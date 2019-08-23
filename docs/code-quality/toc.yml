@@ -658,6 +658,16 @@
                   href: ca2321.md
                 - name: CA2322：确保在反序列化之前没有使用 SimpleTypeResolver 初始化 JavaScriptSerializer
                   href: ca2322.md
+                - name: CA2326：请勿使用 None 以外的 TypeNameHandling 值
+                  href: ca2326.md
+                - name: CA2327：不要使用不安全的 JsonSerializerSettings
+                  href: ca2327.md
+                - name: CA2328：确保 JsonSerializerSettings 是安全的
+                  href: ca2328.md
+                - name: CA2329：不要使用不安全的配置反序列化 JsonSerializer
+                  href: ca2329.md
+                - name: CA2330：在反序列化时确保 JsonSerializer 具有安全配置
+                  href: ca2330.md
                 - name: CA3001：查看 SQL 注入漏洞的代码
                   href: ca3001-review-code-for-sql-injection-vulnerabilities.md
                 - name: CA3002：查看 XSS 漏洞的代码
