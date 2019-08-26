@@ -34,11 +34,11 @@ IntelliTest 提供了一套静态帮助程序类，可供创作[参数化单元�
 
 表示假设的静态类，例如[参数化单元测试](test-generation.md#parameterized-unit-testing)中的[前置条件](test-generation.md#precondition)。 此类的方法可用于筛除不需要的测试输入。
 
-如果假设的条件不适用于某些测试输入，则会引发 PexAssumeFailedException。 这将导致在无提示的情况下忽略该测试。
+如果假设的条件不适用于某些测试输入，则会引发 PexAssumeFailedException  。 这将导致在无提示的情况下忽略该测试。
 
 **示例**
 
-以下参数化测试不会考虑 j = 0：
+以下参数化测试不会考虑 j = 0  ：
 
 ```csharp
 public void TestSomething(int i, int j) {
@@ -57,16 +57,16 @@ public void TestSomething(int i, int j) {
           return;
 ```
 
-只是 PexAssume 失败时会导致无测试用例。 使用 if 语句时，IntelliTest 会生成一个单独的测试用例，使其包含 if 语句的 then 分支。
+只是 PexAssume 失败时会导致无测试用例  。 使用 if 语句时，IntelliTest 会生成一个单独的测试用例，使其包含 if 语句的 then 分支    。
 
-PexAssume 还包含专用的嵌套类，用于对字符串、数组和集合进行假设。
+PexAssume  还包含专用的嵌套类，用于对字符串、数组和集合进行假设。
 
 <a name="pexassert"></a>
 ## <a name="pexassert"></a>PexAssert
 
-表示断言的静态类，例如[参数化单元测试](test-generation.md#parameterized-unit-testing)中的[前置条件](test-generation.md#postcondition)。
+表示断言的静态类，例如[参数化单元测试](test-generation.md#parameterized-unit-testing)中的[后置条件](test-generation.md#postcondition)。
 
-如果断言的条件不适用于某些测试输入，则会引发 PexAssertFailedException，这将导致测试失败。
+如果断言的条件不适用于某些测试输入，则会引发 PexAssertFailedException，这将导致测试失败  。
 
 **示例**
 
@@ -85,11 +85,11 @@ public void TestSomething(int i) {
 
 向测试提供辅助输入值的静态类，可用于实现[参数化模拟](input-generation.md#parameterized-mocks)。
 
-PexChoose 类不可用于确定针对特定输入值的测试通过或失败。 PexChoose 只提供输入值，也称为“选择”。 仍由用户负责限制输入值，并写入定义测试何时通过或失败的断言。
+PexChoose 类不可用于确定针对特定输入值的测试通过或失败  。 PexChoose 只提供输入值，也称为“选择”   。 仍由用户负责限制输入值，并写入定义测试何时通过或失败的断言。
 
 **操作模式**
 
-PexChoose 类可在两种模式下运行：
+PexChoose 类可在两种模式下运行  ：
 
 * IntelliTest 在[输入生成](input-generation.md)期间对测试和经测试代码执行符号分析时，选择器会返回任意值，并且 IntelliTest 会跟踪每个值在测试和经测试代码中的使用方式。 IntelliTest 会生成相关值，以触发测试和经测试代码中的不同执行路径。
 
@@ -97,7 +97,7 @@ PexChoose 类可在两种模式下运行：
 
 **用法**
 
-* 简单调用 PexChoose.Value 生成新值：
+* 简单调用 PexChoose.Value 生成新值  ：
 
 ```csharp
 public int Foo() {
@@ -110,7 +110,7 @@ public int Foo() {
 
 记录已命名值的静态类。
 
-IntelliTest 浏览代码时，会通过 PexObserve 记录使用其格式化字符串表现形式的计算值。 该值与唯一名称相关联。
+IntelliTest 浏览代码时，会通过 PexObserve 记录使用其格式化字符串表现形式的计算值  。 该值与唯一名称相关联。
 
 ```csharp
 PexObserve.Value<string>("result", result);
@@ -147,7 +147,7 @@ public partial class MathExTests {
 
 **示例**
 
-此示例演示了如何实现 PexAssume.Arrays.ElementsAreNotNull 方法。
+此示例演示了如何实现 PexAssume.Arrays.ElementsAreNotNull 方法  。
 在该方法中会忽略对数组值长度的约束，以避免 IntelliTest 尝试生成其他大小的数组。 只在此处忽略该约束。 如果经测试代码对不同数组长度的处理方式不同，IntelliTest 无法根据对经测试代码的约束生成不同大小的数组。
 
 ```csharp
