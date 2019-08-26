@@ -64,7 +64,7 @@ PexAssume 还包含专用的嵌套类，用于对字符串、数组和集合进�
 <a name="pexassert"></a>
 ## <a name="pexassert"></a>PexAssert
 
-表示断言的静态类，例如[参数化单元测试](test-generation.md#parameterized-unit-testing)中的[前置条件](test-generation.md#postcondition)。
+表示断言的静态类，例如[参数化单元测试](test-generation.md#parameterized-unit-testing)中的[后置条件](test-generation.md#postcondition)。
 
 如果断言的条件不适用于某些测试输入，则会引发 PexAssertFailedException，这将导致测试失败。
 
