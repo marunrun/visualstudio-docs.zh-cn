@@ -66,7 +66,7 @@ ms.locfileid: "68918453"
 
      `el` 匹配“hello”
 
-- 将 `!` 添加到筛选器的末尾，使其成为精确区分大小写匹配：
+- 将 `!` 添加到筛选器的末尾，使其成为区分大小写的精确匹配：
 
      `el!` 不匹配“hello”
 
@@ -209,7 +209,7 @@ attribute of the Assembly element in the .fakes:
 
 - 向类型名称添加填充码前缀可生成填充码类型名称。
 
-   例如，ShimExample 是示例类型的填充码类型。
+   例如，ShimExample 是 Example 类型的填充码类型。
 
 - 向类型名称添加存根前缀可生成存根类型名称。
 
