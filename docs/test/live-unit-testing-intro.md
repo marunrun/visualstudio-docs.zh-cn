@@ -27,7 +27,7 @@ Live Unit Testing：
 
 - 指示单元测试是否充分覆盖代码，并显示未被单元测试覆盖的代码。 Live Unit Testing 以图形方式实时描绘代码覆盖率，以便一眼就能看到每行代码覆盖的测试数，以及未被任何单元测试覆盖的行。
 
-如果有包含一个或多个单元测试项目的解决方案，可从顶级 Visual Studio 菜单中依次选择“测试” > “Live Unit Testing” > “启动”来启用 Live Unit Testing。
+如果有包含一个或多个单元测试项目的解决方案，可从顶级 Visual Studio 菜单中依次选择“测试” > “Live Unit Testing” > “启动”来启用 Live Unit Testing    。
 
 > [!NOTE]
 > 只有 Visual Studio Enterprise Edition 中提供 Live Unit Testing。
