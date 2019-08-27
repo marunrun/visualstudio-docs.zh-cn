@@ -31,6 +31,7 @@
 # 源编辑器
 ## [编辑器功能](source-editor.md)
 ## [重构](refactoring.md)
+## [IntelliSense](intellisense.md)
 ## [注释](comments.md)
 ## [编辑器行为](editor-behavior.md)
 ## [任务注释](task-comments.md)
