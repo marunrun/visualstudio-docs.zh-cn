@@ -1,4 +1,4 @@
----
+﻿---
 title: 客户端脚本调试 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -28,6 +28,7 @@ Visual Studio 调试器提供了一个全面的调试环境，以便查找和更
 
 ## <a name="opening-script-documents"></a>打开脚本文档
 可以在“解决方案资源管理器”中查看服务器端和客户端脚本文档的列表。 可以从“解决方案资源管理器”中打开任何脚本文档。 有关详细信息，请参阅[如何：查看脚本文档](../debugger/how-to-view-script-documents.md)。
+可以在“解决方案资源管理器”中查看服务器端和客户端脚本文档的列表。 可以从“解决方案资源管理器”中打开任何脚本文档。 有关详细信息，请参阅[如何：查看脚本文档](../debugger/how-to-view-script-documents.md)。 
 
 ## <a name="breakpoint-mapping"></a>断点映射
  在 Visual Studio 中，不能直接调试服务器端代码，但可以在服务器端文件中设置断点。 Visual Studio 会自动将断点映射到客户端文件中的对应位置，并在客户端代码中创建映射的断点。

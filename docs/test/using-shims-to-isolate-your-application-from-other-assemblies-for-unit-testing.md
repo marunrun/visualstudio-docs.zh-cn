@@ -89,7 +89,7 @@ public void Y2kCheckerTest() {
 
 正确释放每个填充码上下文至关重要。 根据经验，请始终调用 `ShimsContext.Create` 语句内的 `using`，以便确保清除已注册的填充码。 例如，您可能为某一测试方法注册了填充码，而且该方法会将 `DateTime.Now` 方法替换为始终返回 2000 年 1 月 1 日的委托。 如果忘记清除测试方法中的已注册填充码，则剩余的测试将始终返回 2000 年 1 月 1 日作为 DateTime.Now 值。 这可能会让人感到惊讶和困惑。
 
-### <a name="WriteShims"></a>编写包含垫片的测试
+### <a name="WriteShims"></a>编写包含填充码的测试
 
 在测试代码中，为要虚设的方法插入 *绕道*。 例如:
 
@@ -158,7 +158,7 @@ End Class
 
 您可能会看到一个说明 Fakes 命名空间不存在的生成错误。 此错误有时会在发生其他编译错误时出现。 修复其他错误，然后它就会消失。
 
-## <a name="BKMK_Shim_basics"></a>用于各种方法的垫片
+## <a name="BKMK_Shim_basics"></a>用于各种方法的填充码
 
 使用填充码方法，您可以将任何 .NET 方法（包括静态方法或非虚拟方法）替换为自己的委托。
 
@@ -504,7 +504,7 @@ ShimFile.WriteAllTextStringString = shim;
 
 ## <a name="BKMK_Limitations"></a>限制
 
-垫片无法用于 .NET 基类库 **mscorlib** 和 **System** 中的所有类型。
+填充码无法用于 .NET 基类库 mscorlib 和 System 中的所有类型。
 
 ## <a name="see-also"></a>请参阅
 

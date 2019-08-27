@@ -1,4 +1,4 @@
----
+﻿---
 title: 尝试联系远程计算机时出现 DCOM 错误。 拒绝访问。 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference

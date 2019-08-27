@@ -92,7 +92,7 @@ Live Unit Testing 可用于测试针对 .NET Framework 或 .NET Core 的解决�
 
    [!code-csharp[StringLibrary source code](samples/csharp/utilitylibraries/stringlibrary/class1.cs)]
 
-   `StringLibrary` 有三种静态方法：
+   `StringLibrary` 有三个静态方法：
 
    - 如果字符串以大写字符开头，则 `StartsWithUpper` 返回 `true`；否则返回 `false`。
 

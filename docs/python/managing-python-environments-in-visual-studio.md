@@ -1,4 +1,4 @@
----
+﻿---
 title: 管理 Python 环境和解释器
 description: 使用 Python 环境窗口来管理全局、虚拟和 Conda 环境、安装 Python 解释器和包以及将环境分配给 Visual Studio 项目。
 ms.date: 08/06/2019
