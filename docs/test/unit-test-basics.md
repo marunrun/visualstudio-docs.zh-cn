@@ -1,6 +1,6 @@
 ---
 title: 单元测试基础知识
-ms.date: 06/06/2019
+ms.date: 08/07/2019
 ms.topic: conceptual
 f1_keywords:
 - vs.UnitTest.CreateUnitTest
@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 39e5529ae777fe1cee69e669ce20fb919eceb5ef
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: e439ab3ca22fdb26992164c3927269a0f58a1f3b
+ms.sourcegitcommit: 5b34052a1c7d86179d7898ed532babb2d9dad4a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925822"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490733"
 ---
 # <a name="unit-test-basics"></a>单元测试基础知识
 
@@ -40,7 +40,12 @@ ms.locfileid: "68925822"
 
 在本文中，我们使用称为 `MyBank` 的虚构应用程序的开发作为示例。 无需使用实际代码按照本主题中的说明操作。 测试方法用 C# 编写，并通过用于托管代码的 Microsoft 单元测试框架进行呈现。 但是，这些概念很容易转移到其他语言和框架。
 
+::: moniker range="vs-2017"
 ![MyBank 解决方案](../test/media/ute_mybanksolution.png)
+::: moniker-end
+::: moniker range=">=vs-2019"
+![MyBank 解决方案 2019](../test/media/vs-2019/basics-mybank-solution.png)
+::: moniker-end
 
 我们第一次尝试设计的 `MyBank` 应用程序包含表示个人帐户及其与银行交易的帐户组件，以及表示集合和管理单独帐户的功能的数据库组件。
 
@@ -69,7 +74,7 @@ public void Withdraw(double amount)
     }
     else
     {
-        throw new ArgumentException(amount, "Withdrawal exceeds balance!")
+        throw new ArgumentException(nameof(amount), "Withdrawal exceeds balance!");
     }
 }
 ```
@@ -84,18 +89,28 @@ public void Withdraw(double amount)
 
 1. 在代码编辑器窗口中，右键单击并从右键单击菜单中选择[创建单元测试](create-unit-tests-menu.md)  。
 
+   ::: moniker range="vs-2017"
    ![从编辑器窗口查看上下文菜单](../test/media/createunittestsrightclick.png)
+   ::: moniker-end
+   ::: moniker range=">=vs-2019"
+   ![从编辑器窗口查看上下文菜单](../test/media/vs-2019/basics-create-unit-tests.png)
+   ::: moniker-end
 
    > [!NOTE]
    > “创建单元测试”菜单命令仅适用于面向 .NET Framework（但不是 .NET Core）的托管代码  。
 
 2. 单击“确定”接受默认值以创建单元测试，或更改用于创建并命名单元测试项目和单元测试的值  。 你可以选择默认添加到单元测试方法的代码。
 
-    ![在 Visual Studio 中创建“单元测试”对话框](../test/media/create-unit-tests.png)
+   ![在 Visual Studio 中创建“单元测试”对话框](../test/media/create-unit-tests.png)
 
 3. 在类的所有方法的新单元测试项目中创建单元测试存根。
 
-    ![已创建单元测试](../test/media/createunittestsstubs.png)
+   ::: moniker range="vs-2017"
+   ![已创建单元测试](../test/media/createunittestsstubs.png)
+   ::: moniker-end
+   ::: moniker range=">=vs-2019"
+   ![已创建单元测试](../test/media/vs-2019/basics-test-stub.png)
+   ::: moniker-end
 
 4. 现在向前跳转，了解如何 [将代码添加到单元测试方法](#write-your-tests) ，以使你的单元测试有意义，并使你想要添加的额外单元测试彻底地测试代码。
 
@@ -218,9 +233,14 @@ public void My_Test ()
 
 在生成测试项目时，测试将出现在“测试资源管理器”中  。 如果“测试资源管理器”不可见，请选择 Visual Studio 菜单上的“测试”，然后依次选择“Windows”、“测试资源管理器”     。
 
+::: moniker range="vs-2017"
 ![单元测试资源管理器](../test/media/ute_failedpassednotrunsummary.png)
+::: moniker-end
+::: moniker range=">=vs-2019"
+![单元测试资源管理器](../test/media/vs-2019/basics-test-explorer.png)
+::: moniker-end
 
-运行、编写并重新运行测试时，“测试资源管理器”的默认视图将显示“失败的测试”、“通过的测试”、“跳过的测试”和“未运行的测试”组中的结果      。 可以选择组标题以打开显示该组中的所有测试的视图。
+运行、编写和重新运行测试时，“测试资源管理器”将在“失败的测试”、“通过的测试”、“跳过的测试”和“未运行的测试”组中显示结果      。 可以在工具栏中选择其他分组依据选项。
 
 通过在全局级别的搜索框中的匹配文本或选择其中一个预定义的筛选器，你还可以在任何视图中筛选测试。 你可以在任何时间运行任何选定的测试。 测试运行的结果立即显示在资源管理器窗口顶部的通过/失败栏中。 在你选择测试时，会显示测试方法结果的详细信息。
 
@@ -228,9 +248,14 @@ public void My_Test ()
 
 “测试资源管理器”工具栏可帮助你发现、组织和运行你感兴趣的测试  。
 
+::: moniker range="vs-2017"
 ![从测试资源管理器工具栏运行测试](../test/media/ute_toolbar.png)
+::: moniker-end
+::: moniker range=">=vs-2019"
+![从测试资源管理器工具栏运行测试](../test/media/vs-2019/test-explorer-toolbar-diagram-16-2.png)
+::: moniker-end
 
-你可以选择“运行全部”  来运行所有测试，或选择“运行”  来选择要运行的测试的子集。 运行一组测试后，测试运行的摘要将出现在“测试资源管理器”窗口的底部  。 选择一个测试以在底部窗格中查看该测试的详细信息。 选择右键单击菜单中的“打开测试”  （快捷键： **“F12”** ），显示所选测试的源代码。
+你可以选择“运行全部”  来运行所有测试，或选择“运行”  来选择要运行的测试的子集。 选择一个测试，在测试详细信息窗格中查看该测试的详细信息。 选择右键单击菜单中的“打开测试”  （快捷键： **“F12”** ），显示所选测试的源代码。
 
 ::: moniker range="vs-2017"
 
@@ -246,18 +271,33 @@ public void My_Test ()
 
 ### <a name="run-tests-after-every-build"></a>每次生成后运行测试
 
-> [!WARNING]
-> 仅在 Visual Studio Enterprise 中支持每次生成后运行单元测试。
+::: moniker range="vs-2017"
 
 |Button|说明|
 |-|-|
-|![生成后运行](../test/media/ute_runafterbuild_btn.png)|若要在每个本地生成后运行单元测试，请在标准菜单上选择“测试”，然后在“测试资源管理器”工具栏上选择“生成后运行测试”    。|
+|![生成后运行](../test/media/ute_runafterbuild_btn.png)|要在每个本地生成后运行单元测试，请在标准菜单上选择“测试”，然后在测试资源管理器的工具栏上选择“生成后运行测试”    。|
+
+> [!NOTE]
+> 在每次生成后运行单元测试需要 Visual Studio 2017 Enterprise Edition或 Visual Studio 2019。 在 Visual Studio 2019 中，此功能可用于社区版、专业版以及企业版。
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+若要在每个本地生成后运行单元测试，请在“测试资源管理器”工具栏中打开设置图标并选择“生成后运行测试”  。
+
+::: moniker-end
 
 ### <a name="filter-and-group-the-test-list"></a>筛选和分组测试列表
 
-有大量测试时，可以在“测试资源管理器”搜索框中键入，以按指定的字符串筛选列表  。 你可以通过从筛选器列表中选择以更多地限制筛选器事件。
+当有大量的测试时，可在“测试资源管理器”搜索框中键入指定的字符串，以按该字符串筛选列表  。 你可以通过从筛选器列表中选择以更多地限制筛选器事件。
 
+::: moniker range="vs-2017"
 ![搜索筛选器类别](../test/media/ute_searchfilter.png)
+::: moniker-end
+::: moniker range=">=vs-2019"
+![搜索筛选器类别](../test/media/vs-2019/test-explorer-search-filter-16-2.png)
+::: moniker-end
 
 |Button|说明|
 |-|-|
@@ -282,9 +322,14 @@ public void My_Test ()
 
 **问：如果使用的是 TDD，该如何从我的测试生成代码？**
 
-**答：** 使用 IntelliSense 在你的项目代码中生成类和方法。 编写调用你想要生成的类或方法的测试方法中的语句，然后打开调用下面的 IntelliSense 菜单。 如果调用新类的构造函数，请从菜单选择“生成新类型”  并按照向导在你的代码项目中插入此类。 如果调用方法，请从 IntelliSense 菜单选择“生成新方法”  。
+**答：** 使用快速操作在你的项目代码中生成类和方法。 在调用想要生成的类或方法的测试方法中编写语句，然后打开错误下面的灯泡。 如果调用新类的构造函数，请从菜单选择“生成类型”并按照向导在你的代码项目中插入此类  。 如果调用方法，请从 IntelliSense 菜单选择“生成方法”  。
 
-![生成方法存根 IntelliSense 菜单](../test/media/ute_generatemethodstubintellisense.png)
+::: moniker range="vs-2017"
+![生成方法存根快速操作菜单](../test/media/ute_generatemethodstubintellisense.png)
+::: moniker-end
+::: moniker range=">=vs-2019"
+![生成方法存根快速操作菜单](../test/media/vs-2019/basics-generate-method-tdd.png)
+::: moniker-end
 
 **问：我是否可以创建将多个数据集作为输入来运行测试的单元测试？**
 
@@ -320,7 +365,7 @@ public void AddIntegerHelper_DataDrivenValues_AllShouldPass()
 
 **问：是否能查看我的单元测试测试了多少代码？**
 
-**答：** 可以。 你可以使用 Visual Studio 代码覆盖率工具确定你的单元测试实际测试的代码量。 支持本机和托管语言以及可由单元测试框架运行的所有单元测试框架。
+**答：** 可以。 可以使用 Visual Studio Enterprise 中的 Visual Studio 代码覆盖率工具确定你的单元测试实际测试的代码量。 支持本机和托管语言以及可由单元测试框架运行的所有单元测试框架。
 
 你可以在选定的测试上或解决方案中的所有测试上运行代码覆盖率。 “代码覆盖率结果”窗口显示行、函数、类、命名空间和模块执行的产品代码块的百分比  。
 

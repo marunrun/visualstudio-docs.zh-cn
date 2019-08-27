@@ -7,12 +7,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: e54a0957cb6b63c95c1cd914f7fc3eb72e581ac3
-ms.sourcegitcommit: 6b0503ed8d25454d6e39a8e606910b3fa58cf1d2
+ms.openlocfilehash: 64045221ad9200223264632d4bdbd33ff82d631f
+ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68981643"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69585345"
 ---
 # <a name="walkthrough-get-started-with-windows-forms-designer"></a>演练：Windows 窗体设计器入门
 
@@ -309,8 +309,10 @@ DemoCalculator 控件可在其他复合控件或窗体上使用。 以下过程�
 
 ## <a name="next-steps"></a>后续步骤
 
-本文演示了如何构造用于简单计算器的用户界面。 若要继续，可以通过实现计算器逻辑来扩展其功能。 或者，继续学习[使用 Windows 窗体创建图片查看器](../ide/tutorial-1-create-a-picture-viewer.md)的其他教程。
+本文演示了如何构造用于简单计算器的用户界面。 若要继续，可以通过实现计算器逻辑来扩展其功能，然后[使用 ClickOnce 发布应用](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)。 或者，继续学习[使用 Windows 窗体创建图片查看器](../ide/tutorial-1-create-a-picture-viewer.md)的其他教程。
 
 ## <a name="see-also"></a>请参阅
 
+- [Windows 窗体控件](/dotnet/framework/winforms/controls/)
 - [Windows 窗体控件的辅助功能](/dotnet/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form)
+- [使用 ClickOnce 发布](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

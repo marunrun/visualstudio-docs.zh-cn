@@ -1,6 +1,6 @@
 ---
 title: 如何：将项目配置为面向平台
-ms.date: 11/04/2016
+ms.date: 08/16/2019
 ms.technology: vs-ide-compile
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: faef9f55a88385953a121574f761193cc8c11ea9
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 5d31d3a4f2e42981df646f9c38e13ee9b5f21122
+ms.sourcegitcommit: 9e5e8b6e9a3b6614723e71cc23bb434fe4218c9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416833"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634925"
 ---
 # <a name="how-to-configure-projects-to-target-platforms"></a>如何：将项目配置为面向平台
 
@@ -64,9 +64,60 @@ ms.locfileid: "68416833"
 
 - 对于 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 项目，请参阅 [/clr（公共语言运行时编译）](/cpp/build/reference/clr-common-language-runtime-compilation)。
 
+## <a name="manually-editing-the-project-file"></a>手动编辑项目文件
+
+有时，需要手动编辑项目文件以进行某些自定义配置。 例如，当你有无法在 IDE 中指定的条件（例如对两个不同平台而言不同的引用）时，如以下示例所示。
+
+### <a name="example-referencing-x86-and-x64-assemblies-and-dlls"></a>示例:引用 x86 和 x64 程序集和 DLL
+
+你可能拥有同时具有 x86 和 x64 版本的 .NET 程序集或 DLL。 若要将项目设置为使用这些引用，请先添加引用，然后打开项目文件并对其进行编辑，以添加具有同时引用配置和目标平台的条件的 `ItemGroup`。  例如，假设引用的二进制文件是 ClassLibrary1，并且调试和发布配置以及 x86 和 x64 版本有不同路径。  然后，使用四个包含所有设置组合的 `ItemGroup` 元素，如下所示：
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Reference Include="ClassLibrary1">
+      <HintPath>..\..\ClassLibrary1\ClassLibrary1\bin\x64\Debug\netstandard2.0\ClassLibrary1.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Reference Include="ClassLibrary1">
+      <HintPath>..\..\ClassLibrary1\ClassLibrary1\bin\x64\Release\netstandard2.0\ClassLibrary1.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <Reference Include="ClassLibrary1">
+      <HintPath>..\..\ClassLibrary1\ClassLibrary1\bin\x86\Debug\netstandard2.0\ClassLibrary1.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  
+  <ItemGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86'">
+    <Reference Include="ClassLibrary1">
+      <HintPath>..\..\ClassLibrary1\ClassLibrary1\bin\x86\Release\netstandard2.0\ClassLibrary1.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
+```
+
+::: moniker range="vs-2017"
+> [!NOTE]
+> 在 Visual Studio 2017 中，需要先卸载项目，然后才能编辑项目文件。 若要卸载项目，请右键单击项目节点，然后选择“卸载项目”  。 完成编辑后，请右键单击项目节点并选择“重新加载项目”，以保存所做的更改并重新加载项目  。
+::: moniker-end
+
+有关项目文件的详细信息，请参阅 [MSBuild 项目文件架构引用](/visualstudio/msbuild/msbuild-project-file-schema-reference)。
+
 ## <a name="see-also"></a>请参阅
 
 - [了解生成平台](../ide/understanding-build-platforms.md)
 - [/platform（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option)
 - [64 位应用程序](/dotnet/framework/64-bit-apps)
 - [Visual Studio IDE 64 位支持](../ide/visual-studio-ide-64-bit-support.md)
+- [了解项目文件](/aspnet/web-forms/overview/deployment/web-deployment-in-the-enterprise/understanding-the-project-file)

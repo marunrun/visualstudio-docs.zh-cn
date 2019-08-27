@@ -22,6 +22,7 @@
 #### [订阅者数据匿名化](anonymization.md)
 ### [订阅门户概述](using-the-subscriber-portal.md)
 ### [管理订阅](manage-vs-subscriptions.md)
+### [联系订阅管理员](contact-my-admin.md)
 ### 优点
 #### 工具
 ##### [Azure 额度](vs-azure.md)
@@ -58,17 +59,22 @@
 #### [查找和声明密钥](find-keys.md)
 #### [Internet 演示](internet-demos.md)
 ## 管理员
-### [管理员职责](admin-responsibilities.md)
+### 管理员职责
+#### [管理员职责](admin-responsibilities.md)
 #### [预生产库存](admin-inventory.md)
 #### [管理大型团队和外部承包商](manage-teams.md)
 #### [跟踪用户分配和处理订单](assignments-orders.md)
-### 加入组织
-#### [打开和打开许可证迁移](open-migration.md)
+### 访问管理门户
+#### [批量许可证](volume-license.md)
 #### [MPSA](mpsa.md)
 #### [云订阅](cloud-admin.md)
-#### [加入视频](https://youtu.be/plSu6fpi7UI)
+#### [针对客户的合作伙伴管理](open-migration.md)
+#### [视频教程：访问管理门户](https://youtu.be/plSu6fpi7UI)
 ### 使用管理门户
+#### [超级管理员和管理人员](admin-roles.md)
+#### [设置协议首选项](admin-prefs.md)
 #### [概述](using-admin-portal.md)
+#### [视频教程：使用管理门户](https://www.youtube.com/watch?v=XG-E-IDjA-w&list=PLReL099Y5nReJhZ6o8CQFPSBgzGCHX99_&index=3&t=0s)
 #### 分配订阅
 ##### [添加单用户](assign-license.md)
 ##### [添加多个用户](assign-license-bulk.md)
@@ -81,7 +87,7 @@
 #### [过期订阅](handle-expired-license.md)
 #### [使用别名的订阅者](aliasing.md)
 #### [使用个人电子邮件登录的订阅者](personal-email-sign-ins.md)
-### [使用 GitHub Enterprise 管理 Visual Studio](assign-github.md)
+#### [使用 GitHub Enterprise 管理 Visual Studio](assign-github.md)
 ## 资源
 ### [Visual Studio 授权白皮书](https://aka.ms/vslicensing)
 ### [比较订阅选项和定价](https://visualstudio.microsoft.com/vs/pricing)

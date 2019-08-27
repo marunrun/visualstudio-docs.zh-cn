@@ -3,32 +3,25 @@ title: 订阅管理门户入门 |Visual Studio Marketplace
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/24/2019
+ms.date: 08/07/2019
 ms.topic: conceptual
 description: 了解如何开始在订阅管理门户中管理组织的 Visual Studio 订阅。
-ms.openlocfilehash: f3b11a0a0977fff8a6c89f565adffb1cac49e2ad
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: 6ee33bfaf47452a1213cd5def206e47aee790fc3
+ms.sourcegitcommit: 5b34052a1c7d86179d7898ed532babb2d9dad4a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68605706"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490704"
 ---
-# <a name="get-started-with-the-visual-studio-subscriptions-administration-portal"></a>开始使用 Visual Studio 订阅管理门户
-使用 Visual Studio 订阅管理门户时，需要记住：
+# <a name="overview-of-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio 订阅管理门户概述
+Visual Studio 订阅管理门户提供了集中管理组织订阅的工具。 
+
+## <a name="important-considerations"></a>重要注意事项
+使用 Visual Studio 订阅管理门户时，需要记住以下要点：
 - **Visual Studio 订阅根据用户授权。** 每个订阅者可以根据开发和测试需要在多台计算机上使用软件。
 - 为每个订阅者只分配一个订阅级别，分别对应于组织购买的 Visual Studio 订阅。  如果订阅者分配有多个订阅级别，请编辑订阅者的设置，使他们只有一个订阅级别。
 - **更新订阅者的订阅级别**，当订阅升级（购买“升级”许可证之后）或续签到更低级别时更新。
 - **不要在订阅者之间共享订阅。** 订阅必须分配给指定的个人。  不允许将订阅分配给团队。  必须将订阅分配给任何使用全部或部分订阅权益（开发和测试软件、Microsoft Azure、E-Learning 等）的用户。
-
-## <a name="access-to-the-portal"></a>门户访问权限
-如果你是组织协议的主要联系人或通知联系人，则在设置批量许可协议时，你将自动获得门户访问权限。 你将收到系统触发的欢迎电子邮件，它将指示用于登录门户的电子邮件地址。 登录后，你将自动设置为超级管理员，并可以开始管理订阅和其他管理员。 
-
-## <a name="administrator-roles"></a>管理员角色
-批量许可客户在新的 Visual Studio 订阅管理门户中存在两种不同的角色。 这些角色就像现在 VLSC 中的“主要联系人或通知联系人”角色和“订阅管理员”角色。
-
-**超级管理员：** 首次设置组织时，“主要联系人或通知联系人”在默认情况下会成为超级管理员。 主要联系人或通知联系人可以选择分配其他超级管理员或管理员。 超级管理员可以添加和删除其他管理员和订阅者。 如果系统中有两个以上的超级管理员，为了安全起见，超级管理员可以删除最后两个以外的所有超级管理员。
-
-**管理员：** 管理员只能由超级管理员设置。管理员可以在超级管理员分配给订阅者的协议中对其进行管理。
 
 ## <a name="the-subscribers-page"></a>“订阅者”页
 已分配有订阅后，“订阅者”选项卡会提供有关订阅者的详细信息，包括：
@@ -51,6 +44,12 @@ ms.locfileid: "68605706"
 有关正在查看的协议的更多信息，请选择“详细信息”选项卡。它显示协议状态、购买帐户、组织详细信息、超级管理员和其他相关信息。
 > [!div class="mx-imgBorder"]
 > ![Visual Studio 订阅管理门户的“详细信息”页](_img/using-admin-portal/details-page.png)
+
+## <a name="resources"></a>资源
+- [Visual Studio 授权白皮书](https://aka.ms/vslicensing)
+- [比较订阅选项和定价](https://visualstudio.microsoft.com/vs/pricing)
+- [比较 Visual Studio IDE 功能](https://visualstudio.microsoft.com/vs/compare)
+- [Visual Studio 管理和订阅支持](https://visualstudio.microsoft.com/support/support-overview-vs)
 
 ## <a name="next-steps"></a>后续步骤
 详细了解管理员的职责：

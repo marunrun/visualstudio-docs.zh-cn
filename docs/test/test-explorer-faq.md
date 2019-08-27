@@ -1,6 +1,6 @@
 ---
 title: 测试资源管理器常见问题解答
-ms.date: 11/07/2018
+ms.date: 08/14/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - Test Explorer
@@ -14,16 +14,16 @@ ms.workload:
 - multiple
 author: kendrahavens
 manager: jillfra
-ms.openlocfilehash: 0dda73a4bbea2813131cc0695655eed7ea3409ca
-ms.sourcegitcommit: 044bb54cb4552c8f4651feb11d62e52726117e75
+ms.openlocfilehash: a37cdea4206dafe657dc8cf8adbbcf98ce18afc9
+ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68662013"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69551856"
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio 测试资源管理器常见问题解答
-
 ::: moniker range=">=vs-2019"
+
 ## <a name="where-is-group-by-traits-in-visual-studio-2019"></a>Visual Studio 2019 中的特征分组位于何处？
 此特征分组已移至列。 通过 Visual Studio 2019 版本 16.2 中的多层和可自定义层次结构，我们认为将特征作为分组包含在内造成了不必要的视觉复杂性。 我们希望获得关于此设计的反馈！ https://developercommunity.visualstudio.com/content/problem/588029/no-longer-able-to-group-by-trait-in-test-explorer.html
 
@@ -31,38 +31,43 @@ ms.locfileid: "68662013"
 
 ![显示特征列](media/vs-2019/trait-column.png)
 ![筛选特征列](media/vs-2019/trait-column-filter.png)
-
 ::: moniker-end
 
 ## <a name="dynamic-test-discovery"></a>动态测试发现
 
 **测试资源管理器未发现动态定义的测试。（例如，理论、自定义适配器、自定义特征和 #ifdef 等）如何发现这些测试？** 
 
-请生成项目，并确保在“工具” > “选项” > “测试”中打开基于程序集的发现    。
-
-[实时测试发现](https://go.microsoft.com/fwlink/?linkid=862824)是一种基于源的测试发现功能。 该功能无法发现使用理论、自定义适配器、自定义特征和 `#ifdef` 语句等的测试，因为这些项是在运行时定义的。 需要进行生成才能准确发现此类测试。 在 Visual Studio 2017 版本 15.6 及更高版本中，基于程序集的发现（传统发现）仅在生成后运行。 此设置意味着实时测试发现会在编辑时找到尽可能多的测试，并且通过基于程序集的发现可在生成之后显示动态定义的测试。 “实时测试发现”改进了响应能力，但仍可让你在生成后获取完整且准确的结果。
+::: moniker range=">=vs-2019"
+生成项目以运行基于程序集的发现。
+::: moniker-end
+::: moniker range="vs-2017"
+请生成你的项目，并确保在“工具”>“选项”>“测试”中打开基于程序集的发现    。
+::: moniker-end
+[实时测试发现](https://go.microsoft.com/fwlink/?linkid=862824)是一种基于源的测试发现功能。 该功能无法发现使用理论、自定义适配器、自定义特征和 `#ifdef` 语句等的测试，因为这些项是在运行时定义的。 需要进行生成才能准确发现此类测试。 在 Visual Studio 2017 版本 15.6 及更高版本中，基于程序集的发现（传统发现）仅在生成后运行。 此设置意味着实时测试发现会在编辑时找到尽可能多的测试，并且通过基于程序集的发现可在生成之后显示动态定义的测试。 实时测试发现改进了响应能力，但仍可让你在生成后获取完整且准确的结果。
 
 ## <a name="test-explorer--plus-symbol"></a>测试资源管理器加号 (+)
 
 测试资源管理器首行中出现的加号 (+) 是什么意思？ 
 
-加号 (+) 表示，只要启用基于程序集的发现，即可在生成后发现更多测试。 如果在项目中检测到动态定义的测试，也会出现该符号。
+加号 (+) 表示在运行基于程序集的发现时，生成后可能会发现更多测试。 如果在项目中检测到动态定义的测试，也会出现该符号。
 
 ![加号汇总行](media/testex-plussymbol.png)
 
+::: moniker range="vs-2017"
 ## <a name="assembly-based-discovery"></a>基于程序集的发现
 
 基于程序集的发现不再对我的项目有效。  如何重新启动它？
 
-请转到“工具” > “选项” > “测试”，选中“另外，生成后从已生成的程序集中发现测试”框     。
+请转到“工具”>“选项”>“测试”，并选中“另外，生成后从已生成的程序集中发现测试”框     。
 
 ![基于程序集的选项](media/testex-toolsoptions.png)
+::: moniker-end
 
 ## <a name="real-time-test-discovery"></a>实时测试发现
 
 在我键入时，测试现在会显示在测试资源管理器中，而不必生成我的项目。  进行了哪些更改？
 
-此功能称为[实时测试发现](https://go.microsoft.com/fwlink/?linkid=862824)。 它使用 Roslyn 分析器来发现测试并实时填充测试资源管理器，而无需你生成项目。 若要深入了解动态定义测试（如理论或自定义特征）的测试发现行为，请参阅常见问题解答 1。
+此功能称为[实时测试发现](https://go.microsoft.com/fwlink/?linkid=862824)。 它使用 Roslyn 分析器来发现测试并实时填充测试资源管理器，而无需你生成项目。 有关动态定义测试（如理论或自定义特征）的测试发现行为，请参阅[动态测试发现](#dynamic-test-discovery)。
 
 ## <a name="real-time-test-discovery-compatibility"></a>实时测试发现兼容性
 
@@ -92,7 +97,7 @@ UWP 测试面向的是部署应用时的另一个运行时。 这表示，你需
 
 ## <a name="test-explorer-hierarchy-view"></a>测试资源管理器层次结构视图
 
-在层次结构视图中，“项目”、“命名空间”和“类”分组旁存在“已传递”、“失败”、“已跳过”和“不运行”图标。  这些图标代表什么？
+**在层次结构视图中，父节点分组旁边有“已通过”、“失败”、“已跳过”和“未运行”图标。** 这些图标代表什么？
 
 “项目”、“命名空间”和“类”分组旁的图标显示该分组中的测试状态。 请参见下表。
 
@@ -110,6 +115,7 @@ Visual Studio 2019 中不再出现一些与测试相关的 API。  进行了哪�
 
 在 Visual Studio 2019 中，将删除以前标记为公开但从未正式记录过的某些测试窗口 API。 它们在 Visual Studio 2017 中被标记为“弃用”，提前通告扩展维护人员。 据我们所知，很少有扩展找过这些 API 并依赖于它们。 它们包括 `IGroupByProvider`、`IGroupByProvider<T>`、`KeyComparer`、`ISearchFilter`、`ISearchFilterToken`、`ISearchToken` 和 `SearchFilterTokenType`。 若此更改影响了你的扩展，请在[开发者社区](https://developercommunity.visualstudio.com)上提交一个 bug 告知我们。
 
+::: moniker range="vs-2017"
 ## <a name="test-adapter-nuget-reference"></a>测试适配器 NuGet 引用
 
 在 Visual Studio 2017 版本 15.8 中，发现了我的测试但不执行。 
@@ -124,6 +130,7 @@ Visual Studio 2019 中不再出现一些与测试相关的 API。  进行了哪�
 > 如果使用 NUnit 2 测试适配器且无法迁移到 NUnit 3 测试适配器，则可以在 Visual Studio 15.8 版的“工具” > “选项” > “测试”中关闭这一新发现行为    。
 
 ![“工具”选项中的测试资源管理器适配器行为](media/testex-adapterbehavior.png)
+::: moniker-end
 
 ## <a name="uwp-testcontainer-was-not-found"></a>未找到 UWP TestContainer
 

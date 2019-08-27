@@ -65,13 +65,13 @@ using (ShimsContext.Create()) {
 
 ### <a name="AddFakes"></a>添加 Fakes 程序集
 
-1. 在解决方案资源管理器中，展开单元测试项目的“引用”。
+1. 在解决方案资源管理器中，展开单元测试项目的“引用”   。
 
-    - 如果使用的是 Visual Basic，请选择解决方案资源管理器的工具栏中的“显示所有文件”以便查看“引用”节点。
+    - 如果使用的是 Visual Basic，请选择解决方案资源管理器的工具栏中的“显示所有文件”以便查看“引用”节点    。
 
-2. 选择包含要为其创建填充码的类定义的程序集。 例如，如果要填充 DateTime，请选择 System.dll。
+2. 选择包含要为其创建填充码的类定义的程序集。 例如，如果要填充 DateTime，请选择 System.dll   。
 
-3. 选择快捷菜单中的“添加 Fakes 程序集”。
+3. 选择快捷菜单中的“添加 Fakes 程序集”  。
 
 ### <a name="ShimsContext"></a>使用 ShimsContext
 

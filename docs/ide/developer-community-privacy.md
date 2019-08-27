@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 942ae41322d6a08bc8de0c450577f2eccb45772a
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 86578a300da8ea1cdb739db4d1c02505a6d97180
+ms.sourcegitcommit: 9e5e8b6e9a3b6614723e71cc23bb434fe4218c9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67823372"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634855"
 ---
 # <a name="developer-community-data-privacy"></a>开发人员社区数据隐私
 
@@ -54,21 +54,19 @@ ms.locfileid: "67823372"
 
 - Visual Studio 内存中活动日志文件
 
-- VSFeedbackPerfWatsonData 文件夹中的 PerfWatson 文件（如果启用了 Watson 收集） 
+- PerfWatson 文件（如果启用 Watson 集合）
 
-- VSFeedbackVSRTCLogs 文件夹中的 LiveShare 日志文件（如有） 
+- LiveShare 日志文件（如果存在）
 
-- %LOCALAPPDATA%\Xamarin\Logs 中的 Xamarin 日志文件（如有） 
+- Xamarin 日志文件（如果存在）
 
-- %TEMP%\NuGetScratch\nuget-dg\nugetSpec.dg 中的 NuGet 日志文件（如有） 
+- Nuget 日志文件（如果存在）
 
-- Web 调试程序日志文件（如有）：
+- Web 调试程序日志文件（如果存在）
 
-  - %TEMP%\vscode-chrome-debug.txt 
+- 服务中心日志和 MEF 错误日志（如果存在）
 
-  - %TEMP%\vscode-node-debug2.txt 
-
-  - %TEMP%\vscode-edge-debug.txt 
+- Python 日志（如果存在）
 
 - 屏幕截图（如果选择随附该项）
 

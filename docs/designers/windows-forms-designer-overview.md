@@ -7,12 +7,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 8280a60f1d265336d427079bdef6612b42ed4330
-ms.sourcegitcommit: 6b0503ed8d25454d6e39a8e606910b3fa58cf1d2
+ms.openlocfilehash: 0df8b7ec5955f472d716af2850d2ab0b776c6552
+ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68981633"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69585328"
 ---
 # <a name="windows-forms-designer-overview"></a>Windows 窗体设计器概述
 
@@ -39,7 +39,7 @@ Visual Studio 中的 Windows 窗体设计器为创建基于 Windows 窗体的应
 
 - [Windows 窗体概述](/dotnet/framework/winforms/windows-forms-overview)
 - [Windows 窗体控件](/dotnet/framework/winforms/controls/)
-- [Windows 窗体控件的辅助功能](/dotnet/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form)
 - [Windows 窗体中的用户输入](/dotnet/framework/winforms/user-input-in-windows-forms)
 - [Windows 窗体中的数据绑定](/dotnet/framework/winforms/windows-forms-data-binding)
 - [增强 Windows 窗体应用](/dotnet/framework/winforms/advanced/)
+- <xref:System.Windows.Forms?displayProperty=fullName> API 参考

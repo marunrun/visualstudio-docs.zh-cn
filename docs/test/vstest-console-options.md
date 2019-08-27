@@ -10,12 +10,12 @@ author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 147ec9096be430d0bc81be65fdf68f927c0f3dac
-ms.sourcegitcommit: 044bb54cb4552c8f4651feb11d62e52726117e75
+ms.openlocfilehash: 34b38ca89e33fd1f3ab8d309c6f55822bf8b7107
+ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661941"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69551818"
 ---
 # <a name="vstestconsoleexe-command-line-options"></a>VSTest.Console.exe 命令行选项
 
@@ -41,7 +41,7 @@ VSTest.Console.exe 是用于运行测试的命令行工具  。 可在命令行�
 |**/UseVsixExtensions**|此选项使 vstest.console.exe 进程使用或跳过在测试运行中安装的 VSIX 扩展（如果有）  。<br />此选项已弃用。 从 Visual Studio 的下一个主版本开始，此选项可能会删除。 转为作为 NuGet 包提供的使用扩展。<br />示例：`/UseVsixExtensions:true`|
 |**/TestAdapterPath:[路径]** |强制 vstest.console.exe 进程使用测试运行中指定路径（如果有）内的自定义测试适配器  。<br />示例：`/TestAdapterPath:[pathToCustomAdapters]`|
 |**/Platform:[平台类型]** |将用来执行测试的目标平台体系结构。<br />有效值为 x86、x64 和 ARM。|
-|**/Framework: [Framework 版本]** |要用于执行测试的目标 .NET 版本。<br />有效值为 Framework35、Framework40、Framework45 和 FrameworkUap10。<br />如果将目标框架指定为 Framework35，则测试在 CLR 4.0“兼容模式”下运行  。<br />示例：`/Framework:framework40`|
+|**/Framework: [Framework 版本]** |要用于执行测试的目标 .NET 版本。<br />示例值有 `Framework35`、`Framework40`、`Framework45`、`FrameworkUap10`、`.NETCoreApp,Version=v1.1`。<br />如果将目标框架指定为 Framework35，则测试在 CLR 4.0“兼容模式”下运行  。<br />示例：`/Framework:framework40`|
 |**/TestCaseFilter:[表达式]** |运行与给定表达式匹配的测试。<br /><Expression\> 的格式为 <property\>=<value\>[\|<Expression\>]。<br />示例：`/TestCaseFilter:"Priority=1"`<br />示例：`/TestCaseFilter:"TestCategory=Nightly|FullyQualifiedName=Namespace.ClassName.MethodName"`<br />/TestCaseFilter 命令行选项不能与 /Tests 命令行选项一起使用   。 <br />有关创建和使用表达式的信息，请参阅 [TestCase 筛选](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md)。|
 |**/?**|显示使用情况信息。|
 |**/Logger:[*uri/friendlyname*]**|为测试结果指定一个记录器。<br />示例:要将结果记录到 Visual Studio 测试结果文件 (TRX)，请使用 /Logger:trx  。<br />示例:要将测试结果发布到 Team Foundation Server，请使用 TfsPublisher：<br />**/logger:TfsPublisher;**<br />**Collection=<project url\>;**<br />**BuildName=<build name\>;**<br />**TeamProject=<project name\>;**<br />**[;Platform=\<Defaults to "Any CPU">]**<br />**[;Flavor=\<Defaults to "Debug">]**<br />**[;RunTitle=<title\>]**|

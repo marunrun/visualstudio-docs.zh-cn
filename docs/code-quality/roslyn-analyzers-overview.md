@@ -11,14 +11,14 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: cae7a02c774773d08c287dde7df59ff62fdbec58
-ms.sourcegitcommit: 9cfd3ef6c65f671a26322320818212a1ed5955fe
+ms.openlocfilehash: 2d4a9bfca972f9c57688b19bd872b31ee5997f76
+ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68533342"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550761"
 ---
-# <a name="overview-of-net-compiler-platform-analyzers"></a>.NET Compiler Platform 分析器概述
+# <a name="overview-of-net-compiler-platform-code-analyzers"></a>.NET Compiler Platform 代码分析器概述
 
 .NET 编译器平台 ("Roslyn") 分析器分析代码的样式、质量和可维护性、设计和其他问题。 Visual Studio 包括一系列内置的分析器，这些分析器在用户键入时分析 C# 或 Visual Basic 代码。 在[文本编辑器选项](../ide/code-styles-and-code-cleanup.md)页上或在 [.editorconfig 文件](../ide/editorconfig-code-style-settings-reference.md)中配置这些内置分析器的首选项。 可以将其他分析器作为 Visual Studio 扩展或 NuGet 包安装。
 
@@ -28,33 +28,33 @@ ms.locfileid: "68533342"
 
 ![分析器冲突和快速操作代码修复](../code-quality/media/built-in-analyzer-code-fix.png)
 
-## <a name="roslyn-analyzers-vs-static-code-analysis"></a>Roslyn 分析器与静态代码分析
+## <a name="net-compiler-platform-based-analysis-versus-legacy-analysis"></a>基于 .NET Compiler Platform 的分析与传统分析
 
-.NET Compiler Platform ("Roslyn") 分析器最终将取代托管代码的[静态代码分析](../code-quality/code-analysis-for-managed-code-overview.md)。 许多静态代码分析规则都已被重新编写为 Roslyn 分析器诊断。
+.NET Compiler Platform（“Roslyn”）代码分析最终将替换托管代码的[传统分析](../code-quality/code-analysis-for-managed-code-overview.md)。 许多传统分析规则已重写为基于 .NET Compiler Platform 的代码分析器。
 
-与静态代码分析规则冲突一样，Roslyn 分析器冲突显示在错误列表中  。 此外，Roslyn 分析器冲突也会在代码编辑器中以波浪线的形式显示在违规代码下  。 规则的[严重性设置](../code-quality/use-roslyn-analyzers.md#rule-severity)决定波浪线的颜色。 以下屏幕截图显示了三个冲突 &mdash; 一个为红色、一个绿色为以及一个为灰色：
+与传统的分析规则冲突一样，基于 .NET Compiler Platform 的代码分析冲突会出现在 Visual Studio 的错误列表窗口中。 此外，基于 .NET Compiler Platform 的代码分析冲突还会在代码编辑器中以波浪线的形式显示在违规代码下方  。 规则的[严重性设置](../code-quality/use-roslyn-analyzers.md#rule-severity)决定波浪线的颜色。 以下屏幕截图显示了三个冲突 &mdash; 一个为红色、一个绿色为以及一个为灰色：
 
 ![代码编辑器中的波浪线](media/diagnostics-severity-colors.png)
 
-Roslyn 分析器在生成时分析代码，比如静态代码分析（如果启用），但还可在你键入时保持运行状态。 如果启用[完整解决方案分析](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md#to-toggle-full-solution-analysis)，Roslyn 分析器还会提供编辑器中未打开的代码文件的设计时分析。
+基于 .NET Compiler Platform 的代码分析器在生成时分析代码，如果启了用传统分析，传统分析也是如此，但代码分析器在你键入时也处于活动状态。 如果启用[完整的解决方案分析](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md#to-toggle-full-solution-analysis)，代码分析器还提供未在编辑器中打开的代码文件的设计时分析。
 
 > [!TIP]
-> 仅当分析仪作为 NuGet 软件包安装时，才会显示 Roslyn 分析器的生成时错误和警告。
+> 仅当分析器作为 NuGet 包安装时，才会显示来自代码分析器的生成时错误和警告。
 
-Roslyn 分析器不仅会报告静态代码分析也会报告的相同类型的问题，而且还可以轻松修复文件或项目中冲突的一次发生或全部发生。 这些操作称为代码修复  。 代码修复是特定于 IDE 的；在 Visual Studio 中，它们以[快速操作](../ide/quick-actions.md)的方式实现。 并非所有分析器诊断都有相关联的代码修复。
+基于 .NET Compiler Platform 的代码分析器不仅报告与传统分析相同类型的问题，而且让你能够轻松地修复文件或项目中的一处或全部冲突。 这些操作称为代码修复  。 代码修复是特定于 IDE 的；在 Visual Studio 中，它们以[快速操作](../ide/quick-actions.md)的方式实现。 并非所有分析器诊断都有相关联的代码修复。
 
 > [!NOTE]
-> 下面的 UI 选项仅适用于静态代码分析：
+> 以下 UI 选项仅适用于传统分析：
 >
 > - “分析”   > “运行代码分析”  菜单选项。
-> - 项目属性页的“代码分析”  选项卡上的“生成时启用代码分析”  和“禁止显示所生成代码的结果”  复选框（这些选项对 Roslyn 分析器没有任何影响）。
+> - 项目的属性页的“代码分析”选项卡上的“生成时启用代码分析”和“禁止显示所生成代码的结果”复选框    。
 
-要区分“错误列表”中来自 Roslyn 分析器的冲突和来自静态代码分析的冲突，请查看“工具”列   。 如果“工具”值与“解决方案资源管理器”中的某个分析器程序集匹配，例如 Microsoft.CodeQuality.Analyzers，则冲突来自 Roslyn 分析器   。 否则，冲突源自静态代码分析。
+若在“错误列表”窗口中要区分来自代码分析器和传统分析的冲突，请查看“工具”列  。 如果“工具”值与“解决方案资源管理器”中的某个分析器程序集（例如 Microsoft.CodeQuality.Analyzers）匹配，则该冲突来自代码分析器   。 否则，冲突源自传统分析。
 
 ![错误列表中的工具列](media/code-analysis-tool-in-error-list.png)
 
 > [!TIP]
-> 项目文件中的 RunCodeAnalysis  msbuild 属性只适用于静态代码分析。 如果安装分析器，请将项目文件中的“RunCodeAnalysis”  设置为“false”  ，以防止生成后运行静态代码分析。
+> 项目文件中的 RunCodeAnalysis msbuild 属性仅适用于传统分析  。 如果安装分析器，请在项目文件中将 RunCodeAnalysis 设置为 false，以防止生成后运行传统分析   。
 >
 > ```xml
 > <RunCodeAnalysis>false</RunCodeAnalysis>
@@ -91,13 +91,13 @@ Roslyn 分析器不仅会报告静态代码分析也会报告的相同类型的�
 ## <a name="next-steps"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [在 Visual Studio 中安装 Roslyn 分析器](../code-quality/install-roslyn-analyzers.md)
+> [在 Visual Studio 中安装代码分析器](../code-quality/install-roslyn-analyzers.md)
 
 > [!div class="nextstepaction"]
-> [在 Visual Studio 中使用 Roslyn 分析器](../code-quality/use-roslyn-analyzers.md)
+> [在 Visual Studio 中使用代码分析器](../code-quality/use-roslyn-analyzers.md)
 
 ## <a name="see-also"></a>请参阅
 
 - [分析器常见问题解答](analyzers-faq.md)
-- [编写 Roslyn 分析器](../extensibility/getting-started-with-roslyn-analyzers.md)
+- [编写自己的代码分析器](../extensibility/getting-started-with-roslyn-analyzers.md)
 - [.NET Compiler Platform SDK](/dotnet/csharp/roslyn-sdk/)

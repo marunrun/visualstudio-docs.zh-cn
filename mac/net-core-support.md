@@ -5,12 +5,12 @@ author: sayedihashimi
 ms.author: sayedha
 ms.date: 06/13/2019
 ms.assetid: 8B8CEBE8-00DA-4AD1-8193-77F58B57F244
-ms.openlocfilehash: 325489f243e6942cf02df406937f4d19cd21ed0d
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: 2788529a72b556bcf97001ff1c75c9056e4e87f5
+ms.sourcegitcommit: 9e5e8b6e9a3b6614723e71cc23bb434fe4218c9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68681746"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634790"
 ---
 # <a name="net-core-support"></a>.NET Core 支持
 
@@ -24,7 +24,8 @@ ms.locfileid: "68681746"
 |v2.2.200 + |✔︎|✔︎|✔︎|
 |v3.0 预览版 3 以上的版本 | | | |
 |v3.0 预览版 3、4、5 |✔︎|✔︎|✔︎|
-|v3.0 预览版 6+ | |✔︎|✔︎|
+|v3.0 预览版 6、7 | |✔︎|✔︎|
+|v3.0 预览版 8+ | | |✔︎|
 
 > [!IMPORTANT]
 > 如果之前将 .NET Core v2.2.1xx 与 Visual Studio for Mac 8.0 配合使用，则需要手动更新到上表所列的受支持的 .NET Core 版本。 建议使用 [2.1.700](https://dotnet.microsoft.com/download/dotnet-core/2.1) 或 [2.2.300](https://dotnet.microsoft.com/download/dotnet-core/2.2) 版本

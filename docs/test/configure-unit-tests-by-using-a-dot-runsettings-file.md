@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: c291eb614a69d88116c6af228304e19a6295bba2
-ms.sourcegitcommit: 044bb54cb4552c8f4651feb11d62e52726117e75
+ms.openlocfilehash: d9f47c54a530f58ea562fd942c1ef795bad37331
+ms.sourcegitcommit: 5b34052a1c7d86179d7898ed532babb2d9dad4a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68662033"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490656"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>使用 .runsettings 文件配置单元测试 
 
@@ -26,11 +26,25 @@ ms.locfileid: "68662033"
 
 ### <a name="ide"></a>IDE
 
-若要在 IDE 中指定一个运行设置文件，选择“测试” > “测试设置” > “选择测试设置文件”，然后选择 .runsettings 文件     。
+::: moniker range="vs-2017"
 
-![在 Visual Studio 中选择测试设置文件菜单](media/select-test-settings-file.png)
+若要在 IDE 中指定一个运行设置文件，请选择“测试”>“测试设置”>“选择测试设置文件”，然后选择 .runsettings 文件     。
 
-该文件将显示在“测试设置”菜单上，你可以选择或取消选择它  。 选择后，每当选择“分析代码覆盖率”时，都会应用运行设置文件  。
+![在 Visual Studio 2017 中选择测试设置文件菜单](media/select-test-settings-file.png)
+
+该文件将显示在“测试设置”菜单上，你可以选择或取消选择它。 选择后，每当选择“分析代码覆盖率”时，都会应用运行设置文件  。
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+若要在 IDE 中指定运行设置文件，请在“测试资源管理器”中选择“设置”按钮上的箭头，然后选择“选择设置文件”    。 浏览到并选择 .runsettings 文件  。
+
+![在 Visual Studio 2019 中选择测试设置文件菜单](media/vs-2019/select-test-settings-file.png)
+
+该文件将显示在“测试资源管理器”中的“测试设置”菜单上，你可以选择或取消选择它。 选择后，每当选择“分析代码覆盖率”时，都会应用运行设置文件  。
+
+::: moniker-end
 
 ### <a name="command-line"></a>命令行
 
@@ -73,9 +87,19 @@ ms.locfileid: "68662033"
    > [!TIP]
    > 只要使用扩展名 .runsettings，文件名就无关紧要  。
 
-1. 使用以下示例中的 XML 替换文件内容，并根据需要自定义。
+2. 使用以下示例中的 XML 替换文件内容，并根据需要自定义。
 
-1. 在“测试”  菜单上，依次选择“测试设置”  、“选择测试设置文件” >   。 浏览到创建的 .runsettings 文件，然后选择“确定”   。
+::: moniker range="vs-2017"
+
+3. 在“测试”  菜单上，依次选择“测试设置”  、“选择测试设置文件” >   。 浏览到创建的 .runsettings 文件，然后选择“确定”   。
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+3. 若要选择运行设置文件，请在“测试资源管理器”中，选择“设置”按钮上的箭头，然后选择“选择设置文件”    。 浏览到创建的 .runsettings 文件，然后选择“确定”   。
+
+::: moniker-end
 
    > [!TIP]
    > 可以在解决方案中创建多个 .runsettings 文件，然后按需选择一个作为活动测试设置文件  。
@@ -94,7 +118,7 @@ ms.locfileid: "68662033"
     <ResultsDirectory>.\TestResults</ResultsDirectory>
 
     <!-- x86 or x64 -->
-    <!-- You can also change it from the top-level menu Test > Test Settings > Processor Architecture for AnyCPU Projects -->
+    <!-- You can also change it from the test settings menu; choose "Processor Architecture for AnyCPU Projects" -->
     <TargetPlatform>x86</TargetPlatform>
 
     <!-- Framework35 | [Framework40] | Framework45 -->
@@ -260,7 +284,7 @@ public void HomePageTest()
 |-|-|-|
 |**ForcedLegacyMode**|False|在 Visual Studio 2012 中，对 MSTest 适配器进行了优化，使其变得更快且更具可伸缩性。 某些行为（如测试的运行顺序）可能不与 Visual Studio 早期版本中的完全一致。 将此值设置为 true 可使用旧测试适配器  。<br /><br />例如，如果为单元测试指定 app.config 文件，可能会用到此设置  。<br /><br />我们建议你考虑重构测试以便可以使用较新的适配器。|
 |**IgnoreTestImpact**|False|当在 MSTest 中或从 Microsoft 测试管理器运行时，测试影响功能会设置受最近更改影响的测试的优先级。 此设置会停用该功能。 有关详细信息，请参阅[自上一个生成后应运行哪些测试？](https://msdn.microsoft.com/library/dd286589)。|
-|**SettingsFile**||你可以指定测试设置文件以便与此处的 MSTest 适配器配合使用。 还可以通过选择“测试” > “测试设置” > “选择测试设置文件”指定测试设置文件    。<br /><br />如果指定此值，则还必须将“ForcedlegacyMode”  设置为“true”  。<br /><br />`<ForcedLegacyMode>true</ForcedLegacyMode>`|
+|**SettingsFile**||你可以指定测试设置文件以便与此处的 MSTest 适配器配合使用。 还可以[从设置菜单](#ide)指定测试设置文件。<br /><br />如果指定此值，则还必须将“ForcedlegacyMode”  设置为“true”  。<br /><br />`<ForcedLegacyMode>true</ForcedLegacyMode>`|
 |**KeepExecutorAliveAfterLegacyRun**|False|测试运行完成后，MSTest 将关闭。 测试中启动的任何进程也将终止。 如果希望测试执行程序保持活动状态，请将此值设为 true  。 例如，可使用此设置让浏览器保持在编码的 UI 测试之间运行。|
 |**DeploymentEnabled**|true|如果将此值设置为 false，则不会将已在测试方法中指定的部署项目复制到部署目录中  。|
 |**CaptureTraceOutput**|true|你可以使用 <xref:System.Diagnostics.Trace.WriteLine%2A?displayProperty=nameWithType> 从测试方法写入调试跟踪。|

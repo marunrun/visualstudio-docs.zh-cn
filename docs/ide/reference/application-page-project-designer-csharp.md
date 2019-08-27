@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 897c3a82f5add84ad343c100b93fd8a4d2663610
-ms.sourcegitcommit: d4920babfc3d24a3fe1d4bf446ed3fe73b344467
+ms.openlocfilehash: 04a130528edbe8ab3aae0a24d69315b934b19d54
+ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67160065"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69551427"
 ---
 # <a name="application-page-project-designer-c"></a>“项目设计器”->“应用程序”页 (C#)
 
@@ -105,6 +105,8 @@ ms.locfileid: "67160065"
 
 若要以编程方式访问此属性，请参阅 <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>。
 
+有关创建图标的信息，请参阅[图标的图像编辑器](/cpp/windows/image-editor-for-icons)。
+
 **Manifest**
 
 当应用程序在 Windows Vista 上以用户帐户控制 (UAC) 模式运行时，选择一个清单生成选项。 此选项可以有下列值：
@@ -120,3 +122,5 @@ ms.locfileid: "67160065"
 若要为项目提供资源文件，请选中此单选按钮。 选择此选项会禁用“图标”  和“清单”  选项。
 
 输入路径名或使用“浏览”按钮 ( **...** )，以向项目添加 Win32 资源文件。
+
+有关详细信息，请参阅[为 .NET 应用创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。

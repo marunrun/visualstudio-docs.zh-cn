@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 8749cd7757796a1b716b1ac9db086d3155f94694
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5bd7fa0bcff67573e61d40a2172e17620910a421
+ms.sourcegitcommit: 5b34052a1c7d86179d7898ed532babb2d9dad4a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62965541"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490628"
 ---
 # <a name="customize-code-coverage-analysis"></a>自定义代码覆盖率分析
 
@@ -30,18 +30,38 @@ ms.locfileid: "62965541"
 
 1. 将运行设置文件添加到解决方案中。 在“解决方案资源管理器”的解决方案快捷菜单上，依次选择“添加” > “新建项”和“XML 文件”     。 保存带有类似于 CodeCoverage.runsettings 的名称的文件  。
 
-1. 添加本文结尾处示例文件中的内容，然后按需进行自定义，如以下章节所述。
+2. 添加本文结尾处示例文件中的内容，然后按需进行自定义，如以下章节所述。
 
-1. 若要选择运行设置文件，在“测试”菜单上，选择“测试设置” > “选择测试设置文件”    。 若要指定运行设置文件以从命令行或在生成工作流中运行测试，请参阅[使用 .runsettings 文件配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#specify-a-run-settings-file)  。
+::: moniker range="vs-2017"
+
+3. 若要选择运行设置文件，在“测试”菜单上，选择“测试设置” > “选择测试设置文件”    。 若要指定运行设置文件以从命令行或在生成工作流中运行测试，请参阅[使用 .runsettings 文件配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#specify-a-run-settings-file)  。
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+3. 若要选择运行设置文件，请在“测试资源管理器”中，选择“设置”按钮上的箭头，然后选择“选择设置文件”    。 若要指定运行设置文件以从命令行或在生成工作流中运行测试，请参阅[使用 .runsettings 文件配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#specify-a-run-settings-file)  。
+
+::: moniker-end
 
    选择“分析代码覆盖率”时，会从运行设置文件读取配置信息  。
 
    > [!TIP]
    > 在运行测试或更新代码时，之前的代码覆盖率结果和代码着色不会自动隐藏。
 
-若要禁用和启用自定义设置，请依次选择“测试”和“测试设置” > 菜单，然后取消选择或选择文件。  
+::: moniker range="vs-2017"
+
+若要关闭和启用自定义设置，请在“测试”>“测试设置”菜单中取消选择或选择该文件   。
 
 ![包含自定义设置文件的测试设置菜单](../test/media/codecoverage-settingsfile.png)
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+若要关闭和启用自定义设置，请在“测试资源管理器”的“设置”菜单中取消选择或选择该文件   。
+
+::: moniker-end
 
 ### <a name="specify-symbol-search-paths"></a>指定符号搜索路径
 
@@ -89,7 +109,7 @@ ms.locfileid: "62965541"
 
 包括和排除节点使用正则表达式。 有关详细信息，请参阅[在 Visual Studio 中使用正则表达式](../ide/using-regular-expressions-in-visual-studio.md)。 正则表达式与通配符不同。 具体而言：
 
-- .\\*  与包含任意字符的字符串匹配
+-  .\* 与任意字符组成的字符串匹配
 
 - **\\.** 与句点“.”匹配
 

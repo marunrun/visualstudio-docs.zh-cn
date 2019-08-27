@@ -55,9 +55,9 @@ IntelliTest 需要构造对象时，将根据需要在序列中自动添加对�
 <a name="parameterized-unit-testing"></a>
 ## <a name="parameterized-unit-testing"></a>参数化单元测试
 
-参数化单元测试 (PUT) 是采用参数的测试。 传统单元测试通常是 closed 方法，PUT 与之不同，可采用任何参数集。 是不是很简单？ 是的 - IntelliTest 将从此尝试[生成（最小）输入集](input-generation.md)，[完全涵盖](input-generation.md#dynamic-code-coverage)可从测试访问的代码。
+参数化单元测试 (PUT) 是采用参数的测试  。 传统单元测试通常是封闭的方法，PUT 与之不同，可采用任何参数集。 是不是很简单？ 是的 - IntelliTest 将从此尝试[生成（最小）输入集](input-generation.md)，[完全涵盖](input-generation.md#dynamic-code-coverage)可从测试访问的代码。
 
-PUT 使用 [PexMethod](attribute-glossary.md#pexmethod) 自定义属性定义，其方式与 MSTest（或 NUnit、xUnit）类似。 PUT 实例方法按逻辑分组成使用 [PexClass](attribute-glossary.md#pexclass) 标记的类。 下面的示例展示了 MyPexTest 类中存储的简单 PUT：
+PUT 使用 [PexMethod](attribute-glossary.md#pexmethod) 自定义属性定义，其方式与 MSTest（或 NUnit、xUnit）类似。 PUT 实例方法按逻辑分组成使用 [PexClass](attribute-glossary.md#pexclass) 标记的类。 下面的示例展示了 MyPexTest 类中存储的简单 PUT  ：
 
 ```csharp
 [PexMethod]
@@ -116,7 +116,7 @@ public partial class ListTest {
 
 IntelliTest 提供大量验证属性，帮助将异常分类为预期异常和意外异常。
 
-预期异常生成带有“ExpectedException(typeof(xxx))”等注释的负面测试用例，而意外异常生成失败测试用例。
+预期异常生成带有“ExpectedException(typeof(xxx))”等注释的负面测试用例，而意外异常生成失败测试用例   。
 
 ```csharp
 [PexMethod, PexAllowedException(typeof(ArgumentNullException))]
@@ -144,7 +144,7 @@ void SomeTest() {...}
 
 用户可以使用假设和断言来表示有关测试的[前置条件](#precondition)（假设）和[后置条件](#postcondition)（断言）。 IntelliTest 生成一组参数值和“浏览”代码时，可能会违反测试的假设。 在这种情况下，它将不会生成该路径的测试，而会以无提示方式忽略该路径。
 
-断言是常规单元测试框架中的常见概念，因此 IntelliTest 已“了解”每个受支持测试框架提供的内置 Assert 类。 但是大部分框架不会提供 Assume 类。 在这种情况下，IntelliTest 会提供 [PexAssume](static-helper-classes.md#pexassume) 类。 如果不想使用现有的测试框架，IntelliTest 还有 [PexAssert](static-helper-classes.md#pexassert) 类。
+断言是常规单元测试框架中的常见概念，因此 IntelliTest 已“了解”每个受支持测试框架提供的内置 Assert 类  。 但是大部分框架不会提供 Assume 类  。 在这种情况下，IntelliTest 会提供 [PexAssume](static-helper-classes.md#pexassume) 类。 如果不想使用现有的测试框架，IntelliTest 还有 [PexAssert](static-helper-classes.md#pexassert) 类。
 
 ```csharp
 [PexMethod]
@@ -172,7 +172,7 @@ public void Test2([PexAssumeNotNull] object o)
 
 方法的前置条件表示在该条件下方法会成功。
 
-通常情况下，通过检查参数和对象声明，并在违反时引发 ArgumentException 或 InvalidOperationException 来强制执行前置条件。
+通常情况下，通过检查参数和对象声明，并在违反时引发 ArgumentException 或 InvalidOperationException 来强制执行前置条件   。
 
 在 IntelliTest 中，[参数化单元测试](#parameterized-unit-testing)的前置条件使用 [PexAssume](static-helper-classes.md#pexassume) 表示。
 
@@ -181,7 +181,7 @@ public void Test2([PexAssumeNotNull] object o)
 
 方法的后置条件表示前置条件最初有效时，执行方法期间和之后应保持的条件。
 
-通常情况下，通过调用 Assert 方法来强制执行后置条件。
+通常情况下，通过调用 Assert 方法来强制执行后置条件  。
 
 使用 IntelliTest 时，[参数化单元测试](#parameterized-unit-testing)的后置条件使用 [PexAssert](static-helper-classes.md#pexassert) 表示。
 
@@ -191,7 +191,7 @@ public void Test2([PexAssumeNotNull] object o)
 
 1. 如果测试用例未在[配置的路径边界](exploration-bounds.md)内终止，则被视为失败，除非设置了 [TestExcludePathBoundsExceeded](exploration-bounds.md#testexcludepathboundsexceeded) 选项
 
-1. 如果测试引发 PexAssumeFailedException，则测试成功。 但是，它通常会被筛除，除非 [TestEmissionFilter](exploration-bounds.md#testemissionfilter) 被设置为“全部”
+1. 如果测试引发 PexAssumeFailedException，则测试成功  。 但是，它通常会被筛除，除非 [TestEmissionFilter](exploration-bounds.md#testemissionfilter) 被设置为“全部” 
 
 1. 如果测试违反[断言](#assumptions-and-assertions)例如，引发单元测试框架的断言冲突异常时，测试失败
 
