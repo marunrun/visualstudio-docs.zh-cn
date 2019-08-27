@@ -153,7 +153,7 @@ public void Withdraw(double amount)
 
 每个单元测试项目包含类，用于镜像代码项目中类的名称。 在我们的示例中， `AccountsTests` 项目将包含以下类：
 
-- `AccountInfoTests` 类包含用于 `AccountInfo` 项目中 `Accounts` 类的单元测试方法
+- `AccountInfoTests` 类包含用于 `Accounts` 项目中 `AccountInfo` 类的单元测试方法
 
 - `CheckingAccountTests` 类包含用于 `CheckingAccount` 类的单元测试方法。
 
@@ -240,7 +240,7 @@ public void My_Test ()
 ![单元测试资源管理器](../test/media/vs-2019/basics-test-explorer.png)
 ::: moniker-end
 
-运行、编写和重新运行测试时，“测试资源管理器”将在“失败的测试”、“通过的测试”、“跳过的测试”和“未运行的测试”组中显示结果     。 可以在工具栏中选择其他分组依据选项。
+运行、编写和重新运行测试时，“测试资源管理器”将在“失败的测试”、“通过的测试”、“跳过的测试”和“未运行的测试”组中显示结果      。 可以在工具栏中选择其他分组依据选项。
 
 通过在全局级别的搜索框中的匹配文本或选择其中一个预定义的筛选器，你还可以在任何视图中筛选测试。 你可以在任何时间运行任何选定的测试。 测试运行的结果立即显示在资源管理器窗口顶部的通过/失败栏中。 在你选择测试时，会显示测试方法结果的详细信息。
 
