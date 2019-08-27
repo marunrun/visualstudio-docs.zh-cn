@@ -1,14 +1,9 @@
 ---
 title: 调试接口访问 SDK |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,13 +14,13 @@ ms.assetid: 4c0abe53-11d3-4b7a-bdc7-b054f85aaf40
 caps.latest.revision: 15
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 394109e1d691819e06159073a6ea00b65d97de0a
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: ddaea95bc879364de99c0ec01213cda30fa4e7d7
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51810034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68197625"
 ---
 # <a name="debug-interface-access-sdk"></a>调试接口访问 SDK
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -50,6 +45,3 @@ Microsoft 调试接口访问软件开发工具包 (DIA SDK) 提供了调试信�
   
  [Dia2dump.cpp 源文件](../../debugger/debug-interface-access/dia2dump-cpp-source-file.md)  
  使用的源代码[Dia2dump 示例](../../debugger/debug-interface-access/dia2dump-sample.md)演示 DIA API。
-
-
-

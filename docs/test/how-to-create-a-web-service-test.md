@@ -9,14 +9,13 @@ helpviewer_keywords:
 ms.assetid: fbcd57ee-06ad-4260-8694-09f8e0f93e39
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 3f63a1734c7df506c2bda0e51546b2ece04ebb00
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 3fd640a79a81e2306c8abd1c3c5279b1fc8f335f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53833418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62950132"
 ---
 # <a name="how-to-create-a-web-service-test"></a>如何：创建 Web 服务测试
 
@@ -32,21 +31,21 @@ Visual Studio Enterprise
 
 ## <a name="to-test-a-web-service"></a>测试 Web 服务
 
-1.  创建新的 Web 性能测试。 浏览器打开后，立刻选择“停止”。
+1. 创建新的 Web 性能测试。 浏览器打开后，立刻选择“停止”。
 
-2.  在“Web 性能测试编辑器”中右击“Web 性能测试”，然后选择“添加 Web 服务请求”。
+2. 在“Web 性能测试编辑器”中右击“Web 性能测试”，然后选择“添加 Web 服务请求”。
 
-3.  在新请求的“Url”属性中，键入 Web 服务的名称，如 http://localhost/storecsvs/InstantOrder.asmx。
+3. 在新请求的“Url”属性中，键入 Web 服务的名称，如 http://localhost/storecsvs/InstantOrder.asmx。
 
-4.  打开单独的浏览器会话，在“地址”工具栏中键入 .asmx 页的 URL。 选择要用来测试和检查 SOAP 消息的方法。 该方法包含 `SOAPAction`。
+4. 打开单独的浏览器会话，在“地址”工具栏中键入 .asmx 页的 URL。 选择要用来测试和检查 SOAP 消息的方法。 该方法包含 `SOAPAction`。
 
-5.  在“Web 性能测试编辑器”中，右击请求并选择“添加标题”，以添加新标题。 在“名称”属性中键入 `SOAPAction`。 在“值”属性中，键入你在 `SOAPAction` 中看到的值，如 `"http://tempuri.org/CheckStatus"`。
+5. 在“Web 性能测试编辑器”中，右击请求并选择“添加标题”，以添加新标题。 在“名称”属性中键入 `SOAPAction`。 在“值”属性中，键入你在 `SOAPAction` 中看到的值，如 `"http://tempuri.org/CheckStatus"`。
 
-6.  在编辑器中展开 URL 节点，选择“字符串正文”节点并在“内容类型”属性中输入 `text/xml` 的值。
+6. 在编辑器中展开 URL 节点，选择“字符串正文”节点并在“内容类型”属性中输入 `text/xml` 的值。
 
-7.  返回到步骤 4 中的浏览器，从 Web 服务描述页中选择 SOAP 请求的 XML 部分并将它复制到剪贴板中。
+7. 返回到步骤 4 中的浏览器，从 Web 服务描述页中选择 SOAP 请求的 XML 部分并将它复制到剪贴板中。
 
-8.  XML 内容类似下面的示例：
+8. XML 内容类似下面的示例：
 
      ```xml
      <?xml version="1.0" encoding="utf-8"?>

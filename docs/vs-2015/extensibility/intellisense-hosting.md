@@ -1,26 +1,21 @@
 ---
 title: IntelliSense 承载 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - IntelliSense hosting
 ms.assetid: 20c61f8a-d32d-47e2-9c67-bf721e2cbead
 caps.latest.revision: 18
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: e7e6ae688c0af3506f3d77cf2c1bac5291595b80
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: a5c378aec6822a436de0d8fc2656fcac7be4149f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51737882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68203898"
 ---
 # <a name="intellisense-hosting"></a>IntelliSense 托管
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -56,4 +51,3 @@ Visual Studio 使 IntelliSense 托管。 IntellSense 承载可让你提供不 Vi
   
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualStudio.TextManager.Interop>
-

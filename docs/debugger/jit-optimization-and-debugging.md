@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 19bfabf3-1a2e-49dc-8819-a813982e86fd
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 917c9bab910b8f3153af46dc9d1d1a64ec6e529d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: 7346b6fd8fbd483021437638f9e134ead88a0b93
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53841260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62846318"
 ---
 # <a name="jit-optimization-and-debugging"></a>JIT 优化和调试
 **如何优化适用于.NET:** 如果想要调试的代码，更加容易时，代码都**不**优化。 这是因为时代码进行了优化，编译器和运行时更改到发出的 CPU 代码以使它运行速度更快，但有的不太直接映射到原始源代码。 这意味着调试器是经常无法告诉您的本地变量的值和代码单步执行和断点可能无法按预期工作。
@@ -46,8 +46,8 @@ ms.locfileid: "53841260"
 1. 在其中将调试器附加到已运行的进程的情况下，此选项不会影响在已附加调试器时已经加载的模块。
 2. 此选项不起作用于 Dll 已预编译为本机代码 （即进行 ngen 处理）。 但是，您可以通过使用环境变量 COMPlus_ZapDisable 设置为"1"启动进程禁用预编译代码的使用情况。
 
-## <a name="see-also"></a>请参阅  
- [Debugging Managed Code](../debugger/debugging-managed-code.md) （调试托管代码）  
- [Navigating through Code with the Debugger](../debugger/navigating-through-code-with-the-debugger.md) （使用调试器浏览代码）  
- [附加到正在运行的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
- [托管执行过程](/dotnet/standard/managed-execution-process)
+## <a name="see-also"></a>请参阅
+- [调试托管代码](../debugger/debugging-managed-code.md)
+- [使用调试器浏览代码](../debugger/navigating-through-code-with-the-debugger.md)
+- [附加到正在运行的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)
+- [托管执行过程](/dotnet/standard/managed-execution-process)

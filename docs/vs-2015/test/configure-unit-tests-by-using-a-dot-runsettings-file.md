@@ -1,24 +1,19 @@
 ---
 title: 使用 .runsettings 文件配置单元测试 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-test
+ms.topic: conceptual
 ms.assetid: f7e9e4a2-5d01-4f78-b408-5be3892bd162
 caps.latest.revision: 28
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 8d9b03c3b3e418a59c5cea40d61c1ad4c5024d1d
-ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
-ms.translationtype: MTE95
+manager: jillfra
+ms.openlocfilehash: 2a1eae79e90a7d20419aaf25c1679aae885e3e92
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54154484"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65686435"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>使用 .runsettings 文件配置单元测试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,11 +23,11 @@ ms.locfileid: "54154484"
  如果你不希望执行任何特殊配置，则无需 *.runsettings 文件。 最常见的用途是自定义[代码覆盖率](../test/customizing-code-coverage-analysis.md)。  
   
 > [!NOTE]
->  **.runsettings 和 .testsettings**  
+> **.runsettings 和 .testsettings**  
 >   
->  有两种类型的文件可供配置测试。 *.runsettings 用于单元测试。 \*.testsettings 用于[实验室环境测试](http://msdn.microsoft.com/library/0c15317e-80c6-4317-aed3-82b8e15e3901)、Web 性能和负载测试，以及用于自定义某些类型的诊断数据适配器（如 IntelliTrace 和事件日志适配器）。  
+> 有两种类型的文件可供配置测试。 *.runsettings 用于单元测试。 \*.testsettings 用于[实验室环境测试](https://msdn.microsoft.com/library/0c15317e-80c6-4317-aed3-82b8e15e3901)、Web 性能和负载测试，以及用于自定义某些类型的诊断数据适配器（如 IntelliTrace 和事件日志适配器）。  
 >   
->  在 2010 之前的 Visual Studio 版本中，还可通过使用 *.testsettings 文件自定义单元测试。 你仍可以这么做，但是测试运行的速度将会比在 \*.runsettings 文件中使用等效配置慢得多。  
+> 在 2010 之前的 Visual Studio 版本中，还可通过使用 *.testsettings 文件自定义单元测试。 你仍可以这么做，但是测试运行的速度将会比在 \*.runsettings 文件中使用等效配置慢得多。  
   
 ## <a name="customizing-tests-with-a-runsettings-file"></a>使用 .runsettings 文件自定义测试  
   
@@ -48,7 +43,7 @@ ms.locfileid: "54154484"
   
    ![启用运行设置文件](../test/media/runsettings-1.png "RunSettings-1")  
   
-##  <a name="example"></a>复制此示例 .runsettings 文件  
+## <a name="example"></a>复制此示例 .runsettings 文件  
  这是典型的 *.runsettings 文件。 文件的每个元素是可选的，因为每个值都有默认值。  
   
 ```xml  
@@ -146,7 +141,7 @@ ms.locfileid: "54154484"
 #### <a name="other-diagnostic-data-adapters"></a>其他诊断数据适配器  
  代码覆盖率适配器是当前可使用运行设置文件进行自定义的唯一适配器。  
   
- 要自定义任何其他类型的诊断数据适配器，则必须使用测试设置文件。 有关详细信息，请参阅[指定 Visual Studio 测试的测试设置](http://msdn.microsoft.com/library/0c15317e-80c6-4317-aed3-82b8e15e3901)。  
+ 要自定义任何其他类型的诊断数据适配器，则必须使用测试设置文件。 有关详细信息，请参阅[指定 Visual Studio 测试的测试设置](https://msdn.microsoft.com/library/0c15317e-80c6-4317-aed3-82b8e15e3901)。  
   
 #### <a name="testrunparameters"></a>TestRunParameters  
  TestRunParameters 提供了一种可用于运行时测试的定义变量和值的方法。  
@@ -157,7 +152,7 @@ ms.locfileid: "54154484"
 |配置|默认|值|  
 |-------------------|-------------|------------|  
 |ForcedLegacyMode|False|在 Visual Studio 2012 中，已对 MSTest 适配器进行了优化，使其变得更快且更具可伸缩性。 某些行为（如测试的运行顺序）可能不与 Visual Studio 早期版本中的完全一致。 将此值设置为 `true` 可使用旧测试适配器。<br /><br /> 例如，如果为单元测试指定 app.config 文件，则可能会用到此配置。<br /><br /> 我们建议你考虑重构测试以便可以使用较新的适配器。|  
-|IgnoreTestImpact|False|当在 MSTest 中或从 Microsoft 测试管理器运行时，测试影响功能会设置受最近更改影响的测试的优先级。 此设置会停用该功能。 有关详细信息，请参阅[操作说明：收集数据来检查该测试应是运行代码更改后](http://msdn.microsoft.com/library/2f921ea1-9bb0-4870-a30f-0521fc22cb47)。|  
+|IgnoreTestImpact|False|当在 MSTest 中或从 Microsoft 测试管理器运行时，测试影响功能会设置受最近更改影响的测试的优先级。 此设置会停用该功能。 有关详细信息，请参阅[如何：收集数据来检查该测试应是运行代码更改后](https://msdn.microsoft.com/library/2f921ea1-9bb0-4870-a30f-0521fc22cb47)。|  
 |SettingsFile||你可以指定测试设置文件以便与此处的 MS 测试适配器配合使用。 你还可以使用“测试” 、“测试设置” 和“选择测试设置文件” 菜单指定测试设置文件。<br /><br /> 如果指定此值，则还必须将“ForcedlegacyMode”  设置为“true” 。<br /><br /> `<RunSettings>   <MSTest>     <SettingsFile>my.testsettings</SettingsFile>      <ForcedLegacyMode>true</ForcedLegacyMode>    </MSTest> </RunSettings>`|  
 |KeepExecutorAliveAfterLegacyRun|False|测试运行完成后，MSTest 将关闭。 任何作为测试的一部分启动的进程也将在此时终止。 如果要使测试执行器保持活动状态，请将此配置设置为 true。<br /><br /> 例如，可以使用此配置让浏览器保持在编码的 UI 测试之间运行。|  
 |DeploymentEnabled|true|如果将此配置设置为 false，则不会将已在测试方法中指定的部署项目复制到部署目录中。|  
@@ -169,7 +164,4 @@ ms.locfileid: "54154484"
   
 ## <a name="see-also"></a>请参阅  
  [自定义代码覆盖率分析](../test/customizing-code-coverage-analysis.md)   
- [指定 Visual Studio 测试的测试设置](http://msdn.microsoft.com/library/0c15317e-80c6-4317-aed3-82b8e15e3901)
-
-
-
+ [指定 Visual Studio 测试的测试设置](https://msdn.microsoft.com/library/0c15317e-80c6-4317-aed3-82b8e15e3901)

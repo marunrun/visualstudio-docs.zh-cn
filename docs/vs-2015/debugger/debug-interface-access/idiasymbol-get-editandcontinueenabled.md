@@ -1,14 +1,9 @@
 ---
-title: 'Idiasymbol:: Get_editandcontinueenabled |Microsoft Docs'
-ms.custom: ''
+title: IDiaSymbol::get_editAndContinueEnabled | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +12,18 @@ ms.assetid: cd703c64-9ff8-4654-8493-8cde9309cb22
 caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: fe8e797bfe17a7b8f2a22bd1752abd8f902ce956
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 74ac007a3b9d42677c77989ea36c6e20f9cd35f7
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51780160"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "65697708"
 ---
 # <a name="idiasymbolgeteditandcontinueenabled"></a>IDiaSymbol::get_editAndContinueEnabled
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索一个标志，指示是否编译该模块[/Z7、 /Zi、 /ZI （调试信息格式）](http://msdn.microsoft.com/library/ce9fa7e1-0c9b-47e3-98ea-26d1a16257c8)编译器开关。  
+检索一个标志，指示是否编译该模块[/Z7、 /Zi、 /ZI （调试信息格式）](https://msdn.microsoft.com/library/ce9fa7e1-0c9b-47e3-98ea-26d1a16257c8)编译器开关。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,18 +41,15 @@ HRESULT get_editAndContinueEnabled ( 
  如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
   
 > [!NOTE]
->  返回值为`S_FALSE`表示该属性不是可用于符号。  
+> 返回值为`S_FALSE`表示该属性不是可用于符号。  
   
 ## <a name="requirements"></a>要求  
   
 |需求|描述|  
 |-----------------|-----------------|  
 |标头：|dia2.h|  
-|版本:|DIA SDK v7.0|  
+|版本：|DIA SDK v7.0|  
   
 ## <a name="see-also"></a>请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
- [/Z7、/Zi、/ZI（调试信息格式）](http://msdn.microsoft.com/library/ce9fa7e1-0c9b-47e3-98ea-26d1a16257c8)
-
-
-
+ [/Z7、/Zi、/ZI（调试信息格式）](https://msdn.microsoft.com/library/ce9fa7e1-0c9b-47e3-98ea-26d1a16257c8)

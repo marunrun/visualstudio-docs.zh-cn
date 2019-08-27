@@ -1,23 +1,20 @@
 ---
 title: T4 输出指令 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 ms.assetid: 03a14993-47ad-4f2e-8032-57db28d5842a
 caps.latest.revision: 6
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 2e2d30c5d1dee578da14608a4e272fea09184a76
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 9262ec994ec847c38ec8d5c1ad95010a929cc4ba
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49198518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62549521"
 ---
 # <a name="t4-output-directive"></a>T4 输出指令
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -80,6 +77,3 @@ ms.locfileid: "49198518"
  `0`（系统默认）  
   
  一般情况下，可以使用 WebName 字符串或 <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=fullName> 返回的任一编码的 CodePage 编号。
-
-
-

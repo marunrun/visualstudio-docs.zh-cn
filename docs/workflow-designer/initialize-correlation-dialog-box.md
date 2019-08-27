@@ -2,21 +2,20 @@
 title: 工作流设计器的初始化相关对话框
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - InitializeCorrelation.UI
 ms.assetid: 2a0a1cd3-7b9e-493e-9264-fcf85289ffcf
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 51f001e053b0c2fdfe892175b00ed3f39dc6f1b4
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8fab86b39cd927d516bc627630a29feee1698daa
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53829756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62536811"
 ---
 # <a name="initialize-correlation-dialog-box"></a>“初始化相关”对话框
 

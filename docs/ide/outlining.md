@@ -1,7 +1,6 @@
 ---
 title: 折叠和展开代码区域
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - outlining
@@ -13,22 +12,22 @@ helpviewer_keywords:
 - outlining code
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ee657cdf0c7046021a3589378926b086caf504ac
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d6451e835e44af23fbd41c9c1573e0bc5daed115
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53832880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62811911"
 ---
 # <a name="outlining"></a>大纲显示
 
 你可以选择隐藏视图中的某些代码，方法是折叠某个区域的代码，使其显示在加号 + 下面。 单击加号可展开折叠的区域。 如果你使用的是键盘，则可选择使用 Ctrl+M+M 来进行折叠和展开。 你还可以双击大纲边距（位于代码左侧）上的区域中的任意行来折叠大纲区域。 将鼠标悬停在折叠区域时，可以看见折叠区域的内容提示。
 
 > [!NOTE]
-> 本主题适用于 Windows 上的 Visual Studio。 对于 Visual Studio for Mac，请参阅[源编辑器 (Visual Studio for Mac)](/visualstudio/mac/source-editor)。
+> 本主题适用于 Visual Studio  Windows 版。 对于 Visual Studio for Mac，请参阅[源编辑器 (Visual Studio for Mac)](/visualstudio/mac/source-editor)。
 
 将鼠标悬停在边距上时也会突出显示大纲边距中的区域。 在某些颜色配置中，默认的突出显示颜色可能看起来很模糊。 可在“工具” > “选项” > “环境” > “字体和颜色” > “可折叠区域”中更改此颜色。
 

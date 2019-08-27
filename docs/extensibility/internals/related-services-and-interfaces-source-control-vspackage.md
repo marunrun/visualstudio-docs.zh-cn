@@ -6,37 +6,37 @@ helpviewer_keywords:
 - source control packages, interfaces
 - interfaces, source control packages
 ms.assetid: 3e96e838-5675-46bb-99cf-40d420086038
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c312b6d89812a76f5fc8135eb18f02f0afedc5ec
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a9aa9dd59a568ae766a7cd0939c41a4bcd97f640
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53940620"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66337301"
 ---
 # <a name="related-services-and-interfaces-source-control-vspackage"></a>相关服务和界面（源代码管理 VSPackage）
-本部分列出了所有的源控件中的 VSPackage 相关接口[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]。 源代码管理 VSPackage 实现这些接口的一些，并使用其他人来完成源代码管理任务。  
-  
-## <a name="interfaces-implemented-by-and-for-source-control-vspackages"></a>接口和源代码管理 Vspackage 的实现  
- 中介绍了以下接口[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]，和源代码管理 VSPackage 实现其子集的具体取决于其所需的功能集。 一些接口来标记作为所需，必须由每个源代码管理 VSPackage 实现。  
-  
- 包未实现时，这些接口[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]提供默认实现。 请注意，默认实现设计的情况下不注册任何 VSPackage 和不控制任何项目时。 正确编写的源代码管理 VSPackage 实现所有必要的接口，而不是将它保留为这些接口的默认实现。  
-  
- 源代码管理 VSPackage 必须实现封装的部分或所有以下接口的专用服务。  
-  
- 接口是：  
-  
--   必需：相应的实体 （源代码管理 VSPackage，源存根 （stub） 项目） 必须实现接口。  
-  
--   建议：实体应实现此接口;否则，源代码管理功能，可能会受到限制。  
-  
--   可选： 实体可以实现此接口可提供更丰富的功能集。  
-  
-| 接口 | 目标 | 由实现 | 实现？ |
+本部分列出了所有的源控件中的 VSPackage 相关接口[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]。 源代码管理 VSPackage 实现这些接口的一些，并使用其他人来完成源代码管理任务。
+
+## <a name="interfaces-implemented-by-and-for-source-control-vspackages"></a>接口和源代码管理 Vspackage 的实现
+ 中介绍了以下接口[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]，和源代码管理 VSPackage 实现其子集的具体取决于其所需的功能集。 一些接口来标记作为所需，必须由每个源代码管理 VSPackage 实现。
+
+ 包未实现时，这些接口[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]提供默认实现。 请注意，默认实现设计的情况下不注册任何 VSPackage 和不控制任何项目时。 正确编写的源代码管理 VSPackage 实现所有必要的接口，而不是将它保留为这些接口的默认实现。
+
+ 源代码管理 VSPackage 必须实现封装的部分或所有以下接口的专用服务。
+
+ 接口是：
+
+- 必需：相应的实体 （源代码管理 VSPackage，源存根 （stub） 项目） 必须实现接口。
+
+- 建议：实体应实现此接口;否则，源代码管理功能，可能会受到限制。
+
+- 可选： 实体可以实现此接口可提供更丰富的功能集。
+
+| 接口 | 用途 | 由实现 | 实现？ |
 | - | - |--------------------------|-------------|
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> | 编辑器调用此接口，然后再修改或保存文件。 源代码管理 VSPackage 可以签出该文件或拒绝该操作，如果签出失败。 | 源代码管理 VSPackage | 建议 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2> | 此接口提供基本源代码管理功能，对于项目，如注册和取消注册与源代码管理项目和基本源控件中绘制标志符号提供支持。 | 源代码管理 VSPackage | 必需 |
@@ -60,6 +60,6 @@ ms.locfileid: "53940620"
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps> | 此接口用于将源控件设置保存在解决方案 (.sln) 文件。 设置包括源代码管理位置和源控件状态标志。 | 源代码管理 VSPackage | 建议 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts> | 此接口用于解决方案选项 (.suo) 文件中保存源代码管理设置。 这可能包括特定于用户的源代码管理设置，例如当前用户的登记位置。 | 源代码管理 VSPackage | 建议 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3> | 此接口用于监视事件以执行操作，如签入之前关闭解决方案，或从源代码管理获取新文件，在打开项目的项目文件。 | 源代码管理 VSPackage | 建议 |
-  
-## <a name="see-also"></a>请参阅  
- [设计元素](../../extensibility/internals/source-control-vspackage-design-elements.md)
+
+## <a name="see-also"></a>请参阅
+- [设计元素](../../extensibility/internals/source-control-vspackage-design-elements.md)

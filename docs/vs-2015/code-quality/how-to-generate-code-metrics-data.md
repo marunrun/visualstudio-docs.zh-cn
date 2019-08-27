@@ -1,14 +1,9 @@
 ---
-title: 如何： 生成代码度量数据 |Microsoft Docs
-ms.custom: ''
+title: 如何：生成代码度量数据 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: conceptual
 helpviewer_keywords:
 - code metrics results, generate
 - code metrics results
@@ -17,13 +12,13 @@ ms.assetid: 7bd2c906-ee9c-484a-9550-4cddecc8f042
 caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 0e2b09b81f6b5197c8edd0a501395199f4b57ec9
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: aeba6a777dd060f310f9cbb8801b2405cd76f6b2
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51759069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68201328"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>如何：生成代码度量数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,15 +31,15 @@ ms.locfileid: "51759069"
   
 ### <a name="to-generate-code-metrics-results-for-an-entire-solution"></a>若要生成整个解决方案的代码度量结果  
   
--   单击**分析菜单**，然后单击**CalculateCode 指标解决方案**。  
+- 单击**分析菜单**，然后单击**CalculateCode 指标解决方案**。  
   
      \- 或 -  
   
--   在中**解决方案资源管理器**，右键单击该解决方案，然后单击**CalculateCode 指标**。  
+- 在中**解决方案资源管理器**，右键单击该解决方案，然后单击**CalculateCode 指标**。  
   
      \- 或 -  
   
--   在中**代码度量结果**窗口中，单击**CalculateCode 指标解决方案**按钮。  
+- 在中**代码度量结果**窗口中，单击**CalculateCode 指标解决方案**按钮。  
   
      此时将生成结果和**代码度量结果**显示窗口。  
   
@@ -62,10 +57,7 @@ ms.locfileid: "51759069"
   
 ### <a name="to-view-the-results-details"></a>若要查看结果详细信息  
   
--   展开的树中**层次结构**列。  
+- 展开的树中**层次结构**列。  
   
 ## <a name="see-also"></a>请参阅  
  [测量托管代码的复杂性和可维护性](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)
-
-
-

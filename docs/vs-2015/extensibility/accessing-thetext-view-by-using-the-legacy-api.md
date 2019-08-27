@@ -1,26 +1,21 @@
 ---
 title: 使用旧版 API 访问文本视图 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - text view
 ms.assetid: 8f751f72-c972-4be3-84ee-19c281e02e25
 caps.latest.revision: 16
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 83204584f786edf0784878aeaad90eb309aa321a
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 8f9396e4523e38e7313efb5668c4680f551558ab
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51758129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68184958"
 ---
 # <a name="accessing-thetext-view-by-using-the-legacy-api"></a>使用旧版 API 访问文本视图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -47,4 +42,3 @@ ms.locfileid: "51758129"
 ## <a name="see-also"></a>请参阅  
  [如果使用旧版 API 更改视图设置](../extensibility/changing-view-settings-by-using-the-legacy-api.md)   
  [使用文本管理器监视全局设置](../extensibility/using-the-text-manager-to-monitor-global-settings.md)
-

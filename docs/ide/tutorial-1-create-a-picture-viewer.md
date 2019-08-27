@@ -1,38 +1,37 @@
 ---
 title: 教程 1：创建图片查看器
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.assetid: 3071d6df-2b2f-4e95-ab68-bef727323136
 author: TerryGLee
 ms.author: tglee
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f44174f98c69f05cf7a0030e642dc9d9e065201
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 46ce6f92acb7ed6e92af07729a14720d3a8421a8
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53861645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62821803"
 ---
 # <a name="tutorial-1-create-a-picture-viewer"></a>教程 1：创建图片查看器
 
 在本教程中，您将生成一个从文件加载图片并将其显示在窗口中的程序。 你将学习如何使用 Windows 窗体设计器拖动控件（如窗体上的按钮和图片框）、设置控件属性，以及如何使用容器来平滑地调整窗体的大小。 您还将开始编写代码。 您将学习如何：
 
--   创建新项目。
+- 创建新项目。
 
--   测试（调试）应用程序。
+- 测试（调试）应用程序。
 
--   向窗体中添加基本控件（如复选框和按钮）。
+- 向窗体中添加基本控件（如复选框和按钮）。
 
--   使用布局在窗体上定位控件。
+- 使用布局在窗体上定位控件。
 
--   向窗体中添加“打开文件”和“颜色”对话框。
+- 向窗体中添加“打开文件”和“颜色”对话框。
 
--   使用 IntelliSense 和代码片段编写代码。
+- 使用 IntelliSense 和代码片段编写代码。
 
--   编写事件处理程序方法。
+- 编写事件处理程序方法。
 
 完成时，程序将类似下图所示：
 

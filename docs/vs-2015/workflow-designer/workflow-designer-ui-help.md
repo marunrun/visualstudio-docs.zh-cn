@@ -1,11 +1,8 @@
 ---
 title: 工作流设计器 UI 帮助 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 helpviewer_keywords:
 - Visual Studio 2010 Workflow Designer [WFD], user interface help
@@ -14,13 +11,13 @@ ms.assetid: f7afc443-7c7f-4b0f-9517-c58070a640de
 caps.latest.revision: 5
 author: gewarren
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: 1eee870558ee62e43a55e98fc539308f4ae52dd6
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: b19a301f7c170ee28d774ea0d96397dc2cfef312
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49306821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855287"
 ---
 # <a name="workflow-designer-ui-help"></a>工作流设计器 UI 帮助
 本节包含 [!INCLUDE[wfd1](../includes/wfd1-md.md)] 的上下文相关帮助主题。 在中工作时[!INCLUDE[vs2010](../includes/vs2010-md.md)]，可以从用户界面中访问这些主题按**F1**时[!INCLUDE[wfd2](../includes/wfd2-md.md)]对话框处于打开状态。  

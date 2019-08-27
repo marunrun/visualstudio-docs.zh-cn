@@ -1,14 +1,9 @@
 ---
 title: 托管的代码警告的代码分析 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - vc.project.vcfxcoptool.enablefxcop
 helpviewer_keywords:
@@ -21,12 +16,12 @@ caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 300875689a8ea6e872e287eaed6d2328bdab5170
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 237091c4304b6d6fef90197d503f84fe86c12b9e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49278898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68142346"
 ---
 # <a name="code-analysis-for-managed-code-warnings"></a>托管代码的代码分析警告
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -66,6 +61,3 @@ ms.locfileid: "49278898"
 |[安全警告](../code-quality/security-warnings.md)|支持更安全的库和应用程序的警告。|  
 |[用法警告](../code-quality/usage-warnings.md)|支持适当使用 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]的警告。|  
 |[Code Analysis Policy Errors](../code-quality/code-analysis-policy-errors.md)|签入时未满足代码分析策略而发生的错误。|
-
-
-

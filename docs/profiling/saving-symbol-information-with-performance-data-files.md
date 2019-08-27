@@ -7,15 +7,15 @@ helpviewer_keywords:
 - profiling tools, packsymbols
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d4cc39f8e07ed0947bedc31ba39d74fc8cee742a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 0bf78c94f8982af78d0f393c9cb5b878bef27d87
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53820316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62939503"
 ---
 # <a name="saving-symbol-information-with-performance-data-files"></a>使用性能数据文件保存符号信息
 
@@ -61,6 +61,6 @@ VsPerfReport -packsymbols -summary:all filename.vsp
 
 ## <a name="see-also"></a>请参阅
 
-[保存和导出性能工具数据](../profiling/saving-and-exporting-performance-tools-data.md)  
-[如何：引用 Windows 符号信息](../profiling/how-to-reference-windows-symbol-information.md)  
+[保存和导出性能工具数据](../profiling/saving-and-exporting-performance-tools-data.md)
+[如何：引用 Windows 符号信息](../profiling/how-to-reference-windows-symbol-information.md)
 [VSPerfReport](../profiling/vsperfreport.md)

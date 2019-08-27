@@ -1,7 +1,6 @@
 ---
-title: 对托管代码实施自定义代码分析签入策略
+title: 自定义代码分析签入策略的托管代码
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - vs.code.analysis.selecttfsrulesets
@@ -10,15 +9,15 @@ f1_keywords:
 ms.assetid: fd029003-5671-4b24-8b6f-032e0a98b2e8
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab2c4e61eca64917a032d9dfd80c5eca71c09ec9
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 6619e3bb988a555fba5718f609ff3a5f0584063b
+ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53873788"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66260830"
 ---
 # <a name="implement-custom-code-analysis-check-in-policies-for-managed-code"></a>实现托管代码的自定义代码分析签入策略
 
@@ -80,7 +79,7 @@ ms.locfileid: "53873788"
 
 3. 在中**签入策略**列表中，双击**代码分析**，并确保选中**托管代码的执行代码分析**复选框处于选中状态。
 
-4. 在中**运行此规则集**列表中，单击**\<从源代码管理选择规则集 >**。
+4. 在中**运行此规则集**列表中，单击 **\<从源代码管理选择规则集 >** 。
 
 5. 键入在版本控制中签入策略规则集文件的路径。
 
@@ -115,6 +114,6 @@ ms.locfileid: "53873788"
 
 6. 若要忽略来自其他公司的组件中的代码，请选择**禁止显示生成代码的结果**复选框。
 
-7. 在中**运行此规则集**列表中，单击**\<浏览...>**。
+7. 在中**运行此规则集**列表中，单击 **\<浏览...>** 。
 
 8. 指定签入策略规则集文件的本地版本。

@@ -1,14 +1,9 @@
 ---
 title: 作为源的元数据 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 dev_langs:
 - CSharp
 helpviewer_keywords:
@@ -19,13 +14,13 @@ ms.assetid: 4945a07f-b3be-4f05-a587-fc29058aa8fa
 caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
-manager: wpickett
-ms.openlocfilehash: 8bcac8071d0cc76c29a5b9d0478727fea0b59901
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 5883708d0ed32f636c5e229147676cf1545f8a47
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49232942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63444592"
 ---
 # <a name="metadata-as-source"></a>作为源代码的元数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,7 +28,7 @@ ms.locfileid: "49232942"
 作为源代码的元数据使你可以查看在只读缓冲区中显示为 C# 源代码的元数据。 这可以查看类型和成员（不包含实现）的声明。 对于源代码在项目或解决方案中不可用的类型或成员，可以通过运行“转到定义”  命令以源代码形式查看元数据。  
   
 > [!NOTE]
->  尝试对标记为内部的类型或成员运行“转到定义”  命令时，集成开发环境 (IDE) 不会将其元数据显示为源代码，无论引用程序集是否友好均是如此。  
+> 尝试对标记为内部的类型或成员运行“转到定义”  命令时，集成开发环境 (IDE) 不会将其元数据显示为源代码，无论引用程序集是否友好均是如此。  
   
  你可以在“代码编辑器”或“代码定义”  窗口中以源代码形式查看元数据。  
   

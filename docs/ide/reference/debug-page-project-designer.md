@@ -1,7 +1,7 @@
 ---
 title: “项目设计器”->“调试”页
 ms.date: 06/27/2018
-ms.prod: visual-studio-dev15
+ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - vb.ProjectPropertiesDebug
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - Project Designer, Debug page
 - Debug page in Project Designer
 ms.assetid: ef11eae9-df96-4e20-aabd-2678ba317140
-author: gewarren
-ms.author: gewarren
-manager: douge
+author: mikejo5000
+ms.author: mikejo
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f383701017e9fb830333f7a9869aac99684333a6
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a1f54485a4dd47b0aec4401f6cdfb39072e9f8cf
+ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53848254"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68461411"
 ---
 # <a name="debug-page-project-designer"></a>“项目设计器”->“调试”页
 
-使用项目设计器的“调试”页为 Visual Basic 或 C# 项目中的调试行为设置属性。
+使用项目设计器的“调试”页为 Visual Basic 或 C# 项目中的调试行为设置属性   。
 
-要访问“调试”页，请在解决方案资源管理器中选择项目节点。 在“项目”菜单上，选择“\<项目名称”>“属性”。 当项目设计器出现时，请单击“调试”选项卡。
+要访问“调试”页，请在解决方案资源管理器中选择项目节点   。 在“项目”菜单上，选择“\<项目名称”>“属性”   。 当项目设计器出现时，请单击“调试”选项卡   。
 
 > [!NOTE]
 > 本主题不适用于 UWP 应用。 有关 UWP 应用，请参阅[启动调试会话 (VB、C#、C++ 和 XAML)](../../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)。
@@ -36,15 +36,15 @@ ms.locfileid: "53848254"
 
 **配置**
 
-指定要显示或修改的配置设置。 设置可以为“调试”（默认）、“发布”或“所有配置”。
+指定要显示或修改的配置设置。 设置可以为“调试”（默认）、“发布”或“所有配置”    。
 
 **平台**
 
-指定要显示或修改的平台设置。 这些选择包括“任何 CPU”（默认）、“x64”和“x86”。
+指定要显示或修改的平台设置。 这些选择包括“任何 CPU”（默认）、“x64”和“x86”    。
 
 ## <a name="start-action"></a>启动操作
 
-“启动操作”指示应用程序调试时要启动的项：项目、自定义程序、URL 或不启动任何项。 默认情况下，此选项设置为“启动项目”。 “调试”页上的“启动操作”设置确定 `StartAction` 属性的值。
+“启动操作”指示应用程序调试时要启动的项：项目、自定义程序、URL 或不启动任何项  。 默认情况下，此选项设置为“启动项目”  。 “调试”页上的“启动操作”设置确定 `StartAction` 属性的值   。
 
 **启动项目**
 
@@ -66,7 +66,7 @@ ms.locfileid: "53848254"
 
 **工作目录**
 
-在此文本框中，输入将从其中启动项目的目录。 或单击“浏览”按钮 (...) 选择目录。
+在此文本框中，输入将从其中启动项目的目录。 或单击“浏览”按钮 (...) 选择目录  。
 
 **使用远程计算机**
 
@@ -84,7 +84,7 @@ ms.locfileid: "53848254"
 
 ## <a name="see-also"></a>请参阅
 
-- [在 Visual Studio 中进行调试](../../debugger/debugger-feature-tour.md)
+- [初探调试器](../../debugger/debugger-feature-tour.md)
 - [C# 调试配置的项目设置](../../debugger/project-settings-for-csharp-debug-configurations.md)
 - [Visual Basic 调试配置的项目设置](../../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
 - [如何：使用受限权限调试 ClickOnce 应用程序](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)

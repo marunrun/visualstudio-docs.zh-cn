@@ -1,14 +1,9 @@
 ---
-title: CA2101： 指定对 P-invoke 字符串参数封送处理 |Microsoft Docs
-ms.custom: ''
+title: CA2101:指定对 P-invoke 字符串参数封送处理 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - SpecifyMarshalingForPInvokeStringArguments
 - CA2101
@@ -20,14 +15,14 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: ffe39953f36ee8af31611bca8ce8d390f102b085
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 11916609f2efa9c0b6e208548ba51795bd276015
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49813854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68154392"
 ---
-# <a name="ca2101-specify-marshaling-for-pinvoke-string-arguments"></a>CA2101：指定对 P/Invoke 字符串参数进行封送处理
+# <a name="ca2101-specify-marshaling-for-pinvoke-string-arguments"></a>CA2101:指定对 P/Invoke 字符串参数进行封送处理
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -55,6 +50,3 @@ ms.locfileid: "49813854"
  下面的示例演示一个方法，违反了此规则，并展示了如何解决冲突。
 
  [!code-csharp[FxCop.Security.PinvokeAnsiUnicode#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.PinvokeAnsiUnicode/cs/FxCop.Security.PinvokeAnsiUnicode.cs#1)]
-
-
-

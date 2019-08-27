@@ -2,18 +2,17 @@
 title: 工作区和 Visual Studio 中的语言服务 |Microsoft Docs
 ms.date: 02/21/2018
 ms.topic: conceptual
-ms.assetid: 8631ffea-83c8-4fd4-a01e-c59772e89c84
 author: vukelich
 ms.author: svukel
 manager: viveis
 ms.workload:
 - vssdk
-ms.openlocfilehash: 28ecd995446969c271694c554ae21e03c1afc79d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 2893ae2bcd70ff317ba799fea6cfd2751c685731
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53850263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62952687"
 ---
 # <a name="workspaces-and-language-services"></a>工作区和语言服务
 
@@ -61,4 +60,4 @@ ms.locfileid: "53850263"
 
 ## <a name="next-steps"></a>后续步骤
 
-* [工作区生成](workspace-build.md)-打开文件夹支持构建如 MSBuild 和生成文件系统。 
+* [工作区生成](workspace-build.md)-打开文件夹支持构建如 MSBuild 和生成文件系统。

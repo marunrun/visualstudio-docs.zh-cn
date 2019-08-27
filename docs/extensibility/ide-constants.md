@@ -11,17 +11,17 @@ helpviewer_keywords:
 - IDE, constants
 - physical views
 ms.assetid: 5030e70a-241d-474a-ba8c-e3b1cf947ff0
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 337d5dd0e8a167bd4e49f084d819eb4c1145c6a9
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d16b758a34eb1b9f48e912f75c4eec144a07ce4a
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53837467"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66311333"
 ---
 # <a name="ide-constants"></a>IDE 常量
 
@@ -65,7 +65,7 @@ ms.locfileid: "53837467"
 
 ## <a name="visual-studio-constants"></a>Visual Studio 常量
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |<xref:Microsoft.VisualStudio.VSConstants.VS_S_PROJECTFORWARDED>|错误的 HRESULT 的特定于 Visual Studio，并指示"项目转发。|
 |<xref:Microsoft.VisualStudio.VSConstants.VS_S_TBXMARKER>|一个常量，它是特定于 Visual Studio 的"工具箱标记"。|

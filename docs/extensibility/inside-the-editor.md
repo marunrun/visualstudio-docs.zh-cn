@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - architecture
 ms.assetid: 822cbb8d-7ab4-40ee-bd12-44016ebcce81
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 785e47a337eb33eb9416705a4c2c647a99f611d7
-ms.sourcegitcommit: 59c48e1e42b48ad25a4e198af670faa4d8dae370
+ms.openlocfilehash: 155d760ee546b1e35b733a00ac9a67722742f9b5
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54204516"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66340793"
 ---
 # <a name="inside-the-editor"></a>在编辑器内
 
@@ -108,7 +108,7 @@ ms.locfileid: "54204516"
 
 #### <a name="spans-and-normalizedspancollections"></a>范围和 NormalizedSpanCollections
 
-一个<xref:Microsoft.VisualStudio.Text.Span>表示可应用于文本快照中的文本范围的间隔。 快照位置是从零开始，因此范围可以在包括零个任何位置处开始。 `End`跨度的属性是否等于之和其`Start`属性并将其`Length`属性。 一个`Span`不包括按索引的字符`End`属性。 例如，具有的起始范围 = 5 且长度 = 3 具有最终 = 8，它包括在位置 5、 6 和 7 个字符。 此跨度的表示法是 5..8）。
+一个<xref:Microsoft.VisualStudio.Text.Span>表示可应用于文本快照中的文本范围的间隔。 快照位置是从零开始，因此范围可以在包括零个任何位置处开始。 `End`跨度的属性是否等于之和其`Start`属性并将其`Length`属性。 一个`Span`不包括按索引的字符`End`属性。 例如，具有的起始范围 = 5 且长度 = 3 具有最终 = 8，它包括在位置 5、 6 和 7 个字符。 此跨度的表示法是 [5..8)。
 
 这两个范围相交如果它们具有任何共同的位置，其中包括的结束位置。 因此的交集 [3, 5) 和 [2, 7) 是 [3, 5) 和的交集 [3, 5) 和 [5, 7) 是 [5，5）。 (请注意，[5，5) 是空范围。)
 
@@ -202,19 +202,19 @@ abXefYj
 
 编辑器的功能设计，以便独立于其实现的功能的定义。 编辑器包括以下功能：
 
--   标记和分类器
+- 标记和分类器
 
--   修饰
+- 修饰
 
--   投影
+- 投影
 
--   大纲显示
+- 大纲显示
 
--   鼠标和键绑定
+- 鼠标和键绑定
 
--   操作和基元
+- 操作和基元
 
--   IntelliSense
+- IntelliSense
 
 ### <a name="tags-and-classifiers"></a>标记和分类器
 
@@ -262,7 +262,7 @@ C# 分类器可能会标记为一个注释，整个范围并将英语语言的�
 
 弹出修饰是在文本视图，例如，工具提示上方的一个小窗口中显示的图形。
 
-###  <a name="projection"></a> 投影
+### <a name="projection"></a> 投影
 
 投影是一种构造一种不同的文本缓冲区的实际存储文本，但改为结合了其他文本缓冲区中的文本的方法。 例如，可以使用投影缓冲区，来连接其他两个缓冲区中的文本，并显示结果，如同它是一个缓冲区中或隐藏一个缓冲区中的文本部分。 投影缓冲区可以充当源缓冲区到另一个投影缓冲区。 可以构造一组缓冲区通过投影相关的顺序重新进行排列以多种不同方式的文本。 (此类集是也称为*缓冲区关系图*。)Visual Studio 文本大纲显示功能实现通过使用投影缓冲区来隐藏折叠的文本，并且 ASP.NET 页的 Visual Studio 编辑器使用投影来支持嵌入的 Visual Basic 和 C# 等语言。
 

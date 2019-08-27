@@ -1,129 +1,125 @@
 - name: Visual Studio 中的 XML 工具
   href: xml-tools-in-visual-studio.md
+- name: XML 编辑器
   items:
-    - name: 使用 XML 数据
-      href: working-with-xml-data.md
+    - name: 概述
+      displayName: XML editor
+      href: xml-editor.md
+    - name: XML 文档验证
+      href: xml-document-validation.md
+    - name: XML 编辑器 IntelliSense 功能
+      href: xml-editor-intellisense-features.md
+    - name: XML 代码片断
       items:
-        - name: XML 编辑器
-          href: xml-editor.md
+        - name: 概述
+          displayName: XML snippets overview
+          href: xml-snippets.md
+        - name: 使用 XML 片段
+          href: how-to-use-xml-snippets.md
+        - name: 基于 XML 架构生成片段
+          href: how-to-generate-an-xml-snippet-from-an-xml-schema.md
+        - name: 创建 XML 片段
+          href: how-to-create-xml-snippets.md
+    - name: 编辑 XSLT 样式表
+      href: editing-xslt-style-sheets.md
+    - name: 架构缓存
+      href: schema-cache.md
+    - name: XML 编辑器任务
+      items:
+        - name: 演练：使用 XML 编辑器功能
+          href: walkthrough-using-xml-editor-features.md
+        - name: 选择要使用的 XML 架构
+          href: how-to-select-the-xml-schemas-to-use.md
+        - name: 基于XML 文档创建 XML 架构
+          href: how-to-create-an-xml-schema-from-an-xml-document.md
+        - name: 通过 XML 编辑器执行 XSLT 转换
+          href: how-to-execute-an-xslt-transformation-from-the-xml-editor.md
+        - name: 编辑 XML 文件
+          href: how-to-edit-xml-files.md
+        - name: XSLT 演示
           items:
-            - name: XML 文档验证
-              href: xml-document-validation.md
-            - name: XML 编辑器的 IntelliSense 功能
-              href: xml-editor-intellisense-features.md
-            - name: XML 代码片断
-              href: xml-snippets.md
-            - name: 编辑 XSLT 样式表
-              href: editing-xslt-style-sheets.md
-            - name: 架构缓存
-              href: schema-cache.md
-            - name: “XML 编辑器”的组件
-              href: xml-editor-components.md
-              items:
-                - name: 杂项，XML，文本编辑器，“选项”对话框
-                  href: miscellaneous-xml-text-editor-options-dialog-box.md
-                - name: XML 文档属性，“属性”窗口
-                  href: xml-document-properties-properties-window.md
-                - name: 格式化，XML，文本编辑器，“选项”对话框
-                  href: formatting-xml-text-editor-options-dialog-box.md
-                - name: XML 架构对话框
-                  href: xml-schemas-dialog-box.md
-            - name: XML 编辑器任务
-              items:
-                - name: 演练：使用 XML 编辑器功能
-                  href: walkthrough-using-xml-editor-features.md
-                - name: 选择要使用的 XML 架构
-                  href: how-to-select-the-xml-schemas-to-use.md
-                - name: 从 XML 文档创建 XML 架构
-                  href: how-to-create-an-xml-schema-from-an-xml-document.md
-                - name: 在 XML 编辑器中执行 XSLT 转换
-                  href: how-to-execute-an-xslt-transformation-from-the-xml-editor.md
-                - name: 编辑 XML 文件
-                  href: how-to-edit-xml-files.md
-                - name: 使用 XML 代码段
-                  href: how-to-use-xml-snippets.md
-                - name: 从 XML 架构生成 XML 代码段
-                  href: how-to-generate-an-xml-snippet-from-an-xml-schema.md
-                - name: 创建 XML 代码段
-                  href: how-to-create-xml-snippets.md
-                - name: 演练：使用 XSLT IntelliSense
-                  href: walkthrough-using-xslt-intellisense.md
-                - name: 演练：使用 XSLT 层次结构
-                  href: walkthrough-using-xslt-hierarchy.md
-                - name: 演练：XSLT 探查器
-                  href: walkthrough-xslt-profiler.md
-        - name: XML 架构设计器
-          href: xml-schema-designer.md
+            - name: XSLT IntelliSense
+              href: walkthrough-using-xslt-intellisense.md
+            - name: XSLT 层次结构
+              href: walkthrough-using-xslt-hierarchy.md
+    - name: XML 文件属性
+      href: xml-document-properties-properties-window.md
+    - name: XML 架构对话框
+      href: xml-schemas-dialog-box.md
+- name: XML 架构设计器
+  items:
+    - name: 概述
+      displayName: XML Schema Designer overview
+      href: xml-schema-designer.md
+    - name: XML 架构资源管理器
+      items:
+        - name: XML 架构资源管理器
+          href: xml-schema-explorer.md
+        - name: 搜索架构集
+          href: searching-the-schema-set.md
+        - name: 排序、筛选和分组
+          href: sorting-filtering-and-grouping-xml-schema-explorer.md
+        - name: 上下文菜单
+          href: context-menus-xml-schema-explorer.md
+        - name: XML 文本的集成
+          href: integration-of-xml-literals-with-xml-schema-explorer.md
+    - name: 工作区
+      items:
+        - name: 视图概述
+          href: xml-schema-designer-workspace.md
+        - name: 起始视图
+          href: start-view.md
+        - name: 内容模型视图
+          href: content-model-view.md
+        - name: 图形视图
+          href: graph-view.md
+    - name: 与 XML 编辑器集成
+      href: integration-with-xml-editor.md
+    - name: XML 架构设计器任务
+      items:
+        - name: 创建和编辑 XSD 架构文件
+          href: how-to-create-and-edit-an-xsd-schema-file.md
+        - name: 基于 XSD 架构创建 XML 文档
+          href: how-to-create-an-xml-document-based-on-an-xsd-schema.md
+        - name: 向工作区添加架构集搜索结果节点
+          href: how-to-add-schema-set-search-result-nodes-to-the-workspace.md
+        - name: 在视图和 XML 编辑器之间切换
+          href: how-to-switch-between-views-and-the-xml-editor.md
+        - name: 将 XML 结构资源管理器中的节点添加到工作区
+          href: how-to-add-nodes-to-the-workspace-from-the-xml-schema-explorer.md
+        - name: 将起始视图中的节点添加到工作区
+          href: how-to-add-nodes-to-the-workspace-from-the-start-view.md
+        - name: 获取架构集的概述
+          href: how-to-get-an-overview-of-a-schema-set-using-the-graph-view.md
+        - name: 检查节点的内容模型
+          href: how-to-examine-the-content-model-of-nodes-using-the-content-model-view.md
+        - name: 结合使用 XML 架构设计器和 XML 文本
+          href: how-to-use-the-xml-schema-designer-with-xml-literals.md
+        - name: 打印关系图
+          href: how-to-print-diagrams-from-the-graph-view-and-the-content-model-view.md
+        - name: 示例 XSD 文件
           items:
-            - name: XML 架构资源管理器
-              href: xml-schema-explorer.md
-              items:
-                - name: 搜索架构集
-                  href: searching-the-schema-set.md
-                - name: 排序、筛选和分组
-                  href: sorting-filtering-and-grouping-xml-schema-explorer.md
-                - name: 上下文菜单
-                  href: context-menus-xml-schema-explorer.md
-                - name: XML 文本集成
-                  href: integration-of-xml-literals-with-xml-schema-explorer.md
-            - name: XML 架构设计器工作区
-              href: xml-schema-designer-workspace.md
-              items:
-                - name: 起始视图
-                  href: start-view.md
-                - name: 内容模型视图
-                  href: content-model-view.md
-                - name: 图形视图
-                  href: graph-view.md
-            - name: 与 XML 编辑器的集成
-              href: integration-with-xml-editor.md
-            - name: XML 架构设计器任务
-              items:
-                - name: 创建和编辑 XSD 架构文件
-                  href: how-to-create-and-edit-an-xsd-schema-file.md
-                - name: 基于 XSD 架构创建 XML 文档
-                  href: how-to-create-an-xml-document-based-on-an-xsd-schema.md
-                - name: 将架构集搜索结果节点添加到工作区
-                  href: how-to-add-schema-set-search-result-nodes-to-the-workspace.md
-                - name: 在视图和 XML 编辑器之间切换
-                  href: how-to-switch-between-views-and-the-xml-editor.md
-                - name: 从 XML 架构资源管理器向工作区添加节点
-                  href: how-to-add-nodes-to-the-workspace-from-the-xml-schema-explorer.md
-                - name: 从起始视图向工作区添加节点
-                  href: how-to-add-nodes-to-the-workspace-from-the-start-view.md
-                - name: 使用图形视图获取架构集的概览
-                  href: how-to-get-an-overview-of-a-schema-set-using-the-graph-view.md
-                - name: 使用内容模型视图检查节点的内容模型
-                  href: how-to-examine-the-content-model-of-nodes-using-the-content-model-view.md
-                - name: 将 XML 架构设计器用于 XML 文本
-                  href: how-to-use-the-xml-schema-designer-with-xml-literals.md
-                - name: 从图形视图和内容模型视图打印关系图
-                  href: how-to-print-diagrams-from-the-graph-view-and-the-content-model-view.md
-                - name: 示例 XSD 文件
-                  href: sample-xsd-files.md
-                  items:
-                    - name: 简单架构
-                      href: sample-xsd-file-simple-schema.md
-                    - name: 订单架构
-                      href: sample-xsd-file-purchase-order-schema.md
-                    - name: 关系
-                      href: sample-xsd-file-relationships.md
-        - name: 使用 XML 数据时的安全注意事项
-          href: security-considerations-when-working-with-xml-data.md
-    - name: XSLT 调试
+            - name: 简单架构
+              displayName: Sample XSD files
+              href: sample-xsd-file-simple-schema.md
+            - name: 采购订单架构
+              href: sample-xsd-file-purchase-order-schema.md
+            - name: 关系
+              href: sample-xsd-file-relationships.md
+- name: XSLT 调试
+  items:
+    - name: 概述
+      displayName: XSLT debugging
       href: debugging-xslt.md
-      items:
-        - name: 调试 XSLT
-          href: how-to-start-debugging-xslt.md
-        - name: 在 XSLT 中使用断点
-          href: how-to-use-breakpoints-with-xslt.md
-        - name: 计算 XPath 表达式
-          href: how-to-evaluate-an-xpath-expression.md
-        - name: 演练：调试 XSLT 样式表
-          href: walkthrough-debug-an-xslt-style-sheet.md
-        - name: XSLT 默认模板
-          href: xslt-default-templates.md
-        - name: 调试程序用户界面 (XSLT)
-          href: debugger-user-interface-xslt.md
-        - name: XSLT 探查器
-          href: xslt-profiler.md
+    - name: 演练：调试 XSLT 样式表
+      href: walkthrough-debug-an-xslt-style-sheet.md
+    - name: 评估 XPath 表达式
+      href: how-to-evaluate-an-xpath-expression.md
+    - name: XSLT 调试程序用户界面
+      href: debugger-user-interface-xslt.md
+    - name: XSLT 默认模板
+      href: xslt-default-templates.md
+    - name: XSLT 探查器
+      href: xslt-profiler.md
+- name: XML 的安全注意事项
+  href: security-considerations-when-working-with-xml-data.md

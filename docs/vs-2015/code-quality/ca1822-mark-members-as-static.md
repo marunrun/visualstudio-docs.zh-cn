@@ -1,14 +1,9 @@
 ---
-title: CA1822： 将成员标记为静态 |Microsoft Docs
-ms.custom: ''
+title: CA1822:将成员标记为静态 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - MarkMembersAsStatic
 - CA1822
@@ -20,24 +15,24 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 7b85d12038d4c505f912dd2f9440829f2c80679c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 42c6f0d333d1f7ee3f657b9c57c4154e9f824128
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49183490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68201684"
 ---
-# <a name="ca1822-mark-members-as-static"></a>CA1822：将成员标记为 static
+# <a name="ca1822-mark-members-as-static"></a>CA1822:将成员标记为 static
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 2017 的最新文档，请参阅[CA1822： 将成员标记为静态](https://docs.microsoft.com/visualstudio/code-quality/ca1822-mark-members-as-static)docs.microsoft.com 上。  
+Visual Studio 的最新文档，请参阅[CA1822:将成员标记为静态](https://docs.microsoft.com/visualstudio/code-quality/ca1822-mark-members-as-static)。  
   
 |||  
 |-|-|  
 |TypeName|MarkMembersAsStatic|  
 |CheckId|CA1822|  
 |类别|Microsoft.Performance|  
-|是否重大更改|无间断-如果该成员不可见程序集外部的而不考虑更改进行。 否-如果只需将该成员更改为实例成员与`this`关键字。<br /><br /> 是-如果从实例成员的成员更改为静态成员，并且它是程序集外部可见。|  
+|是否重大更改|无间断-如果该成员不可见程序集外部的而不考虑更改进行。<br /><br /> 无间断-如果只需将该成员更改为实例成员与`this`关键字。<br /><br /> 是-如果从实例成员的成员更改为静态成员，并且它是程序集外部可见。|  
   
 ## <a name="cause"></a>原因  
  不访问实例数据成员未标记为静态 (共享中[!INCLUDE[vbprvb](../includes/vbprvb-md.md)])。  
@@ -52,9 +47,8 @@ Visual Studio 2017 的最新文档，请参阅[CA1822： 将成员标记为静�
  它可以安全地禁止显示以前发布的代码的修复程序将为其在一项重大更改此规则的警告。  
   
 ## <a name="related-rules"></a>相关的规则  
- [CA1811：避免使用未调用的私有代码](../code-quality/ca1811-avoid-uncalled-private-code.md)  
+ [CA1811:避免使用未调用的私有代码](../code-quality/ca1811-avoid-uncalled-private-code.md)  
   
- [CA1812：避免未实例化的内部类](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)  
+ [CA1812:避免未实例化的内部类](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)  
   
- [CA1804：移除未使用的局部变量](../code-quality/ca1804-remove-unused-locals.md)
-
+ [CA1804:删除未使用的局部变量](../code-quality/ca1804-remove-unused-locals.md)

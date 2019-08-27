@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: e86806dd-5897-4e4c-bfd4-8d687fb72a6e
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 1f6debabdb154e091a8021ccd998bb31d8f88d28
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 6045466d93a0017b648ca4327e80c801517c1359
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53932254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786427"
 ---
 # <a name="how-to-specify-test-agents-to-use-in-load-test-scenarios"></a>如何：指定要在负载测试方案中使用的测试代理
 
@@ -46,24 +45,24 @@ ms.locfileid: "53932254"
 
 ## <a name="to-specify-the-agents-to-use-for-a-scenario"></a>指定要用于方案的代理
 
-1.  打开一个负载测试。
+1. 打开一个负载测试。
 
      “负载测试编辑器”随即显示。 其中显示负载测试树。
 
-2.  在负载测试树的“方案”文件夹中，选择要为其指定所用代理的方案节点。
+2. 在负载测试树的“方案”文件夹中，选择要为其指定所用代理的方案节点。
 
-3.  在“视图”菜单上选择“属性窗口”。
+3. 在“视图”菜单上选择“属性窗口”。
 
      该方案的类别和属性将显示在“属性”窗口中。
 
-4.  在与“要使用的代理”属性对应的文本框中，键入该方案可运行于的代理的列表。
+4. 在与“要使用的代理”属性对应的文本框中，键入该方案可运行于的代理的列表。
 
      代理必须用逗号分隔，例如“Agent1, Agent2, Agent3”。 将该属性保留为空白会指定该方案应使用所有可用的代理。
 
     > [!NOTE]
     > 对本地运行将忽略“要使用的代理”属性。 对于远程运行，如果“要使用的代理”中指定的代理都不存在，则该方案中的测试将不运行。
 
-5.  更改属性后，在“文件”菜单上选择“保存”。 然后，就可以用新的“要使用的代理”值运行负载测试了。
+5. 更改属性后，在“文件”菜单上选择“保存”。 然后，就可以用新的“要使用的代理”值运行负载测试了。
 
 ## <a name="see-also"></a>请参阅
 

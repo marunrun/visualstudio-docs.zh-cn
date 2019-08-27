@@ -1,14 +1,9 @@
 ---
-title: 演练： 获取一系列安装代码片段 （旧版实现） |Microsoft Docs
-ms.custom: ''
+title: 演练：获取一系列安装代码片段 （旧版实现） |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - snippets, retrieving list
 - code snippets, retrieving list
@@ -16,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 7d142f8b-35b1-44c4-a13e-f89f6460c906
 caps.latest.revision: 16
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: a8d132de9773614b966b6fe3a7ae84392fba4f35
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 256430c0e41bfc0452282c89407335d997cc715c
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51759976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63440757"
 ---
-# <a name="walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation"></a>演练：获取已安装代码片段（旧版实现）的列表
+# <a name="walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation"></a>演练：获取包含已安装的代码片段的列表（旧版实现）
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 代码段是一段代码可以插入到源缓冲区 （它允许选择安装的代码片段的列表） 的菜单命令或通过从 IntelliSense 完成列表中选择代码片段快捷方式。  
@@ -35,7 +30,7 @@ ms.locfileid: "51759976"
   
 ### <a name="to-retrieve-a-list-of-code-snippets"></a>若要检索的代码段的列表  
   
-1.  下面的代码演示如何获取给定语言的代码段的列表。 结果存储在一个数组中<xref:Microsoft.VisualStudio.TextManager.Interop.VsExpansion>结构。 此方法使用静态<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>方法以获取<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager>接口从<xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>服务。 但是，还可以使用服务提供商提供给你的 VSPackage 和调用<xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A>方法。  
+1. 下面的代码演示如何获取给定语言的代码段的列表。 结果存储在一个数组中<xref:Microsoft.VisualStudio.TextManager.Interop.VsExpansion>结构。 此方法使用静态<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>方法以获取<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager>接口从<xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>服务。 但是，还可以使用服务提供商提供给你的 VSPackage 和调用<xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A>方法。  
   
     ```csharp  
     using System;  
@@ -110,10 +105,10 @@ ms.locfileid: "51759976"
   
 ### <a name="to-call-the-getsnippets-method"></a>若要调用 GetSnippets 方法  
   
-1.  下面的方法演示如何调用`GetSnippets`方法在分析操作完成。 <xref:Microsoft.VisualStudio.Package.LanguageService.OnParseComplete%2A>之后的分析操作中，原因是启动调用方法<xref:Microsoft.VisualStudio.Package.ParseReason>。  
+1. 下面的方法演示如何调用`GetSnippets`方法在分析操作完成。 <xref:Microsoft.VisualStudio.Package.LanguageService.OnParseComplete%2A>之后的分析操作中，原因是启动调用方法<xref:Microsoft.VisualStudio.Package.ParseReason>。  
   
 > [!NOTE]
->  `expansionsList`数组 listis 出于性能原因缓存。 停止并重新加载语言服务之前，在列表中不反映对这些代码片段更改 (例如，通过停止并重新启动[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)])。  
+> `expansionsList`数组 listis 出于性能原因缓存。 停止并重新加载语言服务之前，在列表中不反映对这些代码片段更改 (例如，通过停止并重新启动[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)])。  
   
 ```csharp  
 class TestLanguageService : LanguageService  
@@ -134,7 +129,7 @@ class TestLanguageService : LanguageService
   
 ### <a name="to-use-the-snippet-information"></a>若要使用的代码段信息  
   
-1.  下面的代码演示如何使用返回的代码段信息`GetSnippets`方法。 `AddSnippets`从用于填充的代码片段列表的任何分析原因响应中的分析器调用方法。 这应发生后第一次完成了完整的分析。  
+1. 下面的代码演示如何使用返回的代码段信息`GetSnippets`方法。 `AddSnippets`从用于填充的代码片段列表的任何分析原因响应中的分析器调用方法。 这应发生后第一次完成了完整的分析。  
   
      `AddDeclaration`方法可生成更高版本显示完成列表中声明的列表。  
   
@@ -185,4 +180,3 @@ class TestLanguageService : LanguageService
   
 ## <a name="see-also"></a>请参阅  
  [旧版语言服务中的代码片段支持](../../extensibility/internals/support-for-code-snippets-in-a-legacy-language-service.md)
-

@@ -2,7 +2,6 @@
 title: IDebugDocument 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,12 +13,12 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 75b70ef255b5f1e5eed4d36373274bc05cf92e67
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: b750dc586e241aa7e969362bb58f72a3ad77f0aa
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54344286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62974483"
 ---
 # <a name="idebugdocument-interface"></a>IDebugDocument 接口
 所有调试文档的基接口。  

@@ -2,7 +2,6 @@
 title: DOCUMENTNAMETYPE 枚举 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 31e304cfbb0ed7cd19b832d7ed7c33ccc2c930c3
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: 5ee258602c47951f4731dc1378542cc83d57d72b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54094765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955207"
 ---
 # <a name="documentnametype-enumeration"></a>DOCUMENTNAMETYPE 枚举
 描述为文档获取哪种类型。  

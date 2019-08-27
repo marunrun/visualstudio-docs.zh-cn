@@ -1,24 +1,19 @@
 ---
 title: 使用 Microsoft Fakes 隔离受测代码 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-test
+ms.topic: conceptual
 ms.assetid: a03c2e83-a41f-4854-bcf2-fcaa277a819d
 caps.latest.revision: 18
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: a2c5806af5712a396659d484d09d3fd7374111a1
-ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
+manager: jillfra
+ms.openlocfilehash: 97f238b51e3f4ad3bbb32bdbdc134089c0cb7e99
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51220926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68147195"
 ---
 # <a name="isolating-code-under-test-with-microsoft-fakes"></a>用 Microsoft Fakes 隔离测试代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -56,10 +51,10 @@ Microsoft Fakes 将应用的其余部分替换为*存根*或*垫片*，有助于
   
  通常，我们建议使用存根类型来与基本代码中的依赖项隔离。 可以通过隐藏接口后面的组件执行此操作。 填充码类型可用于与不提供可测试的 API 的第三方组件隔离。  
   
-##  <a name="stubs"></a>开始使用存根  
+## <a name="stubs"></a>开始使用存根  
  有关更详细的说明，请参阅[使用存根隔离应用的各个部分以供单元测试使用](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md)。  
   
-1.  **注入接口**  
+1. **注入接口**  
   
      若要使用存根，你在编写要测试的代码时不应明确提及应用程序的其他组件中的类。 “组件”是指一个类或一起开发和更新的多个类，通常包含在一个 Visual Studio 项目中。 应使用接口来声明变量和参数，并且应使用工厂来传入或创建其他组件的实例。 例如，如果 StockFeed 是应用程序的另一个组件中的类，则可以认为以下内容是错误的：  
   
@@ -80,15 +75,15 @@ Microsoft Fakes 将应用的其余部分替换为*存根*或*垫片*，有助于
   
     ```  
   
-2.  **添加 Fakes 程序集**  
+2. **添加 Fakes 程序集**  
   
-    1.  在“解决方案资源管理器”中，展开测试项目的引用列表。 如果使用的是 Visual Basic，必须选择“显示所有文件”才能看到引用列表。  
+    1. 在“解决方案资源管理器”中，展开测试项目的引用列表。 如果使用的是 Visual Basic，必须选择“显示所有文件”  才能看到引用列表。  
   
-    2.  选择对其中定义了接口（例如 IStockFeed）的程序集的引用。 在此引用的快捷菜单上，选择“添加 Fakes 程序集”。  
+    2. 选择对其中定义了接口（例如 IStockFeed）的程序集的引用。 在此引用的快捷菜单上，选择“添加 Fakes 程序集”  。  
   
-    3.  重新生成解决方案。  
+    3. 重新生成解决方案。  
   
-3.  在测试中，构建存根的实例并为存根的方法提供代码：  
+3. 在测试中，构建存根的实例并为存根的方法提供代码：  
   
     ```csharp  
     [TestClass]  
@@ -150,7 +145,7 @@ Microsoft Fakes 将应用的其余部分替换为*存根*或*垫片*，有助于
   
      另外，还会为属性的 getter 和 setter、事件和泛型方法生成存根。 有关详细信息，请参阅[使用存根隔离应用的各个部分以供单元测试使用](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md)。  
   
-##  <a name="shims"></a>开始使用垫片  
+## <a name="shims"></a>开始使用垫片  
  （有关更详细的说明，请参阅[使用垫片将应用与其他程序集相隔离以供单元测试使用](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)。）  
   
  假定你的组件包含对 `DateTime.Now` 的调用：  
@@ -170,9 +165,9 @@ Microsoft Fakes 将应用的其余部分替换为*存根*或*垫片*，有助于
   
 1. **添加 Fakes 程序集**  
   
-    在“解决方案资源管理器”中，打开单元测试项目的引用，然后选择对包含要虚设的方法的程序集的引用。 在此示例中，`DateTime` 类位于 **System.dll** 中。  若要查看 Visual Basic 项目中的引用，请选择“显示所有文件”。  
+    在“解决方案资源管理器”中，打开单元测试项目的引用，然后选择对包含要虚设的方法的程序集的引用。 在此示例中，`DateTime` 类位于 **System.dll** 中。  若要查看 Visual Basic 项目中的引用，请选择“显示所有文件”  。  
   
-    选择“添加 Fakes 程序集”。  
+    选择“添加 Fakes 程序集”  。  
   
 2. **在 ShimsContext 中插入垫片**  
   
@@ -253,6 +248,3 @@ System.IO.Fakes.ShimFile.AllInstances.ReadToEnd = ...
  [使用填充码针对单元测试将应用程序与程序集隔离](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)  
   
  [Microsoft Fakes 中的代码生成、编译和命名约定](../test/code-generation-compilation-and-naming-conventions-in-microsoft-fakes.md)
-
-
-

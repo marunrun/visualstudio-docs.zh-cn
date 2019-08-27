@@ -2,9 +2,8 @@
 title: 删除 Visual Studio
 titleSuffix: ''
 description: 了解如何逐步从计算机中彻底删除 Visual Studio。
-ms.date: 09/12/2017
+ms.date: 03/30/2019
 ms.custom: seodec18
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - uninstall
@@ -18,21 +17,23 @@ f1_keywords:
 ms.assetid: 9c81a777-9c95-4934-b517-c60c6dc78799
 author: heaths
 ms.author: tglee
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 26d29ccf0bfa834ec7581fea11a606ce0558cf74
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.prod: visual-studio-windows
+ms.technology: vs-installation
+ms.openlocfilehash: e363065d96169660817a548fb97d39f09cf679c9
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53985662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62810385"
 ---
-# <a name="remove-visual-studio-2017"></a>删除 Visual Studio 2017
+# <a name="remove-visual-studio"></a>删除 Visual Studio
 
-如果遇到灾难性错误，并且无法修复或卸载 Visual Studio，可运行 `InstallCleanup.exe` 工具，以删除 Visual Studio 2017 及更高版本的所有已安装实例的安装文件和产品信息。 如果修复或卸载失败，运行此工具将作为最后的解决措施，并且可能从其他 Visual Studio 安装或其他需要修复的产品中卸载功能。
+如果遇到灾难性错误，并且无法修复或卸载 Visual Studio，可运行 `InstallCleanup.exe` 工具，以删除 Visual Studio 2017 或 Visual Studio 2019 的所有已安装实例的安装文件和产品信息。 如果修复或卸载失败，运行此工具应仅作为最后的解决措施，并且可能从其他 Visual Studio 安装或其他也可能需要修复的产品中卸载功能。
 
-在下面的说明中，可以使用具有以下行为的不同命令行开关运行此工具：
+在以下说明中，可以使用具有以下行为的不同命令行开关运行此工具：
 
 | 开关 | 行为 |
 | ------ | -------- |
@@ -41,10 +42,10 @@ ms.locfileid: "53985662"
 
 1. 关闭 Visual Studio 安装程序。
 2. 打开管理员命令提示符。 要打开管理员命令提示符，请执行以下步骤：
-   * 单击“开始”菜单
-   * 键入“cmd”。
+   * 在“在此键入进行搜索”框中键入“cmd”。
    * 右键单击“命令提示符” ，然后单击“以管理员身份运行” 。
 3. 键入 `InstallCleanup.exe` 实用工具的完整路径，并传递所需的任何命令行开关。 默认情况下，此实用工具的路径如下所示：
+
    ```
    C:\Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\layout\InstallCleanup.exe
    ```
@@ -55,7 +56,7 @@ ms.locfileid: "53985662"
 
 ## <a name="see-also"></a>请参阅
 
-* [安装 Visual Studio 2017](install-visual-studio.md)
-* [更新 Visual Studio 2017](update-visual-studio.md)
-* [修改 Visual Studio 2017](modify-visual-studio.md)
-* [卸载 Visual Studio 2017](uninstall-visual-studio.md)
+* [安装 Visual Studio](install-visual-studio.md)
+* [更新 Visual Studio](update-visual-studio.md)
+* [修改 Visual Studio](modify-visual-studio.md)
+* [卸载 Visual Studio](uninstall-visual-studio.md)

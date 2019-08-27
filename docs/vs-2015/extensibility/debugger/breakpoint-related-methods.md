@@ -1,38 +1,33 @@
 ---
 title: 断点相关的方法 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], breakpoint methods
 - breakpoints, methods
 ms.assetid: a6f77bf0-bf81-443f-8683-5f12075bbe10
 caps.latest.revision: 9
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: e1767afec32b2b90250a841317e0929fcdd7732c
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 47ba1529521fdce042512a38d32ad2ca2eb3cb82
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51794993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68146439"
 ---
 # <a name="breakpoint-related-methods"></a>断点相关的方法
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 调试引擎 (DE) 必须支持的设置的断点。 Visual Studio 调试支持以下类型的断点：  
   
--   绑定  
+- 绑定  
   
      通过用户界面请求和成功绑定到指定的代码位置  
   
--   挂起  
+- 挂起  
   
      通过 UI 但尚未绑定到实际说明请求  
   
@@ -91,4 +86,3 @@ ms.locfileid: "51794993"
   
 ## <a name="see-also"></a>请参阅  
  [执行控件和状态计算](../../extensibility/debugger/execution-control-and-state-evaluation.md)
-

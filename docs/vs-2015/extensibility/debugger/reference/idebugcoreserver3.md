@@ -1,14 +1,9 @@
 ---
-title: IDebugCoreServer3 |Microsoft Docs
-ms.custom: ''
+title: IDebugCoreServer3 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - IDebugCoreServer3
 helpviewer_keywords:
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 51f5f41b-a5a4-4df0-a703-41f3d1811d7f
 caps.latest.revision: 9
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: f732492a3730a9071fd08aab4fe925f4e6bf2cd0
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: cd1781b133b4c3ee95b4207a0dd237e2dd7298a1
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51735849"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65685652"
 ---
 # <a name="idebugcoreserver3"></a>IDebugCoreServer3
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -39,7 +34,7 @@ IDebugCoreServer3 : IDebugCoreServer2
  Visual Studio 实现此接口。  
   
 ## <a name="notes-for-callers"></a>调用方的说明  
- 使用[QueryInterface](http://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3)若要获取此接口从[IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)接口。 调用[GetServer](../../../extensibility/debugger/reference/idebugdefaultport2-getserver.md)还可以返回此接口。 此接口是最常用的自定义端口提供程序以启动服务器 （本地或远程） 上的程序。  
+ 使用[QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3)若要获取此接口从[IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)接口。 调用[GetServer](../../../extensibility/debugger/reference/idebugdefaultport2-getserver.md)还可以返回此接口。 此接口是最常用的自定义端口提供程序以启动服务器 （本地或远程） 上的程序。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法  
  除了上的方法[IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)接口，此接口实现以下方法：  
@@ -61,11 +56,10 @@ IDebugCoreServer3 : IDebugCoreServer2
 ## <a name="requirements"></a>要求  
  标头： msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间:Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)   
  [GetServer](../../../extensibility/debugger/reference/idebugdefaultport2-getserver.md)
-

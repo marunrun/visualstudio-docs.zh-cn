@@ -1,14 +1,9 @@
 ---
 title: ClickOnce 参考 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -20,13 +15,13 @@ ms.assetid: 2a7d5704-5e8c-452c-9ef3-5e8ec5e952fe
 caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: ffde39543da20d29994e4efa205e0a7c13e30e79
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: c7086d5bab5be2df4cc1249cc629468883c9247a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49188273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68156087"
 ---
 # <a name="clickonce-reference"></a>ClickOnce 参考
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -57,6 +52,3 @@ ms.locfileid: "49188273"
   
  [发布 ClickOnce 应用程序](../deployment/publishing-clickonce-applications.md)  
  提供了演练和如何-到的可以执行 ClickOnce 任务。
-
-
-

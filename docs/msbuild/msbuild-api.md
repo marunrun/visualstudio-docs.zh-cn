@@ -4,15 +4,15 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b5241d5978411b6e3740a0aa294935758b4c825
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 256dba169357f24af147f6efd244de842563bc43
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53946823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817279"
 ---
 # <a name="use-the-msbuild-api"></a>使用 MSBuild API
 

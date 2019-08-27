@@ -1,27 +1,22 @@
 ---
 title: 命令设计 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - commands
 - commands, implementation
 ms.assetid: 097108c3-f758-4b87-89d6-b32d12d9041a
 caps.latest.revision: 35
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 9aed86eef616702363a661ece0ab565a768f2f75
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: a6e9eaf69be62b38a880b07fd8eb51cfc9c256a3
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51750122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68195079"
 ---
 # <a name="command-design"></a>命令设计
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -67,7 +62,7 @@ ms.locfileid: "51750122"
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|描述|  
 |-----------|-----------------|  
 |[实现](../../extensibility/internals/command-implementation.md)|介绍如何在 VSPackage 中实现命令。|  
 |[可用性](../../extensibility/internals/command-availability.md)|介绍 Visual Studio 上下文如何确定有哪些命令。|  
@@ -77,4 +72,3 @@ ms.locfileid: "51750122"
 |[默认命令、组和工具栏位置](../../extensibility/internals/default-command-group-and-toolbar-placement.md)|介绍 Vspackage 如何充分利用 Visual Studio 中包含的命令。|  
 |[管理 VSPackages](../../extensibility/managing-vspackages.md)|介绍 Visual Studio 加载 Vspackage 的方式。|  
 |[Visual Studio 命令表格 (.Vsct) 文件](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)|提供了有关基于 XML 的.vsct 文件，用于描述的布局和外观的 Vspackage 中的命令的信息。|
-

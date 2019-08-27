@@ -7,20 +7,19 @@ helpviewer_keywords:
 - error, process
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c235a55cbb5648eec0c2e1ee0632b56b1ea537ad
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 11605b9477397bb217bc2799feb622cb9d5bce37
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53860957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62569818"
 ---
 # <a name="visual-studio-unrecoverable-process-error"></a>Visual Studio 无法恢复的处理器错误
 
-Visual Studio 2017 使用多个进程外的进程来运行必需的后台任务，如实时单元测试、代码分析器等。 在进程外运行这些进程可提供 Visual Studio 性能优势，例如运行长且资源密集的作业时，Visual Studio 可更快响应。 此外，由于 Visual Studio 是一个 32 位进程，在进程外运行进程可为内存密集型作业提供更大的操作内存空间。
+Visual Studio 使用多个进程外的进程来运行必需的后台任务，如实时单元测试、代码分析器等。 在进程外运行这些进程可提供 Visual Studio 性能优势，例如运行长且资源密集的作业时，Visual Studio 可更快响应。 此外，由于 Visual Studio 是一个 32 位进程，在进程外运行进程可为内存密集型作业提供更大的操作内存空间。
 
 如果 ServiceHub.RoslynCodeAnalysisService.exe 或 ServiceHub.RoslynCodeAnalysisService32.exe 进程出于某种原因结束，弹出信息栏会显示以下消息：
 

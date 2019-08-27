@@ -7,14 +7,13 @@ helpviewer_keywords:
 ms.assetid: 6fe13be1-aeb5-4927-9bff-35950e194da9
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: d047298a263e707c2f4e09475d2f6510a586a4f2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: e49fbb3411aee98fce5899c522b9743b3f2afa33
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53945815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62950249"
 ---
 # <a name="how-to-create-a-recorder-plug-in"></a>如何：创建记录器插件
 
@@ -24,7 +23,7 @@ ms.locfileid: "53945815"
 
 记录器插件使你可对动态参数执行自己的自定义关联。 通过内置的关联功能，Web 性能测试会在测试完成时或在使用 Web 性能测试编辑器工具栏上的“将动态参数提升为 Web 测试参数”时，在 Web 记录中检测动态参数。 但是，内置的检测功能并不是总能找到所有动态参数。 例如，该功能找不到通常会在 5 到 30 分钟之间更改其值的会话 ID。 因此，必须手动执行关联过程。
 
-通过 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin>，你可以为自己的自定义插件编写代码。 在“Web 性能测试编辑器”中保存和显示 Web 性能测试之前，此插件可以多种方式执行关联或修改该 Web 性能测试。 因此，如果您确定必须为许多记录关联特定动态变量，则可自动执行此过程。
+通过 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin>，您可以为自己的自定义插件编写代码。 在“Web 性能测试编辑器”中保存和显示 Web 性能测试之前，此插件可以多种方式执行关联或修改该 Web 性能测试。 因此，如果您确定必须为许多记录关联特定动态变量，则可自动执行此过程。
 
 可以使用记录器插件的某些其他方法可用于在 Web 性能测试中添加提取和验证规则、添加上下文参数或将注释转换为事务。
 
@@ -34,36 +33,26 @@ ms.locfileid: "53945815"
 
 ### <a name="to-create-a-recorder-plug-in"></a>创建记录器插件
 
-1.  打开包含 Web 性能和负载测试项目以及要为之创建记录器插件的 Web 性能测试的解决方案。
+1. 打开包含 Web 性能和负载测试项目以及要为之创建记录器插件的 Web 性能测试的解决方案。
 
-2.  在解决方案资源管理器中，右键单击解决方案，选择“添加”，然后选择“新建项目”。
+2. 将新的“类库”项目添加到该解决方案中。
 
-     随即出现“添加新项目”对话框。
-
-3.  在“已安装的模板”下，选择“Visual C#”。
-
-4.  在模板列表中，选择“类库”。
-
-5.  在“名称”文本框中，键入记录器插件的名称。
-
-     类库将添加到解决方案资源管理器中，并且将在代码编辑器中打开新类。
-
-6.  在解决方案资源管理器的新类库项目文件夹中，右键单击“引用”文件夹，然后选择“添加引用”。
+3. 在解决方案资源管理器的新类库项目文件夹中，右键单击“引用”文件夹，然后选择“添加引用”。
 
     > [!TIP]
     > 新类库项目文件夹的一个示例为“RecorderPlugins”。
 
      随即显示“添加引用”对话框。
 
-7.  选择“.NET”选项卡。
+4. 选择“.NET”选项卡。
 
-8.  向下滚动并选择“Microsoft.VisualStudio.QualityTools.WebTestFramework”，然后选择“确定”。
+5. 向下滚动并选择“Microsoft.VisualStudio.QualityTools.WebTestFramework”，然后选择“确定”。
 
      将“Microsoft.VisualStudio.QualityTools.WebTestFramework”添加到解决方案资源管理器的“引用”文件夹中。
 
-9. 为记录器插件编写代码。 首先，创建一个从 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin> 派生的新公共类。
+6. 为记录器插件编写代码。 首先，创建一个从 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin> 派生的新公共类。
 
-10. 重写 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin.PostWebTestRecording*> 方法。
+7. 重写 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin.PostWebTestRecording*> 方法。
 
     ```csharp
     public class Class1 : WebTestRecorderPlugin
@@ -80,11 +69,11 @@ ms.locfileid: "53945815"
     > [!NOTE]
     > 如果确实要修改 Web 性能测试，则还需要将 <xref:Microsoft.VisualStudio.TestTools.WebTesting.PostWebTestRecordingEventArgs.RecordedWebTestModified*> 属性设置为 true：`e.RecordedWebTestModified = true;`
 
-11. 根据希望记录器插件在 Web 记录发生后执行的操作来添加更多代码。 例如，可以添加代码来处理自定义关联，如以下示例所示。 还可以为将注释转换为事务或向 Web 性能测试添加验证规则等操作创建记录器插件。
+8. 根据希望记录器插件在 Web 记录发生后执行的操作来添加更多代码。 例如，可以添加代码来处理自定义关联，如以下示例所示。 还可以为将注释转换为事务或向 Web 性能测试添加验证规则等操作创建记录器插件。
 
-12. 在“生成”菜单上，选择“生成 \<类库项目名称>”。
+9. 在“生成”菜单上，选择“生成 \<类库项目名称>”。
 
-13. 接下来，必须部署记录器插件以使其向 Visual Studio 注册。
+接下来，部署记录器插件以使其向 Visual Studio 注册。
 
 ### <a name="deploy-the-recorder-plug-in"></a>部署记录器插件
 
@@ -97,13 +86,13 @@ ms.locfileid: "53945815"
 > [!WARNING]
 > 在将记录器插件复制到以上两个位置之一后，必须重新启动 Visual Studio，以便注册记录器插件。
 
-### <a name="to-execute-the-recorder-plug-in"></a>执行记录器插件
+### <a name="execute-the-recorder-plug-in"></a>执行记录器插件
 
-1.  创建新的 Web 性能测试。
+1. 创建新的 Web 性能测试。
 
      随即显示“启用 WebTestRecordPlugins”对话框。
 
-2.  选中记录器插件对应的复选框，然后选择“确定”。
+2. 选中记录器插件对应的复选框，然后选择“确定”。
 
      在 Web 性能测试完成记录后，将执行新记录器插件。
 
@@ -124,9 +113,7 @@ ms.locfileid: "53945815"
 > [!NOTE]
 > 示例代码的完整列表位于本主题底部。
 
-**评审示例代码**
-
-## <a name="iterate-through-the-result-to-find-first-page-with-reportsession"></a>循环访问结果以查找包含 ReportSession 的第一页
+### <a name="iterate-through-the-result-to-find-first-page-with-reportsession"></a>循环访问结果以查找包含 ReportSession 的第一页
 
 此部分代码示例循环访问每个记录的对象，并在响应正文中搜索 ReportSession。
 
@@ -143,7 +130,7 @@ foreach (WebTestResultUnit unit in e.RecordedWebTestResult.Children)
              {
 ```
 
-## <a name="add-an-extraction-rule"></a>添加提取规则
+### <a name="add-an-extraction-rule"></a>添加提取规则
 
 找到响应后，需要添加提取规则。 此部分示例代码使用 <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionRuleReference> 类创建提取规则，然后在 Web 性能测试中查找要向其添加提取规则的正确请求。 每个结果对象都会添加一个名为“DeclarativeWebTestItemId”的新属性，代码中正在使用该属性从 Web 性能测试中获取正确请求。
 
@@ -167,7 +154,7 @@ ExtractionRuleReference ruleReference = new ExtractionRuleReference();
      }
 ```
 
-## <a name="replace-query-string-parameters"></a>替换查询字符串参数
+### <a name="replace-query-string-parameters"></a>替换查询字符串参数
 
 现在，代码将查找以 ReportSession 作为名称的所有查询字符串参数并将其值更改为 {{SessionId}}，如此部分代码示例所示：
 

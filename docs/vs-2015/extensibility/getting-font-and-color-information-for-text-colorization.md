@@ -1,27 +1,22 @@
 ---
 title: 获取字体和颜色信息对文本着色 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - text, coloring
 - font and color control [Visual Studio SDK], coloring
 ms.assetid: d1f985bd-743e-40b7-9458-d9af53647c91
 caps.latest.revision: 23
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 41fc6ac7ba20bc552ebdfde2cab69dd28867ee7f
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 8724c31accb26e478c2726dfe791256994fc95ca
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51741298"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65696861"
 ---
 # <a name="getting-font-and-color-information-for-text-colorization"></a>获取字体和颜色信息对文本着色
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,7 +26,7 @@ ms.locfileid: "51741298"
  显示以的文本的大多数实现需要`T:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults`和关联接口，用于显示、 检索和存储文本显示设置。  
   
 > [!NOTE]
->  自定义核心编辑器时 (它也支持**文本 EditorCategory**)，强烈建议你使用的着色技术语言服务中。 有关详细信息，请参阅[字体和颜色概述](../extensibility/font-and-color-overview.md)。  
+> 自定义核心编辑器时 (它也支持**文本 EditorCategory**)，强烈建议你使用的着色技术语言服务中。 有关详细信息，请参阅[字体和颜色概述](../extensibility/font-and-color-overview.md)。  
   
 ## <a name="getting-default-font-and-color-information"></a>获取默认字体和颜色信息  
  所有**字体和颜色**应在指定的任何窗口中显示的文本设置**显示项**之一**类别**。 有关详细信息，请参阅[字体和 Colors，Environment，Options Dialog Box](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)。  
@@ -51,7 +46,6 @@ ms.locfileid: "51741298"
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaultsProvider>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults>   
- [使用字体和文本](http://msdn.microsoft.com/library/d43640f3-da94-4df2-a29d-a9d021a1c069)   
- [处理颜色](http://msdn.microsoft.com/library/d34ff96f-241d-494f-abdd-13811ada8cd3)   
- [GDI （图形设备接口）](http://msdn.microsoft.com/en-us/7e1d4540-bb2e-4257-8eee-eee376acba83)
-
+ [使用字体和文本](https://msdn.microsoft.com/library/d43640f3-da94-4df2-a29d-a9d021a1c069)   
+ [处理颜色](https://msdn.microsoft.com/library/d34ff96f-241d-494f-abdd-13811ada8cd3)   
+ [GDI （图形设备接口）](https://msdn.microsoft.com/7e1d4540-bb2e-4257-8eee-eee376acba83)

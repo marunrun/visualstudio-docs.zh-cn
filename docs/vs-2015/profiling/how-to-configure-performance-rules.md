@@ -1,27 +1,22 @@
 ---
 title: 如何：配置性能规则 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.ruleseditor
 ms.assetid: a148b468-b849-4858-880a-808a6b47e596
 caps.latest.revision: 19
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 3b4750dcd245094d0ea116097c7e58b87065aa91
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 71593496613c75485fd30481777d0fcc1102c11c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51765108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68179587"
 ---
 # <a name="how-to-configure-performance-rules"></a>如何：配置性能规则
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,21 +25,18 @@ Visual Studio 分析工具的性能警告指示所分析应用程序中可能会
   
 ### <a name="to-configure-profiler-performance-warnings"></a>配置事件探查器性能警告  
   
-1.  在 **“工具”** 菜单上，单击 **“选项”**。  
+1. 在 **“工具”** 菜单上，单击 **“选项”** 。  
   
-2.  展开“性能工具”，然后单击“规则”。  
+2. 展开“性能工具”  ，然后单击“规则”  。  
   
-3.  若要启用或禁用某个警告，请选择或清除该警告 **ID** 和名称旁边的复选框。  
+3. 若要启用或禁用某个警告，请选择或清除该警告 **ID** 和名称旁边的复选框。  
   
-4.  若要指定规则的警告级别，请单击规则旁边的“操作”单元格，然后单击警告等级。  
+4. 若要指定规则的警告级别，请单击规则旁边的“操作”  单元格，然后单击警告等级。  
   
-    -   **已禁用** - 禁用规则（等同于清除规则 ID 旁边的复选框）。  
+    - **已禁用** - 禁用规则（等同于清除规则 ID 旁边的复选框）。  
   
-    -   **警告** - 将规则显示为警告。  
+    - **警告** - 将规则显示为警告。  
   
-    -   **错误** - 停止分析执行并将规则显示为错误。  
+    - **错误** - 停止分析执行并将规则显示为错误。  
   
-    -   **信息** - 仅将规则显示为信息。
-
-
-
+    - **信息** - 仅将规则显示为信息。

@@ -1,31 +1,25 @@
 ---
 title: MSBuild 目标 Framework 和目标平台 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 ms.assetid: df6517c5-edd6-4cc4-97ad-b3cdfc78e799
 caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 74ca7eb25aac26eb66628ea76be502e4a244a2bd
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 1a550b4a6634604594da0893e3f420fd9c38ca3c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49923363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68181023"
 ---
 # <a name="msbuild-target-framework-and-target-platform"></a>MSBuild 目标 Framework 和目标平台
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
-可以生成要在目标框架（.NET Framework 的一个特定版本）和目标平台（一种特定的软件体系结构）上运行的项目。  例如，可以将一个应用程序的目标设定为在与 802 x86 处理器系列 ("x86") 兼容的 32 位平台上的 .NET Framework 2.0 上运行。 目标框架与目标平台的组合称为“目标上下文”。  
+可以生成要在目标框架  （.NET Framework 的一个特定版本）和目标平台  （一种特定的软件体系结构）上运行的项目。  例如，可以将一个应用程序的目标设定为在与 802 x86 处理器系列 ("x86") 兼容的 32 位平台上的 .NET Framework 2.0 上运行。 目标框架与目标平台的组合称为“目标上下文”  。  
   
 ## <a name="target-framework-and-profile"></a>目标框架和配置文件  
  目标框架是特定版本的 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]生成的项目将在其上运行。 需要规范目标框架，因为它将启用专用于该框架版本的编译器功能和程序集引用。  
@@ -56,7 +50,7 @@ ms.locfileid: "49923363"
 <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>  
 ```  
   
- 目标概况是目标框架的一个子集。 例如，.NET Framework 4 客户端配置文件不包括对 MSBuild 程序集的引用。  
+ 目标概况  是目标框架的一个子集。 例如，.NET Framework 4 客户端配置文件不包括对 MSBuild 程序集的引用。  
   
  目标配置文件是在项目文件中的 `TargetFrameworkProfile` 属性中指定的。 可通过在 IDE 中使用项目属性页中的目标框架控件来更改目标概况。 有关详细信息，请参阅[如何：面向 .NET Framework 的某个版本](../ide/how-to-target-a-version-of-the-dotnet-framework.md)。  
   
@@ -66,13 +60,13 @@ ms.locfileid: "49923363"
 ```  
   
 ## <a name="target-platform"></a>目标平台  
- 平台是定义特定运行时环境的硬件和软件的组合。 例如，应用于对象的  
+ 平台  是定义特定运行时环境的硬件和软件的组合。 例如，应用于对象的  
   
 - `x86` 指定在 Intel 80x86 处理器或等效处理器上运行的 32 位 Windows 操作系统。  
   
 - `Xbox` 指定 Microsoft Xbox 360 平台。  
   
-  目标平台是指将在其上运行生成项目的特定平台。 目标平台是在项目文件中的 `Platform` 生成属性中指定的。 可通过在 IDE 中使用项目属性页或**配置管理器**来更改目标平台。  
+  目标平台  是指将在其上运行生成项目的特定平台。 目标平台是在项目文件中的 `Platform` 生成属性中指定的。 可通过在 IDE 中使用项目属性页或**配置管理器**来更改目标平台。  
   
 ```  
 <PropertyGroup>  
@@ -81,7 +75,7 @@ ms.locfileid: "49923363"
   
 ```  
   
- 目标配置是目标平台的一个子集。 例如，`x86``Debug` 配置不包括大多数代码优化项。 目标配置是在项目文件中的 `Configuration` 生成属性中指定的。 可通过使用项目属性页或**配置管理器**来更改目标配置。  
+ 目标配置  是目标平台的一个子集。 例如，`x86``Debug` 配置不包括大多数代码优化项。 目标配置是在项目文件中的 `Configuration` 生成属性中指定的。 可通过使用项目属性页或**配置管理器**来更改目标配置。  
   
 ```  
 <PropertyGroup>  
@@ -91,8 +85,5 @@ ms.locfileid: "49923363"
   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多定向](../msbuild/msbuild-multitargeting-overview.md)
-
-
-

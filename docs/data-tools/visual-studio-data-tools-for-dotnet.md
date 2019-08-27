@@ -5,23 +5,22 @@ ms.topic: conceptual
 ms.assetid: c3175080-1dfb-4ab8-a460-92dadbb844b4
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
 - dotnet
-ms.openlocfilehash: 24da256ac835e477465845714cc844ac5bb305d7
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: a4a62f629244d44680b3d5ac3233bd45b975302e
+ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53872747"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66745310"
 ---
 # <a name="visual-studio-data-tools-for-net"></a>适用于 NET 的 Visual Studio Data Tools
 
-Visual Studio 和.NET Framework 一起提供广泛的 API 和工具连接到数据库、 在内存中，数据建模和用户界面中显示数据的支持。 提供数据访问功能的.NET Framework 类被称为[ADO.NET](/dotnet/framework/data/adonet/index)。 ADO.NET 中的，以及数据工具在 Visual Studio 中，主要设计用于支持关系数据库和 XML。 如今，许多 NoSQL 数据库供应商或第三方提供 ADO.NET 提供程序。
+Visual Studio 和.NET 一起提供广泛的 API 和工具连接到数据库、 在内存中，数据建模和用户界面中显示数据的支持。 提供数据访问功能的.NET 类名为[ADO.NET](/dotnet/framework/data/adonet/index)。 ADO.NET 中的，以及数据工具在 Visual Studio 中，主要设计用于支持关系数据库和 XML。 如今，许多 NoSQL 数据库供应商或第三方提供 ADO.NET 提供程序。
 
-[.NET core](/dotnet/core/)支持 ADO.NET，数据集和相关的类型除外。 如果要以.NET Core 为目标，并且需要一个对象关系映射 (ORM) 层，使用[Entity Framework Core](/ef/core/)。
+[.NET core](/dotnet/core/)支持 ADO.NET，数据集和其相关的类型除外。 如果要面向.NET Core，并且需要一个对象关系映射 (ORM) 层，使用[Entity Framework Core](/ef/core/)。
 
 下图显示了基本的体系结构的简化的视图：
 

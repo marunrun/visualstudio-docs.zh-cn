@@ -1,27 +1,22 @@
 ---
-title: 清单： 创建旧版语言服务 |Microsoft Docs
-ms.custom: ''
+title: 清单：创建旧版语言服务 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - language services
 - language services, native code
 ms.assetid: 8b73b341-a33a-4ab5-9390-178c9e563d2d
 caps.latest.revision: 10
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 330270b34d55e88c883b9d8a6270b4abad02d9c1
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 3b79afe64aafac473d4fe5d22464998d0c2f0537
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51782981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63437617"
 ---
 # <a name="checklist-creating-a-legacy-language-service"></a>清单：创建旧版语言服务
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -30,13 +25,13 @@ ms.locfileid: "51782981"
   
 ## <a name="steps-for-creating-a-language-service"></a>创建语言服务的步骤  
   
-1.  实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> 接口。  
+1. 实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> 接口。  
   
-    -   在你的 VSPackage，实现<xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>接口，以提供语言服务。  
+    - 在你的 VSPackage，实现<xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>接口，以提供语言服务。  
   
-    -   集成的开发环境 (IDE) 中提供语言服务你<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>实现。  
+    - 集成的开发环境 (IDE) 中提供语言服务你<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>实现。  
   
-2.  实现<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>主要语言服务类中的接口。  
+2. 实现<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>主要语言服务类中的接口。  
   
      <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>接口是核心编辑器和语言服务之间的交互的起始点。  
   
@@ -68,7 +63,7 @@ ms.locfileid: "51782981"
     必须处理的命令取决于所提供服务。 有关详细信息，请参阅[语言服务筛选器的重要命令](../../extensibility/internals/important-commands-for-language-service-filters.md)。  
   
   > [!NOTE]
-  >  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewFilter>必须为同一对象上实现接口<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>接口。  
+  > <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewFilter>必须为同一对象上实现接口<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>接口。  
   
 - 语句结束  
   
@@ -116,7 +111,7 @@ ms.locfileid: "51782981"
   
 - 大纲显示  
   
-   有几个选项用于支持大纲显示。 例如，可以支持**折叠到定义**命令，提供控制编辑器的大纲区域，或支持客户端控制区域。 有关详细信息，请参阅[如何： 提供扩展的大纲显示支持旧版语言服务中](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)。  
+   有几个选项用于支持大纲显示。 例如，可以支持**折叠到定义**命令，提供控制编辑器的大纲区域，或支持客户端控制区域。 有关详细信息，请参阅[如何：提供旧版语言服务中的展开大纲显示支持](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)。  
   
 - 语言服务注册  
   
@@ -126,11 +121,10 @@ ms.locfileid: "51782981"
   
    提供上下文到编辑器中的以下方法之一：  
   
-  -   通过实现文本标记为提供的上下文<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerContextProvider>接口。  
+  - 通过实现文本标记为提供的上下文<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerContextProvider>接口。  
   
   通过实现来提供所有的用户上下文<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider>接口。  
   
 ## <a name="see-also"></a>请参阅  
  [开发旧版语言服务](../../extensibility/internals/developing-a-legacy-language-service.md)   
  [编写 CLR 表达式计算器](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
-

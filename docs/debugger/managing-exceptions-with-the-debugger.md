@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 43a77fa8-37d0-4c98-a334-0134dbca4ece
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f31fa49916bf9b6d13865cd5d427670ceb33cb0
-ms.sourcegitcommit: 59c48e1e42b48ad25a4e198af670faa4d8dae370
-ms.translationtype: MTE95
+ms.openlocfilehash: b83cb026bec6d33490517e5703a042b4a8e2434c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54204412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62846457"
 ---
 # <a name="manage-exceptions-with-the-debugger-in-visual-studio"></a>管理 Visual Studio 中调试器的异常
 
@@ -100,7 +100,7 @@ ms.locfileid: "54204412"
 
   但它不会显示`here`行。
 
-- 一个C#控制台应用程序引用具有两种方法的类的类库。 一种方法引发异常，并处理它，而第二种方法会引发同一异常但不会进行处理。
+- C# 控制台应用程序引用具有两种方法的类的类库。 一种方法引发异常，并处理它，而第二种方法会引发同一异常但不会进行处理。
 
   ```csharp
   public class Class1
@@ -204,7 +204,7 @@ public class GenericException<T> : Exception
 使用**异常设置**窗口设置异常条件。 当前支持的条件包括模块名称要包括或排除异常。 通过设置模块名称作为条件，您可以选择仅在某些代码模块上异常中断。 此外可以选择以避免中断特定模块的问题。
 
 > [!NOTE]
-> 将条件添加到异常是中的新增功能[!include[vs_dev15](../misc/includes/vs_dev15_md.md)]。
+> 将条件添加到异常从开始支持[!include[vs_dev15](../misc/includes/vs_dev15_md.md)]。
 
 若要添加条件的异常：
 
@@ -222,8 +222,8 @@ public class GenericException<T> : Exception
 
 ## <a name="see-also"></a>请参阅
 
-[在出现异常后继续执行](../debugger/continuing-execution-after-an-exception.md)<br/>
-[如何：在发生异常后检查系统代码](../debugger/how-to-examine-system-code-after-an-exception.md)<br/>
-[如何：使用本机运行时检查](../debugger/how-to-use-native-run-time-checks.md)<br/>
-[使用运行时检查（不用 C 运行时库）](../debugger/using-run-time-checks-without-the-c-run-time-library.md)<br/>
-[初探调试器](../debugger/debugger-feature-tour.md)
+- [在出现异常后继续执行](../debugger/continuing-execution-after-an-exception.md)<br/>
+- [如何：在发生异常后检查系统代码](../debugger/how-to-examine-system-code-after-an-exception.md)<br/>
+- [如何：使用本机运行时检查](../debugger/how-to-use-native-run-time-checks.md)<br/>
+- [使用运行时检查（不用 C 运行时库）](../debugger/using-run-time-checks-without-the-c-run-time-library.md)<br/>
+- [初探调试器](../debugger/debugger-feature-tour.md)

@@ -1,14 +1,9 @@
 ---
-title: 'Idiasession:: Findchildren |Microsoft Docs'
-ms.custom: ''
+title: IDiaSession::findChildren | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 5d19046f-f668-4aa9-8788-95cda9a98997
 caps.latest.revision: 13
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 71a200d04da6ff79406f54feee05b73be4e6f689
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: cf274bb0f572da11a9aa43248da7eaa72a2e73c3
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51782812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68150423"
 ---
 # <a name="idiasessionfindchildren"></a>IDiaSession::findChildren
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -42,7 +37,7 @@ HRESULT findChildren ( 
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `parent`  
  [in][IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)表示父对象。 如果此父符号是函数、 模块或块，则返回其子词法`ppResult`。 如果父符号是一种类型，则返回其子类。 如果此参数为`NULL`，然后`symtag`必须设置为`SymTagExe`或`SymTagNull`，这会返回全局作用域 （.exe 文件）。  
   
@@ -76,6 +71,3 @@ pSession->findChildren( pFunc, SymTagData, szVarName, nsCaseSensitive, &pEnum );
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [NameSearchOptions 枚举](../../debugger/debug-interface-access/namesearchoptions.md)   
  [SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)
-
-
-

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - vsz files
 - wizards, files
 ms.assetid: 72e1d0f3-eef1-455e-b803-96827f030f50
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c66665fa927cbd1f7c2f704467750c6c943eb467
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b4bbd69bc92ee96fcf93749aa6f700ad76ff72c8
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53898185"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66309723"
 ---
 # <a name="wizard-vsz-file"></a>向导 (.Vsz) 文件
 

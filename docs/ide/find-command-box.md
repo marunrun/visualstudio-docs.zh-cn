@@ -1,7 +1,6 @@
 ---
 title: “查找-命令”框
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - vs.findcommandbox
@@ -9,15 +8,15 @@ helpviewer_keywords:
 - Find/Command box
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 91546caa5136fbcd31dabcaa9294ccd8056e6750
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 221c5fbbd3f0f82ac97d0c2a0fcc82657e0296c4
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53866780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62977744"
 ---
 # <a name="findcommand-box"></a>“查找/命令”框
 

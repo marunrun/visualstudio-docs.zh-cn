@@ -1,14 +1,9 @@
 ---
 title: 配置性能会话 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - common tasks, performance
 - common tasks, profiling tools
@@ -18,13 +13,13 @@ ms.assetid: e1c3ba41-ffca-4edf-9a7f-8a5a9244ef9b
 caps.latest.revision: 41
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 280d9023167b4d83dfb8b0137301219a518521b9
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: d67801cedded1ccf66544e21257866feda828e31
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51790391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63434331"
 ---
 # <a name="configuring-performance-sessions"></a>配置性能会话
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +27,7 @@ ms.locfileid: "51790391"
 通过使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 分析工具，可以收集大量各种应用程序类型的性能数据。 本节演示如何使用性能会话的“性能向导”属性和目标二进制文件配置分析工具以收集你感兴趣的数据。 分析工具配置属性还可用来控制分析运行中收集的数据量。 有关详细信息，请参阅[控制数据收集](../profiling/controlling-data-collection.md)。  
   
 > [!NOTE]
->  在许多情况下，使用“性能向导”的默认属性是收集分析数据的一种有效方法。 有关详细信息，请参阅[性能分析初学者指南](../profiling/beginners-guide-to-performance-profiling.md)和[入门](../profiling/getting-started-with-performance-tools.md)。  
+> 在许多情况下，使用“性能向导”的默认属性是收集分析数据的一种有效方法。 有关详细信息，请参阅[性能分析初学者指南](../profiling/beginners-guide-to-performance-profiling.md)和[入门](../profiling/getting-started-with-performance-tools.md)。  
   
 ## <a name="common-tasks"></a>常规任务  
   
@@ -47,6 +42,3 @@ ms.locfileid: "51790391"
   
 ## <a name="see-also"></a>请参阅  
  [性能资源管理器](../profiling/performance-explorer.md)
-
-
-

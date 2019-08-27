@@ -1,8 +1,7 @@
 ---
-title: IActiveScriptStats::GetStat |Microsoft Docs
+title: IActiveScriptStats::GetStat | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0d00c438f0fe03566dfb7efb93645cad02dc7477
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: 8befb3da4e4b6f060a5f58aedec3604afe70aefb
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54095389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992017"
 ---
 # <a name="iactivescriptstatsgetstat"></a>IActiveScriptStats::GetStat
 返回一个标准脚本统计信息。  
@@ -42,7 +41,7 @@ HRESULT GetStat(
  `stid`  
  [in]指定要返回的统计信息。 必须为值：  
   
-|返回的常量|值|描述|  
+|返回的常量|“值”|描述|  
 |--------------|-----------|-----------------|  
 |SCRIPTSTAT_STATEMENT_COUNT|1|返回自启动的脚本或已重置统计信息以来执行的语句数。|  
   

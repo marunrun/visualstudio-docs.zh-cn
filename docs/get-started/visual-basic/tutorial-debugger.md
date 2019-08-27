@@ -12,23 +12,19 @@ helpviewer_keywords:
 ms.assetid: 62734c0d-a75a-4576-8f73-0e97c19280e1
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4437b108aebd63950bce0ea07b9b1e493cf759af
-ms.sourcegitcommit: a715de2ba8c703f37aa2102567b1aa2c0f05a117
+ms.openlocfilehash: 070de03f56f6d9d10a9e6a41516ffcb67837e90e
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53441849"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65680312"
 ---
 # <a name="tutorial-learn-to-debug-visual-basic-code-using-visual-studio"></a>教程：学习使用 Visual Studio 调试 Visual Basic 代码
 
 本文通过分步演练介绍了 Visual Studio 调试器的功能。 如果需要更加深入地了解调试器功能，请参阅[初探调试器](../../debugger/debugger-feature-tour.md)。 当你调试应用时，通常意味着运行附带有调试器的应用程序。 执行此操作时，调试器在运行过程中可提供许多方法让你查看代码的情况。 你可以逐步浏览代码、查看变量中存储的值、设置对变量的监视以查看值何时改变、检查代码的执行路径、查看代码分支是否正在运行等等。 如果这是你第一次尝试调试代码，可能需要在浏览本文之前阅读[零基础调试](../../debugger/debugging-absolute-beginners.md)。
-
-| | |
-|---------|---------|
-| ![视频的摄像机图标](../../install/media/video-icon.png "观看视频") | [观看有关调试的视频](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugger-Feature-tour-of-Visual-studio-2017-sqwiwLD6D_1111787171)，其中展示了类似的步骤。 |
 
 在本教程中，你将：
 
@@ -40,25 +36,47 @@ ms.locfileid: "53441849"
 
 ## <a name="prerequisites"></a>系统必备
 
-* 须安装 Visual Studio 2017 且具有“.NET 桌面开发”工作负载。
+::: moniker range=">=vs-2019"
 
-    如果尚未安装 Visual Studio，请转到  [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 页免费安装。
+须安装 Visual Studio 2019 且具有“.NET 桌面开发”工作负载。
 
-    如果需要安装工作负载，但已有 Visual Studio，则单击“新建项目”对话框左窗格中的“打开 Visual Studio 安装程序”链接（选择“文件” > “新建” > “项目”）。 Visual Studio 安装程序启动。 选择“.NET 桌面开发”工作负载，然后选择“修改”。
+::: moniker-end
+::: moniker range="vs-2017"
+
+须安装 Visual Studio 2017 且具有“.NET 桌面开发”工作负载。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)页免费安装。
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)页免费安装。
+
+::: moniker-end
+
+如果需要安装工作负载但已有 Visual Studio，请转到“工具” > “获取工具和功能...”，这会打开 Visual Studio 安装程序。 Visual Studio 安装程序启动。 选择“.NET 桌面开发”工作负载，然后选择“修改”。
 
 ## <a name="create-a-project"></a>创建项目
 
-1. 在 Visual Studio 中，依次选择“文件”>“新建项目”。
+1. 打开 Visual Studio。
 
-2. 在“Visual Basic”下，选择“Windows 桌面”，然后在中间窗格中选择“控制台应用”。
+    ::: moniker range=">=vs-2019"
+    按 Esc 关闭启动窗口。 键入 Ctrl+Q 以打开搜索框，键入“visual basic”，选择“模板”，然后选择“创建新的控制台应用(.NET Framework)项目”。 在出现的对话框中，键入名称（如 get-started-debugging），然后选择“创建”。
+    ::: moniker-end
+    ::: moniker range="vs-2017"
+    在顶部菜单栏，依次选择“文件” > “新建” > “项目”。 在“新建项目”对话框的左窗格中，在“Visual Basic”下，选择“Windows 桌面”，然后在中间窗格中选择“控制台应用(.NET Framework)”。 然后，键入名称（如“get-started-debugging”）并单击“确定”。
+    ::: moniker-end
 
-    如果没有看到“控制台应用程序”项目模板，请单击“新建项目”对话框左侧窗格中的“打开 Visual Studio 安装程序”链接。 Visual Studio 安装程序启动。 选择“.NET 桌面开发”工作负载，然后选择“修改”。
-
-3. 键入名称（如“get-started-debugging”），然后单击“确定”。
+    如果没有看到“控制台应用(.NET Framework)”项目模板，请转到“工具” > “获取工具和功能...”，这会打开 Visual Studio 安装程序。 选择“.NET 桌面开发”工作负载，然后选择“修改”。
 
     Visual Studio 随即创建项目。
 
-4. 在 Program.cs 中，将以下代码
+1. 在 Module1.vb 中，替换以下代码
 
     ```vb
     Module Module1
@@ -206,7 +224,7 @@ ms.locfileid: "53441849"
 
     ![设置断点](../visual-basic/media/get-started-set-breakpoint-vb.png)
 
-    断点是可靠调试的最基本和最重要的功能。 断点指示 Visual Studio 应在哪个位置挂起你的运行代码，以使你可以查看变量的值或内存的行为，或确定代码的分支是否运行。 
+    断点是可靠调试的最基本和最重要的功能。 断点指示 Visual Studio 应在哪个位置挂起你的运行代码，以使你可以查看变量的值或内存的行为，或确定代码的分支是否运行。
 
 2. 按 F5 或“开始调试”按钮![开始调试](../../debugger/media/dbg-tour-start-debugging.png "Start Debugging")，应用随即启动，调试器将运行到你设置断点的代码行。
 
@@ -232,7 +250,7 @@ ms.locfileid: "53441849"
 
      ![使用 F10 单步跳过代码](../visual-basic/media/get-started-step-over-vb.png "F10 Step Over")
 
-     请注意，这次调试器不会单步执行基类 (`Shape`) 的 `Draw` 方法。 按 F10 将使调试器前进，但不会单步执行应用代码中的函数或方法（代码仍将执行）。 通过在进行 `MyBase.Draw` 方法调用时按 F10（而不是 F11），我们跳过了 `MyBase.Draw` 的实现代码（我们现在可能对此不感兴趣）。
+     请注意，这次调试器不会单步执行基类 (`Shape`) 的 `Draw` 方法。 按 F10 将使调试器前进，但不会单步执行应用代码中的函数或方法（代码仍将执行）。 通过在进行 `MyBase.Draw` 方法调用时按“F10”（而不是“F11”），我们跳过了 `MyBase.Draw` 的实现代码（我们现在可能对此不感兴趣）。
 
 ## <a name="navigate-code-using-run-to-click"></a>使用“运行时单击”导航代码
 
@@ -329,7 +347,7 @@ ms.locfileid: "53441849"
 
     可双击代码行来查看该源代码，这也会更改调试器正在检查的当前作用域。 此操作不会使调试器前进。
 
-    还可使用“调用堆栈”窗口中的右键单击菜单执行其他操作。 例如，你可将断点插入到指定的函数中，使用“运行到光标处”推进调试器，然后检查源代码。 有关更多信息，请参见[如何：检查调用堆栈](../../debugger/how-to-use-the-call-stack-window.md)。
+    还可使用“调用堆栈”窗口中的右键单击菜单执行其他操作。 例如，你可将断点插入到指定的函数中，使用“运行到光标处”推进调试器，然后检查源代码。 有关详细信息，请参阅[如何：检查调用堆栈](../../debugger/how-to-use-the-call-stack-window.md)。
 
 ## <a name="change-the-execution-flow"></a>更改执行流
 

@@ -1,25 +1,20 @@
 ---
 title: Start | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: b85d0fe9-f67a-4b7c-8d48-7eecf3f2dfe9
 caps.latest.revision: 18
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 6c2f52a000cdf5eaa1a1ef4b9afeb141500f1911
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 83dc76e3e92a05f936d94c8cd0f6a2b9b69e4cc1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51724186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68192818"
 ---
 # <a name="start"></a>Start
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,13 +31,13 @@ VSPerfCmd.exe /Start:Method /Output:FileName [Options]
  `Method`  
  必须是以下关键字之一：  
   
--   **TRACE** - 指定检测方法。  
+- **TRACE** - 指定检测方法。  
   
--   **SAMPLE** - 指定采样方法。  
+- **SAMPLE** - 指定采样方法。  
   
--   **COVERAGE** - 指定代码覆盖率。  
+- **COVERAGE** - 指定代码覆盖率。  
   
--   **CONCURRENCY** - 指定资源争用方法。  
+- **CONCURRENCY** - 指定资源争用方法。  
   
 ## <a name="required-options"></a>必需选项  
  在命令行上指定 **Start** 时，必须指定 **Output** 选项。  
@@ -56,7 +51,7 @@ VSPerfCmd.exe /Start:Method /Output:FileName [Options]
  **CrossSession**&#124;**CS**  
  启用跨进程分析。 同时支持选项名 **CrossSession** 和 **CS**。  
   
- **User:**[`domain\`]`username`  
+ **User:** [`domain\`]`username`  
  使客户端可以用指定帐户访问监视器。  
   
  **WinCounter:** `Path` [**Automark**:`n`]  
@@ -68,7 +63,7 @@ VSPerfCmd.exe /Start:Method /Output:FileName [Options]
  **Status**  
  **Status** 应用于进行分析的进程。 它列出进程和线程及其当前分析状态 (On/Off)。 例如，如果某个进程已停止，则 **Status** 不会在报告中对此进行指示。 **Status** 会显示该进程是否进行分析。  
   
- **Shutdown**[**:**`Timeout`]  
+ **Shutdown**[ **:** `Timeout`]  
  关闭探查器。  
   
 ## <a name="example"></a>示例  
@@ -79,11 +74,8 @@ VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp
 VSPerfCmd.exe /Launch:TestApp.exe  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [分析独立应用程序](../profiling/command-line-profiling-of-stand-alone-applications.md)   
  [分析 ASP.NET Web 应用程序](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
  [分析服务](../profiling/command-line-profiling-of-services.md)
-
-
-

@@ -1,14 +1,9 @@
 ---
 title: 使用代码分析工具分析应用程序质量 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.analysisresults
 helpviewer_keywords:
@@ -20,12 +15,12 @@ caps.latest.revision: 26
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: e2dd66668efcba5264cc3a3646b627ec9be99e63
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 83fbe8b372d021e0cec4faccfd0b22fcaa8af30d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49216675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68157100"
 ---
 # <a name="analyzing-application-quality-by-using-code-analysis-tools"></a>使用代码分析工具分析应用程序质量
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,18 +44,15 @@ ms.locfileid: "49216675"
 ### <a name="code-analysis-for-drivers"></a>驱动程序的代码分析  
  通过系统地分析驱动程序源代码，代码分析工具可以帮助提高驱动程序的稳定性和可靠性。  
   
- [使用代码分析工具来分析驱动程序质量](http://go.microsoft.com/fwlink/?LinkId=227618)  
- 驱动程序代码分析是一个编译时静态验证工具，该工具可检测 C 和 C++ 程序中的基本编码错误，并且该工具包括一个专用模块，该模块设计用于检测（主要）内核模式驱动程序代码中的错误。 Static Driver Verifier (SDV) 是一个静态验证工具，可以系统分析 Windows 内核模式驱动程序的源代码。 SDV 确定驱动程序是否与 Windows 操作系统内核正确交互。  
+ [使用代码分析工具来分析驱动程序质量](/windows-hardware/drivers/devtest/tools-for-verifying-drivers)  
+ 驱动程序的代码分析是一个编译时静态验证工具，检测 C 中的基本编码错误和C++程序，并包括一个专用的模块，旨在检测 （主要） 内核模式驱动程序代码中的错误。 Static Driver Verifier (SDV) 是一个静态验证工具，可以系统分析 Windows 内核模式驱动程序的源代码。 SDV 确定驱动程序是否与 Windows 操作系统内核正确交互。  
   
  [代码分析驱动程序警告](http://go.microsoft.com/fwlink/?LinkId=225920)  
  介绍驱动程序代码分析在驱动程序代码中检测到可能的错误时报告的警告。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [测量托管代码的复杂性和可维护性](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)  
  在此处插入说明。  
   
  [单元测试代码](../test/unit-test-your-code.md)  
  在此处插入说明。
-
-
-

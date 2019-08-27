@@ -9,16 +9,15 @@ helpviewer_keywords:
 ms.assetid: 572c15aa-1fd0-468c-b6be-9fa50e170914
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 46df354cf860aa1aa08fd8d738711dad41fd6741
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: fbe86e085e50dc0e72c00b7bbe7a313e689e0ee5
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53861298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62571521"
 ---
 # <a name="automatic-feature-suspension"></a>自动功能挂起
 
@@ -42,7 +41,7 @@ ms.locfileid: "53861298"
 
 ## <a name="full-solution-analysis-suspended"></a>挂起的完整解决方案分析
 
-默认情况下，完整解决方案分析适用于 Visual Basic 启用和禁用对于 Visual C#。 但是，内存不足的情况，在完整解决方案分析会自动禁用 Visual Basic 和 Visual C#，而不考虑其设置选项对话框中。 但是，您可以重新启用完整解决方案分析通过选择**重新启用**中的信息栏出现时，通过选择按钮**启用完整解决方案分析**复选框，在选项对话框中，或通过重新启动 Visual Studio。 选项对话框始终显示当前的完整解决方案分析设置。 有关更多信息，请参见[如何：启用和禁用完整解决方案分析](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md)。
+默认情况下，完整解决方案分析适用于 Visual Basic 启用和禁用对于 Visual C#。 但是，内存不足的情况，在完整解决方案分析会自动禁用 Visual Basic 和 Visual C#，而不考虑其设置选项对话框中。 但是，您可以重新启用完整解决方案分析通过选择**重新启用**中的信息栏出现时，通过选择按钮**启用完整解决方案分析**复选框，在选项对话框中，或通过重新启动 Visual Studio。 选项对话框始终显示当前的完整解决方案分析设置。 有关详细信息，请参阅[如何：启用和禁用完整解决方案分析](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md)。
 
 ## <a name="gc-low-latency-disabled"></a>禁用 GC 低延迟
 

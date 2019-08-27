@@ -1,7 +1,6 @@
 ---
 title: C/C++ 代码分析警告
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 helpviewer_keywords:
 - code analysis, warnings for C/C++ code
@@ -19,15 +18,15 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 369aee6e9d94aa1f2f25029022609d11aac9d7a5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: dc3f09575085039986a0b2fbbf3eb386ee5f5e1b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53907915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62540775"
 ---
 # <a name="code-analysis-for-cc-warnings"></a>C/C++ 代码分析警告
-本部分列出了除引发的 C/c + + 代码分析警告[c + + Core Guidelines 检查器](code-analysis-for-cpp-corecheck.md)。 有关代码分析的信息，请参阅[/analyze （代码分析）](/cpp/build/reference/analyze-code-analysis)和[快速启动：C/c + + 代码分析](../code-quality/quick-start-code-analysis-for-c-cpp.md)。
+本部分列出了 C /C++代码分析警告除了那些会引发[ C++ Core Guidelines 检查器](code-analysis-for-cpp-corecheck.md)。 有关代码分析的信息，请参阅[/analyze （代码分析）](/cpp/build/reference/analyze-code-analysis)和[快速启动：为 C 代码分析 /C++](../code-quality/quick-start-code-analysis-for-c-cpp.md)。
 
 ## <a name="see-also"></a>请参阅
 

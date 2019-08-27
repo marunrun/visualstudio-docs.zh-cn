@@ -1,7 +1,6 @@
 ---
 title: CA1714:Flags 枚举应采用复数形式的名称
-ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
+ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
 - FlagsEnumsShouldHavePluralNames
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 95ef5b43-7681-49e9-a5a3-ac0357cf1be7
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cf78041d61da991804a4dcdb0f924dc4a5f489e3
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d71200c6c7fbb61e7994119fde5e75f7623fa669
+ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53881808"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69547189"
 ---
 # <a name="ca1714-flags-enums-should-have-plural-names"></a>CA1714:Flags 枚举应采用复数形式的名称
 
@@ -32,23 +31,39 @@ ms.locfileid: "53881808"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 公共枚举具有<xref:System.FlagsAttribute?displayProperty=fullName>和其名称不会结束中的。
+
+枚举具有<xref:System.FlagsAttribute?displayProperty=fullName> , 且其名称不以 "" 结尾。
+
+默认情况下, 此规则仅查看外部可见的枚举, 但这是[可配置](#configurability)的。
 
 ## <a name="rule-description"></a>规则说明
- 使用标记的类型<xref:System.FlagsAttribute>具有采用复数形式，因为该属性指示可以指定多个值的名称。 例如，枚举，用于定义每周天数可能被用于应用程序中您可以在其中指定多天。 此枚举应具有<xref:System.FlagsAttribute>且无法调用天。 允许仅指定一天的类似枚举将没有属性，并可能是名为 Day。
 
- 命名约定提供了通用的外观对于库面向公共语言运行时。 这会减少所需的新软件库，并会增加客户信心库由必须在托管代码中开发的专业知识的人学习曲线。
+标记有的类型<xref:System.FlagsAttribute>具有复数形式的名称, 因为该特性指示可以指定多个值。 例如, 定义一周中各天的枚举可能适用于可指定多天的应用程序。 此枚举应具有<xref:System.FlagsAttribute> , 并且可以称为 "Days"。 只允许指定一天的类似枚举不具有属性, 并且可以称为 "Day"。
+
+命名约定为面向公共语言运行时的库提供了通用的外观。 这减少了新软件库所需的学习曲线, 并使客户可以放心地了解库是由具有开发托管代码的专业技能的人员开发的。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 确保枚举名称的复数形式的单词，或删除<xref:System.FlagsAttribute>属性如果不应同时指定多个枚举值。
+
+将枚举的名称设置为复数字, 如果不应同时<xref:System.FlagsAttribute>指定多个枚举值, 则删除该属性。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 则可以安全地禁止显示冲突，如果名称为复数形式的单词，但不是以结尾的。 例如，如果所述的多个天枚举以前名为 DaysOfTheWeek，这会违反该规则，但不是其意图的逻辑。 应禁止显示此类违规情况。
 
-## <a name="related-rules"></a>相关的规则
- [CA1027:用 FlagsAttribute 标记枚举](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
+如果名称是复数形式的单词, 但不是以 "" 结尾, 则可以安全地禁止显示冲突。 例如, 如果前面介绍的多天枚举名为 "DaysOfTheWeek", 则这将违反规则的逻辑, 而不是其意图。 应抑制此类冲突。
 
- [CA2217:不使用 FlagsAttribute 标记枚举](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
+## <a name="configurability"></a>配置
+
+如果从[FxCop 分析器](install-fxcop-analyzers.md)(而不是传统分析) 运行此规则, 则可以根据其可访问性, 将基本代码的哪些部分配置为在上运行此规则。 例如, 若要指定规则只应针对非公共 API 图面运行, 请在项目中的 editorconfig 文件中添加以下键/值对:
+
+```ini
+dotnet_code_quality.ca1714.api_surface = private, internal
+```
+
+您可以为此规则、所有规则或此类别中的所有规则 (命名) 配置此选项。 有关详细信息, 请参阅[配置 FxCop 分析器](configure-fxcop-analyzers.md)。
+
+## <a name="related-rules"></a>相关规则
+
+- [CA1027用 FlagsAttribute 标记枚举](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
+- [CA2217不要用 FlagsAttribute 标记枚举](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
 
 ## <a name="see-also"></a>请参阅
 

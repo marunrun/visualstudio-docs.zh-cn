@@ -1,7 +1,6 @@
 ---
 title: 适用于 UWP 应用的应用程序属性页
 ms.date: 01/23/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - AppPackage.Properties.Application
@@ -9,15 +8,15 @@ helpviewer_keywords:
 - Application page [UWP project]
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 2808afab24fa4a78d881dd23cc2b1a8efa364b2a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 416661a39f54429f24cca66a0ec1be7b6c87629d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53898277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791042"
 ---
 # <a name="application-property-page-uwp-projects"></a>应用程序属性页（UWP 项目）
 
@@ -45,7 +44,7 @@ ms.locfileid: "53898277"
 
 可通过本部分中的下拉列表，为应用设置目标版本和最低版本的 Windows 10。 建议将目标设定为 Windows 10 的最新版本，如果你正在开发企业应用，那么也可支持较旧的最低版本。 有关要选择的 Windows 10 版本的详细信息，请参阅[选择 UWP 版本](/windows/uwp/updates-and-versions/choose-a-uwp-version)。
 
-有关 Visual Studio 2017 中的平台目标信息，请参阅[平台目标](/visualstudio/productinfo/vs2017-compatibility-vs#platform-targeting)。
+有关 Visual Studio 中的平台目标信息，请参阅[平台目标](/visualstudio/productinfo/vs2017-compatibility-vs#platform-targeting)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,14 +1,9 @@
 ---
 title: VSPackage 开发的 Devenv 命令行开关 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - /setup command line switch
 - /resetskippkgs command line switch
@@ -21,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d65d2c04-dd84-42b0-b956-555b11f5a645
 caps.latest.revision: 17
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 97900d5d23fae8f097ce5f2951f9fb13866f2a1e
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 97ce429a7140d7b95393c2dcb8b34491b3adfefa
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51749137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68185283"
 ---
 # <a name="devenv-command-line-switches-for-vspackage-development"></a>VSPackage 开发的 Devenv 命令行开关
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,11 +31,11 @@ ms.locfileid: "51749137"
   
  任务包括：  
   
--   在从 IDE 外部的预配置中部署应用程序。  
+- 在从 IDE 外部的预配置中部署应用程序。  
   
--   自动使用预设的生成项目的生成设置，或调试配置。  
+- 自动使用预设的生成项目的生成设置，或调试配置。  
   
--   在 IDE 之外，在特定配置中，IDE 加载中的所有内容。 此外，您可以自定义在启动时 IDE。  
+- 在 IDE 之外，在特定配置中，IDE 加载中的所有内容。 此外，您可以自定义在启动时 IDE。  
   
 ## <a name="guidelines-for-switches"></a>开关的准则  
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 文档介绍了用户级 devenv 命令行开关。 有关详细信息，请参阅[Devenv 命令行开关](../ide/reference/devenv-command-line-switches.md)。 Devenv 还支持用于 VSPackage 开发、 部署和调试的其他命令行开关。  
@@ -55,4 +50,3 @@ ms.locfileid: "51749137"
 ## <a name="see-also"></a>请参阅  
  [添加命令行开关](../extensibility/adding-command-line-switches.md)   
  [Devenv 命令行开关](../ide/reference/devenv-command-line-switches.md)
-

@@ -1,25 +1,20 @@
 ---
 title: 16bpp 呈现目标格式变量 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 24b22ad9-5ad0-4161-809a-9b518eb924bf
 caps.latest.revision: 8
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: bf00bf536e5f1ee140a818ee59c66703906860f0
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 7b315c7ab9bb10d039e81ba26b1beb9c4447a205
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51727639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68157573"
 ---
 # <a name="16bpp-render-target-format-variant"></a>16bpp 呈现目标格式变量
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,11 +37,11 @@ ms.locfileid: "51727639"
 ## <a name="remarks"></a>备注  
  每次调用创建呈现器目标的 `ID3D11Device::CreateTexture2D` 时，呈现器目标格式都将重置为 DXGI_FORMAT_B5G6R5_UNORM。 具体而言，当在 pDesc 中传递的 D3D11_TEXTURE2D_DESC 对象描述呈现器目标时将重写该格式；即：  
   
--   BindFlags 成员将设置 D3D11_BIND_REDNER_TARGET 标志。  
+- BindFlags 成员将设置 D3D11_BIND_REDNER_TARGET 标志。  
   
--   BindFlags 成员将清除 D3D11_BIND_DEPTH_STENCIL 标志。  
+- BindFlags 成员将清除 D3D11_BIND_DEPTH_STENCIL 标志。  
   
--   将 Usage 成员设置为 D3D11_USAGE_DEFAULT。  
+- 将 Usage 成员设置为 D3D11_USAGE_DEFAULT。  
   
 ## <a name="restrictions-and-limitations"></a>限制和约束  
  因为 B5G6R5 格式不具有 alpha 通道，所以此变体不会保留 alpha 内容。 如果应用的呈现要求在呈现器目标中使用 alpha 通道，则不能够仅切换到 B5G6R5 格式。  
@@ -61,6 +56,3 @@ target_description.BindFlags = D3D11_BIND_RENDER_TARGET;
 target_description.Format = DXGI_FORMAT_B5G6R5_UNORM;  
 d3d_device->CreateTexture2D(&target_description, nullptr, &render_target);  
 ```
-
-
-

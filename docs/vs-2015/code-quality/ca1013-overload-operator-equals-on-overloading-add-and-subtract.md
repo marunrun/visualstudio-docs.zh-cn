@@ -1,14 +1,9 @@
 ---
-title: CA1013： 重载相等运算符，加法和减法 |Microsoft Docs
-ms.custom: ''
+title: CA1013:重载相等运算符，加法和减法 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - OverrideOperatorEqualsOnOverridingAddAndSubtract
 - OverrideOperatorEqualsOnOverloadingAddAndSubtract
@@ -24,14 +19,14 @@ caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 277f0c880ba9a3043744cf1c558ea8487062bd12
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 1b70085c83d842ccb5f8addc661af9109b5a5976
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49921978"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65695625"
 ---
-# <a name="ca1013-overload-operator-equals-on-overloading-add-and-subtract"></a>CA1013：重载加法方法和减法方法时重载相等运算符
+# <a name="ca1013-overload-operator-equals-on-overloading-add-and-subtract"></a>CA1013:重载加法方法和减法方法时重载相等运算符
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -87,7 +82,4 @@ return left.Equals(right);
 **错误的类型： {2,2} {9,9}相等？否**
 **很好的类型： {3,3} {9,9}包括 = =？ 不**
 ## <a name="see-also"></a>请参阅
- [相等运算符](http://msdn.microsoft.com/library/bc496a91-fefb-4ce0-ab4c-61f09964119a)
-
-
-
+ [相等运算符](https://msdn.microsoft.com/library/bc496a91-fefb-4ce0-ab4c-61f09964119a)

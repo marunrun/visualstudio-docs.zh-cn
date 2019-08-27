@@ -1,12 +1,9 @@
 ---
 title: 验证 UML 模型 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - UML, constraints
 - UML, validation
@@ -14,13 +11,13 @@ ms.assetid: deed5092-c11d-4431-a801-1e866a103075
 caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: fea958a20e5eee78f79f324ad19ef646f7920951
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: f795928677f4a232c3ae3cec0d3bab9d9266cb35
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51739974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63437458"
 ---
 # <a name="validate-your-uml-model"></a>验证 UML 模型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,7 +32,7 @@ ms.locfileid: "51739974"
 - **验证命令。** 若要调用在任何时间验证，请单击**验证 UML 模型**上**体系结构**菜单。  
   
   > [!NOTE]
-  >  仅当安装了验证约束时，才显示该命令。  
+  > 仅当安装了验证约束时，才显示该命令。  
   
 - **在保存模型时。** 可以在保存模型时应用验证约束。 这些约束的目的在于帮助确保不保存你的项目解释为无效的模型。  
   
@@ -52,29 +49,26 @@ ms.locfileid: "51739974"
   
 #### <a name="to-install-a-visual-studio-extension"></a>安装 Visual Studio 扩展  
   
-1.  双击 **.vsix**在 Windows 资源管理器 （或文件资源管理器） 中的文件。  
+1. 双击 **.vsix**在 Windows 资源管理器 （或文件资源管理器） 中的文件。  
   
-2.  重新启动任何已在运行的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 实例。  
+2. 重新启动任何已在运行的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 实例。  
   
 ## <a name="disabling-and-uninstalling-validation-constraints"></a>禁用和卸载验证约束  
  需使用约束不适用的某一模型时，可以暂时禁用包含约束的扩展。 采用这种方式，便可以通过启用和禁用不同的扩展在不同的时间使用不同种类的模型。  
   
 #### <a name="to-disable-or-uninstall-a-visual-studio-extension"></a>禁用或卸载 Visual Studio 扩展  
   
-1.  上[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]**工具**菜单中，单击**扩展和更新**。  
+1. 上[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]**工具**菜单中，单击**扩展和更新**。  
   
-2.  扩展的旁边，单击**禁用**暂时禁用该扩展。 您可以重新启用它更高版本返回给**扩展和更新**窗口。  
+2. 扩展的旁边，单击**禁用**暂时禁用该扩展。 您可以重新启用它更高版本返回给**扩展和更新**窗口。  
   
      \- 或 -  
   
      单击**卸载**以删除该扩展。  
   
-3.  重新启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。  
+3. 重新启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。  
   
 ## <a name="see-also"></a>请参阅  
  [为 UML 模型定义验证约束](../modeling/define-validation-constraints-for-uml-models.md)   
  [为您的应用程序创建模型](../modeling/create-models-for-your-app.md)   
  [在你的开发过程中使用模型](../modeling/use-models-in-your-development-process.md)
-
-
-

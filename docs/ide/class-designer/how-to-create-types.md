@@ -1,7 +1,6 @@
 ---
 title: 如何：使用类设计器创建类型
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - VS.Clr.ClrAttributesDialog
@@ -15,47 +14,47 @@ helpviewer_keywords:
 ms.assetid: 94458c31-28bc-40e2-9737-85868788a0e5
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 131c09b170e86858d8a2855092404208fe06fa91
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: abee206f67aa019476fcd5085b4ff872338b4d1f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53916463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62975263"
 ---
 # <a name="how-to-create-types-by-using-class-designer"></a>如何：使用类设计器创建类型
 
 若要设计 C# 和 Visual Basic 项目的新类型，请在类图上创建它们。 若要查看现有类型，请参阅[如何：查看现有类型](how-to-view-existing-types.md)。
 
-##  <a name="CreateType"></a>创建新类型
+## <a name="CreateType"></a>创建新类型
 
-1.  在“工具箱”的“类设计器”下，将以下之一拖动到类图上：
+1. 在“工具箱”的“类设计器”下，将以下之一拖动到类图上：
 
-    -   “类”或“抽象类”
+    - “类”或“抽象类”
 
-    -   **Enum**
+    - **Enum**
 
-    -   **Interface**
+    - **Interface**
 
-    -   “结构”(VB) 或“结构”(C#)
+    - “结构”(VB) 或“结构”(C#)
 
-    -   **Delegate**
+    - **Delegate**
 
-    -   “模块”（仅限 VB）
+    - “模块”（仅限 VB）
 
-2.  为该类型命名。 然后选择其访问级别。
+2. 为该类型命名。 然后选择其访问级别。
 
-3.  选择要在其中添加该类型的初始代码的文件：
+3. 选择要在其中添加该类型的初始代码的文件：
 
-    -   若要创建新文件并将其添加到当前项目，请选择“创建新文件”，并为该文件命名。
+    - 若要创建新文件并将其添加到当前项目，请选择“创建新文件”，并为该文件命名。
 
-    -   若要将代码添加到现有文件，请选择“添加到现有文件”。
+    - 若要将代码添加到现有文件，请选择“添加到现有文件”。
 
          如果你的解决方案有共享跨多个应用的代码的项目，你可以将新类型添加到应用项目中的类图，但前提是相应的类文件在同一应用项目中或共享项目中。
 
-4.  现在添加其他项以定义该类型：
+4. 现在添加其他项以定义该类型：
 
     |||
     |-|-|
@@ -68,7 +67,7 @@ ms.locfileid: "53916463"
 
      请参阅[创建成员](creating-and-configuring-type-members.md#create-members)。
 
-##  <a name="CustAttributeType"></a>将自定义特性应用于类型
+## <a name="CustAttributeType"></a>将自定义特性应用于类型
 
 1. 在类图上单击类型的形状。
 
@@ -78,7 +77,7 @@ ms.locfileid: "53916463"
 
    自定义属性随即应用于类型。
 
-##  <a name="CustAttributeMember"></a>将自定义特性应用于类型成员
+## <a name="CustAttributeMember"></a>将自定义特性应用于类型成员
 
 1. 在类图上类型的形状中单击成员的名称，或者在“类详细信息”窗口中单击成员所在的行。
 

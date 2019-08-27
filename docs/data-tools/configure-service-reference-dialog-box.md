@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 25e4c36b-2db6-4e71-9010-b7068255d09d
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: e90287711d23a3560ddd97280a8a51e591ce40e0
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: 1cf4a809c1353f2fe30383a312f65b6c623083db
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53963510"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68925673"
 ---
 # <a name="configure-service-reference-dialog-box"></a>“配置服务引用”对话框
 
-**配置服务引用**对话框中，您可以配置 Windows Communication Foundation (WCF) 服务的行为。
+通过 "**配置服务引用**" 对话框, 您可以配置 WINDOWS COMMUNICATION FOUNDATION (WCF) 服务的行为。
 
 要访问“配置服务引用”对话框，请右键单击“解决方案资源管理器”中的服务引用，然后选择“配置服务引用”。 还可以通过单击“添加服务引用对话框”中的“高级”按钮来访问该对话框。
 
@@ -44,65 +43,65 @@ ms.locfileid: "53963510"
 
 ## <a name="uielement-list"></a>UIElement 列表
 
- **地址**
+**地址**
 
- 更新服务引用在其中查找服务的 web 地址。 例如，在开发期间，服务可能是托管在开发服务器上，然后更高版本移到生产服务器，因而需要进行地址更改。
+更新服务引用在其中查找服务的 web 地址。 例如, 在开发过程中, 该服务可能会托管在一个开发服务器上, 稍后会移到生产服务器上, 使得一个地址更改。
 
 > [!NOTE]
-> 从“添加服务引用”对话框中显示“配置服务引用”对话框时，“地址”元素不可用 。
+> 从“添加服务引用”对话框中显示“配置服务引用”对话框时，“地址”元素不可用。
 
- **生成的类的访问级别**
+**生成的类的访问级别**
 
- 确定 WCF 客户端类的代码访问级别。
+确定 WCF 客户端类的代码访问级别。
 
 > [!NOTE]
 > 对于网站项目，该选项将始终设置为 `Public`，并且无法更改。 有关详细信息，请参阅[服务引用疑难解答](../data-tools/troubleshooting-service-references.md)。
 
- **生成异步操作**
+**生成异步操作**
 
- 确定是否以同步方式调用 WCF 服务的方法 （默认值） 或以异步方式。
+确定是否同步调用 WCF 服务方法 (默认值) 或异步调用。
 
- **生成基于任务的操作**
+**生成基于任务的操作**
 
- 编写异步代码时，此选项允许您充分利用的任务并行库 (TPL) 引入的.NET 4。 请参阅[任务并行库 (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)。
+编写异步代码时, 此选项可让你充分利用随 .NET 4 引入的任务并行库 (TPL)。 请参阅[任务并行库 (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)。
 
- **始终生成消息约定**
+**始终生成消息约定**
 
- 确定是否将消息协定类型生成 WCF 客户端。 有关消息约定的详细信息，请参阅[使用消息约定](/dotnet/framework/wcf/feature-details/using-message-contracts)。
+确定是否为 WCF 客户端生成消息协定类型。 有关消息约定的详细信息，请参阅[使用消息约定](/dotnet/framework/wcf/feature-details/using-message-contracts)。
 
- **集合类型**
+**集合类型**
 
- 为 WCF 客户端指定列表集合类型。 默认类型为 <xref:System.Array>。
+为 WCF 客户端指定列表集合类型。 默认类型为 <xref:System.Array>。
 
- **字典集合类型**
+**字典集合类型**
 
- 为 WCF 客户端指定字典集合类型。 默认类型为 <xref:System.Collections.Generic.Dictionary%602>。
+为 WCF 客户端指定字典集合类型。 默认类型为 <xref:System.Collections.Generic.Dictionary%602>。
 
- **重新使用引用的程序集中的类型**
+**重新使用引用的程序集中的类型**
 
- 确定 WCF 客户端是否尝试重复使用什么中引用的程序集，而不是生成新类型添加或更新服务时已存在。 默认情况下，此选项处于选中状态。
+确定在添加或更新服务时, WCF 客户端是否尝试重用引用程序集中已存在的内容, 而不是生成新类型。 默认情况下，此选项处于选中状态。
 
- **重新使用所有引用的程序集中的类型**
+**重新使用所有引用的程序集中的类型**
 
- 选择中的所有类型时**引用的程序集列表**如有可能重复使用。 默认情况下，该选项是选中的。
+如果选择此选项, 则会在可能的情况下重用**被引用程序集中**的所有类型。 默认情况下，该选项是选中的。
 
- **重新使用所引用的指定程序集中的类型**
+**重新使用所引用的指定程序集中的类型**
 
- 选择中的所选的类型时**引用的程序集列表**会重复使用。
+如果选择此选项, 则只会重复使用所**引用的程序集列表**中的选定类型。
 
- **引用的程序集列表**
+**引用的程序集列表**
 
- 包含引用的程序集的项目或网站的列表。 当选择**重新使用的指定被引用程序集中的类型**，可以选中或清除各个程序集。
+包含项目或网站的被引用程序集的列表。 选择 "**在指定的引用程序集中重用类型**" 时, 可以选择或清除各个程序集。
 
- **添加 Web 引用**
+**添加 Web 引用**
 
- 显示“添加 Web 引用”对话框。
+显示“添加 Web 引用”对话框。
 
 > [!NOTE]
-> 此选项应仅用于面向 2.0 版的项目[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]。
+> 此选项应仅用于面向 .NET Framework 版本2.0 的项目。
 >
 > [!NOTE]
-> **添加 Web 引用**按钮才可用**配置服务引用**对话框中显示从**添加服务引用对话框**。
+> 只有在 "**添加服务引用" 对话框**中显示 "**配置服务引用**" 对话框时, "**添加 Web 引用**" 按钮才可用。
 
 ## <a name="see-also"></a>请参阅
 

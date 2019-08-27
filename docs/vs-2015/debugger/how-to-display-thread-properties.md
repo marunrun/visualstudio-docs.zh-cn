@@ -1,27 +1,22 @@
 ---
-title: 如何： 显示线程属性 |Microsoft Docs
-ms.custom: ''
+title: 如何：显示线程属性 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - thread properties
 ms.assetid: f0e64c0e-cdb3-4ad4-9723-09934166f3a2
 caps.latest.revision: 7
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 19eca8a7ff1ab7bcb6bf339a9de9ea402e3fec97
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 4a9d311563134850a7b2efd04eb6d6ed00dfcc25
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51793121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68205350"
 ---
 # <a name="how-to-display-thread-properties"></a>如何：显示线程属性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,6 +30,3 @@ ms.locfileid: "51793121"
 2. 从**视图**菜单中，选择**属性**。  
   
    属性对话框不是模式，因此你可以单击视图窗口中的另一个项，对话框中将所选项目上显示的信息。
-
-
-

@@ -1,7 +1,6 @@
 ---
 title: CA2147:透明方法不得使用安全断言
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - SecurityTransparentCodeShouldNotAssert
@@ -13,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 5d31e940-e599-4b23-9b28-1c336f8d910e
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4daf5d4183c8226a0bed613c5e175ddbd620f43a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e1b56001f5a083317911edde9282b66758deb1b6
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53912488"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68920716"
 ---
 # <a name="ca2147-transparent-methods-may-not-use-security-asserts"></a>CA2147:透明方法不得使用安全断言
 
@@ -33,34 +32,34 @@ ms.locfileid: "53912488"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 标记为代码<xref:System.Security.SecurityTransparentAttribute>未授予足够的权限进行断言。
+被标记为<xref:System.Security.SecurityTransparentAttribute>的代码未被授予足够的权限进行断言。
 
 ## <a name="rule-description"></a>规则说明
- 此规则分析所有方法和类型的程序集是完全透明或混合透明/关键，并标记的任何声明性或命令性用法<xref:System.Security.CodeAccessPermission.Assert%2A>。
+此规则分析程序集中的所有方法和类型, 该程序集为 100% 透明或混合透明/关键, 并标志的<xref:System.Security.CodeAccessPermission.Assert%2A>任何声明性或命令性用法。
 
- 在运行时，对任何调用<xref:System.Security.CodeAccessPermission.Assert%2A>从透明代码将导致<xref:System.InvalidOperationException>引发。 这可能在两个 100%透明程序集，以及程序集中混合透明/关键方法或类型被声明为透明，但包括声明性或命令性断言。
+在运行时, 对从透明<xref:System.Security.CodeAccessPermission.Assert%2A>代码进行的任何调用都<xref:System.InvalidOperationException>将导致引发。 这种情况可能发生在 100% 透明程序集, 也可能出现在混合透明/关键程序集中, 其中方法或类型声明为透明, 但包含声明性或命令式断言。
 
- .NET Framework 2.0 引入了一个名为功能*透明度*。 单个方法、 字段、 接口、 类和类型可以是透明或关键。
+.NET Framework 2.0 引入了一个名为 "*透明度*" 的特性。 各个方法、字段、接口、类和类型可以是透明的或关键的。
 
- 透明代码不能提升的安全特权。 因此，授予或其请求的任何权限都会自动通过代码传递给调用方或主机应用程序域。 提升的示例包括 assert 语句、 Linkdemand、 SuppressUnmanagedCode，和`unsafe`代码。
+不允许透明代码提升安全权限。 因此, 任何授予或要求的权限都将自动通过代码传递给调用方或主机应用程序域。 提升的示例包括断言、linkdemand、SuppressUnmanagedCode 和`unsafe`代码。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要解决此问题，或者标记调用与该断言的代码， <xref:System.Security.SecurityCriticalAttribute>，或删除该断言。
+若要解决此问题, 请将调用断言<xref:System.Security.SecurityCriticalAttribute>的代码标记为, 或删除断言。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 不要禁止显示此规则的消息。
+请勿禁止显示此规则的消息。
 
 ## <a name="example"></a>示例
- 如果此代码将失败`SecurityTestClass`是透明的当`Assert`方法会抛出<xref:System.InvalidOperationException>。
+如果`SecurityTestClass`是透明的, 则`Assert`当该方法引发<xref:System.InvalidOperationException>时, 此代码将失败。
 
- [!code-csharp[FxCop.Security.CA2147.TransparentMethodsMustNotUseSecurityAsserts#1](../code-quality/codesnippet/CSharp/ca2147-transparent-methods-may-not-use-security-asserts_1.cs)]
+[!code-csharp[FxCop.Security.CA2147.TransparentMethodsMustNotUseSecurityAsserts#1](../code-quality/codesnippet/CSharp/ca2147-transparent-methods-may-not-use-security-asserts_1.cs)]
 
 ## <a name="example"></a>示例
- 一种方法是代码评审的 SecurityTransparentMethod 方法在以下示例中，而且如果此方法被认为安全的提升，将 SecurityTransparentMethod 标记与安全关键。 这需要详细、 完整和无错误的安全审核，必须执行以及任何的标注下 Assert 方法内发生的方法：
+其中一种方法是在下面的示例中查看 SecurityTransparentMethod 方法, 如果该方法被认为是安全的, 则将 SecurityTransparentMethod 标记为安全关键。 这要求在方法上执行详细的、完整和无错误的安全审核, 以及在断言下的方法中发生的任何调用:
 
- [!code-csharp[FxCop.Security.SecurityTransparentCode2#1](../code-quality/codesnippet/CSharp/ca2147-transparent-methods-may-not-use-security-asserts_2.cs)]
+[!code-csharp[FxCop.Security.SecurityTransparentCode2#1](../code-quality/codesnippet/CSharp/ca2147-transparent-methods-may-not-use-security-asserts_2.cs)]
 
- 另一个选项是从代码中删除该断言，并允许任何后续文件 I/O 权限需求流超出 SecurityTransparentMethod 给调用方。 这使安全检查。 在这种情况下，无任何安全审核，因为需要权限要求将流向调用方和/或应用程序域。 通过安全策略、 宿主环境中，并相应地代码源的权限授予密切控制权限请求。
+另一种方法是从代码中删除断言, 并让任何后续的文件 i/o 权限要求在 SecurityTransparentMethod 到调用方之前流动。 这将启用安全检查。 在这种情况下, 不需要安全审核, 因为权限要求将流向调用方和/或应用程序域。 权限要求通过安全策略、宿主环境和代码源权限授予进行严格控制。
 
 ## <a name="see-also"></a>请参阅
- [安全警告](../code-quality/security-warnings.md)
+[安全警告](../code-quality/security-warnings.md)

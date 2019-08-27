@@ -6,16 +6,15 @@ helpviewer_keywords:
 - Domain-Specific Language, programming domain properties
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: f86082c1b382904dc721d3caab54bf6d18418096
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MT
+ms.openlocfilehash: 1ca2401333f7678b821b5c6fa68f7953a91996d0
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53938311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63440024"
 ---
 # <a name="calculated-and-custom-storage-properties"></a>计算的和自定义的存储属性
 域特定语言 (DSL) 中的所有域属性可以显示给用户在关系图上和在语言资源管理器中，并且可以通过程序代码访问。 但是，属性不同的方式存储它们的值。
@@ -34,30 +33,30 @@ ms.locfileid: "53938311"
 
 #### <a name="to-define-a-calculated-or-custom-storage-property"></a>若要定义的计算或自定义存储属性
 
-1.  在 DslDefinition.dsl 中，选择域属性在关系图中或在**DSL 资源管理器**。
+1. 在 DslDefinition.dsl 中，选择域属性在关系图中或在**DSL 资源管理器**。
 
-2.  在中**属性**窗口中，将**种类**字段**计算**或**自定义存储**。
+2. 在中**属性**窗口中，将**种类**字段**计算**或**自定义存储**。
 
      请确保还设置其**类型**到所需的内容。
 
-3.  单击**转换所有模板**中的工具栏**解决方案资源管理器**。
+3. 单击**转换所有模板**中的工具栏**解决方案资源管理器**。
 
-4.  在 **“生成”** 菜单上，单击 **“生成解决方案”**。
+4. 在 **“生成”** 菜单上，单击 **“生成解决方案”**。
 
      收到以下错误消息："*YourClass*不包含定义 get*YourProperty*。"
 
-5.  双击该错误消息。
+5. 双击该错误消息。
 
      在 Dsl\GeneratedCode\DomainClasses.cs 或 DomainRelationships.cs 将打开。 上面突出显示的方法调用中，注释会提示你提供一个实现 get*YourProperty*（)。
 
     > [!NOTE]
-    >  从 DslDefinition.dsl 生成此文件。 如果编辑此文件时，所做的更改将会丢失您单击下一次**转换所有模板**。 相反，在单独的文件添加所需的方法。
+    > 从 DslDefinition.dsl 生成此文件。 如果编辑此文件时，所做的更改将会丢失您单击下一次**转换所有模板**。 相反，在单独的文件添加所需的方法。
 
-6.  创建或打开类文件在单独的文件夹，例如独特\\*YourDomainClass*。 cs。
+6. 创建或打开类文件在单独的文件夹，例如独特\\*YourDomainClass*。 cs。
 
      请确保该命名空间是生成的代码相同。
 
-7.  在类文件中，编写域类的部分实现。 在类中，编写缺少的定义`Get`方法类似于下面的示例：
+7. 在类文件中，编写域类的部分实现。 在类中，编写缺少的定义`Get`方法类似于下面的示例：
 
     ```
     namespace Company.FamilyTree
@@ -67,7 +66,7 @@ ms.locfileid: "53938311"
     }  }
     ```
 
-8.  如果您设置**种类**到**自定义存储**，你将需要提供`Set`方法。 例如：
+8. 如果您设置**种类**到**自定义存储**，你将需要提供`Set`方法。 例如：
 
     ```
     void SetAgeValue(int value)
@@ -82,7 +81,7 @@ ms.locfileid: "53938311"
 
 10. 测试属性。 请确保您尝试**撤消**并**重做**。
 
-##  <a name="setters"></a> 事务和自定义资源库
+## <a name="setters"></a> 事务和自定义资源库
  在自定义存储属性的 Set 方法，您无需打开事务，因为通常在活动事务内部调用的方法。
 
  但是，如果用户调用撤消或重做操作，或者如果正在回滚事务可能还调用 Set 方法。 当<xref:Microsoft.VisualStudio.Modeling.Store.InUndoRedoOrRollback%2A>为 true，Set 方法的行为，如下所示：

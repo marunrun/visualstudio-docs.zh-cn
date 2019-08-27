@@ -1,14 +1,9 @@
 ---
 title: “选项”对话框 ->“项目和解决方案” | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 helpviewer_keywords:
 - Projects and Solutions Options dialog box
 - Options dialog box, Projects and Solutions
@@ -16,22 +11,21 @@ ms.assetid: 2801f24e-a138-488a-ae3c-e1f99a678ac0
 caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 4230f99b78809594d65da991c65c11d7dc30efd4
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 2bdcfc2f6a4b7655a6f4f2e335310e938e5acfed
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49246189"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65701983"
 ---
 # <a name="projects-and-solutions-options-dialog-box"></a>“选项”对话框 ->“项目和解决方案”
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 设置 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 项目文件夹的默认路径，并在开发和生成项目时确定“输出”窗口、“任务列表”和“解决方案资源管理器”的默认行为。 若要访问此对话框，请单击“工具/选项”，展开“项目和解决方案”，然后单击“常规”。  
   
 > [!NOTE]
->  对话框中的可用选项以及显示的菜单命令的名称和位置可能与“帮助”中的描述不同，具体取决于您的当前设置或版本。 此帮助页是根据“常规开发设置”而编写的。 若要查看或更改设置，请在“工具”菜单上选择“导入和导出设置”。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+> 对话框中的可用选项以及显示的菜单命令的名称和位置可能与“帮助”中的描述不同，具体取决于您的当前设置或版本。 此帮助页是根据“常规开发设置”而编写的。 若要查看或更改设置，请在“工具”菜单上选择“导入和导出设置”。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ## <a name="settings"></a>设置  
  **项目位置**  
@@ -64,13 +58,10 @@ ms.locfileid: "49246189"
  如果您尝试在不完全信任的位置（例如，在 UNC 路径或 HTTP 路径）创建一个新项目或打开现有项目，将显示一条消息。 使用此选项以指定每次在不完全受信任的位置尝试创建或打开一个项目时是否显示该消息。  
   
  **在生成开始时显示输出窗口**  
- 在解决方案生成一开始就在 IDE 中自动显示输出窗口。 有关详细信息，请参阅[如何：控制输出窗口](http://msdn.microsoft.com/library/91aebd15-8854-4a7a-9f7d-57376fb4e858)。 默认情况下会启用此选项。  
+ 在解决方案生成一开始就在 IDE 中自动显示输出窗口。 有关详细信息，请参阅[如何：控制输出窗口](https://msdn.microsoft.com/library/91aebd15-8854-4a7a-9f7d-57376fb4e858)。 默认情况下会启用此选项。  
   
  **在重命名文件时提示重命名符号**  
  选定后，将显示一个消息框，询问是否[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]还应该将项目中的所有引用重命名为代码元素。  
   
 ## <a name="see-also"></a>请参阅  
  [“选项”对话框 ->“项目和解决方案”->“生成和运行”](../../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)
-
-
-

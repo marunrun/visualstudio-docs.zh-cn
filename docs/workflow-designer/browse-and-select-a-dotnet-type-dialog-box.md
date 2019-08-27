@@ -2,22 +2,21 @@
 title: 工作流设计器-浏览并选择.NET 类型对话框
 ms.date: 11/04/2016
 ms.topic: conceptual
-ms.prod: visual-studio-dev15
 f1_keywords:
 - TypeBrowser.UI
 - ActivityTypeResolver.UI
 ms.assetid: 864b60b6-a070-4e5c-aa5b-a25341b57ea6
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 016dbb410aeade96d99d3ac27473e15ccc4b824c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f48a30e11e28daef2d1803646d2b495bcb718b84
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53915213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62993182"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>“浏览并选择 .NET 类型”对话框
 
@@ -25,11 +24,11 @@ ms.locfileid: "53915213"
 
 在很多用户方案中都使用此对话框，这些方案包括：
 
--   设置变量或参数的类型时。
+- 设置变量或参数的类型时。
 
--   为一般活动选择类型时。
+- 为一般活动选择类型时。
 
--   在 <xref:System.Activities.Statements.TryCatch> 活动上添加一个 catch 时。
+- 在 <xref:System.Activities.Statements.TryCatch> 活动上添加一个 catch 时。
 
 > [!NOTE]
 > 类型浏览器可以显示 Visual Basic 交错数组类型，但不显示多维数组类型。 请参阅[交错数组](http://go.microsoft.com/fwlink/?LinkId=195226)并[多维数组](http://go.microsoft.com/fwlink/?LinkId=195227)有关详细信息。
@@ -38,19 +37,19 @@ ms.locfileid: "53915213"
 
 ### <a name="to-select-a-value-or-reference-type-from-the-type-browser"></a>从类型浏览器中选择值或引用类型
 
-1.  在中**类型名称**框中，输入你想要使用的类型的名称。
+1. 在中**类型名称**框中，输入你想要使用的类型的名称。
 
-2.  执行下列操作之一：
+2. 执行下列操作之一：
 
-    -   当你想要使用的类型名称出现的树中后**类型名称**框中，双击该类型以选择它。
+    - 当你想要使用的类型名称出现的树中后**类型名称**框中，双击该类型以选择它。
 
-    -   键入在足够字符**类型名称**中，用于唯一标识你想要使用并按 enter 以选择的类型的类型
+    - 键入在足够字符**类型名称**中，用于唯一标识你想要使用并按 enter 以选择的类型的类型
 
 ### <a name="to-select-a-generic-type-from-the-type-browser"></a>从类型浏览器中选择一个泛型类型
 
-1.  在中**类型名称**框中，键入你想要使用的类型的名称。
+1. 在中**类型名称**框中，键入你想要使用的类型的名称。
 
-2.  当你想要使用的类型名称出现的树中后**类型名称**框中，单击要选择它以导致下拉列表框的类型出现。
+2. 当你想要使用的类型名称出现的树中后**类型名称**框中，单击要选择它以导致下拉列表框的类型出现。
 
      选择想要用于关闭下拉列表框中，从泛型，然后单击类型**确定**。
 
@@ -66,9 +65,9 @@ ms.locfileid: "53915213"
 
 例如：
 
-1.  键入**操作**匹配<xref:System.OperationCanceledException>但不是<xref:System.InvalidOperationException>。 若要匹配 <xref:System.InvalidOperationException>，请开始键入 System.I 或 Invalid。
+1. 键入**操作**匹配<xref:System.OperationCanceledException>但不是<xref:System.InvalidOperationException>。 若要匹配 <xref:System.InvalidOperationException>，请开始键入 System.I 或 Invalid。
 
-2.  键入**泛型**匹配<xref:System.GenericUriParser>但不是在类型<xref:System.Collections.Generic>命名空间。 若要搜索中的类型<xref:System.Collections.Generic>命名空间中，键入命名空间的完全限定的名称。
+2. 键入**泛型**匹配<xref:System.GenericUriParser>但不是在类型<xref:System.Collections.Generic>命名空间。 若要搜索中的类型<xref:System.Collections.Generic>命名空间中，键入命名空间的完全限定的名称。
 
 ## <a name="selecting-a-service-contract-using-the-type-browser-dialog"></a>使用类型浏览器对话框选择服务协定
 

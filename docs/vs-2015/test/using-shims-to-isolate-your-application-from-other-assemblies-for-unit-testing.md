@@ -1,29 +1,24 @@
 ---
 title: 使用垫片将应用与其他程序集相隔离以供单元测试使用 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-test
+ms.topic: conceptual
 ms.assetid: d2a34de2-6527-4c21-8b93-2f268ee894b7
 caps.latest.revision: 14
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: a6cd7efa12fc87c5de4bd82bcfb789d50193dbe7
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: ddbcac3073dec1e7f21d381d30978589f1cdd792
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49904409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68185736"
 ---
 # <a name="using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing"></a>使用填充码针对单元测试将应用程序与程序集隔离
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-填充码类型 * * 是 Microsoft Fakes 框架使用让你轻松地隔离环境中测试组件的两种技术之一。 填充码会将对特定方法的调用转换为在测试中编写的部分代码。 很多方法会依赖于外部条件而返回不同的结果，但填充码处于测试的控制之下，并且可以在每次调用时返回一致的结果。 这会使您的测试更易于编写。  
+垫片类型是 Microsoft Fakes 框架使用的两种技术之一，方便你轻松地将受测组件与环境隔离开来。 填充码会将对特定方法的调用转换为在测试中编写的部分代码。 很多方法会依赖于外部条件而返回不同的结果，但填充码处于测试的控制之下，并且可以在每次调用时返回一致的结果。 这会使您的测试更易于编写。  
   
  使用填充码，可以将代码与不属于解决方案的程序集隔离。 为了相互隔离解决方案的组件，我们建议使用存根。  
   
@@ -33,52 +28,9 @@ ms.locfileid: "49904409"
   
 - Visual Studio Enterprise  
   
-  请观看[视频（1 小时 16 分钟）：在 Visual Studio 2012 中使用 Fakes 测试不可测试代码](http://go.microsoft.com/fwlink/?LinkId=261837)  
+  请参阅[视频 （1 小时 16 分钟）：在 Visual Studio 2012 测试使用 Fakes 不可测试代码](http://go.microsoft.com/fwlink/?LinkId=261837)
   
-## <a name="in-this-topic"></a>在本主题中  
- 在本主题中，您将了解以下内容：  
-  
- [示例：千年虫问题](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md#BKMK_Example__The_Y2K_bug)  
-  
- [如何使用垫片](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md#BKMK_Fakes_requirements)  
-  
-- [添加 Fakes 程序集](#AddFakes)  
-  
-- [使用 ShimsContext](#ShimsContext)  
-  
-- [编写包含垫片的测试](#WriteTests)  
-  
-  [用于各种方法的垫片](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md#BKMK_Shim_basics)  
-  
-- [静态方法](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md#BKMK_Static_methods)  
-  
-- [实例方法（对于所有实例）](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md#BKMK_Instance_methods__for_all_instances_)  
-  
-- [实例方法（对于一个运行时实例）](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md#BKMK_Instance_methods__for_one_instance_)  
-  
-- [构造函数](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md#BKMK_Constructors)  
-  
-- [基成员](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md#BKMK_Base_members)  
-  
-- [静态构造函数](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md#BKMK_Static_constructors)  
-  
-- [终结器](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md#BKMK_Finalizers)  
-  
-- [私有方法](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md#BKMK_Private_methods)  
-  
-- [绑定接口](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md#BKMK_Binding_interfaces)  
-  
-  [更改默认行为](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md#BKMK_Changing_the_default_behavior)  
-  
-  [检测环境访问权限](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md#BKMK_Detecting_environment_accesses)  
-  
-  [并发](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md#BKMK_Concurrency)  
-  
-  [通过垫片方法调用原始方法](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md#BKMK_Calling_the_original_method_from_the_shim_method)  
-  
-  [限制](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md#BKMK_Limitations)  
-  
-##  <a name="BKMK_Example__The_Y2K_bug"></a>示例：千年虫问题  
+## <a name="BKMK_Example__The_Y2K_bug"></a> 示例：千年虫 bug  
  我们来考虑一种会在 2000 年 1 月 1 日引发异常的方法：  
   
 ```csharp  
@@ -87,7 +39,7 @@ public static class Y2KChecker {
     public static void Check() {  
         if (DateTime.Now == new DateTime(2000, 1, 1))  
             throw new ApplicationException("y2kbug!");  
-    }  
+    }
 }  
   
 ```  
@@ -110,19 +62,19 @@ using (ShimsContext.Create()
   
 ```  
   
-##  <a name="BKMK_Fakes_requirements"></a>如何使用垫片  
+## <a name="BKMK_Fakes_requirements"></a>如何使用垫片  
   
-###  <a name="AddFakes"></a>添加 Fakes 程序集  
+### <a name="AddFakes"></a>添加 Fakes 程序集  
   
-1.  在“解决方案资源管理器”中，展开单元测试项目的“引用”。  
+1. 在“解决方案资源管理器”中，展开单元测试项目的“引用”  。  
   
-    -   如果使用的是 Visual Basic，必须选择解决方案资源管理器工具栏中的“显示所有文件”才能看到引用列表。  
+    - 如果使用的是 Visual Basic，必须选择解决方案资源管理器工具栏中的“显示所有文件”  才能看到引用列表。  
   
-2.  选择包含要为其创建填充码的类定义的程序集。 例如，如果要填充 DateTime，请选择 System.dll  
+2. 选择包含要为其创建填充码的类定义的程序集。 例如，如果要填充 DateTime，请选择 System.dll  
   
-3.  选择快捷菜单中的“添加 Fakes 程序集”。  
+3. 选择快捷菜单中的“添加 Fakes 程序集”  。  
   
-###  <a name="ShimsContext"></a>使用 ShimsContext  
+### <a name="ShimsContext"></a>使用 ShimsContext  
  当在单元测试框架中使用填充码类型时，必须将测试代码包装在 `ShimsContext` 中，以便控制填充码的生存期。 如果未做此要求，您的填充码将一直持续到 AppDomain 关闭。 最简单的方法是使用静态 `ShimsContext` 方法创建一个 `Create()`，如下面的代码中所示：  
   
 ```csharp  
@@ -138,7 +90,7 @@ public void Y2kCheckerTest() {
   
  正确释放每个填充码上下文至关重要。 根据经验，请始终调用 `ShimsContext.Create` 语句内的 `using`，以便确保清除已注册的填充码。 例如，您可能为某一测试方法注册了填充码，而且该方法会将 `DateTime.Now` 方法替换为始终返回 2000 年 1 月 1 日的委托。 如果忘记清除测试方法中的已注册填充码，则剩余的测试将始终返回 2000 年 1 月 1 日作为 DateTime.Now 值。 这可能会让人感到惊讶和困惑。  
   
-###  <a name="WriteShims"></a>编写包含垫片的测试  
+### <a name="WriteShims"></a>编写包含垫片的测试  
  在测试代码中，为要虚设的方法插入 *detour*。 例如：  
   
 ```csharp  
@@ -207,10 +159,10 @@ End Class
   
  您可能会看到一个说明 Fakes 命名空间不存在的生成错误。 此错误有时会在发生其他编译错误时出现。 修复其他错误，然后它就会消失。  
   
-##  <a name="BKMK_Shim_basics"></a>用于各种方法的垫片  
+## <a name="BKMK_Shim_basics"></a>用于各种方法的垫片  
  使用填充码方法，您可以将任何 .NET 方法（包括静态方法或非虚拟方法）替换为自己的委托。  
   
-###  <a name="BKMK_Static_methods"></a>静态方法  
+### <a name="BKMK_Static_methods"></a>静态方法  
  用于将填充码附加到静态方法的属性将放置在填充码类型中。 每个属性只有一个资源库，可用来将委托附加到目标方法。 例如，给定一个具有静态方法 `MyClass` 的类 `MyMethod`：  
   
 ```csharp  
@@ -229,7 +181,7 @@ public static class MyClass {
 ShimMyClass.MyMethod = () =>5;  
 ```  
   
-###  <a name="BKMK_Instance_methods__for_all_instances_"></a>实例方法（对于所有实例）  
+### <a name="BKMK_Instance_methods__for_all_instances_"></a>实例方法（对于所有实例）  
  与静态方法类似，可以为所有实例填充实例方法。 为了避免混淆，用于附加这些填充码的属性放置在名为 AllInstances 的嵌套类型中。 例如，给定一个具有静态方法 `MyClass` 的类 `MyMethod`：  
   
 ```csharp  
@@ -265,7 +217,7 @@ public class ShimMyClass : ShimBase<MyClass> {
   
  请注意，在此示例中，Fakes 会将运行时实例作为委托的第一个自变量传递。  
   
-###  <a name="BKMK_Instance_methods__for_one_instance_"></a>实例方法（对于一个运行时实例）  
+### <a name="BKMK_Instance_methods__for_one_instance_"></a>实例方法（对于一个运行时实例）  
  根据调用的接收方，也可以通过不同的委托来填充实例方法。 这样一来，同一实例方法可以根据类型实例而具有不同的行为。 用于设置这些填充码的属性是填充码类型本身的实例方法。 每个实例化的填充码类型也会与一个所填充类型的原始实例相关联。  
   
  例如，给定一个具有静态方法 `MyClass` 的类 `MyMethod`：  
@@ -325,7 +277,7 @@ MyClass instance = shim; // implicit cast retrieves the runtime
                          // instance  
 ```  
   
-###  <a name="BKMK_Constructors"></a> 构造函数  
+### <a name="BKMK_Constructors"></a> 构造函数  
  构造函数也可以进行填充，以便将填充码类型附加到未来的对象。 在填充码类型中，每个构造函数都作为静态方法构造函数而公开。 例如，给定一个使用整数的构造函数的类 `MyClass`：  
   
 ```csharp  
@@ -375,7 +327,7 @@ public class ShimMyClass : ShimBase<MyClass>
 }  
 ```  
   
-###  <a name="BKMK_Base_members"></a>基成员  
+### <a name="BKMK_Base_members"></a>基成员  
  基成员的填充码属性可以通过以下方式来访问：为基类型创建填充码，并将子实例作为参数传递给基填充码类的构造函数。  
   
  例如，给定一个具有实例方法 `MyBase` 和子类型 `MyMethod` 的类 `MyChild`：  
@@ -418,16 +370,16 @@ public class ShimMyBase : ShimBase<MyBase> {
 }  
 ```  
   
-###  <a name="BKMK_Static_constructors"></a>静态构造函数  
+### <a name="BKMK_Static_constructors"></a>静态构造函数  
  填充码类型会公开静态方法 `StaticConstructor`，以便填充类型的静态构造函数。 由于静态构造函数仅执行一次，因此，在访问任何类型成员之前，你需要确保配置填充码。  
   
-###  <a name="BKMK_Finalizers"></a>终结器  
+### <a name="BKMK_Finalizers"></a>终结器  
  Fakes 中不支持终结器。  
   
-###  <a name="BKMK_Private_methods"></a>私有方法  
+### <a name="BKMK_Private_methods"></a>私有方法  
  Fakes 代码生成器将为仅具有签名中的可见类型的私有方法创建填充码属性，即可见的参数类型和返回类型。  
   
-###  <a name="BKMK_Binding_interfaces"></a>绑定接口  
+### <a name="BKMK_Binding_interfaces"></a>绑定接口  
  当填充的类型实现某一接口时，代码生成器将发出一个方法，以便它同时绑定该接口的所有成员。  
   
  例如，给定一个实现 `MyClass` 的类 `IEnumerable<int>`：  
@@ -463,7 +415,7 @@ public class ShimMyClass : ShimBase<MyClass> {
   
 ```  
   
-##  <a name="BKMK_Changing_the_default_behavior"></a>更改默认行为  
+## <a name="BKMK_Changing_the_default_behavior"></a>更改默认行为  
  每个生成的填充码类型都保留 `IShimBehavior` 接口的一个实例（通过 `ShimBase<T>.InstanceBehavior` 属性）。 只要客户端调用未显式填充的实例成员，系统就会使用该行为。  
   
  如果未显式设置该行为，它将使用静态 `ShimsBehaviors.Current` 属性返回的实例。 默认情况下，此属性将返回引发 `NotImplementedException` 异常的行为。  
@@ -489,7 +441,7 @@ ShimsBehaviors.Current =
   
 ```  
   
-##  <a name="BKMK_Detecting_environment_accesses"></a>检测环境访问权限  
+## <a name="BKMK_Detecting_environment_accesses"></a>检测环境访问权限  
  通过将 `ShimsBehaviors.NotImplemented` 行为分配给相应填充码类型的静态属性 `Behavior`，可以将行为附加到特定类型的所有成员（包括静态方法）：  
   
 ```csharp  
@@ -501,10 +453,10 @@ ShimMyClass.BehaveAsNotImplemented();
   
 ```  
   
-##  <a name="BKMK_Concurrency"></a> 并发  
+## <a name="BKMK_Concurrency"></a> 并发  
  填充码类型适用于 AppDomain 中的所有线程，并且不具备线程关联性。 如果您计划使用支持并发的测试运行程序，这一点非常重要：涉及填充码类型的测试无法并发运行。 此属性不由 Fakes 运行时来实施。  
   
-##  <a name="BKMK_Calling_the_original_method_from_the_shim_method"></a>通过垫片方法调用原始方法  
+## <a name="BKMK_Calling_the_original_method_from_the_shim_method"></a>通过垫片方法调用原始方法  
  假设我们想要在验证文件名已传递给方法之后，再将文本编写到文件系统。 这种情况下，我们需要调用填充码方法中的原始方法。  
   
  要解决这一问题，第一种方法是使用委托和 `ShimsContext.ExecuteWithoutShims()` 来包装对原始方法的调用，如下面的代码中所示：  
@@ -546,18 +498,15 @@ ShimFile.WriteAllTextStringString = shim;
   
 ```  
   
-##  <a name="BKMK_Limitations"></a>限制  
+## <a name="BKMK_Limitations"></a>限制  
  垫片无法用于 .NET 基类库 **mscorlib** 和 **System** 中的所有类型。  
   
 ## <a name="external-resources"></a>外部资源  
   
 ### <a name="guidance"></a>指导  
- [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [使用 Visual Studio 2012 – 第 2 章对连续交付进行测试：单元测试：测试内部](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
 ## <a name="see-also"></a>请参阅  
  [使用 Microsoft Fakes 隔离受测代码](../test/isolating-code-under-test-with-microsoft-fakes.md)   
- [Peter Provost 的博客：Visual Studio 2012 垫片](http://www.peterprovost.org/blog/2012/04/25/visual-studio-11-fakes-part-2)   
- [视频（1 小时 16 分钟）：在 Visual Studio 2012 中使用 Fakes 测试不可测试代码](http://go.microsoft.com/fwlink/?LinkId=261837)
-
-
-
+ [Peter Provost 的博客：Visual Studio 2012 填充码](http://www.peterprovost.org/blog/2012/04/25/visual-studio-11-fakes-part-2)   
+ [视频（1 小时 16 分钟）：在 Visual Studio 2012 测试使用 Fakes 不可测试代码](http://go.microsoft.com/fwlink/?LinkId=261837)

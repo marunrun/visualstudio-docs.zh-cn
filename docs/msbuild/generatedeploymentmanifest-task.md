@@ -14,15 +14,15 @@ helpviewer_keywords:
 - GenerateDeploymentManifest task [MSBuild]
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d8f6f45b0a02922f3c91b9d1443000a385eb240
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f8a2f4810c8a485d6b9013f658e221db39d8071f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53932374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63003344"
 ---
 # <a name="generatedeploymentmanifest-task"></a>GenerateDeploymentManifest 任务
 
@@ -31,7 +31,6 @@ ms.locfileid: "53932374"
 ## <a name="parameters"></a>参数
 
 下表描述了 `GenerateDeploymentManifest` 任务的参数。
-
 
 | 参数 | 说明 |
 |--------------------------| - |
@@ -67,7 +66,7 @@ ms.locfileid: "53932374"
 
 ## <a name="see-also"></a>请参阅
 
-[任务](../msbuild/msbuild-tasks.md)  
-[GenerateApplicationManifest 任务](../msbuild/generateapplicationmanifest-task.md)  
-[SignFile 任务](../msbuild/signfile-task.md)  
-[任务参考](../msbuild/msbuild-task-reference.md)
+- [任务](../msbuild/msbuild-tasks.md)
+- [GenerateApplicationManifest 任务](../msbuild/generateapplicationmanifest-task.md)
+- [SignFile 任务](../msbuild/signfile-task.md)
+- [任务参考](../msbuild/msbuild-task-reference.md)

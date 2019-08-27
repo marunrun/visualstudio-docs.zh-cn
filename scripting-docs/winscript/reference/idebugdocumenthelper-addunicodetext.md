@@ -2,7 +2,6 @@
 title: 'Idebugdocumenthelper:: Addunicodetext |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 190df1f621b450c6d3b34c339d21f947f48636f2
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
-ms.translationtype: MT
+ms.openlocfilehash: 391095acc1d2f541a3c497abeac5ae7248baa4e8
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54093517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63446627"
 ---
 # <a name="idebugdocumenthelperaddunicodetext"></a>IDebugDocumentHelper::AddUnicodeText
 本文档的末尾追加一个 Unicode 字符串。  
@@ -43,7 +42,7 @@ HRESULT AddUnicodeText(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
 |`E_FAIL`|该方法不能添加字符。|  
@@ -52,9 +51,9 @@ HRESULT AddUnicodeText(
  此方法将生成`IDebugDocumentTextEvents`通知。  
   
 > [!NOTE]
->  如果此方法之后调用`AddDeferredText`已调用`E_FAIL`返回。  
+> 如果此方法之后调用`AddDeferredText`已调用`E_FAIL`返回。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugDocumentHelper 接口](../../winscript/reference/idebugdocumenthelper-interface.md)   
- [Idebugdocumenthelper:: Adddeferredtext](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)   
+ [IDebugDocumentHelper::AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)   
  [IDebugDocumentTextEvents 接口](../../winscript/reference/idebugdocumenttextevents-interface.md)

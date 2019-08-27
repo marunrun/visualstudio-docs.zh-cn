@@ -1,14 +1,9 @@
 ---
 title: “选项”对话框 ->“环境”| Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.OptionsDialog.Environment
 - VS.ToolsOptionsPages.Environment
@@ -16,27 +11,26 @@ ms.assetid: 3f463cf0-734b-4fdc-b4ff-b47f9bb99069
 caps.latest.revision: 33
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: f235e79b7173ec37e5ecfdf2dd3f0d1d2ae1ea40
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 5880dbeb9f3f49f990a923fd48c27dd6167d59c8
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49257668"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65692201"
 ---
 # <a name="environment-options-dialog-box"></a>“选项”对话框 ->“环境”
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 使用“选项”对话框的“环境”文件夹中的页，可设置集成开发环境 (IDE) 的某些元素的显示和行为方式。 可通过在菜单栏上依次选择“工具”、“选项”、“环境”来访问“环境”页。  
   
 > [!NOTE]
->  显示在计算机上的对话框和菜单命令可能与“帮助”中说明的不同，具体取决于处于活动状态的设置以及你使用的 Visual Studio 版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+> 显示在计算机上的对话框和菜单命令可能与“帮助”中说明的不同，具体取决于处于活动状态的设置以及你使用的 Visual Studio 版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 |有关如何执行下列操作的信息|查看|  
 |----------------------------------|---------|  
 |自定义窗口、菜单和其他 IDE 元素的外观和行为。|[“选项”对话框 ->“环境”->“常规”](../../ide/reference/general-environment-options-dialog-box.md)|  
-|为外接程序指定安全性。|[外接程序安全性，环境中，选项对话框](http://msdn.microsoft.com/library/f95aa7af-70a5-4323-abe5-91bd6d264f4e)|  
+|为外接程序指定安全性。|[“选项”对话框 ->“环境”->“外接程序安全性”](https://msdn.microsoft.com/library/f95aa7af-70a5-4323-abe5-91bd6d264f4e)|  
 |更改文件的自动保存和还原设置。|[“选项”对话框 ->“环境”->“自动恢复”](../../ide/reference/autorecover-environment-options-dialog-box.md)|  
 |建立文档的显示和管理设置，其中包括“其他”文件的行为。|[“选项”对话框 ->“环境”->“文档”](../../ide/reference/documents-environment-options-dialog-box.md)|  
 |自定义更新如何发生以及如何管理扩展。|[“选项”对话框 ->“环境”->“扩展和更新”](../../ide/reference/extensions-and-updates-environment-options-dialog-box.md)|  
@@ -54,6 +48,3 @@ ms.locfileid: "49257668"
   
 ## <a name="see-also"></a>请参阅  
  [“选项”对话框](../../ide/reference/options-dialog-box-visual-studio.md)
-
-
-

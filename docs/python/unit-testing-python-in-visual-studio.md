@@ -2,21 +2,20 @@
 title: 单元测试 Python 代码
 description: 在 Visual Studio 中为 Python 代码设置单元测试，以充分利用测试资源管理器功能来发现、运行和调试测试。
 ms.date: 11/12/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
-author: kraigb
-ms.author: kraigb
-manager: douge
+author: JoshuaPartlow
+ms.author: joshuapa
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 5f808314639c72f530e64c4ccac08c49439c6818
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e16612287d1efa76b206de50c6af9f18edab7c8a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53858272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63002917"
 ---
 # <a name="set-up-unit-testing-for-python-code"></a>为 Python 代码设置单元测试
 
@@ -25,10 +24,6 @@ ms.locfileid: "53858272"
 Python 单元测试广泛应用于在程序设计期间验证方案。 针对 Visual Studio 的 Python 支持包括在开发过程的上下文中发现、执行和调试单元测试，无需单独运行单元测试。
 
 本文简要介绍了适用于 Python 语言的 Visual Studio 中的单元测试功能。 有关单元测试的的更多常见信息，请参阅[对代码进行单元测试](../test/unit-test-your-code.md)。
-
-|   |   |
-|---|---|
-| ![视频的摄像机图标](../install/media/video-icon.png "观看视频") | 有关 Python 中的单元测试，请[观看视频（Microsoft 虚拟学院）](https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Testing-Python-hb46k6LWE_405918567)（2 分 31 秒）。 |
 
 ## <a name="discover-and-view-tests"></a>发现和查看测试
 
@@ -91,7 +86,7 @@ Python 单元测试广泛应用于在程序设计期间验证方案。 针对 Vi
 
 ![调试测试](media/unit-test-debugging.png)
 
-还可使用“分析所选测试的代码覆盖率”和“配置文件测试”命令，具体取决于 Visual Studio 版本（请参阅[功能矩阵](overview-of-python-tools-for-visual-studio.md#features-matrix)）。
+还可以使用“分析所选测试的代码覆盖率”和“配置文件测试”命令。
 
 ### <a name="known-issues"></a>已知问题
 

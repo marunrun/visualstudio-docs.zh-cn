@@ -1,5 +1,5 @@
 ---
-title: 如何：以编程方式缓存中的 Office 文档的数据源
+title: 以编程方式缓存 Office 文档中的数据源
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - data [Office development in Visual Studio], caching
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 46411ef1827f6a5adead8ff58e42eaf68e6c58ae
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: 5e63b478fb16965f639a76dad0cbc3b2715bc7e2
+ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54088486"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66401403"
 ---
 # <a name="how-to-programmatically-cache-a-data-source-in-an-office-document"></a>如何：以编程方式缓存中的 Office 文档的数据源
   你可以以编程方式将数据对象添加到文档中的数据缓存通过调用`StartCaching`方法的主机项，如<xref:Microsoft.Office.Tools.Word.Document>， <xref:Microsoft.Office.Tools.Excel.Workbook>，或<xref:Microsoft.Office.Tools.Excel.Worksheet>。 从数据缓存中删除数据对象，通过调用`StopCaching`宿主项的方法。
@@ -34,25 +34,25 @@ ms.locfileid: "54088486"
 
 ## <a name="to-programmatically-cache-a-data-object"></a>若要以编程方式缓存数据对象
 
-1.  声明在类级别，不在方法中的数据对象。 此示例假定你将声明<xref:System.Data.DataSet>名为`dataSet1`你想要以编程方式缓存。
+1. 声明在类级别，不在方法中的数据对象。 此示例假定你将声明<xref:System.Data.DataSet>名为`dataSet1`你想要以编程方式缓存。
 
      [!code-csharp[Trin_VstcoreDataExcel#12](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#12)]
      [!code-vb[Trin_VstcoreDataExcel#12](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#12)]
 
-2.  实例化数据对象，然后调用`StartCaching`方法文档或工作表的实例并传入的数据对象的名称。
+2. 实例化数据对象，然后调用`StartCaching`方法文档或工作表的实例并传入的数据对象的名称。
 
      [!code-csharp[Trin_VstcoreDataExcel#13](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#13)]
      [!code-vb[Trin_VstcoreDataExcel#13](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#13)]
 
 ## <a name="to-stop-caching-a-data-object"></a>若要停止缓存数据对象
 
-1.  调用`StopCaching`方法文档或工作表的实例并传入的数据对象的名称。 此示例假定你拥有<xref:System.Data.DataSet>名为`dataSet1`想要停止缓存。
+1. 调用`StopCaching`方法文档或工作表的实例并传入的数据对象的名称。 此示例假定你拥有<xref:System.Data.DataSet>名为`dataSet1`想要停止缓存。
 
      [!code-csharp[Trin_VstcoreDataExcel#14](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#14)]
      [!code-vb[Trin_VstcoreDataExcel#14](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#14)]
 
     > [!NOTE]
-    >  不要调用`StopCaching`的事件处理程序从`Shutdown`事件的文档或工作表。 按时间`Shutdown`引发事件，它太迟是若要修改的数据缓存。 有关详细信息`Shutdown`事件，请参阅[Events in Office Projects](../vsto/events-in-office-projects.md)。
+    > 不要调用`StopCaching`的事件处理程序从`Shutdown`事件的文档或工作表。 按时间`Shutdown`引发事件，它太迟是若要修改的数据缓存。 有关详细信息`Shutdown`事件，请参阅[Events in Office Projects](../vsto/events-in-office-projects.md)。
 
 ## <a name="see-also"></a>请参阅
 

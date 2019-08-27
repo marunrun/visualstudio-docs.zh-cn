@@ -1,14 +1,9 @@
 ---
 title: 扩展菜单和命令 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - menus, common tasks
 - VSPackages, menu tasks
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 7b2be4b9-e3fe-4412-874f-ae72ebc84c4b
 caps.latest.revision: 50
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 36dcc3742b745f8933f340b8df966b1f621d6998
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 83d9dc45863f1ed1b5e11c17b9e922b62b0186dc
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51793147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68204525"
 ---
 # <a name="extending-menus-and-commands"></a>扩展菜单和命令
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -67,4 +62,3 @@ ms.locfileid: "51793147"
  介绍如何本地化菜单命令。  
   
 ## <a name="related-sections"></a>相关章节
-

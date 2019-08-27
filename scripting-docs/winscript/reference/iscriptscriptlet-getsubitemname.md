@@ -1,8 +1,7 @@
 ---
-title: IScriptScriptlet::GetSubItemName |Microsoft Docs
+title: IScriptScriptlet::GetSubItemName | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6962edbc1f639e23e159915ca1aa6ef165433ce0
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: 0c48517b7f9f5fab3250b8cff68ad288525145b9
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54096637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786792"
 ---
 # <a name="iscriptscriptletgetsubitemname"></a>IScriptScriptlet::GetSubItemName
 Scriptlet 的对象主机的完全限定名称中返回的最后一个标识符。  
@@ -45,7 +44,7 @@ HRESULT GetSubItemName(
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   

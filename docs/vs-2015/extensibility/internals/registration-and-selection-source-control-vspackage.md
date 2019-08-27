@@ -1,27 +1,22 @@
 ---
 title: 注册和选择 (源代码管理 VSPackage) |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - registration, source control packages
 - source control packages, registration
 ms.assetid: 7d21fe48-489a-4f55-acb5-73da64c4e155
 caps.latest.revision: 35
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 636e70357c23059a505d657af0078653de413976
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: HT
+manager: jillfra
+ms.openlocfilehash: 692f2a9f34edd41839179f7229e079ec8e791800
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51764461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68185818"
 ---
 # <a name="registration-and-selection-source-control-vspackage"></a>注册和选择（源代码管理 VSPackage）
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -38,18 +33,18 @@ ms.locfileid: "51764461"
 ### <a name="registry-entries"></a>注册表项  
  源代码管理包需要三个专用 Guid:  
   
-- 包 GUID： 这是包含 （在本部分中称为 ID_Package） 的源控件实现的包的主要 GUID。  
+- 包 GUID:这是包含 （在本部分中称为 ID_Package） 的源控件实现的包的主要 GUID。  
   
-- 源控件 GUID： 这是个源代码管理用于将注册 Visual Studio 源控件存根的 VSPackage 的 GUID，也可用作命令 UI 上下文的 GUID。 源代码管理 GUID 注册时源代码管理服务的 GUID。 在示例中，源控件 GUID 称为 ID_SccProvider。  
+- 源控件 GUID:这是个源代码管理用于将注册 Visual Studio 源控件存根的 VSPackage 的 GUID，也可用作命令 UI 上下文的 GUID。 源代码管理 GUID 注册时源代码管理服务的 GUID。 在示例中，源控件 GUID 称为 ID_SccProvider。  
   
-- 源控制服务 GUID： 这是专用的服务 （在本部分中称为 SID_SccPkgService） 的 Visual Studio 使用的 GUID。 除此之外，源代码管理包需要定义其他 Guid 的 Vspackage，工具窗口，依次类推。  
+- 源代码管理服务的 GUID:这是专用的服务 （在本部分中称为 SID_SccPkgService） 的 Visual Studio 使用的 GUID。 除此之外，源代码管理包需要定义其他 Guid 的 Vspackage，工具窗口，依次类推。  
   
   必须由源代码管理 VSPackage 进行以下注册表项：  
   
 |项名称|条目|  
 |--------------|-------------|  
 |`HKEY_LOCAL_MACHINE\   SOFTWARE\     Microsoft\       VisualStudio\         X.Y\           SourceControlProviders\`|（默认值） = rg_sz: {ID_SccProvider}|  
-|`HKEY_LOCAL_MACHINE\   SOFTWARE\     Microsoft\       VisualStudio\         X.Y\           SourceControlProviders\             {ID_SccProvider}\`|（默认值） = rg_sz:\<包的友好名称 ><br /><br /> 服务 = rg_sz: {SID_SccPkgService}|  
+|`HKEY_LOCAL_MACHINE\   SOFTWARE\     Microsoft\       VisualStudio\         X.Y\           SourceControlProviders\             {ID_SccProvider}\`|（默认值） = rg_sz:\<包的友好名称 ><br /><br /> Service = rg_sz:{SID_SccPkgService}|  
 |`HKEY_LOCAL_MACHINE\   SOFTWARE\     Microsoft\       VisualStudio\         X.Y\           SourceControlProviders\             {ID_SccProvider}\               Name\`|（默认值） = rg_sz: #\<本地化名称的资源 ID ><br /><br /> 包 = rg_sz: {ID_Package}|  
 |`HKEY_LOCAL_MACHINE\   SOFTWARE\     Microsoft\       VisualStudio\         X.Y\           SolutionPersistence\             <PackageName>\`<br /><br /> (请注意，键名称， `SourceCodeControl`，已由[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]不是可用的选择和\<包名称 >。)|（默认值） = rg_sz: {ID_Package}|  
   
@@ -91,4 +86,3 @@ ms.locfileid: "51764461"
  [功能](../../extensibility/internals/source-control-vspackage-features.md)   
  [创建源代码管理插件](../../extensibility/internals/creating-a-source-control-plug-in.md)   
  [VSPackage](../../extensibility/internals/vspackages.md)
-

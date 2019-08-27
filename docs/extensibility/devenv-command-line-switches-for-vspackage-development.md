@@ -13,33 +13,33 @@ helpviewer_keywords:
 - command line, switches
 - Visual Studio SDK, command-line switches
 ms.assetid: d65d2c04-dd84-42b0-b956-555b11f5a645
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3ed62724cd7d9c957e602975aebb3be8fc6547d1
-ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
+ms.openlocfilehash: 289f31c503143dc2b992717483f4d8701414e09d
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54227351"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66348053"
 ---
 # <a name="devenv-command-line-switches-for-vspackage-development"></a>VSPackage 开发的 Devenv 命令行开关
 
-Visual Studio 允许开发人员自动执行任务命令行中的，执行时`devenv.exe`，启动 Visual Studio IDE 的文件。  
+Visual Studio 允许开发人员自动执行任务命令行中的，执行时`devenv.exe`，启动 Visual Studio IDE 的文件。
 
- 任务包括：  
+ 任务包括：
 
-- 在从 IDE 外部的预配置中部署应用程序。  
+- 在从 IDE 外部的预配置中部署应用程序。
 
-- 自动使用预设的生成项目的生成设置，或调试配置。  
+- 自动使用预设的生成项目的生成设置，或调试配置。
 
-- 在 IDE 之外，在特定配置中，IDE 加载中的所有内容。 此外可以自定义在启动时 IDE。  
+- 在 IDE 之外，在特定配置中，IDE 加载中的所有内容。 此外可以自定义在启动时 IDE。
 
 ## <a name="guidelines-for-switches"></a>开关的准则
 
-Visual Studio 文档介绍了用户级`devenv`命令行开关。 有关详细信息，请参阅[Devenv 命令行开关](../ide/reference/devenv-command-line-switches.md)。 `devenv`工具还支持用于 VSPackage 开发、 部署和调试的其他命令行开关。  
+Visual Studio 文档介绍了用户级`devenv`命令行开关。 有关详细信息，请参阅[Devenv 命令行开关](../ide/reference/devenv-command-line-switches.md)。 `devenv`工具还支持用于 VSPackage 开发、 部署和调试的其他命令行开关。
 
 | 命令行开关 | 描述 |
 |---------------------| - |

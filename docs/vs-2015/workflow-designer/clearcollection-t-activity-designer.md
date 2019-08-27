@@ -1,11 +1,8 @@
 ---
 title: ClearCollection&lt;T&gt;活动设计器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.ClearCollection`1.UI
@@ -13,13 +10,13 @@ ms.assetid: db0e5da2-7b5a-4f1a-864c-f3aeeeeb51a7
 caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: 7c71d9a09cb3f64464ce968296799b27d573bfcd
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 240e634115e7602c66d69f0dba9cfa52504dc89a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49232857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62977166"
 ---
 # <a name="clearcollectionlttgt-activity-designer"></a>ClearCollection&lt;T&gt;活动设计器
 **ClearCollection\<T >** 活动设计器用于创建和配置<xref:System.Activities.Statements.ClearCollection%601>活动。  
@@ -43,6 +40,6 @@ ms.locfileid: "49232857"
   
 ## <a name="see-also"></a>请参阅  
  [集合](../workflow-designer/collection-activity-designers.md)   
- [AddToCollection\<T >](../workflow-designer/addtocollection-t-activity-designer.md)   
- [ExistsInCollection\<T >](../workflow-designer/existsincollection-t-activity-designer.md)   
+ [AddToCollection\<T>](../workflow-designer/addtocollection-t-activity-designer.md)   
+ [ExistsInCollection\<T>](../workflow-designer/existsincollection-t-activity-designer.md)   
  [RemoveFromCollection\<T>](../workflow-designer/removefromcollection-t-activity-designer.md)

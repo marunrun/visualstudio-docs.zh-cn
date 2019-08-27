@@ -4,16 +4,15 @@ ms.date: 11/04/2016
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 406f92a9d7003f2c0fd36859a56b011e8a8a5f92
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b473dc706cd7183835c5d84091fb53e45337c013
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53899780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834212"
 ---
 # <a name="directed-graph-markup-language-dgml-reference"></a>定向图形标记语言 (DGML) 引用
 
@@ -24,7 +23,7 @@ ms.locfileid: "53899780"
 > [!NOTE]
 > 在编辑 .dgml 文件时，IntelliSense 可帮助您标识对每个元素及其值可用的特性。 若要指定特性中的颜色，请使用常用颜色的名称，如“Blue”或 ARGB 十六进制值（如“#ffa0b1c3”）。 DGML 使用一小部分 Windows Presentation Foundation (WPF) 颜色定义格式。 有关详细信息，请参阅[颜色类](http://go.microsoft.com/fwlink/?LinkId=182345)。
 
-##  <a name="DGML"></a> DGML 语法
+## <a name="DGML"></a> DGML 语法
 
 下表描述在 DGML 中使用的各种元素：
 
@@ -301,7 +300,7 @@ ms.locfileid: "53899780"
   </DirectedGraph>
   ```
 
-###  <a name="AddAlias"></a> 常用路径的别名
+### <a name="AddAlias"></a> 常用路径的别名
 
 将常用路径替换为别名有助于减小 .dgml 文件的大小和加载或保存该文件所需的时间。 若要创建别名，请在 .dgml 文件的结尾处添加 `<Paths></Paths>` 部分。 在此部分添加 `<Path/>` 元素以定义路径的别名：
 

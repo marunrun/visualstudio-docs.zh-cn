@@ -2,7 +2,6 @@
 title: IActiveScriptSite::GetDocVersionString |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a451f4883373978772643e11fe22feb9122be30e
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: 7327b71329c1f476eab9c27d5e0d5a047664abfa
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54349746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992740"
 ---
 # <a name="iactivescriptsitegetdocversionstring"></a>IActiveScriptSite::GetDocVersionString
 检索唯一标识当前的文档版本的主机定义的字符串。 如果 Windows 脚本 （如下所示使用记事本正在编辑的 HTML 页的情况下） 范围内已更改的相关的文档，脚本引擎可以将它保存以及其保留的状态，强制重新编译下次加载脚本。  

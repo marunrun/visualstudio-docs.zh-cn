@@ -1,22 +1,24 @@
 ---
 layout: LandingPage
 title: 通过分析来评估应用性能 | Microsoft Docs
-description: 了解如何使用 Visual Studio 2017 并以你喜欢的语言来分析应用程序、服务和工具的性能。
+description: 了解如何使用 Visual Studio 并以你喜欢的语言来分析应用程序、服务和工具的性能。
 ms.custom: seodec18
 ms.topic: landing-page
 author: mikejo5000
 ms.author: mikejo
-manager: douge
-ms.openlocfilehash: ced28177670ab33916701858bfae36fa860a357f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: e47f44a78fbd8632b834c46c451f5f3106c85fcd
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53886437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62995436"
 ---
 # <a name="measure-app-performance-in-visual-studio"></a>在 Visual Studio 中评估应用性能
 
-分析和诊断工具有助于诊断内存和 CPU 使用率以及其他应用程序级别问题。 这些工具可用于累积一段时间内在调试器中运行应用程序的数据（例如变量值、函数调用和事件）。 可以查看代码执行期间不同点的应用程序状态。 
+分析和诊断工具有助于诊断内存和 CPU 使用率以及其他应用程序级别问题。 这些工具可用于累积一段时间内在调试器中运行应用程序的数据（例如变量值、函数调用和事件）。 可以查看代码执行期间不同点的应用程序状态。
+
+<!-- markdownlint-disable MD033 -->
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -49,24 +51,6 @@ ms.locfileid: "53886437"
                     </div>
                     <div class="cardText">
                         <h3>诊断工具入门（CPU 使用率）</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-    <li>
-        <a href="https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Profiling-with-Diagnostics-Tools-in-Visual-Studio-2017-daHnzMD6D_9211787171">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_video.svg" alt="Watch a Video on the Diagnostics Tools">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>观看介绍诊断工具的视频</h3>
                     </div>
                 </div>
             </div>

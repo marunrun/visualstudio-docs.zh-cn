@@ -1,13 +1,9 @@
 ---
 title: 命令别名 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 helpviewer_keywords:
 - aliases, Visual Studio commands
 - Visual Studio, commands
@@ -20,21 +16,20 @@ ms.assetid: de8bb378-8c1c-4087-a9a5-537fa8314c19
 caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 346225b43cd7a08d00501500f596545d10ccd3ed
-ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
-ms.translationtype: MTE95
+manager: jillfra
+ms.openlocfilehash: 573c120aafdf520b137e3fb50251ed8606f5c43a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "53962277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68160884"
 ---
 # <a name="visual-studio-command-aliases"></a>Visual Studio Command Aliases
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
+别名通过缩短执行命令所需的文本提供了在“查找/命令”  框或“命令”  窗口中输入命令的方法。 例如，可以使用预定义别名 `>of`，而不是输入 `>File.OpenFile` 来显示“打开文件”  对话框。
 
-别名通过缩短执行命令所需的文本提供了在“查找/命令”框或“命令”窗口中输入命令的方法。 例如，可以使用预定义别名 `>of`，而不是输入 `>File.OpenFile` 来显示“打开文件”对话框。
-
- 在“命令”窗口中键入 `alias` 可显示当前别名及其定义的列表。 键入 `>cls` 可清除“命令”窗口中的内容。 若要查看特定命令的别名，请键入 `alias <command name>`。
+ 在“命令”  窗口中键入 `alias` 可显示当前别名及其定义的列表。 键入 `>cls` 可清除“命令”  窗口中的内容。 若要查看特定命令的别名，请键入 `alias <command name>`。
 
  您可以轻松地为某个 Visual Studio 命令创建您自己的别名（带有或不带参数）。 例如，用于为 `File.NewFile MyFile.txt` 创建别名的语法是 `alias MyAlias File.NewFile MyFile.txt`。 您可以使用 `alias <alias name> /delete` 删除某个别名。
 
@@ -76,7 +71,7 @@ ms.locfileid: "53962277"
 |[“启动”命令](../../ide/reference/start-command.md)|g|调试.启动|
 |[“转到”命令](../../ide/reference/go-to-command.md)|GotoLn|编辑.转到|
 |转到大括号|GotoBrace|编辑.转到大括号|
-|F1Help|帮助|帮助.F1 帮助|
+|F1Help|Help|帮助.F1 帮助|
 |即时模式|immed|Tools.ImmediateMode|
 |将文件作为文本插入|InsertFile|Edit.InsertFileAsText|
 |[“列出调用堆栈”命令](../../ide/reference/list-call-stack-command.md)|kb|Debug.ListCallStack|

@@ -1,14 +1,9 @@
 ---
 title: MSBuild 任务 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#MSBuild
 dev_langs:
@@ -23,28 +18,27 @@ ms.assetid: 76577f6c-7669-44ad-a840-363e37a04d34
 caps.latest.revision: 35
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 3782db2b2c3fb3cdc5d0cc9ed21459c2b2215250
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: d2349c21d55c20bcb3bcd50ab96f383a9afcc00b
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49878253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63426113"
 ---
 # <a name="msbuild-task"></a>MSBuild 任务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 从另一 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 项目生成 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 项目。  
   
 ## <a name="parameters"></a>参数  
  下表描述了 `MSBuild` 任务的参数。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |`BuildInParallel`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，会并行生成 `Projects` 参数中指定的项目（如有可能）。 默认值为 `false`。|  
 |`Projects`|必选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要生成的项目文件。|  
-|`Properties`|可选 `String` 参数。<br /><br /> 以分号分隔的作为全局属性应用到子项目的属性名称/值对列表。 指定此参数时，它在功能上等效于使用 [MSBuild.exe ](../msbuild/msbuild-command-line-reference.md) 进行生成时设置具有 **/property** 开关的属性。 例如：<br /><br /> `Properties="Configuration=Debug;Optimize=$(Optimize)"`<br /><br /> 通过 `Properties` 参数将属性传递到项目时，即使已加载了项目文件，[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 也会创建项目的新实例。 创建项目的新实例后，[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 将其视为具有不同全局属性且可与项目的其他实例并行生成的不同项目。 例如，可同时生成发布配置和调试配置。|  
+|`Properties`|可选 `String` 参数。<br /><br /> 以分号分隔的作为全局属性应用到子项目的属性名称/值对列表。 指定此参数时，它在功能上等效于使用 [MSBuild.exe ](../msbuild/msbuild-command-line-reference.md) 进行生成时设置具有 **/property** 开关的属性。 例如:<br /><br /> `Properties="Configuration=Debug;Optimize=$(Optimize)"`<br /><br /> 通过 `Properties` 参数将属性传递到项目时，即使已加载了项目文件，[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 也会创建项目的新实例。 创建项目的新实例后，[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 将其视为具有不同全局属性且可与项目的其他实例并行生成的不同项目。 例如，可同时生成发布配置和调试配置。|  
 |`RebaseOutputs`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则生成项目中目标输出项的相对路径将其路径调整为相对于调用项目。 默认值为 `false`。|  
 |`RemoveProperties`|可选 `String` 参数。<br /><br /> 指定要删除的全局属性的集。|  
 |`RunEachTargetSeparately`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 任务一次一个地调用被传递到 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 的列表中调用一个目标，不会同时调用目标。 将此参数设置为 `true` 可确保即使先前调用目标失败，也可调用后续目标。 否则，生成错误将停止调用所有后续目标。 默认值为 `false`。|  
@@ -74,7 +68,7 @@ ms.locfileid: "49878253"
  但 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 3.5 提供了两个新的保留元数据项，属性和 AdditionalProperties，这两个元数据项提供了使用 [MSBuild 任务](../msbuild/msbuild-task.md)为正在生成的不同项目传递不同属性的一种灵活的方式。  
   
 > [!NOTE]
->  这些新的元数据项仅适用于在 [MSBuild任务](../msbuild/msbuild-task.md)的项目属性中传递的项。  
+> 这些新的元数据项仅适用于在 [MSBuild任务](../msbuild/msbuild-task.md)的项目属性中传递的项。  
   
 ## <a name="multi-processor-build-benefits"></a>多处理器生成的优点  
  在多处理器系统上并行生成项目时，则会体验到使用此新元数据的其中一个主要的好处。 通过元数据可将所有项目合并到单个 [MSBuild 任务](../msbuild/msbuild-task.md)调用中，而无需执行任何批处理或条件性 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 任务。 仅调用单个 [MSBuild 任务](../msbuild/msbuild-task.md) 时，将并行生成项目属性中列出的所有项目。 （但仅适用于 `BuildInParallel=true` 属性存在于 [MSBuild 任务](../msbuild/msbuild-task.md)中时。）有关详细信息，请参阅[并行生成多个项目](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)。  
@@ -83,7 +77,7 @@ ms.locfileid: "49878253"
  常见的方案是使用 [MSBuild 任务](../msbuild/msbuild-task.md)生成多个解决方案文件时，仅使用不同的生成配置。 你可能希望使用调试配置生成解决方案 a1，使用发布配置生成解决方案 a2。 在 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 2.0 中，此项目文件将如下所示：  
   
 > [!NOTE]
->  在以下示例中，“...”表示其他解决方案文件。  
+> 在以下示例中，“...”表示其他解决方案文件。  
   
 ### <a name="aproj"></a>a.proj  
   
@@ -198,6 +192,3 @@ ms.locfileid: "49878253"
 ## <a name="see-also"></a>请参阅  
  [任务](../msbuild/msbuild-tasks.md)   
  [任务参考](../msbuild/msbuild-task-reference.md)
-
-
-

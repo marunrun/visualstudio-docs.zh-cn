@@ -1,14 +1,9 @@
 ---
 title: 常量 （调试接口访问 SDK） |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,13 +13,13 @@ ms.assetid: aca4ec77-bc08-4cdd-a6ce-8d4a28ea5ea3
 caps.latest.revision: 10
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: dab1689d06332bd1c3ac93279289cfc002af0abc
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 931e1ab46793a5ff7e0434949330eaf4dbc820e8
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51777652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68164424"
 ---
 # <a name="constants-debug-interface-access-sdk"></a>常量（调试接口访问 SDK）
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -32,9 +27,9 @@ ms.locfileid: "51777652"
 这些字符串常量可用于标识程序调试数据库 (PDB) 文件通过 DIA SDK 的各个部分。  
   
 ## <a name="constants"></a>常量  
- 以下被声明为 C/c + + 宏。  
+ 以下声明为 C /C++宏。  
   
-|宏|“值”|  
+|宏|值|  
 |-----------|-----------|  
 |`DiaTable_Symbols`|L"符号"|  
 |`DiaTable_Sections`|L"Section"|  
@@ -64,10 +59,7 @@ HRESULT GetSymbolTable(IDiaEnumTables *pEnumTables, IDiaTable **pTable)
  标头： dia2.h  
   
 ## <a name="see-also"></a>请参阅  
- [引用](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)   
+ [参考](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)   
  [枚举和结构](../../debugger/debug-interface-access/enumerations-and-structures.md)   
- [接口 （调试接口访问 SDK）](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
+ [接口（调试接口访问 SDK）](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaEnumTables::Item](../../debugger/debug-interface-access/idiaenumtables-item.md)
-
-
-

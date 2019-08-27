@@ -1,25 +1,20 @@
 ---
 title: 使用探查器命令行从 .NET Framework 服务收集内存数据 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: b1361333-8a09-4a65-87a9-4ac94ceb2d9f
 caps.latest.revision: 18
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 3a12add91b1062b109d392d130b625cdd7f4c873
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 67184daeae3b2a50da266e2eb420d5a2ae9896db
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51727914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68198393"
 ---
 # <a name="collecting-memory-data-from-net-framework-services-by-using-the-profiler-command-line"></a>使用探查器命令行从 .NET Framework 服务收集内存数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,10 +26,10 @@ ms.locfileid: "51727914"
 |任务|相关内容|  
 |----------|---------------------|  
 |**将探查器附加到 .NET 服务**|-   [如何：将探查器附加到 .NET 服务以收集内存数据](../profiling/how-to-attach-the-profiler-to-a-dotnet-service-to-collect-memory-data-by-using-the-command-line.md)|  
-|**检测 .NET 服务和收集内存数据**|-   [如何：检测 .NET Framework 服务和收集内存数据](../profiling/how-to-instrument-a-dotnet-framework-service-and-collect-memory-data-by-using-the-profiler-command-line.md)|  
+|**检测 .NET 服务和收集内存数据**|-   [如何：检测 .NET Framework 服务，并收集内存数据](../profiling/how-to-instrument-a-dotnet-framework-service-and-collect-memory-data-by-using-the-profiler-command-line.md)|  
 |**添加层交互数据**|-   [收集层交互数据](../profiling/adding-tier-interaction-data-from-the-command-line.md)|  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 ### <a name="profiling-services"></a>分析服务  
   
@@ -56,6 +51,3 @@ ms.locfileid: "51727914"
   
 ## <a name="reference"></a>参考  
  [命令行分析工具参考](../profiling/command-line-profiling-tools-reference.md)
-
-
-

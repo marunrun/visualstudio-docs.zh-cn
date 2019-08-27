@@ -1,27 +1,22 @@
 ---
 title: 获取端口 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - ports, getting
 - debugging [Debugging SDK], ports
 ms.assetid: 745c2337-cfff-4d02-b49c-3ca7c4945c5e
 caps.latest.revision: 15
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 660ead58af40f85b4da4d68d7172866f5fe1fd0c
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: f980c9d14bc2d0c9728f87374828cf690737429c
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51789897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63436407"
 ---
 # <a name="getting-a-port"></a>获取端口
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -38,7 +33,7 @@ ms.locfileid: "51789897"
  此代码片段演示了如何使用提供给的端口[LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)注册中的程序节点[ResumeProcess](../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md)。 为清楚起见，省略了此概念与不是直接相关的参数。  
   
 > [!NOTE]
->  此示例中使用端口来启动和恢复过程，并假定[IDebugPortEx2](../../extensibility/debugger/reference/idebugportex2.md)接口实现的端口上。 这不是唯一的方法来执行这些任务，并且还有可能，端口可能不甚至会涉及到以外的程序的[IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)提供给它。  
+> 此示例中使用端口来启动和恢复过程，并假定[IDebugPortEx2](../../extensibility/debugger/reference/idebugportex2.md)接口实现的端口上。 这不是唯一的方法来执行这些任务，并且还有可能，端口可能不甚至会涉及到以外的程序的[IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)提供给它。  
   
 ```cpp#  
 // This is an IDebugEngineLaunch2 method.  
@@ -108,4 +103,3 @@ HRESULT CDebugEngine::ResumeProcess(IDebugProcess2 *pDebugProcess)
  [启用要进行调试的程序](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)   
  [端口提供程序](../../extensibility/debugger/port-suppliers.md)   
  [端口](../../extensibility/debugger/ports.md)
-

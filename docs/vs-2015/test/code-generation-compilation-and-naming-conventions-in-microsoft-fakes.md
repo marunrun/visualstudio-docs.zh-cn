@@ -1,24 +1,19 @@
 ---
 title: Microsoft Fakes 中的代码生成、编译和命名约定 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-test
+ms.topic: conceptual
 ms.assetid: 20221de4-2a9e-4787-b99a-b5855bb90872
 caps.latest.revision: 18
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 1de284c8d4fdfe5cb84a474641b880590c2094aa
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 8186a5961aeb728e683f3ee011766e980e070eea
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49895314"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65686401"
 ---
 # <a name="code-generation-compilation-and-naming-conventions-in-microsoft-fakes"></a>Microsoft Fakes 中的代码生成、编译和命名约定
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,9 +22,9 @@ ms.locfileid: "49895314"
   
  **要求**  
   
--   Visual Studio Enterprise  
+- Visual Studio Enterprise  
   
-##  <a name="BKMK_In_this_topic"></a> 在本主题中  
+## <a name="BKMK_In_this_topic"></a> 在本主题中  
  [代码生成和编译](#BKMK_Code_generation_and_compilation)  
   
 - [配置存根的代码生成](#BKMK_Configuring_code_generation_of_stubs) • [类型筛选](#BKMK_Type_filtering) • [将实际类和虚拟方法用作存根](#BKMK_Stubbing_concrete_classes_and_virtual_methods) • [内部类型](#BKMK_Internal_types) • [优化生成时间](#BKMK_Optimizing_build_times) • [避免程序集名称冲突](#BKMK_Avoiding_assembly_name_clashing)  
@@ -42,9 +37,9 @@ ms.locfileid: "49895314"
   
 - [指南](#BKMK_Guidance)  
   
-##  <a name="BKMK_Code_generation_and_compilation"></a>代码生成和编译  
+## <a name="BKMK_Code_generation_and_compilation"></a>代码生成和编译  
   
-###  <a name="BKMK_Configuring_code_generation_of_stubs"></a>配置存根的代码生成  
+### <a name="BKMK_Configuring_code_generation_of_stubs"></a>配置存根的代码生成  
  存根类型的生成在具有 .fakes 文件扩展名的 XML 文件中配置。 Fakes 框架通过自定义 MSBuild 任务在生成进程中集成并在生成时检测这些文件。 Fakes 代码生成器将存根类型编译为程序集并添加对项目的引用。  
   
  下面的示例说明了 FileSystem.dll 中定义的存根类型：  
@@ -56,7 +51,7 @@ ms.locfileid: "49895314"
   
 ```  
   
-###  <a name="BKMK_Type_filtering"></a>类型筛选  
+### <a name="BKMK_Type_filtering"></a>类型筛选  
  可在 .fakes 文件中设置筛选器以限制应用作存根的类型。 你可以在 StubGeneration 元素下添加数量不限的清除、添加、删除元素以生成所选类型的列表。  
   
  例如，此 .fakes 文件会在 System 和 System.IO 命名空间下生成类型的存根，但是排除系统中包含“Handle”的任何类型：  
@@ -77,27 +72,27 @@ ms.locfileid: "49895314"
   
  筛选器字符串使用简单语法定义如何完成匹配：  
   
--   默认情况下筛选器不区分大小写；筛选器可执行子字符串匹配：  
+- 默认情况下筛选器不区分大小写；筛选器可执行子字符串匹配：  
   
      `el` 匹配“hello”  
   
--   将 `!` 添加到筛选器的末尾，使其成为精确区分大小写匹配：  
+- 将 `!` 添加到筛选器的末尾，使其成为精确区分大小写匹配：  
   
      `el!` 不匹配“hello”  
   
      `hello!` 匹配“hello”  
   
--   将 `*` 添加到筛选器的末尾，使其匹配字符串前缀：  
+- 将 `*` 添加到筛选器的末尾，使其匹配字符串前缀：  
   
      `el*` 不匹配“hello”  
   
      `he*` 匹配“hello”  
   
--   以分号分隔的列表中的多个筛选器已合并为析取：  
+- 以分号分隔的列表中的多个筛选器已合并为析取：  
   
      `el;wo` 匹配“hello”和“world”  
   
-###  <a name="BKMK_Stubbing_concrete_classes_and_virtual_methods"></a>将具体类和虚拟方法用作存根  
+### <a name="BKMK_Stubbing_concrete_classes_and_virtual_methods"></a>将具体类和虚拟方法用作存根  
  默认情况下，为所有非密封类生成存根类型。 可通过 .fakes 配置文件将存根类型限制为抽象类：  
   
 ```xml  
@@ -114,7 +109,7 @@ ms.locfileid: "49895314"
 </Fakes>  
 ```  
   
-###  <a name="BKMK_Internal_types"></a>内部类型  
+### <a name="BKMK_Internal_types"></a>内部类型  
  Fakes 代码生成器将为对生成的 Fakes 程序集可见的类型生成填充码类型和存根类型。 要使已填充的程序集的内部类型对 Fakes 和你的测试程序集可见，请将 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性添加到向生成的 Fakes 程序集和测试程序集提供可见性的已填充的程序集代码中。 以下是一个示例：  
   
 ```csharp  
@@ -139,7 +134,7 @@ ms.locfileid: "49895314"
       PublicKey=<Test_assembly_public_key>)]  
   ```  
   
-  如果已填充的程序集具有强名称，则 Fakes 框架将自动对生成的 Fakes 程序集进行强签名。 你需要对测试程序集进行强签名。 请参阅[创建和使用具有强名称的程序集](http://msdn.microsoft.com/library/ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9)。  
+  如果已填充的程序集具有强名称，则 Fakes 框架将自动对生成的 Fakes 程序集进行强签名。 你需要对测试程序集进行强签名。 请参阅[创建和使用具有强名称的程序集](https://msdn.microsoft.com/library/ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9)。  
   
   Fakes 框架使用相同的密钥为所有生成的程序集签名，因此，你可以将此代码片段用作起点以将 Fakes 程序集的“InternalsVisibleTo”属性添加到已填充的程序集代码中。  
   
@@ -147,7 +142,7 @@ ms.locfileid: "49895314"
 [assembly: InternalsVisibleTo("FileSystem.Fakes, PublicKey=0024000004800000940000000602000000240000525341310004000001000100e92decb949446f688ab9f6973436c535bf50acd1fd580495aae3f875aa4e4f663ca77908c63b7f0996977cb98fcfdb35e05aa2c842002703cad835473caac5ef14107e3a7fae01120a96558785f48319f66daabc862872b2c53f5ac11fa335c0165e202b4c011334c7bc8f4c4e570cf255190f4e3e2cbc9137ca57cb687947bc")]  
 ```  
   
- 通过指定 **.snk** 文件（包含作为 **.fakes** 文件的 `Fakes`\\`Compilation` 元素中 `KeyFile` 属性值的替换密钥）的完整路径，可以为 Fakes 程序集指定不同的公钥，比如为已填充的程序集创建的密钥。 例如：  
+ 通过指定 **.snk** 文件（包含作为 **.fakes** 文件的 `Fakes`\\`Compilation` 元素中 `KeyFile` 属性值的替换密钥）的完整路径，可以为 Fakes 程序集指定不同的公钥，比如为已填充的程序集创建的密钥。 例如:  
   
 ```xml  
 <-- FileSystem.Fakes.fakes -->  
@@ -169,26 +164,26 @@ ms.locfileid: "49895314"
   
  在上面的示例中，`Alternate_public_key` 值和 `Test_assembly_public_key` 值可以相同。  
   
-###  <a name="BKMK_Optimizing_build_times"></a>优化生成时间  
+### <a name="BKMK_Optimizing_build_times"></a>优化生成时间  
  Fakes 程序集的编译可极大地加快生成时间。 通过为独立集中项目中的 .NET 系统程序集和第三方程序集生成 Fakes 程序集，可以最大程度地缩短生成时间。 由于你的计算机很少更改这种程序集，因此你可以在其他项目中重新使用生成的 Fakes 程序集。  
   
  从单元测试项目中，可以轻松引用放置在项目文件夹 FakesAssemblies 下的已编译的 Fakes 程序集。  
   
-1.  使用与你的测试项目匹配的 .NET 运行时版本创建新的类库。 我们称之为 Fakes.Prebuild。 从项目中删除不需要的 class1.cs 文件。  
+1. 使用与你的测试项目匹配的 .NET 运行时版本创建新的类库。 我们称之为 Fakes.Prebuild。 从项目中删除不需要的 class1.cs 文件。  
   
-2.  添加对需要 Fakes 的所有系统和第三方程序集的引用。  
+2. 添加对需要 Fakes 的所有系统和第三方程序集的引用。  
   
-3.  为每个程序集和生成添加一个 .fakes 文件。  
+3. 为每个程序集和生成添加一个 .fakes 文件。  
   
-4.  从测试项目  
+4. 从测试项目  
   
-    -   确保具有对 Fakes 运行时 DLL 的引用：  
+    - 确保具有对 Fakes 运行时 DLL 的引用：  
   
          C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\PublicAssemblies\Microsoft.QualityTools.Testing.Fakes.dll  
   
-    -   对于每个已为其创建 Fakes 的程序集，请添加对相应 DLL 文件的引用，该文件位于项目文件夹的 Fakes.Prebuild\FakesAssemblies 中。  
+    - 对于每个已为其创建 Fakes 的程序集，请添加对相应 DLL 文件的引用，该文件位于项目文件夹的 Fakes.Prebuild\FakesAssemblies 中。  
   
-###  <a name="BKMK_Avoiding_assembly_name_clashing"></a>避免程序集名称冲突  
+### <a name="BKMK_Avoiding_assembly_name_clashing"></a>避免程序集名称冲突  
  在团队生成环境中，所有生成输出合并到一个目录中。 如果出现多个使用 Fakes 的项目，可能发生不同版本的 Fakes 程序集相互覆盖的情况。 例如，来自 .NET Framework 2.0 的 TestProject1 fakes mscorlib.dll 和 .NET Framework 4 的 TestProject2 fakes mscorlib.dll 都会产生一个 mscorlib.Fakes.dll Fakes 程序集。  
   
  要避免出现此问题，在添加 .fakes 文件时，Fakes 应自动为非项目引用创建版本限定的 Fakes 程序集名称。 在创建 Fakes 程序集名称时，版本限定的 Fakes 程序集名称将嵌入版本号：  
@@ -206,9 +201,9 @@ attribute of the Assembly element in the .fakes:
   
 ```  
   
-##  <a name="BKMK_Fakes_naming_conventions"></a>Fakes 命名约定  
+## <a name="BKMK_Fakes_naming_conventions"></a>Fakes 命名约定  
   
-###  <a name="BKMK_Shim_type_and_stub_type_naming_conventions"></a>填充类型和存根类型命名约定  
+### <a name="BKMK_Shim_type_and_stub_type_naming_conventions"></a>填充类型和存根类型命名约定  
  **命名空间**  
   
 - 向命名空间添加 .Fakes 后缀。  
@@ -233,7 +228,7 @@ attribute of the Assembly element in the .fakes:
   
 - 根据填充码类型复制嵌套类型结构。  
   
-###  <a name="BKMK_Shim_delegate_property_or_stub_delegate_field_naming_conventions"></a>填充委托属性或存根委托字段命名约定  
+### <a name="BKMK_Shim_delegate_property_or_stub_delegate_field_naming_conventions"></a>填充委托属性或存根委托字段命名约定  
  字段命名的**基本规则**，从空的名称开始：  
   
 - 追加方法名称。  
@@ -259,13 +254,13 @@ attribute of the Assembly element in the .fakes:
   
  **备注**  
   
--   **索引器的 getter 和 setter** 的处理方式类似于属性。 索引器的默认名称为 `Item`。  
+- **索引器的 getter 和 setter** 的处理方式类似于属性。 索引器的默认名称为 `Item`。  
   
--   **参数类型**名称已转换并串联。  
+- **参数类型**名称已转换并串联。  
   
--   除非具有重载多义性，否则将忽略**返回类型**。 如果是这样，将在名称末尾追加返回类型  
+- 除非具有重载多义性，否则将忽略**返回类型**。 如果是这样，将在名称末尾追加返回类型  
   
-###  <a name="BKMK_Parameter_type_naming_conventions"></a>参数类型命名约定  
+### <a name="BKMK_Parameter_type_naming_conventions"></a>参数类型命名约定  
   
 |假定为|追加的字符串是…|  
 |-----------|-------------------------|  
@@ -280,20 +275,17 @@ attribute of the Assembly element in the .fakes:
 |方法 `M<MMethod>` 的**泛型方法自变量**`!!i`|`Mi`|  
 |**嵌套类型**`N.T`|先追加 `N`，然后追加 `T`|  
   
-###  <a name="BKMK_Recursive_rules"></a>递归规则  
+### <a name="BKMK_Recursive_rules"></a>递归规则  
  下面的规则按递归方式应用：  
   
--   由于 Fakes 使用 C# 生成 Fakes 程序集，因此，生成无效 C# 标记的所有字符都将转义为“_”（下划线）。  
+- 由于 Fakes 使用 C# 生成 Fakes 程序集，因此，生成无效 C# 标记的所有字符都将转义为“_”（下划线）。  
   
--   如果生成的名称与声明类型的任何成员发生冲突，则通过追加一个两位数的计数器（从 01 开始）来使用编号方案。  
+- 如果生成的名称与声明类型的任何成员发生冲突，则通过追加一个两位数的计数器（从 01 开始）来使用编号方案。  
   
-##  <a name="BKMK_External_resources"></a>外部资源  
+## <a name="BKMK_External_resources"></a>外部资源  
   
-###  <a name="BKMK_Guidance"></a> 指导  
+### <a name="BKMK_Guidance"></a> 指导  
  [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
 ## <a name="see-also"></a>请参阅  
  [用 Microsoft Fakes 隔离测试代码](../test/isolating-code-under-test-with-microsoft-fakes.md)
-
-
-

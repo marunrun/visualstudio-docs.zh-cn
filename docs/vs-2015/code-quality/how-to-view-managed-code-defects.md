@@ -1,14 +1,9 @@
 ---
-title: 如何： 查看托管的代码缺陷 |Microsoft Docs
-ms.custom: ''
+title: 如何：查看托管的代码缺陷 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: conceptual
 helpviewer_keywords:
 - managed code, analyzing
 - code analysis, viewing managed code defects
@@ -18,19 +13,19 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 4f0dff4744e3c77ed94afe78396008a3de7646c3
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 5ef9b5f8da2cf38566c6cedbf10eae3fa5921362
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49239416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "58930800"
 ---
 # <a name="how-to-view-managed-code-defects"></a>如何：查看托管代码缺陷
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在代码分析中，错误、警告和消息会在“代码分析”窗口报告。 当您对项目或解决方案运行代码分析时，将自动显示“代码分析”窗口。  
+在代码分析中，错误、警告和消息会在“代码分析”窗口报告。 当你对项目或解决方案运行代码分析时，将自动显示“代码分析”窗口。  
   
- 在“代码分析”窗口中，你可以：  
+ 在“代码分析”窗口中，您可以：  
   
 -   **选择警告标题。**  
   
@@ -39,6 +34,3 @@ ms.locfileid: "49239416"
 -   **选择警告 id。** 警告 id 作为前缀**CA**并包含一个四位数字。 例如，CA1234。  
   
      系统将会显示警告的 MSDN Library 帮助主题。 帮助主题包含有关警告原因的详细信息，并包括一些示例来演示警告问题是如何发生和解决的。
-
-
-

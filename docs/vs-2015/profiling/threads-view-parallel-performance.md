@@ -1,14 +1,9 @@
 ---
 title: “线程”视图（并行性能） | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.view.threadblocking
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 2e441103-a266-407b-88c3-fb58716257a3
 caps.latest.revision: 26
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 39457684ba19ecbb0ad2ef82caa349e67cdaf8a7
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 0d685dc39f5e07840a5995f7fe67988840c3f50a
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51756337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63441660"
 ---
 # <a name="threads-view-parallel-performance"></a>线程视图（并行性能）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -47,19 +42,19 @@ ms.locfileid: "51756337"
 ## <a name="usage"></a>用法  
  下面是一些可以用于使用“线程”视图的方式：  
   
--   确定应用的用户界面 (UI) 在特定执行阶段中无响应的原因。  
+- 确定应用的用户界面 (UI) 在特定执行阶段中无响应的原因。  
   
--   确定在同步、I/O、页面错误和其他事件上阻塞所花的时间量。  
+- 确定在同步、I/O、页面错误和其他事件上阻塞所花的时间量。  
   
--   确定来自系统上执行的其他进程的干扰的程度。  
+- 确定来自系统上执行的其他进程的干扰的程度。  
   
--   确定并行执行的负载平衡问题。  
+- 确定并行执行的负载平衡问题。  
   
--   确定非最优或不存在的可伸缩性的原因（例如，在有更多逻辑核心可用时，并行应用的性能未提高的原因）。  
+- 确定非最优或不存在的可伸缩性的原因（例如，在有更多逻辑核心可用时，并行应用的性能未提高的原因）。  
   
--   了解应用中的并发度以帮助进行并行化。  
+- 了解应用中的并发度以帮助进行并行化。  
   
--   了解工作线程和执行的关键路径间的依赖关系。  
+- 了解工作线程和执行的关键路径间的依赖关系。  
   
 ## <a name="examining-specific-time-intervals-and-threads"></a>检查特定时间间隔和线程  
  “线程”视图会显示时间线。 可以在时间线中缩放和平移以检查应用程序的特定间隔和线程。 X 轴上是时间，y 轴上是几个通道：  
@@ -102,7 +97,7 @@ ms.locfileid: "51756337"
  选择执行段中的一个点时，并发可视化工具会在相关调用堆栈上查找该时间点，然后在执行段中所选点上方显示黑色脱字号，并在“当前堆栈”选项卡上显示调用堆栈本身。可以在执行段上选择多个点。  
   
 > [!NOTE]
->  并发可视化工具可能无法解析执行段上的选择。 通常，当段的持续时间小于一毫秒时，会发生这种情况。  
+> 并发可视化工具可能无法解析执行段上的选择。 通常，当段的持续时间小于一毫秒时，会发生这种情况。  
   
  若要获取当前所选时间范围内所有已启用（未隐藏）线程的执行分析，请选择活动图例中的“执行”按钮。  
   
@@ -156,6 +151,3 @@ ms.locfileid: "51756337"
   
 ## <a name="see-also"></a>请参阅  
  [并发可视化工具](../profiling/concurrency-visualizer.md)
-
-
-

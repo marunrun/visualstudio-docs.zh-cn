@@ -1,19 +1,18 @@
 ---
 title: 对项目模板和项模板加载进行故障排除
 ms.date: 01/02/2018
-ms.prod: visual-studio-dev15
 ms.topic: troubleshooting
 helpviewer_keywords:
 - templates [Visual Studio], troubleshooting
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 4908716ce5f984aef6dbd3d482a26e1aeb94623d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 70782646a52a5bca5741a864eee1f965941bb34b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53890912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62547588"
 ---
 # <a name="how-to-troubleshoot-templates"></a>如何：模板疑难解答
 
@@ -21,7 +20,17 @@ ms.locfileid: "53890912"
 
 ## <a name="validate-the-vstemplate-file"></a>验证 vstemplate 文件
 
+::: moniker range="vs-2017"
+
 如果模板中的 vstemplate 文件未遵循 Visual Studio 模板架构，则“新建项目”对话框中可能不会显示该模板。
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+如果模板中的 vstemplate 文件未遵循 Visual Studio 模板架构，则创建新项目的对话框中可能不会显示该模板。
+
+::: moniker-end
 
 ### <a name="to-validate-the-vstemplate-file"></a>验证 vstemplate 文件
 

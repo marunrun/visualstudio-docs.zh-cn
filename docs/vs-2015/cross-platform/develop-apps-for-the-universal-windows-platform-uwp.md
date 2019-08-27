@@ -1,30 +1,24 @@
 ---
 title: 开发面向通用 Windows 平台 (UWP) 的应用 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- tgt-pltfrm-cross-plat
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: tgt-pltfrm-cross-plat
+ms.topic: conceptual
 ms.assetid: eac59cb6-f12e-4a77-9953-6d62b164a643
 caps.latest.revision: 50
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 24dfca5d4ac8432cbe659bb42ca54d0398c47c04
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+ms.openlocfilehash: 8af5414b1c775a17421b87b9c18d58c34f544405
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51766475"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65698654"
 ---
 # <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>开发面向通用 Windows 平台 (UWP) 的应用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 使用通用 Windows 平台和我们的一项 Windows 核心，可在任何 Windows 10 设备上（从电话到桌面）运行同一应用。 使用 Visual Studio 2015 和通用 Windows 应用开发工具创建这些通用 Windows 应用。  
   
  ![通用 Windows 平台](../cross-platform/media/uwp-coreextensions.png "UWP_CoreExtensions")  
@@ -37,7 +31,7 @@ ms.locfileid: "51766475"
   
  **究竟什么是通用 Windows 平台？**  
   
- 它只是一个协定和版本的集合。 使你能够定位应用运行的环境。 不用再定位到操作系统。 现在你可以将应用定位到一个或多个设备系列。 通过此 [平台指南](http://msdn.microsoft.com/library/windows/apps/dn894631.aspx)了解更多详细信息。  
+ 它只是一个协定和版本的集合。 使你能够定位应用运行的环境。 不用再定位到操作系统。 现在你可以将应用定位到一个或多个设备系列。 通过此 [平台指南](https://msdn.microsoft.com/library/windows/apps/dn894631.aspx)了解更多详细信息。  
   
 ## <a name="requirements"></a>要求  
  通用 Windows 应用开发工具附带了仿真程序，可用于查看应用在不同设备上的显示效果。 如果想要使用这些仿真程序，需要在物理计算机上安装此软件。 物理计算机必须运行 Windows 8.1 (x64) Professional 版本或更高版本，并具有支持客户端 Hyper-V 和二级地址转换 (SLAT) 的处理器。 当 Visual Studio 安装在虚拟机上时，则无法使用仿真程序。  
@@ -54,16 +48,15 @@ ms.locfileid: "51766475"
   
   如果选择使用 Visual Studio 2015 在除 Windows 10 外的平台上开发通用 Windows 应用，存在以下限制：  
   
-- Windows 8.1：不能在本地运行应用（仅在远程 Windows 10 设备上运行）。 可使用 Visual Studio 中的仿真程序，但不能使用模拟器。  
+- Windows 8.1：不能 （仅在远程 Windows 10 设备） 上运行应用程序本地。 可使用 Visual Studio 中的仿真程序，但不能使用模拟器。  
   
-- Windows 7：不能在本地运行应用（仅在远程 Windows 10 设备上运行）。 不能使用 Visual Studio 中的仿真程序或模拟器。  
+- Windows 7：不能 （仅在远程 Windows 10 设备） 上运行应用程序本地。 不能使用 Visual Studio 中的仿真程序或模拟器。  
   
   如果开发平台是 Windows 10，只能使用 XAML 设计器。  
   
 ## <a name="universal-windows-apps"></a>通用 Windows 应用  
- 从 C#、Visual Basic、C++ 或 JavaScript 中选择首选的开发语言以 [为 Windows 10 设备创建通用 Windows 应用](http://msdn.microsoft.com/library/windows/apps/xaml/dn609832.aspx#target_win10)。 或者，监视 [此入门视频](http://channel9.msdn.com/Series/ConnectOn-Demand/229)。  
+ 从 C#、Visual Basic、C++ 或 JavaScript 中选择首选的开发语言以 [为 Windows 10 设备创建通用 Windows 应用](https://msdn.microsoft.com/library/windows/apps/xaml/dn609832.aspx#target_win10)。 或者，监视 [此入门视频](http://channel9.msdn.com/Series/ConnectOn-Demand/229)。  
   
- 如果你有现有的 Windows 应用商店 8.1 应用、Windows Phone 8.1 应用或使用 Visual Studio 2015 RC 创建的通用 Windows 应用，则 [移植这些现有的应用](http://msdn.microsoft.com/library/windows/apps/xaml/mt238321.aspx) 以使用最新的通用 Windows 平台。  
+ 如果你有现有的 Windows 应用商店 8.1 应用、Windows Phone 8.1 应用或使用 Visual Studio 2015 RC 创建的通用 Windows 应用，则 [移植这些现有的应用](https://msdn.microsoft.com/library/windows/apps/xaml/mt238321.aspx) 以使用最新的通用 Windows 平台。  
   
  创建通用 Windows 应用后，必须 [将应用打包](https://msdn.microsoft.com/library/windows/apps/hh454036.aspx) 以将其安装在 Windows 10 设备或提交到 Windows 应用商店。
-

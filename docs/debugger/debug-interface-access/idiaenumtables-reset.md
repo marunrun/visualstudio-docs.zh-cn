@@ -1,5 +1,5 @@
 ---
-title: 'Idiaenumtables:: Reset |Microsoft Docs'
+title: IDiaEnumTables::Reset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -9,27 +9,27 @@ helpviewer_keywords:
 ms.assetid: 033039f4-5132-48c4-ba46-376243e3519f
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2dfd37d7ff075928c5d13c3aed864b069f9bd9a6
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: b0171138784ca440fc528cc446c93874cd5fb5c4
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53911947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62829349"
 ---
 # <a name="idiaenumtablesreset"></a>IDiaEnumTables::Reset
-将枚举序列重置到开头。  
-  
-## <a name="syntax"></a>语法  
-  
-```C++  
-HRESULT Reset ();  
-```  
-  
-## <a name="return-value"></a>返回值  
- 返回 `S_OK`。  
-  
-## <a name="see-also"></a>请参阅  
- [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)
+将枚举序列重置到开头。
+
+## <a name="syntax"></a>语法
+
+```C++
+HRESULT Reset ();
+```
+
+## <a name="return-value"></a>返回值
+ 返回 `S_OK`。
+
+## <a name="see-also"></a>请参阅
+- [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)

@@ -1,25 +1,20 @@
 ---
 title: VsgDbg 类 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 6722263c-ccef-40c7-a0ae-87a863fbab00
 caps.latest.revision: 8
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 0fb4a830c6cc3af49dcb3e26c6711af1a014c9c1
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 053647d48324f056148375bae9268b997ba8721f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51724903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68145693"
 ---
 # <a name="vsgdbg-class"></a>VsgDbg 类
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -46,7 +41,7 @@ class VsgDbg;
   
 |名称|描述|  
 |----------|-----------------|  
-|[AddMessage](../debugger/addmessage.md)|将自定义消息添加到图形诊断 HUD （显示）。|  
+|[AddMessage](../debugger/addmessage.md)|将自定义消息添加到图形诊断 HUD（提醒显示）。|  
 |[BeginCapture](../debugger/begincapture.md)|开始将结尾的捕获时间间隔`EndCapture`。|  
 |[CaptureCurrentFrame](../debugger/capturecurrentframe.md)|将当前帧的剩余部分捕获到图形日志文件。|  
 |[复制（编程捕获）](../debugger/copy-programmatic-capture.md)|将活动图形日志 (.vsglog) 文件的内容复制到新文件。|  
@@ -57,6 +52,3 @@ class VsgDbg;
   
 ## <a name="remarks"></a>备注  
  `VsgDbg`类表示可用于以编程方式控制图形诊断功能的接口。 可以使用一些功能，即使在未主动捕获并记录图形信息;这包括`AddMessage`成员函数和`ToggleHUD`成员函数。 其他成员函数准备图形诊断工具启动或停止活动捕获图形信息的应用内组件，或当应用主动捕获并记录到图形日志文件的图形信息时，必须调用。
-
-
-

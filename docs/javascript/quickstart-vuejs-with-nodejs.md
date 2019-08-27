@@ -3,30 +3,48 @@ title: 快速入门：创建第一个 Vue.js 应用
 description: 在此快速入门中，将使用针对 Visual Studio 的 Node.js 工具在 Visual Studio 中创建 Vue.js 应用
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.prod: visual-studio-dev15
 ms.topic: quickstart
 ms.devlang: javascript
 ms.assetid: b0e4ebed-1a01-41ef-aad1-4d8465ce5322
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 61554a784c5e3f2abaa8987116854893408b2ded
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 28e86068b2255d1796363405c0231c1fb6bdd480
+ms.sourcegitcommit: 6196d0b7fdcb08ba6d28a8151ad36b8d1139f2cc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53853887"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65226504"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-vuejs-app"></a>快速入门：使用 Visual Studio 创建第一个 Vue.js 应用
 
-在这个对 Visual Studio 集成开发环境 (IDE) 的 5-10 分钟简介中，可以创建并运行简单的 Vue.js Web 应用程序。 如果尚未安装 Visual Studio 2017，请转到 [Visual Studio 下载](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)页免费安装。
+在这个对 Visual Studio 集成开发环境 (IDE) 的 5-10 分钟简介中，可以创建并运行简单的 Vue.js Web 应用程序。
 
 > [!IMPORTANT]
 > 本文需要从 Visual Studio 2017 版本 15.8 开始提供的 Vue.js 模板。
+
+## <a name="prerequisites"></a>系统必备
+
+* 须安装 Visual Studio 且具有 Node.js 开发工作负载。
+
+    ::: moniker range=">=vs-2019"
+    如果尚未安装 Visual Studio 2019，请转到  [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/) 页免费安装。
+    ::: moniker-end
+    ::: moniker range="vs-2017"
+    如果尚未安装 Visual Studio 2017，请转到  [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/) 页免费安装。
+    ::: moniker-end
+
+    如果需要安装工作负载但已有 Visual Studio，请转到“工具” > “获取工具和功能...”，这会打开 Visual Studio 安装程序。 选择“Node.js 开发”工作负载，然后选择“修改”。
+
+    ![VS 安装程序中的 Node.js 工作负载](../ide/media/quickstart-nodejs-workload.png)
+
+* 须安装 Node.js 运行时。
+
+    如果未安装，请从 [Node.js](https://nodejs.org/en/download/) 网站安装 LTS 版本。 一般情况下，Visual Studio 会自动检测已安装的 Node.js 运行时。 如果系统未检测到已安装运行时，则可以将项目配置为引用属性页中已安装的运行时（创建项目后，右键单击项目节点并选择“属性”）。
 
 ## <a name="create-a-project"></a>创建项目
 
@@ -36,21 +54,23 @@ ms.locfileid: "53853887"
 
     一般情况下，Visual Studio 会自动检测已安装的 Node.js 运行时。 如果系统未检测到已安装运行时，则可以将项目配置为引用属性页中已安装的运行时（创建项目后，右键单击项目节点并选择“属性”）。
 
-1. 打开 Visual Studio 2017。
+1. 打开 Visual Studio。
 
-1. 在顶部菜单栏，依次选择“文件” > “新建” > “项目”。
+1. 创建新项目。
 
-1. 在“新建项目”对话框中，在“JavaScript” > “Node.js”或“TypeScript” > “Node.js”下，选择“基本 Vue.js Web 应用程序”。 输入项目名称，然后单击“确定”。
+    ::: moniker range=">=vs-2019"
+    按 Esc 关闭启动窗口。 键入 Ctrl+Q 以打开搜索框，键入“基本 Vue.js”，然后选择“基本 Vue.js Web 应用程序”（JavaScript 或 TypeScript）。 在出现的对话框中，键入名称“basic-vuejs”，然后选择“创建”。
 
-     ![Vue.js 模板](../javascript/media/vuejs-template.png)
+    ![Vue.js 模板](../javascript/media/vs-2019/vuejs-template.png)
+    ::: moniker-end
+    ::: moniker range="vs-2017"
+    在顶部菜单栏，依次选择“文件” > “新建” > “项目”。 在“新建项目”对话框的左窗格中，展开“JavaScript”或“TypeScript”，然后选择“Node.js”。 在中间窗格中，选择“基本 Vue.js Web 应用程序”，键入名称“basic-vuejs”，然后选择“确定”。
+
+    ![Vue.js 模板](../javascript/media/vuejs-template.png)
+    ::: moniker-end
+    如果未看到“基本 Vue.js Web 应用程序”项目模板，必须先添加 Node.js 开发工作负载。 有关详细说明，请参阅[先决条件](#prerequisites)。
 
     Visual Studio 随即创建新项目。 新项目在“解决方案资源管理器”（右窗格）中打开。
-
-     如果没有看到“基本 Vue.js Web 应用程序”项目模板，请单击“新建项目”对话框左侧窗格中的“打开 Visual Studio 安装程序”链接。 Visual Studio 安装程序启动。 选择“Node.js 开发”工作负载，然后选择“修改”。
-
-     ![VS 安装程序中的 Node.js 工作负载](../ide/media/quickstart-nodejs-workload.png)
-
-    Visual Studio 创建新的解决方案并打开项目。
 
 1. 选中输出窗口（下方窗格），查看安装应用程序所需的 npm 包的进度。
 

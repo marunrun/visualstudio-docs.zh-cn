@@ -1,7 +1,6 @@
 ---
 title: Devenv 命令行开关
 ms.date: 12/10/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 helpviewer_keywords:
 - switches, Devenv
@@ -11,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: e12bc6ed-74fd-4bea-8d7c-89b99c20bad8
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c2ea1bfc4cc49378308933dffd5bc3873b25209
-ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
+ms.openlocfilehash: db9aaeb48095b058abb0deefa342598eefeed1b9
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54269665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62970216"
 ---
 # <a name="devenv-command-line-switches"></a>Devenv 命令行开关
 
@@ -68,6 +67,7 @@ ms.locfileid: "54269665"
 |[/Command](command-devenv-exe.md)|启动 IDE 并执行指定的命令。<br /><br /> `devenv /command "nav https://docs.microsoft.com/"`|
 |[/DebugExe](debugexe-devenv-exe.md)|在调试器的控制下加载 C++ 可执行文件。 此开关不适用于 Visual Basic 或 C# 可执行文件。 有关详细信息，请参阅[自动启动调试器中的进程](../../debugger/debug-multiple-processes.md#BKMK_Automatically_start_an_process_in_the_debugger)。<br /><br /> `devenv /debugexe mysln.exe`|
 |[/Diff](diff.md)|比较两个文件。 采用四个参数：SourceFile、TargetFile、SourceDisplayName（可选）和 TargetDisplayName（可选）。<br /><br /> `devenv /diff File1 File2 Alias1 Alias2`|
+|[/DoNotLoadProjects](donotloadprojects-devenv-exe.md)|打开指定的解决方案，而不加载任何项目。<br /><br /> `devenv /donotloadprojects mysln.sln`|
 |[/Edit](edit-devenv-exe.md)|在此应用程序的运行实例中打开指定的文件。 如果没有正在运行的实例，它启动具有简化的窗口布局的新实例。<br /><br /> `devenv /edit File1 File2`|
 |[/LCID 或 /L](lcid-devenv-exe.md)|为 IDE 设置默认语言。 如果 Visual Studio 安装中不包括指定语言，此设置遭忽略。<br /><br /> `devenv /l 1033`|
 |[/Log](log-devenv-exe.md)|启动 Visual Studio 并将所有活动记录到日志文件中。<br /><br /> `devenv /log mylogfile.xml`|

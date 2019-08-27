@@ -2,7 +2,6 @@
 title: IRemoteDebugApplicationThread 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,12 +13,12 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f502749453e1701c8e6e52e69745408fdcd9812d
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: fd0574fe6093c6d53a63dfbbc97a7a313eaedc5f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54349707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788031"
 ---
 # <a name="iremotedebugapplicationthread-interface"></a>IRemoteDebugApplicationThread 接口
 表示特定应用程序中的执行线程。  

@@ -1,27 +1,22 @@
 ---
 title: 创作 Windows Installer 程序包 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - .msi files, VSPackages
 - msi files, VSPackages
 ms.assetid: 0ce7c21d-0d3f-47fe-a0bb-eed506e32609
 caps.latest.revision: 21
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: c51696cd41083e81fb1561eb8707c4f4844b32d5
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 5e92e965f0efe531f1618be509d0a7c9655c573d
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51742642"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65682539"
 ---
 # <a name="authoring-a-windows-installer-package"></a>创作 Windows Installer 程序包
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -41,7 +36,7 @@ ms.locfileid: "51742642"
   
 - 将集成在 VSPackage[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]通过调用**devenv.exe /setup** （使用 CustomAction 表）。  
   
-  有关详细信息，请参阅[Windows 安装程序](http://msdn.microsoft.com/library/cc185688\(VS.85\).aspx)。  
+  有关详细信息，请参阅[Windows 安装程序](https://msdn.microsoft.com/library/cc185688\(VS.85\).aspx)。  
   
 ## <a name="setup-tools"></a>安装程序工具  
  各种第三方安装程序工具提供了 Windows Installer 程序包的开发环境。 两个免费工具如下所示：  
@@ -54,8 +49,7 @@ ms.locfileid: "51742642"
   
    该工具集生成 XML 源文件从 Windows Installer 程序包。 该工具集是 Microsoft 的开源项目。 您可以下载源代码和从可执行文件[ http://sourceforge.net/projects/wix ](http://sourceforge.net/projects/wix)。  
   
-  为将集成到商业产品[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]通过使用[!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]，请参阅[ http://visualstudiogallery.com ](http://visualstudiogallery.com/)。  
+  为将集成到商业产品[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]通过使用[!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]，请参阅[ https://marketplace.visualstudio.com/ ](https://marketplace.visualstudio.com/)。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 Windows Installer 安装 VSPackage](../../extensibility/internals/installing-vspackages-with-windows-installer.md)
-

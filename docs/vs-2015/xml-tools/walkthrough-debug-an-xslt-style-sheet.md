@@ -1,25 +1,20 @@
 ---
-title: 演练： 调试 XSLT 样式表 |Microsoft Docs
-ms.custom: ''
+title: 演练：调试 XSLT 样式表 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-xml-tools
+ms.topic: conceptual
 ms.assetid: 3db9fa5a-f619-4cb6-86e7-64b364e58e5d
 caps.latest.revision: 5
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 10dad7382a30800675c257a4e2c8219d20e5b18b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 5e685e77dafe00b8cadd9b273ccc61c8e5d9e1e4
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49887684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68158635"
 ---
 # <a name="walkthrough-debug-an-xslt-style-sheet"></a>演练：调试 XSLT 样式表
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,9 +23,9 @@ ms.locfileid: "49887684"
   
 ### <a name="to-prepare-for-this-walkthrough"></a>准备此次演练  
   
-1.  关闭任何打开的解决方案。  
+1. 关闭任何打开的解决方案。  
   
-2.  将两个示例文件复制到本地计算机上。  
+2. 将两个示例文件复制到本地计算机上。  
   
 ## <a name="start-debugging"></a>开始调试  
   
@@ -42,7 +37,7 @@ ms.locfileid: "49887684"
   
     该样式表将在“XML 编辑器”中打开。  
   
-3. 单击浏览按钮 (**...**) 上**输入**字段的文档属性窗口。  
+3. 单击浏览按钮 ( **...** ) 上**输入**字段的文档属性窗口。  
   
 4. 找到 books.xml 文件并单击**打开**。  
   
@@ -64,40 +59,40 @@ ms.locfileid: "49887684"
   
 #### <a name="to-use-the-watch-window"></a>要使用“监视”窗口，请执行下列操作：  
   
-1.  从**调试**菜单，依次指向**Windows**，指向**观看**，然后单击**监视 1**。  
+1. 从**调试**菜单，依次指向**Windows**，指向**观看**，然后单击**监视 1**。  
   
      此时出现“监视 1”窗口。  
   
-2.  类型`$bookAverage`中**名称**字段，然后按 ENTER。  
+2. 类型`$bookAverage`中**名称**字段，然后按 ENTER。  
   
      `$bookAverage` 变量的值将显示在窗口中。  
   
-3.  类型`self::node()`中**名称**字段，然后按 ENTER。  
+3. 类型`self::node()`中**名称**字段，然后按 ENTER。  
   
      `self::node()` 是一个计算结果为当前上下文节点的 XPath 表达式。 `self::node()` XPath 表达式的值是第一个 book 节点。 此值随着转换的进度而更改。  
   
-4.  展开 `self::node()` 节点，然后展开 `price` 节点。  
+4. 展开 `self::node()` 节点，然后展开 `price` 节点。  
   
      这样可以查看书价的值，并且可以很容易将其与 `$bookAverage` 值进行比较。 因为书价低于平均值，所以，`xsl:if` 条件应继续。  
   
 ## <a name="step-through-the-code"></a>逐行执行代码  
- 调试程序允许您一次执行一行代码。  
+ 调试程序允许你一次执行一行代码。  
   
 #### <a name="to-step-through-the-code"></a>要逐行执行代码，请执行下列操作：  
   
-1.  按 F5 继续。  
+1. 按 F5  继续。  
   
      因为第一个 book 节点满足 `xsl:if` 条件，所以，该 book 节点将添加到“XSL 输出”窗口。 调试器继续执行，直到它再次位于样式表中的 `xsl:if` 元素上。 调试器此时位于 books.xml 文件中的第二个 book 节点上。  
   
      在 Watch1 窗口中，`self::node()` 值变为第二个 book 节点。 通过检查 price 元素的值，可以确定价格高于平均值，所以，`xsl:if` 条件应失败。  
   
-2.  按 F5 继续。  
+2. 按 F5  继续。  
   
      因为第二个 book 节点未满足 `xsl:if` 条件，所以不会将此 book 节点添加到“XSL 输出”窗口。 调试器继续执行，直到它再次位于样式表中的 `xsl:if` 元素上。 调试器此时位于 books.xml 文件中的第三个 `book` 节点上。  
   
      在 Watch1 窗口中，`self::node()` 值变为第三个 book 节点。 通过检查 `price` 元素的值，您可以确定此价格低于平均价格，因此 `xsl:if` 条件应成立。  
   
-3.  按 F5 继续。  
+3. 按 F5  继续。  
   
      因为满足 `xsl:if` 条件，所以，第三个 book 节点将添加到“XSL 输出”窗口。 XML 文档中的所有 book 节点均已处理，调试程序停止。  
   
@@ -161,4 +156,3 @@ ms.locfileid: "49887684"
   
 ## <a name="see-also"></a>请参阅  
  [调试 XSLT](../xml-tools/debugging-xslt.md)
-

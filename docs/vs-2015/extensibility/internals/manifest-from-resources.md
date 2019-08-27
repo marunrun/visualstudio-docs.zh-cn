@@ -1,21 +1,17 @@
 ---
 title: 来自资源的清单 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0234109b-5dcb-4d9d-acb9-a63f8bd5699c
 caps.latest.revision: 5
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: d442686ab588932cac077a0b5fdc09a1a746c3d3
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 33d3094c599ddc8cb472bd6defa211f57e85e84f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51771855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68192623"
 ---
 # <a name="manifest-from-resources"></a>Manifest from Resources
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -32,11 +28,11 @@ ms.locfileid: "51771855"
 ||||  
 |-|-|-|  
 |**交换机名称**|**备注**|**必需或可选**|  
-|/resources|以分号分隔的映像或目录列表。 此列表应始终包含将在清单中的映像的完整列表。 如果只列出了部分，则不包含的条目都将丢失。<br /><br /> 如果给定的资源文件是一个图像条，该工具会将其拆分到单独的映像添加到清单的每个 subimage 之前。<br /><br /> 如果图像是.png 文件，我们建议设置此类名称格式为该工具可以填写正确的映像属性：\<名称 >。\<宽度 >。\<高度 >.png。|必需|  
+|/resources|以分号分隔的映像或目录列表。 此列表应始终包含将在清单中的映像的完整列表。 如果只列出了部分，则不包含的条目都将丢失。<br /><br /> 如果给定的资源文件是一个图像条，该工具会将其拆分到单独的映像添加到清单的每个 subimage 之前。<br /><br /> 如果图像是.png 文件，我们建议此类的名称格式，以便该工具可以填充正确的映像属性中：\<名称 >。\<宽度 >。\<高度 >.png。|必需|  
 |/assembly|（不包括扩展名） 的托管程序集或本机程序集 （相对于该清单的运行时位置） 资源的宿主的运行时路径的名称。|必需|  
-|/ 清单|要向生成的.imagemanifest 文件的名称。 这可能包括要在不同的位置创建文件的绝对或相对路径。 该默认名称匹配的程序集名称。<br /><br /> 默认值：\<当前目录 >\\< 程序集\>.imagemanifest|Optional|  
-|/guidName|要为所有生成的清单中的映像在 GUID 符号的名称。<br /><br /> 默认： AssetsGuid|Optional|  
-|/rootPath|需要在创建托管的资源 Uri 之前剥离根路径。 （此标志。 若要使用该工具在其中获取相对 URI 路径错误，导致无法加载的资源的情况下帮助）<br /><br /> 默认值：\<当前目录 >|Optional|  
+|/ 清单|要向生成的.imagemanifest 文件的名称。 这可能包括要在不同的位置创建文件的绝对或相对路径。 该默认名称匹配的程序集名称。<br /><br /> 默认：\<当前目录 >\\< 程序集\>.imagemanifest|Optional|  
+|/guidName|要为所有生成的清单中的映像在 GUID 符号的名称。<br /><br /> 默认：AssetsGuid|Optional|  
+|/rootPath|需要在创建托管的资源 Uri 之前剥离根路径。 （此标志。 若要使用该工具在其中获取相对 URI 路径错误，导致无法加载的资源的情况下帮助）<br /><br /> 默认：\<当前目录 >|Optional|  
 |/recursive|设置此标志指示该工具以递归方式搜索 /resources 参数中的任何目录。 忽略此标志会在顶级的等级等级仅搜索的目录中。|Optional|  
 |/isNative|当程序集参数是本机程序集的路径时，请设置此标志。 当程序集参数是托管程序集的名称，则忽略此标志。 （请参阅有关此标志的其他信息的备注部分。）|Optional|  
 |/newGuids|设置此标志指示该工具创建映像的 GUID 符号而不是合并现有清单中的一个新的值。|Optional|  
@@ -47,25 +43,25 @@ ms.locfileid: "51771855"
   
  **示例**  
   
--   ManifestFromResources /resources:D:\Images /assembly:My.Assembly.Name /isNative  
+- ManifestFromResources /resources:D:\Images /assembly:My.Assembly.Name /isNative  
   
--   ManifestFromResources /resources:D:\Images\Image1.png;D:\Images\Image1.xaml /assembly:My.Assembly.Name /manifest:MyImageManifest.imagemanifest  
+- ManifestFromResources /resources:D:\Images\Image1.png;D:\Images\Image1.xaml /assembly:My.Assembly.Name /manifest:MyImageManifest.imagemanifest  
   
--   ManifestFromResources /resources:D:\Images\Image1.png;D:\Images\Image1.xaml /assembly:My.Assembly.Name /guidName:MyImages /newGuids /newIds  
+- ManifestFromResources /resources:D:\Images\Image1.png;D:\Images\Image1.xaml /assembly:My.Assembly.Name /guidName:MyImages /newGuids /newIds  
   
 ## <a name="notes"></a>说明  
   
--   该工具仅支持.png 和.xaml 文件。 将忽略任何其他图像或文件类型。 分析资源时遇到的所有不受支持类型生成一个警告。 如果不支持该工具完成时找到图像分析的资源，就会生成错误  
+- 该工具仅支持.png 和.xaml 文件。 将忽略任何其他图像或文件类型。 分析资源时遇到的所有不受支持类型生成一个警告。 如果不支持该工具完成时找到图像分析的资源，就会生成错误  
   
--   通过遵循的建议的格式为.png 图像，该工具将设置.png 的大小/维度值为格式指定大小，即使它不同于映像的实际大小。  
+- 通过遵循的建议的格式为.png 图像，该工具将设置.png 的大小/维度值为格式指定大小，即使它不同于映像的实际大小。  
   
--   宽度/高度格式可以省略对于.png 图像，但该工具将读取图像的实际宽度/高度，并将其用于图像的大小/维度值。  
+- 宽度/高度格式可以省略对于.png 图像，但该工具将读取图像的实际宽度/高度，并将其用于图像的大小/维度值。  
   
--   多次为同一个.imagemanifest 相同的图像带上运行此工具将会导致重复的清单项，因为该工具会尝试拆分为独立图像的图像条，并将它们添加到现有的清单。  
+- 多次为同一个.imagemanifest 相同的图像带上运行此工具将会导致重复的清单项，因为该工具会尝试拆分为独立图像的图像条，并将它们添加到现有的清单。  
   
--   工具生成的清单仅应完成合并 （忽略 /newGuids 或 /newIds）。 已自定义或通过其他方式生成的清单可能不正确合并。  
+- 工具生成的清单仅应完成合并 （忽略 /newGuids 或 /newIds）。 已自定义或通过其他方式生成的清单可能不正确合并。  
   
--   为本机程序集生成的清单可能需要手动编辑生成以进行匹配的资源 Id 从本机程序集的.rc 文件的 ID 符号之后。  
+- 为本机程序集生成的清单可能需要手动编辑生成以进行匹配的资源 Id 从本机程序集的.rc 文件的 ID 符号之后。  
   
 ## <a name="sample-output"></a>示例输出  
  **简单的映像清单**  
@@ -163,4 +159,3 @@ ms.locfileid: "51771855"
   <ImageLists />  
 </ImageManifest>  
 ```
-

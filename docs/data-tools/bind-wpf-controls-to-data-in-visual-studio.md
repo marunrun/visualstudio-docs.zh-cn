@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: e05a1e0c-5082-479d-bbc9-d395b0bc6580
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3c3737174843a8b9ff77ecdfb592e1275b88c84c
-ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
-ms.translationtype: MTE95
+ms.openlocfilehash: 0d1769440ea72ff477ac78230f2c7c1bb71b5ace
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54154390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62816257"
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>在 Visual Studio 中将 WPF 控件绑定到数据
 
-通过将数据绑定到 [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] 控件，可以向应用程序的用户显示数据。 若要创建这些数据绑定控件，可以将项从**数据源**窗口拖到[!INCLUDE[wpfdesigner_current_short](../data-tools/includes/wpfdesigner_current_short_md.md)]Visual Studio 中。 本主题将介绍一些你可用于创建数据绑定 [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] 应用程序的最常见的任务、工具和类。
+通过将数据绑定到 [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] 控件，可以向应用程序的用户显示数据。 若要创建这些数据绑定控件，可以将项从**数据源**窗口拖到[!INCLUDE[wpfdesigner_current_short](../data-tools/includes/wpfdesigner_current_short_md.md)]Visual Studio 中。 本主题将介绍一些您可用于创建数据绑定 [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] 应用程序的最常见的任务、工具和类。
 
 有关如何在 Visual Studio 中创建数据绑定控件的常规信息，请参阅[将控件绑定到 Visual Studio 中的数据](../data-tools/bind-controls-to-data-in-visual-studio.md)。 有关 [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] 数据绑定的详细信息，请参阅[数据绑定概述](/dotnet/framework/wpf/data/data-binding-overview)。
 
@@ -55,16 +54,16 @@ ms.locfileid: "54154390"
 | - | - | - |
 | 数据集 | 是 | 是 |
 | [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] | 是 | 是 |
-| 服务 | 是 | No |
-| 对象 | 是 | No |
+| 服务 | 是 | 否 |
+| 对象 | 是 | 否 |
 
 ### <a name="datasets"></a>数据集
 
 当将表或列从**数据源**到设计器中，Visual Studio 窗口生成[!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)]，执行以下操作：
 
--   将数据集和新的 <xref:System.Windows.Data.CollectionViewSource> 添加到将项拖至的容器的资源中。 <xref:System.Windows.Data.CollectionViewSource> 是可用于导航和显示数据集中的数据的对象。
+- 将数据集和新的 <xref:System.Windows.Data.CollectionViewSource> 添加到将项拖至的容器的资源中。 <xref:System.Windows.Data.CollectionViewSource> 是可用于导航和显示数据集中的数据的对象。
 
--   为控件创建数据绑定。 如果将项拖动到设计器中的一个现有控件上，则 XAML 会将该控件绑定到该项。 如果将项拖动到容器时，XAML 创建拖动的项，为选定的控件，并将控件绑定到的项。 将在新的 <xref:System.Windows.Controls.Grid> 内创建该控件。
+- 为控件创建数据绑定。 如果将项拖动到设计器中的一个现有控件上，则 XAML 会将该控件绑定到该项。 如果将项拖动到容器时，XAML 创建拖动的项，为选定的控件，并将控件绑定到的项。 将在新的 <xref:System.Windows.Controls.Grid> 内创建该控件。
 
 Visual Studio 还将对代码隐藏文件做出以下更改：
 
@@ -84,7 +83,7 @@ Visual Studio 还将对代码隐藏文件做出以下更改：
 
 - 为包含该控件的 <xref:System.Windows.FrameworkElement.Loaded> 元素创建 [!INCLUDE[TLA2#tla_ui](../data-tools/includes/tla2sharptla_ui_md.md)] 事件处理程序。 事件处理程序调用`Get<EntityName>Query`方法来用数据填充实体检索<xref:System.Windows.Data.CollectionViewSource>从容器的资源，然后使第一个数据项的当前项。 如果<xref:System.Windows.FrameworkElement.Loaded>事件处理程序已存在，Visual Studio 将此代码添加到现有的事件处理程序。
 
-### <a name="services"></a>服务
+### <a name="services"></a>Services
 
 当将服务对象或属性从**数据源**设计器中，Visual Studio 窗口生成[!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)]创建数据绑定控件 （或将现有控件绑定到对象或属性）。 但是，Visual Studio 不生成用数据填充代理服务对象的代码。 你必须自己编写此代码。 有关演示如何执行此操作的示例，请参阅[绑定 WPF 控件添加到 WCF 数据服务](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)。
 
@@ -103,9 +102,9 @@ Visual Studio 将生成执行以下操作的 XAML：
 
 Visual Studio 生成[!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)]，执行以下操作：
 
--   将新的 <xref:System.Windows.Data.CollectionViewSource> 添加到将项拖至的容器的资源中。 <xref:System.Windows.Data.CollectionViewSource> 是可用于导航和显示对象中的数据的对象。
+- 将新的 <xref:System.Windows.Data.CollectionViewSource> 添加到将项拖至的容器的资源中。 <xref:System.Windows.Data.CollectionViewSource> 是可用于导航和显示对象中的数据的对象。
 
--   为控件创建数据绑定。 如果将项拖动到设计器中的一个现有控件上，则 XAML 会将该控件绑定到该项。 如果将项拖动到容器时，XAML 创建拖动的项，为选定的控件，并将控件绑定到的项。 将在新的 <xref:System.Windows.Controls.Grid> 内创建该控件。
+- 为控件创建数据绑定。 如果将项拖动到设计器中的一个现有控件上，则 XAML 会将该控件绑定到该项。 如果将项拖动到容器时，XAML 创建拖动的项，为选定的控件，并将控件绑定到的项。 将在新的 <xref:System.Windows.Controls.Grid> 内创建该控件。
 
 ## <a name="see-also"></a>请参阅
 

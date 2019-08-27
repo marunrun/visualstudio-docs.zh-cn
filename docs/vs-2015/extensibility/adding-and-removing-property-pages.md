@@ -1,14 +1,9 @@
 ---
 title: 添加和删除属性页 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - property pages, adding
 - property pages, project subtypes
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 34853412-ab8a-4caa-9601-7d0727b2985d
 caps.latest.revision: 30
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 680a375d025d59d12c2a070bc564ff94085bc4b5
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 98838f09df3094e16d5f1a18263ffdad603ded0b
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51798958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63440142"
 ---
 # <a name="adding-and-removing-property-pages"></a>添加和删除属性页
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,7 +30,7 @@ ms.locfileid: "51798958"
   
 #### <a name="to-remove-a-property-page-in-project-designer"></a>若要在项目设计器中删除属性页  
   
-1.  重写`GetProperty(uint itemId, int propId, out object property)`方法筛选属性页并获取`clsids`列表。  
+1. 重写`GetProperty(uint itemId, int propId, out object property)`方法筛选属性页并获取`clsids`列表。  
   
     ```vb  
     Protected Overrides int GetProperty(uint itemId, int propId, out object property)  
@@ -80,7 +75,7 @@ ms.locfileid: "51798958"
     }  
     ```  
   
-2.  删除**生成事件**页上从获取`clsids`列表。  
+2. 删除**生成事件**页上从获取`clsids`列表。  
   
     ```vb  
     Private buildEventsPageGuid As String = "{1E78F8DB-6C07-4D61-A18F-7514010ABD56}"  
@@ -116,7 +111,7 @@ ms.locfileid: "51798958"
   
 #### <a name="to-add-a-property-page-in-project-designer"></a>若要在项目设计器中添加属性页  
   
-1.  创建你想要添加的属性页。  
+1. 创建你想要添加的属性页。  
   
     ```vb  
     Class DeployPropertyPage  
@@ -161,7 +156,7 @@ ms.locfileid: "51798958"
     }  
     ```  
   
-2.  注册新的属性页。  
+2. 注册新的属性页。  
   
     ```vb  
     <MSVSIP.ProvideObject(GetType(DeployPropertyPage), RegisterUsing = RegistrationMethod.CodeBase)>  
@@ -171,7 +166,7 @@ ms.locfileid: "51798958"
     [MSVSIP.ProvideObject(typeof(DeployPropertyPage), RegisterUsing = RegistrationMethod.CodeBase)]  
     ```  
   
-3.  重写`GetProperty(uint itemId, int propId, out object property)`方法来筛选器属性页中，获取`clsids`列出，添加新的属性页。  
+3. 重写`GetProperty(uint itemId, int propId, out object property)`方法来筛选器属性页中，获取`clsids`列出，添加新的属性页。  
   
     ```vb  
     Protected Overrides Function GetProperty(ByVal itemId As UInteger, ByVal propId As Integer, ByRef [property] As Object) As Integer  
@@ -210,8 +205,7 @@ ms.locfileid: "51798958"
     ```  
   
 > [!NOTE]
->  本主题中提供的所有代码示例都是一个更大示例的组成部分[VSSDK 示例](../misc/vssdk-samples.md)。  
+> 本主题中提供的所有代码示例都是一个更大示例的组成部分[VSSDK 示例](../misc/vssdk-samples.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [项目子类型](../extensibility/internals/project-subtypes.md)
-

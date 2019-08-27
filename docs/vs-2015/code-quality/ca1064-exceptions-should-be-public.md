@@ -1,14 +1,9 @@
 ---
-title: CA1064： 异常应该是公共 |Microsoft Docs
-ms.custom: ''
+title: CA1064:异常应该是公共 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA1064
 - ExceptionsShouldBePublic
@@ -20,14 +15,14 @@ caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: e9d85fef6cd581f32be9438b94264c201869ba01
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 00d188188f722907c2bac20e84cb9291ef8bc0fe
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49888471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68200430"
 ---
-# <a name="ca1064-exceptions-should-be-public"></a>CA1064：异常应该是公共的
+# <a name="ca1064-exceptions-should-be-public"></a>CA1064:异常应该是公共的
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -55,6 +50,3 @@ ms.locfileid: "49888471"
  因为异常类直接派生自异常，内部，则将触发此规则在第一个示例方法，FirstCustomException。 因为尽管也直接从异常派生类，该类被声明为公共规则不会激发 SecondCustomException 类上。 第三个类也不会触发该规则，因为它不直接从派生<xref:System.Exception?displayProperty=fullName>， <xref:System.SystemException?displayProperty=fullName>，或<xref:System.ApplicationException?displayProperty=fullName>。
 
  [!code-csharp[FxCop.Design.ExceptionsShouldBePublic.CA1064#1](../snippets/csharp/VS_Snippets_CodeAnalysis/fxcop.design.exceptionsshouldbepublic.ca1064/cs/ca1064 - exceptionsshouldbepublic.cs#1)]
-
-
-

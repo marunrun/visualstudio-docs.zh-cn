@@ -2,21 +2,20 @@
 title: 工作流设计器-Parallel 活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - System.Activities.Statements.Parallel.UI
 ms.assetid: 0306dc3b-075a-4091-ac3a-96486fbabed5
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ad0d0d44c18c17dd1602c51954a7c529b84d114
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 79e1e7e48f7ed7e8cd4084805dfae2018a886a82
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53843601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63002776"
 ---
 # <a name="parallel-activity-designer"></a>Parallel 活动设计器
 

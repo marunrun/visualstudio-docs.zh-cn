@@ -1,25 +1,20 @@
 ---
 title: 概述（性能工具）| Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: b877802d-c736-4047-821a-bd7733fff6de
 caps.latest.revision: 27
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: d055f4a68a7fbc866300ab5fe842d43a75ce7008
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 6429f9d9a94d74be48bd1a6305f1bb109a173b5a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51741311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68189347"
 ---
 # <a name="overviews-performance-tools"></a>概述（性能工具）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -54,9 +49,6 @@ ms.locfileid: "51741311"
  [分析和 Windows Vista 安全性](../profiling/profiling-and-windows-vista-security.md)  
  了解在 [!INCLUDE[wiprlhext](../includes/wiprlhext-md.md)] 上收集采样数据和分析跨会话应用程序所需的问题和步骤。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [入门](../profiling/getting-started-with-performance-tools.md)   
  [性能资源管理器](../profiling/performance-explorer.md)
-
-
-

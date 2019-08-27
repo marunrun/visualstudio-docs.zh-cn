@@ -1,14 +1,9 @@
 ---
 title: 了解检测数据值 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiling Tools,instrumentation
 - instrumentation profiling method
@@ -16,18 +11,18 @@ ms.assetid: 2cf94cf9-c317-4a52-bf00-670f1262165e
 caps.latest.revision: 34
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: aaa94700c22858be5b6a739034715d1bc926eaf9
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 703d80da623c4fdb72328565513c6debe80447d1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51787934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68145479"
 ---
 # <a name="understanding-instrumentation-data-values"></a>了解检测数据值
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的检测分析方法会记录所分析应用程序中函数调用、行和指令的详细计时信息  
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的检测  分析方法会记录所分析应用程序中函数调用、行和指令的详细计时信息  
   
  **要求**  
   
@@ -47,11 +42,11 @@ ms.locfileid: "51787934"
   
   对于记录间隔时调用堆栈中的每个函数，探查器分析会将间隔添加到函数的四个数据值中的一个或多个。 分析基于两个条件将间隔添加到函数的数据值：  
   
-- 间隔是在函数的代码中还是在子函数（函数调用的函数）中出现。  
+- 间隔是在函数的代码中还是在子函数  （函数调用的函数）中出现。  
   
 - 在间隔中是否发生了操作系统事件。  
   
-  函数或数据范围的间隔的数据值称为已用非独占、已用独占、应用程序非独占和应用程序独占：  
+  函数或数据范围的间隔的数据值称为已用非独占  、已用独占  、应用程序非独占  和应用程序独占  ：  
   
 - 函数的所有间隔都会添加到已用非独占数据值。  
   
@@ -103,9 +98,6 @@ ms.locfileid: "51787934"
   
  100 * 函数应用程序独占值/会话应用程序非独占值  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [分析性能工具数据](../profiling/analyzing-performance-tools-data.md)   
  [如何：选择收集方法](../profiling/how-to-choose-collection-methods.md)
-
-
-

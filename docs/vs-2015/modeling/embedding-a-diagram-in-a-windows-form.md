@@ -1,23 +1,20 @@
 ---
 title: 在 Windows 窗体中嵌入关系图 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 ms.assetid: fa6cd040-7c88-4329-b9c3-2a80b312610f
 caps.latest.revision: 3
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 04ecf5bd7bfc91e03f48e624d208a5b4f29b10b7
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 440b60697d4ab1e88f535b6c5ef824bc74e19c48
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49292521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68203414"
 ---
 # <a name="embedding-a-diagram-in-a-windows-form"></a>在 Windows 窗体中嵌入图表
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,15 +25,15 @@ ms.locfileid: "49292521"
   
 #### <a name="to-embed-a-dsl-diagram-in-a-windows-control"></a>若要在 Windows 控件中嵌入 DSL 关系图  
   
-1.  添加一个新**用户控件**到 DslPackage 项目的文件。  
+1. 添加一个新**用户控件**到 DslPackage 项目的文件。  
   
-2.  将在面板控件添加到用户控件。 此面板将包含 DSL 关系图。  
+2. 将在面板控件添加到用户控件。 此面板将包含 DSL 关系图。  
   
      添加所需的其他控件。  
   
      设置控件的定位点属性。  
   
-3.  在解决方案资源管理器，右键单击用户控件文件，然后单击**查看代码**。 将此构造函数和变量添加到代码中：  
+3. 在解决方案资源管理器，右键单击用户控件文件，然后单击**查看代码**。 将此构造函数和变量添加到代码中：  
   
     ```csharp  
   
@@ -50,7 +47,7 @@ ms.locfileid: "49292521"
   
     ```  
   
-4.  将新文件添加到 DslPackage 项目中包含以下内容：  
+4. 将新文件添加到 DslPackage 项目中包含以下内容：  
   
     ```  
     using System.Windows.Forms;  
@@ -74,13 +71,13 @@ ms.locfileid: "49292521"
   
     ```  
   
-5.  若要测试 DSL，按 F5，然后打开示例模型文件。 该控件中显示关系图。 工具箱和其他功能会正常工作。  
+5. 若要测试 DSL，按 F5，然后打开示例模型文件。 该控件中显示关系图。 工具箱和其他功能会正常工作。  
   
 #### <a name="updating-the-form-using-store-events"></a>更新窗体使用存储事件  
   
-1.  在窗体设计器中，添加**ListBox**名为`listBox1`。 这将在模型中显示的元素的列表。 它将保留在模型使用 synchronism*存储事件*。 有关详细信息，请参阅[事件处理程序传播更改外部模型](../modeling/event-handlers-propagate-changes-outside-the-model.md)。  
+1. 在窗体设计器中，添加**ListBox**名为`listBox1`。 这将在模型中显示的元素的列表。 它将保留在模型使用 synchronism*存储事件*。 有关详细信息，请参阅[事件处理程序传播更改外部模型](../modeling/event-handlers-propagate-changes-outside-the-model.md)。  
   
-2.  在自定义代码文件中，重写进一步 DocView 类的方法：  
+2. 在自定义代码文件中，重写进一步 DocView 类的方法：  
   
     ```  
   
@@ -123,7 +120,7 @@ ms.locfileid: "49292521"
   
     ```  
   
-3.  在针对该用户控件代码中，插入方法来侦听元素中添加和删除：  
+3. 在针对该用户控件代码中，插入方法来侦听元素中添加和删除：  
   
     ```  
   
@@ -152,11 +149,10 @@ ms.locfileid: "49292521"
   
     ```  
   
-4.  若要测试 DSL，请按 F5 并在实验实例中的[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]，打开示例模型文件。  
+4. 若要测试 DSL，请按 F5 并在实验实例中的[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]，打开示例模型文件。  
   
      请注意，列表框中显示的元素的列表在模型中，并且它是正确任何添加或删除操作，以及撤消和重做。  
   
 ## <a name="see-also"></a>请参阅  
  [导航和更新程序代码中的模型](../modeling/navigating-and-updating-a-model-in-program-code.md)   
  [编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)
-

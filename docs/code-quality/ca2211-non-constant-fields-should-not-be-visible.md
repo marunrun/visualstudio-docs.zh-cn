@@ -1,7 +1,6 @@
 ---
 title: CA2211:非常量字段不应是可见的
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - CA2211
@@ -12,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: e1e42c40-0acd-4312-af29-70133739a304
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 77253de14219c4c1c6737f9bc6e5c61e11fff4ba
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 77909627385a7aa2e41f87c23ec41dc8ac0e1a5e
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53937460"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68920363"
 ---
 # <a name="ca2211-non-constant-fields-should-not-be-visible"></a>CA2211:非常量字段不应是可见的
 
@@ -35,19 +34,19 @@ ms.locfileid: "53937460"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 公共或受保护的静态字段不是常量也不是只读的。
+公共或受保护的静态字段不是常量, 也不是只读的。
 
 ## <a name="rule-description"></a>规则说明
- 不是常数也不是只读字段的静态字段不是线程安全的。 对此类字段的访问必须严格控制，并需要高级编程技术来同步对类对象的访问。 这些是技巧难以学习和母版和测试此类对象会带来独特挑战，因为静态字段最适合用于存储不会更改的数据。 此规则适用于库;应用程序不应公开任何字段。
+不是常数也不是只读字段的静态字段不是线程安全的。 必须严格控制对此类字段的访问, 并且需要使用高级编程技术来同步对类对象的访问。 由于这些都是很难学习和掌握的技能, 并且测试此类对象会带来自己的挑战, 因此最好将静态字段用于存储不会更改的数据。 此规则适用于库;应用程序不应公开任何字段。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要解决此规则的冲突，请将静态字段常数或只读的。 如果无法做到这一点，重新设计要使用替代机制，例如管理的基础字段对线程安全的访问的线程安全属性的类型。 意识到问题，如锁争用和死锁可能影响性能和行为的库。
+若要修复与此规则的冲突, 请将静态字段设置为常量或只读。 如果这是不可能的, 请重新设计该类型以使用替代机制 (如线程安全属性) 来管理对基础字段的线程安全访问。 请注意, 锁争用和死锁之类的问题可能会影响库的性能和行为。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 它可以安全地禁止显示此规则的警告，如果你正在开发的应用的因此有权访问包含静态字段的类型的完全控制。 库设计器不应取消与该规则; 警告使用非常量静态字段可使用库开发人员难以正确使用。
+如果你正在开发应用程序, 因此可以安全地禁止显示此规则发出的警告, 从而可以完全控制对包含静态字段的类型的访问。 库设计器不应禁止显示此规则发出的警告;使用非常量静态字段可以使开发人员难以正确使用库。
 
 ## <a name="example"></a>示例
- 下面的示例显示了与此规则冲突的类型。
+下面的示例演示违反此规则的类型。
 
- [!code-vb[FxCop.Usage.AvoidStaticNonConstants#1](../code-quality/codesnippet/VisualBasic/ca2211-non-constant-fields-should-not-be-visible_1.vb)]
- [!code-csharp[FxCop.Usage.AvoidStaticNonConstants#1](../code-quality/codesnippet/CSharp/ca2211-non-constant-fields-should-not-be-visible_1.cs)]
+[!code-vb[FxCop.Usage.AvoidStaticNonConstants#1](../code-quality/codesnippet/VisualBasic/ca2211-non-constant-fields-should-not-be-visible_1.vb)]
+[!code-csharp[FxCop.Usage.AvoidStaticNonConstants#1](../code-quality/codesnippet/CSharp/ca2211-non-constant-fields-should-not-be-visible_1.cs)]

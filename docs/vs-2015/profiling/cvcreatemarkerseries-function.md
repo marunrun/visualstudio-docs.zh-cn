@@ -1,14 +1,9 @@
 ---
 title: CvCreateMarkerSeries 函数 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvCreateMarkerSeriesA
 - cvmarkers/CvCreateMarkerSeriesW
@@ -19,13 +14,13 @@ ms.assetid: e280530b-137a-43a7-8643-aa514ab86ed7
 caps.latest.revision: 8
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 52ef56d1e33ddb66a4c35f7c46596ea080478a6c
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 6dc4af6ef3b2ffc89ec0e69a6dd63923f5c55ffe
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51734719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68155539"
 ---
 # <a name="cvcreatemarkerseries-function"></a>CvCreateMarkerSeries 函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -66,8 +61,5 @@ _Check_return_ HRESULT CvCreateMarkerSeriesA(
   
  **ANSI：** CvCreateMarkerSeriesA  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [C++ 库参考](../profiling/cpp-library-reference.md)
-
-
-

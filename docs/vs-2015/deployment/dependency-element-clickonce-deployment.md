@@ -1,14 +1,9 @@
 ---
 title: '&lt;依赖项&gt;元素 （ClickOnce 部署） |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 f1_keywords:
 - urn:schemas-microsoft-com:asm.v2#osVersionInfo
 - urn:schemas-microsoft-com:asm.v2#os
@@ -30,13 +25,13 @@ ms.assetid: 9b4d2082-0347-4922-ac70-85f11b913039
 caps.latest.revision: 29
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: af4b3fc79118e25fb5631de1a4ea4d5897355bf1
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: f191b11dfce5b3877d0a31e260e092000a556a5a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49214912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68187784"
 ---
 # <a name="ltdependencygt-element-clickonce-deployment"></a>&lt;依赖项&gt;元素 （ClickOnce 部署）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -84,25 +79,25 @@ ms.locfileid: "49214912"
  `dependency`元素通常表示程序集包含在中的主应用程序依赖项[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序。 如果 Main.exe 应用程序使用名为 DotNetAssembly.dll 程序集，则必须在依赖项部分列出该程序集。 依赖关系，但是，也可以表示其他类型的依赖项，如依赖特定版本的公共语言运行时，全局程序集缓存 (GAC) 中的程序集或 COM 对象。 因为它是一种无人参与部署技术，[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]无法启动下载和安装这些类型的依赖项，但它不会阻止运行该应用程序如果不存在一个或多个指定的依赖项。  
   
 ## <a name="dependentassembly"></a>dependentAssembly  
- 必须的。 此元素包含`assemblyIdentity`元素。 下表显示了属性`dependentAssembly`支持。  
+ 必需。 此元素包含`assemblyIdentity`元素。 下表显示了属性`dependentAssembly`支持。  
   
 |特性|描述|  
 |---------------|-----------------|  
 |`preRequisite`|可选。 指定此程序集应已存在于 gac。 有效值为 `true` 和 `false`。 如果`true`，并在 GAC 中不存在指定的程序集、 应用程序无法运行。|  
 |`visible`|可选。 标识顶级应用程序标识，包括其依赖项。 在内部使用[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]来管理应用程序存储和激活。|  
-|`dependencyType`|必须的。 此依赖项和应用程序之间的关系。 有效值为：<br /><br /> -   `install`. 组件表示从当前应用程序的单独安装。<br />-   `preRequisite`. 组件被必需的当前应用程序。|  
+|`dependencyType`|必需。 此依赖项和应用程序之间的关系。 有效值为：<br /><br /> -   `install`. 组件表示从当前应用程序的单独安装。<br />-   `preRequisite`. 组件被必需的当前应用程序。|  
 |`codebase`|可选。 应用程序清单的完整路径。|  
 |`size`|可选。 应用程序清单，以字节为单位的大小。|  
   
 ## <a name="assemblyidentity"></a>assemblyIdentity  
- 必须的。 此元素是 `dependentAssembly` 元素的子元素。 内容`assemblyIdentity`必须是与中所述相同[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序清单。 下表显示的属性`assemblyIdentity`元素。  
+ 必需。 此元素是 `dependentAssembly` 元素的子元素。 内容`assemblyIdentity`必须是与中所述相同[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序清单。 下表显示的属性`assemblyIdentity`元素。  
   
 |特性|描述|  
 |---------------|-----------------|  
-|`Name`|必须的。 标识应用程序的名称。|  
-|`Version`|必须的。 采用以下格式指定该应用程序的版本号： `major.minor.build.revision`|  
-|`publicKeyToken`|必须的。 指定的 16 字符十六进制字符串表示应用程序集签名的公钥的 sha-1 哈希的最后 8 个字节。 用于签名的公钥必须为 2048 位或更高版本。|  
-|`processorArchitecture`|必须的。 指定微处理器。 有效的值是`x86`的 32 位 Windows 和`IA64`的 64 位 Windows。|  
+|`Name`|必需。 标识应用程序的名称。|  
+|`Version`|必需。 采用以下格式指定该应用程序的版本号： `major.minor.build.revision`|  
+|`publicKeyToken`|必需。 指定的 16 字符十六进制字符串表示应用程序集签名的公钥的 sha-1 哈希的最后 8 个字节。 用于签名的公钥必须为 2048 位或更高版本。|  
+|`processorArchitecture`|必需。 指定微处理器。 有效的值是`x86`的 32 位 Windows 和`IA64`的 64 位 Windows。|  
 |`Language`|可选。 标识程序集的两个部分语言代码。 例如，EN-US，代表对于英语 （美国）。 默认值为 `neutral`。 此元素处于`asmv2`命名空间。|  
 |`type`|可选。 有关向后兼容性 Windows 并行安装技术。 唯一允许的值是`win32`。|  
   
@@ -190,7 +185,4 @@ ms.locfileid: "49214912"
   
 ## <a name="see-also"></a>请参阅  
  [ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md)   
- [\<依赖项 > 元素](../deployment/dependency-element-clickonce-application.md)
-
-
-
+ [\<dependency> 元素](../deployment/dependency-element-clickonce-application.md)

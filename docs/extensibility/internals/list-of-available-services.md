@@ -6,29 +6,30 @@ helpviewer_keywords:
 - services, Visual Studio
 - Visual Studio, services
 ms.assetid: 724eb24b-b87c-4971-a2e7-adee7afc03b2
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7cd076e19a1732309a07feccca899669741b6482
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 6bd7aea3adbb3a732b83736e5824d775824cccdb
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53964632"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66344853"
 ---
 # <a name="list-of-available-services"></a>可用服务的列表
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 和 Visual Studio SDK 支持以下服务。 某些程序包提供其自己的服务未在此处列出的 — 例如，语言服务不具有单个服务的 GUID。 必须使用的语言名称以在注册表中找到的语言服务的 GUID。  
-  
- 使用服务 Guid 此处列出或获取来自其他源 （例如，语言服务） 来获取的主要接口或基接口与每个服务所示。  
-  
-## <a name="the-services"></a>服务  
-  
+
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 和 Visual Studio SDK 支持以下服务。 某些程序包提供其自己的服务未在此处列出的 — 例如，语言服务不具有单个服务的 GUID。 必须使用的语言名称以在注册表中找到的语言服务的 GUID。
+
+使用服务 Guid 此处列出或获取来自其他源 （例如，语言服务） 来获取的主要接口或基接口与每个服务所示。
+
+## <a name="the-services"></a>服务
+
 | 服务 | 接口 | Visual Studio | Visual Studio 2005 | 描述 |
 | - | - |---------------|--------------------| - |
 | <xref:Microsoft.VisualStudio.OLE.Interop.SBindHost> | <xref:Microsoft.VisualStudio.OLE.Interop.IBindHost> | 是 | 是 | 使用 Vspackage 获取<xref:Microsoft.VisualStudio.OLE.Interop.IBindHost>ActiveX 控件以便于异步数据传输中的接口。 |
-| <xref:Microsoft.VisualStudio.Shell.Interop.SDTE> | <xref:EnvDTE.DTE> | 否 | 是 | 获取用于自动化的设计时可扩展性 (DTE) 对象。<br /><br /> C/C + + ID:SID_SDTE |
+| <xref:Microsoft.VisualStudio.Shell.Interop.SDTE> | <xref:EnvDTE.DTE> | 否 | 是 | 获取用于自动化的设计时可扩展性 (DTE) 对象。<br /><br /> C /C++ ID:SID_SDTE |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SCodeNavigate> | <xref:Microsoft.VisualStudio.Shell.Interop.ICodeNavigate> | 是 | 是 | 由窗体设计器以显示控件的默认事件处理程序实现。 |
 | <xref:Microsoft.VisualStudio.OLE.Interop.SContainerDispatch> | IDispatch | 是 | 是 | 允许 VSPackage 来访问另一个 VSPackage 或控件的自动化接口。 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SExtendedTypeLib> | <xref:Microsoft.VisualStudio.Shell.Interop.IExtendedTypeLib> | 是 | 是 | 允许 VSPackage 来添加或创建一个扩展的类型库。 |
@@ -128,7 +129,7 @@ ms.locfileid: "53964632"
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsSolutionObject> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution> | 是 | 是 | 使用<xref:Microsoft.VisualStudio.Shell.Interop.SVsSolution>改为服务。 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsSolutionPersistence> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence> | 是 | 是 | 允许 VSPackage 来存储和从当前解决方案的.sln 文件中检索信息。 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsSQLCLRReferences> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsSQLCLRReferences> | 否 | 是 | 提供的功能添加和更新中托管的代码程序集的引用。 |
-| <xref:Microsoft.VisualStudio.Shell.Interop.SVsStartPageDownload> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsStartPageDownload> | 否 | 是 | 提供用于启动和停止下载服务在后台线程上的启动页下载服务的访问权限。 |
+| <xref:Microsoft.VisualStudio.Shell.Interop.SVsStartPageDownload> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsStartPageDownload> | 否 | 是 | 提供对 Visual Studio 2017 起始页的下载服务的启动和停止下载服务在后台线程上访问。 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsStatusbar> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbar> | 是 | 是 | 提供对 IDE 的状态栏的访问。 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsStrongNameKeys> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsStrongNameKeys> | 否 | 是 | 提供用于创建强密钥名称和密钥文件包含对托管的代码程序集签名中使用的密码的方法的访问权限。 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsStructuredFileIO> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsStructuredFileIO> | 是 | 是 | 允许 VSPackage 以提供有关将数据保存在多个格式的支持。 |
@@ -156,7 +157,7 @@ ms.locfileid: "53964632"
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsWebURLMRU> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsWebURLMRU> | 是 | 是 | 使 VSPackage 可以向 Url 的最近使用过的 (MRU) 列表添加 URL 并获取 MRU 列表中的所有 Url 的列表。 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsWindowFrame> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> | 是 | 是 | 启用以获取包的一部分的包可能会置于该窗口框架的 VSPackage。 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsXMLMemberIndexService> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsXMLMemberIndexService> | 是 | 是 | 提供对与特定的元数据文件相关联的 XML 格式文档文件的访问。 |
-  
-## <a name="see-also"></a>请参阅  
- [COM 和托管的服务](http://msdn.microsoft.com/en-us/6c5808b4-ad87-48d7-ae06-33a81e7052af)   
- [使用并提供服务](../../extensibility/using-and-providing-services.md)
+
+## <a name="see-also"></a>请参阅
+
+- [使用并提供服务](../../extensibility/using-and-providing-services.md)

@@ -1,14 +1,9 @@
 ---
-title: POPDIRLISTFUNC |Microsoft Docs
-ms.custom: ''
+title: POPDIRLISTFUNC | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 f1_keywords:
 - POPLISTFUNC
 helpviewer_keywords:
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 0ee90fd2-5467-4154-ab4c-7eb02ac3a14c
 caps.latest.revision: 15
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 7b1361350b5a0c349ec8bd95a877c4fbaf75eafc
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 77e4701d3d8ec54fd37d6483f55b10a28af65b15
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51802748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68194049"
 ---
 # <a name="popdirlistfunc"></a>POPDIRLISTFUNC
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -54,7 +49,7 @@ typedef BOOL (*POPDIRLISTFUNC)(
 ## <a name="return-value"></a>返回值  
  IDE 将返回相应的错误代码：  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |SCC_OK|继续进行处理。|  
 |SCC_I_OPERATIONCANCELED|停止处理。|  
@@ -67,4 +62,3 @@ typedef BOOL (*POPDIRLISTFUNC)(
  [通过 IDE 实现的回调函数](../extensibility/callback-functions-implemented-by-the-ide.md)   
  [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)   
  [错误代码](../extensibility/error-codes.md)
-

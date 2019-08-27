@@ -1,12 +1,9 @@
 ---
 title: 使用 TextTransform 实用工具生成文件 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - text templates, TextTransform utility
 - TextTransform.exe
@@ -14,13 +11,13 @@ ms.assetid: 06a48235-fe02-403e-a1cf-2ae70b4db62f
 caps.latest.revision: 43
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: e7dbe189c9b46c10dc7bac5da4b87457d7c6ecbf
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 607eda7550819e4150f026a0671ed744ba9c10a7
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49227443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63427048"
 ---
 # <a name="generating-files-with-the-texttransform-utility"></a>使用 TextTransform 实用工具生成文件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,7 +25,7 @@ ms.locfileid: "49227443"
 TextTransform.exe 是一个命令行工具，可用于转换文本模板。 当调用 TextTransform.exe 时，作为自变量指定的文本模板文件的名称。 TextTransform.exe 调用文本转换引擎，并处理文本模板。 TextTransform.exe 通常通过脚本调用。 但是，它不通常必需的因为您可以在 Visual Studio 中或在生成过程中执行文本转换。  
   
 > [!NOTE]
->  如果你想要将文本转换作为生成过程的一部分，请考虑使用 MSBuild 文本转换任务。 有关详细信息，请参阅[生成过程中的代码生成](../modeling/code-generation-in-a-build-process.md)。 中的计算机上[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]还可以编写的应用程序的安装或[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]可以转换文本模板的扩展。 有关详细信息，请参阅[通过使用自定义宿主处理文本模板](../modeling/processing-text-templates-by-using-a-custom-host.md)。  
+> 如果你想要将文本转换作为生成过程的一部分，请考虑使用 MSBuild 文本转换任务。 有关详细信息，请参阅[生成过程中的代码生成](../modeling/code-generation-in-a-build-process.md)。 中的计算机上[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]还可以编写的应用程序的安装或[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]可以转换文本模板的扩展。 有关详细信息，请参阅[通过使用自定义宿主处理文本模板](../modeling/processing-text-templates-by-using-a-custom-host.md)。  
   
  TextTransform.exe 位于以下目录中：  
   
@@ -64,6 +61,3 @@ TextTransform [<options>] <templateName>
 |在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 解决方案中生成文件。|[使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|  
 |编写指令处理器转换自己的数据源。|[自定义 T4 文本转换](../modeling/customizing-t4-text-transformation.md)|  
 |编写文本模板化主机，您可以调用自己的应用程序从文本模板。|[使用自定义宿主处理文本模板](../modeling/processing-text-templates-by-using-a-custom-host.md)|
-
-
-

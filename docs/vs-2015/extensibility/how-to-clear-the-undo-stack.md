@@ -1,35 +1,30 @@
 ---
-title: 如何： 清除撤消堆栈 |Microsoft Docs
-ms.custom: ''
+title: 如何：清除撤消堆栈 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - clear undo stack
 ms.assetid: 2200d2d4-7f58-401c-87fc-ddd32d368193
 caps.latest.revision: 8
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: c7f094723ec74bbcfe7723ea8141a6980a1465fa
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: db77f93fd7f6af16b5358b75b6ffcd5927430653
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51734695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62549107"
 ---
-# <a name="how-to-clear-the-undo-stack"></a>如何： 清除撤消堆栈
+# <a name="how-to-clear-the-undo-stack"></a>如何：清除撤消堆栈
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 下面的以下过程说明如何清除撤消堆栈。  
   
 ### <a name="to-clear-the-undo-stack"></a>若要清除撤消堆栈  
   
-1.  若要清除撤消堆栈使用[IOleUndoManager::DiscardFrom](http://msdn.microsoft.com/library/windows/desktop/ms693799)方法。 以下是此示例：  
+1. 若要清除撤消堆栈使用[IOleUndoManager::DiscardFrom](/windows/desktop/api/ocidl/nf-ocidl-ioleundomanager-discardfrom)方法。 以下是此示例：  
   
     ```  
     HRESULT CCmdWindow::ClearUndoStack()  
@@ -51,4 +46,3 @@ ms.locfileid: "51734695"
   
 ## <a name="see-also"></a>请参阅  
  [如何：实现撤消管理](../extensibility/how-to-implement-undo-management.md)
-

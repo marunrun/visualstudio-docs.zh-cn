@@ -2,7 +2,6 @@
 title: IDispError 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,18 +13,18 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b717ebfe740a9b356513bb0f15e90c629a14e147
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
-ms.translationtype: MT
+ms.openlocfilehash: 85704ed9e9a9493ef02e4d4d68a84a2d1623533f
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54345833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63446859"
 ---
 # <a name="idisperror-interface"></a>IDispError 接口
 提供详细上下文错误的信息。  
   
 > [!NOTE]
->  未实现此接口。  
+> 未实现此接口。  
   
  除了继承的方法之外`IUnknown`，则`IDispError`接口公开以下方法。  
   

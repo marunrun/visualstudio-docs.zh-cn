@@ -1,14 +1,9 @@
 ---
 title: 旧版语言服务中的成员完成 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense, Member Completion tool tip
 - Member Completion, supporting in language services [managed package framework]
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 500f718d-9028-49a4-8615-ba95cf47fc52
 caps.latest.revision: 22
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: b8b5940e473c639600c30e66e7dc0c732359322d
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 93182d61b6ecf5bf22ea7117bf8ccfd17e2acd1a
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51790977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63437915"
 ---
 # <a name="member-completion-in-a-legacy-language-service"></a>旧版语言服务中的成员完成
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -34,7 +29,7 @@ IntelliSense 成员完成是工具提示显示特定的作用域，如类、 结
  旧版语言服务实现 VSPackage 的一部分，但实现语言服务功能的较新方法是使用 MEF 扩展。 若要获取详细信息，请参阅[扩展编辑器和语言服务](../../extensibility/extending-the-editor-and-language-services.md)。  
   
 > [!NOTE]
->  我们建议在开始尽可能快地使用新编辑器 API。 这将提高您的语言服务的性能，让您充分利用新的编辑器功能。  
+> 我们建议在开始尽可能快地使用新编辑器 API。 这将提高您的语言服务的性能，让您充分利用新的编辑器功能。  
   
 ## <a name="how-it-works"></a>其工作原理  
  以下是中的成员列表中均显示使用 MPF 类的两种方法：  
@@ -43,7 +38,7 @@ IntelliSense 成员完成是工具提示显示特定的作用域，如类、 结
   
 - <xref:Microsoft.VisualStudio.Package.IScanner>扫描程序检测到的成员完成字符和设置的令牌触发器<xref:Microsoft.VisualStudio.Package.TokenTriggers>，该字符。  
   
-  成员完成字符表示的类、 结构或枚举成员遵循。 例如，在 C# 或 Visual Basic 中的成员完成字符是`.`，而 c + + 中的字符是任一`.`或`->`。 触发器值的成员选择字符扫描时设置。  
+  成员完成字符表示的类、 结构或枚举成员遵循。 例如，在C#或 Visual Basic 的成员完成字符`.`，在C++字符可以是`.`或`->`。 触发器值的成员选择字符扫描时设置。  
   
 ### <a name="the-intellisense-member-list-command"></a>IntelliSense 成员 List 命令  
  <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>命令启动对的调用<xref:Microsoft.VisualStudio.Package.Source.Completion%2A>方法<xref:Microsoft.VisualStudio.Package.Source>类和<xref:Microsoft.VisualStudio.Package.Source.Completion%2A>方法，都依次调用<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>方法分析器分析原因为<xref:Microsoft.VisualStudio.Package.ParseReason>。  
@@ -262,4 +257,3 @@ namespace TestLanguagePackage
     }  
 }  
 ```
-

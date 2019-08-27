@@ -6,16 +6,15 @@ helpviewer_keywords:
 - Domain-Specific Language, domain class
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 799b5d2feafbf4a0e7b6ff54673983a585b0d2fe
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: fb66a0d497c86091f689f119e57a5230f125e8de
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53876885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999194"
 ---
 # <a name="properties-of-domain-classes"></a>域类的属性
 域类具有下表中的属性。 域类的相关信息，请参阅[了解模型、 类和关系](../modeling/understanding-models-classes-and-relationships.md)。 有关如何使用这些属性的详细信息，请参阅[自定义和扩展域特定语言](../modeling/customizing-and-extending-a-domain-specific-language.md)。
@@ -23,17 +22,17 @@ ms.locfileid: "53876885"
 |属性|描述|默认|
 |-|-|-|
 |访问修饰符|域类的访问级别（`public` 或 `internal`）。|`public`|
-|自定义特性|用于将属性添加到此域类从生成的源代码类。|\<无 >|
+|自定义特性|用于将属性添加到此域类从生成的源代码类。|\<none>|
 |生成双派生|如果`True`，将生成的基类和一个分部类 （以支持通过重写自定义）。 有关详细信息，请参阅[重写和扩展生成的类](../modeling/overriding-and-extending-the-generated-classes.md)。|`False`|
 |具有自定义构造函数|如果`True`，将在源代码中提供自定义构造函数。 有关详细信息，请参阅[重写和扩展生成的类](../modeling/overriding-and-extending-the-generated-classes.md)。|`False`|
 |继承修饰符|介绍的从域类生成的源代码类的继承的类型 (`none`，`abstract`或`sealed`)。|`none`|
-|基类|如果此域类派生，类的基类的名称。|\<无 >|
-|name|此域类的名称。|当前名称|
+|基类|如果此域类派生，类的基类的名称。|\<none>|
+|名称|此域类的名称。|当前名称|
 |命名空间|此域类的命名空间。|当前命名空间|
-|说明|此域类相关联的非正式说明。|\<无 >|
-|描述|用于记录生成的设计器的 UI 说明。|\<无 >|
-|显示名称|将此域类生成的设计器中显示的名称。|\<无 >|
-|帮助关键字|用于索引此域类的 F1 帮助中的可选关键字。|\<无 >|
+|说明|此域类相关联的非正式说明。|\<none>|
+|描述|用于记录生成的设计器的 UI 说明。|\<none>|
+|显示名称|将此域类生成的设计器中显示的名称。|\<none>|
+|帮助关键字|用于索引此域类的 F1 帮助中的可选关键字。|\<none>|
 
 ## <a name="see-also"></a>请参阅
 

@@ -2,21 +2,20 @@
 title: 工作流设计器的内容定义对话框
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - MessageContent.UI
 ms.assetid: 7e4237c3-90a1-4149-bd8a-3643d1dde0df
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cae5fc2c8da95a803dba915c3fa4b2a63820ee93
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b30409bcc82d540a17917f3a8b55084a205613b3
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53952958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62949879"
 ---
 # <a name="content-definition-dialog-box"></a>“内容定义”对话框
 

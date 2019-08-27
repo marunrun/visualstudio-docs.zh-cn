@@ -1,27 +1,22 @@
 ---
 title: 通过 IDE 实现的回调函数 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, callback functions
 - callback functions, source control plug-ins
 ms.assetid: 4a8833f0-6ac0-4ea7-9400-8275aa991468
 caps.latest.revision: 25
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 5d2bf114a22419e5ed4621db52a68d266e2e7d0e
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: HT
+manager: jillfra
+ms.openlocfilehash: df2daef11303e85d5fe2d0bf33e3df038081db64
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51807514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68184533"
 ---
 # <a name="callback-functions-implemented-by-the-ide"></a>通过 IDE 实现的回叫函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -64,4 +59,3 @@ ms.locfileid: "51807514"
   
  [源代码管理插件](../extensibility/source-control-plug-ins.md)  
  描述源控件插件 SDK 的参考部分的内容。
-

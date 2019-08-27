@@ -1,14 +1,9 @@
 ---
 title: return 语句在函数外的 |Microsoft Docs
-ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-client-threshold
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- javascript
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-windows
+ms.technology: vs-javascript
+ms.topic: reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT1018
 dev_langs:
@@ -16,16 +11,15 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: 03568f9f-5f4f-4a10-a738-9a73f3832b9e
-caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 82ba1488692f8e8b59063b8f9a52b0682d27e7f8
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: 01ef96385d5fe3dccf14a7491e67983d39913280
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54349447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63006401"
 ---
 # <a name="return-statement-outside-of-function"></a>“return”语句在函数之外
 您使用`return`全局作用域中的代码的语句。 `return`语句应仅出现在函数体。  
@@ -45,7 +39,7 @@ return [ expression ];
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
--   删除`return`语句从你的代码 （全局范围） 的主要部分。  
+- 删除`return`语句从你的代码 （全局范围） 的主要部分。  
   
 ## <a name="see-also"></a>请参阅  
  [return 语句](../../javascript/reference/return-statement-javascript.md)   

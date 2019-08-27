@@ -1,24 +1,24 @@
 ---
-title: Node.js 中的单元测试
-description: Visual Studio 使用针对 Visual Studio 的 Node.js 工具提供支持单元测试 JavaScript 代码
+title: 对 JavaScript 和 TypeScript 代码进行单元测试
+description: Visual Studio 支持使用针对 Visual Studio 的 Node.js 工具对 JavaScript 和 TypeScript 代码进行单元测试
 ms.date: 06/06/2018
 ms.topic: conceptual
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: a65fc53f72e2e7a90b03f376ced55fffbe9ecbf8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b1ef763295db7673896189ce000ed59d5da5becf
+ms.sourcegitcommit: a124076dfd6b4e5aecda4d01984fee7b0c034745
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53952759"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68787978"
 ---
-# <a name="unit-testing-in-nodejs"></a>Node.js 中的单元测试
+# <a name="unit-testing-javascript-and-typescript-in-visual-studio"></a>在 Visual Studio 中对 JavaScript 和 TypeScript 代码进行单元测试
 
 通过针对 Visual Studio 的 Node.js 工具可以在无需切换到命令提示符的情况下，使用一些常用 JavaScript 框架写入和运行单元测试。
 
@@ -26,6 +26,7 @@ ms.locfileid: "53952759"
 * Mocha ([mochajs.org](http://mochajs.org/))
 * Jasmine ([Jasmine.github.io](https://jasmine.github.io/))
 * Tape ([github.com/substack/tape](https://github.com/substack/tape))
+* Jest ([jestjs.io](https://jestjs.io/))
 * 导出运行程序（此框架特定于针对 Visual Studio 的 Node.js 工具）
 
 > [!WARNING]
@@ -37,11 +38,11 @@ ms.locfileid: "53952759"
 
 将单元测试添加到项目之前，请确保要使用的框架已本地安装在项目中。 使用 [npm 包安装窗口](npm-package-management.md#npmInstallWindow)可以轻松完成此操作。
 
-向项目添加单元测试的首选方法是在项目中创建“测试”文件夹并将其设置为项目属性中的测试根。 还需要选择想要使用的测试框架。
+向项目添加单元测试的首选方法是在项目中创建“测试”文件夹并将其设置为项目属性中的测试根  。 还需要选择想要使用的测试框架。
 
 ![设置测试根和测试框架](../javascript/media/unit-test-project-properties.png)
 
-可以使用“添加新项”对话框，将简单的空白测试添加到项目。 同一项目中同时支持 JavaScript 和 TypeScript。
+可以使用“添加新项”对话框，将简单的空白测试添加到项目  。 同一项目中同时支持 JavaScript 和 TypeScript。
 
 ![添加新单元测试](../javascript/media/unit-test-add-new-item.png)
 
@@ -62,19 +63,19 @@ describe('Test Suite 1', function() {
 })
 ```
 
-如果尚未在项目属性中设置单元测试选项，则必须确保“属性”窗口中的“测试框架”属性设为适用于单元测试文件的正确测试框架。 这通过单元测试文件模板自动完成。
+如果尚未在项目属性中设置单元测试选项，则必须确保“属性”窗口中的“测试框架”属性设为适用于单元测试文件的正确测试框架   。 这通过单元测试文件模板自动完成。
 
 ![测试框架](../javascript/media/UnitTestsFrameworkMocha.png)
 
 > [!Note]
 > 单元测试选项将优先于单个文件的设置。
 
-打开测试资源管理器（选择“测试” > “Windows” > “测试资源管理器”）后，Visual Studio 发现并显示测试。 如果开始未显示测试，则重新生成项目以刷新列表。
+打开测试资源管理器（选择“测试” > “Windows” > “测试资源管理器”）后，Visual Studio 发现并显示测试    。 如果开始未显示测试，则重新生成项目以刷新列表。
 
 ![测试资源管理器](../javascript/media/UnitTestsDiscoveryMocha.png)
 
 > [!NOTE]
-> 请勿在 tsconfig.json 中使用 `outdir` 或 `outfile`，因为测试资源管理器无法在 TypeScript 文件中找到单元测试。
+> 请勿在 tsconfig.json 中使用 `outdir` 或 `outfile`，因为测试资源管理器无法在 TypeScript 文件中找到单元测试  。
 
 ## <a name="run-tests"></a>运行测试
 
@@ -82,7 +83,7 @@ describe('Test Suite 1', function() {
 
 ### <a name="run-tests-in-visual-studio-2017"></a>在 Visual Studio 2017 中运行测试
 
-可以通过在测试资源管理器中单击“全部运行”链接运行测试。 或者，可以选择一个或多个测试或组，右键单击并从快捷菜单选择“运行所选测试”，从而运行测试。 后台运行测试，测试资源管理器自动更新并显示结果。 此外，还可以通过选择“调试所选测试”调试所选测试。
+可以通过在测试资源管理器中单击“全部运行”链接运行测试  。 或者，可以选择一个或多个测试或组，右键单击并从快捷菜单选择“运行所选测试”，从而运行测试  。 后台运行测试，测试资源管理器自动更新并显示结果。 此外，还可以通过选择“调试所选测试”调试所选测试  。
 
 > [!Warning]
 > 使用 Node 8+ 调试单元测试仅适用于 JavaScript 测试文件，TypeScript 测试文件命中断点失败。 一种变通方法是使用 `debugger` 关键字。
@@ -127,7 +128,7 @@ Test execution time: 1.5731 Seconds
 ```
 
 > [!NOTE]
-> 如果收到指示无法找到 vstest.console.exe 的错误，请确保已打开开发人员命令提示，而不是常规的命令提示符。
+> 如果收到指示无法找到 vstest.console.exe 的错误，请确保已打开开发人员命令提示，而不是常规的命令提示符  。
 
 ## <a name="addingFramework"></a>添加对单元测试框架的支持
 
@@ -149,7 +150,7 @@ Visual Studio 启动时开始发现可用测试框架。 如果在 Visual Studio
 ## <a name="unit-tests-in-other-project-types"></a>其他项目类型中的单元测试
 并不局限于在 Node.js 项目中编写单元测试。 将 TestFramework 和 TestRoot 属性添加到任何 C# 或 Visual Basic 项目时，将枚举这些测试，并且可使用“测试资源管理器”窗口运行它们。
 
-为实现此操作，请在解决方案资源管理器中右键单击项目节点，选择“卸载项目”，然后选择“编辑项目”。 然后在项目文件中，将以下两个元素添加到属性组中。
+为实现此操作，请在解决方案资源管理器中右键单击项目节点，选择“卸载项目”  ，然后选择“编辑项目”  。 然后在项目文件中，将以下两个元素添加到属性组中。
 
 > [!NOTE]
 > 确保未对要添加元素的属性组指定条件。
@@ -164,5 +165,11 @@ Visual Studio 启动时开始发现可用测试框架。 如果在 Visual Studio
 
 接下来，将测试添加到指定的测试根文件夹，它们将可以在“测试资源管理器”窗口中运行。 如果最初未显示它们，可能需要重新生成项目。
 
-> [!NOTE]
-> 这当前不适用于 .NET Standard 和 .NET Core 项目。
+### <a name="unit-test-net-core-and-net-standard"></a>对 .NET Core 和 .NET Standard 进行单元测试
+除了上述属性之外，你还需要安装 NuGet 包[Microsoft.JavaScript.UnitTest](https://www.nuget.org/packages/Microsoft.JavaScript.UnitTest/) 并设置以下属性：
+
+```xml
+<PropertyGroup>
+    <GenerateProgramFile>false</GenerateProgramFile>
+</PropertyGroup>
+```

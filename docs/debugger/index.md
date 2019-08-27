@@ -1,22 +1,24 @@
 ---
 layout: LandingPage
 title: 调试应用 | Microsoft Docs
-description: 了解如何使用 Visual Studio 2017 并以你喜欢的语言来调试适用于你的平台和设备的应用程序、服务和工具。
+description: 了解如何针对平台和设备使用 Visual Studio 按所选的语言来调试应用程序、服务和工具。
 ms.custom: seodec18
 ms.topic: landing-page
 ms.author: mikejo
 author: mikejo5000
-manager: douge
-ms.openlocfilehash: 79a3aa8fd2d86b7c64d719dc745138b970b92d3c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: f3bf5cc1dd11e0062ca849f16fb806fa756e2203
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53886632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62846349"
 ---
 # <a name="debugging-in-visual-studio"></a>在 Visual Studio 中进行调试
 
 Visual Studio 调试程序有助于你观察程序的运行时行为并发现问题。 该调试器可用于所有 Visual Studio 编程语言及其关联的库。 使用调试程序时，可以中断程序的执行以检查代码、检查和编辑变量、查看寄存器、查看从源代码创建的指令，以及查看应用程序占用的内存空间。
+
+<!-- markdownlint-disable MD033 -->
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -48,25 +50,7 @@ Visual Studio 调试程序有助于你观察程序的运行时行为并发现问
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>编写具有更少 bug 的 C# 代码！</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-    <li>
-        <a href="https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugger-Feature-tour-of-Visual-studio-2017-sqwiwLD6D_1111787171">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="https://docs.microsoft.com/media/common/i_video.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>观看介绍调试程序用法的视频</h3>
+                        <h3>调试技术和工具</h3>
                     </div>
                 </div>
             </div>

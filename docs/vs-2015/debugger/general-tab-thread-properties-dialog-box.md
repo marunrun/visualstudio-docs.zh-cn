@@ -1,14 +1,9 @@
 ---
-title: 常规选项卡上，线程属性对话框 |Microsoft Docs
-ms.custom: ''
+title: 常规选项卡，线程属性对话框 |Microsoft 文档
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - threading [Visual Studio], thread properties
 - thread properties
@@ -16,13 +11,13 @@ ms.assetid: 46b6c668-6786-456e-97dc-337bcac0d812
 caps.latest.revision: 7
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 2777096e13ef649f2a340d3b3cae92d050d9531f
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: b1a8e6fd583f6035fc84f0c86adcee059562235d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51728982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68159946"
 ---
 # <a name="general-tab-thread-properties-dialog-box"></a>“线程属性”对话框 ->“常规”选项卡
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,13 +35,10 @@ ms.locfileid: "51728982"
 |**等待原因**|仅当线程处于等待状态时，这是适用。 事件对用于与受保护的子系统进行通信。|  
 |**CPU 时间**|在此过程，并且其线程上花费的总 CPU 时间。 用户时间 + 特权的时间等于。|  
 |**用户时间**|此线程在用户模式下的正在执行代码所用总已用时间。 窗口管理器和图形引擎等子系统，应用程序以用户模式下执行。|  
-|**特权的时间**|此线程在特权模式下的正在执行代码所用总已用时间。 调用 Windows 系统服务时，服务将通常运行在特权模式以获得对系统专有数据的访问权限。 在用户模式下执行的线程访问从受此类数据。 对系统调用可以是显式的或者它们可能是隐式的如页面错误或中断发生时。|  
-|**已用时间**|此线程已运行的总运行时间 （以秒为单位）。|  
+|**特权时间**|此线程在特权模式下的正在执行代码所用总已用时间。 调用 Windows 系统服务时，服务将通常运行在特权模式以获得对系统专有数据的访问权限。 在用户模式下执行的线程访问从受此类数据。 对系统调用可以是显式的或者它们可能是隐式的如页面错误或中断发生时。|  
+|**运行时间**|此线程已运行的总运行时间 （以秒为单位）。|  
 |**当前优先级**|此线程的当前动态的优先级。 进程中的线程可以通过提高和降低其自身相对于该过程的基本优先级的基本优先级。|  
 |**基本优先级**|此线程当前的基本优先级。|  
 |**起始地址**|此线程的起始虚拟地址。|  
-|**用户的 PC**|在线程用户程序计数器。|  
+|**用户电脑**|在线程用户程序计数器。|  
 |**上下文切换**|从一个线程切换到另一个数。 在单个进程内或跨进程，可以发生线程切换。 询问有关信息，另一个线程或更高优先级的线程已准备好运行时被抢占的线程可能会导致线程切换。|
-
-
-

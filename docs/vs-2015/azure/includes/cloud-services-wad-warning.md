@@ -1,15 +1,23 @@
+---
+ms.openlocfilehash: 0170c6ed655ce54e2dbadf57341dff56616186ec
+ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68205718"
+---
 > [!WARNING]
-> 启用现有的角色的诊断时，部署包时已禁用已设置任何扩展。 这些方法包括：
+> 为现有角色启用诊断时，将禁用部署包时已设置的所有扩展。 这些方法包括：
 >
 > * Microsoft 监视代理诊断
 > * Microsoft Azure 安全监视
 > * Microsoft 反恶意软件                 
 > * Microsoft Monitoring Agent
-> * Microsoft 服务 Profiler 代理      
-> * Windows Azure 域扩展        
-> * Windows Azure 诊断扩展   
-> * Windows Azure 的远程桌面扩展
-> * Windows Azure 日志收集器
+> * Microsoft 服务探查器代理      
+> * Microsoft Azure 域扩展        
+> * Microsoft Azure 诊断扩展   
+> * Microsoft Azure 远程桌面扩展
+> * Microsoft Azure 日志收集器
 >
-> 在部署更新的角色后，可以重置你的扩展通过 Azure 门户或 PowerShell。
+> 部署更新的角色后，可以通过 Azure 门户或 PowerShell 重置扩展。
 >

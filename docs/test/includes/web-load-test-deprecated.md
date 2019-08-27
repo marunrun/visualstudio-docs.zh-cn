@@ -1,11 +1,11 @@
 ---
 ms.topic: include
-ms.openlocfilehash: 57e03003412adf654157c635ee8fbbc9b9796f13
-ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
+ms.openlocfilehash: a2ceafbbd204083fc421a05488dd67185f68d9d8
+ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52896908"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68144840"
 ---
 > [!NOTE]
-> 已弃用 Web 性能和负载测试功能。 Visual Studio 2019 是支持 Web 性能和负载测试的最后一个版本。
+> 已弃用 Web 性能和负载测试功能。 Visual Studio 2019 是支持 Web 性能和负载测试的最后一个版本。 有关详细信息，请参阅[基于云的负载测试服务生命周期结束](https://devblogs.microsoft.com/devops/cloud-based-load-testing-service-eol/)博客文章。

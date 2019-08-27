@@ -1,12 +1,9 @@
 ---
-title: 如何： 创建域特定语言解决方案 |Microsoft Docs
-ms.custom: ''
+title: 如何：创建域特定语言解决方案 |Microsoft Docs
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 f1_keywords:
 - vs.dsltools.designerwizard
 helpviewer_keywords:
@@ -17,13 +14,13 @@ ms.assetid: e585b63b-34d2-405a-8d81-39ea22317975
 caps.latest.revision: 43
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 2650afc2172cdcceca892d4ad19a05becac3e472
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: eae08b771f3bd5748485f9029f7f12725df6f28f
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49908901"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65698126"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>如何：创建域特定语言解决方案
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -47,7 +44,7 @@ ms.locfileid: "49908901"
   
    1. 在 **“文件”** 菜单上，指向 **“新建”**，然后单击 **“项目”**。  
   
-   2. 此时将出现 “新建项目” 对话框。  
+   2. 此时将出现“新建项目”对话框。  
   
    3. 下**项目类型**，展开**其他项目类型**节点，然后单击**扩展性**。  
   
@@ -58,7 +55,7 @@ ms.locfileid: "49908901"
        **域特定语言设计器向导**出现。  
   
       > [!NOTE]
-      >  最好是您键入的名称应是有效的 Visual C# 标识符，因为它可能用于生成代码。  
+      > 最好是您键入的名称应是有效的 Visual C# 标识符，因为它可能用于生成代码。  
   
       ![创建 DSL 对话框](../modeling/media/create-dsldialog.png "Create_DSLDialog")  
   
@@ -70,18 +67,18 @@ ms.locfileid: "49908901"
   
 3. 输入文件扩展名**文件扩展名**页。 它应该是唯一在您的计算机，并想要安装 DSL 在其上的任何计算机。 你应看到消息**没有应用程序或 Visual Studio 编辑器使用此扩展**。  
   
-   -   如果您曾经用尚未完全安装的上一个实验性 Dsl 的文件扩展名，则可以清除它们出通过使用**重置实验实例**工具，可在[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]SDK 菜单。  
+   - 如果您曾经用尚未完全安装的上一个实验性 Dsl 的文件扩展名，则可以清除它们出通过使用**重置实验实例**工具，可在[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]SDK 菜单。  
   
-   -   如果另一个[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]扩展使用此文件扩展名的完全安装在计算机上，请考虑卸载它。 上**工具**菜单上，单击**扩展管理器**。  
+   - 如果另一个[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]扩展使用此文件扩展名的完全安装在计算机上，请考虑卸载它。 上**工具**菜单上，单击**扩展管理器**。  
   
 4. 检查，并根据需要调整，其余向导页中的字段。 设置感到满意，单击**完成**。 有关设置的详细信息，请参阅[DSL 设计器向导页](#settings)。  
   
     该向导创建的解决方案，有两个项目，分别名为**Dsl**并**DslPackage**。  
   
    > [!NOTE]
-   >  如果你看到一条消息，提醒你不运行来自不受信任源的文本模板中，单击**确定**。 您可以设置不会再次出现此消息。  
+   > 如果你看到一条消息，提醒你不运行来自不受信任源的文本模板中，单击**确定**。 您可以设置不会再次出现此消息。  
   
-##  <a name="settings"></a> DSL 设计器向导页  
+## <a name="settings"></a> DSL 设计器向导页  
  可将多个字段从其默认值保持不变。 但是，请确保将文件扩展名字段设置。  
   
 ### <a name="solution-settings-page"></a>解决方案设置页  
@@ -101,15 +98,15 @@ ms.locfileid: "49908901"
   
  如果看到一系列工具或包，应执行下列任一操作：  
   
--   键入不同的文件扩展名。  
+- 键入不同的文件扩展名。  
   
      \- 或 -  
   
--   重置[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]实验实例。 这将取消注册所有以前生成的 Dsl。 上**启动**菜单上，单击**所有程序**， **Microsoft Visual Studio 2010 SDK**，**工具**，，然后**重置Microsoft Visual Studio 2010 实验实例**。 您可以重新生成任何其他你想要再次使用的 Dsl。  
+- 重置[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]实验实例。 这将取消注册所有以前生成的 Dsl。 上**启动**菜单上，单击**所有程序**， **Microsoft Visual Studio 2010 SDK**，**工具**，，然后**重置Microsoft Visual Studio 2010 实验实例**。 您可以重新生成任何其他你想要再次使用的 Dsl。  
   
      \- 或 -  
   
--   如果[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]扩展使用此文件扩展名的完全安装在计算机上，卸载它。 上**工具**菜单上，单击**扩展管理器**。  
+- 如果[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]扩展使用此文件扩展名的完全安装在计算机上，卸载它。 上**工具**菜单上，单击**扩展管理器**。  
   
 ### <a name="product-settings-page"></a>产品设置页  
  **新的特定于域的语言所属的产品名称是什么？**  
@@ -136,7 +133,4 @@ ms.locfileid: "49908901"
   
 ## <a name="see-also"></a>请参阅  
  [如何定义特定于域的语言](../modeling/how-to-define-a-domain-specific-language.md)   
- [域特定语言工具术语表](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)
-
-
-
+ [域特定语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

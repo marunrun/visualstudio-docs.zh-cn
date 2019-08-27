@@ -1,7 +1,6 @@
 ---
 title: CA1003:使用泛型事件处理程序实例
-ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
+ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
 - UseGenericEventHandlerInstances
@@ -12,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 402101b6-555d-4cf7-b223-1d9fdfaaf1cd
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 26630aa008e944f0af3fdcc66a16dc4c08bd4e8b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a1ef4258d1b095395be34c7004e3f783b973897d
+ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53887326"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69547875"
 ---
 # <a name="ca1003-use-generic-event-handler-instances"></a>CA1003:使用泛型事件处理程序实例
 
@@ -35,42 +34,55 @@ ms.locfileid: "53887326"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 一种类型包含一个委托，它返回 void，其签名包含两个参数 （一个的对象的第一个和第二个是分配给 EventArgs 的类型） 和包含程序集针对[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]。
+
+类型包含一个委托, 该委托返回 void, 其签名包含两个参数 (第一个对象, 第二个参数是可分配给 EventArgs 的类型), 并且包含程序集面向 .NET。
+
+默认情况下, 此规则仅查看外部可见类型, 但这是[可配置](#configurability)的。
 
 ## <a name="rule-description"></a>规则说明
- 之前[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]，以便将自定义信息传递给事件处理程序，一个新委托，必须指定派生自的类声明<xref:System.EventArgs?displayProperty=fullName>类。 这已不再是在实际[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]，它引入了<xref:System.EventHandler%601?displayProperty=fullName>委托。 此泛型委托允许的任何类都派生自<xref:System.EventArgs>来与事件处理程序一起使用。
+
+在 .net 之前, 若要将自定义信息传递到事件处理程序, 必须将新委托声明为指定派生自<xref:System.EventArgs?displayProperty=fullName>类的类。 在 .net 中, 泛型<xref:System.EventHandler%601?displayProperty=fullName>委托允许将派生自<xref:System.EventArgs>的任何类与事件处理程序一起使用。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要解决此规则的冲突，移除了该委托，并将其用途为通过使用<xref:System.EventHandler%601?displayProperty=fullName>委托。 如果该委托将自动生成[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]编译器，更改要使用的事件声明的语法<xref:System.EventHandler%601?displayProperty=fullName>委托。
+
+若要修复与此规则的冲突, 请删除委托, 并使用<xref:System.EventHandler%601?displayProperty=fullName>委托替换其使用。
+
+如果委托由 Visual Basic 编译器自动生成, 请更改事件声明的语法以使用<xref:System.EventHandler%601?displayProperty=fullName>委托。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 不禁止显示此规则发出的警告。
+
+不禁止显示此规则发出的警告。
+
+## <a name="configurability"></a>配置
+
+如果从[FxCop 分析器](install-fxcop-analyzers.md)(而不是传统分析) 运行此规则, 则可以根据其可访问性, 将基本代码的哪些部分配置为在上运行此规则。 例如, 若要指定规则只应针对非公共 API 图面运行, 请在项目中的 editorconfig 文件中添加以下键/值对:
+
+```ini
+dotnet_code_quality.ca1003.api_surface = private, internal
+```
+
+您可以为此规则、所有规则或此类别中的所有规则 (设计) 配置此选项。 有关详细信息, 请参阅[配置 FxCop 分析器](configure-fxcop-analyzers.md)。
 
 ## <a name="example"></a>示例
- 下面的示例显示了一个委托，它违反了此规则。 在[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]示例中，注释说明了如何修改示例以满足该规则。 对于 C# 示例，以下是一个示例显示修改后的代码。
 
- [!code-vb[FxCop.Design.CustomEventHandler#1](../code-quality/codesnippet/VisualBasic/ca1003-use-generic-event-handler-instances_1.vb)]
- [!code-csharp[FxCop.Design.CustomEventHandler#1](../code-quality/codesnippet/CSharp/ca1003-use-generic-event-handler-instances_1.cs)]
+下面的示例演示了违反规则的委托。 在 Visual Basic 示例中, 注释说明了如何修改示例以满足规则。 C#例如, 下面的示例演示了修改后的代码。
 
-## <a name="example"></a>示例
- 以下示例从上一示例中，满足该规则，并将在中的使用它删除委托声明`ClassThatRaisesEvent`并`ClassThatHandlesEvent`方法通过使用<xref:System.EventHandler%601?displayProperty=fullName>委托。
+[!code-vb[FxCop.Design.CustomEventHandler#1](../code-quality/codesnippet/VisualBasic/ca1003-use-generic-event-handler-instances_1.vb)]
+[!code-csharp[FxCop.Design.CustomEventHandler#1](../code-quality/codesnippet/CSharp/ca1003-use-generic-event-handler-instances_1.cs)]
 
- [!code-csharp[FxCop.Design.GenericEventHandler#1](../code-quality/codesnippet/CSharp/ca1003-use-generic-event-handler-instances_2.cs)]
+下面的代码片段将从上一个示例中删除满足规则的委托声明。 它通过使用`ClassThatRaisesEvent` `ClassThatHandlesEvent` 委托替换和方法中的使用<xref:System.EventHandler%601?displayProperty=fullName> 。
 
-## <a name="related-rules"></a>相关的规则
- [CA1005:避免泛型类型参数过多](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
+[!code-csharp[FxCop.Design.GenericEventHandler#1](../code-quality/codesnippet/CSharp/ca1003-use-generic-event-handler-instances_2.cs)]
 
- [CA1010:集合应实现泛型接口](../code-quality/ca1010-collections-should-implement-generic-interface.md)
+## <a name="related-rules"></a>相关规则
 
- [CA1000:不要在泛型类型中声明静态成员](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)
-
- [CA1002:不要公开泛型列表](../code-quality/ca1002-do-not-expose-generic-lists.md)
-
- [CA1006:不要将嵌套在成员签名中的泛型类型](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
-
- [CA1004:泛型方法应提供类型参数](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)
-
- [CA1007： 在适用处在适用处使用泛型](../code-quality/ca1007-use-generics-where-appropriate.md)
+- [CA1005避免泛型类型的参数过多](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
+- [CA1010集合应实现泛型接口](../code-quality/ca1010-collections-should-implement-generic-interface.md)
+- [CA1000不要在泛型类型中声明静态成员](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)
+- [CA1002不要公开泛型列表](../code-quality/ca1002-do-not-expose-generic-lists.md)
+- [CA1006不要将泛型类型嵌套在成员签名中](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
+- [CA1004泛型方法应提供类型参数](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)
+- [CA1007在适当的位置使用泛型](../code-quality/ca1007-use-generics-where-appropriate.md)
 
 ## <a name="see-also"></a>请参阅
 

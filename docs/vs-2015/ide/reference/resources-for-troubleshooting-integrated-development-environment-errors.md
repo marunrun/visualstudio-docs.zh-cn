@@ -1,14 +1,9 @@
 ---
 title: 用于排除集成开发环境错误的资源 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.Message.0x00005A89
 - VS.Message.0x00005A8E
@@ -98,18 +93,17 @@ ms.assetid: 8f866eb5-a206-4c16-807e-96a0f2c0e645
 caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 269806ea71794f1b328fd94e147dbf055b78ca1f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 97edc5419cb552f853a75817564a69dd175ec54b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49232656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68203675"
 ---
 # <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>用于排除集成开发环境错误的资源
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 并非所有错误消息都有特定的相关帮助主题。 如果错误消息里的信息不能帮助解决问题，可以参考其他资源，如知识库文章、开发人员社区或产品支持。  
   
 ## <a name="knowledge-base-articles"></a>知识库文章  
@@ -118,10 +112,7 @@ ms.locfileid: "49232656"
 ## <a name="the-developer-community"></a>开发人员社区  
  可通过论坛与其他开发人员以及 Microsoft 员工进行互动。 如果遇到无法解决的问题，可在论坛中发布有关该问题的帖子。 还可搜索讨论组，查看其他人是否已发布有关该问题的帖子。  
   
- 可以访问 [Microsoft 技术社区](http://go.microsoft.com/fwlink/?LinkID=144922)网站上的论坛、博客、聊天和其他资源。  
+ 可以访问 [Microsoft 技术社区](https://techcommunity.microsoft.com/)网站上的论坛、博客、聊天和其他资源。  
   
 ## <a name="product-support"></a>产品支持  
  如果借助其他资源仍不能解决问题，则可以访问 [Microsoft 支持](http://go.microsoft.com/fwlink/?linkid=1782)网站，与 Microsoft 支持服务联系。 若要了解所在区域中可用的产品支持，请参阅[与我们联系](../../ide/talk-to-us.md)。
-
-
-

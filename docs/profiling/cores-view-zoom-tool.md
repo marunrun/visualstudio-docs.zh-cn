@@ -9,24 +9,24 @@ helpviewer_keywords:
 ms.assetid: f7d48602-ba32-4487-b51a-89e596124108
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5bfc05c208a072fbe1e17eeafdebb938b33aaaf4
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c6862493de844ad8108009a2103752122114ae6c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53967289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62553040"
 ---
 # <a name="cores-view-zoom-tool"></a>内核视图缩放工具
-缩放控件是一个滑块，允许在时间线上进行放大和缩小操作，便于你关注特定的感兴趣的区域。 此控件以当前视图的中心为缩放点，因此放大前请先调整视图。  
-  
-## <a name="other-ways-to-zoom"></a>其他缩放方式  
-  
--   放大：通过拖动在时间线视图中选择一个区域。 释放鼠标按钮后，时间线视图会放大选定的范围。  
-  
--   放大和缩小：将鼠标悬停在时间线上，然后按 Ctrl 并移动鼠标滚轮。  
-  
-## <a name="see-also"></a>请参阅  
- [内核视图](../profiling/cores-view.md)
+缩放控件是一个滑块，允许在时间线上进行放大和缩小操作，便于你关注特定的感兴趣的区域。 此控件以当前视图的中心为缩放点，因此放大前请先调整视图。
+
+## <a name="other-ways-to-zoom"></a>其他缩放方式
+
+- 放大：通过拖动在时间线视图中选择一个区域。 释放鼠标按钮后，时间线视图会放大选定的范围。
+
+- 放大和缩小：将鼠标悬停在时间线上，然后按 Ctrl 并移动鼠标滚轮。
+
+## <a name="see-also"></a>请参阅
+- [内核视图](../profiling/cores-view.md)

@@ -1,14 +1,9 @@
 ---
-title: DA0004：处理器使用率很高 | Microsoft Docs
-ms.custom: ''
+title: DA0004：处理器使用情况很高 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 f1_keywords:
 - vs.performance.rules.DAHighProcessorUsage
 - vs.performance.rules.DA0004
@@ -18,21 +13,21 @@ ms.assetid: 2c4fb569-929e-4f1d-8c50-b590ee371351
 caps.latest.revision: 17
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: a942a26bb4cd8ccca94fd442250fe8a239cba4ed
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: a0e14a7400b937c56c2aac49a43d1d59cf96eba0
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51764033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68158700"
 ---
-# <a name="da0004-high-processor-usage"></a>DA0004：处理器使用率很高
+# <a name="da0004-high-processor-usage"></a>DA0004：处理器使用情况很高
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 规则 Id |DA0004 |  
 |类别 |分析工具使用情况 |  
 |分析方法 |检测采样 |  
-|消息 |您的处理器使用率始终高于 75%。 请考虑使用采样模式对 CPU 密集型应用程序。 |  
+|消息 |您的处理器使用率始终高于 75%。 请考虑对 CPU 密集型应用程序使用采样模式。|  
 |规则类型 |信息 |  
   
  使用采样法、.NET 内存或资源争用方法进行分析时，必须收集至少 10 个样本才能触发此规则。  
@@ -45,7 +40,3 @@ ms.locfileid: "51764033"
   
 ## <a name="how-to-fix-violations"></a>如何解决冲突  
  请考虑使用采样法而非检测法再次分析应用程序，除非需要使用函数计时，或者你更希望了解输入/输出而非处理器瓶颈。
-
-
-
-

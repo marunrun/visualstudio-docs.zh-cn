@@ -2,7 +2,6 @@
 title: IDebugAsyncOperation 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,12 +13,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c0088fddd2661d6711c9a18495f4b8704f782b3c
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: 820ecc40924ace4153b76f46c8b8fd1603512ebb
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54349981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62821778"
 ---
 # <a name="idebugasyncoperation-interface"></a>IDebugAsyncOperation 接口
 进程调试管理器实现`IDebugAsyncOperation`接口。 语言引擎将调用`IDebugApplication::CreateAsyncDebugOperation`方法来获取对此接口的引用。 语言引擎可以使用`IDebugAsyncOperation`接口，以提供对同步调试操作的异步访问。  

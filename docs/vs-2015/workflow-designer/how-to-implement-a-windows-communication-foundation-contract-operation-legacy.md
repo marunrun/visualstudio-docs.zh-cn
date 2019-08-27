@@ -1,23 +1,20 @@
 ---
-title: 如何： 实现 Windows Communication Foundation 协定操作 （旧版） |Microsoft Docs
-ms.custom: ''
+title: 如何：实现 Windows Communication Foundation 协定操作 （旧版） |Microsoft Docs
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 ms.assetid: d6aeb20e-fac8-4a9d-bd26-ae78bef96b41
 caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: a3c3d76257f27023beca6cd480137114b0161b12
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 56866e084eac7dc3a3ac2a0b80baaa2533ccd285
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49813532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931179"
 ---
 # <a name="how-to-implement-a-windows-communication-foundation-contract-operation-legacy"></a>如何：实现 Windows Communication Foundation 协定操作（旧版）
 本主题介绍如何使用面向 [!INCLUDE[indigo1](../includes/indigo1-md.md)] 或 [!INCLUDE[wfd1](../includes/wfd1-md.md)] 的旧 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 来实现 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] 协定操作。  
@@ -54,5 +51,5 @@ ms.locfileid: "49813532"
   
 ## <a name="see-also"></a>请参阅  
  [选择操作对话框 （旧版）](../workflow-designer/choose-operation-dialog-box-legacy.md)   
- [如何： 调用 WCF 协定操作 （旧版）](../workflow-designer/how-to-invoke-a-windows-communication-foundation-contract-operation-legacy.md)   
+ [如何：调用 WCF 协定操作 （旧版）](../workflow-designer/how-to-invoke-a-windows-communication-foundation-contract-operation-legacy.md)   
  [旧版工作流活动](../workflow-designer/legacy-workflow-activities.md)

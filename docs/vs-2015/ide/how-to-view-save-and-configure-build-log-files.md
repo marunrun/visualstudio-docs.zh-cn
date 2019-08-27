@@ -1,25 +1,20 @@
 ---
 title: 如何：查看、保存和配置生成日志文件 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 ms.assetid: 75d38b76-26d6-4f43-bbe7-cbacd7cc81e7
 caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 26ece0c0d46e5c747ac05bae8c2d4fc793c34601
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 7bd8bae0213755b11c145c4bef9c312fe3990c4d
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49207397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63432328"
 ---
 # <a name="how-to-view-save-and-configure-build-log-files"></a>如何：查看、保存和配置生成日志文件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,25 +25,25 @@ ms.locfileid: "49207397"
   
 ### <a name="to-view-the-build-log-file-for-a-c-project"></a>查看 C++ 项目的生成日志文件  
   
-1.  在“Windows 资源管理器”或“文件资源管理器”中，打开以下文件：\\...\Visual Studio Version\Projects\\ProjectName\\ProjectName\Debug\\ProjectName.txt  
+1. 在“Windows 资源管理器”或“文件资源管理器”中，打开以下文件：\\...\Visual Studio Version\Projects\\ProjectName\\ProjectName\Debug\\ProjectName.txt  
   
 ### <a name="to-create-a-build-log-file-for-a-managed-code-project"></a>创建托管代码项目的生成日志文件  
   
-1.  在菜单栏上，依次选择 **“生成”**、 **“生成解决方案”**。  
+1. 在菜单栏上，依次选择 **“生成”**、 **“生成解决方案”**。  
   
-2.  在“输出”窗口，突出显示来自生成的信息，然后将其复制到剪贴板。  
+2. 在“输出”窗口，突出显示来自生成的信息，然后将其复制到剪贴板。  
   
-3.  打开文本编辑器（如记事本），将信息粘贴到该文件中，然后保存。  
+3. 打开文本编辑器（如记事本），将信息粘贴到该文件中，然后保存。  
   
 ### <a name="to-change-the-amount-of-information-included-in-the-build-log"></a>更改包含在生成日志中的信息量  
   
-1.  在菜单栏上，依次选择“工具” 、“选项” 。  
+1. 在菜单栏上，依次选择“工具” 、“选项” 。  
   
-2.  在“项目和解决方案”页，选择“生成和运行”页。  
+2. 在“项目和解决方案”页，选择“生成和运行”页。  
   
-3.  在“MSBuild 项目生成输出详细信息”列表中，选择以下值之一，然后选择“确定”按钮。  
+3. 在“MSBuild 项目生成输出详细信息”列表中，选择以下值之一，然后选择“确定”按钮。  
   
-    |详细级别|描述|  
+    |详细级别|说明|  
     |---------------------|-----------------|  
     |Quiet|仅显示生成总结。|  
     |最低|显示生成总结；错误、警告以及分类为极为重要的信息。|  
@@ -59,12 +54,9 @@ ms.locfileid: "49207397"
      有关详细信息，请参阅[“选项”对话框->“项目和解决方案”->“生成和运行”](../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)和 <xref:Microsoft.Build.Framework.LoggerVerbosity>。  
   
     > [!IMPORTANT]
-    >  更改要在“输出”窗口（所有项目）和 ProjectName.txt 文件（仅限 C++ 项目）中生效，必须重新生成该项目。  
+    > 更改要在“输出”窗口（所有项目）和 ProjectName.txt 文件（仅限 C++ 项目）中生效，必须重新生成该项目。  
   
 ## <a name="see-also"></a>请参阅  
  [获取生成日志](../msbuild/obtaining-build-logs-with-msbuild.md)   
  [在 Visual Studio 中生成和清理项目和解决方案](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)   
  [编译和生成](../ide/compiling-and-building-in-visual-studio.md)
-
-
-

@@ -6,20 +6,21 @@ ms.date: 10/31/2018
 author: jasongroce
 ms.author: jasgro
 ms.topic: landing-page
-ms.prod: visual-studio-dev15
 ms.technology: vs-ide-mobile
 ms.workload:
 - apexprodleads
-ms.openlocfilehash: 3db198017d15961cf10e30caa1fd860804b9ad3a
-ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
+ms.openlocfilehash: f52b537a5e6a02dbaccb02f275c380d0ec355fdf
+ms.sourcegitcommit: d4920babfc3d24a3fe1d4bf446ed3fe73b344467
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54153992"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67160120"
 ---
 # <a name="mobile-development-with-c-documentation"></a>使用 C++ 文档的移动开发
 
 使用 Visual Studio 创建面向 iOS、Android 和 Windows 设备的本机 C++ 应用。
+
+<!-- markdownlint-disable MD033 -->
 
 <ul class="panelContent cardsF">
     <li>
@@ -91,7 +92,7 @@ ms.locfileid: "54153992"
                 <div class="card">
                     <div class="cardText">
                         <h3><a href="/cpp/visual-cpp-in-visual-studio">Visual C++</a></h3>
-                        <p><a href="/cpp/ide/ide-and-tools-for-visual-cpp-development">用于 Visual C++ 开发的 IDE 和工具</a><p>
+                        <p><a href="/cpp/ide/read-and-understand-code-cpp">读取和写入代码</a><p>
                     </div>
                 </div>
             </div>
@@ -103,7 +104,7 @@ ms.locfileid: "54153992"
                 <div class="card">
                     <div class="cardText">
                         <h3>平台</h3>
-                        <p><a href="/cpp/windows/universal-windows-apps-cpp">通用 Windows 平台 (UWP) 文档</a></p>
+                        <p><a href="/cpp/cppcx/universal-windows-apps-cpp">通用 Windows 平台 (UWP) 文档</a></p>
                         <p><a href="https://developer.apple.com/reference">iOS API 文档</a></p>
                         <p><a href="https://developer.android.com/guide/index.html">Android API 文档</a></p>
                     </div>

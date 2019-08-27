@@ -1,29 +1,24 @@
 ---
 title: LocalizedDescription 元素 （VSIX 语言包架构） |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 ms.assetid: 766a1732-bbaf-4875-b276-feb42169633a
 caps.latest.revision: 9
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 408b582ec5145bab1f022776ba0793eb87b84dea
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 281f3823d22ee0e290e4b6bb32a8280f4773a592
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51797892"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65679899"
 ---
 # <a name="localizeddescription-element-vsix-language-pack-schema"></a>LocalizedDescription 元素 （VSIX 语言包架构）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-必须的。 提供的扩展插件的本地化的说明。  
+必需。 提供的扩展插件的本地化的说明。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,22 +33,22 @@ ms.locfileid: "51797892"
   
 |特性|描述|  
 |---------------|-----------------|  
-|无||  
+|None||  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|无||  
+|None||  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[VSIX LanguagePack 元素](../extensibility/vsixlanguagepack-element-vsix-language-pack-schema.md)|必须的。 VSIX 语言包中提供的根元素。|  
+|[VSIX LanguagePack 元素](../extensibility/vsixlanguagepack-element-vsix-language-pack-schema.md)|必需。 VSIX 语言包中提供的根元素。|  
   
 ## <a name="text-value"></a>文本值  
- 必须的。 目标语言中的扩展文本说明。  
+ 必需。 目标语言中的扩展文本说明。  
   
 ## <a name="element-information"></a>元素信息  
   
@@ -67,5 +62,4 @@ ms.locfileid: "51797892"
 ## <a name="see-also"></a>请参阅  
  [VSX 语言包架构参考](../extensibility/vsx-language-pack-schema-reference.md)   
  [本地化 VSIX 包](../extensibility/localizing-vsix-packages.md)   
- [VSIX 扩展架构 1.0 参考](http://msdn.microsoft.com/en-us/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)
-
+ [VSIX 扩展架构 1.0 参考](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)

@@ -1,7 +1,6 @@
 ---
 title: CA2115:使用本机资源时调用 GC.KeepAlive
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - CallGCKeepAliveWhenUsingNativeResources
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: f00a59a7-2c6a-4bbe-a1b3-7bf77d366f34
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d1f7214ce570042d1cebdbf0ac75ffaf81b0ea1
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9a74f6313f90a31d43cf39443b1c44d78f0628f8
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53849488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62545184"
 ---
 # <a name="ca2115-call-gckeepalive-when-using-native-resources"></a>CA2115:使用本机资源时调用 GC.KeepAlive
 
@@ -43,7 +42,7 @@ ms.locfileid: "53849488"
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-若要解决此规则的冲突，添加对的调用<xref:System.GC.KeepAlive%2A>方法，传递的当前实例 (`this`在 C# 和 c + +) 作为参数。 将该调用放在最后一行代码后该对象必须防止垃圾回收。 在调用后立即<xref:System.GC.KeepAlive%2A>，该对象再次被视为准备好进行垃圾收集假定没有托管的引用关系。
+若要解决此规则的冲突，添加对的调用<xref:System.GC.KeepAlive%2A>方法，传递的当前实例 (`this`中C#和C++) 作为参数。 将该调用放在最后一行代码后该对象必须防止垃圾回收。 在调用后立即<xref:System.GC.KeepAlive%2A>，该对象再次被视为准备好进行垃圾收集假定没有托管的引用关系。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 

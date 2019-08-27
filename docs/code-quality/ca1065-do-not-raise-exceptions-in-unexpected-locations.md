@@ -1,7 +1,6 @@
 ---
 title: CA1065:不要在意外的位置引发异常
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - CA1065
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 4e1bade4-4ca2-4219-abc3-c7b2d741e157
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 824f257c19b219f78d226a82469cffb315f3069a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9dd45410a2c928a0ffbbe827b100edd119cf59f0
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53881612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62797491"
 ---
 # <a name="ca1065-do-not-raise-exceptions-in-unexpected-locations"></a>CA1065:不要在意外的位置引发异常
 

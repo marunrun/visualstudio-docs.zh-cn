@@ -3,7 +3,6 @@ title: 禁用或移动包缓存
 description: 了解如何禁用、启用或移动部署 Visual Studio 时使用的包缓存。
 ms.date: 04/14/2017
 ms.custom: seodec18
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - cache
@@ -14,19 +13,21 @@ helpviewer_keywords:
 ms.assetid: 2429993A-3F0E-41C5-9562-FEA6AE994440
 author: heaths
 ms.author: tglee
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ed8a827dd1edfcd2f0e61361ec4b20f6662ab036
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.prod: visual-studio-windows
+ms.technology: vs-installation
+ms.openlocfilehash: 47793cff733d84634c79355fb7639dbdad1cd82f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53909005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62974229"
 ---
 # <a name="disable-or-move-the-package-cache"></a>禁用或移动包缓存
 
-如果需要在未连接 Internet 的情况下修复 Visual Studio 或其他相关产品，可以使用包缓存提供的已安装的包源。 不过，在安装一些驱动器或系统后，可能不希望保留所有这些包。
+如果需要在未连接 Internet 的情况下修复 Visual Studio 或其他相关产品，可以使用包缓存提供的已安装的包源。 不过，在安装一些驱动器或系统后，建议不要保留所有的这些包。
 由于安装程序会在需要时下载它们，因此如果希望节省或恢复磁盘空间，可以禁用或移动包缓存。
 
 ## <a name="disable-the-package-cache"></a>禁用包缓存
@@ -39,7 +40,7 @@ ms.locfileid: "53909005"
 
 对任意产品执行任何操作都会删除相应产品的任何现有包，并避免在安装后保存任何包。 如果修改或修复 Visual Studio 且必须使用包，那么它们会自动进行下载，并在安装后进行删除。
 
-若要重新启用缓存，请改为传递 `--cache`。 由于只会缓存必需的包，因此，如果需要还原所有包，应在断开网络连接之前修复 Visual Studio。
+若要重新启用缓存，请改为传递 `--cache`。 由于只有必需的包会被缓存，因此，如果需要还原所有包，应在断开网络连接之前修复 Visual Studio。
 
 ```cmd
 "%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vs_installer.exe" repair --passive --norestart --cache

@@ -7,18 +7,17 @@ helpviewer_keywords:
 ms.assetid: 9649226a-857d-41ef-8ec7-047b6e498033
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 88819e8858a57a16e327e8e7b04f69c74fe5045a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 9751ce3b08a0ac963cccdf091ccb99001c6f2c9f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53900766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62785768"
 ---
 # <a name="modify-load-test-logging-settings"></a>修改负载测试日志记录设置
 
-已完成的负载测试的负载测试结果包含从受测计算机的日志中定期收集的性能计数器样本和错误信息。 可以在负载测试运行过程中收集大量性能计数器样本。 所收集到的性能数据量取决于运行的长度、采样间隔、受测计算机的数量以及要收集的计数器的数量。 对于大型负载测试，所收集的性能数据量很容易就能达到数千兆字节；因此，你可能需要考虑修改将数据保存到日志的频率。 请参阅[测试控制器和测试代理](configure-test-agents-and-controllers-for-load-tests.md)。
+已完成的负载测试的负载测试结果包含从受测计算机的日志中定期收集的性能计数器样本和错误信息。 可以在负载测试运行过程中收集大量性能计数器样本。 所收集到的性能数据量取决于运行的长度、采样间隔、受测计算机的数量以及要收集的计数器的数量。 对于大型负载测试，所收集的性能数据量很容易就能达到数千兆字节；因此，您可能需要考虑修改将数据保存到日志的频率。 请参阅[测试控制器和测试代理](configure-test-agents-and-controllers-for-load-tests.md)。
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -27,7 +26,7 @@ ms.locfileid: "53900766"
 |任务|关联主题|
 |-|-----------------------|
 |**在负载测试失败时保存日志：** 可以指定是否每当负载测试未通过就保存测试日志。|-   [如何：指定是否将测试失败保存到测试日志中](../test/how-to-specify-if-test-failures-are-saved-to-test-logs.md)|
-|**为日志文件指定最大文件大小：** 可以编辑与测试控制器服务关联的 XML 配置文件，以指定要用于日志文件的最大文件大小。|[如何：为日志文件指定最大文件大小](../test/how-to-specify-the-maximum-size-for-the-log-file.md)|
+|**为日志文件指定最大文件大小：** 可以编辑与测试控制器服务关联的 XML 配置文件，以指定要用于日志文件的最大文件大小。|修改 QTCcontroller.exe.config XML 配置文件中的 `<add key="LogSizeLimitInMegs" value="20"/>`。|
 
 ## <a name="see-also"></a>请参阅
 

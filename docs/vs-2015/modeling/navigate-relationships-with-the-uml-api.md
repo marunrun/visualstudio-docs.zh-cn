@@ -1,25 +1,22 @@
 ---
 title: 使用 UML API 导航关系 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - UML API
 ms.assetid: a4d11d45-b8c0-40f9-a597-363f07659610
 caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 0f8d1392bebf4d2591bbd7e4dc7bd8755c09f2c2
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: cb2a02ba27f06ef027001c2de07308c153b21c2b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51740541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68158970"
 ---
 # <a name="navigate-relationships-with-the-uml-api"></a>使用 UML API 导航关系
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -95,7 +92,7 @@ IEnumerable<IBehavioredClassifier> GetRealizingClassifiers
   
 ```  
   
-### <a name="dependency"></a>依赖项  
+### <a name="dependency"></a>依赖关系  
   
 ```  
 /// Returns the elements depending on this element  
@@ -155,9 +152,9 @@ IEnumerable<IUseCase>GetIncludingCases(this IUseCase usecase);
 ```  
   
 ## <a name="enumerating-relationships"></a>枚举关系  
- UML 模型中返回多个值的所有属性均符合 <IEnumerable> 接口。 这意味着你可以使用[Linq 查询表达式](http://go.microsoft.com/fwlink/?LinkId=168834)中定义的扩展方法**System.Linq**命名空间。  
+ 返回多个值的所有属性的 UML 模型都符合 IEnumerable <> 接口。 这意味着你可以使用[Linq 查询表达式](http://go.microsoft.com/fwlink/?LinkId=168834)中定义的扩展方法**System.Linq**命名空间。  
   
- 例如：  
+ 例如:  
   
 ```  
 from shape in     Context.CurrentDiagram.GetSelectedShapes<IClassifier>()  
@@ -169,6 +166,3 @@ select shape.Element
 ## <a name="see-also"></a>请参阅  
  [扩展 UML 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)   
  [导航 UML 模型](../modeling/navigate-the-uml-model.md)
-
-
-

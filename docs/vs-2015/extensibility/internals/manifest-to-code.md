@@ -1,26 +1,22 @@
 ---
 title: 代码清单 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 17ecacea-397d-4a97-b003-01bd5d56e936
 caps.latest.revision: 5
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: e07700b73c4f419e5dd0fa31c5e2aad9f3d6693d
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 5dd39ecfb25b4b21f7a9064da7621bcc77aab791
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51758223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68192649"
 ---
 # <a name="manifest-to-code"></a>Manifest to Code
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-代码工具清单是一个控制台应用程序的 Visual Studio 映像服务获取.imagemanifest 文件，并生成包装文件或文件的引用在 c + +、 C#、 VB 或 Visual Studio 扩展的.vsct 文件中的图像清单值。 此工具生成可用于从 Visual Studio 映像服务直接请求映像或传递通过 Api 清单的值，如果代码不会处理任何其自己的 UI 和呈现的包装器文件。  
+代码工具清单是一个控制台应用程序的 Visual Studio 映像服务获取.imagemanifest 文件，并生成包装文件或引用图像清单中的值的文件C++， C#，Visual Studio VB 或.vsct 文件扩展插件。 此工具生成可用于从 Visual Studio 映像服务直接请求映像或传递通过 Api 清单的值，如果代码不会处理任何其自己的 UI 和呈现的包装器文件。  
   
 ## <a name="how-to-use-the-tool"></a>如何使用该工具  
  **语法**  
@@ -32,29 +28,29 @@ ms.locfileid: "51758223"
 ||||  
 |-|-|-|  
 |**交换机名称**|**备注**|**必需或可选**|  
-|/ 清单|图像清单用于创建或更新代码包装程序的路径。|必需|  
-|/language|要在其中生成代码包装程序语言。<br /><br /> 有效值： CPP、 c + +、 CS、 CSharp、 C#、 VB 或 VSCT 的值是不区分大小写。<br /><br /> VSCT 语言选项、 /monikerClass、 /classAccess 和 /namespace 选项被忽略。|必需|  
-|/imageIdClass|ImageIdClass 和工具创建的关联的文件的名称。 C + + 语言选项时，会生成仅.h 文件。<br /><br /> 默认值：\<清单路径 > \MyImageIds。\<Lang Ext >|Optional|  
-|/monikerClass|MonikerClass 和工具创建的关联的文件的名称。 C + + 语言选项时，会生成仅.h 文件。 这被忽略 VSCT 语言。<br /><br /> 默认值：\<清单路径 > \MyMonikers。\<Lang Ext >|Optional|  
-|/classAccess|ImageIdClass 和 monikerClass 的访问修饰符。 请确保访问修饰符为给定语言有效。 这是已忽略 VSCT 语言选项。<br /><br /> 默认： 公共|Optional|  
-|/namespace|在代码包装程序中定义的命名空间。 这是已忽略 VSCT 语言选项。 任一 '。 或:: 是有效的命名空间分隔符，而不考虑所选的语言选项。<br /><br /> 默认： MyImages|Optional|  
+|/ 清单|图像清单用于创建或更新代码包装程序的路径。|必填|  
+|/language|要在其中生成代码包装程序语言。<br /><br /> 有效值：CPP， C++，CS、 CSharp、 C#，VB 或 VSCT 值不区分大小写。<br /><br /> VSCT 语言选项、 /monikerClass、 /classAccess 和 /namespace 选项被忽略。|必填|  
+|/imageIdClass|ImageIdClass 和工具创建的关联的文件的名称。 有关C++语言选项，仅.h 文件生成。<br /><br /> 默认：\<清单路径 > \MyImageIds。\<Lang Ext >|Optional|  
+|/monikerClass|MonikerClass 和工具创建的关联的文件的名称。 有关C++语言选项，仅.h 文件生成。 这被忽略 VSCT 语言。<br /><br /> 默认：\<清单路径 > \MyMonikers。\<Lang Ext >|Optional|  
+|/classAccess|ImageIdClass 和 monikerClass 的访问修饰符。 请确保访问修饰符为给定语言有效。 这是已忽略 VSCT 语言选项。<br /><br /> 默认：Public|Optional|  
+|/namespace|在代码包装程序中定义的命名空间。 这是已忽略 VSCT 语言选项。 任一 '。 或:: 是有效的命名空间分隔符，而不考虑所选的语言选项。<br /><br /> 默认：MyImages|Optional|  
 |/noLogo|设置此标志会停止打印的产品和版权信息。|Optional|  
 |/?|打印帮助信息。|Optional|  
 |/help|打印帮助信息。|Optional|  
   
  **示例**  
   
--   ManifestToCode /manifest:D:\MyManifest.imagemanifest 命令  
+- ManifestToCode /manifest:D:\MyManifest.imagemanifest                /language:CSharp  
   
--   ManifestToCode /manifest:D:\MyManifest.imagemanifest /language:C++ /namespace： 我:: Namespace /imageIdClass:MyImageIds /monikerClass:MyMonikers /classAccess:friend  
+- ManifestToCode /manifest:D:\MyManifest.imagemanifest /language:C++ /namespace： 我:: Namespace /imageIdClass:MyImageIds /monikerClass:MyMonikers /classAccess:friend  
   
--   ManifestToCode /manifest:D:\MyManifest.imagemanifest /language:VSCT /imageIdClass:MyImageIds  
+- ManifestToCode /manifest:D:\MyManifest.imagemanifest                /language:VSCT                /imageIdClass:MyImageIds  
   
 ## <a name="notes"></a>说明  
   
--   我们建议图像的清单生成的清单资源工具中使用此工具。  
+- 我们建议图像的清单生成的清单资源工具中使用此工具。  
   
--   要生成代码包装器符号条目仅查看该工具。 如果图像清单包含没有符号，生成的代码包装器将为空。 如果没有图像或一组图像清单中不使用符号的图像，然后它们将从中排除代码包装程序。  
+- 要生成代码包装器符号条目仅查看该工具。 如果图像清单包含没有符号，生成的代码包装器将为空。 如果没有图像或一组图像清单中不使用符号的图像，然后它们将从中排除代码包装程序。  
   
 ## <a name="sample-output"></a>示例输出  
  **C# 包装器**  
@@ -100,9 +96,9 @@ namespace MyImages
 }  
 ```  
   
- **C + + 包装器**  
+ **C++包装器**  
   
- 一对简单的映像 ID 和图像名字对象类的 c + + 将类似于下面的代码：  
+ 简单的映像 ID 和为图像名字对象类的一个对C++将类似于下面的代码：  
   
 ```cpp  
 //-----------------------------------------------------------------------------  
@@ -236,4 +232,3 @@ End Namespace
   </Symbols>  
 </CommandTable>  
 ```
-

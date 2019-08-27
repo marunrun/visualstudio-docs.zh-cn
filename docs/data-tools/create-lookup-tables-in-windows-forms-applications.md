@@ -8,16 +8,15 @@ helpviewer_keywords:
 ms.assetid: 0edd5385-c381-4b17-9096-74e2778db9d5
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 617d3afece5fbf5da2b347d097df65b5659263f5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: 782f5b422058d1564bde04251a92d95145f6edf3
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53900108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62567271"
 ---
 # <a name="create-lookup-tables-in-windows-forms-applications"></a>在 Windows 窗体应用程序中创建查找表
 
@@ -29,29 +28,29 @@ ms.locfileid: "53900108"
 
 ## <a name="to-databind-a-lookup-control"></a>数据绑定查找控件
 
-1.  打开项目，打开**数据源**通过选择窗口**视图** > **其他 Windows** > **数据源**.
+1. 打开项目，打开**数据源**通过选择窗口**视图** > **其他 Windows** > **数据源**.
 
     > [!NOTE]
     > 查找表需要两个相关的表或对象均位于**数据源**窗口。 有关详细信息，请参阅[中的数据集的关系](relationships-in-datasets.md)。
 
-2.  展开中的节点**数据源**窗口，直到您所见的父表和所有列，以及相关的子表和所有它的列。
+2. 展开中的节点**数据源**窗口，直到您所见的父表和所有列，以及相关的子表和所有它的列。
 
     > [!NOTE]
     > 子表节点是显示为父表中可展开子节点的节点。
 
-3.  更改到子表的拖放类型**详细信息**通过选择**详细信息**从子表节点上的控件列表。 有关详细信息，请参阅[设置从数据源窗口中拖动时创建的控件](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)。
+3. 更改到子表的拖放类型**详细信息**通过选择**详细信息**从子表节点上的控件列表。 有关详细信息，请参阅[设置从数据源窗口中拖动时创建的控件](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)。
 
-4.  查找两个表相关的节点 (`CustomerID`上一示例中的节点)。 为其拖放类型更改<xref:System.Windows.Forms.ComboBox>通过选择**组合框**从控件列表。
+4. 查找两个表相关的节点 (`CustomerID`上一示例中的节点)。 为其拖放类型更改<xref:System.Windows.Forms.ComboBox>通过选择**组合框**从控件列表。
 
-5.  将从主要子表节点拖**数据源**窗口拖到窗体上的。
+5. 将从主要子表节点拖**数据源**窗口拖到窗体上的。
 
      数据绑定控件 （带有描述性标签） 和一个工具条 (<xref:System.Windows.Forms.BindingNavigator>) 窗体中显示。 一个[数据集](../data-tools/dataset-tools-in-visual-studio.md)， [TableAdapter](../data-tools/create-and-configure-tableadapters.md)， <xref:System.Windows.Forms.BindingSource>，并<xref:System.Windows.Forms.BindingNavigator>组件栏中出现。
 
-6.  现在，将从主要的父表节点**数据源**窗口直接拖到查找控件 ( <xref:System.Windows.Forms.ComboBox>)。
+6. 现在，将从主要的父表节点**数据源**窗口直接拖到查找控件 ( <xref:System.Windows.Forms.ComboBox>)。
 
      查找绑定现在已建立。 请参阅下表中的设置在控件的特定属性。
 
-    |Property|设置说明|
+    |属性|设置说明|
     |--------------| - |
     |**数据源**|Visual Studio 将此属性设置拖到控件上的表所创建的 <xref:System.Windows.Forms.BindingSource>（相对于创建该控件时所创建的 <xref:System.Windows.Forms.BindingSource>）。<br /><br /> 如果你需要进行调整，则将此设置为<xref:System.Windows.Forms.BindingSource>具有你想要显示的列的表。|
     |**DisplayMember**|对于你拖动到控件上的表，则 Visual Studio 将此属性设置为该主键后的具有字符串数据类型的第一列。<br /><br /> 如果你需要进行调整，其设置为你想要显示的列名称。|

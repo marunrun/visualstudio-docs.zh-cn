@@ -1,14 +1,9 @@
 ---
 title: Visual Basic 特定的 IntelliSense | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense [Visual Basic]
 - IntelliSense [Visual Studio], Visual Basic
@@ -16,22 +11,22 @@ ms.assetid: 4dec8753-05e5-4f74-b304-5f8c4ed8723b
 caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 7fbeae534915863ec8a49e529bef4f6eb0c0fcb0
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: f471ed62a3bb53c4779c0b2d80315f10bfc85993
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49852487"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65696482"
 ---
 # <a name="visual-basic-specific-intellisense"></a>Visual Basic 特定的 IntelliSense
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Basic 源代码编辑器提供以下 IntelliSense 功能：  
   
--   语法提示  
+- 语法提示  
   
-     语法提示显示正在键入的语句的语法。 这对语句而言是有用的，如 [Declare](http://msdn.microsoft.com/library/d3f21fb0-b804-4c99-97ed-583b23894cf1)。  
+     语法提示显示正在键入的语句的语法。 这对语句而言是有用的，如 [Declare](https://msdn.microsoft.com/library/d3f21fb0-b804-4c99-97ed-583b23894cf1)。  
   
 ## <a name="automatic-completion"></a>自动完成  
   
@@ -58,6 +53,3 @@ Visual Basic 源代码编辑器提供以下 IntelliSense 功能：
   
 ## <a name="see-also"></a>请参阅  
  [使用 IntelliSense](../ide/using-intellisense.md)
-
-
-

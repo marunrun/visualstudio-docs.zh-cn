@@ -6,42 +6,42 @@ helpviewer_keywords:
 - persistence, projects
 - projects [Visual Studio SDK], persistance
 ms.assetid: 42907bcf-4e27-46bd-a8cb-01c2ccd2bde5
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 475120f72962d0ab1c5c0dd6e8441349dfc8086c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5c0f81d3cb4cc1e3404087f6ad4b8ecac34b9ec0
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53890045"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66328328"
 ---
 # <a name="project-persistence"></a>项目持久性
-持久性是你的项目的关键设计注意事项。 大多数项目使用项目项代表文件;[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]还支持其数据是不基于文件的项目。 必须保留这两个拥有的项目和项目文件的文件。 IDE 指示要保存本身或项目项的项目。  
-  
- 项目的模板将传递给项目工厂。 模板应支持根据特定项目类型的要求的所有项目项的初始化。 这些模板稍后可以另存为项目文件，由该解决方案通过 IDE 管理。 有关详细信息，请参阅[创建项目实例通过使用项目工厂](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)并[解决方案](../../extensibility/internals/solutions.md)。  
-  
- 项目项可以是基于文件的或非基于文件的：  
-  
--   基于文件的项可以是本地或远程。 在 C# 中的 Web 项目，例如，将连接到远程系统上的文件保留本地，而在远程系统上保留文件本身。  
-  
--   不基于文件的项可以将项目保存到数据库或存储库。  
-  
-## <a name="commit-models"></a>提交模型  
- 在决定后的项目项的位置，必须选择相应提交模型。 例如，在基于文件的模型中使用本地文件，每个项目可以保存自主操作。 在存储库模型中，您可以保存在一个事务中的多个项。 有关详细信息，请参阅[项目类型设计决策](../../extensibility/internals/project-type-design-decisions.md)。  
-  
- 若要确定文件扩展名，项目实现<xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>接口，它提供了信息使客户端对象的实现**另存为**对话框的 — 即，填写**保存类型**下拉列表列出和管理的初始文件扩展名。  
-  
- IDE 调用`IPersistFileFormat`接口以指示该项目应保持其项目的项目项根据需要。 因此，该对象拥有其文件和格式的所有方面。 这包括对象的格式的名称。  
-  
- 项不是文件，以防`IPersistFileFormat`仍是如何非基于文件的项会被保留。 项目文件，如.vbp 文件[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]项目或.vcproj 文件[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]项目，也必须持久保存。  
-  
- 对于保存操作，IDE 会检查正在运行的 document 表 (RDT) 和层次结构将命令传递给<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem>和<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2>接口。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem.IsItemDirty%2A>实现方法是为了确定是否已修改此项。 如果该项，<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem.SaveItem%2A>实现方法是为了保存已修改的项。  
-  
- 上的方法`IVsPersistHierarchyItem2`接口用于确定是否可以重新加载项，如果可以将项，重新加载它。 此外，<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.IgnoreItemFileChanges%2A>方法可以实现导致要放弃未保存的已更改的项。  
-  
-## <a name="see-also"></a>请参阅  
- [清单：创建新的项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)   
- [使用项目工厂创建项目实例](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)
+持久性是你的项目的关键设计注意事项。 大多数项目使用项目项代表文件;[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]还支持其数据是不基于文件的项目。 必须保留这两个拥有的项目和项目文件的文件。 IDE 指示要保存本身或项目项的项目。
+
+ 项目的模板将传递给项目工厂。 模板应支持根据特定项目类型的要求的所有项目项的初始化。 这些模板稍后可以另存为项目文件，由该解决方案通过 IDE 管理。 有关详细信息，请参阅[创建项目实例通过使用项目工厂](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)并[解决方案](../../extensibility/internals/solutions-overview.md)。
+
+ 项目项可以是基于文件的或非基于文件的：
+
+- 基于文件的项可以是本地或远程。 在 C# 中的 Web 项目，例如，将连接到远程系统上的文件保留本地，而在远程系统上保留文件本身。
+
+- 不基于文件的项可以将项目保存到数据库或存储库。
+
+## <a name="commit-models"></a>提交模型
+ 在决定后的项目项的位置，必须选择相应提交模型。 例如，在基于文件的模型中使用本地文件，每个项目可以保存自主操作。 在存储库模型中，您可以保存在一个事务中的多个项。 有关详细信息，请参阅[项目类型设计决策](../../extensibility/internals/project-type-design-decisions.md)。
+
+ 若要确定文件扩展名，项目实现<xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>接口，它提供了信息使客户端对象的实现**另存为**对话框的 — 即，填写**保存类型**下拉列表列出和管理的初始文件扩展名。
+
+ IDE 调用`IPersistFileFormat`接口以指示该项目应保持其项目的项目项根据需要。 因此，该对象拥有其文件和格式的所有方面。 这包括对象的格式的名称。
+
+ 项不是文件，以防`IPersistFileFormat`仍是如何非基于文件的项会被保留。 项目文件，如.vbp 文件[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]项目或.vcproj 文件[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]项目，也必须持久保存。
+
+ 对于保存操作，IDE 会检查正在运行的 document 表 (RDT) 和层次结构将命令传递给<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem>和<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2>接口。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem.IsItemDirty%2A>实现方法是为了确定是否已修改此项。 如果该项，<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem.SaveItem%2A>实现方法是为了保存已修改的项。
+
+ 上的方法`IVsPersistHierarchyItem2`接口用于确定是否可以重新加载项，如果可以将项，重新加载它。 此外，<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.IgnoreItemFileChanges%2A>方法可以实现导致要放弃未保存的已更改的项。
+
+## <a name="see-also"></a>请参阅
+- [清单：创建新的项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)
+- [使用项目工厂创建项目实例](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)

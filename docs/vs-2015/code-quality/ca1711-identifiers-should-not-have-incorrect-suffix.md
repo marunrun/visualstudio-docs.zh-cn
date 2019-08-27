@@ -1,14 +1,9 @@
 ---
-title: ： ca1711 标识符应采用正确的后缀 |Microsoft Docs
-ms.custom: ''
+title: CA1711:标识符应采用正确的后缀 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA1711
 - IdentifiersShouldNotHaveIncorrectSuffix
@@ -20,14 +15,14 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 1f42416a6d88edc417c0150685ab4c7e198aa808
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: c0ed08a50ce7e4c665839f6dccb4913e13d0d774
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49837095"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65676477"
 ---
-# <a name="ca1711-identifiers-should-not-have-incorrect-suffix"></a>CA1711：标识符应采用正确的后缀
+# <a name="ca1711-identifiers-should-not-have-incorrect-suffix"></a>CA1711:标识符应采用正确的后缀
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -45,13 +40,13 @@ ms.locfileid: "49837095"
 
  下表列出了保留的后缀的基类型和接口与它们相关联。
 
-|后缀|基类型/接口|
+|Suffix|基类型/接口|
 |------------|--------------------------|
 |特性|<xref:System.Attribute?displayProperty=fullName>|
 |集合|<xref:System.Collections.ICollection?displayProperty=fullName><br /><br /> <xref:System.Collections.IEnumerable?displayProperty=fullName><br /><br /> <xref:System.Collections.Queue?displayProperty=fullName><br /><br /> <xref:System.Collections.Stack?displayProperty=fullName><br /><br /> <xref:System.Collections.Generic.ICollection%601?displayProperty=fullName><br /><br /> <xref:System.Data.DataSet?displayProperty=fullName><br /><br /> <xref:System.Data.DataTable?displayProperty=fullName>|
 |词典|<xref:System.Collections.IDictionary?displayProperty=fullName><br /><br /> <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>|
 |EventArgs|<xref:System.EventArgs?displayProperty=fullName>|
-|事件处理程序|事件处理程序委托|
+|EventHandler|事件处理程序委托|
 |例外|<xref:System.Exception?displayProperty=fullName>|
 |权限|<xref:System.Security.IPermission?displayProperty=fullName>|
 |Queue|<xref:System.Collections.Queue?displayProperty=fullName>|
@@ -77,10 +72,7 @@ ms.locfileid: "49837095"
  除非后缀在应用程序域中具有明确的含义，否则不要禁止显示来自此规则的警告。
 
 ## <a name="related-rules"></a>相关的规则
- [CA1710：标识符应具有正确的后缀](../code-quality/ca1710-identifiers-should-have-correct-suffix.md)
+ [CA1710:标识符应具有正确的后缀](../code-quality/ca1710-identifiers-should-have-correct-suffix.md)
 
 ## <a name="see-also"></a>请参阅
- [特性](http://msdn.microsoft.com/library/ee0038ef-b247-4747-a650-3c5c5cd58d8b) [NIB： 事件和委托](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115)
-
-
-
+ [特性](https://msdn.microsoft.com/library/ee0038ef-b247-4747-a650-3c5c5cd58d8b) [NIB:事件和委托](https://msdn.microsoft.com/d98fd58b-fa4f-4598-8378-addf4355a115)

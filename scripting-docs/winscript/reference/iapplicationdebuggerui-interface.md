@@ -2,7 +2,6 @@
 title: IApplicationDebuggerUI 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,12 +13,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e3c5f9e4cabeb4fba31bb039a7cf673ca1759860
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: f138492e5b0a465bb0f101c15457ed1021ab3d5a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54348901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62991093"
 ---
 # <a name="iapplicationdebuggerui-interface"></a>IApplicationDebuggerUI 接口
 由调试器集成的开发环境 (IDE) 实现 (除了`IApplicationDebugger`) 提供更好地控制调试器的用户界面 (UI) 的外部组件。  

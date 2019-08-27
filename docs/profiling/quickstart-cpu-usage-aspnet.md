@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Diagnostics Tools, CPU Usage
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 594c6660c306faef635d14f60f1d717a04678db5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 65d6dbd67debc4673173af29e0c92aa57b58c865
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53837389"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65703877"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-aspnet"></a>快速入门：在 Visual Studio 中分析 CPU 使用率数据 (ASP.NET)
 
@@ -87,8 +87,8 @@ Visual Studio 提供了许多强大的功能来帮助你分析应用程序中的
             {
                 m_totalIterations += iters;
             }
-            // we're just spinning here  
-            // and using Random to frustrate compiler optimizations  
+            // we're just spinning here
+            // and using Random to frustrate compiler optimizations
             for (var i = 0; i < iters; i++)
             {
                 result = rand.Next();
@@ -153,30 +153,30 @@ Visual Studio 提供了许多强大的功能来帮助你分析应用程序中的
     }
     ```
 
-##  <a name="step-1-collect-profiling-data"></a>步骤 1：收集分析数据 
-  
-1.  首先，在应用中在 `Simple` 构造函数的该代码行处设置一个断点：
+## <a name="step-1-collect-profiling-data"></a>步骤 1：收集分析数据
+
+1. 首先，在应用中在 `Simple` 构造函数的该代码行处设置一个断点：
 
     `for (int i = 0; i < 200; i++)`
 
     单击代码行左侧的装订线，设置断点。
 
-1.  然后，在 `Simple` 构造函数末尾的右括号处设置第二个断点：
+1. 然后，在 `Simple` 构造函数末尾的右括号处设置第二个断点：
 
      ![设置断点以进行分析](../profiling/media/quickstart-cpu-usage-breakpoints-aspnet.png)
 
     > [!TIP]
     > 通过设置两个断点，可将数据收集限制到想要分析的代码部分。
-  
-1.  已显示“诊断工具”窗口，除非已将其关闭。 若要再次显示该窗口，请依次单击“调试” > “Windows” > “显示诊断工具”。
 
-1.  依次单击“调试” > “启动调试”或单击工具栏上的“启动”或按 F5。
+1. 已显示“诊断工具”窗口，除非已将其关闭。 若要再次显示该窗口，请依次单击“调试” > “Windows” > “显示诊断工具”。
 
-1.  应用加载完成后，单击网页顶部的“关于”链接，开始运行新代码。
+1. 依次单击“调试” > “启动调试”或单击工具栏上的“启动”或按 F5。
 
-1.  查看显示的诊断工具的“摘要”视图。
+1. 应用加载完成后，单击网页顶部的“关于”链接，开始运行新代码。
 
-1.  调试器暂停时，选择“记录 CPU 配置文件”以启用 CPU 使用率数据的收集，然后打开“CPU 使用率”选项卡。
+1. 查看显示的诊断工具的“摘要”视图。
+
+1. 调试器暂停时，选择“记录 CPU 配置文件”以启用 CPU 使用率数据的收集，然后打开“CPU 使用率”选项卡。
 
      ![诊断工具启用 CPU 分析](../profiling/media/quickstart-cpu-usage-summary.png)
 
@@ -184,12 +184,12 @@ Visual Studio 提供了许多强大的功能来帮助你分析应用程序中的
 
      选择“记录 CPU 配置文件”时，Visual Studio 将开始记录函数和执行函数所花的时间，还会提供一个时间线关系图，可使用此关系图专注于采样会话的特定分段。只有应用程序在断点处停止时，才可以查看该收集数据。
 
-6.  按 F5 将应用运行到第二个断点。
+6. 按 F5 将应用运行到第二个断点。
 
      现在将拥有应用程序特定于在两个断点间运行的代码区域的性能数据。
 
      探查器开始准备线程数据。 等待其完成。
-  
+
      CPU 使用率工具在“CPU 使用率”选项卡中显示报表。
 
      现在可以开始分析数据。
@@ -207,7 +207,7 @@ Visual Studio 提供了许多强大的功能来帮助你分析应用程序中的
 
 2. 在函数列表中，双击 `MyProfilingApp_MVC.Models.ServerClass::GetNumber` 函数。
 
-    双击该函数时，将在左侧窗格中打开“调用方/被调用方”视图。 
+    双击该函数时，将在左侧窗格中打开“调用方/被调用方”视图。
 
     ![诊断工具“调用方和被调用方”视图](../profiling/media/quickstart-cpu-usage-caller-callee-aspnet.png)
 
@@ -226,7 +226,7 @@ Visual Studio 提供了许多强大的功能来帮助你分析应用程序中的
 - [分析 CPU 使用情况](../profiling/cpu-usage.md)，更深入地了解 CPU 使用率工具。
 - 在不附加调试程序的情况下，或通过将正在运行的应用作为目标来分析 CPU 使用率。有关详细信息，请参阅[在使用或不使用调试程序的情况下运行分析工具](../profiling/running-profiling-tools-with-or-without-the-debugger.md)中的[在不使用调试程序的情况下收集分析数据](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging)。
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
- [使用 Visual Studio 分析](../profiling/index.md)  
- [首先了解分析工具](../profiling/profiling-feature-tour.md)
+- [使用 Visual Studio 分析](../profiling/index.md)
+- [首先了解分析工具](../profiling/profiling-feature-tour.md)

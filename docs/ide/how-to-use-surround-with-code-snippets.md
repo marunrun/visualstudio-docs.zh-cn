@@ -1,22 +1,21 @@
 ---
 title: 如何使用外侧代码片段 | Microsoft Docs
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - surround-with snippets
 - snippets [C#], surround with
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 11e31d46af00620b9e8ac9f45fe79946eea4eb1a
-ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
+ms.openlocfilehash: 0bf279502c52c47a68ea7eb5fb5c193e7d31e4d6
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54270146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62428204"
 ---
 # <a name="how-to-use-surround-with-code-snippets"></a>如何：使用外侧代码片段
 

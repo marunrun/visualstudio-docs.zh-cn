@@ -2,7 +2,6 @@
 title: 'Ijsdebugframe:: Getreturnaddress 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -16,12 +15,12 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 78384fc4e65dcd5e1f41f3f83b98c3fab5b12cfd
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: 18b98c7a5f92f3745baea5d4f82ae90da0989135
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54093894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62558154"
 ---
 # <a name="ijsdebugframegetreturnaddress-method"></a>IJsDebugFrame::GetReturnAddress 方法
 获取 start 返回地址 （请参阅 GetStackRange） 的框架。  

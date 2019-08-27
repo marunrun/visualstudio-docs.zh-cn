@@ -1,26 +1,21 @@
 ---
 title: 事件说明 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], events
 ms.assetid: 09f61652-7e16-4bb0-8055-f61a84bf384e
 caps.latest.revision: 8
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: c9ed1f59624c8fa334c99be7ec44672746902a3e
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 5aff88047d6b1f79544af927751d7a053eeda218
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51769924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68152825"
 ---
 # <a name="event-descriptions"></a>事件说明
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -29,7 +24,7 @@ ms.locfileid: "51769924"
   
 ## <a name="events-and-the-reasons-for-their-use"></a>事件和供其使用的原因  
   
-|事件|描述|  
+|Event|描述|  
 |-----------|-----------------|  
 |激活文档事件|调试引擎 (DE) 想要打开或将文档置于前台 IDE 时发生。|  
 |断点绑定或断点错误事件|绑定断点或当无法绑定断点，并返回一个错误时发送。|  
@@ -53,4 +48,3 @@ ms.locfileid: "51769924"
   
 ## <a name="see-also"></a>请参阅  
  [发送事件](../../extensibility/debugger/sending-events.md)
-

@@ -1,5 +1,5 @@
 ---
-title: 了解内存分配数据值和对象生存期数据值 | Microsoft Docs
+title: 了解内存分配数据值和对象生存期数据值
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Profiling Tools, .NET memory method
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 518be5d4126dbfa2713fada4df8451292166dcbf
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b652ac052b26054c85955a144d4414d4fe43c005
+ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53858946"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66263806"
 ---
 # <a name="understand-memory-allocation-and-object-lifetime-data-values"></a>了解内存分配数据值和对象生存期数据值
 

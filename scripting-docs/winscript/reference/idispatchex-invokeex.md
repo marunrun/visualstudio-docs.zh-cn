@@ -1,8 +1,7 @@
 ---
-title: IDispatchEx::InvokeEx |Microsoft Docs
+title: IDispatchEx::InvokeEx | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e631ecca1181a25fa3cf419f5fc96666f0db3cd6
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: 33494836e463c9c2fd74acf7835d7e4630747b0e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54086523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63000742"
 ---
 # <a name="idispatchexinvokeex"></a>IDispatchEx::InvokeEx
 提供对属性和方法公开的访问`IDispatchEx`对象。  
@@ -52,11 +51,11 @@ HRESULT InvokeEx(
  `wFlags`  
  的合法值为`wFlags`是：  
   
- DISPATCH_PROPERTYGET &AMP;#124; DISPATCH_METHOD &AMP;#124; DISPATCH_PROPERTYPUT &AMP;#124; DISPATCH_PROPERTYPUTREF &AMP;#124; DISPATCH_CONSTRUCT  
+ DISPATCH_PROPERTYGET &#124; DISPATCH_METHOD &#124; DISPATCH_PROPERTYPUT &#124; DISPATCH_PROPERTYPUTREF &#124; DISPATCH_CONSTRUCT  
   
  描述的上下文的标志`InvokeEx`调用：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |DISPATCH_METHOD|作为一种方法在调用成员。 如果属性具有相同的名称，可能会设置此和 DISPATCH_PROPERTYGET 标志 (由定义`IDispatch`)。|  
 |DISPATCH_PROPERTYGET|该成员作为属性或数据成员进行检索 (由定义`IDispatch`)。|  
@@ -65,7 +64,7 @@ HRESULT InvokeEx(
 |DISPATCH_CONSTRUCT|该成员用作构造函数。 (这是由定义的新值`IDispatchEx`)。 的合法值为`wFlags`是：<br /><br /> DISPATCH_PROPERTYGET DISPATCH_METHOD DISPATCH_PROPERTYPUT DISPATCH_PROPERTYPUTREF DISPATCH_CONSTRUCT|  
   
  `pdp`  
- 指向一个结构的指针，该结构包含一个自变量数组、一个命名自变量的 DISPID 自变量数组和数组中元素数的计数。 请参阅`IDispatch`DISPPARAMS 结构的完整说明的文档。  
+ 指向一个结构的指针，该结构包含一个参数数组、一个命名参数的 DISPID 参数数组和数组中元素数的计数。 请参阅`IDispatch`DISPPARAMS 结构的完整说明的文档。  
   
  `pVarRes`  
  结果将为存储或为 Null，如果调用方希望无结果的位置的指针。 如果指定 DISPATCH_PROPERTYPUT 或 DISPATCH_PROPERTYPUTREF，则忽略此参数。  

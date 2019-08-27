@@ -1,14 +1,9 @@
 ---
 title: 项目属性用户界面 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project properties [Visual Studio], user interface
 - projects [Visual Studio SDK], properties UI
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: b6aec634-8533-476c-9ebd-36536a2288e2
 caps.latest.revision: 17
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: e295bff2f8398765f90c3fd537ca4f546208ce4b
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 31840c40f2a494ffd32f5241e2770938138877e9
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51768299"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65704090"
 ---
 # <a name="project-property-user-interface"></a>项目属性用户界面
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -46,11 +41,11 @@ ms.locfileid: "51768299"
   
 - 项目子类型可以通过检索以下来确定在运行时的基础项目的各种可扩展对象相应 Catid<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2>值：  
   
-  -   <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2>  
+  - <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2>  
   
-  -   <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2>  
+  - <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2>  
   
-  -   <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2>  
+  - <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2>  
   
   若要确定项目范围的 Catid，项目子类型检索的上述属性<xref:Microsoft.VisualStudio.VSConstants.VSITEMID>从`VSITEMID``typedef`。 项目子类型可能还想要控制哪些**属性页**对话框页面显示项目中，依赖于配置和独立的配置。 某些项目子类型可能需要删除内置页，并添加项目子类型特定页。 若要启用此选项，托管客户端项目调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A>方法的以下属性：  
   
@@ -60,9 +55,8 @@ ms.locfileid: "51768299"
   
   因为项目子类型的聚合<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>对象，它会重写的定义这些属性，以控制哪些**属性页**显示的对话框。 项目子类型可以检索这些属性的内部基础项目，然后添加或删除根据需要的 Clsid。  
   
-  新添加的项目子类型的属性页都从基础项目实现传递的项目配置浏览对象。 此项目配置浏览对象支持自动化扩展程序。 AutomationExtenders 的详细信息，请参阅[实现并使用自动化扩展程序](http://msdn.microsoft.com/library/0d5c218c-f412-4b28-ab0c-33a611f62356)。 项目子类型调用由实现的属性页<xref:EnvDTE.Project.Extender%2A>来检索扩展基项目的配置浏览对象自己项目子类型配置浏览对象。  
+  新添加的项目子类型的属性页都从基础项目实现传递的项目配置浏览对象。 此项目配置浏览对象支持自动化扩展程序。 AutomationExtenders 的详细信息，请参阅[实现并使用自动化扩展程序](https://msdn.microsoft.com/library/0d5c218c-f412-4b28-ab0c-33a611f62356)。 项目子类型调用由实现的属性页<xref:EnvDTE.Project.Extender%2A>来检索扩展基项目的配置浏览对象自己项目子类型配置浏览对象。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:EnvDTE.IFilterProperties>   
- [属性页对话框](http://msdn.microsoft.com/en-us/4a3d34ac-ed03-45e8-ae60-a0e1aad300e4)
-
+ [属性页对话框](https://msdn.microsoft.com/4a3d34ac-ed03-45e8-ae60-a0e1aad300e4)

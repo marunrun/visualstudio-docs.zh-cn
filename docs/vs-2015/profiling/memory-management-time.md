@@ -1,14 +1,9 @@
 ---
 title: 内存管理时间 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.cv.threads.timeline.paging
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 67af3509-3a7d-435d-bc37-5262448da915
 caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: b3fc38abb47c70949b63b44958e96e3b168589fd
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 48cbdd523f4527af84c52366a439a18330e1828c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51729417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68157351"
 ---
 # <a name="memory-management-time"></a>内存管理时间
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,8 +27,5 @@ ms.locfileid: "51729417"
   
  检查关联的调用堆栈和分析报告，以便更好地了解归类为内存管理的阻塞的基本原因。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [线程视图](../profiling/threads-view-parallel-performance.md)
-
-
-

@@ -1,14 +1,9 @@
 ---
 title: 如何：在项目文件中使用保留的 XML 字符 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, using reserved XML characters
 - MSBuild, reserved XML characters
@@ -16,18 +11,17 @@ ms.assetid: 1ae37275-96bf-4e6e-897b-6b048e5bbe93
 caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: de8e6693b56a36f9b795b132e0181aa0531c7f33
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: aba17e94486ca04e12055c7bf9959f927440c53d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49199662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68178309"
 ---
 # <a name="how-to-use-reserved-xml-characters-in-project-files"></a>如何：在项目文件中使用保留的 XML 字符
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 在创作项目文件时，可能需要使用保留的 XML 字符，例如在属性值或任务参数值中。 但是，某些保留字符必须替换为命名实体，以便可以分析项目文件。  
   
 ## <a name="using-reserved-characters"></a>使用保留字符  
@@ -43,7 +37,7 @@ ms.locfileid: "49199662"
   
 #### <a name="to-use-double-quotes-in-a-project-file"></a>在项目文件中使用双引号  
   
--   将双引号替换为相应的命名实体 &quot;。 例如，若要在 `EXEFile` 项列表两边放置双引号，请键入：  
+- 将双引号替换为相应的命名实体 &quot;。 例如，若要在 `EXEFile` 项列表两边放置双引号，请键入：  
   
     ```  
     <Message Text="The output file is "@(EXEFile)"."/>  
@@ -79,7 +73,5 @@ ms.locfileid: "49199662"
 </Project>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSBuild 参考](../msbuild/msbuild-reference.md) [MSBuild](msbuild.md)
-
-

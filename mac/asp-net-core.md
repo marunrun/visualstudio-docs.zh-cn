@@ -1,16 +1,17 @@
 ---
 title: ASP.NET Core 入门
 description: 本文介绍如何在 Visual Studio for Mac 中开始使用 ASP.NET，包括安装和创建新项目。
-author: conceptdev
-ms.author: crdun
-ms.date: 07/13/2017
+author: sayedihashimi
+ms.author: sayedha
+ms.date: 04/02/2019
 ms.assetid: 6E8B0C90-33D6-4546-8207-CE0787584565
-ms.openlocfilehash: 9576048cb6a62f7a4e8c93456154997af359a711
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.custom: video
+ms.openlocfilehash: 9dcd1b65e9d8ea60f082304b4f84a7108efb99a6
+ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51296471"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67692946"
 ---
 # <a name="getting-started-with-aspnet-core"></a>ASP.NET Core 入门
 
@@ -18,93 +19,96 @@ ms.locfileid: "51296471"
 
 ## <a name="installing-net-core"></a>安装 .NET Core
 
-安装 Visual Studio for Mac 时，将自动安装 .NET Core 1.1。
+安装 Visual Studio for Mac 时，将自动安装 .NET Core 2.1。
 
 ## <a name="creating-an-aspnet-core-app-in-visual-studio-for-mac"></a>在 Visual Studio for Mac 中创建 ASP.NET Core 应用
 
-打开 Visual Studio for Mac。 在欢迎页面上，选择“新建项目...”
+打开 Visual Studio for Mac。 在开始屏幕上，选择“新建项目…” 
 
-![“新建项目”对话框](media/asp-net-core-image1.png)
+![“新建项目”对话框](media/asp-net-core-2019-new-asp-core.png)
 
 这将显示“新建项目”对话框，可通过它选择模板创建应用程序。
 
 许多项目都提供有预建模板，方便快速开始创建 ASP.NET Core 应用程序。 这些是：
 
-- “.NET Core”>“ASP.NET Core 空 Web 应用程序”
-- “.NET Core”>“ASP.NET Core Web 应用”
-- “.NET Core”>“ASP.NET Core Web API”
-- “多平台”>“应用”>“已连接的应用”
+- **.NET Core > 空**
+- **.NET Core > API**
+- **.NET Core > Web 应用**
+- **.NET Core > Web 应用（模型-视图-控制器）**
 
-![ASP.NET 项目选项](media/asp-net-core-image11.png)
+![ASP.NET 项目选项](media/asp-net-core-2019-new-asp-core.png)
 
-选择“ASP.NET Core 空 Web 应用”，然后按“下一步”。 为项目指定名称，并按“创建”。 这将创建新的 ASP.NET Core 应用，类似于下图：
+选择“ASP.NET Core 空 Web 应用”，然后按“下一步”   。 为项目指定名称，并按“创建”  。 这将创建新的 ASP.NET Core 应用，类似于下图：
 
-![新 ASP.NET Core 空项目视图](media/asp-net-core-image4.png)
+![新 ASP.NET Core 空项目视图](media/asp-net-core-2019-empty-project.png)
 
-ASP.NET Core 空 Web 应用程序将通过两个默认文件（“Program.cs”和“Startup.cs”）创建一个 Web 应用。后面将对这两个文件进行说明。 它还将创建一个依赖项文件夹，该文件夹包含项目的 NuGet 包依赖项，如 ASP.NET Core、.NET Core 框架和生成该项目的 MSBuild 目标：
+ASP.NET Core 空模板通过以下两个默认文件创建一个 Web 应用程序：Program.cs  和 Startup.cs  ，后面将对这两个文件进行说明。 它还将创建一个依赖项文件夹，该文件夹包含项目的 NuGet 包依赖项，如 ASP.NET Core、.NET Core 框架和生成该项目的 MSBuild 目标：
 
-![显示依赖项的 Solution Pad](media/asp-net-core-image12.png)
+![显示依赖项的 Solution Pad](media/asp-net-core-2019-solution-dependencies.png)
 
 ### <a name="programcs"></a>Program.cs
 
-在项目中打开并检查“Program.cs”文件。 请注意，在 `Main` 方法中会发生两件事 – 应用中的项：
+在项目中打开并检查“Program.cs”文件  。 请注意，在 `Main` 方法中会发生几件事 – 应用中的项：
 
 ```csharp
-public static void Main(string[] args)
-{
-    var host = new WebHostBuilder()
-        .UseKestrel()
-        .UseContentRoot(Directory.GetCurrentDirectory())
-        .UseIISIntegration()
-        .UseStartup<Startup>()
-        .Build();
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            CreateWebHostBuilder(args).Build().Run();
+        }
 
-    host.Run();
-}
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+            WebHost.CreateDefaultBuilder(args)
+                .UseStartup<Startup>();
+    }
 ```
+
 ASP.NET Core 应用将通过 [`WebHostBuilder`](/aspnet/core/fundamentals/hosting) 实例配置并启动主机，以此在其 Main 方法中创建一个 Web 服务器。 此生成器提供方法以允许配置主机。 在模板应用中使用了以下配置：
+
+* `.UseStartup<Startup>()`：指定启动类。
+
+但是，也可以添加其他配置，例如：
 
 * `UseKestrel`：指定应用将使用的 Kestrel 服务器
 * `UseContentRoot(Directory.GetCurrentDirectory())`：从 Web 项目的根文件夹启动应用时，使用此文件夹作为应用的内容根
-* `.UseIISIntegration()`：指定应用程序应使用 IIS。 要在 ASP.NET Core 中使用 IIS，需要指定 `UseKestrel` 和 `UseIISIntegration`。
-* `.UseStartup<Startup>()`：指定启动类。
-
-  生成并运行方法将生成 IWebHost，用于托管应用并使其开始侦听传入的 HTTP 请求。
+* `.UseIISIntegration()`：指定应用应使用 IIS。 要在 ASP.NET Core 中使用 IIS，需要指定 `UseKestrel` 和 `UseIISIntegration`。
 
 ### <a name="startupcs"></a>Startup.cs
 
-可在 `WebHostBuilder` 上的 `UseStartup()` 方法中指定应用的 Startup 类。 在此类中，可指定请求处理管道和配置任何服务。
+可在 `CreateWebHostBuilder` 上的 `UseStartup()` 方法中指定应用的 Startup 类。 在此类中，可指定请求处理管道和配置任何服务。
 
-在项目中打开并检查“Startup.cs”文件：
+在项目中打开并检查“Startup.cs”文件  ：
 
 ```csharp
-public class Startup
-{
-    public void ConfigureServices(IServiceCollection services)
+    public class Startup
     {
-    }
-
-    public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
-    {
-        loggerFactory.AddConsole();
-
-        if (env.IsDevelopment())
+        // This method gets called by the runtime. Use this method to add services to the container.
+        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+        public void ConfigureServices(IServiceCollection services)
         {
-            app.UseDeveloperExceptionPage();
         }
 
-        app.Run(async (context) =>
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            await context.Response.WriteAsync("Hello World!");
-        });
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+            app.Run(async (context) =>
+            {
+                await context.Response.WriteAsync("Hello World!");
+            });
+        }
     }
-}
 ```
 
 Startup 类必须始终遵守以下规则：
 
- - 始终为公共
- - 包含两个公共方法：`ConfigureServices` 和 `Configure`
+- 始终为公共
+- 包含两个公共方法：`ConfigureServices` 和 `Configure`
 
 `ConfigureServices` 方法定义将在应用中使用的服务。
 
@@ -116,13 +120,13 @@ Startup 类必须始终遵守以下规则：
 
 不添加任何其他代码也可运行此简单的“Hello, World”项目。 要运行此应用并在浏览器中查看它，请按工具栏上的“播放”（三角形）按钮：
 
-![运行应用](media/asp-net-core-image5.png)
+![运行应用](media/asp-net-core-2019-run-debug.png)
 
-Visual Studio for Mac 使用随机端口启动 Web 项目。 要找到该端口，请打开“视图”>“面板”下列出的“应用程序输出”。 之后应找到类似下图内容的输出：
+Visual Studio for Mac 使用随机端口启动 Web 项目。 要找到该端口，请打开“视图”>“面板”下列出的“应用程序输出”  。 之后应找到类似下图内容的输出：
 
 ![显示侦听端口的应用程序输出](media/asp-net-core-image6.png)
 
-打开选择的浏览器，输入 `http://localhost:5000/`，将 `5000` 替换为应用程序输出中的 Visual Studio 输出。 将显示文本 `Hello World!`：
+项目运行后，默认 web 浏览器应启动并连接到“应用程序输出”中列出的 URL。 或者，可以打开选择的任何浏览器，输入 `http://localhost:5000/`，将 `5000` 替换为“应用程序输出”中 Visual Studio 输出的端口。 将显示文本 `Hello World!`：
 
 ![显示文本的浏览器](media/asp-net-core-image7.png)
 
@@ -138,7 +142,7 @@ ASP.NET Core 应用使用模型视图控制器 (MVC) 设计模式，来为应用
 
 要添加控制器，请执行下列操作：
 
-1. 右键单击项目名称，然后选择“添加”>“新文件”。 选择“常规”>“空类”，然后输入控制器名称：
+1. 右键单击项目名称，然后选择“添加”>“新文件”  。 选择“常规”>“空类”，然后输入控制器名称  ：
 
     ![“新文件”对话框](media/asp-net-core-image8.png)
 
@@ -165,9 +169,9 @@ ASP.NET Core 应用使用模型视图控制器 (MVC) 设计模式，来为应用
     }
     ```
 
-3. 通过右键单击“依赖项”文件夹并选择“添加包...”来添加 `Microsoft.AspNetCore.Mvc` 依赖项。
+3. 通过右键单击“依赖项”文件夹并选择“添加包...”来添加 `Microsoft.AspNetCore.Mvc` 依赖项   。
 
-4. 使用搜索框浏览 NuGet 库，查找其中的 `Microsoft.AspNetCore.Mvc`，然后选择“添加包”。 安装可能需要几分钟时间，系统将提示你为必需的依赖项接受各种许可证：
+4. 使用搜索框浏览 NuGet 库，查找其中的 `Microsoft.AspNetCore.Mvc`，然后选择“添加包”  。 安装可能需要几分钟时间，系统将提示你为必需的依赖项接受各种许可证：
 
     ![添加 NuGet](media/asp-net-core-image9.png)
 
@@ -218,21 +222,24 @@ ASP.NET Core 应用使用模型视图控制器 (MVC) 设计模式，来为应用
 
     ![通过参数在浏览器中运行应用](media/asp-net-core-image10.png)
 
-
 ## <a name="troubleshooting"></a>疑难解答
 
-若要在 Mac OS 10.11 (El Capitan) 或更高版本上安装 .NET Core，请执行以下操作：
+若需要在 Mac OS 10.12 (Sierra) 或更高版本上手动安装 .NET Core，请执行以下操作：
 
 1. 安装 .NET Core 前，请确保所有 OS 更新已更新至最新的稳定版本。 可转到应用商店应用程序，并选择“更新”选项卡对此进行检查。
 
 2. 请遵循 [.NET Core 站点](https://www.microsoft.com/net/core#macos) 上列出的步骤。
 
-请确保成功完成所有四个步骤，以确保成功安装 .NET Core。
+请确保成功完成所有步骤，以确保成功安装 .NET Core。
 
 ## <a name="summary"></a>总结
 
 本指南介绍了 ASP.NET Core。 介绍了它是什么，何时使用，并提供了在 Visual Studio for Mac 中使用它的信息。
 有关后续步骤的详细信息，请参阅以下指南：
-- [ASP.NET Core ](/aspnet/core/?view=aspnetcore-2.1#build-web-ui-and-web-apis-using-aspnet-core-mvc) 文档。
+- [ASP.NET Core ](/aspnet/core/?view=aspnetcore-2.1#build-web-apis-and-web-ui-using-aspnet-core-mvc) 文档。
 - [Creating Backend Services for Native Mobile Applications（为本地移动应用程序创建后端服务）](/aspnet/core/mobile/native-mobile-backend)，介绍了如何使用 ASP.NET Core 为 Xamarin.Forms 应用生成 REST 服务。
 - [ASP.NET Core 动手实验](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started)。
+
+## <a name="related-video"></a>相关视频
+
+> [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Build-Your-First-App/player]

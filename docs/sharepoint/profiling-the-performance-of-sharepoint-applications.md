@@ -13,17 +13,17 @@ helpviewer_keywords:
 - performance testing [SharePoint development in Visual Studio]
 - SharePoint development in Visual Studio, performance testing
 - profiling [SharePoint development in Visual Studio]
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8578a27dc6daceda25667142a3cdccae50a42552
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8b59a3de88403300a46b7992a2dad72e3d6b59e0
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53905684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62563305"
 ---
 # <a name="profile-the-performance-of-sharepoint-applications"></a>配置文件的 SharePoint 应用程序性能
 
@@ -39,7 +39,7 @@ ms.locfileid: "53905684"
 
 ## <a name="performance-session-process"></a>性能会话进程
 
-若要分析的应用程序，启动时通过使用分析工具性能向导创建性能会话。 在菜单栏上依次选择**分析**，**启动性能向导**。 完成向导，您输入到性能会话，例如所需的配置文件方法和要分析的应用程序所需的信息。 有关更多信息，请参见[如何：配置文件的网站或 Web 应用程序使用性能向导](http://go.microsoft.com/fwlink/?LinkId=224692)。 或者，可以使用命令行选项来设置和运行性能会话。 有关详细信息，请参阅[分析工具从命令行使用](http://go.microsoft.com/fwlink/?LinkId=224703)。 如果你想要手动配置性能会话的各个方面，请参阅[如何：使用分析工具手动创建性能会话](http://go.microsoft.com/fwlink/?LinkId=224691)。 您还可以创建性能会话从单元测试，通过在**测试结果**窗口中，打开单元测试的快捷菜单，然后选择**创建性能会话**。
+若要分析的应用程序，启动时通过使用分析工具性能向导创建性能会话。 在菜单栏上依次选择**分析**，**启动性能向导**。 完成向导，您输入到性能会话，例如所需的配置文件方法和要分析的应用程序所需的信息。 有关详细信息，请参阅[如何：配置文件的网站或 Web 应用程序使用性能向导](http://go.microsoft.com/fwlink/?LinkId=224692)。 或者，可以使用命令行选项来设置和运行性能会话。 有关详细信息，请参阅[分析工具从命令行使用](http://go.microsoft.com/fwlink/?LinkId=224703)。 如果你想要手动配置性能会话的各个方面，请参阅[如何：使用分析工具手动创建性能会话](http://go.microsoft.com/fwlink/?LinkId=224691)。 您还可以创建性能会话从单元测试，通过在**测试结果**窗口中，打开单元测试的快捷菜单，然后选择**创建性能会话**。
 
 设置性能会话后，保存的会话配置、 服务器配置为提供分析数据和应用程序运行。 使用应用程序时，性能数据写入日志文件。 中列出了性能会话**性能资源管理器**下**目标**文件夹。 在性能会话完成后，其报表中出现**报表**中的文件夹**性能资源管理器**。 若要显示报表，请打开在**性能资源管理器**。 若要查看或配置性能会话的属性，请打开其快捷菜单中的**性能资源管理器**，然后选择**属性**。 性能会话的特定属性的详细信息，请参阅[分析工具配置性能会话](http://go.microsoft.com/fwlink/?LinkId=224694)。 有关如何解释结果的性能会话的信息，请参阅[对分析工具数据](http://go.microsoft.com/fwlink/?LinkId=224704)。
 

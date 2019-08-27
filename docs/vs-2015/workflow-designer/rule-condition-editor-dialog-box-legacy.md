@@ -1,11 +1,8 @@
 ---
 title: 规则条件编辑器对话框 （旧版） |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 f1_keywords:
 - System.Workflow.Activities.Rules.Design.RuleConditionDialog.UI
@@ -15,13 +12,13 @@ ms.assetid: c7ca8be9-de31-4a64-939c-4d53a50d5e29
 caps.latest.revision: 6
 author: gewarren
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: 0503f6ca9a209c62f842c9428cf1af9fe2a07ccc
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 8237c8e29007d010cd99e4323bf8e88a23b7e9fb
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49838538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63006822"
 ---
 # <a name="rule-condition-editor-dialog-box-legacy"></a>“规则条件编辑器”对话框（旧版）
 本主题介绍如何使用**规则条件编辑器**对话框中，在旧[!INCLUDE[wfd1](../includes/wfd1-md.md)]。 在需要面向 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 或 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 时，请使用旧 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]。  
@@ -50,7 +47,7 @@ ms.locfileid: "49838538"
 |**还行**|单击可以保存规则条件。|  
   
 ## <a name="entering-condition-expressions"></a>输入条件表达式  
- 条件表达式是以文本形式输入的。 您可以键入**这。** 要引用字段、 属性和方法在工作流中使用的编辑器，到使用了类似 IntelliSense 的菜单。 或者，可以直接键入工作流成员名称。 可以向条件中添加逻辑运算符（如 AND、OR 和 NOT）。 也可以添加谓词。 谓词由一个二元运算符和两个操作数组成。 支持的二进制运算符包括**==**， **>**， **\<**， **>=**，并**<=**。 支持的操作数包括常量值、算术函数和作用域公共成员。  
+ 条件表达式是以文本形式输入的。 您可以键入**这。** 要引用字段、 属性和方法在工作流中使用的编辑器，到使用了类似 IntelliSense 的菜单。 或者，可以直接键入工作流成员名称。 可以向条件中添加逻辑运算符（如 AND、OR 和 NOT）。 也可以添加谓词。 谓词由一个二元运算符和两个操作数组成。 支持的二进制运算符包括 **==** ， **>** ， **\<** ， **>=** ，并 **<=** 。 支持的操作数包括常量值、算术函数和作用域公共成员。  
   
  您可以指定的类型进行比较，并可以与进行比较**null**或空字符串。 您可以对包含复杂类型的变量进行嵌套的成员调用，例如，`this.Address.State == "WA"`。  
   
@@ -62,7 +59,7 @@ ms.locfileid: "49838538"
   
 - 算术运算符：+、-、*、/、MOD  
   
-- 逻辑运算符： 和，& &、 OR、 &#124; &#124;、 NOT、 ！  
+- 逻辑运算符：AND, &&, OR, &#124;&#124;, NOT, !  
   
 - 按位运算符： &，&#124;  
   

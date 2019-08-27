@@ -4,16 +4,15 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 4374f188e0d67e6ce66ad2979b16de959e14d083
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5b4c0c88e9e096836e32ce427ff78cc94f5d1f72
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53895737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62906984"
 ---
 # <a name="update-shapes-and-connectors-to-reflect-the-model"></a>更新形状和连接线以反映模型
 

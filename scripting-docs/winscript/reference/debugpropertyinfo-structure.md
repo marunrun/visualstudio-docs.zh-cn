@@ -2,7 +2,6 @@
 title: DebugPropertyInfo 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 47c0f6a359341d19b99c1ce8c099ebf1c6d6a1ff
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: 99208626b41f2463178bccecf73c21a1d15fa765
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54088980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955258"
 ---
 # <a name="debugpropertyinfo-structure"></a>DebugPropertyInfo 结构
 描述一个对象具有名称、 类型和值的实际层次结构。 它用来描述本地变量、 参数、 监视变量和表达式的调试属性，并注册。  

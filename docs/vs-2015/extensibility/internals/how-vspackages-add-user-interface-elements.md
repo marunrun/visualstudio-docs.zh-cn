@@ -1,14 +1,9 @@
 ---
 title: Vspackage 如何添加用户界面元素 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - user interfaces, adding elements
 - UI element design [Visual Studio SDK], VSPackages
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: abc5d9d9-b267-48a1-92ad-75fbf2f4c1b9
 caps.latest.revision: 61
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 88b1a71964ddae67241025dd32c1a1384c79765f
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 553c502c100cbb6ed4ae249096af408af14423b4
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51753371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63436126"
 ---
 # <a name="how-vspackages-add-user-interface-elements"></a>VSPackage 如何添加用户界面元素
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -34,11 +29,11 @@ VSPackage 可以添加用户界面 (UI) 元素，例如，菜单、 工具栏和
 ## <a name="the-visual-studio-command-table-architecture"></a>Visual Studio 命令表体系结构  
  如所述，命令表体系结构支持前面提到的体系结构原则。 后面的抽象、 数据结构和工具的命令表体系结构原则是按如下所示：  
   
--   有三种基本类型的项： 菜单、 命令和组。 作为菜单、 子菜单、 工具栏或工具窗口，可以在 UI 中公开菜单。 命令是过程，其中用户可以执行在 IDE 中，并可以将它们公开为菜单项、 按钮、 列表框或其他控件。 组是菜单和命令的容器。  
+- 有三种基本类型的项： 菜单、 命令和组。 作为菜单、 子菜单、 工具栏或工具窗口，可以在 UI 中公开菜单。 命令是过程，其中用户可以执行在 IDE 中，并可以将它们公开为菜单项、 按钮、 列表框或其他控件。 组是菜单和命令的容器。  
   
--   每个项被指定的描述项目、 相对于其他项和修改其行为的标志其优先级的定义。  
+- 每个项被指定的描述项目、 相对于其他项和修改其行为的标志其优先级的定义。  
   
--   每个项都有描述项的父级的位置。 项可以有多个父级，以便它可以出现在 UI 中的多个位置。  
+- 每个项都有描述项的父级的位置。 项可以有多个父级，以便它可以出现在 UI 中的多个位置。  
   
      每个命令必须作为其父级具有一个组，即使它是在该组中的唯一子级。 每个标准菜单还必须具有父组。 工具栏和工具窗口用作其自己的父项。 组可以包含作为其父级主要 Visual Studio 菜单栏中，或任何菜单、 工具栏或工具窗口。  
   
@@ -70,7 +65,7 @@ VSPackage 可以添加用户界面 (UI) 元素，例如，菜单、 工具栏和
  顶级元素`Symbols`部分[GuidSymbol 元素](../../extensibility/guidsymbol-element.md)。 `GuidSymbol` 元素将名称映射到 IDE 用于标识包和其组件部分的 Guid。  
   
 > [!NOTE]
->  Visual Studio 包模板会自动生成的 Guid。 此外可以通过单击创建的唯一 GUID**创建 GUID**上**工具**菜单。  
+> Visual Studio 包模板会自动生成的 Guid。 此外可以通过单击创建的唯一 GUID**创建 GUID**上**工具**菜单。  
   
  第一个`GuidSymbol`元素中，"guid [包名称] Pkg"，是包本身的 GUID。 这是 Visual Studio 用来加载此包的 GUID。 通常情况下，它没有子元素。  
   
@@ -81,15 +76,15 @@ VSPackage 可以添加用户界面 (UI) 元素，例如，菜单、 工具栏和
 ### <a name="menus-groups-and-commands"></a>菜单、 组和命令  
  当菜单、 组或命令具有 GUID 和 ID 时，它可以添加到 IDE。 每个 UI 元素必须具有以下操作：  
   
--   一个`guid`属性的名称相匹配`GuidSymbol`下定义的 UI 元素的元素。  
+- 一个`guid`属性的名称相匹配`GuidSymbol`下定义的 UI 元素的元素。  
   
--   `id`属性关联的名称相匹配`IDSymbol`元素。  
+- `id`属性关联的名称相匹配`IDSymbol`元素。  
   
      共同`guid`和`id`属性 compose*签名*的 UI 元素。  
   
--   一个`priority`确定其父菜单或组中的 UI 元素的位置的属性。  
+- 一个`priority`确定其父菜单或组中的 UI 元素的位置的属性。  
   
--   一个[父元素](../../extensibility/parent-element.md)具有`guid`和`id`属性指定的父菜单或组的签名。  
+- 一个[父元素](../../extensibility/parent-element.md)具有`guid`和`id`属性指定的父菜单或组的签名。  
   
 #### <a name="menus"></a>菜单  
  每个菜单指[Menu Element](../../extensibility/menu-element.md)中`Menus`部分。 菜单必须具有`guid`， `id`，并`priority`属性，和一个`Parent`元素，还以下附加特性和子级：  
@@ -276,17 +271,17 @@ priority="0x0100" type="Menu">
 ##### <a name="general-requirements"></a>一般要求  
  你的命令必须通过以下一系列测试之前可以显示并启用：  
   
--   该命令是正确定位。  
+- 该命令是正确定位。  
   
--   `DefaultInvisible`未设置标志。  
+- `DefaultInvisible`未设置标志。  
   
--   父菜单或工具栏是可见的。  
+- 父菜单或工具栏是可见的。  
   
--   该命令不是不可见由于中的上下文项[VisibilityConstraints 元素](../../extensibility/visibilityconstraints-element.md)部分。  
+- 该命令不是不可见由于中的上下文项[VisibilityConstraints 元素](../../extensibility/visibilityconstraints-element.md)部分。  
   
--   实现的 VSPackage 代码<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>接口显示，并使您的命令。 没有接口代码已截获此并已按照它。  
+- 实现的 VSPackage 代码<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>接口显示，并使您的命令。 没有接口代码已截获此并已按照它。  
   
--   当用户单击你的命令时，它将成为受中所述的过程[路由算法](../../extensibility/internals/command-routing-algorithm.md)。  
+- 当用户单击你的命令时，它将成为受中所述的过程[路由算法](../../extensibility/internals/command-routing-algorithm.md)。  
   
 ## <a name="calling-pre-defined-commands"></a>调用预定义的命令  
  [UsedCommands 元素](../../extensibility/usedcommands-element.md)使 Vspackage 能够访问由其他 Vspackage 或由 IDE 提供的命令。 若要执行此操作，创建[UsedCommand 元素](../../extensibility/usedcommand-element.md)具有 GUID 以及要使用的命令 ID。 这可确保 Visual Studio 中，将加载该命令是即使它不是当前的 Visual Studio 配置的一部分。 有关详细信息，请参阅[UsedCommand 元素](../../extensibility/usedcommand-element.md)。  
@@ -294,18 +289,17 @@ priority="0x0100" type="Menu">
 ## <a name="interface-element-appearance"></a>界面元素外观  
  选择和定位命令元素的注意事项如下所示：  
   
--   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 提供了很多 UI 元素，具体取决于放置以不同方式显示。  
+- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 提供了很多 UI 元素，具体取决于放置以不同方式显示。  
   
--   使用定义的用户界面元素`DefaultInvisible`标志将不会显示在 IDE 除非它是可以显示其 VSPackage 实现<xref:EnvDTE.IDTCommandTarget.QueryStatus%2A>方法，或与中的特定 UI 上下文关联`VisibilityConstraints`部分。  
+- 使用定义的用户界面元素`DefaultInvisible`标志将不会显示在 IDE 除非它是可以显示其 VSPackage 实现<xref:EnvDTE.IDTCommandTarget.QueryStatus%2A>方法，或与中的特定 UI 上下文关联`VisibilityConstraints`部分。  
   
--   即使成功定位的命令不会显示。 这是因为 IDE 自动隐藏或显示某些命令，具体取决于 VSPackage 具有 （或不具有） 的接口实现的。 例如，一些的 VSPackage 的实现生成接口的原因与生成相关菜单项会自动显示。  
+- 即使成功定位的命令不会显示。 这是因为 IDE 自动隐藏或显示某些命令，具体取决于 VSPackage 具有 （或不具有） 的接口实现的。 例如，一些的 VSPackage 的实现生成接口的原因与生成相关菜单项会自动显示。  
   
--   将应用`CommandWellOnly`UI 元素的定义中的标记表示的命令，可以添加只能由自定义项。  
+- 将应用`CommandWellOnly`UI 元素的定义中的标记表示的命令，可以添加只能由自定义项。  
   
--   仅当时 IDE 位于设计视图中显示一个对话框时，可能仅适用于某些 UI 上下文中，例如，命令。  
+- 仅当时 IDE 位于设计视图中显示一个对话框时，可能仅适用于某些 UI 上下文中，例如，命令。  
   
--   若要使某些用户界面元素在 IDE 中显示，必须实现一个或多个接口，或编写一些代码。  
+- 若要使某些用户界面元素在 IDE 中显示，必须实现一个或多个接口，或编写一些代码。  
   
 ## <a name="see-also"></a>请参阅  
  [扩展菜单和命令](../../extensibility/extending-menus-and-commands.md)
-

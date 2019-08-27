@@ -2,21 +2,20 @@
 title: 工作流设计器-CompensableActivity 活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - System.Activities.Statements.CompensableActivity.UI
 ms.assetid: e0340d89-d39e-4a52-8557-13e27040d7b5
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b4194ef3d4cfbf4b4654b1695c022d715fc7d885
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: cfe5a207136b44e61beff77bec8c8c7b869568b6
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53857915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62949886"
 ---
 # <a name="compensableactivity-activity-designer"></a>CompensableActivity 活动设计器
 

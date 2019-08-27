@@ -6,29 +6,30 @@ helpviewer_keywords:
 - Domain-Specific Language, generated code
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: b47fe1e80f2441c729dd2d971bfadffb80dfbd04
-ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
-ms.translationtype: MT
+ms.openlocfilehash: c2ff6d38ef4fcce400888121ef12883b00bcc0c7
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54270289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63386708"
 ---
 # <a name="understanding-the-dsl-code"></a>了解 DSL 代码
+
 域特定语言 (DSL) 解决方案将生成一个 API，可用于读取和更新 Visual Studio 中的 dsl 的实例。 此 API 将定义在从 DSL 定义生成的代码中。 本主题介绍了生成的 API。
 
 ## <a name="the-example-solution-component-diagrams"></a>示例解决方案中：组件图
- 若要创建解决方案的大部分本主题中示例的源，创建从 DSL**组件模型**解决方案模板。 这是在创建新 DSL 解决方案时显示的标准模板之一。
+
+若要创建解决方案的大部分本主题中示例的源，创建从 DSL**组件模型**解决方案模板。 这是在创建新 DSL 解决方案时显示的标准模板之一。
 
 > [!NOTE]
->  组件图 DSL 模板与可以在 Visual Studio 中使用的体系结构菜单创建的 UML 组件图无关。 在中**新的项目**对话框框中，展开**其他项目类型 \ 扩展性**，然后单击**域特定语言设计器**。
+> 组件图 DSL 模板被称为**域特定语言设计器**。
 
- 如果你不熟悉此解决方案模板，请按 F5 并进行试验。 特别注意，可通过将端口工具拖动到组件上来创建端口，并可连接端口。
+按**F5**和试验如果您不熟悉此解决方案模板。 特别注意，可通过将端口工具拖动到组件上来创建端口，并可连接端口。
 
- ![组件及相互连接的端口](../modeling/media/componentsample.png)
+![组件及相互连接的端口](../modeling/media/componentsample.png)
 
 ## <a name="the-structure-of-the-dsl-solution"></a>DSL 解决方案的结构
  **Dsl**项目定义用于 DSL 的 API。 **DslPackage**项目定义与 Visual Studio 的集成。 还可添加你自己的项目，这些项目还可包含从模型生成的代码。
@@ -38,28 +39,28 @@ ms.locfileid: "54270289"
 
  建议你检查生成的代码以帮助你了解 DSL。 若要查看生成的文件，请在“解决方案资源管理器”中展开 *.tt 文件。
 
- \*.Tt 文件包含极少数生成代码。 相反，它们使用 `<#include>` 指令来包括共享的模板文件。 共享的文件可在**\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\DSL SDK\DSL Designer\11.0\TextTemplates**
+ \*.Tt 文件包含极少数生成代码。 相反，它们使用 `<#include>` 指令来包括共享的模板文件。 共享的文件可在 **\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\DSL SDK\DSL Designer\11.0\TextTemplates**
 
  在将你自己的程序代码添加到 DSL 解决方案时，请将它添加在“生成的代码”文件夹之外的单独文件中。 你可能想要创建**自定义代码**文件夹。 （在向自定义文件夹添加新代码文件时，请记住在初始代码主干中更正命名空间。）
 
  强烈建议你不要直接编辑生成的代码，因为当重新生成解决方案时你的编辑将会丢失。 相反，若要自定义 DSL，请执行以下操作：
 
--   调整 DSL 定义中的多个参数。
+- 调整 DSL 定义中的多个参数。
 
--   在单独的代码文件中编写分部类，以重写在生成的类中定义的或由生成的类继承的方法。 在某些情况下，必须设置**生成双派生**若要重写生成的方法将在 DSL 定义中，类的选项。
+- 在单独的代码文件中编写分部类，以重写在生成的类中定义的或由生成的类继承的方法。 在某些情况下，必须设置**生成双派生**若要重写生成的方法将在 DSL 定义中，类的选项。
 
--   在 DSL 定义中，则生成的代码将为你自己的代码提供 hook 设置选项。
+- 在 DSL 定义中，则生成的代码将为你自己的代码提供 hook 设置选项。
 
      例如，如果您设置**具有自定义构造函数**域类的选项，然后生成解决方案，你会看到错误消息。 在双击其中一个错误消息时，你将在生成的代码中看到注释，阐释了你的自定义代码应提供的内容。
 
--   编写你自己的文本模板以生成特定于应用程序的代码。 您可以使用包含文件来共享许多项目通用的模板的部分，并且可以创建 Visual Studio 项目模板来设置使用你自己的文件结构初始化的项目。
+- 编写你自己的文本模板以生成特定于应用程序的代码。 您可以使用包含文件来共享许多项目通用的模板的部分，并且可以创建 Visual Studio 项目模板来设置使用你自己的文件结构初始化的项目。
 
 ## <a name="generated-files-in-dsl"></a>DSL 中生成的文件
  以下生成的文件出现在**Dsl**项目。
 
  *YourDsl* `Schema.xsd`
 
- 包含 DSL 实例的文件的架构。 此文件复制到编译 (**bin**) 目录。 在安装 DSL 时，可以将复制到此文件**\Program Files\Microsoft Visual Studio 11.0\Xml\Schemas** ，以便可以验证模型文件。 有关详细信息，请参阅[部署域特定语言解决方案](../modeling/deploying-domain-specific-language-solutions.md)。
+ 包含 DSL 实例的文件的架构。 此文件复制到编译 (**bin**) 目录。 在安装 DSL 时，可以将复制到此文件 **\Program Files\Microsoft Visual Studio 11.0\Xml\Schemas** ，以便可以验证模型文件。 有关详细信息，请参阅[部署域特定语言解决方案](../modeling/deploying-domain-specific-language-solutions.md)。
 
  如果通过在 DSL 资源管理器中设置选项来自定义序列化，则该架构将进行相应的更改。 但是，如果编写自己的序列化代码，则此文件可能不再表示实际架构。 有关详细信息，请参阅[自定义文件存储和 XML 序列化](../modeling/customizing-file-storage-and-xml-serialization.md)。
 
@@ -121,7 +122,7 @@ ms.locfileid: "54270289"
 
 - 元素组原型 (EGP) 处理程序方法。 这些是必需的如果用户可以*合并*（添加） 到此类的实例上的另一个元素。 通常用户通过从元素工具或另一个形状进行拖动或通过粘贴来执行此操作。
 
-   在示例 DSL 中，“输入端口”或“输出端口”可以合并到“组件”上。 此外，“组件”和“注释”可以合并到模型上。 此
+   在示例 DSL 中，“输入端口”或“输出端口”可以合并到“组件”上。 此外，“组件”和“注释”可以合并到模型上。 必须向
 
    “组件”类中的 EGP 处理程序方法允许“组件”接受“端口”，但不接受“注释”。 根模型类中的 EGP 处理程序可接受“注释”和“组件”，但不接受“端口”。
 
@@ -130,7 +131,7 @@ ms.locfileid: "54270289"
   表示域模型的类。 它派生自 <xref:Microsoft.VisualStudio.Modeling.DomainModel>。
 
 > [!NOTE]
->  这与模型的根类不同。
+> 这与模型的根类不同。
 
  “复制”和“删除”闭包定义在复制或删除一个元素时应包含哪些其他元素。 可以通过设置控制此行为**传播复制**并**传播删除**两侧上的每个关系的角色的属性。 如果想要动态确定这些值，则可编写代码来重写“闭包”类的方法。
 
@@ -339,7 +340,7 @@ explorerWindow.TreeContainer.ObjectModelBrowser.SelectedNode = treeNode;
  若要自定义此文件，请编辑 `.tt` 文件。
 
 > [!WARNING]
->  如果编辑 .tt 文件来包括资源（例如图标或图像），请确保该资源包括在 VSIX 生成中。 在解决方案资源管理器，选择文件，请确保**包含在 VSIX**属性是`True`。
+> 如果编辑 .tt 文件来包括资源（例如图标或图像），请确保该资源包括在 VSIX 生成中。 在解决方案资源管理器，选择文件，请确保**包含在 VSIX**属性是`True`。
 
  此文件控制将 DSL 打包到 Visual Studio 集成扩展 (VSIX) 中的方式。 有关详细信息，请参阅[部署域特定语言解决方案](../modeling/deploying-domain-specific-language-solutions.md)。
 
@@ -348,4 +349,4 @@ explorerWindow.TreeContainer.ObjectModelBrowser.SelectedNode = treeNode;
 - [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)
 - [了解模型、类和关系](../modeling/understanding-models-classes-and-relationships.md)
 - [自定义和扩展域特定语言](../modeling/customizing-and-extending-a-domain-specific-language.md)
-- [编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)
+- [编写代码以自定义特定于域的语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)

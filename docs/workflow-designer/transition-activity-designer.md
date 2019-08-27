@@ -2,21 +2,20 @@
 title: 工作流设计器-Transition 活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - System.Activities.Statements.Transition.UI
 ms.assetid: f6e8b5cc-7fb8-4699-9703-f3c9fc7cc316
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: d60962fbe53184767095735cd460d6eb1eb969fd
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ad9572004702f53cefaad05bfcaad0cd29520542
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53963975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62433937"
 ---
 # <a name="transition-activity-designer"></a>事务活动设计器
 

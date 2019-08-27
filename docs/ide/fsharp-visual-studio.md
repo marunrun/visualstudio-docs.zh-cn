@@ -2,21 +2,20 @@
 title: F# 工具
 description: 了解 F# 中支持的 Visual Studio 功能。
 ms.date: 07/11/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 helpviewer_keywords:
 - F# features [Visual Studio]
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 18803d3033cc3aa1fdfb43620eb741ff1724ec74
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f71e17eae1e728ab755d048daee2c0d156425964
+ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53990079"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66747587"
 ---
 # <a name="develop-with-visual-f-in-visual-studio"></a>在 Visual Studio 中使用 Visual F# 进行开发
 
@@ -24,7 +23,7 @@ ms.locfileid: "53990079"
 
 ## <a name="install-f-support"></a>安装 F# 支持
 
-要在 Visual Studio 中使用 F# 进行开发，请首先安装“.NET 桌面开发”工作负荷（如果尚未安装）。 请通过 Visual Studio 安装程序安装 Visual Studio 工作负荷，可以通过选择“工具” > “获取工具和功能”将其打开。
+要在 Visual Studio 中使用 F# 进行开发，请首先安装“.NET 桌面开发”工作负荷（如果尚未安装）  。 请通过 Visual Studio 安装程序安装 Visual Studio 工作负荷，可以通过选择“工具” > “获取工具和功能”将其打开   。
 
 ![Visual Studio 中的 .NET 桌面开发工作负荷](media/dotnet-desktop-development-workload.png)
 
@@ -49,7 +48,7 @@ Visual Studio 中提供适用于 F# 的多种项目和项模板。 下图显示�
 |多目标|是||
 |图标和清单|No|通过编译器命令行选项提供。|
 |ASP.NET 客户端服务|No||
-|ClickOnce|No|以其他 .NET Framework 语言使用客户端项目（如果适用）。|
+|ClickOnce|No|以其他 .NET 语言使用客户端项目（如果适用）。|
 |强命名|No|通过编译器命令行选项提供。|
 |程序集发布和版本控制|No||
 |代码分析|No|可手动运行或在生成后命令中运行代码分析工具。|
@@ -57,11 +56,11 @@ Visual Studio 中提供适用于 F# 的多种项目和项模板。 下图显示�
 
 ## <a name="project-designer"></a>项目设计器
 
-项目设计器包含按相关功能分组的多个项目属性页。 适用于 F# 项目的大多数页是可用于其他语言的子集，下表提供这些页的说明。 还提供了指向相应 C# 项目设计器页的链接。
+项目设计器包含按相关功能分组的多个项目属性页  。 适用于 F# 项目的大多数页是可用于其他语言的子集，下表提供这些页的说明。 还提供了指向相应 C# 项目设计器页的链接  。
 
 |“项目设计器”页|相关链接|说明|
 | - |-------------|-----------|
-|应用程序|[“应用程序”页，项目设计器](reference/application-page-project-designer-csharp.md)|支持指定应用程序级别设置和属性，例如要创建库还是可执行文件、应用程序面向的 .NET Framework 版本和应用程序使用的资源文件的存储位置的相关信息。|
+|应用程序|[“应用程序”页，项目设计器](reference/application-page-project-designer-csharp.md)|支持指定应用程序级设置和属性，例如要创建库还是可执行文件、应用程序面向的 .NET 版本，以及有关应用程序所使用资源文件的存储位置的信息。|
 |生成|[“项目设计器”->“生成”页](reference/build-page-project-designer-csharp.md)|支持控制代码的编译方式。|
 |生成事件|[“生成事件”页，项目设计器](reference/build-events-page-project-designer-csharp.md)|支持指定编译之前或之后要运行的命令。|
 |调试|[“项目设计器”->“调试”页](reference/debug-page-project-designer.md)|支持控制调试期间应用程序的运行方式。 其中包括要使用的命令、应用程序的启动目录和要启用的任何特殊调试模式，如本机代码和 SQL。|
@@ -90,7 +89,7 @@ F# 中支持 Visual Studio 代码和文本编辑器的以下功能：
 |更改缩进|对所选行实施缩进或取消缩进。|是|
 |智能缩进|根据 F# 作用域规则对光标实施自动缩进和取消缩进。|是|
 |[查找和替换文本](finding-and-replacing-text.md)|支持在文件、项目或解决方案中执行搜索，并更改文本。|是|
-|转到 .NET Framework API 的定义|将光标置于 .NET Framework API 时，显示 .NET Framework 元数据生成的代码。|No|
+|转到 .NET API 的定义|将光标置于 .NET API 时，显示 .NET 元数据生成的代码。|No|
 |转到用户定义的 API 的定义|将光标置于定义的程序实体时，可将光标移至代码中定义实体的位置。|是|
 |转到行|支持按行号转到文件中的特定行。|是|
 |文件顶部的导航栏|支持跳到代码中的位置（例如按函数名称）。|是|
@@ -99,9 +98,9 @@ F# 中支持 Visual Studio 代码和文本编辑器的以下功能：
 |替换为制表符|将空格转换为制表符。|是|
 |类型着色|以特殊颜色显示定义的类型名称。|是|
 |快速查找。 查看“快速查找”、“查找和替换”窗口。|支持在文件或项目中搜索。|是|
-|通过 Ctrl+单击调用“转到定义”|允许通过按住 Ctrl 并单击 F# 符号来调用“转到定义”。|是|
+|通过 Ctrl+单击调用“转到定义”  |允许通过按住 Ctrl 并单击 F# 符号来调用“转到定义”  。|是|
 |从“快速信息”到“转到定义”|可调用“转到定义”的可单击符号内部工具提示。|是|
-|转到全部|通过 Ctrl+T 启用对所有 F# 构造的全局、模糊匹配导航。|是|
+|转到全部|通过 Ctrl+T 启用对所有 F# 构造的全局、模糊匹配导航   。|是|
 |内联重命名|重命名一个符号内联的所有匹配项。|是|
 |查找所有引用|在代码库中查找一个符号的所有匹配项。|是|
 |简化名称代码修复|删除 F# 符号的不必要限定符。|是|
@@ -119,11 +118,11 @@ F# 中支持 Visual Studio 代码和文本编辑器的以下功能：
 |自动实现接口|为接口方法生成代码存根。|是|
 |代码片段|将采用通用编码结构的库中的代码注入主题。|No|
 |完成单词|通过在键入过程中完成字词和名称来减少键入操作。|是|
-|自动完成|启用后，字词自动完成将在键入过程中选择第一个匹配项，而不会等待你选择一项或按 Ctrl+空格键。|是|
+|自动完成|启用后，字词自动完成将在键入过程中选择第一个匹配项，而不会等待你选择一项或按 Ctrl+空格键   。|是|
 |在未打开的命名空间中完成符号|选中后，可借助自动完成建议位于未打开的命名空间中的一个匹配符号，同时主动用对应的 `open` 语句将其完成。|是|
 |生成代码元素|支持针对多种构造生成存根代码。|No|
 |列表成员|键入成员访问运算符 (.) 时，显示某个类型的成员。|是|
-|组织 Using/Open|组织 C# 中的 using 语句或 F# 中的 open 指令引用的命名空间。|No|
+|组织 Using/Open|组织 C# 中的 using 语句或 F# 中的 open 指令引用的命名空间   。|No|
 |参数信息|在键入函数调用时，显示有关参数的有用信息。|是|
 |快速信息|显示代码中任意标识符的完整声明。|是|
 |自动大括号完成|以事务性方式自动完成 F# 类似大括号的语法构造。|是|

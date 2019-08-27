@@ -8,17 +8,17 @@ helpviewer_keywords:
 - package dll
 - vsix reference
 ms.assetid: 8f20177b-dab9-43a3-b959-81a591b451d6
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7ce21c10f1a64bf8edad9181d66b83291d0405c4
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ee6ebeb776e6aa85d5fba200ac357a7375fa2b99
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53902475"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66341051"
 ---
 # <a name="how-to-add-a-dependency-to-a-vsix-package"></a>如何：将依赖项添加到 VSIX 包
 
@@ -46,9 +46,8 @@ ms.locfileid: "53902475"
 
 Vsixinstaller 找将检测 Visual Studio 的早期版本，并通知用户，则需要更高版本的更新。
 
-
 ## <a name="see-also"></a>请参阅
 
- [VSIX 扩展架构 1.0 参考](https://msdn.microsoft.com/library/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)   
- [VSIX 包的剖析](../extensibility/anatomy-of-a-vsix-package.md)   
- [准备 Windows 安装程序部署扩展](../extensibility/preparing-extensions-for-windows-installer-deployment.md)
+- [VSIX 扩展架构 1.0 参考](https://msdn.microsoft.com/library/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)
+- [VSIX 包的剖析](../extensibility/anatomy-of-a-vsix-package.md)
+- [准备 Windows 安装程序部署扩展](../extensibility/preparing-extensions-for-windows-installer-deployment.md)

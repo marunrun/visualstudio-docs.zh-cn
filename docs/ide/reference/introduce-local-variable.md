@@ -1,19 +1,19 @@
 ---
 title: 引入本地变量
+description: 生成局部变量以替换现有表达式。 选择该表达式，右键单击并选择“快速操作和重构”菜单，选择“为(出现的所有)表达式引入局部变量”。
 ms.date: 01/26/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 42d3f7da59fc64e70ab453a6dd1f57d95871b684
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 43f54072d495cfdd6607ccb033ffd1a1713ad8bb
+ms.sourcegitcommit: 0f5f7955076238742f2071d286ad8e896f3a6cad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53968678"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68483688"
 ---
 # <a name="introduce-a-local-variable-in-visual-studio"></a>在 Visual Studio 中引入局部变量
 
@@ -27,7 +27,7 @@ ms.locfileid: "53968678"
 
 **使用时机：** 如果有代码在本地变量中，稍后可轻松地重复使用它们时。
 
-操作原因：可多次复制并粘贴代码以便在各自位置中使用它，但是执行一次操作、将结果存储在本地变量然后始终使用本地变量效果会更好。
+操作原因：  可多次复制并粘贴代码以便在各自位置中使用它，但是执行一次操作、将结果存储在本地变量然后始终使用本地变量效果会更好。
 
 ## <a name="how-to"></a>操作说明
 
@@ -44,17 +44,17 @@ ms.locfileid: "53968678"
 2. 接下来，执行以下操作之一：
 
    - **键盘**
-      - 按“Ctrl”+**。** 触发“快速操作和重构”菜单。
+      - 按“Ctrl”  + **。** 触发“快速操作和重构”  菜单。
    - **鼠标**
-      - 右键单击并选择“快速操作和重构”菜单。
-      - 单击 ![灯泡](media/bulb-cs.png) 图标（如果文本光标已在具有红色波形曲线的行上，它会出现在左边缘）。
+      - 右键单击并选择“快速操作和重构”菜单  。
+      - 单击 ![左边缘中](media/screwdriver.png) 图标（如果文本光标已在具有突出显示的表达式的行上，它会出现在左边缘）。
 
    ![引入本地预览](media/local-preview-cs.png)
 
-3. 从下拉菜单中选择“引入‘表达式’（的所有匹配项）的本地内容”。
+3. 从下拉菜单中选择“引入‘表达式’（的所有匹配项）的本地内容”  。
 
    > [!TIP]
-   > 进行选择前，使用预览窗口底部的“预览更改”链接[查看将发生的所有更改](../../ide/preview-changes.md)。
+   > 进行选择前，使用预览窗口底部的“预览更改”链接[查看将发生的所有更改](../../ide/preview-changes.md)  。
 
    通过从局部变量用法推断出的类型来创建它。 为新的局部变量赋予新名称。
 
@@ -67,7 +67,7 @@ ms.locfileid: "53968678"
        ![“实现接口”的结果 VB](media/local-result-vb.png)
 
    > [!NOTE]
-   > 可使用“...出现的所有...”菜单选项替换每个选定表达式的实例，而不仅替换特地突出显示的表达式。
+   > 可使用“...出现的所有...”菜单选项替换每个选定表达式的实例，而不仅替换特地突出显示的表达式  。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,40 +1,35 @@
 ---
 title: 管理工具箱 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: devlang-csharp
+ms.topic: conceptual
 helpviewer_keywords:
 - Toolbox [Visual Studio SDK], automatic tab selection
 - Toolbox [Visual Studio SDK], managing
 ms.assetid: 3b052047-f6db-46dd-b3bf-da1c348ee410
 caps.latest.revision: 33
-manager: douge
-ms.openlocfilehash: 227001e827057ffab4c851a985f7e36afaf0f351
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 5eeb5d06b0e689391f450fec8744fa58a41f4508
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49873417"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65681546"
 ---
 # <a name="managing-the-toolbox"></a>Managing the Toolbox
 [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] 允许 VSPackage（如编辑器或设计器）管理“工具箱” 的成员资格和外观。  
   
- 此外，还可以使用自动化管理“工具箱”  本身。 有关通过自动化管理工具箱的详细信息，请参阅 [How to: Control the Toolbox](http://msdn.microsoft.com/library/c9d8a18a-d2bc-43d4-a803-601bfc6a6599)。  
+ 此外，还可以使用自动化管理“工具箱”  本身。 有关通过自动化管理工具箱的详细信息，请参阅[如何：控制工具箱](https://msdn.microsoft.com/library/c9d8a18a-d2bc-43d4-a803-601bfc6a6599)。  
   
 ## <a name="automatic-toolbox-tab-selection"></a>自动工具箱选项卡选择  
  可以基于当前处于活动状态的编辑器或设计器，自动激活特定的“工具箱”  选项卡或类别。 例如，如果已激活窗体设计器，那么你可能希望选中“所有 Windows 窗体”  选项卡。  
   
  此支持仅限于编辑器和设计器，并要求：  
   
-1.  实现工厂对象以提供编辑器或设计器实例。 有关实现设计器或编辑器工厂对象的详细信息，请参阅 [Editor Factories](../extensibility/editor-factories.md)。  
+1. 实现工厂对象以提供编辑器或设计器实例。 有关实现设计器或编辑器工厂对象的详细信息，请参阅 [Editor Factories](../extensibility/editor-factories.md)。  
   
-2.  如果存在编辑器或设计器，则将自动激活工具箱选项卡的注册。  
+2. 如果存在编辑器或设计器，则将自动激活工具箱选项卡的注册。  
   
 ## <a name="controlling-the-toolbox"></a>控制工具箱  
  [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] 提供以下接口，使 VSPackage 能够更好地控制对“工具箱”  的管理方式，对自动支持进行了补充。  
@@ -56,7 +51,7 @@ ms.locfileid: "49873417"
   
 - VSPackage 必须使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolbox2> 来添加控件或托管派生自 <xref:System.Windows.Forms.AxHost> 的包装器控件中的控件。  
   
-   Visual Studio 提供了 `Aximp.exe` 工具，以自动包装派生自 <xref:System.Windows.Forms.AxHost> 的控件中的 ActiveX 控件。 有关详细信息，请参阅[Aximp.exe （Windows 窗体 ActiveX 控件导入程序）](http://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0)。  
+   Visual Studio 提供了 `Aximp.exe` 工具，以自动包装派生自 <xref:System.Windows.Forms.AxHost> 的控件中的 ActiveX 控件。 有关详细信息，请参阅[Aximp.exe （Windows 窗体 ActiveX 控件导入程序）](https://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0)。  
   
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolbox>、<xref:Microsoft.VisualStudio.Shell.Interop.IVsToolbox2> 和 <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolbox3> 是基于 COM 的接口，可通过互操作程序集获得。  
   

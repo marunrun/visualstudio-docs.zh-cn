@@ -1,22 +1,21 @@
 ---
 title: 使用编码的 UI 测试来测试 UWP 应用
 ms.date: 05/31/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - uwp
-ms.openlocfilehash: 2ee648a11c04f9ff6da2f7113c37424b4f1f6388
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d50972ccb68ba43e8ebefa0d69fdfff8f7fc5be4
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53842039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62430103"
 ---
 # <a name="create-a-coded-ui-test-to-test-a-uwp-app"></a>创建编码的 UI 测试来测试 UWP 应用
 
@@ -30,7 +29,11 @@ ms.locfileid: "53842039"
 
 1. 在 Visual Studio 中，使用针对 Visual C# 或 Visual Basic 的“空白应用(通用 Windows)”模板创建新项目。
 
-     ![空白应用通用 Windows 模板](../test/media/blank-uwp-app-template.png)
+   ::: moniker range="vs-2017"
+
+   ![空白应用通用 Windows 模板](../test/media/blank-uwp-app-template.png)
+
+   ::: moniker-end
 
 1. 在“新建通用 Windows 平台项目”对话框中，选择“确定”接受默认平台版本。
 
@@ -62,16 +65,20 @@ ms.locfileid: "53842039"
 
 1. 若要向解决方案添加测试项目，请右键单击“解决方案资源管理器”中的解决方案，然后选择“添加” > “新项目”。
 
-1. 在“新项目”对话框中，选择“编码的 UI 测试项目(通用 Windows)”模板。 此模板位于“Visual C#”或“Visual Basic”下的“Windows 通用”类别中。
+1. 搜索并选择“编码的 UI 测试项目(通用 Windows)”模板。
 
-     ![新编码的 UI 测试项目](../test/media/coded-ui-test-project-uwp-template.png)
+   ::: moniker range="vs-2017"
+
+   ![新编码的 UI 测试项目](../test/media/coded-ui-test-project-uwp-template.png)
+
+   ::: moniker-end
 
    > [!NOTE]
    > 如果未看到“编码的 UI 测试项目(通用 Windows)”模板，则需要[安装编码的 UI 测试组件](../test/use-ui-automation-to-test-your-code.md#install-the-coded-ui-test-component)。
 
 1. 在“为编码的 UI 测试生成代码”对话框中，选择“手动编辑测试”。
 
-     ![“为编码的 UI 测试生成代码”对话框](../test/media/manually-edit-the-test.png)
+   ![“为编码的 UI 测试生成代码”对话框](../test/media/manually-edit-the-test.png)
 
 1. 如果尚未运行 UWP 应用，请按 Ctrl+F5 启动应用。
 
@@ -129,6 +136,7 @@ ms.locfileid: "53842039"
         Assert.AreEqual(Me.AssertMethod1ExpectedValues.UITextBoxEditText, uITextBoxEdit.Text, "Textbox value is unexpected.")
     End Sub
     ```
+
 1. 接下来，需要获取想要测试的 UWP [应用](#create-a-uwp-app-to-test)的 AutomationId。 打开 Windows“启动”菜单，查看应用的磁贴。 然后，将十字准线工具![目标图标](media/target-icon.png) 从“编码的 UI 测试生成器”对话框拖动到应用的磁贴中。 当磁贴周围出现蓝色框时，释放鼠标。
 
    ![十字准线工具](media/cross-hair-tool.png)

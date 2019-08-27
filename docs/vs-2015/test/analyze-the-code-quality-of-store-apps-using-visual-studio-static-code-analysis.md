@@ -1,20 +1,20 @@
 ---
-title: 分析应用商店应用程序使用静态代码分析的代码质量
+title: 使用静态代码分析来分析应用商店应用的代码质量
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.technology: vs-ide-general
+ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.assetid: 2341013d-a08b-49a7-b6fd-a7b6aaa797e0
 caps.latest.revision: 13
-author: erickson-doug
+author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 3f8be03c55ca5415041c2db70360719a184563b2
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
-ms.translationtype: MTE95
+manager: jillfra
+ms.openlocfilehash: e85e8427a310a531b91363fff9019a116bc050be
+ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53062010"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68416653"
 ---
 # <a name="analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis"></a>使用 Visual Studio 静态代码分析来分析应用商店应用的代码质量
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]

@@ -1,7 +1,6 @@
 ---
 title: 在游戏或应用中使用三维资产
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - VC.Project.ImageContentTask.ContentOutput
@@ -13,17 +12,17 @@ f1_keywords:
 ms.assetid: ea587909-e434-46a8-abf8-9b3e95a58b4f
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d346982d682305f3c80531bd4386fbefda536a9f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c595f4c8f344cfb9e8678d8f9c425a564baa9e4b
+ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53986760"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65459117"
 ---
-# <a name="use-3d-assets-in-your-game-or-app"></a>在游戏或应用中使用三维资产
+# <a name="how-to-use-3d-assets-in-your-game-or-app"></a>如何：在游戏或应用中使用三维资产
 
 本文介绍如何使用 Visual Studio 处理三维资产并将其包含在生成中。
 
@@ -35,9 +34,11 @@ ms.locfileid: "53986760"
 
 ### <a name="to-add-the-build-customizations-to-your-project"></a>将生成自定义添加到你的项目
 
-1.  在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择“生成依赖项” > “生成自定义”。 随即显示“Visual C++ 生成自定义文件”对话框。
+1. 在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择“生成依赖项” > “生成自定义”。
 
-2.  在“可用的生成自定义文件”下，选中希望在项目中使用的资产类型对应的复选框，如下表中所述：
+   随即显示“Visual C++ 生成自定义文件”对话框。
+
+2. 在“可用的生成自定义文件”下，选中希望在项目中使用的资产类型对应的复选框，如下表中所述：
 
     |资产类型|生成自定义名称|
     |----------------| - |
@@ -45,23 +46,26 @@ ms.locfileid: "53986760"
     |三维模型|MeshContentTask（.targets、.props）|
     |着色器|ShaderGraphContentTask（.targets、.props）|
 
-3.  选择“确定”  按钮。
+3. 选择“确定”  按钮。
 
 ## <a name="include-assets-in-your-build"></a>将资产包含在生成中
- 现在你的项目已了解你希望使用的不同种类的三维资产，下一步是告知它哪些文件是三维资产，以及它们的资产种类。
+
+现在你的项目已了解你希望使用的不同种类的三维资产，下一步是告知它哪些文件是三维资产及其所属的资产种类。
 
 ### <a name="to-add-an-asset-to-your-build"></a>将资产添加到生成
 
-1.  在“解决方案资源管理器”中，在项目中打开资产的快捷菜单，然后选择“属性”。 随即显示资产的“属性页”对话框。
+1. 在“解决方案资源管理器”中，在项目中打开资产的快捷菜单，然后选择“属性”。
 
-2.  请确保将“配置”和“平台”属性设置为你希望更改应用的值。
+   随即显示资产的“属性页”对话框。
 
-3.  在“配置属性”下，选择“常规”，然后在“常规”下的属性网格中，将“项目类型”属性设置为相应的内容管道项目类型。 例如，对于图像或纹理文件，请选择“图像内容管道”。
+2. 请确保将“配置”和“平台”属性设置为你希望更改应用的值。
+
+3. 在“配置属性”下，选择“常规”，然后在“常规”下的属性网格中，将“项目类型”属性设置为相应的内容管道项目类型。 例如，对于图像或纹理文件，请选择“图像内容管道”。
 
     > [!IMPORTANT]
     > 默认情况下，Visual Studio 假设应使用内置于 Visual Studio 中“图像”项目类型对很多种类的图像文件进行分类。 因此，必须更改你希望通过图像内容管道处理的每个图像的“项目类型”属性。 三维模型和视觉着色器图形的内容管道源文件的其他类型默认为正确的“项目类型”。
 
-4.  选择“确定”  按钮。
+4. 选择“确定”  按钮。
 
 下面是三种内容管道项目类型及其关联的源文件类型和输出文件类型。
 
@@ -77,13 +81,15 @@ ms.locfileid: "53986760"
 
 ### <a name="to-configure-content-pipeline-properties"></a>配置内容管道属性
 
-1.  在“解决方案资源管理器”中，在你的项目中打开资产文件的快捷菜单，然后选择“属性”。 随即显示资产的“属性页”对话框。
+1. 在“解决方案资源管理器”中，在你的项目中打开资产文件的快捷菜单，然后选择“属性”。
 
-2.  请确保将“配置”和“平台”属性设置为你希望更改应用到的值。
+   随即显示资产的“属性页”对话框。
 
-3.  在“配置属性”下，选择内容管道节点（例如，纹理和图像资产的“图像内容管道”），然后在属性网格中，将属性设置为相应的值。 例如，若要在生成时为纹理资产生成 mipmap，请将“生成 Mip”属性设置为“是”。
+2. 请确保将“配置”和“平台”属性设置为你希望更改应用到的值。
 
-4.  选择“确定”  按钮。
+3. 在“配置属性”下，选择内容管道节点（例如，纹理和图像资产的“图像内容管道”），然后在属性网格中，将属性设置为相应的值。 例如，若要在生成时为纹理资产生成 mipmap，请将“生成 Mip”属性设置为“是”。
+
+4. 选择“确定”  按钮。
 
 ### <a name="image-content-pipeline-configuration"></a>图像内容管道配置
 
@@ -209,6 +215,6 @@ cbuffer MiscVars : register(b3)
 |-----------|-----------------|
 |[如何：导出包含 mipmap 的纹理](../designers/how-to-export-a-texture-that-contains-mipmaps.md)|描述如何使用“图像内容管道”导出包含预计算 mipmap 的纹理。|
 |[如何：导出包含预乘 Alpha 的纹理](../designers/how-to-export-a-texture-that-has-premultiplied-alpha.md)|描述如何使用“图像内容管道”导出包含预乘 alpha 值的纹理。|
-|[如何：导出纹理以用于 Direct2D 或 Javascipt 应用](../designers/how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps.md)|描述如何使用“图像内容管道”导出可在 Direct2D 或 JavaScript 应用中使用的纹理。|
+|[如何：使用 Direct2D 或 JavaScript 应用导出纹理以供使用](../designers/how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps.md)|描述如何使用“图像内容管道”导出可在 Direct2D 或 JavaScript 应用中使用的纹理。|
 |[处理游戏和应用的三维资产](../designers/working-with-3-d-assets-for-games-and-apps.md)|描述 Visual Studio 提供的用于创建和操作三维资产（包括纹理和图像、三维模型和着色器）的编辑工具。|
 |[如何：导出着色器](../designers/how-to-export-a-shader.md)|描述如何从着色器设计器中导出着色器。|

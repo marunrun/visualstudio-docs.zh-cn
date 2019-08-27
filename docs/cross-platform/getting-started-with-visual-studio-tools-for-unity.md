@@ -11,11 +11,11 @@ manager: crdun
 ms.workload:
 - unity
 ms.openlocfilehash: c22b9c25f95ea26f2cdaf5c2035fb7a373123241
-ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53684777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62824566"
 ---
 # <a name="get-started-with-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity 入门
 
@@ -23,13 +23,13 @@ ms.locfileid: "53684777"
 
 ### <a name="unity-bundled-installation"></a>Unity 捆绑安装
 
-自 Unity 2018.1 起，Visual Studio 为 Unity 的默认 C# 脚本编辑器，并且包含在 Unity 下载助手和 Unity 中心安装工具中。
+从 Unity 2018.1 开始，Visual Studio 是 Unity 的默认 C# 脚本编辑器，并且包含在 Unity 下载助手以及 Unity Hub 安装工具中。
 
 - 前往 [store.unity.com](https://store.unity.com/) 下载 Unity。
 
-安装期间，请确保 Visual Studio 签入组件列表以使用 Unity 进行安装：
+在安装过程中，请确保在要与 Unity 一起安装的组件列表中选中 Visual Studio ：
 
-#### <a name="unity-hub"></a>Unity 中心
+#### <a name="unity-hub"></a>Unity Hub
 
 ![unity 中心安装](media/vstu_unity-hub.png)
 
@@ -57,27 +57,27 @@ ms.locfileid: "53684777"
 
 1. 单击安装程序窗口右下角的“修改”（如已安装）或“安装”（适用于新安装）。
 
-## <a name="configure-unity-for-use-with-visual-studio"></a>配置用于 Visual Studio 的 Unity
+## <a name="configure-unity-for-use-with-visual-studio"></a>配置 Unity 以与 Visual Studio 一起使用
 
 自 Unity 2018.1 起，Visual Studio 应为 Unity 的默认外部脚本编辑器。 可以确认下是否如此，或者将外部脚本编辑器更改为特定版本的 Visual Studio：
 
-1. 从“编辑”菜单选择“首选项”。
+1. 从**Edit**菜单选择**Preferences**。
 
    ![选择首选项](media/vstu_unity-preferences.png)
 
 2. 在“Preferences”对话框中，选择“External Tools”选项卡。
 
-3. 从“外部脚本编辑器”下拉列表中，选择所需版本的 Visual Studio（如果列出此项），否则选择“浏览...”。
+3. 从**External Script Editor**下拉列表中，选择所需版本的 Visual Studio（如果列出此项），否则选择**Browse...**。
 
    ![选择 Visual Studio](media/vstu_unity-external-tools.png)
 
-4. 如果已选择“浏览...”，导航到 Visual Studio 安装目录中的“Common7/IDE”目录，然后选择“devenv.exe”。 然后单击“打开”。
+4. 如果已选择**Browse...**，请导航到 Visual Studio 安装目录中的**Common7/IDE**目录，然后选择**devenv.exe**。 然后单击**Open**。
 
    ![选择“打开”](media/vstu_browse-for-application.png)
 
-5. 在“外部脚本编辑器”列表中选择 Visual Studio 后，确认已选中“编辑器连接”复选框。
+5. 在**External Script Editor**列表中选择 Visual Studio 后，确认已选中**Editor Attaching**复选框。
 
-6. 关闭“首选项”对话框以完成配置过程。
+6. 关闭**Preferences**对话框以完成配置过程。
 
 ## <a name="support-for-older-versions"></a>支持旧版本
 

@@ -1,14 +1,9 @@
 ---
-title: CA2105： 数组字段不应为只读 |Microsoft Docs
-ms.custom: ''
+title: CA2105:不应仅读取数组字段 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA2105
 - ArrayFieldsShouldNotBeReadOnly
@@ -20,14 +15,14 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 51878d18deb56c77ebbef0d0aa84b399ef2fa722
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 4741b30d1429a1a179328c8fb4b150fc4f920612
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49894971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68154388"
 ---
-# <a name="ca2105-array-fields-should-not-be-read-only"></a>CA2105：数组字段不应为只读
+# <a name="ca2105-array-fields-should-not-be-read-only"></a>CA2105:数组字段不应为只读
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -43,7 +38,7 @@ ms.locfileid: "49894971"
 ## <a name="rule-description"></a>规则说明
  当应用`readonly`(`ReadOnly`中[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) 不能更改为包含一个数组，该字段的字段修饰符来指代不同的数组。 但是，可以更改在只读字段中存储的数组的元素。 制定决策或执行基于可以公开访问的只读数组的元素的操作的代码可能包含可利用的安全漏洞。
 
- 请注意，具有公共字段也违反了设计规则[CA1051： 不要声明可见实例字段](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)。
+ 请注意，具有公共字段也违反了设计规则[CA1051:不要声明可见实例字段](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要解决由该规则标识的安全漏洞，不要依赖于可公开访问的只读数组的内容。 强烈建议你使用以下过程之一：
@@ -52,7 +47,7 @@ ms.locfileid: "49894971"
 
 - 使用返回私有数组副本的方法替换公共字段。 你的代码不依赖于克隆，因为如果，则不存在风险修改元素。
 
-  如果你选择第二种方法，请不该字段将替换为属性;属性返回数组造成负面影响性能。 有关详细信息，请参阅[CA1819： 属性不应返回数组](../code-quality/ca1819-properties-should-not-return-arrays.md)。
+  如果你选择第二种方法，请不该字段将替换为属性;属性返回数组造成负面影响性能。 有关详细信息，请参阅[CA1819:属性不应返回数组](../code-quality/ca1819-properties-should-not-return-arrays.md)。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  强烈建议不要使用此规则的警告中排除。 几乎在任何情况下发生其中只读字段的内容并不重要。 如果与你的方案的情况，请删除`readonly`修饰符而不是排除警告消息。
@@ -71,10 +66,7 @@ ms.locfileid: "49894971"
 
  此示例的输出是：
 
- **之前篡改： 成绩： 90，90，90 专用成绩： 90，90，90 保护等级，90，90，90**
-**后篡改： 成绩： 90、 555，90 专用成绩： 90、 555，90 保护等级，90，90，90**
+ **之前篡改：等级：90，90，90 专用年级：90，90，90 保护等级，90，90，90**
+**后篡改：等级：90、 555，90 专用年级：90、 555、 90 保护等级，90，90，90**
 ## <a name="see-also"></a>请参阅
  <xref:System.Array?displayProperty=fullName> <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>
-
-
-

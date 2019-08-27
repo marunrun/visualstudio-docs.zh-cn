@@ -1,7 +1,6 @@
 ---
 title: CA1406:避免对 Visual Basic 6 客户端使用 Int64 参数
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - AvoidInt64ArgumentsForVB6Clients
@@ -12,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: d5d0d3fc-f105-43da-be5b-923ab023309c
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d39c98aae5ae577ad82f0ff99f1069fb34e5146
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 4dfcc612e931756b0e3d817556c9b37844bc3cfd
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53920934"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68922028"
 ---
 # <a name="ca1406-avoid-int64-arguments-for-visual-basic-6-clients"></a>CA1406:避免对 Visual Basic 6 客户端使用 Int64 参数
 
@@ -35,31 +34,31 @@ ms.locfileid: "53920934"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 专门标记为可见到组件对象模型 (COM) 的类型声明的成员，采用<xref:System.Int64?displayProperty=fullName>参数。
+特别标记为对组件对象模型 (COM) 可见的类型会声明采用<xref:System.Int64?displayProperty=fullName>参数的成员。
 
 ## <a name="rule-description"></a>规则说明
- Visual Basic 6 COM 客户端不能访问 64 位整数。
+Visual Basic 6 COM 客户端不能访问 64 位整数。
 
- 默认情况下，以下是对 COM 可见： 程序集、 公共类型、 公共类型中的公共实例成员和公共值类型的所有成员。 但是，若要减少误报，此规则要求类型来显式声明; COM 可见的性包含程序集必须使用标记<xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName>设置为`false`和类型必须标有<xref:System.Runtime.InteropServices.ComVisibleAttribute>设置为`true`。
+默认情况下, 以下是对 COM 可见的: 程序集、公共类型、公共类型中的公共实例成员以及公共值类型的所有成员。 但是, 若要减少误报, 此规则需要显式声明类型的 COM 可见性;必须用<xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName>设置为`false`的将包含程序集标记为, 且类型<xref:System.Runtime.InteropServices.ComVisibleAttribute>必须`true`标记为。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要解决此规则为其值始终可以表示为 32 位整型参数的冲突，将参数类型更改为<xref:System.Int32?displayProperty=fullName>。 如果参数的值可能大于可表示为 32 位整数，将参数类型更改为<xref:System.Decimal?displayProperty=fullName>。 请注意，这两<xref:System.Single?displayProperty=fullName>并<xref:System.Double?displayProperty=fullName>丢失精度的上限范围的<xref:System.Int64>数据类型。 如果该成员不打算对 COM 可见，请将其与标记<xref:System.Runtime.InteropServices.ComVisibleAttribute>设置为`false`。
+若要修复其值始终可表示为32位整数的参数的此规则的冲突, 请将参数类型更改为<xref:System.Int32?displayProperty=fullName>。 如果参数的值可能大于可以表示为32位整数的值, 请将参数类型更改为<xref:System.Decimal?displayProperty=fullName>。 请注意, <xref:System.Single?displayProperty=fullName>和<xref:System.Double?displayProperty=fullName>都不会在<xref:System.Int64>数据类型的上限范围内丢失精度。 如果成员不是要对 COM 可见, 请<xref:System.Runtime.InteropServices.ComVisibleAttribute>将其标记为。 `false`
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 它可以安全地禁止显示此规则的警告，如果它是某些 Visual Basic 6 COM 客户端将不访问类型。
+如果确信 Visual Basic 6 个 COM 客户端将无法访问该类型, 则可以安全地禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
- 下面的示例显示了违反了此规则的类型。
+下面的示例演示违反规则的类型。
 
- [!code-csharp[FxCop.Interoperability.LongArgument#1](../code-quality/codesnippet/CSharp/ca1406-avoid-int64-arguments-for-visual-basic-6-clients_1.cs)]
- [!code-vb[FxCop.Interoperability.LongArgument#1](../code-quality/codesnippet/VisualBasic/ca1406-avoid-int64-arguments-for-visual-basic-6-clients_1.vb)]
+[!code-csharp[FxCop.Interoperability.LongArgument#1](../code-quality/codesnippet/CSharp/ca1406-avoid-int64-arguments-for-visual-basic-6-clients_1.cs)]
+[!code-vb[FxCop.Interoperability.LongArgument#1](../code-quality/codesnippet/VisualBasic/ca1406-avoid-int64-arguments-for-visual-basic-6-clients_1.vb)]
 
-## <a name="related-rules"></a>相关的规则
- [CA1413:避免在 COM 可见值类型中的非公共字段](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)
+## <a name="related-rules"></a>相关规则
+[CA1413避免在 COM 可见值类型中出现非公共字段](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)
 
- [CA1407:避免在 COM 可见类型中的静态成员](../code-quality/ca1407-avoid-static-members-in-com-visible-types.md)
+[CA1407避免在 COM 可见类型中出现静态成员](../code-quality/ca1407-avoid-static-members-in-com-visible-types.md)
 
- [CA1017:用 ComVisibleAttribute 标记程序集](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
+[CA1017用 ComVisibleAttribute 标记程序集](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
 
 ## <a name="see-also"></a>请参阅
 

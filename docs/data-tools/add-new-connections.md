@@ -4,16 +4,15 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 73b09384bd57fd4ea0890d107ce641e4b615559f
-ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
-ms.translationtype: MTE95
+ms.openlocfilehash: b01af2aa269cbaddbd84d24827b1a77e97d52d8a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54154213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62818453"
 ---
 # <a name="add-new-connections"></a>添加新连接
 
@@ -25,7 +24,7 @@ ms.locfileid: "54154213"
 
 - Cloud Explorer
 
-   作为 Visual Studio 扩展中手动安装此窗口，通过选择**工具** > **扩展和更新** > **联机** >  **Visual Studio Marketplace**。 提供浏览和连接到 Azure 服务的专用的功能。
+   手动安装此窗口，以从 Visual Studio 扩展[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.CloudExplorerForVS)。 提供浏览和连接到 Azure 服务的专用的功能。
 
 - SQL Server 对象资源管理器
 

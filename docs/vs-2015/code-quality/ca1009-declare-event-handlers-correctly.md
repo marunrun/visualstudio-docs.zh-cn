@@ -1,14 +1,9 @@
 ---
-title: CA1009： 正确声明事件处理程序 |Microsoft Docs
-ms.custom: ''
+title: CA1009:正确声明事件处理程序 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA1009
 - DeclareEventHandlersCorrectly
@@ -20,14 +15,14 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 7a405ebbf4cd11a695c6e93231d260d8ceae2483
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 51b04b4c081bd7961ef26657dd3cb526652df568
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49918501"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65704253"
 ---
-# <a name="ca1009-declare-event-handlers-correctly"></a>CA1009：正确声明事件处理程序
+# <a name="ca1009-declare-event-handlers-correctly"></a>CA1009:正确声明事件处理程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -59,11 +54,8 @@ ms.locfileid: "49918501"
  [!code-vb[FxCop.Design.EventsTwoParams#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.EventsTwoParams/vb/FxCop.Design.EventsTwoParams.vb#1)]
 
 ## <a name="related-rules"></a>相关的规则
- [CA2109：检查可见的事件处理程序](../code-quality/ca2109-review-visible-event-handlers.md)
+ [CA2109:检查可见的事件处理程序](../code-quality/ca2109-review-visible-event-handlers.md)
 
 ## <a name="see-also"></a>请参阅
  <xref:System.EventArgs?displayProperty=fullName> <xref:System.Object?displayProperty=fullName>
- [NIB： 事件和委托](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115)
-
-
-
+ [NIB：事件和委托](https://msdn.microsoft.com/d98fd58b-fa4f-4598-8378-addf4355a115)

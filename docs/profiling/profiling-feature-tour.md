@@ -2,22 +2,22 @@
 title: 使用分析工具衡量性能
 description: 简要了解 Visual Studio 中提供的各种诊断工具。
 ms.custom: mvc
-ms.date: 05/18/2017
+ms.date: 05/18/2018
 ms.topic: quickstart
 helpviewer_keywords:
 - diagnostic tools
 ms.assetid: d2ee0301-ea78-43d8-851a-71b7b2043d73
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cfa2bcb98e686c04af359900a3c925686659df5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5dff10c90a51dffece1e93e575ab7ae3cbf75367
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53880307"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65704505"
 ---
 # <a name="quickstart-first-look-at-profiling-tools"></a>快速入门：首先了解分析工具
 
@@ -119,6 +119,7 @@ CPU 使用率和内存使用量等分析工具可与调试器配合使用（见�
 
 关系图还可用于确定是否存在与 CPU 或 GPU 绑定的性能瓶颈。
 
+::: moniker range="vs-2017"
 ## <a name="analyze-performance-javascript-uwp"></a>分析性能 (JavaScript UWP)
 
 对于 UWP 应用，可以使用“JavaScript 内存”工具和“HTML UI 响应能力”工具。
@@ -130,6 +131,7 @@ JavaScript 内存工具类似于适用于其他应用类型的内存使用量工
 若要对 UWP 应用执行 UI 响应能力、长时间加载和缓慢视觉对象更新诊断，请使用“HTML UI 响应能力”工具。 使用情况类似于适用于其他应用类型的应用程序时间线工具。 有关更多信息，请参阅 [HTML UI 响应能力](../profiling/html-ui-responsiveness.md)。
 
 ![HTML UI 响应能力分析工具](../profiling/media/diaghtmlresp.png "DiagHTMLResp")
+::: moniker-end
 
 ## <a name="analyze-network-usage-uwp"></a>分析网络使用情况 (UWP)
 
@@ -149,22 +151,22 @@ JavaScript 内存工具类似于适用于其他应用类型的内存使用量工
 
 ![性能资源管理器工具](../profiling/media/prof-tour-performance-explorer.png "Performance Explorer")
 
-## <a name="which-tool-should-i-use"></a>应使用哪一种工具？  
+## <a name="which-tool-should-i-use"></a>应使用哪一种工具？
 
 下表列出了 Visual Studio 提供的不同工具以及适用的不同项目类型：
-  
-|性能工具|Windows 桌面|UWP|ASP.NET/ASP.NET Core| 
-|----------------------|---------------------|-------------|-------------|  
+
+|性能工具|Windows 桌面|UWP|ASP.NET/ASP.NET Core|
+|----------------------|---------------------|-------------|-------------|
 |[CPU 使用率](../profiling/cpu-usage.md)|是|是|是|
-|[内存使用率](../profiling/memory-usage.md)|是|是|是| 
-|[GPU 使用情况](../debugger/gpu-usage.md)|是|是|否| 
+|[内存使用率](../profiling/memory-usage.md)|是|是|是|
+|[GPU 使用情况](../debugger/gpu-usage.md)|是|是|否|
 |[应用程序时间线](../profiling/application-timeline.md)|是|是|否|
 |[性能提示](../profiling/perftips.md)|是|XAML 适用，HTML 不适用|是|
 |[性能资源管理器](../profiling/performance-explorer.md)|是|否|是|
 |[IntelliTrace](../debugger/intellitrace.md)|仅适用于带有 Visual Studio Enterprise 的 .NET|仅适用于带有 Visual Studio Enterprise 的 .NET|仅适用于带有 Visual Studio Enterprise 的 .NET|
 |[网络使用情况](../profiling/network-usage.md)|否|是|否|
-|[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|否|HTML 适用，XAML 不适用|否| 
+|[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|否|HTML 适用，XAML 不适用|否|
 |[JavaScript 内存](../profiling/javascript-memory.md)|否|HTML 适用，XAML 不适用|否|
 
-## <a name="see-also"></a>请参阅  
- [在 Visual Studio 中进行调试](/visualstudio/debugger/debugger-feature-tour)
+## <a name="see-also"></a>请参阅
+- [在 Visual Studio 中进行调试](/visualstudio/debugger/debugger-feature-tour)

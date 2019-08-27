@@ -1,32 +1,31 @@
 ---
 title: 教程 2：创建计时数学测验
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.assetid: d7165d08-ace3-457d-b57d-fb8f80760a6f
 author: TerryGLee
 ms.author: tglee
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d6dc353f7c296dce86bd2b410cfef09683576943
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 4ececa58d04ea7cfebe6178faae724038e353f06
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53985717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62821614"
 ---
 # <a name="tutorial-2-create-a-timed-math-quiz"></a>教程 2：创建计时数学测验
 
 在本教程中，您将构建一个测验，在该测验中，测验对象必须在指定时间内回答四道随机算术题。 您将学习如何：
 
--   使用 <xref:System.Random> 类生成随机数。
+- 使用 <xref:System.Random> 类生成随机数。
 
--   使用 <xref:System.Windows.Forms.Timer> 控件触发事件，使之在特定时间发生。
+- 使用 <xref:System.Windows.Forms.Timer> 控件触发事件，使之在特定时间发生。
 
--   使用 `if else` 语句控制程序流。
+- 使用 `if else` 语句控制程序流。
 
--   使用代码执行基本算术运算。
+- 使用代码执行基本算术运算。
 
 完成时，你的测验看上去与下图类似，但数字有所不同。
 

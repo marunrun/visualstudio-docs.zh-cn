@@ -2,28 +2,27 @@
 title: JavaScript 开发人员编辑功能简介
 description: 此 Visual Studio 代码编辑器简介演示了如何使用 Visual Studio 更轻松地编写、导航和理解 JavaScript 代码。
 ms.date: 12/13/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 41e8628e6d747d523dae12448d81f39ad5de964b
-ms.sourcegitcommit: 8bfabab73b39b3b3e68a3e8dc225515e8b310fed
+ms.openlocfilehash: 111100038817d16d4655271f648aeb076bf1e9af
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54398281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62840743"
 ---
 # <a name="learn-to-use-the-code-editor"></a>了解如何使用代码编辑器
 
 这一简短的 Visual Studio 代码编辑器简介演示了如何使用 Visual Studio 更轻松地编写、导航和理解 C# 代码。
 
 > [!TIP]
-> 如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)页免费安装。 根据所展开的应用开发的类型，可能需要使用 Visual Studio 安装 Node.js 开发工作负荷。
+> 如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/)页免费安装。 根据所展开的应用开发的类型，可能需要使用 Visual Studio 安装 Node.js 开发工作负荷。
 
 本文假定你已熟悉 JavaScript 开发。 如果不熟悉，建议先浏览教程（如[创建 Node.js 和 Express 应用](../javascript/tutorial-nodejs.md)）。
 
@@ -71,7 +70,7 @@ ms.locfileid: "54398281"
 
 工具栏是 Visual Studio 菜单栏下的一行按钮，有助于提高编码效率。 例如，可以切换 IntelliSense 完成模式（[IntelliSense](../ide/using-intellisense.md) 是一种编码辅助工具，可显示匹配方法列表以及其他内容），增加或减少行缩进，或标注出不想编译的代码。 在本部分中，我们将标注出部分代码。
 
-在编辑器中选择一行或多行代码，然后在工具栏上选择“注释掉所选行”按钮![“注释掉”按钮](../javascript/media/write-code-comment-out.png)。 如果想要使用键盘，请按 Ctrl+K、Ctrl+C。
+在编辑器中选择一行或多行代码，然后在工具栏上选择“注释掉所选行”按钮![“注释掉”按钮](../javascript/media/write-code-comment-out.png)。 如果想要使用键盘，请按 Ctrl+K, Ctrl+C。
 
 JavaScript 注释字符 `//` 添加到了每个所选行的开始处，从而为代码添加注释。
 

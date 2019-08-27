@@ -1,14 +1,9 @@
 ---
-title: IDiaSymbol::get_liveRangeStartAddressSection |Microsoft Docs
-ms.custom: ''
+title: IDiaSymbol::get_liveRangeStartAddressSection | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 892b80ff-5957-4233-b4d7-6144167be289
 caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: db95230f87d13f116b2fadbff23a43af497c0918
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: df3faba1309b5a26316b615042492f96b9401a01
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51788851"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "64791448"
 ---
 # <a name="idiasymbolgetliverangestartaddresssection"></a>IDiaSymbol::get_liveRangeStartAddressSection
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -46,7 +41,7 @@ HRESULT get_liveRangeStartAddressSection ( 
  如果成功，则返回`S_OK`; 否则为返回错误代码。  
   
 > [!NOTE]
->  返回的错误代码表示符号不具有实时范围信息。  
+> 返回的错误代码表示符号不具有实时范围信息。  
   
 ## <a name="remarks"></a>备注  
  通过部分和偏移量而形成的地址是范围的符号无效的开头。  
@@ -54,7 +49,7 @@ HRESULT get_liveRangeStartAddressSection ( 
  若要获取地址的偏移量的部分，请使用[IDiaSymbol::get_liveRangeStartAddressOffset](../../debugger/debug-interface-access/idiasymbol-get-liverangestartaddressoffset.md)。  
   
 ## <a name="requirements"></a>要求  
- 标头： Dia2.h  
+ 标头：dia2.h  
   
  库： diaguids.lib  
   
@@ -62,6 +57,3 @@ HRESULT get_liveRangeStartAddressSection ( 
   
 ## <a name="see-also"></a>请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
-
-
-

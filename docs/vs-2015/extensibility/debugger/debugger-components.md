@@ -1,14 +1,9 @@
 ---
 title: 调试器组件 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Visual Studio], components
 - components [Visual Studio SDK], debugging
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 8b8ab77f-a134-495c-be42-3bc51aa62dfb
 caps.latest.revision: 31
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: aabd6311212b866b9171758c8bec39e3beebbfea
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 12f865e7d4c44cfa4002b330ed85ec95f95a8ef9
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51797489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68200664"
 ---
 # <a name="debugger-components"></a>调试器组件
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -33,13 +28,13 @@ ms.locfileid: "51797489"
   
 - **会话调试管理器 (SDM):** 提供了一致的编程接口到[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]调试器的各种的调试引擎管理。 它由实现[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]。  
   
-- **进程调试管理器 (PDM):** 管理的所有正在运行的实例[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，可以是也正在调试的所有程序的列表。 它由实现[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]。  
+- **进程调试管理器 (PDM):** 为所有运行的实例管理[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，可以是也正在调试的所有程序的列表。 它由实现[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]。  
   
-- **调试引擎 (DE):** 负责监视正在调试的程序进行通信的 SDM 和 PDM，正在运行的程序状态并提供的实时分析的表达式计算器和符号提供程序与之交互程序的内存和变量的状态。 它由实现[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]（适用于它支持的语言） 和第三方供应商想要支持其自己的运行的时。  
+- **调试引擎 (DE):** 负责监视正在调试的程序进行通信的 SDM 和 PDM，正在运行的程序状态和与提供程序的内存状态的实时分析的表达式计算器和符号提供程序进行交互和变量。 它由实现[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]（适用于它支持的语言） 和第三方供应商想要支持其自己的运行的时。  
   
-- **表达式计算器 (EE):** 动态评估变量和表达式的用户提供的程序已停止的特定点时提供支持。 它由实现[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]（适用于它支持的语言） 和第三方供应商想要支持自己的语言。  
+- **表达式计算器 (EE):** 提供对动态评估变量和表达式特定点已停止程序时由用户提供支持。 它由实现[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]（适用于它支持的语言） 和第三方供应商想要支持自己的语言。  
   
-- **符号提供程序 (SP):** 也称为符号处理程序中，映射程序的调试符号的程序正在运行的实例，以便可以提供有意义的信息 （如代码源代码级调试和表达式计算）。 它由实现[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]（公共语言运行时 [CLR] 符号和程序数据库 [PDB] 符号文件格式） 和由第三方供应商有其自己专有存储调试信息的方法。  
+- **符号提供程序 (SP):** 也称为符号处理程序，将映射程序的调试符号的程序正在运行的实例，以便可以提供有意义的信息 （如代码源代码级调试和表达式计算）。 它由实现[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]（公共语言运行时 [CLR] 符号和程序数据库 [PDB] 符号文件格式） 和由第三方供应商有其自己专有存储调试信息的方法。  
   
   下图显示了 Visual Studio 调试器的这些元素之间的关系。  
   
@@ -82,4 +77,3 @@ ms.locfileid: "51797489"
   
 ## <a name="see-also"></a>请参阅  
  [入门](../../extensibility/debugger/getting-started-with-debugger-extensibility.md)
-

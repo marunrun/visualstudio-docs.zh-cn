@@ -1,7 +1,6 @@
 ---
 title: 全球化警告
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - vs.codeanalysis.globalizationrules
@@ -13,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: a8d12d41-14bf-4b43-af24-168312d7c390
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: de70944f4bf8e4944b94285a570e6d85ec1a5bb7
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 781ff1e1c7d389baa43a54ee4413280f105ac1e1
+ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53821391"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66714988"
 ---
 # <a name="globalization-warnings"></a>全球化警告
 全球化警告支持世界通用库和应用程序。
@@ -33,7 +32,7 @@ ms.locfileid: "53821391"
 |[CA1300:指定 MessageBoxOptions](../code-quality/ca1300-specify-messageboxoptions.md)|为了让使用从右到左阅读顺序的文化区域正确显示消息框，必须将 MessageBoxOptions 枚举的 RightAlign 和 RtlReading 成员传递给 Show 方法。|
 |[CA1301:避免快捷键重复](../code-quality/ca1301-avoid-duplicate-accelerators.md)|访问键也称为快捷键，它通过使用 Alt 键来实现对控件的键盘访问。 如果多个控件具有重复的访问键，则访问密钥的行为不明确。|
 |[CA1302:请不要对区域设置特定字符串](../code-quality/ca1302-do-not-hardcode-locale-specific-strings.md)|System.Environment.SpecialFolder 枚举包含表示特殊系统文件夹的成员。 对于不同的操作系统，这些文件夹的位置可能具有不同的值；用户也可能会更改某些位置；或者这些位置已经进行了本地化。 Environment.GetFolderPath 方法返回与 Environment.SpecialFolder 枚举，本地化，并适用于当前正在运行的计算机相关联的位置。|
-|[CA1303:不要将文本作为本地化参数传递](../code-quality/ca1303-do-not-pass-literals-as-localized-parameters.md)|外部可见方法将字符串作为参数传递给构造函数或.NET Framework 类库中的方法，该字符串应该是可本地化。|
+|[CA1303:不要将文本作为本地化参数传递](../code-quality/ca1303-do-not-pass-literals-as-localized-parameters.md)|外部可见方法将字符串作为参数传递给.NET 构造函数或方法，并且该字符串应该是可本地化。|
 |[CA1304:指定 CultureInfo](../code-quality/ca1304-specify-cultureinfo.md)|某方法或构造函数调用的成员有一个接受 System.Globalization.CultureInfo 参数的重载，但该方法或构造函数没有调用接受 CultureInfo 参数的重载。 如果未提供 CultureInfo 或 System.IFormatProvider 对象，则重载成员提供的默认值可能不会在所有区域设置中产生您想要的效果。|
 |[CA1305:指定 IFormatProvider](../code-quality/ca1305-specify-iformatprovider.md)|某方法或构造函数调用的一个或多个成员有接受 System.IFormatProvider 参数的重载，但该方法或构造函数没有调用接受 IFormatProvider 参数的重载。 如果未提供 System.Globalization.CultureInfo 或 IFormatProvider 对象，则重载成员提供的默认值可能不会在所有区域设置中产生您想要的效果。|
 |[CA1306:设置区域设置的数据类型](../code-quality/ca1306-set-locale-for-data-types.md)|区域设置决定数据的区域性特定显示元素，例如，数值、货币符号和排序顺序所用的格式。 在创建 DataTable 或 DataSet 时，应显式设置区域设置。|

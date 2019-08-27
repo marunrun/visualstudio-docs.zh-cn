@@ -1,12 +1,9 @@
 ---
-title: UML 类图： 参考 |Microsoft Docs
-ms.custom: ''
+title: UML 类图：引用 |Microsoft Docs
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: reference
 f1_keywords:
 - vs.teamarch.common.generalization.properties
 - vs.teamarch.logicalclassdiagram.toolbox
@@ -26,13 +23,13 @@ ms.assetid: b7c88be0-0d86-4d65-af74-f37e8812d20f
 caps.latest.revision: 43
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 4f3a4fe9949236045238688a9edcd5eef911efb8
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 2be23466642357d19dad52407fcb9bf82e843c5b
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51741063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63424491"
 ---
 # <a name="uml-class-diagrams-reference"></a>UML 类图：参考
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,9 +37,9 @@ ms.locfileid: "51741063"
 UML 类图描述在应用程序内部以及应用程序与其用户在通信时使用的对象和信息结构。 它描述的信息不具有对任何特定实现的引用。 它的类和关系可以采用许多方法来实现，例如数据库表、XML 节点或软件对象的组合。  
   
 > [!NOTE]
->  本主题针对 UML 类图。 还有另一种类图，即 .NET 类图，它用于可视化程序代码。 有关详细信息，请参阅[设计和查看类和类型](http://go.microsoft.com/fwlink/?LinkId=142231)。  
+> 本主题针对 UML 类图。 还有另一种类图，即 .NET 类图，它用于可视化程序代码。 有关详细信息，请参阅[设计和查看类和类型](http://go.microsoft.com/fwlink/?LinkId=142231)。  
   
- 若要创建 UML 类图中，在**体系结构**菜单中，选择**新建 UML 或层关系图**。 有关如何绘制 UML 类图的详细信息，请参阅[UML 类图： 准则](../modeling/uml-class-diagrams-guidelines.md)。 有关如何创建和绘制建模图的详细信息，请参阅[编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)。  
+ 若要创建 UML 类图中，在**体系结构**菜单中，选择**新建 UML 或层关系图**。 有关如何绘制 UML 类图的详细信息，请参阅[UML 类图：指导原则](../modeling/uml-class-diagrams-guidelines.md)。 有关如何创建和绘制建模图的详细信息，请参阅[编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)。  
   
  若要查看支持此功能的 Visual Studio 的版本，请参阅 [体系结构和建模工具的版本支持](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。  
   
@@ -59,13 +56,13 @@ UML 类图描述在应用程序内部以及应用程序与其用户在通信时�
   
   ![显示关系和属性的三个类](../modeling/media/uml-classovreading.png "UML_ClassOvReading")  
   
-| **形状** |       **元素**        |                                                                                                                                                             **说明**                                                                                                                                                              |
+| **Shape** |       **元素**        |                                                                                                                                                             **说明**                                                                                                                                                              |
 |-----------|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |     1     |        **类**         |                                                           共享给定结构或行为特征的对象的定义。 有关详细信息，请参阅[uml 类型的属性的类图](../modeling/properties-of-types-on-uml-class-diagrams.md)。                                                            |
 |     1     |        分类器        |                                                                                                             类、接口或枚举的通用名称。 组件、用例和参与者也是分类器。                                                                                                             |
 |     2     | 折叠/展开控件 |                                                                                         如果看不到分类器的详细信息，则单击分类器左上角的扩展器。 可能还必须单击每段上的 [+]。                                                                                         |
 |     3     |      **特性**       |   附加到每个分类器实例的类型化值。<br /><br /> 若要添加的属性，请单击**特性**部分，然后按**ENTER**。 键入该特性的签名。 有关详细信息，请参阅[属性的属性在 UML 类图](../modeling/properties-of-attributes-on-uml-class-diagrams.md)。   |
-|     4     |      **操作**       | 分类器的实例可执行的方法或函数。 若要添加操作，请单击**Operations**部分，然后按**ENTER**。 键入该操作的签名。 有关详细信息，请参阅[UML 操作的属性类图](../modeling/properties-of-operations-on-uml-class-diagrams.md)。 |
+|     4     |      **Operation**       | 分类器的实例可执行的方法或函数。 若要添加操作，请单击**Operations**部分，然后按**ENTER**。 键入该操作的签名。 有关详细信息，请参阅[UML 操作的属性类图](../modeling/properties-of-operations-on-uml-class-diagrams.md)。 |
 |     5     |     **关联**      |                                                                  两个分类器的成员之间的关系。 有关详细信息，请参阅[属性关联在 UML 类图](../modeling/properties-of-associations-on-uml-class-diagrams.md)。                                                                   |
 |    5a     |     **聚合**      |                                                                                                    表示共享所有权关系的关联。 **聚合**所有者角色的属性设置为**共享**。                                                                                                     |
 |    5b     |     **组合**      |                                                                                                      表示整体-部分关系的关联。 **聚合**所有者角色的属性设置为**复合**。                                                                                                      |
@@ -93,11 +90,8 @@ UML 类图描述在应用程序内部以及应用程序与其用户在通信时�
   
 ## <a name="see-also"></a>请参阅  
  [编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)   
- [UML 类图： 准则](../modeling/uml-class-diagrams-guidelines.md)   
+ [UML 类关系图：指导原则](../modeling/uml-class-diagrams-guidelines.md)   
  [UML 类图上类型的属性](../modeling/properties-of-types-on-uml-class-diagrams.md)   
  [UML 类图上特性的属性](../modeling/properties-of-attributes-on-uml-class-diagrams.md)   
  [UML 类图上的操作的属性](../modeling/properties-of-operations-on-uml-class-diagrams.md)   
  [UML 类图上关联的属性](../modeling/properties-of-associations-on-uml-class-diagrams.md)
-
-
-

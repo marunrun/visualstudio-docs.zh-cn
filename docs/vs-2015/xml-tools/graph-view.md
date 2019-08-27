@@ -1,30 +1,24 @@
 ---
 title: 图形视图 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-xml-tools
+ms.topic: conceptual
 ms.assetid: 5881afde-3f24-4eb9-bff8-6cb3fc8aade7
 caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: d1c0bbe55f2e63c1d86d71556392d57d1330c6b4
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 3e2b51128e851252d3949e6cfde122a52a09af6e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49813617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68198273"
 ---
 # <a name="graph-view"></a>图形视图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 图形视图提供全局架构节点的图形表示形式以及节点间的关系。 请注意，图形视图不允许更改设计图面上架构集的布局。 图形视图还包括 XML 架构设计器工具栏和痕迹栏。  
   
  下图显示的是图形视图，其设计图面上有六个全局节点。  
@@ -42,7 +36,7 @@ ms.locfileid: "49813617"
   
  ![XSD 设计器;图形视图](../xml-tools/media/xsdgraphviewwatermark.gif "XSDGraphViewWatermark")  
   
- 如果架构集有错误，则列表的末尾会显示以下文本：“请使用‘错误列表’查看和修复架构集中的错误”[Use the Error List to view and fix the errors in the set]。  
+ 如果架构集有错误，在列表末尾显示以下文本："使用错误列表以查看并集中解决错误。"  
   
 ## <a name="breadcrumb-bar"></a>痕迹栏  
  图形视图底部的痕迹栏显示所选节点在架构集中所处的位置。 如果选择了多个项，则痕迹栏将为空。  
@@ -104,16 +98,16 @@ ms.locfileid: "49813617"
   
 |选项|描述|  
 |------------|-----------------|  
-|**显示起始视图**|切换到[启动视图](../xml-tools/start-view.md)。 可以使用键盘快捷方式访问此视图： **CTRL + 1**。|  
-|**显示内容模型视图**|切换到[内容模型视图](../xml-tools/content-model-view.md)。 可以使用键盘快捷方式访问此视图： **CTRL + 2**。|  
-|**显示图形视图**|切换到[图形视图](../xml-tools/graph-view.md)。 可以使用键盘快捷方式访问此视图： **CTRL + 3**。|  
+|**显示起始视图**|切换到[启动视图](../xml-tools/start-view.md)。 可以使用键盘快捷方式访问此视图：**CTRL + 1**。|  
+|**显示内容模型视图**|切换到[内容模型视图](../xml-tools/content-model-view.md)。 可以使用键盘快捷方式访问此视图：**CTRL + 2**。|  
+|**显示图形视图**|切换到[图形视图](../xml-tools/graph-view.md)。 可以使用键盘快捷方式访问此视图：**CTRL + 3**。|  
 |**清空工作区**|清空工作区和设计图面。|  
 |**从工作区中删除**|从工作区和设计图面中删除所选节点。|  
 |**移除所选内容从工作区**|从工作区和设计图面中删除未选择的节点。 会在内容模型视图和图形视图中启用此选项。|  
-|**从左到右**|将图形视图中的布局更改为节点的从左到右分层表示形式。 可以使用键盘快捷方式访问此选项： **Alt + 向右键**。|  
-|**从右到左**|将图形视图中的布局更改为节点的从右到左分层表示形式。 可以使用键盘快捷方式访问此选项： **Alt + 向左键**。|  
-|**从上到下**|将图形视图中的布局更改为节点的从上到下分层表示形式。 可以使用键盘快捷方式访问此选项： **Alt + 向下键**。|  
-|**从下到上**|将图形视图中的布局更改为节点的从下到上分层表示形式。 可以使用键盘快捷方式访问此选项： **Alt + 向上键**。|  
+|**从左到右**|将图形视图中的布局更改为节点的从左到右分层表示形式。 可以使用键盘快捷方式访问此选项：**Alt + 向右键**。|  
+|**从右到左**|将图形视图中的布局更改为节点的从右到左分层表示形式。 可以使用键盘快捷方式访问此选项：**Alt + 向左键**。|  
+|**从上到下**|将图形视图中的布局更改为节点的从上到下分层表示形式。 可以使用键盘快捷方式访问此选项：**Alt + 向下箭头**。|  
+|**从下到上**|将图形视图中的布局更改为节点的从下到上分层表示形式。 可以使用键盘快捷方式访问此选项：**Alt + 向上键**。|  
   
 ## <a name="panscroll"></a>平移/滚动  
  可通过以下方法平移设计图面：使用滚动条，或在按住 Ctrl 键的同时单击并拖动鼠标。 如果使用单击并拖动鼠标的方法平移设计图面，光标将更改为指向四个方向的十字箭头。  
@@ -121,11 +115,11 @@ ms.locfileid: "49813617"
 ## <a name="undoredo"></a>撤消/重做  
  在图形视图中，为以下操作启用了撤消/重做功能：  
   
--   通过拖放操作添加单个节点。  
+- 通过拖放操作添加单个节点。  
   
--   从架构资源管理器或起始视图查询的搜索结果窗口中添加多个节点。  
+- 从架构资源管理器或起始视图查询的搜索结果窗口中添加多个节点。  
   
--   删除单个或多个节点。  
+- 删除单个或多个节点。  
   
 ## <a name="zoom"></a>缩放  
  图形视图的右下角提供了缩放功能。  
@@ -145,6 +139,3 @@ ms.locfileid: "49813617"
   
 ## <a name="see-also"></a>请参阅  
  [设计图面](../xml-tools/xml-schema-designer-workspace.md)
-
-
-

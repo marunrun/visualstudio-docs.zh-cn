@@ -15,22 +15,21 @@ helpviewer_keywords:
 ms.assetid: 22c5ade4-4159-4667-b891-0c1aa06f4df5
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 54f3f19617e71137f6f318f62d13c9119727f5f0
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7da05a71d5de4a8f1ec6ef5fbb27a2e74220a1ef
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53939649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62993223"
 ---
 # <a name="sgen-task"></a>SGen 任务
-创建指定程序集中的类型的 XML 序列化程序集。 此任务将包装 XML 序列化程序生成器工具 (Sgen.exe)。 有关详细信息，请参阅 [XML 序列化程序生成器工具 (Sgen.exe)](/dotnet/framework/serialization/xml-serializer-generator-tool-sgen-exe)。  
+创建指定程序集中的类型的 XML 序列化程序集。 此任务将包装 XML 序列化程序生成器工具 (Sgen.exe)。 有关详细信息，请参阅 [XML 序列化程序生成器工具 (Sgen.exe)](/dotnet/framework/serialization/xml-serializer-generator-tool-sgen-exe)。
 
-## <a name="parameters"></a>参数  
- 下表描述了 `SGen` 任务的参数。  
-
+## <a name="parameters"></a>参数
+ 下表描述了 `SGen` 任务的参数。
 
 | 参数 | 说明 |
 |-----------------------------| - |
@@ -50,10 +49,10 @@ ms.locfileid: "53939649"
 | `Types` | 可选 `String[]` 参数。<br /><br /> 获取或设置要为其生成序列化代码的特定类型的列表。 SGen 将仅生成这些类型的序列化代码。 |
 | `UseProxyTypes` | 必选 `Boolean` 参数。<br /><br /> 如果为 `true`，则 SGen 任务仅生成 XML Web service 代理类型的序列化代码。 |
 
-## <a name="remarks"></a>备注  
- 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.ToolTaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.ToolTask> 类。 有关这些其他参数的列表及其说明，请参阅 [ToolTaskExtension 基类](../msbuild/tooltaskextension-base-class.md)。  
+## <a name="remarks"></a>备注
+ 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.ToolTaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.ToolTask> 类。 有关这些其他参数的列表及其说明，请参阅 [ToolTaskExtension 基类](../msbuild/tooltaskextension-base-class.md)。
 
-## <a name="see-also"></a>请参阅  
- [任务参考](../msbuild/msbuild-task-reference.md)   
- [任务](../msbuild/msbuild-tasks.md)   
- [MSBuild 概念](../msbuild/msbuild-concepts.md)
+## <a name="see-also"></a>请参阅
+- [任务参考](../msbuild/msbuild-task-reference.md)
+- [任务](../msbuild/msbuild-tasks.md)
+- [MSBuild 概念](../msbuild/msbuild-concepts.md)

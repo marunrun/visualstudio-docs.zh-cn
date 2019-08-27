@@ -1,14 +1,9 @@
 ---
 title: 适用于标识符的语句结束 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense [JavaScript], statement completion
 - statement completion, JavaScript IntelliSense
@@ -16,13 +11,13 @@ ms.assetid: c2cd4945-c67e-471b-8057-96cfd25f7fb2
 caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: d58c5ecc1d787195f7f5c91a07da7a4e775fc27e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 89f507c2f4d01cf5e3e1e983cfcb5bafd9d9a7dd
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49827047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68152898"
 ---
 # <a name="statement-completion-for-identifiers"></a>适用于标识符的语句结束
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -65,8 +60,5 @@ JavaScript 不允许显式类型的变量声明。 因此，IntelliSense 始终�
   
   使用 XML 文档注释或 JavaScript IntelliSense 扩展性功能，可以重写对象的完成列表。 使用这些功能，您可以提供类型信息和更具描述性的 IntelliSense 信息时它可能否则不可用。 有关详细信息，请参阅[扩展 JavaScript IntelliSense](../ide/extending-javascript-intellisense.md)并[创建 XML 文档注释](../ide/create-xml-documentation-comments-for-javascript-intellisense.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [JavaScript IntelliSense](../ide/javascript-intellisense.md)
-
-
-

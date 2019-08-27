@@ -1,51 +1,48 @@
-items:
 - name: JavaScript 和 TypeScript
   href: index.yml
 - name: 概述
   items:
-  - name: Visual Studio 2017 中的 JavaScript
-    href: javascript-in-vs-2017.md
+    - name: Visual Studio 2019 中的 JavaScript
+      href: javascript-in-vs-2019.md
+    - name: Visual Studio 2017 中的 JavaScript
+      href: javascript-in-vs-2017.md
 - name: 快速入门
   items:
-  - name: 创建 Node.js 项目
-    href: /visualstudio/ide/quickstart-nodejs?toc=/visualstudio/javascript/toc.json
-  - name: 创建 Vue.js 项目
-    href: quickstart-vuejs-with-nodejs.md
+    - name: 初步了解 Visual Studio IDE
+      href: quickstart-ide-orientation-js.md
+    - name: 创建 Node.js 项目
+      href: /visualstudio/ide/quickstart-nodejs?toc=/visualstudio/javascript/toc.json
+    - name: 创建 Vue.js 项目
+      href: quickstart-vuejs-with-nodejs.md
 - name: 教程
   items:
-  - name: 使用 Express 创建 Node.js 应用
-    href: tutorial-nodejs.md
-  - name: 使用 React 创建 Node.js 应用
-    href: tutorial-nodejs-with-react-and-jsx.md
-  - name: 将 Node.js 应用发布到 Linux 应用服务
-    href: publish-nodejs-app-azure.md
+    - name: 使用 Express 创建 Node.js 应用
+      href: tutorial-nodejs.md
+    - name: 使用 React 创建 Node.js 应用
+      href: tutorial-nodejs-with-react-and-jsx.md
+    - name: 将 Node.js 应用发布到 Linux 应用服务
+      href: publish-nodejs-app-azure.md
 - name: 操作指南
   items:
-  - name: 编写和编辑代码
-    href: write-and-edit-code.md
-  - name: 创建 Vue.js 应用程序
-    href: create-application-with-vuejs.md
-  - name: 管理 npm 包
-    href: npm-package-management.md
-  - name: 不使用项目或解决方案而进行开发（“打开文件夹”）
-    href: develop-javascript-code-without-solutions-projects.md
-  - name: 使用 Node.js 交互式 REPL
-    href: nodejs-interactive-repl.md
-  - name: JavaScript IntelliSense
-    href: /visualstudio/ide/javascript-intellisense?toc=/visualstudio/javascript/toc.json
-  - name: 调试 JavaScript 应用程序
-    href: debug-nodejs.md
-  - name: 单元测试 JavaScript
-    href: unit-testing-javascript-with-visual-studio.md
+    - name: 编写和编辑代码
+      href: write-and-edit-code.md
+    - name: 创建 Vue.js 应用程序
+      href: create-application-with-vuejs.md
+    - name: 管理 npm 包
+      href: npm-package-management.md
+    - name: 不使用项目或解决方案而进行开发（“打开文件夹”）
+      href: develop-javascript-code-without-solutions-projects.md
+    - name: 使用 Node.js 交互式 REPL
+      href: nodejs-interactive-repl.md
+    - name: JavaScript IntelliSense
+      href: /visualstudio/ide/javascript-intellisense?toc=/visualstudio/javascript/toc.json
+    - name: 调试 JavaScript 应用程序
+      href: debug-nodejs.md
+    - name: 单元测试 JavaScript
+      href: unit-testing-javascript-with-visual-studio.md
 - name: 资源
   items:
-  - name: package.json 配置
-    href: configure-packages-with-package-json.md
-  - name: JavaScript 和 TypeScript 的 Wiki 文档
-    href: https://github.com/Microsoft/nodejstools/wiki
-ms.openlocfilehash: f10039651ab1aba6ee5d013d83893b56d7504196
-ms.sourcegitcommit: 8bfabab73b39b3b3e68a3e8dc225515e8b310fed
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54398203"
+    - name: package.json 配置
+      href: configure-packages-with-package-json.md
+    - name: JavaScript 和 TypeScript 的 Wiki 文档
+      href: 'https://github.com/Microsoft/nodejstools/wiki'

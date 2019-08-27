@@ -1,12 +1,9 @@
 ---
-title: 演练： 使用文本模板生成代码 |Microsoft Docs
-ms.custom: ''
+title: 演练：使用文本模板生成代码 |Microsoft Docs
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [text templates], generating application code
 - walkthroughs [text templates]
@@ -14,13 +11,13 @@ ms.assetid: 24602ade-baca-425e-a6ce-be09a2c7f7e1
 caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: bd360e07ca555bb7cb2c482970ab9a202f7bb630
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 37abc4862b12ab11239b2dd8a24b8c18acab2a51
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49932543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63446700"
 ---
 # <a name="walkthrough-generating-code-by-using-text-templates"></a>演练：使用文本模板生成代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,7 +30,7 @@ ms.locfileid: "49932543"
  在此示例项目中，模板读取示例 XML 文件，并生成对应于每种节点类型的类。 在手动编写的代码中，可以使用这些类来导航 XML 文件。 此外，还可以在使用相同节点类型的任何其他文件上运行应用程序。 示例 XML 文件的目的是提供想要应用程序处理的所有节点类型的示例。  
   
 > [!NOTE]
->  包括在 [中的应用程序](http://go.microsoft.com/fwlink/?LinkId=178765)xsd.exe [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]可以从 XML 文件中生成强类型类。 此处显示的模板作为示例提供。  
+> 包括在 [中的应用程序](http://go.microsoft.com/fwlink/?LinkId=178765)xsd.exe [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]可以从 XML 文件中生成强类型类。 此处显示的模板作为示例提供。  
   
  下面是示例文件：  
   
@@ -89,9 +86,9 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
   
 ##### <a name="to-create-the-project"></a>要创建项目  
   
-1.  在“文件”  菜单上，单击“新建”  ，然后单击“项目” 。  
+1. 在“文件”  菜单上，单击“新建”  ，然后单击“项目”  。  
   
-2.  单击“”  节点，然后在“模板”  窗格中，单击“控制台应用程序”   
+2. 单击“”  节点，然后在“模板”  窗格中，单击“控制台应用程序”   
   
 ### <a name="add-a-prototype-xml-file-to-the-project"></a>将原型 XML 文件添加到项目  
  此文件的目的是提供想要应用程序能够读取的 XML 节点类型的示例。 可以是一个将用于测试应用程序的文件。 模板将为此文件中的每种节点类型生成 C# 类。  
@@ -100,7 +97,7 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
   
 ##### <a name="to-add-an-xml-file"></a>添加 XML 文件  
   
-1. 在“解决方案资源管理器” 中，右键单击项目，单击“添加”  ，然后单击“新项” 。  
+1. 在“解决方案资源管理器”  中，右键单击项目，单击“添加”  ，然后单击“新项”  。  
   
 2. 在“添加新项”  对话框，从“模板”  窗格选择“XML 文件”  。  
   
@@ -140,12 +137,12 @@ namespace MyProject
   
 ##### <a name="to-add-a-text-template-file-to-your-project"></a>将文本模板文件添加到项目  
   
-1. 在“解决方案资源管理器” 中，右键单击项目，单击“添加” ，然后单击“新项” 。  
+1. 在“解决方案资源管理器”  中，右键单击项目，单击“添加”  ，然后单击“新项”  。  
   
 2. 在“添加新项”  对话框中，从“模板”  窗格选择“文本模板”  。  
   
    > [!NOTE]
-   >  确保添加的是文本模板，而不是预处理文本模板。  
+   > 确保添加的是文本模板，而不是预处理文本模板。  
   
 3. 在文件的模板指令中，将 `hostspecific` 属性更改为 `true`。  
   
@@ -421,11 +418,8 @@ namespace MyProject
   在本演练中，程序代码实际上是从模型实例中生成的，该实例是应用程序会处理的一个典型 XML 文件示例。 在更正规的方法中，XML 架构将以 .xsd 文件或域特定语言定义的形式成为模板的输入。 这种方法将使模板在确定特征（如关系的多重性）方面更轻松。  
   
 ## <a name="troubleshooting-the-text-template"></a>解决文本模板故障  
- 若在“错误列表”中看到模板转换或编译错误，或者若未正确生成输出文件，可以借助[使用 TextTransform 实用工具生成文件](../modeling/generating-files-with-the-texttransform-utility.md)中所述的技术解决文本模板的问题。  
+ 若在“错误列表”  中看到模板转换或编译错误，或者若未正确生成输出文件，可以借助[使用 TextTransform 实用工具生成文件](../modeling/generating-files-with-the-texttransform-utility.md)中所述的技术解决文本模板的问题。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)   
  [编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)
-
-
-

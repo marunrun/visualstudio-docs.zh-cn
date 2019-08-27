@@ -1,27 +1,22 @@
 ---
 title: “调用关系树”视图 - 检测数据 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Call Tree view
 ms.assetid: 306bd176-0ce9-4a10-89ca-20b043d37d4e
 caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 630f75468adf5995eb887ac5f73d82462bfe32a4
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 385d12550692f5f27521afe4dea12e5bdb0aa9d8
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51786238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68147929"
 ---
 # <a name="call-tree-view---instrumentation-data"></a>“调用关系树”视图 - 检测数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,7 +26,7 @@ ms.locfileid: "51786238"
 ## <a name="general"></a>常规  
  常规列标识视图行中的函数。  
   
-|列|描述|  
+|列|说明|  
 |------------|-----------------|  
 |**函数名**|函数名。|  
 |**函数地址**|函数的地址。|  
@@ -49,7 +44,7 @@ ms.locfileid: "51786238"
 ## <a name="elapsed-inclusive-values"></a>已用非独占值  
  已用非独占值表示调用树中父函数调用的函数实例的调用堆栈上的时间。 此时间包括函数调用的子函数及调用操作系统所用的时间，如上下文切换和输入/输出操作。  
   
-|列|描述|  
+|列|说明|  
 |------------|-----------------|  
 |**已用非独占时间**|本上下文中对此函数的所有调用的总已用非独占时间。|  
 |**已用非独占时间百分比**|本上下文中此函数的总已用非独占时间占分析运行期间所用的总已用非独占时间的百分比。|  
@@ -60,7 +55,7 @@ ms.locfileid: "51786238"
 ## <a name="elapsed-exclusive-values"></a>已用独占值  
  已用独占值表示调用树中父函数所调用的函数实例在函数体中执行代码的时间；即函数位于调用堆栈顶部的时间。 此时间包括调用操作系统所用的时间，如上下文切换和输入/输出操作。 但是，此时间不包括函数调用的子函数中所用的时间。  
   
-|列|描述|  
+|列|说明|  
 |------------|-----------------|  
 |**已用独占时间**|本上下文中对此函数的所有调用的总已用独占时间。|  
 |**已用独占时间百分比**|本上下文中此函数的总已用独占时间占分析运行期间所用的总已用独占时间的百分比。|  
@@ -71,7 +66,7 @@ ms.locfileid: "51786238"
 ## <a name="application-inclusive-values"></a>应用程序非独占值  
  应用程序非独占值表示调用树中父函数所调用的函数实例在调用堆栈上的时间。 此时间不包括调用操作系统所用的时间，例如上下文切换和输入/输出操作，但包括函数调用的子函数所用的时间。  
   
-|列|描述|  
+|列|说明|  
 |------------|-----------------|  
 |**应用程序非独占时间**|本上下文中对此函数的所有调用的总应用程序非独占时间。|  
 |**应用程序非独占时间百分比**|本上下文中此函数的总应用程序非独占时间占分析运行期间所用的总已用非独占时间的百分比。|  
@@ -82,7 +77,7 @@ ms.locfileid: "51786238"
 ## <a name="application-exclusive-values"></a>应用程序独占值  
  应用程序独占值表示调用树中父函数所调用的函数实例在函数体中直接执行代码的时间；即函数位于调用堆栈顶部的时间。 此时间不包括调用操作系统所用的时间，如上下文切换和输入/输出操作。 也不包括函数调用的子函数所用的时间。  
   
-|列|描述|  
+|列|说明|  
 |------------|-----------------|  
 |**应用程序独占时间**|本上下文中对此函数的所有调用的总应用程序独占时间。|  
 |**应用程序独占时间百分比**|本上下文中此函数的总应用程序独占时间占分析运行期间所用的总已用独占时间的百分比。|  
@@ -90,11 +85,8 @@ ms.locfileid: "51786238"
 |**最长应用程序独占时间**|本上下文中对此函数的调用的最长应用程序独占时间。|  
 |**最短应用程序独占时间**|本上下文中对此函数的调用的最短应用程序独占时间。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何：自定义报告视图列](../profiling/how-to-customize-report-view-columns.md)   
  [“调用关系树”视图](../profiling/call-tree-view-sampling-data.md)   
  [“调用关系树”视图 - 检测](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)   
  [“调用关系树”视图 - 采样](../profiling/call-tree-view-dotnet-memory-sampling-data.md)
-
-
-

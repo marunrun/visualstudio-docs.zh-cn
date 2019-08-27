@@ -1,14 +1,9 @@
 ---
 title: 为您的应用程序创建模型 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-techdebt
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 f1_keywords:
 - vs.teamarch.common.commentlink.properties
 - vs.teamarch.UMLModelExplorer.dependency
@@ -41,30 +36,30 @@ ms.assetid: b69d9d91-c7e7-4dee-8eb6-706076eecb85
 caps.latest.revision: 60
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 9e3aa389441914121493148ecb8fa45b9f86beed
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 03f525d3b996875097ddee433d0e9ad887ee728f
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51745130"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65679472"
 ---
 # <a name="create-models-for-your-app"></a>为你的应用程序创建模型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 建模图有助于理解、阐明和传达代码的构思和软件系统必须支持的用户需求。 例如，若要描述和传达用户需求，你可以使用统一建模语言 (UML) 用例图、活动图、类图和序列图。 若要描述和传达系统的功能，你可以使用 UML 组件图、类图、活动图和序列图。  
   
- 请参阅[第 9 频道视频： 通过建模改善体系结构](http://go.microsoft.com/fwlink/?LinkID=252078)。  
+ 请参阅[第 9 频道视频：通过建模改善体系结构](http://go.microsoft.com/fwlink/?LinkID=252078)。  
   
  在此版本中，可以创建以下 UML 关系图：  
   
 |**关系图**|**显示**|  
 |-----------------|---------------|  
-|[UML 活动图：参考](../modeling/uml-activity-diagrams-reference.md)|业务流程中操作和参与者之间的工作流|  
-|[UML 组件图：参考](../modeling/uml-component-diagrams-reference.md)|系统的组件、组件的接口、端口和关系|  
-|[UML 类图：参考](../modeling/uml-class-diagrams-reference.md)|用于在系统中存储和交换数据的类型及其关系|  
-|[UML 序列图：参考](../modeling/uml-sequence-diagrams-reference.md)|对象、组件、系统或参与者之间的交互序列|  
-|[UML 用例图：参考](../modeling/uml-use-case-diagrams-reference.md)|系统支持的用户目标和任务|  
+|[UML 活动关系图：参考](../modeling/uml-activity-diagrams-reference.md)|业务流程中操作和参与者之间的工作流|  
+|[UML 组件关系图：参考](../modeling/uml-component-diagrams-reference.md)|系统的组件、组件的接口、端口和关系|  
+|[UML 类关系图：参考](../modeling/uml-class-diagrams-reference.md)|用于在系统中存储和交换数据的类型及其关系|  
+|[UML 序列关系图：参考](../modeling/uml-sequence-diagrams-reference.md)|对象、组件、系统或参与者之间的交互序列|  
+|[UML 用例关系图：参考](../modeling/uml-use-case-diagrams-reference.md)|系统支持的用户目标和任务|  
   
  若要查看支持每种类型的关系图的 Visual Studio 版本，请参阅[体系结构和建模工具的版本支持](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。  
   
@@ -78,7 +73,7 @@ ms.locfileid: "51745130"
   
 ## <a name="common-tasks"></a>常规任务  
   
-|**主题**|**Task**|  
+|**Topic**|**Task**|  
 |---------------|--------------|  
 |[创建 UML 建模项目和关系图](../modeling/create-uml-modeling-projects-and-diagrams.md)|**创建模型**并添加关系图。|  
 |[编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)|**绘制关系图**以编辑模型。|  
@@ -90,13 +85,13 @@ ms.locfileid: "51745130"
   
 ## <a name="related-tasks"></a>相关任务  
   
-|**主题**|**Task**|  
+|**Topic**|**Task**|  
 |---------------|--------------|  
 |[代码可视化](../modeling/visualize-code.md)|创建代码图和层关系图以更好地了解不熟悉的代码。|  
 |[建立用户需求模型](../modeling/model-user-requirements.md)|使用模型来阐明和传达用户的需求。|  
 |[应用体系结构建模](../modeling/model-your-app-s-architecture.md)|使用模型来描述系统的整体结构和行为，并确保它满足用户的需求。|  
 |[在开发过程中验证系统](../modeling/validate-your-system-during-development.md)|确保软件与用户的需求和系统的整体体系结构保持一致。|  
-|[在你的开发过程中使用模型](../modeling/use-models-in-your-development-process.md)<br /><br /> [在敏捷开发中使用模型](http://msdn.microsoft.com/en-us/592ac27c-3d3e-454a-9c38-b76658ed137f)|使用模型来帮助你在系统开发的过程中了解和更改你的系统。|  
+|[在你的开发过程中使用模型](../modeling/use-models-in-your-development-process.md)<br /><br /> [在敏捷开发中使用模型](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)|使用模型来帮助你在系统开发的过程中了解和更改你的系统。|  
 |[安排建模解决方案](../modeling/structure-your-modeling-solution.md)|在大中型项目中组织模型。|  
   
 ## <a name="external-resources"></a>外部资源  
@@ -104,6 +99,3 @@ ms.locfileid: "51745130"
 |**类别**|**Links**|  
 |------------------|---------------|  
 |**论坛**|-   [Visual Studio 可视化和建模工具](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio 可视化和建模 SDK（DSL 工具）](http://go.microsoft.com/fwlink/?LinkId=184721)|
-
-
-

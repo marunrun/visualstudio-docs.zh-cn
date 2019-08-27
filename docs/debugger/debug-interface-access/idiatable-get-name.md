@@ -1,5 +1,5 @@
 ---
-title: 'Idiatable:: Get_name |Microsoft Docs'
+title: IDiaTable::get_name | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -9,33 +9,34 @@ helpviewer_keywords:
 ms.assetid: f6e9cd07-63cd-48a6-9835-e69c2d0859c5
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c5288b85fef8e292454b8b26cbe9459277b1f40
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: fc5ac9b3892ad9447f413df58d43791b1be1720a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53867993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62840469"
 ---
 # <a name="idiatablegetname"></a>IDiaTable::get_name
-检索表的名称。  
-  
-## <a name="syntax"></a>语法  
-  
-```C++  
-HRESULT get_name (   
-   BSTR* pRetVal  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `pRetVal`  
- [out]返回的表的名称。  
-  
-## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
-  
-## <a name="see-also"></a>请参阅  
- [IDiaTable](../../debugger/debug-interface-access/idiatable.md)
+检索表的名称。
+
+## <a name="syntax"></a>语法
+
+```C++
+HRESULT get_name ( 
+   BSTR* pRetVal
+);
+```
+
+#### <a name="parameters"></a>参数
+ `pRetVal`
+
+[out]返回的表的名称。
+
+## <a name="return-value"></a>返回值
+ 如果成功，则返回`S_OK`; 否则为返回错误代码。
+
+## <a name="see-also"></a>请参阅
+- [IDiaTable](../../debugger/debug-interface-access/idiatable.md)

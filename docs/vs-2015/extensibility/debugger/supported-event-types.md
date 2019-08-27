@@ -1,26 +1,21 @@
 ---
 title: 支持的事件类型 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], supported events
 ms.assetid: a3c0386d-551e-4734-9a0c-368d1c2e6671
 caps.latest.revision: 13
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: dd6f8f5b7c2782bb908538426cb531db216b72fb
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: f671e8d0128bee2c52dc1191b33edb889c92d2e9
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51781460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63446441"
 ---
 # <a name="supported-event-types"></a>支持的事件类型
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -50,7 +45,7 @@ Visual Studio 调试当前支持以下事件类型：
     接口[IDebugBreakpointEvent2](../../extensibility/debugger/reference/idebugbreakpointevent2.md)并[IDebugExceptionEvent2](../../extensibility/debugger/reference/idebugexceptionevent2.md)是停止事件的示例。  
   
   > [!NOTE]
-  >  不支持异步停止事件。 它是错误发送异步停止事件。  
+  > 不支持异步停止事件。 它是错误发送异步停止事件。  
   
 ## <a name="discussion"></a>讨论  
  事件的实际实现取决于你 DE 设计。 发送每个事件的类型是由设计 DE 时设置其属性确定的。 例如，可能会发送一个 DE [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md)作为异步事件，而另一个可能会将其作为停止事件。  
@@ -58,9 +53,9 @@ Visual Studio 调试当前支持以下事件类型：
  下表指定哪些程序和线程的参数是必需的事件，以及事件类型。 任何事件可以是同步的。 不需要是同步的任何事件。  
   
 > [!NOTE]
->  [IDebugEngine2](../../extensibility/debugger/reference/idebugengine2.md)接口是必需的所有事件。  
+> [IDebugEngine2](../../extensibility/debugger/reference/idebugengine2.md)接口是必需的所有事件。  
   
-|事件|IDebugProgram2|IDebugThread2|停止事件|  
+|Event|IDebugProgram2|IDebugThread2|停止事件|  
 |-----------|--------------------|-------------------|---------------------|  
 |[IDebugActivateDocumentEvent2](../../extensibility/debugger/reference/idebugactivatedocumentevent2.md)|允许，但不是必需|允许，但不是必需|否|  
 |[IDebugBreakEvent2](../../extensibility/debugger/reference/idebugbreakevent2.md)|必需|必需|是|  
@@ -94,4 +89,3 @@ Visual Studio 调试当前支持以下事件类型：
   
 ## <a name="see-also"></a>请参阅  
  [发送事件](../../extensibility/debugger/sending-events.md)
-

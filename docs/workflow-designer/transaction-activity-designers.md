@@ -2,19 +2,18 @@
 title: 工作流设计器的事务活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 ms.assetid: 8dd0f60f-88ec-4258-bc8d-233689be9997
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8bf5d3042d6d8556ed63d1fe97f17e924049e96a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 01b696b2054bc1ec41c7bdbd432371ed937008b3
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53922937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62433976"
 ---
 # <a name="transaction-activity-designers"></a>事务活动设计器
 

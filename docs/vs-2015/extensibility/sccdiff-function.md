@@ -1,14 +1,9 @@
 ---
 title: SccDiff 函数 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - SccDiff
 helpviewer_keywords:
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: d49bc8c5-f631-4153-9d3c-feb3564da305
 caps.latest.revision: 17
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: ed4ca5cefa45f041e4285b00d7a2d9682e6565a0
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: aa5ea0a269cdbfe678328dc652b4177bdc667b99
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51795747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63432469"
 ---
 # <a name="sccdiff-function"></a>SccDiff 函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -79,7 +74,7 @@ SCCRTN SccDiff(
  作为一种性能优化，源代码管理插件可能会使用基于校验和或时间戳而不是逐字节比较的所要求的替代方法`SCC_DIFF_CONTENTS`： 这些形式的比较都是很明显更快，但可靠性较低。 并非所有的源代码管理系统可能支持这些替代比较方法，并且该插件可能要故障回复到的内容比较。 所有源代码管理插件，至少必须都支持的内容比较。  
   
 > [!NOTE]
->  快速差异标志是互斥的。 有效地不传递任何标志，但它不是有效地同时传递多个。 `SCC_DIFF_QUICK_DIFF`它一个屏蔽，它结合了所有标志，可用于测试，但永远不应作为参数传递。  
+> 快速差异标志是互斥的。 有效地不传递任何标志，但它不是有效地同时传递多个。 `SCC_DIFF_QUICK_DIFF`它一个屏蔽，它结合了所有标志，可用于测试，但永远不应作为参数传递。  
   
 |`fOption`|含义|  
 |---------------|-------------|  
@@ -91,4 +86,3 @@ SCCRTN SccDiff(
   
 ## <a name="see-also"></a>请参阅  
  [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)
-

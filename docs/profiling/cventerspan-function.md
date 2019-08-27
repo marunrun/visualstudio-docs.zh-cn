@@ -21,114 +21,108 @@ helpviewer_keywords:
 ms.assetid: 91689e9c-6733-44b9-b36a-8b9b2eef7d1d
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b757d02f5a0da520f4bcb929b8c4f9eff4b4419
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8d501f7c1e75f5b63c82c34f2dc0a4913d7a88c7
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53892580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62552627"
 ---
 # <a name="cventerspan-function"></a>CvEnterSpan 函数
-标记新范围的起始位置。  
-  
-## <a name="syntax"></a>语法  
-  
-```C  
-HRESULT CvEnterSpanW(  
-    _In_reads_bytes_(16) PCV_MARKERSERIES pMarkerSeries,   
-    _Out_ PCV_SPAN* ppSpan,   
-    _In_ PCWSTR pMessage,  
-    ...   
-    );   
-  
-HRESULT CvEnterSpanA(  
-    _In_reads_bytes_(16) PCV_MARKERSERIES pMarkerSeries,   
-    _Out_ PCV_SPAN* ppSpan,   
-    _In_ PCSTR pMessage,   
-    ...   
-    );   
-  
-HRESULT CvEnterSpanVW(  
-    _In_reads_bytes_(16) PCV_MARKERSERIES pMarkerSeries,   
-    _Out_ PCV_SPAN* ppSpan,   
-    _In_ PCWSTR pMessage,  
-    _In_ va_list argList  
-    );   
-  
-HRESULT CvEnterSpanVA(  
-    _In_reads_bytes_(16) PCV_MARKERSERIES pMarkerSeries,   
-    _Out_ PCV_SPAN* ppSpan,   
-    _In_ PCSTR pMessage,   
-    _In_ va_list argList  
-    );   
-  
-HRESULT CvEnterSpanExW(  
-    _In_reads_bytes_(16) PCV_MARKERSERIES pMarkerSeries,   
-    _In_ CV_IMPORTANCE level,   
-    _In_ int category,   
-    _Out_ PCV_SPAN* ppSpan,   
-    _In_ PCWSTR pMessage,   
-    ...   
-    );   
-  
-HRESULT CvEnterSpanExA(  
-    _In_reads_bytes_(16) PCV_MARKERSERIES pMarkerSeries,   
-    _In_ CV_IMPORTANCE level,   
-    _In_ int category,   
-    _Out_ PCV_SPAN* ppSpan,   
-    _In_ PCSTR pMessage,   
-    ...   
-    );   
-  
-HRESULT CvEnterSpanExVW(  
-    _In_reads_bytes_(16) PCV_MARKERSERIES pMarkerSeries,   
-    _In_ CV_IMPORTANCE level,   
-    _In_ int category,   
-    _Out_ PCV_SPAN* ppSpan,   
-    _In_ PCWSTR pMessage,   
-    _In_ va_list argList);   
-  
-HRESULT CvEnterSpanExVA(  
-    _In_reads_bytes_(16) PCV_MARKERSERIES pMarkerSeries,   
-    _In_ CV_IMPORTANCE level,   
-    _In_ int category,   
-    _Out_ PCV_SPAN* ppSpan,   
-    _In_ PCSTR pMessage,   
-    _In_ va_list argList);  
-  
-```  
-  
-#### <a name="parameters"></a>参数  
- `argList`  
- 参数列表。  
-  
- `category`  
- 范围的类别  
-  
- `level`  
- 范围的重要性级别。  
-  
- `pMarkerSeries`  
- 有效标记系列上下文。 不能为 NULL。  
-  
- `pMessage`  
- 消息格式字符串。 不能为 NULL。  
-  
- `ppSpan`  
- 用于保存所生成范围对象的变量的地址。 地址不能为 NULL，该变量可以具有任何值。  
-  
-## <a name="return-value"></a>返回值  
- 成功写入消息时返回 S_OK。 出现任何错误时返回错误代码。 使用 SUCCEEDED/FAILED 宏检查错误条件。  
-  
-## <a name="requirements"></a>要求  
- **标头：** cvmarkers.h  
-  
- **Unicode：** CvEnterSpanW、CvEnterSpanVW、CvEnterSpanExW、CvEnterSpanExVW  
-  
- **ANSI：** CvEnterSpanA、CvEnterSpanVA、CvEnterSpanExA、CvEnterSpanExVW  
-  
-## <a name="see-also"></a>请参阅  
- [C++ 库参考](../profiling/cpp-library-reference.md)
+标记新范围的起始位置。
+
+## <a name="syntax"></a>语法
+
+```C
+HRESULT CvEnterSpanW(
+    _In_reads_bytes_(16) PCV_MARKERSERIES pMarkerSeries,
+    _Out_ PCV_SPAN* ppSpan,
+    _In_ PCWSTR pMessage,
+    ...
+    );
+
+HRESULT CvEnterSpanA(
+    _In_reads_bytes_(16) PCV_MARKERSERIES pMarkerSeries,
+    _Out_ PCV_SPAN* ppSpan,
+    _In_ PCSTR pMessage,
+    ...
+    );
+
+HRESULT CvEnterSpanVW(
+    _In_reads_bytes_(16) PCV_MARKERSERIES pMarkerSeries,
+    _Out_ PCV_SPAN* ppSpan,
+    _In_ PCWSTR pMessage,
+    _In_ va_list argList
+    );
+
+HRESULT CvEnterSpanVA(
+    _In_reads_bytes_(16) PCV_MARKERSERIES pMarkerSeries,
+    _Out_ PCV_SPAN* ppSpan,
+    _In_ PCSTR pMessage,
+    _In_ va_list argList
+    );
+
+HRESULT CvEnterSpanExW(
+    _In_reads_bytes_(16) PCV_MARKERSERIES pMarkerSeries,
+    _In_ CV_IMPORTANCE level,
+    _In_ int category,
+    _Out_ PCV_SPAN* ppSpan,
+    _In_ PCWSTR pMessage,
+    ...
+    );
+
+HRESULT CvEnterSpanExA(
+    _In_reads_bytes_(16) PCV_MARKERSERIES pMarkerSeries,
+    _In_ CV_IMPORTANCE level,
+    _In_ int category,
+    _Out_ PCV_SPAN* ppSpan,
+    _In_ PCSTR pMessage,
+    ...
+    );
+
+HRESULT CvEnterSpanExVW(
+    _In_reads_bytes_(16) PCV_MARKERSERIES pMarkerSeries,
+    _In_ CV_IMPORTANCE level,
+    _In_ int category,
+    _Out_ PCV_SPAN* ppSpan,
+    _In_ PCWSTR pMessage,
+    _In_ va_list argList);
+
+HRESULT CvEnterSpanExVA(
+    _In_reads_bytes_(16) PCV_MARKERSERIES pMarkerSeries,
+    _In_ CV_IMPORTANCE level,
+    _In_ int category,
+    _Out_ PCV_SPAN* ppSpan,
+    _In_ PCSTR pMessage,
+    _In_ va_list argList);
+
+```
+
+#### <a name="parameters"></a>参数
+ `argList` 参数列表。
+
+ `category` 范围的类别
+
+ `level` 范围的重要性级别。
+
+ `pMarkerSeries` 有效标记系列上下文。 不能为 NULL。
+
+ `pMessage` 消息格式字符串。 不能为 NULL。
+
+ `ppSpan` 用于保存所生成范围对象的变量的地址。 地址不能为 NULL，该变量可以具有任何值。
+
+## <a name="return-value"></a>返回值
+ 成功写入消息时返回 S_OK。 出现任何错误时返回错误代码。 使用 SUCCEEDED/FAILED 宏检查错误条件。
+
+## <a name="requirements"></a>要求
+ **标头：** cvmarkers.h
+
+ **Unicode：** CvEnterSpanW、CvEnterSpanVW、CvEnterSpanExW、CvEnterSpanExVW
+
+ **ANSI：** CvEnterSpanA、CvEnterSpanVA、CvEnterSpanExA、CvEnterSpanExVW
+
+## <a name="see-also"></a>请参阅
+- [C++ 库参考](../profiling/cpp-library-reference.md)

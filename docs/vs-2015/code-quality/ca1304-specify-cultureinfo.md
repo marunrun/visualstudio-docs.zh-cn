@@ -1,14 +1,9 @@
 ---
-title: CA1304： 指定 CultureInfo |Microsoft Docs
-ms.custom: ''
+title: CA1304:指定 CultureInfo |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - SpecifyCultureInfo
 - CA1304
@@ -20,14 +15,14 @@ caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 0078309f1c87e4bd1feb9a8c82d7c654185c13df
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: f5d4333508d6faec3df81f860f5b5b2b526be324
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49948762"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65692086"
 ---
-# <a name="ca1304-specify-cultureinfo"></a>CA1304：指定 CultureInfo
+# <a name="ca1304-specify-cultureinfo"></a>CA1304:指定 CultureInfo
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -40,11 +35,11 @@ ms.locfileid: "49948762"
 ## <a name="cause"></a>原因
  方法或构造函数调用的成员具有重载接受<xref:System.Globalization.CultureInfo?displayProperty=fullName>参数，该方法或构造函数不调用的重载的<xref:System.Globalization.CultureInfo>参数。 此规则将忽略对以下方法的调用：
 
--   <xref:System.Activator.CreateInstance%2A?displayProperty=fullName>
+- <xref:System.Activator.CreateInstance%2A?displayProperty=fullName>
 
--   <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=fullName>
+- <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=fullName>
 
--   <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=fullName>
+- <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=fullName>
 
 ## <a name="rule-description"></a>规则说明
  当<xref:System.Globalization.CultureInfo>或<xref:System.IFormatProvider?displayProperty=fullName>未提供对象，则重载成员提供的默认值可能不想要在所有区域设置中起作用。 此外，[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]成员选择默认区域性和格式设置基于可能不为你的代码正确的假设。 若要确保代码按预期运行您的环境，应提供特定于区域性的信息，根据以下指导原则：
@@ -80,10 +75,7 @@ ms.locfileid: "49948762"
  **1900 年 6 月 4 日下午 12:15:12**
 **06/04/1900年 12:15:12**
 ## <a name="related-rules"></a>相关的规则
- [CA1305：指定 IFormatProvider](../code-quality/ca1305-specify-iformatprovider.md)
+ [CA1305:指定 IFormatProvider](../code-quality/ca1305-specify-iformatprovider.md)
 
 ## <a name="see-also"></a>请参阅
- [NIB： 使用 CultureInfo 类](http://msdn.microsoft.com/en-us/d4329e34-64c3-4d1e-8c73-5b0ee626ba7a)
-
-
-
+ [NIB：使用 CultureInfo 类](https://msdn.microsoft.com/d4329e34-64c3-4d1e-8c73-5b0ee626ba7a)

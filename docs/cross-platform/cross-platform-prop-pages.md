@@ -7,15 +7,15 @@ ms.topic: reference
 ms.assetid: 3a7ba14f-a628-4c1b-bb89-73b9195769f1
 author: corob
 ms.author: mblome
-manager: douge
+manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 86859abc73cfabe0994c7628de13e281b58e05ed
-ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
+ms.openlocfilehash: cfe6ca9ad59ae6e4952f83e095c15dcc4427ca0f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39252385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62819252"
 ---
 # <a name="c-cross-platform-property-page-reference"></a>C++ 跨平台属性页引用
 

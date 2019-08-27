@@ -1,27 +1,22 @@
 ---
 title: 配置选项概述 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project configurations
 - configuration options, about configuration options
 ms.assetid: f4ad4dd3-b39e-42df-ad89-d403cdf24a2b
 caps.latest.revision: 11
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 44c5f424ec36d3c04403f62547920f59622208a9
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 0b37d93adbd2accb7a12fb176ab15aafc6914190
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51747989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63441512"
 ---
 # <a name="configuration-options-overview"></a>配置选项概述
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -39,11 +34,11 @@ ms.locfileid: "51747989"
 |配置名称|平台-Win32|平台-Win64|  
 |------------------------|----------------------|----------------------|  
 |调试|\<调试 Win32 设置 >|\<调试 Win64 设置 >|  
-|发布|\<发布 Win32 设置 >|\<发布 Win64 设置 >|  
-|MyConfig|不可用|\<MyConfig Win64 设置 >|  
+|Release|\<发布 Win32 设置 >|\<发布 Win64 设置 >|  
+|MyConfig|不适用|\<MyConfig Win64 设置 >|  
   
 > [!NOTE]
->  无法创建不包含"Win32"平台，除非您的目标的项目不支持 Win32"MyConfig"解决方案配置。  
+> 无法创建不包含"Win32"平台，除非您的目标的项目不支持 Win32"MyConfig"解决方案配置。  
   
  更改活动解决方案配置该解决方案中选择一的生成、 运行、 调试或部署的项目配置。 例如，如果将活动解决方案配置从版本更改为调试，该解决方案中的所有项目中自动都生成解决方案的调试配置中所示的项目的配置。 项目的配置通常也是命名的调试除非用户已手动更改环境的配置管理器中。  
   
@@ -80,4 +75,3 @@ ms.locfileid: "51747989"
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2>   
  [用于构建的项目配置](../../extensibility/internals/project-configuration-for-building.md)   
  [解决方案配置](../../extensibility/internals/solution-configuration.md)
-

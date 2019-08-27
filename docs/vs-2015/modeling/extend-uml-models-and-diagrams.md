@@ -1,14 +1,9 @@
 ---
 title: 扩展 UML 模型和关系图 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-techdebt
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - UML - extending
 - UML model, extending
@@ -16,13 +11,13 @@ ms.assetid: b5bfa61e-ea59-4c3b-b5af-53475d7d13cd
 caps.latest.revision: 39
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 74f3c518682997dca57a630c6f084437f7175d80
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 917c88056709cfbeb89ce3f19d9c8da9866feb4e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51794759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68182871"
 ---
 # <a name="extend-uml-models-and-diagrams"></a>扩展 UML 模型和关系图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,13 +30,13 @@ ms.locfileid: "51794759"
   
  Fabrikam 的工具团队进行了一系列改进来帮助开发团队。 下面各节描述了可以定义的不同种类的扩展。 可以将其中一些技术组合到一个 Visual Studio 扩展中。  
   
- 有关详细信息，请观看此视频：![链接至视频](../data-tools/media/playvideo.gif "播放视频")[MSDN 如何实现系列： UML 工具和扩展性](http://go.microsoft.com/fwlink/?LinkId=214467)。  
+ 有关详细信息，请观看此视频：![链接至视频](../data-tools/media/playvideo.gif "播放视频")[MSDN 如何实现系列：UML 工具和扩展性](http://go.microsoft.com/fwlink/?LinkId=214467)。  
   
-##  <a name="Requirements"></a> 要求  
+## <a name="Requirements"></a> 要求  
   
--   [Visual Studio SDK](../extensibility/visual-studio-sdk.md)。  
+- [Visual Studio SDK](../extensibility/visual-studio-sdk.md)。  
   
--   [Visual Studio 2015 的建模 SDK](http://www.microsoft.com/download/details.aspx?id=48148)。  
+- [Visual Studio 2015 的建模 SDK](http://www.microsoft.com/download/details.aspx?id=48148)。  
   
 ## <a name="profiles"></a>配置文件  
  配置文件用于对 UML 元素定义构造型和其他属性。  
@@ -63,7 +58,7 @@ ms.locfileid: "51794759"
  有关详细信息，请参阅[为 UML 模型定义验证约束](../modeling/define-validation-constraints-for-uml-models.md)。  
   
 ## <a name="menu-commands"></a>菜单命令  
- 可以通过右键单击 UML 关系图上的元素来定义用户可以调用的命令。 这些命令可以更新模型和关系图，或在 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 中执行其他操作。  
+ 可以通过右键单击 UML 关系图上的元素来定义用户可以调用的命令。 这些命令可以更新模型和关系图，或在 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]中执行其他操作。  
   
  Fabrikam 通过定义菜单命令来自动化经常执行的操作，例如创建签入服务台并将其连接到所选传送带或根据公司的布局规则来重排关系图。  
   
@@ -81,7 +76,7 @@ ms.locfileid: "51794759"
   
  Fabrikam 的开发人员创建可依赖元素构造型自动设置其颜色的代码。 这可让用户轻松区分模型中各元素扮演的不同角色。  
   
- 有关详细信息，请参阅[如何： 响应 UML 模型中的更改](../misc/how-to-respond-to-changes-in-a-uml-model.md)。  
+ 有关详细信息，请参阅[如何：响应 UML 模型中的更改](../misc/how-to-respond-to-changes-in-a-uml-model.md)。  
   
 ## <a name="model-bus"></a>模型总线  
  使用模型总线可以从一个关系图或 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 扩展访问另一个关系图或模型。 它的其中一个优点是，你可以将信息传播到多个模型，从而多人可以同时处理组合模型。  
@@ -118,7 +113,7 @@ ms.locfileid: "51794759"
   
 |**类别**|**链接**|  
 |------------------|---------------|  
-|**视频**|![视频链接](../data-tools/media/playvideo.gif "播放视频") [MSDN 如何实现系列： UML 工具和扩展性](http://go.microsoft.com/fwlink/?LinkId=214467)<br /><br /> ![视频链接](../data-tools/media/playvideo.gif "播放视频")[第 9 频道： Visual Studio 中的 UML](http://go.microsoft.com/fwlink/?LinkId=199957)|  
+|**视频**|![视频链接](../data-tools/media/playvideo.gif "播放视频") [MSDN 如何实现系列：UML 工具和扩展性](http://go.microsoft.com/fwlink/?LinkId=214467)<br /><br /> ![视频链接](../data-tools/media/playvideo.gif "播放视频")[第 9 频道：使用 Visual Studio 的 UML](http://go.microsoft.com/fwlink/?LinkId=199957)|  
 |**论坛**|-   [Visual Studio 可视化和建模工具](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio 可视化和建模 SDK（DSL 工具）](http://go.microsoft.com/fwlink/?LinkId=184721)|  
 |**博客**|[Visual Studio ALM + Team Foundation Server 博客](http://go.microsoft.com/fwlink/?LinkID=201340)|  
 |**技术文章和日志**|[MSDN 体系结构中心](http://go.microsoft.com/fwlink/?LinkId=201343)|  
@@ -126,6 +121,3 @@ ms.locfileid: "51794759"
 ## <a name="see-also"></a>请参阅  
  [为您的应用程序创建模型](../modeling/create-models-for-your-app.md)   
  [UML 建模扩展性的 API 参考](../modeling/api-reference-for-uml-modeling-extensibility.md)
-
-
-

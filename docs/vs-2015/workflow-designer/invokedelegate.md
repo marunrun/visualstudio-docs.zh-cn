@@ -1,11 +1,8 @@
 ---
-title: InvokeDelegate |Microsoft Docs
-ms.custom: ''
+title: InvokeDelegate | Microsoft Docs
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 f1_keywords:
 - InvokeDelegate Designer
@@ -14,13 +11,13 @@ ms.assetid: 289a7498-5127-453f-beb5-05f05b80d26f
 caps.latest.revision: 3
 author: steved0x
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 3b47a975c12cfcfd02b01925685b47cba47cc1fc
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 30281d8cd5d5ed94ed89a980006f9618292a778d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49228847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62951965"
 ---
 # <a name="invokedelegate"></a>InvokeDelegate
 
@@ -44,7 +41,7 @@ ms.locfileid: "49228847"
 |-------------------|--------------|-----------|
 |<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.InvokeDelegate> 活动的友好名称。 默认值为 InvokeDelegate。<br /><br /> 虽然 <xref:System.Activities.Activity.DisplayName%2A> 不是绝对必需的，但最好使用该属性。|
 |<xref:System.Activities.Statements.InvokeDelegate.Delegate%2A>|True|要在执行活动时调用的 <xref:System.Activities.ActivityDelegate> 的名称。 此属性可以在设计器图面上进行编辑。 此属性是强制属性。|
-|<<xref:System.Activities.Statements.InvokeDelegate.DelegateArguments%2A>|False|调用委托的参数集合。 键为 <xref:System.Activities.DelegateArgument> 上的 <xref:System.Activities.ActivityDelegate> 对象的名称，值为其表达式将进行计算并分配给对应 <xref:System.Activities.DelegateArgument> 对象的自变量。 在属性网格中，单击中的省略号按钮**DelegateArguments**字段中，它将显示**DelegateArguments**对话框以便您设置此属性。 单击**创建自变量**字段以添加自变量。|
+|<<xref:System.Activities.Statements.InvokeDelegate.DelegateArguments%2A>|False|调用委托的参数集合。 键为 <xref:System.Activities.DelegateArgument> 上的 <xref:System.Activities.ActivityDelegate> 对象的名称，值为其表达式将进行计算并分配给对应 <xref:System.Activities.DelegateArgument> 对象的参数。 在属性网格中，单击中的省略号按钮**DelegateArguments**字段中，它将显示**DelegateArguments**对话框以便您设置此属性。 单击**创建自变量**字段以添加自变量。|
 
 ## <a name="see-also"></a>请参阅
 

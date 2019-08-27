@@ -1,14 +1,9 @@
 ---
 title: 组织 Using 指令 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: devlang-csharp
+ms.topic: conceptual
 helpviewer_keywords:
 - organize usings
 - using statements, organizing
@@ -16,13 +11,13 @@ ms.assetid: 8548dd54-ebf7-42b5-85c4-8f6088149d74
 caps.latest.revision: 13
 author: BillWagner
 ms.author: wiwagn
-manager: douge
-ms.openlocfilehash: d22182a1b6c6ea361f77e899c74e03e78fd2af80
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: fba37e15cfef218d680edbab7909fe774d823c46
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51809033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822521"
 ---
 # <a name="organizing-using-directives"></a>组织 Using 指令
 此内容已移动到[Visual C# IntelliSense](../ide/visual-csharp-intellisense.md)。

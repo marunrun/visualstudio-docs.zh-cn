@@ -1,27 +1,26 @@
-﻿---
+---
 title: 修复程序错误并改进代码
 description: 本文介绍 Visual Studio 可帮助查找和修复代码中的问题（包括生成错误、代码分析、调试工具和单元测试）的一些基本方法。
 ms.date: 05/02/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.assetid: c3a14d28-d811-4ff3-bd09-21dce14025ca
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e61c5917ee3d77161c31213d4851472e714d1679
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a43be698fd908737c96f9de3cf346b48e84f27fc
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53940172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62798764"
 ---
 # <a name="make-code-work-in-visual-studio"></a>确保代码在 Visual Studio 中正常运行
 
 Visual Studio 提供了一组功能强大的项目构建和调试工具。 在本文中，您将了解 Visual Studio 如何使用生成输出、代码分析、调试工具和单元测试来帮助您在代码中查找问题。
 
-你已经想到了编辑器并创建了一些代码。 现在，需要确保代码正确运行。 与大多数 IDE 一样，Visual Studio 通过两个阶段确保代码正常运行：生成代码以捕获并解决项目和编译器错误，以及运行代码以查找运行时和动态错误。 
+你已经想到了编辑器并创建了一些代码。 现在，需要确保代码正确运行。 与大多数 IDE 一样，Visual Studio 通过两个阶段确保代码正常运行：生成代码以捕获并解决项目和编译器错误，以及运行代码以查找运行时和动态错误。
 
 ## <a name="build-your-code"></a>生成代码
 
@@ -45,7 +44,7 @@ Visual Studio 提供了一组功能强大的项目构建和调试工具。 在�
 
 ![Visual Studio 输出和错误列表](../ide/media/vs_ide_gs_debug_bad_build_error_list.png)
 
-单击“错误列表”窗口中的错误行，跳转至发生错误的行。 （或单击右上方的“快速启动”栏，在其中键入行号，然后按 Enter，打开行号。 这是转至“选项”对话框最快的方法，可以在此打开行号。 了解如何使用“快速启动”栏，可以省去多次单击 UI！）
+单击“错误列表”窗口中的错误行，跳转至发生错误的行。 （或按 Ctrl+Q，键入行号，然后从结果中选择“打开或关闭行号”来打开行号。 这是转至“选项”对话框最快的方法，可以在此打开行号。）
 
 ![Visual Studio 具有行号的编辑器](../ide/media/vs_ide_gs_debug_line_numbers.png)
 
@@ -75,7 +74,7 @@ Visual Studio 提供了一组功能强大的项目构建和调试工具。 在�
 
 ### <a name="c-and-visual-basic-code-analysis"></a>C# 和 Visual Basic 代码分析
 
-Visual Studio 2017 包括一系列内置的 [.NET Compiler Platform 分析器](../code-quality/roslyn-analyzers-overview.md)，这些分析器在用户键入时检查 C# 和 Visual Basic 代码。 可以将其他分析器作为 Visual Studio 扩展或 NuGet 包安装。 如果发现违反规则，将同时在代码编辑器（冲突代码下方有波浪线）和错误列表中报告。
+Visual Studio 包括一系列内置的 [.NET Compiler Platform 分析器](../code-quality/roslyn-analyzers-overview.md)，这些分析器在用户键入时检查 C# 和 Visual Basic 代码。 可以将其他分析器作为 Visual Studio 扩展或 NuGet 包安装。 如果发现违反规则，将同时在代码编辑器（冲突代码下方有波浪线）和错误列表中报告。
 
 ### <a name="c-code-analysis"></a>C++ 代码分析
 
@@ -89,9 +88,9 @@ Visual Studio 2017 包括一系列内置的 [.NET Compiler Platform 分析器](.
 
 ![包含警告的 Visual Studio 错误列表](../ide/media/cpp-code-analysis-warning.png)
 
-## <a name="use-light-bulbs-to-fix-or-refactor-code"></a>使用灯泡修复或重构代码
+## <a name="use-quick-actions-to-fix-or-refactor-code"></a>使用“快速操作”修复或重构代码
 
-通过灯泡或螺丝刀图标提供的 [快速操作](../ide/quick-actions.md)，可让您重构内联代码 它们是在 C#、C++ 和 Visual Basic 代码中快速、有效地修复常见警告的简便方法。 要访问它们，请右键单击警告波形并选择“快速操作和重构”。 或者，在光标位于彩色波浪线所在行时，按 Ctrl+. 或选择边距中的灯泡或螺丝刀图标。 您将看到可以应用于该行代码的可能修复或重构列表。
+通过灯泡或螺丝刀图标提供的 [快速操作](../ide/quick-actions.md)，可让您重构内联代码 它们是在 C#、C++ 和 Visual Basic 代码中快速、有效地修复常见警告的简便方法。 要访问它们，请右键单击警告波形并选择“快速操作和重构”。 或者，在光标位于彩色波浪线所在行时，按 Ctrl+. 或选择边距中的灯泡、错误灯泡或螺丝刀图标。 您将看到可以应用于该行代码的可能修复或重构列表。
 
 ![Visual Studio 灯泡预览](../ide/media/quick-actions-options.png)
 
@@ -157,6 +156,6 @@ Visual Studio 2017 包括一系列内置的 [.NET Compiler Platform 分析器](.
 
 ## <a name="see-also"></a>请参阅
 
-- [调试器功能简介](../debugger/debugger-feature-tour.md)
-- [了解更多使用调试器的信息](../debugger/debugger-feature-tour.md)
+- [初探调试器](../debugger/debugger-feature-tour.md)
+- [了解更多使用调试器的信息](../debugger/index.md)
 - [生成和修复代码](../ide/code-generation-in-visual-studio.md)

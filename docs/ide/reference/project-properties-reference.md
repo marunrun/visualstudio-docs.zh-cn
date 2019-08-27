@@ -1,7 +1,6 @@
 ---
 title: 项目属性引用
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 helpviewer_keywords:
 - user interface [Visual Studio], projects
@@ -9,17 +8,18 @@ helpviewer_keywords:
 ms.assetid: eec49aec-5474-48a7-889d-709045b9a475
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1cfbe0c602264da31b89add3e2e6ca1124f62a52
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 41e6a21278670a477bdd30e28a6f0cc4cac04757
+ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53891639"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68461367"
 ---
 # <a name="project-properties-reference"></a>项目属性引用
+
 详细了解如何配置和自定义项目属性。
 
 ## <a name="project-properties-pages"></a>项目属性页

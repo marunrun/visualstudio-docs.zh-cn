@@ -1,14 +1,9 @@
 ---
 title: 搜索表达式中的逻辑运算符 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - Help Viewer 2.0, logical operators in search
 - logical operators in search [Help Viewer 2.0]
@@ -16,13 +11,13 @@ ms.assetid: 0c38ae7d-3e20-4d47-a020-9677cd285916
 caps.latest.revision: 11
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 8337c455ac283e7b9abbf70c39493b31c01a7d06
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 30a33a434540fded8daab0628d0bd6dd7fb0ff38
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49212532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63412271"
 ---
 # <a name="logical-operators-in-search-expressions"></a>搜索表达式中的逻辑运算符
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +25,7 @@ ms.locfileid: "49212532"
 通过使用逻辑运算符，可以在较简单的表达式基础上创建更复杂的搜索表达式，以改进内容的搜索。 如下表所示，逻辑运算符指定在搜索查询中组合多个搜索词的方式。  
   
 > [!IMPORTANT]
->  必须使用全部大写字母的格式输入逻辑运算符，以便搜索引擎可以识别它们。  
+> 必须使用全部大写字母的格式输入逻辑运算符，以便搜索引擎可以识别它们。  
   
 |要搜索|使用|示例|结果|  
 |-------------------|---------|-------------|------------|  
@@ -42,6 +37,3 @@ ms.locfileid: "49212532"
 ## <a name="see-also"></a>请参阅  
  [全文搜索提示](../ide/full-text-search-tips.md)   
  [查找信息](../ide/locate-information.md)
-
-
-

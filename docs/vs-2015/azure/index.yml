@@ -1,154 +1,148 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 4e579e5a70ee74c365deb689e9cd3035ee597dfc
-ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51001021"
 documentType: LandingData
 title: 利用 Visual Studio 开发 Azure
 metadata:
   title: 利用 Visual Studio 开发 Azure | Microsoft Docs
   meta.description: Tutorials and conceptual articles about connecting apps and services to Azure and developing Azure services.
   author: ghogen
-  manager: douge
+  manager: jillfra
   ms.prod: visual-studio-dev14
   ms.technology: vs-azure
   ms.topic: landing-page
   ms.date: 11/02/2018
   ms.author: ghogen
 sections:
-- title: 发布到 Azure
-  items:
-  - type: paragraph
-    text: 使用 Visual Studio 将应用部署到 Azure 的暂存环境或生产环境。
-  - type: list
-    style: cards
-    className: cardsM
-    columns: 3
+  - title: 发布到 Azure
     items:
-    - href: vs-azure-tools-publishing-a-cloud-service.md
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/azure/cloud-services/media/index/cloud-services.svg
-      title: 发布云服务项目
-    - href: /azure/virtual-machines/windows/publish-web-app-from-visual-studio
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_vmm-cloud.svg
-      title: 将 ASP.NET Web 应用发布到 Azure VM
-- title: 调试和监视性能
-  items:
-  - type: paragraph
-    text: " 了解如何在 Azure 中调试应用和监视性能。"
-  - type: list
-    style: cards
-    className: cardsM
-    columns: 3
+      - type: paragraph
+        text: 使用 Visual Studio 将应用部署到 Azure 的暂存环境或生产环境。
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - href: vs-azure-tools-publishing-a-cloud-service.md
+            html: <p></p>
+            image:
+              src: 'https://docs.microsoft.com/azure/cloud-services/media/index/cloud-services.svg'
+            title: 发布云服务项目
+          - href: /azure/virtual-machines/windows/publish-web-app-from-visual-studio
+            html: <p></p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_vmm-cloud.svg'
+            title: 将 ASP.NET Web 应用发布到 Azure VM
+  - title: 调试和监视性能
     items:
-    - href: vs-azure-tools-intellitrace-debug-published-cloud-services.md
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_debug.svg
-      title: 在 Azure 中调试云服务
-    - href: vs-azure-tools-debug-cloud-services-virtual-machines.md
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_vmm-cloud.svg
-      title: 调试在虚拟机上运行的应用
-    - href: vs-azure-tools-performance-profiling-cloud-services.md
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_code-performance.svg
-      title: 在 Azure 中测量云服务的性能
-- title: 使用 Visual Studio 连接服务将应用连接到 Azure
-  items:
-  - type: paragraph
-    text: 使用 Visual Studio 连接服务将应用或服务项目快速连接到各种 Azure 服务，以自动添加连接代码和配置。
-  - type: list
-    style: icon48
+      - type: paragraph
+        text: ' 了解如何在 Azure 中调试应用和监视性能。'
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - href: vs-azure-tools-intellitrace-debug-published-cloud-services.md
+            html: <p></p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_debug.svg'
+            title: 在 Azure 中调试云服务
+          - href: vs-azure-tools-debug-cloud-services-virtual-machines.md
+            html: <p></p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_vmm-cloud.svg'
+            title: 调试在虚拟机上运行的应用
+          - href: vs-azure-tools-performance-profiling-cloud-services.md
+            html: <p></p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_code-performance.svg'
+            title: 在 Azure 中测量云服务的性能
+  - title: 使用 Visual Studio 连接服务将应用连接到 Azure
     items:
-    - image:
-        src: https://docs.microsoft.com/azure/media/index/Storage.svg
-      text: Azure 存储
-      href: vs-azure-tools-connected-services-storage.md
-    - image:
-        src: https://docs.microsoft.com/azure/media/index/ActiveDirectory.svg
-      text: Azure Active Directory
-      href: /azure/active-directory/develop/vs-active-directory-add-connected-service
-- title: Azure 云服务
-  items:
-  - type: paragraph
-    text: Azure 云服务是用于创建常规 Azure 服务的常规用途技术，具有对 Azure 存储和其他 Azure 资源的访问权限。
-  - type: list
-    style: cards
-    className: cardsM
-    columns: 3
+      - type: paragraph
+        text: 使用 Visual Studio 连接服务将应用或服务项目快速连接到各种 Azure 服务，以自动添加连接代码和配置。
+      - type: list
+        style: icon48
+        items:
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/Storage.svg'
+            text: Azure 存储
+            href: vs-azure-tools-connected-services-storage.md
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/ActiveDirectory.svg'
+            text: Azure Active Directory
+            href: /azure/active-directory/develop/vs-active-directory-add-connected-service
+  - title: Azure 云服务
     items:
-    - href: vs-azure-tools-azure-project-create.md
-      html: <p>创建和配置 Azure 云服务项目</p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_config-tools.svg
-      title: 项目
-    - href: vs-azure-tools-debugging-cloud-services-overview.md
-      html: <p>在本地和在 Azure 中调试云服务</p>
-      image:
-        src: https://docs.microsoft.com//media/common/i_debug.svg
-      title: 调试
-    - href: vs-azure-tools-performance-profiling-cloud-services.md
-      html: <p>使用 Visual Studio 探查器</p>
-      image:
-        src: https://docs.microsoft.com//media/common/i_code-performance.svg
-      title: 分析性能
-    - href: vs-azure-tools-publishing-a-cloud-service.md
-      html: <p>将云服务发布到 Azure</p>
-      image:
-        src: https://docs.microsoft.com//media/common/i_deploy.svg
-      title: 发布
-    - href: vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md
-      html: <p>监视和诊断在 Azure 中运行的云服务和虚拟机</p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_load-testing.svg
-      title: 诊断
-- title: 在 Visual Studio 中使用 Azure 资源
-  items:
-  - type: paragraph
-    text: Visual Studio 中的 Cloud Explorer 提供了访问 Azure 资源（例如存储帐户和虚拟机）的便捷方法。
-  - type: list
-    style: cards
-    className: cardsM
-    columns: 3
+      - type: paragraph
+        text: Azure 云服务是用于创建常规 Azure 服务的常规用途技术，具有对 Azure 存储和其他 Azure 资源的访问权限。
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - href: vs-azure-tools-azure-project-create.md
+            html: <p>创建和配置 Azure 云服务项目</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
+            title: 项目
+          - href: vs-azure-tools-debugging-cloud-services-overview.md
+            html: <p>在本地和在 Azure 中调试云服务</p>
+            image:
+              src: 'https://docs.microsoft.com//media/common/i_debug.svg'
+            title: 调试
+          - href: vs-azure-tools-performance-profiling-cloud-services.md
+            html: <p>使用 Visual Studio 探查器</p>
+            image:
+              src: 'https://docs.microsoft.com//media/common/i_code-performance.svg'
+            title: 分析性能
+          - href: vs-azure-tools-publishing-a-cloud-service.md
+            html: <p>将云服务发布到 Azure</p>
+            image:
+              src: 'https://docs.microsoft.com//media/common/i_deploy.svg'
+            title: 发布
+          - href: vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md
+            html: <p>监视和诊断在 Azure 中运行的云服务和虚拟机</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_load-testing.svg'
+            title: 诊断
+  - title: 在 Visual Studio 中使用 Azure 资源
     items:
-    - href: vs-azure-tools-storage-resources-server-explorer-browse-manage.md
-      html: <p>在 Visual Studio 中访问 Azure 存储帐户</p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_dashboard.svg
-      title: 存储
-    - href: vs-azure-tools-virtual-machines-access-from-server-explorer.md
-      html: <p>从 Visual Studio 访问虚拟机</p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_vmm-cloud.svg
-      title: 虚拟机
-- title: 其他 Azure 开发资源
-  items:
-  - type: paragraph
-    text: 安装 Azure 开发工作负载后，Visual Studio 提供了支持使用特定 Azure 服务进行开发的各种项目的项目模板。
-  - type: list
-    style: icon48
+      - type: paragraph
+        text: Visual Studio 中的 Cloud Explorer 提供了访问 Azure 资源（例如存储帐户和虚拟机）的便捷方法。
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - href: vs-azure-tools-storage-resources-server-explorer-browse-manage.md
+            html: <p>在 Visual Studio 中访问 Azure 存储帐户</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+            title: 存储
+          - href: vs-azure-tools-virtual-machines-access-from-server-explorer.md
+            html: <p>从 Visual Studio 访问虚拟机</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_vmm-cloud.svg'
+            title: 虚拟机
+  - title: 其他 Azure 开发资源
     items:
-    - image:
-        src: https://docs.microsoft.com/azure/azure-resource-manager/media/index/azure-resource-manager.svg
-      text: Azure 资源组
-      href: https://docs.microsoft.com/azure/azure-resource-manager/vs-azure-tools-resource-groups-deployment-projects-create-deploy
-    - image:
-        src: https://docs.microsoft.com/azure/media/index/Azure-Data-Lake-Analytics-COLOR.svg
-      text: Data Lake Analytics
-      href: https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-data-lake-tools-get-started
-    - image:
-        src: https://docs.microsoft.com/azure/media/index/StreamAnalytics.svg
-      text: 流分析
-      href: https://docs.microsoft.com/azure/stream-analytics/stream-analytics-quick-create-vs
-    - image:
-        src: https://docs.microsoft.com/azure/media/index/Fabric.svg
-      text: Service Fabric
-      href: https://docs.microsoft.com/azure/service-fabric/service-fabric-get-started
+      - type: paragraph
+        text: 安装 Azure 开发工作负载后，Visual Studio 提供了支持使用特定 Azure 服务进行开发的各种项目的项目模板。
+      - type: list
+        style: icon48
+        items:
+          - image:
+              src: 'https://docs.microsoft.com/azure/azure-resource-manager/media/index/azure-resource-manager.svg'
+            text: Azure 资源组
+            href: 'https://docs.microsoft.com/azure/azure-resource-manager/vs-azure-tools-resource-groups-deployment-projects-create-deploy'
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/Azure-Data-Lake-Analytics-COLOR.svg'
+            text: Data Lake Analytics
+            href: 'https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-data-lake-tools-get-started'
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/StreamAnalytics.svg'
+            text: 流分析
+            href: 'https://docs.microsoft.com/azure/stream-analytics/stream-analytics-quick-create-vs'
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/Fabric.svg'
+            text: Service Fabric
+            href: 'https://docs.microsoft.com/azure/service-fabric/service-fabric-get-started'

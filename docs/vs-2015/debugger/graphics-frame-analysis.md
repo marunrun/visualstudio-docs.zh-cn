@@ -1,27 +1,22 @@
 ---
 title: 图形帧分析 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.graphics.frameanalysis
 ms.assetid: 336c48ba-a1c4-4db9-b2a4-3de4a129cdd6
 caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 59cd0006f375335d9cf3e714689bead6615b395d
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: bc11af7d259f252d7659f559be15b85f4af90149
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51770374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63437944"
 ---
 # <a name="graphics-frame-analysis"></a>图形帧分析
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,7 +24,7 @@ ms.locfileid: "51770374"
 使用 Visual Studio 图形分析器中的图形帧分析可分析并优化你的 Direct3D 游戏或应用的呈现性能。  
   
 > [!IMPORTANT]
->  图形分析器对于在支持的平台（包括 Windows 10）上使用 Direct3D 11 的应用支持帧分析。 对于使用 Direct3D 12 的应用，当前不支持帧分析。  
+> 图形分析器对于在支持的平台（包括 Windows 10）上使用 Direct3D 11 的应用支持帧分析。 对于使用 Direct3D 12 的应用，当前不支持帧分析。  
   
 ## <a name="frame-analysis"></a>帧分析  
  帧分析使用的信息与在图形日志文件中捕获的用于诊断的信息相同，但是使用它可汇总呈现性能。 在捕获期间，性能信息未记录到日志中；相反，性能信息稍后可通过计时事件和在播放帧时收集统计信息，在帧分析期间生成。 通过在捕获期间记录性能信息，此方法具有以下几个优点：  
@@ -47,14 +42,14 @@ ms.locfileid: "51770374"
   若要查看演示，帧分析可以为你的应用执行的操作，可以观看[Visual Studio 图形帧分析](http://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool)第 9 频道上的视频。  
   
 ## <a name="using-frame-analysis"></a>使用帧分析  
- 在可以使用帧分析之前，你必须在应用运行时从应用中捕获图形信息，正如你在使用任何其他图形分析器工具时进行的操作。 然后，在图形日志文档 (.vsglog) 窗口中，选择**帧分析**选项卡。  
+ 在可以使用帧分析之前，你必须在应用运行时从应用中捕获图形信息，正如你在使用任何其他图形分析器工具时进行的操作。 然后，在图形日志文档 (.vsglog) 窗口中，选择“帧分析”选项卡。  
   
  ![选择帧分析选项卡](../debugger/media/pix-frame-analysis-select-tab.png "pix_frame_analysis_select_tab")  
   
  在分析完成之后，将显示结果。 帧分析选项卡顶部将显示时间线和摘要表。 选项卡底部将显示详细信息表。 如果在播放期间产生错误或警告，则将在时间线上对它们进行汇总；你可以遵循此处的链接以了解错误和警告的详细信息。  
   
 ### <a name="interpreting-results"></a>解释结果  
- 通过解释每个变体的结果，可推断有关你的应用的呈现性能和行为的有用信息。 有关呈现变体的详细信息，请参阅[变体](#Variants)这篇文章中更高版本。  
+ 通过解释每个变体的结果，可推断有关你的应用的呈现性能和行为的有用信息。 有关呈现变体的详细信息，请参阅本文后面的[变体](#Variants)。  
   
  有些结果直接指示变体如何影响呈现性能：  
   
@@ -74,7 +69,7 @@ ms.locfileid: "51770374"
   
 - 如果“一半/四分之一纹理尺寸”变体显示显著的性能提升，则很可能你的纹理占用了太多内存、消耗了太多带宽，或使用了效率低下的纹理缓存。 如果此变体显示性能中没有更改，则你很可能可以使用更大、细节更多的纹理，而无需性能开销。  
   
-  当硬件计数器可用时，你可以使用它们收集有关应用可能会遭遇呈现性能问题原因的非常详细的信息。 所有功能级别 9.2 和更高版本设备都支持深度封闭查询 (**封闭的像素为单位**计数器) 和时间戳。 其他硬件计数器也可能可用，这取决于 GPU 制造商是否实施了硬件计数器并在驱动程序中公开了这些计数器。 你可以使用这些计数器来确认摘要表中显示的结果的确切成因，例如，你可以通过检查深度测试封闭的像素的百分比，确定过度绘制是否是一个因素。  
+  当硬件计数器可用时，你可以使用它们收集有关应用可能会遭遇呈现性能问题原因的非常详细的信息。 所有功能级别 9.2 和更高设备支持深度封闭查询（“封闭的像素”计数器）以及时间戳。 其他硬件计数器也可能可用，这取决于 GPU 制造商是否实施了硬件计数器并在驱动程序中公开了这些计数器。 你可以使用这些计数器来确认摘要表中显示的结果的确切成因，例如，你可以通过检查深度测试封闭的像素的百分比，确定过度绘制是否是一个因素。  
   
 ### <a name="timeline-and-summary-table"></a>时间线和摘要表  
  默认情况下，显示时间线和摘要表，并且折叠其他部分。  
@@ -123,7 +118,7 @@ ms.locfileid: "51770374"
  硬件计数器信息为每个绘图调用都提供了一个特定硬件平台行为的非常详细的视图，可帮助你非常准确地标识出现性能瓶颈的原因。  
   
 > [!NOTE]
->  不同的硬件平台支持不同的计数器；不存在任何标准。 计数器及其表示的内容由每个 GPU 制造商单独确定。  
+> 不同的硬件平台支持不同的计数器；不存在任何标准。 计数器及其表示的内容由每个 GPU 制造商单独确定。  
   
 ### <a name="marker-regions-and-events"></a>标记区域和事件  
  帧分析支持用户定义的事件标记和事件组。 它们将显示在摘要表和详细信息表中。  
@@ -144,13 +139,13 @@ ms.locfileid: "51770374"
   
  帧分析将重试次数限制为 10。 如果你的平台包含积极的电源管理或门控时钟，它可能会导致帧分析失败并报告错误，因为它已经超过了重试限制。 你也许可以通过将平台的电源管理和时钟速度重置以降低积极性来缓解此问题（如果平台启用了它）。  
   
-##  <a name="HardwareSupport"></a> 硬件支持  
+## <a name="HardwareSupport"></a> 硬件支持  
   
 ### <a name="timestamps-and-occlusion-queries"></a>时间戳和封闭查询  
  在支持帧分析的所有平台上都受支持的时间戳。 深度封闭查询（对于“封闭的像素”计数器是必需的）在支持功能级别 9.2 或更高级别的平台上均受支持。  
   
 > [!NOTE]
->  虽然所有支持帧分析的平台都支持时间戳，但是时间戳的准确性和一致性因平台而异。  
+> 虽然所有支持帧分析的平台都支持时间戳，但是时间戳的准确性和一致性因平台而异。  
   
 ### <a name="gpu-counters"></a>GPU 计数器  
  对 GPU 硬件计数器的支持与硬件相关。  
@@ -164,7 +159,7 @@ ms.locfileid: "51770374"
   任何其他支持帧分析的平台都不会收集 GPU 硬件计数器。  
   
 > [!NOTE]
->  由于 GPU 硬件计数器为硬件资源，因此要收集每个呈现变体的完整硬件计数器整集可能要采取多个传递。 因此，收集计数器 GPU 应采取的顺序未指定。  
+> 由于 GPU 硬件计数器为硬件资源，因此要收集每个呈现变体的完整硬件计数器整集可能要采取多个传递。 因此，收集计数器 GPU 应采取的顺序未指定。  
   
 ### <a name="windows-phone"></a>Windows phone  
  时间戳、封闭查询和 GPU 硬件计数器仅在最初随 Windows Phone 8.1 提供的 Windows Phone 手机上受支持。 帧分析需要它们以播放图形日志文件。 最初随 Windows Phone 8 提供的 Windows Phone 手机不支持帧分析，即使手机已更新到 Windows Phone 8.1 也是如此。  
@@ -179,34 +174,31 @@ ms.locfileid: "51770374"
  在图形分析器中，当你播放使用比播放计算机支持的功能级别更高的图形日志文件时，它将自动回退到 WARP。 在帧分析中，它显然不会回退到 WARP，而且它会生成一个错误，因为 WARP 对于检查 Direct3D 应用的正确性（而非其性能）很有用。  
   
 > [!NOTE]
->  虽然记住功能级别的问题很重要，但是你可以在不同的硬件配置和设备上捕获并播放图形日志文件。 例如，你可以在 Windows Phone 上捕获图形信息，然后在台式计算机上播放它，反之亦然。 在这两种情况下，只要日志文件不包含 API 或使用在播放计算机上不受支持的功能级别，就可以播放图形日志。  
+> 虽然记住功能级别的问题很重要，但是你可以在不同的硬件配置和设备上捕获并播放图形日志文件。 例如，你可以在 Windows Phone 上捕获图形信息，然后在台式计算机上播放它，反之亦然。 在这两种情况下，只要日志文件不包含 API 或使用在播放计算机上不受支持的功能级别，就可以播放图形日志。  
   
 ### <a name="direct3d-10-and-lower"></a>Direct3D 10 及更低版本  
  帧分析仅在 Direct3D 11 API 中受支持。 如果你的应用调用 Direct3D 10 API，则即使图形分析器工具已识别并使用它们，帧分析也不会识别或配置它们。 如果你的应用同时使用 Direct3D11 API 和 Direct3D 10 API，则仅配置 Direct3D 11 调用。  
   
 > [!NOTE]
->  这仅适用于你正在使用的 Direct3D API 调用，不适用于功能级别。 只要你使用的是 Direct3D 11、Direct3D 11.1 或 Direct3D 11.2 API，你就可以随意使用所需的功能级别，帧分析还会正常工作。  
+> 这仅适用于你正在使用的 Direct3D API 调用，不适用于功能级别。 只要你使用的是 Direct3D 11、Direct3D 11.1 或 Direct3D 11.2 API，你就可以随意使用所需的功能级别，帧分析还会正常工作。  
   
-##  <a name="Variants"></a> 变体  
- 帧分析可以在播放期间呈现帧的方式为每个更改称为*变体*。 帧分析检查的变体对应于你为了提升应用的呈现性能或视觉质量可能做出的相对容易的常见更改，例如，减小纹理大小、使用纹理压缩或启用不同种类的抗锯齿。 这些变体将重写应用的常用呈现上下文和参数。 摘要如下：  
+## <a name="Variants"></a> 变量  
+ 播放期间，帧分析对呈现帧的方式所做出的每个更改称为“变体”。 帧分析检查的变体对应于你为了提升应用的呈现性能或视觉质量可能做出的相对容易的常见更改，例如，减小纹理大小、使用纹理压缩或启用不同种类的抗锯齿。 这些变体将重写应用的常用呈现上下文和参数。 摘要如下：  
   
 |变体|描述|  
 |-------------|-----------------|  
-|**1x1 视区大小**|将所有呈现器目标上的视口尺寸缩小为 1x1 像素。<br /><br /> 有关详细信息，请参阅[1x1 视口大小变体](../debugger/1x1-viewport-size-variant.md)|  
-|**0 x MSAA**|在所有呈现器目标上禁用多重采样抗锯齿 (MSAA)。<br /><br /> 有关详细信息，请参阅[0 x / 2 x / 4 msaa 变体](../debugger/0x-2x-4x-msaa-variants.md)|  
-|**2x MSAA**|在所有呈现器目标上启用 2x 多重采样抗锯齿 (MSAA)。<br /><br /> 有关详细信息，请参阅[0 x / 2 x / 4 msaa 变体](../debugger/0x-2x-4x-msaa-variants.md)|  
-|**4x MSAA**|在所有呈现器目标上启用 4x 多重采样抗锯齿 (MSAA)。<br /><br /> 有关详细信息，请参阅[0 x / 2 x / 4 msaa 变体](../debugger/0x-2x-4x-msaa-variants.md)|  
+|**1x1 视区大小**|将所有呈现器目标上的视口尺寸缩小为 1x1 像素。<br /><br /> 有关详细信息，请参阅 [1x1 视区大小变体](../debugger/1x1-viewport-size-variant.md)|  
+|**0x MSAA**|在所有呈现器目标上禁用多重采样抗锯齿 (MSAA)。<br /><br /> 有关详细信息，请参阅 [0x/2x/4x MSAA 变体](../debugger/0x-2x-4x-msaa-variants.md)|  
+|**2x MSAA**|在所有呈现器目标上启用 2x 多重采样抗锯齿 (MSAA)。<br /><br /> 有关详细信息，请参阅 [0x/2x/4x MSAA 变体](../debugger/0x-2x-4x-msaa-variants.md)|  
+|**4x MSAA**|在所有呈现器目标上启用 4x 多重采样抗锯齿 (MSAA)。<br /><br /> 有关详细信息，请参阅 [0x/2x/4x MSAA 变体](../debugger/0x-2x-4x-msaa-variants.md)|  
 |**点纹理筛选**|针对所有相应的纹理采样，将筛选模式设置为 `DXD11_FILTER_MIN_MAG_MIP_POINT`（点纹理筛选）。<br /><br /> 有关详细信息，请参阅[Point、 Bilinear、 Trilinear 和 Anisotropic 纹理过滤变体](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)。|  
 |**双线性纹理筛选**|针对所有相应的纹理采样，将筛选模式设置为 `DXD11_FILTER_MIN_MAG_LINEAR_MIP_POINT`（双线性纹理筛选）。<br /><br /> 有关详细信息，请参阅[Point、 Bilinear、 Trilinear 和 Anisotropic 纹理过滤变体](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)。|  
-|**三线性纹理筛选**|针对所有相应的纹理采样，将筛选模式设置为 `DXD11_FILTER_MIN_MAG_MIP_LINEAR`（三线性纹理筛选）。<br /><br /> 有关详细信息，请参阅[Point、 Bilinear、 Trilinear 和 Anisotropic 纹理过滤变体](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)。|  
-|**各向异性纹理筛选**|筛选模式设置为`DXD11_FILTER_ANISOTROPIC`并`MaxAnisotropy`到`16`(16 x 各向异性纹理筛选) 的所有相应的纹理采样。<br /><br /> 有关详细信息，请参阅[Point、 Bilinear、 Trilinear 和 Anisotropic 纹理过滤变体](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)。|  
-|**16bpp 呈现器目标格式**|针对所有呈现器目标和后台缓冲区，将像素格式设置为 `DXGI_FORMAT_B5G6R5_UNORM`（16bpp，565 格式）。<br /><br /> 有关详细信息，请参阅[16bpp 呈现目标格式变体](../debugger/16bpp-render-target-format-variant.md)|  
-|**Mip 贴图生成**|对非呈现器目标的所有纹理启用 Mip 贴图。<br /><br /> 有关详细信息，请参阅[Mip 贴图生成变体](../debugger/mip-map-generation-variant.md)。|  
-|**一半纹理尺寸**|将非呈现器目标的所有纹理上的纹理尺寸减小为其每种尺寸的原始大小的一半。 例如，256x128 纹理将减小为 128x64 纹素。<br /><br /> 有关详细信息，请参阅[half/quarter 纹理维度变体](../debugger/half-quarter-texture-dimensions-variant.md)。|  
-|**四分之一纹理尺寸**|将非呈现器目标的所有纹理上的纹理尺寸减小为其每种尺寸的原始大小的四分之一。 例如，256x128 纹理将减小为 64x32 纹素。<br /><br /> 有关详细信息，请参阅[half/quarter 纹理维度变体](../debugger/half-quarter-texture-dimensions-variant.md)。|  
-|**BC 纹理压缩**|对所有包含 B8G8R8X8、B8G8R8A8 或 R8G8B8A8 像素格式变体的纹理启用块压缩。 通过使用 BC1 压缩 B8G8R8X8 格式变体；通过使用 BC3 压缩 B8G8R8A8 和 R8G8B8A8 格式变体。<br /><br /> 有关详细信息，请参阅[BC 纹理压缩变体](../debugger/bc-texture-compression-variant.md)。|  
+|**三双线性纹理筛选**|针对所有相应的纹理采样，将筛选模式设置为 `DXD11_FILTER_MIN_MAG_MIP_LINEAR`（三线性纹理筛选）。<br /><br /> 有关详细信息，请参阅[Point、 Bilinear、 Trilinear 和 Anisotropic 纹理过滤变体](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)。|  
+|**各向异性纹理筛选**|针对所有相应的纹理采用，将筛选模式设置为 `DXD11_FILTER_ANISOTROPIC`，并将 `MaxAnisotropy` 设置为 `16`（16x 各向异性纹理筛选）。<br /><br /> 有关详细信息，请参阅[Point、 Bilinear、 Trilinear 和 Anisotropic 纹理过滤变体](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)。|  
+|**16bpp 呈现器目标格式**|针对所有呈现器目标和后台缓冲区，将像素格式设置为 `DXGI_FORMAT_B5G6R5_UNORM`（16bpp，565 格式）。<br /><br /> 有关详细信息，请参阅 [16bpp 呈现目标格式变体](../debugger/16bpp-render-target-format-variant.md)|  
+|**Mip 贴图生成**|对非呈现器目标的所有纹理启用 Mip 贴图。<br /><br /> 有关详细信息，请参阅 [Mip 贴图生成变体](../debugger/mip-map-generation-variant.md)。|  
+|**一半纹理尺寸**|将非呈现器目标的所有纹理上的纹理尺寸减小为其每种尺寸的原始大小的一半。 例如，256x128 纹理将减小为 128x64 纹素。<br /><br /> 有关详细信息，请参阅 [Half/Quarter 纹理维度变体](../debugger/half-quarter-texture-dimensions-variant.md)。|  
+|**四分之一纹理尺寸**|将非呈现器目标的所有纹理上的纹理尺寸减小为其每种尺寸的原始大小的四分之一。 例如，256x128 纹理将减小为 64x32 纹素。<br /><br /> 有关详细信息，请参阅 [Half/Quarter 纹理维度变体](../debugger/half-quarter-texture-dimensions-variant.md)。|  
+|**BC 纹理压缩**|对所有包含 B8G8R8X8、B8G8R8A8 或 R8G8B8A8 像素格式变体的纹理启用块压缩。 通过使用 BC1 压缩 B8G8R8X8 格式变体；通过使用 BC3 压缩 B8G8R8A8 和 R8G8B8A8 格式变体。<br /><br /> 有关详细信息，请参阅 [BC 纹理压缩变体](../debugger/bc-texture-compression-variant.md)。|  
   
- 大多数变体的结果是强制性规定：“将纹理大小减小一半速度会快 25%”或“启用 2x MSAA 速度仅慢 2%”。 其他变体可能会需要更多解释，例如，如果将视口尺寸更改为 1x1 的变体显示较大的性能提升，则可能指示呈现遇到低填充率瓶颈；或者，如果性能未出现显著变化，则可能指示呈现遇到顶点处理瓶颈。
-
-
-
+ 大多数变体的结果是强制性规定："减少了一半纹理大小是速度更快 25%"或者"启用 2x MSAA 速度仅慢 2%"。 其他变体可能会需要更多解释，例如，如果将视口尺寸更改为 1x1 的变体显示较大的性能提升，则可能指示呈现遇到低填充率瓶颈；或者，如果性能未出现显著变化，则可能指示呈现遇到顶点处理瓶颈。

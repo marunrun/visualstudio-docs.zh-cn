@@ -1,8 +1,7 @@
 ---
 title: 网络或代理错误的疑难解答
 description: 为在防火墙或代理服务器后安装或使用 Visual Studio 时可能会遇到的网络或代理相关错误查找解决方案。
-ms.date: 02/12/2018
-ms.prod: visual-studio-dev15
+ms.date: 05/22/2019
 ms.topic: troubleshooting
 helpviewer_keywords:
 - network installation, Visual Studio
@@ -13,15 +12,17 @@ helpviewer_keywords:
 ms.assetid: ''
 author: TerryGLee
 ms.author: tglee
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4693a50246493a97e74ba75dc7f516ce72a215ad
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.prod: visual-studio-windows
+ms.technology: vs-installation
+ms.openlocfilehash: 27364bd028d9fb493da354d3bff7f11efe5f459d
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53914937"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67825710"
 ---
 # <a name="troubleshooting-network-related-errors-when-you-install-or-use-visual-studio"></a>安装或使用 Visual Studio 时与网络相关错误的疑难解答
 
@@ -35,39 +36,61 @@ ms.locfileid: "53914937"
 
 - 重新启动 Visual Studio。 这时会出现一个代理身份验证对话框。 出现提示时，在对话框中输入你的凭据。
 
-- 如果重启 Visual Studio 未能解决问题，这可能是由于你的代理服务器不提示需要提供 http:&#47;&#47;go.microsoft.com 地址的凭据，而是提示需要 &#42;.visualStudio.com 地址的凭据。 对于这些服务器，请考虑将以下 URL 列入到白名单，以取消对 Visual Studio 中所有登录场景的阻止：
+- 如果重启 Visual Studio 未能解决问题，这可能是由于你的代理服务器不提示需要提供 http:&#47;&#47;go.microsoft.com 地址的凭据，而是提示需要 &#42;.visualStudio.microsoft.com 地址的凭据。 对于这些服务器，请考虑将以下 URL 添加到允许列表，以取消对 Visual Studio 中所有登录场景的阻止：
 
-    - &#42;.windows.net
+  - &#42;.windows.net
 
-    - &#42;.microsoftonline.com
+  - &#42;.microsoftonline.com
 
-    - &#42;.visualstudio.com
+  - &#42;.visualstudio.microsoft.com
 
-    - &#42;.microsoft.com
+  - &#42;.microsoft.com
 
-    - &#42;.live.com
+  - &#42;.live.com
 
 - 否则，可以从允许列表中删除 http:&#47;&#47;go.microsoft.com 地址，以便在重启 Visual Studio 时出现代理身份验证对话框，以提供 http:&#47;&#47;go.microsoft.com 地址和服务器终结点。
 
-    或
+  \- 或 -
 
 - 如果你想通过代理使用默认凭据，则可以执行以下操作：
 
-  1. 查找 devenv.exe.config（devenv.exe 配置文件），查找位置为：%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE 或 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE。
+::: moniker range="vs-2017"
+
+  1. 查找 devenv.exe.config（devenv.exe 配置文件），查找位置为：%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE 或 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE    。
 
   2. 在配置文件中查找 `<system.net>` 块，然后添加这个代码：
 
       ```xml
       <defaultProxy enabled="true" useDefaultCredentials="true">
-          <proxy bypassonlocal="True" proxyaddress=" HYPERLINK "http://<yourproxy:port#>" http://<yourproxy:port#>"/>
+          <proxy bypassonlocal="True" proxyaddress="http://<yourproxy:port#>"/>
       </defaultProxy>
       ```
 
       你必须在 `proxyaddress="<http://<yourproxy:port#>` 中为你的网络插入正确的代理地址。
 
-     或
+     > [!NOTE]
+     > 有关详细信息，请参阅[&lt;defaultProxy&gt; 元素（网络设置）](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings/)和 [proxy&lt;&gt; 元素（网络设置）](/dotnet/framework/configure-apps/file-schema/network/proxy-element-network-settings)页。
 
-- 此外，也可以按照[如何通过经身份验证的 Web 代理进行连接](https://blogs.msdn.microsoft.com/rido/2010/05/06/how-to-connect-to-tfs-through-authenticated-web-proxy/)博客文章中的说明，了解如何添加允许你使用代理的代码。
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+  1. 查找 devenv.exe.config（devenv.exe 配置文件），查找位置为：%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE 或 %ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE    。
+
+  2. 在配置文件中查找 `<system.net>` 块，然后添加这个代码：
+
+      ```xml
+      <defaultProxy enabled="true" useDefaultCredentials="true">
+          <proxy bypassonlocal="True" proxyaddress="http://<yourproxy:port#>"/>
+      </defaultProxy>
+      ```
+
+      你必须在 `proxyaddress="<http://<yourproxy:port#>` 中为你的网络插入正确的代理地址。
+
+     > [!NOTE]
+     > 有关详细信息，请参阅[&lt;defaultProxy&gt; 元素（网络设置）](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings/)和 [proxy&lt;&gt; 元素（网络设置）](/dotnet/framework/configure-apps/file-schema/network/proxy-element-network-settings)页。
+
+::: moniker-end
 
 ## <a name="error-the-underlying-connection-was-closed"></a>错误：“基础连接已关闭”
 
@@ -97,7 +120,7 @@ Visual Studio 使用传输层安全性 (TLS) 1.2 协议连接到网络资源。 
 
 - &#42;.azurewebsites.net（用于 Azure 连接）
 
-- &#42;.visualstudio.com
+- &#42;.visualstudio.microsoft.com
 
 - cdn.vsassets.io（主机内容分发网络或 CDN、内容）
 
@@ -116,4 +139,4 @@ Visual Studio 使用传输层安全性 (TLS) 1.2 协议连接到网络资源。 
 
 * [在防火墙或代理服务器后面安装和使用 Visual Studio](install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md)
 * [Visual Studio 管理员指南](visual-studio-administrator-guide.md)
-* [安装 Visual Studio 2017](install-visual-studio.md)
+* [安装 Visual Studio](install-visual-studio.md)

@@ -1,19 +1,19 @@
 ---
 title: Hello World 扩展教程 |Microsoft Docs
-ms.date: 07/10/2017
+ms.date: 03/14/2019
 ms.topic: conceptual
 ms.assetid: f74e1ad1-1ee5-4360-9bd5-d82467b884ca
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1e7d221526a0fc0214b57eff0c122e526fc09029
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 4c3bbafcf138c60b65940bcee73c74f56cf6e2fd
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53827080"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66342863"
 ---
 # <a name="create-your-first-extension-hello-world"></a>创建第一个扩展：Hello World
 
@@ -35,16 +35,18 @@ ms.locfileid: "53827080"
 
 ## <a name="prerequisites"></a>系统必备
 
-在开始之前，请确保已安装**Visual Studio 扩展开发**工作负荷包括 VSIX 模板将需要和示例代码。
+在开始之前，请确保已安装**Visual Studio 扩展开发**工作负荷中，其中包含 VSIX 模板将需要和示例代码。
 
 > [!NOTE]
 > 可以使用任何版本的 Visual Studio （Community、 Professional 或 Enterprise） 若要创建 Visual Studio 扩展性项目。
 
 ## <a name="create-an-extensibility-project"></a>创建可扩展性项目
 
-步骤 1。 从**文件**菜单上，单击**新项目**。 在屏幕的底部，输入你的项目的名称。
+::: moniker range="vs-2017"
 
-步骤 2。 从**模板**菜单上，单击**Visual C#**，单击**扩展性**，然后单击**VSIX 项目**。
+步骤 1。 从“文件”菜单中选择“新建” > “项目”。   
+
+步骤 2。 在右上角的搜索框中，键入"vsix"并选择视觉对象C# **VSIX 项目**。 输入"HelloWorld"**名称**对话框并选择底部**确定**。
 
 ![新建项目](media/hello-world-new-project.png)
 
@@ -52,31 +54,55 @@ ms.locfileid: "53827080"
 
 如果你需要将本教程中，再返回到它，您可以在找到新的 HelloWorld 项目**起始页**中**最近**部分。
 
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+步骤 1。 从“文件”菜单中选择“新建” > “项目”。    搜索"vsix"并选择视觉对象C# **VSIX 项目**，然后**下一步**。
+
+步骤 2。 输入"HelloWorld"**项目名称**，然后选择**创建**。
+
+![新建项目](media/hello-world-new-project-2019.png)
+
+现在应看到在 HelloWorld 项目**解决方案资源管理器**。
+
+::: moniker-end
+
 ## <a name="add-a-custom-command"></a>添加自定义命令
 
-步骤 1。 如果您选择的清单，可以看到哪些选项是可更改，为实例、 元数据、 说明和版本。
+步骤 1。 如果选择 *.vsixmanifest*清单文件中，您可以看到哪些选项可更改，如说明、 作者和版本。
 
-步骤 2。 右键单击项目 （而不是解决方案）。 在上下文菜单上，单击**外**，然后单击**新项**。
+步骤 2。 右键单击项目 （而不是解决方案）。 在上下文菜单中，选择**外**，然后**新项**。
 
-步骤 3。 选择**扩展性**部分，并单击**自定义命令**。
+步骤 3。 选择**扩展性**部分中，，然后选择**自定义命令**。
 
-步骤 4。 在中**名称**底部字段中，为其提供一个名称，例如*Command.cs*。
+步骤 4。 在中**名称**底部字段中，输入一个文件名，例如*Command.cs*。
 
 ![自定义命令](media/hello-world-custom-command.png)
 
-您的新命令所示**解决方案资源管理器**下**资源**分支。 这是在这里可找到与您的命令，例如，如果你想要修改图像的 PNG 和 ICO 文件相关的其他文件。
+新的命令文件是在可见**解决方案资源管理器**。 下**资源**节点，您会发现与命令相关的其他文件。 例如，如果你想要修改映像，PNG 文件此处。
 
 ## <a name="modify-the-source-code"></a>修改源代码
 
-此时，你要添加的按钮是非常通用的。 您必须修改的 VSCT 文件和 CS 文件，如果你想要进行更改。
+此时，命令和按钮文本是自动生成并不是十分有趣。 如果你想要进行更改，可以修改的 VSCT 文件和 CS 文件。
 
-* VSCT 文件是在其中您可以重命名你的命令，以及定义何处 Visual Studio 命令系统中。 在探索 VSCT 文件，您会注意到大量注释说明代码控件的哪个每个部分的代码。
+* VSCT 文件是在其中您可以重命名你的命令，以及定义何处 Visual Studio 命令系统中。 在探索 VSCT 文件，您会注意到其中的注释解释 VSCT 代码控件的哪个每个部分。
 
 * CS 文件是可以在其中定义操作，例如单击处理程序。
+
+::: moniker range="vs-2017"
 
 步骤 1。 在中**解决方案资源管理器**，查找您的新命令的 VSCT 文件。 在这种情况下，将调用*CommandPackage.vsct*。
 
 ![命令包 vsct](media/hello-world-command-package-vsct.png)
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+步骤 1。 在中**解决方案资源管理器**，查找扩展 VS 包的 VSCT 文件。 在这种情况下，将调用*HelloWorldPackage.vsct*。
+
+::: moniker-end
 
 步骤 2。 更改`ButtonText`参数`Say Hello World!`。
 
@@ -92,14 +118,15 @@ ms.locfileid: "53827080"
   ...
 ```
 
-步骤 3。 返回到**解决方案资源管理器**并找到*Command.cs*文件。 更改字符串`message`命令`string.Format(..)`到`Hello World!`。
+步骤 3。 返回到**解决方案资源管理器**并找到*Command.cs*文件。 在中`Execute`方法中，更改字符串`message`从`string.Format(..)`到`Hello World!`。
 
 ```csharp
   ...
-  private void MenuItemCallback(object sender, EventArgs e)
+  private void Execute(object sender, EventArgs e)
   {
+    ThreadHelper.ThrowIfNotOnUIThread();
     string message = "Hello World!";
-    string title = "Command1";
+    string title = "Command";
 
     // Show a message box to prove we were here
     VsShellUtilities.ShowMessageBox(
@@ -119,13 +146,17 @@ ms.locfileid: "53827080"
 
 你现在可以在 Visual Studio 实验实例中运行的源代码。
 
-步骤 1。 单击**启动**工具栏中。 这将生成项目并启动调试器，启动 Visual Studio 调用的一个新实例**实验实例**。
+步骤 1。 按**F5**运行**开始调试**命令。 此命令将生成项目并启动调试器，启动 Visual Studio 调用的一个新实例**实验实例**。
+
+::: moniker range="vs-2017"
 
 你将看到单词**实验实例**Visual Studio 标题栏中。
 
 ![实验实例标题栏](media/hello-world-exp-instance.png)
 
-步骤 2。 上**工具**菜单**实验实例**，单击**Say Hello World ！**。
+::: moniker-end
+
+步骤 2。 上**工具**菜单**实验实例**，单击**Say Hello World ！** 。
 
 ![最终结果](media/hello-world-final-result.png)
 
@@ -137,4 +168,5 @@ ms.locfileid: "53827080"
 
 * [开始开发 Visual Studio 扩展](starting-to-develop-visual-studio-extensions.md)-示例、 教程。 和发布你的扩展
 * [什么是 Visual Studio 2017 SDK 中的新增](what-s-new-in-the-visual-studio-2017-sdk.md)-Visual Studio 2017 中的新可扩展性功能
+* [什么是 Visual Studio 2019 SDK 中的新增](whats-new-visual-studio-2019-sdk.md)-Visual Studio 2019 中的新可扩展性功能
 * [在 Visual Studio SDK](internals/inside-the-visual-studio-sdk.md) -了解 Visual Studio 扩展性的详细信息

@@ -1,26 +1,21 @@
 ---
 title: 直接附加到程序 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debug engines, attaching to programs
 ms.assetid: ad2b7db8-821c-440c-ba07-c55c6a395e0f
 caps.latest.revision: 11
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 01845979c838c065774aeab55abc9a1a2cfcde6c
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: ab49163fc1474b541df3bc1b54d336574761baa3
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51773556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68147994"
 ---
 # <a name="attaching-directly-to-a-program"></a>直接附加到程序
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -29,7 +24,7 @@ ms.locfileid: "51773556"
   
 1. 在 IDE 中，选择**调试进程**命令**工具**菜单。  
   
-    这将显示“进程”对话框。  
+    这将显示“进程”  对话框。  
   
 2. 选择一个进程，然后单击**附加**按钮。  
   
@@ -50,4 +45,3 @@ ms.locfileid: "51773556"
 ## <a name="see-also"></a>请参阅  
  [启动后发送启动事件](../../extensibility/debugger/sending-startup-events-after-a-launch.md)   
  [调试任务](../../extensibility/debugger/debugging-tasks.md)
-

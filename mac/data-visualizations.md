@@ -1,23 +1,23 @@
 ---
 title: 调试 - 数据可视化效果
 description: 调试是编程中常见且必要的部分。 Visual Studio for Mac 提供了一整套易于调试的功能。 本文介绍在调试程序中检查对象时可以查看的各种数据可视化效果。
-author: conceptdev
-ms.author: crdun
+author: jmatthiesen
+ms.author: jomatthi
 ms.date: 05/06/2018
 ms.technology: vs-ide-debug
 ms.assetid: 527E6BEC-EF15-4002-ACB5-62AE1C16F6B7
-ms.openlocfilehash: 896fa055c536f9f3ee693773ad4f4ae0edd7e7fe
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
+ms.openlocfilehash: 14696040160dfc33f89b7647fb73b116b41afa16
+ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51349434"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67691732"
 ---
 # <a name="data-visualizations"></a>数据可视化效果
 
 Visual Studio for Mac 提供调试程序用户界面支持，允许调试时的变量、字段或属性的值的可视化效果。 这些数据可视化工具显示数据的扩展版本，使开发者可以检查已知结构，例如显示颜色结构的颜色。
 
-用户将鼠标悬停在行上时，单击值右侧的预览图标，可显示调试“本地”面板中的可视化工具：
+用户将鼠标悬停在行上时，单击值右侧的预览图标，可显示调试“本地”  面板中的可视化工具：
 
 ![“本地”面板](media/data-visualizations-image9.png)
 
@@ -48,7 +48,7 @@ iOS 和 Mac 中的 Rectangle/RectangleF 或 CGRect 显示维度和原点。 与�
 
 ![颜色可视化效果](media/data-visualizations-image14.png)
 
-## <a name="images"></a>图像
+## <a name="images"></a>映像
 
 媒体将按比例呈现（最大维度为 250 像素），且当图像超过 250 像素时，将缩放到合适比例：
 
@@ -78,7 +78,7 @@ iOS 和 Mac 中的 Rectangle/RectangleF 或 CGRect 显示维度和原点。 与�
 
 ## <a name="ienumerable"></a>IEnumerable
 
-IEnumerable 枚举所有值，可单击“显示”值按钮查看每个值。 IEnumerable 选项不会显示 `Array`、`ArrayList`、`List<>`、`Dictionary<,>` 等对象的值，因为它们有自己的调试程序可视化工具。
+IEnumerable 枚举所有值，可单击“显示”  值按钮查看每个值。 IEnumerable 选项不会显示 `Array`、`ArrayList`、`List<>`、`Dictionary<,>` 等对象的值，因为它们有自己的调试程序可视化工具。
 
 ![IEnumerable 可视化效果](media/data-visualizations-image22.png)
 
@@ -88,18 +88,18 @@ IEnumerable 枚举所有值，可单击“显示”值按钮查看每个值。 I
 
 ![其他可视化效果](media/data-visualizations-image23.png)
 
-*   **基元**
-    *   这将显示基元类型的原始值。
-*   **Enum**
-    *   这将显示字段值，不含枚举类型限定符。
-*   **Tuple**
-    *   以 (,) 的格式显示
-*   **Null**
-    *   显示“null”值。
-*   **URL**
-    *   这将显示一个可点击的超链接。
-*   **IntPtr**
-    *   这将显示 IntPtr 的十六进制表示形式。
+* **基元**
+  * 这将显示基元类型的原始值。
+* **Enum**
+  * 这将显示字段值，不含枚举类型限定符。
+* **Tuple**
+  * 以 (,) 的格式显示
+* **Null**
+  * 显示“null”值。
+* **URL**
+  * 这将显示一个可点击的超链接。
+* **IntPtr**
+  * 这将显示 IntPtr 的十六进制表示形式。
 
 ## <a name="see-also"></a>请参阅
 

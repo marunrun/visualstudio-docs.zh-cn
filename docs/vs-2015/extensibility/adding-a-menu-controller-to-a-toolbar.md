@@ -1,14 +1,9 @@
 ---
 title: 将菜单控制器添加到工具栏 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - toolbars [Visual Studio], adding menu controllers
 - menus, adding menu controllers to toolbars
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 6af9b0b4-037f-404c-bb40-aaa1970768ea
 caps.latest.revision: 39
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 13dec4b907b52e35b5b2377aafa511e50dc5cc48
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 3c63f6c98153c9f7a9fab171b3caddd57df717cc
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51771537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68184898"
 ---
 # <a name="adding-a-menu-controller-to-a-toolbar"></a>将菜单控制器添加到工具栏
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -119,7 +114,7 @@ ms.locfileid: "51771537"
   
 ## <a name="implementing-the-menu-controller-commands"></a>实现菜单控制器命令  
   
-1.  在 TWTestCommandPackageGuids.cs，现有的命令 Id 的后面添加三个菜单项的命令 Id。  
+1. 在 TWTestCommandPackageGuids.cs，现有的命令 Id 的后面添加三个菜单项的命令 Id。  
   
     ```csharp  
     public const int cmdidMCItem1 = 0x130;  
@@ -127,13 +122,13 @@ ms.locfileid: "51771537"
     public const int cmdidMCItem3 = 0x132;  
     ```  
   
-2.  在 TWTestCommand.cs，TWTestCommand 类的顶部添加以下代码。  
+2. 在 TWTestCommand.cs，TWTestCommand 类的顶部添加以下代码。  
   
     ```csharp  
     private int currentMCCommand; // The currently selected menu controller command  
     ```  
   
-3.  TWTestCommand 构造函数，在最后一个调用中`AddCommand`方法中，添加代码以将每个命令通过同一处理程序的事件路由。  
+3. TWTestCommand 构造函数，在最后一个调用中`AddCommand`方法中，添加代码以将每个命令通过同一处理程序的事件路由。  
   
     ```csharp  
     for (int i = TWTestCommandPackageGuids.cmdidMCItem1; i <=  
@@ -154,7 +149,7 @@ ms.locfileid: "51771537"
     }  
     ```  
   
-4.  将事件处理程序添加到 TWTestCommand 类，以将标记为已检查所选的命令。  
+4. 将事件处理程序添加到 TWTestCommand 类，以将标记为已检查所选的命令。  
   
     ```csharp  
     private void OnMCItemQueryStatus(object sender, EventArgs e)  
@@ -167,7 +162,7 @@ ms.locfileid: "51771537"
     }  
     ```  
   
-5.  添加的事件处理程序显示一个 MessageBox，当用户选择菜单控制器上的命令：  
+5. 添加的事件处理程序显示一个 MessageBox，当用户选择菜单控制器上的命令：  
   
     ```csharp  
     private void OnMCItemClicked(object sender, EventArgs e)  
@@ -219,13 +214,13 @@ ms.locfileid: "51771537"
   
 ## <a name="testing-the-menu-controller"></a>测试菜单控制器  
   
-1.  生成项目并启动调试。 应会看到的实验实例。  
+1. 生成项目并启动调试。 应会看到的实验实例。  
   
-2.  打开**测试 ToolWindow**上**视图 / 其他 Windows**菜单。  
+2. 打开**测试 ToolWindow**上**视图 / 其他 Windows**菜单。  
   
      菜单控制器中的工具窗口的工具栏中将出现并显示**MC 项 1**。  
   
-3.  单击箭头左侧的菜单控制器按钮。  
+3. 单击箭头左侧的菜单控制器按钮。  
   
      应会看到三个项，其中第一个已选中，并有其图标周围突出显示的框。 单击**MC 项 3**。  
   
@@ -234,4 +229,3 @@ ms.locfileid: "51771537"
 ## <a name="see-also"></a>请参阅  
  [将工具栏添加到工具窗口](../extensibility/adding-a-toolbar-to-a-tool-window.md)   
  [添加工具栏](../extensibility/adding-a-toolbar.md)
-

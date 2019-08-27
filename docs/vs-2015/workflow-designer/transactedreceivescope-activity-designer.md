@@ -1,11 +1,8 @@
 ---
 title: TransactedReceiveScope 活动设计器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 f1_keywords:
 - System.ServiceModel.Activities.TransactedReceiveScope.UI
@@ -13,19 +10,19 @@ ms.assetid: 7ca93aad-4e83-4d81-90f4-998ee114d9b6
 caps.latest.revision: 4
 author: gewarren
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: e718aaf754e9b4617aeb733196a73aa1bc125a9e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: f4864a19cf48b468abed90e120e4924237653cec
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49245240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62976697"
 ---
 # <a name="transactedreceivescope-activity-designer"></a>TransactedReceiveScope 活动设计器
 **TransactedReceiveScope**设计器用于创建和配置<xref:System.ServiceModel.Activities.TransactedReceiveScope>活动。  
   
 ## <a name="the-transactedreceivescope-activity"></a>TransactedReceiveScope 活动  
- <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动使您能够将事务流动到工作流或调度程序创建的服务器事务中。  
+ <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动使你能够将事务流动到工作流或调度程序创建的服务器事务中。  
   
 ### <a name="using-the-transactedreceivescope-activity-designer"></a>使用 TransactedReceiveScope 活动设计器  
  **TransactedReceiveScope**活动设计器可在**消息传送**类别**工具箱**，这通过单击来访问**工具箱**选项卡上[!INCLUDE[wfd2](../includes/wfd2-md.md)](或者，选择**工具栏**从**视图**菜单或 CTRL + ALT + X。)  

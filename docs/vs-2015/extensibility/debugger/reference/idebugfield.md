@@ -1,14 +1,9 @@
 ---
-title: IDebugField |Microsoft Docs
-ms.custom: ''
+title: IDebugField | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - IDebugField
 helpviewer_keywords:
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: adecdd1c-b1b9-4027-92da-74cbe910636f
 caps.latest.revision: 13
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 4feaec188bcfcfbca9f6484e162f1c3e6ad22d67
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 8bc18204d3cbe20635ab0680a50b4d1555dce2ce
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51764978"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65690307"
 ---
 # <a name="idebugfield"></a>IDebugField
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -39,7 +34,7 @@ IDebugField : IUnknown
  符号提供程序的所有字段的基类为实现此接口。  
   
 ## <a name="notes-for-callers"></a>调用方的说明  
- 此接口是所有字段的基类。 返回值的基础[GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)，此接口可能会使用返回的专用化程度接口[QueryInterface](http://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3)。 此外，许多接口返回`IDebugField`中各种方法的对象。  
+ 此接口是所有字段的基类。 返回值的基础[GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)，此接口可能会使用返回的专用化程度接口[QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3)。 此外，许多接口返回`IDebugField`中各种方法的对象。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法  
  下表显示的方法`IDebugField`。  
@@ -59,7 +54,7 @@ IDebugField : IUnknown
 ## <a name="remarks"></a>备注  
  类型等效于 C 语言`typedef`。  
   
- 在下面的 c + + 语言示例，`weather`是类类型，并`sunny`和`stormy`是符号：  
+ 在下面的示例C++语言的示例中，`weather`是类类型，并`sunny`并`stormy`符号：  
   
 ```cpp#  
 class weather;  
@@ -72,10 +67,9 @@ weather stormy;
 ## <a name="requirements"></a>要求  
  标头： sh.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间:Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>请参阅  
  [符号提供程序接口](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)
-

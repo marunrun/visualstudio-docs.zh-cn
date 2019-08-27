@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4a919cd8-541c-40ee-be3b-352fabc56140
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: f27689d5e3c322a539a0db5ee1f93c569cb181a5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 8a0c9ca6f195640e3c356e9288300255570b196c
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53914551"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68926470"
 ---
 # <a name="analyze-load-test-results-in-the-graphs-view-of-the-load-test-analyzer"></a>在负载测试分析器的关系图视图中分析负载测试结果
 
@@ -29,11 +28,11 @@ ms.locfileid: "53914551"
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-要以关系图的形式显示测试结果，请选择负载测试工具栏上的“关系图”。 每个单独的关系图将显示在一个面板中，关系图的名称显示在下拉列表的顶部。 若要在面板中显示不同的关系图，请从列表中选择不同的关系图名称。
+要以关系图的形式显示测试结果，请选择负载测试工具栏上的“关系图”   。 每个单独的关系图将显示在一个面板中，关系图的名称显示在下拉列表的顶部。 若要在面板中显示不同的关系图，请从列表中选择不同的关系图名称。
 
-一次最多可显示四个关系图面板。 通过使用面板布局工具栏按钮，可以在不同的面板布局之间进行切换。
+一次最多可显示四个关系图面板。 通过使用面板布局工具栏按钮，可以在不同的面板布局之间进行切换  。
 
-系统提供了一些内置的关系图。 你既可以按原样使用这些内置关系图，也可以对它们进行自定义。 此外，还可以创建自己的关系图。 有关更多信息，请参见[如何：在关系图上添加和删除计数器](../test/how-to-add-and-delete-counters-on-graphs-in-load-test-results.md)和[如何：创建自定义图形](../test/how-to-create-custom-graphs-in-load-test-results.md)。
+系统提供了一些内置的关系图。 你既可以按原样使用这些内置关系图，也可以对它们进行自定义。 此外，还可以创建自己的关系图。 有关详细信息，请参阅[如何：在关系图上添加和删除计数器](../test/how-to-add-and-delete-counters-on-graphs-in-load-test-results.md)和[如何：创建自定义图形](../test/how-to-create-custom-graphs-in-load-test-results.md)。
 
 ## <a name="built-in-graphs"></a>内置关系图
 
@@ -48,20 +47,20 @@ ms.locfileid: "53914551"
 |控制器和代理|有关运行负载测试的计算机的信息。 其中包括有关内存使用、处理器、物理磁盘和进程的数据。<br /><br /> 默认情况下，只收集“Available Mbytes”（可用的兆字节数）和“Processor Time”（处理器时间）计数器。|
 |事务响应时间|负载测试期间发生的事务的平均响应时间。|
 
- 可以在运行时和运行了测试之后在关系图上显示不同的计数器。
+可以在运行时和运行了测试之后在关系图上显示不同的计数器。
 
 > [!NOTE]
 > 只有响应时间性能计数器可以添加到自动生成的响应时间关系图中。
 
- 计数器信息同时显示在关系图中和关系图下方的图例中。 也可以放大关系图的某一部分。 有关更多信息，请参见[如何：放大关系图的区域](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md)。
+计数器信息同时显示在关系图中和关系图下方的图例中。 也可以放大关系图的某一部分。 有关详细信息，请参阅[如何：放大关系图的区域](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md)。
 
 ## <a name="counters-displayed-in-graphs"></a>关系图中显示的计数器
 
- 关系图中会显示一些计数器。 计数器引用在负载测试期间收集的数据，如每秒的测试数或平均测试时间。 有关计数器的详细信息，请参阅[为负载测试中的计算机指定计数器集和阈值规则](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)。
+关系图中会显示一些计数器  。 计数器引用在负载测试期间收集的数据，如每秒的测试数或平均测试时间。 有关计数器的详细信息，请参阅[为负载测试中的计算机指定计数器集和阈值规则](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)。
 
- 显示在关系图中的计数器的图例显示了几列有关负载测试运行的有用数据。 若要关闭关系图中任何数据的显示，请清除图例中对应行的复选框。
+显示在关系图中的计数器的图例显示了几列有关负载测试运行的有用数据。 若要关闭关系图中任何数据的显示，请清除图例中对应行的复选框。
 
- 图例包含以下列：
+图例包含以下列：
 
 |计数器|计数器的名称|
 |-|-|
@@ -84,15 +83,15 @@ ms.locfileid: "53914551"
 |**放大关系图：** 完成负载测试后，可使用缩放条来放大并滚动到关系图的某一区域。 通过放大，可以更细致地检查在负载测试运行过程中所生成的数据。|-   [如何：放大关系图的区域](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md)|
 |**平铺关系图：** 可以在任意多个模式中排列负载测试结果关系图。 最多可以平铺四个关系图。||
 |**创建自定义关系图：** 可以设计用于显示有关负载测试结果的特定信息的关系图。 可以通过指定关系图将显示的负载测试计数器来设计自定义关系图。|-   [如何：创建自定义图形](../test/how-to-create-custom-graphs-in-load-test-results.md)|
-|**导出关系图中的性能计数器数据：** 处于关系图视图模式中时，可以使用负载测试分析器工具栏上的“将关系图数据导出到 Excel”按钮将关系图数据导出到 Microsoft Excel。||
+|**导出关系图中的性能计数器数据：** 处于关系图视图模式中时，可以使用负载测试分析器工具栏上的“将关系图数据导出到 Excel”按钮将关系图数据导出到 Microsoft Excel    。||
 
 ## <a name="related-tasks"></a>相关任务
 
- [在表视图中分析负载测试结果和错误](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)
+[在表视图中分析负载测试结果和错误](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)
 
- [如何：访问负载测试结果进行分析](../test/how-to-access-load-test-results-for-analysis.md)
+[如何：访问负载测试结果进行分析](../test/how-to-access-load-test-results-for-analysis.md)
 
- [分析负载测试结果](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
+[分析负载测试结果](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
 
 ## <a name="see-also"></a>请参阅
 

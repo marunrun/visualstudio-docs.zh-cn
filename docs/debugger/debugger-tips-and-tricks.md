@@ -2,7 +2,7 @@
 title: 提示和技巧在调试器中
 description: 了解有关的一些鲜为人知的功能支持的 Visual Studio 调试器
 ms.custom: seodec18
-ms.date: 06/15/2017
+ms.date: 06/15/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - stepping
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 5262d8b1-2648-429e-85d5-90fcaadfb362
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 530ed2144127e7934d02f5ccc0310d9542671507
-ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
-ms.translationtype: MTE95
+ms.openlocfilehash: db966d2c0ac048bd650500ed6ab191e6bc867e36
+ms.sourcegitcommit: 9753c7544cec852ca5efd0834e0956d9e53a5734
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54270055"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67043306"
 ---
 # <a name="learn-productivity-tips-and-tricks-for-the-debugger-in-visual-studio"></a>了解 Visual Studio 调试器在工作效率方面的提示和技巧
 
@@ -31,7 +31,7 @@ ms.locfileid: "54270055"
 
 ![固定数据提示](../debugger/media/dbg-tips-data-tips-pinned.png "PinningDataTip")
 
-## <a name="edit-your-code-and-continue-debugging-c-vb-c"></a>编辑代码并继续调试 (C#，VB、 c + +)
+## <a name="edit-your-code-and-continue-debugging-c-vb-c"></a>编辑代码并继续调试 (C#，VB， C++)
 
 在 Visual Studio 支持的大多数语言中，你都可以在调试会话的过程中编辑代码，然后继续调试。 要使用此功能，请先在调试器中暂停，用鼠标点击进入代码，进行编辑，然后按 **F5**、**F10** 或 **F11** 键继续调试。
 
@@ -53,6 +53,10 @@ ms.locfileid: "54270055"
 
 3. 如果你对另一种类型的条件感兴趣，请在**断点设置**对话框中选择**筛选器**，而不是**条件表达式**，然后按照筛选器的提示操作。
 
+## <a name="configure-the-data-to-show-in-the-debugger"></a>配置要在调试器中显示的数据
+
+有关C#，Visual Basic 和C++(C++仅 /CLI 代码)，可以让调试程序要使用下列选项显示的信息[DebuggerDisplay](../debugger/using-the-debuggerdisplay-attribute.md)属性。 有关C++代码中，可以执行相同的 using [Natvis 可视化](create-custom-views-of-native-objects.md)。
+
 ## <a name="change-the-execution-flow"></a>更改执行流
 
 让调试器暂停在某行代码上，用鼠标抓住左侧的黄色箭头指针。 将黄色箭头指针移动到代码执行路径中的其他点上。 然后通过 F5 键或步骤命令继续运行应用。
@@ -64,33 +68,33 @@ ms.locfileid: "54270055"
 > [!WARNING]
 > 通常你需要小心使用此功能，工具提示中会出现警告。 你也可能会看到其他警告。 移动指针不能还原到以前的应用程序状态应用程序。
 
-## <a name="track-an-out-of-scope-object-c-visual-basic"></a>跟踪范围外的对象 (C#，Visual Basic)
+## <a name="track-an-out-of-scope-object-c-visual-basic"></a>跟踪范围外的对象 （C#、 Visual Basic）
 
-很容易地查看变量使用调试器窗口等**监视**窗口。 但是，当变量超出作用域中时才**监视**窗口中，您可能会注意到它将灰显。在某些应用方案中，甚至当变量超出作用域是，并且可能想要密切关注变量的值可能会更改 （例如，变量可能会收到垃圾回收）。 可以通过创建用于在对象 ID 来跟踪变量**监视**窗口。
+通过调试器窗口（如**监视**窗口）可以轻松查看变量。 但是，如果变量超出了**监视**窗口的范围，你可能会注意到它变成了灰色。在某些应用场景中，如果变量超出范围，变量的值甚至可能会发生变化，因此你可能需要密切关注它（例如，变量可能会被当做垃圾回收掉）。 你可以在**监视**窗口中为该变量创建一个对象 ID 来跟踪这个变量。
 
 #### <a name="to-create-an-object-id"></a>创建对象 ID
 
-1.  在要跟踪的变量附近设置一个断点。
+1. 在要跟踪的变量附近设置一个断点。
 
-2.  启动调试器 (**F5**)，并在断点处停止。
+2. 启动调试器 (**F5**)，并在断点处停止。
 
-3. 查找中的变量**局部变量**窗口 (**调试 > Windows > 局部变量**)，右键单击该变量，然后选择**创建对象 ID**。
+3. 在**局部变量**窗口（**调试 > 窗口 > 局部变量**）中找到该变量，右键单击该变量，然后选择**创建对象 ID**。
 
     ![创建对象 ID](../debugger/media/dbg-tips-watch-create-object-id.png "CreateObjectID")
-  
-4.  应该会在“局部变量” **$** 窗口中看到 **$** 窗口中设置断点来中断调用函数返回到的指令或行处的执行。 此变量是对象 id。
-  
-5.  右键单击对象 ID 变量，然后选择**添加监视**。
+
+4. 应该会在“局部变量” **$** 窗口中看到 **$** 窗口中设置断点来中断调用函数返回到的指令或行处的执行。 此变量是对象 id。
+
+5. 右键单击对象 ID 变量，然后选择**添加监视**。
 
 有关详细信息，请参阅[创建的对象 ID](../debugger/watch-and-quickwatch-windows.md#bkmk_objectIds)。
 
 ## <a name="view-return-values-for-functions"></a>查看函数的返回值
 
-若要查看你的函数的返回值，请查看中显示的函数**自动**窗口时在逐句通过代码。 若要查看函数的返回值，请确保已执行您感兴趣的函数 (按**F10**如果您当前已停止在函数调用上一次)。 如果窗口已关闭，则使用**调试 > Windows > 自动**以打开**自动**窗口。
+要查看函数的返回值，请在逐步执行代码时，查看**自动窗口**中显示的函数。 要查看函数的返回值，请确保你关注的函数已执行完毕（如果函数的调用目前处于停止状态，请按一下 **F10** 键）。 如果该窗口已关闭，请通过**调试 > 窗口 > 自动窗口**打开**自动窗口**。
 
 ![自动窗口](../debugger/media/dbg-tips-autos-window.png "自动窗口")
 
-此外，可以输入中的函数**即时**窗口来查看返回值。 (使用打开它**调试 > Windows > 即时**。)
+此外，还可以在**即时**窗口中输入函数来查看返回值。 (通过**调试 > 窗口 > 即时**打开该窗口。)
 
 ![即时窗口](../debugger/media/dbg-tips-immediate-window.png "即时窗口")
 
@@ -106,11 +110,11 @@ ms.locfileid: "54270055"
 
 ![JSON 字符串可视化工具](../debugger/media/dbg-tips-string-visualizer-json.png "JSONStringVisualizer")
 
-对于调试器窗口中显示的其他几个类型（例如 WPF 对象），同样可以打开可视化工具。
+对于几个其他类型如调试器窗口中显示的数据集和 DataTable 对象，还可以打开内置的可视化工具。
 
 ## <a name="break-into-code-on-handled-exceptions"></a>在已处理的异常处中断代码
 
-调试器将中断你的代码上未经处理的异常。 但是，处理异常 (如内出现的异常`try/catch`块) 也可以是 bug 的源，可能想要调查发生时。 可以配置调试器通过配置选项中的为已处理的异常的代码中断**异常设置**对话框。 打开此对话框中，请选择**调试 > Windows > 异常设置**。
+调试器会在未经处理的异常处中断代码。 但是，已处理的异常（例如 `try/catch` 块内发生的异常）也可能会造成错误，可能需要进一步调查。 可以将调试器配置为在已处理的异常处中断代码，方法是配置**异常设置**对话框中的选项。 要打开这个对话框，请选择**调试 > 窗口 > 异常设置**。
 
 通过**异常设置**对话框，你可以让调试器在特定异常处中断代码。 在下图中，调试器会在发生 `System.NullReferenceException` 时中断代码。 有关详细信息，请参阅[管理异常](../debugger/managing-exceptions-with-the-debugger.md)。
 
@@ -122,19 +126,19 @@ ms.locfileid: "54270055"
 
 #### <a name="to-show-threads-in-your-source-code"></a>在源代码中显示线程
 
-1.  调试时，单击**源中显示线程**按钮![在源中显示线程](../debugger/media/dbg-multithreaded-show-threads.png "ThreadMarker")中**调试**工具栏。
-  
-2.  查看窗口左侧的滚动条。 在这一行，你可以看到*线程标记*图标![线程标记](../debugger/media/dbg-thread-marker.png "ThreadMarker") ，类似于两根细线。 线程标记指示线程在此位置停止。
+1. 调试时，单击**源中显示线程**按钮![在源中显示线程](../debugger/media/dbg-multithreaded-show-threads.png "ThreadMarker")中**调试**工具栏。
+
+2. 查看窗口左侧的滚动条。 在这一行，你可以看到*线程标记*图标![线程标记](../debugger/media/dbg-thread-marker.png "ThreadMarker") ，类似于两根细线。 线程标记指示线程在此位置停止。
 
     注意，线程标记可能被断点不完全遮挡。
-  
-3.  将指针悬停在线程标记上。 屏幕上将显示数据提示。 数据提示将告诉你每个已停止线程的名称和线程 ID。
+
+3. 将指针悬停在线程标记上。 屏幕上将显示数据提示。 数据提示将告诉你每个已停止线程的名称和线程 ID。
 
     你还可以查看中的线程的位置[并行堆栈窗口](../debugger/get-started-debugging-multithreaded-apps.md)。
 
 ## <a name="examine-payloads-for-web-services-and-network-resources-uwp"></a>检查 web 服务和网络资源 (UWP) 的有效负载
 
-在 UWP 应用中，你可以分析执行使用的网络操作`Windows.Web.Http`API。 可以使用此工具来帮助调试 web 服务和网络资源。 若要使用该工具，请选择**调试 > 性能 Profiler**。 选择**网络**，然后选择**启动**。 在应用中，浏览使用 `Windows.Web.Http` 的应用场景，然后选择“停止收集”生成报表。
+在 UWP 应用中，你可以分析使用 `Windows.Web.Http` API执行的网络操作。 可以使用此工具来帮助调试 web 服务和网络资源。 若要使用该工具，请选择**调试 > 性能探查器**。 选择**网络**，然后选择**启动**。 在应用中，浏览使用 `Windows.Web.Http` 的应用场景，然后选择 **停止收集** 生成报表。
 
 ![网络使用情况分析工具](../profiling/media/prof-tour-network-usage.png "NetworkUsageProfTool")
 
@@ -144,11 +148,11 @@ ms.locfileid: "54270055"
 
 有关详细信息，请参阅[网络使用情况](../profiling/network-usage.md)。
 
-## <a name="modules_window"></a> 更深入了解如何将调试器附加到您的应用程序 (C#，c + +、 Visual Basic 中， F#)
+## <a name="modules_window"></a> 更深入了解如何将调试器附加到您的应用程序 (C#， C++，Visual Basic 中， F#)
 
 若要附加到正在运行的应用，调试器将加载为想要调试的应用的相同内部版本生成的符号 (.pdb) 文件。 在某些情况下，了解符号文件的一些知识非常有用。 你可在**模块**窗口中检查 Visual Studio 如何加载符号文件。
 
-打开**模块**窗口中的通过选择进行调试时**调试 > Windows > 模块**。 **模块**窗口可以告知调试器将视为用户代码，以及模块或[*我的代码*](../debugger/just-my-code.md)，和符号加载模块的状态。 在大多数情况下，调试器会自动查找符号文件中的用户代码，但如果你想要单步执行 （或调试）.NET framework 代码、 系统代码或第三方库代码，将执行其他步骤才能获取正确的符号文件。
+在调试时，通过选择**调试 > 窗口 > 模块** 打开**模块**窗口。 **模块**窗口可以告诉你，调试器将哪些模块视为用户代码或[*我的代码*](../debugger/just-my-code.md)，以及符号加载模块的状态。 在大多数情况下，调试器会自动为用户代码查找符号文件，但如果你想要单步跟踪 （或调试）.NET framework 代码、系统代码或第三方库代码，必须执行其他步骤获取正确的符号文件。
 
 ![在模块窗口中查看符号信息](../debugger/media/dbg-tips-modules-window.png "ViewSymbolInformation")
 
@@ -162,8 +166,9 @@ ms.locfileid: "54270055"
 
 有关更多提示和技巧以及更多详细的信息，请参阅以下博客文章：
 
-- [使用 Visual Studio 调试时，7个简单的已知技巧](https://blogs.msdn.microsoft.com/visualstudio/2017/06/26/7-lesser-known-hacks-for-debugging-in-visual-studio/)
-- [Visual Studio 中 7 个隐藏的 gem](https://blogs.msdn.microsoft.com/visualstudio/2017/10/05/7-hidden-gems-in-visual-studio-2017/)
+- [使用 Visual Studio 调试时，7个简单的已知技巧](https://devblogs.microsoft.com/visualstudio/7-lesser-known-hacks-for-debugging-in-visual-studio/)
+- [Visual Studio 中 7 个隐藏的 gem](https://devblogs.microsoft.com/visualstudio/7-hidden-gems-in-visual-studio-2017/)
 
 ## <a name="see-also"></a>请参阅
-[键盘快捷键](../ide/tips-and-tricks-for-visual-studio.md)
+
+[键盘快捷键](../ide/productivity-shortcuts.md)

@@ -1,25 +1,20 @@
 ---
 title: 基本设计准则规则规则设置对于托管代码 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: conceptual
 ms.assetid: 7eb384f5-f961-400b-b151-115d92addc6a
 caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: ed0728eb0daa5c1ff0f322db42f66373181f3e23
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 62b6a6e5415f79886246075363a4663efecc246e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49184712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62535790"
 ---
 # <a name="basic-design-guideline-rules-rule-set-for-managed-code"></a>托管代码的“基本设计准则规则”规则集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -54,7 +49,7 @@ ms.locfileid: "49184712"
 |[CA1901](../code-quality/ca1901-p-invoke-declarations-should-be-portable.md)|P/Invoke 声明应为可移植声明|  
 |[CA2002](../code-quality/ca2002-do-not-lock-on-objects-with-weak-identity.md)|不要锁定具有弱标识的对象|  
 |[CA2100](../code-quality/ca2100-review-sql-queries-for-security-vulnerabilities.md)|检查 SQL 查询是否存在安全漏洞|  
-|[CA2101](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)|指定对 P/Invoke 字符串自变量进行封送处理|  
+|[CA2101](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)|指定对 P/Invoke 字符串参数进行封送处理|  
 |[CA2108](../code-quality/ca2108-review-declarative-security-on-value-types.md)|检查有关值类型的声明性安全|  
 |[CA2111](../code-quality/ca2111-pointers-should-not-be-visible.md)|指针应为不可见|  
 |[CA2112](../code-quality/ca2112-secured-types-should-not-expose-fields.md)|受保护的类型不应公开字段|  
@@ -92,88 +87,85 @@ ms.locfileid: "49184712"
 |[CA2237](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)|用 SerializableAttribute 标记 ISerializable 类型|  
 |[CA2238](../code-quality/ca2238-implement-serialization-methods-correctly.md)|正确实现序列化方法|  
 |[CA2240](../code-quality/ca2240-implement-iserializable-correctly.md)|正确实现 ISerializable|  
-|[CA2241](../code-quality/ca2241-provide-correct-arguments-to-formatting-methods.md)|为格式化方法提供正确的自变量|  
+|[CA2241](../code-quality/ca2241-provide-correct-arguments-to-formatting-methods.md)|为格式化方法提供正确的参数|  
 |[CA2242](../code-quality/ca2242-test-for-nan-correctly.md)|正确测试 NaN|  
 |[CA1000](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)|不要在泛型类型中声明静态成员|  
 |[CA1002](../code-quality/ca1002-do-not-expose-generic-lists.md)|不要公开泛型列表|  
 |[CA1003](../code-quality/ca1003-use-generic-event-handler-instances.md)|使用泛型事件处理程序实例|  
 |[CA1004](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)|泛型方法应提供类型参数|  
-|[CA1005](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)|避免泛型类型参数过多|  
-|[CA1006](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)|不要将嵌套在成员签名中的泛型类型|  
-|[CA1007 在适用处](../code-quality/ca1007-use-generics-where-appropriate.md)|在适用处使用泛型|  
+|[CA1005](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)|避免泛型类型的参数过多|  
+|[CA1006](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)|不要将泛型类型嵌套在成员签名中|  
+|[CA1007](../code-quality/ca1007-use-generics-where-appropriate.md)|在适用处使用泛型|  
 |[CA1008](../code-quality/ca1008-enums-should-have-zero-value.md)|枚举应具有零值|  
 |[CA1010](../code-quality/ca1010-collections-should-implement-generic-interface.md)|集合应实现泛型接口|  
-|[CA1011](../code-quality/ca1011-consider-passing-base-types-as-parameters.md)|请考虑将基类型作为参数传递|  
+|[CA1011](../code-quality/ca1011-consider-passing-base-types-as-parameters.md)|考虑将基类型作为参数传递|  
 |[CA1012](../code-quality/ca1012-abstract-types-should-not-have-constructors.md)|抽象类型不应具有构造函数|  
-|[CA1013](../code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract.md)|重载相等运算符，加法和减法|  
+|[CA1013](../code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract.md)|重载加法方法和减法方法时重载相等运算符|  
 |[CA1014](../code-quality/ca1014-mark-assemblies-with-clscompliantattribute.md)|用 CLSCompliantAttribute 标记程序集|  
 |[CA1017](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)|用 ComVisibleAttribute 标记程序集|  
 |[CA1018](../code-quality/ca1018-mark-attributes-with-attributeusageattribute.md)|用 AttributeUsageAttribute 标记特性|  
 |[CA1019](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)|定义特性参数的访问器|  
-|[CA1023](../code-quality/ca1023-indexers-should-not-be-multidimensional.md)|索引器不应是多维|  
-|[CA1024 在适用处](../code-quality/ca1024-use-properties-where-appropriate.md)|在适用处使用属性|  
+|[CA1023](../code-quality/ca1023-indexers-should-not-be-multidimensional.md)|索引器不应是多维的|  
+|[CA1024](../code-quality/ca1024-use-properties-where-appropriate.md)|在适用处使用属性|  
 |[CA1025](../code-quality/ca1025-replace-repetitive-arguments-with-params-array.md)|用形参数组替换重复的实参|  
-|[CA1026](../code-quality/ca1026-default-parameters-should-not-be-used.md)|不应使用默认参数|  
+|[CA1026](../code-quality/ca1026-default-parameters-should-not-be-used.md)|不应使用默认形参|  
 |[CA1027](../code-quality/ca1027-mark-enums-with-flagsattribute.md)|用 FlagsAttribute 标记枚举|  
 |[CA1028](../code-quality/ca1028-enum-storage-should-be-int32.md)|枚举存储应为 Int32|  
-|[CA1030 在适用处](../code-quality/ca1030-use-events-where-appropriate.md)|在适用处使用事件|  
+|[CA1030](../code-quality/ca1030-use-events-where-appropriate.md)|在适用处使用事件|  
 |[CA1031](../code-quality/ca1031-do-not-catch-general-exception-types.md)|不要捕捉一般异常类型|  
 |[CA1032](../code-quality/ca1032-implement-standard-exception-constructors.md)|实现标准异常构造函数|  
-|[CA1034](../code-quality/ca1034-nested-types-should-not-be-visible.md)|嵌套的类型不应是可见|  
+|[CA1034](../code-quality/ca1034-nested-types-should-not-be-visible.md)|嵌套类型不应是可见的|  
 |[CA1035](../code-quality/ca1035-icollection-implementations-have-strongly-typed-members.md)|ICollection 实现含有强类型成员|  
-|[CA1036](../code-quality/ca1036-override-methods-on-comparable-types.md)|重写可比较类型的方法|  
+|[CA1036](../code-quality/ca1036-override-methods-on-comparable-types.md)|重写可比较类型中的方法|  
 |[CA1038](../code-quality/ca1038-enumerators-should-be-strongly-typed.md)|枚举数应强类型化|  
 |[CA1039](../code-quality/ca1039-lists-are-strongly-typed.md)|列表已强类型化|  
 |[CA1041](../code-quality/ca1041-provide-obsoleteattribute-message.md)|提供 ObsoleteAttribute 消息|  
-|[CA1043](../code-quality/ca1043-use-integral-or-string-argument-for-indexers.md)|使用整型或字符串参数用于索引器|  
+|[CA1043](../code-quality/ca1043-use-integral-or-string-argument-for-indexers.md)|将整型或字符串参数用于索引器|  
 |[CA1044](../code-quality/ca1044-properties-should-not-be-write-only.md)|属性不应是只写的|  
-|[CA1046](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)|请重载相等运算符对引用类型|  
-|[CA1047](../code-quality/ca1047-do-not-declare-protected-members-in-sealed-types.md)|不要声明在密封类型中的受保护的成员|  
-|[CA1048](../code-quality/ca1048-do-not-declare-virtual-members-in-sealed-types.md)|不要声明在密封类型中的虚拟成员|  
+|[CA1046](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)|不要对引用类型重载相等运算符|  
+|[CA1047](../code-quality/ca1047-do-not-declare-protected-members-in-sealed-types.md)|不要在密封类型中声明受保护的成员|  
+|[CA1048](../code-quality/ca1048-do-not-declare-virtual-members-in-sealed-types.md)|不要在密封类型中声明虚拟成员|  
 |[CA1050](../code-quality/ca1050-declare-types-in-namespaces.md)|在命名空间中声明类型|  
 |[CA1051](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)|不要声明可见实例字段|  
 |[CA1052](../code-quality/ca1052-static-holder-types-should-be-sealed.md)|应密封静态容器类型|  
 |[CA1053](../code-quality/ca1053-static-holder-types-should-not-have-constructors.md)|静态容器类型不应具有构造函数|  
 |[CA1054](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)|URI 参数不应为字符串|  
-|[CA1055](../code-quality/ca1055-uri-return-values-should-not-be-strings.md)|URI 返回值不应为字符串|  
-|[CA1056](../code-quality/ca1056-uri-properties-should-not-be-strings.md)|URI 属性不应为字符串|  
+|[CA1055](../code-quality/ca1055-uri-return-values-should-not-be-strings.md)|URI 返回值不应是字符串|  
+|[CA1056](../code-quality/ca1056-uri-properties-should-not-be-strings.md)|URI 属性不应是字符串|  
 |[CA1057](../code-quality/ca1057-string-uri-overloads-call-system-uri-overloads.md)|字符串 URI 重载调用 System.Uri 重载|  
 |[CA1058](../code-quality/ca1058-types-should-not-extend-certain-base-types.md)|类型不应扩展某些基类型|  
 |[CA1059](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)|成员不应公开某些具体类型|  
 |[CA1064](../code-quality/ca1064-exceptions-should-be-public.md)|异常应该是公共的|  
-|[CA1500](../code-quality/ca1500-variable-names-should-not-match-field-names.md)|变量名不应与字段名称|  
+|[CA1500](../code-quality/ca1500-variable-names-should-not-match-field-names.md)|变量名不应与字段名相同|  
 |[CA1502](../code-quality/ca1502-avoid-excessive-complexity.md)|避免过度复杂|  
-|[CA1708](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)|标识符不应不同于用例的详细信息|  
-|[CA1716](../code-quality/ca1716-identifiers-should-not-match-keywords.md)|标识符不应与关键字|  
+|[CA1708](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)|标识符应以大小写之外的差别进行区分|  
+|[CA1716](../code-quality/ca1716-identifiers-should-not-match-keywords.md)|标识符不应与关键字冲突|  
 |[CA1801](../code-quality/ca1801-review-unused-parameters.md)|检查未使用的参数|  
-|[CA1804](../code-quality/ca1804-remove-unused-locals.md)|删除未使用的局部变量|  
+|[CA1804](../code-quality/ca1804-remove-unused-locals.md)|移除未使用的局部变量|  
 |[CA1809](../code-quality/ca1809-avoid-excessive-locals.md)|避免过多的局部变量|  
-|[CA1810](../code-quality/ca1810-initialize-reference-type-static-fields-inline.md)|引用类型的静态字段以内联方式初始化|  
+|[CA1810](../code-quality/ca1810-initialize-reference-type-static-fields-inline.md)|以内联方式初始化引用类型的静态字段|  
 |[CA1811](../code-quality/ca1811-avoid-uncalled-private-code.md)|避免使用未调用的私有代码|  
 |[CA1812](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)|避免未实例化的内部类|  
-|[CA1813](../code-quality/ca1813-avoid-unsealed-attributes.md)|避免使用未密封的特性|  
-|[CA1814 与](../code-quality/ca1814-prefer-jagged-arrays-over-multidimensional.md)|通过多维首选使用交错的数组|  
-|[CA1815](../code-quality/ca1815-override-equals-and-operator-equals-on-value-types.md)|重写 equals 和相等运算符对值类型|  
+|[CA1813](../code-quality/ca1813-avoid-unsealed-attributes.md)|避免使用非密封特性|  
+|[CA1814](../code-quality/ca1814-prefer-jagged-arrays-over-multidimensional.md)|与多维数组相比，首选使用交错数组|  
+|[CA1815](../code-quality/ca1815-override-equals-and-operator-equals-on-value-types.md)|重写值类型上的 Equals 和相等运算符|  
 |[CA1819](../code-quality/ca1819-properties-should-not-return-arrays.md)|属性不应返回数组|  
-|[CA1820](../code-quality/ca1820-test-for-empty-strings-using-string-length.md)|测试有空字符串，使用字符串长度|  
-|[CA1822](../code-quality/ca1822-mark-members-as-static.md)|将成员标记为静态|  
+|[CA1820](../code-quality/ca1820-test-for-empty-strings-using-string-length.md)|使用字符串长度测试是否有空字符串|  
+|[CA1822](../code-quality/ca1822-mark-members-as-static.md)|将成员标记为 static|  
 |[CA1823](../code-quality/ca1823-avoid-unused-private-fields.md)|避免未使用的私有字段|  
 |[CA2201](../code-quality/ca2201-do-not-raise-reserved-exception-types.md)|不要引发保留的异常类型|  
 |[CA2205](../code-quality/ca2205-use-managed-equivalents-of-win32-api.md)|使用 Win32 API 的托管等效项|  
 |[CA2208](../code-quality/ca2208-instantiate-argument-exceptions-correctly.md)|正确实例化参数异常|  
-|[CA2211 非常量](../code-quality/ca2211-non-constant-fields-should-not-be-visible.md)|非常量字段不应是可见|  
-|[CA2217](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)|不使用 FlagsAttribute 标记枚举|  
-|[CA2219](../code-quality/ca2219-do-not-raise-exceptions-in-exception-clauses.md)|不会引发异常子句中的异常|  
+|[CA2211](../code-quality/ca2211-non-constant-fields-should-not-be-visible.md)|非常量字段不应是可见的|  
+|[CA2217](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)|不要使用 FlagsAttribute 标记枚举|  
+|[CA2219](../code-quality/ca2219-do-not-raise-exceptions-in-exception-clauses.md)|在异常子句中不引发异常|  
 |[CA2221](../code-quality/ca2221-finalizers-should-be-protected.md)|终结器应受到保护|  
-|[CA2222](../code-quality/ca2222-do-not-decrease-inherited-member-visibility.md)|不要递减继承的成员的可见性|  
-|[CA2223](../code-quality/ca2223-members-should-differ-by-more-than-return-type.md)|成员不应由多个返回类型不同|  
-|[CA2224](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)|重写 equals 方法重载相等运算符|  
+|[CA2222](../code-quality/ca2222-do-not-decrease-inherited-member-visibility.md)|不要递减继承成员的可见性|  
+|[CA2223](../code-quality/ca2223-members-should-differ-by-more-than-return-type.md)|成员不应只是返回类型不同|  
+|[CA2224](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)|重载相等运算符时重写 Equals 方法|  
 |[CA2225](../code-quality/ca2225-operator-overloads-have-named-alternates.md)|运算符重载具有命名的备用项|  
 |[CA2226](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)|运算符应有对称重载|  
 |[CA2227](../code-quality/ca2227-collection-properties-should-be-read-only.md)|集合属性应为只读|  
-|[CA2230](../code-quality/ca2230-use-params-for-variable-arguments.md)|自变量使用 params|  
-|[CA2234](../code-quality/ca2234-pass-system-uri-objects-instead-of-strings.md)|传递 System.Uri 对象，而不是字符串|  
-|[CA2239](../code-quality/ca2239-provide-deserialization-methods-for-optional-fields.md)|提供反序列化方法为可选字段|
-
-
-
+|[CA2230](../code-quality/ca2230-use-params-for-variable-arguments.md)|对可变数量的参数使用 params|  
+|[CA2234](../code-quality/ca2234-pass-system-uri-objects-instead-of-strings.md)|传递 System.Uri 对象，而不传递字符串|  
+|[CA2239](../code-quality/ca2239-provide-deserialization-methods-for-optional-fields.md)|为可选字段提供反序列化方法|

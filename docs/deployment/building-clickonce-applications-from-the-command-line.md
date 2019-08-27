@@ -1,5 +1,5 @@
 ---
-title: 生成 ClickOnce 应用程序从命令行 |Microsoft Docs
+title: 通过命令行生成 ClickOnce 应用程序 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -13,160 +13,163 @@ helpviewer_keywords:
 ms.assetid: d9bc6212-c584-4f72-88c9-9a4b998c555e
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 41161a41b1e2d1e13c5b9d8ebfad47c558570206
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: 9d8ce0753c63f1dcc177f36149cad9789ec150ab
+ms.sourcegitcommit: a124076dfd6b4e5aecda4d01984fee7b0c034745
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53926260"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68787681"
 ---
 # <a name="build-clickonce-applications-from-the-command-line"></a>从命令行生成 ClickOnce 应用程序
-在[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]，可以生成命令行中的项目，即使它们在集成的开发环境 (IDE) 中创建。 事实上，您可以重新生成与创建的项目[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]仅有的另一台计算机上[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]安装。 这允许你在重现生成使用自动化的过程，例如，在中心生成实验室或使用高级脚本编写技术生成项目本身的范围之外。  
-  
-## <a name="use-msbuild-to-reproduce-clickonce-application-deployments"></a>使用 MSBuild 来重现 ClickOnce 应用程序部署  
- 当您调用 msbuild /target:publish 在命令行时，它指示 MSBuild 系统生成项目，并创建[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序 publish 文件夹中。 这相当于选择**发布**命令在 IDE 中。  
-  
- 此命令执行*msbuild.exe*，这是在 Visual Studio 命令提示符环境的路径上。  
-  
- "目标"是一个指示符，MSBuild 如何处理命令。 主要目标是"生成"目标和"发布"目标。 生成目标相当于选择生成命令 （或按 f5 键） 在 IDE 中。 如果只想要生成你的项目，可以实现此目的通过键入`msbuild`。 此命令有效，因为生成目标是生成的所有项目的默认目标[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]。 这意味着您不显式需要指定 build 目标。 因此，键入`msbuild`是相同的操作键入`msbuild /target:build`。  
-  
- `/target:publish`命令告知 MSBuild 调用发布目标。 发布目标取决于生成目标。 这意味着发布操作是生成操作的超集。 例如，如果对一个 Visual Basic 进行了更改或C#自动将由发布操作重新生成源文件，相应的程序集。  
-  
- 有关生成完整的信息[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]使用 Mage.exe 命令行工具创建的部署你[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]清单，请参阅[演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)。  
-  
-## <a name="create-and-build-a-basic-clickonce-application-with-msbuild"></a>创建和生成基本 ClickOnce 应用程序使用 MSBuild  
-  
-#### <a name="to-create-and-publish-a-clickonce-project"></a>若要创建和发布一个 ClickOnce 项目  
-  
-1. 单击**新的项目**从**文件**菜单。 此时将出现 “新建项目” 对话框。  
-  
-2. 选择**Windows 应用程序**并将其命名`CmdLineDemo`。  
-  
-3. 从**构建**菜单上，单击**发布**命令。  
-  
-    此步骤可确保该项目是否已正确配置以生成[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序部署。  
-  
-    出现“发布向导”。  
-  
-4. 在发布向导中，单击**完成**。  
-  
-    Visual Studio 生成并显示名为的默认 Web 页*Publish.htm*。  
-  
-5. 保存你的项目，并记下在其中存储的文件夹位置。  
-  
-   上述步骤创建[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]首次发布的项目。 现在可以再现在 IDE 之外生成。  
-  
-#### <a name="to-reproduce-the-build-from-the-command-line"></a>若要从命令行生成重现  
-  
-1. 退出 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]。  
-  
-2. 从 Windows**启动**菜单上，单击**所有程序**，然后**Microsoft Visual Studio**，然后**Visual Studio Tools**，则**Visual Studio 命令提示符**。 此时会在当前用户的根文件夹中打开命令提示符。  
-  
-3. 在中**Visual Studio 命令提示符**，将当前目录更改为只生成上面的项目的位置。 例如，键入 `chdir My Documents\Visual Studio\Projects\CmdLineDemo`。  
-  
-4. 若要删除现有文件中生成"以创建和发布[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]项目中，"类型`rmdir /s publish`。  
-  
-    此步骤是可选的但它可确保，新文件所有由生成命令行生成。  
-  
-5. 键入 `msbuild /target:publish`。  
-  
-   上述步骤将生成完整[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]的子文件夹中的名为的项目的应用程序部署**发布**。 *CmdLineDemo.application*是[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]部署清单。 文件夹*CmdLineDemo_1.0.0.0*包含的文件*CmdLineDemo.exe*并*CmdLineDemo.exe.manifest*，则[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序清单。 *Setup.exe*是引导程序、 其默认配置安装[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]。 DotNetFX 文件夹中包含的可再发行组件[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]。 这是在 Web 上或者通过 UNC 或 CD/DVD 部署你的应用程序所需的文件的整个集。  
-  
-## <a name="publish-properties"></a>发布属性  
- 在上面的过程中发布应用程序，以下属性是通过发布向导插入到项目文件。 这些属性直接影响如何[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]生成应用程序。  
-  
- 在中*CmdLineDemo.vbproj* / *CmdLineDemo.csproj*:  
-  
-```xml  
-<AssemblyOriginatorKeyFile>WindowsApplication3.snk</AssemblyOriginatorKeyFile>  
-<GenerateManifests>true</GenerateManifests>  
-<TargetZone>LocalIntranet</TargetZone>  
-<PublisherName>Microsoft</PublisherName>  
-<ProductName>CmdLineDemo</ProductName>  
-<PublishUrl>http://localhost/CmdLineDemo</PublishUrl>  
-<Install>true</Install>  
-<ApplicationVersion>1.0.0.*</ApplicationVersion>  
-<ApplicationRevision>1</ApplicationRevision>  
-<UpdateEnabled>true</UpdateEnabled>  
-<UpdateRequired>false</UpdateRequired>  
-<UpdateMode>Foreground</UpdateMode>  
-<UpdateInterval>7</UpdateInterval>  
-<UpdateIntervalUnits>Days</UpdateIntervalUnits>  
-<UpdateUrlEnabled>false</UpdateUrlEnabled>  
-<IsWebBootstrapper>true</IsWebBootstrapper>  
-<BootstrapperEnabled>true</BootstrapperEnabled>  
-```  
-  
- 您可以覆盖这些属性在命令行而无需更改项目文件本身。 例如，将生成以下[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]而无需引导程序的应用程序部署：  
-  
-```cmd  
-msbuild /target:publish /property:BootstrapperEnabled=false  
-```  
-  
- 发布属性控制在[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]从**发布**，**安全**，并且**签名**的属性页**项目设计器**. 下面是发布属性以及指示每个应用程序设计器的各种属性页中的设置方式的说明：  
-  
-- `AssemblyOriginatorKeyFile` 确定用于签名的密钥文件在[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序清单。 此密钥也可能用于你的程序集分配强名称。 设置此属性**签名**页**项目设计器**。  
-  
-  以下属性在设置**安全**页：  
-  
-- **启用 ClickOnce 安全设置**确定是否[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]在生成清单。 最初创建项目，[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]清单生成默认情况下处于关闭状态。 向导将自动打开上首次发布时此标志。  
-  
-- **TargetZone**确定要发出到信任级别将[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序清单。 可能的值为"Internet"、"LocalIntranet"和"自定义"。 Internet 和 LocalIntranet 将导致一个默认权限集来发出到你[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序清单。 LocalIntranet 是默认值，并基本上是说完全信任。 自定义指定的并且只有在基类中显式指定的权限*app.manifest*文件都要发出到[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序清单。 *App.manifest*文件是完整的清单文件包含只需信任信息定义。 它是隐藏的文件，在上配置权限时，自动添加到你的项目**安全**页。  
-  
-  以下属性在设置**发布**页：  
-  
-- `PublishUrl` 是，应用程序将发布到在 IDE 中的位置。 插入到[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序清单，如果既没有`InstallUrl`或`UpdateUrl`指定属性。  
-  
-- `ApplicationVersion` 指定的版本[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序。 这是四位数字的版本号。 如果最后一位数将"*"，则`ApplicationRevision`替换为在生成时插入到程序集清单的值。  
-  
-- `ApplicationRevision` 指定的修订。 这是一个整数，它会发布在 IDE 中的每次递增。 请注意，不自动递增的生成在命令行执行。  
-  
-- `Install` 确定应用程序是否已安装应用程序或运行从 Web 应用程序。  
-  
-- `InstallUrl` （未显示） 是用户将在其中安装的应用程序的位置。 如果指定，此值根深蒂固*setup.exe*引导程序如果`IsWebBootstrapper`启用属性。 它也会插入到应用程序清单如果`UpdateUrl`未指定。  
-  
-- `SupportUrl` （未显示） 位置中的链接**添加/删除程序**已安装应用程序对话框。  
-  
-  设置以下属性**应用程序更新**对话框中，从访问**发布**页。  
-  
-- `UpdateEnabled` 指示应用程序是否应检查更新。  
-  
-- `UpdateMode` 指定更新前台或后台更新。  
-  
-- `UpdateInterval` 指定应用程序检查更新的频率。  
-  
-- `UpdateIntervalUnits` 指定是否`UpdateInterval`值为小时、 天或周为单位。  
-  
-- `UpdateUrl` （未显示） 是应用程序将从其接收更新的位置。 如果指定，此值将插入到应用程序清单。  
-  
-- 设置以下属性**发布选项**对话框中，从访问**发布**页。  
-  
-- `PublisherName` 指定发布服务器上安装或运行该应用程序时显示的提示中显示的名称。 对于已安装的应用程序，它还用于在指定文件夹名称**启动**菜单。  
-  
-- `ProductName` 指定在安装或运行应用程序时显示的提示中显示的产品的名称。 对于已安装的应用程序，它还用于在指定的快捷方式名称**启动**菜单。  
-  
-- 设置以下属性**先决条件**对话框中，从访问**发布**页。  
-  
-- `BootstrapperEnabled` 确定是否生成*setup.exe*引导程序。  
-  
-- `IsWebBootstrapper` 确定是否*setup.exe*引导程序可通过 Web 或基于磁盘的模式。  
-  
-## <a name="installurl-supporturl-publishurl-and-updateurl"></a>InstallURL、 SupportUrl、 PublishURL，和 UpdateURL  
- 下表显示了 ClickOnce 部署的四个 URL 选项。  
-  
-|URL 选项|说明|  
-|----------------|-----------------|  
-|`PublishURL`|所需发布 ClickOnce 应用程序到 Web 站点。|  
-|`InstallURL`|可选。 设置此 URL 选项，则不同于安装站点时`PublishURL`。 例如，可以设置`PublishURL`到一个 FTP 路径和一组`InstallURL`为 Web URL。|  
-|`SupportURL`|可选。 如果不同于支持站点，则设置此 URL 选项`PublishURL`。 例如，可以设置`SupportURL`到公司的客户支持网站。|  
-|`UpdateURL`|可选。 设置此 URL 选项，则更新位置不同于时`InstallURL`。 例如，可以设置`PublishURL`到一个 FTP 路径和一组`UpdateURL`为 Web URL。|  
-  
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.Build.Tasks.GenerateBootstrapper>   
- <xref:Microsoft.Build.Tasks.GenerateApplicationManifest>   
- <xref:Microsoft.Build.Tasks.GenerateDeploymentManifest>   
- [ClickOnce 安全性和部署](../deployment/clickonce-security-and-deployment.md)   
- [演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)
+在[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]中, 你可以从命令行生成项目, 即使它们是在集成开发环境 (IDE) 中创建的。 事实上, 你可以在仅安装了 .NET Framework 的[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]另一台计算机上重新生成使用创建的项目。 这样一来, 您就可以使用自动化进程 (例如, 在中央生成实验室中) 或使用超出生成项目本身范围的高级脚本技术来重现生成。
+
+## <a name="use-msbuild-to-reproduce-clickonce-application-deployments"></a>使用 MSBuild 重现 ClickOnce 应用程序部署
+ 调用 msbuild/target: 在命令行中发布时, 它会告知 msbuild 系统生成项目并在 "发布" 文件夹[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]中创建应用程序。 这等效于在 IDE 中选择 "**发布**" 命令。
+
+ 此命令执行*msbuild.exe*, 后者位于 Visual Studio 命令提示符环境的路径中。
+
+ "目标" 是有关如何处理命令的 MSBuild 的指示器。 键目标为 "生成" 目标和 "发布" 目标。 生成目标等效于在 IDE 中选择 "生成" 命令 (或按 F5)。 如果只想生成项目, 则可以通过键入`msbuild`来实现。 此命令有效, 因为生成目标是生成的[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]所有项目的默认目标。 这意味着你不需要显式指定生成目标。 因此, 键入`msbuild`与键入`msbuild /target:build`内容相同。
+
+ `/target:publish`命令指示 MSBuild 调用发布目标。 发布目标取决于 build 目标。 这意味着发布操作是生成操作的超集。 例如, 如果对某个 Visual Basic 或C#源文件进行了更改, 则发布操作将自动重新生成相应的程序集。
+
+ 有关使用 mage.exe 命令行工具[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]生成完整部署的详细信息, 请参阅[演练:手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)。
+
+## <a name="create-and-build-a-basic-clickonce-application-with-msbuild"></a>使用 MSBuild 创建并生成基本的 ClickOnce 应用程序
+
+#### <a name="to-create-and-publish-a-clickonce-project"></a>创建和发布 ClickOnce 项目
+
+1. 打开 Visual Studio 并创建一个新项目。
+
+    选择 " **Windows 桌面应用程序**" 项目模板, 并`CmdLineDemo`将项目命名为。
+
+1. 在 "**生成**" 菜单中, 单击 "**发布**" 命令。
+
+    此步骤可确保正确配置项目以生成[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序部署。
+
+    出现“发布向导”。
+
+1. 在发布向导中, 单击 "**完成**"。
+
+    Visual Studio 将生成并显示名为*Publish*的默认网页。
+
+1. 保存项目, 并记下存储项目的文件夹位置。
+
+   以上步骤创建[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]一个项目, 该项目是第一次发布的。 现在, 可以在 IDE 外部重现生成。
+
+#### <a name="to-reproduce-the-build-from-the-command-line"></a>从命令行重现生成
+
+1. 退出 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]。
+
+2. 在 Windows 的 "**开始**" 菜单中, 依次单击 "**所有程序**"、 **Microsoft Visual Studio**"、" **Visual Studio Tools**"、" **Visual Studio 命令提示**"。 这应该会在当前用户的根文件夹中打开一个命令提示符。
+
+3. 在**Visual Studio 命令提示符下**, 将当前目录更改为刚才生成的项目的位置。 例如，键入 `chdir My Documents\Visual Studio\Projects\CmdLineDemo`。
+
+4. 若要删除 "创建和发布[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]项目" 中生成的现有文件, 请键入。 `rmdir /s publish`
+
+    此步骤是可选的, 但它可确保新文件都是通过命令行生成生成的。
+
+5. 键入 `msbuild /target:publish`。
+
+   以上步骤会在名为[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] **Publish**的项目的子文件夹中生成完整的应用程序部署。 *CmdLineDemo*是[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]部署清单。 文件夹[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] *cmdlinedemo_ 1.0.0.0*包含应用程序清单中的*CmdLineDemo*和*CmdLineDemo*文件。 Setup.exe 是引导*程序*, 默认情况下配置为安装 .NET Framework。 Dotnetfx.exe 文件夹包含 .NET Framework 的可再发行组件。 这是通过 Web 或 UNC 或 CD/DVD 部署应用程序所需的整个文件集。
+   
+> [!NOTE]
+> MSBuild 系统使用**PublishDir**选项来指定输出的位置, 例如`msbuild /t:publish /p:PublishDir="<specific location>"`。
+
+## <a name="publish-properties"></a>发布属性
+ 在上述过程中发布应用程序时, 发布向导会将以下属性插入项目文件中。 这些属性会直接影响应用[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]程序的生成方式。
+
+ *CmdLineDemo. .vbproj* / *CmdLineDemo*:
+
+```xml
+<AssemblyOriginatorKeyFile>WindowsApplication3.snk</AssemblyOriginatorKeyFile>
+<GenerateManifests>true</GenerateManifests>
+<TargetZone>LocalIntranet</TargetZone>
+<PublisherName>Microsoft</PublisherName>
+<ProductName>CmdLineDemo</ProductName>
+<PublishUrl>http://localhost/CmdLineDemo</PublishUrl>
+<Install>true</Install>
+<ApplicationVersion>1.0.0.*</ApplicationVersion>
+<ApplicationRevision>1</ApplicationRevision>
+<UpdateEnabled>true</UpdateEnabled>
+<UpdateRequired>false</UpdateRequired>
+<UpdateMode>Foreground</UpdateMode>
+<UpdateInterval>7</UpdateInterval>
+<UpdateIntervalUnits>Days</UpdateIntervalUnits>
+<UpdateUrlEnabled>false</UpdateUrlEnabled>
+<IsWebBootstrapper>true</IsWebBootstrapper>
+<BootstrapperEnabled>true</BootstrapperEnabled>
+```
+
+ 您可以在命令行重写这些属性中的任何属性, 而无需更改项目文件本身。 例如, 以下内容将在没有引导[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]程序的情况下生成应用程序部署:
+
+```cmd
+msbuild /target:publish /property:BootstrapperEnabled=false
+```
+
+ 发布属性[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]在 "**项目设计器**" 的 "**发布**"、"**安全性**" 和 "**签名**" 属性页中进行控制。 下面是发布属性的说明, 以及如何在应用程序设计器的各种属性页中设置每个属性的说明:
+
+- `AssemblyOriginatorKeyFile`确定用于对[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序清单进行签名的密钥文件。 此相同键还可用于为程序集分配强名称。 此属性在 "**项目设计器**" 的 "**签名**" 页上设置。
+
+  在 "**安全**" 页上设置以下属性:
+
+- **启用 ClickOnce 安全设置**确定是否[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]生成清单。 最初创建项目时, 默认情况[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]下, 清单生成是关闭的。 首次发布时, 向导将自动打开此标志。
+
+- **TargetZone**确定要发送到[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序清单中的信任级别。 可能的值包括 "Internet"、"LocalIntranet" 和 "Custom"。 Internet 和 LocalIntranet 会将默认权限集发出到你[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]的应用程序清单中。 LocalIntranet 是默认设置, 基本上意味着完全信任。 Custom 指定仅在基本*app.config*文件中显式指定的权限将发送到[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序清单中。 *App.config*文件是部分清单文件, 只包含信任信息定义。 它是一个隐藏的文件, 当你在 "**安全**" 页上配置权限时, 会自动将其添加到你的项目。
+
+  以下属性是在 "**发布**" 页上设置的:
+
+- `PublishUrl`在 IDE 中将应用程序发布到的位置。 如果[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] `InstallUrl`或属性均未指定,则将其插入应用程序清单中。`UpdateUrl`
+
+- `ApplicationVersion`指定[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序的版本。 此版本号为四位数。 如果最后一个数字是 "*", `ApplicationRevision`则会将替换为在生成时插入到清单中的值。
+
+- `ApplicationRevision`指定修订版本。 这是一个整数, 每次在 IDE 中发布时都会递增。 请注意, 对于在命令行中执行的生成, 不会自动递增。
+
+- `Install`确定应用程序是已安装的应用程序还是从 Web 上运行的应用程序。
+
+- `InstallUrl`(未显示) 是用户将从中安装应用程序的位置。 如果已指定, 则将此值刻录到*setup.exe 引导程序*(如果`IsWebBootstrapper`该属性已启用)。 如果`UpdateUrl`未指定, 还会将其插入应用程序清单中。
+
+- `SupportUrl`(未显示) 是在已安装的应用程序的 "**添加/删除程序**" 对话框中链接的位置。
+
+  以下属性是在 "**应用程序更新**" 对话框中设置的, 可从 "**发布**" 页访问。
+
+- `UpdateEnabled`指示应用程序是否应检查更新。
+
+- `UpdateMode`指定前台更新或后台更新。
+
+- `UpdateInterval`指定应用程序检查更新的频率。
+
+- `UpdateIntervalUnits``UpdateInterval`指定值是以小时、日还是周为单位。
+
+- `UpdateUrl`(未显示) 是应用程序将从其接收更新的位置。 如果指定此值, 则会将此值插入应用程序清单中。
+
+- 以下属性是在 "**发布选项**" 对话框中设置的, 可从 "**发布**" 页访问。
+
+- `PublisherName`指定在安装或运行应用程序时显示的提示中所显示发布服务器的名称。 对于已安装的应用程序, 它还用于指定 "**开始**" 菜单上的文件夹名称。
+
+- `ProductName`指定安装或运行应用程序时显示的提示中所显示产品的名称。 对于已安装的应用程序, 它还用于在 "**开始**" 菜单中指定快捷方式名称。
+
+- 以下属性是在 "**系统必备**" 对话框中设置的, 可从 "**发布**" 页访问。
+
+- `BootstrapperEnabled`确定是否生成 setup.exe 引导*程序*。
+
+- `IsWebBootstrapper`确定 setup.exe 引导*程序*是否在 Web 或基于磁盘的模式下工作。
+
+## <a name="installurl-supporturl-publishurl-and-updateurl"></a>InstallURL、SupportUrl、PublishURL 和 UpdateURL
+ 下表显示了用于 ClickOnce 部署的四个 URL 选项。
+
+|URL 选项|描述|
+|----------------|-----------------|
+|`PublishURL`|如果要将 ClickOnce 应用程序发布到网站, 则需要。|
+|`InstallURL`|可选。 如果安装站点不同于, `PublishURL`请设置此 URL 选项。 例如, 可以将设置`PublishURL`为 FTP 路径, 并`InstallURL`将设置为 Web URL。|
+|`SupportURL`|可选。 如果支持站点与不同`PublishURL`, 请设置此 URL 选项。 例如, 你可以将设置`SupportURL`为你公司的客户支持网站。|
+|`UpdateURL`|可选。 如果更新位置与不同`InstallURL`, 请设置此 URL 选项。 例如, 可以将设置`PublishURL`为 FTP 路径, 并`UpdateURL`将设置为 Web URL。|
+
+## <a name="see-also"></a>请参阅
+- <xref:Microsoft.Build.Tasks.GenerateBootstrapper>
+- <xref:Microsoft.Build.Tasks.GenerateApplicationManifest>
+- <xref:Microsoft.Build.Tasks.GenerateDeploymentManifest>
+- [ClickOnce 安全和部署](../deployment/clickonce-security-and-deployment.md)
+- [演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)

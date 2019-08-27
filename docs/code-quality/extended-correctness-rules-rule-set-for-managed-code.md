@@ -1,27 +1,27 @@
 ---
 title: 托管代码的“扩展的更正规则”规则集
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 ms.assetid: 5b181f5b-6c7a-4e46-a783-360e1da427a0
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 000b1780b0124d579ed0b9481c7d18966663ca51
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9ec1bdaf421e3976872a3460dc22fecd24b4386b
+ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53987309"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69585107"
 ---
 # <a name="extended-correctness-rules-rule-set-for-managed-code"></a>托管代码的“扩展的更正规则”规则集
-Microsoft 扩展的正确性规则规则集可最大化代码分析来报告逻辑和框架使用错误。 着重强调了在特定方案，例如 COM 互操作性和移动应用程序上。 应考虑包含此规则集如果其中一种情形适用于你的项目，或在项目中找到其他问题。
 
- Microsoft 扩展的正确性规则规则集包含在 Microsoft 基本正确性规则规则中设置的规则。 基本正确性规则包括 Microsoft 最少量建议规则规则中设置的规则。 有关详细信息请参阅[托管代码的基本正确性规则规则集](../code-quality/basic-correctness-rules-rule-set-for-managed-code.md)和[托管建议规则规则集的托管代码](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md)
+Microsoft 扩展的正确性规则集可最大程度地提高代码分析报告的逻辑和框架使用错误。 对特定方案 (如 COM 互操作性和移动应用程序) 施加了额外的强调。 如果其中一个方案适用于你的项目或在项目中发现其他问题, 则应考虑包含此规则集。
 
- 下表描述中的所有规则的 Microsoft 扩展的正确性规则规则集。
+Microsoft 扩展的正确性规则集包括 "[基本更正规则](../code-quality/basic-correctness-rules-rule-set-for-managed-code.md)" 规则集中的规则, 其中包含 "[托管建议规则](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md)" 规则集中的规则。
+
+下表介绍了 Microsoft 扩展的正确性规则集中的所有规则。
 
 |规则|描述|
 |----------|-----------------|
@@ -47,7 +47,7 @@ Microsoft 扩展的正确性规则规则集可最大化代码分析来报告逻�
 |[CA1901](../code-quality/ca1901-p-invoke-declarations-should-be-portable.md)|P/Invoke 声明应为可移植声明|
 |[CA2002](../code-quality/ca2002-do-not-lock-on-objects-with-weak-identity.md)|不要锁定具有弱标识的对象|
 |[CA2100](../code-quality/ca2100-review-sql-queries-for-security-vulnerabilities.md)|检查 SQL 查询是否存在安全漏洞|
-|[CA2101](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)|指定对 P/Invoke 字符串自变量进行封送处理|
+|[CA2101](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)|指定对 P/Invoke 字符串参数进行封送处理|
 |[CA2108](../code-quality/ca2108-review-declarative-security-on-value-types.md)|检查有关值类型的声明性安全|
 |[CA2111](../code-quality/ca2111-pointers-should-not-be-visible.md)|指针应为不可见|
 |[CA2112](../code-quality/ca2112-secured-types-should-not-expose-fields.md)|受保护的类型不应公开字段|
@@ -85,7 +85,7 @@ Microsoft 扩展的正确性规则规则集可最大化代码分析来报告逻�
 |[CA2237](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)|用 SerializableAttribute 标记 ISerializable 类型|
 |[CA2238](../code-quality/ca2238-implement-serialization-methods-correctly.md)|正确实现序列化方法|
 |[CA2240](../code-quality/ca2240-implement-iserializable-correctly.md)|正确实现 ISerializable|
-|[CA2241](../code-quality/ca2241-provide-correct-arguments-to-formatting-methods.md)|为格式化方法提供正确的自变量|
+|[CA2241](../code-quality/ca2241-provide-correct-arguments-to-formatting-methods.md)|为格式化方法提供正确的参数|
 |[CA2242](../code-quality/ca2242-test-for-nan-correctly.md)|正确测试 NaN|
 |[CA1008](../code-quality/ca1008-enums-should-have-zero-value.md)|枚举应具有零值|
 |[CA1013](../code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract.md)|重载加法方法和减法方法时重载相等运算符|
@@ -143,7 +143,7 @@ Microsoft 扩展的正确性规则规则集可最大化代码分析来报告逻�
 |[CA2144](../code-quality/ca2144-transparent-code-should-not-load-assemblies-from-byte-arrays.md)|透明代码不应从字节数组加载程序集|
 |[CA2145](../code-quality/ca2145-transparent-methods-should-not-be-decorated-with-the-suppressunmanagedcodesecurityattribute.md)|不应使用 SuppressUnmanagedCodeSecurityAttribute 修饰透明方法|
 |[CA2204](../code-quality/ca2204-literals-should-be-spelled-correctly.md)|文字应正确拼写|
-|[CA2211 非常量](../code-quality/ca2211-non-constant-fields-should-not-be-visible.md)|非常量字段不应是可见的|
+|[CA2211](../code-quality/ca2211-non-constant-fields-should-not-be-visible.md)|非常量字段不应是可见的|
 |[CA2217](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)|不要使用 FlagsAttribute 标记枚举|
 |[CA2218](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)|重写 Equals 时重写 GetHashCode|
 |[CA2219](../code-quality/ca2219-do-not-raise-exceptions-in-exception-clauses.md)|在异常子句中不引发异常|

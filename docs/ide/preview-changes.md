@@ -1,21 +1,20 @@
 ---
 title: 预览代码更改
 ms.date: 12/16/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 f1_keywords:
 - vs.codefix.previewchanges
 ms.workload:
 - multiple
-ms.openlocfilehash: be664e48694ad1d0ea88a95a6b72e0355454d9db
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 07d722848725753b0b2abf25c8497327cdb53835
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53832987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812222"
 ---
 # <a name="preview-changes-window"></a>预览更改窗口
 

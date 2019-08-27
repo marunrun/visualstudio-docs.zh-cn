@@ -1,7 +1,6 @@
 ---
 title: CA1050:在命名空间中声明类型
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - CA1050
@@ -12,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 1002748d-ac8d-404f-85dd-7a12d1ad3e05
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 5cb2000249e7e809f4570d93703c0c15093ec2cb
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 869ff99243349ae01c63da0a7d9e6544761cbd39
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53845228"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68922500"
 ---
 # <a name="ca1050-declare-types-in-namespaces"></a>CA1050:在命名空间中声明类型
 
@@ -35,25 +34,25 @@ ms.locfileid: "53845228"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 命名的命名空间范围内定义了一个公共或受保护的类型。
+在命名命名空间的范围外定义公共或受保护类型。
 
 ## <a name="rule-description"></a>规则说明
- 在命名空间，以防止名称冲突，并作为一种方法来组织对象层次结构中的相关的类型声明类型。 任何命名的命名空间之外的类型是不能在代码中引用全局命名空间中。
+类型是在命名空间中声明的, 以防止名称冲突, 并作为在对象层次结构中组织相关类型的一种方法。 位于任何命名命名空间之外的类型位于无法在代码中引用的全局命名空间中。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要解决此规则的冲突，将类型置于一个命名空间中。
+若要修复与此规则的冲突, 请将类型置于命名空间中。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 虽然永远不会需要禁止显示此规则的警告，是安全地执行此操作时将程序集将永远不与其他程序集一起使用。
+尽管你不必禁止显示此规则发出的警告, 但当程序集绝不会与其他程序集一起使用时, 可以安全地执行此操作。
 
 ## <a name="example"></a>示例
- 下面的示例演示具有类型外部命名空间中，未正确声明一个库和具有相同名称的命名空间中声明的类型。
+下面的示例演示了一个类型不正确地在命名空间外声明的库, 以及一个在命名空间中声明了相同名称的类型。
 
- [!code-csharp[FxCop.Design.TypesLiveInNamespaces#1](../code-quality/codesnippet/CSharp/ca1050-declare-types-in-namespaces_1.cs)]
- [!code-vb[FxCop.Design.TypesLiveInNamespaces#1](../code-quality/codesnippet/VisualBasic/ca1050-declare-types-in-namespaces_1.vb)]
+[!code-csharp[FxCop.Design.TypesLiveInNamespaces#1](../code-quality/codesnippet/CSharp/ca1050-declare-types-in-namespaces_1.cs)]
+[!code-vb[FxCop.Design.TypesLiveInNamespaces#1](../code-quality/codesnippet/VisualBasic/ca1050-declare-types-in-namespaces_1.vb)]
 
 ## <a name="example"></a>示例
- 下面的应用程序使用以前已定义的库。 请注意，外部命名空间声明的类型时，将创建名称`Test`未由命名空间限定。 另请注意，若要访问`Test`中键入`Goodspace`，命名空间名称是必需的。
+以下应用程序使用之前定义的库。 请注意, 当名称`Test`未由命名空间限定时, 将创建在命名空间外部声明的类型。 另请注意, 若要`Test`访问中`Goodspace`的类型, 需要命名空间名称。
 
- [!code-csharp[FxCop.Design.TestTypesLive#1](../code-quality/codesnippet/CSharp/ca1050-declare-types-in-namespaces_2.cs)]
- [!code-vb[FxCop.Design.TestTypesLive#1](../code-quality/codesnippet/VisualBasic/ca1050-declare-types-in-namespaces_2.vb)]
+[!code-csharp[FxCop.Design.TestTypesLive#1](../code-quality/codesnippet/CSharp/ca1050-declare-types-in-namespaces_2.cs)]
+[!code-vb[FxCop.Design.TestTypesLive#1](../code-quality/codesnippet/VisualBasic/ca1050-declare-types-in-namespaces_2.vb)]

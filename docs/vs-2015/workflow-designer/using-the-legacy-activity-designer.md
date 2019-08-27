@@ -1,11 +1,8 @@
 ---
 title: 使用旧版活动设计器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 helpviewer_keywords:
 - activities, configuring
@@ -18,13 +15,13 @@ ms.assetid: 2fea8a05-6e58-423d-94bf-a822b15ffb80
 caps.latest.revision: 5
 author: gewarren
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: a6c8aafe9eac26080bfbf57d06c7d512d1e1e62d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 5755c6a3b4ece5b40c7799d83bdf33966d5c2b3e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49843426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855773"
 ---
 # <a name="using-the-legacy-activity-designer"></a>使用旧版活动设计器
 本主题介绍如何使用旧 [!INCLUDE[wfd1](../includes/wfd1-md.md)] 中的活动设计器。 在面向 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 或 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] 时，请使用旧设计器。  
@@ -38,13 +35,13 @@ ms.locfileid: "49843426"
   
 2. 选择**活动**或**Activity （具有单独的代码）** 模板。  
   
-   1.  使用**活动**模板来创建一个活动的活动定义和用户代码位于同一代码文件。  
+   1. 使用**活动**模板来创建一个活动的活动定义和用户代码位于同一代码文件。  
   
-   2.  使用**Activity （具有单独的代码）** 模板以创建表示为工作流标记和单独的代码文件中的用户代码的活动定义一个活动。  
+   2. 使用**Activity （具有单独的代码）** 模板以创建表示为工作流标记和单独的代码文件中的用户代码的活动定义一个活动。  
   
 3. 键入活动名称或保留默认名称，然后单击**添加**。  
   
-   此外可以通过创建一个新类型的项目创建一组自定义活动**工作流活动库**。 有关此项目类型的详细信息，请参阅[如何： 创建工作流活动库 （旧版）](../workflow-designer/how-to-create-a-workflow-activity-library-legacy.md)。  
+   此外可以通过创建一个新类型的项目创建一组自定义活动**工作流活动库**。 有关此项目类型的详细信息，请参阅[如何：创建工作流活动库 （旧版）](../workflow-designer/how-to-create-a-workflow-activity-library-legacy.md)。  
   
 ## <a name="configuring-an-activity"></a>配置活动  
  当 Activity 设计器处于活动状态时，可以使用属性浏览器来配置下表中列出的属性。  
@@ -64,5 +61,5 @@ ms.locfileid: "49843426"
  [创建自定义活动](http://go.microsoft.com/fwlink?LinkID=65021)   
  [旧版工作流活动](../workflow-designer/legacy-workflow-activities.md)   
  [自定义活动示例](http://go.microsoft.com/fwlink?LinkID=65022)   
- [如何： 创建工作流活动库 （旧版）](../workflow-designer/how-to-create-a-workflow-activity-library-legacy.md)   
+ [如何：创建工作流活动库 （旧版）](../workflow-designer/how-to-create-a-workflow-activity-library-legacy.md)   
  [使用旧版工作流设计器](../workflow-designer/using-the-legacy-workflow-designer.md)

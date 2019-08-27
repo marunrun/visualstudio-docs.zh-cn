@@ -1,19 +1,18 @@
 ---
 title: 在编码的 UI 测试中使用 HTML5 控件
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: dbb34804e827ddd0eefdaf4585ba517034a31392
-ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
+ms.openlocfilehash: c7087f08743e58426663734295339d9ca6550a0d
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54269886"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68926590"
 ---
 # <a name="using-html5-controls-in-coded-ui-tests"></a>在编码的 UI 测试中使用 HTML5 控件
 
@@ -21,9 +20,9 @@ ms.locfileid: "54269886"
 
 [!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
- **要求**
+**要求**
 
--   Visual Studio Enterprise
+- Visual Studio Enterprise
 
 > [!WARNING]
 > 在 Internet Explorer 10 之前的版本中，可以在比 Internet Explorer 进程更高的特权级别中运行编码的 UI 测试。 当在 Internet Explorer 10 中运行编码的 UI 测试时，编码的 UI 测试和 Internet Explorer 进程必须处于相同的特权级别。 这是因为 Internet Explorer 10 提供了更安全的 AppContainer 功能。
@@ -48,18 +47,17 @@ ms.locfileid: "54269886"
 
 有关可在其添加断言的属性列表，请参阅 [HTMLAudioElement](https://developer.mozilla.org/docs/Web/API/HTMLAudioElement)。
 
- **搜索属性：**`HtmlAudio` 的搜索属性为 `Id`、`Name` 和 `Title`。
+**搜索属性：** `HtmlAudio` 的搜索属性为 `Id`、`Name` 和 `Title`。
 
- **筛选器属性：**`HtmlAudio` 的筛选器属性为 `Src`、`Class`、`ControlDefinition` 和 `TagInstance`。
+**筛选器属性：** `HtmlAudio` 的筛选器属性为 `Src`、`Class`、`ControlDefinition` 和 `TagInstance`。
 
 > [!NOTE]
 > 定位和暂停的时间可以很长。 在播放期间，编码的 UI 测试将一直等到 `(TimeSpan)` 中指定的时间再暂停音频。 如果由于某种特殊情况，过了指定的时间才命中暂停命令，将引发异常。
 
-
 ## <a name="video-control"></a>视频控件
- **视频控件：** 正确录制和播放 HTML5 视频控件上的操作。
+**视频控件：** 正确录制和播放 HTML5 视频控件上的操作。
 
- ![HTML5 视频控件](../test/media/codedui_html5_video.png)
+![HTML5 视频控件](../test/media/codedui_html5_video.png)
 
 |操作|录制|生成的代码|
 |-|---------------|-|
@@ -72,17 +70,17 @@ ms.locfileid: "54269886"
 
 有关可在其添加断言的属性列表，请参阅 [HTMLVideoElement](https://developer.mozilla.org/docs/Web/HTML/Element/video)。
 
- **搜索属性：**`HtmlVideo` 的搜索属性为 `Id`、`Name` 和 `Title`。
+**搜索属性：** `HtmlVideo` 的搜索属性为 `Id`、`Name` 和 `Title`。
 
- **筛选器属性：**`HtmlVideo` 的筛选属性为 `Src`、`Poster``Class``ControlDefinition` 和 `TagInstance`。
+**筛选器属性：** `HtmlVideo` 的筛选属性为 `Src`、`Poster``Class``ControlDefinition` 和 `TagInstance`。
 
 > [!NOTE]
 > 如果使用 -30s 或 +30s 标签对视频后退或快进，将聚合标签以定位到相应的时间。
 
 ## <a name="progressbar"></a>ProgressBar
- **进度条控件：** 进度条是一种不可交互的控件。 你可以对此控件的 `Value` 和 `Max` 属性添加断言。 有关详细信息，请参阅 [HTMLProgressElement](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress)。
+**进度条控件：** 进度条是一种不可交互的控件。 你可以对此控件的 `Value` 和 `Max` 属性添加断言。 有关详细信息，请参阅 [HTMLProgressElement](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress)。
 
- ![HTML5 进度条控件](../test/media/codedui_html5_progressbar.png)
+![HTML5 进度条控件](../test/media/codedui_html5_progressbar.png)
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,8 +1,7 @@
 ---
-title: IDebugSyncOperation::Execute |Microsoft Docs
+title: IDebugSyncOperation::Execute | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d8c10973bddef45321b9942afef05a696010433f
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: a2bc204169ff94a240e363eb8caa35ec8c7de9be
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54090215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004873"
 ---
 # <a name="idebugsyncoperationexecute"></a>IDebugSyncOperation::Execute
 以同步方式执行该操作并返回。  

@@ -1,14 +1,9 @@
 ---
-title: 选项对话框的常规调试 |Microsoft Docs
-ms.custom: ''
+title: “常规”&gt;“调试”&gt;“选项”对话框 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.options.General
 - VS.ToolsOptionsPages.Debugger.General
@@ -26,13 +21,13 @@ ms.assetid: b33aee0b-43c3-4c26-8ed4-bc673f491503
 caps.latest.revision: 50
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: e3a9e0b8008da5b648ae156235a20964fc0952b1
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 47db517bfb75d81785e910d1dd166ac83ddb2fcb
+ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51742777"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66261655"
 ---
 # <a name="general-debugging-options-dialog-box"></a>“选项”对话框 ->“调试”->“常规”
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,7 +35,7 @@ ms.locfileid: "51742777"
 **工具 / 选项 / 调试 / 常规**页允许你设置以下选项：  
   
  **删除所有断点之前询问**  
- 需要完成之前进行确认**删除所有断点**命令。  
+ 在完成“删除所有断点”  命令前需要进行确认。  
   
  **一个进程中断时则中断所有进程**  
  发生一个中断时，同时中断调试器连接到的所有进程。  
@@ -48,16 +43,16 @@ ms.locfileid: "51742777"
  **当异常跨越 AppDomain 或托管/本机边界时中断**  
  在托管或混合模式调试中，如果满足以下条件，公共语言运行时可能会捕获跨越应用程序域边界或托管/本机边界的异常：  
   
- 1\)时本机代码使用 COM 互操作调用托管的代码和托管的代码引发异常。 请参阅[COM 互操作介绍](http://msdn.microsoft.com/library/8bd62e68-383d-407f-998b-29aa0ce0fd67)。  
+ 1\)时本机代码使用 COM 互操作调用托管的代码和托管的代码引发异常。 请参阅 [COM 互操作介绍](https://msdn.microsoft.com/library/8bd62e68-383d-407f-998b-29aa0ce0fd67)。  
   
- 2\)时应用程序域 1 中运行的托管的代码调用托管的代码中应用程序域 2 中，并在应用程序域 2 中的代码引发异常。 请参阅[应用程序域进行编程](http://msdn.microsoft.com/en-us/bd36055b-56bd-43eb-b4d8-820c37172131)。  
+ 2\)时应用程序域 1 中运行的托管的代码调用托管的代码中应用程序域 2 中，并在应用程序域 2 中的代码引发异常。 请参阅[应用程序域进行编程](https://msdn.microsoft.com/bd36055b-56bd-43eb-b4d8-820c37172131)。  
   
- 3\)当代码调用函数使用反射，而该函数将引发异常。 请参阅[反射](http://msdn.microsoft.com/library/d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775)。  
+ 3\)当代码调用函数使用反射，而该函数将引发异常。 请参阅[反射](https://msdn.microsoft.com/library/d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775)。  
   
  在第 2) 和 3) 条中，异常有时由 `mscorlib` 中的托管代码而不是公共语言运行时捕获。 此选项不影响在 `mscorlib` 捕获到异常时中断。  
   
  **启用地址级调试**  
- 启用高级功能在地址级上进行调试 (**反汇编**窗口中，**注册**窗口中和地址断点)。  
+ 启用高级功能在地址级上进行调试（“反汇编”窗口、“注册”窗口和地址断点)   。  
   
  **如果源不可用时显示反汇编**  
  会自动显示**反汇编**窗口在尝试调试代码的源不可用。  
@@ -66,10 +61,10 @@ ms.locfileid: "51742777"
  允许你在断点上设置筛选器，使其仅影响特定的进程、线程或计算机。  
   
  **启用异常助手**  
- 仅用于托管代码。 托管异常打开“异常助手”对话框。  请参阅[异常助手](http://msdn.microsoft.com/library/992892ac-9d52-44cc-bf09-b44bfc5befeb)。  
+ 仅用于托管代码。 托管异常打开“异常助手”对话框。  请参阅[异常助手](https://msdn.microsoft.com/library/992892ac-9d52-44cc-bf09-b44bfc5befeb)。  
   
  **展开调用堆栈上未经处理的异常**  
- 将导致**调用堆栈**窗口调用堆栈回滚到点之前发生了未经处理的异常。  
+ 导致“调用堆栈”  窗口将调用堆栈回滚到未经处理的异常发生之前的时间点。  
   
  **启用“仅我的代码”**  
  调试器仅显示和单步执行用户代码（“我的代码”），而忽略系统代码和其他经过优化或没有调试符号的代码。  
@@ -87,7 +82,7 @@ ms.locfileid: "51742777"
  使调试器无法单步执行托管代码中的属性和运算符。  
   
  **启用属性求值和其他隐式函数调用**  
- 在变量窗口中打开自动求值的属性和隐式函数调用和**快速监视**对话框。  
+ 在变量窗口和“快速监视”  对话框中打开属性的自动求值和隐式函数调用。  
   
  **对变量窗口 （C# 和仅限 JavaScript） 中的对象调用字符串转换函数**  
  在变量窗口中计算对象时，执行隐式字符串转换调用。 因此，结果将显示为字符串而不是类型名。 仅在 C# 代码中进行调试时适用。 此设置可能由 DebuggerDisplay 特性重写 (请参阅[使用 DebuggerDisplay 特性](../debugger/using-the-debuggerdisplay-attribute.md))。  
@@ -96,7 +91,7 @@ ms.locfileid: "51742777"
  指示 Visual Studio 调试器从实现 SrcSrv (`srcsrv.dll`) 协议的源服务器中获取源文件。 Team Foundation Server 和 Windows 的调试工具是实现协议的两个源服务器。 有关 SrcSrv 设置的更多信息，请参阅“Windows 的调试工具”文档。 此外，请参阅[指定符号 (.pdb) 和源文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)。  
   
 > [!IMPORTANT]
->  由于读取 .pdb 文件会执行文件中的任意代码，因此请确保你信任此服务器。  
+> 由于读取 .pdb 文件会执行文件中的任意代码，因此请确保你信任此服务器。  
   
  **源服务器诊断消息打印到输出窗口**  
  如果启用源服务器支持，此设置会打开诊断显示。  
@@ -111,7 +106,7 @@ ms.locfileid: "51742777"
  指示调试器验证源文件是否与用于生成正在调试的可执行文件的源代码版本匹配。 如果版本不匹配，则会提示你查找匹配源。 如果未找到匹配源，则在调试过程中不会显示源代码。  
   
  **将所有输出窗口文本重都定向到即时窗口**  
- 将发送的所有调试器消息将通常显示在**输出**到窗口**即时**窗口相反。  
+ 将通常显示在“输出”  窗口中的所有调试器消息发送到“即时”  窗口。  
   
  **变量窗口中显示对象的原始结构**  
  关闭所有对象结构视图自定义。 有关视图自定义的详细信息，请参阅[创建的托管对象的自定义视图](../debugger/create-custom-views-of-dot-managed-objects.md)。  
@@ -128,10 +123,10 @@ ms.locfileid: "51742777"
  **加载 dll 导出**  
  加载 DLL 导出表。 处理 Windows 消息、Windows 过程 (WindowProc)、COM 对象、封送或不具有其符号的任何 DLL 时，DLL 导出表中的符号信息将很有用。 读取 DLL 导出信息会占用一些系统开销。 因此，默认情况下此功能被禁用。  
   
- 若要查看 DLL 导出表中的可用符号，请使用 `dumpbin /exports`。 符号可用于任何 32 位系统 DLL。 从 `dumpbin /exports` 输出中，可以查看到精确的函数名，包括非字母数字字符。 这对于在函数上设置断点很有用。 DLL 导出表中的函数名在调试器的其他位置似乎被截断了。 调用将按调用顺序列出，当前函数（嵌套最深的函数）位于顶端。 有关详细信息，请参阅 [dumpbin /exports](http://msdn.microsoft.com/library/2971ab7e-4ee6-478b-9c85-cda42a4ce1bf)。  
+ 若要查看 DLL 导出表中的可用符号，请使用 `dumpbin /exports`。 符号可用于任何 32 位系统 DLL。 从 `dumpbin /exports` 输出中，可以查看到精确的函数名，包括非字母数字字符。 这对于在函数上设置断点很有用。 DLL 导出表中的函数名在调试器的其他位置似乎被截断了。 调用将按调用顺序列出，当前函数（嵌套最深的函数）位于顶端。 有关详细信息，请参阅 [dumpbin /exports](https://msdn.microsoft.com/library/2971ab7e-4ee6-478b-9c85-cda42a4ce1bf)。  
   
  **显示并行堆栈关系图自下而上的**  
- 控制在其中堆栈中的显示的方向**并行堆栈**窗口。  
+ 控制堆栈在“并行堆栈”窗口中的显示方向  。  
   
  **如果写入的数据未更改值，则忽略 GPU 内存访问异常**  
  如果数据未改变，则忽略在调试期间检测的争用条件。 有关详细信息，请参阅[调试 GPU 代码](../debugger/debugging-gpu-code.md)。  
@@ -148,7 +143,7 @@ ms.locfileid: "51742777"
   **使用本机兼容模式**  
   选中此选项后，调试器使用 Visual Studio 2010 本机调试器而不是新的本机调试器。  
   
-  因为新的调试引擎不支持计算 .NET C++ 表达式，因此应在调试 .NET C++ 代码时使用此选项。 但是，启用本机兼容模式会禁用依赖于当前调试器实现来操作的许多功能。 例如，旧引擎缺少很多可视化工具内置类型，例如`std::string`Visual Studio 2015 项目中。   请在这些情况下使用 Visual Studio 2013 项目以便获得最佳的调试体验。  
+  因为新的调试引擎不支持计算 .NET C++ 表达式，因此应在调试 .NET C++ 代码时使用此选项。 但是，启用本机兼容模式会禁用依赖于当前调试器实现来操作的许多功能。 例如，旧引擎缺少许多用于内置类型（如 Visual Studio 2015 项目中的 `std::string`）的可视化工具。   请在这些情况下使用 Visual Studio 2013 项目以便获得最佳的调试体验。  
   
   **使用旧版 C# 和 VB 表达式计算器**  
   调试器将使用 Visual Studio 2013 C# /VB 表达式计算器，而不是基于 Visual Studio 2015 Roslyn 的表达式计算器。  
@@ -163,13 +158,13 @@ ms.locfileid: "51742777"
   在开始调试 (F5) 支持的项目类型时，将显示“实时可视化树”和“实时属性资源管理器”窗口。 有关详细信息，请参阅[调试时检查 XAML 属性](../debugger/inspect-xaml-properties-while-debugging.md)。  
   
   **预览实时可视化树中的所选的元素**  
-  选择其上下文的 XAML 元素也会选中**实时可视化树**窗口。  
+  选定了其上下文的 XAML 元素在“实时可视化树”  窗口中也会被选中。  
   
   **在应用程序中显示运行时工具**  
-  演示**实时可视化树**在正在调试的 XAML 应用程序的主窗口工具栏中的命令。 Visual Studio 2015 Update 2 中引入了此选项。  
+  如果选中一个 XAML 元素的上下文，同时会在“实时可视化树”窗口中选中该元素  。 Visual Studio 2015 Update 2 中引入了此选项。  
   
   **调试时启用诊断工具**  
-  **诊断工具**进行调试时显示窗口。 有关详细信息，请参阅[集成了调试器的分析](http://msdn.microsoft.com/library/a1f40370-7b61-42c2-afc4-0e13eba98859)。  
+  调试时显示“诊断工具”窗口  。 有关详细信息，请参阅[集成了调试器的分析](/visualstudio/profiling/running-profiling-tools-with-or-without-the-debugger)。  
   
   **调试时显示运行时间 PerfTip**  
   在进行调试时，代码窗口会显示给定方法调用的运行时间。  
@@ -178,12 +173,12 @@ ms.locfileid: "51742777"
   在进行调试时，你可以使用“编辑并继续”功能。  
   
   **启用本机编辑并继续**  
-  在调试本机 C++ 代码时，你可以使用“编辑并继续”功能。 有关详细信息，请参阅[编辑并继续 （Visual c + +）](../debugger/edit-and-continue-visual-cpp.md)。  
+  在调试本机 C++ 代码时，你可以使用“编辑并继续”功能。 有关详细信息，请参阅[编辑并继续 (Visual C++)](../debugger/edit-and-continue-visual-cpp.md)。  
   
-  **将更改应用在继续 （仅限本机）**  
+  **继续应用更改（仅限本机）**  
   在从中断状态继续该过程时，Visual Studio 会自动编译并应用你所做的任何未完成的代码更改。 如果未选中，你可以选择使用调试菜单下的“应用代码更改”项来应用更改。  
   
-  **就陈旧的代码 （仅限本机），则发出警告**  
+  **警告过时代码（仅限本机）**  
   收到关于陈旧代码的警告。  
   
   **允许预编译 （仅限本机）**  
@@ -191,6 +186,3 @@ ms.locfileid: "51742777"
   
 ## <a name="see-also"></a>请参阅  
  [在 Visual Studio 中进行调试](../debugger/debugging-in-visual-studio.md)
-
-
-

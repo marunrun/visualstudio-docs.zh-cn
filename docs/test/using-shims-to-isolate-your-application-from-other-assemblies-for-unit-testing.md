@@ -1,23 +1,22 @@
 ---
 title: 使用填充码隔离应用程序以进行单元测试
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 908a31a50b1af99f7123f292f250f9262a7da62e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f0274ecbbe89d35c1bc12651dd234632c973e1a7
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53947330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808114"
 ---
 # <a name="use-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing"></a>使用填充码针对单元测试将应用程序与程序集隔离
 
-**垫片类型**是 Microsoft Fakes 框架使用的两种技术之一，方便你轻松地将受测组件与环境隔离开来。 填充码会将对特定方法的调用转换为在测试中编写的部分代码。 很多方法会依赖于外部条件而返回不同的结果，但填充码处于测试的控制之下，并且可以在每次调用时返回一致的结果。 这会使您的测试更易于编写。
+**填充码类型**是 Microsoft Fakes 框架使用的两种技术之一，方便你轻松地将受测组件与环境隔离开来。 填充码会将对特定方法的调用转换为在测试中编写的部分代码。 很多方法会依赖于外部条件而返回不同的结果，但填充码处于测试的控制之下，并且可以在每次调用时返回一致的结果。 这会使您的测试更易于编写。
 
 使用填充码，可以将代码与不属于解决方案的程序集隔离。 为了相互隔离解决方案的组件，我们建议使用存根。
 
@@ -25,8 +24,8 @@ ms.locfileid: "53947330"
 
 **要求**
 
--   Visual Studio Enterprise
--   .NET Framework 项目
+- Visual Studio Enterprise
+- .NET Framework 项目
 
 > [!NOTE]
 > 不支持 .NET Standard 项目。
@@ -62,19 +61,19 @@ using (ShimsContext.Create()) {
 }
 ```
 
-##  <a name="how-to-use-shims"></a>如何使用填充码
+## <a name="how-to-use-shims"></a>如何使用填充码
 
-###  <a name="AddFakes"></a>添加 Fakes 程序集
+### <a name="AddFakes"></a>添加 Fakes 程序集
 
-1.  在解决方案资源管理器中，展开单元测试项目的“引用”。
+1. 在解决方案资源管理器中，展开单元测试项目的“引用”   。
 
-    -   如果使用的是 Visual Basic，请选择解决方案资源管理器的工具栏中的“显示所有文件”以便查看“引用”节点。
+    - 如果使用的是 Visual Basic，请选择解决方案资源管理器的工具栏中的“显示所有文件”以便查看“引用”节点    。
 
-2.  选择包含要为其创建填充码的类定义的程序集。 例如，如果要填充 DateTime，请选择 System.dll。
+2. 选择包含要为其创建填充码的类定义的程序集。 例如，如果要填充 DateTime，请选择 System.dll   。
 
-3.  选择快捷菜单中的“添加 Fakes 程序集”。
+3. 选择快捷菜单中的“添加 Fakes 程序集”  。
 
-###  <a name="ShimsContext"></a>使用 ShimsContext
+### <a name="ShimsContext"></a>使用 ShimsContext
 
 当在单元测试框架中使用填充码类型时，必须将测试代码包装在 `ShimsContext` 中，以便控制填充码的生存期。 如果未作此要求，填充码将一直持续到 AppDomain 关闭。 最简单的方法是使用静态 `ShimsContext` 方法创建一个 `Create()`，如下面的代码中所示：
 
@@ -90,9 +89,9 @@ public void Y2kCheckerTest() {
 
 正确释放每个填充码上下文至关重要。 根据经验，请始终调用 `ShimsContext.Create` 语句内的 `using`，以便确保清除已注册的填充码。 例如，您可能为某一测试方法注册了填充码，而且该方法会将 `DateTime.Now` 方法替换为始终返回 2000 年 1 月 1 日的委托。 如果忘记清除测试方法中的已注册填充码，则剩余的测试将始终返回 2000 年 1 月 1 日作为 DateTime.Now 值。 这可能会让人感到惊讶和困惑。
 
-###  <a name="WriteShims"></a>编写包含垫片的测试
+### <a name="WriteShims"></a>编写包含垫片的测试
 
-在测试代码中，为要虚设的方法插入 *detour*。 例如:
+在测试代码中，为要虚设的方法插入 *绕道*。 例如:
 
 ```csharp
 [TestClass]
@@ -153,17 +152,17 @@ End Class
 
 填充码类名称是通过在原始类型名称前加上 `Fakes.Shim` 前缀构成的。
 
-垫片的运行方式为在受测应用的代码中插入 *detour*。 无论在什么位置调用原始方法，Fakes 系统都会执行绕道，这样就会调用填充码代码而不是实际方法。
+填充码的运行方式为在受测应用的代码中插入 *绕道*。 无论在什么位置调用原始方法，Fakes 系统都会执行绕道，这样就会调用填充码代码而不是实际方法。
 
 请注意，绕道是在运行时创建和删除的。 必须始终在 `ShimsContext` 生存期内创建绕道。 释放绕道后，在绕道活动期间创建的任何填充码都会被移除。 为此，最好的方法是在 `using` 语句内执行。
 
 您可能会看到一个说明 Fakes 命名空间不存在的生成错误。 此错误有时会在发生其他编译错误时出现。 修复其他错误，然后它就会消失。
 
-##  <a name="BKMK_Shim_basics"></a>用于各种方法的垫片
+## <a name="BKMK_Shim_basics"></a>用于各种方法的垫片
 
 使用填充码方法，您可以将任何 .NET 方法（包括静态方法或非虚拟方法）替换为自己的委托。
 
-###  <a name="BKMK_Static_methods"></a>静态方法
+### <a name="BKMK_Static_methods"></a>静态方法
 
 用于将填充码附加到静态方法的属性将放置在填充码类型中。 每个属性只有一个资源库，可用来将委托附加到目标方法。 例如，给定一个具有静态方法 `MyClass` 的类 `MyMethod`：
 
@@ -183,7 +182,7 @@ public static class MyClass {
 ShimMyClass.MyMethod = () =>5;
 ```
 
-###  <a name="BKMK_Instance_methods__for_all_instances_"></a>实例方法（对于所有实例）
+### <a name="BKMK_Instance_methods__for_all_instances_"></a>实例方法（对于所有实例）
 
 与静态方法类似，可以为所有实例填充实例方法。 为了避免混淆，用于附加这些填充码的属性放置在名为 AllInstances 的嵌套类型中。 例如，给定一个具有静态方法 `MyClass` 的类 `MyMethod`：
 
@@ -220,7 +219,7 @@ public class ShimMyClass : ShimBase<MyClass> {
 
 请注意，在此示例中，Fakes 会将运行时实例作为委托的第一个自变量传递。
 
-###  <a name="BKMK_Instance_methods__for_one_instance_"></a>实例方法（对于一个运行时实例）
+### <a name="BKMK_Instance_methods__for_one_instance_"></a>实例方法（对于一个运行时实例）
 
 根据调用的接收方，也可以通过不同的委托来填充实例方法。 这样一来，同一实例方法可以根据类型实例而具有不同的行为。 用于设置这些填充码的属性是填充码类型本身的实例方法。 每个实例化的填充码类型也会与一个所填充类型的原始实例相关联。
 
@@ -281,7 +280,7 @@ MyClass instance = shim; // implicit cast retrieves the runtime
                          // instance
 ```
 
-###  <a name="BKMK_Constructors"></a> 构造函数
+### <a name="BKMK_Constructors"></a> 构造函数
 
 构造函数也可以进行填充，以便将填充码类型附加到未来的对象。 在填充码类型中，每个构造函数都作为静态方法构造函数而公开。 例如，给定一个使用整数的构造函数的类 `MyClass`：
 
@@ -332,7 +331,7 @@ public class ShimMyClass : ShimBase<MyClass>
 }
 ```
 
-###  <a name="BKMK_Base_members"></a>基成员
+### <a name="BKMK_Base_members"></a>基成员
 
 基成员的填充码属性可以通过以下方式来访问：为基类型创建填充码，并将子实例作为参数传递给基填充码类的构造函数。
 
@@ -375,19 +374,19 @@ public class ShimMyBase : ShimBase<MyBase> {
 }
 ```
 
-###  <a name="BKMK_Static_constructors"></a>静态构造函数
+### <a name="BKMK_Static_constructors"></a>静态构造函数
 
 填充码类型会公开静态方法 `StaticConstructor`，以便填充类型的静态构造函数。 由于静态构造函数仅执行一次，因此，在访问任何类型成员之前，你需要确保配置填充码。
 
-###  <a name="BKMK_Finalizers"></a>终结器
+### <a name="BKMK_Finalizers"></a>终结器
 
 Fakes 中不支持终结器。
 
-###  <a name="BKMK_Private_methods"></a>私有方法
+### <a name="BKMK_Private_methods"></a>私有方法
 
 Fakes 代码生成器会为仅具有签名中的可见类型的私有方法创建填充码属性，即可见的参数类型和返回类型。
 
-###  <a name="BKMK_Binding_interfaces"></a>绑定接口
+### <a name="BKMK_Binding_interfaces"></a>绑定接口
 
 当填充的类型实现某一接口时，代码生成器将发出一个方法，以便它同时绑定该接口的所有成员。
 
@@ -421,7 +420,7 @@ public class ShimMyClass : ShimBase<MyClass> {
 }
 ```
 
-##  <a name="change-the-default-behavior"></a>更改默认行为
+## <a name="change-the-default-behavior"></a>更改默认行为
 
 每个生成的填充码类型都保留 `IShimBehavior` 接口的一个实例（通过 `ShimBase<T>.InstanceBehavior` 属性）。 只要客户端调用未显式填充的实例成员，系统就会使用该行为。
 
@@ -446,7 +445,7 @@ ShimsBehaviors.Current =
     ShimsBehaviors.DefaultValue;
 ```
 
-##  <a name="detect-environment-accesses"></a>检测环境访问权限
+## <a name="detect-environment-accesses"></a>检测环境访问权限
 
 通过将 `ShimsBehaviors.NotImplemented` 行为分配给相应填充码类型的静态属性 `Behavior`，可以将行为附加到特定类型的所有成员（包括静态方法）：
 
@@ -458,13 +457,13 @@ ShimMyClass.Behavior = ShimsBehaviors.NotImplemented;
 ShimMyClass.BehaveAsNotImplemented();
 ```
 
-##  <a name="BKMK_Concurrency"></a> 并发
+## <a name="BKMK_Concurrency"></a> 并发
 
 填充码类型适用于 AppDomain 中的所有线程，且不具备线程关联性。 如果您计划使用支持并发的测试运行程序，这一点非常重要：涉及填充码类型的测试无法并发运行。 此属性不由 Fakes 运行时来实施。
 
-##  <a name="call-the-original-method-from-the-shim-method"></a>通过填充码方法调用原始方法
+## <a name="call-the-original-method-from-the-shim-method"></a>通过填充码方法调用原始方法
 
-假设我们想要在验证文件名已传递给方法之后，再将文本编写到文件系统。 这种情况下，我们需要调用填充码方法中的原始方法。
+假设我们想要在验证文件名已传递给方法之后，再将文本写到文件系统。 这种情况下，我们需要调用填充码方法中的原始方法。
 
 要解决这一问题，第一种方法是使用委托和 `ShimsContext.ExecuteWithoutShims()` 来包装对原始方法的调用，如下面的代码中所示：
 
@@ -503,7 +502,7 @@ shim = (fileName, content) => {
 ShimFile.WriteAllTextStringString = shim;
 ```
 
-##  <a name="BKMK_Limitations"></a>限制
+## <a name="BKMK_Limitations"></a>限制
 
 垫片无法用于 .NET 基类库 **mscorlib** 和 **System** 中的所有类型。
 

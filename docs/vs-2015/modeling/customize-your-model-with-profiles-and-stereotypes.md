@@ -1,12 +1,9 @@
 ---
 title: 自定义模型使用配置文件和构造型 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - UML model, profiles
 - UML model, stereotypes
@@ -15,13 +12,13 @@ ms.assetid: fd607157-0d3a-4583-a84e-427a4b2a5acb
 caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 33e887764c535083c2449a7d333868b2ccd9c4c5
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: f7e9aee38208a96ab75318a86810359392b5b8e1
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51727709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63433348"
 ---
 # <a name="customize-your-model-with-profiles-and-stereotypes"></a>使用配置文件和构造型自定义模型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,11 +34,11 @@ ms.locfileid: "51727709"
  ![具有 stereotype 的 UML 类。](../modeling/media/uml-class-stereotype.png "UML_class_stereotype")  
   
 > [!NOTE]
->  如果使用配置文件创建模型，然后与他人共享该模型，他们将无法看到构造型，除非他们在计算机上安装了相同的配置文件。  
+> 如果使用配置文件创建模型，然后与他人共享该模型，他们将无法看到构造型，除非他们在计算机上安装了相同的配置文件。  
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|描述|  
 |-----------|-----------------|  
 |[向 UML 模型元素添加构造型](../modeling/add-stereotypes-to-uml-model-elements.md)|将模型元素放在包中，将包链接到配置文件，并对该元素应用构造型。|  
 |[UML 模型的标准构造型](../modeling/standard-stereotypes-for-uml-models.md)|UML 标准配置文件 L2 和 L3 随 Visual Studio 一起安装，并且默认情况下，每个模型都链接到它们。 它们提供了可用于为你的模型添加批注的构造型。<br /><br /> 例如，可以将 «规范» 构造型应用于类，以指示它旨在仅定义其实例的外部可见的行为。|  
@@ -49,6 +46,3 @@ ms.locfileid: "51727709"
 |[安装 UML 配置文件](../modeling/install-a-uml-profile.md)|如果有人给了你一个 UML 配置文件，可将它安装在你的计算机上。|  
 |[定义自定义建模工具箱项](../modeling/define-a-custom-modeling-toolbox-item.md)|自定义工具箱项使你能避免在新元素上重复设置构造型。|  
 |[UML 类的构造型的颜色](http://code.msdn.microsoft.com/UML-Color-Classes-by-07de2b70)|此示例代码扩展了 UML 关系图。 它根据元素的构造型自动设置 UML 形状的颜色。|
-
-
-

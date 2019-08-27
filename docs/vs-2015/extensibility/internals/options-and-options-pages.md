@@ -1,14 +1,9 @@
 ---
 title: 选项和选项页 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Tools Options pages [Visual Studio SDK], managed package framework support
 - managed package framework, Tools Options pages support
@@ -18,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e6c0e636-5ec3-450e-b395-fc4bb9d75918
 caps.latest.revision: 35
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 005aeceb328a24c8c90994b6b274dbddc6b874f8
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 643ffd8dc48eb6b0fc35ea035c8c599efbea85c6
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51783267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63438960"
 ---
 # <a name="options-and-options-pages"></a>选项和选项页
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -66,7 +61,7 @@ ms.locfileid: "51783267"
 - <xref:System.ComponentModel.DescriptionAttribute> 确定选项的说明。  
   
   > [!NOTE]
-  >  等效的属性、 SRCategory、 LocDisplayName 和 SRDescription，使用字符串资源本地化和中定义[托管的项目示例](http://go.microsoft.com/fwlink/?LinkId=122774)。  
+  > 等效的属性、 SRCategory、 LocDisplayName 和 SRDescription，使用字符串资源本地化和中定义[托管的项目示例](http://go.microsoft.com/fwlink/?LinkId=122774)。  
   
   考虑以下代码片断：  
   
@@ -91,5 +86,4 @@ ms.locfileid: "51783267"
  通过组合确定的自动化属性的注册表路径<xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A>，单词、 AutomationProperties，和选项页的类别和名称。 例如，如果选项页具有 My Category 类别中，我的网格页名称，和<xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A>，HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp，则该自动化属性具有注册表项，HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\AutomationProperties\My Category\My 网格页。  
   
 > [!NOTE]
->  规范名称，我 Category.My 网格页中，是此密钥的名称子项的值。
-
+> 规范名称，我 Category.My 网格页中，是此密钥的名称子项的值。

@@ -1,14 +1,9 @@
 ---
-title: IDebugProgramPublisher2 |Microsoft Docs
-ms.custom: ''
+title: IDebugProgramPublisher2 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - IDebugProgramPublisher2
 helpviewer_keywords:
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: b1d17f63-7146-4076-a588-034cfc6858b9
 caps.latest.revision: 11
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 89d0dd95f4587950e1381f5fd16d690d010109c3
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: d49173a4c1f10be1544cf07b0b01640321d6d181
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51747098"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65697300"
 ---
 # <a name="idebugprogrampublisher2"></a>IDebugProgramPublisher2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -58,12 +53,12 @@ IDebugProgramPublisher2 : IUnknown
 ## <a name="requirements"></a>要求  
  标头： msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间:Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="example"></a>示例  
- 此示例演示如何实例化程序发行者和注册程序节点。 这会从本教程中，[发布程序节点](http://msdn.microsoft.com/en-us/d0100e02-4e2b-4e72-9e90-f7bc11777bae)。  
+ 此示例演示如何实例化程序发行者和注册程序节点。 这会从本教程中，[发布程序节点](https://msdn.microsoft.com/d0100e02-4e2b-4e72-9e90-f7bc11777bae)。  
   
 ```cpp#  
 // This is how m_srpProgramPublisher is defined in the class definition:  
@@ -99,4 +94,3 @@ void CProgram::Start(IDebugEngine2 * pEngine)
 ## <a name="see-also"></a>请参阅  
  [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)
-

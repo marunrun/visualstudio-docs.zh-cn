@@ -9,33 +9,34 @@ helpviewer_keywords:
 ms.assetid: e601fbc9-b10b-41c7-8180-959e57efabe8
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 492748dc54f68d4f888b8cfb6ad8e27ec44435d0
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: ea2b1ea99eb2801259d58a12c359e9fffd887a64
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53918620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62830431"
 ---
 # <a name="idiaenumsymbolsskip"></a>IDiaEnumSymbols::Skip
-将跳过指定的数目的枚举序列中的符号。  
-  
-## <a name="syntax"></a>语法  
-  
-```C++  
-HRESULT Skip (   
-   ULONG celt  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- celt  
- [in]若要跳过枚举序列中的符号数。  
-  
-## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`如果没有更多的符号以跳过。  
-  
-## <a name="see-also"></a>请参阅  
- [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)
+将跳过指定的数目的枚举序列中的符号。
+
+## <a name="syntax"></a>语法
+
+```C++
+HRESULT Skip ( 
+   ULONG celt
+);
+```
+
+#### <a name="parameters"></a>参数
+ celt
+
+[in]若要跳过枚举序列中的符号数。
+
+## <a name="return-value"></a>返回值
+ 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`如果没有更多的符号以跳过。
+
+## <a name="see-also"></a>请参阅
+- [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

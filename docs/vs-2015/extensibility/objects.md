@@ -1,26 +1,21 @@
 ---
 title: 对象 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - objects, interfaces
 ms.assetid: 8a5ab7a4-3668-4f78-9c08-04c5af7090f2
 caps.latest.revision: 14
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 6efd183962412e73ca5bc4938833c0a219cdfa96
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 903c9fef18990be0aee78309fcdfadb80a95f384
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51809202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68194171"
 ---
 # <a name="objects"></a>对象
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,4 +38,3 @@ ms.locfileid: "51809202"
 ## <a name="related-sections"></a>相关章节  
  [Visual Studio SDK 引用](../extensibility/visual-studio-sdk-reference.md)  
  显示参考主题的列表。
-

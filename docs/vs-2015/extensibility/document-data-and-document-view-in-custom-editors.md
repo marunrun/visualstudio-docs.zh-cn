@@ -1,26 +1,21 @@
 ---
 title: 文档数据和文档视图中自定义编辑器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - document data and document view
 ms.assetid: 71eea623-f566-4feb-84cd-ca1ba71bc493
 caps.latest.revision: 24
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 55f082711de306e9dd22fdf55e769282ad150f17
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 2f73ffde43f2ef3608ae492a9643f7920243d818
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51755292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68204680"
 ---
 # <a name="document-data-and-document-view-in-custom-editors"></a>自定义编辑器中的文档数据和文档视图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -46,11 +41,10 @@ ms.locfileid: "51755292"
 ## <a name="see-also"></a>请参阅  
  [支持多个文档视图](../extensibility/supporting-multiple-document-views.md)   
  [简化的嵌入](../extensibility/simplified-embedding.md)   
- [如何： 附加文档数据的视图](../extensibility/how-to-attach-views-to-document-data.md)   
+ [如何：附加文档数据的视图](../extensibility/how-to-attach-views-to-document-data.md)   
  [文档锁持有者管理](../extensibility/document-lock-holder-management.md)   
  [单个和多选项卡视图](../extensibility/single-and-multi-tab-views.md)   
  [正在保存标准文档](../extensibility/internals/saving-a-standard-document.md)   
  [持久性和正在运行文档表](../extensibility/internals/persistence-and-the-running-document-table.md)   
  [确定哪个编辑器打开一个项目中的文件](../extensibility/internals/determining-which-editor-opens-a-file-in-a-project.md)   
  [编辑器工厂](../extensibility/editor-factories.md)
-

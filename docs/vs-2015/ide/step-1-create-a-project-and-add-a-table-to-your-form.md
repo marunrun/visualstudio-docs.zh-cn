@@ -1,25 +1,20 @@
 ---
-title: 步骤 1：创建项目并向窗体添加表 | Microsoft Docs
-ms.custom: ''
+title: 步骤 1：创建项目并向窗体添加表 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 ms.assetid: 1cac4ba4-f3cd-43bd-ad5d-50fc599234e8
 caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: c49a3e9ac7c4a37c1c030d631667d90b274143cf
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 807d2b7de34acda52dd05ff8263ae3303dca61c6
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49934686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63441920"
 ---
 # <a name="step-1-create-a-project-and-add-a-table-to-your-form"></a>步骤 1：创建项目并向窗体添加表
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,9 +31,9 @@ ms.locfileid: "49934686"
   
 4. 在“属性”窗口中，设置下列窗体属性。  
   
-   1.  将窗体的“Text”属性从“Form1”更改为“Matching Game”。 该文本显示在游戏窗口的顶部。  
+   1. 将窗体的“Text”属性从“Form1”更改为“Matching Game”。 该文本显示在游戏窗口的顶部。  
   
-   2.  将窗体大小设置为 550 像素（宽）× 550 像素（高）。 设置方法有两种：将“Size”属性设置为“550, 550”；或者拖拽窗体的边角，直至你在集成开发环境 (IDE) 的右下角看到正确大小。  
+   2. 将窗体大小设置为 550 像素（宽）× 550 像素（高）。 设置方法有两种：将“Size”属性设置为“550, 550”；或者拖拽窗体的边角，直至你在集成开发环境 (IDE) 的右下角看到正确大小。  
   
 5. 通过选择 IDE 左侧的“工具箱”选项卡显示工具箱。  
   
@@ -47,7 +42,7 @@ ms.locfileid: "49934686"
    1. 将“BackColor”属性设置为“CornflowerBlue”。 为此，请通过选择“属性”窗口中“BackColor”属性旁边的下拉箭头，打开“BackColor”对话框。  然后，选择“BackColor”对话框中的“Web”选项卡，查看可用颜色名称的列表。  
   
       > [!NOTE]
-      >  这些颜色未按字母顺序排列，CornflowerBlue 位于列表底部附近。  
+      > 这些颜色未按字母顺序排列，CornflowerBlue 位于列表底部附近。  
   
    2. 通过选择“Dock”属性旁边的下拉按钮并选择大的中间按钮，将该属性设置为“Fill”。 这会扩展该表，使其覆盖整个窗体。  
   
@@ -65,29 +60,29 @@ ms.locfileid: "49934686"
   
     选择 TableLayoutPanel 后，打开工具箱并向 TableLayoutPanel 的左上角单元格添加“Label”控件（位于“公共控件”类别中）。 现在，`Label` 控件在 IDE 中应处于选中状态。 为其设置下列属性。  
   
-   1.  请确保将标签的“BackColor”属性设置为“CornflowerBlue”。  
+   1. 请确保将标签的“BackColor”属性设置为“CornflowerBlue”。  
   
-   2.  将“AutoSize”属性设置为“False”。  
+   2. 将“AutoSize”属性设置为“False”。  
   
-   3.  将“Dock”属性设置为“Fill”。  
+   3. 将“Dock”属性设置为“Fill”。  
   
-   4.  通过选择“TextAlign”属性旁的下拉按钮并选择中间按钮，将该属性设置为“MiddleCenter”。 这将确保图标显示在单元格中间。  
+   4. 通过选择“TextAlign”属性旁的下拉按钮并选择中间按钮，将该属性设置为“MiddleCenter”。 这将确保图标显示在单元格中间。  
   
-   5.  选择“Font”属性。 此时应显示一个省略号 (...) 按钮。  
+   5. 选择“Font”属性。 此时应显示一个省略号 (...) 按钮。  
   
-   6.  选择省略号按钮，并将“Font”值设置为“Webdings”，将“Font Style”设置为“Bold”，并将“Size”设置为“72”。  
+   6. 选择省略号按钮，并将“Font”值设置为“Webdings”，将“Font Style”设置为“Bold”，并将“Size”设置为“72”。  
   
-   7.  将标签的“Text”属性设置为字母“c”。  
+   7. 将标签的“Text”属性设置为字母“c”。  
   
         TableLayoutPanel 中的左上角单元格现在应包含一个位于蓝色背景中心的黑色框。  
   
        > [!NOTE]
-       >  Webdings 字体是 Windows 操作系统附带的图标字体。 在匹配游戏中，玩家需要匹配图标对，因此您使用此字体显示要匹配的图标。 不要在“Text”属性中输入“c”，请尝试输入其他字母以查看显示哪些图标。 感叹号是一个蜘蛛，大写 N 是一只眼，逗号是一个红辣椒。  
+       > Webdings 字体是 Windows 操作系统附带的图标字体。 在匹配游戏中，玩家需要匹配图标对，因此您使用此字体显示要匹配的图标。 不要在“Text”属性中输入“c”，请尝试输入其他字母以查看显示哪些图标。 感叹号是一个蜘蛛，大写 N 是一只眼，逗号是一个红辣椒。  
   
 8. 选择你的标签控件并将其复制到 TableLayoutPanel 中的下一单元格。 （按 Ctrl+C 键，或在菜单栏上依次选择“编辑”、“复制”。）然后粘贴。 （按 Ctrl+V 键，或在菜单栏上依次选择“编辑”、“粘贴”。）第一个标签的副本将显示在 TableLayoutPanel 的第二个单元格中。 再次粘贴它，在第三个单元格中会出现另一个标签。 一直粘贴 `Label` 控件，直到填充完所有单元格。  
   
    > [!NOTE]
-   >  如果粘贴次数太多，IDE 会将一个新行添加到 TableLayoutPanel 中，以便提供添加新标签控件的位置。 您可以撤消此操作。 若要删除新单元格，请按 Ctrl+Z 键，或在菜单栏上依次选择“编辑”、“撤消”。  
+   > 如果粘贴次数太多，IDE 会将一个新行添加到 TableLayoutPanel 中，以便提供添加新标签控件的位置。 您可以撤消此操作。 若要删除新单元格，请按 Ctrl+Z 键，或在菜单栏上依次选择“编辑”、“撤消”。  
   
     现在，窗体布局已设置完毕。其外观应类似于下图。  
   
@@ -96,9 +91,6 @@ ms.locfileid: "49934686"
   
 ### <a name="to-continue-or-review"></a>继续或查看  
   
--   若要转到下一个教程步骤，请参阅[步骤 2：添加随机对象和图标列表](../ide/step-2-add-a-random-object-and-a-list-of-icons.md)。  
+- 要转到下一个教程步骤，请参阅[步骤 2：添加随机对象和图标列表](../ide/step-2-add-a-random-object-and-a-list-of-icons.md)。  
   
--   若要返回到概述主题，请参阅[教程 3：创建匹配游戏](../ide/tutorial-3-create-a-matching-game.md)。
-
-
-
+- 要返回概述主题，请参阅[教程 3：创建匹配游戏](../ide/tutorial-3-create-a-matching-game.md)。

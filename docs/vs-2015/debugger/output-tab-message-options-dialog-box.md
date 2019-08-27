@@ -1,27 +1,22 @@
 ---
 title: 输出选项卡上，消息选项对话框 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - message options, Output
 ms.assetid: 22dd48c2-6d17-41b1-b84c-9ddeaef68411
 caps.latest.revision: 7
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 1f4589f29f0c52ed82c829c68c2fc9347dfc68c7
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 1fa4494ccff03fa71e25b32a4814a98a9e06dc28
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51787856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68185143"
 ---
 # <a name="output-tab-message-options-dialog-box"></a>“消息选项”对话框 ->“输出”选项卡
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +25,7 @@ ms.locfileid: "51787856"
   
  以下设置位于**输出**选项卡：  
   
- 行号  
+ 行号   
  显示行号。  
   
  **消息嵌套级别**  
@@ -54,14 +49,11 @@ ms.locfileid: "51787856"
  **消息鼠标位置**  
  鼠标 （适用于已发布的消息） 发送消息之后屏幕坐标。  
   
- **最大的行**  
+ **行（最大值）**  
  限制在当前所选的消息视图中保留的行数。  
   
  **此外将消息记录到文件**  
  指定用于消息日志的输出文件。 使用消息日志窗口同时写入此输出文件。  
   
- **将设置保存为默认值**  
+ **保存为默认设置**  
  保存新 windows 的消息流的上述设置。 当您退出 Spy + + 时保存这些设置。
-
-
-

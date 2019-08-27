@@ -1,14 +1,9 @@
 ---
-title: CA1900： 值类型字段应为可移植 |Microsoft Docs
-ms.custom: ''
+title: CA1900:值类型字段应为可移植 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA1900
 - ValueTypeFieldsShouldBePortable
@@ -20,17 +15,17 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: d8794fc1e30e2afb70c6816b6d10feb8d69a5d86
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 97a83bf4ba71d0adc71fdb96d4e1c865358c08e2
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49236296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68203093"
 ---
-# <a name="ca1900-value-type-fields-should-be-portable"></a>CA1900：值类型字段应为可移植字段
+# <a name="ca1900-value-type-fields-should-be-portable"></a>CA1900:值类型字段应为可移植字段
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 2017 的最新文档，请参阅[CA1900： 值类型字段应为可移植](https://docs.microsoft.com/visualstudio/code-quality/ca1900-value-type-fields-should-be-portable)docs.microsoft.com 上。  
+Visual Studio 的最新文档，请参阅[CA1900:值类型字段应为可移植](https://docs.microsoft.com/visualstudio/code-quality/ca1900-value-type-fields-should-be-portable)。  
   
 |||  
 |-|-|  
@@ -50,4 +45,3 @@ Visual Studio 2017 的最新文档，请参阅[CA1900： 值类型字段应为�
   
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告  
  仅当其出现在错误中，应禁止显示此警告。
-

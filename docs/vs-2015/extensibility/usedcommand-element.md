@@ -1,27 +1,22 @@
 ---
 title: UsedCommand 元素 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 helpviewer_keywords:
 - UsedCommands element (VSCT XML schema)
 - VSCT XML schema elements, UsedCommands
 ms.assetid: 99cd05d3-644a-42ff-b289-8458cd1b20c0
 caps.latest.revision: 11
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 8b34c2dbafe9126339638691bc345cab1d347924
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 91929038d77bcf14c6997f9b60551ed8c9c3b820
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51742530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68186369"
 ---
 # <a name="usedcommand-element"></a>UsedCommand 元素
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,8 +36,8 @@ ms.locfileid: "51742530"
   
 |特性|描述|  
 |---------------|-----------------|  
-|guid|必须的。 标识的命令的 GUID ID 对中的 GUID。|  
-|id|必须的。 GUID ID 对，用于标识该命令的 ID。|  
+|guid|必需。 标识的命令的 GUID ID 对中的 GUID。|  
+|id|必需。 GUID ID 对，用于标识该命令的 ID。|  
 |条件|可选。 请参阅[条件属性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -58,7 +53,7 @@ ms.locfileid: "51742530"
 |[UsedCommands 元素](../extensibility/usedcommands-element.md)|UsedCommand 元素进行分组和其他 UsedCommands 分组。|  
   
 ## <a name="remarks"></a>备注  
- 通过添加到命令`<UsedCommands>`元素中，VSPackage 通知[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]VSPackage，需要该命令的环境。 应添加`<UsedCommand>`为包所需的任何命令的元素可能不包括在所有版本和配置 Visual Studio。 例如，如果您的包调用特定于 Visual c + + 的命令，命令将不可用的 Visual Web Developer 用户除非您包括`<UsedCommand>`命令的元素。  
+ 通过添加到命令`<UsedCommands>`元素中，VSPackage 通知[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]VSPackage，需要该命令的环境。 应添加`<UsedCommand>`为包所需的任何命令的元素可能不包括在所有版本和配置 Visual Studio。 例如，如果您的包调用特定于视觉对象的命令C++，该命令可供 Visual Web Developer 中的用户才会包括`<UsedCommand>`命令的元素。  
   
 ## <a name="example"></a>示例  
   
@@ -73,4 +68,3 @@ ms.locfileid: "51742530"
 ## <a name="see-also"></a>请参阅  
  [UsedCommands 元素](../extensibility/usedcommands-element.md)   
  [Visual Studio 命令表格 (.Vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
-

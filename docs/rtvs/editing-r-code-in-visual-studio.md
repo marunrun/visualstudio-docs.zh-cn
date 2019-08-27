@@ -2,19 +2,18 @@
 title: 编辑 R 代码
 description: Visual Studio 为 R 提供量身定制的编辑体验，同时保留所有功能并且能够使用扩展。
 ms.date: 11/05/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: b3191df6ead3454bb138efae2aaf7183cc556d12
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7ecfd8f1cf50e94991ce2fd94ad94ac9815c92ca
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53968360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62938740"
 ---
 # <a name="edit-r-code-in-visual-studio"></a>在 Visual Studio 中编辑 R 代码
 
@@ -40,7 +39,7 @@ Visual Studio 同时还用下划线标出编辑器中的语法错误：
 
 ## <a name="edit-and-organize-code"></a>编辑和整理代码
 
-键入代码时，RTVS 将提供 [IntelliSense](r-intellisense.md) 页中所述的自动补全功能。 它还将设置自动格式，如大括号和括号补全： 
+键入代码时，RTVS 将提供 [IntelliSense](r-intellisense.md) 页中所述的自动补全功能。 它还将设置自动格式，如大括号和括号补全：
 
 ![内联格式设置动画](media/editing-inline-formatting.gif)
 
@@ -98,7 +97,7 @@ f <- function(a) { return(a + 1) }
 
 ## <a name="inserting-roxygen-comments"></a>插入 Roxygen 注释
 
-RTVS 提供一种快捷方式，通过使用函数的参数名来生成 [Roxygen](http://roxygen.org/) 注释。 只需在函数定义上方的空白行中键入 `###`：
+RTVS 提供一种快捷方式，通过使用函数的参数名来生成 [Roxygen](https://cran.r-project.org/web/packages/roxygen2/index.html) 注释。 只需在函数定义上方的空白行中键入 `###`：
 
 ![插入 Roxygen 注释动画](media/editing-roxygen-comments.gif)
 
@@ -129,6 +128,6 @@ RTVS 提供一种快捷方式，通过使用函数的参数名来生成 [Roxygen
 | | 第一个字符显示补全列表 | On | 键入第一个字符时显示补全列表。 关闭时，通过“编辑” > “IntelliSense” > “列表成员”(Ctrl+J) 来显示补全列表。 |
 | | Tab 键调用补全列表 | Off | 键入一个或多个字符并按 Tab 来调用补全列表。 |
 | | 匹配部分输入参数名 | Off | 在函数调用中键入参数名时，签名帮助显示最佳匹配的参数说明。 |
-| 交互窗口 | 在 R 控制台中进行语法检查 | Off | 在交互窗口中应用语法检测。 在多行语句中，语法检查可能无法正常工作。 | 
+| 交互窗口 | 在 R 控制台中进行语法检查 | Off | 在交互窗口中应用语法检测。 在多行语句中，语法检查可能无法正常工作。 |
 | 大纲显示 | 代码大纲显示 | On | 为多行语句这样的区域自动创建可折叠区域。 |
 | 语法检查 | 显示语法错误 | On | 为代码启用自动语法检查。 |

@@ -3,14 +3,14 @@ title: Visual Studio for Mac Tools for Unity
 description: 介绍 Visual Studio Tools for Unity 扩展
 author: therealjohn
 ms.author: johmil
-ms.date: 05/25/2018
+ms.date: 06/18/2019
 ms.assetid: 83FDD7A3-5D16-4B4B-9080-078E3FB5C623
-ms.openlocfilehash: f275288ea54b4b24996825aeb14c7a55ee3a3018
-ms.sourcegitcommit: 5c049194fa256b876ad303f491af11edd505756c
+ms.openlocfilehash: 98a34df9960ca95edbaf6b9c5ae91d7cd4e06568
+ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53027349"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67691859"
 ---
 # <a name="visual-studio-for-mac-tools-for-unity"></a>Visual Studio for Mac Tools for Unity
 
@@ -19,6 +19,9 @@ ms.locfileid: "53027349"
 Visual Studio for Mac Tools for Unity 是一个免费的 Visual Studio 扩展，可将 Visual Studio for Mac 打造成一个通过 Unity 平台开发跨平台游戏和应用的强大工具。
 
 Visual Studio for Mac 中包括现成可用的 Unity 集成，自 Unity 2018.1 起，Visual Studio for Mac 是 Unity 项目的默认 C# IDE。
+
+> [!NOTE]
+> 此信息适用于 Visual Studio for Mac IDE。 对于 Visual Studio Code，请参阅[本指南](https://code.visualstudio.com/docs/other/unity)以了解详细信息。
 
 ## <a name="overview"></a>概述
 

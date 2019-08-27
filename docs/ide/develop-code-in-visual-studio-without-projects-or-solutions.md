@@ -1,7 +1,6 @@
 ---
 title: 开发代码而无需创建项目或解决方案
 ms.date: 02/21/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - open folder [Visual Studio]
@@ -9,19 +8,19 @@ helpviewer_keywords:
 - projects and solutions, develop code without
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a1275a5c0ada3ddc12fe4257880e16d130243d0e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7554d3f89547701e1a7cad0280a1655450520586
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53968467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62962383"
 ---
 # <a name="develop-code-in-visual-studio-without-projects-or-solutions"></a>在 Visual Studio 中开发代码而无需创建项目或解决方案
 
-在 Visual Studio 2017 中，你可以在 Visual Studio 中打开几乎任何类型的基于目录的项目的代码，而无需创建解决方案或者项目文件。 这意味着，例如，可以在 GitHub 上克隆一个存储库，然后在 Visual Studio 中直接打开并开始开发，而无需创建解决方案或项目。 如果需要，可以指定自定义生成任务并通过简单的 JSON 文件启动参数。
+你可以在 Visual Studio 中打开几乎任何类型的基于目录的项目的代码，而无需创建解决方案或者项目文件。 这意味着，例如，可以在 GitHub 上克隆一个存储库，然后在 Visual Studio 中直接打开并开始开发，而无需创建解决方案或项目。 如果需要，可以指定自定义生成任务并通过简单的 JSON 文件启动参数。
 
 在 Visual Studio 中打开代码文件之后，“解决方案资源管理器”会显示文件夹中的所有文件。 可以单击任何文件开始编辑。 在后台，Visual Studio 开始对文件编制索引，以启用 IntelliSense、导航和重构功能。 在编辑、创建、移动或删除文件时，Visual Studio 会自动跟踪更改，并不断更新其 IntelliSense 索引。 代码带有语法着色，许多情况下还含有基本的 IntelliSense 语句完成。
 
@@ -30,9 +29,19 @@ ms.locfileid: "53968467"
 可以通过以下任何方式，在 Visual Studio 中打开代码：
 
 - 在 Visual Studio 菜单栏上，依次选择“文件” > “打开” > “文件夹”，然后浏览到代码位置。
+
 - 在包含该代码的文件夹的上下文（右键单击）菜单上，选择“在 Visual Studio 中打开”命令。
+
+::: moniker range="vs-2017"
 - 选择 Visual Studio“开始”页上的“打开文件夹”链接。
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+- 在“启动”窗口中选择“打开文件夹”链接。
+::: moniker-end
+
 - 如果是键盘用户，则在 Visual Studio 中按 Ctrl+Shift+Alt+O。
+
 - 打开克隆的 GitHub 存储库中的代码。
 
 ### <a name="to-open-code-from-a-cloned-github-repo"></a>打开克隆的 GitHub 存储库中的代码
@@ -62,10 +71,6 @@ ms.locfileid: "53968467"
    ![显示文件夹视图](./media/VSIDE_Code_Clone3_show.png)
 
    此时，可以浏览克隆存储库中的文件夹和文件，并在具有语法着色和其他功能的 Visual Studio 代码编辑器中查看和搜索代码。
-
-| | |
-|---------|---------|
-| ![视频的摄像机图标](../install/media/video-icon.png)| [观看视频](https://mva.microsoft.com/en-us/training-courses/getting-started-with-visual-studio-2017-17798?l=lp3TOKD6D_6711787171)，了解如何从 Visual Studio 中的 GitHub 存储库克隆并打开代码。 |
 
 ## <a name="run-and-debug-your-code"></a>运行和调试代码
 
@@ -98,7 +103,7 @@ ms.locfileid: "53968467"
 
 ### <a name="codebases-that-contain-c-code"></a>包含 C++ 代码的代码库
 
-有关在 Visual Studio 中打开 C++ 代码而无需创建解决方案或项目的信息，请参阅 [C++ 的打开文件夹项目](/cpp/ide/non-msbuild-projects)。
+有关在 Visual Studio 中打开 C++ 代码而无需创建解决方案或项目的信息，请参阅 [C++ 的打开文件夹项目](/cpp/build/open-folder-projects-cpp)。
 
 ### <a name="codebases-that-contain-a-visual-studio-project"></a>包含 Visual Studio 项目的代码库
 
@@ -113,6 +118,6 @@ ms.locfileid: "53968467"
 ## <a name="see-also"></a>请参阅
 
 - [自定义生成和调试任务](../ide/customize-build-and-debug-tasks-in-visual-studio.md)
-- [C++ 的打开文件夹项目](/cpp/ide/non-msbuild-projects)
-- [C++ 中的 CMake 项目](/cpp/ide/cmake-tools-for-visual-cpp)
+- [C++ 的打开文件夹项目](/cpp/build/open-folder-projects-cpp)
+- [C++ 中的 CMake 项目](/cpp/build/cmake-projects-in-visual-studio)
 - [在代码和文本编辑器中编写代码](../ide/writing-code-in-the-code-and-text-editor.md)

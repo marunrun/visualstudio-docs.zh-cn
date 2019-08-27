@@ -7,15 +7,15 @@ helpviewer_keywords:
 - instrumentation profiling method
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 10353dabf0ae0e0bbee726c2f816a04c2af99f90
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 0f10a3f434def1c96c2f096c4b299b47dd8aad9f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53991092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004406"
 ---
 # <a name="understand-instrumentation-data-values"></a>了解检测数据值
 
@@ -97,5 +97,5 @@ Visual Studio 的检测分析方法会记录所分析应用程序中函数调用
 
 ## <a name="see-also"></a>请参阅
 
-[分析性能工具数据](../profiling/analyzing-performance-tools-data.md)  
+[分析性能工具数据](../profiling/analyzing-performance-tools-data.md)
 [如何：选择收集方法](../profiling/how-to-choose-collection-methods.md)

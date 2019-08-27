@@ -2,7 +2,6 @@
 title: IDispatchEx 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -15,12 +14,12 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3a59f30c5b42301d29b73a4a079837423614da49
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: df3fd7d46fdcb1f3e86bddd53700d7bce6e21381
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54087576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63000833"
 ---
 # <a name="idispatchex-interface"></a>IDispatchEx 接口
 `IDispatchEx`的扩展`IDispatch`接口，适合脚本编写语言之类的动态语言的支持的功能。 本部分介绍`IDispatchEx`接口本身之间的差异`IDispatch`和`IDispatchEx`，和扩展的基本原理。 应读者都熟悉`IDispatch`并且有权`IDispatch`文档。  

@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 2918ffa2-562f-40d6-9053-ef321bbeb767
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8622bb1288324429ad346834930559d1435ac6d5
-ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
-ms.translationtype: MTE95
+ms.openlocfilehash: afcada407060af2072e3cf1c30e86153762890b5
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "53867574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62905996"
 ---
-# <a name="view-register-values-in-the-registers-window-c-c-visual-basic-f"></a>在寄存器窗口中查看注册值 (C#，c + +、 Visual Basic 中， F#)
+# <a name="view-register-values-in-the-registers-window-c-c-visual-basic-f"></a>在寄存器窗口中查看注册值 (C#， C++，Visual Basic 中， F#)
 
-**注册**Visual Studio 在调试期间，窗口显示寄存器内容。 有关寄存器背后概念的简要介绍并**注册**窗口中，请参阅[调试基础知识：“寄存器”窗口
+**注册**Visual Studio 在调试期间，窗口显示寄存器内容。 有关寄存器背后概念的简要介绍并**注册**窗口中，请参阅[调试基础知识：寄存器窗口](../debugger/debugging-basics-registers-window.md)。
 
 > [!NOTE]
 > 寄存器信息不可用的脚本或 SQL 应用。
@@ -41,6 +41,8 @@ ms.locfileid: "53867574"
 在调试期间，注册值更改，因为应用程序中执行代码。 以红色中最近显示更改的值**注册**窗口。
 
 为了减少混乱，“寄存器”窗口将寄存器组织成组，具体情况随平台和处理器类型的不同而不同。 您可以显示或隐藏寄存器组。 有关详细信息，请参阅[如何：显示和隐藏寄存器组](../debugger/how-to-display-and-hide-register-groups.md)。
+
+有关信息的标志所示**注册**窗口中，请参阅[有关寄存器窗口](../debugger/debugging-basics-registers-window.md)
 
 您可以编辑寄存器的值。 有关详细信息，请参阅[如何：编辑寄存器值](../debugger/how-to-edit-a-register-value.md)。
 

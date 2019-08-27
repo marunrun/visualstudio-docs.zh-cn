@@ -1,16 +1,17 @@
 ---
 title: 创建和编辑生成配置
 description: 本文介绍如何在 Visual Studio for Mac 中创建生成配置
-author: conceptdev
-ms.author: crdun
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: CC1B72D6-12FF-4CCC-A9D4-00F2DC14589F
-ms.openlocfilehash: 49a64f7752bc5f6b3dbbb0dcfed385bfdd5ef9be
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.custom: video
+ms.openlocfilehash: 09591cb4feee4e9dc673f925bf3917eb3d07319b
+ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51296094"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67693078"
 ---
 # <a name="creating-and-editing-build-configurations"></a>创建和编辑生成配置
 
@@ -22,15 +23,15 @@ ms.locfileid: "51296094"
 
 要创建项目生成配置，请执行以下步骤：
 
-1. 右键单击项目节点，然后选择“选项”。
+1. 右键单击项目节点，然后选择“选项”  。
 
-2. 在“项目选项”对话框中，选择“生成”>“配置”：
+2. 在“项目选项”对话框中，选择“生成”>“配置”： 
 
     ![项目选项中的配置管理器](media/create-and-edit-configurations-image2.png)
 
-3. 要创建新配置，请选择“添加”。 或者，可以复制一个现有配置。
+3. 要创建新配置，请选择“添加”  。 或者，可以复制一个现有配置。
 
-创建配置后，可以使用项目选项中的“生成”部分调整属性，使其适合配置：
+创建配置后，可以使用项目选项中的“生成”部分调整属性，使其适合配置： 
 
 ![配置生成选项](media/create-and-edit-configurations-image3.png)
 
@@ -38,15 +39,15 @@ ms.locfileid: "51296094"
 
 要创建解决方案生成配置，请执行以下步骤：
 
-1. 右键单击解决方案节点，然后选择“选项”。
+1. 右键单击解决方案节点，然后选择“选项”  。
 
-2. 在“解决方案选项”对话框中，选择“生成”>“配置”：
+2. 在“解决方案选项”对话框中，选择“生成”>“配置”： 
 
     ![解决方案选项中的配置管理器](media/create-and-edit-configurations-image1.png)
 
-3. 要创建新配置，请选择“添加”。 或者，可以复制一个现有配置。
+3. 要创建新配置，请选择“添加”  。 或者，可以复制一个现有配置。
 
-创建配置后，可以使用每个项目选项中的“生成”部分调整属性，使其适合配置：
+创建配置后，可以使用每个项目选项中的“生成”部分调整属性，使其适合配置： 
 
 ![配置生成选项](media/create-and-edit-configurations-image3.png)
 
@@ -56,9 +57,13 @@ ms.locfileid: "51296094"
 
 ![配置列表](media/create-and-edit-configurations-image4.png)
 
-选择“重命名”按钮。
+选择“重命名”按钮  。
 
 ![“重命名”对话框](media/create-and-edit-configurations-image5.png)
+
+## <a name="related-video"></a>相关视频
+
+> [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Launch-Multiple-Projects/player]
 
 ## <a name="see-also"></a>请参阅
 

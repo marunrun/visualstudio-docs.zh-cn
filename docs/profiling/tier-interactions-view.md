@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Tier Interactions view
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bf907b11a715f9e108c71daeb6bebd35be9f1212
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8a3bf4f5fd7ab18efb13e1c52847daf647e908b7
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53967091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62968771"
 ---
 # <a name="tier-interactions-view"></a>“层交互”视图
 

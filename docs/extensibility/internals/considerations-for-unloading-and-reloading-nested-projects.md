@@ -6,17 +6,17 @@ helpviewer_keywords:
 - nested projects, unloading and reloading
 - projects [Visual Studio SDK], unloading and reloading nested
 ms.assetid: 06c3427e-c874-45b1-b9af-f68610ed016c
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: db5af7d761df39e2a0fee29f27e3f34526f07a7e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 0a45cf72f09ddf4e5ac1d68b59c2b13e64982744
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53870935"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66335544"
 ---
 # <a name="considerations-for-unloading-and-reloading-nested-projects"></a>有关卸载和重新加载嵌套的项目的注意事项
 

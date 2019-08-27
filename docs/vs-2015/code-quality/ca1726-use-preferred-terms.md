@@ -1,14 +1,9 @@
 ---
-title: CA1726： 使用首选的词条 |Microsoft Docs
-ms.custom: ''
+title: CA1726:使用首选的词条 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - UsePreferredTerms
 - CA1726
@@ -19,17 +14,17 @@ caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: c17514d00be7b0a3303b1c5bf703702fe564e0d1
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 67dab4c732faa04af44800f740d78c4ce4f9dc80
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49220514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68143163"
 ---
-# <a name="ca1726-use-preferred-terms"></a>CA1726：使用首选词条
+# <a name="ca1726-use-preferred-terms"></a>CA1726:使用首选词条
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 2017 的最新文档，请参阅[CA1726： 使用首选的词条](https://docs.microsoft.com/visualstudio/code-quality/ca1726-use-preferred-terms)docs.microsoft.com 上。  
+Visual Studio 的最新文档，请参阅[CA1726:使用首选的词条](https://docs.microsoft.com/visualstudio/code-quality/ca1726-use-preferred-terms)。  
   
 |||  
 |-|-|  
@@ -46,30 +41,30 @@ Visual Studio 2017 的最新文档，请参阅[CA1726： 使用首选的词条](
   
 |过时的术语|首选的术语|  
 |-------------------|--------------------|  
-|不是|后面|  
-|已取消|Canceled|  
-|无法|不能|  
-|ComPlus|EnterpriseServices|  
-|无法|不能|  
-|Didnt|DidNot|  
-|无法|开头|  
-|不|不|  
-|标志或标志|没有任何替换词。 请勿使用。|  
-|尚未|HadNot|  
-|尚未|HasNot|  
-|尚未|HaveNot|  
-|索引|索引|  
-|不是|IsNot|  
-|登录名|登录|  
-|注销|注销|  
-|Shouldnt|ShouldNot|  
-|登录|登录|  
-|签字认可|注销|  
-|Wasnt|WasNot|  
-|没有|未|  
-|未|翻译已经不再|  
-|Wouldnt|WouldNot|  
-|可写|可写|  
+|`Arent`|`AreNot`|
+|`Cancelled`|`Canceled`|
+|`Cant`|`Cannot`|
+|`ComPlus`|`EnterpriseServices`|
+|`Couldnt`|`CouldNot`|
+|`Didnt`|`DidNot`|
+|`Doesnt`|`DoesNot`|
+|`Dont`|`DoNot`|
+|`Flag` 或 `Flags`|没有任何替换词。 请勿使用。|
+|`Hadnt`|`HadNot`|
+|`Hasnt`|`HasNot`|
+|`Havent`|`HaveNot`|
+|`Indices`|`Indexes`|
+|`Isnt`|`IsNot`|
+|`LogIn`|`LogOn`|
+|`LogOut`|`LogOff`|
+|`Shouldnt`|`ShouldNot`|
+|`SignOn`|`SignIn`|
+|`SignOff`|`SignOut`|
+|`Wasnt`|`WasNot`|
+|`Werent`|`WereNot`|
+|`Wont`|`WillNot`|
+|`Wouldnt`|`WouldNot`|
+|`Writeable`|`Writable`|
   
 ## <a name="how-to-fix-violations"></a>如何解决冲突  
  若要修复此规则的冲突，请替换首选备用词条中的术语。  
@@ -79,4 +74,3 @@ Visual Studio 2017 的最新文档，请参阅[CA1726： 使用首选的词条](
   
 ## <a name="related-rules"></a>相关的规则  
  [命名警告](../code-quality/naming-warnings.md)
-

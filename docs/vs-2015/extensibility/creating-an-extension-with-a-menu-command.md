@@ -1,14 +1,9 @@
 ---
 title: 使用菜单命令创建扩展 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - write a vspackage
 - vspackage
@@ -17,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: f97104c8-2bcb-45c7-a3c9-85abeda8df98
 caps.latest.revision: 57
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: fb99149a7b617d8e48e036d9e706e5e1c0a6169b
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: e3bbf6b3b1ed2565d5e58806bd0935f713ba5bfd
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51779302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62572882"
 ---
 # <a name="creating-an-extension-with-a-menu-command"></a>使用菜单命令创建扩展
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,28 +30,28 @@ ms.locfileid: "51779302"
   
 ## <a name="creating-a-menu-command"></a>创建菜单命令  
   
-1.  创建一个名为的 VSIX 项目**FirstMenuCommand**。 可以查找中的 VSIX 项目模板**新的项目**下的对话框**Visual C# / 可扩展性**。  
+1. 创建一个名为的 VSIX 项目**FirstMenuCommand**。 可以查找中的 VSIX 项目模板**新的项目**下的对话框**Visual C# / 可扩展性**。  
   
-2.  项目打开后，添加名为的自定义命令项模板**FirstCommand**。 在中**解决方案资源管理器**，右键单击项目节点并选择**添加 / 新项**。 在中**添加新项**对话框中，转到**Visual C# / 可扩展性**，然后选择**自定义命令**。 在中**名称**在窗口底部字段中，将命令文件名称更改为**FirstCommand.cs**。  
+2. 项目打开后，添加名为的自定义命令项模板**FirstCommand**。 在中**解决方案资源管理器**，右键单击项目节点并选择**添加 / 新项**。 在中**添加新项**对话框中，转到**Visual C# / 可扩展性**，然后选择**自定义命令**。 在中**名称**在窗口底部字段中，将命令文件名称更改为**FirstCommand.cs**。  
   
-3.  生成项目并启动调试。  
+3. 生成项目并启动调试。  
   
      将显示 Visual Studio 的实验实例。 有关实验实例的详细信息，请参阅[实验实例](../extensibility/the-experimental-instance.md)。  
   
-4.  在实验实例中，打开**工具 / 扩展和更新**窗口。 应会看到**FirstMenuCommand**此处扩展。 (如果您打开**扩展和更新**中的 Visual Studio 工作实例，不会看到**FirstMenuCommand**)。  
+4. 在实验实例中，打开**工具 / 扩展和更新**窗口。 应会看到**FirstMenuCommand**此处扩展。 (如果您打开**扩展和更新**中的 Visual Studio 工作实例，不会看到**FirstMenuCommand**)。  
   
      现在，转到**工具**的实验实例中的菜单。 应会看到**调用 FirstCommand**命令。 此时它只会弹出一个消息框，显示"FirstCommandPackage 内 FirstMenuCommand.FirstCommand.MenuItemCallback()"。 我们将了解如何实际从下一节中的此命令启动记事本。  
   
 ## <a name="changing-the-menu-command-handler"></a>更改菜单命令处理程序  
  现在让我们更新要启动记事本的命令处理程序。  
   
-1.  停止调试并返回到 Visual Studio 的工作实例。 打开 FirstCommand.cs 文件并添加以下 using 语句：  
+1. 停止调试并返回到 Visual Studio 的工作实例。 打开 FirstCommand.cs 文件并添加以下 using 语句：  
   
     ```csharp  
     using System.Diagnostics;  
     ```  
   
-2.  查找专用 FirstCommand 构造函数。 这是命令挂接到命令服务和命令处理程序指定的位置。 将命令处理程序的名称更改为 StartNotepad，按如下所示：  
+2. 查找专用 FirstCommand 构造函数。 这是命令挂接到命令服务和命令处理程序指定的位置。 将命令处理程序的名称更改为 StartNotepad，按如下所示：  
   
     ```csharp  
     private FirstCommand(Package package)  
@@ -79,7 +74,7 @@ ms.locfileid: "51779302"
     }  
     ```  
   
-3.  删除 MenuItemCallback 方法并添加一个 StartNotepad 方法，它只是启动记事本：  
+3. 删除 MenuItemCallback 方法并添加一个 StartNotepad 方法，它只是启动记事本：  
   
     ```csharp  
     private void StartNotepad(object sender, EventArgs e)  
@@ -90,7 +85,7 @@ ms.locfileid: "51779302"
     }  
     ```  
   
-4.  现在试一试。当开始调试项目并单击**工具 / 调用 FirstCommand**，您应看到出现的记事本实例。  
+4. 现在试一试。当开始调试项目并单击**工具 / 调用 FirstCommand**，您应看到出现的记事本实例。  
   
      可以使用的实例<xref:System.Diagnostics.Process>类来运行任何可执行文件，而不仅仅是记事本。 使用尝试 calc.exe，例如。  
   
@@ -99,9 +94,9 @@ ms.locfileid: "51779302"
   
  你可以转到此脚本在两种方式之一：  
   
-1.  从桌面中，找到**重置 Visual Studio 2015 实验实例**。  
+1. 从桌面中，找到**重置 Visual Studio 2015 实验实例**。  
   
-2.  从命令行运行以下命令：  
+2. 从命令行运行以下命令：  
   
     ```  
     <VSSDK installation>\VisualStudioIntegration\Tools\Bin\CreateExpInstance.exe /Reset /VSInstance=14.0 /RootSuffix=Exp && PAUSE  
@@ -113,7 +108,7 @@ ms.locfileid: "51779302"
   
  FirstMenuCommand bin 目录中，可以找到此扩展的.vsix 文件。 具体而言，假定您已生成的发布配置，则将为：  
   
- **\<代码目录 > \FirstMenuCommand\FirstMenuCommand\bin\Release\ FirstMenuCommand.vsix**  
+ **\<code directory>\FirstMenuCommand\FirstMenuCommand\bin\Release\ FirstMenuCommand.vsix**  
   
  若要安装扩展，您的朋友需要关闭所有打开的 Visual Studio 实例，然后双击.vsix 文件，随后会显示**VSIX 安装程序**。 将文件复制到 **%LocalAppData%\Microsoft\VisualStudio\14.0\Extensions**目录。  
   
@@ -124,19 +119,18 @@ ms.locfileid: "51779302"
   
 1. 您可以执行许多其他操作使用简单的菜单命令：  
   
-   1.  添加自己的图标：[将图标添加到菜单命令](../extensibility/adding-icons-to-menu-commands.md)  
+   1. 添加自己的图标：[将图标添加到菜单命令](../extensibility/adding-icons-to-menu-commands.md)  
   
-   2.  更改菜单命令的文本：[更改菜单命令的文本](../extensibility/changing-the-text-of-a-menu-command.md)  
+   2. 更改菜单命令的文本：[更改菜单命令的文本](../extensibility/changing-the-text-of-a-menu-command.md)  
   
-   3.  将菜单快捷方式添加到命令：[绑定键盘快捷方式菜单项](../extensibility/binding-keyboard-shortcuts-to-menu-items.md)  
+   3. 将菜单快捷方式添加到命令：[将键盘快捷方式绑定到菜单项](../extensibility/binding-keyboard-shortcuts-to-menu-items.md)  
   
 2. 添加不同类型的命令、 菜单和工具栏：[扩展菜单和命令](../extensibility/extending-menus-and-commands.md)  
   
-3. 添加工具窗口和扩展内置的 Visual Studio 工具窗口：[扩展和自定义工具 Windows](../extensibility/extending-and-customizing-tool-windows.md)  
+3. 添加工具窗口和扩展内置的 Visual Studio 工具窗口：[扩展和自定义工具窗口](../extensibility/extending-and-customizing-tool-windows.md)  
   
-4. 添加 IntelliSense、 代码建议和其他功能到现有代码编辑器：[扩展编辑器和语言服务](../extensibility/extending-the-editor-and-language-services.md)  
+4. 将 IntelliSense、 代码建议和其他功能添加到现有的代码编辑器：[扩展编辑器和语言服务](../extensibility/extending-the-editor-and-language-services.md)  
   
-5. 将选项和属性页和用户设置添加到你的扩展：[扩展属性和属性窗口](../extensibility/extending-properties-and-the-property-window.md)和[扩展用户设置和选项](../extensibility/extending-user-settings-and-options.md)  
+5. 将选项和属性页和用户设置添加到您的扩展插件：[扩展属性和属性窗口](../extensibility/extending-properties-and-the-property-window.md)和[扩展用户设置和选项](../extensibility/extending-user-settings-and-options.md)  
   
-   其他类型的扩展需要更多工作，如创建新的项目类型 ([扩展项目](../extensibility/extending-projects.md))，创建新的编辑器类型 ([创建自定义编辑器和设计器](../extensibility/creating-custom-editors-and-designers.md))，或在独立 shell 中实现您的扩展插件： [Visual Studio 独立 Shell](../extensibility/visual-studio-isolated-shell.md)
-
+   其他类型的扩展需要更多工作，如创建新的项目类型 ([扩展项目](../extensibility/extending-projects.md))，创建新的编辑器类型 ([创建自定义编辑器和设计器](../extensibility/creating-custom-editors-and-designers.md))，或在独立 shell 中实现您的扩展插件：[Visual Studio 独立 Shell](../extensibility/visual-studio-isolated-shell.md)

@@ -1,22 +1,21 @@
 ---
-title: 如何：使用代码分析签入策略强制实现可维护的代码
+title: 使用代码分析签入策略
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, check-in policies
 ms.assetid: d1b3b04f-4dd9-40e6-b2d4-b414d33fb647
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d31e52ab2f158b73a0076414b6d18e0b7421b04
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 0924d3c7b6f39e4ec026a77ee8e0418361e311ba
+ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53825706"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66260925"
 ---
 # <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>如何：强制执行可维护的代码使用代码分析签入策略
 
@@ -50,13 +49,13 @@ Team foundation 版本控制的管理员可以将代码分析可维护性规则�
 
    - 复杂性：**CA1502 AvoidExcessiveComplexity** -阈值：在超过 25 种的警告
 
-   - 可维护性索引：**CA1505 AvoidUnmaintainableCode** -阈值：少于 20 发出警告
+   - 可维护性索引：**CA1505 AvoidUnmaintainableCode** - Threshold:少于 20 发出警告
 
    - 类耦合度：**CA1506 AvoidExcessiveClassCoupling** -阈值：在多个类的 80 和多个方法，为 30 的警告
 
      此外，如果你想违反规则时阻止成功生成，则选择**将警告视为错误**规则说明旁边的复选框。
 
-3. 单击 **“确定”**。 新签入策略现在适用于未来的签入。
+3. 单击 **“确定”** 。 新签入策略现在适用于未来的签入。
 
 ## <a name="see-also"></a>请参阅
 

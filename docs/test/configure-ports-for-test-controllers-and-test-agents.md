@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 211edbd7-9fe4-4251-ba85-8bec4363261b
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: ca6d95de1ddcf50796810b2d9ec11438ca705fe9
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: bd66bcb3615477abc2fc9a8122f2ec4675f37bbb
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53823683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62965643"
 ---
 # <a name="configure-ports-for-test-controllers-and-test-agents"></a>为测试控制器和测试代理配置端口
 
-可以更改测试控制器、测试代理和客户端使用的默认传入端口。 这在你尝试将测试控制器、测试代理或客户端与其他一些软件（这些软件与端口设置发生冲突）一起使用时可能会很有用。 更改端口的另一个原因是，测试控制器和客户端之间的防火墙限制。 在此情况下，你可能需要手动配置端口以便为防火墙启用它，这样测试控制器便能向客户端发送结果。
+可以更改测试控制器、测试代理和客户端使用的默认传入端口。 这在您尝试将测试控制器、测试代理或客户端与其他一些软件（这些软件与端口设置发生冲突）一起使用时可能会很有用。 更改端口的另一个原因是，测试控制器和客户端之间的防火墙限制。 在此情况下，您可能需要手动配置端口以便为防火墙启用它，这样测试控制器便能向客户端发送结果。
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -48,7 +47,7 @@ ms.locfileid: "53823683"
 
 - **客户端** 默认情况下，随机 TCP 端口用于传入连接。 如果需要，您可以配置传入端口。 有关详细信息，请参阅[配置传入端口](#configure-the-incoming-ports)。
 
-   当测试控制器首次尝试连接到客户端时，你可能会收到防火墙通知。
+   当测试控制器首次尝试连接到客户端时，您可能会收到防火墙通知。
 
    Windows Server 2008 默认禁用防火墙通知，必须为客户端程序（devenv.exe、mstest.exe、mlm.exe）手动添加防火墙例外，这样它才能接受传入连接。
 

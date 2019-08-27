@@ -1,12 +1,9 @@
 ---
 title: 调试 T4 文本模板 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - text templates, troubleshooting
 - text templates, debugging
@@ -14,13 +11,13 @@ ms.assetid: 0877fdf2-20bf-42da-b3cc-4c5856b80821
 caps.latest.revision: 30
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: f299b89f7f59cbfc043bb77e6e56c3e5fac22d16
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 08e74dbb5fefcdaa0959690c7eb1633bca2a8bc6
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49298904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68164582"
 ---
 # <a name="debugging-a-t4-text-template"></a>调试 T4 文本模板
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -84,6 +81,3 @@ ms.locfileid: "49298904"
 |处理名为的指令时引发了异常{0}。|处理指令的指令处理器将引发异常时发生。|请确保为指令处理器参数正确。|  
 |主机引发了异常时尝试解析程序集引用{0}。|当主机尝试解析程序集引用时引发异常时发生。 该消息提供了该程序集引用字符串。|程序集引用来自\<@# assembly #> 指令和从指令处理器。 请确保程序集参数中提供的 name 参数正确。|  
 |尝试指定不受支持{1}值{0}指令 {2}|RequiresProvidesDirectiveProcessor （全部从其派生我们生成的指令处理器），情况发生时，提供不受支持，要求，或提供自变量。|确保，name = 中的名称值对中提供要求，并提供参数是否正确。|
-
-
-

@@ -1,25 +1,20 @@
 ---
 title: 使用探查器命令行收集独立应用程序的 .NET Framework 内存数据 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 7bce69e2-407c-4342-8516-641586968928
 caps.latest.revision: 18
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: fc3a109f66a7f761cf31dc6892207a00cc484148
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+manager: jillfra
+ms.openlocfilehash: 37609a2ee4b52931c8df1a95af9d494e64bb473e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53866356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68158230"
 ---
 # <a name="collecting-net-framework-memory-data-for-stand-alone-applications-by-using-the-profiler-command-line"></a>使用探查器命令行收集独立应用程序的 .NET Framework 内存数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,7 +29,7 @@ ms.locfileid: "53866356"
 |**将探查器附加到 .NET 应用程序**|-   [如何：将探查器附加到 .NET Framework 应用程序以收集内存数据](../profiling/how-to-attach-the-profiler-to-a-dotnet-framework-stand-alone-application-to-collect-memory-data-by-using-the-command-line.md)|  
 |**检测应用程序以收集 .NET 内存数据**|-   [如何：使用探查器检测独立 .NET Framework 组件并收集内存数据](/visualstudio/profiling/how-to-instrument-a-dotnet-framework-component-and-collect-memory-data?view=vs-2015)|  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 ### <a name="profiling-stand-alone-applications"></a>分析独立应用程序  
   
@@ -57,6 +52,3 @@ ms.locfileid: "53866356"
   
 ## <a name="reference"></a>参考  
  [命令行分析工具参考](../profiling/command-line-profiling-tools-reference.md)
-
-
-

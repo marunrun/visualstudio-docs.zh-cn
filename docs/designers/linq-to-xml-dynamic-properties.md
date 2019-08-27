@@ -1,20 +1,19 @@
 ---
 title: LINQ to XML 动态属性
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.assetid: 0455f47c-4a68-4f2e-a3f8-dd1d85b99012
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f51995cf1e327691276f0adb417e1832dc936f3e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 181e9e4fb86a0348c0b5adb1d26a0a4e4e1721bb
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53823388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62893206"
 ---
 # <a name="linq-to-xml-dynamic-properties"></a>LINQ to XML 动态属性
 

@@ -1,14 +1,9 @@
 ---
 title: 性能不佳的多线程应用程序的常见模式 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.cv.threads.tools.gallery
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 00d10629-e20f-4d6d-8643-c59a3879812e
 caps.latest.revision: 17
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 1e0dfcb9408c67acc754f687903b4be2d13f9ff4
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: f2c1a799663d33e61977c5416ad199bce8bce545
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51755816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62420377"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>性能不佳的多线程应用程序的常见模式
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,7 +32,7 @@ ms.locfileid: "51755816"
   
  如下图所示，并发可视化工具还可在 CPU 使用率视图中公开此症状，其中，尽管存在多个线程，但该应用程序只使用一个逻辑核心。  
   
- 有关详细信息，请参阅 MSDN 博客网站上 Hazim Shafi 的 [Windows 的并行性能工具](http://go.microsoft.com/fwlink/?LinkID=160569)博客中的“性能模式 1：识别锁争用”。  
+ 有关详细信息，请参阅"性能模式 1:识别锁争用"中 Hazim Shafi[并行性能工具为 Windows](http://go.microsoft.com/fwlink/?LinkID=160569) MSDN 博客网站上的博客。  
   
  ![锁争用](../profiling/media/lockcontention-2.png "LockContention_2")  
   
@@ -57,9 +52,9 @@ ms.locfileid: "51755816"
   
  评估此问题时，应注意以下事项：  
   
--   整个系统可能被过度订阅。 请考虑到系统上的其他进程可能会抢占线程。 将光标悬停在“线程”视图中的抢占段时，工具提示将识别该线程和抢占该线程的进程。 此进程不一定是在进程被抢占的整个过程中执行的进程，但它可提供是什么对进程造成了抢占压力的相关提示。  
+- 整个系统可能被过度订阅。 请考虑到系统上的其他进程可能会抢占线程。 将光标悬停在“线程”视图中的抢占段时，工具提示将识别该线程和抢占该线程的进程。 此进程不一定是在进程被抢占的整个过程中执行的进程，但它可提供是什么对进程造成了抢占压力的相关提示。  
   
--   评估进程如何确定在此工作阶段期间要执行的线程的合适数量。 如果进程直接计算活动的并行线程数，请考虑修改算法以更好地在系统上占用可用的逻辑内核数。 如果使用并发运行时、任务并行库或 PLINQ，这些库将执行计算线程数的工作。  
+- 评估进程如何确定在此工作阶段期间要执行的线程的合适数量。 如果进程直接计算活动的并行线程数，请考虑修改算法以更好地在系统上占用可用的逻辑内核数。 如果使用并发运行时、任务并行库或 PLINQ，这些库将执行计算线程数的工作。  
   
 ## <a name="inefficient-io"></a>I/O 效率低  
  ![I/O 效率低](../profiling/media/inefficient-io.png "Inefficient_IO")  
@@ -73,6 +68,3 @@ ms.locfileid: "51755816"
   
 ## <a name="see-also"></a>请参阅  
  [线程视图](../profiling/threads-view-parallel-performance.md)
-
-
-

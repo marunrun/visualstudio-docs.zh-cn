@@ -1,14 +1,9 @@
 ---
 title: Replace 命令 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - edit.replace
 helpviewer_keywords:
@@ -18,19 +13,18 @@ ms.assetid: a15767f1-5a3d-44f5-8c77-7b0f1157f340
 caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 83281a656d553dfa677d7ae25bf043fc0b588978
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 4ef58a39f1ff96a3c72cbb5a48940e378997cbca
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49283200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68157814"
 ---
 # <a name="replace-command"></a>Replace 命令
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
-使用“查找和替换”窗口的“在文件中替换”选项卡上的可用选项子集替换文件中的文本。  
+使用“查找和替换”窗口的“在文件中替换”选项卡上的可用选项子集替换文件中的文本   。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,10 +36,10 @@ Edit.Replace findwhat replacewith [/all] [/case]
   
 ## <a name="arguments"></a>自变量  
  `findwhat`  
- 必须的。 要匹配的文本。  
+ 必需。 要匹配的文本。  
   
  `replacewith`  
- 必须的。 用于替换匹配文本的文本。  
+ 必需。 用于替换匹配文本的文本。  
   
 ## <a name="switches"></a>开关  
  /all 或 /a  
@@ -94,12 +88,9 @@ Edit.Replace findwhat replacewith [/all] [/case]
 >Edit.Replace btnSend btnSubmit /open  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [查找和替换文本](../../ide/finding-and-replacing-text.md)   
  [“命令”窗口](../../ide/reference/command-window.md)   
  [“查找/命令”框](../../ide/find-command-box.md)   
  [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)   
  [Visual Studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)
-
-
-

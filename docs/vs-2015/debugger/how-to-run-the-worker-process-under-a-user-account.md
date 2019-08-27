@@ -1,14 +1,9 @@
 ---
-title: 如何： 运行辅助进程的用户帐户下 |Microsoft Docs
-ms.custom: ''
+title: 如何：辅助角色下运行进程的用户帐户 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -24,15 +19,15 @@ ms.assetid: b58e97b1-e62a-4318-aea4-52276ea20735
 caps.latest.revision: 35
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: d5d9e9cbadd2b7154eeb84bad99239e0b026eecd
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: ebb8ec1fe10f6fbc5c367cb0ed127e048351b0e4
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51734461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68157873"
 ---
-# <a name="how-to-run-the-worker-process-under-a-user-account"></a>如何：在用户帐户下运行辅助进程
+# <a name="how-to-run-the-worker-process-under-a-user-account"></a>如何：在用户帐户下运行工作进程
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 若要设置计算机以便在某个用户帐户下运行 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 辅助进程（aspnet_wp.exe 或 w3wp.exe），请执行下列步骤。  
@@ -41,29 +36,30 @@ ms.locfileid: "51734461"
   
 #### <a name="to-run-aspnetwpexe-under-a-user-account"></a>以用户帐户运行 aspnet_wp.exe  
   
-1.  打开 machine.config 文件，此文件位于计算机上运行时安装路径下的 CONFIG 文件夹中。  
+1. 打开 machine.config 文件，此文件位于计算机上运行时安装路径下的 CONFIG 文件夹中。  
   
-2.  查找&lt;processModel&gt;部分，并将用户和密码属性更改为的名称和要用于运行 aspnet_wp.exe 的用户帐户的密码。  
+2. 找到 &lt;processModel&gt; 节，将用户和密码属性更改为希望用于运行 aspnet_wp.exe 的用户帐户的名称和密码。  
   
-3.  保存 machine.config 文件。  
+3. 保存 machine.config 文件。  
   
-4.  在 [!INCLUDE[winxpsvr](../includes/winxpsvr-md.md)]上，默认情况下已安装 IIS 6.0。 相应的辅助进程是 w3wp.exe。若要在 IIS 6.0 模式下运行并将 aspnet_wp.exe 用作辅助进程，必须执行下列步骤：  
+4. 在 [!INCLUDE[winxpsvr](../includes/winxpsvr-md.md)]上，默认情况下已安装 IIS 6.0。 相应的辅助进程是 w3wp.exe。若要在 IIS 6.0 模式下运行并将 aspnet_wp.exe 用作辅助进程，必须执行下列步骤：  
   
-    1.  单击 **“开始”**，单击 **“管理工具”** ，然后选择 **“Internet 信息服务”**。  
+    1. 单击 **“开始”** ，单击 **“管理工具”** ，然后选择 **“Internet 信息服务”** 。  
   
-    2.  在 **“Internet 信息服务”** 对话框中，右击 **“网站”** 文件夹并选择 **“属性”**。  
+    2. 在 **“Internet 信息服务”** 对话框中，右击 **“网站”** 文件夹并选择 **“属性”** 。  
   
-    3.  在 **“网站属性”** 对话框中选择 **“服务”**。  
+    3. 在 **“网站属性”** 对话框中选择 **“服务”** 。  
   
-    4.  选择 **“以 IIS6.0 隔离模式运行 WWW 服务”**。  
+    4. 选择 **“以 IIS6.0 隔离模式运行 WWW 服务”** 。  
   
-    5.  关闭 **“属性”** 对话框和 **“Internet 服务管理器”**。  
+    5. 关闭 **“属性”** 对话框和 **“Internet 服务管理器”** 。  
   
-5.  打开 Windows 命令提示窗口，通过运行下面的命令重置服务器：  
+5. 打开 Windows 命令提示窗口，通过运行下面的命令重置服务器：  
   
     ```  
     iisreset  
     ```  
+
     — 或 —  
   
     ```  
@@ -71,28 +67,23 @@ ms.locfileid: "51734461"
     net start w3svc  
     ```  
   
-6.  找到 Temporary [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Files 文件夹，它应位于 CONFIG 文件夹所在的路径中。 右键单击 Temporary [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Files 文件夹，然后选择快捷菜单上的“属性”  。  
+6. 找到 Temporary [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Files 文件夹，它应位于 CONFIG 文件夹所在的路径中。 右键单击 Temporary [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Files 文件夹，然后选择快捷菜单上的“属性”  。  
   
-7.  在 **“临时 ASP.NET 文件属性”** 对话框中单击 **“安全性”** 选项卡。  
+7. 在 **“临时 ASP.NET 文件属性”** 对话框中单击 **“安全性”** 选项卡。  
   
-8.  单击 **“高级”**。  
+8. 单击 **“高级”** 。  
   
-9. 在 **“临时 ASP.Net 文件的高级安全设置”** 对话框中单击 **“添加”**。  
+9. 在 **“临时 ASP.Net 文件的高级安全设置”** 对话框中单击 **“添加”** 。  
   
     将出现 **“选择用户、计算机或组”** 对话框。  
   
-10. 在 **“输入要选择的对象名称”** 框中键入用户名，然后单击 **“确定”**。 用户名必须遵循以下格式：域名\用户名。  
+10. 在 **“输入要选择的对象名称”** 框中键入用户名，然后单击 **“确定”** 。 用户名称必须遵循以下格式：域名 \ 用户名。  
   
-11. 在 **“临时 ASP.Net 文件的权限项”** 对话框中，授予用户 **“完全控制”**，然后单击 **“确定”** 以关闭 **“临时 ASP.Net 文件项”** 对话框。  
+11. 在 **“临时 ASP.Net 文件的权限项”** 对话框中，授予用户 **“完全控制”** ，然后单击 **“确定”** 以关闭 **“临时 ASP.Net 文件项”** 对话框。  
   
-12. 将出现 **“安全性”** 对话框，询问是否确实要更改系统文件夹的权限。 单击 **“是”**。  
+12. 将出现 **“安全性”** 对话框，询问是否确实要更改系统文件夹的权限。 单击 **“是”** 。  
   
 13. 单击 **“确定”** 以关闭 **“临时 ASP.NET 文件属性”** 对话框。  
   
 ## <a name="see-also"></a>请参阅  
 [ASP.NET 调试：系统要求](../debugger/aspnet-debugging-system-requirements.md)  
-  
-
-
-
-

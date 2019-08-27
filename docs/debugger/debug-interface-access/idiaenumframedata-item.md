@@ -1,5 +1,5 @@
 ---
-title: 'Idiaenumframedata:: Item |Microsoft Docs'
+title: IDiaEnumFrameData::Item | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -9,38 +9,40 @@ helpviewer_keywords:
 ms.assetid: 2761a72d-1868-4f5b-a32e-c2a1d9358c91
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 38655a9dc55f16cf7c1ccddd65ae0793d7a04640
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: a8d083cea518032c121a5cb9e9213abbbd7eaaf8
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53894202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62829854"
 ---
 # <a name="idiaenumframedataitem"></a>IDiaEnumFrameData::Item
-通过索引中检索帧数据元素。  
-  
-## <a name="syntax"></a>语法  
-  
-```C++  
-HRESULT Item (   
-   DWORD           index,  
-   IDiaFrameData** section  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- 索引  
- [in]索引[IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)要检索对象。 索引是 0 到范围内`count`-1，其中`count`返回的[idiaenumframedata:: Get_count](../../debugger/debug-interface-access/idiaenumframedata-get-count.md)方法。  
-  
- section  
- [out]返回[IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)对象，表示所需的帧数据元素。  
-  
-## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
-  
-## <a name="see-also"></a>请参阅  
- [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)   
- [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
+通过索引中检索帧数据元素。
+
+## <a name="syntax"></a>语法
+
+```C++
+HRESULT Item ( 
+   DWORD           index,
+   IDiaFrameData** section
+);
+```
+
+#### <a name="parameters"></a>参数
+ 索引
+
+[in]索引[IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)要检索对象。 索引是 0 到范围内`count`-1，其中`count`返回的[idiaenumframedata:: Get_count](../../debugger/debug-interface-access/idiaenumframedata-get-count.md)方法。
+
+ section
+
+[out]返回[IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)对象，表示所需的帧数据元素。
+
+## <a name="return-value"></a>返回值
+ 如果成功，则返回`S_OK`; 否则为返回错误代码。
+
+## <a name="see-also"></a>请参阅
+- [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)
+- [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

@@ -1,14 +1,9 @@
 ---
 title: 在文件中替换 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vs.findreplace.replaceinfiles
 - vs.replaceinfiles
@@ -20,29 +15,29 @@ ms.assetid: ca361466-53bd-44db-a28a-3a74bc03b028
 caps.latest.revision: 33
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 92029377d5e7d4faf4c6b7f38deda1eecdeaa395
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 72a20b0271542dd914aeb592dda3f0cb446a0000
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49228821"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65698676"
 ---
 # <a name="replace-in-files"></a>在文件中替换
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在文件 * * 中的替换，可搜索的一组指定的字符串或表达式，文件的代码并将更改某些或所有找到的匹配项。 找到的匹配项与所执行的操作在“结果选项”中选择的“查找结果”窗口中列出。  
+借助“在文件中替换”功能，可以在一组指定文件的代码中搜索某个字符串或表达式，并更改一部分或全部的匹配项。 找到的匹配项与所执行的操作在“结果选项”中选择的“查找结果”窗口中列出。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在“工具”菜单上选择“导入和导出设置”。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+> 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在“工具”菜单上选择“导入和导出设置”。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
  可以使用以下任一方法在“查找和替换”窗口中显示“在文件中替换”。  
   
 ### <a name="to-display-replace-in-files"></a>显示“在文件中替换”  
   
-1.  在“编辑”菜单上展开“查找和替换”。  
+1. 在“编辑”菜单上展开“查找和替换”。  
   
-2.  选择“在文件中替换”。  
+2. 选择“在文件中替换”。  
   
      — 或 —  
   
@@ -58,7 +53,7 @@ ms.locfileid: "49228821"
  从“查找范围”下拉列表中选择的选项可确定是仅在当前活动文件中进行“在文件中替换”搜索，还是在存储于某些文件夹的所有文件中进行此种搜索。 从列表中选择搜索范围，键入文件夹路径，或单击“浏览(...)”按钮，即可显示“选择搜索文件夹”对话框并选择要搜索的一组文件夹。 也可以直接在“查找范围”框中键入路径。  
   
 > [!NOTE]
->  如果选中“查找范围”选项会导致搜索已从源代码管理中签出的文件，则只会搜索已下载到本机计算机的文件版本。  
+> 如果选中“查找范围”选项会导致搜索已从源代码管理中签出的文件，则只会搜索已下载到本机计算机的文件版本。  
   
 ## <a name="find-options"></a>查找选项  
  可以展开或折叠“查找选项”部分。 可以选择或清除以下选项：  
@@ -93,12 +88,9 @@ ms.locfileid: "49228821"
  如果选中此选项，进行过替换的文件会保持打开状态，便于撤消或保存所做的更改。 内存约束会限制替换操作之后保持打开状态的文件数。  
   
 > [!CAUTION]
->  仅可对保持打开状态以供编辑的文件使用“撤消”。 如果未选择此选项，则尚未打开以供编辑的文件将保持关闭状态，并且“撤销”选项不可用于这些文件。  
+> 仅可对保持打开状态以供编辑的文件使用“撤消”。 如果未选择此选项，则尚未打开以供编辑的文件将保持关闭状态，并且“撤销”选项不可用于这些文件。  
   
 ## <a name="see-also"></a>请参阅  
  [查找和替换文本](../ide/finding-and-replacing-text.md)   
  [在文件中查找](../ide/find-in-files.md)   
  [Visual Studio 命令](../ide/reference/visual-studio-commands.md)
-
-
-

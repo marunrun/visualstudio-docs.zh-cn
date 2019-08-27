@@ -2,25 +2,25 @@
 title: 针对 F# 面向旧版 .NET Framework
 description: 了解在 Visual Studio 中使用 F# 时如何面向 .NET Framework 的较旧版本。
 ms.date: 07/11/2018
-ms.prod: visual-studio-dev15
 ms.topic: troubleshooting
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4f5ef4e8b46681cc102a6678fcd4cb38f3e6f069
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+monikerRange: vs-2017
+ms.openlocfilehash: 2e0d580ac18142010a306d3fb4de19eb69b0b91b
+ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53888070"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66746706"
 ---
 # <a name="target-older-versions-of-net-f"></a>面向 .NET 的较旧版本 (F#)
 
 在 Windows 8.1 上安装 Visual Studio 后，如果尝试在 F# 项目中面向 .NET Framework 2.0、3.0 或 3.5，则可能出现以下错误：
 
-此项目需要 2.0 F# 运行时，但该运行时未安装。
+此项目需要 2.0 F# 运行时，但该运行时未安装。 
 
 已知同时满足以下条件时会出现此错误：
 
@@ -42,19 +42,19 @@ ms.locfileid: "53888070"
 
 ### <a name="to-enable-the-net-framework-35-on-windows-81"></a>在 Windows 8.1 上启用 .NET Framework 3.5
 
-1. 在“开始”屏幕上，键入“控制面板”。
+1. 在“开始”屏幕上，键入“控制面板”   。
 
-   键入时，“应用”标题下将出现“控制面板”图标。
+   键入时，“应用”标题下将出现“控制面板”图标   。
 
-2. 选择“控制面板”图标，选择“程序”图标，然后选择“打开或关闭 Windows 功能”链接。
+2. 选择“控制面板”图标，选择“程序”图标，然后选择“打开或关闭 Windows 功能”链接    。
 
-3. 请确保选中“.NET Framework 3.5 (包括 .NET 2.0 和 3.0)”复选框，然后选择“确定”按钮。 不需要选择 .NET framework 可选组件的任何子节点对应的复选框。
+3. 请确保选中“.NET Framework 3.5 (包括 .NET 2.0 和 3.0)”复选框，然后选择“确定”按钮   。 不需要选择 .NET framework 可选组件的任何子节点对应的复选框。
 
    .NET Framework 3.5 随即启用（如果尚未启用）。
 
 ### <a name="to-install-the-f-20-runtime"></a>安装 F# 2.0 运行时
 
-请按照[修复 Visual Studio 2017 的步骤](../install/repair-visual-studio.md)执行操作。
+请按照[修复 Visual Studio 的步骤](../install/repair-visual-studio.md)执行操作。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,7 +1,6 @@
 ---
 title: CA1806:不要忽略方法结果
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - CA1806
@@ -16,13 +15,13 @@ dev_langs:
 - CPP
 - CSharp
 - VB
-manager: douge
-ms.openlocfilehash: 865c4d26758021b0f0200f7834d02cd34f22bc8a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 2e68fb6b4c40c165a09ae2631a2ad0a64bf52fbc
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53954193"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68921554"
 ---
 # <a name="ca1806-do-not-ignore-method-results"></a>CA1806:不要忽略方法结果
 
@@ -35,66 +34,66 @@ ms.locfileid: "53954193"
 
 ## <a name="cause"></a>原因
 
-有多种原因引起此警告：
+此警告有几个可能的原因:
 
-- 一个新的对象将创建但从未使用过。
+- 创建了一个新的对象, 但从未使用过。
 
-- 创建并返回新字符串的方法称为，从未使用过的新字符串。
+- 将调用一个创建并返回一个新字符串的方法, 并且永远不会使用新的字符串。
 
-- 永远不会使用返回的 HRESULT 或错误代码的 COM 或 P/Invoke 方法。 规则说明
+- COM 或 P/Invoke 方法, 它返回从未使用过的 HRESULT 或错误代码。 规则说明
 
-不必要的对象的创建和未使用的对象的关联的垃圾回收会降低性能。
+不必要的对象创建和未使用对象的关联垃圾回收会降低性能。
 
-字符串是固定不变，并等 String.ToUpper 方法返回的字符串，而非修改实例时调用的方法中字符串的新实例。
+字符串是不可变的, ToUpper 返回字符串的新实例, 而不是在调用方法中修改字符串的实例。
 
-忽略 HRESULT 或错误代码可能会导致错误条件中出现意外行为或资源不足的情况。
+忽略 HRESULT 或错误代码可能导致在错误情况下或资源不足的情况下出现意外的行为。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 如果一个方法创建从未使用过的 B 对象的新实例，将实例作为参数传递给另一种方法，或将此实例赋给变量。 如果对象创建不必要，请删除它。-或-
+如果方法 A 创建从未使用的 B 对象的新实例, 则将该实例作为参数传递给另一个方法, 或将该实例分配给一个变量。 如果不需要创建对象, 则将其删除。-或-
 
- 如果方法 A 调用 B，方法，但不使用新方法 B 返回的字符串实例。 将该实例作为参数传递给另一种方法，将实例分配给一个变量。 或者，如果不需要移除此调用。
+如果方法 A 调用方法 B, 但不使用方法 B 返回的新字符串实例, 则为。 将该实例作为参数传递给其他方法, 并将该实例分配给一个变量。 如果不需要, 则删除该调用。
 
- - 或 -
+ 或
 
- 如果方法 A 调用 B，方法，但不会使用相应的 HRESULT 或错误代码，该方法返回。 使用中的条件语句的结果、 将结果分配给一个变量，或将其作为参数传递给另一种方法。
+如果方法 A 调用方法 B, 但不使用该方法返回的 HRESULT 或错误代码, 则为。 在条件语句中使用结果, 将结果赋给变量, 或将其作为参数传递给其他方法。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 除非创建对象的操作有特定的用途，否则不要禁止显示此规则的警告。
+请勿禁止显示此规则发出的警告, 除非创建对象的行为可用于实现某些目的。
 
 ## <a name="example"></a>示例
- 下面的示例演示将忽略调用 String.Trim 结果的类。
+下面的示例演示一个类, 该类忽略调用字符串的结果。
 
- [!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults3#1](../code-quality/codesnippet/CSharp/ca1806-do-not-ignore-method-results_1.cs)]
- [!code-vb[FxCop.Usage.DoNotIgnoreMethodResults3#1](../code-quality/codesnippet/VisualBasic/ca1806-do-not-ignore-method-results_1.vb)]
- [!code-cpp[FxCop.Usage.DoNotIgnoreMethodResults3#1](../code-quality/codesnippet/CPP/ca1806-do-not-ignore-method-results_1.cpp)]
-
-## <a name="example"></a>示例
- 下面的示例通过将 String.Trim 结果赋回给调用它的变量中修复了上一冲突。
-
- [!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults4#1](../code-quality/codesnippet/CSharp/ca1806-do-not-ignore-method-results_2.cs)]
- [!code-vb[FxCop.Usage.DoNotIgnoreMethodResults4#1](../code-quality/codesnippet/VisualBasic/ca1806-do-not-ignore-method-results_2.vb)]
- [!code-cpp[FxCop.Usage.DoNotIgnoreMethodResults4#1](../code-quality/codesnippet/CPP/ca1806-do-not-ignore-method-results_2.cpp)]
+[!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults3#1](../code-quality/codesnippet/CSharp/ca1806-do-not-ignore-method-results_1.cs)]
+[!code-vb[FxCop.Usage.DoNotIgnoreMethodResults3#1](../code-quality/codesnippet/VisualBasic/ca1806-do-not-ignore-method-results_1.vb)]
+[!code-cpp[FxCop.Usage.DoNotIgnoreMethodResults3#1](../code-quality/codesnippet/CPP/ca1806-do-not-ignore-method-results_1.cpp)]
 
 ## <a name="example"></a>示例
- 下面的示例演示不使用它创建的对象的方法。
+下面的示例通过将字符串的结果赋给其在其上调用的变量来修复前面的冲突。
+
+[!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults4#1](../code-quality/codesnippet/CSharp/ca1806-do-not-ignore-method-results_2.cs)]
+[!code-vb[FxCop.Usage.DoNotIgnoreMethodResults4#1](../code-quality/codesnippet/VisualBasic/ca1806-do-not-ignore-method-results_2.vb)]
+[!code-cpp[FxCop.Usage.DoNotIgnoreMethodResults4#1](../code-quality/codesnippet/CPP/ca1806-do-not-ignore-method-results_2.cpp)]
+
+## <a name="example"></a>示例
+下面的示例演示不使用它创建的对象的方法。
 
 > [!NOTE]
-> 无法在 Visual Basic 中重现此冲突。
+> 在 Visual Basic 中无法重现此冲突。
 
- [!code-cpp[FxCop.Usage.DoNotIgnoreMethodResults5#1](../code-quality/codesnippet/CPP/ca1806-do-not-ignore-method-results_3.cpp)]
- [!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults5#1](../code-quality/codesnippet/CSharp/ca1806-do-not-ignore-method-results_3.cs)]
+[!code-cpp[FxCop.Usage.DoNotIgnoreMethodResults5#1](../code-quality/codesnippet/CPP/ca1806-do-not-ignore-method-results_3.cpp)]
+[!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults5#1](../code-quality/codesnippet/CSharp/ca1806-do-not-ignore-method-results_3.cs)]
 
 ## <a name="example"></a>示例
- 下面的示例通过删除不必要创建对象修复了上一冲突。
+下面的示例通过删除不必要的对象创建来修复以前的冲突。
 
- [!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults6#1](../code-quality/codesnippet/CSharp/ca1806-do-not-ignore-method-results_4.cs)]
- [!code-cpp[FxCop.Usage.DoNotIgnoreMethodResults6#1](../code-quality/codesnippet/CPP/ca1806-do-not-ignore-method-results_4.cpp)]
+[!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults6#1](../code-quality/codesnippet/CSharp/ca1806-do-not-ignore-method-results_4.cs)]
+[!code-cpp[FxCop.Usage.DoNotIgnoreMethodResults6#1](../code-quality/codesnippet/CPP/ca1806-do-not-ignore-method-results_4.cpp)]
 
 <!-- Examples don't exist for the below... -->
 <!--
 ## Example
- The following example shows a method that ignores the error code that the native method GetShortPathName returns.
+The following example shows a method that ignores the error code that the native method GetShortPathName returns.
 
 ## Example
- The following example fixes the previous violation by checking the error code and throwing an exception when the call fails.
+The following example fixes the previous violation by checking the error code and throwing an exception when the call fails.
 -->

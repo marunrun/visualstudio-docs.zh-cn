@@ -1,20 +1,19 @@
 ---
 title: 如何：修改三维模型的透视点
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.assetid: c20b4ec8-29f5-4ca5-bc39-d4548ca6f573
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c66d7b16451a2ee3e545b4737b0ecd12c47d413
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 1b1baa6a42d0874cdefaa8cfb781f66e864d82b2
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53822299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62897448"
 ---
 # <a name="how-to-modify-the-pivot-point-of-a-3d-model"></a>如何：修改三维模型的透视点
 
@@ -26,11 +25,11 @@ ms.locfileid: "53822299"
 
 请确保显示“属性”窗口和“工具箱”。
 
-1.  从现有的三维模型开始，例如[如何：创建基本三维模型](../designers/how-to-create-a-basic-3-d-model.md)中所述的模型。
+1. 从现有的三维模型开始，例如[如何：创建基本三维模型](../designers/how-to-create-a-basic-3-d-model.md)中所述的模型。
 
-2.  进入透视模式。 在“模型编辑器模式”工具栏上，选择“透视模式”按钮以激活透视模式。 “透视模式”按钮周围将显示一个框，用于指示模型编辑器现在处于透视模式中。 在透视模式中，转换等操作会影响对象的透视点，而不影响世界空间中对象的结构。
+2. 进入透视模式。 在“模型编辑器模式”工具栏上，选择“透视模式”按钮以激活透视模式。 “透视模式”按钮周围将显示一个框，用于指示模型编辑器现在处于透视模式中。 在透视模式中，转换等操作会影响对象的透视点，而不影响世界空间中对象的结构。
 
-3.  修改对象的透视点。 在“选择”模式中，选择对象，然后在“模型查看器”工具栏上选择“转换”工具。 一个表示透视点的框显示在设计图面上。 移动框以修改对象的透视点。
+3. 修改对象的透视点。 在“选择”模式中，选择对象，然后在“模型查看器”工具栏上选择“转换”工具。 一个表示透视点的框显示在设计图面上。 移动框以修改对象的透视点。
 
      通过移动框，可以在所有三个维度中移动透视点。 若要沿一个轴转换透视点，请移动与该轴相对应的箭头。 框和箭头将更改为黄色以指示受转换影响的轴。
 

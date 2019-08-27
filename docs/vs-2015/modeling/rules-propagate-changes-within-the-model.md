@@ -1,12 +1,9 @@
 ---
 title: 规则在模型内部传播更改 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
 - Domain-Specific Language, rules
@@ -14,13 +11,13 @@ ms.assetid: 1690a38a-c8f5-4bc6-aab9-015771ec6647
 caps.latest.revision: 32
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 265d04306b4747a4e5bc04b879b9635e81ed8102
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 29950be152c140a8315f96f8752b1fa906c3f801
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49831193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63442932"
 ---
 # <a name="rules-propagate-changes-within-the-model"></a>规则在模型内部传播更改
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -76,7 +73,7 @@ namespace ExampleNamespace
 ```  
 
 > [!NOTE]
->  规则的代码应更改仅的商店; 内的元素的状态也就是说，该规则应更改仅模型元素、 关系、 形状、 连接器、 关系图或它们的属性。 如果你想要将更改传播到应用商店以外的资源，定义存储事件。 有关详细信息，请参阅[事件处理程序传播更改外部模型](../modeling/event-handlers-propagate-changes-outside-the-model.md)  
+> 规则的代码应更改仅的商店; 内的元素的状态也就是说，该规则应更改仅模型元素、 关系、 形状、 连接器、 关系图或它们的属性。 如果你想要将更改传播到应用商店以外的资源，定义存储事件。 有关详细信息，请参阅[事件处理程序传播更改外部模型](../modeling/event-handlers-propagate-changes-outside-the-model.md)  
 
 ### <a name="to-define-a-rule"></a>若要定义规则  
 
@@ -90,7 +87,7 @@ namespace ExampleNamespace
 
 ### <a name="to-define-a-rule-on-a-domain-class"></a>域类上定义规则  
 
--   自定义代码文件中定义的类和它前面加<xref:Microsoft.VisualStudio.Modeling.RuleOnAttribute>属性：  
+- 自定义代码文件中定义的类和它前面加<xref:Microsoft.VisualStudio.Modeling.RuleOnAttribute>属性：  
 
     ```  
     [RuleOn(typeof(ExampleElement),   
@@ -100,19 +97,19 @@ namespace ExampleNamespace
 
     ```  
 
--   中的第一个参数的使用者类型可以是域类、 域关系、 形状、 连接符或关系图。 通常情况下，将规则应用于域类和关系。  
+- 中的第一个参数的使用者类型可以是域类、 域关系、 形状、 连接符或关系图。 通常情况下，将规则应用于域类和关系。  
 
      `FireTime`通常是`TopLevelCommit`。 这可确保仅进行的事务的所有主要更改后执行规则。 备选方法是内联的这在更改; 后立即执行该规则和 LocalCommit，规则的当前事务 （这可能不是最外面） 结束时执行。 此外可以设置会影响在队列中，其排序顺序的规则的优先级，但这是一个不可靠的方法的实现所需的结果。  
 
--   作为使用者类型，可以指定一个抽象类。  
+- 作为使用者类型，可以指定一个抽象类。  
 
--   此规则适用于所有使用者类的实例。  
+- 此规则适用于所有使用者类的实例。  
 
--   默认值为`FireTime`是 TimeToFire.TopLevelCommit。 这会导致最外部事务提交时要执行的规则。 一种替代方法是 TimeToFire.Inline。 这将导致触发事件后立即执行的规则。  
+- 默认值为`FireTime`是 TimeToFire.TopLevelCommit。 这会导致最外部事务提交时要执行的规则。 一种替代方法是 TimeToFire.Inline。 这将导致触发事件后立即执行的规则。  
 
 ### <a name="to-register-the-rule"></a>若要注册规则  
 
--   将规则类添加到的返回类型列表`GetCustomDomainModelTypes`域模型中：  
+- 将规则类添加到的返回类型列表`GetCustomDomainModelTypes`域模型中：  
 
     ```  
     public partial class ExampleDomainModel  
@@ -128,19 +125,18 @@ namespace ExampleNamespace
 
     ```  
 
--   如果您不确定域模型类的名称，该文件中查找**Dsl\GeneratedCode\DomainModel.cs**  
+- 如果您不确定域模型类的名称，该文件中查找**Dsl\GeneratedCode\DomainModel.cs**  
 
--   在 DSL 项目中的自定义代码文件中编写此代码。  
+- 在 DSL 项目中的自定义代码文件中编写此代码。  
 
 ### <a name="to-write-the-code-of-the-rule"></a>若要编写规则的代码  
 
 - 从以下基类之一派生规则类：  
 
-
   |                             基类                              |                                                                                                                                                                                                                                                                                                                                                                              触发器                                                                                                                                                                                                                                                                                                                                                                              |
   |---------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
   |           <xref:Microsoft.VisualStudio.Modeling.AddRule>            |                                                                                                                                                                                                                                                                                                                        添加元素、 链接或形状。<br /><br /> 用于检测新关系，除了新元素。                                                                                                                                                                                                                                                                                                                        |
-  |          <xref:Microsoft.VisualStudio.Modeling.ChangeRule>          | 更改域属性值。 该方法的参数提供的旧的和新值。<br /><br /> 对于形状，触发此规则时内置`AbsoluteBounds`属性更改，如果移动形状。<br /><br /> 在许多情况下，它是更方便地重写`OnValueChanged`或`OnValueChanging`属性处理程序中。 更改立即之前和之后调用这些方法。 与此相反，该规则通常在事务结束时运行。 有关详细信息，请参阅[域属性值更改处理程序](../modeling/domain-property-value-change-handlers.md)。 **注意：** 创建或删除链接时，将不会触发此规则。 相反，编写`AddRule`和一个`DeleteRule`域关系。 |
+  |          <xref:Microsoft.VisualStudio.Modeling.ChangeRule>          | 更改域属性值。 该方法的参数提供的旧的和新值。<br /><br /> 对于形状，触发此规则时内置`AbsoluteBounds`属性更改，如果移动形状。<br /><br /> 在许多情况下，它是更方便地重写`OnValueChanged`或`OnValueChanging`属性处理程序中。 更改立即之前和之后调用这些方法。 与此相反，该规则通常在事务结束时运行。 有关详细信息，请参阅[域属性值更改处理程序](../modeling/domain-property-value-change-handlers.md)。 **注意：** 创建或删除链接时，则不会触发此规则。 相反，编写`AddRule`和一个`DeleteRule`域关系。 |
   |         <xref:Microsoft.VisualStudio.Modeling.DeletingRule>         |                                                                                                                                                                                                                                                                                                             当某个元素或链接是即将被删除时触发。 该属性 ModelElement.IsDeleting 事务结束时才为 true。                                                                                                                                                                                                                                                                                                              |
   |          <xref:Microsoft.VisualStudio.Modeling.DeleteRule>          |                                                                                                                                                                                                       已删除的元素或链接时执行。 已执行的所有其他规则，包括 DeletingRules 后执行规则。 ModelElement.IsDeleting 为 false，并且 ModelElement.IsDeleted 为 true。 若要允许后续撤销，该元素并不实际删除从内存中，但从 Store.ElementDirectory 中删除。                                                                                                                                                                                                       |
   |           <xref:Microsoft.VisualStudio.Modeling.MoveRule>           |                                                                                                                                                                                                                                                                                                           元素是从一个存储分区移动到另一个。<br /><br /> （请注意这不相关的图形形状的位置。）                                                                                                                                                                                                                                                                                                            |
@@ -150,24 +146,23 @@ namespace ExampleNamespace
   |  <xref:Microsoft.VisualStudio.Modeling.TransactionCommittingRule>   |                                                                                                                                                                                                                                                                                                                                                      执行事务时，将为已提交。                                                                                                                                                                                                                                                                                                                                                      |
   |  <xref:Microsoft.VisualStudio.Modeling.TransactionRollingBackRule>  |                                                                                                                                                                                                                                                                                                                                                     要回滚事务时执行。                                                                                                                                                                                                                                                                                                                                                     |
 
-
 - 每个类有一个方法重写。 类型`override`来发现它在类中。 此方法的参数标识要更改的元素。  
 
   请注意有关规则的以下几点：  
 
-1.  组在事务中的更改可能会触发许多规则。 通常情况下，当最外面的事务提交时，会执行规则。 中未指定的顺序执行它们。  
+1. 组在事务中的更改可能会触发许多规则。 通常情况下，当最外面的事务提交时，会执行规则。 中未指定的顺序执行它们。  
 
-2.  始终在事务内执行规则。 因此，无需创建一个新事务来进行更改。  
+2. 始终在事务内执行规则。 因此，无需创建一个新事务来进行更改。  
 
-3.  事务回滚时，或执行撤消或重做操作时，不会执行规则。 这些操作将在存储区中的所有内容重都置为其以前的状态。 因此，如果你的规则发生更改的应用商店之外的任何内容的状态，它可能保留在与应用商店 synchronism 内容。 若要更新在存储外的状态，则最好使用事件。 有关详细信息，请参阅[事件处理程序传播更改外部模型](../modeling/event-handlers-propagate-changes-outside-the-model.md)。  
+3. 事务回滚时，或执行撤消或重做操作时，不会执行规则。 这些操作将在存储区中的所有内容重都置为其以前的状态。 因此，如果你的规则发生更改的应用商店之外的任何内容的状态，它可能保留在与应用商店 synchronism 内容。 若要更新在存储外的状态，则最好使用事件。 有关详细信息，请参阅[事件处理程序传播更改外部模型](../modeling/event-handlers-propagate-changes-outside-the-model.md)。  
 
-4.  从文件加载模型时，将执行一些规则。 若要确定是否加载或保存正在进行，请使用`store.TransactionManager.CurrentTransaction.IsSerializing`。  
+4. 从文件加载模型时，将执行一些规则。 若要确定是否加载或保存正在进行，请使用`store.TransactionManager.CurrentTransaction.IsSerializing`。  
 
-5.  如果你的规则的代码创建更多规则触发器，它们将添加到激发列表的末尾，并在事务完成之前将执行。 DeletedRules 筛选器之后执行的所有其他规则。 一个规则可以在事务中，每个更改一次运行多次。  
+5. 如果你的规则的代码创建更多规则触发器，它们将添加到激发列表的末尾，并在事务完成之前将执行。 DeletedRules 筛选器之后执行的所有其他规则。 一个规则可以在事务中，每个更改一次运行多次。  
 
-6.  要传递到和从规则的信息，您可以将信息存储在`TransactionContext`。 这是仅在事务期间维护的字典。 在事务结束时，它已被释放。 每个规则中的事件自变量提供对它的访问。 请记住规则未按可预测的顺序执行。  
+6. 要传递到和从规则的信息，您可以将信息存储在`TransactionContext`。 这是仅在事务期间维护的字典。 在事务结束时，它已被释放。 每个规则中的事件自变量提供对它的访问。 请记住规则未按可预测的顺序执行。  
 
-7.  在考虑其他备选方法后使用规则。 例如，如果你想要更新属性值发生更改时，请考虑使用计算的属性。 如果你想要约束的大小或形状的位置，使用`BoundsRule`。 如果你想要对属性值的更改作出响应，将添加`OnValueChanged`给属性的处理程序。 有关详细信息，请参阅[对的响应并传播更改](../modeling/responding-to-and-propagating-changes.md)。  
+7. 在考虑其他备选方法后使用规则。 例如，如果你想要更新属性值发生更改时，请考虑使用计算的属性。 如果你想要约束的大小或形状的位置，使用`BoundsRule`。 如果你想要对属性值的更改作出响应，将添加`OnValueChanged`给属性的处理程序。 有关详细信息，请参阅[对的响应并传播更改](../modeling/responding-to-and-propagating-changes.md)。  
 
 ## <a name="example"></a>示例  
  域关系实例化，若要链接两个元素时，下面的示例将更新一个属性。 不仅用户创建一个链接上一个关系图，而且还如果程序代码将创建一个链接时，将会触发规则。  
@@ -221,6 +216,3 @@ namespace Company.TaskRuleExample
 ## <a name="see-also"></a>请参阅  
  [事件处理程序模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)   
  [BoundsRules 约束形状位置和大小](../modeling/boundsrules-constrain-shape-location-and-size.md)
-
-
-

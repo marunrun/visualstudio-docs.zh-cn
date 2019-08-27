@@ -1,14 +1,9 @@
 ---
 title: “别名”命令 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - tools.alias
 helpviewer_keywords:
@@ -21,22 +16,21 @@ ms.assetid: bdf857df-b5d5-450f-8c10-a6fd4dccc130
 caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: f9fb6a4da0b18cf022ee388ff4a6fa5f399dc650
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 00c77675b1a2300468c7848facf498ac3816e136
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49258513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63437213"
 ---
 # <a name="alias-command"></a>“别名”命令
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 为完整命令、完整命令和参数或另一个别名创建新别名。  
   
 > [!TIP]
->  键入 `>alias` 但不带任何参数会显示别名及其定义的当前列表。  
+> 键入 `>alias` 但不带任何参数会显示别名及其定义的当前列表。  
   
 ## <a name="syntax"></a>语法  
   
@@ -89,6 +83,3 @@ Tools.Alias [/delete] [/reset] [aliasname] [aliasstring]
  [“命令”窗口](../../ide/reference/command-window.md)   
  [“查找/命令”框](../../ide/find-command-box.md)   
  [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
-
-
-

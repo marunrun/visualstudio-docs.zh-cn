@@ -1,27 +1,22 @@
 ---
 title: 上下文参数 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - wizards, context parameters
 - context parameters
 ms.assetid: 1a062dcb-8a8f-40dd-bea9-3d10f9448966
 caps.latest.revision: 14
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: f9d9c1d6c78bb026fe0e26c99bbf712d4412ebd5
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 679bf567d2f44564d31d70b62c8663e665e1ea65
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51773205"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65697289"
 ---
 # <a name="context-parameters"></a>上下文参数
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -71,5 +66,4 @@ ms.locfileid: "51773205"
  [自定义参数](../../extensibility/internals/custom-parameters.md)   
  [向导](../../extensibility/internals/wizards.md)   
  [向导 (。在 Vsz) 文件](../../extensibility/internals/wizard-dot-vsz-file.md)   
- [用于启动向导的上下文参数](http://msdn.microsoft.com/library/051a10f4-9e45-4604-b344-123044f33a24)
-
+ [用于启动向导的上下文参数](https://msdn.microsoft.com/library/051a10f4-9e45-4604-b344-123044f33a24)

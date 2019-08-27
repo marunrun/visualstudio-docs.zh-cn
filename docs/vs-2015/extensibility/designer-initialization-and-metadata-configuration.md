@@ -1,27 +1,22 @@
 ---
 title: 设计器的初始化和元数据配置 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - designers [Visual Studio SDK], initializing
 - designers [Visual Studio SDK], configuring metadata
 ms.assetid: f7fe9a7e-f669-4642-ad5d-186b2e6e6ec9
 caps.latest.revision: 17
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 8f5a4bbd24e571100dfc708d7c34f87b6c84adcf
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 2dec3937616c712c56b7012949e044702e6b11f2
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51736211"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65703068"
 ---
 # <a name="designer-initialization-and-metadata-configuration"></a>设计器初始化和元数据配置
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,15 +31,15 @@ ms.locfileid: "51736211"
 ### <a name="customizing-initialization"></a>自定义初始化  
  自定义设计器、 组件或设计器图面，包括：  
   
-1.  修改设计器元数据和有效地更改如何在特定<xref:System.Type>访问属性或转换。  
+1. 修改设计器元数据和有效地更改如何在特定<xref:System.Type>访问属性或转换。  
   
      这通常是通过<xref:System.Drawing.Design.UITypeEditor>或<xref:System.ComponentModel.TypeConverter>机制。  
   
      例如，当<xref:System.Windows.Forms>-基于设计器进行了初始化，[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]环境修改<xref:System.Drawing.Design.UITypeEditor>为<xref:System.Web.UI.WebControls.Image>与设计器使用，以使用资源管理器获取位图而不是文件系统对象。  
   
-2.  将与集成环境，例如，通过订阅事件，或获取项目的配置信息。 可以获取项目的配置信息和订阅事件，通过获取<xref:System.ComponentModel.Design.ITypeResolutionService>接口。  
+2. 将与集成环境，例如，通过订阅事件，或获取项目的配置信息。 可以获取项目的配置信息和订阅事件，通过获取<xref:System.ComponentModel.Design.ITypeResolutionService>接口。  
   
-3.  通过激活相应的用户环境修改**工具箱**类别或通过限制通过应用的实例的设计器的适用性<xref:System.ComponentModel.ToolboxItemFilterAttribute>到设计器的类。  
+3. 通过激活相应的用户环境修改**工具箱**类别或通过限制通过应用的实例的设计器的适用性<xref:System.ComponentModel.ToolboxItemFilterAttribute>到设计器的类。  
   
 ### <a name="designer-initialization-by-a-vspackage"></a>设计器初始化的 vspackage  
  VSPackage 应处理由设计器初始化：  
@@ -52,7 +47,7 @@ ms.locfileid: "51736211"
 1. 创建一个对象，实现<xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>类。  
   
    > [!NOTE]
-   >  <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>类应永远不会在与相同的对象上实现<xref:Microsoft.VisualStudio.Shell.Package>类。  
+   > <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>类应永远不会在与相同的对象上实现<xref:Microsoft.VisualStudio.Shell.Package>类。  
   
 2. 注册类实现<xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>作为 VSPackage 的设计器扩展提供支持，通过应用的实例<xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtensionAttribute>，<xref:Microsoft.VisualStudio.Shell.ProvideObjectAttribute>并<xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute>到提供的 VSPackage 的实现类<xref:Microsoft.VisualStudio.Shell.Package>.  
   
@@ -98,11 +93,10 @@ ms.locfileid: "51736211"
   `internal class MyPackage : Package {}`  
   
 > [!NOTE]
->  在存在时，设计图面上仅支持创建组件，因此只有组件可以使本地元数据。 在上面的示例中，我们已尝试修改一个属性，如`Color`对象的属性。 如果`false`传入的全局标志`CustomBrowser`将永远不会显示，因为在设计器永远不会实际创建的实例`Color`。 全局标志设置为`false`对于组件，如控件、 计时器和对话框很有用。  
+> 在存在时，设计图面上仅支持创建组件，因此只有组件可以使本地元数据。 在上面的示例中，我们已尝试修改一个属性，如`Color`对象的属性。 如果`false`传入的全局标志`CustomBrowser`将永远不会显示，因为在设计器永远不会实际创建的实例`Color`。 全局标志设置为`false`对于组件，如控件、 计时器和对话框很有用。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>   
  <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtensionAttribute>   
  <xref:System.ComponentModel.ToolboxItemFilterType>   
- [扩展设计时支持](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)
-
+ [扩展设计时支持](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)

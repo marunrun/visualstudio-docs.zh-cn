@@ -1,8 +1,7 @@
 ---
-title: IRemoteDebugApplicationEvents::OnBreakFlagChange |Microsoft Docs
+title: IRemoteDebugApplicationEvents::OnBreakFlagChange | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 91facd7a7055ab5ac9e7666c6a0d171e78c73eed
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: eb19b6cfc423a1305276441305ef854c70f2d896
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54086731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62943790"
 ---
 # <a name="iremotedebugapplicationeventsonbreakflagchange"></a>IRemoteDebugApplicationEvents::OnBreakFlagChange
 处理中断标志更改时发生的事件。  
@@ -47,7 +46,7 @@ HRESULT OnBreakFlagChange(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   

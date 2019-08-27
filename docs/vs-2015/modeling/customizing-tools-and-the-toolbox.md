@@ -1,12 +1,9 @@
 ---
 title: 自定义工具和工具箱 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 f1_keywords:
 - vs.dsltools.dsldesigner.selectiondialog
 - vs.dsltools.dsldesigner.selecticondialog
@@ -17,13 +14,13 @@ ms.assetid: 2a0d03d7-ebc6-4458-b9f4-d2cb8418a62d
 caps.latest.revision: 28
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 18c727a228b51c484905c381dd98b7db66c9d7ad
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 2a91615fc711d98970c1aace57cbef814e6fc2a0
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49847807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63433212"
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>自定义工具和工具箱
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,15 +29,15 @@ ms.locfileid: "49847807"
   
  本主题内容：  
   
--   [如何定义工具箱](#ToolboxDef)  
+- [如何定义工具箱](#ToolboxDef)  
   
--   [自定义元素工具](#customizing)  
+- [自定义元素工具](#customizing)  
   
--   [从一种工具创建元素组](#groups)  
+- [从一种工具创建元素组](#groups)  
   
--   [自定义连接工具](#connections)  
+- [自定义连接工具](#connections)  
   
-##  <a name="ToolboxDef"></a> 如何定义工具箱  
+## <a name="ToolboxDef"></a> 如何定义工具箱  
  在 DSL 资源管理器中，展开“编辑器”节点及其下面的节点。 通常，你将看到如下所示的层次结构：  
   
 ```  
@@ -56,18 +53,18 @@ Editor
   
  在 DSL 资源管理器的此部分中，你可以执行以下操作：  
   
--   创建新选项卡。 选项卡定义工具箱中的节标题。  
+- 创建新选项卡。 选项卡定义工具箱中的节标题。  
   
--   创建新工具。  
+- 创建新工具。  
   
--   复制和粘贴工具。  
+- 复制和粘贴工具。  
   
--   在列表中上移或下移工具。  
+- 在列表中上移或下移工具。  
   
--   删除选项卡和工具。  
+- 删除选项卡和工具。  
   
 > [!IMPORTANT]
->  若要在 DSL 资源管理器中添加或粘贴项，请右键单击新节点的祖父级。 例如，若要添加一种工具，请右键单击选项卡上，而非**工具**节点。 若要添加选项卡，右键单击**编辑器**节点。  
+> 若要在 DSL 资源管理器中添加或粘贴项，请右键单击新节点的祖父级。 例如，若要添加一种工具，请右键单击选项卡上，而非**工具**节点。 若要添加选项卡，右键单击**编辑器**节点。  
   
  **工具箱图标**属性的每个工具引用 16x16 位图文件。 这些文件通常保留在**Dsl\Resources**文件夹。  
   
@@ -77,38 +74,38 @@ Editor
   
 #### <a name="to-add-a-tool-to-the-toolbox"></a>将工具添加到工具箱  
   
-1.  通常在已创建形状类并将其映射到域类后创建元素工具。  
+1. 通常在已创建形状类并将其映射到域类后创建元素工具。  
   
      通常在已创建连接符类并将其映射到引用关系后创建连接符工具。  
   
-2.  在 DSL 资源管理器，展开**编辑器**节点并**工具箱选项卡**节点。  
+2. 在 DSL 资源管理器，展开**编辑器**节点并**工具箱选项卡**节点。  
   
      右键单击工具箱选项卡节点，然后依次**添加新元素工具**或**添加新连接工具**。  
   
-3.  设置**工具箱图标**属性来指代 16 × 16 位图。  
+3. 设置**工具箱图标**属性来指代 16 × 16 位图。  
   
      如果你想要定义新图标，在解决方案资源管理器中创建一个位图文件**Dsl\Resources**文件夹。 该文件应具有以下属性值：**生成操作** = **内容**;**复制到输出目录** = **不要复制**。  
   
-4.  **对于元素工具：** 设置**类**属性引用映射到一个形状的具体域类的工具。  
+4. **对于元素工具：** 设置**类**属性引用映射到一个形状的具体域类的工具。  
   
      **对于连接符工具：** 设置**连接生成器**属性到一个下拉列表中提供的项的工具。 在将连接符映射到域关系后自动创建连接生成器。 如果最近创建过连接符，则通常选择关联的连接生成器。  
   
-5.  若要测试 DSL，请按 F5 或 CTRL+F5，并在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例中，打开示例模型文件。 新工具应显示在工具箱上。 将它拖动到关系图上以验证它是否将创建新元素。  
+5. 若要测试 DSL，请按 F5 或 CTRL+F5，并在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例中，打开示例模型文件。 新工具应显示在工具箱上。 将它拖动到关系图上以验证它是否将创建新元素。  
   
      如果该工具未显示，请停止该实验 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。 在 Windows 中**启动**菜单中，运行**重置 Microsoft Visual Studio 2010 实验实例**。 上[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]**构建**菜单中，单击**重新生成解决方案**。 然后，再次测试 DSL。  
   
-##  <a name="customizing"></a> 自定义元素工具  
+## <a name="customizing"></a> 自定义元素工具  
  默认情况下，该工具将创建指定类的单个实例，但是可通过两种方式改变这种情况：  
   
--   在其他类上定义元素合并指令，从而允许它们接受此类的新实例，并允许它们在创建新元素后创建其他链接。 例如，你可以允许用户将“注释”放到其他元素上，从而在两个元素之间创建引用链接。  
+- 在其他类上定义元素合并指令，从而允许它们接受此类的新实例，并允许它们在创建新元素后创建其他链接。 例如，你可以允许用户将“注释”放到其他元素上，从而在两个元素之间创建引用链接。  
   
      这些自定义还将影响当用户粘贴或拖动并放置元素时将发生的情况。  
   
      有关详细信息，请参阅[自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)。  
   
--   编写代码来自定义工具，以便它可以创建元素组。 该工具由 ToolboxHelper.cs 中可重写的方法进行初始化。 有关详细信息，请参阅[创建一个工具中的元素组](#groups)。  
+- 编写代码来自定义工具，以便它可以创建元素组。 该工具由 ToolboxHelper.cs 中可重写的方法进行初始化。 有关详细信息，请参阅[创建一个工具中的元素组](#groups)。  
   
-##  <a name="groups"></a> 从一种工具创建元素组  
+## <a name="groups"></a> 从一种工具创建元素组  
  每个元素工具都包含它应创建的元素的原型。 默认情况下，每个元素工具都将创建单个元素，但也可以使用一个工具创建一组相关对象。 为此，请使用包含相关项的 <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> 初始化工具。  
   
  以下示例取自 DSL，其中有晶体管类型。 每个晶体管具有三个命名的“终端”。 用于晶体管的元素工具将存储包含四个模型元素和三个关系链接的原型。 当用户将工具拖动到关系图上时，该原型将进行实例化并链接到模型根。  
@@ -158,7 +155,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
   
 ```  
   
-##  <a name="connections"></a> 自定义连接工具  
+## <a name="connections"></a> 自定义连接工具  
  通常，在创建新的连接符类后创建元素工具。 或者，可通过允许两个终端的类型确定关系类型来重载一个工具。 例如，可以定义一个可同时创建 Person-Person 关系和 Person-Town 关系的连接工具。  
   
  连接工具将调用连接生成器。 使用连接生成器来指定用户在生成的设计器中链接元素的方式。 连接生成器将指定可链接的元素以及在元素之间创建的链接类型。  
@@ -194,7 +191,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
   你必须提供一些程序代码，才能进行这些自定义。 若要发现你必须提供的代码，请检查这些框之一、单击“转换所有模板”，然后生成解决方案。 将产生一个错误报告。 双击该错误报告以查看注释，该注释解释了应添加的代码。  
   
 > [!NOTE]
->  若要添加自定义代码，请在与 GeneratedCode 文件夹中的代码文件不同的代码文件中创建分部类定义。 为避免丢失工作，不应编辑生成的代码文件。 有关详细信息，请参阅[重写和扩展生成的类](../modeling/overriding-and-extending-the-generated-classes.md)。  
+> 若要添加自定义代码，请在与 GeneratedCode 文件夹中的代码文件不同的代码文件中创建分部类定义。 为避免丢失工作，不应编辑生成的代码文件。 有关详细信息，请参阅[重写和扩展生成的类](../modeling/overriding-and-extending-the-generated-classes.md)。  
   
 #### <a name="creating-custom-connection-code"></a>创建自定义连接代码  
  在每个链接连接指令，**源角色指令**选项卡将定义从哪些类型可以拖动。 同样，**目标角色指令**选项卡将定义到哪些类型可以拖动。 对于每种类型，您可以进一步指定是否允许通过设置连接 （针对该链接连接指令）**自定义接受**标志，然后提供额外的代码。  
@@ -233,7 +230,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
     /// <summary>  
     /// Only if source is on parent of target.  
     /// </summary>  
-    private static bool CanAcceptInPortAndInPortAsSourceAndTarget                (InPort sourceInPort, InPort targetInPort)  
+    private static bool CanAcceptInPortAndInPortAsSourceAndTarget                (InPort sourceInPort, InPort targetInPort)  
     {  
       return sourceInPort.Component == targetInPort.Component.Parent;  
     }  
@@ -254,9 +251,6 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 ## <a name="see-also"></a>请参阅  
  [自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)   
  [自定义复制行为](../modeling/customizing-copy-behavior.md)   
- [如何： 添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)   
+ [如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)   
  [导航和更新程序代码中的模型](../modeling/navigating-and-updating-a-model-in-program-code.md)   
  [线路关系图示例 DSL](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
-
-
-

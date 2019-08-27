@@ -1,33 +1,28 @@
 ---
 title: 单个和多选项卡视图 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - single and multi-tab views
 ms.assetid: e3611704-349f-4323-b03c-f2b0a445d781
 caps.latest.revision: 23
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 8231581761199be4df9c368494fb27bdc7926c51
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 804a37a43ffe25335dc522542f5035b0882e63ee
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51748992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68205568"
 ---
 # <a name="single-and-multi-tab-views"></a>单选项卡和多选项卡视图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 编辑器可以创建不同类型的视图。 例如，代码编辑器窗口，另一个窗体设计器。  
   
- 多个选项卡视图是具有多个选项卡的视图。 例如，HTML 编辑器底部有两个选项卡：**设计**并**源**，每个逻辑视图。 设计视图显示呈现的网页上，而另一个显示包含网页的 HTML。  
+ 多个选项卡视图是具有多个选项卡的视图。 例如，HTML 编辑器有两个选项卡在底部：**设计**并**源**，每个逻辑视图。 设计视图显示呈现的网页上，而另一个显示包含网页的 HTML。  
   
 ## <a name="accessing-physical-views"></a>访问物理视图  
  物理视图承载文档视图对象，每个元素表示的数据缓冲区，例如代码或窗体中的数据的视图。 相应地，每个文档视图对象已 （通过称为物理查看字符串标识） 的物理视图，并通常单一的逻辑视图。  
@@ -121,6 +116,5 @@ Error:
   
 ## <a name="see-also"></a>请参阅  
  [支持多个文档视图](../extensibility/supporting-multiple-document-views.md)   
- [如何： 附加文档数据的视图](../extensibility/how-to-attach-views-to-document-data.md)   
+ [如何：附加文档数据的视图](../extensibility/how-to-attach-views-to-document-data.md)   
  [创建自定义编辑器和设计器](../extensibility/creating-custom-editors-and-designers.md)
-

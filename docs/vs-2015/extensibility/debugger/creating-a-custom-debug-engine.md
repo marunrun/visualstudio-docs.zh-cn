@@ -1,14 +1,9 @@
 ---
 title: 创建自定义调试引擎 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debug engines, implementing
 - debug engines, custom
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 52794238-6fae-451c-bf1c-99f344c6f173
 caps.latest.revision: 16
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 516fda63a1a36e407a71cd6711ecdfabdc1e5e58
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: b2a73dfae7772d8edec076238704aa1b52c9b028
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51784685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63383444"
 ---
 # <a name="creating-a-custom-debug-engine"></a>创建自定义调试引擎
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -30,21 +25,21 @@ ms.locfileid: "51784685"
 调试引擎 (DE) 是允许调试特定运行时体系结构的组件。 通常是只有一个 DE 实现每个运行时环境。  
   
 > [!NOTE]
->  虽然有单独的 DE 实现 TRANSACT-SQL 和 JScript，VBScript 和 JScript 共享单个 DE。  
+> 虽然有单独的 DE 实现 TRANSACT-SQL 和 JScript，VBScript 和 JScript 共享单个 DE。  
   
  部署适用于解释器或操作系统提供执行控制、 断点、 和表达式计算等调试服务。 这些服务通过 DE 接口实现，并可能会导致调试程序对不同的操作模式之间的转换。 有关详细信息，请参阅[操作模式](../../extensibility/debugger/operational-modes.md)。  
   
  创建部署包含以下步骤：  
   
-1.  使用 Visual Studio 注册 DE  
+1. 使用 Visual Studio 注册 DE  
   
-2.  启用要进行调试的程序  
+2. 启用要进行调试的程序  
   
-3.  执行控件和状态评估  
+3. 执行控件和状态评估  
   
-4.  发送事件  
+4. 发送事件  
   
-5.  终止和分离  
+5. 终止和分离  
   
 ## <a name="in-this-section"></a>本节内容  
  [注册自定义调试引擎](../../extensibility/debugger/registering-a-custom-debug-engine.md)  
@@ -70,4 +65,3 @@ ms.locfileid: "51784685"
   
 ## <a name="see-also"></a>请参阅  
  [Visual Studio 调试器可扩展性](../../extensibility/debugger/visual-studio-debugger-extensibility.md)
-

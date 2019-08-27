@@ -4,16 +4,15 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 4786b0ba6ee981ce14b60b1af87252e3d9582a0e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MT
+ms.openlocfilehash: fcc08f9af3452289b3e0e76fe6970e75e8f854db
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53885622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63414815"
 ---
 # <a name="customizing-copy-behavior"></a>自定义复制行为
 在域特定语言 (DSL) 创建使用 Visual Studio 可视化和建模 SDK，可以更改当用户复制并粘贴元素时，会发生什么情况。
@@ -210,7 +209,7 @@ partial class MyDslClipboardCommandSet // EDIT NAME
 ```
 
  **让用户拖放元素。**
-请参阅[操作说明：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)。
+请参阅[如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)。
 
 ## <a name="customizeLinks"></a> 自定义链接复制行为
  当用户复制元素时，标准行为是还会复制所有嵌入元素。 可以修改标准复制行为。 在 DSL 定义中，选择在一侧的关系并在属性窗口中设置的角色**传播复制**值。
@@ -233,7 +232,7 @@ partial class MyDslClipboardCommandSet // EDIT NAME
  对于复制、 粘贴、 创建和删除对象的 DSL 行为的许多方面均由的实例<xref:Microsoft.VisualStudio.Modeling.ElementOperations>的耦合到关系图。 您可以通过派生您自己的类从修改 DSL 的行为<xref:Microsoft.VisualStudio.Modeling.ElementOperations>并重写<xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A>关系图类的属性。
 
 > [!TIP]
->  通过使用程序代码自定义模型的详细信息，请参阅[导航和更新程序代码中的模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
+> 通过使用程序代码自定义模型的详细信息，请参阅[导航和更新程序代码中的模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
 
  ![复制操作的序列图](../modeling/media/dslcopyseqdiagram.png)
 
@@ -285,9 +284,9 @@ using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement;
 
  在 ElementOperations 类中定义两个方法：
 
--   `CanMerge(ModelElement targetElement, System.Windows.Forms.IDataObject data)`，用于确定是否可将源元素拖动到目标形状、连接符或关系图上。
+- `CanMerge(ModelElement targetElement, System.Windows.Forms.IDataObject data)`，用于确定是否可将源元素拖动到目标形状、连接符或关系图上。
 
--   `MergeElementGroupPrototype(ModelElement targetElement, ElementGroupPrototype sourcePrototype)`，用于将源元素合并到目标中。
+- `MergeElementGroupPrototype(ModelElement targetElement, ElementGroupPrototype sourcePrototype)`，用于将源元素合并到目标中。
 
 ### <a name="canmerge"></a>CanMerge()
  调用 `CanMerge()`，以确定当鼠标在关系图上移动时应向用户提供的反馈。 该方法的参数是在其上鼠标悬停的元素，以及有关源的数据（拖动操作从该源执行）。 用户可以从屏幕上的任何位置进行拖动。 因此，源对象可以为多种不同类型，并且可以采用不同的格式进行序列化。 如果源是 DSL 或 UML 模型，则数据参数是 <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> 的序列化。 拖动、复制和工具箱操作使用 ElementGroupPrototypes 来表示模型的片段。
@@ -556,8 +555,7 @@ namespace Company.MyDsl
 ## <a name="see-also"></a>请参阅
 
 - [自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)
-- [如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)
-- [自定义删除行为](../modeling/customizing-deletion-behavior.md)
+- [如何：添加拖放句柄](../modeling/how-to-add-a-drag-and-drop-handler.md)
 - [示例：VMSDK 电路图示例](http://go.microsoft.com/fwlink/?LinkId=213879)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

@@ -1,14 +1,9 @@
 ---
 title: 如何：禁用托管进程 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - hosting process, disabling
 - vshost.exe, disabling the hosting process
@@ -16,13 +11,13 @@ ms.assetid: 9157488d-737f-454b-8d8d-36f99de38bb0
 caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 4251e5aac5042b610ed32f95a13ba5d6ffb9d4eb
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 813094285557171e9c7f021f597d0d643356b5d4
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49848483"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65694415"
 ---
 # <a name="how-to-disable-the-hosting-process"></a>How to: Disable the Hosting Process
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,16 +38,13 @@ ms.locfileid: "49848483"
   
    一般情况下，禁用托管进程时：  
   
--   开始调试 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 应用程序需要的时间会增长。  
+- 开始调试 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 应用程序需要的时间会增长。  
   
--   设计时表达式计算不可用。  
+- 设计时表达式计算不可用。  
   
--   部分信任调试不可用。  
+- 部分信任调试不可用。  
   
 ## <a name="see-also"></a>请参阅  
  [调试和承载进程](../debugger/debugging-and-the-hosting-process.md)   
  [托管进程 (vshost.exe)](../ide/hosting-process-vshost-exe.md)   
- [在应用程序开发过程中生成](http://msdn.microsoft.com/en-us/c9497d62-3b7b-4449-88e8-cf27acc9efe6)
-
-
-
+ [在应用程序开发过程中生成](https://msdn.microsoft.com/c9497d62-3b7b-4449-88e8-cf27acc9efe6)

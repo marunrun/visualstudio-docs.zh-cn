@@ -2,19 +2,18 @@
 title: 工作流设计器的错误处理活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 ms.assetid: 9679ca32-ad7f-4089-824e-fdb931e47a30
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3746749e988ba8ac12ede3f5ddbf92c4ecf64c06
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 4cccfe9af6fd5fbafeea12a53a12fedae6bc2789
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53829889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62949681"
 ---
 # <a name="error-handling-activity-designers"></a>错误处理活动设计器
 

@@ -1,7 +1,6 @@
 ---
 title: 如何：查看类型之间的继承（类设计器）
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.AssociationTypeNotFoundError
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: ea3f0ada-f53b-4fb1-9fb5-908286f5ec3e
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9da919b2a3ead6ab48d199e9370c799afb9f9a65
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8d1a15765bff6d391afc7395be03172bf5d5fc32
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53925428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62975094"
 ---
 # <a name="how-to-view-inheritance-between-types-in-class-designer"></a>如何：查看类设计器中类型之间的继承
 
@@ -28,9 +27,9 @@ ms.locfileid: "53925428"
 
 ## <a name="to-find-the-base-type"></a>查找基类型
 
-1.  在类关系图中，单击要查看基类或基接口的类型。
+1. 在类关系图中，单击要查看基类或基接口的类型。
 
-2.  在“类图”菜单中，选择“显示基类”或“显示基接口”。
+2. 在“类图”菜单中，选择“显示基类”或“显示基接口”。
 
      类型的基类或基接口在关系图中显示为选中状态。 原来隐藏的所有继承连线现在都会出现在两个形状之间。
 
@@ -38,9 +37,9 @@ ms.locfileid: "53925428"
 
 ## <a name="to-find-the-derived-types"></a>查找派生类型
 
-1.  在类关系图中，单击要查看派生类或派生接口的类型。
+1. 在类关系图中，单击要查看派生类或派生接口的类型。
 
-2.  在“类图”菜单中，选择“显示派生类”或“显示派生接口”。
+2. 在“类图”菜单中，选择“显示派生类”或“显示派生接口”。
 
      该类型的派生类或派生接口即会出现在关系图中。 原来隐藏的所有继承连线现在都会出现在形状之间。
 

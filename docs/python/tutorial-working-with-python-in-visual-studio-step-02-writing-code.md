@@ -2,22 +2,21 @@
 title: Visual Studio 中的 Python 教程步骤 2，编写和运行代码
 titleSuffix: ''
 description: 在 Visual Studio 中使用 Python 功能的核心教程的第 2 步，包括编辑代码和运行项目。
-ms.date: 10/29/2018
-ms.prod: visual-studio-dev15
+ms.date: 01/28/2019
 ms.topic: tutorial
-author: kraigb
-ms.author: kraigb
-manager: douge
+author: JoshuaPartlow
+ms.author: joshuapa
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 201284ad236b2182ba6c4e69971ff15d0b43a009
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: fda68b9e5bffbd1afab3389a0d8d624312a8de3f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53935135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62429999"
 ---
 # <a name="step-2-write-and-run-code"></a>步骤 2：编写并运行代码
 
@@ -46,7 +45,7 @@ ms.locfileid: "53935135"
     ![IntelliSense 语法着色和错误突出显示](media/vs-getting-started-python-06-IntelliSense3b.png)
 
     > [!Tip]
-    > 由于一个人的开发环境是件非常私人的事情，因此，Visual Studio 允许用户完全控制 Visual Studio 的外观和行为。 选择“工具” > “选项”菜单命令，浏览“环境”和“文本编辑器”选项卡下面的设置。 默认情况下仅显示部分选项；若要查看每种编程语言的每个选项，请选择对话框底部的“显示所有设置”。 
+    > 由于一个人的开发环境是件非常私人的事情，因此，Visual Studio 允许用户完全控制 Visual Studio 的外观和行为。 选择“工具” > “选项”菜单命令，浏览“环境”和“文本编辑器”选项卡下面的设置。 默认情况下仅显示部分选项；若要查看每种编程语言的每个选项，请选择对话框底部的“显示所有设置”。
 
 1. 按 Ctrl+F5 或选择“调试” > “开始执行(不调试)”菜单项，运行到目前为止编写的代码。 如果代码中仍然存在错误，Visual Studio 会发出警告。
 
@@ -54,7 +53,7 @@ ms.locfileid: "53935135"
 
     ![首次运行程序时的输出](media/vs-getting-started-python-07-output.png)
 
-1. 除了完成语句和函数外，IntelliSense 还提供 Python `import` 和 `from` 语句的完成。 这些完成有助于轻松发现环境中可用的模块以及这些模块的成员。 在编辑器中，删除 `print` 行，开始键入 `import `。 键入空格时会显示模块列表：
+1. 除了完成语句和函数外，IntelliSense 还提供 Python `import` 和 `from` 语句的完成。 这些完成有助于轻松发现环境中可用的模块以及这些模块的成员。 在编辑器中，删除 `print` 行，开始键入 `import`。 键入空格时会显示模块列表：
 
     ![显示 import 语句的可用模块的 IntellSense](media/vs-getting-started-python-08-import1.png)
 

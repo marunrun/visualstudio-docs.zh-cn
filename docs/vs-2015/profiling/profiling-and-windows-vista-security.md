@@ -1,14 +1,9 @@
 ---
 title: 分析和 Windows Vista 安全性 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiling Tools,security
 - performance tools, security
@@ -16,13 +11,13 @@ ms.assetid: 842112fc-b886-4801-8cd7-a25b314b0393
 caps.latest.revision: 24
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 32605cb21b79e035bba9d234cdb7b3d513417363
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: d7e485bc6289634e1bb6d4b4106d54c8dc82096b
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51772945"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65683704"
 ---
 # <a name="profiling-and-windows-vista-security"></a>分析和 Windows Vista 安全性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,18 +37,15 @@ ms.locfileid: "51772945"
   
  可以通过设置跨进程分析可见性选项来查看可用进程的列表。 在单击“附加到进程”时显示的“附加到进程”窗口中提供了这些选项：  
   
--   **显示所有用户的进程**  
+- **显示所有用户的进程**  
   
      未选择此选项时，列表只显示当前用户所拥有的进程。 选择“显示所有用户的进程”时，列表显示所有用户的进程。  
   
--   **显示所有会话中的进程**  
+- **显示所有会话中的进程**  
   
      未选择此选项时，列表显示当前会话中的进程。 选择此选项时，列表显示所有会话中的进程。  
   
 ## <a name="see-also"></a>请参阅  
  [概述](../profiling/overviews-performance-tools.md)   
  [VSPerfCmd](../profiling/vsperfcmd.md)   
- [如何：附加到运行的进程](http://msdn.microsoft.com/en-us/636d0a52-4bfd-48d2-89ad-d7b9ca4dc4f4)
-
-
-
+ [如何：将附加到正在运行的进程](https://msdn.microsoft.com/636d0a52-4bfd-48d2-89ad-d7b9ca4dc4f4)

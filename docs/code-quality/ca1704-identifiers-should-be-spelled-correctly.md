@@ -1,7 +1,6 @@
 ---
 title: CA1704:标识符应正确拼写
 ms.date: 03/28/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - CA1704
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: f2c7a44d-1690-44ca-9cd0-681b04b12b2a
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c39f744556968ff279b3e3e7e9eb923ec069ebc
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8dbfc8081f980b7b9e978da782f1627a88a716a3
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53954404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809403"
 ---
 # <a name="ca1704-identifiers-should-be-spelled-correctly"></a>CA1704:标识符应正确拼写
 
@@ -47,7 +46,7 @@ ms.locfileid: "53954404"
 
 - 下划线表示标记的末尾，并删除。 例如，Hello_world 基于进行标记为"Hello"，"world"。
 
-- 将删除嵌入的与号。 例如，for&mat 标记化为“format”。
+- 将删除嵌入的与号。 例如，对于 & mat 标记化为"format"。
 
 ## <a name="language"></a>语言
 

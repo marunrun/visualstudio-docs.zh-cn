@@ -1,14 +1,9 @@
 ---
 title: 管理通道 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.cv.threads.tools.managechannels
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 507b06e9-bb56-4a72-8fd5-f91f958da6fc
 caps.latest.revision: 18
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: dba4def686f97bd3169eb5816630c272dc61d8e6
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 894378d6648139b7ec2b587eb0066a5725af7a71
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51726010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63443721"
 ---
 # <a name="manage-channels"></a>管理通道
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -55,7 +50,7 @@ ms.locfileid: "51726010"
  如果要隐藏通道，请选择此控件。 例如，如果一个线程在您托管进程的生存期内 100% 同步，则可以在分析其他线程时隐藏该线程。  
   
 > [!NOTE]
->  隐藏某个线程时，还会将其从计算时间中移除，计算时间显示在活动图例和分析报告中。  
+> 隐藏某个线程时，还会将其从计算时间中移除，计算时间显示在活动图例和分析报告中。  
   
 ## <a name="show-all-channels"></a>显示所有通道  
  当一个或多个通道被隐藏时，此控件处于活动状态。 如果选择此控件，将显示所有隐藏的元素并将其全部添加回时间计算。  
@@ -70,6 +65,3 @@ ms.locfileid: "51726010"
  [缩放控件（线程视图）](../profiling/zoom-control-threads-view.md)   
  [打开/关闭度量模式](../profiling/measure-mode-on-off.md)   
  [“线程”视图](../profiling/threads-view-parallel-performance.md)
-
-
-

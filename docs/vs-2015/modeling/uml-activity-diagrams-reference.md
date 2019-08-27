@@ -1,12 +1,9 @@
 ---
-title: UML 活动图： 参考 |Microsoft Docs
-ms.custom: ''
+title: UML 活动图：引用 |Microsoft Docs
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: reference
 f1_keywords:
 - vs.teamarch.activitydiagram.diagram
 - vs.teamarch.activitydiagram.toolbox
@@ -22,13 +19,13 @@ ms.assetid: 07efcd17-2a96-4052-9957-6dcccbb725ee
 caps.latest.revision: 50
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 2dcfa13a7ac97a5afd3e315fcef13a706c5f4bce
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: c60405331ebab909e8056d4800bd43b208c92493
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51810463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68193765"
 ---
 # <a name="uml-activity-diagrams-reference"></a>UML 活动图：参考
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,13 +36,13 @@ ms.locfileid: "51810463"
   
 - 用户和你的系统间的业务流程或工作流。 有关详细信息，请参阅[建立用户需求模型](../modeling/model-user-requirements.md)。  
   
-- 用例中所执行的步骤。 有关详细信息，请参阅[UML 用例图： 准则](../modeling/uml-use-case-diagrams-guidelines.md)。  
+- 用例中所执行的步骤。 有关详细信息，请参阅[UML 用例图：指导原则](../modeling/uml-use-case-diagrams-guidelines.md)。  
   
 - 软件协议，即得到允许的组件间的交互序列。  
   
 - 软件算法。  
   
-  本主题介绍了可以在活动图中使用的元素。 有关更详细的信息有关绘制活动图请参阅[UML 活动图： 准则](../modeling/uml-activity-diagrams-guidelines.md)。 若要创建 UML 活动图中，在**体系结构**菜单上，单击**新建 UML 或层关系图**。 有关如何在一般情况下绘制建模图的详细信息，请参阅[编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)。  
+  本主题介绍了可以在活动图中使用的元素。 有关更详细的信息有关绘制活动图请参阅[UML 活动图：指导原则](../modeling/uml-activity-diagrams-guidelines.md)。 若要创建 UML 活动图中，在**体系结构**菜单上，单击**新建 UML 或层关系图**。 有关如何在一般情况下绘制建模图的详细信息，请参阅[编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)。  
   
 ## <a name="reading-activity-diagrams"></a>读取活动图  
  以下各节中的表介绍了可以在活动图上使用的元素以及它们的主要属性。 元素的属性的完整列表，请参阅[UML 活动图上元素的属性](../modeling/properties-of-elements-on-uml-activity-diagrams.md)。  
@@ -55,7 +52,7 @@ ms.locfileid: "51810463"
  读取关系图时，假设有一个令牌或控制线程将连接线从一个操作传递给下一个操作。  
   
 ### <a name="simple-control-flows"></a>简单的控制流  
- 可以用分支和循环显示一系列操作。 有关如何使用此处描述的元素的详细信息，请参阅本主题的描述控制流部分[UML 活动图： 准则](../modeling/uml-activity-diagrams-guidelines.md)。  
+ 可以用分支和循环显示一系列操作。 有关如何使用此处描述的元素的详细信息，请参阅本主题的描述控制流部分[UML 活动图：指导原则](../modeling/uml-activity-diagrams-guidelines.md)。  
   
  ![简单的控制流](../modeling/media/uml-actovsimple.png "UML_ActOvSimple")  
   
@@ -73,7 +70,7 @@ ms.locfileid: "51810463"
 |9|**调用行为的操作**|一种在另一个活动图中进行了更加详细定义的操作。<br /><br /> -   **IsSynchronous** -如果为 true，该操作等待，直到活动终止。<br />-   **行为**-调用的活动。|  
 |（不显示）|**调用操作的操作**|一种可以在类的实例上调用操作的操作。|  
 ||**活动**|活动图所描绘的工作流。 若要查看活动的属性，必须选择在其**UML 模型资源管理器**。<br /><br /> -   **是只读的**-如果为 true，该活动不应更改任何对象的状态。<br />-   **为单词执行**-如果为 true，则最多只能执行一次此关系图。|  
-||**UML 活动图**|显示活动的关系图。 若要查看其属性，请单击该关系图的空白部分。 **注意：** 活动关系图的名称，包含关系图中，并由关系图显示的活动的文件可以各不相同。|  
+||**UML 活动图**|显示活动的关系图。 若要查看其属性，请单击该关系图的空白部分。 **注意：** 活动图的名称、包含该活动图的文件的名称以及图中所示活动的名称可以各不相同。|  
   
 ### <a name="concurrent-flows"></a>并发流  
  可以描述同时执行的一系列操作。 有关相关信息，请参阅“绘制并发流”。  
@@ -88,7 +85,7 @@ ms.locfileid: "51810463"
 |13|**发送信号的操作**|一种可以将消息或信号发送给另一个活动，或同一活动中的并发线程的操作。 操作的标题或其他注释中指定的信息包含了消息的类型和内容。<br /><br /> 此操作能够以信号形式发送数据，信号可以传递给对象流或输入插针 (16) 中的操作。|  
 |14|**接受事件的操作**|一种要在等到消息或信号后才能继续执行的操作。 标题或其他注释中指定的信息包含了此操作能接收的消息类型。<br /><br /> 如果此操作没有传入控制流，它会在收到消息后立即生成一个令牌。<br /><br /> 此操作能够以信号形式接收数据，信号可以在对象流或输出插针 (17) 中进行传递。<br /><br /> -   **IsUnmarshall** -如果为 true，可以有多个类型化的输出插针，且数据它们它们上面。 如果为 False，则所有数据都显示在一个插针上。|  
   
-###  <a name="DataFlow"></a> 数据流  
+### <a name="DataFlow"></a> 数据流  
  可以描述从一个操作到另一个操作的数据流。 有关此节中所用元素的更多信息，请参见“绘制活动图指南”主题的“绘制数据流”一节。  
   
  ![活动图中显示数据流](../modeling/media/uml-actovdata.png "UML_ActOvData")  
@@ -104,7 +101,4 @@ ms.locfileid: "51810463"
   
 ## <a name="see-also"></a>请参阅  
  [编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)   
- [UML 活动图：准则](../modeling/uml-activity-diagrams-guidelines.md)
-
-
-
+ [UML 活动关系图：指南](../modeling/uml-activity-diagrams-guidelines.md)

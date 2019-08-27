@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8b835e8f-34a3-413d-9bb5-ebaeb87f1198
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: daf589eeabbdf753512cc31ca00b6a88e001c0db
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: bf5864d25e78b6050da5c13097503b2998dda44a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53918736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62566311"
 ---
 # <a name="how-to-save-data-by-using-a-transaction"></a>如何：使用事务保存数据
 
@@ -38,15 +37,15 @@ ms.locfileid: "53918736"
 
 ## <a name="to-add-a-reference-to-the-systemtransactionsdll"></a>若要添加对 System.Transactions.dll 的引用
 
-1.  上**项目**菜单中，选择**添加引用**。
+1. 上**项目**菜单中，选择**添加引用**。
 
-2.  上 **.NET**选项卡 (**SQL Server** SQL Server 项目的选项卡)，选择**System.Transactions**，然后选择**确定**。
+2. 上 **.NET**选项卡 (**SQL Server** SQL Server 项目的选项卡)，选择**System.Transactions**，然后选择**确定**。
 
      对引用*System.Transactions.dll*添加到项目。
 
 ## <a name="to-save-data-in-a-transaction"></a>若要将数据保存在事务中
 
--   添加代码以保存中使用的数据包含的事务的语句。 下面的代码演示如何创建并实例化<xref:System.Transactions.TransactionScope>对象中的 using 语句：
+- 添加代码以保存中使用的数据包含的事务的语句。 下面的代码演示如何创建并实例化<xref:System.Transactions.TransactionScope>对象中的 using 语句：
 
      [!code-vb[VbRaddataSaving#11](../data-tools/codesnippet/VisualBasic/save-data-by-using-a-transaction_1.vb)]
      [!code-csharp[VbRaddataSaving#11](../data-tools/codesnippet/CSharp/save-data-by-using-a-transaction_1.cs)]

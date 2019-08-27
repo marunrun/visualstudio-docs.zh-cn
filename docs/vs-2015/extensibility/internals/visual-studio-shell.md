@@ -1,27 +1,22 @@
 ---
 title: Visual Studio Shell |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - shell, Visual Studio
 - Visual Studio, shell
 ms.assetid: cb124ef4-1a6b-4bfe-bfbf-295ef9c07f36
 caps.latest.revision: 15
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 7ebe79d8ee93206e8d7950112386793a65812d38
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 2ec79aab58e167ff2c935317897ba10a042a2e5a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51748920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68180366"
 ---
 # <a name="visual-studio-shell"></a>Visual Studio Shell
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -41,21 +36,21 @@ ms.locfileid: "51748920"
   
 - 管理某些共享服务，如<xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>，它提供基本外壳程序功能和<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>，其中提供了基本窗口化功能。  
   
-- 管理解决方案 (.sln) 文件。 解决方案包含相关项目，类似于在 Visual c + + 6.0 的工作区 (.dsw) 文件的组。  
+- 管理解决方案 (.sln) 文件。 解决方案包含的相关项目，类似于视觉对象中的工作区 (.dsw) 文件组C++6.0。  
   
 - 跟踪命令行程序范围内所选内容、 上下文和货币。 Shell 跟踪以下类型的项：  
   
-  -   当前项目  
+  - 当前项目  
   
-  -   当前项目项的 ItemID 当前 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>  
+  - 当前项目项的 ItemID 当前 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>  
   
-  -   有关当前所选内容**属性**窗口或 `SelectionContainer`  
+  - 有关当前所选内容**属性**窗口或 `SelectionContainer`  
   
-  -   UI 上下文 Id 或 CmdUIGuids 控制命令、 菜单和工具栏的可见性  
+  - UI 上下文 Id 或 CmdUIGuids 控制命令、 菜单和工具栏的可见性  
   
-  -   活动窗口、 文档和撤消管理器当前处于活动状态元素  
+  - 活动窗口、 文档和撤消管理器当前处于活动状态元素  
   
-  -   驱动器动态帮助用户上下文属性  
+  - 驱动器动态帮助用户上下文属性  
   
   在 shell 还负责调解安装的 Vspackage 和当前服务之间的通信。 它支持 shell 的核心功能，并使所有的 Vspackage 中集成[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]。 这些核心功能包括以下各项：  
   
@@ -77,7 +72,7 @@ ms.locfileid: "51748920"
   
 - **选项**对话框上的**工具**菜单  
   
-- “属性”窗口  
+- “属性”  窗口  
   
 - **解决方案资源管理器**  
   
@@ -91,4 +86,3 @@ ms.locfileid: "51748920"
  <xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>   
  <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>   
  [VSPackage](../../extensibility/internals/vspackages.md)
-

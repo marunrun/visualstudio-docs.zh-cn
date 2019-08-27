@@ -1,14 +1,9 @@
 ---
 title: DA0506：为所分析的进程分配的最大专用字节数 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 f1_keywords:
 - vs.performance.rules.DA0506
 - vs.performance.DA0506
@@ -17,21 +12,21 @@ ms.assetid: e9c43554-9a85-4d98-9fa4-3b19986e7b62
 caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: bdd7d63ad7dd0261394d3333cdd35ec5f5a330f1
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 97d1cacccc2fdd6abbd13aace1de71b28975779e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51810385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68158053"
 ---
-# <a name="da0506-maximum-private-bytes-allocated-for-the-process-being-profiled"></a>DA0506：为所分析的进程分配的最大专用字节数
+# <a name="da0506-maximum-private-bytes-allocated-for-the-process-being-profiled"></a>DA0506：为所分析进程分配的最大专用字节数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 规则 Id |DA0506 |  
 |类别 |资源监视 |  
 |分析方法 |所有 |  
-|消息 |此信息仅作为信息收集。 进程专用字节计数器测量由正在分析的进程分配的虚拟内存。 报告的值在所有测量时间间隔观察到最大值。 |  
+|消息 |此信息仅作为信息收集。 进程专用字节计数器测量由正在分析的进程分配的虚拟内存。 报告的值是在所有测量时间间隔内观察到的最大值。|  
 |规则类型 |信息 |  
   
  使用采样法、.NET 内存或资源争用方法进行分析时，必须收集至少 10 个样本才能触发此规则。  
@@ -51,6 +46,3 @@ ms.locfileid: "51810385"
  若要了解不同分析方案中应用程序的性能，可使用报告的值比较不同版本程序的性能。  
   
  如果进程专用字节的最大值即将达到进程地址空间可以增长到的体系结构大小限制，则可能导致内存不足的异常。 有关详细信息，请参阅 MSDN 杂志期刊中的[调查内存问题](http://go.microsoft.com/fwlink/?LinkID=177833)。
-
-
-

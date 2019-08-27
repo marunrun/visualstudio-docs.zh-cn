@@ -1,14 +1,9 @@
 ---
-title: CA1018： 用 AttributeUsageAttribute 标记特性 |Microsoft Docs
-ms.custom: ''
+title: CA1018:用 AttributeUsageAttribute 标记特性 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA1018
 - MarkAttributesWithAttributeUsage
@@ -20,14 +15,14 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 277a9ff1db0001613bbd8c389b286c130ab17748
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a8b7cea6ea74b336c862cfe44f90e3e1ec54b2c2
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49906138"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65704219"
 ---
-# <a name="ca1018-mark-attributes-with-attributeusageattribute"></a>CA1018：用 AttributeUsageAttribute 标记特性
+# <a name="ca1018-mark-attributes-with-attributeusageattribute"></a>CA1018:用 AttributeUsageAttribute 标记特性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -52,18 +47,15 @@ ms.locfileid: "49906138"
  您应修复而不包括该消息的不是此规则的冲突。 即使属性继承<xref:System.AttributeUsageAttribute>，该属性应存在以简化代码维护。
 
 ## <a name="example"></a>示例
- 下面的示例定义两个属性。 `BadCodeMaintainerAttribute` 错误地省略<xref:System.AttributeUsageAttribute>语句，和`GoodCodeMaintainerAttribute`正确地实现在本部分中前面所述的属性。 请注意，该属性`DeveloperName`所需的设计规则[CA1019： 定义特性参数的访问器](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)，包含在出于完整性的考虑。
+ 下面的示例定义两个属性。 `BadCodeMaintainerAttribute` 错误地省略<xref:System.AttributeUsageAttribute>语句，和`GoodCodeMaintainerAttribute`正确地实现在本部分中前面所述的属性。 请注意，该属性`DeveloperName`所需的设计规则[CA1019:定义特性参数的访问器](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)，包含在出于完整性的考虑。
 
  [!code-csharp[FxCop.Design.AttributeUsage#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.AttributeUsage/cs/FxCop.Design.AttributeUsage.cs#1)]
  [!code-vb[FxCop.Design.AttributeUsage#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.AttributeUsage/vb/FxCop.Design.AttributeUsage.vb#1)]
 
 ## <a name="related-rules"></a>相关的规则
- [CA1019：定义特性参数的访问器](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)
+ [CA1019:定义特性参数的访问器](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)
 
- [CA1813：避免使用未密封的特性](../code-quality/ca1813-avoid-unsealed-attributes.md)
+ [CA1813:避免使用未密封的特性](../code-quality/ca1813-avoid-unsealed-attributes.md)
 
 ## <a name="see-also"></a>请参阅
- [特性](http://msdn.microsoft.com/library/ee0038ef-b247-4747-a650-3c5c5cd58d8b)
-
-
-
+ [属性](https://msdn.microsoft.com/library/ee0038ef-b247-4747-a650-3c5c5cd58d8b)

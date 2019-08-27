@@ -1,24 +1,23 @@
 ---
 title: 选项, 文本编辑器, XML, 格式设置
 ms.date: 10/29/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Formatting
 ms.assetid: 203e60b2-7b80-4ff4-9fa1-aa9f4374377b
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 0d8420df205d49df3c6799e62adbc4e759a4aed2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: e20b2f7ebe351aa050ea66468fb33aba8e4a31bc
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53826515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62969262"
 ---
 # <a name="options-text-editor-xml-formatting"></a>选项, 文本编辑器, XML, 格式设置
 
-使用“格式设置”属性页以指定如何在 XML 文档中设置元素和特性的格式。 若要打开“选项”对话框，请单击“工具”菜单，然后单击“选项”。 要访问“格式设置”属性页，请展开“文本编辑器” > “XML” > “格式设置”节点。
+使用“格式设置”选项页指定 XML 文档中元素和属性的格式设置方式。 要访问 XML 格式设置选项，请选择“工具” > “选项” > “文本编辑器” > “XML”，然后选择“格式设置”。
 
 ## <a name="attributes"></a>特性
 
@@ -31,7 +30,7 @@ ms.locfileid: "53826515"
 
 **在单独的行上对齐每个特性**
 
-使第二个以及后续的特性纵向对齐，以便与第一个特性的缩进匹配。 以下 XML 文本是如何对齐属性的示例。
+使第二个以及后续的特性纵向对齐，以便与第一个特性的缩进匹配。 以下 XML 文本是如何对齐属性的示例：
 
 ```xml
 <item id = "123-A"
@@ -67,5 +66,5 @@ ms.locfileid: "53826515"
 
 ## <a name="see-also"></a>请参阅
 
-- [如何：创建 XML 文档 (Visual Basic)](/dotnet/visual-basic/programming-guide/program-structure/how-to-create-xml-documentation)
-- [代码生成](../code-generation-in-visual-studio.md)
+- [XML 选项 - 杂项](options-text-editor-xml-miscellaneous.md)
+- [Visual Studio 中的 XML 工具](../../xml-tools/xml-tools-in-visual-studio.md)

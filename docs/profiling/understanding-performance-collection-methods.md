@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Profiling Tools, profiling methods
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9bde4e313b9baf4975f5bff247fac248f3a090ea
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 018c71be69efa7b68f08cb0d320633b82be9832d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53825784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62821220"
 ---
 # <a name="understand-performance-collection-methods"></a>了解性能收集方法
 
@@ -131,5 +131,5 @@ Visual Studio 分析工具提供了五种可以用于收集性能数据的方法
 
 ## <a name="see-also"></a>请参阅
 
-[如何：收集网站性能数据](../profiling/how-to-collect-performance-data-for-a-web-site.md)  
+[如何：收集网站性能数据](../profiling/how-to-collect-performance-data-for-a-web-site.md)
 [性能分析初学者指南](../profiling/beginners-guide-to-performance-profiling.md)

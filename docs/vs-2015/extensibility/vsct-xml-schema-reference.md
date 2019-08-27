@@ -1,27 +1,22 @@
 ---
 title: VSCT XML 架构参考 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 helpviewer_keywords:
 - Visual Studio command table configuration files (VSCT), XML schema
 - VSCT XML schema elements
 ms.assetid: 49e7efae-e713-4762-a824-96fdaf92cdc9
 caps.latest.revision: 15
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: bff3fb766c11987b84ba88b5c86ab3c8d24dbc94
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: e56de828d3b357762da98cde3b9591033c6b5d19
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51755862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63441480"
 ---
 # <a name="vsct-xml-schema-reference"></a>VSCT XML 架构参考
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,14 +26,14 @@ ms.locfileid: "51755862"
  基于 XML 的命令表配置 (.vsct) 文件定义对集成的开发环境 (IDE) 的 VSPackage 提供的命令元素。 这些元素包括菜单项、 菜单、 工具栏和组合框。  
   
 > [!NOTE]
->  VSCT 编译器可以在.vsct 文件上运行预处理器。 这通常是因为 c + + 预处理器，您可以定义包含且具有相同的语法的 c + + 文件中使用宏。 .Vsct 中提供了这样的示例文件**新的项目**为 VSPackage 项目创建向导。  
+> VSCT 编译器可以在.vsct 文件上运行预处理器。 这通常是因为C++预处理器，可以定义包含具有相同的语法中使用的宏和C++文件。 .Vsct 中提供了这样的示例文件**新的项目**为 VSPackage 项目创建向导。  
   
 ## <a name="optional-elements"></a>可选元素  
- 某些 VSCT 元素是可选的。 如果`Parent`将暗示 Group_Undefined:0，未指定参数。 如果`Icon`将暗示 guidOfficeIcon:msotcidNoIcon，未指定参数。 定义快捷键时，仿真，这是通常未使用，是可选的。  
+ 某些 VSCT 元素是可选的。 如果`Parent`未指定参数，Group_Undefined:0将隐式。 如果`Icon`将暗示 guidOfficeIcon:msotcidNoIcon，未指定参数。 定义快捷键时，仿真，这是通常未使用，是可选的。  
   
  通过指定的位置中的位图条，可以在编译时嵌入位图项`href`参数。 位图条会在合并过程中复制而不是从该 DLL 的资源中提取。 当`href`提供参数，则`usedList`参数变为可选的并使用视为位图条带中的所有槽。  
   
- 必须通过使用符号名称定义的所有 GUID 和 ID 值。 这些名称可能定义标头文件中或在 VSCT\<符号 > 部分。 符号名称必须是本地的包括通过\<Include > 元素，或所引用的\<Extern > 元素。 从在指定的标头文件中导入符号名称\<Extern > 元素，如果它遵循的简单的模式 #define 符号值。 值可能是另一个符号，只要以前定义该符号。 GUID 定义必须遵循 OLE 或 c + + 格式。 ID 值可能是十进制数字或 0x，前面的十六进制数字，如以下代码行中所示：  
+ 必须通过使用符号名称定义的所有 GUID 和 ID 值。 这些名称可能定义标头文件中或在 VSCT\<符号 > 部分。 符号名称必须是本地的包括通过\<Include > 元素，或所引用的\<Extern > 元素。 从在指定的标头文件中导入符号名称\<Extern > 元素，如果它遵循的简单的模式 #define 符号值。 值可能是另一个符号，只要以前定义该符号。 GUID 定义必须遵循任一 OLE 或C++格式。 ID 值可能是十进制数字或 0x，前面的十六进制数字，如以下代码行中所示：  
   
 - {6D484634-E53D-4a2c-ADCB-55145C9362C8}  
   
@@ -82,4 +77,3 @@ ms.locfileid: "51755862"
 ## <a name="see-also"></a>请参阅  
  [Vspackage 如何添加用户界面元素](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
  [VSPackage 中的命令传送](../extensibility/internals/command-routing-in-vspackages.md)
-

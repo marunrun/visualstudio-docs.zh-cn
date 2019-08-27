@@ -7,14 +7,13 @@ helpviewer_keywords:
 ms.assetid: ed6ff546-acfa-4dd8-b3a2-6e7455930ca4
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: cfbd259eb4363041988a7682f0e5ce601c3917cd
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 12582aa4c1aa41aa0a38f652cf4841ba1f9953e1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53914496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62949937"
 ---
 # <a name="how-to-select-the-active-run-setting-for-a-load-test"></a>如何：为负载测试选择活动运行设置
 
@@ -33,18 +32,18 @@ ms.locfileid: "53914496"
 
 ## <a name="select-the-active-run-setting"></a>选择活动运行设置
 
-1.  打开一个负载测试。
+1. 打开一个负载测试。
 
-2.  展开“运行设置”文件夹。
+2. 展开“运行设置”文件夹。
 
-3.  右键单击要使其成为活动节点的运行设置节点，然后选择“设置为活动的”。
+3. 右键单击要使其成为活动节点的运行设置节点，然后选择“设置为活动的”。
 
      在“负载测试编辑器”中，受影响的运行设置节点将用“[Active]”后缀来更新。
 
      选定的运行设置将变为活动状态，并一直保持活动状态，直到您选择了其他要处于活动状态的运行设置。
 
 > [!NOTE]
-> 可以通过设置名为 `Test.UseRunSetting=<run setting name>` 的环境变量来重写活动的运行设置。 此方法在从命令行或批处理文件运行负载测试时非常有用。 你无需打开负载测试便可以选择不同的运行设置。
+> 可以通过设置名为 `Test.UseRunSetting=<run setting name>` 的环境变量来重写活动的运行设置。 此方法在从命令行或批处理文件运行负载测试时非常有用。 您无需打开负载测试便可以选择不同的运行设置。
 
 ## <a name="specify-the-run-setting-to-use-from-the-command-line"></a>从命令行指定要使用的运行设置
 

@@ -1,14 +1,9 @@
 ---
-title: 如何： 安装与 SignTool.exe (ClickOnce) 文件进行签名 |Microsoft Docs
-ms.custom: ''
+title: 如何：安装使用 SignTool.exe (ClickOnce) 文件进行签名 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -23,13 +18,13 @@ ms.assetid: 545a4005-d283-4110-9821-c78a9833c250
 caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: f6975fb9c3c3e1abeeaebe23b4a85f41833e421e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 67dc8e858a8ee87ee9e1fef9d99bf24ea4994960
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49179304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68202176"
 ---
 # <a name="how-to-sign-setup-files-with-signtoolexe-clickonce"></a>如何：用 SignTool.exe (ClickOnce) 对安装文件进行签名
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,27 +37,27 @@ ms.locfileid: "49179304"
   
 ### <a name="to-generate-an-unsigned-setup-program-and-sign-later"></a>生成未签名的安装程序并在以后进行签名  
   
-1.  在开发计算机上，安装想要用于对清单进行签名的证书。  
+1. 在开发计算机上，安装想要用于对清单进行签名的证书。  
   
-2.  在解决方案资源管理器中，选择项目。  
+2. 在解决方案资源管理器中，选择项目  。  
   
-3.  上**项目**菜单上，单击*ProjectName* **属性**。  
+3. 在“项目”菜单上，单击“ProjectName”属性    。  
   
-4.  在中**签名**页上，清除**ClickOnce 清单签名**。  
+4. 在“签名”页中，清除“为 ClickOnce 清单签名”   。  
   
-5.  在中**发布**页上，单击**先决条件**。  
+5. 在“发布”页中，单击“系统必备”   。  
   
-6.  验证所有系统必备组件未选择，然后单击**确定**。  
+6. 验证是否选中了所有系统必备，然后单击“确定”  。  
   
-7.  在中**发布**页上，验证的发布设置，然后单击**立即发布**。  
+7. 在“发布”页中，验证发布设置，然后单击“立即发布”   。  
   
      该解决方案会将未签名的应用程序清单、未签名的部署清单、特定于版本的文件以及未签名的安装程序发布到发布文件夹位置。  
   
-8.  在中**发布**页上，单击**先决条件**。  
+8. 在“发布”页中，单击“系统必备”   。  
   
-9. 在中**先决条件**对话框中，清除**创建用于安装系统必备组件安装程序**。  
+9. 在“系统必备”对话框中，清除“创建用于安装系统必备组件的安装程序”   。  
   
-10. 在中**发布**页上，验证的发布设置，然后单击**立即发布**。  
+10. 在“发布”页中，验证发布设置，然后单击“立即发布”   。  
   
      该解决方案会将签名的应用程序清单、签名的部署清单和特定于版本的文件发布到发布文件夹位置。 发布过程不会覆盖未签名的安装程序。  
   
@@ -85,7 +80,4 @@ ms.locfileid: "49179304"
     ```  
   
 ## <a name="see-also"></a>请参阅  
- [如何：为应用程序和部署清单重新签名](../deployment/how-to-re-sign-application-and-deployment-manifests.md)
-
-
-
+ [如何：对应用程序和部署清单重新签名](../deployment/how-to-re-sign-application-and-deployment-manifests.md)

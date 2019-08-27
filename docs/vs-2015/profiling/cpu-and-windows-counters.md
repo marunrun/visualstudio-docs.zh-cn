@@ -1,14 +1,9 @@
 ---
 title: CPU 和 Windows 计数器 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.property.counters
 helpviewer_keywords:
@@ -18,13 +13,13 @@ ms.assetid: d2c45c6a-f975-45ab-b8a5-4768ddd518fb
 caps.latest.revision: 33
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: f79eeae8539657f6556b87d917f991113c5de807
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: eceadf1b1bf82876a20027a9d29c8336e381d18d
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51801688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63434304"
 ---
 # <a name="cpu-and-windows-counters"></a>CPU 和 Windows 计数器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,10 +28,10 @@ ms.locfileid: "51801688"
   
  **要求**  
   
--   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
+- [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
 > [!NOTE]
->  Windows 8 和 Windows Server 2012 中增强的安全功能需要以 Visual Studio 探查器在这些平台上收集数据的方式进行重大更改。 Windows 应用商店应用程序也需要新的收集技术。 请参阅 [Windows 8 和 Windows Server 2012 应用程序上的性能工具](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)。  
+> Windows 8 和 Windows Server 2012 中增强的安全功能需要以 Visual Studio 探查器在这些平台上收集数据的方式进行重大更改。 Windows 应用商店应用程序也需要新的收集技术。 请参阅 [Windows 8 和 Windows Server 2012 应用程序上的性能工具](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)。  
   
 ## <a name="windows-counters"></a>Windows 计数器  
  Windows 计数器是 Windows 诊断基础结构的一部分，该结构提供关于操作系统、应用程序、服务或驱动器性能的信息。 Windows 计数器取决于当前计算机的配置，并且可能无法在其他计算机上使用。 Windows 性能计数器以分析标记的形式收集在分析数据文件中，然后可将其用于筛选视图和报表。  
@@ -109,24 +104,24 @@ ms.locfileid: "51801688"
   
 ##### <a name="to-view-a-list-of-a-list-of-window-counters-that-are-supported-on-the-current-platform"></a>查看当前平台上支持的 Windows 计数器列表的列表  
   
-1.  在“性能资源管理器”中，右键单击性能会话，然后单击“属性”。  
+1. 在“性能资源管理器”中，右键单击性能会话，然后单击“属性”。  
   
-2.  单击“Windows 计数器”。  
+2. 单击“Windows 计数器”。  
   
-3.  选择“收集 Windows 计数器”。  
+3. 选择“收集 Windows 计数器”。  
   
-4.  从“计数器类别”列表中，选择一个计数器组。 该组的 Windows 计数器将显示在列表框中。  
+4. 从“计数器类别”列表中，选择一个计数器组。 该组的 Windows 计数器将显示在列表框中。  
   
-     **请注意**：单击“取消”可返回到上一个计数器收集配置。  
+     **注意：** 单击“取消”可返回到上一个计数器收集配置。  
   
 ### <a name="command-line"></a>命令行  
  通过使用 [VSPerfCmd](../profiling/vsperfcmd.md) 命令行工具，可以从命令行中列出计算机上可用的 CPU 计数器。  
   
 ##### <a name="to-list-of-cpu-counters-that-are-supported-on-the-current-platform"></a>查看当前平台上支持的 CPU 计数器的列表  
   
-1.  打开命令提示符窗口。  
+1. 打开命令提示符窗口。  
   
-2.  类型  
+2. 类型  
   
      **\<Visual Studio Performance Tools Directory>\VSPerfCmd /querycounters**  
   
@@ -139,6 +134,3 @@ ms.locfileid: "51801688"
  [如何：选择采样事件](../profiling/how-to-choose-sampling-events.md)   
  [如何：收集 CPU 计数器数据](../profiling/how-to-collect-cpu-counter-data.md)   
  [如何：收集 Windows 计数器数据](../profiling/how-to-collect-windows-counter-data.md)
-
-
-

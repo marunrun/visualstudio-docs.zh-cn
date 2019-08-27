@@ -1,7 +1,6 @@
 ---
 title: CA1018:用 AttributeUsageAttribute 标记特性
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - CA1018
@@ -12,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 6ab70ec0-220f-4880-af31-45067703133c
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f88185882d8cddaf81caf95e2871918553b8eaa
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 78917bcd4c67e1da205595bac07c8e0e5947318d
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53881968"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68923057"
 ---
 # <a name="ca1018-mark-attributes-with-attributeusageattribute"></a>CA1018:用 AttributeUsageAttribute 标记特性
 
@@ -35,30 +34,30 @@ ms.locfileid: "53881968"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- <xref:System.AttributeUsageAttribute?displayProperty=fullName>属性上不存在自定义属性。
+自<xref:System.AttributeUsageAttribute?displayProperty=fullName>定义特性中不存在该特性。
 
 ## <a name="rule-description"></a>规则说明
- 在定义的自定义属性时，将其标记使用<xref:System.AttributeUsageAttribute>以指示源代码中可以应用自定义特性的位置。 特性的含义和预定用法将决定它在代码中的有效位置。 例如，可以定义标识由谁来负责维护和增强在库中，每种类型和在类型级别始终分配职责的人员的属性。 在这种情况下，应启用的属性类、 枚举和接口，但不是应启用它的方法、 事件或属性上编译器。 组织的策略和过程将指示是否应在程序集上启用该属性。
+定义自定义属性时, 请使用<xref:System.AttributeUsageAttribute>标记该属性, 以指示源代码中可应用自定义属性的位置。 特性的含义和预定用法将决定它在代码中的有效位置。 例如, 你可以定义一个属性, 该属性标识负责维护和增强库中的每个类型的人员, 并且始终在类型级别分配责任。 在这种情况下, 编译器应启用类、枚举和接口上的属性, 但不应在方法、事件或属性上启用它。 组织策略和过程将规定是否应在程序集上启用该属性。
 
- <xref:System.AttributeTargets?displayProperty=fullName>枚举定义可以为自定义属性指定的目标。 如果省略<xref:System.AttributeUsageAttribute>，定义的自定义属性才有效的所有目标`All`的值<xref:System.AttributeTargets>枚举。
+<xref:System.AttributeTargets?displayProperty=fullName>枚举定义可为自定义属性指定的目标。 如果省略<xref:System.AttributeUsageAttribute>, 则自定义属性将对所有目标有效, 如<xref:System.AttributeTargets>枚举的值所`All`定义。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要解决此规则的冲突，通过使用指定的属性的目标<xref:System.AttributeUsageAttribute>。 请参见以下示例。
+若要修复与此规则的冲突, 请使用<xref:System.AttributeUsageAttribute>指定属性的目标。 请参见以下示例。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 您应修复而不包括该消息的不是此规则的冲突。 即使属性继承<xref:System.AttributeUsageAttribute>，该属性应存在以简化代码维护。
+应修复与此规则的冲突, 而不是排除消息。 即使属性继承<xref:System.AttributeUsageAttribute>, 也应该提供属性以简化代码维护。
 
 ## <a name="example"></a>示例
- 下面的示例定义两个属性。 `BadCodeMaintainerAttribute` 错误地省略<xref:System.AttributeUsageAttribute>语句，和`GoodCodeMaintainerAttribute`正确地实现在本部分中前面所述的属性。 请注意，该属性`DeveloperName`所需的设计规则[CA1019:定义特性参数的访问器](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)，包含在出于完整性的考虑。
+下面的示例定义了两个特性。 `BadCodeMaintainerAttribute`错误地省略<xref:System.AttributeUsageAttribute>了语句, `GoodCodeMaintainerAttribute`并正确实现了本部分前面所述的属性。 请注意, 设计`DeveloperName`规则[CA1019 需要属性:定义特性参数](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)的访问器, 出于完整性考虑, 包括在内。
 
- [!code-csharp[FxCop.Design.AttributeUsage#1](../code-quality/codesnippet/CSharp/ca1018-mark-attributes-with-attributeusageattribute_1.cs)]
- [!code-vb[FxCop.Design.AttributeUsage#1](../code-quality/codesnippet/VisualBasic/ca1018-mark-attributes-with-attributeusageattribute_1.vb)]
+[!code-csharp[FxCop.Design.AttributeUsage#1](../code-quality/codesnippet/CSharp/ca1018-mark-attributes-with-attributeusageattribute_1.cs)]
+[!code-vb[FxCop.Design.AttributeUsage#1](../code-quality/codesnippet/VisualBasic/ca1018-mark-attributes-with-attributeusageattribute_1.vb)]
 
-## <a name="related-rules"></a>相关的规则
- [CA1019:定义特性参数的访问器](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)
+## <a name="related-rules"></a>相关规则
+[CA1019定义特性参数的访问器](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)
 
- [CA1813:避免使用未密封的特性](../code-quality/ca1813-avoid-unsealed-attributes.md)
+[CA1813避免未密封的特性](../code-quality/ca1813-avoid-unsealed-attributes.md)
 
 ## <a name="see-also"></a>请参阅
 
-- [属性](/dotnet/standard/design-guidelines/attributes)
+- [特性](/dotnet/standard/design-guidelines/attributes)

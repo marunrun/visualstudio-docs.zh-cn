@@ -1,14 +1,9 @@
 ---
 title: MSBuild 批处理 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 helpviewer_keywords:
 - batching [MSBuild]
 - MSBuild, batching
@@ -16,18 +11,17 @@ ms.assetid: d35c085b-27b8-49d7-b6f8-8f2f3a0eec38
 caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 24baafbaf213e90999a5e4e0eea030f2ef608501
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: d96330c01ab340d4db67694f358717a2dae0bce3
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49304162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63439366"
 ---
 # <a name="msbuild-batching"></a>MSBuild 批处理
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 能够基于项元数据将项列表划分为不同类别或批，并对每批运行一次目标或任务。  
   
 ## <a name="task-batching"></a>任务批处理  
@@ -36,7 +30,7 @@ ms.locfileid: "49304162"
  你指定希望 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 使用其中一个任务特性中的 %(ItemMetaDataName) 表示法对任务执行批处理。 以下示例基于 `Color` 项元数据值将 `Example` 项列表划分为几个批次，并将每个批次单独地传递到 `MyTask` 任务。  
   
 > [!NOTE]
->  如果未在任务特性的其他位置引用项列表，或者如果元数据名称可能不明确，则可以使用 %(*ItemCollection.ItemMetaDataName*) 表示法完全限定要用于进行批处理的项元数据值。  
+> 如果未在任务特性的其他位置引用项列表，或者如果元数据名称可能不明确，则可以使用 %(*ItemCollection.ItemMetaDataName*) 表示法完全限定要用于进行批处理的项元数据值。  
   
 ```  
 <Project  
@@ -113,6 +107,3 @@ ms.locfileid: "49304162"
  [MSBuild 概念](../msbuild/msbuild-concepts.md)   
  [MSBuild 参考](../msbuild/msbuild-reference.md)   
  [高级概念](../msbuild/msbuild-advanced-concepts.md)
-
-
-

@@ -8,14 +8,13 @@ helpviewer_keywords:
 ms.assetid: 867a9c21-0909-4963-bc02-d41e9393008c
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 43975e57e37a16522b483990c83d0db22a6eb27d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: ec6ca0e39a7816d99377bc13e1274cbc96a663ea
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53896066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62970629"
 ---
 # <a name="how-to-specify-the-timing-details-storage-property-for-a-load-test-run-setting"></a>如何：为负载测试运行设置指定计时详细信息存储属性
 
@@ -44,21 +43,21 @@ ms.locfileid: "53896066"
 
   计时详细信息数据在运行期间存储在 LoadTestItemResults.dat 文件中，并在负载测试完成后发送回控制器。 如果负载测试的运行持续时间很长，则该文件会很大。 如果代理计算机上没有足够的磁盘空间，这将成为问题。
 
-  如果要从早期版本的 Visual Studio 负载测试升级项目，请使用下面的过程来启用完整详细信息集合。
+  如果要从早期版本的 Visual Studio 负载测试升级项目，请使用下面的过程来启用完整详细信息收集。
 
 ## <a name="to-configure-the-timing-details-storage-property-in-a-load-test"></a>配置负载测试中的计时详细信息存储属性
 
-1.  在负载测试编辑器中打开一个负载测试。
+1. 在负载测试编辑器中打开一个负载测试。
 
-2.  展开负载测试中的“运行设置”节点。
+2. 展开负载测试中的“运行设置”节点。
 
-3.  选择要配置的运行设置，例如“Run Settings1[Active]”。
+3. 选择要配置的运行设置，例如“Run Settings1[Active]”。
 
-4.  打开“属性”窗口。 在“视图”菜单上选择“属性窗口”。
+4. 打开“属性”窗口。 在“视图”菜单上选择“属性窗口”。
 
-5.  在“结果”类别下，选择“计时详细信息存储”属性，然后选择“所有的详细信息”。
+5. 在“结果”类别下，选择“计时详细信息存储”属性，然后选择“所有的详细信息”。
 
-     为“计时详细信息存储”属性配置“所有的详细信息”设置之后，可以运行负载测试并查看“虚拟用户活动图”。 有关更多信息，请参见[如何：分析虚拟用户在负载测试期间的操作](../test/how-to-analyze-virtual-user-activity-during-a-load-test.md)。
+     为“计时详细信息存储”属性配置“所有的详细信息”设置之后，可以运行负载测试并查看“虚拟用户活动图”。 有关详细信息，请参阅[如何：分析虚拟用户在负载测试期间的操作](../test/how-to-analyze-virtual-user-activity-during-a-load-test.md)。
 
 ## <a name="see-also"></a>请参阅
 

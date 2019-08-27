@@ -6,17 +6,17 @@ helpviewer_keywords:
 - properties, adding to a project item
 - project items, adding properties
 ms.assetid: d7a0f2b0-d427-4d49-9536-54edfb37c0f3
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e04561a5b61aed471840e5e835b942c1b2a81717
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 02055e4e9f25f98193e8b27d42326589aef47762
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53823427"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66336119"
 ---
 # <a name="persist-the-property-of-a-project-item"></a>保存项目项的属性
 您可能想要保留的属性添加到项目项，例如源代码文件的作者。 可以通过将属性存储在项目文件中执行此操作。
@@ -27,7 +27,7 @@ ms.locfileid: "53823427"
 
 ## <a name="to-obtain-the-project-hierarchy-with-the-dte-object"></a>若要获取 DTE 对象使用的项目层次结构
 
-1.  将以下代码添加到你的 VSPackage 中：
+1. 将以下代码添加到你的 VSPackage 中：
 
     ```csharp
     EnvDTE.DTE dte = (EnvDTE.DTE)Package.GetGlobalService(typeof(EnvDTE.DTE));
@@ -41,7 +41,7 @@ ms.locfileid: "53823427"
 
 ## <a name="to-persist-the-project-item-property-with-the-dte-object"></a>若要保存项目项属性与 DTE 对象
 
-1.  将以下代码添加到在上一个过程中的方法中提供的代码：
+1. 将以下代码添加到在上一个过程中的方法中提供的代码：
 
     ```csharp
     IVsBuildPropertyStorage buildPropertyStorage =
@@ -58,7 +58,7 @@ ms.locfileid: "53823427"
 
 ## <a name="to-obtain-the-project-hierarchy-using-ivsmonitorselection"></a>若要获取使用 IVsMonitorSelection 的项目层次结构
 
-1.  将以下代码添加到你的 VSPackage 中：
+1. 将以下代码添加到你的 VSPackage 中：
 
     ```csharp
     IVsHierarchy hierarchy = null;
@@ -102,7 +102,7 @@ ms.locfileid: "53823427"
 
 ## <a name="to-persist-the-selected-project-item-property-given-the-project-hierarchy"></a>若要保留选定的项目项属性，给定的项目层次结构
 
-1.  将以下代码添加到在上一个过程中的方法中提供的代码：
+1. 将以下代码添加到在上一个过程中的方法中提供的代码：
 
     ```csharp
     IVsBuildPropertyStorage buildPropertyStorage =

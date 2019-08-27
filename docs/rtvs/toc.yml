@@ -3,7 +3,7 @@
     - name: R Tools for Visual Studio
       href: index.md
     - name: 数据科学和分析应用程序工作负荷
-      href: data-science-and-analytical-applications-workload.md
+      href: ../python/data-science-and-analytical-applications-workload.md
 - name: 快速入门
   items:
     - name: 安装
@@ -19,15 +19,17 @@
 - name: 操作指南
   items:
     - name: R 项目
-      href: r-projects-in-visual-studio.md
       items:
+        - name: R 项目
+          href: r-projects-in-visual-studio.md
         - name: 程序包管理器
           href: r-package-manager-in-visual-studio.md
         - name: SQL Server 集成
           href: integrating-sql-server-with-r.md
     - name: 编辑代码
-      href: editing-r-code-in-visual-studio.md
       items:
+        - name: 编辑代码
+          href: editing-r-code-in-visual-studio.md
         - name: IntelliSense
           href: r-intellisense.md
         - name: Linting
@@ -35,8 +37,9 @@
         - name: 代码片段
           href: code-snippets-for-r.md
     - name: 工作区（本地和远程）
-      href: r-workspaces-in-visual-studio.md
       items:
+        - name: 工作区（本地和远程）
+          href: r-workspaces-in-visual-studio.md
         - name: 设置远程工作区
           href: setting-up-remote-r-workspaces.md
         - name: 适用于 Linux 的远程 R 服务

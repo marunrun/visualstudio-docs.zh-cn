@@ -1,14 +1,9 @@
 ---
 title: 优化菜单和工具栏命令 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - commands [Visual Studio], menus
 - commands [Visual Studio], toolbars
@@ -18,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8385f1a6-1e98-4dca-83d2-fcbed7177242
 caps.latest.revision: 9
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 47a95f4152e1c0779fc3def057f49b9ec9130259
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 25a721c77269837ad8d158db186274586ad638df
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51736733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68150819"
 ---
 # <a name="optimizing-menu-and-toolbar-commands"></a>优化菜单和工具栏命令
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -41,4 +36,3 @@ Vspackage 和到其相应命令添加[!INCLUDE[vsprvs](../../includes/vsprvs-md.
 ## <a name="related-sections"></a>相关章节  
  [命令、菜单和工具栏](../../extensibility/internals/commands-menus-and-toolbars.md)  
  说明如何创建包含菜单、工具栏和命令组合框的 UI。
-

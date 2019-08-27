@@ -1,25 +1,20 @@
 ---
-title: 如何： 开始调试 XSLT |Microsoft Docs
-ms.custom: ''
+title: 如何：开始调试 XSLT |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-xml-tools
+ms.topic: conceptual
 ms.assetid: 8358335a-fcb0-45e0-a37e-45b43e49ec0a
 caps.latest.revision: 4
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 22a2ad1a37b67b2ac2120bfef9975e2a780d737f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 9811963b6130c3b0c144feee928de915a4bd9ba9
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49246618"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65697008"
 ---
 # <a name="how-to-start-debugging-xslt"></a>如何：开始调试 XSLT
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,29 +26,29 @@ ms.locfileid: "49246618"
   
 #### <a name="to-start-debugging-from-a-style-sheet"></a>从样式表开始调试  
   
-1.  在“XML 编辑器”中打开样式表。  
+1. 在“XML 编辑器”中打开样式表。  
   
-2.  选择**调试 XSL**从**XML**菜单。  
+2. 选择**调试 XSL**从**XML**菜单。  
   
 #### <a name="to-start-debugging-from-an-xml-input-document"></a>从 XML 输入文档开始调试  
   
-1.  在 XML 编辑器中打开 XML 文档。  
+1. 在 XML 编辑器中打开 XML 文档。  
   
-2.  选择**调试 XSL**从**XML**菜单。  
+2. 选择**调试 XSL**从**XML**菜单。  
   
 ## <a name="xslt-from-other-languages"></a>其他语言的 XSLT  
  也可以在调试应用程序的同时进入并逐行执行 XSLT。 在 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=fullName> 调用中按 F11 键时，调试程序可以进入并逐行执行 XSLT 代码。  
   
 > [!NOTE]
->  不支持从 <xref:System.Xml.Xsl.XslTransform> 类进入并逐行执行 XSLT。 <xref:System.Xml.Xsl.XslCompiledTransform> 类是唯一支持在调试的同时进入并逐行执行 XSLT 的 XSLT 处理器。  
+> 不支持从 <xref:System.Xml.Xsl.XslTransform> 类进入并逐行执行 XSLT。 <xref:System.Xml.Xsl.XslCompiledTransform> 类是唯一支持在调试的同时进入并逐行执行 XSLT 的 XSLT 处理器。  
   
 #### <a name="to-start-debugging-an-xslt-application"></a>开始调试 XSLT 应用程序  
   
-1.  在实例化 <xref:System.Xml.Xsl.XslCompiledTransform> 对象时，在代码中将 `enableDebug` 参数设置为 `true`。  
+1. 在实例化 <xref:System.Xml.Xsl.XslCompiledTransform> 对象时，在代码中将 `enableDebug` 参数设置为 `true`。  
   
      此设置通知 XSLT 处理器在编译代码时创建调试信息。  
   
-2.  按 F11 键进入并逐行执行 XSLT 代码。  
+2. 按 F11 键进入并逐行执行 XSLT 代码。  
   
      XSLT 样式表加载到新的文档窗口中，XSLT 调试程序也将启动。  
   
@@ -93,6 +88,5 @@ namespace ConsoleApplication
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [演练： 调试 XSLT 样式表](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md)   
- [代码单步执行概述](http://msdn.microsoft.com/en-us/8791dac9-64d1-4bb9-b59e-8d59af1833f9)
-
+ [演练：调试 XSLT 样式表](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md)   
+ [代码单步执行概述](https://msdn.microsoft.com/8791dac9-64d1-4bb9-b59e-8d59af1833f9)

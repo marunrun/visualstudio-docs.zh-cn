@@ -1,8 +1,8 @@
 ---
-title: 使用 Windows PowerShell 脚本发布到开发和测试环境 |Microsoft Docs
-description: 了解如何使用 Visual Studio 从 Windows PowerShell 脚本发布到开发和测试环境。
+title: 使用 Windows PowerShell 脚本发布到开发和测试环境 | Microsoft Docs
+description: 了解如何使用 Windows PowerShell 脚本通过 Visual Studio 发布到开发和测试环境。
 author: ghogen
-manager: douge
+manager: jillfra
 assetId: 5fff1301-5469-4d97-be88-c85c30f837c1
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
@@ -11,48 +11,48 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 9d0142c52fbe40256fc0ab6ec0d5d9fdade243b7
-ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
+ms.openlocfilehash: cfa6c37702eb3f6299061c512081f4c122cee3c9
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51001524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62830486"
 ---
 # <a name="using-windows-powershell-scripts-to-publish-to-dev-and-test-environments"></a>使用 Windows PowerShell 脚本发布到开发和测试环境
 
-在 Visual Studio 中创建 web 应用程序时，可以生成更高版本可以使用它来自动为 Azure 应用服务或虚拟机中的 Web 应用发布到 Azure 网站的 Windows PowerShell 脚本。 可以编辑和扩展以满足应用需求，在 Visual Studio 编辑器中的 Windows PowerShell 脚本或将脚本与现有构建、 测试和发布脚本相集成。
+在 Visual Studio 中创建 Web 应用程序时，可以生成一个 Windows PowerShell 脚本，以后，可以使用该脚本自动将网站以 Azure 应用服务或虚拟机中 Web 应用的形式发布到 Azure。 可以根据需要在 Visual Studio 编辑器中编辑和扩展该 Windows PowerShell 脚本，或者将该脚本与现有的生成、测试和发布脚本相集成。
 
-使用这些脚本，你可以设置自定义的版本 （也称为开发和测试环境） 供临时使用你的网站。 例如，您可能设置了你的网站在 Azure 虚拟机上或运行测试套件、 再现 bug、 测试 bug 修复程序、 试验建议的更改，或设置自定义环境用于演示或展示了网站上的过渡槽的特定版本。 创建用于发布你的项目的脚本后，可以通过重新运行该脚本，根据需要重新创建相同的环境或使用 web 应用程序，创建用于测试的自定义环境生成运行该脚本。
+使用这些脚本，可以设置站点的自定义版本（又称为开发与测试环境）供临时使用。 例如，可以在 Azure 虚拟机中或者 Azure 网站的过渡槽中设置网站的特定版本，以运行测试套件、再现 bug、测试 bug 修复程序、试验建议的更改，或者设置自定义环境用于演示或展示。 创建用于发布项目的脚本后，可以根据需要通过重新运行该脚本来重新创建相同的环境，或者结合自己的 Web 应用版本运行该脚本，以创建自定义环境用于测试。
 
 ## <a name="prerequisites"></a>系统必备
 
-* Azure SDK 2.3 或更高版本。 请参阅[Visual Studio 下载](http://go.microsoft.com/fwlink/?LinkID=624384)。 （您不需要 Azure SDK 就能生成 web 项目的脚本。 此功能适用于 web 项目，不在云服务中的 web 角色。）
-* Azure PowerShell 0.7.4 或更高版本。 请参阅[如何安装和配置 Azure PowerShell](/powershell/azure/overview)。
-* [Windows PowerShell 3.0](http://go.microsoft.com/?linkid=9811175)或更高版本。
+* Azure SDK 2.3 或更高版本。 请参阅 [Visual Studio 下载](http://go.microsoft.com/fwlink/?LinkID=624384)。 （无需使用 Azure SDK 就能为 Web 项目生成脚本。 此功能适用于 Web 项目，而不适用于云服务中的 Web 角色。）
+* Azure PowerShell 0.7.4 或更高版本。 请参阅 [如何安装和配置 Azure PowerShell](/powershell/azure/overview)。
+* [Windows PowerShell 3.0](http://go.microsoft.com/?linkid=9811175) 或更高版本。
 
 ## <a name="additional-tools"></a>其他工具
 
-可使用 Visual Studio 中的 PowerShell 进行 Azure 开发的其他工具和资源。 请参阅[PowerShell Tools for Visual Studio](http://go.microsoft.com/fwlink/?LinkId=404012)。
+我们还提供其他工具和资源，用于在 Visual Studio 中通过 PowerShell 进行 Azure 开发。 请参阅 [PowerShell Tools for Visual Studio](http://go.microsoft.com/fwlink/?LinkId=404012)（适用于 Visual Studio 的 PowerShell 工具）。
 
 ## <a name="generating-the-publish-scripts"></a>生成发布脚本
 
-您可以生成发布脚本时按照创建一个新的项目托管网站的虚拟机[这些说明](/azure/virtual-machines/windows/classic/web-app-visual-studio.md?toc=%2fazure%2fvirtual-machines%2fwindows%2fclassic%2ftoc.json)。 此外可以[生成 Azure 应用服务中发布的 web 应用的脚本](/azure/app-service/scripts/app-service-powershell-deploy-github)。
+在创建新项目时，可以遵照[这些说明](/azure/virtual-machines/windows/classic/web-app-visual-studio?toc=%2fazure%2fvirtual-machines%2fwindows%2fclassic%2ftoc.json)为托管网站的虚拟机生成发布脚本。 还可以[为 Azure 应用服务中的 Web 应用生成发布脚本](/azure/app-service/scripts/app-service-powershell-deploy-github)。
 
-## <a name="scripts-that-visual-studio-generates"></a>Visual Studio 将生成的脚本
+## <a name="scripts-that-visual-studio-generates"></a>Visual Studio 生成的脚本
 
-Visual Studio 将生成一个名为的解决方案级文件夹**PublishScripts** ，其中包含两个 Windows PowerShell 文件、 一个针对你的虚拟机或网站，并包含可以在中使用的函数的模块发布脚本脚本。 Visual Studio 还生成一个文件中指定要部署的项目的详细信息的 JSON 格式。
+Visual Studio 将生成名为 **PublishScripts** 的解决方案级文件夹，其中包含两个 Windows PowerShell 文件、一个针对虚拟机或网站的发布脚本，以及一个包含要在脚本中使用的函数的模块。 Visual Studio 还将生成 JSON 格式的文件，用于指定要部署的项目的详细信息。
 
 ### <a name="windows-powershell-publish-script"></a>Windows PowerShell 发布脚本
 
-发布脚本包含有关部署到网站或虚拟机的特定发布步骤。 Visual Studio 提供语法突出显示适用于 Windows PowerShell 开发。 有关这些函数可用，并且可以自由编辑脚本以适应不断变化的要求中的函数帮助。
+发布脚本包含有关部署到网站或虚拟机的特定发布步骤。 针对 Windows PowerShell 开发，Visual Studio 提供语法颜色设置。 其中还提供了函数的帮助，并且可以自由编辑脚本中的函数，以满足不断变化的要求。
 
 ### <a name="windows-powershell-module"></a>Windows PowerShell 模块
 
-Visual Studio 将生成的 Windows PowerShell 模块包含发布脚本使用的函数。 这些 Azure PowerShell 函数不应修改。 请参阅[如何安装和配置 Azure PowerShell](/powershell/azure/overview)。
+Visual Studio 生成的 Windows PowerShell 模块包含发布脚本使用的函数。 不应修改这些 Azure PowerShell 函数。 请参阅 [如何安装和配置 Azure PowerShell](/powershell/azure/overview)。
 
 ### <a name="json-configuration-file"></a>JSON 配置文件
 
-在中创建 JSON 文件**配置**文件夹和包含配置数据用于确切指定哪些资源将部署到 Azure。 Visual Studio 生成的名称是文件的项目的名称-WAWS-dev.json 如果你创建网站或项目名称 VM dev.json 如果创建的虚拟机。 下面是你创建网站时，将生成的 JSON 配置文件的示例。 值的大多数都一目了然。 网站名称是由 Azure 生成，因此可能会符合您的项目名称。
+JSON 文件是在 **Configurations** 文件夹中创建的，其中包含的配置数据用于确切指定要将哪些资源部署到 Azure。 Visual Studio 生成的文件的名称为 project-name-WAWS-dev.json（如果创建的是网站），或 project name-VM-dev.json（如果创建的是虚拟机）。 以下是创建网站时生成的 JSON 配置文件的示例。 大多数值的含义都一目了然。 网站名称由 Azure 生成，因此，它可能与项目名称不匹配。
 
 ```json
 {
@@ -76,7 +76,7 @@ Visual Studio 将生成的 Windows PowerShell 模块包含发布脚本使用的�
 }
 ```
 
-当创建虚拟机时，JSON 配置文件看起来类似于以下。 云服务创建为虚拟机的容器。 虚拟机包含通过 HTTP 和 HTTPS，web 访问的普通终结点以及用于 Web 部署，这样就可以从本地计算机、 远程桌面和 Windows PowerShell 发布到网站终结点。
+创建虚拟机时，JSON 配置文件类似于下面所示。 创建的云服务用作虚拟机的容器。 虚拟机包含通过 HTTP 和 HTTPS 进行 Web 访问时使用的普通终结点，以及用于 Web 部署的终结点，可以从本地计算机、远程桌面和 Windows PowerShell 通过这些终结点发布到网站。
 
 ```json
 {
@@ -142,24 +142,24 @@ Visual Studio 将生成的 Windows PowerShell 模块包含发布脚本使用的�
 }
 ```
 
-可以编辑 JSON 配置，以更改运行发布脚本时，会发生什么情况。 `cloudService`并`virtualMachine`各节是必需的但可以删除`databases`部分如果您不需要它。 在 Visual Studio 将生成的默认配置文件中为空的属性是可选的;默认配置文件中具有值的这些属性是必需的。
+可以编辑 JSON 配置，以更改运行发布脚本时的行为。 `cloudService` 和 `virtualMachine` 节是必需的，但是，如果不需要 `databases` 节，则可以将它删除。 在 Visual Studio 生成的默认配置文件中为空的属性是可选的；在默认配置文件中具有值的这些属性是必需的。
 
-如果而不是在 Azure 中有单个生产站点拥有的网站具有多个部署环境 （称为槽），则可以在 JSON 配置文件中包含的网站的槽名称。 例如，如果你有一个名为的网站**mysite**和槽的名称为**测试**则 URI 为`mysite-test.cloudapp.net`，但要在配置文件中使用的正确名称为 mysite （test）。 您可以仅才这样做网站和槽已存在于你的订阅。 如果它们不存在，创建该网站由运行该脚本而不指定槽，然后创建中的槽[Azure 门户](https://portal.azure.com/)，并且以后运行该脚本使用修改后的网站名称。 有关 web 应用部署槽位的详细信息，请参阅[设置过渡环境中 Azure 应用服务 web 应用的](/azure/app-service/web-sites-staged-publishing)。
+如果网站具有多个部署环境（称为槽），而并非仅在 Azure 中有单个生产站点，则可将槽位名称包括在 JSON 配置文件的网站名称中。 例如，如果某个网站的名称为 **mysite**，该网站的一个槽的名称为 **test**，则 URI 为 `mysite-test.cloudapp.net`，但要在配置文件中使用的正确名称为 mysite(test)。 只有当网站和槽已在订阅中存在时，才能这样做。 如果它们不存在，请运行脚本来创建网站，而不指定槽位，然后在 [Azure 门户](https://portal.azure.com/)中创建槽位，再使用修改的网站名称来运行脚本。 有关网站的部署槽的详细信息，请参阅[为 Azure 应用服务中的网站设置过渡环境](/azure/app-service/web-sites-staged-publishing)。
 
 ## <a name="how-to-run-the-publish-scripts"></a>如何运行发布脚本
 
-如果您从未运行 Windows PowerShell 脚本之前，必须首先设置执行策略以使脚本能够运行。 策略是一项安全功能来防止用户运行 Windows PowerShell 脚本，如果它们免受恶意软件或病毒涉及执行脚本。
+如果以前从未运行过 Windows PowerShell 脚本，则首先必须设置执行策略以启用要运行的脚本。 该策略是一项安全功能，旨在为运行 Windows PowerShell 脚本的用户提供防护，让其在执行脚本时免受恶意软件或病毒的攻击。
 
 ### <a name="run-the-script"></a>运行脚本
 
-1. 创建你的项目的 Web 部署包。 Web 部署包是包含你想要将复制到你的网站或虚拟机的文件的压缩的存档 （.zip 文件）。 对于任何 web 应用程序，可以在 Visual Studio 中创建 Web 部署包。
+1. 为项目创建 Web 部署包。 Web 部署包是一个压缩的存档（.zip 文件），包含要复制到网站或虚拟机的文件。 可以在 Visual Studio 中为任何 Web 应用程序创建 Web 部署包。
 
    ![创建 Web 部署包](./media/vs-azure-tools-publishing-using-powershell-scripts/IC767885.png)
 
-   有关详细信息，请参阅[如何： 在 Visual Studio 中创建 Web 部署包](https://msdn.microsoft.com/library/dd465323.aspx)。 此外可以自动创建 Web 部署包，如中所述[自定义和扩展发布脚本](#customizing-and-extending-publish-scripts)。
+   有关详细信息，请参阅[如何：在 Visual Studio 中创建 Web 部署包](https://msdn.microsoft.com/library/dd465323.aspx)。 还可以自动创建 Web 部署包，如[自定义和扩展发布脚本](#customizing-and-extending-the-publish-scripts)中所述。
 
-1. 在中**解决方案资源管理器**，打开该脚本的上下文菜单，然后选择**使用 PowerShell ISE 打开**。
-1. 如果第一次在此计算机上运行 Windows PowerShell 脚本，使用管理员特权打开命令提示符窗口并键入以下命令：
+1. 在“解决方案资源管理器”中打开脚本的上下文菜单，并选择“使用 PowerShell ISE 打开”。
+1. 如果首次在此计算机上运行 Windows PowerShell 脚本，请使用管理员权限打开命令提示窗口并键入以下命令：
 
     ```powershell
     Set-ExecutionPolicy RemoteSigned
@@ -171,17 +171,17 @@ Visual Studio 将生成的 Windows PowerShell 模块包含发布脚本使用的�
     Add-AzureAccount
     ```
 
-    出现提示时，提供用户名和密码。
+    出现提示时，请提供用户名和密码。
 
-    请注意，当自动编写脚本，提供 Azure 凭据的此方法不起作用。 相反，应使用`.publishsettings`文件来提供凭据。 一次只使用该命令**Get-azurepublishsettingsfile**从 Azure 下载文件和此后**Import-azurepublishsettingsfile**导入文件。 有关详细说明，请参阅[如何安装和配置 Azure PowerShell](/powershell/azure/overview)。
+    请注意，当自动编写脚本时，这一提供 Azure 凭据的方法不起作用， 而是应使用 `.publishsettings` 文件来提供凭据。 仅限一次使用 **Get-AzurePublishSettingsFile** 命令从 Azure 下载文件，此后则使用 **Import-AzurePublishSettingsFile** 导入该文件。 有关详细信息，请参阅[如何安装和配置 Azure PowerShell](/powershell/azure/overview)。
 
-1. （可选）如果你想要创建虚拟机等 Azure 资源，数据库和网站而不发布 web 应用程序，使用**Publish-WebApplication.ps1**命令与 **-配置**参数设置为 JSON 配置文件。 此命令行使用 JSON 配置文件来确定要创建的资源。 因为它对其他命令行参数使用默认设置，它会创建资源，但不发布 web 应用程序。 -Verbose 选项可提供有关发生了什么情况的详细信息。
+1. （可选）如果希望创建虚拟机、数据库和网站等 Azure 资源，而不发布 Web 应用程序，请使用 **Publish-WebApplication.ps1** 命令以及设置为 JSON 配置文件的 **-Configuration** 参数。 此命令行使用 JSON 配置文件来确定要创建的资源。 由于它的其他命令行参数使用默认设置，因此它会创建资源，但不发布 Web 应用程序。 -Verbose 选项可提供有关运行情况的更多信息。
 
     ```powershell
     Publish-WebApplication.ps1 -Verbose –Configuration C:\Path\WebProject-WAWS-dev.json
     ```
 
-1. 使用**Publish-WebApplication.ps1**命令，来调用脚本并发布 web 应用程序的以下示例之一所示。 如果你需要重写默认设置为任何其他参数，例如订阅名称、 发布包名称、 虚拟机凭据或数据库服务器凭据，可以指定这些参数。 使用 **– Verbose**选项以查看发布过程的进度有关的详细信息。
+1. 如以下示例之一所示，使用 **Publish-WebApplication.ps1** 命令可调用脚本并发布 Web 应用程序。 如果需要覆盖任何其他参数（例如订阅名称、发布包名称、虚拟机凭据或数据库服务器凭据）的默认设置，可以指定这些参数。 使用 **–Verbose** 选项可以查看有关发布进度的详细信息。
 
     ```powershell
     Publish-WebApplication.ps1 –Configuration C:\Path\WebProject-WAWS-dev-json `
@@ -191,7 +191,7 @@ Visual Studio 将生成的 Windows PowerShell 模块包含发布脚本使用的�
     -Verbose
     ```
 
-    如果要创建虚拟机，该命令看起来如下所示。 此示例还演示如何指定多个数据库的凭据。 这些脚本创建的虚拟机，SSL 证书不受信任的根颁发机构颁发。 因此，您需要使用 **– AllowUntrusted**选项。
+    如果要创建虚拟机，则命令类似于以下形式： 此示例还显示了如何为多个数据库指定凭据。 对于这些脚本创建的虚拟机，SSL 证书不是来自受信任的根证书颁发机构。 因此，需要使用 **–AllowUntrusted** 选项。
 
     ```powershell
     Publish-WebApplication.ps1 `
@@ -204,17 +204,17 @@ Visual Studio 将生成的 Windows PowerShell 模块包含发布脚本使用的�
     -Verbose
     ```
 
-    该脚本可以创建数据库，但不会创建数据库服务器。 如果你想要创建数据库服务器，则可以使用**New-azuresqldatabaseserver** Azure 模块中的函数。
+    脚本可以创建数据库，但不会创建数据库服务器。 如果想要创建数据库服务器，可以使用 Azure 模块中的 **New-AzureSqlDatabaseServer** 函数。
 
 ## <a name="customizing-and-extending-the-publish-scripts"></a>自定义和扩展发布脚本
 
-您可以自定义发布脚本和 JSON 配置文件。 Windows PowerShell 模块中的函数**AzureWebAppPublishModule.psm1**不应修改。 如果只是想要指定不同的数据库或更改某些虚拟机的属性，编辑 JSON 配置文件。 如果你想要扩展脚本以自动生成和测试你的项目的功能，可以实现函数存根中的**Publish-WebApplication.ps1**。
+可以自定义发布脚本和 JSON 配置文件。 不应修改 Windows PowerShell 模块 **AzureWebAppPublishModule.psm1** 中的函数。 如果只是想要指定一个不同的数据库或更改虚拟机的某些属性，可以编辑 JSON 配置文件。 如果想要扩展脚本的功能以自动生成和测试项目，可以在 **Publish-WebApplication.ps1** 中实现函数存根。
 
-若要自动生成项目，添加代码调用到 MSBuild`New-WebDeployPackage`中此代码示例所示。 MSBuild 命令的路径是已安装的 Visual Studio 的版本而异。 若要获取正确的路径，可以使用函数**Get-msbuildcmd**，在此示例中所示。
+若要自动生成项目，请按照以下代码示例中所示，添加对 `New-WebDeployPackage` 调用 MSBuild 的代码。 MSBuild 命令的路径各不相同，具体取决于安装的 Visual Studio 版本。 若要获取正确的路径，可以使用 **Get-MSBuildCmd** 函数，如本示例中所示。
 
-### <a name="to-automate-building-your-project"></a>若要自动生成你的项目
+### <a name="to-automate-building-your-project"></a>自动生成项目
 
-1. 添加`$ProjectFile`global param 节中的参数。
+1. 在 global param 节中添加 `$ProjectFile` 参数。
 
     ```powershell
     [Parameter(Mandatory = $false)]
@@ -223,7 +223,7 @@ Visual Studio 将生成的 Windows PowerShell 模块包含发布脚本使用的�
     $ProjectFile,
     ```
 
-1. 将函数复制`Get-MSBuildCmd`到脚本文件。
+1. 将函数 `Get-MSBuildCmd` 复制到脚本文件。
 
     ```powershell
     function Get-MSBuildCmd
@@ -244,7 +244,7 @@ Visual Studio 将生成的 Windows PowerShell 模块包含发布脚本使用的�
     }
     ```
 
-1. 替换`New-WebDeployPackage`使用以下代码，并在行构造的占位符替换为`$msbuildCmd`。 此代码适用于 Visual Studio 2015。 如果使用 Visual Studio 2017，更改**VisualStudioVersion**属性设置为`15.0`(`12.0`适用于 Visual Studio 2013)。
+1. 将 `New-WebDeployPackage` 替换为以下代码，并替换构造 `$msbuildCmd` 的行中的占位符。 此代码适用于 Visual Studio 2015。 如果使用 Visual Studio 2017，更改**VisualStudioVersion**属性设置为`15.0`(`12.0`适用于 Visual Studio 2013)。
 
     ```powershell
     function New-WebDeployPackage
@@ -252,7 +252,7 @@ Visual Studio 将生成的 Windows PowerShell 模块包含发布脚本使用的�
         #Write a function to build and package your web application
     ```
 
-    若要生成 web 应用程序，请使用 MsBuild.exe。 有关帮助，请参阅 MSBuild 命令行参考： [http://go.microsoft.com/fwlink/?LinkId=391339](http://go.microsoft.com/fwlink/?LinkId=391339)
+    若要生成 Web 应用程序，请使用 MsBuild.exe。 有关帮助，请参阅位于以下页面的 MSBuild 命令行参考：[http://go.microsoft.com/fwlink/?LinkId=391339](http://go.microsoft.com/fwlink/?LinkId=391339)
 
     ```powershell
     Write-VerboseWithTime 'Build-WebDeployPackage: Start'
@@ -262,7 +262,7 @@ Visual Studio 将生成的 Windows PowerShell 模块包含发布脚本使用的�
     Write-VerboseWithTime ('Build-WebDeployPackage: ' + $msbuildCmd)
     ```
 
-### <a name="start-execution-of-the-build-command"></a>启动生成命令的执行
+### <a name="start-execution-of-the-build-command"></a>开始执行生成命令
 
 ```powershell
 $job = Start-Process cmd.exe -ArgumentList('/C "' + $msbuildCmd + '"') -WindowStyle Normal -Wait -PassThru
@@ -286,7 +286,7 @@ return $WebDeployPackage
 }
 ```
 
-1. 调用`New-WebDeployPackage`此行之前的函数：`$Config = Read-ConfigFile $Configuration`适用于 web 应用或`$Config = Read-ConfigFile $Configuration -HasWebDeployPackage:([Bool]$WebDeployPackage)`的虚拟机。
+1. 在此行之前调用 `New-WebDeployPackage` 函数：`$Config = Read-ConfigFile $Configuration`（对于 Web 应用）或 `$Config = Read-ConfigFile $Configuration -HasWebDeployPackage:([Bool]$WebDeployPackage)`（对于虚拟机）。
 
     ```powershell
     if($ProjectFile)
@@ -295,7 +295,7 @@ return $WebDeployPackage
     }
     ```
 
-1. 调用自定义的脚本从命令行通过传递`$Project`参数，如以下示例所示：
+1. 从命令行通过传递 `$Project` 参数调用自定义脚本，如下例所示：
 
     ```powershell
     .\Publish-WebApplicationVM.ps1 -Configuration .\Configurations\WebApplication5-VM-dev.json `
@@ -305,49 +305,49 @@ return $WebDeployPackage
     -Verbose
     ```
 
-    若要自动执行测试的应用程序，将代码添加到`Test-WebApplication`。 请务必取消注释中的行**Publish-WebApplication.ps1**调用这些函数。 如果不提供实现，你可以手动生成使用 Visual Studio 项目，然后运行发布脚本发布到 Azure。
+    若要自动测试应用程序，请向 `Test-WebApplication` 添加代码。 请务必取消注释 **Publish-WebApplication.ps1** 中调用这些函数的行。 如果不提供实现，则可以使用 Visual Studio 手动生成项目，并运行发布脚本来发布到 Azure。
 
 ## <a name="publishing-function-summary"></a>发布函数摘要
-若要获取可以在 Windows PowerShell 命令提示符下使用的函数的帮助，请使用命令`Get-Help function-name`。 帮助中包含参数帮助和示例。 在脚本源文件中也是相同的帮助文本**AzureWebAppPublishModule.psm1**并**Publish-WebApplication.ps1**。 在 Visual Studio 语言本地化的脚本和帮助。
+若要获取可在 Windows PowerShell 命令提示符处使用的函数的相关帮助，请使用 `Get-Help function-name` 命令。 帮助中包含参数帮助和示例。 脚本源文件 AzureWebAppPublishModule.psm1 和 Publish-WebApplication.ps1 中也提供了相同的帮助文本。 脚本和帮助已使用 Visual Studio 语言本地化。
 
 **AzureWebAppPublishModule**
 
-| 功能名称 | 描述 |
+| 功能名称 | 说明 |
 | --- | --- |
-| 添加 AzureSQLDatabase |创建新的 Azure SQL 数据库。 |
-| Add-azuresqldatabases |从 Visual Studio 将生成的 JSON 配置文件中的值创建 Azure SQL 数据库。 |
-| 添加 AzureVM |创建 Azure 虚拟机并返回已部署的 VM 的 URL。 该函数将设置先决条件，然后调用**New-azurevm**函数 （Azure 模块） 来创建新的虚拟机。 |
-| Add-azurevmendpoints |将新的输入终结点添加到虚拟机并返回包含新的终结点的虚拟机。 |
-| Add-azurevmstorage |当前订阅中创建新的 Azure 存储帐户。 "Devtest"后面是一个唯一的字母数字字符串开头开始的帐户的名称。 该函数返回新的存储帐户的名称。 指定一个位置或地缘组的新的存储帐户。 |
-| 添加 AzureWebsite |使用指定的名称和位置创建一个网站。 此函数将调用**New-azurewebsite** Azure 模块中的函数。 如果订阅不包含具有指定名称的网站，此函数将创建该网站，并返回一个网站对象。 否则，它将返回 `$null`。 |
-| 备份订阅 |保存当前 Azure 订阅中的`$Script:originalSubscription`变量在脚本范围中。 此函数将保存当前 Azure 订阅 (通过`Get-AzureSubscription -Current`) 及其存储帐户，以及此脚本更改的订阅 (存储在变量`$UserSpecifiedSubscription`) 及其存储帐户，在脚本范围中。 保存这些值，您可以使用一个函数，如`Restore-Subscription`，以原始的当前订阅和存储帐户还原到当前状态，如果当前状态发生更改。 |
-| 查找 AzureVM |获取指定的 Azure 虚拟机。 |
-| Format-devtestmessagewithtime |预先计算的日期和时间的消息。 此函数用于为错误和详细流写入消息。 |
-| Get AzureSQLDatabaseConnectionString |汇编一个连接字符串以连接到 Azure SQL 数据库。 |
-| Get-azurevmstorage |返回的名称模式的第一个存储帐户名称"开发测试 *"（不区分大小写） 中指定的位置或地缘组。如果"devtest*"存储帐户的位置或地缘组与不匹配，此函数将忽略它。 指定一个位置或地缘组。 |
-| Get-msdeploycmd |返回运行 MsDeploy.exe 工具的命令。 |
-| New-azurevmenvironment |查找或与 JSON 配置文件中的值匹配的订阅中创建虚拟机。 |
-| Publish-webpackage |使用 MsDeploy.exe 和 web 发布包。若要将资源部署到网站的 zip 文件。 此函数不生成任何输出。 如果调用 MSDeploy.exe 失败，该函数将引发异常。 若要获取更详细的输出，请使用 **-Verbose**选项。 |
-| Publish-webpackagetovm |验证参数值，然后调用**Publish-webpackage**函数。 |
-| 阅读-ConfigFile |验证 JSON 配置文件并返回所选值的哈希表。 |
-| 还原订阅 |将当前订阅重置为原始订阅。 |
-| Test-azuremodule |返回`$true`如果安装的 Azure 模块版本为 0.7.4 或更高版本。 返回`$false`如果模块未安装或更低的版本。 此函数没有任何参数。 |
-| 测试 AzureModuleVersion |返回`$true`如果 Azure 模块的版本为 0.7.4 或更高版本。 返回`$false`如果模块未安装或更低的版本。 此函数没有任何参数。 |
-| 测试 HttpsUrl |将输入的 URL 转换为 System.Uri 对象。 返回`$True`如果 URL 是绝对的并且其方案为 https。 返回`$false`如果 URL 是相对、 其方案不是 HTTPS，或输入的字符串不能转换为 URL。 |
-| 测试成员 |返回`$true`如果属性或方法是对象的成员。 否则返回 `$false`。 |
-| 写入 ErrorWithTime |写入以当前时间作为前缀的错误消息。 此函数将调用**Format-devtestmessagewithtime**函数来添加消息写入错误流之前的时间。 |
-| 写入 HostWithTime |将消息写入主机程序 (**Write-host**) 以当前时间作为前缀。 写入主机程序的效果各不相同。 大多数程序中承载 Windows PowerShell 将这些消息写入到标准输出。 |
-| 写入 VerboseWithTime |写入以当前时间作为前缀的详细消息。 因为它调用**Write-verbose**，仅当使用运行该脚本所显示的消息**Verbose**参数，或者当**VerbosePreference**首选项设置为**继续**。 |
+| Add-AzureSQLDatabase |创建新的 Azure SQL 数据库。 |
+| Add-AzureSQLDatabases |基于 Visual Studio 生成的 JSON 配置文件中的值创建 Azure SQL 数据库。 |
+| Add-AzureVM |创建 Azure 虚拟机并返回所部署 VM 的 URL。 该函数将设置先决条件，然后调用 **New-AzureVM** 函数（Azure 模块）来创建新的虚拟机。 |
+| Add-AzureVMEndpoints |将新的输入终结点添加到虚拟机，然后返回包含新终结点的虚拟机。 |
+| Add-AzureVMStorage |在当前订阅中创建新的 Azure 存储帐户。 该帐户的名称以“devtest”开头，后接一个唯一的字母数字字符串。 该函数将返回新存储帐户的名称。 为新的存储帐户指定位置或地缘组。 |
+| Add-AzureWebsite |使用特定的名称和位置创建网站。 此函数将调用 Azure 模块中的 **New-AzureWebsite** 函数。 如果订阅中尚未包括具有指定名称的网站，则此函数将创建该网站并返回一个网站对象。 否则，它将返回 `$null`。 |
+| Backup-Subscription |将当前 Azure 订阅保存在脚本作用域中的 `$Script:originalSubscription` 变量中。 此函数在脚本作用域中保存当前 Azure 订阅（通过 `Get-AzureSubscription -Current` 获取）及其存储帐户，以及此脚本更改的订阅（存储在变量 `$UserSpecifiedSubscription` 中）及其存储帐户。 保存这些值后，如果当前状态发生更改，可以使用 `Restore-Subscription` 等函数将当前原始订阅和存储帐户还原到当前状态。 |
+| Find-AzureVM |获取指定的 Azure 虚拟机。 |
+| Format-DevTestMessageWithTime |在消息的前面添加日期和时间。 此函数适用于写入到错误流和详细流的消息。 |
+| Get-AzureSQLDatabaseConnectionString |汇编一个连接字符串以连接到 Azure SQL 数据库。 |
+| Get-AzureVMStorage |返回指定的位置或地缘组中名称模式为 "devtest *"（不区分大小写）的第一个存储帐户的名称。如果“devtest*存储帐户与该位置或地缘组不匹配，则该函数会将其忽略。 指定一个位置或地缘组。 |
+| Get-MSDeployCmd |返回一个用于运行 MsDeploy.exe 工具的命令。 |
+| New-AzureVMEnvironment |在订阅中查找或创建与 JSON 配置文件中的值匹配的虚拟机。 |
+| Publish-WebPackage |使用 MsDeploy.exe 和 Web 发布包 .Zip 文件将资源部署到网站。 此函数不生成任何输出。 如果调用 MSDeploy.exe 失败，该函数将引发异常。 若要获取更详细的输出，请使用 **-Verbose** 选项。 |
+| Publish-WebPackageToVM |验证参数值，并调用 **Publish-WebPackage** 函数。 |
+| Read-ConfigFile |验证 JSON 配置文件并返回选定值的哈希表。 |
+| Restore-Subscription |将当前订阅重置为原始订阅。 |
+| Test-AzureModule |如果安装的 Azure 模块版本为 0.7.4 或更高版本，则返回 `$true`。 如果该模块未安装或者使用了更低的版本，则返回 `$false`。 此函数没有参数。 |
+| Test-AzureModuleVersion |如果 Azure 模块的版本为 0.7.4 或更高版本，则返回 `$true`。 如果该模块未安装或者使用了更低的版本，则返回 `$false`。 此函数没有参数。 |
+| Test-HttpsUrl |将输入 URL 转换为 System.Uri 对象。 如果 URL 是绝对的并且其方案为 https，则返回 `$True`。 如果 URL 是相对的并且其方案不是 HTTPS，或者无法将输入字符串转换为 URL，则返回 `$false`。 |
+| Test-Member |如果某个属性或方法是对象的成员，则返回 `$true`。 否则返回 `$false`。 |
+| Write-ErrorWithTime |写入以当前时间作为前缀的错误消息。 将该消息写入错误流之前，此函数将调用 **Format-DevTestMessageWithTime** 函数来添加时间前缀。 |
+| Write-HostWithTime |将以当前时间作为前缀的消息写入主机程序 (**Write-Host**)。 写入主机程序的效果各不相同。 大多数托管 Windows PowerShell 的程序会将这些消息写入标准输出。 |
+| Write-VerboseWithTime |写入以当前时间作为前缀的详细消息。 由于该函数调用 **Write-Verbose**，因此，仅当使用 **Verbose** 参数运行脚本，或者将 **VerbosePreference** 首选项设置为 **Continue** 时，才显示该消息。 |
 
-**发布 web 应用程序**
+**Publish-WebApplication**
 
-| 功能名称 | 描述 |
+| 功能名称 | 说明 |
 | --- | --- |
-| 新 AzureWebApplicationEnvironment |创建 Azure 资源，例如网站或虚拟机。 |
-| 新 WebDeployPackage |未实现此函数。 你可以在此函数来构建你的项目中添加命令。 |
-| 发布 AzureWebApplication |将发布到 Azure 的 web 应用程序。 |
-| 发布 web 应用程序 |创建和部署 Web 应用、 虚拟机、 SQL 数据库和 Visual Studio web 项目的存储帐户。 |
-| 测试 web 应用程序 |未实现此函数。 在此函数可测试应用程序中，可以添加命令。 |
+| New-AzureWebApplicationEnvironment |创建 Azure 资源，例如网站或虚拟机。 |
+| New-WebDeployPackage |未实现此函数。 可以在此函数中添加命令以生成项目。 |
+| Publish-AzureWebApplication |将 Web 应用程序发布到 Azure。 |
+| Publish-WebApplication |为 Visual Studio Web 项目创建和部署 Web 应用、虚拟机、SQL 数据库和存储帐户。 |
+| Test-WebApplication |未实现此函数。 可以在此函数中添加命令以测试应用程序。 |
 
 ## <a name="next-steps"></a>后续步骤
-了解 PowerShell 脚本通过读取[使用 Windows PowerShell 编写脚本](https://technet.microsoft.com/library/bb978526.aspx)，并查看其他 Azure PowerShell 脚本在[脚本中心](https://azure.microsoft.com/documentation/scripts/)。
+请阅读[使用 Windows PowerShell 编写脚本](https://technet.microsoft.com/library/bb978526.aspx)以详细了解 PowerShell 脚本功能，并参阅[脚本中心](https://azure.microsoft.com/documentation/scripts/)内的其他 Azure PowerShell 脚本。

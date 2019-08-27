@@ -1,14 +1,9 @@
 ---
 title: 可视化代码 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-techdebt
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - code, understanding
 - code, visualizing
@@ -17,13 +12,13 @@ ms.assetid: 0dd7d438-393a-4cd3-b417-9bf37379e1b0
 caps.latest.revision: 49
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 071048fba8d3663639747ea35dbae4375d101c26
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 2d5803544e4e7279179929c7c04a3792e4dd9318
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51738934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68183865"
 ---
 # <a name="visualize-code"></a>可视化代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -46,9 +41,9 @@ ms.locfileid: "51738934"
   
 |||  
 |-|-|  
-|**了解代码和其关系：**<br /><br /> 特定代码段之间的代码图关系<br /><br /> 请参阅整个解决方案中的代码关系概述。<br /><br /> **注意**：在此版本的 Visual Studio 中，术语 *代码图* 用于替换 *依赖项关系图*。|-   [映射解决方案之间的依赖项](../modeling/map-dependencies-across-your-solutions.md)<br />-   [使用代码图调试应用程序](../modeling/use-code-maps-to-debug-your-applications.md)<br />-   [使用代码图分析器发现潜在问题](../modeling/find-potential-problems-using-code-map-analyzers.md)<br />-   [调试时映射调用堆栈上的方法](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)|  
-|**了解类结构：**<br /><br /> 通过从代码创建类关系图，在项目中查看类的结构。|[如何：向项目中添加类图（类设计器）](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)|  
-|**描述高级系统设计和验证对此设计的代码：**<br /><br /> 通过创建层关系图，描述高级系统设计及其预期的依赖项。 对此设计进行代码验证，以确保代码中的依赖项与设计保持一致。|-   [从代码创建层关系图](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [层关系图： 参考](../modeling/layer-diagrams-reference.md)<br />-   [层关系图： 准则](../modeling/layer-diagrams-guidelines.md)<br />-   [使用层关系图验证代码](../modeling/validate-code-with-layer-diagrams.md)|  
+|**了解代码和其关系：**<br /><br /> 特定代码段之间的代码图关系<br /><br /> 请参阅整个解决方案中的代码关系概述。<br /><br /> **说明**：在此版本的 Visual Studio 中，术语*代码图*用来代替*依赖项关系图*。|-   [映射解决方案之间的依赖项](../modeling/map-dependencies-across-your-solutions.md)<br />-   [使用代码图调试应用程序](../modeling/use-code-maps-to-debug-your-applications.md)<br />-   [使用代码图分析器发现潜在问题](../modeling/find-potential-problems-using-code-map-analyzers.md)<br />-   [调试时映射调用堆栈上的方法](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)|  
+|**了解类结构：**<br /><br /> 通过从代码创建类关系图，在项目中查看类的结构。|[如何：向项目添加类图（类设计器）](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)|  
+|**描述高级系统设计和验证对此设计的代码：**<br /><br /> 通过创建层关系图，描述高级系统设计及其预期的依赖项。 对此设计进行代码验证，以确保代码中的依赖项与设计保持一致。|-   [从代码创建层关系图](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [层关系图：引用](../modeling/layer-diagrams-reference.md)<br />-   [层关系图：指南](../modeling/layer-diagrams-guidelines.md)<br />-   [使用层关系图验证代码](../modeling/validate-code-with-layer-diagrams.md)|  
 |**沟通用户需求和体系结构：**<br /><br /> 通过绘制以下 UML 关系图：活动、组件、类、序列和用例，建立用户需求和软件系统体系结构模型。|-   [为您的应用程序创建模型](../modeling/create-models-for-your-app.md)<br />-   [建立用户需求模型](../modeling/model-user-requirements.md)<br />-   [应用程序的体系结构建模](../modeling/model-your-app-s-architecture.md)|  
   
 ## <a name="external-resources"></a>外部资源  
@@ -60,12 +55,9 @@ ms.locfileid: "51738934"
 |**技术文章和日志**|[MSDN 体系结构论坛](http://go.microsoft.com/fwlink/?LinkId=201343)|  
   
 ## <a name="see-also"></a>请参阅  
- [方案： 更改设计使用可视化和建模](../modeling/scenario-change-your-design-using-visualization-and-modeling.md)   
+ [场景：使用可视化和建模更改设计](../modeling/scenario-change-your-design-using-visualization-and-modeling.md)   
  [分析体系结构和建模](../modeling/analyze-and-model-your-architecture.md)   
  [为您的应用程序创建模型](../modeling/create-models-for-your-app.md)   
  [建立用户需求模型](../modeling/model-user-requirements.md)   
  [应用程序的体系结构建模](../modeling/model-your-app-s-architecture.md)   
  [在你的开发过程中使用模型](../modeling/use-models-in-your-development-process.md)
-
-
-

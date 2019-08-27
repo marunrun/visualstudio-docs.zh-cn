@@ -7,18 +7,17 @@ helpviewer_keywords:
 - walkthroughs [text templates]
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 5785dee0da189da4db7aad15ee8eff18b20ee49a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 042d6b6c59489abcfbdcdd4dd10055ea4dedfff5
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53898081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62934329"
 ---
-# <a name="walkthrough-generate-code-by-using-text-templates"></a>演练：通过使用文本模板生成代码
+# <a name="walkthrough-generate-code-by-using-text-templates"></a>演练：使用文本模板生成代码
 
 代码生成允许生成强类型化的程序代码，但可在源模型更改时轻松对其进行更改。 与之相比，另一种编写可接受配置文件的完全泛型程序的替代技术更灵活，但生成的代码既不易读取和更改，也没有这么好的性能。 本演练将演示这一优势。
 
@@ -84,9 +83,9 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
 
 可以将此技术应用于任何代码项目。 本演练使用 C# 项目，出于测试目的，我们使用控制台应用程序。
 
-1.  在“文件”  菜单上，单击“新建”  ，然后单击“项目” 。
+1. 在“文件”  菜单上，单击“新建”  ，然后单击“项目”  。
 
-2.  单击“”  节点，然后在“模板”  窗格中，单击“控制台应用程序” 
+2. 单击“”  节点，然后在“模板”  窗格中，单击“控制台应用程序” 
 
 ### <a name="add-a-prototype-xml-file-to-the-project"></a>将原型 XML 文件添加到项目
 
@@ -94,13 +93,13 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
 
 该文件应为项目的一部分，以便模板进行读取，但不会将其内置于已编译的应用程序中。
 
-1.  在“解决方案资源管理器” 中，右键单击项目，单击“添加”  ，然后单击“新项” 。
+1. 在“解决方案资源管理器”  中，右键单击项目，单击“添加”  ，然后单击“新项”  。
 
-2.  在“添加新项”  对话框，从“模板”  窗格选择“XML 文件”  。
+2. 在“添加新项”  对话框，从“模板”  窗格选择“XML 文件”  。
 
-3.  将示例内容添加到该文件。
+3. 将示例内容添加到该文件。
 
-4.  本演练中，命名文件 `exampleXml.xml`。 将文件的内容设置为上一节中所示的 XML。
+4. 本演练中，命名文件 `exampleXml.xml`。 将文件的内容设置为上一节中所示的 XML。
 
 ### <a name="add-a-test-code-file"></a>添加测试代码文件
 
@@ -132,20 +131,20 @@ namespace MyProject
 
 添加文本模板文件，并将输出扩展名设置为 *.cs*。
 
-1.  在“解决方案资源管理器” 中，右键单击项目，单击“添加” ，然后单击“新项” 。
+1. 在“解决方案资源管理器”  中，右键单击项目，单击“添加”  ，然后单击“新项”  。
 
-2.  在“添加新项”  对话框中，从“模板”  窗格选择“文本模板”  。
+2. 在“添加新项”  对话框中，从“模板”  窗格选择“文本模板”  。
 
     > [!NOTE]
     > 确保添加的是文本模板，而不是预处理文本模板。
 
-3.  在文件的模板指令中，将 `hostspecific` 属性更改为 `true`。
+3. 在文件的模板指令中，将 `hostspecific` 属性更改为 `true`。
 
      此更改将使模板代码有权访问 Visual Studio 服务。
 
-4.  在输出指令中，将扩展属性更改为“.cs”，使该模板生成 C# 文件。 在 Visual Basic 项目中，将其更改为“.vb”。
+4. 在输出指令中，将扩展属性更改为“.cs”，使该模板生成 C# 文件。 在 Visual Basic 项目中，将其更改为“.vb”。
 
-5.  保存该文件。 在此阶段，文本模板文件应包含这些行：
+5. 保存该文件。 在此阶段，文本模板文件应包含这些行：
 
     ```
     <#@ template debug="false" hostspecific="true" language="C#" #>
@@ -413,21 +412,21 @@ namespace MyProject
 
 本演练演示了代码生成的几种方法及其优势：
 
--   *代码生成* 是指从 *模型*创建应用程序的部分源代码。 模型包含以适合应用程序域的方式呈现的信息，并可能在应用程序的生存期内发生更改。
+- *代码生成* 是指从 *模型*创建应用程序的部分源代码。 模型包含以适合应用程序域的方式呈现的信息，并可能在应用程序的生存期内发生更改。
 
--   强类型化是代码生成的一个优点。 模型以更适合用户的方式呈现信息，而生成的代码允许应用程序的其他部分能够使用一组类型来处理信息。
+- 强类型化是代码生成的一个优点。 模型以更适合用户的方式呈现信息，而生成的代码允许应用程序的其他部分能够使用一组类型来处理信息。
 
--   在编写新代码和更新架构时，IntelliSense 和编译器都有助于创建符合模型架构的代码。
+- 在编写新代码和更新架构时，IntelliSense 和编译器都有助于创建符合模型架构的代码。
 
--   将单个简单模板文件添加到项目可提供这些优势。
+- 将单个简单模板文件添加到项目可提供这些优势。
 
--   可以增量式地快速开发和测试文本模板。
+- 可以增量式地快速开发和测试文本模板。
 
 在本演练中，程序代码实际上是从模型实例中生成的，该实例是应用程序会处理的一个典型 XML 文件示例。 在更正规的方法中，XML 架构将以 .xsd 文件或域特定语言定义的形式成为模板的输入。 这种方法将使模板在确定特征（如关系的多重性）方面更轻松。
 
 ## <a name="troubleshoot-the-text-template"></a>解决文本模板
 
-若在“错误列表”中看到模板转换或编译错误，或者若未正确生成输出文件，可以借助[使用 TextTransform 实用工具生成文件](../modeling/generating-files-with-the-texttransform-utility.md)中所述的技术解决文本模板的问题。
+若在“错误列表”  中看到模板转换或编译错误，或者若未正确生成输出文件，可以借助[使用 TextTransform 实用工具生成文件](../modeling/generating-files-with-the-texttransform-utility.md)中所述的技术解决文本模板的问题。
 
 ## <a name="see-also"></a>请参阅
 

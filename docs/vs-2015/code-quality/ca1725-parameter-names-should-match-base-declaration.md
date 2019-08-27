@@ -1,14 +1,9 @@
 ---
-title: CA1725： 参数名应与基声明 |Microsoft Docs
-ms.custom: ''
+title: CA1725:参数名应与基声明 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - ParameterNamesShouldMatchBaseDeclaration
 - CA1725
@@ -20,14 +15,14 @@ caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 0478002cc45fc0c56fc34d4c8c52217ccaaca83f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: e97431b46640fb8241d6bde80d09d38084650be8
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49878630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68143174"
 ---
-# <a name="ca1725-parameter-names-should-match-base-declaration"></a>CA1725：参数名应与基方法中的声明保持一致
+# <a name="ca1725-parameter-names-should-match-base-declaration"></a>CA1725:参数名应与基方法中的声明保持一致
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -48,6 +43,3 @@ ms.locfileid: "49878630"
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  不要禁止显示除以前发布的库中的 COM 可见方法的此规则的警告。
-
-
-

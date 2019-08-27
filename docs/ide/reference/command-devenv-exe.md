@@ -1,7 +1,6 @@
 ---
 title: -Command (devenv.exe)
 ms.date: 12/10/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 helpviewer_keywords:
 - Devenv, /Command switch
@@ -10,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 13c20cd6-f09d-400a-8b7b-ecc266a32cef
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dfc52c66fd56f2d3d7954584804cfd4e3e75ee24
-ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
+ms.openlocfilehash: 6daa21f9db7eef9a651577ad829d884dccf353dc
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54227949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62968618"
 ---
 # <a name="command-devenvexe"></a>/Command (devenv.exe)
 
@@ -32,13 +31,19 @@ devenv /Command CommandName
 
 ## <a name="arguments"></a>自变量
 
-- CommandName
+CommandName
 
-  必需。 Visual Studio 命令或其别名的完整名称（放在双引号中）。 有关命令和别名语法的详细信息，请参阅 [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)。
+必需。 Visual Studio 命令或其别名的完整名称（放在双引号中）。 有关命令和别名语法的详细信息，请参阅 [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)。
 
 ## <a name="remarks"></a>备注
 
-启动完成后，IDE 将执行已命名的命令。 如果你使用此开关，IDE 不会在启动时显示 Visual Studio 起始页。
+启动完成后，IDE 将执行已命名的命令。
+
+::: moniker range="vs-2017"
+
+如果使用此开关，IDE 将不会在启动时显示起始页。
+
+::: moniker-end
 
 如果外接程序公开了某个命令，则可以使用此开关从命令行启动此外接程序。 有关详细信息，请参阅[如何：使用加载项管理器控制加载项](/previous-versions/xwdatdwh(v=vs.140))。
 

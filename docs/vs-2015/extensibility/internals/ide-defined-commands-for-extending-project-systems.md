@@ -1,27 +1,22 @@
 ---
 title: IDE 定义的命令，用于扩展项目系统 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - commands, project systems
 - project systems, environment-defined commands
 ms.assetid: 0e33b8e9-16fa-4400-a941-e92d56120e7e
 caps.latest.revision: 20
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: a58525c9b3bcbcd1bbe4792ecc9427812b62f1e1
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 3b5de061449844b87d60d7a700b1e1c22e1e1282
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51789741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68195037"
 ---
 # <a name="ide-defined-commands-for-extending-project-systems"></a>用于扩展项目系统的 IDE 定义的命令
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -80,4 +75,3 @@ ms.locfileid: "51789741"
  [Vspackage 如何添加用户界面元素](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
  [MenuCommands 与OleMenuCommands](../../misc/menucommands-vs-olemenucommands.md)   
  [创建可重复使用的按钮组](../../extensibility/creating-reusable-groups-of-buttons.md)
-

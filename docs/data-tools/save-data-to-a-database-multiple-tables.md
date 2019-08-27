@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 7ebe03da-ce8c-4cbc-bac0-a2fde4ae4d07
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 2a9cde551796d43cf94c20a9e54768ea9df3ddb5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: 9e4a30c3aa85969a4cbf712f2f4018c24169ff6d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53924795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62565883"
 ---
 # <a name="save-data-to-a-database-multiple-tables"></a>将数据保存到数据库（多个表）
 
@@ -32,17 +31,15 @@ ms.locfileid: "53924795"
 
 本演练涉及以下任务：
 
--   创建一个新**Windows 窗体应用程序**项目。
+- 创建和使用应用程序中配置数据源[数据源配置向导](../data-tools/media/data-source-configuration-wizard.png)。
 
--   创建和使用应用程序中配置数据源[数据源配置向导](../data-tools/media/data-source-configuration-wizard.png)。
+- 设置控件中的项[数据源窗口](add-new-data-sources.md#data-sources-window)。 有关详细信息，请参阅[设置从数据源窗口中拖动时创建的控件](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)。
 
--   设置控件中的项[数据源窗口](add-new-data-sources.md#data-sources-window)。 有关详细信息，请参阅[设置从数据源窗口中拖动时创建的控件](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)。
+- 通过将某些项从“数据源”窗口拖动到窗体上来创建数据绑定控件。
 
--   通过将某些项从“数据源”窗口拖动到窗体上来创建数据绑定控件。
+- 修改数据集中每个表中的几个记录。
 
--   修改数据集中每个表中的几个记录。
-
--   修改用于将数据集中的更新后的数据发回数据库的代码。
+- 修改用于将数据集中的更新后的数据发回数据库的代码。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -64,17 +61,7 @@ ms.locfileid: "53924795"
 
 ## <a name="create-the-windows-forms-application"></a>创建 Windows 窗体应用程序
 
-第一步是创建**Windows 窗体应用程序**。 在此步骤中，向项目分配名称是可选的但我们将在您因为我们将稍后保存该项目为它提供一个名称。
-
-1. 在 Visual Studio 中，在**文件**菜单中，选择**新建** > **项目**。
-
-2. 展开**可视化C#** 或**Visual Basic**在左侧窗格中，然后选择**Windows Desktop**。
-
-3. 在中间窗格中，选择**Windows 窗体应用**项目类型。
-
-4. 将项目命名**UpdateMultipleTablesWalkthrough**，然后选择**确定**。
-
-     创建“UpdateMultipleTablesWalkthrough”项目并将其添加到“解决方案资源管理器”中。
+创建一个新**Windows 窗体应用程序**任意一个项目C#或 Visual Basic。 将项目命名为 **UpdateMultipleTablesWalkthrough**。
 
 ## <a name="create-the-data-source"></a>创建数据源
 
@@ -90,11 +77,11 @@ ms.locfileid: "53924795"
 
 4. 上**选择您的数据连接**屏幕上，执行下列操作之一：
 
-    -   如果下拉列表中包含到 Northwind 示例数据库的数据连接，请选择该连接。
+    - 如果下拉列表中包含到 Northwind 示例数据库的数据连接，请选择该连接。
 
          或
 
-    -   选择“新建连接”，打开“添加/修改连接”对话框。
+    - 选择“新建连接”，打开“添加/修改连接”对话框。
 
 5. 如果你的数据库需要密码，选择选项以包括敏感数据，然后选择**下一步**。
 
@@ -153,7 +140,7 @@ ms.locfileid: "53924795"
 
 2. 对每个表中的一条或多条记录的数据执行一些更改。
 
-3. 选择**保存**按钮。
+3. 选择“保存”按钮。
 
 4. 检查数据库中的值以验证更改是否已保存。
 

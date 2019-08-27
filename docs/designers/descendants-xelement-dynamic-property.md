@@ -1,20 +1,19 @@
 ---
 title: 子代（XElement 动态属性）
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 ms.assetid: 9611d00f-23bf-444b-ab0c-f30701bfc13d
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 67b82b4c5e8e34efa3dcdc98662a2428cbdfa21c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: fa3bf24178f1096cd05e8471c18f466fdd8ee17f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53826648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62897672"
 ---
 # <a name="descendants-xelement-dynamic-property"></a>子代（XElement 动态属性）
 

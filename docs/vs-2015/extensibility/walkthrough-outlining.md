@@ -1,26 +1,21 @@
 ---
-title: 演练： 大纲显示 |Microsoft Docs
-ms.custom: ''
+title: 演练：大纲显示 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - outlining
 ms.assetid: d75a44aa-265a-44d4-9c28-457f59c4ff9f
 caps.latest.revision: 31
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 897ff6a39716f424c40fa587d905847a0dbb3682
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 7c1dd3d28b9978b52c95b5ff905d57720ed10f5d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51805263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68201960"
 ---
 # <a name="walkthrough-outlining"></a>演练：大纲显示
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,11 +29,11 @@ ms.locfileid: "51805263"
   
 #### <a name="to-create-a-mef-project"></a>创建 MEF 项目  
   
-1.  创建一个 VSIX 项目。 将解决方案命名为 `OutlineRegionTest`。  
+1. 创建一个 VSIX 项目。 将解决方案命名为 `OutlineRegionTest`。  
   
-2.  将编辑器分类器项模板添加到项目。 有关详细信息，请参阅[使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)。  
+2. 将编辑器分类器项模板添加到项目。 有关详细信息，请参阅[使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)。  
   
-3.  删除现有的类文件。  
+3. 删除现有的类文件。  
   
 ## <a name="implementing-an-outlining-tagger"></a>实现大纲显示标记器  
  大纲区域被标记为的类型的标记 (<xref:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag>)。 此标记提供了标准大纲显示行为。 可以展开或折叠大纲方式显示的区域。 空心的区域将被标记为正号，如果它处于折叠状态或负号由它将展开，并展开的区域一条竖直线方式来划分。  
@@ -47,39 +42,39 @@ ms.locfileid: "51805263"
   
 #### <a name="to-implement-an-outlining-tagger"></a>若要实现大纲显示标记器  
   
-1.  添加一个类文件并将其命名为 `OutliningTagger`。  
+1. 添加一个类文件并将其命名为 `OutliningTagger`。  
   
-2.  导入以下命名空间。  
+2. 导入以下命名空间。  
   
      [!code-csharp[VSSDKOutlineRegionTest#1](../snippets/csharp/VS_Snippets_VSSDK/vssdkoutlineregiontest/cs/outliningtagger.cs#1)]
      [!code-vb[VSSDKOutlineRegionTest#1](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkoutlineregiontest/vb/outliningtagger.vb#1)]  
   
-3.  创建一个名为类`OutliningTagger`，并让其实现<xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601>:  
+3. 创建一个名为类`OutliningTagger`，并让其实现<xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601>:  
   
      [!code-csharp[VSSDKOutlineRegionTest#2](../snippets/csharp/VS_Snippets_VSSDK/vssdkoutlineregiontest/cs/outliningtagger.cs#2)]
      [!code-vb[VSSDKOutlineRegionTest#2](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkoutlineregiontest/vb/outliningtagger.vb#2)]  
   
-4.  添加一些字段来跟踪文本缓冲区和快照和累积应标记为大纲显示区域的行集。 此代码包括区域表示对象 （若要在以后定义） 的大纲显示区域的列表。  
+4. 添加一些字段来跟踪文本缓冲区和快照和累积应标记为大纲显示区域的行集。 此代码包括区域表示对象 （若要在以后定义） 的大纲显示区域的列表。  
   
      [!code-csharp[VSSDKOutlineRegionTest#3](../snippets/csharp/VS_Snippets_VSSDK/vssdkoutlineregiontest/cs/outliningtagger.cs#3)]
      [!code-vb[VSSDKOutlineRegionTest#3](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkoutlineregiontest/vb/outliningtagger.vb#3)]  
   
-5.  添加字段，初始化一个标记器构造函数分析缓冲区，并添加到事件处理程序<xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed>事件。  
+5. 添加字段，初始化一个标记器构造函数分析缓冲区，并添加到事件处理程序<xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed>事件。  
   
      [!code-csharp[VSSDKOutlineRegionTest#4](../snippets/csharp/VS_Snippets_VSSDK/vssdkoutlineregiontest/cs/outliningtagger.cs#4)]
      [!code-vb[VSSDKOutlineRegionTest#4](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkoutlineregiontest/vb/outliningtagger.vb#4)]  
   
-6.  实现<xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A>方法，它会实例化标记跨越。 此示例假定在 span<xref:Microsoft.VisualStudio.Text.NormalizedSpanCollection>中传递给该方法是连续的尽管这可能不始终是这种情况。 此方法为每个大纲区域实例化新的标记跨度。  
+6. 实现<xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A>方法，它会实例化标记跨越。 此示例假定在 span<xref:Microsoft.VisualStudio.Text.NormalizedSpanCollection>中传递给该方法是连续的尽管这可能不始终是这种情况。 此方法为每个大纲区域实例化新的标记跨度。  
   
      [!code-csharp[VSSDKOutlineRegionTest#5](../snippets/csharp/VS_Snippets_VSSDK/vssdkoutlineregiontest/cs/outliningtagger.cs#5)]
      [!code-vb[VSSDKOutlineRegionTest#5](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkoutlineregiontest/vb/outliningtagger.vb#5)]  
   
-7.  声明`TagsChanged`事件处理程序。  
+7. 声明`TagsChanged`事件处理程序。  
   
      [!code-csharp[VSSDKOutlineRegionTest#6](../snippets/csharp/VS_Snippets_VSSDK/vssdkoutlineregiontest/cs/outliningtagger.cs#6)]
      [!code-vb[VSSDKOutlineRegionTest#6](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkoutlineregiontest/vb/outliningtagger.vb#6)]  
   
-8.  添加`BufferChanged`事件处理程序来响应<xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed>通过分析的文本缓冲区的事件。  
+8. 添加`BufferChanged`事件处理程序来响应<xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed>通过分析的文本缓冲区的事件。  
   
      [!code-csharp[VSSDKOutlineRegionTest#7](../snippets/csharp/VS_Snippets_VSSDK/vssdkoutlineregiontest/cs/outliningtagger.cs#7)]
      [!code-vb[VSSDKOutlineRegionTest#7](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkoutlineregiontest/vb/outliningtagger.vb#7)]  
@@ -109,12 +104,12 @@ ms.locfileid: "51805263"
   
 #### <a name="to-implement-a-tagger-provider"></a>若要实现一个标记器提供程序  
   
-1.  创建一个名为类`OutliningTaggerProvider`实现<xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider>，并将其导出具有 ContentType 和 TagType 属性。  
+1. 创建一个名为类`OutliningTaggerProvider`实现<xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider>，并将其导出具有 ContentType 和 TagType 属性。  
   
      [!code-csharp[VSSDKOutlineRegionTest#12](../snippets/csharp/VS_Snippets_VSSDK/vssdkoutlineregiontest/cs/outliningtagger.cs#12)]
      [!code-vb[VSSDKOutlineRegionTest#12](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkoutlineregiontest/vb/outliningtagger.vb#12)]  
   
-2.  实现<xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider.CreateTagger%2A>方法通过添加`OutliningTagger`到缓冲区的属性。  
+2. 实现<xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider.CreateTagger%2A>方法通过添加`OutliningTagger`到缓冲区的属性。  
   
      [!code-csharp[VSSDKOutlineRegionTest#13](../snippets/csharp/VS_Snippets_VSSDK/vssdkoutlineregiontest/cs/outliningtagger.cs#13)]
      [!code-vb[VSSDKOutlineRegionTest#13](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkoutlineregiontest/vb/outliningtagger.vb#13)]  
@@ -124,11 +119,11 @@ ms.locfileid: "51805263"
   
 #### <a name="to-build-and-test-the-outlineregiontest-solution"></a>若要生成和测试 OutlineRegionTest 解决方案  
   
-1.  生成解决方案。  
+1. 生成解决方案。  
   
-2.  在调试器中运行此项目时，Visual Studio 的第二个实例将进行实例化。  
+2. 在调试器中运行此项目时，Visual Studio 的第二个实例将进行实例化。  
   
-3.  创建文本文件。 键入一些文本，其中包括左大括号和右大括号。  
+3. 创建文本文件。 键入一些文本，其中包括左大括号和右大括号。  
   
     ```  
     [  
@@ -136,8 +131,7 @@ ms.locfileid: "51805263"
     ]  
     ```  
   
-4.  应包含这两个大括号的大纲区域。 您应可以通过单击左侧的左大括号负号，若要折叠大纲区域。 当区域处于折叠状态，省略号 （...） 应显示在折叠的区域和一个弹出窗口，其中包含文本的左侧**将鼠标悬停在文本**应显示的省略号上移动指针时。  
+4. 应包含这两个大括号的大纲区域。 您应可以通过单击左侧的左大括号负号，若要折叠大纲区域。 当区域处于折叠状态，省略号 （...） 应显示在折叠的区域和一个弹出窗口，其中包含文本的左侧**将鼠标悬停在文本**应显示的省略号上移动指针时。  
   
 ## <a name="see-also"></a>请参阅  
  [演练：将内容类型链接到文件扩展名](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)
-

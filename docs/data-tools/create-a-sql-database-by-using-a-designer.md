@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 99c2b06f-47aa-414e-8057-a3453712fd23
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 323513c2ce9c27f2c047ac331083bb2e49392f93
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: 6f227a7948f5a842120341432c03747119988ddf
+ms.sourcegitcommit: aeb1a1135dd789551e15aa5124099a5fe3f0f32b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53836918"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501078"
 ---
 # <a name="create-a-database-and-add-tables-in-visual-studio"></a>创建数据库并在 Visual Studio 中添加表
 
@@ -27,11 +26,23 @@ ms.locfileid: "53836918"
 
 ## <a name="prerequisites"></a>系统必备
 
-若要完成本演练，您必须具有可选**数据存储和处理**在 Visual Studio 中安装的工作负荷。 若要安装它，打开**Visual Studio 安装程序**，然后选择**工作负荷**选项卡。下**Web 和云**，选择**数据存储和处理**。 选择**修改**按钮将工作负荷添加到 Visual Studio。
+若要完成本演练，您必须具有可选**数据存储和处理**在 Visual Studio 中安装的工作负荷。 若要安装它，打开**Visual Studio 安装程序**，然后选择**修改**或**详细** > **修改**旁边的版本你想要修改的 visual Studio。
+
+::: moniker range=">=vs-2019"
+
+上**工作负荷**选项卡上，在**其他工具集**，选择**数据存储和处理**，然后单击**修改**若要添加到工作负荷Visual Studio。
+
+::: moniker-end
+
+::: moniker range="=vs-2017"
+
+上**工作负荷**选项卡上，在**Web 和云**，选择**数据存储和处理**，然后单击**修改**若要添加到工作负荷Visual Studio。
+
+::: moniker-end
 
 ## <a name="create-a-project-and-a-local-database-file"></a>创建一个项目及本地数据库文件
 
-1. 创建名为“SampleDatabaseWalkthrough”的 Windows 窗体项目。
+1. 创建一个新**Windows 窗体应用程序**项目，并命名**SampleDatabaseWalkthrough**。
 
 2. 在菜单栏上，选择**项目** > **添加新项**。
 
@@ -39,7 +50,7 @@ ms.locfileid: "53836918"
 
      ![“项模板”对话框](../data-tools/media/raddata-vsitemtemplates.png)
 
-4. 命名数据库**SampleDatabase**，然后选择**添加**按钮。
+4. 命名数据库**SampleDatabase**，然后单击**添加**。
 
 ### <a name="add-a-data-source"></a>添加数据源
 
@@ -47,7 +58,7 @@ ms.locfileid: "53836918"
 
 1. 在中**数据源**窗口中，选择**添加新数据源**链接。
 
-   “数据源配置”向导随即打开。
+   “数据源配置”向导随即打开  。
 
 1. 上**选择数据源类型**页上，选择**数据库**，然后选择**下一步**。
 
@@ -57,15 +68,15 @@ ms.locfileid: "53836918"
 
 1. 上**将连接字符串保存到应用程序配置文件**页上，选择**下一步**。
 
-1. 一个**选择数据库对象**页上，你会看到一条消息，指出数据库不包含任何对象。 选择“完成”。
+1. 一个**选择数据库对象**页上，你会看到一条消息，指出数据库不包含任何对象。 选择“完成”  。
 
 ### <a name="view-properties-of-the-data-connection"></a>查看的数据连接属性
 
 您可以查看的连接字符串*SampleDatabase.mdf*通过打开属性窗口中的数据连接文件：
 
-- 在 Visual Studio 中，选择**视图** > **SQL Server 对象资源管理器**如果该窗口尚未打开。 打开属性窗口，展开**数据连接**节点，打开快捷菜单*SampleDatabase.mdf*，然后选择**属性**。
+- 选择**视图** > **SQL Server 对象资源管理器**以打开**SQL Server 对象资源管理器**窗口。 展开 **(localdb) \MSSQLLocalDB** > **数据库**，然后右键单击*SampleDatabase.mdf* ，然后选择**属性**.
 
-- 或者，可以选择**视图** > **服务器资源管理器**，如果该窗口尚未打开。 打开属性窗口，展开**数据连接**节点。 打开快捷菜单*SampleDatabase.mdf*，然后选择**属性**。
+- 或者，可以选择**视图** > **服务器资源管理器**，如果该窗口尚未打开。 打开属性窗口，展开**数据连接**节点，打开快捷菜单*SampleDatabase.mdf*，然后选择**属性**。
 
 ## <a name="create-tables-and-keys-by-using-table-designer"></a>使用表设计器创建表和键
 
@@ -73,11 +84,11 @@ ms.locfileid: "53836918"
 
 ### <a name="create-the-customers-table"></a>创建客户表
 
-1. 在中**服务器资源管理器**或**SQL Server 对象资源管理器**，展开**数据连接**节点，然后展开**SampleDatabase.mdf**节点。
+1. 在中**服务器资源管理器**，展开**数据连接**节点，然后展开**SampleDatabase.mdf**节点。
 
 2. 打开快捷菜单**表**，然后选择**添加新表**。
 
-     “表设计器”打开并显示一个网格，其中有一个默认行，表示所创建表中的一列。 通过向网格中添加行，即可在表中添加列。
+     “表设计器”打开并显示一个网格，其中有一个默认行，表示所创建表中的一列  。 通过向网格中添加行，即可在表中添加列。
 
 3. 在网格中，为下列各个条目添加行：
 
@@ -102,9 +113,9 @@ ms.locfileid: "53836918"
 
     ![表设计器](../data-tools/media/raddata-table-designer.png)
 
-7. 在的左上角**表设计器**，选择**更新**按钮。
+7. 在的左上角**表设计器**，选择**更新**。
 
-8. 在中**预览数据库更新**对话框中，选择**更新数据库**按钮。
+8. 在中**预览数据库更新**对话框中，选择**更新数据库**。
 
     你所做的更改将保存到本地数据库文件中。
 
@@ -139,7 +150,7 @@ ms.locfileid: "53836918"
 
      ![在表设计器中添加外键](../data-tools/media/foreignkey.png)
 
-2. 在显示的文本框中，将“ToTable”替换为“Customers”。
+2. 在显示的文本框中，将“ToTable”替换为“Customers”   。
 
 3. 在 T-SQL 的窗格中，更新与以下示例相匹配的最后一行：
 
@@ -170,7 +181,7 @@ ms.locfileid: "53836918"
 6. 添加一些订单数据。
 
     > [!IMPORTANT]
-    > 请确保所有订单 ID 和订单数量是整数，并且每个客户 ID 与 Customers 表中的“CustomerID”列中指定的值匹配。
+    > 请确保所有订单 ID 和订单数量是整数，并且每个客户 ID 与 Customers 表中的“CustomerID”列中指定的值匹配  。
 
 7. 在菜单栏上，选择**文件** > **全部保存**。
 

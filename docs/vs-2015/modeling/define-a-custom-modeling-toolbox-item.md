@@ -1,25 +1,22 @@
 ---
 title: 定义一个自定义建模工具箱项 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - UML - extending, customizing the toolbox
 ms.assetid: a2463606-1100-40ac-97f3-5ba22ca47b7c
 caps.latest.revision: 33
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: dcb562eb76e13b5dcb16532ed808b2447de0d6c8
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: fc8bcd7a373ab6ee63e32b5873fd149001137511
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51778405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63433189"
 ---
 # <a name="define-a-custom-modeling-toolbox-item"></a>定义自定义建模工具箱项
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,38 +27,38 @@ ms.locfileid: "51778405"
   
  自定义工具在关系图中创建一个或多个新元素。 例如，可以制作一个自定义工具来创建以下元素：  
   
--   链接到 .NET 配置文件的包和具有 .NET 构造型的类。  
+- 链接到 .NET 配置文件的包和具有 .NET 构造型的类。  
   
--   由关联链接的用于表示观察者模式的一对类。  
+- 由关联链接的用于表示观察者模式的一对类。  
   
 > [!NOTE]
->  你可以使用此方法来创建元素工具。 也就是说，你可以创建将从工具箱拖到关系图上的工具。 你不能创建连接器工具。  
+> 你可以使用此方法来创建元素工具。 也就是说，你可以创建将从工具箱拖到关系图上的工具。 你不能创建连接器工具。  
   
-##  <a name="DefineTool"></a> 定义自定义建模工具  
+## <a name="DefineTool"></a> 定义自定义建模工具  
   
 #### <a name="to-define-a-custom-modeling-tool"></a>定义自定义建模工具  
   
-1.  创建包含一个元素或一组元素的 UML 关系图。  
+1. 创建包含一个元素或一组元素的 UML 关系图。  
   
-    -   这些元素之间可以具有关系，也可以具有端口、特性、操作或插针等附属元素。  
+    - 这些元素之间可以具有关系，也可以具有端口、特性、操作或插针等附属元素。  
   
-2.  命名新工具并以此来保存关系图。 上**文件**菜单中，使用**保存...作为**。  
+2. 命名新工具并以此来保存关系图。 上**文件**菜单中，使用**保存...作为**。  
   
-3.  使用 Windows 资源管理器，将两个关系图文件复制到以下文件夹或任何子文件夹中：  
+3. 使用 Windows 资源管理器，将两个关系图文件复制到以下文件夹或任何子文件夹中：  
   
      *YourDocuments* **\Visual Studio\Architecture Tools\Custom 工具箱项**  
   
-    -   如果不存在此文件夹，请进行创建。 可能需要创建这两项**体系结构工具**并**自定义工具箱项**。  
+    - 如果不存在此文件夹，请进行创建。 可能需要创建这两项**体系结构工具**并**自定义工具箱项**。  
   
-    -   复制这两个关系图文件，另一个使用的名称以"...**关系图**"和另一个结束的名称以"...**diagram.layout**"  
+    - 复制这两个关系图文件，另一个使用的名称以"...**关系图**"和另一个结束的名称以"...**diagram.layout**"  
   
-    -   你可以随意创建任意多个自定义工具。 为每个工具使用一个关系图。  
+    - 你可以随意创建任意多个自定义工具。 为每个工具使用一个关系图。  
   
-4.  （可选）创建 **.tbxinfo**文件中所述[如何定义自定义工具属性](#tbxinfo)，并将其添加到同一个目录。 这样，便可以定义工具箱图标、工具提示等。  
+4. （可选）创建 **.tbxinfo**文件中所述[如何定义自定义工具属性](#tbxinfo)，并将其添加到同一个目录。 这样，便可以定义工具箱图标、工具提示等。  
   
-    -   将单个 **.tbxinfo**文件可用于定义多个工具。 该文件可以引用子文件夹中的关系图文件。  
+    - 将单个 **.tbxinfo**文件可用于定义多个工具。 该文件可以引用子文件夹中的关系图文件。  
   
-5.  重新启动 Visual Studio。 其他工具会显示在相应类型关系图的工具箱中。  
+5. 重新启动 Visual Studio。 其他工具会显示在相应类型关系图的工具箱中。  
   
 ### <a name="what-the-custom-tool-will-replicate"></a>自定义工具将复制的内容  
  自定义工具会复制源关系图的大部分功能：  
@@ -86,7 +83,7 @@ ms.locfileid: "51778405"
   
 - 连接器路由。 如果手动传送连接器，则在使用你的工具时不会保留该路由。 一些嵌套形状（如端口）的位置不会相对于其所有者而保留。  
   
-##  <a name="tbxinfo"></a> 如何定义的自定义工具属性  
+## <a name="tbxinfo"></a> 如何定义的自定义工具属性  
  工具箱信息 (**.tbxinfo**) 文件，可以指定工具箱名称、 图标、 工具提示、 选项卡上，并帮助对一个或多个自定义工具的关键字。 为其指定任何名称，例如**MyTools.tbxinfo**。  
   
  该文件的一般形式如下所示：  
@@ -139,37 +136,37 @@ ms.locfileid: "51778405"
  可以在 Visual Studio 中编辑位图文件，并在“属性”窗口中将其高度和宽度设置为 16。  
   
 > [!NOTE]
->  如果在单独试用关系图文件后开始使用 .tbxinfo 文件，则可能会发现工具箱同时包含新旧版本的工具箱项。 如果在 .tbxinfo 文件中键入了错误的关系图文件名称，也会发生此问题。 如果发生这种情况，工具箱的快捷菜单上选择**重置工具箱**。 将不会显示自定义工具箱项。 重新启动 Visual Studio，此时将显示正确的自定义项。  
+> 如果在单独试用关系图文件后开始使用 .tbxinfo 文件，则可能会发现工具箱同时包含新旧版本的工具箱项。 如果在 .tbxinfo 文件中键入了错误的关系图文件名称，也会发生此问题。 如果发生这种情况，工具箱的快捷菜单上选择**重置工具箱**。 将不会显示自定义工具箱项。 重新启动 Visual Studio，此时将显示正确的自定义项。  
   
-##  <a name="Extension"></a> 如何将分发在 Visual Studio 扩展中的工具箱项  
+## <a name="Extension"></a> 如何将分发在 Visual Studio 扩展中的工具箱项  
  您可以将分发到其他的工具箱项[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]用户通过将它们打包到 Visual Studio 扩展 (VSIX)。 可以将命令、配置文件和其他扩展打包到同一个 VSIX 文件。 有关详细信息，请参阅[部署 Visual Studio 扩展](http://go.microsoft.com/fwlink/?LinkId=160780)。  
   
  通常使用 VSIX 项目模板来构建 Visual Studio 扩展。 若要执行此操作，必须已安装 [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]。  
   
 #### <a name="to-add-a-toolbox-item-to-a-visual-studio-extension"></a>向 Visual Studio 扩展添加工具箱项  
   
-1.  [创建和测试一个或多个自定义工具](#DefineTool)。  
+1. [创建和测试一个或多个自定义工具](#DefineTool)。  
   
-2.  [创建.tbxinfo 文件](#tbxinfo)引用这些工具。  
+2. [创建.tbxinfo 文件](#tbxinfo)引用这些工具。  
   
-3.  打开现有 Visual Studio 扩展项目。  
+3. 打开现有 Visual Studio 扩展项目。  
   
      \- 或 -  
   
      定义新的 Visual Studio 扩展项目。  
   
-    1.  在“文件”  菜单上，选择“新建” 、“项目” 。  
+    1. 在“文件”  菜单上，选择“新建” 、“项目” 。  
   
-    2.  在中**新的项目**对话框中的**已安装的模板**，选择**Visual C#**，**扩展性**， **VSIX项目**。  
+    2. 在中**新的项目**对话框中的**已安装的模板**，选择**Visual C#**，**扩展性**， **VSIX项目**。  
   
-4.  将工具箱定义添加到项目。 包括 **.tbxinfo**文件中，关系图文件、 位图文件和所有资源文件，并确保它们都包括在 VSIX 中。  
+4. 将工具箱定义添加到项目。 包括 **.tbxinfo**文件中，关系图文件、 位图文件和所有资源文件，并确保它们都包括在 VSIX 中。  
   
-    -   在解决方案资源管理器，在该 VSIX 项目的快捷菜单上选择**外**，**现有项**。 在对话框中，将**对象的类型： 所有文件**。 找到的文件，它们全部选中，并选择**添加**。  
+    - 在解决方案资源管理器，在该 VSIX 项目的快捷菜单上选择**外**，**现有项**。 在对话框中，将**对象的类型：所有文件**。 找到的文件，它们全部选中，并选择**添加**。  
   
         > [!NOTE]
-        >  在此项目中，你不能在模型编辑器中打开关系图文件。  
+        > 在此项目中，你不能在模型编辑器中打开关系图文件。  
   
-5.  设置刚添加的所有文件的以下属性。 通过在解决方案资源管理器中选择所有文件，可以同时设置这些属性。 请注意不要更改项目中其他文件的属性。  
+5. 设置刚添加的所有文件的以下属性。 通过在解决方案资源管理器中选择所有文件，可以同时设置这些属性。 请注意不要更改项目中其他文件的属性。  
   
      **复制到输出目录** = **始终复制**  
   
@@ -177,24 +174,24 @@ ms.locfileid: "51778405"
   
      **包括在 VSIX** = **，则返回 true**  
   
-6.  打开 **source.extension.vsixmanifest**。 它将在扩展清单编辑器中打开。  
+6. 打开 **source.extension.vsixmanifest**。 它将在扩展清单编辑器中打开。  
   
-7.  下**元数据**，添加自定义工具的说明。  
+7. 下**元数据**，添加自定义工具的说明。  
   
      下**资产**，选择**新建**然后将字段设置在对话框中，如下所示：  
   
-    -   **类型** = **自定义扩展插件类型**  
+    - **类型** = **自定义扩展插件类型**  
   
-    -   “类型”= `Microsoft.VisualStudio.ArchitectureTools.CustomToolboxItems`  
+    - “类型”= `Microsoft.VisualStudio.ArchitectureTools.CustomToolboxItems`  
   
         > [!NOTE]
-        >  这并不是下拉列表中的选项。 你必须使用键盘进行输入。  
+        > 这并不是下拉列表中的选项。 你必须使用键盘进行输入。  
   
-    -   **源** = **在文件系统上的文件**。  
+    - **源** = **在文件系统上的文件**。  
   
-    -   **路径**= 你 **.tbxinfo**文件，如**MyTools.tbxinfo**  
+    - **路径**= 你 **.tbxinfo**文件，如**MyTools.tbxinfo**  
   
-8.  生成项目。  
+8. 生成项目。  
   
 9. **若要验证该扩展适用**，按 F5。 启动 Visual Studio 的实验实例。  
   
@@ -204,11 +201,11 @@ ms.locfileid: "51778405"
   
 #### <a name="to-install-custom-tools-from-a-visual-studio-extension"></a>从 Visual Studio 扩展安装自定义工具  
   
-1.  在 Windows 资源管理器或 Visual Studio 中，打开 `.vsix` 文件。  
+1. 在 Windows 资源管理器或 Visual Studio 中，打开 `.vsix` 文件。  
   
-2.  选择**安装**中出现的对话框。  
+2. 选择**安装**中出现的对话框。  
   
-3.  若要卸载或临时禁用该扩展，打开**扩展和更新**从**工具**菜单。  
+3. 若要卸载或临时禁用该扩展，打开**扩展和更新**从**工具**菜单。  
   
 ## <a name="localization"></a>本地化  
  构建一个扩展，使其在安装到另一台计算机中时，以目标计算机语言显示工具名称和工具提示。  
@@ -241,6 +238,3 @@ ms.locfileid: "51778405"
  [定义用于扩展 UML 的配置文件](../modeling/define-a-profile-to-extend-uml.md)   
  [在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)   
  [为 UML 模型定义验证约束](../modeling/define-validation-constraints-for-uml-models.md)
-
-
-

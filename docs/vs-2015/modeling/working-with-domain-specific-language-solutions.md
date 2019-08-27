@@ -1,23 +1,20 @@
 ---
 title: 使用域特定语言解决方案 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 ms.assetid: 3db02722-5fd5-437f-a789-9acaaa809de8
 caps.latest.revision: 8
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: f511ee44b983c388fb3a51c01d5e9424127036b2
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: a9c69af03e88a8debf10763c1a62e82fe0e9430e
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49190289"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65700584"
 ---
 # <a name="working-with-domain-specific-language-solutions"></a>使用域特定语言解决方案
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,8 +49,5 @@ ms.locfileid: "49190289"
  [如何：扩展域特定语言设计器](../modeling/how-to-extend-the-domain-specific-language-designer.md)  
  您可以自定义菜单命令与 DSL 设计器。  
   
- [如何自动执行转换所有模板](http://msdn.microsoft.com/en-us/b63cfe20-fe5e-47cc-9506-59b29bca768a)  
+ [如何自动执行转换所有模板](https://msdn.microsoft.com/b63cfe20-fe5e-47cc-9506-59b29bca768a)  
  若要避免单击转换所有模板，你可更加自动生成的一部分。
-
-
-

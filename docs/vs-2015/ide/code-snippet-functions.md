@@ -1,14 +1,9 @@
 ---
 title: 代码段函数 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - code snippets [Visual Studio], functions
 - snippets [Visual Studio], functions
@@ -17,23 +12,23 @@ ms.assetid: c0a2bf21-8fa5-4457-9281-f599beb53e7d
 caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 3874b162719deb02813ceb7eae09b373e208f458
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 5a7a7522d0c3ddab224e19150f47120b92b2dd32
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49270876"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65701525"
 ---
 # <a name="code-snippet-functions"></a>代码段函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-有三个函数可与 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 代码片段一起使用。 函数在代码片段的 [Function](http://msdn.microsoft.com/en-us/572c5549-5821-4e15-8ecd-0fa86c1c65df) 元素中指定。 有关创建代码片段的详细信息，请参阅[代码片段](../ide/code-snippets.md)。  
+有三个函数可与 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 代码片段一起使用。 函数在代码片段的 [Function](https://msdn.microsoft.com/572c5549-5821-4e15-8ecd-0fa86c1c65df) 元素中指定。 有关创建代码片段的详细信息，请参阅[代码片段](../ide/code-snippets.md)。  
   
 ## <a name="functions"></a>函数  
  下表介绍可与代码片段中的 `Function` 元素一起使用的函数。  
   
-|函数|描述|语言|  
+|函数|说明|语言|  
 |--------------|-----------------|--------------|  
 |`GenerateSwitchCases(` `EnumerationLiteral` `)`|为 `EnumerationLiteral` 参数指定的枚举成员生成一个switch 语句和一组 case 语句。 `EnumerationLiteral` 参数必须是枚举文本的引用或是枚举类型。|[!INCLUDE[csprcs](../includes/csprcs-md.md)]|  
 |`ClassName()`|返回包含插入的代码片段的类的名称。|[!INCLUDE[csprcs](../includes/csprcs-md.md)]|  
@@ -159,8 +154,5 @@ ms.locfileid: "49270876"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [Function 元素 （IntelliSense 代码片段）](http://msdn.microsoft.com/en-us/572c5549-5821-4e15-8ecd-0fa86c1c65df)   
+ [Function 元素 （IntelliSense 代码片段）](https://msdn.microsoft.com/572c5549-5821-4e15-8ecd-0fa86c1c65df)   
  [代码片段架构参考](../ide/code-snippets-schema-reference.md)
-
-
-

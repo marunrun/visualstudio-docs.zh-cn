@@ -2,7 +2,6 @@
 title: Windows 脚本接口 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -12,12 +11,12 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f98e60a82735ae561edf404763e0700f71b3a3d4
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 0aebd0857ba847d5c5eba5e3a4a8a01da73ec159
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49905358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62840026"
 ---
 # <a name="windows-script-interfaces"></a>Windows 脚本接口
 
@@ -63,21 +62,21 @@ Windows 脚本设计隔离了仅在创作环境中所需的界面元素，以便
 
 以下列表提供主机和引擎之间进行交互的步骤。
 
-1.  创建项目。 主机加载项目或文档。 （此步骤并不特定于 Windows 脚本，但是为了完整起见，这里也包含了此步骤。）
+1. 创建项目。 主机加载项目或文档。 （此步骤并不特定于 Windows 脚本，但是为了完整起见，这里也包含了此步骤。）
 
-2.  创建 Windows 脚本引擎。 主机调用 `CoCreateInstance` 创建新的 Windows 脚本引擎，以便指定特定于要使用的脚本引擎的类标识符 (CLSID)。 例如，Internet Explorer 的 HTML 浏览器通过 HTML \<OBJECT> 标记的 CLSID= 属性接收脚本引擎的类标识符。
+2. 创建 Windows 脚本引擎。 主机调用 `CoCreateInstance` 创建新的 Windows 脚本引擎，以便指定特定于要使用的脚本引擎的类标识符 (CLSID)。 例如，Internet Explorer 的 HTML 浏览器通过 HTML \<OBJECT> 标记的 CLSID= 属性接收脚本引擎的类标识符。
 
-3.  加载脚本。 如果已保存脚本内容，则主机可以调用脚本引擎的 `IPersist*::Load` 方法来为它提供脚本存储、流或属性包。 否则，主机使用 `IPersist*::InitNew` 或 [IActiveScriptParse::InitNew](../winscript/reference/iactivescriptparse-initnew.md) 方法来创建 null 脚本。 以文本形式维护脚本的主机可以在调用 `IActiveScriptParse::InitNew` 之后，使用 [IActiveScriptParse::ParseScriptText](../winscript/reference/iactivescriptparse-parsescripttext.md) 向脚本引擎提供脚本的文本。
+3. 加载脚本。 如果已保存脚本内容，则主机可以调用脚本引擎的 `IPersist*::Load` 方法来为它提供脚本存储、流或属性包。 否则，主机使用 `IPersist*::InitNew` 或 [IActiveScriptParse::InitNew](../winscript/reference/iactivescriptparse-initnew.md) 方法来创建 null 脚本。 以文本形式维护脚本的主机可以在调用 `IActiveScriptParse::InitNew` 之后，使用 [IActiveScriptParse::ParseScriptText](../winscript/reference/iactivescriptparse-parsescripttext.md) 向脚本引擎提供脚本的文本。
 
-4.  添加命名项。 对于导入到脚本引擎命名空间中的每个顶级命名项（例如，页和表单），主机调用 [IActiveScript::AddNamedItem](../winscript/reference/iactivescript-addnameditem.md) 方法在引擎的命名空间中创建条目。 如果顶级命名项已是步骤 3 中加载的脚本的部分持久状态，那么此步骤就不需要。 主机不使用 `IActiveScript::AddNamedItem` 添加子级命名项（例如 HTML 页上的控件）；相反，引擎使用主机的 `ITypeInfo` 和 `IDispatch` 接口间接获得顶级项的子项。
+4. 添加命名项。 对于导入到脚本引擎命名空间中的每个顶级命名项（例如，页和表单），主机调用 [IActiveScript::AddNamedItem](../winscript/reference/iactivescript-addnameditem.md) 方法在引擎的命名空间中创建条目。 如果顶级命名项已是步骤 3 中加载的脚本的部分持久状态，那么此步骤就不需要。 主机不使用 `IActiveScript::AddNamedItem` 添加子级命名项（例如 HTML 页上的控件）；相反，引擎使用主机的 `ITypeInfo` 和 `IDispatch` 接口间接获得顶级项的子项。
 
-5.  运行脚本。 主机通过设置 [IActiveScript::SetScriptState](../winscript/reference/iactivescript-setscriptstate.md) 方法中的 SCRIPTSTATE_CONNECTED 标志来使引擎运行脚本。 此调用可能会以类似于脚本 `main()` 函数的方式执行任何脚本引擎构造工作，包括静态绑定、挂接事件（参阅下文）和执行代码。
+5. 运行脚本。 主机通过设置 [IActiveScript::SetScriptState](../winscript/reference/iactivescript-setscriptstate.md) 方法中的 SCRIPTSTATE_CONNECTED 标志来使引擎运行脚本。 此调用可能会以类似于脚本 `main()` 函数的方式执行任何脚本引擎构造工作，包括静态绑定、挂接事件（参阅下文）和执行代码。
 
-6.  获取项信息。 每当脚本引擎需要将符号与顶级项关联时，都会调用返回给定项信息的 [IActiveScriptSite::GetItemInfo](../winscript/reference/iactivescriptsite-getiteminfo.md) 方法。
+6. 获取项信息。 每当脚本引擎需要将符号与顶级项关联时，都会调用返回给定项信息的 [IActiveScriptSite::GetItemInfo](../winscript/reference/iactivescriptsite-getiteminfo.md) 方法。
 
-7.  挂接事件。 启动实际脚本之前，脚本引擎通过 `IConnectionPoint` 接口连接到所有相关对象的事件。
+7. 挂接事件。 启动实际脚本之前，脚本引擎通过 `IConnectionPoint` 接口连接到所有相关对象的事件。
 
-8.  调用属性和方法。 脚本运行时，脚本引擎通过 `IDispatch::Invoke` 或其他标准 OLE 绑定机制实现对命名对象方法和属性的引用。
+8. 调用属性和方法。 脚本运行时，脚本引擎通过 `IDispatch::Invoke` 或其他标准 OLE 绑定机制实现对命名对象方法和属性的引用。
 
 ## <a name="windows-script-terms"></a>Windows 脚本术语
 

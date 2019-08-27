@@ -1,14 +1,9 @@
 ---
 title: “在文件中替换”命令 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - edit.replaceinfiles
 helpviewer_keywords:
@@ -19,19 +14,18 @@ ms.assetid: f116066a-4f65-4f2c-94ef-12cbd8cfb598
 caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: eba6dfcf95c006fb05d4faaa0c370c9dba56e4e7
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 8398f07cf6fa6bd2702b2d84ab0d29dcd614ed32
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49197660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68157806"
 ---
 # <a name="replace-in-files-command"></a>“在文件中替换”命令
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
-使用“查找和替换”窗口的“在文件中替换”选项卡上的可用选项子集替换文件中的文本。  
+使用“查找和替换”窗口的“在文件中替换”选项卡上的可用选项子集替换文件中的文本   。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,10 +37,10 @@ Edit.ReplaceinFiles findwhat replacewith [/all] [/case]
   
 ## <a name="arguments"></a>自变量  
  `findwhat`  
- 必须的。 要匹配的文本。  
+ 必需。 要匹配的文本。  
   
  `replacewith`  
- 必须的。 用于替换匹配文本的文本。  
+ 必需。 用于替换匹配文本的文本。  
   
 ## <a name="switches"></a>开关  
  /all 或 /a  
@@ -84,7 +78,7 @@ Edit.ReplaceinFiles findwhat replacewith [/all] [/case]
  可选。 搜索在 /lookin:`searchpath` 参数中指定的目录中的子文件夹。  
   
  /text2 或 /2  
- 可选。 在“查找结果 2”窗口中显示替换结果。  
+ 可选。 在“查找结果 2”窗口中显示替换结果  。  
   
  /wild 或 /l  
  可选。 使用在 `findwhat` 参数中作为表示形式进行预定义的特殊字符来表示字符或字符序列。  
@@ -93,19 +87,16 @@ Edit.ReplaceinFiles findwhat replacewith [/all] [/case]
  可选。 仅搜索全字。  
   
 ## <a name="example"></a>示例  
- 此示例搜索 `btnCancel` 并将其替换为“我的 visual studio 项目”文件夹中所有 .cls 文件中的 `btnReset` 并在“查找结果 2”窗口显示替换信息。  
+ 此示例搜索 `btnCancel` 并将其替换为“我的 visual studio 项目”文件夹中所有 .cls 文件中的 `btnReset` 并在“查找结果 2”窗口显示替换信息  。  
   
 ```  
 >Edit.ReplaceinFiles btnCancel btnReset /lookin:"c:/my visual studio projects" /ext:.cls /text2  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [查找和替换文本](../../ide/finding-and-replacing-text.md)   
  [在文件中替换](../../ide/replace-in-files.md)   
  [“命令”窗口](../../ide/reference/command-window.md)   
  [“查找/命令”框](../../ide/find-command-box.md)   
  [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)   
  [Visual Studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)
-
-
-

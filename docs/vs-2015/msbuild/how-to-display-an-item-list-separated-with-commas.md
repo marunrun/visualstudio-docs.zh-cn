@@ -1,14 +1,9 @@
 ---
 title: 如何：显示用逗号分隔的项列表 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, separating items with semicolons
 - MSBuild, formatting item collections
@@ -16,18 +11,17 @@ ms.assetid: 3cae844c-7c6d-4144-82dc-efad10ba458f
 caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: c9de7655335d2937a31cc2d63f5220fbf5415745
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 93451d6d49082621df48c734de951e6a4bc7e281
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49195866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68156623"
 ---
 # <a name="how-to-display-an-item-list-separated-with-commas"></a>如何：显示用逗号分隔的项列表
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 在 [!INCLUDE[vstecmsbuildengine](../includes/vstecmsbuildengine-md.md)] ([!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]) 中处理项列表时，有时以易于阅读的方式显示这些项列表的内容会很有帮助。 或者，你执行的任务可能会用到以特殊的分隔符字符串分隔的项列表。 在这两种情况中，可以为项列表指定分隔符字符串。  
   
 ## <a name="separating-items-in-a-list-with-commas"></a>用逗号分隔列表中的项  
@@ -47,12 +41,12 @@ ms.locfileid: "49195866"
   
 #### <a name="to-insert-a-comma-and-a-space-between-items"></a>在各项之间插入逗号和空格  
   
--   使用类似下面这样的项表示法：  
+- 使用类似下面这样的项表示法：  
   
      `@(TXTFile, ', ')`  
   
 ## <a name="example"></a>示例  
- 在此示例中，[Exec](../msbuild/exec-task.md) 任务会运行 findstr 工具，在文件 Phrases.txt 中查找指定的文本字符串。 在 findstr 命令中，文本搜索字符串由 /c: 开关指示，因此 `@(Phrase)` 项列表中各项之间应插入分隔符 `/c:`。  
+ 在此示例中，[Exec](../msbuild/exec-task.md) 任务会运行 findstr 工具，在文件 Phrases.txt 中查找指定的文本字符串。 在 findstr 命令中，文本搜索字符串由 /c: 开关指示，因此 `@(Phrase)` 项列表中各项之间应插入分隔符 `/c:`  。  
   
  对于此示例，等效的命令行命令为：  
   
@@ -75,9 +69,6 @@ ms.locfileid: "49195866"
 </Project>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSBuild 参考](../msbuild/msbuild-reference.md)   
  [项](../msbuild/msbuild-items.md)
-
-
-

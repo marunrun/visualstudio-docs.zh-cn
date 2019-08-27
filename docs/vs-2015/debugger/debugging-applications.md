@@ -1,14 +1,9 @@
 ---
 title: 调试应用程序 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -18,18 +13,18 @@ ms.assetid: f7f08402-610e-47f0-ba10-575dd395a0f0
 caps.latest.revision: 5
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 53df72fcdc5df0022be337aa01a0eab003ba3949
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: b689a3be22c9fec775cf42b9d26393a886174daf
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51810008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68197516"
 ---
 # <a name="debugging-applications"></a>调试应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-以下各节介绍了对不同类型的应用程序进行调试的信息。 应用程序类型和语言不同，需要的设置和技术也会不同，并且需要调试的问题也不同。  
+以下各节介绍了对不同类型的应用程序进行调试的信息。 不同类型的应用程序和编程语言，需要的设置和技术也会不同，需要调试的问题也不同。  
   
 ## <a name="debugging-for-different-types-of-applications"></a>对不同类型的应用程序进行调试  
   
@@ -42,6 +37,3 @@ ms.locfileid: "51810008"
 |[图形诊断（调试 DirectX 图形）](../debugger/visual-studio-graphics-diagnostics.md)|描述如何调试 DirectX 图形。|  
 |[调试 Web 应用程序和脚本](../debugger/debugging-web-applications-and-script.md)|描述如何调试 Web、ASP.NET 和 AJAX 应用程序。|  
 |[调试 WCF 服务](../debugger/debugging-wcf-services.md)|描述如何调试 Windows Communication Foundation 服务。|
-
-
-

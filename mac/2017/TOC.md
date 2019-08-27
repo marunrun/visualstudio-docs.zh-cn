@@ -5,16 +5,15 @@
 ## [在防火墙或代理背后安装和使用](/visualstudio/mac/install-behind-a-firewall-or-proxy-server)
 ## [安装预览版](/visualstudio/mac/install-preview)
 ## [更新](/visualstudio/mac/update)
+## [更新到 Visual Studio 2019 for Mac](/visualstudio/mac/update-vsmac-8.0)
 ## [卸载](/visualstudio/mac/uninstall)
-
 
 # [用户帐户](/visualstudio/mac/user-accounts)
 ## [登录](/visualstudio/mac/signing-in)
-## [启用订阅](/visualstudio/mac/activation)
+## [启用订阅](/visualstudio/mac/enable-subscription)
 
 # [自定义 IDE](/visualstudio/mac/customizing-the-ide)
 ## [扩展 Visual Studio for Mac](/visualstudio/mac/extending-visual-studio-mac)
-
 
 # [项目和解决方案](/visualstudio/mac/projects-and-solutions)
 ## [创建新项目](/visualstudio/mac/create-new-projects)
@@ -53,6 +52,10 @@
 ## [设置 Subversion 存储库](/visualstudio/mac/set-up-subversion-repository)
 ## [使用 Subversion](/visualstudio/mac/working-with-subversion)
 
+# [Web 应用部署](/visualstudio/mac/web-app-deployment.md)
+## [发布到 Azure 应用服务](/visualstudio/mac/publish-app-svc.md)
+## [发布到文件夹](/visualstudio/mac/publish-folder.md)
+
 # [工作负载](/visualstudio/mac/workloads)
 ## [ASP.NET Core](/visualstudio/mac/asp-net-core)
 ### [Razor](/visualstudio/mac/razor)
@@ -66,10 +69,11 @@
 ### [使用 Unity 工具](/visualstudio/mac/using-vsmac-tools-unity)
 ### [在 Unity 中使用 .NET 4.x](/visualstudio/mac//visualstudio/cross-platform/unity-scripting-upgrade/?context=visualstudio/mac/context)
 ### [更改日志](/visualstudio/mac//visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac/?context=visualstudio/mac/context)
-## [使用 Xamarin 的移动应用](/xamarin/)
+## [使用 Xamarin 的移动应用](/visualstudio/mac/xamarin)
 
 # [辅助功能](/visualstudio/mac/accessibility)
 
 # [疑难解答](/visualstudio/mac/troubleshooting)
 ## [Visual Studio 客户体验改善计划](/visualstudio/mac/visual-studio-experience-improvement-program)
 ## [报告问题](/visualstudio/mac/report-a-problem)
+## [排除故障：更新程序在检索信息时发生错误](updater-troubleshooting.md)

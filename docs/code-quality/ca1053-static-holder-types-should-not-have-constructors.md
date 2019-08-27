@@ -1,7 +1,6 @@
 ---
 title: CA1053:静态容器类型不应具有构造函数
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - StaticHolderTypesShouldNotHaveConstructors
@@ -12,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: 10302b9a-fa5e-4935-a06a-513d9600f613
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 998d941d0dd0ec06ff7d0f8a727ad3bf50718065
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: fec59e1d683c7867eb1cad9ae4e796a0815200d4
+ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53928514"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68604782"
 ---
-# <a name="ca1053-static-holder-types-should-not-have-constructors"></a>CA1053:静态容器类型不应具有构造函数
+# <a name="ca1053-static-holder-types-should-not-have-default-constructors"></a>CA1053:静态容器类型不应具有默认构造函数
 
 |||
 |-|-|
@@ -31,22 +30,21 @@ ms.locfileid: "53928514"
 |类别|Microsoft.Design|
 |是否重大更改|重大|
 
+> [!NOTE]
+> 规则 CA1053 合并为[CA1052:静态容器类型应在](ca1052-static-holder-types-should-be-sealed.md) [FxCop 分析器](fxcop-analyzers.yml)中密封。
+
 ## <a name="cause"></a>原因
- 公共或嵌套公共类型只声明了静态成员，但具有公共或受保护的默认构造函数。
+
+公共或嵌套公共类型仅声明静态成员, 并且具有默认构造函数。
 
 ## <a name="rule-description"></a>规则说明
- 由于调用静态成员不需要类型的示例，因此没必要使用构造函数。 此外，因为该类型不具有非静态成员，创建一个实例不提供访问任何类型的成员。
+
+默认构造函数是不必要的, 因为调用静态成员不需要类型的实例。 另外, 由于类型不具有非静态成员, 因此创建实例时不提供对任何类型成员的访问。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复此规则的冲突，请删除默认构造函数或将其公开。
 
-> [!NOTE]
->  如果类型未定义任何构造函数，某些编译器自动创建一个公共的默认构造函数。 如果这与您的类型的情况，请添加私有默认构造函数以消除冲突。
+若要修复与此规则的冲突, 请删除默认构造函数。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 不禁止显示此规则发出的警告。 构造函数存在建议的类型不是静态类型。
 
-## <a name="example"></a>示例
- 下面的示例显示了与此规则冲突的类型。 请注意，在源代码中没有默认构造函数。 当此代码编译到程序集中时，C# 编译器将插入默认构造函数，这会违反此规则。 若要更正此问题，声明一个私有构造函数。
-
- [!code-csharp[FxCop.Design.StaticTypes#1](../code-quality/codesnippet/CSharp/ca1053-static-holder-types-should-not-have-constructors_1.cs)]
+不禁止显示此规则发出的警告。 如果存在默认的构造函数, 则表明该类型不是静态类型。

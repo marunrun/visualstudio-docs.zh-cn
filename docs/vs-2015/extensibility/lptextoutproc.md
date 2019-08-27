@@ -1,14 +1,9 @@
 ---
-title: LPTEXTOUTPROC |Microsoft Docs
-ms.custom: ''
+title: LPTEXTOUTPROC | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 f1_keywords:
 - LPTEXTOUTPROC
 helpviewer_keywords:
@@ -20,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2025c969-e3c7-4cf4-a5c5-099d342895ea
 caps.latest.revision: 22
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 28a48c0d2dbc89295d6c1f8e900ce6219e2c9313
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: f14942ffd59ce2c6eacf7da2d0d1ab252d58e2cb
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51750862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68194449"
 ---
 # <a name="lptextoutproc"></a>LPTEXTOUTPROC
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,21 +47,21 @@ typedef LONG (*LPTEXTOUTPROC) (
  mesg_type  
  消息的类型。 下表列出了支持此参数的值。  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |`SCC_MSG_INFO, SCC_MSG_WARNING, SCC_MSG_ERROR`|消息将被视为信息、 警告或错误。|  
 |`SCC_MSG_STATUS`|显示状态消息，并可以在状态栏中显示。|  
 |`SCC_MSG_DOCANCEL`|与任何消息字符串一起发送。|  
 |`SCC_MSG_STARTCANCEL`|开始显示**取消**按钮。|  
 |`SCC_MSG_STOPCANCEL`|将不再显示**取消**按钮。|  
-|`SCC_MSG_BACKGROUND_IS_CANCELLED`|询问是否要取消后台操作的 IDE: IDE 返回`SCC_MSG_RTN_CANCEL`如果操作已取消; 否则，返回`SCC_MSG_RTN_OK`。 `display_string`参数强制转换为[SccMsgDataIsCancelled](#LinkSccMsgDataIsCancelled)结构，它提供的源代码管理插件。|  
+|`SCC_MSG_BACKGROUND_IS_CANCELLED`|如果后台操作已取消，会要求 IDE:返回 IDE`SCC_MSG_RTN_CANCEL`如果操作已取消; 否则，返回`SCC_MSG_RTN_OK`。 `display_string`参数强制转换为[SccMsgDataIsCancelled](#LinkSccMsgDataIsCancelled)结构，它提供的源代码管理插件。|  
 |`SCC_MSG_BACKGROUND_ON_BEFORE_GET_FILE`|从版本控制检索之前关于文件告知 IDE。 `display_string`参数强制转换为[SccMsgDataOnBeforeGetFile](#LinkSccMsgDataOnBeforeGetFile)结构，它提供的源代码管理插件。|  
 |`SCC_MSG_BACKGROUND_ON_AFTER_GET_FILE`|关于文件告知 IDE 后检索从版本控制。 `display_string`参数强制转换为[SccMsgDataOnAfterGetFile](#LinkSccMsgDataOnAfterGetFile)结构，它提供的源代码管理插件。|  
 |`SCC_MSG_BACKGROUND_ON_MESSAGE`|告知 IDE 的后台操作的当前状态。 `display_string`参数强制转换为[SccMsgDataOnMessage](#LinkSccMsgDataOnMessage)结构，它提供的源代码管理插件。|  
   
 ## <a name="return-value"></a>返回值  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |SCC_MSG_RTN_OK|显示的字符串或操作已成功完成。|  
 |SCC_MSG_RTN_CANCEL|用户想要取消该操作。|  
@@ -76,7 +71,7 @@ typedef LONG (*LPTEXTOUTPROC) (
   
 ## <a name="structures"></a>结构  
   
-###  <a name="LinkSccMsgDataIsCancelled"></a> SccMsgDataIsCancelled  
+### <a name="LinkSccMsgDataIsCancelled"></a> SccMsgDataIsCancelled  
   
 ```cpp#  
 typedef struct {  
@@ -86,7 +81,7 @@ typedef struct {
   
  此结构发送与`SCC_MSG_BACKGROUND_IS_CANCELLED`消息。 它用于通信的后台操作已取消的 ID。  
   
-###  <a name="LinkSccMsgDataOnBeforeGetFile"></a> SccMsgDataOnBeforeGetFile  
+### <a name="LinkSccMsgDataOnBeforeGetFile"></a> SccMsgDataOnBeforeGetFile  
   
 ```cpp#  
 typedef struct {  
@@ -97,7 +92,7 @@ typedef struct {
   
  此结构发送与`SCC_MSG_BACKGROUND_ON_BEFORE_GET_FILE`消息。 它用于通信要检索的文件的名称和正在执行的操作检索的后台操作的 ID。  
   
-###  <a name="LinkSccMsgDataOnAfterGetFile"></a> SccMsgDataOnAfterGetFile  
+### <a name="LinkSccMsgDataOnAfterGetFile"></a> SccMsgDataOnAfterGetFile  
   
 ```cpp#  
 typedef struct {  
@@ -109,7 +104,7 @@ typedef struct {
   
  此结构发送与`SCC_MSG_BACKGROUND_ON_AFTER_GET_FILE`消息。 它用于检索指定的文件，以及未检索的后台操作的 ID 的结果进行通信。 请参阅的返回值[SccGet](../extensibility/sccget-function.md)有关什么可以给出结果。  
   
-###  <a name="LinkSccMsgDataOnMessage"></a> SccMsgDataOnMessage  
+### <a name="LinkSccMsgDataOnMessage"></a> SccMsgDataOnMessage  
  [C++]  
   
 ```  
@@ -147,4 +142,3 @@ LONG SendStatusMessage(
 ## <a name="see-also"></a>请参阅  
  [通过 IDE 实现的回调函数](../extensibility/callback-functions-implemented-by-the-ide.md)   
  [源代码管理插件](../extensibility/source-control-plug-ins.md)
-

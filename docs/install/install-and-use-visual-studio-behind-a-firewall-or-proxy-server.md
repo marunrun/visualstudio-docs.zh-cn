@@ -1,9 +1,8 @@
 ---
 title: 在防火墙或代理服务器背后安装和使用
-description: 如果组织使用防火墙或代理服务器，请检查希望列入允许列表或打开的域 URL、端口和协议
-ms.date: 07/10/2018
+description: 如果组织使用防火墙或代理服务器，请检查希望添加到允许列表或打开的域 URL、端口和协议
+ms.date: 05/22/2019
 ms.custom: seodec18
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - network installation, Visual Studio
@@ -13,32 +12,34 @@ helpviewer_keywords:
 ms.assetid: ''
 author: TerryGLee
 ms.author: tglee
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 55234231855761e0ad0206bdd96dfffcdb52690a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.prod: visual-studio-windows
+ms.technology: vs-installation
+ms.openlocfilehash: 38a243c965199e75622ceff43e742424d3e4977a
+ms.sourcegitcommit: 92a04c57ac0a49f304fa2ea5043436f30068c3cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53879512"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65976214"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>在防火墙或代理服务器后面安装和使用 Visual Studio 和 Azure 服务
 
-如果你或贵组织使用防火墙或代理服务器等安全措施，则会有可能需要将其列入“允许列表”的域 URL，以及可能需要打开的端口和协议，以便在安装和使用 Visual Studio 以及 Azure 服务时获得最佳体验。
+如果你或贵组织使用防火墙或代理服务器等安全措施，则会有可能需要将其添加到“允许列表”的域 URL，以及可能需要打开的端口和协议，以便在安装和使用 Visual Studio 以及 Azure 服务时获得最佳体验。
 
-* **[安装 Visual Studio](#install-visual-studio)**：这些表包括要加入允许列表的域 URL，以便你可访问所需的所有组件和工作负载。
+* **[安装 Visual Studio](#install-visual-studio)**：这些表包括要添加到允许列表的域 URL，以便你可访问所需的所有组件和工作负载。
 
-* **[使用 Visual Studio 和 Azure 服务](#use-visual-studio-and-azure-services)**：此表包括要加入允许列表的域 URL 以及要打开的端口和协议，以便你可访问所需的所有功能和服务。
+* **[使用 Visual Studio 和 Azure 服务](#use-visual-studio-and-azure-services)**：此表包括要添加到允许列表的域 URL 以及要打开的端口和协议，以便你可访问所需的所有功能和服务。
 
 > [!NOTE]
 > 本文针对 Windows 上的 Visual Studio 编写，但部分信息也适用于在防火墙或代理服务器后[安装 Visual Studio for Mac](/visualstudio/mac/install-behind-a-firewall-or-proxy-server)。
 
 ## <a name="install-visual-studio"></a>安装 Visual Studio
 
-### <a name="urls-to-whitelist"></a>加入允许列表的 URL
+### <a name="urls-to-add-to-an-allow-list"></a>要添加到允许列表的 URL
 
-因为 Visual Studio 安装程序从各个域及其下载服务器下载文件，以下是你可能需要在 UI 或部署脚本中以可信方式列入允许列表的域 URL。
+因为 Visual Studio 安装程序从各个域及其下载服务器下载文件，以下是你可能需要在 UI 或部署脚本中以可信方式添加到允许列表的域 URL。
 
 #### <a name="microsoft-domains"></a>Microsoft 域
 
@@ -78,14 +79,14 @@ ms.locfileid: "53879512"
 
 ## <a name="use-visual-studio-and-azure-services"></a>使用 Visual Studio 和 Azure 服务
 
-### <a name="urls-to-whitelist-and-ports-and-protocols-to-open"></a>加入到白名单的 URL 和要打开的端口和协议
+### <a name="urls-to-add-to-an-allow-list-and-ports-and-protocols-to-open"></a>添加到允许列表的 URL 和要打开的端口和协议
 
-若要确保在防火墙或代理服务器后面使用 Visual Studio 或 Azure 服务时可访问一切所需的内容，以下是应列入白名单的URL 和你可能需要打开的端口及协议。
+若要确保在防火墙或代理服务器后面使用 Visual Studio 或 Azure 服务时可访问一切所需的内容，以下是应添加到允许列表的 URL 和你可能需要打开的端口及协议。
 
 | 服务或方案 | DNS 终结点 | 协议 | 端口 | 说明 |
 | - | - | - | - | - |
 | URL<br>解析 | go.microsoft.com<br><br>aka.ms | | | 用于缩短 URL，然后解析为更长的 URL |
-| 起始页 | vsstartpage.blob.core.windows.net | | 443 | 用于显示在 Visual Studio 的起始页上显示的开发人员新闻 |
+| 起始页 | vsstartpage.blob.core.windows.net | | 443 | 用于显示起始页上显示的开发人员新闻（仅 Visual Studio 2017） |
 | 目标<br> 通知 <br>服务 | targetednotifications.azurewebsites.net <br><br>www.research.net | | 80<br><br>443 | 用于将全局通知列表筛选为一个仅适用于特定类型计算机/使用方案的列表 |
 | 扩展名 <br>更新检查 | marketplace.visualstudio.com<br><br>&#42;.windows.net <br>&#42;.microsoftonline.com <br>&#42;.live.com | | 443 | 用于在已安装扩展有可用更新时提供通知 <br><br> 用作登录位置 |
 | AI 项目 <br>集成 | az861674.vo.msecnd.net | | 443<br> | 用于配置新项目，以将使用情况数据发送到你注册的 Application Insights 帐户 |
@@ -101,7 +102,7 @@ ms.locfileid: "53879512"
 | GitHub 存储库信息 | api.github.com | https | 443 | 获取有关 Bower 包其他信息的必要条件 |
 | Web Linters | Eslint.org<br><br>www.Bing.com <br><br>www.coffeelint.org | http | 80 | |
 | Cookiecutter<br>资源管理器模板<br>发现 <br><br>Cookiecutter <br>资源管理器项目<br> 创建 | api.github.com <br>raw.githubusercontent.com <br>go.microsoft.com<br><br>pypi.org <br> pypi.python.org | https | 443<br> | 用于从我们建议的源和 github 存储库发现联机模板 <br><br>用于从 cookiecutter 模板创建一个项目，要求从 Python 包索引 (PyPI) 一次性按需安装 cookiecutter Python 包 |
-| Python 包 <br>发现<br><br>Python 包 <br>管理<br><br>Python <br>新建项目 <br>模板 | pypi.org<br> <br>pypi.python.org <br>bootstrap.pypa.io<br><br>go.microsoft.com | https | 443 | 提供搜索 pip 包的能力<br><br>用于自动安装 pip（如缺失） <br><br> 用于创建 <br><br>用于在“新建项目”对话框中将以下 Python 项目模板解析为 cookiecutter 模板 URL：<br> - 分类器项目<br>- 聚类分析项目 <br> - 回归项目 <br> - 使用 PyKinect 的 PyGame <br> - Pyvot 项目 |
+| Python 包 <br>发现<br><br>Python 包 <br>管理<br><br>新建 <br>Python <br> 项目 <br>模板 | pypi.org<br> <br>pypi.python.org <br>bootstrap.pypa.io<br><br>go.microsoft.com | https | 443 | 提供搜索 pip 包的能力<br><br>用于自动安装 pip（如缺失） <br><br>用于将以下 Python 项目模板解析为 cookiecutter 模板 URL：<br> - 分类器项目<br>- 聚类分析项目 <br> - 回归项目 <br> - 使用 PyKinect 的 PyGame <br> - Pyvot 项目 |
 | Office Web <br>Add-in — 外接程序 <br> file:/// <br>确认 <br>服务 | verificationservice.osi.office.net | https | 443 | 用于验证 Office Web 外接程序的清单 |
 | SharePoint 和 <br>Office 外接程序 | sharepoint.com | https | 443 | 用于将 SharePoint 和 Office 外接程序发布到 SharePoint Online 并对其进行测试 |
 | 工作流管理器 <br>测试服务<br> Host | | http | 12292 | 自动创建的防火墙规则，用于测试带工作流的 SharePoint 外接程序 |
@@ -120,7 +121,7 @@ ms.locfileid: "53879512"
 | 快照 <br>调试器 | 1. go.microsoft.com <br>2. management.azure.com <br> 3. &#42;azurewebsites.net <br> 4. &#42;scm.azurewebsites.net<br>5. api.nuget.org/v3/index.json <br>6. msvsmon | 1. https <br>2. https  <br>3. http <br>4. https <br>5. https <br>6.Concord <br> | 1. 443<br> 2. 443<br>3. 80  <br>4. 443<br> 5. 443<br> 6. 4022（Visual Studio 从属版本） | 1.查询 .json 文件的应用服务 SKU 大小 <br>2.各种 Azure RM 调用 <br>3.站点预热调用渠道  <br>4.客户的目标应用服务 Kudu 终结点 <br>5.查询 nuget.org 中发布的站点扩展版本 <br>6.远程调试通道 |
 | Azure 流分析 <br><br>HDInsight | Management.azure.com | https | 443 | 用于查看、提交、运行和管理 ASA 作业 <br><br> 用于浏览 HDI 群集，以及提交、诊断和调试 HDI 作业 |
 | Azure Data Lake | &#42;.azuredatalakestore.net <br>&#42;.azuredatalakeanalytics.net | https | 443 | 用于编译、提交、查看、诊断和调试作业；用于浏览 ADLS 文件；用于上传和下载文件 |
-| 打包服务 | [account].visualstudio.com <br/> [account].\*.visualstudio.com <br/> \*.blob.core.windows.net <br/> registry.npmjs.org </br> nodejs.org <br/> dist.nuget.org <br/> nuget.org | https | 443 | 仅特定生成任务方案（例如：NuGet 工具安装程序、节点工具安装程序）或者打算将公共上游与源结合使用时才需使用 .npmjs.org、.nuget.org 和 .nodejs.org。 要使用打包服务的核心功能，还需具备其他三个域。 |
+| 打包服务 | [account].visualstudio.com <br/> [account].\*.visualstudio.com <br/> \*.blob.core.windows.net <br/> registry.npmjs.org </br> nodejs.org <br/> dist.nuget.org <br/> nuget.org | https | 443 | 仅特定生成任务方案（例如：NuGet 工具安装程序、节点工具安装程序）或者打算将公共上游与源结合使用时才需使用 \*.npmjs.org、\*.nuget.org 和 \*.nodejs.org。 要使用打包服务的核心功能，还需具备其他三个域。 |
 | Azure DevOps Services | \*.vsassets.io <br/> static2.sharepointonline.com | | | 用于连接 Azure DevOps Services |
 | | | | | |
 
@@ -134,12 +135,13 @@ ms.locfileid: "53879512"
 
 下面是另外几个支持选项：
 
-* 通过[报告问题](../ide/how-to-report-a-problem-with-visual-studio-2017.md)工具（会出现在 Visual Studio 安装程序和 Visual Studio IDE 中）向我们报告产品问题。
+* 通过[报告问题](../ide/how-to-report-a-problem-with-visual-studio.md)工具（会出现在 Visual Studio 安装程序和 Visual Studio IDE 中）向我们报告产品问题。
 * 在 [Visual Studio 开发人员社区](https://developercommunity.visualstudio.com/)中，可提出功能建议、跟踪产品问题，并能找到答案。
 * 使用你的 [GitHub](https://github.com/) 帐户，通过 [Gitter 社区的 Visual Studio 对话](https://gitter.im/Microsoft/VisualStudio)与我们和其他 Visual Studio 开发人员进行交流。
 
 ## <a name="see-also"></a>请参阅
 
+* [Live Share 连接性要求](/visualstudio/liveshare/reference/connectivity/)
 * [创建 Visual Studio 的网络安装](create-a-network-installation-of-visual-studio.md)
 * [对 Visual Studio 中与网络相关错误的故障排除](troubleshooting-network-related-errors-in-visual-studio.md)
 * [Visual Studio 管理员指南](visual-studio-administrator-guide.md)

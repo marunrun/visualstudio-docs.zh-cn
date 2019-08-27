@@ -1,65 +1,40 @@
 ---
 title: 安装第三方单元测试框架
-ms.date: 06/07/2018
-ms.prod: visual-studio-dev15
+ms.date: 04/01/2019
 ms.topic: conceptual
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: f8cdfa96e41e72531cb3f2cdc164af4ed57546e5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9f61b52f72474a8ecd8fac4c30265dcd7cf36a5e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53955235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62978640"
 ---
 # <a name="install-unit-test-frameworks"></a>安装单元测试框架
 
-Visual Studio 测试资源管理器可以运行任何针对该资源管理器开发了适配器接口的单元测试框架。 框架的安装程序会安装二进制文件，并为它支持的语言添加 Visual Studio 项目模板。 使用模板创建项目时，框架会向测试资源管理器注册。 Visual Studio 解决方案可以包含使用不同框架和面向不同语言的单元测试项目。 测试资源管理器可运行所有这些解决方案。
+Visual Studio 测试资源管理器可从任何针对该资源管理器开发了适配器接口的单元测试框架中运行测试。 安装框架会复制二进制文件，并为支持的语言添加 Visual Studio 项目模板。 使用模板创建项目时，框架会向测试资源管理器注册。
 
-[MSTest](getting-started-with-unit-testing.md) 是 Visual Studio 提供的测试框架，默认随 Visual Studio 安装。
+Visual Studio 解决方案可以包含使用不同框架和面向不同语言的单元测试项目。
+
+[MSTest](getting-started-with-unit-testing.md) 是 Visual Studio 提供的测试框架并默认安装。
 
 ## <a name="acquire-frameworks"></a>获取框架
 
-可使用 Visual Studio 扩展管理器，或从 [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs) 下载并安装第三方单元测试框架。 还可以从其他站点（如框架的网站）下载框架。
+使用“NuGet 包管理器”安装第三方单元测试框架。
 
-### <a name="install-from-visual-studio"></a>通过 Visual Studio 安装
+1. 右键单击将包含测试代码的项目，然后选择“管理 NuGet 包”。
 
-1. 在标准菜单上，依次选择“工具”和“扩展和更新”。
+2. 在“NuGet 包管理器”中，搜索要安装的测试框架，然后单击“安装”。
 
-2. 依次展开“联机” > “Visual Studio Marketplace” > “工具”。 选择“测试”。
-
-3. 浏览列表以查找框架。
-
-4. 依次选择框架和“下载”。
-
-有关详细信息，请参阅[查找和使用 Visual Studio 扩展](../ide/finding-and-using-visual-studio-extensions.md)。
-
-### <a name="install-from-the-web"></a>从 Web 安装
-
-如果你了解所需框架：
-
-1. 打开 [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs)。
-
-2. 在“查找”框中键入框架名称。
-
-3. 在结果列表中选择框架，以导航至该工具的 Visual Studio Marketplace 页。
-
-浏览框架以及其他测试工具的列表：
-
-1. 打开 [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs)。
-
-2. 在“按类别/集合筛选”中，选择“查看全部”。
-
-3. 在“分类”列表中（标记为“显示”），展开“工具”节点，然后选择“测试”。
-
-4. 在结果列表中选择框架，以导航到该工具的 Visual Studio Marketplace 页。
+   ![Visual Studio 中的 NuGet 包管理器](media/vs-2019/nuget-package-manager.png)
 
 ## <a name="update-to-the-latest-test-adapters"></a>更新到最新版本的测试适配器
 
-更新到最新版本的稳定测试适配器，以体验更好的测试发现和执行。 有关更新到 MSTest、NUnit 和 xUnit 测试适配器的详细信息，请参阅 [Visual Studio 博客](https://blogs.msdn.microsoft.com/visualstudio/2017/11/16/test-experience-improvements/)。
+更新到最新版本的稳定测试适配器，以体验更好的测试发现和执行。 有关更新到 MSTest、NUnit 和 xUnit 测试适配器的详细信息，请参阅 [Visual Studio 博客](https://devblogs.microsoft.com/visualstudio/test-experience-improvements/)。
 
 ### <a name="to-update-to-the-latest-stable-test-adapter-version"></a>更新到最新版本的稳定测试适配器
 

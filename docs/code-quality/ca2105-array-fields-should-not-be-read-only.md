@@ -1,7 +1,6 @@
 ---
 title: CA2105:数组字段不应为只读
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - CA2105
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 0bdc3421-3ceb-4182-b30c-a992fbfcc35d
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0969147ce4f454f7720f26f72b46cab6e91c37bf
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9f8a02ae357dbf36cb4d3e4bd21aaad0fed3a320
+ms.sourcegitcommit: 32144a09ed46e7223ef7dcab647a9f73afa2dd55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53937959"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586575"
 ---
 # <a name="ca2105-array-fields-should-not-be-read-only"></a>CA2105:数组字段不应为只读
 
@@ -45,7 +44,7 @@ ms.locfileid: "53937959"
 
 若要解决由该规则标识的安全漏洞，不要依赖于可公开访问的只读数组的内容。 强烈建议你使用以下过程之一：
 
-- 将不能更改的强类型集合替换为数组。 有关详细信息，请参阅<xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>。
+- 将不能更改的强类型集合替换为数组。 有关详细信息，请参阅 <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>。
 
 - 使用返回私有数组副本的方法替换公共字段。 你的代码不依赖于克隆，因为如果，则不存在风险修改元素。
 
@@ -75,6 +74,10 @@ ms.locfileid: "53937959"
 Before tampering: Grades: 90, 90, 90 Private Grades: 90, 90, 90  Secure Grades, 90, 90, 90
 After tampering: Grades: 90, 555, 90 Private Grades: 90, 555, 90  Secure Grades, 90, 90, 90
 ```
+
+## <a name="related-rules"></a>相关的规则
+
+- [CA2104:不要声明只读可变引用类型](../code-quality/ca2104-do-not-declare-read-only-mutable-reference-types.md)
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,14 +1,9 @@
 ---
-title: 如何： 使用本机运行时检查 |Microsoft Docs
-ms.custom: ''
+title: 如何：使用本机运行时检查 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - c.runtime.errorchecks
 dev_langs:
@@ -45,18 +40,18 @@ ms.assetid: dc7b2f1e-5ff6-42e0-89b3-dc9dead83ee1
 caps.latest.revision: 24
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 4efbb4e151ea47f655f0b28e19d2811d5541e944
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: b50dda3e31e27fa5d177c3b0ba2790babd2a660f
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51798750"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65685861"
 ---
 # <a name="how-to-use-native-run-time-checks"></a>如何：使用本机运行时检查
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在 Visual C++ 中，可以使用本机 [runtime_checks](http://msdn.microsoft.com/library/ae50b43f-f88d-47ad-a2db-3389e9e7df5b) 捕获常见的运行时错误，例如：  
+在 Visual C++ 中，可以使用本机 [runtime_checks](https://msdn.microsoft.com/library/ae50b43f-f88d-47ad-a2db-3389e9e7df5b) 捕获常见的运行时错误，例如：  
   
 - 堆栈指针损坏。  
   
@@ -82,18 +77,13 @@ ms.locfileid: "51798750"
   
 ### <a name="to-enable-native-run-time-checks-in-a-debug-build"></a>在调试版本中启用本机运行时检查  
   
--   使用 **/RTC** 选项，并与 C 运行库（如 /MDd）调试版链接。  
+- 使用 **/RTC** 选项，并与 C 运行库（如 /MDd）调试版链接。  
   
 ### <a name="to-modify-native-run-time-check-behavior"></a>更改本机运行时检查操作  
   
--   使用 `runtime_checks` 杂注。  
+- 使用 `runtime_checks` 杂注。  
   
 ## <a name="see-also"></a>请参阅  
  [在 Visual Studio 中进行调试](../debugger/debugging-in-visual-studio.md)   
- [runtime_checks](http://msdn.microsoft.com/library/ae50b43f-f88d-47ad-a2db-3389e9e7df5b)   
- [运行时错误检查](http://msdn.microsoft.com/library/c965dd01-57ad-4a3c-b1d6-5aa04f920501)
-
-
-
-
-
+ [runtime_checks](https://msdn.microsoft.com/library/ae50b43f-f88d-47ad-a2db-3389e9e7df5b)   
+ [运行时错误检查](https://msdn.microsoft.com/library/c965dd01-57ad-4a3c-b1d6-5aa04f920501)

@@ -1,33 +1,33 @@
 ---
-title: 分析 Visual Basic 和C#代码中使用静态代码分析应用商店应用的质量
+title: 使用静态代码C#分析来分析应用商店应用中的 Visual Basic 和代码质量
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.technology: vs-ide-general
+ms.technology: vs-ide-test
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.propertypages.csvb.express
 ms.assetid: cab553fc-19a9-4cbf-858e-8200258ffe50
 caps.latest.revision: 16
-author: erickson-doug
+author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: a3a3d753f9e2dd3b046159d191149b7af062fe16
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
-ms.translationtype: MTE95
+manager: jillfra
+ms.openlocfilehash: 7510b7fac5dfc633b88bd9f53347118a02227b92
+ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53063201"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68416639"
 ---
 # <a name="analyze-visual-basic-and-c-code-quality-in-store-apps-using-visual-studio-static-code-analysis"></a>使用 Visual Studio 静态代码分析来分析应用商店应用中的 Visual Basic 和 C# 代码质量
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-适用于 Windows 和 Windows Phone] (../Image/windows_and_phone_content.png"windows_and_phone_content")
+适用于 Windows 和 Windows Phone] (.。。/Image/windows_and_phone_content.png "windows_and_phone_content")
 
  Visual Studio Express 中的代码分析工具可检查代码中是否存在一组常见缺陷以及违反良好编程习惯的情况。 代码分析警告与编译器错误和警告不同，因为代码分析工具搜索的是虽然有效但仍会为你或使用你代码的其他人员带来问题的特定代码模式。 代码分析还可在代码中找到通过测试难以发现的缺陷。 在开发过程中定期运行代码分析工具可提高所编写的应用程序的质量。
 
 > [!NOTE]
->  在 Visual Studio 旗舰版、Visual Studio 高级专业版和 Visual Studio 专业版中，可使用完整的代码分析功能。 请参阅 MSDN 库中的 [Analyzing Application Quality by Using Code Analysis Tools](http://msdn.microsoft.com/library/dd264897.aspx)（使用代码分析工具分析应用程序质量）。
+> 在 Visual Studio 旗舰版、Visual Studio 高级专业版和 Visual Studio 专业版中，可使用完整的代码分析功能。 请参阅 MSDN 库中的 [Analyzing Application Quality by Using Code Analysis Tools](https://msdn.microsoft.com/library/dd264897.aspx)（使用代码分析工具分析应用程序质量）。
 
 ## <a name="in-this-topic"></a>在本主题中
  可了解：
@@ -42,7 +42,7 @@ ms.locfileid: "53063201"
 
  [Visual Basic 和 C# 代码分析警告](../test/analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md#BKMK_Warnings)
 
-##  <a name="BKMK_Run"></a>运行代码分析
+## <a name="BKMK_Run"></a>运行代码分析
  若要对 Visual Studio 解决方案运行代码分析，请执行以下操作：
 
 - 在“生成”菜单上，选择“对解决方案运行代码分析”。
@@ -57,7 +57,7 @@ ms.locfileid: "53063201"
 
    ![代码分析窗口](../test/media/ca-managed-collapsed.png "CA_Managed_Collapsed")
 
-##  <a name="BKMK_Analyze"></a>分析和解决代码分析警告
+## <a name="BKMK_Analyze"></a>分析和解决代码分析警告
  若要分析某个具体的警告，请在“代码分析”窗口中单击该警告的标题。 随后该警告将展开，显示有关问题的详细信息。
 
  ![展开的代码分析警告](../test/media/ca-managed-callouts.png "CA_Managed_Callouts")
@@ -69,9 +69,9 @@ ms.locfileid: "53063201"
  了解问题后，可在代码中解决该问题。 然后重新运行代码分析，以确保警告不再显示在“代码分析”窗口中，并且修复未引发新的警告。
 
 > [!TIP]
->  可从“代码分析”窗口中重新运行代码分析。 单击“分析”按钮，然后选择分析的范围。 可对整个解决方案对所选项目重新运行分析。
+> 可从“代码分析”窗口中重新运行代码分析。 单击“分析”按钮，然后选择分析的范围。 可对整个解决方案对所选项目重新运行分析。
 
-##  <a name="BKMK_Suppress"></a>禁止显示代码分析警告
+## <a name="BKMK_Suppress"></a>禁止显示代码分析警告
  有时，你可能会决定不修复代码分析警告。 你可能会觉得与代码的任何真实实现中引发问题的可能性相比，解决警告所需的重新编码工作量过大。 或者，你可能会认为在警告中使用的分析不适合特定的上下文。 可禁止显示个别警告，以使“代码分析”窗口中不再显示这些警告。
 
  若要禁止显示警告，请执行以下操作：
@@ -88,22 +88,22 @@ ms.locfileid: "53063201"
 
      决定在源文件中还是在禁止显示文件中禁止显示警告取决于编码风格和需要。
 
-##  <a name="BKMK_Search"></a>搜索和筛选代码分析结果
+## <a name="BKMK_Search"></a>搜索和筛选代码分析结果
  可搜索冗长的警告消息列表，也可在多项目解决方案中筛选警告。
 
  ![搜索并筛选代码分析窗口](../test/media/ca-searchfilter.png "CA_SearchFilter")
 
  在 [!INCLUDE[vs_dev11_expwin_long](../includes/vs-dev11-expwin-long-md.md)] 中，所有代码分析警告的严重性级别均为“警告”。
 
-##  <a name="BKMK_Warnings"></a> Visual Basic 和 C# 代码分析警告
+## <a name="BKMK_Warnings"></a> Visual Basic 和 C# 代码分析警告
  代码分析可引发以下警告：
 
- [CA1001：具有可释放字段的类型应该是可释放的](http://msdn.microsoft.com/library/ms182172.aspx)
+ [CA1001：具有可释放字段的类型应该是可释放的](https://msdn.microsoft.com/library/ms182172.aspx)
 
- [CA1821：移除空终结器](http://msdn.microsoft.com/library/bb264476.aspx)
+ [CA1821：移除空终结器](https://msdn.microsoft.com/library/bb264476.aspx)
 
- [CA2213：应释放可释放的字段](http://msdn.microsoft.com/library/ms182328.aspx)
+ [CA2213：应释放可释放的字段](https://msdn.microsoft.com/library/ms182328.aspx)
 
- [CA2229：实现序列化构造函数](http://msdn.microsoft.com/library/ms182343.aspx)
+ [CA2229：实现序列化构造函数](https://msdn.microsoft.com/library/ms182343.aspx)
 
- [CA2231：重写 ValueType.Equals 时应重载相等运算符](http://msdn.microsoft.com/library/ms182359.aspx)
+ [CA2231：重写 ValueType.Equals 时应重载相等运算符](https://msdn.microsoft.com/library/ms182359.aspx)

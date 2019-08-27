@@ -1,25 +1,20 @@
 ---
 title: 如何：创建基本纹理着色器 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: 5af113fb-6415-4be0-8b23-10fddb10e80a
 caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 18bb4f1ad4dfc3428e8dc30958013438de22e13a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: dce20d3e1833659ebfec2e84e6bff7f86dff844e
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49898533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63438433"
 ---
 # <a name="how-to-create-a-basic-texture-shader"></a>如何：创建基本纹理着色器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,15 +23,15 @@ ms.locfileid: "49898533"
   
  本文档演示了这些活动：  
   
--   移除着色器关系图中的节点  
+- 移除着色器关系图中的节点  
   
--   将节点添加到关系图  
+- 将节点添加到关系图  
   
--   设置着色器参数  
+- 设置着色器参数  
   
--   设置参数可见性  
+- 设置参数可见性  
   
--   连接节点  
+- 连接节点  
   
 ## <a name="creating-a-basic-texture-shader"></a>创建基本纹理着色器  
  可通过将纹理样本的颜色和 alpha 值直接写入最终输出颜色，实现基本的单纹理着色器。  
@@ -64,7 +59,7 @@ ms.locfileid: "49898533"
    下图显示了已完成的着色器关系图和应用于立方体的着色器预览。  
   
 > [!NOTE]
->  在此插图中，飞机用作预览形状，并且已指定一个纹理以更好地演示着色器的效果。  
+> 在此插图中，飞机用作预览形状，并且已指定一个纹理以更好地演示着色器的效果。  
   
  ![着色器图及其效果预览](../designers/media/digit-texture-effect.png "Digit-Texture-Effect")  
   
@@ -75,6 +70,3 @@ ms.locfileid: "49898533"
  [图像编辑器](../designers/image-editor.md)   
  [着色器设计器](../designers/shader-designer.md)   
  [着色器设计器节点](../designers/shader-designer-nodes.md)
-
-
-

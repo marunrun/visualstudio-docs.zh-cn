@@ -1,11 +1,8 @@
 ---
 title: Windows Workflow Foundation 用户界面帮助的旧版设计器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 helpviewer_keywords:
 - UI reference
@@ -15,13 +12,13 @@ ms.assetid: b3a0104f-4485-45ac-9794-82d54e45fb09
 caps.latest.revision: 6
 author: gewarren
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: 069c9e8947ec7095c701e560343d37077b060a2e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: c24816e84be2ef8f3460a04f689ecfda5400518e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49277753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63000144"
 ---
 # <a name="legacy-designer-for-windows-workflow-foundation-ui-help"></a>Windows Workflow Foundation 的旧版设计器 UI 帮助
 本节包含 [!INCLUDE[wfd1](../includes/wfd1-md.md)] 中的旧 [!INCLUDE[vs2010](../includes/vs2010-md.md)] 的上下文相关帮助主题。 在需要面向 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 或 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] 时，请使用旧设计器。  

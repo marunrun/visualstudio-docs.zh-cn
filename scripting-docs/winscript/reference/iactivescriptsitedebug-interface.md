@@ -2,7 +2,6 @@
 title: IActiveScriptSiteDebug 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,12 +13,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 339325686d2a98e34c6e9f96056612769a9e110e
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: 3cd8043648586ed3c614cbb137e51d992d7ae29b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54348303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992467"
 ---
 # <a name="iactivescriptsitedebug-interface"></a>IActiveScriptSiteDebug 接口
 智能主机实现`IActiveScriptSiteDebug`界面，用于执行文档管理和参与调试。 `IActiveScriptSite`对象通常提供的实现`IActiveScriptSiteDebug`接口。 如果此操作后，调用`IActiveScriptSite::QueryInterface`方法来获取`IActiveScriptSiteDebug`接口。  

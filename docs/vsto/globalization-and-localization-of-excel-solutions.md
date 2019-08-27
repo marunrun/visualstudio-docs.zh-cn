@@ -9,15 +9,15 @@ helpviewer_keywords:
 - globalization [Office development in Visual Studio], configuring
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6de8e63331c4cb5250ceadd6f7394dd54319e499
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f8d21f1697ce3d566c27e9845ae4c2a9a9d5e068
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53856405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62972286"
 ---
 # <a name="globalization-and-localization-of-excel-solutions"></a>全球化和本地化的 Excel 解决方案
   本节包含有关 Microsoft Office Excel 解决方案的特殊注意事项的信息，这些解决方案将在具有 Windows 非英语设置的计算机上运行。 全球化和本地化 Microsoft Office 解决方案过程中所遇到的大多数问题与使用 Visual Studio 创建其他各种解决方案时遇到的问题相同。 有关常规信息，请参阅[Globalize 和本地化应用程序](../ide/globalizing-and-localizing-applications.md)。
@@ -36,7 +36,7 @@ ms.locfileid: "53856405"
 
  即使你对由托管代码传递或操作的数据使用英语（美国）格式，Excel 仍然会根据最终用户的区域设置来正确解释并显示数据。 Excel 可以正确设置数据格式，因为托管代码将区域设置 ID 1033 与数据一起传递，这表示数据为英语（美国）格式，因此必须重新设置格式，使其与用户的区域设置相匹配。
 
- 例如，如果最终用户将其设置为德语 （德国） 区域设置的区域选项，他们期望日期 2005 年 6 月 29 日，要设置格式的这种方式：29.06.2005。 但是，如果你的解决方案将日期传递给 Excel 作为一个字符串，必须格式对应于英语 （美国） 格式的日期：2005 年 6 月 29 日。 如果将单元格格式化为日期单元格，则 Excel 将采用德语（德国）格式显示日期。
+ 例如，如果最终用户将其设置为德语 （德国） 区域设置的区域选项，他们期望日期 2005 年 6 月 29 日，要设置格式的这种方式：29.06.2005. 但是，如果你的解决方案将日期传递给 Excel 作为一个字符串，必须格式对应于英语 （美国） 格式的日期：6/29/2005. 如果将单元格格式化为日期单元格，则 Excel 将采用德语（德国）格式显示日期。
 
 ### <a name="pass-other-locale-ids-to-the-excel-object-model"></a>将其他区域设置 Id 传递给 Excel 对象模型
  公共语言运行时 (CLR) 会自动将区域设置 ID 1033 传递到接受区分区域设置的数据的 Excel 对象模型中的所有方法和属性。 无法为调入对象模型的所有调用自动更改此行为。 但是，通过使用 <xref:System.Type.InvokeMember%2A> 来调用方法以及将区域设置 ID 传递到方法的 *culture* 参数，可以将不同的区域设置 ID 传递到特定的方法。
@@ -47,7 +47,7 @@ ms.locfileid: "53856405"
  还必须确保与文档文本交互的任何代码部分都与文本的语言保持匹配，并确保书签、命名范围以及其他显示字段能够适应 Office 文档的重新格式化，针对不同语法和文本长度进行调整时需要该 Office 文档。 对于包含相对较少文本的文档模板，您可能需要考虑将文本存储在资源文件，并将其加载在运行时的文本。
 
 ### <a name="text-direction"></a>文本方向
- 在 Excel 中，可以将工作表的属性设置为从右向左呈现文本。 托管控件或具有任何控件`RightToLeft`属性，会自动放置在设计器中匹配这些设置在运行时。 Word 没有针对双向文本的文档设置（只能更改文本的对齐方式），因此这些控件不能映射到此设置。 相反，必须为每个控件设置文本对齐方式。 可以编写代码来遍历所有控件，并强制这些控件从右向左呈现文本。
+ 在 Excel 中，可以将工作表的属性设置为从右向左呈现文本。 托管控件或具有任何控件`RightToLeft`属性，会自动放置在设计器中匹配这些设置在运行时。 Word 不具有双向文本 （您只需更改的文本对齐方式） 的文档设置使控件不能映射到此设置。 相反，必须为每个控件设置文本对齐方式。 可以编写代码来遍历所有控件，并强制这些控件从右向左呈现文本。
 
 ### <a name="change-culture"></a>更改区域性
  文档级自定义项代码通常将共享 Excel 的主 UI 线程，因此，对线程区域性的任何更改都将影响在该线程上运行的所有其他内容；更改不会限制为针对自定义项。

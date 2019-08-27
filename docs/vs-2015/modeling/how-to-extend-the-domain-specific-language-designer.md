@@ -1,25 +1,22 @@
 ---
-title: 如何： 扩展域特定语言设计器 |Microsoft Docs
-ms.custom: ''
+title: 如何：扩展域特定语言设计器 |Microsoft Docs
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 ms.assetid: fa807f1b-2780-491e-925b-abbfd31b2bfa
 caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 434b9c5a575ab19530ca3c5c3e0d6536235b9f88
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 8c02dbf550ca1621a17d2b674a522e1e4f4bcc1c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49878552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62546936"
 ---
-# <a name="how-to-extend-the-domain-specific-language-designer"></a>如何：扩展域特定语言设计器
+# <a name="how-to-extend-the-domain-specific-language-designer"></a>如何：扩展特定于域的语言设计器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 您可以对用来编辑 DSL 定义的设计器进行扩展。 你可以对进行包括添加的菜单命令添加处理程序拖放双击手势和特定类型的值或关系更改时触发的规则的扩展的类型。 可以打包为 Visual Studio 集成扩展 (VSIX) 扩展，并将其分发给其他用户。  
@@ -31,25 +28,25 @@ ms.locfileid: "49878552"
   
 #### <a name="to-create-a-dsl-designer-extension-solution"></a>若要创建 DSL 设计器扩展解决方案  
   
-1.  创建新项目使用类库项目模板。 在中**新的项目**对话框中，单击**Visual C#** ，然后在中间的窗口中单击**类库**。  
+1. 创建新项目使用类库项目模板。 在中**新的项目**对话框中，单击**Visual C#** ，然后在中间的窗口中单击**类库**。  
   
      此项目将包含你的扩展的代码。  
   
-2.  创建新项目使用 VSIX 项目模板。 在中**新的项目**对话框框中，展开**Visual C#**，单击**扩展性**，然后在中间的窗口中选择**VSIX 项目**。  
+2. 创建新项目使用 VSIX 项目模板。 在中**新的项目**对话框框中，展开**Visual C#**，单击**扩展性**，然后在中间的窗口中选择**VSIX 项目**。  
   
      选择**将添加到解决方案**。  
   
      在 VSIX 清单编辑器中打开 Source.extension.vsixmanifest。  
   
-3.  以上内容的字段中，单击**添加内容**。  
+3. 以上内容的字段中，单击**添加内容**。  
   
-4.  在**添加内容**对话框中，将**中选择内容类型**到**MEF 组件**，并设置**项目**到你的类库项目。  
+4. 在**添加内容**对话框中，将**中选择内容类型**到**MEF 组件**，并设置**项目**到你的类库项目。  
   
-5.  单击**选择版本**并确保选中**Visual Studio Enterprise**检查。  
+5. 单击**选择版本**并确保选中**Visual Studio Enterprise**检查。  
   
-6.  请确保将 VSIX 项目的解决方案的启动项目。  
+6. 请确保将 VSIX 项目的解决方案的启动项目。  
   
-7.  在类库项目中，添加对以下程序集的引用：  
+7. 在类库项目中，添加对以下程序集的引用：  
   
      Microsoft.VisualStudio.CoreUtility  
   
@@ -317,4 +314,3 @@ namespace Fabrikam.SimpleDslDesignerExtension
     }  
 }  
 ```
-

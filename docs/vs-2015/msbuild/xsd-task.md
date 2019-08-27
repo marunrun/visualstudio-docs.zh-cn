@@ -1,14 +1,9 @@
 ---
 title: XSD 任务 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 f1_keywords:
 - vc.task.xsd
 - VC.Project.VCXMLDataGeneratorTool.Namespace
@@ -25,42 +20,41 @@ ms.assetid: 15c99f5c-7124-4bbc-bc03-70c7bcce8893
 caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: cd1aed6537d4fb49bafa34ce09dcb191c9475357
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 0c9dcc0d09887cacca7e6cdaa2e4f2b719c6451c
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49182632"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826249"
 ---
 # <a name="xsd-task"></a>XSD 任务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 包装从源生成架构或类文件的 XML 架构定义工具 (Xsd.exe)。  
   
 ## <a name="parameters"></a>参数  
  下表介绍了 **XSD** 任务的参数。  
   
--   **AdditionalOptions**  
+- **AdditionalOptions**  
   
      可选 **String** 参数。  
   
-     在命令行上指定的选项列表。 例如，“*/option1 /option2 /option#*”。 使用此参数可指定未由任何其他 **XSD** 任务参数表示的选项。  
+     在命令行上指定的选项列表。 例如，“ */option1 /option2 /option#* ”。 使用此参数可指定未由任何其他 **XSD** 任务参数表示的选项。  
   
--   **GenerateFromSchema**  
+- **GenerateFromSchema**  
   
-     可选 **String** 参数。  
+  可选 **String** 参数。  
+
+  指定从指定架构生成的类型。  
+
+  指定以下一个值，其中每个值对应于一个 XSD 选项。  
+
+  - **classes** -  **/classes**  
+
+  - **dataset** -  **/dataset**  
   
-     指定从指定架构生成的类型。  
-  
-     指定以下一个值，其中每个值对应于一个 XSD 选项。  
-  
-    -   **classes** - **/classes**  
-  
-    -   **dataset** - **/dataset**  
-  
--   **语言**  
+- **语言**  
   
      可选 **String** 参数。  
   
@@ -68,32 +62,29 @@ ms.locfileid: "49182632"
   
      从 **CS**（默认情况下为 C#）、**VB** (Visual Basic) 或 **JS** (JScript) 中进行选择。 也可指定实现 `System.CodeDom.Compiler.CodeDomProvider Class` 的类的完全限定名。  
   
--   **Namespace**  
+- **Namespace**  
   
      可选 **String** 参数。  
   
      为生成的类型指定运行时命名空间。  
   
--   **Sources**  
+- **Sources**  
   
      必选 `ITaskItem[]` 参数。  
   
      定义可以被任务使用和发出的 MSBuild 源文件项的数组。  
   
--   **SuppressStartupBanner**  
+- **SuppressStartupBanner**  
   
      可选 **Boolean** 参数。  
   
      如果为 `true`，则在任务开始时阻止显示版权和版本号消息。  
   
--   **TrackerLogDirectory**  
+- **TrackerLogDirectory**  
   
      可选 **String** 参数。  
   
      指定跟踪器日志目录。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [任务参考](../msbuild/msbuild-task-reference.md)
-
-
-

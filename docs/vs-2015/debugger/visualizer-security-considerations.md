@@ -1,14 +1,9 @@
 ---
 title: 可视化工具安全注意事项 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -21,13 +16,13 @@ ms.assetid: cdd86bd5-b729-409b-a7c6-374efa091eb1
 caps.latest.revision: 25
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: b25c9a183a843130861818f8a80948a68a8b1ed5
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 51c79c34520c36e51599d4d6135784f493673b62
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51800622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68146464"
 ---
 # <a name="visualizer-security-considerations"></a>可视化工具安全注意事项
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,15 +36,12 @@ ms.locfileid: "51800622"
   
  当调试对象不完全受信任时，在完全信任的情况下运行调试对象端代码会有问题。 如果可视化工具尝试将一个部分信任的程序集从调试对象加载到调试器中，则 Visual Studio 将终止此可视化工具。  
   
- 然而，微小的漏洞仍然存在。 调试对象端可以与从另一个源（不是调试对象）加载的调试器端相关联。 调试对象端然后可以通知受信任的调试器端代表它执行操作。 例如，如果受信任的调试端类公开一个“删除此文件”机制，则当用户调用其可视化工具时，部分信任的调试对象就会调用此机制。  
+ 然而，微小的漏洞仍然存在。 调试对象端可以与从另一个源（不是调试对象）加载的调试器端相关联。 调试对象端然后可以通知受信任的调试器端代表它执行操作。 例如，如果受信任的调试器端类公开一个“删除此文件”机制，则当用户调用其可视化工具时，部分信任的调试对象就会调用此机制。  
   
  若要减轻此漏洞的影响，请注意可视化工具公开的接口。  
   
 ## <a name="see-also"></a>请参阅  
  [可视化工具体系结构](../debugger/visualizer-architecture.md)   
- [如何： 编写可视化工具](../debugger/how-to-write-a-visualizer.md)   
+ [如何：编写可视化工具](../debugger/how-to-write-a-visualizer.md)   
  [创建自定义可视化工具](../debugger/create-custom-visualizers-of-data.md)   
  [查看调试器中的数据](../debugger/viewing-data-in-the-debugger.md)
-
-
-

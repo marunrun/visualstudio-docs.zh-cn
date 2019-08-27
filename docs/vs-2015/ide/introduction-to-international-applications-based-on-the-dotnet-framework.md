@@ -1,14 +1,9 @@
 ---
 title: 介绍基于 .NET Framework 的国际应用程序 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - strings [Visual Studio], localizing
 - Web applications [.NET Framework], globalization
@@ -30,18 +25,18 @@ ms.assetid: b0788993-e62d-4f68-8235-5f87b1d48525
 caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 3d1539d832b67a160e29b22b71066f72609e35b8
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: e56c48468b6890f9c51e3ac79ac6167fd8647903
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49270021"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65675146"
 ---
 # <a name="introduction-to-international-applications-based-on-the-net-framework"></a>介绍基于 .NET Framework 的国际应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中，世界通用的应用程序的创建包括两个部分：全球化（设计可以适应不同区域性的应用程序的过程）和本地化（为特定区域性转换资源的过程）。 有关为国际受众设计应用程序的常规信息，请参阅[开发全球通用应用程序的最佳做法](http://msdn.microsoft.com/library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c)。  
+在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中，世界通用的应用程序的创建包括两个部分：全球化（设计可以适应不同区域性的应用程序的过程）和本地化（为特定区域性转换资源的过程）。 有关为国际受众设计应用程序的常规信息，请参阅[开发全球通用应用程序的最佳做法](https://msdn.microsoft.com/library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c)。  
   
  [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 本地化模型由同时包含应用程序代码和回退资源的主要程序集组成 - 字符串、图像和用于最初开发应用程序时所使用的语言的其他对象。 每个本地化应用程序都会有附属程序集或仅包含经本地化的资源的程序集。 因为主程序集始终包含回退资源，如果在本地化附属程序集中找不到资源，<xref:System.Resources.ResourceManager> 将尝试以层级方式加载它，最终回退到主程序集的资源中。 [用于本地化的资源的分层组织](../ide/hierarchical-organization-of-resources-for-localization.md)中对资源回退系统有更详细的解释。  
   
@@ -58,4 +53,3 @@ ms.locfileid: "49270021"
  <xref:System.Resources>   
  [对应用程序进行全球化和本地化](../ide/globalizing-and-localizing-applications.md)   
  [安全性和已本地化的附属程序集](../ide/security-and-localized-satellite-assemblies.md)
-

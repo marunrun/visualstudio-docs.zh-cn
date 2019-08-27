@@ -1,7 +1,6 @@
 ---
 title: CA1716:标识符不应与关键字冲突
-ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
+ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
 - IdentifiersShouldNotMatchKeywords
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 900cc8a1-1089-4069-a4ce-10b109ac4fab
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d27fdd455d019532b47bc531f9f7377bacd6572e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9a51ac9509cf891c05166d46e4b72b862c0dc723
+ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53828623"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69547080"
 ---
 # <a name="ca1716-identifiers-should-not-match-keywords"></a>CA1716:标识符不应与关键字冲突
 
@@ -33,26 +32,36 @@ ms.locfileid: "53828623"
 
 ## <a name="cause"></a>原因
 
-命名空间、 类型或虚拟或接口成员的名称匹配的编程语言中的保留的关键字。
+命名空间、类型或虚拟或接口成员的名称与编程语言中的保留关键字匹配。
+
+默认情况下, 此规则仅查看外部可见的命名空间、类型和成员, 但这是[可配置](#configurability)的。
 
 ## <a name="rule-description"></a>规则说明
 
-命名空间、 类型、 标识符和虚拟和接口成员不应与面向公共语言运行时的语言所定义的关键字。 根据使用的语言和关键字，编译器错误和二义性可以使库难以使用。
+命名空间、类型和虚拟和接口成员的标识符不应与面向公共语言运行时的语言所定义的关键字匹配。 根据所用的语言和关键字, 编译器错误和歧义会使库难以使用。
 
-此规则检查针对以下语言中的关键字：
+此规则检查以下语言中的关键字:
 
 - Visual Basic
-
 - C#
-
 - C++/CLI
 
-有关使用不区分大小写比较[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]用于其他语言的关键字，并区分大小写比较。
+不区分大小写的比较用于 Visual Basic 关键字, 区分大小写比较用于其他语言。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-关键字的列表中选择不会出现的名称。
+选择不在关键字列表中显示的名称。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
-如果您确信标识符将混淆的 API，用户和库是在.NET Framework 中的所有可用语言中可用，可以禁止显示此规则的警告。
+如果确信标识符不会混淆 API 用户, 并且库可用于 .NET 中的所有可用语言, 则可以禁止显示此规则发出的警告。
+
+## <a name="configurability"></a>配置
+
+如果从[FxCop 分析器](install-fxcop-analyzers.md)(而不是传统分析) 运行此规则, 则可以根据其可访问性, 将基本代码的哪些部分配置为在上运行此规则。 例如, 若要指定规则只应针对非公共 API 图面运行, 请在项目中的 editorconfig 文件中添加以下键/值对:
+
+```ini
+dotnet_code_quality.ca1716.api_surface = private, internal
+```
+
+您可以为此规则、所有规则或此类别中的所有规则 (命名) 配置此选项。 有关详细信息, 请参阅[配置 FxCop 分析器](configure-fxcop-analyzers.md)。

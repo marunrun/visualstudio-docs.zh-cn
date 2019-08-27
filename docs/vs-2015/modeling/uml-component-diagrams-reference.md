@@ -1,12 +1,9 @@
 ---
-title: UML 组件图： 参考 |Microsoft Docs
-ms.custom: ''
+title: UML 组件图：引用 |Microsoft Docs
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: reference
 f1_keywords:
 - vs.teamarch.componentdiagram.diagram
 - vs.teamarch.componentdiagram.toolbox
@@ -21,13 +18,13 @@ ms.assetid: 5eddff6a-892a-4c3c-9278-687ac1eccc50
 caps.latest.revision: 38
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 0e77008d59543b0001f97b37933ff1073e488a33
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 581906741bb43eb221c6a0b6f6bb9aeccd2f3945
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51728123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63424385"
 ---
 # <a name="uml-component-diagrams-reference"></a>UML 组件图：参考
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,21 +38,20 @@ ms.locfileid: "51728123"
  有关如何使用组件图设计过程中的详细信息，请参阅[应用程序的体系结构建模](../modeling/model-your-app-s-architecture.md)。  
 
 > [!NOTE]
->  本主题介绍可以在组件图中使用的元素。 有关详细的有关如何绘制组件图的信息的详细信息请参阅[UML 组件图： 准则](../modeling/uml-component-diagrams-guidelines.md)。 有关如何在一般情况下绘制建模图的详细信息，请参阅[编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)。  
+> 本主题介绍可以在组件图中使用的元素。 有关详细的有关如何绘制组件图的信息的详细信息请参阅[UML 组件图：指导原则](../modeling/uml-component-diagrams-guidelines.md)。 有关如何在一般情况下绘制建模图的详细信息，请参阅[编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)。  
 
 ## <a name="reading-component-diagrams"></a>读取组件图  
  下表介绍可以在组件图上使用的元素以及它们的主要属性。 元素的属性的完整列表，请参阅[UML 组件图上元素的属性](../modeling/properties-of-elements-on-uml-component-diagrams.md)。  
 
  ![使用组件图上的元素](../modeling/media/uml-compovreading.png "UML_CompOvReading")  
 
-
-|  **形状**  |         **元素**         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         **描述和主要属性**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|  **Shape**  |         **元素**         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         **描述和主要属性**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 |-------------|-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |      1      |        **组件**        |                                                                                                                                                                                                                                                                                                                                  系统功能的可重用部件。 组件通过接口提供并使用行为，并且可以使用其他组件。<br /><br /> 可以使用展开/折叠控件 (9) 隐藏或显示组件的内部部件。<br /><br /> 组件是一种类。<br /><br /> -   **为间接实例化**。 如果为 true（默认值），则组件仅作为设计项目存在。 在运行时只有其部件存在。                                                                                                                                                                                                                                                                                                                                  |
 |      2      | **提供的接口端口** |                                                                                                                                                                                                                                                                                                                                                                                                                                                            表示某个组件实现的且其他组件或外部系统可以使用的一组消息或调用。 端口是使用接口作为其类型的组件的属性。                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |      3      | **所需的接口端口** |                                                                                                                                                                                                                                                                                                                                                                                                                                    表示组件发送到其他组件或外部系统的一组消息或调用。 该组件设计为耦合到至少提供这些操作的组件。 端口使用接口作为其类型。                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 |      4      |       **依赖关系**        |                                                                                                                                                                                                                                                                                                                                                                                                                     可用于指示一个组件上的所需的接口可以被另一个组件上的提供的接口满足。<br /><br /> 依赖关系还可以更广泛地用于模型元素之间，以显示一个元素的设计依赖于另一个元素的设计。                                                                                                                                                                                                                                                                                                                                                                                                                      |
-|      5      |          **一部分**           | 组件的特性，其类型通常是另一个组件。 部件用于其父组件的内部设计。 部件以图形方式显示，嵌套在父组件内。<br /><br /> 要创建现有组件类型的部件，请将该组件从 UML 模型资源管理器拖动到所有者组件中。<br /><br /> 若要创建新类型的部分，单击**组件**工具，然后单击所有者组件。<br /><br /> 例如，组件 `Car` 具有 `engine:CarEngine`、`backLeft:Wheel`、`frontRight:Wheel` 等部件。<br /><br /> 多个部件可以具有同一类型，且不同组件可以具有同一类型的部件。<br /><br /> -   **类型**。 部件的类型，在模型中的其他位置定义。 类型通常为另一个组件。<br />-   **重数**。 默认值为 1。 可以将其设置为**0..1**以指示部件可以具有值**null**， **\\** \*以指示的部分是实例的集合给定类型或任何表达式的计算结果可以是一系列数字。 |
+|      5      |          **Part**           | 组件的特性，其类型通常是另一个组件。 部件用于其父组件的内部设计。 部件以图形方式显示，嵌套在父组件内。<br /><br /> 要创建现有组件类型的部件，请将该组件从 UML 模型资源管理器拖动到所有者组件中。<br /><br /> 若要创建新类型的部分，单击**组件**工具，然后单击所有者组件。<br /><br /> 例如，组件 `Car` 具有 `engine:CarEngine`、`backLeft:Wheel`、`frontRight:Wheel` 等部件。<br /><br /> 多个部件可以具有同一类型，且不同组件可以具有同一类型的部件。<br /><br /> -   **类型**。 部件的类型，在模型中的其他位置定义。 类型通常为另一个组件。<br />-   **重数**。 默认值为 1。 可以将其设置为**0..1**以指示部件可以具有值**null**， **\\** \*以指示的部分是实例的集合给定类型或任何表达式的计算结果可以是一系列数字。 |
 |      6      |      **部件程序集**      |                                                                                                                                                                                                                                                                                                                                                                                                                                  一个部件的所需的接口端口与另一个部件的提供的接口端口之间的连接。 部件程序集的实现因组件的不同而异。 连接的部件必须具有同一父组件。                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |      7      |       **委派**        |                                                                                                                                                                                                                                                                                                                                                                                                                                                 将端口链接到某个组件部件的接口。 指示发送到组件的消息由部件处理，或者发送自部件的消息从父组件发出。                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | （不显示） |     **泛化**      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          指示一个组件继承自另一个组件。 部件和接口是继承的。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
@@ -64,12 +60,9 @@ ms.locfileid: "51728123"
 
 ## <a name="see-also"></a>请参阅  
  [编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)   
- [UML 组件图： 准则](../modeling/uml-component-diagrams-guidelines.md)   
+ [UML 组件关系图：指导原则](../modeling/uml-component-diagrams-guidelines.md)   
  [在开发过程中验证您的系统](../modeling/validate-your-system-during-development.md)   
- [UML 用例图： 参考](../modeling/uml-use-case-diagrams-reference.md)   
- [UML 类图： 参考](../modeling/uml-class-diagrams-reference.md)   
- [UML 活动图： 参考](../modeling/uml-activity-diagrams-reference.md)   
- [UML 序列图：参考](../modeling/uml-sequence-diagrams-reference.md)
-
-
-
+ [UML 用例关系图：引用](../modeling/uml-use-case-diagrams-reference.md)   
+ [UML 类关系图：引用](../modeling/uml-class-diagrams-reference.md)   
+ [UML 活动关系图：引用](../modeling/uml-activity-diagrams-reference.md)   
+ [UML 序列关系图：参考](../modeling/uml-sequence-diagrams-reference.md)

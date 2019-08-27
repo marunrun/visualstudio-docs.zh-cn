@@ -1,7 +1,6 @@
 ---
 title: 可移植性警告
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - vs.codeanalysis.PortabilityRules
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 902e859a-2153-4970-baaa-8a5b4a11806f
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f181411d8379c8583057419c2a31f6b27c9d884
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a6a3557cffec60de91da46f60040ec675c866cbf
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53882450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62825320"
 ---
 # <a name="portability-warnings"></a>可移植性警告
 可移植性警告支持跨不同操作系统的可移植性。

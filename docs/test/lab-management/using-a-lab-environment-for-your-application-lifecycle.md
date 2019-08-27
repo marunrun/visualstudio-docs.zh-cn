@@ -1,21 +1,20 @@
 ---
 title: 使用实验室环境进行开发
 ms.date: 05/02/2017
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - lab environment, test lab
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 7b93e4f065cbd776de9f70fae61594e828a92fe8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 0d8b4806a8db576f2aa6c9af198e9b7f2c974556
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53940688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62783408"
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>使用实验室环境进行开发
 
@@ -56,7 +55,7 @@ ms.locfileid: "53940688"
 
 ## <a name="use-the-visual-studio-lab-management-features-of-microsoft-test-manager"></a>使用 Microsoft 测试管理器的 Visual Studio 实验室管理工具版功能
 
-使用 Visual Studio 2017 Enterprise 时，可以使用 Microsoft 测试管理器的 Visual Studio 实验室管理工具版功能创建和管理实验室环境。
+使用 Visual Studio Enterprise Edition 时，可以使用 Microsoft 测试管理器的 Visual Studio 实验室管理工具版功能创建和管理实验室环境。
 
 实验室管理工具版会在环境中的每台计算机上自动安装测试代理。
 
@@ -142,4 +141,4 @@ ms.locfileid: "53940688"
 
 * [安装和配置测试代理](../../test/lab-management/install-configure-test-agents.md)
 * [Visual Studio 实验室管理工具版指南](https://aka.ms/vsarsolutions)
-* [Microsoft DevOps Blog](https://blogs.msdn.microsoft.com/devops/)
+* [Microsoft DevOps Blog](https://devblogs.microsoft.com/devops/)

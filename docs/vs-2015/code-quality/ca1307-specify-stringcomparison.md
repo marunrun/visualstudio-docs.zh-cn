@@ -1,14 +1,9 @@
 ---
-title: CA1307： 指定 StringComparison |Microsoft Docs
-ms.custom: ''
+title: CA1307:指定 StringComparison |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA1307
 - SpecifyStringComparison
@@ -20,14 +15,14 @@ caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 90da21195e5bc2f50708bedc869e945da2d291dd
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 292e174feeb123c640306bc8ef3ffedd7e8847f6
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49853124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68200350"
 ---
-# <a name="ca1307-specify-stringcomparison"></a>CA1307：指定 StringComparison
+# <a name="ca1307-specify-stringcomparison"></a>CA1307:指定 StringComparison
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -52,7 +47,4 @@ ms.locfileid: "49853124"
  它可以安全地禁止显示此规则的警告，当库或应用程序适用于有限的本地用户，并因此不会本地化。
 
 ## <a name="see-also"></a>请参阅
- [全球化警告](../code-quality/globalization-warnings.md) [CA1309： 使用序号 StringComparison](../code-quality/ca1309-use-ordinal-stringcomparison.md)
-
-
-
+ [全球化警告](../code-quality/globalization-warnings.md) [CA1309:使用序号 StringComparison](../code-quality/ca1309-use-ordinal-stringcomparison.md)

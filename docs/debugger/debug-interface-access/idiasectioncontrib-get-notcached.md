@@ -9,33 +9,34 @@ helpviewer_keywords:
 ms.assetid: 5408ea53-f64c-431e-9f62-62819026b038
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e9aaf964d4072691746009c4d1ebb8f46a3c4d47
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: dd58933146cea4a953c0c4290cebb0d12af8f199
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53851597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62839662"
 ---
 # <a name="idiasectioncontribgetnotcached"></a>IDiaSectionContrib::get_notCached
-检索一个标志，指示是否不能缓存部分。  
-  
-## <a name="syntax"></a>语法  
-  
-```C++  
-HRESULT get_notCached (   
-   BOOL* pRetVal  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `pRetVal`  
- [out]返回`TRUE`如果不能缓存部分; 否则，返回`FALSE`。  
-  
-## <a name="return-value"></a>返回值  
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。  
-  
-## <a name="see-also"></a>请参阅  
- [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)
+检索一个标志，指示是否不能缓存部分。
+
+## <a name="syntax"></a>语法
+
+```C++
+HRESULT get_notCached ( 
+   BOOL* pRetVal
+);
+```
+
+#### <a name="parameters"></a>参数
+ `pRetVal`
+
+[out]返回`TRUE`如果不能缓存部分; 否则，返回`FALSE`。
+
+## <a name="return-value"></a>返回值
+ 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。
+
+## <a name="see-also"></a>请参阅
+- [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

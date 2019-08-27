@@ -1,11 +1,8 @@
 ---
 title: 选择规则组对话框 （旧版） |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 f1_keywords:
 - System.Workflow.Activities.Rules.Design.RuleSetBrowserDialog.UI
@@ -15,18 +12,18 @@ ms.assetid: cb2bc3f9-7730-4fb2-9f7b-303a9d9f0c8e
 caps.latest.revision: 6
 author: gewarren
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: c53aefdf17e11974e5ef563cd3684e80722837c1
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 6b3c2a7e23aba13cbe843c33510a81b66ba2b815
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49195983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63445415"
 ---
 # <a name="select-rule-set-dialog-box-legacy"></a>“选择规则集”对话框（旧版）
 本主题介绍如何使用**选择规则集**对话框中，在旧[!INCLUDE[wfd1](../includes/wfd1-md.md)]。 在需要面向 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 或 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 时，请使用旧 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]。  
   
- **选择规则集**对话框用于选择可用于的规则集[PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019)活动。 有关如何访问信息**选择规则集**对话框中，请参阅[如何： 创建 PolicyActivity 规则集 （旧版）](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md)。  
+ **选择规则集**对话框用于选择可用于的规则集[PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019)活动。 有关如何访问信息**选择规则集**对话框中，请参阅[如何：创建 PolicyActivity 规则集 （旧版）](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md)。  
   
  下表介绍的用户界面 (UI) 元素**选择规则集**对话框。  
   
@@ -42,7 +39,7 @@ ms.locfileid: "49195983"
  有关如何创建和编辑规则集的详细信息，请参阅[规则设置编辑器对话框 （旧版）](../workflow-designer/rule-set-editor-dialog-box-legacy.md)。  
   
 > [!WARNING]
->  用于面向 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 或 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 的旧 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] 的规则编辑器不支持多目标。  
+> 用于面向 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 或 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 的旧 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] 的规则编辑器不支持多目标。  
   
  有关条件的详细信息，请参阅[在工作流中使用条件](http://go.microsoft.com/fwlink?LinkID=65009)。  
   

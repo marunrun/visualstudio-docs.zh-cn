@@ -1,24 +1,23 @@
 ---
 title: 选项, 文本编辑器, XML, 杂项
 ms.date: 10/29/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Miscellaneous
 ms.assetid: b6538cbe-badd-4313-a1fb-39e906736bbe
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 85f37f4266f4c05d4de016caa07e8cc6e3cf43a4
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: d3421580251a6a871adba311fd609e881e088ebd
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53905619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62969210"
 ---
 # <a name="options-text-editor-xml-miscellaneous"></a>选项, 文本编辑器, XML, 杂项
 
-使用“杂项”属性页更改 XML 编辑器的自动完成和架构设置。 若要打开“选项”对话框，请单击“工具”菜单，然后单击“选项”。 要访问“杂项”属性页，请展开“文本编辑器” > “XML” > “杂项”节点。
+使用“杂项”选项页更改 XML 编辑器的自动完成和架构设置。 要访问杂项 XML 选项，请选择“工具” > “选项” > “文本编辑器” > “XML”，然后选择“杂项”。
 
 ## <a name="auto-insert"></a>自动插入
 
@@ -54,9 +53,9 @@ ms.locfileid: "53905619"
 
 **架构**
 
-指定架构缓存的位置。 “浏览”按钮 (...) 在新窗口中打开当前架构的缓存位置。 默认位置为 \<Management Studio 安装目录>\Xml\Schemas。
+指定架构缓存的位置。 “浏览”按钮在新窗口中打开当前架构的缓存位置。 默认位置为 %VsInstallDir%\xml\Schemas。
 
 ## <a name="see-also"></a>请参阅
 
-- [如何：创建 XML 文档 (Visual Basic)](/dotnet/visual-basic/programming-guide/program-structure/how-to-create-xml-documentation)
-- [代码生成](../code-generation-in-visual-studio.md)
+- [XML 选项 - 格式设置](options-text-editor-xml-formatting.md)
+- [Visual Studio 中的 XML 工具](../../xml-tools/xml-tools-in-visual-studio.md)

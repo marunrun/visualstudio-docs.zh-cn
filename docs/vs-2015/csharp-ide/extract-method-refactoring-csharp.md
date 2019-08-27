@@ -1,14 +1,9 @@
 ---
 title: 提取方法重构 (C#) |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - vs.csharp.refactoring.extractmethod
 dev_langs:
@@ -20,13 +15,13 @@ ms.assetid: eeba11df-a815-4bec-9c21-8a831891b783
 caps.latest.revision: 29
 author: gewarren
 ms.author: gewarren
-manager: wpickett
-ms.openlocfilehash: cc05da79676beed5fa698f11843a6b7485280e71
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 5a889250e641e004bdb0d89f6965c43c3d6b8e2a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49228054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68155252"
 ---
 # <a name="extract-method-refactoring-c"></a>提取方法重构 (C#)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,19 +32,19 @@ ms.locfileid: "49228054"
   
  **提取方法**具有以下优点：  
   
--   鼓励通过强调离散、 可重复使用方法的最佳编码实践。  
+- 鼓励通过强调离散、 可重复使用方法的最佳编码实践。  
   
--   鼓励自文档化代码中通过较好的组织。  
+- 鼓励自文档化代码中通过较好的组织。  
   
      具说明性的名称时使用的高级方法可以像读取一系列的注释。  
   
--   鼓励创建精细的方法，以简化重写。  
+- 鼓励创建精细的方法，以简化重写。  
   
--   可以减少代码重复。  
+- 可以减少代码重复。  
   
 ### <a name="to-use-extract-method"></a>若要使用提取方法  
   
-1.  创建名为 `ExtractMethod` 的控制台应用程序，然后将 `Program` 替换为下面的示例代码。  
+1. 创建名为 `ExtractMethod` 的控制台应用程序，然后将 `Program` 替换为下面的示例代码。  
   
     ```csharp  
     class A  
@@ -73,13 +68,13 @@ ms.locfileid: "49228054"
     }  
     ```  
   
-2.  选择你想要提取的代码片段：  
+2. 选择你想要提取的代码片段：  
   
     ```csharp  
     double area = PI * radius * radius;  
     ```  
   
-3.  上**重构**菜单上，单击**提取方法**。  
+3. 上**重构**菜单上，单击**提取方法**。  
   
      **提取方法**对话框随即出现。  
   
@@ -87,11 +82,11 @@ ms.locfileid: "49228054"
   
      您还可以右键单击所选代码中，指向**重构**，然后单击**提取方法**以显示**提取方法**对话框。  
   
-4.  指定的名称的新方法，如`CircleArea`，请在**新的方法名称**框。  
+4. 指定的名称的新方法，如`CircleArea`，请在**新的方法名称**框。  
   
      新的方法签名的预览显示在下**预览方法签名**。  
   
-5.  单击 **“确定”**。  
+5. 单击 **“确定”** 。  
   
 ## <a name="remarks"></a>备注  
  当你使用**提取方法**命令时，同一个类中的源成员之后插入新方法。  

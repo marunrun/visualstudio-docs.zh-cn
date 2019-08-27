@@ -2,21 +2,20 @@
 title: 工作流设计器-Throw 活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - System.Activities.Statements.Throw.UI
 ms.assetid: 5e97c947-be39-4a1f-af04-000e2e09528a
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dd0a6ec009262d1f9b9e66460437499279630034
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7074ee2a11759983f103024033cb2b96322330cc
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53873575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62434015"
 ---
 # <a name="throw-activity-designer"></a>Throw 活动设计器
 

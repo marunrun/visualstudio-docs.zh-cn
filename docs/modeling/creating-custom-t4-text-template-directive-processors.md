@@ -6,18 +6,17 @@ helpviewer_keywords:
 - text templates, custom directive processors
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 5db3772b782af666023f39fd833e18ba2092c176
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 3f9d514178e4b899ca727e17ead260719697b562
+ms.sourcegitcommit: 6a19c5ece38a70731496a38f2ef20676ff18f8a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53989145"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476639"
 ---
-# <a name="creating-custom-t4-text-template-directive-processors"></a>创建自定义 T4 文本模板指令处理器
+# <a name="create-custom-t4-text-template-directive-processors"></a>创建自定义 T4 文本模板指令处理器
 
 *文本模板转换过程*采用*文本模板*文件作为输入并生成一个文本文件作为输出。 *文本模板转换引擎*控件与文本模板转换主机和一个或多个文本模板过程中和引擎进行交互*指令处理器*完成过程。 有关详细信息，请参阅[文本模板转换过程](../modeling/the-text-template-transformation-process.md)。
 
@@ -41,9 +40,9 @@ ms.locfileid: "53989145"
 
 可以自定义指令处理器的一些示例：
 
--   若要从作为参数接受用户名和密码的数据库中返回的数据指令处理器。
+- 若要从作为参数接受用户名和密码的数据库中返回的数据指令处理器。
 
--   打开和读取文件的指令处理器作为参数接受的文件的名称。
+- 打开和读取文件的指令处理器作为参数接受的文件的名称。
 
 ### <a name="principal-parts-of-a-custom-directive-processor"></a>自定义指令处理器的主体部分
 
@@ -51,19 +50,19 @@ ms.locfileid: "53989145"
 
 最重要`DirectiveProcessor`必须实现的方法如下所示。
 
--   `bool IsDirectiveSupported(string directiveName)` -返回`true`如果指令处理器可以处理通过命名指令。
+- `bool IsDirectiveSupported(string directiveName)` -返回`true`如果指令处理器可以处理通过命名指令。
 
--   `void ProcessDirective (string directiveName, IDictionary<string, string> arguments)` 模板引擎调用此方法对每个模板中的指令。 您的处理器应该保存结果。
+- `void ProcessDirective (string directiveName, IDictionary<string, string> arguments)` 模板引擎调用此方法对每个模板中的指令。 您的处理器应该保存结果。
 
 之后所有调用了 Processdirective 的模板化引擎将调用这些方法：
 
--   `string[] GetReferencesForProcessingRun()` -返回的模板代码需要的程序集的名称。
+- `string[] GetReferencesForProcessingRun()` -返回的模板代码需要的程序集的名称。
 
--   `string[] GetImportsForProcessingRun()` -返回可用的命名空间中的模板代码。
+- `string[] GetImportsForProcessingRun()` -返回可用的命名空间中的模板代码。
 
--   `string GetClassCodeForProcessingRun()` -返回代码的方法、 属性和模板代码可以使用其他声明。 若要执行此操作的最简单方法是构建包含 C# 或 Visual Basic 代码的字符串。 若要使能够从使用任何 CLR 语言的模板调用指令处理器，您可以将语句构造为 CodeDom 树，然后返回序列化该模板使用的语言中的树的结果。
+- `string GetClassCodeForProcessingRun()` -返回代码的方法、 属性和模板代码可以使用其他声明。 若要执行此操作的最简单方法是构建包含 C# 或 Visual Basic 代码的字符串。 若要使能够从使用任何 CLR 语言的模板调用指令处理器，您可以将语句构造为 CodeDom 树，然后返回序列化该模板使用的语言中的树的结果。
 
--   有关详细信息，请参见[演练：创建自定义指令处理器](../modeling/walkthrough-creating-a-custom-directive-processor.md)。
+- 有关详细信息，请参见[演练：创建自定义指令处理器](../modeling/walkthrough-creating-a-custom-directive-processor.md)。
 
 ## <a name="see-also"></a>请参阅
 

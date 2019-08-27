@@ -1,7 +1,6 @@
 ---
 title: “列出内存”命令
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - debug.listmemory
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: a84de361-a6a6-4f6d-96aa-a0d4a424371e
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c0c2512bd6b446c35aa01e9f56711bb39cd85b3
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d6d0b694f9703c6260d95ad03e085fcdf774dc52
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53846082"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68919130"
 ---
 # <a name="list-memory-command"></a>“列出内存”命令
 显示指定范围内内存的内容。
@@ -33,41 +32,41 @@ Debug.ListMemory [/ANSI|Unicode] [/Count:number] [/Format:formattype]
 ```
 
 ## <a name="arguments"></a>自变量
- `expression`
+`expression`
 
- 可选。 从此处开始显示内存的内存地址。
+可选。 从此处开始显示内存的内存地址。
 
 ## <a name="switches"></a>开关
- /ANSI&#124;Unicode
+/ANSI&#124;Unicode
 
- 可选。 将内存显示为对应于内存的字节的 ANSI 或 Unicode 字符。
+可选。 将内存显示为对应于内存的字节的 ANSI 或 Unicode 字符。
 
- /Count:`number`
+/Count:`number`
 
- 可选。 确定要显示的内存的字节数，从 `expression` 开始。
+可选。 确定要显示的内存的字节数，从 `expression` 开始。
 
- /Format:`formattype`
+/Format:`formattype`
 
- 可选。 查看“内存”窗口中的内存信息时使用的格式类型；可以为 OneByte、TwoBytes、FourBytes、EightBytes、Float（32 位）或 Double（64 位）。 如果使用 OneByte，则 `/Unicode` 不可用。
+可选。 查看“内存”窗口中的内存信息时使用的格式类型；可以为 OneByte、TwoBytes、FourBytes、EightBytes、Float（32 位）或 Double（64 位）  。 如果使用 OneByte，则 `/Unicode` 不可用。
 
- /Hex&#124;Signed&#124;Unsigned
+/Hex&#124;Signed&#124;Unsigned
 
- 可选。 指定查看数字时使用的格式：有符号、无符号的或十六进制。
+可选。 指定查看数字时使用的格式：有符号、无符号的或十六进制。
 
 ## <a name="remarks"></a>备注
- 不必写出带所有开关的完整“Debug.ListMemory”命令，可以使用某些开关预设为指定值的预定义别名调用该命令。 例如，不必输入：
+不必写出带所有开关的完整“Debug.ListMemory”命令，可以使用某些开关预设为指定值的预定义别名调用该命令  。 例如，不必输入：
 
 ```cmd
 >Debug.ListMemory /Format:float /Count:30 /Unicode
 ```
 
- 可写入：
+可写入：
 
 ```cmd
 >df /Count:30 /Unicode
 ```
 
- 下面是 Debug.ListMemory 命令的可用别名列表：
+下面是 Debug.ListMemory 命令的可用别名列表  ：
 
 |Alias|命令和开关|
 |-----------| - |
@@ -86,7 +85,7 @@ Debug.ListMemory [/ANSI|Unicode] [/Count:number] [/Format:formattype]
 >Debug.ListMemory /Format:float /Count:30 /Unicode
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [“列出调用堆栈”命令](../../ide/reference/list-call-stack-command.md)
 - [“列出线程”命令](../../ide/reference/list-threads-command.md)

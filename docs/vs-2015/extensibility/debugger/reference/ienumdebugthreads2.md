@@ -1,14 +1,9 @@
 ---
-title: IEnumDebugThreads2 |Microsoft Docs
-ms.custom: ''
+title: IEnumDebugThreads2 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - IEnumDebugThreads2
 helpviewer_keywords:
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 1854f078-3b49-42c2-b65b-33e3b506fd63
 caps.latest.revision: 12
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 9b60d62846ce777897784e005457fe6cf2ca272a
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 97bc8383f990f6c0c35a402f2ab36b2595d82a9e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51754517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68147688"
 ---
 # <a name="ienumdebugthreads2"></a>IEnumDebugThreads2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -46,7 +41,7 @@ IEnumDebugThreads2 : IUnknown
   
 |方法|描述|  
 |------------|-----------------|  
-|[下一篇](../../../extensibility/debugger/reference/ienumdebugthreads2-next.md)|检索指定的数目的枚举序列中的线程。|  
+|[下一页](../../../extensibility/debugger/reference/ienumdebugthreads2-next.md)|检索指定的数目的枚举序列中的线程。|  
 |[Skip](../../../extensibility/debugger/reference/ienumdebugthreads2-skip.md)|将跳过指定的数目的枚举序列中的线程。|  
 |[Reset](../../../extensibility/debugger/reference/ienumdebugthreads2-reset.md)|将枚举序列重置到开头。|  
 |[Clone](../../../extensibility/debugger/reference/ienumdebugthreads2-clone.md)|创建包含相同枚举状态与当前的枚举器。|  
@@ -58,9 +53,9 @@ IEnumDebugThreads2 : IUnknown
 ## <a name="requirements"></a>要求  
  标头： msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间:Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>请参阅  
  [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)   
@@ -69,4 +64,3 @@ IEnumDebugThreads2 : IUnknown
  [步骤](../../../extensibility/debugger/reference/idebugprocess3-step.md)   
  [继续](../../../extensibility/debugger/reference/idebugprocess3-continue.md)   
  [Execute](../../../extensibility/debugger/reference/idebugprocess3-execute.md)
-

@@ -10,17 +10,17 @@ dev_langs:
 helpviewer_keywords:
 - SharePoint development in Visual Studio, adding applications page to workflow
 - application page [SharePoint development in Visual Studio]
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cb0dfa7212cae1dd4e7c62f71f423c0f8fd275d9
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MT
+ms.openlocfilehash: 032447051bc03b037abba2920d48473f0d73935f
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53938194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63409544"
 ---
 # <a name="walkthrough-add-an-application-page-to-a-workflow"></a>演练：将应用程序页添加到工作流
   本演练演示如何添加显示数据派生自工作流到工作流项目的应用程序页。 它建立在本主题中介绍的项目[演练：使用关联和初始化表单创建工作流](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)。
@@ -38,22 +38,22 @@ ms.locfileid: "53938194"
 ## <a name="prerequisites"></a>系统必备
  你需要以下组件来完成本演练：
 
--   支持的版本[!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)]和 SharePoint。
+- 支持的版本[!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)]和 SharePoint。
 
--   Visual Studio。
+- Visual Studio。
 
--   你还必须完成本主题中的项目[演练：使用关联和初始化表单创建工作流](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)。
+- 你还必须完成本主题中的项目[演练：使用关联和初始化表单创建工作流](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)。
 
 ## <a name="ammend-the-workflow-code"></a>Ammend 工作流代码
  首先，将代码行添加到工作流的结果列的值设置为的费用报表金额。 支出报表摘要计算更高版本中使用此值。
 
 #### <a name="to-set-the-value-of-the-outcome-column-in-the-workflow"></a>若要在工作流中设置结果列的值
 
-1.  加载已完成的项目从主题[演练：使用关联和启动窗体创建工作流](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)到[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]。
+1. 加载已完成的项目从主题[演练：使用关联和启动窗体创建工作流](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)到[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]。
 
-2.  打开的代码*Workflow1.cs*或*Workflow1.vb* （具体取决于您的编程语言）。
+2. 打开的代码*Workflow1.cs*或*Workflow1.vb* （具体取决于您的编程语言）。
 
-3.  到底部`createTask1_MethodInvoking`方法中，添加以下代码：
+3. 到底部`createTask1_MethodInvoking`方法中，添加以下代码：
 
     ```vb
     createTask1_TaskProperties1.ExtendedProperties("Outcome") =
@@ -70,11 +70,11 @@ ms.locfileid: "53938194"
 
 #### <a name="to-add-an-application-page-to-the-project"></a>若要将应用程序页添加到项目
 
-1.  选择 ExpenseReport 项目，然后在菜单栏上选择**项目** > **添加新项**。
+1. 选择 ExpenseReport 项目，然后在菜单栏上选择**项目** > **添加新项**。
 
-2.  在**模板**窗格中，选择**应用程序页**模板中，使用项目项的默认名称 (**ApplicationPage1.aspx**)，然后选择**添加**按钮。
+2. 在**模板**窗格中，选择**应用程序页**模板中，使用项目项的默认名称 (**ApplicationPage1.aspx**)，然后选择**添加**按钮。
 
-3.  在中[!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]ApplicationPage1.aspx 的替换`PlaceHolderMain`节替换为以下：
+3. 在中[!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]ApplicationPage1.aspx 的替换`PlaceHolderMain`节替换为以下：
 
     ```aspx-csharp
     <asp:Content ID="Main" ContentPlaceHolderID="PlaceHolderMain" runat="server">
@@ -88,7 +88,7 @@ ms.locfileid: "53938194"
 
      此代码将表添加到与标题页。
 
-4.  通过将替换为添加到应用程序页标题`PlaceHolderPageTitleInTitleArea`节替换为以下：
+4. 通过将替换为添加到应用程序页标题`PlaceHolderPageTitleInTitleArea`节替换为以下：
 
     ```aspx-csharp
     <asp:Content ID="PageTitleInTitleArea" ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server" >
@@ -101,9 +101,9 @@ ms.locfileid: "53938194"
 
 #### <a name="to-code-the-application-page"></a>编写应用程序页的代码
 
-1.  选择**ApplicationPage1.aspx**节点，然后在菜单栏上选择**视图** > **代码**以显示代码隐藏的应用程序页。
+1. 选择**ApplicationPage1.aspx**节点，然后在菜单栏上选择**视图** > **代码**以显示代码隐藏的应用程序页。
 
-2.  替换**使用**或**导入**语句 （具体取决于您的编程语言） 使用以下类的顶部：
+2. 替换**使用**或**导入**语句 （具体取决于您的编程语言） 使用以下类的顶部：
 
     ```vb
     Imports System
@@ -131,7 +131,7 @@ ms.locfileid: "53938194"
     using Microsoft.SharePoint.Navigation;
     ```
 
-3.  将以下代码添加到 `Page_Load` 方法中：
+3. 将以下代码添加到 `Page_Load` 方法中：
 
     ```vb
     Try
@@ -295,7 +295,7 @@ ms.locfileid: "53938194"
     ```
 
     > [!WARNING]
-    >  请务必将"TestServer"的有效运行 SharePoint 的服务器名称替换为在代码中。
+    > 请务必将"TestServer"的有效运行 SharePoint 的服务器名称替换为在代码中。
 
 ## <a name="test-the-application-page"></a>测试应用程序页
  接下来，确定应用程序页上是否正确显示费用数据。
@@ -343,9 +343,9 @@ ms.locfileid: "53938194"
 
  您可以详细了解如何通过使用 Visual Studio 中从下面这些主题的 Visual Web 设计器设计 SharePoint 页内容：
 
--   [为 SharePoint 创建 web 部件](../sharepoint/creating-web-parts-for-sharepoint.md)。
+- [为 SharePoint 创建 web 部件](../sharepoint/creating-web-parts-for-sharepoint.md)。
 
--   [创建的 web 部件或应用程序页的可重用控件](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)。
+- [创建的 web 部件或应用程序页的可重用控件](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)。
 
 ## <a name="see-also"></a>请参阅
 

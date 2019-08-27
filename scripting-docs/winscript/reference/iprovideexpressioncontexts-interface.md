@@ -2,7 +2,6 @@
 title: IProvideExpressionContexts Interface | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,12 +13,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 91f4251fec57001ba6c7a4ea1804ec72371418bb
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
-ms.translationtype: MT
+ms.openlocfilehash: b6ec0d5e17b0d3527252352c2e789adfac4fa859
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54345092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63410050"
 ---
 # <a name="iprovideexpressioncontexts-interface"></a>IProvideExpressionContexts 接口
 提供枚举特定组件已知的表达式上下文的一种方式。 脚本引擎通常情况下实现此接口。  
@@ -27,7 +26,7 @@ ms.locfileid: "54345092"
  进程调试管理器使用此接口以查找与给定线程关联的所有全局表达式上下文。  
   
 > [!NOTE]
->  此接口是从所需的线程内调用的。 它是由实现者确定当前线程，并返回相应的枚举器。  
+> 此接口是从所需的线程内调用的。 它是由实现者确定当前线程，并返回相应的枚举器。  
   
 ## <a name="methods"></a>方法  
  除了继承的方法之外`IUnknown`，则`IProvideExpressionContexts`接口公开以下方法。  

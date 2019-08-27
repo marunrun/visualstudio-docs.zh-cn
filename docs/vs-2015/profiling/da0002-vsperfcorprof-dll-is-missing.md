@@ -1,14 +1,9 @@
 ---
 title: DA0002：缺少 VSPerfCorProf.dll | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 f1_keywords:
 - vs.performance.DA0002
 - vs.performance.2
@@ -18,13 +13,13 @@ ms.assetid: 76e614b3-ad7e-4b92-b7be-88dc1329be1d
 caps.latest.revision: 19
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: bb1359b525b286dbc88cbd3d8eecaef27060ab23
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 5723506415a0ddbf816b896e23e93eaa706bf7e7
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51809462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68158731"
 ---
 # <a name="da0002-vsperfcorprofdll-is-missing"></a>DA0002：缺少 VSPerfCorProf.dll
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +27,7 @@ ms.locfileid: "51809462"
 规则 Id |DA0002 |  
 |类别 |分析工具使用情况 |  
 |分析方法 |使用 VSPerfCmd 和 VSPerfASPNETCmd 命令行工具进行分析 |  
-|消息 |它会显示不正确设置环境变量未使用 VSPerfCLREnv.cmd 收集文件时。 可能不会解析托管二进制文件的符号。 |  
+|消息 |它会显示不正确设置环境变量未使用 VSPerfCLREnv.cmd 收集文件时。 可能不会解析托管二进制文件的符号。|  
 |规则类型 |信息 |  
   
 ## <a name="cause"></a>原因  
@@ -43,6 +38,3 @@ ms.locfileid: "51809462"
   
 ## <a name="how-to-fix-violations"></a>如何解决冲突  
  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 分析工具中使用命令行工具分析托管应用程序时，先运行 [VSPerfCLREnv](../profiling/vsperfclrenv.md) 命令行工具，然后再开始收集数据。
-
-
-

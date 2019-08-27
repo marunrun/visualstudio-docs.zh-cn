@@ -1,25 +1,20 @@
 ---
 title: 性能规则参考 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 ms.assetid: 59fc9424-76ca-4365-ae47-bb14a736c9c2
 caps.latest.revision: 19
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 689997704fa6d74dad611ee68eb0773612d57248
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: b522f777be495392a39e5a89724fc5657be6ac95
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51793823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68190379"
 ---
 # <a name="performance-rules-reference"></a>性能规则参考
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,6 +38,3 @@ ms.locfileid: "51793823"
 |[内存和分页性能规则](../profiling/memory-and-paging-performance-rules.md)|分析应用程序的托管内存和分页行为的规则。|  
 |[分析工具使用规则](../profiling/profiling-tools-usage-rules.md)|可帮助高效使用分析工具的规则。|  
 |[资源监控性能规则](../profiling/resource-monitoring-performance-rules.md)|有关分析运行中的处理器和内存利用率的信息消息。|
-
-
-

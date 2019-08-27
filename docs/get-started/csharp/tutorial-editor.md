@@ -3,29 +3,39 @@ title: C# 开发人员编辑功能简介
 description: 这一 10 分钟的 Visual Studio 代码编辑器简介演示了如何使用 Visual Studio 更轻松地编写、导航和理解 C# 代码。
 ms.custom: seodec18, get-started
 ms.date: 11/20/2018
-ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: tutorial
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5eda81f5d10a8c7b116d9be690de71017735bf45
-ms.sourcegitcommit: a715de2ba8c703f37aa2102567b1aa2c0f05a117
+ms.openlocfilehash: 5abd287533f2489346b41cdbae5526ed946aa746
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53441862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62971064"
 ---
 # <a name="learn-to-use-the-code-editor"></a>了解如何使用代码编辑器
 
 在这个 10 分钟的 Visual Studio 代码编辑器简介中，我们会向文件添加代码，了解 Visual Studio 编写、导航和了解代码的简便方法。
 
+::: moniker range="vs-2017"
+
 > [!TIP]
-> 如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)页免费安装。
+> 如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)页免费安装。
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+> [!TIP]
+> 如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)页免费安装。
+
+::: moniker-end
 
 本文假定你已熟悉 C#。 如果不熟悉，建议先看看 [Visual Studio 中的 C# 和 ASP.NET Core 入门教程](tutorial-aspnet-core.md)。
 
@@ -36,9 +46,21 @@ ms.locfileid: "53441862"
 
 先创建一个新文件并向其添加一些代码。
 
-1. 打开 Visual Studio，在菜单栏上的“文件”菜单中，选择“新建” > “文件”。
+::: moniker range="vs-2017"
 
-1. 在“新建文件”对话框的“常规”类别中，选择“Visual C# 类”，然后选择“打开”。
+1. 打开 Visual Studio。
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+1. 打开 Visual Studio。 按 Esc  或单击“开始”窗口中的“继续但无需代码”以打开开发环境。
+
+::: moniker-end
+
+2. 在菜单栏上的“文件”菜单中，选择“新建” > “文件”。
+
+3. 在“新建文件”对话框的“常规”类别中，选择“Visual C# 类”，然后选择“打开”。
 
    编辑器中将打开主干为 C# 类的新文件。 （请注意，我们无需创建完整的 Visual Studio 项目来获取代码编辑器提供的某些益处，仅需一个代码文件即可！）
 
@@ -94,7 +116,7 @@ Visual Studio 提供了实用的代码片段，可用于快速方便地生成常
                                 select word;
     ```
 
-1. 我们现在没有使用 `morewords` 变量，但稍后可能会用到，所以我们不想彻底删除它。 那我们就来为这些行加上注释。 选择整个 `morewords` 定义直到结束分号，然后选择工具栏上的“为选定行添加注释”。 如果想要使用键盘，请按 Ctrl+K、Ctrl+C。
+1. 我们现在没有使用 `morewords` 变量，但稍后可能会用到，所以我们不想彻底删除它。 那我们就来为这些行加上注释。 选择整个 `morewords` 定义直到结束分号，然后选择工具栏上的“为选定行添加注释”。 如果想要使用键盘，请按 Ctrl+K, Ctrl+C。
 
    ![“添加注释”按钮](../media/tutorial-comment-out.png)
 
@@ -110,7 +132,7 @@ Visual Studio 提供了实用的代码片段，可用于快速方便地生成常
 
 ## <a name="view-symbol-definitions"></a>查看符号定义
 
-通过 Visual Studio 编辑器可轻松查看类型、方法等的定义。一种方法是导航到包含定义的文件，例如通过选择“转到定义”，转到引用符号的任何位置。 使用“[速览定义](../../ide/go-to-and-peek-definition.md#peek-definition)”速度更快，不会干扰你处理文件。 我们来快速查看一下 `string` 类型的定义。
+通过 Visual Studio 编辑器可轻松查看类型、方法等的定义。一种方法是导航到包含定义的文件，例如通过选择“转到定义”或按“F12”，转到引用符号的任何位置。 使用“[速览定义](../../ide/go-to-and-peek-definition.md#peek-definition)”速度更快，不会干扰你处理文件。 我们来快速查看一下 `string` 类型的定义。
 
 1. 右键单击出现的任意 `string`，然后选择内容菜单上的“速览定义”。 或者，按 Alt+F12。
 

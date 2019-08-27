@@ -1,14 +1,9 @@
 ---
 title: Folder 元素 （Visual Studio 项目模板） |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#Folder
 helpviewer_keywords:
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 558e3d41-0db5-4c44-82bb-6bb87892b093
 caps.latest.revision: 12
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 81d2856bb7c261219fd69ec1e12db85cfb41d7e8
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 35448f4324213739cb2dc14a95598ac9a3d4432f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51787661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68204358"
 ---
 # <a name="folder-element-visual-studio-project-templates"></a>Folder 元素（Visual Studio 项目模板）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +25,7 @@ ms.locfileid: "51787661"
 指定将添加到项目的文件夹。  
   
  \<VSTemplate >  
- \<TemplateContent >  
+ \<TemplateContent>  
  \<Project>  
  \<文件夹 >  
   
@@ -58,7 +53,7 @@ ms.locfileid: "51787661"
 |元素|描述|  
 |-------------|-----------------|  
 |`Folder`|指定要添加到项目的文件夹。 `Folder` 元素可以包含子`Folder`元素。|  
-|[项目项](../extensibility/projectitem-element-visual-studio-item-templates.md)|指定要添加到项目的文件。|  
+|[ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md)|指定要添加到项目的文件。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -71,7 +66,7 @@ ms.locfileid: "51787661"
   
  可以使用任何以下方法以将项目项组织到模板中的文件夹：  
   
--   在模板的.zip 文件，包括文件夹并将其添加到项目的.vstemplate 文件中通过指定的路径中的文件`ProjectItem`元素，没有`Folder`元素。 这是建议的方法。 例如：  
+- 在模板的.zip 文件，包括文件夹并将其添加到项目的.vstemplate 文件中通过指定的路径中的文件`ProjectItem`元素，没有`Folder`元素。 这是建议的方法。 例如:  
   
      `...`  
   
@@ -81,7 +76,7 @@ ms.locfileid: "51787661"
   
      `...`  
   
--   在模板的.zip 文件，包括文件夹并将其添加到项目中，使用.vstemplate 文件`Folder`元素。 例如：  
+- 在模板的.zip 文件，包括文件夹并将其添加到项目中，使用.vstemplate 文件`Folder`元素。 例如：  
   
      `...`  
   
@@ -95,7 +90,7 @@ ms.locfileid: "51787661"
   
      `...`  
   
--   不将文件夹包括在模板的.zip 文件，但将使用的文件夹添加`TargetFileName`属性的`ProjectItem`元素。 例如：  
+- 不将文件夹包括在模板的.zip 文件，但将使用的文件夹添加`TargetFileName`属性的`ProjectItem`元素。 例如：  
   
      `...`  
   
@@ -138,4 +133,3 @@ ms.locfileid: "51787661"
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)   
  [ProjectItem 元素（Visual Studio 项模板）](../extensibility/projectitem-element-visual-studio-item-templates.md)
-

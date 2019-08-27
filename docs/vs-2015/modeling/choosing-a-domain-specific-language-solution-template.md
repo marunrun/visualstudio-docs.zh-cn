@@ -1,25 +1,22 @@
 ---
 title: 选择域特定语言解决方案模板 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language Tools, solution templates
 ms.assetid: 9c05955f-1548-4df6-b09b-4b348823c237
 caps.latest.revision: 26
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 618a26740759431ffe9de2b6ed5b51ffb32ea69e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 36b821219b02fa77171d89214d8cf4813ce92303
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49268473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63433389"
 ---
 # <a name="choosing-a-domain-specific-language-solution-template"></a>选择域特定语言解决方案模板
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,7 +26,7 @@ ms.locfileid: "49268473"
  域特定语言设计器向导中提供了以下解决方案模板。  
   
 > [!NOTE]
->  模板的用途是提供起始 DSL。 名为类和组件图的模板不是完整的 UML 关系图。 如果你想要创建 UML 模型，请考虑 UML 建模工具，提供了一组围绕单个模型集成的关系图。 这些关系图是可扩展的，并且可以使用 ModelBus 与你的 DSL 集成。 有关详细信息，请参阅[为您的应用程序创建模型](../modeling/create-models-for-your-app.md)。  
+> 模板的用途是提供起始 DSL。 名为类和组件图的模板不是完整的 UML 关系图。 如果你想要创建 UML 模型，请考虑 UML 建模工具，提供了一组围绕单个模型集成的关系图。 这些关系图是可扩展的，并且可以使用 ModelBus 与你的 DSL 集成。 有关详细信息，请参阅[为您的应用程序创建模型](../modeling/create-models-for-your-app.md)。  
   
 |模板|功能|描述|  
 |--------------|--------------|-----------------|  
@@ -43,6 +40,3 @@ ms.locfileid: "49268473"
   
 ## <a name="see-also"></a>请参阅  
  [域特定语言工具的概述](../modeling/overview-of-domain-specific-language-tools.md)
-
-
-

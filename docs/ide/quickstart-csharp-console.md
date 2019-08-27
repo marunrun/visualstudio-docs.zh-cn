@@ -2,38 +2,51 @@
 title: 使用 Visual Studio 创建第一个 C# 控制台应用
 titleSuffix: ''
 description: 了解如何在 Visual Studio 中使用 C# 逐步创建简单的 Hello World 控制台应用。
-ms.date: 09/21/2018
-ms.prod: visual-studio-dev15
 ms.custom: seodec18
+ms.date: 03/23/2019
+ms.technology: vs-ide-general
+ms.prod: visual-studio-windows
 ms.topic: quickstart
 ms.devlang: vb
 author: TerryGLee
 ms.author: tglee
-manager: douge
+manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b36051f3a316f2b00ebdd08110f22346a910512
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 34e943984755ff1f36f8a28134e1e2abde4312d4
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53853913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62954024"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-c-console-app"></a>快速入门：使用 Visual Studio 创建第一个 C# 控制台应用
 
 在这个 5-10 分钟的 Visual Studio 集成开发环境 (IDE) 简介中，你将了解如何创建在控制台上运行的简单 C# 应用。
 
-如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)页免费安装。
+::: moniker range="vs-2017"
+
+如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)页免费安装。
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)页免费安装。
+
+::: moniker-end
 
 ## <a name="create-a-project"></a>创建项目
 
 首先，创建 C# 应用程序项目。 项目类型随附了所需的全部模板文件，无需添加任何内容！
 
+::: moniker range="vs-2017"
+
 1. 打开 Visual Studio 2017。
 
-2. 在顶部菜单栏，依次选择“文件” > “新建” > “项目”。
+2. 从顶部菜单栏中选择“文件”>“新建”>“项目”。
 
 3. 在“新建项目”对话框的左窗格中，展开“C#”，然后选择“.NET Core”。 在中间窗格中，选择“控制台应用(.NET Core)”。 随后将项目命名为 HelloWorld。
 
@@ -45,19 +58,64 @@ ms.locfileid: "53853913"
 
      Visual Studio 安装程序启动。 选择“.NET Core 跨平台开发”工作负载，然后选择“修改”。
 
-     ![Visual Studio 安装程序中的 .NET Core 跨平台开发工作负载](../ide/media/dot-net-core-xplat-dev-workload.png)
+     ![Visual Studio 安装程序中的 .NET Core 跨平台开发工作负荷](../ide/media/dot-net-core-xplat-dev-workload.png)
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+1. 打开 Visual Studio 2019。
+
+1. 在“开始”窗口上，选择“创建新项目”。
+
+   ![“创建新项目”窗口](../get-started/media/vs-2019/create-new-project-dark-theme.png)
+
+1. 在“创建新项目”窗口的搜索框中输入或键入“控制台”。 接下来，从“语言”列表中选择 C#，然后从“平台”列表中选择 Windows。 
+
+   应用语言和平台筛选器之后，选择“控制台应用(.NET Core)”模板，然后选择“下一步”。
+
+   ![为“控制台应用(.NET Framework)”选择 C# 模板](../get-started/csharp/media/vs-2019/csharp-create-new-project-search-console-net-core-filtered.png)
+
+   > [!NOTE]
+   > 如果未看到“控制台应用(.NET Core)”模板，则可以通过“创建新项目”窗口安装该模板。 在“找不到所需内容?”消息中，选择“安装更多工具和功能”链接。
+   >
+   > ![“创建新项目”窗口内“找不到所需内容”消息中的“安装更多工具和功能”链接](../get-started/media/vs-2019/not-finding-what-looking-for.png) 
+   > 
+   > 然后，在 Visual Studio 安装程序中，选择“.NET Core 跨平台开发”工作负载。
+   >
+   > ![Visual Studio 安装程序中的 .NET Core 跨平台开发工作负荷](./media/dot-net-core-xplat-dev-workload.png)
+   >
+   > 之后，在 Visual Studio 安装程序中选择“修改”按钮。 系统可能会提示你保存所有内容；如果出现提示，请按照指示进行操作。 接下来，选择“继续”，以安装工作负载。 然后，返回到“[创建项目](#create-a-project)”过程中的步骤 2。
+
+1. 在“配置新项目”窗口中，在“项目名称”框中键入或输入“HelloWorld”。 然后，选择“创建”。
+
+   ![在“配置新项目”窗口中，将项目命名为“HelloWorld”](../get-started/csharp/media/vs-2019/csharp-name-your-helloworld-project.png)
+
+   此时，Visual Studio 将打开新项目。
+   
+::: moniker-end
 
 ## <a name="create-the-application"></a>创建应用程序
 
-选择 C# 项目模板并为项目命名后，Visual Studio 会创建一个简单的“Hello World”应用程序。 
+::: moniker range="vs-2017"
 
-（若要执行此操作，调用 <xref:System.Console.WriteLine%2A> 方法在控制台窗口中 显示文本字符串“Hello World!”。）
+选择 C# 项目模板并为项目命名后，Visual Studio 会创建一个简单的“Hello World”应用程序。
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+Visual Studio 在项目中包含默认的“Hello World”代码。
+
+::: moniker-end
+
+（为此，它通过调用 <xref:System.Console.WriteLine%2A> 方法在控制台窗口中 显示文本字符串“Hello World!”。）
 
    ![查看模板中的默认 Hello World 代码](../ide/media/csharp-console-helloworld-template.png)
 
 如果按 F5，可以在调试模式下运行程序。 但是，控制台窗口短暂出现后就会关闭。
 
-（这是因为 `Main` 方法在执行其单个语句后就会终止，应用程序因而结束。）
+（此行为是因为 `Main` 方法在执行其单个语句后就会终止，应用程序因而结束。）
 
 ### <a name="add-some-code"></a>添加一些代码
 

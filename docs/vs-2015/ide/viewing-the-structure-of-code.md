@@ -1,14 +1,9 @@
 ---
 title: 查看代码的结构 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vs.documentoutline.window
 - vs.objectbrowser
@@ -32,13 +27,13 @@ ms.assetid: e6064f58-5ad9-4f05-8c3f-12e994b6583f
 caps.latest.revision: 32
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: d110056488b7555bc7bbccc5cbad3205d9de7405
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 1277370ca14044755988affc5ccf2bf1fb851a09
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49901640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63443210"
 ---
 # <a name="viewing-the-structure-of-code"></a>查看代码的结构
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -55,14 +50,14 @@ ms.locfileid: "49901640"
   
  [代码定义窗口（C#、C++）](#BKMK_CodeDefinition)  
   
- 此外可以使用**解决方案资源管理器**若要浏览的类型和成员在项目中的，搜索符号、 查看方法的调用层次结构、 查找符号引用及其他信息而无需多个工具窗口之间切换前面列出。  
+ 还可以使用“解决方案资源管理器”浏览项目中的类型和成员、搜索符号、查看方法的调用层次结构、查找符号引用及其他操作，而无需在上述列出的多个工具窗口之间进行切换。  
   
  如果你安装了 Visual Studio Enterprise，则可以使用代码图来直观显示代码的结构及其在整个解决方案中的相关性，并深入查看你感兴趣的代码部分。 有关详细信息，请参阅[映射解决方案中的依赖项](../modeling/map-dependencies-across-your-solutions.md)。  
   
 > [!NOTE]
->  正在使用的 Visual Studio 版本和设置可能会影响 IDE 中的功能。 它们可能与本主题中介绍的功能有所不同。  
+> 正在使用的 Visual Studio 版本和设置可能会影响 IDE 中的功能。 它们可能与本主题中介绍的功能有所不同。  
   
-##  <a name="BKMK_ClassView"></a>类视图（Visual Basic、C#、C++）  
+## <a name="BKMK_ClassView"></a>类视图（Visual Basic、C#、C++）  
  “类视图”显示为“解决方案资源管理器”的一部分并位于单独的窗口中。 “类视图”窗口显示应用程序的元素。 上部窗格显示命名空间、类型、接口、枚举和类，下部窗格显示属于在上部窗格中所选类型的成员。 通过使用此窗口，可以移到源代码（或“对象浏览器”，如果该元素在解决方案外部进行定义）中的成员定义。  
   
  不需要编译项目即可在“类视图”中查看其元素。 修改项目中的代码时，窗口进行刷新。  
@@ -115,7 +110,7 @@ ms.locfileid: "49901640"
 |**转到引用**|在源代码中显示类型或成员的定义（如果可用）。|  
 |**查看调用层次结构**|在“调用层次结构”窗口中显示所选的方法。|  
   
-##  <a name="BKMK_CallHierarchy"></a>调用层次结构（Visual Basic、C#、C++）  
+## <a name="BKMK_CallHierarchy"></a>调用层次结构（Visual Basic、C#、C++）  
  “调用层次结构”窗口显示调用给定方法（或者属性或构造函数）的位置，并列出从该方法调用的方法。 你可以查看多个级别的调用关系图，该关系图显示指定范围内各个方法间调用方/被调用方的关系。  
   
  可以通过选择方法（或者属性或构造函数），然后再选择快捷菜单上的“查看类层次结构”，显示“调用层次结构”窗口。 显示内容应与下图相似。  
@@ -140,7 +135,7 @@ ms.locfileid: "49901640"
 |**复制**|复制所选节点（但不包括其子节点）。|  
 |**刷新**|刷新信息。|  
   
-##  <a name="BKMK_ObjectBrowser"></a>对象浏览器  
+## <a name="BKMK_ObjectBrowser"></a>对象浏览器  
  “对象浏览器”显示项目中的代码说明。  
   
  可以在“对象浏览器”中筛选要查看的内容。 通过使用窗口顶部的下拉列表，你可以选择下列选项之一：  
@@ -199,7 +194,7 @@ ms.locfileid: "49901640"
 |**转到引用**|在源代码中显示类型或成员的定义（如果可用）。|  
 |**查看调用层次结构**|在“调用层次结构”窗口中显示所选的方法。|  
   
-##  <a name="BKMK_CodeDefinition"></a>代码定义窗口（C#、C++）  
+## <a name="BKMK_CodeDefinition"></a>代码定义窗口（C#、C++）  
  “代码定义”窗口显示活动项目中所选类型或成员的定义。 可以在代码编辑器或代码视图窗口中选择类型或成员。  
   
  尽管此窗口是只读的，但你可以在其中设置断点或书签。 若要修改显示的定义，请选择快捷菜单上的“编辑定义”。 这将在代码编辑器中打开源文件，并将插入点移到定义开始的行。  
@@ -229,6 +224,3 @@ ms.locfileid: "49901640"
   
 ## <a name="see-also"></a>请参阅  
  [“类视图”和“对象浏览器”图标](../ide/class-view-and-object-browser-icons.md)
-
-
-

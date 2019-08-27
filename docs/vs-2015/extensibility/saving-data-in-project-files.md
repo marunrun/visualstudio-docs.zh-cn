@@ -1,14 +1,9 @@
 ---
 title: 将数据保存在项目文件 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - data [Visual Studio], saving in project files
 - project files
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: a3d4b15b-a91e-41ba-b235-e62632d11bc5
 caps.latest.revision: 29
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 87d858d675fb1b2fb60280321a319b24684d9d83
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: fc671963854e4fa0c2af763de5000fac82a839b8
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51755835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63432516"
 ---
 # <a name="saving-data-in-project-files"></a>将数据保存在项目文件中
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,7 +34,7 @@ ms.locfileid: "51755835"
   
 #### <a name="to-save-a-build-related-data-in-the-project-file"></a>若要保存对生成相关的项目文件中的数据  
   
--   调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetPropertyValue%2A>方法以保存项目文件的完整路径。  
+- 调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetPropertyValue%2A>方法以保存项目文件的完整路径。  
   
     ```  
     private SpecializedProject project;  
@@ -54,7 +49,7 @@ ms.locfileid: "51755835"
   
 #### <a name="to-retrieve-build-related-data-from-the-project-file"></a>从项目文件检索生成相关的数据  
   
--   调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.GetPropertyValue%2A>方法来检索其中的项目文件的完整路径。  
+- 调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.GetPropertyValue%2A>方法来检索其中的项目文件的完整路径。  
   
     ```  
     private SpecializedProject project;  
@@ -71,7 +66,7 @@ ms.locfileid: "51755835"
   
 #### <a name="to-save-non-build-related-data-in-the-project-file"></a>若要保存非生成相关的项目文件中的数据  
   
-1.  实现<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.IsFragmentDirty%2A>方法，以确定是否已更改的 XML 片段，表明自上次保存到其当前文件。  
+1. 实现<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.IsFragmentDirty%2A>方法，以确定是否已更改的 XML 片段，表明自上次保存到其当前文件。  
   
     ```  
     public int IsFragmentDirty(uint storage, out int pfDirty)  
@@ -101,7 +96,7 @@ ms.locfileid: "51755835"
     }  
     ```  
   
-2.  实现<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Save%2A>方法以将 XML 数据保存在项目文件中。  
+2. 实现<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Save%2A>方法以将 XML 数据保存在项目文件中。  
   
     ```  
     public int Save(ref Guid guidFlavor, uint storage, out string pbstrXMLFragment, int fClearDirty)  
@@ -152,7 +147,7 @@ ms.locfileid: "51755835"
   
 #### <a name="to-retrieve-non-build-related-data-in-the-project-file"></a>若要检索非生成相关的项目文件中的数据  
   
-1.  实现<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.InitNew%2A>方法以初始化项目扩展属性和其他独立于生成的数据。 如果不存在项目文件中的 XML 配置数据，调用此方法。  
+1. 实现<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.InitNew%2A>方法以初始化项目扩展属性和其他独立于生成的数据。 如果不存在项目文件中的 XML 配置数据，调用此方法。  
   
     ```  
     public int InitNew(ref Guid guidFlavor, uint storage)  
@@ -168,7 +163,7 @@ ms.locfileid: "51755835"
         return VSConstants.S_OK;  
     ```  
   
-2.  实现<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Load%2A>方法以从项目文件加载 XML 数据。  
+2. 实现<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Load%2A>方法以从项目文件加载 XML 数据。  
   
     ```  
     public int Load(ref Guid guidFlavor, uint storage, string pszXMLFragment)  
@@ -213,8 +208,7 @@ ms.locfileid: "51755835"
     ```  
   
 > [!NOTE]
->  本主题中提供的所有代码示例都是一个更大示例的组成部分[VSSDK 示例](../misc/vssdk-samples.md)。  
+> 本主题中提供的所有代码示例都是一个更大示例的组成部分[VSSDK 示例](../misc/vssdk-samples.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [保留 MSBuild 项目文件中的数据](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)
-

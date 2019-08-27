@@ -10,14 +10,13 @@ helpviewer_keywords:
 ms.assetid: 729b4c30-4bc3-4698-91b3-17a676897443
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 4026c8077c45fa7f383f59eda0595c8a97eba58d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: f570e2085bf9d0707bb5a8bfe33576466a6d7b41
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53823511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62821194"
 ---
 # <a name="how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results"></a>如何：放大负载测试结果中关系图的区域
 
@@ -52,17 +51,17 @@ ms.locfileid: "53823511"
 
 显示关系图：
 
-1.  运行负载测试直到完成。
+1. 运行负载测试直到完成。
 
-2.  当负载测试运行结束时，在询问是否查看负载测试结果存储区中的结果的对话框中，选择“是”。
+2. 当负载测试运行结束时，在询问是否查看负载测试结果存储区中的结果的对话框中，选择“是”。
 
      \- 或 -
 
-     查看上一次运行的负载测试的详细信息。 有关更多信息，请参见[如何：访问负载测试结果进行分析](../test/how-to-access-load-test-results-for-analysis.md)。
+     查看上一次运行的负载测试的详细信息。 有关详细信息，请参阅[如何：访问负载测试结果进行分析](../test/how-to-access-load-test-results-for-analysis.md)。
 
-3.  如果未显示关系图，请选择“关系图”。
+3. 如果未显示关系图，请选择“关系图”。
 
-4.  如果未显示缩放条，请选择“显示缩放控件”。
+4. 如果未显示缩放条，请选择“显示缩放控件”。
 
      每个关系图有两个缩放条可用。 控制垂直比例的缩放条出现在关系图的左侧。 控制水平比例的缩放条出现在关系图的下方。
 
@@ -74,21 +73,21 @@ ms.locfileid: "53823511"
 
 ### <a name="to-synchronize-zooming-and-scrolling"></a>同步缩放和滚动
 
-1.  在负载测试分析器上，选择“同步水平缩放控件”。
+1. 在负载测试分析器上，选择“同步水平缩放控件”。
 
      当选中“同步水平缩放控件”按钮时，缩放和滚动单个关系图的时间比例的同时也将缩放和滚动其他关系图的时间比例。
 
-2.  再次选择“同步水平缩放控件”。
+2. 再次选择“同步水平缩放控件”。
 
      当未选择“同步水平缩放控件”按钮时，缩放和滚动单个关系图的时间比例只影响该关系图。
 
 ### <a name="to-zoom-and-scroll-to-a-region-of-the-graph"></a>放大并滚动到关系图的区域
 
-1.  在关系图下方的缩放条上，向右拖动左侧控点。
+1. 在关系图下方的缩放条上，向右拖动左侧控点。
 
      这将放大测试运行的后面部分。 类似地，向左拖动右侧控点将放大测试运行的前面部分。
 
-2.  若要放大某个特定区域，请将两个控点向关系图的中心滑动。
+2. 若要放大某个特定区域，请将两个控点向关系图的中心滑动。
 
      两个控点之间的距离越近，放大程度就越高，以便显示负载测试更短、更精细的片段。
 
@@ -108,9 +107,9 @@ ms.locfileid: "53823511"
 
 ### <a name="to-zoom-out"></a>缩小
 
-1.  右击放大的关系图。
+1. 右击放大的关系图。
 
-2.  从快捷菜单中选择“水平缩小”。
+2. 从快捷菜单中选择“水平缩小”。
 
      这将缩小以显示负载测试运行的整个持续时间。
 

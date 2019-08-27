@@ -1,26 +1,21 @@
 ---
 title: 向导 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], providing wizard support
 ms.assetid: 59d9a77f-ee80-474b-a14f-90f477ab717b
 caps.latest.revision: 14
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: cbf2eceeb3ae8a3870954d53f8d85c46f3322d24
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 6e58ebd736f7bb9f35df6e41d5235f36f7037259
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51747578"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65687620"
 ---
 # <a name="wizards"></a>向导
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -55,9 +50,8 @@ ms.locfileid: "51747578"
  [项目类型](../../extensibility/internals/project-types.md)  
  提供指向其他主题提供有关如何设计新的项目类型的信息。  
   
- [演练： 创建向导](http://msdn.microsoft.com/library/adb41fe9-fcca-4e87-bf4f-bf2fa68e8b06)  
+ [演练：创建向导](https://msdn.microsoft.com/library/adb41fe9-fcca-4e87-bf4f-bf2fa68e8b06)  
  演示如何创建向导。  
   
  [扩展项目](../../extensibility/extending-projects.md)  
  介绍如何使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 项目和解决方案来组织代码文件和资源文件，以及如何实现源代码管理。
-

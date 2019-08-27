@@ -9,17 +9,17 @@ helpviewer_keywords:
 - ClickOnce deployment [Office development in Visual Studio], troubleshooting
 - Office development in Visual Studio, troubleshooting
 - deploying applications [Office development in Visual Studio], troubleshooting
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5d6dc3a871389b8b7624b31a4f2a4d3e4e185865
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: dfebb3ce5293e7594827a17b30261403b0f3ae9a
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53947252"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821302"
 ---
 # <a name="troubleshoot-office-solution-deployment"></a>Office 解决方案部署故障排除
   本主题包含有关如何解决在部署 Office 解决方案时可能遇到的常见问题的信息。
@@ -43,11 +43,11 @@ ms.locfileid: "53947252"
 
 #### <a name="to-set-the-time-out-value"></a>设置超时值
 
-1.  在注册表中，导航到以下项：
+1. 在注册表中，导航到以下项：
 
      **HKEY_CURRENT_USER\Software\Microsoft\VSTA**
 
-2.  在 **AddInTimeout** 子项中，以毫秒为单位设置超时值。
+2. 在 **AddInTimeout** 子项中，以毫秒为单位设置超时值。
 
      如果 **AddInTimeout** 子项不存在，请以 DWORD 的形式创建它。
 
@@ -71,11 +71,14 @@ ms.locfileid: "53947252"
 
 1. 在菜单栏上依次选择**项目**， _ProjectName_**属性**。
 
-2. 在“应用程序”  页上，选择“程序集信息” 。
+2. 在“应用程序”  页上，选择“程序集信息”  。
 
-3. 在第一个**程序集版本**框中，输入一个星号 (\*)，然后选择**确定**按钮。
+3. 设置的修订号、 第三个字段**程序集版本**，为通配符 (\*)。 例如，"1.0。 *"。  然后选择**确定**按钮。
 
    更改程序集版本之后，可以继续使用强名称对程序集进行签名，Fusion 会加载自定义项的最新版本。
+
+ [!NOTE]
+> 从 Visual Studio 2017 中，如果你尝试在程序集版本生成错误中使用通配符将发生。  这是因为程序集版本中的通配符将中断 MSBuild 确定性的功能。 系统会指示以从程序集版本中删除通配符或禁用确定性。  若要了解有关确定性的功能的详细信息查看：[常用的 MSBuild 项目属性](../msbuild/common-msbuild-project-properties.md)和[自定义生成](../msbuild/customize-your-build.md)
 
 ## <a name="installation-fails-when-the-uri-has-characters-that-arent-us-ascii"></a>URI 具有不 US ASCII 字符时，安装失败
  将 Office 解决方案发布到 HTTP/HTTPS/FTP 位置时，路径不能包含不属于 US-ASCII 的任何 Unicode 字符。 这类字符会导致安装程序中出现不一致的行为。 请对安装路径使用 US-ASCII 字符。
@@ -118,11 +121,11 @@ ms.locfileid: "53947252"
 ## <a name="cant-install-a-clickonce-solution-by-opening-the-deployment-manifest-from-the-web"></a>无法通过从 web 打开部署清单来安装 ClickOnce 解决方案
  用户可以通过从 Web 打开部署清单来安装 Office 解决方案。 但是，某些安装 Internet 信息服务 (IIS) 阻止 *.vsto*文件扩展名。 用于部署 Office 解决方案之前，必须在 IIS 中定义的 MIME 类型。
 
- 有关如何在 IIS 7 中定义的 MIME 类型的信息，请参阅[添加 MIME 类型 (IIS7)](http://technet.microsoft.com/library/cc725608(WS.10).aspx)。
+ 有关如何在 IIS 7 中定义的 MIME 类型的信息，请参阅[添加 MIME 类型 (IIS7)](https://technet.microsoft.com/library/cc725608(WS.10).aspx)。
 
  将扩展名设置为 **.vsto** ，并将 MIME 类型设置为 **application/x-ms-vsto**。
 
 ## <a name="see-also"></a>请参阅
 
-- [ClickOnce 部署进行故障排除](../deployment/troubleshooting-clickonce-deployments.md)
+- [ClickOnce 部署疑难解答](../deployment/troubleshooting-clickonce-deployments.md)
 - [部署 Office 解决方案](../vsto/deploying-an-office-solution.md)

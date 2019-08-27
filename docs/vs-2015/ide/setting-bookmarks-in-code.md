@@ -1,27 +1,22 @@
 ---
 title: 在代码中设置书签 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - VS.BookmarkWindow
 ms.assetid: a752ed5f-5cf9-4bf2-865a-2131ca600ed5
 caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: bbb6775411af7bc93cd8168af460974fb5c18d3d
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: b9a5612a9d6fd04850134a51f62a02496deb1708
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49219747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63441927"
 ---
 # <a name="setting-bookmarks-in-code"></a>在代码中设置书签
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,13 +29,10 @@ ms.locfileid: "49219747"
  若要添加书签，请将光标置于要添加书签的行上。 单击“切换”按钮或按 CTRL+K。 这样便可添加书签。 再次单击“切换”按钮（或按 CTRL+K），将会删除该书签。 也可以单击书签窗口中的“删除”按钮来删除书签。  
   
 > [!IMPORTANT]
->  书签设置在行号上，而不是代码上。 如果修改代码，书签会保留在行号上，不会随代码移动。  
+> 书签设置在行号上，而不是代码上。 如果修改代码，书签会保留在行号上，不会随代码移动。  
   
  使用书签窗口中的“下一书签”和“上一书签”按钮，可以切换浏览不同书签。  
   
  单击书签窗口中的“新建文件夹”，然后将选定书签拖入新文件夹，可以将书签整理存放到虚拟文件夹中。  
   
  单击书签窗口中的“禁用所有书签”按钮，可以关闭书签（但不会删除书签）。 单击同一按钮（现在称为“启用所有书签”），可以重新启用书签。
-
-
-

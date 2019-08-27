@@ -1,8 +1,7 @@
 ---
-title: IActiveScriptAuthor::AddScriptlet |Microsoft Docs
+title: IActiveScriptAuthor::AddScriptlet | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 62499afe87a3d7dae31e609c9ce88f41e9d993a9
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: 64df7bd4c0d0dde303cdc15d7111688d14c7dc49
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54089203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62935453"
 ---
 # <a name="iactivescriptauthoraddscriptlet"></a>IActiveScriptAuthor::AddScriptlet
 将作为根级别的子级添加的代码 scriptlet`IScriptNode`对象。 在宿主中，允许 scriptlet 的完全限定的名称具有只有两个级别。  
@@ -71,7 +70,7 @@ HRESULT AddScriptlet(
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   

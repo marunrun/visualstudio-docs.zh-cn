@@ -1,14 +1,9 @@
 ---
 title: 生成 ClickOnce 应用程序从命令行 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -21,13 +16,13 @@ ms.assetid: d9bc6212-c584-4f72-88c9-9a4b998c555e
 caps.latest.revision: 25
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: c9a9b2e248e4f10e9b5d3f045c67a9622edd2c2b
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+manager: jillfra
+ms.openlocfilehash: 2625a8d4caa7dd53e9ce86395a98622f91d686b3
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50220012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68155711"
 ---
 # <a name="building-clickonce-applications-from-the-command-line"></a>从命令行生成 ClickOnce 应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,13 +38,13 @@ ms.locfileid: "50220012"
   
  `/target:publish`命令告知 MSBuild 调用发布目标。 发布目标取决于生成目标。 这意味着发布操作是生成操作的超集。 例如，如果对一个 Visual Basic 或 C# 源代码文件进行了更改，相应的程序集将自动重新生成由发布操作。  
   
- 有关生成完整的信息[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]使用 Mage.exe 命令行工具创建的部署你[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]清单，请参阅[演练： 手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)。  
+ 有关生成完整的信息[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]使用 Mage.exe 命令行工具创建的部署你[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]清单，请参阅[演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)。  
   
 ## <a name="creating-and-building-a-basic-clickonce-application-using-msbuild"></a>创建和生成基本的 ClickOnce 应用程序使用 MSBuild  
   
 #### <a name="to-create-and-publish-a-clickonce-project"></a>若要创建和发布一个 ClickOnce 项目  
   
-1. 单击**新的项目**从**文件**菜单。 此时将出现 “新建项目” 对话框。  
+1. 单击**新的项目**从**文件**菜单。 此时将出现“新建项目”  对话框。  
   
 2. 选择**Windows 应用程序**并将其命名`CmdLineDemo`。  
   
@@ -178,6 +173,3 @@ msbuild /target:publish /property:BootstrapperEnabled=false
  <xref:Microsoft.Build.Tasks.GenerateDeploymentManifest>   
  [ClickOnce 安全和部署](../deployment/clickonce-security-and-deployment.md)   
  [演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)
-
-
-

@@ -1,14 +1,9 @@
 ---
-title: IDebugStackFrame3::InterceptCurrentException |Microsoft Docs
-ms.custom: ''
+title: IDebugStackFrame3::InterceptCurrentException | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - IDebugStackFrame3::InterceptCurrentException
 helpviewer_keywords:
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 116c7324-7645-4c15-b484-7a5cdd065ef5
 caps.latest.revision: 10
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 0dde6935a343d7ba915bd7d3954c4462056be851
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 42472690431d48a9baafbb0abee27c1a07d24fcd
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51781642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63428692"
 ---
 # <a name="idebugstackframe3interceptcurrentexception"></a>IDebugStackFrame3::InterceptCurrentException
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -69,7 +64,7 @@ int InterceptCurrentException(
  当调试器想要知道是否拦截异常时，它在当前堆栈帧对象上调用此方法。 此方法负责处理异常的所有详细信息。 如果[IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md)未实现接口或`InterceptStackException`方法会返回任何错误，则调试器会继续正常处理该异常。  
   
 > [!NOTE]
->  异常会被截取只能在托管代码中，它是正在调试的程序在运行时的.NET 下运行时。 当然，第三方语言实现者可以实现`InterceptStackException`中选择性地他们自己的调试引擎。  
+> 异常会被截取只能在托管代码中，它是正在调试的程序在运行时的.NET 下运行时。 当然，第三方语言实现者可以实现`InterceptStackException`中选择性地他们自己的调试引擎。  
   
  拦截完成后[IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md)发出信号。  
   
@@ -77,4 +72,3 @@ int InterceptCurrentException(
  [IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md)   
  [INTERCEPT_EXCEPTION_ACTION](../../../extensibility/debugger/reference/intercept-exception-action.md)   
  [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md)
-

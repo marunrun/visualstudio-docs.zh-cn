@@ -2,19 +2,18 @@
 title: 工作流设计器的控制流活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 ms.assetid: ba74af23-5398-4e62-bd90-c50612e3bfef
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 17f8ee8f97c172546867a552b32f2640d42bc91f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7a3bcbf5ee70b90a0606c7e4cb3d691d28298c2d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53935510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62949864"
 ---
 # <a name="control-flow-activity-designers"></a>控制流活动设计器
 

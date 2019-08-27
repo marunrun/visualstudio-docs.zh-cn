@@ -1,14 +1,9 @@
 ---
 title: 本地化 ClickOnce 应用程序 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -26,13 +21,13 @@ ms.assetid: c92b193b-054d-4923-834b-d4226a4c7a1a
 caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: d7c3b8527bf96ee783de6ac975117bd4c797d426
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 3c29bd6a58d510d98f2a08c96d0cd0bc774e197e
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49261464"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65680009"
 ---
 # <a name="localizing-clickonce-applications"></a>本地化 ClickOnce 应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,11 +38,11 @@ ms.locfileid: "49261464"
   
  本主题介绍为其他区域性部署 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序的三种方法：  
   
--   在单个部署中包括所有附属程序集。  
+- 在单个部署中包括所有附属程序集。  
   
--   为每种区域性生成一个部署，且每个部署中均包括单个附属程序集。  
+- 为每种区域性生成一个部署，且每个部署中均包括单个附属程序集。  
   
--   按需下载附属程序集。  
+- 按需下载附属程序集。  
   
 ## <a name="including-all-satellite-assemblies-in-a-deployment"></a>在一个部署中包括所有附属程序集  
  与发布多个 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 部署不同，你可以发布单个包含所有附属程序集的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 部署。  
@@ -59,37 +54,34 @@ ms.locfileid: "49261464"
  此方法的好处在于它可创建单个部署，并简化已本地化的部署。 在运行时，将根据用户 Windows 操作系统的默认区域性使用适当的附属程序集。 此方法的缺点为只要客户端计算机上安装或更新了应用程序，此方法就会下载所有附属程序集。 如果你的应用程序具有大量字符串，或客户的网络连接速度慢，则此过程在应用程序更新期间会影响性能。  
   
 > [!NOTE]
->  此方法假定你的应用程序将自动调整控件的高度、宽度和位置以适应不同区域性中不同的文本字符串大小。 Windows 窗体包含各种控件和技术，这些控件和技术使你可以设计更易于本地化的窗体，其中包括 <xref:System.Windows.Forms.FlowLayoutPanel> 和 <xref:System.Windows.Forms.TableLayoutPanel> 控件以及 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性。  另请参阅[如何： 在 Windows 窗体使用 AutoSize 和 TableLayoutPanel 控件支持本地化](http://msdn.microsoft.com/library/1zkt8b33\(v=vs.110\))。  
+> 此方法假定你的应用程序将自动调整控件的高度、宽度和位置以适应不同区域性中不同的文本字符串大小。 Windows 窗体包含各种控件和技术，这些控件和技术使你可以设计更易于本地化的窗体，其中包括 <xref:System.Windows.Forms.FlowLayoutPanel> 和 <xref:System.Windows.Forms.TableLayoutPanel> 控件以及 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性。  另请参阅[如何：支持对使用 AutoSize 和 TableLayoutPanel 控件的 Windows 窗体的本地化](https://msdn.microsoft.com/library/1zkt8b33\(v=vs.110\))。  
   
 ## <a name="generate-one-deployment-for-each-culture"></a>为每种区域性生成一个部署  
  在此部署策略中，可以生成多个部署。 在每个部署中，仅包括特定区域性所需的附属程序集，并将该部署标记为特定于该区域性。  
   
- 若要使用此方法在[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]，将**发布语言**上的属性**发布**tab 键切换到所需的区域。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 将自动包括所选区域所需的附属程序集，并将排除部署中的所有其他附属程序集。  
+ 若要在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中使用此方法，请在“发布”选项卡上将“发布语言”属性设置为所需的区域。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 将自动包括所选区域所需的附属程序集，并将排除部署中的所有其他附属程序集。  
   
  可通过在 Microsoft [!INCLUDE[winsdklong](../includes/winsdklong-md.md)] 中使用 MageUI.exe 工具实现相同的操作。 使用**Populate**按钮**文件**选项卡上的应用程序清单来排除所有其他附属程序集从应用程序目录，然后设置**区域性**字段**名称**的部署清单在 MageUI.exe 中的选项卡。 这些步骤不仅包括正确的附属程序集，同时也将部署清单中 `assemblyIdentity` 元素上的 `language` 属性设置为相应的区域性。  
   
- 发布应用程序后，必须为应用程序支持的每种其他区域性重复此步骤。 您必须确保发布到不同的 Web 服务器目录或文件共享目录每次，因为每个应用程序清单将引用不同的附属程序集，并且每个部署清单将具有不同的值`language`属性。  
+ 发布应用程序后，必须为应用程序支持的每种其他区域性重复此步骤。 必须确保每次发布到不同的 Web 服务器目录或文件共享目录，因为每个应用程序清单将引用不同的附属程序集，并且每个部署清单将具有不同的 `language` 属性值。  
   
 ## <a name="downloading-satellite-assemblies-on-demand"></a>按需下载附属程序集  
  如果决定在单个部署中包括所有附属程序集，则可通过使用按需下载来提高性能，这使你能够将程序集标记为可选。 安装或更新应用程序时，将不会下载已标记的程序集。 可通过调用 <xref:System.Deployment.Application.ApplicationDeployment> 类上的 <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroup%2A> 方法，根据需要安装程序集。  
   
- 按需下载附属程序集与按需下载其他类型的程序集略有不同。 有关如何启用此方案中使用的详细信息和代码示例[!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)]工具[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]，请参阅[演练： 使用 ClickOnce 部署 API 按需下载附属程序集](../deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api.md)。  
+ 按需下载附属程序集与按需下载其他类型的程序集略有不同。 有关如何启用此方案中使用的详细信息和代码示例[!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)]工具[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]，请参阅[演练：下载附属程序集使用 ClickOnce 部署 API 按需](../deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api.md)。  
   
- 还可以在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中启用此方案。  另请参阅 [演练：在设计器中使用 ClickOnce 部署 API 按需下载附属程序集](http://msdn.microsoft.com/library/ms366788\(v=vs.110\)) 或 [演练：在设计器中使用 ClickOnce 部署 API 按需下载附属程序集](http://msdn.microsoft.com/library/ms366788\(v=vs.120\))。  
+ 还可以在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中启用此方案。  另请参阅[演练：下载按需使用 ClickOnce 部署 API 使用设计器的附属程序集](https://msdn.microsoft.com/library/ms366788\(v=vs.110\))或[演练：下载附属程序集使用 ClickOnce 部署使用设计器的 API 按需](https://msdn.microsoft.com/library/ms366788\(v=vs.120\))。  
   
 ## <a name="testing-localized-clickonce-applications-before-deployment"></a>在部署前测试已本地化的 ClickOnce 应用程序  
  仅当应用程序主线程的 <xref:System.Threading.Thread.CurrentUICulture%2A> 属性设置为附属程序集的区域性时，才将附属程序集用于 Windows 窗体应用程序。 本地市场中的客户可能已经在运行 Windows 的本地化版本，并且已将区域性设置为相应默认值。  
   
  向客户提供应用程序前，你有如下三个选项，供测试已本地化的部署：  
   
--   可在 Windows 相应的本地化版本上运行自己的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序。  
+- 可在 Windows 相应的本地化版本上运行自己的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序。  
   
--   可在应用程序中以编程方式设置 <xref:System.Threading.Thread.CurrentUICulture%2A> 属性。 （必须在调用 <xref:System.Windows.Forms.Application.Run%2A> 方法前设置该属性。）  
+- 可在应用程序中以编程方式设置 <xref:System.Threading.Thread.CurrentUICulture%2A> 属性。 （必须在调用 <xref:System.Windows.Forms.Application.Run%2A> 方法前设置该属性。）  
   
 ## <a name="see-also"></a>请参阅  
  [\<assemblyIdentity > 元素](../deployment/assemblyidentity-element-clickonce-deployment.md)   
  [ClickOnce 安全和部署](../deployment/clickonce-security-and-deployment.md)   
- [全球化 Windows 窗体](http://msdn.microsoft.com/library/72f6cd92-83be-45ec-aa37-9cb8e3ebc3c5)
-
-
-
+ [全球化 Windows 窗体](https://msdn.microsoft.com/library/72f6cd92-83be-45ec-aa37-9cb8e3ebc3c5)

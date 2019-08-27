@@ -1,14 +1,9 @@
 ---
 title: 收集层交互数据 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.property.tierinteraction
 helpviewer_keywords:
@@ -20,13 +15,13 @@ ms.assetid: 47a944c2-3098-497c-8fc7-e1f43d750bbc
 caps.latest.revision: 18
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 31e2d46992b48b987966bac7d7dc68787f4016c2
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: a20266c870316be9b6be67e661d13eb4e6fdbaee
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51761179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62568042"
 ---
 # <a name="collecting-tier-interaction-data"></a>收集层交互数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -47,14 +42,11 @@ ms.locfileid: "51761179"
   
 ### <a name="to-add-tier-interaction-data-to-a-profiling-run-by-using-the-performance-session-property-pages"></a>使用性能会话属性页将层交互数据添加到分析运行中  
   
-1.  在“性能资源管理器”中，从上下文菜单中选择“属性”。  
+1. 在“性能资源管理器”中，从上下文菜单中选择“属性”。  
   
-2.  选择“层交互”页，然后选中“启用层交互分析”复选框。  
+2. 选择“层交互”页，然后选中“启用层交互分析”复选框。  
   
-3.  在“性能资源管理器”中，选择“目标”节点，然后指定要分析的项目、可执行文件或网站。  
+3. 在“性能资源管理器”中，选择“目标”节点，然后指定要分析的项目、可执行文件或网站。  
   
 ## <a name="see-also"></a>请参阅  
  [“层交互”视图](../profiling/tier-interactions-view.md)
-
-
-

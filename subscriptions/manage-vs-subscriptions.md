@@ -1,68 +1,21 @@
 ---
 title: 管理 Visual Studio 订阅
 author: evanwindom
-ms.author: jaunger
-manager: evelynp
-ms.date: 10/03/2017
-ms.topic: Get-Started-Article
+ms.author: lank
+manager: lank
+ms.date: 07/17/2019
+ms.topic: conceptual
 description: 了解如何充分利用 Visual Studio 订阅
-ms.prod: vs-subscription
-ms.technology: vs-subscriptions
-searchscope: VS Subscription
-ms.openlocfilehash: 84e3f62bfb0939bdb30f562629c84a092cd02f4b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: dcbcbc9c11dc5c695a1ca2ed523ad982ff18f5c5
+ms.sourcegitcommit: 9fc8b144d4ed1c46aba87c0b7e1d24454e0eea9d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49822158"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68493357"
 ---
 # <a name="managing-subscriptions"></a>管理订阅
 
 利用 Visual Studio [订阅者门户](https://my.visualstudio.com)，可在同一位置管理所有的订阅和计划成员身份。 可以更改个人资料、使用订阅中包含的所有权益，以及快速轻松地切换订阅。
-
-## <a name="signing-in-to-the-portal"></a>登录到门户
-
-欢迎使用 Visual Studio 订阅！  借助订阅，你可以获得编码过程中所需的全部软件和权益，包括获取软件、每月的 Azure 信用额度、协作工具、培训福利、支持等，这些都是 Microsoft 提供的所有最新、最卓越的服务。 需要登录才能使用该门户。
-
-### <a name="first-time-access"></a>首次访问
-
-首次使用订阅的步骤取决于获取订阅的方式。
-
-#### <a name="microsoft-store"></a>Microsoft Store
-
-如果已通过 Microsoft Store 购买 Visual Studio 订阅，可从付款“确认页”或“确认电子邮件”启动激活步骤。
-
-1. 在“确认页”或“确认电子邮件”上，单击“单击此处登录”。 你将重定向到 https://my.visualstudio.com/subscriptions/activate。
-2. 输入用于登录订阅者门户的电子邮件地址，然后单击“继续”。
-3. 根据电子邮件地址的不同，可能会重定向到“Microsoft 帐户”登录页，或者公司或学校的登录页。
-4. 输入密码或完成登录要求。
-5. 输入确认页或欢迎电子邮件中提供的产品密钥，然后单击“激活”。
-
-#### <a name="workschool-accounts"></a>工作或学校帐户
-
-如果订阅是由工作或学校提供的，那么你将收到一封欢迎电子邮件。
-
-1. 访问[订阅者门户](https://my.visualstudio.com/)
-2. 输入向新 Visual Studio 订阅分配的电子邮件地址。 订阅者欢迎电子邮件中也标识了该地址。 如果未收到欢迎电子邮件，请检查垃圾邮件文件夹。
-3. 单击“继续”
-4. 将重定向到公司的登录页。
-5. 输入密码。
-6. 单击“登录”。
-
-#### <a name="visual-studio-marketplace"></a>Visual Studio Marketplace
-
-如果从 Visual Studio Marketplace 购买了月度或年度云订阅，请访问[订阅者门户](https://my.visualstudio.com/)，并使用购买订阅时提供的 Microsoft 帐户 (MSA) 登录。
-
-#### <a name="using-a-workschool-account-with-a-microsoft-account-msa"></a>借助 Microsoft 帐户 (MSA) 使用工作或学校帐户
-
-如果组织已有 Azure Active Directory，但你没有 Azure Active Directory 帐户，则可能需要利用登录过程中提供的“个人”选项。
-
-1. 请转到[订阅者门户](https://my.visualstudio.com)
-2. 输入向新 Visual Studio 订阅分配的电子邮件地址。 订阅者“欢迎信”中也标识了该地址。 （如果未收到欢迎电子邮件，请检查垃圾邮件文件夹。）
-3. 单击“继续”
-4. 将重定向到“决策页”。  如果订阅被分配到与 Azure Active Directory (AAD) 租户关联的工作或学校帐户，请选择“工作或学校帐户”。 如果订阅与公司电子邮件地址相关联，但也已转换为个人 Microsoft 帐户 (MSA)，请选择“个人”
-5. 输入密码
-6. 单击“登录”
 
 ## <a name="managing-multiple-subscriptions"></a>管理多个订阅
 
@@ -90,7 +43,6 @@ Visual Studio 订阅门户将所有 Visual Studio 订阅和程序汇集到一个
 ## <a name="renewing-my-subscriptions"></a>续订我的订阅
 
 **标准订阅**
-
 - Microsoft Store：如果从 [Microsoft Store](http://www.microsoft.com/store) 购买订阅，则可以继续在这里续订。
 - 批量许可证：如果公司通过批量许可证购买订阅，管理员应联系经销商续订你的订阅。
 
@@ -100,10 +52,8 @@ Visual Studio 订阅门户将所有 Visual Studio 订阅和程序汇集到一个
 
 - [Imagine](https://imagine.microsoft.com/about)
 - [BizSpark](https://bizspark.microsoft.com/About/Offers)
-- [Microsoft 合作伙伴网络](https://partner.microsoft.com/en-us)
-- [Microsoft 认证培训师](https://www.microsoft.com/en-us/learning/mct-certification.aspx)
-
-**Visual Studio Dev Essentials：** Dev Essentials 是一个免费的计划，并且成员资格不会过期。
+- [Microsoft 合作伙伴网络](https://partner.microsoft.com)
+- [Microsoft 认证培训师](https://www.microsoft.com/learning/mct-certification.aspx)
 
 ## <a name="transferring-subscriptions"></a>转让订阅
 
@@ -119,16 +69,18 @@ Visual Studio 订阅门户将所有 Visual Studio 订阅和程序汇集到一个
 个人资料中的联系人信息和首选项可以轻松更改。
 
 1. 在订阅者门户的右上角单击你的名字。
-2. 单击“编辑个人资料”按钮。
-3. 在“关于”选项卡上，可以更改姓名、电子邮件、国家/地区、个人资料图片和联系人首选项。 在“首选项”选项卡上，可以选择首选语言、日期和时间模式、时区，以及用户界面主题。
-4. 完成更改后，单击“保存”。
-5. 单击浏览器的“返回”按钮以返回到“权益”页。
+2. 单击“编辑个人资料”按钮  。
+3. 在“关于”选项卡上，可以更改姓名、电子邮件、国家/地区、个人资料图片和联系人首选项  。 在“首选项”选项卡上，可以选择首选语言、日期和时间模式、时区，以及用户界面主题。 
+4. 完成更改后，单击“保存”  。
+5. 单击浏览器的“返回”按钮以返回到“权益”页  。
+
+### <a name="setting-communications-preferences"></a>设置通信首选项
+若想要收到关于你的订阅和权益的定期更新，其中包括每月 Visual Studio 订阅新闻稿，请选中 Visual Studio 个人资料中的“Visual Studio 订阅”框，来[更新首选项](https://app.vsaex.visualstudio.com/me?workflowID=devprogram&tab=edit)。 可以随时更改这些首选项，或取消订阅。 
 
    > [!div class="mx-imgBorder"]
-   > ![编辑个人资料信息](_img/manage-vs-subscriptions/edit-profile-resized.png)
-
+   > ![设置首选项](_img/manage-vs-subscriptions/change-prefs.png)
+   
 ### <a name="linking-my-subscription-to-existing-azure-devops-services-or-azure-subscriptions"></a>将订阅链接到现有的 Azure DevOps Services 或 Azure 订阅
-
 如果使用个人 Microsoft 帐户 (MSA) 登录到订阅，并且拥有使用由 Azure 管理的工作或学校帐户的订阅（该订阅包含 Azure DevOps Services 或 Microsoft Azure），则可以链接这两个订阅。 这被称为“备用帐户”，借助此帐户，用户可以继续使用 MSA 登录到订阅，同时访问与学校或工作帐户相关联的现有 Azure、Azure DevOps Services 或 IDE 资源。
 
 即使这两个帐户均使用同一电子邮件地址，仍需添加工作或学校帐户作为备用，以便跨帐户使用权益。
@@ -136,19 +88,15 @@ Visual Studio 订阅门户将所有 Visual Studio 订阅和程序汇集到一个
 添加备用帐户：
 
 1. 使用 Microsoft 帐户 (MSA) 登录到[订阅者门户](https://my.visualstudio.com?wt.mc_id=o~msft~docs)
-2. 单击“订阅”选项卡。
-3. 在“相关链接”下，选择“添加备用帐户”。
-4. 输入工作或学校帐户的电子邮件地址，然后单击“添加”。
+2. 单击“订阅”选项卡  。
+3. 在“相关链接”下，选择“添加备用帐户”   。
+4. 输入工作或学校帐户的电子邮件地址，然后单击“添加”  。
 
-   > [!div class="mx-imgBorder"]
-   > ![备用帐户](_img/manage-vs-subscriptions/alternate-account-resized.png)
-
-添加备用帐户后，就可随时通过单击“订阅”标签并在“相关链接”部分选择相应的选项来更新或删除该帐户。
+添加备用帐户后，就可随时通过单击“订阅”标签并在“相关链接”部分选择相应的选项来更新或删除该帐户   。
 
 ## <a name="frequently-asked-questions"></a>常见问题
 
 ### <a name="q-if-i-do-not-renew-my-subscription-how-long-will-microsoft-keep-my-data"></a>问：如果未续订我的订阅，我的数据将在 Microsoft 保留多长时间？
-
 答：Microsoft 保留客户数据时间的长短视不同购买渠道而定。
 
 | 通道                                                | 持续时间（天） |

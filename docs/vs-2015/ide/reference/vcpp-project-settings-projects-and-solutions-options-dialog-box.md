@@ -1,14 +1,9 @@
 ---
 title: “选项”对话框 ->“项目和解决方案”->“VC++ 项目设置”| Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Projects.VCBuild
 helpviewer_keywords:
@@ -23,25 +18,24 @@ ms.assetid: 56420efd-6a95-464e-b890-e2b38c48d66a
 caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: a1491d639ace0cba80530ea1613525480bad07f5
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 65115be12d00f335272c65083be4a323a604b646
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49238857"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65689351"
 ---
 # <a name="vc-project-settings-projects-and-solutions-options-dialog-box"></a>“选项”对话框 ->“项目和解决方案”->“VC++ 项目设置”
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 使用此对话框，可以定义与生成日志和支持文件类型相关的 [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] 项目设置。  
   
 ### <a name="to-access-this-dialog-box"></a>访问此对话框  
   
-1.  在 **“工具”** 菜单上，单击 **“选项”**。  
+1. 在 **“工具”** 菜单上，单击 **“选项”**。  
   
-2.  依次选择“项目和解决方案”和“VC++ 项目设置”。  
+2. 依次选择“项目和解决方案”和“VC++ 项目设置”。  
   
 ## <a name="build-customization-search-path"></a>生成自定义搜索路径  
  指定包含 .rules 文件的目录列表，这些文件有助于定义项目的生成规则。  
@@ -84,8 +78,5 @@ ms.locfileid: "49238857"
  将“解决方案资源管理器”配置为显示项目中的文件和磁盘上项目文件夹中的文件。  
   
 ## <a name="see-also"></a>请参阅  
- [生成 C/C++ 程序](http://msdn.microsoft.com/library/fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008)   
- [C/C++ 生成参考](http://msdn.microsoft.com/library/100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d)
-
-
-
+ [生成 C/C++ 程序](https://msdn.microsoft.com/library/fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008)   
+ [C/C++ 生成参考](https://msdn.microsoft.com/library/100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d)

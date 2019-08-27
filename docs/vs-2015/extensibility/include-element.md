@@ -1,14 +1,9 @@
 ---
 title: 包含元素 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - Include
 helpviewer_keywords:
@@ -17,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c923dfe6-084a-4105-aec1-f0a3f8399c54
 caps.latest.revision: 10
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: c8173234ac93d8aa4b7893ffbafc1724a1695225
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 1bdc56c9d0b488bdbe24a8534ab516cc0fc831df
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51769456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68203933"
 ---
 # <a name="include-element"></a>Include 元素
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,7 +38,7 @@ Include 元素指定的文件，可以找到对提供包括插入到当前文件
   
 |特性|描述|  
 |---------------|-----------------|  
-|href|必须的。 标头文件的路径：<br /><br /> href="stdidcmd.h"|  
+|href|必需。 标头文件的路径：<br /><br /> href="stdidcmd.h"|  
 |条件|可选。 请参阅[条件属性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -66,4 +61,3 @@ Include 元素指定的文件，可以找到对提供包括插入到当前文件
   
 ## <a name="see-also"></a>请参阅  
  [Visual Studio 命令表格 (.Vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
-

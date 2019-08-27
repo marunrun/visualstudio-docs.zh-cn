@@ -14,15 +14,15 @@ helpviewer_keywords:
 - MarkupCompilePass1 task [WPF MSBuild], converting XAML to binary format
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 52b6e36e06ee74f974d2d774af806a234835cff0
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: dfcd34daa6a9a2b4cb4bd095bc91ac5962c7335d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53906873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62979771"
 ---
 # <a name="markupcompilepass1-task"></a>MarkupCompilePass1 任务
 
@@ -102,11 +102,11 @@ ms.locfileid: "53906873"
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <UsingTask 
-    TaskName="Microsoft.Build.Tasks.Windows.MarkupCompilePass1" 
+  <UsingTask
+    TaskName="Microsoft.Build.Tasks.Windows.MarkupCompilePass1"
     AssemblyFile="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationBuildTasks.dll" />
   <Target Name="MarkupCompilePass1Task">
-    <MarkupCompilePass1 
+    <MarkupCompilePass1
       AssemblyName="WPFMSBuildSample"
       Language="C#"
       OutputType="WinExe"
@@ -121,9 +121,9 @@ ms.locfileid: "53906873"
 
 ## <a name="see-also"></a>请参阅
 
-[WPF MSBuild 参考](../msbuild/wpf-msbuild-reference.md)  
-[WPF MSBuild 任务参考](../msbuild/wpf-msbuild-task-reference.md)  
-[MSBuild 参考](../msbuild/msbuild-reference.md)  
-[MSBuild 任务参考](../msbuild/msbuild-task-reference.md)  
-[生成 WPF 应用程序 (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)  
-[WPF XAML 浏览器应用程序概述](/dotnet/framework/wpf/app-development/wpf-xaml-browser-applications-overview)
+- [WPF MSBuild 参考](../msbuild/wpf-msbuild-reference.md)
+- [WPF MSBuild 任务参考](../msbuild/wpf-msbuild-task-reference.md)
+- [MSBuild 参考](../msbuild/msbuild-reference.md)
+- [MSBuild 任务参考](../msbuild/msbuild-task-reference.md)
+- [生成 WPF 应用程序 (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
+- [WPF XAML 浏览器应用程序概述](/dotnet/framework/wpf/app-development/wpf-xaml-browser-applications-overview)

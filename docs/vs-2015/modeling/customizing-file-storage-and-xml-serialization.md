@@ -1,12 +1,9 @@
 ---
 title: 自定义文件存储和 XML 序列化 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 f1_keywords:
 - vs.dsltools.dsldesigner.xmlbehavior
 helpviewer_keywords:
@@ -15,13 +12,13 @@ ms.assetid: 76c53ef1-e3b9-45da-b425-1bddb3c01395
 caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 574fad0cdccd0112d7d078e86486569d16919a75
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: b41f5f6a3d937f23db1039fdab5e1cf7e36960ef
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49867438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63433256"
 ---
 # <a name="customizing-file-storage-and-xml-serialization"></a>自定义文件存储和 XML 序列化
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,22 +30,22 @@ ms.locfileid: "49867438"
  此外可以编写更多高级自定义的程序代码。  
   
 > [!NOTE]
->  如果你想要将模型保存在特定的格式，但不是需要重新加载它从该窗体，请考虑使用文本模板从模型中，而不是自定义序列化方案生成的输出。 有关详细信息，请参阅[从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)。  
+> 如果你想要将模型保存在特定的格式，但不是需要重新加载它从该窗体，请考虑使用文本模板从模型中，而不是自定义序列化方案生成的输出。 有关详细信息，请参阅[从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)。  
   
 ## <a name="model-and-diagram-files"></a>模型和关系图文件  
  每个模型通常保存在两个文件：  
   
--   模型文件具有一个名称，如**Model1.mydsl**。 它将存储模型元素和关系和其属性。 如的文件扩展名 **.mydsl**由**FileExtension**属性**编辑器**DSL 定义中的节点。  
+- 模型文件具有一个名称，如**Model1.mydsl**。 它将存储模型元素和关系和其属性。 如的文件扩展名 **.mydsl**由**FileExtension**属性**编辑器**DSL 定义中的节点。  
   
--   关系图文件有一个名称，例如**Model1.mydsl.diagram**。 它将存储这些形状、 连接器和它们的位置、 颜色、 线条粗细和关系图的外观的其他详细信息。 如果用户删除 **.diagram**文件中，在模型中的基本信息不会丢失。 仅关系图的布局将丢失。 当打开模型文件时，一组默认的形状并将创建连接器。  
+- 关系图文件有一个名称，例如**Model1.mydsl.diagram**。 它将存储这些形状、 连接器和它们的位置、 颜色、 线条粗细和关系图的外观的其他详细信息。 如果用户删除 **.diagram**文件中，在模型中的基本信息不会丢失。 仅关系图的布局将丢失。 当打开模型文件时，一组默认的形状并将创建连接器。  
   
 #### <a name="to-change-the-file-extension-of-a-dsl"></a>若要更改 DSL 的文件扩展名  
   
-1.  打开 DSL 定义中。 在 DSL 资源管理器，单击编辑器节点。  
+1. 打开 DSL 定义中。 在 DSL 资源管理器，单击编辑器节点。  
   
-2.  在属性窗口中编辑**FileExtension**属性。 不包括在初始"。"的文件扩展名。  
+2. 在属性窗口中编辑**FileExtension**属性。 不包括在初始"。"的文件扩展名。  
   
-3.  在解决方案资源管理器中的两个项模板文件的名称更改**DslPackage\ProjectItemTemplates**。 这些文件的名称遵循以下格式：  
+3. 在解决方案资源管理器中的两个项模板文件的名称更改**DslPackage\ProjectItemTemplates**。 这些文件的名称遵循以下格式：  
   
      `myDsl.diagram`  
   
@@ -84,17 +81,17 @@ ms.locfileid: "49867438"
   
  请注意，序列化模型有关的以下几点：  
   
--   每个 XML 节点具有域类名称相同的名称，只是首字母为小写形式。 例如，`familyTreeModel` 和 `person`。  
+- 每个 XML 节点具有域类名称相同的名称，只是首字母为小写形式。 例如，`familyTreeModel` 和 `person`。  
   
--   域属性，如名称和出生年份扩展会序列化为的 XML 节点中的属性。 同样，属性名称的初始字符转换为小写。  
+- 域属性，如名称和出生年份扩展会序列化为的 XML 节点中的属性。 同样，属性名称的初始字符转换为小写。  
   
--   每个关系序列化为 XML 节点嵌套在关系的源端。 该节点具有相同名称，为源角色属性，但大小写的初始字符。  
+- 每个关系序列化为 XML 节点嵌套在关系的源端。 该节点具有相同名称，为源角色属性，但大小写的初始字符。  
   
      例如，在 DSL 定义中，名为的角色**人们**源于**FamilyTree**类。  在 XML 中，这由名为的节点`people`嵌套在`familyTreeModel`节点。  
   
--   每个嵌入关系目标端序列化为嵌套在此关系下一个节点。 例如，`people`节点包含多个`person`节点。  
+- 每个嵌入关系目标端序列化为嵌套在此关系下一个节点。 例如，`people`节点包含多个`person`节点。  
   
--   每个引用关系的目标端序列化为*名字对象*，这对目标元素的引用进行编码。  
+- 每个引用关系的目标端序列化为*名字对象*，这对目标元素的引用进行编码。  
   
      例如，在`person`节点，可以有`children`关系。 此节点包含名字对象，例如：  
   
@@ -128,33 +125,33 @@ ms.locfileid: "49867438"
   
 #### <a name="to-set-a-domain-class-to-be-referenced-by-id-monikers"></a>若要设置用于引用的 ID 名字对象的域类  
   
-1.  请确保**名字对象键**是`false`类和其基类中的每个域属性。  
+1. 请确保**名字对象键**是`false`类和其基类中的每个域属性。  
   
-    1.  在 DSL 资源管理器，展开**Xml 序列化 Behavior\Class 数据\\**_\<域类 >_**\Element 数据**。  
+    1. 在 DSL 资源管理器，展开**Xml 序列化 Behavior\Class 数据\\**_\<域类 >_**\Element 数据**。  
   
-    2.  确认**名字对象键**是`false`针对每个域属性。  
+    2. 确认**名字对象键**是`false`针对每个域属性。  
   
-    3.  如果域类具有一个基类，重复在该类中的过程。  
+    3. 如果域类具有一个基类，重复在该类中的过程。  
   
-2.  设置**序列化 Id**  =  `true`域类。  
+2. 设置**序列化 Id**  =  `true`域类。  
   
      此属性可以下找到**Xml 序列化行为**。  
   
 #### <a name="to-set-a-domain-class-to-be-referenced-by-qualified-key-monikers"></a>若要设置用于限定键的名字对象引用的域类  
   
--   设置**名字对象键**现有域类的域属性。 属性的类型必须为`string`。  
+- 设置**名字对象键**现有域类的域属性。 属性的类型必须为`string`。  
   
-    1.  在 DSL 资源管理器，展开**Xml 序列化 Behavior\Class 数据\\**_\<域类 >_**\Element 数据**，然后选择域属性。  
+    1. 在 DSL 资源管理器，展开**Xml 序列化 Behavior\Class 数据\\**_\<域类 >_**\Element 数据**，然后选择域属性。  
   
-    2.  在属性窗口中设置**名字对象键**到`true`。  
+    2. 在属性窗口中设置**名字对象键**到`true`。  
   
--   \- 或 -  
+- \- 或 -  
   
      创建新的域类使用**名为域类**工具。  
   
      此工具创建具有一个名为名称的域属性的新类。 **元素名称**并**是名字对象密钥**此域属性的属性初始化为`true`。  
   
--   \- 或 -  
+- \- 或 -  
   
      创建从域类与具有的名字对象密钥属性的另一个类继承关系。  
   
@@ -163,11 +160,11 @@ ms.locfileid: "49867438"
   
  有几种方法，可帮助避免这种情况：  
   
--   设置**元素名称** =  `true`关键域属性。 选择域属性上的 DSL 定义关系图，然后在属性窗口中设置值。  
+- 设置**元素名称** =  `true`关键域属性。 选择域属性上的 DSL 定义关系图，然后在属性窗口中设置值。  
   
      当用户创建类的新实例时，此值会导致域属性自动分配一个不同的值。 默认行为的类名的末尾添加一个数字。 这不会阻止用户的名称更改为重复，但它可帮助在这种情况时用户将模型保存之前未设置的值。  
   
--   启用对 DSL 的验证。 在 DSL 资源管理器，选择编辑器 \ 验证，并设置**使用...** 属性设置为`true`。  
+- 启用对 DSL 的验证。 在 DSL 资源管理器，选择编辑器 \ 验证，并设置**使用...** 属性设置为`true`。  
   
      没有二义性检查的自动生成的验证方法。 该方法是在`Load`验证类别。 这可确保它可能无法重新打开该文件会警告用户。  
   
@@ -207,7 +204,7 @@ ms.locfileid: "49867438"
 ## <a name="customizing-the-structure-of-the-xml"></a>自定义 XML 的结构  
  若要进行以下自定义，展开**Xml 序列化行为**DSL 资源管理器中的节点。 下一个域类中，展开要查看的属性和关系来源于此类列表的元素数据节点。 选择一种关系，并调整其属性窗口中的选项。  
   
--   设置**省略元素**为 true，以忽略源角色节点，离开只是目标元素的列表。 如果源和目标类之间存在多个关系，不应设置此选项。  
+- 设置**省略元素**为 true，以忽略源角色节点，离开只是目标元素的列表。 如果源和目标类之间存在多个关系，不应设置此选项。  
   
     ```  
   
@@ -221,7 +218,7 @@ ms.locfileid: "49867438"
   
     ```  
   
--   设置**使用完整的窗体**表示关系实例的节点中嵌入的目标节点。 将域属性添加到域关系时，将自动设置此选项。  
+- 设置**使用完整的窗体**表示关系实例的节点中嵌入的目标节点。 将域属性添加到域关系时，将自动设置此选项。  
   
     ```  
   
@@ -239,7 +236,7 @@ ms.locfileid: "49867438"
   
     ```  
   
--   设置**表示形式** = **元素**具有另存为元素而不是属性值的域属性。  
+- 设置**表示形式** = **元素**具有另存为元素而不是属性值的域属性。  
   
     ```  
     <person name="Elizabeth I" birthYear="1533">  
@@ -247,7 +244,7 @@ ms.locfileid: "49867438"
     </person>  
     ```  
   
--   若要更改在其中的属性和关系进行序列化的顺序，请右键单击某项下的数据元素，并使用**移**或**下移**菜单命令。  
+- 若要更改在其中的属性和关系进行序列化的顺序，请右键单击某项下的数据元素，并使用**移**或**下移**菜单命令。  
   
 ## <a name="major-customization-using-program-code"></a>使用程序代码的主要自定义  
  您可以替换部分或全部的序列化算法。  
@@ -256,13 +253,13 @@ ms.locfileid: "49867438"
   
 #### <a name="to-customize-the-serialization-of-a-particular-class"></a>若要自定义特定类的序列化  
   
-1.  设置**是自定义**中的节点，在该类**Xml 序列化行为**。  
+1. 设置**是自定义**中的节点，在该类**Xml 序列化行为**。  
   
-2.  转换所有模板、 生成解决方案，并调查导致的编译错误。 附近的每个错误的注释说明你需要提供哪些代码。  
+2. 转换所有模板、 生成解决方案，并调查导致的编译错误。 附近的每个错误的注释说明你需要提供哪些代码。  
   
 #### <a name="to-provide-your-own-serialization-for-the-whole-model"></a>若要提供您自己的整个模型的序列化  
   
-1.  Dsl\GeneratedCode\SerializationHelper.cs 中重写方法  
+1. Dsl\GeneratedCode\SerializationHelper.cs 中重写方法  
   
 ## <a name="options-in-xml-serialization-behavior"></a>Xml 序列化行为中的选项  
  在 DSL 资源管理器，Xml 序列化行为节点包含有关每个域类、 关系、 形状、 连接符和关系图类的子节点。 在每个这些节点是属性和关系来源于该元素的列表。 关系本身就和在其源类表示。  
@@ -313,6 +310,3 @@ ms.locfileid: "49867438"
 ## <a name="see-also"></a>请参阅  
  [导航和更新程序代码中的模型](../modeling/navigating-and-updating-a-model-in-program-code.md)   
  [从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)
-
-
-

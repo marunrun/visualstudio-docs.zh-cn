@@ -4,16 +4,15 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 0b0e85beaa03984be854577728afbb5915af579b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: da3b0d2829732b7b1765b082eb51b2b54832d1ef
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53891821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62906865"
 ---
 # <a name="visual-studio-architecture-tooling-guidance"></a>Visual Studio 体系结构工具指南
 

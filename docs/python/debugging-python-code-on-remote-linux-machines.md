@@ -2,21 +2,20 @@
 title: 在远程 Linux 计算机上调试 Python 代码
 description: 使用 Visual Studio 调试在远程 Linux 计算机上运行的 Python 代码，包括必要的配置步骤、安全性和故障排除。
 ms.date: 12/06/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
-author: kraigb
-ms.author: kraigb
-manager: douge
+author: JoshuaPartlow
+ms.author: joshuapa
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: eaeb13a087723b10098c9cfe6f75f3be2aad351e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e718a5610d9539e3e2a89af0a9de502ebfd168a7
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53964885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62962512"
 ---
 # <a name="remotely-debug-python-code-on-linux"></a>在 Linux 上远程调试 Python 代码
 
@@ -66,7 +65,7 @@ Visual Studio 可在 Windows 计算机本地和远程启动和调试 Python 应�
         print('Nope. The number I was thinking of was {0}'.format(number))
     ```
 
-1. 使用 `pip3 install ptvsd` 将 `ptvsd` 包安装到环境中。 
+1. 使用 `pip3 install ptvsd` 将 `ptvsd` 包安装到环境中。
    >[!NOTE]
    >建议记录安装的 ptvsd 版本，以防需要进行故障排除；[ptvsd 列表](https://pypi.python.org/pypi/ptvsd)也显示了可用版本。
 

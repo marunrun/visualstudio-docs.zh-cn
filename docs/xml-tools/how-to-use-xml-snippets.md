@@ -1,24 +1,23 @@
 ---
 title: 如何使用 XML 代码段
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.assetid: 3a27375b-81cc-48f6-a884-e1cb8c4f78f5
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 514e3efe56c18288a596d4414512064ed4dcc157
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e4a56249c0a87b2516dc233818208f7c7c4b696e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53940727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63002052"
 ---
-# <a name="how-to-use-xml-snippets"></a>如何：使用 XML 代码段
+# <a name="how-to-use-xml-snippets"></a>如何：使用 XML 片段
 
-可以在“XML 编辑器”的快捷菜单上使用下列两个命令调用 XML 代码段。 **插入代码段**命令将在光标位置处插入 XML 代码段。 **Surround With**命令包装所选文本环绕 XML 代码段。 每个 XML 代码段具有指定的代码段类型。 代码段类型确定是否使用可用代码片段**插入代码段**命令， **Surround With**命令还是两个。
+可以通过使用 XML 编辑器快捷菜单上的以下两个命令调用 XML 代码段。 **插入代码段**命令将在光标位置处插入 XML 代码段。 **Surround With**命令包装所选文本环绕 XML 代码段。 每个 XML 代码段具有指定的代码段类型。 代码段类型确定是否使用可用代码片段**插入代码段**命令， **Surround With**命令还是两个。
 
 将 XML 代码段添加到编辑器之后，代码段中的任何可编辑字段将以黄色突出显示，光标位于第一个可编辑字段。
 
@@ -81,7 +80,7 @@ ms.locfileid: "53940727"
 
 ### <a name="to-use-surround-with-from-the-context-menu"></a>若要从上下文菜单中使用外侧代码
 
-1. 在“XML 编辑器”中选择要环绕的文本。
+1. 选择要在 XML 编辑器中环绕的文本。
 
 2. 右键单击并选择**Surround With**。
 
@@ -91,7 +90,7 @@ ms.locfileid: "53940727"
 
 ### <a name="to-use-surround-with-from-the-intellisense-menu"></a>若要从 IntelliSense 菜单上使用外侧代码
 
-1. 在“XML 编辑器”中选择要环绕的文本。
+1. 选择要在 XML 编辑器中环绕的文本。
 
 2. 从**编辑**菜单，依次指向**IntelliSense**，然后选择**Surround With**。
 
@@ -99,7 +98,7 @@ ms.locfileid: "53940727"
 
 3. 从列表中使用鼠标，或通过键入代码片段和按名称选择代码片段**选项卡**或**Enter**。
 
-## <a name="use-xml-snippets"></a>使用 XML 代码段
+## <a name="use-xml-snippets"></a>使用 XML 片段
 
 选择了 XML 代码段后，代码段的文本将自动插入光标位置。 代码段中的任何可编辑字段都将突出显示，并自动选中第一个可编辑字段。 当前选中的字段将框选。
 
@@ -109,7 +108,7 @@ ms.locfileid: "53940727"
 
 按下**Enter**或**Esc**取消字段编辑并使编辑器返回正常状态。
 
-可以通过修改更改可编辑的代码段字段的默认颜色**代码片段字段**中设置**字体和颜色**窗格**选项**对话框。 有关更多信息，请参见[如何：更改编辑器中的字体和颜色](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)。
+可以通过修改更改可编辑的代码段字段的默认颜色**代码片段字段**中设置**字体和颜色**窗格**选项**对话框。 有关详细信息，请参阅[如何：更改编辑器中的字体和颜色](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)。
 
 ## <a name="see-also"></a>请参阅
 

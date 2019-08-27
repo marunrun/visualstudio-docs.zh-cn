@@ -1,14 +1,9 @@
 ---
 title: 重命名重构 (C#) |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - vs.csharp.refactoring.rename
 dev_langs:
@@ -20,13 +15,13 @@ ms.assetid: 268942fc-b142-4dfa-8d90-bedd548c2e4f
 caps.latest.revision: 45
 author: gewarren
 ms.author: gewarren
-manager: wpickett
-ms.openlocfilehash: d88cf6d88f23a3a079d5f9a556c316a204c9ef27
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 3f1c31d858fbe7a5183456bfc7fcc1e602d4e051
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49274958"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65686042"
 ---
 # <a name="rename-refactoring-c"></a>重命名重构 (C#)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,7 +29,7 @@ ms.locfileid: "49274958"
 **重命名**是 Visual Studio 集成的开发环境 (IDE) 提供了一种简单的方法可以重命名代码符号，例如字段、 局部变量、 方法、 命名空间、 属性和类型的标识符中的重构功能。 **重命名**只能更改在注释并在字符串中的名称，并且若要更改的声明和调用的标识符。  
   
 > [!NOTE]
->  当使用针对 Visual Studio 源代码管理，再尝试执行重命名重构获取最新版本的源。  
+> 当使用针对 Visual Studio 源代码管理，再尝试执行重命名重构获取最新版本的源。  
   
  重命名重构为可从以下 Visual Studio 功能：  
   
@@ -53,14 +48,14 @@ ms.locfileid: "49274958"
 |-----------------|----------------------|  
 |字段|声明和此字段的用法更改为新的名称。|  
 |本地变量|声明和变量的用法更改为新的名称。|  
-|方法|该方法并对该方法的所有引用的名称更改为新名称。 **注意：** 时重命名的扩展方法，重命名操作会传播到方法的作用域，而不考虑扩展方法是否正在使用作为静态方法或实例方法中的所有实例。 有关详细信息，请参阅[扩展方法](http://msdn.microsoft.com/library/175ce3ff-9bbf-4e64-8421-faeb81a0bb51)。|  
-|命名空间|命名空间的名称更改为新的名称在声明中，所有`using`语句和完全限定的名称。 **注意：** 重命名命名空间时[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]还会更新**Default Namespace**属性上的**应用程序**页**项目设计器**. 此属性不能通过选择重置**撤消**从**编辑**菜单。 若要重置**默认 Namespace**属性值，必须修改中的属性**项目设计器**。 有关详细信息，请参阅[应用程序页](../ide/reference/application-page-project-designer-csharp.md)。|  
+|方法|该方法并对该方法的所有引用的名称更改为新名称。 **注意：** 当您重命名的扩展方法时，重命名操作将传播到方法的作用域，而不考虑扩展方法是否正在使用作为静态方法或实例方法中的所有实例。 有关详细信息，请参阅[扩展方法](https://msdn.microsoft.com/library/175ce3ff-9bbf-4e64-8421-faeb81a0bb51)。|  
+|命名空间|命名空间的名称更改为新的名称在声明中，所有`using`语句和完全限定的名称。 **注意：** 重命名命名空间时[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]还会更新**Default Namespace**上的属性**应用程序**页**项目设计器**。 此属性不能通过选择重置**撤消**从**编辑**菜单。 若要重置**默认 Namespace**属性值，必须修改中的属性**项目设计器**。 有关详细信息，请参阅[应用程序页](../ide/reference/application-page-project-designer-csharp.md)。|  
 |属性|声明和用法的属性更改为新的名称。|  
 |类型|所有声明和类型的所有用法更改为新名称，包括构造函数和析构函数。 为分部类型重命名操作将会传播到所有部分。|  
   
 #### <a name="to-rename-an-identifier"></a>若要重命名标识符  
   
-1.  创建名为 `RenameIdentifier` 的控制台应用程序，然后将 `Program` 替换为下面的示例代码。  
+1. 创建名为 `RenameIdentifier` 的控制台应用程序，然后将 `Program` 替换为下面的示例代码。  
   
     ```csharp  
     class ProtoClassA  
@@ -81,23 +76,23 @@ ms.locfileid: "49274958"
     }  
     ```  
   
-2.  将光标置于`MethodB`，在方法声明或方法调用。  
+2. 将光标置于`MethodB`，在方法声明或方法调用。  
   
-3.  从**重构**菜单中，选择**重命名**。 **重命名**对话框随即出现。  
+3. 从**重构**菜单中，选择**重命名**。 **重命名**对话框随即出现。  
   
      此外可以右键单击光标，指向**重构**上下文菜单，然后单击**重命名**以显示**重命名**对话框。  
   
-4.  在中**新的名称**字段中，键入`MethodC`。  
+4. 在中**新的名称**字段中，键入`MethodC`。  
   
-5.  选择**在注释中的搜索**复选框。  
+5. 选择**在注释中的搜索**复选框。  
   
-6.  单击 **“确定”**。  
+6. 单击 **“确定”**。  
   
-7.  在中**预览更改**对话框中，单击**应用**。  
+7. 在中**预览更改**对话框中，单击**应用**。  
   
 #### <a name="to-rename-an-identifier-using-smart-tags"></a>若要重命名标识符使用智能标记  
   
-1.  创建名为 `RenameIdentifier` 的控制台应用程序，然后将 `Program` 替换为下面的示例代码。  
+1. 创建名为 `RenameIdentifier` 的控制台应用程序，然后将 `Program` 替换为下面的示例代码。  
   
     ```csharp  
     class ProtoClassA  
@@ -118,18 +113,18 @@ ms.locfileid: "49274958"
     }  
     ```  
   
-2.  声明中`MethodB`中，键入或 backspace 方法标识符。 此标识符下将显示智能标记提示。  
+2. 声明中`MethodB`中，键入或 backspace 方法标识符。 此标识符下将显示智能标记提示。  
   
     > [!NOTE]
-    >  仅可以调用重命名重构在标识符声明中使用智能标记。  
+    > 仅可以调用重命名重构在标识符声明中使用智能标记。  
   
-3.  键入的键盘快捷方式 SHIFT + ALT + F10，，然后按向下箭头以显示智能标记菜单。  
+3. 键入的键盘快捷方式 SHIFT + ALT + F10，，然后按向下箭头以显示智能标记菜单。  
   
      或  
   
      将鼠标指针移动智能标记提示符，以显示智能标记。 然后将鼠标指针移至该智能标记，并单击向下箭头以显示智能标记菜单。  
   
-4.  选择**重命名\<identifer1 >' 到 '\<identifier2 >'** 菜单项调用重命名重构而无需更改代码的预览。 对所有引用 **\<identifer1 >** 将自动更新为 **\<identifier2 >**。  
+4. 选择**重命名\<identifer1 >' 到 '\<identifier2 >'** 菜单项调用重命名重构而无需更改代码的预览。 对所有引用 **\<identifer1 >** 将自动更新为 **\<identifier2 >**。  
   
      或  
   
@@ -149,7 +144,7 @@ ms.locfileid: "49274958"
  如果**重命名重载**处于选中状态，将重命名重构引擎`Derived.Method(int i)`因为它重载`Derived.Method()`，`Base.Method(int i)`因为由重写`Derived.Method(int i)`，和`Base.Method()`的重载，因为它`Base.Method(int i)`.  
   
 > [!NOTE]
->  重命名引用的程序集中定义的成员时，对话框中的文字重命名会导致生成错误。  
+> 重命名引用的程序集中定义的成员时，对话框中的文字重命名会导致生成错误。  
   
 ## <a name="renaming-properties-of-anonymous-types"></a>重命名匿名类型的属性  
  当您重命名匿名类型中的属性时，重命名操作将传播到其他具有相同的属性的匿名类型中的属性。 以下示例说明了此行为。  
@@ -175,4 +170,4 @@ var orderIDs =
   
 ## <a name="see-also"></a>请参阅  
  [重构 (C#)](../csharp-ide/refactoring-csharp.md)   
- [匿名类型](http://msdn.microsoft.com/library/59c9d7a4-3b0e-475e-b620-0ab86c088e9b)
+ [匿名类型](https://msdn.microsoft.com/library/59c9d7a4-3b0e-475e-b620-0ab86c088e9b)

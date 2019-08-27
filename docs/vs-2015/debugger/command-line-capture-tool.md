@@ -1,25 +1,20 @@
 ---
 title: 命令行捕获工具 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: db75b3a7-80b2-4a74-91d2-fd6e0f73b45d
 caps.latest.revision: 7
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: d4cafc8c066025f87d233d8b6db8a97be1aa16f5
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 208ff7f9bbfc2d07669a8b485edffc8dfc4cd54f
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51770689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63437799"
 ---
 # <a name="command-line-capture-tool"></a>命令行捕获工具
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -84,7 +79,7 @@ DXCap.exe –info
  在验证模式下，`events` 指定一组其即时结果将被比较的图形事件。 例如，`-examine present,draw,copy,clear`使比较仅属于这些类别的事件。  
   
 > [!TIP]
->  我们建议从开始`-examine present,draw,copy,clear`因为这将显示出大多数问题，但时间要少得比更广泛的一组事件。 如有必要，你可以指定数目更多的或另一组事件来验证这些事件并发现其他类型的问题。  
+> 我们建议从开始`-examine present,draw,copy,clear`因为这将显示出大多数问题，但时间要少得比更广泛的一组事件。 如有必要，你可以指定数目更多的或另一组事件来验证这些事件并发现其他类型的问题。  
   
  `-haltonfail`  
  在验证模式下，`-haltonfail`硬件和 WARP 呈现器之间检测到差异时，会停止验证。 在按下一个键后，验证将继续进行。  
@@ -142,10 +137,10 @@ DXCap.exe –file regression_test_12.vsglog –c BasicHLSL11.exe
 DXCap.exe –c "C:\Program Files\Internet Explorer\iexplorer.exe" "www.fishgl.com"  
 ```  
   
- 在上面的示例命令捕获图形信息从桌面版本的 Internet Explorer 查看位于使用 WebGL API 来呈现三维内容的 www.fishgl.com 的网页时。  
+ 查看位于使用 WebGL API 来呈现三维内容的 www.fishgl.com 中的网页时，上述示例中的命令将从桌面版本的 Internet Explorer 中捕获图形信息。  
   
 > [!NOTE]
->  由于出现在应用之后的命令行参数传递给它，您必须指定在使用之前用于 DXCap.exe 的自变量`–c`选项。  
+> 由于出现在应用之后的命令行参数会被传递给它，因此必须在使用 `–c` 选项前指定要用于 DXCap.exe 的参数。  
   
 ### <a name="capture-graphics-information-from-a-windows-store-app"></a>从 Windows 应用商店应用捕获图形信息。  
  你可以从 Windows 应用商店应用捕获图形信息。  
@@ -168,18 +163,18 @@ DXCap.exe –e map
   
  上面的命令枚举了与 "map" 匹配的 Windows 应用商店应用；以下是输出：  
   
- **包"Microsoft.BingMaps":**  
- **InstallDirectory: C:\Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe**  
- **FullName: Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe**  
- **UserSID: S-1-5-21-2127521184-1604012920-1887927527-5603533**  
- **名称： Microsoft.BingMaps**  
- **发布者： CN = Microsoft Corporation，O = Microsoft Corporation，L = Redmond，S = Washington，C = US**  
- **版本： 2.1.2914.1734**  
+ 包“Microsoft.BingMaps”  ：  
+ **InstallDirectory：C:\Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe**  
+ **FullName         ：Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe**  
+ **UserSID          ：S-1-5-21-2127521184-1604012920-1887927527-5603533**  
+ **Name             ：Microsoft.BingMaps**  
+ **Publisher        ：CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US**  
+ **Version          ：2.1.2914.1734**  
  **可启动应用程序：**  
- **Id: AppexMaps**  
- **Exe: C:\Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe\Map.exe**  
- **IsWWA： 否**  
- **AppSpec （将启动）： DXCap.exe-c Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe,AppexMaps**枚举的每个应用的输出的最后一行显示可用于从其捕获图形信息的命令。  
+ **Id   :AppexMaps**  
+ **Exe:C:\Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe\Map.exe**  
+ **IsWWA：No**  
+ **AppSpec （将启动）：DXCap.exe-c Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe,AppexMaps**枚举的每个应用的输出的最后一行显示可用于从其捕获图形信息的命令。  
   
 ### <a name="capture-specific-frames-or-frames-between-specific-times"></a>捕获特定帧或特定时段内的帧。  
  使用`–frame`指定你想要使用逗号和范围捕获的帧：  
@@ -302,6 +297,3 @@ DXCap.exe –p regression_test_12.vsglog –toXML temp.xml
 ```  
   
 ## <a name="requirements"></a>要求
-
-
-

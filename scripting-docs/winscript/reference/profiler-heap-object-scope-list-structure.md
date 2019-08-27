@@ -2,7 +2,6 @@
 title: PROFILER_HEAP_OBJECT_SCOPE_LIST 结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -12,12 +11,12 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 114b1a55fce34908c4274877583164aff4ec8dba
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: b1285e4efa3db8a7ec99808f5888d3dbf948e589
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54344819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62830316"
 ---
 # <a name="profilerheapobjectscopelist-structure"></a>PROFILER_HEAP_OBJECT_SCOPE_LIST 结构
 此结构是函数对象仅与相关联。 作用域列表表示为其中每个作用域是一个具有表示每个给定范围中的变量的关联的属性列表的堆对象的作用域的列表，该函数的闭包。 在某些情况下，作用域可能不可用中的对象和仅其索引的属性列表的名称是可用。  

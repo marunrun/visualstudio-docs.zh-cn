@@ -1,30 +1,24 @@
 ---
 title: 与 XML 编辑器的集成 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-xml-tools
+ms.topic: conceptual
 ms.assetid: 43d7a8e6-bd94-4407-a800-15a145c74223
 caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 81cf6b3cb58ceeb118b6e3cc181d417104c40cb0
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 350b97385ab03daca80cc86d4f672dfec07222aa
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49895400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68145262"
 ---
 # <a name="integration-with-xml-editor"></a>与 XML 编辑器的集成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 XML 编辑器中集成了 XML 架构设计器。 如果您修改 XSD 文件在 XML 编辑器中，更改将反映在[XML 架构资源管理器](../xml-tools/xml-schema-explorer.md)。 如果有[关系图视图](../xml-tools/graph-view.md)或[内容模型视图](../xml-tools/content-model-view.md)打开，更改也会反映在存在。 可通过以下方法在 XML 架构设计器和 XML 编辑器之间导航：  
   
 - 在 XML 编辑器中，右键单击某个节点并选择**在 XML 架构资源管理器中显示**。  
@@ -41,6 +35,3 @@ XML 编辑器中集成了 XML 架构设计器。 如果您修改 XSD 文件在 X
   
 ## <a name="see-also"></a>请参阅  
  [XML 架构资源管理器](../xml-tools/xml-schema-explorer.md)
-
-
-

@@ -1,28 +1,23 @@
 ---
 title: 枚举器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, enumerators
 ms.assetid: a60030c5-e1d1-47e1-84bb-cbfe838ab479
 caps.latest.revision: 20
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 90ba436dcfbd09c29f68bff056e315f057e1a983
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 65a03a8dc741ec86aca3137f49cd753722ede215
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51810271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68204566"
 ---
-# <a name="enumerators"></a>枚举器
+# <a name="enumerators"></a>枚举数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本部分列出了源代码管理插件必须要知道源控制插件 API 中的枚举器的数据类型。  
@@ -55,4 +50,3 @@ ms.locfileid: "51810271"
   
  [源代码管理插件](../extensibility/source-control-plug-ins.md)  
  提供源控制插件 API 中的所有元素的完整列表。
-

@@ -2,7 +2,6 @@
 title: IDebugDocumentTextEvents 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,18 +13,18 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bec89ae81d79fb7b0d822cafe2bf44f0ecd8ad81
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
-ms.translationtype: MT
+ms.openlocfilehash: 7c83a6e3a41ed7087338989d5cb077fa070e724b
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54345652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63434263"
 ---
 # <a name="idebugdocumenttextevents-interface"></a>IDebugDocumentTextEvents 接口
 提供指示关联文本文档的更改的事件。  
   
 > [!NOTE]
->  文档文本更改事件对此接口的 fire 时。 事件处理程序可能检索新的文本使用`IDebugDocumentText`接口。  
+> 文档文本更改事件对此接口的 fire 时。 事件处理程序可能检索新的文本使用`IDebugDocumentText`接口。  
   
  除了继承的方法之外`IUnknown`，则`IDebugDocumentTextEvents`接口公开以下方法。  
   

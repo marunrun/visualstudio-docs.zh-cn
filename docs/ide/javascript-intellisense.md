@@ -1,8 +1,8 @@
 ---
 title: JavaScript IntelliSense
 ms.date: 06/28/2017
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
+ms.technology: vs-javascript
 helpviewer_keywords:
 - IntelliSense [JavaScript]
 - <reference> JavaScript XML tag
@@ -20,31 +20,31 @@ helpviewer_keywords:
 - IntelliSense [JavaScript], about
 - IntelliSense extensibility [JavaScript]
 - XML documentation comments [JavaScript]
-author: gewarren
-ms.author: gewarren
-manager: douge
+author: mikejo5000
+ms.author: mikejo
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: de5470f0c48e76d972cd78fd84b7629b8f2426d2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 6ee40d877af75469dcc1abc176d67f43c8bdcfb3
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53849669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62538169"
 ---
 # <a name="javascript-intellisense"></a>JavaScript IntelliSense
 
-[!include[vs_dev15](../misc/includes/vs_dev15_md.md)] 提供了功能强大、即时可用的 JavaScript 编辑体验。 借助于基于 TypeScript 的语言服务所提供的支持，Visual Studio 提供功能更丰富的 IntelliSense、现代 JavaScript 功能支持，以及改进的工作效率功能（如“转到定义”、重构等）。
+Visual Studio 提供了功能强大、即时可用的 JavaScript 编辑体验。 借助于基于 TypeScript 的语言服务所提供的支持，Visual Studio 提供功能更丰富的 IntelliSense、现代 JavaScript 功能支持，以及改进的工作效率功能（如“转到定义”、重构等）。
 
 > [!NOTE]
-> [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] 中的 JavaScript 语言服务为语言服务使用新引擎 （名为“Salsa”）。 本主题中包含详细信息，你还可参阅此[博客文章](https://blogs.msdn.microsoft.com/visualstudio/2016/11/28/more-productive-javascript-in-visual-studio-2017-rc/)。 全新的编辑体验也几乎适用于 Visual Studio Code。 请参阅 [VS Code 文档](https://code.visualstudio.com/docs/languages/javascript)，了解详细信息。
+> 自 Visual Studio 2017 起，JavaScript 语言服务为语言服务使用新引擎（名为“Salsa”）。 本文中包含详细信息，你还可参阅此[博客文章](https://devblogs.microsoft.com/visualstudio/previewing-salsa-javascript-language-service-visual-studio-15/)。 全新的编辑体验也几乎适用于 Visual Studio Code。 请参阅 [VS Code 文档](https://code.visualstudio.com/docs/languages/javascript)，了解详细信息。
 
 有关 Visual Studio 的常规 IntelliSense 功能的详细信息，请参阅[使用 IntelliSense](../ide/using-intellisense.md)。
 
-## <a name="whats-new-in-the-javascript-language-service-in-includevsdev15miscincludesvsdev15mdmd"></a>[!include[vs_dev15](../misc/includes/vs_dev15_md.md)] 中 JavaScript 语言服务的新增功能
+## <a name="whats-new-in-the-javascript-language-service-in-visual-studio-2017"></a>Visual Studio 2017 中 JavaScript 语言服务的新增功能
 
-自 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] 起，JavaScript IntelliSense 将显示有关参数和成员列表的详细信息。
-此新信息由 TypeScript 语言服务提供，该服务在后台使用静态分析来更好地了解使用者的代码。
+自 Visual Studio 2017 起，JavaScript IntelliSense 将显示更多有关参数和成员列表的信息。 此新信息由 TypeScript 语言服务提供，该服务在后台使用静态分析来更好地了解使用者的代码。
+
 TypeScript 使用多个源来构建此信息：
 
 - [基于类型推理的 IntelliSense](#TypeInference)
@@ -53,6 +53,7 @@ TypeScript 使用多个源来构建此信息：
 - [自动获取类型定义](#Auto)
 
 <a name="TypeInference"></a>
+
 ### <a name="intellisense-based-on-type-inference"></a>基于类型推理的 IntelliSense
 
 在 JavaScript 中，通常没有可用的显式类型信息。 好在一般情况下可根据周围的代码上下文，轻松推导出类型。
@@ -90,6 +91,7 @@ exports.Foo = Foo;
 ```
 
 <a name="JsDoc"></a>
+
 ### <a name="intellisense-based-on-jsdoc"></a>基于 JSDoc 的 IntelliSense
 
 在类型推理不提供所需类型信息（或支持文档）的情况下，可通过 JSDoc 注释显式提供类型信息。  例如，若要为部分声明的对象提供特定类型，可使用 `@type` 标记，如下所示：
@@ -123,7 +125,7 @@ function Foo(param1) {
 
 下面是一个简单的示例，其中演示 TypeScript 定义文件通过接口向同一项目的 JavaScript 文件提供此类类型信息（使用 `JsDoc` 标记）。
 
-<img src="https://raw.githubusercontent.com/wiki/Microsoft/TypeScript/images/decl1.png" height="400" width="640" alt="TypeScript definition file" />
+![TypeScript 定义文件](https://raw.githubusercontent.com/wiki/Microsoft/TypeScript/images/decl1.png)
 
 <a name="Auto"></a>
 ### <a name="automatic-acquisition-of-type-definitions"></a>自动获取类型定义

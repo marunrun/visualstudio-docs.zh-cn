@@ -1,21 +1,20 @@
 ---
 title: Visual C++ 代码片段
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
-manager: douge
+author: mikeblome
+ms.author: mblome
+manager: markl
 dev_langs:
 - CPP
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5069d1b92b9c4f73fdb8eca50eabce170f42cef1
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9c1bcef00116e0c5f09099344926d924113e5982
+ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53937434"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68461621"
 ---
 # <a name="visual-c-code-snippets"></a>Visual C++ 代码片段
 
@@ -25,15 +24,15 @@ ms.locfileid: "53937434"
 
 ## <a name="insert-a-code-snippet"></a>插入代码片段
 
-若要插入代码片段，请打开一个 C++ 代码文件（.cpp 或 .h），单击文件内的某个位置，然后执行以下操作之一：
+若要插入代码片段，请打开一个 C++ 代码文件（.cpp  或 .h  ），单击文件内的某个位置，然后执行以下操作之一：
 
-- 右键单击以获取上下文菜单并选择“插入代码片段”
+- 右键单击以获取上下文菜单并选择“插入代码片段” 
 
-- 在“编辑”/“IntelliSense”菜单中，选择“插入代码片段”
+- 在“编辑”/“IntelliSense”  菜单中，选择“插入代码片段” 
 
-- 使用热键：CTRL+K+X
+- 使用热键：CTRL+K+X   
 
-将出现一个以“#if”开头的选择列表。 选择“#if”后，显示添加到文件的以下代码：
+将出现一个以“#if”  开头的选择列表。 选择“#if”  后，显示添加到文件的以下代码：
 
 ```cpp
 #if 0
@@ -41,19 +40,19 @@ ms.locfileid: "53937434"
 #endif // 0
 ```
 
-然后，可以使用正确的条件替换 0。
+然后，可以使用正确的条件替换 0  。
 
 ## <a name="use-a-code-snippet-to-surround-selected-code"></a>使用代码片段来包围所选代码
 
 若要使用代码片段来包围所选代码，请选择一行（或多行），然后执行下列操作之一：
 
-- 右键单击以获取上下文菜单并选择“外侧代码”
+- 右键单击以获取上下文菜单并选择“外侧代码” 
 
-- 在“编辑” > “IntelliSense”菜单中，选择“外侧代码”
+- 在“编辑” > “IntelliSense”菜单中，选择“外侧代码”   
 
-- 在键盘上按：Ctrl+K+S
+- 在键盘上按：Ctrl+K+S   
 
-选择“#if”。 将显示如下所示的内容：
+选择“#if”  。 将显示如下所示的内容：
 
 ```cpp
 #if 0
@@ -65,13 +64,13 @@ ms.locfileid: "53937434"
 
 ## <a name="where-can-i-find-a-complete-list-of-the-c-code-snippets"></a>在哪里可以找到 C++ 代码片段的完整列表？
 
-可以通过以下方式找到 C++ 代码片段的完整列表：转到“代码片段管理器”（位于“工具”菜单中），并将“语言”设置为“Visual C++”。 在下面的窗口中，展开“Visual C++”。 将显示所有 C++ 代码片段的名称，按字母顺序排序。
+可以通过以下方式找到 C++ 代码片段的完整列表：转到“代码片段管理器”  （位于“工具”  菜单中），并将“语言”  设置为“Visual C++”  。 在下面的窗口中，展开“Visual C++”  。 将显示所有 C++ 代码片段的名称，按字母顺序排序。
 
 大多数代码片段的名称都具有自我说明性，但某些名称可能令人困惑。
 
 ## <a name="class-vs-classi"></a>class 与 classi 代码片段比较
 
-class 代码片段具有名为 `MyClass` 的类的定义，以及相应的默认构造函数和析构函数，其中，构造函数和析构函数的定义位于该类的外部：
+class  代码片段具有名为 `MyClass` 的类的定义，以及相应的默认构造函数和析构函数，其中，构造函数和析构函数的定义位于该类的外部：
 
 ```cpp
 class MyClass
@@ -93,7 +92,7 @@ MyClass::~MyClass()
 }
 ```
 
-classi 代码片段也提供名为 `MyClass` 的类的定义，但默认构造函数和析构函数在类定义的内部进行定义：
+classi 代码片段也提供名为 `MyClass` 的类的定义，但默认构造函数和析构函数在类定义的内部进行定义  ：
 
 ```cpp
 class MyClass
@@ -114,9 +113,9 @@ private:
 
 ## <a name="for-vs-forr-vs-rfor"></a>for、forr 与 rfor 比较
 
-有三个不同的 for 代码片段，可提供不同种类的 `for` 循环。
+有三个不同的 for 代码片段，可提供不同种类的 `for` 循环  。
 
-rfor 代码片段具有[基于范围](/cpp/cpp/range-based-for-statement-cpp)的 for 循环（链接）。 该构造优于基于索引的 `for` 循环。
+rfor 代码片段具有[基于范围](/cpp/cpp/range-based-for-statement-cpp)的 for 循环（链接）  。 该构造优于基于索引的 `for` 循环。
 
 ```cpp
 for (auto& i : v)
@@ -125,7 +124,7 @@ for (auto& i : v)
 }
 ```
 
-for 代码片段具有 `for` 循环，此循环中的条件以对象的长度 (`size_t`) 为依据。
+for 代码片段具有 `for` 循环，此循环中的条件以对象的长度 (`size_t`) 为依据  。
 
 ```cpp
 for (size_t i = 0; i < length; i++)
@@ -134,7 +133,7 @@ for (size_t i = 0; i < length; i++)
 }
 ```
 
-forr 代码片段具有反向 `for` 循环，此循环中的条件以对象的长度（整数）为依据。
+forr 代码片段具有反向 `for` 循环，此循环中的条件以对象的长度（整数）为依据  。
 
 ```cpp
 for (int i = length - 1; i >= 0; i--)
@@ -145,7 +144,7 @@ for (int i = length - 1; i >= 0; i--)
 
 ## <a name="the-destructor-snippet-"></a>析构函数代码片段 (~)
 
-析构函数代码片段 (**~**) 在不同上下文中显示不同的行为。 如果在类中插入此代码片段，则它将为该类提供一个析构函数。 例如，给定以下代码：
+析构函数代码片段 ( **~** ) 在不同上下文中显示不同的行为。 如果在类中插入此代码片段，则它将为该类提供一个析构函数。 例如，给定以下代码：
 
 ```cpp
 class SomeClass {

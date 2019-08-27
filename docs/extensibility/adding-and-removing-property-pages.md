@@ -7,20 +7,20 @@ helpviewer_keywords:
 - property pages, project subtypes
 - property pages, removing
 ms.assetid: 34853412-ab8a-4caa-9601-7d0727b2985d
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9d8430c5e08bc6d6d77a7968bd918e219fbd0da3
-ms.sourcegitcommit: d0b02affd24e66efed924c197824f35f823e3240
+ms.openlocfilehash: 03974bba0ca93242cf044a58bbb60ca772a369ce
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/21/2019
-ms.locfileid: "54417884"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66352317"
 ---
 # <a name="add-and-remove-property-pages"></a>添加和删除属性页
 
@@ -32,7 +32,7 @@ ms.locfileid: "54417884"
 
 ### <a name="remove-a-property-page"></a>删除属性页
 
-1.  重写`GetProperty(uint itemId, int propId, out object property)`方法筛选属性页并获取`clsids`列表。
+1. 重写`GetProperty(uint itemId, int propId, out object property)`方法筛选属性页并获取`clsids`列表。
 
     ```vb
     Protected Overrides int GetProperty(uint itemId, int propId, out object property)
@@ -77,7 +77,7 @@ ms.locfileid: "54417884"
     }
     ```
 
-2.  删除**生成事件**页上从获取`clsids`列表。
+2. 删除**生成事件**页上从获取`clsids`列表。
 
     ```vb
     Private buildEventsPageGuid As String = "{1E78F8DB-6C07-4D61-A18F-7514010ABD56}"
@@ -113,7 +113,7 @@ ms.locfileid: "54417884"
 
 ### <a name="add-a-property-page"></a>添加属性页
 
-1.  创建你想要添加的属性页。
+1. 创建你想要添加的属性页。
 
     ```vb
     Class DeployPropertyPage
@@ -158,7 +158,7 @@ ms.locfileid: "54417884"
     }
     ```
 
-2.  注册新的属性页。
+2. 注册新的属性页。
 
     ```vb
     <MSVSIP.ProvideObject(GetType(DeployPropertyPage), RegisterUsing = RegistrationMethod.CodeBase)>
@@ -168,7 +168,7 @@ ms.locfileid: "54417884"
     [MSVSIP.ProvideObject(typeof(DeployPropertyPage), RegisterUsing = RegistrationMethod.CodeBase)]
     ```
 
-3.  重写`GetProperty(uint itemId, int propId, out object property)`方法来筛选器属性页中，获取`clsids`列出，添加新的属性页。
+3. 重写`GetProperty(uint itemId, int propId, out object property)`方法来筛选器属性页中，获取`clsids`列出，添加新的属性页。
 
     ```vb
     Protected Overrides Function GetProperty(ByVal itemId As UInteger, ByVal propId As Integer, ByRef [property] As Object) As Integer

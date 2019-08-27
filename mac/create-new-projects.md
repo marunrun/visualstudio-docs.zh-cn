@@ -1,42 +1,55 @@
 ---
 title: 创建新项目和解决方案
 description: 本文介绍如何在 Visual Studio for Mac 中创建项目和解决方案
-author: conceptdev
-ms.author: crdun
-ms.date: 05/06/2018
+author: heiligerdankgesang
+ms.author: dominicn
+ms.date: 05/23/2019
 ms.assetid: 5880BB10-0A12-47E2-8A82-7A2D59C4D579
-ms.openlocfilehash: b6f355dbe10cf250ec397cb817643984b438a92e
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: dbfc0d951524bb9ffbbd4a2366679cfc6ae41925
+ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51294261"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67693055"
 ---
-# <a name="creating-new-projects-and-solutions"></a>创建新项目和解决方案
+# <a name="creating-a-new-project"></a>创建新项目
 
-## <a name="creating-new-projects-and-solutions-from-a-template"></a>使用模板创建新项目和解决方案
+## <a name="opening-the-project-creation-dialog"></a>打开“项目创建”对话框
 
-可在任何时间使用预定义的模板创建解决方案。 若要用这种方法创建解决方案，请浏览到“文件”>“新建解决方案”，然后依次选择所需平台和所需模板 ****：
+可通过多种方式在 Visual Studio for Mac 中创建新项目。 首次打开 Visual Studio for Mac 时，将显示欢迎屏幕。 可在此处选择“新建”，随即将转到项目创建屏幕  。
 
-![创建新解决方案](media/projects-and-solutions-image0.png)
+> [!TIP]
+> 此外，在欢迎屏幕中，还可以打开并搜索最近的项目和解决方案。 还可以通过转到菜单栏并依次选择“文件”、“最近使用的解决方案”来打开最近使用的项目 
 
-这将创建一个包含一个或更多项目的解决方案，具体取决于所选模板的类型。
+![包含新建项目选项的欢迎屏幕](media/first-run-project.png)
 
-可使用上下文操作或菜单栏导航解决方案资源管理器。
+如果 Visual Studio for Mac 已打开，并且已加载解决方案，可以通过转到菜单栏并依次选择“文件”、“新建解决方案”来创建新解决方案  。 通过此方法创建新解决方案将关闭已加载的解决方案。
 
-若要将新项目添加到解决方案，请右键单击解决方案名称，选择“添加”>“添加新项目”，显示“新建项目”对话框：
+## <a name="creating-a-new-project-from-a-template"></a>根据模板创建新项目
 
-![添加新项目](media/projects-and-solutions-image4.png)
+默认情况下，“新建项目”对话框将按“最近使用”排序显示最近使用的模板   。
 
-这种添加新项目的方法可以用于充分利用 Xamarin 代码共享功能。 将共享项目或可移植库模板添加到现有解决方案提供一种包含任何跨平台逻辑的方法，该逻辑可在解决方案中的所有其他项目中使用。 有关更多关于生成跨平台应用程序的详细信息，请参阅[相关指南](https://developer.xamarin.com/guides/cross-platform/application_fundamentals/code-sharing/)。
+如果不想使用最近使用的模板，可以从对话框左侧的类别中进行选择。 每个类别包含多个项目模板，你可以随意选择。 单击项目类型可查看屏幕右侧的描述。
 
-## <a name="opening-recent-solutions"></a>打开“最近使用的解决方案”。
+![“新建项目”屏幕](media/project-creation-screen.png)
 
-Visual Studio 的登录页面显示最近使用的项目列表：
+## <a name="configuring-your-new-project"></a>配置新项目
 
-![欢迎页上的最近使用解决方案部分](media/create-new-projects-recent.png)
+选择项目模板后，以下屏幕将显示设置项目所需的任何配置步骤；这些步骤可能因项目类型而所有不同。
 
-可以使用“筛选器”框筛选列表，或从列表中移除单个项。
+所有项目都需要一个新项目以及存储文件的位置。 如果项目属于新解决方案，而不是将添加到现有解决方案，则还需要提供解决方案名称。
+
+在此阶段，还可以选择配置 Git 源代码管理选项。 下图是配置 .NET Core 项目的最终步骤示例：
+
+![配置新项目](media/configure-new-project.png)
+
+## <a name="adding-additional-projects-to-a-solution"></a>向解决方案添加其他项目
+
+可通过右键单击 Solution Pad 中的解决方案并依次选择“添加”、“添加新项目”，或者依次选择“添加”、“添加现有项目”，向解决方案添加其他项目   。
+
+添加新项目将引导你完成项目创建步骤，如[配置新项目](#configuring-your-new-project)中所示。
+
+选择添加现有项目，你将能浏览计算机上的现有项目并将其添加到解决方案。
 
 ## <a name="see-also"></a>请参阅
 

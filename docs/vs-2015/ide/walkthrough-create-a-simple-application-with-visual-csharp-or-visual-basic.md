@@ -1,25 +1,20 @@
 ---
 title: 演练：使用 Visual C# 或 Visual Basic 创建简单应用程序 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
+ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: f84339c7-d617-4f56-bfcd-af2215c347ba
 caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 51fc073046833165097a8a9a4fb2f169ed3a04e7
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: c800ddd7221a1adfbc54198363e356eb5260c7cf
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49851681"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65674915"
 ---
 # <a name="walkthrough-create-a-simple-application-with-visual-c-or-visual-basic"></a>演练：使用 Visual C# 或 Visual Basic 创建简单应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,14 +30,14 @@ ms.locfileid: "49851681"
  [调试并测试应用程序](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md#BKMK_DebugTest)  
   
 > [!NOTE]
->  此演练基于 Visual Studio Professional，你将使用其中提供的 WPF 应用程序模板生成用于此演练的项目。 Visual Studio Express for Windows Desktop 也提供此模板，但 Visual Studio Express for Windows 和 Visual Studio Express for Web 不提供。 有关如何使用 Visual Studio Express for Windows 的介绍性信息，请参阅 [Windows 应用商店应用开发人员中心](http://msdn.microsoft.com/windows/apps/br229519)。 有关如何使用 Visual Studio Express for Web 的介绍性信息，请参阅 [Get Started with ASP.NET](http://www.asp.net/get-started)（ASP.NET 入门）。 此外，你的 Visual Studio 版本和你使用的设置将决定某些用户界面元素的名称和位置。 请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+> 此演练基于 Visual Studio Professional，你将使用其中提供的 WPF 应用程序模板生成用于此演练的项目。 Visual Studio Express for Windows Desktop 也提供此模板，但 Visual Studio Express for Windows 和 Visual Studio Express for Web 不提供。 有关如何使用 Visual Studio Express for Windows 的介绍性信息，请参阅 [Windows 应用商店应用开发人员中心](https://msdn.microsoft.com/windows/apps/br229519)。 有关如何使用 Visual Studio Express for Web 的介绍性信息，请参阅 [Get Started with ASP.NET](http://www.asp.net/get-started)（ASP.NET 入门）。 此外，你的 Visual Studio 版本和你使用的设置将决定某些用户界面元素的名称和位置。 请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
-##  <a name="BKMK_ConfigureIDE"></a> 配置 IDE  
+## <a name="BKMK_ConfigureIDE"></a> 配置 IDE  
  第一次启动 Visual Studio 时，Visual Studio 会提示使用 Microsoft 服务帐户 (MSA)登录， [登录到 Visual Studio](http://blogs.msdn.com/b/visualstudio/archive/2013/06/28/welcome-sign-in-to-visual-studio.aspx)。 您不需要登录，而是可以稍后登录。  
   
  在您的 Visual Studio 启动时，您接下来必须选择适用于 IDE 的一组预定义的自定义项的设置组合。 每个设置组合旨在使你更轻松地开发应用程序。  
   
- 此演练假设您应用 **常规开发设置**，这样对 IDE 应用的自定义项数量最少。 如果您已经选择 C# 或 Visual Basic（两者都是很好的选择），您无需更改您的设置。  如果您想要更改您的设置，则可以使用 **导入和导出设置向导**。 请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+ 此演练假设您应用 **常规开发设置**，这样对 IDE 应用的自定义项数量最少。 如果您已经选择 C# 或 Visual Basic（两者都是很好的选择），您无需更改您的设置。  如果您想要更改您的设置，则可以使用 **导入和导出设置向导**。 请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
  在你打开 Visual Studio 后，可识别工具窗口、菜单和工具栏，以及主窗口空间。 工具窗口停靠在应用程序窗口的左侧和右侧，其顶部有 **“快速启动”**、菜单栏和标准工具栏。 应用程序窗口的中心是 **“起始页”**。 当您加载解决方案或项目时，编辑器和设计器将显示在 **起始页** 的空间中。 开发应用程序时，大部分时间都将用在此中心区域。  
   
@@ -72,9 +67,9 @@ ms.locfileid: "49851681"
   
    ![应用了深色主题的 IDE](../ide/media/exploreide-darkthemeide.png "ExploreIDE DarkThemeIDE")  
   
-   本演练剩余部分的图片使用的颜色主题是浅色主题。 有关自定义 IDE 的详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+   本演练剩余部分的图片使用的颜色主题是浅色主题。 若要深入了解如何自定义 IDE，请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
-##  <a name="BKMK_CreateApp"></a> 创建简单的应用程序  
+## <a name="BKMK_CreateApp"></a> 创建简单的应用程序  
   
 ### <a name="create-the-project"></a>创建项目  
  在 Visual Studio 中创建应用程序时，应首先创建项目和解决方案。 在此示例中，您将创建一个 Windows Presentation Foundation 项目。  
@@ -97,7 +92,7 @@ ms.locfileid: "49851681"
   
     ![创建 Visual C# WPF 项目，HelloWPFApp](../ide/media/exploreide-newprojectcsharp.png "ExploreIDE-NewProjectcsharp")  
   
-   Visual Studio 将创建 HelloWPFApp 项目和解决方案， **解决方案资源管理器** 将显示各种文件。 WPF 设计器在拆分视图中显示 MainWindow.xaml 的设计视图和 XAML 视图。 您可以滑动拆分器，以显示任一视图的更多或更少部分。  您可以选择只查看可视化视图或 XAML 视图。 （有关详细信息，请参阅 [适用于 Windows 窗体开发人员的 WPF 设计器](http://msdn.microsoft.com/en-us/47ad0909-e89b-4996-b4ac-874d929f94ca)）。 **“解决方案资源管理器”** 中显示以下项：  
+   Visual Studio 将创建 HelloWPFApp 项目和解决方案， **解决方案资源管理器** 将显示各种文件。 WPF 设计器在拆分视图中显示 MainWindow.xaml 的设计视图和 XAML 视图。 您可以滑动拆分器，以显示任一视图的更多或更少部分。  您可以选择只查看可视化视图或 XAML 视图。 （有关详细信息，请参阅 [适用于 Windows 窗体开发人员的 WPF 设计器](https://msdn.microsoft.com/47ad0909-e89b-4996-b4ac-874d929f94ca)）。 **“解决方案资源管理器”** 中显示以下项：  
   
    图 5：项目项  
   
@@ -114,7 +109,7 @@ ms.locfileid: "49851681"
     **解决方案资源管理器** 显示该文件的名称现在是 Greetings.xaml，并且如果您展开 MainWindow.xaml 的节点（通过将焦点放在该节点上并按右箭头键），您将看到 MainWindow.xaml.vb 或 MainWindow.xaml.cs 的名称现在是 Greetings.xaml.vb 或 Greetings.xaml.cs。 此代码文件被嵌套在 .xaml 文件节点下面，以显示它们的关系十分紧密。  
   
    > [!WARNING]
-   >  此更改会导致错误，你在稍后的步骤中将了解如何调试和修复该错误。  
+   > 此更改会导致错误，你在稍后的步骤中将了解如何调试和修复该错误。  
   
 2. 在 **解决方案资源管理器**上，在设计器视图中打开 Greetings.xaml（通过当该节点具有焦点时按下 Enter 键），并使用鼠标选择窗口的标题栏。  
   
@@ -155,7 +150,7 @@ ms.locfileid: "49851681"
   
 3. 通过按 Ctrl-s 或使用 **文件** 菜单项保存所做的更改。  
   
-   接下来，向窗体添加两个 [RadioButton](http://msdn.microsoft.com/library/6c9ba847-eab7-4bba-9c74-6b56ef72067b) 控件。  
+   接下来，向窗体添加两个 [RadioButton](https://msdn.microsoft.com/library/6c9ba847-eab7-4bba-9c74-6b56ef72067b) 控件。  
   
 ##### <a name="to-add-radio-buttons"></a>添加单选按钮  
   
@@ -183,7 +178,7 @@ ms.locfileid: "49851681"
   
 2. 通过在选择 RadioButton2 时按鼠标右键打开 RadioButton2 的快捷菜单，选择 **编辑文本**，然后输入 `Goodbye`。  
   
-   最后添加的 UI 元素是 [Button](http://msdn.microsoft.com/library/a9d8f5a5-c98c-463e-808a-5a4e63173098) 控件。  
+   最后添加的 UI 元素是 [Button](https://msdn.microsoft.com/library/a9d8f5a5-c98c-463e-808a-5a4e63173098) 控件。  
   
 ##### <a name="to-add-the-button-control"></a>添加 Button 控件  
   
@@ -204,7 +199,7 @@ ms.locfileid: "49851681"
   
 ##### <a name="add-code-to-display-message-boxes"></a>添加代码以显示消息框  
   
-1.  在设计图面上，双击 **“显示”** 按钮。  
+1. 在设计图面上，双击 **“显示”** 按钮。  
   
      此时将打开 Greetings.xaml.vb 或 Greetings.xaml.cs，光标则位于 Button_Click 事件上。 您还可以添加一个 click 事件处理程序，如下所示（如果粘贴的代码的任何名称下有红色的波浪线，则您可能没有选择设计界面上的单选按钮控件并将其重命名）：  
   
@@ -225,7 +220,7 @@ ms.locfileid: "49851681"
     }  
     ```  
   
-2.  对于 Visual Basic，请输入以下代码：  
+2. 对于 Visual Basic，请输入以下代码：  
   
     ```vb  
     If RadioButton1.IsChecked = True Then  
@@ -250,10 +245,10 @@ ms.locfileid: "49851681"
     }  
     ```  
   
-3.  保存应用程序。  
+3. 保存应用程序。  
   
-##  <a name="BKMK_DebugTest"></a> 调试并测试应用程序  
- 接下来，你将调试应用程序以查找错误并测试两个消息框是否正确显示。 下面的说明介绍如何生成和启动调试器，但以后可以阅读[生成 WPF 应用程序 (WPF)](http://msdn.microsoft.com/library/a58696fd-bdad-4b55-9759-136dfdf8b91c) 和[调试 WPF](../debugger/debugging-wpf.md) 以获取有关详细信息。  
+## <a name="BKMK_DebugTest"></a> 调试并测试应用程序  
+ 接下来，你将调试应用程序以查找错误并测试两个消息框是否正确显示。 下面的说明介绍如何生成和启动调试器，但以后可以阅读[生成 WPF 应用程序 (WPF)](https://msdn.microsoft.com/library/a58696fd-bdad-4b55-9759-136dfdf8b91c) 和[调试 WPF](../debugger/debugging-wpf.md) 以获取有关详细信息。  
   
 ### <a name="find-and-fix-errors"></a>查找并修复错误  
  在此步骤中，你会发现我们之前因更改主窗口 XAML 文件的名称而引起的错误。  
@@ -285,29 +280,29 @@ ms.locfileid: "49851681"
   
 ##### <a name="to-add-breakpoints"></a>添加断点  
   
-1.  打开 Greetings.xaml.vb 或 Greetings.xaml.cs，然后选择以下行： `MessageBox.Show("Hello.")`  
+1. 打开 Greetings.xaml.vb 或 Greetings.xaml.cs，然后选择以下行： `MessageBox.Show("Hello.")`  
   
-2.  通过选择 **“调试”**-&gt; **“切换断点”**，从菜单中添加断点。  
+2. 通过选择 **“调试”**-&gt; **“切换断点”**，从菜单中添加断点。  
   
      ![“调试”菜单上的“切换断点”命令](../ide/media/exploreide-togglebreakpoint.png "ExploreIDE-ToggleBreakpoint")  
   
      编辑器窗口最左侧边距中该代码行附近将显示一个红圈。  
   
-3.  选择以下行： `MessageBox.Show("Goodbye.")`。  
+3. 选择以下行： `MessageBox.Show("Goodbye.")`。  
   
-4.  按 F9 键添加断点，然后按 F5 键启动调试。  
+4. 按 F9 键添加断点，然后按 F5 键启动调试。  
   
-5.  在 **“Greetings”** 窗口中，选择 **“Hello”** 单选按钮，然后选择 **“显示”** 按钮。  
+5. 在 **“Greetings”** 窗口中，选择 **“Hello”** 单选按钮，然后选择 **“显示”** 按钮。  
   
      行 `MessageBox.Show("Hello.")` 将用黄色突出显示。 在 IDE 底部，“自动”、“本地”和“监视”窗口一起停靠在左侧，而“调用堆栈”、“断点”、“命令”、“即时”和“输出”窗口一起停靠在右侧。  
   
-6.  在菜单栏上，选择 **“调试”**-> **“跳出”**。  
+6. 在菜单栏上，选择 **“调试”**-> **“跳出”**。  
   
      应用程序继续执行，并显示带单词“Hello”的消息框。  
   
-7.  选择消息框上的 **“确定”** 按钮将其关闭。  
+7. 选择消息框上的 **“确定”** 按钮将其关闭。  
   
-8.  在 **“Greetings”** 窗口中，选择 **“Goodbye”** 单选按钮，然后选择 **“显示”** 按钮。  
+8. 在 **“Greetings”** 窗口中，选择 **“Goodbye”** 单选按钮，然后选择 **“显示”** 按钮。  
   
      行 `MessageBox.Show("Goodbye.")` 将用黄色突出显示。  
   
@@ -340,6 +335,3 @@ ms.locfileid: "49851681"
  [Visual Studio 2015 中的新增功能](../what-s-new-in-visual-studio-2015.md)   
  [Visual Studio 开发入门](../ide/get-started-developing-with-visual-studio.md)   
  [工作效率提示](../ide/productivity-tips-for-visual-studio.md)
-
-
-

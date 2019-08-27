@@ -9,33 +9,34 @@ helpviewer_keywords:
 ms.assetid: fcd2479a-8ff7-4aba-a737-06123c280d54
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c5f027d3ccc2347e73b1c6e5caa096144b446ca
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: bd9dd34bd75199f2af3e14a96a12af663b2ba1f9
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53871802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62829688"
 ---
 # <a name="idiaenumlinenumbersclone"></a>IDiaEnumLineNumbers::Clone
-创建一个包含当前枚举数形式的相同枚举状态的枚举器。  
-  
-## <a name="syntax"></a>语法  
-  
-```C++  
-HRESULT Clone (   
-   IDiaEnumLineNumbers** ppenum  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `ppenum`  
- [out]返回[IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)对象，其中包含重复的枚举器。 重复的行数不是，仅枚举器...  
-  
-## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
-  
-## <a name="see-also"></a>请参阅  
- [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)
+创建一个包含当前枚举数形式的相同枚举状态的枚举器。
+
+## <a name="syntax"></a>语法
+
+```C++
+HRESULT Clone ( 
+   IDiaEnumLineNumbers** ppenum
+);
+```
+
+#### <a name="parameters"></a>参数
+ `ppenum`
+
+[out]返回[IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)对象，其中包含重复的枚举器。 重复的行数不是，仅枚举器...
+
+## <a name="return-value"></a>返回值
+ 如果成功，则返回`S_OK`; 否则为返回错误代码。
+
+## <a name="see-also"></a>请参阅
+- [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)

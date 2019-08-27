@@ -1,14 +1,9 @@
 ---
 title: 如何：使用不同选项生成相同的源文件 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: conceptual
 helpviewer_keywords:
 - source files, building with different options
 - MSBuild, properties
@@ -18,18 +13,17 @@ ms.assetid: d14f1212-ddd9-434f-b138-f840011b0fb2
 caps.latest.revision: 23
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: c46d0577d19a3b3ad0fcd150f33d400e76d550d3
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 8bf76967363f4c0d97d93c895fbeb6209c8503f0
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49830998"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821673"
 ---
 # <a name="how-to-build-the-same-source-files-with-different-options"></a>如何：使用不同选项生成相同的源文件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 在生成项目时，你经常使用不同的生成选项编译相同的组件。 例如，你可以使用符号信息创建调试版本，或者使用无符号信息但启用优化来创建发布版本。 或者，可以生成项目，在某个特定平台（例如，x86 或[!INCLUDE[vcprx64](../includes/vcprx64-md.md)]）上运行。 在所有这些情况下，大部分生成选项保持不变；只更改几个选项以控制生成配置。 利用 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]，你可以使用属性和条件来创建不同的生成配置。  
   
 ## <a name="using-properties-to-modify-projects"></a>使用属性来修改项目  
@@ -39,7 +33,7 @@ ms.locfileid: "49830998"
   
 #### <a name="to-set-a-group-of-properties-based-on-another-property"></a>设置一组属性（基于另一个属性）  
   
--   在 `PropertyGroup` 元素中使用 `Condition` 属性，类似以下代码：  
+- 在 `PropertyGroup` 元素中使用 `Condition` 属性，类似以下代码：  
   
     ```  
     <PropertyGroup Condition="'$(Flavor)'=='DEBUG'">  
@@ -50,7 +44,7 @@ ms.locfileid: "49830998"
   
 #### <a name="to-define-a-property-based-on-another-property"></a>定义属性（基于另一个属性）  
   
--   在 `Property` 元素中使用 `Condition` 属性，类似以下代码：  
+- 在 `Property` 元素中使用 `Condition` 属性，类似以下代码：  
   
     ```  
     <DebugType Condition="'$(Flavor)'=='DEBUG'">full</DebugType>  
@@ -61,13 +55,13 @@ ms.locfileid: "49830998"
   
 #### <a name="to-set-a-project-property-at-the-command-line"></a>在命令行中设置项目属性  
   
--   使用 **/property** 开关以及属性和属性值。 例如：  
+- 使用 **/property** 开关以及属性和属性值。 例如:  
   
     ```  
     msbuild file.proj /property:Flavor=Debug  
     ```  
   
-     - 或 -  
+     \- 或 -  
   
     ```  
     Msbuild file.proj /p:Flavor=Debug  
@@ -81,7 +75,7 @@ ms.locfileid: "49830998"
   msbuild file.proj /p:Flavor=Debug;Platform=x86  
   ```  
   
-   - 或 -  
+   \- 或-  
   
   ```  
   msbuild file.proj /p:Flavor=Debug /p:Platform=x86  
@@ -196,5 +190,3 @@ ToolsVersion="4.0" TreatAsLocalProperty="Color">
  [MSBuild 概念](../msbuild/msbuild-concepts.md)   
  [MSBuild 参考](../msbuild/msbuild-reference.md)   
  [Project 元素 (MSBuild)](../msbuild/project-element-msbuild.md)
-
-

@@ -1,24 +1,23 @@
 ---
-title: 将 Get 方法转换为属性并将属性转换为 Get 方法
+title: 将 Get 方法转换为属性；将属性转换为 Get 方法
 ms.date: 01/26/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 ms.devlang: csharp
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 f1_keywords:
 - vs.csharp.refactoring.convertmethodtoproperty
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0af901ed6a51b962b7b2999b04909136bbb0f3e9
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 87fc623f781c54267fa70da7c5d2a341823e35ae
+ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53861142"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66263101"
 ---
 # <a name="convert-get-method-to-property--convert-property-to-get-method-refactorings"></a>将 Get 方法转换为属性或反向转换
 

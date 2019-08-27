@@ -5,22 +5,24 @@ ms.topic: conceptual
 ms.assetid: 1b06b573-84aa-4458-b3f5-e238df47bf45
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 556f82d99fd6ea811f4198dc7abffb3ab32d47fd
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: eace6e7f3d970de5aa0ab0e74530d3182af0e177
+ms.sourcegitcommit: 16d8ffc624adb716753412a22d586eae68a29ba2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53821252"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412288"
 ---
 # <a name="entity-framework-tools-in-visual-studio"></a>在 Visual Studio 中的实体框架工具
 
 Entity Framework 是一种对象关系映射技术，使.NET 开发人员能够通过使用特定于域的对象处理关系数据。 它不要求提供开发人员通常需要编写的大部分数据访问代码。 实体框架是建模技术，用于新的.NET 应用程序的建议的对象关系映射 (ORM)。
 
-实体框架工具旨在帮助你构建 Entity Framework (EF) 应用程序。 此处是有关实体框架的完整文档：[EF Core 和 EF 6](/ef/)。
+实体框架工具旨在帮助你构建 Entity Framework (EF) 应用程序。 此处是有关实体框架的完整文档：[概述-EF 6](/ef/ef6/)。
+
+  > [!NOTE]
+  > 在此页上所述的实体框架工具用于生成 *.edmx*在 EF Core 中不支持的文件。 若要从现有数据库生成的 EF Core 模型，请参阅[反向工程-EF Core](/ef/core/managing-schemas/scaffolding)。 EF 6 和 EF Core 之间的差异的详细信息，请参阅[比较 EF 6 和 EF Core](/ef/efcore-and-ef6/)。
 
 使用 Entity Framework Tools，您可以创建*概念模型*从现有数据库，然后以图形方式直观显示和编辑概念模型。 或者，您可以首先以图形方式创建概念模型，然后生成支持模型的数据库。 无论哪种情况，你都可以在基础数据库更改时自动更新模型，并为应用程序生成对象层代码。 数据库生成和对象层代码生成是可自定义的。
 
@@ -30,7 +32,7 @@ Entity Framework 是一种对象关系映射技术，使.NET 开发人员能够�
 
 - 可以使用[!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)]  **[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]设计器**(**实体设计器**) 直观地创建和修改实体、 关联、 映射和继承关系。 **实体设计器**还会生成[!INCLUDE[TLA#tla_cshrp](../data-tools/includes/tlasharptla_cshrp_md.md)]或[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]对象层代码。
 
-- 可以使用**[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]向导**从现有数据库生成概念模型并将数据库连接信息添加到你的应用程序。
+- 可以使用 **[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]向导**从现有数据库生成概念模型并将数据库连接信息添加到你的应用程序。
 
 - 可以使用**创建数据库向导**首先创建概念模型，然后创建支持该模型的数据库。
 
@@ -45,7 +47,7 @@ Entity Framework 是一种对象关系映射技术，使.NET 开发人员能够�
 
 ## <a name="related-topics"></a>相关主题
 
-| Title | 说明 |
+| 标题 | 描述 |
 | - | - |
 | [ADO.NET 实体框架](/dotnet/framework/data/adonet/ef/index) | 介绍如何使用[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]工具，其中[!INCLUDE[adonet_ef](../data-tools/includes/adonet_ef_md.md)]提供创建应用程序。 |
 | [实体数据模型](/dotnet/framework/data/adonet/entity-data-model) | 提供用于处理数据的基础上构建的应用程序使用链接和信息[!INCLUDE[adonet_ef](../data-tools/includes/adonet_ef_md.md)]。 |

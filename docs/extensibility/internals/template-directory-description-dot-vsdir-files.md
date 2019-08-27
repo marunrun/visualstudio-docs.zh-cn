@@ -7,35 +7,34 @@ helpviewer_keywords:
 - VSDIR files
 - template directory description files
 ms.assetid: 9df51800-190e-4662-b685-fdaafcff1400
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4ff1c9d1557722b31a4375c3189b788968c2b198
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ad06428905f924e0e339882057ee4e657da47e8a
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53925204"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66331104"
 ---
 # <a name="template-directory-description-vsdir-files"></a>模板目录说明 (.Vsdir) 文件
-模板目录说明文件 (.vsdir) 是使集成的开发环境 (IDE) 以显示文件夹、 向导.vsz 文件和都与你的项目对话框中的模板文件的文本文件。 内容包括每个文件或文件夹的一条记录。 引用位置中的所有.vsdir 文件进行都合并，尽管只有一个.vsdir 文件通常用于描述多个文件夹、 向导、 或模板文件。  
+模板目录说明文件 (.vsdir) 是使集成的开发环境 (IDE) 以显示文件夹、 向导.vsz 文件和都与你的项目对话框中的模板文件的文本文件。 内容包括每个文件或文件夹的一条记录。 引用位置中的所有.vsdir 文件进行都合并，尽管只有一个.vsdir 文件通常用于描述多个文件夹、 向导、 或模板文件。
 
- 文件夹 （子目录），用于在.vsdir 文件，而是.vsdir 文件本身中引用的文件位于同一目录中上。 IDE 运行向导或显示文件夹或文件中的时**新的项目**或**添加新项**对话框框中，IDE 会检查包含执行的文件，以确定是否.vsdir 文件的目录存在。 如果找到.vsdir 文件，IDE 将读取它以确定它是否包含执行或显示文件夹或文件的条目。 如果找到的项，IDE 在向导的执行或内容的显示中使用的信息。  
+ 文件夹 （子目录），用于在.vsdir 文件，而是.vsdir 文件本身中引用的文件位于同一目录中上。 IDE 运行向导或显示文件夹或文件中的时**新的项目**或**添加新项**对话框框中，IDE 会检查包含执行的文件，以确定是否.vsdir 文件的目录存在。 如果找到.vsdir 文件，IDE 将读取它以确定它是否包含执行或显示文件夹或文件的条目。 如果找到的项，IDE 在向导的执行或内容的显示中使用的信息。
 
- 下面的代码示例摘自文件 SourceFiles.vsdir 中\<EnvSDK > \BscPrj\BscPrj\BscPrjProjectItems\Source_Files 注册表项：  
+ 下面的代码示例摘自文件 SourceFiles.vsdir 中\<EnvSDK > \BscPrj\BscPrj\BscPrjProjectItems\Source_Files 注册表项：
 
-```  
-HeaderFile.h|{E59935A1-6156-11d1-87A6-00A0C91E2A46}|#125|130|#126|0|0|0|#127  
-SourceFile.cpp|{E59935A1-6156-11d1-87A6-00A0C91E2A46}|#122|110|#123|0|0|0|#124  
-```  
+```
+HeaderFile.h|{E59935A1-6156-11d1-87A6-00A0C91E2A46}|#125|130|#126|0|0|0|#127
+SourceFile.cpp|{E59935A1-6156-11d1-87A6-00A0C91E2A46}|#122|110|#123|0|0|0|#124
+```
 
- 在这种情况下，两条记录都位于一个文件。 换行符 （回车符） 用于分隔每个记录。 每行表示不同的文件类型。 管道 (&#124;) 字符用于分隔每个记录中的字段。 单个目录可以包含多个.vsdir 文件具有不同的文件的名称，或者可以具有一个.vsdir 文件为每个文件类型。  
+ 在这种情况下，两条记录都位于一个文件。 换行符 （回车符） 用于分隔每个记录。 每行表示不同的文件类型。 管道 (&#124;) 字符用于分隔每个记录中的字段。 单个目录可以包含多个.vsdir 文件具有不同的文件的名称，或者可以具有一个.vsdir 文件为每个文件类型。
 
-## <a name="fields"></a>字段  
- 下表列出了为每个记录指定的字段。  
-
+## <a name="fields"></a>字段
+ 下表列出了为每个记录指定的字段。
 
 | 字段 | 描述 |
 | - | - |
@@ -49,20 +48,20 @@ SourceFile.cpp|{E59935A1-6156-11d1-87A6-00A0C91E2A46}|#122|110|#123|0|0|0|#124
 | 标志 (<xref:Microsoft.VisualStudio.Shell.Interop.__VSDIRFLAGS>) | 用于禁用或启用**名称**并**位置**字段上**添加新项**对话框。 值**标志**字段是必需的位标志的组合的十进制等效值。<br /><br /> 当用户选择某个项上**新建**选项卡上，项目将决定是否名称字段和位置字段将显示当**添加新项**第一次显示对话框。 一个项，通过.vsdir 文件，可以控制仅选择项时是否将字段启用还是已禁用。 |
 | SuggestedBaseName | 表示文件、 向导或模板的默认名称。 此字段是一个字符串或窗体"#ResID"的资源标识符。 IDE 使用此值以提供项的默认名称。 此基本值后追加一个整数值，以使名称唯一的例如 MyFile21.asp。<br /><br /> 在上一列表中，说明、 DLLPath、 IconResourceId、 标志和 SuggestedBaseNumber 仅适用于模板和向导文件。 这些字段不将应用于文件夹中。 BscPrjProjectItems 文件中的代码中阐释这一事实\<EnvSDK > \BscPrj\BscPrj\BscPrjProjectItems 注册表项。 此文件包含四个字段的每个记录具有三个记录 （一个用于每个文件夹）：RelPathName，{clsidPackage} LocalizedName 和 SortPriority。<br /><br /> `General&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#110&#124;100`<br /><br /> `Source_Files&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#111&#124;110`<br /><br /> `Env&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#112&#124;120` |
 
- 当你创建的向导文件时，还应考虑以下问题。  
+ 当你创建的向导文件时，还应考虑以下问题。
 
--   没有有意义的数据的任何非必填的字段应作为占位符包含 0 （零）。  
+- 没有有意义的数据的任何非必填的字段应作为占位符包含 0 （零）。
 
--   如果未不提供任何本地化的名称，向导文件中使用的相对路径名称。  
+- 如果未不提供任何本地化的名称，向导文件中使用的相对路径名称。
 
--   DLLPath 覆盖图标位置的 clsidPackage。  
+- DLLPath 覆盖图标位置的 clsidPackage。
 
--   如果未定义图标，IDE 会替换该扩展的文件的默认图标。  
+- 如果未定义图标，IDE 会替换该扩展的文件的默认图标。
 
--   如果未不提供任何建议的基名称，则使用项目。  
+- 如果未不提供任何建议的基名称，则使用项目。
 
--   如果您删除.vsz 文件、 文件夹或模板文件，还必须从.vsdir 文件删除其关联的记录。  
+- 如果您删除.vsz 文件、 文件夹或模板文件，还必须从.vsdir 文件删除其关联的记录。
 
-## <a name="see-also"></a>请参阅  
- [向导](../../extensibility/internals/wizards.md)   
- [向导 (.Vsz) 文件](../../extensibility/internals/wizard-dot-vsz-file.md)
+## <a name="see-also"></a>请参阅
+- [向导](../../extensibility/internals/wizards.md)
+- [向导 (.Vsz) 文件](../../extensibility/internals/wizard-dot-vsz-file.md)

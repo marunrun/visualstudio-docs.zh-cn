@@ -2,7 +2,6 @@
 title: SCRIPT_E_REPORTED 错误代码 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -12,12 +11,12 @@ caps.latest.revision: 3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3a4ced10b24d80b30ddacd2b2d7c4c04312d576a
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: 4466869f4da6a0efe20955af6e6ef35ca9479f6c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54349200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62840260"
 ---
 # <a name="scriptereported-error-code"></a>SCRIPT_E_REPORTED 错误代码
 脚本引擎已报告通过主机到未经处理的异常[IActiveScriptSite::OnScriptError](../../winscript/reference/iactivescriptsite-onscripterror.md)。 主机可以忽略此错误。  

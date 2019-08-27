@@ -1,27 +1,22 @@
 ---
 title: 创建项目类型 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project types, new
 - projects [Visual Studio SDK], new project types
 ms.assetid: bdb2d22e-d622-450c-bb2d-98152a745fcf
 caps.latest.revision: 26
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 58b31e363d78af7902e6174c9683b7e794031263
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: bbe65d1615603e4dc7546dbfe3530093c62528e5
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51756206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68155027"
 ---
 # <a name="creating-project-types"></a>创建项目类型
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -32,7 +27,7 @@ ms.locfileid: "51756206"
  [项目类型设计决策](../../extensibility/internals/project-type-design-decisions.md)  
  讨论项目、 项目文件持久性，以及必须在创建新的项目类型之前做出的承诺的机修工保养设计决策。  
   
- [清单：新建项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)  
+ [清单：创建新的项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)  
  概述创建支持编辑代码和编译、 生成、 调试和部署你的项目中的应用程序的编程任务的新项目类型时必须遵循的步骤。  
   
  [使用项目工厂创建项目实例](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)  
@@ -65,4 +60,3 @@ ms.locfileid: "51756206"
   
  [项目类型](../../extensibility/internals/project-types.md)  
  讨论如何使用项目来修改代码，编译和生成代码，并运行和调试代码，并提供有关如何创建项目类型的详细主题的链接。
-

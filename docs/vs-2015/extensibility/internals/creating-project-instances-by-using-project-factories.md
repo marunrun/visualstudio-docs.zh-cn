@@ -1,27 +1,22 @@
 ---
 title: 使用项目工厂创建的项目实例 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project factories
 - projects [Visual Studio SDK], project factories
 ms.assetid: 94c90012-8669-459c-af8e-307ac242c8c4
 caps.latest.revision: 14
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 358c13bdc8bc312a479b9c316fa516ad68b10630
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: f26b11aaf74b73535c82ebcd6422f3be0bba3f22
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51736239"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65697205"
 ---
 # <a name="creating-project-instances-by-using-project-factories"></a>使用项目工厂创建项目实例
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -32,7 +27,7 @@ ms.locfileid: "51736239"
   
  您可以实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory>中你的项目中的类接口。 通常情况下，它驻留在其自己的模块。  
   
- 有关实现的示例`IVsProjectFactory`接口，请参阅中包含的 PrjFac.cpp[基本项目](http://msdn.microsoft.com/en-us/385fd2a3-d9f1-4808-87c2-a3f05a91fc36)示例目录。  
+ 有关实现的示例`IVsProjectFactory`接口，请参阅中包含的 PrjFac.cpp[基本项目](https://msdn.microsoft.com/385fd2a3-d9f1-4808-87c2-a3f05a91fc36)示例目录。  
   
  支持由所有者所聚合的项目必须保留其项目文件中的所有者密钥。 当<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A>具有所有者键项目上调用方法、 所拥有的项目将其所有者密钥转换为 GUID 然后调用一个项目工厂`CreateProject`上执行的实际创建此项目工厂方法。  
   
@@ -57,5 +52,4 @@ ms.locfileid: "51736239"
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsOwnedProjectFactory>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterProjectTypes>   
- [清单：新建项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)
-
+ [清单：创建新的项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)

@@ -1,23 +1,23 @@
 ---
-title: 使用 Visual Studio 调试应用
+title: 初探调试器
 description: 开始使用 Visual Studio 调试器调试应用程序
-ms.custom: mvc
-ms.date: 01/09/2019
+ms.custom: seoapril2019
+ms.date: 04/08/2019
 ms.topic: quickstart
 helpviewer_keywords:
 - debugger
 ms.assetid: c763d706-3213-494f-b4d2-990b6e1ec456
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a6363149165c9718300eec1074fdfc006709b3d3
-ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
+ms.openlocfilehash: a5c37466ea3f37bca80933cdc069d40f84099790
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54227884"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65679766"
 ---
 # <a name="first-look-at-the-visual-studio-debugger"></a>初步了解 Visual Studio 调试器
 
@@ -27,7 +27,7 @@ ms.locfileid: "54227884"
 
 ## <a name="set-a-breakpoint-and-start-the-debugger"></a>设置断点并启动调试器
 
-要进行调试，需要在调试器附加到应用进程的情况下启动应用。 F5（“调试”>“开始调试”）是执行该操作最常见的方法。 但是，现在你可能没有设置任何断点来检查应用代码，因此我们首先设置断点再开始调试。 断点是可靠调试的最基本和最重要的功能。 断点指示 Visual Studio 应在哪个位置挂起你的运行代码，以使你可以查看变量的值或内存的行为，或确定代码的分支是否运行。 
+要进行调试，需要在调试器附加到应用进程的情况下启动应用。 F5（“调试”>“开始调试”）是执行该操作最常见的方法。 但是，现在你可能没有设置任何断点来检查应用代码，因此我们首先设置断点再开始调试。 断点是可靠调试的最基本和最重要的功能。 断点指示 Visual Studio 应在哪个位置挂起你的运行代码，以使你可以查看变量的值或内存的行为，或确定代码的分支是否运行。
 
 若代码编辑器中打开了文件，则可通过单击代码行左侧的边缘来设置断点。
 
@@ -77,7 +77,7 @@ F11 是一种以最详尽方式检查执行流的好方法。 （为了更快地
 ![运行到单击处](../debugger/media/dbg-tour-run-to-click-2.png "Run to Click")
 
 > [!NOTE]
-> “运行到单击处”（将执行运行到此处）按钮是 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] 中的新增功能。
+> 自 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] 起，可用使用“运行到单击位置”（将执行运行到此处）按钮。
 
 单击“运行到单击处”（将执行运行到此处）按钮。 调试器将前进到单击的代码行。
 
@@ -173,7 +173,7 @@ F11 是一种以最详尽方式检查执行流的好方法。 （为了更快地
 
 可双击代码行来查看该源代码，这也会更改调试器正在检查的当前范围。 此操作不会使调试器前进。
 
-还可使用“调用堆栈”窗口中的右键单击菜单执行其他操作。 例如，你可将断点插入到指定的函数中，使用“运行到光标处”重启应用，然后检查源代码。 请参阅[操作说明：检查调用堆栈](../debugger/how-to-use-the-call-stack-window.md)。
+还可使用“调用堆栈”窗口中的右键单击菜单执行其他操作。 例如，你可将断点插入到指定的函数中，使用“运行到光标处”重启应用，然后检查源代码。 请参阅[如何：检查调用堆栈](../debugger/how-to-use-the-call-stack-window.md)。
 
 ## <a name="exception"></a> 检查异常
 
@@ -185,10 +185,10 @@ F11 是一种以最详尽方式检查执行流的好方法。 （为了更快地
 
 在此示例中，`DirectoryInfo` 调用在存储于 `value` 变量中的空字符串上引发了错误。
 
-异常帮助程序是帮助调试错误的好功能。 你还可以执行其他操作，如查看错误详细信息及从异常帮助程序添加监视。 或者，如有需要可更改引发特定异常的条件。 若要详细了解如何处理代码中的异常，请参阅[通过编写更优质 C# 代码来修复 bug](../debugger/write-better-code-with-visual-studio.md)。
+异常帮助程序是帮助调试错误的好功能。 你还可以执行其他操作，如查看错误详细信息及从异常帮助程序添加监视。 或者，如有需要可更改引发特定异常的条件。 有关如何在代码中处理异常的详细信息，请参阅[调试技术和工具](../debugger/write-better-code-with-visual-studio.md)。
 
 > [!NOTE]
-> 异常帮助程序取代 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] 中的异常情况助手。
+> 异常帮助程序取代了从 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] 开始提供的异常情况助手。
 
 展开“异常设置”节点以查看有关如何处理此异常类型的更多选项，但对于本教程无需更改任何内容！
 

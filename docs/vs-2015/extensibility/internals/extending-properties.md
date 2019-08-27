@@ -1,33 +1,28 @@
 ---
 title: 扩展属性 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Properties window, providing support
 ms.assetid: 68e2cbd4-861c-453f-8c9f-4ab6afc80e67
 caps.latest.revision: 19
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 919b5a08f003d6e6c320edef4c1321af35f17388
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: b5d2e7d15f7b479941c3186d8cd694c92f762bbf
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51777872"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65690997"
 ---
 # <a name="extending-properties"></a>扩展属性
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **属性**时段 COM 和 COM + 组件的通用属性浏览器，并且支持所有[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]产品。 **属性**窗口适用于`ITypeInfo`类型信息和 COM + 元数据以列出在集成的开发环境 (IDE) 中的任何其他窗口中的当前所选对象的设计时属性。  
   
- **属性**窗口中，也可以通过在键盘上按 F4 或选择打开**属性窗口**上**视图**菜单中，用于查看和编辑独立于配置的、 设计时属性和所选对象的事件。 解决方案和项目，与关联的依赖于配置的属性显示在[属性页](../../extensibility/internals/property-pages.md)。 有关详细信息，请参阅[NIB： 项目属性](http://msdn.microsoft.com/en-us/fb126574-24ad-4c96-9b2b-6e1f3879ba50)，[管理配置选项](../../extensibility/internals/managing-configuration-options.md)，并[NIB： 项目管理在项目中](http://msdn.microsoft.com/en-us/762e606b-7f44-4b66-97a1-e30a703654a0)。  
+ **属性**窗口中，也可以通过在键盘上按 F4 或选择打开**属性窗口**上**视图**菜单中，用于查看和编辑独立于配置的、 设计时属性和所选对象的事件。 解决方案和项目，与关联的依赖于配置的属性显示在[属性页](../../extensibility/internals/property-pages.md)。 有关详细信息，请参阅[NIB： 项目属性](https://msdn.microsoft.com/fb126574-24ad-4c96-9b2b-6e1f3879ba50)，[管理配置选项](../../extensibility/internals/managing-configuration-options.md)，并[NIB： 项目管理在项目中](https://msdn.microsoft.com/762e606b-7f44-4b66-97a1-e30a703654a0)。  
   
  ![属性窗口概述](../../extensibility/internals/media/vspropertieswindow.png "vsPropertiesWindow")  
 “属性”窗口  
@@ -75,19 +70,19 @@ ms.locfileid: "51777872"
  [编译和生成](../../ide/compiling-and-building-in-visual-studio.md)  
  介绍如何使用[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]持续测试和调试应用程序，在你生成应用的平台。  
   
- [HTML 文档属性，属性窗口](http://msdn.microsoft.com/library/46e3d164-a1a7-42f9-87b0-344e10a37b62)  
+ [HTML 文档属性，属性窗口](https://msdn.microsoft.com/library/46e3d164-a1a7-42f9-87b0-344e10a37b62)  
  提供编辑 HTML 文档直接从属性窗口的说明，并提供一个表详细列出在属性窗口中的 HTML 文档中的字段。  
   
- [IDispatch](http://msdn.microsoft.com/en-us/ebbff4bc-36b2-4861-9efa-ffa45e013eb5)  
+ [IDispatch](https://msdn.microsoft.com/ebbff4bc-36b2-4861-9efa-ffa45e013eb5)  
  介绍`IDispatch`接口，它首先设计为支持自动化，提供了一个后期绑定机制来访问和检索有关方法和对象的属性的信息。  
   
- [NIB： 简介动态属性 (Visual Studio)](http://msdn.microsoft.com/en-us/f5102027-1431-4195-ae40-9b991de46d3a)  
+ [NIB：介绍动态属性 (Visual Studio)](https://msdn.microsoft.com/f5102027-1431-4195-ae40-9b991de46d3a)  
  概述，您可以配置你的应用程序，以使属性值存储在外部配置文件而不是应用程序的已编译代码的动态属性。  
   
- [NIB： 项目作为容器](http://msdn.microsoft.com/en-us/87d40f63-f487-4767-8963-64beec27ba1b)  
+ [NIB： 项目作为容器](https://msdn.microsoft.com/87d40f63-f487-4767-8963-64beec27ba1b)  
  描述为一个解决方案来以逻辑方式管理、 生成和调试构成应用程序的各个项中的容器的项目的角色。  
   
- [NIB： 项目属性](http://msdn.microsoft.com/en-us/fb126574-24ad-4c96-9b2b-6e1f3879ba50)  
+ [NIB： 项目属性](https://msdn.microsoft.com/fb126574-24ad-4c96-9b2b-6e1f3879ba50)  
  介绍如何在项目管理设置，可将应用于整个项目的控件属性以及仅限于特定生成配置的项目的属性。  
   
  [解决方案和项目](../../ide/solutions-and-projects-in-visual-studio.md)  
@@ -95,4 +90,3 @@ ms.locfileid: "51777872"
   
  [扩展 Visual Studio 的其他部分](../../extensibility/extending-other-parts-of-visual-studio.md)  
  说明如何使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 服务创建匹配 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]的其余部分的 UI 元素。
-

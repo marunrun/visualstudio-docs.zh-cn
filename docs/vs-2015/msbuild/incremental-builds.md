@@ -1,35 +1,29 @@
 ---
 title: 增量生成 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: conceptual
 helpviewer_keywords:
 - msbuild, incremental builds
 ms.assetid: 325e28c7-4838-4e3f-b672-4586adc7500c
 caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 187761ce813081877434c2a7c3a570059bc556ee
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: eb11467d8d59e7af11741d7719da2858ac1a784c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49812317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68192891"
 ---
 # <a name="incremental-builds"></a>增量生成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 增量生成是经过优化的生成。优化后，如果目标具有的输出文件相对于其相应的输入文件保持为最新，则系统不会执行该目标。 目标元素可同时具有 `Inputs` 属性（指示目标要预期为输入的项）和 `Outputs` 属性（指示目标要生成为输出的项）。 MSBuild 尝试在这些属性的值之间找到一对一映射。 如果存在一对一映射，MSBuild 比较每个输入项的时间戳和其对应的输出项的时间戳。 不具有一对一映射的输出文件则与所有输入文件进行对比。 如果某项的输出文件的时间戳与该项的一个或多个输入文件相同，或与之相比较新，则将该项视为最新。  
   
- 如果所有输出项均为最新，MSBuild 就跳过目标。 目标的这种增量生成可以显著提高生成速度。 如果只有部分文件保持为最新，MSBuild 会执行目标，但跳过最新的项，从而使所有项均保持为最新。 这叫做“部分增量生成”。  
+ 如果所有输出项均为最新，MSBuild 就跳过目标。 目标的这种增量生成可以显著提高生成速度  。 如果只有部分文件保持为最新，MSBuild 会执行目标，但跳过最新的项，从而使所有项均保持为最新。 这叫做“部分增量生成”  。  
   
  项转换通常会生成一对一映射。 有关详细信息，请参阅[转换](../msbuild/msbuild-transforms.md)。  
   
@@ -46,7 +40,7 @@ ms.locfileid: "49812317"
  由 `Compile` 项目类型表示的文件集会被复制到备份目录。 备份文件的文件扩展名为 .bak。 如果运行备份目标后未删除或修改由 `Compile` 项目类型表示的文件或相应的备份文件，则后续生成中将跳过备份目标。  
   
 ## <a name="output-inference"></a>输出推理  
- MSBuild 通过比较目标的 `Inputs` 和 `Outputs` 属性来确定是否执行该目标。 理想情况下，无论是否执行相关目标，增量生成完成后存在的文件集应保持不变。 由任务创建或修改的属性和项会影响生成，因此即使跳过会造成影响的目标，MSBuild 也必须推断这些属性或项的值。 这叫做“输出推理”。  
+ MSBuild 通过比较目标的 `Inputs` 和 `Outputs` 属性来确定是否执行该目标。 理想情况下，无论是否执行相关目标，增量生成完成后存在的文件集应保持不变。 由任务创建或修改的属性和项会影响生成，因此即使跳过会造成影响的目标，MSBuild 也必须推断这些属性或项的值。 这叫做“输出推理”  。  
   
  共有三种情况：  
   
@@ -87,8 +81,5 @@ ms.locfileid: "49812317"
   
  该操作会创建 CompileRan 属性并为其赋予值 `true`，但仅当执行了目标时如此操作。 如果跳过目标，则不会创建 CompileRan。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [目标](../msbuild/msbuild-targets.md)
-
-
-

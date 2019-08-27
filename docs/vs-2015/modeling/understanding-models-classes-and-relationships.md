@@ -1,25 +1,22 @@
 ---
 title: 了解模型、 类和关系 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, models
 ms.assetid: 2ecd569c-b369-41ea-b78e-a61b62e2e4e9
 caps.latest.revision: 37
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: b86e9bd2aa11f098b26edf90f3ed415c66b874a1
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 1809072ca0a01362e6434254b6e70a4bf4db4762
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49271786"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65698104"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>了解模型、类和关系
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,13 +28,13 @@ ms.locfileid: "49271786"
 ## <a name="the-dsl-definition"></a>DSL 定义  
  当打开`Dsl\DslDefinition.dsl`、 你[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]窗口类似于下图。  
   
- ![dsl 设计器](../modeling/media/dsl-designer.png "dsl_designer")  
+ ![DSL 设计器](../modeling/media/dsl-designer.png "dsl_designer")  
   
  在 DSL 定义中最重要的信息显示在 DSL 定义关系图。 其他信息，也是 DslDefinition.dsl 的一部分，显示在 DSL 资源管理器，它通常显示在关系图的一端。 你处理的最常见的任务中，关系图和 DSL 资源管理器对于更高级的自定义项。  
   
  DSL 定义关系图显示了定义模型元素和定义链接模型元素之间的关系的域类。 它还显示形状和连接线，用于向用户显示的模型元素。  
   
- ![具有泳道的 dsl 设计器](../modeling/media/dsl-desinger.png "dsl_desinger")  
+ ![具有泳道的 DSL 设计器](../modeling/media/dsl-desinger.png "dsl_desinger")  
   
  在 DSL 定义中，在关系图或 DSL 资源管理器中选择项时在属性窗口中显示与其有关的信息。 可能在 DSL 详细信息窗口中显示的其他信息。  
   
@@ -59,22 +56,22 @@ ms.locfileid: "49271786"
   
  ![嵌入关系和引用关系](../modeling/media/music-classes.png "Music_Classes")  
   
- 图中显示了四个域类： 音乐、 相册、 艺术家和歌曲。 域类定义域属性，例如名称、 标题和等等。 在实例模型中，关系图上显示的其中一些属性的值。  
+ 该图显示了四个域类：音乐、 相册、 艺术家和歌曲。 域类定义域属性，例如名称、 标题和等等。 在实例模型中，关系图上显示的其中一些属性的值。  
   
- 在类之间是域关系： MusicHasAlbums、 MusicHasArtists、 AlbumbHasSongs 和 ArtistAppearedOnAlbums。 这些关系具有重数 1..1，例如 0..*。 例如，必须与通过 AlbumHasSongs 关系恰好一个唱片集相关的所有首歌。 每个唱片集可以有任意数量的歌曲。  
+ 在类之间是域关系：MusicHasAlbums、 MusicHasArtists、 AlbumbHasSongs 和 ArtistAppearedOnAlbums。 这些关系具有重数 1..1，例如 0..*。 例如，必须与通过 AlbumHasSongs 关系恰好一个唱片集相关的所有首歌。 每个唱片集可以有任意数量的歌曲。  
   
 ### <a name="rearranging-the-dsl-definition-diagram"></a>重新排列的 DSL 定义关系图  
  请注意，域类可以在 DSL 定义关系图中上, 出现多次，唱片集一样在此图中。 始终有一个主视图中，最可能有一些*引用*视图。  
   
  若要重新排列的 DSL 定义关系图，您可以：  
   
--   交换主并通过引用视图**将树放在此处**并**拆分树**命令。 右键单击单个域类，若要查看这些命令。  
+- 交换主并通过引用视图**将树放在此处**并**拆分树**命令。 右键单击单个域类，若要查看这些命令。  
   
--   通过按 Ctrl + Up 和 Ctrl + 向下进行重新排序的域类和形状类。  
+- 通过按 Ctrl + Up 和 Ctrl + 向下进行重新排序的域类和形状类。  
   
--   折叠或展开类在每个形状的右上方使用的图标。  
+- 折叠或展开类在每个形状的右上方使用的图标。  
   
--   通过单击底部的域类减号 （-） 折叠树的部分。  
+- 通过单击底部的域类减号 （-） 折叠树的部分。  
   
 ## <a name="inheritance"></a>继承  
  可以使用继承定义域类。 若要创建继承派生，单击继承工具，单击派生的类，然后单击类的基类。 模型元素具有其自己的域类，以及从基类继承的所有属性定义的所有属性。 它还继承关系中的其角色。  
@@ -100,7 +97,7 @@ ms.locfileid: "49271786"
  当将模型保存到文件以 XML 形式，嵌入的元素都放在其父项，除非自定义序列化。  
   
 > [!NOTE]
->  嵌入与继承不同。 中的嵌入关系的子级不继承父项的属性。 嵌入是链接的一种模型元素之间。 继承类之间的关系并不会创建模型元素之间的链接。  
+> 嵌入与继承不同。 中的嵌入关系的子级不继承父项的属性。 嵌入是链接的一种模型元素之间。 继承类之间的关系并不会创建模型元素之间的链接。  
   
 ### <a name="embedding-rules"></a>嵌入的规则  
  实例模型中的每个元素必须是一个嵌入链接，但模型根除外的目标。  
@@ -157,7 +154,4 @@ ms.locfileid: "49271786"
   
 ## <a name="see-also"></a>请参阅  
  [生成的 API 中的域关系](../misc/domain-relationships-in-the-generated-api.md)   
- [域特定语言工具术语表](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)
-
-
-
+ [域特定语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

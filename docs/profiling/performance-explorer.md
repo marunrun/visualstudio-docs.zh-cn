@@ -9,15 +9,15 @@ helpviewer_keywords:
 - performance tools [Visual Studio ALM]
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a248821639a2263f5695d64030d932b2b6a05fe
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5ad67acae549f67e16b34eb352cdebe5937c8de4
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53933909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794235"
 ---
 # <a name="performance-explorer"></a>性能资源管理器
 

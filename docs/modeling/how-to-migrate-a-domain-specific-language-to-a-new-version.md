@@ -4,16 +4,15 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: b53d604fdf9c18a2e5552d787f7a69ff4c92df2a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MT
+ms.openlocfilehash: 63d313534fab789c5e4e79fb644111314e054250
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53955063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63445150"
 ---
 # <a name="how-to-migrate-a-domain-specific-language-to-a-new-version"></a>如何：将域特定语言迁移至新版本
 你可以迁移项目的定义和使用特定于域的语言设置为[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]的版本从[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]一起分发[!INCLUDE[vs_orcas_long](../debugger/includes/vs_orcas_long_md.md)]。
@@ -29,9 +28,9 @@ ms.locfileid: "53955063"
 
 #### <a name="to-prepare-projects-for-migration"></a>若要准备迁移项目。
 
--   请确保 **.csproj**并 **.sln**可以写入文件。 如果它们是受源代码管理，请确保在签出。
+- 请确保 **.csproj**并 **.sln**可以写入文件。 如果它们是受源代码管理，请确保在签出。
 
--   制作一份你想要迁移的文件夹。
+- 制作一份你想要迁移的文件夹。
 
 ## <a name="migrating-a-collection-of-projects"></a>迁移项目的集合
 
@@ -39,7 +38,7 @@ ms.locfileid: "53955063"
 
 1. 启动 DSL 迁移工具。
 
-   -   可以双击 Windows 资源管理器 （或文件资源管理器） 中的工具或命令提示符下启动该工具。 该工具位于以下位置：
+   - 可以双击 Windows 资源管理器 （或文件资源管理器） 中的工具或命令提示符下启动该工具。 该工具位于以下位置：
 
         **%ProgramFiles%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**
 
@@ -51,41 +50,40 @@ ms.locfileid: "53955063"
 
 3. 查看树中的项目，并取消选中不想要转换的项目。
 
-   -   选择项目或解决方案，以查看该工具将做的更改的列表。
+   - 选择项目或解决方案，以查看该工具将做的更改的列表。
 
        > [!NOTE]
-       >  显示文件夹名称旁边的复选框没有任何影响。 必须展开要检查项目和解决方案的文件夹。
+       > 显示文件夹名称旁边的复选框没有任何影响。 必须展开要检查项目和解决方案的文件夹。
 
 4. 转换项目。
 
-   1.  单击**转换**。
+   1. 单击**转换**。
 
         每个项目文件转换，一份之前_项目_**.csproj**另存为_项目_**。 vs2008.csproj**
 
         每个副本_解决方案_**.sln**另存为_解决方案_**。 vs2008.sln**
 
-   2.  调查报告任何失败的转换。
+   2. 调查报告任何失败的转换。
 
         在文本窗口中报告故障。 此外，树视图可以显示一个红色标志，未能转换每个节点上。 可以单击要获取有关该故障的详细信息的节点。
 
 5. **转换所有模板**解决方案中包含已成功转换项目。
 
-   1.  打开的解决方案。
+   1. 打开的解决方案。
 
-   2.  单击**转换所有模板**解决方案资源管理器的标头中的按钮。
+   2. 单击**转换所有模板**解决方案资源管理器的标头中的按钮。
 
        > [!NOTE]
-       >  您可以进行此步骤不必要。 有关详细信息，请参阅[如何自动执行转换所有模板](/previous-versions/visualstudio/visual-studio-2012/ff521399\(v\=vs.110\))。
+       > 您可以进行此步骤不必要。 有关详细信息，请参阅[如何自动执行转换所有模板](/previous-versions/visualstudio/visual-studio-2012/ff521399\(v\=vs.110\))。
 
 6. 更新自定义代码，在转换后的项目中。
 
-   -   尝试生成项目，并调查任何故障。
+   - 尝试生成项目，并调查任何故障。
 
-   -   测试您的设计器。
-
+   - 测试您的设计器。
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
 ## <a name="see-also"></a>请参阅
 
-- [相关的博客文章](https://blogs.msdn.microsoft.com/visualstudioalm/tag/code-index/)
+- [相关的博客文章](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)

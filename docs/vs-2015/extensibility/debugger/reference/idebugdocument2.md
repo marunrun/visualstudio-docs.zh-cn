@@ -1,14 +1,9 @@
 ---
 title: IDebugDocument2 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - IDebugDocument2
 helpviewer_keywords:
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 1bc58426-dbf5-4471-9aad-9d66cd80eef0
 caps.latest.revision: 13
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: b0b430f0a6022181a45c82fcb0db67fb0c9742e9
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 2cd6afb417de4d8a362916f91593d0d0e67d307c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51761094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68156502"
 ---
 # <a name="idebugdocument2"></a>IDebugDocument2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -50,14 +45,14 @@ IDebugDocument2 : IUnknown
 |[GetDocumentClassID](../../../extensibility/debugger/reference/idebugdocument2-getdocumentclassid.md)|获取文档的类标识符。|  
   
 ## <a name="remarks"></a>备注  
- 仅当 DE 提供的源代码时，实现此接口。 例如，调试 HTML 页面上的脚本时，DE 提供的源代码由于下载或动态生成的源，并且不存在为磁盘文件。 传统的语言，如 c + +，进行调试时则不需要实现此接口。  
+ 仅当 DE 提供的源代码时，实现此接口。 例如，调试 HTML 页面上的脚本时，DE 提供的源代码由于下载或动态生成的源，并且不存在为磁盘文件。 当调试传统语言中，如C++，不需要实现此接口。  
   
 ## <a name="requirements"></a>要求  
  标头： msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间:Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>请参阅  
  [IsPositionInDocument](../../../extensibility/debugger/reference/idebugdocumentposition2-ispositionindocument.md)   
@@ -65,4 +60,3 @@ IDebugDocument2 : IUnknown
  [GetDocument](../../../extensibility/debugger/reference/idebugdocumentcontext2-getdocument.md)   
  [GetDocument](../../../extensibility/debugger/reference/idebugdocumentposition2-getdocument.md)   
  [GetDocument](../../../extensibility/debugger/reference/idebugdisassemblystream2-getdocument.md)
-

@@ -6,16 +6,15 @@ helpviewer_keywords:
 - Domain-Specific Language, accessing the current selection
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 799e6fdc50cad91ebd5ee5081b1d80fa296f5a7c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5cc93f276dae3caeec08a21a74e3bdcaa365fee9
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53947932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62993454"
 ---
 # <a name="how-to-access-and-constrain-the-current-selection"></a>如何：访问和约束当前所选内容
 
@@ -29,7 +28,7 @@ ms.locfileid: "53947932"
 
 ### <a name="to-access-selection-information"></a>若要访问所选内容信息
 
-1.  <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>类定义可用于访问当前所选内容的以下成员。
+1. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>类定义可用于访问当前所选内容的以下成员。
 
     |成员|描述|
     |-|-|
@@ -42,13 +41,13 @@ ms.locfileid: "53947932"
     |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleDocumentSelection%2A> 属性|在模型设计器中获取所选内容的主要元素。|
     |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleSelection%2A> 属性|在活动窗口中获取所选内容的主要元素。|
 
-2.  <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet.CurrentDocView%2A>的属性<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>类提供对访问<xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView>对象，它表示在模型设计器窗口，并提供模型设计器中的所选的元素的额外的访问权限。
+2. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet.CurrentDocView%2A>的属性<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>类提供对访问<xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView>对象，它表示在模型设计器窗口，并提供模型设计器中的所选的元素的额外的访问权限。
 
-3.  此外，生成的代码定义了一个资源管理器工具窗口中属性和命令中的资源管理器中选择属性设置为域特定语言的类。
+3. 此外，生成的代码定义了一个资源管理器工具窗口中属性和命令中的资源管理器中选择属性设置为域特定语言的类。
 
-    -   资源管理器工具窗口属性返回的域特定语言资源管理器工具窗口类的实例。 资源管理器工具窗口类派生自<xref:Microsoft.VisualStudio.Modeling.Shell.ModelExplorerToolWindow>类，并表示域特定语言的模型资源管理器。
+    - 资源管理器工具窗口属性返回的域特定语言资源管理器工具窗口类的实例。 资源管理器工具窗口类派生自<xref:Microsoft.VisualStudio.Modeling.Shell.ModelExplorerToolWindow>类，并表示域特定语言的模型资源管理器。
 
-    -   `ExplorerSelection`属性在域特定语言的模型资源管理器窗口中返回所选的元素。
+    - `ExplorerSelection`属性在域特定语言的模型资源管理器窗口中返回所选的元素。
 
 ## <a name="determine-which-window-is-active"></a>确定哪个窗口处于活动状态
 
@@ -56,11 +55,11 @@ ms.locfileid: "53947932"
 
 ### <a name="to-determine-from-a-command-handler-what-type-of-window-is-active"></a>若要从命令处理程序确定哪种类型的窗口处于活动状态
 
-1.  <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.MonitorSelection%2A>的属性<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>类返回<xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService>提供对在 shell 中的当前选择状态的访问的对象。
+1. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.MonitorSelection%2A>的属性<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>类返回<xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService>提供对在 shell 中的当前选择状态的访问的对象。
 
-2.  <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService.CurrentSelectionContainer%2A>属性的<xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService>接口获取活动选择项容器，它可以不同于活动窗口。
+2. <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService.CurrentSelectionContainer%2A>属性的<xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService>接口获取活动选择项容器，它可以不同于活动窗口。
 
-3.  将添加到命令的以下属性类为你设置特定于域的语言，以确定哪种类型的窗口处于活动状态。
+3. 将添加到命令的以下属性类为你设置特定于域的语言，以确定哪种类型的窗口处于活动状态。
 
     ```csharp
     // using Microsoft.VisualStudio.Modeling.Shell;
@@ -94,17 +93,17 @@ ms.locfileid: "53947932"
 
 ### <a name="to-create-a-selection-rule"></a>若要创建一个选择规则
 
-1.  在 DSL 项目中创建自定义代码文件
+1. 在 DSL 项目中创建自定义代码文件
 
-2.  定义选择规则类派生自<xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules>类。
+2. 定义选择规则类派生自<xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules>类。
 
-3.  重写<xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules.GetCompliantSelection%2A>选择规则类要应用的选择条件的方法。
+3. 重写<xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules.GetCompliantSelection%2A>选择规则类要应用的选择条件的方法。
 
-4.  将 ClassDiagram 类的分部类定义添加到你的自定义代码文件。
+4. 将 ClassDiagram 类的分部类定义添加到你的自定义代码文件。
 
      `ClassDiagram`类派生自<xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram>类，并在生成的代码文件中，Diagram.cs，在 DSL 项目中定义。
 
-5.  重写<xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A>属性的`ClassDiagram`类以返回自定义选择规则。
+5. 重写<xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A>属性的`ClassDiagram`类以返回自定义选择规则。
 
      默认实现<xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A>属性获取不会修改所选内容的所选内容规则对象。
 

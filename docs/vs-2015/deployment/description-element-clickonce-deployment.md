@@ -1,14 +1,9 @@
 ---
 title: "&lt;description&gt;要素 (ClickOnce 配置) |Microsoft Docs'"
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 f1_keywords:
 - urn:schemas-microsoft-com:asm.v2#description
 dev_langs:
@@ -21,13 +16,13 @@ ms.assetid: 18f6919e-a3ab-4942-a57d-167fabfac44e
 caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: 8ddba6356ab051dbad27e55eefd53a517b47a21a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: cadf4a0b525e5603247748edd63516dc26d8a0b6
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49224765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68187748"
 ---
 # <a name="ltdescriptiongt-element-clickonce-deployment"></a>&lt;说明&gt;元素 （ClickOnce 部署）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,8 +33,8 @@ ms.locfileid: "49224765"
   
 ```  
   
-      <description   
-   publisher   
+      <description   
+   publisher   
    product  
    suiteName  
    supportUrl  
@@ -51,8 +46,8 @@ ms.locfileid: "49224765"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`publisher`|必须的。 标识用于在 Windows 中的图标位置的公司名称**启动**菜单并**添加或删除程序**控件面板中的部署配置进行安装时的项。|  
-|`product`|必须的。 标识完整的产品名称。 使用作为安装在 Windows 中的图标的头衔**启动**菜单。|  
+|`publisher`|必需。 标识用于在 Windows 中的图标位置的公司名称**启动**菜单并**添加或删除程序**控件面板中的部署配置进行安装时的项。|  
+|`product`|必需。 标识完整的产品名称。 使用作为安装在 Windows 中的图标的头衔**启动**菜单。|  
 |`suiteName`|可选。 标识的子文件夹中`publisher`在 Windows 中的文件夹**启动**菜单。|  
 |`supportUrl`|可选。 指定所示的支持 URL**添加或删除程序**控制面板中的项。 在 Windows 中的应用程序支持还为创建此 URL 的快捷方式**启动**菜单中，部署配置为安装时。|  
   
@@ -71,6 +66,3 @@ ms.locfileid: "49224765"
   
 ## <a name="see-also"></a>请参阅  
  [ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md)
-
-
-

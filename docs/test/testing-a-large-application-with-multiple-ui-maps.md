@@ -1,22 +1,21 @@
 ---
 title: 使用多个 UI 映射测试大型应用程序
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - coded UI tests, multiple UI maps
 - coded UI tests, for large applications
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f1677ac36222b3d7efddc22bc1c0a69394eaf564
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 4eb49e4e84f61e817e3df8bbbdd20c6922d180ee
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53931672"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68926743"
 ---
 # <a name="test-a-large-application-with-multiple-ui-maps"></a>使用多个 UI 映射测试大型应用程序
 
@@ -28,7 +27,7 @@ ms.locfileid: "53931672"
 
 - Visual Studio Enterprise
 
-在新建编码的 UI 测试时，Visual Studio 测试框架会默认在 <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> 类中生成测试代码。 有关如何录制编码的 UI 测试的详细信息，请参阅[创建编码的 UI 测试](../test/use-ui-automation-to-test-your-code.md)和[编码的 UI 测试剖析](../test/anatomy-of-a-coded-ui-test.md)。
+在新建编码的 UI 测试时，Visual Studio 测试框架会默认在 [UIMap](/previous-versions/dd580454(v=vs.140)) 类中生成测试代码。 有关如何录制编码的 UI 测试的详细信息，请参阅[创建编码的 UI 测试](../test/use-ui-automation-to-test-your-code.md)和[编码的 UI 测试剖析](../test/anatomy-of-a-coded-ui-test.md)。
 
 为 UI 映射生成的代码针对与测试交互的每个对象都包含一个类。 对于每个生成的方法，都会专门为该方法生成方法参数的伴生类。 如果应用程序中存在大量对象、页以及窗体和控件，UI 映射可能会变得很大。 而且，如果多个人正在执行测试，则只有一个大型 UI 映射文件的应用程序会变得难以操作。
 
@@ -41,38 +40,38 @@ ms.locfileid: "53931672"
 - 可以增量方式调整对应用程序 UI 的内容添加，从而最大程度地减少对 UI 其他部分测试的影响。
 
 ## <a name="do-you-need-multiple-ui-maps"></a>你是否需要多个 UI 映射？
- 可在以下情况下创建多个 UI 映射：
+可在以下情况下创建多个 UI 映射：
 
--   一起执行逻辑操作的多个复杂的复合 UI 控件集，如网站中的注册页或购物车的购买页。
+- 一起执行逻辑操作的多个复杂的复合 UI 控件集，如网站中的注册页或购物车的购买页。
 
--   可从应用程序的各个点进行访问的一组独立控件，如具有多个操作页的向导。 如果向导的每页都特别复杂，则可为每页创建单独的 UI 映射。
+- 可从应用程序的各个点进行访问的一组独立控件，如具有多个操作页的向导。 如果向导的每页都特别复杂，则可为每页创建单独的 UI 映射。
 
 ## <a name="add-multiple-ui-maps"></a>添加多个 UI 映射
 
 ### <a name="to-add-a-ui-map-to-your-coded-ui-test-project"></a>向编码的 UI 测试项目中添加 UI 映射
 
-1. 要在编码的 UI 测试项目中创建用于存储所有 UI 映射的文件夹，请在解决方案资源管理器中右键单击编码的 UI 测试项目文件，指向“添加”，然后选择“新建文件夹”。 例如，可将其命名为 `UIMaps`。
+1. 要在编码的 UI 测试项目中创建用于存储所有 UI 映射的文件夹，请在解决方案资源管理器中右键单击编码的 UI 测试项目文件，指向“添加”，然后选择“新建文件夹”    。 例如，可将其命名为 `UIMaps`。
 
     新文件夹显示在编码的 UI 测试项目下面。
 
-2. 右键单击“`UIMaps`”文件夹，指向“添加”，然后选择“新建项”。
+2. 右键单击“`UIMaps`”文件夹，指向“添加”  ，然后选择“新建项”  。
 
-    随即出现“添加新项”对话框。
+    随即出现“添加新项”  对话框。
 
    > [!NOTE]
    > 若要添加新的编码 UI 测试映射，你必须在编码的 UI 测试项目中。
 
-3. 选择列表中的“编码的 UI 测试映射”。
+3. 选择列表中的“编码的 UI 测试映射”  。
 
-    在“名称”框中，输入新 UI 映射的名称。 使用该映射将表示的组件或页的名称，例如，`HomePageMap`。
+    在“名称”  框中，输入新 UI 映射的名称。 使用该映射将表示的组件或页的名称，例如，`HomePageMap`。
 
-4. 选择“添加”。
+4. 选择“添加”  。
 
-    此时，Visual Studio 窗口最小化，同时显示“编码的 UI 测试生成器”对话框。
+    此时，Visual Studio 窗口最小化，同时显示“编码的 UI 测试生成器”  对话框。
 
-5. 录制第一个方法的操作，然后选择“生成代码”。
+5. 录制第一个方法的操作，然后选择“生成代码”  。
 
-6. 录制第一个组件或页面的所有操作和断言并将它们分入方法后，关闭“编码的 UI 测试生成器”对话框。
+6. 录制第一个组件或页面的所有操作和断言并将它们分入方法后，关闭“编码的 UI 测试生成器”  对话框。
 
 7. 继续创建 UI 映射。 为每个组件录制操作和断言并将它们分组为方法，然后生成代码。
 
@@ -142,7 +141,7 @@ namespace ContosoProject
 
 ## <a name="see-also"></a>请参阅
 
-- <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>
+- [UIMap](/previous-versions/dd580454(v=vs.140))
 - <xref:Microsoft.VisualStudio.TestTools.UITesting.BrowserWindow.CopyFrom%2A>
 - [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)
 - [创建编码的 UI 测试](../test/use-ui-automation-to-test-your-code.md)

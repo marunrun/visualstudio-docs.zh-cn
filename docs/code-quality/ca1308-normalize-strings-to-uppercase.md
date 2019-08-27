@@ -1,7 +1,6 @@
 ---
 title: CA1308:将字符串规范化为大写
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - CA1308
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 7e9a7457-3f93-4938-ac6f-1389fba8d9cc
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cf3acc0911f82a95bde3ce51a8869227c817e49a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 06fe8d4fbd4def14bfb8a24f4f211a121c809930
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53894962"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68922239"
 ---
 # <a name="ca1308-normalize-strings-to-uppercase"></a>CA1308:将字符串规范化为大写
 
@@ -29,19 +28,19 @@ ms.locfileid: "53894962"
 |TypeName|NormalizeStringsToUppercase|
 |CheckId|CA1308|
 |类别|Microsoft.Globalization|
-|是否重大更改|非换行|
+|是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 操作将规范化为小写的字符串。
+操作将字符串规范化为小写。
 
 ## <a name="rule-description"></a>规则说明
- 字符串应正常化为大写字母。 字符，当它们转换为小写，不能进行一次往返过程时一小组。 若要进行往返行程意味着若要将字符转换的区域设置到另一个区域设置的方式不同，表示的字符数据，再到准确地检索从已转换的字符的原始字符。
+字符串应正常化为大写字母。 将一小部分字符转换为小写字符后, 不能进行往返。 若要进行往返, 需将字符从一个区域设置转换为另一个表示字符数据的区域设置, 然后从转换后的字符中准确检索原始字符。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 更改操作将字符串转换为小写，以便将字符串转换为改为大写。 例如，将 `String.ToLower(CultureInfo.InvariantCulture)` 更改为 `String.ToUpper(CultureInfo.InvariantCulture)`。
+将字符串转换为小写的操作, 以便将字符串转换为大写形式。 例如，将 `String.ToLower(CultureInfo.InvariantCulture)` 更改为 `String.ToUpper(CultureInfo.InvariantCulture)`。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 它是安全地禁止显示一条警告消息，当您不需要安全决策基于结果 （例如，当在 UI 中显示时）。
+如果不是基于结果做出安全决策 (例如, 在用户界面中显示), 则可以安全地禁止显示警告消息。
 
 ## <a name="see-also"></a>请参阅
- [全球化警告](../code-quality/globalization-warnings.md)
+[全球化警告](../code-quality/globalization-warnings.md)

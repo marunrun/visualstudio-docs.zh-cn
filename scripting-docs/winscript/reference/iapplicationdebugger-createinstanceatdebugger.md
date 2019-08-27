@@ -2,7 +2,6 @@
 title: IApplicationDebugger::CreateInstanceAtDebugger |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,18 +17,18 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a6af315f25aa333ace4be7bb8e3584573f0cfd1f
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
-ms.translationtype: MT
+ms.openlocfilehash: 95489464128e706e755432bee991c5481f5af8bc
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54090917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63425830"
 ---
 # <a name="iapplicationdebuggercreateinstanceatdebugger"></a>IApplicationDebugger::CreateInstanceAtDebugger
 通过代码在调试器进程中允许创建的对象，它是-进程外调试器。  
   
 > [!IMPORTANT]
->  不应实现此方法，因为它允许不受信任的代码中的受信任的调试程序线程创建任意对象。  
+> 不应实现此方法，因为它允许不受信任的代码中的受信任的调试程序线程创建任意对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,7 +61,7 @@ HRESULT CreateInstanceAtDebugger(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   

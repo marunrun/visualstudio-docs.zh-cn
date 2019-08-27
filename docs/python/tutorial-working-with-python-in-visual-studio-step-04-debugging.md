@@ -2,22 +2,21 @@
 title: Visual Studio 中的 Python 教程步骤 4，调试
 titleSuffix: ''
 description: 在 Visual Studio 中使用 Python 功能的核心教程的第 4 步，介绍了如何在调试器中运行 Python 代码。
-ms.date: 10/29/2018
-ms.prod: visual-studio-dev15
+ms.date: 01/28/2019
 ms.topic: tutorial
-author: kraigb
-ms.author: kraigb
-manager: douge
+author: JoshuaPartlow
+ms.author: joshuapa
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 7299765435cae99afedb176f0b8613d7b504b09f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 3f6464986cb94ffa3ab3cc9264ab818112046ea9
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53931536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63002785"
 ---
 # <a name="step-4-run-code-in-the-debugger"></a>步骤 4：在调试器中运行代码
 
@@ -48,12 +47,9 @@ ms.locfileid: "53931536"
 1. 按 F5 或选择“调试” > “开始调试”菜单命令，检查代码是否正常运行。 此命令会在调试器中运行代码，但由于在程序运行时未执行任何操作来暂停程序，因此它只针对几次迭代输出波浪图案。 按任意键关闭输出窗口。
 
     > [!Tip]
-    > 若要在程序完成时自动关闭输出窗口，请使用以下代码替换 `main()` 调用：
+    > 要在程序完成时自动关闭输出窗口，请选择“工具” > “选项”菜单命令，展开“Python”节点，选择“调试”，然后清除选项“进程正常退出时等待输入”：
     >
-    > ```python
-    > if __name__ == "__main__":
-    >     sys.exit(int(main() or 0))
-    > ```
+    > ![Python 调试选项，用于在程序正常退出时关闭输出窗口](media/vs-getting-started-python-22-debugging5.png)
 
 1. 若要在 `for` 语句上设置断点，可单击该行的灰色边距，或将插入点置于该行并使用“调试” > “切换断点”命令 (F9)。 灰色边距中显示的红点用来表示该断点（如以下箭头标记所示）：
 

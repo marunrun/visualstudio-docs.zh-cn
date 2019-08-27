@@ -1,14 +1,9 @@
 ---
 title: “线程详细信息”视图 - 争用数据 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.view.threaddetails
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 874c3b1c-88d8-479a-bb35-1291d9aa8e67
 caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: da2cac3503f97976fe5c0918f86e5b25f2b89329
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 16ee86e69cb3a150a98de5077aa0c545545833e8
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51795644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68145596"
 ---
 # <a name="thread-details-view---contention-data"></a>“线程详细信息”视图 - 争用数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,19 +31,19 @@ ms.locfileid: "51795644"
   
 #### <a name="to-zoom-in-on-a-timeline-segment"></a>放大时间线片段  
   
--   单击鼠标指针并进行拖动以选择时间线的某个区域。  
+- 单击鼠标指针并进行拖动以选择时间线的某个区域。  
   
      释放鼠标后，视图会放大到所选时间片段。 可以重复该过程以放大显示更多详细信息。 时间滚动条上的滚动框表示显示在视图中的时间片段的相对大小。  
   
 #### <a name="to-zoom-out-on-a-timeline"></a>缩小时间线  
   
--   单击“缩小”以返回到以前的缩放级别。  
+- 单击“缩小”  以返回到以前的缩放级别。  
   
--   单击“缩放重置”以在视图中显示整个时间线。  
+- 单击“缩放重置”  以在视图中显示整个时间线。  
   
 #### <a name="to-view-the-call-stack-of-an-event"></a>查看事件的调用堆栈  
   
--   在时间线关系图中，单击表示事件的垂直条。  
+- 在时间线关系图中，单击表示事件的垂直条。  
   
 #### <a name="to-view-or-edit-the-source-code-of-a-function-in-the-call-stack"></a>查看或编辑调用堆栈中的函数的源代码  
   
@@ -58,15 +53,12 @@ ms.locfileid: "51795644"
   
 #### <a name="to-view-the-contention-events-of-a-resource-in-all-threads-in-the-profiling-run"></a>查看分析运行中所有线程中的每个资源的争用事件  
   
--   在时间线关系图中，单击资源的名称或 ID。  
+- 在时间线关系图中，单击资源的名称或 ID。  
   
      所选资源的[“资源详细信息”](../profiling/resource-details-view-contention-data.md)视图会出现。  
   
 #### <a name="to-view-the-thread-contention-data-in-the-processes-window"></a>在“进程”窗口中查看线程争用数据  
   
--   在时间线关系图中，单击“总计”。  
+- 在时间线关系图中，单击“总计”  。  
   
      [“进程视图”](../profiling/process-view-contention-data.md)会出现，其中包含所选线程。
-
-
-

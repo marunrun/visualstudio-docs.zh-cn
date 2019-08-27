@@ -1,22 +1,21 @@
 ---
 title: 将 PyLint 用于 Python 代码
 description: 在 Visual Studio 中运行 PyLint 检查 Python 代码中的问题，包括自定义 linting 的命令行选项。
-ms.date: 10/29/2018
-ms.prod: visual-studio-dev15
+ms.date: 03/13/2019
 ms.topic: conceptual
-author: kraigb
-ms.author: kraigb
-manager: douge
+author: JoshuaPartlow
+ms.author: joshuapa
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 24a54607d0db630ecad9d60daa6f271e8415fcbc
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: bf503cff7d8de2c00a93385113de05de00059390
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53818947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62956795"
 ---
 # <a name="use-pylint-to-check-python-code"></a>使用 PyLint 检查 Python 代码
 

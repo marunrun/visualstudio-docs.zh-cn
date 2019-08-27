@@ -1,8 +1,7 @@
 ---
-title: 'Iactivescriptparse:: Addscriptlet |Microsoft Docs'
+title: IActiveScriptParse::AddScriptlet | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3b928efe2e8ac7bc0fbdb7c2ae9978a4418cbee7
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: ee5d76060789118e9051c2d8dcc5fc570617f6a8
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54090956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62954948"
 ---
 # <a name="iactivescriptparseaddscriptlet"></a>IActiveScriptParse::AddScriptlet
 将代码 scriptlet 添加到该脚本。 此方法使用环境中使用主机文档混合在一起的持久状态的脚本主机负责还原脚本，而不通过`IPersist*`接口。 主要示例是允许要附加到内部事件的 HTML 文档中嵌入的代码 scriptlet 的 HTML 脚本语言 (例如，ONCLICK="button1.text='Exit")。  

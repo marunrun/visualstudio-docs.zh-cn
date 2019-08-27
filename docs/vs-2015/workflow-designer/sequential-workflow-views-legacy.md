@@ -1,11 +1,8 @@
 ---
 title: 顺序工作流视图 （旧版） |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 helpviewer_keywords:
 - sequential workflow views
@@ -14,13 +11,13 @@ ms.assetid: 135f24b9-1b37-442b-9ef8-f0f2108a3212
 caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: 1ac9d10ddb687063de8c45296bc879854a0979a4
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 97d13a86e8bade0855c60326996a192a0d0331b3
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49248724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62938538"
 ---
 # <a name="sequential-workflow-views-legacy"></a>顺序工作流视图（旧版）
 [!INCLUDE[vs2010](../includes/vs2010-md.md)] 提供了一个旧 [!INCLUDE[wfd1](../includes/wfd1-md.md)]，可用于面向 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 或 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]。  

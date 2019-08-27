@@ -2,19 +2,18 @@
 title: 功能建议
 description: 介绍了什么是开发人员社区中的功能建议、如何提出功能建议，以及 Microsoft 如何在 Visual Studio 路线图中采纳功能建议。
 ms.date: 12/17/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: seaniyer
 ms.author: seiyer
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 60fce2b9fb14ffcb0975b91991595d1a4a429cb2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 4da08c2a7fed28b7f4ca75770682673bf58e30c3
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53910569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62951015"
 ---
 # <a name="overview-suggest-a-feature"></a>概述：功能建议
 
@@ -130,4 +129,4 @@ UserVoice 和开发人员社区的投票系统工作原理不同。 为了保持
 
 ## <a name="see-also"></a>请参阅
 
-- [开发人员社区“功能建议”介绍（Visual Studio 博客）](https://blogs.msdn.microsoft.com/visualstudio/2018/10/09/introducing-suggest-a-feature-in-developer-community/?utm_source=vs_developer_news&utm_medium=referral)
+- [开发人员社区“功能建议”介绍（Visual Studio 博客）](https://devblogs.microsoft.com/visualstudio/introducing-suggest-a-feature-in-developer-community/?utm_source=vs_developer_news&utm_medium=referral)

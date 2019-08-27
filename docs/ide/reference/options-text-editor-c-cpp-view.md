@@ -8,22 +8,21 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.C\C++.View
 author: mikeblome
 ms.author: mblome
-manager: wpickett
-ms.prod: visual-studio-dev15
+manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c27673b8e6a5e0acce8f37fe20d675f56a62bbc6
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b15952c8262ea1e8dec1e89816a5887f9bfe9bf6
+ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53846563"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68461276"
 ---
 # <a name="options-text-editor-cc-view"></a>选项, 文本编辑器, C/C++, 视图
 
 使用 C 或 C++ 进行编程时，请使用以下属性页更改代码编辑器的默认行为。
 
-要访问此属性页，请选择“工具” > “选项”并依次展开“文本编辑器”和“C/C++”，然后选择“视图”。
+要访问此属性页，请选择“工具” > “选项”并依次展开“文本编辑器”和“C/C++”，然后选择“视图”      。
 
 ## <a name="code-squiggles"></a>代码波形曲线
 

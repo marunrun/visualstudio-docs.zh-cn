@@ -1,21 +1,20 @@
 ---
 title: 重构代码以将 for 循环转换为 foreach 语句
 ms.date: 05/10/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 85a8d0c5644d1a7daf342b9524e75f7969b3781a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d61e79055b2158115b459e643a36170304b7f655
+ms.sourcegitcommit: b468d71052a1b8a697f477ab23a3644de139f1e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53888186"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67261709"
 ---
 # <a name="refactoring-to-convert-between-a-for-loop-and-a-foreach-statement"></a>重构，以便在 for 循环和 foreach 语句之间进行转换
 
@@ -30,7 +29,7 @@ ms.locfileid: "53888186"
 - C#
 
 > [!NOTE]
-> 转换为 foreach 快速操作重构仅适用于包含全部三部分的 [for](/dotnet/csharp/language-reference/keywords/for) 循环：初始化表达式、条件和迭代器。
+> 转换为 foreach  快速操作重构仅适用于包含全部三部分的 [for](/dotnet/csharp/language-reference/keywords/for) 循环：初始化表达式、条件和迭代器。
 
 ### <a name="why-convert"></a>转换原因
 
@@ -44,11 +43,11 @@ ms.locfileid: "53888186"
 
 1. 将插入点置于 `for` 关键字中。
 
-1. 按“Ctrl”+**。** 或单击代码文件边距中的螺丝刀![螺丝刀图标](../media/screwdriver-icon.png)图标。
+1. 按“Ctrl”  + **。** 或单击代码文件边距中的螺丝刀![螺丝刀图标](../media/screwdriver-icon.png)图标。
 
    ![转换为 foreach 菜单](media/convert-to-foreach.png)
 
-1. 选择“转换为‘foreach’”。 或者，选择“预览更改”以打开[“预览更改”](../../ide/preview-changes.md)对话框，然后选择“应用”。
+1. 选择“转换为‘foreach’”  。 或者，选择“预览更改”  以打开[“预览更改”](../../ide/preview-changes.md)对话框，然后选择“应用”  。
 
 ## <a name="convert-a-foreach-statement-to-a-for-loop"></a>将 foreach 语句转换为 for 循环
 
@@ -72,16 +71,16 @@ ms.locfileid: "53888186"
 
 1. 将插入点置于 `foreach` 或 `For Each` 关键字中。
 
-1. 按“Ctrl”+**。** 或单击代码文件边距中的螺丝刀![螺丝刀图标](../media/screwdriver-icon.png)图标。
+1. 按“Ctrl”  + **。** 或单击代码文件边距中的螺丝刀![螺丝刀图标](../media/screwdriver-icon.png)图标。
 
    ![转换为 for 菜单](media/convert-to-for.png)
 
-1. 选择“转换为‘for’”。 或者，选择“预览更改”以打开[“预览更改”](../../ide/preview-changes.md)对话框，然后选择“应用”。
+1. 选择“转换为‘for’”  。 或者，选择“预览更改”  以打开[“预览更改”](../../ide/preview-changes.md)对话框，然后选择“应用”  。
 
-1. 因为重构会引入一个新迭代计数变量，因此，“重命名”框将出现在编辑器的右上角。 如果想要为变量选择不同名称，键入该名称，然后按“Enter”或选择“重命名”框中的“应用”。 如果不想选择新名称，按“Esc”或选择“应用”以关闭“重命名”框。
+1. 因为重构会引入一个新迭代计数变量，因此，“重命名”  框将出现在编辑器的右上角。 如果想要为变量选择不同名称，键入该名称，然后按“Enter”  或选择“重命名”  框中的“应用”  。 如果不想选择新名称，按“Esc”  或选择“应用”  以关闭“重命名”  框。
 
 > [!NOTE]
-> 对于 C#，由这些重构生成的代码对集合中的项目类型使用显式类型或 [var](/dotnet/csharp/language-reference/keywords/var)。 生成代码中的类型（显式或隐式）取决于范围内的代码样式设置。 这些特定的代码样式设置在“工具” > “选项” > “文本编辑器” > “C#” > “代码样式” > “常规” > “var 首选项”\'下以计算机级别进行配置，或在 [EditorConfig](../../ide/editorconfig-code-style-settings-reference.md#implicit-and-explicit-types) 文件下以解决方案级别进行配置。 如果在“选项”中更改了代码样式设置，请重新打开代码文件以使更改生效。
+> 对于 C#，由这些重构生成的代码对集合中的项目类型使用显式类型或 [var](/dotnet/csharp/language-reference/keywords/var)。 生成代码中的类型（显式或隐式）取决于范围内的代码样式设置。 这些特定的代码样式设置在“工具”   > “选项”   > “文本编辑器”   > “C#”   > “代码样式”   > “常规”   > “var 首选项”\'  下以计算机级别进行配置，或在 [EditorConfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) 文件下以解决方案级别进行配置。 如果在“选项”  中更改了代码样式设置，请重新打开代码文件以使更改生效。
 
 ## <a name="see-also"></a>请参阅
 

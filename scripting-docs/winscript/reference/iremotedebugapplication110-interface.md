@@ -2,7 +2,6 @@
 title: IRemoteDebugApplication110 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,18 +13,18 @@ caps.latest.revision: 3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f280e2b869a3046ecb2d3fac37facdcc1bfeb7fb
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
-ms.translationtype: MT
+ms.openlocfilehash: ea8f3f983cf7279cf6dc9600813a08268cef8301
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54349876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63383498"
 ---
 # <a name="iremotedebugapplication110-interface"></a>IRemoteDebugApplication110 接口
 用于提供新功能，可调用脚本调试器和过程的调用方。  
   
 > [!IMPORTANT]
->  此接口由 PDM v11.0 和更高版本实现。 在 activdbg100.h 中发现。  
+> 此接口由 PDM v11.0 和更高版本实现。 在 activdbg100.h 中发现。  
   
 ## <a name="methods"></a>方法  
  `IRemoteDebugApplication110` 接口公开以下方法。  

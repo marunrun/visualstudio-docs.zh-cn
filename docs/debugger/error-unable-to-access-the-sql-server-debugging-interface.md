@@ -12,22 +12,22 @@ dev_langs:
 - SQL
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5cc911368544801e03ec9ac272f91831a652c051
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: 17c77e0c6f38037aa71f0d48b94b052d4cac3c7a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53988509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62850146"
 ---
 # <a name="error-unable-to-access-the-sql-server-debugging-interface"></a>错误：无法访问 SQL Server 调试接口
-尝试在未启用 SQL 调试的计算机上进行 SQL 调试时，会出现此消息。  
-  
-### <a name="to-correct-this-error"></a>更正此错误  
-  
--   请参阅[设置 SQL 调试](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/s4sszxst(v=vs.100))。  
-  
-## <a name="see-also"></a>请参阅  
- [调试 SQL](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zefbf0t6(v=vs.100))
+尝试在未启用 SQL 调试的计算机上进行 SQL 调试时，会出现此消息。
+
+### <a name="to-correct-this-error"></a>更正此错误
+
+- 请参阅[设置 SQL 调试](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/s4sszxst(v=vs.100))。
+
+## <a name="see-also"></a>请参阅
+- [调试 SQL](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zefbf0t6(v=vs.100))

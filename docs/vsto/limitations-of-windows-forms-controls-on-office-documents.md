@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Toolbox [Office development in Visual Studio], unsupported controls
 - user controls [Office development in Visual Studio], grouping controls
 - Windows Forms controls [Office development in Visual Studio], Toolbox
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1e3ea01d83dcb40378e3ac3282d95620eacc5731
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d5cb4bf5788e1d30933a807e2e97e064118fc076
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53929667"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67823409"
 ---
 # <a name="limitations-of-windows-forms-controls-on-office-documents"></a>Office 文档上的 Windows 窗体控件的限制
 
@@ -41,24 +41,24 @@ ms.locfileid: "53929667"
 
 - 不支持的 Excel 控件的属性：
 
-    - <xref:System.Windows.Forms.Control.Anchor>
-    - <xref:System.Windows.Forms.Control.Dock>
-    - <xref:System.Windows.Forms.Control.Location>
-    - <xref:System.Windows.Forms.Control.TabIndex>
-    - <xref:System.Windows.Forms.Control.TabStop>
-    - <xref:System.Windows.Forms.Control.TopLevelControl>
+  - <xref:System.Windows.Forms.Control.Anchor>
+  - <xref:System.Windows.Forms.Control.Dock>
+  - <xref:System.Windows.Forms.Control.Location>
+  - <xref:System.Windows.Forms.Control.TabIndex>
+  - <xref:System.Windows.Forms.Control.TabStop>
+  - <xref:System.Windows.Forms.Control.TopLevelControl>
 
 - 不受支持的方法和属性的 Word 控件：
 
-    - <xref:System.Windows.Forms.Control.Hide%2A>
-    - <xref:System.Windows.Forms.Control.Show%2A>
-    - <xref:System.Windows.Forms.Control.Anchor>
-    - <xref:System.Windows.Forms.Control.Dock>
-    - <xref:System.Windows.Forms.Control.Location>
-    - <xref:System.Windows.Forms.Control.TabIndex>
-    - <xref:System.Windows.Forms.Control.TabStop>
-    - <xref:System.Windows.Forms.Control.TopLevelControl>
-    - <xref:System.Windows.Forms.Control.Visible>
+  - <xref:System.Windows.Forms.Control.Hide%2A>
+  - <xref:System.Windows.Forms.Control.Show%2A>
+  - <xref:System.Windows.Forms.Control.Anchor>
+  - <xref:System.Windows.Forms.Control.Dock>
+  - <xref:System.Windows.Forms.Control.Location>
+  - <xref:System.Windows.Forms.Control.TabIndex>
+  - <xref:System.Windows.Forms.Control.TabStop>
+  - <xref:System.Windows.Forms.Control.TopLevelControl>
+  - <xref:System.Windows.Forms.Control.Visible>
 
 您还不能设置<xref:System.Windows.Forms.Control.Left>或<xref:System.Windows.Forms.Control.Top>与 Word 文档的文本对齐的 Windows 窗体控件的属性。 添加 Windows 窗体控件，与在以下情况下的文本对齐：
 
@@ -70,7 +70,7 @@ ms.locfileid: "53929667"
 
 Windows 窗体控件通常具有相同的行为上的 Office 文档上 Windows 窗体，但也存在一些差异。 下表描述了 Office 文档上的 Windows 窗体控件存在的差异。
 
-|功能|差异|
+|功能|差值|
 |-------------------|----------------|
 |控件 tab 键顺序|您不能通过在 Excel 工作表或 Word 文档上放置的控件选项卡。|
 |控件分组|不能使用<xref:System.Windows.Forms.GroupBox>控件，以包含 Office 文档上的其他控件。 直接向文档添加多个单选按钮的单选按钮是不互相排斥。 可以编写代码以使单选按钮相互排斥;但是，首选的方法是向用户控件添加单选按钮，然后将用户控件添加到文档。 有关详细信息，请参阅的 Word 控件示例或 Excel 控件示例[Office 开发示例和演练](../vsto/office-development-samples-and-walkthroughs.md)。|

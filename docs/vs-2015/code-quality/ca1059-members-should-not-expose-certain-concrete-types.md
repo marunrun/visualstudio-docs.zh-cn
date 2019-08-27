@@ -1,14 +1,9 @@
 ---
-title: CA1059： 成员不应公开某些具体类型 |Microsoft Docs
-ms.custom: ''
+title: CA1059:成员不应公开某些具体类型 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA1059
 - MembersShouldNotExposeCertainConcreteTypes
@@ -20,14 +15,14 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 894b4c22aaab2b0cce81053e6466b791a50b089a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a78125645dc6369811b4b9e1d7101b7bb4cbba76
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49816880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68200494"
 ---
-# <a name="ca1059-members-should-not-expose-certain-concrete-types"></a>CA1059：成员不应公开某些具体类型
+# <a name="ca1059-members-should-not-expose-certain-concrete-types"></a>CA1059:成员不应公开某些具体类型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -40,7 +35,7 @@ ms.locfileid: "49816880"
 ## <a name="cause"></a>原因
  外部可见成员是某些具体类型或公开某些具体类型通过其参数之一或返回值。 目前，此规则将报告以下具体类型的风险：
 
--   一个类型派生自<xref:System.Xml.XmlNode?displayProperty=fullName>。
+- 一个类型派生自<xref:System.Xml.XmlNode?displayProperty=fullName>。
 
 ## <a name="rule-description"></a>规则说明
  具体类型是指具有一个完整实现因此可以实例化的类型。 若要允许的成员被广泛使用，将使用建议的接口为具体类型。 这样，要接受实现该接口的任何类型或实现该接口的类型的地方使用的成员。
@@ -58,7 +53,4 @@ ms.locfileid: "49816880"
  它是安全地禁止显示此规则从一条消息，如果提供的具体类型的特定功能是必需的。
 
 ## <a name="related-rules"></a>相关的规则
- [CA1011：考虑将基类型作为参数传递](../code-quality/ca1011-consider-passing-base-types-as-parameters.md)
-
-
-
+ [CA1011:请考虑将基类型作为参数传递](../code-quality/ca1011-consider-passing-base-types-as-parameters.md)

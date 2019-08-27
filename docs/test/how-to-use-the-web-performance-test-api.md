@@ -8,14 +8,13 @@ helpviewer_keywords:
 ms.assetid: 93a6a1dd-663b-4ab5-8760-7d6b081561d3
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: c3eaf93b6e39d773884ecfde97e18daef2bedbe0
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: ab103b11659ee1e73537f6f41ff1fe0e6ed32076
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53893534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62978557"
 ---
 # <a name="how-to-use-the-web-performance-test-api"></a>如何：使用 Web 性能测试 API
 
@@ -28,38 +27,38 @@ ms.locfileid: "53893534"
 > [!TIP]
 > 可使用对象浏览器来检查 <xref:Microsoft.VisualStudio.TestTools.WebTesting> 命名空间。 Visual C# 和 Visual Basic 编辑器均为使用此命名空间中的类编写代码提供了 IntelliSense 支持。
 
-还可以为负载测试创建插件。 有关更多信息，请参见[如何：使用负载测试 API](../test/how-to-use-the-load-test-api.md) 以及[如何：创建负载测试插件](../test/how-to-create-a-load-test-plug-in.md)。
+还可以为负载测试创建插件。 有关详细信息，请参阅[如何：使用负载测试 API](../test/how-to-use-the-load-test-api.md) 以及[如何：创建负载测试插件](../test/how-to-create-a-load-test-plug-in.md)。
 
 ## <a name="to-use-the-webtesting-namespace"></a>使用 WebTesting 命名空间
 
-1.  打开包含 Web 性能测试的 Web 性能和负载测试项目。
+1. 打开包含 Web 性能测试的 Web 性能和负载测试项目。
 
-2.  向测试解决方案添加一个 Visual C# 或 Visual Basic 类库项目。
+2. 向测试解决方案添加一个 Visual C# 或 Visual Basic 类库项目。
 
-3.  在 Web 性能和负载测试项目中添加对类库项目的引用。
+3. 在 Web 性能和负载测试项目中添加对类库项目的引用。
 
-4.  在类库项目中添加对 Microsoft.VisualStudio.QualityTools.WebTestFramework DLL 的引用。
+4. 在类库项目中添加对 Microsoft.VisualStudio.QualityTools.WebTestFramework DLL 的引用。
 
-5.  在位于类库项目中的类文件中，为 `using` 命名空间添加 <xref:Microsoft.VisualStudio.TestTools.WebTesting> 语句。
+5. 在位于类库项目中的类文件中，为 `using` 命名空间添加 <xref:Microsoft.VisualStudio.TestTools.WebTesting> 语句。
 
-6.  创建实现 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> 接口的类。
+6. 创建实现 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> 接口的类。
 
-7.  生成项目。
+7. 生成项目。
 
-8.  使用“Web 性能测试编辑器”添加新 Web 性能测试插件：
+8. 使用“Web 性能测试编辑器”添加新 Web 性能测试插件：
 
-    1.  选择工具栏上的“添加 Web 测试插件”。
+    1. 选择工具栏上的“添加 Web 测试插件”。
 
          随即显示“添加 Web 测试插件”对话框。
 
-    2.  在“选择插件”下，选择 Web 性能测试插件类。
+    2. 在“选择插件”下，选择 Web 性能测试插件类。
 
-    3.  在“选定插件的属性”窗格中，设置要在运行时使用的插件的初始值。
+    3. 在“选定插件的属性”窗格中，设置要在运行时使用的插件的初始值。
 
         > [!NOTE]
         > 可根据需要从插件中公开任意多个属性；只需将其设置为公共、可设置并属于 Integer、Boolean 或 String 等基本类型。 以后还可以使用“属性”窗口来编辑 Web 性能测试插件属性。
 
-    4.  选择 **“确定”**。
+    4. 选择 **“确定”**。
 
 9. 运行该 Web 性能测试。
 

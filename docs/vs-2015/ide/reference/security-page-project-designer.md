@@ -1,14 +1,9 @@
 ---
 title: “项目设计器”->“安全”页 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - vb.ProjectPropertiesSecurity
 - vb.XBAPProjectPropertiesSecurity
@@ -23,18 +18,17 @@ ms.assetid: 641d9cd3-fa07-498a-8568-3c169bb4d3d5
 caps.latest.revision: 40
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 967ce9221313c88b10a792f15ffaec80da99de03
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 91b438e8646a215aeed3390e87ce9c20ca923fae
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49267808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63441278"
 ---
 # <a name="security-page-project-designer"></a>”项目设计器“ ->“安全”页
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 “项目设计器”的“安全”页用于配置使用 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 部署部署的应用程序的代码访问安全性设置。 有关详细信息，请参阅 [ClickOnce 应用程序的代码访问安全性](../../deployment/code-access-security-for-clickonce-applications.md)。  
   
  要访问“安全”页，请在“解决方案资源管理器”中单击一个项目节点，然后在“项目”菜单单击“属性”。 显示“项目设计器”时，单击“安全性”选项卡。  
@@ -44,9 +38,9 @@ ms.locfileid: "49267808"
  确定是否在设计时启用安全设置。 清除此选项后，“安全”页上的所有其他选项均不可用。  
   
 > [!NOTE]
->  使用“发布”向导发布应用程序时，会自动启用此选项。  
+> 使用“发布”向导发布应用程序时，会自动启用此选项。  
   
- 选中此选项后，可以从以下两个单选按钮中选择一个：“这是完全信任的应用程序”或“这是部分信任的应用程序”。  
+ 选择此选项时，可以选择以下两个单选按钮之一：“这是完全信任应用程序”或“这是部分信任应用程序”。  
   
  对于 WPF Web 浏览器应用程序项目，默认选择此选项。  
   
@@ -83,10 +77,7 @@ ms.locfileid: "49267808"
  [如何：启用 ClickOnce 安全设置](../../deployment/how-to-enable-clickonce-security-settings.md)   
  [如何：为 ClickOnce 应用程序设置安全区域](../../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)   
  [如何：设置 ClickOnce 应用程序的自定义权限](../../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
- [如何：使用受限权限对 ClickOnce 应用程序进行调试](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
+ [如何：调试具有受限权限的 ClickOnce 应用程序](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
  [ClickOnce 安全和部署](../../deployment/clickonce-security-and-deployment.md)   
  [项目属性引用](../../ide/reference/project-properties-reference.md)   
  [“高级安全设置”对话框](../../ide/reference/advanced-security-settings-dialog-box.md)
-
-
-

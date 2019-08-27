@@ -8,15 +8,15 @@ helpviewer_keywords:
 - debugger
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6933f3b5dd826eda586c92466bcd9a8cbe6dc527
-ms.sourcegitcommit: 59c48e1e42b48ad25a4e198af670faa4d8dae370
-ms.translationtype: MTE95
+ms.openlocfilehash: c01317f3b8fa92cf1bc17c3745f708e0d3f26e5b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54204276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62901211"
 ---
 # <a name="what-is-debugging"></a>什么是调试？
 
@@ -54,4 +54,4 @@ Visual Studio 调试器是一个功能强大的工具。 我们演示如何使�
 > [零基础调试](../debugger/debugging-absolute-beginners.md)
 
 > [!div class="nextstepaction"]
-> [通过编写更优质的 C# 代码来修复 bug](../debugger/write-better-code-with-visual-studio.md)
+> [调试技术和工具](../debugger/write-better-code-with-visual-studio.md)

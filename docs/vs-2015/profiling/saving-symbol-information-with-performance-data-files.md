@@ -1,14 +1,9 @@
 ---
 title: 使用性能数据文件保存符号信息 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - packsymbols, in profiling tools reports
 - profiling tools, packsymbols
@@ -16,18 +11,18 @@ ms.assetid: 8b802505-e94d-4ee0-83e4-fdd790a332c1
 caps.latest.revision: 18
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: dbe05d345e54a900fcdd5568aa898b80417bb68d
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: e9d2e8b0414746523d0f76e8266f6463d9c05574
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51761266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68160287"
 ---
 # <a name="saving-symbol-information-with-performance-data-files"></a>使用性能数据文件保存符号信息
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-如果使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 集成开发环境 (IDE) 分析文件并且计划将 VSP 文件移动到其他计算机，则必须设置性能项目设置以在报告文件中保存或序列化符号。 这会增加报告文件的大小。 出于以下两个原因，需要序列化符号：  
+如果使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 集成开发环境 (IDE) 分析文件并且计划将 VSP 文件移动到其他计算机，则必须设置性能项目设置以在报告文件中保存或序列化  符号。 这会增加报告文件的大小。 出于以下两个原因，需要序列化符号：  
   
 - 在目标程序集从它们在临时存储中的位置丢失之前，将代码符号嵌入到性能报告中。  
   
@@ -39,7 +34,7 @@ ms.locfileid: "51761266"
   
   可以从 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE 或是从命令行序列化符号：  
   
-- 要在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE 中序列化符号，请指向菜单栏上的“工具”，然后单击“选项”。 在“选项”窗口中，选择“性能工具”，然后选中“自动序列化符号信息”复选框。  
+- 要在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE 中序列化符号，请指向菜单栏上的“工具”  ，然后单击“选项”  。 在“选项”  窗口中，选择“性能工具”  ，然后选中“自动序列化符号信息”  复选框。  
   
 - 保存报告文件时，PACKSYMBOLS 是等效命令行选项。 若要序列化符号，请输入 **vsperfreport /summary:all /packsymbols filename.vsp**。  
   
@@ -56,9 +51,9 @@ ms.locfileid: "51761266"
   
 - 确保设置了 Windows 符号缓存的路径。 执行以下操作之一以设置符号缓存路径：  
   
-  -   在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE 中将“调试器”->“符号”选项设置为正确路径。  
+  - 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE 中将“调试器”->“符号”选项设置为正确路径。  
   
-  -   向 VSPerfReport 命令行添加 -symbolpath 选项以包含符号。  
+  - 向 VSPerfReport 命令行添加 -symbolpath 选项以包含符号。  
   
 - 如果在 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 中看不到任何符号，请确保为 ASP 服务器正确设置了符号服务器。  
   
@@ -73,6 +68,3 @@ ms.locfileid: "51761266"
  [保存和导出性能工具数据](../profiling/saving-and-exporting-performance-tools-data.md)   
  [如何：引用 Windows 符号信息](../profiling/how-to-reference-windows-symbol-information.md)   
  [VSPerfReport](../profiling/vsperfreport.md)
-
-
-

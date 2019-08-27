@@ -1,32 +1,31 @@
 ---
 title: 有关提高性能的提示
 ms.date: 08/14/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bdc20f22fc535028cb67939fed9c9472ed081428
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7fccae7d42d9e8f99c78fd55f74466e2f83e5dfa
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53956889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62581775"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio 性能提示和技巧
 
 Visual Studio 性能建议适用于内存不足的情况，这种情况极少出现。 出现这种情况时，可优化某些未使用的 Visual Studio 功能。 以下提示不作为一般性建议。
 
 > [!NOTE]
-> 如果因为内存问题而在使用产品时遇到困难，请通过[反馈工具](../ide/how-to-report-a-problem-with-visual-studio-2017.md)告知我们。
+> 如果因为内存问题而在使用产品时遇到困难，请通过[反馈工具](../ide/how-to-report-a-problem-with-visual-studio.md)告知我们。
 
 ## <a name="use-a-64-bit-os"></a>使用 64 位操作系统
 
 如果将系统从 Windows 32 位版本升级到 64 位版本，那么 Visual Studio 的可用虚拟内存量会从 2 GB 扩展到 4 GB。 这样，即使 Visual Studio 是 32 位进程，也可以处理更大的工作负荷。
 
-有关详细信息，请参阅[内存限制](/windows/desktop/Memory/memory-limits-for-windows-releases#memory_limits)和[在 64 位 Windows 上使用 /LARGEADDRESSAWARE](https://blogs.msdn.microsoft.com/oldnewthing/20050601-24/?p=35483/)。
+有关详细信息，请参阅[内存限制](/windows/desktop/Memory/memory-limits-for-windows-releases)和[在 64 位 Windows 上使用 /LARGEADDRESSAWARE](https://blogs.msdn.microsoft.com/oldnewthing/20050601-24/?p=35483/)。
 
 ## <a name="disable-automatic-file-restore"></a>禁用自动文件还原
 
@@ -42,9 +41,9 @@ Visual Studio 会自动重新打开上一个会话中处于打开状态的文档
 
 - 对于常规“转到”功能，请选择“编辑” > 转到” > 转到所有”（或按 Ctrl+T）。
 
-- 在 Visual Studio 2017 版本 15.8 及更高版本中，可使用“编辑” > “转到” > “转到上次编辑位置”（或按 Ctrl+Shift+Backspace）跳转到解决方案中上次编辑的位置。
+- 可使用“编辑” > “转到” > “转到上次编辑的位置”（或按“Ctrl”+“Shift”+“Backspace”）跳转到解决方案中上次编辑的位置。
 
-- 在 Visual Studio 2017 版本 15.8 及更高版本中，使用“转到最近使用的文件”以查看解决方案中最近访问的文件的列表。 选择“编辑” > “转到” > “转到最近使用的文件”（或按 Ctrl+1、Ctrl +R）。
+- 使用“转到最近使用的文件”，查看解决方案中最近访问的文件的列表。 选择“编辑” > “转到” > “转到最近使用的文件”（或按 Ctrl+1、Ctrl +R）。
 
 ## <a name="configure-debugging-options"></a>配置调试选项
 
@@ -89,7 +88,7 @@ Visual Studio 会自动重新打开上一个会话中处于打开状态的文档
 
     Visual Studio 对整个解决方案执行分析，以在调用生成前提供关于错误的丰富体验。 此功能可用于尽快速识别错误。 但是，对于大型解决方案，这一功能可能会占用大量内存资源。 如果遇到内存不足或类似问题，可以禁用此体验并释放这些资源。 默认情况下，Visual Basic 启用此选项，而 C# 禁用此选项。
 
-    若要禁用“完整解决方案分析”，请选择“工具” > “选项” > “文本编辑器”，替换选择“Visual Basic”或“C#”********。 选择“高级”，并取消选中“启用完整解决方案分析”。
+    若要禁用“完整解决方案分析”，请选择“工具” > “选项” > “文本编辑器”，替换选择“Visual Basic”或“C#”。 选择“高级”，并取消选中“启用完整解决方案分析”。
 
 - **禁用 CodeLens**
 
@@ -106,7 +105,17 @@ Visual Studio 会自动重新打开上一个会话中处于打开状态的文档
 
     扩展是添加到 Visual Studio 的附加软件组件，用于提供新功能或扩展现有功能。 扩展通常可能导致内存资源问题。 如果遇到内存资源问题，请尝试一次禁用一个扩展，并查看这将如何影响方案或工作流。
 
-    要禁用扩展，请转到“工具” > “扩展和更新”，然后禁用特定扩展。
+   ::: moniker range="vs-2017"
+
+    若要禁用扩展，请转到“工具”>“扩展和更新”，然后禁用特定扩展。
+
+   ::: moniker-end
+
+   ::: moniker range=">=vs-2019"
+
+    若要禁用扩展，请转到“扩展”>“管理扩展”，然后禁用特定扩展。
+
+   ::: moniker-end
 
 - **禁用 XAML 设计器**
 
@@ -131,4 +140,4 @@ CLR 使用垃圾回收内存管理系统。 在此系统中，内存有时会被
 ## <a name="see-also"></a>请参阅
 
 - [优化 Visual Studio 性能](../ide/optimize-visual-studio-performance.md)
-- [更快加载解决方案（Visual Studio 博客）](https://blogs.msdn.microsoft.com/visualstudio/2018/04/04/load-solutions-faster-with-visual-studio-2017-version-15-6/)
+- [更快加载解决方案（Visual Studio 博客）](https://devblogs.microsoft.com/visualstudio/load-solutions-faster-with-visual-studio-2017-version-15-6/)

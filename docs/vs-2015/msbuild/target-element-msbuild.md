@@ -1,14 +1,9 @@
 ---
 title: Target 元素 (MSBuild) | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#Target
 dev_langs:
@@ -23,18 +18,17 @@ ms.assetid: 350f6fc2-86b3-45f2-a31e-ece0e6bd4dca
 caps.latest.revision: 38
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: bc4224930782e24b20d3e9720c517304b0153f2d
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: f14815502a33fb7d49a10c2724c57a4a0d86e9f7
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49173402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68144316"
 ---
 # <a name="target-element-msbuild"></a>Target 元素 (MSBuild)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 包含一组要连续执行的 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 任务。  
   
  \<Project>  
@@ -69,8 +63,8 @@ ms.locfileid: "49173402"
 |---------------|-----------------|  
 |`Name`|必需的特性。<br /><br /> 目标的名称。|  
 |`Condition`|可选特性。<br /><br /> 要评估的条件。 如果该条件评估结果为 `false`，那么目标不会执行目标主体或任何在 `DependsOnTargets` 属性中设置的目标。 有关条件的详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。|  
-|`Inputs`|可选特性。<br /><br /> 形成此目标输入的文件。 采用分号分隔多个文件。 将会比较该文件的时间戳与 `Outputs` 中文件的时间戳，从而确定 `Target` 是否为最新。 有关详细信息，请参阅[增量生成](../msbuild/incremental-builds.md)，[如何：增量生成](../msbuild/how-to-build-incrementally.md)以及[转换](../msbuild/msbuild-transforms.md)。|  
-|`Outputs`|可选特性。<br /><br /> 形成此目标输出的文件。 采用分号分隔多个文件。 将会比较该文件的时间戳与 `Inputs` 中文件的时间戳，从而确定 `Target` 是否为最新。 有关详细信息，请参阅[增量生成](../msbuild/incremental-builds.md)，[如何：增量生成](../msbuild/how-to-build-incrementally.md)以及[转换](../msbuild/msbuild-transforms.md)。|  
+|`Inputs`|可选特性。<br /><br /> 形成此目标输入的文件。 采用分号分隔多个文件。 将会比较该文件的时间戳与 `Outputs` 中文件的时间戳，从而确定 `Target` 是否为最新。 有关详细信息，请参阅[增量生成](../msbuild/incremental-builds.md)，[如何：增量生成](../msbuild/how-to-build-incrementally.md)，并[转换](../msbuild/msbuild-transforms.md)。|  
+|`Outputs`|可选特性。<br /><br /> 形成此目标输出的文件。 采用分号分隔多个文件。 将会比较该文件的时间戳与 `Inputs` 中文件的时间戳，从而确定 `Target` 是否为最新。 有关详细信息，请参阅[增量生成](../msbuild/incremental-builds.md)，[如何：增量生成](../msbuild/how-to-build-incrementally.md)，并[转换](../msbuild/msbuild-transforms.md)。|  
 |`Returns`|可选特性。<br /><br /> 一组可供调用此目标（例如，MSBuild 任务）的任务使用的项。 采用分号分隔多个目标。 如果该文件中的目标没有 `Returns` 属性，则会使用输出属性来实现此目的。|  
 |`KeepDuplicateOutputs`|可选布尔属性。<br /><br /> 如果为 `true`，则会记录对目标的“返回”中的同一项的多个引用。  默认情况下，此属性为 `false`。|  
 |`BeforeTargets`|可选特性。<br /><br /> 分号分隔的目标名称列表。  指定时，表示此目标应在指定的一个或多个目标之前运行。 这样项目作者就可以扩展现有的一组目标，而无需直接对其进行修改。 有关详细信息，请参阅[目标生成顺序](../msbuild/target-build-order.md)。|  
@@ -128,6 +122,3 @@ ms.locfileid: "49173402"
 ## <a name="see-also"></a>请参阅  
  [目标](../msbuild/msbuild-targets.md)   
  [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)
-
-
-

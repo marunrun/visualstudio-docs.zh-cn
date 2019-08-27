@@ -1,14 +1,9 @@
 ---
 title: VSIX 清单设计器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 f1_keywords:
 - VS.Sdk.VsixManifestEditor
 helpviewer_keywords:
@@ -18,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5a691e77-cf91-430d-90ea-361d9031ef83
 caps.latest.revision: 21
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 72639c3fbef6b8e297d9e81a7383b2ee8220d896
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 450d306718906c3b76bf05982594045e7fd215f0
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51796436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63387573"
 ---
 # <a name="vsix-manifest-designer"></a>VSIX 清单设计器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +31,7 @@ ms.locfileid: "51796436"
  若要打开**VSIX 清单设计器**，找到在 source.extension.vsixmanifest 文件**解决方案资源管理器**，并打开该文件。 如果文件不包含有效的 XML，将不会打开清单设计器。  
   
 > [!NOTE]
->  生成包时，Source.extension.vsixmanifest 被输出到 extension.vsixmanifest。  
+> 生成包时，Source.extension.vsixmanifest 被输出到 extension.vsixmanifest。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **VSIX 清单设计器**包含对应于这些架构的顶级元素的四个部分：  
@@ -57,7 +52,7 @@ ms.locfileid: "51796436"
   **产品 ID**  
   指定此包的唯一标识信息。  
   
-  **作者**  
+  **Author**  
   指定扩展的作者的名称。  
   
   **Version**  
@@ -158,4 +153,3 @@ ms.locfileid: "51796436"
 ## <a name="see-also"></a>请参阅  
  [VSIX 扩展架构 2.0 参考](../extensibility/vsix-extension-schema-2-0-reference.md)   
  [VSIX 包的剖析](../extensibility/anatomy-of-a-vsix-package.md)
-

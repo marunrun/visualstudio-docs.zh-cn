@@ -1,13 +1,8 @@
 ---
 title: 使用调试器浏览代码 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.execution
@@ -25,13 +20,13 @@ ms.assetid: 759072ba-4aaa-447e-8e51-0dd1456fe896
 caps.latest.revision: 47
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 43155bbd4236ea34d67058443e8814f7ccf00b1f
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: f79ece781db19f2483ef1dd6cb0a81ff7cf78e06
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51750580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63430968"
 ---
 # <a name="navigating-through-code-with-the-debugger"></a>使用调试器浏览代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -55,11 +50,11 @@ ms.locfileid: "51750580"
   
  仅当调试器暂停时，大多数调试器功能，如局部变量窗口中查看变量值或在监视窗口中计算表达式是可用 (也称为*中断模式下*)。 调试器暂停时，应用程序状态已挂起函数，变量时，对象保留在内存中。 在中断模式下，可以检查元素的位置和状态，以查看存在冲突或 bug。 对于某些项目类型，您还可以在中断模式下应用所做的调整。  
   
-##  <a name="BKMK_Step_into__over__or_out_of_the_code"></a> 单步执行代码，  
+## <a name="BKMK_Step_into__over__or_out_of_the_code"></a> 单步执行代码，  
  若要停止调试时代码 （每个语句） 的每一行上，使用**F11**键盘快捷方式 (或**调试** / **单步执行**菜单上)。  
   
 > [!TIP]
->  执行每行代码，你可以悬停在变量，以查看它们的值，或者可以使用[局部变量](../debugger/autos-and-locals-windows.md)并[监视](../debugger/autos-and-locals-windows.md)windows 以监视更改其值。  
+> 执行每行代码，你可以悬停在变量，以查看它们的值，或者可以使用[局部变量](../debugger/autos-and-locals-windows.md)并[监视](../debugger/autos-and-locals-windows.md)windows 以监视更改其值。  
   
  下面是一些有关的行为的详细信息**单步执行**:  
   
@@ -83,7 +78,7 @@ ms.locfileid: "51750580"
   
   若要直观地跟踪调用堆栈，单步执行函数时，请参阅[调试时映射调用堆栈上的方法](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)。  
   
-##  <a name="BKMK_Step_over_Step_out"></a> 单步执行代码，正在跳过函数  
+## <a name="BKMK_Step_over_Step_out"></a> 单步执行代码，正在跳过函数  
  当在调试器中运行代码，通常您会意识到不需要查看特定函数中会发生什么情况 (不关心或知道其工作方式，类似于经过全面测试的库代码)。 使用以下命令以跳过代码 （函数仍可以执行，当然，但调试器跳过它们）。  
   
 |键盘命令|菜单命令|描述|  
@@ -92,12 +87,12 @@ ms.locfileid: "51750580"
 |**Shift+F11**|**跳出**|**单步跳出**会继续运行代码，当前函数返回 （通过当前函数调试器跳） 时挂起执行。|  
   
 > [!TIP]
->  如果你需要在应用中查找的入口点，请先使用**F10**或**F11**。 检查应用程序状态或尝试找出有关其执行流的详细信息时，这些命令很有帮助。  
+> 如果你需要在应用中查找的入口点，请先使用**F10**或**F11**。 检查应用程序状态或尝试找出有关其执行流的详细信息时，这些命令很有帮助。  
   
-##  <a name="BKMK_Break_into_code_by_using_breakpoints_or_Break_All"></a> 运行到特定位置或函数  
+## <a name="BKMK_Break_into_code_by_using_breakpoints_or_Break_All"></a> 运行到特定位置或函数  
  调试代码的首选的方法，这些方法时通常很有用知道具体的代码你想要检查，或至少知道你想要开始调试。  
   
--   **在代码中设置断点**  
+- **在代码中设置断点**  
   
      若要在代码中设置简单断点，请打开 Visual Studio 编辑器中的源文件。 你想要暂停执行、，然后右键单击代码窗口以查看上下文菜单选择中的代码行上设置光标**断点 / 插入断点**(或按**F9**)。 调试器挂起执行权限才能执行行。  
   
@@ -105,21 +100,21 @@ ms.locfileid: "51750580"
   
      Visual Studio 中的断点提供了一组丰富的附加功能，例如条件断点和跟踪点。 请参阅[使用断点](../debugger/using-breakpoints.md)。  
   
--   **运行到光标处**  
+- **运行到光标处**  
   
      若要运行到光标位置，请将光标放在源窗口中可执行的代码行上。 在编辑器的上下文菜单 （在编辑器中右键单击），选择**运行到光标处**。 这就像设置临时断点。  
   
--   **手动中断代码**  
+- **手动中断代码**  
   
-     若要在正在执行的应用程序上，中断下一个可用的代码行，请选择 **“调试”**、 **“全部中断”** （键盘： **Ctrl+Alt+Break**）。  
+     若要中断执行应用程序中代码的下一个可用行，选择**调试**，**全部中断**(键盘：**Ctrl + Alt + Break**)。  
   
      如果中断正在执行的代码，而没有响应的源或符号 (.pdb) 文件，调试器将显示“未找到源文件”  或“未找到符号”  页面，帮助你找到相应的文件。 请参阅[指定符号 (.pdb) 和源文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)。 如果你无法访问支持文件，仍可以在“反汇编”窗口中调试汇编指令。  
   
--   **在调用堆栈上运行到函数**  
+- **在调用堆栈上运行到函数**  
   
      在中**调用堆栈**窗口 （调试时可用），选择函数，右键单击并选择**运行到光标处**。 若要直观地跟踪调用堆栈，请参阅[调试时映射调用堆栈上的方法](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)。  
   
--   **运行到通过名称指定的函数**  
+- **运行到通过名称指定的函数**  
   
      可以让调试器在运行你的应用程序，直至到达指定的函数。 你可以通过名称指定函数，也可以从调用堆栈中选择函数。  
   
@@ -131,35 +126,35 @@ ms.locfileid: "51750580"
   
      ![选择断点对话框](../debugger/media/dbg-execution-overloadedbreakpoints.png "DBG_Execution_OverloadedBreakpoints")  
   
-##  <a name="BKMK_Set_the_next_statement_to_execute"></a> 移动指针以更改执行流  
+## <a name="BKMK_Set_the_next_statement_to_execute"></a> 移动指针以更改执行流  
  调试器暂停时，您可以移动指令指针来设置要执行的代码的下一个语句。 源窗口或“反汇编”窗口的空白区域中的黄色箭头标记要执行的下一条语句的位置。 通过移动此箭头，可以跳过部分代码或返回到以前执行过的行。 在某些情况下可以使用此方法，例如，跳过包含已知 bug 的代码段。  
   
- ![示例 2](../debugger/media/dbg-basics-example2.png "DBG_Basics_Example2")  
+ ![Example2](../debugger/media/dbg-basics-example2.png "DBG_Basics_Example2")  
   
  要设置下一条要执行的语句，请使用以下过程之一：  
   
--   在源窗口中，将黄色箭头拖动希望执行下一语句的位置，该位置应在同一源文件。  
+- 在源窗口中，将黄色箭头拖动希望执行下一语句的位置，该位置应在同一源文件。  
   
--   在源窗口中，将光标放置在你想要执行的下，右键单击并选择的行**设置下一语句**。  
+- 在源窗口中，将光标放置在你想要执行的下，右键单击并选择的行**设置下一语句**。  
   
--   在反汇编窗口中，将光标放置在你想要执行的下，右键单击程序集指令上并选择**设置下一语句**。  
+- 在反汇编窗口中，将光标放置在你想要执行的下，右键单击程序集指令上并选择**设置下一语句**。  
   
 > [!CAUTION]
->  设置下一条语句将导致程序计数器直接跳到新位置。 使用此命令时要小心：  
+> 设置下一条语句将导致程序计数器直接跳到新位置。 使用此命令时要小心：  
 > 
 > - 不执行旧执行点和新执行点之间的指令。  
->   -   如果向后移动执行点，则不撤消插入的指令。  
->   -   将下一条语句移动到另一个函数或范围通常会导致调用堆栈损坏，导致一个运行时错误或异常。 如果尝试将下一条语句移动到另一个范围，则调试器将打开一个含有警告的对话框，并提供一个取消该操作的机会。 在 Visual Basic 中，不能将下一条语句移动到另一个范围或函数。  
->   -   在本机 C++ 中，如果已启用运行时检查，设置下一条语句会导致执行到达方法的结尾时引发异常。  
->   -   当启用“编辑并继续”时，如果你进行了“编辑并继续”无法立即重新映射的编辑，那么 **“设置下一语句”** 将失败。 例如，如果你编辑了 catch 块中的代码，将发生这种情况。 发生这种情况时，你将看到一条错误消息，告诉你该操作不受支持。  
+>   - 如果向后移动执行点，则不撤消插入的指令。  
+>   - 将下一条语句移动到另一个函数或范围通常会导致调用堆栈损坏，导致一个运行时错误或异常。 如果尝试将下一条语句移动到另一个范围，则调试器将打开一个含有警告的对话框，并提供一个取消该操作的机会。 在 Visual Basic 中，不能将下一条语句移动到另一个范围或函数。  
+>   - 在本机 C++ 中，如果已启用运行时检查，设置下一条语句会导致执行到达方法的结尾时引发异常。  
+>   - 当启用“编辑并继续”时，如果你进行了“编辑并继续”无法立即重新映射的编辑，那么 **“设置下一语句”** 将失败。 例如，如果你编辑了 catch 块中的代码，将发生这种情况。 发生这种情况时，你将看到一条错误消息，告诉你该操作不受支持。  
 > 
 > [!NOTE]
->  在托管代码中，在以下情况下不能移动下一条语句：  
+> 在托管代码中，在以下情况下不能移动下一条语句：  
 > 
 > - 下一条语句与当前语句不在同一个方法中。  
->   -   使用实时调试启动调试。  
->   -   正在展开一个调用堆栈。  
->   -   已引发一个 System.StackOverflowException 或 System.Threading.ThreadAbortException 异常。  
+>   - 使用实时调试启动调试。  
+>   - 正在展开一个调用堆栈。  
+>   - 已引发一个 System.StackOverflowException 或 System.Threading.ThreadAbortException 异常。  
   
  应用程序处于活动运行状态时不能设置下一条语句。 要设置下一语句，调试器必须处于中断模式。  
   
@@ -171,7 +166,7 @@ ms.locfileid: "51750580"
  当禁用仅我的代码时，调试器可以单步执行非用户代码，在调试器窗口中显示非用户代码。  
   
 > [!NOTE]
->  设备项目不支持“仅我的代码”。  
+> 设备项目不支持“仅我的代码”。  
   
  **单步执行系统调用**  
   
@@ -181,18 +176,13 @@ ms.locfileid: "51750580"
   
  在调试时加载特定系统组件的符号：  
   
-1.  打开“模块”窗口（键盘： **Ctrl+Alt+U**）。  
+1. 打开模块窗口 (键盘：**Ctrl + Alt + U**)。  
   
-2.  选择要加载符号的模块。  
+2. 选择要加载符号的模块。  
   
      查看 **“符号状态”** 列可以了解哪些模块加载了符号。  
   
-3.  在上下文菜单中选择 **“加载符号”** 。  
+3. 在上下文菜单中选择 **“加载符号”** 。  
   
-##  <a name="BKMK_Step_into_properties_and_operators_in_managed_code"></a> 单步执行托管代码中的属性和运算符  
+## <a name="BKMK_Step_into_properties_and_operators_in_managed_code"></a> 单步执行托管代码中的属性和运算符  
  默认情况下，调试器将逐过程执行托管代码中的属性和运算符。 在多数情况下，这会提供较好的调试体验。 若要启用单步执行属性或运算符，请选择**调试** / **选项**。 在 **“调试”** / **“常规”** 页面上，清除 **“逐过程执行属性和运算符(仅限托管)”** 复选框
-
-
-
-
-

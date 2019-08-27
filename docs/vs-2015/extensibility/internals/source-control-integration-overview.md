@@ -1,26 +1,21 @@
 ---
 title: 源控件集成概述 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], about source control
 ms.assetid: 3a46e4eb-e677-49c3-8647-d927d035a19a
 caps.latest.revision: 17
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 2c4961f7c67fe8d135b97cbcb137d32b2de44214
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 4e2761958cd60721ccf05a14ec54d3e365572ea1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51761517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68148342"
 ---
 # <a name="source-control-integration-overview"></a>源代码管理集成概述
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -39,7 +34,7 @@ ms.locfileid: "51761517"
   
 1. 创建实现中所指定的函数的 DLL[源代码管理插件](../../extensibility/source-control-plug-ins.md)。  
   
-2. 相应的注册表项，从而注册该 DLL (中所述[如何： 安装源代码管理插件](../../extensibility/internals/how-to-install-a-source-control-plug-in.md))。  
+2. 相应的注册表项，从而注册该 DLL (中所述[如何：安装源代码管理插件](../../extensibility/internals/how-to-install-a-source-control-plug-in.md))。  
   
 3. 创建一个帮助程序 UI 和显示当出现提示时源代码管理适配器包 （处理通过源代码管理插件的源代码管理功能的 Visual Studio 组件）  
   
@@ -47,19 +42,19 @@ ms.locfileid: "51761517"
   
 ### <a name="drawbacks-to-implementing-a-source-control-plug-in"></a>实现源代码管理插件的缺点  
   
--   有关高级功能，用户可能会看到两种不同样式的接口，从而导致可能的混淆。  
+- 有关高级功能，用户可能会看到两种不同样式的接口，从而导致可能的混淆。  
   
--   源代码管理插件仅限于权限隐含的源控制插件 API 的源控件模型。  
+- 源代码管理插件仅限于权限隐含的源控制插件 API 的源控件模型。  
   
--   源控件插件 API 可能太多限制的一些源代码管理方案。  
+- 源控件插件 API 可能太多限制的一些源代码管理方案。  
   
 ### <a name="advantages-to-implementing-a-source-control-plug-in"></a>实现源代码管理插件的优点  
   
--   Visual Studio 提供所有基本源代码管理操作的所有用户的界面，以便源代码管理插件不需要实现潜在的复杂 UI。  
+- Visual Studio 提供所有基本源代码管理操作的所有用户的界面，以便源代码管理插件不需要实现潜在的复杂 UI。  
   
--   由于严格的 API，源代码管理插件随时可与外部源控制计划，以提供更广泛的功能; 交互Visual Studio 并不关心过得多的源代码管理功能如何完成，仅，根据源控制插件 API 来完成。  
+- 由于严格的 API，源代码管理插件随时可与外部源控制计划，以提供更广泛的功能; 交互Visual Studio 并不关心过得多的源代码管理功能如何完成，仅，根据源控制插件 API 来完成。  
   
--   它是更轻松地实现了源代码管理插件与源代码管理 VSPackage。  
+- 它是更轻松地实现了源代码管理插件与源代码管理 VSPackage。  
   
 ## <a name="source-control-vspackage"></a>源代码管理 VSPackage  
  [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)] 允许深度集成到 Visual Studio 中使用源代码管理功能的完全控制和提供 Visual Studio 源代码管理用户界面的完全替换。 源代码管理 VSPackage Visual Studio 注册，并且提供了源代码管理功能。 尽管可以使用 Visual Studio 注册多个源代码管理 Vspackage，只有一个可以处于活动状态一次。 源代码管理 VSPackage 处于活动状态时，Visual Studio 中具有完全控制的源代码管理功能和外观。 所有其他源代码管理 Vspackage 可能会在系统中注册处于非活动状态，并将不显示任何 UI。  
@@ -68,21 +63,20 @@ ms.locfileid: "51761517"
   
 ### <a name="drawbacks-to-implementing-a-source-control-vspackage"></a>实现源代码管理 VSPackage 的缺点  
   
--   VSPackage 必须实现多个复杂的接口，以与 Visual Studio 成功集成。  
+- VSPackage 必须实现多个复杂的接口，以与 Visual Studio 成功集成。  
   
--   VSPackage 必须提供所需的源控件，则所有用户界面Visual Studio 将提供此区域中的提供任何帮助。  
+- VSPackage 必须提供所需的源控件，则所有用户界面Visual Studio 将提供此区域中的提供任何帮助。  
   
--   源代码管理 VSPackage 联系紧密绑定到 Visual Studio 并不能执行操作的独立程序，因此不能与源代码管理程序的外部版本一样轻松地共享功能。  
+- 源代码管理 VSPackage 联系紧密绑定到 Visual Studio 并不能执行操作的独立程序，因此不能与源代码管理程序的外部版本一样轻松地共享功能。  
   
 ### <a name="advantages-to-implementing-a-source-control-vspackage"></a>实现源代码管理 VSPackage 的优点  
   
--   因为 VSPackage 具有完全控制源代码管理 UI 和功能，则用户会看到适合源代码管理的无缝界面。  
+- 因为 VSPackage 具有完全控制源代码管理 UI 和功能，则用户会看到适合源代码管理的无缝界面。  
   
--   VSPackage 不局限于特定的源控件模型。  
+- VSPackage 不局限于特定的源控件模型。  
   
 ## <a name="see-also"></a>请参阅  
  [源代码管理](../../extensibility/internals/source-control.md)   
  [创建源代码管理插件](../../extensibility/internals/creating-a-source-control-plug-in.md)   
  [创建源代码管理 VSPackage](../../extensibility/internals/creating-a-source-control-vspackage.md)   
  [源代码管理中的新增功能](../../extensibility/internals/what-s-new-in-source-control.md)
-

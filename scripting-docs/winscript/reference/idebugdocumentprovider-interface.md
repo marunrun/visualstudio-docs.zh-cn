@@ -2,7 +2,6 @@
 title: IDebugDocumentProvider 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,12 +13,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d775deb153205d0e9a452775272285c67e74a210
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: 5632134c86b5aa0e3cb769a68d2d4cfd944ff35c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54345209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63008672"
 ---
 # <a name="idebugdocumentprovider-interface"></a>IDebugDocumentProvider 接口
 提供按需实例化文档的方法。  

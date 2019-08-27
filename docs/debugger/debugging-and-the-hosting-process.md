@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: d0f0b9a6-2a6e-463d-b6ea-9518ee727933
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 98985877a2a85e56e9e1861c3baeaf0c87ad0f9c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: af0d57e39fa8d1312032bacbbd9af95d44449ca1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53852185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62852484"
 ---
 # <a name="debugging-and-the-hosting-process"></a>调试和托管进程
 Visual Studio 托管进程提高了调试器性能，并启用了新的调试器功能，如部分信任调试和设计时表达式求值。 如果需要，你可以禁用托管进程。 以下部分描述用托管进程和不用托管进程进行调试的一些差异。
 
 > [!NOTE]
-> 在 Visual Studio 2017 中，不再需要使用托管进程进行调试的选项，并且已删除了该项。 有关详细信息，请参阅[调试： Visual Studio 2017 旨在加速您最不喜欢的工作](https://vslive.com/Blogs/News-and-Tips/2017/02/Debugging-Visual-Studio-2017-aims-to-speed-up-your-least-favorite-job.aspx)。
+> 从 Visual Studio 2017 中，使用宿主进程进行调试的选项不再需要且已删除。 有关详细信息，请参阅[调试：Visual Studio 2017 旨在为你最不喜欢的作业的速度](https://vslive.com/Blogs/News-and-Tips/2017/02/Debugging-Visual-Studio-2017-aims-to-speed-up-your-least-favorite-job.aspx)。
 
 ## <a name="partial-trust-debugging-and-click-once-security"></a>部分信任调试和 Click-Once 安全
  部分信任调试需要托管进程。 如果禁用托管进程，即使在**项目属性**的**安全**页上启用了部分信任安全，部分信任调试也不工作。 有关详细信息，请参阅[如何：调试部分信任应用程序](/visualstudio/debugger/debugger-security)。

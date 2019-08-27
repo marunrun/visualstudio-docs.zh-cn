@@ -1,7 +1,6 @@
 ---
 title: CA1824:用 NeutralResourcesLanguageAttribute 标记程序集
 ms.date: 03/29/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - CA1824
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 10e97f8a-aa6e-47aa-b253-1e5d3a295d82
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: db780257c83c42f97500a83f1843332cae0ecea3
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 40cb2a3674884a9fb4f1449c9afa2e0a2d27050f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53825171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808555"
 ---
 # <a name="ca1824-mark-assemblies-with-neutralresourceslanguageattribute"></a>CA1824:用 NeutralResourcesLanguageAttribute 标记程序集
 
@@ -57,7 +56,7 @@ ms.locfileid: "53825171"
 
 3. 选择的语言从**非特定语言**或**程序集的非特定语言**下拉列表。
 
-4. 选择“确定”。
+4. 选择 **确定**。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 

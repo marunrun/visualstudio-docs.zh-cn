@@ -1,27 +1,22 @@
 ---
 title: “调用树”视图 - .NET 内存检测数据 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Call Tree view
 ms.assetid: dd359707-245a-4a36-8305-2e980b9edd53
 caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: ed87363751c18794d9cf4c00e156d75760e0bf8d
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: dfcee55882ee90af6ed13072a7e557a9c1763ae8
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51782500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68185989"
 ---
 # <a name="call-tree-view---net-memory-instrumentation-data"></a>“调用树”视图 - .NET 内存检测数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,12 +26,12 @@ ms.locfileid: "51782500"
  “调用关系树”视图中的值对应于调用树中父函数所调用的函数实例。 通过将函数实例值与分析运行中的分配总数或大小进行对比计算出百分比值。  
   
 ## <a name="highlighting-the-execution-hot-path"></a>突出显示执行热路径  
- “调用树”视图可以展开并突出显示创建最大或最多内存对象的进程或函数的执行路径。 若要显示最活跃的路径，请右键单击该进程或函数，然后单击“展开热路径”。  
+ “调用树”视图可以展开并突出显示创建最大或最多内存对象的进程或函数的执行路径。 若要显示最活跃的路径，请右键单击该进程或函数，然后单击“展开热路径”  。  
   
 ## <a name="setting-the-call-tree-root-node"></a>设置调用树根节点  
- 分析运行中的每个进程均显示为根节点。 可右键单击要设置为开始节点的节点，然后选择“设置根”，设置“调用树”视图的开始节点。  
+ 分析运行中的每个进程均显示为根节点。 可右键单击要设置为开始节点的节点，然后选择“设置根”  ，设置“调用树”视图的开始节点。  
   
- 设置根节点后，将从视图中排除所选节点的子树之外的所有其他条目。 可将根节点重置为刚才查看的节点，在“调用树”视图窗口中右键单击并选择“重置根”。  
+ 设置根节点后，将从视图中排除所选节点的子树之外的所有其他条目。 可将根节点重置为刚才查看的节点，在“调用树”视图窗口中右键单击并选择“重置根”  。  
   
 ## <a name="general"></a>常规  
   
@@ -111,6 +106,3 @@ ms.locfileid: "51782500"
 |**平均应用程序独占时间**|调用树中父函数调用此函数时，对此函数的某调用的平均应用程序独占时间。|  
 |**最长应用程序独占时间**|调用树中父函数调用此函数时，对此函数的某调用的最长应用程序独占时间。|  
 |**最短应用程序独占时间**|调用树中父函数调用此函数时，对此函数的某调用的最短应用程序独占时间。|
-
-
-

@@ -1,20 +1,19 @@
 ---
 title: 如何：导出包含 mipmap 的纹理
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.assetid: 3d1ad14b-44fb-4cf0-a995-5e2f60026524
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bddd2eec1da77ad6f128f6010e485b7efaf1866
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f5226903112d06d5efa362c61db938124eed8e68
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53836632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62897313"
 ---
 # <a name="how-to-export-a-texture-that-contains-mipmaps"></a>如何：导出包含 mipmap 的纹理
 

@@ -1,25 +1,22 @@
 ---
 title: 编写代码以自定义域特定于域的语言 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming
 ms.assetid: a4a17f5b-9c97-4575-b2d1-3182c1896b72
 caps.latest.revision: 31
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: affa3db292ed23ca52b0cca810daf5ca70ad0fd1
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 03b92c8ea9b764df517b02dc0dc256b5837a6c10
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49866319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68187104"
 ---
 # <a name="writing-code-to-customise-a-domain-specific-language"></a>编写代码以自定义域特定语言
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,7 +25,7 @@ ms.locfileid: "49866319"
   
  有几个可以在其中编写代码，它使用 DSL 的上下文：  
   
-- **自定义命令。** 可以创建命令，用户可以通过右键单击关系图中，调用以及其可以修改模型。 有关详细信息，请参阅[如何： 向快捷菜单添加命令](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)。  
+- **自定义命令。** 可以创建命令，用户可以通过右键单击关系图中，调用以及其可以修改模型。 有关更多信息，请参见[如何：将命令添加到快捷菜单](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)。  
   
 - **验证。** 可以编写代码，用于验证在模型处于正确状态。 有关详细信息，请参阅[特定于域的语言中的验证](../modeling/validation-in-a-domain-specific-language.md)。  
   
@@ -36,7 +33,7 @@ ms.locfileid: "49866319"
   
 - **文本转换。** 您可以编写文本模板包含的代码，以便访问模型，并生成一个文本文件，例如若要生成程序代码。 有关详细信息，请参阅[从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)。  
   
-- **其他 Visual Studio 扩展。** 您可以编写单独的 VSIX 扩展的读取和修改模型。 有关详细信息，请参阅[如何： 从程序代码中的文件打开模型](../modeling/how-to-open-a-model-from-file-in-program-code.md)  
+- **其他 Visual Studio 扩展。** 您可以编写单独的 VSIX 扩展的读取和修改模型。 有关更多信息，请参见[如何：在程序代码中从文件中打开模型](../modeling/how-to-open-a-model-from-file-in-program-code.md)  
   
   在 DslDefinition.dsl 中定义的类的实例保存在名为的数据结构*内存中存储*(IMS) 或*存储区*。 你始终在 DSL 中定义的类构造函数作为自变量需要存储区。 例如，如果你的 DSL 定义一个名为示例类：  
   
@@ -80,6 +77,3 @@ ms.locfileid: "49866319"
   
 ## <a name="see-also"></a>请参阅  
  [自定义和扩展域特定语言](../modeling/customizing-and-extending-a-domain-specific-language.md)
-
-
-

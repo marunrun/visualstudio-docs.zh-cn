@@ -2,27 +2,26 @@
 title: R 教程入门
 description: 在 Visual Studio 中使用 R 的演练，其中包括项目创建、交互式窗口、代码编辑和调试。
 ms.date: 06/29/2017
-ms.prod: visual-studio-dev15
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: c156993bf2fe425368a2cfebcaca8ac18ea790f2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: df46a2731f9923d85a16082f96c44947099db592
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53944621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63000493"
 ---
 # <a name="get-started-with-r-tools-for-visual-studio"></a>Visual Studio 中的 R 工具入门
 
-安装了针对 Visual Studio 的 R 工具 (RTVS)（请参阅[安装](installing-r-tools-for-visual-studio.md)）后，很快就能亲身感受这些工具提供的体验。 
+安装了针对 Visual Studio 的 R 工具 (RTVS)（请参阅[安装](installing-r-tools-for-visual-studio.md)）后，很快就能亲身感受这些工具提供的体验。
 
 ## <a name="create-an-r-project"></a>创建 R 项目
 
-1. 启动 Visual Studio。
+1. 打开 Visual Studio。
 1. 依次选择“文件” > “新建” > “项目” (Ctrl+Shift+N)
 1. 选择“模板” > “R”下的“R 项目”，指定项目的名称和位置，然后选择“确定”：
 
@@ -93,7 +92,7 @@ ms.locfileid: "53944621"
 
 > [!Tip]
 > 了解编辑模式并按 Ctrl+Enter（或按 Ctrl+A 选择所有内容，然后按 Ctrl+Enter），快速运行代码。 此方法比使用鼠标进行相同的操作更高效。
-> 
+>
 > 此外，还可以将绘图窗口拖放到 Visual Studio 框架外，放置在显示器上任何所需位置。 然后，可轻松将绘图窗口调整为所需大小，然后保存到图像或 PDF 文件中。
 
 1. 再添加几行代码，将另一个绘图包括在内：

@@ -1,4 +1,18 @@
 ---
+title: 监视 GPU 使用率
+author: lisawong19
+ms.author: liwong
+manager: routlaw
+ms.date: 11/13/2017
+ms.topic: conceptual
+ms.workload:
+- multiple
+ms.openlocfilehash: f455a1cbfbad58ebe724c879837e161954cf4be2
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62560882"
 ---
 # <a name="monitoring-gpu-utilization"></a>监视 GPU 使用率
 

@@ -2,7 +2,6 @@
 title: JS_PROPERTY_ATTRIBUTES 枚举 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -16,12 +15,12 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4a3fac8b1be15d1b1d26c13fe1e17e311798a3a3
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: 27aaadfd1d3ff38e9a0382ff1863b73d2bccc325
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54088265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62539438"
 ---
 # <a name="jspropertyattributes-enumeration"></a>JS_PROPERTY_ATTRIBUTES 枚举
 指示属性的特性。  

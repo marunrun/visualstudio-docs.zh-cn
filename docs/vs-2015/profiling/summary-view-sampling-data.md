@@ -1,14 +1,9 @@
 ---
 title: “摘要”视图 - 采样数据 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - sampling profiling method, Summary view
 - Summary view
@@ -16,13 +11,13 @@ ms.assetid: 79056873-2985-40be-9112-cdbc26a65156
 caps.latest.revision: 18
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 5e470cee87a2d83f72df369d79ac337fce5412ed
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: c759922fcd28ce0b686745fc917c02f41762cae4
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51775233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63447165"
 ---
 # <a name="summary-view---sampling-data"></a>“摘要”视图 - 采样数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +25,7 @@ ms.locfileid: "51775233"
 “摘要”视图显示有关分析运行中性能开销最大的函数的信息。 有关详细信息（包括通知链接和报告列表的说明），请参阅[“摘要”视图](../profiling/summary-view.md)。  
   
 > [!NOTE]
->  Windows 8 和 Windows Server 2012 中增强的安全功能需要以 Visual Studio 探查器在这些平台上收集数据的方式进行重大更改。 Windows 应用商店应用程序也需要新的收集技术。 请参阅 [Windows 8 和 Windows Server 2012 应用程序上的性能工具](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)。  
+> Windows 8 和 Windows Server 2012 中增强的安全功能需要以 Visual Studio 探查器在这些平台上收集数据的方式进行重大更改。 Windows 应用商店应用程序也需要新的收集技术。 请参阅 [Windows 8 和 Windows Server 2012 应用程序上的性能工具](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)。  
   
 ## <a name="timeline-graph"></a>时间线关系图  
  “摘要”视图中的时间线关系图显示在进行分析的时间内分析的应用程序的处理器 (CPU) 利用率百分比。 可以使用时间线关系图将视图筛选到所选时间范围。 有关详细信息，请参阅[如何：从摘要时间线中筛选报告视图](../profiling/how-to-filter-report-views-from-the-summary-timeline.md)。  
@@ -40,7 +35,7 @@ ms.locfileid: "51775233"
   
  “热路径”包含每个函数的以下数据：  
   
-|列|描述|  
+|列|说明|  
 |------------|-----------------|  
 |**名称**|函数名。|  
 |**非独占样本数百分比**|此函数或此函数调用的函数执行时发生的样本占所有样本的百分比。|  
@@ -53,7 +48,7 @@ ms.locfileid: "51775233"
   
  “执行单个工作最多的函数”包含每个函数的以下数据：  
   
-|列|描述|  
+|列|说明|  
 |------------|-----------------|  
 |**名称**|函数名。|  
 |**独占样本数百分比**|此函数在其函数体中执行代码时收集的样本数占分析运行中的所有样本数的百分比。 此百分比不包含在此函数调用的函数执行时收集的样本。|  
@@ -61,6 +56,3 @@ ms.locfileid: "51775233"
 ## <a name="see-also"></a>请参阅  
  [“摘要”视图](../profiling/summary-view-dotnet-memory-data.md)   
  [“摘要”视图](../profiling/summary-view-instrumentation-data.md)
-
-
-

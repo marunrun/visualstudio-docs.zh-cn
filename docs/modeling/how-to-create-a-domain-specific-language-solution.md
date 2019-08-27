@@ -10,55 +10,41 @@ helpviewer_keywords:
 - Domain-Specific Language Tools, creating solutions
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: aeeacdd9fc52f26a14930f0756be463ac4f87eec
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MT
+ms.openlocfilehash: 0ac8a47aeca8875dabe3fdf388e9a73d68ec514e
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53943767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63445203"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>如何：创建域特定语言解决方案
 使用专用的 Visual Studio 解决方案，可创建域特定语言 (DSL)。
 
 ## <a name="prerequisites"></a>系统必备
- 在开始此过程之前，必须首先安装这些组件：
 
+在开始此过程之前，安装这些组件：
 
-| | |
-|-|-|
-| Visual Studio | [http://go.microsoft.com/fwlink/?LinkID=185579](http://go.microsoft.com/fwlink/?LinkID=185579) |
-| [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [http://go.microsoft.com/fwlink/?LinkID=185580](http://go.microsoft.com/fwlink/?LinkID=185580) |
-| Visual Studio 可视化和建模 SDK | |
+- Visual Studio
+- Visual Studio SDK (作为的一部分安装**Visual Studio 扩展开发**工作负荷)
+- 建模 SDK （作为 Visual Studio 组件安装）
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-
 ## <a name="creating-a-domain-specific-language-solution"></a>创建域特定语言解决方案
 
-#### <a name="to-create-a-domain-specific-language-solution"></a>若要创建域特定语言解决方案
+1. 首先创建一个新 DSL 向导**域特定语言设计器**项目。
 
-1. 启动 DSL 向导。
+   > [!NOTE]
+   > 最好是选择项目的名称应为有效的视觉对象C#标识符因为它可能用于生成代码。
 
-   1. 在 **“文件”** 菜单上，指向 **“新建”**，然后单击 **“项目”**。
+   ::: moniker range="vs-2017"
 
-   2. 此时将出现 “新建项目” 对话框。
+   ![“创建 DSL”对话框](../modeling/media/create_dsldialog.png)
 
-   3. 下**项目类型**，展开**其他项目类型**节点，然后单击**扩展性**。
-
-   4. 单击**域特定语言设计器**。
-
-   5. 在中**名称**框中，键入解决方案的名称。 单击 **“确定”**。
-
-       **域特定语言设计器向导**出现。
-
-      > [!NOTE]
-      >  最好是您键入的名称应是有效的 Visual C# 标识符，因为它可能用于生成代码。
-
-      ![“创建 DSL”对话框](../modeling/media/create_dsldialog.png)
+   ::: moniker-end
 
 2. 选择一个 DSL 模板。
 
@@ -68,16 +54,16 @@ ms.locfileid: "53943767"
 
 3. 输入文件扩展名**文件扩展名**页。 它应该是唯一在您的计算机，并想要安装 DSL 在其上的任何计算机。 你应看到消息**没有应用程序或 Visual Studio 编辑器使用此扩展**。
 
-   -   如果您曾经用尚未完全安装的上一个实验性 Dsl 的文件扩展名，则可以清除它们出通过使用**重置实验实例**工具，可以在 Visual Studio SDK 菜单中找到。
+   - 如果您曾经用尚未完全安装的上一个实验性 Dsl 的文件扩展名，则可以清除它们出通过使用**重置实验实例**工具，可以在 Visual Studio SDK 菜单中找到。
 
-   -   如果已在计算机上完全安装另一个 Visual Studio 扩展，使用此文件扩展名，请考虑卸载它。 上**工具**菜单上，单击**扩展管理器**。
+   - 如果已在计算机上完全安装另一个 Visual Studio 扩展，使用此文件扩展名，请考虑卸载它。 上**工具**菜单上，单击**扩展管理器**。
 
 4. 检查，并根据需要调整，其余向导页中的字段。 设置感到满意，单击**完成**。 有关设置的详细信息，请参阅[DSL 设计器向导页](#settings)。
 
     该向导创建的解决方案，有两个项目，分别名为**Dsl**并**DslPackage**。
 
    > [!NOTE]
-   >  如果你看到一条消息，提醒你不运行来自不受信任源的文本模板中，单击**确定**。 您可以设置不会再次出现此消息。
+   > 如果你看到一条消息，提醒你不运行来自不受信任源的文本模板中，单击**确定**。 您可以设置不会再次出现此消息。
 
 ## <a name="settings"></a> DSL 设计器向导页
  可将多个字段从其默认值保持不变。 但是，请确保将文件扩展名字段设置。
@@ -99,15 +85,15 @@ ms.locfileid: "53943767"
 
  如果看到一系列工具或包，应执行下列任一操作：
 
--   键入不同的文件扩展名。
+- 键入不同的文件扩展名。
 
      \- 或 -
 
--   重置 Visual Studio 实验实例。 这将取消注册所有以前生成的 Dsl。 上**启动**菜单上，单击**所有程序**， **Microsoft Visual Studio 2010 SDK**，**工具**，，然后**重置Microsoft Visual Studio 2010 实验实例**。 您可以重新生成任何其他你想要再次使用的 Dsl。
+- 重置 Visual Studio 实验实例。 这将取消注册所有以前生成的 Dsl。 上**启动**菜单上，单击**所有程序**， **Microsoft Visual Studio 2010 SDK**，**工具**，，然后**重置Microsoft Visual Studio 2010 实验实例**。 您可以重新生成任何其他你想要再次使用的 Dsl。
 
      \- 或 -
 
--   如果已在计算机上完全安装 Visual Studio 扩展，使用此文件扩展名，则将其卸载。 上**工具**菜单上，单击**扩展管理器**。
+- 如果已在计算机上完全安装 Visual Studio 扩展，使用此文件扩展名，则将其卸载。 上**工具**菜单上，单击**扩展管理器**。
 
 ### <a name="product-settings-page"></a>产品设置页
  **新的特定于域的语言所属的产品名称是什么？**

@@ -1,7 +1,6 @@
 ---
 title: 代码分析策略错误
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - vs.codeanalysis.policyfailures
@@ -10,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: d1f221cd-68c0-4277-9397-b76ad0dbae77
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3edd9b341d2ccead65fee8f97f32ec54f7857dea
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 103a48172665875c3615ce57b90dc77beeb6b5c4
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53987805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806298"
 ---
 # <a name="code-analysis-policy-errors"></a>代码分析策略错误
 
@@ -70,9 +69,9 @@ ms.locfileid: "53987805"
 
 应用于此错误[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]项目和 web 项目。 该策略需要托管的代码分析，以执行，但未启用客户端上的当前项目中。
 
-**必须在项目中启用 C/c + + 代码分析{0}属性和之前的版本签入。**
+**必须启用 C /C++项目中的代码分析{0}属性和之前的版本签入。**
 
-此错误适用于非托管项目。 代码分析策略要求代码分析 C/c + +，但它未启用客户端上的当前项目中。
+此错误适用于非托管项目。 代码分析策略要求代码分析 c /C++，但它未启用客户端上的当前项目中。
 
 ## <a name="see-also"></a>请参阅
 

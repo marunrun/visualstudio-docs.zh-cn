@@ -1,26 +1,21 @@
 ---
 title: Visual Studio SDK 词汇表 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - glossary [Visual Studio SDK]
 ms.assetid: b64d432b-c39b-4904-ad18-3c3218b6e3aa
 caps.latest.revision: 11
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 0ec2300e8bf700deacd50a4a980e02aa4b903bae
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 8c189c4c9e06d224d7cef296a2c39e732cbc29f6
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51758960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62538702"
 ---
 # <a name="visual-studio-sdk-glossary"></a>Visual Studio SDK 词汇表
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -191,4 +186,3 @@ ms.locfileid: "51758960"
   
   VSPackage  
   通过参与一个或多个以下扩展 Visual Studio IDE 的软件可安装部分： 用户界面、 服务、 项目类型或编辑器/设计器。 VSPackage 包含实现的 COM 对象`IVsPackage`接口和一个或多个其他 COM 对象实现其他接口以支持所选内容和其他功能。 此外，VSPackage 还具有特定的注册要求。
-

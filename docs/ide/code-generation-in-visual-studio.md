@@ -1,19 +1,18 @@
 ---
 title: 代码生成功能
 ms.date: 01/11/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c1633e6efb2637a3e7667b3e49f5f5abf4549e5b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 11e82560b5dc049643df013d840b709da5446b56
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53924054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62974990"
 ---
 # <a name="code-generation-features-in-visual-studio"></a>Visual Studio 中的代码生成功能
 

@@ -1,25 +1,20 @@
 ---
 title: LineOff | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 76082063-20ef-47ae-ad64-81b43b654865
 caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 93fe4acedfcae36f75ed38bef102ccc35f08f2ce
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: fbe8a715c5bb179c5293dd666f1879c07068d8b2
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51759683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62583166"
 ---
 # <a name="lineoff"></a>LineOff
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,7 +30,7 @@ VSPerfCmd.exe /Launch:AppName /LineOff [Options]
 ```  
   
 #### <a name="parameters"></a>参数  
- 无  
+ None  
   
 ## <a name="required-options"></a>必需选项  
  只能在包含“Launch”选项的命令行上使用“LineOff”选项。  
@@ -56,6 +51,3 @@ VSPerfCmd.exe /Launch:TestApp.exe /LineOff
  [分析独立应用程序](../profiling/command-line-profiling-of-stand-alone-applications.md)   
  [分析 ASP.NET Web 应用程序](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
  [分析服务](../profiling/command-line-profiling-of-services.md)
-
-
-

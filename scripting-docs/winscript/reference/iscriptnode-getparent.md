@@ -2,7 +2,6 @@
 title: IScriptNode::GetParent |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b45fc7be1a5178e952fefcd794171410d149a1f4
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: 1c990b5ba5c3d03d319e0eeced282c92cfbb5281
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54090020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786851"
 ---
 # <a name="iscriptnodegetparent"></a>IScriptNode::GetParent
 返回`IScriptNode`是父对象的对象。  
@@ -47,7 +46,7 @@ HRESULT GetParent(
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   

@@ -2,19 +2,18 @@
 title: 使用 R 可视化数据
 description: 在 Visual Studio 中如何使用绘图窗口从 R 程序中绘制数据。
 ms.date: 06/29/2017
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 8b0c633e3236f537e9f631df12a5af597e67475c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a48ad7800f8ea2b992e848cfbf6b4fdac99b2062
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53859076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62811039"
 ---
 # <a name="create-visual-data-plots-with-r"></a>使用 R 创建可视数据图
 
@@ -38,7 +37,7 @@ ms.locfileid: "53859076"
 
 生成绘图时会用到“活动”绘图窗口，在绘图历史记录中保存之前的绘图（请参阅[绘图历史记录](#plot-history)）。 例如，输入 `plot(100:1)`，第一个绘图将被替换为向下的行。
 
-与所有其他 Visual Studio 窗口类似。 绘图窗口支持自定义布局（请参阅[在 Visual Studio 中自定义窗口布局](../ide/customizing-window-layouts-in-visual-studio.md)。 绘图窗口可停靠在 Visual Studio 框架内的不同位置，在该框架内调整大小，或者完全从框架中提出，独立调整大小。 
+与所有其他 Visual Studio 窗口类似。 绘图窗口支持自定义布局（请参阅[在 Visual Studio 中自定义窗口布局](../ide/customizing-window-layouts-in-visual-studio.md)。 绘图窗口可停靠在 Visual Studio 框架内的不同位置，在该框架内调整大小，或者完全从框架中提出，独立调整大小。
 
 调整绘图窗口大小后，始终会重新呈现绘图，以提供最佳质量的图像。 通常会在将绘图导出到文件或剪贴板之前使用下一节所述的命令调整绘图的大小。
 
@@ -46,7 +45,7 @@ ms.locfileid: "53859076"
 
 绘图窗口工具栏会保存适用的命令，其中大部分命令可通过“R 工具” > “绘图”菜单使用。
 
-| Button | 命令 | 说明 | 
+| Button | 命令 | 说明 |
 | --- | --- | --- |
 | ![“新建绘图窗口”按钮](media/plotting-toolbar-01-new-plot-window.png) | 新建绘图窗口 | 创建具有自己的历史记录的单独绘图窗口。 请参阅[多个绘图窗口](#multiple-plot-windows)。 |
 | ![“激活绘图窗口”按钮](media/plotting-toolbar-02-activate-plot-window.png) | 激活绘图窗口 | 将当前绘图窗口设置为活动窗口，以便将后续 `plot` 命令呈现给该窗口。 请参阅[多个绘图窗口](#multiple-plot-windows)。 请参阅[多个绘图窗口](#multiple-plot-windows)。 |
@@ -54,8 +53,8 @@ ms.locfileid: "53859076"
 | ![“绘图历史记录”按钮](media/plotting-toolbar-04-plot-history-arrows.png) | 上一个/下一个绘图 |  导航到历史记录中的上一个或下一个绘图。 还可使用 Ctrl+Alt+F11（上一个）和 Ctrl+Alt+F12（下一个）在历史记录中导航。 请参阅[绘图历史记录](#plot-history)。 |
 | ![“另存为图像”按钮](media/plotting-toolbar-05-save-as-image.png)| 另存为图像 | 提示输入文件名并将当前绘图（按窗口大小显示的窗口内容）保存到图像文件。 可用格式为 `.png`、`.jpg`、`.bmp` 和 `.tif`。 |
 | ![“另存为 PDF”按钮](media/plotting-toolbar-06-save-as-pdf.png)| 另存为 PDF | 使用当前窗口大小将当前绘图保存到 PDF 文件。 如果 PDF 进行了缩放，则会重新呈现绘图。 |
-| ![“复制为位图”按钮](media/plotting-toolbar-07-copy-as-bitmap.png)| 复制为位图 | 使用当前窗口大小将图形复制到剪贴板作为光栅位图。 | 
-| ![“复制为图元文件”按钮](media/plotting-toolbar-08-copy-as-metafile.png)| 复制为图元文件 | 将绘图复制到剪贴板作为 [Windows 图元文件](https://en.wikipedia.org/wiki/Windows_Metafile)（维基百科）。 | 
+| ![“复制为位图”按钮](media/plotting-toolbar-07-copy-as-bitmap.png)| 复制为位图 | 使用当前窗口大小将图形复制到剪贴板作为光栅位图。 |
+| ![“复制为图元文件”按钮](media/plotting-toolbar-08-copy-as-metafile.png)| 复制为图元文件 | 将绘图复制到剪贴板作为 [Windows 图元文件](https://en.wikipedia.org/wiki/Windows_Metafile)（维基百科）。 |
 | ![“删除绘图”按钮](media/plotting-toolbar-09-remove-plot.png)| 删除绘图 | 从历史记录中删除当前绘图。 |
 | ![“清除所有绘图”按钮](media/plotting-toolbar-10-clear-all-plots.png) | 清除所有绘图 | 从历史记录中删除所有绘图（确认提示）。 |
 
@@ -84,7 +83,7 @@ ms.locfileid: "53859076"
 
 ## <a name="programmatically-manipulate-plot-windows"></a>以编程方式操作绘图窗口
 
-可通过编程方式用 R 代码操作绘图窗口，使用设备编号识别特定的绘图窗口。 
+可通过编程方式用 R 代码操作绘图窗口，使用设备编号识别特定的绘图窗口。
 
 - `dev.list()`：列出当前 R 会话中的所有图形设备。
 - `dev.new()`：创建一个新的图形设备（一个新的绘图窗口）。

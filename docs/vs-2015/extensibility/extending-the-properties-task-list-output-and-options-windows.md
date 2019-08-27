@@ -1,14 +1,9 @@
 ---
 title: 扩展属性、 任务列表、 输出和选项 Windows |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - properties pane
 - task list
@@ -19,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 06990510-5424-44b8-9fd9-6481acec5c76
 caps.latest.revision: 38
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 327d218f22b4629ec919a20ef2800d445e2d652f
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: cf42be1e62bfb4895d29a61fcadc221d5c14bec9
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51737823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63443906"
 ---
 # <a name="extending-the-properties-task-list-output-and-options-windows"></a>扩展属性、任务列表、输出和选项窗口
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,26 +32,26 @@ ms.locfileid: "51737823"
   
 ## <a name="create-an-extension-with-a-tool-window"></a>使用工具窗口创建扩展  
   
-1.  创建一个名为项目**TodoList**使用 VSIX 模板，并添加一个名为的自定义工具窗口项模板**TodoWindow**。  
+1. 创建一个名为项目**TodoList**使用 VSIX 模板，并添加一个名为的自定义工具窗口项模板**TodoWindow**。  
   
     > [!NOTE]
-    >  有关使用工具窗口创建扩展的详细信息，请参阅[与工具窗口创建扩展](../extensibility/creating-an-extension-with-a-tool-window.md)。  
+    > 有关使用工具窗口创建扩展的详细信息，请参阅[与工具窗口创建扩展](../extensibility/creating-an-extension-with-a-tool-window.md)。  
   
 ## <a name="set-up-the-tool-window"></a>设置工具窗口  
  添加在其中可键入新的 ToDo 项，以将新项添加到列表中，一个按钮和列表框中显示的项在列表中的文本框。  
   
-1.  在 TodoWindow.xaml，从 UserControl 中删除按钮、 文本框和 StackPanel 控件。  
+1. 在 TodoWindow.xaml，从 UserControl 中删除按钮、 文本框和 StackPanel 控件。  
   
     > [!NOTE]
-    >  这不会删除**button1_Click**事件处理程序，将在稍后的步骤中重复使用。  
+    > 这不会删除**button1_Click**事件处理程序，将在稍后的步骤中重复使用。  
   
-2.  从**所有 WPF 控件**一部分**工具箱**，拖动**画布**到网格控件。  
+2. 从**所有 WPF 控件**一部分**工具箱**，拖动**画布**到网格控件。  
   
-3.  拖动**文本框**即**按钮**，和一个**ListBox**到画布。 排列元素，以便在同一级别中，将文本框和按钮和列表框填充其余部分的下方，如下图所示的窗口。  
+3. 拖动**文本框**即**按钮**，和一个**ListBox**到画布。 排列元素，以便在同一级别中，将文本框和按钮和列表框填充其余部分的下方，如下图所示的窗口。  
   
      ![完成工具窗口](../extensibility/media/t5-toolwindow.png "T5 工具窗口")  
   
-4.  在 XAML 窗格中，找到按钮并将其内容的属性设置为**添加**。 重新连接到按钮控件的按钮事件处理程序添加`Click="button1_Click"`属性。 画布块应如下所示：  
+4. 在 XAML 窗格中，找到按钮并将其内容的属性设置为**添加**。 重新连接到按钮控件的按钮事件处理程序添加`Click="button1_Click"`属性。 画布块应如下所示：  
   
     ```xml  
     <Canvas HorizontalAlignment="Left" Width="306">  
@@ -68,13 +63,13 @@ ms.locfileid: "51737823"
   
 #### <a name="customize-the-constructor"></a>自定义构造函数  
   
-1.  在 TodoWindowControl.xaml.cs 文件中，添加以下 using 语句：  
+1. 在 TodoWindowControl.xaml.cs 文件中，添加以下 using 语句：  
   
     ```csharp  
     using System;  
     ```  
   
-2.  添加对 TodoWindow 的公共引用并让 TodoWindowControl 构造函数采用 TodoWindow 参数。 代码应如下所示：  
+2. 添加对 TodoWindow 的公共引用并让 TodoWindowControl 构造函数采用 TodoWindow 参数。 代码应如下所示：  
   
     ```csharp  
     public TodoWindow parent;  
@@ -86,7 +81,7 @@ ms.locfileid: "51737823"
     }  
     ```  
   
-3.  在 TodoWindow.cs，更改 TodoWindowControl 构造函数，以包括 TodoWindow 参数。 代码应如下所示：  
+3. 在 TodoWindow.cs，更改 TodoWindowControl 构造函数，以包括 TodoWindow 参数。 代码应如下所示：  
   
     ```csharp  
     public TodoWindow() : base(null)  
@@ -132,13 +127,13 @@ ms.locfileid: "51737823"
   
 #### <a name="make-the-options-page-available-to-users"></a>向用户提供选项页  
   
-1.  在 TodoWindowPackage.cs，添加<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>到 TodoWindowPackage 类：  
+1. 在 TodoWindowPackage.cs，添加<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>到 TodoWindowPackage 类：  
   
     ```csharp  
     [ProvideOptionPage(typeof(ToolsOptions), "ToDo", "General", 101, 106, true)]  
     ```  
   
-2.  ProvideOptionPage 构造函数的第一个参数是类 ToolsOptions，前面创建的类型。 第二个参数，"ToDo"是中的类别的名称**选项**对话框。 第三个参数，"常规"，是的子类别的名称**选项**选项页将在其中可用的对话框。 接下来两个参数是资源 Id 的字符串;第一种是类别的名称，第二个是子类别的名称。 最后一个参数确定是否可以通过使用自动化访问此页。  
+2. ProvideOptionPage 构造函数的第一个参数是类 ToolsOptions，前面创建的类型。 第二个参数，"ToDo"是中的类别的名称**选项**对话框。 第三个参数，"常规"，是的子类别的名称**选项**选项页将在其中可用的对话框。 接下来两个参数是资源 Id 的字符串;第一种是类别的名称，第二个是子类别的名称。 最后一个参数确定是否可以通过使用自动化访问此页。  
   
      当用户打开选项页时，它应类似于下图。  
   
@@ -149,7 +144,7 @@ ms.locfileid: "51737823"
 ## <a name="make-data-available-to-the-properties-window"></a>使数据可供属性窗口  
  可以通过创建一个名为 ToDo 列表中存储信息的各个项的 TodoItem 类，使待办列表信息可用。  
   
-1.  添加一个名为类`TodoItem.cs`。  
+1. 添加一个名为类`TodoItem.cs`。  
   
      对用户可用的工具窗口时，将由 TodoItems 表示列表框中的项。 当用户选择其中一项在列表框中，**属性**窗口将显示有关项目的信息。  
   
@@ -157,7 +152,7 @@ ms.locfileid: "51737823"
   
      ![属性窗口](../extensibility/media/t5properties.png "T5Properties")  
   
-2.  添加以下 using 语句 TodoItem.cs 文件。  
+2. 添加以下 using 语句 TodoItem.cs 文件。  
   
     ```csharp  
     using System.ComponentModel;  
@@ -165,7 +160,7 @@ ms.locfileid: "51737823"
     using Microsoft.VisualStudio.Shell.Interop;  
     ```  
   
-3.  添加`public`到类声明的访问修饰符。  
+3. 添加`public`到类声明的访问修饰符。  
   
     ```csharp  
     public class TodoItem  
@@ -208,7 +203,7 @@ ms.locfileid: "51737823"
     }  
     ```  
   
-4.  添加到用户控件的专用引用。 添加的构造函数的用户控制和此 ToDo 项的名称。 若要查找 daysAhead 值，它获取选项页属性。  
+4. 添加到用户控件的专用引用。 添加的构造函数的用户控制和此 ToDo 项的名称。 若要查找 daysAhead 值，它获取选项页属性。  
   
     ```csharp  
     private TodoWindowControl parent;  
@@ -237,7 +232,7 @@ ms.locfileid: "51737823"
     }  
     ```  
   
-5.  因为的实例`TodoItem`类将存储在列表框中，将调用 ListBox`ToString`函数，必须重载`ToString`函数。 构造函数之后和类的末尾之前，请将以下代码添加到 TodoItem.cs。  
+5. 因为的实例`TodoItem`类将存储在列表框中，将调用 ListBox`ToString`函数，必须重载`ToString`函数。 构造函数之后和类的末尾之前，请将以下代码添加到 TodoItem.cs。  
   
     ```csharp  
     public override string ToString()  
@@ -246,7 +241,7 @@ ms.locfileid: "51737823"
     }  
     ```  
   
-6.  在 TodoWindowControl.xaml.cs，到 TodoWindowControl 类中添加存根 （stub） 方法`CheckForError`和`UpdateList`方法。 ProcessDialogChar 后且在文件末尾之前将它们放。  
+6. 在 TodoWindowControl.xaml.cs，到 TodoWindowControl 类中添加存根 （stub） 方法`CheckForError`和`UpdateList`方法。 ProcessDialogChar 后且在文件末尾之前将它们放。  
   
     ```csharp  
     public void CheckForErrors()  
@@ -264,7 +259,7 @@ ms.locfileid: "51737823"
   
  必须更改该按钮单击处理程序来读取在文本框中，创建 TodoItem，并将其添加到列表框。  
   
-1.  替换现有`button1_Click`函数中创建新的 TodoItem，并将其添加到列表框的代码。 它将调用 TrackSelection()，将在以后定义。  
+1. 替换现有`button1_Click`函数中创建新的 TodoItem，并将其添加到列表框的代码。 它将调用 TrackSelection()，将在以后定义。  
   
     ```csharp  
     private void button1_Click(object sender, RoutedEventArgs e)  
@@ -279,9 +274,9 @@ ms.locfileid: "51737823"
     }  
     ```  
   
-2.  在设计视图选择列表框控件。 在中**属性**窗口中，单击**事件处理程序**按钮并找到 SelectionChanged 事件。 在文本框中填充**listBox_SelectionChanged**。 执行此操作将添加为 SelectionChanged 处理程序存根，并将其分配给该事件。  
+2. 在设计视图选择列表框控件。 在中**属性**窗口中，单击**事件处理程序**按钮并找到 SelectionChanged 事件。 在文本框中填充**listBox_SelectionChanged**。 执行此操作将添加为 SelectionChanged 处理程序存根，并将其分配给该事件。  
   
-3.  实现 TrackSelection() 方法。 因为您将需要先获取<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell><xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection>服务，需要进行<xref:Microsoft.VisualStudio.Shell.WindowPane.GetService%2A>TodoWindowControl 可访问。 将以下方法添加到 TodoWindow 类：  
+3. 实现 TrackSelection() 方法。 因为您将需要先获取<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell><xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection>服务，需要进行<xref:Microsoft.VisualStudio.Shell.WindowPane.GetService%2A>TodoWindowControl 可访问。 将以下方法添加到 TodoWindow 类：  
   
     ```  
     internal object GetVsService(Type service)  
@@ -290,7 +285,7 @@ ms.locfileid: "51737823"
     }  
     ```  
   
-4.  添加以下 using 语句 TodoWindowControl.xaml.cs:  
+4. 添加以下 using 语句 TodoWindowControl.xaml.cs:  
   
     ```csharp  
     using System.Runtime.InteropServices;  
@@ -299,7 +294,7 @@ ms.locfileid: "51737823"
     using Microsoft.VisualStudio.Shell;  
     ```  
   
-5.  按如下所示填写 SelectionChanged 处理程序：  
+5. 按如下所示填写 SelectionChanged 处理程序：  
   
     ```  
     private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)  
@@ -308,7 +303,7 @@ ms.locfileid: "51737823"
     }  
     ```  
   
-6.  现在，填写 TrackSelection 函数，它将提供与集成**属性**窗口。 在用户将项添加到列表框或列表框中单击某个项时调用此函数。 它将 ListBox 的内容添加到 SelectionContainer 并将传递到 SelectionContainer**属性**窗口的<xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A>事件处理程序。 TrackSelection 服务跟踪的用户界面 (UI) 中所选的对象，并显示其属性  
+6. 现在，填写 TrackSelection 函数，它将提供与集成**属性**窗口。 在用户将项添加到列表框或列表框中单击某个项时调用此函数。 它将 ListBox 的内容添加到 SelectionContainer 并将传递到 SelectionContainer**属性**窗口的<xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A>事件处理程序。 TrackSelection 服务跟踪的用户界面 (UI) 中所选的对象，并显示其属性  
   
     ```csharp  
     private SelectionContainer mySelContainer;  
@@ -358,7 +353,7 @@ ms.locfileid: "51737823"
   
      现在，您有一个类的**属性**窗口中可以使用，您可以将集成**属性**与工具窗口的窗口。 当用户单击工具窗口中，在列表框中的项**属性**窗口应相应地更新。 同样，当用户更改中的 ToDo 项**属性**窗口中，应更新关联的项。  
   
-7.  现在，在 TodoWindowControl.xaml.cs 添加 UpdateList 函数代码的其余部分。 它应删除并重新添加已修改的 TodoItem 从列表框。  
+7. 现在，在 TodoWindowControl.xaml.cs 添加 UpdateList 函数代码的其余部分。 它应删除并重新添加已修改的 TodoItem 从列表框。  
   
     ```csharp  
     public void UpdateList(TodoItem item)  
@@ -370,7 +365,7 @@ ms.locfileid: "51737823"
     }  
     ```  
   
-8.  测试你的代码。 生成项目并启动调试。 应显示在实验实例。  
+8. 测试你的代码。 生成项目并启动调试。 应显示在实验实例。  
   
 9. 打开**工具 / 选项**页。 应会看到在左窗格中的 ToDo 类别。 按字母顺序列出了类别，因此在 Ts 下查找。  
   
@@ -383,7 +378,7 @@ ms.locfileid: "51737823"
 ## <a name="add-text-to-the-output-window-and-items-to-the-task-list"></a>将文本添加到输出窗口和任务列表项  
  有关**任务列表**，您创建新的对象的类型为 Task，然后再添加到该任务对象**任务列表**通过调用其 Add 方法。 要写入到**输出**窗口中，调用其 GetPane 方法来获取窗格对象，，，然后调用窗格对象的 OutputString 方法。  
   
-1.  在 TodoWindowControl.xaml.cs，在`button1_Click`方法中，添加代码以获取**常规**窗格中的**输出**窗口中 （这是默认值），并向其中写入。 该方法应如下所示：  
+1. 在 TodoWindowControl.xaml.cs，在`button1_Click`方法中，添加代码以获取**常规**窗格中的**输出**窗口中 （这是默认值），并向其中写入。 该方法应如下所示：  
   
     ```csharp  
     private void button1_Click(object sender, EventArgs e)  
@@ -410,7 +405,7 @@ ms.locfileid: "51737823"
     }  
     ```  
   
-2.  若要将项添加到任务列表中，你需要将嵌套的类添加到 TodoWindowControl 类。 嵌套的类需要派生自<xref:Microsoft.VisualStudio.Shell.TaskProvider>。 将以下代码添加到 TodoWindowControl 类的末尾。  
+2. 若要将项添加到任务列表中，你需要将嵌套的类添加到 TodoWindowControl 类。 嵌套的类需要派生自<xref:Microsoft.VisualStudio.Shell.TaskProvider>。 将以下代码添加到 TodoWindowControl 类的末尾。  
   
     ```csharp  
     [Guid("72de1eAD-a00c-4f57-bff7-57edb162d0be")]  
@@ -423,7 +418,7 @@ ms.locfileid: "51737823"
     }  
     ```  
   
-3.  接下来将对 TodoTaskProvider 的专用引用和 CreateProvider() 方法添加到 TodoWindowControl 类。 代码应如下所示：  
+3. 接下来将对 TodoTaskProvider 的专用引用和 CreateProvider() 方法添加到 TodoWindowControl 类。 代码应如下所示：  
   
     ```csharp  
     private TodoWindowTaskProvider taskProvider;  
@@ -437,7 +432,7 @@ ms.locfileid: "51737823"
     }  
     ```  
   
-4.  将 ClearError()，这会清除任务列表，并 ReportError()，将条目添加到任务列表中，添加到 TodoWindowControl 类。  
+4. 将 ClearError()，这会清除任务列表，并 ReportError()，将条目添加到任务列表中，添加到 TodoWindowControl 类。  
   
     ```csharp  
     private void ClearError()  
@@ -469,7 +464,7 @@ ms.locfileid: "51737823"
     }  
     ```  
   
-5.  现在，如下所示实现 CheckForErrors 方法。  
+5. 现在，如下所示实现 CheckForErrors 方法。  
   
     ```csharp  
     public void CheckForErrors()  
@@ -487,29 +482,28 @@ ms.locfileid: "51737823"
   
 ## <a name="trying-it-out"></a>尝试一下  
   
-1.  生成项目并启动调试。 将显示在实验实例。  
+1. 生成项目并启动调试。 将显示在实验实例。  
   
-2.  打开 TodoWindow (**视图 / 其他 Windows / TodoWindow**)。  
+2. 打开 TodoWindow (**视图 / 其他 Windows / TodoWindow**)。  
   
-3.  在文本框中键入内容，然后单击**添加**。  
+3. 在文本框中键入内容，然后单击**添加**。  
   
      截止日期 2 天后今天添加到列表框。 未出现任何错误，并**任务列表**(**查看 / 任务列表**) 应没有任何条目。  
   
-4.  现在将设置更改启用**工具 / 选项 / ToDo**页上，从**2**回**0**。  
+4. 现在将设置更改启用**工具 / 选项 / ToDo**页上，从**2**回**0**。  
   
-5.  键入内容中的其他**TodoWindow** ，然后单击**添加**试。 这会触发错误以及中的条目**任务列表**。  
+5. 键入内容中的其他**TodoWindow** ，然后单击**添加**试。 这会触发错误以及中的条目**任务列表**。  
   
      添加项时，初始日期设置为现在再加上 2 天。  
   
-6.  上**视图**菜单上，单击**输出**以打开**输出**窗口。  
+6. 上**视图**菜单上，单击**输出**以打开**输出**窗口。  
   
      请注意，每次将某个项，一条消息将显示在**任务列表**窗格。  
   
-7.  单击其中一个列表框中的项。  
+7. 单击其中一个列表框中的项。  
   
      **属性**窗口将显示两个项的属性。  
   
-8.  更改其中一个属性，然后按 ENTER。  
+8. 更改其中一个属性，然后按 ENTER。  
   
      在列表框中更新项目。
-

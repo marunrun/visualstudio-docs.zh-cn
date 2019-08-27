@@ -1,27 +1,22 @@
 ---
 title: 可视化和查看数据 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], viewing data
 - debugging [Debugging SDK], visualizing data
 ms.assetid: 699dd0f5-7569-40b3-ade6-d0fe53e832bc
 caps.latest.revision: 21
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: f26ed20eccbff52afdc4f8b5060ad426cc100b71
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 719a2b3d073d90ff3977496c7f98ebecb1ab48a7
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51737421"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65696315"
 ---
 # <a name="visualizing-and-viewing-data"></a>可视化和查看数据
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -39,12 +34,12 @@ ms.locfileid: "51737421"
  [IEEVisualizerService](../../extensibility/debugger/reference/ieevisualizerservice.md)获取通过调用[CreateVisualizerService](../../extensibility/debugger/reference/ieevisualizerserviceprovider-createvisualizerservice.md)。 此方法需要[IDebugBinder3](../../extensibility/debugger/reference/idebugbinder3.md)接口，即[IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md)接口传递给[EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)。 `IEEVisualizerServiceProvider::CreateVisualizerService` 此外需要[IDebugSymbolProvider](../../extensibility/debugger/reference/idebugsymbolprovider.md)并[IDebugAddress](../../extensibility/debugger/reference/idebugaddress.md)接口已传递到`IDebugParsedExpression::EvaluateSync`。 若要创建所需的最终接口`IEEVisualizerService`接口是[IEEVisualizerDataProvider](../../extensibility/debugger/reference/ieevisualizerdataprovider.md) EE 实现的接口。 此接口允许要进行可视化处理的属性进行更改。 属性的所有数据都封装在[IDebugObject](../../extensibility/debugger/reference/idebugobject.md) EE 也会实现的接口。  
   
 ### <a name="accessing-property-data"></a>访问属性数据  
- 访问属性数据是通过[IPropertyProxyEESide](../../extensibility/debugger/reference/ipropertyproxyeeside.md)接口。 若要获取此接口，Visual Studio 会调用[QueryInterface](http://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3)上要获取的属性对象[IPropertyProxyProvider](../../extensibility/debugger/reference/ipropertyproxyprovider.md)接口 (实现的相同对象上实现[IDebugProperty3](../../extensibility/debugger/reference/idebugproperty3.md)接口)，然后调用[GetPropertyProxy](../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md)方法来获取`IPropertyProxyEESide`接口。  
+ 访问属性数据是通过[IPropertyProxyEESide](../../extensibility/debugger/reference/ipropertyproxyeeside.md)接口。 若要获取此接口，Visual Studio 会调用[QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3)上要获取的属性对象[IPropertyProxyProvider](../../extensibility/debugger/reference/ipropertyproxyprovider.md)接口 (实现的相同对象上实现[IDebugProperty3](../../extensibility/debugger/reference/idebugproperty3.md)接口)，然后调用[GetPropertyProxy](../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md)方法来获取`IPropertyProxyEESide`接口。  
   
  所有数据都传递输入和输出`IPropertyProxyEESide`接口封装在[IEEDataStorage](../../extensibility/debugger/reference/ieedatastorage.md)接口。 此接口表示一个字节数组，由 Visual Studio 和 EE 实现。 当属性的数据更改时，Visual Studio 将创建`IEEDataStorage`保存新的数据和调用对象[CreateReplacementObject](../../extensibility/debugger/reference/ipropertyproxyeeside-createreplacementobject.md)与该数据对象以获取新`IEEDataStorage`对象，它又是传递给[InPlaceUpdateObject](../../extensibility/debugger/reference/ipropertyproxyeeside-inplaceupdateobject.md)来更新该属性的数据。 `IPropertyProxyEESide::CreateReplacementObject` 允许 EE 来实例化其自己的类实现`IEEDataStorage`接口。  
   
 ## <a name="supporting-custom-viewers"></a>支持自定义查看器  
- 该标志`DBG_ATTRIB_VALUE_CUSTOM_VIEWER`中设置`dwAttrib`字段[DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md)结构 (通过调用返回[GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)) 以指示该对象具有关联的自定义查看器使用它。 当设置此标志时，Visual Studio 将获取[IDebugProperty3](../../extensibility/debugger/reference/idebugproperty3.md)从接口[IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)接口使用[QueryInterface](http://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3)。  
+ 该标志`DBG_ATTRIB_VALUE_CUSTOM_VIEWER`中设置`dwAttrib`字段[DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md)结构 (通过调用返回[GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)) 以指示该对象具有关联的自定义查看器使用它。 当设置此标志时，Visual Studio 将获取[IDebugProperty3](../../extensibility/debugger/reference/idebugproperty3.md)从接口[IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)接口使用[QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3)。  
   
  如果用户选择自定义查看器，Visual Studio 实例化使用查看器的自定义查看器`CLSID`提供的`IDebugProperty3::GetCustomViewerList`方法。 Visual Studio 然后调用[DisplayValue](../../extensibility/debugger/reference/idebugcustomviewer-displayvalue.md)以向用户显示的值。  
   
@@ -56,4 +51,3 @@ ms.locfileid: "51737421"
 ## <a name="see-also"></a>请参阅  
  [调试任务](../../extensibility/debugger/debugging-tasks.md)   
  [类型可视化工具和自定义查看器](../../extensibility/debugger/type-visualizer-and-custom-viewer.md)
-

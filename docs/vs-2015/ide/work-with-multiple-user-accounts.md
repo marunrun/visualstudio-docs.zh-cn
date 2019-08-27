@@ -1,25 +1,20 @@
 ---
 title: 使用多个用户帐户 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 ms.assetid: b73c865c-74e0-420e-89cc-43524f4aafd0
 caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 93f029a067e5a45930c2ac827862c1807e32aff8
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: a60a44a20c06c24645583db4e16ce60cef166554
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49176262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63441647"
 ---
 # <a name="work-with-multiple-user-accounts"></a>使用多个用户帐户
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +27,7 @@ ms.locfileid: "49176262"
   
 #### <a name="sign-in-to-visual-studio"></a>登录 Visual Studio  
   
-1.  使用 Microsoft 帐户或组织帐户登录到 Visual Studio 2015。 你会看到窗口右上角显示的你的用户名，类似于：  
+1. 使用 Microsoft 帐户或组织帐户登录到 Visual Studio 2015。 你会看到窗口右上角显示的你的用户名，类似于：  
   
      ![当前登录的用户](../ide/media/vs2015-username.png "VS2015_UserName")  
   
@@ -49,22 +44,22 @@ ms.locfileid: "49176262"
   
 ### <a name="access-your-azure-account-via-add-connected-service-dialog"></a>通过“添加连接的服务”对话框，访问你的 Azure 帐户  
   
-1.  用 C# 创建通用应用项目。  
+1. 用 C# 创建通用应用项目。  
   
-2.  右键单击解决方案资源管理器中的项目节点并选择**添加 > 连接的服务**。 “添加连接的服务”向导出现，显示与 Visual Studio 登录 ID 相关联的 Azure 帐户中的服务列表。 请注意：无需单独登录 Azure。 但是，第一次尝试从给定计算机访问其资源时，你需要登录到其他帐户。  
+2. 右键单击解决方案资源管理器中的项目节点，选择“添加”>“连接的服务”。 “添加连接的服务”向导出现，显示与 Visual Studio 登录 ID 相关联的 Azure 帐户中的服务列表。 请注意：无需单独登录 Azure。 但是，第一次尝试从给定计算机访问其资源时，你需要登录到其他帐户。  
   
     > [!WARNING]
-    >  如果这是首次创建应用商店应用程序在 Visual Studio 2015 中的特定计算机上，系统会提示通过转到启用设备的开发模式**设置&#124;。更新和安全&#124;适用于开发人员**您的计算机上。 有关详细信息，请参阅[启用设备进行开发](https://msdn.microsoft.com/library/windows/apps/dn706236.aspx)。  
+    > 如果这是首次创建应用商店应用程序在 Visual Studio 2015 中的特定计算机上，系统会提示通过转到启用设备的开发模式**设置&#124;。更新和安全&#124;适用于开发人员**您的计算机上。 有关详细信息，请参阅[启用设备进行开发](https://msdn.microsoft.com/library/windows/apps/dn706236.aspx)。  
   
-###  <a name="access_azure"></a> 在 Web 项目中访问 Azure Active Directory  
- Azure AD 支持 ASP.NET MVC web 应用程序中的最终用户单一登录或 Web API 服务中的 AD 身份验证。 域身份验证不同于单个用户帐户身份验证；有权访问 Active Directory 域的用户可以使用其现有的 Azure AD 帐户连接到你的 web 应用程序。 Office 365 应用还可以使用域身份验证。 若要了解此操作，请创建一个 web 应用程序 (**文件 > 新建项目 > C# > 云 > ASP.NET Web 应用程序**)。 在“新的 ASP.NET 项目”对话框中，选择 **“更改身份验证”**。 身份验证向导随即显示，你能够选择要在你的应用程序中使用的身份验证类型。  
+### <a name="access_azure"></a> 在 Web 项目中访问 Azure Active Directory  
+ Azure AD 支持 ASP.NET MVC web 应用程序中的最终用户单一登录或 Web API 服务中的 AD 身份验证。 域身份验证不同于单个用户帐户身份验证；有权访问 Active Directory 域的用户可以使用其现有的 Azure AD 帐户连接到你的 web 应用程序。 Office 365 应用还可以使用域身份验证。 为此，创建一个 Web 应用程序（“文件”>“新建项目”>“C#”>“云”>“ASP.NET Web 应用程序”）。 在“新的 ASP.NET 项目”对话框中，选择 **“更改身份验证”**。 身份验证向导随即显示，你能够选择要在你的应用程序中使用的身份验证类型。  
   
  ![适用于 ASP.NET 的“更改身份验证”对话框](../ide/media/vs2015-change-authentication.png "VS2015_change_authentication")  
   
  有关 ASP.NET 中不同种类的身份验证的详细信息，请参阅 [在 isual Studio 2013 中创建 ASP.NET Web 项目](http://www.asp.net/visual-studio/overview/2013/creating-web-projects-in-visual-studio#orgauth) （有关身份验证的信息仍适用于 Visual Studio 2015）。  
   
 ### <a name="access-your-visual-studio-team-services-account"></a>访问你的 Visual Studio Team Services 帐户  
- 从主菜单中，选择**团队 > 连接到 Team Foundation Server**以打开**团队资源管理器**窗口。 单击“选择团队项目” ，在“选择 Team Foundation Server” 下的列表框中，你应该看到你的 Visual Studio Team Services 帐户的 URL。 当你选择 URL 时，无需重新输入你的凭据就可登录。  
+ 在主菜单中，选择“团队”>“连接到 Team Foundation Server”打开“团队资源管理器”窗口。 单击“选择团队项目” ，在“选择 Team Foundation Server” 下的列表框中，你应该看到你的 Visual Studio Team Services 帐户的 URL。 当你选择 URL 时，无需重新输入你的凭据就可登录。  
   
 ## <a name="add-a-second-user-account-to-visual-studio"></a>向 Visual Studio 添加第二个用户帐户  
  在 Visual Studio 右上角单击你的用户名旁的向下箭头。 然后单击 **“帐户设置”** 菜单项。 出现 **“帐户管理器”** 对话框并显示你登录所用的帐户。 单击对话框左下方的 **“添加帐户”** 链接，以添加新的 Microsoft 帐户或新的单位或学校帐户。  
@@ -76,7 +71,4 @@ ms.locfileid: "49176262"
  ![帐户管理器](../ide/media/vs2015-accountmanager.gif "VS2015_AccountManager")  
   
 ## <a name="revisit-the-add-connected-services-wizard-and-server-explorer"></a>重新访问“添加连接的服务”向导和服务器资源管理器  
- 现在，再次转到 **“服务器资源管理器”** ，右键单击 Azure 节点并选择 **“管理和筛选订阅”**。 通过单击当前帐户旁的下拉箭头选择新的帐户，然后选择想要在服务器资源管理器中显示的订阅。 你应看到与指定订阅相关联的所有服务。即使你当前不使用第二个帐户登录到 Visual Studio IDE，也可登录到该帐户的服务和资源。 同样适用于**项目 > 添加连接的服务**并**团队 > 连接到 Team Foundation Server**。
-
-
-
+ 现在，再次转到 **“服务器资源管理器”** ，右键单击 Azure 节点并选择 **“管理和筛选订阅”**。 通过单击当前帐户旁的下拉箭头选择新的帐户，然后选择想要在服务器资源管理器中显示的订阅。 你应看到与指定订阅相关联的所有服务。即使你当前不使用第二个帐户登录到 Visual Studio IDE，也可登录到该帐户的服务和资源。 “项目”>“添加连接的服务”和“团队”>“连接到 Team Foundation Server”也是如此。

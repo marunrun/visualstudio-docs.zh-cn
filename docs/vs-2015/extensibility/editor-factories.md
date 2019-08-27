@@ -1,26 +1,21 @@
 ---
 title: 编辑器工厂 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - editor factories
 ms.assetid: cf4e8164-3546-441d-b465-e8a836ae7216
 caps.latest.revision: 21
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 74ea8d296db643e74654f9016c1f5bff4f34c6d8
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 2de1fc8440bd33a526da62dbb4c7937800484aaa
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51809449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68197762"
 ---
 # <a name="editor-factories"></a>编辑器工厂
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -50,15 +45,14 @@ ms.locfileid: "51809449"
 ## <a name="the-editor-factory-registration-process"></a>编辑器工厂注册过程  
  Visual Studio 加载使用编辑器工厂编辑器时，将发生以下过程：  
   
-1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]项目系统调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>。  
+1. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]项目系统调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>。  
   
-2.  此方法返回编辑器工厂。 Visual Studio 而延迟加载编辑器的包，但是，直到项目系统实际上需要在编辑器。  
+2. 此方法返回编辑器工厂。 Visual Studio 而延迟加载编辑器的包，但是，直到项目系统实际上需要在编辑器。  
   
-3.  当项目系统需要在编辑器时，Visual Studio 会调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>，返回的文档视图和文档数据对象的专用的方法。  
+3. 当项目系统需要在编辑器时，Visual Studio 会调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>，返回的文档视图和文档数据对象的专用的方法。  
   
-4.  如果编辑器工厂使用由 Visual Studio 调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>返回文档数据对象，文档视图对象中，Visual Studio 文档窗口、 置于文档视图对象，然后创建到正在运行文档中的一个条目文档数据对象表 (RDT)。  
+4. 如果编辑器工厂使用由 Visual Studio 调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>返回文档数据对象，文档视图对象中，Visual Studio 文档窗口、 置于文档视图对象，然后创建到正在运行文档中的一个条目文档数据对象表 (RDT)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>   
  [运行文档表](../extensibility/internals/running-document-table.md)
-

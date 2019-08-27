@@ -1,14 +1,9 @@
 ---
 title: IDE 常量 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - IDE, errors
 - logical views
@@ -20,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5030e70a-241d-474a-ba8c-e3b1cf947ff0
 caps.latest.revision: 24
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: aa8fb2e4af74facc0ca00343e6abad36b7fcec50
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 18256996d829d34117caa11f4e581d8e54d738b1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51743305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68204043"
 ---
 # <a name="ide-constants"></a>IDE 常量
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,7 +30,7 @@ ms.locfileid: "51743305"
   
 ## <a name="logical-and-physical-views"></a>逻辑和物理视图  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |[LOGVIEWID_Code_guid](/dotnet/api/microsoft.visualstudio.vsconstants.logviewid.code_guid?view=visualstudiosdk-2015)|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97> `cmdidOpenWith` 处理程序应将此值设置为传递<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>方法以获取**打开**对话框中，在这种情况下，在可能的代码视图。|  
 |[LOGVIEWID_Debugging_guid](/dotnet/api/microsoft.visualstudio.vsconstants.logviewid.debugging_guid?view=visualstudiosdk-2015)|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97> `cmdidOpenWith` 处理程序会传递此值设置为<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>方法以获取**打开**对话框中，在这种情况下，可能进行填充<xref:Microsoft.VisualStudio.VSConstants.LOGVIEWID.Debugging_guid>调试视图映射到同一个视图作为<xref:Microsoft.VisualStudio.VSConstants.LOGVIEWID.Code_guid>。|  
@@ -46,7 +41,7 @@ ms.locfileid: "51743305"
   
 ## <a name="editor-factory-flags"></a>编辑器工厂标志  
   
-|“值”|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |[CEF.CloneFile](/dotnet/api/microsoft.visualstudio.vsconstants.cef?view=visualstudiosdk-2015)|已过时的标志的第一个参数的按位组合<xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A>方法。|  
 |[CEF.CloneFile](/dotnet/api/microsoft.visualstudio.vsconstants.cef?view=visualstudiosdk-2015)|第一个参数的按位组合<xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A>，方法中，这表示编辑器工厂应执行必需的修补程序。|  
@@ -55,7 +50,7 @@ ms.locfileid: "51743305"
   
 ## <a name="visual-studio-errors"></a>Visual Studio 错误  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |<xref:Microsoft.VisualStudio.VSConstants.VS_E_BUSY>|返回到异步行为的接口的常量时在相关对象已经忙|  
 |<xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA>|错误的 HRESULT 的特定于 Visual Studio"不兼容的文档数据"。|  
@@ -71,7 +66,7 @@ ms.locfileid: "51743305"
   
 ## <a name="visual-studio-constants"></a>Visual Studio 常量  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |<xref:Microsoft.VisualStudio.VSConstants.VS_S_PROJECTFORWARDED>|错误的 HRESULT 的特定于 Visual Studio，并指示"项目转发。|  
 |<xref:Microsoft.VisualStudio.VSConstants.VS_S_TBXMARKER>|一个常量，它是特定于 Visual Studio 的"工具箱标记"。|  
@@ -86,7 +81,7 @@ ms.locfileid: "51743305"
 ## <a name="ivsselectionevents"></a>IVsSelectionEvents  
  描述在 IDE 的哪个组件只是已选择，在<xref:Microsoft.VisualStudio.Shell.Interop.IVsSelectionEvents.OnElementValueChanged%2A>调用，例如。  
   
-|返回的常量|“值”|
+|返回的常量|ReplTest1|
 |--------------|-----------|
 |[SelectionElement.DocumentFrame](<xref:Microsoft.VisualStudio.VSConstants.SelectionElement#Microsoft_VisualStudio_VSConstants_SelectionElement_DocumentFrame>)|0x2|
 |[SelectionElement.PropertyBrowserSID](<xref:Microsoft.VisualStudio.VSConstants.SelectionElement#Microsoft_VisualStudio_VSConstants_SelectionElement_PropertyBrowserSID>)|0x4|
@@ -98,7 +93,7 @@ ms.locfileid: "51743305"
 ## <a name="vsselelemid"></a>VSSELELEMID  
  用于指示新的选择状态的常量。  
   
-|返回的常量|“值”|  
+|返回的常量|ReplTest1|  
 |--------------|-----------|  
 |<xref:Microsoft.VisualStudio.VSConstants.VSSELELEMID>|2|  
 |<xref:Microsoft.VisualStudio.VSConstants.VSSELELEMID>|7|  
@@ -111,7 +106,7 @@ ms.locfileid: "51743305"
   
 ## <a name="component-selector-dialog-constants"></a>组件选择器对话框常量  
   
-|返回的常量|“值”|  
+|返回的常量|ReplTest1|  
 |--------------|-----------|  
 |<xref:Microsoft.VisualStudio.VSConstants.CPDN_SELCHANGED>|WM_USER + 1280|  
 |<xref:Microsoft.VisualStudio.VSConstants.CPDN_SELDBLCLICK>|WM_USER + 1281|  
@@ -124,4 +119,3 @@ ms.locfileid: "51743305"
   
 ## <a name="see-also"></a>请参阅  
  [用于扩展项目系统的 IDE 定义的命令](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)
-

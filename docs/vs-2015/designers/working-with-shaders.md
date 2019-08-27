@@ -1,25 +1,20 @@
 ---
 title: 使用着色器 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: 6b2ea1ed-b995-4e75-af19-c68fd37a3bc5
 caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 72325522886ed1bc6ab262152c84fc3660231d86
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: b912708e7cc2f811e9cd18a24096ef66e128c375
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49226833"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65690071"
 ---
 # <a name="working-with-shaders"></a>使用着色器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +31,7 @@ ms.locfileid: "49226833"
 ## <a name="dgsl-documents"></a>DGSL 文档  
  着色器设计器以有向图着色器语言 (DGSL) 格式保存着色器，该格式是一种基于有向图标记语言 (DGML) 的 XML 格式。 可以在模型编辑器中直接对三维模型应用 DGSL 着色器。 但是，在应用中使用 DGSL 着色器之前，必须将其导出为 DirectX 理解的格式（例如 HLSL）。  
   
- 由于 DGSL 与 DGML 兼容，因此可以使用旨在分析 DGML 文档的工具来分析 DGSL 着色器。 有关 DGML 的信息，请参阅[了解有向图形标记语言 (DGML)](http://msdn.microsoft.com/library/ee842619.aspx)。  
+ 由于 DGSL 与 DGML 兼容，因此可以使用旨在分析 DGML 文档的工具来分析 DGSL 着色器。 有关 DGML 的信息，请参阅[了解有向图形标记语言 (DGML)](https://msdn.microsoft.com/library/ee842619.aspx)。  
   
 ## <a name="related-topics"></a>相关主题  
   
@@ -45,6 +40,3 @@ ms.locfileid: "49226833"
 |[着色器设计器](../designers/shader-designer.md)|描述如何使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 着色器设计器处理着色器。|  
 |[着色器设计器节点](../designers/shader-designer-nodes.md)|讨论可用于实现图形效果的着色器设计器节点的种类。|  
 |[着色器设计器示例](../designers/shader-designer-examples.md)|提供转至演示如何使用着色器设计器来实现常见图形效果的主题的链接。|
-
-
-

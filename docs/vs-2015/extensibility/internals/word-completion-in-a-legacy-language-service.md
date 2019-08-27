@@ -1,14 +1,9 @@
 ---
 title: 在旧版语言服务中的断完成 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - language services [managed package framework], IntelliSense Complete Word
 - IntelliSense, Complete Word
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 0ace5ac3-f9e1-4e6d-add4-42967b1f96a6
 caps.latest.revision: 16
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 40a7e387ceb5fe88f059539634ae654ba076454f
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 8b4449a30119d925b167213141c3ba577ce42609
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51801714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63439893"
 ---
 # <a name="word-completion-in-a-legacy-language-service"></a>旧版语言服务中的文字完成
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -32,7 +27,7 @@ ms.locfileid: "51801714"
  旧版语言服务实现 VSPackage 的一部分，但实现语言服务功能的较新方法是使用 MEF 扩展。 若要获取详细信息，请参阅[扩展编辑器和语言服务](../../extensibility/extending-the-editor-and-language-services.md)。  
   
 > [!NOTE]
->  我们建议在开始尽可能快地使用新编辑器 API。 这将提高您的语言服务的性能，让您充分利用新的编辑器功能。  
+> 我们建议在开始尽可能快地使用新编辑器 API。 这将提高您的语言服务的性能，让您充分利用新的编辑器功能。  
   
 ## <a name="implementation-steps"></a>实现步骤  
   
@@ -57,4 +52,3 @@ ms.locfileid: "51801714"
  如果列表包含仅一个词，则<xref:Microsoft.VisualStudio.Package.Source>类自动插入这个词来代替部分单词。 如果列表包含多个词语，<xref:Microsoft.VisualStudio.Package.Source>类显示一个工具提示列表，用户可以从中选择适当的选择。  
   
  此外看的示例<xref:Microsoft.VisualStudio.Package.Declarations>中的类实现[旧版语言服务中的成员完成](../../extensibility/internals/member-completion-in-a-legacy-language-service.md)。
-

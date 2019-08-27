@@ -1,14 +1,9 @@
 ---
 title: 安全、 版本和 ClickOnce 部署中的清单问题 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -28,13 +23,13 @@ ms.assetid: d5d0c90b-ac1a-44e2-88dc-0d0ffd881624
 caps.latest.revision: 23
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: 77685b2eb6397d1edf9a342c25838fcefac2e619
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: a4864d37cb5930075b292ee765bce9b288794019
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49289219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63444986"
 ---
 # <a name="security-versioning-and-manifest-issues-in-clickonce-deployments"></a>ClickOnce 部署中的安全、版本控制和清单问题
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -72,11 +67,11 @@ ms.locfileid: "49289219"
   
  如果您已手动编辑部署或应用程序清单，您可能会无意中损坏它们。 清单损坏会阻止的正确[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]安装。 可以通过单击来在运行时调试此类错误**详细信息**上**ClickOnce 错误**对话框中，并读取日志中的错误消息。 日志将列出以下消息之一：  
   
--   语法错误的行号和字符的描述发生错误的位置。  
+- 语法错误的行号和字符的描述发生错误的位置。  
   
--   元素或属性在违反该清单的架构中使用的名称。 如果你已手动添加 XML，到对清单，必须将比较你添加到清单架构。 有关详细信息，请参阅[ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md)并[ClickOnce 应用程序清单](../deployment/clickonce-application-manifest.md)。  
+- 元素或属性在违反该清单的架构中使用的名称。 如果你已手动添加 XML，到对清单，必须将比较你添加到清单架构。 有关详细信息，请参阅[ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md)并[ClickOnce 应用程序清单](../deployment/clickonce-application-manifest.md)。  
   
--   ID 冲突。 部署和应用程序清单中的依赖关系引用必须是唯一在这种他们`name`和`publicKeyToken`属性。 如果在清单中任意两个元素之间的这两个属性匹配，清单分析将会失败。  
+- ID 冲突。 部署和应用程序清单中的依赖关系引用必须是唯一在这种他们`name`和`publicKeyToken`属性。 如果在清单中任意两个元素之间的这两个属性匹配，清单分析将会失败。  
   
 ## <a name="precautions-when-manually-changing-manifests-or-applications"></a>手动更改清单或应用程序时的注意事项  
  更新应用程序清单时，必须重新签名的应用程序清单和部署清单。 部署清单包含对包含该文件的哈希和其数字签名的应用程序清单的引用。  
@@ -93,12 +88,9 @@ ms.locfileid: "49289219"
  如果你想要移动或复制应用程序，则还必须更新`deploymentProvider`路径，以便在客户端实际安装从新位置。 正在更新此路径是主要是一个问题，如果你已安装应用程序。 联机应用程序通过设置的原始 URL 始终启动`deploymentProvider`是可选的。 如果`deploymentProvider`，则将起作用，否则，用于启动应用程序的 URL 将使用用作基 URL，以下载应用程序文件。  
   
 > [!NOTE]
->  每次更新的清单时您必须还对其签名再次。  
+> 每次更新的清单时您必须还对其签名再次。  
   
 ## <a name="see-also"></a>请参阅  
  [ClickOnce 部署疑难解答](../deployment/troubleshooting-clickonce-deployments.md)   
  [保护 ClickOnce 应用程序](../deployment/securing-clickonce-applications.md)   
  [选择 ClickOnce 部署策略](../deployment/choosing-a-clickonce-deployment-strategy.md)
-
-
-

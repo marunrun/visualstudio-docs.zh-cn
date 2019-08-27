@@ -2,22 +2,21 @@
 title: 在 Azure 应用服务 (Windows) 上配置 Python
 description: 如何在 Azure 应用服务上安装 Python 解释器和库，并配置 Web 应用程序，以正确引用该解释器。
 ms.date: 01/07/2019
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
-author: kraigb
-ms.author: kraigb
-manager: douge
+author: JoshuaPartlow
+ms.author: joshuapa
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 5bfa048f7f836e2e4108c3d30a1dfb89b764c59c
-ms.sourcegitcommit: a7e6675185fd34ac8084f09627b2038046cdd2b1
+ms.openlocfilehash: 7ffe0de939eba8af38c132fc3de5c96a9499e3f0
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54060735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62535926"
 ---
 # <a name="how-to-set-up-a-python-environment-on-azure-app-service-windows"></a>如何在 Azure 应用服务 (Windows) 上设置 Python 环境
 
@@ -77,7 +76,7 @@ Azure 应用服务的可自定义 Python 支持作为一组应用服务站点扩
 
 ## <a name="set-webconfig-to-point-to-the-python-interpreter"></a>将 web.config 设置为指向 Python 解释器
 
-（通过门户或 Azure 资源管理器模板）安装站点扩展后，接下来将应用的 web.config 文件指向 Python 解释器。 web.config 文件指示在应用服务上运行的 IIS (7+) Web 服务器如何通过 FastCGI 或 HttpPlatform 处理 Python 请求。
+（通过门户或 Azure 资源管理器模板）安装站点扩展后，接下来将应用的 web.config 文件指向 Python 解释器。 web.config 文件指示在应用服务上运行的 IIS (7+) Web 服务器如何通过 HttpPlatform（推荐）或 FastCGI 处理 Python 请求。
 
 首先找到站点扩展程序 python.exe 的完整路径，然后创建并修改相应的 web.config 文件。
 
@@ -98,6 +97,33 @@ Python 站点扩展安装在 d:\home 下服务器上的文件夹中，适合 Pyt
 1. 在“应用服务”页上，选择“开发工具” > “控制台”。
 1. 输入命令 `ls ../home` 或 `dir ..\home` 查看顶级扩展文件夹，例如 Python361x64。
 1. 输入一个类似于 `ls ../home/python361x64` 或 `dir ..\home\python361x64` 的命令，确认该文件夹包含 python.exe 和其他解释器文件。
+
+### <a name="configure-the-httpplatform-handler"></a>配置 HttpPlatform 处理程序
+
+HttpPlatform 模块将套接字连接直接传递到独立的 Python 进程。 借助此传递可根据需要运行任何 Web 服务器，但需要用于运行本地 Web 服务器的启动脚本。 在 web.config 的 `<httpPlatform>` 元素中指定脚本，其中 `processPath` 属性指向站点扩展的 Python 解释器，`arguments` 属性指向脚本和希望提供的任何参数：
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.webServer>
+    <handlers>
+      <add name="PythonHandler" path="*" verb="*" modules="httpPlatformHandler" resourceType="Unspecified"/>
+    </handlers>
+    <httpPlatform processPath="D:\home\Python361x64\python.exe"
+                  arguments="D:\home\site\wwwroot\runserver.py --port %HTTP_PLATFORM_PORT%"
+                  stdoutLogEnabled="true"
+                  stdoutLogFile="D:\home\LogFiles\python.log"
+                  startupTimeLimit="60"
+                  processesPerApplication="16">
+      <environmentVariables>
+        <environmentVariable name="SERVER_PORT" value="%HTTP_PLATFORM_PORT%" />
+      </environmentVariables>
+    </httpPlatform>
+  </system.webServer>
+</configuration>
+```
+
+此处显示的 `HTTP_PLATFORM_PORT` 环境变量包含端口，本地服务器使用该端口侦听来自 localhost 的连接。 此示例还演示如何根据需要创建其他环境变量，本示例中为 `SERVER_PORT`。
 
 ### <a name="configure-the-fastcgi-handler"></a>配置 FastCGI 处理程序
 
@@ -126,36 +152,9 @@ FastCGI 是在请求级别工作的接口。 IIS 接收传入的连接，并将�
 
 - `PYTHONPATH` 的值可以自由扩展，但必须包括你的应用的根目录。
 - `WSGI_HANDLER` 必须指向可从你的应用导入的 WSGI 应用。
-- `WSGI_LOG` 为可选，但建议在调试应用时使用。 
+- `WSGI_LOG` 为可选，但建议在调试应用时使用。
 
 有关 Bottle、Flask 和 Django Web 应用的 web.config 内容的更多详细信息，请参阅[发布到 Azure](publishing-python-web-applications-to-azure-from-visual-studio.md)。
-
-### <a name="configure-the-httpplatform-handler"></a>配置 HttpPlatform 处理程序
-
-HttpPlatform 模块将套接字连接直接传递到独立的 Python 进程。 借助此传递可根据需要运行任何 Web 服务器，但需要用于运行本地 Web 服务器的启动脚本。 在 web.config 的 `<httpPlatform>` 元素中指定脚本，其中 `processPath` 属性指向站点扩展的 Python 解释器，`arguments` 属性指向脚本和希望提供的任何参数：
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<configuration>
-  <system.webServer>
-    <handlers>
-      <add name="PythonHandler" path="*" verb="*" modules="httpPlatformHandler" resourceType="Unspecified"/>
-    </handlers>
-    <httpPlatform processPath="D:\home\Python361x64\python.exe"
-                  arguments="D:\home\site\wwwroot\runserver.py --port %HTTP_PLATFORM_PORT%"
-                  stdoutLogEnabled="true"
-                  stdoutLogFile="D:\home\LogFiles\python.log"
-                  startupTimeLimit="60"
-                  processesPerApplication="16">
-      <environmentVariables>
-        <environmentVariable name="SERVER_PORT" value="%HTTP_PLATFORM_PORT%" />
-      </environmentVariables>
-    </httpPlatform>
-  </system.webServer>
-</configuration>
-```
-
-此处显示的 `HTTP_PLATFORM_PORT` 环境变量包含端口，本地服务器使用该端口侦听来自 localhost 的连接。 此示例还演示如何根据需要创建其他环境变量，本示例中为 `SERVER_PORT`。
 
 ## <a name="install-packages"></a>安装包
 

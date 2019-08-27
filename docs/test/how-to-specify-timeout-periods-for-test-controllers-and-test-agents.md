@@ -10,14 +10,13 @@ helpviewer_keywords:
 ms.assetid: 777d0db5-0073-458a-a2a3-58b1c1f24c60
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 49d81090a0db94fe0215d01a1194f3eb4fabfcad
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 5e703ca3e1770d92a2dc01402acaaba0b4988e92
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53870448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62970625"
 ---
 # <a name="how-to-specify-timeout-periods-for-test-controllers-and-test-agents"></a>如何：为测试控制器和测试代理指定超时周期
 
@@ -27,7 +26,7 @@ ms.locfileid: "53870448"
 
 若要编辑测试控制器或测试代理的各种超时设置，请使用表中的键名和值来修改以下配置文件：
 
--   测试控制器：*QTController.exe.config*
+- 测试控制器：*QTController.exe.config*
 
     |项名称|说明|值|
     |-|-----------------|-|
@@ -36,7 +35,7 @@ ms.locfileid: "53870448"
     |AgentInitializeTimeout|中止测试运行前，在测试运行开始时等待所有代理及其数据收集器进行初始化的秒数。 如果使用数据收集器，则此值应相当大。|“n”秒。 默认：“120”（2 分钟）。|
     |AgentCleanupTimeout|完成测试运行前，等待所有代理及其数据收集器进行清理的秒数。 如果使用数据收集器，则此值应相当大。|“n”秒。 默认：“120”（2 分钟）。|
 
--   测试代理：*QTAgentService.exe.config*
+- 测试代理：*QTAgentService.exe.config*
 
     |项名称|说明|值|
     |-|-----------------|-|
@@ -118,5 +117,4 @@ ms.locfileid: "53870448"
 - [安装和配置测试代理](../test/lab-management/install-configure-test-agents.md)
 - [修改负载测试记录设置](../test/modify-load-test-logging-settings.md)
 - [为测试控制器和测试代理配置端口](../test/configure-ports-for-test-controllers-and-test-agents.md)
-- [如何：为日志文件指定最大文件大小](../test/how-to-specify-the-maximum-size-for-the-log-file.md)
 - [如何：将测试控制器或测试代理绑定到网络适配器](../test/how-to-bind-a-test-controller-or-test-agent-to-a-network-adapter.md)

@@ -1,14 +1,9 @@
 ---
 title: 使用 CRT 库查找内存泄漏 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -34,13 +29,13 @@ ms.assetid: cf6dc7a6-cd12-4283-b1b6-ea53915f7ed1
 caps.latest.revision: 33
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: eca7af1cb572714214f264cac35b488fba993bdd
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 831cae8d83bc26e05b80d6948a3168a6e6a387c4
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51726557"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65682427"
 ---
 # <a name="finding-memory-leaks-using-the-crt-library"></a>使用 CRT 库查找内存泄漏
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -62,7 +57,7 @@ ms.locfileid: "51726557"
   
  为了 CRT 函数能够正常工作， `#include` 语句必须遵循此处所示的顺序。  
   
- 包含 crtdbg.h，将 `malloc` 和 [free](http://msdn.microsoft.com/library/74ded9cf-1863-432e-9306-327a42080bb8) 函数映射到它们的调试版本，即 [_malloc_dbg](http://msdn.microsoft.com/library/c97eca51-140b-4461-8bd2-28965b49ecdb) 和 `free`，它们将跟踪内存分配和释放。 此映射只在包含 `_DEBUG`的调试版本中发生。 发布版本使用普通的 `malloc` 和 `free` 函数。  
+ 包含 crtdbg.h，将 `malloc` 和 [free](https://msdn.microsoft.com/library/74ded9cf-1863-432e-9306-327a42080bb8) 函数映射到它们的调试版本，即 [_malloc_dbg](https://msdn.microsoft.com/library/c97eca51-140b-4461-8bd2-28965b49ecdb) 和 `free`，它们将跟踪内存分配和释放。 此映射只在包含 `_DEBUG`的调试版本中发生。 发布版本使用普通的 `malloc` 和 `free` 函数。  
   
  `#define` 语句将 CRT 堆函数的基础版本映射到对应的调试版本。 如果省略 `#define` 语句，内存泄漏转储将有所简化。  
   
@@ -72,7 +67,7 @@ ms.locfileid: "51726557"
 _CrtDumpMemoryLeaks();  
 ```  
   
- 如果应用程序有多个退出点，并不需要在每个退出点都手动设置一个对 [_CrtDumpMemoryLeaks](http://msdn.microsoft.com/library/71b2eab4-7f55-44e8-a55a-bfea4f32d34c) 的调用。 应用程序开头部分对 `_CrtSetDbgFlag` 的调用会导致在每个退出点自动调用 `_CrtDumpMemoryLeaks` 。 你必须设置两个位域，如下所示：  
+ 如果应用程序有多个退出点，并不需要在每个退出点都手动设置一个对 [_CrtDumpMemoryLeaks](https://msdn.microsoft.com/library/71b2eab4-7f55-44e8-a55a-bfea4f32d34c) 的调用。 应用程序开头部分对 `_CrtSetDbgFlag` 的调用会导致在每个退出点自动调用 `_CrtDumpMemoryLeaks` 。 你必须设置两个位域，如下所示：  
   
 ```  
 _CrtSetDbgFlag ( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );  
@@ -87,7 +82,7 @@ _CrtSetReportMode( _CRT_ERROR, _CRTDBG_MODE_DEBUG );
 ```  
   
 ## <a name="interpreting-the-memory-leak-report"></a>解释内存泄漏报告  
- 如果应用程序未定义 `_CRTDBG_MAP_ALLOC`，则 [_CrtDumpMemoryLeaks](http://msdn.microsoft.com/library/71b2eab4-7f55-44e8-a55a-bfea4f32d34c) 显示的内存泄漏报告如下所示：  
+ 如果应用程序未定义 `_CRTDBG_MAP_ALLOC`，则 [_CrtDumpMemoryLeaks](https://msdn.microsoft.com/library/71b2eab4-7f55-44e8-a55a-bfea4f32d34c) 显示的内存泄漏报告如下所示：  
   
 ```  
 Detected memory leaks!  
@@ -114,7 +109,7 @@ Object dump complete.
   
 - 内存分配编号，在本例中为 `18`  
   
-- [块类型](http://msdn.microsoft.com/en-us/e2f42faf-0687-49e7-aa1f-916038354f97)，在本例中为 `normal` 。  
+- [块类型](https://msdn.microsoft.com/e2f42faf-0687-49e7-aa1f-916038354f97)，在本例中为 `normal` 。  
   
 - 十六进制内存位置，在本例中为 `0x00780E80` 。  
   
@@ -122,11 +117,11 @@ Object dump complete.
   
 - 块中前 16 个字节的数据（十六进制形式）。  
   
-  内存泄漏报告将内存块标识为普通、客户端或 CRT。  “普通块”是由程序分配的普通内存。  “客户端块”是由 MFC 程序用于需要析构函数的对象的特殊类型内存块。 MFC `new` 运算符根据正在创建的对象的需要创建普通块或客户端块。  “CRT 块”是由 CRT 库为自己使用而分配的内存块。 CRT 库可处理这些块的释放。 因此，你不大可能在内存泄漏报告中看到这些块，除非出现严重错误（例如 CRT 库损坏）。  
+  内存泄漏报告将内存块标识为普通、客户端或 CRT。  “普通块”是由程序分配的普通内存。 “客户端块”是由 MFC 程序针对需要析构函数的对象而使用的特殊类型内存块。 MFC `new` 运算符根据正在创建的对象创建普通块或客户端块。  “CRT 块”是由 CRT 库为自己使用而分配的内存块。 CRT 库可处理这些块的释放。 因此，你不大可能在内存泄漏报告中看到这些块，除非出现严重错误（例如 CRT 库损坏）。  
   
   内存泄漏报告中绝对不会出现另外两个内存块类型。  “可用块”是已释放的内存。 也就是说，根据定义，这种块不会泄漏。  “忽略块”是已明确标记、不出现在内存泄漏报告中的块。  
   
-  这些方法适用于使用标准 CRT `malloc` 函数分配的内存。 如果您的程序分配内存使用 c + +`new`运算符，但是，你可能只能看到的文件和行号，实现全局`operator new`调用`_malloc_dbg`内存泄漏报告中。 该行为不是很有用，因为您可以将其更改为报表使用的宏，如下所示进行分配的行： 
+  这些方法适用于使用标准 CRT `malloc` 函数分配的内存。 如果您的程序分配内存使用C++`new`运算符，但是，你可能只能看到的文件和行号，实现全局`operator new`调用`_malloc_dbg`内存泄漏报告中。 该行为不是很有用，因为您可以将其更改为报表使用的宏，如下所示进行分配的行： 
  
 ```cpp  
 #ifdef _DEBUG
@@ -138,7 +133,7 @@ Object dump complete.
 #endif
 ```  
   
-现在可以替换`new`运算符使用`DBG_NEW`在代码中的宏。 在调试版本中，这将使用的全局重载`operator new`采用附加参数的块类型、 文件和行号。 此重载`new`调用`_malloc_dbg`记录的额外信息。 当你使用`DBG_NEW`，内存泄漏报告显示已泄漏的对象的分配的文件名和行号。 在零售版本，则使用默认`new`。 (我们不建议创建一个名为的预处理器宏`new`，或任何其他语言关键字。)下面是技术的示例：  
+现在可以在代码中使用`DBG_NEW`宏来替换`new`运算符。 在调试版本中，这将使用的全局重载`operator new`采用附加参数的块类型、 文件和行号。 此重载`new`调用`_malloc_dbg`记录的额外信息。 当你使用`DBG_NEW`，内存泄漏报告显示已泄漏的对象的分配的文件名和行号。 在零售版本，则使用默认`new`。 (我们不建议创建一个名为的预处理器宏`new`，或任何其他语言关键字。)下面是该技巧的示例：  
   
 ```cpp  
 // debug_new.cpp
@@ -192,7 +187,7 @@ Object dump complete.
   
 2. 当应用程序在断点处中断时，会出现  “监视”窗口。  
   
-3. 在中**Watch**窗口中，键入`_crtBreakAlloc`中**名称**列。  
+3. 在**监视**窗口的**名称** 列中键入`_crtBreakAlloc`。  
   
     如果要使用 CRT 库的多线程 DLL 版本（/MD 选项），请加入上下文运算符： `{,,ucrtbased.dll}_crtBreakAlloc`  
   
@@ -271,6 +266,3 @@ if ( _CrtMemDifference( &s3, &s1, &s2) )
  [CRT 调试堆详细信息](../debugger/crt-debug-heap-details.md)   
  [调试器安全](../debugger/debugger-security.md)   
  [调试本机代码](../debugger/debugging-native-code.md)
-
-
-

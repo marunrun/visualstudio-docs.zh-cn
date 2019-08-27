@@ -9,17 +9,17 @@ helpviewer_keywords:
 - update element
 - <update> element
 - application manifests [Office development in Visual Studio], <update> element
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 661aa9c0c1a590e78d20e52b6321294d59e70c63
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 461fae79e3af346d64017166b6dae3ace67599e1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53988983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62967528"
 ---
 # <a name="ltupdategt-element-office-development-in-visual-studio"></a>&lt;更新&gt;元素 （Visual Studio 中的 Office 开发）
   `update`元素指定的更新的解决方案将检查的间隔。
@@ -55,7 +55,7 @@ ms.locfileid: "53988983"
 |特性|描述|
 |---------------|-----------------|
 |`maximumAge`| 必需。 这将设置为一个整数。|
-|`unit`|必需。 设置`unit`为以下值之一：<br /><br /> -   **小时数**<br />-   **天**<br />-   **周**|
+|`unit`|必需。 设置`unit`为以下值之一：<br /><br /> -   **小时数**<br />-   **days**<br />-   **周**|
 
 ## <a name="example-of-always-checking-for-updates"></a>始终检查更新的示例
 

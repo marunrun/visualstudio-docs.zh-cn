@@ -1,14 +1,9 @@
 ---
 title: CodeIndex 命令 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - command-line tools [Team Foundation Server]
 - TFSConfig
@@ -17,13 +12,13 @@ ms.assetid: b79568d4-6a64-4ca9-a1ee-3e57f92a9c5c
 caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 9586348a1862820540613a5f191132c49fa6a74d
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: f16d21889421a00fc2723412f34b426f75847822
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49282355"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65701620"
 ---
 # <a name="codeindex-command"></a>CodeIndex 命令
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,10 +27,10 @@ ms.locfileid: "49282355"
   
  **所需权限**  
   
- 若要使用 **CodeIndex** 命令，必须是“Team Foundation Administrators”安全组的成员。 请参阅 [Team Foundation Server 权限参考](http://msdn.microsoft.com/library/39997de5-b7fb-4777-b779-07de0543abe6)。  
+ 若要使用 **CodeIndex** 命令，必须是“Team Foundation Administrators”安全组的成员。 请参阅 [Team Foundation Server 权限参考](https://msdn.microsoft.com/library/39997de5-b7fb-4777-b779-07de0543abe6)。  
   
 > [!NOTE]
->  即使你使用管理凭据进行登录，也必须使用提升权限打开命令提示符窗口以运行此命令。 你还必须从 Team Foundation 的应用层运行此命令。  
+> 即使你使用管理凭据进行登录，也必须使用提升权限打开命令提示符窗口以运行此命令。 你还必须从 Team Foundation 的应用层运行此命令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -67,7 +62,7 @@ TFSConfig CodeIndex /indexingStatus | /setIndexing:[ on | off | keepupOnly ] | /
 ## <a name="examples"></a>示例  
   
 > [!NOTE]
->  此处描述的示例公司、组织、产品、域名、电子邮件地址、徽标、人员、地点和事件均属虚构。  无意与任何真实的公司、组织、产品、域名、电子邮件地址、徽标、人物、地点或事件相关联，也不应进行这方面的推断。  
+> 此处描述的示例公司、组织、产品、域名、电子邮件地址、徽标、人员、地点和事件均属虚构。  无意与任何真实的公司、组织、产品、域名、电子邮件地址、徽标、人物、地点或事件相关联，也不应进行这方面的推断。  
   
  查看代码索引状态和配置：  
   
@@ -130,8 +125,5 @@ TFSConfig CodeIndex /destroyCodeIndex /collectionName:"Fabrikam Web Site"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [Managing server configuration with TFSConfig](http://msdn.microsoft.com/en-us/94424190-3b6b-4f33-a6b6-5807f4225b62) （使用 TFSConfig 管理服务器配置）  
- [Command-line tools for TFS](http://msdn.microsoft.com/en-us/be8c997a-b97b-4e59-97f5-04db0a601a6c)（TFS 的命令行工具）
-
-
-
+ [Managing server configuration with TFSConfig](https://msdn.microsoft.com/94424190-3b6b-4f33-a6b6-5807f4225b62) （使用 TFSConfig 管理服务器配置）  
+ [Command-line tools for TFS](https://msdn.microsoft.com/be8c997a-b97b-4e59-97f5-04db0a601a6c)（TFS 的命令行工具）

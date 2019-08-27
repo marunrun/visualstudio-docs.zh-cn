@@ -1,7 +1,7 @@
 ---
 title: 快速入门：C/C++ 代码分析
+description: 对运行静态分析C++来检测常见编码问题和缺陷的 Visual Studio 中的代码。
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - C/C++ code analysis
@@ -11,12 +11,12 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00dedc25185dfc3a9f12ba645205ce47925003df
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 039ffcd1717dba8ec3c76ae1ca4a691d60851ee5
+ms.sourcegitcommit: 6196d0b7fdcb08ba6d28a8151ad36b8d1139f2cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53825196"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65226064"
 ---
 # <a name="quickstart-code-analysis-for-cc"></a>快速入门：C/C++ 代码分析
 
@@ -35,13 +35,13 @@ ms.locfileid: "53825196"
         > [!NOTE]
         > 当生成的代码所产生的代码分析错误和警告出现在窗体和模板中时，此选项不会取消显示它们。 可以查看和维护窗体或模板的源代码。
 
-3. 若要运行代码分析，每次使用所选的配置生成项目，选择**上生成 C/c + + 时启用代码分析**复选框。 您可以还手动运行代码分析通过打开**分析**菜单，然后选择**上运行代码分析** *ProjectName*。
+3. 若要运行代码分析，每次使用所选的配置生成项目，选择**于 c 语言时启用代码分析 /C++上生成**复选框。 您可以还手动运行代码分析通过打开**分析**菜单，然后选择 **上运行代码分析** *ProjectName*。
 
 4. 在中**运行此规则集**列表中，执行下列操作之一：
 
     - 选择要使用的规则集。
 
-    - 选择**\<浏览...>** 可以指定现有的自定义规则集不在列表中。
+    - 选择 **\<浏览...>** 可以指定现有的自定义规则集不在列表中。
 
     - 定义[自定义规则集](../code-quality/how-to-create-a-custom-rule-set.md)。
 
@@ -66,7 +66,7 @@ Visual Studio 包括两个本机代码标准规则集：
 
 1. 在“解决方案资源管理器”中，选择项目名称。
 
-2. 上**构建**菜单中，选择**上运行代码分析***项目名称*。
+2. 上**构建**菜单中，选择 **上运行代码分析** *项目名称*。
 
    编译项目或解决方案，并运行代码分析。 结果将显示在错误列表。
 
@@ -96,7 +96,7 @@ Visual Studio 包括两个本机代码标准规则集：
 
 可以使用 Visual Studio 中的工作项跟踪功能来记录 bug。 若要使用此功能，必须连接到 Team Foundation Server 的实例。
 
-**若要创建工作项的一个或多个 C/c + + 代码警告**
+**若要创建工作项的一个或多个 C /C++代码警告**
 
 1. 在错误列表中，展开并选择警告
 
@@ -116,4 +116,4 @@ Visual Studio 包括两个本机代码标准规则集：
 
 ## <a name="see-also"></a>请参阅
 
-[C/c + + 代码分析](../code-quality/code-analysis-for-c-cpp-overview.md)
+[为 C 代码分析 /C++](../code-quality/code-analysis-for-c-cpp-overview.md)

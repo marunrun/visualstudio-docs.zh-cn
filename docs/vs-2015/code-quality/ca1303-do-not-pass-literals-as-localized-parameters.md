@@ -1,14 +1,9 @@
 ---
-title: CA1303： 不要传递文本作为本地化的参数 |Microsoft Docs
-ms.custom: ''
+title: CA1303:不传递文本作为本地化的参数 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - Do not pass literals as localized parameters
 - DoNotPassLiteralsAsLocalizedParameters
@@ -21,14 +16,14 @@ caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: d900abe23dab4d950b5790798916fe728a44af4a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: fafcf113f5f40da3bcc4666778330865dcdfb84c
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49886553"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65686805"
 ---
-# <a name="ca1303-do-not-pass-literals-as-localized-parameters"></a>CA1303：不要将文本作为本地化参数传递
+# <a name="ca1303-do-not-pass-literals-as-localized-parameters"></a>CA1303:请不要将文本作为本地化参数传递
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -43,11 +38,11 @@ ms.locfileid: "49886553"
 
  文本字符串作为值传递给参数或属性和一个或多个以下情况下为 true 时，会引发此警告：
 
--   <xref:System.ComponentModel.LocalizableAttribute>参数或属性的特性设置为 true。
+- <xref:System.ComponentModel.LocalizableAttribute>参数或属性的特性设置为 true。
 
--   参数或属性名称包含"Text"、"Message"描述"。
+- 参数或属性名称包含"Text"、"Message"描述"。
 
--   传递给 Console.Write 或 Console.WriteLine 方法将字符串参数名称是"值"format"。
+- 传递给 Console.Write 或 Console.WriteLine 方法将字符串参数名称是"值"format"。
 
 ## <a name="rule-description"></a>规则说明
  在源代码中嵌入的字符串文本是难以进行本地化。
@@ -68,7 +63,4 @@ ms.locfileid: "49886553"
  [!code-vb[FxCop.Globalization.DoNotPassLiterals#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Globalization.DoNotPassLiterals/vb/FxCop.Globalization.DoNotPassLiterals.vb#1)]
 
 ## <a name="see-also"></a>请参阅
- [桌面应用中的资源](http://msdn.microsoft.com/library/8ad495d4-2941-40cf-bf64-e82e85825890)
-
-
-
+ [桌面应用中的资源](https://msdn.microsoft.com/library/8ad495d4-2941-40cf-bf64-e82e85825890)

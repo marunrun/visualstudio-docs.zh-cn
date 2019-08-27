@@ -1,24 +1,19 @@
 ---
-title: 示例 Excel 扩展：TechnologyManager 类 | Microsoft Docs
-ms.custom: ''
+title: 示例 Excel 扩展：TechnologyManager 类 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-test
+ms.topic: conceptual
 ms.assetid: 8a7b760d-b5ac-4451-9593-6ac1a0b95cdb
 caps.latest.revision: 11
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: b23c3e735aba74d86b31afb4b83862d83bcd2bdb
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 64632c175b44a370d7dcaf48e7c0a8cee766a4ab
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49190575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68192511"
 ---
 # <a name="sample-excel-extension-technologymanager-class"></a>示例 Excel 扩展：TechnologyManager 类
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,15 +38,15 @@ ms.locfileid: "49190575"
 ## <a name="methods-to-get-an-element"></a>用于获取元素的方法  
  编码的 UI 测试框架使用一些重要方法，通过提供一个句柄、屏幕上的一个点或不同技术的元素来获取特定于技术的元素。 这些方法的代码是自解释的。 基本方法如下所示：  
   
--   <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.GetFocusedElement%2A?displayProperty=fullName>  
+- <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.GetFocusedElement%2A?displayProperty=fullName>  
   
--   <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.GetElementFromPoint%2A?displayProperty=fullName>  
+- <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.GetElementFromPoint%2A?displayProperty=fullName>  
   
--   <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.GetElementFromWindowHandle%2A?displayProperty=fullName>  
+- <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.GetElementFromWindowHandle%2A?displayProperty=fullName>  
   
--   <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.GetElementFromNativeElement%2A?displayProperty=fullName>  
+- <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.GetElementFromNativeElement%2A?displayProperty=fullName>  
   
--   <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.ConvertToThisTechnology%2A?displayProperty=fullName>  
+- <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.ConvertToThisTechnology%2A?displayProperty=fullName>  
   
 ## <a name="parsequeryid-method"></a>ParseQueryId 方法  
  创建编码的 UI 测试后，用户可以指定测试中部分或全部控件的属性值。 测试框架使用这些属性值创建称为搜索属性的名称/值对，这些属性用来在测试期间查找特定 UI 控件。 所有搜索属性都一起表示技术中每个元素的 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A?displayProperty=fullName> 属性的值，其中包括每个控件。 由于在测试期间一个控件可能要查找几次，因此技术管理器可通过此方法来优化给定控件的搜索属性解析。 此方法也返回 cookie，框架可将此 cookie 用于针对控件的后续搜索。 该方法的此实现使用 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.AndCondition.Match%2A?displayProperty=fullName> 方法来分析搜索属性。  
@@ -72,6 +67,3 @@ ms.locfileid: "49190575"
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>   
  <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A>   
  [扩展编码的 UI 测试和操作录制以支持 Microsoft Excel](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)
-
-
-

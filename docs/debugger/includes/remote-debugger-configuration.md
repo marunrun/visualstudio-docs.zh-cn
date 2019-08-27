@@ -13,18 +13,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: d89dbc0b752c2b8c538ec53769c166b6edbd802f
-ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
+ms.openlocfilehash: 2e5782c49f26925d9eda81f04653b1a20666c6b1
+ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50915109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68149182"
 ---
 1. 在远程计算机上查找和启动**远程调试器**从**启动**菜单。 
    
    如果在远程计算机上没有管理权限，请右击**远程调试器**应用，然后选择**以管理员身份运行**。 否则，只是它正常启动。
 
-   可能有不同版本的*msvsmon.exe*中*x64*， *x32*，或其他文件夹。 请确保启动要调试您的应用程序所需的版本。 
+   如果想要附加到正在运行以管理员身份，或不同的用户下运行的进程帐户 （如 IIS) 中，右键单击**远程调试器**应用，然后选择**以管理员身份运行**. 有关详细信息，请参阅[以管理员身份运行远程调试器](../remote-debugging-errors-and-troubleshooting.md#run-the-remote-debugger-as-an-administrator)。
    
 1. 第一次启动远程调试器 （或之前已配置），**远程调试配置**对话框随即出现。  
   

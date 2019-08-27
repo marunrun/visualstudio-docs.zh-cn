@@ -1,8 +1,7 @@
 ---
-title: IDebugStackFrameSnifferEx::EnumStackFramesEx |Microsoft Docs
+title: IDebugStackFrameSnifferEx::EnumStackFramesEx | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8c34ce267113ae5576a8b3bdca9ac34d4abc00f7
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: 8969c279e4eb2c2966e297317a25a60f12be68a9
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54086966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63005714"
 ---
 # <a name="idebugstackframesnifferexenumstackframesex"></a>IDebugStackFrameSnifferEx::EnumStackFramesEx
 返回当前线程的堆栈帧的枚举器。  

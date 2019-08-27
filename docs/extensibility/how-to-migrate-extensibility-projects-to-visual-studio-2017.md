@@ -3,17 +3,18 @@ title: 如何：将扩展性项目迁移到 Visual Studio 2017 |Microsoft Docs
 ms.date: 11/09/2016
 ms.topic: conceptual
 ms.assetid: 8ca07b00-a3ff-40ab-b647-c0a93b55e86a
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 22fdb969112278fafb636e0162db4ebc93b9a657
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+monikerRange: vs-2017
+ms.openlocfilehash: f5edad198727ea33d3bf293fa0ee1baf3afb5b3b
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53820405"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67823900"
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>如何：将扩展性项目迁移到 Visual Studio 2017
 
@@ -30,14 +31,15 @@ ms.locfileid: "53820405"
 
 所有的 VSIX 项目将需要主版本单向升级到 Visual Studio 2017。
 
-项目文件 (例如 **.csproj*) 将更新：
+项目文件 (例如 * *.csproj*) 将更新：
 
 * MinimumVisualStudioVersion-现在将设置为 15.0
 * OldToolsVersion (如果以前存在)-现在将设置为 14.0
 
 ## <a name="update-the-microsoftvssdkbuildtools-nuget-package"></a>Microsoft.VSSDK.BuildTools NuGet 包更新
 
->**注意：** 如果你的解决方案不引用 Microsoft.VSSDK.BuildTools NuGet 包，则可以跳过此步骤。
+> [!Note]
+> 如果你的解决方案不引用 Microsoft.VSSDK.BuildTools NuGet 包，则可以跳过此步骤。
 
 若要生成新的 VSIX v3 中扩展 （版本 3） 格式，你的解决方案将需要使用新的 VSSDK 生成工具生成。 此功能将安装使用 Visual Studio 2017，但您的 VSIX v2 扩展可能会保存到通过 NuGet 较旧版本的引用。 如果是这样，您将需要手动安装用于你的解决方案的 Microsoft.VSSDK.BuildTools NuGet 包的更新。
 
@@ -45,7 +47,7 @@ ms.locfileid: "53820405"
 
 * 右键单击解决方案并选择**为解决方案管理 NuGet 包**。
 * 导航到**更新**选项卡。
-* 选择**Microsoft.VSSDK.BuildTools （最新版本）**。
+* 选择**Microsoft.VSSDK.BuildTools （最新版本）** 。
 * 按**更新**。
 
 ![VSSDK 生成工具](media/vssdk-build-tools.png)
@@ -54,7 +56,8 @@ ms.locfileid: "53820405"
 
 若要确保 Visual Studio 的用户的安装已运行扩展所需的所有程序集，请扩展清单文件中指定的所有系统必备组件或包。 当用户尝试安装该扩展时，vsixinstaller 找将检查是否已安装所有必备组件。 如果有一些丢失，将提示用户安装缺少的组件作为扩展安装过程的一部分。
 
->**注意：** 至少，所有扩展应都指定 Visual Studio 核心编辑器组件作为必备组件。
+> [!Note]
+> 至少，所有扩展应都指定 Visual Studio 核心编辑器组件作为必备组件。
 
 * 编辑扩展清单文件 (通常称为*source.extension.vsixmanifest*)。
 * 确保`InstallationTarget`包括 15.0。
@@ -80,35 +83,38 @@ ms.locfileid: "53820405"
 
 而不是直接编辑清单 XML，可以使用新**先决条件**将为你更新清单设计器选择必备组件和 XML 的选项卡。
 
->**注意：** 清单设计器将只允许您选择当前的 Visual Studio 实例安装的组件 （不工作负荷或包）。 如果需要添加为工作负荷、 包或当前未安装的组件的必备组件，请直接编辑清单 XML。
+> [!Note]
+> 清单设计器将只允许您选择当前的 Visual Studio 实例安装的组件 （不工作负荷或包）。 如果需要添加为工作负荷、 包或当前未安装的组件的必备组件，请直接编辑清单 XML。
 
 * 打开*source.extension.vsixmanifest [设计]* 文件。
 * 选择**先决条件**选项卡并按**新建**按钮。
 
-  ![VSIX 清单设计器](media/vsix-manifest-designer.png)
+   ![VSIX 清单设计器](media/vsix-manifest-designer.png)
 
 * **添加新先决条件**窗口将打开。
 
-  ![添加 vsix 必备组件](media/add-vsix-prerequisite.png)
+   ![添加 vsix 必备组件](media/add-vsix-prerequisite.png)
 
 * 单击下拉列表**名称**，然后选择所需的必备组件。
-* 如果需要，更新的版本。
+* 如有必要，请更新版本。
 
-  >注意:版本字段将使用当前安装的组件，与范围最多跨越 （但不是包括） 的版本的预填充下一个主要版本的组件。
+   > [!Note]
+   > 版本字段将使用当前安装的组件，与范围最多跨越 （但不是包括） 的版本的预填充下一个主要版本的组件。
 
-  ![添加 roslyn 必备组件](media/add-roslyn-prerequisite.png)
+   ![添加 roslyn 必备组件](media/add-roslyn-prerequisite.png)
 
-* 按**确定**。
+* 按“确定”  。
 
 ## <a name="update-debug-settings-for-the-project"></a>更新项目的调试设置
 
 如果你想要调试你的 Visual Studio 实验实例中的扩展，请确保项目设置**调试** > **启动操作**具有**启动外部程序：** 值设置为*devenv.exe* Visual Studio 2017 安装的文件。
 
-它可能如下所示：*C:\Program 文件 (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe*
+它可能如下所示：*C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe*
 
 ![启动外部程序](media/start-external-program.png)
 
->**注意：** 调试启动操作通常存储在 *。 csproj.user*文件。 此文件通常包括在 *.gitignore*文件，并因此，通常不会保存与其他项目文件时提交到源代码管理。 在这种情况下，如果已经读取你的解决方案从源代码管理全新很可能此项目将具有为启动操作设置的任何值。 使用 Visual Studio 2017 创建的新 VSIX 项目将具有 *。 csproj.user*文件创建包含指向当前 Visual Studio 安装目录的默认值。 但是如果要迁移 v2 VSIX 扩展，则很可能该 *。 csproj.user*文件将包含到上一 Visual Studio 版本的安装目录的引用。 值设置**调试** > **启动操作**将允许正确的 Visual Studio 实验实例启动时尝试调试您的扩展插件。
+> [!Note]
+> 调试启动操作通常存储在 *。 csproj.user*文件。 此文件通常包括在 *.gitignore*文件，并因此，通常不会保存与其他项目文件时提交到源代码管理。 在这种情况下，如果已经读取你的解决方案从源代码管理全新很可能此项目将具有为启动操作设置的任何值。 使用 Visual Studio 2017 创建的新 VSIX 项目将具有 *。 csproj.user*文件创建包含指向当前 Visual Studio 安装目录的默认值。 但是如果要迁移 v2 VSIX 扩展，则很可能该 *。 csproj.user*文件将包含到上一 Visual Studio 版本的安装目录的引用。 值设置**调试** > **启动操作**将允许正确的 Visual Studio 实验实例启动时尝试调试您的扩展插件。
 
 ## <a name="check-that-the-extension-builds-correctly-as-a-vsix-v3"></a>检查扩展构建正确 （作为 VSIX v3)
 
@@ -125,7 +131,8 @@ ms.locfileid: "53820405"
 
 VSIX 将会成功安装在计算机安装所需的所有必备组件使用的测试。
 
->**注意：** 然后再安装任何扩展，请关闭 Visual Studio 的所有实例。
+> [!Note]
+> 然后再安装任何扩展，请关闭 Visual Studio 的所有实例。
 
 尝试安装该扩展：
 
@@ -146,7 +153,8 @@ VSIX 将会成功安装在计算机安装所需的所有必备组件使用的测
 
 等待进程关闭，或手动结束任务。 所列的名称，或在括号中列出的 PID，您可以找到进程。
 
->**注意：** 这些过程将不会自动关闭 Visual Studio 实例正在运行时。 请确保已关闭的情况下在计算机中-包括来自其他用户，使用 Visual Studio 的所有实例，然后继续重试。
+> [!Note]
+> 这些过程将不会自动关闭 Visual Studio 实例正在运行时。 请确保已关闭的情况下在计算机中-包括来自其他用户，使用 Visual Studio 的所有实例，然后继续重试。
 
 ## <a name="check-when-missing-the-required-prerequisites"></a>时缺少所需的先决条件检查
 
@@ -164,7 +172,7 @@ VSIX 将会成功安装在计算机安装所需的所有必备组件使用的测
 
 扩展类型 | 显示名称 | Id
 --- | --- | ---
-编辑器 | Visual Studio 核心编辑器  | Microsoft.VisualStudio.Component.CoreEditor
+编辑器 | Visual Studio 核心编辑器 | Microsoft.VisualStudio.Component.CoreEditor
 Roslyn | C# 和 Visual Basic | Microsoft.VisualStudio.Component.Roslyn.LanguageServices
 WPF | 托管桌面工作负载核心 | Microsoft.VisualStudio.Component.ManagedDesktop.Core
 调试器 | 实时调试器 | Microsoft.VisualStudio.Component.Debugger.JustInTime
@@ -175,7 +183,7 @@ WPF | 托管桌面工作负载核心 | Microsoft.VisualStudio.Component.ManagedD
 
 如果不确定哪个组件包含特定的二进制文件，下载[组件-> 二进制映射电子表格](https://aka.ms/vs2017componentid-binaries)。
 
-### <a name="vs2017-componentbinarymappingxlsx"></a>vs2017 ComponentBinaryMapping.xlsx
+### <a name="vs2017-componentbinarymappingxlsx"></a>vs2017-ComponentBinaryMapping.xlsx
 
 在 Excel 表中有四列：**组件名称**， **ComponentId**，**版本**，并且**二进制 / 文件名称**。  可以使用筛选器来搜索和查找特定组件和二进制文件。
 

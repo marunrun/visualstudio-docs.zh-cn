@@ -1,50 +1,46 @@
 ---
 title: 使用 Blend 创建 UI
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 f1_keywords:
 - Blend.Start.Dev12
 ms.assetid: efd12263-cc2d-4081-a2bb-9a2cc17c442c
 caps.latest.revision: 33
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: a9b1bc090e46ddcb413b3c362af133e10eaaf50c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+manager: jillfra
+ms.openlocfilehash: 7cd7f14158b7dee83767ee9295c8917cadd30fa5
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53883141"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65695936"
 ---
 # <a name="creating-a-ui-by-using-blend-for-visual-studio"></a>使用 Blend for Visual Studio 创建 UI
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Blend for Visual Studio 可帮助设计基于 XAML 的 Windows 桌面、Web、[Windows Phone](http://msdn.microsoft.com/library/windowsphone/develop/jj683071.aspx) 和 [Windows 应用商店](http://msdn.microsoft.com/library/windows/apps/jj129478.aspx)应用。 它提供了与 Visual studio 相同的基本 XAML 设计体验，并添加了可视化设计器，以用于高级任务，例如动画和行为。
+Blend for Visual Studio 可帮助设计基于 XAML 的 Windows 桌面、Web、[Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/jj683071.aspx) 和 [Windows 应用商店](https://msdn.microsoft.com/library/windows/apps/jj129478.aspx)应用。 它提供了与 Visual studio 相同的基本 XAML 设计体验，并添加了可视化设计器，以用于高级任务，例如动画和行为。
 
  Blend for Visual Studio 随附 Visual Studio 提供，无需下载。 但需要在 Visual Studio 安装程序选中，以便在系统上安装。
 
  如果是初次接触 Blend for Visual Studio，则要花一些时间来熟悉工作区的特有功能。 本主题将作用快速教程。
 
 > [!NOTE]
->  若要浏览共享的设计功能，例如美工板、“文档大纲”窗口和“设备”窗口，请参阅[使用 XAML 设计器创建 UI](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)。
+> 若要浏览共享的设计功能，例如美工板、“文档大纲”窗口和“设备”窗口，请参阅[使用 XAML 设计器创建 UI](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)。
 
  **主题内容**：
 
--   [“工具”面板概览](#Tools)
+- [“工具”面板概览](#Tools)
 
--   [“资产”面板概览](#Assets)
+- [“资产”面板概览](#Assets)
 
--   [“对象和时间线”面板概览](#Objects)
+- [“对象和时间线”面板概览](#Objects)
 
--   [“属性”面板概览](#Properties)
+- [“属性”面板概览](#Properties)
 
-##  <a name="Tools"></a>“工具”面板概览
+## <a name="Tools"></a>“工具”面板概览
  可在应用程序中通过 Blend for Visual Studio 的“工具”面板创建和修改对象。 可以通过使用鼠标选择工具并在美工板上进行绘制来创建对象。
 
  ![工具面板](../designers/media/blend5toolspanel.png "Blend5Toolspanel")
@@ -60,7 +56,7 @@ Blend for Visual Studio 可帮助设计基于 XAML 的 Windows 桌面、Web、[W
 
  **观看短片：**![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [工具栏](https://www.youtube.com/watch?v=VkdUJcvoo54&list=PLBDF977B2F1DAB358&index=4)。
 
-##  <a name="Assets"></a>“资产”面板概览
+## <a name="Assets"></a>“资产”面板概览
  可在“资产”面板中找到所有控件，它类似于 Visual Studio 中的“工具箱”。 除控件外，“资产”面板还包括所有可添加到美工板的内容，例如样式、媒体、行为和效果等。
 
  ![资产面板](../designers/media/blend5-assets-panel.png "Blend5_Assets_panel")
@@ -73,7 +69,7 @@ Blend for Visual Studio 可帮助设计基于 XAML 的 Windows 桌面、Web、[W
 |![](../designers/media/b1-4.png "B1_4")|**样式** - 显示资源字典中包含的所有样式。|
 |![](../designers/media/b1-5.png "B1_5")|**说明** - 查看所选资产类别或子类别的说明。|
 
-##  <a name="Objects"></a>“对象和时间线”面板概览
+## <a name="Objects"></a>“对象和时间线”面板概览
  使用此面板可在美工板上组织对象以及（如果需要）对它们进行动画处理。
 
  ![动画模式中的“对象和时间线”面板](../designers/media/b5-object-timeline-animation.png "b5_object_timeline_animation")
@@ -97,13 +93,12 @@ Blend for Visual Studio 可帮助设计基于 XAML 的 Windows 桌面、Web、[W
 |![](../designers/media/b1-15.png "B1_15")|**时间线缩放** - 设置时间线的缩放分辨率。 通过放大，可以编辑动画的更多细节；而通过缩小，可更全面地显示在更长时间段内发生的情况。 如果进行放大，但无法在所需时间位置设置关键帧，请验证设置的对齐分辨率是否足够高。|
 |![标注 16](../designers/media/b5-label-16.png "b5_label_16")|**时间线构成区域** - 查看时间线，并通过拖动关键帧或通过其快捷菜单移动关键帧。|
 
-##  <a name="Properties"></a>“属性”面板概览
+## <a name="Properties"></a>“属性”面板概览
  使用此面板可查看和修改对象的属性。 还可以直接在美工板上设置它们。 若如此操作，则“属性”面板中将反映出属性更改。
 
  ![属性面板](../designers/media/blend5-properties-panel.png "Blend5_properties_panel")
 
  **类别** - 展开和折叠类别的属性。 单击“展开”![](../designers/media/6375953d-074c-421a-bbb3-6f5055b67b64.png "6375953d-074c-421a-bbb3-6f5055b67b64") 和“折叠”![折叠](../designers/media/b5-collapse-button.png "b5_collapse_button") 可显示或隐藏类别详细信息。
-
 
 |                                                                                                         |                                                                                                                                                                                                                                  |
 |---------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

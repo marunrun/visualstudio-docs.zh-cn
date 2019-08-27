@@ -1,14 +1,9 @@
 ---
 title: 使用代码分析规则集编辑器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.ruleseteditor
 ms.assetid: 370c97bf-bb29-4b2f-b9ae-ba125bce7b2d
@@ -16,12 +11,12 @@ caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: cd107f2ac0c377765fda2f62f175d7285eb01bb6
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 57d3c21371cc824573e29657d0b41253e556f4c3
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49269641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68201128"
 ---
 # <a name="working-in-the-code-analysis-rule-set-editor"></a>使用代码分析规则集编辑器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,11 +31,11 @@ ms.locfileid: "49269641"
   
  编辑器中指定的字段组的规则的规则设置的树状结构中显示的规则。 若要添加或删除规则集中的规则，请执行一个或多个以下步骤：  
   
--   选择或清除要添加或删除组中的所有规则的组节点的复选框。 当选择一个组时，所有规则均都设置为**警告**操作。  
+- 选择或清除要添加或删除组中的所有规则的组节点的复选框。 当选择一个组时，所有规则均都设置为**警告**操作。  
   
--   单击**操作**字段的一个组，然后指定要应用于组中的所有规则的操作。  
+- 单击**操作**字段的一个组，然后指定要应用于组中的所有规则的操作。  
   
--   选择或清除各个规则的复选框。 当选择规则的复选框时，该规则设置为警告操作。  
+- 选择或清除各个规则的复选框。 当选择规则的复选框时，该规则设置为警告操作。  
   
 ## <a name="rule-set-editor-toolbar"></a>规则集编辑器工具栏  
  可以使用规则集编辑器的工具栏来分组、 筛选和搜索规则集网格中显示的数据。  
@@ -78,9 +73,6 @@ ms.locfileid: "49269641"
 ## <a name="sorting-and-filtering-rule-sets"></a>排序和筛选规则集  
  从规则集网格的列标题，您可以进行排序和筛选规则的字段的值。  
   
--   若要排序的规则集列表，请单击想要进行排序所依据的字段的列标题。 如果规则集进行分组，每个组均单独进行排序。  
+- 若要排序的规则集列表，请单击想要进行排序所依据的字段的列标题。 如果规则集进行分组，每个组均单独进行排序。  
   
--   若要筛选的字段值的规则集，单击想要筛选所依据的字段的列标题上的筛选器按钮。 选中你想要显示的值的复选框并清除你想要隐藏的值的复选框。
-
-
-
+- 若要筛选的字段值的规则集，单击想要筛选所依据的字段的列标题上的筛选器按钮。 选中你想要显示的值的复选框并清除你想要隐藏的值的复选框。

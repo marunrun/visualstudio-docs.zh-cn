@@ -1,14 +1,9 @@
 ---
-title: 如何： 调试 Code Center Premium 源代码 |Microsoft Docs
-ms.custom: ''
+title: 如何：调试 Code Center Premium 源代码 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -21,13 +16,13 @@ ms.assetid: 18b4769d-b007-4428-9dae-9e72c283ff0d
 caps.latest.revision: 26
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 090326e2bc86aee9acc6e9cee92bc518f64ad63d
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: db9a3e08e14e7fadca6df9e32361c0b042f565e9
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51800180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63438333"
 ---
 # <a name="how-to-debug-with-code-center-premium-source"></a>如何：调试 Code Center Premium 源代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -61,12 +56,12 @@ ms.locfileid: "51800180"
      `src=https://codepremium.msdn.microsoft.com/source/Visual%20Studio%202010/SP1/`  
   
    > [!NOTE]
-   >  请务必包括尾部反斜杠<strong>/</strong> 路径的末尾。  
+   > 请务必包括尾部反斜杠<strong>/</strong> 路径的末尾。  
   
      将这些位置移至列表顶端以确保首先加载这些符号。  
   
    > [!NOTE]
-   >  必须先列出这些 Code Center Premium 位置，以使它们成为首先加载的位置。 在 Visual Studio 2010 中，不能将上述任何服务器移**Microsoft 符号服务器**条目，这就是原因必须清除该复选框。  
+   > 必须先列出这些 Code Center Premium 位置，以使它们成为首先加载的位置。 在 Visual Studio 2010 中，不能将上述任何服务器移**Microsoft 符号服务器**条目，这就是原因必须清除该复选框。  
    > 
    >  若要在调试会话期间从 Microsoft 符号加载符号，请执行下列操作：  
    > 
@@ -83,21 +78,21 @@ ms.locfileid: "51800180"
   
 ### <a name="to-debug-your-source-code-using-attach-to-process"></a>使用“附加到进程”调试源代码  
   
-1.  连接您的智能卡读卡器，并插入您从共享源计划所取得的智能卡。  
+1. 连接您的智能卡读卡器，并插入您从共享源计划所取得的智能卡。  
   
-2.  启动 Visual Studio。  
+2. 启动 Visual Studio。  
   
-3.  打开 Visual Studio 项目。  
+3. 打开 Visual Studio 项目。  
   
-4.  上**工具**菜单上，单击**附加到进程**。  
+4. 上**工具**菜单上，单击**附加到进程**。  
   
-5.  在中**附加到进程**对话框中，单击**选择**。  
+5. 在中**附加到进程**对话框中，单击**选择**。  
   
-6.  在中**选择代码类型**对话框中的**检测以下代码类型**，选择**本机**，**托管**，和**托管 （v4.0)**。  
+6. 在中**选择代码类型**对话框中的**检测以下代码类型**，选择**本机**，**托管**，和**托管 （v4.0)**。  
   
-7.  单击**确定**以关闭**选择代码类型**对话框。  
+7. 单击**确定**以关闭**选择代码类型**对话框。  
   
-8.  在中**可用进程**框中，选择你想要调试的进程。  
+8. 在中**可用进程**框中，选择你想要调试的进程。  
   
 9. 单击 **“附加”**。  
   
@@ -118,36 +113,33 @@ ms.locfileid: "51800180"
     `https://codepremium.msdn.microsoft.com/source/Visual%20Studio%202010/SP1/`  
   
    > [!NOTE]
-   >  请务必包括尾部反斜杠<strong>/</strong> 路径的末尾。  
+   > 请务必包括尾部反斜杠<strong>/</strong> 路径的末尾。  
   
 4. 对于解决方案中的每个托管项目，请执行下列操作  
   
-   1.  在解决方案资源管理器，打开项目的快捷菜单，然后选择**属性**。  
+   1. 在解决方案资源管理器，打开项目的快捷菜单，然后选择**属性**。  
   
-   2.  选择**调试**，然后选择**启用非托管代码调试**。  
+   2. 选择**调试**，然后选择**启用非托管代码调试**。  
   
 ### <a name="to-debug-your-solution-with-code-center-premium-source"></a>调试解决方案的 Code Center Premium 源代码  
   
-1.  在 `Package` 类中，在包构造函数上设置一个断点。  
+1. 在 `Package` 类中，在包构造函数上设置一个断点。  
   
-2.  在中`Debug`菜单上，单击**启动调试**。  
+2. 在中`Debug`菜单上，单击**启动调试**。  
   
-3.  当命中包构造函数中的断点时，请转到**调用堆栈**窗口中，右键单击你想要加载的程序集的堆栈帧符号，然后单击**加载符号**。  
+3. 当命中包构造函数中的断点时，请转到**调用堆栈**窗口中，右键单击你想要加载的程序集的堆栈帧符号，然后单击**加载符号**。  
   
      双击调用帧以加载源代码。  
   
 ### <a name="to-browse-source-code-on-code-center-premium"></a>浏览 Code Center Premium 上的源代码  
   
-1.  连接您的智能卡读卡器，并插入您从共享源计划所取得的智能卡。  
+1. 连接您的智能卡读卡器，并插入您从共享源计划所取得的智能卡。  
   
-2.  启动 Internet Explorer 输入下列 URL：`https://codepremium.msdn.microsoft.com`  
+2. 启动 Internet Explorer 输入下列 URL：`https://codepremium.msdn.microsoft.com`  
   
-3.  浏览找到所需的源代码。  
+3. 浏览找到所需的源代码。  
   
 ## <a name="see-also"></a>请参阅  
  [调试器设置和准备](../debugger/debugger-settings-and-preparation.md)   
  [调试器安全](../debugger/debugger-security.md)   
- [Code Center Premium](http://www.microsoft.com/resources/sharedsource/ccp.mspx)
-
-
-
+ [Code Center Premium](https://www.microsoft.com/en-us/sharedsource/code-center-premium.aspx)

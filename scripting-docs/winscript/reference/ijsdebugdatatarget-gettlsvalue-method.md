@@ -2,7 +2,6 @@
 title: 'Ijsdebugdatatarget:: Gettlsvalue 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -16,12 +15,12 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8f81e9ea6cca9bf54753a496e07903d23bb913fc
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: 458aaab05f274983fdaf69c6e702502974665403
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54095324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62582805"
 ---
 # <a name="ijsdebugdatatargetgettlsvalue-method"></a>IJsDebugDataTarget::GetTlsValue 方法
 有关正在调试的线程，检索指定的 TLS 索引的线程本地存储 (TLS) 槽中的值。  

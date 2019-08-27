@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: fc8eeeb8-6629-4c9b-99f7-2016aee81dff
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 648af91d4b71be65e1f5befef1c3a84225bfabfe
-ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
-ms.translationtype: MTE95
+ms.openlocfilehash: 9b498bdb491e3a15dddf005d43435d84b837fcd0
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54154319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63387743"
 ---
 # <a name="how-to-debug-optimized-code"></a>如何：调试优化的代码
 
@@ -74,10 +74,10 @@ ms.locfileid: "54154319"
 
 8. 如果为“`Custom`”选择了“`Optimization`”选项，现在便可为属性列表中显示的其他任何属性设置选项。
 
-9. 选择配置属性、 C/c + + 项目属性页中，命令行节点，并添加`(` [/Zo](/cpp/build/reference/zo-enhance-optimized-debugging) `)`到**其他选项**文本框。
+9. 选择配置属性 C /C++，命令行节点的项目属性页中，并添加`(` [/Zo](/cpp/build/reference/zo-enhance-optimized-debugging) `)`到**其他选项**文本框。
 
     > [!WARNING]
-    >  `/Zo` 需要 Visual Studio 2013 Update 3 或更高版本。
+    > `/Zo` 需要 Visual Studio 2013 Update 3 或更高版本。
     >
     >  添加 `/Zo` 将禁用[编辑并继续](../debugger/edit-and-continue-visual-csharp.md)。
 

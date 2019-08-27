@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 8823537c-82f0-41f7-bf30-705f0e5e59fd
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1b30675b126f6ed50022f4996cbad9de9226eb59
-ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
-ms.translationtype: MTE95
+ms.openlocfilehash: ceaf74ad2673b0dae80c9529ad082c6ae3187352
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54269912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62824846"
 ---
 # <a name="bind-wpf-controls-to-a-wcf-data-service"></a>将 WPF 控件绑定到 WCF 数据服务
 
@@ -51,7 +50,7 @@ ms.locfileid: "54269912"
 
 事先了解以下概念也很有用，但对于完成本演练并不是必需的：
 
-- WCF 数据服务。 有关详细信息，请参阅[概述](/dotnet/framework/data/wcf/wcf-data-services-overview)。
+- [WCF Data Services](/dotnet/framework/data/wcf/wcf-data-services-overview)。
 
 - [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] 中的数据模型。
 
@@ -61,21 +60,9 @@ ms.locfileid: "54269912"
 
 ## <a name="create-the-service-project"></a>创建服务项目
 
-开始本演练： 为 WCF 数据服务创建一个项目：
+1. 开始本演练： 创建C#或 Visual Basic **ASP.NET Web 应用程序**项目。 将项目命名**AdventureWorksService**。
 
-1. 启动 Visual Studio。
-
-2. 在 **“文件”** 菜单上，指向 **“新建”**，然后单击 **“项目”**。
-
-3. 展开“Visual C#”或“Visual Basic”，然后选择“Web”。
-
-4. 选择“ASP.NET Web 应用程序”项目模板。
-
-5. 在“名称”框中，键入“AdventureWorksService”，然后单击“确定”。
-
-     Visual Studio 创建“AdventureWorksService”项目。
-
-6. 在“解决方案资源管理器”中，右键单击“Default.aspx”，然后选择“删除”。 本演练中不需要此文件。
+2. 在“解决方案资源管理器”中，右键单击“Default.aspx”，然后选择“删除”。 此文件不是本演练所需的。
 
 ## <a name="create-an-entity-data-model-for-the-service"></a>创建实体数据模型服务
 
@@ -230,7 +217,7 @@ ms.locfileid: "54269912"
 
 使用服务代理对象从服务加载销售数据。 然后将返回的数据分配给数据源<xref:System.Windows.Data.CollectionViewSource>WPF 窗口中。
 
-1. 在设计器创建`Window_Loaded`事件处理程序中，双击读取的文本：**MainWindow**
+1. 在设计器创建`Window_Loaded`事件处理程序中，双击读取的文本：**MainWindow**。
 
 2. 将该事件处理程序替换为以下代码。 确保将此代码中的“localhost”地址替换为你的开发计算机上的本地主机地址。
 

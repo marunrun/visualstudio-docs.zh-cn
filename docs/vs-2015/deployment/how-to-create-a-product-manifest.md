@@ -1,14 +1,9 @@
 ---
-title: 如何： 创建产品清单 |Microsoft Docs
-ms.custom: ''
+title: 如何：创建产品清单 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -23,30 +18,30 @@ ms.assetid: 2d316aaa-8bc0-4ce5-90ab-23b3eac0b5dd
 caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: fc5662763e7932cc024169969801c9c321343e32
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 73e2c3f2c9736fd762a9e763827ed641ea5069f7
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49270083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68153823"
 ---
 # <a name="how-to-create-a-product-manifest"></a>如何：创建产品清单
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 若要部署应用程序的先决条件，你可以创建引导程序包。 引导程序包包含一个单一产品清单文件，但是包清单的每个区域设置。 包清单包含包的特定于本地化的方面。 这包括字符串、 最终用户许可协议和语言包。  
   
- 有关产品清单的详细信息，请参阅[如何： 创建程序包清单](../deployment/how-to-create-a-package-manifest.md)。  
+ 有关产品清单的详细信息，请参阅[如何：创建程序包清单](../deployment/how-to-create-a-package-manifest.md)。  
   
 ## <a name="creating-the-product-manifest"></a>创建产品清单  
   
 #### <a name="to-create-the-product-manifest"></a>若要创建产品清单  
   
-1.  创建引导程序包的目录。 此示例使用 C:\package。  
+1. 创建引导程序包的目录。 此示例使用 C:\package。  
   
-2.  在 Visual Studio 中，创建名为的新 XML 文件`product.xml`，并将其保存到 C:\package 文件夹。  
+2. 在 Visual Studio 中，创建名为的新 XML 文件`product.xml`，并将其保存到 C:\package 文件夹。  
   
-3.  添加以下 XML 来描述包的 XML 命名空间和产品代码。 产品代码替换包的唯一标识符。  
+3. 添加以下 XML 来描述包的 XML 命名空间和产品代码。 产品代码替换包的唯一标识符。  
   
     ```  
     <Product  
@@ -54,7 +49,7 @@ ms.locfileid: "49270083"
     ProductCode="Custom.Bootstrapper.Package">  
     ```  
   
-4.  添加 XML 以指定的包具有依赖项。 此示例使用在 Microsoft Windows Installer 3.1 上的依赖项。  
+4. 添加 XML 以指定的包具有依赖项。 此示例使用在 Microsoft Windows Installer 3.1 上的依赖项。  
   
     ```  
     <RelatedProducts>  
@@ -62,7 +57,7 @@ ms.locfileid: "49270083"
       </RelatedProducts>  
     ```  
   
-5.  添加 XML 以列出引导程序包中的所有文件。 此示例使用包文件的名称 CorePackage.msi。  
+5. 添加 XML 以列出引导程序包中的所有文件。 此示例使用包文件的名称 CorePackage.msi。  
   
     ```  
     <PackageFiles>  
@@ -70,16 +65,16 @@ ms.locfileid: "49270083"
     </PackageFiles>  
     ```  
   
-6.  复制或移动到 C:\package 文件夹 CorePackage.msi 文件。  
+6. 复制或移动到 C:\package 文件夹 CorePackage.msi 文件。  
   
-7.  添加 XML 以使用引导程序命令安装包。 引导程序会自动添加 **/qn**将以无提示方式安装的.msi 文件的标志。 如果该文件是.exe，引导程序的使用命令行程序才能运行.exe 文件。 下面的 XML 演示到 CorePackage.msi，任何自变量，但可以将命令行参数放入参数属性。  
+7. 添加 XML 以使用引导程序命令安装包。 引导程序会自动添加 **/qn**将以无提示方式安装的.msi 文件的标志。 如果该文件是.exe，引导程序的使用命令行程序才能运行.exe 文件。 下面的 XML 演示到 CorePackage.msi，任何自变量，但可以将命令行参数放入参数属性。  
   
     ```  
     <Commands>  
         <Command PackageFile="CorePackage.msi" Arguments="">  
     ```  
   
-8.  添加以下 XML 来检查是否安装了此引导程序包。 产品代码替换为可再发行组件的 GUID。  
+8. 添加以下 XML 来检查是否安装了此引导程序包。 产品代码替换为可再发行组件的 GUID。  
   
     ```  
     <InstallChecks>  
@@ -168,6 +163,3 @@ ms.locfileid: "49270083"
   
 ## <a name="see-also"></a>请参阅  
  [产品和包架构引用](../deployment/product-and-package-schema-reference.md)
-
-
-

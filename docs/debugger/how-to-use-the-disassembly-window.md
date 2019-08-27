@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: eaf84dd0-c82d-481b-af51-690b74e7794c
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3af42271e3d08a7910c1eae01bcd6563e46dda1
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: 43214ee122b3aa5c3907b9176631f2dc22c9178e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53922213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62846385"
 ---
-# <a name="view-disassembly-code-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>在 Visual Studio 调试器中查看反汇编代码 (C#，c + +、 Visual Basic 中， F#)
+# <a name="view-disassembly-code-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>在 Visual Studio 调试器中查看反汇编代码 (C#， C++，Visual Basic 中， F#)
 
 “反汇编”窗口显示与编译器所创建的指令对应的汇编代码。 如果你正在调试托管的代码，这些程序集指令对应于在实时 (JIT) 编译器，而非 Microsoft 中间语言 (MSIL) 由 Visual Studio 编译器创建所创建的本机代码。
 

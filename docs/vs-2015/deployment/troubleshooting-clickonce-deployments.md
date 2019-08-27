@@ -1,14 +1,9 @@
 ---
 title: ClickOnce 部署疑难解答 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: troubleshooting
 dev_langs:
 - VB
 - CSharp
@@ -23,13 +18,13 @@ ms.assetid: 58e90012-f68b-4852-8ae9-58e361cbcc32
 caps.latest.revision: 34
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: 20a162a8280854954a58fb0447957a3894325cea
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 26bf92a2401b0355ed149e6b9de20614969812e2
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49284747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62422856"
 ---
 # <a name="troubleshooting-clickonce-deployments"></a>ClickOnce 部署疑难解答
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,7 +33,7 @@ ms.locfileid: "49284747"
   
  在大多数情况下，[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序将下载到用户的计算机并运行而无需任何问题。 有某些情况下，但是，Web 服务器或应用程序配置问题导致无法预料的问题。  
   
- [如何：为 ClickOnce 部署错误设置一个自定义日志文件位置](../deployment/how-to-set-a-custom-log-file-location-for-clickonce-deployment-errors.md)  
+ [如何：设置 ClickOnce 部署错误的自定义日志文件位置](../deployment/how-to-set-a-custom-log-file-location-for-clickonce-deployment-errors.md)  
  介绍如何重定向所有[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]到单个日志文件的计算机上的激活失败。  
   
  [如何：指定 ClickOnce 部署的详细日志文件](../deployment/how-to-specify-verbose-log-files-for-clickonce-deployments.md)  
@@ -59,6 +54,3 @@ ms.locfileid: "49284747"
 ## <a name="see-also"></a>请参阅  
  [ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md)   
  [ndptecclick](../deployment/clickonce-application-manifest.md)
-
-
-

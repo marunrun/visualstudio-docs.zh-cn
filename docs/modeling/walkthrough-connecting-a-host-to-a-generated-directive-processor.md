@@ -1,5 +1,5 @@
 ---
-title: 演练：将主机连接到生成的指令处理器
+title: 连接到生成的指令处理器的主机
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,21 +7,20 @@ helpviewer_keywords:
 - text templates, custom directive hosts
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 3340c9e820103cc286915fe50f105d202eb8c8f8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5cc45f3b2c83b9f54d1912ae7dbfa90a6b552bb3
+ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53988788"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66261870"
 ---
-# <a name="walkthrough-connect-a-host-to-a-generated-directive-processor"></a>演练：连接到生成的指令处理器的主机
+# <a name="walkthrough-connect-a-host-to-a-generated-directive-processor"></a>演练：将主机连接到所生成的指令处理器
 
 您可以编写您自己的主机，用于处理文本模板。 基本的自定义主机进行了演示[演练：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)。 您可以扩展此主机不能添加功能，如生成多个输出文件。
 
@@ -42,7 +41,6 @@ ms.locfileid: "53988788"
 
 若要定义 DSL，必须安装以下组件：
 
-
 | | |
 |-|-|
 | Visual Studio | [http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579) |
@@ -59,22 +57,22 @@ ms.locfileid: "53988788"
 
 1. 创建域特定语言解决方案具有以下特征：
 
-   -   姓名:DSLMinimalTest
+   - 姓名:DSLMinimalTest
 
-   -   解决方案模板：最小语言
+   - 解决方案模板：最小语言
 
-   -   文件扩展名： 最小值
+   - 文件扩展名： 最小值
 
-   -   公司名称：Fabrikam
+   - 公司名称：Fabrikam
 
    有关创建域特定语言解决方案的详细信息，请参阅[如何：创建域特定语言解决方案](../modeling/how-to-create-a-domain-specific-language-solution.md)。
 
-2. 在 **“生成”** 菜单上，单击 **“生成解决方案”**。
+2. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
 
    > [!IMPORTANT]
    > 此步骤中生成指令处理器，并将该密钥为其添加在注册表中。
 
-3. 在“调试”菜单上，单击“启动调试”。
+3. 在“调试”  菜单上，单击“启动调试”  。
 
     此时将打开 Visual Studio 的第二个实例。
 
@@ -90,27 +88,27 @@ ms.locfileid: "53988788"
 
 生成指令处理器后，连接指令处理器和你在中创建自定义文本模板宿主[演练：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)。
 
-1.  打开 CustomHost 解决方案。
+1. 打开 CustomHost 解决方案。
 
-2.  在“项目”菜单上，单击“添加引用”。
+2. 在“项目”菜单上，单击“添加引用”   。
 
      **添加引用**对话框将打开带有 **.NET**显示的选项卡。
 
-3.  添加以下引用：
+3. 添加以下引用：
 
-    -   Microsoft.VisualStudio.Modeling.Sdk.11.0
+    - Microsoft.VisualStudio.Modeling.Sdk.11.0
 
-    -   Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0
+    - Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0
 
-    -   Microsoft.VisualStudio.TextTemplating.11.0
+    - Microsoft.VisualStudio.TextTemplating.11.0
 
-    -   Microsoft.VisualStudio.TextTemplating.Interfaces.11.0
+    - Microsoft.VisualStudio.TextTemplating.Interfaces.11.0
 
-    -   Microsoft.VisualStudio.TextTemplating.Modeling.11.0
+    - Microsoft.VisualStudio.TextTemplating.Modeling.11.0
 
-    -   Microsoft.VisualStudio.TextTemplating.VSHost.11.0
+    - Microsoft.VisualStudio.TextTemplating.VSHost.11.0
 
-4.  在 Program.cs 或 Module1.vb 的顶部，添加以下代码行：
+4. 在 Program.cs 或 Module1.vb 的顶部，添加以下代码行：
 
     ```csharp
     using Microsoft.Win32;
@@ -120,7 +118,7 @@ ms.locfileid: "53988788"
     Imports Microsoft.Win32
     ```
 
-5.  找到的属性代码`StandardAssemblyReferences`，并替换为以下代码：
+5. 找到的属性代码`StandardAssemblyReferences`，并替换为以下代码：
 
     > [!NOTE]
     > 在此步骤中，添加对所需的生成主机将支持的指令处理器的程序集的引用。
@@ -156,7 +154,7 @@ ms.locfileid: "53988788"
     }
     ```
 
-6.  查找函数的代码`ResolveDirectiveProcessor`，并替换为以下代码：
+6. 查找函数的代码`ResolveDirectiveProcessor`，并替换为以下代码：
 
     > [!IMPORTANT]
     > 此代码包含硬编码引用生成的指令处理器你想要连接的名称。 可轻松地使其更多常规，在这种情况下它会查找所有指令处理器列在注册表中，尝试查找匹配项。 在这种情况下，主机将使用任何生成的指令处理器。
@@ -230,9 +228,9 @@ ms.locfileid: "53988788"
             }
     ```
 
-7.  在“文件”菜单上，单击“全部保存”。
+7. 在“文件”菜单上，单击“全部保存”   。
 
-8.  在 **“生成”** 菜单上，单击 **“生成解决方案”**。
+8. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
 
 ## <a name="test-the-custom-host-with-the-directive-processor"></a>测试指令处理器的自定义主机
 
@@ -240,9 +238,9 @@ ms.locfileid: "53988788"
 
 ### <a name="create-a-text-template-to-test-the-custom-host"></a>创建文本模板测试自定义主机
 
-1.  创建一个文本文件，并将其命名`TestTemplateWithDP.tt`。 可以使用任何文本编辑器，如记事本，创建文件。
+1. 创建一个文本文件，并将其命名`TestTemplateWithDP.tt`。 可以使用任何文本编辑器，如记事本，创建文件。
 
-2.  向文本文件中添加以下内容：
+2. 向文本文件中添加以下内容：
 
     > [!NOTE]
     > 文本模板的编程语言不需要以匹配的自定义主机。
@@ -314,15 +312,15 @@ ms.locfileid: "53988788"
     #>
     ```
 
-3.  在代码中，将为\<YOUR 路径 > 中的第一个过程中创建的设计特定于语言的 Sample.min 文件的路径。
+3. 在代码中，将为\<YOUR 路径 > 中的第一个过程中创建的设计特定于语言的 Sample.min 文件的路径。
 
-4.  保存并关闭文件。
+4. 保存并关闭文件。
 
 ### <a name="test-the-custom-host"></a>测试自定义主机
 
-1.  打开一个命令提示符窗口。
+1. 打开一个命令提示符窗口。
 
-2.  为自定义宿主键入可执行文件的路径，但暂不要按 Enter。
+2. 为自定义宿主键入可执行文件的路径，但暂不要按 Enter。
 
      例如，键入：
 
@@ -331,9 +329,9 @@ ms.locfileid: "53988788"
     > [!NOTE]
     > 而不是键入地址，则可以浏览到文件 CustomHost.exe 中**Windows 资源管理器**，然后将文件拖入命令提示符窗口。
 
-3.  键入一个空格。
+3. 键入一个空格。
 
-4.  键入文本模板文件的路径，然后按 Enter。
+4. 键入文本模板文件的路径，然后按 Enter。
 
      例如，键入：
 
@@ -344,11 +342,11 @@ ms.locfileid: "53988788"
 
      自定义主机应用程序运行，并启动文本模板转换过程。
 
-5.  在中**Windows 资源管理器**，浏览到包含文件 TestTemplateWithDP.txt 的文件夹。
+5. 在中**Windows 资源管理器**，浏览到包含文件 TestTemplateWithDP.txt 的文件夹。
 
      该文件夹还包含文件 TestTemplateWithDP1.txt。
 
-6.  打开此文件可以查看文本模板转换的结果。
+6. 打开此文件可以查看文本模板转换的结果。
 
      生成的文本输出的结果显示，并应如下所示：
 
@@ -364,4 +362,4 @@ ms.locfileid: "53988788"
 
 ## <a name="see-also"></a>请参阅
 
-- [演练：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)
+- [演练：创建自定义文本模板主机](../modeling/walkthrough-creating-a-custom-text-template-host.md)

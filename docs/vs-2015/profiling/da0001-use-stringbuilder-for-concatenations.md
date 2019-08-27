@@ -1,14 +1,9 @@
 ---
-title: DA0001：使用 StringBuilder 进行串联 | Microsoft Docs
-ms.custom: ''
+title: DA0001：将 StringBuilder 用于串联 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 f1_keywords:
 - vs.performance.DA0001
 - vs.performance.rules.DAUseStringBuilder
@@ -18,18 +13,18 @@ ms.assetid: a7cc7613-ad5f-48c8-bd2b-56372cc12dfc
 caps.latest.revision: 19
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 4cbfbabc96273f6a39a69888025b80d12103dd4b
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 386eda282364ccc4ab9841f126bb10944477df18
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51803313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68202250"
 ---
-# <a name="da0001-use-stringbuilder-for-concatenations"></a>DA0001：使用 StringBuilder 进行串联
+# <a name="da0001-use-stringbuilder-for-concatenations"></a>DA0001：将 StringBuilder 用于串联
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 2017 的最新文档，请参阅[DA0001： 使用 StringBuilder 进行串联](https://docs.microsoft.com/visualstudio/profiling/da0001-use-stringbuilder-for-concatenations)docs.microsoft.com 上。  
+Visual Studio 的最新文档，请参阅[DA0001:使用 StringBuilder 进行串联](https://docs.microsoft.com/visualstudio/profiling/da0001-use-stringbuilder-for-concatenations)。  
   
 |||  
 |-|-|  
@@ -51,4 +46,3 @@ Visual Studio 2017 的最新文档，请参阅[DA0001： 使用 StringBuilder �
  双击“错误列表”窗口中的消息，导航到采样分析数据的[函数详细信息视图](../profiling/function-details-view.md)。 查找程序中使用字符串串联最频繁的部分。 请对复杂的字符串操作使用 StringBuilder 类，包括频繁使用的字符串串联操作。  
   
  若要深入了解如何使用字符串，请参阅 Microsoft 模式和做法库中[第 5 章 - 提高托管代码性能](http://go.microsoft.com/fwlink/?LinkId=177817)的[字符串操作](http://go.microsoft.com/fwlink/?LinkId=177816)部分。
-

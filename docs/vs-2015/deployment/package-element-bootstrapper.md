@@ -1,14 +1,9 @@
 ---
 title: '&lt;包&gt;元素 （引导程序） |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -20,13 +15,13 @@ ms.assetid: ecd06658-ad02-4440-bccd-88437b7fb816
 caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: b605d891fac3dceae77eb9bd3a1c0707b3fd6650
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 62c19953d1c4d82c0040e728fc2c2645c68589c9
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49298670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68157682"
 ---
 # <a name="ltpackagegt-element-bootstrapper"></a>&lt;包&gt;元素 （引导程序）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -153,8 +148,8 @@ ms.locfileid: "49298670"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`Culture`|必须的。 定义用于此包，确定要使用的语言的区域性。 此属性是一个项`Strings`元素，它在安装过程中列出的产品名称和错误消息的特定于区域性的字符串。|  
-|`Name`|必须的。 如向开发人员工具中显示的包的名称[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。 此属性是一个项`Strings`元素，它应包含`String`具有元素`Name`和`Culture`属性设置为匹配`Name`并`Culture`的属性`Package`。|  
+|`Culture`|必需。 定义用于此包，确定要使用的语言的区域性。 此属性是一个项`Strings`元素，它在安装过程中列出的产品名称和错误消息的特定于区域性的字符串。|  
+|`Name`|必需。 如向开发人员工具中显示的包的名称[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。 此属性是一个项`Strings`元素，它应包含`String`具有元素`Name`和`Culture`属性设置为匹配`Name`并`Culture`的属性`Package`。|  
 |`LicenseAgreement`|可选。 在分发包，其中包含最终用户许可协议 (EULA) 中指定的文件的名称。  此文件可以是纯文本 (.txt) 或丰富文本格式。 (.rtf)|  
   
 ## <a name="example"></a>示例  
@@ -197,6 +192,3 @@ ms.locfileid: "49298670"
   
 ## <a name="see-also"></a>请参阅  
  [产品和包架构引用](../deployment/product-and-package-schema-reference.md)
-
-
-

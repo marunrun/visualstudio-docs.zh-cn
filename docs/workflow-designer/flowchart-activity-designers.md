@@ -2,19 +2,18 @@
 title: 工作流设计器-流程图活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 ms.assetid: 8b7b4aa6-d27d-45c8-87c2-641440d38afc
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1e07cb0de11136649aabc7937a6cc2bcb1ceacc
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 4f3b816c0e486eeaad49bac0b0054d7d3c2bff9b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53857875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62949638"
 ---
 # <a name="flowchart-activity-designers"></a>流程图活动设计器
 

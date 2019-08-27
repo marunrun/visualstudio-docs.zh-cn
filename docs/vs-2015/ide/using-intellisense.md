@@ -1,14 +1,9 @@
 ---
 title: 使用 IntelliSense | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vc.tools.intellisense
 helpviewer_keywords:
@@ -29,13 +24,13 @@ ms.assetid: 9fdb489b-8b46-4b92-9ccc-c8f8cc184081
 caps.latest.revision: 33
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 586a0b31166f3b7696865e54f7d2df9c415315f9
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: bb859fe5e66dbfcc1f43dfff3c0744c84066054b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49197181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68158342"
 ---
 # <a name="using-intellisense"></a>Using IntelliSense
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -53,14 +48,14 @@ IntelliSense 是许多功能的总称：列出成员、参数信息、快速信�
   
  ![Visual Studio 成员列表](../ide/media/vs2015-intellisense.png "vs2015_Intellisense")  
   
- 可以通过键入 Ctrl+J、单击“编辑/IntelliSense/列出成员”或单击编辑器工具栏上的“列出成员”按钮，手动调用“列出成员”功能。 如果在空行上或可识别范围之外调用该功能，列表中会显示全局命名空间中的符号。  
+ 可以通过键入 Ctrl+J、单击“编辑/IntelliSense/列出成员”或单击编辑器工具栏上的“列出成员”按钮，手动调用“列出成员”功能    。 如果在空行上或可识别范围之外调用该功能，列表中会显示全局命名空间中的符号。  
   
- 要默认关闭“列出成员”（以便仅在明确调用后显示），请转到“工具/选项/所有语言”，然后取消选择“自动列出成员”。 如果只希望针对特定语言关闭“列出成员”，请转到该语言的“常规”设置。  
+ 要默认关闭“列出成员”（以便仅在明确调用后显示），请转到“工具/选项/所有语言”，然后取消选择“自动列出成员”   。 如果只希望针对特定语言关闭“列出成员”，请转到该语言的“常规”设置  。  
   
- 你也可以更改为建议模式。在该模式下，只会将你键入的文本插入到代码中。 例如，如果输入不在此列表中的标识符，然后按 TAB，则在完成模式下，该输入会取代类型化标识符。 要在补全模式与建议模式间切换，请按 Ctrl+Alt+空格键或单击“编辑/IntelliSense/切换补全模式”。  
+ 你也可以更改为建议模式。在该模式下，只会将你键入的文本插入到代码中。 例如，如果输入不在此列表中的标识符，然后按 TAB，则在完成模式下，该输入会取代类型化标识符。 要在补全模式与建议模式间切换，请按 Ctrl+Alt+空格键或单击“编辑/IntelliSense/切换补全模式”  。  
   
 ## <a name="parameter-info"></a>参数信息  
- “参数信息”提供方法、特性泛型类型参数（在 C# 中）或模板（在 C++ 中）中所需的参数数目、参数名称和参数类型的相关信息。  
+ “参数信息”提供方法、特性泛型形参（在 C# 中）或模板（在 C++ 中）中所需的参数数目、参数名称和参数类型的相关信息。  
   
  以粗体显示的参数指示键入函数时所需的下一参数。 对于重载函数，可以使用向上和向下键查看函数重载的替代参数信息。  
   
@@ -68,28 +63,28 @@ IntelliSense 是许多功能的总称：列出成员、参数信息、快速信�
   
  当用 XML 文档注释批注函数和参数时，相关注释也将显示为“参数信息”。 有关详细信息，请参阅[提供 XML 代码注释](../ide/supplying-xml-code-comments.md)。  
   
- 可以通过单击“编辑 IntelliSense/参数信息”、键入 Ctrl+Shift+空格键或单击编辑器工具栏上的“参数信息”，手动调用“参数信息”。  
+ 可以通过单击“编辑 IntelliSense/参数信息”、键入 Ctrl+Shift+空格键或单击编辑器工具栏上的“参数信息”，手动调用“参数信息”   。  
   
 ## <a name="quick-info"></a>快速信息  
  “快速信息”可显示代码中任意标识符的完整声明。  
   
  ![Visual Studio 快速信息](../ide/media/vs2015-quick-info.png "VS2015_Quick_info")  
   
- 从“列出成员”框选择成员时也会显示“快速信息”。  
+ 从“列出成员”框选择成员时也会显示“快速信息”  。  
   
  ![C&#35; 代码文件中的参数信息](../ide/media/vs2015-paraminfo.png "VS2015_ParamInfo")  
   
- 可以通过单击“编辑/IntelliSense/快速信息”、键入 Ctrl+I 或单击编辑器工具栏上的“快速信息”按钮，手动调用“快速信息”。  
+ 可以通过单击“编辑/IntelliSense/快速信息”、键入 Ctrl+I 或单击编辑器工具栏上的“快速信息”按钮，手动调用“快速信息”   。  
   
  对于重载函数，Intellisense 可能不会显示重载的所有形式的信息。  
   
- 在 C++ 中，将“工具/选项/文本编辑器/C/C++/高级/自动快速信息”设置为 `false`，即可关闭“快速信息”。  
+ 在 C++ 中，将“工具/选项/文本编辑器/C/C++/高级/自动快速信息”设置为 `false`，即可关闭“快速信息”  。  
   
 ## <a name="complete-word"></a>完成单词  
- 输入足以区分变量名、命令名或函数名的字符后，“完成单词”可以将剩余部分补充完整。 可以通过单击“编辑/IntelliSense/补全单词”、按 Ctrl+空格键或单击编辑器工具栏上的“补全单词”按钮，调用“补全单词”。  
+ 输入足以区分变量名、命令名或函数名的字符后，“完成单词”可以将剩余部分补充完整。 可以通过单击“编辑/IntelliSense/补全单词”、按 Ctrl+空格键或单击编辑器工具栏上的“补全单词”按钮，调用“补全单词”   。  
   
 ## <a name="intellisense-options"></a>IntelliSense 选项  
- IntelliSense 选项默认为启用状态。 要关闭它们，可以单击“工具/选项/文本编辑器”并取消选择“参数信息”。如果不需要“列出成员”功能，可以取消选择“自动列出成员”。  
+ IntelliSense 选项默认为启用状态。 要关闭它们，可以单击“工具/选项/文本编辑器”并取消选择“参数信息”。如果不需要“列出成员”功能，可以取消选择“自动列出成员”    。  
   
 ## <a name="troubleshooting-intellisense"></a>IntelliSense 疑难解答  
  在某些情况下，IntelliSense 选项可能不会像预期那样工作。  
@@ -106,11 +101,8 @@ MessageBox( hWnd, "String literal|") )
   
  **自动选项关闭。** 默认情况下，IntelliSense 会自动运行，但你可以禁用它。 即使禁用了自动语句完成，仍然可以调用 IntelliSense 功能。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Basic 特定的 IntelliSense](../ide/visual-basic-specific-intellisense.md)   
  [Visual C# IntelliSense](../ide/visual-csharp-intellisense.md)   
  [JavaScript IntelliSense](../ide/javascript-intellisense.md)   
  [提供 XML 代码注释](../ide/supplying-xml-code-comments.md)
-
-
-

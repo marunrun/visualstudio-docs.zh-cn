@@ -1,20 +1,19 @@
 ---
 title: 筛选节点
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 ms.assetid: f7cae2dc-e9a7-49d4-8be5-58b79868624e
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ba6246f68505a4b1d0a93011b46e32918779dfa2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 95a8bfeedea11060cbf3a0aefbf2c11a30230060
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53836892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62845063"
 ---
 # <a name="filter-nodes"></a>筛选节点
 

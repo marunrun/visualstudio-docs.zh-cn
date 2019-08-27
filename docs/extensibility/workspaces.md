@@ -2,18 +2,17 @@
 title: 在 Visual Studio 中的工作区 |Microsoft Docs
 ms.date: 02/21/2018
 ms.topic: conceptual
-ms.assetid: 3489592a-dc0c-4cd3-9b08-cd367626980a
 author: vukelich
 ms.author: svukel
 manager: viveis
 ms.workload:
 - vssdk
-ms.openlocfilehash: 406d55b773a586d5cb0128599e225dabbadf21d3
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 011781b434c4d005e473c5f97c60a9269dc5d034
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53876898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62952758"
 ---
 # <a name="workspaces"></a>工作区
 
@@ -176,9 +175,21 @@ private static string MakeRootedUnderWorkingFolder(IWorkspace workspace, string 
 
 ### <a name="the-sourceexplorerpackage-package-did-not-load-correctly"></a>SourceExplorerPackage 包未正确加载
 
-工作区可扩展性是很大程度 MEF 基于，并组合错误将导致托管打开文件夹时无法加载包。 例如，如果扩展将导出的类型`ExportFileContextProviderAttribute`，但该类型仅实现`IWorkspaceProviderFactory<IFileContextActionProvider>`，尝试在 Visual Studio 中打开文件夹时，将会出错。 错误详细信息可在 _%LOCALAPPDATA%\Microsoft\VisualStudio\15.0_id\ComponentModelCache\Microsoft.VisualStudio.Default.err_。 解决任何错误由您的扩展插件实现的类型。
+工作区可扩展性是很大程度 MEF 基于，并组合错误将导致托管打开文件夹时无法加载包。 例如，如果扩展将导出的类型`ExportFileContextProviderAttribute`，但该类型仅实现`IWorkspaceProviderFactory<IFileContextActionProvider>`，尝试在 Visual Studio 中打开文件夹时，将会出错。
+
+::: moniker range="vs-2017"
+
+错误详细信息可在 _%LOCALAPPDATA%\Microsoft\VisualStudio\15.0_id\ComponentModelCache\Microsoft.VisualStudio.Default.err_。 解决任何错误由您的扩展插件实现的类型。
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+错误详细信息可在 _%LOCALAPPDATA%\Microsoft\VisualStudio\16.0_id\ComponentModelCache\Microsoft.VisualStudio.Default.err_。 解决任何错误由您的扩展插件实现的类型。
+
+::: moniker-end
 
 ## <a name="next-steps"></a>后续步骤
 
-* [文件上下文](workspace-file-contexts.md)-文件上下文提供程序打开的文件夹的工作区将代码智能。 
+* [文件上下文](workspace-file-contexts.md)-文件上下文提供程序打开的文件夹的工作区将代码智能。
 * [索引](workspace-indexing.md)-工作区索引收集和保留的工作区的信息。

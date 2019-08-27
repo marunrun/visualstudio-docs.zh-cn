@@ -1,7 +1,6 @@
 ---
 title: CA1307:指定 StringComparison
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - CA1307
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 9b0d5e71-1683-4a0d-bc4a-68b2fbd8af71
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e1a4ac50cd189368bcc59aaff6b02b6f4b639a6b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ce2da2c1ff5b2f74d8b4d6341050c1895b68955a
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53908926"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68922298"
 ---
 # <a name="ca1307-specify-stringcomparison"></a>CA1307:指定 StringComparison
 
@@ -29,23 +28,23 @@ ms.locfileid: "53908926"
 |TypeName|SpecifyStringComparison|
 |CheckId|CA1307|
 |类别|Microsoft.Globalization|
-|是否重大更改|非换行|
+|是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 字符串比较运算使用方法重载，不会设置<xref:System.StringComparison>参数。
+字符串比较操作使用未设置<xref:System.StringComparison>参数的方法重载。
 
 ## <a name="rule-description"></a>规则说明
- 许多字符串运算，最重要<xref:System.String.Compare%2A>并<xref:System.String.Equals%2A>方法，提供一个重载接受<xref:System.StringComparison>枚举作为参数的值。
+许多字符串操作 ( <xref:System.String.Compare%2A>和<xref:System.String.Equals%2A>方法) 都提供接受<xref:System.StringComparison>枚举值作为参数的重载。
 
- 每当重载存在接受<xref:System.StringComparison>参数，而不是不接受此参数的重载，则应使用。 通过显式设置此参数，你的代码通常是进行更清晰易懂、 更易于维护。
+只要存在采用<xref:System.StringComparison>参数的重载, 就应该使用它而不是不采用此参数的重载。 通过显式设置此参数, 你的代码通常会更清晰且更易于维护。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要解决此规则的冲突，请将字符串比较方法更改为接受的重载<xref:System.StringComparison>枚举用作参数。 例如： 更改`String.Compare(str1, str2)`到`String.Compare(str1, str2, StringComparison.Ordinal)`。
+若要修复与此规则的冲突, 请将字符串比较方法更改为接受<xref:System.StringComparison>枚举作为参数的重载。 例如: 将更改`String.Compare(str1, str2)`为`String.Compare(str1, str2, StringComparison.Ordinal)`。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 它可以安全地禁止显示此规则的警告，当库或应用程序适用于有限的本地用户，并因此不会本地化。
+如果库或应用程序适用于受限制的本地受众, 则可以安全地禁止显示此规则发出的警告, 而不会对其进行本地化。
 
 ## <a name="see-also"></a>请参阅
 
 - [全球化警告](../code-quality/globalization-warnings.md)
-- [CA1309:使用序号 StringComparison](../code-quality/ca1309-use-ordinal-stringcomparison.md)
+- [CA1309使用序号 StringComparison](../code-quality/ca1309-use-ordinal-stringcomparison.md)

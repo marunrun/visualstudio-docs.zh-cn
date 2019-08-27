@@ -1,14 +1,9 @@
 ---
 title: 内核视图缩放工具 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.cv.cores.zoom
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: f7d48602-ba32-4487-b51a-89e596124108
 caps.latest.revision: 10
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: d3d902c2642171fdfa27f20a764c5414daa3ccf3
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 28e307bd91d468e0efff840d2b6f469b000f243f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51727793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68183784"
 ---
 # <a name="cores-view-zoom-tool"></a>内核视图缩放工具
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,12 +27,9 @@ ms.locfileid: "51727793"
   
 ## <a name="other-ways-to-zoom"></a>其他缩放方式  
   
--   放大：通过拖动在时间线视图中选择一个区域。 释放鼠标按钮后，时间线视图会放大选定的范围。  
+- 放大：通过拖动在时间线视图中选择一个区域。 释放鼠标按钮后，时间线视图会放大选定的范围。  
   
--   放大和缩小：将鼠标悬停在时间线上，然后按住 CTRL 并移动鼠标滚轮。  
+- 放大和缩小：将鼠标悬停在时间线，然后按 CTRL，并移动鼠标滚轮。  
   
 ## <a name="see-also"></a>请参阅  
  [内核视图](../profiling/cores-view.md)
-
-
-

@@ -1,20 +1,19 @@
 ---
 title: 自定义项目和项模板
 ms.date: 01/02/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - customizing templates [Visual Studio]
 - Visual Studio templates, customizing
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 8f52a948158ec4a48ee3c521c04c65f875156823
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 7e80bf422906c2b89e75462938d736fd3a0e5a41
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53864525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62978141"
 ---
 # <a name="customize-project-and-item-templates"></a>自定义项目和项模板
 
@@ -26,15 +25,15 @@ ms.locfileid: "53864525"
 
 - 修改并将现有模板导出为用户模板。
 
-   有关更多信息，请参见[如何：更新现有模板](../ide/how-to-update-existing-templates.md)。
+   有关详细信息，请参阅[如何：更新现有模板](../ide/how-to-update-existing-templates.md)。
 
 - 将自定义参数传递给模板以替换现有值。
 
-   有关更多信息，请参见[如何：替换模板中的参数](../ide/how-to-substitute-parameters-in-a-template.md)。
+   有关详细信息，请参阅[如何：替换模板中的参数](../ide/how-to-substitute-parameters-in-a-template.md)。
 
 - 自定义根据模板创建项目的向导。
 
-   有关更多信息，请参见[如何：使用向导来处理项目模板（扩展性）](../extensibility/how-to-use-wizards-with-project-templates.md)。
+   有关详细信息，请参阅[如何：使用向导来处理项目模板（扩展性）](../extensibility/how-to-use-wizards-with-project-templates.md)。
 
 ## <a name="see-also"></a>请参阅
 

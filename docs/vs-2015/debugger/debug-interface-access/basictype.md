@@ -1,14 +1,9 @@
 ---
-title: BasicType |Microsoft Docs
-ms.custom: ''
+title: BasicType | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 19ae53ba-cd6e-47b6-9f94-27ae663ce955
 caps.latest.revision: 10
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 633fb76a8177f239b988554a5d15bee09e00c2d9
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 38de89b9774ac20f67b91e4ba864534122f4cdb0
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51745022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62580832"
 ---
 # <a name="basictype"></a>BasicType
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -63,16 +58,16 @@ enum BasicType { 
  基本类型是`void`。  
   
  btChar  
- 基本类型是`char`（C/c + + 类型）。  
+ 基本类型是`char`(C /C++类型)。  
   
  btWChar  
  基本类型是宽 (Unicode) 字符 (`WCHAR`)。  
   
  btInt  
- 基本类型是`signed int`（C/c + + 类型）。  
+ 基本类型是`signed int`(C /C++类型)。  
   
  btUInt  
- 基本类型是`unsigned int`（C/c + + 类型）。  
+ 基本类型是`unsigned int`(C /C++类型)。  
   
  btFloat  
  基本类型是一个浮点数 (`FLOAT`)。  
@@ -84,10 +79,10 @@ enum BasicType { 
  基本类型是一个布尔值 (`BOOL`)。  
   
  btLong  
- 基本类型是`long int`（C/c + + 类型）。  
+ 基本类型是`long int`(C /C++类型)。  
   
  btULong  
- 基本类型是`unsigned long int`（C/c + + 类型）。  
+ 基本类型是`unsigned long int`(C /C++类型)。  
   
  btCurrency  
  基本类型是货币。  
@@ -118,8 +113,5 @@ enum BasicType { 
   
 ## <a name="see-also"></a>请参阅  
  [枚举和结构](../../debugger/debug-interface-access/enumerations-and-structures.md)   
- [Idiasymbol:: Get_basetype](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)   
+ [IDiaSymbol::get_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)   
  [IDiaSymbol::get_length](../../debugger/debug-interface-access/idiasymbol-get-length.md)
-
-
-

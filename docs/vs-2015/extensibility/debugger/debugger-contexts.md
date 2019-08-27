@@ -1,37 +1,32 @@
 ---
 title: 调试器上下文 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], contexts
 ms.assetid: 79808036-b680-4e4c-9c61-4ed43aa11323
 caps.latest.revision: 10
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: b39e53ab06d3ce1633a77fc1fe324206f144dda1
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 771a3cd8ae25173f3033b3a3229e516570f5dedc
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51793537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68200635"
 ---
 # <a name="debugger-contexts"></a>调试器上下文
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 在[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]调试，调试引擎 (DE) 同时在内运行多个不同的上下文中，按如下所示：  
   
--   代码上下文，其中描述了用于控制程序执行流中的当前位置。  
+- 代码上下文，其中描述了用于控制程序执行流中的当前位置。  
   
--   文档上下文或位置，其中描述了源文档中的当前位置。  
+- 文档上下文或位置，其中描述了源文档中的当前位置。  
   
--   表达式计算上下文描述中的表达式求值将发生的上下文。  
+- 表达式计算上下文描述中的表达式求值将发生的上下文。  
   
 ## <a name="in-this-section"></a>本节内容  
  [代码上下文](../../extensibility/debugger/code-context.md)  
@@ -55,4 +50,3 @@ ms.locfileid: "51793537"
   
  [调试任务](../../extensibility/debugger/debugging-tasks.md)  
  包含指向不同的调试任务，如启动程序和计算表达式。
-

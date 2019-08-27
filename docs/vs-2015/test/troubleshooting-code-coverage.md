@@ -1,24 +1,19 @@
 ---
 title: 代码覆盖率疑难解答 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-test
+ms.topic: troubleshooting
 ms.assetid: 26de91b8-45e3-4976-a20e-a3bd1942ddcb
 caps.latest.revision: 13
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: f7df2f4c83a61c62a7774bea475d54c3deea4c47
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 926c9f329ccea8e38c60d4ca05cb1542df725414
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49306041"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67825881"
 ---
 # <a name="troubleshooting-code-coverage"></a>代码覆盖率疑难解答
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,7 +21,7 @@ ms.locfileid: "49306041"
 Visual Studio 中的代码覆盖率分析工具可收集本机和托管程序集（.dll 或 .exe 文件）的数据。 但是，在某些情况下，“代码覆盖率结果”窗口显示类似于“生成了空结果集:...”的错误发生此错误有几个可能的原因。 本主题旨在帮助解决这些问题。  
   
 ## <a name="what-you-should-see"></a>你应该看到的结果  
- 如果选择了“测试”菜单上“分析代码覆盖率”命令，并且生成和测试成功运行，则应该在“代码覆盖率”窗口中看到结果的列表。 你可能必须展开项目以查看详细信息。  
+ 如果选择了“测试”菜单上“分析代码覆盖率”  命令，并且生成和测试成功运行，则应该在“代码覆盖率”窗口中看到结果的列表。 你可能必须展开项目以查看详细信息。  
   
  ![着色的代码覆盖率结果](../test/media/codecoverage1.png "CodeCoverage1")  
   
@@ -39,20 +34,20 @@ Visual Studio 中的代码覆盖率分析工具可收集本机和托管程序集
   
 ### <a name="no-tests-were-executed"></a>未执行测试  
  分析  
- 检查输出窗口。 在“显示输出来源”下拉列表中，选择“测试”。 查看是否记录了任何警告或错误。  
+ 检查输出窗口。 在“显示输出来源”  下拉列表中，选择“测试”  。 查看是否记录了任何警告或错误。  
   
  说明  
  代码覆盖率分析在测试运行过程中完成。 它只包含测试运行时加载到内存中的程序集。 如果未执行任何测试，则没有任何关于代码覆盖率的信息可供报告。  
   
  解决方法  
- 在测试资源管理器中，选择“全部运行”以验证测试是否成功运行。 在使用“分析代码覆盖率”前修复所有错误。  
+ 在测试资源管理器中，选择“全部运行”  以验证测试是否成功运行。 在使用“分析代码覆盖率”  前修复所有错误。  
   
 ### <a name="youre-looking-at-a-previous-result"></a>你看到的是前一个结果  
  在修改并重新运行测试时，前一个代码覆盖率结果可能仍是可见的，包括来自上次运行的代码着色。  
   
-1.  运行“分析代码覆盖率”。  
+1. 运行“分析代码覆盖率”。  
   
-2.  确保选择了“代码覆盖率结果”窗口中的最新结果集。  
+2. 确保选择了“代码覆盖率结果”窗口中的最新结果集。  
   
 ### <a name="pdb-symbol-files-are-unavailable"></a>.pdb（符号）文件不可用  
  分析  
@@ -64,7 +59,7 @@ Visual Studio 中的代码覆盖率分析工具可收集本机和托管程序集
  .pdb 文件必须从与 .dll 或 .exe 文件同一个生成中产生。  
   
  解决方法  
- 确保你的生成设置产生了 .pdb 文件。 如果 .pdb 文件在项目生成时未更新，则打开项目属性，选择“生成”页，选择“高级”，然后查看“调试信息”。  
+ 确保你的生成设置产生了 .pdb 文件。 如果 .pdb 文件在项目生成时未更新，则打开项目属性，选择“生成”  页，选择“高级”  ，然后查看“调试信息”  。  
   
  如果 .pdb 与 .dll 或 .exe 文件在不同的位置，请将 .pdb 文件复制到相同的目录。 也可以配置代码覆盖率引擎以在另一个位置搜索 .pdb 文件。 有关详细信息，请参阅[自定义代码覆盖率分析](../test/customizing-code-coverage-analysis.md)。  
   
@@ -95,7 +90,7 @@ Visual Studio 中的代码覆盖率分析工具可收集本机和托管程序集
  验证程序集不是从本机映像缓存加载的。  
   
  说明  
- 出于性能原因，将不分析本机映像程序集。 有关详细信息，请参阅 [Ngen.exe（本机映像生成器）](http://msdn.microsoft.com/library/44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66)。  
+ 出于性能原因，将不分析本机映像程序集。 有关详细信息，请参阅 [Ngen.exe（本机映像生成器）](https://msdn.microsoft.com/library/44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66)。  
   
  解决方法  
  使用 MSIL 版本的程序集。 不使用 NGen 处理它。  
@@ -112,17 +107,17 @@ Visual Studio 中的代码覆盖率分析工具可收集本机和托管程序集
  解决方法  
  有两种可能的错误类型：  
   
--   **XML 错误**  
+- **XML 错误**  
   
      在 Visual Studio XML 编辑器中打开 .runsettings 文件。 查找错误提示。  
   
--   **正则表达式错误**  
+- **正则表达式错误**  
   
-     文件中的每个字符串都是正则表达式。 检查每个字符串中是否存在错误，尤其是查找：  
-  
-    -   不匹配的括号 (...) 或非转义括号 \\(...\\)。 如果要在搜索字符串中匹配某个括号，则必须对其进行转义。 例如，若要匹配某个函数，请使用：`.*MyFunction\(double\)`  
-  
-    -   表达式开头有星号或加号。 若要匹配任意字符串，请使用句点后跟星号：`.*`  
+  文件中的每个字符串都是正则表达式。 检查每个字符串中是否存在错误，尤其是查找：  
+
+  - 不匹配的括号 (...) 或非转义括号 \\(...\\)。 如果要在搜索字符串中匹配某个括号，则必须对其进行转义。 例如，若要匹配某个函数，请使用：`.*MyFunction\(double\)`  
+
+  - 表达式开头有星号或加号。 若要匹配任意字符串，请使用句点后跟星号：`.*`  
   
 ### <a name="custom-runsettings-file-with-incorrect-exclusions"></a>使用了错误排除的自定义 .runsettings 文件  
  分析  
@@ -152,6 +147,3 @@ Visual Studio 中的代码覆盖率分析工具可收集本机和托管程序集
   
 ## <a name="see-also"></a>请参阅  
  [使用代码覆盖率确定所测试的代码量](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)
-
-
-

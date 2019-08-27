@@ -1,14 +1,9 @@
 ---
 title: 项目元素 （Visual Studio 模板） |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#Project
 helpviewer_keywords:
@@ -17,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 1da15ea6-26e2-462b-a03e-584ef4996579
 caps.latest.revision: 17
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 07700501ae2a76337fed499aeb0a66b8b19dbeba
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: a5c9708bb8c35e66199aaf3665883307e48a63c4
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51741129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68193962"
 ---
 # <a name="project-element-visual-studio-templates"></a>Project 元素（Visual Studio 模板）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,7 +26,7 @@ ms.locfileid: "51741129"
 指定的文件或目录将添加到项目。  
   
  \<VSTemplate >  
- \<TemplateContent >  
+ \<TemplateContent>  
  \<Project>  
   
 ## <a name="syntax"></a>语法  
@@ -63,7 +58,7 @@ ms.locfileid: "51741129"
 |元素|描述|  
 |-------------|-----------------|  
 |[文件夹](../extensibility/folder-element-visual-studio-project-templates.md)|可选元素。<br /><br /> 指定要添加到项目的文件夹。|  
-|[项目项](../extensibility/projectitem-element-visual-studio-project-templates.md)|可选元素。<br /><br /> 指定要向项目中添加的文件。|  
+|[ProjectItem](../extensibility/projectitem-element-visual-studio-project-templates.md)|可选元素。<br /><br /> 指定要向项目中添加的文件。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -112,4 +107,3 @@ ms.locfileid: "51741129"
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)   
  [ProjectItem 元素 （Visual Studio 项目模板）](../extensibility/projectitem-element-visual-studio-project-templates.md)   
  [Folder 元素（Visual Studio 项目模板）](../extensibility/folder-element-visual-studio-project-templates.md)
-

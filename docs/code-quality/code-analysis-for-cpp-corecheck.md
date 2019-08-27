@@ -1,7 +1,6 @@
 ---
 title: C + + Core Guidelines 检查程序引用
 ms.date: 03/22/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 helpviewer_keywords:
 - code analysis, C++ core check
@@ -11,16 +10,16 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6824041d362c0dda584c59998090e85f38d35a8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 0b725d0ee49590062ebdde9a1ef27f838678ccf5
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53959477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62540789"
 ---
 # <a name="c-core-guidelines-checker-reference"></a>C + + Core Guidelines 检查程序引用
 
-本部分列出了 c + + 核心准则检查程序警告。 有关代码分析的信息，请参阅[/analyze （代码分析）](/cpp/build/reference/analyze-code-analysis)和[快速启动：C/c + + 代码分析](../code-quality/quick-start-code-analysis-for-c-cpp.md)。
+本部分列出了 c + + 核心准则检查程序警告。 有关代码分析的信息，请参阅[/analyze （代码分析）](/cpp/build/reference/analyze-code-analysis)和[快速启动：为 C 代码分析 /C++](../code-quality/quick-start-code-analysis-for-c-cpp.md)。
 
 > [!NOTE]
 > 一些警告属于多个组，而不是所有警告都有一个完整的参考主题。
@@ -108,12 +107,9 @@ ms.locfileid: "53959477"
 
 [C26435 SINGLE_VIRTUAL_SPECIFICATION](c26435.md)函数 '%符号 %' 应明确指定为 virtual、 替代或 final。 请参阅[C.128:虚函数应明确指定的虚拟的重写时，或最终](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)。
 
-
 [C26436 NEED_VIRTUAL_DTOR](C26436.md)类型具有虚拟函数的 %符号 %需要任一公共虚拟或受保护非虚拟析构函数。 请参阅[c + + 核心准则 C.35](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c35-a-base-class-destructor-should-be-either-public-and-virtual-or-protected-and-nonvirtual)。
 
-
 [C26443 NO_EXPLICIT_DTOR_OVERRIDE](c26443.md)重写析构函数不应使用显式重写或虚拟说明符。 请参阅[C.128:虚函数应明确指定的虚拟的重写时，或最终](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)。
-
 
 ## <a name="type-group"></a>组类型
 
@@ -130,7 +126,7 @@ ms.locfileid: "53959477"
 [C26440 DECLARE_NOEXCEPT](C26440.md)可将函数 '%符号 %' 声明`noexcept`。 请参阅[c + + 核心准则 F.6](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#f6-if-your-function-may-not-throw-declare-it-noexcept)。
 
 [C26447 DONT_THROW_IN_NOEXCEPT](c26447.md)该函数声明**noexcept**但调用一个函数，它可能会引发异常。
-请参阅[c + + 核心准则：F.6:如果你的函数可能不会引发，将其声明 noexcept](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#f6-if-your-function-may-not-throw-declare-it-noexcept)。
+请参阅[C++核心指导原则：F.6:如果你的函数可能不会引发，将其声明 noexcept](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#f6-if-your-function-may-not-throw-declare-it-noexcept)。
 
 ## <a name="concurrency-group"></a>并发组
 
@@ -184,7 +180,7 @@ ms.locfileid: "53959477"
 
 ## <a name="bounds-group"></a>边界组
 
-[C26446 USE_GSL_AT](c26446.md)更愿意使用`gsl::at()`而不是未选中的下标运算符。 请参阅[c + + 核心准则：Bounds.4:不使用标准库函数和类型不是边界检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile)。
+[C26446 USE_GSL_AT](c26446.md)更愿意使用`gsl::at()`而不是未选中的下标运算符。 请参阅[C++核心指导原则：Bounds.4:不使用标准库函数和类型不是边界检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile)。
 
 [C26481 NO_POINTER_ARITHMETIC](C26481.md)。
 请勿使用指针算法。 请改用跨度。 请参阅[c + + 核心准则 Bounds.1](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
@@ -198,15 +194,14 @@ ms.locfileid: "53959477"
 ## <a name="gsl-group"></a>GSL 组
 
 [C26445 NO_SPAN_REF](c26445.md)对的引用`gsl::span`或`std::string_view`可能表示存在生存期问题。
-请参阅[c + + 核心准则 GSL.view:视图](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gslview-views)
+请参阅[C++核心准则 GSL.view:视图](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gslview-views)
 
-[C26446 USE_GSL_AT](c26446.md)更愿意使用`gsl::at()`而不是未选中的下标运算符。 请参阅[c + + 核心准则：Bounds.4:不使用标准库函数和类型不是边界检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile)。
+[C26446 USE_GSL_AT](c26446.md)更愿意使用`gsl::at()`而不是未选中的下标运算符。 请参阅[C++核心指导原则：Bounds.4:不使用标准库函数和类型不是边界检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile)。
 
-[C26448 USE_GSL_FINALLY](c26448.md)请考虑使用`gsl::finally`如果旨在最终操作。 请参阅[c + + 核心准则：GSL.util:实用程序](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-utilities)。
+[C26448 USE_GSL_FINALLY](c26448.md)请考虑使用`gsl::finally`如果旨在最终操作。 请参阅[C++核心指导原则：GSL.util:实用程序](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-utilities)。
 
 [C26449 NO_SPAN_FROM_TEMPORARY](c26449.md) 
- `gsl::span`或`std::string_view`创建从该临时将无效时临时失效。 请参阅[c + + 核心准则：GSL.view:视图](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gslview-views)。
-
+ `gsl::span`或`std::string_view`创建从该临时将无效时临时失效。 请参阅[C++核心指导原则：GSL.view:视图](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gslview-views)。
 
 ## <a name="deprecated-warnings"></a>已弃用的警告
 

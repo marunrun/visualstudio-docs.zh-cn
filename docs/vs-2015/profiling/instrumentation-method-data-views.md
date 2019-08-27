@@ -1,14 +1,9 @@
 ---
 title: 检测方法数据视图 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - profiling tools,instrumentation method views
 - instrumentation profiling method
@@ -16,13 +11,13 @@ ms.assetid: 481f7579-f784-49ef-bb6c-2944e9d6ab42
 caps.latest.revision: 15
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 23ca631f79137e48781cdb017727aa071067f8f4
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: ac4e3bf3c5dfa20729fe2270121b7649041d9e59
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51790534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68159610"
 ---
 # <a name="instrumentation-method-data-views"></a>检测方法数据视图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -62,8 +57,5 @@ ms.locfileid: "51790534"
  [资源争用数据视图](../profiling/resource-contention-data-views.md)  
  有关使用线程争用方法生成的探查器数据文件的视图和报告的参考信息。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [了解检测数据值](../profiling/understanding-instrumentation-data-values.md)
-
-
-

@@ -14,27 +14,27 @@ helpviewer_keywords:
 - debugging [Visual Studio], expression evaluation
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e9a7e936b565a961bb7b32d5599c79049857328e
-ms.sourcegitcommit: 59c48e1e42b48ad25a4e198af670faa4d8dae370
-ms.translationtype: MTE95
+ms.openlocfilehash: d8cd119ab39939de6562adcb962679874d528283
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54204464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62929357"
 ---
-# <a name="watch-variables-with-watch-windows-and-quickwatch"></a>监视使用监视窗口和快速监视的变量 
+# <a name="watch-variables-with-watch-windows-and-quickwatch"></a>监视使用监视窗口和快速监视的变量
 
-当你进行调试时，可以使用**Watch** windows 和**快速监视**监视变量和表达式。 在调试会话期间，windows 才可用。
+当你进行调试时，可以使用**Watch** windows 和**快速监视**监视变量和表达式。 仅在调试会话期间，这两个窗口才可用。
 
 **观看**windows 可以在调试时一次显示多个变量。 **快速监视**对话框一次仅显示单个变量，并可以继续调试之前，必须关闭。
 
-如果这是你第一次尝试调试代码，可能需要在浏览本文之前阅读[零基础调试](../debugger/debugging-absolute-beginners.md)和[编写更优质的 C# 代码来修复 bug](../debugger/write-better-code-with-visual-studio.md)。
+如果这是你在尝试调试的代码的第一个时间，可能需要阅读[零基础调试](../debugger/debugging-absolute-beginners.md)并[调试技术和工具](../debugger/write-better-code-with-visual-studio.md)之前开始阅读本文。
 
 ## <a name="observe-variables-with-a-watch-window"></a>观察使用监视窗口变量
 
-您可以打开多个**Watch**窗口中，并观察中的多个变量**监视**窗口。 
+您可以打开多个**Watch**窗口中，并观察中的多个变量**监视**窗口。
 
 例如，若要设置的值的监视`a`， `b`，和`c`在下面的代码：
 
@@ -59,23 +59,23 @@ int main()
 ```
 
 1. 上设置断点`c = a + b;`通过单击左边距中的行选择**调试** > **切换断点**，或按**F9**。
-   
+
 1. 开始调试通过选择绿色**启动**箭头或**调试** > **开始调试**，或按**F5**。 在断点处暂停执行。
-   
+
 1. 打开**Watch**通过选择窗口**调试** > **Windows** > **监视** >  **观看 1**，或按**Ctrl**+**Alt**+**W** > **1**.
-   
+
    可以打开其他**Watch**窗口中的，选择 windows **2**， **3**，或者**4**。
-   
+
 1. 在中**Watch**窗口中，选择空的行，并类型变量`a`。 执行相同操作`b`和`c`。
-   
+
    ![监视变量](../debugger/media/watchvariables.png "WatchVariables")
-   
+
 1. 继续进行调试，通过选择**调试** > **单步执行**或按**F11**根据需要以继续。 在变量中的值**Watch**窗口中更改在循环`for`循环。
-   
+
 >[!NOTE]
->仅 c + + 
->- 您可能需要限定变量名或使用变量名称的表达式的上下文。 上下文是函数、 源文件，该文件或变量所处的模块。 如果需要限定上下文，使用[上下文运算符 （c + +）](../debugger/context-operator-cpp.md)中的语法**名称**中**观看**窗口。 
->  
+>有关C++，
+>- 您可能需要限定变量名或使用变量名称的表达式的上下文。 上下文是函数、 源文件，该文件或变量所处的模块。 如果需要限定上下文，使用[上下文运算符 (C++)](../debugger/context-operator-cpp.md)中的语法**名称**中**观看**窗口。
+>
 >- 您可以添加寄存器名和使用的变量名 **$\<注册&nbsp;名称 >** 或 **@\<注册&nbsp;名称 >** 到**名称**中**监视**窗口。 有关详细信息，请参阅 [Pseudovariables](../debugger/pseudovariables.md)。
 
 ## <a name="use-expressions-in-a-watch-window"></a>在监视窗口中使用表达式
@@ -92,28 +92,41 @@ int main()
 
 中可能会显示一个带有两个波浪条纹图标圆圈**监视**窗口。 此图标表示调试器会计算该表达式，因为潜在的跨线程依赖关系。 计算代码需要暂时，运行您的应用程序中的其他线程，但由于在中断模式下，应用程序中的所有线程通常已都停止。 允许其他线程暂时运行可能对您的应用程序和调试器的状态的意外的影响可以忽略断点和这些线程上的异常等事件。
 
+::: moniker range=">= vs-2019" 
+## <a name="search-in-the-watch-window"></a>在监视窗口中搜索
+
+您可以搜索的名称、 值和类型的列中的关键字**监视**使用上面的每个窗口的搜索栏的窗口。 按 ENTER 或选择其中一个箭头，以执行搜索。 若要取消正在进行的搜索，请在搜索栏中选择"x"图标。
+
+使用左右箭头键 (Shift + F3 和 F3，分别) 之间进行导航找到匹配项。
+
+![在监视窗口中的搜索](../debugger/media/ee-search-watch.png "监视窗口中的搜索")
+
+若要使搜索更多或更少全面，使用**搜索更深入地**顶部的下拉列表中**监视**窗口可选择要搜索到的层深度嵌套的对象。 
+
+::: moniker-end
+
 ### <a name="bkmk_refreshWatch"></a> 刷新监视值
 
-刷新图标 （环形箭头） 中可能会显示**监视**窗口时计算表达式。 刷新图标指示错误或已过期的值。 
+刷新图标 （环形箭头） 中可能会显示**监视**窗口时计算表达式。 刷新图标指示错误或已过期的值。
 
-若要刷新值，选择刷新图标，或按空格键。 调试器尝试重新计算该表达式。 但是，可能不需要，也将无法重新计算该表达式，具体取决于计算的值不是原因。 
+若要刷新值，选择刷新图标，或按空格键。 调试器尝试重新计算该表达式。 但是，可能不需要，也将无法重新计算该表达式，具体取决于计算的值不是原因。
 
 悬停在刷新图标，或请参阅**值**列不计算该表达式的原因。 原因包括：
 
 - 在计算表达式，如前面的示例中所示时发生错误。 超时可能会出现，或者变量可能超出范围。
-  
+
 - 表达式中有可能会触发在应用中的副作用的函数调用。 请参阅[表达式的副作用](#bkmk_sideEffects)。
-  
-- 已禁用的属性和隐式函数调用的自动求值。 
-  
+
+- 已禁用的属性和隐式函数调用的自动求值。
+
 如果因为属性和隐式函数调用的自动求值已被禁用，将显示刷新图标，你可以通过选择启用它**启用属性求值和其他隐式函数调用**中**工具**  > **选项** > **调试** > **常规**。
 
 若要演示如何使用刷新图标：
 
-1. 在中**工具** > **选项** > **调试** > **常规**，清除**启用属性求值和其他隐式函数调用**复选框。 
-   
-1. 输入以下代码，然后在**Watch**窗口中，在设置监视`list.Count`属性。 
-   
+1. 在中**工具** > **选项** > **调试** > **常规**，清除**启用属性求值和其他隐式函数调用**复选框。
+
+1. 输入以下代码，然后在**Watch**窗口中，在设置监视`list.Count`属性。
+
    ```csharp
    static void Main(string[] args)
    {
@@ -122,14 +135,14 @@ int main()
        list.Add("goodbye");
    }
    ```
-   
-1. 开始调试。 **监视**窗口会显示类似于以下消息：
-   
-   ![刷新监视](../debugger/media/refreshwatch.png "刷新监视")
-   
-1. 若要刷新值，选择刷新图标，或按空格键。 调试器会重新计算该表达式。 
 
-### <a name="bkmk_sideEffects"></a> 表达式的副作用 
+1. 开始调试。 **监视**窗口会显示类似于以下消息：
+
+   ![刷新监视](../debugger/media/refreshwatch.png "刷新监视")
+
+1. 若要刷新值，选择刷新图标，或按空格键。 调试器会重新计算该表达式。
+
+### <a name="bkmk_sideEffects"></a> 表达式的副作用
 
 计算某些表达式可以更改变量的值，或会影响您的应用程序的状态。 例如，计算下列表达式会更改 `var1`的值：
 
@@ -152,7 +165,7 @@ var1 = var2
 > [!NOTE]
 > 对象 Id 创建弱引用，不会阻止对象被垃圾回收。 它们仅对当前调试会话有效。
 
-在下面的代码中，`MakePerson()`方法创建`Person`使用本地变量： 
+在下面的代码中，`MakePerson()`方法创建`Person`使用本地变量：
 
 ```csharp
 class Person
@@ -190,21 +203,21 @@ public class Program
 若要了解的名称`Person`中`DoSomething()`方法，你可以添加对引用`Person`中的对象 ID**监视**窗口。
 
 1. 之后在代码中设置断点`Person`创建对象。
-   
+
 1. 开始调试。
-   
+
 1. 当在断点处暂停执行时，打开**局部变量**通过选择窗口**调试** > **Windows** > **局部变量**.
-   
+
 1. 在中**局部变量**窗口中，右键单击`Person`变量，然后选择**创建对象 ID**。
-   
+
    应会看到一个美元符号 (**$**) 在**局部变量**窗口中，这是对象 id。
-   
+
 1. 添加到的对象 ID **Watch**窗口中的右键单击对象 ID 并选择**添加监视**。
-   
+
 1. 在中设置另一个断点`DoSomething()`方法。
-   
+
 1. 继续调试。 当执行过程中暂停`DoSomething()`方法，**观看**窗口将显示`Person`对象。
-   
+
    > [!NOTE]
    > 如果你想要查看对象的属性，如`Person.Name`，必须通过选择启用属性求值**工具** > **选项** >  **调试** > **常规** > **启用属性求值和其他隐式函数调用**。
 
@@ -212,9 +225,9 @@ public class Program
 
 某些脚本语言 （例如，JavaScript 或 Python） 使用动态或[鸭子类型](https://en.wikipedia.org/wiki/Duck_typing)类型化和.NET 4.0 和更高版本支持很难在一般调试窗口中观察到的对象。
 
-**Watch**窗口中显示这些对象作为动态对象，从实现的类型创建<xref:System.Dynamic.IDynamicMetaObjectProvider>接口。 动态对象节点显示动态成员的动态对象，但不允许编辑成员值。 
+**Watch**窗口中显示这些对象作为动态对象，从实现的类型创建<xref:System.Dynamic.IDynamicMetaObjectProvider>接口。 动态对象节点显示动态成员的动态对象，但不允许编辑成员值。
 
-若要刷新**动态视图**值，选择[刷新图标](#bkmk_refreshWatch)动态对象节点旁边。 
+若要刷新**动态视图**值，选择[刷新图标](#bkmk_refreshWatch)动态对象节点旁边。
 
 若要仅显示**动态视图**对象，将添加**动态**动态对象名称后格式说明符**观看**窗口：
 
@@ -222,22 +235,22 @@ public class Program
 - 对于 Visual Basic：`$dynamic, ObjectName`
 
 >[!NOTE]
->- C#调试器不会自动重新计算中的值**动态视图**当进入下一行代码。 
+>- C#调试器不会自动重新计算中的值**动态视图**当进入下一行代码。
 >- Visual Basic 调试程序会自动刷新通过添加的表达式**动态视图**。
->- 计算“动态视图”的成员可能会有[副作用](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\))。 
+>- 计算“动态视图”的成员可能会有[副作用](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\))。
 
 **要插入新监视变量的对象强制转换为一个动态对象：**
-  
+
 1. 右键单击的任何子**动态视图**。
 1. 选择**添加监视**。 `object.name`变得`((dynamic) object).name`，并显示在一个新**监视**窗口。
 
-调试器还将添加**动态视图**于的对象的子节点**自动**窗口。 若要打开**自动**窗口中的，在调试期间，选择**调试** > **Windows** > **自动**。 
+调试器还将添加**动态视图**于的对象的子节点**自动**窗口。 若要打开**自动**窗口中的，在调试期间，选择**调试** > **Windows** > **自动**。
 
 **动态视图**还增强了对 COM 对象的调试。 当在调试器进入 COM 对象包装在**System.__ComObject**，它将添加**动态视图**对象节点。
 
 ## <a name="observe-a-single-variable-or-expression-with-quickwatch"></a>观察单个变量或使用快速监视表达式
 
-可以使用**快速监视**观察单个变量。 
+可以使用**快速监视**观察单个变量。
 
 例如，对于下面的代码：
 
@@ -254,31 +267,32 @@ static void Main(string[] args)
 }
 ```
 
-若要观察`a`变量， 
-   
+若要观察`a`变量，
+
 1. 在 `a = a + b;` 行上设置断点。
-   
+
 1. 开始调试。 在断点处暂停执行。
-   
+
 1. 选择的变量`a`在代码中。
-   
-1. 选择**调试** > **快速监视**，按**Shift**+**F9**，或右键单击并选择**快速监视**。 
-   
+
+1. 选择**调试** > **快速监视**，按**Shift**+**F9**，或右键单击并选择**快速监视**。
+
    **快速监视**此时将显示对话框。 `a`变量处于**表达式**框**值**的**1**。
-   
+
    ![快速监视变量](../debugger/media/quickwatchvariable.png "快速监视变量")
-   
+
 1. 若要评估表达式中使用变量，键入一个表达式类似于`a + b`中**表达式**，然后选择**重新评估**。
-   
+
    ![快速监视表达式](../debugger/media/quickwatchexpression.png "快速监视表达式")
-   
+
 1. 若要添加的变量或表达式从**快速监视**到**监视**窗口中，选择**添加监视**。
-   
+
 1. 选择**关闭**以关闭**快速监视**窗口。 (**快速监视**是模式对话框，因此无法继续调试，只要它已打开。)
-   
+
 1. 继续调试。 您可以观察中的变量**监视**窗口。
 
 ## <a name="see-also"></a>请参阅
- [什么是调试？](../debugger/what-is-debugging.md)  
- [通过编写更优质的 C# 代码来修复 bug](../debugger/write-better-code-with-visual-studio.md)  
- [首先看一下调试](../debugger/debugger-feature-tour.md)[调试器窗口](../debugger/debugger-windows.md)
+- [什么是调试？](../debugger/what-is-debugging.md)
+- [调试技术和工具](../debugger/write-better-code-with-visual-studio.md)
+- [首先看一下调试](../debugger/debugger-feature-tour.md)
+- [调试器窗口](../debugger/debugger-windows.md)

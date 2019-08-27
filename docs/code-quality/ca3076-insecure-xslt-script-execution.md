@@ -1,19 +1,18 @@
 ---
 title: CA3076:不安全的 XSLT 脚本执行
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d711aad69dbdf3295ca7b2962a2e2022bd259059
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5f98b022aef49a4d98ad4864793aa55732f8de6c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53891042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62541085"
 ---
 # <a name="ca3076-insecure-xslt-script-execution"></a>CA3076:不安全的 XSLT 脚本执行
 

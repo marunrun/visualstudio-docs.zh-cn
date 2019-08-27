@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1a53d6fed4b2900aa730f4a5c2e04d528b42d1b9
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62419838"
+---
 # <a name="contribute-to-visual-studio-documentation"></a>参与编辑 Visual Studio 文档
 
 感谢你抽出宝贵的时间参与编辑 Visual Studio 文档。
@@ -25,3 +33,7 @@
 ### <a name="larger-edits"></a>较大规模编辑
 
 请参阅参与者指南中的[拉取请求](https://docs.microsoft.com/contribute/how-to-write-workflows-major#pull-request-processing)指南。
+
+**说明**
+
+不主动处理 `docs/vs-2015` 文件夹中的文件，因为这些文件适用于产品的旧版本 Visual Studio 2015。 我们不接受对这些文件进行无关紧要的更改的拉取请求。

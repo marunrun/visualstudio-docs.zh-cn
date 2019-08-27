@@ -1,12 +1,9 @@
 ---
 title: 编辑数据集中的数据 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-data-tools
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,18 +16,17 @@ ms.assetid: 50d5c580-fbf7-408f-be70-e63ac4f4d0eb
 caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 5a983b671b5c6b43009ad3cc32c2cb287977f05c
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 7cbc9519c86b2bf4967e567b29355eb6d8a176a4
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49949287"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65699772"
 ---
 # <a name="edit-data-in-datasets"></a>编辑数据集中的数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 编辑任何数据库中的表中的数据一样编辑数据的表中的数据。 过程可以包括插入、 更新和删除表中的记录。 在数据绑定窗体中，可以指定哪些字段是用户可编辑。 在这些情况下，数据绑定基础结构可处理所有更改跟踪，以便所做的更改可以发送回数据库更高版本。 如果以编程方式对数据进行编辑，并且你想要将这些更改发送回数据库，必须使用的对象和为您做的更改跟踪的方法。  
   
  除了更改实际数据，还可以查询<xref:System.Data.DataTable>返回特定的数据行。 例如，您可能会查询各个行、 行 （原始和建议） 的特定版本，已更改的行或有错误的行。  
@@ -49,7 +45,7 @@ ms.locfileid: "49949287"
  [!code-vb[VbRaddataEditing#5](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataEditing/VB/Form1.vb#5)]  
   
 ## <a name="to-insert-new-rows-into-a-dataset"></a>若要将新行插入到数据集  
- 通常使用数据绑定控件的应用程序添加新记录通过**新添**按钮[BindingNavigator 控件](http://msdn.microsoft.com/library/18c1e2a5-9834-40d3-9b2e-2b545e4e769e)。  
+ 通常使用数据绑定控件的应用程序添加新记录通过**新添**按钮[BindingNavigator 控件](https://msdn.microsoft.com/library/18c1e2a5-9834-40d3-9b2e-2b545e4e769e)。  
   
  若要手动将新记录添加到数据集，通过调用 DataTable 方法创建新的数据行。 然后向其中添加行<xref:System.Data.DataRow>集合 (<xref:System.Data.DataTable.Rows%2A>) 的<xref:System.Data.DataTable>:  
   
@@ -62,12 +58,12 @@ ms.locfileid: "49949287"
   
 #### <a name="to-delete-records-from-a-data-table"></a>若要从数据表中删除记录  
   
--   调用<xref:System.Data.DataRow.Delete%2A>方法的<xref:System.Data.DataRow>。  
+- 调用<xref:System.Data.DataRow.Delete%2A>方法的<xref:System.Data.DataRow>。  
   
      此方法不会以物理方式删除记录。 相反，它将标记为删除的记录。  
   
     > [!NOTE]
-    >  如果收到的 count 属性<xref:System.Data.DataRowCollection>，在生成的计数包括已标记为删除的记录。 若要获取不会将标记为删除的记录的精确计数，可以循环访问集合，查看<xref:System.Data.DataRow.RowState%2A>每个记录属性。 (标记为删除的记录具有<xref:System.Data.DataRow.RowState%2A>的<xref:System.Data.DataRowState>。)或者，可以创建数据视图的筛选器根据行状态的数据集，并从那里获取的 count 属性。  
+    > 如果收到的 count 属性<xref:System.Data.DataRowCollection>，在生成的计数包括已标记为删除的记录。 若要获取不会将标记为删除的记录的精确计数，可以循环访问集合，查看<xref:System.Data.DataRow.RowState%2A>每个记录属性。 (标记为删除的记录具有<xref:System.Data.DataRow.RowState%2A>的<xref:System.Data.DataRowState>。)或者，可以创建数据视图的筛选器根据行状态的数据集，并从那里获取的 count 属性。  
   
      下面的示例演示如何调用<xref:System.Data.DataRow.Delete%2A>方法将标记中的第一行`Customers`表为已删除：  
   
@@ -81,13 +77,13 @@ ms.locfileid: "49949287"
   
 - 每个数据行包含与它的相关信息<xref:System.Data.DataRow.RowState%2A>(例如， <xref:System.Data.DataRowState>， <xref:System.Data.DataRowState>， <xref:System.Data.DataRowState>，或<xref:System.Data.DataRowState>)。  
   
-- 每个已更改的数据行包含该行的多个版本 (<xref:System.Data.DataRowVersion>)，（更改） 之前, 的原始版本和 （之后的更改） 的当前版本。 期间挂起的更改时 (可以作出响应的时间<xref:System.Data.DataTable.RowChanging>事件)、 第三个版本 — 提议的版本，也可以。 有关详细信息，请参阅[如何： 获取 DataRow 的特定版本](../data-tools/how-to-get-specific-versions-of-a-datarow.md)。  
+- 每个已更改的数据行包含该行的多个版本 (<xref:System.Data.DataRowVersion>)，（更改） 之前, 的原始版本和 （之后的更改） 的当前版本。 期间挂起的更改时 (可以作出响应的时间<xref:System.Data.DataTable.RowChanging>事件)、 第三个版本 — 提议的版本，也可以。
   
-  <xref:System.Data.DataSet.HasChanges%2A>数据集的方法将返回`true`如果在数据集中进行了更改。 确定已更改的行存在之后, 可以调用`GetChanges`方法<xref:System.Data.DataSet>或<xref:System.Data.DataTable>返回一组已更改的行。 有关详细信息，请参阅[如何： 检索已更改行](http://msdn.microsoft.com/library/6ff0cbd0-5253-48e7-888a-144d56c2e0a9)。  
+  <xref:System.Data.DataSet.HasChanges%2A>数据集的方法将返回`true`如果在数据集中进行了更改。 确定已更改的行存在之后, 可以调用`GetChanges`方法<xref:System.Data.DataSet>或<xref:System.Data.DataTable>返回一组已更改的行。 有关详细信息，请参阅[如何：检索已更改的行](https://msdn.microsoft.com/library/6ff0cbd0-5253-48e7-888a-144d56c2e0a9)。  
   
 #### <a name="to-determine-if-changes-have-been-made-to-any-rows"></a>若要确定是否已对任何行进行了更改  
   
--   调用<xref:System.Data.DataSet.HasChanges%2A>方法要检查的数据集已更改的行。  
+- 调用<xref:System.Data.DataSet.HasChanges%2A>方法要检查的数据集已更改的行。  
   
      下面的示例演示如何检查的返回值<xref:System.Data.DataSet.HasChanges%2A>方法来检测中名为的数据集是否有任何已更改的行`NorthwindDataset1`:  
   
@@ -99,7 +95,7 @@ ms.locfileid: "49949287"
   
 #### <a name="to-determine-what-type-of-changes-have-been-made-to-a-row"></a>若要确定哪种类型的更改已对某行  
   
--   传递<xref:System.Data.DataRowState>值设为<xref:System.Data.DataSet.HasChanges%2A>方法。  
+- 传递<xref:System.Data.DataRowState>值设为<xref:System.Data.DataSet.HasChanges%2A>方法。  
   
      下面的示例演示如何检查名为的数据集`NorthwindDataset1`以确定是否向其添加了任何新行：  
   
@@ -109,10 +105,9 @@ ms.locfileid: "49949287"
 ## <a name="to-locate-rows-that-have-errors"></a>若要查找具有错误的行  
  当使用单个列和行数据，可能会遇到错误。 你可以检查`HasErrors`属性来确定是否存在错误<xref:System.Data.DataSet>， <xref:System.Data.DataTable>，或<xref:System.Data.DataRow>。  
   
-1.  检查`HasErrors`属性以查看数据集内是否有任何错误。  
+1. 检查`HasErrors`属性以查看数据集内是否有任何错误。  
   
-2.  如果`HasErrors`属性是`true`，循环访问表的集合，然后通过行，以查找具有错误的行。  
+2. 如果`HasErrors`属性是`true`，循环访问表的集合，然后通过行，以查找具有错误的行。  
   
      [!code-csharp[VbRaddataEditing#23](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataEditing/CS/Form1.cs#23)]
      [!code-vb[VbRaddataEditing#23](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataEditing/VB/Form1.vb#23)]
-

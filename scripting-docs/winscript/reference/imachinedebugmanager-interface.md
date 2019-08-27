@@ -2,7 +2,6 @@
 title: IMachineDebugManager 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,12 +13,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 56f06908efd7022988b742a783cb56544bffe3ea
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: 6db8989fc6c932723a9b95017854635396b0deda
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54347822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62977638"
 ---
 # <a name="imachinedebugmanager-interface"></a>IMachineDebugManager 接口
 计算机调试管理器主接口。 此接口是类似于`IMachineDebugManagerCookie`接口。  

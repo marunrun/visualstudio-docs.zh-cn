@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: c48b4d75-ccfc-4950-8b14-ff8adbfe4208
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: bcdfb4640e88289b02f2f8813c39b66eaad3827d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: fc8c29ae4d146a0ec66a362fd6fb99251d726906
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53889418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62567554"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-lookup-data-binding"></a>创建支持查找数据绑定的 Windows 窗体用户控件
 
@@ -41,27 +40,27 @@ ms.locfileid: "53889418"
 
 在本演练中，您将学习如何：
 
--   创建新的“Windows 窗体应用程序”。
+- 创建新的“Windows 窗体应用程序”。
 
--   将新的“用户控件”添加到项目中。
+- 将新的“用户控件”添加到项目中。
 
--   以可视方式设计用户控件。
+- 以可视方式设计用户控件。
 
--   实现 `LookupBindingProperty` 特性。
+- 实现 `LookupBindingProperty` 特性。
 
--   创建具有的数据集**数据源配置**向导。
+- 创建具有的数据集**数据源配置**向导。
 
--   在“数据源”窗口中，设置“Orders”表上的“CustomerID”列，以使用新的控件。
+- 在“数据源”窗口中，设置“Orders”表上的“CustomerID”列，以使用新的控件。
 
--   创建一个用于在新控件中显示数据的窗体。
+- 创建一个用于在新控件中显示数据的窗体。
 
 ## <a name="prerequisites"></a>系统必备
 
 本演练使用 SQL Server Express LocalDB 和 Northwind 示例数据库。
 
-1.  如果您没有 SQL Server Express LocalDB，安装它从[SQL Server Express 下载页](https://www.microsoft.com/sql-server/sql-server-editions-express)，或通过**Visual Studio 安装程序**。 在中**Visual Studio 安装程序**，可以作为的一部分安装 SQL Server Express LocalDB**数据存储和处理**工作负荷，或作为单个组件。
+1. 如果您没有 SQL Server Express LocalDB，安装它从[SQL Server Express 下载页](https://www.microsoft.com/sql-server/sql-server-editions-express)，或通过**Visual Studio 安装程序**。 在中**Visual Studio 安装程序**，可以作为的一部分安装 SQL Server Express LocalDB**数据存储和处理**工作负荷，或作为单个组件。
 
-2.  通过执行以下步骤安装 Northwind 示例数据库：
+2. 通过执行以下步骤安装 Northwind 示例数据库：
 
     1. 在 Visual Studio 中打开**SQL Server 对象资源管理器**窗口。 (SQL Server 对象资源管理器安装的一部分**数据存储和处理**Visual Studio 安装程序中的工作负载。)展开**SQL Server**节点。 LocalDB 实例上右键单击并选择**新查询**。
 
@@ -79,7 +78,7 @@ ms.locfileid: "53889418"
 
 1. 在 Visual Studio 中，在**文件**菜单中，选择**新建** > **项目**。
 
-2. 展开**可视化C#** 或**Visual Basic**在左侧窗格中，然后选择**Windows Desktop**。
+2. 展开**Visual C#** 或**Visual Basic**在左侧窗格中，然后选择**Windows 桌面**。
 
 3. 在中间窗格中，选择**Windows 窗体应用**项目类型。
 
@@ -91,9 +90,9 @@ ms.locfileid: "53889418"
 
 由于本演练从“用户控件”创建查找控件，所以必须将“用户控件”项添加到“LookupControlWalkthrough”项目中。
 
-1.  从“项目”菜单中，选择“添加用户控件”。
+1. 从“项目”菜单中，选择“添加用户控件”。
 
-2.  类型`LookupBox`中**名称**区域中，，然后单击**添加**。
+2. 类型`LookupBox`中**名称**区域中，，然后单击**添加**。
 
      将“LookupBox”控件添加到“解决方案资源管理器”中，并在设计器中打开该控件。
 
@@ -105,38 +104,38 @@ ms.locfileid: "53889418"
 
 对于支持数据绑定的查找控件，你可以实现 <xref:System.ComponentModel.LookupBindingPropertiesAttribute>。
 
-1.  将“LookupBox”控件切换到代码视图。 （在“视图”菜单上，选择“代码”。）
+1. 将“LookupBox”控件切换到代码视图。 （在“视图”菜单上，选择“代码”。）
 
-2.  将 `LookupBox` 中的代码替换为以下内容：
+2. 将 `LookupBox` 中的代码替换为以下内容：
 
      [!code-vb[VbRaddataDisplaying#5](../data-tools/codesnippet/VisualBasic/create-a-windows-forms-user-control-that-supports-lookup-data-binding_1.vb)]
      [!code-csharp[VbRaddataDisplaying#5](../data-tools/codesnippet/CSharp/create-a-windows-forms-user-control-that-supports-lookup-data-binding_1.cs)]
 
-3.  从 **“生成”** 菜单中选择 **“生成解决方案”**。
+3. 从 **“生成”** 菜单中选择 **“生成解决方案”**。
 
 ## <a name="create-a-data-source-from-your-database"></a>从您的数据库创建数据源
 
 此步骤根据 Northwind 示例数据库中的 `Customers` 和 `Orders` 表，使用“数据源配置”向导创建数据源。
 
-1.  若要打开**数据源**窗口，然后在**数据**菜单中，单击**显示数据源**。
+1. 若要打开**数据源**窗口，然后在**数据**菜单中，单击**显示数据源**。
 
-2.  在“数据源”窗口，选择“添加新数据源”以启动“数据源配置”向导。
+2. 在“数据源”窗口，选择“添加新数据源”以启动“数据源配置”向导。
 
-3.  在 **“选择数据源类型”** 页上选择 **“数据库”** ，然后单击 **“下一步”**。
+3. 在 **“选择数据源类型”** 页上选择 **“数据库”** ，然后单击 **“下一步”**。
 
-4.  在“选择数据连接”页面上，执行以下操作之一：
+4. 在“选择数据连接”页面上，执行以下操作之一：
 
-    -   如果下拉列表中包含到 Northwind 示例数据库的数据连接，请选择该连接。
+    - 如果下拉列表中包含到 Northwind 示例数据库的数据连接，请选择该连接。
 
-    -   选择“新建连接”以启动“添加/修改连接”对话框。
+    - 选择“新建连接”以启动“添加/修改连接”对话框。
 
-5.  如果数据库需要密码，请选择该选项以包括敏感数据，再单击“下一步”。
+5. 如果数据库需要密码，请选择该选项以包括敏感数据，再单击“下一步”。
 
-6.  上**将连接字符串保存到应用程序配置文件**页上，单击**下一步**。
+6. 上**将连接字符串保存到应用程序配置文件**页上，单击**下一步**。
 
-7.  在“选择数据库对象”页上，展开“表”节点。
+7. 在“选择数据库对象”页上，展开“表”节点。
 
-8.  选择 `Customers` 和 `Orders` 表，然后单击“完成”。
+8. 选择 `Customers` 和 `Orders` 表，然后单击“完成”。
 
      将“NorthwindDataSet”添加到项目后，“数据源”窗口中即会显示 `Customers` 和 `Orders` 表。
 
@@ -144,21 +143,21 @@ ms.locfileid: "53889418"
 
 在“数据源”窗口中，可以先设置要创建的控件，然后再将项拖动到窗体上。
 
-1.  在设计器中打开“Form1”。
+1. 在设计器中打开“Form1”。
 
-2.  在“数据源”窗口中展开“Customers”节点。
+2. 在“数据源”窗口中展开“Customers”节点。
 
-3.  展开“Orders”节点（“Customers”节点中“Fax”列下面的节点）。
+3. 展开“Orders”节点（“Customers”节点中“Fax”列下面的节点）。
 
-4.  单击“Orders”节点上的下拉箭头，然后从控件列表中选择“详细信息”。
+4. 单击“Orders”节点上的下拉箭头，然后从控件列表中选择“详细信息”。
 
-5.  单击“CustomerID”列（在“Orders”节点中）上的下拉箭头，然后选择“自定义”。
+5. 单击“CustomerID”列（在“Orders”节点中）上的下拉箭头，然后选择“自定义”。
 
-6.  在“数据 UI 自定义选项”对话框中，从“关联的控件”列表中选择“LookupBox”。
+6. 在“数据 UI 自定义选项”对话框中，从“关联的控件”列表中选择“LookupBox”。
 
-7.  单击 **“确定”**。
+7. 单击 **“确定”**。
 
-8.  单击“CustomerID”列上的下拉箭头，然后选择“LookupBox”。
+8. 单击“CustomerID”列上的下拉箭头，然后选择“LookupBox”。
 
 ## <a name="add-controls-to-the-form"></a>向窗体添加控件
 
@@ -174,9 +173,9 @@ ms.locfileid: "53889418"
 
 ## <a name="run-the-application"></a>运行此应用程序
 
--   按 **F5** 运行该应用程序。
+- 按 **F5** 运行该应用程序。
 
--   通过某些记录进行定位，并验证 `LookupBox` 控件中是否显示 `CompanyName`。
+- 通过某些记录进行定位，并验证 `LookupBox` 控件中是否显示 `CompanyName`。
 
 ## <a name="see-also"></a>请参阅
 

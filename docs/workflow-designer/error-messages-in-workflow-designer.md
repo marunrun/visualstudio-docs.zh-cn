@@ -2,7 +2,6 @@
 title: 工作流设计器中的错误消息
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - WFDErrorMessages.UI
 - System.Activities.Presentation.ErrorActivity.UI
@@ -10,15 +9,15 @@ f1_keywords:
 ms.assetid: 4d8bbc2e-34fc-477f-9140-4adfd70c34a0
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 393157c11029a36038b3fea0fa78af413d650ef3
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ab2cb4562f816b254b658cfdc152dc38033fbe03
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53871390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62949679"
 ---
 # <a name="error-messages-in-workflow-designer"></a>工作流设计器中的错误消息
 
@@ -28,13 +27,13 @@ ms.locfileid: "53871390"
 
 在以下情况下会出现在工作流设计器中的错误：
 
-1.  表达式中存在错误。
+1. 表达式中存在错误。
 
-2.  活动的验证约束未满足。
+2. 活动的验证约束未满足。
 
-3.  XAML 文件中存在错误，导致活动无法加载。
+3. XAML 文件中存在错误，导致活动无法加载。
 
-4.  XAML 文件中存在错误，导致工作流无法加载。
+4. XAML 文件中存在错误，导致工作流无法加载。
 
 无效的表达式和未满足的验证约束不会导致工作流无法生成。 会成功生成工作流，但在运行时将引发 <xref:System.Activities.InvalidWorkflowException>。 如果 XAML 文件中存在错误，生成将失败。
 

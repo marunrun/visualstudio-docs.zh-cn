@@ -1,23 +1,20 @@
 ---
 title: 生成并配置将应用程序模型从 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 ms.assetid: 4dc8f572-a09e-4d19-a92d-f1df383e728b
 caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 58d7112048aba7d0c3b75e83e2b10249b200e6d9
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: bb12d80c581b0ea0b605932083cf4f62fe764e30
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51806355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68182856"
 ---
 # <a name="generate-and-configure-your-app-from-models"></a>从模型中生成并配置你的应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -48,7 +45,7 @@ ms.locfileid: "51806355"
   
 - [在程序代码中读取 UML 模型](../modeling/read-a-uml-model-in-program-code.md)  
   
-- [如何：在程序代码中从文件打开模型](../modeling/how-to-open-a-model-from-file-in-program-code.md)  
+- [如何：在程序代码中从文件中打开模型](../modeling/how-to-open-a-model-from-file-in-program-code.md)  
   
   也可以以增量方式应用此方法，但一开始会有更多的工作要做。 你需要编写读取模型代码，并设置一个允许可变部分访问其值的框架。 生成泛型的可变部分比代码生成的开销更大。  
   
@@ -57,27 +54,27 @@ ms.locfileid: "51806355"
 ## <a name="developing-a-derived-application"></a>开发派生应用程序  
  你可能会发现以下一般准则会很有帮助。  
   
--   **先具体后一般化。** 首先编写一个特定版本的应用程序。 此版本应能在一组条件下工作。 当你认为该应用程序能正常工作时，你可以从模型派生一些部分。 逐渐扩展派生的部分。  
+- **先具体后一般化。** 首先编写一个特定版本的应用程序。 此版本应能在一组条件下工作。 当你认为该应用程序能正常工作时，你可以从模型派生一些部分。 逐渐扩展派生的部分。  
   
      例如，设计一个具有一组特定网页的网站，然后设计一个 Web 应用程序来表示在模型中定义的页面。  
   
--   **模型的变体方面。** 确定将发生改变的方面，两个不同部署之间的改变，或随着需求变化而改变。 这些方面应从模型派生。  
+- **模型的变体方面。** 确定将发生改变的方面，两个不同部署之间的改变，或随着需求变化而改变。 这些方面应从模型派生。  
   
      例如，如果一组网页及其之间的链接发生更改，但这些网页的样式和格式始终是相同的，那么模型应描述这些链接，但不必描述网页的格式。  
   
--   **分离关注点。** 如果可变方面能分成独立的区域，则为每个区域使用单独的模型。 使用 ModelBus，你可以定义同时影响各模型及其之间的约束的操作。  
+- **分离关注点。** 如果可变方面能分成独立的区域，则为每个区域使用单独的模型。 使用 ModelBus，你可以定义同时影响各模型及其之间的约束的操作。  
   
      例如，使用一个模型来定义网页导航，使用另一个模型来定义网页布局。 有关详细信息，请参阅[与其他模型和工具集成 UML 模型](../modeling/integrate-uml-models-with-other-models-and-tools.md)。  
   
--   **模型的要求，而不是解决方案。** 设计 DSL 或采用 UML，以便用来描述用户需求。 与此相反，不要根据实现的可变方面设计表示法。  
+- **模型的要求，而不是解决方案。** 设计 DSL 或采用 UML，以便用来描述用户需求。 与此相反，不要根据实现的可变方面设计表示法。  
   
      例如，Web 导航模型应表示网页和网页间的超链接。 Web 导航模型不应表示应用程序中的 HTML 或类的片段。  
   
--   **生成或解释？** 如果特定部署的需求将很少更改，则从模型生成程序代码。 如果需求可能会频繁更改，或者可能共存于同一部署的多个变体中，则编写应用程序，以便该应用程序可以读取和解释模型。  
+- **生成或解释？** 如果特定部署的需求将很少更改，则从模型生成程序代码。 如果需求可能会频繁更改，或者可能共存于同一部署的多个变体中，则编写应用程序，以便该应用程序可以读取和解释模型。  
   
      例如，如果你使用网站模型来开发一系列独立安装的不同网站，则应从模型生成网站代码。 但如果你使用模型来控制一个每天改变的网站，则最好编写一个 Web 服务器来相应地读取模型和表示网站。  
   
--   **UML 或 DSL？** 考虑通过使用构造型扩展 UML 来创建你的建模表示法。 如果没有符合目标的 UML 关系图，则定义一个 DSL。 但要避免中断 UML 的标准语义。  
+- **UML 或 DSL？** 考虑通过使用构造型扩展 UML 来创建你的建模表示法。 如果没有符合目标的 UML 关系图，则定义一个 DSL。 但要避免中断 UML 的标准语义。  
   
      例如，UML 类图是框和箭头的集合；有了这种表示法，你在理论上能定义任何内容。 但是，除非你实际需要描述一组类型，否则我们不建议你使用类图。 例如，你可以采用类图来描述不同类型的网页。  
   
@@ -85,8 +82,5 @@ ms.locfileid: "51806355"
  [从 UML 模型生成文件](../modeling/generate-files-from-a-uml-model.md)   
  [读取程序代码中的 UML 模型](../modeling/read-a-uml-model-in-program-code.md)   
  [从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)   
- [如何： 从程序代码中的文件打开模型](../modeling/how-to-open-a-model-from-file-in-program-code.md)   
+ [如何：从程序代码中的文件打开模型](../modeling/how-to-open-a-model-from-file-in-program-code.md)   
  [使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
-
-
-

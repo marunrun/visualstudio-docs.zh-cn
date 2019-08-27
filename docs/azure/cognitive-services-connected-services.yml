@@ -1,0 +1,38 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Visual Studio 中的认知服务
+metadata:
+  title: 认知服务 | Microsoft Docs
+  meta.description: Tutorials and conceptual articles about connecting apps and services to cognitive services in Azure.
+  ms.custom: seohack18
+  author: ghogen
+  manager: jillfra
+  ms.prod: visual-studio-windows
+  ms.technology: vs-azure
+  ms.topic: landing-page
+  ms.date: 10/09/2018
+  ms.author: ghogen
+sections:
+  - title: 使用 Visual Studio 连接服务将应用连接到认知服务
+    items:
+      - type: paragraph
+        text: 利用 Visual Studio 可以方便地将应用或服务项目连接到各种 Azure 服务，其中包括可提供一组强大人工智能功能的认知服务。 使用 Visual Studio 连接服务极大地简化了开发过程，因为它已为你自动完成了所有配置。 如需教程，请选择你想要在项目中为其添加支持的服务：
+      - type: list
+        style: icon48
+        items:
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/i_azure-cognitive-services-color.svg'
+            text: 文本分析
+            href: /azure/cognitive-services/text-analytics/vs-text-connected-service
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/i_azure-cognitive-services-color.svg'
+            text: 必应新闻搜索
+            href: /azure/cognitive-services/bing-news-search/vs-bing-news-search-connected-service
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/i_azure-cognitive-services-color.svg'
+            text: 人脸 API
+            href: /azure/cognitive-services/face/vs-face-connected-service
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/i_azure-cognitive-services-color.svg'
+            text: 计算机视觉
+            href: /azure/cognitive-services/computer-vision/vs-computer-vision-connected-service

@@ -1,27 +1,27 @@
 ---
 title: 如何使用适用于 C++ 的 Boost.Test
-ms.date: 01/29/2018
-ms.prod: visual-studio-dev15
+description: 使用 Boost.Test 在 Visual Studio 中创建单元测试。
+ms.date: 05/06/2019
 ms.topic: conceptual
 author: mikeblome
 ms.author: mblome
-manager: douge
+manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1428efdd19782803e3091e3d09073f2cd8daec0b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: cf962ec4ecade1bb88d9e301d62eb6ab8a5131cf
+ms.sourcegitcommit: 6196d0b7fdcb08ba6d28a8151ad36b8d1139f2cc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53830841"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65226098"
 ---
 # <a name="how-to-use-boosttest-for-c-in-visual-studio"></a>如何在 Visual Studio 中使用适用于 C++ 的 Boost.Test
 
-在 **Visual Studio 2017 版本 15.5** 和更高版本中，Boost.Test 测试适配器作为“使用 C++ 的桌面开发”工作负荷的组件集成到 Visual Studio IDE 中。
+在 Visual Studio 2017 及更高版本中，Boost.Test 测试适配器作为“使用 C++ 的桌面开发”工作负载的组件集成到 Visual Studio IDE 中。
 
 ![Boost.Test 测试适配器](media/cpp-boost-component.png)
 
-如果没有安装“使用 C++ 的桌面开发”工作负载，则打开“Visual Studio 安装程序”并选择“修改”。 选择“使用 C++ 的桌面开发”工作负载，然后选择“修改”按钮。
+如果没有安装“使用 C++ 的桌面开发”工作负载，则打开“Visual Studio 安装程序”。 选择“使用 C++ 的桌面开发”工作负载，然后选择“修改”按钮。
 
 ## <a name="install-boost"></a>安装 Boost
 
@@ -49,7 +49,7 @@ Boost.Test 需要[Boost](http://www.boost.org/)！ 如果未安装 Boost，则�
 
 项模板使用 Boost.Test 的单标头变量，但是你可以修改 #include 路径来使用独立库变量。 有关详细信息，请参阅[添加 include 指令](#add-include-directives)。
 
-## <a name="create-a-test-project-visual-studio-2017-version-155"></a>创建测试项目（Visual Studio 2017 版本 15.5）
+## <a name="create-a-test-project"></a>创建测试项目
 
 在 Visual Studio 2017 版本 15.5 中，没有预配置测试项目或项模板可用于 Boost.Test。 因此，必须创建和配置控制台应用程序项目来存放测试。
 
@@ -74,6 +74,7 @@ Boost.Test 需要[Boost](http://www.boost.org/)！ 如果未安装 Boost，则�
         <VcpkgEnabled>true</VcpkgEnabled>
     </PropertyGroup>
     ```
+
    c. 保存并关闭 \*.vcxproj 文件，然后重载该项目。
 
    d. 若要打开“属性页”，右键单击项目节点并选择“属性”。

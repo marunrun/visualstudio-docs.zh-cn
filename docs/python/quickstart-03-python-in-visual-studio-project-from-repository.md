@@ -2,25 +2,24 @@
 title: 快速入门 - 克隆 Python 代码存储库
 description: 在此快速入门教程中，将使用 Visual Studio 团队资源管理器进行 Python koans 存储库克隆，从而在 Visual Studio 中创建 Python 项目。
 ms.date: 12/06/2018
-ms.prod: visual-studio-dev15
 ms.topic: quickstart
-author: kraigb
-ms.author: kraigb
-manager: douge
+author: JoshuaPartlow
+ms.author: joshuapa
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a98b236d12954d5707df7fa4933c1f31150c7a0c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 446c2622c01e1b127347a668e199e3e6e6e0b1c5
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53922832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62430610"
 ---
 # <a name="quickstart-clone-a-repository-of-python-code-in-visual-studio"></a>快速入门：在 Visual Studio 中克隆 Python 代码存储库
 
-[在 Visual Studio 2017 中安装 Python 支持](installing-python-support-in-visual-studio.md)后，可以添加适用于 Visual Studio 的 GitHub 扩展。 利用此扩展可轻松克隆 Python 代码的存储库，并在 IDE 中通过该存储库创建一个项目。 此外，始终可在命令行上克隆存储库，然后在 Visual Studio 中使用。
+[在 Visual Studio 中安装 Python 支持](installing-python-support-in-visual-studio.md)后，可以添加适用于 Visual Studio 的 GitHub 扩展。 利用此扩展可轻松克隆 Python 代码的存储库，并在 IDE 中通过该存储库创建一个项目。 此外，始终可在命令行上克隆存储库，然后在 Visual Studio 中使用。
 
 ## <a name="install-the-github-extension-for-visual-studio"></a>安装 Visual Studio 的 GitHub扩展
 

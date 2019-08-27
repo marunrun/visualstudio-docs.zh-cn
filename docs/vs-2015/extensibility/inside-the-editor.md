@@ -1,26 +1,21 @@
 ---
 title: 在编辑器内 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - architecture
 ms.assetid: 822cbb8d-7ab4-40ee-bd12-44016ebcce81
 caps.latest.revision: 32
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: ddca5ab4b0d7dc6aa43f3db8c641ad5fc9e583b2
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 8dfc751b040bd775c3f55ff7db804c2a16d45d5f
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51735184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63414619"
 ---
 # <a name="inside-the-editor"></a>编辑器内
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -51,7 +46,7 @@ ms.locfileid: "51735184"
   
 - [IntelliSense](../extensibility/inside-the-editor.md#intellisense)  
   
-##  <a name="overview"></a> 子系统概述  
+## <a name="overview"></a> 子系统概述  
   
 ### <a name="text-model-subsystem"></a>文本模型子系统  
  文本模型子系统负责表示文本和启用其操作。 文本模型子系统包含<xref:Microsoft.VisualStudio.Text.ITextBuffer>接口，其中描述了通过在编辑器中显示的字符序列。 此文本可以修改、 跟踪，和其他操作在许多方面。 文本模型还提供用于以下方面的类型：  
@@ -81,7 +76,7 @@ ms.locfileid: "51735184"
   
 ## <a name="a-closer-look-at-the-text-model-and-the-text-view"></a>进一步了解文本模型和文本视图  
   
-###  <a name="textmodel"></a> 文本模型  
+### <a name="textmodel"></a> 文本模型  
  文本模型子系统包含不同的文本类型分组。 其中包括文本缓冲区、 文本快照和文本段。  
   
 #### <a name="text-buffers-and-text-snapshots"></a>文本缓冲区和文本快照  
@@ -97,7 +92,7 @@ ms.locfileid: "51735184"
  作为一系列字符或一系列行，可以查看文本快照的内容。 字符和行都是同时索引从零开始。 空文本快照包含零个字符和一个空的行。 由任何有效 Unicode 换行字符序列，或开始或缓冲区末尾的分隔行。 换行字符显式表示文本快照中并不是所有具有相同文本快照中的换行。  
   
 > [!NOTE]
->  有关 Visual Studio 编辑器中的换行字符的详细信息，请参阅[编码和换行符](../ide/encodings-and-line-breaks.md)。  
+> 有关 Visual Studio 编辑器中的换行字符的详细信息，请参阅[编码和换行符](../ide/encodings-and-line-breaks.md)。  
   
  表示文本行<xref:Microsoft.VisualStudio.Text.ITextSnapshotLine>对象，可以获取从文本快照的特定行数或特定的字符位置。  
   
@@ -154,7 +149,7 @@ abXefYj
   
  开发人员可以定义自己的内容类型和使用注册<xref:Microsoft.VisualStudio.Utilities.IContentTypeRegistryService>。 可通过使用相对于特定内容类型定义多个编辑器功能<xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>。 例如，编辑器边距、 在修饰和鼠标处理程序可以定义，以便它们仅适用于显示特定内容类型的编辑器。  
   
-###  <a name="textview"></a> 文本视图  
+### <a name="textview"></a> 文本视图  
  模型视图控制器 (MVC) 模式的视图部分定义的视图，如滚动条，并将插入符号的图形元素格式设置在文本视图。 在 Visual Studio 编辑器中的所有表示元素都基于 WPF。  
   
 #### <a name="text-views"></a>文本视图  
@@ -189,21 +184,21 @@ abXefYj
 ## <a name="editor-features"></a>编辑器功能  
  编辑器的功能设计，以便独立于其实现的功能的定义。 编辑器包括以下功能：  
   
--   标记和分类器  
+- 标记和分类器  
   
--   修饰  
+- 修饰  
   
--   投影  
+- 投影  
   
--   大纲显示  
+- 大纲显示  
   
--   鼠标和键绑定  
+- 鼠标和键绑定  
   
--   操作和基元  
+- 操作和基元  
   
--   IntelliSense  
+- IntelliSense  
   
-###  <a name="tagsandclassifiers"></a> 标记和分类器  
+### <a name="tagsandclassifiers"></a> 标记和分类器  
  标记是与文本范围的相关联的标记。 他们可以看到不同的方式，例如，通过使用文本着色、 下划线、 图形或弹出窗口。 分类器是标记的一种类型。  
   
  其他类型的标记都<xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>突出显示文本，<xref:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag>用于大纲显示，和<xref:Microsoft.VisualStudio.Text.Tagging.ErrorTag>的编译错误。  
@@ -235,14 +230,14 @@ abXefYj
   
  <xref:Microsoft.VisualStudio.Text.Classification.IClassificationFormatMap>是从分类类型的一系列文本格式设置属性的映射。 在编辑器中的格式映射的实现可处理分类格式的所有导出。  
   
-###  <a name="adornments"></a> 修饰  
+### <a name="adornments"></a> 修饰  
  修饰是与的字体和颜色的文本视图中的字符不直接相关的图形效果。 例如，用于标记在许多编程语言的非编译代码的红色波浪线下划线是嵌入的修饰，而工具提示弹出窗口修饰。 修饰派生自<xref:System.Windows.UIElement>并实现<xref:Microsoft.VisualStudio.Text.Tagging.ITag>。 两种特殊类型的修饰标记<xref:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag>，为占用相同的空间，以在视图中，文本的修饰和<xref:Microsoft.VisualStudio.Text.Tagging.ErrorTag>，为波浪线下划线。  
   
  嵌入的修饰是构成格式化的文本视图的一部分的图形。 在不同的 Z 顺序层，它们的组织方式。 有三个内置层，按如下所示： 文本、 插入符号和所选内容。 但是，开发人员可以定义多个层，并将其放在相对于另一个的顺序。 三种类型的嵌入修饰是相对于文本的修饰 （其中移动时移动文本，并删除文本时删除）、 相对于视图的修饰 （它们具有与非文本视图部分） 和所有者控制修饰 (开发人员必须管理它们的位置）。  
   
  弹出修饰是在文本视图，例如，工具提示上方的一个小窗口中显示的图形。  
   
-###  <a name="projection"></a> 投影  
+### <a name="projection"></a> 投影  
  投影是一种构造一种不同的文本缓冲区的实际存储文本，但改为结合了其他文本缓冲区中的文本的方法。 例如，可以使用投影缓冲区，来连接其他两个缓冲区中的文本，并显示结果，如同它是一个缓冲区中或隐藏一个缓冲区中的文本部分。 投影缓冲区可以充当源缓冲区到另一个投影缓冲区。 可以构造一组缓冲区通过投影相关的顺序重新进行排列以多种不同方式的文本。 (此类集是也称为*缓冲区关系图*。)Visual Studio 文本大纲显示功能实现通过使用投影缓冲区来隐藏折叠的文本，并且 ASP.NET 页的 Visual Studio 编辑器使用投影来支持嵌入的 Visual Basic 和 C# 等语言。  
   
  <xref:Microsoft.VisualStudio.Text.Projection.IProjectionBuffer>通过创建<xref:Microsoft.VisualStudio.Text.Projection.IProjectionBufferFactoryService>。 投影缓冲区由的有序<xref:Microsoft.VisualStudio.Text.ITrackingSpan>对象被称为*源范围*。 这些范围的内容显示为一系列字符。 名为从中绘制源范围的文本缓冲区*源缓冲区*。 投影缓冲区的客户端就不必注意它不同于普通文本缓冲区。  
@@ -276,18 +271,18 @@ P: ABCDEvwxyz
 ##### <a name="events-and-projection-buffers"></a>事件和投影缓冲区  
  修改投影缓冲区后，所做的修改将从投影缓冲区发送到依赖于它的缓冲区。 修改所有缓冲区后，会引发缓冲区更改事件，从最深的缓冲区。  
   
-###  <a name="outlining"></a> 大纲显示  
+### <a name="outlining"></a> 大纲显示  
  大纲显示是文本的能够展开或折叠不同的文本视图中块。 大纲显示定义为一种类型的<xref:Microsoft.VisualStudio.Text.Tagging.ITag>中的相同方式定义修饰。 一个<xref:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag>是定义可以展开或折叠的文本区域的标记。 若要使用大纲显示，必须导入<xref:Microsoft.VisualStudio.Text.Outlining.IOutliningManagerService>若要获取<xref:Microsoft.VisualStudio.Text.Outlining.IOutliningManager>。 大纲显示管理器枚举，折叠，且扩展，不同的块，该值表示为<xref:Microsoft.VisualStudio.Text.Outlining.ICollapsible>对象，并相应地引发事件。  
   
-###  <a name="mousebindings"></a> 鼠标绑定  
+### <a name="mousebindings"></a> 鼠标绑定  
  鼠标绑定链接鼠标移动到不同的命令。 通过使用定义鼠标绑定<xref:Microsoft.VisualStudio.Text.Editor.IMouseProcessorProvider>，并通过使用定义键绑定<xref:Microsoft.VisualStudio.Text.Editor.IKeyProcessorProvider>。 <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewHost>自动实例化的所有绑定，并将其连接到视图中的鼠标事件。  
   
  <xref:Microsoft.VisualStudio.Text.Editor.IMouseProcessor>接口包含不同的鼠标事件的预处理和后处理事件处理程序。 为其中一个事件句柄，您可以重写中的方法的一些<xref:Microsoft.VisualStudio.Text.Editor.MouseProcessorBase>。  
   
-###  <a name="editoroperations"></a> 编辑器操作  
+### <a name="editoroperations"></a> 编辑器操作  
  可以使用编辑器操作来自动执行与编辑器中的，用于编写脚本或其他目的进行交互。 您可以导入<xref:Microsoft.VisualStudio.Text.Operations.IEditorOperationsFactoryService>上访问操作到给定<xref:Microsoft.VisualStudio.Text.Editor.ITextView>。 然后可以使用这些对象以修改所选内容、 滚动视图，或将插入符号移动到视图的不同部分。  
   
-###  <a name="intellisense"></a> IntelliSense  
+### <a name="intellisense"></a> IntelliSense  
  IntelliSense 支持语句完成、 签名帮助 （也称为参数信息）、 快速信息和灯泡。  
   
  语句补全将提供方法名称、 XML 元素和其他编码或标记元素的潜在完成弹出的列表。 一般情况下，用户手势调用完成会话。 潜在的完成列表将显示会话和用户可以选择一个或消除列表。 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker>负责创建并触发<xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSession>。 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource>计算<xref:Microsoft.VisualStudio.Language.Intellisense.CompletionSet>会话完成项。  
@@ -295,4 +290,3 @@ P: ABCDEvwxyz
 ## <a name="see-also"></a>请参阅  
  [语言服务和编辑器扩展点](../extensibility/language-service-and-editor-extension-points.md)   
  [编辑器导入](../extensibility/editor-imports.md)
-

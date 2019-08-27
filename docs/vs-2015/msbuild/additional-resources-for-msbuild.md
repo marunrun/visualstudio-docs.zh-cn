@@ -1,14 +1,9 @@
 ---
 title: 有关 MSBuild 的其他资源 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,18 +15,17 @@ ms.assetid: 3206dc09-daa4-43c4-8073-731a82e36a89
 caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 54e432917957a361f736785550cd07b23f5d14a9
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 4ea89855a83cdf01255cacc7c8c639c6fcfe1cc4
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49248958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68187065"
 ---
 # <a name="additional-resources-for-msbuild"></a>有关 MSBuild 的其他资源
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 通过以下网站和论坛，可以获得有关使用 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 的常见问题解答。  
   
 ## <a name="microsoft-resources"></a>Microsoft 资源  
@@ -46,9 +40,7 @@ ms.locfileid: "49248958"
  [Visual Studio MSBuild 论坛](http://go.microsoft.com/fwlink/?LinkId=48931)  
  专注于 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 的社区论坛。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSBuild](msbuild.md)   
  [MSBuild 概念](../msbuild/msbuild-concepts.md)   
  [MSBuild 参考](../msbuild/msbuild-reference.md)
-
-

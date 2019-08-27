@@ -18,28 +18,28 @@ helpviewer_keywords:
 ms.assetid: 8ec5160a-6408-4f47-8d41-f0e20e79a3b9
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 717e57a4c4ba739236fa3b66a444dd854d357dcc
-ms.sourcegitcommit: 59c48e1e42b48ad25a4e198af670faa4d8dae370
-ms.translationtype: MTE95
+ms.openlocfilehash: 7a9ab4300484e81e70abd36dbdba28521f91cd62
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54204289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62903936"
 ---
 # <a name="property-pages-settings-for-web-projects"></a>Web 项目的属性页设置
-如[调试和发布配置](../debugger/how-to-set-debug-and-release-configurations.md)中所述，可以在“属性页”对话框中更改网站调试配置的属性设置。 下表显示“属性页”对话框中与调试器有关的设置的位置。  
-  
+如[调试和发布配置](../debugger/how-to-set-debug-and-release-configurations.md)中所述，可以在“属性页”对话框中更改网站调试配置的属性设置。 下表显示“属性页”对话框中与调试器有关的设置的位置。
+
 ### <a name="start-options-category"></a>启动选项类别
-  
+
 | **设置** | **说明** |
 | - | - |
 | **启动操作** | 将与应用程序启动相关的选项归为一组的标题。 |
 | **使用当前页** | 将当前页指定为调试起点。 |
 | **特定页：** | 指定希望开始调试的网页。 |
 | **启动外部程序：** | 指定用于启动要调试的程序的命令。 |
-| **命令行参数：** | 为上面指定的命令指定自变量。 |
+| **命令行参数：** | 为上面指定的命令指定参数。 |
 | **工作目录：** | 指定被调试的程序的工作目录。 在 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 中，工作目录是启动应用程序的目录，默认情况下为 \bin\debug。 |
 | **启动 URL** | 指定要调试的 Web 应用程序的位置。 |
 | **不打开页面。等待来自外部应用程序的请求** | 表示等待来自外部应用程序的请求。 该选项不会启动 Internet Explorer 或另一个应用程序， 而只是为应用程序调用调试做好准备。 |
@@ -51,6 +51,6 @@ ms.locfileid: "54204289"
 | **本机代码调试** | 使你能够从托管应用程序中调试对本机（非托管）Win32 代码的调用。 |
 | **SQL Server 调试** | 允许对 SQL Server 数据库对象进行调试。 |
 | **Silverlight 调试** | 允许调试 Silverlight 组件。 |
-  
-## <a name="see-also"></a>请参阅  
- [调试器设置和准备](../debugger/debugger-settings-and-preparation.md)
+
+## <a name="see-also"></a>请参阅
+- [调试器设置和准备](../debugger/debugger-settings-and-preparation.md)

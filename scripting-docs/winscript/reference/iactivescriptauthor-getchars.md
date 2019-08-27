@@ -1,8 +1,7 @@
 ---
-title: IActiveScriptAuthor::GetChars |Microsoft Docs
+title: IActiveScriptAuthor::GetChars | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 06e7a7cf276e589aaaa3c00ecab8cbf881942f82
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: 69cdeb16fa0791b3ff8c0cce4a4e67fe110eefc2
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54094323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62935368"
 ---
 # <a name="iactivescriptauthorgetchars"></a>IActiveScriptAuthor::GetChars
 返回请求的完成上下文完成字符组。  
@@ -61,7 +60,7 @@ HRESULT GetChars(
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   

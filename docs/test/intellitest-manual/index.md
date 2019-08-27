@@ -1,21 +1,20 @@
 ---
 title: IntelliTest 参考手册 | Microsoft 开发人员测试工具
 ms.date: 05/02/2017
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest Reference Manual, IntelliTest
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: c8db2e17f18d96f8d8b6c9eee3261c9329ece0b6
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d7258549b242091737e14e00980447eb48d5e78b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53926905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62551588"
 ---
 # <a name="intellitest-reference-manual"></a>IntelliTest 参考手册
 
@@ -31,11 +30,11 @@ ms.locfileid: "53926905"
     * [语言](introduction.md#language)
     * [符号推理](introduction.md#symbolic-reasoning)
     * [不正确的堆栈跟踪](introduction.md#incorrect-stack-traces)
-  - [其他阅读材料](introduction.md#further-reading)<p>&nbsp;</p>
+  - [其他阅读材料](introduction.md#further-reading)
 
 * **[IntelliTest 入门](getting-started.md)**
   - [重要特性](getting-started.md#important-attributes)
-  - [重要的静态帮助程序类](getting-started.md#helper-classes)<p>&nbsp;</p>
+  - [重要的静态帮助程序类](getting-started.md#helper-classes)
 
 * **[测试生成](test-generation.md)**
   - [测试生成器](test-generation.md#test-generators)
@@ -48,7 +47,7 @@ ms.locfileid: "53926905"
   - [后置条件](test-generation.md#postcondition)
   - [测试失败](test-generation.md#test-failures)
   - [安装和卸载](test-generation.md#setup-teardown)
-  - [其他阅读材料](test-generation.md#further-reading)<p>&nbsp;</p>
+  - [其他阅读材料](test-generation.md#further-reading)
 
 * **[输入生成](input-generation.md)**
   - [约束求解器](input-generation.md#constraint-solver)
@@ -61,7 +60,7 @@ ms.locfileid: "53926905"
   - [结构](input-generation.md#structs)
   - [数组和字符串](input-generation.md#arrays-and-strings)
   - [获取其他输入](input-generation.md#additional-inputs)
-  - [其他阅读材料](input-generation.md#further-reading)<p>&nbsp;</p>
+  - [其他阅读材料](input-generation.md#further-reading)
 
 * **[浏览边界](exploration-bounds.md)**
   - [MaxConstraintSolverTime](exploration-bounds.md#maxconstraintsolvertime)
@@ -76,7 +75,7 @@ ms.locfileid: "53926905"
   - [MaxExceptions](exploration-bounds.md#maxexceptions)
   - [TestExcludePathBoundsExceeded](exploration-bounds.md#testexcludepathboundsexceeded)
   - [TestEmissionFilter](exploration-bounds.md#testemissionfilter)
-  - [TestEmissionBranchHits](exploration-bounds.md#testemissionbranchhits)<p>&nbsp;</p>
+  - [TestEmissionBranchHits](exploration-bounds.md#testemissionbranchhits)
 
 * **[属性术语表](attribute-glossary.md)**
   - [PexAssumeNotNull](attribute-glossary.md#pexassumenotnull)
@@ -91,7 +90,7 @@ ms.locfileid: "53926905"
   - [PexAllowedException](attribute-glossary.md#pexallowedexception)
   - [PexAllowedExceptionFromAssembly](attribute-glossary.md#pexallowedexceptionfromassembly)
   - [PexAllowedExceptionFromType](attribute-glossary.md#pexallowedexceptionfromtype)
-  - [PexAllowedExceptionFromTypeUnderTest](attribute-glossary.md#pexallowedexceptionfromtypeundertest)<p>&nbsp;</p>
+  - [PexAllowedExceptionFromTypeUnderTest](attribute-glossary.md#pexallowedexceptionfromtypeundertest)
 
 * **[设置瀑布图](settings-waterfall.md)**
 
@@ -100,7 +99,7 @@ ms.locfileid: "53926905"
   - [PexAssert](static-helper-classes.md#pexassert)
   - [PexChoose](static-helper-classes.md#pexchoose)
   - [PexObserve](static-helper-classes.md#pexobserve)
-  - [PexSymbolicValue](static-helper-classes.md#pexsymbolicvalue)<p>&nbsp;</p>
+  - [PexSymbolicValue](static-helper-classes.md#pexsymbolicvalue)
 
 * **[警告和错误](warnings-and-errors.md)**
   - [已超出 MaxBranches](warnings-and-errors.md#maxbranches-exceeded)
@@ -122,7 +121,7 @@ ms.locfileid: "53926905"
   - [可测试性问题](warnings-and-errors.md#testability-issue)
   - [限制](warnings-and-errors.md#limitation)
   - [观察到调用不匹配](warnings-and-errors.md#observed-call-mismatch)
-  - [存储在静态字段中的值](warnings-and-errors.md#value-static-field)<p>&nbsp;</p>
+  - [存储在静态字段中的值](warnings-and-errors.md#value-static-field)
 
 ## <a name="got-feedback"></a>是否获得反馈？
 

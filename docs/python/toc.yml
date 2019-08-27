@@ -1,148 +1,151 @@
-items:
 - name: Visual Studio 中的 Python
   href: index.yml
 - name: 概述
   items:
-  - name: Python 支持概述
-    href: overview-of-python-tools-for-visual-studio.md
-  - name: 学习 Visual Studio IDE 教程
-    href: visual-studio-ide.md
+    - name: Python 支持概述
+      href: overview-of-python-tools-for-visual-studio.md
+    - name: 学习 Visual Studio IDE 教程
+      href: visual-studio-ide.md
+    - name: 数据科学和分析应用程序工作负荷
+      href: data-science-and-analytical-applications-workload.md
 - name: 安装
-  href: installing-python-support-in-visual-studio.md
   items:
-  - name: 安装 Python 解释器
-    href: installing-python-interpreters.md
+    - name: 安装
+      href: installing-python-support-in-visual-studio.md
+    - name: 安装 Python 解释器
+      href: installing-python-interpreters.md
 - name: 快速入门
   items:
-  - name: 通过 Flask 创建 Web 应用
-    href: ../ide/quickstart-python.md
-    maintainContext: true
-  - name: 通过模板创建项目
-    href: quickstart-02-python-in-visual-studio-project-from-template.md
-  - name: 通过现有代码创建项目
-    href: quickstart-01-python-in-visual-studio-project-from-existing-code.md
-  - name: 通过存储库创建项目
-    href: quickstart-03-python-in-visual-studio-project-from-repository.md
-  - name: 通过 Cookiecutter 模板创建项目
-    href: quickstart-04-python-in-visual-studio-project-from-cookiecutter.md
+    - name: 通过 Flask 创建 Web 应用
+      href: ../ide/quickstart-python.md
+      maintainContext: true
+    - name: 通过模板创建项目
+      href: quickstart-02-python-in-visual-studio-project-from-template.md
+    - name: 打开并运行文件夹中的 Python 代码
+      href: quickstart-05-python-visual-studio-open-folder.md
+    - name: 通过现有代码创建项目
+      href: quickstart-01-python-in-visual-studio-project-from-existing-code.md
+    - name: 通过存储库创建项目
+      href: quickstart-03-python-in-visual-studio-project-from-repository.md
+    - name: 通过 Cookiecutter 模板创建项目
+      href: quickstart-04-python-in-visual-studio-project-from-cookiecutter.md
 - name: 教程
   items:
-  - name: Visual Studio 中的 Python
-    items:
-    - name: 0 - 安装 Python 支持
-      href: tutorial-working-with-python-in-visual-studio-step-00-installation.md
-    - name: 1 - 创建新的 Python 项目
-      href: tutorial-working-with-python-in-visual-studio-step-01-create-project.md
-    - name: 2 - 编写和运行代码
-      href: tutorial-working-with-python-in-visual-studio-step-02-writing-code.md
-    - name: 3 - 使用交互式 REPL 窗口
-      href: tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md
-    - name: 4 - 在调试器中运行代码
-      href: tutorial-working-with-python-in-visual-studio-step-04-debugging.md
-    - name: 5 - 安装程序包和管理 Python 环境
-      href: tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md
-    - name: 6 - 使用 Git
-      href: tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md
-  - name: 了解 Visual Studio 中的 Django
-    items:
-    - name: 1 - 创建项目和解决方案
-      href: learn-django-in-visual-studio-step-01-project-and-solution.md
-    - name: 2 - 创建 Django 应用
-      href: learn-django-in-visual-studio-step-02-create-an-app.md
-    - name: 3 - 为静态文件服务并添加页面
-      href: learn-django-in-visual-studio-step-03-serve-static-files-and-add-pages.md
-    - name: 4 - 使用 Django Web 项目模板
-      href: learn-django-in-visual-studio-step-04-full-django-project-template.md
-    - name: 5 - 对用户进行身份验证
-      href: learn-django-in-visual-studio-step-05-django-authentication.md
-    - name: 6 - 使用 Polls Django Web 项目模板
-      href: learn-django-in-visual-studio-step-06-polls-django-web-project-template.md
-  - name: 了解 Visual Studio 中的 Flask
-    items:
-    - name: 1 - 创建项目和解决方案
-      href: learn-flask-visual-studio-step-01-project-solution.md
-    - name: 2 - 创建 Flask 应用
-      href: learn-flask-visual-studio-step-02-create-app.md
-    - name: 3 - 为静态文件服务并添加页面
-      href: learn-flask-visual-studio-step-03-serve-static-files-add-pages.md
-    - name: 4 - 使用 Flask Web 项目模板
-      href: learn-flask-visual-studio-step-04-full-flask-project-template.md
-    - name: 5 - 使用投票 Flask Web 项目模板
-      href: learn-flask-visual-studio-step-05-polls-flask-web-project-template.md
+    - name: Visual Studio 中的 Python
+      items:
+        - name: 0 - 安装 Python 支持
+          href: tutorial-working-with-python-in-visual-studio-step-00-installation.md
+        - name: 1 - 创建新的 Python 项目
+          href: tutorial-working-with-python-in-visual-studio-step-01-create-project.md
+        - name: 2 - 编写和运行代码
+          href: tutorial-working-with-python-in-visual-studio-step-02-writing-code.md
+        - name: 3 - 使用交互式 REPL 窗口
+          href: tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md
+        - name: 4 - 在调试器中运行代码
+          href: tutorial-working-with-python-in-visual-studio-step-04-debugging.md
+        - name: 5 - 安装程序包和管理 Python 环境
+          href: tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md
+        - name: 6 - 使用 Git
+          href: tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md
+    - name: 了解 Visual Studio 中的 Django
+      items:
+        - name: 1 - 创建项目和解决方案
+          href: learn-django-in-visual-studio-step-01-project-and-solution.md
+        - name: 2 - 创建 Django 应用
+          href: learn-django-in-visual-studio-step-02-create-an-app.md
+        - name: 3 - 为静态文件服务并添加页面
+          href: learn-django-in-visual-studio-step-03-serve-static-files-and-add-pages.md
+        - name: 4 - 使用 Django Web 项目模板
+          href: learn-django-in-visual-studio-step-04-full-django-project-template.md
+        - name: 5 - 对用户进行身份验证
+          href: learn-django-in-visual-studio-step-05-django-authentication.md
+        - name: 6 - 使用 Polls Django Web 项目模板
+          href: learn-django-in-visual-studio-step-06-polls-django-web-project-template.md
+    - name: 了解 Visual Studio 中的 Flask
+      items:
+        - name: 1 - 创建项目和解决方案
+          href: learn-flask-visual-studio-step-01-project-solution.md
+        - name: 2 - 创建 Flask 应用
+          href: learn-flask-visual-studio-step-02-create-app.md
+        - name: 3 - 为静态文件服务并添加页面
+          href: learn-flask-visual-studio-step-03-serve-static-files-add-pages.md
+        - name: 4 - 使用 Flask Web 项目模板
+          href: learn-flask-visual-studio-step-04-full-flask-project-template.md
+        - name: 5 - 使用投票 Flask Web 项目模板
+          href: learn-flask-visual-studio-step-05-polls-flask-web-project-template.md
 - name: 概念
   items:
-  - name: Python 项目
-    href: managing-python-projects-in-visual-studio.md
-    items:
-    - name: Web 项目模板
-      href: python-web-application-project-templates.md
-    - name: Django Web 项目模板
-      href: python-django-web-application-project-template.md
-    - name: Azure 云服务模板
-      href: python-azure-cloud-service-project-template.md
-  - name: Azure SDK for Python
-    href: azure-sdk-for-python.md
+    - name: Python 项目
+      items:
+        - name: Python 项目
+          href: managing-python-projects-in-visual-studio.md
+        - name: Web 项目模板
+          href: python-web-application-project-templates.md
+        - name: Django Web 项目模板
+          href: python-django-web-application-project-template.md
+        - name: Azure 云服务模板
+          href: python-azure-cloud-service-project-template.md
+    - name: Azure SDK for Python
+      href: /python/azure/?view=azure-python
 - name: 操作指南
   items:
-  - name: 管理 Python 环境
-    href: managing-python-environments-in-visual-studio.md
-    items:
-    - name: 为项目选择解释器
-      href: selecting-a-python-environment-for-a-project.md
-    - name: 对依赖项使用 requirements.txt
-      href: managing-required-packages-with-requirements-txt.md
-    - name: 搜索路径
-      href: search-paths.md
-    - name: 环境窗口引用
-      href: python-environments-window-tab-reference.md
-    - name: 为 IIS 配置 Web 应用
-      href: configure-web-apps-for-iis-windows.md
-  - name: 编辑 Python 代码
-    href: editing-python-code-in-visual-studio.md
-    items:
-    - name: 格式代码
-      href: formatting-python-code.md
-    - name: 重构代码
-      href: refactoring-python-code.md
-    - name: 使用 PyLint
-      href: linting-python-code.md
-  - name: 定义自定义菜单命令
-    href: defining-custom-python-project-commands.md
-  - name: 交互式 Python (REPL)
-    href: python-interactive-repl-in-visual-studio.md
-    items:
-    - name: 使用 IPython REPL
-      href: interactive-repl-ipython.md
-  - name: 调试
-    href: debugging-python-in-visual-studio.md
-    items:
-    - name: 在远程 Linux 计算机上调试代码
-      href: debugging-python-code-on-remote-linux-machines.md
-  - name: 在 Linux 上发布到 Azure 应用服务
-    href: publishing-python-web-applications-to-azure-from-visual-studio.md
-  - name: 与 C++ 交互
-    items:
-    - name: 创建适用于 Python 的 C++ 扩展
-      href: working-with-c-cpp-python-in-visual-studio.md
-    - name: Python/C++ 混合模式调试
-      href: debugging-mixed-mode-c-cpp-python-in-visual-studio.md
-    - name: 混合模式调试的符号
-      href: debugging-symbols-for-mixed-mode-c-cpp-python.md
-  - name: 分析
-    href: profiling-python-code-in-visual-studio.md
-  - name: 单元测试
-    href: unit-testing-python-in-visual-studio.md
-  - name: 使用 Cookiecutter 扩展
-    href: using-python-cookiecutter-templates.md
+    - name: 管理 Python 环境
+      items:
+        - name: 管理 Python 环境
+          href: managing-python-environments-in-visual-studio.md
+        - name: 为项目选择解释器
+          href: selecting-a-python-environment-for-a-project.md
+        - name: 对依赖项使用 requirements.txt
+          href: managing-required-packages-with-requirements-txt.md
+        - name: 搜索路径
+          href: search-paths.md
+        - name: 环境窗口引用
+          href: python-environments-window-tab-reference.md
+        - name: 为 IIS 配置 Web 应用
+          href: configure-web-apps-for-iis-windows.md
+    - name: 编辑 Python 代码
+      items:
+        - name: 编辑 Python 代码
+          href: editing-python-code-in-visual-studio.md
+        - name: 格式代码
+          href: formatting-python-code.md
+        - name: 重构代码
+          href: refactoring-python-code.md
+        - name: 使用 PyLint
+          href: linting-python-code.md
+    - name: 定义自定义菜单命令
+      href: defining-custom-python-project-commands.md
+    - name: 交互式 Python (REPL)
+      items:
+        - name: 交互式 Python (REPL)
+          href: python-interactive-repl-in-visual-studio.md
+        - name: 使用 IPython REPL
+          href: interactive-repl-ipython.md
+    - name: 调试
+      items:
+        - name: 调试
+          href: debugging-python-in-visual-studio.md
+        - name: 在远程 Linux 计算机上调试代码
+          href: debugging-python-code-on-remote-linux-machines.md
+    - name: 在 Linux 上发布到 Azure 应用服务
+      href: publishing-python-web-applications-to-azure-from-visual-studio.md
+    - name: 与 C++ 交互
+      items:
+        - name: 创建适用于 Python 的 C++ 扩展
+          href: working-with-c-cpp-python-in-visual-studio.md
+        - name: Python/C++ 混合模式调试
+          href: debugging-mixed-mode-c-cpp-python-in-visual-studio.md
+        - name: 混合模式调试的符号
+          href: debugging-symbols-for-mixed-mode-c-cpp-python.md
+    - name: 分析
+      href: profiling-python-code-in-visual-studio.md
+    - name: 单元测试
+      href: unit-testing-python-in-visual-studio.md
+    - name: 使用 Cookiecutter 扩展
+      href: using-python-cookiecutter-templates.md
 - name: 参考
   items:
-  - name: 项模板
-    href: python-item-templates.md
-  - name: 选项
-    href: python-support-options-and-settings-in-visual-studio.md
-ms.openlocfilehash: e295581bbb60c5febc98cde837f6e498aa93d042
-ms.sourcegitcommit: a715de2ba8c703f37aa2102567b1aa2c0f05a117
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53441582"
+    - name: 项模板
+      href: python-item-templates.md
+    - name: 选项
+      href: python-support-options-and-settings-in-visual-studio.md

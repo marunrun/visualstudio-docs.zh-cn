@@ -1,7 +1,6 @@
 ---
 title: 使用 Visual C++ 代码（类设计器）
 ms.date: 06/21/2017
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.cpplimitation
@@ -16,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f5b40921-2ef7-4de0-b595-45b44c79ffa6
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e81a267b1a80036a0e000d7336f6b50b0e5f29d2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 16dbcbecece0e8ec38e3f38391ca5063e2e3d36c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53947512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62975003"
 ---
 # <a name="work-with-visual-c-code-in-class-designer"></a>在类设计器中使用 Visual C++ 代码
 

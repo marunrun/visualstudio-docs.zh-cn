@@ -1,14 +1,9 @@
 ---
-title: CA2109： 检查可见的事件处理程序 |Microsoft Docs
-ms.custom: ''
+title: CA2109:检查可见的事件处理程序 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA2109
 - ReviewVisibleEventHandlers
@@ -20,14 +15,14 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 328df28441fa5c96fee40baed11a54c3044542b8
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 9cdf4777aa9ec0222656ac02376c5343d2138c0d
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49880372"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65687375"
 ---
-# <a name="ca2109-review-visible-event-handlers"></a>CA2109：检查可见的事件处理程序
+# <a name="ca2109-review-visible-event-handlers"></a>CA2109:检查可见的事件处理程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -47,18 +42,18 @@ ms.locfileid: "49880372"
 
  要求不能可靠地保护由事件处理程序调用的方法。 安全请求有助于防止代码免受不受信任调用方通过检查调用堆栈上的调用方。 事件处理程序的方法在运行时，将事件处理程序添加到事件的代码不一定存在调用堆栈上。 因此，调用堆栈可能具有仅高度受信任的调用方调用事件处理程序方法时。 这将导致发出的事件处理程序方法才能成功请求。 此外，调用此方法，则可能会添加要求的权限。 出于这些原因，仅可以查看的事件处理方法后评估不修复该规则的冲突的风险。 当查看你的代码时，请考虑以下问题：
 
--   事件处理程序是否执行危险或可被利用，如断言权限或禁止显示非托管的代码权限的任何操作？
+- 事件处理程序是否执行危险或可被利用，如断言权限或禁止显示非托管的代码权限的任何操作？
 
--   什么是与你的代码的安全威胁，因为可以随时与高度仅运行受信任调用方在堆栈上？
+- 什么是与你的代码的安全威胁，因为可以随时与高度仅运行受信任调用方在堆栈上？
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复此规则的冲突，请检查该方法并评估以下：
 
--   您可以将事件处理方法非公共？
+- 您可以将事件处理方法非公共？
 
--   是否可以移动的事件处理程序的所有危险多功能？
+- 是否可以移动的事件处理程序的所有危险多功能？
 
--   如果施加的安全要求，这可以以某种其他方式？
+- 如果施加的安全要求，这可以以某种其他方式？
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  禁止显示此规则警告在仔细检查安全性后，才以确保你的代码不会构成安全威胁。
@@ -70,7 +65,4 @@ ms.locfileid: "49880372"
 
 ## <a name="see-also"></a>请参阅
  <xref:System.Security.CodeAccessPermission.Demand%2A?displayProperty=fullName> <xref:System.EventArgs?displayProperty=fullName>
- [安全要求](http://msdn.microsoft.com/en-us/324c14f8-54ff-494d-9fd1-bfd20962c8ba)
-
-
-
+ [安全要求](https://msdn.microsoft.com/324c14f8-54ff-494d-9fd1-bfd20962c8ba)

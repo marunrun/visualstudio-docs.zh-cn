@@ -1,14 +1,9 @@
 ---
 title: DA0003：大量内核样本 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 f1_keywords:
 - vs.performance.rules.DA0003
 - vs.performance.DA0003
@@ -18,13 +13,13 @@ ms.assetid: c1f46f77-eb95-42e5-b340-d86bc9de41b4
 caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 922cc6998db9813c188eb9028b8e855a8b860270
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: ad9a0671595d4628932ff4f2db41a137e060c4d1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51741698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68158715"
 ---
 # <a name="da0003-many-kernel-samples"></a>DA0003：大量内核样本
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +27,7 @@ ms.locfileid: "51741698"
 规则 Id |DA0003 |  
 |类别 |分析工具使用情况 |  
 |分析方法 |采样 |  
-|消息 |在内核模式下具有很高比例的示例。 这可能表明 I/O 活动量很大或上下文切换的速率很高。 请考虑使用检测模式再次分析应用程序。 |  
+|消息 |在内核模式下具有很高比例的示例。 这可能表明 I/O 活动量很大或上下文切换的速率很高。 请考虑使用检测模式再次分析应用程序。|  
 |规则类型 |信息 |  
   
 ## <a name="cause"></a>原因  
@@ -46,9 +41,6 @@ ms.locfileid: "51741698"
 ## <a name="how-to-fix-violations"></a>如何解决冲突  
  请考虑使用以下选项之一再次分析应用程序：  
   
--   使用检测方法进行分析。  
+- 使用检测方法进行分析。  
   
--   提高采样率，尝试在用户模式下收集更多样本。
-
-
-
+- 提高采样率，尝试在用户模式下收集更多样本。

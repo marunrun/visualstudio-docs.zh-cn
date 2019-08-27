@@ -5,16 +5,15 @@ ms.topic: reference
 ms.assetid: 3ced8bda-210e-4caf-9d8f-96cdbba19251
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: db36f6e15a219109fa60ffaed13a01890833ea82
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: fcc2a7322397537c9585d0aaa2674e1d3ab3c656
+ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53910852"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65460701"
 ---
 # <a name="cannot-create-an-association-ltassociation-namegt---property-listed-twice"></a>无法创建关联 &lt;关联名称&gt; - 属性已列出两次
 
@@ -36,6 +35,5 @@ ms.locfileid: "53910852"
 
 ## <a name="see-also"></a>请参阅
 
-- [O-R 设计器消息](../data-tools/o-r-designer-messages.md)
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [如何：创建 LINQ to SQL 类 （O/R 设计器） 之间的关联](../data-tools/how-to-create-an-association-relationship-between-linq-to-sql-classes-o-r-designer.md)

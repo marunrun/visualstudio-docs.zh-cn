@@ -1,14 +1,9 @@
 ---
-title: DA0504：所分析的进程的最大工作集（以字节为单位） | Microsoft Docs
-ms.custom: ''
+title: DA0504：所分析的进程的最大工作集（字节） | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 f1_keywords:
 - vs.performance.DA0504
 - vs.performance.504
@@ -17,21 +12,21 @@ ms.assetid: 36e71603-ece7-4000-85fc-9da4eed61bf2
 caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: a39171c8786f3b2149a50bd3c4a6915575f050ae
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: a990b428cfa03722ee5e02884344d96844825ee8
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51800193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68157165"
 ---
-# <a name="da0504-maximum-working-set-in-bytes-for-the-process-being-profiled"></a>DA0504：所分析的进程的最大工作集(以字节为单位)
+# <a name="da0504-maximum-working-set-in-bytes-for-the-process-being-profiled"></a>DA0504：所分析进程的最大工作集（字节）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 规则 Id |DA0504 |  
 |类别 |资源管理 |  
 |分析方法 |所有 |  
-|消息 |此信息仅作为信息收集。 进程工作集计数器测量由正在分析的进程使用的物理内存的使用情况。 报告的值在所有测量时间间隔观察到最大值。 |  
+|消息 |此信息仅作为信息收集。 进程工作集计数器测量由正在分析的进程使用的物理内存的使用情况。 报告的值是在所有测量时间间隔内观察到的最大值。|  
 |规则类型 |信息 |  
   
  使用采样法、.NET 内存或资源争用方法进行分析时，必须收集至少 10 个样本才能触发此规则。  
@@ -47,6 +42,3 @@ ms.locfileid: "51800193"
  该规则从 Windows 性能监视设备收集此测量数据，并进行报告用于信息用途。 若要了解不同测试方案中应用程序的性能，可使用此规则比较不同版本程序的性能。  
   
  双击“错误列表”窗口中的消息，导航到分析数据的[标记视图](../profiling/marks-view.md)。 查找 **Process\Working Set** 和 **Memory\Pages/sec** 计数器列。 然后，查找 **Process\Working Set** 的最大值，并将其与 **Memory\Pages/sec** 值比较。 通常情况下，工作集与时间间隔相关联，此时分页 IO 活动会减少（尤其当计算机是内存约束的时候）。
-
-
-

@@ -1,26 +1,21 @@
 ---
 title: 通过并行部署注册文件扩展名 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - file extensions, registering for side-by-side
 ms.assetid: 9ab046a2-147d-4167-aa14-7d661b1eaaa5
 caps.latest.revision: 14
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: d0312bbc7bd6c73cf0141157cde13f0a381f5e41
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 354b91dd1282df9726c1ee9c47f610b0dfdd9c1a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51805666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68163701"
 ---
 # <a name="registering-file-name-extensions-for-side-by-side-deployments"></a>注册并行部署的文件扩展名
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,4 +38,3 @@ ms.locfileid: "51805666"
 ## <a name="related-sections"></a>相关章节  
  [支持多个版本的 Visual Studio](../extensibility/supporting-multiple-versions-of-visual-studio.md)  
  在开发和向最终用户部署的过程中，描述与多个版本的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 和你的 VSPackage 相关的问题。
-

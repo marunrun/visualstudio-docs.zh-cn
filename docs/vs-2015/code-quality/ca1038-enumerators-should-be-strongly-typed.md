@@ -1,14 +1,9 @@
 ---
-title: CA1038： 枚举数应强类型化 |Microsoft Docs
-ms.custom: ''
+title: CA1038:枚举数应强类型化 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - EnumeratorsShouldBeStronglyTyped
 - CA1038
@@ -20,14 +15,14 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: aafd89a068a57ef1eb89584441195e1ece8b8f52
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 84b6ae6ef0c63870ad9dc593fd0cf2e166e65397
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49899066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62559808"
 ---
-# <a name="ca1038-enumerators-should-be-strongly-typed"></a>CA1038：枚举数应强类型化
+# <a name="ca1038-enumerators-should-be-strongly-typed"></a>CA1038:枚举数应强类型化
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -40,11 +35,11 @@ ms.locfileid: "49899066"
 ## <a name="cause"></a>原因
  公共或受保护类型实现<xref:System.Collections.IEnumerator?displayProperty=fullName>，但不提供强类型的版本<xref:System.Collections.IEnumerator.Current%2A?displayProperty=fullName>属性。 从以下类型派生的类型不受此规则：
 
--   <xref:System.Collections.CollectionBase?displayProperty=fullName>
+- <xref:System.Collections.CollectionBase?displayProperty=fullName>
 
--   <xref:System.Collections.DictionaryBase?displayProperty=fullName>
+- <xref:System.Collections.DictionaryBase?displayProperty=fullName>
 
--   <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>
+- <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>
 
 ## <a name="rule-description"></a>规则说明
  此规则要求<xref:System.Collections.IEnumerator>实现还提供强类型的版本<xref:System.Collections.IEnumerator.Current%2A>属性，因此用户不需要返回值转换为强类型使用时，它们提供的功能由接口。 此规则假定，该类型的实现<xref:System.Collections.IEnumerator>包含一系列强于类型的实例<xref:System.Object>。
@@ -61,14 +56,11 @@ ms.locfileid: "49899066"
  [!code-csharp[FxCop.Design.IEnumeratorStrongTypes#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.IEnumeratorStrongTypes/cs/FxCop.Design.IEnumeratorStrongTypes.cs#1)]
 
 ## <a name="related-rules"></a>相关的规则
- [CA1035：ICollection 实现含有强类型成员](../code-quality/ca1035-icollection-implementations-have-strongly-typed-members.md)
+ [CA1035:ICollection 实现含有强类型成员](../code-quality/ca1035-icollection-implementations-have-strongly-typed-members.md)
 
- [CA1039：列表已强类型化](../code-quality/ca1039-lists-are-strongly-typed.md)
+ [CA1039:列表已强类型化](../code-quality/ca1039-lists-are-strongly-typed.md)
 
 ## <a name="see-also"></a>请参阅
  <xref:System.Collections.IEnumerator?displayProperty=fullName> <xref:System.Collections.CollectionBase?displayProperty=fullName>
  <xref:System.Collections.DictionaryBase?displayProperty=fullName>
  <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>
-
-
-

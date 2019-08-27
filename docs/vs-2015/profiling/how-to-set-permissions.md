@@ -1,14 +1,9 @@
 ---
 title: 如何：设置权限 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - profiling, setting permissions
 - security [Visual Studio ALM], setting permissions
@@ -19,13 +14,13 @@ ms.assetid: 69f27896-8f46-4ef3-bfb7-726d95304f3a
 caps.latest.revision: 28
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 2bfbcb15d9dae16dd7d65ac00ad7c5b17600fa9d
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 03991f3d5900377ceca5464bf41cfb90fcae650e
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51792876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63440596"
 ---
 # <a name="how-to-set-permissions"></a>如何：设置权限
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,29 +38,29 @@ ms.locfileid: "51792876"
   如果管理员为用户组的成员授予对分析工具的软件驱动程序的访问权限，则他们就可以运行分析工具。 最后一个过程“授予对分析驱动程序的访问权限”描述如何授予对该驱动程序的访问权限。  
   
 > [!NOTE]
->  需要管理员权限才能执行这些过程中的步骤。  
+> 需要管理员权限才能执行这些过程中的步骤。  
   
 ### <a name="to-create-a-user-account-that-has-user-permissions"></a>创建拥有用户权限的用户帐户  
   
-1.  右键单击“我的电脑”，然后单击“管理”。  
+1. 右键单击“我的电脑”，然后单击“管理”。  
   
      随即打开“计算机管理”窗口。  
   
-2.  展开“本地用户和组”。  
+2. 展开“本地用户和组”。  
   
-3.  右键单击“用户”文件夹，然后单击“新建用户”。  
+3. 右键单击“用户”文件夹，然后单击“新建用户”。  
   
      随即出现“新建用户”对话框。  
   
-4.  将所创建的用户帐户的信息填写在此对话框的字段中。 指定一个密码。 还可以选中要求用户下次登录时更改密码的复选框。  
+4. 将所创建的用户帐户的信息填写在此对话框的字段中。 指定一个密码。 还可以选中要求用户下次登录时更改密码的复选框。  
   
-5.  单击“创建”，然后单击“关闭”。  
+5. 单击“创建”，然后单击“关闭”。  
   
      新用户将出现在用户组（一组没有管理员权限的用户）中。  
   
 ### <a name="to-grant-access-to-shared-project-files"></a>授予对共享项目文件的访问权限  
   
-1.  在 Windows 资源管理器（或文件资源管理器）中，找到此用户使用并由项目团队共享的项目文件的文件夹树根目录。  
+1. 在 Windows 资源管理器（或文件资源管理器）中，找到此用户使用并由项目团队共享的项目文件的文件夹树根目录。  
   
      此文件夹的路径可能如下所示：  
   
@@ -73,17 +68,17 @@ ms.locfileid: "51792876"
     D:\ourProject  
     ```  
   
-2.  右键单击该文件夹，然后单击“属性”。  
+2. 右键单击该文件夹，然后单击“属性”。  
   
      随即显示“\<文件夹名称> 属性”对话框。  
   
-3.  单击 **“安全”** 选项卡。  
+3. 单击 **“安全”** 选项卡。  
   
-4.  单击“组或用户名”框中的用户帐户的名称。  
+4. 单击“组或用户名”框中的用户帐户的名称。  
   
-5.  在“\<用户名> 的权限”框中，选中“完全控制”复选框。  
+5. 在“\<用户名> 的权限”框中，选中“完全控制”复选框。  
   
-6.  单击 **“确定”**。  
+6. 单击 **“确定”**。  
   
      这将授予用户对从第 5 步所选文件夹开始的共享文件夹树的权限。  
   
@@ -117,11 +112,11 @@ ms.locfileid: "51792876"
   
     此命令为 \<用户名> 或 \<组名称> 帐户授予对分析工具的访问权限。 \<权限> 选项用于确定用户可访问的分析功能。 \<权限> 选项可以是下面的一个或多个值：  
   
-   -   FullAccess — 允许访问所有分析方法，包括从服务、采样和跨会话分析收集性能数据。  
+   - FullAccess — 允许访问所有分析方法，包括从服务、采样和跨会话分析收集性能数据。  
   
-   -   SampleProfiling — 允许访问采样分析方法  
+   - SampleProfiling — 允许访问采样分析方法  
   
-   -   CrossSession — 允许访问分析服务所需的跨会话分析。  
+   - CrossSession — 允许访问分析服务所需的跨会话分析。  
   
 5. （可选）若要在计算机重新启动以后保留以上所有步骤的效果，请运行以下命令：  
   
@@ -135,6 +130,3 @@ ms.locfileid: "51792876"
  [配置性能会话](../profiling/configuring-performance-sessions.md)   
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [分析和 Windows Vista 安全性](../profiling/profiling-and-windows-vista-security.md)
-
-
-

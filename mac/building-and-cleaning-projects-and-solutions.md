@@ -1,16 +1,16 @@
 ---
-title: 在 Visual Studio for Mac 中生成和清理项目和解决方案
+title: 生成和清理项目和解决方案
 description: 本文介绍如何在 Visual Studio for Mac 中生成项目
-author: conceptdev
-ms.author: crdun
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: E4B6CB42-9FE2-43B9-93B7-BD4BD50518B1
-ms.openlocfilehash: 74a78c5cb4e9583db1eb99bb6eeb5691cb4adcfd
-ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
+ms.openlocfilehash: b69bdbacc9b6d8d19dd3ce7abbc9b2a822a48f07
+ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51294235"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68872264"
 ---
 # <a name="building-and-cleaning-projects-and-solutions"></a>生成和清理项目和解决方案
 
@@ -22,7 +22,7 @@ ms.locfileid: "51294235"
 
 1. 在 Solution Pad 中选择“解决方案”节点：
 
-    ![选择“解决方案”节点](media/compiling-and-building-image1.png)
+    ![选择选择“解决方案”节点](media/compiling-and-building-image1.png)
 
 2. 在菜单栏中选择“生成菜单”，然后选择以下选项之一：
 

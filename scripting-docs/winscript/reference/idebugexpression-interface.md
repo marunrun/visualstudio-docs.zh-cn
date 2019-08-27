@@ -2,7 +2,6 @@
 title: IDebugExpression 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,18 +13,18 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9684253343aa83cf95f7d816781705eab7fbc327
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
-ms.translationtype: MT
+ms.openlocfilehash: 1757317e9ab148b508bfed95107b5c3b3369b598
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54345509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63430024"
 ---
 # <a name="idebugexpression-interface"></a>IDebugExpression 接口
 表示异步计算的表达式。 脚本引擎通常情况下实现此接口。 调试器 IDE 通常使用此接口来启用立即执行窗口或监视窗口。  
   
 > [!NOTE]
->  `IDebugExpression`接口是只能从堆栈帧。  
+> `IDebugExpression`接口是只能从堆栈帧。  
   
  除了继承的方法之外`IUnknown`，则`IDebugExpression`接口公开以下方法。  
   

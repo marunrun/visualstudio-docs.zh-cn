@@ -1,7 +1,6 @@
 ---
 title: CA2001:避免调用有问题的方法
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - CA2001
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 19db8edb-31ce-441c-b0de-a0f2746155b7
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f9e66a7c535ec83ac176700dbae8ee58fbf04135
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 1abef0067a58225eea6110d4cc2f7257bc605463
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53958782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808382"
 ---
 # <a name="ca2001-avoid-calling-problematic-methods"></a>CA2001:避免调用有问题的方法
 
@@ -45,7 +44,7 @@ ms.locfileid: "53958782"
 |<xref:System.Threading.Thread.Resume%2A?displayProperty=fullName><br /><br /> <xref:System.Threading.Thread.Suspend%2A?displayProperty=fullName>|已弃用 Thread.Suspend 和 Thread.Resume 由于其不可预知的行为。  使用中的其他类<xref:System.Threading>命名空间，如<xref:System.Threading.Monitor>， <xref:System.Threading.Mutex>，和<xref:System.Threading.Semaphore>，以同步线程或保护资源。|
 |<xref:System.Runtime.InteropServices.SafeHandle.DangerousGetHandle%2A?displayProperty=fullName>|DangerousGetHandle 方法会带来安全风险，因为它可以返回不是有效的句柄。 请参阅<xref:System.Runtime.InteropServices.SafeHandle.DangerousAddRef%2A>和<xref:System.Runtime.InteropServices.SafeHandle.DangerousRelease%2A>详细了解如何安全地使用 DangerousGetHandle 方法的方法。|
 |<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName><br /><br /> <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=fullName><br /><br /> <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=fullName>|这些方法可以从意外的位置加载的程序集。 有关示例，请参阅 Suzanne Cook 的.NET CLR 笔记博客文章[LoadFile vs。LoadFrom](http://go.microsoft.com/fwlink/?LinkId=164450)并[选择绑定上下文](http://go.microsoft.com/fwlink/?LinkId=164451)有关加载程序集的方法信息。|
-|[CoSetProxyBlanket](http://go.microsoft.com/fwlink/?LinkID=169250) (Ole32)<br /><br /> [CoInitializeSecurity](http://go.microsoft.com/fwlink/?LinkId=169255) (Ole32)|用户代码启动托管进程中执行时，它是太迟可靠地调用 CoSetProxyBlanket。 公共语言运行时 (CLR) 执行可能会阻止用户 P/Invoke 之后的初始化操作。<br /><br /> 如果你确实必须 CoSetProxyBlanket 调用托管应用程序，我们建议使用本机代码 （c + +） 可执行文件启动过程，在本机代码中，调用 CoSetProxyBlanket，然后在进程中启动托管的代码应用程序。 （请务必指定运行时的版本号。）|
+|[CoSetProxyBlanket](http://go.microsoft.com/fwlink/?LinkID=169250) (Ole32)<br /><br /> [CoInitializeSecurity](http://go.microsoft.com/fwlink/?LinkId=169255) (Ole32)|用户代码启动托管进程中执行时，它是太迟可靠地调用 CoSetProxyBlanket。 公共语言运行时 (CLR) 执行可能会阻止用户 P/Invoke 之后的初始化操作。<br /><br /> 如果你确实必须 CoSetProxyBlanket 调用托管应用程序，我们建议使用本机代码启动过程 (C++) 可执行文件，在本机代码中，调用 CoSetProxyBlanket，然后在进程中启动托管的代码应用程序。 （请务必指定运行时的版本号。）|
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 

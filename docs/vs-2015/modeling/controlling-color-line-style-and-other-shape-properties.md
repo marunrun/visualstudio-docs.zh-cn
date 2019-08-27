@@ -1,23 +1,20 @@
 ---
 title: 控制颜色、 线型和其他形状属性 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 ms.assetid: c06d0066-24aa-4c65-b91c-c2089b81ec8d
 caps.latest.revision: 4
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: b5694e81721bcc16b13c1857a07072fcaef00a08
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: cff60ca7fc76563db73c4fc839688e0fba4ab975
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49285475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68159647"
 ---
 # <a name="controlling-color-line-style-and-other-shape-properties"></a>控制颜色、线型和其他形状属性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +29,7 @@ ms.locfileid: "49285475"
  现在，该形状具有域设置的属性，您可以在程序代码中或以用户身份。  
   
 ## <a name="dynamically-updating-an-exposed-property"></a>动态更新公开的属性  
- 通常，你想要使依赖于另一个属性公开的属性。 例如，可能想要特定域属性时变为红色的形状小于零。 若要使此依赖项，创建[规则](../modeling/rules-propagate-changes-within-the-model.md)。 例如：  
+ 通常，你想要使依赖于另一个属性公开的属性。 例如，可能想要特定域属性时变为红色的形状小于零。 若要使此依赖项，创建[规则](../modeling/rules-propagate-changes-within-the-model.md)。 例如:  
   
 ```csharp  
 using System;  
@@ -74,6 +71,3 @@ namespace ExampleNamespace
  }  
 }  
 ```
-
-
-

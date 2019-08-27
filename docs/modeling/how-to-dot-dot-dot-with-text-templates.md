@@ -1,21 +1,20 @@
 ---
-title: '如何：使用文本模板 ... '
+title: 如何：使用文本模板 ...
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 7a29f9c8813950cda5907b7f0f96141d00d562fe
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c3bbcbb078925f36204c472c27821e6ba94fa4e0
+ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53887758"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66747540"
 ---
-# <a name="how-to--with-text-templates"></a>如何：使用文本模板 ... 
+# <a name="how-to--with-text-templates"></a>如何：使用文本模板 ...
 在 Visual Studio 中的文本模板提供任何类型的生成文本的有用的方法。 可以使用文本模板生成文本，在你的应用程序的一部分运行时和在设计时生成的某些项目代码。 本主题总结了最常要求"如何实现...？" 问题。
 
  本主题中的前面使用项目符号的多个答案是替代建议。
@@ -27,32 +26,33 @@ ms.locfileid: "53887758"
 ### <a name="generate-part-of-my-application-code"></a>生成我的应用程序代码的一部分
  我有一个配置或*模型*文件或数据库中。 我的代码的一个或多个部件依赖于该模型。
 
--   从文本模板生成的某些代码文件。 有关详细信息，请参阅[使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)并[若要开始编写模板的最佳方法是什么？](#starting)。
+- 从文本模板生成的某些代码文件。 有关详细信息，请参阅[使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)并[若要开始编写模板的最佳方法是什么？](#starting)。
 
 ### <a name="generate-files-at-run-time-passing-data-into-the-template"></a>在运行时，将数据传递到模板生成文件
  在运行时，我的应用程序生成文本文件，例如包含混合使用标准文本和数据的报表。 我想要避免编写数百个`write`语句。
 
--   将运行时文本模板添加到你的项目。 此模板创建在代码中，可以实例化和用于生成文本的类。 在构造函数参数，可以将数据传递给它。 有关详细信息，请参阅[使用 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。
+- 将运行时文本模板添加到你的项目。 此模板创建在代码中，可以实例化和用于生成文本的类。 在构造函数参数，可以将数据传递给它。 有关详细信息，请参阅[使用 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。
 
--   如果你想要从仅在运行时提供的模板生成，可以使用标准文本模板。 如果你正在编写一个 Visual Studio 扩展，可以调用文本模板化服务。 有关详细信息，请参阅[VS 扩展中调用文本转换](../modeling/invoking-text-transformation-in-a-vs-extension.md)。 在其他上下文中，可以使用文本模板化引擎。 有关详细信息，请参阅<xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>。
+- 如果你想要从仅在运行时提供的模板生成，可以使用标准文本模板。 如果你正在编写一个 Visual Studio 扩展，可以调用文本模板化服务。 有关详细信息，请参阅[VS 扩展中调用文本转换](../modeling/invoking-text-transformation-in-a-vs-extension.md)。 在其他上下文中，可以使用文本模板化引擎。 有关详细信息，请参阅 <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>。
 
      使用\<#@parameter#> 指令将参数传递给这些模板。 有关详细信息，请参阅[T4 参数指令](../modeling/t4-parameter-directive.md)。
 
 ### <a name="read-another-project-file-from-a-template"></a>从模板中读取另一个项目文件
  若要从与模板相同的 Visual Studio 项目中读取文件：
 
--   将 `hostSpecific="true"` 插入 `<#@template#>` 指令。
+- 将 `hostSpecific="true"` 插入 `<#@template#>` 指令。
 
      在代码中，使用`this.Host.ResolvePath(filename)`来获取该文件的完整路径。
 
 ### <a name="invoke-methods-from-a-template"></a>调用模板中的方法
- 如果方法中已存在，例如，标准[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]类：
+
+如果方法中已存在，例如，.NET 类：
 
 - 使用\<#@assembly#> 指令来加载该程序集，并使用\<#@import#> 若要设置的命名空间上下文。 有关详细信息，请参阅[T4 导入指令](../modeling/t4-import-directive.md)。
 
    如果您经常使用一组相同的程序集并导入指令，应考虑编写指令处理器。 在每个模板，可以调用指令处理器，它可以加载这些程序集和模型文件和设置的命名空间上下文。 有关详细信息，请参阅[创建自定义 T4 文本模板指令处理器](../modeling/creating-custom-t4-text-template-directive-processors.md)。
 
-  如果你要自行编写方法：
+如果你要自行编写方法：
 
 - 如果你正在编写运行时文本模板，编写一个具有与运行时文本模板相同的名称的分部类定义。 添加到此类的其他方法。
 
@@ -67,11 +67,11 @@ ms.locfileid: "53887758"
 ### <a name="generate-many-files-from-one-model-schema"></a>从一个模型架构生成多个文件
  如果您经常从具有相同的 XML 或数据库架构的模型生成文件：
 
--   应考虑编写指令处理器。 这使您以将程序集的多个语句和导入语句中使用单个自定义指令的每个模板。 指令处理器还可以加载和分析的模型文件。 有关详细信息，请参阅[创建自定义 T4 文本模板指令处理器](../modeling/creating-custom-t4-text-template-directive-processors.md)。
+- 应考虑编写指令处理器。 这使您以将程序集的多个语句和导入语句中使用单个自定义指令的每个模板。 指令处理器还可以加载和分析的模型文件。 有关详细信息，请参阅[创建自定义 T4 文本模板指令处理器](../modeling/creating-custom-t4-text-template-directive-processors.md)。
 
 ### <a name="generate-files-from-a-complex-model"></a>从复杂的模型生成文件
 
--   请考虑创建域特定语言 (DSL) 来表示该模型。 这使得它更容易编写模板，因为你使用类型和属性，以反映您的模型中的元素的名称。 无需分析文件或导航 XML 节点。 例如：
+- 请考虑创建域特定语言 (DSL) 来表示该模型。 这使得它更容易编写模板，因为你使用类型和属性，以反映您的模型中的元素的名称。 无需分析文件或导航 XML 节点。 例如：
 
      `foreach (Book book in this.Library) { ... }`
 
@@ -94,21 +94,21 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 
 ### <a name="execute-text-templates-in-the-build-process"></a>在生成过程中执行文本模板
 
--   有关详细信息，请参阅[生成过程中的代码生成](../modeling/code-generation-in-a-build-process.md)。
+- 有关详细信息，请参阅[生成过程中的代码生成](../modeling/code-generation-in-a-build-process.md)。
 
 ## <a name="more-general-questions"></a>更多常规问题
 
 ### <a name="starting"></a> 若要开始编写文本模板的最佳方法是什么？
 
-1.  写入生成的文件的具体示例。
+1. 写入生成的文件的具体示例。
 
-2.  将其转换文本模板的方法是插入`<#@template #>`指令，和的指令和代码所需加载模型的输入的文件。
+2. 将其转换文本模板的方法是插入`<#@template #>`指令，和的指令和代码所需加载模型的输入的文件。
 
-3.  渐进式文件的部分将替换为表达式和代码块。
+3. 渐进式文件的部分将替换为表达式和代码块。
 
 ### <a name="what-is-a-model"></a>"模型"是什么？
 
--   通过在模板读取的输入。 它可能是在文件中或在数据库中。 XML 或 Visio 绘图，或特定于域的语言 (DSL) 或 UML 模型中，可能会也可能是纯文本。 它可以分布在多个文件。 通常，多个模板读取一个模型。
+- 通过在模板读取的输入。 它可能是在文件中或在数据库中。 XML 或 Visio 绘图，或特定于域的语言 (DSL) 或 UML 模型中，可能会也可能是纯文本。 它可以分布在多个文件。 通常，多个模板读取一个模型。
 
      "模型"一词的含义是业务的，它表示您更直接地比生成的程序代码或其他文件的某些方面。 例如，它可能表示你生成的软件将监督通信网络的计划。
 
@@ -119,8 +119,8 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 
 ### <a name="what-best-practices-are-there-for-text-templates"></a>"最佳实践"还有哪些文本模板的？
 
--   有关详细信息，请参阅[T4 文本模板编写准则](../modeling/guidelines-for-writing-t4-text-templates.md)。
+- 有关详细信息，请参阅[T4 文本模板编写准则](../modeling/guidelines-for-writing-t4-text-templates.md)。
 
 ### <a name="what-is-t4"></a>什么是"T4"？
 
--   此处所述的 Visual Studio 文本模板功能的另一个名称。 未发布的上一个版本是"文本模板转换"的缩写词。
+- 此处所述的 Visual Studio 文本模板功能的另一个名称。 未发布的上一个版本是"文本模板转换"的缩写词。

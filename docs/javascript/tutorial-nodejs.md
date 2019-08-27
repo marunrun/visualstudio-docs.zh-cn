@@ -6,21 +6,33 @@ ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 0bbd7dd67c85d0693a7aa5df8253dbe12d1e52b1
-ms.sourcegitcommit: 8bfabab73b39b3b3e68a3e8dc225515e8b310fed
+ms.openlocfilehash: fd1841c406423147082a4dced9d0993d07efaca9
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54398255"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65695858"
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>教程：在 Visual Studio 中创建 Node.js 和 Express 应用
 
-本教程介绍如果使用 Node.js 和 Express 进行 Visual Studio 开发，教程会创建一个简单的 Node.js Web 应用，添加一些代码，浏览 IDE 的某些功能并运行应用。 如果尚未安装 Visual Studio，请在[此处](http://visualstudio.microsoft.com)免费安装。
+本教程介绍如果使用 Node.js 和 Express 进行 Visual Studio 开发，教程会创建一个简单的 Node.js Web 应用，添加一些代码，浏览 IDE 的某些功能并运行应用。 
+
+::: moniker range="vs-2017"
+
+如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)页免费安装。
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)页免费安装。
+
+::: moniker-end
 
 在本教程中，你将了解：
 > [!div class="checklist"]
@@ -48,11 +60,18 @@ Express 是一个 Web 应用程序框架，用作 Node.js 构建 Web 应用程�
 
 ## <a name="prerequisites"></a>系统必备
 
-* 须安装 Visual Studio 2017 且具有 Node.js 开发工作负载。
+* 须安装 Visual Studio 且具有 Node.js 开发工作负载。
 
-    如果尚未安装 Visual Studio，请转到  [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 页免费安装。
+    ::: moniker range=">=vs-2019"
+    如果尚未安装 Visual Studio 2019，请转到  [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/) 页免费安装。
+    ::: moniker-end
+    ::: moniker range="vs-2017"
+    如果尚未安装 Visual Studio 2017，请转到  [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/) 页免费安装。
+    ::: moniker-end
 
-    如果需要安装工作负载，但已有 Visual Studio，则单击“新建项目”对话框左窗格中的“打开 Visual Studio 安装程序”链接（选择“文件” > “新建” > “项目”）。 Visual Studio 安装程序启动。 选择“Node.js 开发”工作负载，然后选择“修改”。
+    如果需要安装工作负载但已有 Visual Studio，请转到“工具” > “获取工具和功能...”，这会打开 Visual Studio 安装程序。 选择“Node.js 开发”工作负载，然后选择“修改”。
+
+    ![VS 安装程序中的 Node.js 工作负载](../ide/media/quickstart-nodejs-workload.png)
 
 * 须安装 Node.js 运行时。
 
@@ -66,13 +85,17 @@ Visual Studio 管理项目中的单个应用程序的文件。 该项目包括�
 
 在本教程中，将从一个包含 Node.js 和 express 应用的代码的简单项目开始。
 
-1. 打开 Visual Studio 2017。
+1. 打开 Visual Studio。
 
-1. 在顶部菜单栏，依次选择“文件” > “新建” > “项目”。
+1. 创建新项目。
 
-1. 在“新建项目”对话框的左窗格中，展开“JavaScript”，然后选择“Node.js”。 在中间窗格中，选择“基本 Azure Node.js Express 4 应用程序”，然后选择“确定”。
-
-     如果未看到“基本 Azure Node.js Express 4 应用程序”项目模板，须先安装“Node.js 开发”工作负载（有关说明，请参阅先决条件）。
+    ::: moniker range=">=vs-2019"
+    按 Esc 关闭启动窗口。 键入 Ctrl+Q 以打开搜索框，键入“Node.js”，然后选择“创建新的基本 Azure Node.js Express 4 应用程序”(JavaScript)。 在出现的对话框中，选择“创建”。
+    ::: moniker-end
+    ::: moniker range="vs-2017"
+    在顶部菜单栏，依次选择“文件” > “新建” > “项目”。 在“新建项目”对话框的左窗格中，展开“JavaScript”，然后选择“Node.js”。 在中间窗格中，选择“基本 Azure Node.js Express 4 应用程序”，然后选择“确定”。
+    ::: moniker-end
+    如果未看到“基本 Azure Node.js Express 4 应用程序”项目模板，必须添加 Node.js 开发工作负载。 有关详细说明，请参阅[先决条件](#prerequisites)。
 
     Visual Studio 创建新的解决方案并在右窗格中打开项目。 在编辑器（左窗格）中打开 App.js 项目文件。
 
@@ -191,9 +214,14 @@ IntelliSense 是一款可帮助编写代码的 Visual Studio 工具。
 
 ## <a name="run-the-application"></a>运行此应用程序
 
-1. 在调试工具栏中选择调试目标，例如 Microsoft Edge 或 Chrome。
+1. 在“调试”工具栏中选择调试目标，例如 Microsoft Edge 或 Chrome。
 
+    ::: moniker range=">=vs-2019"
+    ![选择调试目标](../javascript/media/vs-2019/tutorial-nodejs-deploy-target.png)
+    ::: moniker-end
+    ::: moniker range="vs-2017"
     ![选择调试目标](../javascript/media/tutorial-nodejs-deploy-target.png)
+    ::: moniker-end
 
     如果计算机上有 Chrome，但未显示为选项，请从调试目标下拉列表中选择“浏览方式”，然后选择 Chrome 作为默认浏览器目标（选择“设为默认值”）。
 

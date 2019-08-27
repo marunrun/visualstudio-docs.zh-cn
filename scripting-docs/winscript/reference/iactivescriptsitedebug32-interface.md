@@ -11,11 +11,11 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 ms.openlocfilehash: e7937311e01274570e34bd639a0dc5f68206a3aa
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54345560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992447"
 ---
 # <a name="iactivescriptsitedebug32-interface"></a>IActiveScriptSiteDebug32 Interface
 智能主机实现`IActiveScriptSiteDebug32`界面，用于执行文档管理和参与调试。 `IActiveScriptSite`对象通常提供的实现`IActiveScriptSiteDebug32`接口。 如果此操作后，调用`IActiveScriptSite::QueryInterface`方法来获取`IActiveScriptSiteDebug32`接口。  

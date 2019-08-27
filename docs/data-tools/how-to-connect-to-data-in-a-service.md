@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: a6b54353-05fe-4e5c-8631-90231fc95504
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 66a13ac6f23caa3e6ccf28d5d68c03b3fe7fdb4f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: 7633d60ed672b64137b68bd9e6c3b860224753e5
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53923869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62566929"
 ---
 # <a name="how-to-connect-to-data-in-a-service"></a>如何：连接到服务中的数据
 
@@ -37,20 +36,20 @@ ms.locfileid: "53923869"
 
 ## <a name="to-connect-your-application-to-a-service"></a>若要连接到服务应用程序
 
-1.  在 **“数据”** 菜单上，单击 **“添加新数据源”**。
+1. 在 **“数据”** 菜单上，单击 **“添加新数据源”**。
 
-2.  选择**服务**上**选择数据源类型**页上，然后依次**下一步**。
+2. 选择**服务**上**选择数据源类型**页上，然后依次**下一步**。
 
-3.  输入你想要使用，或单击该服务的地址**Discover**若要在当前解决方案中，找到服务，然后单击**转**。
+3. 输入你想要使用，或单击该服务的地址**Discover**若要在当前解决方案中，找到服务，然后单击**转**。
 
-4.  （可选） 您可以键入一个新**Namespace**默认值的位置。
+4. （可选） 您可以键入一个新**Namespace**默认值的位置。
 
     > [!NOTE]
     > 单击**高级**以打开[配置服务引用对话框](../data-tools/configure-service-reference-dialog-box.md)。
 
-5.  单击**确定**添加到你的项目的服务引用。
+5. 单击**确定**添加到你的项目的服务引用。
 
-6.  单击 **“完成”**。
+6. 单击 **“完成”**。
 
      数据源随即添加到“数据源”窗口中。
 

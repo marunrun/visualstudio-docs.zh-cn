@@ -1,14 +1,9 @@
 ---
 title: 测试的源代码管理插件的指南 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - plug-ins, source control
 - source control [Visual Studio SDK], testing plug-ins
@@ -18,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 13b74765-0b7c-418e-8cd9-5f2e8db51ae5
 caps.latest.revision: 27
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: eea089da8c8e0b7e626f58660a57cd499a93fb7c
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 6790e61eddc81045bb168028ee7aeef7a0492e3c
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51778900"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67825750"
 ---
 # <a name="test-guide-for-source-control-plug-ins"></a>源代码管理插件的测试指南
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -32,7 +27,7 @@ ms.locfileid: "51778900"
 本部分提供用于测试你的源代码管理插件与指导[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]。 提供的最常见的测试区域，以及一些可能会出现问题的更多复杂区域的广泛概述。 本概述不应为测试用例的详尽列表。  
   
 > [!NOTE]
->  某些 bug 修复和改进到最新[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]IDE 可能会发现与现有源控件的管理单元以前未使用的早期版本时遇到的问题[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]。 强烈建议测试你现有的源代码管理插件在此部分中，枚举的区域，即使以来的以前版本的插件进行任何更改[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]。  
+> 某些 bug 修复和改进到最新[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]IDE 可能会发现与现有源控件的管理单元以前未使用的早期版本时遇到的问题[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]。 强烈建议测试你现有的源代码管理插件在此部分中，枚举的区域，即使以来的以前版本的插件进行任何更改[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]。  
   
 ## <a name="common-preparation"></a>常见的准备工作  
  具有计算机[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]和安装，是必需的目标源代码管理插件。 与此类似配置的第二个计算机可用于某些打开从源代码管理的测试。  
@@ -44,7 +39,7 @@ ms.locfileid: "51778900"
  任何项目类型中提供[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]支持源代码管理集成 (例如， [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]， [!INCLUDE[csprcs](../../includes/csprcs-md.md)]，或[!INCLUDE[vcprvc](../../includes/vcprvc-md.md)])。  
   
  Web 项目  
- 有四种类型的 Web 项目： 文件系统、 本地 IIS、 远程站点和 FTP。  
+ 有四种类型的 Web 项目：文件系统、 本地 IIS、 远程站点和 FTP。  
   
 - 在本地路径上创建文件系统项目，但它们不需要 Internet 信息服务 (IIS)，因为它们通过 UNC 路径，在内部访问，可以将放置在从 IDE，类似于客户端项目内部的源代码管理下安装。  
   
@@ -62,56 +57,55 @@ ms.locfileid: "51778900"
   
 ## <a name="test-areas-covered-in-this-section"></a>在本部分中介绍的测试环节  
   
--   [测试区域 1：添加到源代码管理或从源代码管理打开](../../extensibility/internals/test-area-1-add-to-open-from-source-control.md)  
+- [测试区域 1：添加到源代码管理/从源代码管理打开](../../extensibility/internals/test-area-1-add-to-open-from-source-control.md)  
   
-    -   Case 1a： 将解决方案添加到源代码管理  
+  - Case 1a:将解决方案添加到源代码管理  
+
+  - Case 1b:从源代码管理打开解决方案  
+
+  - 案例 1 c:从源代码管理添加解决方案  
+
+- [测试区域 2：从源代码管理获取](../../extensibility/internals/test-area-2-get-from-source-control.md)  
   
-    -   Case 1b： 从源代码管理打开解决方案  
+- [测试区域 3：签出/撤消签出](../../extensibility/internals/test-area-3-check-out-undo-checkout.md)  
   
-    -   案例 1 c： 从源代码管理添加解决方案  
+  - 案例 3:签出/撤销签出  
+
+  - Case 3a:签出  
+
+  - Case 3b:断开连接签出  
+
+  - 案例 3 c:查询编辑/查询保存 (QEQS)  
+
+  - 本例中 3d:无提示签出  
+
+  - Case 3e:撤消签出  
   
--   [测试区域 2：从源代码管理获取](../../extensibility/internals/test-area-2-get-from-source-control.md)  
+- [测试区域 4：签入](../../extensibility/internals/test-area-4-check-in.md)  
   
--   [测试区域 3：签出/撤销签出](../../extensibility/internals/test-area-3-check-out-undo-checkout.md)  
+  - Case 4a:修改的项目  
+
+  - Case 4b:添加文件  
+
+  - 用例 4 c:添加项目  
   
-    -   案例 3： 签出/撤销签出  
+- [测试区域 5：更改源代码管理](../../extensibility/internals/test-area-5-change-source-control.md)  
   
-    -   Case 3a： 签出  
-  
-    -   Case 3b： 已断开连接签出  
-  
-    -   案例 3 c： 查询编辑/查询保存 (QEQS)  
-  
-    -   Case 3d： 无提示签出  
-  
-    -   Case 3e： 撤消签出  
-  
--   [测试区域 4：签入](../../extensibility/internals/test-area-4-check-in.md)  
-  
-    -   Case 4a： 修改项目  
-  
-    -   Case 4b： 将文件添加  
-  
-    -   Case 4c： 添加项目  
-  
--   [测试区域 5：更改源代码管理](../../extensibility/internals/test-area-5-change-source-control.md)  
-  
-    -   Case 5a： 绑定  
-  
-    -   Case 5b： 取消绑定  
-  
-    -   Case 5c： 重新绑定  
-  
--   [测试区域 6：删除](../../extensibility/internals/test-area-6-delete.md)  
-  
--   [测试区域 7：共享](../../extensibility/internals/test-area-7-share.md)  
-  
--   [测试区域 8：插件切换](../../extensibility/internals/test-area-8-plug-in-switching.md)  
-  
-    -   Case 8a： 自动更改  
-  
-    -   Case 8b： 基于解决方案的更改  
-  
+  - Case 5a:将绑定  
+
+  - Case 5b:取消绑定  
+
+  - 用例 5 c:重新绑定  
+
+- [测试区域 6：删除](../../extensibility/internals/test-area-6-delete.md)  
+
+- [测试区域 7：共享](../../extensibility/internals/test-area-7-share.md)  
+
+- [测试区域 8：插件切换](../../extensibility/internals/test-area-8-plug-in-switching.md)  
+
+  - Case 8a:自动更改  
+
+  - Case 8b:基于解决方案的更改  
+
 ## <a name="see-also"></a>请参阅  
  [源代码管理插件](../../extensibility/source-control-plug-ins.md)
-

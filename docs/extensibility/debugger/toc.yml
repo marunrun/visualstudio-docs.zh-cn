@@ -5,13 +5,15 @@
 - name: Visual Studio 调试示例
   href: visual-studio-debugging-samples.md
 - name: 创建自定义调试引擎
-  href: creating-a-custom-debug-engine.md
   items:
+    - name: 创建自定义调试引擎
+      href: creating-a-custom-debug-engine.md
     - name: 注册自定义调试引擎
       href: registering-a-custom-debug-engine.md
     - name: 启用要进行调试的程序
-      href: enabling-a-program-to-be-debugged.md
       items:
+        - name: 启用要进行调试的程序
+          href: enabling-a-program-to-be-debugged.md
         - name: 获取端口
           href: getting-a-port.md
         - name: 注册程序
@@ -23,8 +25,9 @@
         - name: 发送必需事件
           href: sending-the-required-events.md
     - name: 执行控件和状态计算
-      href: execution-control-and-state-evaluation.md
       items:
+        - name: 执行控件和状态计算
+          href: execution-control-and-state-evaluation.md
         - name: 程序控制
           href: program-control.md
         - name: 断点相关的方法
@@ -36,8 +39,9 @@
         - name: 控件事件
           href: control-events.md
     - name: 发送事件
-      href: sending-events.md
       items:
+        - name: 发送事件
+          href: sending-events.md
         - name: 事件源 (Visual Studio SDK)
           href: event-sources-visual-studio-sdk.md
         - name: 支持的事件类型
@@ -47,8 +51,9 @@
     - name: 终止和分离
       href: termination-and-detaching.md
     - name: 调用调试器事件
-      href: calling-debugger-events.md
       items:
+        - name: 调用调试器事件
+          href: calling-debugger-events.md
         - name: 附加到程序和从程序分离
           href: attaching-and-detaching-to-a-program.md
         - name: 启动调试器
@@ -76,13 +81,15 @@
     - name: 如何：调试自定义调试引擎
       href: how-to-debug-a-custom-debug-engine.md
 - name: 调试器可扩展性入门
-  href: getting-started-with-debugger-extensibility.md
   items:
+    - name: 调试器可扩展性入门
+      href: getting-started-with-debugger-extensibility.md
     - name: 扩展调试器的路线图
       href: roadmap-for-extending-the-debugger.md
     - name: 调试器组件
-      href: debugger-components.md
       items:
+        - name: 调试器组件
+          href: debugger-components.md
         - name: 调试包
           href: debug-package.md
         - name: 进程调试管理器
@@ -100,8 +107,9 @@
         - name: 类型可视化工具和自定义查看器
           href: type-visualizer-and-custom-viewer.md
     - name: 调试器概念
-      href: debugger-concepts.md
       items:
+        - name: 调试器概念
+          href: debugger-concepts.md
         - name: 调试会话
           href: debug-session.md
         - name: 服务器 (Visual Studio SDK)
@@ -125,8 +133,9 @@
         - name: 断点 (Visual Studio SDK)
           href: breakpoints-visual-studio-sdk.md
     - name: 调试器上下文
-      href: debugger-contexts.md
       items:
+        - name: 调试器上下文
+          href: debugger-contexts.md
         - name: 代码上下文
           href: code-context.md
         - name: 文档位置
@@ -136,13 +145,15 @@
         - name: 表达式计算上下文
           href: expression-evaluation-context.md
     - name: 调试任务
-      href: debugging-tasks.md
       items:
+        - name: 调试任务
+          href: debugging-tasks.md
         - name: 安全性问题
           href: security-issues.md
         - name: 启动程序
-          href: launching-a-program.md
           items:
+            - name: 启动程序
+              href: launching-a-program.md
             - name: 通知端口
               href: notifying-the-port.md
             - name: 启动后附加
@@ -160,13 +171,15 @@
         - name: 可视化和查看数据
           href: visualizing-and-viewing-data.md
 - name: 编写公共语言运行时表达式计算器
-  href: writing-a-common-language-runtime-expression-evaluator.md
   items:
+    - name: 编写公共语言运行时表达式计算器
+      href: writing-a-common-language-runtime-expression-evaluator.md
     - name: 公共语言运行时和表达式计算
       href: common-language-runtime-and-expression-evaluation.md
     - name: 表达式计算器体系结构
-      href: expression-evaluator-architecture.md
       items:
+        - name: 表达式计算器体系结构
+          href: expression-evaluator-architecture.md
         - name: 计算上下文
           href: evaluation-context.md
         - name: 键表达式计算器接口
@@ -174,16 +187,19 @@
     - name: 注册表达式计算器
       href: registering-an-expression-evaluator.md
     - name: 实现表达式计算器
-      href: implementing-an-expression-evaluator.md
       items:
+        - name: 实现表达式计算器
+          href: implementing-an-expression-evaluator.md
         - name: 表达式计算器实施策略
           href: expression-evaluator-implementation-strategy.md
     - name: 显示局部
-      href: displaying-locals.md
       items:
+        - name: 显示局部
+          href: displaying-locals.md
         - name: 局部的实现示例
-          href: sample-implementation-of-locals.md
           items:
+            - name: 局部的实现示例
+              href: sample-implementation-of-locals.md
             - name: 实现 GetMethodProperty
               href: implementing-getmethodproperty.md
             - name: 枚举局部
@@ -195,32 +211,37 @@
             - name: 计算局部
               href: evaluating-locals.md
     - name: 计算监视窗口表达式
-      href: evaluating-a-watch-window-expression.md
       items:
+        - name: 计算监视窗口表达式
+          href: evaluating-a-watch-window-expression.md
         - name: 表达式计算的实现示例
           href: sample-implementation-of-expression-evaluation.md
         - name: 计算监视表达式
           href: evaluating-a-watch-expression.md
     - name: 更改局部值
-      href: changing-the-value-of-a-local.md
       items:
+        - name: 更改局部值
+          href: changing-the-value-of-a-local.md
         - name: 更改值的实现示例
           href: sample-implementation-of-changing-values.md
     - name: 实现类型可视化工具和自定义查看器
       href: implementing-type-visualizers-and-custom-viewers.md
 - name: 实现端口提供程序
-  href: implementing-a-port-supplier.md
   items:
+    - name: 实现端口提供程序
+      href: implementing-a-port-supplier.md
     - name: 实现和注册端口提供程序
       href: implementing-and-registering-a-port-supplier.md
     - name: 所需的端口提供程序接口
       href: required-port-supplier-interfaces.md
 - name: .NET Framework 的并行扩展内幕
-  href: parallel-extension-internals-for-the-dotnet-framework.md
   items:
+    - name: .NET Framework 的并行扩展内幕
+      href: parallel-extension-internals-for-the-dotnet-framework.md
     - name: Task 类 - 内部成员
-      href: task-class-internal-members.md
       items:
+        - name: Task 类 - 内部成员
+          href: task-class-internal-members.md
         - name: m_action 字段
           href: m-action-field.md
         - name: m_contingentProperties 字段
@@ -250,34 +271,39 @@
         - name: NotifyDebuggerOfWaitCompletion 方法
           href: notifydebuggerofwaitcompletion-method.md
     - name: TaskScheduler 类 - 内部成员
-      href: taskscheduler-class-internal-members.md
       items:
+        - name: TaskScheduler 类 - 内部成员
+          href: taskscheduler-class-internal-members.md
         - name: GetScheduledTasksForDebugger 方法
           href: getscheduledtasksfordebugger-method.md
         - name: GetTaskSchedulersForDebugger 方法
           href: gettaskschedulersfordebugger-method.md
     - name: ContingentProperties 类 - 内部成员
-      href: contingentproperties-class-internal-members.md
       items:
+        - name: ContingentProperties 类 - 内部成员
+          href: contingentproperties-class-internal-members.md
         - name: m_children 字段
           href: m-children-field.md
     - name: AsyncTaskMethodBuilder 结构 - 内部成员
-      href: asynctaskmethodbuilder-structure-internal-members.md
       items:
+        - name: AsyncTaskMethodBuilder 结构 - 内部成员
+          href: asynctaskmethodbuilder-structure-internal-members.md
         - name: AsyncTaskMethodBuilder.ObjectIdForDebugger 属性
           href: asynctaskmethodbuilder-objectidfordebugger-property.md
         - name: AsyncTaskMethodBuilder.m_builder 字段
           href: asynctaskmethodbuilder-m-builder-field.md
     - name: AsyncTaskMethodBuilder<TResult> 结构 - 内部成员
-      href: asynctaskmethodbuilder-tresult-structure-internal-members.md
       items:
+        - name: AsyncTaskMethodBuilder<TResult> 结构 - 内部成员
+          href: asynctaskmethodbuilder-tresult-structure-internal-members.md
         - name: AsyncTaskMethodBuilder<TResult>.ObjectIdForDebugger 属性
           href: asynctaskmethodbuilder-tresult-objectidfordebugger-property.md
         - name: AsyncTaskMethodBuilder<TResult>.m_task 字段
           href: asynctaskmethodbuilder-tresult-m-task-field.md
     - name: AsyncVoidMethodBuilder 结构 - 内部成员
-      href: asyncvoidmethodbuilder-structure-internal-members.md
       items:
+        - name: AsyncVoidMethodBuilder 结构 - 内部成员
+          href: asyncvoidmethodbuilder-structure-internal-members.md
         - name: AsyncVoidMethodBuilder.ObjectIdForDebugger 属性
           href: asyncvoidmethodbuilder-objectidfordebugger-property.md
         - name: AsyncVoidMethodBuilder.m_objectIdForDebugger 字段

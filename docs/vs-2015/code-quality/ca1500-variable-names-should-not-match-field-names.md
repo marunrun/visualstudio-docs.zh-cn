@@ -1,14 +1,9 @@
 ---
-title: CA1500： 变量名称不应与字段名称 |Microsoft Docs
-ms.custom: ''
+title: CA1500:变量名不应与字段名称 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - VariableNamesShouldNotMatchFieldNames
 - CA1500
@@ -20,17 +15,17 @@ caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: fdac60aa7b3fb37f45cff7c1c9e5f17920efed18
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 8dc15c95398ed45954c3830d1c558a6653a4346f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49173935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68191490"
 ---
-# <a name="ca1500-variable-names-should-not-match-field-names"></a>CA1500：变量名不应与字段名相同
+# <a name="ca1500-variable-names-should-not-match-field-names"></a>CA1500:变量名不应与字段名相同
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 2017 的最新文档，请参阅[CA1500： 变量名不应与字段名](https://docs.microsoft.com/visualstudio/code-quality/ca1500-variable-names-should-not-match-field-names)docs.microsoft.com 上。  
+Visual Studio 的最新文档，请参阅[CA1500:变量名不应与字段名](https://docs.microsoft.com/visualstudio/code-quality/ca1500-variable-names-should-not-match-field-names)。  
   
 |||  
 |-|-|  
@@ -56,4 +51,3 @@ Visual Studio 2017 的最新文档，请参阅[CA1500： 变量名不应与字�
   
  [!code-csharp[FxCop.Maintainability.VarMatchesField#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Maintainability.VarMatchesField/cs/FxCop.Maintainability.VarMatchesField.cs#1)]
  [!code-vb[FxCop.Maintainability.VarMatchesField#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Maintainability.VarMatchesField/vb/FxCop.Maintainability.VarMatchesField.vb#1)]
-

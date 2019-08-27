@@ -1,12 +1,9 @@
 ---
 title: 编写 T4 文本模板 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - text templates, syntax
 - text templates, guide
@@ -15,13 +12,13 @@ ms.assetid: 94328da7-953b-4e92-9587-648543d1f732
 caps.latest.revision: 45
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 7aa5a216b9be48eae7f2905084f0c39109688d6c
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 1e2f40421c2b59e61de1560619422491a37ed8d8
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49897792"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65684705"
 ---
 # <a name="writing-a-t4-text-template"></a>编写 T4 文本模板
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -103,7 +100,7 @@ Hello!
  在代码中，可以使用 `Write();` 语句的位置都可以插入文本块。  
   
 > [!NOTE]
->  当嵌入例如循环或条件的复合语句内的文本块时，请始终使用大括号 {...} 若要包含文本块。  
+> 当嵌入例如循环或条件的复合语句内的文本块时，请始终使用大括号 {...} 若要包含文本块。  
   
 ### <a name="expression-control-blocks"></a>表达式控制块  
  表达式控制块计算表达式并将其转换为字符串。 该字符串将插入到输出文件中。  
@@ -116,7 +113,7 @@ Hello!
 <#= 2 + 3 #>  
 ```  
   
- 请注意，开始符号有三个字符“<#=”。  
+ 请注意，开始符号有三个字符"< #="。  
   
  表达式可以包含作用域中的任何变量。 例如，下面的块输出数字行：  
   
@@ -200,7 +197,7 @@ private void WriteSquareLine(int i)
 <#@ assembly name="$(SolutionDir)library\MyAssembly.dll" #>  
 ```  
   
- 有关宏的列表，请参阅[用于生成命令和属性的常用宏](http://msdn.microsoft.com/library/239bd708-2ea9-4687-b264-043f1febf98b)。  
+ 有关宏的列表，请参阅[用于生成命令和属性的常用宏](https://msdn.microsoft.com/library/239bd708-2ea9-4687-b264-043f1febf98b)。  
   
  程序集指令中不起[预处理的文本模板](../modeling/run-time-text-generation-with-t4-text-templates.md)。  
   
@@ -217,7 +214,7 @@ private void WriteSquareLine(int i)
   
  有关详细信息，请参阅[T4 导入指令](../modeling/t4-import-directive.md)。  
   
-###  <a name="Include"></a> 包括代码和文本  
+### <a name="Include"></a> 包括代码和文本  
  `include` 指令插入其他模板文件的文本。 例如，下面的指令插入 `test.txt` 的内容。  
   
  `<#@ include file="c:\test.txt" #>`  
@@ -267,7 +264,7 @@ Content of MyFile.txt is:
   
 ```  
   
- 还可以获取主机提供的其他服务。 有关详细信息，请参阅[访问 Visual Studio 或从模板的其他主机](http://msdn.microsoft.com/en-us/0556f20c-fef4-41a9-9597-53afab4ab9e4)。  
+ 还可以获取主机提供的其他服务。 有关详细信息，请参阅[访问 Visual Studio 或从模板的其他主机](https://msdn.microsoft.com/0556f20c-fef4-41a9-9597-53afab4ab9e4)。  
   
 ### <a name="design-time-text-templates-run-in-a-separate-appdomain"></a>设计时文本模板在单独的 AppDomain 中运行  
  请注意，[设计时文本模板](../modeling/design-time-code-generation-by-using-t4-text-templates.md)独立于主应用程序的 AppDomain 中运行。 在大多数情况下这并不重要，但在某些复杂的情况下你可能会发现一些限制。 例如，如果要从单独的服务将数据传入模板或从中传出数据，则该服务必须提供可序列化的 API。  
@@ -287,6 +284,3 @@ Content of MyFile.txt is:
 |在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 外运行文本生成。|[使用 TextTransform 实用工具生成文件](../modeling/generating-files-with-the-texttransform-utility.md)|  
 |以域特定语言的形式转换数据。|[从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)|  
 |编写指令处理器转换自己的数据源。|[自定义 T4 文本转换](../modeling/customizing-t4-text-transformation.md)|
-
-
-

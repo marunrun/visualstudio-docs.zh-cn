@@ -1,26 +1,21 @@
 ---
 title: 项目上下文 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], opening items
 ms.assetid: d1803f4a-24eb-44b0-b5d2-cb40c15534be
 caps.latest.revision: 11
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: c2d54d0e4e8f2a19f641b984d82a5f35d6390274
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: d4ee4da5fdea63cf1bdd33554c72f6dac30d0334
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51795180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62429933"
 ---
 # <a name="project-context"></a>项目上下文
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -36,4 +31,3 @@ ms.locfileid: "51795180"
 ## <a name="see-also"></a>请参阅  
  [项目优先级](../../extensibility/internals/project-priority.md)   
  [添加项目和项目项模板](../../extensibility/internals/adding-project-and-project-item-templates.md)
-

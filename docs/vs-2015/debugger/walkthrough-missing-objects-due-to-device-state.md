@@ -1,25 +1,20 @@
 ---
-title: 演练： 因而缺少对象设备状态 |Microsoft Docs
-ms.custom: ''
+title: 演练：因设备状态而缺少对象 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 1b0d2bbd-0729-4aa5-8308-70c5bf1468c5
 caps.latest.revision: 25
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 5c0ad6017dd6ff660dfbd47977e1a53346cf6c55
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 51fb019d428ed7196818c96e759c0abc8f8e68c7
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51773725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "58936912"
 ---
 # <a name="walkthrough-missing-objects-due-to-device-state"></a>演练：因设备状态而缺少对象
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -113,6 +108,3 @@ ms.locfileid: "51773725"
    确定呈现问题的原因可能是配置错误的深度函数后，可以利用此信息以及你对代码的了解查找错误设置深度函数的位置，并解决此问题。 如果你不熟悉该代码，可以使用调试时收集的线索来查找问题。例如，根据此方案中的“深度模具描述”  ，你可以在代码中搜索“depth”或“GREATER”等单词。 修复代码后，重新生成并运行应用以查明呈现的问题是否已解决：  
   
    ![解决该问题后的应用程序](../debugger/media/vsg-walkthru1-finalview.png "vsg_walkthru1_finalview")
-
-
-

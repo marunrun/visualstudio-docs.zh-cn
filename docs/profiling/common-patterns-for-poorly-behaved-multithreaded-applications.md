@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Concurrency Visualizer, common patterns for poorly-behaved multithreaded applications
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 19f868089c5f8a6187d1bdd36adaf22162b8e2b8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 4aec033266ccb2a6e6dcd0342669b7c31082488a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53878739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788852"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>性能不佳的多线程应用程序的常见模式
 
@@ -30,7 +30,7 @@ ms.locfileid: "53878739"
 
 如下图所示，并发可视化工具还可在 CPU 使用率视图中公开此症状，其中，尽管存在多个线程，但该应用程序只使用一个逻辑核心。
 
-有关详细信息，请参阅MSDN 博客网站上 Hazim Shafi 的 [Windows 的并行性能工具](http://go.microsoft.com/fwlink/?LinkID=160569)博客中的“性能模式 1：识别锁争用”。
+有关详细信息，请参阅 MSDN 杂志文章[线程性能 - Visual Studio 2010 中的资源争用并发分析](https://msdn.microsoft.com/magazine/ff714587.aspx)中的“从问题开始”部分。
 
 ![锁争用](../profiling/media/lockcontention_2.png "LockContention_2")
 

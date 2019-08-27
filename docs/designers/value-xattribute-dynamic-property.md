@@ -1,7 +1,6 @@
 ---
 title: 值（XAttribute 动态属性）
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 apiname:
 - XAttribute.Value
@@ -9,15 +8,15 @@ apitype: Assembly
 ms.assetid: 019733d2-e050-4120-b537-831cd3fc008e
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b97e33bdcb28a3c8790af752d5ab9786dc5ef3d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: fe9127d4a7c691c34f15d399bd32f5e48cc6f0ed
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53882888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892815"
 ---
 # <a name="value-xattribute-dynamic-property"></a>值（XAttribute 动态属性）
 

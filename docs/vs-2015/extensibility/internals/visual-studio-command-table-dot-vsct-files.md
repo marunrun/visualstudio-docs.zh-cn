@@ -1,27 +1,22 @@
 ---
 title: Visual Studio 命令表 (。Vsct) 文件 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - VSCT files, overview
 - Visual Studio command table configuration files (VSCT), overview
 ms.assetid: 1313adb4-add4-4e74-90e2-f4be522f5259
 caps.latest.revision: 23
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 7a68d9f5dac293cc9048cb4b84aaa487c5079250
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: cde3b86e19788c41df6e8f1c79a6bf829f491170
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51748822"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65675250"
 ---
 # <a name="visual-studio-command-table-vsct-files"></a>Visual Studio 命令表格 (.Vsct) 文件
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -41,7 +36,7 @@ ms.locfileid: "51748822"
  [VSCT XML 架构参考](../../extensibility/vsct-xml-schema-reference.md)  
  提供有关每个部分的命令表 XML 配置文件的详细信息。  
   
- [命令表配置 (。Ctc) 文件](http://msdn.microsoft.com/en-us/3413dda1-f372-4669-bcf0-c64d3463842c)  
+ [命令表配置 (。Ctc) 文件](https://msdn.microsoft.com/3413dda1-f372-4669-bcf0-c64d3463842c)  
  概述了不推荐使用的.ctc 文件格式。  
   
  [VSPackage 如何添加用户界面元素](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)  
@@ -52,4 +47,3 @@ ms.locfileid: "51748822"
   
  [命令、菜单和工具栏](../../extensibility/internals/commands-menus-and-toolbars.md)  
  说明如何创建包含菜单、工具栏和命令组合框的 UI。
-

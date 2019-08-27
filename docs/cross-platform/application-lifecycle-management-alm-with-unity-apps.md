@@ -1,4 +1,4 @@
-﻿---
+---
 title: 适用于 Unity 应用的应用程序生命周期管理 (ALM) | Microsoft Docs
 ms.date: 08/21/2018
 ms.technology: vs-unity-tools
@@ -9,12 +9,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: ca0c3da5048194ce438e815bd1612f6b166bb29b
-ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
+ms.openlocfilehash: d52e02947a9148463396260afd3e389fa1d248ee
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/27/2018
-ms.locfileid: "53802561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62824699"
 ---
 # <a name="devops-with-unity-apps"></a>适用于 Unity 应用的 DevOps
 
@@ -26,7 +26,7 @@ Visual Studio、Azure DevOps Services 和 Team Foundation Server 提供了各种
 
 ## <a name="agile-tools"></a>敏捷工具
 
-参考链接：[关于敏捷工具和敏捷项目管理](/azure/devops/boards/backlogs/overview?view=vsts)（使用 Azure Boards 或 TFS，包括 Team Explorer Everywhere）
+参考链接：[关于敏捷工具和敏捷项目管理](/azure/devops/boards/backlogs/backlogs-overview?view=vsts)（使用 Azure Boards 或 TFS，包括 Team Explorer Everywhere）
 
 常规注释：所有的计划和跟踪功能均独立于项目类型和编码语言。
 
@@ -42,7 +42,7 @@ Visual Studio、Azure DevOps Services 和 Team Foundation Server 提供了各种
 
 参考链接：**[对体系结构进行分析和建模](../modeling/analyze-and-model-your-architecture.md)**
 
-常规注释：虽然这些设计功能既不依赖于编码语言，也不依赖于使用 C# 等 .NET 语言，但是他们运行于具有对象层次结构和类关系的传统应用程序范例上。 在 Unity 中设计游戏将包括不同的范例，即图形对象、声音、着色器、脚本等关系。 因此，Visual Studio 建模关系图工具并非专用于 Unity 项目。 它们可能被用于管理 C# 脚本内的关系，但这只有全体中的一个部分。
+常规注释：虽然这些设计功能既不依赖于编码语言，也不依赖于使用 C# 等 .NET 语言，但是他们运行于具有对象层次结构和类关系的传统应用程序范例上。 在 Unity 中设计游戏会同时涉及到不同的范例，即图形对象、声音、着色器、脚本等关系。 因此，Visual Studio 建模关系图工具并非专用于 Unity 项目。 它们可能被用于管理 C# 脚本内的关系，但这只有全体中的一个部分。
 
 |功能|通过 Unity 提供支持|其他注释|
 |-------------|--------------------------|-------------------------|
@@ -67,9 +67,9 @@ Visual Studio、Azure DevOps Services 和 Team Foundation Server 提供了各种
 
 使用 Unity 进行版本控制的特殊注意事项：
 
-1. Unity 使用一个默认隐藏的不透明库来追踪和游戏资产相关的元数据。若要使文件和元数据保持同步，需使元数据可见，并将其保存在更易于管理的区块中。有关详细信息，请参阅 [Using External Version Control Systems with Unity](http://docs.unity3d.com/Manual/ExternalVersionControlSystemSupport.html)（配合使用 Unity 与外部版本控制系统）（Unity 文档）。
+1. Unity 使用一个默认隐藏的不透明库来追踪和游戏资产相关的元数据。 若要使文件和元数据保持同步，需使元数据可见，并将其保存在更易于管理的区块中。 有关详细信息，请参阅 [Using External Version Control Systems with Unity](http://docs.unity3d.com/Manual/ExternalVersionControlSystemSupport.html)（配合使用 Unity 与外部版本控制系统）（Unity 文档）。
 
-2. 并非 Unity 项目中的所有文件和文件夹都适合实施源代码管理，上面的链接中也给予了说明。应添加 Assets 和 ProjectSettings 文件夹，但不应添加 Library 和 Temp 文件夹。有关不会执行源代码管理的生成的文件的附加列表，请参阅 StackOverflow 上的讨论[如何使用 Git 进行 Unity3D 源代码管理？](http://stackoverflow.com/questions/18225126/how-to-use-git-for-unity3d-source-control)。许多开发人员都针对此主题发表了博文。
+2. 并非 Unity 项目中的所有文件和文件夹都适合实施源代码管理，上面的链接中也给予了说明。 应添加 Assets 和 ProjectSettings 文件夹，但不应添加 Library 和 Temp 文件夹。 有关不会执行源代码管理的生成的文件的附加列表，请参阅 StackOverflow 上的讨论[如何使用 Git 进行 Unity3D 源代码管理？](http://stackoverflow.com/questions/18225126/how-to-use-git-for-unity3d-source-control)。 许多开发人员都针对此主题发表了博文。
 
 3. Unity 项目中的二进制资产 — 例如纹理或音频文件 — 可能会占用大量存储空间。 Git 等各种源代码管理系统为所做的每一次更改都保留一份唯一的副本，即使更改仅影响该文件的一小部分。 这会导致 Git 存储库变得臃肿。 为解决此问题，Unity 开发人员通常选择仅将最终资产添加到其存储库中，并使用另一种方法来保留其资产的工作历史记录，例如 OneDrive、DropBox 或 git-annex。 此方法有效是因为此类资产通常不需要与源代码更改一起进行版本控制。 开发人员通常也将项目编辑器的资产序列化模式设置为强制文本，以便以文本格式保存场景文件，而不是允许在源代码管理中进行合并的二进制格式。 有关详细信息，请参阅 [Editor Settings](http://docs.unity3d.com/Manual/class-EditorManager.html)（编辑器设置）（Unity 文档）。
 

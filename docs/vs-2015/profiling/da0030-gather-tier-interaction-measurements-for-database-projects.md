@@ -1,14 +1,9 @@
 ---
-title: DA0030：收集数据库项目的层交互测量值 | Microsoft Docs
-ms.custom: ''
+title: DA0030：收集数据库项目的层交互度量值 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 f1_keywords:
 - vs.performance.DA0030
 - vs.performance.rules.DA0030
@@ -17,21 +12,21 @@ ms.assetid: 42b2f69d-0cfa-4854-82c4-589c3d8b4557
 caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 16d6275074b3cae6b186fe9bb113e32c33e284af
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 9a4b140c1859d3a3a17eb2f48eb02a60a3e9d50c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51796748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68152631"
 ---
-# <a name="da0030-gather-tier-interaction-measurements-for-database-projects"></a>DA0030：收集数据库项目的层交互测量值
+# <a name="da0030-gather-tier-interaction-measurements-for-database-projects"></a>DA0030：收集数据库项目的层交互度量值
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 规则 Id |DA0030 |  
 |类别 |分析工具使用情况 |  
 |分析方法 |采样 |  
-|消息 |收集多层应用程序的交互度量值将有助于您了解数据库使用模式和关键数据访问延迟。 请尝试再次将应用程序分析启用层交互分析选项。 |  
+|消息 |收集多层应用程序的交互度量值将有助于您了解数据库使用模式和关键数据访问延迟。 尝试在启用“层交互分析”选项的情况下再次分析应用程序。|  
 |规则类型 |信息 |  
   
 ## <a name="cause"></a>原因  
@@ -48,6 +43,3 @@ ms.locfileid: "51796748"
  此规则仅供参考，可能不需要采取纠正措施。  
   
  有关如何从 Visual Studio IDE 向分析数据添加层交互数据的信息，请参阅[收集层交互数据](../profiling/collecting-tier-interaction-data.md)。 有关如何从命令行添加层交互数据的信息，请参阅[收集层交互数据](../profiling/adding-tier-interaction-data-from-the-command-line.md)。
-
-
-

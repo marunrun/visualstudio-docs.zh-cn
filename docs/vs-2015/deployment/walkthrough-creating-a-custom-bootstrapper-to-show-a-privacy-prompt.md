@@ -1,14 +1,9 @@
 ---
-title: 演练： 创建自定义的引导程序，以显示隐私提示 |Microsoft Docs
-ms.custom: ''
+title: 演练：创建自定义引导程序以显示隐私提示 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -24,13 +19,13 @@ ms.assetid: 2f3edd6a-84d1-4864-a1ae-6a13c5732aae
 caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: e8bd1101647973a7a8f206159f8910a4e633e5da
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 6d93d9f771da9387661603f3eb71301e9d9aead7
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49893385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63427133"
 ---
 # <a name="walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt"></a>演练：创建自定义引导程序以显示隐私提示
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,7 +37,7 @@ ms.locfileid: "49893385"
 ## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
--   Visual Studio 2010。  
+- Visual Studio 2010。  
   
 ## <a name="creating-an-update-consent-dialog-box"></a>创建更新同意对话框中  
  若要显示隐私提示，请创建的应用程序询问读取器同意自动更新应用程序。  
@@ -133,7 +128,7 @@ ms.locfileid: "49893385"
     6. 在中**启动对象**下拉列表菜单中，选择**Module1**。  
   
        > [!NOTE]
-       >  禁用应用程序框架将禁用功能，例如 Windows XP 视觉样式、 应用程序事件、 初始屏幕、 单实例应用程序和的详细信息。 有关详细信息，请参阅 [Application Page, Project Designer (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)（应用程序页、项目设计器 (Visual Basic)。  
+       > 禁用应用程序框架将禁用功能，例如 Windows XP 视觉样式、 应用程序事件、 初始屏幕、 单实例应用程序和的详细信息。 有关详细信息，请参阅 [Application Page, Project Designer (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)（应用程序页、项目设计器 (Visual Basic)。  
   
        Visual C# 仅适用于开发人员：  
   
@@ -148,29 +143,29 @@ ms.locfileid: "49893385"
   
  此过程说明了如何创建自定义引导程序包，通过创建以下文档：  
   
--   Product.xml 清单文件来描述引导程序的内容。  
+- Product.xml 清单文件来描述引导程序的内容。  
   
--   若要列出的包，如字符串和软件许可条款的特定于本地化的方面 package.xml 清单文件。  
+- 若要列出的包，如字符串和软件许可条款的特定于本地化的方面 package.xml 清单文件。  
   
--   面向软件许可条款的文档。  
+- 面向软件许可条款的文档。  
   
-#### <a name="step-1-to-create-the-bootstrapper-directory"></a>步骤 1： 若要创建引导程序目录  
+#### <a name="step-1-to-create-the-bootstrapper-directory"></a>步骤 1：若要创建引导程序目录  
   
-1.  创建一个名为**UpdateConsentDialog** %PROGRAMFILES%\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages 中。  
-  
-    > [!NOTE]
-    >  您可能需要管理权限才能创建此文件夹。  
-  
-2.  在 UpdateConsentDialog 目录中，创建一个名为 en 子目录。  
+1. 创建一个名为**UpdateConsentDialog** %PROGRAMFILES%\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages 中。  
   
     > [!NOTE]
-    >  创建每个区域设置的新目录。 例如，可以添加 fr 和 de 区域设置的子目录。 如有必要，这些目录将包含法语和德语字符串和语言包。  
+    > 您可能需要管理权限才能创建此文件夹。  
   
-#### <a name="step-2-to-create-the-productxml-manifest-file"></a>步骤 2： 创建 product.xml 清单文件  
+2. 在 UpdateConsentDialog 目录中，创建一个名为 en 子目录。  
   
-1.  创建名为文本文件`product.xml`。  
+    > [!NOTE]
+    > 创建每个区域设置的新目录。 例如，可以添加 fr 和 de 区域设置的子目录。 如有必要，这些目录将包含法语和德语字符串和语言包。  
   
-2.  在 product.xml 文件中，添加以下 XML 代码。 请确保不覆盖现有的 XML 代码。  
+#### <a name="step-2-to-create-the-productxml-manifest-file"></a>步骤 2：若要创建 product.xml 清单文件  
+  
+1. 创建名为文本文件`product.xml`。  
+  
+2. 在 product.xml 文件中，添加以下 XML 代码。 请确保不覆盖现有的 XML 代码。  
   
     ```  
     <Product  
@@ -196,13 +191,13 @@ ms.locfileid: "49893385"
     </Product>  
     ```  
   
-3.  将文件保存到 UpdateConsentDialog 引导程序目录。  
+3. 将文件保存到 UpdateConsentDialog 引导程序目录。  
   
-#### <a name="step-3-to-create-the-packagexml-manifest-file-and-the-software-license-terms"></a>步骤 3： 创建 package.xml 清单文件和软件许可条款  
+#### <a name="step-3-to-create-the-packagexml-manifest-file-and-the-software-license-terms"></a>步骤 3：若要创建 package.xml 清单文件和软件许可条款  
   
-1.  创建名为文本文件`package.xml`。  
+1. 创建名为文本文件`package.xml`。  
   
-2.  在 package.xml 文件中，添加下面的 XML 代码，以定义区域设置和包括的软件许可条款。 请确保不覆盖现有的 XML 代码。  
+2. 在 package.xml 文件中，添加下面的 XML 代码，以定义区域设置和包括的软件许可条款。 请确保不覆盖现有的 XML 代码。  
   
     ```  
     <Package   
@@ -224,94 +219,91 @@ ms.locfileid: "49893385"
     </Package>  
     ```  
   
-3.  将文件保存到 UpdateConsentDialog 引导程序目录中的 en 子目录。  
+3. 将文件保存到 UpdateConsentDialog 引导程序目录中的 en 子目录。  
   
-4.  创建一个名为软件许可条款 eula.rtf 的文档。  
+4. 创建一个名为软件许可条款 eula.rtf 的文档。  
   
     > [!NOTE]
-    >  软件许可条款应包括有关许可、 保证、 责任和当地法律信息。 这些文件应是特定于区域设置的因此请确保该文件的保存支持 MBCS 或 UNICODE 字符格式。 请咨询您的软件许可条款内容有关的法律部门。  
+    > 软件许可条款应包括有关许可、 保证、 责任和当地法律信息。 这些文件应是特定于区域设置的因此请确保该文件的保存支持 MBCS 或 UNICODE 字符格式。 请咨询您的软件许可条款内容有关的法律部门。  
   
-5.  将文档保存到 UpdateConsentDialog 引导程序目录中的 en 子目录。  
+5. 将文档保存到 UpdateConsentDialog 引导程序目录中的 en 子目录。  
   
-6.  如有必要，为每个区域设置的软件许可条款创建新的 package.xml 清单文件和新 eula.rtf 文档。 例如，如果创建的 fr 和 de 区域设置的子目录，创建单独 package.xml 清单文件和软件许可条款，并将其保存到的 fr 和 de 子目录。  
+6. 如有必要，为每个区域设置的软件许可条款创建新的 package.xml 清单文件和新 eula.rtf 文档。 例如，如果创建的 fr 和 de 区域设置的子目录，创建单独 package.xml 清单文件和软件许可条款，并将其保存到的 fr 和 de 子目录。  
   
 ## <a name="setting-the-update-consent-application-as-a-prerequisite"></a>设置更新同意应用程序的必备组件  
  在 Visual Studio 中，您可以设置更新许可应用程序的必备组件。  
   
 #### <a name="to-set-the-update-consent-application-as-a-prerequisite"></a>若要更新许可应用程序设置的必备组件  
   
-1.  在中**解决方案资源管理器**，单击你想要部署应用程序的名称。  
+1. 在中**解决方案资源管理器**，单击你想要部署应用程序的名称。  
   
-2.  上**项目**菜单上，单击*ProjectName* **属性**。  
+2. 在“项目”菜单上，单击“ProjectName”属性。  
   
-3.  单击**发布**页上，然后依次**先决条件**。  
+3. 单击**发布**页上，然后依次**先决条件**。  
   
-4.  选择**更新同意对话框**。  
+4. 选择**更新同意对话框**。  
   
     > [!NOTE]
-    >  您可能需要关闭并重新打开 Visual Studio 以查看更新的同意对话框中系统必备组件对话框。  
+    > 您可能需要关闭并重新打开 Visual Studio 以查看更新的同意对话框中系统必备组件对话框。  
   
-5.  单击 **“确定”**。  
+5. 单击 **“确定”**。  
   
 ## <a name="creating-and-testing-the-setup-program"></a>创建和测试安装程序  
  在设置更新许可应用程序的必备组件后，可以为应用程序中生成的安装程序和引导程序。  
   
 #### <a name="to-create-and-test-the-setup-program-by-not-clicking-i-agree"></a>若要创建和测试安装程序不单击我同意  
   
-1.  在中**解决方案资源管理器**，单击你想要部署应用程序的名称。  
+1. 在中**解决方案资源管理器**，单击你想要部署应用程序的名称。  
   
-2.  上**项目**菜单上，单击*ProjectName* **属性**。  
+2. 在“项目”菜单上，单击“ProjectName”属性。  
   
-3.  单击**发布**页上，然后依次**立即发布**。  
+3. 单击**发布**页上，然后依次**立即发布**。  
   
-4.  如果发布输出不会自动打开，导航到发布输出。  
+4. 如果发布输出不会自动打开，导航到发布输出。  
   
-5.  运行 Setup.exe 程序。  
+5. 运行 Setup.exe 程序。  
   
      安装程序显示同意对话框中更新软件许可协议。  
   
-6.  阅读软件许可协议，然后依次**接受**。  
+6. 阅读软件许可协议，然后依次**接受**。  
   
-     同意对话框中更新应用程序将出现并显示以下文本： 在 Web 上找到最新的更新检查要安装的应用程序。 通过单击我同意，您授权检查在 Internet 上的自动更新应用程序。  
+     同意对话框中更新应用程序将出现并显示以下文本：在 Web 上找到最新的更新检查要安装的应用程序。 通过单击我同意，您授权检查在 Internet 上的自动更新应用程序。  
   
-7.  关闭应用程序，或单击取消。  
+7. 关闭应用程序，或单击取消。  
   
-     应用程序将显示错误： 安装的系统组件时出错*ApplicationName*。 已成功安装所有系统组件之前，安装程序无法继续。  
+     应用程序将显示错误：安装的系统组件时出错*ApplicationName*。 已成功安装所有系统组件之前，安装程序无法继续。  
   
-8.  单击以显示以下错误消息的详细信息： 组件更新同意对话框无法安装具有以下错误消息:"自动更新协议不被接受。" 无法安装以下组件:-更新同意对话框  
+8. 单击以显示以下错误消息的详细信息：组件更新同意对话框无法安装具有以下错误消息："自动更新协议是不被接受。" 无法安装以下组件:-更新同意对话框  
   
 9. 单击 **“关闭”**。  
   
 #### <a name="to-create-and-test-the-setup-program-by-clicking-i-agree"></a>若要创建和测试安装程序通过单击我同意  
   
-1.  在中**解决方案资源管理器**，单击你想要部署应用程序的名称。  
+1. 在中**解决方案资源管理器**，单击你想要部署应用程序的名称。  
   
-2.  上**项目**菜单上，单击*ProjectName* **属性**。  
+2. 在“项目”菜单上，单击“ProjectName”属性。  
   
-3.  单击**发布**页上，然后依次**立即发布**。  
+3. 单击**发布**页上，然后依次**立即发布**。  
   
-4.  如果发布输出不会自动打开，导航到发布输出。  
+4. 如果发布输出不会自动打开，导航到发布输出。  
   
-5.  运行 Setup.exe 程序。  
+5. 运行 Setup.exe 程序。  
   
      安装程序显示同意对话框中更新软件许可协议。  
   
-6.  阅读软件许可协议，然后依次**接受**。  
+6. 阅读软件许可协议，然后依次**接受**。  
   
-     同意对话框中更新应用程序将出现并显示以下文本： 在 Web 上找到最新的更新检查要安装的应用程序。 通过单击我同意，您授权检查在 Internet 上的自动更新应用程序。  
+     同意对话框中更新应用程序将出现并显示以下文本：在 Web 上找到最新的更新检查要安装的应用程序。 通过单击我同意，您授权检查在 Internet 上的自动更新应用程序。  
   
-7.  单击**我同意**，然后单击**继续**。  
+7. 单击**我同意**，然后单击**继续**。  
   
      应用程序将开始安装。  
   
-8.  如果出现安装应用程序对话框中，单击**安装**。  
+8. 如果出现安装应用程序对话框中，单击**安装**。  
   
 ## <a name="see-also"></a>请参阅  
  [应用程序部署必备](../deployment/application-deployment-prerequisites.md)   
  [创建引导程序包](../deployment/creating-bootstrapper-packages.md)   
- [如何： 创建产品清单](../deployment/how-to-create-a-product-manifest.md)   
- [如何： 创建程序包清单](../deployment/how-to-create-a-package-manifest.md)   
+ [如何：创建产品清单](../deployment/how-to-create-a-product-manifest.md)   
+ [如何：创建程序包清单](../deployment/how-to-create-a-package-manifest.md)   
  [产品和包架构引用](../deployment/product-and-package-schema-reference.md)
-
-
-

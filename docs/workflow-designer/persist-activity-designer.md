@@ -2,21 +2,20 @@
 title: 工作流设计器-Persist 活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - System.Activities.Statements.Persist.UI
 ms.assetid: be8648dd-3eb9-4a50-8ec1-57a8be804692
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 15a954224062c38484b34aa21ceb812ac77fbd0d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 2c97d916d00d1c976b4e27381f55e42cbb7cb0db
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53950564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004119"
 ---
 # <a name="persist-activity-designer"></a>Persist 活动设计器
 

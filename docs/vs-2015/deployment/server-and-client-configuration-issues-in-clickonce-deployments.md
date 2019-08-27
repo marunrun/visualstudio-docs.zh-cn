@@ -1,14 +1,9 @@
 ---
 title: 服务器和 ClickOnce 部署中的客户端配置问题 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -22,13 +17,13 @@ ms.assetid: 929e5fcc-dd56-409c-bb57-00bd9549b20b
 caps.latest.revision: 35
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: 8cf7a6db209bb6bbed1d8044bbdc3ed106e64836
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 8b8f81f22ffe566524e45a62330bc95c8ce00016
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49948936"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65686372"
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>ClickOnce 部署中的服务器和客户端配置问题
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -47,7 +42,7 @@ ms.locfileid: "49948936"
   
 - .deploy  
   
-  但是，可以禁用此选项通过清除**使用".deploy"文件扩展名**选项卡上[Publish Options Dialog Box](http://msdn.microsoft.com/en-us/fd9baa1b-7311-4f9e-8ffb-ae50cf110592)，在这种情况下必须配置 Web 服务器以允许所有文件扩展名在应用程序中使用。  
+  但是，可以禁用此选项通过清除**使用".deploy"文件扩展名**选项卡上[Publish Options Dialog Box](https://msdn.microsoft.com/fd9baa1b-7311-4f9e-8ffb-ae50cf110592)，在这种情况下必须配置 Web 服务器以允许所有文件扩展名在应用程序中使用。  
   
   你将需要配置.manifest、.application 和.deploy，例如，如果使用不具有安装的 IIS [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]，或者如果正在使用另一台 Web 服务器 (例如 Apache)。  
   
@@ -57,15 +52,15 @@ ms.locfileid: "49948936"
 ## <a name="clickonce-and-proxy-authentication"></a>ClickOnce 和代理身份验证  
  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 从.NET Framework 3.5 的 Windows 集成代理身份验证提供支持。 没有特定 machine.config 指令是必需的。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 不等基本或摘要式其他身份验证协议提供支持。  
   
- 此外可以应用于.NET Framework 2.0，若要启用此功能的修补程序。 有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=158730 。  
+ 此外可以应用于.NET Framework 2.0，若要启用此功能的修补程序。 有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=158730。  
   
- 有关详细信息，请参阅[ \<defaultProxy > 元素 （网络设置）](http://msdn.microsoft.com/library/9d663c4b-07b4-4f6f-9b12-efbd3630354f)。  
+ 有关详细信息，请参阅[ \<defaultProxy > 元素 （网络设置）](https://msdn.microsoft.com/library/9d663c4b-07b4-4f6f-9b12-efbd3630354f)。  
   
 ## <a name="clickonce-and-web-browser-compatibility"></a>ClickOnce 和 Web 浏览器兼容性问题  
  目前，[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]仅当使用 Internet Explorer 打开部署清单的 URL，将启动安装。 仅当 Internet Explorer 设置为默认 Web 浏览器，从另一个应用程序，如 Microsoft Office Outlook 启动其 URL，则的部署将成功启动。  
   
 > [!NOTE]
->  如果部署提供程序不为空或已安装 Microsoft.NET Framework Assistant 扩展，则支持 Mozilla Firefox。 此扩展与.NET Framework 3.5 SP1 一起打包。 有关 XBAP 支持，在需要时激活插件 NPWPF。  
+> 如果部署提供程序不为空或已安装 Microsoft.NET Framework Assistant 扩展，则支持 Mozilla Firefox。 此扩展与.NET Framework 3.5 SP1 一起打包。 有关 XBAP 支持，在需要时激活插件 NPWPF。  
   
 ## <a name="activating-clickonce-applications-through-browser-scripting"></a>激活 ClickOnce 应用程序可以通过浏览器脚本  
  如果您已开发一个自定义网页，将启动[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]使用活动脚本应用程序可能会发现在某些计算机上将不启动应用程序。 Internet Explorer 包含名为的设置**自动提示文件下载**，这会影响此行为。 此设置位于**安全**选项卡中其**选项**会影响此行为的菜单。 它称为**文件下载自动提示**，，下列出**下载**类别。 属性设置为**启用**默认情况下，为 intranet Web 页，并向**禁用**默认情况下，Internet Web pages。 如果此设置设置为**禁用**，任何尝试激活[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序以编程方式 (例如，通过将分配到其 URL`document.location`属性) 将被阻止。 在此情况下，用户可以启动应用程序只能通过用户启动的下载，例如，通过单击超链接设置为应用程序的 URL。  
@@ -83,7 +78,7 @@ ms.locfileid: "49948936"
 ```  
   
 > [!NOTE]
->  可以让 NTLM （NT 质询-响应） 身份验证工作如果该站点会提示您提供默认凭据，之外的凭据，然后在安全对话框中，单击**确定**如果你想要保存所提供提示你时将来的会话的凭据。 但是，此解决方法将不适用于基本身份验证。  
+> 可以让 NTLM （NT 质询-响应） 身份验证工作如果该站点会提示您提供默认凭据，之外的凭据，然后在安全对话框中，单击**确定**如果你想要保存所提供提示你时将来的会话的凭据。 但是，此解决方法将不适用于基本身份验证。  
   
 ## <a name="using-third-party-web-servers"></a>使用第三方 Web 服务器  
  如果要部署[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]从 Web 服务器 IIS 之外的应用程序，您可能会遇到问题如果服务器返回内容类型不正确的密钥[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]文件，如部署清单和应用程序清单。 若要解决此问题，请参阅有关如何将新内容类型添加到服务器，并确保所有文件名称扩展映射下, 表中都列出的文档位于适当位置的 Web 服务器的帮助。  
@@ -97,27 +92,27 @@ ms.locfileid: "49948936"
 |`.msp`|`application/octet-stream`|  
   
 ## <a name="clickonce-and-mapped-drives"></a>ClickOnce 和映射的驱动器  
- 如果使用 Visual Studio 发布 ClickOnce 应用程序，则无法指定映射的驱动器作为安装位置。 但是，可以修改通过使用清单生成器和编辑器 （Mage.exe 和 MageUI.exe） 从映射的驱动器安装 ClickOnce 应用程序。 有关详细信息，请参阅[Mage.exe （清单生成和编辑工具）](http://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)并[MageUI.exe (Manifest Generation and Editing Tool，Graphical Client)](http://msdn.microsoft.com/library/f9e130a6-8117-49c4-839c-c988f641dc14)。  
+ 如果使用 Visual Studio 发布 ClickOnce 应用程序，则无法指定映射的驱动器作为安装位置。 但是，可以修改通过使用清单生成器和编辑器 （Mage.exe 和 MageUI.exe） 从映射的驱动器安装 ClickOnce 应用程序。 有关详细信息，请参阅[Mage.exe （清单生成和编辑工具）](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)并[MageUI.exe（图形化客户端中的清单生成和编辑工具）](https://msdn.microsoft.com/library/f9e130a6-8117-49c4-839c-c988f641dc14)。  
   
 ## <a name="ftp-protocol-not-supported-for-installing-applications"></a>FTP 协议不支持用于安装应用程序  
  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 支持从任何 HTTP 1.1 Web 服务器或文件服务器安装的应用程序。 FTP 文件传输协议不支持用于安装应用程序。 可以使用 FTP 发布应用程序。 下表总结了这些差异：  
   
 |URL 类型|描述|  
 |--------------|-----------------|  
-|ftp: / /|您可以将发布[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序使用此协议。|  
+|ftp://|您可以将发布[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序使用此协议。|  
 |http://|你可以安装[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序使用此协议。|  
 |https://|你可以安装[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序使用此协议。|  
 |file://|你可以安装[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序使用此协议。|  
   
-## <a name="windows-xp-sp2-windows-firewall"></a>Windows XP SP2: Windows 防火墙  
+## <a name="windows-xp-sp2-windows-firewall"></a>Windows XP SP2：Windows 防火墙  
  默认情况下，Windows XP SP2 启用 Windows 防火墙。 如果正在开发应用程序在已安装的 Windows XP 的计算机上，您将仍可以发布和运行[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]从正在运行 IIS 的本地服务器的应用程序。 但是，不能访问该服务器正在运行的 IIS 从另一台计算机只有打开 Windows 防火墙。 有关管理 Windows 防火墙的说明，请参阅 Windows 帮助。  
   
-## <a name="windows-server-enable-frontpage-server-extensions"></a>Windows Server： 启用 FrontPage 服务器扩展  
+## <a name="windows-server-enable-frontpage-server-extensions"></a>Windows Server：启用 FrontPage 服务器扩展  
  Microsoft FrontPage 服务器扩展是必需的应用程序发布到使用 HTTP 的 Windows Web 服务器。  
   
  默认情况下，Windows Server 没有安装的 FrontPage 服务器扩展。 如果你想要使用[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]若要发布到 HTTP 使用 FrontPage 服务器扩展的 Windows Server Web 服务器，必须先安装 FrontPage 服务器扩展。 可以通过使用 Windows Server 中管理您的服务器管理工具来执行安装。  
   
-## <a name="windows-server-locked-down-content-types"></a>Windows Server： 锁定的内容类型  
+## <a name="windows-server-locked-down-content-types"></a>Windows Server：锁定的内容类型  
  上的 IIS[!INCLUDE[WinXPSvr](../includes/winxpsvr-md.md)]锁定除某些已知的内容类型 （例如，.htm、.html、.txt 等） 以外的所有文件类型。 若要启用的部署[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]使用此服务器应用程序，您需要更改 IIS 设置，以允许下载文件的类型.application、.manifest 和任何其他应用程序所使用的自定义文件类型。  
   
  如果部署使用 IIS 服务器，运行 inetmgr.exe 并添加新的默认 Web 页的文件类型：  
@@ -144,6 +139,3 @@ ms.locfileid: "49948936"
  [ClickOnce 部署疑难解答](../deployment/troubleshooting-clickonce-deployments.md)   
  [选择 ClickOnce 部署策略](../deployment/choosing-a-clickonce-deployment-strategy.md)   
  [应用程序部署必备](../deployment/application-deployment-prerequisites.md)
-
-
-

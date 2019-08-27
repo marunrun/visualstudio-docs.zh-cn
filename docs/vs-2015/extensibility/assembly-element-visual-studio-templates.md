@@ -1,14 +1,9 @@
 ---
 title: Assembly 元素 （Visual Studio 模板） |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#Assembly
 helpviewer_keywords:
@@ -17,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9242f76a-1273-4b8a-8f26-6606f91829ef
 caps.latest.revision: 11
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 40bb0b99bfe22c7842296c2fbaa2b868ca1ef259
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 10c894f3507ae760624b6ae18f785aae6016cd5e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51802026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68184706"
 ---
 # <a name="assembly-element-visual-studio-templates"></a>Assembly 元素（Visual Studio 模板）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,7 +26,7 @@ ms.locfileid: "51802026"
 指定有关程序集，该模板使用以将该程序集的引用添加到项目的信息。  
   
  \<VSTemplate >  
- \<TemplateContent >  
+ \<TemplateContent>  
  \<引用 >  
  \<引用 >  
  \<程序集 >  
@@ -62,7 +57,7 @@ ms.locfileid: "51802026"
   
  此文本指定要实例化项模板时，向项目添加的程序集。 必须通过以下方式之一指定此程序集名称：  
   
--   为完整的程序集名称。 例如：  
+- 为完整的程序集名称。 例如:  
   
     ```  
     <Assembly>  
@@ -70,7 +65,7 @@ ms.locfileid: "51802026"
     </Assembly>  
     ```  
   
--   为简单文本引用。 例如：  
+- 为简单文本引用。 例如：  
   
     ```  
     <Assembly> System </Assembly>  
@@ -105,4 +100,3 @@ ms.locfileid: "51802026"
 ## <a name="see-also"></a>请参阅  
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)
-

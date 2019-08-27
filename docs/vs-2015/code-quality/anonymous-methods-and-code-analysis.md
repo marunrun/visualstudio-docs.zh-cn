@@ -1,14 +1,9 @@
 ---
 title: 匿名方法和代码分析 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: conceptual
 helpviewer_keywords:
 - methods, anonymous
 - code analysis, anonymous methods
@@ -18,12 +13,12 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 73ff8dfca29f1ed9896462725886baa87e729100
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: b8b3f64a0b5f70067367e98d7e1d1471fc670099
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49280158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68157065"
 ---
 # <a name="anonymous-methods-and-code-analysis"></a>匿名方法和代码分析
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -113,7 +108,7 @@ class Class
   
  类可以包含的内联匿名方法的值赋给具有多个构造函数的字段。 在这种情况下，警告和度量值与相关联的所有构造函数除非该构造函数链接到同一个类中的另一个构造函数。  
   
- 例如，在下面的类的声明中找到的任何警告**anonymousMethod**应针对引发**Class(int)** 并**Class(string)** 但不是针对**Class()**。  
+ 例如，在下面的类的声明中找到的任何警告**anonymousMethod**应针对引发**Class(int)** 并**Class(string)** 但不是针对**Class()** 。  
   
 ```vb  
   
@@ -159,6 +154,3 @@ class Class
   
 ## <a name="see-also"></a>请参阅  
  [分析托管代码质量](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)
-
-
-

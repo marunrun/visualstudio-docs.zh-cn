@@ -2,19 +2,18 @@
 title: 工作流设计器-如何：在工作流中设置断点
 ms.date: 11/04/2016
 ms.topic: conceptual
-ms.prod: visual-studio-dev15
 ms.assetid: e41b21c9-c061-4358-8e2f-eb5e412864a8
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 570e7c5b4ec64c4e21b53cef38b89a5846cc1bb7
-ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
+ms.openlocfilehash: 7503d0b0bee201a9617e90966c9f75ac6333f228
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54269691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62949510"
 ---
 # <a name="how-to-set-breakpoints-in-workflows"></a>如何：在工作流中设置断点
 
@@ -42,4 +41,4 @@ ms.locfileid: "54269691"
 ## <a name="see-also"></a>请参阅
 
 - [使用工作流设计器调试工作流](../workflow-designer/debugging-workflows-with-the-workflow-designer.md)
-- [如何：调试与工作流设计器的 XAML](../workflow-designer/how-to-debug-xaml-with-the-workflow-designer.md)
+- [如何：使用工作流设计器调试 XAML](../workflow-designer/how-to-debug-xaml-with-the-workflow-designer.md)

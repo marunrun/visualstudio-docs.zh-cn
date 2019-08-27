@@ -1,25 +1,20 @@
 ---
 title: 在 XAML 设计器中插入图像、视频和音频剪辑 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: ff707aca-6bc5-4a2d-834b-bb6511a7b8f6
 caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 63d26d079e686339ad8ed93c5aefb8c7a468e899
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: db6225f8bf8055edb0fb5b6f3cdea98de79b4bcc
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49283954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68159404"
 ---
 # <a name="insert-images-videos-and-audio-clips-in-xaml-designer"></a>在 XAML 设计器中插入图像、视频和音频剪辑
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,7 +23,7 @@ ms.locfileid: "49283954"
   
  ![大小合适的图像](../designers/media/b5-memory-images-sized.png "b5_memory_images_sized")  
   
- 若要使用图像、视频或音频剪辑，请将其添加到项目，然后将其从“资产”  面板拖到“美工板” 。  
+ 若要使用图像、视频或音频剪辑，请将其添加到项目，然后将其从“资产”  面板拖到“美工板”  。  
   
  这些视频可帮助你将图像、视频和音频剪辑插入应用。  
   
@@ -41,6 +36,3 @@ ms.locfileid: "49283954"
   
 ## <a name="see-also"></a>请参阅  
  [使用 Blend for Visual Studio 创建 UI](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)
-
-
-

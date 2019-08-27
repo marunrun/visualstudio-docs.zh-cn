@@ -1,7 +1,6 @@
 ---
 title: “选项”>“文本编辑器”>“基本(VB)”>“高级”
-ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
+ms.date: 01/16/2019
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Visual_Basic.Editor
@@ -16,22 +15,49 @@ helpviewer_keywords:
 ms.assetid: 5a8cafca-f7b4-4a2d-92ce-6894a7673d00
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ca2178b61aa3cd2aa83314f00c231d564a10944
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: aa331fea595c2143dd3ab47aa562fbd61277f81f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53871234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817783"
 ---
 # <a name="options-text-editor-basic-visual-basic-advanced"></a>“选项”>“文本编辑器”>“基本(Visual Basic)”>“高级”
-在“选项”（“工具”菜单）对话框的“文本编辑器”文件夹下的“Basic”文件夹中，“VB 专用”属性页包含以下属性：
+在“选项”（“工具”菜单）对话框中“文本编辑器”文件夹的“基本”文件夹内，“VB 专用”属性页包含以下属性：
+
+## <a name="analysis"></a>分析
+
+- 启用完整解决方案分析
+
+   针对解决方案中的所有文件启用代码分析，而不仅针对打开的代码文件。 详情请参阅[完整解决方案分析](../../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md)。
+
+## <a name="using-directives"></a>Using 指令
+
+- 对 using 排序时将“System”指令排在第一位
+
+   当你选择右键单击菜单中的“删除和排序 Using”命令后，它会对 `using` 指令进行排序，并将“System”命名空间置于列表顶部。
+
+- 单独的 using 指令组
+
+   当你选择右键单击菜单中的“删除和排序 Using”命令后，它会在具有相同根命名空间的指令组之间插入空行，以将 `using` 指令分隔开来。
+
+- 建议对引用程序集中的类型使用 using
+- 建议对 NuGet 包中的类型使用 using
+
+   选择这些选项时，[快速操作](../quick-actions.md)可用于安装 NuGet 包，并为未引用的类型添加 `using` 指令。
+
+   ![用于在 Visual Studio 中安装 NuGet 包的快速操作](media/nuget-lightbulb.png)
+
+## <a name="highlighting"></a>Highlighting
 
  **启用突出显示引用和关键字**
 
-文本编辑器可突出显示符号的所有实例或子句中的所有关键字，例如 `If..Then`、`While...End While` 或 `Try...Catch...Finally`。 可以在突出显示的引用或关键字之间进行导航，具体方法为按 Ctrl + Shift + 向下箭头，或按 Ctrl + Shift + 向上箭头。
+文本编辑器可以突出显示所有符号实例或子句中的所有关键字，如 `If..Then`、`While...End While` 或 `Try...Catch...Finally`。 可以在突出显示的引用或关键字之间进行导航，具体方法为按 Ctrl + Shift + 向下箭头，或按 Ctrl + Shift + 向上箭头。
+
+## <a name="outlining"></a>大纲显示
 
 **启用大纲显示模式**
 
@@ -47,25 +73,31 @@ ms.locfileid: "53871234"
 |在一组单行构造之后|-   在类文件中的导入语句之后，在类型定义之前<br />-   在类中声明的变量之后，在所有过程之前|
 |在单行声明（非块级声明）之后|-   在导入语句、继承语句、变量声明、事件声明、委托声明和 DLL 声明语句之后|
 
- **整齐排列代码（重新设置格式）** 文本编辑器会适当地重新设置代码格式。 选定此选项后，代码编辑器会：
+## <a name="block-structure-guides"></a>块结构指南
 
--   将代码与正确的制表符位置对齐
+如果你选中此选项，与结构化代码块对齐的竖线就会在编辑器中显示，这样你就能轻松识别各个代码块了。 例如，在 `Sub` 语句中的 `Sub` 和 `EndSub` 之间会出现一条线。
 
--   重新确定关键字、变量和对象的大小写，以符合正确的形式
+## <a name="editor-help"></a>编辑器帮助
 
--   向 `If...Then` 语句添加缺少的 `Then`
+**整齐排列代码（重新设置格式）** 文本编辑器会适当地重新设置代码格式。 选定此选项后，代码编辑器会：
 
--   在函数调用中添加括号
+- 将代码与正确的制表符位置对齐
 
--   在字符串中添加缺少的结束引号
+- 重新确定关键字、变量和对象的大小写，以符合正确的形式
 
--   重新设置指数表示法格式
+- 向 `If...Then` 语句添加缺少的 `Then`
 
--   重新设置日期格式
+- 在函数调用中添加括号
+
+- 在字符串中添加缺少的结束引号
+
+- 重新设置指数表示法格式
+
+- 重新设置日期格式
 
 **自动插入最终构造**
 
- 例如，在你键入过程声明的第一行 `Sub Main—` 并按 Enter 后，文本编辑器会添加匹配的 `End Sub` 行。 同样，如果添加一个 [For](/dotnet/visual-basic/language-reference/statements/for-next-statement) 循环，文本编辑器会添加一个匹配的 `Next` 语句。 选定此选项后，代码编辑器会自动添加最终构造。
+例如，如果你键入过程声明的第一行 `Sub Main` 并按 Enter，文本编辑器就会添加匹配的 `End Sub` 行。 同样，如果添加一个 [For](/dotnet/visual-basic/language-reference/statements/for-next-statement) 循环，文本编辑器会添加一个匹配的 `Next` 语句。 选定此选项后，代码编辑器会自动添加最终构造。
 
 **自动插入 Interface 和 MustOverride 成员**
 

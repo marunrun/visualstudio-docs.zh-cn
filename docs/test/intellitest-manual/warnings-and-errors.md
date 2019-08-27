@@ -1,21 +1,20 @@
 ---
 title: 警告和错误 | Microsoft IntelliTest 开发人员测试工具
 ms.date: 05/02/2017
-ms.prod: visual-studio-dev15
 ms.topic: reference
 helpviewer_keywords:
 - IntelliTest, Warnings and errors
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: fe52e31c7401acd6bc10d469d98eabf2916f84be
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 85957c18abff9d49e62570375177aa262b08739b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53899014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62952730"
 ---
 # <a name="warnings-and-errors"></a>警告和错误
 
@@ -28,26 +27,26 @@ ms.locfileid: "53899014"
   * [已超出 MaxCalls](#maxcalls-exceeded)
   * [已超出 MaxStack](#maxstack-exceeded)
   * [已超出 MaxRuns](#maxruns-exceeded)
-  * [已超出 MaxRunsWithoutNewTests](#maxrunswithoutnewtests-exceeded)<p />
+  * [已超出 MaxRunsWithoutNewTests](#maxrunswithoutnewtests-exceeded)
 
 * **约束求解**
-  * [无法具体化解决方案](#cannot-concretize-solution)<p />
+  * [无法具体化解决方案](#cannot-concretize-solution)
 
 * **域**
   * [需要帮助来构造对象](#help-construct)
   * [需要帮助来查找类型](#help-types)
-  * [猜测的可用类型](#usable-type-guessed)<p />
+  * [猜测的可用类型](#usable-type-guessed)
 
 * **执行**
   * [浏览期间的意外故障](#unexpected-exploration)
-  * [TargetInvocationException](#targetinvocationexception)<p />
+  * [TargetInvocationException](#targetinvocationexception)
 
 * **检测**
   * [已调用未检测的方法](#uninstrumented-method-called)
   * [已调用外部方法](#external-method-called)
   * [已调用无法检测的方法](#uninstrumentable-method-called)
   * [可测试性问题](#testability-issue)
-  * [限制](#limitation)<p />
+  * [限制](#limitation)
 
 * **解释器**
   * [观察到调用不匹配](#observed-call-mismatch)

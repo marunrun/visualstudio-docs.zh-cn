@@ -2,21 +2,20 @@
 title: 工作流设计器-Confirm 活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - System.Activities.Statements.Confirm.UI
 ms.assetid: c753b67b-b0e7-462a-bb4e-ba8db04a078d
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34f59bc8ad3040c6077d5feeb4f725f367b8dcdc
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8418faf7fb4eb55a0b20a33aaaa2909e07ff7a78
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53956450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62949850"
 ---
 # <a name="confirm-activity-designer"></a>Confirm 活动设计器
 

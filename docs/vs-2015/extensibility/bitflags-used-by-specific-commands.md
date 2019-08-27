@@ -1,26 +1,21 @@
 ---
 title: 使用特定命令的位标志 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, bitflags used by specific commands
 ms.assetid: 37969977-6f7d-45c9-ba03-1306ae71f5d1
 caps.latest.revision: 25
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: e8ea658e62ca2bcd3ca4d423f00a94f83f2a2086
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 43dc083812bc172fe4a9f80335742b3faab2e1f4
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51798178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68184695"
 ---
 # <a name="bitflags-used-by-specific-commands"></a>特定命令使用的位标志
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,14 +25,14 @@ ms.locfileid: "51798178"
 ## <a name="checked-out-flag"></a>签出标志  
  可以为设置此标志[SccAdd](../extensibility/sccadd-function.md)或[SccCheckin](../extensibility/scccheckin-function.md)。  
   
-|Flag|值|描述|  
+|Flag|ReplTest1|描述|  
 |----------|-----------|-----------------|  
 |`SCC_KEEP_CHECKEDOUT`|0x1000|保持签出该文件。|  
   
 ## <a name="add-flags"></a>添加标志  
  通过使用这些标志[SccAdd](../extensibility/sccadd-function.md)。  
   
-|Flag|值|描述|  
+|Flag|ReplTest1|描述|  
 |----------|-----------|-----------------|  
 |`SCC_FILETYPE_AUTO`|0x00|源代码管理插件会自动检测文件是否是文本或二进制文件。|  
 |`SCC_FILETYPE_TEXT`|0x01|文件类型为文本。|  
@@ -59,14 +54,14 @@ ms.locfileid: "51798178"
 ## <a name="populatelist-flag"></a>PopulateList 标志  
  通过使用此标志[SccPopulateList](../extensibility/sccpopulatelist-function.md)中`fOptions`参数。  
   
-|Flag|值|描述|  
+|Flag|ReplTest1|描述|  
 |----------|-----------|-----------------|  
 |`SCC_PL_DIR`|0x00000001L|IDE 传递不是文件的目录。|  
   
 ## <a name="populatedirlist-flags"></a>PopulateDirList 标志  
  通过使用这些标志[SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)中`fOptions`参数。  
   
-|选项值|“值”|描述|  
+|选项值|值|描述|  
 |------------------|-----------|-----------------|  
 |SCC_PDL_ONELEVEL|0x0000|检查只有一个级别的 （这是默认值） 的目录的目录。|  
 |SCC_PDL_RECURSIVE|0x0001|以递归方式检查每个给定目录下的所有目录。|  
@@ -75,7 +70,7 @@ ms.locfileid: "51798178"
 ## <a name="openproject-flags"></a>打开项目标志  
  通过使用这些标志[SccOpenProject](../extensibility/sccopenproject-function.md)中`dwFlags`参数。  
   
-|选项值|“值”|描述|  
+|选项值|值|描述|  
 |------------------|-----------|-----------------|  
 |SCC_OP_CREATEIFNEW|0x00000001L|如果项目不存在在源代码管理中，创建它。 如果未设置此标志，提示用户输入项目以创建 (除非`SCC_OP_SILENTOPEN`指定标志)。|  
 |SCC_OP_SILENTOPEN|0x00000002L|不提示用户创建一个项目;只需返回`SCC_E_UNKNOWNPROJECT`。|  
@@ -83,10 +78,10 @@ ms.locfileid: "51798178"
 ## <a name="get-flags"></a>获取标志  
  通过使用这些标志[SccGet](../extensibility/sccget-function.md)并[SccCheckout](../extensibility/scccheckout-function.md)。  
   
-|Flag|值|描述|  
+|Flag|ReplTest1|描述|  
 |----------|-----------|-----------------|  
-|`SCC_GET_ALL`|0x00000001L|IDE 传递目录，而不是文件： 获取这些目录中的所有文件。|  
-|`SCC_GET_RECURSIVE`|0x00000002L|IDE 传递目录： 获取这些目录和所有子目录。|  
+|`SCC_GET_ALL`|0x00000001L|IDE 传递不是文件的目录：获取这些目录中的所有文件。|  
+|`SCC_GET_RECURSIVE`|0x00000002L|IDE 传递目录：获取这些目录和所有子目录。|  
   
 ## <a name="noption-values"></a>nOption 值  
  通过使用这些标志[SccSetOption](../extensibility/sccsetoption-function.md)中`nOption`参数。  
@@ -114,4 +109,3 @@ ms.locfileid: "51798178"
   
 ## <a name="see-also"></a>请参阅  
  [源代码管理插件](../extensibility/source-control-plug-ins.md)
-

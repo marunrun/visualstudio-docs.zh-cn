@@ -1,22 +1,21 @@
 ---
 title: 重命名文件名以匹配类型
 ms.date: 01/26/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 42e1d3cad1752649446a35abd863390166a57271
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 90783dcd609094659517d994c3a4d4e0610b7735
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53834576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62945144"
 ---
 # <a name="sync-a-type-to-a-filename-or-a-filename-to-a-type-refactoring"></a>将类型同步到文件名或反向操作
 
@@ -31,6 +30,9 @@ ms.locfileid: "53834576"
 **使用时机：** 已重命名文件或类型，且尚未更新相应文件或类型进行匹配时。
 
 操作原因：将类型置于具有其他名称的文件中，将很难查找要搜索的内容，反之亦然。 通过重命名类型或文件名，代码变得更具可读性且更易于导航。
+
+> [!NOTE]
+> 此重构尚不可用于 .NET Standard 和 .NET Core 项目。
 
 ## <a name="how-to"></a>操作说明
 
@@ -62,8 +64,6 @@ ms.locfileid: "53834576"
    - Visual Basic：在以下示例中，文件“Employee.vb”被重命名为“Person.vb”以匹配类型名称。
 
        ![内联结果 Visual Basic](media/synctype-result-vb.png)
-
-> ![注意] 此重构尚不可用于 .NET Standard 和 .NET Core 项目。
 
 ## <a name="see-also"></a>请参阅
 

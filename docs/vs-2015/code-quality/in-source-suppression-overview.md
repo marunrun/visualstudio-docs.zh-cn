@@ -1,14 +1,9 @@
 ---
 title: 源代码中禁止显示概述 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: conceptual
 helpviewer_keywords:
 - source suppression, code analysis
 - code analysis, source suppression
@@ -17,12 +12,12 @@ caps.latest.revision: 42
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 844681d079e5565aab9eceadb73f7d8a61cbb2c6
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: cb2b23dcc01d90bc4365c7d5673e6232229b8d3e
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49209035"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67825990"
 ---
 # <a name="in-source-suppression-overview"></a>“源代码中禁止显示”概述
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,7 +29,7 @@ ms.locfileid: "49209035"
  不应在发布版本使用在源代码中禁止显示以防止意外地传送在源代码中禁止显示元数据。 由于在源代码中禁止显示的处理成本，还通过包括在源代码中禁止显示元数据降低应用程序的性能。  
   
 > [!NOTE]
->  您不需要亲自为手动代码这些属性。 有关详细信息，请参阅[如何： 通过使用菜单项禁止显示警告](../code-quality/how-to-suppress-warnings-by-using-the-menu-item.md)。 菜单项不可用 c + + 代码。  
+> 您不需要亲自为手动代码这些属性。 有关详细信息，请参阅[如何：使用菜单项禁止显示警告](../code-quality/how-to-suppress-warnings-by-using-the-menu-item.md)。 菜单项不是可用于C++代码。  
   
 ## <a name="suppressmessage-attribute"></a>SuppressMessage 特性  
  右键单击中的代码分析警告时**错误列表**，然后单击**禁止显示消息**即**SuppressMessage**在代码中或为添加属性项目的全局禁止显示文件。  
@@ -59,27 +54,27 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
   
  其中：  
   
--   **规则类别**-定义了该规则的类别。 有关代码分析规则类别的详细信息，请参阅[的代码分析托管代码警告](../code-quality/code-analysis-for-managed-code-warnings.md)。  
+- **规则类别**-定义了该规则的类别。 有关代码分析规则类别的详细信息，请参阅[的代码分析托管代码警告](../code-quality/code-analysis-for-managed-code-warnings.md)。  
   
--   **规则 Id** -规则的标识符。 支持包括以上两个规则标识符的短期和长期名称。 短名称是 CAXXXX;长名称是 CAXXXX:FriendlyTypeName。  
+- **规则 Id** -规则的标识符。 支持包括以上两个规则标识符的短期和长期名称。 短名称是 CAXXXX;长名称是 CAXXXX:FriendlyTypeName。  
   
--   **理由**-用于记录取消消息的规则的原因的文本。  
+- **理由**-用于记录取消消息的规则的原因的文本。  
   
--   **消息 Id** -为每个消息问题的唯一标识符。  
+- **消息 Id** -为每个消息问题的唯一标识符。  
   
--   **作用域**-取消该警告的目标。 如果未指定目标，则将它设置为属性的目标。 受支持的作用域包括：  
+- **作用域**-取消该警告的目标。 如果未指定目标，则将它设置为属性的目标。 受支持的作用域包括：  
   
-    -   模块  
+  - 模块  
+
+  - 命名空间  
+
+  - 资源  
+
+  - 类型  
+
+  - 成员  
   
-    -   命名空间  
-  
-    -   资源  
-  
-    -   类型  
-  
-    -   成员  
-  
--   **目标**-用于取消该警告将目标指定的标识符。 它必须包含完全限定的项名称。  
+- **目标**-用于取消该警告将目标指定的标识符。 它必须包含完全限定的项名称。  
   
 ## <a name="suppressmessage-usage"></a>SuppressMessage 使用情况  
  在向其级别禁止显示代码分析警告的实例**SuppressMessage**应用属性。 这样做的目的是紧密耦合到代码的禁止显示信息发生冲突。  
@@ -104,7 +99,7 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 ## <a name="generated-code"></a>生成的代码  
  托管的代码编译器和一些第三方工具生成代码以加快代码的开发。 在源文件中出现的编译器生成的代码通常标有**GeneratedCodeAttribute**属性。  
   
- 您可以选择是否要取消显示代码分析警告和错误生成的代码。 有关如何禁止显示此类警告和错误的信息，请参阅[如何： 生成代码的禁止显示警告](../code-quality/how-to-suppress-code-analysis-warnings-for-generated-code.md)。  
+ 您可以选择是否要取消显示代码分析警告和错误生成的代码。 有关如何禁止显示此类警告和错误的信息，请参阅[如何：禁止显示生成的代码的警告](../code-quality/how-to-suppress-code-analysis-warnings-for-generated-code.md)。  
   
  请注意，代码分析忽略了**GeneratedCodeAttribute**时应用于整个程序集或单个参数。 这种情况下很少发生。  
   
@@ -114,7 +109,7 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
  `[module: SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace", Target = "MyNamespace")]`  
   
 > [!NOTE]
->  禁止显示警告，其中包含命名空间范围内时，它将阻止对自身的命名空间的警告。 它不会取消该警告针对在命名空间内的类型。  
+> 禁止显示警告，其中包含命名空间范围内时，它将阻止对自身的命名空间的警告。 它不会取消该警告针对在命名空间内的类型。  
   
  可以通过指定显式作用域表示任何禁止显示。 在全局级别还必须遵循这些禁止显示。 不能通过修饰类型来指定成员级禁止显示。  
   
@@ -123,13 +118,10 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
  `[module: SuppressMessage("Microsoft.Design", "CA1055:AbstractTypesDoNotHavePublicConstructors", Scope="member", Target="Microsoft.Tools.FxCop.Type..ctor()")]`  
   
 > [!NOTE]
->  目标始终包含完全限定的项名称。  
+> 目标始终包含完全限定的项名称。  
   
 ## <a name="global-suppression-file"></a>全局禁止显示文件  
- 全局禁止显示文件维护全局级禁止显示或不指定目标的禁止显示的禁止显示。 例如，禁止显示的程序集级别冲突存储在该文件中。 此外，某些 ASP.NET 禁止显示存储在此文件中，是因为项目级别设置不可用于窗体背后的代码。 全局禁止显示被创建并添加到你的项目选择第一次**在项目禁止显示文件**的选项**禁止显示消息**命令，在错误列表窗口。 有关详细信息，请参阅[如何： 通过使用菜单项禁止显示警告](../code-quality/how-to-suppress-warnings-by-using-the-menu-item.md)。  
+ 全局禁止显示文件维护全局级禁止显示或不指定目标的禁止显示的禁止显示。 例如，禁止显示的程序集级别冲突存储在该文件中。 此外，某些 ASP.NET 禁止显示存储在此文件中，是因为项目级别设置不可用于窗体背后的代码。 全局禁止显示被创建并添加到你的项目选择第一次**在项目禁止显示文件**的选项**禁止显示消息**命令，在错误列表窗口。 有关详细信息，请参阅[如何：使用菜单项禁止显示警告](../code-quality/how-to-suppress-warnings-by-using-the-menu-item.md)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Diagnostics.CodeAnalysis>
-
-
-

@@ -1,14 +1,9 @@
 ---
-title: IDebugProgramNode2::Attach_V7 |Microsoft Docs
-ms.custom: ''
+title: IDebugProgramNode2::Attach_V7 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - IDebugProgramNode2::Attach
 helpviewer_keywords:
@@ -17,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b5ffc736-efc7-4ca8-964d-5536ff891b0e
 caps.latest.revision: 13
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 8cec22985451386b88662818a15f60a90e93e6ae
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 08028f2b03f3ea36cc72172ca8f9de31740b49f3
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51780602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63417910"
 ---
 # <a name="idebugprogramnode2attachv7"></a>IDebugProgramNode2::Attach_V7
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -64,7 +59,7 @@ int Attach_V7 ( 
 ## <a name="remarks"></a>备注  
   
 > [!WARNING]
->  起始日期[!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]，此方法不能再使用，否则应始终返回`E_NOTIMPL`。 请参阅[IDebugProgramNodeAttach2](../../../extensibility/debugger/reference/idebugprogramnodeattach2.md)接口的另一种方法，如果程序节点需要指示不能将它附加到或如果程序节点只需设置程序`GUID`。 否则，实现[附加](../../../extensibility/debugger/reference/idebugengine2-attach.md)方法。  
+> 起始日期[!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]，此方法不能再使用，否则应始终返回`E_NOTIMPL`。 请参阅[IDebugProgramNodeAttach2](../../../extensibility/debugger/reference/idebugprogramnodeattach2.md)接口的另一种方法，如果程序节点需要指示不能将它附加到或如果程序节点只需设置程序`GUID`。 否则，实现[附加](../../../extensibility/debugger/reference/idebugengine2-attach.md)方法。  
   
 ## <a name="prior-to-visual-studio-2005"></a>在 Visual Studio 2005 之前  
  此方法需要仅当正在调试的程序的地址空间中运行 DE 实现。 否则，此方法应返回`S_FALSE`。  
@@ -84,4 +79,3 @@ int Attach_V7 ( 
  [IDebugLoadCompleteEvent2](../../../extensibility/debugger/reference/idebugloadcompleteevent2.md)   
  [IDebugEntryPointEvent2](../../../extensibility/debugger/reference/idebugentrypointevent2.md)   
  [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md)
-

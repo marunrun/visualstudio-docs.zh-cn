@@ -1,25 +1,22 @@
 ---
 title: 关于域特定语言 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language
 ms.assetid: 29e5b6f2-ece4-4f3b-ab08-5f957418702f
 caps.latest.revision: 28
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 6cddf51705758d046ab66319d6ac6295f3a4b057
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 0ddfc51c54c04ad0d79d7ef180a027cbd253ac09
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49894516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68165442"
 ---
 # <a name="about-domain-specific-languages"></a>关于域特定语言
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -65,15 +62,15 @@ ms.locfileid: "49894516"
 ## <a name="aspects-of-graphical-domain-specific-development"></a>图形的特定于域的开发方面  
  图形的特定于域的语言必须包括以下功能：  
   
--   Notation  
+- Notation  
   
--   域模型  
+- 域模型  
   
--   项目生成  
+- 项目生成  
   
--   序列化  
+- 序列化  
   
--   与 Visual Studio 的集成  
+- 与 Visual Studio 的集成  
   
 ### <a name="notation"></a>Notation  
  特定于域的语言必须具有相当一小组可轻松地定义和扩展来表示特定于域的构造的元素。 表示法由形状表示的元素和连接器，它表示元素，请在图形关系图图面之间的关系组成。 在[!INCLUDE[dsl](../includes/dsl-md.md)]，可以扩展的形状，并将其优化来表示特定于域的语言的元素。  
@@ -95,30 +92,27 @@ ms.locfileid: "49894516"
 ## <a name="benefits-of-domain-specific-development"></a>特定于域的开发的好处  
  域特定语言可提供以下优势：  
   
--   包含完全适应问题空间的构造。  
+- 包含完全适应问题空间的构造。  
   
      不同于常规用途语言，域特定语言包含元素和直接表示问题空间的逻辑关系。 例如，保险策略应用程序必须包括有关策略和声明的元素。 域特定语言，可以更轻松地设计应用程序，并查找和更正错误的逻辑。  
   
--   允许非开发人员和其他人不知道了解整体设计的域。  
+- 允许非开发人员和其他人不知道了解整体设计的域。  
   
      通过使用图形的特定于域的语言，可以创建的域的可视表示形式，以便非开发人员可以轻松地了解应用程序的设计。  
   
--   可以更轻松地创建最终的应用程序的原型。  
+- 可以更轻松地创建最终的应用程序的原型。  
   
      开发人员可以使用它们的模型生成创建原型应用程序，它们可显示给客户端的代码。  
   
 ## <a name="the-process-of-domain-specific-development"></a>特定于域的开发过程  
  使用域特定语言的大多数软件开发团队按照以下步骤来创建和使用其模型：  
   
--   团队将永远不会更改的部分从域的变量部分区分开来。  
+- 团队将永远不会更改的部分从域的变量部分区分开来。  
   
--   开发人员编写代码的固定部分，并保留的变量部分的扩展点。  
+- 开发人员编写代码的固定部分，并保留的变量部分的扩展点。  
   
--   首席软件开发人员或架构师创建一种特定于域的语言，其中包含域和变量部分的扩展点的固定部分的设计模式。  
+- 首席软件开发人员或架构师创建一种特定于域的语言，其中包含域和变量部分的扩展点的固定部分的设计模式。  
   
--   首席软件开发人员或架构师团队生成的各种应用程序的开发人员到部署域特定语言。  
+- 首席软件开发人员或架构师团队生成的各种应用程序的开发人员到部署域特定语言。  
   
--   每个开发人员创建适用于特定应用程序的模型。
-
-
-
+- 每个开发人员创建适用于特定应用程序的模型。

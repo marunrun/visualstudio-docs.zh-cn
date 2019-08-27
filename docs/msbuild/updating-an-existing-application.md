@@ -4,21 +4,21 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0487ee8cdbb89b7c781cb13225d209d840eda134
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: cf1c226fceff6ea17a7f83d750a93d6406a31c7d
+ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53836866"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66263740"
 ---
 # <a name="update-an-existing-application-for-msbuild-15"></a>将现有的应用程序更新到 MSBuild 15
 
 在 15.0 之前的 MSBuild 版本中，是从全局程序集缓存 (GAC) 加载 MSBuild ，并在注册表中安装 MSBuild 扩展的。 这样确保了所有应用程序使用相同版本的 MSBuild 和访问相同的工具集，但阻止了 Visual Studio 不同版本的并行安装。
 
-为支持更快、更小的并行安装，Visual Studio 2017 不再将 MSBuild 放置在 GAC 中或修改注册表。 遗憾的是，这意味着希望使用 MSBuild API 评估或生成项目的应用程序不能隐式依赖于 Visual Studio 安装。
+为支持更快、更小的并行安装，Visual Studio 2017 及更高版本不再将 MSBuild 放置在 GAC 中或修改注册表。 遗憾的是，这意味着希望使用 MSBuild API 评估或生成项目的应用程序不能隐式依赖于 Visual Studio 安装。
 
 ## <a name="use-msbuild-from-visual-studio"></a>从 Visual Studio 使用 MSBuild
 
@@ -42,14 +42,14 @@ ms.locfileid: "53836866"
 
 将项目文件更改为从 NuGet 包中引用 MSBuild 程序集。 指定 `ExcludeAssets=runtime` 以告知 NuGet 仅在生成期间需要程序集，不应将其复制到输出目录。
 
-MSBuild 包的主要版本和次要版本须低于或等于希望支持的 Visual Studio 的最低版本。 如果希望支持 Visual Studio 2017 的任意版本，请引用 `15.1.548` 版本的包。
+MSBuild 包的主要版本和次要版本须低于或等于希望支持的 Visual Studio 的最低版本。 例如，如果想要支持 Visual Studio 2017 和更高版本，请引用包版本 `15.1.548`。
 
 例如，可以使用此 XML：
 
 ```xml
 <ItemGroup>
   <PackageReference Include="Microsoft.Build" Version="15.1.548" ExcludeAssets="runtime" />
-  <PackageReference Include="Microsoft.Build.Utilities" Version="15.1.548" ExcludeAssets="runtime" />
+  <PackageReference Include="Microsoft.Build.Utilities.Core" Version="15.1.548" ExcludeAssets="runtime" />
 </ItemGroup>
 ```
 
@@ -71,15 +71,17 @@ MSBuild 包的主要版本和次要版本须低于或等于希望支持的 Visua
 
 生成项目并检查输出目录，以确保它不包含任何 Microsoft.Build.\*.dll 程序集（除 Microsoft.Build.Locator.dll 以外，它在下一步中添加）。
 
-### <a name="add-package-reference"></a>添加包引用
+### <a name="add-package-reference-for-microsoftbuildlocator"></a>为 Microsoft.Build.Locator 添加包引用
 
-向 [Microsoft.Build.Locator](https://www.nuget.org/packages/Microsoft.Build.Locator/) 添加 NuGet 包引用。
+为 [Microsoft.Build.Locator](https://www.nuget.org/packages/Microsoft.Build.Locator/) 添加 NuGet 包引用。
 
 ```xml
     <PackageReference Include="Microsoft.Build.Locator">
-      <Version>1.0.7-preview-ge60d679b53</Version>
+      <Version>1.1.2</Version>
     </PackageReference>
 ```
+
+请勿为 Microsoft.Build.Locator 包指定 `ExcludeAssets=runtime`。
 
 ### <a name="register-instance-before-calling-msbuild"></a>在调用 MSBuild 之前注册实例
 

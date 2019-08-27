@@ -1,14 +1,9 @@
 ---
 title: SccGetCommandOptions 函数 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - SccGetCommandOptions
 helpviewer_keywords:
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: bbe4aa4e-b4b0-403e-b7a0-5dd6eb24e5a9
 caps.latest.revision: 15
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 10f47a193a3ff47412249e094c1c9364653350ae
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 55d4d2cae73dd77fc601ca85ab45d969fc0e4de8
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51810086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63432410"
 ---
 # <a name="sccgetcommandoptions-function"></a>SccGetCommandOptions 函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -80,9 +75,8 @@ SCCRTN SccGetCommandOptions(
  最后，当用户单击**确定**在 IDE 中**获取**对话框中，IDE 调用[SccGet](../extensibility/sccget-function.md)，并传入此结构中返回`ppvOptions`，其中包含高级的选项。  
   
 > [!NOTE]
->  该命令`SCC_COMMAND_OPTIONS`则 IDE 将显示时，将使用**选项**对话框中，使用户能够设置控制集成的工作方式的首选项。 如果源代码管理插件想要提供其自己的首选项对话框中，它可以显示它从**高级**IDE 的首选项对话框中的按钮。 在插件处于全权负责获取和保存此信息;IDE 不会使用它或对其进行修改。  
+> 该命令`SCC_COMMAND_OPTIONS`则 IDE 将显示时，将使用**选项**对话框中，使用户能够设置控制集成的工作方式的首选项。 如果源代码管理插件想要提供其自己的首选项对话框中，它可以显示它从**高级**IDE 的首选项对话框中的按钮。 在插件处于全权负责获取和保存此信息;IDE 不会使用它或对其进行修改。  
   
 ## <a name="see-also"></a>请参阅  
  [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)   
  [命令代码](../extensibility/command-code-enumerator.md)
-

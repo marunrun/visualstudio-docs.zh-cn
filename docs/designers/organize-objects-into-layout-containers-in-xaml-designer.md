@@ -1,48 +1,33 @@
 ---
 title: 在 XAML 设计器中将对象组织到布局容器中
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.assetid: 29c80c38-0fa3-48d6-b3a8-3b864f482e44
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.workload:
-- uwp
-ms.openlocfilehash: d5c56dc477b3c788f8d5ebfee4809067c77e08e8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: d0401d810f5f97b0306290faff2cfeb1785ba14f
+ms.sourcegitcommit: 90c3187d804ad7544367829d07ed4b47d3f8a72d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53829298"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821934"
 ---
 # <a name="organize-objects-into-layout-containers-in-xaml-designer"></a>在 XAML 设计器中将对象组织到布局容器中
 
 本文介绍用于 XAML 设计器的版式面板和控件。
 
-想象希望对象出现在页面上的位置；诸如图像、按钮和视频等对象。 也许你希望它们出现在行和列中、在单个行中（垂直或水平）或在固定位置中。
+想象你希望对象出现在页面上的哪个位置&mdash;诸如图像、按钮和视频等对象。 也许你希望它们出现在行和列中、在单个行中（垂直或水平）或在固定位置中。
 
-在考虑好页面的显示情况后，请选择布局面板。 所有页面都从一个布局面板开始，因为你需要某个容器来向其中添加对象。 默认情况下为 Grid，但可以进行更改。
+在考虑好页面的显示情况后，请选择布局面板。 所有页面都从一个布局面板开始，因为你需要某个容器来向其中添加对象。 默认情况下为 Grid，但可以进行更改  。
 
-布局面板可帮助你在页面上排列对象，但是它们的作用不仅于此。 它们可以帮助你针对不同屏幕大小和分辨率进行设计。 当用户运行你的应用时，布局面板中的所有对象都会调整大小以匹配用户设备的屏幕空间。 当然，如果不希望布局进行此操作，则可为一部分布局或整个布局重写该行为。 可以使用高度和宽度属性对此进行控制。
+布局面板可帮助你在页面上排列对象，但是它们的作用不仅于此。 它们可以帮助你针对不同屏幕大小和分辨率进行设计。 当用户运行你的应用时，布局面板中的所有对象都会调整大小以匹配用户设备的屏幕空间。 当然，如果你不希望布局这样做，则可以为布局的一部分或整个布局重写该行为。 可以使用高度和宽度属性对此进行控制。
 
 ## <a name="layout-panels"></a>布局面板
 
-通过选择这些布局面板之一来开始设计你的页面。 页面可以具有多个布局面板。 例如，可从 Grid 布局面板开始，然后将一个 StackPanel 添加到 Grid 中的某个区域，即可在该元素中垂直排列控件。
+通过选择这些布局面板之一来开始设计你的页面。 页面可以具有多个布局面板。 例如，可从 Grid  布局面板开始，然后将一个 StackPanel  添加到 Grid  中的某个区域，即可在该元素中垂直排列控件。
 
-以下布局面板是最常用的，不过还有一些其他布局面板。 在 Assets 面板中可以找到所有这些内容。
-
-- [网格](#Grid)
-
-- [UniformGrid](#UniformGrid)
-
-- [画布](#Canvas)
-
-- [StackPanel](#stackpanel)
-
-- [WrapPanel](#wrappanel)
-
-- [DockPanel](#dockpanel)
+以下布局面板是最常用的，不过还有一些其他布局面板。 在 Visual Studio 的“工具箱”中或 Blend for Visual Studio 的“资产”面板中可以找到它们   。
 
 ### <a name="grid"></a>Grid
 
@@ -54,9 +39,9 @@ ms.locfileid: "53829298"
 
 将对象排列到相等或统一的网格区域中。 此面板非常适用于排列图像的列表。
 
-![UniformGrid 版式面板](../designers/media/928b9284-a7e8-4678-875a-656b80b78076.png)
-
 （仅适用于 WPF 项目。）
+
+![UniformGrid 版式面板](../designers/media/928b9284-a7e8-4678-875a-656b80b78076.png)
 
 ### <a name="canvas"></a>Canvas
 
@@ -72,7 +57,7 @@ ms.locfileid: "53829298"
 
 ### <a name="wrappanel"></a>WrapPanel
 
-按顺序从左到右排列对象。 面板最右边空间不足时，它会将内容换行到下一行，并采用从左到右、从上到下的换行顺序。 还可以使自动换行面板的方向垂直，以便对象从上到下、从左到右排列。
+按顺序从左到右排列对象。 面板最右边空间不足时，它会将内容换行  到下一行，并采用从左到右、从上到下的换行顺序。 还可以使自动换行面板的方向垂直，以便对象从上到下、从左到右排列。
 
 （仅适用于 WPF 项目。）
 
@@ -80,47 +65,39 @@ ms.locfileid: "53829298"
 
 ### <a name="dockpanel"></a>DockPanel
 
-排列对象，使它们停留或停靠在面板的一个边缘。
+排列对象，使它们停留或停靠在面板的一个边缘  。
 
 （仅适用于 WPF 项目。）
 
 ![DockPanel 版式面板](../designers/media/72d46b58-9a49-4dd5-8af7-6843c0440226.png)
 
-**观看短片：**![“播放”按钮](../designers/media/bldadminconsoleinitialconfigicon.PNG) [WPF - DockPanel](https://www.youtube.com/watch?v=EBH_OIM-zPo)
+**观看短片：** ![“播放”按钮](../designers/media/bldadminconsoleinitialconfigicon.PNG) [WPF - DockPanel](https://www.youtube.com/watch?v=EBH_OIM-zPo)
 
 ## <a name="layout-controls"></a>布局控件
 
 也可以向布局控件添加对象。 布局控件功能不如布局面板那么丰富，在某些情况中这些控件可能很有用。
 
-以下布局控件是最常用的，不过还有一些其他布局控件。 在 Assets 面板中可以找到所有这些内容。
-
-- [边框](#Border)
-
-- [弹出项](#Popup)
-
-- [ScrollViewer](#scrollviewer)
-
-- [Viewbox](#viewbox)
+以下布局控件是最常用的，不过还有一些其他布局控件。 在 Visual Studio 的“工具箱”中或 Blend for Visual Studio 的“资产”面板中可以找到它们   。
 
 ### <a name="border"></a>Border
 
-围绕创建边框、背景或两者。 只能将一个对象添加到边框。 如果要将边框或背景应用于多个对象，请将布局面板添加到边框。 然后，将对象添加到该面板或控件。
+围绕创建边框、背景或两者。 只能将一个对象添加到边框  。 如果要将边框或背景应用于多个对象，请将布局面板添加到边框  。 然后，将对象添加到该面板或控件。
 
 ![边框布局控件](../designers/media/e761238b-99fd-43c5-bbc4-57538b8289ff.png)
 
 ### <a name="popup"></a>弹出项
 
-在窗口中向用户显示信息或选项。 只能将一个对象添加到弹出项。 默认情况下，弹出项包含一个 Grid，但是可以更改。
+在窗口中向用户显示信息或选项。 只能将一个对象添加到弹出项  。 默认情况下，弹出项  包含一个 Grid  ，但是可以更改。
 
 ### <a name="scrollviewer"></a>ScrollViewer
 
-使用户可以向下滚动页面或页面区域。 只能将一个对象添加到 ScrollViewer，因此添加 Grid 或 StackPanel 等布局面板很有必要。
+使用户可以向下滚动页面或页面区域。 只能将一个对象添加到 ScrollViewer  ，因此添加 Grid  或 StackPanel  等布局面板很有必要。
 
 ![ScrollViewer 布局控件](../designers/media/06b326d4-f23d-41a6-b26b-e1aff37572a7.png)
 
 ### <a name="viewbox"></a>Viewbox
 
-采用与缩放控件十分类似的方式扩展对象。 只能将一个对象添加到 Viewbox。 如果要将该效果应用于多个对象，请将布局面板添加到 ViewBox，然后将控件添加到该布局面板。
+采用与缩放控件十分类似的方式扩展对象。 只能将一个对象添加到 Viewbox  。 如果要将该效果应用于多个对象，请将布局面板添加到 ViewBox  ，然后将控件添加到该布局面板。
 
 （仅适用于 WPF 项目。）
 

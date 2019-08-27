@@ -1,27 +1,22 @@
 ---
 title: ContingentProperties 类-内部成员 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - ContingentProperties class [.NET Framework debug engines]
 - debug engines, ContingentProperties class [.NET Framework]
 ms.assetid: c49d1362-ab1c-4b6d-9950-fcae40e0e66b
 caps.latest.revision: 13
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: fdef7310185170a8cb73c3a04ec706108615a17f
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 3f6778aef90361a7751ccd744fcf93822f8f97db
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51796124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414641"
 ---
 # <a name="contingentproperties-class---internal-members"></a>ContingentProperties 类 - 内部成员
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -45,7 +40,7 @@ ms.locfileid: "51796124"
   
 ### <a name="fields"></a>字段  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[m_children](../../extensibility/debugger/m-children-field.md)|使用此任务中注册的子任务的列表。|  
   
@@ -54,4 +49,3 @@ ms.locfileid: "51796124"
   
 ## <a name="see-also"></a>请参阅  
  [.NET Framework 的并行扩展内幕](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
-

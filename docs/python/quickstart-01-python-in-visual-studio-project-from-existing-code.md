@@ -2,25 +2,24 @@
 title: 快速入门 - 从现有代码创建 Python 项目
 description: 在此快速入门教程中，使用便捷的模板基于现有文件夹创建适合 Python 的 Visual Studio 项目。
 ms.date: 12/06/2018
-ms.prod: visual-studio-dev15
 ms.topic: quickstart
-author: kraigb
-ms.author: kraigb
-manager: douge
+author: JoshuaPartlow
+ms.author: joshuapa
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e26768c3e18fb12ca97e2875dec6ab84cb0344ac
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8fbbd8c49ecc367a0dd01d9ab775735b93174fe6
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53965483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62429047"
 ---
 # <a name="quickstart-create-a-python-project-from-existing-code"></a>快速入门：从现有代码创建 Python 项目
 
-[在 Visual Studio 2017 中安装 Python 支持](installing-python-support-in-visual-studio.md)后，就可以轻松地将现有 Python 代码引入 Visual Studio 项目。
+[在 Visual Studio 中安装 Python 支持](installing-python-support-in-visual-studio.md)后，就可以轻松地将现有 Python 代码引入 Visual Studio 项目。
 
 > [!Important]
 > 此处所述的过程不移动或复制原始源文件。 如果要使用副本，请先复制文件夹。

@@ -1,14 +1,9 @@
 ---
-title: 'Idiaenumlinenumbers:: Item |Microsoft Docs'
-ms.custom: ''
+title: IDiaEnumLineNumbers::Item | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 08efbeaf-22f7-49e9-96a8-bb906dfe4fd8
 caps.latest.revision: 10
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: e22ee9fd5df4419583552d8e9071d9d831d3ad82
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 630c86e463cdc6ff838fad00d5d02e6f67c729d7
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51772412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68190134"
 ---
 # <a name="idiaenumlinenumbersitem"></a>IDiaEnumLineNumbers::Item
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -43,7 +38,7 @@ HRESULT Item ( 
  索引  
  [in]索引[IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)要检索对象。 索引是 0 到范围内`count`-1，其中`count`返回的[idiaenumlinenumbers:: Get_count](../../debugger/debug-interface-access/idiaenumlinenumbers-get-count.md)方法。  
   
- 行号  
+ lineNumber  
  [out]返回[IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)对象，表示所需的行号。  
   
 ## <a name="return-value"></a>返回值  
@@ -52,6 +47,3 @@ HRESULT Item ( 
 ## <a name="see-also"></a>请参阅  
  [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   
  [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)
-
-
-

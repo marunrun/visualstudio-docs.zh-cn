@@ -1,25 +1,20 @@
 ---
 title: 修改 Blend 中对象的样式 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: 31192d2c-5b84-41bc-94c0-898638c170bd
 caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 70bf451a828e3884a6004f6304b91351e866ee52
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: a5ca94c88a1f131065b7d5de57e9cdc200696d58
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49843627"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65681441"
 ---
 # <a name="modify-the-style-of-objects-in-blend"></a>修改 Blend 中对象的样式
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,18 +25,18 @@ ms.locfileid: "49843627"
   
  **主题内容**：  
   
--   [画笔：修改对象的外观](#Brushes)  
+- [画笔：修改对象的外观](#Brushes)  
   
--   [样式和模板：在控件之间创建一致的外观](#Styles)  
+- [样式和模板：在控件之间创建一致的外观](#Styles)  
   
--   [可视状态：基于其状态更改控件的外观](#Visual)  
+- [可视状态：更改基于其状态的控件的外观](#Visual)  
   
--   [资源：创建颜色、样式和模板，并在以后重复使用它们](#Resources)  
+- [资源：创建颜色、 样式和模板并重复使用它们更高版本](#Resources)  
   
-##  <a name="Brushes"></a>画笔：修改对象的外观  
+## <a name="Brushes"></a> 画笔：修改对象的外观  
  如果要更改对象外观，请向它应用画笔。  
   
- 观看简短视频：![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [画笔工具栏](http://www.popscreen.com/v/6A4mO/Microsoft-Expression-Blend-The-Brushes-Editor)。  
+ **观看短片：**![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [画笔编辑器](http://www.popscreen.com/v/6A4mO/Microsoft-Expression-Blend-The-Brushes-Editor)。  
   
 ### <a name="paint-a-repeating-image-or-pattern-on-an-object"></a>在对象上绘制重复图像或图案  
  可使用平铺画笔在对象上绘制重复图像或图案。  
@@ -60,14 +55,14 @@ ms.locfileid: "49843627"
   
  ![](../designers/media/fb6c90e0-153c-48fe-b563-e601beac6227.png "fb6c90e0-153c-48fe-b563-e601beac6227") ![](../designers/media/e261b99f-7d8f-4d91-bc84-19c7beccc255.png "e261b99f-7d8f-4d91-bc84-19c7beccc255")  
   
- 观看简短视频：![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [平铺画笔](http://www.popscreen.com/v/6A4iM/Microsoft-Expression-Blend-Tile-Brushes)。  
+ **观看短片：**![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [平铺画笔](http://www.popscreen.com/v/6A4iM/Microsoft-Expression-Blend-Tile-Brushes)。  
   
-##  <a name="Styles"></a>样式和模板：在控件之间创建一致的外观  
+## <a name="Styles"></a> 样式和模板：跨控件创建一致的外观  
  可以一次性设计控件的外观和行为，然后将该设计应用于其他控件，以便不必分别进行维护。  
   
- 是否应使用样式？：如果只是想设置默认属性（如按钮的颜色），请使用样式。 即使在应用了样式之后，也可以修改控件。  
+ **是否应使用样式？**：如果只是想设置默认属性（如按钮的颜色），请使用样式。 即使在应用了样式之后，也可以修改控件。  
   
- 是否应使用模板？：如果想要更改控件的结构，请使用模板。 假设将图形或徽标转换为按钮。 在向其应用模板之后，无法修改控件。  
+ **是否应使用模板？**：如果想要更改控件的结构，请使用模板。 假设将图形或徽标转换为按钮。 在向其应用模板之后，无法修改控件。  
   
 ### <a name="create-a-template-or-style"></a>创建模板或样式  
  可通过两种方法创建模板。 可以将美工板上的任何对象转换为控件，也可以使模板基于现有控件。  
@@ -84,47 +79,42 @@ ms.locfileid: "49843627"
   
 - 选择“创建空白项”可从头开始。  
   
-  **编辑当前**编辑样式或已创建的模板时，才会显示选项。 对于仍在使用默认系统模板的控件，它不会出现。  
+  仅当编辑已创建的样式或模板时，“编辑当前形状”选项才会出现。 对于仍在使用默认系统模板的控件，它不会出现。  
   
   在“创建样式资源”对话框中，可以命名样式或模板以便可以在以后使用它，也可以将样式或模板应用于该类型的所有控件。  
   
   ![](../designers/media/4818ee6a-ce60-4b79-91c8-3b1871829eea.png "4818ee6a-ce60-4b79-91c8-3b1871829eea")  
   
 > [!NOTE]
->  不能为控件的每种类型都创建样式或模板。 如果控件不支持它们，则痕迹导航按钮不会出现在美工板上方。  
+> 不能为控件的每种类型都创建样式或模板。 如果控件不支持它们，则痕迹导航按钮不会出现在美工板上方。  
 >   
->  若要返回主文档的编辑范围，请单击“返回范围”![](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png "55844eb3-ed98-4f20-aa66-a6f5b23eeb2b")。  
+> 若要返回主文档的编辑范围，请单击“返回范围”![](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png "55844eb3-ed98-4f20-aa66-a6f5b23eeb2b")。  
 >   
->  ![](../designers/media/4a5612e1-7a28-4587-b870-0fe7112ec2ad.png "4a5612e1-7a28-4587-b870-0fe7112ec2ad")  
+> ![](../designers/media/4a5612e1-7a28-4587-b870-0fe7112ec2ad.png "4a5612e1-7a28-4587-b870-0fe7112ec2ad")  
   
- 观看简短视频：![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [创建样式](http://www.microsoft.com/showcase/details.aspx?uuid=9b8e86e2-8e90-4d61-81af-fa5b5afb3e95)。  
-  
- 观看简短视频：![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [在 Expression Blend 中创建控件模板](http://msdn.microsoft.com/expression/cc263912.aspx)。  
+ **观看短片：**![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [创建样式](https://www.youtube.com/watch?v=W8YdXDPeKdc)。  
   
 ### <a name="apply-a-style-or-template-to-a-control"></a>将样式或模板应用于控件  
- 在[对象和时间线](http://msdn.microsoft.com/en-us/135a5a5e-ec6d-4f38-8827-60e284cd5f57)面板中右键单击某个对象，选择“编辑模板”，然后选择“应用资源”。  
+ 在[对象和时间线](https://msdn.microsoft.com/135a5a5e-ec6d-4f38-8827-60e284cd5f57)面板中右键单击某个对象，选择“编辑模板”，然后选择“应用资源”。  
   
  ![](../designers/media/dc12debc-7711-47d9-84ce-10322a384397.png "dc12debc-7711-47d9-84ce-10322a384397")  
   
 ### <a name="restore-the-default-style-or-template-of-a-control"></a>还原控件的默认样式或模板  
- 选择控件，在[属性面板](http://msdn.microsoft.com/en-us/135a5a5e-ec6d-4f38-8827-60e284cd5f57)中，找到“样式”或“模板”属性。 然后，单击“高级选项”![](../designers/media/12e06962-5d8a-480d-a837-e06b84c545bb.png "12e06962-5d8a-480d-a837-e06b84c545bb")，再在快捷菜单上单击“重置”。  
+ 选择控件，在[属性面板](https://msdn.microsoft.com/135a5a5e-ec6d-4f38-8827-60e284cd5f57)中，找到“样式”或“模板”属性。 然后，单击“高级选项”![](../designers/media/12e06962-5d8a-480d-a837-e06b84c545bb.png "12e06962-5d8a-480d-a837-e06b84c545bb")，再在快捷菜单上单击“重置”。  
   
-##  <a name="Visual"></a>可视状态：基于其状态更改控件的外观  
+## <a name="Visual"></a> 可视状态：根据控件状态更改其外观  
  控件可以基于用户交互而具有不同的视觉外观。 例如，可以在用户单击时使按钮变为绿色，也可以运行动画。 可使用过渡缩短或延长可视状态之间的时间。  
   
  ![](../designers/media/a95c671a-5639-40b9-83db-1e6b214330d5.png "a95c671a-5639-40b9-83db-1e6b214330d5")  
   
- 观看简短视频：![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [管理 WPF 控件的状态](https://www.youtube.com/watch?v=m0PlkF5i6uw)。  
+ **观看短片：**![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [管理 WPF 控件的状态](https://www.youtube.com/watch?v=m0PlkF5i6uw)。  
   
-##  <a name="Resources"></a>资源：创建颜色、样式和模板，并在以后重复使用它们  
+## <a name="Resources"></a> 资源：创建颜色、样式和模板，并在以后重复使用它们  
  可以将项目中的几乎所有对象转换为资源。 资源只是可以在应用程序中的不同位置重复使用的对象。 例如，可以一次性创建一种颜色，使它成为资源，然后在多个对象上使用该颜色。 若要更改所有这些对象的颜色，只需更改该颜色资源。  
   
  ![](../designers/media/89203705-cf66-46e0-b153-52a23cd744f7.png "89203705-cf66-46e0-b153-52a23cd744f7") ![](../designers/media/6bff8b19-3cd5-41a0-bbf9-ff65532d5aae.png "6bff8b19-3cd5-41a0-bbf9-ff65532d5aae")  
   
- 观看简短视频：![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [简要了解资源](http://www.popscreen.com/v/6A4k7/Microsoft-Expression-Blend-Brief-Touch-on-Resources)。  
+ **观看短片：**![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [简要了解资源](http://www.popscreen.com/v/6A4k7/Microsoft-Expression-Blend-Brief-Touch-on-Resources)。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 Blend for Visual Studio 创建 UI](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)
-
-
-

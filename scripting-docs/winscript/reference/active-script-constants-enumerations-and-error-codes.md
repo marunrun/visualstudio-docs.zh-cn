@@ -2,7 +2,6 @@
 title: 活动脚本常量、 枚举和错误代码 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -12,12 +11,12 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f5e25070aa92a9464bfc92433c0d2b7763232fb6
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: 090b494e904fbef1c0d3d8b380f7a184a6042788
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54347614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62953993"
 ---
 # <a name="active-script-constants-enumerations-and-error-codes"></a>活动脚本常量、枚举和错误代码
 本部分介绍枚举和错误代码在 Windows 脚本引擎中使用。  
@@ -28,7 +27,7 @@ ms.locfileid: "54347614"
 |--------------|-----------------|  
 |[SCRIPTTHREADID 常量](../../winscript/reference/scriptthreadid-constants.md)|指定线程的类型。|  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>属性  
   
 |属性|描述|  
 |--------------|-----------------|  

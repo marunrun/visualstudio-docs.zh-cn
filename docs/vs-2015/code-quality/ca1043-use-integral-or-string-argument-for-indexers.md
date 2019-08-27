@@ -1,14 +1,9 @@
 ---
-title: CA1043： 将整型或字符串参数用于索引器 |Microsoft Docs
-ms.custom: ''
+title: CA1043:使用整型或字符串参数用于索引器 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA1043
 - UseIntegralOrStringArgumentForIndexers
@@ -20,14 +15,14 @@ caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: db2b365626efc1a5735adf986d1b49ac52c2c72b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 643d91ad51e9511bbd4440d2f84fbd441c768a53
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49951556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68143216"
 ---
-# <a name="ca1043-use-integral-or-string-argument-for-indexers"></a>CA1043：将整型或字符串自变量用于索引器
+# <a name="ca1043-use-integral-or-string-argument-for-indexers"></a>CA1043:将整型或字符串参数用于索引器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -57,9 +52,6 @@ ms.locfileid: "49951556"
  [!code-vb[FxCop.Design.IntegralOrStringIndexers#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.IntegralOrStringIndexers/vb/FxCop.Design.IntegralOrStringIndexers.vb#1)]
 
 ## <a name="related-rules"></a>相关的规则
- [CA1023：索引器不应是多维的](../code-quality/ca1023-indexers-should-not-be-multidimensional.md)
+ [CA1023:索引器不应是多维](../code-quality/ca1023-indexers-should-not-be-multidimensional.md)
 
- [CA1024：在适用处使用属性](../code-quality/ca1024-use-properties-where-appropriate.md)
-
-
-
+ [CA1024： 在适用处在适用处使用属性](../code-quality/ca1024-use-properties-where-appropriate.md)

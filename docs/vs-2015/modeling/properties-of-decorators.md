@@ -1,25 +1,22 @@
 ---
 title: 修饰器的属性 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: reference
 helpviewer_keywords:
 - Domain-Specific Language, decorators
 ms.assetid: f6322fe5-dc08-4d32-a6b3-0bd18879136d
 caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 2d7d6aec514cab53777840730dee6bafac51512e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: d9cd07ed41e39c931e67f43f1c77ff8bd56b2eb3
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49276882"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65701767"
 ---
 # <a name="properties-of-decorators"></a>修饰器的属性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,8 +30,8 @@ ms.locfileid: "49276882"
 |属性|描述|默认|  
 |--------------|-----------------|-------------|  
 |DisplayName|修饰器将生成的设计器中显示的名称。|展开折叠修饰器|  
-|name|修饰器的名称。|ExpandCollapseDecorator|  
-|说明|与此修饰器相关联的非正式说明。|\<无 >|  
+|名称|修饰器的名称。|ExpandCollapseDecorator|  
+|说明|与此修饰器相关联的非正式说明。|\<none>|  
 |HorizontalOffset|水平偏移量，相对于修饰器，以英寸为单位的默认位置。 （在形状上仅。）|0|  
 |VerticalOffset|垂直偏移量，相对于修饰器，以英寸为单位的默认位置。 （在形状上仅。）|0|  
 |OffsetFromLine|修饰器在行中，相对于其默认位置，以英寸为单位的偏移量。 （有关连接器仅。）|0|  
@@ -45,10 +42,10 @@ ms.locfileid: "49276882"
   
 |属性|描述|默认|  
 |--------------|-----------------|-------------|  
-|DefaultIcon|要显示的图标或图像文件的路径。|\<无 >|  
+|DefaultIcon|要显示的图标或图像文件的路径。|\<none>|  
 |DisplayName|修饰器要在生成的设计器中显示的名称。|图标修饰器|  
-|name|修饰器的名称。|IconDecorator|  
-|说明|与修饰器相关联的非正式说明。|\<无 >|  
+|名称|修饰器的名称。|IconDecorator|  
+|说明|与修饰器相关联的非正式说明。|\<none>|  
 |HorizontalOffset|水平偏移量，相对于修饰器，以英寸为单位的默认位置。 （在形状上仅。）|0|  
 |VerticalOffset|垂直偏移量，相对于修饰器，以英寸为单位的默认位置。 （在形状上仅。）|0|  
 |OffsetFromLine|修饰器在行中，相对于其默认位置，以英寸为单位的偏移量。 （有关连接器仅。）|0|  
@@ -63,8 +60,8 @@ ms.locfileid: "49276882"
 |DisplayName|修饰器要在生成的设计器中显示的名称。|Label|  
 |FontSize|修饰器中显示的文本的字体大小。|8|  
 |FontStyle|修饰器中显示的文本的字体样式。|规则|  
-|name|修饰器的名称。|Label|  
-|说明|与修饰器相关联的非正式说明。|\<无 >|  
+|名称|修饰器的名称。|Label|  
+|说明|与修饰器相关联的非正式说明。|\<none>|  
 |HorizontalOffset|水平偏移量，相对于修饰器，以英寸为单位的默认位置。 （在形状上仅。）|0|  
 |VerticalOffset|垂直偏移量，相对于修饰器，以英寸为单位的默认位置。 （在形状上仅。）|0|  
 |OffsetFromLine|修饰器在行中，相对于其默认位置，以英寸为单位的偏移量。 （有关连接器仅。）|0|  
@@ -72,7 +69,4 @@ ms.locfileid: "49276882"
 |位置|修饰器默认位置。|TargetBottom|  
   
 ## <a name="see-also"></a>请参阅  
- [域特定语言工具术语表](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)
-
-
-
+ [域特定语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

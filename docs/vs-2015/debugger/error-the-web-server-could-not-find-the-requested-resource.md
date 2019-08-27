@@ -1,14 +1,9 @@
 ---
-title: 错误： Web 服务器找不到请求的资源 |Microsoft Docs
-ms.custom: ''
+title: 错误：Web 服务器找不到请求的资源 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 dev_langs:
 - FSharp
 - VB
@@ -20,15 +15,15 @@ ms.assetid: 1ceeaf30-918c-42bb-ace1-96944530fef3
 caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: f490006d21f51f48cd8b2d97da262015ab170f39
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: b3904a9fcb2e15190018dbc4caabe925690e023f
+ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51808292"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66263707"
 ---
-# <a name="error-the-web-server-could-not-find-the-requested-resource"></a>错误：Web 服务器未能找到请求的资源
+# <a name="error-the-web-server-could-not-find-the-requested-resource"></a>错误：Web 服务器找不到所请求的资源
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 为了安全起见，IIS 已返回泛型错误。  
@@ -37,11 +32,8 @@ ms.locfileid: "51808292"
   
  导致此错误的可能原因有很多。 几个最常见的原因包括：文件系统中的 IIS 安装或配置、网站配置或权限有问题。 您可以尝试使用浏览器访问资源。 根据 IIS 的配置方式，您可能必须在服务器上使用本地浏览器或检查 IIS 错误日志以获取详细的错误消息。  
   
- 有关排除 IIS 问题的详细信息，请参阅[IIS 管理和管理](http://go.microsoft.com/fwlink/?LinkId=255872)。  
+ 有关 IIS 的疑难解答的详细信息，请参阅 [IIS 管理](http://go.microsoft.com/fwlink/?LinkId=255872)。  
   
 ## <a name="see-also"></a>请参阅  
- [UrlScan 安全工具](http://www.microsoft.com/technet/security/tools/urlscan.mspx)   
+ [UrlScan 安全工具](/iis/extensions/working-with-urlscan/urlscan-3-reference)   
  [错误：Web 服务器已被锁定，并阻止 DEBUG 谓词](../debugger/error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb.md)
-
-
-

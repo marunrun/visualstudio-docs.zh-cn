@@ -2,7 +2,6 @@
 title: 活动脚本调试概述 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,12 +13,12 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d8624c1405931edefe2e1e53e579ad28a7b238f1
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: 31fb3f5bf88b0caf179a43d02358bb6a9f1a2831
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54345482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62975794"
 ---
 # <a name="active-script-debugging-overview"></a>活动脚本调试概述
 活动脚本调试接口可以进行中性语言调试和中性主机调试，并支持各种开发环境。  

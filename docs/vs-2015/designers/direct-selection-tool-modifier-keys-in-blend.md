@@ -1,30 +1,25 @@
 ---
 title: Blend 中的“路径选择”工具修改键 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: 21f9b951-dc2b-4d09-bd70-75caed8fb964
 caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: dfe69bcc678cbd6f06f8afc8d7e175b124f423ab
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: f4c9c027487fcefd29b486d6c58fa45f9e347f60
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49191069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68195265"
 ---
 # <a name="direct-selection-tool-modifier-keys-in-blend"></a>Blend 中的“路径选择”工具修改键
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-下表列出了在使用“路径选择”工具 ![](../designers/media/6dd6571f-c116-451d-8dd2-1f88b8406362.png "6dd6571f-c116-451d-8dd2-1f88b8406362") 修改现有路径形状时可使用的快捷方式。 要在现有路径上添加或删除点，或联接两个现有路径，请使用“钢笔”工具。  
+下表列出了在使用“路径选择”  工具 ![](../designers/media/6dd6571f-c116-451d-8dd2-1f88b8406362.png "6dd6571f-c116-451d-8dd2-1f88b8406362") 修改现有路径形状时可使用的快捷方式。 要在现有路径上添加或删除点，或联接两个现有路径，请使用“钢笔”  工具。  
   
 |任务|操作步骤|指针|  
 |-----------------------|-------------|-------------|  
@@ -44,6 +39,3 @@ ms.locfileid: "49191069"
  [“美工板”修改键](../designers/artboard-modifier-keys-in-blend.md)   
  [“笔”工具修改键](../designers/pen-tool-modifier-keys-in-blend.md)   
  [绘制形状和路径](../designers/draw-shapes-and-paths.md)
-
-
-

@@ -1,31 +1,28 @@
 ---
 title: 使用订阅者门户 - http://my.visualstudio.com | Microsoft Docs
 author: evanwindom
-ms.author: jaunger
-manager: evelynp
-ms.date: 01/04/2018
-ms.topic: Get-Started-Article
+ms.author: lank
+manager: lank
+ms.date: 07/19/2019
+ms.topic: conceptual
 description: 了解 Visual Studio 订阅门户为你提供的所有权益
-ms.prod: vs-subscription
-ms.technology: vs-subscriptions
-searchscope: VS Subscription
-ms.openlocfilehash: 6bd5e0ac308a8644f6428deb7468e00007f7c70b
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: 8ac16b09077935fc1b45d2b04acd895107096459
+ms.sourcegitcommit: 485881e6ba872c7b28a7b17ceaede845e5bea4fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47859015"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68377921"
 ---
-# <a name="using-the-subscriber-portal---myspanspanvisualstudiospanspancom"></a>使用订阅者门户 - my.<span></span>visualstudio<span></span>.com
+# <a name="using-the-subscriber-portal---myvisualstudiocom"></a>使用订阅者门户 - my.visualstudio.com
 
 Visual Studio 订阅门户 [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) 为一体化资源，可利用通过 Visual Studio 订阅提供的所有权益。
 
 需要通过与订阅相关联的身份进行登录才能使用该门户。  这可能是你的 Microsoft 帐户 (MSA) 或组织（如工作单位或学校）提供给你的电子邮件地址。  了解[登录](signing-in.md)。
 
-门户分为六页。  每一页均提供了对订阅中包含的不同产品或服务的访问权限。  这六页分别为权益、下载、产品密钥、订阅、支持和市场。 
+门户分为六页。  每一页均提供了对订阅中包含的不同产品或服务的访问权限。  这六页分别为权益、下载、产品密钥、订阅、支持和市场。
 
 ## <a name="benefitshttpsmyvisualstudiocombenefitswtmcidomsftdocs"></a>[权益](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
-随附订阅的工具和服务在“权益”页上以“磁贴”形式显示。  并非所有订阅都包含所有权益。 磁贴分为三个类别：工具、专业开发和支持。  如果你使用 Visual Studio Dev Essentials，将会看到一个名为“精选”的类别，其中可能包含从其他三个类别中选择的权益。
+随附订阅的工具和服务在“权益”页上以“磁贴”形式显示。  并非所有订阅都包含所有权益。 磁贴分为三类：工具、专业开发和支持。  如果你使用 Visual Studio Dev Essentials，将会看到一个名为“精选”的类别，其中可能包含从其他三个类别中选择的权益。
 
 ### <a name="tools"></a>工具
 “工具”类别中包含核心开发工具，如 Visual Studio IDE、Azure DevOps 和合作伙伴提供的工具。  此外，还会看到 Azure 和 Visual Studio App Center 等服务。
@@ -53,4 +50,7 @@ Visual Studio 订阅门户 [https://my.visualstudio.com](https://my.visualstudio
 
 ## <a name="marketplacehttpsmarketplacevisualstudiocom"></a>[市场](https://marketplace.visualstudio.com/)
 
-需要续订 Visual Studio 云订阅？  想要下载 Visual Studio 系列产品的最新扩展？  市场有助于用户查找增强 Azure DevOps、Team Foundation Server 和 Visual Studio Code 的扩展、工具和服务。 甚至可以成为发布者，在市场上发布你自己的扩展。
+需要续订 Visual Studio 云订阅？  想要下载 Visual Studio 系列产品的最新扩展？  市场有助于用户查找增强 Azure DevOps、Azure DevOps Server 和 Visual Studio Code 的扩展、工具和服务。 甚至可以成为发布者，在市场上发布你自己的扩展。
+
+## <a name="next-steps"></a>后续步骤
+在 [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) 登录门户网站，查看你的权益。  还可以了解有关使用 [Microsoft 帐户](sign-in-msa.md) (MSA)、[工作或学校帐户](sign-in-work.md)，甚至是 [GitHub 帐户](sign-in-github.md)登录门户网站的详细信息。 

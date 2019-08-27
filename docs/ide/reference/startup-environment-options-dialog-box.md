@@ -1,26 +1,32 @@
 ---
 title: “选项”对话框 ->“环境”->“启动”
-ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
+ms.date: 03/28/2019
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Startup
 ms.assetid: 9d517203-3c62-4660-b7b4-ea7d032dcb1e
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e970655f37b02d588064ac57c5dea30bf5b1214e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e0f14d830c9b0c3d091ffc380f64c128b8b79b83
+ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53939227"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68605909"
 ---
-# <a name="startup-environment-options-dialog-box"></a>“选项”对话框 ->“环境”->“启动”
+# <a name="options-dialog-box-environment--startup"></a>“选项”对话框：环境 \> 启动
+
+::: moniker range="vs-2017"
+
 使用此页可以自定义 Visual Studio 起始页或在 Visual Studio 启动时设置不同的默认操作。 有关详细信息，请参阅[自定义起始页](../../ide/customizing-the-start-page-for-visual-studio.md)。
 
-## <a name="see-also"></a>请参阅
+::: moniker-end
 
-- [“选项”对话框 ->“环境”](../../ide/reference/environment-options-dialog-box.md)
+::: moniker range=">=vs-2019"
+
+使用此页可以设置 Visual Studio 启动时不同的默认操作。 在“启动时打开”列表中，从“开始窗口”（这允许打开新的或现有项目）、“最新解决方案”或“空环境”中选择     。
+
+::: moniker-end

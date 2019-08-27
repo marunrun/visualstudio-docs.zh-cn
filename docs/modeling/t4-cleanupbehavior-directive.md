@@ -4,16 +4,15 @@ ms.date: 11/04/2016
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: f99cece37b37cdbf4906e9af3939fe824aec0a93
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 27df15c0b935ff4bae497940c095dba1598bc4c1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53912816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62964100"
 ---
 # <a name="t4-cleanupbehavior-directive"></a>T4 CleanUpBehavior 指令
 

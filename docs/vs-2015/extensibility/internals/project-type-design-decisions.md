@@ -1,14 +1,9 @@
 ---
 title: 项目类型设计决策 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project types, project file persistence
 - project types, commitment mechanics
@@ -17,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: f68671fe-fd7a-4e56-a0b5-330b0f1fedb1
 caps.latest.revision: 11
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 62d1a0e78aebd39c1f305c3480d6a418b382b4fd
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: cd26e08ab153e96fc601e89788008cb0e9ca38c8
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51781785"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65704081"
 ---
 # <a name="project-type-design-decisions"></a>项目类型设计决策
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -35,7 +30,7 @@ ms.locfileid: "51781785"
   
  在项目中的项可以是文件，或它们可以在 Internet 上是更加抽象对象，例如数据库存储库或数据连接中的对象。 如果项是文件，项目可以是基于引用的或基于目录的项目。  
   
- 在基于引用的项目中，项可以出现在多个项目。 但是，一个项代表的实际文件位于仅限一个目录中。 在基于目录的项目中，所有项目项的目录结构中都存在。 有关详细信息，请参阅[NIB： 项目管理在项目中](http://msdn.microsoft.com/en-us/762e606b-7f44-4b66-97a1-e30a703654a0)。  
+ 在基于引用的项目中，项可以出现在多个项目。 但是，一个项代表的实际文件位于仅限一个目录中。 在基于目录的项目中，所有项目项的目录结构中都存在。 有关详细信息，请参阅[NIB： 项目管理在项目中](https://msdn.microsoft.com/762e606b-7f44-4b66-97a1-e30a703654a0)。  
   
  本地项存储在安装应用程序的同一计算机上。 远程项目可以存储在本地网络中，单独的服务器上或在 Internet 上的其他位置。  
   
@@ -64,11 +59,10 @@ ms.locfileid: "51781785"
  当通过使用事务处理模式下打开数据对象时，更改保存到内存中的临时位置和不会提交直到用户手动选择要保存该文件。 此时，所有更改必须一起都出现，或将进行任何更改。  
   
 ## <a name="see-also"></a>请参阅  
- [清单： 创建新的项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)   
- [NIB： 项目管理在项目中](http://msdn.microsoft.com/en-us/762e606b-7f44-4b66-97a1-e30a703654a0)   
+ [清单：创建新的项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)   
+ [NIB： 项目管理在项目中](https://msdn.microsoft.com/762e606b-7f44-4b66-97a1-e30a703654a0)   
  [打开和保存项目项](../../extensibility/internals/opening-and-saving-project-items.md)   
  [项目持久性](../../extensibility/internals/project-persistence.md)   
  [项目模型的元素](../../extensibility/internals/elements-of-a-project-model.md)   
  [项目模型核心组件](../../extensibility/internals/project-model-core-components.md)   
  [创建项目类型](../../extensibility/internals/creating-project-types.md)
-

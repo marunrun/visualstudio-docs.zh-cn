@@ -1,33 +1,28 @@
 ---
 title: 旧版 API 中的文本缓冲区事件 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - text buffer events
 ms.assetid: 9be49e9f-1864-41c2-8a3c-f66895881341
 caps.latest.revision: 17
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 677824142f2e7e497888627041cfe7a82487d342
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: e82fa31ca435d0c850a4d9e75e927cff9613b046
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51735505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68186403"
 ---
 # <a name="text-buffer-events-in-the-legacy-api"></a>旧版 API 中的文本缓冲区事件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 文本缓冲区对象会发出多个不同的事件，您可以对不同的情况下作出响应。  
   
- 当使用传统的 API 时，应以接收通知的文本缓冲区更改来实现以下接口。 显示文本缓冲区使用的接口`IConnectionPointContainer`接口上要接收通知的行的文本缓冲区更改从缓冲区。 有关详细信息，请参阅[如何： 使用旧 API 的文本缓冲区事件注册](../extensibility/how-to-register-for-text-buffer-events-with-the-legacy-api.md)。 情况下`IVsTextStreamEvents`或`IVsTextLinesEvents`接口，则返回的更改以任一一或或双三维坐标，分别。  
+ 当使用传统的 API 时，应以接收通知的文本缓冲区更改来实现以下接口。 显示文本缓冲区使用的接口`IConnectionPointContainer`接口上要接收通知的行的文本缓冲区更改从缓冲区。 有关详细信息，请参阅[如何：为使用旧 API 的文本缓冲区事件注册](../extensibility/how-to-register-for-text-buffer-events-with-the-legacy-api.md)。 情况下`IVsTextStreamEvents`或`IVsTextLinesEvents`接口，则返回的更改以任一一或或双三维坐标，分别。  
   
 ## <a name="text-buffer-interfaces"></a>文本缓冲区接口  
  以下是实现文本缓冲区对象的接口。  
@@ -59,4 +54,3 @@ ms.locfileid: "51735505"
 ## <a name="see-also"></a>请参阅  
  [使用旧版 API 访问的文本缓冲区](../extensibility/accessing-the-text-buffer-by-using-the-legacy-api.md)   
  [如何：使用旧 API 注册文本缓冲区事件](../extensibility/how-to-register-for-text-buffer-events-with-the-legacy-api.md)
-

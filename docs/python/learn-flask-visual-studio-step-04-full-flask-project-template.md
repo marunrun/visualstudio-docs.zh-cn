@@ -3,21 +3,20 @@ title: 学习 Visual Studio 中的 Flask 教程的第 4 步，Web 项目模板
 titleSuffix: ''
 description: Visual Studio 项目上下文中 Flask 基础知识的演练，具体介绍了 Flask Web 项目和 Flask/Jade Web 项目模板提供的功能。
 ms.date: 01/07/2019
-ms.prod: visual-studio-dev15
 ms.topic: tutorial
-author: kraigb
-ms.author: kraigb
-manager: douge
+author: JoshuaPartlow
+ms.author: joshuapa
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 74118aee63a67310656926d84300ba180ff74188
-ms.sourcegitcommit: a7e6675185fd34ac8084f09627b2038046cdd2b1
+ms.openlocfilehash: 9f4c165f3e882cea71ee4aaff9f2358c27ce6a2b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54060824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62957222"
 ---
 # <a name="step-4-use-the-full-flask-web-project-template"></a>步骤 4：使用完整的 Flask Web 项目模板
 
@@ -163,13 +162,14 @@ index.html 和 contact.html 使用相同的结构，在“内容”块中提供�
 
 如本文开头所述，Visual Studio 提供“Flask/Jade Web 项目”模板，该模板创建的应用程序与“Flask Web 项目”生成的应用程序在视觉上相同。 主要区别在于它使用 Jade 模板引擎，该引擎是 Jinja 的扩展，Jinja 使用更简洁的语言来实现相同的概念。 具体来说，例如，Jade 使用关键字而不是括在 {% %} 分隔符中的标记，使你可以使用关键字引用 CSS 样式和 HTML 元素。
 
-要启用 Jade，项目模板首先在 requirements.txt 中包含 pyjade 包。 
+要启用 Jade，项目模板首先在 requirements.txt 中包含 pyjade 包。
 
 该应用的 \_\_init\_\_.py 文件包含一行
 
 ```python
 app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
 ```
+
 在 templates 文件夹中，会看到 .jade 文件而不是 .html 模板，并且 views.py 中的视图在对 `flask.render_template` 的调用中引用这些文件。 否则，视图代码相同。
 
 打开其中一个 .jade 文件，可以看到模板更简洁的表达式。 例如，以下是由“Flask/Jade Web 项目”模板创建的 templates/layout.jade 的内容：

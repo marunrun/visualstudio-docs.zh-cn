@@ -9,33 +9,34 @@ helpviewer_keywords:
 ms.assetid: 00e462da-980a-40b3-a2d6-75a25ee809e5
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6fd383270dabc0117434badf50f48af6f4e695a3
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: e39693f63ea706ecdfa30a9ce0202444f51d4f57
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53966208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62839675"
 ---
 # <a name="idiapropertystorageenum"></a>IDiaPropertyStorage::Enum
-获取此集内的属性的枚举器。  
-  
-## <a name="syntax"></a>语法  
-  
-```C++  
-HRESULT Enum (   
-   IEnumSTATPROPSTG** ppenum  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `ppenum`  
- [out]返回`IEnumSTATPROPSTG`对象 （在 Microsoft.VisualStudio.OLE.Interop 命名空间） 表示的属性的枚举。  
-  
-## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则返回错误代码。  
-  
-## <a name="see-also"></a>请参阅  
- [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)
+获取此集内的属性的枚举器。
+
+## <a name="syntax"></a>语法
+
+```C++
+HRESULT Enum ( 
+   IEnumSTATPROPSTG** ppenum
+);
+```
+
+#### <a name="parameters"></a>参数
+ `ppenum`
+
+[out]返回`IEnumSTATPROPSTG`对象 （在 Microsoft.VisualStudio.OLE.Interop 命名空间） 表示的属性的枚举。
+
+## <a name="return-value"></a>返回值
+ 如果成功，则返回`S_OK`; 否则返回错误代码。
+
+## <a name="see-also"></a>请参阅
+- [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

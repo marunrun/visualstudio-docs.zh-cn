@@ -1,27 +1,22 @@
 ---
 title: 旧版语言服务分析器和扫描程序 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - parsers, language services [managed package framework]
 - language services [managed package framework], Parsers
 ms.assetid: 1ac3de27-a23b-438d-9593-389e45839cfa
 caps.latest.revision: 21
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: fd419c569a298afd37548fd7b85a23cad733e371
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 64f9a9f4d0785f033191ab527084f0dddb1ff104
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51786389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63434365"
 ---
 # <a name="legacy-language-service-parser-and-scanner"></a>旧版语言服务分析器和扫描程序
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -73,7 +68,7 @@ namespace MyNamespace
  与不同的编译器 （其中令牌转换为某种形式的可执行代码） 的一部分使用的分析器，原因有多种不同，在许多不同的上下文中，可以调用语言服务分析器。 如何实现在这种方法<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>中的方法<xref:Microsoft.VisualStudio.Package.LanguageService>类是由您决定。 务必要记住的<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>可能会在后台线程上调用方法。  
   
 > [!CAUTION]
->  <xref:Microsoft.VisualStudio.Package.ParseRequest>结构包含对引用<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>对象。 这<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>对象不能使用在后台线程中。 事实上，许多 MPF 基类不能在后台线程中使用。 其中包括<xref:Microsoft.VisualStudio.Package.Source>， <xref:Microsoft.VisualStudio.Package.ViewFilter>，<xref:Microsoft.VisualStudio.Package.CodeWindowManager>类和其他任何直接或间接与视图进行通信的类。  
+> <xref:Microsoft.VisualStudio.Package.ParseRequest>结构包含对引用<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>对象。 这<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>对象不能使用在后台线程中。 事实上，许多 MPF 基类不能在后台线程中使用。 其中包括<xref:Microsoft.VisualStudio.Package.Source>， <xref:Microsoft.VisualStudio.Package.ViewFilter>，<xref:Microsoft.VisualStudio.Package.CodeWindowManager>类和其他任何直接或间接与视图进行通信的类。  
   
  此分析器通常分析整个源文件第一个时间调用它或分析时原因的值<xref:Microsoft.VisualStudio.Package.ParseReason>提供。 对后续调用<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>方法处理的已分析的代码的一小部分，并可以通过使用上一个完整的分析操作的结果更加迅速地执行。 <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>方法来传递通过分析操作的结果<xref:Microsoft.VisualStudio.Package.AuthoringSink>和<xref:Microsoft.VisualStudio.Package.AuthoringScope>对象。 <xref:Microsoft.VisualStudio.Package.AuthoringSink>对象用于为特定的分析原因，例如，span 的信息匹配大括号或具有参数列表的方法签名中收集信息。 <xref:Microsoft.VisualStudio.Package.AuthoringScope>提供的声明和方法签名以及支持集合对于转到高级的编辑选项 (**转到定义**，**转到声明**，**转到引用**)。  
   
@@ -87,29 +82,29 @@ namespace MyNamespace
   
  假定该语言服务支持匹配大括号。  
   
-1.  在用户键入右大括号 （}）。  
+1. 在用户键入右大括号 （}）。  
   
-2.  在源文件中的光标处插入大括号和光标高级 1。  
+2. 在源文件中的光标处插入大括号和光标高级 1。  
   
-3.  <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>中的方法<xref:Microsoft.VisualStudio.Package.Source>类调用与类型化的右大括号。  
+3. <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>中的方法<xref:Microsoft.VisualStudio.Package.Source>类调用与类型化的右大括号。  
   
-4.  <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>方法调用<xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A>中的方法<xref:Microsoft.VisualStudio.Package.Source>类来获取当前光标位置之前的位置处的令牌。 此标记对应的类型化的右大括号）。  
+4. <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>方法调用<xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A>中的方法<xref:Microsoft.VisualStudio.Package.Source>类来获取当前光标位置之前的位置处的令牌。 此标记对应的类型化的右大括号）。  
   
-    1.  <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A>方法调用<xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A>方法<xref:Microsoft.VisualStudio.Package.Colorizer>对象，以获取当前行上的所有令牌。  
+    1. <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A>方法调用<xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A>方法<xref:Microsoft.VisualStudio.Package.Colorizer>对象，以获取当前行上的所有令牌。  
   
-    2.  <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A>方法调用<xref:Microsoft.VisualStudio.Package.IScanner.SetSource%2A>方法<xref:Microsoft.VisualStudio.Package.IScanner>对象与当前行的文本。  
+    2. <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A>方法调用<xref:Microsoft.VisualStudio.Package.IScanner.SetSource%2A>方法<xref:Microsoft.VisualStudio.Package.IScanner>对象与当前行的文本。  
   
-    3.  <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A>方法将重复调用<xref:Microsoft.VisualStudio.Package.IScanner.ScanTokenAndProvideInfoAboutIt%2A>方法<xref:Microsoft.VisualStudio.Package.IScanner>对象从当前行中收集的所有令牌。  
+    3. <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A>方法将重复调用<xref:Microsoft.VisualStudio.Package.IScanner.ScanTokenAndProvideInfoAboutIt%2A>方法<xref:Microsoft.VisualStudio.Package.IScanner>对象从当前行中收集的所有令牌。  
   
-    4.  <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A>方法调用的私有方法<xref:Microsoft.VisualStudio.Package.Source>类来获取令牌，其中包含所需的位置，并从获取的令牌列表中的传递<xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A>方法。  
+    4. <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A>方法调用的私有方法<xref:Microsoft.VisualStudio.Package.Source>类来获取令牌，其中包含所需的位置，并从获取的令牌列表中的传递<xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A>方法。  
   
-5.  <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>方法查找的一个令牌触发器标志<xref:Microsoft.VisualStudio.Package.TokenTriggers>从返回的令牌上<xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A>方法; 即，表示右大括号的标记)。  
+5. <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>方法查找的一个令牌触发器标志<xref:Microsoft.VisualStudio.Package.TokenTriggers>从返回的令牌上<xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A>方法; 即，表示右大括号的标记)。  
   
-6.  如果触发器的标志<xref:Microsoft.VisualStudio.Package.TokenTriggers>找到，则<xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A>中的方法<xref:Microsoft.VisualStudio.Package.Source>调用类。  
+6. 如果触发器的标志<xref:Microsoft.VisualStudio.Package.TokenTriggers>找到，则<xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A>中的方法<xref:Microsoft.VisualStudio.Package.Source>调用类。  
   
-7.  <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A>方法启动的分析操作中的分析原因值<xref:Microsoft.VisualStudio.Package.ParseReason>。 此操作最终调用<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>方法<xref:Microsoft.VisualStudio.Package.LanguageService>类。 如果启用了异步分析，则此调用<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>方法在后台线程上发生。  
+7. <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A>方法启动的分析操作中的分析原因值<xref:Microsoft.VisualStudio.Package.ParseReason>。 此操作最终调用<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>方法<xref:Microsoft.VisualStudio.Package.LanguageService>类。 如果启用了异步分析，则此调用<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>方法在后台线程上发生。  
   
-8.  在分析操作完成后，名为内部完成处理程序 （也称为回调方法）`HandleMatchBracesResponse`名为<xref:Microsoft.VisualStudio.Package.Source>类。 自动进行此调用<xref:Microsoft.VisualStudio.Package.LanguageService>基类，不是由分析器。  
+8. 在分析操作完成后，名为内部完成处理程序 （也称为回调方法）`HandleMatchBracesResponse`名为<xref:Microsoft.VisualStudio.Package.Source>类。 自动进行此调用<xref:Microsoft.VisualStudio.Package.LanguageService>基类，不是由分析器。  
   
 9. `HandleMatchBracesResponse`方法获取从范围列表<xref:Microsoft.VisualStudio.Package.AuthoringSink>对象存储在<xref:Microsoft.VisualStudio.Package.ParseRequest>对象。 (对 span<xref:Microsoft.VisualStudio.TextManager.Interop.TextSpan>结构，它在源文件中指定的一系列行和字符。)此列表的范围通常包含两个范围，分别用于左和右大括号。  
   
@@ -120,7 +115,7 @@ namespace MyNamespace
 12. 完成。  
   
 ### <a name="summary"></a>总结  
- 匹配大括号操作是通常限制为简单的语言元素对。 更复杂的元素，如匹配三元组 ("`if(…)`"，"`{`"和"`}`"，或"`else`"、"`{`"和"`}`")，可以突出显示文字自动完成操作的一部分。 例如，完成"else"一词后，匹配"`if`"语句可以突出显示。 如果有一系列`if` / `else if`语句，所有这些无法通过使用相同的机制为匹配的大括号突出显示。 <xref:Microsoft.VisualStudio.Package.Source>基本类已支持此操作，请按如下所示： 扫描程序必须返回令牌的触发器值<xref:Microsoft.VisualStudio.Package.TokenTriggers>与触发器值结合使用<xref:Microsoft.VisualStudio.Package.TokenTriggers>令牌之前，光标位置。  
+ 匹配大括号操作是通常限制为简单的语言元素对。 更复杂的元素，如匹配三元组 ("`if(…)`"，"`{`"和"`}`"，或"`else`"、"`{`"和"`}`")，可以突出显示文字自动完成操作的一部分。 例如，完成"else"一词后，匹配"`if`"语句可以突出显示。 如果有一系列`if` / `else if`语句，所有这些无法通过使用相同的机制为匹配的大括号突出显示。 <xref:Microsoft.VisualStudio.Package.Source>基本类已支持此操作，请按如下所示：扫描程序必须返回令牌的触发器值<xref:Microsoft.VisualStudio.Package.TokenTriggers>与触发器值结合使用<xref:Microsoft.VisualStudio.Package.TokenTriggers>令牌之前，光标位置。  
   
  有关详细信息，请参阅[旧版语言服务中的大括号匹配](../../extensibility/internals/brace-matching-in-a-legacy-language-service.md)。  
   
@@ -143,4 +138,3 @@ namespace MyNamespace
  [旧版语言服务概述](../../extensibility/internals/legacy-language-service-overview.md)   
  [旧版语言服务中的语法着色](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md)   
  [旧版语言服务中的大括号匹配](../../extensibility/internals/brace-matching-in-a-legacy-language-service.md)
-

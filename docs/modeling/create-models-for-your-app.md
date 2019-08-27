@@ -1,7 +1,6 @@
 ---
 title: 为你的应用程序创建模型
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - vs.teamarch.common.commentlink.properties
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - software, modeling
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f608246af6311c03f4ed5ee31d4588ce2aa1a7ea
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 79d116cfb7c9b6514032aa12d916b21b38ae94b3
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53942679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62811682"
 ---
 # <a name="create-models-for-your-app"></a>为你的应用程序创建模型
 
@@ -39,13 +38,13 @@ ms.locfileid: "53942679"
 
 |**关系图**|**显示**|
 |-|-|
-|[依赖项关系图：指导原则](../modeling/layer-diagrams-guidelines.md)<br /><br /> [依赖项关系图：引用](../modeling/layer-diagrams-reference.md)|系统的上层体系结构|
+|[依赖项关系图：指南](../modeling/layer-diagrams-guidelines.md)<br /><br /> [依赖项关系图：参考](../modeling/layer-diagrams-reference.md)|系统的上层体系结构|
 |代码图<br /><br /> [映射解决方案中的依赖项](../modeling/map-dependencies-across-your-solutions.md)<br /><br /> [使用代码图分析查找潜在问题](../modeling/find-potential-problems-using-code-map-analyzers.md)|现有代码中的依赖关系和其他关系|
 |代码生成的类图<br /><br /> [使用类图（类设计器）](../ide/class-designer/designing-and-viewing-classes-and-types.md)|.NET 代码中的类型及其关系|
 
 ## <a name="related-tasks"></a>相关任务
 
-|**主题**|**Task**|
+|**Topic**|**Task**|
 |-|-|
 |[代码可视化](../modeling/visualize-code.md)|创建代码映射和依赖项关系图以更好地了解不熟悉的代码。|
 |[建立用户需求模型](../modeling/model-user-requirements.md)|使用模型来阐明和传达用户的需求。|

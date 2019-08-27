@@ -7,60 +7,61 @@ helpviewer_keywords:
 - text templates, transforming by using msbuild
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 11ff8764395f10a4937143d6f51d220f970193af
-ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
+ms.openlocfilehash: b3d61a5bcd530afb951f98f84f1f4e38e36f96d6
+ms.sourcegitcommit: 9cfd3ef6c65f671a26322320818212a1ed5955fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54270227"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68533309"
 ---
 # <a name="code-generation-in-a-build-process"></a>生成过程中的代码生成
 
-[文本转换](../modeling/code-generation-and-t4-text-templates.md)可以作为的一部分调用[生成过程](/azure/devops/pipelines/index)的 Visual Studio 解决方案。 有一些专用于文本转换的生成任务。 T4 生成任务运行设计时文本模板，它们还编译运行时（已预处理的）文本模板。
+可在 Visual Studio 解决方案的[生成过程](/azure/devops/pipelines/index)中调用[文本转换](../modeling/code-generation-and-t4-text-templates.md)。 有一些专用于文本转换的生成任务。 T4 生成任务运行设计时文本模板，它们还编译运行时（已预处理的）文本模板。
 
-根据你使用的引擎，生成任务可完成的操作之间是有一些差异的。 如果文本模板生成 Visual Studio 中的解决方案时，可以访问 Visual Studio API (EnvDTE) [hostspecific ="true"](../modeling/t4-template-directive.md)属性设置。 但在生成该解决方案从命令行时或启动通过 Visual Studio 的服务器内部版本时，就不一样。 在这些情况下，生成由 MSBuild 执行，并且使用不同的 T4 主机。
+根据你使用的引擎，生成任务可完成的操作之间是有一些差异的。 在 Visual Studio 中生成解决方案时, 如果设置了[hostspecific = "true"](../modeling/t4-template-directive.md)属性, 则文本模板可以访问 VISUAL studio API (EnvDTE)。 但当您从命令行生成解决方案时, 或者通过 Visual Studio 启动服务器生成时, 这种情况并不成立。 在这些情况下，生成由 MSBuild 执行，并且使用不同的 T4 主机。 这意味着, 在使用 MSBuild 生成文本模板时, 不能以相同的方式访问项目文件名称之类的内容。 但是, 可以[使用生成参数将环境信息传递到文本模板和指令处理器](#parameters)。
 
-这意味着，您无法访问项目文件名等内容相同的方式生成 MSBuild 中的文本模板时。 但是，你可以[通过生成参数，将环境信息传递到文本模板和指令处理器](#parameters)。
+## <a name="buildserver"></a>配置计算机
 
-##  <a name="buildserver"></a> 配置计算机
-
-若要启用生成任务在开发计算机上的，安装 Visual Studio 的建模 SDK。
+若要在开发计算机上启用生成任务, 请安装适用于 Visual Studio 的建模 SDK。
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-如果[您的生成服务器](/azure/devops/pipelines/agents/agents)运行在其未安装 Visual Studio，在计算机上的将以下文件复制到生成计算机，从开发计算机。 用最新的版本号替换 ' *'。
+如果[生成服务器](/azure/devops/pipelines/agents/agents)在未安装 Visual Studio 的计算机上运行, 请将以下文件从开发计算机复制到生成计算机。 替换为 "*" 的最新版本号。
 
 - $(ProgramFiles)\MSBuild\Microsoft\VisualStudio\v*.0\TextTemplating
 
-    - Microsoft.VisualStudio.TextTemplating.Sdk.Host.*.0.dll
+  - Microsoft.VisualStudio.TextTemplating.Sdk.Host.*.0.dll
 
-    - Microsoft.TextTemplating.Build.Tasks.dll
+  - Microsoft.TextTemplating.Build.Tasks.dll
 
-    - Microsoft.TextTemplating.targets
+  - Microsoft.TextTemplating.targets
 
 - $(ProgramFiles)\Microsoft Visual Studio *.0\VSSDK\VisualStudioIntegration\Common\Assemblies\v4.0
 
-    - Microsoft.VisualStudio.TextTemplating.*.0.dll
+  - Microsoft.VisualStudio.TextTemplating.*.0.dll
 
-    - Microsoft.VisualStudio.TextTemplating.Interfaces.*.0.dll（多个文件）
+  - Microsoft.VisualStudio.TextTemplating.Interfaces.*.0.dll（多个文件）
 
-    - Microsoft.VisualStudio.TextTemplating.VSHost.*.0.dll
+  - Microsoft.VisualStudio.TextTemplating.VSHost.*.0.dll
 
 - $(ProgramFiles)\Microsoft Visual Studio *.0\Common7\IDE\PublicAssemblies\
 
-    - Microsoft.VisualStudio.TextTemplating.Modeling.*.0.dll
+  - Microsoft.VisualStudio.TextTemplating.Modeling.*.0.dll
+  
+> [!TIP]
+> 如果在生成服务器`MissingMethodException`上运行 TextTemplating 生成目标时获取 CodeAnalysis 方法的, 请确保 Roslyn 程序集位于与生成可执行文件位于同一目录中的名为*Roslyn*的目录中 (例如,*msbuild.exe*)。
 
-## <a name="to-edit-the-project-file"></a>编辑项目文件
+## <a name="edit-the-project-file"></a>编辑项目文件
 
-您将必须编辑项目文件在 MSBuild 中配置的一些功能。
+编辑项目文件以配置 MSBuild 中的某些功能, 例如导入文本转换目标。
 
-在中**解决方案资源管理器**，选择**卸载**从你的项目的右键单击菜单。 这允许你在 XML 编辑器中编辑 .csproj 或 .vbproj 文件。
-
-完成编辑后，选择**重新加载**。
+在**解决方案资源管理器**中, 从项目的右键单击菜单中选择 "**卸载**"。 这允许你在 XML 编辑器中编辑 .csproj 或 .vbproj 文件。 完成编辑后, 选择 "**重新加载**"。
 
 ## <a name="import-the-text-transformation-targets"></a>导入文本转换目标
 
@@ -77,8 +78,8 @@ ms.locfileid: "54270227"
 ```xml
 <!-- Optionally make the import portable across VS versions -->
   <PropertyGroup>
-    <!-- Get the Visual Studio version - defaults to 10: -->
-    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- Get the Visual Studio version: -->
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">16.0</VisualStudioVersion>
     <!-- Keep the next element all on one line: -->
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
@@ -99,7 +100,7 @@ ms.locfileid: "54270227"
     </PropertyGroup>
     ```
 
-- 例如，覆盖只读文件，因为不会签出这些文件：
+- 覆盖只读文件, 例如, 因为这些文件未签出:
 
     ```xml
     <PropertyGroup>
@@ -115,7 +116,13 @@ ms.locfileid: "54270227"
     </PropertyGroup>
     ```
 
-     默认情况下，T4 MSBuild 任务将重新生成一个输出文件，前提是它早于其模板文件，或早于所有已包含的文件，或早于之前已由模板读取或已由其使用的指令处理器读取的所有文件。 请注意，这是一个依赖项测试，其功能比 Visual Studio 中的“转换所有模板”命令使用的测试强大得多，后者仅比较模板和输出文件的日期。
+     默认情况下, 如果输出文件早于以下值, 则它将重新生成输出文件:
+     
+     - 其模板文件
+     - 包含的任何文件
+     - 之前已由模板或其使用的指令处理器读取的所有文件
+     
+     这是一个功能更强大的依赖项测试, 它比 Visual Studio 中的 "**转换所有模板**" 命令使用, 后者仅比较模板和输出文件的日期。
 
 若要在项目中仅执行文本转换，请调用 TransformAll 任务：
 
@@ -131,13 +138,13 @@ ms.locfileid: "54270227"
 
 ## <a name="source-control"></a>源代码管理
 
-没有针对源代码管理系统的特定内置集成。 但是，你可以添加自己的扩展，例如，用于签出和签入生成的文件。默认情况下，文本转换任务将避免覆盖标记为只读的文件，因此当遇到此类文件时，将在 Visual Studio 错误列表中记录错误，并且任务将失败。
+没有针对源代码管理系统的特定内置集成。 不过, 你可以添加自己的扩展, 例如, 签出和签入生成的文件。 默认情况下, 文本转换任务避免覆盖标记为只读的文件。 遇到此类文件时, Visual Studio 错误列表中会记录错误, 并且该任务会失败。
 
 若要指定应覆盖只读文件，请插入此属性：
 
 `<OverwriteReadOnlyOutputFiles>true</OverwriteReadOnlyOutputFiles>`
 
-除非自定义后续处理步骤，否则会在覆盖文件时，在错误列表中记录相应的警告。
+除非自定义后处理步骤, 否则当覆盖文件时, 将在错误列表中记录一条警告。
 
 ## <a name="customize-the-build-process"></a>自定义生成过程
 
@@ -158,7 +165,7 @@ ms.locfileid: "54270227"
 
 在 `AfterTransform` 中，你可以引用文件列表：
 
-- GeneratedFiles - 由过程写入的文件的列表。 对于覆盖现有只读文件的文件，%(GeneratedFiles.ReadOnlyFileOverwritten) 为 true。 可将这些文件签出源代码管理。
+- GeneratedFiles - 由过程写入的文件的列表。 对于那些覆盖现有只读文件的文件, `%(GeneratedFiles.ReadOnlyFileOverwritten)`将为 true。 可将这些文件签出源代码管理。
 
 - NonGeneratedFiles - 未覆盖的只读文件的列表。
 
@@ -178,9 +185,9 @@ ms.locfileid: "54270227"
 </ItemGroup>
 ```
 
-要重定向到的一个有用的文件夹是 `$(IntermediateOutputPath).`
+要重定向到的有用文件夹`$(IntermediateOutputPath)`为。
 
-如果指定和输出文件名，则它将优先于在模板的输出指令中指定的扩展。
+如果指定输出文件名, 则其优先于模板中的 output 指令中指定的扩展。
 
 ```xml
 <ItemGroup>
@@ -192,9 +199,9 @@ ms.locfileid: "54270227"
 </ItemGroup>
 ```
 
-如果您也正在转换使用所有转换，或运行单个文件生成器的 VS 内的模板，不建议指定 OutputFileName 或 OutputFilePath。 你最终将得到不同的文件路径，具体取决于你触发转换的方式。 这可能很容易让人产生混淆。
+如果还使用 "**转换所有**" 或 "运行单个文件生成器" 在 Visual Studio 中转换模板, 则不建议指定 OutputFileName 或 OutputFilePath。 最终会根据你触发转换的方式来处理不同的文件路径。 这可能会造成混淆。
 
-## <a name="add-reference-and-include-paths"></a>添加引用，并包含路径
+## <a name="add-reference-and-include-paths"></a>添加引用和包含路径
 
 主机有一个默认的路径集，主机将在这些路径中搜索模板中引用的程序集。 添加到此路径集：
 
@@ -214,9 +221,9 @@ $(IncludeFolders);$(MSBuildProjectDirectory)\Include;AnotherFolder;And\Another</
 </PropertyGroup>
 ```
 
-##  <a name="parameters"></a> 将生成上下文数据传递到模板
+## <a name="parameters"></a>将生成上下文数据传递到模板
 
-你可以在项目文件中设置参数值。 例如，可以传递[构建](../msbuild/msbuild-properties.md)属性和[环境变量](../msbuild/how-to-use-environment-variables-in-a-build.md):
+你可以在项目文件中设置参数值。 例如, 可以传递[生成](../msbuild/msbuild-properties.md)属性和[环境变量](../msbuild/how-to-use-environment-variables-in-a-build.md):
 
 ```xml
 <ItemGroup>
@@ -227,7 +234,7 @@ $(IncludeFolders);$(MSBuildProjectDirectory)\Include;AnotherFolder;And\Another</
 </ItemGroup>
 ```
 
-在文本模板的 Template 指令中设置 `hostspecific`。 使用[参数](../modeling/t4-parameter-directive.md)指令获取值：
+在文本模板的 Template 指令中设置 `hostspecific`。 使用[参数](../modeling/t4-parameter-directive.md)指令获取值:
 
 ```
 <#@template language="c#" hostspecific="true"#>
@@ -235,7 +242,7 @@ $(IncludeFolders);$(MSBuildProjectDirectory)\Include;AnotherFolder;And\Another</
 The project folder is: <#= ProjectFolder #>
 ```
 
-在指令处理器，您可以调用[ITextTemplatingEngineHost.ResolveParameterValue](/previous-versions/visualstudio/visual-studio-2012/bb126369\(v\=vs.110\)):
+在指令处理器中, 可以调用[ITextTemplatingEngineHost. resolveparametervalue 不](/previous-versions/visualstudio/visual-studio-2012/bb126369\(v\=vs.110\)):
 
 ```csharp
 string value = Host.ResolveParameterValue("-", "-", "parameterName");
@@ -246,13 +253,13 @@ Dim value = Host.ResolveParameterValue("-", "-", "parameterName")
 ```
 
 > [!NOTE]
-> 仅当你使用 MSBuild 时，`ResolveParameterValue` 才会通过 `T4ParameterValues` 获取数据。 当你使用 Visual Studio 转换模板时，参数将具有默认值。
+> 仅当你使用 MSBuild 时，`ResolveParameterValue` 才会通过 `T4ParameterValues` 获取数据。 使用 Visual Studio 转换模板时, 这些参数具有默认值。
 
-##  <a name="msbuild"></a> 使用项目属性中的程序集和 include 指令
+## <a name="msbuild"></a>在 assembly 和 include 指令中使用项目属性
 
-Visual Studio 宏喜欢 **$ （solutiondir)** MSBuild 中不起作用。 你可以改用项目属性。
+Visual Studio 宏 (如 **$ (SolutionDir))** 在 MSBuild 中不起作用。 你可以改用项目属性。
 
-编辑你 *.csproj*或 *.vbproj*文件以定义项目属性。 此示例定义名为的属性**myLibFolder**:
+编辑 *.csproj*或 *.vbproj*文件以定义项目属性。 此示例定义了一个名为**myLibFolder**的属性:
 
 ```xml
 <!-- Define a project property, myLibFolder: -->
@@ -279,21 +286,32 @@ Visual Studio 宏喜欢 **$ （solutiondir)** MSBuild 中不起作用。 你可�
 
 ## <a name="q--a"></a>问题解答
 
-**我为什么要在生成服务器中转换模板？我在我的代码签入之前，我已转换 Visual Studio 中的模板。**
+**为什么要在生成服务器中转换模板？在我签入我的代码之前, 我已经在 Visual Studio 中转换了模板。**
 
-如果更新一个包含的文件或模板读取的另一个文件，Visual Studio 不会自动转换的文件。 转换模板，因为生成的一部分可确保所有内容均是最新。
+如果更新包含的文件或模板读取的其他文件, 则 Visual Studio 不会自动转换文件。 将模板转换为生成的一部分可以确保一切都是最新的。
 
-**其他选项还有哪些用于转换文本模板？**
+**用于转换文本模板的其他选项有哪些？**
 
-- [TextTransform 实用工具](../modeling/generating-files-with-the-texttransform-utility.md)可以在命令脚本中使用。 在大多数情况下，它是更轻松地使用 MSBuild。
+- 可在命令脚本中使用[TextTransform 实用程序](../modeling/generating-files-with-the-texttransform-utility.md)。 在大多数情况下, 使用 MSBuild 更为简单。
 
-- [在 VS 扩展中调用文本转换](../modeling/invoking-text-transformation-in-a-vs-extension.md)
+- [在 Visual Studio 扩展中调用文本转换](../modeling/invoking-text-transformation-in-a-vs-extension.md)。
 
 - [设计时文本模板](../modeling/design-time-code-generation-by-using-t4-text-templates.md)由 Visual Studio 转换。
 
-- [运行时文本模板](../modeling/run-time-text-generation-with-t4-text-templates.md)在应用程序中的运行时转换。
+- [运行时文本模板](../modeling/run-time-text-generation-with-t4-text-templates.md)在运行时在应用程序中转换。
 
 ## <a name="see-also"></a>请参阅
 
-- 在 T4 MSbuild 模板中没有正确的指导 *%programfiles (x86) %\Microsoft Visual Studio\2017\Enterprise\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets*
+::: moniker range="vs-2017"
+
+- 有关在 *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets*
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+- 有关在 *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\Enterprise\msbuild\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets*
+
+::: moniker-end
+
 - [编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)

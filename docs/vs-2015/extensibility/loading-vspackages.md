@@ -1,27 +1,22 @@
 ---
 title: 加载 VSPackages |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - VSPackages, autoloading
 - VSPackages, loading
 ms.assetid: f4c3dcea-5051-4065-898f-601269649d92
 caps.latest.revision: 18
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: e351f49ea3e9579202e21868361e5d6f3d53b8fd
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: e20caff476e116ad59430692719bdbbe22c4914c
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51753885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63439769"
 ---
 # <a name="loading-vspackages"></a>加载 VSPackages
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,13 +24,13 @@ ms.locfileid: "51753885"
 Vspackage 加载到 Visual Studio 中，仅当其功能是必需的。 例如，加载 VSPackage 时 Visual Studio 使用项目工厂或 VSPackage 实现的服务。 此功能被称为延迟的加载，这尽可能使用以提高性能。  
   
 > [!NOTE]
->  Visual Studio 可以确定某些 VSPackage 信息，例如 VSPackage 提供，而不加载 VSPackage 的命令。  
+> Visual Studio 可以确定某些 VSPackage 信息，例如 VSPackage 提供，而不加载 VSPackage 的命令。  
   
  Vspackage 可以设置为自动加载在特定的用户界面 (UI) 上下文中，例如，打开解决方案时。 <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute>属性将设置此上下文中。  
   
 ### <a name="autoloading-a-vspackage-in-a-specific-context"></a>自动加载 VSPackage 的特定上下文中  
   
--   添加`ProvideAutoLoad`VSPackage 属性的属性：  
+- 添加`ProvideAutoLoad`VSPackage 属性的属性：  
   
     ```csharp  
     [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\14.0")]  
@@ -48,11 +43,11 @@ Vspackage 加载到 Visual Studio 中，仅当其功能是必需的。 例如，
   
      请参阅的枚举的字段<xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80>有关 UI 上下文及其 GUID 值的列表。  
   
--   中设置断点<xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A>方法。  
+- 中设置断点<xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A>方法。  
   
--   生成 VSPackage 并启动调试。  
+- 生成 VSPackage 并启动调试。  
   
--   加载解决方案或创建一个。  
+- 加载解决方案或创建一个。  
   
      VSPackage 加载，并在断点处停止。  
   
@@ -61,7 +56,7 @@ Vspackage 加载到 Visual Studio 中，仅当其功能是必需的。 例如，
   
  可以使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackage%2A>方法，以强制 VSPackage 加载。  
   
--   插入此代码<xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A>强制另一个 VSPackage 加载的 vspackage 的方法：  
+- 插入此代码<xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A>强制另一个 VSPackage 加载的 vspackage 的方法：  
   
     ```csharp  
     IVsShell shell = GetService(typeof(SVsShell)) as IVsShell;  
@@ -134,4 +129,3 @@ public override void Unregister(RegistrationContext context)
   
 ## <a name="see-also"></a>请参阅  
  [VSPackage](../extensibility/internals/vspackages.md)
-

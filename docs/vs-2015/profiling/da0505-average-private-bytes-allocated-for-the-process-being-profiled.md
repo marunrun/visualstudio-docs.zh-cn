@@ -1,14 +1,9 @@
 ---
-title: DA0505：为所分析进程分配的平均专用字节数 | Microsoft Docs
-ms.custom: ''
+title: DA0505：为所分析的进程分配的平均专用字节数 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 f1_keywords:
 - vs.performance.DA0505
 - vs.performance.rules.DA0505
@@ -17,21 +12,21 @@ ms.assetid: 32c612ea-d077-44ba-8e6f-3a96333bad00
 caps.latest.revision: 13
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 60f1bce7fe6f0199928e68dcc86b5062e327209a
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: fde4228538a26a4601dc7eb5638a4b803dafbacb
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51789949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68205905"
 ---
-# <a name="da0505-average-private-bytes-allocated-for-the-process-being-profiled"></a>DA0505：为所分析进程分配的平均专用字节数
+# <a name="da0505-average-private-bytes-allocated-for-the-process-being-profiled"></a>DA0505：为所分析的进程分配的平均专用字节数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 规则 Id |DA0505 |  
 |类别 |资源管理 |  
 |分析方法 |所有 |  
-|消息 |此信息仅作为信息收集。 进程专用字节计数器测量由正在分析的进程分配的虚拟内存。 报告的值计算出所有测量时间间隔的平均值。 |  
+|消息 |此信息仅作为信息收集。 进程专用字节计数器测量由正在分析的进程分配的虚拟内存。 报告的值是针对所有测量时间间隔所计算的平均值。|  
 |规则类型 |信息 |  
   
  使用采样法、.NET 内存或资源争用方法进行分析时，必须收集至少 10 个样本才能触发此规则。  
@@ -49,6 +44,3 @@ ms.locfileid: "51789949"
   
 ## <a name="how-to-use-rule-data"></a>如何使用规则数据  
  若要了解不同分析方案中应用程序的性能，可使用报告的值比较不同版本程序的性能。
-
-
-

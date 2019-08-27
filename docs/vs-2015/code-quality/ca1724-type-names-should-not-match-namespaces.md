@@ -1,14 +1,9 @@
 ---
-title: CA1724： 类型名不应与命名空间 |Microsoft Docs
-ms.custom: ''
+title: CA1724:类型名不应与命名空间 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - TypeNamesShouldNotMatchNamespaces
 - CA1724
@@ -20,14 +15,14 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 5331a32db054b1cb3939bbfd3ba088ab5da33f96
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 7fe95e08d2265baf06c6da265996ffcd579f0d1f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49903174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68143186"
 ---
-# <a name="ca1724-type-names-should-not-match-namespaces"></a>CA1724：类型名不应与命名空间冲突
+# <a name="ca1724-type-names-should-not-match-namespaces"></a>CA1724:类型名不应与命名空间冲突
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -48,6 +43,3 @@ ms.locfileid: "49903174"
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  对于新开发，没有已知情况下，必须在此禁止显示此规则的警告。 禁止显示警告之前，请仔细考虑如何库用户可能会被搞糊涂了匹配的名称。 发布库，您可能需要禁止显示此规则的警告。
-
-
-

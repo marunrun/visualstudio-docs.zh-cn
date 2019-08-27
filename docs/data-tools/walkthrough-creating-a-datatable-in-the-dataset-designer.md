@@ -9,16 +9,15 @@ helpviewer_keywords:
 - data [Visual Studio], Dataset Designer
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 505c27787b033a6ccee9f89a19962d5fc81b9912
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: 1126117cb1fc26c4f61bfb0f6ed0e19e86ce9323
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53824829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62564917"
 ---
 # <a name="walkthrough-create-a-datatable-in-the-dataset-designer"></a>演练：在数据集设计器中创建数据表
 
@@ -28,7 +27,7 @@ ms.locfileid: "53824829"
 
 1. 在 Visual Studio 中，在**文件**菜单中，选择**新建** > **项目**。
 
-2. 展开**可视化C#** 或**Visual Basic**在左侧窗格中，然后选择**Windows Desktop**。
+2. 展开**Visual C#** 或**Visual Basic**在左侧窗格中，然后选择**Windows 桌面**。
 
 3. 在中间窗格中，选择**Windows 窗体应用**项目类型。
 
@@ -38,33 +37,33 @@ ms.locfileid: "53824829"
 
 ## <a name="add-a-new-dataset-to-the-application"></a>将新的数据集添加到应用程序
 
-1.  在“项目”菜单上，选择“添加新项”。
+1. 在“项目”菜单上，选择“添加新项”。
 
      “添加新项”对话框随即出现。
 
-2.  在左侧窗格中，选择**数据**，然后选择**数据集**在中间窗格中。
+2. 在左侧窗格中，选择**数据**，然后选择**数据集**在中间窗格中。
 
-3.  选择“添加”。
+3. 选择“添加”。
 
      Visual Studio 将添加名为的文件**DataSet1.xsd**到该项目并将其在中打开**数据集设计器**。
 
 ## <a name="add-a-new-datatable-to-the-dataset"></a>将一个新的 DataTable 添加到数据集
 
-1.  拖动**DataTable**从**数据集**选项卡**工具箱**拖到**数据集设计器**。
+1. 拖动**DataTable**从**数据集**选项卡**工具箱**拖到**数据集设计器**。
 
      名为的表**DataTable1**添加到数据集。
 
-2.  单击的标题栏**DataTable1**并将其重命名`Music`。
+2. 单击的标题栏**DataTable1**并将其重命名`Music`。
 
 ## <a name="add-columns-to-the-datatable"></a>向数据表添加列
 
-1.  右键单击**音乐**表。 指向**外**，然后单击**列**。
+1. 右键单击**音乐**表。 指向**外**，然后单击**列**。
 
-2.  名称列`SongID`。
+2. 名称列`SongID`。
 
-3.  在“属性”  窗口中，将 <xref:System.Data.DataColumn.DataType%2A> 属性设置为 <xref:System.Int16?displayProperty=fullName>。
+3. 在“属性”  窗口中，将 <xref:System.Data.DataColumn.DataType%2A> 属性设置为 <xref:System.Int16?displayProperty=fullName>。
 
-4.  重复此过程，并添加以下列：
+4. 重复此过程，并添加以下列：
 
      `SongTitle`: <xref:System.String?displayProperty=fullName>
 

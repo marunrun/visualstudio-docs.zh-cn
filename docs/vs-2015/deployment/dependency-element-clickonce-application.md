@@ -1,14 +1,9 @@
 ---
 title: '&lt;依赖项&gt;元素 （ClickOnce 应用程序） |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 f1_keywords:
 - urn:schemas-microsoft-com:asm.v2#osVersionInfo
 - urn:schemas-microsoft-com:asm.v2#os
@@ -31,13 +26,13 @@ ms.assetid: 09d6a1e0-60f8-4fbd-843b-8e49ee3115a3
 caps.latest.revision: 36
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: e76d517af1e0bd93507a47facd63bd50ae98e635
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: e79fadcab1a4f00c084d675c3267b5886772fe2c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49233852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68199882"
 ---
 # <a name="ltdependencygt-element-clickonce-application"></a>&lt;依赖项&gt;元素 （ClickOnce 应用程序）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -110,20 +105,20 @@ ms.locfileid: "49233852"
 |`description`|可选。 介绍了用户可读的窗体中所描述的操作系统`dependentOS`元素。|  
   
 ### <a name="osversioninfo"></a>osVersionInfo  
- 必须的。 此元素是 `dependentOS` 元素的子元素，并且包含 `os` 元素。 此元素没有属性。  
+ 必需。 此元素是 `dependentOS` 元素的子元素，并且包含 `os` 元素。 此元素没有属性。  
   
 ### <a name="os"></a>操作系统  
- 必须的。 此元素是 `osVersionInfo` 元素的子元素。 此元素具有以下属性。  
+ 必需。 此元素是 `osVersionInfo` 元素的子元素。 此元素具有以下属性。  
   
 |特性|描述|  
 |---------------|-----------------|  
-|`majorVersion`|必须的。 指定操作系统的主版本号。|  
-|`minorVersion`|必须的。 指定操作系统的次版本号。|  
-|`buildNumber`|必须的。 指定的 os 内部版本号。|  
-|`servicePackMajor`|必须的。 指定 service pack 的操作系统的主版本号。|  
+|`majorVersion`|必需。 指定操作系统的主版本号。|  
+|`minorVersion`|必需。 指定操作系统的次版本号。|  
+|`buildNumber`|必需。 指定的 os 内部版本号。|  
+|`servicePackMajor`|必需。 指定 service pack 的操作系统的主版本号。|  
 |`servicePackMinor`|可选。 指定 service pack 的操作系统的次版本号。|  
 |`productType`|可选。 标识产品类型值。 有效值为 `server`、`workstation` 和 `domainController`。 例如，对于 Windows 2000 Professional，此属性的值是`workstation`。|  
-|`suiteType`|可选。 标识系统或系统的配置类型上可用的产品套件。 有效的值为`backoffice`， `blade`， `datacenter`， `enterprise`， `home`， `professional`， `smallbusiness`， `smallbusinessRestricted`，和`terminal`。 例如，对于 Windows 2000 Professional，此属性的值是`professional`。|  
+|`suiteType`|可选。 标识系统或系统的配置类型上可用的产品套件。 有效值为 `backoffice`、`blade`、`datacenter`、`enterprise`、`home`、`professional`、`smallbusiness`、`smallbusinessRestricted` 和 `terminal`。 例如，对于 Windows 2000 Professional，此属性的值是`professional`。|  
   
 ### <a name="dependentassembly"></a>dependentAssembly  
  可选。 包含`assemblyIdentity`元素。 `dependentOS`并`dependentAssembly`元素是互斥的： 一个或另一个必须存在`dependency`元素，但不是能同时。  
@@ -132,19 +127,19 @@ ms.locfileid: "49233852"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`dependencyType`|必须的。 指定的依赖关系类型。 有效值为 `preprequisite` 和 `install`。 `install`的一部分安装的程序集[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序。 一个`prerequisite`程序集必须位于全局程序集缓存 (GAC) 之前[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]可以安装应用程序。|  
-|`allowDelayedBinding`|必须的。 指定是否可以在运行时以编程方式加载程序集。|  
-|`group`|可选。 如果`dependencyType`属性设置为`install`，指定该仅按需安装的程序集的命名的组。 有关详细信息，请参阅[演练：在设计器中使用 ClickOnce 部署 API 按需下载程序集](../deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer.md)。<br /><br /> 如果设置为`framework`并`dependencyType`属性设置为`prerequisite`，将该程序集指定为.NET Framework 的一部分。 全局程序集缓存 (GAC) 时不会检查此程序集安装在[!INCLUDE[net_v40_short](../includes/net-v40-short-md.md)]及更高版本。|  
+|`dependencyType`|必需。 指定的依赖关系类型。 有效值为 `preprequisite` 和 `install`。 `install`的一部分安装的程序集[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序。 一个`prerequisite`程序集必须位于全局程序集缓存 (GAC) 之前[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]可以安装应用程序。|  
+|`allowDelayedBinding`|必需。 指定是否可以在运行时以编程方式加载程序集。|  
+|`group`|可选。 如果`dependencyType`属性设置为`install`，指定该仅按需安装的程序集的命名的组。 有关详细信息，请参见[演练：在设计器中使用 ClickOnce 部署 API 按需下载程序集](../deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer.md)。<br /><br /> 如果设置为`framework`并`dependencyType`属性设置为`prerequisite`，将该程序集指定为.NET Framework 的一部分。 全局程序集缓存 (GAC) 时不会检查此程序集安装在[!INCLUDE[net_v40_short](../includes/net-v40-short-md.md)]及更高版本。|  
 |`codeBase`|时需要`dependencyType`属性设置为`install`。 依赖程序集的路径。 可以是绝对路径或相对路径的清单代码基。 此路径必须是为了使程序集清单是有效的 URI 有效。|  
 |`size`|时需要`dependencyType`属性设置为`install`。 依赖程序集，以字节为单位的大小。|  
   
 ### <a name="assemblyidentity"></a>assemblyIdentity  
- 必须的。 此元素是 `dependentAssembly` 元素的子元素，并且包含下列元素。  
+ 必需。 此元素是 `dependentAssembly` 元素的子元素，并且包含下列元素。  
   
 |特性|描述|  
 |---------------|-----------------|  
-|`name`|必须的。 标识应用程序的名称。|  
-|`version`|必须的。 采用以下格式指定该应用程序的版本号： `major.minor.build.revision`|  
+|`name`|必需。 标识应用程序的名称。|  
+|`version`|必需。 采用以下格式指定该应用程序的版本号： `major.minor.build.revision`|  
 |`publicKeyToken`|可选。 指定表示最后 8 个字节的 16 字符的十六进制字符串`SHA-1`的应用程序集签名的公钥的哈希值。 使用对目录进行签名的公钥必须是 2048 位或的详细信息。|  
 |`processorArchitecture`|可选。 指定的处理器。 有效的值是`x86`的 32 位 Windows 和`I64`的 64 位 Windows。|  
 |`language`|可选。 标识的两个部分语言代码，如 EN-US，程序集。|  
@@ -226,7 +221,4 @@ ms.locfileid: "49233852"
   
 ## <a name="see-also"></a>请参阅  
  [ClickOnce 应用程序清单](../deployment/clickonce-application-manifest.md)   
- [\<依赖项 > 元素](../deployment/dependency-element-clickonce-deployment.md)
-
-
-
+ [\<dependency> 元素](../deployment/dependency-element-clickonce-deployment.md)

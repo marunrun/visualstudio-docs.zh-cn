@@ -1,14 +1,9 @@
 ---
 title: 符号类型的词法层次结构 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 912da653-ddfe-45a4-84aa-64281283739a
 caps.latest.revision: 18
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 0f9fa295a7faa85a0b7a7b3268702c4199869754
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: e70b83046c41b13cb51324eb63e81b26a118a81f
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51783254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63403507"
 ---
 # <a name="lexical-hierarchy-of-symbol-types"></a>符号类型的词法层次结构
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -51,13 +46,10 @@ ms.locfileid: "51783254"
 |[UsingNameSpace](../../debugger/debug-interface-access/usingnamespace.md)|指定`namespace`标识符。|  
   
 > [!NOTE]
->  其他符号属性可能可用，具体取决于符号类型。 单个符号主题中列出了这些属性。  
+> 其他符号属性可能可用，具体取决于符号类型。 单个符号主题中列出了这些属性。  
   
 ## <a name="see-also"></a>请参阅  
  [符号类型的类层次结构](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md)   
- [Idiasymbol:: Get_symtag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)   
+ [IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)   
  [符号和符号标记](../../debugger/debug-interface-access/symbols-and-symbol-tags.md)   
  [SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)
-
-
-

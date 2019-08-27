@@ -1,14 +1,9 @@
 ---
 title: “项目设计器”->“签名”页 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - vs.AddNewStrongNameKey
 - ResolveKeySource.KeyFileForSignAssemblyNotImported
@@ -24,18 +19,17 @@ ms.assetid: dab3ba13-2f92-4827-92bd-1be3c35bc48b
 caps.latest.revision: 39
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: e4aa8ee86032c4cadf9cbfa59d3db840102be669
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: ba55795e1f1b5f54b2a863ec0163a796111d9800
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49263922"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65689471"
 ---
 # <a name="signing-page-project-designer"></a>“项目设计器”->“签名”页
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 使用“项目设计器”的“签名”页对应用程序和部署清单及程序集进行签名（强名称签名）。  
   
  请注意，尽管这两项任务都在“签名”页上执行，但应用程序和部署清单的签名过程与程序集的签名过程不同。  
@@ -46,7 +40,7 @@ ms.locfileid: "49263922"
   
 ## <a name="application-and-deployment-manifest-signing"></a>应用程序和部署清单签名  
  “为 ClickOnce 清单签名”复选框  
- 选中此复选框以使用公钥/私钥对对应用程序和部署清单进行签名。 有关如何执行此操作的详细信息，请参阅[如何：对应用程序和部署清单进行签名](../../ide/how-to-sign-application-and-deployment-manifests.md)。  
+ 选中此复选框以使用公钥/私钥对对应用程序和部署清单进行签名。 有关如何执行此操作的详细信息，请参阅[如何：对应用程序和部署清单签名](../../ide/how-to-sign-application-and-deployment-manifests.md)。  
   
  “从存储区选择”按钮  
  可以从当前用户的个人证书存储区中选择现有证书。 可以选择其中一个证书来对应用程序和部署清单进行签名。  
@@ -72,9 +66,9 @@ ms.locfileid: "49263922"
   
 ## <a name="assembly-signing"></a>程序集签名  
  “为程序集签名”复选框  
- 选择此复选框可为程序集签名并创建强名称密钥文件。 有关使用“项目设计器”为程序集签名的详细信息，请参阅[如何：为程序集签名 (Visual Studio)](http://msdn.microsoft.com/en-us/f468a7d3-234c-4353-924d-8e0ae5896564)。  
+ 选择此复选框可为程序集签名并创建强名称密钥文件。 有关使用“项目设计器”为程序集签名的详细信息，请参阅[如何：为程序集签名 (Visual Studio)](https://msdn.microsoft.com/f468a7d3-234c-4353-924d-8e0ae5896564)。  
   
- 此选项使用 [!INCLUDE[winsdklong](../../includes/winsdklong-md.md)] 提供的 Al.exe 工具对程序集签名。 有关 Al.exe 的详细信息，请参阅[如何：使用强名称为程序集签名](http://msdn.microsoft.com/library/2c30799a-a826-46b4-a25d-c584027a6c67)。  
+ 此选项使用 [!INCLUDE[winsdklong](../../includes/winsdklong-md.md)] 提供的 Al.exe 工具对程序集签名。 有关 Al.exe 的详细信息，请参阅[如何：使用强名称为程序集签名](https://msdn.microsoft.com/library/2c30799a-a826-46b4-a25d-c584027a6c67)。  
   
  “选择强名称密钥文件”列表  
  使你可以指定一个新的或现有强名称密钥文件，用来对程序集签名。 选择“\<浏览...>”以选择现有的密钥文件。  
@@ -89,19 +83,16 @@ ms.locfileid: "49263922"
  “仅延迟签名”复选框  
  选中此复选框以启用延迟签名。  
   
- 请注意，延迟签名的项目将不会运行，也不能调试。 但是，可以使用 [Sn.exe（强名称工具）](http://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6)及 `-Vr` 选项，在开发过程中跳过验证。  
+ 请注意，延迟签名的项目将不会运行，也不能调试。 但是，可以使用 [Sn.exe（强名称工具）](https://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6)及 `-Vr` 选项，在开发过程中跳过验证。  
   
 > [!NOTE]
->  对程序集签名时，可能并不总是有权访问私钥。 例如，一个组织可能具有开发人员不是每天都能访问的严密保护密钥对。 公钥可能可用，但私钥的访问权限仅限于少数几个人。 在这种情况下，你可以使用延迟或部分签名来提供公钥，将私钥的添加延迟到转交该程序集后。  
+> 对程序集签名时，可能并不总是有权访问私钥。 例如，一个组织可能具有开发人员不是每天都能访问的严密保护密钥对。 公钥可能可用，但私钥的访问权限仅限于少数几个人。 在这种情况下，你可以使用延迟或部分签名来提供公钥，将私钥的添加延迟到转交该程序集后。  
   
 ## <a name="see-also"></a>请参阅  
  [项目属性引用](../../ide/reference/project-properties-reference.md)   
  [管理程序集签名和清单签名](../../ide/managing-assembly-and-manifest-signing.md)   
- [托管应用程序的强名称签名](http://msdn.microsoft.com/en-us/5fef3490-c519-4363-94fd-8b1ad260dab5)   
+ [托管应用程序的强名称签名](https://msdn.microsoft.com/5fef3490-c519-4363-94fd-8b1ad260dab5)   
  [如何：对应用程序和部署清单进行签名](../../ide/how-to-sign-application-and-deployment-manifests.md)   
- [如何：为程序集签名 (Visual Studio)](http://msdn.microsoft.com/en-us/f468a7d3-234c-4353-924d-8e0ae5896564)   
- [如何：使用强名称为程序集签名](http://msdn.microsoft.com/library/2c30799a-a826-46b4-a25d-c584027a6c67)   
- [具有强名称的程序集](http://msdn.microsoft.com/library/d4a80263-f3e0-4d81-9b61-f0cbeae3797b)
-
-
-
+ [如何：签名程序集 (Visual Studio)](https://msdn.microsoft.com/f468a7d3-234c-4353-924d-8e0ae5896564)   
+ [如何：使用强名称为程序集签名](https://msdn.microsoft.com/library/2c30799a-a826-46b4-a25d-c584027a6c67)   
+ [具有强名称的程序集](https://msdn.microsoft.com/library/d4a80263-f3e0-4d81-9b61-f0cbeae3797b)

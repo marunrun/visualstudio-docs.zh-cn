@@ -1,25 +1,20 @@
 ---
 title: Visual C++ 代码片段 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 ms.assetid: 74e26fd4-e5ca-4611-a816-0a521b4947a0
 caps.latest.revision: 6
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: ed64d9dde53b31cfe5f52ce708e4ee96d91fe8ff
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 884ec6cc25fd2ef415dc71055361344d79021d5e
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49861353"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65696378"
 ---
 # <a name="visual-c-code-snippets"></a>Visual C++ 代码片段
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -143,7 +138,7 @@ for (int i = length - 1; i >= 0; i--)
 }  
 ```  
   
- **rfor** 代码片段具有[基于范围](http://msdn.microsoft.com/library/5750ba1d-ba48-4236-a923-e32de8345c2d)的 for 循环（链接）：  
+ **rfor** 代码片段具有[基于范围](https://msdn.microsoft.com/library/5750ba1d-ba48-4236-a923-e32de8345c2d)的 for 循环（链接）：  
   
 ```cpp  
 for (auto& i : v)  
@@ -179,6 +174,3 @@ class SomeClass {
 {  
   
 ```
-
-
-

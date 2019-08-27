@@ -1,25 +1,20 @@
 ---
 title: GPU 使用情况 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 957fed3c-4ded-4e05-87c6-ccc33de65349
 caps.latest.revision: 7
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 3068f614275c14d022ed4d74fa6a10ffe396f68b
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: b7dee579f726a1edfc81e1f3e1ec62bf7d8beba4
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51817498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63437959"
 ---
 # <a name="gpu-usage"></a>GPU 使用情况
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +31,7 @@ ms.locfileid: "51817498"
 - 支持必要计时规范的 GPU 和驱动程序。  
   
   > [!NOTE]
-  >  有关支持的硬件和驱动程序的详细信息，请参阅本文档末尾的[硬件和驱动程序支持](#hwsupport)。  
+  > 有关支持的硬件和驱动程序的详细信息，请参阅本文档末尾的[硬件和驱动程序支持](#hwsupport)。  
   
   有关图形诊断要求的详细信息，请参阅[入门](../debugger/getting-started-with-visual-studio-graphics-diagnostics.md)。  
   
@@ -45,14 +40,14 @@ ms.locfileid: "51817498"
   
 #### <a name="to-start-the-gpu-usage-tool"></a>启动 GPU 使用情况工具：  
   
-1. 在主菜单上，选择“调试”，然后选择“性能和诊断”（键盘：按 Alt+F2）。  
+1. 在菜单按钮中，选择“调试”，然后选择“性能和诊断”（键盘：按 Alt+F2）。  
   
 2. 在“性能和诊断”中心，选中“GPU 使用情况”旁的复选框。 （可选）选中你希望使用的其他工具旁的复选框。 你可以同时运行几个性能和诊断工具，以便对应用的性能有一个更全面的了解。  
   
     ![选择要使用的诊断工具。](../debugger/media/gfx-diag-diagsession-tools.png "gfx_diag_diagsession_tools")  
   
    > [!NOTE]
-   >  并非所有性能和诊断工具都可以同时使用。  
+   > 并非所有性能和诊断工具都可以同时使用。  
   
 3. 选择“性能和诊断”中心底部的蓝色“启动”按钮，以便在所选工具下运行应用。  
   
@@ -99,7 +94,7 @@ ms.locfileid: "51817498"
 |--------------------|-----------------|  
 |**Process**|你感兴趣的进程的名称。 诊断会话期间使用 GPU 的所有进程都包括在此下拉列表中。 与此下拉列表中的进程相关联的颜色是以下时间线中线程活动的颜色。|  
 |**线程**|你感兴趣的线程 ID。 在多线程应用中，这有助于隔离属于你感兴趣的进程的特定线程。 与所选线程关联的事件在每条时间线中突出显示。|  
-|**显示**|显示其刷新率的显示器编号。**注意：** 可以配置某些驱动程序，以便将多个物理显示器显示为单个较大的虚拟显示器。 即使计算机连接了多个显示器，也可能仅列出一个。|  
+|**显示**|显示其刷新率的显示器编号**注意：** 可以配置某些驱动程序，以便将多个物理显示器显示为单个较大的虚拟显示器。 即使计算机连接了多个显示器，也可能仅列出一个。|  
 |**筛选器**|你感兴趣的关键字。 报告的下半部分将仅包括与关键字完全匹配或部分匹配的事件。 你可以指定多个关键字并用分号 (;) 隔开。|  
 |**层次结构排序**|指示是保留还是忽略事件层次结构（通过用户标记定义）的复选框。|  
   
@@ -115,27 +110,27 @@ ms.locfileid: "51817498"
 |**线程 ID**|事件源于的线程 ID。|  
   
 > [!IMPORTANT]
->  Windows 8.1 是事件归属所必需的。 此外，如果你的 GPU 或驱动程序不支持必要的检测功能，则所有事件将都显示为“无归属”。 如果遇到此问题，请确保更新 GPU 驱动程序，然后重试。 有关详细信息，请参阅下面的[硬件和驱动程序支持](#hwsupport)。  
+> Windows 8.1 是事件归属所必需的。 此外，如果你的 GPU 或驱动程序不支持必要的检测功能，则所有事件将都显示为“无归属”。 如果遇到此问题，请确保更新 GPU 驱动程序，然后重试。 有关详细信息，请参阅下面的[硬件和驱动程序支持](#hwsupport)。  
   
 ## <a name="gpu-usage-settings"></a>GPU 使用情况设置  
  你可以将 GPU 使用情况工具配置为推迟收集分析信息，而不在应用启动后立即开始收集信息。 由于分析信息可能非常大，因此当你知道应用性能暂时不会降速时，这将很有用。  
   
 #### <a name="to-postpone-profiling-from-the-start-of-the-app"></a>从应用的开头推迟分析：  
   
-1.  在主菜单上，选择“调试”，然后选择“性能和诊断”（键盘：按 Alt+F2）。  
+1. 在菜单按钮中，选择“调试”，然后选择“性能和诊断”（键盘：按 Alt+F2）。  
   
-2.  在“性能和诊断”中心，按照“GPU 使用情况”旁的“设置”链接进行操作。  
+2. 在“性能和诊断”中心，按照“GPU 使用情况”旁的“设置”链接进行操作。  
   
-3.  在“常规”属性页上的“GPU 分析配置”下，取消选中“在应用启动时开始分析”复选框以推迟分析。  
+3. 在“常规”属性页上的“GPU 分析配置”下，取消选中“在应用启动时开始分析”复选框以推迟分析。  
   
      ![配置 GPU 使用情况收集何时开始](../debugger/media/gfx-diag-gpu-usage-config.png "gfx_diag_gpu_usage_config")  
   
 > [!IMPORTANT]
->  Direct3D 12 当前不支持推迟分析。  
+> Direct3D 12 当前不支持推迟分析。  
   
  如果使用此设置推迟分析信息的收集，当你在 GPU 使用情况工具下运行应用时，GPU 使用情况工具窗口底部的一个附加链接将变为可用。 若要开始收集分析信息，请选择“开始收集更多详细 GPU 使用情况数据”消息中的“启动”链接。  
   
-##  <a name="hwsupport"></a>硬件和驱动程序支持  
+## <a name="hwsupport"></a>硬件和驱动程序支持  
  支持以下 GPU 硬件和驱动程序：  
   
 |Vendor|GPU 说明|要求的驱动程序版本|  
@@ -148,13 +143,10 @@ ms.locfileid: "51817498"
   
 ## <a name="see-also"></a>请参阅  
   
--   [使用 DirectX 工具解决游戏中的复杂图形问题（视频）](http://channel9.msdn.com/Events/GDC/GDC-2015/Solve-the-Tough-Graphics-Problems-with-your-Game-Using-DirectX-Tools)  
+- [使用 DirectX 工具解决游戏中的复杂图形问题（视频）](http://channel9.msdn.com/Events/GDC/GDC-2015/Solve-the-Tough-Graphics-Problems-with-your-Game-Using-DirectX-Tools)  
   
--   [Visual Studio 中的 GPU 使用情况工具（视频）](http://channel9.msdn.com/Events/Visual-Studio/Connect-event-2014/715)  
+- [Visual Studio 中的 GPU 使用情况工具（视频）](http://channel9.msdn.com/Events/Visual-Studio/Connect-event-2014/715)  
   
--   [Visual Studio 2013 Update 4 CTP1 中的 GPU 使用情况工具（博客）](http://blogs.msdn.com/b/vcblog/archive/2014/09/05/gpu-usage-tool-in-visual-studio-2013-update-4-ctp1.aspx)  
+- [Visual Studio 2013 Update 4 CTP1 中的 GPU 使用情况工具（博客）](http://blogs.msdn.com/b/vcblog/archive/2014/09/05/gpu-usage-tool-in-visual-studio-2013-update-4-ctp1.aspx)  
   
--   [Visual Studio 中 DirectX 的 GPU 使用情况](http://blogs.msdn.com/b/ianhu/archive/2014/12/16/gpu-usage-for-directx-in-visual-studio.aspx)
-
-
-
+- [Visual Studio 中 DirectX 的 GPU 使用情况](http://blogs.msdn.com/b/ianhu/archive/2014/12/16/gpu-usage-for-directx-in-visual-studio.aspx)

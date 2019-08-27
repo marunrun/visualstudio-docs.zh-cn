@@ -1,14 +1,9 @@
 ---
-title: CA2210： 程序集应具有有效的强名称 |Microsoft Docs
-ms.custom: ''
+title: CA2210:程序集应具有有效的强名称 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - AssembliesShouldHaveValidStrongNames
 - CA2210
@@ -20,14 +15,14 @@ caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 1551cccb11fc33a21503e7030cfd671c953ee17d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: f94183c6051ed0c2603bbfe35484fabb83a2160f
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49865812"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65697990"
 ---
-# <a name="ca2210-assemblies-should-have-valid-strong-names"></a>CA2210：程序集应具有有效的强名称
+# <a name="ca2210-assemblies-should-have-valid-strong-names"></a>CA2210:程序集应具有有效的强名称
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -72,7 +67,7 @@ ms.locfileid: "49865812"
 
 - 有关[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]v1.0 或 v1.1，使用<xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName>或<xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName>属性。
 
-- 有关[!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)]，可以使用两种`/keyfile`或`/keycontainer`编译器选项[/KEYFILE （指定密钥或密钥对以便为程序集签名）](http://msdn.microsoft.com/library/9b71f8c0-541c-4fe5-a0c7-9364f42ecb06)或[/KEYCONTAINER （指定密钥容器以便为程序集签名）](http://msdn.microsoft.com/library/94882d12-b77a-49c7-96d0-18a31aee001e) c + + 中的链接器选项)。
+- 有关[!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)]，可以使用两种`/keyfile`或`/keycontainer`编译器选项[/KEYFILE （指定密钥或密钥对以便为程序集签名）](https://msdn.microsoft.com/library/9b71f8c0-541c-4fe5-a0c7-9364f42ecb06)或[/KEYCONTAINER （指定密钥容器以便为程序集签名）](https://msdn.microsoft.com/library/94882d12-b77a-49c7-96d0-18a31aee001e)中的链接器选项C++)。
 
   **若要对 Visual Studio 中的强名称程序集签名**
 
@@ -94,14 +89,11 @@ ms.locfileid: "49865812"
 
    **若要对使用 Visual Studio 外部强名称程序集签名**
 
--   使用提供的强名称工具 (Sn.exe) [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK。 有关详细信息，请参阅 [Sn.exe （强名称工具）](http://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6)。
+- 使用提供的强名称工具 (Sn.exe) [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK。 有关详细信息，请参阅 [Sn.exe （强名称工具）](https://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6)。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  如果在环境中使用该程序集，则仅禁止显示此规则的警告的篡改内容并不是问题。
 
 ## <a name="see-also"></a>请参阅
  <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName> <xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName>
- [如何： 使用强名称为程序集签名](http://msdn.microsoft.com/library/2c30799a-a826-46b4-a25d-c584027a6c67) [Sn.exe （强名称工具）](http://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6)
-
-
-
+ [如何：使用强名称为程序集签名](https://msdn.microsoft.com/library/2c30799a-a826-46b4-a25d-c584027a6c67) [Sn.exe （强名称工具）](https://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6)

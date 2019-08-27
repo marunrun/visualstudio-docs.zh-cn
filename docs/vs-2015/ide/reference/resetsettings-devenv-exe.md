@@ -1,14 +1,9 @@
 ---
 title: -ResetSettings (devenv.exe) | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 helpviewer_keywords:
 - Devenv, /ResetSettings switch
 - ResetSettings switch
@@ -17,18 +12,17 @@ ms.assetid: 1d41021c-6f58-4bd5-b122-d1c995812192
 caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 276205ae2aab3c38ceb3d4f1419e0bac13ae626c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 1b35026140b424da0f7fa71cb9e70b72c3dba243
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49273489"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65689649"
 ---
 # <a name="resetsettings-devenvexe"></a>/ResetSettings (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 还原 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 默认设置并自动启动 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE。 可选择将这些设置重置为指定的 .vssettings 文件。  
   
  默认设置由首次启动 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 时选择的配置文件决定。  
@@ -56,8 +50,5 @@ Devenv.exe /ResetSettings "C:\My Files\MySettings.vssettings"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)   
+ [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)   
  [Devenv 命令行开关](../../ide/reference/devenv-command-line-switches.md)
-
-
-

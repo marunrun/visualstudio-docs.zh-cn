@@ -12,7 +12,7 @@
           items: null
         - name: Windows 脚本接口
           tocHref: /scripting/winscript/
-          topicHref: /scripting/winscript/windows-scripting-interfaces
+          topicHref: /scripting/winscript/windows-script-interfaces
           items:
             - name: 参考
               tocHref: /scripting/winscript/reference/

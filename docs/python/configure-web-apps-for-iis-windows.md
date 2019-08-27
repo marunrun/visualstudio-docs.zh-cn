@@ -2,22 +2,21 @@
 title: 为 Python Web 应用配置 IIS
 description: 如何将 Python Web 应用配置为使用 Windows 虚拟机中的 Internet Information Services 运行。
 ms.date: 12/06/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
-author: kraigb
-ms.author: kraigb
-manager: douge
+author: JoshuaPartlow
+ms.author: joshuapa
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 4d05e4022ada575873a85279d81b094b08160b6d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 551cff18849f0e8ad9fcd6f2c1e08561291b177f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53843354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62957367"
 ---
 # <a name="configure-python-web-apps-for-iis"></a>为 Python Web 应用配置 IIS
 
@@ -38,7 +37,7 @@ ms.locfileid: "53843354"
 
 ## <a name="set-webconfig-to-point-to-the-python-interpreter"></a>将 web.config 设置为指向 Python 解释器
 
-应用的 web.config 文件指示 Windows 上运行的 IIS (7+) Web 服务器，应如何通过 FastCGI 或 HttpPlatform 处理 Python 请求。 使用 Visual Studio 2017 时，必须手动修改 web.config。 如后续部分中所述，Visual Studio 2015 自动修改此文件
+应用的 web.config 文件指示 Windows 上运行的 IIS (7+) Web 服务器，应如何通过 HttpPlatform（推荐）或 FastCGI 处理 Python 请求。 Visual Studio 2015 及更早版本会自动进行这些修改。 使用 Visual Studio 2017 及更高版本时，必须手动修改 web.config。
 
 ### <a name="configure-the-httpplatform-handler"></a>配置 HttpPlatform 处理程序
 

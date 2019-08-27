@@ -1,14 +1,9 @@
 ---
 title: 无效的替换器参数 |Microsoft Docs
-ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-client-threshold
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- javascript
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-windows
+ms.technology: vs-javascript
+ms.topic: reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5035
 dev_langs:
@@ -20,19 +15,19 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0f144e733bf115cc98bf61b23a2ed3e4e3cda1e0
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: 46e01a4e6bb989fad2da6f979c79b7aba13df63a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54346210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007309"
 ---
-# <a name="invalid-replacer-argument"></a>无效的替换器自变量
+# <a name="invalid-replacer-argument"></a>无效的替换器参数
 尝试调用`JSON.stringify`不是有效的参数。 `replacer`参数必须为一个函数或数组。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
--   更改`replacer`函数或数组参数。  
+- 更改`replacer`函数或数组参数。  
   
 ## <a name="example"></a>示例  
  在此示例代码会导致运行时错误，因为`memberfilter`是而不是函数或数组的对象。  

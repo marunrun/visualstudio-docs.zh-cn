@@ -1,25 +1,20 @@
 ---
-title: 如何：创建和修改 MIP 级别 | Microsoft Docs
-ms.custom: ''
+title: 如何：创建和修改 MIP 级别 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: f64d4369-2307-4175-a39a-2e45506f7fa1
 caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 9578fd2bdafeaf8c9a3e9fcd3dd5523b4d8cc7f2
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 1c1d0babfec4a2fd56e2ed40c5f2c75329ccb6d3
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49184283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63434463"
 ---
 # <a name="how-to-create-and-modify-mip-levels"></a>如何：创建和修改 MIP 级别
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,9 +26,9 @@ ms.locfileid: "49184283"
   
 #### <a name="to-generate-mip-levels"></a>生成 MIP 级别  
   
-1.  如[如何：创建基本纹理](../designers/how-to-create-a-basic-texture.md)中所述，从基本纹理开始。 为了获得最佳结果，请指定宽度和高度为 2 的幂（例如，256、512、1024 等）的纹理。  
+1. 如[如何：创建基本纹理](../designers/how-to-create-a-basic-texture.md)。 为了获得最佳结果，请指定宽度和高度为 2 的幂（例如，256、512、1024 等）的纹理。  
   
-2.  生成 MIP 级别。 在“图像编辑器模式”工具栏上，依次选择“高级”、“工具”和“生成 Mip”。  
+2. 生成 MIP 级别。 在“图像编辑器模式”工具栏上，依次选择“高级”、“工具”和“生成 Mip”。  
   
      请注意，“转到下一 Mip 级别”和“转到上一 Mip 级别”按钮现在将出现在“图像编辑器模式”工具栏上。 如果显示“属性”窗口，则还可以注意到，只读属性“Mip 级别”和“Mip 级别计数”现在将出现在图像属性中。  
   
@@ -42,15 +37,12 @@ ms.locfileid: "49184283"
   
 #### <a name="to-modify-an-individual-mip-level"></a>修改单个 MIP 级别  
   
-1.  选择想要修改的 MIP 级别。 在“图像编辑器模式”工具栏上，使用“转到下一 MIP 级别”和“转到上一 MIP 级别”按钮在 MIP 级别之间进行选择。  
+1. 选择想要修改的 MIP 级别。 在“图像编辑器模式”工具栏上，使用“转到下一 MIP 级别”和“转到上一 MIP 级别”按钮在 MIP 级别之间进行选择。  
   
-2.  选择想要修改的 MIP 级别后，可以使用绘图工具对其进行修改，而不会更改其他 MIP 级别的内容。 “图像编辑器”工具栏上提供了绘图工具。 选择工具后，可以在“属性”窗口中更改其属性。 有关绘图工具及其属性的信息，请参阅[图像编辑器](../designers/image-editor.md)。  
+2. 选择想要修改的 MIP 级别后，可以使用绘图工具对其进行修改，而不会更改其他 MIP 级别的内容。 “图像编辑器”工具栏上提供了绘图工具。 选择工具后，可以在“属性”窗口中更改其属性。 有关绘图工具及其属性的信息，请参阅[图像编辑器](../designers/image-editor.md)。  
   
 > [!NOTE]
->  如果无需修改单个 MIP 级别的内容（可能会执行此操作以实现某些效果），建议在生成时从源纹理生成 mipmap。 这有助于确保 MIP 级别与源纹理保持同步，因为对某一 MIP 级别的修改不会自动传播到其他级别。 有关如何在生成时生成 mipmap 的详细信息，请参阅[如何：导出包含 Mipmap 的纹理](../designers/how-to-export-a-texture-that-contains-mipmaps.md)。  
+> 如果无需修改单个 MIP 级别的内容（可能会执行此操作以实现某些效果），建议在生成时从源纹理生成 mipmap。 这有助于确保 MIP 级别与源纹理保持同步，因为对某一 MIP 级别的修改不会自动传播到其他级别。 有关如何在生成时生成 mipmap 的详细信息，请参阅[如何：导出包含 Mipmap 的纹理](../designers/how-to-export-a-texture-that-contains-mipmaps.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [如何：创建基本纹理](../designers/how-to-create-a-basic-texture.md)
-
-
-

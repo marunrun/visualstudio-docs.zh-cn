@@ -1,14 +1,9 @@
 ---
 title: 调用层次结构 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.CallHierarchy
 helpviewer_keywords:
@@ -17,18 +12,17 @@ ms.assetid: c55bda01-d7de-4823-8f9a-1bcc37dbb74a
 caps.latest.revision: 45
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 86cf4e12f412e6448f4a4b7c38af8268f10d9c56
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 41c7aa12e4adf2a757689670cdfed394f2a534c6
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49851100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63433700"
 ---
 # <a name="call-hierarchy"></a>调用层次结构
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 调用层次结构通过显示选定方法、属性或构造函数的所有调用方及被调用方，使用户可以在代码间导航。 这有助于更好地理解代码的流动方式，以及评估代码更改的效果。 可以检查多个级别的代码，以查看方法调用的复杂链条以及代码的其他入口点，从而找到所有可能的执行路径。  
   
  与调试器显示的调用堆栈不同，调用层次结构可在设计时使用。  
@@ -61,7 +55,7 @@ ms.locfileid: "49851100"
 - “代码定义”窗口（如果打开）显示选定成员的代码。 C# 和 C++ 提供此窗口。 有关此窗口的详细信息，请参阅[查看代码的结构](../../ide/viewing-the-structure-of-code.md)。  
   
 > [!NOTE]
->  调用层次结构不会查找方法组引用，这些引用包含将方法添加为事件处理程序或将方法分配给委托的位置。 若要查找对方法的所有引用，可以使用“查找所有引用”命令。  
+> 调用层次结构不会查找方法组引用，这些引用包含将方法添加为事件处理程序或将方法分配给委托的位置。 若要查找对方法的所有引用，可以使用“查找所有引用”命令。  
   
 ## <a name="shortcut-menu-items"></a>快捷菜单项  
  下表描述了在树状视图窗格中右键单击某个节点时，可以使用的多个快捷菜单选项。  
@@ -74,6 +68,3 @@ ms.locfileid: "49851100"
 |**查找所有引用**|在选定节点上运行“查找所有引用”命令。 这会在项目中查找所有引用某个类或成员的代码行。<br /><br /> 还可以使用 Shift+F12 在选定节点上运行“查找所有引用”命令。|  
 |**复制**|复制选定节点（但不包含其子节点）的内容。|  
 |**刷新**|折叠选定节点，重新展开它后便可显示最新的信息。|
-
-
-

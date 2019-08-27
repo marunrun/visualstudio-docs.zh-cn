@@ -1,7 +1,6 @@
 ---
 title: 创建和配置数据集
 ms.date: 11/21/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - typed datasets, creating
@@ -9,17 +8,17 @@ helpviewer_keywords:
 - datasets, configuring
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3cde629114c56f80f0b70e7ef6641bffa7551577
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: 41a7a699506853d6891c7d7b66fef4082814c06a
+ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53829230"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65460621"
 ---
-# <a name="create-and-configure-datasets-in-visual-studio"></a>在 Visual Studio 中创建和配置数据集
+# <a name="how-to-create-and-configure-datasets-in-visual-studio"></a>如何：在 Visual Studio 中创建和配置数据集
 
 数据集是一组对象在内存中存储数据库中的数据和支持更改跟踪来使创建、 读取、 更新和删除 (CRUD) 操作，对该数据而无需始终连接到数据库。 数据集设计用于简单*对数据的窗体*业务应用程序。 对于新应用程序，请考虑使用实体框架在内存中的数据存储和建模。 若要使用的数据集，应具有数据库概念的基础知识。
 
@@ -71,7 +70,7 @@ ms.locfileid: "53829230"
 
 1. 单击中的数据集节点**解决方案资源管理器**以便**数据集设计器**成为焦点。
 
-2. 单击**数据源**Visual Studio 中或类型的左边距中的选项卡**数据源**中**快速启动**框。
+2. 单击**数据源**Visual Studio 中或类型的左边距中的选项卡**数据源**在搜索框中。
 
 3. 右键单击数据集节点，然后选择**使用向导配置数据源**。
 

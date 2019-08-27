@@ -6,16 +6,15 @@ helpviewer_keywords:
 - Domain-Specific Language, definition file
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: c0f69d660a1693e42662a82a2a19ce790725fb43
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c43ed1fa156c77edc89b8d40185cc7436cce5d7a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53869250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63001482"
 ---
 # <a name="the-dsldefinitiondsl-file"></a>DslDefinition.dsl 文件
 
@@ -71,7 +70,7 @@ ms.locfileid: "53869250"
 
 本部分将定义一个设计器 （编辑器），它结合了**工具箱**，验证设置、 关系图和序列化方案。 “设计器”部分还将定义模型的根类，此根类通常也是关系图的根类。
 
-### <a name="explorer"></a>Explorer
+### <a name="explorer"></a>资源管理器
 
 本部分介绍**DSL 资源管理器**行为 （在 XmlSerializationBehavior 部分中定义）。
 
@@ -79,7 +78,7 @@ ms.locfileid: "53869250"
 
 在整个 DslDefinition.dsl 文件中，你可以使用名字对象对特定项进行交叉引用。 例如，每个关系定义都包含一个源子节和目标字节。 每个子节都包含可与该关系建立链接的对象类的名字对象：
 
-```
+```xml
 <DomainRelationship ...        Name="LibraryHasMembers" Namespace="ExampleNamespace" >    <Source>      <DomainRole ...>
        <RolePlayer>
          <DomainClassMoniker Name="Library" />
@@ -90,7 +89,7 @@ ms.locfileid: "53869250"
 
 通常，引用项的命名空间（在本例中为 `Library` 域类）与进行引用的项的命名空间相同（在本例中为 LibraryHasMembers 域关系）。 在这些情况下，名字对象必须仅提供类的名称。 否则，应使用完整形式 /Namespace/Name：
 
-```
+```xml
 <DomainClassMoniker Name="/ExampleNameSpace/Library" />
 ```
 
@@ -108,7 +107,7 @@ ms.locfileid: "53869250"
 
 每个外部类型定义都仅由名称和命名空间组成，例如 String 和 System：
 
-```
+```xml
 <ExternalType Name="String" Namespace="System" />
 ```
 
@@ -120,7 +119,7 @@ ms.locfileid: "53869250"
 
 典型的枚举规范与以下示例类似：
 
-```
+```xml
 <DomainEnumeration IsFlags="true" Name="PageSort"          Namespace="Fabrikam.Wizard">
   <Literals>
     <EnumerationLiteral Name="Start" Value="1"/>
@@ -137,7 +136,7 @@ ms.locfileid: "53869250"
 
 每个类都具有一组属性，并且可能具有一个基类。 在组件图示例中，`NamedElement` 是一个具有 `Name` 属性的抽象类，其类型为字符串：
 
-```
+```xml
 <DomainClass Id="ee3161ca-2818-42c8-b522-88f50fc72de8"  Name="NamedElement" Namespace="Fabrikam.CmptDsl5"      DisplayName="Named Element"  InheritanceModifier="Abstract">
   <Properties>
     <DomainProperty Id="ef553cf0-33b5-4e34-a30b-cfcfd86f2261"   Name="Name" DisplayName="Name"  DefaultValue="" Category="" IsElementName="true">
@@ -151,7 +150,7 @@ ms.locfileid: "53869250"
 
 `NamedElement` 是其他几个类（如 `Component`）的基类；对于该基类，除了继承自 `Name` 的 `NamedElement` 属性外，它还具有自己的属性。 BaseClass 子节点包含名字对象引用。 由于引用的类位于同一命名空间中，因此名字对象中仅需要其名称：
 
-```
+```xml
 <DomainClass Name="Component" Namespace="Fabrikam.CmptDsl5"              DisplayName="Component">
   <BaseClass>
     <DomainClassMoniker Name="NamedElement" />
@@ -167,27 +166,27 @@ ms.locfileid: "53869250"
 
 每个域类（包括关系、形状、连接符和关系图）都可能具有以下特性和子节点：
 
--   **Id.** 此属性是一个 GUID。 如果文件中未提供值，则域特定语言设计器将创建一个值。 （在本文档的插图中，通常忽略此特性以节省空间。）
+- **Id.** 此属性是一个 GUID。 如果文件中未提供值，则域特定语言设计器将创建一个值。 （在本文档的插图中，通常忽略此特性以节省空间。）
 
--   **名称和 Namespace。** 这些属性生成的代码中指定的名称和命名空间的类。 在域特定语言中它们必须都是唯一的。
+- **名称和 Namespace。** 这些属性生成的代码中指定的名称和命名空间的类。 在域特定语言中它们必须都是唯一的。
 
--   **InheritanceModifier。** 此属性是"抽象"、"密封"或 none。
+- **InheritanceModifier。** 此属性是"抽象"、"密封"或 none。
 
--   **显示名称。** 此属性是名称，将出现在**属性**窗口。 DisplayName 特性可以包含空格和其他标点。
+- **显示名称。** 此属性是名称，将出现在**属性**窗口。 DisplayName 特性可以包含空格和其他标点。
 
--   **GeneratesDoubleDerived.** 如果此属性设置为 true，将生成两个类，且其中一个是另一个的子类。 所有生成的方法都位于基类中，而构造函数位于子类中。 通过设置此特性，你可以在自定义代码中重写任何生成的方法。
+- **GeneratesDoubleDerived.** 如果此属性设置为 true，将生成两个类，且其中一个是另一个的子类。 所有生成的方法都位于基类中，而构造函数位于子类中。 通过设置此特性，你可以在自定义代码中重写任何生成的方法。
 
--   **HasCustomConstructor**。 如果将此特性设置为 true，则从生成的代码中忽略构造函数，以便你可以编写自己的版本。
+- **HasCustomConstructor**。 如果将此特性设置为 true，则从生成的代码中忽略构造函数，以便你可以编写自己的版本。
 
--   **属性**。 此特性包含生成的类的 CLR Attributes。
+- **属性**。 此特性包含生成的类的 CLR Attributes。
 
--   **BaseClass**。 如果指定基类，它必须属于同一类型。 例如，域类必须具有另一个域类作为其基类，而隔离舱形状也必须具有一个隔离舱形状。 如果没有指定基类，则生成的代码中的类派生自标准框架类。 例如，域类派生自 `ModelElement`。
+- **BaseClass**。 如果指定基类，它必须属于同一类型。 例如，域类必须具有另一个域类作为其基类，而隔离舱形状也必须具有一个隔离舱形状。 如果没有指定基类，则生成的代码中的类派生自标准框架类。 例如，域类派生自 `ModelElement`。
 
--   **属性**。 此特性包含在事务控制下维护的且在保存模型时保留的属性。
+- **属性**。 此特性包含在事务控制下维护的且在保存模型时保留的属性。
 
--   **ElementMergeDirectives**。 每个元素合并指令都可以控制将其他类的不同实例添加到父类的实例的方式。 你可以在本主题后面找到有关元素合并指令的详细信息。
+- **ElementMergeDirectives**。 每个元素合并指令都可以控制将其他类的不同实例添加到父类的实例的方式。 你可以在本主题后面找到有关元素合并指令的详细信息。
 
--   为在 `Classes` 部分中列出的每个域类生成 C# 类。 在 Dsl\GeneratedCode\DomainClasses.cs 中生成 C# 类。
+- 为在 `Classes` 部分中列出的每个域类生成 C# 类。 在 Dsl\GeneratedCode\DomainClasses.cs 中生成 C# 类。
 
 ### <a name="properties"></a>属性
 
@@ -195,7 +194,7 @@ ms.locfileid: "53869250"
 
 该类型必须引用在 `Types` 部分中列出的某个类型。 通常，名字对象必须包含命名空间。
 
-```
+```xml
 <DomainProperty Name="Name" DisplayName="Name"  DefaultValue="" Category="" IsElementName="true">
   <Type>
     <ExternalTypeMoniker Name="/System/String" />
@@ -205,17 +204,17 @@ ms.locfileid: "53869250"
 
 每个域属性还可以具有以下特性：
 
--   **IsBrowsable**。 此属性确定该属性是否显示在**属性**窗口，当用户单击父类的对象。
+- **IsBrowsable**。 此属性确定该属性是否显示在**属性**窗口，当用户单击父类的对象。
 
--   **IsUIReadOnly**。 此属性确定用户是否可以更改中的属性**属性**窗口或通过在其中显示该属性的修饰器。
+- **IsUIReadOnly**。 此属性确定用户是否可以更改中的属性**属性**窗口或通过在其中显示该属性的修饰器。
 
--   **类型**。 可以将此特性设置为 Normal、Calculated 或 CustomStorage。 如果将此特性设置为 Calculated，则你必须提供可确定该值的自定义代码，并且该属性将是只读的。 如果将此特性设置为 CustomStorage，则你必须提供可获取并设置值的代码。
+- **类型**。 可以将此特性设置为 Normal、Calculated 或 CustomStorage。 如果将此特性设置为 Calculated，则你必须提供可确定该值的自定义代码，并且该属性将是只读的。 如果将此特性设置为 CustomStorage，则你必须提供可获取并设置值的代码。
 
--   **IsElementName**。 如果将此特性设置为 true，则其值会在创建父类的实例时自动设置为唯一值。 仅针对每个类中的一个属性（必须具有字符串类型），将此特性设置为 true。 在组件图示例中，`Name` 中的 `NamedElement` 属性已将 `IsElementName` 设置为 true。 只要用户创建 `Component` 元素（派生自 `NamedElement`），该名称就会自动初始化为类似于“Component6”的名称。
+- **IsElementName**。 如果将此特性设置为 true，则其值会在创建父类的实例时自动设置为唯一值。 仅针对每个类中的一个属性（必须具有字符串类型），将此特性设置为 true。 在组件图示例中，`Name` 中的 `NamedElement` 属性已将 `IsElementName` 设置为 true。 只要用户创建 `Component` 元素（派生自 `NamedElement`），该名称就会自动初始化为类似于“Component6”的名称。
 
--   `DefaultValue`。 如果已指定此特性，则指定的值将分配给此类的新实例的特性。 如果设置 `IsElementName`，则 DefaultValue 特性将指定新字符串的初始部分。
+- `DefaultValue`。 如果已指定此特性，则指定的值将分配给此类的新实例的特性。 如果设置 `IsElementName`，则 DefaultValue 特性将指定新字符串的初始部分。
 
--   **类别**是在显示该属性将在其下的标头**属性**窗口。
+- **类别**是在显示该属性将在其下的标头**属性**窗口。
 
 ## <a name="relationships"></a>关系
 
@@ -227,11 +226,11 @@ ms.locfileid: "53869250"
 
 每个关系都包含具有以下特性的源和目标角色：
 
--   `RolePlayer`属性引用了链接实例的域类：Outport 对应于源，inport 对应于目标。
+- `RolePlayer`属性引用了链接实例的域类：Outport 对应于源，inport 对应于目标。
 
--   `Multiplicity` 特性具有四个可能值（ZeroMany、ZeroOne、One 和 OneMany）。 此特性是指可与一个角色扮演者关联的关系的链接数。
+- `Multiplicity` 特性具有四个可能值（ZeroMany、ZeroOne、One 和 OneMany）。 此特性是指可与一个角色扮演者关联的关系的链接数。
 
--   `PropertyName` 特性将指定在角色扮演类中用于访问另一端的对象的名称。 在模板或自定义代码中使用此名称以遍历关系。 例如，将源角色的 `PropertyName` 特性设置为 `Targets`。 因此，以下代码将适用：
+- `PropertyName` 特性将指定在角色扮演类中用于访问另一端的对象的名称。 在模板或自定义代码中使用此名称以遍历关系。 例如，将源角色的 `PropertyName` 特性设置为 `Targets`。 因此，以下代码将适用：
 
     ```
     OutPort op = ...; foreach (InPort ip in op.Targets) ...
@@ -245,15 +244,15 @@ ms.locfileid: "53869250"
     ComponentPort p = ...; Component c = p.Component; if (c != null) ...
     ```
 
--   该角色的 `Name` 为在关系类中用于引用链接端的名称。 根据约定，角色名称应始终采用单数形式，因为每个链接在每一端上都仅具有一个实例。 以下代码将适用：
+- 该角色的 `Name` 为在关系类中用于引用链接端的名称。 根据约定，角色名称应始终采用单数形式，因为每个链接在每一端上都仅具有一个实例。 以下代码将适用：
 
-    ```
+    ``` 
     Connection connectionLink = ...; OutPort op = connectionLink.Source;
     ```
 
--   默认情况下，将 `IsPropertyGenerator` 特性设置为 true。 如果将其设置为 false，则不会在角色扮演者类上创建任何属性。 （例如，在这种情况下，`op.Targets` 将不适用）。 但是，如果自定义代码显式使用此关系，则仍可以使用自定义代码来遍历关系或获取对链接本身的访问权限：
+- 默认情况下，将 `IsPropertyGenerator` 特性设置为 true。 如果将其设置为 false，则不会在角色扮演者类上创建任何属性。 （例如，在这种情况下，`op.Targets` 将不适用）。 但是，如果自定义代码显式使用此关系，则仍可以使用自定义代码来遍历关系或获取对链接本身的访问权限：
 
-    ```
+    ``` 
     OutPort op = ...; foreach (InPort ip in Connection.GetTargets(op)) ...
     foreach (Connection link in Connection.GetLinksToTargets(op)) ...
     ```
@@ -262,9 +261,9 @@ ms.locfileid: "53869250"
 
 除适用于所有类的特性和子节点外，每个关系还具有以下特性：
 
--   **IsEmbedding**。 此布尔值特性指定该关系是否为嵌入树的一部分。 每个模型都必须通过其嵌入关系形成一个树。 因此，除非域类是某个模型的根，否则每个域类都必须至少是一个嵌入关系的目标类。
+- **IsEmbedding**。 此布尔值特性指定该关系是否为嵌入树的一部分。 每个模型都必须通过其嵌入关系形成一个树。 因此，除非域类是某个模型的根，否则每个域类都必须至少是一个嵌入关系的目标类。
 
--   **AllowsDuplicates**。 布尔值特性（在默认情况下为 false）仅适用于在源和目标元素处具有“多个”重数的关系。 它将确定语言用户是否可以通过同一关系的多个链接连接一对源和目标元素。
+- **AllowsDuplicates**。 布尔值特性（在默认情况下为 false）仅适用于在源和目标元素处具有“多个”重数的关系。 它将确定语言用户是否可以通过同一关系的多个链接连接一对源和目标元素。
 
 ## <a name="designer-and-toolbox-tabs"></a>设计器和工具箱选项卡
 
@@ -288,7 +287,7 @@ ms.locfileid: "53869250"
 
 组件图示例包含适用于 InPort 的 ShapeMap 的 ParentElementPath 中的路径。 此路径的开头如下所示：
 
-```
+``` 
     ComponentHasPorts.Component
 ```
 
@@ -296,13 +295,13 @@ ms.locfileid: "53869250"
 
 编写 C# 时对此模型，可以通过使用关系生成的属性上的每个相关类跳过一个步骤中的链接：
 
-```
+``` 
      InPort port; ...  Component c = port.Component;
 ```
 
 但是，必须在路径语法中显式执行这两次跳跃。 由于此要求，你可以更容易地访问中间链接。 以下代码完成了从链接到 Component 的跳跃：
 
-```
+``` 
     ComponentHasPorts.Component / ! Component
 ```
 
@@ -314,7 +313,7 @@ ms.locfileid: "53869250"
 
 一个可能的主机类（如 Component）仅在其具有某个新元素类的元素合并指令时才接受该新元素。 例如，具有 Name="Component" 的 DomainClass 节点包含：
 
-```
+```xml
 <DomainClass Name="Component" ...> ...
     <ElementMergeDirective>
       <Index>
@@ -338,7 +337,7 @@ ComponentModel（语言的根类）具有适用于组件和注释的元素合并
 
 例如，你可以将此元素合并指令添加到 Component 类：
 
-```
+```xml
 <DomainClass Name="Component" ...> ...
   <ElementMergeDirective>
     <Index>
@@ -363,25 +362,25 @@ ComponentModel（语言的根类）具有适用于组件和注释的元素合并
 
 每个 `XmlClassData` 节点都包括以下子节点和特性：
 
--   名字对象节点，用于引用数据应用到的类。
+- 名字对象节点，用于引用数据应用到的类。
 
--   **XmlPropertyData**类上定义每个属性。
+- **XmlPropertyData**类上定义每个属性。
 
--   **XmlRelationshipData**源于类的每个关系。 （关系还具有其自己的 XmlClassData 节点。）
+- **XmlRelationshipData**源于类的每个关系。 （关系还具有其自己的 XmlClassData 节点。）
 
--   **TypeName**字符串属性，以确定生成的代码中的序列化帮助器类的名称。
+- **TypeName**字符串属性，以确定生成的代码中的序列化帮助器类的名称。
 
--   **ElementName**字符串，用于确定此类的序列化实例的 XML 标记。 根据约定，ElementName 通常与类名相同，不同之处在于首字母为小写。 例如，示例模型文件从以下内容开始：
+- **ElementName**字符串，用于确定此类的序列化实例的 XML 标记。 根据约定，ElementName 通常与类名相同，不同之处在于首字母为小写。 例如，示例模型文件从以下内容开始：
 
-    ```
+    ```xml
     <componentModel ...
     ```
 
--   **MonikerElementName**中用户的序列化的模型文件。 此特性引入了可引用此类的名字对象。
+- **MonikerElementName**中用户的序列化的模型文件。 此特性引入了可引用此类的名字对象。
 
--   **MonikerAttributeName**，用于标识名字对象内的 XML 属性的名称。 在此片段中的用户的序列化文件，定义特定于域的语言的作者**MonikerElementName**为"inPortMoniker"并**MonikerAttributeName**为"path":
+- **MonikerAttributeName**，用于标识名字对象内的 XML 属性的名称。 在此片段中的用户的序列化文件，定义特定于域的语言的作者**MonikerElementName**为"inPortMoniker"并**MonikerAttributeName**为"path":
 
-    ```
+    ```xml
     <inPortMoniker path="//Component2/InPort1" />
     ```
 
@@ -401,7 +400,7 @@ ComponentModel（语言的根类）具有适用于组件和注释的元素合并
 
 在序列化模型文件中，元素的完整名字对象是一个路径，该路径从模型根沿着嵌入关系的树向下，从而在每个位置处引用名字对象密钥。 例如，InPorts 嵌入在 Components 中，Components 又反过来嵌入在模型根中。 因此，一个有效的名字对象为：
 
-```
+```xml
 <inPortMoniker name="//Component2/InPort1" />
 ```
 
@@ -419,7 +418,7 @@ ComponentModel（语言的根类）具有适用于组件和注释的元素合并
 
 例如，DslDefinition.dsl 文件包含：
 
-```
+```xml
 <XmlClassData ElementName="component" ...>
   <DomainClassMoniker Name="Component" />
   <ElementData>
@@ -430,10 +429,10 @@ ComponentModel（语言的根类）具有适用于组件和注释的元素合并
 
 因此，序列化文件包含：
 
-```
-<component name="Component1"> <!-- parent ->
-   <ports> <!-- role ->
-     <outPort name="OutPort1"> <!-- child element ->
+```xml
+<component name="Component1"> <!-- parent -->
+   <ports> <!-- role -->
+     <outPort name="OutPort1"> <!-- child element -->
        ...
      </outPort>
    </ports> ...
@@ -441,7 +440,7 @@ ComponentModel（语言的根类）具有适用于组件和注释的元素合并
 
 如果**UseFullForm**属性设置为 true，引入额外的嵌套层。 该层表示关系本身。 如果该关系具有属性，则必须将该特性设置为 true。
 
-```
+```xml
 <XmlClassData ElementName="outPort">
    <DomainClassMoniker Name="OutPort" />
    <ElementData>
@@ -454,11 +453,11 @@ ComponentModel（语言的根类）具有适用于组件和注释的元素合并
 
 序列化文件包含：
 
-```
-<outPort name="OutPort1">  <!-- Parent ->
-   <targets>  <!-- role ->
-     <connection sourceRoleName="X">  <!-- relationship link ->
-         <inPortMoniker name="//Component2/InPort1" /> <!-- child ->
+```xml
+<outPort name="OutPort1">  <!-- Parent -->
+   <targets>  <!-- role -->
+     <connection sourceRoleName="X">  <!-- relationship link -->
+         <inPortMoniker name="//Component2/InPort1" /> <!-- child -->
      </connection>
     </targets>
   </outPort>
@@ -468,9 +467,9 @@ ComponentModel（语言的根类）具有适用于组件和注释的元素合并
 
 如果**OmitElement**属性设置为 true 时，关系角色省略名称时，它缩写序列化的文件并不明确，如果两个类具有多个关系。 例如：
 
-```
+```xml
 <component name="Component3">
-  <!-- only one relationship could get here: ->
+  <!-- only one relationship could get here: -->
   <outPort name="OutPort1">
      <targets> ...
 ```
@@ -479,19 +478,19 @@ ComponentModel（语言的根类）具有适用于组件和注释的元素合并
 
 DslDefinition.dsl 文件本身就是一个序列化文件并且符合域特定语言定义。 以下是 XML 序列化定义的一些示例：
 
--   **Dsl** RootClass 节点和关系图的类。 在 `Dsl` 下方嵌入了 DomainClass、DomainRelationship 和其他元素。
+- **Dsl** RootClass 节点和关系图的类。 在 `Dsl` 下方嵌入了 DomainClass、DomainRelationship 和其他元素。
 
--   **类**是**RoleElementName**的特定于域的语言和 DomainClass 之间的关系。
+- **类**是**RoleElementName**的特定于域的语言和 DomainClass 之间的关系。
 
-```
+```xml
 <Dsl Name="CmptDsl5" ...>
   <Classes>
     <DomainClass Name="NamedElement" InheritanceModifier="Abstract" ...
 ```
 
--   **XmlSerializationBehavior**特性嵌入在`Dsl`属性，但**OmitElement**特性已设置在嵌入关系上。 因此，不会干扰任何 `RoleElementName` 特性。 与此相反， **ClassData**属性是`RoleElementName`属性之间的嵌入关系**XmlSerializationBehavior**属性和一个**XmlClassData**属性。
+- **XmlSerializationBehavior**特性嵌入在`Dsl`属性，但**OmitElement**特性已设置在嵌入关系上。 因此，不会干扰任何 `RoleElementName` 特性。 与此相反， **ClassData**属性是`RoleElementName`属性之间的嵌入关系**XmlSerializationBehavior**属性和一个**XmlClassData**属性。
 
-```
+```xml
 <Dsl Name="CmptDsl5" ...> ...
   <XmlSerializationBehavior Name="ComponentsSerializationBehavior" >
     <ClassData>
@@ -499,9 +498,9 @@ DslDefinition.dsl 文件本身就是一个序列化文件并且符合域特定�
       <XmlClassData ...>...</XmlClassData>
 ```
 
--   ConnectorHasDecorators 是 `Connector` 和 `Decorator` 之间的嵌入关系。 已对 `UseFullForm` 进行设置，以便关系名称与连接符对象中的每个链接的关系属性列表一同显示。 但是，还对 `OmitElement` 进行了设置，以便 `RoleElementName` 没有包含嵌入在 `Connector` 内的多个链接：
+- ConnectorHasDecorators 是 `Connector` 和 `Decorator` 之间的嵌入关系。 已对 `UseFullForm` 进行设置，以便关系名称与连接符对象中的每个链接的关系属性列表一同显示。 但是，还对 `OmitElement` 进行了设置，以便 `RoleElementName` 没有包含嵌入在 `Connector` 内的多个链接：
 
-```
+```xml
 <Connector Name="AssociationLink" ...>
   <ConnectorHasDecorators Position="TargetTop" ...>
     <TextDecorator Name="TargetRoleName"   />
@@ -516,11 +515,11 @@ DslDefinition.dsl 文件本身就是一个序列化文件并且符合域特定�
 
 形状和连接符定义除了继承域类中的特性和子节点外，还继承以下内容：
 
--   `Color` 和 `Line``Style` 特性。
+- `Color` 和 `Line``Style` 特性。
 
--   **ExposesFillColorAsProperty**和几个类似的属性。 这些布尔值特性通过用户使相应的属性处于可变状态。 通常情况下，当语言用户单击关系图上的形状时，属性，将出现在**属性**窗口是指该形状映射的域类实例。 如果将 `ExposesFillColorAsProperty` 设置为 true，则还将显示形状本身的属性。
+- **ExposesFillColorAsProperty**和几个类似的属性。 这些布尔值特性通过用户使相应的属性处于可变状态。 通常情况下，当语言用户单击关系图上的形状时，属性，将出现在**属性**窗口是指该形状映射的域类实例。 如果将 `ExposesFillColorAsProperty` 设置为 true，则还将显示形状本身的属性。
 
--   **ShapeHasDecorators**。 此特性的实例可针对每个文本、图标或展开/折叠修饰器出现。 （在 DslDefinition.dsl 文件中，如果将 `ShapeHasDecorators` 设置为 true，则 `UseFullForm` 与其之间存在关系。）
+- **ShapeHasDecorators**。 此特性的实例可针对每个文本、图标或展开/折叠修饰器出现。 （在 DslDefinition.dsl 文件中，如果将 `ShapeHasDecorators` 设置为 true，则 `UseFullForm` 与其之间存在关系。）
 
 ## <a name="shape-maps"></a>形状映射
 
@@ -528,7 +527,7 @@ DslDefinition.dsl 文件本身就是一个序列化文件并且符合域特定�
 
 如以下示例所示，`ShapeMap` 元素至少具有域类的名字对象、形状的名字对象以及 `ParentElementPath` 元素：
 
-```
+```xml
 <ShapeMap>
   <DomainClassMoniker Name="InPort" />
   <ParentElementPath>
@@ -550,7 +549,7 @@ ComponentHasPorts . Component / ! Component /    ComponentModelHasComponents . C
 
 模型的根不具有形状映射。 而该根可以直接从具有 `Class` 元素的关系图中引用：
 
-```
+```xml
 <Diagram Name="ComponentDiagram" >
     <Class>
       <DomainClassMoniker Name="ComponentModel" />
@@ -569,7 +568,7 @@ ComponentHasPorts . Component / ! Component /    ComponentModelHasComponents . C
 
 最小连接符映射将引用连接符和关系：
 
-```
+```xml
 <ConnectorMap>
   <ConnectorMoniker Name="CommentLink" />
   <DomainRelationshipMoniker Name="CommentsReferenceComponents" />

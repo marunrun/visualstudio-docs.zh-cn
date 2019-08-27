@@ -1,7 +1,6 @@
 ---
 title: 如何：管理编辑器窗口
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - editor windows
@@ -11,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 340143d4-8a71-490d-823e-162b276f4c6d
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d9134e7dcaddebbc63ad7fcb5650d5c24a00c6db
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8a8b6d1d4c39f09382dd0e4a12660bed31ad9b2d
+ms.sourcegitcommit: 614d5b99576ea27a41957cd94062dc95cbd29c1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53866171"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65531945"
 ---
 # <a name="how-to-manage-editor-windows"></a>如何：管理编辑器窗口
 
@@ -34,9 +33,9 @@ ms.locfileid: "53866171"
 
 ### <a name="to-split-a-pane"></a>拆分窗格
 
-1.  在编辑器窗口中单击以获得焦点。
+1. 在编辑器窗口中单击以获得焦点。
 
-2.  在“窗口”菜单中，选择“拆分”。
+2. 在“窗口”菜单中，选择“拆分”。
 
      编辑区域分为由分隔条隔开的两个窗格。 可以分别滚动这两个窗格，以便同时查看和编辑活动文档的不同部分。 窗格中的任何更改都会在其他窗格中反映。
 
@@ -45,7 +44,7 @@ ms.locfileid: "53866171"
 
 ### <a name="to-return-to-single-pane-view"></a>返回单一窗格视图
 
--   在“窗口”菜单中，选择“移除拆分”。
+- 在“窗口”菜单中，选择“移除拆分”。
 
 ## <a name="create-new-windows"></a>新建窗口
 
@@ -57,6 +56,5 @@ ms.locfileid: "53866171"
 
 ## <a name="see-also"></a>请参阅
 
-- [自定义编辑器](../ide/customizing-the-editor.md)
 - [代码编辑器功能](../ide/writing-code-in-the-code-and-text-editor.md)
 - [自定义窗口布局](../ide/customizing-window-layouts-in-visual-studio.md)

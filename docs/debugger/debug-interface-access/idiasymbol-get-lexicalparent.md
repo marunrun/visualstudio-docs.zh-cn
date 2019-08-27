@@ -9,42 +9,43 @@ helpviewer_keywords:
 ms.assetid: 4d119965-33a8-474c-9c64-95c5218c389c
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8388e2f59935b5a0603d6cd31b3417d8578b39ad
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: e8927785ba6ca0dbe3daf6c402be776e8c9d8288
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53820379"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "64813732"
 ---
 # <a name="idiasymbolgetlexicalparent"></a>IDiaSymbol::get_lexicalParent
-检索到词法父级的符号的引用。  
-  
-## <a name="syntax"></a>语法  
-  
-```C++  
-HRESULT get_lexicalParent (   
-   IDiaSymbol** pRetVal  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `pRetVal`  
- [out]返回[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)表示符号的词法的父对象。  
-  
-## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
-  
+检索到词法父级的符号的引用。
+
+## <a name="syntax"></a>语法
+
+```C++
+HRESULT get_lexicalParent ( 
+   IDiaSymbol** pRetVal
+);
+```
+
+#### <a name="parameters"></a>参数
+ `pRetVal`
+
+[out]返回[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)表示符号的词法的父对象。
+
+## <a name="return-value"></a>返回值
+ 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+
 > [!NOTE]
->  返回值为`S_FALSE`表示该属性不是可用于符号。  
-  
-## <a name="remarks"></a>备注  
- 符号的词法父级是封闭的函数或模块。 例如，函数参数或局部变量的词法父级是函数本身，而函数的词法父级是的模块中定义。  
-  
- 如中所述词法父项是可以出现的可能符号[符号类型的词法层次结构](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)。  
-  
-## <a name="see-also"></a>请参阅  
- [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
- [符号类型的词法层次结构](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)
+> 返回值为`S_FALSE`表示该属性不是可用于符号。
+
+## <a name="remarks"></a>备注
+ 符号的词法父级是封闭的函数或模块。 例如，函数参数或局部变量的词法父级是函数本身，而函数的词法父级是的模块中定义。
+
+ 如中所述词法父项是可以出现的可能符号[符号类型的词法层次结构](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)。
+
+## <a name="see-also"></a>请参阅
+- [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
+- [符号类型的词法层次结构](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)

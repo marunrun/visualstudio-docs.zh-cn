@@ -14,14 +14,13 @@ dev_langs:
 - VB
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: b7a656ce5cf15575a0c875ecd686a1ae535a978c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: c39518c03d1a599dbe9eecac3d609343b7394313
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53989317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822596"
 ---
 # <a name="code-a-custom-validation-rule-for-a-web-performance-test"></a>为 Web 性能测试编码自定义验证规则
 
@@ -34,24 +33,24 @@ ms.locfileid: "53989317"
 
 ## <a name="to-create-custom-validation-rules"></a>创建自定义验证规则
 
-1.  打开一个包含 Web 性能测试的测试项目。
+1. 打开一个包含 Web 性能测试的测试项目。
 
-2.  （可选）创建一个将在其中存储验证规则的单独的类库项目。
+2. （可选）创建一个将在其中存储验证规则的单独的类库项目。
 
     > [!IMPORTANT]
     > 你可以在测试所在的项目中创建类。 但是，如果你希望重用规则，则最好创建一个单独的类库项目来存储规则。 如果创建单独的项目，则必须完成本过程中的可选步骤。
 
-3.  （可选）在该类库项目中，添加一个对 Microsoft.VisualStudio.QualityTools.WebTestFramework DLL 的引用。
+3. （可选）在该类库项目中，添加一个对 Microsoft.VisualStudio.QualityTools.WebTestFramework DLL 的引用。
 
-4.  创建一个从 <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule> 类派生的类。 实现 <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule.Validate*> 和 <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule.RuleName*> 成员。
+4. 创建一个从 <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule> 类派生的类。 实现 <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule.Validate*> 和 <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule.RuleName*> 成员。
 
-5.  （可选）生成新的类库项目。
+5. （可选）生成新的类库项目。
 
-6.  （可选）在测试项目中添加一个对包含自定义验证规则的类库项目的引用。
+6. （可选）在测试项目中添加一个对包含自定义验证规则的类库项目的引用。
 
-7.  在测试项目中的“Web 性能测试编辑器”中打开一个 Web 性能测试。
+7. 在测试项目中的“Web 性能测试编辑器”中打开一个 Web 性能测试。
 
-8.  若要将自定义验证规则添加到 Web 性能测试请求中，请右键单击请求并选择“添加验证规则”。
+8. 若要将自定义验证规则添加到 Web 性能测试请求中，请右键单击请求并选择“添加验证规则”。
 
      出现“添加验证规则”对话框。 将在“选择规则”列表中看到自定义验证规则以及预定义的验证规则。 选择你的自定义验证规则，然后选择“确定”。
 

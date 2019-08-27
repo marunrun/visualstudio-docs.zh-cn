@@ -1,7 +1,6 @@
 ---
 title: 代码片段
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - vs.ExpansionManagerImport
@@ -11,26 +10,26 @@ helpviewer_keywords:
 - code snippets
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 dev_langs:
 - CSharp
 - VB
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: c539e2a20f7fa32ccba86a56831c71b17fdbefa5
-ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
+ms.openlocfilehash: 98dadaed75cf16ae6ae35da9d6589355a63bd35c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54269399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62975228"
 ---
 # <a name="code-snippets"></a>代码片段
 
 代码片段是小块可重用代码，可通过右键单击菜单（关联菜单）命令或热键组合插入到代码文件中。 代码片段通常包含常用的代码块（如 `try-finally` 或 `if-else` 块），可用于插入整个类或方法。
 
 > [!NOTE]
-> 本主题适用于 Windows 上的 Visual Studio。 对于 Visual Studio for Mac，请参阅[代码片段 (Visual Studio for Mac)](/visualstudio/mac/snippets)。
+> 本主题适用于 Visual Studio  Windows 版。 对于 Visual Studio for Mac，请参阅[代码片段 (Visual Studio for Mac)](/visualstudio/mac/snippets)。
 
 代码片段可用于多种语言，例如 C#、C++、Visual Basic、XML 和 T-SQL。 要在安装项中查看对某语言可用的所有片段，请在 Visual Studio 的“工具”菜单中打开“代码片段管理器”，然后从顶部的下拉菜单中选择此语言。
 

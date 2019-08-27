@@ -1,14 +1,9 @@
 ---
 title: 调试本机代码 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug
 dev_langs:
@@ -26,13 +21,13 @@ ms.assetid: d94eee90-7e0d-4cac-88c1-9831030daa5e
 caps.latest.revision: 24
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: a8c81efece10fe55dc1cf228a3d0c23e7f5a64af
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 61ee852f75737d85604fda106b15e61dc3634899
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51730558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68196424"
 ---
 # <a name="debugging-native-code"></a>调试本机代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -71,7 +66,7 @@ ms.locfileid: "51730558"
  提供有关如何调试使用特性的代码的指导。 指导信息包括如何打开“源批注”、如何查看插入的代码以及如何在当前执行点查看反汇编代码。  
   
  [演练：调试并行应用程序](../debugger/walkthrough-debugging-a-parallel-application.md)  
- 介绍如何使用**并行任务**并**并行堆栈**工具窗口调试并行应用程序。  
+ 描述如何使用“并行任务”  和“并行堆栈”  工具窗口调试并行应用程序。  
   
 ## <a name="related-sections"></a>相关章节  
  [Visual C++ 项目类型](../debugger/debugging-preparation-visual-cpp-project-types.md)  
@@ -83,6 +78,3 @@ ms.locfileid: "51730558"
 ## <a name="see-also"></a>请参阅  
  [调试器安全](../debugger/debugger-security.md)   
  [在 Visual Studio 中进行调试](../debugger/debugging-in-visual-studio.md)
-
-
-

@@ -1,14 +1,9 @@
 ---
 title: 如何：创建和删除项目依赖项 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - VS.ProjectDependenciesDlg
 helpviewer_keywords:
@@ -22,13 +17,13 @@ ms.assetid: e2a0a8ff-dae7-40a8-b774-b88aa5235183
 caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: cc63ef7159b0f11b3d170e0b4123f337ba413d65
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: e4b039f514c7d43e768becca8532a05fb14785b3
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49823835"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65680367"
 ---
 # <a name="how-to-create-and-remove-project-dependencies"></a>如何：创建和移除项目依赖项
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -44,7 +39,7 @@ ms.locfileid: "49823835"
     “项目依赖项”对话框随即打开。  
   
    > [!NOTE]
-   >  “项目依赖项”选项仅可在具有多个项目的解决方案中使用。  
+   > “项目依赖项”选项仅可在具有多个项目的解决方案中使用。  
   
 3. 从“依赖项”选项卡上的“项目”下拉菜单中选择一个项目。  
   
@@ -54,24 +49,21 @@ ms.locfileid: "49823835"
   
 ### <a name="to-remove-dependencies-from-projects"></a>删除项目中的依赖项  
   
-1.  在“解决方案资源管理器”中，选择一个项目。  
+1. 在“解决方案资源管理器”中，选择一个项目。  
   
-2.  在“项目”菜单上，选择“项目依赖项”。  
+2. 在“项目”菜单上，选择“项目依赖项”。  
   
      “项目依赖项”对话框随即打开。  
   
     > [!NOTE]
-    >  “项目依赖项”选项仅可在具有多个项目的解决方案中使用。  
+    > “项目依赖项”选项仅可在具有多个项目的解决方案中使用。  
   
-3.  从“依赖项”选项卡上的“项目”下拉菜单中选择一个项目。  
+3. 从“依赖项”选项卡上的“项目”下拉菜单中选择一个项目。  
   
-4.  在“依赖对象”字段中，清除不再属于此项目依赖项的任何其他项目的复选框。  
+4. 在“依赖对象”字段中，清除不再属于此项目依赖项的任何其他项目的复选框。  
   
 ## <a name="see-also"></a>请参阅  
  [在 Visual Studio 中生成和清理项目和解决方案](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)   
  [编译和生成](../ide/compiling-and-building-in-visual-studio.md)   
  [了解生成配置](../ide/understanding-build-configurations.md)   
- [NIB 如何：修改项目属性和配置设置](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
-
-
-
+ [NIB 如何：修改项目属性和配置设置](https://msdn.microsoft.com/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)

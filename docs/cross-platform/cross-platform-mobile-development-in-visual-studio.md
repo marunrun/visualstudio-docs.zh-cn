@@ -10,12 +10,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c040d0375a8ecb2872e148331166ecae45040cf
-ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
+ms.openlocfilehash: fcf28d844124b7a2ae8a0b380739433261c5a3ef
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54154045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62816094"
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Visual Studio 中的跨平台移动开发
 
@@ -38,9 +38,9 @@ ms.locfileid: "54154045"
 |[Xamarin 移动应用开发文档](/xamarin/) |
 |[适用于 Xamarin 应用的 DevOps](/xamarin/tools/ci/devops/) |
 |[了解 Visual Studio 中的通用 Windows 应用](https://visualstudio.microsoft.com/vs/universal-windows-platform/) (VisualStudio.com)|
-|[了解 Swift 与 C# 之间的相似之处](http://aka.ms/scposter) (download.microsoft.com)|
+|[了解 Swift 与 C# 之间的相似之处](https://aka.ms/scposter) (download.microsoft.com)|
 
-###  <a name="AndroidHTML"></a>通过单个基本代码面向 Android、iOS 和 Windows
+### <a name="AndroidHTML"></a>通过单个基本代码面向 Android、iOS 和 Windows
 
  可使用 C# 或 F# 构建面向 Android、iOS 和 Windows 的本机应用（目前不支持 Visual Basic）。  首先，请安装 Visual Studio 2017，在安装程序中选择“使用 .NET 的移动开发”选项。
 
@@ -56,7 +56,7 @@ ms.locfileid: "54154045"
 
  根据应用设计的复杂性，可以考虑使用项目模板“移动应用”  组中的 **Xamarin.Forms** 模板生成应用。 Xamarin.Forms 是一个 UI 工具包，可用于创建在 Android、iOS 和 Windows 之间共享的单一界面。  编译 Xamarin.Forms 解决方案时，会分别获得一个 Android 应用、iOS 应用和 Windows 应用。 有关更多详细信息，请参阅[了解关于使用 Xamarin 进行移动开发的信息](/xamarin/cross-platform/get-started/introduction-to-mobile-development/)和 [Xamarin.Forms 文档](/xamarin/xamarin-forms/)。
 
-####  <a name="ShareHTML"></a> 在 Android、iOS 和 Windows 应用间共享代码
+#### <a name="ShareHTML"></a> 在 Android、iOS 和 Windows 应用间共享代码
 
  如果不使用 Xamarin.Forms 并选择为每个平台单独设计，可在平台项目（Android、iOS 和 Windows）之间共享大多数的非 UI 代码。 这包括所有的业务逻辑、云集成、数据库访问和其他所有面向 .NET 框架的代码。 唯一不能共享的代码是面向特定平台的代码。
 
@@ -69,7 +69,7 @@ ms.locfileid: "54154045"
 |[共享代码选项](/xamarin/cross-platform/app-fundamentals/code-sharing/) (Xamarin) |
 |[.NET 的代码共享选项](/dotnet/standard/cross-platform/) |
 
-###  <a name="WindowsHTML"></a>面向 Windows 10 设备
+### <a name="WindowsHTML"></a>面向 Windows 10 设备
 
  ![Windows 设备](../cross-platform/media/windowsdevices.png "Windows 设备")
 
@@ -84,7 +84,7 @@ ms.locfileid: "54154045"
 |[开发通用 Windows 平台 (UWP) 的应用](../cross-platform/develop-apps-for-the-universal-windows-platform-uwp.md)|
 |[将应用迁移到通用 Windows 平台 (UWP)](https://msdn.microsoft.com/library/mt148501.aspx)|
 
-##  <a name="HTML"></a>构建面向 Android、iOS 和 Windows 的应用 (HTML/JavaScript)
+## <a name="HTML"></a>构建面向 Android、iOS 和 Windows 的应用 (HTML/JavaScript)
 
  ![Windows、iOS 和 Android 设备](../cross-platform/media/homedevices.png "Windows、iOS 和 Android 设备")
 
@@ -96,7 +96,7 @@ ms.locfileid: "54154045"
 
  ![使用 Javascript 的多设备混合应用](../cross-platform/media/multidevicehybridapps.png "使用 Javascript 的多设备混合应用")
 
- 首先，请安装 Visual Studio 2017，并在安装过程中选择“使用 Javascript 的移动开发”。 Cordova 工具都会自动安装构建多平台应用所需的所有第三方软件。
+ 首先，请安装 Visual Studio，并在安装过程中选择“使用 Javascript 的移动开发”功能。 Cordova 工具都会自动安装构建多平台应用所需的所有第三方软件。
 
  安装扩展后，打开 Visual Studio 并创建空白应用 (Apache Cordova)项目。 然后，便可使用 JavaScript 或 TypeScript 来开发应用了。 也可以添加插件来扩展应用的功能，编写代码时插件的 API 会出现在 IntelliSense 中。
 
@@ -158,7 +158,7 @@ ms.locfileid: "54154045"
 |[了解有关使用 Visual Studio 构建 Unity 游戏的更多信息](https://visualstudio.microsoft.com/vs/features/game-development/#tab-4b0d0be8de5f65564ad)|
 |[阅读有关 Visual Studio Tools for Unity 的详细信息](../cross-platform/visual-studio-tools-for-unity.md) |
 |[开始使用 Visual Studio Tools for Unity](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md) |
-|[了解关于 Visual Studio Tools for Unity 2.0 预览版的最新增强功能](https://blogs.msdn.microsoft.com/visualstudio/2014/12/03/visual-studio-tools-for-unity-2-0-preview/) （Visual Studio 博客）|
+|[了解关于 Visual Studio Tools for Unity 2.0 预览版的最新增强功能](https://devblogs.microsoft.com/visualstudio/visual-studio-tools-for-unity-2-0-preview/) （Visual Studio 博客）|
 |[观看 Visual Studio Tools for Unity 2.0 预览版的简介视频](http://www.bing.com/videos/search?q=visual+studio+tools+for+unity&qs=n&form=QBVLPG&pq=visual+studio+tools+for+unity&sc=6-29&sp=-1&sk=#view=detail&mid=0A13177F0BC7463A24080A13177F0BC7463A2408) （视频）|
 |[了解 Unity](http://unity3d.com/) （Unity 网站）|
 

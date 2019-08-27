@@ -1,25 +1,20 @@
 ---
 title: Mip 贴图生成变量 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 3b4b3583-0b01-4f5d-aacb-3f96d19111d9
 caps.latest.revision: 9
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: c567f68abb5b67022bb2decd64ed23e35bf6d5d3
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 3ac567677776c225008a581cc4d5de85ec2c882d
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51723084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63383962"
 ---
 # <a name="mip-map-generation-variant"></a>Mip-map 生成变量
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -51,7 +46,7 @@ ms.locfileid: "51723084"
   如果已为纹理自动生成 mip 贴图，则会在播放期间修改对 `ID3D11Device::CreateShaderResourceView` 的调用，以在纹理采样期间使用 mip 链。  
   
 ## <a name="example"></a>示例  
- **Mip 贴图生成**可以通过使用如下代码重现变体：  
+ 通过使用如下代码，可重现“Mip 贴图生成”变体：  
   
 ```  
 D3D11_TEXTURE2D_DESC texture_description;  
@@ -75,10 +70,7 @@ d3d_device->CreateTexture2D(&texture_description, initial_data.data(), &texture)
  请记住，当你向 `CreateTexture2D` 提供初始数据时，你必须为每个 mip 级别提供一个 D3D11_SUBRESOURCE_DATA 对象。  
   
 > [!NOTE]
->  如果你希望提供你自己的 mip 级别内容而不是自动生成它们，你必须使用支持进行了 mip 贴图的纹理的图像编辑器创建纹理，然后加载该文件并将 mip 级别传递给 `CreateTexture2D`。  
+> 如果你希望提供你自己的 mip 级别内容而不是自动生成它们，你必须使用支持进行了 mip 贴图的纹理的图像编辑器创建纹理，然后加载该文件并将 mip 级别传递给 `CreateTexture2D`。  
   
 ## <a name="see-also"></a>请参阅  
  [Half/Quarter 纹理维度变量](../debugger/half-quarter-texture-dimensions-variant.md)
-
-
-

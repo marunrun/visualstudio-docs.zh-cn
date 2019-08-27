@@ -1,7 +1,6 @@
 ---
 title: “设置”页面，项目设计器
 ms.date: 06/14/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - ApplicationSettingsOverview
@@ -10,15 +9,15 @@ helpviewer_keywords:
 - Project Designer, Settings page
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 95fc794bee8388dd0655af9adcd9101f57816126
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d7422b87d0f812de2d99d59c2932e9aa2b9e6315
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53949240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62989964"
 ---
 # <a name="settings-page-project-designer"></a>“设置”页面，项目设计器
 

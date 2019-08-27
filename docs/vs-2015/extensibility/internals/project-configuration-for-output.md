@@ -1,26 +1,21 @@
 ---
 title: 项目配置为输出 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project configurations, output
 ms.assetid: a4517f73-45af-4745-9d7f-9fddf887b636
 caps.latest.revision: 11
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 1c23f9210175b848bfdf3ddab56776092e39212c
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: d14435917e982328220aa6b778d081a8837f0396
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51740891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63443879"
 ---
 # <a name="project-configuration-for-output"></a>用于输出的项目配置
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -32,7 +27,7 @@ ms.locfileid: "51740891"
  通过实现开发构造`IVsOutputGroup`允许到组根据使用情况的输出的项目。 例如，一个 DLL 可能与其程序数据库 (PDB) 进行分组。  
   
 > [!NOTE]
->  PDB 文件包含调试信息并生成.dll 或.exe 时指定生成调试信息选项时创建它。 为仅调试项目配置通常生成.pdb 文件。  
+> PDB 文件包含调试信息并生成.dll 或.exe 时指定生成调试信息选项时创建它。 为仅调试项目配置通常生成.pdb 文件。  
   
  项目必须返回相同数量的支持，每个配置的组，即使的组中包含的输出数可能会配置配置有所不同。 例如，项目 Matt 的 DLL 可能会在调试配置中，包括 mattd.dll 和 mattd.pdb 但仅在零售配置中包括 matt.dll。  
   
@@ -56,4 +51,3 @@ ms.locfileid: "51740891"
  [用于构建的项目配置](../../extensibility/internals/project-configuration-for-building.md)   
  [项目配置对象](../../extensibility/internals/project-configuration-object.md)   
  [解决方案配置](../../extensibility/internals/solution-configuration.md)
-

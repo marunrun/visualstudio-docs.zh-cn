@@ -1,14 +1,9 @@
 ---
 title: 类设计器中的 Visual C++ 类 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.inheritancelinelabel
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 75e56f8c-11ef-42a3-b7ec-3d2cf25c581b
 caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: d4193dda70aeda8534b9dc2fa3428ca08a9d89fa
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 5e772d5dddcdde2306212e8a8fc48b9e39ae47a8
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49285683"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65696406"
 ---
 # <a name="visual-c-classes-in-class-designer"></a>类设计器中的 Visual C++ 类
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,7 +26,7 @@ ms.locfileid: "49285683"
 类设计器支持 C++ 类，直观呈现本机 C++ 类的方式与直观呈现 Visual Basic 和 Visual C# 类形状时大致相同，不同之处在于 C++ 类可以有多个继承关系。 可以展开类形状来显示类中的更多字段和方法，也可以折叠类形状来节省空间。  
   
 > [!NOTE]
->  类设计器不支持联合（一种特殊类型的类，仅分配联合的最大数据成员所需的内存量）。  
+> 类设计器不支持联合（一种特殊类型的类，仅分配联合的最大数据成员所需的内存量）。  
   
 ## <a name="simple-inheritance"></a>简单继承  
  如果将存在单类继承关系的多个类拖到类图上，它们将会通过箭头相连。 箭头指向基类的方向。 例如，如果类图中有以下类，这两个类将会通过箭头相连，箭头从 B 指向 A：  
@@ -57,9 +52,9 @@ class Penguin : public Bird, public Swimmer {};
  右键单击类形状，然后单击“显示基类”，可以显示选定类的基类。  
   
 > [!NOTE]
->  C++ 代码不支持“显示派生类”命令。 可以转到类视图，依次展开类型节点和“Derived Types”子文件夹，然后将这些类型拖到类图上，即可显示派生类。  
+> C++ 代码不支持“显示派生类”命令。 可以转到类视图，依次展开类型节点和“Derived Types”子文件夹，然后将这些类型拖到类图上，即可显示派生类。  
   
- 有关多类继承的详细信息，请参阅 [(NOTINBUILD) 多重继承](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca)和[多个基类](http://msdn.microsoft.com/library/a30c69fe-401c-4a87-96a0-e0da70c7c740)。  
+ 有关多类继承的详细信息，请参阅 [(NOTINBUILD) 多重继承](https://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca)和[多个基类](https://msdn.microsoft.com/library/a30c69fe-401c-4a87-96a0-e0da70c7c740)。  
   
 ## <a name="abstract-classes"></a>抽象类  
  类设计器支持抽象类（亦称为“抽象基类”）。 这些是永不实例化，但可从中派生其他类的类。 以本文前面“多重继承”部分中的示例为例，可以将 `Bird` 类实例化成各个单独的对象，如下所示：  
@@ -126,7 +121,7 @@ typedef struct
   
  结构也可以是匿名的。 类设计器显示匿名类和结构的方式与显示各自类型的方式相同。 虽然可以声明并显示匿名类和结构，但类设计器不会使用你指定的标记名称， 而是使用类视图生成的名称。 类或结构作为 **__unnamed** 元素显示在类视图和类设计器中。  
   
- 有关匿名类的详细信息，请参阅[匿名类类型](http://msdn.microsoft.com/library/9ba667b2-8c2a-4c29-82a6-fa120b9233c8)。  
+ 有关匿名类的详细信息，请参阅[匿名类类型](https://msdn.microsoft.com/library/9ba667b2-8c2a-4c29-82a6-fa120b9233c8)。  
   
 ## <a name="template-classes"></a>模板类  
  类设计器支持直观呈现模板类。 支持嵌套声明。 下表列出了一些典型声明。  
@@ -163,7 +158,7 @@ typedef struct
   
  下表列出了一些模板继承示例。  
   
-|Code 元素|类设计器视图|  
+|代码元素|类设计器视图|  
 |------------------|-------------------------|  
 |`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {`<br /><br /> `class B {};`<br /><br /> `}`<br /><br /> `class A : C<int>::B {};`|`A`<br /><br /> 类<br /><br /> ->B<br /><br /> `C<int>`<br /><br /> 类<br /><br /> （B 包含在类 C 中的“嵌套类型”下）<br /><br /> `C<T>`<br /><br /> 模板类|  
   
@@ -176,11 +171,8 @@ typedef struct
   
 ## <a name="see-also"></a>请参阅  
  [使用 Visual C++ 代码（类设计器）](../ide/working-with-visual-cpp-code-class-designer.md)   
- [类和结构](http://msdn.microsoft.com/library/516dd496-13fb-4f17-845a-e9ca45437873)   
- [匿名类类型](http://msdn.microsoft.com/library/9ba667b2-8c2a-4c29-82a6-fa120b9233c8)   
- [(NOTINBUILD) 多重继承](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca)   
- [多个基类](http://msdn.microsoft.com/library/a30c69fe-401c-4a87-96a0-e0da70c7c740)   
- [模板](http://msdn.microsoft.com/library/90fcc14a-2092-47af-9d2e-dba26d25b872)
-
-
-
+ [类和结构](https://msdn.microsoft.com/library/516dd496-13fb-4f17-845a-e9ca45437873)   
+ [匿名类类型](https://msdn.microsoft.com/library/9ba667b2-8c2a-4c29-82a6-fa120b9233c8)   
+ [(NOTINBUILD) 多重继承](https://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca)   
+ [多个基类](https://msdn.microsoft.com/library/a30c69fe-401c-4a87-96a0-e0da70c7c740)   
+ [模板](https://msdn.microsoft.com/library/90fcc14a-2092-47af-9d2e-dba26d25b872)

@@ -1,7 +1,7 @@
 ---
 title: 预生成事件/生成后事件命令行对话框
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
+ms.technology: vs-ide-compile
 ms.topic: reference
 f1_keywords:
 - cs.ProjectPropertiesBuildEventsBuilder
@@ -29,48 +29,49 @@ helpviewer_keywords:
 - $(ProjectName)
 - build events, macros
 ms.assetid: d49b2c57-24bf-4fb2-8351-5c4b6cca938f
-author: gewarren
-ms.author: gewarren
-manager: douge
+author: ghogen
+ms.author: ghogen
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7cc93b398791d01cc29025772a6cd086f0d0c740
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d5671a75a847d81caedeffc17ea436eade060f3e
+ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53877898"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68461310"
 ---
-# <a name="pre-build-eventpost-build-event-command-line-dialog-box"></a>预生成事件/生成后事件命令行对话框
+# <a name="pre-build-eventpost-build-event-command-line-dialog-box"></a>生成前事件/生成后事件命令行对话框
+
 可以直接在编辑框中键入[“项目设计器”>“生成事件页”(C#)](../../ide/reference/build-events-page-project-designer-csharp.md)的预生成或生成后事件，或者可以从可用宏的列表中选择预生成和生成后宏。
 
 > [!NOTE]
 > 如果项目是最新的且没有触发任何生成，则不会运行预生成事件。
 
-
 ## <a name="ui-element-list"></a>UI 元素列表
- 命令行编辑框
 
- 包含为预生成或生成后运行的事件。
+命令行编辑框 
+
+包含为预生成或生成后运行的事件。
 
 > [!NOTE]
 > 在运行 .bat 文件的所有生成后命令之前添加 `call` 语句。 例如，`call C:\MyFile.bat` 或 `call C:\MyFile.bat call C:\MyFile2.bat`。
 
+宏 
 
- 宏
+展开编辑框，显示要插入命令行编辑框的宏列表。
 
- 展开编辑框，显示要插入到命令行编辑框的宏列表。
+宏表格 
 
- 宏表格
+列出可用宏及其值。 有关每个宏的说明，请参见下面的“宏”。 一次只能选择一个要插入命令行编辑框的宏。
 
- 列出可用宏及其值。 有关每个宏的说明，请参见下面的“宏”。 一次只能选择一个插入命令行编辑框的宏。
+插入 
 
- 插入
-
- 将在宏表格中选择的宏插入命令行编辑框。
+将在宏表格中选择的宏插入命令行编辑框。
 
 ### <a name="macros"></a>宏
- 可以使用任何宏来指定文件位置，或在存在多种选择的情况下获取输入文件的实际名称。 这些宏不区分大小写。
+
+可以使用任何宏来指定文件位置，或在存在多种选择的情况下获取输入文件的实际名称。 这些宏不区分大小写。
 
 |宏|说明|
 |-----------|-----------------|

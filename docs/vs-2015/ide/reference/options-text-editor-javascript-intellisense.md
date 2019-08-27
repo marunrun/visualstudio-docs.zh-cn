@@ -1,14 +1,9 @@
 ---
 title: “选项”->“文本编辑器”->“JavaScript”->“IntelliSense”| Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.JavaScript.Intellisense.References
 - VS.ToolsOptionsPages.Text_Editor.JavaScript.Intellisense.General
@@ -16,18 +11,17 @@ ms.assetid: b4a9816d-cf87-4dc6-a8d4-1591d6a48103
 caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 6aa1f4027746ebf1304362217c16fffa7e68a75d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: cc0a254f13c4689dd6526646ddd2ff30b6094411
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49822406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63432988"
 ---
 # <a name="options-text-editor-javascript-intellisense"></a>选项，文本编辑器，JavaScript，IntelliSense
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 使用 **“选项”** 对话框的 **“IntelliSense”** 页可以修改影响 IntelliSense for JavaScript 行为的设置。 可以通过选择菜单栏上的 **“工具”** 、 **“选项”**, **“文本编辑器”** 、 **““IntelliSense””**, **“IntelliSense”**, **“工具”.** 页。  
   
  [!INCLUDE[note_settings_general](../../includes/note-settings-general-md.md)]  
@@ -50,7 +44,7 @@ ms.locfileid: "49822406"
  选中此复选框时，如果有 JavaScript 文件在项目上下文外部打开，Visual Studio 将下载在文件中引用的远程 JavaScript 文件，以提供 IntelliSense 信息。 如果选择此选项，当你在 JavaScript 文件中包括这些文件作为引用时，将下载这些文件。  
   
 > [!NOTE]
->  对于 Web 项目，默认下载你的项目中所引用的远程文件。  
+> 对于 Web 项目，默认下载你的项目中所引用的远程文件。  
   
 ## <a name="statement-completion"></a>语句结束  
  可以使用这些选项更改 IntelliSense 语句结束的行为。  
@@ -80,13 +74,10 @@ ms.locfileid: "49822406"
   此选项指定文件加载到语言服务上下文的顺序。 可以使用 **“移除”**、 **“上移”** 和 **“下移”** 按钮配置此顺序。 为使 IntelliSense 正常工作，依赖于另一文件的文件必须在另一文件加载后加载。  
   
 > [!CAUTION]
->  如果在两个或更多隐式引用中无条件定义了一个对象，则将使用此列表中的最后一个引用来定义此对象。  
+> 如果在两个或更多隐式引用中无条件定义了一个对象，则将使用此列表中的最后一个引用来定义此对象。  
   
  **添加对组的引用**  
  使用此选项，可通过浏览到相应文件来添加其他 IntelliSense .js 文件。  
   
 ## <a name="see-also"></a>请参阅  
  [JavaScript IntelliSense](../../ide/javascript-intellisense.md)
-
-
-

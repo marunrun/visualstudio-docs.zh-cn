@@ -1,14 +1,9 @@
 ---
 title: 在游戏或应用程序中使用三维资产 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.ImageContentTask.ContentOutput
 - VC.Project.MeshContentTask.ContentOutput
@@ -20,13 +15,13 @@ ms.assetid: ea587909-e434-46a8-abf8-9b3e95a58b4f
 caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: e04f4c82e6f11f2659b4cc65549efb291009b720
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 20076e4f8cc05ad971a1cbe710c95f444b80938b
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49863589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63386892"
 ---
 # <a name="using-3-d-assets-in-your-game-or-app"></a>在游戏或应用程序中使用三维资产
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,9 +35,9 @@ ms.locfileid: "49863589"
   
 #### <a name="to-add-the-build-customizations-to-your-project"></a>将生成自定义添加到你的项目  
   
-1.  在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择“生成依赖项”和“生成自定义”。 随即显示“Visual C++ 生成自定义文件”对话框。  
+1. 在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择“生成依赖项”和“生成自定义”。 随即显示“Visual C++ 生成自定义文件”对话框。  
   
-2.  在“可用的生成自定义文件”下，选中你希望在项目中使用的资产类型对应的复选框，如此表中所述：  
+2. 在“可用的生成自定义文件”下，选中你希望在项目中使用的资产类型对应的复选框，如此表中所述：  
   
     |资产类型|生成自定义名称|  
     |----------------|------------------------------|  
@@ -50,7 +45,7 @@ ms.locfileid: "49863589"
     |三维模型|MeshContentTask（.targets、.props）|  
     |着色器|ShaderGraphContentTask（.targets、.props）|  
   
-3.  选择“确定”  按钮。  
+3. 选择“确定”  按钮。  
   
 ## <a name="including-assets-in-your-build"></a>将资产包含在生成中  
  现在你的项目已了解你希望使用的不同种类的三维资产，下一步是告知它哪些文件是三维资产，以及它们的资产种类。  
@@ -64,7 +59,7 @@ ms.locfileid: "49863589"
 3. 在“配置属性”下，选择“常规”，然后在“常规”下的属性网格中，将“项目类型”属性设置为相应的内容管道项目类型。 例如，对于图像或纹理文件，请选择“图像内容管道”。  
   
    > [!IMPORTANT]
-   >  默认情况下，[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 假设应使用内置于 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中“图像”项目类型对很多种类的图像文件进行分类。 因此，必须更改你希望通过图像内容管道处理的每个图像的“项目类型”属性。 三维模型和视觉着色器图形的内容管道源文件的其他类型默认为正确的“项目类型”。  
+   > 默认情况下，[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 假设应使用内置于 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中“图像”项目类型对很多种类的图像文件进行分类。 因此，必须更改你希望通过图像内容管道处理的每个图像的“项目类型”属性。 三维模型和视觉着色器图形的内容管道源文件的其他类型默认为正确的“项目类型”。  
   
 4. 选择“确定”  按钮。  
   
@@ -81,13 +76,13 @@ ms.locfileid: "49863589"
   
 #### <a name="to-configure-content-pipeline-properties"></a>配置内容管道属性  
   
-1.  在“解决方案资源管理器”中，在你的项目中打开资产文件的快捷菜单，然后选择“属性”。 随即显示资产的“属性页”对话框。  
+1. 在“解决方案资源管理器”中，在你的项目中打开资产文件的快捷菜单，然后选择“属性”。 随即显示资产的“属性页”对话框。  
   
-2.  请确保将“配置”和“平台”属性设置为你希望更改应用到的值。  
+2. 请确保将“配置”和“平台”属性设置为你希望更改应用到的值。  
   
-3.  在“配置属性”下，选择内容管道节点（例如，纹理和图像资产的“图像内容管道”），然后在属性网格中，将属性设置为相应的值。 例如，若要在生成时为纹理资产生成 mipmap，请将“生成 Mip”属性设置为“是”。  
+3. 在“配置属性”下，选择内容管道节点（例如，纹理和图像资产的“图像内容管道”），然后在属性网格中，将属性设置为相应的值。 例如，若要在生成时为纹理资产生成 mipmap，请将“生成 Mip”属性设置为“是”。  
   
-4.  选择“确定”  按钮。  
+4. 选择“确定”  按钮。  
   
 ### <a name="image-content-pipeline-configuration"></a>图像内容管道配置  
  使用图像内容管道工具生成纹理资产时，你可以采用各种方式压缩纹理、指示生成时是否应该生成 MIP 级别，以及更改输出文件的名称。  
@@ -97,26 +92,26 @@ ms.locfileid: "49863589"
 |压缩|指定用于输出文件的压缩类型。<br /><br /> 可用选项为：<br /><br /> -   不进行压缩<br />-   BC1_UNORM 压缩<br />-   BC1_UNORM_SRGB 压缩<br />-   BC2_UNORM 压缩<br />-   BC2_UNORM_SRGB 压缩<br />-   BC3_UNORM 压缩<br />-   BC3_UNORM_SRGB 压缩<br />-   BC4_UNORM 压缩<br />-   BC4_SNORM 压缩<br />-   BC5_UNORM 压缩<br />-   BC5_SNORM 压缩<br />-   BC6H_UF16 压缩<br />-   BC6H_SF16 压缩<br />-   BC7_UNORM 压缩<br />-   BC7_UNORM_SRGB 压缩<br /><br /> 有关不同版本的 DirectX 中支持哪些压缩格式的信息，请参阅 [DXGI 编程指南](http://go.microsoft.com/fwlink/p/?LinkId=246265)。|  
 |转换为预乘 alpha 格式|若要将输出文件中的图像转换为预乘 alpha 格式，则为“是”；否则为“否”。 仅更改输出文件，源图像未发生更改。|  
 |**生成 Mip**|若要在生成时生成完整的 MIP 链并将它包含在输出文件中，则为“是”；否则为“否”。 如果为“否”且源文件已经包含 mipmap 链，则输出文件将具有 MIP 链；否则，输出文件将没有 MIP 链。|  
-|内容输出|指定输出文件的名称。 重要说明：更改输出文件的文件扩展名不会影响其文件格式。|  
+|内容输出|指定输出文件的名称。 **重要提示：** 更改输出文件的文件扩展名不会影响其文件格式。|  
   
 ### <a name="mesh-content-pipeline-configuration"></a>网格内容管道配置  
  使用网格内容管道工具生成网格资产时，你可以更改输出文件的名称。  
   
 |属性|描述|  
 |--------------|-----------------|  
-|内容输出|指定输出文件的名称。 重要说明：更改输出文件的文件扩展名不会影响其文件格式。|  
+|内容输出|指定输出文件的名称。 **重要提示：** 更改输出文件的文件扩展名不会影响其文件格式。|  
   
 ### <a name="shader-content-pipeline-configuration"></a>着色器内容管道配置  
  使用着色器内容管道工具生成着色器资产时，你可以更改输出文件的名称。  
   
 |属性|描述|  
 |--------------|-----------------|  
-|内容输出|指定输出文件的名称。 重要说明：更改输出文件的文件扩展名不会影响其文件格式。|  
+|内容输出|指定输出文件的名称。 **重要提示：** 更改输出文件的文件扩展名不会影响其文件格式。|  
   
 ## <a name="loading-and-using-3-d-assets-at-run-time"></a>在运行时加载和使用三维资产  
   
 ### <a name="using-textures-and-images"></a>使用纹理和图像  
- Direct3D 提供了用于创建纹理资源的功能。 在 Direct3D 11 中，D3DX11 实用工具库提供了用于直接从图像文件创建纹理资源和资源视图的其他功能。 有关如何在 Direct3D 11 中创建纹理资源的详细信息，请参阅[纹理](http://go.microsoft.com/fwlink/p/?LinkID=246267)。 有关如何使用 D3DX11 库从图像文件创建纹理资源或资源视图的详细信息，请参阅[如何：从文件初始化纹理](http://go.microsoft.com/fwlink/p/?LinkId=246268)。  
+ Direct3D 提供了用于创建纹理资源的功能。 在 Direct3D 11 中，D3DX11 实用工具库提供了用于直接从图像文件创建纹理资源和资源视图的其他功能。 有关如何在 Direct3D 11 中创建纹理资源的详细信息，请参阅[纹理](http://go.microsoft.com/fwlink/p/?LinkID=246267)。 有关如何使用 D3DX11 库从图像文件创建纹理资源或资源视图的详细信息，请参阅[如何：初始化一个文件从纹理](http://go.microsoft.com/fwlink/p/?LinkId=246268)。  
   
 ### <a name="using-3-d-models"></a>使用三维模型  
  Direct3D 11 不提供用于从三维模型创建资源的功能。 相反，你必须编写代码，该代码可读取三维模型文件并创建表示三维模型和该模型所需的任何资源（例如，纹理或着色器）的顶点和索引缓冲区。  
@@ -205,13 +200,10 @@ cbuffer MiscVars : register(b3)
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|标题|说明|  
 |-----------|-----------------|  
 |[如何：导出包含 Mipmap 的纹理](../designers/how-to-export-a-texture-that-contains-mipmaps.md)|描述如何使用“图像内容管道”导出包含预计算 mipmap 的纹理。|  
-|[如何：导出包含自左乘的 Alpha 的纹理](../designers/how-to-export-a-texture-that-has-premultiplied-alpha.md)|描述如何使用“图像内容管道”导出包含预乘 alpha 值的纹理。|  
-|[如何：导出纹理以用于 Direct2D 或 Javascipt 应用程序](../designers/how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps.md)|描述如何使用“图像内容管道”导出可在 Direct2D 或 JavaScript 应用中使用的纹理。|  
+|[如何：导出包含预乘 Alpha 的纹理](../designers/how-to-export-a-texture-that-has-premultiplied-alpha.md)|描述如何使用“图像内容管道”导出包含预乘 alpha 值的纹理。|  
+|[如何：导出纹理以用于 Direct2D 或 Javascipt 应用](../designers/how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps.md)|描述如何使用“图像内容管道”导出可在 Direct2D 或 JavaScript 应用中使用的纹理。|  
 |[为游戏和应用使用三维资产](../designers/working-with-3-d-assets-for-games-and-apps.md)|描述 Visual Studio 提供的用于创建和操作三维资产（包括纹理和图像、三维模型和着色器）的编辑工具。|  
 |[如何：导出着色器](../designers/how-to-export-a-shader.md)|描述如何从着色器设计器中导出着色器。|
-
-
-

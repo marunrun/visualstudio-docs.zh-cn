@@ -1,14 +1,9 @@
 ---
-title: 如何： Page Up 或在内存中的 Down |Microsoft Docs
-ms.custom: ''
+title: 如何：Page Up 或在内存中的 Down |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -27,18 +22,18 @@ ms.assetid: 50b30a68-66f6-43f8-a48b-59ce12c95471
 caps.latest.revision: 23
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: d20c22e366736711f16fc17f56b2e81eea558948
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: cc05772e6376dbe151d5ca71b9ee221e61a7be88
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51769148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68157861"
 ---
 # <a name="how-to-page-up-or-down-in-memory"></a>如何：在内存中向上或向下翻页
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-查看内存中的内容时**内存**窗口或**反汇编**窗口中，您可以使用垂直滚动条向上或向下移动内存空间中。  
+在“内存”窗口或“反汇编”窗口中查看内存内容时，可以使用垂直滚动条在内存空间中上下移动   。  
   
 ### <a name="to-page-up-or-down-in-memory"></a>在内存中向上或向下翻页  
   
@@ -54,14 +49,9 @@ ms.locfileid: "51769148"
   
 #### <a name="to-move-up-or-down-one-instruction"></a>向上或向下移动一个指令  
   
--   单击垂直滚动条顶部或底部的箭头。  
+- 单击垂直滚动条顶部或底部的箭头。  
   
 ## <a name="see-also"></a>请参阅  
- [内存 Windows](../debugger/memory-windows.md)   
- [如何： 使用反汇编窗口](../debugger/how-to-use-the-disassembly-window.md)   
+ [“内存”窗口](../debugger/memory-windows.md)   
+ [如何：使用“反汇编”窗口](../debugger/how-to-use-the-disassembly-window.md)   
  [查看调试器中的数据](../debugger/viewing-data-in-the-debugger.md)
-
-
-
-
-

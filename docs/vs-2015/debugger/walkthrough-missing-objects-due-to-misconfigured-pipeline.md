@@ -1,40 +1,35 @@
 ---
-title: 演练： 因而缺少对象管线 |Microsoft Docs
-ms.custom: ''
+title: 演练：因配置错误管道而缺少对象 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: ed8ac02d-b38f-4055-82fb-67757c2ccbb9
 caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: cd28886695e3234240de5675e5e2b19972b105fa
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 9d74006051fd39043de75cec81fdad3f1083adef
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51782006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63444281"
 ---
-# <a name="walkthrough-missing-objects-due-to-misconfigured-pipeline"></a>演练：因管线误配置而缺少对象
+# <a name="walkthrough-missing-objects-due-to-misconfigured-pipeline"></a>演练：因管道误配置而缺少对象
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本演练演示如何使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 图形诊断工具来调查由于未设置的像素着色器而缺失的对象。  
   
  此演练阐释了以下任务：  
   
--   使用“图形事件列表”  定位问题的潜在根源。  
+- 使用“图形事件列表”  定位问题的潜在根源。  
   
--   使用“图形管道阶段”  窗口来检查 `DrawIndexed` Direct3D API 调用的效果。  
+- 使用“图形管道阶段”  窗口来检查 `DrawIndexed` Direct3D API 调用的效果。  
   
--   检查设备上下文以确认未设置着色器阶段。  
+- 检查设备上下文以确认未设置着色器阶段。  
   
--   搭配使用“图形管道阶段”  窗口和“图形事件调用堆栈”  来帮助查找未设置的像素着色器来源。  
+- 搭配使用“图形管道阶段”  窗口和“图形事件调用堆栈”  来帮助查找未设置的像素着色器来源。  
   
 ## <a name="scenario"></a>方案  
  当 3-D 应用中缺少对象时，有时是因为其中一个着色器阶段未在呈现对象前设置。 在具有简单呈现需要的应用中，此错误的来源通常位于对象绘图调用的调用堆栈中某个位置。 但是作为一种优化手段，某些应用批量处理具有共同的着色器程序、纹理或其他数据的对象，从而最大程度减少状态更改的开销。 在这些应用中，错误来源可能隐藏在批处理系统中，而不是位于绘图调用的调用堆栈中。 本演练中的方案演示具有简单呈现需求的应用，因此可在调用堆栈中找到错误源。  
@@ -69,7 +64,7 @@ ms.locfileid: "51782006"
     在“图形管道阶段”  窗口中，“输入装配器”  阶段将显示转换前的对象的几何图形，而“顶点着色器”  阶段显示转换后的相同对象。 在此方案中，请注意“图形管道阶段”  窗口显示“输入装配器”  阶段和“顶点着色器”   阶段，但不显示其中一个绘图调用的“像素着色器”  阶段。  
   
    > [!NOTE]
-   >  如果其他管道阶段（例如外壳着色器、域着色器或几何着色器阶段）处理该对象，则其中的任何一个都可能是导致问题的原因。 通常情况下，该问题与结果未显示或以意外方式显示的最早阶段相关联。  
+   > 如果其他管道阶段（例如外壳着色器、域着色器或几何着色器阶段）处理该对象，则其中的任何一个都可能是导致问题的原因。 通常情况下，该问题与结果未显示或以意外方式显示的最早阶段相关联。  
   
 4. 当到达对应于缺失对象的绘图调用时即停止。 在此方案中，“图形管道阶段”  窗口指示几何图形发布到 GPU（由存在“输入装配器”  阶段指示）并且进行了转换（由“顶点着色器”  阶段指示），但因为似乎不存在活动像素着色器而未显示在呈现目标中（由缺少“像素着色器”  阶段指示）。 在此方案中，甚至还可以在“输出合并器”  阶段查看缺失对象的轮廓：  
   
@@ -92,7 +87,7 @@ ms.locfileid: "51782006"
 1. 查找对应于缺失对象的 `PSSetShader` 调用。 在“图形事件列表”  窗口中，请在“图形事件列表”  窗口右上角的“搜索”  框中输入“Draw;PSSetShader”。 这将筛选列表，使其仅包含“PSSetShader”事件，以及标题中具有“Draw”的事件。 选择出现在缺失对象绘图调用之前的第一个 `PSSetShader` 调用。  
   
    > [!NOTE]
-   >  如果未在此帧内进行设置，则`PSSetShader` 不会显示在“图形事件列表”  窗口。 通常仅当只有一个像素着色器用于所有对象，或者此帧期间 `PSSetShader` 调用被无意跳过时发生这种情况。 在任一情况下，我们建议你搜索应用的源代码获取 `PSSetShader` 调用，并使用传统调试技术检查这些调用的行为。  
+   > 如果未在此帧内进行设置，则`PSSetShader` 不会显示在“图形事件列表”  窗口。 通常仅当只有一个像素着色器用于所有对象，或者此帧期间 `PSSetShader` 调用被无意跳过时发生这种情况。 在任一情况下，我们建议你搜索应用的源代码获取 `PSSetShader` 调用，并使用传统调试技术检查这些调用的行为。  
   
 2. 打开“图形事件调用堆栈”  窗口。 在“图形诊断”  工具栏上，选择“图形事件调用堆栈” 。  
   
@@ -101,7 +96,7 @@ ms.locfileid: "51782006"
     ![未初始化像素着色器代码](../debugger/media/gfx-diag-demo-misconfigured-pipeline-step-5.png "gfx_diag_demo_misconfigured_pipeline_step_5")  
   
    > [!NOTE]
-   >  如果仅通过检查调用堆栈无法找到 null 值的源，我们建议在 `PSSetShader` 调用上设置条件断点，以便像素着色器将被设置为 null 时程序执行中断。 然后在调试模式下重新启动此应用，并使用传统调试技术来查找 null 值的源。  
+   > 如果仅通过检查调用堆栈无法找到 null 值的源，我们建议在 `PSSetShader` 调用上设置条件断点，以便像素着色器将被设置为 null 时程序执行中断。 然后在调试模式下重新启动此应用，并使用传统调试技术来查找 null 值的源。  
   
    若要解决此问题，通过 `ID3D11DeviceContext::PSSetShader` API 调用的第一个参数来分配正确的像素着色器。  
   
@@ -110,6 +105,3 @@ ms.locfileid: "51782006"
    修复代码后，你可以重新生成并运行应用以验证呈现问题是否已解决：  
   
    ![现在已显示对象](../debugger/media/gfx-diag-demo-misconfigured-pipeline-resolution.jpg "gfx_diag_demo_misconfigured_pipeline_resolution")
-
-
-

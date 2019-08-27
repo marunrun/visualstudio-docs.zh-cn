@@ -2,21 +2,20 @@
 title: 工作流设计器-Assign 活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - System.Activities.Statements.Assign.UI
 ms.assetid: ba3feb3c-f144-47ea-926d-cf752b804153
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e5f3080dfcd7afbc999ad478fa3bbdc8470ef54a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 4179c23cefbf995242288c1e778f9e0413bfe28e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53905817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62993249"
 ---
 # <a name="assign-activity-designer"></a>Assign 活动设计器
 
@@ -24,7 +23,7 @@ ms.locfileid: "53905817"
 
 ## <a name="the-assign-activity"></a>Assign 活动
 
-<xref:System.Activities.Statements.Assign> 活动为变量或参数赋值。
+<xref:System.Activities.Statements.Assign> 活动为变量或自变量赋值。
 
 ### <a name="using-the-assign-activity-designer"></a>使用 Assign 活动设计器
 

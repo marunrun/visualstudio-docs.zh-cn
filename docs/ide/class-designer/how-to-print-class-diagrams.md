@@ -1,7 +1,6 @@
 ---
 title: 如何：打印类图（类设计器）
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - printing [Visual Studio], class diagrams
@@ -9,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 62c87425-3446-41fb-943c-1f86397883c8
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e4b38967badbed94c946b04a1434150912c32859
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: cdc03624b2260870ca43643caa995db5621dbec9
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53916249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62975185"
 ---
 # <a name="how-to-print-class-diagrams"></a>如何：打印类图
 
@@ -25,9 +24,9 @@ ms.locfileid: "53916249"
 
 ## <a name="to-print-a-class-diagram"></a>打印类图
 
-1.  打开类图。
+1. 打开类图。
 
-2.  单击“文件”菜单上的“打印”。
+2. 单击“文件”菜单上的“打印”。
 
 随即将打印整个类图。 可能需要调整“页面设置”对话框中的设置，以便按适当大小进行打印。
 

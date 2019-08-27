@@ -1,14 +1,9 @@
 ---
-title: CA2118： 检查 SuppressUnmanagedCodeSecurityAttribute 用法 |Microsoft Docs
-ms.custom: ''
+title: CA2118:检查 SuppressUnmanagedCodeSecurityAttribute 用法 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA2118
 - ReviewSuppressUnmanagedCodeSecurityUsage
@@ -20,14 +15,14 @@ caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 6d4cee2d7758f467a13875f89a9534ceb0d883b5
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 4fdbf84cc981dfe9e7cee73fba06867250d2fc33
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49904474"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65687282"
 ---
-# <a name="ca2118-review-suppressunmanagedcodesecurityattribute-usage"></a>CA2118：检查 SuppressUnmanagedCodeSecurityAttribute 用法
+# <a name="ca2118-review-suppressunmanagedcodesecurityattribute-usage"></a>CA2118:检查 SuppressUnmanagedCodeSecurityAttribute 用法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -41,7 +36,7 @@ ms.locfileid: "49904474"
  公共或受保护的类型或成员具有<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName>属性。
 
 ## <a name="rule-description"></a>规则说明
- <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> 执行使用 COM 互操作或平台调用的非托管的代码的成员更改默认的安全系统行为。 通常情况下，系统会进行[数据和建模](http://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6)非托管的代码权限。 此要求发生在运行时为每个成员，并且检查权限的调用堆栈中每个调用方。 当存在该属性时，系统会进行[链接要求](http://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)的权限： 调用方进行 JIT 编译时检查直接调用方的权限。
+ <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> 执行使用 COM 互操作或平台调用的非托管的代码的成员更改默认的安全系统行为。 通常情况下，系统会进行[数据和建模](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6)非托管的代码权限。 此要求发生在运行时为每个成员，并且检查权限的调用堆栈中每个调用方。 当存在该属性时，系统会进行[链接要求](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)的权限： 调用方进行 JIT 编译时检查直接调用方的权限。
 
  该特性主要用于提高性能；不过，提高性能的同时会显著增加安全风险。 如果该属性将在调用本机方法的公共成员上时中 （而不是直接调用方） 的调用堆栈, 的调用方不需要执行非托管的代码的非托管的代码权限。 具体取决于公共成员的操作和输入的处理，它可能允许不受信任调用方访问通常限制为可信的代码的功能。
 
@@ -49,11 +44,11 @@ ms.locfileid: "49904474"
 
  默认安全策略不会向程序集授予非托管的代码权限，除非它执行从本地计算机或者是以下组之一的成员：
 
--   我的计算机的区域代码组
+- 我的计算机的区域代码组
 
--   Microsoft 强名称代码组
+- Microsoft 强名称代码组
 
--   ECMA 强名称代码组
+- ECMA 强名称代码组
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  请仔细查看代码，以确保此属性是绝对必要。 如果你不熟悉托管的代码安全或不了解使用此属性的安全隐患，请在代码中将其删除。 如果该属性是必需的您必须确保调用方不能出于恶意使用你的代码。 如果你的代码没有权限来执行非托管的代码，此属性不起作用，应删除。
@@ -77,7 +72,4 @@ ms.locfileid: "49904474"
  [!code-csharp[FxCop.Security.TypeInvokeAndSuppress#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.TypeInvokeAndSuppress/cs/FxCop.Security.TypeInvokeAndSuppress.cs#1)]
 
 ## <a name="see-also"></a>请参阅
- <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> [安全编码准则](http://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)[安全优化](http://msdn.microsoft.com/en-us/cf255069-d85d-4de3-914a-e4625215a7c0)[数据和建模](http://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6)[链接需求](http://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)
-
-
-
+ <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> [安全编码准则](https://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)[安全优化](https://msdn.microsoft.com/cf255069-d85d-4de3-914a-e4625215a7c0)[数据和建模](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6)[链接需求](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)

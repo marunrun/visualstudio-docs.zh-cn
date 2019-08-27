@@ -1,7 +1,6 @@
 ---
 title: 选项，文本编辑器，XAML，格式
 ms.date: 10/29/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XAML.Formatting.General
@@ -27,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: ad3820b1-0d94-4807-a74c-c3467ed973a2
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: b5eaddd1170fa1f6f076e79de2038e0089fd4f39
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 3ed364d9c8995a93acb0de8002bafefd603c2d71
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53950233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62969249"
 ---
 # <a name="options-text-editor-xaml-formatting"></a>选项，文本编辑器，XAML，格式
 
@@ -45,13 +44,13 @@ ms.locfileid: "53950233"
 
 检测到以下任一事件时，可能引发自动格式设置。
 
--   完成结束标记或简单标记。
+- 完成结束标记或简单标记。
 
--   完成开始标记。
+- 完成开始标记。
 
--   从剪贴板粘贴。
+- 从剪贴板粘贴。
 
--   设置键盘命令格式。
+- 设置键盘命令格式。
 
 可以指定引发自动格式设置的事件。
 
@@ -147,7 +146,6 @@ Width="75">Hello</Button>
 
 ```xml
 <Grid>
-
 
 <Button Name="button1">Hello</Button>
 

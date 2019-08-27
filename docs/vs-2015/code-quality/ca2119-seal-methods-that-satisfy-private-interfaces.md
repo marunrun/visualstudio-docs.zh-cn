@@ -1,14 +1,9 @@
 ---
-title: CA2119： 密封满足私有接口的方法 |Microsoft Docs
-ms.custom: ''
+title: CA2119:密封满足私有接口的方法 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - SealMethodsThatSatisfyPrivateInterfaces
 - CA2119
@@ -20,14 +15,14 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: c6d3e102cde1fc010f777006d629fa2d19add894
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 56b08d1b842e65e1c1c29a7409813c314cbf014d
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49825384"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65687274"
 ---
-# <a name="ca2119-seal-methods-that-satisfy-private-interfaces"></a>CA2119：密封满足私有接口的方法
+# <a name="ca2119-seal-methods-that-satisfy-private-interfaces"></a>CA2119:密封满足私有接口的方法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -46,15 +41,15 @@ ms.locfileid: "49825384"
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要解决此规则的冲突，防止方法被重写程序集外部的通过使用以下项之一：
 
--   请声明类型`sealed`(`NotInheritable`在 Visual Basic 中)。
+- 请声明类型`sealed`(`NotInheritable`在 Visual Basic 中)。
 
--   更改到的声明类型的可访问性`internal`(`Friend`在 Visual Basic 中)。
+- 更改到的声明类型的可访问性`internal`(`Friend`在 Visual Basic 中)。
 
--   从声明类型中删除所有公共构造函数。
+- 从声明类型中删除所有公共构造函数。
 
--   实现方法，而无需使用`virtual`修饰符。
+- 实现方法，而无需使用`virtual`修饰符。
 
--   显式实现该方法。
+- 显式实现该方法。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  则可以安全地禁止显示此警告规则，仔细检查后没有安全存在问题的情况，可能是在程序集外重写该方法的情况下可利用。
@@ -74,7 +69,4 @@ ms.locfileid: "49825384"
  [!code-vb[FxCop.Security.SealMethods2#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Security.SealMethods2/vb/FxCop.Security.SealMethods2.vb#1)]
 
 ## <a name="see-also"></a>请参阅
- [接口](http://msdn.microsoft.com/library/2feda177-ce11-432d-81b4-d50f5f35fd37)[接口](http://msdn.microsoft.com/library/61b06674-12c9-430b-be68-cc67ecee1f5b)
-
-
-
+ [接口](https://msdn.microsoft.com/library/2feda177-ce11-432d-81b4-d50f5f35fd37)[接口](https://msdn.microsoft.com/library/61b06674-12c9-430b-be68-cc67ecee1f5b)

@@ -1,8 +1,7 @@
 ---
-title: IDebugAsyncOperationCallBack::onComplete |Microsoft Docs
+title: IDebugAsyncOperationCallBack::onComplete | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4909f469b558ef4664a74c4a7926001d20adc40e
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: f9e5532a55901d8e29addfee58594645440991f6
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54089396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62821867"
 ---
 # <a name="idebugasyncoperationcallbackoncomplete"></a>IDebugAsyncOperationCallBack::onComplete
 发出信号，结果是可从异步调试操作。  
@@ -48,5 +47,5 @@ HRESULT onComplete();
  此方法向发出信号，结果是可从`IDebugAsyncOperation`对象。 引发该事件的调试程序线程中。  
   
 ## <a name="see-also"></a>请参阅  
- [IDebugAsyncOperationCallBack 接口](../../winscript/reference/idebugasyncoperationcallback-interface.md)   
+ [IDebugAsyncOperationCallBack Interface](../../winscript/reference/idebugasyncoperationcallback-interface.md)   
  [IDebugAsyncOperation 接口](../../winscript/reference/idebugasyncoperation-interface.md)

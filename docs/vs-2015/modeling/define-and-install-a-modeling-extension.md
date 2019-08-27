@@ -1,12 +1,9 @@
 ---
 title: 定义和安装建模扩展 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - UML - extending
 - UML model, extending
@@ -14,13 +11,13 @@ ms.assetid: 82a58dc5-c7cf-4521-a6da-7ff09cd0de9d
 caps.latest.revision: 39
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 6f7895916cc4ee877c53b056f703d8e46b64b409
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: cf370b4ca0e0a4d14c482c6ece46b79d2d224d34
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51805562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68181917"
 ---
 # <a name="define-and-install-a-modeling-extension"></a>定义和安装建模扩展
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,41 +42,41 @@ ms.locfileid: "51805562"
   
 #### <a name="to-create-a-class-library-project-for-menu-commands-gesture-handlers-or-validation"></a>为菜单命令、笔势处理程序或验证创建一个类库项目  
   
-1.  在“文件”  菜单上，选择“新建” 、“项目” 。  
+1. 在“文件”  菜单上，选择“新建”  、“项目”  。  
   
-2.  在“已安装的模板” 下，选择“Visual C#”  或 “Visual Basic”，然后选择“类库” 。  
+2. 在“已安装的模板”  下，选择“Visual C#”  或  “Visual Basic”，然后选择“类库”  。  
   
 #### <a name="to-create-a-vsix-project"></a>创建 VSIX 项目  
   
-1.  若要创建具有代码的组件，最简单的方法就是先创建类库项目。 然后，向该项目添加你的代码。  
+1. 若要创建具有代码的组件，最简单的方法就是先创建类库项目。 然后，向该项目添加你的代码。  
   
-2.  创建 VSIX 项目。  
+2. 创建 VSIX 项目。  
   
-    1.  在“解决方案资源管理器” 中，该解决方案的快捷菜单上，选择“添加” 、“新建项目” 。  
+    1. 在“解决方案资源管理器”  中，该解决方案的快捷菜单上，选择“添加”  、“新建项目”  。  
   
-    2.  在 **“已安装的模板”** 下，展开 **“Visual C#”** 或 **“Visual Basic”**，然后选择 **“扩展性”**。 在中间栏中，选择“VSIX 项目” 。  
+    2. 在 **“已安装的模板”** 下，展开 **“Visual C#”** 或 **“Visual Basic”** ，然后选择 **“扩展性”** 。 在中间栏中，选择“VSIX 项目”  。  
   
-3.  将 VSIX 项目设置为解决方案的启动项目。  
+3. 将 VSIX 项目设置为解决方案的启动项目。  
   
-    -   在“解决方案资源管理器”中，VSIX 项目的快捷菜单上选择“设为启动项目” 。  
+    - 在“解决方案资源管理器”中，VSIX 项目的快捷菜单上选择“设为启动项目”  。  
   
-4.  打开 **source.extension.vsixmanifest**。 将在清单编辑器中打开该文件。  
+4. 打开 **source.extension.vsixmanifest**。 将在清单编辑器中打开该文件。  
   
-5.  在“元数据”  选项卡上，设置 VSIX 的名称和描述性字段。  
+5. 在“元数据”  选项卡上，设置 VSIX 的名称和描述性字段。  
   
-6.  在“安装目标”  选项卡上，选择“新建”  ，并将 Visual Studio 版本设置为目标。  
+6. 在“安装目标”  选项卡上，选择“新建”  ，并将 Visual Studio 版本设置为目标。  
   
-7.  在“资产”  选项卡上，将组件添加到 Visual Studio 扩展。  
+7. 在“资产”  选项卡上，将组件添加到 Visual Studio 扩展。  
   
-    1.  选择 **“新建”**。  
+    1. 选择 **“新建”** 。  
   
-    2.  对于具有代码的组件，在“添加新资产”  对话框中对这些字段进行设置：  
+    2. 对于具有代码的组件，在“添加新资产”  对话框中对这些字段进行设置：  
   
         |||  
         |-|-|  
         |**类型** =|**Microsoft.VisualStudio.MefComponent**|  
-        |**源** =|**当前解决方案中的项目**|  
-        |**项目** =|*你的类库项目*|  
+        |Source   =|**当前解决方案中的项目**|  
+        |**Project** =|*你的类库项目*|  
         |**在此文件夹中嵌入** =|*（空）*|  
   
          有关其他组件类型，请参阅下一部分中的链接。  
@@ -100,54 +97,51 @@ ms.locfileid: "51805562"
   
 #### <a name="to-run-an-extension-during-its-development"></a>在其开发期间运行扩展  
   
-1.  在中[!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]**调试**菜单中，选择**开始调试**。  
+1. 在中[!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]**调试**菜单中，选择**开始调试**。  
   
      将生成项目，并且 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 的新实例将在实验模式下启动。  
   
-    -   或者可以选择“启动但不调试” 。 这将减少启动该程序所花费的时间。  
+    - 或者可以选择“启动但不调试”  。 这将减少启动该程序所花费的时间。  
   
-2.  创建或打开 Visual Studio 的实验实例中的一个建模项目并创建或打开一个关系图。  
+2. 创建或打开 Visual Studio 的实验实例中的一个建模项目并创建或打开一个关系图。  
   
      你的扩展将进行加载并运行。  
   
-3.  如果使用了“启动但不调试”  ，但想要使用调试器，请返回到 Visual Studio 的主实例。 在 **“调试”** 菜单上，单击 **“附加到进程”**。 在对话框中，选择具有程序名 **devenv**的 Visual Studio 的实验实例。  
+3. 如果使用了“启动但不调试”  ，但想要使用调试器，请返回到 Visual Studio 的主实例。 在 **“调试”** 菜单上，单击 **“附加到进程”** 。 在对话框中，选择具有程序名 **devenv**的 Visual Studio 的实验实例。  
   
-##  <a name="Installing"></a> 安装和卸载扩展  
+## <a name="Installing"></a> 安装和卸载扩展  
  执行以下步骤以在你自己的计算机上或在其他计算机上的 Visual Studio 的主实例中运行你的扩展。  
   
-1.  在你的计算机中，找到由你的扩展项目生成的 **.vsix** 文件。  
+1. 在你的计算机中，找到由你的扩展项目生成的 **.vsix** 文件。  
   
-    1.  在“解决方案资源管理器” 中，项目的快捷菜单上，选择“在 Windows 资源管理器中打开文件夹” 。  
+    1. 在“解决方案资源管理器”  中，项目的快捷菜单上，选择“在 Windows 资源管理器中打开文件夹”  。  
   
-    2.  找到的文件**bin\\\*\\**_YourProject_**.vsix**  
+    2. 找到的文件**bin\\\*\\** _YourProject_ **.vsix**  
   
-2.  将 **.vsix** 文件复制到要安装该扩展的目标计算机。 该计算机可以是自己的计算机或其他计算机。  
+2. 将 **.vsix** 文件复制到要安装该扩展的目标计算机。 该计算机可以是自己的计算机或其他计算机。  
   
-    -   目标计算机必须具有在 **source.extension.vsixmanifest** 的“安装目标” 选项卡上指定的 Visual Studio 版本之一。  
+    - 目标计算机必须具有在 **source.extension.vsixmanifest** 的“安装目标”  选项卡上指定的 Visual Studio 版本之一。  
   
-3.  在目标计算机上，打开 **.vsix** 文件，例如双击打开。  
+3. 在目标计算机上，打开 **.vsix** 文件，例如双击打开。  
   
-     “” 将会打开并安装扩展。  
+     “”  将会打开并安装扩展。  
   
-4.  启动或重新启动 Visual Studio。  
+4. 启动或重新启动 Visual Studio。  
   
 #### <a name="to-uninstall-an-extension"></a>若要卸载扩展  
   
-1. 在  “工具”菜单上，单击 “扩展和更新”。  
+1. 在  “工具”菜单上，单击  “扩展和更新”。  
   
-2. 展开“已安装的扩展” 。  
+2. 展开“已安装的扩展”  。  
   
-3. 选择扩展，然后单击“卸载” 。  
+3. 选择扩展，然后单击“卸载”  。  
   
    在极少数情况下，有错误的扩展无法加载并在错误窗口中创建报告，但不显示在扩展管理器中。 在这种情况下，您可以通过从以下位置删除文件来删除扩展其中 *%localappdata%* 通常*DriveName*: \Users\\*用户名*\AppData\Local:  
   
-   *%Localappdata%* **\Microsoft\VisualStudio\\[version] \Extensions**  
+   *%LocalAppData%* **\Microsoft\VisualStudio\\[version]\Extensions**  
   
 ## <a name="see-also"></a>请参阅  
  [定义用于扩展 UML 的配置文件](../modeling/define-a-profile-to-extend-uml.md)   
  [定义一个自定义建模工具箱项](../modeling/define-a-custom-modeling-toolbox-item.md)   
  [为 UML 模型定义验证约束](../modeling/define-validation-constraints-for-uml-models.md)   
  [在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)
-
-
-

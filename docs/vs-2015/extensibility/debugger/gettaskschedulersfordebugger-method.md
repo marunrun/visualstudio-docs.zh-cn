@@ -1,33 +1,28 @@
 ---
 title: GetTaskSchedulersForDebugger 方法 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - GetTaskSchedulersForDebugger method, TaskScheduler class [.NET Framework debug engines]
 ms.assetid: 58aa236a-5ab8-4695-b303-89dffdbcd946
 caps.latest.revision: 11
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: f748eae50ab810477cb625eac4373903236fec82
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 995bf40669a4480f6f1ddfe8071a7885a4659c9f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51749608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68152712"
 ---
 # <a name="gettaskschedulersfordebugger-method"></a>GetTaskSchedulersForDebugger 方法
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 检索的所有数组<xref:System.Threading.Tasks.TaskScheduler>当前处于活动状态的对象。  
   
- **Namespace**：<xref:System.Threading.Tasks?displayProperty=fullName>  
+ **命名空间：** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
  **程序集：** mscorlib （在 mscorlib.dll 中)  
   
@@ -47,4 +42,3 @@ ms.locfileid: "51749608"
   
 ## <a name="see-also"></a>请参阅  
  [TaskScheduler 类](../../extensibility/debugger/taskscheduler-class-internal-members.md)
-

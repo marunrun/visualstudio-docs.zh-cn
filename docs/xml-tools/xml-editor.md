@@ -1,23 +1,24 @@
 ---
 title: XML 编辑器
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5c1c81abbbc2f252744c465adf1cb99b3396d54
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 39e069dfd65294ed3d40342816e871757378a57b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53873760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63002481"
 ---
 # <a name="xml-editor"></a>XML 编辑器
 
-XML 编辑器取决于 Visual Studio 文本编辑器中，并包括对 XML 语言的额外支持。 XML 编辑器包括以下功能：
+Visual Studio 中的 XML 编辑器取决于文本编辑器，并包括对 XML 语言的额外支持。 当在 Visual Studio 中打开 XML 文件时，它在 XML 编辑器中打开。
+
+XML 编辑器包括以下功能：
 
 - XML 1.0 语法检查。
 
@@ -33,13 +34,13 @@ XML 编辑器取决于 Visual Studio 文本编辑器中，并包括对 XML 语�
 
 - 将 DTD 或 XML 数据简化 (XDR) 架构转换为 XML 架构。
 
-- XSLT 1.0 语法检查。
+- XSLT 语法检查。
 
 - 文档以大纲方式显示，从而使得可以展开和折叠元素。
 
 - 与集成[XML 架构资源管理器](../xml-tools/xml-schema-explorer.md)。 这提供了 XML 架构的分层视图。
 
-XML 编辑器调用针对的已知文件扩展名，如 *.xml*， *.xsd*， *.xsl*，以及 *.config*。如果文件似乎包含 XML，未知的文件扩展名也会调用“XML 编辑器”。 您可以还打开任何文件使用 XML 编辑器通过使用**打开**选项，并从列表中选择 XML 编辑器。
+XML 编辑器调用针对的已知文件扩展名，如 *.xml*， *.xsd*， *.xsl*，以及 *.config*。如果文件似乎包含 XML，未知的文件扩展名也会调用“XML 编辑器”。
 
 ## <a name="xslt-intellisense"></a>XSLT IntelliSense
 
@@ -47,7 +48,7 @@ XML 编辑器调用针对的已知文件扩展名，如 *.xml*， *.xsd*， *.xs
 
 ## <a name="xslt-profiler"></a>XSLT 探查器
 
-[XSLT 探查器](../xml-tools/walkthrough-xslt-profiler.md)创建详细的 XSLT 性能报告，可帮助您衡量、 评估和锁定 XSLT 代码中的与性能相关问题。 XSLT 探查器还包含有关 XSL 和 XSLT 样式表优化的有用提示。
+[XSLT 探查器](../xml-tools/xslt-profiler.md)创建详细的 XSLT 性能报告，可帮助您衡量、 评估和锁定 XSLT 代码中的与性能相关问题。 XSLT 探查器还包含有关 XSL 和 XSLT 样式表优化的有用提示。
 
 ## <a name="xslt-hierarchy"></a>XSLT 层次结构
 
@@ -55,6 +56,8 @@ XML 编辑器调用针对的已知文件扩展名，如 *.xml*， *.xsd*， *.xs
 
 ## <a name="see-also"></a>请参阅
 
-- [在代码编辑器功能](../ide/writing-code-in-the-code-and-text-editor.md)提供有关在文本编辑器的信息。
-- [XML 标准参考](https://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401)提供有关 XML 技术，包括 XML、 文档类型定义 (DTD)、 XML 架构定义语言 (XSD) 和 XSLT 的信息。
+- [XML 编辑器选项的格式设置](../ide/reference/options-text-editor-xml-formatting.md)
+- [XML 编辑器选项-杂项](../ide/reference/options-text-editor-xml-miscellaneous.md)
+- [代码编辑器功能](../ide/writing-code-in-the-code-and-text-editor.md)
+- [XML 标准参考](https://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401)
 - [Visual Studio 中的 XML 工具](../xml-tools/xml-tools-in-visual-studio.md)

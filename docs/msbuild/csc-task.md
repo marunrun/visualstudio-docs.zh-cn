@@ -15,22 +15,21 @@ helpviewer_keywords:
 ms.assetid: d8c19b36-f5ca-484b-afa6-8ff3b90e103a
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 59c9c7d092ff5d080baebdc562bbd6b3da436c88
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 39287eb2b1aec27dcb0c08c40875ce579b3a6bea
+ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53838328"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66745787"
 ---
 # <a name="csc-task"></a>Csc 任务
-包装 csc.exe，生成可执行 (.exe) 文件、动态链接库（.dll 文件）或者代码模块（.netmodule 文件）。 有关 csc.exe 的详细信息，请参阅 [C# 编译器选项](/dotnet/csharp/language-reference/compiler-options/index)。  
+包装 csc.exe，生成可执行 (.exe) 文件、动态链接库（.dll 文件）或者代码模块（.netmodule 文件）     。 有关 csc.exe 的详细信息，请参阅 [C# 编译器选项](/dotnet/csharp/language-reference/compiler-options/index)  。
 
-## <a name="parameters"></a>参数  
- 下表描述了 `Csc` 任务的参数。  
-
+## <a name="parameters"></a>参数
+下表描述了 `Csc` 任务的参数。
 
 | 参数 | 说明 |
 |------------------------------| - |
@@ -38,7 +37,7 @@ ms.locfileid: "53838328"
 | `AddModules` | 可选 `String` 参数。<br /><br /> 指定将构成程序集一部分的一个或多个模块。 有关详细信息，请参阅 [（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/addmodule-compiler-option)。 |
 | `AllowUnsafeBlocks` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则编译使用 [unsafe](/dotnet/csharp/language-reference/keywords/unsafe) 关键字的代码。 有关详细信息，请参阅 [-unsafe（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/unsafe-compiler-option)。 |
 | `ApplicationConfiguration` | 可选 `String` 参数。<br /><br /> 指定包含程序集绑定设置的应用程序配置文件。 |
-| `BaseAddress` | 可选 `String` 参数。<br /><br /> 指定要加载 DLL 的首选基址。 DLL 的默认基址由 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 公共语言运行时设置。 有关详细信息，请参阅 [-baseaddress（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/baseaddress-compiler-option)。 |
+| `BaseAddress` | 可选 `String` 参数。<br /><br /> 指定要加载 DLL 的首选基址。 DLL 的默认基址由 .NET Framework 公共语言运行时设置。 有关详细信息，请参阅 [-baseaddress（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/baseaddress-compiler-option)。 |
 | `CheckForOverflowUnderflow` | 可选 `Boolean` 参数。<br /><br /> 指定溢出数据类型边界的整数算法是否导致运行时异常。 有关详细信息，请参阅 [-checked（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/checked-compiler-option)。 |
 | `CodePage` | 可选 `Int32` 参数。<br /><br /> 指定要用于编译中所有源代码文件的代码页。 有关详细信息，请参阅 [-codepage（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/codepage-compiler-option)。 |
 | `DebugType` | 可选 `String` 参数。<br /><br /> 指定调试类型。 `DebugType` 可以是 `full` 或 `pdbonly`。 默认值是 `full`，这使得调试程序能够附加到正在运行的程序中。 指定在调试程序中启动该程序时，`pdbonly` 启用源代码调试，但正在运行的程序附加到调试程序时，只显示汇编程序。<br /><br /> 此参数替代 `EmitDebugInformation` 参数。<br /><br /> 有关详细信息，请参阅 [-debug（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/debug-compiler-option)。 |
@@ -54,20 +53,20 @@ ms.locfileid: "53838328"
 | `KeyContainer` | 可选 `String` 参数。<br /><br /> 指定加密密钥容器的名称。 有关详细信息，请参阅 [-keycontainer（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/keycontainer-compiler-option)。 |
 | `KeyFile` | 可选 `String` 参数。<br /><br /> 指定含有加密密钥的文件名。 有关详细信息，请参阅 [-keyfile（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/keyfile-compiler-option)。 |
 | `LangVersion` | 可选 `String` 参数。<br /><br /> 指定要使用的语言版本。 有关详细信息，请参阅 [-langversion（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/langversion-compiler-option)。 |
-| `LinkResources` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 创建指向输出文件中的 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 资源的链接；资源文件不会放入输出文件中。<br /><br /> 传递到此参数的项可以具有名为 `LogicalName` 和 `Access` 的可选元数据条目。 `LogicalName` 对应于 `/linkresource` 开关的 `identifier` 参数，`Access` 对应于 `accessibility-modifier` 参数。 有关详细信息，请参阅 [-linkresource（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/linkresource-compiler-option)。 |
+| `LinkResources` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 创建指向输出文件中的 .NET Framework 资源的链接；资源文件不会放入输出文件中。<br /><br /> 传递到此参数的项可以具有名为 `LogicalName` 和 `Access` 的可选元数据条目。 `LogicalName` 对应于 `/linkresource` 开关的 `identifier` 参数，`Access` 对应于 `accessibility-modifier` 参数。 有关详细信息，请参阅 [-linkresource（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/linkresource-compiler-option)。 |
 | `MainEntryPoint` | 可选 `String` 参数。<br /><br /> 指定 `Main` 方法的位置。 有关详细信息，请参阅 [-main（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/main-compiler-option)。 |
 | `ModuleAssemblyName` | 可选 `String` 参数。<br /><br /> 指定此模块所属程序集的名称。 |
-| `NoConfig` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则告知编译器不使用 csc.rsp 文件进行编译。 有关详细信息，请参阅 [-noconfig（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/noconfig-compiler-option)。 |
+| `NoConfig` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则告知编译器不使用 csc.rsp 文件进行编译  。 有关详细信息，请参阅 [-noconfig（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/noconfig-compiler-option)。 |
 | `NoLogo` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则禁止显示编译器横幅信息。 有关详细信息，请参阅 [-nologo（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/nologo-compiler-option)。 |
-| `NoStandardLib` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则防止导入 mscorlib.dll，这定义了整个 System 命名空间。 如果你想要定义或创建自己的 System 命名空间和对象，请使用此参数。 有关详细信息，请参阅 [-nostdlib（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/nostdlib-compiler-option)。 |
+| `NoStandardLib` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则防止导入 mscorlib.dll，这定义了整个 System 命名空间。  如果你想要定义或创建自己的 System 命名空间和对象，请使用此参数。 有关详细信息，请参阅 [-nostdlib（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/nostdlib-compiler-option)。 |
 | `NoWin32Manifest` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则不包括默认的 Win32 清单。 |
 | `Optimize` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则启用优化。 如果为 `false`，则禁用优化。 有关详细信息，请参阅 [-optimize（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/optimize-compiler-option)。 |
 | `OutputAssembly` | 可选 `String` 输出参数。<br /><br /> 指定输出文件的名称。 有关详细信息，请参阅 [-out（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/out-compiler-option)。 |
 | `OutputRefAssembly` | 可选 `String` 参数。<br /><br /> 指定输出引用程序集文件的名称。 有关详细信息，请参阅 [-refout （C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/refout-compiler-option)。 |
-| `PdbFile` | 可选 `String` 参数。<br /><br /> 指定调试信息文件名。 默认名称是扩展名为 .pdb 的输出文件名。 |
+| `PdbFile` | 可选 `String` 参数。<br /><br /> 指定调试信息文件名。 默认名称是扩展名为 .pdb 的输出文件名。  |
 | `Platform` | 可选 `String` 参数。<br /><br /> 指定将作为输出文件目标的处理器平台。 此参数可以具有 `x86`、`x64` 或 `anycpu` 的值。 默认值为 `anycpu`。 有关详细信息，请参阅 [-platform（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option)。 |
 | `References` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 促使该任务将公共类型信息从指定项导入到当前项目中。 有关详细信息，请参阅 [-reference（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/reference-compiler-option)。<br /><br /> 你可以通过将元数据 `Aliases` 添加到原始的“参考”项，在 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 文件中指定 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 引用别名。 例如，在以下 Csc 命令行中设置别名“LS1”：<br /><br /> `CSC /r:LS1=MyCodeLibrary.dll /r:LS2=MyCodeLibrary2.dll *.cs`<br /><br /> 将使用：<br /><br /> `<Reference Include="MyCodeLibrary"> <Aliases>LS1</Aliases> </Reference>` |
-| `Resources` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 将 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 资源嵌入到输出文件中。<br /><br /> 传递到此参数的项可以具有名为 `LogicalName` 和 `Access` 的可选元数据条目。 `LogicalName` 对应于 `/resource` 开关的 `identifier` 参数，`Access` 对应于 `accessibility-modifier` 参数。 有关详细信息，请参阅 [-resource（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/resource-compiler-option)。 |
+| `Resources` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 将 .NET Framework 资源嵌入到输出文件。<br /><br /> 传递到此参数的项可以具有名为 `LogicalName` 和 `Access` 的可选元数据条目。 `LogicalName` 对应于 `/resource` 开关的 `identifier` 参数，`Access` 对应于 `accessibility-modifier` 参数。 有关详细信息，请参阅 [-resource（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/resource-compiler-option)。 |
 | `ResponseFiles` | 可选 `String` 参数。<br /><br /> 指定包含此任务命令的响应文件。 有关详细信息，请参阅 [@（指定响应文件）](/dotnet/csharp/language-reference/compiler-options/response-file-compiler-option)。 |
 | `Sources` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定一个或多个 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 源文件。 |
 | `TargetType` | 可选 `String` 参数。<br /><br /> 指定输出文件的文件格式。 此参数可以具有 `library` 或 `winexe` 的值，前者将创建代码库 `exe`，代码库将创建控制台应用程序 `module`，应用程序将创建一个模块，后者将创建 Windows 程序。 默认值为 `library`。 有关详细信息，请参阅 [-target（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/target-compiler-option)。 |
@@ -77,23 +76,23 @@ ms.locfileid: "53838328"
 | `WarningLevel` | 可选 `Int32` 参数。<br /><br /> 指定编译器显示的警告级别。 有关详细信息，请参阅 [-warn（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/warn-compiler-option)。 |
 | `WarningsAsErrors` | 可选 `String` 参数。<br /><br /> 指定将被视为错误的警告的列表。 有关详细信息，请参阅 [-warnaserror（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option)。<br /><br /> 此参数替代 `TreatWarningsAsErrors` 参数。 |
 | `WarningsNotAsErrors` | 可选 `String` 参数。<br /><br /> 指定不被视为错误的警告的列表。 有关详细信息，请参阅 [-warnaserror（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option)。<br /><br /> 只有 `TreatWarningsAsErrors` 参数设置为 `true` 时，此参数才有用。 |
-| `Win32Icon` | 可选 `String` 参数。<br /><br /> 在程序集中插入 .ico 文件，为输出文件赋予其在“文件资源管理器”中所需的外观。 有关详细信息，请参阅 [-win32icon（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option)。 |
+| `Win32Icon` | 可选 `String` 参数。<br /><br /> 在程序集中插入 .ico 文件，为输出文件赋予其在“文件资源管理器”中所需的外观  。  有关详细信息，请参阅 [-win32icon（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option)。 |
 | `Win32Manifest` | 可选 `String` 参数。<br /><br /> 指定要包含的 Win32 清单。 |
-| `Win32Resource` | 可选 `String` 参数。<br /><br /> 在输出文件中插入 Win32 资源 (.res) 文件。 有关详细信息，请参阅 [-win32res（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/win32res-compiler-option)。 |
+| `Win32Resource` | 可选 `String` 参数。<br /><br /> 在输出文件中插入 Win32 资源 (.res) 文件  。 有关详细信息，请参阅 [-win32res（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/win32res-compiler-option)。 |
 
-## <a name="remarks"></a>备注  
- 除上面列出的参数外，此任务还从 `Microsoft.Build.Tasks.ManagedCompiler` 类继承参数，该类继承自 <xref:Microsoft.Build.Tasks.ToolTaskExtension> 类（它自身继承自 <xref:Microsoft.Build.Utilities.ToolTask> 类）。 有关这些其他参数的列表及其说明，请参阅 [ToolTaskExtension 基类](../msbuild/tooltaskextension-base-class.md)。  
+## <a name="remarks"></a>备注
+除上面列出的参数外，此任务还从 `Microsoft.Build.Tasks.ManagedCompiler` 类继承参数，该类继承自 <xref:Microsoft.Build.Tasks.ToolTaskExtension> 类（它自身继承自 <xref:Microsoft.Build.Utilities.ToolTask> 类）。 有关这些其他参数的列表及其说明，请参阅 [ToolTaskExtension 基类](../msbuild/tooltaskextension-base-class.md)。
 
-## <a name="example"></a>示例  
- 以下示例使用 `Csc` 任务来编译 `Compile` 项集合的源文件中的可执行文件。  
+## <a name="example"></a>示例
+以下示例使用 `Csc` 任务来编译 `Compile` 项集合的源文件中的可执行文件。
 
-```xml  
-<CSC  
-    Sources="@(Compile)"  
-    OutputAssembly="$(AppName).exe"  
-    EmitDebugInformation="true" />  
-```  
+```xml
+<CSC
+    Sources="@(Compile)"
+    OutputAssembly="$(AppName).exe"
+    EmitDebugInformation="true" />
+```
 
-## <a name="see-also"></a>请参阅  
- [任务参考](../msbuild/msbuild-task-reference.md)   
- [任务](../msbuild/msbuild-tasks.md)
+## <a name="see-also"></a>请参阅
+- [任务参考](../msbuild/msbuild-task-reference.md)
+- [任务](../msbuild/msbuild-tasks.md)

@@ -1,0 +1,258 @@
+- name: 在 Visual Studio 中访问数据
+  items:
+    - name: 在 Visual Studio 中访问数据
+      href: accessing-data-in-visual-studio.md
+    - name: 安装数据库系统、工具和示例
+      items:
+        - name: 安装数据库系统、工具和示例
+          href: installing-database-systems-tools-and-samples.md
+        - name: 安装 SQL Server 示例数据库
+          href: install-sql-server-sample-databases.md
+        - name: 使用脚本创建 SQL 数据库
+          href: create-a-sql-database-by-using-a-script.md
+        - name: 使用设计器创建 SQL 数据库
+          href: create-a-sql-database-by-using-a-designer.md
+        - name: 升级 .mdf 文件
+          href: upgrade-dot-mdf-files.md
+    - name: 适用于 NET 的 Visual Studio Data Tools
+      items:
+        - name: 适用于 NET 的 Visual Studio Data Tools
+          href: visual-studio-data-tools-for-dotnet.md
+        - name: 使用 ADO.NET 创建简单的数据应用程序
+          href: create-a-simple-data-application-by-using-adonet.md
+        - name: 使用 WPF 和 Entity Framework 6 创建简单的数据应用程序
+          href: create-a-simple-data-application-with-wpf-and-entity-framework-6.md
+        - name: 添加新连接
+          items:
+            - name: 添加新连接
+              href: add-new-connections.md
+            - name: 连接到 Access 数据库中的数据（Windows 窗体）
+              href: connect-to-data-in-an-access-database-windows-forms.md
+        - name: 添加新数据源
+          href: add-new-data-sources.md
+        - name: Visual Studio 中的实体数据模型工具
+          href: entity-data-model-tools-in-visual-studio.md
+        - name: Visual Studio 中的数据集工具
+          items:
+            - name: Visual Studio 中的数据集工具
+              href: dataset-tools-in-visual-studio.md
+            - name: 创建和配置数据集
+              items:
+                - name: 创建和配置数据集
+                  href: create-and-configure-datasets-in-visual-studio.md
+                - name: 类型化与非类型化数据集
+                  href: typed-vs-untyped-datasets.md
+                - name: 数据集中的关系
+                  href: relationships-in-datasets.md
+            - name: 使用 Tableadapter 填充数据集
+              items:
+                - name: 使用 Tableadapter 填充数据集
+                  href: fill-datasets-by-using-tableadapters.md
+                - name: 创建和配置 TableAdapter
+                  href: create-and-configure-tableadapters.md
+                - name: 创建参数化 TableAdapter 查询
+                  href: create-parameterized-tableadapter-queries.md
+                - name: 使用 TableAdapter 直接访问数据库
+                  href: directly-access-the-database-with-a-tableadapter.md
+                - name: 在填充数据集时关闭约束
+                  href: turn-off-constraints-while-filling-a-dataset.md
+                - name: 扩展 TableAdapter 的功能
+                  href: extend-the-functionality-of-a-tableadapter.md
+                - name: 将 XML 数据读入到数据集中
+                  href: read-xml-data-into-a-dataset.md
+            - name: 编辑数据集中的数据
+              href: edit-data-in-datasets.md
+            - name: 验证数据集中的数据
+              href: validate-data-in-datasets.md
+            - name: 将数据保存回数据库
+              items:
+                - name: 将数据保存回数据库
+                  href: save-data-back-to-the-database.md
+                - name: 将新记录插入数据库
+                  href: insert-new-records-into-a-database.md
+                - name: 使用 TableAdapter 更新数据
+                  href: update-data-by-using-a-tableadapter.md
+                - name: 分层更新
+                  href: hierarchical-update.md
+                - name: 处理并发异常
+                  href: handle-a-concurrency-exception.md
+                - name: 使用事务保存数据
+                  href: save-data-by-using-a-transaction.md
+                - name: 在事务中保存数据
+                  href: save-data-in-a-transaction.md
+                - name: 将数据保存到数据库（多个表）
+                  href: save-data-to-a-database-multiple-tables.md
+                - name: 将数据从对象保存到数据库
+                  href: save-data-from-an-object-to-a-database.md
+                - name: 用 TableAdapter DBDirect 方法保存数据
+                  href: save-data-with-the-tableadapter-dbdirect-methods.md
+                - name: 将数据集另存为 XML
+                  href: save-a-dataset-as-xml.md
+            - name: 查询数据集
+              href: query-datasets.md
+            - name: 在 n 层应用程序中使用数据集
+              items:
+                - name: 在 n 层应用程序中使用数据集
+                  href: work-with-datasets-in-n-tier-applications.md
+                - name: 向 n 层数据集添加验证
+                  href: add-validation-to-an-n-tier-dataset.md
+                - name: 向 n 层应用程序中的数据集添加代码
+                  href: add-code-to-datasets-in-n-tier-applications.md
+                - name: 向 n 层应用程序中的 TableAdapter 添加代码
+                  href: add-code-to-tableadapters-in-n-tier-applications.md
+                - name: 将数据集和 TableAdapter 分离到不同的项目中
+                  href: separate-datasets-and-tableadapters-into-different-projects.md
+        - name: Visual Studio 中的 LINQ to SQL 工具
+          items:
+            - name: Visual Studio 中的 LINQ to SQL 工具
+              href: linq-to-sql-tools-in-visual-studio2.md
+            - name: DataContext 方法（O/R 设计器）
+              items:
+                - name: DataContext 方法（O/R 设计器）
+                  href: datacontext-methods-o-r-designer.md
+                - name: 更改 DataContext 方法的返回类型（O/R 设计器）
+                  href: how-to-change-the-return-type-of-a-datacontext-method-o-r-designer.md
+                - name: 创建映射到存储过程和函数的 DataContext 方法（O/R 设计器）
+                  href: how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md
+            - name: 数据类继承（O/R 设计器）
+              items:
+                - name: 数据类继承（O/R 设计器）
+                  href: data-class-inheritance-o-r-designer.md
+                - name: 使用 O/R 设计器配置继承
+                  href: how-to-configure-inheritance-by-using-the-o-r-designer.md
+                - name: 使用单表继承创建 LINQ to SQL 类（O/R 设计器）
+                  href: walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md
+            - name: 创建映射到表和视图的 LINQ to SQL 类（O/R 设计器）
+              href: how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md
+            - name: 扩展 O/R 设计器生成的代码
+              href: how-to-extend-code-generated-by-the-o-r-designer.md
+            - name: 创建 LINQ to SQL 类之间的关联（关系）（O/R 设计器）
+              href: how-to-create-an-association-relationship-between-linq-to-sql-classes-o-r-designer.md
+            - name: 在实体类中添加验证
+              href: how-to-add-validation-to-entity-classes.md
+            - name: 自定义实体类的插入、更新和删除行为
+              href: walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes.md
+            - name: 分配存储过程以便执行更新、插入和删除操作（O/R 设计器）
+              href: how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md
+            - name: 打开和关闭复数形式（O/R 设计器）
+              href: how-to-turn-pluralization-on-and-off-o-r-designer.md
+            - name: O/R 设计器消息
+              items:
+                - name: O/R 设计器消息
+                  href: o-r-designer-messages.md
+                - name: 无法删除所选类，因为该类用作一个或多个 DataContext 方法的返回类型
+                  href: the-selected-class-cannot-be-deleted-because-it-is-used-as-a-return-type-for-one-or-more-datacontext-methods.md
+                - name: 连接字符串包含的凭据具有明文密码并且未使用集成安全性
+                  href: the-connection-string-contains-credentials-with-a-clear-text-password-and-is-not-using-integrated-security.md
+                - name: 无法删除属性 <属性名称\>，因为它正在参与关联 <关联名称\>
+                  href: the-property-property-name-cannot-be-deleted-because-it-is-participating-in-the-association-association-name.md
+                - name: 无法删除属性 <属性名称\>
+                  href: the-property-property-name-cannot-be-deleted.md
+                - name: 应用程序设置文件中的连接属性缺失或不正确
+                  href: the-connection-property-in-the-application-settings-file-is-missing-or-incorrect.md
+                - name: 您从不支持的数据库提供程序选择了数据库对象
+                  href: you-have-selected-a-database-object-from-an-unsupported-database-provider.md
+                - name: 无法创建关联 <关联名称\> - 属性类型不匹配
+                  href: cannot-create-an-association-association-name-property-types-do-not-match.md
+                - name: 警告。 尚未应用对“配置行为”对话框所做的更改
+                  href: warning-changes-have-been-made-to-the-configure-behavior-dialog-box-that-have-not-been-applied.md
+                - name: 此相关方法是以下默认插入、更新或删除方法的支持方法
+                  href: this-related-method-is-the-backing-method-for-the-following-default-insert-update-or-delete-methods.md
+                - name: 一个或多个所选项包含设计器不支持的数据类型
+                  href: one-or-more-selected-items-contain-a-data-type-that-is-not-supported-by-the-designer.md
+                - name: 对 DataContext 方法的返回类型的更改操作不能撤消
+                  href: changing-the-return-type-of-a-datacontext-method-cannot-be-undone.md
+                - name: 调试时无法修改设计器
+                  href: the-designer-cannot-be-modified-while-debugging.md
+                - name: 所选连接使用不支持的数据库提供程序
+                  href: the-selected-connection-uses-an-unsupported-database-provider.md
+                - name: 您添加到设计器的对象使用与当前使用的设计器不同的数据连接
+                  href: the-objects-you-are-adding-to-the-designer-use-a-different-data-connection-than-the-designer-is-currently-using.md
+                - name: 无法创建关联 <关联名称\> - 属性已列出两次
+                  href: cannot-create-an-association-association-name-property-listed-twice.md
+                - name: 检索不到数据库对象 <对象名称\> 的架构信息
+                  href: could-not-retrieve-schema-information-for-database-object-object-name.md
+                - name: 一个或多个所选数据库对象返回与目标类的架构不匹配的架构
+                  href: one-or-more-selected-database-objects-return-a-schema-that-does-not-match-the-schema-of-the-target-class.md
+        - name: 在 Visual Studio 中将控件绑定到数据
+          items:
+            - name: 在 Visual Studio 中将控件绑定到数据
+              href: bind-controls-to-data-in-visual-studio.md
+            - name: 设置从“数据源”窗口中拖动时要创建的控件
+              href: set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md
+            - name: 向“数据源”窗口添加自定义控件
+              href: add-custom-controls-to-the-data-sources-window.md
+            - name: 在 Windows 窗体应用程序中对数据进行筛选和排序
+              href: filter-and-sort-data-in-a-windows-forms-application.md
+            - name: 在 Visual Studio 中将 WPF 控件绑定到数据
+              items:
+                - name: 在 Visual Studio 中将 WPF 控件绑定到数据
+                  href: bind-wpf-controls-to-data-in-visual-studio1.md
+                - name: 将 WPF 控件绑定到数据集
+                  href: bind-wpf-controls-to-a-dataset.md
+                - name: 在 Visual Studio 中将 WPF 控件绑定到数据
+                  href: bind-wpf-controls-to-data-in-visual-studio2.md
+                - name: 将 WPF 控件绑定到 WCF 数据服务
+                  href: bind-wpf-controls-to-a-wcf-data-service.md
+                - name: 在 WPF 应用程序中创建查找表
+                  href: create-lookup-tables-in-wpf-applications.md
+                - name: 在 WPF 应用程序中显示相关数据
+                  href: display-related-data-in-wpf-applications.md
+                - name: 在 WPF 应用程序中显示相关数据
+                  href: walkthrough-displaying-related-data-in-a-wpf-application.md
+                - name: 将控件绑定到数据库中的图片
+                  href: bind-controls-to-pictures-from-a-database.md
+            - name: 在 Visual Studio 中将 Windows 窗体控件绑定到数据
+              items:
+                - name: 在 Visual Studio 中将 Windows 窗体控件绑定到数据
+                  href: bind-windows-forms-controls-to-data-in-visual-studio.md
+                - name: 将 Windows 窗体控件绑定到数据
+                  href: bind-windows-forms-controls-to-data.md
+                - name: 在保存数据前提交数据绑定控件中正在进行的编辑
+                  href: commit-in-process-edits-on-data-bound-controls-before-saving-data.md
+                - name: 在 Windows 窗体应用程序中创建查找表
+                  href: create-lookup-tables-in-windows-forms-applications.md
+                - name: 创建用于搜索数据的 Windows 窗体
+                  href: create-a-windows-form-to-search-data.md
+                - name: 创建支持简单数据绑定的 Windows 窗体用户控件
+                  href: create-a-windows-forms-user-control-that-supports-simple-data-binding.md
+                - name: 创建支持复杂数据绑定的 Windows 窗体用户控件
+                  href: create-a-windows-forms-user-control-that-supports-complex-data-binding.md
+                - name: 创建支持查找数据绑定的 Windows 窗体用户控件
+                  href: create-a-windows-forms-user-control-that-supports-lookup-data-binding.md
+                - name: 在窗体间传递数据
+                  href: pass-data-between-forms.md
+            - name: Visual Studio 中的绑定对象
+              href: bind-objects-in-visual-studio.md
+            - name: 自定义 Visual Studio 创建数据绑定控件的标题的方式
+              href: customize-how-visual-studio-creates-captions-for-data-bound-controls.md
+        - name: Visual Studio 中的 Windows Communication Foundation 服务和 WCF 数据服务
+          items:
+            - name: Visual Studio 中的 Windows Communication Foundation 服务和 WCF 数据服务
+              href: windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md
+            - name: 连接到服务中的数据
+              href: how-to-connect-to-data-in-a-service.md
+            - name: 在 Windows 窗体中创建简单的 WCF 服务
+              href: walkthrough-creating-a-simple-wcf-service-in-windows-forms.md
+            - name: 通过 WPF 和实体框架创建 WCF 数据服务
+              href: walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework.md
+            - name: 使用概念模型
+              href: working-with-a-conceptual-model-wcf-data-services.md
+            - name: 服务引用疑难解答
+              href: troubleshooting-service-references.md
+            - name: “配置服务引用”对话框
+              href: configure-service-reference-dialog-box.md
+            - name: 添加、更新或删除 WCF 数据服务引用
+              href: how-to-add-update-or-remove-a-wcf-data-service-reference.md
+        - name: 在 Visual Studio 中创建和管理数据库和数据层应用程序
+          items:
+            - name: 在 Visual Studio 中创建和管理数据库和数据层应用程序
+              href: creating-and-managing-databases-and-data-tier-applications-in-visual-studio.md
+            - name: 创建 N 层数据应用程序”视频
+              href: walkthrough-creating-an-n-tier-data-application.md
+            - name: N 层数据应用程序概述
+              href: n-tier-data-applications-overview.md
+        - name: 数据访问错误疑难解答的其他资源
+          href: additional-resources-for-troubleshooting-data-access-errors.md
+    - name: 适用于 C++ 的 Visual Studio Data Tools
+      href: visual-studio-data-tools-for-cpp.md

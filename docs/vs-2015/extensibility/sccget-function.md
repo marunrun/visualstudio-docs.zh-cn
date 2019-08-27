@@ -1,14 +1,9 @@
 ---
 title: SccGet 函数 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - SccGet
 helpviewer_keywords:
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 09a18bd2-b788-411a-9da6-067d806e46f6
 caps.latest.revision: 15
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 78c766e52278c8bae29e57cad6f1c0255de4ea43
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 2a5d5065ca427f0319174aa59e6b87d356816d4c
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51761718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63432434"
 ---
 # <a name="sccget-function"></a>SccGet 函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -82,7 +77,7 @@ SCCRTN SccGet(
  `SCC_GET_ALL`可以结合标志`SCC_GET_RECURSIVE`标志，用于检索在给定目录中的所有文件和所有子目录。  
   
 > [!NOTE]
->  `SCC_GET_RECURSIVE` 应永远不会传递而无需`SCC_GET_ALL`。 另请注意，是否目录 C:\A 和 C:\A\B 传递递归 get，C:\A\B 及其所有的子目录将实际检索两次。 IDE 的负责 — 并不是源代码管理插件的 — 若要确保从数组的保持这种重复项。  
+> `SCC_GET_RECURSIVE` 应永远不会传递而无需`SCC_GET_ALL`。 另请注意，是否目录 C:\A 和 C:\A\B 传递递归 get，C:\A\B 及其所有的子目录将实际检索两次。 IDE 的负责 — 并不是源代码管理插件的 — 若要确保从数组的保持这种重复项。  
   
  最后，即使在进行源代码管理插件指定`SCC_CAP_GET_NOUI`上初始化，表示它没有 Get 命令的用户界面，在 IDE 中检索文件可能仍调用此函数的标志。 该标志只是意味着 IDE 不会显示 Get 菜单项和，该插件不需要提供任何 UI。  
   
@@ -91,23 +86,22 @@ SCCRTN SccGet(
   
  有两种方法来解决这种情况下，源控制版本的本地缓存变得与源代码管理数据库不同步：  
   
-1.  不允许重命名当前已签出源代码管理数据库中的文件。  
+1. 不允许重命名当前已签出源代码管理数据库中的文件。  
   
-2.  执行操作"删除旧"后跟"添加新"的等效项。 下面的算法是一种方法来实现此目的。  
+2. 执行操作"删除旧"后跟"添加新"的等效项。 下面的算法是一种方法来实现此目的。  
   
-    1.  调用[SccQueryChanges](../extensibility/sccquerychanges-function.md)若要了解如何重命名为 b.txt 源代码管理数据库中的 a.txt 的函数。  
+    1. 调用[SccQueryChanges](../extensibility/sccquerychanges-function.md)若要了解如何重命名为 b.txt 源代码管理数据库中的 a.txt 的函数。  
   
-    2.  将本地 a.txt 重命名为 b.txt。  
+    2. 将本地 a.txt 重命名为 b.txt。  
   
-    3.  调用`SccGet`a.txt 和 b.txt 函数。  
+    3. 调用`SccGet`a.txt 和 b.txt 函数。  
   
-    4.  源代码管理数据库中不存在 a.txt，因为本地版本缓存会清除缺失 a.txt 版本信息。  
+    4. 源代码管理数据库中不存在 a.txt，因为本地版本缓存会清除缺失 a.txt 版本信息。  
   
-    5.  正在签出的 b.txt 文件与本地 b.txt 文件的内容合并。  
+    5. 正在签出的 b.txt 文件与本地 b.txt 文件的内容合并。  
   
-    6.  现在可以检查更新的 b.txt 文件。  
+    6. 现在可以检查更新的 b.txt 文件。  
   
 ## <a name="see-also"></a>请参阅  
  [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)   
  [特定命令使用的位标志](../extensibility/bitflags-used-by-specific-commands.md)
-

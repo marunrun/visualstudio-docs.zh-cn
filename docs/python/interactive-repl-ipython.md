@@ -1,22 +1,21 @@
 ---
 title: IPython REPL（交互式窗口）
 description: 使用 IPython 模式下的 Visual Studio 交互窗口提供用户友好交互式开发环境，并具有交互式并行计算功能。
-ms.date: 10/29/2018
-ms.prod: visual-studio-dev15
+ms.date: 01/28/2019
 ms.topic: conceptual
-author: kraigb
-ms.author: kraigb
-manager: douge
+author: JoshuaPartlow
+ms.author: joshuapa
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c38c9263792cb62e60b13e0671c943435320436b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8b4510ed738fdd2b33389ab4242dbde86cffff8c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53821986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62957718"
 ---
 # <a name="use-ipython-in-the-interactive-window"></a>在交互窗口中使用 IPython
 
@@ -42,7 +41,7 @@ IPython 模式下的 Visual Studio 交互窗口是目前非常先进的用户友
    ```python
    import matplotlib.pyplot as plt
    import numpy as np
-  
+
    x = np.linspace(0, 5, 10)
    y = x ** 2
    plt.plot(x, y, 'r', x, x ** 3, 'g', x, x ** 4, 'b')

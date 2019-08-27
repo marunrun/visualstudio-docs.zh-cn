@@ -1,27 +1,22 @@
 ---
 title: GuidSymbol 元素 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 helpviewer_keywords:
 - VSCT XML schema elements, GuidSymbol
 - GuidSymbol element (VSCT XML schema)
 ms.assetid: 11fb3545-8974-4776-9a54-6b6e7739ae31
 caps.latest.revision: 9
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 6d2f3648ab8dd7c140fe07e2469acfc9b417518f
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 5f11ed48d9dcf961228957cf15db3815c00d14d7
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51771797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68204225"
 ---
 # <a name="guidsymbol-element"></a>GuidSymbol 元素
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -44,8 +39,8 @@ ms.locfileid: "51771797"
   
 |特性|描述|  
 |---------------|-----------------|  
-|name|必须的。 在 GUID 符号的名称。|  
-|值|必须的。 在 GUID 符号的 GUID。|  
+|name|必需。 在 GUID 符号的名称。|  
+|value|必需。 在 GUID 符号的 GUID。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -64,4 +59,3 @@ ms.locfileid: "51771797"
   
 ## <a name="see-also"></a>请参阅  
  [Visual Studio 命令表格 (.Vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
-

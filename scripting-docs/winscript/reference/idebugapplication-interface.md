@@ -2,7 +2,6 @@
 title: IDebugApplication 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,12 +13,12 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b3483bea94d7a53fabf3f552df97a681307b885c
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: 8229f234f8a8ce607f36c48e070cb3d40a211d45
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54349720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990826"
 ---
 # <a name="idebugapplication-interface"></a>IDebugApplication 接口
 语言引擎和主机公开非远程调试方法，供使用。  

@@ -1,14 +1,9 @@
 ---
 title: '&lt;命令&gt;元素 （引导程序） |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -20,13 +15,13 @@ ms.assetid: e61d5787-fe1f-4ebf-b0cf-0d7909be7ffb
 caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: 309f93658cee6663c2b5673c03c6621330e7fa39
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: af10c9e0b26a6ef2c8e7a98bc345b8e86017682b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49276570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68205338"
 ---
 # <a name="ltcommandsgt-element-bootstrapper"></a>&lt;命令&gt;元素 （引导程序）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -85,7 +80,7 @@ ms.locfileid: "49276570"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`PackageFile`|必须的。 要安装的包的名称应该为一个或多个指定的条件`InstallConditions`返回 false。 必须通过使用在同一文件中定义包`PackageFile`元素。|  
+|`PackageFile`|必需。 要安装的包的名称应该为一个或多个指定的条件`InstallConditions`返回 false。 必须通过使用在同一文件中定义包`PackageFile`元素。|  
 |`Arguments`|可选。 一组命令行参数将传递到包文件。|  
 |`EstimatedInstallSeconds`|可选。 估计的时间 （秒），需要安装包。 此值确定引导程序向用户显示进度栏的大小。 默认值为 0，这种情况下指定估计没有时间。|  
 |`EstimatedDiskBytes`|可选。 已完成的磁盘空间，以字节为单位，在安装后将占用包的估计的大小。 在引导程序向用户显示的硬盘空间要求中使用此值。 默认值为的 0，用例引导程序不会显示任何硬盘空间要求。|  
@@ -102,9 +97,9 @@ ms.locfileid: "49276570"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`Property`|必须的。 要测试的属性的名称。 该属性必须之前已由定义的子`InstallChecks`元素。 有关详细信息，请参阅[ \<InstallChecks > 元素](../deployment/installchecks-element-bootstrapper.md)。|  
-|`Compare`|必须的。 要执行的比较类型。 以下列表显示了有效的值：<br /><br /> `ValueEqualTo`, `ValueNotEqualTo`, `ValueGreaterThan`, `ValueGreaterThanOrEqualTo`, `ValueLessThan`, `ValueLessThanOrEqualTo`, `VersionEqualTo`, `VersionNotEqualTo`, `VersionGreaterThan`, `VersionGreaterThanOrEqualTo`, `VersionLessThan`, `VersionLessThanOrEqualTo`, `ValueExists`, `ValueNotExists`|  
-|`Value`|必须的。 要与属性比较的值。|  
+|`Property`|必需。 要测试的属性的名称。 该属性必须之前已由定义的子`InstallChecks`元素。 有关详细信息，请参阅[ \<InstallChecks > 元素](../deployment/installchecks-element-bootstrapper.md)。|  
+|`Compare`|必需。 要执行的比较类型。 以下列表显示了有效的值：<br /><br /> `ValueEqualTo`, `ValueNotEqualTo`, `ValueGreaterThan`, `ValueGreaterThanOrEqualTo`, `ValueLessThan`, `ValueLessThanOrEqualTo`, `VersionEqualTo`, `VersionNotEqualTo`, `VersionGreaterThan`, `VersionGreaterThanOrEqualTo`, `VersionLessThan`, `VersionLessThanOrEqualTo`, `ValueExists`, `ValueNotExists`|  
+|`Value`|必需。 要与属性比较的值。|  
 |`Schedule`|可选。 名称`Schedule`定义应何时计算此规则的标记。|  
   
 ## <a name="failif"></a>FailIf  
@@ -114,22 +109,22 @@ ms.locfileid: "49276570"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`Property`|必须的。 要测试的属性的名称。 该属性必须之前已由定义的子`InstallChecks`元素。 有关详细信息，请参阅[ \<InstallChecks > 元素](../deployment/installchecks-element-bootstrapper.md)。|  
-|`Compare`|必须的。 要执行的比较类型。 以下列表显示了有效的值：<br /><br /> `ValueEqualTo`, `ValueNotEqualTo`, `ValueGreaterThan`, `ValueGreaterThanOrEqualTo`, `ValueLessThan`, `ValueLessThanOrEqualTo`, `VersionEqualTo`, `VersionNotEqualTo`, `VersionGreaterThan`, `VersionGreaterThanOrEqualTo`, `VersionLessThan`, `VersionLessThanOrEqualTo`, `ValueExists`, `ValueNotExists`|  
-|`Value`|必须的。 要与属性比较的值。|  
+|`Property`|必需。 要测试的属性的名称。 该属性必须之前已由定义的子`InstallChecks`元素。 有关详细信息，请参阅[ \<InstallChecks > 元素](../deployment/installchecks-element-bootstrapper.md)。|  
+|`Compare`|必需。 要执行的比较类型。 以下列表显示了有效的值：<br /><br /> `ValueEqualTo`, `ValueNotEqualTo`, `ValueGreaterThan`, `ValueGreaterThanOrEqualTo`, `ValueLessThan`, `ValueLessThanOrEqualTo`, `VersionEqualTo`, `VersionNotEqualTo`, `VersionGreaterThan`, `VersionGreaterThanOrEqualTo`, `VersionLessThan`, `VersionLessThanOrEqualTo`, `ValueExists`, `ValueNotExists`|  
+|`Value`|必需。 要与属性比较的值。|  
 |`String`|可选。 要向用户在失败时显示的文本。|  
 |`Schedule`|可选。 名称`Schedule`定义应何时计算此规则的标记。|  
   
 ## <a name="exitcodes"></a>ExitCodes  
- `ExitCodes`元素是子元素的`Command`元素。 `ExitCodes`元素包含一个或多个`ExitCode`元素，用于确定安装应执行什么操作来响应来自包的退出代码。 可以有一个可选`ExitCode`元素下的`Command`元素。 `ExitCodes` 没有任何属性。  
+ `ExitCodes`元素是子元素的`Command`元素。 `ExitCodes`元素包含一个或多个`ExitCode`元素，用于确定安装应执行什么操作来响应来自包的退出代码。 可以有一个可选`ExitCode`元素下的`Command`元素。 `ExitCodes` 没有属性。  
   
 ## <a name="exitcode"></a>ExitCode  
  `ExitCode`元素是子元素的`ExitCodes`元素。 `ExitCode`元素可确定安装应执行什么操作来响应来自包的退出代码。 `ExitCode` 不包含任何子元素，并具有以下属性。  
   
 |特性|描述|  
 |---------------|-----------------|  
-|`Value`|必须的。 退出代码值此`ExitCode`元素将适用。|  
-|`Result`|必须的。 如何安装应响应此退出代码。 以下列表显示了有效的值：<br /><br /> `Success`。 标记为已成功安装的包。<br /><br /> `SuccessReboot`。 将该包标记为已成功安装，并指示系统在重新启动。<br /><br /> `Fail`。 标记为失败的包。<br /><br /> `FailReboot`。 将该包标记为失败，并指示系统在重新启动。|  
+|`Value`|必需。 退出代码值此`ExitCode`元素将适用。|  
+|`Result`|必需。 如何安装应响应此退出代码。 以下列表显示了有效的值：<br /><br /> `Success`。 标记为已成功安装的包。<br /><br /> `SuccessReboot`。 将该包标记为已成功安装，并指示系统在重新启动。<br /><br /> `Fail`。 标记为失败的包。<br /><br /> `FailReboot`。 将该包标记为失败，并指示系统在重新启动。|  
 |`String`|可选。 要对此退出代码的响应中向用户显示的值。|  
 |`FormatMessageFromSystem`|可选。 确定是否使用系统提供的错误消息对应的退出代码，或使用中提供的值`String`。 有效的值为`true`，这意味着若要使用的系统提供的错误，并`false`，这意味着若要使用提供的字符串`String`。 默认值为 `false`。 如果此属性为`false`，但`String`未设置，将使用系统提供错误。|  
   
@@ -213,7 +208,4 @@ ms.locfileid: "49276570"
   
 ## <a name="see-also"></a>请参阅  
  [产品和包架构引用](../deployment/product-and-package-schema-reference.md)   
- [\<InstallChecks > 元素](../deployment/installchecks-element-bootstrapper.md)
-
-
-
+ [\<InstallChecks> 元素](../deployment/installchecks-element-bootstrapper.md)

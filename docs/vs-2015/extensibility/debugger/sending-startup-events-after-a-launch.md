@@ -1,26 +1,21 @@
 ---
 title: 启动后发送启动事件 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], startup events
 ms.assetid: 306ea0b4-6d9e-4871-8d8d-a4032d422940
 caps.latest.revision: 10
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 0cc0642c085510e69fe7cd16abe195095c993219
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: caf36e6713e49bb1470cd720ba2d04f689abba43
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51769118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63436667"
 ---
 # <a name="sending-startup-events-after-a-launch"></a>启动后发送启动事件
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -38,7 +33,7 @@ ms.locfileid: "51769118"
 - 加载完成事件，发送的代码时加载并准备好运行，但在执行任何代码之前  
   
   > [!NOTE]
-  >  当此事件继续执行时，全局变量进行初始化并启动例程运行。  
+  > 当此事件继续执行时，全局变量进行初始化并启动例程运行。  
   
 - 可能的其他线程的创建和模块加载事件。  
   
@@ -53,4 +48,3 @@ ms.locfileid: "51769118"
 ## <a name="see-also"></a>请参阅  
  [控制执行](../../extensibility/debugger/control-of-execution.md)   
  [调试任务](../../extensibility/debugger/debugging-tasks.md)
-

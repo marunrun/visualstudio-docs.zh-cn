@@ -2,27 +2,27 @@
 title: 安装 R 工具
 description: 如何在 Visual Studio 2017 和 Visual Studio 2015 中安装 R 工具，包括脱机安装。
 ms.date: 01/24/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 0bede3afc12eb7f22f516d7f21727609d5724a9a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+monikerRange: vs-2017
+ms.openlocfilehash: 4b505b1a8669c0eff14e7afcdb88275cd1502f95
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53943150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62581233"
 ---
 # <a name="how-to-install-r-tools-for-visual-studio"></a>如何安装针对 Visual Studio 的 R 工具
 
 本文内容：
 
 - [支持的 Visual Studio 版本](#supported-versions-of-visual-studio)
-- [在 Visual Studio 2017 中安装 RTVS](#installing-rtvs-in-visual-studio-2017)
-- [在 Visual Studio 2015 中安装 RTVS](#installing-rtvs-in-visual-studio-2015)
+- [在 Visual Studio 2017 中安装 RTVS](#install-rtvs-in-visual-studio-2017)
+- [在 Visual Studio 2015 中安装 RTVS](#install-rtvs-in-visual-studio-2015)
 - [脱机安装](#offline-installation-of-visual-studio-and-rtvs)
 
 > [!Note]
@@ -30,7 +30,7 @@ ms.locfileid: "53943150"
 
 ## <a name="supported-versions-of-visual-studio"></a>支持的 Visual Studio 版本
 
-装有 [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 和 [Visual Studio 2015 Update 3（或更高版本）](http://go.microsoft.com/fwlink/?LinkId=691129)的社区版（免费）、专业版和企业版的 Windows 均支持针对 Visual Studio 的 R 工具 (RTVS)。
+装有 [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) 和 [Visual Studio 2015 Update 3（或更高版本）](http://go.microsoft.com/fwlink/?LinkId=691129)的社区版（免费）、专业版和企业版的 Windows 均支持针对 Visual Studio 的 R 工具 (RTVS)。
 
 Visual Studio for Mac 目前尚不支持 RTVS。
 
@@ -67,7 +67,7 @@ Microsoft R Open 和 CRAN R 均允许多个并行版本。 但是，Microsoft R 
 从 [https://aka.ms/rtvs-current](https://aka.ms/rtvs-current) 下载适用于 Visual Studio 2015 的最新 RTVS。 如果尚未安装，RTVS 会检查是否有适合的 Visual Studio 版本，并帮助安装 R 解释器。
 
 > [!Note]
-> 独立 RTVS 安装程序仅适用于 Visual Studio 2015；在 Visual Studio 2017 中，可通过[数据科学和分析应用程序工作负载](#installing-rtvs-in-visual-studio-2017)安装 R 支持（如前面所述）。
+> 独立 RTVS 安装程序仅适用于 Visual Studio 2015；在 Visual Studio 2017 中，可通过[数据科学和分析应用程序工作负载](#install-rtvs-in-visual-studio-2017)安装 R 支持（如前面所述）。
 
 RTVS for Visual Studio 2015 安装在以下位置：`%ProgramFiles(x86)%\Microsoft Visual Studio 14\Common7\IDE\Extensions\Microsoft\R Tools for Visual Studio`
 

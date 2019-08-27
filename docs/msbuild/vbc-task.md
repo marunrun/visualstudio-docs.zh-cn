@@ -15,22 +15,21 @@ helpviewer_keywords:
 ms.assetid: 595278b1-2782-4577-b1ba-b4b5ab5625a3
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b186f5be27bb1457b7d9beb1a056bec90821f45
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 247d7c5a204418fdddf41e906a12ef2ef1fb232f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53956148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62577767"
 ---
 # <a name="vbc-task"></a>Vbc 任务
-包装可生成可执行文件 (.exe)、动态链接库 (.dll) 或代码模块 (.netmodule) 的 vbc.exe。 有关 vbc.exe 的详细信息，请参阅 [Visual Basic 命令行编译器](/dotnet/visual-basic/reference/command-line-compiler/index)。  
+包装可生成可执行文件 (.exe)、动态链接库 (.dll) 或代码模块 (.netmodule) 的 vbc.exe。 有关 vbc.exe 的详细信息，请参阅 [Visual Basic 命令行编译器](/dotnet/visual-basic/reference/command-line-compiler/index)。
 
-## <a name="parameters"></a>参数  
- 下表描述了 `Vbc` 任务的参数。  
-
+## <a name="parameters"></a>参数
+ 下表描述了 `Vbc` 任务的参数。
 
 | 参数 | 说明 |
 |------------------------------| - |
@@ -51,7 +50,7 @@ ms.locfileid: "53956148"
 | `Imports` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 从指定项集合导入命名空间。 此参数对应于 vbc.exe 编译器的 [-imports](/dotnet/visual-basic/reference/command-line-compiler/imports) 开关。 |
 | `KeyContainer` | 可选 `String` 参数。<br /><br /> 指定加密密钥容器的名称。 此参数对应于 vbc.exe 编译器的 [-keycontainer](/dotnet/visual-basic/reference/command-line-compiler/keycontainer) 开关。 |
 | `KeyFile` | 可选 `String` 参数。<br /><br /> 指定含有加密密钥的文件名。 有关详细信息，请参阅 [-keyfile](/dotnet/visual-basic/reference/command-line-compiler/keyfile)。 |
-| `LangVersion` | 可选 <xref:System.String?displayProperty=fullName> 参数。<br /><br /> 指定语言版本，“9”或“10”。 |
+| `LangVersion` | 可选 <xref:System.String?displayProperty=fullName> 参数。<br /><br /> 指定[语言版本](/dotnet/visual-basic/language-reference/configure-language-version)，如“15.5”。 |
 | `LinkResources` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 创建指向输出文件中的 .NET Framework 资源的链接；资源文件不会放入输出文件中。 此参数对应于 vbc.exe 编译器的 [-linkresource](/dotnet/visual-basic/reference/command-line-compiler/linkresource) 开关。 |
 | `MainEntryPoint` | 可选 `String` 参数。<br /><br /> 指定包含 `Sub Main` 过程的类或模块。 此参数对应于 vbc.exe 编译器的 [-main](/dotnet/visual-basic/reference/command-line-compiler/main) 开关。 |
 | `ModuleAssemblyName` | 可选 `String` 参数。<br /><br /> 指定此模块所属程序集。 |
@@ -88,21 +87,21 @@ ms.locfileid: "53956148"
 | `Win32Icon` | 可选 `String` 参数。<br /><br /> 在程序集中插入 .ico 文件，为输出文件赋予其在“文件资源管理器”中所需的外观。 此参数对应于 vbc.exe 编译器的 [-win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon) 开关。 |
 | `Win32Resources` | 可选 `String` 参数。<br /><br /> 在输出文件中插入 Win32 资源 (.res) 文件。 此参数对应于 vbc.exe 编译器的 [-win32resource](/dotnet/visual-basic/reference/command-line-compiler/win32resource) 开关。 |
 
-## <a name="remarks"></a>备注  
- 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.ToolTaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.ToolTask> 类。 有关这些其他参数的列表及其说明，请参阅 [ToolTaskExtension 基类](../msbuild/tooltaskextension-base-class.md)。  
+## <a name="remarks"></a>备注
+ 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.ToolTaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.ToolTask> 类。 有关这些其他参数的列表及其说明，请参阅 [ToolTaskExtension 基类](../msbuild/tooltaskextension-base-class.md)。
 
-## <a name="example"></a>示例  
- 以下示例编译 Visual Basic 项目。  
+## <a name="example"></a>示例
+ 以下示例编译 Visual Basic 项目。
 
-```xml  
-<VBC  
-   Sources="@(sources)"  
-   Resources="strings.resources"  
-   Optimize="true"  
-   OutputAssembly="out.exe"/>  
-```  
+```xml
+<VBC
+   Sources="@(sources)"
+   Resources="strings.resources"
+   Optimize="true"
+   OutputAssembly="out.exe"/>
+```
 
-## <a name="see-also"></a>请参阅  
- [Visual Basic 命令行编译器](/dotnet/visual-basic/reference/command-line-compiler/index)   
- [任务](../msbuild/msbuild-tasks.md)   
- [任务参考](../msbuild/msbuild-task-reference.md)
+## <a name="see-also"></a>请参阅
+- [Visual Basic 命令行编译器](/dotnet/visual-basic/reference/command-line-compiler/index)
+- [任务](../msbuild/msbuild-tasks.md)
+- [任务参考](../msbuild/msbuild-task-reference.md)

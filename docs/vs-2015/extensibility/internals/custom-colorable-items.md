@@ -1,27 +1,22 @@
 ---
 title: 自定义可着色项 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - colorable items
 - language services, custom colorable items
 ms.assetid: b4d0ddee-c04b-48dc-ba82-f6068570cef0
 caps.latest.revision: 25
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 272d16b9f5f8fb33b68c911c5e7bd27923f4c2db
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 24a4db907ec859c6075c06956f86939047379897
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51796943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63409373"
 ---
 # <a name="custom-colorable-items"></a>自定义可着色项
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -35,11 +30,11 @@ ms.locfileid: "51796943"
  因为 IDE 可处理的可着色项中的用户重写**字体和颜色**对话框中，你需要仅提供一个名称与每个自定义可着色项。 此名称将会出现在**显示的项**列表。 可着色项按字母顺序显示。 语言服务的自定义可着色的项目进行分组，可以开始使用你的语言名称，每个名称，例如**NewLanguage-注释**并**NewLanguage-关键字**。  
   
 > [!CAUTION]
->  要避免与现有的可着色项名称发生冲突的可着色项名称中，应包括的语言名称。 如果在开发过程中更改了一可着色项的名称，必须重置缓存创建第一次访问了你可着色的项。 你可以重置实验性使用 CreateExpInstance 工具随 Visual Studio SDK，通常在目录中缓存  
+> 要避免与现有的可着色项名称发生冲突的可着色项名称中，应包括的语言名称。 如果在开发过程中更改了一可着色项的名称，必须重置缓存创建第一次访问了你可着色的项。 你可以重置实验性使用 CreateExpInstance 工具随 Visual Studio SDK，通常在目录中缓存  
 >   
->  **C:\Program 文件 (x86) \Microsoft Visual Studio 14.0\VSSDK\VisualStudioIntegration\Tools\Bin**  
+> **C:\Program Files (x86)\Microsoft Visual Studio 14.0\VSSDK\VisualStudioIntegration\Tools\Bin**  
 >   
->  若要重置缓存，请调用`CreateExpInstance /Reset`。 CreateExpInstance 有关详细信息，请参阅[CreateExpInstance 实用工具](../../extensibility/internals/createexpinstance-utility.md)。  
+> 若要重置缓存，请调用`CreateExpInstance /Reset`。 CreateExpInstance 有关详细信息，请参阅[CreateExpInstance 实用工具](../../extensibility/internals/createexpinstance-utility.md)。  
   
  从未引用的可着色项在列表中的第一个项。 第一项对应于可着色项索引为 0，和[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]始终提供的默认文本颜色和该项的属性。 处理未引用该项的最简单方法是提供作为第一项列表中的占位符可着色项。  
   
@@ -77,4 +72,3 @@ ms.locfileid: "51796943"
  [旧版语言服务中的语法着色](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)   
  [实现语法着色](../../extensibility/internals/implementing-syntax-coloring.md)   
  [如何：使用内置的可着色项](../../extensibility/internals/how-to-use-built-in-colorable-items.md)
-

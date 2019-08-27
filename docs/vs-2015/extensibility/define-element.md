@@ -1,27 +1,22 @@
 ---
 title: 定义元素 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 helpviewer_keywords:
 - VSCT XML schema elements, Define
 - Define element (VSCT XML schema)
 ms.assetid: 5aee74e3-de41-4dc6-9618-93e158af56dd
 caps.latest.revision: 11
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: df8f7dc76d01cd1a76537dad23b44e2e4b061682
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 8cc543a07176f307641c53a2ef3e132881821ce7
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51765888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68162161"
 ---
 # <a name="define-element"></a>Define 元素
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,8 +36,8 @@ ms.locfileid: "51765888"
   
 |特性|描述|  
 |---------------|-----------------|  
-|name|必须的。 符号名称：<br /><br /> 名称 ="模式"|  
-|值|必须的。 符号的值：<br /><br /> 值 ="标准"|  
+|name|必需。 符号名称：<br /><br /> 名称 ="模式"|  
+|值|必需。 符号的值：<br /><br /> value="Standard"|  
 |条件|可选。 有关详细信息，请参阅[条件属性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -63,4 +58,3 @@ ms.locfileid: "51765888"
   
 ## <a name="see-also"></a>请参阅  
  [Visual Studio 命令表格 (.Vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
-

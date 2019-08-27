@@ -1,177 +1,270 @@
 - name: 设计用户界面
   href: designing-user-interfaces.md
+- name: XAML
   items:
-    - name: 在 Visual Studio 中设计 XAML
+    - name: XAML 概述
+      href: xaml-overview.md
+    - name: 在 Visual Studio 和 Blend 中设计 XAML
       href: designing-xaml-in-visual-studio.md
+    - name: XAML 设计器
       items:
-        - name: 使用 XAML 设计器创建 UI
+        - name: 概述
+          displayName: XAML Designer
           href: creating-a-ui-by-using-xaml-designer-in-visual-studio.md
+        - name: 使用元素
+          href: working-with-elements-in-xaml-designer.md
+        - name: 将对象组织到布局容器中
+          href: organize-objects-into-layout-containers-in-xaml-designer.md
+        - name: 创建和应用资源
+          href: how-to-create-and-apply-a-resource.md
+        - name: 演练：绑定到数据
+          href: walkthrough-binding-to-data-in-xaml-designer.md
+        - name: 调试或禁用项目代码
+          href: debugging-or-disabling-project-code-in-xaml-designer.md
+        - name: Blend for Visual Studio
+          href: creating-a-ui-by-using-blend-for-visual-studio.md
+        - name: 绘制形状和路径 (Blend)
+          href: draw-shapes-and-paths.md
+        - name: 修改对象样式 (Blend)
+          href: modify-the-style-of-objects-in-blend.md
+        - name: 为对象添加动画效果 (Blend)
+          href: animate-objects-in-xaml-designer.md
+        - name: 显示数据 (Blend)
+          href: display-data-in-blend.md
+        - name: 参考
           items:
-            - name: 在 XAML 设计器中使用元素
-              href: working-with-elements-in-xaml-designer.md
-            - name: 在 XAML 设计器中将对象组织到布局容器中
-              href: organize-objects-into-layout-containers-in-xaml-designer.md
-            - name: 创建和应用资源
-              href: how-to-create-and-apply-a-resource.md
-            - name: 演练：在 XAML 设计器中绑定数据
-              href: walkthrough-binding-to-data-in-xaml-designer.md
-            - name: XAML 设计器的键盘快捷方式
-              href: keyboard-shortcuts-for-xaml-designer.md
-            - name: 在 XAML 设计器中调试或禁用项目代码
-              href: debugging-or-disabling-project-code-in-xaml-designer.md
             - name: XAML 错误和警告
               href: xaml-errors-warnings.md
-        - name: 使用 Blend for Visual Studio 创建 UI
-          href: creating-a-ui-by-using-blend-for-visual-studio.md
-          items:
-            - name: 在 XAML 设计器中插入控件并修改其行为
-              href: insert-controls-and-modify-their-behavior-in-xaml-designer.md
-            - name: 在 XAML 设计器中插入图像、视频和音频剪辑
-              href: insert-images-videos-and-audio-clips-in-xaml-designer.md
-            - name: 绘制形状和路径
-              href: draw-shapes-and-paths.md
-            - name: 修改 Blend 中对象的样式
-              href: modify-the-style-of-objects-in-blend.md
-            - name: 在 XAML 设计器中动态显示对象
-              href: animate-objects-in-xaml-designer.md
-            - name: 显示数据
-              href: display-data-in-blend.md
-            - name: Blend 中的键盘快捷方式和修改键
-              href: keyboard-shortcuts-and-modifier-keys-in-blend.md
-              items:
-                - name: 键盘快捷键
-                  href: keyboard-shortcuts-in-blend.md
-                - name: “美工板”修改键
-                  href: artboard-modifier-keys-in-blend.md
-                - name: “笔”工具修改键
-                  href: pen-tool-modifier-keys-in-blend.md
-                - name: “路径选择”工具修改键
-                  href: direct-selection-tool-modifier-keys-in-blend.md
-            - name: Blend 的辅助功能产品和服务
-              href: accessibility-products-and-services-blend.md
-    - name: Windows Presentation Foundation (WPF)
+            - name: XAML 设计器的键盘快捷方式
+              href: keyboard-shortcuts-for-xaml-designer.md
+            - name: 用于 Blend 的键盘快捷键
+              href: keyboard-shortcuts-in-blend.md
+            - name: 美工板修改键 (Blend)
+              href: artboard-modifier-keys-in-blend.md
+            - name: “触笔”工具修改键 (Blend)
+              href: pen-tool-modifier-keys-in-blend.md
+            - name: “路径选择”工具修改键 (Blend)
+              href: direct-selection-tool-modifier-keys-in-blend.md
+- name: Windows Presentation Foundation (WPF)
+  items:
+    - name: 入门
+      displayName: Windows Presentation Foundation (WPF)
       href: getting-started-with-wpf.md
+    - name: WPF 概述
+      href: introduction-to-wpf.md
+    - name: 数据绑定
       items:
-        - name: WPF 概述
-          href: introduction-to-wpf.md
         - name: 使用 LINQ to XML 进行 WPF 数据绑定
           href: wpf-data-binding-with-linq-to-xml-overview.md
+        - name: LINQ to XML 动态属性
           items:
-            - name: LINQ to XML 动态属性
+            - name: 概述
+              displayName: LINQ to XML dynamic properties
               href: linq-to-xml-dynamic-properties.md
+            - name: XAttribute 类动态属性
               items:
-                - name: XAttribute 类动态属性
-                  href: xattribute-class-dynamic-properties.md
-                  items:
-                    - name: 值（XAttribute 动态属性）
-                      href: value-xattribute-dynamic-property.md
-                - name: XElement 类动态属性
-                  href: xelement-class-dynamic-properties.md
-                  items:
-                    - name: 特性（XElement 动态属性）
-                      href: attribute-xelement-dynamic-property.md
-                    - name: 元素（XElement 动态属性）
-                      href: element-xelement-dynamic-property.md
-                    - name: 元素（XElement 动态属性）
-                      href: elements-xelement-dynamic-property.md
-                    - name: 子代（XElement 动态属性）
-                      href: descendants-xelement-dynamic-property.md
-                    - name: 值（XElement 动态属性）
-                      href: value-xelement-dynamic-property.md
-                    - name: Xml（XElement 动态属性）
-                      href: xml-xelement-dynamic-property.md
-                - name: 示例
+                - name: 值（XAttribute 动态属性）
+                  href: value-xattribute-dynamic-property.md
+            - name: XElement 类动态属性
+              items:
+                - name: 特性（XElement 动态属性）
+                  href: attribute-xelement-dynamic-property.md
+                - name: 元素（XElement 动态属性）
+                  href: element-xelement-dynamic-property.md
+                - name: 元素（XElement 动态属性）
+                  href: elements-xelement-dynamic-property.md
+                - name: 子代（XElement 动态属性）
+                  href: descendants-xelement-dynamic-property.md
+                - name: 值（XElement 动态属性）
+                  href: value-xelement-dynamic-property.md
+                - name: Xml（XElement 动态属性）
+                  href: xml-xelement-dynamic-property.md
+            - name: 示例
+              items:
+                - name: 使用 LINQ to XML 的 WPF 数据绑定
                   href: wpf-data-binding-using-linq-to-xml-example.md
-                  items:
-                    - name: 生成并运行 LinqToXmlDataBinding 示例
-                      href: how-to-build-and-run-the-linqtoxmldatabinding-example.md
-                    - name: 演练：LINQ to XML 数据绑定
-                      href: walkthrough-linqtoxmldatabinding-example.md
-                      items:
-                        - name: L2DBForm.xaml 源代码
-                          href: l2dbform-xaml-source-code.md
-                        - name: L2DBForm.xaml.cs 源代码
-                          href: l2dbform-xaml-cs-source-code.md
+                - name: 生成并运行 LinqToXmlDataBinding 示例
+                  href: how-to-build-and-run-the-linqtoxmldatabinding-example.md
+                - name: 演练：LINQ to XML 数据绑定
+                  href: walkthrough-linqtoxmldatabinding-example.md
+                - name: L2DBForm.xaml 源代码
+                  href: l2dbform-xaml-source-code.md
+                - name: L2DBForm.xaml.cs 源代码
+                  href: l2dbform-xaml-cs-source-code.md
+- name: Windows 窗体
+  items:
+    - name: Windows 窗体设计器概述
+      href: windows-forms-designer-overview.md
+    - name: Windows 窗体设计器入门
+      href: walkthrough-windows-forms-designer.md
+    - name: 排列控件 >>
+      href: /dotnet/framework/winforms/controls/arranging-controls-on-windows-forms
+    - name: 创建数据绑定控件 >>
+      href: /dotnet/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form
+    - name: 创建自定义控件 >>
+      href: /dotnet/framework/winforms/controls/developing-windows-forms-controls-at-design-time
+    - name: 禁用 Windows 窗体设计器的 DPI 感知功能
+      href: disable-dpi-awareness.md
+    - name: 参考
+      items:
+        - name: System.Windows.Forms API >>
+          href: /dotnet/api/system.windows.forms
+    - name: 教程
+      items:
+        - name: '教程 1：创建图片查看器 (C#)'
+          items:
+            - name: 概述
+              displayName: Tutorial 1 Picture viewer
+              href: ../ide/tutorial-1-create-a-picture-viewer.md
+            - name: 步骤 1：创建 Windows 窗体应用程序项目
+              href: ../ide/step-1-create-a-windows-forms-application-project.md
+            - name: 步骤 2：运行程序
+              href: ../ide/step-2-run-your-program.md
+            - name: 步骤 3：设置窗体属性
+              href: ../ide/step-3-set-your-form-properties.md
+            - name: 步骤 4：使用 TableLayoutPanel 控件设置窗体布局
+              href: ../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md
+            - name: 步骤 5：向窗体添加控件
+              href: ../ide/step-5-add-controls-to-your-form.md
+            - name: 步骤 6：命名按钮控件
+              href: ../ide/step-6-name-your-button-controls.md
+            - name: 步骤 7：向窗体添加对话框组件
+              href: ../ide/step-7-add-dialog-components-to-your-form.md
+            - name: 步骤 8：为“显示图片”按钮事件处理程序编写代码
+              href: ../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md
+            - name: 步骤 9：检查代码、为代码添加注释和测试代码
+              href: ../ide/step-9-review-comment-and-test-your-code.md
+            - name: 步骤 10：为其他按钮和复选框编写代码
+              href: ../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md
+            - name: 步骤 11：运行程序并尝试其他功能
+              href: ../ide/step-11-run-your-program-and-try-other-features.md
+        - name: '教程 2：创建计时数学测验 (C#)'
+          items:
+            - name: 概述
+              displayName: Tutorial 2 Timed math quiz
+              href: ../ide/tutorial-2-create-a-timed-math-quiz.md
+            - name: 步骤 1：创建项目并向窗体添加标签
+              href: ../ide/step-1-create-a-project-and-add-labels-to-your-form.md
+            - name: 步骤 2：创建随机加法问题
+              href: ../ide/step-2-create-a-random-addition-problem.md
+            - name: 步骤 3：添加倒计时计时器
+              href: ../ide/step-3-add-a-countdown-timer.md
+            - name: 步骤 4：添加 CheckTheAnswer() 方法
+              href: ../ide/step-4-add-the-checktheanswer-parens-method.md
+            - name: 步骤 5：为 NumericUpDown 控件添加 Enter 事件处理程序
+              href: ../ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md
+            - name: 步骤 6：添加减法问题
+              href: ../ide/step-6-add-a-subtraction-problem.md
+            - name: 步骤 7：添加乘法和除法问题
+              href: ../ide/step-7-add-multiplication-and-division-problems.md
+            - name: 步骤 8：自定义测验
+              href: ../ide/step-8-customize-the-quiz.md
+        - name: '教程 3：创建配对游戏 (C#)'
+          items:
+            - name: 概述
+              displayName: Tutorial 3 Matching game
+              href: ../ide/tutorial-3-create-a-matching-game.md
+            - name: 步骤 1：创建项目并向窗体添加表
+              href: ../ide/step-1-create-a-project-and-add-a-table-to-your-form.md
+            - name: 步骤 2：添加 Random 对象和图标列表
+              href: ../ide/step-2-add-a-random-object-and-a-list-of-icons.md
+            - name: 步骤 3：向每个标签分配一个随机图标
+              href: ../ide/step-3-assign-a-random-icon-to-each-label.md
+            - name: 步骤 4：向每个标签添加一个 Click 事件处理程序
+              href: ../ide/step-4-add-a-click-event-handler-to-each-label.md
+            - name: 步骤 5：添加标签引用
+              href: ../ide/step-5-add-label-references.md
+            - name: 步骤 6：添加计时器
+              href: ../ide/step-6-add-a-timer.md
+            - name: 步骤 7：保持对可见
+              href: ../ide/step-7-keep-pairs-visible.md
+            - name: 步骤 8：添加验证玩家是否获胜的方法
+              href: ../ide/step-8-add-a-method-to-verify-whether-the-player-won.md
+            - name: 步骤 9：尝试其他功能
+              href: ../ide/step-9-try-other-features.md
+- name: 三维资产
+  items:
     - name: 处理游戏和应用的 3D 资产
       href: working-with-3-d-assets-for-games-and-apps.md
+    - name: 如何：在游戏或应用中使用三维资产
+      href: using-3-d-assets-in-your-game-or-app.md
+    - name: 纹理和图像
       items:
         - name: 使用纹理和图像
           href: working-with-textures-and-images.md
+        - name: 图像编辑器
+          href: image-editor.md
+        - name: 图像编辑器示例
           items:
-            - name: 图像编辑器
-              href: image-editor.md
-            - name: 图像编辑器示例
-              href: image-editor-examples.md
-              items:
-                - name: 创建基本纹理
-                  href: how-to-create-a-basic-texture.md
-                - name: 创建和修改 MIP 级别
-                  href: how-to-create-and-modify-mip-levels.md
+            - name: 创建基本纹理
+              href: how-to-create-a-basic-texture.md
+            - name: 创建和修改 MIP 级别
+              href: how-to-create-and-modify-mip-levels.md
+    - name: 三维模型
+      items:
         - name: 处理三维模型
           href: working-with-3-d-models.md
+        - name: 模型编辑器
+          href: model-editor.md
+        - name: 模型编辑器示例
           items:
-            - name: 模型编辑器
-              href: model-editor.md
-            - name: 模型编辑器示例
-              href: model-editor-examples.md
-              items:
-                - name: 创建基本三维模型
-                  href: how-to-create-a-basic-3-d-model.md
-                - name: 修改三维模型的透视点
-                  href: how-to-modify-the-pivot-point-of-a-3-d-model.md
-                - name: 构建三维地形模型
-                  href: how-to-model-3-d-terrain.md
-                - name: 向三维模型应用着色器
-                  href: how-to-apply-a-shader-to-a-3-d-model.md
+            - name: 创建基本三维模型
+              href: how-to-create-a-basic-3-d-model.md
+            - name: 修改三维模型的透视点
+              href: how-to-modify-the-pivot-point-of-a-3-d-model.md
+            - name: 构建三维地形模型
+              href: how-to-model-3-d-terrain.md
+            - name: 向三维模型应用着色器
+              href: how-to-apply-a-shader-to-a-3-d-model.md
+    - name: 着色器
+      items:
         - name: 使用着色器
           href: working-with-shaders.md
+        - name: 着色器设计器
+          href: shader-designer.md
+        - name: 着色器设计器节点
           items:
-            - name: 着色器设计器
-              href: shader-designer.md
-            - name: 着色器设计器节点
+            - name: 概述
+              displayName: Shader designer nodes
               href: shader-designer-nodes.md
-              items:
-                - name: 常量节点
-                  href: constant-nodes.md
-                - name: 参数节点
-                  href: parameter-nodes.md
-                - name: 纹理节点
-                  href: texture-nodes.md
-                - name: 数学运算节点
-                  href: math-nodes.md
-                - name: 实用程序节点
-                  href: utility-nodes.md
-                - name: 筛选节点
-                  href: filter-nodes.md
-            - name: 着色器设计器示例
-              href: shader-designer-examples.md
-              items:
-                - name: 创建基本颜色着色器
-                  href: how-to-create-a-basic-color-shader.md
-                - name: 创建基本朗伯着色器
-                  href: how-to-create-a-basic-lambert-shader.md
-                - name: 创建基本 Phong 着色器
-                  href: how-to-create-a-basic-phong-shader.md
-                - name: 创建基本纹理着色器
-                  href: how-to-create-a-basic-texture-shader.md
-                - name: 创建灰度纹理着色器
-                  href: how-to-create-a-grayscale-texture-shader.md
-                - name: 创建基于几何图形的渐变着色器
-                  href: how-to-create-a-geometry-based-gradient-shader.md
-                - name: 演练：创建真实的三维台球
-                  href: walkthrough-creating-a-realistic-3-d-billiard-ball.md
-                - name: 导出着色器
-                  href: how-to-export-a-shader.md
-        - name: 在游戏或应用中使用三维资产
-          href: using-3-d-assets-in-your-game-or-app.md
+            - name: 常量节点
+              href: constant-nodes.md
+            - name: 参数节点
+              href: parameter-nodes.md
+            - name: 纹理节点
+              href: texture-nodes.md
+            - name: 数学运算节点
+              href: math-nodes.md
+            - name: 实用程序节点
+              href: utility-nodes.md
+            - name: 筛选节点
+              href: filter-nodes.md
+        - name: 着色器设计器示例
           items:
-            - name: 导出包含 mipmap 的纹理
-              href: how-to-export-a-texture-that-contains-mipmaps.md
-            - name: 导出包含自左乘的 alpha 的纹理
-              href: how-to-export-a-texture-that-has-premultiplied-alpha.md
-            - name: 导出纹理以用于 Direct2D 或 Javascipt 应用
-              href: how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps.md
-    - name: Visual Studio 图像库
-      href: the-visual-studio-image-library.md
-- name: 使用工作流设计器开发应用
-  href: ../workflow-designer/developing-applications-with-the-workflow-designer.md
+            - name: 创建基本颜色着色器
+              displayName: Shader designer example
+              href: how-to-create-a-basic-color-shader.md
+            - name: 创建基本朗伯着色器
+              href: how-to-create-a-basic-lambert-shader.md
+            - name: 创建基本 Phong 着色器
+              href: how-to-create-a-basic-phong-shader.md
+            - name: 创建基本纹理着色器
+              href: how-to-create-a-basic-texture-shader.md
+            - name: 创建灰度纹理着色器
+              href: how-to-create-a-grayscale-texture-shader.md
+            - name: 创建基于几何图形的渐变着色器
+              href: how-to-create-a-geometry-based-gradient-shader.md
+            - name: 演练：创建真实的三维台球
+              href: walkthrough-creating-a-realistic-3-d-billiard-ball.md
+            - name: 导出着色器
+              href: how-to-export-a-shader.md
+    - name: 导出纹理
+      items:
+        - name: 导出包含 mipmap 的纹理
+          href: how-to-export-a-texture-that-contains-mipmaps.md
+        - name: 导出包含自左乘的 alpha 的纹理
+          href: how-to-export-a-texture-that-has-premultiplied-alpha.md
+        - name: 使用 Direct2D 或 JavaScript 应用导出纹理以供使用
+          href: how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps.md
+- name: Visual Studio 图像库
+  href: the-visual-studio-image-library.md

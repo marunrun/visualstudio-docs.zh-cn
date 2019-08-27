@@ -1,43 +1,42 @@
 ---
 title: 指定自定义生成事件
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.technology: vs-ide-compile
 ms.topic: conceptual
 helpviewer_keywords:
 - build events, customizing
 ms.assetid: 69e935a5-e208-4bcd-865c-3e5f9b047ca8
-author: gewarren
-ms.author: gewarren
-manager: douge
+author: ghogen
+ms.author: ghogen
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e6c5bde6b6dce7655043f3dc766a5faa81fa944e
-ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.openlocfilehash: 620ffa1ea23c2c892e8385bd9e81a07fb640411a
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "53055123"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68918896"
 ---
 # <a name="specify-custom-build-events-in-visual-studio"></a>在 Visual Studio 中指定自定义生成事件
 
-通过指定自定义生成事件，可以在生成开始之前或在它完成之后自动运行命令。 例如，可以在生成开始之前运行 .bat 文件，或是在生成完成之后将新文件复制到文件夹中。 仅当生成在生成过程中成功到达这些点时，生成事件才会运行。
+通过指定自定义生成事件，可以在生成开始之前或在它完成之后自动运行命令。 例如，可以在生成开始之前运行 .bat 文件，或是在生成完成之后将新文件复制到文件夹中  。 仅当生成在生成过程中成功到达这些点时，生成事件才会运行。
 
- 有关所使用的编程语言的特定信息，请参阅以下主题：
+有关所使用的编程语言的特定信息，请参阅以下主题：
 
--   Visual Basic--[如何：指定生成事件 (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md)。
+- Visual Basic--[如何：指定生成事件 (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md)。
 
--   C# 和 F#--[如何：指定生成事件 (C#)](../ide/how-to-specify-build-events-csharp.md)。
+- C# 和 F#--[如何：指定生成事件 (C#)](../ide/how-to-specify-build-events-csharp.md)。
 
--   Visual C++--[指定生成事件](/cpp/ide/specifying-build-events)。
+- Visual C++--[指定生成事件](/cpp/build/specifying-build-events)。
 
 ## <a name="syntax"></a>语法
 
 生成事件遵循与 DOS 命令相同的语法，但可以使用宏更轻松地创建生成事件。 有关可用宏的列表，请参阅[预生成事件/生成后事件命令行对话框](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)。
 
- 为获得最佳结果，请遵循以下这些格式设置提示：
+为获得最佳结果，请遵循以下这些格式设置提示：
 
-- 在运行 .bat 文件的所有生成事件之前，先添加 `call` 语句。
+- 在运行 .bat 文件的所有生成事件之前，先添加 `call` 语句  。
 
    示例：`call C:\MyFile.bat`
 
@@ -54,7 +53,7 @@ ms.locfileid: "53055123"
    示例：`for %I in (*.txt *.doc *.html) do copy %I c:\`*mydirectory*`\`
 
   > [!NOTE]
-  >  以上代码中的 `%I` 在批处理脚本中应是 `%%I`。
+  > 以上代码中的 `%I` 在批处理脚本中应是 `%%I`。
 
 ## <a name="see-also"></a>请参阅
 

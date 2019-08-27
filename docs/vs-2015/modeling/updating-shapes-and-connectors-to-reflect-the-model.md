@@ -1,23 +1,20 @@
 ---
 title: 更新形状和连接线以反映模型 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 ms.assetid: 51eb2af9-00e7-4725-a87d-62fb4f39f444
 caps.latest.revision: 8
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 93c079a5dc80b0a26e133258328fb7b5b9fb8d41
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: c8520084b57fdf0f831f62626593832d03c25636
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49192447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68183922"
 ---
 # <a name="updating-shapes-and-connectors-to-reflect-the-model"></a>更新形状和连接线以反映模型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,9 +32,9 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 ## <a name="set-shape-map-properties-to-control-the-visibility-of-a-decorator"></a>设置形状映射的属性以控制修饰器的可见性  
  您可以控制修饰器的可见性，而无需编写程序代码中，通过在 DSL 定义中配置形状和域类之间的映射。 有关详细信息，请参阅下列主题：  
   
--   [如何：控制修饰器的可见性 - 重定向](../misc/how-to-control-the-visibility-of-a-decorator-redirect.md)  
+- [如何：控制修饰器的可见性-重定向](../misc/how-to-control-the-visibility-of-a-decorator-redirect.md)  
   
--   [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)  
+- [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)  
   
 ## <a name="expose-the-color-and-style-of-a-shape-as-properties"></a>将作为属性公开的颜色和形状的样式  
  在 DSL 定义中，右键单击形状类、 指向**添加公开**，然后单击某一项诸如**填充颜色**。  
@@ -118,7 +115,7 @@ partial class MyLanguageDiagram
   
  可以使用此方法，为域属性和非应用商店功能，例如形状的大小。  
   
-##  <a name="OnAssociatedProperty"></a> 使用 AssociateValueWith() 更新形状的其他功能  
+## <a name="OnAssociatedProperty"></a> 使用 AssociateValueWith() 更新形状的其他功能  
  形状，例如是否具有阴影或连接器的箭头样式的某些功能没有公开为域属性的功能的内置方法。  此类功能的更改不受控制的事务系统中。 因此，不适合更新这些使用规则，因为当用户执行撤消命令不会调用规则。  
   
  相反，可以通过使用更新此类功能<xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnAssociatedPropertyChanged%2A>。 在以下示例中，由连接器显示在关系中的域属性的值控制连接线的箭头样式：  
@@ -165,6 +162,3 @@ public partial class ArrowConnector // My connector class.
  `AssociateValueWith()` 应调用一次为每个你想要注册的域属性。 已调用后，将调用对指定的属性的任何更改`OnAssociatedPropertyChanged()`中存在该属性的模型元素的所有形状。  
   
  不需要调用`AssociateValueWith()`每个实例。 尽管 InitializeResources 是实例方法，但它是只调用一次为每个形状类。
-
-
-

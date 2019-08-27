@@ -1,14 +1,9 @@
 ---
 title: “新建文件”命令 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - file.newfile
 helpviewer_keywords:
@@ -18,18 +13,17 @@ ms.assetid: 767868d6-a525-425b-a43b-2198f636ab6b
 caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 1043dc600d339e2a0989bb71fc7e8a09e712e102
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: bb86a15e73ac2410ad763acd3b361e4a82bc44f1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49264090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68199077"
 ---
 # <a name="new-file-command"></a>“新建文件”命令
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 创建新文件并将其打开。 该文件显示在“杂项文件”文件夹下。  
   
 ## <a name="syntax"></a>语法  
@@ -54,10 +48,10 @@ File.NewFile [filename] [/t:templatename] [/editor:editorname]
 /t:"Visual C++\C++ File (.cpp)"  
 ```  
   
- 以上示例指示 C++ 文件模板位于“新建文件”对话框中的 Visual C++ 类别下。  
+ 以上示例指示 C++ 文件模板位于“新建文件”对话框中的 Visual C++ 类别下  。  
   
  /e:`editorname`  
- 可选。 将在其中打开文件的编辑器的名称。 如果指定该参数，但未提供编辑器名称，则会出现“打开方式”对话框。  
+ 可选。 将在其中打开文件的编辑器的名称。 如果指定该参数，但未提供编辑器名称，则会出现“打开方式”  对话框。  
   
  /e:`editorname` 参数语法使用“打开方式”对话框中显示的编辑器名称，并用引号括起来。  
   
@@ -74,12 +68,9 @@ File.NewFile [filename] [/t:templatename] [/editor:editorname]
 >File.NewFile test1 /t:"General\HTML Page" /e:"Source Code (text) Editor"  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)   
  [“命令”窗口](../../ide/reference/command-window.md)   
  [即时窗口](../../ide/reference/immediate-window.md)   
  [“查找/命令”框](../../ide/find-command-box.md)   
  [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
-
-
-

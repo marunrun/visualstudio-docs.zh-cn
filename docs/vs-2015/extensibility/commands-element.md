@@ -1,14 +1,9 @@
 ---
 title: 命令元素 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - Commands
 helpviewer_keywords:
@@ -17,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 47cf16a5-d78b-452e-86f6-b5893856dddf
 caps.latest.revision: 18
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 0016deb1cf3852754e94c94a2ed153a3155d041a
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 194768a3b540511996e1d99e6450a7a9b24ebc74
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51801142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68184291"
 ---
 # <a name="commands-element"></a>Commands 元素
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -98,4 +93,3 @@ ms.locfileid: "51801142"
 ## <a name="see-also"></a>请参阅  
  [Vspackage 如何添加用户界面元素](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
  [命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)
-

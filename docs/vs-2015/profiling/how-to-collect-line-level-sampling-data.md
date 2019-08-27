@@ -1,29 +1,24 @@
 ---
 title: 如何：收集行级采样数据 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - performance tools, line-level sampling
 ms.assetid: 44803aad-dd39-4c2e-9209-d35185d44983
 caps.latest.revision: 27
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 21ef50736e00bd835b4e1bc88530d2aaef30ee82
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 65890bf31a1257c3a41bc1fd7ed3f732c50eda14
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51767544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68185958"
 ---
-# <a name="how-to-collect-line-level-sampling-data"></a>如何：收集行级采样数据
+# <a name="how-to-collect-line-level-sampling-data"></a>如何：收集行级别采样数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 行级采样是探查器确定占用大量处理器时间的函数在代码中的位置，如具有高独占样本的函数，处理器需要耗费大量时间。  
@@ -52,20 +47,17 @@ ms.locfileid: "51767544"
   
 - IP - 获取聚合样本的地址（仅限 IP 视图）。  
   
-  在“模块”视图中，如果函数具有行级统计信息，这些统计信息将嵌套在每个函数下。 此外，还将显示嵌套在每行下的 IP 级统计信息。  
+  在“模块”  视图中，如果函数具有行级统计信息，这些统计信息将嵌套在每个函数下。 此外，还将显示嵌套在每行下的 IP 级统计信息。  
   
 ### <a name="turn-off-line-level-sampling-for-managed-code"></a>关闭托管代码的行级采样  
  默认情况下，行级采样处于开启状态。 可以通过执行以下任一操作来关闭托管代码的行级数据收集：  
   
--   分析前，键入 **VSPerfCLREnv /samplelineoff**。 这会影响应用程序和服务。  
+- 分析前，键入 **VSPerfCLREnv /samplelineoff**。 这会影响应用程序和服务。  
   
      — 或 —  
   
--   启动应用程序时，键入 **VSPerfCmd /lineoff \<其他参数>**。  
+- 启动应用程序时，键入 **VSPerfCmd /lineoff \<其他参数>** 。  
   
 ## <a name="see-also"></a>请参阅  
  [配置性能会话](../profiling/configuring-performance-sessions.md)   
  [分析性能工具数据](../profiling/analyzing-performance-tools-data.md)
-
-
-

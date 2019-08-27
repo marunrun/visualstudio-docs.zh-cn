@@ -1,14 +1,9 @@
 ---
 title: RemoveDuplicates 任务 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#RemoveDuplicates
 dev_langs:
@@ -23,24 +18,23 @@ ms.assetid: 481cbab6-73ff-488c-aba5-2c09f9eb1e04
 caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 33bb64dbc7d73bd2c20e3efa7ff3a11510923a1f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 73ad829c86305ff4d9a54025467e262d56e24dbc
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49263674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68159246"
 ---
 # <a name="removeduplicates-task"></a>RemoveDuplicates 任务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 从指定的项集合中删除重复的项。  
   
 ## <a name="parameters"></a>参数  
  下表描述了 `RemoveDuplicates` 任务的参数。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |`Filtered`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 包含删除了所有重复项的项集合。|  
 |`Inputs`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 要从中删除重复项的项集合。|  
@@ -75,10 +69,7 @@ ms.locfileid: "49263674"
 </Project>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [任务参考](../msbuild/msbuild-task-reference.md)   
  [MSBuild 概念](../msbuild/msbuild-concepts.md)   
  [任务](../msbuild/msbuild-tasks.md)
-
-
-

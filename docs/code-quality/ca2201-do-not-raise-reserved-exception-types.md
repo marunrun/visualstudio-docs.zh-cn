@@ -1,7 +1,6 @@
 ---
 title: CA2201:不要引发保留的异常类型
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - DoNotRaiseReservedExceptionTypes
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: dd14ef5c-80e6-41a5-834e-eba8e2eae75e
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b8eff3ac514e82e16327bfb873ed5fa2e9ccfba
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 1648d2ae3c46fa8382a96b497f307b370a8d345c
+ms.sourcegitcommit: 51dad3e11d7580567673e0d426ab3b0a17584319
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53911934"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66820577"
 ---
 # <a name="ca2201-do-not-raise-reserved-exception-types"></a>CA2201:不要引发保留的异常类型
 
@@ -47,6 +46,8 @@ ms.locfileid: "53911934"
 
 下面的异常类型被保留，应仅由公共语言运行时引发：
 
+- <xref:System.AccessViolationException?displayProperty=fullName>
+
 - <xref:System.ExecutionEngineException?displayProperty=fullName>
 
 - <xref:System.IndexOutOfRangeException?displayProperty=fullName>
@@ -54,6 +55,14 @@ ms.locfileid: "53911934"
 - <xref:System.NullReferenceException?displayProperty=fullName>
 
 - <xref:System.OutOfMemoryException?displayProperty=fullName>
+
+- <xref:System.Runtime.InteropServices.COMException?displayProperty=fullName>
+
+- <xref:System.Runtime.InteropServices.ExternalException?displayProperty=fullName>
+
+- <xref:System.Runtime.InteropServices.SEHException?displayProperty=fullName>
+
+- <xref:System.StackOverflowException?displayProperty=fullName>
 
 **不会引发一般异常**
 

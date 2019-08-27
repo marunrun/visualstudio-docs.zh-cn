@@ -1,27 +1,22 @@
 ---
 title: 旧版语言服务中重新格式化代码 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - reformatting code, supporting in language services [managed package framework]
 - language services [managed package framework], reformatting code
 ms.assetid: 08bb3375-8fef-4f4e-9efa-0d7333bab0eb
 caps.latest.revision: 13
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 95b878448904c194bd758d266e67599369502fe6
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: eb0dac5e1282d544df9c04bf4c12303fb391739d
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51779263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63436644"
 ---
 # <a name="reformatting-code-in-a-legacy-language-service"></a>在旧版语言服务中重新格式化代码
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -29,7 +24,7 @@ ms.locfileid: "51779263"
 在[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]源代码可以重新设置格式的规范化使用缩进和空格。 这可能包括插入或删除空间或在每个行开头的选项卡、 添加新行之间的行，或用制表符或空格与制表符替换空格。  
   
 > [!NOTE]
->  **请注意**插入或删除换行字符可能会影响标记，如断点和书签，但添加或删除空格或选项卡不会影响标记。  
+> **请注意**插入或删除换行字符可能会影响标记，如断点和书签，但添加或删除空格或选项卡不会影响标记。  
   
  用户可以通过选择启动重新格式化操作**选定内容的格式**或**格式的文档**从**高级**菜单上的**编辑**菜单。 插入代码段或特定字符时，也会触发重新格式化操作。 例如，当在 C# 中键入右大括号，匹配的左大括号和右大括号之间的所有内容会自动缩进到适当的级别。  
   
@@ -186,4 +181,3 @@ namespace MyLanguagePackage
   
 ## <a name="see-also"></a>请参阅  
  [旧版语言服务功能](../../extensibility/internals/legacy-language-service-features1.md)
-

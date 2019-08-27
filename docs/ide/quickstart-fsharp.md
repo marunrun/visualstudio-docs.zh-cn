@@ -2,7 +2,6 @@
 title: 快速入门：在 F# 中创建 ASP.NET Core Web 服务
 description: 了解如何在 Visual Studio 中使用 F# 逐步创建 ASP.NET Core Web 服务。
 ms.date: 08/24/2018
-ms.prod: visual-studio-dev15
 ms.topic: quickstart
 author: cartermp
 ms.author: phcart
@@ -12,26 +11,38 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 9cdd97349732b4e228c77ce59990e47a396a0112
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c24803f3817aa8461f9445e390fe44853d2d27c5
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53961860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62953310"
 ---
-# <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-service-in-f"></a>快速入门：使用 Visual Studio 在 F# 中创建首个 ASP.NET Core Web 服务
+# <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-service-in-f"></a>快速入门：使用 Visual Studio 在 F\# 中创建首个 ASP.NET Core Web 服务
 
 在这个 5-10 分钟的有关 Visual Studio 中 F# 的介绍中，将创建一个 F# ASP.NET Core Web 应用程序。
 
-如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)页免费安装。
+::: moniker range="vs-2017"
+
+如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)页免费安装。
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)页免费安装。
+
+::: moniker-end
 
 ## <a name="create-a-project"></a>创建项目
 
 首先，创建一个 ASP.NET Core Web API 项目。 即使尚未添加任何内容，项目类型随附的模板文件里也包含一个功能性 Web 服务！
 
-1. 打开 Visual Studio 2017。
+::: moniker range="vs-2017"
 
-2. 在顶部菜单栏，依次选择“文件” > “新建” > “项目”。
+1. 打开 Visual Studio。
+
+2. 从顶部菜单栏中选择“文件”>“新建”>“项目”。
 
 3. 在“新建项目”对话框的左窗格中，展开“Visual F#”，然后选择“Web”。 在中间窗格中，选择“ASP.NET Core Web 应用程序”，然后选择“确定”。
 
@@ -40,6 +51,22 @@ ms.locfileid: "53961860"
      ![VS 安装程序的 ASP.NET 工作负载](../ide/media/quickstart-aspnet-workload.png)
 
 4. 在“新建 ASP.NET Core Web 应用程序”对话框中，从顶部下拉菜单选择“ASP.NET Core 2.1”。 （如果没有在列表中看到“ASP.NET Core 2.1”，请通过“下载”链接进行安装，该链接显示在对话框顶部附近的黄色栏中。）选择 **“确定”**。
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+1. 打开 Visual Studio。
+
+2. 在“开始”窗口上，选择“创建新项目”。
+
+3. 在“创建新项目”页上，将“f # web”键入搜索框，然后选择“ASP.NET Core Web 应用程序”项目模板。 选择“下一步”。
+
+4. 在“配置新项目”页上，输入名称，然后选择“创建”。
+
+5. 在“新建 ASP.NET Core Web 应用程序”页上，从顶部下拉菜单选择“ASP.NET Core 2.1”，然后选择“创建”。
+
+::: moniker-end
 
 ## <a name="explore-the-ide"></a>探索 IDE
 

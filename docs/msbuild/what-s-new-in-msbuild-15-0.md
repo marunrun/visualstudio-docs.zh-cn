@@ -5,15 +5,16 @@ ms.topic: conceptual
 ms.assetid: 9976b6fd-d052-4017-b848-35b5bf4b2f66
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3712f009262abd9590653af3f3ef4e4e81c87e84
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+monikerRange: vs-2017
+ms.openlocfilehash: 718ef14fda76df87dc4627dc518e993058896471
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53943572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62777979"
 ---
 # <a name="whats-new-in-msbuild-15"></a>MSBuild 15 中的新增功能
 
@@ -23,7 +24,7 @@ MSBuild 现已推出，属于 [.NET Core SDK](https://www.microsoft.com/net/down
 
  MSBuild 现安装于每版 Visual Studio 下的文件夹中。 例如，C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild。 也可使用下面的 PowerShell 模块查找 MSBuild：[vssetup.powershell](https://github.com/Microsoft/vssetup.powershell)。
 
- 全局程序集缓存中不再安装 MSBuild。 若要以编程方式引用 MSBuild，请使用 NuGet 包。
+ 全局程序集缓存中不再安装 MSBuild。 若要以编程方式引用 MSBuild，请使用 NuGet 包。 有关详细信息，请参阅[更新 MSBuild 15.0 的现有应用程序](../msbuild/updating-an-existing-application.md)。
 
 ## <a name="changed-properties"></a>更改的属性
 
@@ -51,4 +52,4 @@ MSBuild 现已推出，属于 [.NET Core SDK](https://www.microsoft.com/net/down
 - `GetPathOfFileAbove` 返回此文件前紧邻的文件的路径。 它在功能上等效于调用 `<Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />`
 
 ## <a name="see-also"></a>请参阅
-[MSBuild](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)

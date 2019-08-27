@@ -7,19 +7,20 @@ helpviewer_keywords:
 - Visual Studio integration SDK roadmap
 - integration roadmap, Visual Studio SDK
 ms.assetid: 9118eaa4-0453-4dc5-9e16-c7062d254869
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f356fe21f512ae1fabb51df3ab562b067a692665
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 05736ebc8ce242120b49b59ef6d6caf4c4992573
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53821140"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66349830"
 ---
 # <a name="inside-the-visual-studio-sdk"></a>深入探究 Visual Studio SDK
+
 本部分提供有关 Visual Studio 扩展，其中包括 Visual Studio 体系结构、 组件、 服务、 架构、 实用工具和类似的内容的详细信息。
 
 ## <a name="extensibility-architecture"></a>可扩展性体系结构
@@ -55,20 +56,20 @@ ms.locfileid: "53821140"
 
  工具窗口通常会提供用户可与之交互的各种控件。 例如，**属性**窗口让用户设置具有特殊用途的对象的属性。 **属性**窗口是这个意义上说，专用的但还常规，因为在许多不同的情况下可以使用它。 同样，**输出**窗口专用化，因为它提供了基于文本的输出，但常规，因为在 Visual Studio 中的许多子系统可以使用它来向 Visual Studio 用户提供输出。
 
- 请考虑下图的 Visual Studio 中，其中包含多个工具窗口。
+ 请考虑下图的 Visual Studio 中，其中包含多个工具窗口：
 
  ![屏幕截图](../../extensibility/internals/media/t1gui.png "T1gui")
 
  某些工具窗口一起停靠在单一的解决方案资源管理器工具窗口将显示和隐藏其他工具窗口，但使其可通过单击选项卡。 图中显示了两个其他工具窗口**错误列表**并**输出**窗口中上一个窗格, 停靠在一起。
 
- 此外显示的是主文档窗格中，其中显示了多个编辑器窗口。 尽管工具窗口通常有一个实例 (例如，可以打开一个**解决方案资源管理器**)，编辑器窗口可以具有多个实例，其中每个可用于编辑一个单独的文档，但所有这些都在停靠同一个窗格。 图显示了一个文档窗格具有两个编辑器窗口、 一个窗体设计器窗口中，以及一个显示启动页的浏览器窗口。 在文档窗格中的所有窗口都都可通过单击选项卡上，但包含 EditorPane.cs 文件的编辑器窗口是可见且处于活动状态。
+ 此外显示的是主文档窗格中，其中显示了多个编辑器窗口。 尽管工具窗口通常有一个实例 (例如，可以打开一个**解决方案资源管理器**)，编辑器窗口可以具有多个实例，其中每个可用于编辑一个单独的文档，但所有这些都在停靠同一个窗格。 图中显示一个具有两个编辑器窗口中，一个窗体设计器窗口的文档窗格。 在文档窗格中的所有窗口都都可通过单击选项卡上，但包含 EditorPane.cs 文件的编辑器窗口是可见且处于活动状态。
 
  扩展 Visual Studio 时，可以通过扩展来创建 windows，Visual Studio 用户可交互的工具。 此外可以创建自己的编辑器的让 Visual Studio 用户编辑文档。 工具窗口和编辑器将集成到 Visual Studio 中，因为没有它们以停靠或正确显示选项卡上进行编程。 时正确注册 Visual Studio 中，它们会自动具有工具窗口和文档窗口在 Visual Studio 中的典型功能。 有关详细信息，请参阅[扩展和自定义工具 Windows](../../extensibility/extending-and-customizing-tool-windows.md)。
 
 ## <a name="document-windows"></a>文档窗口
  文档窗口是带边框的子窗口的多文档界面 (MDI) 窗口。 文档窗口通常要用于宿主的文本编辑器、 窗体编辑器 （也称为设计器） 或编辑控件，但它们还可以托管其他功能的类型。 **新的文件**对话框包括 Visual Studio 提供的文档窗口的示例。
 
- 大多数编辑器是特定于编程语言或文件类型，如 HTML 页面、 框架、 c + + 文件或标头文件。 通过选择中的模板**新的文件**对话框中，用户动态创建一个文档窗口是与模板关联的文件类型的编辑器。 当用户打开现有文件，还会创建一个文档窗口。
+ 大多数编辑器是特定于编程语言或文件类型，如 HTML 页，框架集，C++文件或标头文件。 通过选择中的模板**新的文件**对话框中，用户动态创建一个文档窗口是与模板关联的文件类型的编辑器。 当用户打开现有文件，还会创建一个文档窗口。
 
  文档窗口仅限于在 MDI 工作区。 每个文档窗口的顶部，有一个选项卡和 tab 键顺序链接至其他 MDI 区域中可以在打开的窗口。 右键单击文档窗口的选项卡显示包括用于将 MDI 区域拆分为多个水平或垂直选项卡组的选项的快捷菜单。 拆分 MDI 区可以同时查看多个文件。 有关详细信息，请参阅[文档 Windows](../../extensibility/internals/document-windows.md)。
 
@@ -83,14 +84,15 @@ ms.locfileid: "53821140"
  语言服务的核心是一个分析器和扫描程序。 扫描程序 （或词法分析器） 将源文件划分为称为标记的元素，并分析程序建立这些令牌之间的关系。 当创建语言服务时，必须实现分析器和扫描程序，以便 Visual Studio 可以理解的令牌和语言的语法。 可以创建托管或非托管语言服务。 有关详细信息，请参阅[旧版语言服务扩展性](../../extensibility/internals/legacy-language-service-extensibility.md)。
 
 ## <a name="projects"></a>项目
- 在 Visual Studio 中，项目是开发人员用于组织和生成的源代码和其他资源的容器。 项目的让组织、 生成、 调试和部署的源代码，请对 Web 服务和数据库，以及其他资源的引用。 Vspackage 可以通过提供项目类型、 项目子类型和自定义工具来扩展 Visual Studio 项目系统。
 
- 项目还可能收集到一个解决方案，其中是协同工作以创建应用程序的一个或多个项目的分组。 适用于解决方案的项目和状态信息存储在两个解决方案文件、 基于文本的解决方案 (.sln) 文件和二进制解决方案用户选项 (.suo) 文件。 这些文件是与组 (文件.vbg) 文件的早期版本中使用的类似[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]，以及在工作区 (.dsw) 和用户选项 (.opt) 文件的早期版本中使用[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]。
+在 Visual Studio 中，项目是开发人员用于组织和生成的源代码和其他资源的容器。 项目的让组织、 生成、 调试和部署的源代码，请对 Web 服务和数据库，以及其他资源的引用。 Vspackage 可以通过提供项目类型、 项目子类型和自定义工具来扩展 Visual Studio 项目系统。
 
- 有关详细信息，请参阅[项目](../../extensibility/internals/projects.md)并[解决方案](../../extensibility/internals/solutions.md)。
+项目可能还收集在一起*解决方案*，这是一个或多个协同工作以创建应用程序的项目的分组。 适用于解决方案的项目和状态信息存储在两个解决方案文件中，基于文本的[解决方案 (.sln) 文件](solution-dot-sln-file.md)和二进制[解决方案用户选项 (.suo) 文件](solution-user-options-dot-suo-file.md)。 这些文件是类似于早期版本的 Visual Basic 中使用的组 (文件.vbg) 文件和工作区 (.dsw) 和用户选项 (.opt) 文件的早期版本中使用C++。
+
+有关详细信息，请参阅[项目](../../extensibility/internals/projects.md)并[解决方案](../../extensibility/internals/solutions-overview.md)。
 
 ## <a name="project-and-item-templates"></a>项目和项模板
- Visual Studio 包含预定义的项目模板和项目项模板。 可以还使您自己的模板或获取社区中的模板，然后将其集成到 Visual Studio。 [MSDN 代码库](http://code.msdn.microsoft.com/Project/ProjectDirectory.aspx?ProjectSearchText=visual%20studio)是为模板和扩展的位置。
+ Visual Studio 包含预定义的项目模板和项目项模板。 可以还使您自己的模板或获取社区中的模板，然后将其集成到 Visual Studio。 [MSDN 代码库](https://code.msdn.microsoft.com/site/search?query=visual%20studio)是为模板和扩展的位置。
 
  模板包含的项目结构和所需构建特定类型的应用程序、 控件、 库或类的基本文件。 当你想要开发软件，类似于一个模板时，创建基于模板的项目，然后修改该项目中的文件。
 
@@ -102,7 +104,7 @@ ms.locfileid: "53821140"
 ## <a name="properties-and-options"></a>属性和选项
  **属性**窗口显示单个或多个选定的项的属性：[将属性扩展](../../extensibility/internals/extending-properties.md)选项页包含一系列的适用于特定组件，例如，一种编程语言或 VSPackage 的选项：[选项和选项页](../../extensibility/internals/options-and-options-pages.md)。 设置为通常与 UI 相关的功能，可以导入和导出：[支持用户设置](../../extensibility/internals/support-for-user-settings.md)。
 
-## <a name="visual-studio-services"></a>Visual Studio 服务
+## <a name="visual-studio-services"></a>Visual Studio Services
  服务提供了一组特定的组件使用的接口。 Visual Studio 提供了一组可由任何组件，包括扩展的服务。 例如，Visual Studio 服务，工具窗口，以显示或隐藏动态，启用对帮助、 状态栏或 UI 事件的访问。 在 Visual Studio 编辑器还提供可由编辑器扩展导入的服务。 有关详细信息，请参阅[使用和提供服务](../../extensibility/using-and-providing-services.md)。
 
 ## <a name="debugger"></a>调试器

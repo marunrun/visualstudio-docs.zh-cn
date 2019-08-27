@@ -1,14 +1,9 @@
 ---
 title: “选项”->“文本编辑器”->“所有语言”| Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.JavaScript.General
 - VS.ToolsOptionsPages.Text_Editor.ResJSON.General
@@ -24,27 +19,26 @@ ms.assetid: 49ee7306-9d46-4170-850f-a1716171752d
 caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 987e0339f2d27405c81ce05b6a30181a1469be7b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: e3d62bf388725b454d771e8cdd59ec963775eeb1
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49884168"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65674755"
 ---
 # <a name="options-text-editor-all-languages"></a>选项、文本编辑器、所有语言
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 使用此对话框可更改代码编辑器的默认行为。 这些设置也适用于其他基于代码编辑器的编辑器，如 HTML 设计器的“源”视图。 若要打开此对话框，请从“工具”菜单中选择“选项”。 在“文本编辑器”文件夹中，展开“所有语言”子文件夹，然后选择“常规”。  
   
 > [!CAUTION]
->  在此页面用于设置所有开发语言的默认选项。 请记住，重置此对话框中的一个选项会将所有语言的“常规”选项重置为在此处选择的任何选项。 若要只为一种语言更改文本编辑器选项，请展开该语言的子文件夹并选择其选项页。  
+> 在此页面用于设置所有开发语言的默认选项。 请记住，重置此对话框中的一个选项会将所有语言的“常规”选项重置为在此处选择的任何选项。 若要只为一种语言更改文本编辑器选项，请展开该语言的子文件夹并选择其选项页。  
   
  当在“常规”选项页上为某些编程语言选择了一个选项，而没有为其他编程语言选择该选项时，会显示一个灰色复选标记。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+> 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ## <a name="statement-completion"></a>语句结束  
  自动列出成员  
@@ -64,7 +58,7 @@ ms.locfileid: "49884168"
  选中后，行中水平方向超出可视编辑器区域的任何部分会自动显示在下一行。 选择此选项将启用“显示可视的自动换行标志符号”选项。  
   
 > [!NOTE]
->  “自动换行”打开时，“虚空格”功能会被关闭。  
+> “自动换行”打开时，“虚空格”功能会被关闭。  
   
  显示可视的自动换行标志符号  
  选中后，在一个长行换行到第二行的位置会显示一个回车箭头指示符。  
@@ -74,7 +68,7 @@ ms.locfileid: "49884168"
  如果不希望显示这些指示符，则清除此选项。  
   
 > [!NOTE]
->  这些提醒箭头不会添加到代码中，也不会打印出来。 它们仅供参考。  
+> 这些提醒箭头不会添加到代码中，也不会打印出来。 它们仅供参考。  
   
  没有选定内容时对空行应用剪切或复制命令  
  此选项设置当你将插入点放置在空行上，未选中任何内容，然后复制或剪切时，编辑器的行为。  
@@ -86,14 +80,14 @@ ms.locfileid: "49884168"
   此设置对行非空时的复制或剪切操作无效。 如果未选择任何内容，将会对整行进行复制或剪切。 如果随后执行粘贴操作，则粘贴整行文本及其行尾字符。  
   
 > [!TIP]
->  若要显示空格、制表符和行尾的指示符，从而区分缩进行和完全空白的行，请从“编辑”菜单中选择“高级”，然后选择“查看空白”。  
+> 若要显示空格、制表符和行尾的指示符，从而区分缩进行和完全空白的行，请从“编辑”菜单中选择“高级”，然后选择“查看空白”。  
   
 ## <a name="display"></a>显示  
  行号  
  选中后，行号出现在每行代码的旁边。  
   
 > [!NOTE]
->  这些行号不会添加到代码中，也不会打印出来。 它们仅供参考。  
+> 这些行号不会添加到代码中，也不会打印出来。 它们仅供参考。  
   
  启用单击 URL 定位  
  选中后，鼠标光标在经过编辑器中的 URL 时会变成向上指的手形。 可以单击该 URL 以在 Web 浏览器中显示指示页面。  
@@ -105,6 +99,3 @@ ms.locfileid: "49884168"
  [“选项”->“文本编辑器”->“所有语言”->“制表符”](../../ide/reference/options-text-editor-all-languages-tabs.md)   
  [“选项”对话框 ->“环境”->“常规”](../../ide/reference/general-environment-options-dialog-box.md)   
  [使用 IntelliSense](../../ide/using-intellisense.md)
-
-
-

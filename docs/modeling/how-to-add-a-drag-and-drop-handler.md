@@ -4,16 +4,15 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 90385b233e859bf1cdd8ea1617b94efe58ec4cbf
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b15e0d305140e6e04464091df59432a2cd261796
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53876388"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821943"
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>如何：添加拖放处理程序
 
@@ -35,7 +34,7 @@ using System.Linq;
 
 在新文件中，为应响应拖动操作的形状或关系图类定义分部类。 重写以下方法：
 
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragOver%2A> - 当鼠标指针在拖动操作期间进入该形状时调用此方法。 你的方法应检查用户正在拖动的项，并设置“效果”属性以指示用户是否可以将项放置在此形状上。 “效果”属性确定当指针悬停在此形状上时指针的外观，还确定当用户释放鼠标按钮时是否将调用 `OnDragDrop()`。
+- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragOver%2A> - 当鼠标指针在拖动操作期间进入该形状时调用此方法。 你的方法应检查用户正在拖动的项，并设置“效果”属性以指示用户是否可以将项放置在此形状上。 “效果”属性确定当指针悬停在此形状上时指针的外观，还确定当用户释放鼠标按钮时是否将调用 `OnDragDrop()`。
 
     ```csharp
     partial class MyShape // MyShape generated from DSL Definition.
@@ -51,7 +50,7 @@ using System.Linq;
         }
     ```
 
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A> -如果用户释放鼠标按钮时鼠标指针停留在此形状或关系图中，如果调用此方法`OnDragOver(DiagramDragEventArgs e)`之前设置`e.Effect`以外的值为`None`。
+- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A> -如果用户释放鼠标按钮时鼠标指针停留在此形状或关系图中，如果调用此方法`OnDragOver(DiagramDragEventArgs e)`之前设置`e.Effect`以外的值为`None`。
 
     ```csharp
     public override void OnDragDrop(DiagramDragEventArgs e)
@@ -67,11 +66,11 @@ using System.Linq;
     }
     ```
 
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A> -当用户双击的形状或关系图时，调用此方法。
+- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A> -当用户双击的形状或关系图时，调用此方法。
 
-     有关更多信息，请参见[如何：截获对形状或修饰器的单击](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)。
+     有关详细信息，请参阅[如何：截获对形状或修饰器的单击](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)。
 
-定义 `IsAcceptableDropItem(e)` 以确定拖动项是否是可接受的，并定义 ProcessDragDropItem(e) 以在放置该项后更新模型。 这些方法必须先从事件参数中提取项。 有关如何执行该操作的信息，请参阅[如何获取对拖动项的引用](#extracting)。
+定义 `IsAcceptableDropItem(e)` 以确定拖动项是否是可接受的，并定义 ProcessDragDropItem(e) 以在放置该项后更新模型。 这些方法必须先从事件参数中提取项。 有关如何执行该操作的信息，请参阅[如何获取对拖动项的引用](#to-send-an-object-from-a-source-dsl)。
 
 ## <a name="define-gesture-handlers-by-using-mef"></a>通过使用 MEF 定义笔势处理程序
 
@@ -81,9 +80,9 @@ MEF (Managed Extensibility Framework) 允许定义可使用最小配置安装的
 
 ### <a name="to-define-a-mef-gesture-handler"></a>定义 MEF 笔势处理程序
 
-1.  将添加到您**Dsl**并**DslPackage**项目**MefExtension**中所述的文件[使用 MEF 扩展 DSL](../modeling/extend-your-dsl-by-using-mef.md)。
+1. 将添加到您**Dsl**并**DslPackage**项目**MefExtension**中所述的文件[使用 MEF 扩展 DSL](../modeling/extend-your-dsl-by-using-mef.md)。
 
-2.  现在可以将笔势处理程序定义为 MEF 组件：
+2. 现在可以将笔势处理程序定义为 MEF 组件：
 
     ```csharp
     // This attribute is defined in the generated file
@@ -115,7 +114,7 @@ MEF (Managed Extensibility Framework) 允许定义可使用最小配置安装的
 
      可创建多个笔势处理程序组件，例如当你具有不同类型的拖动对象时。
 
-3.  添加目标形状、连接符或关系图类的分部类定义，并定义方法 `IsAcceptableDropItem()` 和 `ProcessDragDropItem()`。 必须通过从事件参数中提取拖动项开始使用这些方法。 有关详细信息，请参阅[如何获取对拖动项的引用](#extracting)。
+3. 添加目标形状、连接符或关系图类的分部类定义，并定义方法 `IsAcceptableDropItem()` 和 `ProcessDragDropItem()`。 必须通过从事件参数中提取拖动项开始使用这些方法。 有关详细信息，请参阅[如何获取对拖动项的引用](#to-send-an-object-from-a-source-dsl)。
 
 ## <a name="how-to-decode-the-dragged-item"></a>如何解码拖动项
 
@@ -125,17 +124,17 @@ MEF (Managed Extensibility Framework) 允许定义可使用最小配置安装的
 
 若要发现拖动源信息可采用的格式，请在调试模式下运行代码，从而在 `OnDragOver()` 或 `CanDragDrop()` 入口设置断点。 检查 `DiagramDragEventArgs` 参数的值。 信息将采用以下两种方式提供：
 
--   <xref:System.Windows.Forms.IDataObject>  `Data` -此属性包含序列化的版本的源对象，通常在多个格式。 其最有用的函数是：
+- <xref:System.Windows.Forms.IDataObject>  `Data` -此属性包含序列化的版本的源对象，通常在多个格式。 其最有用的函数是：
 
-    -   diagramEventArgs.Data.GetDataFormats()-列出了可以在其中解码拖动的对象的格式。 例如，如果用户从桌面拖动文件，则可用的格式包括文件名（“`FileNameW`”）。
+  - diagramEventArgs.Data.GetDataFormats()-列出了可以在其中解码拖动的对象的格式。 例如，如果用户从桌面拖动文件，则可用的格式包括文件名（“`FileNameW`”）。
 
-    -   `diagramEventArgs.Data.GetData(format)` -解码拖动的对象中指定的格式。 将该对象转换为相应的类型。 例如：
+  - `diagramEventArgs.Data.GetData(format)` -解码拖动的对象中指定的格式。 将该对象转换为相应的类型。 例如:
 
-         `string fileName = diagramEventArgs.Data.GetData("FileNameW") as string;`
+    `string fileName = diagramEventArgs.Data.GetData("FileNameW") as string;`
 
-         还可以采用自己的自定义格式从源中传输对象（例如模型总线引用）。 有关详细信息，请参阅[如何在拖放发送模型总线引用](#mbr)。
+    还可以采用自己的自定义格式从源中传输对象（例如模型总线引用）。 有关详细信息，请参阅[如何在拖放发送模型总线引用](#to-send-an-object-from-a-source-dsl)。
 
--   <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> `Prototype` -如果你希望用户从 DSL 或 UML 模型拖动项，则使用此属性。 元素组原型包含一个或多个对象、链接及其属性值。 在粘贴操作中以及要从工具箱添加元素时，也会使用它。 在原型中，对象及其类型由 Guid 标识。 例如，此代码允许用户从 UML 关系图或 UML 模型资源管理器拖动类元素：
+- <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> `Prototype` -如果你希望用户从 DSL 或 UML 模型拖动项，则使用此属性。 元素组原型包含一个或多个对象、链接及其属性值。 在粘贴操作中以及要从工具箱添加元素时，也会使用它。 在原型中，对象及其类型由 Guid 标识。 例如，此代码允许用户从 UML 关系图或 UML 模型资源管理器拖动类元素：
 
     ```csharp
     private bool IsAcceptableDropItem(DiagramDragEventArgs e)
@@ -159,17 +158,17 @@ MEF (Managed Extensibility Framework) 允许定义可使用最小配置安装的
 
 ### <a name="to-prepare-a-dsl-project-for-model-bus"></a>准备用于模型总线的 DSL 项目
 
-1.  确保源 DSL 可由 Visual Studio 模型总线访问：
+确保源 DSL 可由 Visual Studio 模型总线访问：
 
-    1.  如果未安装 Visual Studio 模型总线扩展，请下载并安装它。 有关详细信息，请参阅[可视化和建模 SDK](http://go.microsoft.com/fwlink/?LinkID=185579)。
+1. 如果未安装 Visual Studio 模型总线扩展，请下载并安装它。 有关详细信息，请参阅[可视化和建模 SDK](http://go.microsoft.com/fwlink/?LinkID=185579)。
 
-    2.  在 DSL 设计器中打开源 DSL 的 DSL 定义文件。 右键单击设计图面，然后单击**启用 Modelbus**。 在该对话框中，选择一个或两个选项。  单击 **“确定”**。 新项目“ModelBus”随即添加到 DSL 解决方案中。
+2. 在 DSL 设计器中打开源 DSL 的 DSL 定义文件。 右键单击设计图面，然后单击**启用 Modelbus**。 在该对话框中，选择一个或两个选项。  单击 **“确定”** 。 新项目“ModelBus”随即添加到 DSL 解决方案中。
 
-    3.  单击**转换所有模板**重新生成解决方案。
+3. 单击**转换所有模板**重新生成解决方案。
 
 ### <a name="to-send-an-object-from-a-source-dsl"></a>从源 DSL 发送对象
 
-1.  在 ElementOperations 子类中，重写 `Copy()`，以便它将模型总线引用 (MBR) 编码到 IDataObject 中。 当用户开始从源关系图进行拖动时，将调用此方法。 当用户在目标关系图中进行放置时，随后在 IDataObject 中提供编码的 MBR。
+1. 在 ElementOperations 子类中，重写 `Copy()`，以便它将模型总线引用 (MBR) 编码到 IDataObject 中。 当用户开始从源关系图进行拖动时，将调用此方法。 当用户在目标关系图中进行放置时，随后在 IDataObject 中提供编码的 MBR。
 
     ```csharp
     using Microsoft.VisualStudio.Modeling;
@@ -209,13 +208,13 @@ MEF (Managed Extensibility Framework) 允许定义可使用最小配置安装的
 
 ### <a name="to-receive-a-model-bus-reference-from-a-dsl-in-a-target-dsl-or-uml-project"></a>在目标 DSL 或 UML 项目中从 DSL 接收模型总线引用
 
-1.  在目标 DSL 项目中，将项目引用添加到：
+1. 在目标 DSL 项目中，将项目引用添加到：
 
-    -   源 DSL 项目。
+    - 源 DSL 项目。
 
-    -   源 ModelBus 项目。
+    - 源 ModelBus 项目。
 
-2.  在笔势处理程序代码文件中，添加以下命名空间引用：
+2. 在笔势处理程序代码文件中，添加以下命名空间引用：
 
     ```csharp
     using Microsoft.VisualStudio.Modeling;
@@ -227,7 +226,7 @@ MEF (Managed Extensibility Framework) 允许定义可使用最小配置安装的
     using SourceDslNamespace.ModelBusAdapters;
     ```
 
-3.  以下示例说明了如何获取对源模型元素的访问权限：
+3. 以下示例说明了如何获取对源模型元素的访问权限：
 
     ```csharp
     partial class MyTargetShape // or diagram or connector
@@ -274,7 +273,7 @@ MEF (Managed Extensibility Framework) 允许定义可使用最小配置安装的
 
 ### <a name="to-accept-an-element-sourced-from-a-uml-model"></a>接受来源于 UML 模型的元素
 
--   以下代码示例接受从 UML 关系图拖放的对象。
+- 以下代码示例接受从 UML 关系图拖放的对象。
 
     ```csharp
     using Microsoft.VisualStudio.ArchitectureTools.Extensibility;
@@ -575,6 +574,6 @@ namespace Company.CompartmentDrag  // EDIT.
 ## <a name="see-also"></a>请参阅
 
 - [自定义复制行为](../modeling/customizing-copy-behavior.md)
-- [部署域特定语言解决方案](../modeling/deploying-domain-specific-language-solutions.md)
+- [部署域特定语言解决方案](msi-and-vsix-deployment-of-a-dsl.md)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

@@ -1,25 +1,25 @@
 ---
-title: 修改 Blend 中对象的样式
+title: 修改对象样式
+titleSuffix: Blend for Visual Studio
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3cd8b8d9b3f9a12fa69cf708b0f7a3b16bae83d1
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 53a2071e17898fc77aba8a5d51dda77ea2927187
+ms.sourcegitcommit: 90c3187d804ad7544367829d07ed4b47d3f8a72d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53906782"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821960"
 ---
-# <a name="modify-the-style-of-objects-in-blend"></a>修改 Blend 中对象的样式
+# <a name="modify-the-style-of-objects-in-blend-for-visual-studio"></a>修改 Blend for Visual Studio 中对象的样式
 
-自定义对象的最简单方法是在“属性”窗格中设置属性。
+自定义对象的最简单方法是在“属性”  窗格中设置属性。
 
-如果你希望重复使用设置或设置组，请创建可重复使用的资源。 这可以是样式、模板或如自定义颜色一样简单的对象。 还可以使控件基于其状态以不同方式出现。 例如，按钮在用户单击它时变为绿色。
+如果你希望重复使用设置或设置组，请创建可重复使用的资源。 这可以是样式  、模板  或如自定义颜色一样简单的对象。 还可以使控件基于其状态以不同方式出现。 例如，按钮在用户单击它时变为绿色。
 
 ## <a name="brushes-modify-the-appearance-of-an-object"></a>画笔：修改对象的外观
 
@@ -27,9 +27,9 @@ ms.locfileid: "53906782"
 
 ### <a name="paint-a-repeating-image-or-pattern-on-an-object"></a>在对象上绘制重复图像或图案
 
-可使用平铺画笔在对象上绘制重复图像或图案。
+可使用平铺画笔  在对象上绘制重复图像或图案。
 
-若要创建平铺画笔，请首先创建图像画笔、图形画笔或视觉画笔资源。
+若要创建平铺画笔，请首先创建图像画笔  、图形画笔  或视觉画笔  资源。
 
 使用图像创建图像画笔。 下图显示图像画笔、平铺的图像画笔和翻转的图像画笔。
 
@@ -47,53 +47,53 @@ ms.locfileid: "53906782"
 
 可以一次性设计控件的外观和行为，然后将该设计应用于其他控件，以便不必分别进行维护。
 
-**是否应使用样式？**：如果只是想设置默认属性（如按钮的颜色），请使用样式。 即使在应用了样式之后，也可以修改控件。
+**是否应使用样式？** ：如果只是想设置默认属性（如按钮的颜色），请使用样式  。 即使在应用了样式之后，也可以修改控件。
 
-**是否应使用模板？**：如果想要更改控件的结构，请使用模板。 假设将图形或徽标转换为按钮。 在向控件应用模板之后，无法修改控件。
+**是否应使用模板？** ：如果想要更改控件的结构，请使用模板  。 假设将图形或徽标转换为按钮。 在向控件应用模板之后，无法修改控件。
 
 ### <a name="create-a-template-or-style"></a>创建模板或样式
 
 可通过两种方法创建模板。 可以将美工板上的任何对象转换为控件，也可以使模板基于现有控件。
 
-若要将任何对象转换为控件模板，请选择对象，然后在“工具”菜单上，选择“构成控件”。
+若要将任何对象转换为控件模板，请选择对象，然后在“工具”  菜单上，选择“构成控件”  。
 
-如果想要使模板基于现有控件，请选择美工板上的对象。 然后，在美工板顶部，选择痕迹导航按钮，选择“编辑模板”，然后选择“编辑副本”或“创建空白项”。
+如果想要使模板基于现有控件，请选择美工板上的对象。 然后，在美工板顶部，选择痕迹导航按钮，选择“编辑模板”  ，然后选择“编辑副本”  或“创建空白项”  。
 
 ![编辑“模板”菜单](../designers/media/5ebdb33f-aad2-4c10-a328-5e8b04c56a36.png)
 
-若要创建样式，请选择对象，在“对象”菜单上选择“编辑样式”，然后选择“编辑副本”或“创建空白项”。
+若要创建样式，请选择对象，在“对象”  菜单上选择“编辑样式”  ，然后选择“编辑副本”  或“创建空白项”  。
 
-- 选择“编辑副本”可从控件的默认样式或模板开始。
+- 选择“编辑副本”  可从控件的默认样式或模板开始。
 
-- 选择“创建空白项”可从头开始。
+- 选择“创建空白项”  可从头开始。
 
-仅当编辑已创建的样式或模板时，“编辑当前形状”选项才会出现。 对于仍在使用默认系统模板的控件，它不会出现。
+仅当编辑已创建的样式或模板时，“编辑当前形状”  选项才会出现。 对于仍在使用默认系统模板的控件，它不会出现。
 
-在“创建样式资源”对话框中，可以命名样式或模板以便可以在以后使用它，也可以将样式或模板应用于该类型的所有控件。
+在“创建样式资源”  对话框中，可以命名样式或模板以便可以在以后使用它，也可以将样式或模板应用于该类型的所有控件。
 
 ![“创建样式资源”对话框](../designers/media/4818ee6a-ce60-4b79-91c8-3b1871829eea.png)
 
 > [!NOTE]
 > 不能为控件的每种类型都创建样式或模板。 如果控件不支持它们，则痕迹导航按钮不会出现在美工板上方。
-> 若要返回主文档编辑范围，请单击“返回范围”![返回到图标范围](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png)。
+> 若要返回主文档编辑范围，请单击“返回范围”![返回到图标范围](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png)  。
 
 ### <a name="apply-a-style-or-template-to-a-control"></a>将样式或模板应用于控件
 
-在[对象和时间线](../designers/creating-a-ui-by-using-blend-for-visual-studio.md#tour-of-the-objects-and-timeline-panel)面板中右键单击某个对象，选择“编辑模板”，然后选择“应用资源”。
+在[对象和时间线](../designers/creating-a-ui-by-using-blend-for-visual-studio.md#objects-and-timeline-window)窗口中右键单击某个对象，选择“编辑模板”  ，然后选择“应用资源”  。
 
 ![“应用资源”菜单](../designers/media/dc12debc-7711-47d9-84ce-10322a384397.png)
 
 ### <a name="restore-the-default-style-or-template-of-a-control"></a>还原控件的默认样式或模板
 
-选择控件，在[属性面板](../designers/creating-a-ui-by-using-blend-for-visual-studio.md#tour-of-the-properties-panel)中，找到“样式”或“模板”属性。 选择“高级选项”，然后在快捷菜单上单击“重置”。
+选择控件，在“属性”窗口中，找到“样式”或“模板”属性   。 选择“高级选项”，然后在快捷菜单上单击“重置”   。
 
-## <a name="visual-states-change-the-appearance-of-a-control-based-on-its-state"></a>可视状态：根据控件状态更改其外观
+## <a name="visual-states"></a>可视状态
 
-控件可以基于用户交互而具有不同的视觉外观。 例如，可以在用户单击时使按钮变为绿色，也可以运行动画。 可使用过渡缩短或延长可视状态之间的时间。
+使用可视状态，可以基于其状态更改控件的外观。 控件可以基于用户交互而具有不同的视觉外观。 例如，可以在用户单击时使按钮变为绿色，也可以运行动画。 可使用过渡缩短或延长可视状态之间的时间。
 
 ![鼠标悬停状态](../designers/media/a95c671a-5639-40b9-83db-1e6b214330d5.png)
 
-**观看短片：**![播放按钮](../designers/media/bldadminconsoleinitialconfigicon.PNG) [管理 WPF 控件的状态](https://www.youtube.com/watch?v=m0PlkF5i6uw)。
+**观看短片：** ![播放按钮](../designers/media/bldadminconsoleinitialconfigicon.PNG) [管理 WPF 控件的状态](https://www.youtube.com/watch?v=m0PlkF5i6uw)。
 
 ## <a name="resources-create-colors-styles-and-templates-and-reuse-them-later"></a>资源：创建颜色、样式和模板，并在以后重复使用它们
 

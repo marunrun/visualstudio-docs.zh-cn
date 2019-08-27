@@ -1,14 +1,9 @@
 ---
-title: 演练：查找内存泄漏 (JavaScript) | Microsoft Docs
-ms.custom: ''
+title: 演练：查找内存泄漏 (JavaScript) |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -20,13 +15,13 @@ ms.assetid: f595412f-776b-49a2-8433-ea0062c6904d
 caps.latest.revision: 36
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: e2b84adac23547f42cca6113c5f5a7090f224e8c
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 5617dc6cbe4b7ba096afe1f308d06e7f4aaf9c6a
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51744953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63439651"
 ---
 # <a name="walkthrough-find-a-memory-leak-javascript"></a>演练：查找内存泄漏 (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,18 +34,18 @@ ms.locfileid: "51744953"
   
 ### <a name="running-the-javascript-memory-analyzer-test-app"></a>运行 JavaScript 内存分析器测试应用  
   
-1.  在 Visual Studio 中，依次选择 **“文件”**、 **“新建”**、 **“项目”**。  
+1. 在 Visual Studio 中，依次选择 **“文件”**、 **“新建”**、 **“项目”**。  
   
-2.  在左窗格中选择“JavaScript”  ，选择“Windows” 、“Windows 8” ，然后选择“通用”  或“Windows Phone 应用” 。  
+2. 在左窗格中选择“JavaScript”  ，选择“Windows” 、“Windows 8” ，然后选择“通用”  或“Windows Phone 应用” 。  
   
     > [!IMPORTANT]
-    >  本主题中显示的内存使用量结果是针对 Windows 8 应用进行测试的。  
+    > 本主题中显示的内存使用量结果是针对 Windows 8 应用进行测试的。  
   
-3.  在中间窗格中选择 **“空白应用”** 项目模板。  
+3. 在中间窗格中选择 **“空白应用”** 项目模板。  
   
-4.  在“名称”  框中指定名称（例如 `JS_Mem_Tester`），然后选择“确定” 。  
+4. 在“名称”  框中指定名称（例如 `JS_Mem_Tester`），然后选择“确定” 。  
   
-5.  在“解决方案资源管理器”中，打开 default.html，并将以下代码粘贴到 \<body> 标记之间：  
+5. 在“解决方案资源管理器”中，打开 default.html，并将以下代码粘贴到 \<body> 标记之间：  
   
     ```html  
     <div class="wrapper">  
@@ -60,9 +55,9 @@ ms.locfileid: "51744953"
     ```  
   
     > [!IMPORTANT]
-    >  如果你正在使用 Windows 8.1 通用应用模板，你需要在 .Windows 和 .WindowsPhone 项目中更新 HTML 和 CSS 代码。  
+    > 如果你正在使用 Windows 8.1 通用应用模板，你需要在 .Windows 和 .WindowsPhone 项目中更新 HTML 和 CSS 代码。  
   
-6.  打开 default.css，然后添加以下 CSS 代码：  
+6. 打开 default.css，然后添加以下 CSS 代码：  
   
     ```css  
     .memleak {  
@@ -70,7 +65,7 @@ ms.locfileid: "51744953"
     }  
     ```  
   
-7.  打开 default.js，并用以下代码替换所有代码：  
+7. 打开 default.js，并用以下代码替换所有代码：  
   
     ```javascript  
     (function () {  
@@ -131,7 +126,7 @@ ms.locfileid: "51744953"
     })();  
     ```  
   
-8.  选择 F5 键开始调试。 验证 **“泄漏内存”** 按钮是否显示在此页中。  
+8. 选择 F5 键开始调试。 验证 **“泄漏内存”** 按钮是否显示在此页中。  
   
 9. 切换回 Visual Studio (Alt+Tab)，然后按 Shift+F5 停止调试。  
   
@@ -142,7 +137,7 @@ ms.locfileid: "51744953"
 1. 在 **“调试”** 工具栏上的 **“启动调试”** 列表中，选择已更新的项目的调试目标：某个 Windows Phone 仿真程序或 **“模拟器”**。  
   
    > [!TIP]
-   >  对于 Windows 应用商店应用，也可以选择该列表中的 **“本地计算机”** 或 **“远程计算机”** 。 但是，使用仿真器或模拟器的优点是，你可以将其放置在 Visual Studio 旁，并且在正在运行的应用和 JavaScript 内存分析器之间轻松切换。 有关更多信息，请参阅[从 Visual Studio 运行应用](../debugger/run-store-apps-from-visual-studio.md)和[在远程计算机上运行 Windows 应用商店应用](../debugger/run-windows-store-apps-on-a-remote-machine.md)。  
+   > 对于 Windows 应用商店应用，也可以选择该列表中的 **“本地计算机”** 或 **“远程计算机”** 。 但是，使用仿真器或模拟器的优点是，你可以将其放置在 Visual Studio 旁，并且在正在运行的应用和 JavaScript 内存分析器之间轻松切换。 有关更多信息，请参阅[从 Visual Studio 运行应用](../debugger/run-store-apps-from-visual-studio.md)和[在远程计算机上运行 Windows 应用商店应用](../debugger/run-windows-store-apps-on-a-remote-machine.md)。  
   
 2. 在“调试”  菜单上，选择“性能探查器...” 。  
   
@@ -157,7 +152,7 @@ ms.locfileid: "51744953"
     当选择此按钮时，default.js 中的事件处理代码将起作用，导致内存泄漏。 你将使用此内存泄漏用于诊断目的。  
   
    > [!TIP]
-   >  通过重现要测试是否存在内存泄漏情况的场景，可以更轻松地筛选掉不相关的信息，例如，在应用程序初始化期间或在加载页面时添加到堆中的对象。  
+   > 通过重现要测试是否存在内存泄漏情况的场景，可以更轻松地筛选掉不相关的信息，例如，在应用程序初始化期间或在加载页面时添加到堆中的对象。  
   
 5. 从正在运行的应用程序中，切换到 Visual Studio (Alt+Tab)。  
   
@@ -176,14 +171,14 @@ ms.locfileid: "51744953"
     ![基线快照和快照 2](../profiling/media/js-mem-app-snapshot2.png "JS_Mem_App_Snapshot2")  
   
    > [!NOTE]
-   >  在拍摄快照时，Windows Phone 仿真程序不显示应用程序的屏幕快照。  
+   > 在拍摄快照时，Windows Phone 仿真程序不显示应用程序的屏幕快照。  
   
 9. 切换到应用并再次选择 **“泄漏内存”** 按钮。  
   
 10. 切换到 Visual Studio 并第三次选择 **“拍摄堆快照”** 。  
   
     > [!TIP]
-    >  通过拍摄此工作流中的第三个快照，可以筛选出与内存泄漏不相关的、从基线快照到第二个快照的更改。 例如，预计可能有一些更改（如在页面上更新页眉和页脚）会造成内存使用量的更改，但可能与内存泄漏不相关。  
+    > 通过拍摄此工作流中的第三个快照，可以筛选出与内存泄漏不相关的、从基线快照到第二个快照的更改。 例如，预计可能有一些更改（如在页面上更新页眉和页脚）会造成内存使用量的更改，但可能与内存泄漏不相关。  
   
      下图显示了快照 #2 和快照 #3。  
   
@@ -196,7 +191,7 @@ ms.locfileid: "51744953"
     - 与快照 #1 相比，堆大小（左侧的红色向上箭头指示）增加了几 KB。  
   
       > [!IMPORTANT]
-      >  堆大小的准确内存使用率值取决于调试目标。  
+      > 堆大小的准确内存使用率值取决于调试目标。  
   
     - 与快照 #1 相比，堆上的对象数量（右侧的红色向上箭头指示）有所增加。 添加了一个对象 (+1)，未移除任何对象 (-0)。  
   
@@ -224,12 +219,12 @@ ms.locfileid: "51744953"
   
     - 此对象是快照 #2 中的剩余对象，说明可能存在内存泄漏。  
   
-      此时对该应用的一些了解可提供帮助：选择 **“泄漏内存”** 按钮应能移除 DIV 元素和添加元素，因此代码似乎不起作用（也就是说，泄漏了内存）。 下一部分将说明如何修复此问题。  
+      对应用程序的一些了解可在此时帮助：选择**泄漏内存**按钮应能移除 DIV 元素和添加元素，因此代码似乎不起作用 （也就是说，泄漏了内存）。 下一部分将说明如何修复此问题。  
   
     > [!TIP]
-    >  有时，定位与 `Global` 对象相关的对象可能有助于确定此问题。 为此，请打开标识符的快捷菜单，然后选择 **“在根视图中显示”**。  
+    > 有时，定位与 `Global` 对象相关的对象可能有助于确定此问题。 为此，请打开标识符的快捷菜单，然后选择 **“在根视图中显示”**。  
   
-##  <a name="FixingMemory"></a> 修复内存问题  
+## <a name="FixingMemory"></a> 修复内存问题  
   
 1. 通过使用探查器显示的数据，可以检查负责移除 ID 为“item”的 DOM 元素的代码。 它将出现在 `initialize()` 函数中。  
   
@@ -293,6 +288,3 @@ ms.locfileid: "51744953"
   
 ## <a name="see-also"></a>请参阅  
  [“JavaScript 内存”](../profiling/javascript-memory.md)
-
-
-

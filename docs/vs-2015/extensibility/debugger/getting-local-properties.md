@@ -1,14 +1,9 @@
 ---
 title: 获取局部属性 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - expression evaluation, getting local properties
 - debugging [Debugging SDK], local properties
@@ -16,27 +11,27 @@ helpviewer_keywords:
 ms.assetid: 6c3a79e8-1ba1-4863-97c3-0216c3d9f092
 caps.latest.revision: 12
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: a96b9abfd215dc297a5b245e0ac670b4822d70c2
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: b174af9e107c13c3d8a79f00493fe5dbdd180ec6
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51799114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63436400"
 ---
 # <a name="getting-local-properties"></a>获取局部属性
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 > [!IMPORTANT]
->  在 Visual Studio 2015 中，这种方式实现表达式计算器已弃用。 有关实现 CLR 表达式计算器的信息，请参阅[CLR 表达式计算器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)并[托管表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。  
+> 在 Visual Studio 2015 中，这种方式实现表达式计算器已弃用。 有关实现 CLR 表达式计算器的信息，请参阅[CLR 表达式计算器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)并[托管表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。  
   
  Visual Studio 调用[EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)来获取[IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md)对象，它提供对要在中显示的所有局部变量的访问**局部变量**窗口。 Visual Studio 然后调用[下一步](../../extensibility/debugger/reference/ienumdebugpropertyinfo2-next.md)来获取要为每个本地显示的信息。 在此示例中，该类`CEnumPropertyInfo`实现`IEnumDebugPropertyInfo2`接口。  
   
  此实现`IEnumDebugPropertyInfo2::Next`执行下列任务：  
   
-1.  清除其中的信息是要存储的数组。  
+1. 清除其中的信息是要存储的数组。  
   
-2.  调用[下一步](../../extensibility/debugger/reference/ienumdebugfields-next.md)对于每个本地存储返回[DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md)中要返回的数组。 [IEnumDebugFields](../../extensibility/debugger/reference/ienumdebugfields.md)提供对象时这`CEnumPropertyInfo`类实例化。  
+2. 调用[下一步](../../extensibility/debugger/reference/ienumdebugfields-next.md)对于每个本地存储返回[DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md)中要返回的数组。 [IEnumDebugFields](../../extensibility/debugger/reference/ienumdebugfields.md)提供对象时这`CEnumPropertyInfo`类实例化。  
   
 ## <a name="managed-code"></a>托管代码  
  此示例演示一种实现`IEnumDebugPropertyInfo2::EnumChildren`在托管代码中的方法的局部变量。  
@@ -166,4 +161,3 @@ STDMETHODIMP CEnumPropertyInfo::Next(
 ## <a name="see-also"></a>请参阅  
  [局部的实现示例](../../extensibility/debugger/sample-implementation-of-locals.md)   
  [枚举局部](../../extensibility/debugger/enumerating-locals.md)
-

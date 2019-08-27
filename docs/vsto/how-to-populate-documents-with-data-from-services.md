@@ -11,15 +11,15 @@ helpviewer_keywords:
 - data [Office development in Visual Studio], adding to documents
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e935501e2e38c7e6c3abdb1c16e351342cf52a8a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 6239bc351872dc7a945c3fbff8ad1ed13817c3ef
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53838289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62967779"
 ---
 # <a name="how-to-populate-documents-with-data-from-services"></a>如何：用服务中的数据填充文档
 
@@ -33,21 +33,21 @@ ms.locfileid: "53838289"
 
 ## <a name="to-populate-a-document-level-project-with-data-from-a-web-service"></a>填充文档级项目中的 web 服务的数据
 
-1.  打开“数据源”  窗口并为项目创建服务数据源。 有关详细信息，请参阅[添加新数据源](../data-tools/add-new-data-sources.md)。
+1. 打开“数据源”  窗口并为项目创建服务数据源。 有关详细信息，请参阅[添加新数据源](../data-tools/add-new-data-sources.md)。
 
-2.  将所需的表或字段从“数据源”  窗口拖动到你的文档。
+2. 将所需的表或字段从“数据源”  窗口拖动到你的文档。
 
      在文档中创建控件，创建绑定到项目中的对象类的 <xref:System.Windows.Forms.BindingSource> ，并为该服务生成类。
 
-3.  在代码中，创建连接到在步骤 1 中的 web 服务类的实例。
+3. 在代码中，创建连接到在步骤 1 中的 web 服务类的实例。
 
-4.  如果没有与 web 服务的通信所需的属性，创建这些属性的实例。
+4. 如果没有与 web 服务的通信所需的属性，创建这些属性的实例。
 
-5.  使用 Web 服务公开的方法和第 4 步中创建的任何属性实例创建并发送数据请求。
+5. 使用 Web 服务公开的方法和第 4 步中创建的任何属性实例创建并发送数据请求。
 
      您使用的方法取决于 web 服务提供。
 
-6.  从 web 服务的目标分配数据响应<xref:System.Windows.Forms.BindingSource.DataSource%2A>属性的<xref:System.Windows.Forms.BindingSource>。
+6. 从 web 服务的目标分配数据响应<xref:System.Windows.Forms.BindingSource.DataSource%2A>属性的<xref:System.Windows.Forms.BindingSource>。
 
 运行项目时，控件显示数据源中的第一条记录。 可以通过使用 <xref:System.Windows.Forms.BindingSource>中的对象处理货币事件，从而滚动记录。
 

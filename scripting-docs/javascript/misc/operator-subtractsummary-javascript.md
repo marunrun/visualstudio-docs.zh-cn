@@ -1,29 +1,23 @@
 ---
 title: 运算符摘要 (JavaScript) |Microsoft Docs
-ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-client-threshold
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- javascript
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-windows
+ms.technology: vs-javascript
+ms.topic: reference
 dev_langs:
 - JavaScript
 - TypeScript
 - DHTML
 ms.assetid: 3bc55336-912f-4ff8-8d28-1e26e0144840
-caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 85eb607ed868d034860d44b3ecaf69a5d8d55c89
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: dadd47684978bf4be6c9029646d4b6041cb431ee
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54349317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63006467"
 ---
 # <a name="operator-summary-javascript"></a>运算符摘要 (JavaScript)
 下表列出[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]中它们各自的类别的运算符。  

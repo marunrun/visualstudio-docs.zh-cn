@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: d78c43ee-4ef2-42e5-984e-d137de4e7e92
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 79a6432da32733b5cdc45e9f191c866b7fce1c02
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7ae0b2f606b4fe04ad390712f48ac1e06ff9bb86
+ms.sourcegitcommit: 283f2dbce044a18e9f6ac6398f6fc78e074ec1ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53968305"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805330"
 ---
 # <a name="add-visual-studio-editor-support-for-other-languages"></a>为其他语言添加 Visual Studio 编辑器支持
 
@@ -47,27 +46,27 @@ Visual Studio 编辑器中的功能（如语法着色、语句完成（也称作
 
 除语法着色和基本语句完成外，Visual Studio 还具有一种称为[导航到](https://blogs.msdn.microsoft.com/benwilli/2015/04/09/visual-studio-tip-3-use-navigate-to/)的功能。 可使用此功能快速搜索代码文件、文件路径和代码符号。 Visual Studio 为以下语言提供“导航到”支持。
 
--   前往
+- C#
 
--   Java
+- C++
 
--   JavaScript
+- TypeScript
 
--   PHP
+- JavaScript
 
--   TypeScript
+- Visual Basic
 
--   Visual Basic
+- 前往
 
--   Visual C++
+- Java
 
--   C#
+- PHP
 
 所有这些文件类型均有上述功能，即使尚未安装对某种语言的支持也是如此。 安装某种语言的专门支持可能会提供其他语言支持，例如 IntelliSense 或其他高级语言功能（如灯泡）。
 
 ## <a name="add-support-for-non-supported-languages"></a>添加对不受支持语言的支持
 
-Visual Studio 2015 Update 1 及更高版本通过 [TextMate 语法](https://manual.macromates.com/en/language_grammars)在编辑器中提供语言支持。 如果你喜欢的编程语言当前在 Visual Studio 编辑器中不受支持，请先在 Web 上搜索，可能存在该语言的 TextMate 包。 如果还是找不到，可通过创建语言语法和代码段的 TextMate 包模型在 Visual Studio 2015 Update 1 及更高版本中自行添加对该语言的支持。
+Visual Studio 通过 [TextMate 语法](https://manual.macromates.com/en/language_grammars)在编辑器中提供语言支持。 如果你喜欢的编程语言当前在 Visual Studio 编辑器中不受支持，请先在 Web 上搜索&mdash;可能存在该语言的 TextMate 包。 如果还是找不到，可通过创建语言语法和片段的 TextMate 包模型自行添加对该语言的支持。
 
 在以下文件夹中添加 Visual Studio 的任何新 TextMate 语法：
 
@@ -77,15 +76,19 @@ Visual Studio 2015 Update 1 及更高版本通过 [TextMate 语法](https://manu
 
 |文件夹名|说明|
 |-----------------|-----------------|
-|\\*\<language name>*|语言文件夹。 用语言的名称替换 *\<language name>*。 例如，*\Matlab*。|
+|\\ *\<language name>*|语言文件夹。 用语言的名称替换 *\<language name>* 。 例如， *\Matlab*。|
 |*\Syntaxes*|语法文件夹。 包含语言的 .json 语法文件，如 Matlab.json。|
 |*\Snippets*|代码段文件夹。 包含语言的代码段。|
 
-在 Windows 中，%userprofile% 解析为路径 c:\Users\\\<user name>。 如果系统上不存在扩展文件夹，则需要创建它。 如果该文件夹已存在，它将被隐藏。
+在 Windows 中，%userprofile% 解析为路径 c:\Users\\\<user name>。 如果系统上不存在“Extensions”文件夹，则需要创建它。 如果该文件夹已存在，它将被隐藏。
 
-有关如何创建 TextMate 语法的详细信息，请参阅 [TextMate - 语言语法简介：如何添加 HTML 中嵌入的源代码语法突出显示功能](https://developmentality.wordpress.com/2011/02/08/textmate-introduction-to-language-grammars/)和[关于如何为 Textmate 包创建语言语法和自定义主题的说明](https://benparizek.com/notebook/notes-on-how-to-create-a-language-grammar-and-custom-theme-for-a-textmate-bundle)。
+> [!TIP]
+> 如果在编辑器中打开了任何文件，则需要在添加 TextMate 语法之后关闭并重新打开它们，以查看语法高亮显示。
+
+有关如何创建 TextMate 语法的详细信息，请参阅 [TextMate - 语言语法简介](https://developmentality.wordpress.com/2011/02/08/textmate-introduction-to-language-grammars/)和[如何创建 Textmate 包的语言语法和自定义主题说明](https://benparizek.com/notebook/notes-on-how-to-create-a-language-grammar-and-custom-theme-for-a-textmate-bundle)。
 
 ## <a name="see-also"></a>请参阅
 
+- [添加语言服务器协议扩展](../extensibility/adding-an-lsp-extension.md)
 - [演练：创建代码片段](../ide/walkthrough-creating-a-code-snippet.md)
 - [演练：显示语句完成](../extensibility/walkthrough-displaying-statement-completion.md)

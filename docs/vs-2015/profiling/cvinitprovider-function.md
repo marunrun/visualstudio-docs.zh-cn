@@ -1,14 +1,9 @@
 ---
 title: CvInitProvider 函数 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvInitProvider
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: ba1863ad-e35f-4d34-a2f2-5e68957d1915
 caps.latest.revision: 8
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: a41e7fe1a6da619e926301b0e1a9b99803fc6d67
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: a5a8a9e70c85563e95037c754c59b6077ed21f28
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51798296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68188803"
 ---
 # <a name="cvinitprovider-function"></a>CvInitProvider 函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,8 +47,5 @@ HRESULT CvInitProvider(
 ## <a name="requirements"></a>要求  
  **标头：** cvmarkers.h  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [C++ 库参考](../profiling/cpp-library-reference.md)
-
-
-

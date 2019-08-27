@@ -1,34 +1,31 @@
 ---
 title: 文本模板的安全性 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - text templates, security
 ms.assetid: 567a2383-7d43-4acc-af4a-cd70b7a0151e
 caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 65b4b6616921dae0abb0bb54316d8b8262d1f652
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: f21bfadd540ce365c7f585a35991c27395558c6e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49214677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68202689"
 ---
 # <a name="security-of-text-templates"></a>文本模板的安全性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 文本模板具有以下安全问题：  
   
--   文本模板是任意代码插入到易受攻击。  
+- 文本模板是任意代码插入到易受攻击。  
   
--   如果主机用来查找指令处理器的机制不是安全的可以运行恶意的指令处理器。  
+- 如果主机用来查找指令处理器的机制不是安全的可以运行恶意的指令处理器。  
   
 ## <a name="arbitrary-code"></a>任意代码  
  在编写模板时，可以将之内的任何代码\<# # > 标记。 这允许在文本模板中执行任意代码。  
@@ -39,6 +36,3 @@ ms.locfileid: "49214677"
  与转换主机和一个或多个指令处理器转换到的输出文件的模板文本，文本模板引擎进行交互。 有关详细信息，请参阅[文本模板转换过程](../modeling/the-text-template-transformation-process.md)。  
   
  如果主机用来查找指令处理器的机制不是安全的它运行的运行恶意的指令处理器的风险。 恶意的指令处理器可以提供在中运行的代码`FullTrust`模式时运行该模板。 如果创建自定义文本模板转换主机，您必须使用一种安全机制，如注册表中，要找到指令处理器的引擎。
-
-
-

@@ -1,14 +1,9 @@
 ---
 title: SccPopulateList 函数 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - SccPopulateList
 helpviewer_keywords:
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 7416e781-c571-4a7f-8af3-a089ce8be662
 caps.latest.revision: 14
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: fccf5ba354a99eaef6968c5d5027e8540762af75
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 5efdddc448dc8e04ee963eaa1b342a93666d9b62
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51798893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63446776"
 ---
 # <a name="sccpopulatelist-function"></a>SccPopulateList 函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -86,7 +81,7 @@ SCCRTN SccPopulateList (
  该插件将继续调用`pfnPopulate`函数，它将添加或删除文件，直到它完成，然后返回从`SccPopulateList`函数。 然后，IDE 可以显示其列表。 `lpStatus`数组均表示由 IDE 传入的原始列表中的所有文件。 回调函数的使用中的所有这些文件除了要让状态插件的填充。  
   
 > [!NOTE]
->  源代码管理插件始终可以选择只是此函数，因为它是离开列表立即返回。 如果插件实现此函数，则可以通过设置表示此`SCC_CAP_POPULATELIST`功能对的第一个调用中的位标志[SccInitialize](../extensibility/sccinitialize-function.md)。 默认情况下，该插件应始终假定要传入的所有项都是文件。 但是，如果 IDE 设置`SCC_PL_DIR`标记中`fOptions`参数中传递的所有项都都视为目录。 插件应在目录中添加属于的所有文件。 IDE 永远不会将传入文件和目录的混合。  
+> 源代码管理插件始终可以选择只是此函数，因为它是离开列表立即返回。 如果插件实现此函数，则可以通过设置表示此`SCC_CAP_POPULATELIST`功能对的第一个调用中的位标志[SccInitialize](../extensibility/sccinitialize-function.md)。 默认情况下，该插件应始终假定要传入的所有项都是文件。 但是，如果 IDE 设置`SCC_PL_DIR`标记中`fOptions`参数中传递的所有项都都视为目录。 插件应在目录中添加属于的所有文件。 IDE 永远不会将传入文件和目录的混合。  
   
 ## <a name="see-also"></a>请参阅  
  [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)   
@@ -94,4 +89,3 @@ SCCRTN SccPopulateList (
  [POPLISTFUNC](../extensibility/poplistfunc.md)   
  [使用特定命令的位标志](../extensibility/bitflags-used-by-specific-commands.md)   
  [命令代码](../extensibility/command-code-enumerator.md)
-

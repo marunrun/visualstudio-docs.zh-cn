@@ -1,14 +1,9 @@
 ---
 title: 如何：在索引中查找主题 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - Index tab [Help Viewer 2.0]
 - Help Viewer 2.0, using the index
@@ -20,13 +15,13 @@ ms.assetid: cb071e93-f297-459c-a6fa-8ae0dabc42a4
 caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 50c19fdaeaf9842c91e5dd7e9ca1472355b1b3e0
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 67eb54d06297458915edfe34718948b085c6e86b
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49815972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63416831"
 ---
 # <a name="how-to-find-topics-in-the-index"></a>如何：在索引中查找主题
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,7 +37,7 @@ ms.locfileid: "49815972"
       通过选择选项卡顶部附近的筛选器按钮，可以显示包含你指定的文本的所有条目，或者仅显示以指定的文本开头的条目。  
   
      > [!NOTE]
-     >  当筛选器按钮显示在带有边框的较暗的背景上时，条目必须包含你指定的文本。 如果没有显示背景和边框，则条目必须以你指定的文本开头。  
+     > 当筛选器按钮显示在带有边框的较暗的背景上时，条目必须包含你指定的文本。 如果没有显示背景和边框，则条目必须以你指定的文本开头。  
   
    - 滚动索引，选择一个关键字。  
   
@@ -50,6 +45,3 @@ ms.locfileid: "49815972"
   
 ## <a name="see-also"></a>请参阅  
  [索引搜索提示](../ide/index-search-tips.md)
-
-
-

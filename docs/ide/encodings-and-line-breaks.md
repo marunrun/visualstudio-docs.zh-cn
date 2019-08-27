@@ -1,7 +1,6 @@
 ---
 title: 编码和换行符字符
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - vs.Encoding
@@ -15,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8f9b3ffc-7b8d-44f4-87cb-dc29105be12d
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 11a70e214362d61fa54e83182bec7cc128905b69
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 59ed38c28c6818fb618156450d47c05b4f35d63d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53847696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62978156"
 ---
 # <a name="encodings-and-line-endings"></a>编码和行尾
 

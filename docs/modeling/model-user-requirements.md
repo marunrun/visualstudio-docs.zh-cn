@@ -7,16 +7,15 @@ helpviewer_keywords:
 - stories
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 9101c6f264d3f4017581a6732e9b93f78e33215d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d75bfd7634e068224b12168390193773c198957a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53867009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814560"
 ---
 # <a name="model-user-requirements"></a>建立用户需求模型
 
@@ -57,7 +56,7 @@ ms.locfileid: "53867009"
 
 请注意，大多数关系图类型可以用于其他目的。 有关关系图类型的概述，请参阅[为您的应用程序创建模型](../modeling/create-models-for-your-app.md)。
 
-##  <a name="BusinessRules"></a> Showing Business Rules
+## <a name="BusinessRules"></a> Showing Business Rules
 
 业务规则是一个不与特定用例相关联的要求，应在整个系统中进行观察。
 
@@ -77,19 +76,19 @@ ms.locfileid: "53867009"
 |-|-|
 |如何开发符合业务规则的代码|[应用体系结构建模](../modeling/model-your-app-s-architecture.md)|
 
-##  <a name="QoSRequirements"></a> Describing Quality of Service Requirements
+## <a name="QoSRequirements"></a> Describing Quality of Service Requirements
 
 服务质量要求有多个类别。 它们包括以下类型：
 
--   性能
+- 性能
 
--   安全性
+- 安全性
 
--   可用性
+- 可用性
 
--   可靠性
+- 可靠性
 
--   稳定性
+- 稳定性
 
 可以在特定用例的描述中包括其中的一些要求。 其他要求并不特定于用例，并已经非常高效地写入了单独文档。 如果可能，遵守要求模型定所定义的词汇非常有用。 在下面的示例中，请注意，要求中使用的主要词语是参与者、用例和上述插图中的类的标题：
 

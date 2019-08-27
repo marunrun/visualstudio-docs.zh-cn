@@ -1,23 +1,22 @@
 ---
 title: 单元测试
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio, unit tests
 - unit tests, verifying code with
 - testing code, automated tests
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 1b036a9a34711d82194ea3c41acdb12651978446
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5682d752ba2c1430d8ab708e3dadda754a1ba757
+ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53868636"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65461386"
 ---
 # <a name="unit-test-your-code"></a>对代码进行单元测试
 
@@ -25,7 +24,7 @@ ms.locfileid: "53868636"
 
 单元测试工具包括：
 
-* **测试资源管理器** &mdash; 可在测试资源管理器中运行单元测试并查看结果。 可以使用任何单元测试框架，包括具有资源管理器的适配器的第三方框架。
+* 测试资源管理器 &mdash; 可在“测试资源管理器”中运行单元测试并查看其结果。 可以使用任何单元测试框架，包括具有资源管理器的适配器的第三方框架。
 
 * **托管代码的 Microsoft 单元测试框架** &mdash; 托管代码的 Microsoft 单元测试框架随 Visual Studio 安装，并提供测试 .NET 代码的框架。
 
@@ -39,18 +38,18 @@ ms.locfileid: "53868636"
 
 ## <a name="key-tasks"></a>关键任务
 
-下面的主题可帮助你了解和创建单元测试：
+以下文章可帮助你了解和创建单元测试：
 
 |任务|相关主题|
 |-|-----------------------|
-|**快速入门和演练：** 借助以下主题从代码示例中学习 Visual Studio 中的单元测试。|-   [演练：创建并运行托管代码的单元测试](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)<br />-   [快速入门：通过测试资源管理器进行测试驱动开发](../test/quick-start-test-driven-development-with-test-explorer.md)<br />-   [将单元测试添加到现有 C++ 应用程序](../test/how-to-use-microsoft-test-framework-for-cpp.md)|
-|**使用测试资源管理器进行单元测试：** 了解“测试资源管理器”如何帮助创建成效和效率更高的单元测试。|-   [单元测试基本信息](../test/unit-test-basics.md)<br />-   [创建单元测试项目](../test/create-a-unit-test-project.md)<br />-   [使用测试资源管理器运行单元测试](../test/run-unit-tests-with-test-explorer.md)<br />-   [安装第三方单元测试框架](../test/install-third-party-unit-test-frameworks.md)|
-|**对 C++ 代码进行单元测试**|-   [通过适用于 C++ 的 Microsoft 单元测试框架编写适用于 C/C++ 的单元测试](../test/writing-unit-tests-for-c-cpp.md)|
-|**隔离单元测试**|-   [使用 Microsoft Fakes 隔离受测代码](../test/isolating-code-under-test-with-microsoft-fakes.md)|
-|**使用代码覆盖率来确定项目代码的测试比例：** 了解 Visual Studio 测试工具的代码覆盖功能。|-   [使用代码覆盖率确定正在测试的代码量](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)|
-|**使用负载测试执行压力和性能分析：** 可以创建负载测试并向其添加单元测试，以帮助隔离应用程序中的性能和压力问题。|-   [负载测试（Azure Test Plans 和 TFS）](/azure/devops/test/load-test/index?view=vsts)|
-|**设置质量要求：** 可以创建质量要求以在签入或合并代码之前强制运行测试，从而帮助确保代码质量。|-   [签入策略 (Azure Repos TFVC)](/azure/devops/repos/tfvc/add-check-policies?view=vsts)|
-|**设置测试选项：** 例如，可以指定测试结果的存储位置。|[使用 .runsettings 文件配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)|
+|**快速入门和演练：** 从代码示例中了解 Visual Studio 中的单元测试。|- [演练：创建并运行托管代码的单元测试](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)<br />- [快速入门：通过测试资源管理器进行测试驱动开发](../test/quick-start-test-driven-development-with-test-explorer.md)<br />- [如何：将单元测试添加到 C++ 应用](../test/how-to-use-microsoft-test-framework-for-cpp.md)|
+|**使用测试资源管理器进行单元测试：** 了解“测试资源管理器”如何帮助创建成效和效率更高的单元测试。|- [单元测试基本信息](../test/unit-test-basics.md)<br />- [创建单元测试项目](../test/create-a-unit-test-project.md)<br />- [使用测试资源管理器运行单元测试](../test/run-unit-tests-with-test-explorer.md)<br />- [安装第三方单元测试框架](../test/install-third-party-unit-test-frameworks.md)|
+|**对 C++ 代码进行单元测试**|- [编写适用于 C/C++ 的单元测试](../test/writing-unit-tests-for-c-cpp.md)|
+|**隔离单元测试**|- [使用 Microsoft Fakes 隔离受测代码](../test/isolating-code-under-test-with-microsoft-fakes.md)|
+|**使用代码覆盖率来确定项目代码的测试比例：** 了解 Visual Studio 测试工具的代码覆盖功能。|- [使用代码覆盖率确定正在测试的代码量](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)|
+|**使用负载测试执行压力和性能分析：** 了解如何创建负载测试，帮助隔离应用程序中的性能和压力问题。|- [快速入门：创建负载测试项目](../test/quickstart-create-a-load-test-project.md)<br />- [负载测试（Azure Test Plans 和 TFS）](/azure/devops/test/load-test/index?view=vsts)|
+|**设置质量要求：** 了解如何创建质量要求以在签入或合并代码之前强制运行测试。|- [签入策略 (Azure Repos TFVC)](/azure/devops/repos/tfvc/add-check-policies?view=vsts)|
+|**设置测试选项：** 了解如何配置测试选项（如存储测试结果的位置）。|[使用 .runsettings 文件配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)|
 
 ## <a name="api-reference-documentation"></a>API 参考文档
 

@@ -1,27 +1,22 @@
 ---
 title: CommandPlacement 元素 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 helpviewer_keywords:
 - CommandPlacements element (VSCT XML schema)
 - VSCT XML schema elements, CommandPlacements
 ms.assetid: 2cbd7ac8-c55a-43d8-a26d-713b3d790016
 caps.latest.revision: 10
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 53a60949cdda6d026525dcc8be5bab8f82a0fb73
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 43fd417c4d54c0ab57133cf6dbff2c770c1ffc45
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51741538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68184340"
 ---
 # <a name="commandplacement-element"></a>CommandPlacement 元素
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,16 +40,16 @@ CommandPlacement 元素使按钮、 组和要包含在多个组或菜单中的�
   
 |特性|描述|  
 |---------------|-----------------|  
-|guid|必须的。 命令集，如中所定义的 guid [Symbols 元素](../extensibility/symbols-element.md)。|  
-|id|必须的。 菜单、 组或命令放置，如中所定义的 id `Symbols Element`。|  
-|priority|必须的。 确定项在其父元素中的 visual 位置。|  
+|guid|必需。 命令集，如中所定义的 guid [Symbols 元素](../extensibility/symbols-element.md)。|  
+|id|必需。 菜单、 组或命令放置，如中所定义的 id `Symbols Element`。|  
+|priority|必需。 确定项在其父元素中的 visual 位置。|  
 |条件|可选。 请参阅[条件属性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|父级|必须的。 菜单或托管要放置的项组中。|  
+|父级|必需。 菜单或托管要放置的项组中。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -76,4 +71,3 @@ CommandPlacement 元素使按钮、 组和要包含在多个组或菜单中的�
 ## <a name="see-also"></a>请参阅  
  [CommandPlacements 元素](../extensibility/commandplacements-element.md)   
  [Visual Studio 命令表格 (.Vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
-

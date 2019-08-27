@@ -1,14 +1,9 @@
 ---
 title: 如何：还原 C# 重构代码片段 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - unsafe expansion
 - expansions, unsafe
@@ -16,13 +11,13 @@ ms.assetid: 12114273-7f2f-43d0-abcb-2d4711a3a68d
 caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 8cb5906009d4c3f5d9d94a8e9898a1f02b3aedc0
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 9f81514db881ad26a5fa827b0bde11df2467f23d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49227873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68186280"
 ---
 # <a name="how-to-restore-c-refactoring-snippets"></a>如何：还原 C# 重构代码段
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,23 +30,23 @@ C# 重构操作依赖于在以下目录中找到的代码片段：
   
 ### <a name="to-verify-c-refactoring-snippets-are-available-through-the-code-snippet-manager"></a>若要通过代码片段管理器验证 C# 重构代码片段是否可用  
   
-1.  在“工具”菜单中，选择“代码片段管理器”。  
+1. 在“工具”  菜单中，选择“代码片段管理器”  。  
   
-2.  在“代码片段管理器”对话框中，从“语言”下拉列表中选择“Visual C#”。  
+2. 在“代码片段管理器”  对话框中，从“语言”  下拉列表中选择“Visual C#”  。  
   
-     “重构”文件夹应出现在树视图文件夹列表中。  
+     “重构”  文件夹应出现在树视图文件夹列表中。  
   
 ### <a name="to-restore-refactoring-see-comment-in-code-snippet-manager"></a>若要还原重构，请参阅“代码片段管理器”中的注释  
   
-1.  若“重构”文件夹未出现在“代码片段管理器”的树视图文件夹列表中，则使用此过程将重构代码片段添加回“代码片段管理器”中。  
+1. 若“重构”  文件夹未出现在“代码片段管理器”的树视图文件夹列表中，则使用此过程将重构代码片段添加回“代码片段管理器”中。  
   
-2.  在“工具”菜单中，选择“代码片段管理器”。  
+2. 在“工具”  菜单中，选择“代码片段管理器”  。  
   
-3.  在“代码片段管理器”对话框中，从“语言”下拉列表中选择“Visual C#”。  
+3. 在“代码片段管理器”  对话框中，从“语言”  下拉列表中选择“Visual C#”  。  
   
-4.  单击 **添加**。 将出现“代码片段目录”对话框，该对话框可帮助查找和指定要添加回“代码片段管理器”的目录。  
+4. 单击 **添加**。 将出现“代码片段目录”  对话框，该对话框可帮助查找和指定要添加回“代码片段管理器”的目录。  
   
-5.  查找“重构”文件夹，其目录路径为：  
+5. 查找“重构”  文件夹，其目录路径为：  
   
      *安装目录*\Microsoft Visual Studio 14.0\VC#\Snippets\\*language ID*\Refactoring  
   
@@ -59,12 +54,9 @@ C# 重构操作依赖于在以下目录中找到的代码片段：
   
      C:\Program Files\Microsoft Visual Studio 14.0\VC#\Snippets\1033\Refactoring。  
   
-6.  单击“代码片段目录”对话框中的“打开”，然后在“代码片段管理器”中单击“确定”。  
+6. 单击“代码片段目录”  对话框中的“打开”  ，然后在“代码片段管理器”中单击“确定”  。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual C# 代码片段](../ide/visual-csharp-code-snippets.md)   
  [重构 (C#)](../csharp-ide/refactoring-csharp.md)   
  [代码片段](../ide/code-snippets.md)
-
-
-

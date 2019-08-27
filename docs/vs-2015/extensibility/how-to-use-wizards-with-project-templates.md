@@ -1,14 +1,9 @@
 ---
-title: 如何： 使用向导来处理项目模板 |Microsoft Docs
-ms.custom: ''
+title: 如何：使用向导来处理项目模板 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - project templates [Visual Studio], wizards
 - Visual Studio templates, wizards
@@ -18,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 47ee26cf-67b7-4ff1-8a9d-ab11a725405c
 caps.latest.revision: 23
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 650b9c360013d06216e607269f77afd24f3cc22c
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: e8722cc2990f91446c806bf80f3673dc4c941532
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51783748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63432562"
 ---
 # <a name="how-to-use-wizards-with-project-templates"></a>如何：使用向导来处理项目模板
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,24 +33,24 @@ Visual Studio 提供了 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> 接
 ## <a name="creating-a-project-template-project-with-a-vsix-project"></a>使用 VSIX 项目创建项目模板项目  
  您开始使用项目模板项目中。，这是 Visual Studio SDK 的一部分创建的自定义模板。 在此过程中，我们将使用 C# 项目模板项目，但还没有 Visual Basic 项目模板项目。 然后将 VSIX 项目添加到包含项目模板项目的解决方案。  
   
-1.  创建一个 C# 项目模板项目 (在 Visual Studio 中，**文件 / 新建 / 项目 / Visual C# / 可扩展性 / C# 项目模板**)。 其命名为**MyProjectTemplate**。  
+1. 创建一个 C# 项目模板项目 (在 Visual Studio 中，**文件 / 新建 / 项目 / Visual C# / 可扩展性 / C# 项目模板**)。 其命名为**MyProjectTemplate**。  
   
     > [!NOTE]
-    >  您可能需要安装 Visual Studio SDK。 有关详细信息，请参阅[安装 Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md)。  
+    > 您可能需要安装 Visual Studio SDK。 有关详细信息，请参阅[安装 Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md)。  
   
-2.  添加新的 VSIX 项目 (**文件 / 新建 / 项目 / Visual C# / 可扩展性 / VSIX 项目**) 中与项目模板项目相同的解决方案 (在**解决方案资源管理器**，选择解决方案节点，右键单击，然后选择**添加 / 新建项目**)。 其命名为**MyProjectWizard。**  
+2. 添加新的 VSIX 项目 (**文件 / 新建 / 项目 / Visual C# / 可扩展性 / VSIX 项目**) 中与项目模板项目相同的解决方案 (在**解决方案资源管理器**，选择解决方案节点，右键单击，然后选择**添加 / 新建项目**)。 其命名为**MyProjectWizard。**  
   
-3.  将 VSIX 项目设置为启动项目。 在中**解决方案资源管理器**，选择解决方案节点，右键单击，并选择**设为启动项目**。  
+3. 将 VSIX 项目设置为启动项目。 在中**解决方案资源管理器**，选择解决方案节点，右键单击，并选择**设为启动项目**。  
   
-4.  模板项目添加为 VSIX 项目的资产。 在中**解决方案资源管理器**，在 VSIX 项目节点，找到**source.extension.vsixmanifest**文件。 双击以在清单编辑器中打开它。  
+4. 模板项目添加为 VSIX 项目的资产。 在中**解决方案资源管理器**，在 VSIX 项目节点，找到**source.extension.vsixmanifest**文件。 双击以在清单编辑器中打开它。  
   
-5.  在清单编辑器中，选择**资产**窗口左侧的选项卡。  
+5. 在清单编辑器中，选择**资产**窗口左侧的选项卡。  
   
-6.  在中**资产**选项卡上，选择**新建**。 在中**添加新资产**窗口中的，为类型字段中，选择**Microsoft.VisualStudio.ProjectTemplate**。 在中**源**字段中，选择**当前解决方案中的项目**。 在中**项目**字段中，选择**MyProjectTemplate**。 然后单击“确定” 。  
+6. 在中**资产**选项卡上，选择**新建**。 在中**添加新资产**窗口中的，为类型字段中，选择**Microsoft.VisualStudio.ProjectTemplate**。 在中**源**字段中，选择**当前解决方案中的项目**。 在中**项目**字段中，选择**MyProjectTemplate**。 然后单击“确定”  。  
   
-7.  生成解决方案并启动调试。 将出现 Visual Studio 的第二个实例。 （这可能需要几分钟时间）。  
+7. 生成解决方案并启动调试。 将出现 Visual Studio 的第二个实例。 （这可能需要几分钟时间）。  
   
-8.  在 Visual Studio 的第二个实例，尝试使用你的新模板创建一个新的项目。 (**文件 / 新建 / 项目 /visual C# / 我的项目模板**)。 新项目应该显示与名为的类**Class1**。 现在已创建自定义项目模板 ！ 立即停止调试。  
+8. 在 Visual Studio 的第二个实例，尝试使用你的新模板创建一个新的项目。 (**文件 / 新建 / 项目 /visual C# / 我的项目模板**)。 新项目应该显示与名为的类**Class1**。 现在已创建自定义项目模板 ！ 立即停止调试。  
   
 ## <a name="creating-a-custom-template-wizard"></a>创建自定义模板向导  
  本主题演示如何创建自定义向导创建项目之前打开 Windows 窗体。 在窗体，用户可以添加一个自定义参数值，在项目创建期间添加到源代码。  
@@ -64,15 +59,15 @@ Visual Studio 提供了 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> 接
   
 2. 在中**解决方案资源管理器**，选择 VSIX 项目节点。 以下解决方案资源管理器，您应看到**属性**窗口。 如果不这样做，请选择**视图 / 属性窗口**，或按**F4**。 在属性窗口中，选择以下字段以`true`:  
   
-   -   **IncludeAssemblyInVSIXContainer**  
+   - **IncludeAssemblyInVSIXContainer**  
   
-   -   **IncludeDebugSymbolsInVSIXContainer**  
+   - **IncludeDebugSymbolsInVSIXContainer**  
   
-   -   **IncludeDebugSymbolsInLocalVSIXDeployment**  
+   - **IncludeDebugSymbolsInLocalVSIXDeployment**  
   
 3. 将程序集作为资产添加到 VSIX 项目。 打开 source.extension.vsixmanifest 文件，并选择**资产**选项卡。在**添加新资产**窗口中，对于**类型**选择**Microsoft.VisualStudio.Assembly**，为**源**选择**A当前解决方案中的项目**，并为**项目**选择**MyTemplateWizard**。  
   
-4. 添加对 VSIX 项目的以下引用。 (在**解决方案资源管理器**，在 VSIX 项目节点，请选择**引用**，右键单击，然后选择**添加引用**。)在中**添加引用**对话框中**Framework**选项卡上，找到**System.Windows 窗体**程序集并将其选中。 现在，选择**扩展**选项卡。 查找**EnvDTE**程序集并将其选中。 其中还有**Microsoft.VisualStudio.TemplateWizardInterface**程序集并将其选中。 单击 **“确定”**。  
+4. 添加对 VSIX 项目的以下引用。 (在**解决方案资源管理器**，在 VSIX 项目节点，请选择**引用**，右键单击，然后选择**添加引用**。)在中**添加引用**对话框中**Framework**选项卡上，找到**System.Windows 窗体**程序集并将其选中。 现在，选择**扩展**选项卡。 查找**EnvDTE**程序集并将其选中。 其中还有**Microsoft.VisualStudio.TemplateWizardInterface**程序集并将其选中。 单击 **“确定”** 。  
   
 5. 将向导实现的类添加到 VSIX 项目。 (在解决方案资源管理器，右键单击 VSIX 项目节点并选择**外**，然后**新项**，然后**类**。)将类命名**WizardImplementation**。  
   
@@ -212,7 +207,7 @@ Visual Studio 提供了 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> 接
   
 1. 程序集签名。 在中**解决方案资源管理器**，选择 VSIX 项目，右键单击，并选择**项目属性**。  
   
-2. 在中**项目属性**窗口中，选择**签名**选项卡。 在**签名**选项卡上，选中**为程序集签名**。 在中**选择强名称密钥文件**字段中，选择**\<新建 >**。 在中**创建强名称密钥**窗口，请在**密钥文件名称**字段中，键入**key.snk**。 取消选中**保护密钥文件使用密码**字段。  
+2. 在中**项目属性**窗口中，选择**签名**选项卡。 在**签名**选项卡上，选中**为程序集签名**。 在中**选择强名称密钥文件**字段中，选择 **\<新建 >** 。 在中**创建强名称密钥**窗口，请在**密钥文件名称**字段中，键入**key.snk**。 取消选中**保护密钥文件使用密码**字段。  
   
 3. 在中**解决方案资源管理器**、 选择 VSIX 项目，然后查找**属性**窗口。  
   
@@ -220,31 +215,31 @@ Visual Studio 提供了 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> 接
   
 5. 重新生成解决方案。  
   
-6. 现在可以 MyProjectWizard 项目目录中找到的 key.snk 文件 (**\<磁盘位置 > \MyProjectTemplate\MyProjectWizard\key.snk**)。 将复制的 key.snk 文件。  
+6. 现在可以 MyProjectWizard 项目目录中找到的 key.snk 文件 ( **\<磁盘位置 > \MyProjectTemplate\MyProjectWizard\key.snk**)。 将复制的 key.snk 文件。  
   
-7. 转到输出目录，找到该程序集 (**\<磁盘位置 > \MyProjectTemplate/MyProjectWizard\bin\Debug\MyProjectWizard.dll**)。 粘贴此处的 key.snk 文件。 （这不是绝对必要，但它将使以下步骤更容易。）  
+7. 转到输出目录，找到该程序集 ( **\<磁盘位置 > \MyProjectTemplate/MyProjectWizard\bin\Debug\MyProjectWizard.dll**)。 粘贴此处的 key.snk 文件。 （这不是绝对必要，但它将使以下步骤更容易。）  
   
 8. 打开命令窗口中，并将更改为在其中创建该程序集的目录。  
   
 9. 查找**sn.exe**签名工具。 例如，在 Windows 10 64 位操作系统，典型路径将是以下：  
   
-     **C:\Program Files (x86) \Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools**  
+     **C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools**  
   
      如果找不到工具，请尝试运行**其中 /R。 sn.exe**命令窗口中。 记下的路径。  
   
 10. 从 key.snk 文件中提取的公钥。 在命令窗口中，键入  
   
-     **\<sn.exe 的位置 > \sn.exe-p key.snk outfile.key。**  
+     **\<location of sn.exe>\sn.exe - p key.snk outfile.key.**  
   
      别忘了的 sn.exe 的用引号将路径括起，如果目录名称中有空格 ！  
   
 11. 从 outfile 获取的公钥令牌：  
   
-     **\<sn.exe 的位置 > \sn.exe-t outfile.key。**  
+     **\<location of sn.exe>\sn.exe - t outfile.key.**  
   
      同样，不要忘记引号引起来。 你应看到如下输出中的行  
   
-     **公钥标记是 <token>**  
+     **公钥标记是\<令牌 >**  
   
      记下此值。  
   
@@ -297,19 +292,19 @@ namespace $safeprojectname$
 ## <a name="using-the-custom-wizard"></a>使用自定义向导  
  现在可以从模板创建项目，并使用自定义向导。  
   
-1.  重新生成解决方案并启动调试。 将显示 Visual Studio 的第二个实例。  
+1. 重新生成解决方案并启动调试。 将显示 Visual Studio 的第二个实例。  
   
-2.  创建新的 MyProjectTemplate 项目。 (**文件 / 新建 / 项目 /visual C# / MyProjectTemplate**)  
+2. 创建新的 MyProjectTemplate 项目。 (**文件 / 新建 / 项目 /visual C# / MyProjectTemplate**)  
   
-3.  在中**新的项目**对话框中，找到您的模板中，键入一个名称，并单击**确定**。  
+3. 在中**新的项目**对话框中，找到您的模板中，键入一个名称，并单击**确定**。  
   
      此时将打开向导的用户输入窗体。  
   
-4.  键入自定义参数的值，然后单击该按钮。  
+4. 键入自定义参数的值，然后单击该按钮。  
   
      在向导用户输入窗体关闭，并从模板创建的项目。  
   
-5.  在中**解决方案资源管理器**，右键单击源代码文件，然后单击**查看代码**。  
+5. 在中**解决方案资源管理器**，右键单击源代码文件，然后单击**查看代码**。  
   
      请注意，`$custommessage$`已替换为向导用户输入窗体中输入的文本。  
   

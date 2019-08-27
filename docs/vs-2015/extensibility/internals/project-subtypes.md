@@ -1,27 +1,22 @@
 ---
 title: 项目子类型 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], subtypes
 - project subtypes [Visual Studio SDK]
 ms.assetid: d235b47b-cf11-4d47-a63f-e33d9d16105d
 caps.latest.revision: 21
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: f4562eab97c28437d8722eacbb60459bd2732dfa
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 5ad1e105d43c40782b13d8799b20626e57363c2f
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51752699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63421834"
 ---
 # <a name="project-subtypes"></a>项目子类型
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -29,7 +24,7 @@ ms.locfileid: "51752699"
 项目子类型可以自定义或 flavor 的项目系统的行为[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]。 自定义项包括其他数据保存在项目文件中，添加或筛选中的项**添加新项**对话框中，控制如何调试和部署，程序集和扩展项目**属性页**对话框。 Vspackage 实现项目子类型使用 COM 聚合。  
   
 > [!NOTE]
->  Visual c + + 项目系统不支持项目子类型。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 使用项目子类型实现 SQL Server 和智能设备项目本身。  
+> 视觉对象C++项目系统不支持项目子类型。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 使用项目子类型实现 SQL Server 和智能设备项目本身。  
   
 ## <a name="in-this-section"></a>本节内容  
  [项目子类型设计](../../extensibility/internals/project-subtypes-design.md)  
@@ -65,4 +60,3 @@ ms.locfileid: "51752699"
 ## <a name="related-sections"></a>相关章节  
  [项目类型](../../extensibility/internals/project-types.md)  
  提供了详细说明的主题的链接[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]项目。
-

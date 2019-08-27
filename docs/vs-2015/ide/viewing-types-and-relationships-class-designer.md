@@ -1,14 +1,9 @@
 ---
 title: 查看类型和关系（类设计器）| Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.CannotShowBaseType
 helpviewer_keywords:
@@ -21,13 +16,13 @@ ms.assetid: c4f46d94-9972-42ac-ae63-6ff306369965
 caps.latest.revision: 37
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 801481c6fed2dab33774cd9895685e91e49ab361
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 978458e9aaca7ea0eae15350803c26246f0c9f1e
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49240755"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65696449"
 ---
 # <a name="viewing-types-and-relationships-class-designer"></a>查看类型和关系（类设计器）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,7 +30,7 @@ ms.locfileid: "49240755"
 类设计器使用类图显示类型详细信息，例如，它们的构成成员和共享的关系。 这些实体的可视化实际上是代码中的动态视图。 这意味着可以在设计器上编辑类型，然后查看反射在实体源代码中的编辑内容。 同样，类图将与对代码中的实体所做的更改保持同步。  
   
 > [!NOTE]
->  如果项目包含类图，并且项目引用了另一个项目中的类型，则在为该类型生成项目前，类图不会显示该引用的类型。 同样，在为该实体重新生成项目前，该类图不会显示对外部实体代码所做的更改。 若要了解引用程序集和只读文件中的类型，请参阅[显示只读信息（类设计器）](http://msdn.microsoft.com/en-us/33e2d3a9-1668-4d10-ae56-fa09b3156e0a)。  
+> 如果项目包含类图，并且项目引用了另一个项目中的类型，则在为该类型生成项目前，类图不会显示该引用的类型。 同样，在为该实体重新生成项目前，该类图不会显示对外部实体代码所做的更改。 若要了解引用程序集和只读文件中的类型，请参阅[显示只读信息（类设计器）](https://msdn.microsoft.com/33e2d3a9-1668-4d10-ae56-fa09b3156e0a)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：查看现有类型（类设计器）](../ide/how-to-view-existing-types-class-designer.md)  
@@ -58,6 +53,3 @@ ms.locfileid: "49240755"
  [如何：自定义类图（类设计器）](../ide/how-to-customize-class-diagrams-class-designer.md)  
   
  [使用类图（类设计器）](../ide/working-with-class-diagrams-class-designer.md)
-
-
-

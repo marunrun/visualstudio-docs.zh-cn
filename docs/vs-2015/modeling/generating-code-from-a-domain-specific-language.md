@@ -1,23 +1,20 @@
 ---
 title: 从域特定语言生成代码 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 ms.assetid: e3706cc9-2afd-456a-a879-68425a248ebc
 caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 5edc6e267957f08837399ae5c2e56bce3cc26cce
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 63e1b48a7582294c200b1e30147d85a9b26165d4
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49231993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68182807"
 ---
 # <a name="generating-code-from-a-domain-specific-language"></a>从域特定语言生成代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,7 +46,7 @@ Microsoft[!INCLUDE[dsl](../includes/dsl-md.md)]提供了一种强大方法从模
   
  描述如何进行故障排除和调试特定于域的语言是指在文本模板。  
   
- [演练：将主机连接到生成的指令处理器](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md)  
+ [演练：将主机连接到所生成的指令处理器](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md)  
   
  介绍如何连接到生成的指令处理器自定义主机。  
   
@@ -70,6 +67,3 @@ Microsoft[!INCLUDE[dsl](../includes/dsl-md.md)]提供了一种强大方法从模
  [生成过程中的代码生成](../modeling/code-generation-in-a-build-process.md)  
   
  如果要从生成服务器上的 DSL 生成的文件，请阅读本主题。
-
-
-

@@ -1,14 +1,9 @@
 ---
-title: 'CA1409: Com 可见类型应该是可创建 |Microsoft Docs'
-ms.custom: ''
+title: CA1409:Com 可见类型应该是可创建 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - ComVisibleTypesShouldBeCreatable
 - CA1409
@@ -20,14 +15,14 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 8d6a28acea085fad99549739a0c4ab132169a436
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 7bd52ad75c67f9c8faa80e84eb5ae09c22c25280
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49889771"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65678879"
 ---
-# <a name="ca1409-com-visible-types-should-be-creatable"></a>CA1409：Com 可见类型应该是可创建的
+# <a name="ca1409-com-visible-types-should-be-creatable"></a>CA1409:COM 可见类型应该是可创建的
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -54,10 +49,7 @@ ms.locfileid: "49889771"
  它可以安全地禁止显示此规则的警告，如果提供了其他方法来创建并将该对象传递给 COM 客户端。
 
 ## <a name="related-rules"></a>相关的规则
- [CA1017：用 ComVisibleAttribute 标记程序集](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
+ [CA1017:用 ComVisibleAttribute 标记程序集](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
 
 ## <a name="see-also"></a>请参阅
- [为互操作限定.NET 类型](http://msdn.microsoft.com/library/4b8afb52-fb8d-4e65-b47c-fd82956a3cdd)[与进行互操作非托管代码](http://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258)
-
-
-
+ [为互操作限定.NET 类型](https://msdn.microsoft.com/library/4b8afb52-fb8d-4e65-b47c-fd82956a3cdd)[与进行互操作非托管代码](https://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258)

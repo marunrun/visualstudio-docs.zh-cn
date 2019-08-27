@@ -1,26 +1,27 @@
 ---
 title: 常用命令的默认键盘快捷键
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4efad136af68b290465b614fef7877538938852f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 72e010d76188be1ebe07eb9400b7cde60c2bf0a6
+ms.sourcegitcommit: 9753c7544cec852ca5efd0834e0956d9e53a5734
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53889851"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67043330"
 ---
-# <a name="default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio"></a>Visual Studio 中常用命令的默认键盘快捷方式
+# <a name="popular-keyboard-shortcuts-for-visual-studio"></a>Visual Studio 的常用键盘快捷方式
 
 你可以通过按以下默认键盘快捷键访问 Visual Studio 中的常用命令。 有关具有默认快捷方式的命令的完整列表，请参阅[默认键盘快捷方式](../ide/default-keyboard-shortcuts-in-visual-studio.md)。
 
+“全局”上下文表示该快捷方式适用于 Visual Studio 中的任何工具窗口  。
+
 > [!NOTE]
-> 通过打开“选项”对话框，展开“环境”节点，然后选择“键盘”，可以查找任何命令的快捷方式。
+> 通过打开“选项”对话框，展开“环境”节点，然后选择“键盘”，可以[查找任何命令的快捷方式](identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)    。
 
 ## <a name="build"></a>生成
 
@@ -39,7 +40,7 @@ ms.locfileid: "53889851"
 |调试.全部中断|**Ctrl+Alt+Break** [全局]|
 |调试.删除所有断点|**Ctrl+Shift+F9** [全局]|
 |调试.异常|**Ctrl+Alt+E** [全局]|
-|调试.快速监视|**Ctrl+Alt+Q** [全局]<br /><br /> 或 **Shift+F9** [全局]|
+|调试.快速监视|**Ctrl+Alt+Q** [全局]<br /><br />或 **Shift+F9** [全局]|
 |调试.重新启动|**Ctrl+Shift+F5** [全局]|
 |调试.运行到光标处|**Ctrl+F10** [全局]|
 |调试.设置下一语句|**Ctrl+Shift+F10** [全局]|
@@ -55,13 +56,13 @@ ms.locfileid: "53889851"
 
 |命令|键盘快捷方式 [上下文]|
 |--------------| - |
-|编辑.分行|**Enter** [文本编辑器、报表设计器、Windows 窗体设计器]<br /><br /> 或 **Shift+Enter** [文本编辑器]|
+|编辑.分行|**Enter** [文本编辑器、报表设计器、Windows 窗体设计器]<br /><br />或 **Shift+Enter** [文本编辑器]|
 |Edit.CollapseToDefinitions|**Ctrl+M**、**Ctrl+O** [文本编辑器]|
 |编辑.注释选定内容|**Ctrl+K**、**Ctrl+C** [文本编辑器]|
-|编辑.完成单词|**Alt+向右键** [文本编辑器、工作流设计器]<br /><br /> 或 **Ctrl+空格键** [文本编辑器、工作流设计器]<br /><br /> 或 **Ctrl+K**、**W** [工作流设计器]<br /><br /> 或 **Ctrl+K、Ctrl+W** [工作流设计器]|
-|编辑.复制|**Ctrl+C** [全局]<br /><br /> 或 **Ctrl+Insert** [全局]|
-|编辑.剪切|**Ctrl+X** [全局]<br /><br /> 或 **Shift+Delete** [全局]|
-|编辑.删除|**Delete** [全局、团队资源管理器]<br /><br /> 或 **Shift+Delete** [序列图、UML 活动图、层关系图]<br /><br /> 或 **Ctrl+Delete** [类图]|
+|编辑.完成单词|**Alt+向右键** [文本编辑器、工作流设计器]<br /><br />或 **Ctrl+空格键** [文本编辑器、工作流设计器]<br /><br />或 **Ctrl+K**、**W** [工作流设计器]<br /><br />或 **Ctrl+K、Ctrl+W** [工作流设计器]|
+|编辑.复制|**Ctrl+C** [全局]<br /><br />或 **Ctrl+Insert** [全局]|
+|编辑.剪切|**Ctrl+X** [全局]<br /><br />或 **Shift+Delete** [全局]|
+|编辑.删除|**Delete** [全局、团队资源管理器]<br /><br />或 **Shift+Delete** [序列图、UML 活动图、层关系图]<br /><br />或 **Ctrl+Delete** [类图]|
 |编辑.查找|**Ctrl+F** [全局]|
 |编辑.查找所有引用|**Shift+F12** [全局]|
 |编辑.在文件中查找|**Ctrl+Shift+F** [全局]|
@@ -79,14 +80,14 @@ ms.locfileid: "53889851"
 |编辑.剪切行|**Ctrl+L** [文本编辑器]|
 |编辑.向下扩展列|**Shift+Alt+向下箭** [文本编辑器]|
 |编辑.上开新行|**Ctrl+Enter** [文本编辑器]|
-|编辑.列出成员|**Ctrl+J** [文本编辑器、工作流设计器]<br /><br /> 或 **Ctrl+K、Ctrl+L** [工作流设计器]<br /><br /> 或 **Ctrl+K、L** [工作流设计器]|
+|编辑.列出成员|**Ctrl+J** [文本编辑器、工作流设计器]<br /><br />或 **Ctrl+K、Ctrl+L** [工作流设计器]<br /><br />或 **Ctrl+K、L** [工作流设计器]|
 |Edit.NavigateTo|**Ctrl+,** [全局]|
 |编辑.打开文件|**Ctrl+Shift+G** [全局]|
 |编辑.改写模式|**Insert** [文本编辑器]|
-|编辑.参数信息|**Ctrl+Shift+空格键** [文本编辑器、工作流设计器]<br /><br /> 或 **Ctrl+K、Ctrl+P** [工作流设计器]<br /><br /> 或 **Ctrl+K、P** [工作流设计器]|
-|编辑.粘贴|**Ctrl+V** [全局]<br /><br /> 或 **Shift+Insert** [全局]|
+|编辑.参数信息|**Ctrl+Shift+空格键** [文本编辑器、工作流设计器]<br /><br />或 **Ctrl+K、Ctrl+P** [工作流设计器]<br /><br />或 **Ctrl+K、P** [工作流设计器]|
+|编辑.粘贴|**Ctrl+V** [全局]<br /><br />或 **Shift+Insert** [全局]|
 |编辑.查看定义|**Alt+F12** [文本编辑器]|
-|编辑.重做|**Ctrl+Y** [全局]<br /><br /> 或 **Shift+Alt+Backspace** [全局]<br /><br /> 或 **Ctrl+Shift+Z** [全局]|
+|编辑.重做|**Ctrl+Y** [全局]<br /><br />或 **Shift+Alt+Backspace** [全局]<br /><br />或 **Ctrl+Shift+Z** [全局]|
 |编辑.替换|**Ctrl+H** [全局]|
 |编辑.全选|**Ctrl+A** [全局]|
 |编辑.选择当前字|**Ctrl+W** [文本编辑器]|
@@ -98,7 +99,7 @@ ms.locfileid: "53889851"
 |Edit.ToggleCompletionMode|**Ctrl+Alt+空格键** [文本编辑器]|
 |编辑.切换大纲显示展开|**Ctrl+M、Ctrl+M** [文本编辑器]|
 |编辑.取消注释选定内容|**Ctrl+K、Ctrl+U** [文本编辑器]|
-|编辑.取消|**Ctrl+Z** [全局]<br /><br /> 或 **Alt+Backspace** [全局]|
+|编辑.取消|**Ctrl+Z** [全局]<br /><br />或 **Alt+Backspace** [全局]|
 |编辑.字删除直至结尾处|**Ctrl+Delete** [文本编辑器]|
 |编辑.字删除直至开始处|**Ctrl+Backspace** [文本编辑器]|
 
@@ -143,19 +144,19 @@ ms.locfileid: "53889851"
 |--------------| - |
 |视图.类视图|**Ctrl+Shift+C** [全局]|
 |视图.编辑标签|**F2** [全局]|
-|视图.错误列表|**Ctrl+\\、Ctrl+E** [全局]<br /><br /> 或 **Ctrl+\\、E** [全局]|
+|视图.错误列表|**Ctrl+\\、Ctrl+E** [全局]<br /><br />或 **Ctrl+\\、E** [全局]|
 |视图.向后定位|**Ctrl+-** [全局]|
 |视图.向前定位|**Ctrl+Shift+-** [全局]|
 |视图.对象浏览器|**Ctrl+Alt+J** [全局]|
 |视图.输出|**Ctrl+Alt+O** [全局]|
-|视图.属性窗口|F4|
+|视图.属性窗口|F4 |
 |视图.刷新|**F5** [团队资源管理器]|
 |视图.服务器资源管理器|**Ctrl+Alt+S** [全局]|
-|视图.显示智能标记|**Ctrl+.** [Global]<br /><br /> 或 **Shift+Alt+F10** [全局、HTML 编辑器设计视图]|
+|视图.显示智能标记|**Ctrl+.** [Global]<br /><br />或 **Shift+Alt+F10** [全局、HTML 编辑器设计视图]|
 |视图.解决方案资源管理器|**Ctrl+Alt+L** [全局]|
 |视图.Tfs 团队资源管理器|**Ctrl+\\、Ctrl+M** [全局]|
 |视图.工具箱|**Ctrl+Alt+X** [全局]|
-|视图.查看代码|**Enter** [类图]<br /><br /> 或 **F7** [设置设计器]|
+|视图.查看代码|**Enter** [类图]<br /><br />或 **F7** [设置设计器]|
 |视图.视图设计器|**Shift+F7** [HTML 编辑器源视图]|
 
 ## <a name="window"></a>窗口
@@ -170,4 +171,5 @@ ms.locfileid: "53889851"
 
 ## <a name="see-also"></a>请参阅
 
-- [在 Visual Studio 中标识并自定义键盘快捷键](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)
+- [在 Visual Studio 中识别并自定义键盘快捷方式](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)
+- [Visual Studio 中的所有键盘快捷方式](default-keyboard-shortcuts-in-visual-studio.md)

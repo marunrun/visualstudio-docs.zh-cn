@@ -1,14 +1,9 @@
 ---
-title: 'CA2117: APTCA 类型应只扩展 APTCA 基类型 |Microsoft Docs'
-ms.custom: ''
+title: CA2117:APTCA 类型应只扩展 APTCA 基类型 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA2117
 - AptcaTypesShouldOnlyExtendAptcaBaseTypes
@@ -20,14 +15,14 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 4b069674827ab266b4a4b7a99f81e039d487f6da
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 078b7f5535dc80261917ef662b3a2f0069cb33a8
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49922637"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65687304"
 ---
-# <a name="ca2117-aptca-types-should-only-extend-aptca-base-types"></a>CA2117：APTCA 类型应只扩展 APTCA 基类型
+# <a name="ca2117-aptca-types-should-only-extend-aptca-base-types"></a>CA2117:APTCA 类型应只扩展 APTCA 基类型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -41,7 +36,7 @@ ms.locfileid: "49922637"
  公共或受保护的程序集中类型<xref:System.Security.AllowPartiallyTrustedCallersAttribute?displayProperty=fullName>属性继承自不具有属性的程序集中声明的类型。
 
 ## <a name="rule-description"></a>规则说明
- 默认情况下，使用强名称的程序集中的公共或受保护类型隐式受[继承需求](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9)的完全信任。 用强名称的程序集标记<xref:System.Security.AllowPartiallyTrustedCallersAttribute>(APTCA) 特性不具有这种保护。 该属性禁用继承要求。 这样，是在未获得完全信任的类型声明的程序集中的可继承的公开的类型。
+ 默认情况下，使用强名称的程序集中的公共或受保护类型隐式受[继承需求](https://msdn.microsoft.com/28b9adbb-8f08-4f10-b856-dbf59eb932d9)的完全信任。 用强名称的程序集标记<xref:System.Security.AllowPartiallyTrustedCallersAttribute>(APTCA) 特性不具有这种保护。 该属性禁用继承要求。 这样，是在未获得完全信任的类型声明的程序集中的可继承的公开的类型。
 
  APTCA 属性是完全受信任的程序集，并在程序集中的类型继承自的类型不允许部分受信任调用方，则可能会产生安全问题。 如果两个类型`T1`并`T2`满足以下条件，则恶意调用方可以使用类型`T1`绕过的隐式完全信任继承要求保护`T2`:
 
@@ -86,11 +81,7 @@ ms.locfileid: "49922637"
 **从测试： 阳光明媚牧场**
 **满足在阳光明媚牧场 2003 年 2 月 22 日上午 12:00:00 ！**
 ## <a name="related-rules"></a>相关的规则
- [CA2116：APTCA 方法应只调用 APTCA 方法](../code-quality/ca2116-aptca-methods-should-only-call-aptca-methods.md)
+ [CA2116:APTCA 方法应只调用 APTCA 方法](../code-quality/ca2116-aptca-methods-should-only-call-aptca-methods.md)
 
 ## <a name="see-also"></a>请参阅
- [安全编码准则](http://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177) [.NET Framework 程序集可被调用的部分受信任代码](http://msdn.microsoft.com/en-us/a417fcd4-d3ca-4884-a308-3a1a080eac8d)[通过使用库部分受信任的代码](http://msdn.microsoft.com/library/dd66cd4c-b087-415f-9c3e-94e3a1835f74)[继承请求](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9)
-
-
-
-
+ [安全编码准则](https://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177) [.NET Framework 程序集可被调用的部分受信任代码](https://msdn.microsoft.com/a417fcd4-d3ca-4884-a308-3a1a080eac8d)[通过使用库部分受信任的代码](https://msdn.microsoft.com/library/dd66cd4c-b087-415f-9c3e-94e3a1835f74)[继承请求](https://msdn.microsoft.com/28b9adbb-8f08-4f10-b856-dbf59eb932d9)

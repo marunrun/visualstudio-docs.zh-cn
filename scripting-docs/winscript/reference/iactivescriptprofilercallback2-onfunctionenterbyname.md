@@ -1,8 +1,7 @@
 ---
-title: IActiveScriptProfilerCallback2::OnFunctionEnterByName |Microsoft Docs
+title: IActiveScriptProfilerCallback2::OnFunctionEnterByName | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,12 +13,12 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 40c527881c45a935344aa5444d7397ccdb6d99e4
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: f6fdb4addace1b0bbabdd4303c3943b976763514
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54092490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62993262"
 ---
 # <a name="iactivescriptprofilercallback2onfunctionenterbyname"></a>IActiveScriptProfilerCallback2::OnFunctionEnterByName
 通知探查器对象的脚本引擎会执行文档对象模型 (DOM) 函数调用。  

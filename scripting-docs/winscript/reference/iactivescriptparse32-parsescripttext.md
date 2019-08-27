@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptParse32::ParseScriptText |Microsoft Docs
+title: IActiveScriptParse32::ParseScriptText | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -11,11 +11,11 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 ms.openlocfilehash: 782c1d7bd2dd4c0708418ffd3e69c339dd993fde
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54094596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62954851"
 ---
 # <a name="iactivescriptparse32parsescripttext"></a>IActiveScriptParse32::ParseScriptText
 分析给定的代码 scriptlet，添加声明到命名空间和评估与相应的代码。  
@@ -48,7 +48,7 @@ HRESULT ParseScriptText(
 |`ulStartingLineNumber`|[in]指定分析开始的行的从零开始值。|  
 |`dwFlags`|[in]与 scriptlet 相关联的标志。 可以是这些值的组合：|  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |SCRIPTTEXT_ISEXPRESSION|如果计算表达式和语句之间的差异非常重要，但在脚本语言的语法模糊，此标志指定 scriptlet 会被解释为表达式，而不是语句或语句的列表。 默认情况下，除非可以从 scriptlet 文本的语法确定正确的选择，否则要假定语句。|  
 |SCRIPTTEXT_ISPERSISTENT|指示是否保存脚本引擎应保存在此调用过程中添加的代码 (例如，通过调用`IPersist*::Save`)，或如果脚本引擎通过转换为初始化状态重置。|  

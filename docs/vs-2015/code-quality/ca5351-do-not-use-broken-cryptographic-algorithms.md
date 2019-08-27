@@ -1,24 +1,19 @@
 ---
 title: CA5351 不使用损坏的加密算法 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 ms.assetid: 483f51b3-e186-4433-b48e-5ca24a9a9c94
 caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 7067d1d08be6de121986c60ead67086a11548ea8
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 780745e2b4213d8fdd130fe03cac292b233c5b0c
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49889810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63430682"
 ---
 # <a name="ca5351-do-not-use-broken-cryptographic-algorithms"></a>CA5351 不使用损坏的加密算法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,7 +26,7 @@ ms.locfileid: "49889810"
 |是否重大更改|非重大更改|  
   
 > [!NOTE]
->  此警告上次更新于 2015 年 11 月。  
+> 此警告上次更新于 2015 年 11 月。  
   
 ## <a name="cause"></a>原因  
  哈希函数（如 <xref:System.Security.Cryptography.MD5> ）和加密算法（如 <xref:System.Security.Cryptography.DES> 和 <xref:System.Security.Cryptography.RC2> ）可能会带来重大风险，并可能通过普通的攻击技术（如暴力攻击和哈希冲突）导致暴露敏感信息。  
@@ -52,9 +47,9 @@ ms.locfileid: "49889810"
 ## <a name="how-to-fix-violations"></a>如何解决冲突  
  使用更强大的加密选项：  
   
--   对于 MD5，请使用 [SHA-2](https://msdn.microsoft.com/en-us/library/windows/desktop/aa382459.aspx) 系列的哈希（例如 <xref:System.Security.Cryptography.SHA512>、 <xref:System.Security.Cryptography.SHA384>、 <xref:System.Security.Cryptography.SHA256>）。  
+- 对于 MD5，请使用 [SHA-2](https://msdn.microsoft.com/library/windows/desktop/aa382459.aspx) 系列的哈希（例如 <xref:System.Security.Cryptography.SHA512>、 <xref:System.Security.Cryptography.SHA384>、 <xref:System.Security.Cryptography.SHA256>）。  
   
--   对于 DES 和 RC2，请使用 <xref:System.Security.Cryptography.Aes> 加密。  
+- 对于 DES 和 RC2，请使用 <xref:System.Security.Cryptography.Aes> 加密。  
   
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告  
  除非经过加密专家审查，否则不要禁止显示此规则的警告。  

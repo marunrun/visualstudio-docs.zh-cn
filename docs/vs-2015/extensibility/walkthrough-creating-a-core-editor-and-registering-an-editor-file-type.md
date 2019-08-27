@@ -1,28 +1,23 @@
 ---
-title: 演练： 创建核心编辑器和注册编辑器文件类型 |Microsoft Docs
-ms.custom: ''
+title: 演练：创建核心编辑器和注册编辑器文件类型 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - walkthrough
 ms.assetid: 24d2bffd-a35c-46db-8515-fd60b884b7fb
 caps.latest.revision: 30
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 1573709c7ef42e51454ca65103a6faeda78dcc1b
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 14296aa335ba6710d4d9eac8e5338af7463c0aac
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51778704"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65687638"
 ---
-# <a name="walkthrough-creating-a-core-editor-and-registering-an-editor-file-type"></a>演练： 创建核心编辑器和注册编辑器文件类型
+# <a name="walkthrough-creating-a-core-editor-and-registering-an-editor-file-type"></a>演练：创建核心编辑器和注册编辑器文件类型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本演练演示如何创建启动 VSPackage[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]核心编辑器具有.myext 文件扩展名的文件时已加载。  
@@ -33,25 +28,25 @@ ms.locfileid: "51778704"
 ## <a name="locations-for-the-visual-studio-package-project-template"></a>在 Visual Studio 包项目模板位置  
  可在“新建项目”  对话框中的三个不同位置找到 Visual Studio 包项目模板：  
   
-1.  在“Visual Basic 扩展性”之下。 项目的默认语言为 Visual Basic。  
+1. 在“Visual Basic 扩展性”之下。 项目的默认语言为 Visual Basic。  
   
-2.  在“C# 扩展性”之下。 项目的默认语言为 C#。  
+2. 在“C# 扩展性”之下。 项目的默认语言为 C#。  
   
-3.  在“其他项目类型扩展性”之下。 项目的默认语言为 C++。  
+3. 在“其他项目类型扩展性”之下。 项目的默认语言为 C++。  
   
 ### <a name="to-create-the-vspackage"></a>若要创建 VSPackage  
   
--   启动[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]并创建[!INCLUDE[csprcs](../includes/csprcs-md.md)]名为 VSPackage `MyPackage`，如中所述[演练： 创建菜单命令 VSPackage](http://msdn.microsoft.com/en-us/d699c149-5d1e-47ff-94c7-e1222af02c32)。  
+- 启动[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]并创建[!INCLUDE[csprcs](../includes/csprcs-md.md)]名为 VSPackage `MyPackage`，如中所述[演练：创建菜单命令 VSPackage](https://msdn.microsoft.com/d699c149-5d1e-47ff-94c7-e1222af02c32)。  
   
 ### <a name="to-add-the-editor-factory"></a>若要添加编辑器工厂  
   
-1.  右键单击**MyPackage**项目，指向**添加**，然后单击**类**。  
+1. 右键单击**MyPackage**项目，指向**添加**，然后单击**类**。  
   
-2.  在中**添加新项**对话框框中，请确保**类**选择模板，则类型`EditorFactory.cs`作为名称，然后单击**添加**将类添加到你的项目。  
+2. 在中**添加新项**对话框框中，请确保**类**选择模板，则类型`EditorFactory.cs`作为名称，然后单击**添加**将类添加到你的项目。  
   
      应会自动打开 EditorFactory.cs 文件。  
   
-3.  在代码中引用以下程序集。  
+3. 在代码中引用以下程序集。  
   
     ```vb  
     Imports System.Runtime.InteropServices  
@@ -74,7 +69,7 @@ ms.locfileid: "51778704"
   
     ```  
   
-4.  添加将 GUID 传递给`EditorFactory`类添加`Guid`立即在类声明的属性。  
+4. 添加将 GUID 传递给`EditorFactory`类添加`Guid`立即在类声明的属性。  
   
      您可以使用 guidgen.exe 随时生成新的 GUID[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的命令提示符，或通过单击**创建 GUID**上**工具**菜单。 此处使用的 GUID 是仅为示例;不要在项目中使用它。  
   
@@ -86,7 +81,7 @@ ms.locfileid: "51778704"
     [Guid("0eea3187-c5fa-48d4-aa72-b5eecd3b17b1")]   
     ```  
   
-5.  在类定义中，添加两个私有变量来包含父包和服务提供程序。  
+5. 在类定义中，添加两个私有变量来包含父包和服务提供程序。  
   
     ```vb  
     Class EditorFactory  
@@ -103,7 +98,7 @@ ms.locfileid: "51778704"
   
     ```  
   
-6.  添加接受一个参数的类型的公共类构造函数<xref:Microsoft.VisualStudio.Shell.Package>:  
+6. 添加接受一个参数的类型的公共类构造函数<xref:Microsoft.VisualStudio.Shell.Package>:  
   
     ```vb  
     Public Sub New(ByVal parentPackage As Package)  
@@ -118,7 +113,7 @@ ms.locfileid: "51778704"
     }  
     ```  
   
-7.  修改`EditorFactory`类声明为派生<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>接口。  
+7. 修改`EditorFactory`类声明为派生<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>接口。  
   
     ```vb  
     Class EditorFactory Implements IVsEditorFacto  
@@ -129,7 +124,7 @@ ms.locfileid: "51778704"
   
     ```  
   
-8.  右键单击<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>，单击**实现接口**，然后单击**显式实现接口**。  
+8. 右键单击<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>，单击**实现接口**，然后单击**显式实现接口**。  
   
      这会添加必须实现中的四种方法<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>接口。  
   
@@ -325,20 +320,20 @@ ms.locfileid: "51778704"
   
 ### <a name="to-register-the-editor-factory"></a>若要注册编辑器工厂  
   
-1.  在**解决方案资源管理器**，双击要打开到字符串表，该表中的 Resources.resx 文件条目**String1 为**选定。  
+1. 在**解决方案资源管理器**，双击要打开到字符串表，该表中的 Resources.resx 文件条目**String1 为**选定。  
   
-2.  更改名称的标识符`IDS_EDITORNAME`和文本到**MyPackage 编辑器。** 此字符串将显示为您的编辑器的名称。  
+2. 更改名称的标识符`IDS_EDITORNAME`和文本到**MyPackage 编辑器。** 此字符串将显示为您的编辑器的名称。  
   
-3.  打开 VSPackage.resx 文件并添加一个新字符串，将名称设置为**101**到`IDS_EDITORNAME`。 这样，包使用的资源 ID 访问刚刚创建的字符串。  
+3. 打开 VSPackage.resx 文件并添加一个新字符串，将名称设置为**101**到`IDS_EDITORNAME`。 这样，包使用的资源 ID 访问刚刚创建的字符串。  
   
     > [!NOTE]
-    >  如果 VSPackage.resx 文件包含另一个字符串`name`属性设置为**101**，替换另一个唯一的数字值，在此处以及以下步骤中。  
+    > 如果 VSPackage.resx 文件包含另一个字符串`name`属性设置为**101**，替换另一个唯一的数字值，在此处以及以下步骤中。  
   
-4.  在中**解决方案资源管理器**，打开 MyPackagePackage.cs 文件。  
+4. 在中**解决方案资源管理器**，打开 MyPackagePackage.cs 文件。  
   
      这是主要包文件。  
   
-5.  之前添加以下用户属性`Guid`属性。  
+5. 之前添加以下用户属性`Guid`属性。  
   
     ```vb  
     <ProvideEditorFactoryAttribute(GetType(EditorFactory), 101)> _  
@@ -354,7 +349,7 @@ ms.locfileid: "51778704"
   
      <xref:Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute>属性将相关联的.myext 文件扩展名与编辑器工厂，以便任何时候，只要具有加载扩展插件、 调用编辑器工厂的文件。  
   
-6.  添加到一个私有变量`MyPackage`类，构造函数中之前，并为其提供类型`EditorFactory`。  
+6. 添加到一个私有变量`MyPackage`类，构造函数中之前，并为其提供类型`EditorFactory`。  
   
     ```vb  
     Private editorFactory As EditorFactory  
@@ -364,7 +359,7 @@ ms.locfileid: "51778704"
     private EditorFactory editorFactory;  
     ```  
   
-7.  查找`Initialize`方法 (可能需要打开`Package Members`隐藏的区域)，并在调用后添加以下代码`base.Initialize()`。  
+7. 查找`Initialize`方法 (可能需要打开`Package Members`隐藏的区域)，并在调用后添加以下代码`base.Initialize()`。  
   
     ```vb  
     'Create our editor factory and register it.   
@@ -379,7 +374,7 @@ ms.locfileid: "51778704"
   
     ```  
   
-8.  编译此程序，并确保没有任何错误。  
+8. 编译此程序，并确保没有任何错误。  
   
      此步骤在实验注册表配置单元注册编辑器工厂[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。 如果系统提示重写 resource.h 文件，请单击**确定**。  
   
@@ -403,4 +398,3 @@ ms.locfileid: "51778704"
 ## <a name="see-also"></a>请参阅  
  [在核心编辑器](../extensibility/inside-the-core-editor.md)   
  [使用旧 API 实例化核心编辑器](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)
-

@@ -7,21 +7,23 @@ helpviewer_keywords:
 ms.assetid: 2253956e-3ae0-4bdc-9d3a-4881dfae4ddb
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fab9dc76bf47dbe03388aaef56c85ca2fa5a7bf
-ms.sourcegitcommit: d0b02affd24e66efed924c197824f35f823e3240
+ms.openlocfilehash: a92d5a593c67f54b50649a48b8f973bbfbff8958
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/21/2019
-ms.locfileid: "54417897"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65694950"
 ---
 # <a name="property-functions"></a>属性函数
 
 在 .NET Framework 4 和 4.5 版中，可以使用属性函数来计算 MSBuild 脚本。 可以在出现属性的任何位置使用属性函数。 与任务不同，属性函数可在目标外部使用，并在任何目标运行之前进行计算。
 
  可以在生成脚本中读取系统时间、比较字符串、匹配正则表达式及执行其他操作，而无需使用 MSBuild 任务。 MSBuild 将尝试将字符串转换为数字、将数字转换为字符串，并根据需要进行其他转换。
+ 
+从属性函数返回的字符串值已转义[特殊字符](msbuild-special-characters.md)。 如果要将这些值视为如同直接置于项目文件中，请使用 `$([MSBuild]::Unescape())` 取消转义特殊字符。
 
 ## <a name="property-function-syntax"></a>属性函数语法
 
@@ -166,7 +168,7 @@ $([MSBuild]::Add($(NumberOne), $(NumberTwo)))
 |int BitwiseXor(第一个整型值, 第二个整型值)|对第一个值和第二个值执行按位 `XOR`（第一个值 ^ 第二个值）。|
 |int BitwiseNot(第一个整型值)|执行按位 `NOT`（~第一个值）。|
 |bool IsOsPlatform(string platformString)|指定当前 OS 平台是否为 `platformString`。 `platformString` 必须属于 <xref:System.Runtime.InteropServices.OSPlatform>。|
-|bool IsOSUnixLike|如果当前 OS 是 Unix 系统，则为 True。|
+|bool IsOSUnixLike()|如果当前 OS 是 Unix 系统，则为 True。|
 |string NormalizePath(params string[] path)|获取指定路径的规范化完整路径，并确保其包含当前操作系统的正确目录分隔符。|
 |string NormalizeDirectory(params string[] path)|获取指定目录的规范化完整路径，确保其包含当前操作系统的正确目录分隔符，并确保其具有尾部反斜杠。|
 |string EnsureTrailingSlash(string path)|如果给定路径没有尾部反斜杠，请添加一个。 如果路径为空字符串，请勿其进行修改。|
@@ -175,7 +177,7 @@ $([MSBuild]::Add($(NumberOne), $(NumberTwo)))
 |string MakeRelative(string basePath, string path)|将 `path` 关联到 `basePath`。 `basePath` 必须是绝对目录。 如果无法关联 `path`，则会返回逐字字符串。 类似于 `Uri.MakeRelativeUri`。|
 |string ValueOrDefault(string conditionValue, string defaultValue)|仅当“conditionValue”为空时在参数“defaultValue”中返回字符串，否则返回值 conditionValue。|
 
-##  <a name="nested-property-functions"></a>嵌套的属性函数
+## <a name="nested-property-functions"></a>嵌套的属性函数
 
 可将属性函数组合在一起，组成更复杂的函数，如下例所示。
 
@@ -319,8 +321,8 @@ MSBuild `ValueOrDefault` 属性函数将返回第一个参数，除非它为 nul
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
     <PropertyGroup>
-        <Value1>$([MSBuild]::ValueOrDefault(`$(UndefinedValue)`, `a`))</Value1>
-        <Value2>$([MSBuild]::ValueOrDefault(`b`, `$(Value1)`))</Value2>
+        <Value1>$([MSBuild]::ValueOrDefault('$(UndefinedValue)', 'a'))</Value1>
+        <Value2>$([MSBuild]::ValueOrDefault('b', '$(Value1)'))</Value2>
     </PropertyGroup>
 
     <Target Name="MyTarget">
@@ -338,6 +340,6 @@ Output:
 
 ## <a name="see-also"></a>请参阅
 
-[MSBuild 属性](../msbuild/msbuild-properties.md)
+- [MSBuild 属性](../msbuild/msbuild-properties.md)
 
-[MSBuild 概述](../msbuild/msbuild.md)
+- [MSBuild 概述](../msbuild/msbuild.md)

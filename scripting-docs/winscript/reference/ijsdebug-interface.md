@@ -2,7 +2,6 @@
 title: IJsDebug 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -12,12 +11,12 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 16f0da202e937a92a8e76dddc27d9da7bc61c4ca
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: 20d755250960ad2f5b22cc7b645ad24b91c4875f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54089409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62583641"
 ---
 # <a name="ijsdebug-interface"></a>IJsDebug 接口
 JavaScript 调试的入口点。  

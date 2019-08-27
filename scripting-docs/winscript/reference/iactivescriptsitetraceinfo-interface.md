@@ -2,7 +2,6 @@
 title: IActiveScriptSiteTraceInfo Interface | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -12,12 +11,12 @@ caps.latest.revision: 2
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 00785a14733ff1f76a170ddc6a020bbf79fc0f32
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: a3825ad72c903b9e1f0d19d699e391666d39f876
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54344455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992311"
 ---
 # <a name="iactivescriptsitetraceinfo-interface"></a>IActiveScriptSiteTraceInfo 接口
 提供发送脚本跟踪信息的方法。  

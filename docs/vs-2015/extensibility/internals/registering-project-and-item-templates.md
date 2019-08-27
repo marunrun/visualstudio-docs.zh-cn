@@ -1,14 +1,9 @@
 ---
 title: 注册项目和项模板 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], adding items
 - registry, Add New Item dialog box
@@ -18,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6b909f93-d7f5-4aec-81c6-ee9ff0f31638
 caps.latest.revision: 28
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 06a9840680c76103373cde00ac37310bb6138095
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: HT
+manager: jillfra
+ms.openlocfilehash: a06e7a292d960e675ad4b0de97499557542fef1c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51764287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68185841"
 ---
 # <a name="registering-project-and-item-templates"></a>注册项目和项模板
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -44,11 +39,11 @@ ms.locfileid: "51764287"
 "ProjectTemplatesDir"="C:\\MyProduct\\MyProjectTemplates"  
 ```  
   
-|name|类型|描述|  
+|名称|类型|描述|  
 |----------|----------|-----------------|  
 |@|REG_SZ|这种类型的项目的默认名称。|  
 |DisplayName|REG_SZ|包下注册的名称的资源 ID 来检索从附属 DLL。|  
-|Package|REG_SZ|在包下已注册包的类 ID。|  
+|package|REG_SZ|在包下已注册包的类 ID。|  
 |ProjectTemplatesDir|REG_SZ|默认项目模板文件的路径。 项目模板文件将由**新的项目**模板。|  
   
 ### <a name="registering-item-templates"></a>注册项模板  
@@ -89,7 +84,7 @@ ms.locfileid: "51764287"
 "SortPriority"=dword:00000064  
 ```  
   
-|name|类型|描述|  
+|名称|类型|描述|  
 |----------|----------|-----------------|  
 |CommonFindFilesFilter|REG_DWORD|使常用筛选器之一中的筛选**在文件中查找**对话框。 前面未标记为常见的筛选器的筛选器列表中列出了常用筛选器。|  
 |CommonOpenFilesFilter|REG_DWORD|使常用筛选器之一中的筛选**打开的文件**对话框。 前面未标记为常见的筛选器的筛选器列表中列出了常用筛选器。|  
@@ -128,4 +123,3 @@ ms.locfileid: "51764287"
  [向导](../../extensibility/internals/wizards.md)   
  [本地化应用程序](../../ide/localizing-applications.md)   
  [通常用于扩展项目的对象的 CATID](../../extensibility/internals/catids-for-objects-that-are-typically-used-to-extend-projects.md)
-

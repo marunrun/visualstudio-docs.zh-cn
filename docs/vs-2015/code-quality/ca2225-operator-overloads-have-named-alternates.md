@@ -1,14 +1,9 @@
 ---
-title: CA2225： 运算符重载具有命名的备用项 |Microsoft Docs
-ms.custom: ''
+title: CA2225:运算符重载具有命名的备用项 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - OperatorOverloadsHaveNamedAlternates
 - CA2225
@@ -20,14 +15,14 @@ caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 427bd7756e1bf7a9e1b7056a84dd90c29bf504fe
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: aa90a1e97b563ef549cb3f628fcf9130a364c50a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49860248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68201619"
 ---
-# <a name="ca2225-operator-overloads-have-named-alternates"></a>CA2225：运算符重载具有命名的备用项
+# <a name="ca2225-operator-overloads-have-named-alternates"></a>CA2225:运算符重载具有命名的备用项
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -49,7 +44,7 @@ ms.locfileid: "49860248"
 |---------|------------------|-----------|--------------------|
 |+ （二进制）|+|+ （二进制）|添加|
 |+=|+=|+=|添加|
-|&|And|&|BitwiseAnd|
+|&|且|&|BitwiseAnd|
 |&=|和 =|&=|BitwiseAnd|
 |&#124;|Or|&#124;|BitwiseOr|
 |&#124;=|或 =|&#124;=|BitwiseOr|
@@ -63,8 +58,8 @@ ms.locfileid: "49860248"
 |>=|>=|>=|比较|
 |++|不可用|++|递增|
 |<>|!=|Equals|
-|<<|<<|<<|左向右|
-|<<=|<<=|<<=|左向右|
+|<<|<<|<<|LeftShift|
+|<<=|<<=|<<=|LeftShift|
 |<|<|<|比较|
 |<=|<=|\<=|比较|
 |&&|不可用|&&|LogicalAnd|
@@ -75,11 +70,11 @@ ms.locfileid: "49860248"
 |* （二进制）|*|*|相乘|
 |*=|不可用|*=|相乘|
 |~|Not|~|OnesComplement|
-|>>|>>|>>|组合键|
-=|不可用|>>=|组合键|
+|>>|>>|>>|RightShift|
+=|不可用|>>=|RightShift|
 |-（二进制）|-（二进制）|-（二进制）|减|
 |-=|不可用|-=|减|
-|true|为 true 时|不可用|IsTrue （属性）|
+|true|IsTrue|不可用|IsTrue （属性）|
 |-（一元）|不可用|-|求反|
 |+ （一元）|不可用|+|Plus|
 |False|IsFalse|False|IsTrue （属性）|
@@ -102,15 +97,12 @@ ms.locfileid: "49860248"
  [!code-csharp[FxCop.Usage.OperatorOverloadsHaveNamedAlternates#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OperatorOverloadsHaveNamedAlternates/cs/FxCop.Usage.OperatorOverloadsHaveNamedAlternates.cs#1)]
 
 ## <a name="related-rules"></a>相关的规则
- [CA1046：不要对引用类型重载相等运算符](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)
+ [CA1046:请重载相等运算符对引用类型](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)
 
- [CA2226：运算符应有对称重载](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)
+ [CA2226:运算符应有对称重载](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)
 
- [CA2224：重载相等运算符时重写 Equals 方法](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)
+ [CA2224:重写 equals 方法重载相等运算符](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)
 
- [CA2218：重写 Equals 时重写 GetHashCode](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)
+ [CA2218:重写 Equals 时重写 GetHashCode](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)
 
  [CA2231：重写 ValueType.Equals 时应重载相等运算符](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)
-
-
-

@@ -1,25 +1,20 @@
 ---
 title: 将 EventSource 事件作为标记可视化 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 3a10022a-5c37-48b1-a833-dd35902176b6
 caps.latest.revision: 15
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: c39f137299c1f229de8c3c6dc8d7329cba6033cb
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: a8cd0f0e5a420155cfc6786e4a8542bc59f93ece
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51742561"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65690207"
 ---
 # <a name="visualizing-eventsource-events-as-markers"></a>将 EventSource 事件作为标记可视化
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,11 +26,11 @@ ms.locfileid: "51742561"
   
 ### <a name="marker-type"></a>标记类型  
   
-1.  具有[操作码](http://msdn.microsoft.com/en-us/d97953df-669b-4c55-b1a8-925022b339b7) win:Start 或 win:Stop 的事件将分别被视为范围的开始或结束。  无法显示嵌套或重叠的范围。 无法显示以一个线程开始并以另一个线程结束的事件对。  
+1. 具有[操作码](https://msdn.microsoft.com/d97953df-669b-4c55-b1a8-925022b339b7) win:Start 或 win:Stop 的事件将分别被视为范围的开始或结束。  无法显示嵌套或重叠的范围。 无法显示以一个线程开始并以另一个线程结束的事件对。  
   
-2.  其操作码既不是 win:Start 也不是 win:Stop 的事件将被视为标记标志，除非其[级别](http://msdn.microsoft.com/en-us/dfa4e0a9-4d89-4f50-aef9-1dae0dc11726)（EVENT_RECORD.EVENT_HEADER.EVENT_DESCRIPTOR 的字段）为 win:Verbose 或更高版本。  
+2. 其操作码既不是 win:Start 也不是 win:Stop 的事件将被视为标记标志，除非其[级别](https://msdn.microsoft.com/dfa4e0a9-4d89-4f50-aef9-1dae0dc11726)（EVENT_RECORD.EVENT_HEADER.EVENT_DESCRIPTOR 的字段）为 win:Verbose 或更高版本。  
   
-3.  在所有其他情况下，事件均被视为消息。  
+3. 在所有其他情况下，事件均被视为消息。  
   
 ### <a name="importance"></a>重要性  
  下表定义了事件级别映射到标记重要性的方式。  
@@ -99,10 +94,7 @@ ms.locfileid: "51742561"
  使用 cvSpanId 字段（一个整数型）匹配事件对。 每对开始/停止事件的值，该值表示范围必须是唯一的。 通常对于并发代码，这需要使用同步基元（如 <xref:System.Threading.Interlocked.Exchange%2A>）以确保密钥（用于 CvSpanID 的值）正确。  
   
 > [!NOTE]
->  不支持以下操作：使用 SpanID 以嵌套范围，允许它们部分重叠在同一线程上或允许它们以一个线程开始并以另一个线程结束。  
+> 不支持以下操作：使用 SpanID 以嵌套范围，允许它们部分重叠在同一线程上或允许它们以一个线程开始并以另一个线程结束。  
   
 ## <a name="see-also"></a>请参阅  
  [并发可视化工具标记](../profiling/concurrency-visualizer-markers.md)
-
-
-

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - profiling tools,tier interaction method
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 58b8c5e04baad8083c2794cc6dbed8a08408a8da
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b04b2d2c3c23b444d011d81002f7f22a12b1ebf0
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53878674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62777854"
 ---
 # <a name="add-tier-interaction-data-from-the-command-line"></a>从命令行添加层交互数据
 
@@ -61,7 +61,7 @@ ms.locfileid: "53878674"
 3. 启动探查器。 键入以下命令：
 
     ```cmd
-    vsperfcmd /start:trace /output:Desktop_tip.vsp 
+    vsperfcmd /start:trace /output:Desktop_tip.vsp
     ```
 
 4. 使用 VSPerfCmd 启动应用程序。 键入以下命令：
@@ -113,7 +113,7 @@ ms.locfileid: "53878674"
 7. 启动探查器。 键入以下命令：
 
     ```cmd
-    vsperfcmd /start:trace /output:MiddleTier_tip.vsp /user:SYSTEM /crosssession 
+    vsperfcmd /start:trace /output:MiddleTier_tip.vsp /user:SYSTEM /crosssession
     ```
 
 8. 必要时，请启动该服务。
@@ -121,7 +121,7 @@ ms.locfileid: "53878674"
 9. 将探查器附加到该服务。 键入以下命令：
 
     ```cmd
-    vsperfcmd /attach:MiddleTier.exe /output:MyService_tip.vsp /user:SYSTEM /crosssession 
+    vsperfcmd /attach:MiddleTier.exe /output:MyService_tip.vsp /user:SYSTEM /crosssession
     ```
 
 10. 使用该服务并收集分析数据。

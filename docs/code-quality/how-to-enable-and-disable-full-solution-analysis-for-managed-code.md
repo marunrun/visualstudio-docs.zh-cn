@@ -1,21 +1,20 @@
 ---
-title: 如何：启用和禁用托管代码的完整解决方案分析
+title: 启用和禁用托管代码的完整解决方案分析
 ms.date: 03/23/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - full solution analysis
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b6e5d73f0a08511730cb79eccf60570bad804137
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a445439014e3b1f68b634865265089eb68e790a6
+ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53937879"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66260879"
 ---
 # <a name="how-to-enable-and-disable-full-solution-analysis-for-managed-code"></a>如何：启用和禁用托管代码的完整解决方案分析
 

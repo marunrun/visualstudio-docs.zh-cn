@@ -5,16 +5,15 @@ ms.topic: reference
 ms.assetid: a1c8f833-c918-4a86-9679-d2a791f938a9
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 915475b9f20b57871a8228ebde022d0b6ce8f3b6
-ms.sourcegitcommit: 59c48e1e42b48ad25a4e198af670faa4d8dae370
-ms.translationtype: MTE95
+ms.openlocfilehash: f7214bfc1d4260a3baa03464d541993a264faefa
+ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54204263"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65460662"
 ---
 # <a name="could-not-retrieve-schema-information-for-database-object-object-name"></a>未能获取数据库对象 \<对象名称> 的架构信息
 
@@ -22,5 +21,4 @@ ms.locfileid: "54204263"
 
 ## <a name="see-also"></a>请参阅
 
-- [O-R 设计器消息](../data-tools/o-r-designer-messages.md)
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

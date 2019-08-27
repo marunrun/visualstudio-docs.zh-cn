@@ -5,16 +5,15 @@ ms.topic: reference
 ms.assetid: 487dafe4-d57c-4be1-9e3a-bb0a8699b2fa
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5224866db3fb0499a386bd1d3bea1ac0e6b06f2a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: 2e18a95aa2e4eb8a9238a046e3a77f3d618cdd2b
+ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53935393"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65458366"
 ---
 # <a name="the-designer-cannot-be-modified-while-debugging"></a>调试时无法修改设计器
 
@@ -24,5 +23,4 @@ ms.locfileid: "53935393"
 
 ## <a name="see-also"></a>请参阅
 
-- [O-R 设计器消息](../data-tools/o-r-designer-messages.md)
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

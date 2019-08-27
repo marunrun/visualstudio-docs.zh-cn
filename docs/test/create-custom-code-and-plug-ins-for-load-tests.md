@@ -10,14 +10,13 @@ helpviewer_keywords:
 ms.assetid: 0c0fcc99-673b-4ea0-a268-0475f66e5cb6
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: aeb7a0cd638accca463d90f043d2be4581128b9e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 8382d5014b88d9f1711a082e46530e1e3dfb96e4
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53932913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62965422"
 ---
 # <a name="create-custom-code-and-plug-ins-for-load-tests"></a>为负载测试创建自定义代码和插件
 

@@ -1,14 +1,9 @@
 ---
-title: 'Idiasegment:: Get_read |Microsoft Docs'
-ms.custom: ''
+title: IDiaSegment::get_read | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: aafbc86d-352c-4e1a-911a-1472d2d59212
 caps.latest.revision: 11
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 927ad321f8bad54a5a006baede2eccd6168d7b81
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: a1ef1a39666d1901abf879e7878866b5cfc1fa8b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51729883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68151768"
 ---
 # <a name="idiasegmentgetread"></a>IDiaSegment::get_read
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -43,10 +38,7 @@ HRESULT get_read ( 
  [out]返回`TRUE`如果可以读取段; 否则，返回`FALSE`。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。  
+ 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。  
   
 ## <a name="see-also"></a>请参阅  
  [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)
-
-
-

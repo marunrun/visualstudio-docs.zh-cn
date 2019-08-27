@@ -1,22 +1,21 @@
 ---
 title: 类设计器中的 Visual C++ 结构
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - Class Designer [Visual Studio], structures
 ms.assetid: bad18ab6-d956-47a6-a413-811cc26db5f5
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95c6622a6c67eda3543c11153c8f79d232aa023d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e9b8e81ee25e081a324a8520317fa57a1314ccd0
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53876596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62975029"
 ---
 # <a name="visual-c-structures-in-class-designer"></a>类设计器中的 Visual C++ 结构
 

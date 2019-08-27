@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data [Office development in Visual Studio], adding to documents
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5333b3d6f9ba107bde21bbc23566940ee5dbf80d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7cb221715ef1c2a50bc60e1725db3b1d8721f165
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53960610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62967717"
 ---
 # <a name="how-to-populate-documents-with-data-from-objects"></a>如何：用对象中的数据填充文档
 
@@ -28,11 +28,11 @@ ms.locfileid: "53960610"
 
 必须完成三个基本步骤才能用对象中的数据填充文档：
 
--   将控件添加到可以绑定到数据的文档。
+- 将控件添加到可以绑定到数据的文档。
 
--   将数据对象添加到文档中。
+- 将数据对象添加到文档中。
 
--   将数据对象连接到 BindingSource。
+- 将数据对象连接到 BindingSource。
 
 ## <a name="to-add-a-data-object"></a>若要添加数据对象
 
@@ -48,23 +48,23 @@ ms.locfileid: "53960610"
 
 若要连接到 BindingSource 的数据对象：
 
-1.  将所需数据字段从“数据源”  窗口拖动到你的文档。 此操作会自动创建一个控件。
+1. 将所需数据字段从“数据源”  窗口拖动到你的文档。 此操作会自动创建一个控件。
 
-2.  在代码中，可以创建为数据源选择的对象类型的实例。
+2. 在代码中，可以创建为数据源选择的对象类型的实例。
 
-3.  将实例分配给 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 的 <xref:System.Windows.Forms.BindingSource>属性。
+3. 将实例分配给 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 的 <xref:System.Windows.Forms.BindingSource>属性。
 
 ### <a name="application-level-projects"></a>应用程序级项目
 
 若要连接到 BindingSource 的数据对象：
 
-1.  在代码中，可以创建与数据源关联的对象类型的实例。
+1. 在代码中，可以创建与数据源关联的对象类型的实例。
 
-2.  创建 <xref:System.Windows.Forms.BindingSource>的实例。
+2. 创建 <xref:System.Windows.Forms.BindingSource>的实例。
 
-3.  将数据源实例分配给 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 的 <xref:System.Windows.Forms.BindingSource>属性。
+3. 将数据源实例分配给 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 的 <xref:System.Windows.Forms.BindingSource>属性。
 
-4.  将数据源作为数据绑定添加到控件。
+4. 将数据源作为数据绑定添加到控件。
 
 ## <a name="see-also"></a>请参阅
 

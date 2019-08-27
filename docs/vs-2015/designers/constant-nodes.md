@@ -1,25 +1,20 @@
 ---
 title: 常量节点 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: 2c798a50-a2d7-459b-9879-ad4ad8290c9b
 caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 0b062f6190213fc2b18670f50fdd527c4c3f212a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: d38a4f8a182562c11dbb742cb26392218edfd981
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49260051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68162658"
 ---
 # <a name="constant-nodes"></a>常量节点
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,16 +36,13 @@ ms.locfileid: "49260051"
 |**二维常量**|双分量矢量常数。<br /><br /> **输出**<br /><br /> `Output`: `float2`<br /> 矢量值。|**输出**<br /> 矢量值。|  
 |**三维常量**|三分量矢量常数。<br /><br /> **输出**<br /><br /> `Output`: `float3`<br /> 矢量值。|**输出**<br /> 矢量值。|  
 |**四维常量**|四分量矢量常数。<br /><br /> **输出**<br /><br /> `Output`: `float4`<br /> 颜色值。|**输出**<br /> 矢量值。|  
-|**标准化位置**|以标准化设备坐标表示的当前像素的位置。<br /><br /> x 坐标和 y 坐标具有 [-1, 1] 范围内的值，z 坐标具有 [0, 1] 范围中的值，w 分量包含视图空间中的点深度值；w 未标准化。<br /><br /> **输出**<br /><br /> `Output`: `float4`<br /> 当前像素的位置。|无|  
-|**点颜色**|当前像素的漫射颜色，它是材质漫射颜色和顶点颜色属性的组合。<br /><br /> **输出**<br /><br /> `Output`: `float4`<br /> 当前像素的漫射颜色。|无|  
+|**标准化位置**|以标准化设备坐标表示的当前像素的位置。<br /><br /> x 坐标和 y 坐标具有 [-1, 1] 范围内的值，z 坐标具有 [0, 1] 范围中的值，w 分量包含视图空间中的点深度值；w 未标准化。<br /><br /> **输出**<br /><br /> `Output`: `float4`<br /> 当前像素的位置。|None|  
+|**点颜色**|当前像素的漫射颜色，它是材质漫射颜色和顶点颜色属性的组合。<br /><br /> **输出**<br /><br /> `Output`: `float4`<br /> 当前像素的漫射颜色。|None|  
 |**点深度**|视图空间中当前像素的深度。<br /><br /> **输出**<br /><br /> `Output`: `float`<br /> 当前像素的深度。|无|  
 |**标准化点深度**|以标准化设备坐标表示的当前像素的深度。<br /><br /> 结果的值在 [0, 1] 的范围内。<br /><br /> **输出**<br /><br /> `Output`: `float`<br /> 当前像素的深度。|无|  
-|**屏幕位置**|以屏幕坐标表示的当前像素的位置。<br /><br /> 屏幕坐标基于当前视区。 x 和 y 分量包含屏幕坐标，z 分量包含标准化为 [0, 1] 范围的深度，w 分量包含视图空间中的深度值。<br /><br /> **输出**<br /><br /> `Output`: `float4`<br /> 当前像素的位置。|无|  
+|**屏幕位置**|以屏幕坐标表示的当前像素的位置。<br /><br /> 屏幕坐标基于当前视区。 x 和 y 分量包含屏幕坐标，z 分量包含标准化为 [0, 1] 范围的深度，w 分量包含视图空间中的深度值。<br /><br /> **输出**<br /><br /> `Output`: `float4`<br /> 当前像素的位置。|None|  
 |**表面法线**|当前像素在对象空间内的表面法线。<br /><br /> 它可用于计算对象空间中的光照量和光照反射。<br /><br /> **输出**<br /><br /> `Output`: `float3`<br /> 当前像素的表面法线。|无|  
 |**切空间照相机向量**|从当前像素延伸到切空间中相机的向量。<br /><br /> 它可用于计算切空间中的反射。<br /><br /> **输出**<br /><br /> `Output`: `float3`<br /> 从当前像素到相机的向量。|无|  
 |**切空间灯光方向**|定义在当前像素的切空间中从光源投射出的光线方向的向量。<br /><br /> 它可用于计算切空间中的光照量和反射量。<br /><br /> **输出：**<br /><br /> `Output`: `float3`<br /> 从当前像素到光源的矢量。|无|  
 |**世界法线**|当前像素在世界空间内的表面法线。<br /><br /> 它可用于计算世界空间内的光照量和光照反射。<br /><br /> **输出**<br /><br /> `Output`: `float3`<br /> 当前像素的表面法线。|无|  
 |**世界位置**|当前像素在世界空间内的位置。<br /><br /> **输出**<br /><br /> `Output`: `float4`<br /> 当前像素的位置。|无|
-
-
-

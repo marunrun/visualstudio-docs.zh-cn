@@ -1,14 +1,9 @@
 ---
 title: 对应用程序进行全球化和本地化 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - globalization [Visual Studio]
 - Visual Basic code, international applications
@@ -20,13 +15,13 @@ ms.assetid: 4d9815ae-3e80-4b4d-933d-f8309aee18d5
 caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 66634bf6c14e316140e001fd8bb147504736981b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: fe8671142aeda4972f9ac218fe536b4a991649a7
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49246098"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65704372"
 ---
 # <a name="globalizing-and-localizing-applications"></a>对应用程序进行全球化和本地化
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,10 +47,10 @@ ms.locfileid: "49246098"
  [全球化你的应用（使用 C#/VB/C++ 和 XAML 的 Windows 应用商店应用）](http://go.microsoft.com/fwlink/?LinkId=258267)  
  包含一些操作方法主题和指南，可帮助你使用 XAML 和 Visual C#、Visual Basic 或 Visual C++ 对 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 应用构建进行全球化和本地化。  
   
- [开发全球通用应用程序的最佳做法](http://msdn.microsoft.com/library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c)  
+ [开发全球通用应用程序的最佳做法](https://msdn.microsoft.com/library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c)  
  提供有关针对国际用户进行编程的背景信息。  
   
- [类库概述](http://msdn.microsoft.com/library/7e4c5921-955d-4b06-8709-101873acf157)  
+ [类库概述](https://msdn.microsoft.com/library/7e4c5921-955d-4b06-8709-101873acf157)  
  介绍可加快和优化开发过程并提供对系统功能的访问的类、接口和值类型。  
   
  <xref:System.Globalization>  
@@ -63,4 +58,3 @@ ms.locfileid: "49246098"
   
  <xref:System.Resources>  
  指出该命名空间中的类和接口，这些类和接口使开发人员能够创建、存储和管理应用程序中所使用的、各种区域性特定的各种资源。
-

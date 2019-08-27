@@ -1,14 +1,9 @@
 ---
 title: 类图和“类详细信息”窗口中的键盘快捷方式和鼠标快捷方式（类设计器）| Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vs.classdetails.window
 helpviewer_keywords:
@@ -18,13 +13,13 @@ ms.assetid: c12d8dac-9902-4fde-b721-2a8116da53b7
 caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: f607046609208804f349eb06e927ab8e72e28992
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 861ce1cf40dd5c56c043399387ef51fa3b4efee2
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49247905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63412248"
 ---
 # <a name="keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer"></a>类图和“类详细信息”窗口中的键盘快捷键和鼠标快捷方式（类设计器）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,18 +28,18 @@ ms.locfileid: "49247905"
   
  **在本主题中**  
   
--   [在类设计器中使用鼠标](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md#MouseClassDesigner)  
+- [在类设计器中使用鼠标](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md#MouseClassDesigner)  
   
--   [在类详细信息窗口中使用鼠标](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md#MouseClassDetails)  
+- [在类详细信息窗口中使用鼠标](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md#MouseClassDetails)  
   
--   [在类设计器中使用键盘](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md#KeyboardClassDesigner)  
+- [在类设计器中使用键盘](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md#KeyboardClassDesigner)  
   
--   [在类详细信息窗口中使用键盘](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md#KeyboardClassDetails)  
+- [在类详细信息窗口中使用键盘](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md#KeyboardClassDetails)  
   
-##  <a name="MouseClassDesigner"></a>在类设计器中使用鼠标  
+## <a name="MouseClassDesigner"></a>在类设计器中使用鼠标  
  类图中支持下列鼠标操作：  
   
-|鼠标组合|上下文|描述|  
+|鼠标组合|上下文|说明|  
 |-----------------------|-------------|-----------------|  
 |双击|Shape 元素|打开代码编辑器。|  
 ||棒糖形连接器|展开/折叠棒糖形。|  
@@ -54,23 +49,23 @@ ms.locfileid: "49247905"
 |CTRL + 鼠标滚轮|类图|缩放。|  
 |CTRL + Shift + 单击|类图|缩放。|  
   
-##  <a name="MouseClassDetails"></a>在类详细信息窗口中使用鼠标  
+## <a name="MouseClassDetails"></a>在类详细信息窗口中使用鼠标  
  通过使用鼠标，可按以下列方式更改类详细信息窗口及其显示的数据的外观：  
   
--   单击任何可编辑的单元格即可编辑该单元格的内容。 你所做的更改会反映在存储或显示数据的所有位置，包括属性窗口中和源代码中。  
+- 单击任何可编辑的单元格即可编辑该单元格的内容。 你所做的更改会反映在存储或显示数据的所有位置，包括属性窗口中和源代码中。  
   
--   单击某一行的任何单元格将使属性窗口显示该行所表示的元素的属性。  
+- 单击某一行的任何单元格将使属性窗口显示该行所表示的元素的属性。  
   
--   若要更改列的宽度，请将拖动列标题右侧的边界，直到列变成你想要的宽度。  
+- 若要更改列的宽度，请将拖动列标题右侧的边界，直到列变成你想要的宽度。  
   
--   通过单击行左侧的箭头符号，可以扩展或折叠隔离舱或属性节点。  
+- 通过单击行左侧的箭头符号，可以扩展或折叠隔离舱或属性节点。  
   
--   类详细信息窗口提供了几个按钮，用于在当前类中创建新成员以及在类详细信息窗口网格中的成员隔离舱之间进行导航。 有关详细信息，请参阅类详细信息窗口按钮。  
+- 类详细信息窗口提供了几个按钮，用于在当前类中创建新成员以及在类详细信息窗口网格中的成员隔离舱之间进行导航。 有关详细信息，请参阅类详细信息窗口按钮。  
   
-##  <a name="KeyboardClassDesigner"></a>在类设计器中使用键盘  
+## <a name="KeyboardClassDesigner"></a>在类设计器中使用键盘  
  类图中支持下列键盘操作：  
   
-|键|上下文|描述|  
+|键|上下文|说明|  
 |---------|-------------|-----------------|  
 |箭头键|在类型形状内|对形状内容的树式导航（支持环绕形状）。 如果当前项可展开，则左键和右键会展开/折叠此项；如果当前项不可展开，则导航到其父级（请参阅视图导航以了解详细行为）。|  
 ||顶级形状|定义关系图上的形状。|  
@@ -94,10 +89,10 @@ ms.locfileid: "49247905"
 |Shift+Tab|全部上下文|导航至相同父项中的上一个子级（支持环绕）。|  
 |空格键|全部上下文|在当前元素上切换选择。|  
   
-##  <a name="KeyboardClassDetails"></a>在类详细信息窗口中使用键盘  
+## <a name="KeyboardClassDetails"></a>在类详细信息窗口中使用键盘  
   
 > [!NOTE]
->  选择下列键绑定以专用于模拟键入代码的体验。  
+> 选择下列键绑定以专用于模拟键入代码的体验。  
   
  使用下列键导航至类详细信息窗口：  
   
@@ -105,7 +100,7 @@ ms.locfileid: "49247905"
 |-|-|  
 |键|结果|  
 |,（逗号）|如果光标位于参数行中，请键入逗号可将光标移到下一个参数的名称字段。 如果光标位于方法的最后一个参数行中，则它会移动到 \<添加字段> 字段中，该字段可用于创建新参数。<br /><br /> 如果光标在类详细信息窗口中的其他位置，按原义输入一个逗号会在当前字段中添加一个逗号。|  
-|;（分号）<br /><br /> 或<br /><br /> )（右括号）|将光标移到类详细信息窗口网格中下一个成员行的名称字段。|  
+|;（分号）<br /><br /> or<br /><br /> )（右括号）|将光标移到类详细信息窗口网格中下一个成员行的名称字段。|  
 |Tab|将光标移到下一个字段，方法是先从左到右移动，再从上到下移动。 如果将光标移出已键入文本的字段，则在此操作未生成错误时，类详细信息窗口将处理并存储该文本。<br /><br /> 如果光标位于空字段（如 \<添加参数>）上，则按 Tab 将其移动到下一行的第一个字段。|  
 |\<空格>|将光标移到下一个字段，方法是先从左到右移动，再从上到下移动。 如果光标位于空字段上（如 \<添加参数>），它将移动到下一行的第一个字段。 请注意，将忽略紧跟着逗号键入的 \<空格>。<br /><br /> 如果光标在“摘要”字段中，键入一个空格就会添加一个空格字符。<br /><br /> 如果光标位于给定行的隐藏列中，键入一个空格将切换“隐藏”复选框的值。|  
 |CTRL+Tab|切换到另一个文档窗口。 例如，从类详细信息窗口切换到打开的代码文件。|  
@@ -116,6 +111,3 @@ ms.locfileid: "49247905"
   
 ## <a name="see-also"></a>请参阅  
  [创建和配置类型成员（类设计器）](../ide/creating-and-configuring-type-members-class-designer.md)
-
-
-

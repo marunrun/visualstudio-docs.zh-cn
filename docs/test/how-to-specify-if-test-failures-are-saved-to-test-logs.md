@@ -8,14 +8,13 @@ helpviewer_keywords:
 ms.assetid: 08a7fe98-a7f7-4b8d-94a3-ec82b65a2aaf
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: ae52695e980a46cf6385108ae0b4fb4e8b8d5b09
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: ef80a10954e9cf58db04e46f11934ffd86974bea
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53920266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786099"
 ---
 # <a name="how-to-specify-if-test-failures-are-saved-to-test-logs-using-the-load-test-editor"></a>如何：指定是否使用负载测试编辑器将测试失败保存到测试日志中
 
@@ -28,17 +27,17 @@ ms.locfileid: "53920266"
 
 ## <a name="to-specify-if-the-test-log-is-saved-when-a-test-fails-in-a-scenario"></a>指定当某个方案中测试未通过时是否保存测试日志
 
-1.  打开一个负载测试。
+1. 打开一个负载测试。
 
      “负载测试编辑器”随即显示。 其中显示负载测试树。
 
-2.  在负载测试树的“运行设置”文件夹中，选择要为其指定最大测试迭代数的运行设置节点。
+2. 在负载测试树的“运行设置”文件夹中，选择要为其指定最大测试迭代数的运行设置节点。
 
-3.  在“视图”菜单上选择“属性窗口”。
+3. 在“视图”菜单上选择“属性窗口”。
 
      该运行设置类别和属性将显示在“属性”窗口中。
 
-4.  在“测试未通过时保存日志”属性中，选择 True 或 False 以指定当方案中的测试未通过时是否希望保存测试日志。
+4. 在“测试未通过时保存日志”属性中，选择 True 或 False 以指定当方案中的测试未通过时是否希望保存测试日志。
 
      更改完此属性后，请选择“文件”菜单上的“保存”。
 

@@ -1,7 +1,6 @@
 ---
 title: CA1703:资源字符串应正确拼写
 ms.date: 03/28/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - ResourceStringsShouldBeSpelledCorrectly
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 693f4970-f512-40cb-ae3b-a0f3a5c6d6f1
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0458fa33413023fe9ae2b693a9bf75ffacda706c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 2643ff7cb8ce401462be7e5c1e52d5f985896f3a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53890584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62546266"
 ---
 # <a name="ca1703-resource-strings-should-be-spelled-correctly"></a>CA1703:资源字符串应正确拼写
 

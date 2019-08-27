@@ -1,21 +1,20 @@
 ---
 title: 浏览边界 | Microsoft IntelliTest 开发人员测试工具
 ms.date: 05/02/2017
-ms.prod: visual-studio-dev15
 ms.topic: reference
 helpviewer_keywords:
 - IntelliTest, Exploration bounds
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 718c8cfdf7b4d03ea0c1c3b5f9f4a120a5997a8e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ffa6908fe759f33ad1e82f2fd44975d6731cdf16
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53935458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62978544"
 ---
 # <a name="exploration-bounds"></a>浏览边界
 
@@ -30,17 +29,17 @@ public partial class FooTest {...}
 
 * **约束求解边界**
   * [MaxConstraintSolverTime](#maxconstraintsolvertime) - [约束求解器](input-generation.md#constraint-solver)必须发现将导致后跟一个新的其他执行路径的输入所需的秒数。
-  * [MaxConstraintSolverMemory](#maxconstraintsolvermemory) - [约束求解器](input-generation.md#constraint-solver)可能用于发现输入的大小 (MB)。<p />
+  * [MaxConstraintSolverMemory](#maxconstraintsolvermemory) - [约束求解器](input-generation.md#constraint-solver)可能用于发现输入的大小 (MB)。
 * **浏览路径边界**
   * [MaxBranches](#maxbranches) - 可能沿单个执行路径使用的最大分支数。
   * [MaxCalls](#maxcalls) - 可能在单个执行路径期间执行的最大调用数。
   * [MaxStack](#maxstack) - 单个执行路径期间任何时候的堆栈最大大小，以活动调用的帧数来衡量。
-  * [MaxConditions](#maxconditions) - 可能在单个执行路径期间检查的最大输入条件数。<p />
+  * [MaxConditions](#maxconditions) - 可能在单个执行路径期间检查的最大输入条件数。
 * **浏览边界**
   * [MaxRuns](#maxruns) - 浏览期间将尝试运行的最大次数。
   * [MaxRunsWithoutNewTests](#maxrunswithoutnewtests) - 不发出新测试情况下连续运行的最大数目。
   * [MaxRunsWithUniquePaths](#maxrunswithuniquepaths) - 浏览期间，将尝试使用唯一执行路径运行的最大次数。
-  * [MaxExceptions](#maxexceptions) - 在所有发现的执行路径组合中可能找到的最大异常数。<p />
+  * [MaxExceptions](#maxexceptions) - 在所有发现的执行路径组合中可能找到的最大异常数。
 * **测试套件代码生成设置**
   * [TestExcludePathBoundsExceeded](#testexcludepathboundsexceeded) - 为 true 时，将忽略超过任何路径边界的执行路径（[MaxCalls](#maxcalls)、[MaxBranches](#maxbranches)、[MaxStack](#maxstack)、[MaxConditions](#maxconditions)）。
   * [TestEmissionFilter](#testemissionfilter) - 指示 IntelliTest 应在哪些情况下发出测试。
@@ -106,7 +105,7 @@ for (int i=0; i<100; i++) { }
 
 ```csharp
 [PexMethod]
-void ParameterizedTest(int n) 
+void ParameterizedTest(int n)
 {
      for (int i=0; i<n; i++) { // conditions are "0<n", "1<n", ..., "!(n<n)"
           ...
@@ -144,10 +143,10 @@ MaxRuns 和 MaxRunsWithUniquePaths 这两个设置的关系如下所示：
 
 此浏览边界背后的动机是包含循环或递归的任何代码可能具有无限数目的执行路径，因此必须在[输入生成](input-generation.md)期间限制 IntelliTest。
 
-MaxRuns 和 MaxRunsWithUniquePaths 这两个设置的关系如下所示： 
+MaxRuns 和 MaxRunsWithUniquePaths 这两个设置的关系如下所示：
 
 * IntelliTest 将使用不同的测试输入调用参数化测试方法最多 MaxRuns 次。
-* 如果执行代码是确定的，IntelliTest 每次将使用不同的执行路径。 但在某些情况下，执行代码可能会使用不同的输入沿用之前使用过的执行路径。 
+* 如果执行代码是确定的，IntelliTest 每次将使用不同的执行路径。 但在某些情况下，执行代码可能会使用不同的输入沿用之前使用过的执行路径。
 * IntelliTest 计算找到的唯一执行路径数；此数目受 MaxRunsWithUniquePaths 选项限制。
 
 <a name="maxexceptions"></a>

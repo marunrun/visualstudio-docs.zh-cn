@@ -1,23 +1,22 @@
 ---
 title: 对 Visual C# 代码进行单元测试
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - uwp
 author: gewarren
-ms.openlocfilehash: 40aa7393b4b4bc03f978c2ab2fa27d660dd5f9db
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 359f2f8b078c197f12a6db09858ca7c9da5a621a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53891022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809623"
 ---
-# <a name="unit-testing-visual-c-code"></a>对 Visual C# 代码进行单元测试
+# <a name="unit-test-c-code"></a>单元测试 C# 代码
 
-本文介绍一种在 UWP 应用中创建面向 Visual C# 类的单元测试的方法。 Rooter 类通过实现计算给定数的平方根的估计的函数来演示限制计算理论的模糊内存。 Maths 应用程序之后可使用此函数为用户演示可通过 math 完成的有趣操作。
+本文介绍一种在 UWP 应用中创建面向 C# 类的单元测试的方法。 Rooter 类通过实现计算给定数的平方根的估计的函数来演示限制计算理论的模糊内存。 Maths 应用程序之后可使用此函数为用户演示可通过 math 完成的有趣操作。
 
 本文演示如何使用单元测试作为开发的第一步。 在此方法中，首先编写验证要测试的系统的特定行为的测试方法，然后编写通过测试的代码。 通过按照以下过程的顺序进行更改，您可调转此策略的顺序，即先编写要测试的代码，然后编写单元测试。
 
@@ -27,13 +26,13 @@ ms.locfileid: "53891022"
 
 1. 在“文件”菜单上，选择“新建” > “项目”。
 
-2. 在“新建项目”对话框中，依次展开“已安装” > “Visual C#”，然后选择“Windows 通用”。 然后，从项目模板列表中选择“空白应用”。
+2. 搜索并选择“空白应用(通用 Windows)”项目模板。
 
-3. 将项目命名为“`Maths`”，并确保已选中“创建解决方案的目录”。
+3. 将项目命名为 `Maths`。
 
 4. 在解决方案资源管理器中，选择解决方案名称，然后从快捷菜单中依次选择“添加”和“新建项目”。
 
-5. 在“新建项目”对话框中，依次展开“已安装”和“Visual C#”，然后选择“Windows 通用”。 然后从项目模板列表中选择“单元测试应用(通用 Windows)”。
+5. 搜索并选择“单元测试应用(通用 Windows)”项目模板。
 
 6. 在 Visual Studio 编辑器中打开 UnitTest1.cs。
 

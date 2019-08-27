@@ -1,7 +1,7 @@
 ---
 title: 选项，文本编辑器，JavaScript，格式
 ms.date: 10/29/2018
-ms.prod: visual-studio-dev15
+ms.technology: vs-javascript
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.JavaScript.Formatting.Spacing
@@ -11,25 +11,27 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.TypeScript.Formatting.General
 - VS.ToolsOptionsPages.Text_Editor.TypeScript.Formatting.New_Lines
 ms.assetid: 28a0aef1-9353-4d94-95a5-54b42e15c0dc
-author: gewarren
-ms.author: gewarren
-manager: douge
+author: mikejo5000
+ms.author: mikejo
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4719d529d3fc9da7367150cd211a598ebf52770a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 957dbd557a15c4c1df6028672f204a06936767c1
+ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53853276"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68605989"
 ---
-# <a name="options-text-editor-javascript-formatting"></a>选项，文本编辑器，JavaScript，格式
-使用“选项”对话框的“格式设置”页在代码编辑器中设置用于代码格式设置的选项。 若要访问此页，请在菜单栏上选择“工具”、“选项”，然后依次展开“文本编辑器”、“JavaScript”和“格式设置”。
+# <a name="options-dialog-box-text-editor--javascript--formatting"></a>“选项”对话框：“文本编辑器”\>“JavaScript”\>“格式设置”
+
+使用“选项”  对话框的“格式设置”  页在代码编辑器中设置用于代码格式设置的选项。 要访问此页，请先依次选择菜单栏中的“工具” > “选项”，再依次展开“文本编辑器” > “JavaScript/TypeScript” > “格式设置”      。
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
 ## <a name="automatic-formatting"></a>自动格式设置
- 这些选项可确定在“源”视图中设置格式的时间。
+
+这些选项可确定在“源”  视图中设置格式的时间。
 
 ### <a name="uielement-list"></a>UIElement 列表
 
@@ -42,7 +44,8 @@ ms.locfileid: "53853276"
 |**粘贴时设置格式**|选择此选项后，如果将代码粘贴到编辑器中，代码编辑器会重新设置该代码的格式。 编辑器使用当前定义的格式设置规则。 如未选择此选项，则编辑器使用粘贴代码的原始格式设置。|
 
 ## <a name="new-lines"></a>新行
- 这些选项可确定代码编辑器是否将函数和控制块的左大括号置于新行。
+
+这些选项可确定代码编辑器是否将函数和控制块的左大括号置于新行。
 
 ### <a name="uielement-list"></a>UIElement 列表
 
@@ -52,7 +55,8 @@ ms.locfileid: "53853276"
 |**将控制块的左大括号置于新行**|选择此选项后，代码编辑器会将与控制块（例如，`if` 和 `while` 控制块）关联的左大括号移动到新行。|
 
 ## <a name="spacing"></a>间距
- 这些选项可确定在“源”视图中插入空格的方式。
+
+这些选项可确定在“源”视图中插入空格的方式  。
 
 ### <a name="uielement-list"></a>UIElement 列表
 

@@ -1,18 +1,18 @@
 ---
-title: Windows 8 和 Windows Server 2012 应用程序上的性能工具 | Microsoft Docs
+title: Windows 8 和 Windows Server 2012 应用上的性能工具
 ms.date: 06/19/2017
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fe876d5244ad18d1d2635caa1717ca9eb0e29ba
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 69b817af15b782ebd1e281d51855d62b11e8f470
+ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53832289"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66262955"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Windows 8 和 Windows Server 2012 应用程序上的性能工具
 

@@ -2,21 +2,20 @@
 title: 工作流设计器-ClearCollection<T>活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - System.Activities.Statements.ClearCollection`1.UI
 ms.assetid: db0e5da2-7b5a-4f1a-864c-f3aeeeeb51a7
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ba2fbaf22f7a27d4984ab49e4e8f93897da668ac
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: cab7ea023524da7e28e2baa2d4e5018cd091c60d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53986526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62949989"
 ---
 # <a name="clearcollectiont-activity-designer"></a>ClearCollection\<T > 活动设计器
 
@@ -45,6 +44,6 @@ ms.locfileid: "53986526"
 ## <a name="see-also"></a>请参阅
 
 - [集合](../workflow-designer/collection-activity-designers.md)
-- [AddToCollection\<T >](../workflow-designer/addtocollection-t-activity-designer.md)
+- [AddToCollection\<T>](../workflow-designer/addtocollection-t-activity-designer.md)
 - [ExistsInCollection\<T>](../workflow-designer/existsincollection-t-activity-designer.md)
 - [RemoveFromCollection\<T>](../workflow-designer/removefromcollection-t-activity-designer.md)

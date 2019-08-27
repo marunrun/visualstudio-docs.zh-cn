@@ -1,14 +1,9 @@
 ---
 title: 特定于 Visual C++ 的 MSBuild 任务 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -20,19 +15,18 @@ ms.assetid: 05410f0c-7356-4692-bc00-20664421c9ff
 caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 1da9bdb5c181c9fd935987d629f08af1505f0501
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 452c3b408ab6471963124e61bc803e99eb6be80d
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49246139"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65686911"
 ---
 # <a name="msbuild-tasks-specific-to-visual-c"></a>特定于 Visual C++ 的 MSBuild 任务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
-任务提供在生成过程中运行的代码。 安装 Visual C++ 后，除了随 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 安装的任务外，以下任务也可用。 有关详细信息，请参阅 [MSBuild (Visual C++) 概述](http://msdn.microsoft.com/library/dd258f6f-ab51-48d9-b274-f7ba911d05ca)。  
+任务提供在生成过程中运行的代码。 安装 Visual C++ 后，除了随 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 安装的任务外，以下任务也可用。 有关详细信息，请参阅 [MSBuild (Visual C++) 概述](https://msdn.microsoft.com/library/dd258f6f-ab51-48d9-b274-f7ba911d05ca)。  
   
  除了特定于每个任务的参数外，每个任务还具有以下参数。  
   
@@ -43,7 +37,7 @@ ms.locfileid: "49246139"
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|描述|  
 |-----------|-----------------|  
 |[BscMake 任务](../msbuild/bscmake-task.md)|包装 Microsoft 浏览信息维护实用工具 (bscmake.exe)。|  
 |[CL 任务](../msbuild/cl-task.md)|包装 Visual C++ 编译器工具 (cl.exe)。|  
@@ -60,6 +54,3 @@ ms.locfileid: "49246139"
 |[MSBuild 参考](../msbuild/msbuild-reference.md)|介绍 MSBuild 系统的元素。|  
 |[任务](../msbuild/msbuild-tasks.md)|介绍任务，这些任务是代码单元，可以组合起来以产生生成。|  
 |[任务写入](../msbuild/task-writing.md)|描述如何创建任务。|
-
-
-

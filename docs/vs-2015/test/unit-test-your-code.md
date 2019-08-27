@@ -1,14 +1,9 @@
 ---
 title: 单元测试代码 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-test
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio, unit tests
 - unit tests, verifying code with
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: c191de3e-3f3b-471e-b828-29ec24e80e2c
 caps.latest.revision: 64
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: f79fb0ac4945253f1a10ce98a7e1ed17eaa6de63
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 1e6f0dd19c9d5d3ea1ee28a267aa969aad638948
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49950415"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65695245"
 ---
 # <a name="unit-test-your-code"></a>单元测试代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -48,23 +43,23 @@ ms.locfileid: "49950415"
   
 |任务|相关主题|  
 |-----------|-----------------------|  
-|**快速入门和演练：** 借助以下主题从代码示例中学习 Visual Studio 中的单元测试。|-   [演练：创建并运行托管代码的单元测试](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)<br />-   [快速入门：通过测试资源管理器进行测试驱动开发](../test/quick-start-test-driven-development-with-test-explorer.md)<br />-   [向现有的 C++ 应用程序添加单元测试](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)<br />-   [使用测试资源管理器对本机代码进行单元测试](http://msdn.microsoft.com/en-us/8a09d6d8-3613-49d8-9ffe-11375ac4736c)|  
-|**使用“测试资源管理器”进行单元测试：** 了解“测试资源管理器”如何帮助创建成效和效率更高的单元测试。|-   [单元测试基础](../test/unit-test-basics.md)<br />-   [创建单元测试项目](../test/create-a-unit-test-project.md)<br />-   [使用测试资源管理器运行单元测试](../test/run-unit-tests-with-test-explorer.md)<br />-   [安装第三方单元测试框架](../test/install-third-party-unit-test-frameworks.md)<br />-   [从 Visual Studio 2010 升级单元测试](http://msdn.microsoft.com/en-us/9bb75856-f68a-4de2-a084-b08a947a1172)|  
+|**快速入门和演练：** 借助以下主题从代码示例中学习 Visual Studio 中的单元测试。|-   [演练：创建并运行托管代码的单元测试](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)<br />-   [快速入门：通过测试资源管理器进行测试驱动开发](../test/quick-start-test-driven-development-with-test-explorer.md)<br />-   [向现有的 C++ 应用程序添加单元测试](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)<br />-   [使用测试资源管理器对本机代码进行单元测试](https://msdn.microsoft.com/8a09d6d8-3613-49d8-9ffe-11375ac4736c)|  
+|**使用测试资源管理器进行单元测试：** 了解“测试资源管理器”如何帮助创建成效和效率更高的单元测试。|-   [单元测试基础](../test/unit-test-basics.md)<br />-   [创建单元测试项目](../test/create-a-unit-test-project.md)<br />-   [使用测试资源管理器运行单元测试](../test/run-unit-tests-with-test-explorer.md)<br />-   [安装第三方单元测试框架](../test/install-third-party-unit-test-frameworks.md)<br />-   [从 Visual Studio 2010 升级单元测试](https://msdn.microsoft.com/9bb75856-f68a-4de2-a084-b08a947a1172)|  
 |**对托管代码进行单元测试：**|-   [用 Microsoft 适用于托管代码的单元测试框架编写 .NET Framework 的单元测试](../test/writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md)|  
 |**对 C++ 代码进行单元测试**|-   [用适用于 C++ 的 Microsoft 单元测试框架编写 C/C++ 单元测试](../test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp.md)|  
 |**隔离单元测试**|-   [用 Microsoft Fakes 隔离测试代码](../test/isolating-code-under-test-with-microsoft-fakes.md)|  
-|**使用代码覆盖率确定通过单元测试进行测试的项目代码的比例：** 了解 [!INCLUDE[vsprvsts](../includes/vsprvsts-md.md)] 测试工具的代码覆盖率功能。|-   [使用代码覆盖率确定所测试的代码量](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)|  
-|**通过对单元测试使用负载测试来执行压力和性能分析**：可以创建负载测试并向其添加单元测试，以帮助隔离应用程序中的性能和压力问题。 **注意：** 创建和使用负载测试需要 Visual Studio Enterprise。|-   [创建和编辑负载测试](http://msdn.microsoft.com/en-us/e2985d15-60a7-4177-93b4-f986c2936337)<br />-   [如何：将 Web 性能测试和单元测试添加到负载测试方案](http://msdn.microsoft.com/en-us/03cc073e-9bdf-4530-ae46-504a51884594)<br />-   [如何：从负载测试方案中删除 Web 测试和单元测试](http://msdn.microsoft.com/en-us/3d6128d2-82b0-42fc-bda2-23a8aa03be07)|  
-|**设置和强制实施质量要求**：可以创建质量要求以在签入代码之前强制运行测试，从而帮助确保代码质量。|-   [设置和强制实施质量要求](http://msdn.microsoft.com/library/bdc5666e-6cf0-45b2-a0a1-133c3f61e852)|  
-|**扩展单元测试类型：** 可以向可能不在单元测试框架内的测试添加功能。 例如，可以添加一个指定某个测试是否应以普通用户身份运行的测试属性。 也可以扩展框架，将行特性添加到某个方法并在测试内使用该行中的数据。|有关如何扩展单元测试框架的示例代码，请参见以下 [Microsoft 网站](http://go.microsoft.com/fwlink/?LinkId=185591)。|  
+|**使用代码覆盖率确定通过单元测试进行测试的项目代码的比例：** 了解有关代码覆盖率功能[!INCLUDE[vsprvsts](../includes/vsprvsts-md.md)]测试工具。|-   [使用代码覆盖率确定所测试的代码量](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)|  
+|**通过单元测试使用负载测试来执行压力和性能分析：** 可以创建负载测试并向其添加单元测试，以帮助隔离应用程序中的性能和压力问题。 **注意：** 创建和使用负载测试需要 Visual Studio Enterprise。|-   [创建和编辑负载测试](https://msdn.microsoft.com/e2985d15-60a7-4177-93b4-f986c2936337)<br />-   [如何：将 Web 性能测试和单元测试添加到负载测试方案](https://msdn.microsoft.com/03cc073e-9bdf-4530-ae46-504a51884594)<br />-   [如何：从负载测试方案中删除 Web 测试和单元测试](https://msdn.microsoft.com/3d6128d2-82b0-42fc-bda2-23a8aa03be07)|  
+|**设置并强制实施质量要求：** 您可以创建质量要求以强制运行测试之后，代码签入，以帮助确保代码质量。|-   [设置和强制实施质量要求](https://msdn.microsoft.com/library/bdc5666e-6cf0-45b2-a0a1-133c3f61e852)|  
+|**扩展单元测试类型：** 可以将功能添加到你可能不在单元测试框架的测试。 例如，可以添加一个指定某个测试是否应以普通用户身份运行的测试属性。 也可以扩展框架，将行特性添加到某个方法并在测试内使用该行中的数据。|有关如何扩展单元测试框架的示例代码，请参见以下 [Microsoft 网站](http://go.microsoft.com/fwlink/?LinkId=185591)。|  
 |**设置测试选项：** 例如，可以指定测试结果的存储位置。|[使用 .runsettings 文件配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)|  
   
 ## <a name="related-tasks"></a>相关任务  
- [在 Microsoft 测试管理器中查看测试结果](http://msdn.microsoft.com/en-us/9fb3e429-78df-4fe2-89ed-0ad1db0738f4)  
+ [在 Microsoft 测试管理器中查看测试结果](https://msdn.microsoft.com/9fb3e429-78df-4fe2-89ed-0ad1db0738f4)  
   
  介绍测试结果及其处理方法，包括如何查看、保存和删除它们。  
   
- [使用 Microsoft Visual Studio 运行系统测试](http://msdn.microsoft.com/library/19fae5c4-5798-4c4c-b531-3e8f901b1130)  
+ [使用 Microsoft Visual Studio 运行系统测试](https://msdn.microsoft.com/library/19fae5c4-5798-4c4c-b531-3e8f901b1130)  
   
  提供指向关于使用 Visual Studio 而不是使用 [!INCLUDE[TCMext](../includes/tcmext-md.md)]来运行自动测试的信息的链接。  
   
@@ -78,20 +73,17 @@ ms.locfileid: "49950415"
 ## <a name="external-resources"></a>外部资源  
   
 ### <a name="videos"></a>视频  
- [第 9 频道：对使用 XAML 编写的 Windows 应用商店应用进行单元测试](http://go.microsoft.com/fwlink/?LinkId=226285)  
+ [第 9 频道：使用 XAML 生成 Windows 应用商店应用进行单元测试](http://go.microsoft.com/fwlink/?LinkId=226285)  
   
 ### <a name="forums"></a>论坛  
  [Visual Studio 单元测试](http://go.microsoft.com/fwlink/?LinkId=224477)  
   
 ### <a name="guidance"></a>指导  
- [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [使用 Visual Studio 2012 – 第 2 章对连续交付进行测试：单元测试：测试内部](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
 ### <a name="reference"></a>参考  
  [Content Index for Unit Tests](http://go.microsoft.com/fwlink/?LinkID=254719)（单元测试的内容索引）  
   
 ## <a name="see-also"></a>请参阅  
- [提高代码质量](http://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)   
- [测试应用程序](http://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac)
-
-
-
+ [提高代码质量](https://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)   
+ [测试应用程序](https://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac)

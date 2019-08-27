@@ -1,14 +1,9 @@
 ---
 title: 消息视图 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.externaltools.spyplus.messagesview
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 14c2a786-c23a-4b2d-acad-8c32a856c70d
 caps.latest.revision: 9
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 3f896650d7979365346d493c5aac06340007cbb7
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 3765b9804224549c98b57cd1b0a44f0330d278b5
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51784372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68157489"
 ---
 # <a name="messages-view"></a>消息视图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,21 +34,21 @@ Spy++ 消息视图
   
 #### <a name="to-open-a-messages-view-for-a-window-process-or-thread"></a>若要打开的窗口、 进程或线程的消息视图  
   
-1.  将焦点移至[Windows 视图](../debugger/windows-view.md)，[进程视图](../debugger/processes-view.md)，或[线程视图](../debugger/threads-view.md)窗口。  
+1. 将焦点移至[Windows 视图](../debugger/windows-view.md)，[进程视图](../debugger/processes-view.md)，或[线程视图](../debugger/threads-view.md)窗口。  
   
-2.  查找你想要检查，其消息的项的节点并选择它。  
+2. 查找你想要检查，其消息的项的节点并选择它。  
   
-3.  从**Spy**菜单中，选择**日志消息**。  
+3. 从**Spy**菜单中，选择**日志消息**。  
   
      [消息选项对话框](../debugger/message-options-dialog-box.md)随即打开。  
   
-4.  选择你想要显示的消息的选项。  
+4. 选择你想要显示的消息的选项。  
   
-5.  按**确定**开始日志记录消息。  
+5. 按**确定**开始日志记录消息。  
   
      一个视图窗口将打开，消息的以及**消息**菜单添加到 Spy + + 工具栏。 根据所选的选项，消息开始流式传送到活动的消息视图窗口。  
   
-6.  在必须足够多的消息，请选择**停止日志记录**从**消息**菜单。  
+6. 在必须足够多的消息，请选择**停止日志记录**从**消息**菜单。  
   
 ## <a name="in-this-section"></a>本节内容  
  [控制消息视图](../debugger/how-to-control-messages-view.md)  
@@ -76,7 +71,7 @@ Spy++ 消息视图
  介绍 windows、 消息、 进程和线程的 Spy + + 树的视图。  
   
  [使用 Spy++](../debugger/using-spy-increment.md)  
- 引入了 Spy + + 工具，并说明如何使用它。  
+ 介绍 Spy + + 工具，并说明如何使用它。  
   
  [“消息选项”对话框](../debugger/message-options-dialog-box.md)  
  用于选择要在活动的消息视图中列出的消息。  
@@ -88,7 +83,4 @@ Spy++ 消息视图
  用于显示在消息视图中选择一条消息的属性。  
   
  [Spy++ 参考](../debugger/spy-increment-reference.md)  
- 包含描述每个 Spy + + 菜单和对话框中的各个部分。
-
-
-
+ 包含描述每个 Spy + + 菜单和对话框的章节。

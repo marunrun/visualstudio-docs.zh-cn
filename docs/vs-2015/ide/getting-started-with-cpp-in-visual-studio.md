@@ -1,24 +1,20 @@
 ---
 title: C++ 入门
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 99c73344-86ba-4b08-9e15-f6111cc04185
 caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: b0e79d65c590973f99d36f7fd81a98e3bae55a50
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: b80faa2ceb48cfec933d2287b70d304564a8106a
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53879246"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65704446"
 ---
 # <a name="getting-started-with-c-in-visual-studio"></a>Visual Studio 中的 C++ 入门
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,7 +33,7 @@ ms.locfileid: "53879246"
 
  [生成应用程序的发布版本](../ide/getting-started-with-cpp-in-visual-studio.md#BKMK_BuildRelease)
 
-##  <a name="BKMK_Configure"></a> 登录到 Visual Studio
+## <a name="BKMK_Configure"></a> 登录到 Visual Studio
  首次启动 Visual Studio 时，有机会使用 Live 或 Outlook 之类的 Microsoft 帐户登录。 登录允许你的设置在所有设备上同步。 有关详细信息，请参阅 [Signing in to Visual Studio](../ide/signing-in-to-visual-studio.md)。
 
  图 1：Visual Studio IDE
@@ -46,7 +42,7 @@ ms.locfileid: "53879246"
 
  在你打开 Visual Studio 后，可查看 IDE 的三个基本部分：工具窗口、菜单和工具栏，以及主窗口空间。 工具窗口停靠在应用程序窗口的左侧和右侧，其顶部有“快速启动” 、菜单栏和标准工具栏。 应用程序窗口的中心包含“起始页” 。 当你打开解决方案或项目时，将在这里显示编辑器和设计器。 开发应用程序时，大部分时间都将用在此中心区域。
 
-##  <a name="BKMK_CreateApp"></a> 创建简单的应用程序
+## <a name="BKMK_CreateApp"></a> 创建简单的应用程序
  在 Visual Studio 中创建应用程序时，应首先创建项目和解决方案。 在此示例中，你将创建一个 Windows 控制台应用程序。
 
 #### <a name="to-create-a-console-app"></a>要创建控制台应用程序
@@ -69,12 +65,12 @@ ms.locfileid: "53879246"
 
    ![解决方案资源管理器中解决方案的文件](../ide/media/c-ide-solutioncontents.png "C++IDE_SolutionContents")
 
-##  <a name="BKMK_AddCode"></a>将代码添加到应用程序
+## <a name="BKMK_AddCode"></a>将代码添加到应用程序
  接下来，你将添加代码以在控制台窗口中显示单词“Hello”。
 
 #### <a name="to-display-hello-in-the-console-window"></a>要在控制台窗口中显示“Hello”
 
-1.  在 GreetingsConsoleApp.cpp 文件中，在行 `return 0;` 之前输入一个空行，然后输入以下代码：
+1. 在 GreetingsConsoleApp.cpp 文件中，在行 `return 0;` 之前输入一个空行，然后输入以下代码：
 
     ```
     cout << "Hello\n";
@@ -86,9 +82,9 @@ ms.locfileid: "53879246"
 
      错误消息也将出现在“错误列表”  窗口中。 你可以通过在菜单栏中选择“视图” 、 “错误列表”显示窗口。
 
-     [cout](http://msdn.microsoft.com/library/d87db6c3-e4e1-4d09-9ec5-458f55018257) 包含在 \<iostream\> 头文件中。
+     [cout](https://msdn.microsoft.com/library/d87db6c3-e4e1-4d09-9ec5-458f55018257) 包含在 \<iostream\> 头文件中。
 
-2.  若要包括 iostream 标头，请在 `#include "stdafx.h"`后面输入以下代码：
+2. 若要包括 iostream 标头，请在 `#include "stdafx.h"`后面输入以下代码：
 
     ```
     #include \<iostream\>
@@ -99,16 +95,16 @@ ms.locfileid: "53879246"
 
      修复该错误后， `cout` 下面的红色波浪线将消失。
 
-3.  保存对文件所做的更改。
+3. 保存对文件所做的更改。
 
      ![修复计数错误的代码](../ide/media/c-ide-coutfix.png "C++IDE_CoutFix")
 
-##  <a name="BKMK_DebugTest"></a>调试并测试应用程序
+## <a name="BKMK_DebugTest"></a>调试并测试应用程序
  你可以调试 GreetingsConsoleApp 以查看控制台窗口中是否显示单词“Hello”。
 
 #### <a name="to-debug-the-application"></a>若要调试该应用程序
 
--   启动调试器。
+- 启动调试器。
 
      ![“调试”菜单上的“启动调试”命令](../ide/media/exploreide-startdebugging.png "ExploreIDE-StartDebugging")
 
@@ -132,7 +128,7 @@ ms.locfileid: "53879246"
 
    有关详细信息，请参阅[控制台项目](../debugger/debugging-preparation-console-projects.md)。
 
-##  <a name="BKMK_BuildRelease"></a>生成应用程序的发布版本
+## <a name="BKMK_BuildRelease"></a>生成应用程序的发布版本
  确认一切就绪后，可以准备该应用程序的发布版本。
 
 #### <a name="to-clean-the-solution-files-and-build-a-release-version"></a>要清理解决方案文件并生成发布版本
@@ -152,4 +148,4 @@ ms.locfileid: "53879246"
    祝贺你完成本演练！ 如要了解更多示例，请参阅 [Visual Studio Samples](../ide/visual-studio-samples.md)。
 
 ## <a name="see-also"></a>请参阅
- [演练：创建简单应用程序](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)[高效工作提示](../ide/productivity-tips-for-visual-studio.md) [Visual Studio 示例](../ide/visual-studio-samples.md)[开始使用 Visual Studio 进行开发](../ide/get-started-developing-with-visual-studio.md)
+ [演练：创建简单应用程序](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md) [高效工作提示](../ide/productivity-tips-for-visual-studio.md) [Visual Studio 示例](../ide/visual-studio-samples.md) [开始使用 Visual Studio 进行开发](../ide/get-started-developing-with-visual-studio.md)

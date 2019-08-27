@@ -7,16 +7,15 @@ helpviewer_keywords:
 - Domain-Specific Language, validation
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: f228d1cf68357711d106b9399477badce350f558
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MT
+ms.openlocfilehash: fcc35f74625b17762656451e598d131dfe85417e
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53943730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63385849"
 ---
 # <a name="validation-in-a-domain-specific-language"></a>域特定语言中的验证
 作为域特定语言 (DSL) 的作者，你可以定义验证约束，以验证由用户创建的模型是否有意义。 例如，如果你的 DSL 允许用户绘制人员及其祖先的家族树，你可以编写一个约束，用于确保孩子的出生日期在其父母之后。
@@ -26,7 +25,7 @@ ms.locfileid: "53943730"
  验证是特别重要，如果你正在编写文本模板或其他工具可处理用户的模型。 验证可确保模型满足由这些工具假定的前提条件。
 
 > [!WARNING]
->  还可以允许验证约束以及扩展菜单命令和笔势处理程序一起定义在对 DSL 的单独扩展中。 除了 DSL，用户还可以选择安装这些扩展。 有关详细信息，请参阅[通过使用 MEF 扩展 DSL](../modeling/extend-your-dsl-by-using-mef.md)。
+> 还可以允许验证约束以及扩展菜单命令和笔势处理程序一起定义在对 DSL 的单独扩展中。 除了 DSL，用户还可以选择安装这些扩展。 有关详细信息，请参阅[通过使用 MEF 扩展 DSL](../modeling/extend-your-dsl-by-using-mef.md)。
 
 ## <a name="running-validation"></a>运行验证
  当用户编辑模型时（即域特定语言的实例），以下操作可运行验证：
@@ -49,19 +48,19 @@ ms.locfileid: "53943730"
  每个验证方法都将报告它找到的所有错误。
 
 > [!NOTE]
->  验证方法报告错误，但不更改模型。 如果你想要调整或阻止某些更改，请参阅[验证的替代方法](#alternatives)。
+> 验证方法报告错误，但不更改模型。 如果你想要调整或阻止某些更改，请参阅[验证的替代方法](#alternatives)。
 
 #### <a name="to-define-a-validation-constraint"></a>定义验证约束
 
 1. 中启用验证**编辑器 \ 验证**节点：
 
-   1.  打开**Dsl\DslDefinition.dsl**。
+   1. 打开**Dsl\DslDefinition.dsl**。
 
-   2.  在 DSL 资源管理器，展开**编辑器**节点，然后选择**验证**。
+   2. 在 DSL 资源管理器，展开**编辑器**节点，然后选择**验证**。
 
-   3.  在属性窗口中设置**使用**属性设置为`true`。 设置所有这些属性非常方便。
+   3. 在属性窗口中设置**使用**属性设置为`true`。 设置所有这些属性非常方便。
 
-   4.  单击**转换所有模板**中**解决方案资源管理器**工具栏。
+   4. 单击**转换所有模板**中**解决方案资源管理器**工具栏。
 
 2. 为一个或多个域类或域关系编写分部类定义。 中的新代码文件中编写这些定义**Dsl**项目。
 
@@ -71,7 +70,7 @@ ms.locfileid: "53943730"
    [ValidationState(ValidationState.Enabled)]
    ```
 
-   -   默认情况下，此特性还将针对派生类启用验证。 如果想要针对特定派生类禁用验证，则可以使用 `ValidationState.Disabled`。
+   - 默认情况下，此特性还将针对派生类启用验证。 如果想要针对特定派生类禁用验证，则可以使用 `ValidationState.Disabled`。
 
 4. 将验证方法添加到类。 每个验证方法都可以具有任何名称，但要具有类型 <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationContext> 的一个参数。
 
@@ -212,7 +211,7 @@ partial class MyLanguageCommandSet
 ...
 ```
 
- 有关更多信息，请参见[如何：将命令添加到快捷菜单](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)。
+ 有关详细信息，请参阅[如何：将命令添加到快捷菜单](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)。
 
  还可以创建单独的验证控制器，并自行管理错误。 例如：
 
@@ -311,7 +310,7 @@ private void TestForCircularLinks(ValidationContext context)
 ```
 
 > [!NOTE]
->  你可以为方法添加带有任意数目的 `[ValidationMethod()]` 特性的前缀。 可以将方法同时添加到自定义类别和标准类别。
+> 你可以为方法添加带有任意数目的 `[ValidationMethod()]` 特性的前缀。 可以将方法同时添加到自定义类别和标准类别。
 
  若要调用自定义验证，请执行以下操作：
 

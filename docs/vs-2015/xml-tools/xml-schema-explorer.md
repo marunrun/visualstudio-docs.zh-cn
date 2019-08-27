@@ -1,30 +1,24 @@
 ---
 title: XML 架构资源管理器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-xml-tools
+ms.topic: conceptual
 ms.assetid: 2fc39e98-b194-456b-a452-cfafb0a52d66
 caps.latest.revision: 11
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 32116de7bb88fe937980b02e1789830a27ca36b1
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 550c43532db89132ec4e1b123005ad02ef547414
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49845870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68198047"
 ---
 # <a name="xml-schema-explorer"></a>XML 架构资源管理器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 XML 架构资源管理器与 Microsoft Visual Studio 和 XML 编辑器相集成，从而使您可以使用 XML 架构定义语言 (XSD) 架构。 当打开 XML 架构文件时**架构集**节点将出现在 XML 架构资源管理器。 目标文件的所有包含架构、导入架构或重新定义的架构，以及通过 `include` 或 `import` 语句引用的任何文件，也出现在 XML 架构资源管理器中。  
   
  使用 XML 架构资源管理器，您可以执行下列操作：  
@@ -73,11 +67,11 @@ XML 架构资源管理器与 Microsoft Visual Studio 和 XML 编辑器相集成�
   
  若要激活的节点，双击它，或按**Enter**时选择的节点。  
   
--   激活某节点时会打开在其中定义该节点的文件（如果文件尚未打开）并在文件中选择该节点。  
+- 激活某节点时会打开在其中定义该节点的文件（如果文件尚未打开）并在文件中选择该节点。  
   
--   激活文件节点时会打开选定文件（如果该文件尚未打开）并突出显示 `<schema>` 节点。  
+- 激活文件节点时会打开选定文件（如果该文件尚未打开）并突出显示 `<schema>` 节点。  
   
--   激活架构集或命名空间节点不会执行任何操作。  
+- 激活架构集或命名空间节点不会执行任何操作。  
   
 ## <a name="draging-and-dropping-nodes"></a>拖放节点  
  可以将全局节点、文件节点和命名空间节点拖放到 XSD 设计器视图上。 如果当前视图是[起始视图](../xml-tools/start-view.md)，拖动到该视图的节点将会打开[关系图视图](../xml-tools/graph-view.md)。 如果当前视图是[内容模型视图](../xml-tools/content-model-view.md)或图形视图，视图将不会在你放到它上面的节点。  
@@ -88,20 +82,13 @@ XML 架构资源管理器与 Microsoft Visual Studio 和 XML 编辑器相集成�
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [搜索架构集](../xml-tools/searching-the-schema-set.md)  
+- [搜索架构集](../xml-tools/searching-the-schema-set.md)  
   
--   [排序、筛选和分组](../xml-tools/sorting-filtering-and-grouping-xml-schema-explorer.md)  
+- [排序、筛选和分组](../xml-tools/sorting-filtering-and-grouping-xml-schema-explorer.md)  
   
--   [上下文菜单](../xml-tools/context-menus-xml-schema-explorer.md)  
+- [上下文菜单](../xml-tools/context-menus-xml-schema-explorer.md)  
   
--   [XML 文本与 XML 架构资源管理器的集成](../xml-tools/integration-of-xml-literals-with-xml-schema-explorer.md)  
+- [XML 文本与 XML 架构资源管理器的集成](../xml-tools/integration-of-xml-literals-with-xml-schema-explorer.md)  
   
 ## <a name="see-also"></a>请参阅  
- [如何：从 XML 架构资源管理器向工作区添加节点](../xml-tools/how-to-add-nodes-to-the-workspace-from-the-xml-schema-explorer.md)
-
-
-
-
-
-
-
+ [如何：从 XML 架构资源管理器将节点添加到工作区](../xml-tools/how-to-add-nodes-to-the-workspace-from-the-xml-schema-explorer.md)

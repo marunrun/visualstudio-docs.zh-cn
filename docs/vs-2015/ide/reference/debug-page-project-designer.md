@@ -1,14 +1,9 @@
 ---
 title: “项目设计器”->“调试”页 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - vb.ProjectPropertiesDebug
 helpviewer_keywords:
@@ -18,20 +13,19 @@ ms.assetid: ef11eae9-df96-4e20-aabd-2678ba317140
 caps.latest.revision: 37
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: f16abf5fbf21678187a22efc9a368df7785057ab
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 039b6722ca064c64c0e0b7f7757070852e908395
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49271357"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65703919"
 ---
 # <a name="debug-page-project-designer"></a>“项目设计器”->“调试”页
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 > [!WARNING]
->  本主题不适用于 Windows 应用商店应用。 请参阅 Windows 开发人员中心的[启动调试会话 (VB, C#, C++ and XAML)](../../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)。  
+> 本主题不适用于 Windows 应用商店应用。 请参阅 Windows 开发人员中心的[启动调试会话 (VB, C#, C++ and XAML)](../../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)。  
   
  使用项目设计器的“调试”页为 Visual Basic 或 C# 项目中的调试行为设置属性。  
   
@@ -41,10 +35,10 @@ ms.locfileid: "49271357"
  通过以下选项，可选择要显示或修改的配置和平台。  
   
  **配置**  
- 指定要显示或修改的配置设置。 设置可以为“调试”（默认）、“发布”或“所有配置”。 有关详细信息，请参阅[调试和发布项目配置](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)。  
+ 指定要显示或修改的配置设置。 设置可以为“调试”（默认）、“发布”或“所有配置”。 有关详细信息，请参阅[调试和发布项目配置](https://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e)。  
   
  **平台**  
- 指定要显示或修改的平台设置。 这些选择包括“任何 CPU”（默认）、“x64”和“x86”。 有关详细信息，请参阅[调试和发布项目配置](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)。  
+ 指定要显示或修改的平台设置。 这些选择包括“任何 CPU”（默认）、“x64”和“x86”。 有关详细信息，请参阅[调试和发布项目配置](https://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e)。  
   
 ## <a name="start-action"></a>启动操作  
  “启动操作”指示应用程序调试时要启动的项：项目、自定义程序、URL 或不启动任何项。 默认情况下，此选项设置为“启动项目”。 “调试”页上的“启动操作”设置确定 `StartAction` 属性的值。  
@@ -84,9 +78,6 @@ ms.locfileid: "49271357"
  [在 Visual Studio 中进行调试](../../debugger/debugging-in-visual-studio.md)   
  [C# 调试配置的项目设置](../../debugger/project-settings-for-csharp-debug-configurations.md)   
  [Visual Basic 调试配置的项目设置](../../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
- [管理调试属性](http://msdn.microsoft.com/en-us/92474d16-e7fe-4fac-9287-6bd6b3a7eb68)   
- [如何：使用受限权限对 ClickOnce 应用程序进行调试](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
+ [管理调试属性](https://msdn.microsoft.com/92474d16-e7fe-4fac-9287-6bd6b3a7eb68)   
+ [如何：调试具有受限权限的 ClickOnce 应用程序](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
  [如何：创建和编辑配置](../../ide/how-to-create-and-edit-configurations.md)
-
-
-

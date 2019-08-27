@@ -1,11 +1,8 @@
 ---
 title: 键盘快捷方式在工作流设计器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 f1_keywords:
 - WFDKeyboardShortcuts.UI
@@ -13,13 +10,13 @@ ms.assetid: 9be75438-a4a3-4781-94e5-45b7ec082358
 caps.latest.revision: 4
 author: gewarren
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: 409a39dc889970ee7ad0eff3354fa43de15b7dbe
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: b1a03463d292fa1d4d980c62daa74b291d6a8cb1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49895335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62951952"
 ---
 # <a name="keyboard-shortcuts-in-the-workflow-designer"></a>工作流设计器中的键盘快捷键
 可通过键盘访问 [!INCLUDE[wfd1](../includes/wfd1-md.md)] 的所有核心功能。  
@@ -32,7 +29,7 @@ ms.locfileid: "49895335"
   
 |快捷键|用途|  
 |--------------|-------------|  
-|Ctrl+E，A|显示或隐藏参数设计器。|  
+|Ctrl+E，A|显示或隐藏自变量设计器。|  
 |Ctrl+E，C|就地折叠所选择的活动。|  
 |Ctrl+E，E|就地展开所选择的活动。|  
 |Ctrl+E，F|连接流程图中所选择的活动。|  
@@ -57,13 +54,13 @@ ms.locfileid: "49895335"
   
 - 连接活动：  
   
-  1.  通过按 Tab 键定位到活动来选择源活动。  
+  1. 通过按 Tab 键定位到活动来选择源活动。  
   
-  2.  根据需要按 Ctrl+E，M 多次将键盘焦点移至目标活动。  
+  2. 根据需要按 Ctrl+E，M 多次将键盘焦点移至目标活动。  
   
-  3.  按 Ctrl+E，S 将目标活动添加到选择范围。  
+  3. 按 Ctrl+E，S 将目标活动添加到选择范围。  
   
-  4.  按 Ctrl+E，F 添加从源到目标的连接器。  
+  4. 按 Ctrl+E，F 添加从源到目标的连接器。  
   
   有关通过键盘连接活动的说明：  
   
@@ -76,18 +73,18 @@ ms.locfileid: "49895335"
 ### <a name="expression-editing"></a>表达式编辑  
  默认情况下，用于 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 文本编辑的默认键盘快捷键适用于 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 中的表达式编辑器，但具有以下限制：  
   
--   重新映射以下命令的键盘快捷键无效。 编辑表达式时，只能使用默认的键盘快捷键访问这些命令。  
+- 重新映射以下命令的键盘快捷键无效。 编辑表达式时，只能使用默认的键盘快捷键访问这些命令。  
   
-    1.  剪切  
+    1. 剪切  
   
-    2.  复制  
+    2. 复制  
   
-    3.  粘贴  
+    3. 粘贴  
   
-    4.  全选  
+    4. 全选  
   
-    5.  撤消  
+    5. 撤消  
   
-    6.  重做  
+    6. 重做  
   
--   若要重新映射 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 的 [!INCLUDE[vs2010](../includes/vs2010-md.md)] 中表达式编辑命令的键盘快捷键，请在 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 作用域中编辑这些快捷键。 在文本编辑器作用域所进行的更改不会自动应用于 [!INCLUDE[wfd2](../includes/wfd2-md.md)]。 如果您希望在这两个位置都重新映射快捷键，则必须应用两次更改（每个作用域应用一次）。
+- 若要重新映射 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 的 [!INCLUDE[vs2010](../includes/vs2010-md.md)] 中表达式编辑命令的键盘快捷键，请在 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 作用域中编辑这些快捷键。 在文本编辑器作用域所进行的更改不会自动应用于 [!INCLUDE[wfd2](../includes/wfd2-md.md)]。 如果您希望在这两个位置都重新映射快捷键，则必须应用两次更改（每个作用域应用一次）。

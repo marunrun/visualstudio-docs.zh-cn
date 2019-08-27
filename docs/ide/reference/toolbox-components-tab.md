@@ -1,7 +1,6 @@
 ---
 title: 工具箱，“组件”选项卡
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - VS.CHOOSEITEMS.FrameworkComponents
@@ -11,21 +10,21 @@ helpviewer_keywords:
 - Toolbox, Components tab
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3324063e80bdb33ec928135ef8760c5e15c7a8c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 17f040b9bb64c2192bc6b376f5d0397ee5438071
+ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53967065"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66747755"
 ---
 # <a name="toolbox-components-tab"></a>工具箱，“组件”选项卡
 
-显示可以添加到适用于 Windows 窗体的 Visual Basic 和 C# 设计器的组件。 除 Visual Studio 附带的 .NET Framework 组件（如 <xref:System.Messaging.MessageQueue> 和 <xref:System.Diagnostics.EventLog> 组件）外，还可向此选项卡添加自己的组件或第三方组件。
+显示可以添加到适用于 Windows 窗体的 Visual Basic 和 C# 设计器的组件。 除 Visual Studio 附带的 .NET 组件（如 <xref:System.Messaging.MessageQueue> 和 <xref:System.Diagnostics.EventLog> 组件）外，还可向此选项卡添加自己的组件或第三方组件。
 
-要显示此选项卡，请打开 Windows 窗体设计器。 选择“视图” > 工具箱”。 在“工具箱”中，选择“组件”选项卡。
+要显示此选项卡，请打开 Windows 窗体设计器。 选择“视图” > 工具箱”   。 在“工具箱”中，选择“组件”选项卡   。
 
 ## <a name="components"></a>组件数
 
@@ -86,7 +85,7 @@ ms.locfileid: "53967065"
 创建 <xref:System.Windows.Forms.Timer> 组件实例，该实例可用于向基于 Windows 的应用程序添加基于时间的功能。 有关详细信息，请参阅 [Timer 组件](/dotnet/framework/winforms/controls/timer-component-windows-forms)。
 
 > [!NOTE]
-> 此外，还有一个基于系统的 <xref:System.Timers.Timer>，可将其添加到“工具箱”。此 <xref:System.Timers.Timer> 针对服务器应用程序进行了优化，Windows 窗体 <xref:System.Windows.Forms.Timer> 最适合在 Windows 窗体上使用。
+> 此外，还有一个基于系统的 <xref:System.Timers.Timer>，可将其添加到“工具箱”。此 <xref:System.Timers.Timer> 针对服务器应用程序进行了优化，Windows 窗体 <xref:System.Windows.Forms.Timer> 最适合在 Windows 窗体上使用  。
 
 ## <a name="see-also"></a>请参阅
 

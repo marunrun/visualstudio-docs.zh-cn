@@ -1,32 +1,27 @@
 ---
-title: IDebugComPlusSymbolProvider2::GetTypeFromToken |Microsoft Docs
-ms.custom: ''
+title: 'IDebugComPlusSymbolProvider2:: GetTypeFromToken |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 helpviewer_keywords:
 - IDebugComPlusSymbolProvider2::GetTypeFromToken
 - GetTypeFromToken
 ms.assetid: 4452bc5d-0225-40e0-a467-c472a5c7c4ee
 caps.latest.revision: 11
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 14047f18979f45bf777274c640a90c54f26c27ca
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 1fa5e258390040fc70c0538c929a166984c3a7b0
+ms.sourcegitcommit: f369ff7e84b0216f01570a486c7be80ca6d0e61a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51791522"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "62540555"
 ---
 # <a name="idebugcomplussymbolprovider2gettypefromtoken"></a>IDebugComPlusSymbolProvider2::GetTypeFromToken
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-检索在给定其标记的类型。  
+在给定其标记的情况中检索类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,22 +45,22 @@ int GetTypeFromToken(
   
 #### <a name="parameters"></a>参数  
  `appDomain`  
- [in]应用程序域的标识符。  
+ 中应用程序域的标识符。  
   
  `guidModule`  
- [in]该模块的唯一标识符。  
+ 中模块的唯一标识符。  
   
  `tdToken`  
- [in]要检索的类型的标记。  
+ 中要检索的类型的标记。  
   
  `ppField`  
- [out]返回表示的类型[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)。  
+ 弄返回由[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)表示的类型。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功, 则`S_OK`返回; 否则返回错误代码。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何实现此方法对于**CDebugSymbolProvider**对象，它公开[IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)接口。  
+ 下面的示例演示如何为公开[IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)接口的**CDebugSymbolProvider**对象实现此方法。  
   
 ```cpp#  
 HRESULT CDebugSymbolProvider::GetTypeFromToken(  
@@ -95,4 +90,3 @@ Error:
   
 ## <a name="see-also"></a>请参阅  
  [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)
-

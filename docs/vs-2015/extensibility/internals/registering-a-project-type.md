@@ -1,14 +1,9 @@
 ---
 title: 注册项目类型 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], new project registry entries
 - registry, new project types
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: dfc0e231-6b4e-447d-9d64-0e66dea3394a
 caps.latest.revision: 22
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 38848e54f95cc3d78cf3bae2f32bd9827e98c5ac
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 63e0140b752adda02aba6126580ec08ee1f7536a
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51785321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63436630"
 ---
 # <a name="registering-a-project-type"></a>注册项目类型
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -32,7 +27,7 @@ ms.locfileid: "51785321"
  在下面的示例中，从注册表语句提供默认路径和数据 （如果适用） 后, 跟的表包含每个语句的注册表脚本中的条目。 表提供了脚本条目和语句的附加信息。  
   
 > [!NOTE]
->  下面的注册表信息用于类型的示例和您将编写注册您的项目类型的注册表脚本中的条目的目的。 实际的条目和它们的用途可能因您的项目类型的特定要求。 您应查看可用于找到相似的项目进行开发，类型的一个示例，然后查看该示例注册表脚本。  
+> 下面的注册表信息用于类型的示例和您将编写注册您的项目类型的注册表脚本中的条目的目的。 实际的条目和它们的用途可能因您的项目类型的特定要求。 您应查看可用于找到相似的项目进行开发，类型的一个示例，然后查看该示例注册表脚本。  
   
  下面的示例是从 HKEY_CLASSES_ROOT。  
   
@@ -54,7 +49,7 @@ ms.locfileid: "51785321"
    @="devenv.exe \"%1\""  
 ```  
   
-|name|类型|数据|描述|  
+|名称|类型|数据|描述|  
 |----------|----------|----------|-----------------|  
 |`@`|REG_SZ|`FigPrjFile`|具有扩展.figp 的文件类型名称和项目的说明。|  
 |`Content Type`|REG_SZ|`Text/plain`|项目文件的的内容类型。|  
@@ -86,7 +81,7 @@ ms.locfileid: "51785321"
    "FigProjectItemsEvents"="Returns the FigProjectItemsEvents Object"  
 ```  
   
-|name|类型|数据|描述|  
+|名称|类型|数据|描述|  
 |----------|----------|----------|-----------------|  
 |`@` （默认值）|REG_SZ|`FigPrj Project VSPackage`|这可本地化的名称注册 VSPackage （项目类型）。|  
 |`InprocServer32`|REG_SZ|`%MODULE%`|DLL 的项目类型的路径。 IDE 加载此 DLL，并将传递到 VSPackage CLSID`DllGetClassObject`若要获取<xref:Microsoft.VisualStudio.OLE.Interop.IClassFactory>构造<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>对象。|  
@@ -137,7 +132,7 @@ ms.locfileid: "51785321"
    "SortPriority"=dword:00000064  
 ```  
   
-|name|类型|数据|描述|  
+|名称|类型|数据|描述|  
 |----------|----------|----------|-----------------|  
 |`@`|REG_SZ|`FigPrj Project`|此类型的项目的默认名称。|  
 |`DisplayName`|REG_SZ|`#%IDS_PROJECT_TYPE%`|包下注册的名称的资源 ID 来检索从附属 DLL。|  
@@ -177,7 +172,7 @@ ms.locfileid: "51785321"
    "NewProjectDialogOnly"=dword:00000000  
 ```  
   
-|name|类型|数据|描述|  
+|名称|类型|数据|描述|  
 |----------|----------|----------|-----------------|  
 |`@`|REG_SZ|`#%IDS_NEWPROJ_ TEMPLATES_ENTRY%`|新项目模板的资源 ID。|  
 |`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|默认为已注册的项目类型的项目的路径。|  
@@ -198,9 +193,9 @@ ms.locfileid: "51785321"
    "SortPriority"=dword:00000064  
 ```  
   
-|name|类型|数据|描述|  
+|名称|类型|数据|描述|  
 |----------|----------|----------|-----------------|  
-|`@`|REG_SZ|无|默认值，该值指示以下条目，是用于杂项文件项目项。|  
+|`@`|REG_SZ|None|默认值，该值指示以下条目，是用于杂项文件项目项。|  
 |`@`|REG_SZ|`#%IDS_ADDITEM_TEMPLATES_ENTRY%`|添加新项模板文件的资源 ID 值。|  
 |`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjectItems`|将显示在项的默认路径**添加新项**对话框。|  
 |`SortPriority`|REG_DWORD|`100 (vcprx64)`|建立的树节点中显示的排序顺序**添加新项**对话框。|  
@@ -227,9 +222,9 @@ ms.locfileid: "51785321"
   
   最后一个字段标识 CTMENU 资源的版本号。 你可以通过更改版本号再次合并菜单。  
   
-|name|类型|数据|描述|  
+|名称|类型|数据|描述|  
 |----------|----------|----------|-----------------|  
-|%Clsid_package%|REG_SZ|`,1000,1`|要检索的菜单信息的资源。|  
+|%CLSID_Package%|REG_SZ|`,1000,1`|要检索的菜单信息的资源。|  
   
  下面的所有示例都位于注册表项 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\NewProjectTemplates] 下。  
   
@@ -241,7 +236,7 @@ ms.locfileid: "51785321"
    "NewProjectDialogOnly"=dword:00000000  
 ```  
   
-|name|类型|数据|描述|  
+|名称|类型|数据|描述|  
 |----------|----------|----------|-----------------|  
 |`@`|REG_SZ|`#%IDS_NEWPROJ_TEMPLATES_ENTRY%`|图项目新项目模板的资源 ID 值。|  
 |`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|新的项目目录的默认路径。 此目录中的项将显示在**新建项目向导**对话框。|  
@@ -256,7 +251,7 @@ ms.locfileid: "51785321"
    "UseInterface"=dword:00000001  
 ```  
   
-|name|类型|数据|描述|  
+|名称|类型|数据|描述|  
 |----------|----------|----------|-----------------|  
 |`Package`|REG_SZ|`%CLSID_Package%`|类 ID 的已注册 VSPackage。|  
 |`UseInterface`|REG_DWORD|`1`|1 表示 UI 将用于与此项目进行交互。 0 表示没有 UI 界面。|  
@@ -272,7 +267,6 @@ ms.locfileid: "51785321"
  这意味着如果包括 PROJECT_TYPE = EF 在.vsz 文件中，环境会找到您.vsz 文件以前指定的 ProductDir 目录中的条目。  
   
 ## <a name="see-also"></a>请参阅  
- [清单： 创建新的项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)   
+ [清单：创建新的项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)   
  [项目模型的元素](../../extensibility/internals/elements-of-a-project-model.md)   
  [使用项目工厂创建项目实例](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)
-

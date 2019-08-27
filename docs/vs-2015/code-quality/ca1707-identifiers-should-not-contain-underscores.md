@@ -1,14 +1,9 @@
 ---
-title: CA1707： 标识符不应包含下划线 |Microsoft Docs
-ms.custom: ''
+title: CA1707:标识符不应包含下划线 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - IdentifiersShouldNotContainUnderscores
 - CA1707
@@ -20,17 +15,17 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 0aeea5c113ebebe33d4c371fed1a5c46da4e735e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 7973646aab545484287f5628eb0fa3cf3629db84
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49211063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68189207"
 ---
-# <a name="ca1707-identifiers-should-not-contain-underscores"></a>CA1707：标识符不应包含下划线
+# <a name="ca1707-identifiers-should-not-contain-underscores"></a>CA1707:标识符不应包含下划线
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 2017 的最新文档，请参阅[CA1707： 标识符不应包含下划线](https://docs.microsoft.com/visualstudio/code-quality/ca1707-identifiers-should-not-contain-underscores)docs.microsoft.com 上。  
+Visual Studio 的最新文档，请参阅[CA1707:标识符不应包含下划线](https://docs.microsoft.com/visualstudio/code-quality/ca1707-identifiers-should-not-contain-underscores)。  
   
 |||  
 |-|-|  
@@ -54,7 +49,6 @@ Visual Studio 2017 的最新文档，请参阅[CA1707： 标识符不应包含�
  不禁止显示此规则发出的警告。  
   
 ## <a name="related-rules"></a>相关的规则  
- [CA1709：标识符的大小写应当正确](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)  
+ [CA1709:标识符应采用正确的大小写](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)  
   
- [CA1708：标识符不应仅以大小写进行区分](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
-
+ [CA1708:标识符不应不同于用例的详细信息](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)

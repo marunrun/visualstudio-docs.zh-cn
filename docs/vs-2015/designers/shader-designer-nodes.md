@@ -1,25 +1,20 @@
 ---
 title: 着色器设计器节点 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: f5192fbd-c78f-40a8-a4d4-443209610268
 caps.latest.revision: 8
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: f41d1d3d934ecd85ac36d24d704db561d42faa97
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: cde6b6a44649f3a9e100a0ff10e3dda21f2d6f3c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49293496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68187745"
 ---
 # <a name="shader-designer-nodes"></a>着色器设计器节点
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,15 +30,15 @@ ms.locfileid: "49293496"
 ### <a name="promotion-of-inputs"></a>输入的提升  
  因为着色器设计器必须最终生成 HLSL 源代码，以便效果可用于游戏或应用，所以着色器设计器节点必须遵守 HLSL 使用的类型提升规则。 因为图形硬件主要以浮点值运行，所以不同类型之间的类型提升（例如，从 `int` 到 `float`或从 `float` 到 `double`）是不常见的。 因为图形硬件一次对多条信息使用相同运算，所以可以发生不同种类的提升，其中较短的输入会延长，以匹配最长输入的大小。 延长方式取决于输入类型，也取决于运算本身：  
   
--   “如果较小类型为标量值，那么：  
+- “如果较小类型为标量值，那么：   
   
      标量值会复制到矢量中，该矢量大小与较大输入相同。 例如，当运算的最大输入是三元矢量时，标量输入 5.0 变为矢量 (5.0, 5.0, 5.0)，无论是什么运算，都是如此。  
   
--   如果较小类型是矢量，并且运算为乘法（\*、/、% 等），那么：  
+- 如果较小类型是矢量，并且运算为乘法（\*、/、% 等），那么：   
   
      矢量的值复制到与较大输入大小相等的矢量的前导元素中，并将尾随元素设置为 1.0。 例如，矢量输入与四元矢量相乘时，矢量输入 (5.0, 5.0) 变为矢量 (5.0, 5.0, 1.0, 1.0)。 通过使用乘法标识 1.0 来保留输出的第三和第四元素。  
   
--   如果较小类型是矢量，并且运算是加法（+、 - 等），那么  
+- 如果较小类型是矢量，并且运算是加法（+、 - 等），那么   
   
      矢量的值复制到与较大输入大小相等的矢量的前导元素中，并将尾随元素设置为 0.0。 例如，矢量输入与四元矢量相加时，矢量输入 (5.0, 5.0) 变为矢量 (5.0, 5.0, 0.0, 0.0)。 通过使用加法标识 0.0来保留输出的第三和第四元素。  
   
@@ -57,6 +52,3 @@ ms.locfileid: "49293496"
 |[数学运算节点](../designers/math-nodes.md)|介绍可用来执行代数、逻辑、三角函数和其他数学运算的节点，这些运算直接映射到 HLSL 指令。|  
 |[实用程序节点](../designers/utility-nodes.md)|介绍可用来执行常见照明计算和其他常见运算的节点，这些操作不直接映射到 HLSL 指令。|  
 |[筛选节点](../designers/filter-nodes.md)|介绍可用来执行纹理筛选和颜色筛选的节点。|
-
-
-

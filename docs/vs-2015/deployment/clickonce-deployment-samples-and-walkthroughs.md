@@ -1,14 +1,9 @@
 ---
 title: ClickOnce 部署示例和演练 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -22,13 +17,13 @@ ms.assetid: 3973276b-7b11-4692-a0a2-32bebf0b9c2a
 caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: cc16747838347810e12e293d718b355f492a158e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: d7a7663a2e365f800b754b771bffca4f539cee51
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49207215"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65675436"
 ---
 # <a name="clickonce-deployment-samples-and-walkthroughs"></a>ClickOnce 部署示例和演练
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -46,8 +41,5 @@ ms.locfileid: "49207215"
 |[下载 ClickOnce 部署 API 使用设计器中使用按需程序集](../deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer.md)|说明如何仅在应用程序首次使用程序集时进行下载。|  
   
 ## <a name="see-also"></a>请参阅  
- [Visual Studio 演练](http://msdn.microsoft.com/en-us/f5399a1f-2d3d-42fb-b989-134ccda2159f)   
+ [Visual Studio 演练](https://msdn.microsoft.com/f5399a1f-2d3d-42fb-b989-134ccda2159f)   
  [Visual Studio 示例](../ide/visual-studio-samples.md)
-
-
-

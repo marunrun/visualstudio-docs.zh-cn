@@ -1,14 +1,9 @@
 ---
-title: CV_CFL_LANG |Microsoft Docs
-ms.custom: ''
+title: CV_CFL_LANG | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 4e8e0613-ad02-4de9-9f46-e4753c5b0251
 caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: f6e2aa402d3f882d83525b180707653b97533e32
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 9c1fabdb202d51b85eb2983360bdfd02757f7649
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51724787"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65699362"
 ---
 # <a name="cvcfllang"></a>CV_CFL_LANG
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -59,7 +54,7 @@ typedef enum CV_CFL_LANG { 
  应用程序语言为 c。  
   
  CV_CFL_CXX  
- 应用程序语言是 c + +。  
+ 应用程序语言是C++。  
   
  CV_CFL_FORTRAN  
  应用程序语言是 FORTRAN。  
@@ -101,7 +96,7 @@ typedef enum CV_CFL_LANG { 
  应用程序语言为 Jscript。  
   
  CV_CFL_MSIL  
- 应用程序语言是未知 Microsoft 中间语言 (MSIL)，可能使用的结果[/LTCG （链接时间代码生成）](http://msdn.microsoft.com/library/788c6f52-fdb8-40c2-90af-4026ea2cf2e2)切换。  
+ 应用程序语言是未知 Microsoft 中间语言 (MSIL)，可能使用的结果[/LTCG （链接时间代码生成）](https://msdn.microsoft.com/library/788c6f52-fdb8-40c2-90af-4026ea2cf2e2)切换。  
   
  CV_CFL_HLSL  
  应用程序语言是高级别着色器语言。  
@@ -115,6 +110,3 @@ typedef enum CV_CFL_LANG { 
 ## <a name="see-also"></a>请参阅  
  [枚举和结构](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [IDiaSymbol::get_language](../../debugger/debug-interface-access/idiasymbol-get-language.md)
-
-
-

@@ -1,1154 +1,1261 @@
-items:
 - name: Visual Studio 文档
   href: ide/index.yml
+  pdf_name: Visual Studio documentation
 - name: 概述
-  items:
-  - name: 关于 Visual Studio 2017
-    href: get-started/visual-studio-ide.md
-  - name: 关于代码编辑器
-    href: get-started/tutorial-editor.md
-  - name: 关于项目和解决方案
-    href: get-started/tutorial-projects-solutions.md
-  - name: 更多 Visual Studio 功能
-    href: ide/advanced-feature-overview.md
   expanded: true
+  items:
+    - name: 关于 Visual Studio
+      href: get-started/visual-studio-ide.md
+    - name: 关于代码编辑器
+      href: get-started/tutorial-editor.md
+    - name: 关于项目和解决方案
+      href: get-started/tutorial-projects-solutions.md
+    - name: 更多 Visual Studio 功能
+      href: ide/advanced-feature-overview.md
 - name: 安装
   items:
-  - name: 安装 Visual Studio
-    href: install/install-visual-studio.md
-  - name: 登录 Visual Studio
-    href: ide/signing-in-to-visual-studio.md
-    items:
-    - name: 使用多个用户帐户
-      href: ide/work-with-multiple-user-accounts.md
-    - name: 扩展试用版或更新许可证
-      href: ide/how-to-unlock-visual-studio.md
-  - name: 脱机安装
-    items:
-    - name: 创建 Visual Studio 的脱机安装
-      href: install/create-an-offline-installation-of-visual-studio.md
-    - name: 安装脱机安装所需的证书
-      href: install/install-certificates-for-visual-studio-offline.md
-  - name: 选择安装位置
-    href: install/change-installation-locations.md
-  - name: 安装问题疑难解答
-    href: install/troubleshooting-installation-issues.md
-  - name: 更新 Visual Studio
-    href: install/update-visual-studio.md
-  - name: 修改 Visual Studio
-    href: install/modify-visual-studio.md
-  - name: 安装 Help Viewer
-    href: help-viewer/installation.md
-  - name: 修复 Visual Studio
-    href: install/repair-visual-studio.md
-  - name: 卸载 Visual Studio
-    href: install/uninstall-visual-studio.md
-  - name: Visual Studio 管理员指南
-    href: install/visual-studio-administrator-guide.md
-    items:
-    - name: 使用命令行
+    - name: 安装 Visual Studio
+      href: install/install-visual-studio.md
+    - name: 脱机安装
       items:
-      - name: 使用命令行参数安装 Visual Studio
-        href: install/use-command-line-parameters-to-install-visual-studio.md
-      - name: 命令行参数示例
-        href: install/command-line-parameter-examples.md
-    - name: 在网络上安装
+        - name: 创建 Visual Studio 的脱机安装
+          href: install/create-an-offline-installation-of-visual-studio.md
+        - name: 安装脱机安装所需的证书
+          href: install/install-certificates-for-visual-studio-offline.md
+    - name: 并排安装 Visual Studio 版本
+      href: install/install-visual-studio-versions-side-by-side.md
+    - name: 选择安装位置
+      href: install/change-installation-locations.md
+    - name: 导入或导出安装配置
+      href: install/import-export-installation-configurations.md
+    - name: 安装问题疑难解答
+      href: install/troubleshooting-installation-issues.md
+    - name: 更新 Visual Studio
+      href: install/update-visual-studio.md
+    - name: 修改 Visual Studio
+      href: install/modify-visual-studio.md
+    - name: 修复 Visual Studio
+      href: install/repair-visual-studio.md
+    - name: 卸载 Visual Studio
+      href: install/uninstall-visual-studio.md
+    - name: Visual Studio 管理员指南
       items:
-      - name: 创建基于网络的 Visual Studio 安装
-        href: install/create-a-network-installation-of-visual-studio.md
-      - name: 更新基于网络的 Visual Studio 安装
-        href: install/update-a-network-installation-of-visual-studio.md
-      - name: 在防火墙或代理服务器后面安装和使用 Visual Studio
-        href: install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md
-        items:
-        - name: 排查安装或使用 Visual Studio 时遇到的网络错误
-          href: install/troubleshooting-network-related-errors-in-visual-studio.md
-    - name: 在企业中部署
+        - name: 概述
+          href: install/visual-studio-administrator-guide.md
+        - name: 使用命令行
+          items:
+            - name: 使用命令行参数安装 Visual Studio
+              href: install/use-command-line-parameters-to-install-visual-studio.md
+            - name: 命令行参数示例
+              href: install/command-line-parameter-examples.md
+        - name: 在网络上安装
+          items:
+            - name: 创建基于网络的 Visual Studio 安装
+              href: install/create-a-network-installation-of-visual-studio.md
+            - name: 网络注意事项
+              items:
+                - name: 在防火墙或代理服务器后面安装和使用 Visual Studio
+                  href: install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md
+                - name: 排查安装或使用 Visual Studio 时遇到的网络错误
+                  href: install/troubleshooting-network-related-errors-in-visual-studio.md
+        - name: 在企业中部署
+          items:
+            - name: 通过响应文件自动执行 Visual Studio 安装
+              href: install/automated-installation-with-response-file.md
+            - name: 在部署 Visual Studio 时自动应用产品密钥
+              href: install/automatically-apply-product-keys-when-deploying-visual-studio.md
+            - name: 为 Visual Studio 企业部署设置默认值
+              href: install/set-defaults-for-enterprise-deployments.md
+            - name: 部署帮助查看器
+              items:
+                - name: 帮助查看器管理员指南
+                  href: help-viewer/administrator-guide.md
+                - name: Help Content Manager 的命令行自变量
+                  href: help-viewer/command-line-arguments.md
+                - name: Help Content Manager 重写
+                  href: help-viewer/behavior-overrides.md
+        - name: 管理和更新安装
+          items:
+            - name: 用于检测和管理 Visual Studio 实例的工具
+              href: install/tools-for-managing-visual-studio-instances.md
+            - name: 更新基于网络的 Visual Studio 安装
+              href: install/update-a-network-installation-of-visual-studio.md
+            - name: 在维修基线上更新 Visual Studio
+              href: install/update-servicing-baseline.md
+            - name: 控制 Visual Studio 部署的更新
+              href: install/controlling-updates-to-visual-studio-deployments.md
+            - name: 管理报包有效负载更改
+              href: install/changed-payloads.md
+            - name: 禁用或移动包缓存
+              href: install/disable-or-move-the-package-cache.md
+        - name: 管理订阅
+          items:
+            - name: Visual Studio 订阅：管理员概述
+              href: /visualstudio/subscriptions/admin-responsibilities
+        - name: 参考
+          items:
+            - name: Visual Studio 工作负荷和组件 ID
+              items:
+                - name: 概述
+                  displayName: Workload and component IDs
+                  href: install/workload-and-component-ids.md
+                - name: Visual Studio Enterprise
+                  href: install/workload-component-id-vs-enterprise.md
+                - name: Visual Studio Professional
+                  href: install/workload-component-id-vs-professional.md
+                - name: Visual Studio Community
+                  href: install/workload-component-id-vs-community.md
+                - name: Visual Studio 团队资源管理器
+                  href: install/workload-component-id-vs-team-explorer.md
+                - name: Visual Studio Desktop Express
+                  href: install/workload-component-id-vs-express.md
+                - name: Visual Studio 生成工具
+                  href: install/workload-component-id-vs-build-tools.md
+                - name: Visual Studio Test Agent
+                  href: install/workload-component-id-vs-test-agent.md
+                - name: Visual Studio Test Controller
+                  href: install/workload-component-id-vs-test-controller.md
+                - name: Visual Studio 专业测试工具版
+                  href: install/workload-component-id-vs-test-professional.md
+                - name: Visual Studio Feedback Client
+                  href: install/workload-component-id-vs-feedback-client.md
+            - name: Visual Studio 内部版本号和发布日期
+              href: install/visual-studio-build-numbers-and-release-dates.md
+    - name: 在 Azure 虚拟机中使用 Visual Studio
+      href: install/using-visual-studio-vm.md
+    - name: 容器
       items:
-      - name: 通过响应文件自动执行 Visual Studio 安装
-        href: install/automated-installation-with-response-file.md
-      - name: 在部署 Visual Studio 时自动应用产品密钥
-        href: install/automatically-apply-product-keys-when-deploying-visual-studio.md
-      - name: 为 Visual Studio 企业部署设置默认值
-        href: install/set-defaults-for-enterprise-deployments.md
-      - name: 禁用或移动包缓存
-        href: install/disable-or-move-the-package-cache.md
-      - name: 控制 Visual Studio 部署的更新
-        href: install/controlling-updates-to-visual-studio-deployments.md
-    - name: 管理安装
-      items:
-      - name: 用于检测和管理 Visual Studio 实例的工具
-        href: install/tools-for-managing-visual-studio-instances.md
-    - name: 管理订阅
-      items:
-      - name: Visual Studio 订阅：管理员概述
-        href: /visualstudio/subscriptions/admin-responsibilities
-    - name: 帮助查看器管理员指南
-      href: help-viewer/administrator-guide.md
-      items:
-      - name: Help Content Manager 的命令行自变量
-        href: help-viewer/command-line-arguments.md
-      - name: Help Content Manager 重写
-        href: help-viewer/behavior-overrides.md
-    - name: 参考
-      items:
-      - name: Visual Studio 工作负荷和组件 ID
-        href: install/workload-and-component-ids.md
-        items:
-        - name: Visual Studio Enterprise 2017
-          href: install/workload-component-id-vs-enterprise.md
-        - name: Visual Studio Professional 2017
-          href: install/workload-component-id-vs-professional.md
-        - name: Visual Studio Community 2017
-          href: install/workload-component-id-vs-community.md
-        - name: Visual Studio 团队资源管理器 2017
-          href: install/workload-component-id-vs-team-explorer.md
-        - name: Visual Studio Desktop Express 2017
-          href: install/workload-component-id-vs-express.md
-        - name: Visual Studio 生成工具 2017
-          href: install/workload-component-id-vs-build-tools.md
-        - name: Visual Studio Test Agent 2017
-          href: install/workload-component-id-vs-test-agent.md
-        - name: Visual Studio Test Controller 2017
-          href: install/workload-component-id-vs-test-controller.md
-        - name: Visual Studio Test Professional 2017
-          href: install/workload-component-id-vs-test-professional.md
-        - name: Visual Studio Feedback Client 2017
-          href: install/workload-component-id-vs-feedback-client.md
-      - name: Visual Studio 内部版本号和发布日期
-        href: install/visual-studio-build-numbers-and-release-dates.md
-  - name: 在 Azure 虚拟机中使用 Visual Studio
-    href: install/using-visual-studio-vm.md
-  - name: 将生成工具安装到容器
-    href: install/build-tools-container.md
-    items:
-    - name: 容器的高级示例
-      href: install/advanced-build-tools-container.md
-    - name: 容器的已知问题
-      href: install/build-tools-container-issues.md
+        - name: 将生成工具安装到容器
+          href: install/build-tools-container.md
+        - name: 容器的高级示例
+          href: install/advanced-build-tools-container.md
+        - name: 容器的已知问题
+          href: install/build-tools-container-issues.md
+    - name: 安装 Help Viewer
+      href: help-viewer/installation.md
 - name: 快速入门
   items:
-  - name: Visual Studio 入门
-    href: ide/quickstart-ide-orientation.md
-  - name: C++：创建控制台应用
-    href: ide/getting-started-with-cpp-in-visual-studio.md
-  - name: Python：创建 Web 应用
-    href: ide/quickstart-python.md
-  - name: Node.js：创建 Web 应用
-    href: ide/quickstart-nodejs.md
-  - name: F#：创建 Web 服务
-    href: ide/quickstart-fsharp.md
-  - name: C#：创建 Web 应用
-    href: ide/quickstart-aspnet-core.md
-  - name: C#：创建控制台应用
-    href: ide/quickstart-csharp-console.md
-  - name: Visual Basic：创建控制台应用
-    href: ide/quickstart-visual-basic-console.md
+    - name: Visual Studio 入门
+      displayName: Feature tour
+      href: ide/quickstart-ide-orientation.md
+    - name: C++：创建控制台应用
+      href: ide/getting-started-with-cpp-in-visual-studio.md
+    - name: Python：创建 Web 应用
+      href: ide/quickstart-python.md
+    - name: Node.js：创建 Web 应用
+      href: ide/quickstart-nodejs.md
+    - name: 'F#：创建 Web 服务'
+      href: ide/quickstart-fsharp.md
+    - name: 'C#：创建 Web 应用'
+      href: ide/quickstart-aspnet-core.md
+    - name: 'C#：创建控制台应用'
+      href: ide/quickstart-csharp-console.md
+    - name: Visual Basic：创建控制台应用
+      href: ide/quickstart-visual-basic-console.md
 - name: 教程
   items:
-  - name: C#
-    href: get-started/csharp/
-  - name: F#
-    href: /dotnet/fsharp/
-  - name: Visual Basic
-    href: get-started/visual-basic/
-  - name: C++
-    href: /cpp/get-started/
-  - name: Python
-    href: python/
-  - name: Node.js
-    href: javascript/
+    - name: 'C#'
+      href: get-started/csharp/
+    - name: 'F#'
+      href: /dotnet/fsharp/
+    - name: Visual Basic
+      href: get-started/visual-basic/
+    - name: C++
+      href: /cpp/get-started/tutorial-console-cpp
+    - name: Python
+      href: python/
+    - name: Node.js
+      href: javascript/
 - name: 操作指南
   items:
-  - name: 开发
-    href: ide/index-writing-code.md
-    items:
-    - name: 在 IDE 中移动
-      href: ide/how-to-move-around-in-the-visual-studio-ide.md
-    - name: 使用解决方案和项目
-      href: ide/solutions-and-projects-in-visual-studio.md
+    - name: 开发
       items:
-      - name: 创建解决方案和项目
-        href: ide/creating-solutions-and-projects.md
-      - name: 移植、迁移和升级项目
-        href: porting/port-migrate-and-upgrade-visual-studio-projects.md
-      - name: 移植、迁移和升级 Visual Studio 2019 预览版中的项目
-        href: porting/port-migrate-upgrade-visual-studio-projects-2019.md
-      - name: 管理项目和解决方案属性
-        href: ide/managing-project-and-solution-properties.md
-      - name: 管理项目中的引用
-        href: ide/managing-references-in-a-project.md
-        items:
-        - name: 使用引用管理器添加或删除引用
-          href: ide/how-to-add-or-remove-references-by-using-the-reference-manager.md
-        - name: 使用 NuGet 与扩展 SDK 添加引用
-          href: ide/adding-references-using-nuget-versus-an-extension-sdk.md
-        - name: 添加或删除导入的命名空间 (Visual Basic)
-          href: ide/how-to-add-or-remove-imported-namespaces-visual-basic.md
-        - name: 有关无效引用的疑难解答
-          href: ide/troubleshooting-broken-references.md
-      - name: 管理应用程序资源 (.NET)
-        href: ide/managing-application-resources-dotnet.md
-      - name: 管理应用程序设置 (.NET)
-        href: ide/managing-application-settings-dotnet.md
-        items:
-        - name: 将应用配置文件添加到 C# 项目
-          href: ide/how-to-add-app-config-file.md
-      - name: 管理程序集和清单签名
-        href: ide/managing-assembly-and-manifest-signing.md
-        items:
-        - name: 对应用程序和部署清单签名
-          href: ide/how-to-sign-application-and-deployment-manifests.md
-      - name: 指定应用程序图标（Visual Basic、C#）
-        href: ide/how-to-specify-an-application-icon-visual-basic-csharp.md
-      - name: 多目标概述
-        href: ide/visual-studio-multi-targeting-overview.md
-        items:
-        - name: 面向 .NET Framework 的某个版本
-          href: ide/how-to-target-a-version-of-the-dotnet-framework.md
-      - name: 创建项目和项模板
-        href: ide/creating-project-and-item-templates.md
-        items:
-        - name: 创建项目模板
-          href: ide/how-to-create-project-templates.md
-        - name: 创建多项目模板
-          href: ide/how-to-create-multi-project-templates.md
-        - name: 创建项模板
-          href: ide/how-to-create-item-templates.md
-        - name: 创建多文件项模板
-          href: ide/how-to-create-multi-file-item-templates.md
-        - name: 创建 Web 模板
-          href: ide/how-to-manually-create-web-templates.md
-        - name: 模板疑难解答
-          href: ide/how-to-troubleshoot-templates.md
-      - name: 查找和组织项目和项模板
-        href: ide/how-to-locate-and-organize-project-and-item-templates.md
-      - name: 自定义项目和项模板
-        href: ide/customizing-project-and-item-templates.md
-        items:
-        - name: 更新现有模板
-          href: ide/how-to-update-existing-templates.md
-        - name: 替换模板中的参数
-          href: ide/how-to-substitute-parameters-in-a-template.md
-      - name: 64 位支持
-        href: ide/visual-studio-ide-64-bit-support.md
-    - name: 不使用项目或解决方案而进行开发（“打开文件夹”）
-      href: ide/develop-code-in-visual-studio-without-projects-or-solutions.md
-      items:
-      - name: 自定义生成和调试任务
-        href: ide/customize-build-and-debug-tasks-in-visual-studio.md
-    - name: 连接到项目或存储库
-      href: ide/connect-team-project.md
-    - name: 使用编辑器
-      href: ide/writing-code-in-the-code-and-text-editor.md
-      items:
-      - name: 查找和替换文本
-        href: ide/finding-and-replacing-text.md
-        items:
-        - name: 使用正则表达式
-          href: ide/using-regular-expressions-in-visual-studio.md
-        - name: “查找-命令”框
-          href: ide/find-command-box.md
-        - name: 在文件中查找
-          href: ide/find-in-files.md
-        - name: 在文件中替换
-          href: ide/replace-in-files.md
-      - name: 编码和换行符
-        href: ide/encodings-and-line-breaks.md
-        items:
-        - name: 保存和打开带有编码的文件
-          href: ide/how-to-save-and-open-files-with-encoding.md
-      - name: 大纲显示
-        href: ide/outlining.md
-      - name: 生成和修复代码
-        href: ide/code-generation-in-visual-studio.md
-        items:
-        - name: 代码片段
+        - name: 索引：使用 IDE 编写代码
+          href: ide/index-writing-code.md
+        - name: 在 IDE 中移动
+          href: ide/how-to-move-around-in-the-visual-studio-ide.md
+        - name: 解决方案和项目
           items:
-          - name: 使用代码片段
-            href: ide/code-snippets.md
-            items:
-            - name: C# 代码片段参考
-              href: ide/visual-csharp-code-snippets.md
-            - name: C++ 代码片段参考
-              href: ide/visual-cpp-code-snippets.md
-            - name: 插入 XML 注释
-              href: ide/reference/generate-xml-documentation-comments.md
-            - name: 使用外侧代码片段
-              href: ide/how-to-use-surround-with-code-snippets.md
-            - name: 最佳实践
-              href: ide/best-practices-for-using-code-snippets.md
-          - name: 创建代码片段
-            items:
-            - name: 演练：创建代码片段
-              href: ide/walkthrough-creating-a-code-snippet.md
-            - name: 分发代码片段
-              href: ide/how-to-distribute-code-snippets.md
-            - name: 代码片段函数
-              href: ide/code-snippet-functions.md
-            - name: 代码片段架构参考
-              href: ide/code-snippets-schema-reference.md
-            - name: 代码片段疑难解答
-              href: ide/troubleshooting-snippets.md
-        - name: 快速操作
-          href: ide/quick-actions.md
+            - name: 使用解决方案和项目
+              href: ide/solutions-and-projects-in-visual-studio.md
+            - name: 创建新项目
+              href: ide/create-new-project.md
+            - name: 创建解决方案和项目
+              href: ide/creating-solutions-and-projects.md
+            - name: 打开存储库中的项目
+              href: get-started/tutorial-open-project-from-repo.md
+            - name: 移植、迁移和升级项目
+              href: porting/port-migrate-and-upgrade-visual-studio-projects.md
+            - name: 管理项目和解决方案属性
+              href: ide/managing-project-and-solution-properties.md
+            - name: 项目引用
+              items:
+                - name: 管理项目中的引用
+                  href: ide/managing-references-in-a-project.md
+                - name: 使用引用管理器添加或删除引用
+                  href: ide/how-to-add-or-remove-references-by-using-the-reference-manager.md
+                - name: 添加或删除导入的命名空间 (Visual Basic)
+                  href: ide/how-to-add-or-remove-imported-namespaces-visual-basic.md
+                - name: 有关无效引用的疑难解答
+                  href: ide/troubleshooting-broken-references.md
+            - name: 管理应用程序资源 (.NET)
+              href: ide/managing-application-resources-dotnet.md
+            - name: 应用程序设置 (.NET)
+              items:
+                - name: 管理应用程序设置 (.NET)
+                  href: ide/managing-application-settings-dotnet.md
+                - name: '将应用配置文件添加到 C# 项目'
+                  href: ide/how-to-add-app-config-file.md
+            - name: 对清单签名
+              items:
+                - name: 管理程序集和清单签名
+                  href: ide/managing-assembly-and-manifest-signing.md
+                - name: 对应用程序和部署清单签名
+                  href: ide/how-to-sign-application-and-deployment-manifests.md
+            - name: '指定应用程序图标（Visual Basic、C#）'
+              href: ide/how-to-specify-an-application-icon-visual-basic-csharp.md
+            - name: 确定目标框架
+              href: ide/visual-studio-multi-targeting-overview.md
+            - name: 创建模板
+              items:
+                - name: 创建项目和项模板
+                  href: ide/creating-project-and-item-templates.md
+                - name: 将标记添加到模板
+                  href: ide/template-tags.md
+                - name: 创建项目模板
+                  href: ide/how-to-create-project-templates.md
+                - name: 创建多项目模板
+                  href: ide/how-to-create-multi-project-templates.md
+                - name: 创建项模板
+                  href: ide/how-to-create-item-templates.md
+                - name: 创建多文件项模板
+                  href: ide/how-to-create-multi-file-item-templates.md
+                - name: 创建 Web 模板
+                  href: ide/how-to-manually-create-web-templates.md
+                - name: 模板疑难解答
+                  href: ide/how-to-troubleshoot-templates.md
+            - name: 对项目和项模板进行定位
+              href: ide/how-to-locate-and-organize-project-and-item-templates.md
+            - name: 自定义模板
+              items:
+                - name: 自定义项目和项模板
+                  href: ide/customizing-project-and-item-templates.md
+                - name: 更新现有模板
+                  href: ide/how-to-update-existing-templates.md
+                - name: 替换模板中的参数
+                  href: ide/how-to-substitute-parameters-in-a-template.md
+                - name: 模板参数
+                  href: ide/template-parameters.md
+            - name: 64 位支持
+              href: ide/visual-studio-ide-64-bit-support.md
+        - name: 不使用项目或解决方案进行开发
           items:
-          - name: 常见快速操作
-            href: ide/common-quick-actions.md
-          - name: 生成类/类型
-            href: ide/reference/generate-class-type.md
-          - name: 生成方法
-            href: ide/reference/generate-method.md
-          - name: 生成字段/属性/本地
-            href: ide/reference/generate-field-property-local.md
-          - name: 生成构造函数
-            href: ide/reference/generate-constructor.md
-          - name: 将参数添加到方法
-            href: ide/reference/add-parameter.md
-          - name: 生成替代
-            href: ide/reference/generate-override.md
-          - name: 生成 Equals 和 GetHashCode 方法替代
-            href: ide/reference/generate-equals-gethashcode-methods.md
-          - name: 实现抽象类
-            href: ide/reference/implement-abstract-class.md
-          - name: 实现接口
-            href: ide/reference/implement-interface.md
-          - name: 引入局部变量
-            href: ide/reference/introduce-local-variable.md
-        - name: 重构代码
-          href: ide/refactoring-in-visual-studio.md
+            - name: 如何：不含项目进行开发
+              displayName: Open folder
+              href: ide/develop-code-in-visual-studio-without-projects-or-solutions.md
+            - name: 自定义生成和调试任务
+              displayName: makefile tasks.vs.json
+              href: ide/customize-build-and-debug-tasks-in-visual-studio.md
+        - name: 连接到项目或存储库
+          displayName: Azure DevOps VSTS GitHub
+          href: ide/connect-team-project.md
+        - name: 编辑器
           items:
-          - name: 更改方法签名
-            href: ide/reference/change-method-signature.md
-          - name: 在 for 循环和 foreach 语句之间进行转换
-            href: ide/reference/convert-for-loop-to-foreach.md
-          - name: 在 Get 方法和属性之间进行转换
-            href: ide/reference/convert-get-method-to-property.md
-          - name: 将 LINQ 查询转换为 foreach 语句
-            href: ide/reference/convert-linq-to-foreach.md
-          - name: 封装字段
-            href: ide/reference/encapsulate-field.md
-          - name: 提取接口
-            href: ide/reference/extract-interface.md
-          - name: 提取方法
-            href: ide/reference/extract-method.md
-          - name: 内联临时变量
-            href: ide/reference/inline-temporary-variable.md
-          - name: 将声明移至引用附近
-            href: ide/reference/move-declaration-near-reference.md
-          - name: 将类型移到匹配的文件
-            href: ide/reference/move-type-to-matching-file.md
-          - name: 删除无法访问的代码
-            href: ide/reference/remove-unreachable-code.md
-          - name: 重命名
-            href: ide/reference/rename.md
-          - name: 同步类型和文件名
-            href: ide/reference/sync-type-and-file.md
-          - name: 使用显式类型
-            href: ide/reference/convert-var-to-explicit-type.md
-        - name: 演练：基于使用情况生成代码
-          href: ide/walkthrough-test-first-support-with-the-generate-from-usage-feature.md
-      - name: 工作效率提示
-        href: ide/productivity-tips-for-visual-studio.md
-        items:
-        - name: 键盘快捷键
-          href: ide/tips-and-tricks-for-visual-studio.md
+            - name: 使用编辑器
+              href: ide/writing-code-in-the-code-and-text-editor.md
+            - name: 查找和替换
+              items:
+                - name: 查找和替换文本
+                  href: ide/finding-and-replacing-text.md
+                - name: 使用正则表达式
+                  dispayName: RegEx
+                  href: ide/using-regular-expressions-in-visual-studio.md
+                - name: “查找-命令”框
+                  href: ide/find-command-box.md
+                - name: 在文件中查找
+                  href: ide/find-in-files.md
+                - name: 在文件中替换
+                  href: ide/replace-in-files.md
+            - name: 编码
+              items:
+                - name: 编码和换行符
+                  href: ide/encodings-and-line-breaks.md
+                - name: 保存和打开带有编码的文件
+                  href: ide/how-to-save-and-open-files-with-encoding.md
+            - name: 大纲显示
+              displayName: Expand and collapse
+              href: ide/outlining.md
+            - name: 代码生成和重构
+              items:
+                - name: 生成和修复代码
+                  href: ide/code-generation-in-visual-studio.md
+                - name: 代码片段
+                  items:
+                    - name: 使用代码片段
+                      href: ide/code-snippets.md
+                    - name: 'C# 代码片段参考'
+                      href: ide/visual-csharp-code-snippets.md
+                    - name: C++ 代码片段参考
+                      href: ide/visual-cpp-code-snippets.md
+                    - name: 插入 XML 注释
+                      href: ide/reference/generate-xml-documentation-comments.md
+                    - name: 使用外侧代码片段
+                      href: ide/how-to-use-surround-with-code-snippets.md
+                    - name: 最佳实践
+                      href: ide/best-practices-for-using-code-snippets.md
+                    - name: 创建代码片段
+                      items:
+                        - name: 演练：创建代码片段
+                          href: ide/walkthrough-creating-a-code-snippet.md
+                        - name: 分发代码片段
+                          href: ide/how-to-distribute-code-snippets.md
+                        - name: 代码片段函数
+                          href: ide/code-snippet-functions.md
+                        - name: 代码片段架构参考
+                          href: ide/code-snippets-schema-reference.md
+                        - name: 代码片段疑难解答
+                          href: ide/troubleshooting-snippets.md
+                - name: 快速操作
+                  href: ide/quick-actions.md
+                  displayName: light bulb screwdriver suggestions
+                  items:
+                    - name: 常见快速操作
+                      href: ide/common-quick-actions.md
+                    - name: 生成类/类型
+                      href: ide/reference/generate-class-type.md
+                    - name: 生成方法
+                      href: ide/reference/generate-method.md
+                    - name: 生成字段/属性/本地
+                      href: ide/reference/generate-field-property-local.md
+                    - name: 生成构造函数
+                      href: ide/reference/generate-constructor.md
+                    - name: 生成解构函数
+                      href: ide/reference/generate-deconstructor.md
+                    - name: 将参数添加到方法
+                      href: ide/reference/add-parameter.md
+                    - name: 生成替代
+                      href: ide/reference/generate-override.md
+                    - name: 生成 Equals 和 GetHashCode 方法替代
+                      href: ide/reference/generate-equals-gethashcode-methods.md
+                    - name: 生成的 using
+                      href: ide/reference/generate-usings.md
+                    - name: 实现抽象类
+                      href: ide/reference/implement-abstract-class.md
+                    - name: 实现接口
+                      href: ide/reference/implement-interface.md
+                    - name: 引入局部变量
+                      href: ide/reference/introduce-local-variable.md
+                - name: 重构代码
+                  items:
+                    - name: 概述
+                      displayName: refactoring
+                      href: ide/refactoring-in-visual-studio.md
+                    - name: 更改方法签名
+                      href: ide/reference/change-method-signature.md
+                    - name: 将匿名类型转换为类
+                      href: ide/reference/convert-anonymous-type-to-class.md
+                    - name: 将匿名类型转换为元组
+                      href: ide/reference/convert-anonymous-type-to-tuple.md
+                    - name: 在 for 循环和 foreach 语句之间进行转换
+                      href: ide/reference/convert-for-loop-to-foreach.md
+                    - name: 在 Get 方法和属性之间进行转换
+                      href: ide/reference/convert-get-method-to-property.md
+                    - name: 将本地函数转换为方法
+                      href: ide/reference/convert-local-function-method.md
+                    - name: 将 foreach 循环转换为 LINQ
+                      href: ide/reference/convert-foreach-linq.md
+                    - name: 将 LINQ 查询转换为 foreach 语句
+                      href: ide/reference/convert-linq-to-foreach.md
+                    - name: 将 Switch 语句转换为 Switch 表达式
+                      href: ide/reference/convert-switch-statement-to-switch-expression.md
+                    - name: 封装字段
+                      href: ide/reference/encapsulate-field.md
+                    - name: 提取接口
+                      href: ide/reference/extract-interface.md
+                    - name: 提取方法
+                      href: ide/reference/extract-method.md
+                    - name: 生成参数
+                      href: ide/reference/generate-parameter.md
+                    - name: 内联临时变量
+                      href: ide/reference/inline-temporary-variable.md
+                    - name: IntelliSense 完成未导入类型
+                      href: ide/reference/intellisense-completion-unimported-types.md
+                    - name: 反转条件表达式和逻辑运算
+                      href: ide/reference/invert-conditional-logical.md
+                    - name: 反转 if 语句
+                      href: ide/reference/invert-if-statement.md
+                    - name: 将声明移至引用附近
+                      href: ide/reference/move-declaration-near-reference.md
+                    - name: 将类型移到匹配的文件
+                      href: ide/reference/move-type-to-matching-file.md
+                    - name: 将类型移到命名空间
+                      href: ide/reference/move-type-to-namespace.md
+                    - name: 拉取成员
+                      href: ide/reference/pull-members-up.md
+                    - name: 通过 IntelliSense 完成正则表达式
+                      href: ide/reference/regex-completion-through-intellisense.md
+                    - name: 删除无法访问的代码
+                      href: ide/reference/remove-unreachable-code.md
+                    - name: 重命名
+                      href: ide/reference/rename.md
+                    - name: 对 Using 排序
+                      href: ide/reference/sort-usings.md
+                    - name: Split 或 merge if 语句
+                      href: ide/reference/split-or-merge-if-statement.md
+                    - name: 同步命名空间和文件夹名称
+                      href: ide/reference/sync-namespace-and-folder-name.md
+                    - name: 同步类型和文件名
+                      href: ide/reference/sync-type-and-file.md
+                    - name: 使用显式类型
+                      href: ide/reference/convert-var-to-explicit-type.md
+                    - name: 使用 lambda 表达式或程序块主体
+                      href: ide/reference/use-block-body-lambda.md
+                    - name: 未使用的值分配、变量和参数
+                      href: ide/reference/unused-values-parameters.md
+                    - name: 自动换行和对齐调用链接
+                      href: ide/reference/wrap-and-align-call-chains.md
+                    - name: 自动换行、缩进和对齐参数
+                      href: ide/reference/wrap-align-indent-parameters.md
+                - name: 演练：基于使用情况生成代码
+                  href: ide/walkthrough-test-first-support-with-the-generate-from-usage-feature.md
+            - name: IntelliSense
+              items:
+                - name: 使用 IntelliSense
+                  href: ide/using-intellisense.md
+                - name: Visual Basic IntelliSense
+                  href: ide/visual-basic-specific-intellisense.md
+                - name: 'C# IntelliSense'
+                  href: ide/visual-csharp-intellisense.md
+                - name: JavaScript IntelliSense
+                  href: ide/javascript-intellisense.md
+                - name: Visual C++ IntelliSense
+                  href: ide/visual-cpp-intellisense.md
+                - name: 配置用于 IntelliSense 的 C++ 项目
+                  href: ide/visual-cpp-intellisense-configuration.md
+            - name: 在代码中移动
+              items:
+                - name: 导航代码
+                  href: ide/navigating-code.md
+                - name: 在代码中查找引用
+                  href: ide/finding-references.md
+                - name: 查看类型和成员定义
+                  items:
+                    - name: 转到定义和速览定义
+                      href: ide/go-to-and-peek-definition.md
+                    - name: 使用“查看定义”查看和编辑代码
+                      href: ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md
+                - name: 使用“转到”命令查找代码
+                  href: ide/go-to.md
+            - name: 自定义编辑器
+              items:
+                - name: 更改文本大小写
+                  href: ide/how-to-change-text-case-in-the-editor.md
+                - name: 管理编辑器模式
+                  href: ide/how-to-manage-editor-modes.md
+                - name: 管理编辑器窗口
+                  href: ide/how-to-manage-editor-windows.md
+                - name: 更改字体和颜色
+                  href: ide/reference/how-to-change-fonts-and-colors-in-the-editor.md
+                - name: 更改自动换行
+                  href: ide/reference/how-to-manage-word-wrap-in-the-editor.md
+                - name: 显示行号
+                  href: ide/reference/how-to-display-line-numbers-in-the-editor.md
+                - name: 将 URL 显示为链接
+                  href: ide/reference/how-to-display-urls-as-links-in-the-editor.md
+                - name: 设置语言特定的编辑器选项
+                  href: ide/reference/setting-language-specific-editor-options.md
+            - name: 代码样式
+              items:
+                - name: 代码样式首选项
+                  href: /visualstudio/ide/code-styles-and-code-cleanup
+                - name: 使用 EditorConfig 文件构造代码样式
+                  displayName: Configure code style analyzers
+                  href: ide/create-portable-custom-editor-options.md
+                - name: .NET 编码约定
+                  items:
+                    - name: 概述
+                      href: ide/editorconfig-code-style-settings-reference.md
+                    - name: 语言约定
+                      href: ide/editorconfig-language-conventions.md
+                    - name: 格式设置约定
+                      href: ide/editorconfig-formatting-conventions.md
+                    - name: 命名约定
+                      href: ide/editorconfig-naming-conventions.md
+            - name: 自定义滚动条
+              href: ide/how-to-track-your-code-by-customizing-the-scrollbar.md
+            - name: 在代码中设置书签
+              href: ide/setting-bookmarks-in-code.md
+            - name: CodeLens
+              items:
+                - name: 使用 CodeLens 查找代码历史记录
+                  href: ide/find-code-changes-and-other-history-with-codelens.md
+                - name: CodeIndex 命令
+                  href: ide/codeindex-command.md
+            - name: 其他语言的编辑器支持
+              href: ide/adding-visual-studio-editor-support-for-other-languages.md
+        - name: 代码视图
           items:
-          - name: 标识并自定义键盘快捷方式
-            href: ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md
-          - name: 常用命令的快捷方式
-            href: ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md
-          - name: 所有键盘快捷方式
-            href: ide/default-keyboard-shortcuts-in-visual-studio.md
-        - name: 针对 .NET 开发人员的提示
-          href: ide/visual-studio-2017-for-dotnet-developers.md
-      - name: 使用 IntelliSense
-        href: ide/using-intellisense.md
-        items:
-        - name: Visual Basic IntelliSense
-          href: ide/visual-basic-specific-intellisense.md
-        - name: C# IntelliSense
-          href: ide/visual-csharp-intellisense.md
-        - name: JavaScript IntelliSense
-          href: ide/javascript-intellisense.md
-        - name: Visual C++ IntelliSense
-          href: ide/visual-cpp-intellisense.md
-        - name: 配置用于 IntelliSense 的 C++ 项目
-          href: ide/visual-cpp-intellisense-configuration.md
-      - name: 导航代码
-        href: ide/navigating-code.md
-        items:
-        - name: 在代码中查找引用
-          href: ide/finding-references.md
-        - name: 查看类型和成员定义
-          href: ide/go-to-and-peek-definition.md
+            - name: 查看代码结构
+              href: ide/viewing-the-structure-of-code.md
+            - name: “类视图”和“对象浏览器”图标
+              href: ide/class-view-and-object-browser-icons.md
+        - name: 使用任务列表
+          href: ide/using-the-task-list.md
+        - name: 类设计器
           items:
-          - name: 使用“查看定义”查看和编辑代码
-            href: ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md
-        - name: 使用“转到”命令查找代码
-          href: ide/go-to.md
-      - name: 自定义编辑器
-        href: ide/customizing-the-editor.md
-        items:
-        - name: 更改文本大小写
-          href: ide/how-to-change-text-case-in-the-editor.md
-        - name: 管理编辑器模式
-          href: ide/how-to-manage-editor-modes.md
-        - name: 管理编辑器窗口
-          href: ide/how-to-manage-editor-windows.md
-        - name: 更改字体和颜色
-          href: ide/reference/how-to-change-fonts-and-colors-in-the-editor.md
-        - name: 更改自动换行
-          href: ide/reference/how-to-manage-word-wrap-in-the-editor.md
-        - name: 显示行号
-          href: ide/reference/how-to-display-line-numbers-in-the-editor.md
-        - name: 将 URL 显示为链接
-          href: ide/reference/how-to-display-urls-as-links-in-the-editor.md
-        - name: 设置语言特定的编辑器选项
-          href: ide/reference/setting-language-specific-editor-options.md
-      - name: 代码样式首选项
-        href: ide/code-styles-and-quick-actions.md
-        items:
-        - name: 使用 EditorConfig 文件构造代码样式
-          href: ide/create-portable-custom-editor-options.md
+            - name: 在类设计器中设计类
+              href: ide/class-designer/designing-and-viewing-classes-and-types.md
+            - name: 向项目添加类图
+              href: ide/class-designer/how-to-add-class-diagrams-to-projects.md
+            - name: 自定义类图
+              href: ide/class-designer/how-to-customize-class-diagrams.md
+            - name: 将类图元素复制到 Microsoft Office 文档
+              href: ide/class-designer/how-to-copy-class-diagram-elements-to-a-microsoft-office-document.md
+            - name: 将类图作为图像导出
+              href: ide/class-designer/how-to-export-class-diagrams-as-images.md
+            - name: 打印类图
+              href: ide/class-designer/how-to-print-class-diagrams.md
+            - name: 向类图添加注释
+              href: ide/class-designer/how-to-add-comments-to-class-diagrams.md
+            - name: 创建类和类型
+              items:
+                - name: 创建类型
+                  href: ide/class-designer/how-to-create-types.md
+                - name: 创建类型之间的继承
+                  href: ide/class-designer/how-to-create-inheritance-between-types.md
+                - name: 创建类型之间的关联
+                  href: ide/class-designer/how-to-create-associations-between-types.md
+                - name: 可视化集合关联
+                  href: ide/class-designer/how-to-visualize-a-collection-association.md
+                - name: 创建和配置类型成员
+                  href: ide/class-designer/creating-and-configuring-type-members.md
+            - name: 查看类型和关系
+              items:
+                - name: 查看现有类型
+                  href: ide/class-designer/how-to-view-existing-types.md
+                - name: 查看类型之间的继承
+                  href: ide/class-designer/how-to-view-inheritance-between-types.md
+                - name: 成员表示法与关联表示法
+                  href: ide/class-designer/how-to-change-between-member-notation-and-association-notation.md
+            - name: 重构类和类型
+              href: ide/class-designer/refactoring-classes-and-types.md
+            - name: 实现接口
+              href: ide/class-designer/how-to-implement-an-interface.md
+            - name: 将类拆分为分部类
+              href: ide/class-designer/how-to-split-a-class-into-partial-classes.md
+            - name: 创建可以为 null 的类型
+              href: ide/class-designer/how-to-create-a-nullable-type.md
+            - name: 类设计器只不过的 C++
+              items:
+                - name: 使用 Visual C++ 代码
+                  href: ide/class-designer/working-with-visual-cpp-code.md
+                - name: C++ 类
+                  href: ide/class-designer/visual-cpp-classes.md
+                - name: C++ 结构
+                  href: ide/class-designer/visual-cpp-structures.md
+                - name: C++ 枚举
+                  href: ide/class-designer/visual-cpp-enumerations.md
+                - name: C++ typedef
+                  href: ide/class-designer/visual-cpp-typedefs.md
+            - name: 键盘和鼠标快捷方式
+              href: ide/class-designer/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window.md
+            - name: 类设计器错误
+              href: ide/class-designer/additional-information-about-errors.md
+        - name: 改进代码
+          href: ide/find-and-fix-code-errors.md
+        - name: 跨平台移动开发
+          href: cross-platform/cross-platform-mobile-development-in-visual-studio.md
+        - name: 'Visual Studio 中的 F#'
           items:
-          - name: .NET 语言和格式设置约定
-            href: ide/editorconfig-code-style-settings-reference.md
-          - name: .NET 命名约定
-            href: ide/editorconfig-naming-conventions.md
-      - name: 自定义滚动条
-        href: ide/how-to-track-your-code-by-customizing-the-scrollbar.md
-      - name: 在代码中设置书签
-        href: ide/setting-bookmarks-in-code.md
-      - name: 使用 CodeLens 查找代码历史记录
-        href: ide/find-code-changes-and-other-history-with-codelens.md
-        items:
-        - name: CodeIndex 命令
-          href: ide/codeindex-command.md
-      - name: 其他语言的编辑器支持
-        href: ide/adding-visual-studio-editor-support-for-other-languages.md
-    - name: 查看代码结构
-      href: ide/viewing-the-structure-of-code.md
+            - name: 'F# 开发'
+              href: ide/fsharp-visual-studio.md
+            - name: 面向 .NET 较旧版本
+              href: ide/fsharp-target-older-dotnet-versions.md
+        - name: Office 和 SharePoint 开发
+          href: vsto/office-and-sharepoint-development-in-visual-studio.md
+        - name: 使用 XML 和 XSLT 文件
+          href: xml-tools/xml-tools-in-visual-studio.md
+        - name: 使用容器进行开发
+          href: containers/index.yml
+        - name: 开发非独占应用
+          items:
+            - name: 设计可访问应用
+              href: ide/reference/resources-for-designing-accessible-applications.md
+            - name: 设计国际应用
+              displayName: Globalization localization world-ready
+              href: ide/globalizing-and-localizing-applications.md
+    - name: 访问数据 >>
+      displayName: Data connections
+      href: data-tools/accessing-data-in-visual-studio.md
+    - name: 设计用户界面 >>
+      displayName: XAML designer
+      href: designers/designing-user-interfaces.md
+    - name: 使用工作流设计器开发应用 >>
+      href: workflow-designer/developing-applications-with-the-workflow-designer.md
+    - name: 编译和生成
       items:
-      - name: “类视图”和“对象浏览器”图标
-        href: ide/class-view-and-object-browser-icons.md
-    - name: 使用任务列表
-      href: ide/using-the-task-list.md
-    - name: 在类设计器中设计类
-      href: ide/class-designer/designing-and-viewing-classes-and-types.md
-      items:
-      - name: 向项目添加类图
-        href: ide/class-designer/how-to-add-class-diagrams-to-projects.md
-      - name: 自定义类图
-        href: ide/class-designer/how-to-customize-class-diagrams.md
-      - name: 将类图元素复制到 Microsoft Office 文档
-        href: ide/class-designer/how-to-copy-class-diagram-elements-to-a-microsoft-office-document.md
-      - name: 将类图作为图像导出
-        href: ide/class-designer/how-to-export-class-diagrams-as-images.md
-      - name: 打印类图
-        href: ide/class-designer/how-to-print-class-diagrams.md
-      - name: 向类图添加注释
-        href: ide/class-designer/how-to-add-comments-to-class-diagrams.md
-      - name: 创建类和类型
-        items:
-        - name: 创建类型
-          href: ide/class-designer/how-to-create-types.md
-        - name: 创建类型之间的继承
-          href: ide/class-designer/how-to-create-inheritance-between-types.md
-        - name: 创建类型之间的关联
-          href: ide/class-designer/how-to-create-associations-between-types.md
-        - name: 可视化集合关联
-          href: ide/class-designer/how-to-visualize-a-collection-association.md
-        - name: 创建和配置类型成员
-          href: ide/class-designer/creating-and-configuring-type-members.md
-      - name: 查看类型和关系
-        items:
-        - name: 查看现有类型
-          href: ide/class-designer/how-to-view-existing-types.md
-        - name: 查看类型之间的继承
-          href: ide/class-designer/how-to-view-inheritance-between-types.md
-        - name: 成员表示法与关联表示法
-          href: ide/class-designer/how-to-change-between-member-notation-and-association-notation.md
-      - name: 重构类和类型
-        href: ide/class-designer/refactoring-classes-and-types.md
-        items:
-        - name: 实现接口
-          href: ide/class-designer/how-to-implement-an-interface.md
-        - name: 将类拆分为分部类
-          href: ide/class-designer/how-to-split-a-class-into-partial-classes.md
-        - name: 创建可以为 null 的类型
-          href: ide/class-designer/how-to-create-a-nullable-type.md
-      - name: 使用 Visual C++ 代码
-        href: ide/class-designer/working-with-visual-cpp-code.md
-        items:
-        - name: C++ 类
-          href: ide/class-designer/visual-cpp-classes.md
-        - name: C++ 结构
-          href: ide/class-designer/visual-cpp-structures.md
-        - name: C++ 枚举
-          href: ide/class-designer/visual-cpp-enumerations.md
-        - name: C++ typedef
-          href: ide/class-designer/visual-cpp-typedefs.md
-      - name: 键盘和鼠标快捷方式
-        href: ide/class-designer/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window.md
-      - name: 类设计器错误
-        href: ide/class-designer/additional-information-about-errors.md
-    - name: 改进代码
-      href: ide/find-and-fix-code-errors.md
-    - name: 跨平台移动开发
-      href: cross-platform/cross-platform-mobile-development-in-visual-studio.md
-    - name: F# 开发
-      href: ide/fsharp-visual-studio.md
-      items:
-      - name: 面向 .NET 较旧版本
-        href: ide/fsharp-target-older-dotnet-versions.md
-    - name: Office 和 SharePoint 开发
-      href: vsto/office-and-sharepoint-development-in-visual-studio.md
-    - name: 使用 XML 和 XSLT 文件
-      href: xml-tools/xml-tools-in-visual-studio.md
-    - name: 其他教程
-      items:
-      - name: 使用 C# 或 Visual Basic 创建 WPF 应用
-        href: /visualstudio/get-started/csharp/tutorial-wpf
-      - name: Windows 窗体应用教程
-        items:
-        - name: 教程 1：创建图片查看器 (C#)
-          href: ide/tutorial-1-create-a-picture-viewer.md
+        - name: 概述
+          displayName: Compile build
+          href: ide/compiling-and-building-in-visual-studio.md
+        - name: 演练：构建应用程序
+          href: ide/walkthrough-building-an-application.md
+        - name: 生成并清理项目和解决方案
           items:
-          - name: 步骤 1：创建 Windows 窗体应用程序项目
-            href: ide/step-1-create-a-windows-forms-application-project.md
-          - name: 步骤 2：运行程序
-            href: ide/step-2-run-your-program.md
-          - name: 步骤 3：设置窗体属性
-            href: ide/step-3-set-your-form-properties.md
-          - name: 步骤 4：使用 TableLayoutPanel 控件设置窗体布局
-            href: ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md
-          - name: 步骤 5：向窗体添加控件
-            href: ide/step-5-add-controls-to-your-form.md
-          - name: 步骤 6：命名按钮控件
-            href: ide/step-6-name-your-button-controls.md
-          - name: 步骤 7：向窗体添加对话框组件
-            href: ide/step-7-add-dialog-components-to-your-form.md
-          - name: 步骤 8：为“显示图片”按钮事件处理程序编写代码
-            href: ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md
-          - name: 步骤 9：检查代码、为代码添加注释和测试代码
-            href: ide/step-9-review-comment-and-test-your-code.md
-          - name: 步骤 10：为其他按钮和复选框编码代码
-            href: ide/step-10-write-code-for-additional-buttons-and-a-check-box.md
-          - name: 步骤 11：运行程序并尝试其他功能
-            href: ide/step-11-run-your-program-and-try-other-features.md
-        - name: 教程 2：创建计时数学测验 (C#)
-          href: ide/tutorial-2-create-a-timed-math-quiz.md
+            - name: 概述
+              displayName: Build clean
+              href: ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md
+            - name: 更改生成输出目录
+              href: ide/how-to-change-the-build-output-directory.md
+            - name: 生成到公共输出目录
+              href: ide/how-to-build-to-a-common-output-directory.md
+            - name: 指定自定义生成事件
+              href: ide/specifying-custom-build-events-in-visual-studio.md
+            - name: 设置多个启动项目
+              href: ide/how-to-set-multiple-startup-projects.md
+            - name: 创建和删除项目依赖项
+              href: ide/how-to-create-and-remove-project-dependencies.md
+            - name: 查看、保存和配置生成日志文件
+              href: ide/how-to-view-save-and-configure-build-log-files.md
+            - name: 从生成中排除项目
+              href: ide/how-to-exclude-projects-from-a-build.md
+            - name: 取消编译器警告
+              href: ide/how-to-suppress-compiler-warnings.md
+        - name: 生成操作
+          href: ide/build-actions.md
+        - name: 生成配置
           items:
-          - name: 步骤 1：创建项目并向窗体添加标签
-            href: ide/step-1-create-a-project-and-add-labels-to-your-form.md
-          - name: 步骤 2：创建随机加法问题
-            href: ide/step-2-create-a-random-addition-problem.md
-          - name: 步骤 3：添加倒计时计时器
-            href: ide/step-3-add-a-countdown-timer.md
-          - name: 步骤 4：添加 CheckTheAnswer() 方法
-            href: ide/step-4-add-the-checktheanswer-parens-method.md
-          - name: 步骤 5：为 NumericUpDown 控件添加 Enter 事件处理程序
-            href: ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md
-          - name: 步骤 6：添加减法问题
-            href: ide/step-6-add-a-subtraction-problem.md
-          - name: 步骤 7：添加乘法和除法问题
-            href: ide/step-7-add-multiplication-and-division-problems.md
-          - name: 步骤 8：自定义测验
-            href: ide/step-8-customize-the-quiz.md
-        - name: 教程 3：创建配对游戏 (C#)
-          href: ide/tutorial-3-create-a-matching-game.md
+            - name: 了解生成配置
+              href: ide/understanding-build-configurations.md
+            - name: 创建和编辑配置
+              href: ide/how-to-create-and-edit-configurations.md
+            - name: 使用 Visual Basic 开发人员设置管理生成配置
+              href: ide/how-to-manage-build-configurations-with-visual-basic-developer-settings-applied.md
+            - name: 同时生成多个配置
+              href: ide/how-to-build-multiple-configurations-simultaneously.md
+        - name: 生成平台
           items:
-          - name: 步骤 1：创建项目并向窗体添加表
-            href: ide/step-1-create-a-project-and-add-a-table-to-your-form.md
-          - name: 步骤 2：添加 Random 对象和图标列表
-            href: ide/step-2-add-a-random-object-and-a-list-of-icons.md
-          - name: 步骤 3：向每个标签分配一个随机图标
-            href: ide/step-3-assign-a-random-icon-to-each-label.md
-          - name: 步骤 4：向每个标签添加一个 Click 事件处理程序
-            href: ide/step-4-add-a-click-event-handler-to-each-label.md
-          - name: 步骤 5：添加标签引用
-            href: ide/step-5-add-label-references.md
-          - name: 步骤 6：添加计时器
-            href: ide/step-6-add-a-timer.md
-          - name: 步骤 7：保持对可见
-            href: ide/step-7-keep-pairs-visible.md
-          - name: 步骤 8：添加验证玩家是否获胜的方法
-            href: ide/step-8-add-a-method-to-verify-whether-the-player-won.md
-          - name: 步骤 9：尝试其他功能
-            href: ide/step-9-try-other-features.md
-  - name: 访问数据...
-    href: data-tools/accessing-data-in-visual-studio.md
-  - name: 设计用户界面...
-    href: designers/designing-user-interfaces.md
-  - name: 编译和生成
-    href: ide/compiling-and-building-in-visual-studio.md
-    items:
-    - name: 演练：构建应用程序
-      href: ide/walkthrough-building-an-application.md
-    - name: 生成并清理项目和解决方案
-      href: ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md
-      items:
-      - name: 更改生成输出目录
-        href: ide/how-to-change-the-build-output-directory.md
-      - name: 生成到公共输出目录
-        href: ide/how-to-build-to-a-common-output-directory.md
-      - name: 指定自定义生成事件
-        href: ide/specifying-custom-build-events-in-visual-studio.md
-      - name: 设置多个启动项目
-        href: ide/how-to-set-multiple-startup-projects.md
-      - name: 创建和删除项目依赖项
-        href: ide/how-to-create-and-remove-project-dependencies.md
-      - name: 查看、保存和配置生成日志文件
-        href: ide/how-to-view-save-and-configure-build-log-files.md
-      - name: 从生成中排除项目
-        href: ide/how-to-exclude-projects-from-a-build.md
-      - name: 取消编译器警告
-        href: ide/how-to-suppress-compiler-warnings.md
-    - name: 生成操作
-      href: ide/build-actions.md
-    - name: 生成配置
-      href: ide/understanding-build-configurations.md
-      items:
-      - name: 创建和编辑配置
-        href: ide/how-to-create-and-edit-configurations.md
-      - name: 使用 Visual Basic 开发人员设置管理生成配置
-        href: ide/how-to-manage-build-configurations-with-visual-basic-developer-settings-applied.md
-      - name: 同时生成多个配置
-        href: ide/how-to-build-multiple-configurations-simultaneously.md
-    - name: 生成平台
-      href: ide/understanding-build-platforms.md
-      items:
-      - name: 将项目配置为定目标到一个平台
-        href: ide/how-to-configure-projects-to-target-platforms.md
-      - name: 将项目配置为定目标到多个平台
-        href: ide/how-to-configure-projects-to-target-multiple-platforms.md
-    - name: MSBuild...
-      href: msbuild/msbuild.md
-    - name: Azure Pipelines 和 TFS...
-      href: /azure/devops/pipelines/index?view=vsts
-    - name: 指定生成事件 (Visual Basic)
-      href: ide/how-to-specify-build-events-visual-basic.md
-    - name: 指定生成事件 (C#)
-      href: ide/how-to-specify-build-events-csharp.md
-    - name: 在 Visual Basic 中配置警告
-      href: ide/configuring-warnings-in-visual-basic.md
-    - name: 演练：创建多计算机生成环境
-      href: ide/walkthrough-creating-a-multiple-computer-build-environment.md
-  - name: 调试...
-    href: debugger/index.md
-  - name: 测试...
-    href: test/improve-code-quality.md
-  - name: 测量性能...
-    href: profiling/index.md
-  - name: 分析代码质量...
-    href: code-quality/index.md
-  - name: 部署...
-    href: deployment/index.md
-  - name: 扩展 Visual Studio...
-    href: extensibility/visual-studio-sdk.md
-  - name: 对体系结构进行分析和建模...
-    href: modeling/analyze-and-model-your-architecture.md
-  - name: 自定义 IDE
-    href: ide/personalizing-the-visual-studio-ide.md
-    items:
-    - name: 快速入门：个性化设置主题和文本颜色
-      href: ide/quickstart-personalize-the-ide.md
-    - name: 环境设置
-      href: ide/environment-settings.md
-    - name: 同步设置
-      href: ide/synchronized-settings-in-visual-studio.md
-    - name: 更改字体和颜色
-      href: ide/how-to-change-fonts-and-colors-in-visual-studio.md
-    - name: 自定义菜单和工具栏
-      href: ide/how-to-customize-menus-and-toolbars-in-visual-studio.md
-    - name: 自定义窗口布局
-      href: ide/customizing-window-layouts-in-visual-studio.md
-    - name: 在解决方案资源管理器中自定义文件嵌套
-      href: ide/file-nesting-solution-explorer.md
-    - name: 自定义起始页
-      href: ide/customizing-the-start-page-for-visual-studio.md
-    - name: 查找和使用 Visual Studio 扩展
-      href: ide/finding-and-using-visual-studio-extensions.md
-    - name: 管理外部工具
-      href: ide/managing-external-tools.md
-  - name: 优化性能
-    href: ide/optimize-visual-studio-performance.md
-    items:
-    - name: 启动时间
-      href: ide/optimize-visual-studio-startup-time.md
-    - name: 加载已筛选的解决方案
-      href: ide/filtered-solutions.md
+            - name: 了解生成平台
+              href: ide/understanding-build-platforms.md
+            - name: 将项目配置为定目标到一个平台
+              href: ide/how-to-configure-projects-to-target-platforms.md
+            - name: 将项目配置为定目标到多个平台
+              href: ide/how-to-configure-projects-to-target-multiple-platforms.md
+        - name: MSBuild >>
+          href: msbuild/msbuild.md
+        - name: Azure Pipelines 和 TFS >>
+          displayName: VSTS Azure DevOps CI/CD Continuous integration delivery
+          href: /azure/devops/pipelines/index?view=vsts
+        - name: 指定生成事件 (Visual Basic)
+          href: ide/how-to-specify-build-events-visual-basic.md
+        - name: '指定生成事件 (C#)'
+          href: ide/how-to-specify-build-events-csharp.md
+        - name: 在 Visual Basic 中配置警告
+          href: ide/configuring-warnings-in-visual-basic.md
+        - name: 演练：创建多计算机生成环境
+          href: ide/walkthrough-creating-a-multiple-computer-build-environment.md
+    - name: 调试 >>
+      href: debugger/index.md
+    - name: 测试 >>
+      displayName: Unit testing
+      href: test/improve-code-quality.md
+    - name: 测量性能 >>
+      displayName: Profiling
+      href: profiling/index.md
+    - name: 分析代码质量 >>
+      displayName: Code analysis FxCop Analyzers
+      href: code-quality/index.md
+    - name: 部署 >>
+      href: deployment/index.md
+    - name: 扩展 Visual Studio >>
+      displayName: Visual Studio SDK
+      href: extensibility/visual-studio-sdk.md
+    - name: 对体系结构进行分析和建模 >>
+      href: modeling/analyze-and-model-your-architecture.md
     - name: 提示和技巧
-      href: ide/visual-studio-performance-tips-and-tricks.md
-  - name: 管理辅助功能
-    href: ide/reference/accessibility-features-of-visual-studio.md
-    items:
-    - name: 设置 IDE 辅助功能选项
-      href: ide/reference/how-to-set-ide-accessibility-options.md
-    - name: 仅使用键盘进行操作
-      href: ide/reference/how-to-use-the-keyboard-exclusively.md
-    - name: 辅助功能提示和技巧
-      href: ide/reference/accessibility-tips-and-tricks.md
-    - name: Microsoft 提供的辅助功能产品和服务
-      href: ide/reference/accessibility-products-and-services-from-microsoft.md
-    - name: 用于设计支持辅助功能的应用的资源
-      href: ide/reference/resources-for-designing-accessible-applications.md
-  - name: 全球化和本地化应用
-    href: ide/globalizing-and-localizing-applications.md
-    items:
-    - name: 国际 .NET Framework 应用简介
-      href: ide/introduction-to-international-applications-based-on-the-dotnet-framework.md
-    - name: 本地化应用
-      href: ide/localizing-applications.md
       items:
-      - name: 用于本地化的资源的分层组织
-        href: ide/hierarchical-organization-of-resources-for-localization.md
-      - name: 安全性和已本地化的附属程序集
-        href: ide/security-and-localized-satellite-assemblies.md
-      - name: 用于主程序集和已本地化的附属程序集的版本号
-        href: ide/version-numbers-for-main-and-localized-satellite-assemblies.md
-      - name: 用于本地化的非特定资源语言
-        href: ide/neutral-resources-languages-for-localization.md
-    - name: 全球化应用
-      href: ide/globalizing-applications.md
+        - name: 提高生产力的功能
+          href: ide/productivity-features.md
+        - name: 提高生产力的快捷方式
+          href: ide/productivity-shortcuts.md
+        - name: '针对 C# 开发人员的提示'
+          displayName: ReSharper
+          href: ide/csharp-developer-productivity.md
+        - name: 自定义键盘快捷方式
+          href: ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md
+        - name: 仅使用键盘进行操作
+          displayName: accessibility
+          href: ide/reference/how-to-use-the-keyboard-exclusively.md
+    - name: 个性化设置
       items:
-      - name: 全球 Windows 窗体和 Web 窗体的区域性特定类
-        href: ide/culture-specific-classes-for-global-windows-forms-and-web-forms.md
-    - name: 创建双向语言的应用
-      href: ide/creating-applications-in-bi-directional-languages.md
+        - name: 自定义 IDE
+          displayName: Personalize
+          href: ide/personalizing-the-visual-studio-ide.md
+        - name: 快速入门：个性化设置主题和文本颜色
+          href: ide/quickstart-personalize-the-ide.md
+        - name: 环境设置
+          displayName: profiles
+          href: ide/environment-settings.md
+        - name: 同步设置
+          href: ide/synchronized-settings-in-visual-studio.md
+        - name: 字体和颜色
+          href: ide/how-to-change-fonts-and-colors-in-visual-studio.md
+        - name: 菜单和工具栏
+          href: ide/how-to-customize-menus-and-toolbars-in-visual-studio.md
+        - name: 窗口布局
+          href: ide/customizing-window-layouts-in-visual-studio.md
+        - name: 解决方案资源管理器中的文件嵌套
+          href: ide/file-nesting-solution-explorer.md
+        - name: 启动行为
+          displayName: Start page window
+          href: ide/customizing-the-start-page-for-visual-studio.md
+        - name: 查找和使用 Visual Studio 扩展
+          href: ide/finding-and-using-visual-studio-extensions.md
+          displayName: 'marketplace, gallery, vsix'
+        - name: 管理外部工具
+          href: ide/managing-external-tools.md
+        - name: 个性化帐户
+          items:
+            - name: 登录 Visual Studio
+              displayName: personalization accounts
+              href: ide/signing-in-to-visual-studio.md
+            - name: 使用多个用户帐户
+              href: ide/work-with-multiple-user-accounts.md
+            - name: 扩展试用版或更新许可证
+              href: ide/how-to-unlock-visual-studio.md
+    - name: Visual Studio 的性能
+      items:
+        - name: 优化性能
+          href: ide/optimize-visual-studio-performance.md
+        - name: 启动时间
+          href: ide/optimize-visual-studio-startup-time.md
+        - name: 加载已筛选的解决方案
+          href: ide/filtered-solutions.md
+        - name: 提示和技巧
+          href: ide/visual-studio-performance-tips-and-tricks.md
+    - name: 可访问性
+      items:
+        - name: 管理辅助功能
+          href: ide/reference/accessibility-features-of-visual-studio.md
+        - name: 设置 IDE 辅助功能选项
+          href: ide/reference/how-to-set-ide-accessibility-options.md
+        - name: 辅助功能提示和技巧
+          href: ide/reference/accessibility-tips-and-tricks.md
+        - name: Microsoft 提供的辅助功能产品和服务
+          href: ide/reference/accessibility-products-and-services-from-microsoft.md
 - name: 参考
   items:
-  - name: 项目和项模板
-    items:
-    - name: 模板参数
-      href: ide/template-parameters.md
-  - name: 常规用户界面元素
-    items:
-    - name: 调用层次结构
-      href: ide/reference/call-hierarchy.md
-    - name: 预览更改
-      href: ide/preview-changes.md
-    - name: 选择工具箱项，WPF 组件
-      href: ide/reference/choose-toolbox-items-wpf-components.md
-    - name: 代码段选择器
-      href: ide/reference/code-snippet-picker.md
-    - name: “命令”窗口
-      href: ide/reference/command-window.md
-    - name: “转换”对话框
-      href: ide/reference/convert-dialog-box.md
-    - name: “错误列表”窗口
-      href: ide/reference/error-list-window.md
-    - name: 文件属性，JavaScript
-      href: ide/reference/file-properties-javascript.md
-    - name: 转到行
-      href: ide/reference/go-to-line.md
-    - name: 即时窗口
-      href: ide/reference/immediate-window.md
-    - name: 杂项文件
-      href: ide/reference/miscellaneous-files.md
-    - name: “选项”对话框
-      href: ide/reference/options-dialog-box-visual-studio.md
+    - name: 键盘快捷键
       items:
-      - name: “选项”对话框 ->“环境”
-        href: ide/reference/environment-options-dialog-box.md
-        items:
-        - name: 环境 - 常规
-          href: ide/reference/general-environment-options-dialog-box.md
-        - name: 环境 - 自动恢复
-          href: ide/reference/autorecover-environment-options-dialog-box.md
-        - name: 环境 - 文档
-          href: ide/reference/documents-environment-options-dialog-box.md
-        - name: 环境 - 扩展和更新
-          href: ide/reference/extensions-and-updates-environment-options-dialog-box.md
-        - name: 环境 - 查找和替换
-          href: ide/reference/find-and-replace-environment-options-dialog-box.md
-        - name: 环境 - 字体和颜色
-          href: ide/reference/fonts-and-colors-environment-options-dialog-box.md
-        - name: 环境 - 导入和导出设置
-          href: ide/reference/import-and-export-settings-environment-options-dialog-box.md
-        - name: 环境 - 区域设置
-          href: ide/reference/international-settings-environment-options-dialog-box.md
-        - name: 环境 - 键盘
-          href: ide/reference/keyboard-environment-options-dialog-box.md
-        - name: 环境 - 通知
-          href: ide/reference/notifications-environment-options-dialog-box.md
-        - name: 环境 - 快速启动
-          href: ide/reference/quick-launch-environment-options-dialog-box.md
-        - name: 环境 - 启动
-          href: ide/reference/startup-environment-options-dialog-box.md
-        - name: 环境 - 帐户
-          href: ide/reference/accounts-environment-options-dialog-box.md
-        - name: 环境 - 选项卡和窗口
-          href: ide/reference/tabs-and-windows-environment-options-dialog-box.md
-        - name: 环境 - 任务列表
-          href: ide/reference/task-list-environment-options-dialog-box.md
-        - name: 环境 - 信任设置
-          href: ide/reference/trust-settings.md
-        - name: 环境 - Web 浏览器
-          href: ide/reference/web-browser-environment-options-dialog-box.md
-      - name: “选项”对话框 ->“文本编辑器”
-        href: ide/reference/text-editor-options-dialog-box.md
-        items:
-        - name: 文本编辑器 - 常规
-          href: ide/reference/options-text-editor-general.md
-        - name: 文本编辑器 - 文件扩展名
-          href: ide/reference/options-text-editor-file-extension.md
-        - name: 文本编辑器 - 所有语言
-          href: ide/reference/options-text-editor-all-languages.md
-        - name: 文本编辑器 - 所有语言，滚动条
-          href: ide/reference/options-text-editor-all-languages-scroll-bars.md
-        - name: 文本编辑器 - 所有语言，选项卡
-          href: ide/reference/options-text-editor-all-languages-tabs.md
-        - name: 文本编辑器 - 基本 (Visual Basic)，高级
-          href: ide/reference/options-text-editor-basic-visual-basic.md
-        - name: 文本编辑器 - 基本 (Visual Basic)，代码样式
-          href: ide/code-styles-and-quick-actions.md
-        - name: 文本编辑器 - 基本 (Visual Basic)，IntelliSense
-          href: ide/visual-basic-specific-intellisense.md
-        - name: 文本编辑器 - C/C++，格式设置
-          href: ide/reference/options-text-editor-c-cpp-formatting.md
-        - name: 文本编辑器 - C/C++，高级
-          href: ide/reference/options-text-editor-c-cpp-advanced.md
-        - name: 文本编辑器 - C/C++，试验
-          href: ide/reference/options-text-editor-c-cpp-experimental.md
-        - name: 文本编辑器 - C/C++，视图
-          href: ide/reference/options-text-editor-c-cpp-view.md
-        - name: 文本编辑器 - C#，代码样式，格式设置
-          href: ide/reference/options-text-editor-csharp-formatting.md
-        - name: 文本编辑器 - C#，高级
-          href: ide/reference/options-text-editor-csharp-advanced.md
-        - name: 文本编辑器 - C#，IntelliSense
-          href: ide/reference/options-text-editor-csharp-intellisense.md
-        - name: 文本编辑器 - F#，高级
-          href: ide/reference/options-text-editor-fsharp-advanced.md
-        - name: 文本编辑器 - F#，代码修补程序
-          href: ide/reference/options-text-editor-fsharp-code-fixes.md
-        - name: 文本编辑器 - F#，CodeLens
-          href: ide/reference/options-text-editor-fsharp-codelens.md
-        - name: 文本编辑器 - F#，IntelliSense
-          href: ide/reference/options-text-editor-fsharp-intellisense.md
-        - name: 文本编辑器 - HTML（Web 窗体），格式设置
-          href: ide/reference/options-text-editor-html-formatting.md
-        - name: 文本编辑器 - HTML（Web 窗体），杂项
-          href: ide/reference/options-text-editor-html-miscellaneous.md
-        - name: 文本编辑器 - HTML（Web 窗体），验证
-          href: ide/reference/options-text-editor-html-validation.md
-        - name: 文本编辑器 - JavaScript，代码验证
-          href: ide/reference/options-text-editor-javascript-code-validation.md
-        - name: 文本编辑器 - JavaScript，格式设置
-          href: ide/reference/options-text-editor-javascript-formatting.md
-        - name: 文本编辑器 - JavaScript，IntelliSense
-          href: ide/reference/options-text-editor-javascript-intellisense.md
-        - name: 文本编辑器 - JavaScript，Linting
-          href: ide/reference/options-text-editor-javascript-linting.md
-        - name: 文本编辑器 - JavaScript，项目
-          href: ide/reference/options-text-editor-javascript-project.md
-        - name: 文本编辑器 - U-SQL，格式设置
-          href: ide/reference/options-text-editor-usql-formatting.md
-        - name: 文本编辑器 - U-SQL，IntelliSense
-          href: ide/reference/options-text-editor-usql-intellisense.md
-        - name: 文本编辑器 - XAML，格式设置
-          href: ide/reference/options-text-editor-xaml-formatting.md
-        - name: 文本编辑器 - XAML，杂项
-          href: ide/reference/options-text-editor-xaml-miscellaneous.md
-        - name: 文本编辑器 - XML，格式设置
-          href: ide/reference/options-text-editor-xml-formatting.md
-        - name: 文本编辑器 - XML，杂项
-          href: ide/reference/options-text-editor-xml-miscellaneous.md
-      - name: 项目和解决方案选项对话框
-        href: ide/reference/projects-and-solutions-options-dialog-box.md
-        items:
-        - name: 项目和解决方案 - 生成和运行
-          href: ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md
-        - name: 项目和解决方案 - Web 项目
-          href: ide/reference/options-dialog-box-projects-and-solutions-web-projects.md
-        - name: 项目和解决方案 - VB 默认值
-          href: ide/reference/visual-basic-defaults-projects-options-dialog-box.md
-        - name: 项目和解决方案 - VC++ 项目设置
-          href: ide/reference/vcpp-project-settings-projects-and-solutions-options-dialog-box.md
-      - name: XAML 设计器选项对话框
-        href: ide/reference/xaml-designer.md
-    - name: 输出窗口
-      href: ide/reference/output-window.md
-    - name: 项目属性引用
-      href: ide/reference/project-properties-reference.md
+        - name: 常用命令
+          displayName: keyboard shortcuts
+          href: ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md
+        - name: 所有命令
+          displayName: keyboard commands
+          href: ide/default-keyboard-shortcuts-in-visual-studio.md
+    - name: Visual Studio 命令
       items:
-      - name: “项目设计器”->“应用程序”页 (UWP)
-        href: ide/reference/application-page-project-designer-uwp.md
-      - name: Application Page, Project Designer (Visual Basic)
-        href: ide/reference/application-page-project-designer-visual-basic.md
-        items:
-        - name: “程序集信息”对话框
-          href: ide/reference/assembly-information-dialog-box.md
-      - name: “项目设计器”->“应用程序”页 (C#)
-        href: ide/reference/application-page-project-designer-csharp.md
-      - name: “项目设计器”->“生成事件”页 (C#)
-        href: ide/reference/build-events-page-project-designer-csharp.md
-        items:
-        - name: 预生成事件/生成后事件命令行对话框
-          href: ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md
-      - name: “项目设计器”->“生成”页 (C#)
-        href: ide/reference/build-page-project-designer-csharp.md
-        items:
-        - name: “高级生成设置”对话框 (C#)
-          href: ide/reference/advanced-build-settings-dialog-box-csharp.md
-      - name: “项目设计器”->“代码分析”
-        href: ide/reference/code-analysis-project-designer.md
-      - name: “编译”页, 项目设计器 (Visual Basic)
-        href: ide/reference/compile-page-project-designer-visual-basic.md
-        items:
-        - name: “高级编译器设置”对话框 (Visual Basic)
-          href: ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md
-        - name: “生成事件”对话框 (Visual Basic)
-          href: ide/reference/build-events-dialog-box-visual-basic.md
-      - name: “项目设计器”->“调试”页
-        href: ide/reference/debug-page-project-designer.md
-      - name: “项目设计器”->“My 扩展”页 (Visual Basic)
-        href: ide/reference/my-extensions-page-project-designer-visual-basic.md
-      - name: “项目设计器”->“发布”页
-        href: ide/reference/publish-page-project-designer.md
-        items:
-        - name: “系统必备”对话框
-          href: ide/reference/prerequisites-dialog-box.md
-      - name: 项目设计器 ->“引用”页 (Visual Basic)
-        href: ide/reference/references-page-project-designer-visual-basic.md
-      - name: ”项目设计器“ ->“安全”页
-        href: ide/reference/security-page-project-designer.md
-        items:
-        - name: “高级安全设置”对话框
-          href: ide/reference/advanced-security-settings-dialog-box.md
-      - name: “项目设计器”->“服务”页
-        href: ide/reference/services-page-project-designer.md
-        items:
-        - name: “高级服务设置”对话框
-          href: ide/reference/advanced-settings-for-services-dialog-box.md
-      - name: “设置”页面，项目设计器
-        href: ide/reference/settings-page-project-designer.md
-      - name: “项目设计器”->“签名”页
-        href: ide/reference/signing-page-project-designer.md
-    - name: 属性页，JavaScript
-      href: ide/reference/property-pages-javascript.md
-    - name: “属性”窗口
-      href: ide/reference/properties-window.md
-    - name: 团队资源管理器参考
-      href: ide/reference/team-explorer-reference.md
-    - name: 工具箱
-      href: ide/reference/toolbox.md
+        - name: 参考
+          displayName: Visual Studio commands
+          href: ide/reference/visual-studio-commands.md
+        - name: 命令别名
+          href: ide/reference/visual-studio-command-aliases.md
+        - name: “添加现有项”命令
+          href: ide/reference/add-existing-item-command.md
+        - name: “添加现有项目”命令
+          href: ide/reference/add-existing-project-command.md
+        - name: “添加新项”命令
+          href: ide/reference/add-new-item-command.md
+        - name: “别名”命令
+          href: ide/reference/alias-command.md
+        - name: Evaluate Statement 命令
+          href: ide/reference/evaluate-statement-command.md
+        - name: “查找”命令
+          href: ide/reference/find-command.md
+        - name: “在文件中查找”命令
+          href: ide/reference/find-in-files-command.md
+        - name: “转到”命令
+          href: ide/reference/go-to-command.md
+        - name: “导入和导出设置”命令
+          href: ide/reference/import-and-export-settings-command.md
+        - name: “列出调用堆栈”命令
+          href: ide/reference/list-call-stack-command.md
+        - name: “列出反汇编”命令
+          href: ide/reference/list-disassembly-command.md
+        - name: “列出内存”命令
+          href: ide/reference/list-memory-command.md
+        - name: “列出模块”命令
+          href: ide/reference/list-modules-command.md
+        - name: “列出寄存器”命令
+          href: ide/reference/list-registers-command.md
+        - name: “列出源”命令
+          href: ide/reference/list-source-command.md
+        - name: “列出线程”命令
+          href: ide/reference/list-threads-command.md
+        - name: “日志命令窗口输出”命令
+          href: ide/reference/log-command-window-output-command.md
+        - name: “新建文件”命令
+          href: ide/reference/new-file-command.md
+        - name: “打开文件”命令
+          href: ide/reference/open-file-command.md
+        - name: “打开项目”命令
+          href: ide/reference/open-project-command.md
+        - name: “打印”命令
+          href: ide/reference/print-command.md
+        - name: “快速监视”命令
+          href: ide/reference/quick-watch-command.md
+        - name: “替换”命令
+          href: ide/reference/replace-command.md
+        - name: “在文件中替换”命令
+          href: ide/reference/replace-in-files-command.md
+        - name: 设置当前进程
+          href: ide/reference/set-current-process.md
+        - name: “设置当前堆栈帧”命令
+          href: ide/reference/set-current-stack-frame-command.md
+        - name: “设置当前线程”命令
+          href: ide/reference/set-current-thread-command.md
+        - name: “设置基数”命令
+          href: ide/reference/set-radix-command.md
+        - name: Shell 命令
+          href: ide/reference/shell-command.md
+        - name: ShowWebBrowser 命令
+          href: ide/reference/showwebbrowser-command.md
+        - name: “启动”命令
+          href: ide/reference/start-command.md
+        - name: “符号路径”命令
+          href: ide/reference/symbol-path-command.md
+        - name: “切换断点”命令
+          href: ide/reference/toggle-breakpoint-command.md
+        - name: “监视”命令
+          href: ide/reference/watch-command.md
+    - name: 常规用户界面元素
+      displayName: Windows and dialogs
       items:
-      - name: 工具箱，“组件”选项卡
-        href: ide/reference/toolbox-components-tab.md
-      - name: 工具箱，“数据”选项卡
-        href: ide/reference/toolbox-data-tab.md
-      - name: 工具箱，“HTML”选项卡
-        href: ide/reference/toolbox-html-tab.md
-  - name: Devenv 命令行开关
-    href: ide/reference/devenv-command-line-switches.md
-    items:
-    - name: -? (devenv.exe)
-      href: ide/reference/q-devenv-exe.md
-    - name: -Build (devenv.exe)
-      href: ide/reference/build-devenv-exe.md
-    - name: -Clean (devenv.exe)
-      href: ide/reference/clean-devenv-exe.md
-    - name: -Command (devenv.exe)
-      href: ide/reference/command-devenv-exe.md
-    - name: -DebugExe (devenv.exe)
-      href: ide/reference/debugexe-devenv-exe.md
-    - name: -Deploy (devenv.exe)
-      href: ide/reference/deploy-devenv-exe.md
-    - name: -Diff (devenv.exe)
-      href: ide/reference/diff.md
-    - name: -Edit (devenv.exe)
-      href: ide/reference/edit-devenv-exe.md
-    - name: -LCID (devenv.exe)
-      href: ide/reference/lcid-devenv-exe.md
-    - name: -Log (devenv.exe)
-      href: ide/reference/log-devenv-exe.md
-    - name: -NoSplash (devenv.exe)
-      href: ide/reference/nosplash-devenv-exe.md
-    - name: -Out (devenv.exe)
-      href: ide/reference/out-devenv-exe.md
-    - name: -Project (devenv.exe)
-      href: ide/reference/project-devenv-exe.md
-    - name: -ProjectConfig (devenv.exe)
-      href: ide/reference/projectconfig-devenv-exe.md
-    - name: -Rebuild (devenv.exe)
-      href: ide/reference/rebuild-devenv-exe.md
-    - name: -ResetSettings (devenv.exe)
-      href: ide/reference/resetsettings-devenv-exe.md
-    - name: -Run (devenv.exe)
-      href: ide/reference/run-devenv-exe.md
-    - name: -Runexit (devenv.exe)
-      href: ide/reference/runexit-devenv-exe.md
-    - name: -SafeMode (devenv.exe)
-      href: ide/reference/safemode-devenv-exe.md
-    - name: -Upgrade (devenv.exe)
-      href: ide/reference/upgrade-devenv-exe.md
-    - name: -UseEnv (devenv.exe)
-      href: ide/reference/useenv-devenv-exe.md
-  - name: Visual Studio 命令
-    href: ide/reference/visual-studio-commands.md
-    items:
-    - name: Visual Studio Command Aliases
-      href: ide/reference/visual-studio-command-aliases.md
-    - name: “添加现有项”命令
-      href: ide/reference/add-existing-item-command.md
-    - name: “添加现有项目”命令
-      href: ide/reference/add-existing-project-command.md
-    - name: “添加新项”命令
-      href: ide/reference/add-new-item-command.md
-    - name: “别名”命令
-      href: ide/reference/alias-command.md
-    - name: “计算语句”命令
-      href: ide/reference/evaluate-statement-command.md
-    - name: “查找”命令
-      href: ide/reference/find-command.md
-    - name: “在文件中查找”命令
-      href: ide/reference/find-in-files-command.md
-    - name: “转到”命令
-      href: ide/reference/go-to-command.md
-    - name: “导入和导出设置”命令
-      href: ide/reference/import-and-export-settings-command.md
-    - name: “列出调用堆栈”命令
-      href: ide/reference/list-call-stack-command.md
-    - name: “列出反汇编”命令
-      href: ide/reference/list-disassembly-command.md
-    - name: “列出内存”命令
-      href: ide/reference/list-memory-command.md
-    - name: “列出模块”命令
-      href: ide/reference/list-modules-command.md
-    - name: “列出寄存器”命令
-      href: ide/reference/list-registers-command.md
-    - name: “列出源”命令
-      href: ide/reference/list-source-command.md
-    - name: “列出线程”命令
-      href: ide/reference/list-threads-command.md
-    - name: “日志命令窗口输出”命令
-      href: ide/reference/log-command-window-output-command.md
-    - name: “新建文件”命令
-      href: ide/reference/new-file-command.md
-    - name: “打开文件”命令
-      href: ide/reference/open-file-command.md
-    - name: “打开项目”命令
-      href: ide/reference/open-project-command.md
-    - name: Print 命令
-      href: ide/reference/print-command.md
-    - name: “快速监视”命令
-      href: ide/reference/quick-watch-command.md
-    - name: Replace 命令
-      href: ide/reference/replace-command.md
-    - name: “在文件中替换”命令
-      href: ide/reference/replace-in-files-command.md
-    - name: 设置当前进程
-      href: ide/reference/set-current-process.md
-    - name: “设置当前堆栈帧”命令
-      href: ide/reference/set-current-stack-frame-command.md
-    - name: “设置当前线程”命令
-      href: ide/reference/set-current-thread-command.md
-    - name: “设置基数”命令
-      href: ide/reference/set-radix-command.md
-    - name: shell 命令
-      href: ide/reference/shell-command.md
-    - name: ShowWebBrowser 命令
-      href: ide/reference/showwebbrowser-command.md
-    - name: “启动”命令
-      href: ide/reference/start-command.md
-    - name: “符号路径”命令
-      href: ide/reference/symbol-path-command.md
-    - name: “切换断点”命令
-      href: ide/reference/toggle-breakpoint-command.md
-    - name: “监视”命令
-      href: ide/reference/watch-command.md
-  - name: 安全性
-    items:
-    - name: 开发安全应用程序
-      href: ide/securing-applications.md
-    - name: 以常规用户或管理员身份运行 Visual Studio
-      href: ide/user-permissions-and-visual-studio.md
-    - name: Windows 信息保护 (WIP)
-      href: ide/exempt-visual-studio-from-wip.md
-  - name: Microsoft Help Viewer
-    href: help-viewer/overview.md
-    items:
-    - name: 安装和管理本地内容
-      href: help-viewer/install-manage-local-content.md
-    - name: 在 Help Viewer 中查找主题
+        - name: 调用层次结构
+          href: ide/reference/call-hierarchy.md
+        - name: 预览更改
+          href: ide/preview-changes.md
+        - name: “选择工具箱项”->“WPF 组件”
+          href: ide/reference/choose-toolbox-items-wpf-components.md
+        - name: 代码段选择器
+          href: ide/reference/code-snippet-picker.md
+        - name: “命令”窗口
+          href: ide/reference/command-window.md
+        - name: “转换”对话框
+          href: ide/reference/convert-dialog-box.md
+        - name: “错误列表”窗口
+          href: ide/reference/error-list-window.md
+        - name: 文件属性，JavaScript
+          href: ide/reference/file-properties-javascript.md
+        - name: 转到行
+          href: ide/reference/go-to-line.md
+        - name: 即时窗口
+          href: ide/reference/immediate-window.md
+        - name: 杂项文件
+          href: ide/reference/miscellaneous-files.md
+        - name: 选项
+          items:
+            - name: “选项”对话框
+              href: ide/reference/options-dialog-box-visual-studio.md
+            - name: 环境
+              items:
+                - name: 常规
+                  href: ide/reference/general-environment-options-dialog-box.md
+                - name: 帐户
+                  href: ide/reference/accounts-environment-options-dialog-box.md
+                - name: 自动恢复
+                  href: ide/reference/autorecover-environment-options-dialog-box.md
+                - name: 文档
+                  href: ide/reference/documents-environment-options-dialog-box.md
+                - name: 扩展
+                  href: ide/reference/extensions-and-updates-environment-options-dialog-box.md
+                - name: 查找和替换
+                  href: ide/reference/find-and-replace-environment-options-dialog-box.md
+                - name: 字体和颜色
+                  href: ide/reference/fonts-and-colors-environment-options-dialog-box.md
+                - name: 导入和导出设置
+                  href: ide/reference/import-and-export-settings-environment-options-dialog-box.md
+                - name: 国际设置
+                  href: ide/reference/international-settings-environment-options-dialog-box.md
+                - name: 键盘
+                  href: ide/reference/keyboard-environment-options-dialog-box.md
+                - name: 预览功能
+                  href: ide/reference/environment-preview-features-options.md
+                - name: 通知
+                  href: ide/reference/notifications-environment-options-dialog-box.md
+                - name: 快速启动
+                  href: ide/reference/quick-launch-environment-options-dialog-box.md
+                - name: 启动
+                  href: ide/reference/startup-environment-options-dialog-box.md
+                - name: 选项卡和窗口
+                  href: ide/reference/tabs-and-windows-environment-options-dialog-box.md
+                - name: 任务列表
+                  href: ide/reference/task-list-environment-options-dialog-box.md
+                - name: 信任设置
+                  href: ide/reference/trust-settings.md
+                - name: Web 浏览器
+                  href: ide/reference/web-browser-environment-options-dialog-box.md
+            - name: 项目和解决方案
+              items:
+                - name: 常规
+                  href: ide/reference/projects-and-solutions-options-dialog-box.md
+                - name: 生成和运行
+                  href: ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md
+                - name: 位置
+                  href: ide/reference/projects-solutions-locations-options.md
+                - name: VB 默认值
+                  href: ide/reference/visual-basic-defaults-projects-options-dialog-box.md
+                - name: VC++ 项目设置
+                  href: ide/reference/vcpp-project-settings-projects-and-solutions-options-dialog-box.md
+                - name: Web 项目
+                  href: ide/reference/options-dialog-box-projects-and-solutions-web-projects.md
+            - name: 文本编辑器
+              items:
+                - name: 常规
+                  href: ide/reference/options-text-editor-general.md
+                - name: 文件扩展名
+                  href: ide/reference/options-text-editor-file-extension.md
+                - name: 所有语言
+                  items:
+                    - name: 常规
+                      href: ide/reference/options-text-editor-all-languages.md
+                    - name: 滚动条
+                      href: ide/reference/options-text-editor-all-languages-scroll-bars.md
+                    - name: 制表符
+                      href: ide/reference/options-text-editor-all-languages-tabs.md
+                - name: Basic
+                  items:
+                    - name: 高级
+                      href: ide/reference/options-text-editor-basic-visual-basic.md
+                    - name: 代码样式
+                      href: ide/code-styles-and-code-cleanup.md
+                    - name: IntelliSense
+                      href: ide/visual-basic-specific-intellisense.md
+                - name: 'C#'
+                  items:
+                    - name: 高级
+                      href: ide/reference/options-text-editor-csharp-advanced.md
+                    - name: 代码样式 > 格式设置
+                      href: ide/reference/options-text-editor-csharp-formatting.md
+                    - name: IntelliSense
+                      href: ide/reference/options-text-editor-csharp-intellisense.md
+                - name: C/C++
+                  items:
+                    - name: 高级
+                      href: ide/reference/options-text-editor-c-cpp-advanced.md
+                    - name: 实验
+                      href: ide/reference/options-text-editor-c-cpp-experimental.md
+                    - name: 格式化
+                      href: ide/reference/options-text-editor-c-cpp-formatting.md
+                    - name: 视图
+                      href: ide/reference/options-text-editor-c-cpp-view.md
+                - name: 'F#'
+                  items:
+                    - name: 高级
+                      href: ide/reference/options-text-editor-fsharp-advanced.md
+                    - name: 代码修复
+                      href: ide/reference/options-text-editor-fsharp-code-fixes.md
+                    - name: CodeLens
+                      href: ide/reference/options-text-editor-fsharp-codelens.md
+                    - name: IntelliSense
+                      href: ide/reference/options-text-editor-fsharp-intellisense.md
+                - name: HTML (Web Forms)
+                  items:
+                    - name: 格式化
+                      href: ide/reference/options-text-editor-html-formatting.md
+                    - name: 杂项
+                      href: ide/reference/options-text-editor-html-miscellaneous.md
+                    - name: 验证
+                      href: ide/reference/options-text-editor-html-validation.md
+                - name: JavaScript/TypeScript
+                  items:
+                    - name: 代码验证
+                      href: ide/reference/options-text-editor-javascript-code-validation.md
+                    - name: 格式化
+                      href: ide/reference/options-text-editor-javascript-formatting.md
+                    - name: IntelliSense
+                      href: ide/reference/options-text-editor-javascript-intellisense.md
+                    - name: Linting
+                      href: ide/reference/options-text-editor-javascript-linting.md
+                    - name: 项目
+                      href: ide/reference/options-text-editor-javascript-project.md
+                - name: U-SQL
+                  items:
+                    - name: 格式化
+                      href: ide/reference/options-text-editor-usql-formatting.md
+                    - name: IntelliSense
+                      href: ide/reference/options-text-editor-usql-intellisense.md
+                - name: XAML
+                  items:
+                    - name: 格式化
+                      href: ide/reference/options-text-editor-xaml-formatting.md
+                    - name: 杂项
+                      href: ide/reference/options-text-editor-xaml-miscellaneous.md
+                - name: XML
+                  items:
+                    - name: 格式化
+                      href: ide/reference/options-text-editor-xml-formatting.md
+                    - name: 杂项
+                      href: ide/reference/options-text-editor-xml-miscellaneous.md
+            - name: Windows Forms Designer — Windows 窗体设计器
+              items:
+                - name: 常规
+                  href: ide/reference/options-windows-forms-designer.md
+                - name: 数据 UI 自定义
+                  href: ide/reference/options-windows-forms-designer-data-ui-customization.md
+            - name: XAML 设计器
+              href: ide/reference/xaml-designer.md
+        - name: “输出”窗口
+          href: ide/reference/output-window.md
+        - name: 项目属性
+          items:
+            - name: 参考
+              displayName: Project properties
+              href: ide/reference/project-properties-reference.md
+            - name: “项目设计器”->“应用程序”页 (UWP)
+              href: ide/reference/application-page-project-designer-uwp.md
+            - name: 'Application Page, Project Designer (Visual Basic)'
+              items:
+                - name: “应用程序”页
+                  href: ide/reference/application-page-project-designer-visual-basic.md
+                - name: “程序集信息”对话框
+                  href: ide/reference/assembly-information-dialog-box.md
+            - name: '“项目设计器”->“应用程序”页 (C#)'
+              href: ide/reference/application-page-project-designer-csharp.md
+            - name: '“项目设计器”->“生成事件”页 (C#)'
+              items:
+                - name: “生成事件”页
+                  href: ide/reference/build-events-page-project-designer-csharp.md
+                - name: 预生成事件/生成后事件命令行对话框
+                  href: ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md
+            - name: '“项目设计器”->“生成”页 (C#)'
+              items:
+                - name: “生成”页
+                  href: ide/reference/build-page-project-designer-csharp.md
+                - name: '“高级生成设置”对话框 (C#)'
+                  href: ide/reference/advanced-build-settings-dialog-box-csharp.md
+            - name: “项目设计器”->“代码分析”
+              href: ide/reference/code-analysis-project-designer.md
+            - name: '“编译”页, 项目设计器 (Visual Basic)'
+              items:
+                - name: “编译”页
+                  href: ide/reference/compile-page-project-designer-visual-basic.md
+                - name: “高级编译器设置”对话框 (Visual Basic)
+                  href: ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md
+                - name: “生成事件”对话框 (Visual Basic)
+                  href: ide/reference/build-events-dialog-box-visual-basic.md
+            - name: “项目设计器”->“调试”页
+              href: ide/reference/debug-page-project-designer.md
+            - name: “项目设计器”->“My 扩展”页 (Visual Basic)
+              href: ide/reference/my-extensions-page-project-designer-visual-basic.md
+            - name: “项目设计器”->“发布”页
+              items:
+                - name: “发布”页面
+                  href: ide/reference/publish-page-project-designer.md
+                - name: “系统必备”对话框
+                  href: ide/reference/prerequisites-dialog-box.md
+            - name: 项目设计器 ->“引用”页 (Visual Basic)
+              href: ide/reference/references-page-project-designer-visual-basic.md
+            - name: ”项目设计器“ ->“安全”页
+              items:
+                - name: “安全”页
+                  href: ide/reference/security-page-project-designer.md
+                - name: “高级安全设置”对话框
+                  href: ide/reference/advanced-security-settings-dialog-box.md
+            - name: “项目设计器”->“服务”页
+              items:
+                - name: “服务”页
+                  href: ide/reference/services-page-project-designer.md
+                - name: “高级服务设置”对话框
+                  href: ide/reference/advanced-settings-for-services-dialog-box.md
+            - name: “设置”页面，项目设计器
+              href: ide/reference/settings-page-project-designer.md
+            - name: “项目设计器”->“签名”页
+              href: ide/reference/signing-page-project-designer.md
+        - name: 属性页，JavaScript
+          href: ide/reference/property-pages-javascript.md
+        - name: “属性”窗口
+          href: ide/reference/properties-window.md
+        - name: 团队资源管理器参考
+          href: ide/reference/team-explorer-reference.md
+        - name: 工具箱
+          items:
+            - name: 参考
+              displayName: Toolbox
+              href: ide/reference/toolbox.md
+            - name: 工具箱，“组件”选项卡
+              href: ide/reference/toolbox-components-tab.md
+            - name: 工具箱，“数据”选项卡
+              href: ide/reference/toolbox-data-tab.md
+            - name: 工具箱，“HTML”选项卡
+              href: ide/reference/toolbox-html-tab.md
+    - name: Devenv 命令行开关
       items:
-      - name: 在索引中查找主题
-        href: help-viewer/find-topics-index.md
-      - name: 在目录中查找主题
-        href: help-viewer/find-topics-toc.md
-      - name: 搜索主题
-        href: help-viewer/find-topics.md
-        items:
-        - name: 搜索表达式中的逻辑和高级运算符
-          href: help-viewer/logical-operators-search-expressions.md
-    - name: 自定义 Help Viewer
-      href: help-viewer/customize.md
-    - name: 辅助功能
-      href: help-viewer/accessibility-features.md
+        - name: 参考
+          displayName: devenv command-line switches
+          href: ide/reference/devenv-command-line-switches.md
+        - name: '-? (devenv.exe)'
+          href: ide/reference/q-devenv-exe.md
+        - name: '-Build (devenv.exe)'
+          href: ide/reference/build-devenv-exe.md
+        - name: '-Clean (devenv.exe)'
+          href: ide/reference/clean-devenv-exe.md
+        - name: '-Command (devenv.exe)'
+          href: ide/reference/command-devenv-exe.md
+        - name: '-DebugExe (devenv.exe)'
+          href: ide/reference/debugexe-devenv-exe.md
+        - name: '-Deploy (devenv.exe)'
+          href: ide/reference/deploy-devenv-exe.md
+        - name: '-Diff (devenv.exe)'
+          href: ide/reference/diff.md
+        - name: '-DoNotLoadProjects (devenv.exe)'
+          href: ide/reference/donotloadprojects-devenv-exe.md
+        - name: '-Edit (devenv.exe)'
+          href: ide/reference/edit-devenv-exe.md
+        - name: '-LCID (devenv.exe)'
+          href: ide/reference/lcid-devenv-exe.md
+        - name: '-Log (devenv.exe)'
+          href: ide/reference/log-devenv-exe.md
+        - name: '-NoSplash (devenv.exe)'
+          href: ide/reference/nosplash-devenv-exe.md
+        - name: '-Out (devenv.exe)'
+          href: ide/reference/out-devenv-exe.md
+        - name: '-Project (devenv.exe)'
+          href: ide/reference/project-devenv-exe.md
+        - name: '-ProjectConfig (devenv.exe)'
+          href: ide/reference/projectconfig-devenv-exe.md
+        - name: '-Rebuild (devenv.exe)'
+          href: ide/reference/rebuild-devenv-exe.md
+        - name: '-ResetSettings (devenv.exe)'
+          href: ide/reference/resetsettings-devenv-exe.md
+        - name: '-Run (devenv.exe)'
+          href: ide/reference/run-devenv-exe.md
+        - name: '-Runexit (devenv.exe)'
+          href: ide/reference/runexit-devenv-exe.md
+        - name: '-SafeMode (devenv.exe)'
+          href: ide/reference/safemode-devenv-exe.md
+        - name: '-Upgrade (devenv.exe)'
+          href: ide/reference/upgrade-devenv-exe.md
+        - name: '-UseEnv (devenv.exe)'
+          href: ide/reference/useenv-devenv-exe.md
+    - name: 安全性
       items:
-      - name: 快捷键
-        href: help-viewer/shortcut-keys.md
-  - name: Dotfuscator 社区版 (CE)
-    href: ide/dotfuscator/index.md
-    items:
-    - name: Dotfuscator 的功能
-      href: ide/dotfuscator/capabilities.md
-    - name: 安装 Dotfuscator CE
-      href: ide/dotfuscator/install.md
-    - name: 升级 Dotfuscator CE
-      href: ide/dotfuscator/upgrades.md
+        - name: 开发安全应用程序
+          href: ide/securing-applications.md
+        - name: 以常规用户或管理员身份运行 Visual Studio
+          href: ide/user-permissions-and-visual-studio.md
+        - name: Windows 信息保护 (WIP)
+          href: ide/exempt-visual-studio-from-wip.md
+    - name: 双向语言输入
+      href: ide/use-bidirectional-languages.md
+    - name: Microsoft Help Viewer
+      items:
+        - name: 概述
+          displayName: Help Viewer
+          href: help-viewer/overview.md
+        - name: 安装和管理本地内容
+          displayName: Offline books docs
+          href: help-viewer/install-manage-local-content.md
+        - name: 在 Help Viewer 中查找主题
+          items:
+            - name: 在索引中查找主题
+              href: help-viewer/find-topics-index.md
+            - name: 在目录中查找主题
+              href: help-viewer/find-topics-toc.md
+            - name: 搜索
+              items:
+                - name: 搜索主题
+                  href: help-viewer/find-topics.md
+                - name: 搜索表达式中的逻辑和高级运算符
+                  href: help-viewer/logical-operators-search-expressions.md
+        - name: 自定义 Help Viewer
+          href: help-viewer/customize.md
+        - name: 可访问性
+          href: help-viewer/accessibility-features.md
+        - name: 快捷键
+          href: help-viewer/shortcut-keys.md
+    - name: Dotfuscator Community
+      items:
+        - name: 概述
+          displayName: Dotfuscator Community
+          href: ide/dotfuscator/index.md
+        - name: Dotfuscator 的功能
+          href: ide/dotfuscator/capabilities.md
+        - name: 安装 Dotfuscator Community
+          href: ide/dotfuscator/install.md
+        - name: 升级 Dotfuscator Community
+          href: ide/dotfuscator/upgrades.md
 - name: 资源
+  expanded: true
   items:
-  - name: Visual Studio 2017 中的新增功能
-    href: ide/whats-new-in-visual-studio.md
-  - name: Visual Studio 2019 中的新增功能
-    href: ide/whats-new-visual-studio-2019.md
-  - name: 发行说明和系统要求
-    items:
-    - name: 当前发行说明
-      href: /visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default&contextView=vs-2017
-    - name: 预览发行说明
-      href: /visualstudio/releasenotes/vs2017-preview-relnotes?context=visualstudio/default&contextView=vs-2017
-    - name: 发行说明历史记录
-      href: /visualstudio/releasenotes/vs2017-relnotes-history?context=visualstudio/default&contextView=vs-2017
-    - name: 发行节奏
-      href: /visualstudio/productinfo/vs2017-release-rhythm?context=visualstudio/default&contextView=vs-2017
-    - name: Visual Studio 路线图
-      href: /visualstudio/productinfo/vs2018-roadmap?context=visualstudio/default&contextView=vs-2017
-    - name: 系统要求
-      href: /visualstudio/productinfo/vs2017-system-requirements-vs?context=visualstudio/default&contextView=vs-2017
-    - name: 平台兼容性
-      href: /visualstudio/productinfo/vs2017-compatibility-vs?context=visualstudio/default&contextView=vs-2017
-    - name: 授权
-      href: https://visualstudio.microsoft.com/license-terms/
-    - name: 可分发代码
-      href: /visualstudio/productinfo/2017-redistribution-vs?context=visualstudio/default&contextView=vs-2017
-    - name: 支持生命周期和维护服务
-      href: /visualstudio/productinfo/vs-servicing-vs?context=visualstudio/default&contextView=vs-2017
+    - name: Visual Studio 2017 中的新增功能
+      href: ide/whats-new-visual-studio-2017.md
+    - name: Visual Studio 2019 中的新增功能
+      href: ide/whats-new-visual-studio-2019.md
+    - name: 发行说明和系统要求
+      items:
+        - name: 发行节奏
+          href: /visualstudio/productinfo/release-rhythm/
+        - name: Visual Studio 2017
+          items:
+            - name: 当前发行说明
+              href: /visualstudio/releasenotes/vs2017-relnotes/
+            - name: 预览发行说明
+              href: /visualstudio/releasenotes/vs2017-preview-relnotes/
+            - name: 发行说明历史记录
+              href: /visualstudio/releasenotes/vs2017-relnotes-history/
+            - name: 可分发代码
+              href: /visualstudio/productinfo/2017-redistribution-vs/
+            - name: 平台兼容性
+              href: /visualstudio/productinfo/vs2017-compatibility-vs/
+            - name: 系统要求
+              href: /visualstudio/productinfo/vs2017-system-requirements-vs/
+        - name: Visual Studio 2019
+          items:
+            - name: 当前发行说明
+              href: /visualstudio/releases/2019/release-notes/
+            - name: 预览发行说明
+              href: /visualstudio/releases/2019/release-notes-preview/
+            - name: 发行说明历史记录
+              href: /visualstudio/releases/2019/release-notes-history/
+            - name: 可分发代码
+              href: /visualstudio/releases/2019/redistribution/
+            - name: 平台兼容性
+              href: /visualstudio/releases/2019/compatibility/
+            - name: 系统要求
+              href: /visualstudio/releases/2019/system-requirements/
+        - name: 许可条款
+          href: 'https://visualstudio.microsoft.com/license-terms/'
+        - name: 支持生命周期和维护服务
+          href: /visualstudio/productinfo/vs-servicing-vs/
+    - name: 问题报告
+      items:
+        - name: 如何报告 Visual Studio 的问题
+          href: ide/how-to-report-a-problem-with-visual-studio.md
+        - name: “报告问题”状态和常见问题解答
+          displayName: Developer Community
+          href: ide/report-a-problem.md
+        - name: 使用所有调用堆栈为 Visual Studio 进程创建小型转储
+          displayName: Create minidumps with call stacks
+          href: ide/report-a-problem-minidumps.md
+        - name: 为 MSBuild 问题创建日志
+          displayName: Create logs for MSBuild problems
+          href: ide/msbuild-logs.md
+        - name: 使用 PerfView 收集 ETL 跟踪
+          displayName: ETL trace with PerfView
+          href: ide/report-a-problem-perfview.md
+    - name: 建议 Visual Studio 功能
+      href: ide/suggest-a-feature.md
     - name: 开发人员社区数据隐私
       href: ide/developer-community-privacy.md
-  - name: 如何报告 Visual Studio 的问题
-    href: ide/how-to-report-a-problem-with-visual-studio-2017.md
-    items:
-    - name: “报告问题”状态和常见问题解答
-      href: ide/report-a-problem.md
-  - name: 建议 Visual Studio 功能
-    href: ide/suggest-a-feature.md
-  - name: 客户体验改善计划
-    href: ide/visual-studio-experience-improvement-program.md
-    items:
-    - name: 系统生成的日志
-      href: ide/diagnostic-data-collection.md
-  - name: 用于排除 IDE 错误的资源
-    href: ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md
-  - name: 与我们交流
-    href: ide/talk-to-us.md
-ms.openlocfilehash: ee98252a961a3a2e6a656be5042e8f4298132c2c
-ms.sourcegitcommit: d0b02affd24e66efed924c197824f35f823e3240
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 01/21/2019
-ms.locfileid: "54417949"
+    - name: 客户体验改善计划
+      items:
+        - name: 概述
+          displayName: Customer Experience Improvement Program
+          href: ide/visual-studio-experience-improvement-program.md
+        - name: 系统生成的日志
+          href: ide/diagnostic-data-collection.md
+    - name: 用于排除 IDE 错误的资源
+      href: ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md
+    - name: 反馈
+      displayName: Feedback
+      href: ide/feedback-options.md

@@ -1,14 +1,9 @@
 ---
 title: TemplateGroupID 元素 （Visual Studio 模板） |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#TemplateGroupID
 helpviewer_keywords:
@@ -17,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: bce7b49a-90bc-4691-aff3-a87e209f6d83
 caps.latest.revision: 19
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 9955b577db6f2e1ab7c34ed7b97b242d7b763c72
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 53d1f6628ff9df48879a34417b7d89223d848dd8
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51792198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68186438"
 ---
 # <a name="templategroupid-element-visual-studio-templates"></a>TemplateGroupID 元素（Visual Studio 模板）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +27,7 @@ ms.locfileid: "51792198"
   
  \<VSTemplate >  
  \<TemplateData >  
- \<TemplateGroupID >  
+ \<TemplateGroupID>  
   
 ## <a name="syntax"></a>语法  
   
@@ -63,7 +58,7 @@ ms.locfileid: "51792198"
 ## <a name="remarks"></a>备注  
  `TemplateGroupID` 是一个元素。  
   
- 值`TemplateGroupID`元素使用与项目系统注册 (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*\<版本号 >* \Projects\\)对显示在筛选器模板**添加新项**对话框。  
+ 值`TemplateGroupID`元素使用与项目系统注册 (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ *\<版本号 >* \Projects\\)对显示在筛选器模板**添加新项**对话框。  
   
 |Visual C++ 值|含义|  
 |------------------------|-------------|  
@@ -80,4 +75,3 @@ ms.locfileid: "51792198"
 ## <a name="see-also"></a>请参阅  
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)
-

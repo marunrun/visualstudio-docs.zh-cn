@@ -1,8 +1,7 @@
 ---
-title: IDebugApplicationNode::Detach |Microsoft Docs
+title: IDebugApplicationNode::Detach | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ec67c17b184000239cd60dbf138a91fda8209c26
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: ce6f4fdf0e5c49062f0d930b64de8fb1b06888d1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54086992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990353"
 ---
 # <a name="idebugapplicationnodedetach"></a>IDebugApplicationNode::Detach
 从项目树中删除此应用程序节点。  

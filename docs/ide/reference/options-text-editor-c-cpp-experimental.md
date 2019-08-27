@@ -8,36 +8,46 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.C\C++.Experimental
 author: mikeblome
 ms.author: mblome
-manager: wpickett
-ms.prod: visual-studio-dev15
+manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13bcc65b3d8ffe4872c8b7d5f18b1bbf13bc67c5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 75f36d66ea46e7a0474c3b76ae000f745337fc45
+ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53893323"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68461374"
 ---
 # <a name="options-text-editor-cc-experimental"></a>选项, 文本编辑器, C/C++, 实验
 
-通过更改这些选项，你可以在用 C 或 C++ 进行编程时更改与 IntelliSense 和浏览数据库有关的行为。 这些功能实际上是实验性的，且可能会在 Visual Studio 将来版本中进行修改或删除。 本主题介绍 Visual Studio 2017 中的各选项。 对于 Visual Studio 2015，请在目录上方的选择器中选择“2015”。
+通过更改这些选项，你可以在用 C 或 C++ 进行编程时更改与 IntelliSense 和浏览数据库有关的行为。 这些功能实际上是实验性的且可能会在 Visual Studio 将来版本中进行修改或删除。
 
-若要访问此属性页，请按 **Control+Q**，激活 `Quick Launch`，然后键入“实验”。 在键入前几个字母后，快速启动将查找该页面。 此外，还可以选择**工具 | 选项**，依次展开“文本编辑器”和“C/C++”，再选择“实验”。
+::: moniker range="vs-2017"
 
-这些功能在 Visual Studio 2017 安装中可用。
+本文介绍 Visual Studio 2017 中的各选项。 对于 Visual Studio 2015，请在目录上方的选择器中选择“2015”  。
+
+::: moniker-end
+
+要访问此属性页，请按 Ctrl+Q   以激活搜索框，然后键入“experimental”  。 在键入前几个字母后，搜索会查找该页面。 此外，还可以选择“工具” > “选项”，依次展开“文本编辑器”和“C/C++”，再选择“试验”      。
+
+这些功能在 Visual Studio 安装中可用。
 
 > [!NOTE]
 > 以下说明中的某些 Visual Studio 用户界面元素在计算机上出现的名称或位置可能会不同。 这些元素取决于你所使用的 Visual Studio 版本和你所使用的设置。 请参阅[个性化设置 Visual Studio IDE](../../ide/personalizing-the-visual-studio-ide.md)。
 
 ## <a name="enable-predictive-intellisense"></a>启用预测 IntelliSense
 
-预测 IntelliSense 限制 IntelliSense 下拉列表中显示的结果数，以便你仅看到与上下文相关的结果。 例如，如果键入 <code>int x =</code> 并调用 IntelliSense 下拉列表，只会看到整数或返回整数的函数。 预测 IntelliSense 在默认情况下是关闭的。
+预测 IntelliSense 限制 IntelliSense 下拉列表中显示的结果数，以便你仅看到与上下文相关的结果。 例如，如果键入 `int x =` 并调用 IntelliSense 下拉列表，只会看到整数或返回整数的函数。 预测 IntelliSense 在默认情况下是关闭的。
+
+::: moniker range="vs-2017"
 
 ## <a name="enable-faster-project-load"></a>启用更快的项目加载
 
-**Visual Studio 2017 版本 15.3 及更高版本**：此功能当前称为“启用项目缓存”，并已移至 [VC++ 项目设置](vcpp-project-settings-projects-and-solutions-options-dialog-box.md)属性页。
+自 Visual Studio 2017 版本 15.3 起：此功能当前称为“启用项目缓存”，并已移至 [VC++ 项目设置](vcpp-project-settings-projects-and-solutions-options-dialog-box.md)属性页  。
+
 此选项使 Visual Studio 能缓存项目数据，以便下次打开该项目时，它能直接加载缓存的数据，而无需通过项目文件重新对其计算。 使用缓存数据可显著缩短项目加载时间。
+
+::: moniker-end
 
 ## <a name="additional-features-in-the-visual-studio-marketplace"></a>Visual Studio Marketplace 中的其他功能
 
@@ -56,4 +66,5 @@ ms.locfileid: "53893323"
 ## <a name="see-also"></a>请参阅
 
 - [设置语言特定的编辑器选项](../../ide/reference/setting-language-specific-editor-options.md)
-- [在 C++ 中重构（VC 博客）](https://blogs.msdn.microsoft.com/vcblog/2014/11/14/all-about-c-refactoring-in-visual-studio-2015-preview/)
+- [在 C++ 中重构（VC 博客）](https://devblogs.microsoft.com/cppblog/all-about-c-refactoring-in-visual-studio-2015-preview/
+)

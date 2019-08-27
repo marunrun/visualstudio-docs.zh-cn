@@ -1,14 +1,9 @@
 ---
 title: '&lt;publisherIdentity&gt;元素 （ClickOnce 部署） |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -21,13 +16,13 @@ ms.assetid: 34c579db-d2f2-4b66-b9c8-47207f33d950
 caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: 1d25b9ff6c4d8a3eb43d18d5c9849ba7199ffe79
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 486e0bc5059e041f02e8dac4836c5ff59b27f63e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49226936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68157639"
 ---
 # <a name="ltpublisheridentitygt-element-clickonce-deployment"></a>&lt;publisherIdentity&gt;元素 （ClickOnce 部署）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -48,20 +43,17 @@ ms.locfileid: "49226936"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`name`|必须的。 描述发布此应用程序的参与方的标识。|  
-|`issuerKeyHash`|必须的。 包含证书颁发者的公钥的 sha-1 哈希。|  
+|`name`|必需。 描述发布此应用程序的参与方的标识。|  
+|`issuerKeyHash`|必需。 包含证书颁发者的公钥的 sha-1 哈希。|  
   
 #### <a name="parameters"></a>参数  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>Exceptions  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
   
 ## <a name="subhead"></a>副标题
-
-
-

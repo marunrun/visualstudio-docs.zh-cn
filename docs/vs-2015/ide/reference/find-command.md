@@ -1,14 +1,9 @@
 ---
 title: “查找”命令 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - edit.find
 helpviewer_keywords:
@@ -18,19 +13,18 @@ ms.assetid: f0c705dc-2b97-423d-abbf-5584d4827208
 caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: cf2ef55aa291016719c5f481d70dadd09f4403d1
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: ee744a8ab3a22d640f3d48e7291b546f36415d24
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49259169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68199305"
 ---
 # <a name="find-command"></a>“查找”命令
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
-要搜索文件，请使用“查找和替换”窗口的“在文件中查找”选项卡上的可用选项子集。  
+要搜索文件，请使用“查找和替换”窗口的“在文件中查找”选项卡上的可用选项子集   。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +35,7 @@ Edit.Find findwhat [/case] [/doc | /proc | /open | /sel]
   
 ## <a name="arguments"></a>自变量  
  `findwhat`  
- 必须的。 要匹配的文本。  
+ 必需。 要匹配的文本。  
   
 ## <a name="switches"></a>开关  
  /case 或 /c  
@@ -87,11 +81,8 @@ Edit.Find findwhat [/case] [/doc | /proc | /open | /sel]
 >Edit.Find somestring /sel /case  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [“命令”窗口](../../ide/reference/command-window.md)   
  [“查找/命令”框](../../ide/find-command-box.md)   
  [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)   
  [Visual Studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)
-
-
-

@@ -1,30 +1,24 @@
 ---
 title: Visual Studio Tools for Unity | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- tgt-pltfrm-cross-plat
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-unity-tools
+ms.topic: conceptual
 ms.assetid: 6cabc626-5310-4622-a743-210a9abb5535
 caps.latest.revision: 6
 author: conceptdev
 ms.author: crdun
-manager: ghogen
-ms.openlocfilehash: 7bdcdbc4a19914494b0a48932afc25c1f7626fbb
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 9d2bfa0a3ca4a751637204ef156a609f4ee0c3e5
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51762335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68155269"
 ---
 # <a name="visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 在本节中，你将了解免费的 Visual Studio 扩展 Visual Studio Tools for Unity，它让 Visual Studio 成为使用 Unity 生成游戏的强大工具。  
   
 ## <a name="visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity  
@@ -54,4 +48,3 @@ ms.locfileid: "51762335"
   
  [更改日志](../cross-platform/change-log-visual-studio-tools-for-unity.md)  
  本部分将介绍每个 Visual Studio Tools for Unity 版本中的新功能、Bug 修复和其他更改。
-

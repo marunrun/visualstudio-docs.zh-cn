@@ -1,14 +1,9 @@
 ---
 title: “项目设计器”->“应用程序”页 (Visual Basic) | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - vb.ProjectPropertiesApplicationWPF
 - vb.ProjectPropertiesApplication
@@ -19,18 +14,17 @@ ms.assetid: 8cec9fea-cd92-47ff-88dd-7c928f0b4a74
 caps.latest.revision: 68
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 9d2b23b5570a6372b727906a63ffb51513019df7
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 9979283258611b38e894c08446352082bcc7134e
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49175482"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65688098"
 ---
 # <a name="application-page-project-designer-visual-basic"></a>Application Page, Project Designer (Visual Basic)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 使用项目设计器的“应用程序”页可指定项目的应用程序设置和属性。  
   
  若要访问“应用程序”页，请在**解决方案资源管理器**中选择项目节点（而非“解决方案”节点）。 然后在菜单栏上依次选择“项目”、“属性”。 当项目设计器出现时，单击“应用程序”选项卡。  
@@ -41,7 +35,7 @@ ms.locfileid: "49175482"
  以下选项用于配置应用程序的常规设置。  
   
  **程序集名称**  
- 指定将包含程序集清单的输出文件的名称。 如果更改此属性，“输出名称”属性也将更改。 也可以使用 [/out (Visual Basic)](http://msdn.microsoft.com/library/9f148c15-0909-4cb8-a2db-777f8a8b45ae) 在命令提示符下进行此更改。 有关如何以编程方式访问此属性的信息，请参阅 <xref:VSLangProj.ProjectProperties.AssemblyName%2A>。  
+ 指定将包含程序集清单的输出文件的名称。 如果更改此属性，“输出名称”属性也将更改。 也可以使用 [/out (Visual Basic)](https://msdn.microsoft.com/library/9f148c15-0909-4cb8-a2db-777f8a8b45ae) 在命令提示符下进行此更改。 有关如何以编程方式访问此属性的信息，请参阅 <xref:VSLangProj.ProjectProperties.AssemblyName%2A>。  
   
  **根命名空间**  
  指定项目中所有文件的基命名空间。 例如，如果将“根命名空间”设置为 `Project1`，并且在代码中的任何命名空间外有 `Class1`，则其命名空间为 `Project1.Class1`。 如果代码中的命名空间 `Class2` 内有 `Order`，则其命名空间为 `Project1.Order.Class2`。  
@@ -49,11 +43,11 @@ ms.locfileid: "49175482"
  如果清除“根命名空间”，则可以在代码中指定项目的命名空间结构。  
   
 > [!NOTE]
->  如果在 [Namespace 语句](http://msdn.microsoft.com/library/a31fbd95-9ace-4c3d-bbb1-51222a2272b2)中使用 Global 关键字，则可以在项目的根命名空间外定义命名空间。 如果清除“根命名空间”，无需在 `Namespace` 语句中使用 `Global` 关键字，`Global` 便可成为顶级命名空间。 有关详细信息，请参阅 [Visual Basic 中的命名空间](http://msdn.microsoft.com/library/cffac744-ab8c-4f1f-ba50-732c22ab4b88)中的“Namespace 语句中的 Global 关键字”。  
+> 如果在 [Namespace 语句](https://msdn.microsoft.com/library/a31fbd95-9ace-4c3d-bbb1-51222a2272b2)中使用 Global 关键字，则可以在项目的根命名空间外定义命名空间。 如果清除“根命名空间”，无需在 `Namespace` 语句中使用 `Global` 关键字，`Global` 便可成为顶级命名空间。 有关详细信息，请参阅 [Visual Basic 中的命名空间](https://msdn.microsoft.com/library/cffac744-ab8c-4f1f-ba50-732c22ab4b88)中的“Namespace 语句中的 Global 关键字”。  
   
- 有关如何在代码中创建命名空间的信息，请参阅 [Namespace 语句](http://msdn.microsoft.com/library/a31fbd95-9ace-4c3d-bbb1-51222a2272b2)。  
+ 有关如何在代码中创建命名空间的信息，请参阅 [Namespace 语句](https://msdn.microsoft.com/library/a31fbd95-9ace-4c3d-bbb1-51222a2272b2)。  
   
- 有关根命名空间属性的详细信息，请参阅 [/rootnamespace](http://msdn.microsoft.com/library/e9245edf-6bef-420d-a7c7-324117752783)。  
+ 有关根命名空间属性的详细信息，请参阅 [/rootnamespace](https://msdn.microsoft.com/library/e9245edf-6bef-420d-a7c7-324117752783)。  
   
  有关如何以编程方式访问此属性的信息，请参阅 <xref:VSLangProj.ProjectProperties.RootNamespace%2A>。  
   
@@ -63,7 +57,7 @@ ms.locfileid: "49175482"
  默认值与“新建项目”对话框中指定的目标框架相匹配。  
   
 > [!NOTE]
->  第一次打开对话框时将自动设置[“系统必备”对话框](../../ide/reference/prerequisites-dialog-box.md)中所列的必备组件包。 如果随后更改项目的目标框架，则必须手动指定必备组件，以便与新目标框架相匹配。  
+> 第一次打开对话框时将自动设置[“系统必备”对话框](../../ide/reference/prerequisites-dialog-box.md)中所列的必备组件包。 如果随后更改项目的目标框架，则必须手动指定必备组件，以便与新目标框架相匹配。  
   
  有关详细信息，请参阅[如何：面向 .NET Framework 的某个版本](../../ide/how-to-target-a-version-of-the-dotnet-framework.md)和 [Visual Studio 多目标概述](../../ide/visual-studio-multi-targeting-overview.md)。  
   
@@ -75,23 +69,23 @@ ms.locfileid: "49175482"
  如果指定“WinMD 文件”选项，可以将类型投影到任何 Windows 运行时编程语言中。 通过将项目输出打包为 WinMD 文件，可以用多种语言编写应用程序代码，并让代码进行互操作，就像代码全部是用同一种语言编写的一样。 可以对面向 Windows 运行时库的解决方案（包括 [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] 应用）使用“WinMD 文件”选项。 有关详细信息，请参阅[用 C# 和 Visual Basic 创建 Windows 运行时组件](http://go.microsoft.com/fwlink/?LinkId=231895)。  
   
 > [!NOTE]
->  Windows 运行时可以投影类型，使其在任何一种使用它们的语言中看起来都像本机对象一样。 例如，与 Windows 运行时交互的 JavaScript 应用程序将其用作一组 JavaScript 对象，而 C# 应用程序则将库用作一个 .NET 对象集合。 通过将项目输出打包为 WinMD 文件，可以充分利用 Windows 运行时所用的技术。  
+> Windows 运行时可以投影类型，使其在任何一种使用它们的语言中看起来都像本机对象一样。 例如，与 Windows 运行时交互的 JavaScript 应用程序将其用作一组 JavaScript 对象，而 C# 应用程序则将库用作一个 .NET 对象集合。 通过将项目输出打包为 WinMD 文件，可以充分利用 Windows 运行时所用的技术。  
   
- 有关“应用程序类型”属性的详细信息，请参阅 [/target (Visual Basic)](http://msdn.microsoft.com/library/e0954147-548b-461f-9c4b-a8f88845616c)。 有关如何以编程方式访问此属性的信息，请参阅 <xref:VSLangProj.ProjectProperties.OutputType%2A>。  
+ 有关“应用程序类型”属性的详细信息，请参阅 [/target (Visual Basic)](https://msdn.microsoft.com/library/e0954147-548b-461f-9c4b-a8f88845616c)。 有关如何以编程方式访问此属性的信息，请参阅 <xref:VSLangProj.ProjectProperties.OutputType%2A>。  
   
  **图标**  
- 设置要用作程序图标的 .ico 文件。 选择“\<浏览...>”以浏览现有图形。 有关详细信息，请参阅 [/win32icon](http://msdn.microsoft.com/library/aecaab01-9353-46c5-941c-6edabd4eff92)（或 [/win32icon（C# 编译器选项）](http://msdn.microsoft.com/library/756d9b6d-ab07-41b7-ba58-5bd88f711138)）。 若要以编程方式访问此属性，请参阅 <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>。  
+ 设置要用作程序图标的 .ico 文件。 选择“\<浏览...>”以浏览现有图形。 有关详细信息，请参阅 [/win32icon](https://msdn.microsoft.com/library/aecaab01-9353-46c5-941c-6edabd4eff92)（或 [/win32icon（C# 编译器选项）](https://msdn.microsoft.com/library/756d9b6d-ab07-41b7-ba58-5bd88f711138)）。 若要以编程方式访问此属性，请参阅 <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>。  
   
  **启动窗体/启动对象/启动 URI**  
  指定应用程序的启动窗体或入口点。  
   
  如果“启用应用程序框架”处于选中状态（默认设置），则此列表的标题为“启动窗体”，并且仅显示窗体，因为应用程序框架仅支持启动窗体，不支持对象。  
   
- 如果项目是 WPF 浏览器应用程序，则此列表的标题为“启动 URI”，默认值为“Page1.xaml”。 “启动 URI”列表用于指定应用程序启动时显示的用户界面资源（一种 XAML 元素）。 有关详细信息，请参阅 <xref:System.Windows.Application.StartupUri%2A> 。  
+ 如果项目是 WPF 浏览器应用程序，则此列表的标题为“启动 URI”，默认值为“Page1.xaml”。 “启动 URI”列表用于指定应用程序启动时显示的用户界面资源（一种 XAML 元素）。 有关更多信息，请参见<xref:System.Windows.Application.StartupUri%2A>。  
   
  如果“启用应用程序框架”处于清除状态，则此列表将变为“启动对象”，并且同时显示窗体和带有 `Sub Main` 的类或模块。  
   
- “启动对象”定义应用程序加载时要调用的入口点。 此选项通常设置为应用程序中的主窗体或当应用程序启动时应运行的 `Sub Main` 过程。 类库没有入口点，因此它们为此属性提供的唯一选项是“(无)”。 有关详细信息，请参阅 [/main](http://msdn.microsoft.com/library/83fc339d-6652-415d-b205-b5133319b5b0)。 若要以编程方式访问此属性，请参阅 <xref:VSLangProj.ProjectProperties.StartupObject%2A>。  
+ “启动对象”定义应用程序加载时要调用的入口点。 此选项通常设置为应用程序中的主窗体或当应用程序启动时应运行的 `Sub Main` 过程。 类库没有入口点，因此它们为此属性提供的唯一选项是“(无)”。 有关详细信息，请参阅 [/main](https://msdn.microsoft.com/library/83fc339d-6652-415d-b205-b5133319b5b0)。 若要以编程方式访问此属性，请参阅 <xref:VSLangProj.ProjectProperties.StartupObject%2A>。  
   
  **程序集信息**  
  单击此按钮以显示[“程序集信息”对话框](../../ide/reference/assembly-information-dialog-box.md)。  
@@ -116,7 +110,7 @@ ms.locfileid: "49175482"
  “Windows 应用程序框架属性”节提供以下设置。 仅当“启用应用程序框架”复选框处于选中状态时，这些选项才可用。 本节后面的一节介绍了 Windows Presentation Foundation (WPF) 应用程序的“Windows 应用程序框架属性”设置。  
   
  **启用 XP 视觉样式**  
- 启用或禁用 Windows XP 视觉样式，也称为 *Windows XP 主题*。 Windows XP 视觉样式可启用一些控件，例如带有圆角和动态颜色的控件。 默认为已启用。 有关 Windows XP 视觉样式的详细信息，请参阅 [Windows XP 功能和 Windows 窗体控件](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)。  
+ 启用或禁用 Windows XP 视觉样式，也称为 *Windows XP 主题*。 Windows XP 视觉样式可启用一些控件，例如带有圆角和动态颜色的控件。 默认为已启用。 有关 Windows XP 视觉样式的详细信息，请参阅 [Windows XP 功能和 Windows 窗体控件](https://msdn.microsoft.com/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)。  
   
  **生成单个实例应用程序**  
  选中此复选框可防止用户运行应用程序的多个实例。 此复选框的默认设置为清除状态。 此设置允许运行应用程序的多个实例。  
@@ -165,7 +159,4 @@ ms.locfileid: "49175482"
  <xref:System.Windows.Application> 对象在应用程序状态出现某些变化时（例如，在应用程序启动或关闭时）引发事件。 有关此类公开的事件的完整列表，请参阅 <xref:System.Windows.Application>。 这些事件在 `Application` 分部类的用户代码节中进行处理。  
   
 ## <a name="see-also"></a>请参阅  
-[管理应用程序属性](../../ide/application-properties.md) [在 Office 解决方案中编写代码](http://msdn.microsoft.com/library/2d4d8fd0-e881-4829-976f-0d1a9221dec0)
-
-
-
+[管理应用程序属性](../../ide/application-properties.md) [在 Office 解决方案中编写代码](https://msdn.microsoft.com/library/2d4d8fd0-e881-4829-976f-0d1a9221dec0)

@@ -2,21 +2,20 @@
 title: 工作流设计器-CorrelatesOn 定义对话框
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - CorrelatesOnDefinition.UI
 ms.assetid: 8b2b627a-f236-4479-aa09-525df65e3413
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4bdc8dd059679c0ba1407585525d30a28dfd8440
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d7b7336a3f3b0c2725f4e52116d0add8bf13b90e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53988279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62949809"
 ---
 # <a name="correlateson-definition-dialog-box"></a>“CorrelatesOn 定义”对话框
 
@@ -39,5 +38,4 @@ ms.locfileid: "53988279"
 
 - <xref:System.ServiceModel.Activities.Receive>
 - [“添加相关初始值设定项”对话框](../workflow-designer/add-correlationinitializers-dialog-box.md)
-- [添加关联对话框](http://msdn.microsoft.com/en-us/9e41a149-e8ab-41b1-8886-ea06a63041b6)
 - [“初始化相关”对话框](../workflow-designer/initialize-correlation-dialog-box.md)

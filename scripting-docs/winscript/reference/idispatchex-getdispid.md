@@ -1,8 +1,7 @@
 ---
-title: IDispatchEx::GetDispID |Microsoft Docs
+title: IDispatchEx::GetDispID | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c466ec767be53d100b970314bf0d81d5dd9dfb20
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: 95ab1d72e5b2f608c51ac6e56be1986df8945ec2
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54097534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63000865"
 ---
 # <a name="idispatchexgetdispid"></a>IDispatchEx::GetDispID
 将单个成员名称映射到其相应的 DISPID，随后可在后续调用`IDispatchEx::InvokeEx`。  
@@ -45,7 +44,7 @@ HRESULT GetDispID(
  `grfdex`  
  确定用于获取成员标识符的选项。 这可以是以下值的组合：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |fdexNameCaseSensitive|名称查找区分大小写的方式完成的请求。 可能会被忽略不支持区分大小写查找的对象。|  
 |fdexNameEnsure|如果尚不存在的情况下创建成员的请求。 应使用的值创建新成员`VT_EMPTY`。|  

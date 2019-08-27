@@ -1,7 +1,6 @@
 ---
 title: -Rebuild (devenv.exe)
 ms.date: 12/10/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 helpviewer_keywords:
 - Devenv, /rebuild switch
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: c5a8a4bf-0e2b-46eb-a44a-8aeb29b92c32
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 208bc533578d116fe55ad336f4aaee72eec94c3f
-ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
+ms.openlocfilehash: 44e8675b0a913873ce9b89d9d9c4ceb431dffa0d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54268561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62945537"
 ---
 # <a name="rebuild-devenvexe"></a>/Rebuild (devenv.exe)
 

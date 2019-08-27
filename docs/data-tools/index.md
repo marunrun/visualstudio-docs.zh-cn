@@ -1,24 +1,25 @@
 ---
 title: 开发数据解决方案
-description: 了解用于在 Visual Studio 中开发数据方案的各种工具，包括 .NET Framework 工具、SQL Server Data Tools、Azure Data Lake、Azure HDInsight 和 Azure 流分析。
+description: 了解用于在 Visual Studio 中开发数据方案的各种工具，包括 .NET 工具、SQL Server Data Tools、Azure Data Lake、Azure HDInsight 和 Azure 流分析。
 layout: LandingPage
 ms.date: 01/01/2018
 author: gewarren
 ms.author: gewarren
-ms.prod: visual-studio-dev15
 ms.topic: landing-page
 ms.workload:
 - data-storage
-ms.openlocfilehash: 854cb5287aef6500e80d34fbccac8b343da73fc9
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 768d3d1f130c3ef7b81da9706559e9d6b5f159ee
+ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53890545"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66715040"
 ---
 # <a name="use-data-tools-in-visual-studio-to-develop-data-solutions"></a>在 Visual Studio 中使用数据工具开发数据解决方案
 
 了解如何在 Visual Studio 中借助数据工具并通过 SQL Server、Azure Data Lake 或 Hadoop 开发和测试数据解决方案。
+
+<!-- markdownlint-disable MD033 -->
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -28,11 +29,11 @@ ms.locfileid: "53890545"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../data-tools/media/logo_VS.svg" alt="Use Visual Studio and .NET framework tooling to develop your data applications" />
+                            <img src="../data-tools/media/logo_VS.svg" alt="Use Visual Studio and .NET tooling to develop your data applications" />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>了解 Visual Studio 和 .NET Framework 工具与 API 对开发数据应用程序的支持</h3>
+                        <h3>了解面向数据应用程序开发的 Visual Studio 和 .NET 工具以及 API 支持</h3>
                     </div>
                 </div>
             </div>
@@ -124,7 +125,7 @@ ms.locfileid: "53890545"
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <p><Access data in Visual Studio></p>
+                        <p>在 Visual Studio 中访问数据</p>
                     </div>
                 </div>
             </div>

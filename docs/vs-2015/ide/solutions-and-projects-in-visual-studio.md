@@ -1,13 +1,9 @@
 ---
 title: 解决方案和项目
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.savedeferredsaveprojectonclose
 - vs.untrustedtemplateopeningdocuments
@@ -53,13 +49,13 @@ ms.assetid: aeaf56cb-c2dd-47f6-b012-23b84b7a7254
 caps.latest.revision: 41
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: a4e50e386be097338207a2ef66904347f9170d3b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 340fe819086d3cc18cb9c2dd6a4ca14129c6d8ad
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53905236"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65679882"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Visual Studio 中的解决方案和项目
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -79,7 +75,7 @@ ms.locfileid: "53905236"
  还可以创建自定义项目和项模板。 有关详细信息，请参阅[创建项目和项模板](../ide/creating-project-and-item-templates.md)。
 
 ## <a name="creating-new-projects"></a>创建新项目
- 创建新项目的最简单方法是从预定义的项目模板开始，该模板包含一组基本的预生成代码文件、配置文件、资产和设置，这些内容使你可以开始采用特定编程语言创建特定类型的应用程序或网站。 这些模板是从主菜单选择“文件”&#124;“新建”&#124;“项目”或“文件”&#124;“新建”&#124;“网站”，然后进行导航时在“新建项目对话框”中看到的内容。 有关详细信息，请参阅[创建解决方案和项目](../ide/creating-solutions-and-projects.md)和 [NIB Creating Projects from Templates](http://msdn.microsoft.com/en-us/7c36d86a-6b79-4480-8228-0f925f1204b2)（NIB 从模板创建项目）。
+ 创建新项目的最简单方法是从预定义的项目模板开始，该模板包含一组基本的预生成代码文件、配置文件、资产和设置，这些内容使你可以开始采用特定编程语言创建特定类型的应用程序或网站。 这些模板是从主菜单选择“文件”&#124;“新建”&#124;“项目”或“文件”&#124;“新建”&#124;“网站”，然后进行导航时在“新建项目对话框”中看到的内容。 有关详细信息，请参阅[创建解决方案和项目](../ide/creating-solutions-and-projects.md)和 [NIB Creating Projects from Templates](https://msdn.microsoft.com/7c36d86a-6b79-4480-8228-0f925f1204b2)（NIB 从模板创建项目）。
 
 ## <a name="managing-projects-in-solution-explorer"></a>在解决方案资源管理器中管理项目
  创建新项目之后，可使用 **“解决方案资源管理器”** 查看和管理项目和解决方案及其关联项。 下图显示具有一个包含两个项目的 C# 解决方案的服务器资源管理器。
@@ -88,23 +84,23 @@ ms.locfileid: "53905236"
 
 ## <a name="in-this-section"></a>本节内容
 
--   [创建解决方案和项目](../ide/creating-solutions-and-projects.md)
+- [创建解决方案和项目](../ide/creating-solutions-and-projects.md)
 
--   [添加和删除项目项](../ide/adding-and-removing-project-items.md)
+- [添加和删除项目项](../ide/adding-and-removing-project-items.md)
 
--   [管理项目和解决方案属性](../ide/managing-project-and-solution-properties.md)
+- [管理项目和解决方案属性](../ide/managing-project-and-solution-properties.md)
 
--   [管理项目中的引用](../ide/managing-references-in-a-project.md)
+- [管理项目中的引用](../ide/managing-references-in-a-project.md)
 
--   [应用程序属性](../ide/application-properties.md)
+- [应用程序属性](../ide/application-properties.md)
 
--   [管理程序集签名和清单签名](../ide/managing-assembly-and-manifest-signing.md)
+- [管理程序集签名和清单签名](../ide/managing-assembly-and-manifest-signing.md)
 
--   [如何：指定应用程序图标 (Visual Basic、C#)](../ide/how-to-specify-an-application-icon-visual-basic-csharp.md)
+- [如何：指定应用程序图标（Visual Basic、C#）](../ide/how-to-specify-an-application-icon-visual-basic-csharp.md)
 
--   [面向特定的 .NET Framework 版本](../ide/targeting-a-specific-dotnet-framework-version.md)
+- [面向特定的 .NET Framework 版本](../ide/targeting-a-specific-dotnet-framework-version.md)
 
--   [创建项目和项模板](../ide/creating-project-and-item-templates.md)
+- [创建项目和项模板](../ide/creating-project-and-item-templates.md)
 
 ## <a name="see-also"></a>请参阅
  [Visual Studio IDE](../ide/visual-studio-ide.md)

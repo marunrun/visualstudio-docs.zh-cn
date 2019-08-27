@@ -1,7 +1,6 @@
 ---
-title: XML 工具
+title: XML 编辑器和架构设计器
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - vb.xmldesigner
@@ -16,7 +15,7 @@ helpviewer_keywords:
 - XML schemas
 - XML [Visual Studio], SGML relationship to
 - CSS, style sheets for XML
-- XML [Visual Studio], .NET Framework classes
+- XML [Visual Studio], .NET classes
 - data [Visual Studio], XML
 - classes [Visual Studio], XML
 - style sheets, for XML
@@ -30,44 +29,53 @@ helpviewer_keywords:
 ms.assetid: 1fd5de47-2d61-4180-9539-c2c4bf9ab768
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ecbd93836cdf5b91bb9f7abb93a95499927fa0b1
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d7493d6c10c83b16ad7579299a49a7747e34c20b
+ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53872955"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66746518"
 ---
 # <a name="xml-tools-in-visual-studio"></a>Visual Studio 中的 XML 工具
 
-*可扩展标记语言 (XML)* 是一种标记语言，用于描述数据提供一种格式。 该语言使跨越多个平台进行更准确的内容声明和获得更有意义的搜索结果变得更加容易。 此外，XML 实现了表示与数据的分离。 例如，在 HTML 中，使用标记来告诉浏览器将数据显示为粗体或斜体；而在 XML 中，标记只用于描述数据，例如城市名、温度和大气压。 在 XML 中，使用样式表等可扩展样式表语言 (XSL) 和级联样式表 (CSS) 来呈现在浏览器中的数据。 XML 将数据与表示及处理相分离。 这一特点使你能够通过应用不同的样式表和应用程序，按照所需的方式显示和处理数据。
+*可扩展标记语言 (XML)* 是一种标记语言，用于描述数据提供一种格式。 XML 将数据分割开来，并使用其表示关联的样式表等可扩展样式表语言 (XSL) 和级联样式表 (CSS)。 Visual Studio 提供了一些工具和功能，可以更加容易地使用 XML、XSLT 和 XML 架构。
 
-XML 是为在 Web 上传送而优化了的 SGML 的子集。 它是由万维网联合会 (W3C) 定义的。 此标准化确保了结构化的数据是统一和独立于应用程序或供应商。
+## <a name="xml-editor"></a>XML 编辑器
 
-XML 是核心的 Visual Studio 和.NET Framework 的许多功能。 以下文章列表名称的工具和 Visual Studio 和.NET Framework 中提供的功能与 XML 相关。
+[XML 编辑器](xml-editor.md)用于编辑 XML 文档。 它提供了完整 XML 语法检查、 键入时，颜色编码和 IntelliSense 时的架构验证。 如果提供了架构或文档类型定义，IntelliSense 将使用该架构或文档类型定义列出允许的元素和属性。
 
-有关详细信息，请参阅<xref:System.Xml?displayProperty=fullName>文档。
+其他功能包括：
 
-## <a name="reference"></a>参考
+- XML 代码段支持，包括架构生成的代码段
 
-[Microsoft.VisualStudio.XmlEditor](http://go.microsoft.com/fwlink/?LinkID=165699)公开[XML 编辑器](http://go.microsoft.com/fwlink/?LinkId=228249)分析通过树[System.Xml.Linq](http://go.microsoft.com/fwlink/?LinkId=228250)为任意 XML 文档。
+- 文档大纲，以便可以展开和折叠元素
 
-[XML 标准参考](https://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401)提供有关 XML 技术，包括 XML、 文档类型定义 (DTD)、 XML 架构定义语言 (XSD) 和 XSLT 的信息。
+- 能够执行 XSLT 转换并以文本、 XML 或 HTML 的形式查看结果
 
-<xref:System.Xml?displayProperty=fullName> 介绍类和其他元素构成<xref:System.Xml>命名空间，并对每个项提供更多详细信息的链接。
+- 从 XML 实例文档生成 XML 架构定义语言 (XSD) 架构的功能
 
-<xref:System.Xml.Serialization?displayProperty=fullName> 介绍类和其他元素构成<xref:System.Xml.Serialization>命名空间并提供指向有关每个项的更多详细信息。
+- 支持编辑 XSLT 样式表，包括 IntelliSense 支持
 
-## <a name="related-sections"></a>相关章节
+- XML 架构资源管理器
 
-[XML 文档对象模型 (DOM)](/dotnet/standard/data/xml/xml-document-object-model-dom)描述如何<xref:System.Xml.XmlDocument>和及其关联的类符合 W3C 文档对象模型 (Core) 等级 1 和 2 级命名空间支持规范。
+## <a name="xml-schema-designer"></a>XML 架构设计器
 
-[处理 XML 数据与 XmlReader 和 XmlWriter](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc189001\(v\=vs.95\))
+[XML 架构设计器](xml-schema-designer.md)集成使用 Visual Studio 和 XML 编辑器，以使你能够使用 XML 架构定义语言 (XSD) 架构。
 
-[XSLT 转换](/dotnet/standard/data/xml/xslt-transformations)描述如何<xref:System.Xml.Xsl.XslCompiledTransform>类实现 XSLT 1.0 建议。
+## <a name="xslt-debugging"></a>XSLT 调试
 
-[处理 XML 数据使用 XPath 数据模型](/dotnet/standard/data/xml/process-xml-data-using-the-xpath-data-model)描述如何<xref:System.Xml.XPath.XPathNavigator>类可以处理 XML 数据存储在<xref:System.Xml.XPath.XPathDocument>或<xref:System.Xml.XmlDocument>对象。 <xref:System.Xml.XPath.XPathNavigator> 类以 XQuery 1.0 和 XPath 2.0 数据模型为基础，可用于导航和编辑 XML 数据。
+Visual Studio 支持[调试 XSLT 样式表](../xml-tools/debugging-xslt.md)。 使用调试程序，可以在 XSLT 样式表中设置断点，从代码进入并逐行执行 XSLT 样式表，等等。
 
-[XML 架构对象模型 (SOM)](/dotnet/standard/data/xml/xml-schema-object-model-som)说明了用来创建和操作 XML 架构，通过提供的类<xref:System.Xml.Schema.XmlSchema>类来加载和编辑架构。
+> [!NOTE]
+> XSLT 调试程序是仅在 Visual Studio Enterprise edition 中可用。
+
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Xml?displayProperty=fullName>
+- [XSLT 转换](/dotnet/standard/data/xml/xslt-transformations)
+- [使用 XPath 数据模型处理 XML 数据](/dotnet/standard/data/xml/process-xml-data-using-the-xpath-data-model)
+- [XML 文档对象模型 (DOM)](/dotnet/standard/data/xml/xml-document-object-model-dom)
+- [XML 架构对象模型 (SOM)](/dotnet/standard/data/xml/xml-schema-object-model-som)

@@ -1,14 +1,9 @@
 ---
 title: GenerateApplicationManifest 任务 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#GenerateApplicationManifest
 dev_langs:
@@ -24,18 +19,17 @@ ms.assetid: a494102b-0cb2-4755-8e2a-d2c0f39fac1d
 caps.latest.revision: 27
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: da5c9cb78ff4d3d9542c956a377f6342945d11a0
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 3493c487c446bb66e99bf98a7c3f5599599801fd
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49245558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63424137"
 ---
 # <a name="generateapplicationmanifest-task"></a>GenerateApplicationManifest 任务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 生成 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序清单或本机清单。 本机清单通过为组件定义唯一标识，并标识组成该组件的所有程序集和文件来描述组件。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序清单通过指示应用程序的入口点并指定应用程序安全级别来扩展本机清单。  
   
 ## <a name="parameters"></a>参数  
@@ -50,10 +44,10 @@ ms.locfileid: "49245558"
 |`Dependencies`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定为生成的清单定义依赖程序集集的项列表。 项元数据可更详细地描述每个项，指示更多部署状态和依赖项类型。 有关详细信息，请参阅下面的“项元数据”部分。|  
 |`Description`|可选 `String` 参数。<br /><br /> 指定应用程序或组件的说明。|  
 |`EntryPoint`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定一个项，用于指示生成的清单程序集的入口点。<br /><br /> 对于 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序清单，此参数指定在应用程序运行时启动的程序集。|  
-|`ErrorReportUrl`|可选 [String] (<!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  -->) 参数。<br /><br /> 指定在安装 ClickOnce 时发出错误报告期间，对话框中显示的网页的 URL。|  
+|`ErrorReportUrl`|可选 [String](<!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  -->) 参数。<br /><br /> 指定在安装 ClickOnce 时发出错误报告期间，对话框中显示的网页的 URL。|  
 |`FileAssociations`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定与 ClickOnce 部署清单关联的一个或多个文件类型的列表。<br /><br /> 文件关联只在面向 .NET Framework 3.5 或更高版本时才有效。|  
 |`Files`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 要包含在清单中的文件。 指定每个文件的完整路径。|  
-|`HostInBrowser`|可选 [布尔值] (<!-- TODO: review code entity reference <xref:assetId:///Boolean?qualifyHint=False&amp;autoUpgrade=True>  -->) 参数。<br /><br /> 如果为 `true`，则应用程序托管在浏览器中（与 WPF Web 浏览器应用程序一样）。|  
+|`HostInBrowser`|可选 [Boolean](<!-- TODO: review code entity reference <xref:assetId:///Boolean?qualifyHint=False&amp;autoUpgrade=True>  -->) 参数。<br /><br /> 如果为 `true`，则应用程序托管在浏览器中（与 WPF Web 浏览器应用程序一样）。|  
 |`IconFile`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指示应用程序图标文件。 应用程序图标在生成的应用程序清单中表示，可用于“开始”菜单和“添加/删除程序”对话框。 如果未指定此输入，将使用默认图标。 如果任务正在生成本机清单，将忽略此参数。|  
 |`InputManifest`|可选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指示输入 XML 文档，使其充当清单生成器的基础。 这使得结构数据（如应用程序安全或自定义清单定义）可反映在输出清单中。 XML 文档中的根元素必须是 asmv1 命名空间中的程序集节点。|  
 |`IsolatedComReferences`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要在生成清单中隔离的 COM 组件。 此参数支持隔离 COM 组件以实现“免注册 COM”部署。 方法是通过自动生成具有标准 COM 注册定义的清单。 但为了保证组件正常工作，必须在生成计算机上注册这些 COM 组件。|  
@@ -66,12 +60,12 @@ ms.locfileid: "49245558"
 |`Publisher`|可选 `String` 参数。<br /><br /> 指定应用程序的发布者。 如果未指定此参数，则将从注册的用户或生成的清单的标识中推断该名称。 该名称将用作“开始”菜单上的文件夹名称，且将作为“添加或删除程序”对话框中显示的名称的一部分。|  
 |`RequiresMinimumFramework35SP1`|可选 `Boolean` 参数。<br /><br /> 如果为 true，则该应用程序要求 .NET Framework 3.5 SP1 或更新的版本。|  
 |`TargetCulture`|可选 `String` 参数。<br /><br /> 标识应用程序的区域性，并指定生成的清单的程序集标识的 `Language` 字段。 如果未指定此参数，则会假定该应用程序的区域性是固定的。|  
-|`TargetFrameworkMoniker`|可选 <!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  --> 参数。<br /><br /> 指定目标框架名字对象。|  
-|`TargetFrameworkProfile`|可选 <!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  --> 参数。<br /><br /> 指定目标框架配置文件。|  
-|`TargetFrameworkSubset`|可选 <!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  --> 参数。<br /><br /> 指定要面向的 .NET Framework 子集的名称。|  
-|`TargetFrameworkVersion`|可选 <!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  --> 参数。<br /><br /> 指定项目的目标 .NET Framework。|  
+|`TargetFrameworkMoniker`|Optional <!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  --> 参数。<br /><br /> 指定目标框架名字对象。|  
+|`TargetFrameworkProfile`|Optional <!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  --> 参数。<br /><br /> 指定目标框架配置文件。|  
+|`TargetFrameworkSubset`|Optional <!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  --> 参数。<br /><br /> 指定要面向的 .NET Framework 子集的名称。|  
+|`TargetFrameworkVersion`|Optional <!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  --> 参数。<br /><br /> 指定项目的目标 .NET Framework。|  
 |`TrustInfoFile`|可选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指示用于指定应用程序安全性的 XML 文档。 XML 文档中的根元素必须是 asmv2 命名空间中的 trustInfo 节点。 如果任务正在生成本机清单，将忽略此参数。|  
-|`UseApplicationTrust`|可选 <!-- TODO: review code entity reference <xref:assetId:///Boolean?qualifyHint=False&amp;autoUpgrade=True>  --> 参数。<br /><br /> 如果为 true，则将 `Product`、`Publisher` 和 `SupportUrl` 属性写入应用程序清单中。|  
+|`UseApplicationTrust`|Optional <!-- TODO: review code entity reference <xref:assetId:///Boolean?qualifyHint=False&amp;autoUpgrade=True>  --> 参数。<br /><br /> 如果为 true，则将 `Product`、`Publisher` 和 `SupportUrl` 属性写入应用程序清单中。|  
   
 ## <a name="remarks"></a>备注  
  除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.GenerateManifestBase> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关任务类的参数列表，请参阅[任务基类](../msbuild/task-base-class.md)。  
@@ -96,10 +90,10 @@ ms.locfileid: "49245558"
  上文说明了最简单的清单生成方案，并为单个程序生成了 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 清单。 根据清单的程序集可以推断出默认的名称和标识。  
   
 > [!NOTE]
->  在下面的示例中，为将重点放在清单生成方面上，预先生成了所有应用程序二进制文件。 此示例会生成一个完全可用的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 部署。  
+> 在下面的示例中，为将重点放在清单生成方面上，预先生成了所有应用程序二进制文件。 此示例会生成一个完全可用的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 部署。  
   
 > [!NOTE]
->  有关在此示例的 `SignFile` 任务中使用的 `Thumbprint` 属性的详细信息，请参阅 [SignFile 任务](../msbuild/signfile-task.md)。  
+> 有关在此示例的 `SignFile` 任务中使用的 `Thumbprint` 属性的详细信息，请参阅 [SignFile 任务](../msbuild/signfile-task.md)。  
   
 ```  
 <Project DefaultTargets="Build"  
@@ -149,10 +143,10 @@ ms.locfileid: "49245558"
  此示例除显式指定清单的名称和标识之外，其他方面均与上一个示例类似。 此外，此示例还被配置为联机应用程序，而不是安装的应用程序。  
   
 > [!NOTE]
->  在下面的示例中，为将重点放在清单生成方面上，预先生成了所有应用程序二进制文件。 此示例会生成一个完全可用的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 部署。  
+> 在下面的示例中，为将重点放在清单生成方面上，预先生成了所有应用程序二进制文件。 此示例会生成一个完全可用的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 部署。  
   
 > [!NOTE]
->  有关在此示例的 `SignFile` 任务中使用的 `Thumbprint` 属性的详细信息，请参阅 [SignFile 任务](../msbuild/signfile-task.md)。  
+> 有关在此示例的 `SignFile` 任务中使用的 `Thumbprint` 属性的详细信息，请参阅 [SignFile 任务](../msbuild/signfile-task.md)。  
   
 ```  
 <Project DefaultTargets="Build"  
@@ -207,10 +201,10 @@ ms.locfileid: "49245558"
  此示例针对具有多个文件和程序集的应用程序，分别使用 `GenerateApplicationManifest` 和 `GenerateDeploymentManifest` 任务生成 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序清单和部署清单。  
   
 > [!NOTE]
->  在下面的示例中，为将重点放在清单生成方面上，预先生成了所有应用程序二进制文件。 此示例会生成一个完全可用的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 部署。  
+> 在下面的示例中，为将重点放在清单生成方面上，预先生成了所有应用程序二进制文件。 此示例会生成一个完全可用的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 部署。  
   
 > [!NOTE]
->  有关在此示例的 `SignFile` 任务中使用的 `Thumbprint` 属性的详细信息，请参阅 [SignFile 任务](../msbuild/signfile-task.md)。  
+> 有关在此示例的 `SignFile` 任务中使用的 `Thumbprint` 属性的详细信息，请参阅 [SignFile 任务](../msbuild/signfile-task.md)。  
   
 ```  
 <Project DefaultTargets="Build"  
@@ -327,7 +321,7 @@ ms.locfileid: "49245558"
  此示例生成 Test.exe.manifest，使该应用程序可借助“免注册 COM”进行 XCOPY 部署。  
   
 > [!NOTE]
->  在下面的示例中，为将重点放在清单生成方面上，预先生成了所有应用程序二进制文件。 此示例会生成一个完全可用的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 部署。  
+> 在下面的示例中，为将重点放在清单生成方面上，预先生成了所有应用程序二进制文件。 此示例会生成一个完全可用的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 部署。  
   
 ```  
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -363,6 +357,3 @@ ms.locfileid: "49245558"
  [GenerateDeploymentManifest 任务](../msbuild/generatedeploymentmanifest-task.md)   
  [SignFile 任务](../msbuild/signfile-task.md)   
  [任务参考](../msbuild/msbuild-task-reference.md)
-
-
-

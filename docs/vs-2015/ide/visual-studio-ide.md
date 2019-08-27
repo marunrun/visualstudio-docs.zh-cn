@@ -1,23 +1,20 @@
 ---
-title: Visual Studio 2015 |Microsoft Docs
+title: Visual Studio 2015 | Microsoft Docs
 titleSuffix: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 772b6cf4-cee5-42d0-bc18-b4eb07e22ff0
 caps.latest.revision: 36
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: c6bd4e34e25add01de6e6e54c2439c2ca80ccf33
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+manager: jillfra
+ms.openlocfilehash: 90a7611e0b8895b0ed3540cae861ebafec9ae4bd
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53062478"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65698481"
 ---
 # <a name="visual-studio-ide"></a>Visual Studio IDE
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,11 +30,11 @@ Microsoft Visual Studio 2015 是一套用于创建软件的工具，包括通过
 
 - 适用于各种使用 DirectX 的 Windows 设备（包括 Xbox）的游戏和图形密集型应用程序。
 
-默认情况下，Visual Studio 支持 C#、C 和 C++、JavaScript、F# 以及 Visual Basic。 Visual Studio 可与 Unity（通过 [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md) 扩展）和 Apache Cordova（通过 [Visual Studio Tools for Apache Cordova](http://msdn.microsoft.com/library/db446f2c-6ba4-4c76-aac5-4c66f43b8c42)）等第三方应用程序配合使用和完美集成。 可通过创建执行专门任务的自定义工具自行扩展 Visual Studio。
+默认情况下，Visual Studio 支持 C#、C 和 C++、JavaScript、F# 以及 Visual Basic。 Visual Studio 可与 Unity（通过 [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md) 扩展）和 Apache Cordova（通过 [Visual Studio Tools for Apache Cordova](https://msdn.microsoft.com/library/db446f2c-6ba4-4c76-aac5-4c66f43b8c42)）等第三方应用程序配合使用和完美集成。 可通过创建执行专门任务的自定义工具自行扩展 Visual Studio。
 
 如果以前从未使用 Visual Studio，请通过我们的 [Get Started Developing with Visual Studio](../ide/get-started-developing-with-visual-studio.md) 教程和演练了解基础知识。
 
-如果你想要了解有关 Visual Studio 2015 中的新增功能的信息，请参阅[What's New in Visual Studio 2015](../what-s-new-in-visual-studio-2015.md)。
+若要了解 Visual Studio 2015 的新增功能，请参阅 [Visual Studio 2015 中的新增功能](../what-s-new-in-visual-studio-2015.md)。
 
 ## <a name="visual-studio-setup"></a>Visual Studio 安装
  你可以在 [Visual Studio 版本](http://www.visualstudio.com/products/visual-studio-with-msdn-overview-vs)了解哪个版本的 Visual Studio 最适合你。
@@ -77,7 +74,7 @@ Microsoft Visual Studio 2015 是一套用于创建软件的工具，包括通过
 ## <a name="connecting-to-visual-studio-team-services-and-team-foundation-server"></a>连接到 Visual Studio Team Services 和 Team Foundation Server
  Visual Studio Team Services (VSTS) 是一种基于云的服务，用于承载软件项目和启用团队中的协作。 VSTS 支持 Git 和 Team Foundation 源控件系统以及 Scrum、CMMI 和 Agile 开发方法。 Team Foundation 版本控制 (TFVC) 采用单一的集中式服务器存储库来跟踪文件和调整它的版本。 本地更改始终签入到中央服务器，其他开发人员可在此处获得最新的更改。 Team Foundation Server (TFS) 2015 是 Visual Studio 的应用程序生命周期管理中心。 它使用单个解决方案，使开发过程中涉及的所有人均可参与该开发过程。 TFS 对于管理异类团队和项目也非常有用。
 
- 如果你的网络中已经具有 Visual Studio Team Services 帐户或 Team Foundation Server，则可通过“团队资源管理器”窗口连接。 可在此窗口中将代码签入（出）源控件、管理工作项、启动生成以及访问团队聊天室和工作区。 您可以打开团队资源管理器从**快速启动**或从主菜单上**视图&#124;团队资源管理器**或从**工作组&#124;管理连接**。  有关 Visual Studio Team Services 的详细信息，请参阅 [www.visualstudio.com](https://www.visualstudio.com/)。 有关 Team Foundation Server 的详细信息，请参阅 [Team Foundation Server](https://www.visualstudio.com/products/tfs-overview-vs)。
+ 如果你的网络中已经具有 Visual Studio Team Services 帐户或 Team Foundation Server，则可通过“团队资源管理器”窗口连接。 可在此窗口中将代码签入（出）源控件、管理工作项、启动生成以及访问团队聊天室和工作区。 可从“快速启动”或者从“视图”&#124;“团队资源管理器”或“团队”&#124;“管理连接”的主菜单打开“团队资源管理器”。  有关 Visual Studio Team Services 的详细信息，请参阅 [www.visualstudio.com](https://www.visualstudio.com/)。 有关 Team Foundation Server 的详细信息，请参阅 [Team Foundation Server](https://www.visualstudio.com/products/tfs-overview-vs)。
 
  下图显示了 VSTS 中托管的解决方案的“团队资源管理器”窗格：
 
@@ -88,7 +85,7 @@ Microsoft Visual Studio 2015 是一套用于创建软件的工具，包括通过
 
  *项目模板* 是指可快速创建特定类型应用程序的预填充代码文件和配置设置的集合。 Visual Studio 附带了很多项目模板以供选择，如果所有默认模板都不适用，也可以自行创建。 利用模板创建项目后，便可以在提供的文件或添加的新文件中将自己的代码写入项目。 有关详细信息，请参阅[解决方案和项目](../ide/solutions-and-projects-in-visual-studio.md)。 下图显示了具有适用于 ASP.NET 应用程序的项目模板的“新建项目”对话框。
 
- ![Visual Studio 新项目对话框](../ide/media/vs2015-newprojectdialog.png "VS2015_NewProjectDialog")
+ ![Visual Studio“新建项目”对话框](../ide/media/vs2015-newprojectdialog.png "VS2015_NewProjectDialog")
 
 ## <a name="designing-the-user-interface"></a>设计用户界面
  设计器是一种直观的工具，可用于创建用户界面，而无需编写代码。 可以从 [Toolbox](../ide/reference/toolbox.md) 窗口拖动 UI 控件（如列表框、日历和按钮）到表示窗口或对话框的设计图面。 可以调整大小和重新排列这些元素，而无需编写任何代码。 任何具有用户界面的项目类型都包含设计器。
@@ -105,16 +102,16 @@ Microsoft Visual Studio 2015 是一套用于创建软件的工具，包括通过
 |![](../designers/media/b1-4.png "B1_4")|**设计图面控件** 使用这些控件（“显示对齐网格”、“网格线对齐”  和“启用或禁用网格线对齐” ）可设置对齐选项。 对齐可用于使对象彼此对齐，或者使对象与设计图面上的等间距线对齐。|
 |![](../designers/media/b1-5.png "B1_5")|**代码编辑器** 在代码编辑器中手动编辑 XAML、C#、C++ 或 Visual Basic 代码。|
 
- 有关详细信息，请参阅[Visual Studio 和 Blend for Visual Studio 中设计 XAML](../designers/designing-xaml-in-visual-studio.md)。
+ 有关详细信息，请参阅[在 Visual Studio 和 Blend for Visual Studio 中设计 XAML](../designers/designing-xaml-in-visual-studio.md)。
 
 ## <a name="writing-navigating-and-understanding-code"></a>编写、导航和了解代码
  如果你是一名开发人员，则可能会在“编辑器”窗口花费大部分时间。 Visual Studio 包含针对 C#、C++、Visual Basic、JavaScript、XML、HTML、CSS 和 F# 的编辑器，并且第三方提供了针对很多其他语言的插件编辑器（和编译器）。
 
- 您可以通过单击编辑文本编辑器中的各个文件**文件&#124;打开&#124;文件。** ，在文本编辑器中编辑单个文件。若要编辑打开的项目中的文件，请在“解决方案资源管理器”中单击该文件名。 代码被着色，你可以通过在“快速启动”中键入“Colors”来个性化设置配色方案。 可同时打开多个文本编辑器选项卡式窗口。 可独立拆分每个窗口。 还可以在全屏模式下运行文本编辑器。
+ 可以通过单击“文件&#124;打开&#124;文件”，在文本编辑器中编辑单个文件。 ，在文本编辑器中编辑单个文件。若要编辑打开的项目中的文件，请在“解决方案资源管理器”中单击该文件名。 代码被着色，你可以通过在“快速启动”中键入“Colors”来个性化设置配色方案。 可同时打开多个文本编辑器选项卡式窗口。 可独立拆分每个窗口。 还可以在全屏模式下运行文本编辑器。
 
- ![在代码编辑器中的 GreetingsConsoleApp.cpp](../ide/media/c-ide-editorlinenumberswordwrapon.png "C + + IDE_EditorLineNumbersWordWrapOn")
+ ![代码编辑器中的 GreetingsConsoleApp.cpp](../ide/media/c-ide-editorlinenumberswordwrapon.png "C++IDE_EditorLineNumbersWordWrapOn")
 
- 文本编辑器可实现高度交互（如果你希望如此），具有很多工作效率功能，可帮助更好更快地编写代码。 功能因语言，且无需使用任何这些 （类型为"编辑器"的快速启动） 来打开或关闭功能：下面是一些常见的工作效率功能：
+ 文本编辑器可实现高度交互（如果你希望如此），具有很多工作效率功能，可帮助更好更快地编写代码。 功能因语言而异，并且不必使用以上任意语言（在“快速启动”中键入“Editor”）来打开或关闭功能。一些常见的工作效率功能为：
 
 1. [Refactoring](../ide/refactoring-in-visual-studio.md) 包括智能重命名变量、移动选定的代码行到单独的函数、移动代码到其他位置、重新排序函数参数以及更多操作。
 
@@ -136,7 +133,7 @@ Microsoft Visual Studio 2015 是一套用于创建软件的工具，包括通过
 
 8. “转到定义”  上下文菜单选项可直接进入其中定义函数或对象的位置。 还可以在编辑器中右键单击来获取其他导航命令。
 
-9. [对象浏览器](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470)，作为相关的工具，可以检查系统上的 .NET 或 Windows 运行时程序集，以查看其中包含的类型以及这些类型包含的方法和属性。
+9. [对象浏览器](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470)，作为相关的工具，可以检查系统上的 .NET 或 Windows 运行时程序集，以查看其中包含的类型以及这些类型包含的方法和属性。
 
      ![显示 System.Timer 的对象浏览器](../ide/media/objectbrowser.png "ObjectBrowser")
 
@@ -146,7 +143,7 @@ Microsoft Visual Studio 2015 是一套用于创建软件的工具，包括通过
 
 生成项目是指编译源代码并执行生成可执行文件所必需的任何步骤。 不同语言具有不同的生成操作，而常规网站根本不生成。 无论是何种项目类型，“生成”菜单都是这些命令的标准位置。 若要编译代码并通过单个击键运行，请按 F5。 每个编译器都可通过 IDE 完全配置。 “生成”工具栏可指定是生成程序的调试版本（启用符号和额外错误检查以支持调试器中的断点和单步执行），还是生成将最终呈现给客户的发布版本。 可在项目的属性页中配置其他生成设置和许多其他设置。 右键单击“解决方案资源管理器”中的项目节点，并选择“属性”。 还可以从命令行运行生成。
 
-生成输出（包括错误或成功消息）显示在“输出”窗口中。 **错误列表**显示有关生成错误的详细的信息。
+生成输出（包括错误或成功消息）显示在“输出”窗口中。 “错误列表”提供有关生成错误的详细信息。
 
 ## <a name="debugging-your-code"></a>调试代码
  使用 Visual Studio 的先进调试器，可以调试在本地项目、远程设备或仿真程序（例如 Android 或 Windows Phone 的仿真程序）上运行的代码。 可以一次一个语句逐行执行代码并随时检查变量，可以逐行执行多个线程应用程序，还可以设置只在特定条件为“真”时才命中的断点。 上述所有操作均可在代码编辑器中配置，因此无需离开代码的上下文。
@@ -157,7 +154,7 @@ Microsoft Visual Studio 2015 是一套用于创建软件的工具，包括通过
 
  [Immediate Window](../ide/reference/immediate-window.md) 使你能够在表达式中键入并立即查看其结果。
 
- [IntelliTrace](http://msdn.microsoft.com/en-us/629e9660-c59a-446b-8c30-290059158f61) 窗口会记录在运行 .NET 程序中的每个方法调用和其他事件，并可帮助快速找到问题来源位置。
+ [IntelliTrace](https://msdn.microsoft.com/629e9660-c59a-446b-8c30-290059158f61) 窗口会记录在运行 .NET 程序中的每个方法调用和其他事件，并可帮助快速找到问题来源位置。
 
  有关详细信息，请参阅 [在 Visual Studio 中进行调试](../debugger/debugging-in-visual-studio.md)。
 
@@ -167,10 +164,10 @@ Microsoft Visual Studio 2015 是一套用于创建软件的工具，包括通过
  ![单元测试资源管理器](../ide/media/ute-failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")
 
 ## <a name="analyzing-code-quality-and-performance"></a>分析代码质量和性能
- Visual Studio 包含用于静态和运行时分析的强大工具。 静态分析工具帮助识别设计、全球化、互操作性、性能、安全性和其他类别中的潜在错误。 性能测试（也称为分析）涉及测量程序的运行方式。 可从“分析”  菜单中访问这些工具。 有关详细信息，请参阅 [使用 Visual Studio 诊断工具提高质量](http://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)。
+ Visual Studio 包含用于静态和运行时分析的强大工具。 静态分析工具帮助识别设计、全球化、互操作性、性能、安全性和其他类别中的潜在错误。 性能测试（也称为分析）涉及测量程序的运行方式。 可从“分析”  菜单中访问这些工具。 有关详细信息，请参阅 [使用 Visual Studio 诊断工具提高质量](https://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)。
 
 ## <a name="connecting-to-cloud-services-and-databases"></a>连接到云服务和数据库
- Visual Studio 中的“ [服务器资源管理器](http://msdn.microsoft.com/library/4ea29b3b-bbb2-45e4-9082-eaf635c41c4d) ”窗口显示个性化帐户（登录时使用的帐户）下托管的所有帐户的资源，包括 SQL Server 实例、Azure、Salesforce.com、Office 365 和网站。
+ Visual Studio 中的“ [服务器资源管理器](https://msdn.microsoft.com/library/4ea29b3b-bbb2-45e4-9082-eaf635c41c4d) ”窗口显示个性化帐户（登录时使用的帐户）下托管的所有帐户的资源，包括 SQL Server 实例、Azure、Salesforce.com、Office 365 和网站。
 
  ![服务器资源管理器](../ide/media/vs2015-serverexplorer3.png "vs2015_ServerExplorer3")
 
@@ -187,7 +184,7 @@ Microsoft Visual Studio 2015 是一套用于创建软件的工具，包括通过
  可以使用 Visual Studio 体系结构和建模工具来设计和建模应用程序。 这些工具可帮助实现代码的结构、行为和关系的可视化效果。 在开发过程中，可以在整个应用程序生命周期的不同详细信息级别上创建模型。 可通过将模型元素链接到 Team Foundation Server 工作项和开发计划来跟踪要求、任务、测试用例、Bug 和其他与模型关联的工作。 有关详细信息，请参阅 [设计和建模应用程序](../modeling/analyze-and-model-your-architecture.md)。
 
 ## <a name="extending-visual-studio-through-the-visual-studio-sdk"></a>通过 Visual Studio SDK 扩展 Visual Studio
- Visual Studio 是一个可扩展的平台。 Visual Studio 扩展是与 IDE 集成的自定义工具。 可以添加第三方扩展，或创建自己的扩展。 有关详细信息，请参阅 [部署 Visual Studio 扩展](http://msdn.microsoft.com/library/5b1b5db3-6005-44cf-83b0-e608d7764d14)。
+ Visual Studio 是一个可扩展的平台。 Visual Studio 扩展是与 IDE 集成的自定义工具。 可以添加第三方扩展，或创建自己的扩展。 有关详细信息，请参阅 [部署 Visual Studio 扩展](https://msdn.microsoft.com/library/5b1b5db3-6005-44cf-83b0-e608d7764d14)。
 
  [Visual Studio User Experience Guidelines](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md) 是编写 Visual Studio 扩展的必备参考。 这些特定于平台的指南包括有关对话框设计、字体、颜色、图标、常用控件以及可使你的新增功能与 Visual Studio 无缝集成的其他交互模式的信息。
 
@@ -199,7 +196,7 @@ Microsoft Visual Studio 2015 是一套用于创建软件的工具，包括通过
 |[如何：在 IDE 中移动](../ide/how-to-move-around-in-the-visual-studio-ide.md)|[Visual Studio 开发入门](../ide/get-started-developing-with-visual-studio.md)|
 |[查找和使用 Visual Studio 扩展](../ide/finding-and-using-visual-studio-extensions.md)|[解决方案和项目](../ide/solutions-and-projects-in-visual-studio.md)|
 |[编写代码](../ide/writing-code-in-the-code-and-text-editor.md)|[在 Visual Studio 中进行调试](../debugger/debugging-in-visual-studio.md)|
-|[分析工具](../profiling/profiling-tools.md)|[提高代码质量](http://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)|
+|[分析工具](../profiling/profiling-tools.md)|[提高代码质量](https://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)|
 |[设计用户界面](../designers/designing-user-interfaces.md)|[体系结构分析和建模](../modeling/analyze-and-model-your-architecture.md)|
 |[编译和生成](../ide/compiling-and-building-in-visual-studio.md)|[部署应用程序、服务和组件](../deployment/deploying-applications-services-and-components.md)|
 |[Visual Studio IDE 64 位支持](../ide/visual-studio-ide-64-bit-support.md)|[安全性](../ide/security-in-visual-studio.md)|

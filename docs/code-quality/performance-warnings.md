@@ -1,7 +1,6 @@
 ---
 title: 性能警告
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - vs.codeanalysis.performancerules
@@ -13,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: e014ac3a-02e6-46d9-942c-3491dd63782f
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e9fca1eedc94aeb327191f44469945f69584500
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7dd2945ec12ac398f2887d20d3d0cb6156f4ed3c
+ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53868581"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66745211"
 ---
 # <a name="performance-warnings"></a>性能警告
 性能警告支持高性能库和应用程序。
@@ -39,9 +38,9 @@ ms.locfileid: "53868581"
 | [CA1810:引用类型的静态字段以内联方式初始化](../code-quality/ca1810-initialize-reference-type-static-fields-inline.md) | 当一个类型声明显式静态构造函数时，实时 (JIT) 编译器会向该类型的每个静态方法和实例构造函数中添加一项检查，以确保之前已调用该静态构造函数。 静态构造函数检查会降低性能。 |
 | [CA1811:避免使用未调用的私有代码](../code-quality/ca1811-avoid-uncalled-private-code.md) | 私有或内部 （程序集级别） 成员在程序集中没有调用方、 由公共语言运行时，不调用它和它不由委托调用。 |
 | [CA1812:避免未实例化的内部类](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md) | 程序集级别类型的实例不是由程序集中的代码创建的。 |
-| [CA1813:避免使用未密封的特性](../code-quality/ca1813-avoid-unsealed-attributes.md) | .NET Framework 类库提供用于检索自定义特性的方法。 默认情况下，这些方法搜索特性继承层次结构。 通过密封特性，将无需搜索继承层次结构，且能够提高性能。 |
+| [CA1813:避免使用未密封的特性](../code-quality/ca1813-avoid-unsealed-attributes.md) | .NET 提供了用于检索自定义特性的方法。 默认情况下，这些方法搜索特性继承层次结构。 通过密封特性，将无需搜索继承层次结构，且能够提高性能。 |
 | [CA1814： 与通过多维首选使用交错的数组](../code-quality/ca1814-prefer-jagged-arrays-over-multidimensional.md) | 交错数组是元素为数组的数组。 构成元素的数组可以是不同的大小，可能会导致某些数据集的较低浪费空间。 |
-| [CA1815:重写 equals 和相等运算符对值类型](../code-quality/ca1815-override-equals-and-operator-equals-on-value-types.md) | 对于值类型，Equals 的继承的实现使用反射库，并比较所有字段的内容。 反射需要消耗大量计算资源，可能没有必要比较每一个字段是否相等。 如果希望用户对实例进行比较或排序，或者希望用户将实例用作哈希表键，则值类型应实现 Equals。 |
+| [CA1815:替代值类型上的 Equals 和相等运算符](../code-quality/ca1815-override-equals-and-operator-equals-on-value-types.md) | 对于值类型，Equals 的继承的实现使用反射库，并比较所有字段的内容。 反射需要消耗大量计算资源，可能没有必要比较每一个字段是否相等。 如果希望用户对实例进行比较或排序，或者希望用户将实例用作哈希表键，则值类型应实现 Equals。 |
 | [CA1816:调用 GC。SuppressFinalize 正确](../code-quality/ca1816-call-gc-suppressfinalize-correctly.md) | 实现 Dispose 方法不会调用 GC。SuppressFinalize 或不是实现 Dispose 方法调用 GC。SuppressFinalize 或方法调用 GC。SuppressFinalize，并将传递其他名称 (我在[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)])。 |
 | [CA1819:属性不应返回数组](../code-quality/ca1819-properties-should-not-return-arrays.md) | 属性返回的数组不写保护状态，即使该属性是只读的。 若要使数组不会被更改，属性必须返回数组的副本。 通常，用户不能理解调用这种属性的负面性能影响。 |
 | [CA1820:测试有空字符串，使用字符串长度](../code-quality/ca1820-test-for-empty-strings-using-string-length.md) | 使用 String.Length 属性或 String.IsNullOrEmpty 方法比较字符串要比使用 Equals 的速度快得多。 |

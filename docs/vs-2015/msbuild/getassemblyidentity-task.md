@@ -1,14 +1,9 @@
 ---
 title: GetAssemblyIdentity 任务 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#GetAssemblyIdentity
 dev_langs:
@@ -23,24 +18,23 @@ ms.assetid: a977e072-37ad-4941-84a6-32a4483be55d
 caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: b85d7679fe2869211826ed08f35a65031a6b77cf
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 9b4a578d1d22c6e912fd3f7edc203195dbba8987
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49175079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68178401"
 ---
 # <a name="getassemblyidentity-task"></a>GetAssemblyIdentity 任务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 从指定的文件检索程序集标识并输出标识信息。  
   
 ## <a name="task-parameters"></a>任务参数  
  下表描述了 `GetAssemblyIdentity` 任务的参数。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |`Assemblies`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 包含检索到的程序集标识。|  
 |`AssemblyFiles`|必选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要从中检索标识的文件。|  
@@ -71,9 +65,6 @@ ms.locfileid: "49175079"
 </Project>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [任务](../msbuild/msbuild-tasks.md)   
  [任务参考](../msbuild/msbuild-task-reference.md)
-
-
-

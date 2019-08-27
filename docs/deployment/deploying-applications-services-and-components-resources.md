@@ -10,15 +10,15 @@ dev_langs:
 - C++
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4af052f2851e8fa79e60d57aa771d914b3aa2fdd
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b7c322b960360231c2e8a1d2aa1a9920bbcf5521
+ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53888148"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66263304"
 ---
 # <a name="overview-of-deployment-in-visual-studio"></a>Visual Studio 中的部署概述
 
@@ -35,7 +35,7 @@ ms.locfileid: "53888148"
 - [Azure 应用服务](#azure-app-service)
 - [Azure 虚拟机](#azure-virtual-machines)
 - [文件系统](#file-system)
-- [自定义目标（如 IIS、FTP 等）](#custom-targets)，包括所有任意的 Web 服务器。
+- [自定义目标（如 IIS、FTP 等）](#custom-targets-iis-ftp)，包括所有任意的 Web 服务器。
 
 在“发布”选项卡上，可以选择现有发布配置文件、导入现有发布配置文件或使用此处所述的选项新建发布配置文件。 若要查看教程了解 IDE 中针对不同应用类型的发布选项，请参阅[初探部署](../deployment/deploying-applications-services-and-components.md)。
 
@@ -118,7 +118,7 @@ ms.locfileid: "53888148"
 
 - [使用发布工具部署 .NET Core 应用程序](/dotnet/core/deploying/deploy-with-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 - [将 ASP.NET Core 应用发布到 Azure](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
-- [Visual C++ 中的部署](/cpp/ide/deployment-in-visual-cpp)
+- [Visual C++ 中的部署](/cpp/windows/deployment-in-visual-cpp)
 - [部署 UWP 应用](/windows/uwp/packaging/packaging-uwp-apps?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 - [使用 Web 部署将 Node.js 应用发布到 Azure](https://github.com/Microsoft/nodejstools/wiki/Publish-to-Azure-Website-using-Web-Deploy?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 - [将 Python 应用发布到 Azure 应用服务](../python/publishing-python-web-applications-to-azure-from-visual-studio.md?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)

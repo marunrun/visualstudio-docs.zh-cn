@@ -1,14 +1,9 @@
 ---
-title: 异常疑难解答： System.ServiceModel.Security.MessageSecurityException |Microsoft Docs
-ms.custom: ''
+title: 异常疑难解答：System.ServiceModel.Security.MessageSecurityException | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: devlang-csharp
+ms.topic: troubleshooting
 helpviewer_keywords:
 - System.ServiceModel.Security.MessageSecurityException exception
 - MessageSecurityException exception
@@ -16,22 +11,22 @@ ms.assetid: 61ad69a1-ac50-49de-9a7c-8454a84ec5bd
 caps.latest.revision: 8
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: e7d13f5cc282026b1590f59180ed7f25312bb926
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: db8c0c092ad8bc1435f939c862cf3fa7fc52179e
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51742478"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65689151"
 ---
-# <a name="troubleshooting-exceptions-systemservicemodelsecuritymessagesecurityexception"></a>关于异常的疑难解答：System.ServiceModel.Security.MessageSecurityException
+# <a name="troubleshooting-exceptions-systemservicemodelsecuritymessagesecurityexception"></a>异常疑难解答：System.ServiceModel.Security.MessageSecurityException
 一个<xref:System.ServiceModel.Security.MessageSecurityException>时将引发异常[!INCLUDE[vsindigo](../includes/vsindigo-md.md)]确定消息未受到正确保护或已被篡改。 当下列条件全为真时，此错误会非常频繁地发生：  
   
--   在远程连接（如远程桌面连接或终端服务）上使用 WCF 服务引用与网站或 Web 应用程序项目中的 WCF 服务 (.svc) 进行通信。  
+- 在远程连接（如远程桌面连接或终端服务）上使用 WCF 服务引用与网站或 Web 应用程序项目中的 WCF 服务 (.svc) 进行通信。  
   
--   您不具有远程站点上的管理员权限。  
+- 您不具有远程站点上的管理员权限。  
   
--   对远程站点上的本地主机的请求由 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Development Server 进行处理。  
+- 对远程站点上的本地主机的请求由 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Development Server 进行处理。  
   
 ## <a name="associated-tips"></a>相关提示  
  **使用 ASP.Net 开发服务器时解决 NTLM 身份验证问题。**  
@@ -40,7 +35,7 @@ ms.locfileid: "51742478"
  如果远程用户可能通过使用 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Development Server 来运行网站，并且还使用 Web 服务或 WCF 服务，则可以创建自定义服务绑定或关闭 NTLM 安全。  
   
 > [!IMPORTANT]
->  建议不要关闭 NTLM 安全功能，否则可能构成安全威胁。  
+> 建议不要关闭 NTLM 安全功能，否则可能构成安全威胁。  
   
  如果创建自定义服务绑定，仍然可以受 NTLM 身份验证保护。  
   
@@ -79,16 +74,16 @@ ms.locfileid: "51742478"
    在处理 WCF 服务引用时，可以按照以下步骤来禁用 NTLM 安全。  
   
 > [!IMPORTANT]
->  建议不要关闭 NTLM 安全功能，否则可能构成安全威胁。  
+> 建议不要关闭 NTLM 安全功能，否则可能构成安全威胁。  
   
 #### <a name="to-turn-off-ntlm-security"></a>关闭 NTLM 安全  
   
-1.  在 **“解决方案资源管理器”** 中，右击网站名称，然后单击 **“属性页”**。  
+1. 在 **“解决方案资源管理器”** 中，右击网站名称，然后单击 **“属性页”**。  
   
-2.  选择 **“启动选项”**，然后清除 **“NTLM 身份验证”** 复选框。  
+2. 选择 **“启动选项”**，然后清除 **“NTLM 身份验证”** 复选框。  
   
-3.  单击 **“确定”**。  
+3. 单击 **“确定”**。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Security.MessageSecurityException>   
- [使用异常助手](http://msdn.microsoft.com/library/e0a78c50-7318-4d54-af51-40c00aea8711)
+ [使用异常助手](https://msdn.microsoft.com/library/e0a78c50-7318-4d54-af51-40c00aea8711)

@@ -1,16 +1,16 @@
 ---
 title: 用户帐户
 description: 有关登录 Visual Studio for Mac 并在 Visual Studio for Mac 中启用订阅的信息
-author: conceptdev
-ms.author: crdun
+author: asb3993
+ms.author: amburns
 ms.date: 05/06/2018
 ms.assetid: 17AB4F31-4921-4B4E-8D9D-95FB84294521
-ms.openlocfilehash: 8ae291054a08a8835d7bf3d1d1df77c1c6eb8519
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: d262257c48e26928633b9325da1650e1e58e74d3
+ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43223893"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67692244"
 ---
 # <a name="user-accounts"></a>用户帐户
 
@@ -21,4 +21,4 @@ ms.locfileid: "43223893"
 ## <a name="in-this-section"></a>本节内容
 
 * [登录 Visual Studio for Mac](signing-in.md)
-* [启用订阅](activation.md)
+* [启用订阅](enable-subscription.md)

@@ -1,8 +1,7 @@
 ---
-title: IDispatchEx::DeleteMemberByDispID |Microsoft Docs
+title: IDispatchEx::DeleteMemberByDispID | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: de99e74cf12939a31c99cdc59ce8ad7fd685ae03
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: 36eeeb4c28286bb5712be3908b47a5145e460597
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54086861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63000939"
 ---
 # <a name="idispatchexdeletememberbydispid"></a>IDispatchEx::DeleteMemberByDispID
 删除成员的 DISPID。  

@@ -1,25 +1,20 @@
 ---
-title: 如何：创建基于几何图形的渐变着色器 | Microsoft Docs
-ms.custom: ''
+title: 如何：创建基于几何图形的渐变着色器 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: 4b204405-ba95-4c5e-bd51-ec033a3ebfb6
 caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 61dd80bb8d8ba4c272beff018d3ab65ffce41dc6
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: eda8424aeb28231df0ae0355931989bec13a89b7
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49911871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63436174"
 ---
 # <a name="how-to-create-a-geometry-based-gradient-shader"></a>如何：创建基于几何图形的渐变着色器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,13 +23,13 @@ ms.locfileid: "49911871"
   
  本文档演示了这些活动：  
   
--   将节点添加到着色器关系图  
+- 将节点添加到着色器关系图  
   
--   设置节点属性  
+- 设置节点属性  
   
--   断开节点  
+- 断开节点  
   
--   连接节点  
+- 连接节点  
   
 ## <a name="creating-a-geometry-based-gradient-shader"></a>创建基于几何图形的渐变着色器  
  您可以通过将像素的位置并入着色器中来实现基于几何图形的着色器。 在着色语言中，除了 2-D 屏幕上的颜色和位置之外，像素还包含其他信息。 像素（在某些系统中称为片段）是值的一个集合，描述对应于像素的图面。 本文档中描述的着色器利用全局空间中三维对象的每个像素的高度，来影响片段的最终输出颜色。  
@@ -64,25 +59,22 @@ ms.locfileid: "49911871"
    下图显示了已完成的着色器关系图和应用于球体的着色器预览。  
   
 > [!NOTE]
->  在此图中，指定了橙色以更好地演示着色器的效果，但因为预览形状在世界空间中没有位置，所以无法在着色器设计器中完全预览该着色器。 必须在实际场景中预览着色器以演示完全效果。  
+> 在此图中，指定了橙色以更好地演示着色器的效果，但因为预览形状在世界空间中没有位置，所以无法在着色器设计器中完全预览该着色器。 必须在实际场景中预览着色器以演示完全效果。  
   
  ![着色器图及其效果预览](../designers/media/digit-gradient-effect-graph.png "")  
   
  某些形状可能会增强某些着色器的预览效果。 有关如何在着色器设计器中预览着色器的详细信息，请参阅[着色器设计器](../designers/shader-designer.md)中的“预览着色器”  
   
- 下图显示了应用于在[如何：构建三维地形模型](../designers/how-to-model-3-d-terrain.md)中演示的三维场景的着色器（此着色器为本文档中所述的着色器）。 颜色的强度随着世界中点的高度而增加。  
+ 下图显示应用于三维场景中所示本文档中所述的着色器[如何：构建三维地形模型](../designers/how-to-model-3-d-terrain.md)。 颜色的强度随着世界中点的高度而增加。  
   
  ![应用于三维地形模型的渐变效果](../designers/media/digit-gradient-effect-result.png "Digit-Gradient-Effect-Result")  
   
- 若要深入了解如何将向三维模型应用着色器，请参阅[如何：向三维模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)。  
+ 有关如何向三维模型应用着色器的详细信息，请参阅[如何：向三维模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [如何：向三维模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)   
  [如何：导出着色器](../designers/how-to-export-a-shader.md)   
- [如何：构建三维地形模型](../designers/how-to-model-3-d-terrain.md)   
+ [如何：三维地形模型](../designers/how-to-model-3-d-terrain.md)   
  [如何：创建灰度纹理着色器](../designers/how-to-create-a-grayscale-texture-shader.md)   
  [着色器设计器](../designers/shader-designer.md)   
  [着色器设计器节点](../designers/shader-designer-nodes.md)
-
-
-

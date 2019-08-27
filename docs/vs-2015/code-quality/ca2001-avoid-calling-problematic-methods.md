@@ -1,14 +1,9 @@
 ---
-title: CA2001： 避免调用有问题的方法 |Microsoft Docs
-ms.custom: ''
+title: CA2001:避免调用有问题的方法 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA2001
 - AvoidCallingProblematicMethods
@@ -20,14 +15,14 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: ddc96857cf0c3c54472eded5545ca0f328eba213
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 26f50580c8d29e24b25a9dad520a81d22a3dfc0c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49902784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68189068"
 ---
-# <a name="ca2001-avoid-calling-problematic-methods"></a>CA2001：避免调用有问题的方法
+# <a name="ca2001-avoid-calling-problematic-methods"></a>CA2001:避免调用有问题的方法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -51,7 +46,7 @@ ms.locfileid: "49902784"
 |<xref:System.Threading.Thread.Resume%2A?displayProperty=fullName><br /><br /> <xref:System.Threading.Thread.Suspend%2A?displayProperty=fullName>|已弃用 Thread.Suspend 和 Thread.Resume 由于其不可预知的行为。  使用中的其他类<xref:System.Threading>命名空间，如<xref:System.Threading.Monitor>， <xref:System.Threading.Mutex>，和<xref:System.Threading.Semaphore>以同步线程或保护资源。|
 |<xref:System.Runtime.InteropServices.SafeHandle.DangerousGetHandle%2A?displayProperty=fullName>|DangerousGetHandle 方法会带来安全风险，因为它可以返回不是有效的句柄。 请参阅<xref:System.Runtime.InteropServices.SafeHandle.DangerousAddRef%2A>和<xref:System.Runtime.InteropServices.SafeHandle.DangerousRelease%2A>详细了解如何安全地使用 DangerousGetHandle 方法的方法。|
 |<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName><br /><br /> <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=fullName><br /><br /> <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=fullName>|这些方法可以从意外的位置加载的程序集。 有关示例，请参阅 Suzanne Cook 的.NET CLR 笔记博客文章[LoadFile vs。LoadFrom](http://go.microsoft.com/fwlink/?LinkId=164450)并[选择绑定上下文](http://go.microsoft.com/fwlink/?LinkId=164451)方法加载程序集的信息的 MSDN 网站上。|
-|[CoSetProxyBlanket](http://go.microsoft.com/fwlink/?LinkID=169250) (Ole32)<br /><br /> [CoInitializeSecurity](http://go.microsoft.com/fwlink/?LinkId=169255) (Ole32)|用户代码启动托管进程中执行时，它是太迟可靠地调用 CoSetProxyBlanket。 公共语言运行时 (CLR) 执行可能会阻止用户 P/Invoke 之后的初始化操作。<br /><br /> 如果你确实必须 CoSetProxyBlanket 调用托管应用程序，我们建议使用本机代码 （c + +） 可执行文件启动过程，在本机代码中，调用 CoSetProxyBlanket，然后在进程中启动托管的代码应用程序。 （请务必指定运行时的版本号。）|
+|[CoSetProxyBlanket](http://go.microsoft.com/fwlink/?LinkID=169250) (Ole32)<br /><br /> [CoInitializeSecurity](http://go.microsoft.com/fwlink/?LinkId=169255) (Ole32)|用户代码启动托管进程中执行时，它是太迟可靠地调用 CoSetProxyBlanket。 公共语言运行时 (CLR) 执行可能会阻止用户 P/Invoke 之后的初始化操作。<br /><br /> 如果你确实必须 CoSetProxyBlanket 调用托管应用程序，我们建议使用本机代码启动过程 (C++) 可执行文件，在本机代码中，调用 CoSetProxyBlanket，然后在进程中启动托管的代码应用程序。 （请务必指定运行时的版本号。）|
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复此规则的冲突，请删除或替换对危险或有问题的方法的调用。
@@ -61,6 +56,3 @@ ms.locfileid: "49902784"
 
 ## <a name="see-also"></a>请参阅
  [可靠性警告](../code-quality/reliability-warnings.md)
-
-
-

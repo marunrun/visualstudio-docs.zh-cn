@@ -1,14 +1,9 @@
 ---
-title: CA2108： 检查有关值类型的声明性安全 |Microsoft Docs
-ms.custom: ''
+title: CA2108:检查有关值类型的声明性安全 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - ReviewDeclarativeSecurityOnValueTypes
 - CA2108
@@ -20,14 +15,14 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: b437fa656c2a2d0650463fd0ab78119f67099ac7
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: f6a17bf57f00923cfd31bd477f211ba66169672a
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49889656"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65687370"
 ---
-# <a name="ca2108-review-declarative-security-on-value-types"></a>CA2108：检查有关值类型的声明性安全
+# <a name="ca2108-review-declarative-security-on-value-types"></a>CA2108:检查有关值类型的声明性安全
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -38,7 +33,7 @@ ms.locfileid: "49889656"
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
- 公共或受保护值类型受[数据和建模](http://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6)或[链接要求](http://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)。
+ 公共或受保护值类型受[数据和建模](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6)或[链接要求](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)。
 
 ## <a name="rule-description"></a>规则说明
  分配和其他构造函数执行前通过其默认构造函数初始化值类型。 如果值类型保护的 Demand 或 LinkDemand，并且调用方没有权限而不满足安全检查，任何构造函数的默认值将失败，并且将引发安全异常。 未释放的值类型;它将继续处于其默认构造函数设置的状态。 不要假定将传递值类型的实例的调用方有权创建或访问该实例。
@@ -61,11 +56,8 @@ ms.locfileid: "49889656"
 
  本示例生成以下输出。
 
- **结构自定义构造函数： 请求失败。** 
+ **结构自定义构造函数：请求失败。** 
 **新值 SecuredTypeStructure 100 100**
 **新值 SecuredTypeStructure 200 200**
 ## <a name="see-also"></a>请参阅
- [链接需求](http://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)[数据和建模](http://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6)
-
-
-
+ [链接需求](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)[数据和建模](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6)

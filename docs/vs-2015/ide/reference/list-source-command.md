@@ -1,14 +1,9 @@
 ---
 title: “列出源”命令 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - Debug.ListSource
 helpviewer_keywords:
@@ -19,18 +14,17 @@ ms.assetid: e45f08d2-f4a3-49c3-9452-aa60508e2f74
 caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: ff216ddd8943ea971669c6ebb1c7c0306b02160f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: e0a4a8482dc1c2c66a45902f2f3382b179b46b13
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49171972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68199127"
 ---
 # <a name="list-source-command"></a>“列出源”命令
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 显示源代码的指定行。  
   
 ## <a name="syntax"></a>语法  
@@ -65,9 +59,6 @@ Debug.ListSource [/Count:number] [/Current] [/File:filename]
 Debug.ListSource /File:"C:\Visual Studio Projects\Form1.vb" /Line:4 /ShowLineNumbers:yes  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)   
  [“命令”窗口](../../ide/reference/command-window.md)
-
-
-

@@ -1,22 +1,21 @@
 ---
-title: 工作流设计器-添加参数，并添加参数对话框
+title: 工作流设计器：添加参数 （& a） 添加自变量对话框
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - AddParameters.UI
 ms.assetid: a21fb4fe-134b-40b0-8497-86b842940ca1
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: f0a9868566ad77441d31929acc2d6fddb1736eb2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7acb273430ac2dea8bc1f95a5c9a6e5c1d45c6f5
+ms.sourcegitcommit: 13ab9a5ab039b070b9cd9251d0b83dd216477203
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53823864"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66177728"
 ---
 # <a name="add-parameters-and-add-arguments-dialog-boxes"></a>“添加参数”对话框
 
@@ -32,7 +31,7 @@ ms.locfileid: "53823864"
 
 |||
 |-|-|
-|**名称**|自变量的名称。|
-|**方向**|指定该自变量是否表示数据流入委托、流出委托还是流入和流出委托。|
+|**名称**|参数的名称。|
+|**方向**|指定该参数是否表示数据流入委托、流出委托还是流入和流出委托。|
 |**Type**|新自变量的类型名称。|
 |**值**|要用于委托自变量的此实例的值。|

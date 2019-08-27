@@ -1,32 +1,26 @@
 ---
 title: 目标生成顺序 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: conceptual
 helpviewer_keywords:
 - msbuild, build order
 ms.assetid: f4a26339-9f9a-497a-9aa6-0797183d450d
 caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: a0bd5eb8dc4c99d05d8c31aa05914327a0ab7f02
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 9ea2068bce101eb27a81da4925e0fef6ffa8c534
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49925872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68144278"
 ---
 # <a name="target-build-order"></a>目标生成顺序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 如果目标的输入取决于另一目标的输出，那么必须将目标排序。 可使用这些属性指定目标运行的顺序：  
   
 - `InitialTargets`。 `Project` 属性指定将首先运行的目标，即使在命令行或 `DefaultTargets` 属性中指定了目标。  
@@ -113,22 +107,19 @@ ms.locfileid: "49925872"
 ## <a name="determining-the-target-build-order"></a>确定目标生成顺序  
  MSBuild 按以下方式确定目标生成顺序：  
   
-1.  运行 `InitialTargets` 目标。  
+1. 运行 `InitialTargets` 目标。  
   
-2.  运行由 **/target** 开关在命令行上指定的目标。 如果未在命令行上指定目标，则运行 `DefaultTargets` 目标。 如果都不存在，则运行出现的第一个目标。  
+2. 运行由 **/target** 开关在命令行上指定的目标。 如果未在命令行上指定目标，则运行 `DefaultTargets` 目标。 如果都不存在，则运行出现的第一个目标。  
   
-3.  评估目标的 `Condition` 属性。 如果出现 `Condition` 属性且评估结果为 `false`，那么不会运行该目标，且目标不会对生成造成进一步影响。  
+3. 评估目标的 `Condition` 属性。 如果出现 `Condition` 属性且评估结果为 `false`，那么不会运行该目标，且目标不会对生成造成进一步影响。  
   
-4.  执行目标前，运行其 `DependsOnTargets` 目标。  
+4. 执行目标前，运行其 `DependsOnTargets` 目标。  
   
-5.  执行目标前，运行 `BeforeTargets` 属性中列出的所有目标。  
+5. 执行目标前，运行 `BeforeTargets` 属性中列出的所有目标。  
   
-6.  执行目标前，会比较其 `Inputs` 属性和 `Outputs` 属性。 如果 MSBuild 确定任何输出文件相对于相应的输入文件过期，那么 MSBuild 将执行该目标。 否则，MSBuild 会跳过该目标。  
+6. 执行目标前，会比较其 `Inputs` 属性和 `Outputs` 属性。 如果 MSBuild 确定任何输出文件相对于相应的输入文件过期，那么 MSBuild 将执行该目标。 否则，MSBuild 会跳过该目标。  
   
-7.  执行或跳过目标后，运行 `AfterTargets` 属性中列出的所有目标。  
+7. 执行或跳过目标后，运行 `AfterTargets` 属性中列出的所有目标。  
   
 ## <a name="see-also"></a>请参阅  
  [目标](../msbuild/msbuild-targets.md)
-
-
-

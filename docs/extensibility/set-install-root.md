@@ -3,31 +3,32 @@ title: 使用 VSIX v3 扩展文件夹外安装 |Microsoft Docs
 ms.date: 11/09/2016
 ms.topic: conceptual
 ms.assetid: 913c3745-8aa9-4260-886e-a05aecfb2225
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 847ce9bc55e93f292ffdfe6f237e8c39eeac9fd4
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 2d5fc36c1244edd0988b6b76f8106020369cd90b
+ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53968493"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67852200"
 ---
-# <a name="installing-outside-the-extensions-folder"></a>在扩展文件夹外安装
+# <a name="install-outside-the-extensions-folder"></a>在扩展文件夹外进行安装
 
-从 Visual Studio 2017 和 VSIX v3 （版本 3），现在支持用于安装扩展文件夹外的扩展资产。 目前，作为有效的安装位置 （其中 [INSTALLDIR] 映射到 Visual Studio 实例的安装目录），会启用以下位置：
+从 Visual Studio 2017 和 VSIX v3 （版本 3），扩展资产可以扩展文件夹外安装。 目前，作为有效的安装位置 （其中 [INSTALLDIR] 映射到 Visual Studio 实例的安装目录），会启用以下位置：
 
-* [INSTALLDIR] \MSBuild
-* [INSTALLDIR] \Xml\Schemas
-* [INSTALLDIR] \Common7\IDE\PublicAssemblies
-* [INSTALLDIR] \Licenses
-* [INSTALLDIR] \Common7\IDE\ReferenceAssemblies
-* [INSTALLDIR] \Common7\IDE\RemoteDebugger
-* [INSTALLDIR] \Common7\IDE\VC\VCTargets
+* [INSTALLDIR]\MSBuild
+* [INSTALLDIR]\Xml\Schemas
+* [INSTALLDIR]\Common7\IDE\PublicAssemblies
+* [INSTALLDIR]\Licenses
+* [INSTALLDIR]\Common7\IDE\ReferenceAssemblies
+* [INSTALLDIR]\Common7\IDE\RemoteDebugger
+* [INSTALLDIR] \Common7\IDE\VC\VCTargets （仅适用于 Visual Studio 2017 支持; 不推荐使用的 Visual Studio 2019 及更高版本）
 
->**注意：** VSIX 格式不允许您安装 VS 安装文件夹结构之外。
+> [!NOTE]
+> VSIX 格式不允许你安装 Visual Studio 安装文件夹结构之外。 
 
 为了支持安装到这些目录，必须在 VSIX 安装"每个实例每台计算机"。 可以通过检查 extension.vsixmanifest 设计器中的"所有用户"复选框来启用此选项：
 
@@ -49,7 +50,8 @@ ms.locfileid: "53968493"
  </ProjectReference>
 ```
 
->**注意：** 如果您愿意，可以直接编辑.csproj 文件。
+> [!NOTE]
+> 如果您愿意，可以直接编辑.csproj 文件。
 
 ## <a name="how-to-set-a-subpath-under-the-installroot"></a>如何设置下 InstallRoot 子路径
 

@@ -1,14 +1,9 @@
 ---
 title: SccAdd 函数 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - SccAdd
 helpviewer_keywords:
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 545268f3-8e83-446a-a398-1a9db9e866e8
 caps.latest.revision: 18
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 29703be15369649df2208c1521a6636e5ccbefb9
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: daac15bbb7829d510db17ba02057a2dc86c55990
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51765835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63432512"
 ---
 # <a name="sccadd-function"></a>SccAdd 函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -85,7 +80,7 @@ SCCRTN SccAdd(
  常用`fOptions`由一个数组，此处替换`pfOptions`，其中一个`LONG`选项每个文件规范。 这是因为文件类型可能会有所不同文件文件。  
   
 > [!NOTE]
->  它是无效的同时指定`SCC_FILETYPE_TEXT`和`SCC_FILETYPE_BINARY`是未指定有效的同一文件中，但它的选项。 设置既不是设置相同`SCC_FILETYPE_AUTO`，在这种情况下进行源代码管理插件自动检测文件类型。  
+> 它是无效的同时指定`SCC_FILETYPE_TEXT`和`SCC_FILETYPE_BINARY`是未指定有效的同一文件中，但它的选项。 设置既不是设置相同`SCC_FILETYPE_AUTO`，在这种情况下进行源代码管理插件自动检测文件类型。  
   
  下面是列表中使用标志`pfOptions`数组：  
   
@@ -102,4 +97,3 @@ SCCRTN SccAdd(
   
 ## <a name="see-also"></a>请参阅  
  [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)
-

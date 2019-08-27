@@ -8,14 +8,13 @@ helpviewer_keywords:
 ms.assetid: 2ada376d-f168-455d-9643-6acb535360c1
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 52a6289d6b17528d31d66e26df2f15b85749aac3
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: c22d9327deb0c04790a3adfc809d9ae5da483916
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53823537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834777"
 ---
 # <a name="add-a-data-source-to-a-web-performance-test"></a>将数据源添加到 Web 性能测试
 
@@ -35,7 +34,9 @@ ms.locfileid: "53823537"
 
 ## <a name="create-a-sql-database"></a>创建一个 SQL 数据库
 
-1. 如果还没有 Visual Studio Enterprise，可以从 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)页进行下载。
+::: moniker range="vs-2017"
+
+1. 如果还没有 Visual Studio Enterprise，可以从 [Visual Studio 下载](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)页进行下载。
 
 2. 创建一个 SQL 数据库。
 
@@ -60,6 +61,38 @@ ms.locfileid: "53823537"
 7. 向字段中添加数据。
 
      ![向字段添加数据](../test/media/web_test_databinding_sql_addnewfieldsadddata.png)
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+1. 如果还没有 Visual Studio Enterprise，可以从 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)页进行下载。
+
+2. 创建一个 SQL 数据库。
+
+     ![添加新的 SQL 数据库](../test/media/web_test_databinding_sql_addnewdb.png)
+
+3. 创建一个数据库项目。
+
+     ![从数据库创建新项目](../test/media/web_test_databinding_sql_addnewdbproject.png)
+
+4. 向数据库项目中添加表。
+
+     ![向数据库项目添加新表](../test/media/web_test_databinding_sql_addnewdbtablename.png)
+
+5. 向表中添加字段。
+
+     ![向表中添加字段](../test/media/web_test_databinding_sql_addnewdbaddfields.png)
+
+6. 发布数据库项目。
+
+     ![从“解决方案资源管理器”发布数据库项目](../test/media/web_test_databinding_sql_addnewdbpublish.png)
+
+7. 向字段中添加数据。
+
+     ![向字段添加数据](../test/media/web_test_databinding_sql_addnewfieldsadddata.png)
+
+::: moniker-end
 
 ## <a name="add-the-data-source"></a>添加数据源
 
@@ -202,7 +235,7 @@ ms.locfileid: "53823537"
 
      ![应用高级属性](../test/media/web_test_databinding_advancedproperties.png)
 
-9. 键入包含架构文件的文件夹的名称并测试你的连接。
+9. 键入包含架构文件的文件夹的名称并测试您的连接。
 
      ![输入指向数据文件夹的路径](../test/media/web_test_databinding_adddatasourcecolortext5.png)
 

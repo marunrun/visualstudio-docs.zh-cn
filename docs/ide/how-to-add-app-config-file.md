@@ -1,7 +1,6 @@
 ---
 title: 如何将 app.config 文件添加到项目
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -9,15 +8,15 @@ helpviewer_keywords:
 - app.config files, adding to C# projects
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 11bc55316414298cf61a27854182f4831feb1ded
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d7e760d952d03a31fdb633ae57c0fb670b50fcc2
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53910095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62547905"
 ---
 # <a name="how-to-add-an-application-configuration-file-to-a-c-project"></a>如何：向 C# 项目添加应用程序配置文件
 

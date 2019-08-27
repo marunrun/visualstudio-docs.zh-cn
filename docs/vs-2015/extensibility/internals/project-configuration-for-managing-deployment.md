@@ -1,27 +1,22 @@
 ---
 title: 用于管理部署项目配置 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project configurations, managing deployment
 - projects [Visual Studio SDK], configuration for managing deployment
 ms.assetid: bd5940d9-d94d-4944-beda-4ec1ab2bbde5
 caps.latest.revision: 9
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: a6ea732449c92b2dffb91c7e90ff738791b7c2f7
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: d5b16c3392e9432ba540130d45f6907de15b51ab
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51721361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62429946"
 ---
 # <a name="project-configuration-for-managing-deployment"></a>用于管理部署的项目配置
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -48,4 +43,3 @@ ms.locfileid: "51721361"
  [管理配置选项](../../extensibility/internals/managing-configuration-options.md)   
  [用于构建的项目配置](../../extensibility/internals/project-configuration-for-building.md)   
  [用于输出的项目配置](../../extensibility/internals/project-configuration-for-output.md)
-

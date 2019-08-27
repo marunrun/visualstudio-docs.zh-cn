@@ -1,27 +1,22 @@
 ---
 title: 提供 Vspackage 的自动化 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - VSPackages, automation [Visual Studio SDK]
 - automation [Visual Studio SDK], VSPackages
 ms.assetid: 104c4c55-78b8-42f4-b6b0-9a334101aaea
 caps.latest.revision: 16
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: fc6eb16d1873c7986d9fac556440f24eb007396f
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: c6eb76eba76567f2966323d4058c9e752cb6fb69
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51774167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68200972"
 ---
 # <a name="providing-automation-for-vspackages"></a>提供适用于 VSPackage 的自动化
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -40,7 +35,7 @@ ms.locfileid: "51774167"
  环境的事件体系结构提供了可追加您自己的特定于 VSPackage 的对象的另一个位置。 例如，通过创建您自己的唯一事件的对象，可以扩展项目的环境的事件模型。 您可能想要提供自己的新项添加到项目类型时的事件。 有关详细信息，请参阅[公开事件](../../extensibility/internals/exposing-events-in-the-visual-studio-sdk.md)。  
   
 #### <a name="window-objects"></a>窗口对象  
- Windows 可以传递回特定于 VSPackage 的自动化对象返回给调用时环境。 实现派生自的对象<xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibleObject>，<xref:EnvDTE.IExtensibleObject>或`IDispatch`，将返回传递属性，扩展在其中确定位置的窗口对象。 例如，这种方法可用于提供在窗口框架中放置的控件的自动化。 此对象以及它可能会延长的任何其他对象的语义是由您负责进行设计。 有关详细信息，请参阅[如何： 为 Windows 提供自动化](../../extensibility/internals/how-to-provide-automation-for-windows.md)。  
+ Windows 可以传递回特定于 VSPackage 的自动化对象返回给调用时环境。 实现派生自的对象<xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibleObject>，<xref:EnvDTE.IExtensibleObject>或`IDispatch`，将返回传递属性，扩展在其中确定位置的窗口对象。 例如，这种方法可用于提供在窗口框架中放置的控件的自动化。 此对象以及它可能会延长的任何其他对象的语义是由您负责进行设计。 有关详细信息，请参阅[如何：提供适用于 Windows 的自动化](../../extensibility/internals/how-to-provide-automation-for-windows.md)。  
   
 #### <a name="options-pages-on-the-tools-menu"></a>在工具菜单上的选项页  
  可以创建页以扩展工具选项自动化模型通过实现页面并将信息添加到注册表，以创建你自己的选项。 然后，可以像任何其他选项页的环境对象模型调用您的页面。 如果要添加到 Vspackage 通过环境的功能的设计需要选项页，则应添加的自动化支持。 有关详细信息，请参阅[选项页的自动化支持](../../extensibility/internals/automation-support-for-options-pages.md)。  
@@ -49,4 +44,3 @@ ms.locfileid: "51774167"
  若要扩展的项目的自动化，你还实施标准自动化对象 (派生自`IDispatch`) 的其他项目对象旁边构建并实现标准方法和属性。 标准的对象的示例包括如插入到解决方案层次结构的项目对象`Projects`， `Project`， `ProjectItem`，和`ProjectItems`。 每个新的项目类型应实现这些对象，则可能你的项目的其他的具体取决于语义）。  
   
  在某种意义上，这些对象提供特定于 VSPackage 的项目对象的另一优势。 标准自动化对象允许你的项目以使用支持的相同对象的其他任何项目一样的通用方式。 因此外, 接程序，针对常规编写`Project`和`ProjectItem`对象端可针对任何类型的项目。 有关详细信息，请参阅[项目建模](../../extensibility/internals/project-modeling.md)。
-

@@ -1,8 +1,7 @@
 ---
-title: IActiveScriptProperty::GetProperty |Microsoft Docs
+title: IActiveScriptProperty::GetProperty | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 24
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0e68cb73b1b94b84d5133e1c7489bc8bf6309aea
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: e10d72e289fc2dc31464ce4505cea5c03e8d7f9d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54091294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992793"
 ---
 # <a name="iactivescriptpropertygetproperty"></a>IActiveScriptProperty::GetProperty
 获取由参数指定的属性。  
@@ -53,7 +52,7 @@ HRESULT GetProperty(
   
  允许使用值`dwProperty`以下表所述。  
   
-|返回的常量|值|含义|  
+|返回的常量|“值”|含义|  
 |--------------|-----------|-------------|  
 |SCRIPTPROP_INTEGERMODE|0x00003000|强制将整数模式而不是浮动点模式中的脚本引擎。|  
 |SCRIPTPROP_STRINGCOMPAREINSTANCE|0x00003001|允许脚本引擎要替换的字符串比较功能。|  

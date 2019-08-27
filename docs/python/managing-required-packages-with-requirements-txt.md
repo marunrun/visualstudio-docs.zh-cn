@@ -1,22 +1,21 @@
 ---
 title: 使用 requirements.txt 文件管理包依赖项
 description: requirements.txt 文件描述了项目的依赖项。 如果收到包含 requirements.txt 文件的项目，你将可以在一个步骤中轻松安装这些依赖关系。
-ms.date: 10/29/2018
-ms.prod: visual-studio-dev15
+ms.date: 03/18/2019
 ms.topic: conceptual
-author: kraigb
-ms.author: kraigb
-manager: douge
+author: JoshuaPartlow
+ms.author: joshuapa
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 209944ddfc86feb3fe5dbfcd7144f3f6e0d66451
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a1853df63354801ebf0413d3c8707135cb9bb800
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53968522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62535696"
 ---
 # <a name="manage-required-packages-with-requirementstxt"></a>使用 requirements.txt 管理所需的包
 
@@ -26,11 +25,13 @@ ms.locfileid: "53968522"
 
 - 如果已加载包含 requirements.txt 的项目，且想要安装该文件列出的所有包，请展开“解决方案资源管理器”中的“Python 环境”节点，然后右键单击环境节点并选择“从 requirements.txt 安装”：
 
-    ![从 requirements.txt 安装](media/environments-requirements-txt-install.png)
+    ![从 requirements.txt 安装](media/environments/environments-requirements-txt-install.png)
+
+- 如果要在虚拟环境中安装依赖项，请首先创建并激活该环境，然后使用“从 requirements.txt 安装”命令。 有关创建虚拟环境的详细信息，请参阅[使用虚拟环境](selecting-a-python-environment-for-a-project.md#use-virtual-environments)。
 
 - 如果环境中已安装所有必需的包，可在“解决方案资源管理器”中右键单击该环境，并选择“生成 requirements.txt”以创建必需的文件。 如果文件已存在，会出现有关如何进行更新的提示：
 
-    ![更新 requirements.txt 选项](media/environments-requirements-txt-replace.png)
+    ![更新 requirements.txt 选项](media/environments/environments-requirements-txt-replace.png)
 
   - “替换整个文件”将删除存在的所有项、注释和选项。
   - “刷新现有条目”会检测包的要求并更新版本说明符，匹配当前安装的版本。

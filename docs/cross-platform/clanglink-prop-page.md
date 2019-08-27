@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.assetid: 66e88848-116c-4eb0-bc57-183394d35b57
 author: corob
 ms.author: mblome
-manager: douge
+manager: jillfra
 f1_keywords:
 - VC.Project.VCLinkerTool.OutputFile
 - VC.Project.VCLinkerTool.ShowProgress
@@ -32,20 +32,20 @@ f1_keywords:
 - VC.Project.VCLinkerTool.LibraryDependencies
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 1b491257c561af337afdfd0d066c9ed8cd550c15
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: 16dcb7ff5925f341fc78b57f1d9a4f011a27d576
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39230943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815772"
 ---
 # <a name="clang-linker-properties-android-c"></a>Clang 链接器属性 (Android C++)
 
-属性 | 描述 | 选项
+Property | 说明 | 选项
 --- | ---| ---
 输出文件 | 该选项可重写链接器创建的程序的默认名称和位置。 (-o)
 显示进度 | 打印链接器进度消息。
-版本 | -version 选项让链接器将版本号置于可执行文件的标头中。
+Version | -version 选项让链接器将版本号置于可执行文件的标头中。
 启用详细输出 | -verbose 选项通知链接器输出调试的详细消息。
 启用增量链接 | 此选项通知链接器启用增量链接。
 共享库搜索路径 | 允许用户填入共享库搜索路径。

@@ -2,7 +2,6 @@
 title: ERRORRESUMEACTION 枚举 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d78852a05226f5112447dd142c06a2ba55ddba5a
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: d92b4b2e00b25a509d29511008876d781c8a577a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54347224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955167"
 ---
 # <a name="errorresumeaction-enumeration"></a>ERRORRESUMEACTION 枚举
 描述如何从运行时错误继续。  

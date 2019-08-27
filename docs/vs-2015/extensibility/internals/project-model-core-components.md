@@ -1,27 +1,22 @@
 ---
 title: 项目模型核心组件 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project models, objects and interfaces
 - project models, services
 ms.assetid: b2f572d3-b26d-4846-92d1-84055fac141a
 caps.latest.revision: 18
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 70cb00e6d2ecae8ba5fb8abefb76f7061406f0fd
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: de65155e08f4c2410d19db1b25105d247c9f0952
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51741320"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65704121"
 ---
 # <a name="project-model-core-components"></a>项目模型核心组件
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -86,7 +81,7 @@ ms.locfileid: "51741320"
   
  下表列出了项目模型中标识的服务的简短说明。  
   
-### <a name="services"></a>服务  
+### <a name="services"></a>Services  
   
 |服务|注释|  
 |-------------|--------------|  
@@ -108,8 +103,7 @@ ms.locfileid: "51741320"
   
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>   
- [清单： 创建新的项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)   
- [不在生成： 使用 HierUtil7 项目类来实现一种项目类型 （c + +）](http://msdn.microsoft.com/en-us/a5c16a09-94a2-46ef-87b5-35b815e2f346)   
+ [清单：创建新的项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)   
+ [不在生成中：使用 HierUtil7 项目类来实现一种项目类型 (C++)](https://msdn.microsoft.com/a5c16a09-94a2-46ef-87b5-35b815e2f346)   
  [支持符号浏览工具](../../extensibility/internals/supporting-symbol-browsing-tools.md)   
  [项目模型的元素](../../extensibility/internals/elements-of-a-project-model.md)
-

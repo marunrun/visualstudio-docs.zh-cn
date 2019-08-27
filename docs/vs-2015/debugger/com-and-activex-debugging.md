@@ -1,14 +1,9 @@
 ---
 title: 调试 COM 和 ActiveX |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.com
 dev_langs:
@@ -26,13 +21,13 @@ ms.assetid: 3260b2a7-3239-493d-9271-aedf705c13c7
 caps.latest.revision: 23
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 1c71aa59e62d9ac8530f34f42e15737a52b0fad6
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 4b4d74a6a1c4f03951d93eaf2aa5e556762b9021
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51771491"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65702310"
 ---
 # <a name="com-and-activex-debugging"></a>调试 COM 和 ActiveX
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -55,9 +50,6 @@ ms.locfileid: "51771491"
   
 ## <a name="see-also"></a>请参阅  
  [调试器安全](../debugger/debugger-security.md)   
- [COM 简介](http://msdn.microsoft.com/library/120735d9-db71-4ad3-a730-ce576ea2354e)   
- [ActiveX 控件](http://msdn.microsoft.com/library/52aaec4d-3889-402e-b57d-758078f8ac57)   
+ [COM 简介](https://msdn.microsoft.com/library/120735d9-db71-4ad3-a730-ce576ea2354e)   
+ [ActiveX 控件](https://msdn.microsoft.com/library/52aaec4d-3889-402e-b57d-758078f8ac57)   
  [SDI 服务器应用程序](../debugger/sdi-server-applications.md)
-
-
-

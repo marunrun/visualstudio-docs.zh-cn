@@ -1,11 +1,8 @@
 ---
 title: 流程图活动设计器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.Flowchart.UI
@@ -15,13 +12,13 @@ ms.assetid: d5af2276-5215-4138-880a-cf2b90bbf3a0
 caps.latest.revision: 5
 author: gewarren
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: 67bebeec9c2d88ba1912bc50b27e38f8278e7e3f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 3e89caded1b7388b79ea3232dc0a2809dc7b8222
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49226234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62943474"
 ---
 # <a name="flowchart-activity-designer"></a>流程图活动设计器
 <xref:System.Activities.Statements.Flowchart> 活动用于创建定义和管理复杂流控制的工作流。 可以使用代码或 <xref:System.Activities.Statements.Flowchart> 创作 [!INCLUDE[wfd2](../includes/wfd2-md.md)]。 本主题讲述 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 体验。 [!INCLUDE[wfd1](../includes/wfd1-md.md)] 工作流活动设计器使开发人员能够以自然的方式创作工作流。  
@@ -49,4 +46,4 @@ ms.locfileid: "49226234"
 ## <a name="see-also"></a>请参阅  
  [流程图](../workflow-designer/flowchart-activity-designers.md)   
  [FlowDecision](../workflow-designer/flowdecision-activity-designer.md)   
- [FlowSwitch\<T >](../workflow-designer/flowswitch-t-activity-designer.md)
+ [FlowSwitch\<T>](../workflow-designer/flowswitch-t-activity-designer.md)

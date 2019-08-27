@@ -1,27 +1,22 @@
 ---
 title: “模块”视图 - .NET 内存采样数据 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Modules view
 ms.assetid: 9c05b51a-8382-44cf-a8f7-3fabdd2e8f1b
 caps.latest.revision: 17
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 0b9a02e5579eb5dc82f2e1f21a10444c329a317f
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: abc5f1f6a15271fa3ec530658add2b6ca3027959
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51765524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68160866"
 ---
 # <a name="modules-view---net-memory-sampling-data"></a>“模块”视图 - .NET 内存采样数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +25,7 @@ ms.locfileid: "51765524"
   
  分配内存的语句的源文件行号在 函数节点下列出，执行分配的指令的地址在行节点下列出。 非独占和独占值始终对于行数据和指令数据始终是相同的。  
   
-|列|描述|  
+|列|说明|  
 |------------|-----------------|  
 |**名称**|模块、函数、行号或指令地址的名称。|  
 |**进程 ID**|分析运行的进程 ID (PID)。|  
@@ -48,11 +43,8 @@ ms.locfileid: "51765524"
 |**独占字节数**|-   对于函数，是此函数分配的字节总数。 此数值不包括此函数调用的函数中分配的字节数。<br />-   对于模块，是此模块中函数分配的独占字节数之和。<br />-   对于行或指令，是此行或指令分配的对象的总数。|  
 |**独占字节数百分比**|分析运行期间分配的属于模块、函数、行或指令的独占字节的所有字节数的百分比。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何：自定义报告视图列](../profiling/how-to-customize-report-view-columns.md)   
  [“模块”视图 - 检测](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   
  [“模块”视图](../profiling/modules-view-sampling-data.md)   
  [“模块”视图](../profiling/modules-view-instrumentation-data.md)
-
-
-

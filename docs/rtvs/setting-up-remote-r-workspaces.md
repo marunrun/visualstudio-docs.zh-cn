@@ -2,19 +2,18 @@
 title: 远程 R 工作区
 description: 如何设置远程 R 工作区并从 Visual Studio 连接到该工作区。
 ms.date: 12/04/2017
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 6a5dfb136c975634bd4f8915d1f5eb1c9d023e98
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 0263afa4eeb9094802fe6272380b6b53106da4a2
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53837779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62810134"
 ---
 # <a name="set-up-remote-workspaces"></a>设置远程工作区
 
@@ -97,14 +96,19 @@ RTVS 要求通过 HTTP 实现所有与远程服务器的通信，这就要求服
 
 1. 使用 SSH 连接到或登录到 Linux 计算机。
 2. 安装 `ssl-cert` 程序包：
+
     ```sh
     sudo apt-get install ssl-cert
     ```
+
 3. 运行 `make-ssl-cert` 以生成默认的自签名 SSL 证书：
+
     ```sh
     sudo make-ssl-cert generate-default-snakeoil --force-overwrite
     ```
+
 4. 将生成的密钥和 PEM 文件转换为 PFX。 生成的 PFX 应位于主文件夹中：
+
     ```sh
     openssl pkcs12 -export -out ~/ssl-cert-snakeoil.pfx -inkey /etc/ssl/private/ssl-cert-snakeoil.key -in /etc/ssl/certs/ssl-cert-snakeoil.pem -password pass:SnakeOil
     ```

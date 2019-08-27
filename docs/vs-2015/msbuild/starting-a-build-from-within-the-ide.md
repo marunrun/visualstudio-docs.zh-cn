@@ -1,32 +1,26 @@
 ---
 title: 在 IDE 中启动生成 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: conceptual
 helpviewer_keywords:
 - build
 ms.assetid: 936317aa-63b7-4eb0-b9db-b260a0306196
 caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: c741b8dfd0607de41ca7b53bdd88244ae3957a9a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 94685a2b06b14c232d9e1f79a1d7440e1ceb765b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49230381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68161334"
 ---
 # <a name="starting-a-build-from-within-the-ide"></a>在 IDE 中启动生成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 自定义项目系统必须使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor> 启动生成。 本主题介绍这样做的原因并概述具体过程。  
   
 ## <a name="parallel-builds-and-threads"></a>并行生成和线程  
@@ -127,6 +121,3 @@ public bool Build(Project project, bool isDesignTimeBuild)
 }  
   
 ```
-
-
-

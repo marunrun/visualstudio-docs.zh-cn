@@ -1,30 +1,24 @@
 ---
 title: XML 编辑器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-xml-tools
+ms.topic: conceptual
 ms.assetid: 623869f3-040b-4bf4-b353-ddc2229694e4
 caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 5053910e4f5760648eef989162eb31e3c3cc5c9e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: cadd0bded176a44d3eb977382778dd20b68a95a2
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49896323"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65703159"
 ---
 # <a name="xml-editor"></a>XML 编辑器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 “XML 编辑器”基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio 文本编辑器，并增加了对 XML 语言的支持。 “XML 编辑器”具有下列功能：  
   
 - XML 1.0 语法检查。  
@@ -52,13 +46,13 @@ ms.locfileid: "49896323"
 ## <a name="express-editions"></a>Express Editions  
  Visual Studio Express Edition 中无法使用下列 XML 编辑器功能：  
   
--   从 XML 实例文档创建 XML 架构。  
+- 从 XML 实例文档创建 XML 架构。  
   
--   从“XML 编辑器”查看 XSLT 输出。  
+- 从“XML 编辑器”查看 XSLT 输出。  
   
--   编辑 XSLT 样式表时的智能验证。  
+- 编辑 XSLT 样式表时的智能验证。  
   
--   XML 架构资源管理器。  
+- XML 架构资源管理器。  
   
 ## <a name="in-this-section"></a>本节内容  
  [XML 文档验证](../xml-tools/xml-document-validation.md)  
@@ -80,14 +74,11 @@ ms.locfileid: "49896323"
  介绍“XML 编辑器”的用户界面组件。  
   
 ## <a name="related-sections"></a>相关章节  
- [编辑文本、 代码和标记](http://msdn.microsoft.com/en-us/0d9c00d7-5df4-48a3-b185-2a265f055439)  
+ [编辑文本、 代码和标记](https://msdn.microsoft.com/0d9c00d7-5df4-48a3-b185-2a265f055439)  
  提供有关“文本编辑器”的信息。  
   
- [XML 标准参考](http://msdn.microsoft.com/en-us/79c78508-c9d0-423a-a00f-672e855de401)  
+ [XML 标准参考](https://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401)  
  提供有关 XML 技术的信息，其中包括 XML、文档类型定义 (DTD)、XML 架构定义语言 (XSD) 和 XSLT。  
   
 ## <a name="see-also"></a>请参阅  
  [Visual Studio 中的 XML 工具](../xml-tools/xml-tools-in-visual-studio.md)
-
-
-

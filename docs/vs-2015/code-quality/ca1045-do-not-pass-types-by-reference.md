@@ -1,14 +1,9 @@
 ---
-title: CA1045： 不要通过引用来传递类型 |Microsoft Docs
-ms.custom: ''
+title: CA1045:不要通过引用来传递类型 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA1045
 - DoNotPassTypesByReference
@@ -20,14 +15,14 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 1aa9077a0d27c105cd7008d550a4315ce8daf91a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 6bbdcb2e2ac8f905a2b52cfb41ed90217d215b4b
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49836562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63431544"
 ---
-# <a name="ca1045-do-not-pass-types-by-reference"></a>CA1045：不要通过引用来传递类型
+# <a name="ca1045-do-not-pass-types-by-reference"></a>CA1045:不要通过引用来传递类型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -41,7 +36,7 @@ ms.locfileid: "49836562"
  公共或受保护方法的公共类型中具有`ref`接受基元类型、 引用类型或值类型参数不是内置类型之一。
 
 ## <a name="rule-description"></a>规则说明
- 通过引用传递类型 (使用`out`或`ref`) 需要体验提供了指导，了解值类型和引用类型的不同之处，以及能处理具有多个返回值的方法。 此外，之间的差异`out`和`ref`参数没有得到广泛了解。
+ 通过引用传递类型 (使用`out`或`ref`) 需要体验提供了指导，了解值类型和引用类型的不同之处，以及能处理具有多个返回值的方法。 另外，`out` 和 `ref` 形参之间的区别并不广为人知。
 
  当"按引用"传递引用类型时，方法将希望使用参数可返回对象的不同实例。 （按引用传递引用类型也称为使用双指针、 指向指针的指针或双间接寻址。）使用的默认调用约定，通过"按值"，已采用引用类型参数接收指向对象的指针。 按值传递的指针，它指向的而非对象。 通过值传递意味着该方法不能更改要将其指向引用的新实例的指针类型，但可以更改它所指向的对象的内容。 对于大多数应用程序这就足够了，并生成所需的行为。
 
@@ -50,7 +45,7 @@ ms.locfileid: "49836562"
  尽管比较常见并大量使用正确的应用程序的返回值`out`和`ref`参数需要中间设计和编码技能。 库设计为普通用户不应指望用户掌握了架构师`out`或`ref`参数。
 
 > [!NOTE]
->  当您处理大型结构参数时，复制这些结构所需的其他资源在按值传递时可能会导致性能影响。 在这些情况下，您可以考虑使用`ref`或`out`参数。
+> 当您处理大型结构参数时，复制这些结构所需的其他资源在按值传递时可能会导致性能影响。 在这些情况下，您可以考虑使用`ref`或`out`参数。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与由值类型导致此规则的冲突，使该方法返回的对象作为其返回值。 如果该方法必须返回多个值，重新设计它返回一个对象，保存值的单个实例。
@@ -82,16 +77,13 @@ ms.locfileid: "49836562"
 
  本示例生成以下输出。
 
- **更改指针的按值传递：**
+ **更改指针的按值传递：** 
 **12345**
 **12345**
 **更改指针的按引用传递：** 
- **12345**
+**12345**
 **12345 ABCDE**
-**传递返回值：**
+**传递返回值：** 
 **12345 ABCDE**
 ## <a name="related-rules"></a>相关的规则
- [CA1021：避免使用 out 参数](../code-quality/ca1021-avoid-out-parameters.md)
-
-
-
+ [CA1021:避免使用 out 参数](../code-quality/ca1021-avoid-out-parameters.md)

@@ -2,22 +2,21 @@
 title: Visual Studio 中的 Python 教程步骤 1，创建项目
 titleSuffix: ''
 description: 在 Visual Studio 中使用 Python 功能的核心教程概述和第 1 步，包括系统必备组件和创建新的 Python 项目。
-ms.date: 10/29/2018
-ms.prod: visual-studio-dev15
+ms.date: 01/28/2019
 ms.topic: tutorial
-author: kraigb
-ms.author: kraigb
-manager: douge
+author: JoshuaPartlow
+ms.author: joshuapa
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2741d98eff02fd17be67213ab1069bdd43476475
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ed4fdbfe7090a66d955461f2c3a394f6fb661c5a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53916041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62430701"
 ---
 # <a name="tutorial-work-with-python-in-visual-studio"></a>教程：在 Visual Studio 中使用 Python
 
@@ -61,7 +60,7 @@ Visual Studio 为 Python 提供一级语言支持。 本教程将指导你完成
 
     (1) 粗体突出显示的是项目，其名称是在“新建项目”对话框中指定的名称。 在磁盘上，此项目由项目文件夹中的 .pyproj 文件表示。
 
-    (2) 顶层是一个*解决方案*，它与项目默认同名。 解决方案在磁盘上由 .sln 文件表示，是一个或多个相关项目的容器。 例如，如果为 Python 应用程序编写 C++ 扩展，该 C++ 项目可以驻留在同一解决方案中。 解决方案还可以包含 Web 服务的项目，以及专用测试程序的项目。 
+    (2) 顶层是一个*解决方案*，它与项目默认同名。 解决方案在磁盘上由 .sln 文件表示，是一个或多个相关项目的容器。 例如，如果为 Python 应用程序编写 C++ 扩展，该 C++ 项目可以驻留在同一解决方案中。 解决方案还可以包含 Web 服务的项目，以及专用测试程序的项目。
 
     (3) 在项目下方可以看到源文件，在本例中，只有一个 .py 文件。 选择文件时会在“属性”窗口中显示其属性。 双击文件会以任何适合该文件的方式打开该文件。
 
@@ -79,5 +78,3 @@ Visual Studio 为 Python 提供一级语言支持。 本教程将指导你完成
 - [Visual Studio 中的 Python 项目](managing-python-projects-in-visual-studio.md)。
 - [在 python.org 上了解 Python 语言](https://www.python.org)
 - [Python for Beginners](https://www.python.org/about/gettingstarted/)（面向初学者的 Python，python.org）
-- [Microsoft Virtual Academy 上的免费 Phthon 课程](https://mva.microsoft.com/search/SearchResults.aspx#!q=python)
-- [Microsoft Virtual Academy 上的“Python 最常见问题”](https://aka.ms/mva-top-python-questions)

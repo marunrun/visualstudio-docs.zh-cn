@@ -1,8 +1,7 @@
 ---
-title: IMachineDebugManager::RemoveApplication |Microsoft Docs
+title: IMachineDebugManager::RemoveApplication | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3b9b4124429c1a303cd66f4ccbfad8aba46ef3ad
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: 0ee70097ab87406d6ad39b244bdec61a72aea836
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54097704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62977547"
 ---
 # <a name="imachinedebugmanagerremoveapplication"></a>IMachineDebugManager::RemoveApplication
 删除应用程序从正在运行的应用程序列表。  

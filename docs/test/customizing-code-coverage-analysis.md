@@ -1,19 +1,18 @@
 ---
 title: 自定义代码覆盖率分析
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: e640fd14c6fd5b465a52ffe319814083958db676
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5bd7fa0bcff67573e61d40a2172e17620910a421
+ms.sourcegitcommit: 5b34052a1c7d86179d7898ed532babb2d9dad4a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53856522"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490628"
 ---
 # <a name="customize-code-coverage-analysis"></a>自定义代码覆盖率分析
 
@@ -21,32 +20,52 @@ ms.locfileid: "53856522"
 
 若要从代码覆盖率结果中排除测试代码，仅包括应用程序代码，请将 <xref:System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute> 属性添加到测试类。
 
-若要包含不属于解决方案的程序集，请获取这些程序集的 .pdb 文件并将其复制到与程序集 .dll 文件相同的文件夹。
+若要包含不属于解决方案的程序集，请获取这些程序集的 .pdb 文件并将其复制到与程序集 .dll 文件相同的文件夹   。
 
 ## <a name="run-settings-file"></a>运行设置文件
 
-[运行设置文件](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)是由单元测试工具使用的配置文件。 在 .runsettings 文件中指定高级代码覆盖率设置。
+[运行设置文件](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)是由单元测试工具使用的配置文件。 在 .runsettings 文件中指定高级代码覆盖率设置。 
 
 若要自定义代码覆盖率，请执行以下步骤：
 
-1. 将运行设置文件添加到解决方案中。 在“解决方案资源管理器”的解决方案快捷菜单上，依次选择“添加” > “新建项”和“XML 文件”。 保存带有类似于 CodeCoverage.runsettings 的名称的文件。
+1. 将运行设置文件添加到解决方案中。 在“解决方案资源管理器”的解决方案快捷菜单上，依次选择“添加” > “新建项”和“XML 文件”     。 保存带有类似于 CodeCoverage.runsettings 的名称的文件  。
 
-1. 添加本文结尾处示例文件中的内容，然后按需进行自定义，如以下章节所述。
+2. 添加本文结尾处示例文件中的内容，然后按需进行自定义，如以下章节所述。
 
-1. 若要选择运行设置文件，在“测试”菜单上，选择“测试设置” > “选择测试设置文件”。 若要指定运行设置文件以从命令行或在生成工作流中运行测试，请参阅[使用 .runsettings 文件配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#specify-a-run-settings-file)。
+::: moniker range="vs-2017"
 
-   选择“分析代码覆盖率”时，会从运行设置文件读取配置信息。
+3. 若要选择运行设置文件，在“测试”菜单上，选择“测试设置” > “选择测试设置文件”    。 若要指定运行设置文件以从命令行或在生成工作流中运行测试，请参阅[使用 .runsettings 文件配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#specify-a-run-settings-file)  。
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+3. 若要选择运行设置文件，请在“测试资源管理器”中，选择“设置”按钮上的箭头，然后选择“选择设置文件”    。 若要指定运行设置文件以从命令行或在生成工作流中运行测试，请参阅[使用 .runsettings 文件配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#specify-a-run-settings-file)  。
+
+::: moniker-end
+
+   选择“分析代码覆盖率”时，会从运行设置文件读取配置信息  。
 
    > [!TIP]
    > 在运行测试或更新代码时，之前的代码覆盖率结果和代码着色不会自动隐藏。
 
-若要禁用和启用自定义设置，请依次选择“测试”和“测试设置” > 菜单，然后取消选择或选择文件。
+::: moniker range="vs-2017"
+
+若要关闭和启用自定义设置，请在“测试”>“测试设置”菜单中取消选择或选择该文件   。
 
 ![包含自定义设置文件的测试设置菜单](../test/media/codecoverage-settingsfile.png)
 
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+若要关闭和启用自定义设置，请在“测试资源管理器”的“设置”菜单中取消选择或选择该文件   。
+
+::: moniker-end
+
 ### <a name="specify-symbol-search-paths"></a>指定符号搜索路径
 
-代码覆盖率需要程序集的符号文件（.pdb 文件）。 对于解决方案生成的程序集，符号文件通常与二进制文件一起出现，且代码覆盖率将自动工作。 但在某些情况下，你可能需要在你的代码覆盖率分析中包含引用的程序集。 在这种情况下，.pdb 文件可能不会与二进制文件相邻，但可在 .runsettings 文件中指定符号搜索路径。
+代码覆盖率需要程序集的符号文件（.pdb 文件）  。 对于解决方案生成的程序集，符号文件通常与二进制文件一起出现，且代码覆盖率将自动工作。 但在某些情况下，你可能需要在你的代码覆盖率分析中包含引用的程序集。 在这种情况下，.pdb 文件可能不会与二进制文件相邻，但可在 .runsettings 文件中指定符号搜索路径   。
 
 ```xml
 <SymbolSearchPaths>
@@ -56,7 +75,7 @@ ms.locfileid: "53856522"
 ```
 
 > [!NOTE]
-> 符号解析可能很耗时，尤其是在使用包含大量程序集的远程文件位置时。 因此，请考虑将 .pdb 文件复制到与二进制文件（.dll 和 .exe）相同的本地位置。
+> 符号解析可能很耗时，尤其是在使用包含大量程序集的远程文件位置时。 因此，请考虑将 .pdb 文件复制到与二进制文件（.dll 和 .exe）相同的本地位置    。
 
 ### <a name="exclude-and-include"></a>排除和包含
 
@@ -82,15 +101,15 @@ ms.locfileid: "53856522"
 </ModulePaths>
 ```
 
-如果“Include”为空，那么代码覆盖率会处理已加载且能找到 .pdb 文件的所有程序集。 代码覆盖率不包括与“Exclude”列表中子句匹配的项。
+如果“Include”为空，那么代码覆盖率会处理已加载且能找到 .pdb 文件的所有程序集   。 代码覆盖率不包括与“Exclude”列表中子句匹配的项  。
 
-先处理“Include”，再处理“Exclude”。
+先处理“Include”，再处理“Exclude”   。
 
 ### <a name="regular-expressions"></a>正则表达式
 
 包括和排除节点使用正则表达式。 有关详细信息，请参阅[在 Visual Studio 中使用正则表达式](../ide/using-regular-expressions-in-visual-studio.md)。 正则表达式与通配符不同。 具体而言：
 
-- .\\* 与包含任意字符的字符串匹配
+-  .\* 与任意字符组成的字符串匹配
 
 - **\\.** 与句点“.”匹配
 
@@ -128,7 +147,7 @@ ms.locfileid: "53856522"
 
 - **ModulePath** - 匹配程序集文件路径指定的程序集。
 
-- **CompanyName** - 按“公司”属性匹配程序集。
+- **CompanyName** - 按“公司”属性匹配程序集  。
 
 - **PublicKeyToken** - 按公钥标记匹配签名的程序集。
 

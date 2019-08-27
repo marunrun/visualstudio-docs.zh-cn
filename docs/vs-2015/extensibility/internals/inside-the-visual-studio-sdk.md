@@ -1,14 +1,9 @@
 ---
 title: 在 Visual Studio SDK |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - roadmap, Visual Studio integration SDK
 - Visual Studio integration SDK roadmap
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 9118eaa4-0453-4dc5-9e16-c7062d254869
 caps.latest.revision: 31
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: b7a7642d8cd33d53bb7d6d2a472a0690713e25d3
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 3bdc65a145b64071087d72fce9967c67cc2f8426
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51795825"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65687536"
 ---
 # <a name="inside-the-visual-studio-sdk"></a>深入探究 Visual Studio SDK
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -42,7 +37,7 @@ Visual Studio 体系结构的通用的视图
  在 Visual Studio shell 提供基本功能和支持，其组件 Vspackage 和 MEF 扩展之间的跨通信。 有关详细信息，请参阅[Visual Studio Shell](../../extensibility/internals/visual-studio-shell.md)。  
   
 ## <a name="user-experience-guidelines"></a>用户体验指南  
- 如果您打算设计的 Visual Studio 的新功能，应看一看以下准则，以便设计和可用性的提示： [Visual Studio 用户体验指南](../../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)。  
+ 如果您打算设计的 Visual Studio 的新功能，您应该看看以下准则，以便设计和可用性的提示：[Visual Studio 用户体验指南](../../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)。  
   
 ## <a name="commands"></a>命令  
  命令是完成任务（如打印文档、刷新视图或创建新文件）的函数。  
@@ -76,7 +71,7 @@ Visual Studio 体系结构的通用的视图
 ## <a name="document-windows"></a>文档窗口  
  文档窗口是带边框的子窗口的多文档界面 (MDI) 窗口。 文档窗口通常要用于宿主的文本编辑器、 窗体编辑器 （也称为设计器） 或编辑控件，但它们还可以托管其他功能的类型。 **新的文件**对话框包括 Visual Studio 提供的文档窗口的示例。  
   
- 大多数编辑器是特定于编程语言或文件类型，如 HTML 页面、 框架、 c + + 文件或标头文件。 通过选择中的模板**新的文件**对话框中，用户动态创建一个文档窗口是与模板关联的文件类型的编辑器。 当用户打开现有文件，还会创建一个文档窗口。  
+ 大多数编辑器是特定于编程语言或文件类型，如 HTML 页，框架集，C++文件或标头文件。 通过选择中的模板**新的文件**对话框中，用户动态创建一个文档窗口是与模板关联的文件类型的编辑器。 当用户打开现有文件，还会创建一个文档窗口。  
   
  文档窗口仅限于在 MDI 工作区。 每个文档窗口的顶部，有一个选项卡和 tab 键顺序链接至其他 MDI 区域中可以在打开的窗口。 右键单击文档窗口的选项卡显示包括用于将 MDI 区域拆分为多个水平或垂直选项卡组的选项的快捷菜单。 拆分 MDI 区可以同时查看多个文件。 有关详细信息，请参阅[文档 Windows](../../extensibility/internals/document-windows.md)。  
   
@@ -95,22 +90,22 @@ Visual Studio 体系结构的通用的视图
   
  项目还可能收集到一个解决方案，其中是协同工作以创建应用程序的一个或多个项目的分组。 适用于解决方案的项目和状态信息存储在两个解决方案文件、 基于文本的解决方案 (.sln) 文件和二进制解决方案用户选项 (.suo) 文件。 这些文件是与组 (文件.vbg) 文件的早期版本中使用的类似[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]，以及在工作区 (.dsw) 和用户选项 (.opt) 文件的早期版本中使用[!INCLUDE[vcprvc](../../includes/vcprvc-md.md)]。  
   
- 有关详细信息，请参阅[项目](../../extensibility/internals/projects.md)并[解决方案](../../extensibility/internals/solutions.md)。  
+ 有关详细信息，请参阅[项目](../../extensibility/internals/projects.md)并[解决方案](../../extensibility/internals/solutions-overview.md)。  
   
 ## <a name="project-and-item-templates"></a>项目和项模板  
- Visual Studio 包含预定义的项目模板和项目项模板。 可以还使您自己的模板或获取社区中的模板，然后将其集成到 Visual Studio。 [MSDN 代码库](http://code.msdn.microsoft.com/Project/ProjectDirectory.aspx?ProjectSearchText=visual%20studio)是为模板和扩展的位置。  
+ Visual Studio 包含预定义的项目模板和项目项模板。 可以还使您自己的模板或获取社区中的模板，然后将其集成到 Visual Studio。 [MSDN 代码库](https://code.msdn.microsoft.com/site/search?query=visual%20studio)是为模板和扩展的位置。  
   
  模板包含的项目结构和所需构建特定类型的应用程序、 控件、 库或类的基本文件。 当你想要开发软件，类似于一个模板时，创建基于模板的项目，然后修改该项目中的文件。  
   
 > [!NOTE]
->  此模板体系结构不支持为[!INCLUDE[vcprvc](../../includes/vcprvc-md.md)]项目。 有关如何创建[!INCLUDE[vcprvc](../../includes/vcprvc-md.md)]项目模板，请参阅[设计向导](http://msdn.microsoft.com/library/a7c0be7e-9297-4fed-83e3-5645c896d56b)。  
+> 此模板体系结构不支持为[!INCLUDE[vcprvc](../../includes/vcprvc-md.md)]项目。 有关如何创建[!INCLUDE[vcprvc](../../includes/vcprvc-md.md)]项目模板，请参阅[设计向导](https://msdn.microsoft.com/library/a7c0be7e-9297-4fed-83e3-5645c896d56b)。  
   
  有关详细信息，请参阅[添加项目和项目项模板](../../extensibility/internals/adding-project-and-project-item-templates.md)。  
   
 ## <a name="properties-and-options"></a>属性和选项  
- **属性**窗口中显示一个或多个选定的项的属性：[扩展属性](../../extensibility/internals/extending-properties.md)选项页包含与某个组件，如相关的选项集编程语言或 VSPackage:[选项和选项页](../../extensibility/internals/options-and-options-pages.md)。 设置是通常与 UI 相关的功能，可以导入和导出：[支持用户设置](../../extensibility/internals/support-for-user-settings.md)。  
+ **属性**窗口显示单个或多个选定的项的属性：[将属性扩展](../../extensibility/internals/extending-properties.md)选项页包含一系列的适用于特定组件，例如，一种编程语言或 VSPackage 的选项：[选项和选项页](../../extensibility/internals/options-and-options-pages.md)。 设置为通常与 UI 相关的功能，可以导入和导出：[支持用户设置](../../extensibility/internals/support-for-user-settings.md)。  
   
-## <a name="visual-studio-services"></a>Visual Studio 服务  
+## <a name="visual-studio-services"></a>Visual Studio Services  
  服务提供了一组特定的组件使用的接口。 Visual Studio 提供了一组可由任何组件，包括扩展的服务。 例如，Visual Studio 服务，工具窗口，以显示或隐藏动态，启用对帮助、 状态栏或 UI 事件的访问。 在 Visual Studio 编辑器还提供可由编辑器扩展导入的服务。 有关详细信息，请参阅[使用和提供服务](../../extensibility/using-and-providing-services.md)。  
   
 ## <a name="debugger"></a>调试器  
@@ -133,4 +128,3 @@ Visual Studio 体系结构的通用的视图
   
 ## <a name="help-viewer"></a>帮助查看器  
  可以将你自己的帮助和 F1 页面集成到帮助查看器。 有关详细信息，请参阅[Microsoft 帮助查看器 SDK](../../extensibility/internals/microsoft-help-viewer-sdk.md)。
-

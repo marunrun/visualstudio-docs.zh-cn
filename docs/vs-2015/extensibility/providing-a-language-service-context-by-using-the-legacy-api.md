@@ -1,33 +1,28 @@
 ---
 title: 使用旧版 API 提供的语言服务上下文 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - language service context
 ms.assetid: daa2df22-9181-4bad-b007-a7d40302bce1
 caps.latest.revision: 15
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 322dc704524a5b0172797c9351e7beb60d778ab4
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 4471b71b612008ba7d0733c92286415cd3c3f6b3
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51781928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68193865"
 ---
-# <a name="providing-a-language-service-context-by-using-the-legacy-api"></a>使用旧版 API 提供的语言服务上下文
+# <a name="providing-a-language-service-context-by-using-the-legacy-api"></a>使用旧版 API 提供语言服务上下文
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 有两个选项的语言服务以提供用户上下文中使用[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]核心编辑器： 提供文本标记的上下文，或提供所有的用户上下文。 下面概述了每个之间的差异。  
   
- 提供连接到您自己的编辑器的语言服务上下文的详细信息，请参阅[如何： 为编辑器提供上下文](../extensibility/how-to-provide-context-for-editors.md)。  
+ 提供连接到您自己的编辑器的语言服务上下文的详细信息，请参阅[如何：为编辑器提供的上下文](../extensibility/how-to-provide-context-for-editors.md)。  
   
 ## <a name="provide-text-marker-context-to-the-editor"></a>为编辑器提供文本标记上下文  
  若要为编译器错误由文本标记中提供的上下文[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]核心编辑器，实现<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerContextProvider>接口。 在此方案中，语言服务仅当在光标位于文本标记上时提供上下文。 这允许提供到光标位置处关键字编辑器**动态帮助**窗口不具有任何属性。  
@@ -56,4 +51,3 @@ ms.locfileid: "51781928"
   
 ## <a name="context-guidelines-for-editors-and-designers"></a>上下文为编辑器和设计器的指导原则  
  设计器和编辑器必须提供的编辑器或设计器窗口的常规关键字。 这样，以便当用户按 F1 时，泛型类型，但相应，帮助主题将显示的设计器或编辑器。 编辑器必须除此之外，提供当前光标位置处关键字或提供基于当前所选内容的关键术语。 这样做是为了确保指向帮助主题的文本或 UI 元素，或选择显示在用户按 F1 时。 设计器提供了设计器，如在窗体上按钮中选择的项的上下文。 编辑器和设计器还必须连接到语言服务中所述[旧版语言服务基础知识](../extensibility/internals/legacy-language-service-essentials.md)。
-

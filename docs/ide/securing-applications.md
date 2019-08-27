@@ -1,7 +1,6 @@
 ---
 title: 安全性
 ms.date: 06/01/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Visual Studio], applications
@@ -9,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 7d32c4cf-8bec-4307-a2a8-42f0ceddf3eb
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 74643454c4e96f5f4c1faa98b26fa1f26bd2790b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 2c5b0f4c748cd923ca02cb16ba374747c20d12d7
+ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53904625"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66747653"
 ---
 # <a name="secure-applications"></a>保护应用程序
 
@@ -41,7 +40,7 @@ ms.locfileid: "53904625"
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Framework 中的安全性](/dotnet/standard/security/index)
+- [.NET 中的安全性](/dotnet/standard/security/index)
 - [Azure 安全性](/azure/security/)
 - [Windows 10 移动版安全指南](/windows/security/threat-protection/windows-10-mobile-security-guide)
 - [Apache Cordova 平台安全功能](/visualstudio/cross-platform/tools-for-cordova/security/best-practices?view=toolsforcordova-2017)

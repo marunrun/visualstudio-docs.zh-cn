@@ -1,7 +1,6 @@
 ---
 title: CA2102:在常规处理程序中捕捉非 CLSCompliant 异常
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - CA2102
@@ -11,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: bf2df68f-d386-4379-ad9e-930a2c2e930d
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: de5bb494822b2faabce0bdf8a3b2a1e2e9a80b99
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 2f361720f45a24e561ab2a886537bda02c73c006
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53840390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62545767"
 ---
 # <a name="ca2102-catch-non-clscompliant-exceptions-in-general-handlers"></a>CA2102:在常规处理程序中捕捉非 CLSCompliant 异常
 
@@ -40,7 +39,7 @@ ms.locfileid: "53840390"
 
 - C#：`catch {}`
 
-- C + +:`catch(...) {}`或 `catch(Object^) {}`
+- C++:`catch(...) {}`或 `catch(Object^) {}`
 
 在 catch 块中删除以前允许的权限时，未处理的非 CLS 兼容异常将成为安全问题。 未捕获非 CLS 兼容异常，因为可以使用提升的权限运行恶意方法引发非 CLS 兼容异常。
 

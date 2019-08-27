@@ -1,21 +1,20 @@
 ---
 title: 编码的 UI 测试的配置和平台
-ms.date: 2015-10-04
-ms.prod: visual-studio-dev15
+ms.date: 10/04/2015
 ms.topic: reference
 helpviewer_keywords:
 - coded UI tests
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: ebac25b0269d5c5bc1d0bd674b41d35ab91cc7b5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: fd44fdc7e365bd07f25318740fb2dcc04fe0ea9d
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53893031"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68926459"
 ---
 # <a name="supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings"></a>支持编码的 UI 测试和操作录制的配置和平台
 
@@ -28,7 +27,7 @@ ms.locfileid: "53893031"
 
 **要求**
 
--   Visual Studio Enterprise
+- Visual Studio Enterprise
 
 ## <a name="supported-configurations"></a>支持的配置
 
@@ -37,15 +36,14 @@ ms.locfileid: "53893031"
 | 操作系统 | [!INCLUDE[win7](../debugger/includes/win7_md.md)]<br /><br /> [!INCLUDE[winsvr08_r2](../debugger/includes/winsvr08_r2_md.md)]<br /><br /> [!INCLUDE[win8](../debugger/includes/win8_md.md)]<br /><br /> Windows 10 |
 | 32 位/64 位支持 | 运行 32 位 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] 的 32 位 Windows 可测试 32 位应用程序。<br /><br /> 运行 32 位 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] 的 64 位 Windows 可测试具有 UI 同步的 32 位 WOW 应用程序。<br /><br /> 运行 32 位 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] 的 64 位 Windows 可测试不具有 UI 同步的 64 位 Windows 窗体和 WPF 应用程序。 |
 | 体系结构 | x86 和 x64**注意：** 除非在 [!INCLUDE[win8](../debugger/includes/win8_md.md)] 或更高版本下运行，否则 Internet Explorer 在 64 位模式下不受支持。 |
-| .NET | .NET 2.0、3.0、3.5、4 和 4.5。 **注意：**[!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] 和 Visual Studio 都需要 .NET 4 才能运行。 但是，支持使用列出的 .NET 版本开发的应用程序。 |
+| .NET | .NET 2.0、3.0、3.5、4 和 4.5。 **注意：** [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] 和 Visual Studio 都需要 .NET 4 才能运行。 但是，支持使用列出的 .NET 版本开发的应用程序。 |
 
 > [!NOTE]
-> UI 同步是一种功能，该功能在每个控件的消息队列中验证播放。   如果某个控件未响应发送给它的事件，则会重新发送该事件。
-
+> UI 同步是一种功能，该功能在每个控件的消息队列中验证播放。  如果某个控件未响应发送给它的事件，则会重新发送该事件。
 
 ## <a name="platform-support"></a>平台支持
 
-| 平台 | 支持级别 |
+| Platform | 支持级别 |
 |-| - |
 | Windows Phone 应用 | 仅支持基于 WinRT-XAML 的 Phone 应用。 |
 | UWP 应用 | 仅支持基于 XAML 的 UWP 应用。 |
@@ -70,7 +68,7 @@ ms.locfileid: "53893031"
 | Citrix/终端服务 | 不建议在终端服务器上录制操作。 记录器不支持同时运行多个实例。 |
 | PowerBuilder | 部分支持。<br /><br /> 支持取决于为 PowerBuilder 控件启用的可访问性。 |
 
- 有关如何创建扩展以支持其他平台的信息，请参阅[启用控件的编码的 UI 测试](../test/enable-coded-ui-testing-of-your-controls.md)和[扩展编码的 UI 测试和操作录制](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)。
+有关如何创建扩展以支持其他平台的信息，请参阅[启用控件的编码的 UI 测试](../test/enable-coded-ui-testing-of-your-controls.md)和[扩展编码的 UI 测试和操作录制](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,27 +1,22 @@
 ---
 title: 注册工具窗口 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - tool windows, registering managed
 - tool windows, registering
 ms.assetid: 8c8c4a24-3da4-497b-9db2-0ddd7cfbfdd2
 caps.latest.revision: 15
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 9c9e8a6a86fb858b5c0e85aafc21095bd579b396
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 8178938715278bf69fe8f4cc1b336bbd19cec04e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51786166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62535631"
 ---
 # <a name="registering-a-tool-window"></a>注册工具窗口
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,4 +36,3 @@ public class PackageToolWindow : Package
 ```  
   
  在上面的代码，<xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute>向 Visual Studio 注册 persistedwindowpane 注册时和 DynamicWindowPane 工具窗口。 保留的工具窗口停靠，并使用选项卡式**解决方案资源管理器**，并且动态窗口中将提供默认值的起始位置和大小。 由暂时的指示在启动时不创建动态窗口中。 这将 DontForceCreate 值写入系统注册表中的工具 Windows 键。 有关详细信息，请参阅[工具窗口中显示配置](../extensibility/tool-window-display-configuration.md)。
-

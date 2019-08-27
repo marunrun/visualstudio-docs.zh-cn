@@ -1,7 +1,6 @@
 ---
 title: CA2221:终结器应受到保护
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - CA2221
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: bda03aee-4cce-45d3-907d-17f4ee030acc
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aa768c4f14483ebfd144865f9a4d91283f9c6132
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e88f22f25ff0620a88685dee93fd5658c302db74
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53835023"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68920246"
 ---
 # <a name="ca2221-finalizers-should-be-protected"></a>CA2221:终结器应受到保护
 
@@ -32,19 +31,19 @@ ms.locfileid: "53835023"
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
- 公共类型实现终结器没有指定系列 （受保护） 的访问。
+公共类型实现不指定族 (受保护) 访问的终结器。
 
 ## <a name="rule-description"></a>规则说明
- 终结器必须使用族访问修饰符。 此规则由 C#、 Visual Basic 和 Visual c + + 编译器强制执行。
+终结器必须使用族访问修饰符。 此规则由C#、Visual Basic 和 Visual C++编译器强制执行。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复此规则的冲突，请更改为系列可访问的终结器。
+若要修复与此规则的冲突, 请将终结器更改为可以进行系列访问。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 不禁止显示此规则发出的警告。
+不禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
- 此规则不能违反了任何高级的.NET 语言;如果你正在编写 Microsoft 中间语言，它可以违反了。
+任何高级 .NET 语言中都不能违反此规则;如果你正在编写 Microsoft 中间语言, 则可能会违反此方法。
 
 ```
 // =============== CLASS MEMBERS DECLARATION ===================
@@ -81,4 +80,4 @@ ms.locfileid: "53835023"
 
 ## <a name="see-also"></a>请参阅
 
-- [Dispose 模式](/dotnet/standard/design-guidelines/dispose-pattern)
+- [释放模式](/dotnet/standard/design-guidelines/dispose-pattern)

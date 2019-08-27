@@ -1,27 +1,22 @@
 ---
-title: 测试区域 6： 删除 |Microsoft Docs
-ms.custom: ''
+title: 测试区域 6：删除 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], deleting items
 - source control plug-ins, deleting items
 ms.assetid: 6f2e872c-5ba2-4303-9f50-a90cef9a6225
 caps.latest.revision: 13
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 1498566e1afeaf1517b7ae3bd62297444c828888
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 3ffe786b5bc5f6d0bb0233fbb431988e0145611d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51766310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68155935"
 ---
 # <a name="test-area-6-delete"></a>测试区域 6：删除
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -43,13 +38,13 @@ ms.locfileid: "51766310"
 ## <a name="expected-behavior"></a>预期的行为  
  删除测试区域中的测试用例预期的行为是：  
   
--   已删除的项将不再显示在**解决方案资源管理器**。  
+- 已删除的项将不再显示在**解决方案资源管理器**。  
   
--   已删除的项目或项的父签出，根据需要 （也许加上提示。）  
+- 已删除的项目或项的父签出，根据需要 （也许加上提示。）  
   
--   删除签入或添加的项后，它不会出现在**挂起的签入**窗口。  
+- 删除签入或添加的项后，它不会出现在**挂起的签入**窗口。  
   
--   项仍然后删除，在源代码管理存储区中，存在，并且必须手动清除。  
+- 项仍然后删除，在源代码管理存储区中，存在，并且必须手动清除。  
   
 |操作|测试步骤|若要验证的预期的结果|  
 |------------|----------------|--------------------------------|  
@@ -61,4 +56,3 @@ ms.locfileid: "51766310"
   
 ## <a name="see-also"></a>请参阅  
  [源代码管理插件的测试指南](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)
-

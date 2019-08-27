@@ -1,13 +1,9 @@
 ---
 title: 查找和使用扩展 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.ExtensionManager
 helpviewer_keywords:
@@ -18,13 +14,13 @@ ms.assetid: 4ca92d93-31b9-47ef-8109-4a429d9e2ca3
 caps.latest.revision: 47
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: d557af4b09af81d4145a7ef66a7b812f5dcf04bb
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+manager: jillfra
+ms.openlocfilehash: f4878827ae65a8f42e8225c7daab207a27a0614a
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53884395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63426379"
 ---
 # <a name="finding-and-using-visual-studio-extensions"></a>查找和使用 Visual Studio 扩展
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,10 +30,10 @@ Visual Studio 扩展是在 Visual Studio 内运行的代码包，并且提供了
  你可以使用 **“扩展和更新”** 对话框安装来自网站或其他位置的 Visual Studio 扩展及示例，然后启用、禁用、更新或卸载这些扩展和示例。 （“工具”/“扩展和更新”，或在“快速启动”  窗口中输入 **扩展** ）。 该对话框还显示用于已安装的示例和扩展的更新。 还可以从网站下载扩展，或从其他开发人员处获取它们。
 
 > [!NOTE]
->  从 Visual Studio 2015 开始，Visual Studio 库上托管的扩展将自动更新。  可以通过 **“扩展和更新”** 对话框更改此设置。  请参阅下面的 **“自动扩展更新”** 部分了解详细信息。
+> 从 Visual Studio 2015 开始，Visual Studio 库上托管的扩展将自动更新。  可以通过 **“扩展和更新”** 对话框更改此设置。  请参阅下面的 **“自动扩展更新”** 部分了解详细信息。
 
 ## <a name="finding-visual-studio-extensions"></a>查找 Visual Studio 扩展
- 你可以安装来自 Microsoft 网站上 [Visual Studio 库](http://go.microsoft.com/fwlink/?LinkID=178891) 或 [示例库](http://go.microsoft.com/fwlink/?LinkId=245175) 的扩展。 这些扩展可以是控件、示例、模板、工具或其他组件，用于向 Visual Studio 添加功能。 Visual Studio 支持 VSIX 包格式的扩展，其中包括项目模板、项模板、 **工具箱** 项、托管扩展框架 (MEF) 组件和 VSPackage。 还可以下载和安装基于 MSI 的扩展，但是无法通过 **“扩展和更新”** 对话框启用或禁用它们。 Visual Studio 库包含 VSIX 和 MSI 扩展。
+ 可以安装的扩展[Visual Studio Marketplace](https://marketplace.visualstudio.com/)或[示例库](https://code.msdn.microsoft.com/vstudio)Microsoft 网站上。 这些扩展可以是控件、示例、模板、工具或其他组件，用于向 Visual Studio 添加功能。 Visual Studio 支持 VSIX 包格式的扩展，其中包括项目模板、项模板、 **工具箱** 项、托管扩展框架 (MEF) 组件和 VSPackage。 还可以下载和安装基于 MSI 的扩展，但是无法通过 **“扩展和更新”** 对话框启用或禁用它们。 Visual Studio 库包含 VSIX 和 MSI 扩展。
 
 ## <a name="installing-or-uninstalling-visual-studio-extensions"></a>安装或卸载 Visual Studio 扩展
  在 **“扩展和更新”** 中，找到要安装的扩展。 （如果知道扩展的名称或部分名称，则可以在“搜索 Visual Studio 库”窗口中进行搜索。）单击“下载”，然后单击“安装”。 必须重新启动 Visual Studio 才能加载扩展。
@@ -58,12 +54,12 @@ Visual Studio 扩展是在 Visual Studio 内运行的代码包，并且提供了
 
  若要禁用自动更新，可为所有扩展或仅特定扩展禁用该功能。
 
--   若要为所有扩展禁用自动更新，请单击 **“扩展和更新”** 对话框上的 **“更改扩展和更新设置”** 链接，并取消选中 **“自动更新扩展”**。
+- 若要为所有扩展禁用自动更新，请单击 **“扩展和更新”** 对话框上的 **“更改扩展和更新设置”** 链接，并取消选中 **“自动更新扩展”**。
 
--   若要为特定扩展禁用自动更新，请取消选中 **“扩展和更新”** 对话框右侧的扩展详细信息窗格中的 **“自动更新此扩展插件”** 选项。
+- 若要为特定扩展禁用自动更新，请取消选中 **“扩展和更新”** 对话框右侧的扩展详细信息窗格中的 **“自动更新此扩展插件”** 选项。
 
 > [!NOTE]
->  从 Visual Studio 2015 Update 2 开始，可以指定（在“工具”/“选项”/“环境”/“扩展和更新”中）是否需要为每用户扩展、所有用户扩展或两者（默认设置）进行自动更新。
+> 从 Visual Studio 2015 Update 2 开始，可以指定（在“工具”/“选项”/“环境”/“扩展和更新”中）是否需要为每用户扩展、所有用户扩展或两者（默认设置）进行自动更新。
 
 ## <a name="sample-master-copies-and-working-copies"></a>主控副本和工作副本示例
  安装联机示例时，解决方案存储在两个位置：
@@ -93,4 +89,4 @@ Visual Studio 扩展是在 Visual Studio 内运行的代码包，并且提供了
  Visual Studio 会继续在无需修改的情况下，支持由 Microsoft 安装程序 (MSI) 安装、而不是通过 **“扩展和更新”** 对话框安装的扩展。
 
 > [!TIP]
->  如果基于 MSI 的扩展包含 extension.vsixmanifest 文件，则扩展会出现在 **“扩展和更新”** 对话框中。
+> 如果基于 MSI 的扩展包含 extension.vsixmanifest 文件，则扩展会出现在 **“扩展和更新”** 对话框中。

@@ -1,11 +1,8 @@
 ---
 title: CorrelationScope 活动设计器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 f1_keywords:
 - System.ServiceModel.Activities.CorrelationScope.UI
@@ -13,13 +10,13 @@ ms.assetid: 75f20664-9042-464d-8e2b-148d365a2286
 caps.latest.revision: 6
 author: gewarren
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: 4a46c50a888808932d071622d83b871761977259
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 95c8422d53903c3c7b81db9f6ef042c5ea9ff1c1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49173194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62976764"
 ---
 # <a name="correlationscope-activity-designer"></a>CorrelationScope 活动设计器
 **CorrelationScope**活动设计器用于创建和配置<xref:System.ServiceModel.Activities.CorrelationScope>提供子消息传递活动使用的隐式管理的活动<xref:System.ServiceModel.Activities.CorrelationHandle>对象。  

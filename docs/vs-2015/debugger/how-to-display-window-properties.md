@@ -1,27 +1,22 @@
 ---
-title: 如何： 显示窗口属性 |Microsoft Docs
-ms.custom: ''
+title: 如何：显示窗口属性 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - window properties
 ms.assetid: 4c2f52de-bd91-42cf-9028-67aa75f8bd26
 caps.latest.revision: 7
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 1e02c0b184a6e5af6da04084b5dfdaf55140d1fc
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: acef433d8f82151a7870fda047f27ac46090b480
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51747237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62538182"
 ---
 # <a name="how-to-display-window-properties"></a>如何：显示窗口属性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,6 +28,3 @@ ms.locfileid: "51747237"
 1. 选择该项，然后选择**属性**从**视图**菜单。  
   
    属性对话框都不是模式。 视图窗口中单击的项之间时，对话框的自动刷新，每个选择的项信息。
-
-
-

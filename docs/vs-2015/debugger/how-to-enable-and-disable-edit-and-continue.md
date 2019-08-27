@@ -1,14 +1,9 @@
 ---
-title: 如何： 启用和禁用编辑并继续 |Microsoft Docs
-ms.custom: ''
+title: 如何：启用和禁用编辑并继续 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -29,15 +24,15 @@ ms.assetid: fd961a1c-76fa-420d-ad8f-c1a6c003b0db
 caps.latest.revision: 29
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 5709b4bdae55c0ade6ca4559dcbaad8d66c0bbac
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 70914da9be4046589a0ca3b8e5fd4ae13210ca51
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51781252"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65689262"
 ---
-# <a name="how-to-enable-and-disable-edit-and-continue"></a>如何：启用和禁用“编辑并继续”
+# <a name="how-to-enable-and-disable-edit-and-continue"></a>如何：启用和禁用编辑并继续
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 您可以禁用或启用在编辑并继续**选项**在设计时对话框。 无法在调试过程中更改此设置。  
@@ -55,7 +50,7 @@ ms.locfileid: "51781252"
 3. 若要启用，请选择**启用编辑并继续**复选框。 若要禁用它，请清除该复选框。  
   
    > [!NOTE]
-   >  如果启用了 IntelliTrace 并且收集 IntelliTrace 事件和调用信息，则会禁用“编辑并继续”。 有关详细信息，请参阅[配置 IntelliTrace](http://msdn.microsoft.com/en-us/7657ecab-e07e-4b1b-872d-f05d966be37e)。  
+   > 如果启用了 IntelliTrace 并且收集 IntelliTrace 事件和调用信息，则会禁用“编辑并继续”。 有关详细信息，请参阅[配置 IntelliTrace](https://msdn.microsoft.com/7657ecab-e07e-4b1b-872d-f05d966be37e)。  
   
 4. 单击 **“确定”**。  
   
@@ -63,6 +58,3 @@ ms.locfileid: "51781252"
   
 ## <a name="see-also"></a>请参阅  
  [编辑并继续](../debugger/edit-and-continue.md)
-
-
-

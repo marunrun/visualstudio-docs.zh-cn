@@ -1,0 +1,16 @@
+- name: Python
+  items:
+    - name: Python
+      href: getting-started-with-python.md
+    - name: 设置 Visual Studio
+      href: getting-started-with-ptvs-setting-up-visual-studio.md
+    - name: 开始编码（项目）
+      href: getting-started-with-ptvs-start-coding-projects.md
+    - name: 编辑代码
+      href: getting-started-with-ptvs-editing-code.md
+    - name: 调试
+      href: getting-started-with-ptvs-debugging.md
+    - name: 交互式 Python
+      href: getting-started-with-ptvs-interactive-python.md
+    - name: 在 Azure 中构建网站
+      href: getting-started-with-ptvs-building-a-website-in-azure.md

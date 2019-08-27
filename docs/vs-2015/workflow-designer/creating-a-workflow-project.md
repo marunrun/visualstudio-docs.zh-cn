@@ -1,11 +1,8 @@
 ---
 title: 创建工作流项目 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 helpviewer_keywords:
 - Workflow Designer, creating a workflow project
@@ -15,13 +12,13 @@ ms.assetid: 235a125e-ebe7-4a98-bf77-86c8558728fb
 caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: 4ba558e77aae5ae40d5b754c30b648f4ba2ea2af
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: d91d84b6a763dd3fecfac8a030f8514c91e5ac61
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49236712"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65704713"
 ---
 # <a name="creating-a-workflow-project"></a>创建工作流项目
 工作流、[!INCLUDE[indigo1](../includes/indigo1-md.md)] 工作流服务、自定义活动和自定义活动设计器都可以使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目模板来创建。 本节介绍如何通过 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中提供的项目模板来创建库和应用程序。  
@@ -40,14 +37,14 @@ ms.locfileid: "49236712"
  [如何：创建活动库](../workflow-designer/how-to-create-an-activity-library.md)  
  介绍用于在 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 中创建活动库的步骤。  
   
- [如何：创建活动设计器库](../workflow-designer/how-to-create-an-activity-designer-library.md)  
+ [如何：创建活动设计器库y](../workflow-designer/how-to-create-an-activity-designer-library.md)  
  介绍如何创建适合多种受众的设计器。  
   
  [如何：向工作流项目添加新项](../workflow-designer/how-to-add-a-new-item-to-a-workflow-project.md)  
  介绍如何向现有项目添加其他工作流活动或设计器以及其他 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项（如代码活动）。  
   
 ## <a name="related-sections"></a>相关章节  
- [设计工作流](http://msdn.microsoft.com/library/41f727b5-b142-4c1b-b046-492b96135ae6)  
+ [设计工作流](https://msdn.microsoft.com/library/41f727b5-b142-4c1b-b046-492b96135ae6)  
   
 ## <a name="see-also"></a>请参阅  
  [使用工作流设计器](../workflow-designer/using-the-workflow-designer.md)

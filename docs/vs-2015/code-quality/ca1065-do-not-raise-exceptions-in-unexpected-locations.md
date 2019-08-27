@@ -1,14 +1,9 @@
 ---
-title: CA1065： 不要引发意外的位置中的异常 |Microsoft Docs
-ms.custom: ''
+title: CA1065:不会引发意外的位置中的异常 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA1065
 - DoNotRaiseExceptionsInUnexpectedLocations
@@ -20,14 +15,14 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 142322360d4ba1ffed6ef893bf02254548ee2705
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 6c5a393c32d7f7182fc3226689e24d20a4cae1ac
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49887579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68200406"
 ---
-# <a name="ca1065-do-not-raise-exceptions-in-unexpected-locations"></a>CA1065：不要在意外的位置引发异常
+# <a name="ca1065-do-not-raise-exceptions-in-unexpected-locations"></a>CA1065:不要在意外的位置引发异常
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -70,24 +65,24 @@ ms.locfileid: "49887579"
 
  允许属性 get 方法从引发以下异常：
 
--   <xref:System.InvalidOperationException?displayProperty=fullName> 所有派生类 (包括<xref:System.ObjectDisposedException?displayProperty=fullName>)
+- <xref:System.InvalidOperationException?displayProperty=fullName> 所有派生类 (包括<xref:System.ObjectDisposedException?displayProperty=fullName>)
 
--   <xref:System.NotSupportedException?displayProperty=fullName> 所有派生类
+- <xref:System.NotSupportedException?displayProperty=fullName> 所有派生类
 
--   <xref:System.ArgumentException?displayProperty=fullName> （仅限通过索引，以获得）
+- <xref:System.ArgumentException?displayProperty=fullName> （仅限通过索引，以获得）
 
--   <xref:System.Collections.Generic.KeyNotFoundException> （仅限通过索引，以获得）
+- <xref:System.Collections.Generic.KeyNotFoundException> （仅限通过索引，以获得）
 
 ### <a name="event-accessor-methods"></a>事件访问器方法
  事件访问器应该是简单的操作，不会引发异常。 当您尝试添加或删除事件处理程序时，事件不应引发异常。
 
  允许从事件访问器中引发以下异常：
 
--   <xref:System.InvalidOperationException?displayProperty=fullName> 所有派生类 (包括<xref:System.ObjectDisposedException?displayProperty=fullName>)
+- <xref:System.InvalidOperationException?displayProperty=fullName> 所有派生类 (包括<xref:System.ObjectDisposedException?displayProperty=fullName>)
 
--   <xref:System.NotSupportedException?displayProperty=fullName> 所有派生类
+- <xref:System.NotSupportedException?displayProperty=fullName> 所有派生类
 
--   <xref:System.ArgumentException> 派生类
+- <xref:System.ArgumentException> 派生类
 
 ### <a name="equals-methods"></a>Equals 方法
  以下**等于**方法不应引发异常：
@@ -138,10 +133,7 @@ ms.locfileid: "49887579"
  它可以安全地禁止显示此规则的警告，如果冲突引起异常声明而不是引发的异常。
 
 ## <a name="related-rules"></a>相关的规则
- [CA2219：在异常子句中不引发异常](../code-quality/ca2219-do-not-raise-exceptions-in-exception-clauses.md)
+ [CA2219:不会引发异常子句中的异常](../code-quality/ca2219-do-not-raise-exceptions-in-exception-clauses.md)
 
 ## <a name="see-also"></a>请参阅
  [设计警告](../code-quality/design-warnings.md)
-
-
-

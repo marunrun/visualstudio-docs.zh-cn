@@ -1,14 +1,9 @@
 ---
-title: CA1810： 引用类型的静态字段以内联方式初始化 |Microsoft Docs
-ms.custom: ''
+title: CA1810:引用类型的静态字段以内联方式初始化 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - InitializeReferenceTypeStaticFieldsInline
 - CA1810
@@ -20,14 +15,14 @@ caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: e4d7ffbe4fc821ffd70b0bb299b2a4738d63873b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: dd0372ca3264bedd6fbb17ef3c8326471cb6e99f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49862679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62538899"
 ---
-# <a name="ca1810-initialize-reference-type-static-fields-inline"></a>CA1810：以内联方式初始化引用类型的静态字段
+# <a name="ca1810-initialize-reference-type-static-fields-inline"></a>CA1810:以内联方式初始化引用类型的静态字段
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -47,9 +42,9 @@ ms.locfileid: "49862679"
 
  静态构造函数检查会降低性能。 通常使用静态构造函数仅用于初始化静态字段，只需确保该静态初始化的情况下在静态字段在首次访问之前发生。 `beforefieldinit`行为是适用于这些和大多数其他类型。 静态初始化会影响全局状态和以下项之一为 true 时才不合适：
 
--   对全局状态的影响很高，如果不使用该类型不需要。
+- 对全局状态的影响很高，如果不使用该类型不需要。
 
--   而无需访问类型的任何静态字段，可以访问全局状态的副作用。
+- 而无需访问类型的任何静态字段，可以访问全局状态的副作用。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  要修复与该规则的冲突，请在声明它时初始化所有静态数据并移除静态构造函数。
@@ -72,7 +67,4 @@ ms.locfileid: "49862679"
  **{**
  **} / / 结束类 NoStaticConstructor 的**
 ## <a name="related-rules"></a>相关的规则
- [CA2207：以内联方式初始化值类型的静态字段](../code-quality/ca2207-initialize-value-type-static-fields-inline.md)
-
-
-
+ [CA2207:值类型的静态字段以内联方式初始化](../code-quality/ca2207-initialize-value-type-static-fields-inline.md)

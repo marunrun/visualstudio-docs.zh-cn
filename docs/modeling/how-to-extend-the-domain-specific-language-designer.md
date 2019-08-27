@@ -4,16 +4,15 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: d1cec12a7a97ffa23f2eb75ffd9fc53da8ad2ed1
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 85a4356837180d13428acf34636f28cca668a423
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53940696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62993158"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>如何：扩展特定于域的语言设计器
 
@@ -27,25 +26,23 @@ ms.locfileid: "53940696"
 
 ### <a name="to-create-a-dsl-designer-extension-solution"></a>若要创建 DSL 设计器扩展解决方案
 
-1.  创建新项目使用类库项目模板。 在中**新的项目**对话框中，单击**Visual C#** ，然后在中间的窗口中单击**类库**。
+1. 创建新项目使用**类库**项目模板。 此项目将包含你的扩展的代码。
 
-     此项目将包含你的扩展的代码。
-
-2.  创建新项目使用 VSIX 项目模板。 在中**新的项目**对话框框中，展开**Visual C#**，单击**扩展性**，然后在中间的窗口中选择**VSIX 项目**。
+2. 创建一个新**VSIX 项目**项目。
 
      选择**将添加到解决方案**。
 
-     在 VSIX 清单编辑器中打开 Source.extension.vsixmanifest。
+     *Source.extension.vsixmanifest* VSIX 清单编辑器中打开。
 
-3.  以上内容的字段中，单击**添加内容**。
+3. 以上内容的字段中，单击**添加内容**。
 
-4.  在**添加内容**对话框中，将**中选择内容类型**到**MEF 组件**，并设置**项目**到你的类库项目。
+4. 在**添加内容**对话框中，将**中选择内容类型**到**MEF 组件**，并设置**项目**到你的类库项目。
 
-5.  单击**选择版本**并确保选中**Visual Studio Enterprise**检查。
+5. 单击**选择版本**并确保选中**Visual Studio Enterprise**检查。
 
-6.  请确保将 VSIX 项目的解决方案的启动项目。
+6. 请确保将 VSIX 项目的解决方案的启动项目。
 
-7.  在类库项目中，添加对以下程序集的引用：
+7. 在类库项目中，添加对以下程序集的引用：
 
      Microsoft.VisualStudio.CoreUtility
 
@@ -71,17 +68,17 @@ ms.locfileid: "53940696"
 
 将扩展部署到主要的 Visual Studio 和其他计算机，请执行以下步骤：
 
-1.  查找 VSIX 安装文件，在 VSIX 项目中 bin\\*\*\\\*.vsix
+1. 查找 VSIX 安装文件，在 VSIX 项目中 bin\\*\*\\\*.vsix
 
-2.  将此文件复制到目标计算机，然后在 Windows 资源管理器 （或文件资源管理器） 中，双击它。
+2. 将此文件复制到目标计算机，然后在 Windows 资源管理器 （或文件资源管理器） 中，双击它。
 
      Visual Studio 扩展管理器将打开，以确认已安装扩展。
 
 若要卸载该扩展，请按照下列步骤：
 
-1.  在 Visual Studio 中，在**工具**菜单上，单击**扩展管理器**。
+1. 在 Visual Studio 中，在**工具**菜单上，单击**扩展管理器**。
 
-2.  选择扩展，并将其删除。
+2. 选择扩展，并将其删除。
 
 ## <a name="add-a-shortcut-menu-command"></a>添加一个快捷方式菜单命令
 

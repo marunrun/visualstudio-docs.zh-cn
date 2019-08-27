@@ -1,14 +1,9 @@
 ---
 title: .NET 内存数据视图 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - .NET memory profiling method views
 - profiling tools,.NET memory profiling views
@@ -16,13 +11,13 @@ ms.assetid: 79184d8e-769b-4ace-be2b-521147772081
 caps.latest.revision: 15
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: bc893857e56d97442efd9ceee8ffb8a5aed72ea2
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 7d31213dc970fa7cb28c4d4620c6731692db83d2
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51762491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68185243"
 ---
 # <a name="net-memory-data-views"></a>.NET 内存数据视图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -85,6 +80,3 @@ ms.locfileid: "51762491"
   
  [检测方法数据视图](../profiling/instrumentation-method-data-views.md)  
  关于使用检测方法生成的探查器数据文件的视图和报表的参考信息。
-
-
-

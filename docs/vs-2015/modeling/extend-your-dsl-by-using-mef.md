@@ -1,23 +1,20 @@
 ---
 title: 通过使用 MEF 扩展 DSL |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 ms.assetid: 3e7be79a-53ab-4d79-863a-bef8d27839bd
 caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: fd5e4727c4352ca27d905bad608c4a1c17284f9b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: a1b90f37dcdadc53b6f2a81b9b4e9a860dd6a529
+ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49930632"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67692522"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>使用 MEF 扩展 DSL
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,7 +23,7 @@ ms.locfileid: "49930632"
   
  此外，启用时 MEF 在 DSL 中，可能会更轻松地编写的一些功能 DSL，即使它们是与 DSL。  
   
- 有关 MEF 的详细信息，请参阅[Managed Extensibility Framework (MEF)](http://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde)。  
+ 有关 MEF 的详细信息，请参阅[Managed Extensibility Framework (MEF)](https://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde)。  
   
 ### <a name="to-enable-your-dsl-to-be-extended-by-mef"></a>若要启用由 MEF 扩展 DSL  
   
@@ -35,7 +32,7 @@ ms.locfileid: "49930632"
     文件名： `CommandExtensionVSCT.tt`  
   
    > [!IMPORTANT]
-   >  在此文件以 GUID CommandSetId DslPackage\GeneratedCode\Constants.tt 中定义的相同设置 GUID  
+   > 在此文件以 GUID CommandSetId DslPackage\GeneratedCode\Constants.tt 中定义的相同设置 GUID  
   
    ```  
    <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
@@ -134,23 +131,23 @@ ms.locfileid: "49930632"
   
    - 此程序集通常具有文件名结尾"。Dsl.dll"。  
   
-   - 如果你有权访问 DSL 项目，可以找到程序集文件的目录下**Dsl\bin\\\\***  
+   - 如果你有权访问 DSL 项目，可以找到程序集文件的目录下**Dsl\\bin\\\***  
   
    - 如果你有权访问的 DSL 的 VSIX 文件，您可以通过 VSIX 文件的文件扩展名更改为".zip"找到程序集。 解压缩.zip 文件。  
   
 3. 添加以下.NET 程序集的引用：  
   
-   -   Microsoft.VisualStudio.Modeling.Sdk.11.0.dll  
+   - Microsoft.VisualStudio.Modeling.Sdk.11.0.dll  
   
-   -   Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0.dll  
+   - Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0.dll  
   
-   -   Microsoft.VisualStudio.Modeling.Sdk.Shell.11.0.dll  
+   - Microsoft.VisualStudio.Modeling.Sdk.Shell.11.0.dll  
   
-   -   System.ComponentModel.Composition.dll  
+   - System.ComponentModel.Composition.dll  
   
-   -   System.Windows.Forms.dll  
+   - System.Windows.Forms.dll  
   
-4. 在同一解决方案中创建一个 VSIX 项目。 若要执行此操作，在**新的项目**对话框框中，展开**Visual Basic**或**Visual C#**，单击**扩展性**，然后选择**VSIX 项目**。  
+4. 在同一解决方案中创建一个 VSIX 项目。 若要执行此操作，在**新的项目**对话框框中，展开**Visual Basic**或**Visual C#** ，单击**扩展性**，然后选择**VSIX 项目**。  
   
 5. 在解决方案资源管理器，右键单击 VSIX 项目，然后单击**设为启动项目**。  
   
@@ -162,7 +159,7 @@ ms.locfileid: "49930632"
   
    1. 在中**source.extension.vsixmanifest**，单击**添加引用**  
   
-   2. 在对话框中，单击**添加负载**，然后查找的 DSL 的 VSIX 文件。 在 DSL 解决方案中生成的 VSIX 文件 * * DslPackage\bin\\\\* * *。  
+   2. 在对话框中，单击**添加负载**，然后查找的 DSL 的 VSIX 文件。 在 DSL 解决方案中生成的 VSIX 文件**DslPackage\\bin\\\*** 。  
   
        这允许用户在同时安装 DSL 和扩展。 如果用户已安装 DSL，则将安装你的扩展。  
   
@@ -250,7 +247,7 @@ namespace MyMefExtension
 ### <a name="gesture-handlers"></a>笔势处理程序  
  笔势处理程序可以处理对象拖动到关系图上从任何位置，内部或外部[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。 下面的示例使用户可以将文件从 Windows 资源管理器拖动到关系图上。 它将创建包含文件名称的元素。  
   
- 可以编写处理程序来处理来自其他 DSL 模型和 UML 模型拖动的。 有关详细信息，请参阅[如何： 添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)。  
+ 可以编写处理程序来处理来自其他 DSL 模型和 UML 模型拖动的。 有关详细信息，请参阅[如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)。  
   
 ```  
   
@@ -379,9 +376,6 @@ namespace MefExtension
   
 ## <a name="see-also"></a>请参阅  
  [传送 Visual Studio 扩展](../extensibility/shipping-visual-studio-extensions.md)   
- [托管可扩展性框架 (MEF)](http://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde)   
- [如何： 添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)   
+ [托管可扩展性框架 (MEF)](https://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde)   
+ [如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)   
  [域特定语言中的验证](../modeling/validation-in-a-domain-specific-language.md)
-
-
-

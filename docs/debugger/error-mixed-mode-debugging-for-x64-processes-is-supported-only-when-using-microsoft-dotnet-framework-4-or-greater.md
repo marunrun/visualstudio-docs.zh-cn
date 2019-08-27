@@ -1,5 +1,5 @@
 ---
-title: 错误：仅当使用 Microsoft .NET Framework 4 或更高版本时才支持对 x64 进程执行混合模式调试 | Microsoft Docs
+title: 错误：混合模式调试支持对 x64 进程是仅当使用 Microsoft.NET Framework 4 或更高版本 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -11,26 +11,26 @@ dev_langs:
 - C++
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4098689338d0c0c647964e4d13e59ab860e42e4c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: 9ef0daf5fd28bd829edcdce412839b03ed8347bf
+ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53827399"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66745442"
 ---
 # <a name="error-mixed-mode-debugging-for-x64-processes-is-supported-only-when-using-microsoft-net-framework-4-or-greater"></a>错误：仅当使用 Microsoft .NET Framework 4 或更高版本时才支持对 x64 进程执行混合模式调试
-若要调试 64 位进程中的混合本机代码和托管代码，你必须安装了 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 4 版。 低于 4 的 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 版本不支持对 64 位进程进行混合模式调试。  
-  
-### <a name="to-correct-this-error"></a>更正此错误  
-  
-- 执行以下步骤之一：  
-  
-  - 将 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 升级到 4 版。  
-  
-  - 生成 32 位版本的应用程序以进行调试。  
-  
-## <a name="see-also"></a>请参阅  
- [Remote Debugging](../debugger/remote-debugging.md)
+若要调试 64 位进程中的混合本机和托管代码，必须具有.NET Framework 版本 4。 不支持混合模式调试的.NET Framework 版本 4 之前的 64 位进程。
+
+### <a name="to-correct-this-error"></a>更正此错误
+
+- 执行以下步骤之一：
+
+  - 升级到版本 4 的.NET Framework。
+
+  - 生成 32 位版本的应用程序以进行调试。
+
+## <a name="see-also"></a>请参阅
+- [远程调试](../debugger/remote-debugging.md)

@@ -2,21 +2,20 @@
 title: 衡量 Python 代码的性能
 description: 在使用基于 CPython 的解释器时，使用 Visual Studio 探查器来检查 Pyhon 代码的性能。
 ms.date: 11/12/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
-author: kraigb
-ms.author: kraigb
-manager: douge
+author: JoshuaPartlow
+ms.author: joshuapa
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 30fb65214db1eda64ef9b39f74d1bb534ba6af91
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e31286a9b0ea3852ad1fe788d4ff6c4c66e7e4f0
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53929719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62784258"
 ---
 # <a name="profile-python-code"></a>分析 Python 代码
 
@@ -32,12 +31,8 @@ ms.locfileid: "53929719"
 
 ![分析性能报告](media/profiling-results.png)
 
-|   |   |
-|---|---|
-| ![视频的摄像机图标](../install/media/video-icon.png "观看视频") | 有关 Python 分析的演示，请[观看视频（Microsoft 虚拟学院）](https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Profiling-Python-s6FoC6LWE_1005918567)（3 分 00 秒）。|
-
 > [!Note]
-> 目前，Visual Studio 仅支持此级别的全应用程序分析，但是我们当然希望听到你关于未来功能的反馈。 使用此页底部的[“产品反馈”按钮](#feedback)。
+> 目前，Visual Studio 仅支持此级别的全应用程序分析，但是我们当然希望听到你关于未来功能的反馈。 使用此页底部的“产品反馈”按钮。
 
 ## <a name="profiling-for-ironpython"></a>IronPython 的分析
 

@@ -1,14 +1,9 @@
 ---
-title: CA1816： 调用 GC。SuppressFinalize 正确 |Microsoft Docs
-ms.custom: ''
+title: CA1816:调用 GC。SuppressFinalize 正确 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA1816
 - DisposeMethodsShouldCallSuppressFinalize
@@ -20,14 +15,14 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: d859f8fe38d4b6efecb83b117f35cbf483467b6f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 031003e4989e6018a250045f5fa8550a7ec2033a
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49913873"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65683022"
 ---
-# <a name="ca1816-call-gcsuppressfinalize-correctly"></a>CA1816：正确调用 GC.SuppressFinalize
+# <a name="ca1816-call-gcsuppressfinalize-correctly"></a>CA1816:正确调用 GC.SuppressFinalize
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -39,16 +34,16 @@ ms.locfileid: "49913873"
 
 ## <a name="cause"></a>原因
 
--   是的实现的方法<xref:System.IDisposable.Dispose%2A?displayProperty=fullName>不会调用<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>。
+- 是的实现的方法<xref:System.IDisposable.Dispose%2A?displayProperty=fullName>不会调用<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>。
 
--   不是一种实现的方法<xref:System.IDisposable.Dispose%2A?displayProperty=fullName>调用<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>。
+- 不是一种实现的方法<xref:System.IDisposable.Dispose%2A?displayProperty=fullName>调用<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>。
 
--   一个方法调用<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>，并将传递此 （我在 Visual Basic 中） 以外的其他内容。
+- 一个方法调用<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>，并将传递此 （我在 Visual Basic 中） 以外的其他内容。
 
 ## <a name="rule-description"></a>规则说明
  <xref:System.IDisposable.Dispose%2A?displayProperty=fullName>方法可让用户随时可用于垃圾回收的对象之前释放资源。 如果<xref:System.IDisposable.Dispose%2A?displayProperty=fullName>方法调用时，它释放的对象的资源。 这使得无需终止。 <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 应调用<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>使垃圾回收器不会调用对象的终结器。
 
- 若要防止派生的类型有终结器无需重新实现 [System.IDisposable] (<!-- TODO: review code entity reference <xref:assetId:///System.IDisposable?qualifyHint=True&amp;autoUpgrade=False>  -->)，并调用它，未密封的类型而无需终结器应仍调用<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>。
+ 若要防止派生类型有终结器，无需重新实现 [System.IDisposable] （<!-- TODO: review code entity reference <xref:assetId:///System.IDisposable?qualifyHint=True&amp;autoUpgrade=False>  -->) 并调用它，未密封的类型而无需终结器仍应调用<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复此规则的冲突：
@@ -75,12 +70,9 @@ ms.locfileid: "49913873"
  [!code-vb[FxCop.Usage.CallGCSuppressFinalizeCorrectly2#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.CallGCSuppressFinalizeCorrectly2/VB/FxCop.Usage.CallGCSuppressFinalizeCorrectly2.vb#1)]
 
 ## <a name="related-rules"></a>相关的规则
- [CA2215：Dispose 方法应调用基类 Dispose](../code-quality/ca2215-dispose-methods-should-call-base-class-dispose.md)
+ [CA2215:方法应调用基类 dispose](../code-quality/ca2215-dispose-methods-should-call-base-class-dispose.md)
 
- [CA2216：可释放类型应声明终结器](../code-quality/ca2216-disposable-types-should-declare-finalizer.md)
+ [CA2216:可释放类型应声明终结器](../code-quality/ca2216-disposable-types-should-declare-finalizer.md)
 
 ## <a name="see-also"></a>请参阅
- [释放模式](http://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb)
-
-
-
+ [Dispose 模式](https://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb)

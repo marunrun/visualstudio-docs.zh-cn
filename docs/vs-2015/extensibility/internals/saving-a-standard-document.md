@@ -1,14 +1,9 @@
 ---
 title: 正在保存标准文档 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], saving standard documents
 - projects [Visual Studio SDK], saving standard documents
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: d692fedf-b46e-4d60-84bd-578635042235
 caps.latest.revision: 9
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 72415a4ddfa3de9511aab4b52ae37960af872fde
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 5040070287db6486fa62c9010fe023be31b04cbe
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51803573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68198084"
 ---
 # <a name="saving-a-standard-document"></a>保存标准文档
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -58,13 +53,12 @@ ms.locfileid: "51803573"
   
 #### <a name="to-change-file-ownership-to-the-miscellaneous-files-project"></a>若要将文件所有权更改为杂项文件项目  
   
-1.  查询服务以获取<xref:Microsoft.VisualStudio.Shell.Interop.SVsExternalFilesManager>接口。  
+1. 查询服务以获取<xref:Microsoft.VisualStudio.Shell.Interop.SVsExternalFilesManager>接口。  
   
      一个指向<xref:Microsoft.VisualStudio.Shell.Interop.IVsExternalFilesManager2>返回。  
   
-2.  调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsExternalFilesManager2.TransferDocument%2A>(`pszMkDocumentNew`， `punkWindowFrame`) 方法，将文档传输到新层次结构。 层次结构执行另存为命令调用此方法。  
+2. 调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsExternalFilesManager2.TransferDocument%2A>(`pszMkDocumentNew`， `punkWindowFrame`) 方法，将文档传输到新层次结构。 层次结构执行另存为命令调用此方法。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>   
  [打开和保存项目项](../../extensibility/internals/opening-and-saving-project-items.md)
-

@@ -1,14 +1,9 @@
 ---
 title: 用于本地化的资源的分层组织 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - resource files, localized
 - localization [Visual Studio], resources
@@ -23,13 +18,13 @@ ms.assetid: dadf8f2c-f74c-44d7-bec0-a1e956d8d38d
 caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 11eeaa2c6742675372acf8b96280737f556c7799
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 02f136fa0daa23484e31deab8f138a02b8a0b592
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49914133"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65704347"
 ---
 # <a name="hierarchical-organization-of-resources-for-localization"></a>用于本地化的资源的分层组织
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -59,6 +54,5 @@ ms.locfileid: "49914133"
  [安全性和已本地化的附属程序集](../ide/security-and-localized-satellite-assemblies.md)   
  [本地化应用程序](../ide/localizing-applications.md)   
  [对应用程序进行全球化和本地化](../ide/globalizing-and-localizing-applications.md)   
- [如何：为 Windows 窗体全球化设置区域性和用户界面的区域性](http://msdn.microsoft.com/en-us/694e049f-0b91-474a-9789-d35124f248f0)   
- [如何：为 ASP.NET 网页全球化设置区域性和 UI 区域性](http://msdn.microsoft.com/library/76091f86-f967-4687-a40f-de87bd8cc9a0)
-
+ [如何：为 Windows 窗体全球化设置区域性和 UI 区域性](https://msdn.microsoft.com/694e049f-0b91-474a-9789-d35124f248f0)   
+ [如何：为 ASP.NET 网页全球化设置区域性和 UI 区域性](https://msdn.microsoft.com/library/76091f86-f967-4687-a40f-de87bd8cc9a0)

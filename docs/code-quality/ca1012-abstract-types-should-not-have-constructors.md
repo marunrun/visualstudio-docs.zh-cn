@@ -1,7 +1,6 @@
 ---
 title: CA1012:抽象类型不应具有构造函数
-ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
+ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
 - AbstractTypesShouldNotHaveConstructors
@@ -11,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 09f458ac-dd88-4cd7-a47f-4106c1e80ece
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 81a9fe50b4141b10e3946e3494ff325d1cc302b5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d8cc63e95792d64fc82dc3ad4af022dc5e9c292b
+ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53825092"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69547812"
 ---
 # <a name="ca1012-abstract-types-should-not-have-constructors"></a>CA1012:抽象类型不应具有构造函数
 
@@ -31,28 +30,44 @@ ms.locfileid: "53825092"
 |TypeName|AbstractTypesShouldNotHaveConstructors|
 |CheckId|CA1012|
 |类别|Microsoft.Design|
-|是否重大更改|非换行|
+|是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 公共类型是抽象的具有公共构造函数。
+
+类型为抽象类型并且具有构造函数。
+
+默认情况下, 此规则仅查看外部可见类型, 但这是[可配置](#configurability)的。
 
 ## <a name="rule-description"></a>规则说明
- 抽象类型的构造函数只能由派生类型调用。 由于公共构造函数用于创建类型的实例，但无法为抽象类型创建实例，因此具有公共构造函数的抽象类在设计上是错误的。
+
+抽象类型的构造函数只能由派生类型调用。 由于公共构造函数创建类型的实例, 并且不能创建抽象类型的实例, 因此具有公共构造函数的抽象类型的设计是错误的。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要解决此规则的冲突，使受保护的构造函数或未声明为抽象类型。
+
+若要修复与此规则的冲突, 请使构造函数成为受保护的, 或者不将该类型声明为抽象类型。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 不禁止显示此规则发出的警告。 抽象类型具有公共构造函数。
+
+不禁止显示此规则发出的警告。 抽象类型具有公共构造函数。
+
+## <a name="configurability"></a>配置
+
+如果从[FxCop 分析器](install-fxcop-analyzers.md)(而不是传统分析) 运行此规则, 则可以根据其可访问性, 将基本代码的哪些部分配置为在上运行此规则。 例如, 若要指定规则只应针对非公共 API 图面运行, 请在项目中的 editorconfig 文件中添加以下键/值对:
+
+```ini
+dotnet_code_quality.ca1012.api_surface = private, internal
+```
+
+您可以为此规则、所有规则或此类别中的所有规则 (设计) 配置此选项。 有关详细信息, 请参阅[配置 FxCop 分析器](configure-fxcop-analyzers.md)。
 
 ## <a name="example"></a>示例
- 下面的示例包含与此规则冲突的抽象类。
 
- [!code-vb[FxCop.Design.AbstractTypeBad#1](../code-quality/codesnippet/VisualBasic/ca1012-abstract-types-should-not-have-constructors_1.vb)]
- [!code-csharp[FxCop.Design.AbstractTypeBad#1](../code-quality/codesnippet/CSharp/ca1012-abstract-types-should-not-have-constructors_1.cs)]
+以下代码段包含违反此规则的抽象类型。
 
-## <a name="example"></a>示例
- 下面的示例通过从构造函数的可访问性更改修复了前面的冲突`public`到`protected`。
+[!code-vb[FxCop.Design.AbstractTypeBad#1](../code-quality/codesnippet/VisualBasic/ca1012-abstract-types-should-not-have-constructors_1.vb)]
+[!code-csharp[FxCop.Design.AbstractTypeBad#1](../code-quality/codesnippet/CSharp/ca1012-abstract-types-should-not-have-constructors_1.cs)]
 
- [!code-csharp[FxCop.Design.AbstractTypeGood#1](../code-quality/codesnippet/CSharp/ca1012-abstract-types-should-not-have-constructors_2.cs)]
- [!code-vb[FxCop.Design.AbstractTypeGood#1](../code-quality/codesnippet/VisualBasic/ca1012-abstract-types-should-not-have-constructors_2.vb)]
+下面的代码片段通过将构造函数的可访问性从`public`更改为来`protected`修复以前的冲突。
+
+[!code-csharp[FxCop.Design.AbstractTypeGood#1](../code-quality/codesnippet/CSharp/ca1012-abstract-types-should-not-have-constructors_2.cs)]
+[!code-vb[FxCop.Design.AbstractTypeGood#1](../code-quality/codesnippet/VisualBasic/ca1012-abstract-types-should-not-have-constructors_2.vb)]

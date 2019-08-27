@@ -1,13 +1,9 @@
 ---
 title: 自定义窗口布局
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.windows
 - vs.environment
@@ -27,13 +23,13 @@ ms.assetid: 7517ff13-76de-4ecf-9c1b-eb9b7ff4d718
 caps.latest.revision: 30
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 7a0f6b087f512750ae729d52c0855e3d4981d330
-ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
-ms.translationtype: MTE95
+manager: jillfra
+ms.openlocfilehash: 84967c8aeb5319d748ff42d051f0f63dad1d9b12
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "53934370"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65701268"
 ---
 # <a name="customizing-window-layouts-in-visual-studio"></a>在 Visual Studio 中自定义窗口布局
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -81,7 +77,7 @@ ms.locfileid: "53934370"
   可以通过拖动、使用 **“窗口”** 菜单上的命令或右键单击待排列窗口的标题栏，来排列工具窗口和文档窗口。
 
 > [!NOTE]
->  以下说明中的某些 Visual Studio 用户界面元素在计算机上出现的名称或位置可能会不同。 这些元素取决于你所使用的 Visual Studio 版本和你所使用的设置。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。
+> 以下说明中的某些 Visual Studio 用户界面元素在计算机上出现的名称或位置可能会不同。 这些元素取决于你所使用的 Visual Studio 版本和你所使用的设置。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。
 
 ### <a name="docking-windows"></a>停靠窗口
  单击和拖动工具窗口的标题栏或文档窗口的选项卡时，将显示一个菱形引导标记。 进行拖动操作时，当鼠标光标悬停在菱形中的一个箭头之上时，将出现一个阴影区域，显示如果现在释放鼠标按钮，窗口将停靠的位置。
@@ -110,25 +106,25 @@ ms.locfileid: "53934370"
  ![自动隐藏](../ide/media/vs2015-auto-hide.png "vs2015_auto_hide")
 
 > [!NOTE]
->  若要设置“自动隐藏”是单独针对工具窗口执行还是作为停靠组执行，请选中或清除 **“选项”** 对话框中的 **“自动隐藏按钮仅影响活动工具窗口”** 。 有关详细信息，请参阅 [General, Environment, Options Dialog Box](../ide/reference/general-environment-options-dialog-box.md)。
+> 若要设置“自动隐藏”是单独针对工具窗口执行还是作为停靠组执行，请选中或清除 **“选项”** 对话框中的 **“自动隐藏按钮仅影响活动工具窗口”** 。 有关详细信息，请参阅 [General, Environment, Options Dialog Box](../ide/reference/general-environment-options-dialog-box.md)。
 
 > [!NOTE]
->  当窗口处于使用状态时，启用了“自动隐藏”的工具窗口可能会暂时滑入视野。 若要再次隐藏该窗口，请选择位于当前窗口之外的项。 当窗口不处于使用状态时，它将滑出视野。
+> 当窗口处于使用状态时，启用了“自动隐藏”的工具窗口可能会暂时滑入视野。 若要再次隐藏该窗口，请选择位于当前窗口之外的项。 当窗口不处于使用状态时，它将滑出视野。
 
 ### <a name="specifying-a-monitor"></a>指定监视器
  如果你还有一个监视器，并且操作系统支持，你可以选择在任一监视器上显示窗口。 甚至可以将多个窗口组合到其他监视器上的“筏”中。
 
 > [!TIP]
->  可以创建 **“解决方案资源管理器”** 的多个实例，并将它们移动到另一个监视器。 右键单击窗口，并选择 **“新建解决方案资源管理器视图”**。 可以通过在选择 Ctrl 键的同时双击，使所有窗口返回到原监视器。
+> 可以创建 **“解决方案资源管理器”** 的多个实例，并将它们移动到另一个监视器。 右键单击窗口，并选择 **“新建解决方案资源管理器视图”**。 可以通过在选择 Ctrl 键的同时双击，使所有窗口返回到原监视器。
 
 ### <a name="reset-name-and-switch-between-window-layouts"></a>重置、命名窗口布局，以及在各布局间切换
  使用 **“重置窗口布局”** 命令，可将 IDE 恢复到原窗口布局以用于设置集合。 运行此命令时，将出现以下操作：
 
--   所有 windows 都移动到其默认位置。
+- 所有 windows 都移动到其默认位置。
 
--   默认窗口布局中关闭的所有窗口都关闭。
+- 默认窗口布局中关闭的所有窗口都关闭。
 
--   默认窗口布局中打开的所有窗口都打开。
+- 默认窗口布局中打开的所有窗口都打开。
 
 ### <a name="create-and-save-custom-layouts"></a>创建和保存自定义布局
  Visual Studio 2015 允许你保存最多 10 个自定义窗口布局，并在这些布局之间快速切换。 以下步骤展示如何创建、保存、调用和管理自定义布局，这些布局利用带有停靠工具窗口和浮动工具窗口的多个监视器。
@@ -137,29 +133,29 @@ ms.locfileid: "53934370"
 
 ##### <a name="create-a-ui-project-and-customize-the-layout"></a>创建 UI 项目，自定义布局
 
-1.  在 **“新项目”** 对话框中，创建一个 Visual C# WPF 桌面应用程序并对其任意命名。 假设这是我们将开发其用户界面的项目，我们想最大化设计器窗口的空间并将其他工具窗口移开。
+1. 在 **“新项目”** 对话框中，创建一个 Visual C# WPF 桌面应用程序并对其任意命名。 假设这是我们将开发其用户界面的项目，我们想最大化设计器窗口的空间并将其他工具窗口移开。
 
-2.  如果有多个监视器，可将 **“解决方案资源管理器”** 窗口和 **“属性”** 窗口拉到第二个监视器旁。 在单监视器系统中，尝试关闭除设计器以外的所有其他窗口。
+2. 如果有多个监视器，可将 **“解决方案资源管理器”** 窗口和 **“属性”** 窗口拉到第二个监视器旁。 在单监视器系统中，尝试关闭除设计器以外的所有其他窗口。
 
-3.  按 **“Ctrl + Alt + X”** ，显示工具箱。 如果窗口停靠，则拖动窗口，使它浮动在想使其在各监视器上定位的某个位置处。
+3. 按 **“Ctrl + Alt + X”** ，显示工具箱。 如果窗口停靠，则拖动窗口，使它浮动在想使其在各监视器上定位的某个位置处。
 
-4.  按 F5，将 Visual Studio 设置为调试模式。 根据需要调整“自动”、“调用堆栈”和“输出”调试窗口的位置。 你即将创建的布局将应用于编辑模式和调试模式。
+4. 按 F5，将 Visual Studio 设置为调试模式。 根据需要调整“自动”、“调用堆栈”和“输出”调试窗口的位置。 你即将创建的布局将应用于编辑模式和调试模式。
 
-5.  如果调试模式和编辑模式中的布局如你所需，则在主菜单中选择“窗口”>“保存窗口布局”。 将此布局命名为“设计器”。
+5. 如果调试模式和编辑模式中的布局如你所需，则在主菜单中选择“窗口”>“保存窗口布局”。 将此布局命名为“设计器”。
 
      请注意：新布局分配了来自保留列表 Ctrl + Alt + 1...0 的下一个	键盘快捷方式。
 
 ##### <a name="create-a-database-project-and-layout"></a>创建数据库项目和布局
 
-1.  将新的 **“SQL Server 数据库”** 项目添加到解决方案。
+1. 将新的 **“SQL Server 数据库”** 项目添加到解决方案。
 
-2.  在解决方案资源管理器中右键单击新项目，然后选择 **“在对象资源管理器中查看”**。 这将显示 **“SQL Server 对象资源管理器”** 窗口，可在该窗口中访问你的数据库中的表格、视图和其他对象。 可使此窗口浮动或停靠。 根据需要调整其他工具窗口。 如果要增强真实性，可添加实际数据库，但本演练不必这样做。
+2. 在解决方案资源管理器中右键单击新项目，然后选择 **“在对象资源管理器中查看”**。 这将显示 **“SQL Server 对象资源管理器”** 窗口，可在该窗口中访问你的数据库中的表格、视图和其他对象。 可使此窗口浮动或停靠。 根据需要调整其他工具窗口。 如果要增强真实性，可添加实际数据库，但本演练不必这样做。
 
-3.  如果布局满足你的要求，在主菜单中选择“窗口”>“保存窗口布局”。 将此布局命名为“DB 项目”。 （对于此项目，我们不会涉及调试模式布局。）
+3. 如果布局满足你的要求，在主菜单中选择“窗口”>“保存窗口布局”。 将此布局命名为“DB 项目”。 （对于此项目，我们不会涉及调试模式布局。）
 
 ##### <a name="switch-between-the-layouts"></a>在布局之间切换
 
-1.  要在布局之间切换，可使用键盘快捷键，或者在主菜单中选择“窗口”>“应用窗口布局”。
+1. 要在布局之间切换，可使用键盘快捷键，或者在主菜单中选择“窗口”>“应用窗口布局”。
 
      ![应用窗口布局菜单](../ide/media/vs2015-applywindowlayout.png "VS2015_ApplyWindowLayout")
 
@@ -171,7 +167,7 @@ ms.locfileid: "53934370"
 
 ##### <a name="manage-and-roam-your-layouts"></a>管理和漫游你的布局
 
-1.  可通过选择“窗口”>“管理窗口布局”来删除、重命名或重新排列自定义布局。 如果移动布局，则键绑定自动调整以反映列表中的新位置。 绑定不能以其他方式修改，因此一次可存储最多 10 个布局。
+1. 可通过选择“窗口”>“管理窗口布局”来删除、重命名或重新排列自定义布局。 如果移动布局，则键绑定自动调整以反映列表中的新位置。 绑定不能以其他方式修改，因此一次可存储最多 10 个布局。
 
      ![管理窗口布局](../ide/media/managewindowlayouts.png "ManageWindowLayouts")
 
@@ -181,9 +177,9 @@ ms.locfileid: "53934370"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[窗口类型](../misc/kinds-of-windows.md)|讨论 IDE 中的工具窗口与文档窗口的区别。|
 |[如何：排列和停靠窗口](../misc/how-to-arrange-and-dock-windows.md)|描述如何停靠、自动隐藏和平铺窗口，还描述如何重置窗口布局。|
 |[如何：在 IDE 中移动](../ide/how-to-move-around-in-the-visual-studio-ide.md)|描述如何能够按使用顺序在 IDE 中打开的窗口之间循环。 还描述如何能够跳转到特定文档。|
-|[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)|包含有关设置组合，以及这些设置如何影响窗口布局、键盘快捷键和 IDE 中的其他元素的信息。|
+|[在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)|包含有关设置组合，以及这些设置如何影响窗口布局、键盘快捷键和 IDE 中的其他元素的信息。|

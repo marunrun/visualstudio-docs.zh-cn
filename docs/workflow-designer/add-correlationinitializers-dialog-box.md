@@ -2,21 +2,20 @@
 title: 工作流设计器-添加相关初始值设定项对话框
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - AddCorrelationInitializers.UI
 ms.assetid: c0517467-d54a-4ee6-aef0-c19b96b6f395
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 67dea88845ffbfab8350e4a1134e09436c95321b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 21c030295d325ea1ee4d546356f8cda5ef6ffd3f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53860344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62946646"
 ---
 # <a name="add-correlationinitializers-dialog-box"></a>“添加相关初始值设定项”对话框
 
@@ -27,7 +26,7 @@ ms.locfileid: "53860344"
 - 基于查询的
 - Context — 上下文
 - 回调上下文
-- 请求-答复
+- request-reply
 
 下表介绍的用户界面 (UI) 元素**添加相关初始值设定项**对话框：
 
@@ -45,5 +44,4 @@ ms.locfileid: "53860344"
 
 ## <a name="see-also"></a>请参阅
 
-- [添加关联对话框](http://msdn.microsoft.com/en-us/9e41a149-e8ab-41b1-8886-ea06a63041b6)
 - [“初始化相关”对话框](../workflow-designer/initialize-correlation-dialog-box.md)

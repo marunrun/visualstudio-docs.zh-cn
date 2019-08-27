@@ -6,16 +6,15 @@ helpviewer_keywords:
 - Domain-Specific Language, providing overridable classes
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 3ea0446d53ad3cc74bd8af96e95fabada1098da5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9aa4f39fb54617ae1dbf048a1e13f009c8df5185
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53929275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814232"
 ---
 # <a name="override-and-extend-the-generated-classes"></a>重写和扩展生成的类
 
@@ -55,9 +54,9 @@ public partial class Book
 
 例如，在示例 Library.dsl，`CirculationBook`域类具有`Generates``Double Derived`属性设置为`true`。 为此域类生成的代码包含两个类：
 
--   `CirculationBookBase`它是一个抽象，它包含所有方法和属性。
+- `CirculationBookBase`它是一个抽象，它包含所有方法和属性。
 
--   `CirculationBook`它派生自`CirculationBookBase`。 它是空的但其构造函数除外。
+- `CirculationBook`它派生自`CirculationBookBase`。 它是空的但其构造函数除外。
 
 若要重写任何方法，您创建派生类的分部定义如`CirculationBook`。 您可以重写生成的方法和从建模 framework 继承的方法。
 
@@ -91,6 +90,6 @@ public partial class Book
 
 您可以订阅某些事件在形状上。 例如，可以侦听形状上的鼠标单击。 您必须编写订阅的每个对象事件的代码。 此代码可以用 InitializeInstanceResources() 的重写。
 
-ShapeFields，用于绘制的形状上的修饰器上生成一些事件。 有关示例，请参阅[如何：截获对形状或修饰器的单击](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)。
+ShapeFields，用于绘制的形状上的修饰器上生成一些事件。 有关示例，请参见 [如何：截获对形状或修饰器的单击](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)。
 
 这些事件通常不会发生在事务内。 如果你想要在应用商店中进行更改，应创建一个事务。

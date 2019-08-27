@@ -2,7 +2,6 @@
 title: IDebugApplication110 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,18 +13,18 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b13208d6a507ea4ed3157606f358b6b0168180cf
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
-ms.translationtype: MT
+ms.openlocfilehash: 0991f27077cf3ac3eb5cbfdcbb409fd5903d9a66
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54349551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63446373"
 ---
 # <a name="idebugapplication110-interface"></a>IDebugApplication110 接口
 `IDebugApplication110`接口扩展的功能[IDebugApplication 接口](../../winscript/reference/idebugapplication-interface.md)。 您可以对的实现调用 QueryInterface 来获取此接口的实例[IDebugApplication 接口](../../winscript/reference/idebugapplication-interface.md)。  
   
 > [!IMPORTANT]
->  此接口由 PDM v11.0 和更高版本实现。 在 activdbg100.h 中发现。  
+> 此接口由 PDM v11.0 和更高版本实现。 在 activdbg100.h 中发现。  
   
 ## <a name="methods"></a>方法  
  `IDebugApplication110` 接口公开以下方法。  

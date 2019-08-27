@@ -1,20 +1,19 @@
 ---
 title: 示例 XSD 文件：简单架构
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: sample
 ms.assetid: f7e1dde1-b4f6-4371-add4-935b68ec77d7
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d3c07e6668f7805a6ed044258b6767764e63e1b1
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 0228ab75da15099aad3a6f60feca3d71f644b4ff
+ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53922268"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65455092"
 ---
 # <a name="sample-xsd-file-simple-schema"></a>示例 XSD 文件：简单架构
 
@@ -46,3 +45,6 @@ ms.locfileid: "53922268"
  </xsd:complexType>
 </xsd:schema>
 ```
+
+> [!NOTE]
+> 此处描述的示例公司、组织、产品、域名、电子邮件地址、徽标、人员、地点和事件均属虚构。 我们无意将它们与任何真实的公司、单位、产品、域名、电子邮件地址、徽标、人员、地点或事件挂钩，请勿“对号入座”。

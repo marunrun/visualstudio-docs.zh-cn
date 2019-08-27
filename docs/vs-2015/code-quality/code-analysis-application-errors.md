@@ -1,14 +1,9 @@
 ---
-title: 代码分析应用程序错误 |Microsoft Docs
-ms.custom: ''
+title: 代码分析应用程序错误
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 helpviewer_keywords:
 - errors [Visual Studio ALM], code analysis
 - code analysis, errors
@@ -18,13 +13,13 @@ ms.assetid: d8fd9475-ac9b-4085-b5a3-b0c807922cac
 caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
-manager: wpickett
-ms.openlocfilehash: 66d611903c71cc526c01c1062c85ceef2e7975f5
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 1af00ebc2f6fdc1bc32a5a6784b88068d4e3ffb2
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49225012"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65693386"
 ---
 # <a name="code-analysis-application-errors"></a>代码分析应用程序错误
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,7 +44,7 @@ ms.locfileid: "49225012"
 |[CA0062](ca0062.md)|规则*RuleId*中规则集引用*名称*未找到。|
 |[CA0063](ca0063.md)|未能加载规则集文件或其依赖规则集文件之一。|
 |[CA0064](ca0064.md)|不执行任何分析，因为指定的规则集不包含任何 FxCop 规则。|
-|[CA0065](ca0065.md)|不受支持的元数据构造： 类型 '*TypeName*包含的属性和字段具有相同名称*PropertyFieldName*|
+|[CA0065](ca0065.md)|不受支持的元数据构造：类型*TypeName*包含的属性和字段具有相同名称*PropertyFieldName*|
 |[CA0066](ca0066.md)|值*VersionID*提供给 **/targetframeworkversion**不是可识别的版本。|
 |[CA0067](ca0067.md)|找不到的目录。|
 |[CA0068](ca0068.md)|调试信息未找到目标程序集*AssemblyName*。|
@@ -57,14 +52,13 @@ ms.locfileid: "49225012"
 |[CA0070](ca0070.md)|无法加载程序集或类型，因为安全权限。|
 |[CA0501](ca0501.md)|无法读取输出报告。|
 |[CA0502](ca0502.md)|不支持的语言。|
-|[CA0503](ca0503.md))|该属性已被弃用。 使用取代属性|
+|[CA0503](ca0503.md)|该属性已弃用。 使用取代属性|
 |[CA0504](ca0504.md)|规则目录被忽略，因为它不存在|
-|[CA0505](ca0505.md)|该属性已被弃用。 使用取代属性|
+|[CA0505](ca0505.md)|该属性已弃用。 使用取代属性|
 |[FxCopCmd 错误](fxcopcmd-errors.md)|托管的代码分析错误。|
-|[Code Analysis Policy Errors](../code-quality/code-analysis-policy-errors.md)|代码分析签入策略错误。|
 
 ## <a name="related-sections"></a>相关章节
 
-- [编写安全代码的准则](http://msdn.microsoft.com/en-us/9892fd19-45cd-44b6-9fa8-10f1b5cb6ea4)
+- [编写安全代码的准则](https://msdn.microsoft.com/9892fd19-45cd-44b6-9fa8-10f1b5cb6ea4)
 - [分析托管代码质量](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)
-- [用于排除应用程序生命周期管理工具中的错误的资源](http://msdn.microsoft.com/library/76ca8f76-1e2d-4b55-89e2-bd59e4abe74c)
+- [用于排除应用程序生命周期管理工具中的错误的资源](https://msdn.microsoft.com/library/76ca8f76-1e2d-4b55-89e2-bd59e4abe74c)

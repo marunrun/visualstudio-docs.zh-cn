@@ -1,7 +1,6 @@
 ---
 title: 内部函数
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - _String_length_
@@ -16,36 +15,36 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: 7781a1ac48945b2c272d5234ac7f4dcbd923b309
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 65a5272d74e1987cd7838932182e7e59c9c53f21
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53944517"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68923948"
 ---
 # <a name="intrinsic-functions"></a>内部函数
-在 SAL 表达式可以是 C/c + + 表达式，前提是不具有副作用的表达式，例如，+ +、--，和所有在此上下文中具有副作用的函数调用。  但是，SAL 提供一些类似函数的对象以及可以在 SAL 表达式中使用一些保留的符号。 这些称为*内部函数*。
+SAL 中的表达式可以是 C/C++表达式, 前提是它是一个不具有副作用的表达式, 例如 + +、--, 和函数调用都在此上下文中有副作用。  但是, SAL 提供一些类似函数的对象和一些可用于 SAL 表达式的保留符号。 这些*函数称为内部函数*。
 
 ## <a name="general-purpose"></a>通用
- 以下内部函数批注的 sal 提供常规实用程序。
+以下内部函数注释提供了用于 SAL 的常规实用工具。
 
 |批注|描述|
 |----------------|-----------------|
-|`_Curr_`|同义词所批注的对象。  当`_At_`正在使用中，批注`_Curr_`的第一个参数相同`_At_`。  否则，将参数或批注与从词法上关联的整个函数/返回值。|
-|`_Inexpressible_(expr)`|表示一个缓冲区的大小是太复杂，无法通过使用批注表达式表示的情况 — 例如，通过扫描输入的数据集，然后再计算的计算时所选成员。|
-|`_Nullterm_length_(param)`|`param` 是最多缓冲区，但不是包括 null 终止符中的元素数。 它可应用于非聚合，非 void 类型的任何缓冲。|
-|`_Old_(expr)`|在不满足前提条件，计算时`_Old_`将返回输入的值`expr`。  当它计算后置条件中时，它将返回值`expr`根据它进行计算中不满足前提条件。|
-|`_Param_(n)`|`n`个参数的函数，从 1 到计数`n`，和`n`是文本的整数常量。 如果名为的参数，此批注等同于按名称访问该参数。 **注意：** `n`可能指由省略号，或者可能在不使用名称函数原型中使用的位置参数。|
-|`return`|C/c + + 保留关键字`return`可以 SAL 表达式中使用以指示函数的返回值。  在 post 状态; 值才可用它会导致语法错误之前状态使用它。|
+|`_Curr_`|当前正在进行批注的对象的同义词。  当批注正在使用时, `_Curr_`与的第一个参数`_At_`相同。 `_At_`  否则, 它是批注在词法上关联的参数或整个函数/返回值。|
+|`_Inexpressible_(expr)`|表示缓冲区的大小太复杂, 无法通过使用批注表达式来表示, 例如, 通过扫描输入数据集并对选定成员进行计数来计算。|
+|`_Nullterm_length_(param)`|`param`缓冲区中的元素数, 最多不包括 null 终止符。 它可以应用于非聚合非 void 类型的任何缓冲区。|
+|`_Old_(expr)`|当在前置条件中进行计算`_Old_`时, 将返回`expr`输入值。  当在后置条件中进行计算时, 它将返回`expr`值, 因为它会在前置条件中进行计算。|
+|`_Param_(n)`|函数`n`的第 n 个参数, 从1到`n`, 并`n`是一个文本整数常量。 如果参数名为, 则此批注与按名称访问参数相同。 **注意:** `n`可以引用省略号定义的位置参数, 也可以在未使用名称的函数原型中使用。|
+|`return`|可以在 SALC++表达式中`return`使用 C/reserved 关键字来指示函数的返回值。  该值仅在 post 状态中可用;在 pre 状态中使用它是一个语法错误。|
 
 ## <a name="string-specific"></a>特定于字符串
- 下面的内部函数批注启用操作的字符串。 这些函数的所有四个具有相同的用途： 若要返回的 null 终止符之前找到的类型的元素数。 差异几种类型的引用的元素中的数据。 请注意，如果你想要指定以 null 结尾的长度的缓冲区，不由字符，请使用`_Nullterm_length_(param)`批注与上一节。
+以下内部函数批注允许对字符串进行操作。 所有这四个函数都具有相同的用途: 返回在 null 终止符之前找到的类型的元素数。 不同之处在于引用的元素中的数据类型。 请注意, 若要指定不由字符组成的以 null 结尾的缓冲区的长度, 请使用上一节`_Nullterm_length_(param)`中的批注。
 
 |批注|描述|
 |----------------|-----------------|
-|`_String_length_(param)`|`param` 是为字符串，但不是包括 null 终止符中的元素数。 此批注被保留的字符串的字符类型。|
-|`strlen(param)`|`param` 是为字符串，但不是包括 null 终止符中的元素数。 此批注保留以供使用的字符数组和类似于 C 运行时函数[strlen （)](/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l)。|
-|`wcslen(param)`|`param` 是 （但不是包括） 在字符串中的元素数目 null 终止符。 此批注保留以供使用宽字符数组和类似于 C 运行时函数[wcslen （)](/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l)。|
+|`_String_length_(param)`|`param`字符串中的元素数, 最大为, 但不包括 null 终止符。 此批注是为字符字符串类型保留的。|
+|`strlen(param)`|`param`字符串中的元素数, 最大为, 但不包括 null 终止符。 此批注保留用于字符数组, 类似于 C 运行时函数[strlen ()](/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l)。|
+|`wcslen(param)`|`param`字符串中的元素数, 最大为 (但不包括) 空终止符。 此批注保留用于宽字符数组, 类似于 C 运行时函数[wcslen ()](/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l)。|
 
 ## <a name="see-also"></a>请参阅
 

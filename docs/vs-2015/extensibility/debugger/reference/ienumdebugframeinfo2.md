@@ -1,14 +1,9 @@
 ---
-title: IEnumDebugFrameInfo2 |Microsoft Docs
-ms.custom: ''
+title: IEnumDebugFrameInfo2 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - IEnumDebugFrameInfo2
 helpviewer_keywords:
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 994e30ad-435a-4f9e-9272-d96d9e01099c
 caps.latest.revision: 12
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 6938641b2ec274d23928742bbaa014c43c02dc48
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 6cc6a0ff332fd6feac72ce4abf38b5319e63c913
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51728288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68161015"
 ---
 # <a name="ienumdebugframeinfo2"></a>IEnumDebugFrameInfo2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -46,7 +41,7 @@ IEnumDebugFrameInfo2 : IUnknown
   
 |方法|描述|  
 |------------|-----------------|  
-|[下一篇](../../../extensibility/debugger/reference/ienumdebugframeinfo2-next.md)|检索指定的数目的[FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)枚举序列中的结构。|  
+|[下一页](../../../extensibility/debugger/reference/ienumdebugframeinfo2-next.md)|检索指定的数目的[FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)枚举序列中的结构。|  
 |[Skip](../../../extensibility/debugger/reference/ienumdebugframeinfo2-skip.md)|跳过指定的数目的[FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)枚举序列中的结构。|  
 |[Reset](../../../extensibility/debugger/reference/ienumdebugframeinfo2-reset.md)|将枚举序列重置到开头。|  
 |[Clone](../../../extensibility/debugger/reference/ienumdebugframeinfo2-clone.md)|创建一个包含当前枚举数形式的相同枚举状态的枚举器。|  
@@ -58,12 +53,11 @@ IEnumDebugFrameInfo2 : IUnknown
 ## <a name="requirements"></a>要求  
  标头： msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间:Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>请参阅  
  [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)   
  [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)   
  [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)
-

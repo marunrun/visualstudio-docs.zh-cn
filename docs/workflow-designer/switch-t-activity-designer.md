@@ -2,22 +2,21 @@
 title: 工作流设计器-交换机<T>活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - System.Activities.Presentation.ModelItemKeyValuePair.UI
 - System.Activities.Statements.Switch`1.UI
 ms.assetid: 18a6c96e-49a9-4356-ab61-fbd7e3ab44bb
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5109b57ba203bbc0bd0a76cb61985ecfaa132967
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7eb83567a7d59dc02779839a5305b9c1c0329912
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53873851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62434041"
 ---
 # <a name="switcht-activity-designer"></a>交换机\<T > 活动设计器
 

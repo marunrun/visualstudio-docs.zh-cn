@@ -1,14 +1,9 @@
 ---
 title: 如何：序列化符号信息 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Performance.General
 helpviewer_keywords:
@@ -18,13 +13,13 @@ ms.assetid: 9e0da706-6325-4073-83d1-aeab3b7c137a
 caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 1f57339f7fc5c7c9e2cd34441daf4c8e42d485cc
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: c4ea056c48525014fffad0243dfeb4dd40a8daa3
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51802507"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65687012"
 ---
 # <a name="how-to-serialize-symbol-information"></a>如何：序列化符号信息
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,18 +28,15 @@ ms.locfileid: "51802507"
   
 ### <a name="to-automatically-serialize-symbol-information"></a>自动序列化符号信息  
   
-1.  在 **“工具”** 菜单上，单击 **“选项”**。  
+1. 在 **“工具”** 菜单上，单击 **“选项”**。  
   
      随即出现“选项”对话框。  
   
-2.  单击“性能工具”。  
+2. 单击“性能工具”。  
   
-3.  在“常规设置”下，选择“自动序列化符号信息”。  
+3. 在“常规设置”下，选择“自动序列化符号信息”。  
   
 ## <a name="see-also"></a>请参阅  
  [配置性能会话](../profiling/configuring-performance-sessions.md)   
  [如何：引用 Windows 符号信息](../profiling/how-to-reference-windows-symbol-information.md)   
- [如何：保存已分析的报告文件](http://msdn.microsoft.com/en-us/0340ddde-caf4-48ac-8af3-d15dcdade556)
-
-
-
+ [如何：保存已分析的报告文件](https://msdn.microsoft.com/0340ddde-caf4-48ac-8af3-d15dcdade556)

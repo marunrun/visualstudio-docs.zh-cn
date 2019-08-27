@@ -1,5 +1,5 @@
 ---
-title: 设置从“数据源”窗口中拖动时要创建的控件
+title: 设置要创建时从数据源窗口中拖动控件
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 20597ff8-0c98-43ec-8fb1-05376804ba48
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 0ef06a84fb903b79a40087ac7e7ac98c6964d285
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: 442a98b76efb8013d5d40607e14586299718afc3
+ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53879992"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66715094"
 ---
 # <a name="set-the-control-to-be-created-when-dragging-from-the-data-sources-window"></a>设置从“数据源”窗口中拖动时要创建的控件
 
@@ -46,7 +45,7 @@ ms.locfileid: "53879992"
 
     - 若要在单个控件中显示的所有数据，请选择一个不同的控件在列表中，如**DataGrid**或**列表**在 WPF 应用程序中，或**DataGridView**在 Windows 窗体中应用程序。
 
-    可用控件列表取决于所在的设计器上已打开，.NET Framework 的版本将项目目标，以及是否已添加自定义控件支持数据绑定到的**工具箱**。 如果你想要创建的控件不在可用控件列表中，可以将控件添加到列表。 有关详细信息，请参阅[将自定义控件添加到数据源窗口](../data-tools/add-custom-controls-to-the-data-sources-window.md)。
+    可用控件列表取决于所在的设计器上已打开，哪个版本的.NET 项目目标，以及是否已添加自定义控件支持数据绑定到的**工具箱**。 如果你想要创建的控件不在可用控件列表中，可以将控件添加到列表。 有关详细信息，请参阅[将自定义控件添加到数据源窗口](../data-tools/add-custom-controls-to-the-data-sources-window.md)。
 
     若要了解如何创建可添加到的控件中数据的表或对象列表的自定义 Windows 窗体控件**数据源**窗口中，请参阅[创建支持复杂数据的 Windows 窗体用户控件绑定](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md)。
 
@@ -64,7 +63,7 @@ ms.locfileid: "53879992"
 
 4. 单击列或属性的下拉列表菜单，然后选择你想要创建一项拖动到设计器时的控件。
 
-     可用控件列表取决于所在的设计器上已打开，.NET Framework 的版本将项目目标，以及的自定义控件的支持的数据绑定，已添加到**工具箱**。 如果你想要创建的控件的可用控件列表中，可以将控件添加到列表。 有关详细信息，请参阅[将自定义控件添加到数据源窗口](../data-tools/add-custom-controls-to-the-data-sources-window.md)。
+     可用控件列表取决于所在的设计器上已打开，哪个版本的.NET 项目目标，以及哪些自定义控件的支持数据绑定，已添加到**工具箱**。 如果你想要创建的控件的可用控件列表中，可以将控件添加到列表。 有关详细信息，请参阅[将自定义控件添加到数据源窗口](../data-tools/add-custom-controls-to-the-data-sources-window.md)。
 
      若要了解如何创建可添加到的数据列或属性中的控件列表的自定义控件**数据源**窗口中，请参阅[创建支持简单数据绑定的Windows窗体用户控件](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md).
 

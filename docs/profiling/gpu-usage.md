@@ -4,15 +4,15 @@ ms.date: 11/01/2018
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d8971a626d1cff33fa3799f20d6a53bb212a0dac
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f16a518542e8acab636da6e395fdfee8d7a25085
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53941081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62969788"
 ---
 # <a name="gpu-usage"></a>GPU 使用情况
 
@@ -155,7 +155,7 @@ GPU 使用情况报告的上半部分显示 CPU 处理活动、GPU 呈现活动�
 
 - [使用 DirectX 工具解决游戏中的复杂图形问题（视频）](https://channel9.msdn.com/Events/GDC/GDC-2015/Solve-the-Tough-Graphics-Problems-with-your-Game-Using-DirectX-Tools)
 - [Visual Studio 中的 GPU 使用情况工具（视频）](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2014/715)
-- [Visual Studio 2013 Update 4 CTP1 中的 GPU 使用情况工具（博客）](https://blogs.msdn.microsoft.com/vcblog/2014/09/04/gpu-usage-tool-in-visual-studio-2013-update-4-ctp1/)
+- [Visual Studio 2013 Update 4 CTP1 中的 GPU 使用情况工具（博客）](https://devblogs.microsoft.com/cppblog/gpu-usage-tool-in-visual-studio-2013-update-4-ctp1/)
 - [Visual Studio 中 DirectX 的 GPU 使用情况](https://blogs.msdn.microsoft.com/ianhu/2014/12/16/gpu-usage-for-directx-in-visual-studio/)
 - [GPUView](/windows-hardware/drivers/display/using-gpuview)
 - [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)

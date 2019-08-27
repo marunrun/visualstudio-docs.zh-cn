@@ -6,21 +6,20 @@ helpviewer_keywords:
 - managed VSPackages, file location
 - VSPackages, managed package file location
 ms.assetid: beb8607a-4183-4ed2-9ac8-7527f11513b1
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 88cde80499cc56adc2b347b45a4776257ec0e040
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 601104e484682b7db833f74a3527139ed312e731
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53988298"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66322452"
 ---
 # <a name="specifying-vspackage-file-location-to-the-vs-shell"></a>指定 VS Shell 的 VSPackage 文件位置
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 必须能够找到程序集 DLL 加载 VSPackage。 下表中所述，你可以多种方式找到它。  
-
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 必须能够找到程序集 DLL 加载 VSPackage。 下表中所述，你可以多种方式找到它。
 
 | 方法 | 描述 |
 | - | - |
@@ -30,4 +29,4 @@ ms.locfileid: "53988298"
 | 将放置到 DLL **PublicAssemblies**目录。 | 最后，该程序集还可放入**PublicAssemblies**子目录。 程序集位于**PublicAssemblies**自动检测到，并且也会出现在**添加引用**中的对话框[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]。<br /><br /> VSPackage 程序集只应置于**PublicAssemblies**目录包含托管组件，旨在由其他 VSPackage 开发人员重复使用。 大多数程序集不符合此条件。 |
 
 > [!NOTE]
->  使用具有强名称的所有依赖程序集签名程序集。 此外应在你自己的目录或全局程序集缓存 (GAC) 中安装这些程序集。 这样可以防止与具有相同的基本文件名称，称为弱名称绑定的程序集冲突。
+> 使用具有强名称的所有依赖程序集签名程序集。 此外应在你自己的目录或全局程序集缓存 (GAC) 中安装这些程序集。 这样可以防止与具有相同的基本文件名称，称为弱名称绑定的程序集冲突。

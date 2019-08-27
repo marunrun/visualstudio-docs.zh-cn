@@ -1,28 +1,23 @@
 ---
-title: 如何： 实现撤消管理 |Microsoft Docs
-ms.custom: ''
+title: 如何：实现撤消管理 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - undo management
 ms.assetid: 1942245d-7a1d-4a11-b5e7-a3fe29f11c0b
 caps.latest.revision: 12
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: f7eb3e3a1bbda905b2f5c5819835b10513d444fb
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 0f3d56ae02718f5dfdf373eeeb6aff774d11931e
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51806095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63435956"
 ---
-# <a name="how-to-implement-undo-management"></a>如何： 实现撤消管理
+# <a name="how-to-implement-undo-management"></a>如何：实现撤消管理
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 用于撤消管理的主界面是<xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoManager>，这由环境实现。 若要支持撤消管理，实现单独的撤消单元 (即， <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoUnit>，其中包含多个单独的步骤。  
@@ -34,9 +29,9 @@ ms.locfileid: "51806095"
   
 #### <a name="to-support-undo-management-for-a-single-view-editor"></a>若要为单一视图编辑器支持撤消管理  
   
-1.  调用`QueryInterface`上`IServiceProvider`接口上的窗口框架`IOleUndoManager`，从要访问撤消管理器的文档视图对象 (`IID_IOLEUndoManager`)。  
+1. 调用`QueryInterface`上`IServiceProvider`接口上的窗口框架`IOleUndoManager`，从要访问撤消管理器的文档视图对象 (`IID_IOLEUndoManager`)。  
   
-2.  当视图被放置到窗口框架后时，它将获取的站点指针，它可用于调用`QueryInterface`为`IServiceProvider`。  
+2. 当视图被放置到窗口框架后时，它将获取的站点指针，它可用于调用`QueryInterface`为`IServiceProvider`。  
   
 ## <a name="cases-where-an-editor-supports-multiple-views"></a>其中一个编辑器支持多个视图的情况下  
  如果必须文档和视图之间的分离，则通常一个撤消管理器与文档本身相关联。 所有的撤消单元将放置在与文档数据对象关联的一个撤消管理器。  
@@ -53,17 +48,17 @@ ms.locfileid: "51806095"
   
 3. 中继你<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>并<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A>调入存储`IOleCommandTarget`以下 StandardCommandSet97 命令的接口：  
   
-   -   cmdidUndo  
+   - cmdidUndo  
   
-   -   cmdidMultiLevelUndo  
+   - cmdidMultiLevelUndo  
   
-   -   cmdidRedo  
+   - cmdidRedo  
   
-   -   cmdidMultiLevelRedo  
+   - cmdidMultiLevelRedo  
   
-   -   cmdidMultiLevelUndoList  
+   - cmdidMultiLevelUndoList  
   
-   -   cmdidMultiLevelRedoList  
+   - cmdidMultiLevelRedoList  
   
 4. 调用`QueryInterface`上`IOleUndoManager`为`IID_IVsChangeTrackingUndoManager`。 存储指向<xref:Microsoft.VisualStudio.TextManager.Interop.IVsChangeTrackingUndoManager>。  
   
@@ -82,10 +77,9 @@ ms.locfileid: "51806095"
    `OleUndoManager`类表示单个撤消堆栈实例。 因此，是每个被跟踪的撤消或重复的数据实体的一个撤消管理器对象。  
   
 > [!NOTE]
->  文本编辑器中广泛使用的撤消管理器对象，它是文本编辑器中没有特定支持的通用组件。 如果你想要支持多级撤消或重做，可以使用此对象来执行此操作。  
+> 文本编辑器中广泛使用的撤消管理器对象，它是文本编辑器中没有特定支持的通用组件。 如果你想要支持多级撤消或重做，可以使用此对象来执行此操作。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsChangeTrackingUndoManager>   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLifetimeControlledObject>   
  [如何：清除撤消堆栈](../extensibility/how-to-clear-the-undo-stack.md)
-

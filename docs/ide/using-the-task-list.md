@@ -1,7 +1,6 @@
 ---
 title: 使用任务列表
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - TaskListWindow
@@ -12,22 +11,22 @@ helpviewer_keywords:
 - Visual Studio, task list
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b30abf88a00934670ba2d34873ad883c833aae8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9f6ccc0284f89891ff686e456abdcccb1b5296e8
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53831097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62821556"
 ---
 # <a name="use-the-task-list"></a>使用任务列表
 
 使用“任务列表”跟踪使用 `TODO` 和 `HACK` 或自定义令牌等令牌的代码注释，还能管理直接导向代码中的预定义位置的快捷方式。 单击列表中的项以转到其在源代码中的位置。
 
 > [!NOTE]
-> 本主题适用于 Windows 上的 Visual Studio。 对于 Visual Studio for Mac，请参阅[任务注释 (Visual Studio for Mac)](/visualstudio/mac/task-comments)。
+> 本主题适用于 Visual Studio  Windows 版。 对于 Visual Studio for Mac，请参阅[任务注释 (Visual Studio for Mac)](/visualstudio/mac/task-comments)。
 
 ## <a name="the-task-list-window"></a>“任务列表”窗口
 
@@ -35,7 +34,7 @@ ms.locfileid: "53831097"
 
 若要打开“任务列表”，请选择“视图” > “任务列表”，或从键盘按 Ctrl+\\、T。
 
-![任务列表窗口](../ide/media/vs2015_task_list.png)
+![“任务列表”窗口](../ide/media/vs2015_task_list.png)
 
 要更改列表的排序顺序，请选择任意列的标头。 若要进一步优化搜索结果，请按住 Shift 键单击另一个列标头。 另一种方法是，在快捷菜单上选择“排序方式”，然后选择一个标头。 若要进一步优化搜索结果，请按住 Shift 并选择另一个标头。
 
@@ -84,6 +83,9 @@ Visual Studio 2015 中已删除用户任务功能。 若打开的解决方案具
 4. 在 **“优先级别”** 下拉列表中，为新令牌选择默认优先级别。
 
 5. 选择“添加”。
+
+> [!TIP]
+> 输入名称后将启用“添加”按钮。 必须先输入名称，然后再单击“添加”。
 
 ### <a name="c-todo-comments"></a>C++ TODO 注释
 

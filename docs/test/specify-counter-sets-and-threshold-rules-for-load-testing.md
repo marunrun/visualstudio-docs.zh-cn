@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9e14d955-f3a4-4717-bbfe-7f08cdda5678
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 23c4997f6079a2b5f27a380afb4ef07b84c4fa61
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 79140e61844ce450db86ba3bd0b0d6577dec3531
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53887060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62431314"
 ---
 # <a name="specify-counter-sets-and-threshold-rules-for-computers-in-a-load-test"></a>为负载测试中的计算机指定计数器集和阈值规则
 
@@ -34,7 +33,7 @@ ms.locfileid: "53887060"
 
 默认情况下，在控制器和代理上收集性能计数器。 有关详细信息，请参阅[测试控制器和测试代理](configure-test-agents-and-controllers-for-load-tests.md)。
 
-你应将正在测试的服务器添加到需要收集其计数器的计算机的列表中，这一点很重要。 然后即可在负载测试期间收集和监视任何重要的系统数据。
+您应将正在测试的服务器添加到需要收集其计数器的计算机的列表中，这一点很重要。 然后即可在负载测试期间收集和监视任何重要的系统数据。
 
 ## <a name="tasks"></a>任务
 
@@ -47,7 +46,7 @@ ms.locfileid: "53887060"
 
 ## <a name="use-counter-sets"></a>使用计数器集
 
-负载测试工具会不断地使用计数器收集性能数据并绘制相应的图形。 在负载测试运行期间，将按用户指定的时间间隔收集计数器数据。 有关更多信息，请参见[如何：指定采样率](../test/how-to-specify-the-sample-rate-for-a-load-test.md)。 使用负载测试分析器，可以在运行时查看计数器，或者在负载测试运行完成后查看计数器。
+负载测试工具会不断地使用计数器收集性能数据并绘制相应的图形。 在负载测试运行期间，将按用户指定的时间间隔收集计数器数据。 有关详细信息，请参阅[如何：指定采样率](../test/how-to-specify-the-sample-rate-for-a-load-test.md)。 使用负载测试分析器，可以在运行时查看计数器，或者在负载测试运行完成后查看计数器。
 
 将在服务器和任何运行测试的计算机上收集计数器数据。 如果设置了一组代理计算机来运行测试，则还将收集这些计算机上的计数器。
 
@@ -57,13 +56,13 @@ ms.locfileid: "53887060"
 
 各个 HTTP 请求的性能数据由运行测试的计算机报告。 如代理计算机。 对于请求，可以监视“Average Time to First Byte”（收到第一个字节的平均时间）、“Response Time”（响应时间）和“Requests per Second”（每秒请求数）等数据。
 
-为了便于在 Web 服务器上收集性能数据，Visual Studio Enterprise 还基于在负载测试中使用的技术提供了预定义的命名计数器集。 这些计数器集在您分析运行 IIS、ASP.NET 或 SQL Server 的服务器时很有用。 可以使用负载测试编辑器添加默认的计数器集中没有提供的计数器。 请务必将正在测试的计算机或服务器添加到负载测试中，以确保可以监视这些计算机上的资源使用情况。 有关更多信息，请参见[如何：管理计数器集](../test/how-to-manage-counter-sets-using-the-load-test-editor.md)。
+为了便于在 Web 服务器上收集性能数据，Visual Studio Enterprise 还基于在负载测试中使用的技术提供了预定义的命名计数器集。 这些计数器集在您分析运行 IIS、ASP.NET 或 SQL Server 的服务器时很有用。 可以使用负载测试编辑器添加默认的计数器集中没有提供的计数器。 请务必将正在测试的计算机或服务器添加到负载测试中，以确保可以监视这些计算机上的资源使用情况。 有关详细信息，请参阅[如何：管理计数器集](../test/how-to-manage-counter-sets-using-the-load-test-editor.md)。
 
 负载运行的结果分析经常要求您具备某个方面的专业知识，这样才能知道需要收集哪些数据、在哪些地方设置阈值规则以及如何判别测量值反映出的应用程序中的特定问题。 有关详细信息，请参阅[关于阈值规则](#about-threshold-rules)。
 
 ### <a name="performance-counter-sampling-interval-considerations"></a>性能计数器采样间隔注意事项
 
-根据负载测试的长度，可在负载测试运行设置中为“采样速率”属性选择适当的值。 较小的采样速率（如 5 秒默认值）需要占用负载测试结果数据库中的更多空间。 对于较长的负载测试，增加采样速率会减少收集的数据量。 有关更多信息，请参见[如何：指定采样率](../test/how-to-specify-the-sample-rate-for-a-load-test.md)。
+根据负载测试的长度，可在负载测试运行设置中为“采样速率”属性选择适当的值。 较小的采样速率（如 5 秒默认值）需要占用负载测试结果数据库中的更多空间。 对于较长的负载测试，增加采样速率会减少收集的数据量。 有关详细信息，请参阅[如何：指定采样率](../test/how-to-specify-the-sample-rate-for-a-load-test.md)。
 
 下面是有关采样速率的一些准则。
 

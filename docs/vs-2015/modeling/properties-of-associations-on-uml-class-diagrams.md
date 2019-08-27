@@ -1,12 +1,9 @@
 ---
 title: 类图上 UML 关联的属性 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: reference
 f1_keywords:
 - vs.teamarch.common.association.properties
 helpviewer_keywords:
@@ -15,13 +12,13 @@ ms.assetid: f82bcd34-7903-4c00-8da1-613efa07d223
 caps.latest.revision: 26
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: b132ee2aa0f67662fcfcad92b8ae945c2d66c680
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 1c029a29b2d81f7a6ca64f47aab15caf5119d172
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51810272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68154892"
 ---
 # <a name="properties-of-associations-on-uml-class-diagrams"></a>UML 类图上关联的属性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -54,7 +51,6 @@ ms.locfileid: "51810272"
 ### <a name="properties-of-each-role"></a>每个角色的属性  
  若要查看每个角色的属性，请展开**第一个角色**或**第二个角色**属性。  
 
-
 |     **Property**     |          **默认**          |                                                                                                                                                                                                                                                                                                                                        描述                                                                                                                                                                                                                                                                                                                                         |
 |----------------------|-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |  **角色名称 (2)**   | 此角色的类型名称 |                                                                                                                                                                                                                                                                                                       角色的名称。 显示在关系图中的关联端附近。                                                                                                                                                                                                                                                                                                        |
@@ -63,17 +59,14 @@ ms.locfileid: "51810272"
 | **是派生的并集** |             False             |                                                                                                                                                                                                                                                                                                             如果为 true，则角色为派生类型中一组角色的联合。                                                                                                                                                                                                                                                                                                             |
 |   **是可导航**   |             True              |                                                 可以在此方向读取关联。 给定相反角色的实例，则你正在描述的软件便可以高效地确定此角色中关联的实例。<br /><br /> 如果一个角色是可导航的，而另一个不可导航，则会在可导航方向中的关联上出现一个箭头 (7)。<br /><br /> 默认情况下，关联工具会创建一个在某一方向上可导航的关联。 若要将其转换为双向关联，可以选择的关联，单击该操作标记，将出现，然后单击**成为双向**。                                                 |
 |   **是只读的**   |             False             |                                                                                                                                                                                                                                                                                   如果为 true，则创建关联实例后不能更改它。 链接始终指向同一对象。                                                                                                                                                                                                                                                                                    |
-| **重数 (3)** |               1               | **1** -始终关联的此端链接到一个对象。 在图中，每个菜单项都有一个菜单。<br /><br /> **0..1** -以下两项关联的此端链接到一个对象，或不存在链接。<br /><br /> **\\**\* -关联另一端的每个对象链接到的这一端的对象的集合，该集合可能为空。<br /><br /> **1..\\**  \* -关联另一端的每个对象链接到此端的至少一个对象。 在图中，每个菜单都有至少一个菜单项。<br /><br /> *n* **..** *m* -在另一端的每个对象具有一系列之间*n*并*m*链接到此端的对象。 |
+| **重数 (3)** |               1               | **1** -始终关联的此端链接到一个对象。 在图中，每个菜单项都有一个菜单。<br /><br /> **0..1** -以下两项关联的此端链接到一个对象，或不存在链接。<br /><br /> **\\** \* -关联另一端的每个对象链接到的这一端的对象的集合，该集合可能为空。<br /><br /> **1..\\**  \* -关联另一端的每个对象链接到此端的至少一个对象。 在图中，每个菜单都有至少一个菜单项。<br /><br /> *n* **..** *m* -在另一端的每个对象具有一系列之间*n*并*m*链接到此端的对象。 |
 |    **有序**    |             False             |                                                                                                                                                                                                                                                                                                  如果为 true，则返回的集合会构成一个顺序列表。 对于大于 1 的重数。                                                                                                                                                                                                                                                                                                   |
 |    **是唯一的**     |             False             |                                                                                                                                                                                                                                                                                              如果为 true，则返回的集合中没有重复值。 对于大于 1 的重数。                                                                                                                                                                                                                                                                                              |
 |    **可见性**    |            Public             |                                                                                                                                                                                                                                 公共 - 全局可见<br /><br /> 专用 - 对所属类型以外的类型不可见<br /><br /> 受保护 - 对派生自所有者的类型可见<br /><br /> 包 - 对同一包中的其他类型可见。                                                                                                                                                                                                                                  |
 
 ## <a name="see-also"></a>请参阅  
- [UML 类图： 参考](../modeling/uml-class-diagrams-reference.md)   
+ [UML 类关系图：引用](../modeling/uml-class-diagrams-reference.md)   
  [UML 类图上类型的属性](../modeling/properties-of-types-on-uml-class-diagrams.md)   
  [UML 类图上特性的属性](../modeling/properties-of-attributes-on-uml-class-diagrams.md)   
  [UML 类图上的操作的属性](../modeling/properties-of-operations-on-uml-class-diagrams.md)   
- [UML 类图：准则](../modeling/uml-class-diagrams-guidelines.md)
-
-
-
+ [UML 类关系图：指南](../modeling/uml-class-diagrams-guidelines.md)

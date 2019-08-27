@@ -1,14 +1,9 @@
 ---
 title: “错误列表”窗口 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.ErrorList
 helpviewer_keywords:
@@ -20,20 +15,19 @@ ms.assetid: b7f6d45a-733b-4ad8-bc2f-737a37509e56
 caps.latest.revision: 36
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 0ecec77428d32512ec1b5fcf3822933c1c619b7f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 1d481bbc71019639588c793fee64acd34d5739e8
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49873681"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65680148"
 ---
 # <a name="error-list-window"></a>“错误列表”窗口
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
-请注意]
->  错误列表中显示了特定错误消息的相关信息。 可以从“输出”窗口中复制错误号或错误字符串文本。 若要显示“输出”窗口，请按 Ctrl+Alt+O。 请参阅[输出窗口](../../ide/reference/output-window.md)。  
+备注
+> 错误列表中显示了特定错误消息的相关信息。 可以从“输出”窗口中复制错误号或错误字符串文本。 若要显示“输出”窗口，请按 Ctrl+Alt+O。 请参阅[输出窗口](../../ide/reference/output-window.md)。  
   
  使用“错误列表”窗口，可以提高应用程序开发速度。 例如，可以执行下列任务：  
   
@@ -56,19 +50,19 @@ ms.locfileid: "49873681"
   若要对列表进行排序，请单击任一列标头。 若要按其他列对列表进行进一步排序，请按住 Shift 键并单击其他列标头。 若要选择显示哪些列和隐藏哪些列，请从快捷菜单中选择“显示列”。 若要更改列的显示顺序，请将任意列标头向左或向右拖动。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能与此处的描述不同，具体取决于你的当前设置或版本。 若要更改设置，请单击“工具”/“导入和导出设置”。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+> 显示的对话框和菜单命令可能与此处的描述不同，具体取决于你的当前设置或版本。 若要更改设置，请单击“工具”/“导入和导出设置”。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ## <a name="error-list-filters"></a>错误列表筛选器  
  两个下拉列表框中有两种类型的筛选器，分别位于工具栏右侧和左侧。 工具栏左侧的下拉列表用于指定要使用的代码文件集（“整体解决方案”、“打开的文档”、“当前项目”、“当前文档”）。  
   
  可以限制搜索范围，以对多组错误进行分析和处理。 例如，你可能希望集中处理阻碍项目编译的核心错误。 范围限定选项包括：  
   
-1. **打开的文档**：显示已打开文档的错误、警告和消息。  
+1. **打开的文档**：显示已打开的文档的错误、警告和消息。  
   
 2. **当前项目**：显示当前“编辑器”中选定文档的项目或“解决方案资源管理器”中的选定项目的错误、警告和消息。  
   
    > [!NOTE]
-   >  如果当前选定文档的项目与“解决方案资源管理器”中的选定项目不同，则错误、警告和消息的筛选列表将会发生变化。  
+   > 如果当前选定文档的项目与“解决方案资源管理器”中的选定项目不同，则错误、警告和消息的筛选列表将会发生变化。  
   
 3. **当前文档**：显示“编辑器”或“解决方案资源管理器”中当前选定文档的错误、警告和消息。  
   
@@ -100,6 +94,3 @@ ms.locfileid: "49873681"
   
  线  
  显示出现问题的行。
-
-
-

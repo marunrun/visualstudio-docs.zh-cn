@@ -1,5 +1,5 @@
 ---
-title: 演练：使用设计器为 SharePoint 创建 Web 部件 |Microsoft Docs
+title: 创建使用设计器的 SharePoint web 部件
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Web Parts [SharePoint development in Visual Studio], designer
 - Web Parts [SharePoint development in Visual Studio], creating
 - Web Parts [SharePoint development in Visual Studio], designing
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 146a1722f240895e0f508b0474df72f6f5f84ece
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9963c2f7e829e9d295ca254aa651e37e3ad08efd
+ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53870898"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66401146"
 ---
 # <a name="walkthrough-create-a-web-part-for-sharepoint-by-using-a-designer"></a>演练：使用设计器为 SharePoint 创建 web 部件
 
@@ -49,9 +49,9 @@ ms.locfileid: "53870898"
 
 1. 启动[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]通过使用**以管理员身份运行**选项。
 
-2. 在菜单栏上，依次选择“文件” > “新建” > “项目”。
+2. 在菜单栏上，依次选择“文件”   > “新建”   > “项目”  。
 
-     此时将出现 “新建项目” 对话框。
+     此时将出现“新建项目”  对话框。
 
 3. 在中**新的项目**对话框中的，在**Visual C#** 或**Visual Basic**，展开**Office/SharePoint**，然后选择**SharePoint 解决方案**类别。
 
@@ -69,7 +69,7 @@ ms.locfileid: "53870898"
 
 1. 在 Visual Web Developer 设计器中，选择**设计**选项卡以切换到设计视图。
 
-2. 在菜单栏上，依次选择“视图” > “工具箱”。
+2. 在菜单栏上，依次选择“视图” > “工具箱”   。
 
 3. 在中**标准**的节点**工具箱**，选择**CheckBoxList**控件，然后执行以下步骤之一：
 
@@ -187,6 +187,6 @@ ms.locfileid: "53870898"
 
 ## <a name="see-also"></a>请参阅
 
-[为 SharePoint 创建 web 部件](../sharepoint/creating-web-parts-for-sharepoint.md)  
-[如何：创建 SharePoint web 部件](../sharepoint/how-to-create-a-sharepoint-web-part.md)  
+[为 SharePoint 创建 web 部件](../sharepoint/creating-web-parts-for-sharepoint.md)
+[如何：创建 SharePoint web 部件](../sharepoint/how-to-create-a-sharepoint-web-part.md)
 [演练：为 SharePoint 创建 web 部件](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)

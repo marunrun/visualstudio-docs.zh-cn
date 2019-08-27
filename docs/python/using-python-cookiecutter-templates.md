@@ -1,26 +1,25 @@
 ---
 title: 通过 Python 使用 CookieCutter 模板
 description: Visual Studio 支持图形 Cookiecutter 扩展，以发现 Python 代码的模板并从这些模板创建项目。
-ms.date: 10/29/2018
-ms.prod: visual-studio-dev15
+ms.date: 01/28/2019
 ms.topic: conceptual
-author: kraigb
-ms.author: kraigb
-manager: douge
+author: JoshuaPartlow
+ms.author: joshuapa
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1f5123323794d7a333440cb8aa94c51e44c8fc87
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: eeea19b1d2ff4a4d24f27280a48b9ae673406908
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53958230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832134"
 ---
 # <a name="use-the-cookiecutter-extension"></a>使用 Cookiecutter 扩展
 
-[Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) 可提供图形用户界面，用于发现模板、输入模板选项以及创建项目和文件。 Cookiecutter 在 Visual Studio 2017 中随附，在 Visual Studio 早期版本中可单独安装。
+[Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) 可提供图形用户界面，用于发现模板、输入模板选项以及创建项目和文件。 Cookiecutter 随附在 Visual Studio 2017 及更高版本中，在 Visual Studio 早期版本中可单独安装。
 
 Cookiecutter 需要 Python 3.3 或更高版本（32 位或 64 位）或者 Anaconda 3 4.2 或更高版本（32 位或 64 位）。 如果适用的 Python 解释器不可用，Visual Studio 将显示警告。 如果 Visual Studio 运行时安装 Python 解释器，请单击Cookiecutter 工具栏上的“主页”按钮，检测新安装的解释器。 （请参阅 [Python 环境](managing-python-environments-in-visual-studio.md)了解有关整体环境的详细信息。）
 
@@ -60,7 +59,7 @@ Cookiecutter 主页上显示可选择的模板列表，分为以下几组：
 
 ![Cookiecutter 选项页](media/cookiecutter-template-options.png)
 
-每个 Cookiecutter 模板定义各自的选项集，并为每个选项指定默认值（显示为每个条目字段中的建议文本）。 如果默认值是使用其他选项的动态值，则通常为代码片段。 
+每个 Cookiecutter 模板定义各自的选项集，并为每个选项指定默认值（显示为每个条目字段中的建议文本）。 如果默认值是使用其他选项的动态值，则通常为代码片段。
 
 使用用户配置文件可为特定选项自定义默认值。 Cookiecutter 扩展检测到用户配置文件时，会使用用户配置的默认值覆盖模板的默认值。 Cookiecutter 文档的[用户配置](https://cookiecutter.readthedocs.io/en/latest/advanced/user_config.html)部分对此行为进行了讨论。
 

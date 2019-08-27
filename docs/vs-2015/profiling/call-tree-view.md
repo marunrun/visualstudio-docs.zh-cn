@@ -1,14 +1,9 @@
 ---
 title: “调用树”视图 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.view.calltree
 helpviewer_keywords:
@@ -20,13 +15,13 @@ ms.assetid: b2dbc033-bf95-4d10-8e51-f9462979133e
 caps.latest.revision: 39
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 8f09b85c20d84cb25d6a1fdbbd8493c47056318a
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 105f16c0d9deb8d94a102818c5335af18685c675
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51738748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63439333"
 ---
 # <a name="call-tree-view"></a>“调用关系树”视图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,10 +36,10 @@ ms.locfileid: "51738748"
   
  可以自定义“调用树”视图来添加或删除列。 右键单击“列名称标题栏”，然后选择“添加/删除列”。  
   
- 通过限制显示的数据量，可配置“调用树”视图进行降噪。 通过使用降噪，性能问题在视图中就变得更为显著。 当性能问题易于区分时，分析就变得较为轻松了。 有关详细信息，请参阅[如何：在报告视图中配置降噪](../profiling/how-to-configure-noise-reduction-in-report-views.md)。  
+ 通过限制显示的数据量，可配置“调用树”视图进行降噪。 通过使用降噪，性能问题在视图中就变得更为显著。 当性能问题易于区分时，分析就变得较为轻松了。 有关详细信息，请参阅[如何：在报表视图中配置降噪](../profiling/how-to-configure-noise-reduction-in-report-views.md)。  
   
 > [!NOTE]
->  如果将降噪配置为在启用时显示警告，则将在报告中显示信息栏。  
+> 如果将降噪配置为在启用时显示警告，则将在报告中显示信息栏。  
   
  有关“调用树”视图中的列定义的详细信息，请参阅以下内容：  
   
@@ -60,6 +55,3 @@ ms.locfileid: "51738748"
  [性能报告视图](../profiling/performance-report-views.md)   
  [了解检测数据值](../profiling/understanding-instrumentation-data-values.md)   
  [了解采样数据值](../profiling/understanding-sampling-data-values.md)
-
-
-

@@ -1,26 +1,21 @@
 ---
 title: 指定文件扩展名的文件处理程序 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - file extensions, specifying file handlers
 ms.assetid: e3de4730-a95c-465a-b3b2-92ca85364ad7
 caps.latest.revision: 19
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: d0a4f0547da10a4d519d315000a0f35a19a56287
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 0fe2f26a959fc6a185bf244bfa4571846b7991a5
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51726249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63447184"
 ---
 # <a name="specifying-file-handlers-for-file-name-extensions"></a>指定文件扩展名的文件处理程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,7 +36,7 @@ HKEY_CLASSES_ROOT\
 ```  
   
 > [!NOTE]
->  指定应用程序的键是从 HKEY_CLASSES_ROOT\Applications 下的列表。  
+> 指定应用程序的键是从 HKEY_CLASSES_ROOT\Applications 下的列表。  
   
  添加 OpenWithList 键，来声明你的应用程序支持文件扩展名，即使另一个应用程序将获得该扩展的所有权。 这可能是你的应用程序或其他应用程序的未来版本。  
   
@@ -57,7 +52,7 @@ HKEY_CLASSES_ROOT\
  您可以注册不同的应用程序能够打开特定文件扩展名，请将版本控制的 Progid 作为值添加到 HKEY_CLASSES_ROOT\\*\<扩展 >* \OpenWithProgids 密钥。 此注册表项包含文件扩展名关联的备用 Progid 的列表。 在显示与列出的 Progid 关联的应用程序**打开**_产品名称_子菜单。 如果同一应用程序中同时指定`OpenWithList`和`OpenWithProgids`密钥，操作系统将合并重复项。  
   
 > [!NOTE]
->  `OpenWithProgids`密钥仅支持在 Windows XP 中。 因为其他操作系统忽略此密钥，请不要使用它作为唯一的注册文件处理程序。 使用此密钥来提供在 Windows XP 中更好的用户体验。  
+> `OpenWithProgids`密钥仅支持在 Windows XP 中。 因为其他操作系统忽略此密钥，请不要使用它作为唯一的注册文件处理程序。 使用此密钥来提供在 Windows XP 中更好的用户体验。  
   
  将所需的 Progid 添加为类型 REG_NONE 的值。 下面的代码提供注册文件扩展名的 Progid 的示例 (。*ext*)。  
   
@@ -82,9 +77,8 @@ HKEY_CLASSES_ROOT\
          VisualStudio.vcproj.14.0 //new progid  
 ```  
   
- 如果旧 ProgID 具有与其关联的谓词，则这些谓词也会出现下**打开***产品名称*的快捷菜单中。  
+ 如果旧 ProgID 具有与其关联的谓词，则这些谓词也会出现下 **打开** *产品名称* 的快捷菜单中。  
   
 ## <a name="see-also"></a>请参阅  
  [有关文件扩展名](../extensibility/about-file-name-extensions.md)   
  [注册文件扩展名的谓词](../extensibility/registering-verbs-for-file-name-extensions.md)
-

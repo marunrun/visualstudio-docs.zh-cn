@@ -6,16 +6,15 @@ helpviewer_keywords:
 - tests and requirements
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 01aee6de65f1ddc0db16b0ebe527fb3d4d5480ad
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7d2fd53b3dc1237e9d31daf0e80fff3ddf5f1475
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53958808"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821954"
 ---
 # <a name="develop-tests-from-a-model"></a>基于模型开发测试
 可以使用要求模型和体系结构模型来帮助组织系统及其组件的测试。 这种做法有助于确保你测试了对于用户和其他利益干系人而言非常重要的要求，并可帮助你在要求发生变化时快速更新测试。 如果你使用 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)]，还可以维护模型和测试之间的链接。
@@ -41,17 +40,17 @@ ms.locfileid: "53958808"
 
  这些准则可能会有所帮助：
 
--   每个用例应具有多个测试，用于获得主要路径和异常结果。
+- 每个用例应具有多个测试，用于获得主要路径和异常结果。
 
--   描述需求模型中的用例时，与详细描述用户为实现目标需遵循的过程相比，定义用例的后置条件（即实现的目标）更重要。 例如，“订餐”的后置条件可以是餐馆正在为顾客准备餐点和顾客已付款。 后置条件是测试应验证的条件。
+- 描述需求模型中的用例时，与详细描述用户为实现目标需遵循的过程相比，定义用例的后置条件（即实现的目标）更重要。 例如，“订餐”的后置条件可以是餐馆正在为顾客准备餐点和顾客已付款。 后置条件是测试应验证的条件。
 
--   使单独测试基于后置条件的单独子句。 例如，创建单独测试以在有订单时通知餐馆并向顾客收取款项。 此分离具有这些好处：
+- 使单独测试基于后置条件的单独子句。 例如，创建单独测试以在有订单时通知餐馆并向顾客收取款项。 此分离具有这些好处：
 
-    -   需求的不同方面通常独立发生更改。 按这种方法将测试分成不同方面，可以在需求发生更改时更方便地更新测试。
+  - 需求的不同方面通常独立发生更改。 按这种方法将测试分成不同方面，可以在需求发生更改时更方便地更新测试。
 
-    -   如果开发计划逐个实现用例的方面，则你可以随着开发的进展单独启用测试。
+  - 如果开发计划逐个实现用例的方面，则你可以随着开发的进展单独启用测试。
 
--   设计测试时，请将测试数据的选择与确定是否已实现后置条件的代码或脚本分离。 例如，可能是一个简单的算术函数的测试：输入 4;验证输出为 2。 相反，将脚本设计为：选择一个输入;本身乘以输出，并验证结果为原始输入。 此样式允许你在不更改测试主体的情况下改变测试输入。
+- 设计测试时，请将测试数据的选择与确定是否已实现后置条件的代码或脚本分离。 例如，可能是一个简单的算术函数的测试：输入 4;验证输出为 2。 相反，将脚本设计为：选择一个输入;本身乘以输出，并验证结果为原始输入。 此样式允许你在不更改测试主体的情况下改变测试输入。
 
 #### <a name="linking-tests-to-use-cases"></a>将测试链接到用例
  如果使用的[!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)]设计和运行测试，可以组织要求、 用例或用户情景工作项测试。 你可以将这些工作项链接到模型中的用例。 这样你便可以快速跟踪测试的需求更改，并有助于你跟踪每个用例的进度。
@@ -60,7 +59,7 @@ ms.locfileid: "53958808"
 
 1. 在 [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] 中，创建一个要 求并使测试套件基于该需求。
 
-    所创建的要求是 [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] 中的工作项。 它可能是用户情景、 要求或用例工作项，具体取决于你的项目使用与 Team Foundation 的过程模板。 有关详细信息，请参阅[有关敏捷工具和敏捷项目管理](/azure/devops/boards/backlogs/overview?view=vsts)。
+    所创建的要求是 [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] 中的工作项。 它可能是用户情景、 要求或用例工作项，具体取决于你的项目使用与 Team Foundation 的过程模板。 有关详细信息，请参阅[有关敏捷工具和敏捷项目管理](/azure/devops/boards/backlogs/backlogs-overview?view=vsts)。
 
 2. 将要求工作项链接到模型中的一个或多个用例。
 
@@ -132,23 +131,23 @@ Assert (countAfter == countBefore = 1);
 ## <a name="Attaching"></a> 附加到模型元素的测试用例
  如果你的项目使用 [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)]，则你可以将测试链接到模型中的元素。 这样你便可以快速找到受要求中的更改影响的测试，并且可帮助你跟踪要求的实现程度。
 
- 你可以将测试链接到所有类型的元素。 以下是一些示例。
+ 你可以将测试链接到所有类型的元素。 下面是一些可能的恶意活动：
 
--   将用例链接到执行它的测试。
+- 将用例链接到执行它的测试。
 
--   在链接到用例的注释上编写用例后置条件或目标的子句，然后将测试链接到每个注释。
+- 在链接到用例的注释上编写用例后置条件或目标的子句，然后将测试链接到每个注释。
 
--   在类图或活动图上的注释中编写固定规则，然后将这些注释链接到测试。
+- 在类图或活动图上的注释中编写固定规则，然后将这些注释链接到测试。
 
--   将测试链接到活动图或单个活动。
+- 将测试链接到活动图或单个活动。
 
--   将测试套件链接到它测试的组件或子系统。
+- 将测试套件链接到它测试的组件或子系统。
 
 #### <a name="to-link-tests-to-a-model-element-or-relationship"></a>将测试链接到模型元素或关系
 
 1. 在 [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] 中，创建一个要 求并使测试套件基于该需求。
 
-    所创建的要求是 [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] 中的工作项。 它可能是用户情景、 要求或用例工作项，具体取决于你的项目使用与 Team Foundation 的过程模板。 有关详细信息，请参阅[有关敏捷工具和敏捷项目管理](/azure/devops/boards/backlogs/overview?view=vsts)。
+    所创建的要求是 [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] 中的工作项。 它可能是用户情景、 要求或用例工作项，具体取决于你的项目使用与 Team Foundation 的过程模板。 有关详细信息，请参阅[有关敏捷工具和敏捷项目管理](/azure/devops/boards/backlogs/backlogs-overview?view=vsts)。
 
 2. 将要求工作项链接到模型中的一个或多个元素。
 

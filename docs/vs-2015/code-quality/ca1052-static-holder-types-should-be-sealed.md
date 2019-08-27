@@ -1,14 +1,9 @@
 ---
-title: CA1052： 应密封静态容器类型 |Microsoft Docs
-ms.custom: ''
+title: CA1052:应密封静态容器类型 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - StaticHolderTypesShouldBeSealed
 - CA1052
@@ -20,14 +15,14 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: b605d4361e2a29174d4640406228c402a9c8429a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d973d7ff5464b76228e917c83b3e62116e115718
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49823848"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65693806"
 ---
-# <a name="ca1052-static-holder-types-should-be-sealed"></a>CA1052：应密封静态容器类型
+# <a name="ca1052-static-holder-types-should-be-sealed"></a>CA1052:应密封静态容器类型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -38,7 +33,7 @@ ms.locfileid: "49823848"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 公共或受保护类型仅包含静态成员和不使用声明[密封](http://msdn.microsoft.com/library/8e4ed5d3-10be-47db-9488-0da2008e6f3f)([NotInheritable](http://msdn.microsoft.com/library/5c4da7c9-9562-4653-a947-1972e992f9f9)) 修饰符。
+ 公共或受保护类型仅包含静态成员和不使用声明[密封](https://msdn.microsoft.com/library/8e4ed5d3-10be-47db-9488-0da2008e6f3f)([NotInheritable](https://msdn.microsoft.com/library/5c4da7c9-9562-4653-a947-1972e992f9f9)) 修饰符。
 
 ## <a name="rule-description"></a>规则说明
  此规则假定只包含静态成员的类型未设计为继承，因为该类型不提供可以在派生类型中重写任何功能。 未计划继承的类型应该用 `sealed` 修饰符进行标记，以便禁止其作为基类型使用。
@@ -68,7 +63,4 @@ ms.locfileid: "49823848"
  [!code-csharp[FxCop.Design.StaticMembersFixed#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.StaticMembersFixed/cs/FxCop.Design.StaticMembersFixed.cs#1)]
 
 ## <a name="related-rules"></a>相关的规则
- [CA1053：静态容器类型不应具有构造函数](../code-quality/ca1053-static-holder-types-should-not-have-constructors.md)
-
-
-
+ [CA1053:静态容器类型不应具有构造函数](../code-quality/ca1053-static-holder-types-should-not-have-constructors.md)

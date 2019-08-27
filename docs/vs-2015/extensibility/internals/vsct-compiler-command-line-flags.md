@@ -1,27 +1,22 @@
 ---
 title: VSCT 编译器命令行标志 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - VSCT files, compiling
 - command-table file compilation (VSCT files)
 ms.assetid: 9dc6c33f-e6cf-4cf2-9b05-e8f7bfac1cfb
 caps.latest.revision: 11
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 628c9ef34fc23776672a4252886c091a38f63b4b
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 98cd0ec51ead200a904baeb409551cd1084f1f11
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51734965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63440827"
 ---
 # <a name="vsct-compiler-command-line-flags"></a>VSCT 编译器命令行标志
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -57,7 +52,7 @@ Syntax: vsct <infile> [<outfile>] [-S[symbols file]] [-D<preprocessor-define>]*
 ```  
   
 > [!NOTE]
->  字符-（连字符） 和 / （正斜杠） 是这两个接受的表示法，该值指示命令行参数。  
+> 字符-（连字符） 和 / （正斜杠） 是这两个接受的表示法，该值指示命令行参数。  
   
  可接受标志和它们的含义如下所示。  
   
@@ -66,7 +61,7 @@ Syntax: vsct <infile> [<outfile>] [-S[symbols file]] [-D<preprocessor-define>]*
 |-D|指定定义的任何其他符号。|  
 |-I|指示附加的包含解析的文件引用时应使用的路径。|  
 |-L|指定<xref:System.Globalization.CultureInfo>区域性名称，例如"EN-US"。|  
-|-E|发出C#命令项的指定命名空间中的对象后跟 [C&#124;H&#124;N]:*文件名*其中 C = C#，H = c + + 标头，N = 命名空间。 需要适用于 C# 命名空间。|  
+|-E|发出C#命令项的指定命名空间中的对象后跟 [C&#124;H&#124;N]:*文件名*其中 C = C#，H =C++标头，N = 命名空间。 需要适用于 C# 命名空间。|  
 |-v|详细输出。|  
   
  -L 开关指示编译器选择字符串，以生成对应的二进制.cto 文件的一组给定<xref:System.Globalization.CultureInfo>区域性名称。 指定的区域性名称应与匹配一个或多个的 Language 特性[字符串元素](../../extensibility/strings-element.md).vsct 文件中。 如果字符串元素具有无语言属性，它继承自包含的[CommandTable 元素](../../extensibility/commandtable-element.md)。  
@@ -85,4 +80,3 @@ Syntax: vsct <infile> [<outfile>] [-S[symbols file]] [-D<preprocessor-define>]*
  [Visual Studio 命令表 (。Vsct) 文件](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)   
  [VSCT XML 架构参考](../../extensibility/vsct-xml-schema-reference.md)   
  [VSPackage 如何添加用户界面元素](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
-

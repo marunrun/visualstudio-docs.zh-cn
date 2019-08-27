@@ -1,14 +1,9 @@
 ---
 title: “启动”命令 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - debug.start
 helpviewer_keywords:
@@ -18,18 +13,17 @@ ms.assetid: dc4e4aa2-b0ab-4e00-92db-6dc3058ddc21
 caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: a3b2f482fb33664796a4e6fe451a6a2917e9592f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: c334f52ba080329ef5cbd6dfde1e3e3beed1dc70
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49247689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62551268"
 ---
 # <a name="start-command"></a>“启动”命令
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 开始调试启动项目。  
   
 ## <a name="syntax"></a>语法  
@@ -57,6 +51,3 @@ Debug.Start [address]
  [“命令”窗口](../../ide/reference/command-window.md)   
  [“查找/命令”框](../../ide/find-command-box.md)   
  [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
-
-
-

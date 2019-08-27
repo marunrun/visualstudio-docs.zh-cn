@@ -15,39 +15,38 @@ helpviewer_keywords:
 ms.assetid: 5e32e10e-9bac-4969-9bdd-b8f6919d3516
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: fda8f23cdaff6fc98e0a0bb982d5c4c17265ecf0
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: 61ebcd6c833b55f0769365b89274e35136c914f9
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53843276"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68925353"
 ---
 # <a name="update-data-by-using-a-tableadapter"></a>使用 TableAdapter 更新数据
 
-在数据集中的数据已修改并验证后，您可以发送更新后的数据返回到数据库通过调用`Update`方法[TableAdapter](../data-tools/create-and-configure-tableadapters.md)。 `Update`方法更新单个数据表，并运行基于的正确命令 （INSERT、 UPDATE 或 DELETE）<xref:System.Data.DataRow.RowState%2A>的表中每个数据行。 时数据集具有相关表，Visual Studio 生成一个 TableAdapterManager 类，用于执行更新操作。 TableAdapterManager 类可确保按正确的顺序基于数据库中定义的外键约束进行更新。 当您使用数据绑定控件时，数据绑定体系结构将创建调用 tableAdapterManager TableAdapterManager 类的一个成员变量。
+修改并验证数据集中的数据后, 可以通过调用`Update` [TableAdapter](../data-tools/create-and-configure-tableadapters.md)的方法将更新后的数据发回数据库。 方法根据表中每个数据行的, <xref:System.Data.DataRow.RowState%2A>更新单个数据表并运行正确的命令 (INSERT、UPDATE 或 DELETE)。 `Update` 当数据集具有相关表时, Visual Studio 将生成用于执行更新的 TableAdapterManager 类。 TableAdapterManager 类确保按在数据库中定义的外键约束按照正确顺序进行更新。 使用数据绑定控件时, 数据绑定体系结构会创建名为 tableAdapterManager 的 TableAdapterManager 类的成员变量。
 
 > [!NOTE]
-> 当您尝试使用数据集的内容更新数据源时，你会遇到错误。 若要避免错误，我们建议您将调用该适配器的代码`Update`方法内的`try` / `catch`块。
+> 尝试使用数据集的内容更新数据源时, 可能会出现错误。 若要避免错误, 建议您将调用`Update`适配器的方法的代码放在`catch`块`try` /内。
 
- 更新数据源的确切步骤可以根据业务需求而有所不同，但包括以下步骤：
+根据业务需要, 更新数据源的确切过程可能有所不同, 但包含以下步骤:
 
-1.  调用该适配器`Update`中的方法`try` / `catch`块。
+1. 在块中`Update`调用适配器的方法。/ `try` `catch`
 
-2.  如果捕获到异常，找到导致此错误的数据行。
+2. 如果捕获到异常, 请找到导致错误的数据行。
 
-3.  解决此问题在数据行 （您可以如果以编程方式或无效的行显示给用户进行修改），并再试一次更新 (<xref:System.Data.DataRow.HasErrors%2A>， <xref:System.Data.DataTable.GetErrors%2A>)。
+3. 协调数据行中的问题 (以编程方式或通过向用户显示无效行进行修改), 然后重试更新 (<xref:System.Data.DataRow.HasErrors%2A>、 <xref:System.Data.DataTable.GetErrors%2A>)。
 
 ## <a name="save-data-to-a-database"></a>将数据保存到数据库
 
-调用`Update`TableAdapter 的方法。 传递包含要写入到数据库的值的数据表的名称。
+调用 TableAdapter 的方法。 `Update` 传递包含要写入数据库的值的数据表的名称。
 
-### <a name="to-update-a-database-by-using-a-tableadapter"></a>若要使用 TableAdapter 更新数据库
+### <a name="to-update-a-database-by-using-a-tableadapter"></a>使用 TableAdapter 更新数据库
 
--   将 TableAdapter`Update`中的方法`try` / `catch`块。 下面的示例演示如何更新的内容`Customers`表中`NorthwindDataSet`内`try` / `catch`块。
+- 在块中`Update`包含TableAdapter的方法。/ `try` `catch` 下面的示例`Customers`演示如何`NorthwindDataSet`从`try` 块`catch`内/的中更新表的内容。
 
      [!code-csharp[VbRaddataSaving#9](../data-tools/codesnippet/CSharp/update-data-by-using-a-tableadapter_1.cs)]
      [!code-vb[VbRaddataSaving#9](../data-tools/codesnippet/VisualBasic/update-data-by-using-a-tableadapter_1.vb)]

@@ -1,14 +1,9 @@
 ---
 title: 常用的 MSBuild 项目属性 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -23,25 +18,24 @@ ms.assetid: 9857505d-ae15-42f1-936d-6cd7fb9dd276
 caps.latest.revision: 39
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 30371d20e240e5679664a687c5ca098519cac9c0
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 1eb56d1334eb18dd5872457d032e5780a3f75eb3
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49300048"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65698708"
 ---
 # <a name="common-msbuild-project-properties"></a>常用的 MSBuild 项目属性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 下表列出了在 Visual Studio 项目文件中定义的或者在 MSBuild 提供的 .targets 文件中包括的经常使用的属性。  
   
  Visual Studio 中的项目文件（.csproj、.vbproj、vcxproj 等）包含你使用 IDE 生成项目时运行的 MSBuild XML 代码。 项目通常会导入一个或多个 .targets 文件以定义它们的生成过程。 有关详细信息，请参阅[.Targets 文件](../msbuild/msbuild-dot-targets-files.md)。  
   
 ## <a name="list-of-common-properties-and-parameters"></a>通用属性和参数的列表  
   
-|属性或参数名|描述|  
+|属性或参数名|说明|  
 |--------------------------------|-----------------|  
 |AdditionalLibPaths|指定其他文件夹，编译器将在这些文件夹中查找引用程序集。|  
 |AddModules|使编译器让指定文件中的所有类型信息可供正在编译的项目使用。 此属性等效于 `/addModules` 编译器开关。|  
@@ -59,7 +53,7 @@ ms.locfileid: "49300048"
 |CleanFile|将用作“清理缓存”的文件的名称。 清理缓存是要在清理操作期间删除的已生成文件的列表。 该文件由生成过程放在中间输出路径中。<br /><br /> 此属性只指定没有路径信息的文件名。|  
 |CodePage|指定要用于编译中所有源代码文件的代码页。 此属性等效于 `/codepage` 编译器开关。|  
 |CompilerResponseFile|可以传递给编译器任务的可选响应文件。|  
-|配置|正在生成的配置，为“调试”或“发布”。|  
+|Configuration|正在生成的配置，为“调试”或“发布”。|  
 |CscToolPath|[!INCLUDE[csprcs](../includes/csprcs-md.md)] 编译器 csc.exe 的路径。|  
 |CustomBeforeMicrosoftCommonTargets|要在公用目标导入前自动导入的项目文件或目标文件的名称。|  
 |DebugSymbols|一个布尔值，指示是否由生成来生成符号。<br /><br /> 在命令行中设置 /p:DebugSymbols=false 会禁用程序数据库 (.pdb) 符号文件的生成。|  
@@ -94,7 +88,7 @@ ms.locfileid: "49300048"
 |OutputType|指定输出文件的文件格式。 此参数可以具有下列值之一：<br /><br /> -   Library。 创建一个代码库。 （默认值）。<br />-   Exe。 创建控制台应用程序。<br />-   Module。 创建一个模块。<br />-   Winexe。 创建一个基于 Windows 的程序。<br /><br /> 此属性等效于 vbc.exe 编译器的 `/target` 开关。|  
 |OverwriteReadOnlyFiles|一个布尔值，指示要让生成覆盖只读文件还是触发错误。|  
 |PdbFile|正在发出的 .pdb 文件的文件名。 此属性等效于 csc.exe 编译器的 `/pdb` 开关。|  
-|平台|生成所面向的操作系统。 有效值是“Any CPU”、“x86”和“x64”。|  
+|Platform|生成所面向的操作系统。 有效值是“Any CPU”、“x86”和“x64”。|  
 |RemoveIntegerChecks|一个布尔值，指示是否禁用整数溢出错误检查。 默认值为 `false`。 此属性等效于 vbc.exe 编译器的 `/removeintchecks` 开关。|  
 |SGenUseProxyTypes|一个布尔值，指示是否应由 SGen.exe 生成代理类型。<br /><br /> SGen 目标使用此属性来设置 UseProxyTypes 标志。 此属性默认为 true，并且没有更高属性的 UI。 若要生成非 webservice 类型的序列化程序集，请在导入 Microsoft.Common.Targets 或 C#/VB.targets 之前将此属性添加到项目文件并将其设为 false。|  
 |SGenToolPath|一个可选的工具路径，指示在当前版本的 SGen.exe 被重写时可以获得 SGen.exe 的位置。|  
@@ -120,7 +114,7 @@ ms.locfileid: "49300048"
 |Satellite_Version|指定附属程序集的版本信息。|  
 |Satellite_Win32Icon|在附属程序集中插入一个 .ico 图标文件。|  
 |Satellite_Win32Resource|在附属程序集中插入一个 Win32 资源（.res 文件）。|  
-|SubsystemVersion|指定生成的可执行文件可以使用的子系统的最低版本。 此属性等效于 `/subsystemversion` 编译器开关。 有关此属性的默认值的信息，请参阅 [/subsystemversion (Visual Basic)](http://msdn.microsoft.com/library/08be22b2-f447-4cd3-8203-120b1b920b54) 或 [/subsystemversion（C# 编译器选项）](http://msdn.microsoft.com/library/a99fce81-9d92-4813-9874-bee777041445)。|  
+|SubsystemVersion|指定生成的可执行文件可以使用的子系统的最低版本。 此属性等效于 `/subsystemversion` 编译器开关。 有关此属性的默认值的信息，请参阅 [/subsystemversion (Visual Basic)](https://msdn.microsoft.com/library/08be22b2-f447-4cd3-8203-120b1b920b54) 或 [/subsystemversion（C# 编译器选项）](https://msdn.microsoft.com/library/a99fce81-9d92-4813-9874-bee777041445)。|  
 |TargetCompactFramework|运行你所生成的应用程序所需要的 .NET Compact Framework 的版本。 通过指定此属性，你可以引用否则将无法引用的某些 Framework 程序集。|  
 |TargetFrameworkVersion|运行生成的应用程序所需的 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 版本。 通过指定此属性，你可以引用否则将无法引用的某些 Framework 程序集。|  
 |TreatWarningsAsErrors|一个布尔型参数，如果设置为 `true`，则会导致将所有警告都视为错误。 此参数等效于 `/nowarn` 编译器开关。|  
@@ -136,6 +130,3 @@ ms.locfileid: "49300048"
   
 ## <a name="see-also"></a>请参阅  
  [常用的 MSBuild 项目项](../msbuild/common-msbuild-project-items.md)
-
-
-

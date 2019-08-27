@@ -1,14 +1,9 @@
 ---
-title: IDiaStackWalkHelper::pdataForVA |Microsoft Docs
-ms.custom: ''
+title: IDiaStackWalkHelper::pdataForVA | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: fafc38fe-74dc-4726-9a51-eebf3a673d7f
 caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: c937ac3039ef5807623d99a9d7fcaadada17a3e6
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 5af921caa989d7279bb9f52751c452d91045cf3e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51816744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68150093"
 ---
 # <a name="idiastackwalkhelperpdataforva"></a>IDiaStackWalkHelper::pdataForVA
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -55,7 +50,7 @@ HRESULT pdataForVA( 
  [in、 out]使用所请求的数据填充缓冲区。 不能为 `NULL`。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`。 返回`S_FALSE`是否存在指定的地址不 PDATA。 否则，返回错误代码。  
+ 如果成功，则返回 `S_OK`。 返回`S_FALSE`是否存在指定的地址不 PDATA。 否则，返回错误代码。  
   
 ## <a name="remarks"></a>备注  
  PDATA （名为".pdata"一节） 的编译单位包含有关异常处理函数的信息。  
@@ -64,6 +59,3 @@ HRESULT pdataForVA( 
   
 ## <a name="see-also"></a>请参阅  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)
-
-
-

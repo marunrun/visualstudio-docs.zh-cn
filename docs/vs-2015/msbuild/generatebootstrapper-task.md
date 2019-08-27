@@ -1,14 +1,9 @@
 ---
 title: GenerateBootstrapper 任务 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#GenerateBootstrapper
 dev_langs:
@@ -23,18 +18,17 @@ ms.assetid: ca3ba2c6-d2ea-41f2-b7e3-0fc2b0730460
 caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: c5c96c91a48e854c1619aa112bae5e1d84737765
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 488caf02a20b4f0855df1ba2ef64c85e70e1a6a4
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49811903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68149628"
 ---
 # <a name="generatebootstrapper-task"></a>GenerateBootstrapper 任务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 提供自动化方式来检测、下载和安装应用程序及其必备组件。 它可以作为集成不同的安装程序的单个安装程序为组成应用程序的所有组件提供服务。  
   
 ## <a name="task-parameters"></a>任务参数  
@@ -101,11 +95,11 @@ ms.locfileid: "49811903"
   
    指定一个位置，以供引导程序查找要安装的安装必备组件。 此参数可以具有下列值：  
   
-  - `HomeSite`：指示必备组件正由组件供应商联系托管。  
+  - `HomeSite`：指示必备组件正由组件供应商托管。  
   
   - `Relative`：指示必备组件位于应用程序的同一位置。  
   
-  - `Absolute`：指示所有组件在集中式 URL 处找到。 此值应与 `ComponentsUrl` 输入参数结合使用。  
+  - `Absolute`：指示所有组件都可在集中式 URL 处找到。 此值应与 `ComponentsUrl` 输入参数结合使用。  
   
     如果未指定 `ComponentsLocation`，则默认情况下使用 `HomeSite`。  
   
@@ -187,6 +181,3 @@ ms.locfileid: "49811903"
 ## <a name="see-also"></a>请参阅  
  [任务](../msbuild/msbuild-tasks.md)   
  [任务参考](../msbuild/msbuild-task-reference.md)
-
-
-

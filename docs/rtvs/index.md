@@ -1,20 +1,19 @@
 ---
 title: R Tools for Visual Studio
-description: 针对 Visual Studio 的 R 工具 (RTVS) 是一个免费的开源扩展，提供多种语言功能，包括 IntelliSense、调试和远程工作区。
+description: 针对 Visual Studio 的 R 工具 2017 (RTVS) 是一个免费的开源扩展，提供多种语言功能，包括 IntelliSense、调试和远程工作区。
 ms.date: 11/13/2017
-ms.prod: visual-studio-dev15
 ms.topic: overview
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: c2ae060c889065f7f8ba543e0cb20e8ea40ec758
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 385d58834aa96a3ad9e2002020dd1ce4fda3c87f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53883076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63000010"
 ---
 # <a name="work-with-r-in-visual-studio"></a>在 Visual Studio 中使用 R
 
@@ -23,7 +22,7 @@ R 是用于统计计算和图形的高度可扩展语言和环境。 它是使�
 针对 Visual Studio 的 R 工具 (RTVS) 是使用 MIT 许可证发布的[开源](https://github.com/microsoft/RTVS)插件，适用于 Visual Studio 2017 和 Visual Studio 2015 Update 3（或更高版本）。 （还有一个链接到 R 解释器二进制文件的开放源代码组件 [RHost](https://github.com/microsoft/R-Host)，它是使用 GNU 公共许可证 V2 进行发布的。）
 
 > [!Note]
-> RTVS 目前仅在 Windows 上的 Visual Studio 中受支持，在 Visual Studio for Mac 中不受支持。
+> RTVS 目前仅在 Windows 上的 Visual Studio 2017 中受支持，在 Visual Studio for Mac 中不受支持。 不适用于 Visual Studio 2019。
 
 若要在 Visual Studio 中使用 R，请执行以下操作：
 

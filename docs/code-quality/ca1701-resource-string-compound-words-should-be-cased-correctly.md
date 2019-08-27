@@ -1,7 +1,6 @@
 ---
 title: CA1701:资源字符串组合词应采用正确的大小写
 ms.date: 03/28/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - ResourceStringCompoundWordsShouldBeCasedCorrectly
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 4ddbe09f-24b8-4c47-9373-a06f4487ca0d
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e2cc74bb7d3cc15e593d465a8c8d0d55275954ff
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8fdae06137586f11de1a30a73894c46c7fb18fa6
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53841776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62546279"
 ---
 # <a name="ca1701-resource-string-compound-words-should-be-cased-correctly"></a>CA1701:资源字符串组合词应采用正确的大小写
 
@@ -59,7 +58,7 @@ ms.locfileid: "53841776"
 
 它可以安全地禁止显示此规则的警告，如果这两个部件的组合词识别由拼写字典，目的是使用两个单词。
 
-此外可以为用于拼写检查器的自定义字典添加组合词。 自定义字典中的单词不会导致冲突。 有关更多信息，请参见[如何：自定义代码分析字典](../code-quality/how-to-customize-the-code-analysis-dictionary.md)。
+此外可以为用于拼写检查器的自定义字典添加组合词。 自定义字典中的单词不会导致冲突。 有关详细信息，请参阅[如何：自定义代码分析字典](../code-quality/how-to-customize-the-code-analysis-dictionary.md)。
 
 ## <a name="related-rules"></a>相关的规则
 

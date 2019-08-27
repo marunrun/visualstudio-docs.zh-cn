@@ -1,23 +1,20 @@
 ---
 title: 在图表上设置背景图像 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 ms.assetid: e334a24c-8521-4072-b50f-e59158dde145
 caps.latest.revision: 4
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: fd9d5ca21dbe1b0444c650a127fc0184dfb640f1
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 28e2358b92080bd56cfda9d395f87e5c188da221
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49240547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68189394"
 ---
 # <a name="setting-a-background-image-on-a-diagram"></a>在图表上设置背景图像
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,21 +25,21 @@ ms.locfileid: "49240547"
   
 #### <a name="to-set-a-background-image-for-a-generated-designer"></a>为生成的设计器设置背景图像  
   
-1.  将要用作关系图的背景的图像文件复制到当前项目的 Dsl\Resources 目录中。  
+1. 将要用作关系图的背景的图像文件复制到当前项目的 Dsl\Resources 目录中。  
   
-2.  在中**解决方案资源管理器**，右键单击 Dsl\Resources 文件夹，指向**添加**，然后单击**现有项**。  
+2. 在中**解决方案资源管理器**，右键单击 Dsl\Resources 文件夹，指向**添加**，然后单击**现有项**。  
   
-3.  在中**添加现有项**对话框中，浏览到 Dsl\Resources 文件夹。  
+3. 在中**添加现有项**对话框中，浏览到 Dsl\Resources 文件夹。  
   
-4.  在中**类型的文件**列表中，单击**图像文件**。  
+4. 在中**类型的文件**列表中，单击**图像文件**。  
   
-5.  单击复制到目录，该图像文件，然后单击**添加**。  
+5. 单击复制到目录，该图像文件，然后单击**添加**。  
   
-6.  右键单击 Dsl，然后单击**属性**以打开 Dsl 项目的属性。  
+6. 右键单击 Dsl，然后单击**属性**以打开 Dsl 项目的属性。  
   
-7.  上**资源**选项卡上，单击**此项目不包含默认资源文件。单击此处创建一个资源文件。”**。  
+7. 上**资源**选项卡上，单击**此项目不包含默认资源文件。单击此处创建一个资源文件。”** 。  
   
-8.  将图像文件添加到资源文件，通过将图片从**解决方案资源管理器**到资源窗口。  
+8. 将图像文件添加到资源文件，通过将图片从**解决方案资源管理器**到资源窗口。  
   
 9. 打开“文件”菜单，然后单击该选项以保存项目属性。  
   
@@ -112,6 +109,3 @@ ms.locfileid: "49240547"
  [自定义文本和图像字段](../modeling/customizing-text-and-image-fields.md)   
  [导航和更新程序代码中的模型](../modeling/navigating-and-updating-a-model-in-program-code.md)   
  [编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)
-
-
-

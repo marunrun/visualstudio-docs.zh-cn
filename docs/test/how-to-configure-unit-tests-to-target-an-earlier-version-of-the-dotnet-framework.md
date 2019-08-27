@@ -1,19 +1,18 @@
 ---
 title: 单元测试面向 .NET Framework 的早期版本
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
 author: gewarren
-ms.openlocfilehash: df8489decc50c863bdfaec65c6de6ddc4d2dd229
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 0d77bd4fa5a1797b5e405c0b1af12cd1c24b18f7
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53869873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62979355"
 ---
 # <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>如何：配置单元测试以面向 .NET Framework 的早期版本
 
@@ -47,66 +46,48 @@ ms.locfileid: "53869873"
 
 - 无法使单元测试面向早期客户端版本的框架。
 
-## <a name="re-targeting-to-a-specific-version-of-the-net-framework-for-visual-basic-unit-test-projects"></a>针对 Visual Basic 单元测试项目重新面向特定版本的 .NET Framework
+## <a name="retargeting-for-visual-basic-unit-test-projects"></a>重定向 Visual Basic 单元测试项目
 
-1.  创建一个新的 Visual Basic 单元测试项目。 在“文件”菜单上选择“新建”，再选择“项目”。
+1. 创建新的 Visual Basic“单元测试项目”项目。
 
-     随即显示“新建项目”对话框。
-
-2.  在“已安装的模板”下面展开“Visual Basic”。 选择“测试”，然后选择“测试项目”模板。
-
-3.  在“名称”框中，键入 Visual Basic 测试项目名称，然后选择“确定”。
-
-4.  在解决方案资源管理器中，从新的 Visual Basic 测试项目的快捷菜单中选择“属性”。
+2. 在“解决方案资源管理器”中，从新的 Visual Basic 测试项目的右键单击菜单中选择“属性”。
 
      随即显示 Visual Basic 测试项目的属性。
 
-5.  在“编译”选项卡上，选择“高级编译选项”，如下面的插图中所示。
+3. 在“编译”选项卡上，选择“高级编译选项”，如下面的插图中所示。
 
      ![高级编译选项](../test/media/howtoconfigureunittest35frameworka.png)
 
-6.  使用“目标框架 (所有配置)”下拉列表，将目标框架更改为 **.NET Framework 3.5**或更高版本，如下图中的标注 B 所示。 不应指定客户端版本。
+4. 使用“目标框架 (所有配置)”下拉列表，将目标框架更改为 **.NET Framework 3.5**或更高版本，如下图中的标注 B 所示。 不应指定客户端版本。
 
      ![目标框架下拉列表](../test/media/howtoconfigureunitest35frameworkstepb.png)
 
-## <a name="re-targeting-to-a-specific-version-of-the-net-framework-for-visual-c-unit-test-projects"></a>针对 Visual C# 单元测试项目重新面向特定版本的 .NET Framework
+## <a name="retargeting-for-c-unit-test-projects"></a>重定向 C# 单元测试项目
 
-1.  创建一个新的 Visual C# 单元测试项目。 在“文件”菜单上选择“新建”，再选择“项目”。
+1. 创建新的 C#“单元测试项目”项目。
 
-     随即显示“新建项目”对话框。
+2. 在“解决方案资源管理器”中，从新的 C# 测试项目的右键单击菜单中选择“属性”。
 
-2.  在“已安装的模板”下面展开“Visual C#”。 选择“测试”，然后选择“测试项目”模板。
+   随即显示 C# 测试项目的属性。
 
-3.  在“名称”文本框中，键入 Visual C# 测试项目名称，然后选择“确定”。
+3. 在“应用程序”选项卡上，选择“目标框架”。 从下拉列表中，选择“.NET Framework 3.5”或更高版本，如下图中所示。 不应指定客户端版本。
 
-4.  在解决方案资源管理器中，从新的 Visual C# 测试项目的快捷菜单中选择“属性”。
+   ![目标框架下拉列表](../test/media/howtoconfigureunittest35frameworkcsharp.png)
 
-     随即显示 Visual C# 测试项目的属性。
+## <a name="retargeting-for-ccli-unit-test-projects"></a>重定向 C++/CLI 单元测试项目
 
-5.  在“应用程序”选项卡上，选择“目标框架”。 从下拉列表中，选择“.NET Framework 3.5”或更高版本，如下图中所示。 不应指定客户端版本。
+1. 创建新的 C++“单元测试项目”项目。
 
-     ![目标框架下拉列表](../test/media/howtoconfigureunittest35frameworkcsharp.png)
+   > [!WARNING]
+   > 若要为以前版本的适用于 Visual C++ 的 .NET Framework 生成 C++/CLI 单元测试，则必须使用相应版本的 Visual Studio。
 
-## <a name="re-targeting-to-a-specific-version-of-the-net-framework-for-ccli-unit-test-projects"></a>针对 C++/CLI 单元测试项目重新面向特定版本的 .NET Framework
+2. 在“解决方案资源管理器”中，从新的 C++ 测试项目中选择“卸载项目”。
 
-1.  创建一个新的 C++ 单元测试项目。 在“文件”菜单上，选择“新建” ，然后单击“项目”。
+3. 在“解决方案资源管理器”中，选择已卸载的 C++ 测试项目，然后选择“编辑\<项目名称>.vcxproj”。
 
-     随即显示“新建项目”对话框。
+   即可在编辑器中打开 .vcxproj 文件。
 
-    > [!WARNING]
-    > 若要为以前版本的适用于 Visual C++ 的 .NET Framework 生成 C++/CLI 单元测试，则必须使用相应版本的 Visual Studio。 例如，若要面向 .NET Framework 3.5，必须安装 Visual Studio 2008 和 Visual Studio 2008 Service Pack 1。
-
-2.  在“已安装的模板”下面展开“Visual C++”。 选择“测试”，然后选择“测试项目”模板。
-
-3.  在“名称”文本框中，键入 Visual C++ 测试项目名称，然后选择“确定”。
-
-4.  在解决方案资源管理器中，从新的 Visual C++ 测试项目中选择“卸载项目”。
-
-5.  在解决方案资源管理器中，选择已卸载的 Visual C++ 测试项目，然后选择“编辑\<项目名称>.vcxproj”。
-
-     即可在编辑器中打开 .vcxproj 文件。
-
-6.  在标记为`"Globals"`的 `PropertyGroup` 中将 `TargetFrameworkVersion` 设为版本 3.5 或更高版本。 不应指定客户端版本：
+4. 在标记为`"Globals"`的 `PropertyGroup` 中将 `TargetFrameworkVersion` 设为版本 3.5 或更高版本。 不应指定客户端版本：
 
     ```xml
     <PropertyGroup Label="Globals">
@@ -119,9 +100,9 @@ ms.locfileid: "53869873"
       </PropertyGroup>
     ```
 
-7.  保存并关闭 .vcxproj 文件。
+5. 保存并关闭 .vcxproj 文件。
 
-8.  在解决方案资源管理器中，从新的 Visual C++ 测试项目的快捷菜单中选择“重载项目”。
+6. 在“解决方案资源管理器”中，从新的 C++ 测试项目的右键单击菜单中选择“重载项目”。
 
 ## <a name="see-also"></a>请参阅
 

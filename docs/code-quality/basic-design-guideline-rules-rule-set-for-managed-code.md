@@ -1,27 +1,27 @@
 ---
 title: 托管代码的“基本设计准则规则”规则集
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 ms.assetid: 7eb384f5-f961-400b-b151-115d92addc6a
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 54169ea373c87e731410492954773dcc575e20c1
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d51796f7575e3dd5766655661927dfd520935c02
+ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53844883"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69585081"
 ---
 # <a name="basic-design-guideline-rules-rule-set-for-managed-code"></a>托管代码的“基本设计准则规则”规则集
-可以使用 Microsoft 基本设计准则规则规则集以专注于使代码更易于理解和使用。 您应包含此规则设置，如果你的项目包括库代码，或者如果你想要强制执行的代码易于维护的最佳实践。
 
- 基本设计准则规则 Microsoft 最小值进行规则规则集中包含的所有规则。 最小的规则的列表，请参阅[托管代码的托管建议规则规则集](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md)。
+您可以使用 Microsoft 基本设计准则规则集来集中精力使您的代码更易于理解和使用。 如果你的项目包含库代码, 或者如果你希望为易于维护的代码强制实施最佳实践, 则应包含此规则集。
 
- 下表介绍的所有 Microsoft 基本设计准则规则规则集中规则。
+基本设计准则规则包括 "[托管建议规则](managed-recommended-rules-rule-set-for-managed-code.md)" 规则集中的所有规则。
+
+下表介绍了 Microsoft 基本设计准则规则集中的所有规则。
 
 |规则|描述|
 |----------|-----------------|
@@ -47,7 +47,7 @@ ms.locfileid: "53844883"
 |[CA1901](../code-quality/ca1901-p-invoke-declarations-should-be-portable.md)|P/Invoke 声明应为可移植声明|
 |[CA2002](../code-quality/ca2002-do-not-lock-on-objects-with-weak-identity.md)|不要锁定具有弱标识的对象|
 |[CA2100](../code-quality/ca2100-review-sql-queries-for-security-vulnerabilities.md)|检查 SQL 查询是否存在安全漏洞|
-|[CA2101](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)|指定对 P/Invoke 字符串自变量进行封送处理|
+|[CA2101](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)|指定对 P/Invoke 字符串参数进行封送处理|
 |[CA2108](../code-quality/ca2108-review-declarative-security-on-value-types.md)|检查有关值类型的声明性安全|
 |[CA2111](../code-quality/ca2111-pointers-should-not-be-visible.md)|指针应为不可见|
 |[CA2112](../code-quality/ca2112-secured-types-should-not-expose-fields.md)|受保护的类型不应公开字段|
@@ -85,7 +85,7 @@ ms.locfileid: "53844883"
 |[CA2237](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)|用 SerializableAttribute 标记 ISerializable 类型|
 |[CA2238](../code-quality/ca2238-implement-serialization-methods-correctly.md)|正确实现序列化方法|
 |[CA2240](../code-quality/ca2240-implement-iserializable-correctly.md)|正确实现 ISerializable|
-|[CA2241](../code-quality/ca2241-provide-correct-arguments-to-formatting-methods.md)|为格式化方法提供正确的自变量|
+|[CA2241](../code-quality/ca2241-provide-correct-arguments-to-formatting-methods.md)|为格式化方法提供正确的参数|
 |[CA2242](../code-quality/ca2242-test-for-nan-correctly.md)|正确测试 NaN|
 |[CA1000](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)|不要在泛型类型中声明静态成员|
 |[CA1002](../code-quality/ca1002-do-not-expose-generic-lists.md)|不要公开泛型列表|
@@ -93,7 +93,7 @@ ms.locfileid: "53844883"
 |[CA1004](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)|泛型方法应提供类型参数|
 |[CA1005](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)|避免泛型类型的参数过多|
 |[CA1006](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)|不要将泛型类型嵌套在成员签名中|
-|[CA1007 在适用处](../code-quality/ca1007-use-generics-where-appropriate.md)|在适用处使用泛型|
+|[CA1007](../code-quality/ca1007-use-generics-where-appropriate.md)|在适用处使用泛型|
 |[CA1008](../code-quality/ca1008-enums-should-have-zero-value.md)|枚举应具有零值|
 |[CA1010](../code-quality/ca1010-collections-should-implement-generic-interface.md)|集合应实现泛型接口|
 |[CA1011](../code-quality/ca1011-consider-passing-base-types-as-parameters.md)|考虑将基类型作为参数传递|
@@ -104,12 +104,12 @@ ms.locfileid: "53844883"
 |[CA1018](../code-quality/ca1018-mark-attributes-with-attributeusageattribute.md)|用 AttributeUsageAttribute 标记特性|
 |[CA1019](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)|定义特性参数的访问器|
 |[CA1023](../code-quality/ca1023-indexers-should-not-be-multidimensional.md)|索引器不应是多维的|
-|[CA1024 在适用处](../code-quality/ca1024-use-properties-where-appropriate.md)|在适用处使用属性|
+|[CA1024](../code-quality/ca1024-use-properties-where-appropriate.md)|在适用处使用属性|
 |[CA1025](../code-quality/ca1025-replace-repetitive-arguments-with-params-array.md)|用形参数组替换重复的实参|
 |[CA1026](../code-quality/ca1026-default-parameters-should-not-be-used.md)|不应使用默认形参|
 |[CA1027](../code-quality/ca1027-mark-enums-with-flagsattribute.md)|用 FlagsAttribute 标记枚举|
 |[CA1028](../code-quality/ca1028-enum-storage-should-be-int32.md)|枚举存储应为 Int32|
-|[CA1030 在适用处](../code-quality/ca1030-use-events-where-appropriate.md)|在适用处使用事件|
+|[CA1030](../code-quality/ca1030-use-events-where-appropriate.md)|在适用处使用事件|
 |[CA1031](../code-quality/ca1031-do-not-catch-general-exception-types.md)|不要捕捉一般异常类型|
 |[CA1032](../code-quality/ca1032-implement-standard-exception-constructors.md)|实现标准异常构造函数|
 |[CA1034](../code-quality/ca1034-nested-types-should-not-be-visible.md)|嵌套类型不应是可见的|
@@ -145,7 +145,7 @@ ms.locfileid: "53844883"
 |[CA1811](../code-quality/ca1811-avoid-uncalled-private-code.md)|避免使用未调用的私有代码|
 |[CA1812](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)|避免未实例化的内部类|
 |[CA1813](../code-quality/ca1813-avoid-unsealed-attributes.md)|避免使用非密封特性|
-|[CA1814 与](../code-quality/ca1814-prefer-jagged-arrays-over-multidimensional.md)|与多维数组相比，首选使用交错数组|
+|[CA1814](../code-quality/ca1814-prefer-jagged-arrays-over-multidimensional.md)|与多维数组相比，首选使用交错数组|
 |[CA1815](../code-quality/ca1815-override-equals-and-operator-equals-on-value-types.md)|重写值类型上的 Equals 和相等运算符|
 |[CA1819](../code-quality/ca1819-properties-should-not-return-arrays.md)|属性不应返回数组|
 |[CA1820](../code-quality/ca1820-test-for-empty-strings-using-string-length.md)|使用字符串长度测试是否有空字符串|
@@ -154,7 +154,7 @@ ms.locfileid: "53844883"
 |[CA2201](../code-quality/ca2201-do-not-raise-reserved-exception-types.md)|不要引发保留的异常类型|
 |[CA2205](../code-quality/ca2205-use-managed-equivalents-of-win32-api.md)|使用 Win32 API 的托管等效项|
 |[CA2208](../code-quality/ca2208-instantiate-argument-exceptions-correctly.md)|正确实例化参数异常|
-|[CA2211 非常量](../code-quality/ca2211-non-constant-fields-should-not-be-visible.md)|非常量字段不应是可见的|
+|[CA2211](../code-quality/ca2211-non-constant-fields-should-not-be-visible.md)|非常量字段不应是可见的|
 |[CA2217](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)|不要使用 FlagsAttribute 标记枚举|
 |[CA2219](../code-quality/ca2219-do-not-raise-exceptions-in-exception-clauses.md)|在异常子句中不引发异常|
 |[CA2221](../code-quality/ca2221-finalizers-should-be-protected.md)|终结器应受到保护|

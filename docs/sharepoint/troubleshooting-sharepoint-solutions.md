@@ -11,23 +11,23 @@ dev_langs:
 - CSharp
 helpviewer_keywords:
 - SharePoint development in Visual Studio, troubleshooting
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0e72b1f8a7ca76aa2b3afd68041c500b24efd8db
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: bab7f45824def7a4b5a385381a4789b7adc276d0
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53957957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63008075"
 ---
 # <a name="troubleshoot-sharepoint-solutions"></a>对 SharePoint 解决方案进行故障排除
   当使用调试 SharePoint 解决方案时，可能出现以下问题或警报[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]调试器。 有关详细信息，请参阅[调试 SharePoint 2007 工作流解决方案](https://msdn.microsoft.com/3a5392f3-66f3-48be-956e-02de23fa6247)。
 
 ## <a name="token-restrictions-in-sandboxed-visual-web-parts"></a>沙盒可视 web 部件中的标记限制
- 沙盒解决方案中的可视 Web 部件无法处理标准标记，例如 SharePoint 运行时支持的 $SPUrl。 因此不会解析 URL，并且如果你直接在脚本元素中引用 URL，则无法在可视 Web 部件设计器的“设计”视图中预览内容：
+ 沙盒解决方案中的可视 Web 部件无法处理标准标记，例如 SharePoint 运行时支持的 $SPUrl。 因此不会解析 URL，并且如果您直接在脚本元素中引用 URL，则无法在可视 Web 部件设计器的“设计”视图中预览内容：
 
 ```xml
 <script src="<% $SPUrl:~site/SiteAssets/ListOperations.js %>"></script>
@@ -115,9 +115,9 @@ ms.locfileid: "53957957"
 
 ##### <a name="to-reenter-the-workflow-wizard"></a>若要重新输入工作流向导
 
-1.  在中**解决方案资源管理器**，选择工作流节点。
+1. 在中**解决方案资源管理器**，选择工作流节点。
 
-2.  在中**属性**窗口中，选择具有省略号按钮的任何属性的省略号 （...） 按钮。
+2. 在中**属性**窗口中，选择具有省略号按钮的任何属性的省略号 （...） 按钮。
 
 ## <a name="user-must-refresh-application-page-in-browser-while-debugging-to-view-updated-image"></a>若要查看更新的映像进行调试时，用户必须刷新浏览器中的应用程序页上
  如果正在调试 SharePoint 解决方案，其中包含与控件用于显示图像，如应用程序页[!INCLUDE[TLA2#tla_html](../sharepoint/includes/tla2sharptla-html-md.md)]图像控件，必须刷新页面，在浏览器显示的图像所做的任何更改。
@@ -127,13 +127,13 @@ ms.locfileid: "53957957"
 
 ### <a name="error-message"></a>错误消息
 
--   SharePoint 站点位置无效。
+- SharePoint 站点位置无效。
 
 ### <a name="resolution"></a>解决方法
 
--   安装 [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)]。
+- 安装 [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)]。
 
--   确保有 SharePoint 网站管理员访问权限。 有关详细信息，请参阅[!INCLUDE[TLA2#tla_office](../sharepoint/includes/tla2sharptla-office-md.md)]在线文章[分配或删除 SharePoint Server 中的服务应用程序管理员](https://docs.microsoft.com/sharepoint/administration/assign-or-remove-administrators-of-service-applications)。
+- 确保有 SharePoint 网站管理员访问权限。 有关详细信息，请参阅[!INCLUDE[TLA2#tla_office](../sharepoint/includes/tla2sharptla-office-md.md)]在线文章[分配或删除 SharePoint Server 中的服务应用程序管理员](https://docs.microsoft.com/sharepoint/administration/assign-or-remove-administrators-of-service-applications)。
 
 ## <a name="site-deletion-web-event-does-not-occur-in-event-receiver-project"></a>事件接收方项目中不会发生站点删除 web 事件
  当你创建事件接收器项目，并且您选择某些 Web 事件，如"正在删除网站"时，永远不会发生该事件。
@@ -156,46 +156,46 @@ ms.locfileid: "53957957"
 
 ##### <a name="to-change-the-feature-scope-of-the-event-receiver"></a>若要更改的事件接收器的功能范围
 
-1.  在中**解决方案资源管理器**，打开事件接收器 *.feature*文件中**功能设计器**通过双击该文件或打开其快捷菜单，然后选择**打开**。
+1. 在中**解决方案资源管理器**，打开事件接收器 *.feature*文件中**功能设计器**通过双击该文件或打开其快捷菜单，然后选择**打开**。
 
-2.  选择箭头旁边**作用域**，然后选择**站点**中显示的列表。
+2. 选择箭头旁边**作用域**，然后选择**站点**中显示的列表。
 
 ## <a name="deployment-error-appears-after-the-name-of-an-identifier-in-a-business-data-connectivity-model-project-is-changed"></a>业务数据连接模型项目中的标识符的名称更改后，会出现部署错误
  如果更改业务数据连接 (BDC) 模型中的实体的标识符名称，然后尝试部署解决方案，将发生此问题。
 
 ### <a name="error-messages"></a>错误消息
 
--   \<*模型名称*> 具有以下外部内容类型激活错误...
+- \<*模型名称*> 具有以下外部内容类型激活错误...
 
--   名称的 IMetadataObject '\<*模型名称*> 字段 name 的重复中有一个值...
+- 名称的 IMetadataObject '\<*模型名称*> 字段 name 的重复中有一个值...
 
 ### <a name="resolution"></a>解决方法
  若要解决此问题，手动删除该模型，然后再次部署该解决方案。  可以使用以下工具之一来删除模型：
 
--   SharePoint 2010 管理中心。 有关详细信息，请参阅[BDC 模型管理](http://go.microsoft.com/fwlink/?LinkID=181472)Microsoft TechNet 网站上。
+- SharePoint 2010 管理中心。 有关详细信息，请参阅[BDC 模型管理](http://go.microsoft.com/fwlink/?LinkID=181472)Microsoft TechNet 网站上。
 
--   Windows PowerShell。 可以通过在命令提示符下键入以下命令来删除模型：**删除 SPBusinessDataCatalogModel**。 有关详细信息，请参阅[常规 cmdlet (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkID=182375) Microsoft TechNet 网站上。
+- Windows PowerShell。 可以通过在命令提示符下键入以下命令来删除模型：**删除 SPBusinessDataCatalogModel**。 有关详细信息，请参阅[常规 cmdlet (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkID=182375) Microsoft TechNet 网站上。
 
 ## <a name="an-error-appears-when-you-try-to-view-a-visual-web-part-in-sharepoint"></a>当您尝试查看 SharePoint 中的可视 web 部件时，会出现错误
  发生此问题时**路径**用户控件的属性不会开始替换的字符串"controltemplates 设置样式\\"。
 
 ### <a name="error-messages"></a>错误消息
 
--   文件 /_CONTROLTEMPLATES/*\<项目名称 >*/*\<Web 部件名称 >*/*\<用户控件名称 >*.ascx 不存在。
+- 文件 /_CONTROLTEMPLATES/*\<项目名称 >*/*\<Web 部件名称 >*/*\<用户控件名称 >*.ascx 不存在。
 
--   '/' 应用程序中的服务器错误。
+- '/' 应用程序中的服务器错误。
 
 ### <a name="resolution"></a>解决方法
 
 ##### <a name="to-resolve-this-issue"></a>若要解决此问题
 
-1.  在中**解决方案资源管理器**，选择用户控件文件，其文件扩展名是 *.ascx*。
+1. 在中**解决方案资源管理器**，选择用户控件文件，其文件扩展名是 *.ascx*。
 
-2.  在菜单栏上依次选择**视图** > **属性窗口**。
+2. 在菜单栏上依次选择**视图** > **属性窗口**。
 
-3.  在中**属性**窗口中，展开**部署位置**节点。
+3. 在中**属性**窗口中，展开**部署位置**节点。
 
-4.  确保的值**路径**属性以使用字符串"controltemplates 设置样式\\"。
+4. 确保的值**路径**属性以使用字符串"controltemplates 设置样式\\"。
 
 ## <a name="error-appears-when-an-imported-reusable-workflow-that-contains-a-task-form-field-is-run"></a>包含任务窗体字段的导入可重用工作流运行时，会出现错误
  如果你导入包含有一个字段的任务窗体的工作流，然后运行从中导入它的同一系统上的新工作流，会发生此问题。
@@ -230,26 +230,26 @@ ms.locfileid: "53957957"
 
 ##### <a name="to-access-the-iis-app-pool-settings"></a>若要访问 IIS 应用程序池设置
 
-1.  打开 IIS 管理器。
+1. 打开 IIS 管理器。
 
-2.  在中**连接**窗格中，展开 SharePoint 服务器节点，然后再选择**应用程序池**节点。
+2. 在中**连接**窗格中，展开 SharePoint 服务器节点，然后再选择**应用程序池**节点。
 
-3.  上**应用程序池**页上，选择 SharePoint 应用程序池 (通常"SharePoint-80")，然后在**操作**窗格中，选择**高级设置**链接。
+3. 上**应用程序池**页上，选择 SharePoint 应用程序池 (通常"SharePoint-80")，然后在**操作**窗格中，选择**高级设置**链接。
 
-4.  若要增加 IIS 超时前的等待时间，更改的值**Ping 最大响应时间 （秒）** 大于 90 秒的值。
+4. 若要增加 IIS 超时前的等待时间，更改的值**Ping 最大响应时间 （秒）** 大于 90 秒的值。
 
-5.  若要禁用 IIS 执行 ping 操作，设置**启用 Ping**到**False**。
+5. 若要禁用 IIS 执行 ping 操作，设置**启用 Ping**到**False**。
 
 ## <a name="auto-retract-leaves-orphaned-list-instance-in-sharepoint"></a>在 SharePoint 中自动收回离开孤立的列表实例
  如果执行以下步骤，将发生此问题。
 
-1.  创建具有列表实例中的列表定义[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]。
+1. 创建具有列表实例中的列表定义[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]。
 
-2.  选择**F5**键以运行该解决方案。
+2. 选择**F5**键以运行该解决方案。
 
-3.  停止调试，或关闭 SharePoint 站点。
+3. 停止调试，或关闭 SharePoint 站点。
 
-4.  重新打开 SharePoint 站点，打开列表实例。
+4. 重新打开 SharePoint 站点，打开列表实例。
 
 ### <a name="error-message"></a>错误消息
  '/' 应用程序中的服务器错误。

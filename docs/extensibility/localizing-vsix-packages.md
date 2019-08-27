@@ -7,17 +7,17 @@ helpviewer_keywords:
 - localize extension
 - localized deployment
 ms.assetid: 10e80b13-b39e-466c-a7c8-774a862355af
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d554819c8c615dc9f8fcd41bb4b460482e21fde
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 3e0ef2cc0c2404a2148f471d12f313b158f3bd64
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53956928"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66344563"
 ---
 # <a name="localizing-vsix-packages"></a>本地化 VSIX 包
 
@@ -27,7 +27,7 @@ ms.locfileid: "53956928"
 
 ## <a name="directory-structure"></a>目录结构
 
- 当用户安装扩展**扩展和更新**检查其名称与目标计算机的 Visual Studio 区域设置相匹配的文件夹的 VSIX 包的最高级别。 如果**扩展和更新**查找 *.vsixlangpack*文件在文件夹中，都将替换该文件中的相应值中的本地化的值 *.vsixmanifest*文件。 在安装该扩展时，会显示这些值。 下面的示例显示了已本地化为西班牙语 (ES-ES) 和法语 (FR-FR) 的 VSIX 包的目录结构。  
+ 当用户安装扩展**扩展和更新**检查其名称与目标计算机的 Visual Studio 区域设置相匹配的文件夹的 VSIX 包的最高级别。 如果**扩展和更新**查找 *.vsixlangpack*文件在文件夹中，都将替换该文件中的相应值中的本地化的值 *.vsixmanifest*文件。 在安装该扩展时，会显示这些值。 下面的示例显示了已本地化为西班牙语 (ES-ES) 和法语 (FR-FR) 的 VSIX 包的目录结构。
 
 ```text
 .
@@ -53,7 +53,7 @@ ms.locfileid: "53956928"
 
 1. 在中**解决方案资源管理器**，右键单击 Extension.vsixlangpack 文件，然后单击**属性**。
 
-2.  在中**属性网格**，单击**包含在 Vsix**，并将其值设置为`true`。
+2. 在中**属性网格**，单击**包含在 Vsix**，并将其值设置为`true`。
 
 ## <a name="example"></a>示例
 
@@ -63,7 +63,7 @@ ms.locfileid: "53956928"
 
 ### <a name="code"></a>代码
 
- [*Extension.vsixmanifest*]
+- [*Extension.vsixmanifest*]
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -83,7 +83,7 @@ ms.locfileid: "53956928"
 </PackageManifest>
 ```
 
- [*Extension.vsixlangpack*]
+- [*Extension.vsixlangpack*]
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

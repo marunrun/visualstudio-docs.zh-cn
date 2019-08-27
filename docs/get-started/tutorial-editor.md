@@ -1,30 +1,40 @@
 ---
 title: 代码编辑器中的编辑功能简介
 ms.date: 11/30/2017
-ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.custom: get-started
 ms.topic: tutorial
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c3953f69d263b948e84f0d1aa48d878cd39afe6
-ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
+ms.openlocfilehash: 913a5a08dc467ea23d22c2a08a23abfe70b9a736
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/27/2018
-ms.locfileid: "53803328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62943829"
 ---
 # <a name="learn-to-use-the-code-editor"></a>了解如何使用代码编辑器
 
 在这个 10 分钟的 Visual Studio 代码编辑器简介中，我们会向文件添加代码，了解 Visual Studio 编写、导航和了解代码的简便方法。
 
+::: moniker range="vs-2017"
+
 > [!TIP]
-> 如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)页免费安装。
+> 如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)页免费安装。
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+> [!TIP]
+> 如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)页免费安装。
+
+::: moniker-end
 
 本文假定你已熟悉编程语言。 如果不熟悉，则建议首先查看其中一个编程快速入门，如使用 [Python](../ide/quickstart-python.md) 或 [C#](../get-started/csharp/tutorial-aspnet-core.md) 创建 Web 应用，或使用 [Visual Basic](../ide/quickstart-visual-basic-console.md) 或 [C++](../ide/getting-started-with-cpp-in-visual-studio.md) 创建控制台应用。
 
@@ -32,9 +42,21 @@ ms.locfileid: "53803328"
 
 先创建一个新文件并向其添加一些代码。
 
-1. 打开 Visual Studio，在菜单栏上的“文件”菜单中，选择“新建” > “文件”。
+::: moniker range="vs-2017"
 
-1. 在“新建文件”对话框的“常规”类别中，选择“Visual C# 类”，然后选择“打开”。
+1. 打开 Visual Studio。
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+1. 打开 Visual Studio。 按 Esc  或单击“开始”窗口中的“继续但无需代码”以打开开发环境。
+
+::: moniker-end
+
+2. 在菜单栏上的“文件”菜单中，选择“新建” > “文件”。
+
+3. 在“新建文件”对话框的“常规”类别中，选择“Visual C# 类”，然后选择“打开”。
 
    编辑器中将打开主干为 C# 类的新文件。 （请注意，我们无需创建完整的 Visual Studio 项目来获取代码编辑器提供的某些益处，仅需一个代码文件即可！）
 
@@ -90,7 +112,7 @@ Visual Studio 提供了实用的代码片段，可用于快速方便地生成常
                                 select word;
     ```
 
-1. 我们现在没有使用 `morewords` 变量，但稍后可能会用到，所以我们不想彻底删除它。 那我们就来为这些行加上注释。 选择整个 `morewords` 定义直到结束分号，然后选择工具栏上的“为选定行添加注释”。 如果想要使用键盘，请按 Ctrl+K、Ctrl+C。
+1. 我们现在没有使用 `morewords` 变量，但稍后可能会用到，所以我们不想彻底删除它。 那我们就来为这些行加上注释。 选择整个 `morewords` 定义直到结束分号，然后选择工具栏上的“为选定行添加注释”。 如果想要使用键盘，请按 Ctrl+K, Ctrl+C。
 
    ![“添加注释”按钮](media/tutorial-comment-out.png)
 

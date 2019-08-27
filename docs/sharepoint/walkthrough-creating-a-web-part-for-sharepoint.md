@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Web Parts [SharePoint development in Visual Studio], developing
 - Web Parts [SharePoint development in Visual Studio], creating
 - Web Parts [SharePoint development in Visual Studio], designing
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5f2c851659d09cc118f8f54b6e82bb3b806d7e34
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 622dfafbe16efee1e953fbc42bfa3b94cfa3cc58
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53944280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62965266"
 ---
 # <a name="walkthrough-create-a-web-part-for-sharepoint"></a>演练：为 SharePoint 创建 web 部件
 
@@ -216,7 +216,7 @@ Web 部件显示数据网格中的员工。 用户指定包含员工数据的文
 
 ## <a name="see-also"></a>请参阅
 
-[为 SharePoint 创建 web 部件](../sharepoint/creating-web-parts-for-sharepoint.md)  
-[如何：创建 SharePoint web 部件](../sharepoint/how-to-create-a-sharepoint-web-part.md)  
-[如何：使用设计器创建 SharePoint web 部件](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)  
+[为 SharePoint 创建 web 部件](../sharepoint/creating-web-parts-for-sharepoint.md)
+[如何：创建 SharePoint web 部件](../sharepoint/how-to-create-a-sharepoint-web-part.md)
+[如何：使用设计器创建 SharePoint web 部件](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)
 [演练：使用设计器为 SharePoint 创建 web 部件](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)

@@ -1,5 +1,5 @@
 ---
-title: 演练：使用 IntelliTrace 调试 SharePoint 应用程序 |Microsoft Docs
+title: 调试 SharePoint 应用程序使用 IntelliTrace
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, IntelliTrace
 - data collector
 - IntelliTrace
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d2c36d2781e34f85e46fc8a1a56d384bad713399
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 59407696743b15262db83f915feb075a10e22225
+ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53865461"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66401040"
 ---
 # <a name="walkthrough-debug-a-sharepoint-application-by-using-intellitrace"></a>演练：使用 IntelliTrace 调试 SharePoint 应用程序
 
@@ -33,15 +33,15 @@ ms.locfileid: "53865461"
 
  本演练阐释了以下任务：
 
-- [创建功能接收器](#BKMK_CreateReceiver)
+- [创建功能接收器](#create-a-feature-receiver)
 
-- [将代码添加到功能接收器](#BKMK_AddCode)
+- [将代码添加到功能接收器](#add-code-to-the-feature-receiver)
 
-- [测试项目](#BKMK_Test1)
+- [测试项目](#test-the-project)
 
-- [使用 Microsoft Monitoring Agent 收集 IntelliTrace 数据](#BKMK_CollectDiagnosticData)
+- [使用 Microsoft Monitoring Agent 收集 IntelliTrace 数据](#collect-intellitrace-data-by-using-microsoft-monitoring-agent)
 
-- [调试并修复 SharePoint 解决方案](#BKMK_DebugSolution)
+- [调试并修复 SharePoint 解决方案](#debug-and-fix-the-sharepoint-solution)
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 

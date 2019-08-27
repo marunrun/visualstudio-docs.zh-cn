@@ -1,24 +1,20 @@
 ---
 title: 常规用户界面元素 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 ms.assetid: bc67652d-1001-4979-ba71-d57147d21928
 caps.latest.revision: 40
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 9222a03b9df8997298e473c7248307341d89409f
-ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
-ms.translationtype: MTE95
+manager: jillfra
+ms.openlocfilehash: a510ad25e741fc5924597d4b26841518c63f83a1
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "53931166"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65690963"
 ---
 # <a name="general-user-interface-elements-visual-studio"></a>常规用户界面元素 (Visual Studio)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -45,15 +41,15 @@ ms.locfileid: "53931166"
 
  [选项，文本编辑器，基本 (Visual Basic)](../../ide/reference/options-text-editor-basic-visual-basic.md)允许您为 Visual Basic 文件指定选项。
 
- [选项，文本编辑器，C/c + +，格式设置](../../ide/reference/options-text-editor-c-cpp-formatting.md)允许您指定为 C 或 c + + 文件的格式设置选项。
+ [选项，文本编辑器，C /C++、 格式设置](../../ide/reference/options-text-editor-c-cpp-formatting.md)允许您指定于 c 语言的格式设置选项或C++文件。
 
- [选项，文本编辑器，C/c + +，高级](../../ide/reference/options-text-editor-c-cpp-advanced.md)，可指定 C 或 c + + 文件的高级的选项。
+ [选项，文本编辑器，C /C++的高级](../../ide/reference/options-text-editor-c-cpp-advanced.md)允许您指定用于 C 的高级的选项或C++文件。
 
- [选项、 文本编辑器中， C#、 格式设置](../../ide/reference/options-text-editor-csharp-formatting.md)允许您指定的格式设置选项C#文件。
+ [选项，文本编辑器，C#、 格式设置](../../ide/reference/options-text-editor-csharp-formatting.md)允许您指定为 C# 文件的格式设置选项。
 
- [选项、 文本编辑器中，C#的高级](../../ide/reference/options-text-editor-csharp-advanced.md)允许您指定的高级的选项C#文件。
+ [选项，文本编辑器，C#，高级](../../ide/reference/options-text-editor-csharp-advanced.md)，可指定 C# 文件的高级的选项。
 
- [选项、 文本编辑器中， C#，IntelliSense](../../ide/reference/options-text-editor-csharp-intellisense.md)允许您指定的智能感知选项C#文件。
+ [选项，文本编辑器，C#，IntelliSense](../../ide/reference/options-text-editor-csharp-intellisense.md) ，可指定 C# 文件的 IntelliSense 选项。
 
  [选项，文本编辑器，XAML，格式设置](../../ide/reference/options-text-editor-xaml-formatting.md)允许您指定的 XAML 文件的格式设置选项。
 
@@ -73,6 +69,6 @@ ms.locfileid: "53931166"
 
  [工具箱、 HTML 选项卡](../../ide/reference/toolbox-html-tab.md)，可将 html 标记添加到设计图面。
 
- [通常，CSS，文本编辑器选项对话框](http://msdn.microsoft.com/library/b33a7617-e69d-4a11-938e-2e218a34a10c)，可指定 CSS 文件的选项。
+ [通常，CSS，文本编辑器选项对话框](https://msdn.microsoft.com/library/b33a7617-e69d-4a11-938e-2e218a34a10c)，可指定 CSS 文件的选项。
 
- [验证、 HTML、 文本编辑器选项对话框](http://msdn.microsoft.com/library/9c24ecfe-263e-4bf1-88de-d01be3992863)允许你指定的 HTML 页面的选项。
+ [验证、 HTML、 文本编辑器选项对话框](https://msdn.microsoft.com/library/9c24ecfe-263e-4bf1-88de-d01be3992863)允许你指定的 HTML 页面的选项。

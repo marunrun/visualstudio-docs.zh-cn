@@ -1,14 +1,9 @@
 ---
 title: 'Idiasymbol:: Get_undecoratednameex |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +12,18 @@ ms.assetid: 579aed0b-c57d-41a1-a94a-3bf665fd4a9d
 caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: e1902c6300a35924e7fcd626d9b63f69bc5bbc2c
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: f9c50f5d352d8a52b0eb8b125992b2c325e48234
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51745398"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "64811861"
 ---
 # <a name="idiasymbolgetundecoratednameex"></a>IDiaSymbol::get_undecoratedNameEx
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索部分或全部 c + + 的未修饰名称修饰 （链接） 名称。  
+检索部分或全部的未修饰名称C++修饰 （链接） 名称。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,19 +39,19 @@ HRESULT get_undecoratedNameEx( 
  [in]指定的标志的组合返回该控件。 请参阅备注部分的特定值以及他们的操作。  
   
  `pRetVal`  
- [out]返回未修饰的名为 c + + 修饰名。  
+ [out]返回的未修饰的名称C++修饰名。  
   
 ## <a name="return-value"></a>返回值  
  如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
   
 > [!NOTE]
->  返回值为`S_FALSE`表示该属性不是可用于符号。  
+> 返回值为`S_FALSE`表示该属性不是可用于符号。  
   
 ## <a name="remarks"></a>备注  
  `undecorateOptions`可以是下列标志的组合。  
   
 > [!NOTE]
->  标记名称未定义在 DIA SDK 中，因此您需要将声明添加到你的代码，或使用原始值。  
+> 标记名称未定义在 DIA SDK 中，因此您需要将声明添加到你的代码，或使用原始值。  
   
 |Flag|值|描述|  
 |----------|-----------|-----------------|  
@@ -66,8 +61,8 @@ HRESULT get_undecoratedNameEx( 
 |UNDNAME_NO_FUNCTION_RETURNS|0x0004|禁用扩展的主声明的返回类型。|  
 |UNDNAME_NO_ALLOCATION_MODEL|0x0008|禁用声明模型的扩展。|  
 |UNDNAME_NO_ALLOCATION_LANGUAGE|0x0010|禁用扩展的声明语言说明符。|  
-|UNDNAME_RESERVED1|0x0020|保留。|  
-|UNDNAME_RESERVED2|0x0040|保留。|  
+|UNDNAME_RESERVED1|0x0020|已保留。|  
+|UNDNAME_RESERVED2|0x0040|已保留。|  
 |UNDNAME_NO_THISTYPE|0x0060|禁用所有修饰符上`this`类型。|  
 |UNDNAME_NO_ACCESS_SPECIFIERS|0x0080|禁用扩展的成员的访问说明符。|  
 |UNDNAME_NO_THROW_SIGNATURES|0x0100|禁用扩展"抛出的签名的"函数和函数的指针。|  
@@ -83,6 +78,3 @@ HRESULT get_undecoratedNameEx( 
   
 ## <a name="see-also"></a>请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
-
-
-

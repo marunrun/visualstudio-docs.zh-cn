@@ -1,32 +1,26 @@
 ---
 title: “选项”对话框 ->“环境”->“扩展和更新”| Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.ExtensionManager
 ms.assetid: c73859eb-3c33-4f39-86bf-6788387b5937
 caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: b0b51d3b5f61a256a440673b9770f10efecb7b0e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 16b8d2214d9f81115d183eb1b4e6765dcd33d37e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49181085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68199351"
 ---
 # <a name="extensions-and-updates-environment-options-dialog-box"></a>“选项”对话框 ->“环境”->“扩展和更新”
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 使用此页可以设置有关 Visual Studio 如何执行更新以及如何更新和发现扩展的选项。  
   
 ### <a name="automatically-check-for-updates"></a>自动检查更新。  
@@ -43,6 +37,3 @@ ms.locfileid: "49181085"
   
 ## <a name="see-also"></a>请参阅  
  [“选项”对话框 ->“环境”](../../ide/reference/environment-options-dialog-box.md)
-
-
-

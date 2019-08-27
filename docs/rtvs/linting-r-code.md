@@ -2,21 +2,20 @@
 title: Linting R 代码
 description: 如何使用 Visual Studio 针对 R 的内置 Linting 支持，包括 Linter 选项。
 ms.date: 07/02/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - vs.toolsoptionspages.text_editor.r.lint
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 7cbbf0e727269baa0a9e199574afcfee1d8ee687
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: aecf9d95fb8a3b2cda659e2694bff145424e150b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53886671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62970728"
 ---
 # <a name="lint-r-code-in-visual-studio"></a>在 Visual Studio 中 Lint R 代码
 

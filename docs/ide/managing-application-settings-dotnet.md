@@ -1,7 +1,6 @@
 ---
 title: 管理应用程序设置 (.NET)
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - msvse_settingsdesigner.err.nameblank
@@ -9,15 +8,15 @@ helpviewer_keywords:
 - application settings [Visual Studio]
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e6f4340f87782573f7330705786d0e4f923eb914
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: dad84145200b09cfbddab63bd9994096d0ba3e17
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53865500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62537279"
 ---
 # <a name="manage-application-settings-net"></a>管理应用程序设置 (.NET)
 
@@ -85,7 +84,9 @@ ms.locfileid: "53865500"
 
 强烈建议使用 `My.Settings` 对象和默认 .settings 文件来访问设置。 原因是可以使用“设置设计器”为设置分配属性，此外，还将在应用程序关闭之前自动保存用户设置。 但是，Visual Basic 应用程序可以直接访问设置。 在这种情况下，你必须访问 `MySettings` 类并使用项目根目录中的自定义 .settings 文件。 与处理 C# 应用程序时一样，在结束应用程序之前必须保存用户设置；下一节会对此进行说明。
 
-## <a name="access-or-change-application-settings-at-run-time-in-c"></a>在运行时访问或更改 C# 应用程序的设置 #
+<!-- markdownlint-disable MD003 MD020 -->
+## <a name="access-or-change-application-settings-at-run-time-in-c"></a>在运行时访问或更改 C# 应用程序的设置
+<!-- markdownlint-enable MD003 MD020 -->
 
 在 Visual Basic 以外的语言（如 C#）中，必须直接访问 `Settings` 类，如下面的 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 示例中所示。
 

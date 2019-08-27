@@ -1,14 +1,9 @@
 ---
-title: 如何：创建类型之间的关联（类设计器） | Microsoft Docs
-ms.custom: ''
+title: 如何：创建类型 （类设计器） 之间的关联 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.associationline
 helpviewer_keywords:
@@ -21,13 +16,13 @@ ms.assetid: adccb9c8-2f8a-4086-9fa9-f70f99fb6e00
 caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 33b1a45d1c5dc3275ebbde8124986705bcac51ef
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 2d152ce38c445955988ec76a2e328691eac152ca
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49856790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63416941"
 ---
 # <a name="how-to-create-associations-between-types-class-designer"></a>如何：创建类型之间的关联（类设计器）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,13 +32,13 @@ ms.locfileid: "49856790"
  尽管可以将所有字段和属性显示为关联，但根据想要在关系图中强调的内容来将若干重要成员显示为关联更有意义。 （可将不太重要的成员显示为常规成员，或将其全部隐藏起来。）  
   
 > [!NOTE]
->  类设计器仅支持单向关联。  
+> 类设计器仅支持单向关联。  
   
 ### <a name="to-define-an-association-line-in-the-class-diagram"></a>在类关系图中定义关联连线  
   
-1.  在“工具箱”的“类设计器”下，选择“关联”。  
+1. 在“工具箱”的“类设计器”下，选择“关联”。  
   
-2.  在希望以关联关系链接的两个形状之间绘制一条连线。  
+2. 在希望以关联关系链接的两个形状之间绘制一条连线。  
   
      这就在第一个类中创建了一个新属性。 此属性显示为一条具有默认名称的关联连线（而不是作为形状中隔离舱内的属性）。 其类型是关联连线所指向的形状。  
   
@@ -53,16 +48,13 @@ ms.locfileid: "49856790"
   
   \- 或 -  
   
-1.  单击包含显示为关联的属性的形状。  
+1. 单击包含显示为关联的属性的形状。  
   
      该形状获得焦点，且其成员显示在“类详细信息”窗口和“属性”窗口中。  
   
-2.  在“类详细信息”窗口或“属性”窗口中，编辑该属性的名称字段，并按 Enter。  
+2. 在“类详细信息”窗口或“属性”窗口中，编辑该属性的名称字段，并按 Enter。  
   
      此名称在“类详细信息”窗口中、关联行上、“属性”窗口中和代码中同时得到更新。  
   
 ## <a name="see-also"></a>请参阅  
  [如何：在成员表示法与关联表示法之间转换（类设计器）](../ide/how-to-change-between-member-notation-and-association-notation-class-designer.md)
-
-
-

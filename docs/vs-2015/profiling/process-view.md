@@ -1,14 +1,9 @@
 ---
 title: “进程”视图 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.view.process
 helpviewer_keywords:
@@ -21,13 +16,13 @@ ms.assetid: 6d4e2a5d-9f17-4ece-a6f1-75836e1fc382
 caps.latest.revision: 17
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 56fb301436b3fbe9374301fa4f7a8fd421485cbb
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 0436401c458a7d6771a2785028a8b5fe0ef57546
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51794499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68180209"
 ---
 # <a name="process-view"></a>“进程”视图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +31,7 @@ ms.locfileid: "51794499"
   
  进程按名称列出。 线程作为创建它们的进程的子节点列出。 如果无可用符号，可以通过启动线程的函数或标签 **[ntdll.dll]** 对线程命名。  
   
- 若要添加和移除列，请右键单击视图，然后选择“添加/移除列”。 此外，还可通过单击列名对数据进行排序。 有关详细信息，请参阅[如何：自定义报表视图列](../profiling/how-to-customize-report-view-columns.md)。  
+ 若要添加和移除列，请右键单击视图，然后选择“添加/移除列”  。 此外，还可通过单击列名对数据进行排序。 有关详细信息，请参阅[如何：自定义报告视图列](../profiling/how-to-customize-report-view-columns.md)。  
   
  对于使用采样和检测方法生成的数据和其中包含 .NET 内存数据的数据而言，“进程”视图的列相同。 下表对列值进行了说明。  
   
@@ -52,6 +47,3 @@ ms.locfileid: "51794499"
  [采样方法数据视图](../profiling/profiler-sampling-method-data-views.md)   
  [检测方法数据视图](../profiling/instrumentation-method-data-views.md)   
  [.NET 内存数据视图](../profiling/dotnet-memory-data-views.md)
-
-
-

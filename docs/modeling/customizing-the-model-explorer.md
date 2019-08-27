@@ -8,27 +8,26 @@ helpviewer_keywords:
 - Domain-Specific Language Tools, Domain-Specific Language Explorer
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: f3b9df35c4dd69b52c6c4562f3e634dd9a2bdb56
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MT
+ms.openlocfilehash: 65ada4a061fd928a074c9fcdb24fab60a277c457
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53986812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63445840"
 ---
 # <a name="customizing-the-model-explorer"></a>自定义模型资源管理器
 您可以更改的外观和行为在资源管理器域特定语言设计器，如下所示：
 
--   更改窗口标题。
+- 更改窗口标题。
 
--   更改选项卡图标。
+- 更改选项卡图标。
 
--   更改节点的图标。
+- 更改节点的图标。
 
--   隐藏节点。
+- 隐藏节点。
 
 ## <a name="changing-the-window-title"></a>更改窗口标题
  若要更改的生成资源管理器窗口标题，请选择**资源管理器行为**中**DSL 资源管理器**，然后在**属性**窗口中，设置**标题**属性设置为所需的标题。
@@ -60,32 +59,32 @@ ms.locfileid: "53986812"
     在资源管理器应显示三个**Actor**具有您的图标的节点。
 
 > [!NOTE]
->  如果设置了生成资源管理器中显示的任何元素节点图标，资源管理器中的所有节点将都显示图标。 如果尚未设置任何图标，节点将显示默认图标。
+> 如果设置了生成资源管理器中显示的任何元素节点图标，资源管理器中的所有节点将都显示图标。 如果尚未设置任何图标，节点将显示默认图标。
 
 ## <a name="changing-the-name-displayed-on-an-explorer-node"></a>更改显示在资源管理器节点的名称
  您可以更改模型元素的名称在资源管理器中的显示方式。 下面的过程演示如何显示的名称**任务**引用**注释**注释节点中。
 
 #### <a name="to-display-a-property"></a>若要显示属性
 
-1.  打开在前面的过程中创建的解决方案。
+1. 打开在前面的过程中创建的解决方案。
 
-2.  请确保**注释**引用只有一个单一域类通过设置具有属性名称的 role 的多重性**主题**到 0..1。 属性名称会变得**使用者**，并应成为关系名称**CommentReferencesSubject**。
+2. 请确保**注释**引用只有一个单一域类通过设置具有属性名称的 role 的多重性**主题**到 0..1。 属性名称会变得**使用者**，并应成为关系名称**CommentReferencesSubject**。
 
-3.  在中**DSL 资源管理器**，右键单击**资源管理器行为**，然后单击**添加新的资源管理器节点设置**。
+3. 在中**DSL 资源管理器**，右键单击**资源管理器行为**，然后单击**添加新的资源管理器节点设置**。
 
      **ExplorerNodeSettings**节点下显示**自定义节点设置**节点。
 
-4.  选择**ExplorerNodeSettings**，然后在**属性**窗口中，设置**类**到**注释**。
+4. 选择**ExplorerNodeSettings**，然后在**属性**窗口中，设置**类**到**注释**。
 
-5.  右键单击**注释**节点，并单击**添加新属性路径**。
+5. 右键单击**注释**节点，并单击**添加新属性路径**。
 
      新节点将出现名为**属性显示**。
 
-6.  选择**属性显示**，然后在**属性**窗口中，单击值字段**路径到属性**。 选择**注释**，然后**CommentReferencesSubject**，然后**FlowElement**。 生成的路径应类似于**CommentReferencesSubject.Subject/ ！使用者**。
+6. 选择**属性显示**，然后在**属性**窗口中，单击值字段**路径到属性**。 选择**注释**，然后**CommentReferencesSubject**，然后**FlowElement**。 生成的路径应类似于**CommentReferencesSubject.Subject/ ！使用者**。
 
-7.  中的值字段**属性**，选择**名称**。
+7. 中的值字段**属性**，选择**名称**。
 
-8.  转换所有模板，然后生成并运行你的解决方案。
+8. 转换所有模板，然后生成并运行你的解决方案。
 
 9. 在生成的设计器中打开示例关系图。
 
@@ -98,17 +97,17 @@ ms.locfileid: "53986812"
 
 #### <a name="to-hide-an-explorer-node"></a>若要隐藏的资源管理器节点
 
-1.  打开在前面的过程中创建的解决方案。
+1. 打开在前面的过程中创建的解决方案。
 
-2.  在中**DSL 资源管理器**，右键单击**资源管理器行为**，然后单击**添加新域路径**。
+2. 在中**DSL 资源管理器**，右键单击**资源管理器行为**，然后单击**添加新域路径**。
 
      一个**域路径**节点下显示**隐藏节点**。
 
-3.  选择**域路径**，然后在**属性**窗口中，单击值字段**路径定义**。 选择**FlowGraph**，然后**FlowGraphHasComments**。 生成的路径应类似于**FlowGraphHasComments.Comments**
+3. 选择**域路径**，然后在**属性**窗口中，单击值字段**路径定义**。 选择**FlowGraph**，然后**FlowGraphHasComments**。 生成的路径应类似于**FlowGraphHasComments.Comments**
 
-4.  转换所有模板，然后生成并运行你的解决方案。
+4. 转换所有模板，然后生成并运行你的解决方案。
 
-5.  在生成的设计器中打开示例关系图。
+5. 在生成的设计器中打开示例关系图。
 
      在资源管理器应仅显示**Actors**节点，然后，将不显示**注释**节点。
 

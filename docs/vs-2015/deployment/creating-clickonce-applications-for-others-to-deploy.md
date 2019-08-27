@@ -1,14 +1,9 @@
 ---
 title: 创建 ClickOnce 供其他应用程序部署 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -29,13 +24,13 @@ ms.assetid: d20766c7-4ef3-45ab-8aa0-3f15b61eccaa
 caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: f2b7bb6c990567a483ab28d215019fe1b259d166
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: ff76fe46f07ef713cb3c0e529e8029730450f2a6
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49862081"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65675606"
 ---
 # <a name="creating-clickonce-applications-for-others-to-deploy"></a>创建供其他人部署的 ClickOnce 应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -60,11 +55,11 @@ ms.locfileid: "49862081"
 ## <a name="creating-customer-deployments-by-using-application-manifest-for-trust"></a>通过用于信任的应用程序清单中创建客户部署  
  ClickOnce 的.NET Framework 3.5 中包含一项新功能，让开发人员和客户的新解决方案对方案进行签名的清单的方式。 ClickOnce 应用程序清单支持名为的新元素`<useManifestForTrust>`，使开发人员来表示的数字签名的应用程序清单是应使用来做出信任决定。 开发人员可以使用 ClickOnce 打包工具-如 Mage.exe 和 MageUI.exe 中，Visual Studio-若要在应用程序清单中包含此元素，以及将其发布者名称和应用程序的名称嵌入在清单中。  
   
- 当使用`<useManifestForTrust>`，部署清单不需要使用由证书颁发机构颁发的验证码证书进行签名。 相反，它可以使用所谓的自签名证书进行签名。 自签名的证书是由客户或开发人员通过使用标准的.NET Framework SDK 工具生成，然后使用标准的 ClickOnce 部署工具部署清单中应用。 有关详细信息，请参阅[Makecert.exe （证书创建工具）](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)。  
+ 当使用`<useManifestForTrust>`，部署清单不需要使用由证书颁发机构颁发的验证码证书进行签名。 相反，它可以使用所谓的自签名证书进行签名。 自签名的证书是由客户或开发人员通过使用标准的.NET Framework SDK 工具生成，然后使用标准的 ClickOnce 部署工具部署清单中应用。 有关详细信息，请参阅[Makecert.exe （证书创建工具）](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)。  
   
  使用自签名的证书进行部署清单提供了几个优势。 通过消除对客户可获取或创建自己的验证码证书，需要`<useManifestForTrust>`简化了部署，客户，同时还允许开发人员维护他们自己的应用程序上的品牌标识。 结果是更安全，并且具有唯一的应用程序标识的已签名部署一组。 这消除了从相同应用程序部署到多个客户可能会发生潜在冲突。  
   
- 有关如何创建使用 ClickOnce 部署的分步信息`<useManifestForTrust>`启用，请参阅[演练： 手动部署 ClickOnce 应用程序，不会不需要重新签名并且该保留品牌信息](../deployment/walkthrough-manually-deploying-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information.md).  
+ 有关如何创建使用 ClickOnce 部署的分步信息`<useManifestForTrust>`启用，请参阅[演练：手动部署 ClickOnce 应用程序，不需要重新签名并且保留署名信息](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required?view=vs-2015)。  
   
 ### <a name="how-application-manifest-for-trust-works-at-runtime"></a>如何应用程序清单信任在运行时的工作原理  
  若要获取使用信任的应用程序清单在运行时的工作方式更好地理解，请考虑下面的示例。 面向.NET Framework 3.5 的 ClickOnce 应用程序是由 Microsoft 创建的。 应用程序清单使用`<useManifestForTrust>`元素和由 Microsoft 签名。 Adventure Works 通过使用自签名的证书对签名部署清单。 Adventure Works 客户端配置为信任由 Microsoft 签名的任何应用程序。  
@@ -108,7 +103,4 @@ ms.locfileid: "49862081"
 ## <a name="see-also"></a>请参阅  
  [部署 ClickOnce 应用程序进行测试和生产服务器无需重新签名](../deployment/deploying-clickonce-applications-for-testing-and-production-servers-without-resigning.md)   
  [演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)   
- [演练：手动部署不需要重新签名并且保留署名信息的 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information.md)
-
-
-
+ [演练：手动部署不需要重新签名且保留品牌信息的 ClickOnce 应用程序](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required?view=vs-2015)

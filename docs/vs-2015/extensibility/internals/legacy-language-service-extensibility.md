@@ -1,27 +1,22 @@
 ---
 title: 旧版语言服务扩展性 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - language services
 - Visual Studio, language services
 ms.assetid: 2700cd4d-5f68-43fc-b62f-dc80c3f3aa85
 caps.latest.revision: 43
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 6481dfd425f549742ad208df0d2cd04dd182c82f
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 9346311aac4bc5833005423e90c2eb92faddcb84
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51758279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68194979"
 ---
 # <a name="legacy-language-service-extensibility"></a>旧版语言服务扩展性
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -57,4 +52,3 @@ ms.locfileid: "51758279"
   
  [用于调试的语言服务支持](../../extensibility/internals/language-service-support-for-debugging.md)  
  提供有关的信息和链接到 Visual Studio 调试 SDK，其中包含创建和自定义调试器组件用于调试的程序所需的信息。
-

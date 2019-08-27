@@ -1,22 +1,21 @@
 ---
-title: 使用存根隔离应用程序的各个部分以进行单元测试
+title: 使用存根隔离应用程序的各个部分以进行测试
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: c832853470fb4aa3adad9719ddbbe35123f04772
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b88905df0c99eb66c64e529610d6713801fceece
+ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53902758"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66401714"
 ---
 # <a name="use-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>使用存根隔离应用程序的各个部分以进行单元测试
 
@@ -30,11 +29,11 @@ ms.locfileid: "53902758"
 
 ![Real 和 Stub 类符合一个接口。](../test/media/fakesinterfaces.png)
 
-由于存根依赖于你以这种方式构建代码的能力，因此你通常使用存根隔离应用程序的各个部分。 要将它与不受你控制的其他程序集（如 System.dll）隔离开，通常应使用填充码。 请参阅[使用填充码针对单元测试将应用程序与程序集隔离](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)。
+由于存根依赖于你以这种方式构建代码的能力，因此你通常使用存根隔离应用程序的各个部分。 要将它与不受你控制的其他程序集（如 System.dll）隔离开，通常应使用填充码  。 请参阅[使用填充码针对单元测试将应用程序与程序集隔离](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)。
 
 ## <a name="how-to-use-stubs"></a>如何使用存根
 
-### <a name="design-for-dependency-injection"></a>依赖关系注入设计
+### <a name="design-for-dependency-injection"></a>依赖项注入的设计
 
 若要使用存根，则必须将应用程序设计为使不同的组件不相互依赖，而只依赖接口定义。 各个组件在运行时连接在一起，而不是在编译时进行耦合。 这种模式可帮助制作可靠且易于更新的软件，因为更改往往不会跨组件边界传播。 即使未使用存根，也建议采用此模式。 若要编写新代码，采用[依赖项注入](http://en.wikipedia.org/wiki/Dependency_injection)模式会很容易。 如果要为现有软件编写测试，你可能必须重构它。 如果这样做可行，则可以考虑改用填充码。
 
@@ -89,7 +88,7 @@ End Function
 
 - “组件”指的是一个类或你同时开发和更新的一组类。 通常，组件是一个 Visual Studio 项目中的代码。 分离一个组件中的类不太重要，因为它们是同时更新的。
 
-- 从相对稳定的平台（如 System.dll）的类中分离你的组件也不是那么重要。 为所有这些类编写接口将使你的代码显得杂乱。
+- 从相对稳定的平台（如 System.dll）的类中分离你的组件也不是那么重要  。 为所有这些类编写接口将使你的代码显得杂乱。
 
 可以使用类似下面的接口从 StockFeed 中分离 StockAnalyzer 代码：
 
@@ -148,13 +147,13 @@ analyzer = new StockAnalyzer(new StockFeed());
 
 #### <a name="add-a-fakes-assembly"></a>添加 Fakes 程序集
 
-1. 在解决方案资源管理器中，展开单元测试项目的“引用”。
+1. 在解决方案资源管理器中，展开单元测试项目的“引用”   。
 
-   如果使用的是 Visual Basic，请选择解决方案资源管理器的工具栏中的“显示所有文件”以便查看“引用”节点。
+   如果使用的是 Visual Basic，请选择解决方案资源管理器的工具栏中的“显示所有文件”以便查看“引用”节点    。
 
 2. 选择包含要为其创建存根的接口定义的程序集。
 
-3. 选择快捷菜单中的“添加 Fakes 程序集”。
+3. 选择快捷菜单中的“添加 Fakes 程序集”  。
 
 ### <a name="write-your-test-with-stubs"></a>使用存根编写测试
 
@@ -229,9 +228,9 @@ class TestMyComponent
     public void TestVariableContosoPrice()
     {
         // Arrange:
-        int priceToReturn;
-        string companyCodeUsed;
-        var componentUnderTest = new StockAnalyzer(new StubIStockFeed()
+        int priceToReturn = 345;
+        string companyCodeUsed = "";
+        var componentUnderTest = new StockAnalyzer(new StockAnalysis.Fakes.StubIStockFeed()
             {
                GetSharePriceString = (company) =>
                   {
@@ -241,8 +240,6 @@ class TestMyComponent
                      return priceToReturn;
                   };
             };
-        // Set the value that will be returned by the stub:
-        priceToReturn = 345;
 
         // Act:
         int actualResult = componentUnderTest.GetContosoPrice();
@@ -264,7 +261,7 @@ Class TestMyComponent
     <TestMethod()> _
     Public Sub TestVariableContosoPrice()
         ' Arrange:
-        Dim priceToReturn As Integer
+        Dim priceToReturn As Integer = 345
         Dim companyCodeUsed As String = ""
         Dim stockFeed As New StockAnalysis.Fakes.StubIStockFeed()
         With stockFeed
@@ -279,8 +276,6 @@ Class TestMyComponent
         End With
         ' Create an object to test:
         Dim componentUnderTest As New StockAnalyzer(stockFeed)
-        ' Set the value that will be returned by the stub:
-        priceToReturn = 345
 
         ' Act:
         Dim actualResult As Integer = componentUnderTest.GetContosoPrice()
@@ -317,7 +312,7 @@ var stub = new StubIMyInterface ();
 stub.MyMethodString = (value) => 1;
 ```
 
-如果你没有为某个函数提供存根，Fakes 将生成一个返回返回类型的默认值的函数。 对于数字，默认值为 0，而对于类类型，默认值为 `null` (C#) 或 `Nothing` (Visual Basic)。
+如果没有为某个函数提供存根，Fakes 将生成一个返回该返回类型默认值的函数。 对于数字，默认值为 0，而对于类类型，默认值为 `null` (C#) 或 `Nothing` (Visual Basic)。
 
 ### <a name="properties"></a>属性
 
@@ -409,7 +404,7 @@ public void TestGetValue()
     }
 ```
 
-在从此类生成的存根中，可以为 DoAbstract() 和 DoVirtual() 设置委托方法，但不能为 DoConcrete() 设置委托方法。
+在从此类生成的存根中，可以为 `DoAbstract()` 和 `DoVirtual()` 设置委托方法，但不能为 `DoConcrete()` 设置委托方法。
 
 ```csharp
 // unit test
@@ -438,9 +433,9 @@ Assert.AreEqual(43,stub.DoVirtual(1));
 
 ## <a name="stub-limitations"></a>存根限制
 
-1. 不支持使用指针的方法签名。
+- 不支持使用指针的方法签名。
 
-2. 无法对密封类或静态方法进行存根处理，因为存根类型依赖于虚方法调度。 对于这种情况，请使用[使用填充码针对单元测试将应用程序与程序集隔离](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)中所述的填充码类型
+- 无法对密封类或静态方法进行存根处理，因为存根类型依赖于虚方法调度。 对于这种情况，请使用[使用填充码针对单元测试将应用程序与程序集隔离](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)中所述的填充码类型
 
 ## <a name="change-the-default-behavior-of-stubs"></a>更改存根的默认行为
 

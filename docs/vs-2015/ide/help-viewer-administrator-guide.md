@@ -1,25 +1,20 @@
 ---
 title: Help Viewer 管理员指南 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-help-viewer
+ms.topic: conceptual
 ms.assetid: 4340c69f-b96b-4932-bb82-38b16a5ab149
 caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: f470c55b08cc559e481ed75e962fda4f0e625a5c
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: b00f89b60c7e884bfaf71e971722530b44a78b4e
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49871285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63445694"
 ---
 # <a name="help-viewer-administrator-guide"></a>帮助查看器管理员指南
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,7 +36,7 @@ ms.locfileid: "49871285"
 ## <a name="deploying-local-help-content-from-the-internet"></a>从 Internet 部署本地帮助内容  
  可以使用 MSDN 内容包服务从 Internet 将本地帮助内容部署到客户端计算机。 请使用以下语法：  
   
- \\<*路径*> \v2.2\HlpCtntmgr.exe /operation \<*名称*> /catalogname \<*目录名称*> /locale \< *区域设置*>  
+ \\<path to>\v2.2\HlpCtntmgr.exe /operation \<name> /catalogname \<catalog name> /locale \<locale>  
   
  有关 HlpCtntMgr.exe 命令行语法的详细信息，请参阅 [Help Content Manager 的命令行参数](../ide/command-line-arguments-for-the-help-content-manager.md)。  
   
@@ -56,7 +51,7 @@ ms.locfileid: "49871285"
 - 帮助的默认源仍处于联机状态。  
   
   > [!TIP]
-  >  可以通过修改 HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\14.0\help\UseOnlineHelp 注册表项来更改帮助的默认源。 有关详细信息，请参阅 [Help Content Manager 重写](../ide/help-content-manager-overrides.md)。  
+  > 可以通过修改 HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\14.0\help\UseOnlineHelp 注册表项来更改帮助的默认源。 有关详细信息，请参阅 [Help Content Manager 重写](../ide/help-content-manager-overrides.md)。  
   
 - 系统仍会在首次启动 Visual Studio 时提示客户端安装基本帮助内容。 可以通过修改 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\14.0\Help\DisableFirstRunHelpSelection 注册表项来禁用此提示。  
   
@@ -65,25 +60,25 @@ ms.locfileid: "49871285"
   
 ##### <a name="to-install-english-content-from-the-internet"></a>从 Internet 安装英语内容  
   
-1.  选择“开始”，然后选择“运行”。  
+1. 选择“开始”，然后选择“运行”。  
   
-2.  键入下列命令：  
+2. 键入下列命令：  
   
      C:\Program Files (x86)\Microsoft Help Viewer\v2.2\hlpctntmgr.exe /operation install /catalogname VisualStudio14 /locale en-us  
   
-3.  按 Enter。  
+3. 按 Enter。  
   
 ## <a name="deploying-pre-installed-local-help-content-on-client-computers"></a>在客户端计算机上部署预安装的本地帮助内容  
  可以将联机的内容集安装到一台计算机，然后将已安装的该内容复制到其他计算机。  
   
- 要求:  
+ 要求：  
   
 - 用于安装内容集的计算机必须可以访问 Internet。  
   
 - 用户必须具有管理员权限才能在安装之后更新、添加或移除本地帮助内容。  
   
   > [!TIP]
-  >  如果用户没有管理员权限，则建议在帮助查看器中禁用“管理内容”选项卡。 有关详细信息，请参阅 [Help Content Manager 重写](../ide/help-content-manager-overrides.md)。  
+  > 如果用户没有管理员权限，则建议在帮助查看器中禁用“管理内容”选项卡。 有关详细信息，请参阅 [Help Content Manager 重写](../ide/help-content-manager-overrides.md)。  
   
   注意：  
   
@@ -100,13 +95,13 @@ ms.locfileid: "49871285"
   
 1. 在 Help Viewer 中，选择“管理内容”选项卡。  
   
-2. 下**可用的文档**，导航到 Visual Studio 文档集。  
+2. 在“可用的文档”下，导航到 Visual Studio 文档集。  
   
 3. 选择每个子项旁的“删除”。  
   
-4. 选择**启动**卸载  
+4. 选择“开始”开始卸载  
   
-5. 浏览到*n*: \ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio12，并验证该文件夹仅包含文件 catalogType.xml。  
+5. 浏览到 n:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio12 并验证该文件夹是否仅包含文件 catalogType.xml。  
   
    一旦移除所有以前安装的本地 Visual Studio 帮助内容，便已准备好下载基本内容集。  
   
@@ -114,7 +109,7 @@ ms.locfileid: "49871285"
   
 1. 在 Help Viewer 中，选择“管理内容”选项卡。  
   
-2. 下**可用的文档**，导航到的文档集，你想要下载，然后选择**添加**。  
+2. 在“可用的文档”下，导航到要下载的文档集，然后选择“添加”。  
   
 3. 选择“启动”。  
   
@@ -122,17 +117,17 @@ ms.locfileid: "49871285"
   
 ##### <a name="to-package-the-content"></a>对内容进行打包  
   
-1.  创建要将内容复制到其中的文件夹以便将来进行部署。  
+1. 创建要将内容复制到其中的文件夹以便将来进行部署。  
   
      例如：c:\VS12Help。  
   
-2.  使用管理员权限打开 cmd.exe。  
+2. 使用管理员权限打开 cmd.exe。  
   
-3.  导航到在步骤 1 中创建的文件夹。  
+3. 导航到在步骤 1 中创建的文件夹。  
   
-4.  键入下列命令：  
+4. 键入下列命令：  
   
-     Xcopy %SYSTEMDRIVE%\ProgramData\Microsoft\HelpLibrary2 \< *foldername*> \ /y /e /k /o  
+     Xcopy %SYSTEMDRIVE%\ProgramData\Microsoft\HelpLibrary2 \<*文件夹名*>\ /y /e /k /o  
   
      例如： `Xcopy %SYSTEMDRIVE%\ProgramData\Microsoft\HelpLibrary2 c:\VS12Help\ /y /e /k /o`  
   
@@ -140,11 +135,11 @@ ms.locfileid: "49871285"
   
 ##### <a name="to-deploy-the-content"></a>部署内容  
   
-1.  创建网络共享，然后将帮助内容复制到该位置。  
+1. 创建网络共享，然后将帮助内容复制到该位置。  
   
-     例如，将其内容复制到 c:\VS12Help 中\\\myserver\VS12Help。  
+     例如，将 c:\VS12Help 中的内容复制到 \\\myserver\VS12Help。  
   
-2.  创建用于包含帮助内容的部署脚本的 .bat 文件。 由于客户端可能对在推送过程中删除的任何文件具有读取锁定，所以应在推送更新之前关闭客户端。  
+2. 创建用于包含帮助内容的部署脚本的 .bat 文件。 由于客户端可能对在推送过程中删除的任何文件具有读取锁定，所以应在推送更新之前关闭客户端。  
   
      例如：  
   
@@ -204,11 +199,8 @@ ms.locfileid: "49871285"
     :CONTINUE  
     ```  
   
-3.  在要安装帮助内容的本地计算机上运行 bat 文件。  
+3. 在要安装帮助内容的本地计算机上运行 bat 文件。  
   
 ## <a name="see-also"></a>请参阅  
- [用于 Help Content Manager 的命令行参数](../ide/command-line-arguments-for-the-help-content-manager.md)   
+ [Help Content Manager 的命令行参数](../ide/command-line-arguments-for-the-help-content-manager.md)   
  [Help Content Manager 重写](../ide/help-content-manager-overrides.md)
-
-
-

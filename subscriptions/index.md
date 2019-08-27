@@ -6,16 +6,13 @@ Manager: lank
 layout: LandingPage
 Ms.date: 06/25/2018
 Ms.topic: landing-page
-Description: Welcome to Visual Studio Subscriptions
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 083522aae47abdfdec37d5add756457f18590953
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+Description: 欢迎使用 Visual Studio 订阅
+ms.openlocfilehash: 25337098dded67d28df1cea03a47ec8c28646763
+ms.sourcegitcommit: 57866dd72fd0e15ce61128df70729b427a2d02eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49856820"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68315223"
 ---
 # <a name="visual-studio-subscriptions"></a>Visual Studio 订阅
 
@@ -26,6 +23,7 @@ Visual Studio 订阅提供全面的资源集合，便于你在首选平台和设
 管理员登录到 [https://manage.visualstudio.com](https://manage.visualstudio.com)，将订阅分配给团队。<br>
 订阅者登录到 [https://my.visualstudio.com](https://my.visualstudio.com)，访问订阅权益。
 
+<!-- markdownlint-disable MD033 -->
 <ul class="panelContent cardsFTitle">
     <li>
         <a href="/azure/">
@@ -157,7 +155,7 @@ Visual Studio 订阅提供全面的资源集合，便于你在首选平台和设
                         <ul>
                             <li><a href="/visualstudio/subscriptions/vs-ide-benefit">Visual Studio</a></li>
                             <li>Visual Studio for Mac</li>
-                            <li>Team Foundation Server 和 TFS CAL</li>
+                            <li>Azure DevOps Server 和 CAL</li>
                         </ul>
                     </div>
                 </div>
@@ -170,7 +168,7 @@ Visual Studio 订阅提供全面的资源集合，便于你在首选平台和设
                 <div class="card">
                     <div class="cardText">
                         <h3>云服务</h3>
-                        <p>通过 Visual Studio 订阅，可以获取月度 Azure 抵用额度和免费访问 Azure 服务的权限、开发和测试费用折扣，以及专门为订户提供的图片库和预配置虚拟机的访问权限。 具体取决于你的订阅，云服务可能包括：</p>
+                        <p>通过 Visual Studio 订阅，可以获取月度 Azure 额度，以访问 Azure 服务、开发和测试费用折扣，以及专门为订户提供的图片库和预配置的虚拟机。 具体取决于你的订阅，云服务可能包括：</p>
                         <ul>
                             <li><a href="/visualstudio/subscriptions/vs-azure">Azure</a></li>
                             <li><a href="/visualstudio/subscriptions/vs-visual-studio-app-center">Visual Studio App Center</a></li>
@@ -195,8 +193,6 @@ Visual Studio 订阅提供全面的资源集合，便于你在首选平台和设
                             <li><a href="/visualstudio/subscriptions/vs-linkedin-learning">领英高级版</a>（业务、技术和创意）</li>
                             <li><a href="/visualstudio/subscriptions/vs-pluralsight">Pluralsight</a>（云、设计、移动和数据）</li>
                             <li><a href="/visualstudio/subscriptions/vs-datacamp">Data Camp</a>（数据科学和 AI）</li>
-                            <li><a href="/visualstudio/subscriptions/vs-xamarin">Xamarin University</a>（移动开发）</li>
-                            <li><a href="/visualstudio/subscriptions/vs-opsgility">Opsgility 培训</a>（以云为中心）</li>
                             <li><a href="/visualstudio/subscriptions/vs-tech-support">Microsoft 专业技术支持事件</a></li>
                             <li><a href="/visualstudio/subscriptions/vs-azure-advisory-chat">Azure 顾问聊天</a></li>
                             <li><a href="/visualstudio/subscriptions/vs-azure-community">Azure 社区</a></li>

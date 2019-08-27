@@ -1,19 +1,18 @@
 ---
 title: 生成方法重写
 ms.date: 01/26/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f4c78edaecb9cedf3bcff4acf7b39b3e54701f24
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: afb32a7ddb9a53ac6585cc690a3ba8fd1098b080
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53906860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62790458"
 ---
 # <a name="generate-an-override-in-visual-studio"></a>在 Visual Studio 中生成方法重写
 

@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 177420b9-568b-4dad-9d16-1b0e98a24d71
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 585b5b5397ebd259476654dc2cc62f1add262af9
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: b85999a22bf49923630a0abe2f9ef33950edd8fe
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53918896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815626"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>将 WPF 控件绑定到数据集
 
@@ -51,21 +50,35 @@ ms.locfileid: "53918896"
 
 - 数据集和 TableAdapter。 有关详细信息，请参阅[Visual Studio 中的数据集工具](../data-tools/dataset-tools-in-visual-studio.md)并[Tableadapter](../data-tools/create-and-configure-tableadapters.md)。
 
-- WPF 数据绑定。 有关详细信息，请参阅 [数据绑定概述](/dotnet/framework/wpf/data/data-binding-overview)。
+- WPF 数据绑定。 有关详细信息，请参阅[数据绑定概述](/dotnet/framework/wpf/data/data-binding-overview)。
 
 ## <a name="create-the-project"></a>创建项目
 
 创建新的 WPF 项目以显示产品记录。
 
-1. 启动 Visual Studio。
+::: moniker range="vs-2017"
 
-2. 在“文件”菜单上，选择“新建” > “项目”。
+1. 打开 Visual Studio。
+
+2. 在“文件”菜单上，依次选择“新建”>“项目”。
 
 3. 展开“Visual Basic”或“Visual C#”，然后选择“Windows”。
 
-4. 选择“WPF 应用程序”项目模板。
+4. 选择**WPF 应用**项目模板。
 
 5. 在中**名称**框中，输入**AdventureWorksProductsEditor** ，然后选择**确定**。
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+1. 打开 Visual Studio。
+
+2. 在“开始”窗口上，选择“创建新项目”。
+
+3. 搜索C# **WPF 应用**项目模板，然后按照步骤创建该项目，命名项目**AdventureWorksProductsEditor**。
+
+::: moniker-end
 
    Visual Studio 创建 AdventureWorksProductsEditor 项目。
 

@@ -2,9 +2,8 @@
 title: 使用命令行参数安装 Visual Studio
 titleSuffix: ''
 description: 了解如何使用命令行参数来控制或自定义 Visual Studio 安装。
-ms.date: 11/14/2018
+ms.date: 03/30/2019
 ms.custom: seodec18
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - command-line parameters
@@ -13,19 +12,21 @@ f1_keywords:
 ms.assetid: 480f3cb4-d873-434e-a8bf-82cff7401cf2
 author: TerryGLee
 ms.author: tglee
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eb4ab50f5b5b699d2cbb8fa800705f4ed218c588
-ms.sourcegitcommit: a8c841648d862c83a0f0d654df1b367c159adc5e
+ms.prod: visual-studio-windows
+ms.technology: vs-installation
+ms.openlocfilehash: 8e999df4fc1269025c9adc038c1a17dd586a3081
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54403962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62951321"
 ---
-# <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>使用命令行参数安装 Visual Studio 2017
+# <a name="use-command-line-parameters-to-install-visual-studio"></a>使用命令行参数安装 Visual Studio
 
-通过命令提示符安装 Visual Studio 2017 时，可以使用各种命令行参数来控制或自定义安装。 通过命令行，可以执行下列操作：
+通过命令提示符安装 Visual Studio 时，可以使用各种命令行参数来控制或自定义安装。 通过命令行，可以执行下列操作：
 
 - 启动预先选定了特定选项的安装。
 - 自动执行安装过程。
@@ -33,11 +34,23 @@ ms.locfileid: "54403962"
 
 将命令行选项与安装引导程序结合使用。安装引导程序是启动下载过程的小型（约 1MB）文件。 安装引导程序是你从 Visual Studio 网站下载时启动的第一个可执行文件。 单击下面的链接，直接链接到要安装的产品版本所对应的最新版安装引导程序：
 
-- [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=15?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=link+cta&utm_content=download+commandline+parameters+vs2017)
-- [Visual Studio 2017 Professional](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=15?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=link+cta&utm_content=download+commandline+parameters+vs2017)
-- [Visual Studio 2017 Community](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&rel=15?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=link+cta&utm_content=download+commandline+parameters+vs2017)
+::: moniker range="vs-2017"
 
-## <a name="list-of-command-line-parameters"></a>命令行参数列表
+- [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=15&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=link+cta&utm_content=download+commandline+parameters+vs2017)
+- [Visual Studio 2017 Professional](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=15&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=link+cta&utm_content=download+commandline+parameters+vs2017)
+- [Visual Studio 2017 Community](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&rel=15&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=link+cta&utm_content=download+commandline+parameters+vs2017)
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+- [Visual Studio 2019 Enterprise](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=link+cta&utm_content=download+commandline+parameters+vs2019+rc)
+- [Visual Studio 2019 Professional](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=link+cta&utm_content=download+commandline+parameters+vs2019+rc)
+- [Visual Studio 2019 Community](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=link+cta&utm_content=download+commandline+parameters+vs2019+rc)
+
+::: moniker-end
+
+## <a name="command-line-parameters"></a>命令行参数
 
  Visual Studio 命令行参数不区分大小写。
 
@@ -46,7 +59,7 @@ ms.locfileid: "54403962"
 （将 `vs_enterprise.exe` 替换为要安装的相应产品版本。）
 
 >[!TIP]
-> 有关如何使用命令行安装 Visual Studio 2017 的更多示例，请参阅[命令行参数示例](command-line-parameter-examples.md)页。
+> 有关如何使用命令行安装 Visual Studio 的更多示例，请参阅[命令行参数示例](command-line-parameter-examples.md)页。
 
 | **命令** | **说明** |
 | ----------------------- | --------------- |
@@ -55,7 +68,9 @@ ms.locfileid: "54403962"
 | `update` | 更新已安装的产品。 |
 | `repair` | 修复已安装的产品。 |
 | `uninstall` | 卸载已安装的产品。 |
-| `export` | **15.9 版中的新增功能**：将安装所选内容导出到安装配置文件。 **说明**：仅能与 vs_installer.exe 一起使用。 |
+| `export` | **15.9 版的新增功能**：将安装所选内容导出到安装配置文件。 **说明**：仅能与 vs_installer.exe 一起使用。 |
+
+## <a name="install-options"></a>安装选项
 
 | **安装选项** | **说明** |
 | ----------------------- | --------------- |
@@ -79,6 +94,8 @@ ms.locfileid: "54403962"
 
 > [!IMPORTANT]
 > 指定多个工作负载和组件时，必须对每项重复运行 `--add` 或 `--remove` 命令行开关。
+
+## <a name="layout-options"></a>布局选项
 
 | **布局选项** | **说明** |
 | ----------------------- | --------------- |
@@ -104,7 +121,7 @@ ms.locfileid: "54403962"
 | `--cache` | **15.2 中新增的可选选项**：如果指定，将在安装后保存包，以便后续修复时使用。 这会替代用于后续安装、修复或修改的全局策略设置。 默认策略是缓存包。 对于卸载命令，忽略此选项。 有关详细信息，请了解如何[禁用或移动包缓存](disable-or-move-the-package-cache.md)。 |
 | `--nocache` | **15.2 中新增的可选选项**：如果指定，将在安装或修复完成后删除包。 只有在需要时才会重新下载，并且会在使用后再次删除。 这会替代用于后续安装、修复或修改的全局策略设置。 默认策略是缓存包。 对于卸载命令，忽略此选项。 有关详细信息，请了解如何[禁用或移动包缓存](disable-or-move-the-package-cache.md)。 |
 | `--noUpdateInstaller` | **15.2 中新增的可选选项**：如果存在，指定无提示安装时阻止安装程序进行自我更新。 如果在需要更新安装程序时通过无提示安装指定 noUpdateInstaller，则安装程序将忽略该命令并返回非零退出代码。 |
-| `--noWeb` | **15.3 版中新增的可选选项**：安装程序现在从 Internet 下载要安装的所有内容。  离线布局中必须有要安装的所有内容。  如果布局中缺少内容，安装将失败。  有关详细信息，请参阅[从网络安装点进行部署](create-a-network-installation-of-visual-studio.md)。 |
+| `--noWeb` | **15.3 版中新增的可选选项**：如果存在，Visual Studio 安装程序将使用布局目录中的文件来安装 Visual Studio。 如果用户尝试安装不在布局中的组件，安装程序将失败。  有关详细信息，请参阅[从网络安装点进行部署](create-a-network-installation-of-visual-studio.md)。 <br/><br/> **重要说明**：此开关不会阻止 Visual Studio 安装程序检查更新。 有关详细信息，请参阅[控制对基于网络的 Visual Studio 部署的更新](controlling-updates-to-visual-studio-deployments.md)。|
 | `--path <name>=<path>` | **15.7 版中新增的可选选项**：用于指定安装的自定义安装路径。 支持的路径名称有 shared、cache 和 install。 |
 | `--path cache=<path>` | **15.7 版中新增的可选选项**：使用指定的位置下载安装文件。 只可以在首次安装 Visual Studio 时设置此位置。 示例：`--path cache="C:\VS\cache"` |
 | `--path shared=<path>` | **15.7 版中新增的可选选项**：包含用于并行 Visual Studio 安装的共享文件。 某些工具和 SDK 会安装到此驱动器上的某个位置，而其他一些工具可能会替代此设置并安装到另一个驱动器。 示例：`--path shared="C:\VS\shared"` <br><br>重要提示：只能在首次安装 Visual Studio 时对此设置一次。 |
@@ -112,7 +129,7 @@ ms.locfileid: "54403962"
 
 ## <a name="list-of-workload-ids-and-component-ids"></a>工作负荷 ID 和组件 ID 列表
 
-有关按 Visual Studio 产品排序的工作负载和组件 ID 的列表，请参阅 [Visual Studio 2017 工作负载和组件 ID](workload-and-component-ids.md) 页面。
+有关按 Visual Studio 产品排序的工作负载和组件 ID 的列表，请参阅 [Visual Studio 工作负载和组件 ID](workload-and-component-ids.md) 页。
 
 ## <a name="list-of-language-locales"></a>语言区域设置列表
 
@@ -152,7 +169,7 @@ ms.locfileid: "54403962"
 
 ## <a name="see-also"></a>请参阅
 
-- [Visual Studio 2017 安装的命令行参数示例](command-line-parameter-examples.md)
-- [创建 Visual Studio 2017 的脱机安装](create-an-offline-installation-of-visual-studio.md)
+- [Visual Studio 安装命令行参数示例](command-line-parameter-examples.md)
+- [创建 Visual Studio 的脱机安装](create-an-offline-installation-of-visual-studio.md)
 - [通过响应文件自动执行 Visual Studio 安装](automated-installation-with-response-file.md)
-- [Visual Studio 2017 工作负载和组件 ID](workload-and-component-ids.md)
+- [Visual Studio 工作负荷和组件 ID](workload-and-component-ids.md)

@@ -1,14 +1,9 @@
 ---
-title: 选项，文本编辑器，C + +，高级 |Microsoft Docs
-ms.custom: ''
+title: “选项”->“文本编辑器”->“C/C++”->“高级”| Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.C\C++.Advanced
 - VS.ToolsOptionsPages.Text_Editor.C%2FC%2B%2B.Advanced
@@ -19,24 +14,23 @@ ms.assetid: 67c82ae5-fddd-49df-baec-8e7498b156f3
 caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: aafa46e62af6eadb56d8cf53cb2190bc7403358b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: a17931b9d7ccb8ef60158d6ea6d22e8b2f27b031
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49285696"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65697168"
 ---
 # <a name="options-text-editor-cc-advanced"></a>选项，文本编辑器，C/C++，高级
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 通过更改这些选项，你可以在用 C 或 C++ 进行编程时更改与 IntelliSense 和浏览数据库有关的行为。  
   
  若要访问此页，请在“选项”对话框的左窗格中，展开“文本编辑器”，再展开“C/C++”，然后选择“高级”。  
   
 > [!NOTE]
->  以下说明中的某些 Visual Studio 用户界面元素在计算机上出现的名称或位置可能会不同。 这些元素取决于你所使用的 Visual Studio 版本和你所使用的设置。 请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+> 以下说明中的某些 Visual Studio 用户界面元素在计算机上出现的名称或位置可能会不同。 这些元素取决于你所使用的 Visual Studio 版本和你所使用的设置。 请参阅[在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ## <a name="browsingnavigation"></a>浏览/导航  
  除在极少数情况下，比如解决方案太大以致数据库活动占用过多的系统资源，否则不应选择以下选项。  
@@ -79,19 +73,19 @@ ms.locfileid: "49285696"
   
  通过以下诸多选项进行设置：  
   
--   0 - 无  
+- 0 - 无  
   
--   1 - 常规  
+- 1 - 常规  
   
--   2 - 空闲  
+- 2 - 空闲  
   
--   4 - WorkItem  
+- 4 - WorkItem  
   
--   8 - IntelliSense  
+- 8 - IntelliSense  
   
--   16 - ACPerf  
+- 16 - ACPerf  
   
--   32 - ClassView  
+- 32 - ClassView  
   
 ## <a name="fallback-location"></a>回退位置  
  回退位置指不使用主位置（与解决方案位于同一目录）时 SDF 和 IntelliSense 支持文件（例如，iPCH）所在的位置。 当用户无权写入到解决方案目录或者解决方案目录位于一个慢速设备上时，可能会出现这种情况。 默认回退位置位于用户的临时目录中。  
@@ -130,7 +124,7 @@ ms.locfileid: "49285696"
  **最大缓存的转换单元数**  
  在任一时刻为 IntelliSense 请求保持活动状态的最大转换单元数。 指定的值必须介于 2 到 15 之间。 此数字直接关系到将要运行的最大 VCPkgSrv.exe 进程数（针对 Visual Studio 的给定实例）。 默认值为 2，但如果有可用内存，可以增加此值，这样可能会略微提升 IntelliSense 的性能。  
   
- 有关转换单元的详细信息，请参阅[转换阶段](http://msdn.microsoft.com/library/a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db)。  
+ 有关转换单元的详细信息，请参阅[转换阶段](https://msdn.microsoft.com/library/a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db)。  
   
  **禁用主动成员列表**  
  键入类型或变量的名称时不显示成员列表。 如“成员列表提交字符”选项中所定义，此列表仅在键入某个提交字符后显示。  
@@ -164,6 +158,3 @@ ms.locfileid: "49285696"
   
 ## <a name="see-also"></a>请参阅  
  [设置语言特定的编辑器选项](../../ide/reference/setting-language-specific-editor-options.md)
-
-
-

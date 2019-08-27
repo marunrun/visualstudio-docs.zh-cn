@@ -1,24 +1,19 @@
 ---
 title: 文档加载延迟 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: fb07b8e2-a4e3-4cb0-b04f-8eb11c491f35
 caps.latest.revision: 7
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 94d79af00fced81dc7da38f323598ade926d26f4
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 5565749a21614bb0b882beab8c83ed63bc839229
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51755477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68196859"
 ---
 # <a name="delayed-document-loading"></a>文档加载延迟
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -34,21 +29,21 @@ ms.locfileid: "51755477"
   
 - 窗口框架的 GetProperty 方法<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A>上的任何以下属性：  
   
-  -   <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
+  - <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
   
-  -   <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
+  - <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
   
-  -   <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
+  - <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
   
-  -   <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
+  - <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
   
-  -   <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
+  - <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
   
-  -   <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
+  - <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
   
   如果您的扩展插件使用托管的代码，不应调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.GetDocumentInfo%2A>除非确定文档未处于挂起的初始化状态，或者想要完全初始化后的文档... 这是因为此方法始终返回文档数据对象，如有必要创建它。 相反，应调用的方法之一 IVsRunningDocumentTable4 接口上。  
   
-  如果您的扩展插件使用 c + +，则可以传递`null`不希望的参数。  
+  如果您的扩展插件使用C++，可以将传递`null`不希望的参数。  
   
   可以通过要求提供相关的属性之前调用以下方法之一来避免不必要的文档加载： 寻求其他属性之前。  
   
@@ -69,5 +64,4 @@ ms.locfileid: "51755477"
 ## <a name="testing-extensions-to-see-if-they-force-initialization"></a>测试以查看是否它们强制进行初始化的扩展  
  没有任何可见提示，以指示是否已初始化文档，因此它可能很难找到您的扩展插件强制初始化。 可以设置注册表项，简化验证，因为它会导致未完全初始化文本的每个文档的标题`[Stub]`标题中。  
   
- 在中**HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\BackgroundSolutionLoad]**，请设置**StubTabTitleFormatString**到 **{0} [存根]**。
-
+ 在中**HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\BackgroundSolutionLoad]** ，请设置**StubTabTitleFormatString**到 **{0} [存根]** 。

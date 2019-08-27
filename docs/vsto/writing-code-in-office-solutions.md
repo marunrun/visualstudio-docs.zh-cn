@@ -28,17 +28,17 @@ helpviewer_keywords:
 - projects [Office development in Visual Studio], writing code
 - Office applications [Office development in Visual Studio], programming model
 - managed code extensions [Office development in Visual Studio], writing code
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 35c78f03cdb537ef5be2fd3b9004ca713485d3bc
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 2c5163de342415113321b6bd2337cd75ff528f6c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53942968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62810770"
 ---
 # <a name="write-code-in-office-solutions"></a>在 Office 解决方案中编写代码
   编写 Office 项目代码与编写 Visual Studio 中其他类型的代码在某些方面存在不同。 其中许多差异与 Office 对象模型公开给托管代码的方式相关。 其他差异与 Office 项目的设计相关。
@@ -51,7 +51,7 @@ ms.locfileid: "53942968"
 ### <a name="understand-primary-interop-assemblies"></a>了解主互操作程序集
  Microsoft Office 应用程序向自动化公开其大部分功能。 但是，不能直接使用托管代码（如 Visual Basic 或 C# ）来自动执行 Office 应用程序。 若要使用托管代码来自动执行 Office 应用程序，必须使用 Office 主互操作程序集 (PIA)。 主互操作程序集使托管代码可与 Office 应用程序的基于 COM 的对象模型进行交互。
 
- 每个 Microsoft Office 应用程序都有 PIA。 当你在 Visual Studio 中创建 Office 项目时，则对相应 PIA 的引用将自动添加到项目中。 为了自动执行来自项目的其他 Office 应用程序的功能，必须手动添加对相应 PIA 的引用。 有关更多信息，请参见[如何：面向 Office 应用程序可以通过主互操作程序集](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)。
+ 每个 Microsoft Office 应用程序都有 PIA。 当你在 Visual Studio 中创建 Office 项目时，则对相应 PIA 的引用将自动添加到项目中。 为了自动执行来自项目的其他 Office 应用程序的功能，必须手动添加对相应 PIA 的引用。 有关详细信息，请参阅[如何：面向 Office 应用程序可以通过主互操作程序集](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)。
 
 ### <a name="use-primary-interop-assemblies-at-design-time-and-runtime"></a>在设计时和运行时使用主互操作程序集
  必须在开发计算机上的全局程序集缓存中安装并注册 Office PIA 才能执行大多数开发任务。 有关详细信息，请参阅[配置计算机以开发 Office 解决方案](../vsto/configuring-a-computer-to-develop-office-solutions.md)。
@@ -63,9 +63,9 @@ ms.locfileid: "53942968"
 
  由于 Office PIA 中的类型对应于基于 COM 的对象模型中的类型，因此使用这些类型的方式通常不同于其他托管类型。 例如，调用在 Office 主互操作程序集中具有可选参数的方法的方式取决于你正在项目中使用的编程语言。 有关详细信息，请参阅下列主题：
 
--   [Office 解决方案中的可选参数](../vsto/optional-parameters-in-office-solutions.md)。
+- [Office 解决方案中的可选参数](../vsto/optional-parameters-in-office-solutions.md)。
 
--   [Office 解决方案中的后期绑定](../vsto/late-binding-in-office-solutions.md)。
+- [Office 解决方案中的后期绑定](../vsto/late-binding-in-office-solutions.md)。
 
 ## <a name="program-model-of-office-projects"></a>Office 项目的程序模型
  所有 Office 项目都包括一个或多个为你的代码提供入口点的生成类。 这些类还提供对主机应用程序的对象模型的访问以及对操作窗格和自定义任务窗格等功能的访问。
@@ -91,7 +91,7 @@ ms.locfileid: "53942968"
  若要更改 Visual C# Office 项目中的主机项的命名空间，请使用 **“主机项的命名空间”** 属性。 有关详细信息，请参阅[Office 项目中的属性](../vsto/properties-in-office-projects.md)。
 
 ## <a name="supported-programming-languages-in-office-projects"></a>Office 项目中支持的编程语言
- Visual Studio 中的 Office 项目模板仅支持 Visual Basic 和 Visual C# 编程语言。 因此，这些项目模板只能在 **中的** “新建项目” **对话框的** “Visual Basic” **和** “Visual C#” [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]节点下找到。 有关更多信息，请参见[如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
+ Visual Studio 中的 Office 项目模板仅支持 Visual Basic 和 Visual C# 编程语言。 因此，这些项目模板只能在 **中的** “新建项目” **对话框的** “Visual Basic” **和** “Visual C#” [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]节点下找到。 有关详细信息，请参阅[如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
 ## <a name="language-choice-and-office-programming"></a>选择的语言和 Office 编程
  Microsoft Office 和 Visual Basic for Applications (VBA) 被开发为协同工作以优化应用程序自定义项的工作流。 Visual Basic 已继承其中一些开发。 例如，Visual Basic 支持可选的参数，这意味着你在调用 Microsoft Office 主互操作程序集中的一些方法时编写的代码比使用 Visual C# 时少。
@@ -99,8 +99,11 @@ ms.locfileid: "53942968"
 ## <a name="program-with-visual-basic-vs-visual-c-in-office-solutions"></a>与 Visual Basic 程序。Visual C# 在 Office 解决方案中
  你可以通过使用 Visual Basic 或 Visual C# 创建 Office 解决方案。 由于 Microsoft Office 对象模型被设计为与 Microsoft Visual Basic for Applications (VBA) 一起使用，因此 Visual Basic 开发人员可以轻松使用由 Microsoft Office 应用程序公开的对象。 Visual C# 开发人员可以使用与 Visual Basic 开发人员相同的大多数功能，但在某些情况下，他们必须编写附加代码才能使用 Office 对象模型。 Office 开发中的基本编程功能与在 Visual Basic 和 C# 中编写的托管代码之间也有一些差异。
 
+<!-- markdownlint-disable MD003 MD020 -->
 ## <a name="key-differences-between-visual-basic-and-visual-c"></a>Visual Basic 和 Visual C# 之间的主要差异
- 下表显示了 Office 开发中 Visual Basic 与 Visual C# 之间的主要差异。
+<!-- markdownlint-enable MD003 MD020 -->
+
+下表显示了 Office 开发中 Visual Basic 与 Visual C# 之间的主要差异。
 
 |功能|描述|Visual Basic 支持|Visual C# 支持|
 |-------------|-----------------|--------------------------|------------------------|

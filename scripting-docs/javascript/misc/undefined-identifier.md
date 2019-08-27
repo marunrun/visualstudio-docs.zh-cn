@@ -1,14 +1,9 @@
 ---
 title: 未定义的标识符 |Microsoft Docs
-ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-client-threshold
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- javascript
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-windows
+ms.technology: vs-javascript
+ms.topic: reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5009
 dev_langs:
@@ -16,29 +11,28 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: 8c8000d9-dd14-487e-922d-98430024a0f6
-caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f54117dc6d169d11498f15d034fa584fc2e9f64b
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: ee928a945081d1ac1369a71d11f74f2c5db2b365
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54346132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63005906"
 ---
 # <a name="undefined-identifier"></a>未定义标识符
 你尝试使用标识符的[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]编译器无法识别。 每当你使用，则返回未定义的值：  
   
--   变量不存在，  
+- 变量不存在，  
   
--   已声明但从未遇到过的变量分配给它的值  
+- 已声明但从未遇到过的变量分配给它的值  
   
--   对象属性不存在。  
+- 对象属性不存在。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
--   与变量声明**var**语句 (如`var`x;)。  
+- 与变量声明**var**语句 (如`var`x;)。  
   
 ## <a name="see-also"></a>请参阅  
  [变量](../../javascript/variables-javascript.md)   

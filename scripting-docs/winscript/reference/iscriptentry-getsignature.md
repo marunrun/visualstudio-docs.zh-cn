@@ -1,8 +1,7 @@
 ---
-title: IScriptEntry::GetSignature |Microsoft Docs
+title: IScriptEntry::GetSignature | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 245b5806006ad94740e09e23f881e26e071a3bc1
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: 70cc1939ae4eb1e3c58d31b3d42b7f1b4603ce9e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54092724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787788"
 ---
 # <a name="iscriptentrygetsignature"></a>IScriptEntry::GetSignature
 返回类型信息`IScriptEntry`函数对象。  
@@ -47,7 +46,7 @@ HRESULT GetSignature(
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   

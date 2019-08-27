@@ -1,22 +1,21 @@
 ---
 title: 有关使用代码段的最佳做法
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - code snippets, best practices
 - code snippets, security
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d95b1b95d1859d29f82f7de45aa6ddb9cde7554f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 42a6eec4b6478f9a789c81311fdfdec4e664cb8a
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53908913"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67825950"
 ---
 # <a name="best-practices-for-using-code-snippets"></a>有关使用代码片段的最佳做法
 
@@ -30,9 +29,9 @@ ms.locfileid: "53908913"
 
 改写文件位置以使其适合应用程序时，应考虑以下事项：
 
-- 查找可访问的位置。 用户可能无权访问计算机的 Program Files 文件夹，因此可能无法存储包含应用程序文件的文件。
+- 查找可访问的位置。 用户可能无权访问计算机的 Program Files 文件夹，因此可能无法存储包含应用程序文件的文件  。
 
-- 查找安全位置。 将文件存储在根文件夹 (C:\\) 中并不安全。 建议将应用程序数据存储在“应用程序数据”文件夹中。 对于个人用户数据，应用程序可在“文档”文件夹中为每位用户创建一个文件。
+- 查找安全位置。 将文件存储在根文件夹 (C:\\) 中并不安全  。 建议将应用程序数据存储在“应用程序数据”文件夹中  。 对于个人用户数据，应用程序可在“文档”文件夹中为每位用户创建一个文件  。
 
 - 使用有效文件名。 可使用 <xref:System.Windows.Forms.OpenFileDialog> 和 <xref:System.Windows.Forms.SaveFileDialog> 控件降低使用无效文件名的可能性。 请注意，在用户选择文件和代码操作该文件的时间范围内，可能会删除该文件。 此外，用户可能没有写入该文件的权限。
 
@@ -62,11 +61,11 @@ ms.locfileid: "53908913"
 
 - 在 Visual Studio 的记事本或 XML 编辑器中打开所有已下载的代码片段文件，并在安装前仔细检查。 查找以下问题：
 
-    - 如果执行该代码片段，可能会对系统造成损坏。 在运行前请仔细阅读源代码。
+  - 如果执行该代码片段，可能会对系统造成损坏。 在运行前请仔细阅读源代码。
 
-    - 代码片段文件的 Help URL 块可以包含执行恶意脚本文件或显示攻击性网站的 URL。
+  - 代码片段文件的 Help URL 块可以包含执行恶意脚本文件或显示攻击性网站的 URL。
 
-    - 代码片段可能包含以无提示方式添加到项目的引用，并且这些引用可从系统的任何位置加载。 这些引用可能已从下载代码片段的位置下载到了计算机。 随后，代码片段可能会调用执行恶意代码的引用中的方法。 若要避免此类攻击，请检查代码片段文件的 Imports 和 References 块。
+  - 代码片段可能包含以无提示方式添加到项目的引用，并且这些引用可从系统的任何位置加载。 这些引用可能已从下载代码片段的位置下载到了计算机。 随后，代码片段可能会调用执行恶意代码的引用中的方法。 若要避免此类攻击，请检查代码片段文件的 Imports 和 References 块。
 
 ## <a name="see-also"></a>请参阅
 

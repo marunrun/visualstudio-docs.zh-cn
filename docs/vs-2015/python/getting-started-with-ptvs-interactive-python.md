@@ -1,25 +1,20 @@
 ---
-title: PTVS 入门： 交互式 Python |Microsoft Docs
-ms.custom: ''
+title: PTVS 入门：交互式 Python | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-python
+ms.topic: conceptual
 ms.assetid: fa594314-bdd0-4da5-874a-57b03414b675
 caps.latest.revision: 5
 author: kraigb
 ms.author: kraigb
-manager: ghogen
-ms.openlocfilehash: 7d9438d7d80480349dd53384c2538742a22b4d36
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 4fba8bf658a50a7a7e28abace1eb622ab14f5f26
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49183906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62550982"
 ---
 # <a name="getting-started-with-ptvs-interactive-python"></a>PTVS 入门：交互式 Python
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,4 +36,3 @@ ms.locfileid: "49183906"
 ## <a name="see-also"></a>请参阅  
  [Wiki 文档](https://github.com/Microsoft/PTVS/wiki/Interactive-REPL)   
  [PTVS 入门和深入了解视频](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)
-

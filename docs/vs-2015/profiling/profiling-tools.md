@@ -1,27 +1,22 @@
 ---
 title: 分析工具 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.diagnosticshub.overview
 ms.assetid: 0fb6cd5d-e16a-4526-84a5-19e63c625bc5
 caps.latest.revision: 26
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 380e98a8cd52fe77486dae245eee910a65a41057
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: bcb230532da4a0b84ea0102d86534c28afe35558
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51782097"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65686271"
 ---
 # <a name="profiling-tools"></a>分析工具
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,7 +36,7 @@ ms.locfileid: "51782097"
 ## <a name="memory-usage"></a>内存使用率  
  ![DiagMemorySmall](../profiling/media/diagmemorysmall.png "DiagMemorySmall")  
   
- 使用“内存使用率”  工具进行调试时可查找内存泄漏和低效内存。 该工具可以拍摄托管和本机内存堆的快照。 此工具可用于桌面应用、Windows 通用应用和 ASP.NET 应用。 “内存使用率”  工具可以在调试时从“诊断工具”  窗口运行（“调试”/“Windows”/“显示诊断工具”），也可以在调试器外部运行（“调试”/“性能探查器...”）。有关详细信息，请参阅[内存使用情况](../profiling/memory-usage.md)和[不调试情况下的内存使用情况](http://msdn.microsoft.com/library/8883bc5f-df86-4f84-aa2b-a21150f499b0)。  
+ 使用“内存使用率”  工具进行调试时可查找内存泄漏和低效内存。 该工具可以拍摄托管和本机内存堆的快照。 此工具可用于桌面应用、Windows 通用应用和 ASP.NET 应用。 “内存使用率”  工具可以在调试时从“诊断工具”  窗口运行（“调试”/“Windows”/“显示诊断工具”），也可以在调试器外部运行（“调试”/“性能探查器...”）。有关详细信息，请参阅[内存使用情况](../profiling/memory-usage.md)和[不调试情况下的内存使用情况](https://msdn.microsoft.com/library/8883bc5f-df86-4f84-aa2b-a21150f499b0)。  
   
 ## <a name="cpu-usage"></a>CPU 使用率  
  ![DiagCPUSmall](../profiling/media/diagcpusmall.png "DiagCPUSmall")  
@@ -84,7 +79,7 @@ ms.locfileid: "51782097"
  [IntelliTrace](../debugger/intellitrace.md) 可以记录特定事件、检查调试器事件和函数调用期间“局部变量”窗口中的数据以及调试难以再现的问题。  IntelliTrace 主要是一个调试工具，但它还可以提供可用于性能调查的信息。 此工具仅可在 Visual Studio Enterprise 中与桌面应用、Windows 通用应用和 C# ASP.NET 应用结合使用。 调试时可以在“诊断工具”  窗口找到 IntelliTrace（“调试”/“Windows”/“显示诊断工具”）。  
   
 ## <a name="profiling-in-production"></a>在生产中分析  
- 在生产中进行分析的推荐方法是从 [使用 vsperf.exe 的命令行](../profiling/using-the-profiling-tools-from-the-command-line.md) 分析，以收集 CPU 配置文件。 有关 Azure App Service 中的远程分析支持，请参阅 [服务器资源管理器或 Kudu 门户](https://azure.microsoft.com/en-us/blog/remote-profiling-support-in-azure-app-service/)。  
+ 在生产中进行分析的推荐方法是从 [使用 vsperf.exe 的命令行](../profiling/using-the-profiling-tools-from-the-command-line.md) 分析，以收集 CPU 配置文件。 有关 Azure App Service 中的远程分析支持，请参阅 [服务器资源管理器或 Kudu 门户](https://azure.microsoft.com/blog/remote-profiling-support-in-azure-app-service/)。  
   
 ## <a name="which-tool-should-i-use"></a>应使用哪一种工具？  
  下表列出了 Visual Studio 提供的不同工具以及适用的不同项目类型：  
@@ -103,6 +98,3 @@ ms.locfileid: "51782097"
   
 ## <a name="see-also"></a>请参阅  
  [Visual Studio IDE](../ide/visual-studio-ide.md)
-
-
-

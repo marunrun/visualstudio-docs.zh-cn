@@ -1,14 +1,9 @@
 ---
 title: 缺少布尔值 |Microsoft Docs
-ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-client-threshold
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- javascript
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-windows
+ms.technology: vs-javascript
+ms.topic: reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5010
 dev_langs:
@@ -16,16 +11,15 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: 35d71b7f-53fd-44c4-a7c7-b1550c65cfd4
-caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cb8ec8f7244b98cfa628794b485859dbec611c19
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: 261cf0ad93208c0eac09e42dcd68853352318e88
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54347926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817895"
 ---
 # <a name="boolean-expected"></a>缺少布尔值
 你尝试调用**Boolean.prototype.toString**或**Boolean.prototype.valueOf**方法以外的类型的对象上`Boolean`。 调用此类型的对象的类型必须是`Boolean`。 例如：

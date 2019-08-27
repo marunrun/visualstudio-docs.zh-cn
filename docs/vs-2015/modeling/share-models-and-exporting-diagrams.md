@@ -1,12 +1,9 @@
 ---
 title: 共享模型和导出关系图 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - UML model, sharing
 - UML diagrams, saving
@@ -14,13 +11,13 @@ ms.assetid: 22e47b4d-c185-478c-9535-56d292b45984
 caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: f59ac9d96a9f001b54c86bbf51819ecf2efb40c9
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 4d2fd2af8a68ee72ec26b52a4c26a829d94376ef
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51798451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68199845"
 ---
 # <a name="share-models-and-exporting-diagrams"></a>共享模型和导出关系图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -54,7 +51,7 @@ ms.locfileid: "51798451"
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|描述|  
 |-----------|-----------------|  
 |[管理版本控制下的模型和关系图](../modeling/manage-models-and-diagrams-under-version-control.md)|Visual Studio 用户可以处理共享模型。|  
 |[安排建模解决方案](../modeling/structure-your-modeling-solution.md)|共享大型或中型项目的模型。|  
@@ -66,6 +63,3 @@ ms.locfileid: "51798451"
 ## <a name="see-also"></a>请参阅  
  [为您的应用程序创建模型](../modeling/create-models-for-your-app.md)   
  [在你的开发过程中使用模型](../modeling/use-models-in-your-development-process.md)
-
-
-

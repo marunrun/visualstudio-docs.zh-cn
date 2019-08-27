@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 326b6c3c-5378-452b-8ca3-ba5a06ab3d41
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 70447148922382cef3e5c3fb9b7ba24613033c35
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 66789cdf50c06648b2d973d9c62a14c113aeaa0e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53834290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62785917"
 ---
 # <a name="load-test-results-summary-overview"></a>负载测试结果摘要概述
 
-运行负载测试后，可以查看负载测试摘要以快速了解结果。 负载测试摘要以简洁、易读的格式提供关键结果。 你还可以打印负载测试摘要， 以便于在向利益干系人传达结果时使用。 当你从以前运行的负载测试打开负载测试结果时，负载测试摘要也是默认视图。 有关更多信息，请参见[如何：访问负载测试结果进行分析](../test/how-to-access-load-test-results-for-analysis.md)。
+运行负载测试后，可以查看负载测试摘要以快速了解结果。 负载测试摘要以简洁、易读的格式提供关键结果。 您还可以打印负载测试摘要， 以便于在向利益干系人传达结果时使用。 当您从以前运行的负载测试打开负载测试结果时，负载测试摘要也是默认视图。 有关详细信息，请参阅[如何：访问负载测试结果进行分析](../test/how-to-access-load-test-results-for-analysis.md)。
 
 ![“摘要”视图](../test/media/ltest_summaryview.png)
 
@@ -32,7 +31,7 @@ ms.locfileid: "53834290"
 
 ## <a name="the-load-test-summary"></a>负载测试摘要
 
-负载测试摘要分为几个小节。 开头几节显示在摘要的顶部，并且始终可见。 当你查看负载测试摘要时，首先会看到下列各项：
+负载测试摘要分为几个小节。 开头几节显示在摘要的顶部，并且始终可见。 当您查看负载测试摘要时，首先会看到下列各项：
 
 - 有关测试运行的信息
 
@@ -63,7 +62,7 @@ ms.locfileid: "53834290"
 
 ## <a name="test-run-information"></a>测试运行信息
 
-“有关测试运行的信息”一节包含有关运行的一般信息，包括测试的名称、开始时间和结束时间以及运行测试的控制器。 此节还包含有关运行的可选说明，这些说明是你在运行负载测试时添加的。
+“有关测试运行的信息”一节包含有关运行的一般信息，包括测试的名称、开始时间和结束时间以及运行测试的控制器。 此节还包含有关运行的可选说明，这些说明是您在运行负载测试时添加的。
 
 ## <a name="overall-results"></a>整体结果
 
@@ -71,7 +70,7 @@ ms.locfileid: "53834290"
 
 ## <a name="key-statistic-top-5-slowest-pages"></a>关键统计信息：最慢的前 5 个页面
 
-“最慢的页面”一节包含负载测试中最慢的 5 个页面。 此节显示每个页面的 URL 和平均页面加载时间。 这些页面按降序列出。 可选择某个页面的 URL 以打开“页”表和查看该页面的更多详细信息。 有关更多信息，请参见[如何：查看网页响应](../test/how-to-view-web-page-response-time-in-a-load-test.md)。
+“最慢的页面”一节包含负载测试中最慢的 5 个页面。 此节显示每个页面的 URL 和平均页面加载时间。 这些页面按降序列出。 可选择某个页面的 URL 以打开“页”表和查看该页面的更多详细信息。 有关详细信息，请参阅[如何：查看网页响应](../test/how-to-view-web-page-response-time-in-a-load-test.md)。
 
 “95% 页面时间(秒)”的百分比值报告，95% 的页面在此时间内完成（以秒为单位）。
 
@@ -94,7 +93,7 @@ ms.locfileid: "53834290"
 
 ## <a name="page-results"></a>页结果
 
-“页结果”一节包含负载测试中所有网页的列表。 此节显示 URL、方案、测试的名称、平均页面时间以及计数。 可选择某个页面的 URL 以打开“页”表和查看该页面的更多详细信息。 有关更多信息，请参见[如何：查看网页响应](../test/how-to-view-web-page-response-time-in-a-load-test.md)。
+“页结果”一节包含负载测试中所有网页的列表。 此节显示 URL、方案、测试的名称、平均页面时间以及计数。 可选择某个页面的 URL 以打开“页”表和查看该页面的更多详细信息。 有关详细信息，请参阅[如何：查看网页响应](../test/how-to-view-web-page-response-time-in-a-load-test.md)。
 
 > [!NOTE]
 > 通过选择此节标题左侧的箭头，可以折叠和展开此节。
@@ -108,9 +107,9 @@ ms.locfileid: "53834290"
 
 百分比值报告以下事务信息：
 
--   在 \< 秒之内完成了事务总数的 90%。
+- 在 \< 秒之内完成了事务总数的 90%。
 
--   在 \< 秒之内完成了事务总数的 95%。
+- 在 \< 秒之内完成了事务总数的 95%。
 
 ## <a name="system-under-test-resources"></a>受测系统的资源
 

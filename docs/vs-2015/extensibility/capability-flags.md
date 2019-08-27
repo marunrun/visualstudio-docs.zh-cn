@@ -1,33 +1,28 @@
 ---
 title: 功能标志 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, capability flags
 ms.assetid: a3f6071c-eac8-4bcd-8ffd-8d0a2d24a252
 caps.latest.revision: 25
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 6fd526abb5580b6eb3899df9ee76baacd91e56d7
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 831a52818cfc5c7b75c01a9551b70cd26b95dbcf
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51785282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68184520"
 ---
 # <a name="capability-flags"></a>功能标志
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 SCC_CAP_*xxx*标志是用来指示源代码管理插件的功能的位标志。 SCC_EXCAP_*xxx*标志是增量标志，指示扩展的功能并解析为整数值。  
   
-|功能代码|“值”|描述|  
+|功能代码|值|描述|  
 |---------------------|-----------|-----------------|  
 |`SCC_CAP_REMOVE`|0x00000001L|支持[SccRemove](../extensibility/sccremove-function.md)和命令。|  
 |`SCC_CAP_RENAME`|0x00000002L|支持[SccRename](../extensibility/sccrename-function.md)和命令。|  
@@ -57,7 +52,7 @@ SCC_CAP_*xxx*标志是用来指示源代码管理插件的功能的位标志。 
   
 ## <a name="capability-bits-added-in-version-12"></a>在版本 1.2 中添加功能位  
   
-|功能代码|“值”|描述|  
+|功能代码|值|描述|  
 |---------------------|-----------|-----------------|  
 |`SCC_CAP_CREATESUBPROJECT`|0x00010000L|支持[SccCreateSubProject](../extensibility/scccreatesubproject-function.md)。|  
 |`SCC_CAP_GETPARENTPROJECT`|0x00020000L|支持[SccGetParentProjectPath](../extensibility/sccgetparentprojectpath-function.md)。|  
@@ -70,7 +65,7 @@ SCC_CAP_*xxx*标志是用来指示源代码管理插件的功能的位标志。 
 ## <a name="capability-bits-added-in-version-13"></a>在版本 1.3 中添加功能位  
  这些标志传递到一次一个地[SccGetExtendedCapabilities](../extensibility/sccgetextendedcapabilities-function.md)函数来确定是否支持此功能。  
   
-|扩展的功能的代码|“值”|描述|  
+|扩展的功能的代码|值|描述|  
 |------------------------------|-----------|-----------------|  
 |`SCC_EXCAP_CHECKOUT_LOCALVER`|1|支持`SCC_CHECKOUT_LOCALVER`签出的选项。|  
 |`SCC_EXCAP_BACKGROUND_GET`|2|支持[SccBackgroundGet](../extensibility/sccbackgroundget-function.md)。|  
@@ -86,4 +81,3 @@ SCC_CAP_*xxx*标志是用来指示源代码管理插件的功能的位标志。 
   
 ## <a name="see-also"></a>请参阅  
  [源代码管理插件](../extensibility/source-control-plug-ins.md)
-

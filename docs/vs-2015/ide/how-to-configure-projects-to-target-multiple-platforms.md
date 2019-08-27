@@ -1,14 +1,9 @@
 ---
-title: 如何：将项目配置为面向多个平台 | Microsoft Docs
-ms.custom: ''
+title: 如何：配置项目以面向多个平台 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio], targeting platforms
 - platforms, changing target platforms
@@ -16,13 +11,13 @@ ms.assetid: affa2392-7aed-45ac-9ffa-1d8e0496d590
 caps.latest.revision: 11
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 9a3010e6304124ee306c5ecad3593df98d555523
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 7457b5be3a6c1cbf2c2b6a1c6f66f9fb89e8d225
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49921829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62584305"
 ---
 # <a name="how-to-configure-projects-to-target-multiple-platforms"></a>如何：将项目配置为面向多个平台
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,31 +29,31 @@ ms.locfileid: "49921829"
   
 #### <a name="to-set-your-configuration-to-target-a-different-platform"></a>将配置设置为面向不同平台  
   
-1.  在“生成”菜单上，单击“配置管理器”。  
+1. 在“生成”菜单上，单击“配置管理器”。  
   
-2.  在“活动解决方案平台”框中，选择希望解决方案面向的平台，或者选择“\<新建>”创建一个新的平台。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 会编译应用程序，以面向在“配置管理器”对话框中被设置为活动平台的平台。  
+2. 在“活动解决方案平台”框中，选择希望解决方案面向的平台，或者选择“\<新建>”创建一个新的平台。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 会编译应用程序，以面向在“配置管理器”对话框中被设置为活动平台的平台。  
   
 ## <a name="removing-a-platform"></a>删除平台  
  如果发现不再需要某个平台，可以使用“配置管理器”对话框将其删除。 此操作会删除你为配置和目标的这个组合所配置的所有解决方案和项目设置。  
   
 #### <a name="to-remove-a-platform"></a>删除平台  
   
-1.  在“生成”菜单上，单击“配置管理器”。  
+1. 在“生成”菜单上，单击“配置管理器”。  
   
-2.  在“活动解决方案平台”框中，选择“\<编辑>”。 “编辑解决方案平台”对话框随即打开。  
+2. 在“活动解决方案平台”框中，选择“\<编辑>”。 “编辑解决方案平台”对话框随即打开。  
   
-3.  单击想要删除的平台，然后单击“删除”。  
+3. 单击想要删除的平台，然后单击“删除”。  
   
 ## <a name="targeting-multiple-platforms-with-one-solution"></a>通过一个解决方案面向多个平台  
  由于可以基于配置和平台设置的组合更改设置，因此可以设置一个面向多个平台的解决方案。  
   
 #### <a name="to-target-multiple-platforms"></a>面向多个平台  
   
-1.  使用“配置资源管理器”为解决方案添加至少两个目标平台。  
+1. 使用“配置资源管理器”为解决方案添加至少两个目标平台。  
   
-2.  从“活动解决方案平台”列表中选择想要面向的平台。  
+2. 从“活动解决方案平台”列表中选择想要面向的平台。  
   
-3.  生成解决方案。  
+3. 生成解决方案。  
   
 #### <a name="to-build-multiple-solution-configurations-at-once"></a>一次生成多个解决方案配置  
   
@@ -72,6 +67,3 @@ ms.locfileid: "49921829"
  [如何：创建和编辑配置](../ide/how-to-create-and-edit-configurations.md)   
  [了解生成配置](../ide/understanding-build-configurations.md)   
  [在 Visual Studio 中生成和清理项目和解决方案](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
-
-
-

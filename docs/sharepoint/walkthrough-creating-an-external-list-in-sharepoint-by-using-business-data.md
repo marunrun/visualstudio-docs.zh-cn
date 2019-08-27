@@ -1,5 +1,5 @@
 ---
-title: 演练：使用业务数据在 SharePoint 中创建外部列表 |Microsoft Docs
+title: 在使用业务数据的 SharePoint 中创建外部列表
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - BDC [SharePoint development in Visual Studio], entity backed list
 - Business Data Connectivity service [SharePoint development in Visual Studio], entity backed list
 - Business Data Connectivity service [SharePoint development in Visual Studio], external list
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 96c52d1d30444aa557465ce2022a3ef1db4c3de0
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: cf9c7d13e6aaac85d3bac4254247a3c07b39b5c3
+ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53918779"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66401068"
 ---
 # <a name="walkthrough-create-an-external-list-in-sharepoint-by-using-business-data"></a>演练：使用业务数据在 SharePoint 中创建外部列表
 
@@ -66,17 +66,17 @@ ms.locfileid: "53918779"
 
 6. 在中**解决方案资源管理器**，选择 SharePoint 项目节点。
 
-7. 在菜单栏上，依次选择“项目” > “添加新项”。
+7. 在菜单栏上，依次选择“项目”   > “添加新项”  。
 
-     此时将打开“添加新项”对话框。
+     此时将打开“添加新项”  对话框。
 
-8. 在中**模板**窗格中，选择**业务数据连接模型 （仅场解决方案）**，将项目命名**命名为 AdventureWorksContacts**，然后选择**添加**按钮。
+8. 在中**模板**窗格中，选择**业务数据连接模型 （仅场解决方案）** ，将项目命名**命名为 AdventureWorksContacts**，然后选择**添加**按钮。
 
 ## <a name="add-data-access-classes-to-the-project"></a>向项目添加数据访问类
 
 1. 在菜单栏上依次选择**工具** > **连接到数据库**。
 
-     **添加连接**对话框随即打开。
+     随即会打开“添加连接”对话框  。
 
 2. 将连接添加到 SQL Server AdventureWorks 示例数据库。
 
@@ -84,7 +84,7 @@ ms.locfileid: "53918779"
 
 3. 在 **“解决方案资源管理器”** 中，选择项目节点。
 
-4. 在菜单栏上，依次选择“项目” > “添加新项”。
+4. 在菜单栏上，依次选择“项目”   > “添加新项”  。
 
 5. 在中**已安装的模板**窗格中，选择**数据**节点。
 
@@ -120,7 +120,7 @@ ms.locfileid: "53918779"
 
 将实体添加到模型。 可以从 Visual Studio 中添加实体**工具箱**到 BDC 设计器上。
 
-1. 在菜单栏上，依次选择“视图” > “工具箱”。
+1. 在菜单栏上，依次选择“视图” > “工具箱”   。
 
 2. 上**BusinessDataConnectivity**选项卡**工具箱**，将添加**实体**到 BDC 设计器上。
 
@@ -182,12 +182,12 @@ ms.locfileid: "53918779"
 
 10. 重复步骤 6，以下字段的每个创建的类型说明符。
 
-    |name|类型名称|
+    |名称|类型名称|
     |----------|---------------|
     |FirstName|System.String|
     |LastName|System.String|
     |电话|System.String|
-    |电子邮件地址|System.String|
+    |EmailAddress|System.String|
     |EmailPromotion|System.Int32|
     |NameStyle|System.Boolean|
     |PasswordHash|System.String|
@@ -244,7 +244,7 @@ ms.locfileid: "53918779"
 > [!NOTE]
 > 您可能需要修改您在 SharePoint 中的安全设置，然后您可以调试你的解决方案。 有关详细信息，请参阅[设计的业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
 
-1. 选择 F5。
+1. 选择 F5  。
 
      SharePoint 网站将打开。
 
@@ -276,7 +276,7 @@ ms.locfileid: "53918779"
 
 ## <a name="see-also"></a>请参阅
 
-[设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)  
-[创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)  
-[BDC 模型设计工具概述](../sharepoint/bdc-model-design-tools-overview.md)  
-[将业务数据集成到 SharePoint](../sharepoint/integrating-business-data-into-sharepoint.md)
+[设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)
+[创建的业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)
+[BDC 模型设计工具概述](../sharepoint/bdc-model-design-tools-overview.md)
+ [将业务数据集成到 SharePoint](../sharepoint/integrating-business-data-into-sharepoint.md)

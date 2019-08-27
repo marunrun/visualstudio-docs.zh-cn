@@ -1,23 +1,23 @@
 ---
 title: 托管代码的“安全规则”规则集
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 ms.assetid: 564aeac6-03fa-41b0-b655-88179f0ab01b
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b6ab8f106b4d87b49546a2fa62f31c893210281b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 1131f9cf0e77fd4fe68e4bc5c033491aa6dd34e1
+ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53905028"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69585190"
 ---
 # <a name="security-rules-rule-set-for-managed-code"></a>托管代码的“安全规则”规则集
-应包括 Microsoft 安全规则规则集以最大程度地报告潜在安全问题数。
+
+使用 Microsoft 安全规则规则集进行旧代码分析以最大程度地提高报告的潜在安全问题的数量。
 
 |规则|描述|
 |----------|-----------------|
@@ -64,3 +64,25 @@ ms.locfileid: "53905028"
 |[CA2147](../code-quality/ca2147-transparent-methods-may-not-use-security-asserts.md)|透明方法不得使用安全断言|
 |[CA2149](../code-quality/ca2149-transparent-methods-must-not-call-into-native-code.md)|透明方法不得调入本机代码|
 |[CA2210](../code-quality/ca2210-assemblies-should-have-valid-strong-names.md)|程序集应具有有效的强名称|
+|[CA2300](ca2300-do-not-use-insecure-deserializer-binaryformatter.md)|请勿使用不安全的反序列化程序 BinaryFormatte|
+|[CA2301](ca2301-do-not-call-binaryformatter-deserialize-without-first-setting-binaryformatter-binder.md)|在未先设置 BinaryFormatter.Binder 的情况下，请不要调用 BinaryFormatter.Deserialize|
+|[CA2302](ca2302-ensure-binaryformatter-binder-is-set-before-calling-binaryformatter-deserialize.md)|在调用 BinaryFormatter.Deserialize 之前，确保设置 BinaryFormatter.Binder|
+|[CA2305](ca2305-do-not-use-insecure-deserializer-losformatter.md)|请勿使用不安全的反序列化程序 LosFormatter|
+|[CA2310](ca2310-do-not-use-insecure-deserializer-netdatacontractserializer.md)|请勿使用不安全的反序列化程序 NetDataContractSerializer|
+|[CA2311](ca2311-do-not-deserialize-without-first-setting-netdatacontractserializer-binder.md)|在未先设置 NetDataContractSerializer.Binder 的情况下，请不要反序列化|
+|[CA2312](ca2312-ensure-netdatacontractserializer-binder-is-set-before-deserializing.md)|确保在反序列化之前设置 NetDataContractSerializer.Binder|
+|[CA2315](ca2315-do-not-use-insecure-deserializer-objectstateformatter.md)|请勿使用不安全的反序列化程序 ObjectStateFormatter|
+|[CA2321](ca2321.md)|请勿使用 SimpleTypeResolver 对 JavaScriptSerializer 进行反序列化|
+|[CA2322](ca2322.md)|确保在反序列化之前没有使用 SimpleTypeResolver 初始化 JavaScriptSerializer|
+|[CA3001](../code-quality/ca3001-review-code-for-sql-injection-vulnerabilities.md)|查看 SQL 注入漏洞的代码|
+|[CA3002](../code-quality/ca3002-review-code-for-xss-vulnerabilities.md)|查看 XSS 漏洞的代码|
+|[CA3003](../code-quality/ca3003-review-code-for-file-path-injection-vulnerabilities.md)|查看文件路径注入漏洞的代码|
+|[CA3004](../code-quality/ca3004-review-code-for-information-disclosure-vulnerabilities.md)|查看信息泄露漏洞的代码|
+|[CA3005](../code-quality/ca3005-review-code-for-ldap-injection-vulnerabilities.md)|查看 LDAP 注入漏洞的代码|
+|[CA3006](../code-quality/ca3006-review-code-for-process-command-injection-vulnerabilities.md)|查看进程命令注入漏洞的代码|
+|[CA3007](../code-quality/ca3007-review-code-for-open-redirect-vulnerabilities.md)|查看公开重定向漏洞的代码|
+|[CA3008](../code-quality/ca3008-review-code-for-xpath-injection-vulnerabilities.md)|查看 XPath 注入漏洞的代码|
+|[CA3009](../code-quality/ca3009-review-code-for-xml-injection-vulnerabilities.md)|查看 XML 注入漏洞的代码|
+|[CA3010](../code-quality/ca3010-review-code-for-xaml-injection-vulnerabilities.md)|查看 XAML 注入漏洞的代码|
+|[CA3011](../code-quality/ca3011-review-code-for-dll-injection-vulnerabilities.md)|查看 DLL 注入漏洞的代码|
+|[CA3012](../code-quality/ca3012-review-code-for-regex-injection-vulnerabilities.md)|查看正则表达式注入漏洞的代码|

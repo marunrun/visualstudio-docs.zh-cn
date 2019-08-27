@@ -4,14 +4,14 @@ ms.date: 01/26/2018
 ms.topic: conceptual
 author: PooyaZv
 ms.author: pozandev
-manager: douge
+manager: jillfra
 ms.workload: multiple
-ms.openlocfilehash: 1bd09827899000e4f3d1f65fae27da969bcbc107
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 00266fd8fbc881707652247e08b093ca4b15a88d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53887706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911984"
 ---
 # <a name="how-to-diagnose-ui-delays-caused-by-extensions"></a>如何：诊断由扩展引起的 UI 延迟
 
@@ -21,7 +21,7 @@ ms.locfileid: "53887706"
 
 此通知告诉用户 UI 延迟 （即，在 UI 中无响应） 可能已从扩展的代码的结果。 它还提供选项来禁用扩展或以后的通知，该扩展的用户。
 
-本文档介绍如何诊断在扩展代码中什么原因导致 UI 延迟通知。 
+本文档介绍如何诊断在扩展代码中什么原因导致 UI 延迟通知。
 
 > [!NOTE]
 > 不使用 Visual Studio 实验实例来诊断 UI 延迟。 使用实验实例中，这意味着可能不会显示 UI 延迟通知时，调用堆栈分析所需的 UI 延迟通知中的某些部分将关闭。
@@ -43,7 +43,7 @@ ms.locfileid: "53887706"
 
 ## <a name="restart-vs-with-activity-logging-on"></a>使用活动日志记录重启 VS
 
-Visual Studio 可以生成"活动日志"时调试问题提供有帮助的信息。 若要打开 Visual Studio 中的日志记录的活动，启动 Visual Studio 中使用`/log`命令行选项。 Visual Studio 启动后，活动日志存储在以下位置：
+Visual Studio 可以生成"活动日志"时调试问题提供有帮助的信息。 若要打开 Visual Studio 中的日志记录的活动，请打开 Visual Studio 中使用`/log`命令行选项。 Visual Studio 启动后，活动日志存储在以下位置：
 
 ```DOS
 %APPDATA%\Microsoft\VisualStudio\<vs_instance_id>\ActivityLog.xml
@@ -102,7 +102,7 @@ Perfview.exe collect C:\trace.etl /BufferSizeMB=1024 -CircularMB:2048 -Merge:tru
 然后，在左窗格中选择的跟踪文件并打开它，请选择**打开**右键菜单或上下文菜单。
 
 > [!NOTE]
-> 默认情况下 PerfView 输出 Zip 存档。 当打开*trace.zip*，它会自动解压缩存档，并打开跟踪。 您可以通过取消选中跳过此**Zip**跟踪回收期间的框。 但是，如果您计划传输，并在不同计算机之间使用跟踪，我们强烈建议不要取消选中**Zip**框。 如果不使用此选项，Ngen 程序集的所需的 Pdb 将不带跟踪并因此从 Ngen 程序集的符号将解析目标计算机上。 (请参阅[这篇博客文章](https://blogs.msdn.microsoft.com/devops/2012/12/10/creating-ngen-pdbs-for-profiling-reports/)的 Pdb Ngen 的程序集的详细信息。) 
+> 默认情况下 PerfView 输出 Zip 存档。 当打开*trace.zip*，它会自动解压缩存档，并打开跟踪。 您可以通过取消选中跳过此**Zip**跟踪回收期间的框。 但是，如果您计划传输，并在不同计算机之间使用跟踪，我们强烈建议不要取消选中**Zip**框。 如果不使用此选项，Ngen 程序集的所需的 Pdb 将不带跟踪并因此从 Ngen 程序集的符号将解析目标计算机上。 (请参阅[这篇博客文章](https://devblogs.microsoft.com/devops/creating-ngen-pdbs-for-profiling-reports/)的 Pdb Ngen 的程序集的详细信息。)
 
 可能需要几分钟时间 PerfView 来处理和打开的跟踪。 打开跟踪后，在其下出现的各种"视图"列表。
 

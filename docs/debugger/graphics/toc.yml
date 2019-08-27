@@ -9,8 +9,9 @@
 - name: 图形日志文档
   href: graphics-log-document.md
 - name: 图形帧分析
-  href: graphics-frame-analysis.md
   items:
+    - name: 图形帧分析
+      href: graphics-frame-analysis.md
     - name: 1x1 视口大小变量
       href: 1x1-viewport-size-variant.md
     - name: 0x/2x/4x MSAA 变量
@@ -46,8 +47,9 @@
 - name: 命令行捕获工具
   href: command-line-capture-tool.md
 - name: 图形诊断示例
-  href: graphics-diagnostics-examples.md
   items:
+    - name: 图形诊断示例
+      href: graphics-diagnostics-examples.md
     - name: 演练：捕获图形信息
       href: walkthrough-capturing-graphics-information.md
     - name: 演练：以编程方式捕获图形信息
@@ -56,20 +58,22 @@
       href: walkthrough-missing-objects-due-to-device-state.md
     - name: 演练：因顶点着色而缺少对象
       href: walkthrough-missing-objects-due-to-vertex-shading.md
-    - name: 演练：因管线误配置而缺少对象
+    - name: 演练：因管道误配置而缺少对象
       href: walkthrough-missing-objects-due-to-misconfigured-pipeline.md
     - name: 演练：调试因着色引起的呈现错误
       href: walkthrough-debugging-rendering-errors-due-to-shading.md
     - name: 演练：使用图形诊断来调试计算着色器
       href: walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader.md
-    - name: 如何：更改图形诊断播放机
+    - name: 如何：更改图形诊断播放计算机
       href: how-to-change-the-graphics-diagnostics-playback-machine.md
 - name: 引用（编程捕获）
-  href: reference-programmatic-capture.md
   items:
+    - name: 引用（编程捕获）
+      href: reference-programmatic-capture.md
     - name: VsgDbg 类
-      href: vsgdbg-class.md
       items:
+        - name: VsgDbg 类
+          href: vsgdbg-class.md
         - name: 'VsgDbg::VsgDbg（构造函数）'
           href: vsgdbg-vsgdbg-constructor.md
         - name: 'VsgDbg::~VsgDbg（析构函数）'

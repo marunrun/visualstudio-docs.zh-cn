@@ -1,7 +1,6 @@
 ---
 title: Bookmark 控件
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - VST.Toolbox.Bookmark
@@ -15,29 +14,29 @@ helpviewer_keywords:
 - Bookmark control
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d9a2de59d0cdb9cd1114375d4327ab3e3a6b5af7
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 00271d77cb5b172fbbbf02682eb7e23c6246ca23
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53960412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62939328"
 ---
 # <a name="bookmark-control"></a>Bookmark 控件
   <xref:Microsoft.Office.Tools.Word.Bookmark> 控件是一个具有唯一名称且用于公开事件的书签，可以绑定到数据。 可以将书签用作占位符以在 Microsoft Office Word 文档中标记项或位置。 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件是 <xref:Microsoft.Office.Interop.Word.Bookmark> 对象和 <xref:Microsoft.Office.Interop.Word.Range> 对象的组合。
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
- 在文档级项目中，可以添加<xref:Microsoft.Office.Tools.Word.Bookmark>到你的文档在设计时或在运行时的控件。 在 VSTO 外接程序项目中，可以添加<xref:Microsoft.Office.Tools.Word.Bookmark>向任何打开的文档在运行时的控件。 有关更多信息，请参见[如何：向 Word 文档添加书签控件](../vsto/how-to-add-bookmark-controls-to-word-documents.md)。
+ 在文档级项目中，可以添加<xref:Microsoft.Office.Tools.Word.Bookmark>到你的文档在设计时或在运行时的控件。 在 VSTO 外接程序项目中，可以添加<xref:Microsoft.Office.Tools.Word.Bookmark>向任何打开的文档在运行时的控件。 有关详细信息，请参阅[如何：向 Word 文档添加书签控件](../vsto/how-to-add-bookmark-controls-to-word-documents.md)。
 
 ## <a name="bind-data-to-the-control"></a>将数据绑定到控件
  <xref:Microsoft.Office.Tools.Word.Bookmark> 控件支持简单数据绑定。 应该使用 <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> 属性将书签绑定到数据源。 书签的默认数据绑定属性是 <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A> 属性。
 
  如果在绑定数据集中的数据进行了更新，<xref:Microsoft.Office.Tools.Word.Bookmark>控件显示所做的更改。
 
- 在文档级项目中，还可以使用“数据源”  窗口将数据绑定到书签。 有关更多信息，请参见[如何：用对象中的数据填充文档](../vsto/how-to-populate-documents-with-data-from-objects.md)。
+ 在文档级项目中，还可以使用“数据源”  窗口将数据绑定到书签。 有关详细信息，请参阅[如何：用对象中的数据填充文档](../vsto/how-to-populate-documents-with-data-from-objects.md)。
 
 ## <a name="formatting"></a>格式化
  可应用于 <xref:Microsoft.Office.Interop.Word.Bookmark> 的格式设置也可应用于 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件。 此格式设置包括字体、 缩进、 间距、 编号和样式。
@@ -49,7 +48,7 @@ ms.locfileid: "53960412"
 
 |Text 属性|描述|
 |-------------------|-----------------|
-|<xref:Microsoft.Office.Tools.Word.Bookmark.Text?displayProperty=nameWithType>|使用此属性可以在书签内显示文本，并使书签保留在文档中。 向书签分配文本会扩展书签范围，但不会删除书签。<br /><br /> 例如，`Bookmark1.Text = "Hello world"` 将文本插入书签中，且使书签保持原样。|
+|<xref:Microsoft.Office.Tools.Word.Bookmark.Text?displayProperty=nameWithType>|使用此属性可以在书签内显示文本，并使书签保留在文档中。 向书签分配文本会扩展书签范围，但不会删除书签。<br /><br /> 例如， `Bookmark1.Text = "Hello world"` 将文本插入书签中，且使书签保持原样。|
 |<xref:Microsoft.Office.Interop.Word.Range.Text?displayProperty=nameWithType>|使用此属性可在书签位置处显示文本，并自动删除该书签。 例如， `Bookmark1.Range.Text = "Hello world"` 将文本插入书签中，并删除该书签。|
 
 ## <a name="rename-the-control-at-design-time"></a>在设计时将控件重命名
@@ -88,27 +87,27 @@ ms.locfileid: "53960412"
 
 |书签|Text|
 |--------------|----------|
-|两个单独的书签|[这是替换]。{}|
+|两个单独的书签|[this is replacement.]{}|
 |Bookmark1|This is replacement.|
-|Bookmark2|*\<空 >*|
+|Bookmark2|*\<empty>*|
 
 ## <a name="events"></a>事件
 
 以下事件可用于 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件：
 
--   <xref:Microsoft.Office.Tools.Word.Bookmark.BeforeDoubleClick>
+- <xref:Microsoft.Office.Tools.Word.Bookmark.BeforeDoubleClick>
 
--   <xref:Microsoft.Office.Tools.Word.Bookmark.BeforeRightClick>
+- <xref:Microsoft.Office.Tools.Word.Bookmark.BeforeRightClick>
 
--   <xref:Microsoft.Office.Tools.Word.Bookmark.BindingContextChanged>
+- <xref:Microsoft.Office.Tools.Word.Bookmark.BindingContextChanged>
 
--   <xref:Microsoft.Office.Tools.Word.Bookmark.Deselected>
+- <xref:Microsoft.Office.Tools.Word.Bookmark.Deselected>
 
--   <xref:System.ComponentModel.IComponent.Disposed>
+- <xref:System.ComponentModel.IComponent.Disposed>
 
--   <xref:Microsoft.Office.Tools.Word.Bookmark.Selected>
+- <xref:Microsoft.Office.Tools.Word.Bookmark.Selected>
 
--   <xref:Microsoft.Office.Tools.Word.Bookmark.SelectionChange>
+- <xref:Microsoft.Office.Tools.Word.Bookmark.SelectionChange>
 
 ## <a name="see-also"></a>请参阅
 

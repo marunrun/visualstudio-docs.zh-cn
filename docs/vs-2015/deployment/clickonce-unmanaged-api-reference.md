@@ -1,14 +1,9 @@
 ---
 title: ClickOnce 非托管 API 参考 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -23,13 +18,13 @@ ms.assetid: ec002138-4054-456d-bcc1-79ac2f4a4fd7
 caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: 6175ae0b51e017d9f06c1e185ba1da7295d69657
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 714d7b18995bf1ad51b07e02227e440879f73c9e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49237545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68192310"
 ---
 # <a name="clickonce-unmanaged-api-reference"></a>ClickOnce 非托管 API 参考
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,8 +47,8 @@ ms.locfileid: "49237545"
   
 |参数|描述|类型|  
 |---------------|-----------------|----------|  
-|`pcwzActivationUrl`|一个指向`ActivationURL`。|LPCWSTR|  
-|`pcwzPathToDeploymentManifest`|一个指向`PathToDeploymentManifest`。|LPCWSTR|  
+|`pcwzActivationUrl`|指向 `ActivationURL` 的指针。|LPCWSTR|  
+|`pcwzPathToDeploymentManifest`|指向 `PathToDeploymentManifest` 的指针。|LPCWSTR|  
 |`pwzApplicationIdentity`|指向用于接收一个以 NULL 结尾的字符串，指定完整的应用程序标识返回的缓冲区的指针。|LPWSTR|  
 |`pdwIdentityBufferLength`|长度的 DWORD 的指针`pwzApplicationIdentity`中 WCHARs 缓冲区。 这包括 NULL 终止字符的空间。|LPDWORD|  
 |`pwzProcessorArchitecture`|指向用于接收一个以 NULL 结尾的字符串，指定应用程序部署，则清单的处理器体系结构的缓冲区的指针。|LPWSTR|  
@@ -89,6 +84,3 @@ ms.locfileid: "49237545"
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Deployment.Application.DeploymentServiceCom.CleanOnlineAppCache%2A>
-
-
-

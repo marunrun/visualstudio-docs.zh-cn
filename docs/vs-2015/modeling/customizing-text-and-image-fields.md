@@ -1,23 +1,20 @@
 ---
 title: 自定义文本和图像字段 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 ms.assetid: a7259fc0-5afa-4356-b27e-5641e01628a9
 caps.latest.revision: 4
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: c73f14e2b581ea5a9c0bd22f50c11ed205c0f804
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 5069f6d45d72606bce7de2866c6328864fcde21f
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49271123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63433244"
 ---
 # <a name="customizing-text-and-image-fields"></a>自定义文本和图像字段
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -96,7 +93,7 @@ public virtual StyleSetResourceId GetFontId(ShapeElement parentShape)
  如果不是，然后重写`InitializeShapeFields`shape 类和分配到相应的值的方法`Default...`文本字段的属性。  
   
 > [!WARNING]
->  若要重写`InitializeShapeFields()`，则必须设置**生成双派生**形状类的属性`true`DSL 定义中。  
+> 若要重写`InitializeShapeFields()`，则必须设置**生成双派生**形状类的属性`true`DSL 定义中。  
   
  在此示例中，形状具有将用于用户注释的文本字段。 我们想要使用的标准注释字体。 因为它是一种标准字体样式集中，我们可以设置默认字体 id:  
   
@@ -191,13 +188,13 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
   
 #### <a name="to-create-a-subclass-of-imagefield"></a>若要创建的 ImageField 子类  
   
-1.  设置**生成双派生**的 DSL 定义中的父形状类的属性。  
+1. 设置**生成双派生**的 DSL 定义中的父形状类的属性。  
   
-2.  重写`InitializeShapeFields`形状类的方法。  
+2. 重写`InitializeShapeFields`形状类的方法。  
   
-    -   在 DSL 项目中，创建一个新代码文件并编写形状类的分部类定义。 重写的方法定义。  
+    - 在 DSL 项目中，创建一个新代码文件并编写形状类的分部类定义。 重写的方法定义。  
   
-3.  检查的代码`InitializeShapeFields`DSL\GeneratedCode\Shapes.cs 中。  
+3. 检查的代码`InitializeShapeFields`DSL\GeneratedCode\Shapes.cs 中。  
   
      在重写方法中，调用基方法，然后创建你自己的图像字段类的实例。 用于替换中的正则图像字段`shapeFields`列表。  
   
@@ -205,7 +202,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
  此示例使依赖于形状的模型元素的状态更改的图标。  
   
 > [!WARNING]
->  此示例演示如何使动态图像修饰器。 但如果只想要一个或两个映像，具体取决于模型变量的状态之间切换，它会更易于创建多个图像修饰器，找到在同一位置上相应的形状，并设置要取决于模型的特定值的可见性筛选器变量。 若要设置此筛选器，在 DSL 定义中选择形状地图，打开 DSL 详细信息窗口中，然后单击修饰器选项卡。  
+> 此示例演示如何使动态图像修饰器。 但如果只想要一个或两个映像，具体取决于模型变量的状态之间切换，它会更易于创建多个图像修饰器，找到在同一位置上相应的形状，并设置要取决于模型的特定值的可见性筛选器变量。 若要设置此筛选器，在 DSL 定义中选择形状地图，打开 DSL 详细信息窗口中，然后单击修饰器选项卡。  
   
  若要运行此示例代码，创建新 DSL 解决方案使用最小语言模板。 添加布尔域属性`AlternateState`到 ExampleElement 域类。 将图标修饰器添加到 ExampleShape 类，并将其图像设置为位图文件。 单击**转换所有模板**。 在 DSL 项目中，添加一个新的代码文件并插入以下代码。  
   
@@ -277,6 +274,3 @@ partial class ExampleShape
  [在图表上设置背景图像](../modeling/setting-a-background-image-on-a-diagram.md)   
  [导航和更新程序代码中的模型](../modeling/navigating-and-updating-a-model-in-program-code.md)   
  [编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)
-
-
-

@@ -3,27 +3,26 @@ title: 登录 Visual Studio
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 12/10/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.assetid: b9531c25-e4cf-43ae-b331-a9f31a8cd171
 author: TerryGLee
 ms.author: tglee
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dccb2fb9c4fce456055b136dace7e95d02647a94
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c7568f27d9be2ff38c2d5c87cf8a950e06846db5
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53840786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960776"
 ---
 # <a name="sign-in-to-visual-studio"></a>登录 Visual Studio
 
 如果通过登录到 IDE 设置了“个性化”帐户，则可以个性化和优化 Visual Studio 中的开发体验。
 
 > [!NOTE]
-> 本主题适用于 Windows 上的 Visual Studio。 对于 Visual Studio for Mac，请参阅[登录到 Visual Studio for Mac](/visualstudio/mac/signing-in)。
+> 本主题适用于 Visual Studio  Windows 版。 对于 Visual Studio for Mac，请参阅[登录到 Visual Studio for Mac](/visualstudio/mac/signing-in)。
 
 ## <a name="why-should-i-sign-in-to-visual-studio"></a>我为什么应该登录到 Visual Studio？
 
@@ -31,7 +30,7 @@ ms.locfileid: "53840786"
 
 以下是登录后可体验的内容及可执行的操作的完整列表：
 
-- **访问 Visual Studio Dev Essentials 程序的权限** - 此程序包括免费软件产品/服务、培训、支持等。 请参阅 [Visual Studio Dev Essential](http://aka.ms/vsdevhelp) 了解详细信息。
+- **访问 Visual Studio Dev Essentials 程序的权限** - 此程序包括免费软件产品/服务、培训、支持等。 请参阅 [Visual Studio Dev Essential](https://aka.ms/vsdevhelp) 了解详细信息。
 
 - **同步 Visual Studio 设置** - 登录到任何设备上的 Visual Studio 时，将立即应用自定义设置（例如，键绑定、窗口布局和颜色主题）。 请参阅 [Visual Studio 中的同步设置](../ide/synchronized-settings-in-visual-studio.md)。
 
@@ -45,7 +44,7 @@ ms.locfileid: "53840786"
 
 ## <a name="how-to-sign-in-to-visual-studio"></a>如何登录到 Visual Studio
 
-首次启动 Visual Studio 时，系统将要求你登录并提供一些基本注册信息。 应选择最符合需求的 Microsoft 帐户或工作（学校）帐户。 如果你没有此类帐户，可以免费创建一个 Microsoft 帐户。 请参阅 [如何注册 Microsoft 帐户？](http://windows.microsoft.com/windows-live/sign-up-create-account-how)
+首次打开 Visual Studio 时，系统将要求你登录并提供一些基本注册信息。 应选择最符合需求的 Microsoft 帐户或工作（学校）帐户。 如果你没有此类帐户，可以免费创建一个 Microsoft 帐户。 请参阅 [如何注册 Microsoft 帐户？](http://windows.microsoft.com/windows-live/sign-up-create-account-how)
 
 然后，选择要在 Visual Studio 中使用的 UI 设置和颜色主题。 Visual Studio 会记住这些设置并将其同步到登录到的所有 Visual Studio 环境。 有关已同步的设置列表，请参阅[已同步的设置](../ide/synchronized-settings-in-visual-studio.md)。 以后可以打开 Visual Studio 中的“工具” > “选项”菜单来更改设置。
 

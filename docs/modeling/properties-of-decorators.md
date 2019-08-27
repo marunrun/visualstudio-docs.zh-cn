@@ -6,16 +6,15 @@ helpviewer_keywords:
 - Domain-Specific Language, decorators
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: fc0f6e3fe8078675792109c41ee75272b44ca714
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 76129141ed293281eeb3179a654f470bcf608bdf
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53865357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62996795"
 ---
 # <a name="properties-of-decorators"></a>修饰器的属性
 修饰器是图标、 文本或展开/折叠尖括号中显示的形状或关系图上的连接器。 下表显示三种类型的修饰器的属性。 某些属性会显示仅在形状修饰器或仅连接器修饰器。
@@ -27,8 +26,8 @@ ms.locfileid: "53865357"
 |属性|描述|默认|
 |-|-|-|
 |DisplayName|修饰器将生成的设计器中显示的名称。|展开折叠修饰器|
-|name|修饰器的名称。|ExpandCollapseDecorator|
-|说明|与此修饰器相关联的非正式说明。|\<无 >|
+|名称|修饰器的名称。|ExpandCollapseDecorator|
+|说明|与此修饰器相关联的非正式说明。|\<none>|
 |HorizontalOffset|水平偏移量，相对于修饰器，以英寸为单位的默认位置。 （在形状上仅。）|0|
 |VerticalOffset|垂直偏移量，相对于修饰器，以英寸为单位的默认位置。 （在形状上仅。）|0|
 |OffsetFromLine|修饰器在行中，相对于其默认位置，以英寸为单位的偏移量。 （有关连接器仅。）|0|
@@ -39,10 +38,10 @@ ms.locfileid: "53865357"
 
 |属性|描述|默认|
 |-|-|-|
-|DefaultIcon|要显示的图标或图像文件的路径。|\<无 >|
+|DefaultIcon|要显示的图标或图像文件的路径。|\<none>|
 |DisplayName|修饰器要在生成的设计器中显示的名称。|图标修饰器|
-|name|修饰器的名称。|IconDecorator|
-|说明|与修饰器相关联的非正式说明。|\<无 >|
+|名称|修饰器的名称。|IconDecorator|
+|说明|与修饰器相关联的非正式说明。|\<none>|
 |HorizontalOffset|水平偏移量，相对于修饰器，以英寸为单位的默认位置。 （在形状上仅。）|0|
 |VerticalOffset|垂直偏移量，相对于修饰器，以英寸为单位的默认位置。 （在形状上仅。）|0|
 |OffsetFromLine|修饰器在行中，相对于其默认位置，以英寸为单位的偏移量。 （有关连接器仅。）|0|
@@ -57,8 +56,8 @@ ms.locfileid: "53865357"
 |DisplayName|修饰器要在生成的设计器中显示的名称。|Label|
 |FontSize|修饰器中显示的文本的字体大小。|8|
 |FontStyle|修饰器中显示的文本的字体样式。|规则|
-|name|修饰器的名称。|Label|
-|说明|与修饰器相关联的非正式说明。|\<无 >|
+|名称|修饰器的名称。|Label|
+|说明|与修饰器相关联的非正式说明。|\<none>|
 |HorizontalOffset|水平偏移量，相对于修饰器，以英寸为单位的默认位置。 （在形状上仅。）|0|
 |VerticalOffset|垂直偏移量，相对于修饰器，以英寸为单位的默认位置。 （在形状上仅。）|0|
 |OffsetFromLine|修饰器在行中，相对于其默认位置，以英寸为单位的偏移量。 （有关连接器仅。）|0|

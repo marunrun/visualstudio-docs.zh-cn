@@ -9,34 +9,35 @@ helpviewer_keywords:
 ms.assetid: bb47abe8-6706-4679-bc52-79f6444dae7e
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bd0964077c158940298d5a99535a12054b79c57e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: a64fcf47e6d1b315499bc2e43ab32459bf11c091
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53906821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834514"
 ---
 # <a name="idiatablegetcount"></a>IDiaTable::get_Count
-检索表中的项的数目。  
-  
-## <a name="syntax"></a>语法  
-  
-```C++  
-HRESULT get_Count (   
-   LONG* pRetVal  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `pRetVal`  
- [out]返回表中的项数。  
-  
-## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
-  
-## <a name="see-also"></a>请参阅  
- [IDiaTable](../../debugger/debug-interface-access/idiatable.md)   
- [IDiaTable::Item](../../debugger/debug-interface-access/idiatable-item.md)
+检索表中的项的数目。
+
+## <a name="syntax"></a>语法
+
+```C++
+HRESULT get_Count ( 
+   LONG* pRetVal
+);
+```
+
+#### <a name="parameters"></a>参数
+ `pRetVal`
+
+[out]返回表中的项数。
+
+## <a name="return-value"></a>返回值
+ 如果成功，则返回`S_OK`; 否则为返回错误代码。
+
+## <a name="see-also"></a>请参阅
+- [IDiaTable](../../debugger/debug-interface-access/idiatable.md)
+- [IDiaTable::Item](../../debugger/debug-interface-access/idiatable-item.md)

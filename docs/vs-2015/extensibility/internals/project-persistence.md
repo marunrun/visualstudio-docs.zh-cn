@@ -1,40 +1,35 @@
 ---
 title: 项目持久性 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - persistence, projects
 - projects [Visual Studio SDK], persistance
 ms.assetid: 42907bcf-4e27-46bd-a8cb-01c2ccd2bde5
 caps.latest.revision: 12
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: ff836f56601adeba7b3df675207701f6e2d6e7fa
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: abbcc1fc1048866ef790a4b6779ed15ef80a9be1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51729556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62429517"
 ---
 # <a name="project-persistence"></a>项目持久性
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 持久性是你的项目的关键设计注意事项。 大多数项目使用项目项代表文件;[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]还支持其数据是不基于文件的项目。 必须保留这两个拥有的项目和项目文件的文件。 IDE 指示要保存本身或项目项的项目。  
   
- 项目的模板将传递给项目工厂。 模板应支持根据特定项目类型的要求的所有项目项的初始化。 这些模板稍后可以另存为项目文件，由该解决方案通过 IDE 管理。 有关详细信息，请参阅[创建项目实例通过使用项目工厂](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)并[解决方案](../../extensibility/internals/solutions.md)。  
+ 项目的模板将传递给项目工厂。 模板应支持根据特定项目类型的要求的所有项目项的初始化。 这些模板稍后可以另存为项目文件，由该解决方案通过 IDE 管理。 有关详细信息，请参阅[创建项目实例通过使用项目工厂](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)并[解决方案](../../extensibility/internals/solutions-overview.md)。  
   
  项目项可以是基于文件的或非基于文件的：  
   
--   基于文件的项可以是本地或远程。 在 C# 中的 Web 项目，例如，将连接到远程系统上的文件保留本地，而在远程系统上保留文件本身。  
+- 基于文件的项可以是本地或远程。 在 C# 中的 Web 项目，例如，将连接到远程系统上的文件保留本地，而在远程系统上保留文件本身。  
   
--   不基于文件的项可以将项目保存到数据库或存储库。  
+- 不基于文件的项可以将项目保存到数据库或存储库。  
   
 ## <a name="commit-models"></a>提交模型  
  在决定后的项目项的位置，必须选择相应提交模型。 例如，在基于文件的模型中使用本地文件，每个项目可以保存自主操作。 在存储库模型中，您可以保存在一个事务中的多个项。 有关详细信息，请参阅[项目类型设计决策](../../extensibility/internals/project-type-design-decisions.md)。  
@@ -50,6 +45,5 @@ ms.locfileid: "51729556"
  上的方法`IVsPersistHierarchyItem2`接口用于确定是否可以重新加载项，如果可以将项，重新加载它。 此外，<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.IgnoreItemFileChanges%2A>方法可以实现导致要放弃未保存的已更改的项。  
   
 ## <a name="see-also"></a>请参阅  
- [清单： 创建新的项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)   
+ [清单：创建新的项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)   
  [使用项目工厂创建项目实例](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)
-

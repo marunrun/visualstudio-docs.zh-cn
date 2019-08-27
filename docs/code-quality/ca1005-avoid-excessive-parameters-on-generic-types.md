@@ -1,7 +1,6 @@
 ---
 title: CA1005:避免泛型类型的参数过多
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - AvoidExcessiveParametersOnGenericTypes
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 372b2f28-5c59-4815-9753-6c65b2bb3589
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 502a51af172acce0e10eb16e1ee62524c20194f2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ffc94a04d708315cc143afd1556cb8a2f0072e91
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53960571"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68923290"
 ---
 # <a name="ca1005-avoid-excessive-parameters-on-generic-types"></a>CA1005:避免泛型类型的参数过多
 
@@ -32,31 +31,31 @@ ms.locfileid: "53960571"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 外部可见的泛型类型具有两个以上的类型参数。
+外部可见的泛型类型具有两个以上的类型参数。
 
 ## <a name="rule-description"></a>规则说明
- 泛型类型包含的类型参数越多，越难以知道并记住每个类型参数各代表什么。 它是使用一个类型参数，如下所示通常明显`List<T>`，并在某些情况下，使用两个类型参数，如下所示`Dictionary<TKey, TValue>`。 如果两个以上的类型参数已存在，都会感到过于困难对于大多数用户 (例如， `TooManyTypeParameters<T, K, V>` C# 中或`TooManyTypeParameters(Of T, K, V)`中[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)])。
+泛型类型包含的类型参数越多，越难以知道并记住每个类型参数各代表什么。 通常情况下, 有一种类型参数 (如`List<T>`中) 和 (在某些情况下有两个类型`Dictionary<TKey, TValue>`参数) 非常明显, 如中所示。 如果存在两个以上的类型参数, 则很难为大多数用户 (例如`TooManyTypeParameters<T, K, V>` , 在C#或`TooManyTypeParameters(Of T, K, V)`中[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]为)。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复此规则的冲突，请更改设计以使用不超过两个类型参数。
+若要修复与此规则的冲突, 请将设计更改为使用不超过两个类型参数。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 除非设计确实需要两个以上的类型参数，否则不要禁止显示此规则的警告。 提供易于理解和使用的语法中的泛型可减少所需了解和提高新库的使用率的时间。
+请勿禁止显示此规则发出的警告, 除非设计确实需要两个以上的类型参数。 在易于理解和使用的语法中提供泛型, 可减少学习和增加新库的采用率所需的时间。
 
-## <a name="related-rules"></a>相关的规则
- [CA1010:集合应实现泛型接口](../code-quality/ca1010-collections-should-implement-generic-interface.md)
+## <a name="related-rules"></a>相关规则
+[CA1010集合应实现泛型接口](../code-quality/ca1010-collections-should-implement-generic-interface.md)
 
- [CA1000:不要在泛型类型中声明静态成员](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)
+[CA1000不要在泛型类型中声明静态成员](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)
 
- [CA1002:不要公开泛型列表](../code-quality/ca1002-do-not-expose-generic-lists.md)
+[CA1002不要公开泛型列表](../code-quality/ca1002-do-not-expose-generic-lists.md)
 
- [CA1006:不要将嵌套在成员签名中的泛型类型](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
+[CA1006不要将泛型类型嵌套在成员签名中](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
 
- [CA1004:泛型方法应提供类型参数](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)
+[CA1004泛型方法应提供类型参数](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)
 
- [CA1003:使用泛型事件处理程序实例](../code-quality/ca1003-use-generic-event-handler-instances.md)
+[CA1003使用泛型事件处理程序实例](../code-quality/ca1003-use-generic-event-handler-instances.md)
 
- [CA1007： 在适用处在适用处使用泛型](../code-quality/ca1007-use-generics-where-appropriate.md)
+[CA1007在适当的位置使用泛型](../code-quality/ca1007-use-generics-where-appropriate.md)
 
 ## <a name="see-also"></a>请参阅
- [泛型](/dotnet/csharp/programming-guide/generics/index)
+[泛型](/dotnet/csharp/programming-guide/generics/index)

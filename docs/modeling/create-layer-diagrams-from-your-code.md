@@ -9,20 +9,19 @@ helpviewer_keywords:
 - constraints, architectural
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: f10323a1123b795f1fa6b09d52252b8038b1a732
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b9822dda92a096e3c497d468865d3ed9fd56e16d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53846160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62421161"
 ---
 # <a name="create-dependency-diagrams-from-your-code"></a>从代码创建依赖项关系图
 
-若要可视化软件系统的高级逻辑体系结构，创建*依赖项关系图*Visual Studio 中。 为了确保你的代码保持与此设计保持一致，请使用验证代码依赖项关系图。 您可以创建 Visual C# 和 Visual Basic 项目的依赖项关系图。 若要查看哪些版本的 Visual Studio 支持此功能，请参阅[体系结构和建模工具的版本支持](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
+若要可视化软件系统的高级逻辑体系结构，创建*依赖项关系图*Visual Studio 中。 为了确保你的代码保持与此设计保持一致，请使用验证代码依赖项关系图。 您可以创建 Visual C# 和 Visual Basic 项目的依赖项关系图。 若要查看哪些版本的 Visual Studio 支持此功能，请参阅[体系结构和建模工具的版本支持](../modeling/what-s-new-for-design-in-visual-studio.md#edition-support-for-architecture-and-modeling-tools)。
 
 ![创建依赖项关系图](../modeling/media/layerdiagramvisualizecode.png)
 
@@ -42,24 +41,24 @@ ms.locfileid: "53846160"
 ### <a name="add-a-new-dependency-diagram-to-a-modeling-project"></a>将新的依赖项关系图添加到建模项目
 
 > [!NOTE]
-> 不支持 Visual Studio 2017 中的.NET Core 项目的依赖项关系图。
+> 不支持在 Visual Studio 中的.NET Core 项目的依赖项关系图。
 
-1.  上**体系结构**菜单中，选择**新依赖项关系图**。
+1. 上**体系结构**菜单中，选择**新依赖项关系图**。
 
-2.  下**模板**，选择**依赖项关系图**。
+2. 下**模板**，选择**依赖项关系图**。
 
-3.  命名该关系图。
+3. 命名该关系图。
 
-4.  在中**添加到建模项目**，浏览到并在解决方案中选择一个现有建模项目。
+4. 在中**添加到建模项目**，浏览到并在解决方案中选择一个现有建模项目。
 
-     - 或 -
+     或
 
      选择**创建一个新建模项目**将一个新建模项目添加到解决方案。
 
     > [!NOTE]
     > 依赖项关系图必须存在于建模项目内。 但是，你可以将其链接到解决方案中任何位置的项。
 
-5.  请确保保存建模项目和依赖项关系图。
+5. 请确保保存建模项目和依赖项关系图。
 
 ## <a name="drag-and-drop-or-copy-and-paste-from-a-code-map"></a>拖放或复制和粘贴中的代码图
 
@@ -102,19 +101,19 @@ ms.locfileid: "53846160"
 
  层上的数字指示链接到该层的项目数。 但在读取此数字时，请记住以下事项：
 
--   如果某个层链接到一个包含其他项目的项目，但该层未直接链接到其他项目，则该数字仅包括链接的项目。 但是，在层验证过程中其他项目包括在分析范围内。
+- 如果某个层链接到一个包含其他项目的项目，但该层未直接链接到其他项目，则该数字仅包括链接的项目。 但是，在层验证过程中其他项目包括在分析范围内。
 
      例如，如果一个层链接到单个命名空间，则链接的项目数是 1，即使该命名空间包含类也是如此。 如果该层还链接到命名空间中的每个类，则该数字将包括链接的类。
 
--   如果一个层包含链接到项目的其他层，则容器层也链接到这些项目，即使容器层上的数字不包括这些项目。
+- 如果一个层包含链接到项目的其他层，则容器层也链接到这些项目，即使容器层上的数字不包括这些项目。
 
 ## <a name="Managing"></a> 管理层和项目之间的链接
 
-1.  在依赖项关系图中，打开层的快捷菜单，然后选择**查看链接**。
+1. 在依赖项关系图中，打开层的快捷菜单，然后选择**查看链接**。
 
      **层资源管理器**将显示所选层的项目链接。
 
-2.  使用以下任务管理这些链接：
+2. 使用以下任务管理这些链接：
 
 |**若要**|**在层资源管理器**|
 |-|-|
@@ -125,7 +124,7 @@ ms.locfileid: "53846160"
 |验证链接的项目，支持对依赖项关系图的验证。|看看**支持验证**项目链接的列。|
 
 ## <a name="Discovering"></a> 现有依赖关系进行反向工程处理
- 只要与一个层关联的项目引用与另一个层关联的项目，就存在依赖关系。 例如，一个层中的某个类声明了一个拥有其他层中的某个类的变量。 您可以对关系图上链接到层的项目的现有依赖关系进行反向工程处理。
+ 只要与一个层关联的项目引用与另一个层关联的项目，就存在依赖关系。 例如，一个层中的某个类声明了一个拥有其他层中的某个类的变量。 你可以对关系图上链接到层的项目的现有依赖关系进行反向工程处理。
 
 > [!NOTE]
 > 无法为某些种类的项目对依赖关系进行反向工程处理。 例如，对于链接到文本文件的层，将不会对源自或指向该层的依赖关系进行反向工程处理。 若要查看哪些项目具有可进行反向工程处理的依赖项，打开一个或多个层的快捷菜单，然后选择**查看链接**。 在中**层资源管理器**，检查**支持验证**列。 依赖项不会为其此列显示的项目实施反向工程**False**。
@@ -151,16 +150,17 @@ ms.locfileid: "53846160"
 ## <a name="Codemaps"></a> 发现的模式和在代码图上的依赖项
  在创建依赖项关系图，同时还可能会创建**代码映射**。 这些关系图可以帮助你在浏览代码时发现模式和依赖项。 使用解决方案资源管理器、类视图或对象浏览器来浏览程序集、命名空间和类，这通常能很好地响应现有层。 有关代码图的详细信息，请参阅：
 
--   [映射解决方案中的依赖项](../modeling/map-dependencies-across-your-solutions.md)
+- [映射解决方案中的依赖项](../modeling/map-dependencies-across-your-solutions.md)
 
--   [使用代码图调试应用程序](../modeling/use-code-maps-to-debug-your-applications.md)
+- [使用代码图调试应用程序](../modeling/use-code-maps-to-debug-your-applications.md)
 
--   [使用代码图分析查找潜在问题](../modeling/find-potential-problems-using-code-map-analyzers.md)
+- [使用代码图分析查找潜在问题](../modeling/find-potential-problems-using-code-map-analyzers.md)
 
 ## <a name="see-also"></a>请参阅
 
+- [对体系结构和建模工具的版本支持](../modeling/what-s-new-for-design-in-visual-studio.md#edition-support-for-architecture-and-modeling-tools)
 - [视频：验证你在真实时间中的体系结构依赖关系](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)
-- [依赖项关系图：引用](../modeling/layer-diagrams-reference.md)
-- [依赖项关系图：指导原则](../modeling/layer-diagrams-guidelines.md)
+- [依赖项关系图：参考](../modeling/layer-diagrams-reference.md)
+- [依赖项关系图：指南](../modeling/layer-diagrams-guidelines.md)
 - [使用依赖项关系图验证代码](../modeling/validate-code-with-layer-diagrams.md)
 - [代码可视化](../modeling/visualize-code.md)

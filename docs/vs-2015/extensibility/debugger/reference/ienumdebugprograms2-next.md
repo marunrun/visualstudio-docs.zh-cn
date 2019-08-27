@@ -1,14 +1,9 @@
 ---
 title: IEnumDebugPrograms2::Next |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - IEnumDebugPrograms2::Next
 helpviewer_keywords:
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 9120e263-e97c-4a40-ab2c-e9264ce3d6c4
 caps.latest.revision: 14
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 4065aa9a3ba1bbd3cadd965d8a0a4f306513b468
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 356f1086c4490c45672c5f71e761bdfc6cbe762d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51789260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68199587"
 ---
 # <a name="ienumdebugprograms2next"></a>IEnumDebugPrograms2::Next
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -47,7 +42,7 @@ int Next(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `celt`  
  [in]要检索的元素数。 此外可以指定的最大大小`rgelt`数组。  
   
@@ -58,9 +53,8 @@ int Next(
  [out]返回中实际返回的元素数目`rgelt`。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`。 返回`S_FALSE`如果无法返回请求的元素数少于; 否则，返回错误代码。  
+ 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果无法返回请求的元素数少于; 否则，返回错误代码。  
   
 ## <a name="see-also"></a>请参阅  
  [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)
-

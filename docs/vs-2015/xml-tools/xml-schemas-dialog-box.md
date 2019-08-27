@@ -1,30 +1,24 @@
 ---
 title: XML 架构对话框 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-xml-tools
+ms.topic: conceptual
 ms.assetid: 0271fa26-2205-49bd-96e0-ae1441571808
 caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: f97bfca4623a826130e68a5399cc2ab86f784cbf
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 82247c2510d64f712cc4b703154ea16a4bb7e7e1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49899586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68150655"
 ---
 # <a name="xml-schemas-dialog-box"></a>XML 架构对话框
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 **XML 架构**对话框用于选择要与 XML 文档关联的 XML 架构定义语言 (XSD) 架构。 您可以从架构缓存中选择架构，也可以指定不在缓存中的架构。 选定的架构被视为架构集的一部分。 架构集用于 IntelliSense 和 XML 文档验证。  
   
  您可以访问**XML 架构**通过单击对话框中**架构**按钮，在文档属性窗口中，或选择**架构**从**XML**菜单。  
@@ -53,8 +47,5 @@ ms.locfileid: "49899586"
   
 ## <a name="see-also"></a>请参阅  
  [XML 编辑器组件](../xml-tools/xml-editor-components.md)   
- [如何： 选择使用的 XML 架构](../xml-tools/how-to-select-the-xml-schemas-to-use.md)   
+ [如何：选择使用的 XML 架构](../xml-tools/how-to-select-the-xml-schemas-to-use.md)   
  [架构缓存](../xml-tools/schema-cache.md)
-
-
-

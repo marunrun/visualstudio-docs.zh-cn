@@ -1,27 +1,27 @@
 ---
 title: 通过导入发布设置来发布到 IIS
 description: 创建并导入发布配置文件，以便将应用程序从 Visual Studio 部署到 IIS
-ms.date: 05/07/2018
+ms.date: 01/31/2019
 ms.topic: tutorial
 helpviewer_keywords:
 - deployment, publish settings
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 13a4210e24fe64db79be897bc159477e9b2f5a3a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8e0c7309f52fbc8056f09e5a59afcfdefaa8d0bf
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53897375"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65680142"
 ---
 # <a name="publish-an-application-to-iis-by-importing-publish-settings-in-visual-studio"></a>通过在 Visual Studio 中导入发布设置将应用程序发布到 IIS
 
 可使用“发布”工具导入发布设置，然后部署应用。 在本文中，我们使用 IIS 的发布设置，但你可以使用类似的步骤导入 [Azure 应用服务](../deployment/tutorial-import-publish-settings-azure.md)的发布设置。 在某些情况下，对于每个 Visual Studio 安装，使用发布设置配置文件比为 IIS 手动配置部署要快。
 
-这些步骤适用于 Visual Studio 中的 ASP.NET、ASP.NET Core 和 .NET Core 应用。 这些步骤对应于 Visual Studio 2017 版本 15.6。
+这些步骤适用于 Visual Studio 中的 ASP.NET、ASP.NET Core 和 .NET Core 应用。
 
 在本教程中，你将：
 
@@ -38,19 +38,31 @@ ms.locfileid: "53897375"
 
 ## <a name="prerequisites"></a>系统必备
 
-* 须安装 Visual Studio 2017 且具有 ASP.NET 和 .NET Framework 开发工作负载。 对于 .NET Core 应用，还需要 .NET Core 工作负载。
+::: moniker range=">=vs-2019"
 
-    如果尚未安装 Visual Studio，请转到  [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 页免费安装。
+* 必须安装 Visual Studio 2019 且具有 ASP.NET 和 web 开发工作负载。
 
-* 若要从 IIS 生成发布设置文件，必须具有运行 Windows Server 2012 或 Windows Server 2016 的计算机，并且必须正确配置 IIS Web 服务器角色。 还必须安装 ASP.NET 4.5 或 ASP.NET Core。 对于 ASP.NET Core，请参阅[发布到 IIS](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)。 对于 ASP.NET 4.5，请参阅[使用 ASP.NET 3.5 和 ASP.NET 4.5 的 IIS 8.0](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)。
+    如果尚未安装 Visual Studio，请转到  [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/) 页免费安装。
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+* 须安装 Visual Studio 2017 且具有 ASP.NET 和 web 开发工作负载。
+
+    如果尚未安装 Visual Studio，请转到  [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/) 页免费安装。
+::: moniker-end
+
+* 服务器上必须运行 Windows Server 2012 或 Windows Server 2016，并且必须正确安装 [IIS Web 服务器角色](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)（需要生成发布设置文件 (\*.publishsettings)）。 该服务器上还必须安装 ASP.NET 4.5 或 ASP.NET Core。 若要安装 ASP.NET 4.5，请参阅[使用 ASP.NET 3.5 和 ASP.NET 4.5 的 IIS 8.0](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)。 若要安装 ASP.NET Core，请参阅 [使用 IIS 在 Windows 上托管 ASP.NET Core](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)。
 
 ## <a name="create-a-new-aspnet-project-in-visual-studio"></a>在 Visual Studio 中新建 ASP.NET 项目
 
-1. 在运行 Visual Studio 的计算机中，依次选择“文件” > “新建项目”。
+1. 在运行 Visual Studio 的计算机上，创建新项目。
 
-1. 在 Visual C# 或 Visual Basic 下选择“Web”，然后在中间窗格中选择“ASP.NET Web 应用程序(.NET Framework)”或（仅限 C#）“ASP.NET Core Web 应用程序”，然后单击“确定”。
+    选择正确的模板。 在此示例中，选择“ASP.NET Web 应用程序(.NET Framework)”或“ASP.NET Core Web 应用程序”（仅限 C#），然后单击“确定”。
 
-    如果没有看到指定的项目模板，请单击“新建项目”对话框左侧窗格中的“打开 Visual Studio 安装程序”链接。 Visual Studio 安装程序启动。 请参阅本文中的先决条件，以确定必须安装的必需 Visual Studio 工作负载。
+    如果没有看到指定的项目模板，请单击“新建项目”对话框左侧窗格中的“打开 Visual Studio 安装程序”链接。 Visual Studio 安装程序启动。 安装“ASP.NET 和 Web 开发”工作负载。
+
+    选择的项目模板（ASP.NET 或 ASP.NET Core）必须与安装在 Web 服务器上的 ASP.NET 版本相对应。
 
 1. 选择“MVC”(.NET Framework) 或“Web 应用程序(模型-视图-控制器)”（适用于 .NET Core），并确保已选中“无身份验证”，然后单击“确定”。
 

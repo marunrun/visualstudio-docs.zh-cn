@@ -1,8 +1,7 @@
 ---
-title: IActiveScriptAuthor::ParseScriptText |Microsoft Docs
+title: IActiveScriptAuthor::ParseScriptText | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8c5f9e4969795cedd7da80864c1ad69c0d68f8b9
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: fe6870f3b19c5727fdbea0418b8373b990cb671a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54091801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955076"
 ---
 # <a name="iactivescriptauthorparsescripttext"></a>IActiveScriptAuthor::ParseScriptText
 分析脚本文本、 将文本添加到创作引擎，该脚本并创建`IScriptEntry`对应于脚本块的对象。  

@@ -1,7 +1,6 @@
 ---
 title: CA2231:重写 ValueType.Equals 时应重载相等运算符
-ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
+ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
 - OverloadOperatorEqualsOnOverridingValueTypeEquals
@@ -13,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 114c0161-261a-40ad-8b2c-0932d6909d2a
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f005f62f5bf45ce29db41b29650f1d0cc5e4e25
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: fafa4782762e18f1ced8c7f929720e995986ac7a
+ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53958613"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69546863"
 ---
 # <a name="ca2231-overload-operator-equals-on-overriding-valuetypeequals"></a>CA2231:重写 ValueType.Equals 时应重载相等运算符
 
@@ -36,12 +35,16 @@ ms.locfileid: "53958613"
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
- 值类型重写<xref:System.Object.Equals%2A?displayProperty=fullName>，但没有实现相等运算符。
+
+值类型会重<xref:System.Object.Equals%2A?displayProperty=fullName>写, 但不实现相等运算符。
+
+默认情况下, 此规则仅查看外部可见类型, 但这是[可配置](#configurability)的。
 
 ## <a name="rule-description"></a>规则说明
- 大多数编程语言中，没有默认实现相等运算符 （= =） 的值类型。 如果您的编程语言支持运算符重载，则应考虑实现相等运算符。 其行为应该是相同的<xref:System.Object.Equals%2A>。
 
- 相等运算符的重载实现中，不能使用默认的相等运算符。 执行此操作将导致堆栈溢出。 若要实现相等运算符，请在实现中使用 Object.Equals 方法。 例如：
+在大多数编程语言中, 值类型没有对相等运算符 (= =) 的默认实现。 如果你的编程语言支持运算符重载, 则应考虑实现相等运算符。 它的行为应与的行为相同<xref:System.Object.Equals%2A>。
+
+不能在相等运算符的重载实现中使用默认的相等运算符。 这样做将导致堆栈溢出。 若要实现相等运算符, 请在实现中使用对象 Equals 方法。 例如:
 
 ```vb
 If (Object.ReferenceEquals(left, Nothing)) Then
@@ -58,26 +61,36 @@ return left.Equals(right);
 ```
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复此规则的冲突，请实现相等运算符。
+
+若要修复与此规则的冲突, 请实现相等运算符。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 则可以安全地禁止显示此规则; 的警告但是，我们建议在可能的情况提供相等运算符。
+
+可以安全地禁止显示此规则发出的警告;但是, 我们建议您尽可能地提供相等运算符。
+
+## <a name="configurability"></a>配置
+
+如果从[FxCop 分析器](install-fxcop-analyzers.md)(而不是传统分析) 运行此规则, 则可以根据其可访问性, 将基本代码的哪些部分配置为在上运行此规则。 例如, 若要指定规则只应针对非公共 API 图面运行, 请在项目中的 editorconfig 文件中添加以下键/值对:
+
+```ini
+dotnet_code_quality.ca2231.api_surface = private, internal
+```
+
+您可以为此规则、所有规则或此类别中的所有规则 (使用情况) 配置此选项。 有关详细信息, 请参阅[配置 FxCop 分析器](configure-fxcop-analyzers.md)。
 
 ## <a name="example"></a>示例
- 下面的示例定义与此规则冲突的类型。
 
- [!code-csharp[FxCop.Usage.EqualsGetHashCode#1](../code-quality/codesnippet/CSharp/ca2231-overload-operator-equals-on-overriding-valuetype-equals_1.cs)]
+下面的示例定义了违反此规则的类型:
 
-## <a name="related-rules"></a>相关的规则
- [CA1046:请重载相等运算符对引用类型](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)
+[!code-csharp[FxCop.Usage.EqualsGetHashCode#1](../code-quality/codesnippet/CSharp/ca2231-overload-operator-equals-on-overriding-valuetype-equals_1.cs)]
 
- [CA2225:运算符重载具有命名的备用项](../code-quality/ca2225-operator-overloads-have-named-alternates.md)
+## <a name="related-rules"></a>相关规则
 
- [CA2226:运算符应有对称重载](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)
-
- [CA2224:重写 equals 方法重载相等运算符](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)
-
- [CA2218:重写 Equals 时重写 GetHashCode](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)
+- [CA1046不要对引用类型重载运算符 equals](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)
+- [CA2225运算符重载具有命名的备用项](../code-quality/ca2225-operator-overloads-have-named-alternates.md)
+- [CA2226运算符应有对称重载](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)
+- [CA2224重载运算符等于时重写 equals](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)
+- [CA2218重写 Equals 时重写 GetHashCode](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)
 
 ## <a name="see-also"></a>请参阅
 

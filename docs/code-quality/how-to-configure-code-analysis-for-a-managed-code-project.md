@@ -1,7 +1,6 @@
 ---
 title: 配置代码分析
 ms.date: 04/04/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.propertypages.csvb
@@ -11,34 +10,36 @@ helpviewer_keywords:
 - code analysis, rule sets
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f204ce43abee96dcaf6e2f96141fd01237c1e492
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a1b09b77eb051d32a3aabb929e9058786215cfb4
+ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53939753"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69551047"
 ---
-# <a name="how-to-configure-code-analysis-for-a-managed-code-project"></a>如何：为托管代码项目配置代码分析
+# <a name="how-to-configure-legacy-analysis-for-managed-code"></a>如何：为托管代码配置旧分析
 
-在 Visual Studio 中，您可以从列表中选择的代码分析[规则集](../code-quality/rule-set-reference.md)) 要应用于托管的代码项目。 默认情况下**Microsoft 最少量建议规则**选择规则集，但可以应用不同的规则，如果所需的设置。 可以将规则集应用到解决方案中的一个或多个项目。
+在 Visual Studio 中, 可以从要应用于托管代码项目的代码分析[规则集](../code-quality/rule-set-reference.md)列表中进行选择。 默认情况下**Microsoft 最少量建议规则**选择规则集，但可以应用不同的规则，如果所需的设置。 可以将规则集应用到解决方案中的一个或多个项目。
 
-> [!TIP]
-> 有关如何配置 ASP.NET web 应用程序设置的规则的信息，请参阅[如何：为 ASP.NET web 应用程序配置代码分析](../code-quality/how-to-configure-code-analysis-for-an-aspnet-web-application.md)。
+有关如何为 ASP.NET web 应用程序配置规则集的信息, 请参阅[如何:为 ASP.NET web 应用程序](../code-quality/how-to-configure-code-analysis-for-an-aspnet-web-application.md)配置代码分析。
 
-## <a name="to-configure-a-rule-set-for-a-net-framework-project"></a>若要配置的规则设置为.NET Framework 项目
+> [!NOTE]
+> 本文适用于传统分析, 不适用于[基于 .NET Compiler Platform 的代码分析器](use-roslyn-analyzers.md), 不在生成后运行代码分析。
+
+## <a name="configure-a-rule-set-for-a-net-framework-project"></a>为 .NET Framework 项目配置规则集
 
 1. 打开**代码分析**项目的属性页上的选项卡。 可以在以下两种方式来执行此操作：
 
-   - 在中**解决方案资源管理器**，选择的项目。 在菜单栏上，选择**分析** > **配置代码分析** > **对于\<项目名称 >**。
+   - 在中**解决方案资源管理器**，选择的项目。 在菜单栏上，选择**分析** > **配置代码分析** > **对于\<项目名称 >** 。
 
    - 右键单击该项目中的**解决方案资源管理器**，然后选择**属性**，然后选择**代码分析**选项卡。
 
 1. 在中**配置**并**平台**列表中，选择生成配置和目标平台。
 
-1. 若要运行代码分析，每次使用所选的配置生成项目，选择**生成时启用代码分析**复选框。 您可以还手动运行代码分析通过选择**分析** > **运行代码分析** > **上运行代码分析\<项目名称 >**.
+1. 若要运行代码分析，每次使用所选的配置生成项目，选择**生成时启用代码分析**复选框。 您可以还手动运行代码分析通过选择**分析** > **运行代码分析** > **上运行代码分析\<项目名称 >** .
 
 1. 默认情况下，代码分析不报告由外部工具自动生成的代码所产生的警告。 若要查看生成的代码，请清除**禁止显示生成代码的结果**复选框。
 
@@ -49,7 +50,7 @@ ms.locfileid: "53939753"
 
     - 选择你想要使用的规则集。
 
-    - 选择**\<浏览...>** 若要查找的现有的自定义规则集不在列表中。
+    - 选择 **\<浏览...>** 若要查找的现有的自定义规则集不在列表中。
 
     - 定义[自定义规则集](../code-quality/how-to-create-a-custom-rule-set.md)。
 

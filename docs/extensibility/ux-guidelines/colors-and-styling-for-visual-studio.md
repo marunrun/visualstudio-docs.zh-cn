@@ -3,17 +3,17 @@ title: Visual Studio 的颜色和样式 |Microsoft Docs
 ms.date: 07/31/2017
 ms.topic: conceptual
 ms.assetid: 0e384ea1-4d9e-4307-8884-6e183900732c
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 12555b48550d252ce125ac437c1e30d5ae22fae9
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: faded3e4a541ad899306e40bf9d46bf96a6b8ace
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53914603"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66338350"
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>Visual Studio 的颜色和样式
 
@@ -85,7 +85,7 @@ Visual Studio 源代码包括多个包定义文件，包含的标记名称和每
 
 ![工具&gt;选项对话框](../../extensibility/ux-guidelines/media/0301-a_toolsoptionsdialog.png "0301 a_ToolsOptionsDialog")<br />工具&gt;选项对话框
 
-##  <a name="BKMK_TheVSColorService"></a> VSColor Service
+## <a name="BKMK_TheVSColorService"></a> VSColor Service
 
 Visual Studio 提供的环境颜色服务，也称为 VSColor service 或外壳颜色服务。 此服务，可将 UI 元素的颜色值绑定到集，其中包含每个主题颜色的名称-值颜色。 VSColor 服务必须用于所有 UI 元素，以便颜色自动更改以反映当前用户选择了主题，并以使 UI 绑定到的环境颜色服务将集成新的主题在将来版本的 Visual Studio。
 
@@ -112,7 +112,6 @@ IVsUIShell2::GetVSSysColorEx(VSSYSCOLOR dwSysColIndex, DWORD *pdwRGBval)
 文件 VSShell80.idl，枚举中`__VSSYSCOLOREX`具有 shell 颜色常量。 若要使用它，传入的索引值形式中的值之一`enum __VSSYSCOLOREX`记录在 MSDN 或常规索引号 Windows 系统 API， `GetSysColor`，接受。 执行此操作获取返回应在第二个参数中使用的颜色的 RGB 值。
 
 如果存储笔或使用一种新颜色的画笔，则必须`AdviseBroadcastMessages`（从 Visual Studio shell 中) 和侦听`WM_SYSCOLORCHANGE`和`WM_THEMECHANGED`消息。
-
 
 若要访问本机代码中的颜色服务，你将类似于下面这样的调用：
 
@@ -268,7 +267,7 @@ protected override void Dispose(bool disposing)
 }
 ```
 
-##  <a name="BKMK_ChoosingHighContrastColors"></a> 选择高对比度颜色
+## <a name="BKMK_ChoosingHighContrastColors"></a> 选择高对比度颜色
 
 ### <a name="overview"></a>概述
 
@@ -331,7 +330,7 @@ Windows 使用增加的文本、 背景和图像的色彩对比度的多个高�
 | WindowFrame | -IDE 边框 |
 | WindowText | -自动隐藏选项卡上的前景色<br />-所选工具窗口选项卡前景色<br />-失去焦点或未选定的临时选项卡前景色和失去焦点的文档窗口选项卡<br />-未选定标志符号通过树视图默认前景色和悬停<br />的所选工具窗口选项卡边框<br />-滚动条滚动块背景、 边框和标志符号 |
 
-##  <a name="BKMK_ExposingColorsForEndUsers"></a> 为最终用户公开的颜色
+## <a name="BKMK_ExposingColorsForEndUsers"></a> 为最终用户公开的颜色
 
 ### <a name="overview"></a>概述
 
@@ -359,7 +358,7 @@ VSPackage 可以控制字体和通过自定义类别的颜色和字体和颜色�
 
 填充注册表具有两个值：
 
-| name | 类型 | 数据 | 描述 |
+| 名称 | 类型 | 数据 | 描述 |
 | --- | --- | --- | --- |
 | 类别 | REG_SZ | GUID | 创建标识类别的 GUID |
 | package | REG_SZ | GUID | 支持类别的 VSPackage 服务的 GUID |
@@ -372,7 +371,7 @@ VSPackage 可以控制字体和通过自定义类别的颜色和字体和颜色�
 
 填充注册表具有两个值：
 
-| name | 类型 | 数据 | 描述 |
+| 名称 | 类型 | 数据 | 描述 |
 |--- | --- | --- | --- |
 | 类别 | REG_SZ | GUID | 创建标识类别的 GUID |
 | package | REG_SZ | GUID | 支持类别的 VSPackage 服务的 GUID |

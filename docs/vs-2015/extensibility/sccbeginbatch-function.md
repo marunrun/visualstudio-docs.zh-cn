@@ -1,14 +1,9 @@
 ---
 title: SccBeginBatch 函数 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - SccBeginBatch
 helpviewer_keywords:
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 33968183-2e15-4e0d-955b-ca12212d1c25
 caps.latest.revision: 15
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 31064e0bc746ecc6fb67f5e2feacbd9ae91ca7bd
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 264d9057bf4f17281d6d8a16ed3a6794004e0e21
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51724346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68189558"
 ---
 # <a name="sccbeginbatch-function"></a>SccBeginBatch 函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,13 +30,13 @@ ms.locfileid: "51724346"
 SCCRTN SccBeginBatch(void);  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  无。  
   
 ## <a name="return-value"></a>返回值  
  此函数的源控制插件实现应返回以下值之一：  
   
-|“值”|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |SCC_OK|一批操作已成功开始。|  
 |SCC_E_UNKNOWNERROR|非特定故障。|  
@@ -54,4 +49,3 @@ SCCRTN SccBeginBatch(void);
 ## <a name="see-also"></a>请参阅  
  [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccEndBatch](../extensibility/sccendbatch-function.md)
-

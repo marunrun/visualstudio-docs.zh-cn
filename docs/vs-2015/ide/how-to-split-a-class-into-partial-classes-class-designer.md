@@ -1,14 +1,9 @@
 ---
 title: 如何：将类拆分为分部类（类设计器）| Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - Class Designer, partial classes
 - partial classes, Class Designer
@@ -16,13 +11,13 @@ ms.assetid: 6f6b0b30-3996-4569-9200-20482b3adf90
 caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 6ae389e3bfe32e2e040da5bef3f41a51ff69555d
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 23d344d2f350b5b7a2e376e8856c916d9baa01f2
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49245474"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65702613"
 ---
 # <a name="how-to-split-a-class-into-partial-classes-class-designer"></a>如何：将类拆分为分部类（类设计器）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,9 +33,9 @@ ms.locfileid: "49245474"
  下面的示例将类 `Employee` 的定义拆分到两个声明中，其中每一个均定义一个不同的过程。 示例中的两个分部定义可能在一个源文件中或在两个不同的源文件中。  
   
 > [!NOTE]
->  Visual Basic 使用分部类定义将 Visual Studio 生成的代码与用户编写的代码分开。 代码被分成单独的源文件。 例如，“Windows 窗体设计器”定义了控件的分部类，如 `Form`。 不应修改这些控件中生成的代码。  
+> Visual Basic 使用分部类定义将 Visual Studio 生成的代码与用户编写的代码分开。 代码被分成单独的源文件。 例如，“Windows 窗体设计器”定义了控件的分部类，如 `Form`。 不应修改这些控件中生成的代码。  
   
- 有关 Visual Basic 中分部类型的详细信息，请参阅[分部](http://msdn.microsoft.com/library/7adaef80-f435-46e1-970a-269fff63b448)。  
+ 有关 Visual Basic 中分部类型的详细信息，请参阅[分部](https://msdn.microsoft.com/library/7adaef80-f435-46e1-970a-269fff63b448)。  
   
 ## <a name="example"></a>示例  
  若要拆分 Visual Basic 中的类定义，请使用 `Partial` 关键字，如以下示例所示。  
@@ -81,10 +76,7 @@ public partial class Employee
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [分部类和方法](http://msdn.microsoft.com/library/804cecb7-62db-4f97-a99f-60975bd59fa1)   
- [分部（类型）](http://msdn.microsoft.com/library/27320743-a22e-4c7b-b0b3-53afe3607334)   
- [分部（方法）（C# 参考）](http://msdn.microsoft.com/library/43f40242-17e0-4452-8573-090503ad3137)   
- [Partial](http://msdn.microsoft.com/library/7adaef80-f435-46e1-970a-269fff63b448)
-
-
-
+ [分部类和方法](https://msdn.microsoft.com/library/804cecb7-62db-4f97-a99f-60975bd59fa1)   
+ [分部（类型）](https://msdn.microsoft.com/library/27320743-a22e-4c7b-b0b3-53afe3607334)   
+ [分部（方法）（C# 参考）](https://msdn.microsoft.com/library/43f40242-17e0-4452-8573-090503ad3137)   
+ [Partial](https://msdn.microsoft.com/library/7adaef80-f435-46e1-970a-269fff63b448)

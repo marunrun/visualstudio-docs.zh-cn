@@ -7,17 +7,17 @@ dev_langs:
 - CSharp
 helpviewer_keywords:
 - coauthoring, in Excel
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 62e73362a04d334027075d5c1fea9cc4c0b5d3bf
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 96d83bbe34e0510ccf14204eb83fa1ed2da2d173
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53871065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62978180"
 ---
 # <a name="understand-coauthoring-and-add-ins"></a>了解共同编写和外接程序
 
@@ -26,4 +26,4 @@ ms.locfileid: "53871065"
 注意:共同编写的 Windows 桌面 Excel 在 2017年中引入，目前适用于 office 365 订阅服务器。 购买到 Office 2016 或更早版本的永久许可证用户当前不具有访问共同编写功能。 （Excel Online，适用于 Android 的 Excel，适用于 iOS、 Excel 和 Windows 应用商店中的 Excel Mobile 还支持共同编写）。
 
 ## <a name="see-also"></a>请参阅
-[Excel 解决方案](./excel-solutions.md)
+- [Excel 解决方案](./excel-solutions.md)

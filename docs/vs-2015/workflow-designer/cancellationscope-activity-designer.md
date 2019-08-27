@@ -1,11 +1,8 @@
 ---
 title: CancellationScope 活动设计器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.CancellationScope.UI
@@ -13,13 +10,13 @@ ms.assetid: 2c85d663-b219-4142-9866-7693ffd46379
 caps.latest.revision: 8
 author: gewarren
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: 125e9fd934ce40d2a6633daa62b817628306daa3
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 6207d1fcd2e920de979a13624e5cf1b442c2703c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49229887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62977201"
 ---
 # <a name="cancellationscope-activity-designer"></a>CancellationScope 活动设计器
 **CancellationScope**活动设计器用于创建和配置<xref:System.Activities.Statements.CancellationScope>活动。  
@@ -45,5 +42,5 @@ ms.locfileid: "49229887"
  [事务](../workflow-designer/transaction-activity-designers.md)   
  [CompensableActivity](../workflow-designer/compensableactivity-activity-designer.md)   
  [补偿](../workflow-designer/compensate-activity-designer.md)   
- [确认](../workflow-designer/confirm-activity-designer.md)   
+ [Confirm](../workflow-designer/confirm-activity-designer.md)   
  [TransactionScope](../workflow-designer/transactionscope-activity-designer.md)

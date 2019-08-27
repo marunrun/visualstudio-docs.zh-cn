@@ -1,30 +1,24 @@
 ---
 title: 上下文菜单 （XML 架构资源管理器） |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-xml-tools
+ms.topic: conceptual
 ms.assetid: 42ab17ca-b8c1-40d7-beda-d033f66fe874
 caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 854ea473f2f606b28052b093978253372b4fec59
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: d6c14a268ef58dec31f65fe73e176eac8f690d9c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49294603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68157753"
 ---
 # <a name="context-menus-xml-schema-explorer"></a>上下文菜单（XML 架构资源管理器）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 以下上下文菜单项用于执行特定于架构的搜索和其他操作。  
   
 ## <a name="node-type-schema-set"></a>节点类型：架构集  
@@ -92,7 +86,7 @@ ms.locfileid: "49294603"
 |**显示所有派生类型**|查找并突出显示从所选类型直接和间接派生的所有类型。|  
 |**显示所有上级**|显示所有父（基）类型。|  
   
-## <a name="node-type-attribute"></a>节点类型：属性  
+## <a name="node-type-attribute"></a>节点类型：特性  
  除了上述全局节点选项之外，特性节点的上下文菜单还拥有以下选项：  
   
 |选项|描述|  
@@ -101,7 +95,7 @@ ms.locfileid: "49294603"
 |**转到原始特性**|对于属性引用，导航至特性的实际定义。|  
 |**显示所有引用**|对于全局特性，查找并突出显示对所选特性的所有引用（具有 `ref="selectedAttribute"` 的其他特性）。|  
   
-## <a name="node-type-attribute-group"></a>节点类型：属性组  
+## <a name="node-type-attribute-group"></a>节点类型：特性组  
  除了上述全局节点选项之外，特性组节点的上下文菜单还拥有以下选项：  
   
 |选项|描述|  
@@ -110,7 +104,7 @@ ms.locfileid: "49294603"
 |**显示所有成员**|查找并突出显示特性组的所有成员。|  
 |**显示所有引用**|查找并突出显示对所选特性组的所有引用（具有 `ref="selectedAttributeGroup"` 的特性组）。|  
   
-## <a name="node-type-named-group"></a>节点类型：命名组  
+## <a name="node-type-named-group"></a>节点类型：命名的组  
  除了上述全局节点选项之外，命名组节点的上下文菜单还拥有以下选项：  
   
 |选项|描述|  
@@ -122,6 +116,3 @@ ms.locfileid: "49294603"
 ## <a name="see-also"></a>请参阅  
  [XML 架构资源管理器](../xml-tools/xml-schema-explorer.md)   
  [搜索架构集](../xml-tools/searching-the-schema-set.md)
-
-
-

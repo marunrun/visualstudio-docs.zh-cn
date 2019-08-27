@@ -12,34 +12,33 @@ helpviewer_keywords:
 ms.assetid: cfe274f0-71fe-40f6-994e-7c7f6273c9ba
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 38ed283a70716f0f282bdcdf60c18f0f38fc8bb2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: 653a9b589e68c326fc40a94ed0fa3ab7e49acb8b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53822151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62567645"
 ---
 # <a name="create-relationships-between-datasets"></a>创建数据集之间的关系
 包含相关的数据的数据集表，表使用<xref:System.Data.DataRelation>对象来表示表之间的父/子关系，并从另一个返回相关的记录。 通过将相关的表添加到数据集**数据源配置向导**，或**数据集设计器**下创建并配置<xref:System.Data.DataRelation>为您的对象。
 
 <xref:System.Data.DataRelation>对象执行两个功能：
 
--   它可以提供与你正在使用的记录相关的记录。 它提供了子记录，如果你在父记录 (<xref:System.Data.DataRow.GetChildRows%2A>)，如果你正在使用子记录的父记录 (<xref:System.Data.DataRow.GetParentRow%2A>)。
+- 它可以提供与你正在使用的记录相关的记录。 它提供了子记录，如果你在父记录 (<xref:System.Data.DataRow.GetChildRows%2A>)，如果你正在使用子记录的父记录 (<xref:System.Data.DataRow.GetParentRow%2A>)。
 
--   它可以强制执行约束的引用完整性，例如当删除父记录中删除相关的子记录。
+- 它可以强制执行约束的引用完整性，例如当删除父记录中删除相关的子记录。
 
 务必要了解真正的联接的函数之间的区别<xref:System.Data.DataRelation>对象。 在真正的联接，记录处于取自父和子表，将放入单个的平面记录集。 当你使用<xref:System.Data.DataRelation>对象，创建新的记录集。 相反，DataRelation 跟踪的表之间的关系，并使父和子记录保持同步。
 
 ## <a name="datarelation-objects-and-constraints"></a>DataRelation 对象和约束
 一个<xref:System.Data.DataRelation>对象还用于创建和强制实施以下限制：
 
--   唯一约束，这可确保表中的列包含没有重复项。
+- 唯一约束，这可确保表中的列包含没有重复项。
 
--   Foreign key 约束，可用于在数据集中的父和子表之间维护引用完整性。
+- Foreign key 约束，可用于在数据集中的父和子表之间维护引用完整性。
 
 在中指定的约束<xref:System.Data.DataRelation>对象实现通过自动创建相应的对象或设置属性。 如果您通过使用创建 foreign key 约束<xref:System.Data.DataRelation>对象、 实例的<xref:System.Data.ForeignKeyConstraint>类添加到<xref:System.Data.DataRelation>对象的<xref:System.Data.DataRelation.ChildKeyConstraint%2A>属性。
 
@@ -48,11 +47,11 @@ ms.locfileid: "53822151"
 ### <a name="referential-integrity-rules"></a>引用完整性规则
 作为外键约束的一部分，可以指定应用于三个点的引用完整性规则：
 
--   更新父记录时
+- 更新父记录时
 
--   删除父记录时
+- 删除父记录时
 
--   当接受或拒绝更改
+- 当接受或拒绝更改
 
 可在规则中指定<xref:System.Data.Rule>枚举并列出在下表中。
 
@@ -77,33 +76,33 @@ ms.locfileid: "53822151"
 
 #### <a name="to-create-a-relationship-between-two-data-tables"></a>若要创建的两个数据表之间的关系
 
-1.  在“数据集设计器”中打开数据集。 有关详细信息，请参见[演练：在数据集设计器中创建数据集](walkthrough-creating-a-dataset-with-the-dataset-designer.md)。
+1. 在“数据集设计器”中打开数据集。 有关详细信息，请参见[演练：在数据集设计器中创建数据集](walkthrough-creating-a-dataset-with-the-dataset-designer.md)。
 
-2.  拖动**关系**对象从**数据集**工具箱拖到关系中子数据的表。
+2. 拖动**关系**对象从**数据集**工具箱拖到关系中子数据的表。
 
      **关系**对话框将打开，填充**子表**与您拖动表框**关系**拖到对象。
 
-3.  选择从父表**父表**框。 父表包含一个对多关系的"一"方上的记录。
+3. 选择从父表**父表**框。 父表包含一个对多关系的"一"方上的记录。
 
-4.  验证正确的子表显示在**子表**框。 子表包含一个对多关系的"多"方上的记录。
+4. 验证正确的子表显示在**子表**框。 子表包含一个对多关系的"多"方上的记录。
 
-5.  键入的名称中的关系**名称**框中，或保留默认名称基于所选的表。 这是实际的名称<xref:System.Data.DataRelation>在代码中的对象。
+5. 键入的名称中的关系**名称**框中，或保留默认名称基于所选的表。 这是实际的名称<xref:System.Data.DataRelation>在代码中的对象。
 
-6.  选择联接中的表的列**键列**并**外键列**列出。
+6. 选择联接中的表的列**键列**并**外键列**列出。
 
-7.  选择是否创建一个关系、 约束，或这两者。
+7. 选择是否创建一个关系、 约束，或这两者。
 
-8.  选中或清除**嵌套关系**框。 选择此选项设置<xref:System.Data.DataRelation.Nested%2A>属性设置为`true`，这将导致子行要以 XML 数据形式编写或与同步这些行时嵌套在父列的关系的<xref:System.Xml.XmlDataDocument>。 有关详细信息，请参阅[嵌套 Datarelation](/dotnet/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations)。
+8. 选中或清除**嵌套关系**框。 选择此选项设置<xref:System.Data.DataRelation.Nested%2A>属性设置为`true`，这将导致子行要以 XML 数据形式编写或与同步这些行时嵌套在父列的关系的<xref:System.Xml.XmlDataDocument>。 有关详细信息，请参阅[嵌套 Datarelation](/dotnet/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations)。
 
-9. 设置对这些表中的记录进行更改时要强制实施的规则。 有关更多信息，请参见<xref:System.Data.Rule>。
+9. 设置对这些表中的记录进行更改时要强制实施的规则。 有关详细信息，请参阅 <xref:System.Data.Rule>。
 
 10. 单击**确定**来创建关系。 在两个表之间的设计器中显示的关系线。
 
 #### <a name="to-display-a-relation-name-in-the-dataset-designer"></a>若要在数据集设计器中显示的关系名称
 
-1.  在“数据集设计器”中打开数据集。 有关详细信息，请参见[演练：在数据集设计器中创建数据集](walkthrough-creating-a-dataset-with-the-dataset-designer.md)。
+1. 在“数据集设计器”中打开数据集。 有关详细信息，请参见[演练：在数据集设计器中创建数据集](walkthrough-creating-a-dataset-with-the-dataset-designer.md)。
 
-2.  从**数据**菜单中，选择**显示关系标签**命令以显示该关系名称。 清除该命令，以隐藏关系名称。
+2. 从**数据**菜单中，选择**显示关系标签**命令以显示该关系名称。 清除该命令，以隐藏关系名称。
 
 ## <a name="see-also"></a>请参阅
 

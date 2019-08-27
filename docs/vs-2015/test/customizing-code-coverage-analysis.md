@@ -1,24 +1,19 @@
 ---
 title: 自定义代码覆盖率分析 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-test
+ms.topic: conceptual
 ms.assetid: f6337c35-acae-4c5f-b5d9-ac5ff687ef18
 caps.latest.revision: 18
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: d8a0b09bf2e67813548865b6ed56fee0b0170cc5
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 15093cc6af6e61384c393b1c3e435df3840a2811
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49890161"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65686439"
 ---
 # <a name="customizing-code-coverage-analysis"></a>自定义代码覆盖率分析
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,7 +30,7 @@ ms.locfileid: "49890161"
   
    获取这些程序集的 .pdb 文件并将这些文件复制到与程序集 .dll 文件相同的文件夹中。  
   
-  若要自定义代码覆盖率行为，请复制[本主题结尾的示例](#sample)，然后使用文件扩展名 .runsettings 将其添加到你的解决方案中。 根据你自己的需求编辑示例，然后在“测试”菜单上，依次选择“测试设置”和“选择测试设置文件”。 本主题的其余部分更详细地介绍了此过程。  
+  若要自定义代码覆盖率行为，请复制[本主题结尾的示例](#sample)，然后使用文件扩展名 .runsettings 将其添加到你的解决方案中。 根据你自己的需求编辑示例，然后在“测试”  菜单上，依次选择“测试设置”  和“选择测试设置文件”  。 本主题的其余部分更详细地介绍了此过程。  
   
 ## <a name="the-runsettings-file"></a>.runsettings 文件  
  高级代码覆盖率设置在 .runsettings 文件中指定。 这是由单元测试工具使用的配置文件。 建议复制[本主题结尾的示例](#sample)，然后根据你自己的需求编辑示例。  
@@ -48,15 +43,15 @@ ms.locfileid: "49890161"
   
 1. 将 .xml 文件添加为扩展名为 `.runsettings` 的解决方案项：  
   
-    在“解决方案资源管理器”中，从解决方案的快捷菜单中，依次选择“添加”、“新建项”和“XML 文件”。 保存名称以 `CodeCoverage.runsettings` 等结尾的文件  
+    在“解决方案资源管理器”中，从解决方案的快捷菜单中，依次选择“添加”  、“新建项”  和“XML 文件”  。 保存名称以 `CodeCoverage.runsettings` 等结尾的文件  
   
 2. 添加本主题结尾的示例中给定的内容，然后按你的需要自定义它，如以下章节所述。  
   
-3. 在“测试”菜单上，依次选择“测试设置”、“选择测试设置文件”和文件。  
+3. 在“测试”  菜单上，依次选择“测试设置”  、“选择测试设置文件”  和文件。  
   
-4. 现在，当你运行“分析代码覆盖率”时，此 `.runsettings` 文件将会控制其行为。 不要忘记你必须再次运行代码覆盖率：在运行测试或更新代码时，你之前的覆盖率结果和代码着色不会自动更新。  
+4. 现在，当你运行“分析代码覆盖率”  时，此 `.runsettings` 文件将会控制其行为。 不要忘记你必须再次运行代码覆盖率：在运行测试或更新代码时，你之前的覆盖率结果和代码着色不会自动更新。  
   
-5. 若要禁用和启用自定义设置，请依次选择“测试”和“测试设置”菜单，然后取消选择或选择文件。  
+5. 若要禁用和启用自定义设置，请依次选择“测试”  和“测试设置”  菜单，然后取消选择或选择文件。  
   
    ![包含自定义设置文件的“测试设置”菜单](../test/media/codecoverage-settingsfile.png "CodeCoverage-settingsFile")  
   
@@ -74,7 +69,7 @@ ms.locfileid: "49890161"
 ```  
   
 > [!WARNING]
->  符号解析可能很耗时，尤其是在使用包含大量程序集的远程文件位置时。 因此，请考虑将远程 .pdb 文件复制到与二进制文件（.dll 和 .exe）相同的本地位置。  
+> 符号解析可能很耗时，尤其是在使用包含大量程序集的远程文件位置时。 因此，请考虑将远程 .pdb 文件复制到与二进制文件（.dll 和 .exe）相同的本地位置。  
   
 ### <a name="excluding-and-including"></a>排除和包括  
  你可以从代码覆盖率分析中排除指定的程序集。 例如：  
@@ -106,7 +101,7 @@ ms.locfileid: "49890161"
 ### <a name="regular-expressions"></a>正则表达式  
  包括和排除节点使用正则表达式。 有关详细信息，请参阅[在 Visual Studio 中使用正则表达式](../ide/using-regular-expressions-in-visual-studio.md)。 正则表达式与通配符不同。 具体而言：  
   
-1. **\.\\*** 匹配任何字符的字符串  
+1. **\.\\** * 与包含任意字符的字符串匹配  
   
 2. **\\.** 与句点“.”匹配  
   
@@ -139,7 +134,7 @@ ms.locfileid: "49890161"
 ```  
   
 > [!WARNING]
->  如果正则表达式中存在错误（如未转义和不匹配的括号），则不会运行代码覆盖率分析。  
+> 如果正则表达式中存在错误（如未转义和不匹配的括号），则不会运行代码覆盖率分析。  
   
 ### <a name="other-ways-to-include-or-exclude-elements"></a>包括或排除元素的其他方法  
  有关示例，请参阅[本主题结尾的示例](#sample)。  
@@ -158,7 +153,7 @@ ms.locfileid: "49890161"
   
   **与函数名称匹配**  
   
-  正则表达式必须与函数的完全限定名匹配，包括命名空间、类名、方法名称和参数列表。 例如，  
+  正则表达式必须与函数的完全限定名匹配，包括命名空间、类名、方法名称和参数列表。 例如，应用于对象的  
   
 - C# 或 Visual Basic：`Fabrikam.Math.LocalMath.SquareRoot(double)`  
   
@@ -183,16 +178,16 @@ ms.locfileid: "49890161"
 ## <a name="how-to-specify-runsettings-files-while-running-tests"></a>如何在运行测试时指定 .runsettings 文件  
   
 ### <a name="to-customize-runsettings-in-visual-studio-tests"></a>在 Visual Studio 测试中自定义 runsettings  
- 依次选择“测试”、“测试设置”、“选择测试设置文件”和 .runsettings 文件。 该文件将显示在“测试设置”菜单上，你可以选择或取消它。 选择后，每当你使用“分析代码覆盖率”时，都会应用 .runsettings 文件。  
+ 依次选择“测试”  、“测试设置”  、“选择测试设置文件”  和 .runsettings 文件。 该文件将显示在“测试设置”菜单上，你可以选择或取消它。 选择后，每当你使用“分析代码覆盖率”  时，都会应用 .runsettings 文件。  
   
 ### <a name="to-customize-run-settings-in-a-command-line-test"></a>在命令行测试中自定义运行设置  
- 若要从命令行运行测试，请使用 vstest.console.exe。 此设置文件是此实用工具的一个参数。 有关详细信息，请参阅[通过命令行使用 VSTest.console](http://msdn.microsoft.com/library/852812d8-b3bb-407e-bc43-04d511fcb27a)。  
+ 若要从命令行运行测试，请使用 vstest.console.exe。 此设置文件是此实用工具的一个参数。 有关详细信息，请参阅[通过命令行使用 VSTest.console](https://msdn.microsoft.com/library/852812d8-b3bb-407e-bc43-04d511fcb27a)。  
   
-1.  启动 Visual Studio 开发人员命令提示符：  
+1. 启动 Visual Studio 开发人员命令提示符：  
   
-     在 Windows 的“开始”上，依次选择“所有程序”、“Microsoft Visual Studio”、“Visual Studio Tools”和“开发人员命令提示”。  
+     在 Windows 的“开始”  上，依次选择“所有程序”  、“Microsoft Visual Studio”  、“Visual Studio Tools”  和“开发人员命令提示”  。  
   
-2.  运行：  
+2. 运行：  
   
      `vstest.console.exe MyTestAssembly.dll /EnableCodeCoverage /Settings:CodeCoverage.runsettings`  
   
@@ -203,17 +198,17 @@ ms.locfileid: "49890161"
   
 1. 确保签入你的 .runsettings 文件。  
   
-2. 在“团队资源管理器”中，打开“生成”，然后添加或编辑生成定义。  
+2. 在“团队资源管理器”中，打开“生成”，然后添加或编辑生成定义。   
   
-3. 在“进程”页中，展开“自动测试”、“测试源”和“运行设置”。 选择 **.runsettings** 文件。  
+3. 在“进程”页中，展开“自动测试”、“测试源”和“运行设置”。     选择 **.runsettings** 文件。  
   
-   - <em>但是**测试程序集</em>* 而不是将显示**测试源**。尝试设置“运行设置”** 字段时，我只能选择 .testsettings 文件。*  
+   - 不过，显示的是“测试程序集”，而不是“测试源”<em>   。尝试设置“运行设置”  字段时，我只能选择 .testsettings 文件。*  
   
-      在“自动测试”下，依次选择“测试程序集”和行尾的“[...]”。 在“添加/编辑测试运行”对话框中，将“测试运行程序”设为“Visual Studio 测试运行程序”。  
+      在“自动测试”  下，依次选择“测试程序集”  和行尾的“[...]”  。 在“添加/编辑测试运行”  对话框中，将“测试运行程序”  设为“Visual Studio 测试运行程序”  。  
   
    结果在生成报告的摘要部分可见。  
   
-##  <a name="sample"></a>示例 .runsettings 文件  
+## <a name="sample"></a>示例 .runsettings 文件  
  复制此代码并对其进行编辑以满足你自己的需求。 这是默认的 .runsettings 文件。  
   
  （有关 .runsettings 文件的其他用法，请参阅[使用 .runsettings 文件配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)。）  
@@ -242,7 +237,7 @@ Note that searching for symbols increases code coverage runtime. So keep this sm
 <!--  
 About include/exclude lists:  
 Empty "Include" clauses imply all; empty "Exclude" clauses imply none.  
-Each element in the list is a regular expression (ECMAScript syntax). See http://msdn.microsoft.com/library/2k3te2cs.aspx.  
+Each element in the list is a regular expression (ECMAScript syntax). See https://msdn.microsoft.com/library/2k3te2cs.aspx.  
 An item must first match at least one entry in the include list to be included.  
 Included items must then not match any entries in the exclude list to remain included.  
 -->  
@@ -333,6 +328,3 @@ Included items must then not match any entries in the exclude list to remain inc
 ## <a name="see-also"></a>请参阅  
  [使用代码覆盖率确定受测代码量](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)   
  [单元测试代码](../test/unit-test-your-code.md)
-
-
-

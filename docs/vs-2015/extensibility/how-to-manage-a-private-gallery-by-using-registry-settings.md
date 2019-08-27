@@ -1,29 +1,24 @@
 ---
-title: 如何： 通过使用注册表设置管理专用库 |Microsoft Docs
-ms.custom: ''
+title: 如何：通过使用注册表设置管理专用库 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - VSIX private galleries, managing
 - managing VSIX private galleries
 ms.assetid: 86b86442-4293-4cad-9fe2-876eef65f426
 caps.latest.revision: 7
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 371fea42e1e59907c08d0a7e51a56875c1b73537
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: a55b7aa486edfd3775b12dca9d143c2e5f280884
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51744448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68204155"
 ---
-# <a name="how-to-manage-a-private-gallery-by-using-registry-settings"></a>如何： 通过使用注册表设置管理专用库
+# <a name="how-to-manage-a-private-gallery-by-using-registry-settings"></a>如何：通过使用注册表设置管理专用库
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 如果你是管理员或独立 Shell 扩展开发人员，您可以控制对控件、 模板和工具在 Visual Studio 库、 示例库或专用库的访问。 若要使库可用或不可用，请创建描述已修改的注册表项和其值的.pkgdef 文件。  
@@ -45,9 +40,9 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
   
  `Repositories`键是指要启用或禁用库。 Visual Studio 库和示例库使用以下存储库的 Guid:  
   
-- Visual Studio 库： 0F45E408-7995-4375-9485-86B8DB553DC9  
+- Visual Studio 库：0F45E408-7995-4375-9485-86B8DB553DC9  
   
-- 示例库： AEB9CB40-D8E6-4615-B52C-27E307F8506C  
+- 示例库：AEB9CB40-D8E6-4615-B52C-27E307F8506C  
   
   `Disabled`值是可选的。 默认情况下，启用了库。  
   
@@ -76,4 +71,3 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
   
 ## <a name="see-also"></a>请参阅  
  [专用库](../extensibility/private-galleries.md)
-

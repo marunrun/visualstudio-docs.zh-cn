@@ -9,15 +9,15 @@ helpviewer_keywords:
 - autosave
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e0529876ab7a055e455fbe53b379afc4db43e0fc
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ceaf13e24d56060e3d962e108d43c4d87d69fb8c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53932965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62826678"
 ---
 # <a name="how-autosave-impacts-office-solutions"></a>自动保存如何影响 Office 解决方案
 
@@ -27,5 +27,4 @@ ms.locfileid: "53932965"
 > Windows 桌面 Word 的自动保存、 Excel 和 PowerPoint 在 2017年中引入，目前适用于 office 365 订阅服务器。 如果您购买了为 Office 2016 或更低的永久许可证，你当前没有访问共同编写功能。 （Excel Online，适用于 Android 的 Excel，适用于 iOS、 Excel 和 Excel Mobile，在 Windows 应用商店中支持此功能，但。）
 
 ## <a name="see-also"></a>请参阅
-
-[开发 Office 解决方案](./developing-office-solutions.md)
+- [开发 Office 解决方案](./developing-office-solutions.md)

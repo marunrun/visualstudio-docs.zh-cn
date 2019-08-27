@@ -1,14 +1,9 @@
 ---
 title: 性能报告视图 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - reports, profiling tools
 - profiling tools reports
@@ -17,13 +12,13 @@ ms.assetid: 3e84e513-dc64-40bb-b385-03281f28b519
 caps.latest.revision: 29
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 6905ae3a350ddb91db7cd9f500d57ccdc70cca86
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 3390a2b38e82fc89a73a5ced82ef96d7c638a95a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51806498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68161991"
 ---
 # <a name="performance-report-views"></a>性能报告视图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,8 +47,5 @@ ms.locfileid: "51806498"
  [“层交互”视图](../profiling/tier-interactions-view.md)  
  有关包含层交互数据的分析数据文件的交互视图和报告的参考信息。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [分析性能工具数据](../profiling/analyzing-performance-tools-data.md)
-
-
-

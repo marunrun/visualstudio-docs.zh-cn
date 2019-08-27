@@ -1,4 +1,18 @@
 ---
+title: 克隆存储库
+author: lisawong19
+ms.author: liwong
+manager: routlaw
+ms.date: 11/13/2017
+ms.topic: conceptual
+ms.workload:
+- multiple
+ms.openlocfilehash: 73f1595e0e6c8f182f0bedcece51011390964ed2
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62539587"
 ---
 # <a name="clone-a-repository-of-python-code-in-visual-studio"></a>在 Visual Studio 中克隆 Python 代码存储库
 
@@ -10,16 +24,16 @@
 
 2. 启动 Visual Studio。
 
-3. 选择“视图”>“团队资源管理器...”，打开“团队资源管理器”窗口，可在该窗口中连接到 GitHub 或 Azure DevOps Services，或者克隆存储库。
+3. 选择“视图”>“团队资源管理器”，打开“团队资源管理器”窗口，在该窗口中可以连接到 GitHub 或 Azure DevOps Services，或者克隆存储库。
 
-    ![显示 Azure DevOps、GitHub 并克隆存储库的“团队资源管理器”窗口](media/create-project-repo/team-explorer.png)
+    ![显示 Azure DevOps、GitHub 并克隆存储库的“团队资源管理器”窗口](media/create-project-repo/team-explorer-devops.png)
 
 4. 在“本地 Git 存储库”下的 URL 字段中，输入 `https://github.com/Microsoft/samples-for-ai`，为克隆文件输入一个文件夹，然后选择“克隆”。
 
     > [!Tip]
     > 在团队资源管理器中指定的文件夹是用于接收克隆文件的特定文件夹。 与 `git clone` 命令不同，在团队资源管理器中创建克隆时不会使用存储库名称自动创建一个子文件夹。
 
-5. 完成克隆后，双击团队资源管理器底部的存储库文件夹，导航到存储库仪表板。 在“解决方案”下方，选择“新建...”。
+5. 完成克隆后，双击团队资源管理器底部的存储库文件夹，导航到存储库仪表板。 在“解决方案”下方，选择“新建”。
 
     ![“团队资源管理器”窗口，从克隆创建新项目](media/create-project-repo/team-explorer-new-project.png)
 
@@ -29,7 +43,7 @@
 
 8. 在解决方案资源管理器中，展开 `TensorFlow Examples> MNIST` 节点，右键单击 `convolutional.py`，然后选择“设置为启动文件”。 此步骤指示 Visual Studio 在运行项目时应使用哪个文件。
 
-9. 按 Ctrl+F5，或依次选择“调试”>“启动但不调试”，以运行程序。 如果看到 `，则重新检查上一步中的工作目录设置。
+9. 按 Ctrl+F5，或依次选择“调试”>“启动但不调试”，以运行程序。 如果发现错误，请在上一步中重新检查工作目录设置。
 
 10. 程序成功运行时，可看见它开始下载培训和测试数据集，然后训练模型并输出错误率。 需要错误率随着时间推移降低
 
@@ -42,6 +56,6 @@
 
    ![运行 tensorboard](media/create-project-repo/run-tensorboard.png)
 
-12. 注意到错误随着时间推移减少，这意味着质量在不断提高
+12. 请注意，错误随着时间推移而减少，这意味着质量在不断提高。
 
    ![运行 tensorboard](media/create-project-repo/tensorboard.png)

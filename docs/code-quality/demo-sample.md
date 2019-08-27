@@ -1,7 +1,6 @@
 ---
 title: 用于代码分析的示例 C++ 项目
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: sample
 helpviewer_keywords:
 - demo sample [Visual Studio ALM]
@@ -12,12 +11,12 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: ad5a7d3b2c13b603fd3a9f523563c844dda8b67d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ad28cae5e548a35e0166e1d8ed451450264241f7
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53852500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62820787"
 ---
 # <a name="sample-c-project-for-code-analysis"></a>用于代码分析的示例 C++ 项目
 

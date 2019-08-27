@@ -2,7 +2,6 @@
 title: 活动脚本创作接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -15,12 +14,12 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 787dbfab822990c94867bd7e3932c59559daa917
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: 00b041b4cb2009d247572d1e47dfff40d8548927
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54346522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63003601"
 ---
 # <a name="active-script-authoring-interfaces"></a>活动脚本创作接口
 ActivAut.h 标头文件提供了在本部分中列出的接口。  
@@ -28,15 +27,15 @@ ActivAut.h 标头文件提供了在本部分中列出的接口。
 ## <a name="in-this-section"></a>本节内容  
  以下接口启用网页创作：  
   
--   [IActiveScriptAuthor 接口](../../winscript/reference/iactivescriptauthor-interface.md)  
+- [IActiveScriptAuthor 接口](../../winscript/reference/iactivescriptauthor-interface.md)  
   
--   [IActiveScriptAuthorProcedure 接口](../../winscript/reference/iactivescriptauthorprocedure-interface.md)  
+- [IActiveScriptAuthorProcedure 接口](../../winscript/reference/iactivescriptauthorprocedure-interface.md)  
   
--   [IScriptEntry 接口](../../winscript/reference/iscriptentry-interface.md)  
+- [IScriptEntry 接口](../../winscript/reference/iscriptentry-interface.md)  
   
--   [IScriptNode 接口](../../winscript/reference/iscriptnode-interface.md)  
+- [IScriptNode 接口](../../winscript/reference/iscriptnode-interface.md)  
   
--   [IScriptScriptlet 接口](../../winscript/reference/iscriptscriptlet-interface.md)  
+- [IScriptScriptlet 接口](../../winscript/reference/iscriptscriptlet-interface.md)  
   
 ## <a name="see-also"></a>请参阅  
  [Windows 脚本接口参考](../../winscript/reference/windows-script-interfaces-reference.md)

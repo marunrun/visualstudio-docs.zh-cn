@@ -1,14 +1,9 @@
 ---
 title: 示例表达式计算的实现 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - expression evaluators
 - debugging [Debugging SDK], expression evaluators
@@ -16,32 +11,32 @@ helpviewer_keywords:
 ms.assetid: 2a5f04b8-6c65-4232-bddd-9093653a22c4
 caps.latest.revision: 10
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: a79f61351363ba14b9993181c77e1a9be88515d9
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: a7a19247b296d7e00a15051e75dd53536133c426
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51735171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63436696"
 ---
 # <a name="sample-implementation-of-expression-evaluation"></a>表达式计算的实现示例
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 > [!IMPORTANT]
->  在 Visual Studio 2015 中，这种方式实现表达式计算器已弃用。 有关实现 CLR 表达式计算器的信息，请参阅[CLR 表达式计算器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)并[托管表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。  
+> 在 Visual Studio 2015 中，这种方式实现表达式计算器已弃用。 有关实现 CLR 表达式计算器的信息，请参阅[CLR 表达式计算器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)并[托管表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。  
   
  有关**Watch**窗口表达式中，Visual Studio 调用[ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)以生成[IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md)对象。 `IDebugExpressionContext2::ParseText` 实例化的表达式计算器 (EE) 和调用[分析](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)来获取[IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md)对象。  
   
  此实现`IDebugExpressionEvaluator::Parse`执行下列任务：  
   
-1.  [C + +]分析表达式来查找错误。  
+1. [C++仅]分析表达式来查找错误。  
   
-2.  实例化一个类 (称为`CParsedExpression`在此示例中)，它实现`IDebugParsedExpression`接口，并将存储在类中要分析的表达式。  
+2. 实例化一个类 (称为`CParsedExpression`在此示例中)，它实现`IDebugParsedExpression`接口，并将存储在类中要分析的表达式。  
   
-3.  返回`IDebugParsedExpression`接口从`CParsedExpression`对象。  
+3. 返回`IDebugParsedExpression`接口从`CParsedExpression`对象。  
   
 > [!NOTE]
->  在下面的示例和 MyCEE 示例中，表达式计算器不会将从评估分析。  
+> 在下面的示例和 MyCEE 示例中，表达式计算器不会将从评估分析。  
   
 ## <a name="managed-code"></a>托管代码  
  这是一个实现的`IDebugExpressionEvaluator::Parse`在托管代码中。 请注意此版本的方法将推迟到分析[EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)用于分析的代码也计算在同一时间 (请参阅[计算监视表达式](../../extensibility/debugger/evaluating-a-watch-expression.md))。  
@@ -117,4 +112,3 @@ STDMETHODIMP CExpressionEvaluator::Parse(
 ## <a name="see-also"></a>请参阅  
  [计算监视窗口表达式](../../extensibility/debugger/evaluating-a-watch-window-expression.md)   
  [计算监视表达式](../../extensibility/debugger/evaluating-a-watch-expression.md)
-

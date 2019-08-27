@@ -1,25 +1,20 @@
 ---
 title: Point、 Bilinear、 Trilinear 和 Anisotropic 纹理过滤变量 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 57d14fc9-b5f7-45ee-9717-48086886742d
 caps.latest.revision: 11
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: ef054b1773b1f0d07e21ec25cb326594a4d3b2d9
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 5c53f3b0633ec8938de210cb518d9fae1937eb2c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51791224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68185406"
 ---
 # <a name="point-bilinear-trilinear-and-anisotropic-texture-filtering-variants"></a>Point、Bilinear、Trilinear 和 Anisotropic 纹理过滤变量
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -62,15 +57,15 @@ ms.locfileid: "51791224"
   
 - `D3D11_FILTER_ANISOTROPIC`  
   
-  在中**点纹理筛选**变体，提供应用程序的筛选模式将替换`D3D11_FILTER_MIN_MAG_MIP_POINT`; 在**双线性纹理筛选**变体，它将替换`D3D11_FILTER_MIN_MAG_LINEAR_MIP_POINT`;然后在**三线性纹理筛选**变体，它将替换`D3D11_FILTER_MIN_MAG_MIP_LINEAR`。  
+  在“点纹理筛选”变体中，应用程序提供的筛选模式将替换为 `D3D11_FILTER_MIN_MAG_MIP_POINT`；在“双线性纹理筛选”变体中，将替换为 `D3D11_FILTER_MIN_MAG_LINEAR_MIP_POINT`；在“三线性纹理筛选”变体中，将替换为 `D3D11_FILTER_MIN_MAG_MIP_LINEAR`    。  
   
-  在中**各向异性纹理筛选**变体，提供应用程序的筛选模式将替换`D3D11_FILTER_ANISOTROPIC`，并最大各向异性将设置为 16。  
+  在“各向异性纹理筛选”变体中，应用程序提供的筛选模式将替换为 `D3D11_FILTER_ANISOTROPIC`，且最大各向异性将设置为 16  。  
   
 ## <a name="restrictions-and-limitations"></a>限制和约束  
- 在 Direct3D 中，功能级别 9.1 指定最大各向异性为 2x。 因为**各向异性纹理筛选**变体尝试以独占方式使用 16 x 各向异性，帧分析功能级别 9.1 的设备上运行时播放将失败。 受此约束影响的现代设备包括基于 ARM 的 Surface RT 和 Surface 2 Windows 平板电脑。 仍然可能在某些计算机中找到的较旧 GPU 也可能会受影响，但是将它们普遍视为已过时且它们越来越不常见。  
+ 在 Direct3D 中，功能级别 9.1 指定最大各向异性为 2x。 因为“各向异性纹理筛选”变体尝试以独占方式使用 16x 各向异性，所以当帧分析在功能级别 9.1 的设备上运行时播放将失败  。 受此约束影响的现代设备包括基于 ARM 的 Surface RT 和 Surface 2 Windows 平板电脑。 仍然可能在某些计算机中找到的较旧 GPU 也可能会受影响，但是将它们普遍视为已过时且它们越来越不常见。  
   
 ## <a name="example"></a>示例  
- **点纹理筛选**可以通过使用如下代码重现变体：  
+ 通过使用如下代码，可重现“点纹理筛选”变体  ：  
   
 ```  
 D3D11_SAMPLER_DESC sampler_description;  
@@ -84,7 +79,7 @@ d3d_context->PSSetSamplers(0, 1, &sampler
 ```  
   
 ## <a name="example"></a>示例  
- **双线性纹理筛选**可以通过使用如下代码重现变体：  
+ 通过使用如下代码，可重现“双线性纹理筛选”变体  ：  
   
 ```  
 D3D11_SAMPLER_DESC sampler_description;   
@@ -98,7 +93,7 @@ d3d_context->PSSetSamplers(0, 1, &sampler
 ```  
   
 ## <a name="example"></a>示例  
- **三线性纹理筛选**可以通过使用如下代码重现变体：  
+ 通过使用如下代码，可重现“三线性纹理筛选”变体  ：  
   
 ```  
 D3D11_SAMPLER_DESC sampler_description;   
@@ -112,7 +107,7 @@ d3d_context->PSSetSamplers(0, 1, &sampler
 ```  
   
 ## <a name="example"></a>示例  
- **各向异性纹理筛选**可以通过使用如下代码重现变体：  
+ 通过使用如下代码，可重现“各向异性问题筛选”变体  ：  
   
 ```  
 D3D11_SAMPLER_DESC sampler_description;   
@@ -125,6 +120,3 @@ sampler_description.MaxAnisotropy = 16;
 d3d_device->CreateSamplerState(&sampler_desc, &sampler);  
 d3d_context->PSSetSamplers(0, 1, &sampler  
 ```
-
-
-

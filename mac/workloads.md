@@ -1,16 +1,16 @@
 ---
 title: Visual Studio for Mac 工作负载
 description: 本文介绍了可以在 Visual Studio for Mac 中使用的各种工作负载，包括 Xamarin 移动应用、ASP.NET Core 和适用于游戏的 Unity。
-author: conceptdev
-ms.author: crdun
-ms.date: 12/05/2018
+author: therealjohn
+ms.author: johmil
+ms.date: 06/18/2019
 ms.assetid: DDC39599-8C5D-4CB9-8DA5-229E085384CA
-ms.openlocfilehash: 959af3acf8c6da1437ffc6efd66e984902e9e94a
-ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.openlocfilehash: a40887eabc01a1ffb143bad98aeefb8f03f93889
+ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54315457"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67692067"
 ---
 # <a name="visual-studio-for-mac-workloads"></a>Visual Studio for Mac 工作负载
 
@@ -24,9 +24,13 @@ Visual Studio for Mac 预安装有用于开发以下类型应用的工作负荷�
 
 ## <a name="mobile-applications-with-xamarin"></a>使用 Xamarin 的移动应用
 
-通过 Xamarin，可以创建使用 .NET 的跨平台移动应用，以用于 Android、iOS、tvOS、watchOS 和 Mac 桌面应用。
+通过 [Xamarin](xamarin.md)，可以创建使用 .NET 的跨平台移动应用，以用于 Android、iOS、tvOS、watchOS 和 Mac 桌面应用。
 
 有关在 Visual Studio for Mac 中使用 Xamarin 的信息，请参阅 [Xamarin 开发者中心](https://developer.xamarin.com/)，并查看移动应用[动手实验](https://github.com/Microsoft/vs4mac-labs/tree/master/Mobile/Getting-Started)。
+
+## <a name="mac-desktop-applications"></a>Mac 桌面应用程序
+
+可以使用 Cocoa 用户界面框架在 [Xamarin.Mac](https://docs.microsoft.com/xamarin/mac/) 中生成 Mac 应用，在 Mac 上使用 [Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/platform/other/mac) 生成与其他平台共享代码和 UI 的应用。
 
 ## <a name="net-core-applications"></a>.NET Core 应用程序
 

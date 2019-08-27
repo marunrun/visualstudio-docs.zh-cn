@@ -1,23 +1,20 @@
 ---
 title: T4 参数指令 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 ms.assetid: 1d590387-1d9d-40a5-a72c-65fae7a8bdf3
 caps.latest.revision: 5
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 87e493667af1626cd97e575ddb614e7fd12c21d3
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 3e350b353d90143a0805455b29bfe0a14aad25cb
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49294549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63411604"
 ---
 # <a name="t4-parameter-directive"></a>T4 参数指令
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -109,7 +106,4 @@ string resultText = t.TransformText();
 ## <a name="obtaining-arguments-from-texttemplateexe"></a>从 TextTemplate.exe 获取自变量  
   
 > [!IMPORTANT]
->  `parameter`指令不会检索中设置的值`–a`参数的`TextTransform.exe`实用程序。 若要获取这些值，请设置`hostSpecific="true"`中`template`指令，并使用`this.Host.ResolveParameterValue("","","argName")`。
-
-
-
+> `parameter`指令不会检索中设置的值`–a`参数的`TextTransform.exe`实用程序。 若要获取这些值，请设置`hostSpecific="true"`中`template`指令，并使用`this.Host.ResolveParameterValue("","","argName")`。

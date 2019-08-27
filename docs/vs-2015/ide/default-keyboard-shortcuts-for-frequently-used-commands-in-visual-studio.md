@@ -1,24 +1,20 @@
 ---
 title: 常用命令的默认键盘快捷键
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5839d6ca-e5ac-4468-9025-3d5ea177f19c
 caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 52d14af4e3d8d4007aa235db72320f461e63d3c2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+manager: jillfra
+ms.openlocfilehash: 7c64207f6ab26c78492db9feae80698b0af5679d
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53942065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63437512"
 ---
 # <a name="default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio"></a>Visual Studio 中的常用命令的默认键盘快捷键
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,7 +22,7 @@ ms.locfileid: "53942065"
 你可以通过按以下默认键盘快捷键访问 Visual Studio 中的常用命令。 有关具有默认快捷方式的命令的完整列表，请参阅[默认键盘快捷方式](../ide/default-keyboard-shortcuts-in-visual-studio.md)。
 
 > [!NOTE]
->  通过打开“选项”对话框，展开“环境”节点，然后选择“键盘”，可以查找任何命令的快捷方式。
+> 通过打开“选项”对话框，展开“环境”节点，然后选择“键盘”，可以查找任何命令的快捷方式。
 
  **在本主题中**
 
@@ -35,7 +31,7 @@ ms.locfileid: "53942065"
 |[生成](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_build)|[编辑](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_edit)|[Project](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_project)|[工具](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_tools)|[窗口](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_window)|
 |[调试](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_debug)|[文件](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_file)|[重构](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_refactor)|[视图](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_view)||
 
-##  <a name="bkmk_build"></a>生成
+## <a name="bkmk_build"></a>生成
 
 |命令|键盘快捷键 [上下文]|
 |--------------|-------------------------------------|
@@ -44,7 +40,7 @@ ms.locfileid: "53942065"
 |生成.编译|Ctrl+F7 [全局]|
 |生成.对解决方案运行代码分析|Alt+F11 [全局]|
 
-##  <a name="bkmk_debug"></a>调试
+## <a name="bkmk_debug"></a>调试
 
 |命令|键盘快捷键 [上下文]|
 |--------------|-------------------------------------|
@@ -64,7 +60,7 @@ ms.locfileid: "53942065"
 |调试.停止调试|Shift+F5 [全局]|
 |调试.切换断点|F9 [全局]|
 
-##  <a name="bkmk_edit"></a>编辑
+## <a name="bkmk_edit"></a>编辑
 
 |命令|键盘快捷键 [上下文]|
 |--------------|-------------------------------------|
@@ -115,7 +111,7 @@ dit.SurroundWith|Ctrl+K、Ctrl+S [全局]|
 |编辑.字删除直至结尾处|Ctrl+Delete [文本编辑器]|
 |编辑.字删除直至开始处|Ctrl+Backspace [文本编辑器]|
 
-##  <a name="bkmk_file"></a>文件
+## <a name="bkmk_file"></a>文件
 
 |命令|键盘快捷键 [上下文]|
 |--------------|-------------------------------------|
@@ -131,26 +127,26 @@ dit.SurroundWith|Ctrl+K、Ctrl+S [全局]|
 |文件.保存选定项|Ctrl+S [全局]|
 |文件.在浏览器中查看|Ctrl+Shift+W [全局]|
 
-##  <a name="bkmk_project"></a>项目
+## <a name="bkmk_project"></a>项目
 
 |命令|键盘快捷键 [上下文]|
 |--------------|-------------------------------------|
 |项目.添加现有项|Shift+Alt+A [全局]|
 |项目.添加新项|Ctrl+Shift+A [全局]|
 
-##  <a name="bkmk_refactor"></a>重构
+## <a name="bkmk_refactor"></a>重构
 
 |命令|键盘快捷键 [上下文]|
 |-------------|-----------------------------------|
 |重构.提取方法|Ctrl+R、Ctrl+M [全局]|
 
-##  <a name="bkmk_tools"></a>工具
+## <a name="bkmk_tools"></a>工具
 
 |命令|键盘快捷键 [上下文]|
 |-------------|-----------------------------------|
 |工具.附加到进程|Ctrl+Alt+P [全局]|
 
-##  <a name="bkmk_view"></a>视图
+## <a name="bkmk_view"></a>视图
 
 |命令|键盘快捷键 [上下文]|
 |--------------|-------------------------------------|
@@ -171,7 +167,7 @@ iew.TfsTeamExplorer|Ctrl+\\、Ctrl+M [全局]|
 |视图.查看代码|Enter [类图]<br /><br /> 或 F7 [设置设计器]|
 |视图.视图设计器|Shift+F7 [HTML 编辑器源视图]|
 
-##  <a name="bkmk_window"></a>窗口
+## <a name="bkmk_window"></a>窗口
 
 |命令|键盘快捷键 [上下文]|
 |--------------|-------------------------------------|

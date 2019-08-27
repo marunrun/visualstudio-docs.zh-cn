@@ -2,9 +2,8 @@
 title: Visual Studio 管理员指南
 titleSuffix: ''
 description: 详细了解如何在企业环境中部署 Visual Studio。
-ms.date: 05/29/2018
+ms.date: 06/02/2019
 ms.custom: seodec18
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - network installation, Visual Studio
@@ -13,78 +12,157 @@ helpviewer_keywords:
 ms.assetid: 4af353f5-6cfd-4ebe-bcfb-f42306e451a0
 author: TerryGLee
 ms.author: tglee
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 25bf36870e20b630c6de388c13f2b01bae4a274b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.prod: visual-studio-windows
+ms.technology: vs-installation
+ms.openlocfilehash: 9a586a0ab0d6b7a3ab34ef581e2ba6f5348232c2
+ms.sourcegitcommit: 7eb2fb21805d92f085126f3a820ac274f2216b4e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53826395"
+ms.lasthandoff: 06/22/2019
+ms.locfileid: "67328784"
 ---
-# <a name="visual-studio-2017-administrator-guide"></a>Visual Studio 2017 管理员指南
+# <a name="visual-studio-administrator-guide"></a>Visual Studio 管理员指南
 
-在企业环境中，系统管理员通常会从网络共享或通过使用系统管理软件向最终用户部署安装。 为了支持企业部署，我们精心设计了 Visual Studio 安装程序引擎，以便系统管理员可以创建网络安装位置、预配置安装默认值、在安装过程中部署产品密钥以及管理成功推出的产品更新。 本管理员指南通过各种情境，提供有关在网络环境中进行企业部署的指导。
+在企业环境中，系统管理员通常会从网络共享或通过使用系统管理软件向最终用户部署安装。 我们精心设计了 Visual Studio 安装程序引擎，使系统管理员可以创建网络安装位置、预配置安装默认值、在安装过程中部署产品密钥以及管理成功推出的产品更新，从而支持企业部署。
 
-## <a name="deploy-visual-studio-2017-in-an-enterprise-environment"></a>在企业环境中部署 Visual Studio 2017
+本管理员指南通过各种情境，提供有关在网络环境中进行企业部署的指导。
 
-只要每台目标计算机满足[最低安装要求](/visualstudio/productinfo/vs2017-system-requirements-vs)，就可以将 Visual Studio 2017 部署到客户端工作站。 无论是通过 System Center 等软件还是通过批处理文件进行部署，通常都需要完成以下步骤：
+## <a name="before-you-begin"></a>在开始之前
 
-1. 在网络位置上[创建包含 Visual Studio 产品文件的网络共享](create-a-network-installation-of-visual-studio.md)。
+在组织内部署 Visual Studio 之前，需作出几项决策，完成几项任务：
 
-2. [选择要安装的工作负载和组件](workload-and-component-ids.md)。
+::: moniker range="vs-2019"
 
-3. [创建包含默认安装选项的响应文件](automated-installation-with-response-file.md)。 或者，[生成安装脚本](use-command-line-parameters-to-install-visual-studio.md)，使用命令行参数来控制安装。
+* 确保每台目标计算机满足[最低安装要求](/visualstudio/releases/2019/system-requirements/)。
 
-4. （可选）[应用批量许可证产品密钥](automatically-apply-product-keys-when-deploying-visual-studio.md)作为安装脚本的一部分，这样用户便无需单独激活软件。
+* 确定服务需求。
 
-5. 将网络布局更新为[控制何时向最终用户提供产品更新](controlling-updates-to-visual-studio-deployments.md)。
+  如果公司需要继续使用某一功能集，但仍想获取常规维护更新，请计划使用维护基线。 有关详细信息，请参阅 [Visual Studio 产品生命周期和维护](/visualstudio/releases/2019/servicing#support-options-for-enterprise-and-professional-customers)页面的“Enterprise 和 Professional 客户的支持选项”部分以及[如何：在维修基线上更新 Visual Studio](update-servicing-baseline.md) 页面。
 
-6. （可选）将注册表项设置为[控制在客户端工作站上缓存什么内容](set-defaults-for-enterprise-deployments.md)。
+  如果打算应用维护更新及累积功能更新，可选择最新的位数。
 
-7. 使用选定的部署技术，在目标开发者工作站上执行前述步骤中生成的脚本。
+* 确定更新模型。
 
-8. 定期运行第 1 步中的命令来添加更新后的组件，使用 Visual Studio [最新更新刷新网络位置](update-a-network-installation-of-visual-studio.md)。
+  希望单个客户端计算机在哪里获得更新？ 具体而言，确定是想要从 Internet 还是从公司范围的本地共享获取更新。 接下来，如果选择使用本地共享，确定是单个用户可以自行更新客户端，还是需要管理员以编程方式更新客户端。
 
-> [!IMPORTANT]
-> 请注意，从网络共享进行安装会“记住”它们的源位置。 这意味着客户端计算机的修复可能需要返回最初从中安装客户端的网络共享。 请仔细选择网络位置，使其符合在组织中运行的 Visual Studio 2017 客户端的预期生存期。
+* 确定公司所需的[工作负载和组件](workload-and-component-ids.md?view=vs-2019)。
 
-## <a name="use-visual-studio-tools"></a>使用 Visual Studio 工具
+* 确定是否使用[响应文件](automated-installation-with-response-file.md?view=vs-2019)（这可简化脚本文件中的管理细节）。
 
-我们提供了几种工具来帮助你在客户端计算机上[检测和管理安装的 Visual Studio 实例](tools-for-managing-visual-studio-instances.md)。
+* 确定是否要启用组策略，以及是否要在个人计算机上将 Visual Studio 配置为禁用客户反馈。
 
-> [!TIP]
-> 除了管理员指南中的文档外，[Heath Stewart 的博客](https://blogs.msdn.microsoft.com/heaths/tag/vs2017/)也是不错的 Visual Studio 2017 安装程序参考信息源。
+::: moniker-end
 
-## <a name="specify-customer-feedback-settings"></a>指定客户反馈设置
+::: moniker range="vs-2017"
 
-默认情况下，Visual Studio 安装会启用客户反馈。 启用“组策略”时，可以将 Visual Studio 配置为在个人计算机上禁用客户反馈。 为此，请在以下键上设置基于注册表的策略：
+* 确保每台目标计算机满足[最低安装要求](/visualstudio/productinfo/vs2017-system-requirements-vs/)。
 
-HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\VisualStudio\SQM
+* 确定服务需求。
 
-Entry = OptIn
+  如果公司需要继续使用某一功能集，但仍想获取常规维护更新，请计划使用维护基线。 有关详细信息，请参阅 [Visual Studio 产品生命周期和维护](/visualstudio/releases/2019/servicing#support-for-older-versions-of-visual-studio)页面的“对较旧版本的 Visual Studio 的支持”部分以及[如何：在维修基线上更新 Visual Studio](update-servicing-baseline.md) 页面。
 
-Value = (DWORD)
-* 0 为选择禁用
-* 1 为选择启用
+  如果打算应用维护更新及累积功能更新，可选择最新的位数。
 
-有关客户反馈设置的详细信息，请参阅 [Visual Studio 客户体验改善计划](../ide/visual-studio-experience-improvement-program.md)页。
+* 确定更新模型。
+
+  希望单个客户端计算机在哪里获得更新？ 具体而言，确定是想要从 Internet 还是从公司范围的本地共享获取更新。 接下来，如果选择使用本地共享，确定是单个用户可以自行更新客户端，还是需要管理员以编程方式更新客户端。
+
+* 确定公司所需的[工作负载和组件](workload-and-component-ids.md?view=vs-2017)。
+
+* 确定是否使用[响应文件](automated-installation-with-response-file.md?view=vs-2017)（这可简化脚本文件中的管理细节）。
+
+* 确定是否要启用组策略，以及是否要在个人计算机上将 Visual Studio 配置为禁用客户反馈。
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+## <a name="step-1---download-visual-studio-product-files"></a>第 1 步 - 下载 Visual Studio 产品文件
+
+* [选择要安装的工作负载和组件](workload-and-component-ids.md?view=vs-2019)。
+
+* [创建 Visual Studio 产品文件的网络共享](create-a-network-installation-of-visual-studio.md?view=vs-2019)。
+
+## <a name="step-2---build-an-installation-script"></a>第 2 步 - 生成安装脚本
+
+* 生成使用[命令行参数](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019)来控制安装的安装脚本。
+
+  >[!NOTE]
+  > 可通过使用[响应文件](automated-installation-with-response-file.md?view=vs-2019)来简化脚本。 确保创建包含默认安装选项的响应文件。
+
+* （可选）[应用批量许可证产品密钥](automatically-apply-product-keys-when-deploying-visual-studio.md?view=vs-2019)作为安装脚本的一部分，这样用户便无需单独激活软件。
+
+* （可选）将网络布局更新为[控制何时何地向最终用户提供产品更新](controlling-updates-to-visual-studio-deployments.md?view=vs-2019)。
+
+* （可选）设置影响 Visual Studio 部署的注册表策略，例如与其他版本或实例共享的一些包的安装位置、[缓存包的位置](set-defaults-for-enterprise-deployments.md?view=vs-2019)或[是否缓存包](disable-or-move-the-package-cache.md?view=vs-2019)。
+
+* （可选）设置组策略。 还可在个人计算机上[将 Visual Studio 配置为禁用客户反馈](../ide/visual-studio-experience-improvement-program.md)。
+
+## <a name="step-3---deploy"></a>第 3 步 - 部署
+
+* 使用所选部署技术，在目标开发者工作站上执行脚本。
+
+## <a name="step-4---deploy-updates"></a>第 4 步 - 部署更新
+
+* 定期运行第 1 步中的命令来添加更新后的组件，使用 Visual Studio [最新更新刷新网络位置](update-a-network-installation-of-visual-studio.md?view=vs-2019)。
+
+  可以使用更新脚本来更新 Visual Studio。 为此，请使用 [`update`](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) 命令行参数。
+
+## <a name="step-5---optional-use-visual-studio-tools"></a>第 5 步 -（可选）使用 Visual Studio 工具
+
+我们提供了几种工具来帮助你在客户端计算机上[检测和管理安装的 Visual Studio 实例](tools-for-managing-visual-studio-instances.md?view=vs-2019)。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+## <a name="step-1---download-visual-studio-product-files"></a>第 1 步 - 下载 Visual Studio 产品文件
+
+* [选择要安装的工作负载和组件](workload-and-component-ids.md?view=vs-2017)。
+
+* [创建 Visual Studio 产品文件的网络共享](create-a-network-installation-of-visual-studio.md?view=vs-2017)。
+
+## <a name="step-2---build-an-installation-script"></a>第 2 步 - 生成安装脚本
+
+* 生成使用[命令行参数](use-command-line-parameters-to-install-visual-studio.md?view=vs-2017)来控制安装的安装脚本。
+
+  >[!NOTE]
+  > 可通过使用[响应文件](automated-installation-with-response-file.md?view=vs-2017)来简化脚本。 确保创建包含默认安装选项的响应文件。
+
+* （可选）[应用批量许可证产品密钥](automatically-apply-product-keys-when-deploying-visual-studio.md?view=vs-2017)作为安装脚本的一部分，这样用户便无需单独激活软件。
+
+* （可选）将网络布局更新为[控制何时何地向最终用户提供产品更新](controlling-updates-to-visual-studio-deployments.md?view=vs-2017)。
+
+* （可选）设置影响 Visual Studio 部署的注册表策略，例如与其他版本或实例共享的一些包的安装位置、[缓存包的位置](set-defaults-for-enterprise-deployments.md?view=vs-2019)或[是否缓存包](disable-or-move-the-package-cache.md?view=vs-2017)。
+
+* （可选）设置组策略。 还可在个人计算机上[将 Visual Studio 配置为禁用客户反馈](../ide/visual-studio-experience-improvement-program.md)。
+
+## <a name="step-3---deploy"></a>第 3 步 - 部署
+
+* 使用所选部署技术，在目标开发者工作站上执行脚本。
+
+## <a name="step-4---deploy-updates"></a>第 4 步 - 部署更新
+
+* 定期运行第 1 步中的命令来添加更新后的组件，使用 Visual Studio [最新更新刷新网络位置](update-a-network-installation-of-visual-studio.md?view=vs-2017)。
+
+  可以使用更新脚本来更新 Visual Studio。 为此，请使用 [`update`](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) 命令行参数。
+
+## <a name="step-5---optional-use-visual-studio-tools"></a>第 5 步 -（可选）使用 Visual Studio 工具
+
+我们提供了几种工具来帮助你在客户端计算机上[检测和管理安装的 Visual Studio 实例](tools-for-managing-visual-studio-instances.md?view=vs-2017)。
+
+::: moniker-end
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>请参阅
 
-* [安装 Visual Studio 2017](install-visual-studio.md)
-* [使用命令行参数安装 Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md)
-  * [命令行参数示例](command-line-parameter-examples.md)
-  * [工作负载和组件 ID 参考](workload-and-component-ids.md)
-* [创建基于网络的 Visual Studio 安装](create-a-network-installation-of-visual-studio.md)
-  * [安装 Visual Studio 脱机安装所需的证书](install-certificates-for-visual-studio-offline.md)
-* [通过响应文件自动执行 Visual Studio](automated-installation-with-response-file.md)
-* [在部署 Visual Studio 时自动应用产品密钥](automatically-apply-product-keys-when-deploying-visual-studio.md)
-* [为 Visual Studio 企业部署设置默认值](set-defaults-for-enterprise-deployments.md)
-* [禁用或移动包缓存](disable-or-move-the-package-cache.md)
-* [更新基于网络的 Visual Studio 安装](update-a-network-installation-of-visual-studio.md)
-* [控制 Visual Studio 部署的更新](controlling-updates-to-visual-studio-deployments.md)
-* [用于检测和管理 Visual Studio 实例的工具](tools-for-managing-visual-studio-instances.md)
+* [命令行参数示例](command-line-parameter-examples.md)
+* [安装 Visual Studio 脱机安装所需的证书](install-certificates-for-visual-studio-offline.md)
+* [导入或导出安装配置](import-export-installation-configurations.md)
+* [Visual Studio 安装存档](https://devblogs.microsoft.com/setup/tag/vs2017/)
+* [Visual Studio 产品生命周期和维护](/visualstudio/releases/2019/servicing/)
+* [同步自动加载设置](../extensibility/synchronously-autoloaded-extensions.md)

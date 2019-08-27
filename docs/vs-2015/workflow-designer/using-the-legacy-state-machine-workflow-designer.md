@@ -1,11 +1,8 @@
 ---
 title: 使用旧版状态机工作流设计器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 helpviewer_keywords:
 - StateFinalizationActivity activity
@@ -20,16 +17,16 @@ ms.assetid: 2cd21123-35c2-4eaf-82f6-86fce7a8f04d
 caps.latest.revision: 5
 author: gewarren
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: 30eaf026d0558538c51b4cbda313e051348a5120
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 54469f2e255ff9ea726ea1b6c13abcb55c33252d
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49231681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63444110"
 ---
 # <a name="using-the-legacy-state-machine-workflow-designer"></a>使用旧版状态机工作流设计器
-在创建新的状态机工作流项目中[!INCLUDE[vs2010](../includes/vs2010-md.md)]面向[!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)]或[!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]，你可以选择使用两种**状态机工作流控制台应用程序**或**状态机工作流库**旧项目模板。 如果选择其中一个状态机项目模板，则会以旧工作流设计器用户界面的形式呈现状态机设计器。 有关旧状态机项目模板的信息，请参阅[如何： 创建状态机工作流控制台应用程序 （旧版）](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md)和[如何： 创建状态机工作流库 （旧版）](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md).  
+在创建新的状态机工作流项目中[!INCLUDE[vs2010](../includes/vs2010-md.md)]面向[!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)]或[!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]，你可以选择使用两种**状态机工作流控制台应用程序**或**状态机工作流库**旧项目模板。 如果选择其中一个状态机项目模板，则会以旧工作流设计器用户界面的形式呈现状态机设计器。 有关旧状态机项目模板的信息，请参阅[如何：创建状态机工作流控制台应用程序 （旧版）](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md)和[如何：创建状态机工作流库 （旧版）](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md)。  
   
  状态机工作流由一组状态组成。 一个状态被指示为初始状态。 每个状态都可以接收一组特定事件。 视事件而定，可以转换到另一个状态。 状态机工作流可以有最终状态。 当转换到最终状态时，工作流将完成。  
   
@@ -43,7 +40,7 @@ ms.locfileid: "49231681"
 ## <a name="state-machine-workflow-activities"></a>状态机工作流活动  
  下表描述了状态机工作流设计器中使用的关键活动。  
   
-|工具箱名称|Activity|描述|  
+|工具箱名称|活动|描述|  
 |------------------|--------------|-----------------|  
 |**状态**|[StateActivity](http://go.microsoft.com/fwlink?LinkID=65042)|表示状态机; 中的状态可能包含其他**StateActivity**活动。 有关详细信息，请参阅[使用 StateActivity 活动](http://go.microsoft.com/fwlink?LinkID=65083)。|  
 |**SetState**|[SetStateActivity](http://go.microsoft.com/fwlink?LinkID=65041)|指定到新状态的转换。 有关详细信息，请参阅[使用 SetStateActivity 活动](http://go.microsoft.com/fwlink?LinkID=65082)。|  
@@ -56,13 +53,13 @@ ms.locfileid: "49231681"
  当您将一个新**StateActivity**到工作流设计图面上，可以添加[EventDrivenActivity](http://go.microsoft.com/fwlink?LinkID=65029)， [StateInitializationActivity](http://go.microsoft.com/fwlink?LinkID=65044)， [StateFinalizationActivity](http://go.microsoft.com/fwlink?LinkID=65043)，或其他**StateActivity**活动作为子活动。  
   
 > [!CAUTION]
->  当你使用状态机工作流设计器来创建工作流时，必须监视设计与工作流的结构**文档大纲**视图窗口。 状态机工作流中的结构的视图**文档大纲**视图窗口镜像的工作流标记文件中的活动的逻辑布局。 工作流活动显示在设计图面上的物理布局可能不会反映工作流标记文件中活动的逻辑布局。  
+> 当你使用状态机工作流设计器来创建工作流时，必须监视设计与工作流的结构**文档大纲**视图窗口。 状态机工作流中的结构的视图**文档大纲**视图窗口镜像的工作流标记文件中的活动的逻辑布局。 工作流活动显示在设计图面上的物理布局可能不会反映工作流标记文件中活动的逻辑布局。  
 >   
->  若要打开**文档大纲**窗口，请在**视图**菜单上，指向**其他 Windows**，然后选择**文档大纲**。  
+> 若要打开**文档大纲**窗口，请在**视图**菜单上，指向**其他 Windows**，然后选择**文档大纲**。  
   
 ## <a name="see-also"></a>请参阅  
- [如何： 创建状态机工作流控制台应用程序 （旧版）](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md)   
- [如何： 创建状态机工作流库 （旧版）](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md)   
+ [如何：创建状态机工作流控制台应用程序 （旧版）](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md)   
+ [如何：创建状态机工作流库 （旧版）](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md)   
  [状态机工作流](http://go.microsoft.com/fwlink?LinkID=65016)   
  [使用 StateActivity 活动](http://go.microsoft.com/fwlink?LinkID=65083)   
  [使用 StateInitializationActivity 活动](http://go.microsoft.com/fwlink?LinkID=65006)   

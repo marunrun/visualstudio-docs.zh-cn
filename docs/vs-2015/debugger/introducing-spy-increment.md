@@ -1,27 +1,22 @@
 ---
 title: Spy + + 简介 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Spy++
 ms.assetid: 733b514b-63a9-402d-89aa-4f0416766655
 caps.latest.revision: 13
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: b5e6aecff83d745c724fa0009b33a798ae94118d
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 35e9fa2d75528549f8c55f5b52dbd4c4aa2271a6
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51792419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63431453"
 ---
 # <a name="introducing-spy"></a>Spy++ 简介
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,25 +40,21 @@ ms.locfileid: "51792419"
   在各个 Spy++ 窗口中，可以单击鼠标右键以显示常用命令的快捷菜单。 显示的命令取决于指针所在的位置。 例如，如果在窗口视图中右键单击某个条目，且所选窗口可见，那么单击快捷方式菜单上的“突出显示”  可使所选窗口边框闪烁，以便你能更轻松地找到该窗口。  
   
 > [!NOTE]
->  有其他两种实用程序类似于 Spy++：用于显示进程和线程详细信息的 PView 和允许你监视动态数据交换 (DDE) 消息的 DDESPY.EXE。  
+> 有两个类似于 Spy + + 其他实用程序：用于显示有关进程和线程和 DDESPY 的详细信息。Exe 文件，可让你监视动态数据交换 (DDE) 消息。  
   
 ## <a name="64-bit-operating-systems"></a>64 位操作系统  
  Spy++ 有两个版本。 第一个版本，名为 Spy++ (spyxx.exe)，用于显示发送到在 32 位进程中运行的窗口的消息。 例如，在 32 位进程中运行的 Visual Studio。 因此，可以使用 Spy++ 来显示发送到“解决方案资源管理器” 中的消息。 由于 Visual Studio 中大多数生成的默认配置是在 32 位进程中运行的，因此第一个版本的 Spy++ 在 Visual Studio 中的“工具”  菜单上可用。  
   
  第二个版本，名为 Spy++（64 位）(spyxx_amd64.exe)，用于显示发送到在 64 位进程中运行的窗口的消息。 例如，在 64 位操作系统上，记事本在 64 位进程中运行。 因此，可以使用 Spy++（64 位）来显示发送到记事本的消息。 Spy++ （64 位）通常位于  
   
- ..\\ *Visual Studio 安装文件夹*\Common7\Tools\spyxx_amd64.exe。  
+ ..\\*Visual Studio 安装文件夹*\Common7\Tools\spyxx_amd64.exe。  
   
  可以直接从命令行运行任一版本的 Spy++。  
   
 > [!NOTE]
->  虽然 Spy++（64 位）文件名包含 "amd"，但它可在任何 x64 Windows 操作系统中运行。  
+> 虽然 Spy++（64 位）文件名包含 "amd"，但它可在任何 x64 Windows 操作系统中运行。  
   
 ## <a name="see-also"></a>请参阅  
- [使用 Spy + +](../debugger/using-spy-increment.md)   
- [Spy + + 视图](../debugger/spy-increment-views.md)   
+ [使用 Spy++](../debugger/using-spy-increment.md)   
+ [Spy++ 视图](../debugger/spy-increment-views.md)   
  [Spy++ 参考](../debugger/spy-increment-reference.md)
-
-
-
-

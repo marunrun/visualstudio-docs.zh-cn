@@ -1,26 +1,21 @@
 ---
 title: 托管 Vspackage |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: devlang-csharp
+ms.topic: conceptual
 helpviewer_keywords:
 - VSPackages, managed
 - managed VSPackages
 ms.assetid: a4f17068-c563-45a8-bbbf-4203ea99e9d2
 caps.latest.revision: 34
-manager: douge
-ms.openlocfilehash: 44507112ceb3e7bed452ef4ced7633001224ad82
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: bde7742bc9165413abcf98bfb475c19ec0e45f51
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49227072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62838758"
 ---
 # <a name="managed-vspackages"></a>托管的 VSPackage
 以下主题介绍如何创建 VSPackage。 VSPackage 是软件模块扩展[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]通过提供用户界面 (UI) 元素、 服务、 项目、 编辑器和设计器的集成的开发环境 (IDE)。 有关更多信息，请参见 [VSPackages](../extensibility/internals/vspackages.md)。  

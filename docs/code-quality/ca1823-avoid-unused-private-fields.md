@@ -1,7 +1,6 @@
 ---
 title: CA1823:避免未使用的私有字段
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - AvoidUnusedPrivateFields
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 614f94f6-0dc7-430f-8124-cb889a4a720f
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f5610e97b623c21a7a0f380e9f2e070400e0aefc
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 47a2ad3b64055584551a63a2333e29286783d8cf
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53873231"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68921361"
 ---
 # <a name="ca1823-avoid-unused-private-fields"></a>CA1823:避免未使用的私有字段
 
@@ -29,25 +28,25 @@ ms.locfileid: "53873231"
 |TypeName|AvoidUnusedPrivateFields|
 |CheckId|CA1823|
 |类别|Microsoft.Performance|
-|是否重大更改|非换行|
+|是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 在代码中的私有字段存在，但不是由任何代码路径时，会报告此规则。
+当代码中的私有字段存在, 但未被任何代码路径使用时, 将报告此规则。
 
 ## <a name="rule-description"></a>规则说明
- 检测到程序集内有似乎未访问过的私有字段。
+检测到程序集内有似乎未访问过的私有字段。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复此规则的冲突，请删除字段或添加使用它的代码。
+若要修复与此规则的冲突, 请删除字段或添加使用该字段的代码。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 它可以安全地禁止显示此规则的警告。
+可以安全地禁止显示此规则发出的警告。
 
-## <a name="related-rules"></a>相关的规则
- [CA1812:避免未实例化的内部类](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
+## <a name="related-rules"></a>相关规则
+[CA1812避免未实例化的内部类](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
 
- [CA1801:检查未使用的参数](../code-quality/ca1801-review-unused-parameters.md)
+[CA1801查看未使用的参数](../code-quality/ca1801-review-unused-parameters.md)
 
- [CA1804:删除未使用的局部变量](../code-quality/ca1804-remove-unused-locals.md)
+[CA1804删除未使用的局部变量](../code-quality/ca1804-remove-unused-locals.md)
 
- [CA1811:避免使用未调用的私有代码](../code-quality/ca1811-avoid-uncalled-private-code.md)
+[CA1811避免使用未调用的私有代码](../code-quality/ca1811-avoid-uncalled-private-code.md)

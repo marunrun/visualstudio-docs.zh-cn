@@ -1,7 +1,6 @@
 ---
-title: 安装自定义起始页或更改启动项
+title: 更改启动体验
 ms.date: 02/01/2017
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - vs.ToolsOptionsPages.Startup
@@ -11,27 +10,45 @@ helpviewer_keywords:
 - Visual Studio Start Page
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d3514effbe9b8affd870e46746b308216a80de33
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c8b31f033b9c04871e57836dd263071d87a24fda
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53864785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62824251"
 ---
-# <a name="customize-the-start-page-for-visual-studio"></a>自定义 Visual Studio 的起始页
+# <a name="customize-startup"></a>自定义启动
 
-可以通过多种不同的方式来自定义 Visual Studio 的启动体验，例如，显示“打开项目”对话框或打开最近加载的解决方案。 你也可以显示自定义起始页，此起始页是在工具窗口中运行的 Windows Presentation Foundation (WPF) XAML 页，并且可以运行 Visual Studio 的内部命令。
+可以通过几种不同的方式自定义 Visual Studio 的启动体验，例如打开最新的解决方案或仅打开空的开发环境。
+
+::: moniker range="vs-2017"
+
+你也可以显示自定义起始页，此起始页是在工具窗口中运行的 Windows Presentation Foundation (WPF) XAML 页，并且可以运行 Visual Studio 的内部命令。
+
+::: moniker-end
 
 ## <a name="to-change-the-startup-item"></a>更改启动项
 
 1. 在菜单栏上，依次选择“工具” > “选项”。
 
-1. 展开“环境”，然后选择“启动”。
+2. 展开“环境”，然后选择“启动”。
 
-1. 在“启动时”列表中，选择在 Visual Studio 启动后要显示的项目。
+::: moniker range="vs-2017"
+
+3. 在“启动时”列表中，选择在 Visual Studio 启动后要显示的项目。
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+3. 在“启动时打开”列表中，选择要在 Visual Studio 启动后执行的操作。 可以从“开始窗口”（这允许打开新的或现有项目）、“最新解决方案”或“空环境”中选择。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 ## <a name="to-show-a-custom-start-page"></a>显示自定义起始页
 
@@ -41,15 +58,17 @@ ms.locfileid: "53864785"
 
 ### <a name="to-select-which-custom-start-page-to-display"></a>选择要显示的自定义起始页
 
-1. 在菜单栏上，依次选择“工具” > “选项”。
+1. 在菜单栏上，依次选择“工具”>“选项”。
 
 1. 展开“环境”，然后选择“启动”。
 
 1. 在“自定义起始页”列表中，选择所需的页。
 
-> [!NOTE]
-> 如果自定义起始页中的错误导致 Visual Studio 崩溃，则可以使用安全模式下启动 Visual Studio，然后将其设置为使用默认起始页。 请参阅 [/SafeMode (devenv.exe)](../ide/reference/safemode-devenv-exe.md)。
+> [!TIP]
+> 如果自定义起始页中的错误导致 Visual Studio 崩溃，则可以在安全模式下打开 Visual Studio，然后将其设置为使用默认起始页。 请参阅 [/SafeMode (devenv.exe)](../ide/reference/safemode-devenv-exe.md)。
 
 ## <a name="see-also"></a>请参阅
 
 - [个性化设置 Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md)
+
+::: moniker-end

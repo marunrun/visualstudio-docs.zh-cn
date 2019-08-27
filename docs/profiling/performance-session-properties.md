@@ -8,15 +8,15 @@ helpviewer_keywords:
 - performance tools, performance session properties
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a6cf897d0181717439f7ae3ac6afccb469b06f0
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 77da53856e0562d036fade431dd0deba0376fe9f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53961908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62798374"
 ---
 # <a name="performance-session-properties"></a>性能会话属性
 
@@ -38,13 +38,13 @@ ms.locfileid: "53961908"
 
 [收集 .NET 内存分配和生存期数据](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)
 
- [如何：设置性能数据文件名选项](../profiling/how-to-set-performance-data-file-name-options.md)
+- [如何：设置性能数据文件名选项](../profiling/how-to-set-performance-data-file-name-options.md)
 
 ## <a name="launch"></a>启动
 
 通过这些设置可以从二进制文件列表进行选择并指定二进制文件的启动顺序。
 
-有关更多信息，请参见[如何：指定要启动的二进制文件](../profiling/how-to-specify-the-binary-to-start.md)
+有关详细信息，请参阅[如何：指定要启动的二进制文件](../profiling/how-to-specify-the-binary-to-start.md)
 
 ## <a name="sampling"></a>采样
 
@@ -56,12 +56,12 @@ ms.locfileid: "53961908"
 - 性能计数器 - 用于低级别性能问题
 - 可以基于可用性能计数器指定其他样本事件
 
-有关更多信息，请参见[如何：选择采样事件](../profiling/how-to-choose-sampling-events.md)
+有关详细信息，请参阅[如何：选择采样事件](../profiling/how-to-choose-sampling-events.md)
 
 ## <a name="binary"></a>二进制
 通过这些设置可以指定是否要将检测的二进制文件重新定位到另一个位置。 例如，如果在分析 My.DLL 并且未选择重新定位检测的二进制文件，则会创建名为 My.Orig.DLL 的 My.DLL 备份副本。 随后，会通过插入探测以收集数据来修改 My.DLL。 如果决定重新定位检测的二进制文件，则原始二进制文件不会重命名，并且检测的二进制文件会复制到指定位置以供在检测过程中使用。
 
-有关更多信息，请参见[如何：指定要启动的二进制文件](../profiling/how-to-specify-the-binary-to-start.md)
+有关详细信息，请参阅[如何：指定要启动的二进制文件](../profiling/how-to-specify-the-binary-to-start.md)
 
 ## <a name="tier-interactions"></a>层交互
 
@@ -81,7 +81,7 @@ ms.locfileid: "53961908"
 
 通过这些设置可以在使用检测分析方法时收集有关 CPU 性能计数器的数据。 可移植性能计数器可在不考虑 CPU 设计或制造商的情况下使用。 平台事件特定于 CPU 设计和制造商。 有关芯片性能计数器的详细信息，请参阅特定处理器文档。
 
-有关更多信息，请参见[如何：收集 CPU 计数器数据](../profiling/how-to-collect-cpu-counter-data.md)
+有关详细信息，请参阅[如何：收集 CPU 计数器数据](../profiling/how-to-collect-cpu-counter-data.md)
 
 ## <a name="windows-events"></a>Windows 事件
 
@@ -97,7 +97,7 @@ ms.locfileid: "53961908"
 
 通过此选项可以从 Windows 性能监视器计数器收集数据。 若要收集此数据，请选中标记为“收集 Windows 性能计数器”的复选框。 收集间隔可以在“收集间隔”框中设置。 还可以使用“计数器类别”和“实例”。 提供了一些默认 Windows 性能监视器计数器。
 
- 有关更多信息，请参见[如何：收集 Windows 计数器数据](../profiling/how-to-collect-windows-counter-data.md)。
+ 有关详细信息，请参阅[如何：收集 Windows 计数器数据](../profiling/how-to-collect-windows-counter-data.md)。
 
 ## <a name="advanced"></a>高级
 
@@ -111,6 +111,6 @@ ms.locfileid: "53961908"
 
 ## <a name="see-also"></a>请参阅
 
-[概述](../profiling/overviews-performance-tools.md)  
-[配置性能会话](../profiling/configuring-performance-sessions.md)  
+[概述](../profiling/overviews-performance-tools.md)
+[配置性能会话](../profiling/configuring-performance-sessions.md)
 [控制数据收集](../profiling/controlling-data-collection.md)

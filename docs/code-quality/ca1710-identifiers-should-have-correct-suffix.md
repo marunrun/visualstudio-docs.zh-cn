@@ -1,7 +1,6 @@
 ---
 title: CA1710:标识符应具有正确的后缀
-ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
+ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
 - CA1710
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 2b8e6dce-b4e8-4a66-ba9a-6b79be5bfe8c
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e8923f3bb1ae4fe92891593c2109852810beb4e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 93fd892baaf54d79c3a2387b8961a2f4c1bb2cdb
+ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53944705"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69547323"
 ---
 # <a name="ca1710-identifiers-should-have-correct-suffix"></a>CA1710:标识符应具有正确的后缀
 
@@ -33,17 +32,19 @@ ms.locfileid: "53944705"
 
 ## <a name="cause"></a>原因
 
-标识符不具有正确的后缀。
+标识符的后缀不正确。
+
+默认情况下, 此规则仅查看外部可见的标识符, 但这是[可配置](#configurability)的。
 
 ## <a name="rule-description"></a>规则说明
 
-按照约定，类型扩展某些基类型或实现特定接口或从这些类型派生的类型的名称具有与基类型或接口关联的后缀。
+按照约定, 扩展某些基类型或实现某些接口的类型的名称或从这些类型派生的类型具有与基类型或接口关联的后缀。
 
-命名约定提供了通用的外观对于库面向公共语言运行时。 这会减少所需的新软件库，并会增加客户信心库由必须在托管代码中开发的专业知识的人学习曲线。
+命名约定为面向公共语言运行时的库提供了通用的外观。 这减少了新软件库所需的学习曲线, 并使客户可以放心地了解库是由具有开发托管代码的专业技能的人员开发的。
 
-下表列出了基本类型和接口具有关联的后缀。
+下表列出了具有关联后缀的基类型和接口。
 
-|基类型/接口|后缀|
+|基类型/接口|Suffix|
 |--------------------------|------------|
 |<xref:System.Attribute?displayProperty=fullName>|特性|
 |<xref:System.EventArgs?displayProperty=fullName>|EventArgs|
@@ -60,43 +61,53 @@ ms.locfileid: "53944705"
 |<xref:System.IO.Stream?displayProperty=fullName>|流|
 |<xref:System.Security.IPermission?displayProperty=fullName>|权限|
 |<xref:System.Security.Policy.IMembershipCondition?displayProperty=fullName>|条件|
-|一个事件处理程序委托。|事件处理程序|
+|事件处理程序委托。|EventHandler|
 
-类型实现<xref:System.Collections.ICollection>和是通用的类型的数据结构，如字典、 堆栈或队列，允许提供有意义信息的预期用法的类型的名称。
+实现<xref:System.Collections.ICollection>并且是一种通用类型的数据结构 (如字典、堆栈或队列) 的类型是允许的名称, 这些名称提供有关类型的预期用法的有用信息。
 
-类型实现<xref:System.Collections.ICollection>和是特定项的集合具有 Collection 一词结尾的名称。 例如，集合<xref:System.Collections.Queue>对象将具有名称 QueueCollection。 Collection 后缀表示后，可以使用枚举集合的成员`foreach`(`For Each`中[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) 语句。
+实现<xref:System.Collections.ICollection>和的类型是特定项的集合, 其名称以单词 "collection" 结尾。 例如, <xref:System.Collections.Queue>对象的集合的名称为 "QueueCollection"。 "Collection" 后缀表示可以使用`foreach` (`For Each` in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) 语句枚举集合的成员。
 
-类型实现<xref:System.Collections.IDictionary>名称以字典一词结尾，即使该类型还实现<xref:System.Collections.IEnumerable>或<xref:System.Collections.ICollection>。 Collection 和字典后缀命名约定使用户能够区分以下两个枚举模式。
+实现<xref:System.Collections.IDictionary>的类型的名称以单词 "Dictionary" 结尾, 即使该类型还实现<xref:System.Collections.IEnumerable>了或<xref:System.Collections.ICollection>。 "集合" 和 "字典" 后缀命名约定使用户能够区分以下两个枚举模式。
 
-具有后缀 Collection 的类型遵循此枚举模式。
+具有 "Collection" 后缀的类型遵循此枚举模式。
 
 ```
 foreach(SomeType x in SomeCollection) { }
 ```
 
-使用字典后缀的类型遵循此枚举模式。
+带有 "Dictionary" 后缀的类型遵循此枚举模式。
 
 ```
 foreach(SomeType x in SomeDictionary.Values) { }
 ```
 
-一个<xref:System.Data.DataSet>对象的集合组成<xref:System.Data.DataTable>包含的集合的对象<xref:System.Data.DataColumn?displayProperty=fullName>和<xref:System.Data.DataRow?displayProperty=fullName>对象，等等。 这些集合实现<xref:System.Collections.ICollection>通过基<xref:System.Data.InternalDataCollectionBase?displayProperty=fullName>类。
+对象包含<xref:System.Data.DataTable>对象的集合, <xref:System.Data.DataColumn?displayProperty=fullName>这些对象由和<xref:System.Data.DataRow?displayProperty=fullName>对象的集合组成。 <xref:System.Data.DataSet> 这些集合通过<xref:System.Collections.ICollection>基类<xref:System.Data.InternalDataCollectionBase?displayProperty=fullName>实现。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-重命名该类型，以便使用正确的字词作为后缀。
+重命名该类型, 使其具有正确的字词后缀。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
-它是安全地禁止显示一个警告，如果类型是一种通用的数据结构可能会扩展，或将包含一组任意的各种项，请使用后缀 Collection。 在这种情况下，提供了有关实现、 性能或数据结构的其他特征有意义的信息的名称 binarytree (例如，)。 在某些情况下，该类型的特定类型 (例如，StringCollection) 集合，不要禁止显示此规则的警告因为后缀指示后，可以使用枚举类型`foreach`语句。
+如果类型是可能被扩展的通用数据结构, 或者将保留任意一组不同的项, 则可以安全地禁止显示警告以使用 "集合" 后缀。 在这种情况下, 提供有关实现、性能或数据结构的其他特征的有用信息的名称可能有意义 (例如, BinaryTree)。 在类型表示特定类型的集合的情况下 (例如, StringCollection), 请勿禁止显示此规则的警告, 因为后缀指示可以使用`foreach`语句来枚举该类型。
 
-对于其他后缀，不要禁止显示此规则的警告。 该后缀，可为表露类型名称的预期的用法。
+对于其他后缀, 不要禁止显示此规则发出的警告。 后缀允许从类型名称中清晰地使用预期用法。
 
-## <a name="related-rules"></a>相关的规则
+## <a name="configurability"></a>配置
 
-[CA1711:标识符应采用正确的后缀](../code-quality/ca1711-identifiers-should-not-have-incorrect-suffix.md)
+如果从[FxCop 分析器](install-fxcop-analyzers.md)(而不是传统分析) 运行此规则, 则可以根据其可访问性, 将基本代码的哪些部分配置为在上运行此规则。 例如, 若要指定规则只应针对非公共 API 图面运行, 请在项目中的 editorconfig 文件中添加以下键/值对:
+
+```ini
+dotnet_code_quality.ca1710.api_surface = private, internal
+```
+
+您可以为此规则、所有规则或此类别中的所有规则 (命名) 配置此选项。 有关详细信息, 请参阅[配置 FxCop 分析器](configure-fxcop-analyzers.md)。
+
+## <a name="related-rules"></a>相关规则
+
+[CA1711标识符不应具有正确的后缀](../code-quality/ca1711-identifiers-should-not-have-incorrect-suffix.md)
 
 ## <a name="see-also"></a>请参阅
 
-- [属性](/dotnet/standard/design-guidelines/attributes)
+- [特性](/dotnet/standard/design-guidelines/attributes)
 - [处理和引发事件](/dotnet/standard/events/index)

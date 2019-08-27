@@ -1,7 +1,6 @@
 ---
 title: CA2106:保护断言
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - CA2106
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 91feb36e-6e2c-436c-8272-5aee31f77e98
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 164d2bbe335f4b69892cf069bade5cf0df1e0787
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: df19d31abe88c6d12bafc933ba740badb832eb16
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53864668"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68921076"
 ---
 # <a name="ca2106-secure-asserts"></a>CA2106:保护断言
 
@@ -32,16 +31,16 @@ ms.locfileid: "53864668"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 一种方法断言权限，并不执行调用方的任何安全检查。
+方法断言权限, 但不对调用方执行任何安全检查。
 
 ## <a name="rule-description"></a>规则说明
- 如果在不执行任何安全检查的情况下断言安全权限，则会在代码中留下可利用的安全漏洞。 安全堆栈审核停止时断言安全权限。 如果在调用方执行任何检查的情况下断言权限，调用方可以通过使用你的权限间接执行代码。 断言没有安全检查是允许当您确定无法以有害方式使用断言。 声明是无害的如果您调用的代码是无害的或者用户不能将任意信息传递给调用的代码。
+如果在不执行任何安全检查的情况下断言安全权限，则会在代码中留下可利用的安全漏洞。 安全堆栈审核在断言安全权限时停止。 如果在不对调用方执行任何检查的情况下断言权限, 调用方可以使用您的权限间接执行代码。 如果你确定不能以有害方式使用断言, 则不允许使用不带安全检查的断言。 如果调用的代码不无害, 或用户无法将任意信息传递给所调用的代码, 则断言不会造成危害。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复此规则的冲突，请添加对方法或其声明类型安全要求。
+若要修复与此规则的冲突, 请将安全要求添加到方法或其声明类型。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 禁止显示此规则在仔细检查安全性后，才的警告。
+仅在仔细检查安全检查后, 禁止显示此规则发出的警告。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,23 +1,20 @@
 ---
 title: 控制流活动设计器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 ms.assetid: ba74af23-5398-4e62-bd90-c50612e3bfef
 caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: e852bfa5b392c6ffa758678fa83dabd8a8c97f54
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 25f8db1f6d14692538fe7f61ed2f9dbd37e0bd29
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49303610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62977311"
 ---
 # <a name="control-flow-activity-designers"></a>控制流活动设计器
 [!INCLUDE[wfd1](../includes/wfd1-md.md)] 包含系统提供的若干活动，构造工作流时可以使用它们。 本节包含系统提供的活动中用于控制工作流中的流的活动。 以下主题介绍这些活动以及如何使用它们。  
@@ -26,7 +23,7 @@ ms.locfileid: "49303610"
  [DoWhile](../workflow-designer/dowhile-activity-designer.md)  
  执行其主体中包含至少一次，直到指定的条件的计算结果为活动 **，则返回 true**。  
   
- [ForEach\<T >](http://msdn.microsoft.com/en-us/a680cddd-2760-497a-b27b-c023fcbc6f33)  
+ [ForEach\<T>](foreach-t-activity-designer.md)  
  为指定集合中的每一项执行其主体中包含的活动。  
   
  [如果](../workflow-designer/if-activity-designer.md)  
@@ -47,7 +44,7 @@ ms.locfileid: "49303610"
  [Sequence](../workflow-designer/sequence-activity-designer.md)  
  包含子活动的已排序集合，将按该排序执行这些子活动。  
   
- [交换机\<T >](http://msdn.microsoft.com/en-us/ce1aa634-c4db-4475-a1c8-a88478a57212)  
+ [Switch\<T>](switch-t-activity-designer.md)  
  计算指定表达式并执行活动集合中其关联键与计算所得值匹配的活动。  
   
  [While](../workflow-designer/while-activity-designer.md)  

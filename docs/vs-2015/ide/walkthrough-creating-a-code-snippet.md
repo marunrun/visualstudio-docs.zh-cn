@@ -1,14 +1,9 @@
 ---
-title: 演练：创建代码片段 | Microsoft Docs
-ms.custom: ''
+title: 演练：创建代码片段 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - code snippets, creating
 - code snippets, shortcut
@@ -20,21 +15,21 @@ ms.assetid: 0dcaae11-39cf-4463-9c90-2494321251c2
 caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 038635db92d08837cc6519670053c9619ebe3c9b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: b23640abec76f04199abe6e64888c641940e7a3f
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49267732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63388335"
 ---
-# <a name="walkthrough-creating-a-code-snippet"></a>演练：创建代码段
+# <a name="walkthrough-creating-a-code-snippet"></a>演练：创建代码片段
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-只需几步操作即可创建代码片段。 你需要做的就是创建一个 XML 文件，填写适当的元素，并向其中添加代码。 此外还可以向代码中添加引用和替换参数。 通过使用代码片段管理器的导入按钮添加到你的 Visual Studio 安装该片段 (**工具/代码片段管理器**)。  
+只需几步操作即可创建代码片段。 你需要做的就是创建一个 XML 文件，填写适当的元素，并向其中添加代码。 此外还可以向代码中添加引用和替换参数。 使用代码片段管理器（工具/代码片段管理器）上的“导入”按钮，即可向自己的 Visual Studio 安装添加代码片段。  
   
 > [!TIP]
->  有关如何更轻松地编写代码片段，如搜索 CodePlex 网站获取的社区工具[Snippet Editor](http://go.microsoft.com/fwlink/?LinkId=251033)。  
+> 有关如何更轻松地编写代码片段，如搜索 CodePlex 网站获取的社区工具[Snippet Editor](http://go.microsoft.com/fwlink/?LinkId=251033)。  
   
 ## <a name="snippet-template"></a>代码片段模板  
  以下是基本代码片段模板：  
@@ -59,13 +54,13 @@ ms.locfileid: "49267732"
   
 ### <a name="to-create-a-code-snippet"></a>创建代码片段  
   
-1.  在 Visual Studio 中创建新的 XML 文件，然后添加如上所示的模板。  
+1. 在 Visual Studio 中创建新的 XML 文件，然后添加如上所示的模板。  
   
-2.  在元素中填写代码片段的标题，例如“Hello World VB”。  
+2. 在元素中填写代码片段的标题，例如“Hello World VB”。  
   
-3.  在 Code 元素的“语言”特性中填写代码片段的语言。 对于本示例，请使用“VB”。  
+3. 在 Code 元素的“语言”特性中填写代码片段的语言。 对于本示例，请使用“VB”。  
   
-4.  在 Code 元素中的 CDATA 部分内添加某些代码，例如：  
+4. 在 Code 元素中的 CDATA 部分内添加某些代码，例如：  
   
     ```  
     <Code Language="VB">  
@@ -74,33 +69,33 @@ ms.locfileid: "49267732"
   
     ```  
   
-5.  将代码片段另存为 VBCodeSnippet.snippet。  
+5. 将代码片段另存为 VBCodeSnippet.snippet。  
   
 ### <a name="to-add-a-code-snippet-to-visual-studio"></a>将代码片段添加到 Visual Studio  
   
-1.  可以使用代码片段管理器将自己的代码片段添加到 Visual Studio 安装。 打开代码片段管理器 (**工具/代码片段管理器**)。  
+1. 可以使用代码片段管理器将自己的代码片段添加到 Visual Studio 安装。 打开代码片段管理器（工具/代码片段管理器）。  
   
-2.  单击“导入”按钮。  
+2. 单击“导入”按钮。  
   
-3.  请转到在前面的过程中保存代码片段的位置，选择该位置，然后单击“打开”。  
+3. 请转到在前面的过程中保存代码片段的位置，选择该位置，然后单击“打开”。  
   
-4.  “导入代码片段”对话框随即打开，要求从右窗格中提供的选项中选择代码片段的添加位置。 其中一个选项应为“我的代码片段”。 选择它，单击“完成”，然后单击“确定”。  
+4. “导入代码片段”对话框随即打开，要求从右窗格中提供的选项中选择代码片段的添加位置。 其中一个选项应为“我的代码片段”。 选择它，单击“完成”，然后单击“确定”。  
   
-5.  代码片段会复制到以下位置：  
+5. 代码片段会复制到以下位置：  
   
      `%USERPROFILE%\Documents\Visual Studio 2013\Code Snippets\Visual Basic\My Code Snippets`  
   
-6.  通过打开 Visual Basic 项目并打开代码文件，测试代码片段。 在文件中单击**插入代码段**上下文菜单，然后**我的代码片段**。 应看到一个名为“我的 Visual Basic 代码片段”的代码片段。 双击该选项。  
+6. 通过打开 Visual Basic 项目并打开代码文件，测试代码片段。 在文件中单击**插入代码段**上下文菜单，然后**我的代码片段**。 应看到一个名为“我的 Visual Basic 代码片段”的代码片段。 双击该选项。  
   
-7.  应会看到`Console.WriteLine("Hello, World!")`插入代码中。  
+7. 应会看到`Console.WriteLine("Hello, World!")`插入代码中。  
   
 ### <a name="adding-description-and-shortcut-fields"></a>添加“说明”和“快捷方式”字段  
   
-1.  在“代码片段管理器”中查看“说明”字段时，可以获得有关代码片段的详细信息。 快捷方式是用户为插入代码片段而键入的标记。 编辑已添加通过打开的文件的代码段`%USERPROFILE%\Documents\Visual Studio 2013\Code Snippets\Visual Basic\My Code Snippet\VBCodeSnippet.snippet`。  
+1. 在“代码片段管理器”中查看“说明”字段时，可以获得有关代码片段的详细信息。 快捷方式是用户为插入代码片段而键入的标记。 编辑已添加通过打开的文件的代码段`%USERPROFILE%\Documents\Visual Studio 2013\Code Snippets\Visual Basic\My Code Snippet\VBCodeSnippet.snippet`。  
   
-2.  将 Author 和 Description 元素添加到 Header 元素，并填写。  
+2. 将 Author 和 Description 元素添加到 Header 元素，并填写。  
   
-3.  Header 元素应该类似于以下形式：  
+3. Header 元素应该类似于以下形式：  
   
     ```  
     <Header>  
@@ -111,9 +106,9 @@ ms.locfileid: "49267732"
   
     ```  
   
-4.  打开“代码片段管理器”并选择代码片段。 在右窗格中，应看到“说明”和“创建者”字段已填写。  
+4. 打开“代码片段管理器”并选择代码片段。 在右窗格中，应看到“说明”和“创建者”字段已填写。  
   
-5.  要添加快捷方式，请添加 Shortcut 元素，以及 Author 和 Description 元素：  
+5. 要添加快捷方式，请添加 Shortcut 元素，以及 Author 和 Description 元素：  
   
     ```  
     <Header>  
@@ -125,17 +120,17 @@ ms.locfileid: "49267732"
   
     ```  
   
-6.  再次保存代码片段文件。  
+6. 再次保存代码片段文件。  
   
-7.  要测试该快捷方式，请打开 Visual Basic 项目，并打开代码文件。 类型`hello`文件，并按选项卡中。 应插入代码段。  
+7. 要测试该快捷方式，请打开 Visual Basic 项目，并打开代码文件。 类型`hello`文件，并按选项卡中。 应插入代码段。  
   
 ### <a name="to-add-references-and-imports"></a>添加引用和导入  
   
-1.  使用 Visual Basic 代码段可以通过使用引用元素添加到项目的引用，并使用导入元素添加导入声明。 （其他语言中的代码片段没有此功能。）例如，如果将代码示例中的 `Console.WriteLine` 更改为 `MessageBox.Show`，则可能需要将 System.Windows.Forms.dll 程序集添加到项目中。  
+1. 使用 Visual Basic 代码段可以通过使用引用元素添加到项目的引用，并使用导入元素添加导入声明。 （其他语言中的代码片段没有此功能。）例如，如果将代码示例中的 `Console.WriteLine` 更改为 `MessageBox.Show`，则可能需要将 System.Windows.Forms.dll 程序集添加到项目中。  
   
-2.  打开代码片段。  
+2. 打开代码片段。  
   
-3.  在 Snippet 元素下添加 References 元素：  
+3. 在 Snippet 元素下添加 References 元素：  
   
     ```  
     <References>  
@@ -146,7 +141,7 @@ ms.locfileid: "49267732"
   
     ```  
   
-4.  在 Snippet 元素下添加 Imports 元素：  
+4. 在 Snippet 元素下添加 Imports 元素：  
   
     ```  
     <Imports>  
@@ -157,17 +152,17 @@ ms.locfileid: "49267732"
   
     ```  
   
-5.  将 CDATA 部分更改为以下内容：  
+5. 将 CDATA 部分更改为以下内容：  
   
     ```  
     <![CDATA[MessageBox.Show("Hello, World!")]]>  
     ```  
   
-6.  保存代码片段。  
+6. 保存代码片段。  
   
-7.  打开 Visual Basic 项目并添加代码片段。  
+7. 打开 Visual Basic 项目并添加代码片段。  
   
-8.  代码文件顶部会出现一条 Imports 语句：  
+8. 代码文件顶部会出现一条 Imports 语句：  
   
     ```  
     Imports System.Windows.Forms  
@@ -178,11 +173,11 @@ ms.locfileid: "49267732"
   
 ### <a name="adding-replacements"></a>添加替换  
   
-1.  你可能需要用户替换部分代码片段，例如，如果添加了一个变量并需要用户将该变量替换为当前项目中的变量。 可以提供两种类型的替换：文本和对象。 文本是某些类型的字符串（字符串文本、变量名称或数值的字符串表示形式）。 对象是除字符串以外的其他类型的实例。 在此过程中，需要声明文本替换和对象替换，并更改代码，以引用这些替换。  
+1. 你可能需要用户替换部分代码片段，例如，如果添加了一个变量并需要用户将该变量替换为当前项目中的变量。 可以提供两种类型的替换：文本和对象。 文本是某些类型的字符串（字符串文本、变量名称或数值的字符串表示形式）。 对象是除字符串以外的其他类型的实例。 在此过程中，需要声明文本替换和对象替换，并更改代码，以引用这些替换。  
   
-2.  打开代码片段。  
+2. 打开代码片段。  
   
-3.  此示例使用 SQL 连接字符串，因此需要更改 Imports 和 References 元素，以添加合适的引用：  
+3. 此示例使用 SQL 连接字符串，因此需要更改 Imports 和 References 元素，以添加合适的引用：  
   
     ```  
     <References>  
@@ -204,7 +199,7 @@ ms.locfileid: "49267732"
   
     ```  
   
-4.  要声明 SQL 连接字符串的文本替换，请在 Snippet 元素下添加 Declarations 元素，并在其中添加具有 ID、工具提示和替换默认值子元素的 Literal 元素：  
+4. 要声明 SQL 连接字符串的文本替换，请在 Snippet 元素下添加 Declarations 元素，并在其中添加具有 ID、工具提示和替换默认值子元素的 Literal 元素：  
   
     ```  
     <Declarations>  
@@ -217,7 +212,7 @@ ms.locfileid: "49267732"
   
     ```  
   
-5.  要声明 SQL 连接的对象替换，请在 Declarations 元素内添加 Object 元素，并添加 ID、对象类型、工具提示和默认值子元素。 生成的 Declarations 元素应如下所示：  
+5. 要声明 SQL 连接的对象替换，请在 Declarations 元素内添加 Object 元素，并添加 ID、对象类型、工具提示和默认值子元素。 生成的 Declarations 元素应如下所示：  
   
     ```  
     <Declarations>  
@@ -235,7 +230,7 @@ ms.locfileid: "49267732"
     </Declarations>  
     ```  
   
-6.  在代码部分中，可以用 $ 符号包围替换内容进行引用，例如 `$replacement$`：  
+6. 在代码部分中，可以用 $ 符号包围替换内容进行引用，例如 `$replacement$`：  
   
     ```  
     <Code Language="VB" Kind="method body">  
@@ -249,9 +244,9 @@ ms.locfileid: "49267732"
     </Code>  
     ```  
   
-7.  保存代码片段。  
+7. 保存代码片段。  
   
-8.  打开 Visual Basic 项目并添加代码片段。  
+8. 打开 Visual Basic 项目并添加代码片段。  
   
 9. 代码应如下所示，其中 `SQL connection string` 和 `dcConnection` 替换内容以浅橙色突出显示。 按 tab 键导航到另一个。  
   
@@ -268,6 +263,3 @@ ms.locfileid: "49267732"
   
 ## <a name="see-also"></a>请参阅  
  [代码片段架构参考](../ide/code-snippets-schema-reference.md)
-
-
-

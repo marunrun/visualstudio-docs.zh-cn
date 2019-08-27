@@ -1,14 +1,9 @@
 ---
-title: CA1700： 不要命名枚举值&#39;保留&#39;|Microsoft Docs
-ms.custom: ''
+title: CA1700:未命名枚举值&#39;保留&#39;|Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA1700
 - DoNotNameEnumValuesReserved
@@ -20,14 +15,14 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 3229b8432af89857d1aadd8bf1531c8b11a29ed7
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: a5446d21b51f57b4a614e8931b154654bee99cd2
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49897987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68189264"
 ---
-# <a name="ca1700-do-not-name-enum-values-39reserved39"></a>CA1700： 不要命名枚举值&#39;保留&#39;
+# <a name="ca1700-do-not-name-enum-values-39reserved39"></a>CA1700:未命名枚举值&#39;保留&#39;
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -60,15 +55,12 @@ ms.locfileid: "49897987"
  它可以安全地禁止显示此规则的警告，当前使用的成员或对以前发布的库。
 
 ## <a name="related-rules"></a>相关的规则
- [CA2217：不要使用 FlagsAttribute 标记枚举](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
+ [CA2217:不使用 FlagsAttribute 标记枚举](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
 
- [CA1712：不要将类型名用作枚举值的前缀](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)
+ [CA1712:不要使用类型名称的枚举值的前缀](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)
 
- [CA1028：枚举存储应为 Int32](../code-quality/ca1028-enum-storage-should-be-int32.md)
+ [CA1028:枚举存储应为 Int32](../code-quality/ca1028-enum-storage-should-be-int32.md)
 
- [CA1008：枚举应具有零值](../code-quality/ca1008-enums-should-have-zero-value.md)
+ [CA1008:枚举应具有零值](../code-quality/ca1008-enums-should-have-zero-value.md)
 
- [CA1027：用 FlagsAttribute 标记枚举](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
-
-
-
+ [CA1027:用 FlagsAttribute 标记枚举](../code-quality/ca1027-mark-enums-with-flagsattribute.md)

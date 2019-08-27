@@ -1,7 +1,6 @@
 ---
 title: CA1726:使用首选词条
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - UsePreferredTerms
@@ -11,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 642b2acd-3a33-4d1f-b0a7-67073ae73be2
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c31838f8dcfdcb8c98d7cfdd94eb2743f6e7d90
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e4e068fee014d767b7afcdf8183ac6611b299f36
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53909004"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68921574"
 ---
 # <a name="ca1726-use-preferred-terms"></a>CA1726:使用首选词条
 
@@ -28,17 +27,17 @@ ms.locfileid: "53909004"
 |TypeName|UsePreferredTerms|
 |CheckId|CA1726|
 |类别|Microsoft.Naming|
-|是否重大更改|-对程序集引发时中断<br /><br /> 无间断-时在类型参数时触发|
+|是否重大更改|正在进行-对程序集引发时<br /><br /> 非中断-在类型参数上触发时|
 
 ## <a name="cause"></a>原因
 
-在外部可见的标识符的名称中，包括一个存在首选备用词条的词条。 或者，名称包括术语标志或标志。
+在外部可见的标识符的名称中，包括一个存在首选备用词条的词条。 或名称包含字词标志或标志。
 
 ## <a name="rule-description"></a>规则说明
 
-此规则将分析为标记的标识符。 每个单个标记和每个连续的双标记组合到规则和任何自定义词典的已弃用部分生成的条款进行比较。 下表显示了内置规则以及其首选备用词条的条款。
+此规则将标识符分析为标记。 每个单独的标记和每个连续的双重标记组合将与规则中和任何自定义字典中不推荐使用的部分中的字词进行比较。 下表显示了规则中内置的术语及其首选替代项。
 
-|过时的术语|首选的术语|
+|过时术语|首选术语|
 |-------------------|--------------------|
 |`Arent`|`AreNot`|
 |`Cancelled`|`Canceled`|
@@ -48,7 +47,7 @@ ms.locfileid: "53909004"
 |`Didnt`|`DidNot`|
 |`Doesnt`|`DoesNot`|
 |`Dont`|`DoNot`|
-|`Flag` 或 `Flags`|没有任何替换词。 请勿使用。|
+|`Flag` 或 `Flags`|无替换字词。 请勿使用。|
 |`Hadnt`|`HadNot`|
 |`Hasnt`|`HasNot`|
 |`Havent`|`HaveNot`|
@@ -66,10 +65,10 @@ ms.locfileid: "53909004"
 |`Writeable`|`Writable`|
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复此规则的冲突，请替换首选备用词条中的术语。
+若要修复与此规则的冲突, 请将此术语替换为首选替代项。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 仅当标识符的名称是有意而为且明确地与原始字词而不是首选术语相关，禁止显示此规则的警告。
+仅当标识符的名称是有意的并且特别与原始字词相关, 而不是首选字词时, 才禁止显示此规则的警告。
 
-## <a name="related-rules"></a>相关的规则
- [命名警告](../code-quality/naming-warnings.md)
+## <a name="related-rules"></a>相关规则
+[命名警告](../code-quality/naming-warnings.md)

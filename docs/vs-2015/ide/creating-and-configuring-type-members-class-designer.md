@@ -1,14 +1,9 @@
 ---
 title: 创建和配置类型成员（类设计器）| Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vs.classdetails.method
 - vs.classdetails.property
@@ -34,13 +29,13 @@ ms.assetid: 42af8738-3738-4ca7-82ff-edf573a68f96
 caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 93a112fac274921fe2d1075e1a1b9178c408240c
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 93d001af54a84bdb2cd2ec00f3e8fb80174c6436
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49827969"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65701215"
 ---
 # <a name="creating-and-configuring-type-members-class-designer"></a>创建和配置类型成员（类设计器）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -58,17 +53,17 @@ ms.locfileid: "49827969"
 |模块（仅限 VB）|方法、属性、字段、事件、构造函数和常量|  
   
 > [!NOTE]
->  通过使用自动实现的属性（仅限 C#），属性的 get 和 set 访问器不需要其他逻辑，因而属性声明更加简洁。 若要显示完全签名，请从“类图”菜单中选择“更改成员格式”->“显示完全签名”。 有关自动实现的属性的详细信息，请参阅[自动实现的属性](http://msdn.microsoft.com/library/aa55fa97-ccec-431f-b5e9-5ac789fd32b7)。  
+> 通过使用自动实现的属性（仅限 C#），属性的 get 和 set 访问器不需要其他逻辑，因而属性声明更加简洁。 若要显示完全签名，请从“类图”菜单中选择“更改成员格式”->“显示完全签名”。 有关自动实现的属性的详细信息，请参阅[自动实现的属性](https://msdn.microsoft.com/library/aa55fa97-ccec-431f-b5e9-5ac789fd32b7)。  
   
 ## <a name="common-tasks"></a>常规任务  
   
 |任务|支持内容|  
 |----------|------------------------|  
-|开始：创建并配置类型成员之前，必须打开“类详细信息”窗口。|-   [打开“类详细信息”窗口](../ide/creating-and-configuring-type-members-class-designer.md#OpenClassDetails)<br />-   [“类详细信息”用法说明](../ide/creating-and-configuring-type-members-class-designer.md#ClassDetailsUsageNotes)<br />-   [显示只读信息](../ide/creating-and-configuring-type-members-class-designer.md#ReadOnlyInfo)<br />-   [类图和“类详细信息”窗口中的键盘快捷方式和鼠标快捷方式（类设计器）](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md)|  
-|**创建和修改类型成员：**。可以使用“类详细信息”窗口创建新成员、修改成员并向方法中添加参数。|-   [创建成员](../ide/creating-and-configuring-type-members-class-designer.md#CreateMembers)<br />-   [修改类型成员](../ide/creating-and-configuring-type-members-class-designer.md#ModifyTypeMembers)<br />-   [向方法中添加参数](../ide/creating-and-configuring-type-members-class-designer.md#AddMethodParams)|  
+|**开始操作：** 创建并配置类型成员之前，必须打开类详细信息窗口中。|-   [打开“类详细信息”窗口](../ide/creating-and-configuring-type-members-class-designer.md#OpenClassDetails)<br />-   [“类详细信息”用法说明](../ide/creating-and-configuring-type-members-class-designer.md#ClassDetailsUsageNotes)<br />-   [显示只读信息](../ide/creating-and-configuring-type-members-class-designer.md#ReadOnlyInfo)<br />-   [类图和“类详细信息”窗口中的键盘快捷方式和鼠标快捷方式（类设计器）](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md)|  
+|**创建和修改类型成员：** 可以创建新成员、 修改成员和通过使用类详细信息窗口向方法添加参数。|-   [创建成员](../ide/creating-and-configuring-type-members-class-designer.md#CreateMembers)<br />-   [修改类型成员](../ide/creating-and-configuring-type-members-class-designer.md#ModifyTypeMembers)<br />-   [向方法中添加参数](../ide/creating-and-configuring-type-members-class-designer.md#AddMethodParams)|  
   
-##  <a name="OpenClassDetails"></a>打开“类详细信息”窗口  
- 默认情况下，打开一个新的类图时，“类详细信息”窗口会自动显示（请参阅[如何：将类图添加到项目中（类设计器）](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)）。 你也可以通过以下方式明确地打开“类详细信息”窗口。  
+## <a name="OpenClassDetails"></a>打开“类详细信息”窗口  
+ 默认情况下，类详细信息窗口会自动显示当你打开新的类图 (请参阅[如何：将类图添加到项目 （类设计器）](../ide/how-to-add-class-diagrams-to-projects-class-designer.md))。 你也可以通过以下方式明确地打开“类详细信息”窗口。  
   
 #### <a name="to-open-the-class-details-window"></a>打开“类详细信息”窗口  
   
@@ -78,65 +73,65 @@ ms.locfileid: "49827969"
   
    - 或 -  
   
--   在“视图”菜单上指向“其他窗口”，然后单击“类详细信息”。  
+- 在“视图”菜单上指向“其他窗口”，然后单击“类详细信息”。  
   
-##  <a name="CreateMembers"></a>创建成员  
+## <a name="CreateMembers"></a>创建成员  
  可以使用以下任何工具创建成员：  
   
--   类设计器  
+- 类设计器  
   
--   “类详细信息”窗口工具栏  
+- “类详细信息”窗口工具栏  
   
--   “类详细信息”窗口  
-  
-> [!NOTE]
->  还可使用本节中介绍的过程创建构造函数和析构函数。 请切记构造函数和析构函数是特殊类型的方法，因此这两种函数显示在类图形状的“方法”隔离舱以及“类详细信息”窗口网格的“方法”区域。  
+- “类详细信息”窗口  
   
 > [!NOTE]
->  可以添加到委托中的唯一实体就是参数。 注意，标题为“使用‘类详细信息’窗口工具栏创建成员”的过程对此操作无效。  
+> 还可使用本节中介绍的过程创建构造函数和析构函数。 请切记构造函数和析构函数是特殊类型的方法，因此这两种函数显示在类图形状的“方法”隔离舱以及“类详细信息”窗口网格的“方法”区域。  
+  
+> [!NOTE]
+> 可以添加到委托中的唯一实体就是参数。 注意，标题为“使用‘类详细信息’窗口工具栏创建成员”的过程对此操作无效。  
   
 #### <a name="to-create-a-member-using-class-designer"></a>使用类设计器创建成员  
   
-1.  右键单击要向其中添加成员的类型，将鼠标指向“添加”，然后选择要添加的成员类型。  
+1. 右键单击要向其中添加成员的类型，将鼠标指向“添加”，然后选择要添加的成员类型。  
   
      将创建一个新的成员签名并将其添加到该类型中。 系统将以默认名称为其命名，可在“类设计器”、“类详细信息”窗口或“属性”窗口中更改该名称。  
   
-2.  或者，也可指定有关成员的其他详细信息，例如成员类型。  
+2. 或者，也可指定有关成员的其他详细信息，例如成员类型。  
   
 #### <a name="to-create-a-member-using-the-class-details-window-toolbar"></a>使用“类详细信息”窗口工具栏创建成员  
   
-1.  在关系图面上选择希望向其添加成员的类型。  
+1. 在关系图面上选择希望向其添加成员的类型。  
   
      该类型获得焦点，其内容显示在“类详细信息”窗口中。  
   
-2.  在“类详细信息”窗口工具栏上单击顶部图标，再从下拉列表中选择“新建 \<成员>”。  
+2. 在“类详细信息”窗口工具栏上单击顶部图标，再从下拉列表中选择“新建 \<成员>”。  
   
      光标移至要添加的那类成员所对应行中的“名称”字段。 例如，如果单击了“新建属性”，则光标将移至“类详细信息”窗口的“属性”区域中的一个新行上。  
   
-3.  键入希望创建的成员的名称，再按 Enter（或者通过按 Tab 等方式移动焦点）。  
+3. 键入希望创建的成员的名称，再按 Enter（或者通过按 Tab 等方式移动焦点）。  
   
      将创建一个新的成员签名并将其添加到该类型中。 现在该成员就存在于代码中，并显示在“类设计器”、“类详细信息”窗口和“属性”窗口中。  
   
-4.  或者，也可指定有关成员的其他详细信息，例如成员类型。  
+4. 或者，也可指定有关成员的其他详细信息，例如成员类型。  
   
 #### <a name="to-create-a-member-using-the-class-details-window"></a>使用“类详细信息”窗口创建成员  
   
-1.  在关系图面上选择希望向其添加成员的类型。  
+1. 在关系图面上选择希望向其添加成员的类型。  
   
      该类型获得焦点，其内容显示在“类详细信息”窗口中。  
   
-2.  在“类详细信息”窗口中包含要添加的那类成员的部分中，单击“\<添加成员>”。 例如，若要添加一个字段，请单击“\<添加字段>”。  
+2. 在“类详细信息”窗口中包含要添加的那类成员的部分中，单击“\<添加成员>”。 例如，若要添加一个字段，请单击“\<添加字段>”。  
   
-3.  键入希望创建的成员的名称，再按 Enter。  
+3. 键入希望创建的成员的名称，再按 Enter。  
   
      将创建一个新的成员签名并将其添加到该类型中。 现在该成员就存在于代码中，并显示在“类设计器”、“类详细信息”窗口和“属性”窗口中。  
   
-4.  或者，也可指定有关成员的其他详细信息，例如成员类型。  
+4. 或者，也可指定有关成员的其他详细信息，例如成员类型。  
   
-     注意：还可使用键盘快捷方式创建成员。 有关详细信息，请参阅[类图和“类详细信息”窗口中的键盘快捷方式和鼠标快捷方式（类设计器）](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md)。  
+     **注意：** 还可使用键盘快捷方式创建成员。 有关详细信息，请参阅[类图和“类详细信息”窗口中的键盘快捷方式和鼠标快捷方式（类设计器）](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md)。  
   
-##  <a name="ModifyTypeMembers"></a>修改类型成员  
- 类设计器使你能够修改关系图上显示的类型的成员。 你可以修改类图上显示的任何非只读类型的成员。 （请参阅[显示只读信息（类设计器）](http://msdn.microsoft.com/en-us/33e2d3a9-1668-4d10-ae56-fa09b3156e0a)。）通过在设计图面、“属性”窗口和“类详细信息”窗口上使用就地编辑来修改类型成员。  
+## <a name="ModifyTypeMembers"></a>修改类型成员  
+ 类设计器使你能够修改关系图上显示的类型的成员。 你可以修改类图上显示的任何非只读类型的成员。 （请参阅[显示只读信息（类设计器）](https://msdn.microsoft.com/33e2d3a9-1668-4d10-ae56-fa09b3156e0a)。）通过在设计图面、“属性”窗口和“类详细信息”窗口上使用就地编辑来修改类型成员。  
   
  “类详细信息”窗口中显示的所有成员均表示类图中类型的成员。 有四种成员：方法、属性、字段和事件。  
   
@@ -144,52 +139,52 @@ ms.locfileid: "49827969"
   
  每个成员行均显示以下元素：  
   
--   **成员图标**  
+- **成员图标**  
   
      每种成员均由各自的图标表示。 将鼠标指向成员图标时可显示该成员的签名。 单击成员图标或成员图标左边的空白处可选择该行。  
   
--   **成员名称**  
+- **成员名称**  
   
      成员行的“名称”列显示成员的名称。 此名称还显示在“属性”窗口的“名称”属性中。 使用此单元格可更改任何具有读写权限的成员的名称。  
   
      如果“名称”列过窄而无法完整地显示名称，则将鼠标指向成员名称即可显示完整名称。  
   
--   **成员类型**  
+- **成员类型**  
   
      “成员类型”单元格使用 IntelliSense，这使你可以选择当前项目或引用项目中列出的所有可用类型。  
   
--   **成员修饰符**  
+- **成员修饰符**  
   
      将成员的可见性修饰符更改为 `Public` (`public`)、`Private` (`private`)、`Friend` (`internal`) `Protected` (`protected`)、`Protected``Friend` (`protected``internal`) 或 `Default`。  
   
--   **\<添加成员>**  
+- **\<添加成员>**  
   
      “类详细信息”窗口中最后一行的“名称”单元格中包含文本“\<添加成员>”。 如果单击此单元格，则可创建新成员。 有关详细信息，请参阅[创建成员](../ide/creating-and-configuring-type-members-class-designer.md#CreateMembers)。  
   
--   “属性”窗口中的成员属性  
+- “属性”窗口中的成员属性  
   
      “类详细信息”窗口显示的成员属性是“属性”窗口中所显示的成员属性的子集。 在一个位置更改某个属性将使该属性的值在全局范围内得到更新， 包括该属性的值在其他位置的显示。  
   
--   **摘要**  
+- **摘要**  
   
      “摘要”单元格公开该成员相关信息的摘要。 单击“摘要”单元格中的省略号可查看或编辑该成员的“摘要”、“返回类型”和“标记”相关信息。  
   
--   **隐藏**  
+- **隐藏**  
   
      选中“隐藏”复选框后，该成员将不会显示在该类型中。  
   
 #### <a name="to-modify-a-type-member"></a>修改类型成员  
   
-1.  使用类设计器选择一种类型。  
+1. 使用类设计器选择一种类型。  
   
-2.  如果“类详细信息”窗口未显示，请在“类设计器”工具栏上单击“类详细信息’窗口”按钮。  
+2. 如果“类详细信息”窗口未显示，请在“类设计器”工具栏上单击“类详细信息’窗口”按钮。  
   
-3.  编辑“类详细信息”窗口网格中各字段的值。 每编辑完一个字段按一下 Enter，或者以其他方式（例如按 Tab）将焦点从已编辑的字段中移开。 你的编辑将立即在代码中反映出来。  
+3. 编辑“类详细信息”窗口网格中各字段的值。 每编辑完一个字段按一下 Enter，或者以其他方式（例如按 Tab）将焦点从已编辑的字段中移开。 你的编辑将立即在代码中反映出来。  
   
     > [!NOTE]
-    >  如果只希望修改成员的名称，你可以使用就地编辑来进行操作。  
+    > 如果只希望修改成员的名称，你可以使用就地编辑来进行操作。  
   
-##  <a name="AddMethodParams"></a>向方法中添加参数  
+## <a name="AddMethodParams"></a>向方法中添加参数  
  使用“类详细信息”窗口向方法中添加参数。 可以将参数配置为必需或可选。 如果为参数的“可选的默认值”属性提供值，将指示设计器以可选参数的形式生成代码。  
   
  参数行包含以下项：  
@@ -214,61 +209,61 @@ ms.locfileid: "49827969"
   
 - **\<添加参数>**  
   
-   成员的最后一个参数行的“名称”单元格中包含文本“<add parameter>”。 单击此单元格可创建新的参数。 有关详细信息，请参阅[向方法中添加参数](../ide/creating-and-configuring-type-members-class-designer.md#HowToAddParameterToMethod)。  
+   成员的最后一个参数行的“名称”单元格中包含文本“<添加参数\>”。 单击此单元格可创建新的参数。 有关详细信息，请参阅[向方法中添加参数](../ide/creating-and-configuring-type-members-class-designer.md#HowToAddParameterToMethod)。  
   
   **“属性”窗口中的参数属性**  
   
-  “属性”窗口中显示的参数属性与“类详细信息”窗口中显示的相同：“名称”、“类型”、“修饰符”、“摘要”以及“可选的默认值”属性。 在一个位置更改某个属性将使该属性的值在全局范围内得到更新，包括这个属性值在其他位置的显示。  
+  属性窗口显示在类详细信息窗口中显示的属性的相同参数：“名称”、“类型”、“修饰符”、“摘要”以及“可选默认值”属性。 在一个位置更改某个属性将使该属性的值在全局范围内得到更新，包括这个属性值在其他位置的显示。  
   
 > [!NOTE]
->  若要向委托中添加参数，请参阅[创建成员](../ide/creating-and-configuring-type-members-class-designer.md#CreateMembers)。  
+> 若要向委托中添加参数，请参阅[创建成员](../ide/creating-and-configuring-type-members-class-designer.md#CreateMembers)。  
   
 > [!NOTE]
->  尽管析构函数是一种方法，但它不能有参数。  
+> 尽管析构函数是一种方法，但它不能有参数。  
   
-###  <a name="HowToAddParameterToMethod"></a>向方法添加参数  
+### <a name="HowToAddParameterToMethod"></a>向方法添加参数  
   
-1.  在关系图图面上，单击你要向其中添加参数的方法所属的类型。  
+1. 在关系图图面上，单击你要向其中添加参数的方法所属的类型。  
   
      焦点移到该类型上，并且它的内容显示在“类详细信息”窗口中。  
   
-2.  在“类详细信息”窗口中，展开你要向其中添加参数的方法所在的行。  
+2. 在“类详细信息”窗口中，展开你要向其中添加参数的方法所在的行。  
   
      此时将显示缩进的参数行，其中仅包含一对括号和文字“\<添加参数>”。  
   
-3.  单击“\<添加参数>”，键入新参数的名称，并按 Enter。  
+3. 单击“\<添加参数>”，键入新参数的名称，并按 Enter。  
   
      新参数随即添加到方法和方法的代码中。 它显示在“类详细信息”窗口和“属性”窗口中。  
   
-4.  （可选）指定参数的其他详细信息，例如参数类型。  
+4. （可选）指定参数的其他详细信息，例如参数类型。  
   
 ### <a name="to-add-an-optional-parameter-to-a-method"></a>向方法添加可选参数  
   
-1.  在关系图面上，单击要向其中添加可选参数的方法所属的类型。  
+1. 在关系图面上，单击要向其中添加可选参数的方法所属的类型。  
   
      焦点移到该类型上，并且它的内容显示在“类详细信息”窗口中。  
   
-2.  在“类详细信息”窗口中，展开要向其中添加可选参数的方法所在的行。  
+2. 在“类详细信息”窗口中，展开要向其中添加可选参数的方法所在的行。  
   
      此时将显示缩进的参数行，其中仅包含一对括号和文字“\<添加参数>”。  
   
-3.  单击“\<添加参数>”，键入新参数的名称，并按 Enter。  
+3. 单击“\<添加参数>”，键入新参数的名称，并按 Enter。  
   
      新参数随即添加到方法和方法的代码中。 它显示在“类详细信息”窗口和“属性”窗口中。  
   
-4.  在“属性”窗口中，为“可选的默认值”属性键入值。 如果设置参数的“可选的默认值”属性，将使该参数变为可选。  
+4. 在“属性”窗口中，为“可选的默认值”属性键入值。 如果设置参数的“可选的默认值”属性，将使该参数变为可选。  
   
     > [!NOTE]
-    >  可选参数必须是参数列表中位于最后面的参数。  
+    > 可选参数必须是参数列表中位于最后面的参数。  
   
-##  <a name="ClassDetailsUsageNotes"></a>“类详细信息”用法说明  
+## <a name="ClassDetailsUsageNotes"></a>“类详细信息”用法说明  
  请注意下面关于使用“类详细信息”窗口的技巧。  
   
  **可编辑的和不可编辑的单元格**  
   
  除了下面几个特例外，“类详细信息”窗口中的所有单元格都是可编辑的：  
   
-- 整个类型是只读的，比如它位于引用的程序集中时（请参阅[显示只读信息（类设计器）](http://msdn.microsoft.com/en-us/33e2d3a9-1668-4d10-ae56-fa09b3156e0a)。）当你在类设计器中选择形状时，“类详细信息”窗口将以只读方式显示形状的详细信息。  
+- 整个类型是只读的，比如它位于引用的程序集中时（请参阅[显示只读信息（类设计器）](https://msdn.microsoft.com/33e2d3a9-1668-4d10-ae56-fa09b3156e0a)。）当你在类设计器中选择形状时，“类详细信息”窗口将以只读方式显示形状的详细信息。  
   
 - 对于索引器，名称是只读的，其余内容（类型、修饰符、摘要）都是可编辑的。  
   
@@ -290,7 +285,7 @@ ms.locfileid: "49827969"
   
   你可以复制或剪切“类详细信息”窗口中的字段或行，然后将它们粘贴到另一个类型中。 仅当行不是只读的时候才能剪切。 当你粘贴行时，“类详细信息”窗口会给行分配一个新名称（从所复制的行的名称派生）以避免冲突。  
   
-##  <a name="ReadOnlyInfo"></a>显示只读信息  
+## <a name="ReadOnlyInfo"></a>显示只读信息  
  类设计器和“类详细信息”窗口可显示以下各项的类型（及类型成员）：  
   
 - 包含类关系图的项目  
@@ -327,7 +322,7 @@ ms.locfileid: "49827969"
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|描述|  
 |-----------|-----------------|  
 |[查看类型和关系（类设计器）](../ide/viewing-types-and-relationships-class-designer.md)|你可以在类图中查看你的现有类型、成员和关系。|  
 |[重构类和类型（类设计器）](../ide/refactoring-classes-and-types-class-designer.md)|通过使用重构，你可以轻松地重命名类型和类型成员。 你也可以在类之间移动成员，将一个类拆分为多个分部类，并实现接口。|

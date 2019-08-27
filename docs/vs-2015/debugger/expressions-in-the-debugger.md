@@ -1,13 +1,8 @@
 ---
 title: 调试器中的表达式 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.expressions
@@ -31,13 +26,13 @@ ms.assetid: 70f9b531-44c7-4d77-980d-5eddbf2bff41
 caps.latest.revision: 30
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: cf75965a9be7c8e2a9a09cc43fa6eec632d6bf90
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 3999737a2fad04c9b513722ae11608574a72c410
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51722235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68158492"
 ---
 # <a name="expressions-in-the-debugger"></a>调试器中的表达式
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -50,7 +45,7 @@ Visual Studio 调试器包括表达式计算器，当您在 **“快速监视”
  无法识别 F# 表达式。 如果正在调试 F# 代码，你需要在向调试器窗口或对话框中输入表达式之前，将表达式转换为 C# 语法。 当把表达式从 F # 转换到 C# 时，请务必记住 C# 使用 `==` 运算符来测试相等性，而 F # 使用单个 `=`。  
   
 ## <a name="c-expressions"></a>C++ 表达式  
- 有关将上下文运算符用于 C++ 中的表达式的信息，请参阅 [Context Operator (C++)](../debugger/context-operator-cpp.md)。  
+ 有关将上下文运算符用于 C++ 中的表达式的信息，请参阅 [上下文运算符 (C++)](../debugger/context-operator-cpp.md)。  
   
 ### <a name="unsupported-expressions-in-c"></a>不支持的 C++ 表达式  
   
@@ -74,7 +69,7 @@ new Date(2,3,1985)
 ```  
   
 #### <a name="preprocessor-macros"></a>预处理器宏  
- 调试器中不支持预处理器宏。 例如，如果常量 `VALUE` 被声明为： `#define VALUE 3`，则不能使用“监视” `VALUE`**窗口中的** 。 若要避免此限制，只要有可能就应将 `#define`替换为枚举和函数。  
+ 调试器中不支持预处理器宏。 例如，如果常量 `VALUE` 被声明为： `#define VALUE 3`，则不能使用 **监视** 窗口中的 `VALUE` 。 若要避免此限制，只要有可能就应将 `#define`替换为枚举和函数。  
   
 ### <a name="using-namespace-declarations"></a>使用命名空间声明  
  不能使用 `using namespace` 声明。  若要访问一个类型名称或当前命名空间之外的变量，必须使用完全限定的名称。  
@@ -99,7 +94,7 @@ int main()
   
 ```  
   
-###  <a name="BKMK_Using_debugger_intrinisic_functions_to_maintain_state"></a> 使用调试器内部函数来维护状态  
+### <a name="BKMK_Using_debugger_intrinisic_functions_to_maintain_state"></a> 使用调试器内部函数来维护状态  
  利用调试器内部函数，您可以调用表达式中的某些 C/C++ 函数而不更改应用程序的状态。  
   
  调试器内部函数：  
@@ -123,15 +118,15 @@ int main()
   
 ## <a name="ccli---unsupported-expressions"></a>C++/CLI - 不支持的表达式  
   
--   不支持包含指针的强制转换或用户定义的强制转换。  
+- 不支持包含指针的强制转换或用户定义的强制转换。  
   
--   不支持对象比较和赋值。  
+- 不支持对象比较和赋值。  
   
--   不支持重载运算符和重载函数。  
+- 不支持重载运算符和重载函数。  
   
--   不支持装箱和取消装箱。  
+- 不支持装箱和取消装箱。  
   
--   不支持`Sizeof` 运算符。  
+- 不支持`Sizeof` 运算符。  
   
 ## <a name="c---unsupported-expressions"></a>C# - 不支持的表达式  
   
@@ -140,19 +135,19 @@ int main()
   
  不支持动态对象的下列功能：  
   
--   复合运算符 `+=`、 `-=`、 `%=`、 `/=`和 `*=`  
+- 复合运算符 `+=`、 `-=`、 `%=`、 `/=`和 `*=`  
   
--   许多强制转换，包括数值强制转换和类型参数强制转换  
+- 许多强制转换，包括数值强制转换和类型参数强制转换  
   
--   带两个以上的参数的方法调用  
+- 带两个以上的参数的方法调用  
   
--   带两个以上的参数的属性 getter  
+- 带两个以上的参数的属性 getter  
   
--   带参数的属性 setter  
+- 带参数的属性 setter  
   
--   分配给索引器  
+- 分配给索引器  
   
--   布尔运算符 `&&` 和 `||`  
+- 布尔运算符 `&&` 和 `||`  
   
 ### <a name="anonymous-methods"></a>匿名方法  
  不支持创建新的匿名方法。  
@@ -164,19 +159,19 @@ int main()
   
  不支持动态对象的下列功能：  
   
--   复合运算符 `+=`、 `-=`、 `%=`、 `/=`和 `*=`  
+- 复合运算符 `+=`、 `-=`、 `%=`、 `/=`和 `*=`  
   
--   许多强制转换，包括数值强制转换和类型参数强制转换  
+- 许多强制转换，包括数值强制转换和类型参数强制转换  
   
--   带两个以上的参数的方法调用  
+- 带两个以上的参数的方法调用  
   
--   带两个以上的参数的属性 getter  
+- 带两个以上的参数的属性 getter  
   
--   带参数的属性 setter  
+- 带参数的属性 setter  
   
--   分配给索引器  
+- 分配给索引器  
   
--   布尔运算符 `&&` 和 `||`  
+- 布尔运算符 `&&` 和 `||`  
   
 ### <a name="local-constants"></a>局部常量  
  不支持局部常量。  
@@ -189,43 +184,38 @@ int main()
   
 ### <a name="unsupported-keywords"></a>不受支持的关键字  
   
--   `AddressOf`  
+- `AddressOf`  
   
--   `End`  
+- `End`  
   
--   `Error`  
+- `Error`  
   
--   `Exit`  
+- `Exit`  
   
--   `Goto`  
+- `Goto`  
   
--   `On Error`  
+- `On Error`  
   
--   `Resume`  
+- `Resume`  
   
--   `Return`  
+- `Return`  
   
--   `Select/Case`  
+- `Select/Case`  
   
--   `Stop`  
+- `Stop`  
   
--   `SyncLock`  
+- `SyncLock`  
   
--   `Throw`  
+- `Throw`  
   
--   `Try/Catch/Finally`  
+- `Try/Catch/Finally`  
   
--   `With`  
+- `With`  
   
--   命名空间或模块级的关键字，如 `End Sub` 或 `Module`。  
+- 命名空间或模块级的关键字，如 `End Sub` 或 `Module`。  
   
 ## <a name="see-also"></a>请参阅  
- [C + + 中的格式说明符](../debugger/format-specifiers-in-cpp.md)   
+ [C++ 中的格式说明符](../debugger/format-specifiers-in-cpp.md)   
  [Context Operator (C++)](../debugger/context-operator-cpp.md)   
  [C# 中的格式说明符](../debugger/format-specifiers-in-csharp.md)   
  [伪变量](../debugger/pseudovariables.md)
-
-
-
-
-

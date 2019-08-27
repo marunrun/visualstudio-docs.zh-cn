@@ -1,14 +1,9 @@
 ---
 title: '&lt;assemblyIdentity&gt;元素 （ClickOnce 应用程序） |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 f1_keywords:
 - urn:schemas-microsoft-com:asm.v2#assemblyIdentity
 dev_langs:
@@ -21,13 +16,13 @@ ms.assetid: f48e9531-efac-4d11-8166-f63a5ece1ac5
 caps.latest.revision: 22
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: d16fdf182845eb2ae916da95b7677112b968b60f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 5bde22809af69071f5484e25717a5aea7d78a603
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49249036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62428529"
 ---
 # <a name="ltassemblyidentitygt-element-clickonce-application"></a>&lt;assemblyIdentity&gt;元素 （ClickOnce 应用程序）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,11 +47,11 @@ ms.locfileid: "49249036"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`Name`|必须的。 标识应用程序的名称。<br /><br /> 如果`Name`包含特殊字符，如单引号或双引号引起来，应用程序可能无法激活。|  
-|`Version`|必须的。 采用以下格式指定该应用程序的版本号： `major.minor.build.revision`|  
+|`Name`|必需。 标识应用程序的名称。<br /><br /> 如果`Name`包含特殊字符，如单引号或双引号引起来，应用程序可能无法激活。|  
+|`Version`|必需。 采用以下格式指定该应用程序的版本号： `major.minor.build.revision`|  
 |`publicKeyToken`|可选。 指定表示最后 8 个字节的 16 字符的十六进制字符串`SHA-1`的应用程序集签名的公钥的哈希值。 使用对目录进行签名的公钥必须为 2048 位或更高版本。<br /><br /> 尽管为程序集签名是可选但建议，但此属性是必需的。 如果程序集未签名，你应从自签名的程序集复制值或使用"虚拟"值均为零。|  
-|`processorArchitecture`|必须的。 指定的处理器。 有效的值是`msil`适用于所有处理器`x86`的 32 位 Windows`IA64`为 64 位 Windows 和`Itanium`Intel 64 位 Itanium 处理器。|  
-|`language`|必须的。 标识两个部分语言代码 (例如， `en-US`) 的程序集。 此元素处于`asmv2`命名空间。 如果未指定，默认值是`neutral`。|  
+|`processorArchitecture`|必需。 指定的处理器。 有效的值是`msil`适用于所有处理器`x86`的 32 位 Windows`IA64`为 64 位 Windows 和`Itanium`Intel 64 位 Itanium 处理器。|  
+|`language`|必需。 标识两个部分语言代码 (例如， `en-US`) 的程序集。 此元素处于`asmv2`命名空间。 如果未指定，默认值是`neutral`。|  
   
 ## <a name="examples"></a>示例  
   
@@ -77,7 +72,4 @@ ms.locfileid: "49249036"
   
 ## <a name="see-also"></a>请参阅  
  [ClickOnce 应用程序清单](../deployment/clickonce-application-manifest.md)   
- [\<assemblyIdentity > 元素](../deployment/assemblyidentity-element-clickonce-deployment.md)
-
-
-
+ [\<assemblyIdentity> 元素](../deployment/assemblyidentity-element-clickonce-deployment.md)

@@ -2,7 +2,6 @@
 title: SCRIPT_E_RECORDED 错误代码 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -12,12 +11,12 @@ caps.latest.revision: 3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8473c905f7524c72449d96c32bec4260e2502e34
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: e652f845fd039549ee8e32e9d87e668b3ca759c1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54349083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62840299"
 ---
 # <a name="scripterecorded-error-code"></a>SCRIPT_E_RECORDED 错误代码
 脚本引擎和主机之间传递了错误。 主机需要传递给调用方的错误代码。  

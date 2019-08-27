@@ -1,11 +1,8 @@
 ---
 title: 规则集编辑器对话框 （旧版） |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 f1_keywords:
 - System.Workflow.Activities.Rules.Design.RuleSetDialog.UI
@@ -15,13 +12,13 @@ ms.assetid: 7cfd5df1-1115-4e5c-9b72-121f39419e83
 caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: 3469e395ee50e63f8ac76e4181d02b777ccbd4ba
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 862842bd41762b15a38254c9d5e21bf06cdca10a
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49942395"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65703199"
 ---
 # <a name="rule-set-editor-dialog-box-legacy"></a>“规则集编辑器”对话框（旧版）
 本主题介绍如何使用**规则集编辑器**对话框中，在旧[!INCLUDE[wfd1](../includes/wfd1-md.md)]。 在需要面向 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 或 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 时，请使用旧 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]。  
@@ -29,12 +26,12 @@ ms.locfileid: "49942395"
  **规则集编辑器**对话框用于创建和修改[PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019)规则集，这些规则将序列化为.rules 文件。  
   
 > [!NOTE]
->  如果你想要打开.rules 文件**带编码的 XML 编辑器**，必须先关闭工作流或活动的关联设计器窗口。  
+> 如果你想要打开.rules 文件**带编码的 XML 编辑器**，必须先关闭工作流或活动的关联设计器窗口。  
   
- 有关如何访问信息**规则集编辑器**对话框中，请参阅[如何： 创建 PolicyActivity 规则集 （旧版）](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md)。  
+ 有关如何访问信息**规则集编辑器**对话框中，请参阅[如何：创建 PolicyActivity 规则集 （旧版）](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md)。  
   
 > [!WARNING]
->  用于面向 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 或 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 的旧 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] 的规则编辑器不支持多目标。  
+> 用于面向 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 或 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 的旧 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] 的规则编辑器不支持多目标。  
   
  下表介绍的用户界面 (UI) 元素**规则集编辑器**对话框。  
   
@@ -50,7 +47,7 @@ ms.locfileid: "49942395"
 |**名称：**|输入规则的名称。|  
 |**优先级：**|为规则输入一个优先级。 默认优先级是 0。|  
 |**重新评估：**|指定要将哪种规则重新计算类型用于规则。 可用选项为：<br /><br /> -   **始终**，这将导致根据需要重新计算规则。<br />-   **永远不会**，这将导致永远不会重新计算规则。 在此情况下，规则只执行一次。|  
-|**活动**|选中以激活规则。|  
+|**Active**|选中以激活规则。|  
 |**条件：**|为规则条件输入一个表达式。 有关表达式语法的信息，请参见本页的“输入条件和操作表达式”一节。|  
 |**Then 操作：**|为 Then 操作输入表达式。 有关表达式语法的信息，请参见本页的“输入条件和操作表达式”一节。|  
 |**Else 操作：**|为 Else 操作输入表达式。 有关表达式语法的信息，请参见本页的“输入条件和操作表达式”一节。|  
@@ -73,13 +70,13 @@ ms.locfileid: "49942395"
   
 - 算术运算符：+、-、*、/、MOD  
   
-- 逻辑运算符： 和，& &、 OR、 &#124; &#124;、 NOT、 ！  
+- 逻辑运算符：AND, &&, OR, &#124;&#124;, NOT, !  
   
 - 按位运算符： &，&#124;  
   
   表达式运算符优先级遵循 C# 运算符优先级规则。  
   
-  有关条件的详细信息，请参阅[在工作流中使用条件](http://msdn.microsoft.com/en-us/541211f5-d382-4810-894f-71f00b34fa77)。  
+  有关条件的详细信息，请参阅[在工作流中使用条件](https://msdn.microsoft.com/541211f5-d382-4810-894f-71f00b34fa77)。  
   
 ### <a name="halt-and-update-functions"></a>Halt 和 Update 函数  
  **Then 操作：** 并**Else 操作：** 表达式支持**暂停**并**更新**函数。 若要使用**暂停**函数中，键入**暂停**到**Then 操作：** 或**Else 操作：** 文本框。 **暂停**操作会导致规则集执行立即停止，并将控制权返回到调用代码。 您使用**更新**与正向链接的函数。  

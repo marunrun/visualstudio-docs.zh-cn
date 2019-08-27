@@ -1,14 +1,9 @@
 ---
 title: 如何：在检测中排除或包括短函数 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - profiling tools, instrument events
 - profiling tools, include short functions
@@ -17,13 +12,13 @@ ms.assetid: eaeead79-aafe-4490-86ff-6ed4cad9c15f
 caps.latest.revision: 18
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: bd17b5c383736f2c11977e117ee59a1a6fa9e571
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: c8bb49e650f2395bac8a3b5eb1d0f52e2e168731
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51742549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68146111"
 ---
 # <a name="how-to-exclude-or-include-short-functions-from-instrumentation"></a>如何：在检测中排除或包括短函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,23 +27,20 @@ ms.locfileid: "51742549"
   
 ### <a name="to-exclude-or-include-short-functions-from-instrumentation"></a>在检测中排除或包括短函数  
   
-1.  在“性能资源管理器”中，选择“性能会话”，然后右键单击并选择“属性”。  
+1. 在“性能资源管理器”中，选择“性能会话”，然后右键单击并选择“属性”    。  
   
-     随即显示“属性页”对话框。  
+     随即显示“属性页”对话框  。  
   
-2.  在“属性页”中，单击“检测”属性。  
+2. 在“属性页”中，单击“检测”属性   。  
   
-3.  若要从检测中排除短函数，请选择“从检测中排除短函数”。 此为默认设置。  
+3. 若要从检测中排除短函数，请选择“从检测中排除短函数”  。 此为默认设置。  
   
      或  
   
-     若要在检测中包括短函数，请清除“从检测中排除短函数”。  
+     若要在检测中包括短函数，请清除“从检测中排除短函数”  。  
   
-4.  单击 **“确定”**。  
+4. 单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [控制数据收集](../profiling/controlling-data-collection.md)   
  [性能会话属性](../profiling/performance-session-properties.md)
-
-
-

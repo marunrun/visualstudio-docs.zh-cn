@@ -2,19 +2,18 @@
 title: R Markdown
 description: 如何在 Visual Studio 中创建 R Markdown 文档，以生成高质量的报表、演示文稿和仪表板。
 ms.date: 11/16/2017
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 6394dcedc8c29f517d502d1a4e5475667f9b1f9f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b8f87f831c8076b22a61d7032d16be8d13f21b62
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53938467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998640"
 ---
 # <a name="create-r-markdown-documents"></a>创建 R Markdown 文档
 
@@ -34,6 +33,7 @@ ms.locfileid: "53938467"
     install.packages("rmarkdown")
 
     ```
+
 1. 要创建新的 R Markdown 文件，请使用“文件” > “新建” > “文件”菜单命令，并在列表中选择”R” > ”R Markdown”。 访问项目的上下文，在解决方案资源管理器中右键单击项目，选择“添加 R Markdown”（或“添加” > “新项目”，再在列表中选择”R Markdown”）。
 
 1. 新文件的默认内容如下：

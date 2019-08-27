@@ -7,16 +7,15 @@ helpviewer_keywords:
 - UML diagrams, saving
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: aec059dab655068d6dffaed6fe9a920cda1b6b7e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 3cb1699db54691e81c49b686c245d96f9b5a5442
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53897977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63003377"
 ---
 # <a name="share-models-and-exporting-diagrams"></a>共享模型和导出关系图
 在 Visual Studio 中，你可以通过多种方式与同事共享模型和关系图。
@@ -44,7 +43,7 @@ ms.locfileid: "53897977"
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|描述|
+|Title|描述|
 |-|-|
 |[安排建模解决方案](../modeling/structure-your-modeling-solution.md)|共享大型或中型项目的模型。|
 |[将关系图导出为图像](../modeling/export-diagrams-as-images.md)|你可以将部分关系图复制到 PowerPoint 或 Word 等应用程序，或将关系图打印到 XPS 文件。|

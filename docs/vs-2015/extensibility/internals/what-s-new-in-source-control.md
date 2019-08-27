@@ -1,29 +1,25 @@
 ---
-title: 什么&#39;s 源代码管理中的新增功能 |Microsoft Docs
-ms.custom: ''
+title: 源代码管理中的新增功能
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - what's new [Visual Studio SDK], source control
 - source control [Visual Studio SDK], what's new
 ms.assetid: bcf85418-18fb-4824-9dae-d14bf3d56a77
 caps.latest.revision: 28
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 9a108acb2ae32b64292cd819c75de4726f067a00
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 31b55c57f47f25814eff24f13bcf91408468d0f4
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51752456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68200955"
 ---
-# <a name="what39s-new-in-source-control"></a>什么&#39;s 源代码管理中的新增功能
+# <a name="what39s-new-in-source-control-in-visual-studio-2015"></a>什么&#39;s Visual Studio 2015 中的源代码管理中的新增功能
+
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 在[!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]可以通过实现源代码管理 VSPackage 提供深度集成的源代码控制解决方案。 本部分介绍的源代码管理 Vspackage 功能并提供实现步骤的概述。  
@@ -37,17 +33,17 @@ ms.locfileid: "51752456"
   
  以下步骤为提供所需实现源代码管理包的一般概述。 有关详细信息，请参阅[创建源代码管理 VSPackage](../../extensibility/internals/creating-a-source-control-vspackage.md)。  
   
-1.  创建提供专用源控制服务的 VSPackage。  
+1. 创建提供专用源控制服务的 VSPackage。  
   
-2.  通过提供的源控件相关服务中实现接口[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)](例如，<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>和<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider>接口)。  
+2. 通过提供的源控件相关服务中实现接口[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)](例如，<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>和<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider>接口)。  
   
-3.  注册您的源代码管理 VSPackage。  
+3. 注册您的源代码管理 VSPackage。  
   
-4.  实现所有的源代码管理 UI，包括菜单项、 对话框、 工具栏和上下文菜单。  
+4. 实现所有的源代码管理 UI，包括菜单项、 对话框、 工具栏和上下文菜单。  
   
-5.  所有源控件相关的事件都传递给您的源代码管理 VSackage 时它处于活动状态，并且必须由你的 VSPackage。  
+5. 所有源控件相关的事件都传递给您的源代码管理 VSackage 时它处于活动状态，并且必须由你的 VSPackage。  
   
-6.  您的源代码管理 VSPackage 必须侦听事件，例如那些实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3>接口以及跟踪项目文档 (TPD) 的事件 (由实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>接口) 并采取必要措施。  
+6. 您的源代码管理 VSPackage 必须侦听事件，例如那些实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3>接口以及跟踪项目文档 (TPD) 的事件 (由实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>接口) 并采取必要措施。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>   
@@ -56,4 +52,3 @@ ms.locfileid: "51752456"
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>   
  [概述](../../extensibility/internals/source-control-integration-overview.md)   
  [创建源代码管理 VSPackage](../../extensibility/internals/creating-a-source-control-vspackage.md)
-

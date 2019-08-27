@@ -1,26 +1,21 @@
 ---
 title: 通过使用修改独立的 Shell。Pkgundef 文件 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio shell, isolated mode%2C .pkgundef file
 ms.assetid: 9cee2a20-f8ac-4d9d-aef9-068fcd9f27a4
 caps.latest.revision: 12
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 2266eda9b3e50d85131148d708a934835340f074
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: eab02fe900e96ba37c63faae535974788f99ba78
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51802689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62538380"
 ---
 # <a name="modifying-the-isolated-shell-by-using-the-pkgundef-file"></a>通过使用修改独立的 Shell。Pkgundef 文件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,4 +47,3 @@ ms.locfileid: "51802689"
 ## <a name="see-also"></a>请参阅  
  [Visual Studio 功能的包 Guid](../extensibility/package-guids-of-visual-studio-features.md)   
  [自定义独立 Shell](../extensibility/customizing-the-isolated-shell.md)
-

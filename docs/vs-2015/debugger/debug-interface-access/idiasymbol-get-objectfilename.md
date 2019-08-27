@@ -1,27 +1,22 @@
 ---
-title: IDiaSymbol::get_objectFileName |Microsoft Docs
-ms.custom: ''
+title: IDiaSymbol::get_objectFileName | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 21793872-4879-4e4d-b527-dcf70aa7fb31
 caps.latest.revision: 6
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: f4b74c460ffc01f0abcb737dc7f727a3d5d3406a
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: c84b4760760fefd7950eaa5d91a5e06d8b782414
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51729879"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "68183132"
 ---
 # <a name="idiasymbolgetobjectfilename"></a>IDiaSymbol::get_objectFileName
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -35,7 +30,7 @@ HRESULT get_objectFilename(
    BSTR *pRetVal);  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `pRetVal`  
  [out]一个指向`BSTR`保存对象文件名称。  
   
@@ -44,6 +39,3 @@ HRESULT get_objectFilename(
   
 ## <a name="see-also"></a>请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
-
-
-

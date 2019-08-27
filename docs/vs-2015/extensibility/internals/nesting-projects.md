@@ -1,14 +1,9 @@
 ---
 title: 嵌套项目 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project nesting
 - nested projects
@@ -17,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 12cce037-9840-4761-845e-5abd5fb317b0
 caps.latest.revision: 16
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: b4ccf51dd492a32990718ffe84bfe78cd736a42c
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 0e3a0fae42dc7bf1497e3d0d4a9d23f9cab50675
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51805193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68180409"
 ---
 # <a name="nesting-projects"></a>嵌套项目
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -41,13 +36,12 @@ ms.locfileid: "51805193"
 嵌套的项目的示例  
   
 ## <a name="see-also"></a>请参阅  
- [如何： 实现嵌套的项目](../../extensibility/internals/how-to-implement-nested-projects.md)   
+ [如何：实现嵌套的项目](../../extensibility/internals/how-to-implement-nested-projects.md)   
  [有关卸载和重新加载嵌套项目的注意事项](../../extensibility/internals/considerations-for-unloading-and-reloading-nested-projects.md)   
  [嵌套项目的向导支持](../../extensibility/internals/wizard-support-for-nested-projects.md)   
  [注册项目和项模板](../../extensibility/internals/registering-project-and-item-templates.md)   
  [实现嵌套项目的命令处理](../../extensibility/internals/implementing-command-handling-for-nested-projects.md)   
  [筛选嵌套项目的 AddItem 对话框](../../extensibility/internals/filtering-the-additem-dialog-box-for-nested-projects.md)   
- [清单： 创建新的项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)   
+ [清单：创建新的项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)   
  [上下文参数](../../extensibility/internals/context-parameters.md)   
  [向导 (.Vsz) 文件](../../extensibility/internals/wizard-dot-vsz-file.md)
-

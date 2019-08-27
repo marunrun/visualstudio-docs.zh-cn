@@ -1,14 +1,9 @@
 ---
-title: CA1505： 避免编写无法维护的代码 |Microsoft Docs
-ms.custom: ''
+title: CA1505:避免编写无法维护的代码 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - AvoidUnmaintainableCode
 - CA1505
@@ -20,14 +15,14 @@ caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 089a4d45c74b1849a73c99c8065f1f67ca9b0e43
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d9d5dc976c27ca2459fa64b95fe0502579a500b8
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49906099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68191210"
 ---
-# <a name="ca1505-avoid-unmaintainable-code"></a>CA1505：避免编写无法维护的代码
+# <a name="ca1505-avoid-unmaintainable-code"></a>CA1505:避免使用无法维护的代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -53,6 +48,3 @@ ms.locfileid: "49906099"
 
 ## <a name="see-also"></a>请参阅
  [可维护性警告](../code-quality/maintainability-warnings.md)[测量复杂性和可维护性的托管代码](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)
-
-
-

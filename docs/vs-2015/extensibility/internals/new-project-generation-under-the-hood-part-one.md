@@ -1,27 +1,22 @@
 ---
-title: 生成新项目： 揭秘，第 1 部分 |Microsoft Docs
-ms.custom: ''
+title: 生成新项目：实质上，第 1 部分 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio], new project dialog
 - projects [Visual Studio], new project generation
 ms.assetid: 66778698-0258-467d-8b8b-c351744510eb
 caps.latest.revision: 30
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: f1181cb3f84471727b181bb1ff91b69e8613b8a5
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 6f26c093f09cd5b7b99f00ee69a81be99c769e2e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51792913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68184151"
 ---
 # <a name="new-project-generation-under-the-hood-part-one"></a>生成新项目：揭秘，第 1 部分
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -30,15 +25,15 @@ ms.locfileid: "51792913"
   
  有几个 Visual Studio 协调为你的任务：  
   
--   它将显示所有可用的项目类型的树。  
+- 它将显示所有可用的项目类型的树。  
   
--   它显示每个项目类型的应用程序模板的列表，并可让你选择其中一个。  
+- 它显示每个项目类型的应用程序模板的列表，并可让你选择其中一个。  
   
--   它收集应用程序，如项目名称和路径的项目信息。  
+- 它收集应用程序，如项目名称和路径的项目信息。  
   
--   它将此信息传递到项目工厂。  
+- 它将此信息传递到项目工厂。  
   
--   它生成当前解决方案中的项目项和文件夹。  
+- 它生成当前解决方案中的项目项和文件夹。  
   
 ## <a name="the-new-project-dialog-box"></a>新建项目对话框  
  所有它开始时选择新的项目的项目类型。 首先，通过单击**新的项目**上**文件**菜单。 **新的项目**对话框随即出现，外观如下所示：  
@@ -85,7 +80,7 @@ devenv /installvstemplates
   
  \<Visual Studio 安装路径 > \VC#\VCSPackages\1033\csprojui.dll  
   
- 若要验证这一点，打开文件资源管理器，并将 csprojui.dll 拖入 Visual Studio 目录... 字符串表显示了资源 # 2345年具有标题**Visual C#**。  
+ 若要验证这一点，打开文件资源管理器，并将 csprojui.dll 拖入 Visual Studio 目录... 字符串表显示了资源 # 2345年具有标题**Visual C#** 。  
   
 ##### <a name="sortpriority"></a>SortPriority  
  这将确定中的根节点的位置**项目类型**树。  
@@ -97,7 +92,7 @@ devenv /installvstemplates
 ##### <a name="developeractivity"></a>DeveloperActivity  
  如果存在此子项，则由开发人员设置对话框控制的根节点的位置。 例如，应用于对象的  
   
- DeveloperActivity REG_SZ VC #  
+ DeveloperActivity REG_SZVC#  
   
  指示 Visual C# 为根节点是否 Visual Studio 设置为[!INCLUDE[vcprvc](../../includes/vcprvc-md.md)]开发。 否则，它将为的子节点**其他语言**。  
   
@@ -121,14 +116,14 @@ devenv /installvstemplates
   
  时**新的项目**对话框将打开，[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]遍历 ProjectTemplates 文件夹，并重新创建其结构处于**项目类型**树中的一些更改：  
   
--   中的根节点**项目类型**树由应用程序模板。  
+- 中的根节点**项目类型**树由应用程序模板。  
   
--   节点名称可本地化，并可包含特殊字符。  
+- 节点名称可本地化，并可包含特殊字符。  
   
--   可以更改排序顺序。  
+- 可以更改排序顺序。  
   
 ##### <a name="finding-the-root-node-for-a-project-type"></a>查找根节点的项目类型  
- 当 Visual Studio 遍历 ProjectTemplates 文件夹时，打开所有的.zip 文件，并提取任何.vstemplate 文件。 .Vstemplate 文件使用 XML 来描述应用程序模板。 有关详细信息，请参阅[生成新项目： 揭秘，第二部分](../../extensibility/internals/new-project-generation-under-the-hood-part-two.md)。  
+ 当 Visual Studio 遍历 ProjectTemplates 文件夹时，打开所有的.zip 文件，并提取任何.vstemplate 文件。 .Vstemplate 文件使用 XML 来描述应用程序模板。 有关详细信息，请参阅[生成新项目：实质上，第二部分](../../extensibility/internals/new-project-generation-under-the-hood-part-two.md)。  
   
  \<ProjectType > 标记确定该应用程序的项目类型。 例如，\CSharp\SmartDevice\WindowsCE\1033\WindowsCE-EmptyProject.zip 文件包含具有此标记的 EmptyProject.vstemplate 文件：  
   
@@ -221,4 +216,3 @@ devenv /installvstemplates
   
 ## <a name="see-also"></a>请参阅  
  [生成新项目：揭秘，第 2 部分](../../extensibility/internals/new-project-generation-under-the-hood-part-two.md)
-

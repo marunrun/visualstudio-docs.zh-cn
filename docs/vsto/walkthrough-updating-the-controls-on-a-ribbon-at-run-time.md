@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Ribbon [Office development in Visual Studio], dynamic menu
 - dynamic menus [Office development in Visual Studio]
 - Ribbon [Office development in Visual Studio], updating
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cd318be64bb15f72a0bd0147e2b14e79301fb7d6
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e293a0136e6ae2d8b6a6747201e484fdea43f91e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53926907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62981109"
 ---
 # <a name="walkthrough-update-the-controls-on-a-ribbon-at-runtime"></a>演练：更新在运行时功能区上的控件
 
@@ -30,17 +30,17 @@ ms.locfileid: "53926907"
 
 [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
-此示例拉取来自 Northwind 示例数据库的数据，以填充 Microsoft Office Outlook 中的组合框和菜单。 这些控件中自动选择的项填充字段，如**到**并**主题**的电子邮件中。
+此示例提取来自 Northwind 示例数据库的数据，以填充 Microsoft Office Outlook 中的组合框和菜单。 这些控件中自动选择的项填充字段，如**到**并**主题**的电子邮件中。
 
 本演练阐释了以下任务：
 
--   创建新的 Outlook VSTO 外接程序项目。
+- 创建新的 Outlook VSTO 外接程序项目。
 
--   设计自定义功能区组。
+- 设计自定义功能区组。
 
--   将自定义组添加到内置选项卡。
+- 将自定义组添加到内置选项卡。
 
--   更新在运行时在功能区上的控件。
+- 更新在运行时在功能区上的控件。
 
 > [!NOTE]
 > 以下说明中的某些 Visual Studio 用户界面元素在计算机上出现的名称或位置可能会不同。 这些元素取决于你所使用的 Visual Studio 版本和你所使用的设置。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md)。
@@ -49,9 +49,9 @@ ms.locfileid: "53926907"
 
 你需要以下组件来完成本演练：
 
--   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
+- [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
 
--   Microsoft Outlook
+- Microsoft Outlook
 
 ## <a name="create-a-new-outlook-vsto-add-in-project"></a>创建新的 Outlook VSTO 外接程序项目
 
@@ -59,13 +59,13 @@ ms.locfileid: "53926907"
 
 ### <a name="to-create-a-new-outlook-vsto-add-in-project"></a>创建新的 Outlook VSTO 外接程序项目
 
-1.  在中[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]，创建一个 Outlook VSTO 外接程序项目名称**为 Ribbon_Update_At_Runtime**。
+1. 在中[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]，创建一个 Outlook VSTO 外接程序项目名称**为 Ribbon_Update_At_Runtime**。
 
-2.  在 **“新建项目”** 对话框中，选择 **“创建解决方案的目录”**。
+2. 在 **“新建项目”** 对话框中，选择 **“创建解决方案的目录”**。
 
-3.  将项目保存到默认项目目录中。
+3. 将项目保存到默认项目目录中。
 
-     有关更多信息，请参见[如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
+     有关详细信息，请参阅[如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
 ## <a name="design-a-custom-ribbon-group"></a>设计自定义功能区组
 
@@ -73,25 +73,25 @@ ms.locfileid: "53926907"
 
 ### <a name="to-design-a-custom-group"></a>设计自定义组
 
-1.  在 **“项目”** 菜单上，单击 **“添加新项”**。
+1. 在 **“项目”** 菜单上，单击 **“添加新项”**。
 
-2.  在 **“添加新项”** 对话框中，选择 **“功能区(可视化设计器)”**。
+2. 在 **“添加新项”** 对话框中，选择 **“功能区(可视化设计器)”**。
 
-3.  更改到新的功能区的名称**CustomerRibbon**，然后单击**添加**。
+3. 更改到新的功能区的名称**CustomerRibbon**，然后单击**添加**。
 
      *CustomerRibbon.cs*或*CustomerRibbon.vb*文件将在功能区设计器中打开并显示一个默认选项卡和组。
 
-4.  单击功能区设计器以将其选定。
+4. 单击功能区设计器以将其选定。
 
-5.  在中**属性**窗口中，单击下拉箭头旁边**RibbonType**属性，，然后单击**Microsoft.Outlook.Mail.Compose**。
+5. 在中**属性**窗口中，单击下拉箭头旁边**RibbonType**属性，，然后单击**Microsoft.Outlook.Mail.Compose**。
 
      这样，当用户撰写一封新邮件在 Outlook 中的时，显示功能区。
 
-6.  在功能区设计器中，单击**Group1**以将其选中。
+6. 在功能区设计器中，单击**Group1**以将其选中。
 
-7.  在中**属性**窗口中，将**标签**到**客户采购**。
+7. 在中**属性**窗口中，将**标签**到**客户采购**。
 
-8.  从**Office 功能区控件**选项卡**工具箱**，将**组合框**拖到**客户采购**组。
+8. 从**Office 功能区控件**选项卡**工具箱**，将**组合框**拖到**客户采购**组。
 
 9. 单击**ComboBox1**以将其选中。
 
@@ -111,17 +111,17 @@ ms.locfileid: "53926907"
 
 ### <a name="to-add-the-custom-group-to-a-built-in-tab"></a>将自定义组添加到内置选项卡
 
-1.  单击**TabAddins （内置）** 选项卡以选择它。
+1. 单击**TabAddins （内置）** 选项卡以选择它。
 
-2.  在中**属性**窗口中，展开**ControlId**属性，且然后将设置**OfficeId**到**TabNewMailMessage**。
+2. 在中**属性**窗口中，展开**ControlId**属性，且然后将设置**OfficeId**到**TabNewMailMessage**。
 
      这将添加**客户采购**组，以便**消息**新邮件消息中出现的功能区选项卡。
 
-3.  单击**客户采购**组以将其选中。
+3. 单击**客户采购**组以将其选中。
 
-4.  在**属性**窗口中，展开**位置**属性中，单击下拉箭头旁边**PositionType**属性，，然后单击**BeforeOfficeId**。
+4. 在**属性**窗口中，展开**位置**属性中，单击下拉箭头旁边**PositionType**属性，，然后单击**BeforeOfficeId**。
 
-5.  设置**OfficeId**属性设置为**groupclipboard**。
+5. 设置**OfficeId**属性设置为**groupclipboard**。
 
      这将定位**客户采购**组之前**剪贴板**组**消息**选项卡。
 
@@ -131,31 +131,31 @@ ms.locfileid: "53926907"
 
 ### <a name="to-create-the-data-source"></a>创建数据源
 
-1.  在 **“数据”** 菜单上，单击 **“添加新数据源”**。
+1. 在 **“数据”** 菜单上，单击 **“添加新数据源”**。
 
      这将启动**数据源配置向导**。
 
-2.  选择**数据库**，然后单击**下一步**。
+2. 选择**数据库**，然后单击**下一步**。
 
-3.  选择**数据集**，然后单击**下一步**。
+3. 选择**数据集**，然后单击**下一步**。
 
-4.  选择与 Northwind 示例 Microsoft SQL Server Compact 4.0 数据库的数据连接或通过添加新的连接**新的连接**按钮。
+4. 选择与 Northwind 示例 Microsoft SQL Server Compact 4.0 数据库的数据连接或通过添加新的连接**新的连接**按钮。
 
-5.  选择或创建连接后，单击**下一步**。
+5. 选择或创建连接后，单击**下一步**。
 
-6.  单击**下一步**保存连接字符串。
+6. 单击**下一步**保存连接字符串。
 
-7.  上**选择数据库对象**页上，展开**表**。
+7. 上**选择数据库对象**页上，展开**表**。
 
-8.  选中以下每个表格旁的复选框：
+8. 选中以下每个表格旁的复选框：
 
-    1.  **客户**
+    1. **客户**
 
-    2.  **订单详细信息**
+    2. **订单详细信息**
 
-    3.  **订单**
+    3. **订单**
 
-    4.  **产品**
+    4. **产品**
 
 9. 单击 **“完成”**。
 
@@ -163,11 +163,11 @@ ms.locfileid: "53926907"
 
 使用功能区对象模型执行以下任务：
 
--   添加到的客户名称**客户**组合框。
+- 添加到的客户名称**客户**组合框。
 
--   添加到菜单和按钮控件**产品购买**菜单表示销售订单和产品的销售。
+- 添加到菜单和按钮控件**产品购买**菜单表示销售订单和产品的销售。
 
--   填充收件人、 主题和正文的新邮件消息的使用中的数据字段**客户**组合框和**产品购买**菜单。
+- 填充收件人、 主题和正文的新邮件消息的使用中的数据字段**客户**组合框和**产品购买**菜单。
 
 ### <a name="to-update-controls-in-the-custom-group-by-using-the-ribbon-object-model"></a>使用功能区对象模型更新自定义组中的控件
 
@@ -257,31 +257,31 @@ ms.locfileid: "53926907"
 
 ### <a name="to-test-the-controls-in-the-custom-group"></a>测试自定义组中的控件
 
-1.  按**F5**运行你的项目。
+1. 按**F5**运行你的项目。
 
      Outlook 启动。
 
-2.  在 Outlook 中，在**文件**菜单，依次指向**新建**，然后单击**邮件**。
+2. 在 Outlook 中，在**文件**菜单，依次指向**新建**，然后单击**邮件**。
 
      执行下列操作：
 
-    -   出现新的邮件消息检查器窗口。
+    - 出现新的邮件消息检查器窗口。
 
-    -   上**消息**功能区选项卡**客户采购**组显示之前**剪贴板**组。
+    - 上**消息**功能区选项卡**客户采购**组显示之前**剪贴板**组。
 
-    -   **客户**组中的组合框使用 Northwind 数据库中的客户名称进行更新。
+    - **客户**组中的组合框使用 Northwind 数据库中的客户名称进行更新。
 
-3.  上**消息**功能区选项卡，在**客户采购**组中，选择的一位客户**客户**组合框。
+3. 上**消息**功能区选项卡，在**客户采购**组中，选择的一位客户**客户**组合框。
 
      执行下列操作：
 
-    -   **产品购买**菜单进行更新，以显示所选客户的每个销售订单。
+    - **产品购买**菜单进行更新，以显示所选客户的每个销售订单。
 
-    -   每笔销售订单子菜单进行更新，以显示该笔订单中购买的产品。
+    - 每笔销售订单子菜单进行更新，以显示该笔订单中购买的产品。
 
-    -   所选的客户的电子邮件地址添加到**到**行的邮件消息中的主题和电子邮件的正文使用文本进行填充。
+    - 所选的客户的电子邮件地址添加到**到**行的邮件消息中的主题和电子邮件的正文使用文本进行填充。
 
-4.  单击**Products Purchases**菜单上，指向任一销售订单，然后单击销售订单中的产品。
+4. 单击**Products Purchases**菜单上，指向任一销售订单，然后单击销售订单中的产品。
 
      该产品名称将添加到邮件消息的正文中。
 
@@ -289,11 +289,11 @@ ms.locfileid: "53926907"
 
 可从以下主题了解有关如何自定义 Office 用户界面的更多信息：
 
--   将基于上下文的 UI 添加到任何文档级自定义项。 有关详细信息，请参阅[操作窗格概述](../vsto/actions-pane-overview.md)。
+- 将基于上下文的 UI 添加到任何文档级自定义项。 有关详细信息，请参阅[操作窗格概述](../vsto/actions-pane-overview.md)。
 
--   扩展标准的或自定义的 Microsoft Office Outlook 窗体。 有关详细信息，请参见[演练：设计 Outlook 窗体区域](../vsto/walkthrough-designing-an-outlook-form-region.md)。
+- 扩展标准的或自定义的 Microsoft Office Outlook 窗体。 有关详细信息，请参见[演练：设计 Outlook 窗体区域](../vsto/walkthrough-designing-an-outlook-form-region.md)。
 
--   将自定义任务窗格添加到 Outlook。 有关详细信息，请参阅[自定义任务窗格](../vsto/custom-task-panes.md)。
+- 将自定义任务窗格添加到 Outlook。 有关详细信息，请参阅[自定义任务窗格](../vsto/custom-task-panes.md)。
 
 ## <a name="see-also"></a>请参阅
 

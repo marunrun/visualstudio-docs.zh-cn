@@ -2,7 +2,6 @@
 title: 用于设计易于访问的应用程序的资源
 description: 了解如何创建易于访问的应用程序，以便让残障人士更轻松地使用它们。
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - accessibility, Windows applications
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 426bf023-bb34-43c4-9edb-c307191c8170
 author: TerryGLee
 ms.author: tglee
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 10b63de96ce56005abeb59de35b533693edcff53
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7fe2a4b57fda3ab861b5471e1af70cd4bfcc55e6
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53959620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62811776"
 ---
 # <a name="resources-for-designing-accessible-applications"></a>用于设计易于访问的应用程序的资源
 
@@ -44,13 +43,13 @@ ms.locfileid: "53959620"
 
 ## <a name="websites"></a>网站
 
--   [演练：使用图像控件、菜单控件以及 AutoPostBack 的辅助功能准则](https://msdn.microsoft.com/Library/ff7b5021-48b3-46bf-921f-9fe1e0e32202) 本文提供分步说明，阐释如何在示例网页中包含可访问控件。 还提供针对 Web 的一些辅助功能设计提示。
+- [演练：使用图像控件、菜单控件以及 AutoPostBack 的辅助功能准则](https://msdn.microsoft.com/Library/ff7b5021-48b3-46bf-921f-9fe1e0e32202) 本文提供分步说明，阐释如何在示例网页中包含可访问控件。 还提供针对 Web 的一些辅助功能设计提示。
 
--   **使用 DHTML 创建可访问网页** 此技术文章列出了可访问的 HTML 4.0 元素以及可访问 Web 设计提示。 有关详细信息，请参阅[使用 DHTML 创建可访问的网页](https://msdn.microsoft.com/library/ms528445.aspx)。
+- **使用 DHTML 创建可访问网页** 此技术文章列出了可访问的 HTML 4.0 元素以及可访问 Web 设计提示。 有关详细信息，请参阅[使用 DHTML 创建可访问的网页](https://msdn.microsoft.com/library/ms528445.aspx)。
 
 ### <a name="third-party-resources"></a>第三方资源
 
--   **万维网联合会 (W3C) 的 Web 辅助功能计划** 此网站为可访问网站开发提供准则和技术。 有关详细信息，请参阅 [https://www.w3.org/WAI/GL/](https://www.w3.org/WAI/GL/)。
+- **万维网联合会 (W3C) 的 Web 辅助功能计划** 此网站为可访问网站开发提供准则和技术。 有关详细信息，请参阅 [https://www.w3.org/WAI/GL/](https://www.w3.org/WAI/GL/)。
 
 ## <a name="see-also"></a>请参阅
 

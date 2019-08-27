@@ -1,14 +1,9 @@
 ---
 title: 'Idiainjectedsource:: Get_sourcecompression |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 854b142f-23a9-466c-bf7f-98e581d5abcd
 caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 2c003f7bdad613b5994f2f0aaca665fe73a13d24
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 8e8cafcaf3d245ac2310b93c16812327c381854d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51761644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68192429"
 ---
 # <a name="idiainjectedsourcegetsourcecompression"></a>IDiaInjectedSource::get_sourceCompression
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -43,13 +38,10 @@ HRESULT get_sourceCompression ( 
  [out]返回源所使用的压缩的指示器。 零值指示没有源压缩已使用。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。  
+ 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。  
   
 ## <a name="remarks"></a>备注  
  此方法返回的值是特定于编译器使用。 例如，编译器可能会使用运行长度编码或 Huffman 样式压缩。  
   
 ## <a name="see-also"></a>请参阅  
  [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)
-
-
-

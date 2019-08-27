@@ -1,7 +1,6 @@
 ---
 title: 管理外部工具
 ms.date: 11/20/2017
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - vs.externaltools
@@ -9,15 +8,15 @@ helpviewer_keywords:
 - external tools [Visual Studio]
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f918ad272683de5316467d1027e098c1ead91a6
-ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
+ms.openlocfilehash: 3562ed9ebf2d62ab002ac227486218c8c38ad337
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54154058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62535668"
 ---
 # <a name="manage-external-tools"></a>管理外部工具
 
@@ -25,13 +24,24 @@ ms.locfileid: "54154058"
 
 ## <a name="tools-available-on-the-tools-menu"></a>“工具”菜单中提供的工具
 
-“工具”菜单包含若干内置命令，如：
+“工具”菜单包含若干内置命令，包括：
+
+::: moniker range="vs-2017"
 
 * 用于[管理 Visual Studio 扩展](finding-and-using-visual-studio-extensions.md)的“扩展和更新”
 * 用于[整理代码片段](code-snippets.md)的“代码片段管理器”
-* 用于启动 [Dotfuscator Community Edition (CE)](dotfuscator/index.md)（如果[已安装](dotfuscator/install.md)）的“PreEmptive Protection - Dotfuscator”
 * 用于[自定义菜单和工具栏](how-to-customize-menus-and-toolbars-in-visual-studio.md)的“自定义”
 * 用于[为 Visual Studio IDE 和其他工具设置各种不同选项](reference/options-dialog-box-visual-studio.md)的“选项”
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+* 用于[整理代码片段](code-snippets.md)的“代码片段管理器”
+* 用于[自定义菜单和工具栏](how-to-customize-menus-and-toolbars-in-visual-studio.md)的“自定义”
+* 用于[为 Visual Studio IDE 和其他工具设置各种不同选项](reference/options-dialog-box-visual-studio.md)的“选项”
+
+::: moniker-end
 
 ## <a name="add-new-tools-to-the-tools-menu"></a>将新工具添加到“工具”菜单
 

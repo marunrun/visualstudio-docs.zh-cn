@@ -1,20 +1,17 @@
 ---
 title: 使用产品密钥 | Microsoft 文档
 author: evanwindom
-ms.author: jaunger
-manager: evelynp
-ms.date: 10/03/2017
-ms.topic: Get-Started-Article
+ms.author: lank
+manager: lank
+ms.date: 07/20/2019
+ms.topic: conceptual
 description: 了解如何获取和管理 Visual Studio 订阅中的产品密钥。
-ms.prod: vs-subscription
-ms.technology: vs-subscriptions
-searchscope: VS Subscription
-ms.openlocfilehash: cdd37aae3e0a3e3caebafa026fd5dcf3922c0998
-ms.sourcegitcommit: f6dd17b0864419083d0a1bf54910023045526437
+ms.openlocfilehash: 35dee0a03aa50e40b60d4207dcd6e830c9c27383
+ms.sourcegitcommit: 485881e6ba872c7b28a7b17ceaede845e5bea4fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/27/2018
-ms.locfileid: "53803819"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68377685"
 ---
 # <a name="using-product-keys-in-visual-studio-subscriptions"></a>使用 Visual Studio 订阅中的产品密钥
 
@@ -45,16 +42,20 @@ Microsoft 致力于维护 Visual Studio 订阅计划的完整性以及该计划�
 
 研究表明，大多数订阅者的订阅中所含产品密钥的数量足以满足他们的需求。 如果需要其他密钥，可通过 Visual Studio 订阅[客户服务](https://visualstudio.microsoft.com/subscriptions/support/)提交请求，我们将根据具体情况考虑是否批准你的请求。
 
-## <a name="locating-and-claiming-product-keys"></a>查找并索取产品密钥
-必须登录你的 Visual Studio 订阅才能查看产品密钥。 可在如下所示的“[下载](https://my.visualstudio.com/downloads)”页中，选择某一特定产品的蓝色“获取密钥”链接来查找单个产品密钥。  所有密钥都可在“[产品密钥](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs)”页查找到。 如果一个产品有多个密钥，会在下载项的“注释”列中显示注释，帮助你确定应使用哪个密钥。
-> [!div class="mx-imgBorder"]   
-> ![从“下载”页获取密钥](_img/product-keys/download-get-key.png)
-    
+## <a name="accessing-product-keys"></a>访问产品密钥
+必须登录你的 Visual Studio 订阅才能查看产品密钥。 可在如下所示的“[下载](https://my.visualstudio.com/downloads)”页中，选择某一特定产品的蓝色“获取密钥”链接来查找单个产品密钥。   如果一个产品有多个密钥，会在下载项的“注释”列中显示注释，帮助你确定应使用哪个密钥。
+
 某些产品将其多个版本捆绑到单次下载中。 在这种情况下，输入的产品密钥决定安装的产品版本。
-某些密钥会自动提供，例如“静态”密钥，同一个密钥可以根据需要使用无数次，因为不需要激活。 其他密钥必须通过选择该产品的“获取密钥”链接来索取。
+某些密钥会自动提供，例如“静态”密钥，同一个密钥可以根据需要使用无数次，因为不需要激活。 其他密钥必须通过选择该产品的“获取密钥”链接来索取。 
+> [!div class="mx-imgBorder"]
+> ![从“下载”页获取密钥](_img/product-keys/download-get-key.png)
+
+所有密钥都可在“[产品密钥](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs)”页查找到。 可在该页面找到适用于产品所有用户的静态密钥、获取仅供你使用的自定义密钥、查看密钥声明限制的状态以及导出所有产品密钥。 
+
+> [!div class="mx-imgBorder"]
+> ![产品密钥页](_img/product-keys/product-keys-page.png)
 
 根据具体的产品，有多种密钥类型可供选择。
-
 
 ### <a name="product-key-types"></a>产品密钥类型
 
@@ -72,49 +73,9 @@ Microsoft 致力于维护 Visual Studio 订阅计划的完整性以及该计划�
 |    DreamSpark MAK 密钥         |    这些是面向 DreamSpark 计划消费者的 MAK 密钥。                                                                                                                                                                                                  |
 |
 
-可从产品的下载页索取密钥，或者在“[产品密钥](https://my.visualstudio.com/productkeys)”页上搜索所需的密钥。
+可从产品的下载页索取密钥，或者在[“产品密钥”](https://my.visualstudio.com/productkeys)页上搜索所需的密钥。
 
-### <a name="claiming-product-keys"></a>索取产品密钥
-只有拥有活动订阅的订阅者才可下载产品和索取产品密钥。  当订阅处于活动状态时，可从“[产品密钥](https://my.visualstudio.com/productkeys)”页导出索取的密钥。
-
-
-索取产品密钥：
-1. 登录到你的 Visual Studio 订阅。  必须登录才能下载产品或索取产品密码。
-2. 单击“[产品密钥](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs)”选项卡。
-3. 产品密钥根据产品名称按字母顺序列出。  可以向下滚动到所需产品的名称，也可以使用页面顶部的搜索栏进行搜索。
-   > [!div class="mx-imgBorder"]
-   > ![搜索产品密钥](_img/product-keys/visio-product-key-cropped.png)
-
-在此示例中，我们使用了搜索栏查找 Visio 2010 的产品密钥。
-正如你所见，这里列出了几个版本的 Visio 2010。  为 Visio Standard 2010 和 Visio Premium 2010 分别索取了一个密钥，现在两者均剩余 4 个密钥。  已索取的这两个密钥为零售密钥，并且都显示在页面上。  注意，你可以在“注释”列记录有关已索取的密钥的简短说明。  可以结合“已索取”列中的日期，使用它来跟踪索取的密钥。  例如，可以在使用密钥激活产品的安装时进行记录。
-
-### <a name="exporting-your-claimed-keys"></a>导出已索取的密钥
-可以导出所有已索取的密钥以及众多自动标记为“已索取”的静态密钥和其他密钥的列表。
-
-> [!IMPORTANT]
-> 如果订阅到期，则无法索取新的密钥或导出已索取的密钥。
-
-若要导出密钥，只需单击“产品密钥”页最右侧的“导出所有密钥”链接。  此时将创建名为 KeysExport.xml 的 .xml 文件，可选择打开或保存该文件。  你需要使用能够处理 .xml 文件的应用程序来打开此文件。  例如，可以将该文件作为 Excel 中的只读工作簿打开。
-
-## <a name="internet-demonstrations-via-terminal-services"></a>通过终端服务访问 Internet 演示
-凭借 Visual Studio 订阅，可允许最终用户使用终端服务（Windows Server 2003 或 Windows Server 2008）或远程桌面服务（Windows Server 2008 R2 或更高版本）访问你的程序的 Internet 演示。 使用这种方式，多达 200 位匿名用户可同时访问你的演示。 你的演示不得使用生产数据。 Visual Studio 订阅者可以向最终用户演示其应用程序。 在软件是通过 Visual Studio 订阅授权的情况下，未购买 Visual Studio 订阅的最终用户只能通过使用终端服务 (TS) 或远程桌面服务 (RDS) 的此 Internet 与演示应用程序交互。
-
-除了开发/测试权限，Visual Studio 订阅者可以根据需要使用许多 RDS 或 TS 连接。
-
-### <a name="enabling-rds-access"></a>启用 RDS 访问
-Visual Studio 订阅者可以输入[订阅门户](https://my.visualstudio.com?wt.mc_id=o~msft~docs)的“[产品密钥](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs)”选项卡中的产品密钥，增加可通过 RDS 访问 Windows Server 的用户数量。 若要获得产品密钥，请连接到“产品密钥”页，然后向下滚动到正在运行的 Windows Server 版本。 找到“Windows Server <版本> R2 远程桌面服务 <用户或设备> 连接”，然后单击“索取密钥”链接。 例如，如果是在 Windows Server 2012 R2 上使用 RDS，且部署使用用户 CAL，请选择“Windows Server 2012 远程桌面服务用户连接(50)”。
-每种类型的 5 个密钥都支持 Windows Server 2008 R2，每个密钥支持 20 个连接。 对于 Windows Server 2012 R2，每种类型提供 4 个密钥，每个密钥支持 50 个连接。
-
-#### <a name="to-enable-additional-connections-in-windows-server"></a>在 Windows Server 中启用其他连接：
-1.  打开服务器管理器。
-2.  打开左侧导航窗格中的“服务器”列表。
-3.  右键单击你的许可证服务器，然后选择“安装许可证”。
-4.  完成向导中的步骤。  如果选择的是协议类型，请选择“许可证包(零售购买)”，然后输入从我的门户获得的产品密钥。
-
-如果满足以下条件，最终用户可以通过 RDS 进行连接以访问应用程序：
-- 用户必须为匿名（处于未经身份验证状态）。
-- 必须使用 Internet 连接。
-- 若要进行应用程序演示，最多可以使用 200 个并发用户连接。
-- Visual Studio 订阅者必须获得启用用户连接所需的产品密钥。
-
-如果需要获得有关如何在服务器上设置 RD 授权的说明，请参阅 [RD Licensing Configuration on Windows Server 2012](http://blogs.technet.com/b/askperf/archive/2013/09/20/rd-licensing-configuration-on-windows-server-2012.aspx)（Windows Server 2012 上的 RD 授权配置）。 如果存在任何疑问，请访问 [Microsoft 远程桌面服务论坛](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserverTS)。
+## <a name="next-steps"></a>后续步骤
+要声明密钥，请访问 https://my.visualstudio.com/productkeys 。  
+了解如何[查找和声明密钥](find-keys.md)。
+还可以了解如何使用产品密钥来支持 [Internet 演示](internet-demos.md)。

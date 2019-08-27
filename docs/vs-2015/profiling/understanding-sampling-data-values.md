@@ -1,14 +1,9 @@
 ---
 title: 了解采样数据值 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - sampling profiling method
 - Profiling Tools, sampling
@@ -16,18 +11,18 @@ ms.assetid: fad540a8-24b6-4ff9-91ce-e67e9a58399d
 caps.latest.revision: 27
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 1234c88383e67ad1e4ae12db89679dad59a3d9b7
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 91a4a50ecc745c0b56167d6a5dbb1932af7ed2bf
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51817615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68145423"
 ---
 # <a name="understanding-sampling-data-values"></a>了解采样数据值
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 分析工具的采样分析方法按设置的间隔中断计算机处理器并收集函数调用堆栈。 调用堆栈是一种动态结构，用于存储有关在处理器中执行的函数的信息。  
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 分析工具的采样  分析方法按设置的间隔中断计算机处理器并收集函数调用堆栈。 调用堆栈  是一种动态结构，用于存储有关在处理器中执行的函数的信息。  
   
  **要求**  
   
@@ -37,7 +32,7 @@ ms.locfileid: "51817615"
   
   如果处理器在执行目标代码，探查器会递增调用堆栈中每个函数的样本计数。 获取样本时，调用堆栈上只有一个函数当前在执行代码。 堆栈上的其他函数是函数调用层次结构中的父级，在等待其子级返回。  
   
-  对于样本事件，探查器会递增当前在执行其指令的函数的独占样本计数。 因为独占样本也是函数的总计（非独占）样本的一部分，所以前处于活动状态的函数的非独占样本计数也会递增。  
+  对于样本事件，探查器会递增当前在执行其指令的函数的独占  样本计数。 因为独占样本也是函数的总计（非独占  ）样本的一部分，所以前处于活动状态的函数的非独占样本计数也会递增。  
   
   探查器会递增调用堆栈上所有其他函数的非独占样本计数。  
   
@@ -60,6 +55,3 @@ ms.locfileid: "51817615"
 ## <a name="see-also"></a>请参阅  
  [如何：选择收集方法](../profiling/how-to-choose-collection-methods.md)   
  [分析性能工具数据](../profiling/analyzing-performance-tools-data.md)
-
-
-

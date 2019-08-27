@@ -1,14 +1,9 @@
 ---
-title: 演练： 改进 UI 响应能力 (HTML) | Microsoft Docs
-ms.custom: ''
+title: 演练：改进 UI 响应能力 (HTML) |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -23,31 +18,31 @@ ms.assetid: 7e5a2524-dbf5-4a40-b5d6-2d1ed7fff3de
 caps.latest.revision: 21
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: f0cf1b080a0e803beda6682265dc383dc43a33d0
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 7224dc1ddcffc203c930a3ead01c2f541af2122f
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51791134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63433174"
 ---
-# <a name="walkthrough-improving-ui-responsiveness-html"></a>演练： 改进 UI 响应能力 (HTML)
+# <a name="walkthrough-improving-ui-responsiveness-html"></a>演练：改进 UI 响应能力 (HTML)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本演练引导你使用 [HTML UI 响应能力探查器](../profiling/html-ui-responsiveness.md)确定并修复性能问题。 探查器可用于 Visual Studio 中的使用 JavaScript 的 Windows Universal 和 Windows 应用商店应用。 在此方案中，你将创建一个过于频繁地更新 DOM 元素的性能测试应用，并使用探查器确定并修复此问题。  
   
 ### <a name="creating-and-running-the-performance-test-app"></a>创建并运行性能测试应用  
   
-1.  在 Visual Studio 中，创建一个新的 Windows Universal JavaScript 项目。 （选择“文件”/“新建”/“项目”。 在左窗格中选择“JavaScript”，然后选择“Windows”、“Windows 10”，再选择“通用”或“Windows Phone”。  
+1. 在 Visual Studio 中，创建一个新的 Windows Universal JavaScript 项目。 （选择“文件”/“新建”/“项目”。 在左窗格中选择“JavaScript”，然后选择“Windows”、“Windows 10”，再选择“通用”或“Windows Phone”。  
   
-2.  > [!IMPORTANT]
-    >  本主题中显示的诊断结果是针对 Windows 8 应用显示的。  
+2. > [!IMPORTANT]
+    > 本主题中显示的诊断结果是针对 Windows 8 应用显示的。  
   
-3.  在中间窗格中选择一个空白项目模板，如“空白应用”。  
+3. 在中间窗格中选择一个空白项目模板，如“空白应用”。  
   
-4.  在“名称”  框中指定名称（例如 `JS_Perf_Tester`），然后选择“确定” 。  
+4. 在“名称”  框中指定名称（例如 `JS_Perf_Tester`），然后选择“确定” 。  
   
-5.  在“解决方案资源管理器”中，打开 default.html，并将以下代码粘贴到 \<body> 标记之间：  
+5. 在“解决方案资源管理器”中，打开 default.html，并将以下代码粘贴到 \<body> 标记之间：  
   
     ```html  
     <div class="wrapper">  
@@ -55,7 +50,7 @@ ms.locfileid: "51791134"
     </div>  
     ```  
   
-6.  打开 default.css，然后添加以下 CSS 代码：  
+6. 打开 default.css，然后添加以下 CSS 代码：  
   
     ```css  
     #content {  
@@ -64,7 +59,7 @@ ms.locfileid: "51791134"
     }  
     ```  
   
-7.  打开 default.js，并用以下代码替换所有代码：  
+7. 打开 default.js，并用以下代码替换所有代码：  
   
     ```javascript  
     (function () {  
@@ -153,7 +148,7 @@ ms.locfileid: "51791134"
   
     ```  
   
-8.  选择 F5 键开始调试。 确认“等待值”按钮显示在此页中。  
+8. 选择 F5 键开始调试。 确认“等待值”按钮显示在此页中。  
   
 9. 选择“等待值”，并验证按钮文本和颜色是否约每秒更新一次。 这是设计使然。  
   
@@ -209,9 +204,9 @@ ms.locfileid: "51791134"
   
      可以从此数据中收集各种事实。 例如：  
   
-    -   每个 `Timer` 事件，这些事件经过彩色编码以标识为脚本事件，包括对 `document.createElement` 的调用，后跟样式计算和对 `style.backgroundColor` 和 `appendChild()` 的调用。  
+    - 每个 `Timer` 事件，这些事件经过彩色编码以标识为脚本事件，包括对 `document.createElement` 的调用，后跟样式计算和对 `style.backgroundColor` 和 `appendChild()` 的调用。  
   
-    -   在选定的短时间范围（约一到两秒）内，有大量 `Timer`、`Layout` 和 `Paint` 事件发生。 `Timer` 事件发生的频率远高于每秒一次更新，这在运行应用并选择“等待值”按钮后非常明显。  
+    - 在选定的短时间范围（约一到两秒）内，有大量 `Timer`、`Layout` 和 `Paint` 事件发生。 `Timer` 事件发生的频率远高于每秒一次更新，这在运行应用并选择“等待值”按钮后非常明显。  
   
 10. 要进行调查，请对左下方窗格中的一个 `Timer` 事件选择匿名函数的链接。 以下函数将在 default.js 中打开：  
   
@@ -230,7 +225,7 @@ ms.locfileid: "51791134"
   
 ### <a name="fixing-the-performance-issue"></a>修复性能问题  
   
-1.  使用以下代码替换 `update()` 函数：  
+1. 使用以下代码替换 `update()` 函数：  
   
     ```javascript  
     function update() {  
@@ -245,10 +240,7 @@ ms.locfileid: "51791134"
   
      此代码的修复版本中包括 1000 毫秒延迟，这在代码的先前版本中被省略，导致使用默认延迟值。 通过探查器数据可以看出，默认值为零毫秒，这将导致过于频繁地运行 `setValues()` 函数。  
   
-2.  再次运行“HTML UI 响应能力”探查器，然后查看“CPU 使用率”图。 你将看到过多事件已消失，CPU 使用率降到接近零值。 问题已修复！  
+2. 再次运行“HTML UI 响应能力”探查器，然后查看“CPU 使用率”图。 你将看到过多事件已消失，CPU 使用率降到接近零值。 问题已修复！  
   
 ## <a name="see-also"></a>请参阅  
  [HTML UI 响应能力](../profiling/html-ui-responsiveness.md)
-
-
-

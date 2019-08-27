@@ -1,6 +1,6 @@
 ---
 title: 自定义生成 | Microsoft Docs
-ms.date: 06/14/2017
+ms.date: 06/13/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, transforms
@@ -8,29 +8,29 @@ helpviewer_keywords:
 ms.assetid: d0bceb3b-14fb-455c-805a-63acefa4b3ed
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 858d28ac2fdc6cab32e537e86f84771e0fb53f90
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8e644fd6fc521318512bbc5dd25838a379af78a9
+ms.sourcegitcommit: dd3c8cbf56c7d7f82f6d8818211d45847ab3fcfc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53919555"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67141168"
 ---
-# <a name="customize-your-build-c-visual-basic"></a>自定义生成（C#，Visual Basic）
+# <a name="customize-your-build"></a>自定义生成
 
-使用标准生成进程（导入 Microsoft.Common.props 和 Microsoft.Common.targets）的 MSBuild 项目有多个可用于自定义生成过程的扩展性挂钩。
+使用标准生成进程（导入 Microsoft.Common.props 和 Microsoft.Common.targets）的 MSBuild 项目有多个可用于自定义生成过程的扩展性挂钩   。
 
 ## <a name="add-arguments-to-command-line-msbuild-invocations-for-your-project"></a>向项目的命令行 MSBuild 调用添加参数
 
-源目录中或之上的 Directory.Build.rsp 文件将应用到项目的命令行生成。 有关详细信息，请参阅 [MSBuild 响应文件](../msbuild/msbuild-response-files.md#directorybuildrsp)。
+源目录中或之上的 Directory.Build.rsp 文件将应用到项目的命令行生成  。 有关详细信息，请参阅 [MSBuild 响应文件](../msbuild/msbuild-response-files.md#directorybuildrsp)。
 
 ## <a name="directorybuildprops-and-directorybuildtargets"></a>Directory.Build.props 和 Directory.Build.targets
 
-在 MSBuild 15 版之前，如果要向解决方案中的项目提供新的自定义属性，必须手动向解决方案中的每个项目文件添加一个针对该属性的引用。 另外，还必须在 .props 文件中定义属性，然后在解决方案的每个项目中显式导入该 .props 文件。
+在 MSBuild 15 版之前，如果要向解决方案中的项目提供新的自定义属性，必须手动向解决方案中的每个项目文件添加一个针对该属性的引用。 另外，还必须在 .props  文件中定义属性，然后在解决方案的每个项目中显式导入该 .props  文件。
 
-但现在，通过在包含源的根文件夹的名为 Directory.Build.props 的单个文件中定义一个新属性，只需一步即可向每个项目添加该属性。 在 MSBuild 运行时，Microsoft.Common.props 会搜索 Directory.Build.props 文件的目录结构（Microsoft.Common.targets 将查找 Directory.Build.targets）。 如果找到，就会导入该属性。 Directory.Build.props 是用户定义文件，对目录下的项目提供自定义选项。
+但现在，通过在包含源的根文件夹的名为 Directory.Build.props  的单个文件中定义一个新属性，只需一步即可向每个项目添加该属性。 在 MSBuild 运行时，Microsoft.Common.props  会搜索 Directory.Build.props  文件的目录结构（Microsoft.Common.targets  将查找 Directory.Build.targets  ）。 如果找到，就会导入该属性。 Directory.Build.props  是用户定义文件，对目录下的项目提供自定义选项。
 
 > [!NOTE]
 > 基于 Linux 的文件系统区分大小写。 请确保 Directory.Build.props 文件名的大小写完全匹配，否则将不会在生成流程中检测到它。
@@ -39,9 +39,9 @@ ms.locfileid: "53919555"
 
 ### <a name="directorybuildprops-example"></a>Directory.Build.props 示例
 
-例如，如果想要使所有项目都可以访问新的 Roslyn /deterministic 功能（属性 `$(Deterministic)` 在 Roslyn `CoreCompile` 目标中公开了此功能），可以执行以下操作。
+例如，如果想要使所有项目都可以访问新的 Roslyn /deterministic  功能（属性 `$(Deterministic)` 在 Roslyn `CoreCompile` 目标中公开了此功能），可以执行以下操作。
 
-1. 在存储库根目录中创建一个名为 Directory.Build.props 的新文件。
+1. 在存储库根目录中创建一个名为 Directory.Build.props  的新文件。
 2. 将以下 XML 添加到此文件。
 
    ```xml
@@ -51,11 +51,12 @@ ms.locfileid: "53919555"
     </PropertyGroup>
    </Project>
    ```
-3. 运行 MSBuild。 项目现有的 Microsoft.Common.props 和 Microsoft.Common.targets 导入会找到该文件并将其导入。
+
+3. 运行 MSBuild。 项目现有的 Microsoft.Common.props  和 Microsoft.Common.targets  导入会找到该文件并将其导入。
 
 ### <a name="search-scope"></a>搜索范围
 
-搜索 Directory.Build.props 文件时，MSBuild 将从项目位置 (`$(MSBuildProjectFullPath)`) 向上搜索目录结构，找到 Directory.Build.props 文件后停止。 例如，如果 `$(MSBuildProjectFullPath)` 为 c:\users\username\code\test\case1，MSBuild 将从该位置开始搜索，然后向上搜索目录结构，直到找到 Directory.Build.props 文件，如以下目录结构中所示。
+搜索 Directory.Build.props  文件时，MSBuild 将从项目位置 (`$(MSBuildProjectFullPath)`) 向上搜索目录结构，找到 Directory.Build.props  文件后停止。 例如，如果 `$(MSBuildProjectFullPath)` 为 c:\users\username\code\test\case1  ，MSBuild 将从该位置开始搜索，然后向上搜索目录结构，直到找到 Directory.Build.props  文件，如以下目录结构中所示。
 
 ```
 c:\users\username\code\test\case1
@@ -66,13 +67,13 @@ c:\users
 c:\
 ```
 
-解决方案文件的位置与 Directory.Build.props 无关。
+解决方案文件的位置与 Directory.Build.props  无关。
 
 ### <a name="import-order"></a>导入顺序
 
-Directory.Build.props 很早便已导入 Microsoft.Common.props，因此它无法使用后来定义的属性。 因此，请避免引用尚未定义的属性（否则计算结果将为空）。
+Directory.Build.props 很早便已导入 Microsoft.Common.props，因此它无法使用后来定义的属性   。 因此，请避免引用尚未定义的属性（否则计算结果将为空）。
 
-从 NuGet 包导入 .targets 文件后，会从 Microsoft.Common.targets 导入 Directory.Build.targets。 因此，它会重写大部分生成逻辑中定义的属性和目标，但有时候，可能需要在最终导入后自定义项目文件。
+从 NuGet 包导入 .targets  文件后，会从 Microsoft.Common.targets  导入 Directory.Build.targets  。 因此，它会重写大部分生成逻辑中定义的属性和目标，但有时候，可能需要在最终导入后自定义项目文件。
 
 ### <a name="use-case-multi-level-merging"></a>用例：多级别合并
 
@@ -92,33 +93,63 @@ Directory.Build.props 很早便已导入 Microsoft.Common.props，因此它无�
     \Project2Tests
 ```
 
-则可能需要具有所有项目 (1) 的通用属性、src 项目 (2-src) 的通用属性，以及 test 项目 (2-test) 的通用属性。
+则可能需要具有所有项目 (1)  的通用属性、src  项目 (2-src)  的通用属性，以及 test  项目 (2-test)  的通用属性。
 
-若要 MSBuild 正确地合并“内部”文件（2-src 和 2-test）和“外部”文件 (1)，必须考虑到 MSBuild 找到 Directory.Build.props 文件后会立即停止进一步的扫描。 要继续扫描并合并到外部文件，请将此代码置于这两个内部文件中：
+若要 MSBuild 正确地合并“内部”文件（2-src 和 2-test）和“外部”文件 (1)，必须考虑到 MSBuild 找到 Directory.Build.props 文件后会立即停止进一步的扫描     。 要继续扫描并合并到外部文件，请将此代码置于这两个内部文件中：
 
 `<Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />`
 
 MSBuild 的常规方法汇总如下：
 
-- 对于任何给定的项目，MSBuild 在解决方案结构中向上查找第一个 Directory.Build.props，将其与默认项合并，然后停止扫描
+- 对于任何给定的项目，MSBuild 在解决方案结构中向上查找第一个 Directory.Build.props  ，将其与默认项合并，然后停止扫描
 - 如果要找到并合并多个级别，则从“内部”文件 [`<Import...>`](../msbuild/property-functions.md#msbuild-getpathoffileabove)（如上所示）“外部”文件
 - 如果“外部”文件本身不会再导入其上的内容，则扫描在此处停止
 - 要控制扫描/合并过程，请使用 `$(DirectoryBuildPropsPath)` 和 `$(ImportDirectoryBuildProps)`
 
-或再简单点：不能导入任何内容的第一个 Directory.Build.props 即为 MSBuild 停止的位置。
+或再简单点：不能导入任何内容的第一个 Directory.Build.props 即为 MSBuild 停止的位置  。
+
+### <a name="choose-between-adding-properties-to-a-props-or-targets-file"></a>选择将属性添加到 .props 文件或 .targets 文件
+
+MSBuild 依赖于导入顺序，属性（或 `UsingTask` 或目标）的最后一个定义是使用的定义。
+
+使用显式导入时，可以随时从 .props  或 .targets  文件导入。 下面介绍广泛使用的约定：
+
+- .props  文件在导入顺序的早期导入。
+
+- .targets  文件在生成顺序的后期导入。
+
+此约定由 `<Project Sdk="SdkName">` 导入强制执行（即，在文件的所有内容之前首先导入 Sdk.props  ，然后在文件的所有内容之后最后导入 Sdk.targets  ）。
+
+在决定在何处放置属性后，使用以下通用原则：
+
+- 对于许多属性，在何处定义它们并不重要，因为它们不会被覆盖，只能在执行时读取。
+
+- 对于可能在单个项目中自定义的行为，请在 .props  文件中设置默认值。
+
+- 通过读取可能自定义属性的值，避免在 .props  文件中设置依赖属性，因为在 MSBuild 读取用户项目之前不会进行自定义。
+
+- 在 .targets  文件中设置依赖属性，因为它们将从单个项目中提取自定义项。
+
+- 如果需要覆盖属性，请在所有用户项目自定义项生效后，在 .targets  文件中执行此操作。 使用派生属性时务必小心；还可能需要覆盖派生属性。
+
+- 包括 .props  文件中的项目（以属性为条件）。 在任何项目之前都要考虑所有属性，因此可以提取用户项目属性自定义项，这使用户的项目有机会 `Remove` 或 `Update` 导入所引入的任何项目。
+
+- 定义 .targets  文件中的目标。 但是，如果 SDK 导入了 .targets  文件，请记住此方案使得覆盖目标更加困难，因为默认情况下用户的项目没有可以覆盖它的地方。
+
+- 如果可能，宁可在评估时自定义属性，也不更改目标内的属性。 此原则可以更轻松地加载项目并了解正在执行的操作。
 
 ## <a name="msbuildprojectextensionspath"></a>MSBuildProjectExtensionsPath
 
-默认情况下，Microsoft.Common.props 导入 `$(MSBuildProjectExtensionsPath)$(MSBuildProjectFile).*.props`，Microsoft.Common.targets 导入 `$(MSBuildProjectExtensionsPath)$(MSBuildProjectFile).*.targets`。 `MSBuildProjectExtensionsPath` 的默认值是 `$(BaseIntermediateOutputPath)`、`obj/`。 NuGet 用此机制来引用随包提供的生成逻辑，也就是说，在还原时，它会创建引用包内容的 `{project}.nuget.g.props` 文件。
+默认情况下，Microsoft.Common.props 导入 `$(MSBuildProjectExtensionsPath)$(MSBuildProjectFile).*.props`，Microsoft.Common.targets 导入 `$(MSBuildProjectExtensionsPath)$(MSBuildProjectFile).*.targets`   。 `MSBuildProjectExtensionsPath` 的默认值是 `$(BaseIntermediateOutputPath)`、`obj/`。 NuGet 用此机制来引用随包提供的生成逻辑，也就是说，在还原时，它会创建引用包内容的 `{project}.nuget.g.props` 文件。
 
-可以通过在 Directory.Build.props 中或者在导入 Microsoft.Common.props 前将属性 `ImportProjectExtensionProps` 设为 `false` 来禁用此扩展性机制。
+可以通过在 Directory.Build.props 中或者在导入 Microsoft.Common.props 前将属性 `ImportProjectExtensionProps` 设为 `false` 来禁用此扩展性机制   。
 
 > [!NOTE]
 > 禁用 MSBuildProjectExtensionsPath 导入将阻止在 NuGet 包中提供的生成逻辑应用到你的项目。 一些 NuGet 包需要生成逻辑来执行其功能，并且在禁用该功能时会呈现不可用。
 
 ## <a name="user-file"></a>.user 文件
 
-Microsoft.Common.CurrentVersion.targets 会导入 `$(MSBuildProjectFullPath).user`（如果存在），因此可以使用其他文件扩展名在你的项目旁创建一个文件。 对于计划签入源代码管理的长期更改，最好更改项目本身，以便将来的维护人员不必了解此扩展机制。
+Microsoft.Common.CurrentVersion.targets 会导入 `$(MSBuildProjectFullPath).user`（如果存在），因此可以使用其他文件扩展名在你的项目旁创建一个文件  。 对于计划签入源代码管理的长期更改，最好更改项目本身，以便将来的维护人员不必了解此扩展机制。
 
 ## <a name="msbuildextensionspath-and-msbuilduserextensionspath"></a>MSBuildExtensionsPath 和 MSBuildUserExtensionsPath
 
@@ -137,18 +168,18 @@ $(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\{TargetFileName}\ImportBefore\*.
 $(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\{TargetFileName}\ImportAfter\*.targets
 ```
 
-。 这使已安装的 SDK 可以增强常见项目类型的生成逻辑。
+。 这一约定使已安装的 SDK 可以增强常见项目类型的生成逻辑。
 
-在 `$(MSBuildUserExtensionsPath)` 中搜索相同的目录结构，即按用户文件夹 %LOCALAPPDATA%\Microsoft\MSBuild。 放置在该文件夹中的文件将被导入该用户凭据下运行的相应项目类型的所有生成。 通过在模式 `ImportUserLocationsByWildcardBefore{ImportingFileNameWithNoDots}` 中设置以导入文件命名的属性，可以禁用用户扩展。 例如，将 `ImportUserLocationsByWildcardBeforeMicrosoftCommonProps` 设置为 `false` 会阻止导入 `$(MSBuildUserExtensionsPath)\$(MSBuildToolsVersion)\Imports\Microsoft.Common.props\ImportBefore\*`。
+在 `$(MSBuildUserExtensionsPath)` 中搜索相同的目录结构，即按用户文件夹 %LOCALAPPDATA%\Microsoft\MSBuild  。 放置在该文件夹中的文件将被导入该用户凭据下运行的相应项目类型的所有生成。 通过在模式 `ImportUserLocationsByWildcardBefore{ImportingFileNameWithNoDots}` 中设置以导入文件命名的属性，可以禁用用户扩展。 例如，将 `ImportUserLocationsByWildcardBeforeMicrosoftCommonProps` 设置为 `false` 会阻止导入 `$(MSBuildUserExtensionsPath)\$(MSBuildToolsVersion)\Imports\Microsoft.Common.props\ImportBefore\*`。
 
 ## <a name="customize-the-solution-build"></a>自定义解决方案生成
 
 > [!IMPORTANT]
-> 以这种方式自定义解决方案生成将仅适用于带有 MSBuild.exe 的命令行生成。 它不适用于 Visual Studio 中的生成。
+> 以这种方式自定义解决方案生成将仅适用于带有 MSBuild.exe 的命令行生成  。 它不适用于 Visual Studio 中的生成  。
 
 当 MSBuild 生成解决方案文件时，它首先在内部转换为项目文件，然后再生成它。 已生成的项目文件在定义任何目标前导入 `before.{solutionname}.sln.targets`，在导入目标后导入 `after.{solutionname}.sln.targets` ，其中包括安装到 `$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportBefore` 和 `$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportAfter` 目录的目标。
 
-例如，可以在包含以下内容的名为 after.MyCustomizedSolution.sln.targets 的相同目录中创建文件，从而定义在生成 MyCustomizedSolution.sln 后写自定义日志消息的新目标
+例如，可以在包含以下内容的名为 after.MyCustomizedSolution.sln.targets 的相同目录中创建文件，从而定义在生成 MyCustomizedSolution.sln 后写自定义日志消息的新目标  
 
 ```xml
 <Project>
@@ -160,6 +191,6 @@ $(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\{TargetFileName}\ImportAfter\*.t
 
 ## <a name="see-also"></a>请参阅
 
-[MSBuild 概念](../msbuild/msbuild-concepts.md)
+- [MSBuild 概念](../msbuild/msbuild-concepts.md)
 
-[MSBuild 参考](../msbuild/msbuild-reference.md)
+- [MSBuild 参考](../msbuild/msbuild-reference.md)

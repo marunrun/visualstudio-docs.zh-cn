@@ -1,25 +1,20 @@
 ---
 title: 使用纹理和图像 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: b9fbc8fa-66d1-4055-8460-24d8b8fbe43e
 caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: ff5125ce46abe993f35551a0ce46a0d211af99bb
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 89c8fd489c29fc9b352c34011349ff447e48adb4
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49250492"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65690083"
 ---
 # <a name="working-with-textures-and-images"></a>使用纹理和图像
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,7 +22,7 @@ ms.locfileid: "49250492"
 可以在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中使用图像编辑器来创建和修改纹理和图像。 如同用 DirectX 应用程序开发的应用程序一样，图像编辑器支持丰富的纹理和图像格式。  
   
 > [!NOTE]
->  图像编辑器不支持低色彩图像，例如图标或光标。 若要创建或修改这种图像，请使用[适用于图标的图像编辑器](http://msdn.microsoft.com/library/586d2b8b-0348-4883-a85d-1ff0ddbf14dd)。  
+> 图像编辑器不支持低色彩图像，例如图标或光标。 若要创建或修改这种图像，请使用[适用于图标的图像编辑器](https://msdn.microsoft.com/library/586d2b8b-0348-4883-a85d-1ff0ddbf14dd)。  
   
 ## <a name="textures-and-images"></a>纹理和图像  
  简单地说，纹理和图像只是用于在图形应用中提供可视细节的数据表。 纹理或图像提供的细节取决于其用法，颜色样本、Alpha（透明度）值、法线与高度值是常见的示例。 纹理与图像之间的主要差别在于，前者连同形状的表示形式（通常是 3D 模型）来呈现整个对象或场景，而图像通常是对象或场景的独立表示形式。  
@@ -56,6 +51,3 @@ ms.locfileid: "49250492"
 |-----------|-----------------|  
 |[图像编辑器](../designers/image-editor.md)|介绍如何使用图像编辑器处理纹理和图像。|  
 |[图像编辑器示例](../designers/image-editor-examples.md)|提供演示如何使用图像编辑器执行常见图像处理任务的主题的链接。|
-
-
-

@@ -1,14 +1,9 @@
 ---
-title: CA2214： 不要在构造函数中调用可重写的方法 |Microsoft Docs
-ms.custom: ''
+title: CA2214:不要在构造函数中调用可重写的方法 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - DoNotCallOverridableMethodsInConstructors
 - CA2214
@@ -20,14 +15,14 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: b43400dbd516328e133ed6e103d4a4f2a7ccf8a3
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 0a2e107429bb48b2bf17a625e25866a19c7781b6
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49921465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68142421"
 ---
-# <a name="ca2214-do-not-call-overridable-methods-in-constructors"></a>CA2214：不要在构造函数中调用可重写的方法
+# <a name="ca2214-do-not-call-overridable-methods-in-constructors"></a>CA2214:不要在构造函数中调用可重写的方法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -60,6 +55,3 @@ ms.locfileid: "49921465"
  **调用基构造函数。** 
 **称为派生 DoSomething-初始化？否**
 **调用派生构造函数。**
-
-
-

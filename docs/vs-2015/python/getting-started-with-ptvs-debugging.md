@@ -1,25 +1,20 @@
 ---
 title: PTVS 入门：调试 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-python
+ms.topic: conceptual
 ms.assetid: 82803559-1d60-4c57-98fb-2dc1e0182b42
 caps.latest.revision: 5
 author: kraigb
 ms.author: kraigb
-manager: ghogen
-ms.openlocfilehash: 8a92eb3779abf5be00f39bd4aa3e66238a729ded
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: b636dd4f3a5c5265231898573bfdf52de2dff84e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49204917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68197716"
 ---
 # <a name="getting-started-with-ptvs-debugging"></a>PTVS 入门：调试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -59,7 +54,6 @@ if __name__ == "__main__":
   
  你可以在很短的 [youtube 视频](https://www.youtube.com/watch?v=bO7wpzgy74A&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=4)中观看这些说明。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Wiki 文档](https://github.com/Microsoft/PTVS/wiki/Debugging)   
  [PTVS 入门和深入了解视频](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)
-

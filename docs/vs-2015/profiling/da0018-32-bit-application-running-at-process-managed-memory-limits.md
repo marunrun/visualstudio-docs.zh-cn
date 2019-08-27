@@ -1,14 +1,9 @@
 ---
 title: DA0018：运行的 32 位应用程序达到了进程托管内存的限制 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 f1_keywords:
 - vs.performance.18
 - vs.performance.DA0018
@@ -17,21 +12,21 @@ ms.assetid: 98eb2d96-f92f-42f9-915c-e5ac2330ffbf
 caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: aeca49e13a2d7181d74f48522786185f4be9ed58
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 6418a39d7e53a3edaa48b3cd003d35d95cba386e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51722261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68194948"
 ---
-# <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018：运行的 32 位应用程序达到了进程托管内存的限制
+# <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018：运行的 32 位应用程序达到了进程托管内存限制
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 规则 Id |DA0018 |  
 |类别 |分析工具使用情况 |  
 |分析方法 |采样 |  
-|消息 |托管内存分配接近 32 位进程的默认限制。 应用程序可能会受内存限制。 |  
+|消息 |托管内存分配接近 32 位进程的默认限制。 应用程序可能会受内存限制。|  
 |规则类型 |警告 |  
   
  使用采样法、.NET 内存或资源争用方法进行分析时，必须收集至少 10 个样本才能触发此规则。  
@@ -51,7 +46,7 @@ ms.locfileid: "51722261"
  托管堆总大小接近默认限制时，内存管理开销常会增加到一定程度，此时应用程序的响应情况和可伸缩性会开始受到影响。  
   
 ## <a name="how-to-investigate-a-warning"></a>如何调查警告  
- 双击“错误列表”窗口中的消息，导航到[标记](../profiling/marks-view.md)视图。 查找 **.NET CLR Memory\\# Bytes in all Heaps** 和 **# Total committed bytes** 列。 确定是否存在特定阶段的程序执行，其中托管内存分配高于其他阶段。 比较 **# Bytes in all Heaps** 列的值与 **.NET CLR Memory\\# of Gen 0 Collections**、**.NET CLR Memory\\# of Gen 1 Collections** 和 **.NET CLR Memory\\# of Gen 2 Collections** 列中报告的垃圾回收率，确定托管内存分配模式是否会影响垃圾回收率。  
+ 双击“错误列表”窗口中的消息，导航到[标记](../profiling/marks-view.md)视图。 查找 **.NET CLR Memory\\# Bytes in all Heaps** 和 **# Total committed bytes** 列。 确定是否存在特定阶段的程序执行，其中托管内存分配高于其他阶段。 比较 **# Bytes in all Heaps** 列的值与 **.NET CLR Memory\\# of Gen 0 Collections**、 **.NET CLR Memory\\# of Gen 1 Collections** 和 **.NET CLR Memory\\# of Gen 2 Collections** 列中报告的垃圾回收率，确定托管内存分配模式是否会影响垃圾回收率。  
   
  在 .NET Framework 应用程序中，公共语言运行时会限制托管堆的总大小，使其略低于进程地址空间专用区域部分总大小的一半。 对于在 32 位计算机上运行的 32 位进程，进程地址空间专用部分的上限为 2 GB。 托管堆总大小开始接近其默认限制时，管理内存的开销可能会增加，应用程序的性能会降低。  
   
@@ -74,6 +69,3 @@ ms.locfileid: "51722261"
   若要解除对进程地址空间的专用部分大小的虚拟内存体系结构约束，请尝试在 64 位计算机上运行此 32 位进程。  64 位计算机上的 32 位进程最多可获得 4 GB 的专用虚拟内存。  
   
   64 位计算机上运行的 64 位进程最多可获得 8 TB 的虚拟内存。 请考虑重新编译应用程序，将其作为本机 64 位应用程序执行。 此规则仅供参考，可能不需要采取纠正措施。
-
-
-

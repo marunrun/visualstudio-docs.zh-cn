@@ -10,14 +10,13 @@ helpviewer_keywords:
 ms.assetid: 81536233-1962-40d9-9511-0b4633814d90
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 079a7390b462dd8d48535f683f391ec2dca4827d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 692ea254719f5ae14491ae81e2e6ab0f5740fc05
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53916782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63002263"
 ---
 # <a name="how-to-add-and-delete-counters-on-graphs-in-load-test-results"></a>如何：在负载测试结果中的关系图上添加和删除计数器
 
@@ -29,7 +28,7 @@ ms.locfileid: "53916782"
 
 **性能计数器采样间隔注意事项**
 
-基于负载测试的长度，在负载测试运行设置中为“采样率”属性选择一个值。 较小的采样速率（如 5 秒默认值）需要占用负载测试结果数据库中的更多空间。 对于更长的负载测试，增加采样速率会减少收集的数据量。 有关更多信息，请参见[如何：指定采样率](../test/how-to-specify-the-sample-rate-for-a-load-test.md)。
+基于负载测试的长度，在负载测试运行设置中为“采样率”属性选择一个值。 较小的采样速率（如 5 秒默认值）需要占用负载测试结果数据库中的更多空间。 对于更长的负载测试，增加采样速率会减少收集的数据量。 有关详细信息，请参阅[如何：指定采样率](../test/how-to-specify-the-sample-rate-for-a-load-test.md)。
 
 下面是有关采样速率的一些准则：
 
@@ -48,29 +47,29 @@ ms.locfileid: "53916782"
 
 负载测试结果储存库中存储计时详细信息数据所需的空间可能会非常大，尤其是对于运行时间较长的负载测试。 另外，在负载测试结束时将此数据存储到负载测试结果储存库中所需的时间也较长，因为在负载测试完成执行之前此数据一直存储在负载测试代理上。 负载测试完成时，数据将存储到储存库中。 默认情况下，将启用“计时详细信息存储”属性。 如果这对测试环境来说有问题，则可能需要将“计时详细信息存储”设置为“无”。
 
-有关更多信息，请参见[如何：指定计时详细信息存储属性](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md)。
+有关详细信息，请参阅[如何：指定计时详细信息存储属性](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md)。
 
 ## <a name="to-display-a-particular-performance-counter-on-a-load-test-graph"></a>在负载测试关系图上显示特定性能计数器
 
-1.  在完成负载测试后或加载测试结果后，在负载测试分析器的工具栏中选择“关系图”。
+1. 在完成负载测试后或加载测试结果后，在负载测试分析器的工具栏中选择“关系图”。
 
      “计数器”面板显示在关系图视图中。
 
     > [!NOTE]
     > 如果看不到“计数器”面板，请选择工具栏上的“显示计数器面板”。
 
-2.  在“计数器”面板中，展开层次结构中的节点，直到找到希望以图形方式显示的性能计数器。
+2. 在“计数器”面板中，展开层次结构中的节点，直到找到希望以图形方式显示的性能计数器。
 
      例如，若要显示运行测试的计算机上的可用内存，请展开“计算机”，展开该计算机的节点，然后展开“内存”。 将看到“Available MBytes”计数器。
 
-3.  选择要在上面显示性能计数器的关系图。
+3. 选择要在上面显示性能计数器的关系图。
 
-4.  在“计数器”面板中右键单击性能计数器，然后选择“在关系图上显示计数器”。
+4. 在“计数器”面板中右键单击性能计数器，然后选择“在关系图上显示计数器”。
 
     > [!TIP]
     > 若要暂时停止在关系图上显示性能计数器数据，请清除图例中性能计数器的复选框。 这样仍可以分析最小值、最大值和平均值统计信息，而不用在关系图上查看趋势线。 如果在分析问题时关系图包含几个重叠的性能计数器图形，这会非常有用。 有关详细信息，请参阅[使用关系图视图图例分析负载测试](../test/use-the-graphs-view-legend-to-analyze-load-tests.md)。
 
-5.  若要从关系图删除性能计数器数据，请右击图例的“计数器”列中的性能计数器，然后选择“删除”。
+5. 若要从关系图删除性能计数器数据，请右击图例的“计数器”列中的性能计数器，然后选择“删除”。
 
      \- 或 -
 

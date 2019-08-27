@@ -1,19 +1,18 @@
 ---
 title: 生成 C# Equals 和 GetHashCode 方法重写
 ms.date: 01/26/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: e7b1f2f196e8cb737d179e12e49d829b1651c5d5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: bbe04ac7a28666f32aa1da3bebe5ed50f96fb900
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53960899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62790526"
 ---
 # <a name="generate-equals-and-gethashcode-method-overrides-in-visual-studio"></a>在 Visual Studio 中生成 C# Equals 和 GetHashCode 方法重写
 
@@ -21,17 +20,17 @@ ms.locfileid: "53960899"
 
 - C#
 
-**功能：** 用于生成“Equals”和“GetHashCode”方法。
+**功能：** 用于生成“Equals”和“GetHashCode”方法   。
 
 **使用时机：** 当类型应按一个或多个字段进行比较，而不是按内存中的对象位置进行比较时，请生成这些替代。
 
-操作原因：
+操作原因： 
 
-- 如果实现值类型，则应考虑重写 Equals 方法，针对 Equals 方法在 ValueType 上的默认实现提升相关性能。
+- 如果实现值类型，则应考虑重写 Equals 方法，针对 Equals 方法在 ValueType 上的默认实现提升相关性能  。
 
-- 在实现引用类型时，如果类型看起来像基类型（如点、字符串和 BigNumber 等），请考虑重写 Equals 方法。
+- 在实现引用类型时，如果类型看起来像基类型（如点、字符串和 BigNumber 等），请考虑重写 Equals 方法  。
 
-- 重写 GetHashCode 方法，使类型能在哈希表中正常工作。 了解有关[相等运算符](/dotnet/standard/design-guidelines/equality-operators)的更多指南。
+- 重写 GetHashCode 方法，使类型能在哈希表中正常工作  。 了解有关[相等运算符](/dotnet/standard/design-guidelines/equality-operators)的更多指南。
 
 ## <a name="how-to"></a>操作说明
 
@@ -44,17 +43,17 @@ ms.locfileid: "53960899"
 
 1. 接下来，执行以下操作之一：
 
-   - 按“Ctrl”+**。** 触发“快速操作和重构”菜单。
+   - 按“Ctrl”  + **。** 触发“快速操作和重构”  菜单。
 
-   - 右键单击并选择“快速操作和重构”菜单。
+   - 右键单击并选择“快速操作和重构”菜单  。
 
    - 单击 ![左边缘中](../media/screwdriver-icon.png) 显示的螺丝刀图标。
 
    ![生成重写预览](media/overrides-preview-cs.png)
 
-1. 从下拉菜单中选择“生成 Equals(object)”或“生成 Equals 和 GetHashCode”。
+1. 从下拉菜单中选择“生成 Equals(object)”或“生成 Equals 和 GetHashCode”   。
 
-1. 在“选取成员”对话框中，选择要为其生成方法的成员：
+1. 在“选取成员”对话框中，选择要为其生成方法的成员  ：
 
     ![生成重写对话框](media/overrides-dialog-cs.png)
 

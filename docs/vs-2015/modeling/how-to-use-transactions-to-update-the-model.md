@@ -1,23 +1,20 @@
 ---
-title: 如何： 使用事务更新模型 |Microsoft Docs
-ms.custom: ''
+title: 如何：使用事务更新模型 |Microsoft Docs
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 ms.assetid: e24436a5-7f97-401b-bc83-20d188d10d5b
 caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 50f9d491ed52098edb8a8ccd1a7b2f9c8834447e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: bbc09543d0ee0297678d3f205becc55a6b6d7714
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49236855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68181502"
 ---
 # <a name="how-to-use-transactions-to-update-the-model"></a>如何：使用事务更新模型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -64,9 +61,9 @@ catch (Exception ex)
 ## <a name="rolling-back-a-transaction"></a>回滚事务  
  若要确保在存储区将保留在或将恢复到事务执行前的状态，可以使用这些策略之一：  
   
-1.  引发未捕获事务的作用域内的异常。  
+1. 引发未捕获事务的作用域内的异常。  
   
-2.  回滚显式事务：  
+2. 回滚显式事务：  
   
     ```  
     this.Store.TransactionManager.CurrentTransaction.Rollback();  
@@ -108,6 +105,3 @@ if (!this.Store.InUndoRedoOrRollback) {...}
 if (!this.Store.InSerializationTransaction) {...}  
   
 ```
-
-
-

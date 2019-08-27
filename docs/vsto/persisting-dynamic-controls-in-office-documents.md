@@ -13,17 +13,17 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], Windows Forms controls
 - documents [Office development in Visual Studio], host controls
 - host controls [Office development in Visual Studio], persisting in the document
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 570131dfdb3cb582ba6ee6c8a12fff2dfcc01e98
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8fd44d535cd8a9920ebc3de37d0c483a19dac8f8
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53894790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62976594"
 ---
 # <a name="persist-dynamic-controls-in-office-documents"></a>持久保存在 Office 文档中的动态控件
 
@@ -76,17 +76,17 @@ ms.locfileid: "53894790"
 
 当用户重新打开文档时，可以重新创建已删除的 Windows 窗体控件。 为此，必须执行下列任务：
 
-1.  保存或关闭文档时，存储关于大小、位置和控件状态的信息。 文档级自定义项，可以将数据保存到文档中的数据缓存。 在 VSTO 外接程序中，可以将数据保存到文档中的自定义 XML 部件中。
+1. 保存或关闭文档时，存储关于大小、位置和控件状态的信息。 文档级自定义项，可以将数据保存到文档中的数据缓存。 在 VSTO 外接程序中，可以将数据保存到文档中的自定义 XML 部件中。
 
-2.  打开文档时，在引发的事件中重新创建控件。 在文档级项目中，可以在 `Sheet`*n*`_Startup` 或 `ThisDocument_Startup` 事件处理程序中执行此操作。 在 VSTO 外接程序项目中，可以在 <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookOpen> 或 <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentOpen> 事件的事件处理程序中执行此操作。
+2. 打开文档时，在引发的事件中重新创建控件。 在文档级项目中，可以在 `Sheet`*n*`_Startup` 或 `ThisDocument_Startup` 事件处理程序中执行此操作。 在 VSTO 外接程序项目中，可以在 <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookOpen> 或 <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentOpen> 事件的事件处理程序中执行此操作。
 
-###  <a name="removingActiveX"></a> 在外接程序中删除 ActiveX 包装
+### <a name="removingActiveX"></a> 在外接程序中删除 ActiveX 包装
 
 通过使用 VSTO 外接程序可将动态 Windows 窗体控件添加到文档中，可以防止出现在该文档中通过以下方式打开下一次控件的 ActiveX 包装。
 
 #### <a name="remove-activex-wrappers-when-the-document-is-opened"></a>打开文档时删除 ActiveX 包装
 
-若要删除所有 ActiveX 包装，请调用 `GetVstoObject` 方法为表示新打开文档的 <xref:Microsoft.Office.Interop.Word.Document> 或 <xref:Microsoft.Office.Interop.Excel.Workbook> 生成主机项。 例如，若要从 Word 文档中删除所有 ActiveX 包装，可以调用 `GetVstoObject` 方法来为 <xref:Microsoft.Office.Interop.Word.Document> 对象生成宿主项，该对象会传递给 <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentOpen> 事件的事件处理程序。
+若要删除所有 ActiveX 包装，请调用 `GetVstoObject` 方法为表示新打开文档的 <xref:Microsoft.Office.Interop.Word.Document> 或 <xref:Microsoft.Office.Interop.Excel.Workbook> 生成宿主项。 例如，若要从 Word 文档中删除所有 ActiveX 包装，可以调用 `GetVstoObject` 方法来为 <xref:Microsoft.Office.Interop.Word.Document> 对象生成宿主项，该对象会传递给 <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentOpen> 事件的事件处理程序。
 
 知道只能在安装 VSTO 外接程序的计算机上打开文档时，此过程非常有用。 如果该文档可能会传递给其他未安装 VSTO 外接程序的用户，请考虑在关闭文档之前删除控件。
 

@@ -1,7 +1,6 @@
 ---
 title: 可靠性警告
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - vs.codeanalysis.reliabilityrules
@@ -12,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 77886846-10a2-4585-968a-7eb60ebe07e8
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e7a93ea20edc4b27b3c0e6f41fef2f45bd7f407a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 009422eaf9ac81af6e8f9d48732655b2528c85a0
+ms.sourcegitcommit: 92a04c57ac0a49f304fa2ea5043436f30068c3cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53845410"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65976152"
 ---
 # <a name="reliability-warnings"></a>可靠性警告
-可靠性警告支持库和应用程序的可靠性，如使用正确的内存和线程。
 
-## <a name="in-this-section"></a>本节内容
+可靠性警告支持库和应用程序的可靠性，如使用正确的内存和线程。 可靠性规则包括：
 
 |规则|描述|
 |----------|-----------------|
@@ -35,3 +33,4 @@ ms.locfileid: "53845410"
 |[CA2003:不要将纤程视为线程](../code-quality/ca2003-do-not-treat-fibers-as-threads.md)|托管的线程是被视为 Win32 线程。|
 |[CA2004:移除对 GC 的调用。保持连接](../code-quality/ca2004-remove-calls-to-gc-keepalive.md)|如果要将转换为使用 SafeHandle，删除所有调用的 GC。KeepAlive (object)。 在这种情况下，类不必调用 GC。KeepAlive，假定它们没有终结器但是依赖于 SafeHandle 以完成 OS 句柄来它们。|
 |[CA2006:使用 SafeHandle 封装本机资源](../code-quality/ca2006-use-safehandle-to-encapsulate-native-resources.md)|在托管代码中使用 IntPtr 可能意味着潜在的安全性和可靠性方面的问题。 必须检查所有使用 IntPtr 之处，以确定是否需要在该处使用 SafeHandle 或类似的技术。|
+|[CA2007:不直接等待任务](../code-quality/ca2007-do-not-directly-await-task.md)|异步方法[等待](/dotnet/csharp/language-reference/keywords/await)<xref:System.Threading.Tasks.Task>直接。|

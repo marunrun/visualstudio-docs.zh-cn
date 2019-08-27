@@ -1,7 +1,6 @@
 ---
 title: 调试时映射调用堆栈上的方法
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - vs.progression.debugwithcodemaps
@@ -26,24 +25,35 @@ helpviewer_keywords:
 - debugging [Visual Studio], visualizing the call stack
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a238da745821da5c93cf953817305703786df805
-ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
-ms.translationtype: MT
+ms.openlocfilehash: 8641a677ae36ad5a3c1f0f4344fc5c12b8798d7d
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "53889236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63445137"
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>在 Visual Studio 中调试时映射调用堆栈上的方法
+
 创建代码映射，以便在调试时对调用堆栈进行可视化跟踪。 你可以在图中进行标注以跟踪代码执行的操作，以便专注于查找 Bug。
 
  ![使用代码图上的调用堆栈调试](../debugger/media/debuggermap_overview.png)
 
  你将需要：
 
-- [Visual Studio Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+ ::: moniker range="vs-2017"
+
+- [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+- [Visual Studio Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
+
+::: moniker-end
 
 - 可以调试，如 Visual C#、 Visual Basic、 c + +、 JavaScript 或 X + + 的代码
 
@@ -67,9 +77,9 @@ ms.locfileid: "53889236"
 
 ## <a name="MapStack"></a>映射调用堆栈
 
-1.  开始调试。 （键盘：**F5**)
+1. 开始调试。 （键盘：**F5**)
 
-2.  你的应用进入中断模式或你单步执行函数后，请选择**Code Map**。 （键盘：**Ctrl** + **Shift** + **`**)
+2. 你的应用进入中断模式或你单步执行函数后，请选择**Code Map**。 （键盘：**Ctrl** + **Shift** + **`**)
 
      ![选择代码图以开始映射调用堆栈](../debugger/media/debuggermap_choosecodemap.png)
 
@@ -80,16 +90,19 @@ ms.locfileid: "53889236"
      在你继续调试时，该代码图将自动更新。 请参阅[使用下一步的调用堆栈更新图](#UpdateMap)。
 
 ## <a name="MakeNotes"></a>对代码进行标注
+
  添加注释以跟踪代码中发生的情况。 若要在注释中添加新行，请按**Shift + Return**。
 
  ![向代码图上的调用堆栈添加注释](../debugger/media/debuggermap_addcomment.png)
 
 ## <a name="UpdateMap"></a>使用下一个调用堆栈更新映射
+
  运行你的应用到下一个断点或单步执行某一函数。 此图将添加新的调用堆栈。
 
  ![使用下一个调用堆栈更新代码图](../debugger/media/debuggermap_addclearcallstack.png)
 
 ## <a name="AddRelatedCode"></a>向映射添加相关代码
+
  现在你已生成图-什么下一步？ 如果您正在使用 C# 或 Visual Basic，添加项，例如字段、 属性和其他方法，来跟踪代码中发生的情况。
 
  双击某个方法以查看其代码定义，或者使用该方法的快捷菜单。 （键盘：选择方法在图上按**F12**)
@@ -101,7 +114,7 @@ ms.locfileid: "53889236"
  ![显示调用堆栈代码图上某方法中的字段](../debugger/media/debuggermap_showfields.png)
 
 > [!NOTE]
->  默认情况下，向图添加项还会添加父组节点（如类、命名空间和程序集）。 尽管这很有用，您可以仅仅保留图通过关闭此功能使用**包括父级**图工具栏上或通过按按钮**CTRL**添加项时。
+> 默认情况下，向图添加项还会添加父组节点（如类、命名空间和程序集）。 尽管这很有用，您可以仅仅保留图通过关闭此功能使用**包括父级**图工具栏上或通过按按钮**CTRL**添加项时。
 
  ![调用堆栈代码图上与某方法相关的字段](../debugger/media/debuggermap_showedfields.png)
 
@@ -114,6 +127,7 @@ ms.locfileid: "53889236"
  ![调用堆栈代码图上使用某字段的方法](../debugger/media/debuggermap_foundallreferences.png)
 
 ## <a name="FindBugs"></a>使用映射查找 Bug
+
  通过代码可视化，可帮助你更快发现 Bug。 例如，假设要研究一个绘图程序中的 bug。 当你绘制一条线并尝试撤消该操作时，直到你绘制另一条线后才会发生变化。
 
  因此，可在 `clear`、`undo` 和 `Repaint` 方法中设置断点，启动调试，然后生成如下所示的图：
@@ -150,11 +164,11 @@ ms.locfileid: "53889236"
 
    打开**布局**图工具栏上的菜单：
 
-  -   更改默认布局。
+  - 更改默认布局。
 
-  -   若要停止自动重新排列图，关闭**调试时自动布局**。
+  - 若要停止自动重新排列图，关闭**调试时自动布局**。
 
-  -   若要添加项时，重新排列图降至最低，请关闭**增量布局**。
+  - 若要添加项时，重新排列图降至最低，请关闭**增量布局**。
 
 - **可以与他人共享代码图？**
 

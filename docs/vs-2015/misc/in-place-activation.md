@@ -1,25 +1,20 @@
 ---
 title: 在就地激活 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: devlang-csharp
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - in-place view activation
 ms.assetid: 7d316945-06e0-4d8e-ba3a-0ef96fc75399
 caps.latest.revision: 26
-manager: douge
-ms.openlocfilehash: 5d8badf198d86e9643dbc6e98683dd3437d72f64
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 192274d087731f68cb7e01c1da20e80cbfef0360
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49232188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63446414"
 ---
 # <a name="in-place-activation"></a>在就地激活
 如果你的编辑器视图托管了 ActiveX 或其他活动控件，则必须使用就地激活模型将编辑器视图实现为 ActiveX 控件或活动文档数据对象。  
@@ -30,7 +25,7 @@ ms.locfileid: "49232188"
  如果实现了 ActiveX 控件，则可以托管其他嵌入对象。 如果你实现了文档数据对象，窗口框架将限制你使用 ActiveX 控件的能力。  
   
 > [!NOTE]
->  <xref:Microsoft.VisualStudio.OLE.Interop.IOleDocument> 和 <xref:Microsoft.VisualStudio.OLE.Interop.IOleDocumentView> 接口允许分离数据与视图。 但是，Visual Studio 不支持此功能，并且这些接口仅用于表示文档视图对象。  
+> <xref:Microsoft.VisualStudio.OLE.Interop.IOleDocument> 和 <xref:Microsoft.VisualStudio.OLE.Interop.IOleDocumentView> 接口允许分离数据与视图。 但是，Visual Studio 不支持此功能，并且这些接口仅用于表示文档视图对象。  
   
  使用 <xref:Microsoft.VisualStudio.Shell.Interop.SOleComponentUIManager> 服务的编辑器可以通过调用由 <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager> 服务实现的 <xref:Microsoft.VisualStudio.Shell.Interop.SOleComponentUIManager> 接口的方法来提供菜单、工具栏和命令的集成。 编辑器还可以提供其他 Visual Studio 功能，例如，选择跟踪和撤消管理。 有关详细信息，请参阅[创建自定义编辑器和设计器](../extensibility/creating-custom-editors-and-designers.md)。  
   
@@ -41,7 +36,7 @@ ms.locfileid: "49232188"
 就地激活编辑器  
   
 > [!NOTE]
->  此绘图的对象中，仅 `CYourEditorFactory` 对象是创建标准编辑器必需的对象。 如果要创建自定义编辑器，不必实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> ，因为你的编辑器可能具有自己的专用持久性机制。 有关详细信息，请参阅[创建自定义编辑器和设计器](../extensibility/creating-custom-editors-and-designers.md)。  
+> 此绘图的对象中，仅 `CYourEditorFactory` 对象是创建标准编辑器必需的对象。 如果要创建自定义编辑器，不必实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> ，因为你的编辑器可能具有自己的专用持久性机制。 有关详细信息，请参阅[创建自定义编辑器和设计器](../extensibility/creating-custom-editors-and-designers.md)。  
   
  为了创建就地激活编辑器而实现的所有接口都显示在单个 `CYourEditorDocument` 对象上，但此配置仅支持文档数据的单一视图。 有关支持文档数据的多个视图的详细信息，请参阅 [Supporting Multiple Document Views](../extensibility/supporting-multiple-document-views.md)。  
   

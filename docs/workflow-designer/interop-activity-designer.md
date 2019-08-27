@@ -1,22 +1,21 @@
-﻿---
+---
 title: 工作流设计器的 Interop 活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - System.Activities.Statements.Interop.UI
 ms.assetid: 800a3403-ba86-41c4-8de1-c4fee9703eb1
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 66734cd555c88d960431373d4ccf6a7ca0b39099
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 688ef92fae5bd0cbaa5ddc653bbaab5692f4827f
+ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53867285"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66747140"
 ---
 # <a name="interop-activity-designer"></a>Interop 活动设计器
 
@@ -30,11 +29,7 @@ ms.locfileid: "53867285"
 
 **互操作**活动设计器可在**迁移**类别**工具箱**，这通过单击来访问**工具箱**选项卡。或者，选择**工具箱**从**视图**菜单中或按**Ctrl**+**Alt** + **X**。
 
-[迁移](../workflow-designer/migration-activity-designers.md)包含的类别<xref:System.Activities.Statements.Interop>活动中仅出现**工具箱**如果项目面向完整.NET Framework 4。
-
-对于 C# 项目，您可以重新将项目定为右键单击该项目中的使用完整的.NET Framework 4**解决方案资源管理器**，然后选择**属性**。 上**应用程序**选项卡上，选择**NET Framework 4**选项**目标框架**。 选择**是**确认此更改。
-
-对于 Visual Basic 项目，您可以重新将项目定为右键单击项目中使用完整的.NET Framework 4**解决方案资源管理器**，然后选择**属性**。 上**编译**选项卡上，单击**高级编译选项**按钮。 选择 **.Net Framework 4**从**目标框架列表**，然后单击**确定**。 选择**是**确认此更改。
+[迁移](../workflow-designer/migration-activity-designers.md)包含的类别<xref:System.Activities.Statements.Interop>活动才会显示在**工具箱**如果项目面向.NET Framework 4 （完整） 或更高版本。 如果有必要，您可以更改的 framework 版本的项目目标。
 
 **互操作**活动设计器可以从拖动**工具箱**和放置到工作流设计器图面上通常放置活动的例如内无论<xref:System.Activities.Statements.Sequence>。 删除**Interop**活动设计器创建<xref:System.Activities.Statements.Interop>默认值的活动**DisplayName**互操作。 可以编辑<xref:System.Activities.Activity.DisplayName%2A>中的标头**互操作**活动设计器中，或在**DisplayName**属性网格的框。
 

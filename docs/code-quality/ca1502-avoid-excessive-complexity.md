@@ -1,7 +1,6 @@
 ---
 title: CA1502:避免过度复杂
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - AvoidExcessiveComplexity
@@ -12,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: d735454b-2f8f-47ce-907d-f7a5a5391221
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 dev_langs:
 - CPP
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 21b623041bdf599439fd51f99354f206eb25c433
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e968cef6491e1c24d98e5f64248b5104db8c5b65
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53893151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62797403"
 ---
 # <a name="ca1502-avoid-excessive-complexity"></a>CA1502:避免过度复杂
 
@@ -45,11 +44,11 @@ ms.locfileid: "53893151"
 
 圈复杂度 = 边缘的节点数 + 1 的数
 
-其中一个节点表示逻辑分支点，边缘表示节点之间的直线。
+一个*节点*表示逻辑分支点和一个*边缘*表示节点之间的直线。
 
 超过 25 种的圈复杂度时，规则将报告冲突。
 
-您可以了解有关代码的指标的详细信息[测量复杂性和托管代码可维护性](../code-quality/code-metrics-values.md)，
+您可以了解有关代码的指标的详细信息[测量托管代码的复杂性](../code-quality/code-metrics-values.md)。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 

@@ -1,7 +1,6 @@
 ---
 title: 代码段函数
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 helpviewer_keywords:
 - code snippets [Visual Studio], functions
@@ -10,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: c0a2bf21-8fa5-4457-9281-f599beb53e7d
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7cf31fed530447af986d96418d06cf46f02b14b1
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 60453b6842dd321b7c85c2837e12b1208adb18f9
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53907808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62974964"
 ---
 # <a name="code-snippet-functions"></a>代码片段函数
 
@@ -30,11 +29,11 @@ ms.locfileid: "53907808"
 
 |函数|说明|语言|
 |--------------|-----------------|--------------|
-|`GenerateSwitchCases(` `EnumerationLiteral` `)`|为 `EnumerationLiteral` 参数指定的枚举成员生成一个switch 语句和一组 case 语句。 `EnumerationLiteral` 参数必须是枚举文本的引用或是枚举类型。|C#|
+|`GenerateSwitchCases(EnumerationLiteral)`|为 `EnumerationLiteral` 参数指定的枚举成员生成一个switch 语句和一组 case 语句。 `EnumerationLiteral` 参数必须是枚举文本的引用或是枚举类型。|C#|
 |`ClassName()`|返回包含插入的代码片段的类的名称。|C#|
-|`SimpleTypeName(` `TypeName` `)`|在已调用该代码片段的上下文中将 TypeName 参数缩减为其最简单的形式。|C#|
+|`SimpleTypeName(TypeName)`|在已调用该代码片段的上下文中将 TypeName 参数缩减为其最简单的形式。|C#|
 
-## <a name="example"></a>示例
+## <a name="generateswitchcases-example"></a>GenerateSwitchCases 示例
 
 下面的示例演示了如何使用 `GenerateSwitchCases` 函数。 在插入此代码片段并将枚举输入到 `$switch_on$` 文本中时，`$cases$` 文本为枚举中的每个值生成一个 `case` 语句。
 
@@ -76,7 +75,7 @@ ms.locfileid: "53907808"
 </CodeSnippets>
 ```
 
-## <a name="example"></a>示例
+## <a name="classname-example"></a>ClassName 示例
 
 下面的示例演示了如何使用 `ClassName` 函数。 在插入此代码片段时，`$classname$` 文本会替换为代码文件中该位置的封闭类的名称。
 
@@ -123,7 +122,7 @@ ms.locfileid: "53907808"
 </CodeSnippets>
 ```
 
-## <a name="example"></a>示例
+## <a name="simpletypename-example"></a>SimpleTypeName 示例
 
 此示例演示如何使用 `SimpleTypeName` 函数。 在此代码片段插入到代码文件中时，`$SystemConsole$` 文本会替换为在其中调用该代码片段的上下文中 <xref:System.Console> 类型的最简单形式。
 

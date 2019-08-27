@@ -9,15 +9,15 @@ helpviewer_keywords:
 - CPU counters in Profiling Tools
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ddf173f39accb0bb9d2907349c82accdd4f21b40
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 37025177c026d0b6578644ca5765a6878be984ea
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53912631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62552992"
 ---
 # <a name="cpu-and-windows-counters"></a>CPU 和 Windows 计数器
 
@@ -129,7 +129,7 @@ Visual Studio 探查器继续支持特定平台的特定事件。 例如，Penti
 
 ## <a name="see-also"></a>请参阅
 
-[概述](../profiling/overviews-performance-tools.md)  
-[如何：选择采样事件](../profiling/how-to-choose-sampling-events.md)  
-[如何：收集 CPU 计数器数据](../profiling/how-to-collect-cpu-counter-data.md)  
+[概述](../profiling/overviews-performance-tools.md)
+[如何：选择采样事件](../profiling/how-to-choose-sampling-events.md)
+[如何：收集 CPU 计数器数据](../profiling/how-to-collect-cpu-counter-data.md)
 [如何：收集 Windows 计数器数据](../profiling/how-to-collect-windows-counter-data.md)

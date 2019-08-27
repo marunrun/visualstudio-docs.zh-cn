@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 4296ad30-6952-46cb-b002-6b34eee1993a
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c1ca9466f4b70f7232cb1832fe05794b8cffd45
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: HT
+ms.openlocfilehash: 181596e7b76dc2288da82e731455710fde0205d8
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53951493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62564738"
 ---
 # <a name="com-debugging-tools"></a>COM 调试工具
 
@@ -45,6 +45,6 @@ Microsoft 基础类示例
 - [调试 COM 和 ActiveX](../debugger/com-and-activex-debugging.md)
 - [COM 调试工具](../debugger/com-debugging-tools.md)
 - [在 Visual Studio 中进行调试](../debugger/index.md)
-- [调试器功能简介](../debugger/debugger-feature-tour.md)
+- [初探调试器](../debugger/debugger-feature-tour.md)
 - [OCLIENT 示例：说明了一个可视化编辑容器应用程序](https://msdn.microsoft.com/library/8cd5c234-9a4e-4934-8f5d-bac189ad92c4)
-- [SUPERPAD 示例：演示使用 CEditView 编辑文本的可视化编辑服务器](https://msdn.microsoft.com/library/7b14e975-d986-4e6a-8289-226485cfcb72)
+- [SUPERPAD 示例：说明一个可视化编辑服务器，使用 CEditView 编辑文本](https://msdn.microsoft.com/library/7b14e975-d986-4e6a-8289-226485cfcb72)

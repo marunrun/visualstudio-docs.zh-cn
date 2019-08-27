@@ -1,12 +1,9 @@
 ---
 title: 事件处理程序模型外部传播更改 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
 - Domain-Specific Language, events
@@ -14,13 +11,13 @@ ms.assetid: 0ac8d1e4-239f-4370-ba1d-3769bb38b8a5
 caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 7bfddc0903c520469833a0f160444202edf07c32
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 24ef57b545360cccbf75039b5f64a0f53e636dd8
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49823692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68181756"
 ---
 # <a name="event-handlers-propagate-changes-outside-the-model"></a>事件处理程序在模型外部传播更改
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,13 +30,13 @@ ms.locfileid: "49823692"
   
 1. 选择你想要监视的事件的类型。 有关完整列表，请查看的属性<xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory>。 每个属性对应于事件的类型。 最常用的事件类型包括：  
   
-   -   `ElementAdded` – 当模型元素时，触发，关系链接、 形状或连接线创建。  
+   - `ElementAdded` – 当模型元素时，触发，关系链接、 形状或连接线创建。  
   
-   -   ElementPropertyChanged – 触发时的值`Normal`更改域属性。 仅当新的和旧值不相等，则触发事件。 该事件不能应用于计算的和自定义存储属性。  
+   - ElementPropertyChanged – 触发时的值`Normal`更改域属性。 仅当新的和旧值不相等，则触发事件。 该事件不能应用于计算的和自定义存储属性。  
   
         它不能应用于对应于关系链接在角色属性。 请改用`ElementAdded`要监视的域关系。  
   
-   -   `ElementDeleted` – 模型元素后触发，关系、 形状或连接线已被删除。 您仍然可以访问的属性值的元素，但它将具有与其他元素的任何关系。  
+   - `ElementDeleted` – 模型元素后触发，关系、 形状或连接线已被删除。 您仍然可以访问的属性值的元素，但它将具有与其他元素的任何关系。  
   
 2. 添加的分部类定义_YourDsl_**DocData**单独的代码文件中**DslPackage**项目。  
   
@@ -169,11 +166,11 @@ private static void AlbumTitleAdjuster(object sender,
   
  如果您编写更新存储的事件：  
   
--   使用`store.InUndoRedoOrRollback`若要避免更改中撤消的模型元素。 事务管理器将恢复到其原始状态存储中设置的所有内容。  
+- 使用`store.InUndoRedoOrRollback`若要避免更改中撤消的模型元素。 事务管理器将恢复到其原始状态存储中设置的所有内容。  
   
--   使用`store.InSerializationTransaction`若要避免从文件加载模型时更改。  
+- 使用`store.InSerializationTransaction`若要避免从文件加载模型时更改。  
   
--   所做的更改将导致更多的事件触发。 请确保避免无限循环。  
+- 所做的更改将导致更多的事件触发。 请确保避免无限循环。  
   
 ## <a name="store-event-types"></a>存储事件类型  
  每个事件类型对应于 Store.EventManagerDirectory 中的集合。 可以添加或移除事件处理程序在任何时候，但通常要将文档加载时添加它们。  
@@ -194,7 +191,4 @@ private static void AlbumTitleAdjuster(object sender,
   
 ## <a name="see-also"></a>请参阅  
  [响应并传播更改](../modeling/responding-to-and-propagating-changes.md)   
- [示例代码： 电路图](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
-
-
-
+ [示例代码：线路关系图](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)

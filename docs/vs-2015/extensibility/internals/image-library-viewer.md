@@ -1,21 +1,17 @@
 ---
 title: 图像库查看器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9d9c7fbb-ebae-4b20-9dd8-3c9070c0d0d1
 caps.latest.revision: 7
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 6c0e277a123fe24da9824fae94b13eee686f5663
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: HT
+manager: jillfra
+ms.openlocfilehash: 97d634f97eb7a13cfa54b2c0d326b19f31fb7d9d
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51778015"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65685571"
 ---
 # <a name="image-library-viewer"></a>图像库查看器
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -96,7 +92,7 @@ Visual Studio 图像库查看器工具可以加载并搜索图像的清单，从
 |CommonProgramFiles|%Commonprogramfiles%环境变量的值|  
 |LocalAppData|%Localappdata%环境变量的值|  
 |ManifestFolder|包含清单的文件的文件夹|  
-|我的文档|当前用户的我的文档文件夹的完整路径|  
+|MyDocuments|当前用户的我的文档文件夹的完整路径|  
 |ProgramFiles|%Programfiles%环境变量的值|  
 |系统|Windows\System32 文件夹|  
 |WinDir|%Windir%环境变量的值|  
@@ -134,18 +130,18 @@ Visual Studio 图像库查看器工具可以加载并搜索图像的清单，从
 |||  
 |-|-|  
 |**特性**|**定义**|  
-|URI|[必需]一个 URI，定义可从中加载图像。 它可以是以下值之一：<br /><br /> -A [Pack URI](http://msdn.microsoft.com/library/aa970069\(v=vs.100\).aspx)使用应用程序: / / 颁发机构<br /><br /> -一个绝对组件资源引用<br /><br /> 的包含本机资源的文件路径|  
-|背景|[可选]指示什么类型的源应使用的背景。<br /><br /> 它可以是以下值之一：<br /><br /> - *光*： 可以在浅色背景上使用了源。<br /><br /> - *深色*： 可以在深色背景上使用了源。<br /><br /> - *高对比度*： 可以在高对比度模式中的任何背景上使用了源。<br /><br /> - *HighContrastLight*： 可以在高对比度模式中的浅色背景上使用了源。<br /><br /> -*HighContrastDark*： 可以在高对比度模式中的深色背景上使用了源。<br /><br /> 如果**背景**省略属性，可以在任何的背景上使用了源。<br /><br /> 如果**背景**是*Light*，*深色*， *HighContrastLight*，或*HighContrastDark*、永远不会反转源的颜色。 如果**背景**省略或设为*对比度*，由图像的控制的源的颜色反转**AllowColorInversion**属性。|  
+|URI|[必需]一个 URI，定义可从中加载图像。 它可以是以下值之一：<br /><br /> -A [Pack URI](https://msdn.microsoft.com/library/aa970069\(v=vs.100\).aspx)使用应用程序: / / 颁发机构<br /><br /> -一个绝对组件资源引用<br /><br /> 的包含本机资源的文件路径|  
+|背景|[可选]指示什么类型的源应使用的背景。<br /><br /> 它可以是以下值之一：<br /><br /> - *光*:源可以使用浅色背景上。<br /><br /> - *深色*:可以在深色背景上使用源。<br /><br /> - *高对比度*:可以在高对比度模式中的任何背景上使用源。<br /><br /> - *HighContrastLight*:可以在高对比度模式下浅色背景上使用源。<br /><br /> -*HighContrastDark*:可以在高对比度模式中的深色背景上使用源。<br /><br /> 如果**背景**省略属性，可以在任何的背景上使用了源。<br /><br /> 如果**背景**是*Light*，*深色*， *HighContrastLight*，或*HighContrastDark*、永远不会反转源的颜色。 如果**背景**省略或设为*对比度*，由图像的控制的源的颜色反转**AllowColorInversion**属性。|  
   
  一个\<源 > 元素可以具有以下可选子元素之一：  
   
 ||||  
 |-|-|-|  
 |**元素**|**属性 （全部所需）**|**定义**|  
-|\<大小 >|“值”|源将用于指定大小 （以设备为单位） 的映像。 图将方形。|  
-|\<SizeRange >|MinSize、 MaxSize|将映像从 MinSize 到最大大小 （以设备为单位） （含限值） 使用源。 图将方形。|  
+|\<Size>|值|源将用于指定大小 （以设备为单位） 的映像。 图将方形。|  
+|\<SizeRange>|MinSize, MaxSize|将映像从 MinSize 到最大大小 （以设备为单位） （含限值） 使用源。 图将方形。|  
 |\<维度 >|宽度、 高度|源将用于给定的宽度和高度 （以设备为单位） 的映像。|  
-|\<DimensionRange >|MinWidth，MinHeight，<br /><br /> MaxWidth MaxHeight|源将用于从最小宽度/高度 （以设备为单位） 的最大宽度/高度的图像 （含）。|  
+|\<DimensionRange>|MinWidth，MinHeight，<br /><br /> MaxWidth MaxHeight|源将用于从最小宽度/高度 （以设备为单位） 的最大宽度/高度的图像 （含）。|  
   
  一个\<源 > 元素还具有一个可选\<NativeResource > 子元素，定义\<源 > 从本机程序集而不是托管程序集加载的。  
   
@@ -228,10 +224,9 @@ Visual Studio 图像库查看器工具可以加载并搜索图像的清单，从
   
 ## <a name="notes"></a>说明  
   
--   默认情况下，该工具会在 Visual Studio 安装目录中存在多个映像清单中拉取。 仅具有公开使用名字对象的一种是**Microsoft.VisualStudio.ImageCatalog**清单。 GUID: ae27a6b0-e345-4288-96df-5eaf394ee369 (不要**不**重写自定义清单中的此 GUID) 类型： KnownMonikers  
+- 默认情况下，该工具会在 Visual Studio 安装目录中存在多个映像清单中拉取。 仅具有公开使用名字对象的一种是**Microsoft.VisualStudio.ImageCatalog**清单。 GUID: ae27a6b0-e345-4288-96df-5eaf394ee369 (不要**不**重写自定义清单中的此 GUID) 类型：KnownMonikers  
   
--   该工具会尝试启动时加载它找到的所有映像清单，因此，可能需要几秒钟，要实际出现的应用程序。 它也可能会加载清单时是缓慢或无响应。  
+- 该工具会尝试启动时加载它找到的所有映像清单，因此，可能需要几秒钟，要实际出现的应用程序。 它也可能会加载清单时是缓慢或无响应。  
   
 ## <a name="sample-output"></a>示例输出  
  此工具不会生成任何输出。
-

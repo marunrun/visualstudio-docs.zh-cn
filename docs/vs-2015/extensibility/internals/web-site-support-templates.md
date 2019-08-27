@@ -1,26 +1,21 @@
 ---
 title: 网站支持模板 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - we site projects, templates
 ms.assetid: 37173c97-486b-4b3c-8ed3-cf5890c4de23
 caps.latest.revision: 13
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: eebacb3006826a90320cbc61edf7d56467e688ce
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: dca7768f31219328648d457d188086e0185e2ffc
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51760222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68200963"
 ---
 # <a name="web-site-support-templates"></a>网站支持模板
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -40,66 +35,66 @@ ms.locfileid: "51760222"
 ## <a name="project-templates"></a>项目模板  
  使用网站项目模板来构建新网站以响应**新的 Web 站点**命令**文件**菜单。 目前支持三个网站项目类型：  
   
--   空网站项目  
+- 空网站项目  
   
--   网站项目  
+- 网站项目  
   
--   Web 服务项目  
+- Web 服务项目  
   
 ### <a name="empty-web-site-projects"></a>空网站项目  
  这些文件创建新的空网站以响应**空网站**命令，它指向后，会出现**新的 Web 站点**上**文件**菜单：  
   
--   EmptyWeb.vstemplate  
+- EmptyWeb.vstemplate  
   
      引导用户创建新的空网站模板文件。  
   
--   EmptyWeb.webproj  
+- EmptyWeb.webproj  
   
      此文件是项目模板系统的项目。 它满足 EmptyWeb.vstemplate 文件中的项目文件引用。  
   
 ### <a name="web-site-projects"></a>网站项目  
  这些文件创建新网站以响应**ASP.NET Web 站点**命令，它指向后，会出现**新的 Web 站点**上**文件**菜单：  
   
--   Default.aspx  
+- Default.aspx  
   
      新的 Web 站点默认主页。 Language 特性指定源代码语言和 CodeFile 特性指定包含与此页关联的代码隐藏代码的依赖文件。  
   
--   Default.aspx。*扩展*  
+- Default.aspx。*扩展*  
   
      包含默认主页上的代码隐藏代码的依赖文件。 代码隐藏语言决定*扩展*此文件。  
   
--   web.config  
+- web.config  
   
      根 web.site 配置文件。  
   
--   WebApplication.vstemplate  
+- WebApplication.vstemplate  
   
      确定网站解决方案的内容并强制 App_Data 文件夹创建的模板文件。  
   
--   WebApplication.webproj  
+- WebApplication.webproj  
   
      此文件是项目模板系统的项目。 它满足 WebApplication.vstemplate 文件中的项目文件引用。  
   
 ### <a name="web-service-projects"></a>Web 服务项目  
  这些文件创建新网站以响应**ASP.NET Web 服务**指向后即可使用命令**新的 Web 站点**上**文件**菜单：  
   
--   Service.asmx  
+- Service.asmx  
   
      新的 Web 服务的 HTML 页。 Language 特性指定源代码语言和 CodeBehind 属性指定包含与此服务关联的代码隐藏代码的依赖文件。  
   
--   服务。 *扩展*  
+- 服务。 *扩展*  
   
      实现服务类的依赖文件。 代码隐藏语言决定*扩展*此文件。  
   
--   web.config  
+- web.config  
   
--   根 web.site 配置文件。  
+- 根 web.site 配置文件。  
   
--   WebService.vstemplate  
+- WebService.vstemplate  
   
      确定网站解决方案的内容并强制 App_Data 和 App_Code 文件夹创建的模板文件。 该服务。*扩展*文件复制到 App_Code 文件夹。  
   
--   WebService.webproj  
+- WebService.webproj  
   
      此文件是项目模板系统的项目。 它满足 WebService.vstemplate 文件中的项目文件引用。  
   
@@ -109,33 +104,33 @@ ms.locfileid: "51760222"
 ## <a name="project-item-templates"></a>项目项模板  
  网站项目项模板用于将新的 Web 页面添加到响应中的 Web 站点**添加现有项**命令。 目前支持这些类型的网页：  
   
--   新的类  
+- 新的类  
   
--   新的 HTML 页面  
+- 新的 HTML 页面  
   
--   新 Web 窗体  
+- 新 Web 窗体  
   
--   新的主页面  
+- 新的主页面  
   
 ### <a name="new-class"></a>新的类  
  此模板创建新的源文件的空类定义以响应**添加新的类**命令。  
   
--   类。 *扩展*  
+- 类。 *扩展*  
   
      实现了空的类的源文件。 代码隐藏语言决定*扩展*此文件。  
   
--   Class.vstemplate  
+- Class.vstemplate  
   
      模板文件，创建的源文件，并确定其内容。  
   
 ### <a name="new-html-page"></a>新的 HTML 页面  
  此模板创建新的 Web 页以响应**添加新的 HTML 页面**命令。  
   
--   HTMLPage.htm  
+- HTMLPage.htm  
   
      Web 页面的起始内容。 此 Web 页面通常具有任何关联的代码隐藏依赖文件。 若要创建智能页关联的代码隐藏文件，请改为使用 Web 窗体模板。  
   
--   HTMLPage.vstemplate  
+- HTMLPage.vstemplate  
   
      创建 Web 页并确定其内容的模板文件。  
   
@@ -146,27 +141,27 @@ ms.locfileid: "51760222"
   
  若要创建所选的母版页的内容页，选择**选择母版页**。  
   
--   WebForm.aspx  
+- WebForm.aspx  
   
      Web 页面的起始内容。 此 Web 页面具有任何关联的代码隐藏依赖文件。  
   
--   WebForm_cb.aspx  
+- WebForm_cb.aspx  
   
      Web 页面的起始内容。 此 Web 页面有一个关联的代码隐藏依赖文件。  
   
--   代码隐藏文件。 *扩展*  
+- 代码隐藏文件。 *扩展*  
   
      实现 web 窗体类的依赖文件。 代码隐藏语言决定*扩展*此文件。  
   
--   ContentPage.aspx  
+- ContentPage.aspx  
   
      作为内容页面的网页的起始内容。 此 Web 页面具有任何关联的代码隐藏依赖文件。  
   
--   ContentPage_cb.aspx  
+- ContentPage_cb.aspx  
   
      作为内容页面的网页的起始内容。 此 Web 页面有一个关联的代码隐藏依赖文件。  
   
--   WebForm.vstemplate  
+- WebForm.vstemplate  
   
      确定新的 web 页面和其依赖的文件的内容模板文件。  
   
@@ -175,22 +170,21 @@ ms.locfileid: "51760222"
   
  若要创建依赖的代码隐藏源文件，请选择**将代码放在单独的文件**。 否则单个网页将创建一个带有空的脚本块，但不\<%page%> 指令来挂接依赖文件。  
   
--   MasterPage.master  
+- MasterPage.master  
   
      母版页的起始内容。 此母版页具有任何关联的代码隐藏依赖文件。  
   
--   MasterPage_cb.master  
+- MasterPage_cb.master  
   
      母版页的起始内容。 此母版页有一个关联的代码隐藏依赖文件。  
   
--   代码隐藏文件。*扩展*  
+- 代码隐藏文件。*扩展*  
   
      实现主页面类中的依赖文件。 代码隐藏语言决定*扩展*此文件。  
   
--   MasterPage.vstemplate  
+- MasterPage.vstemplate  
   
      确定新的主页面和其依赖的文件的内容模板文件。  
   
 ## <a name="see-also"></a>请参阅  
  [网站支持](../../extensibility/internals/web-site-support.md)
-

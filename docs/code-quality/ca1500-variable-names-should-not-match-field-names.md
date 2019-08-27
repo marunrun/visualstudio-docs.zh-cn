@@ -1,7 +1,6 @@
 ---
 title: CA1500:变量名不应与字段名相同
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - VariableNamesShouldNotMatchFieldNames
@@ -12,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: fa0e5029-79e9-4a33-8576-787ac3c26c39
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d82795669bb1d490af3f78c8d1f1d35afe2b3e7
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 740edb9861d2e3e758a36dfc067cb85fe4fc2c7e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53885380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807155"
 ---
 # <a name="ca1500-variable-names-should-not-match-field-names"></a>CA1500:变量名不应与字段名相同
 

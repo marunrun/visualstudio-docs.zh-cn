@@ -1,13 +1,9 @@
 ---
 title: 使用 XAML 设计器创建 UI
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 f1_keywords:
 - VS.XamlDesigner
 - VS.DevicePanel
@@ -17,13 +13,13 @@ ms.assetid: c54969a7-d75a-4a35-9b37-af7a596a7c24
 caps.latest.revision: 31
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 3bd82bd99901ba0b8df400e3780b17d1baadab0c
-ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
-ms.translationtype: MTE95
+manager: jillfra
+ms.openlocfilehash: 039e6d5ae21059692aecc05de51bc2b311436334
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "53837285"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65695631"
 ---
 # <a name="creating-a-ui-by-using-xaml-designer-in-visual-studio"></a>在 Visual Studio 中，使用 XAML 设计器创建 UI
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -46,7 +42,7 @@ Visual Studio 中的 XAML 设计器提供可视化界面，有助于设计基于
 
  对齐线：对齐线是显示为红色虚线的“对齐边界”，在控件的边缘对齐时或文本基线对齐时显示。 仅当启用了“对齐线对齐”  时，才会显示对齐边界。
 
- **网格滑轨** 使用 `Grid` 滑轨可以管理 [网格](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx)面板中的行和列。 可以创建和删除行和列，并可以调整其相对宽度和高度。 显示在美工板左侧的垂直网格轨道用于行，而显示在顶部的水平线则用于列。
+ **网格滑轨** 使用 `Grid` 滑轨可以管理 [网格](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx)面板中的行和列。 可以创建和删除行和列，并可以调整其相对宽度和高度。 显示在美工板左侧的垂直网格轨道用于行，而显示在顶部的水平线则用于列。
 
  **网格装饰器** `Grid` 装饰器显示为 `Grid` 滑轨上具有垂直或水平线条附加到其上的一个三角形。 当拖动 `Grid` 装饰器时，相邻的列或行的宽度或高度随鼠标的移动而改变。
 
@@ -54,7 +50,7 @@ Visual Studio 中的 XAML 设计器提供可视化界面，有助于设计基于
 
  **重设句柄大小** 重设句柄大小显示在所选控件上，通过它可调整控件的大小。 当调整控件大小时，通常会出现宽度和高度值，帮助设置控件的大小。 有关在“设计”视图中操纵控件的详细信息，请参见 [Working with elements in XAML Designer](../designers/working-with-elements-in-xaml-designer.md)。
 
- **边距** 边距表示控件边缘与其容器边缘之间的固定空间量。 可使用“属性”窗口中 **“布局”** 下的 [Margin](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.margin.aspx) 属性来设置控件的边距。
+ **边距** 边距表示控件边缘与其容器边缘之间的固定空间量。 可使用“属性”窗口中 **“布局”** 下的 [Margin](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.margin.aspx) 属性来设置控件的边距。
 
  **边距装饰器** 可使用边距装饰器更改元素相对于其布局容器的边距。 打开边距装饰器，未设置边距时，边距装饰器将显示断开的锁链。 未设置边距时，元素将在运行时调整布局容器的大小时保留在原处。 边距装饰器关闭时，边距装饰器将显示完好的锁链，且在运行时调整布局容器的大小时，元素将随边距一起移动（边距保持固定）。
 

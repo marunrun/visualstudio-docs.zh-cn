@@ -1,18 +1,18 @@
 ---
-title: 如何：筛选分析工具报表视图以显示“仅我的代码”| Microsoft Docs
+title: 筛选分析工具报表视图以显示“仅我的代码”
 ms.date: 02/15/2018
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c04132dde3f668c007c8fc0bf750c434baa81bbf
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c65c249c8d744dd01ef67d4836f9aa7066370fa0
+ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53925019"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66261401"
 ---
 # <a name="how-to-filter-profiling-tools-report-views-to-display-just-my-code"></a>如何：筛选分析工具报表视图以显示“仅我的代码”
 

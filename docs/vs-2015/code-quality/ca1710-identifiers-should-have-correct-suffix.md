@@ -1,14 +1,9 @@
 ---
-title: CA1710： 标识符应具有正确的后缀 |Microsoft Docs
-ms.custom: ''
+title: CA1710:标识符应具有正确的后缀 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA1710
 - IdentifiersShouldHaveCorrectSuffix
@@ -20,14 +15,14 @@ caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 2256e3f20dfdb4ddb8efa28d7ecdd203a139bcc5
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 16b4c2fb13a8de1824233b491d752b796aea907d
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49940159"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65676553"
 ---
-# <a name="ca1710-identifiers-should-have-correct-suffix"></a>CA1710：标识符应具有正确的后缀
+# <a name="ca1710-identifiers-should-have-correct-suffix"></a>CA1710:标识符应具有正确的后缀
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -47,7 +42,7 @@ ms.locfileid: "49940159"
 
  下表列出了基本类型和接口具有关联的后缀。
 
-|基类型/接口|后缀|
+|基类型/接口|Suffix|
 |--------------------------|------------|
 |<xref:System.Attribute?displayProperty=fullName>|特性|
 |<xref:System.EventArgs?displayProperty=fullName>|EventArgs|
@@ -64,7 +59,7 @@ ms.locfileid: "49940159"
 |<xref:System.IO.Stream?displayProperty=fullName>|流|
 |<xref:System.Security.IPermission?displayProperty=fullName>|权限|
 |<xref:System.Security.Policy.IMembershipCondition?displayProperty=fullName>|条件|
-|一个事件处理程序委托。|事件处理程序|
+|一个事件处理程序委托。|EventHandler|
 
  类型实现<xref:System.Collections.ICollection>和是通用的类型的数据结构，如字典、 堆栈或队列，允许提供有意义信息的预期用法的类型的名称。
 
@@ -95,10 +90,7 @@ foreach(SomeType x in SomeDictionary.Values) { }
  对于其他后缀，不要禁止显示此规则的警告。 该后缀，可为表露类型名称的预期的用法。
 
 ## <a name="related-rules"></a>相关的规则
- [CA1711：标识符应采用正确的后缀](../code-quality/ca1711-identifiers-should-not-have-incorrect-suffix.md)
+ [CA1711:标识符应采用正确的后缀](../code-quality/ca1711-identifiers-should-not-have-incorrect-suffix.md)
 
 ## <a name="see-also"></a>请参阅
- [特性](http://msdn.microsoft.com/library/ee0038ef-b247-4747-a650-3c5c5cd58d8b) [NIB： 事件和委托](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115)
-
-
-
+ [特性](https://msdn.microsoft.com/library/ee0038ef-b247-4747-a650-3c5c5cd58d8b) [NIB:事件和委托](https://msdn.microsoft.com/d98fd58b-fa4f-4598-8378-addf4355a115)

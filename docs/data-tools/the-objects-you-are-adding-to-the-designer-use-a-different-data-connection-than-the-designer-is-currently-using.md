@@ -1,20 +1,19 @@
 ---
-title: 您添加到设计器的对象使用与当前使用的设计器不同的数据连接
+title: 添加到设计器的对象使用不同的数据连接
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 332ed2f3-3377-4d51-8e3b-fdb98231978e
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b61507087a3a4d9ac69c7a0f7fd602dcf7f5cc06
-ms.sourcegitcommit: 59c48e1e42b48ad25a4e198af670faa4d8dae370
-ms.translationtype: MTE95
+ms.openlocfilehash: c85e0c17eeb4cfbd786faac338c8b908c5a7f363
+ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54204302"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66260929"
 ---
 # <a name="the-objects-you-are-adding-to-the-designer-use-a-different-data-connection-than-the-designer"></a>要添加到设计器中的对象使用不同的数据连接与设计器
 
@@ -33,9 +32,8 @@ ms.locfileid: "54204302"
 
 - 若要继续使用现有连接并添加所选的对象的取消，单击**否**。
 
-   操作被取消。 DataContext.Connection 仍然设置为现有连接。
+   操作被取消。 DataContext.Connection 仍然设置为现有连接  。
 
 ## <a name="see-also"></a>请参阅
 
-- [O-R 设计器消息](../data-tools/o-r-designer-messages.md)
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

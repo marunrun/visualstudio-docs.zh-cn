@@ -1,14 +1,9 @@
 ---
 title: 管理调试器的异常 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.exceptions
 - vs.debug.exceptions.find
@@ -37,13 +32,13 @@ ms.assetid: 43a77fa8-37d0-4c98-a334-0134dbca4ece
 caps.latest.revision: 40
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: bdb648e7a29b3ed5d9a444e203ddbdcd6b0e73dc
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: HT
+manager: jillfra
+ms.openlocfilehash: be15b683a6e173d813ea13eaa0cc400a40e68206
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51770000"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65690512"
 ---
 # <a name="managing-exceptions-with-the-debugger"></a>管理调试器的异常
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,17 +47,17 @@ ms.locfileid: "51770000"
   
  异常发生时，调试程序将一条异常消息写入到输出窗口。 它可能会在以下情况中中断执行：  
   
--   引发异常且未进行处理时。  
+- 引发异常且未进行处理时。  
   
--   调试程序设置为在引发异常时立即中断执行（在调用任何处理程序之前）时。  
+- 调试程序设置为在引发异常时立即中断执行（在调用任何处理程序之前）时。  
   
--   如果设置了 [Just My Code](../debugger/just-my-code.md)，且调试程序设置为出现任何未在用户代码中进行处理的异常时执行中断操作。  
-  
-> [!NOTE]
->  ASP.NET 有一个顶级异常处理程序，可以在浏览器中显示错误页。 除非启用 **“仅我的代码”** ，否则它不会中断执行。 有关示例，请参阅以下 [Setting the debugger to continue on user-unhandled exceptions](../debugger/managing-exceptions-with-the-debugger.md#BKMK_UserUnhandled) 。  
+- 如果设置了 [Just My Code](../debugger/just-my-code.md)，且调试程序设置为出现任何未在用户代码中进行处理的异常时执行中断操作。  
   
 > [!NOTE]
->  在 Visual Basic 应用程序中，调试程序将所有错误作为异常进行管理，即使使用出错时样式错误处理程序也是如此。  
+> ASP.NET 有一个顶级异常处理程序，可以在浏览器中显示错误页。 除非启用 **“仅我的代码”** ，否则它不会中断执行。 有关示例，请参阅以下 [Setting the debugger to continue on user-unhandled exceptions](../debugger/managing-exceptions-with-the-debugger.md#BKMK_UserUnhandled) 。  
+  
+> [!NOTE]
+> 在 Visual Basic 应用程序中，调试程序将所有错误作为异常进行管理，即使使用出错时样式错误处理程序也是如此。  
   
 ## <a name="managing-exceptions-with-the-exception-settings-window"></a>使用异常设置窗口管理异常  
  可以使用 **“异常设置”** 窗口指定哪些异常（或异常组）将导致调试程序执行中断操作，以及你想要它执行中断操作的位置。 可以添加或删除异常，或指定要对其执行中断操作的异常。 单击 **“调试”/“窗口”/“异常设置”**，以在打开解决方案时打开此窗口。  
@@ -146,7 +141,7 @@ ms.locfileid: "51770000"
   
    ![还原异常设置中的默认值](../debugger/media/restoredefaultexceptions.png "RestoreDefaultExceptions")  
   
-###  <a name="BKMK_UserUnhandled"></a> Setting the debugger to 用户未经处理的异常时继续  
+### <a name="BKMK_UserUnhandled"></a> Setting the debugger to 用户未经处理的异常时继续  
  如果正在使用 [Just My Code](../debugger/just-my-code.md)调试 .NET 或 JavaScript 代码，则对于未在用户代码中进行处理但在其他地方进行了处理的异常，可以让调试程序不要执行中断操作。  
   
 1. 在 **“异常设置”** 窗口中，通过在窗口中右键单击打开上下文菜单，然后选择 **“显示列”**。 （如果已禁用 **“仅我的代码”**，则将看不到此命令。）  
@@ -167,7 +162,7 @@ ms.locfileid: "51770000"
  如果想要将异常添加到 GPU 内存访问异常、JavaScript 运行时异常或 Win32 异常类别，则需要包括错误代码和说明。  
   
 > [!TIP]
->  请检查你的拼写！ **“异常设置”** 窗口不会检查是否存在添加的异常。 因此，如果键入 **Sytem.UriTemplateMatchException**，则将获得该异常的条目（而不是 **System.UriTemplateMatchException**的条目）。  
+> 请检查你的拼写！ **“异常设置”** 窗口不会检查是否存在添加的异常。 因此，如果键入 **Sytem.UriTemplateMatchException**，则将获得该异常的条目（而不是 **System.UriTemplateMatchException**的条目）。  
   
  异常设置在解决方案的 .suo 文件中保留，因此适用于特定解决方案。 无法跨解决方案重用特定异常设置。 此时，仅保留添加的异常，而不会保留删除的异常。 换而言之，可以添加一个异常，然后关闭并重新打开解决方案，该异常将仍然存在。 但是，如果删除一个异常，然后关闭/重新打开解决方案，异常将消失。  
   
@@ -188,13 +183,8 @@ public class GenericException<T> : Exception
   
 ## <a name="see-also"></a>请参阅  
  [在出现异常之后继续执行](../debugger/continuing-execution-after-an-exception.md)   
- [如何： 在发生异常后检查系统代码](../debugger/how-to-examine-system-code-after-an-exception.md)   
- [如何： 使用本机运行时检查](../debugger/how-to-use-native-run-time-checks.md)   
+ [如何：在发生异常后检查系统代码](../debugger/how-to-examine-system-code-after-an-exception.md)   
+ [如何：使用本机运行时检查](../debugger/how-to-use-native-run-time-checks.md)   
  [使用无 C 运行时库运行时检查](../debugger/using-run-time-checks-without-the-c-run-time-library.md)   
- [异常助手](http://msdn.microsoft.com/library/992892ac-9d52-44cc-bf09-b44bfc5befeb)   
+ [异常助手](https://msdn.microsoft.com/library/992892ac-9d52-44cc-bf09-b44bfc5befeb)   
  [调试器基础知识](../debugger/debugger-basics.md)
-
-
-
-
-

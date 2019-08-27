@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 80260118-08bc-4b37-bfe5-9422ee7a1e4e
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: eddd0252bca5cea3f683f0e00133b8e6e66392f7
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: ea312ca2858a02bc8a70c3e41dbb525c9d222adc
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53952175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62565712"
 ---
 # <a name="walkthrough-save-data-in-a-transaction"></a>演练：在事务中保存数据
 
@@ -33,9 +32,9 @@ ms.locfileid: "53952175"
 
 本演练使用 SQL Server Express LocalDB 和 Northwind 示例数据库。
 
-1.  如果您没有 SQL Server Express LocalDB，安装它从[SQL Server Express 下载页](https://www.microsoft.com/sql-server/sql-server-editions-express)，或通过**Visual Studio 安装程序**。 在 Visual Studio 安装程序中，SQL Server Express LocalDB 可以安装的一部分 **.NET 桌面开发**工作负荷，或作为单个组件。
+1. 如果您没有 SQL Server Express LocalDB，安装它从[SQL Server Express 下载页](https://www.microsoft.com/sql-server/sql-server-editions-express)，或通过**Visual Studio 安装程序**。 在 Visual Studio 安装程序中，SQL Server Express LocalDB 可以安装的一部分 **.NET 桌面开发**工作负荷，或作为单个组件。
 
-2.  通过执行以下步骤安装 Northwind 示例数据库：
+2. 通过执行以下步骤安装 Northwind 示例数据库：
 
     1. 在 Visual Studio 中打开**SQL Server 对象资源管理器**窗口。 (SQL Server 对象资源管理器安装的一部分**数据存储和处理**Visual Studio 安装程序中的工作负载。)展开**SQL Server**节点。 LocalDB 实例上右键单击并选择**新查询**。
 
@@ -53,7 +52,7 @@ ms.locfileid: "53952175"
 
 1. 在 Visual Studio 中，在**文件**菜单中，选择**新建** > **项目**。
 
-2. 展开**可视化C#** 或**Visual Basic**在左侧窗格中，然后选择**Windows Desktop**。
+2. 展开**Visual C#** 或**Visual Basic**在左侧窗格中，然后选择**Windows 桌面**。
 
 3. 在中间窗格中，选择**Windows 窗体应用**项目类型。
 
@@ -65,27 +64,27 @@ ms.locfileid: "53952175"
 
 此步骤中使用**数据源配置向导**创建基于数据源`Customers`和`Orders`Northwind 示例数据库中的表。
 
-1.  若要打开**数据源**窗口，然后在**数据**菜单中，选择**显示数据源**。
+1. 若要打开**数据源**窗口，然后在**数据**菜单中，选择**显示数据源**。
 
-2.  在“数据源”窗口，选择“添加新数据源”以启动“数据源配置”向导。
+2. 在“数据源”窗口，选择“添加新数据源”以启动“数据源配置”向导。
 
-3.  上**选择数据源类型**屏幕上，选择**数据库**，然后选择**下一步**。
+3. 上**选择数据源类型**屏幕上，选择**数据库**，然后选择**下一步**。
 
-4.  上**选择您的数据连接**屏幕执行下列任一操作：
+4. 上**选择您的数据连接**屏幕执行下列任一操作：
 
-    -   如果下拉列表中包含到 Northwind 示例数据库的数据连接，请选择该连接。
+    - 如果下拉列表中包含到 Northwind 示例数据库的数据连接，请选择该连接。
 
          或
 
-    -   选择“新建连接”以启动“添加/修改连接”对话框，并创建到 Northwind 数据库的连接。
+    - 选择“新建连接”以启动“添加/修改连接”对话框，并创建到 Northwind 数据库的连接。
 
-5.  如果你的数据库需要密码，选择选项以包括敏感数据，然后选择**下一步**。
+5. 如果你的数据库需要密码，选择选项以包括敏感数据，然后选择**下一步**。
 
-6.  上**将连接字符串保存到应用程序配置文件**屏幕上，选择**下一步**。
+6. 上**将连接字符串保存到应用程序配置文件**屏幕上，选择**下一步**。
 
-7.  上**选择数据库对象**屏幕上，展开**表**节点。
+7. 上**选择数据库对象**屏幕上，展开**表**节点。
 
-8.  选择`Customers`并`Orders`表，并选择**完成**。
+8. 选择`Customers`并`Orders`表，并选择**完成**。
 
      将“NorthwindDataSet”添加到项目后，“数据源”窗口即会显示 `Customers` 和 `Orders` 表。
 
@@ -109,9 +108,9 @@ ms.locfileid: "53952175"
 
 ### <a name="to-add-a-reference-to-the-systemtransactions-dll-file"></a>添加对 System.Transactions DLL 文件的引用
 
-1.  上**项目**菜单中，选择**添加引用**。
+1. 上**项目**菜单中，选择**添加引用**。
 
-2.  选择**System.Transactions** (在 **.NET**选项卡)，然后选择**确定**。
+2. 选择**System.Transactions** (在 **.NET**选项卡)，然后选择**确定**。
 
      将“System.Transactions”的引用添加到项目。
 
@@ -121,47 +120,47 @@ ms.locfileid: "53952175"
 
 ### <a name="to-modify-the-auto-generated-save-code"></a>修改自动生成的保存代码
 
-1.  选择**保存**按钮**CustomersBindingNavigator** （带有软盘图标的按钮）。
+1. 选择**保存**按钮**CustomersBindingNavigator** （带有软盘图标的按钮）。
 
-2.  将 `CustomersBindingNavigatorSaveItem_Click` 方法替换为以下代码：
+2. 将 `CustomersBindingNavigatorSaveItem_Click` 方法替换为以下代码：
 
      [!code-vb[VbRaddataSaving#4](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_1.vb)]
      [!code-csharp[VbRaddataSaving#4](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_1.cs)]
 
 对相关数据的协调更改的顺序如下：
 
--   删除子记录。 (在这种情况下，删除记录`Orders`表。)
+- 删除子记录。 (在这种情况下，删除记录`Orders`表。)
 
--   删除父记录。 (在这种情况下，删除记录`Customers`表。)
+- 删除父记录。 (在这种情况下，删除记录`Customers`表。)
 
--   插入父记录。 (在这种情况下中, 插入记录`Customers`表。)
+- 插入父记录。 (在这种情况下中, 插入记录`Customers`表。)
 
--   插入子记录。 (在这种情况下中, 插入记录`Orders`表。)
+- 插入子记录。 (在这种情况下中, 插入记录`Orders`表。)
 
 ### <a name="to-delete-existing-orders"></a>删除现有顺序
 
--   将以下 `DeleteOrders` 方法添加到“Form1”：
+- 将以下 `DeleteOrders` 方法添加到“Form1”：
 
      [!code-vb[VbRaddataSaving#5](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_2.vb)]
      [!code-csharp[VbRaddataSaving#5](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_2.cs)]
 
 ### <a name="to-delete-existing-customers"></a>删除现有客户
 
--   将以下 `DeleteCustomers` 方法添加到“Form1”：
+- 将以下 `DeleteCustomers` 方法添加到“Form1”：
 
      [!code-vb[VbRaddataSaving#6](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_3.vb)]
      [!code-csharp[VbRaddataSaving#6](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_3.cs)]
 
 ### <a name="to-add-new-customers"></a>添加新客户
 
--   将以下 `AddNewCustomers` 方法添加到“Form1”：
+- 将以下 `AddNewCustomers` 方法添加到“Form1”：
 
      [!code-vb[VbRaddataSaving#7](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_4.vb)]
      [!code-csharp[VbRaddataSaving#7](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_4.cs)]
 
 ### <a name="to-add-new-orders"></a>添加新顺序
 
--   将以下 `AddNewOrders` 方法添加到“Form1”：
+- 将以下 `AddNewOrders` 方法添加到“Form1”：
 
      [!code-vb[VbRaddataSaving#8](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_5.vb)]
      [!code-csharp[VbRaddataSaving#8](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_5.cs)]

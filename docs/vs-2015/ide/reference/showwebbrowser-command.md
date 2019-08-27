@@ -1,14 +1,9 @@
 ---
 title: ShowWebBrowser 命令 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - view.showwebbrowser
 helpviewer_keywords:
@@ -18,18 +13,17 @@ ms.assetid: c6a4fbd6-8e9d-45cc-8b2f-93990d065e78
 caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: f9bf9668a690347988e3148cf90da69ec3b33ca2
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: c3cd5d04efab6f6cb5641c7e0c4c2a8547e1ef00
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49171946"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65689419"
 ---
 # <a name="showwebbrowser-command"></a>ShowWebBrowser 命令
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 在集成开发环境 (IDE) 中或 IDE 外部显示在 Web 浏览器窗口中指定的 URL。  
   
 ## <a name="syntax"></a>语法  
@@ -40,7 +34,7 @@ View.ShowWebBrowser URL [/new][/ext]
   
 ## <a name="arguments"></a>自变量  
  `URL`  
- 必须的。 网站的 URL（统一资源定位器）。  
+ 必需。 网站的 URL（统一资源定位器）。  
   
 ## <a name="switches"></a>开关  
  /new  
@@ -56,7 +50,7 @@ View.ShowWebBrowser URL [/new][/ext]
  以下示例显示在 IDE 外部的 Web 浏览器中的 MSDN Online 主页。 如果 Web 浏览器的实例已打开，则使用它；否则启动一个新实例。  
   
 ```  
->View.ShowWebBrowser http://msdn.microsoft.com /ext  
+>View.ShowWebBrowser https://msdn.microsoft.com /ext  
 ```  
   
 ## <a name="see-also"></a>请参阅  
@@ -64,6 +58,3 @@ View.ShowWebBrowser URL [/new][/ext]
  [“命令”窗口](../../ide/reference/command-window.md)   
  [“查找/命令”框](../../ide/find-command-box.md)   
  [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
-
-
-

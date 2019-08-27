@@ -1,14 +1,9 @@
 ---
 title: IDiaPropertyStorage::ReadMultiple |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 6ccc9397-ce41-4f72-b261-72ac252cd4a5
 caps.latest.revision: 13
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: c36dcd5fc0f6e02804c57d94c9ae1d5c05e3b19f
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 40cd84e00f2e6abea285368a6206c7400abf8877
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51796228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62538078"
 ---
 # <a name="idiapropertystoragereadmultiple"></a>IDiaPropertyStorage::ReadMultiple
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -51,13 +46,10 @@ HRESULT ReadMultiple( 
  [in、 out]一个数组`PROPVARIANT`结构 （Microsoft.VisualStudio.OLE.Interop 命名空间中） 若要使用的每个属性的值进行填充。 该数组必须至少是`cpspec`大小中的元素。 调用方不需要初始化数组中的值。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`。 返回`S_FALSE`如果未找到一个或多个属性。 否则将返回错误代码。  
+ 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果未找到一个或多个属性。 否则，返回错误代码。  
   
 ## <a name="remarks"></a>备注  
  如果未找到属性中的相应条目`rgvar`数组包含`VARIANT`类型为`VT_EMPTY`。  
   
 ## <a name="see-also"></a>请参阅  
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)
-
-
-

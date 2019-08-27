@@ -1,49 +1,44 @@
 ---
 title: 语言服务和编辑器扩展点 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - extension points
 ms.assetid: 91a6417e-a6fe-4bc2-9d9f-5173c634a99b
 caps.latest.revision: 34
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 0bcbef5094bd12392b7ea79865e1d28e2934a11e
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 5bf0e34c76406b054ea2d27434f749b676b0b30c
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51743586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63439801"
 ---
 # <a name="language-service-and-editor-extension-points"></a>语言服务和编辑器扩展点
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 该编辑器还提供可以扩展为 Managed Extensibility Framework (MEF) 组件部件，其中包括大多数语言服务功能的扩展点。 主要扩展点类别如下：  
   
--   内容类型  
+- 内容类型  
   
--   分类类型和分类格式  
+- 分类类型和分类格式  
   
--   边距和滚动条  
+- 边距和滚动条  
   
--   Tags  
+- Tags  
   
--   修饰  
+- 修饰  
   
--   鼠标处理器  
+- 鼠标处理器  
   
--   拖放处理程序  
+- 拖放处理程序  
   
--   选项  
+- 选项  
   
--   IntelliSense  
+- IntelliSense  
   
 ## <a name="extending-content-types"></a>扩展内容类型  
  内容类型是类型的文本编辑器，例如处理、"text"、"代码"或"CSharp"的定义。 通过声明类型的变量来定义新的内容类型<xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition>并提供一个唯一的名称的新内容类型。 若要使用编辑器注册内容类型，请将其导出以及以下属性：  
@@ -98,7 +93,7 @@ internal static ContentTypeDefinition TestContentTypeDefinition;
   
 - ENC  
   
-- 中文本  
+- FindResults  
   
 - F#  
   
@@ -120,7 +115,7 @@ internal IContentTypeRegistryService ContentTypeRegistryService { get; set; }
  若要将内容类型与文件扩展名相关联，请使用<xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition>。  
   
 > [!NOTE]
->  在 Visual Studio 中，文件扩展名注册使用<xref:Microsoft.VisualStudio.Shell.ProvideLanguageExtensionAttribute>的语言服务包。 <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition>将 MEF 内容类型与已在这种方式中注册的文件扩展名相关联。  
+> 在 Visual Studio 中，文件扩展名注册使用<xref:Microsoft.VisualStudio.Shell.ProvideLanguageExtensionAttribute>的语言服务包。 <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition>将 MEF 内容类型与已在这种方式中注册的文件扩展名相关联。  
   
  若要导出到内容类型定义的文件扩展名，必须包含以下属性：  
   
@@ -183,7 +178,7 @@ internal static ClassificationTypeDefinition CSharpTestDefinition;
   
 - "其他错误"  
   
-- "警告"  
+- "warning"  
   
   若要发现可用分类类型的列表，请导入<xref:Microsoft.VisualStudio.Text.Classification.IClassificationTypeRegistryService>，可以维护编辑器分类类型的集合。 下面的代码将此服务作为属性导入。  
   
@@ -283,7 +278,7 @@ internal class TestTaggerProvider : ITaggerProvider
 - <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>： 使用修饰与相关联。  
   
   > [!NOTE]
-  >  有关的示例<xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>，请参阅中的 HighlightWordTag 定义[演练： 突出显示文本](../extensibility/walkthrough-highlighting-text.md)。  
+  > 有关的示例<xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>，请参阅中的 HighlightWordTag 定义[演练：突出显示文本](../extensibility/walkthrough-highlighting-text.md)。  
   
 - <xref:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag>： 与可展开或折叠大纲显示中的区域相关联。  
   
@@ -329,7 +324,7 @@ internal class HighlightWordFormatDefinition : MarkerFormatDefinition
  若要将此格式定义应用于一个标记，引用类 （而不是显示名称） 的名称属性中设置的名称。  
   
 > [!NOTE]
->  有关的示例<xref:Microsoft.VisualStudio.Text.Classification.MarkerFormatDefinition>，请参阅中的 HighlightWordFormatDefinition 类[演练： 突出显示文本](../extensibility/walkthrough-highlighting-text.md)。  
+> 有关的示例<xref:Microsoft.VisualStudio.Text.Classification.MarkerFormatDefinition>，请参阅中的 HighlightWordFormatDefinition 类[演练：突出显示文本](../extensibility/walkthrough-highlighting-text.md)。  
   
 ## <a name="extending-adornments"></a>扩展修饰  
  修饰定义可添加到文本视图中显示的文本或文本视图自身中的视觉效果。 可以为任何类型的定义您自己修饰<xref:System.Windows.UIElement>。  
@@ -338,7 +333,7 @@ internal class HighlightWordFormatDefinition : MarkerFormatDefinition
   
 - <xref:Microsoft.VisualStudio.Utilities.NameAttribute>： 修饰的名称。  
   
-- <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>： 相对于其他修饰层修饰的顺序。 类<xref:Microsoft.VisualStudio.Text.Editor.PredefinedAdornmentLayers>定义默认的四个层： 选择、 大纲显示、 插入符号和文本。  
+- <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>： 相对于其他修饰层修饰的顺序。 类<xref:Microsoft.VisualStudio.Text.Editor.PredefinedAdornmentLayers>定义默认的四个层：选择、 大纲显示、 插入符号和文本。  
   
   下面的示例演示在修饰层定义导出特性。  
   
@@ -414,21 +409,21 @@ internal sealed class TestMouseProcessorProvider : IMouseProcessorProvider
   
 - <xref:Microsoft.VisualStudio.Text.Editor.DragDrop.DropFormatAttribute>： 此拖放处理程序的有效的文本格式。 按从最高到低的优先级顺序处理以下格式：  
   
-  1.  任何自定义格式  
+  1. 任何自定义格式  
   
-  2.  FileDrop  
+  2. FileDrop  
   
-  3.  EnhancedMetafile  
+  3. EnhancedMetafile  
   
-  4.  WaveAudio  
+  4. WaveAudio  
   
-  5.  Riff  
+  5. Riff  
   
-  6.  差异  
+  6. 差异  
   
-  7.  区域设置  
+  7. 区域设置  
   
-  8.  调色板  
+  8. 调色板  
   
   9. PenData  
   
@@ -512,39 +507,39 @@ internal sealed class TestOption : EditorOptionDefinition<bool>
 ### <a name="implementing-an-intellisense-source"></a>实现智能感知源  
  若要自定义源，必须实现一个 （或多个） 的以下源接口：  
   
--   <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource>  
+- <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource>  
   
--   <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSource>  
+- <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSource>  
   
--   <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSource>  
+- <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSource>  
   
--   <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>  
+- <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>  
   
 > [!IMPORTANT]
->  <xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSource> 已弃用的<xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>。  
+> <xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSource> 已弃用的<xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>。  
   
  此外，必须实现相同类型的提供的程序：  
   
--   <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider>  
+- <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider>  
   
--   <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSourceProvider>  
+- <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSourceProvider>  
   
--   <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSourceProvider>  
+- <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSourceProvider>  
   
--   <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider>  
+- <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider>  
   
 > [!IMPORTANT]
->  <xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSourceProvider> 已弃用的<xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider>。  
+> <xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSourceProvider> 已弃用的<xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider>。  
   
  必须导出提供程序和以下属性：  
   
--   <xref:Microsoft.VisualStudio.Utilities.NameAttribute>： 源的名称。  
+- <xref:Microsoft.VisualStudio.Utilities.NameAttribute>： 源的名称。  
   
--   <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>： 源适用的内容 （例如，"text"或"代码"） 类型。  
+- <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>： 源适用的内容 （例如，"text"或"代码"） 类型。  
   
--   <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>： 源应 （相对于其他源） 的显示的顺序。  
+- <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>： 源应 （相对于其他源） 的显示的顺序。  
   
--   下面的示例显示了完成源提供程序上的导出特性。  
+- 下面的示例显示了完成源提供程序上的导出特性。  
   
 ```  
 Export(typeof(ICompletionSourceProvider))]  
@@ -584,4 +579,3 @@ internal class TestIntellisenseControllerProvider : IIntellisenseControllerProvi
  有关使用 IntelliSense 控制器的详细信息，请参阅以下演练：  
   
  [演练：显示 QuickInfo 工具提示](../extensibility/walkthrough-displaying-quickinfo-tooltips.md)
-

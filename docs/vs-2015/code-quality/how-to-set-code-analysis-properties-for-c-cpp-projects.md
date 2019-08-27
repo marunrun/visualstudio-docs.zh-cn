@@ -1,14 +1,9 @@
 ---
-title: 如何： 设置 C + + 项目的代码分析属性 |Microsoft Docs
-ms.custom: ''
+title: 如何：设置的 C-代码分析属性C++项目 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.propertypages.native
 - VC.Project.VCCLCompilerTool.EnablePrefast
@@ -23,13 +18,13 @@ ms.assetid: 7af52097-6d44-4785-9b9f-43b7a7d447d7
 caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.openlocfilehash: 447bb9dfedc93594c6af014b830bfabc1b7ecf39
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 4ebed266924861dac4bfc9e316a56907dbd11534
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51752658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68201320"
 ---
 # <a name="how-to-set-code-analysis-properties-for-cc-projects"></a>如何：设置 C/C++ 项目的代码分析属性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,7 +38,7 @@ ms.locfileid: "51752658"
  **配置**列表和**平台**列表，可以将不同的代码分析设置应用于不同的项目配置和平台组合。 例如，可以直接将代码分析，以将一组规则应用到用于调试的项目生成并生成一组不同的版本。  
   
 ## <a name="enabling-code-analysis"></a>启用代码分析  
- 您可以决定是否通过选择启用你的项目的代码分析**启用代码分析的 C/c + + 生成**。 结合**配置**列表中，您可以例如，决定禁用调试版本并启用为发布版本的代码分析。  
+ 您可以决定是否通过选择启用你的项目的代码分析**启用代码分析的 C /C++上生成**。 结合**配置**列表中，您可以例如，决定禁用调试版本并启用为发布版本的代码分析。  
   
  如果你的项目包含托管的代码，您可以决定是否启用或禁用通过选择代码分析**生成时启用代码分析**。  
   
@@ -60,6 +55,3 @@ ms.locfileid: "51752658"
 ## <a name="see-also"></a>请参阅  
  [分析托管代码质量](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)   
  [C/C++ 代码分析警告](../code-quality/code-analysis-for-c-cpp-warnings.md)
-
-
-

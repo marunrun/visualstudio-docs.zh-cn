@@ -1,8 +1,7 @@
 ---
-title: 'Iactivescript:: Interruptscriptthread |Microsoft Docs'
+title: IActiveScript::InterruptScriptThread | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d20847245e25ec6227bb043df3190a6db5f095d5
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: aa46bc95087b3defaf739cc3473c58e29a93071c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54088928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62935503"
 ---
 # <a name="iactivescriptinterruptscriptthread"></a>IActiveScript::InterruptScriptThread
 中断正在运行的脚本线程 （事件接收器，立即执行或宏调用） 的执行。 此方法可用于终止卡 （例如，在无限循环） 的脚本。 它可以从非基础线程调用不会导致到主机对象或一个非基本标注[IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)方法。  
@@ -54,7 +53,7 @@ HRESULT InterruptScriptThread(
  `dwFlags`  
  [in]与中断相关联的选项标志。 可以是下列值之一：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |SCRIPTINTERRUPT_DEBUG|如果支持，请输入当前脚本执行点处的脚本引擎调试器。|  
 |SCRIPTINTERRUPT_RAISEEXCEPTION|如果脚本引擎的语言支持，让脚本能够处理该异常。 否则为脚本方法中止和错误代码返回给调用方;也就是说，事件源或宏调用程序。|  

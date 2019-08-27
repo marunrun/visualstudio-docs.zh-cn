@@ -1,14 +1,9 @@
 ---
 title: 对旧版语言服务中的代码片段的支持 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - snippets, supporting in language services
 - code snippets, supporting in language services [managed package framework]
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 7490325b-acee-4c2d-ac56-1cd5db1a1083
 caps.latest.revision: 29
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: bf26d48c541806a1dd65a0ffb4a8e3e974b11db4
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 33218dd8fe7cee4a6700dcb289719ffae932bbe0
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51795760"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65691787"
 ---
 # <a name="support-for-code-snippets-in-a-legacy-language-service"></a>旧版语言服务中的代码片段支持
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -31,10 +26,10 @@ ms.locfileid: "51795760"
   
  允许的代码段以通过使用 TAB 键导航字段的特殊的编辑模式中插入代码段。 字段可以支持 IntelliSense 样式下拉列表菜单。 用户通过键入 ENTER 或 ESC 键提交到源代码文件的代码段。 若要了解有关代码段的详细信息，请参阅[代码片段](../../ide/code-snippets.md)。  
   
- 旧版语言服务实现 VSPackage 的一部分，但实现语言服务功能的较新方法是使用 MEF 扩展。 若要获取详细信息，请参阅[演练： 实现代码片段](../../extensibility/walkthrough-implementing-code-snippets.md)。  
+ 旧版语言服务实现 VSPackage 的一部分，但实现语言服务功能的较新方法是使用 MEF 扩展。 若要获取详细信息，请参阅[演练：实现代码片段](../../extensibility/walkthrough-implementing-code-snippets.md)。  
   
 > [!NOTE]
->  我们建议在开始尽可能快地使用新编辑器 API。 这将提高您的语言服务的性能，让您充分利用新的编辑器功能。  
+> 我们建议在开始尽可能快地使用新编辑器 API。 这将提高您的语言服务的性能，让您充分利用新的编辑器功能。  
   
 ## <a name="managed-package-framework-support-for-code-snippets"></a>托管包框架支持的代码段  
  托管的包框架 (MPF) 支持大多数代码段功能，从读取到插入代码段模板并启用特殊的编辑模式。 通过管理支持<xref:Microsoft.VisualStudio.Package.ExpansionProvider>类。  
@@ -46,16 +41,16 @@ ms.locfileid: "51795760"
 ## <a name="providing-support-for-code-snippets"></a>提供代码片段的支持  
  若要启用的代码片段支持，必须提供或安装代码片段，必须提供用户插入这些代码段的方式。 有三个步骤启用对代码片段的支持：  
   
-1.  安装的代码段文件。  
+1. 安装的代码段文件。  
   
-2.  启用语言服务的代码段。  
+2. 启用语言服务的代码段。  
   
-3.  调用<xref:Microsoft.VisualStudio.Package.ExpansionProvider>对象。  
+3. 调用<xref:Microsoft.VisualStudio.Package.ExpansionProvider>对象。  
   
 ### <a name="installing-the-snippet-files"></a>安装代码片段文件  
  一个有通常代码片段模板每个文件的一种语言的所有代码段将存储为 XML 文件中的模板。 有关使用代码片段模板的 XML 架构的详细信息，请参阅[代码片段架构参考](../../ide/code-snippets-schema-reference.md)。 每个代码片段模板标识与语言 id。 此语言 ID 在注册表中指定和放入`Language`属性的\<代码 > 模板中的标记。  
   
- 通常有两个代码段模板文件的存储位置的位置： 1） 你的语言已安装了和 2） 在用户的文件夹。 这些位置将添加到注册表因此，Visual Studio**代码片段管理器**可以找到的代码段。 用户的文件夹是由用户创建的代码段的存储位置。  
+ 通常有两个代码段模板文件的存储位置的位置：1） 你的语言已安装和 2） 中用户的文件夹。 这些位置将添加到注册表因此，Visual Studio**代码片段管理器**可以找到的代码段。 用户的文件夹是由用户创建的代码段的存储位置。  
   
  已安装的代码段模板文件的典型的文件夹布局如下所示： *[InstallRoot]*\\ *[TestLanguage]* \Snippets\\*LCID*\Snippets。  
   
@@ -93,10 +88,10 @@ ms.locfileid: "51795760"
 |元素|描述|  
 |-------------|-----------------|  
 |%LCID%|区域设置 id。|  
-|%Installroot%|Visual Studio 中，例如，C:\Program Files\Microsoft Visual Studio 8 中的根安装文件夹。|  
-|%Projdir%|包含当前项目的文件夹。|  
-|%Projitem%|包含当前项目项的文件夹。|  
-|%Testdocs%|文件夹中的用户的设置文件夹，例如，C:\Documents and Settings\\ *[username]* documents\visual Studio\8。|  
+|%InstallRoot%|Visual Studio 中，例如，C:\Program Files\Microsoft Visual Studio 8 中的根安装文件夹。|  
+|%ProjDir%|包含当前项目的文件夹。|  
+|%ProjItem%|包含当前项目项的文件夹。|  
+|%TestDocs%|文件夹中的用户的设置文件夹，例如，C:\Documents and Settings\\ *[username]* documents\visual Studio\8。|  
   
 ### <a name="enabling-code-snippets-for-your-language-service"></a>启用语言服务的代码片段  
  通过添加启用语言服务的代码片段<xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute>属性为你的 VSPackage (请参阅[注册旧版语言服务](../../extensibility/internals/registering-a-legacy-language-service1.md)有关详细信息)。 <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute.ShowRoots%2A>并<xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute.SearchPaths%2A>参数是可选的但应包括`SearchPaths`命名参数来告知**代码片段管理器**您的代码段的位置。  
@@ -122,9 +117,9 @@ ms.locfileid: "51795760"
 ### <a name="inserting-a-code-snippet-by-using-a-menu-command"></a>通过使用菜单命令插入代码片段  
  若要使用菜单命令显示代码段浏览器，添加一个菜单命令，然后调用<xref:Microsoft.VisualStudio.Package.ExpansionProvider.DisplayExpansionBrowser%2A>中的方法<xref:Microsoft.VisualStudio.Package.ExpansionProvider>响应该菜单命令的接口。  
   
-1.  将命令和一个按钮添加到.vsct 文件。 您可以找到在操作的说明[演练： 创建菜单命令通过使用 Visual Studio 包模板](http://msdn.microsoft.com/library/1985fa7d-aad4-4866-b356-a125b6a246de)。  
+1. 将命令和一个按钮添加到.vsct 文件。 您可以找到在操作的说明[演练：使用 Visual Studio 包模板创建菜单命令](https://msdn.microsoft.com/library/1985fa7d-aad4-4866-b356-a125b6a246de)。  
   
-2.  从派生类<xref:Microsoft.VisualStudio.Package.ViewFilter>类并重写<xref:Microsoft.VisualStudio.Package.ViewFilter.QueryCommandStatus%2A>方法，以指示对新的菜单命令的支持。 此示例将始终启用菜单命令。  
+2. 从派生类<xref:Microsoft.VisualStudio.Package.ViewFilter>类并重写<xref:Microsoft.VisualStudio.Package.ViewFilter.QueryCommandStatus%2A>方法，以指示对新的菜单命令的支持。 此示例将始终启用菜单命令。  
   
     ```csharp  
     using Microsoft.VisualStudio.Package;  
@@ -160,7 +155,7 @@ ms.locfileid: "51795760"
     }  
     ```  
   
-3.  重写<xref:Microsoft.VisualStudio.Package.ViewFilter.HandlePreExec%2A>中的方法<xref:Microsoft.VisualStudio.Package.ViewFilter>类来获取<xref:Microsoft.VisualStudio.Package.ExpansionProvider>对象，并调用<xref:Microsoft.VisualStudio.Package.ExpansionProvider.DisplayExpansionBrowser%2A>对该对象的方法。  
+3. 重写<xref:Microsoft.VisualStudio.Package.ViewFilter.HandlePreExec%2A>中的方法<xref:Microsoft.VisualStudio.Package.ViewFilter>类来获取<xref:Microsoft.VisualStudio.Package.ExpansionProvider>对象，并调用<xref:Microsoft.VisualStudio.Package.ExpansionProvider.DisplayExpansionBrowser%2A>对该对象的方法。  
   
     ```csharp  
     using Microsoft.VisualStudio.Package;  
@@ -212,22 +207,22 @@ ms.locfileid: "51795760"
   
      中的以下方法<xref:Microsoft.VisualStudio.Package.ExpansionProvider>类是由 Visual Studio 的顺序调用给定插入代码段的过程：  
   
-4.  <xref:Microsoft.VisualStudio.Package.ExpansionProvider.OnItemChosen%2A>  
+4. <xref:Microsoft.VisualStudio.Package.ExpansionProvider.OnItemChosen%2A>  
   
-5.  <xref:Microsoft.VisualStudio.Package.ExpansionProvider.IsValidKind%2A>  
+5. <xref:Microsoft.VisualStudio.Package.ExpansionProvider.IsValidKind%2A>  
   
-6.  <xref:Microsoft.VisualStudio.Package.ExpansionProvider.OnBeforeInsertion%2A>  
+6. <xref:Microsoft.VisualStudio.Package.ExpansionProvider.OnBeforeInsertion%2A>  
   
-7.  <xref:Microsoft.VisualStudio.Package.ExpansionProvider.FormatSpan%2A>  
+7. <xref:Microsoft.VisualStudio.Package.ExpansionProvider.FormatSpan%2A>  
   
-8.  <xref:Microsoft.VisualStudio.Package.ExpansionProvider.OnAfterInsertion%2A>  
+8. <xref:Microsoft.VisualStudio.Package.ExpansionProvider.OnAfterInsertion%2A>  
   
      之后<xref:Microsoft.VisualStudio.Package.ExpansionProvider.OnAfterInsertion%2A>方法调用时，插入代码段和<xref:Microsoft.VisualStudio.Package.ExpansionProvider>对象是在特殊的编辑模式下用于修改刚插入的代码段。  
   
 ### <a name="inserting-a-code-snippet-by-using-a-shortcut"></a>使用快捷方式插入代码片段  
  实现从完成列表的快捷方式是变得更为复杂而不是实现菜单命令。 您首先必须将代码片段快捷方式添加到 IntelliSense 文字自动完成列表。 然后必须检测由于完成而插入代码段快捷方式名称后。 最后，必须获取的代码片段标题和路径使用的快捷名称，并传递到该信息<xref:Microsoft.VisualStudio.Package.ExpansionProvider.InsertNamedExpansion%2A>方法<xref:Microsoft.VisualStudio.Package.ExpansionProvider>方法。  
   
- 若要将代码片段快捷方式添加到文字自动完成列表中，将其添加到<xref:Microsoft.VisualStudio.Package.Declarations>对象中你<xref:Microsoft.VisualStudio.Package.AuthoringScope>类。 必须确保能够识别为一个代码段名称的快捷方式。 有关示例，请参阅[演练： 获取列表的安装代码片段 （旧版实现）](../../extensibility/internals/walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md)。  
+ 若要将代码片段快捷方式添加到文字自动完成列表中，将其添加到<xref:Microsoft.VisualStudio.Package.Declarations>对象中你<xref:Microsoft.VisualStudio.Package.AuthoringScope>类。 必须确保能够识别为一个代码段名称的快捷方式。 有关示例，请参阅[演练：获取一系列安装代码片段 （旧版实现）](../../extensibility/internals/walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md)。  
   
  你可以检测到插入代码片段快捷方式<xref:Microsoft.VisualStudio.Package.Declarations.OnAutoComplete%2A>方法的<xref:Microsoft.VisualStudio.Package.Declarations>类。 因为代码段名称已插入到源文件中，必须插入扩展时删除。 <xref:Microsoft.VisualStudio.Package.ExpansionProvider.InsertNamedExpansion%2A>方法采用描述的代码段插入点的跨度; 如果范围在源文件中包含整个代码段名称，该名称替换为代码段。  
   
@@ -343,7 +338,7 @@ namespace TestLanguagePackage
   
 4. <xref:Microsoft.VisualStudio.Package.ExpansionProvider.OnAfterInsertion%2A>  
   
-   获取语言服务的安装的代码片段的列表的详细信息，请参阅[演练： 获取列表的安装代码片段 （旧版实现）](../../extensibility/internals/walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md)。  
+   获取语言服务的安装的代码片段的列表的详细信息，请参阅[演练：获取一系列安装代码片段 （旧版实现）](../../extensibility/internals/walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md)。  
   
 ## <a name="implementing-the-expansionfunction-class"></a>实现 ExpansionFunction 类  
  扩展函数是命名的函数的嵌入代码片段模板，并返回一个或多个要放置在一个字段的值。 为了支持扩展函数语言服务中，你必须从派生类<xref:Microsoft.VisualStudio.Package.ExpansionFunction>类，实现<xref:Microsoft.VisualStudio.Package.ExpansionFunction.GetCurrentValue%2A>方法。 然后必须重写<xref:Microsoft.VisualStudio.Package.LanguageService.CreateExpansionFunction%2A>中的方法<xref:Microsoft.VisualStudio.Package.LanguageService>类以返回你的版本的新实例化<xref:Microsoft.VisualStudio.Package.ExpansionFunction>支持每个扩展函数的类。 如果您支持的可能值的扩展函数的列表，还必须重写<xref:Microsoft.VisualStudio.Package.ExpansionFunction.GetIntellisenseList%2A>中的方法<xref:Microsoft.VisualStudio.Package.ExpansionFunction>类以返回这些值的列表。  
@@ -400,5 +395,4 @@ namespace TestLanguagePackage
  [旧版语言服务功能](../../extensibility/internals/legacy-language-service-features1.md)   
  [注册旧版语言服务](../../extensibility/internals/registering-a-legacy-language-service1.md)   
  [代码片段](../../ide/code-snippets.md)   
- [演练：获取安装代码片段（旧版实现）的列表](../../extensibility/internals/walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md)
-
+ [演练：获取包含已安装的代码片段的列表（旧版实现）](../../extensibility/internals/walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md)

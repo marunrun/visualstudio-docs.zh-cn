@@ -1,14 +1,9 @@
 ---
-title: 如何： 创建本地化的引导程序包 |Microsoft Docs
-ms.custom: ''
+title: 如何：创建本地化的引导程序包 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 helpviewer_keywords:
 - localized bootstrapper packages
 - dependencies, creating localized bootstrapper packages
@@ -17,13 +12,13 @@ ms.assetid: 66a1bc7e-6540-4164-963d-557196a69d8a
 caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: 1408189539cf5d2be9cc9c0eb0f758a211efcfca
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 5ec3cd1365826c1a06b2d0f7bd6da377c8dc4d46
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49304754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63440655"
 ---
 # <a name="how-to-create-a-localized-bootstrapper-package"></a>如何：创建本地化的引导程序包
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,20 +27,20 @@ ms.locfileid: "49304754"
   
  默认情况下，Visual Studio 2010 只包括 .NET Framework 4、.NET Framework 4 Client Profile、F# Runtime 2.0 和 F# Runtime 4.0 的本地化引导程序包。 你可以通过完成三步操作来为其他引导程序创建本地化包。  
   
-1.  创建 \Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages 中的区域设置名称命名的文件夹\\*BootstrapperPackageName*。  
+1. 创建 \Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages 中的区域设置名称命名的文件夹\\*BootstrapperPackageName*。  
   
-2.  创建包含引导程序包的软件许可条款的文件并将其放入新的文件夹中。  
+2. 创建包含引导程序包的软件许可条款的文件并将其放入新的文件夹中。  
   
-3.  创建名为 package.xml 的包清单，更新字符串和区域性，并将该文件放入新的文件夹中。 如果你已经用目标语言创建 Visual Studio 的引导程序，则可以复制 Visual Studio package.xml 文件并在此步骤中修改它。  
+3. 创建名为 package.xml 的包清单，更新字符串和区域性，并将该文件放入新的文件夹中。 如果你已经用目标语言创建 Visual Studio 的引导程序，则可以复制 Visual Studio package.xml 文件并在此步骤中修改它。  
   
 > [!NOTE]
->  如果将安装项目来部署应用程序，可以通过更改本地化应用程序**本地化**属性。  
+> 如果使用安装项目来部署应用程序，则可以通过更改“本地化”属性来本地化应用程序  。  
   
  [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-a-localized-bootstrapper-package"></a>创建本地化的引导程序包  
   
-1.  创建以区域设置名称命名的文件夹。  
+1. 创建以区域设置名称命名的文件夹。  
   
      在 32 位计算机上创建该文件夹中 \Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages\\*BootstrapperPackageName*\ 文件夹。  
   
@@ -55,8 +50,8 @@ ms.locfileid: "49304754"
   
     |区域设置|文件夹名称|  
     |------------|-----------------|  
-    |中文(简体)|zh-Hans|  
-    |中文(繁体)|zh-Hant|  
+    |中文（简体）|zh-Hans|  
+    |和 SharePoint 2010 显示的“中文(繁体)”|zh-Hant|  
     |捷克语|cs|  
     |德语|de|  
     |英语|en|  
@@ -70,38 +65,35 @@ ms.locfileid: "49304754"
     |俄语|ru|  
     |土耳其语|tr|  
   
-2.  创建包含引导程序包的软件许可条款的文件并将其放入新的文件夹中。  
+2. 创建包含引导程序包的软件许可条款的文件并将其放入新的文件夹中。  
   
-3.  创建名为 package.xml 的包清单并将其放入新的文件夹中。 有关详细信息，请参阅[如何： 创建程序包清单](../deployment/how-to-create-a-package-manifest.md)。  
+3. 创建名为 package.xml 的包清单并将其放入新的文件夹中。 有关详细信息，请参阅[如何：创建程序包清单](../deployment/how-to-create-a-package-manifest.md)。  
   
-4.  更新包清单的 `<Strings>` 部分，使字符串以正确的区域设置语言表示。  
+4. 更新包清单的 `<Strings>` 部分，使字符串以正确的区域设置语言表示。  
   
-5.  更改 `<String Name="Culture">` 值以匹配文件夹名称。  
+5. 更改 `<String Name="Culture">` 值以匹配文件夹名称。  
   
-6.  保存 package.xml 文件。  
+6. 保存 package.xml 文件。  
   
 ### <a name="to-create-a-bootstrapper-package-for-net-framework-35-service-pack-1-localized-in-french"></a>为用法语本地化的 .NET Framework 3.5 Service Pack 1 创建引导程序包  
   
-1.  创建名为 fr 的文件夹。 该文件夹名称必须与区域设置名称匹配。  
+1. 创建名为 fr 的文件夹。 该文件夹名称必须与区域设置名称匹配。  
   
      在 32 位计算机上，在 \Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages\DotNetFX35SP1\ 文件夹中创建文件夹。  
   
      在 64 位计算机上，在 \Program Files (86)\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages\DotNetFX35SP1\ 文件夹中创建文件夹。  
   
-2.  将软件许可条款的本地化版本放入 fr 文件夹。  
+2. 将软件许可条款的本地化版本放入 fr 文件夹。  
   
-3.  将 \Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages\DotNetFX35SP1\en\package.xml 文件复制到 fr 文件夹，并在 XML 设计器中打开该文件。  
+3. 将 \Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages\DotNetFX35SP1\en\package.xml 文件复制到 fr 文件夹，并在 XML 设计器中打开该文件。  
   
-4.  更新包清单的 `<Strings>` 部分，以便用法语表示错误字符串。  
+4. 更新包清单的 `<Strings>` 部分，以便用法语表示错误字符串。  
   
-5.  将 `<String Name="Culture">` 值更改为 fr。  
+5. 将 `<String Name="Culture">` 值更改为 fr。  
   
-6.  保存 package.xml 文件。  
+6. 保存 package.xml 文件。  
   
 ## <a name="see-also"></a>请参阅  
  [创建引导程序包](../deployment/creating-bootstrapper-packages.md)   
  [应用程序部署必备](../deployment/application-deployment-prerequisites.md)   
- [如何：创建程序包清单](../deployment/how-to-create-a-package-manifest.md)
-
-
-
+ [如何：创建包清单](../deployment/how-to-create-a-package-manifest.md)

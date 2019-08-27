@@ -1,12 +1,9 @@
 ---
 title: UML 活动图上元素的属性 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: reference
 f1_keywords:
 - vs.teamarch.activitydiagram.shapes.properties
 helpviewer_keywords:
@@ -16,13 +13,13 @@ ms.assetid: 9849d45e-65d5-46bd-a319-757e90b7c748
 caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 5a3233d073a4b54c7c52b4b725f0d15833f5a51f
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: a442d3a116fa527271cad5acd2ffc7f7fec5d076
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51803053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63444438"
 ---
 # <a name="properties-of-elements-on-uml-activity-diagrams"></a>UML 活动图上元素的属性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,27 +27,27 @@ ms.locfileid: "51803053"
 UML 活动图上的每个元素都有属性。 若要查看某个元素的属性，请右键单击元素关系图上或在**UML 模型资源管理器**，然后单击**属性**。 属性将显示在**属性**窗口。  
   
 > [!NOTE]
->  本主题主要讲述 UML 活动图上元素的属性。 有关如何读取 UML 活动图的信息，请参阅[UML 活动图： 参考](../modeling/uml-activity-diagrams-reference.md)。 有关如何绘制 UML 活动图的详细信息，请参阅[UML 活动图： 准则](../modeling/uml-activity-diagrams-guidelines.md)。  
+> 本主题主要讲述 UML 活动图上元素的属性。 有关如何读取 UML 活动图的信息，请参阅[UML 活动图：参考](../modeling/uml-activity-diagrams-reference.md)。 有关如何绘制 UML 活动图的详细信息，请参阅[UML 活动图：指导原则](../modeling/uml-activity-diagrams-guidelines.md)。  
   
 ## <a name="properties-of-elements"></a>元素的属性  
   
 |         属性         |        默认         |                               元素                               |                                                                                                                                                                描述                                                                                                                                                                 |
 |--------------------------|------------------------|---------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |         **名称**         |     默认名称     |                                 全部                                 |                                                                                                                                                          标识元素。                                                                                                                                                           |
-|    **限定的名称**    |    Package :: Name     |                                 全部                                 |                                                                                                                     唯一标识元素。 以包含它的包的限定名为前缀。                                                                                                                     |
+|    **限定的名称**    |    包::名称     |                                 全部                                 |                                                                                                                     唯一标识元素。 以包含它的包的限定名为前缀。                                                                                                                     |
 |      **工作项**      |      0 associated      |                                 全部                                 |                                                                                与此元素关联的工作项的数目。 若要将工作项相关联，请参阅[链接模型元素和工作项](../modeling/link-model-elements-and-work-items.md)。                                                                                |
 |     **说明**      |         (无)         |                                 全部                                 |                                                                                                                                             可在此处记下有关元素的常规说明。                                                                                                                                             |
-|        **颜色**         | （该类型的默认值） |                                 全部                                 |                                                                                                                                                          形状的颜色。                                                                                                                                                           |
+|        **Color**         | （该类型的默认值） |                                 全部                                 |                                                                                                                                                          形状的颜色。                                                                                                                                                           |
 |         **正文**         |         (无)         |                               操作                                |                                                                                                                                                      指定详细操作。                                                                                                                                                       |
 |       **语言**       |         (无)         |                               操作                                |                                                                                                                                                  正文中的表达式的语言。                                                                                                                                                   |
 | **本地后置条件** |         (无)         |         操作，发送，接受，调用行为，调用操作         |                                                                                                                          执行结束时必须满足的约束。 操作实现的目标。                                                                                                                          |
 | **本地前置条件**  |         (无)         |         操作，发送，接受，调用行为，调用操作         |                                                                                                                                        执行开始之前必须满足的约束。                                                                                                                                         |
 |    **是同步**    |          True          |                    调用行为，调用操作                    |                                                                                                                                        -如果为 true，操作将一直等待直到活动终止。                                                                                                                                        |
 |       **行为**       |         (无)         |                            调用行为                            |                                                                                                                                                         的调用活动。                                                                                                                                                          |
-|      **操作**       |         (无)         |                           调用操作                            |                                                                                                                                                         的调用操作。                                                                                                                                                         |
+|      **Operation**       |         (无)         |                           调用操作                            |                                                                                                                                                         的调用操作。                                                                                                                                                         |
 |    **已打乱顺序**     |         False          |                            接受事件                             |                                                                                                       -如果为 true，可以有多个类型化的输出插针，并且数据被取消封送到它们。 如果为 False，则所有数据都显示在一个插针上。                                                                                                        |
 |     **上限**      |        **\\**\*        |                   对象节点，活动参数                   |                                                                                                      **0**指示数据必须直接沿流传递。<br /><br /> **\\**\* 指示数据可以存储在流中。                                                                                                      |
-|      **所选内容**       |         (无)         | 对象节点，活动参数，输入插针，输出插针，对象流 |                                                                                                                          调用筛选数据的进程。 此进程可以在另一个关系图中定义。                                                                                                                          |
+|      **选择**       |         (无)         | 对象节点，活动参数，输入插针，输出插针，对象流 |                                                                                                                          调用筛选数据的进程。 此进程可以在另一个关系图中定义。                                                                                                                          |
 |       **订购**       |         (无)         |       对象节点，活动参数，输入插针，输出插针        |                                                                                                                                                    -如何将多个令牌存储。                                                                                                                                                     |
 |      **是控件**      |         False          |                        输入插针，输出插针                        |                                                                                                                            -如果为 true，则此插针上的流是控制流。 如果为 False，则为对象流。                                                                                                                            |
 |         **Type**         |         (无)         |       输入插针，输出插针，对象节点，活动参数        |                              的传输的对象类型。<br />-类型可以是整数，如基元类型或模型中的其他位置定义的分类器。 如果输入未定义类型的名称，它将出现在**未指定的类型**UML 模型资源管理器的部分。                               |
@@ -61,8 +58,5 @@ UML 活动图上的每个元素都有属性。 若要查看某个元素的属性
 | **是单个执行**  |         False          |                          活动图                           |                                                                                                                                   -如果设置，则最多只能执行一次此关系图。                                                                                                                                    |
   
 ## <a name="see-also"></a>请参阅  
- [UML 活动图： 参考](../modeling/uml-activity-diagrams-reference.md)   
- [UML 活动图：准则](../modeling/uml-activity-diagrams-guidelines.md)
-
-
-
+ [UML 活动关系图：引用](../modeling/uml-activity-diagrams-reference.md)   
+ [UML 活动关系图：指南](../modeling/uml-activity-diagrams-guidelines.md)

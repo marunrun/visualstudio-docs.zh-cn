@@ -1,11 +1,8 @@
 ---
 title: 调试单步执行选项 （旧版） |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 helpviewer_keywords:
 - branch stepping
@@ -17,13 +14,13 @@ ms.assetid: 3e9e3041-68c7-4f16-9bd6-da5e5144744b
 caps.latest.revision: 5
 author: gewarren
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: b7dfaa4fb659418c26d5aa0144fac4188ef4b16b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: b1f0761ba750146ce7f8cc52e6992dae689f7779
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49899378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62976959"
 ---
 # <a name="debug-stepping-options-legacy"></a>调试单步执行选项（旧版）
 本主题介绍如何调试具有旧 [!INCLUDE[wf](../includes/wf-md.md)] 中的并发活动的 [!INCLUDE[wfd1](../includes/wfd1-md.md)] 应用程序。 在需要面向 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 或 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 时，请使用旧 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]。  
@@ -40,4 +37,4 @@ ms.locfileid: "49899378"
   
 ## <a name="see-also"></a>请参阅  
  [调试旧版工作流](../workflow-designer/debugging-legacy-workflows.md)   
- [如何：更改调试单步执行选项（旧版）](../workflow-designer/how-to-change-the-debug-stepping-option-legacy.md)
+ [如何：更改调试步进选项（旧版）](../workflow-designer/how-to-change-the-debug-stepping-option-legacy.md)

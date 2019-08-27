@@ -1,7 +1,6 @@
 ---
 title: 如何：直观显示集合关联（类设计器）
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.collectionassociationline
@@ -13,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 54e39838-2fc9-4dc2-85b6-7e88a743108e
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: acf1fd75770888f492833235f09a381d0836be34
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 09c23b59711a95f0729555acfd0203160bd9995d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53925389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62975068"
 ---
 # <a name="how-to-visualize-a-collection-association-in-class-designer"></a>如何：直观显示类设计器中的集合关联
 
@@ -29,11 +28,11 @@ ms.locfileid: "53925389"
 
 ## <a name="to-create-a-collection-association"></a>创建集合联合
 
-1.  在代码中，创建一个属性或字段，其本身属于强类型集合。
+1. 在代码中，创建一个属性或字段，其本身属于强类型集合。
 
-2.  在类图中扩展类，以便显示属性和字段。
+2. 在类图中扩展类，以便显示属性和字段。
 
-3.  在类中，右键单击该字段或属性，然后选择“显示为集合关联”。
+3. 在类中，右键单击该字段或属性，然后选择“显示为集合关联”。
 
 此属性或字段将显示为链接到已收集类型的关联行。
 

@@ -1,5 +1,5 @@
 ---
-title: 如何：使用域特定语言修改标准的菜单命令
+title: 修改在 DSL 中的标准菜单命令
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,16 +7,15 @@ helpviewer_keywords:
 - Domain-Specific Language, adding custom commands
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: bc7eedfbdf725333a5cd6d3cdd3d683437d1979c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 466df3030793603319cf73085910a164fd222e29
+ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53870185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67890599"
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>如何：使用域特定语言修改标准的菜单命令
 
@@ -29,15 +28,15 @@ ms.locfileid: "53870185"
 
 ### <a name="to-discover-what-commands-you-can-modify"></a>发现可以修改的命令
 
-1.  在中`DslPackage`项目中，打开`GeneratedCode\CommandSet.cs`。 此 C# 文件可在解决方案资源管理器作为的子公司`CommandSet.tt`。
+1. 在中`DslPackage`项目中，打开`GeneratedCode\CommandSet.cs`。 此 C# 文件可在解决方案资源管理器作为的子公司`CommandSet.tt`。
 
-2.  在此文件的名称结尾找到类"`CommandSet`"，例如`Language1CommandSet`和`Language1ClipboardCommandSet`。
+2. 在此文件的名称结尾找到类"`CommandSet`"，例如`Language1CommandSet`和`Language1ClipboardCommandSet`。
 
-3.  在每个命令集类中，键入“`override`”，后跟一个空格。 IntelliSense 将显示可重写方法的列表。 每个命令具有一对其名称以“`ProcessOnStatus`”和“`ProcessOnMenu`”开头的方法。
+3. 在每个命令集类中，键入“`override`”，后跟一个空格。 IntelliSense 将显示可重写方法的列表。 每个命令具有一对其名称以“`ProcessOnStatus`”和“`ProcessOnMenu`”开头的方法。
 
-4.  记录哪些命令集类包含你想要修改的命令。
+4. 记录哪些命令集类包含你想要修改的命令。
 
-5.  关闭该文件，无需保存编辑。
+5. 关闭该文件，无需保存编辑。
 
     > [!NOTE]
     > 通常，不应编辑已生成的文件。 任何编辑都将在下次生成文件时丢失。
@@ -48,15 +47,15 @@ ms.locfileid: "53870185"
 
 ### <a name="to-extend-the-command-set-class"></a>扩展命令集类
 
-1.  在“解决方案资源管理器”中，在 DslPackage 项目中打开 GeneratedCode 文件夹，然后在 CommandSet.tt 下进行查找并打开其生成的文件 CommandSet.cs。 注意在此处定义的第一个类的命名空间和名称。 例如，你可能看到：
+1. 在“解决方案资源管理器”中，在 DslPackage 项目中打开 GeneratedCode 文件夹，然后在 CommandSet.tt 下进行查找并打开其生成的文件 CommandSet.cs。 注意在此处定义的第一个类的命名空间和名称。 例如，你可能看到：
 
      `namespace Company.Language1`
 
      `{ ...  internal partial class Language1CommandSet : ...`
 
-2.  在中**DslPackage**，创建名为的文件夹**自定义代码**。 在此文件夹中创建名为的新类文件`CommandSet.cs`。
+2. 在中**DslPackage**，创建名为的文件夹**自定义代码**。 在此文件夹中创建名为的新类文件`CommandSet.cs`。
 
-3.  在该新文件中，编写具有与生成的分部类相同的命名空间和名称的分部声明。 例如：
+3. 在该新文件中，编写具有与生成的分部类相同的命名空间和名称的分部声明。 例如:
 
     ```csharp
     using System;
@@ -66,7 +65,8 @@ ms.locfileid: "53870185"
     { internal partial class Language1CommandSet { ...
     ```
 
-     **请注意**如果类文件模板用于创建新文件，则必须更正的命名空间和类名。
+    > [!NOTE]
+    > 如果使用的类文件模板创建新文件，必须更正的命名空间和类名。
 
 ## <a name="override-the-command-methods"></a>重写命令方法
 
@@ -129,17 +129,17 @@ protected override void ProcessOnMenuDeleteCommand()
 
 以下片段通常在这些方法内十分有用：
 
--   `this.CurrentSelection`。 用户右键单击的形状始终包含在此形状和连接符列表中。 如果用户单击关系图的空白部分，则“关系图”是该列表中的唯一成员。
+- `this.CurrentSelection`。 用户右键单击的形状始终包含在此形状和连接符列表中。 如果用户单击关系图的空白部分，则“关系图”是该列表中的唯一成员。
 
--   `this.IsDiagramSelected()` - `true` 如果用户单击关系图的空白部分。
+- `this.IsDiagramSelected()` - `true` 如果用户单击关系图的空白部分。
 
--   `this.IsCurrentDiagramEmpty()`
+- `this.IsCurrentDiagramEmpty()`
 
--   `this.IsSingleSelection()` - 用户未选择多个形状
+- `this.IsSingleSelection()` - 用户未选择多个形状
 
--   `this.SingleSelection` - 用户右键单击的形状或关系图
+- `this.SingleSelection` - 用户右键单击的形状或关系图
 
--   `shape.ModelElement as MyLanguageElement` - 由形状表示的模型元素。
+- `shape.ModelElement as MyLanguageElement` - 由形状表示的模型元素。
 
 有关如何在元素之间导航以及如何创建对象和链接的详细信息，请参阅[导航和更新程序代码中的模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
 
@@ -147,7 +147,7 @@ protected override void ProcessOnMenuDeleteCommand()
 
 - <xref:System.ComponentModel.Design.MenuCommand>
 - [编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)
-- [如何：将命令添加到快捷菜单](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)
+- [如何：向快捷菜单添加命令](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)
 - [VSPackage 如何添加用户界面元素](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Visual Studio 命令表格 (.Vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
 - [VSCT XML 架构参考](../extensibility/vsct-xml-schema-reference.md)

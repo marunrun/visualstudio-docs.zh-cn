@@ -1,7 +1,6 @@
 ---
 title: 创建多文件项模板
 ms.date: 01/02/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio templates, creating multi-file item templates
@@ -9,13 +8,13 @@ helpviewer_keywords:
 - item templates, creating multi-file item templates
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 0bffe46fa392a09b29eef224aaa50f5e02db826a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 745f371fa0461c2dc0dcedac0e06d160bbf7e209
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53877648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62428984"
 ---
 # <a name="how-to-create-multi-file-item-templates"></a>如何：创建多文件项模板
 
@@ -29,11 +28,11 @@ ms.locfileid: "53877648"
 
 多文件项模板需要参数，确保创建该项时使用正确的文件扩展名。 如果使用“导出模板向导”创建多文件项模板，会自动生成这些参数，无需进一步编辑。
 
-## <a name="to-create-a-multi-file-item-template-by-using-the-export-template-wizard"></a>使用“导出模板向导”创建多文件项模板
+## <a name="use-the-export-template-wizard"></a>使用“导出模板向导”
 
 可按创建单文件项模板的方式创建多文件项模板。 请参阅[如何：创建项模板](../ide/how-to-create-item-templates.md)。 在向导的“选择要导出的项”页面中，选择具有相关文件（例如，“Windows 窗体”窗体文件）的文件。 向导会自动在模板中含入任何相关文件，例如设计器和资源文件。
 
-## <a name="to-manually-create-a-multi-file-item-template"></a>手动创建多文件项模板
+## <a name="manually-create-a-multi-file-item-template"></a>手动创建多文件项模板
 
 1. 创建项模板与手动创建单文件项模板一样，但包括每个构成多文件项的文件。
 
@@ -58,7 +57,7 @@ ms.locfileid: "53877648"
 
    所选的文件将压缩到一个 .zip 文件中。
 
-1. 将该 .zip 文件复制到用户项模板位置。 默认情况下，该目录为 %USERPROFILE%\Documents\Visual Studio \<Version\>\Templates\ItemTemplates。 有关更多信息，请参见[如何：查找和组织模板](../ide/how-to-locate-and-organize-project-and-item-templates.md)。
+1. 将该 .zip 文件复制到用户项模板位置。 默认情况下，该目录为 %USERPROFILE%\Documents\Visual Studio \<Version\>\Templates\ItemTemplates。 有关详细信息，请参阅[如何：查找和组织模板](../ide/how-to-locate-and-organize-project-and-item-templates.md)。
 
 1. 关闭 Visual Studio，然后重新打开它。
 

@@ -1,28 +1,27 @@
 ---
 title: 使用 LINQ to XML 进行 WPF 数据绑定概述
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.assetid: 3bf80845-891b-41de-a71b-4080b5bd3ea6
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bc67ec6beb42c3bce82f3a32f6e40f052f8ad0ef
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 400686710e09c19a806493232d471a1c946a630d
+ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53850721"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66715071"
 ---
 # <a name="wpf-data-binding-with-linq-to-xml-overview"></a>使用 LINQ to XML 进行 WPF 数据绑定概述
 
-本主题介绍 <xref:System.Xml.Linq> 命名空间中的动态数据绑定功能。 这些功能可用作 Windows Presentation Foundation (WPF) 应用中用户界面 (UI) 元素的数据源。 此方案依赖于 <xref:System.Xml.Linq.XAttribute?displayProperty=fullName> 和 <xref:System.Xml.Linq.XElement?displayProperty=fullName> 的特殊动态属性。
+本主题介绍 <xref:System.Xml.Linq> 命名空间中的动态数据绑定功能。 这些功能可用作 Windows Presentation Foundation (WPF) 应用中用户界面 (UI) 元素的数据源。 此方案依赖于 <xref:System.Xml.Linq.XAttribute?displayProperty=fullName> 和 <xref:System.Xml.Linq.XElement?displayProperty=fullName> 的特殊动态属性  。
 
 ## <a name="xaml-and-linq-to-xml"></a>XAML 和 LINQ to XML
 
-可扩展应用程序标记语言 (XAML) 是由 Microsoft 创建的 XML 方言，支持 .NET Framework 3.0 技术。 它在 WPF 中用于表示用户界面元素和相关功能，如事件和数据绑定。 在 Windows Workflow Foundation 中，XAML 用于表示程序结构，如程序控制（工作流）。 XAML 使技术的声明性方面与相关的过程性代码分离，从而可定义更具个性化的程序行为。
+Extensible Application Markup Language (XAML) 是由 Microsoft 创建的用于支持 .NET 技术的 XML 方言。 它在 WPF 中用于表示用户界面元素和相关功能，如事件和数据绑定。 在 Windows Workflow Foundation 中，XAML 用于表示程序结构，如程序控制（工作流  ）。 XAML 使技术的声明性方面与相关的过程性代码分离，从而可定义更具个性化的程序行为。
 
 XAML 和 LINQ to XML 的交互有两种主要方式：
 
@@ -39,7 +38,7 @@ WPF 数据绑定可使 UI 元素将其一个属性与一个数据源相关联。
 |组件|说明|
 |---------------|-----------------|
 |绑定目标|要与数据源关联的 UI 元素。 WPF 中的可视元素是从 <xref:System.Windows.UIElement> 类派生的。|
-|目标属性|绑定目标的依赖项属性，反映数据绑定源的值。 从中派生 <xref:System.Windows.DependencyObject> 的 <xref:System.Windows.UIElement> 类直接支持依赖项属性。|
+|目标属性|绑定目标的依赖项属性  ，反映数据绑定源的值。 从中派生 <xref:System.Windows.DependencyObject> 的 <xref:System.Windows.UIElement> 类直接支持依赖项属性。|
 |绑定源|提供给 UI 元素以便进行显示的一个或多个值的源对象。 WPF 自动支持以下类型作为绑定源：CLR 对象、ADO.NET 数据对象、XML 数据（来自 XPath 或 LINQ to XML 查询）或其他 <xref:System.Windows.DependencyObject>。|
 |源路径|绑定源的属性，可解析为要绑定的一个或一组值。|
 
@@ -47,19 +46,19 @@ WPF 数据绑定可使 UI 元素将其一个属性与一个数据源相关联。
 
 ### <a name="dynamic-data-binding-in-wpf"></a>WPF 中的动态数据绑定
 
-默认情况下，仅在初始化目标 UI 元素时，才会发生数据绑定。 这称为“一次性”绑定。 这不能满足多数用途的需要；通常，数据绑定解决方案要求使用以下方式之一在运行时动态传播更改：
+默认情况下，仅在初始化目标 UI 元素时，才会发生数据绑定。 这称为“一次性”  绑定。 这不能满足多数用途的需要；通常，数据绑定解决方案要求使用以下方式之一在运行时动态传播更改：
 
-- 单向绑定，这种方式会自动传播对一侧所做的更改。 最常见的情况是对源所做的更改会反映在目标中，但有时需要相反的情况。
+- 单向  绑定，这种方式会自动传播对一侧所做的更改。 最常见的情况是对源所做的更改会反映在目标中，但有时需要相反的情况。
 
-- 双向绑定，在这种方式中，对源所做的更改会自动传播到目标，而且对目标的更改也会自动传播到源。
+- 双向  绑定，在这种方式中，对源所做的更改会自动传播到目标，而且对目标的更改也会自动传播到源。
 
-为了进行单向或双向绑定，源必须实现一种更改通知机制，例如通过实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口或通过对支持的每个属性使用 PropertyNameChanged 模式。
+为了进行单向或双向绑定，源必须实现一种更改通知机制，例如通过实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口或通过对支持的每个属性使用 PropertyNameChanged 模式  。
 
 有关 WPF 中数据绑定的详细信息，请参阅[数据绑定 (WPF)](/dotnet/framework/wpf/data/data-binding-wpf)。
 
 ## <a name="dynamic-properties-in-linq-to-xml-classes"></a>LINQ to XML 类中的动态属性
 
-大多数 LINQ to XML 类都不适合作为适当的 WPF 动态数据源。 一些最有用的信息只能通过方法（而不是属性）提供，并且这些类中的属性不实现更改通知。 为了支持 WPF 数据绑定，LINQ to XML 公开了一组动态属性。
+大多数 LINQ to XML 类都不适合作为适当的 WPF 动态数据源。 一些最有用的信息只能通过方法（而不是属性）提供，并且这些类中的属性不实现更改通知。 为了支持 WPF 数据绑定，LINQ to XML 公开了一组动态属性  。
 
 这些动态属性是特殊的运行时属性，它们重复 <xref:System.Xml.Linq.XAttribute> 和 <xref:System.Xml.Linq.XElement> 类中现有方法和属性的功能。 将这些属性添加到这些类中只是为了使这些类能够充当 WPF 的动态数据源。 为了满足这一要求，所有这些动态属性都要实现更改通知。 下一节 [LINQ to XML 动态属性](../designers/linq-to-xml-dynamic-properties.md)中提供有关这些动态属性的详细参考。
 

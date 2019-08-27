@@ -1,27 +1,22 @@
 ---
 title: 图形状态 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.graphics.statewindow
 ms.assetid: 97e7757e-c372-4626-8149-99a81367a0e1
 caps.latest.revision: 5
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: c5100f32a7a706f0d61e3b0ac006c8168e1ee553
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: HT
+manager: jillfra
+ms.openlocfilehash: 87972fe12cb8be78b89261d0aaaa272d9e2d5a14
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51750374"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67825580"
 ---
 # <a name="graphics-state"></a>图形状态
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,24 +37,24 @@ Visual Studio 图形诊断中的“状态”窗口可帮助你了解当前事件
   
 ##### <a name="to-change-the-state-view"></a>若要更改状态视图  
   
--   在“状态”窗口中标题栏下面的左上方，选择对应于你想要使用的状态视图样式的按钮。  
-  
-    -   **显示 API 输入的状态视图**  
-  
-    -   **显示逻辑状态视图**  
-  
-    -   **显示固定状态视图**  
+- 在“状态”窗口中标题栏下面的左上方，选择对应于你想要使用的状态视图样式的按钮。  
+
+  - **显示 API 输入状态视图**  
+
+  - **显示逻辑状态视图**  
+
+  - **显示固定状态视图**  
   
 > [!IMPORTANT]
->  必须将状态固定**显示 API 输入状态**或**显示逻辑状态**才显示在视图**显示固定状态视图**。  
+> 必须固定“显示 API 输入状态”或“显示逻辑状态”视图中的状态，以便它在“显示固定状态视图”中显示    。  
   
 ### <a name="state-table-format"></a>状态表格式  
  “状态”窗口显示了多个信息列。  
   
 |列|描述|  
 |------------|-----------------|  
-|name|状态项的名称。 如果此项表示状态的捆绑包，则可以展开该项以显示它。<br /><br /> 在中**API 输入状态视图**并**逻辑状态视图**指出，缩进名称以显示状态之间的层次结构关系。<br /><br /> 在中**固定状态视图**状态，则平面列表中显示完全限定的名称。|  
-|“值”|状态项的值。|  
+|名称|状态项的名称。 如果此项表示状态的捆绑包，则可以展开该项以显示它。<br /><br /> 在“API 输入状态视图”和“逻辑状态视图”状态中，缩进名称以显示状态之间的层次结构关系   。<br /><br /> 在“固定状态视图”状态中，完全限定名显示在简单列表中  。|  
+|值|状态项的值。|  
 |类型|状态项的类型。|  
   
 ### <a name="changed-state"></a>已更改的状态  
@@ -72,11 +67,8 @@ Visual Studio 图形诊断中的“状态”窗口可帮助你了解当前事件
   
 ##### <a name="to-pin-state-in-place"></a>若要将状态固定到适当位置  
   
-1.  在“状态”窗口中，找到你感兴趣的状态。 可能需要展开更高级别的状态来查找你感兴趣的详细信息。  
+1. 在“状态”窗口中，找到你感兴趣的状态。 可能需要展开更高级别的状态来查找你感兴趣的详细信息。  
   
-2.  将光标置于所感兴趣的状态上。 图钉图标将显示在状态项的左侧。  
+2. 将光标置于所感兴趣的状态上。 图钉图标将显示在状态项的左侧。  
   
-3.  选择图钉图标以将状态项固定在适当位置。
-
-
-
+3. 选择图钉图标以将状态项固定在适当位置。

@@ -1,14 +1,9 @@
 ---
 title: SccGetProjPath 函数 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - SccGetProjPath
 helpviewer_keywords:
@@ -16,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: 1079847e-d45f-4cb8-9d92-1e01ce5d08f6
 caps.latest.revision: 16
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 978316cd9c953217a3e59a7ecd1b047cab12734b
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 585402efbda165844f449e2477d5ca69722613a8
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51752597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63446873"
 ---
 # <a name="sccgetprojpath-function"></a>SccGetProjPath 函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 此函数会提示用户输入项目路径，这是一个字符串，它仅对源代码管理插件有意义。 当用户是，将调用：  
   
--   创建新的项目  
+- 创建新的项目  
   
--   将现有项目添加到版本控制  
+- 将现有项目添加到版本控制  
   
--   尝试查找现有的版本控制项目  
+- 尝试查找现有的版本控制项目  
   
 ## <a name="syntax"></a>语法  
   
@@ -104,7 +99,7 @@ SCCRTN SccGetProjPath (
  有关`lpUser`，IDE 可能会传入用户名，或者它可能只是一个指针传递到一个空字符串。 如果用户名称，源代码管理插件应使用它作为默认值。 但是，如果未传递名称或具有给定名称的登录失败，该插件应提示用户输入的登录名和传递名称重新`lpUser`当它收到有效的登录名。 因为该插件可能会更改此字符串，IDE 会始终分配大小的缓冲区 (`SCC_USER_LEN`+ 1)。  
   
 > [!NOTE]
->  IDE 将执行的第一个操作可能会调用`SccOpenProject`函数或`SccGetProjPath`函数。 因此，这两个具有相同`lpUser`参数，以使源代码管理插件在用户登录，在任一时间。 即使从函数返回表示失败，该插件必须填充此字符串与有效的登录名。  
+> IDE 将执行的第一个操作可能会调用`SccOpenProject`函数或`SccGetProjPath`函数。 因此，这两个具有相同`lpUser`参数，以使源代码管理插件在用户登录，在任一时间。 即使从函数返回表示失败，该插件必须填充此字符串与有效的登录名。  
   
  `lpLocalPath` 是，用户将项目的目录。 它可能为空字符串。 如果没有当前定义 （如果尝试从源代码管理系统下载的项目是用户） 的目录，如果`bAllowChangePath`是`TRUE`，源代码管理插件可以提示用户输入或使用其他某种方法将其拥有字符串插入`lpLocalPath`。 如果`bAllowChangePath`是`FALSE`，该插件不应更改为字符串，因为用户已使用指定的目录中。  
   
@@ -115,4 +110,3 @@ SCCRTN SccGetProjPath (
 ## <a name="see-also"></a>请参阅  
  [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccOpenProject](../extensibility/sccopenproject-function.md)
-

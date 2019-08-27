@@ -1,32 +1,26 @@
 ---
 title: MSBuild 内联任务 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 helpviewer_keywords:
 - MSBuild, tasks
 ms.assetid: e72e6506-4a11-4edf-ae8d-cfb5a3b9d8a0
 caps.latest.revision: 23
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 1f210aa8e33859f41046edc8e524cbfbeaf5417b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: cea0d72488bbd18972b2a2f6d87f21dfb32481d6
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49898611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63439360"
 ---
 # <a name="msbuild-inline-tasks"></a>MSBuild 内联任务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 通常，MSBuild 任务通过编译实现 <xref:Microsoft.Build.Framework.ITask> 接口的类进行创建。 有关详细信息，请参阅[任务](../msbuild/msbuild-tasks.md)。  
   
  从 .NET Framework 版本 4 开始，你可以在项目文件中创建内联任务。 无需创建单独的程序集来承载该任务。 这使得更易于跟踪源代码和部署任务。 源代码将集成到脚本中。  
@@ -73,7 +67,7 @@ ms.locfileid: "49898611"
   `Reference` 和 `Using` 元素都与语言无关。 可以用任何一种受支持的 .NET CodeDom 语言（例如，Visual Basic 或 Visual C#）编写内联任务。  
   
 > [!NOTE]
->  由 `Task` 元素包含的元素均特定于任务工厂，在本例中，即代码任务工厂。  
+> 由 `Task` 元素包含的元素均特定于任务工厂，在本例中，即代码任务工厂。  
   
 ### <a name="code-element"></a>Code 元素  
  最后一个出现在 `Task`元素内的子元素是 `Code` 元素。 `Code` 元素包含或定位你想要编译到任务中的代码。 放置于 `Code` 元素中的内容具体取决于你希望如何编写任务。  
@@ -93,7 +87,7 @@ ms.locfileid: "49898611"
   或者，可以使用 `Code` 元素的 `Source` 属性来指定包含任务代码的文件的位置。 源文件中的代码的类型必须为由 `Type` 属性所指定的类型。 如果存在 `Source` 属性，则 `Type` 的默认值为 `Class`。 如果 `Source` 不存在，则默认值为 `Fragment`。  
   
 > [!NOTE]
->  当在源文件中定义任务类时，类名必须符合对应的 [UsingTask](../msbuild/usingtask-element-msbuild.md) 元素的 `TaskName` 属性。  
+> 当在源文件中定义任务类时，类名必须符合对应的 [UsingTask](../msbuild/usingtask-element-msbuild.md) 元素的 `TaskName` 属性。  
   
 ## <a name="hello-world"></a>Hello World  
  下面是一个更全面的内联任务。 HelloWorld 任务 在默认错误日志记录设备上显示“Hello, World!”，该设备通常为系统控制台或 Visual Studio **输出**窗口。 示例中包含了 `Reference` 元素，这仅用于阐释目的。  
@@ -200,6 +194,3 @@ File.WriteAllText(Path, content);
 ## <a name="see-also"></a>请参阅  
  [任务](../msbuild/msbuild-tasks.md)   
  [演练：创建内联任务](../msbuild/walkthrough-creating-an-inline-task.md)
-
-
-

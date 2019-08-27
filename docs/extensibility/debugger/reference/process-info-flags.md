@@ -1,22 +1,25 @@
 ---
-title: PROCESS_INFO_FLAGS |Microsoft Docs
+title: PROCESS_INFO_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - PROCESS_INFO_FLAGS
 helpviewer_keywords:
 - PROCESS_INFO_FLAGS enumeration
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0c7d319d2053cfa67bd4e7fe77c68474fceb03a2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+dev_langs:
+- CPP
+- CSharp
+ms.openlocfilehash: e0694d83409a492a1d950a17ac5e2298ba9b8578
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53896118"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66309391"
 ---
 # <a name="processinfoflags"></a>PROCESS_INFO_FLAGS
 
@@ -43,18 +46,18 @@ enum enum_PROCESS_INFO_FLAGS { 
 };
 ```
 
-## <a name="members"></a>成员
+## <a name="fields"></a>字段
 
-PIFLAG_SYSTEM_PROCESS  
+`PIFLAG_SYSTEM_PROCESS`\
 指示该过程是一个系统进程。
 
-PIFLAG_DEBUGGER_ATTACHED  
+`PIFLAG_DEBUGGER_ATTACHED`\
 指示由调试器调试该进程。 可能会[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]调试器，也可能是一些其他调试器，例如，WinDbg。
 
-PIFLAG_PROCESS_STOPPED  
+`PIFLAG_PROCESS_STOPPED`\
 指示该进程已停止。 有效才`PIFLAG_DEBUGGER_ATTACHED`还指定了。 可在 Visual Studio 2005 和更高版本。
 
-PIFLAG_PROCESS_RUNNING  
+`PIFLAG_PROCESS_RUNNING`\
 指示进程正在运行。 有效才`PIFLAG_DEBUGGER_ATTACHED`还指定了。 可在 Visual Studio 2005 和更高版本。
 
 ## <a name="remarks"></a>备注
@@ -73,5 +76,5 @@ PIFLAG_PROCESS_RUNNING
 
 ## <a name="see-also"></a>请参阅
 
-[枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)  
-[PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)
+- [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)

@@ -1,40 +1,35 @@
 ---
 title: 管理通用 Windows 项目 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 47926aa1-3b41-410d-bca8-f77fc950cbe7
 caps.latest.revision: 15
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: b2c10232b917e8343ace8d1a31fcd3609ecdfb95
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 08d88ce08c6c91cbf46bcc6d15cbf098d61e604d
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51783774"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65679930"
 ---
 # <a name="managing-universal-windows-projects"></a>管理通用 Windows 项目
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-通用 Windows 应用是面向 Windows 8.1 和 Windows Phone 8.1，从而允许开发人员在这两个平台上使用的代码和其他资产。 共享的代码和资源都保存在共享项目，而特定于平台的代码和资源保留在单独的项目，一个用于 Windows，另一个用于 Windows Phone。 有关通用 Windows 应用程序的详细信息，请参阅[通用 Windows 应用](http://msdn.microsoft.com/library/windows/apps/dn609832.aspx)。 管理项目的 visual Studio 扩展应了解通用 Windows 应用项目具有不同于单平台的应用程序的结构。 本演练演示如何导航共享的项目和管理共享的项。  
+通用 Windows 应用是面向 Windows 8.1 和 Windows Phone 8.1，从而允许开发人员在这两个平台上使用的代码和其他资产。 共享的代码和资源都保存在共享项目，而特定于平台的代码和资源保留在单独的项目，一个用于 Windows，另一个用于 Windows Phone。 有关通用 Windows 应用程序的详细信息，请参阅[通用 Windows 应用](https://msdn.microsoft.com/library/windows/apps/dn609832.aspx)。 管理项目的 visual Studio 扩展应了解通用 Windows 应用项目具有不同于单平台的应用程序的结构。 本演练演示如何导航共享的项目和管理共享的项。  
   
 ## <a name="prerequisites"></a>系统必备  
  从 Visual Studio 2015 开始，您并不安装 Visual Studio SDK 从下载中心获得。 它是作为 Visual Studio 安装程序中的可选功能包含在内。 此外可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md)。  
   
 ### <a name="navigate-the-shared-project"></a>导航共享的项目  
   
-1.  创建一个名为 C# VSIX 项目**TestUniversalProject**。 (**文件，新建、 项目**，然后**C#，可扩展性，Visual Studio 包**)。 添加**自定义命令**项目项模板 (在解决方案资源管理器，右键单击项目节点并选择**添加 / 新建项**，然后转到**扩展性**)。 将文件命名**TestUniversalProject**。  
+1. 创建一个名为 C# VSIX 项目**TestUniversalProject**。 (**文件，新建、 项目**，然后**C#，可扩展性，Visual Studio 包**)。 添加**自定义命令**项目项模板 (在解决方案资源管理器，右键单击项目节点并选择**添加 / 新建项**，然后转到**扩展性**)。 将文件命名**TestUniversalProject**。  
   
-2.  添加对 Microsoft.VisualStudio.Shell.Interop.12.1.DesignTime.dll 和 Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll 的引用 (在**扩展**部分)。  
+2. 添加对 Microsoft.VisualStudio.Shell.Interop.12.1.DesignTime.dll 和 Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll 的引用 (在**扩展**部分)。  
   
-3.  打开 TestUniversalProject.cs 并添加以下`using`语句：  
+3. 打开 TestUniversalProject.cs 并添加以下`using`语句：  
   
     ```csharp  
     using EnvDTE;  
@@ -47,7 +42,7 @@ ms.locfileid: "51783774"
     using System.Windows.Forms;  
     ```  
   
-4.  TestUniversalProject 类中添加一个指向的私有字段**输出**窗口。  
+4. TestUniversalProject 类中添加一个指向的私有字段**输出**窗口。  
   
     ```csharp  
     public sealed class TestUniversalProject   
@@ -57,7 +52,7 @@ ms.locfileid: "51783774"
     }  
     ```  
   
-5.  设置对 TestUniversalProject 构造函数内的输出窗格的引用：  
+5. 设置对 TestUniversalProject 构造函数内的输出窗格的引用：  
   
     ```csharp  
     private TestUniversalProject(Package package)  
@@ -82,7 +77,7 @@ ms.locfileid: "51783774"
     }  
     ```  
   
-6.  删除从现有代码`ShowMessageBox`方法：  
+6. 删除从现有代码`ShowMessageBox`方法：  
   
     ```csharp  
     private void ShowMessageBox(object sender, EventArgs e)   
@@ -90,7 +85,7 @@ ms.locfileid: "51783774"
     }  
     ```  
   
-7.  获取 DTE 对象，我们将使用在本演练中有多种不同的用途。 此外，请确保单击的菜单按钮时加载解决方案。  
+7. 获取 DTE 对象，我们将使用在本演练中有多种不同的用途。 此外，请确保单击的菜单按钮时加载解决方案。  
   
     ```csharp  
     private void ShowMessageBox(object sender, EventArgs e)  
@@ -108,7 +103,7 @@ ms.locfileid: "51783774"
     }  
     ```  
   
-8.  查找共享的项目。 共享的项目是一个纯粹的容器;它不生成或生成的输出。 以下方法通过查找在解决方案中查找第一个共享的项目<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>具有共享的项目功能的对象。  
+8. 查找共享的项目。 共享的项目是一个纯粹的容器;它不生成或生成的输出。 以下方法通过查找在解决方案中查找第一个共享的项目<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>具有共享的项目功能的对象。  
   
     ```csharp  
     private IVsHierarchy FindSharedProject()  
@@ -240,7 +235,7 @@ ms.locfileid: "51783774"
     ```  
   
     > [!IMPORTANT]
-    >  如果用户在实验实例中打开过的 c + + 通用 Windows 应用项目，上面的代码将引发异常。 这是一个已知问题。 若要避免此异常，将为`foreach`上面阻止以下：  
+    > 如果用户打开C++通用 Windows 应用项目中的实验实例中，上面的代码将引发异常。 这是一个已知问题。 若要避免此异常，将为`foreach`上面阻止以下：  
   
     ```csharp  
     var importingProjects = sharedAssetsProject.EnumImportingProjects();  
@@ -311,7 +306,7 @@ ms.locfileid: "51783774"
   
 ### <a name="manage-the-shared-items-in-the-platform-project"></a>管理平台项目中的共享的项  
   
-1.  查找在平台项目中共享的项。 共享项目中的项在平台项目中显示为共享项。 你不能看到它们在**解决方案资源管理器**，但您可以放心离开项目层次结构，可以找到它们。 以下方法将在层次结构的指导，并收集所有共享的项。 它根据需要将输出的每个项的标题。 通过新的属性标识的共享的项<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID7>。  
+1. 查找在平台项目中共享的项。 共享项目中的项在平台项目中显示为共享项。 你不能看到它们在**解决方案资源管理器**，但您可以放心离开项目层次结构，可以找到它们。 以下方法将在层次结构的指导，并收集所有共享的项。 它根据需要将输出的每个项的标题。 通过新的属性标识的共享的项<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID7>。  
   
     ```csharp  
     private void InspectHierarchyItems(IVsHierarchy hier, uint itemid, int level, List<uint> itemIds, bool getSharedItems, bool printItems)  
@@ -343,7 +338,7 @@ ms.locfileid: "51783774"
     }  
     ```  
   
-2.  在`ShowMessageBox`方法中，添加以下代码以引导平台项目层次结构项。 插入内`foreach`块。  
+2. 在`ShowMessageBox`方法中，添加以下代码以引导平台项目层次结构项。 插入内`foreach`块。  
   
     ```csharp  
     output.OutputStringThreadSafe("Walk the active platform project:\n");  
@@ -351,7 +346,7 @@ ms.locfileid: "51783774"
     this.InspectHierarchyItems(activePlatformHier, (uint)VSConstants.VSITEMID.Root, 1, sharedItemIds, true, true);  
     ```  
   
-3.  读取共享的项目。 共享的项在平台项目中显示为隐藏的链接文件，并可以读取为普通链接的文件的所有属性。 以下代码将读取第一个共享项的完整路径。  
+3. 读取共享的项目。 共享的项在平台项目中显示为隐藏的链接文件，并可以读取为普通链接的文件的所有属性。 以下代码将读取第一个共享项的完整路径。  
   
     ```csharp  
     var sharedItemId = sharedItemIds[0];  
@@ -360,7 +355,7 @@ ms.locfileid: "51783774"
     output.OutputStringThreadSafe(string.Format("Shared item full path: {0}\n", fullPath));  
     ```  
   
-4.  现在试一试。按 F5 启动实验实例。 在实验实例中创建一个 C# 通用中心应用程序项目 (在**新的项目**对话框中， **Visual C# / Windows / Windows 8 / 通用 / 中心应用**) 转到**工具**菜单，然后单击**调用 TestUniversalProject**，然后再签入文本**输出**窗格。 显示的内容应与以下类似：  
+4. 现在试一试。按 F5 启动实验实例。 在实验实例中创建一个 C# 通用中心应用程序项目 (在**新的项目**对话框中， **Visual C# / Windows / Windows 8 / 通用 / 中心应用**) 转到**工具**菜单，然后单击**调用 TestUniversalProject**，然后再签入文本**输出**窗格。 显示的内容应与以下类似：  
   
     ```  
     Found shared project: HubApp.Shared  
@@ -530,7 +525,7 @@ ms.locfileid: "51783774"
 9. 修改共享的项。 不能修改平台项目; 中的共享的项相反，必须在这些项的实际所有者共享项目中修改它们。 可以使用共享项目中获取相应的项 ID <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.IsDocumentInProject%2A>，向其提供共享的项的完整路径。 然后，可以修改共享的项。 更改传播到平台项目。  
   
     > [!IMPORTANT]
-    >  您应找出项目项是共享的项之前修改它。  
+    > 您应找出项目项是共享的项之前修改它。  
   
      以下方法修改项目项文件的名称。  
   
@@ -578,4 +573,3 @@ ms.locfileid: "51783774"
     ```  
   
 13. 生成并运行该项目。 在实验实例中创建一个 C# 通用项目，请转到**工具**菜单，然后单击**调用 TestUniversalProject**，并检查常规输出窗格中的文本。 平台项目中的文件重命名后，你应看到<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A>事件和一个<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A>事件。 更改以来该文件将导致其他文件来更改，并且由于平台项目中的项的更改不获取任何位置传播，因此没有仅每个上述事件之一。
-

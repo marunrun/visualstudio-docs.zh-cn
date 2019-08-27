@@ -1,14 +1,9 @@
 ---
-title: Visual Studio SDK |Microsoft Docs
-ms.custom: ''
+title: Visual Studio SDK | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 f1_keywords:
 - VSSDK.v90.StartPage
 helpviewer_keywords:
@@ -18,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1f7c348a-114c-4243-b392-3531e9c9c6fd
 caps.latest.revision: 57
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: e64506ca544dd3811864358f9c928f6893dc8448
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 0c338648ebb69874781906c0eabff670e5158be8
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51758971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62538780"
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,7 +38,7 @@ Visual Studio SDK 可帮助您扩展 Visual Studio 功能或集成到 Visual Stu
   
 - 添加自定义项目类型  
   
-- 让数百万开发人员通过 Visual Studio 库  
+- 让数百万开发人员通过 Visual Studio Marketplace  
   
   如果您从未书写过 Visual Studio 扩展之前，应找到有关这些功能以及在详细信息[开始开发 Visual Studio 扩展到](../extensibility/starting-to-develop-visual-studio-extensions.md)。  
   
@@ -61,7 +56,7 @@ Visual Studio SDK 可帮助您扩展 Visual Studio 功能或集成到 Visual Stu
  充分利用[映像服务和目录](../extensibility/image-service-and-catalog.md)最大的映像管理以及对高 DPI 和主题支持。  
   
 ## <a name="finding-and-installing-existing-visual-studio-extensions"></a>查找和安装现有的 Visual Studio 扩展  
- 您可以找到 Visual Studio 中的扩展**扩展和更新**上的对话框**工具**菜单。 有关详细信息，请参阅[查找和使用 Visual Studio 扩展](../ide/finding-and-using-visual-studio-extensions.md)。 此外可以查找中的扩展[Visual Studio 库](https://visualstudiogallery.msdn.microsoft.com/)  
+ 您可以找到 Visual Studio 中的扩展**扩展和更新**上的对话框**工具**菜单。 有关详细信息，请参阅[查找和使用 Visual Studio 扩展](../ide/finding-and-using-visual-studio-extensions.md)。 此外可以查找中的扩展[Visual Studio Marketplace](https://marketplace.visualstudio.com/)  
   
 ## <a name="visual-studio-sdk-reference"></a>Visual Studio SDK 引用  
  您可以找到的 Visual Studio SDK API 参考[Visual Studio SDK 引用](../extensibility/visual-studio-sdk-reference.md)。  
@@ -74,16 +69,16 @@ Visual Studio SDK 可帮助您扩展 Visual Studio 功能或集成到 Visual Stu
   
  你可以找到详细信息中的[VSX Arcana 博客](http://blogs.msdn.com/b/vsx/)和一些由 Microsoft Mvp 撰写的博客：  
   
--   [最喜欢的 Visual Studio 扩展](http://geekswithblogs.net/sdorman/archive/2014/10/05/favorite-visual-studio-extensions.aspx)  
+- [最喜欢的 Visual Studio 扩展](http://geekswithblogs.net/sdorman/archive/2014/10/05/favorite-visual-studio-extensions.aspx)  
   
--   [Visual Studio 扩展性](http://www.visualstudioextensibility.com/overview/vs/)  
+- [Visual Studio 扩展性](http://www.visualstudioextensibility.com/overview/vs/)  
   
--   [扩展 Visual Studio](http://blog.slaks.net/2013-10-18/extending-visual-studio-part-1-getting-started/)  
+- [扩展 Visual Studio](http://blog.slaks.net/2013-10-18/extending-visual-studio-part-1-getting-started/)  
   
 ## <a name="see-also"></a>请参阅  
  [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)   
- [如何： 将扩展性项目迁移到 Visual Studio 2015](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2015.md)   
- [常见问题： 将外接程序转换为 VSPackage 扩展](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md)   
+ [如何：将扩展性项目迁移到 Visual Studio 2015](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2015.md)   
+ [常见问题解答：将外接程序转换为 VSPackage 扩展](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md)   
  [管理在托管代码中的多个线程](../extensibility/managing-multiple-threads-in-managed-code.md)   
  [扩展菜单和命令](../extensibility/extending-menus-and-commands.md)   
  [将命令添加到工具栏](../extensibility/adding-commands-to-toolbars.md)   
@@ -103,4 +98,3 @@ Visual Studio SDK 可帮助您扩展 Visual Studio 功能或集成到 Visual Stu
  [针对 Visual Studio SDK 的支持](../extensibility/support-for-the-visual-studio-sdk.md)   
  [存档](../extensibility/archive.md)   
  [Visual Studio SDK 引用](../extensibility/visual-studio-sdk-reference.md)
-

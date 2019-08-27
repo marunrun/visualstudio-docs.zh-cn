@@ -1,35 +1,30 @@
 ---
 title: 扩展工具箱 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: devlang-csharp
+ms.topic: conceptual
 helpviewer_keywords:
 - tools [Visual Studio], Toolbox
 - Toolbox [Visual Studio SDK]
 ms.assetid: bb84a79e-cd4c-4a58-8871-2513e7119b6e
 caps.latest.revision: 38
-manager: douge
-ms.openlocfilehash: 444cf6b27179408414cc7df55d634497683004a6
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: ddf67fba3ae603dbd31d4628c61a6f14cc2441c4
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49230329"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65686935"
 ---
 # <a name="extending-the-toolbox"></a>扩展工具箱
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **工具箱** 提供了一系列对象，这些对象通过 IDE 拖放机制为编辑器和设计器提供各种功能。  
   
  VSPackage 与 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **工具箱**联合使用有两种基本方式：  
   
--   VSPackage 可以向 **工具箱**添加新数据项和控件。  
+- VSPackage 可以向 **工具箱**添加新数据项和控件。  
   
--   VSPackage 可以是现有 **工具箱** 功能目标或使用者，支持拖放操作并配置 **工具箱**的外观。  
+- VSPackage 可以是现有 **工具箱** 功能目标或使用者，支持拖放操作并配置 **工具箱**的外观。  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：创建使用 Windows 窗体的工具箱控件](../misc/how-to-create-a-toolbox-control-that-uses-windows-forms.md)  
@@ -42,10 +37,10 @@ ms.locfileid: "49230329"
  介绍 VSPackage 管理 **工具箱**的内容和外观的方式。  
   
 ## <a name="related-sections"></a>相关章节  
- [如何：管理“工具箱”窗口](http://msdn.microsoft.com/en-us/a022c3fe-298c-4a59-a48f-b050da90ebc2)  
+ [如何：管理“工具箱”窗口](https://msdn.microsoft.com/a022c3fe-298c-4a59-a48f-b050da90ebc2)  
  介绍如何使用 **集成开发环境 (IDE) 中的** 工具箱 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。  
   
- [如何： 控制工具箱](http://msdn.microsoft.com/library/c9d8a18a-d2bc-43d4-a803-601bfc6a6599)  
+ [如何：控制工具箱](https://msdn.microsoft.com/library/c9d8a18a-d2bc-43d4-a803-601bfc6a6599)  
  介绍如何使用自动化编程模型管理 **工具箱** 。  
   
  [扩展 Visual Studio 的其他部分](../extensibility/extending-other-parts-of-visual-studio.md)  

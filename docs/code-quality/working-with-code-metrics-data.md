@@ -1,7 +1,6 @@
 ---
 title: 代码度量值窗口
 ms.date: 12/12/2017
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - vs.codemetrics.output
@@ -11,15 +10,15 @@ helpviewer_keywords:
 - results window, code metrics
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 31690ccc3c2f32b4abb2ff9fefcc268c83977595
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: bbe2c216a9293ddc8c5c1212957c2987924d14e1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53856314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62825066"
 ---
 # <a name="use-the-code-metrics-results-window"></a>使用代码度量结果窗口
 
@@ -49,15 +48,15 @@ ms.locfileid: "53856314"
 
 ### <a name="to-filter-the-code-metrics-results"></a>若要筛选代码度量结果
 
-1.  从**筛选器**列表中，选择的列名称。
+1. 从**筛选器**列表中，选择的列名称。
 
-2.  在中**Min**，键入要显示的最小值。
+2. 在中**Min**，键入要显示的最小值。
 
-3.  在中**最大**，键入要显示的最大值。
+3. 在中**最大**，键入要显示的最大值。
 
-4.  单击**应用筛选器**按钮。
+4. 单击**应用筛选器**按钮。
 
-5.  若要查看结果详细信息，请展开层次结构树。
+5. 若要查看结果详细信息，请展开层次结构树。
 
 ## <a name="add-remove-and-rearrange-data-columns"></a>添加、 删除和重新排列的数据列
 
@@ -89,23 +88,23 @@ ms.locfileid: "53856314"
 
 ### <a name="to-create-a-work-item-based-on-a-result"></a>若要创建基于某一结果的工作项
 
-1.  右键单击结果。
+1. 右键单击结果。
 
-2.  指向**创建工作项**，然后单击你想要创建的工作项类型 (**Bug**，**任务**，依此类推)。
+2. 指向**创建工作项**，然后单击你想要创建的工作项类型 (**Bug**，**任务**，依此类推)。
 
-3.  通过填写所有必填字段来完成工作项窗体。
+3. 通过填写所有必填字段来完成工作项窗体。
 
-4.  上**文件**菜单上，单击**全部保存**来保存工作项。
+4. 上**文件**菜单上，单击**全部保存**来保存工作项。
 
 ### <a name="to-create-a-bug-based-on-a-result"></a>若要创建基于某一结果的 bug
 
-1.  单击以选中它的结果。
+1. 单击以选中它的结果。
 
-2.  单击**创建工作项**按钮。
+2. 单击**创建工作项**按钮。
 
-3.  通过填写所有必填字段来完成工作项窗体。
+3. 通过填写所有必填字段来完成工作项窗体。
 
-4.  上**文件**菜单上，单击**全部保存**来保存工作项。
+4. 上**文件**菜单上，单击**全部保存**来保存工作项。
 
 ## <a name="see-also"></a>请参阅
 

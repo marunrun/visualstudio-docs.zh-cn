@@ -1,36 +1,29 @@
 ---
 title: 架构缓存 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-xml-tools
+ms.topic: conceptual
 ms.assetid: 35a7fcad-f3bf-4a96-9008-4306e7276223
 caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 071ae9f75ab48a2fbabba7c272ad542f59e9e8be
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 0ed32908212f158532e5553752ef5c0b70306fe6
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49833143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63435343"
 ---
 # <a name="schema-cache"></a>架构缓存
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
 
 “XML 编辑器”提供的架构缓存位于 %InstallRoot%\Xml\Schemas 目录。 架构缓存适用于计算机上的所有用户，并且包含用于智能感知和 XML 文档验证的标准 XML 架构。  
 
  XML 编辑器还可以查找解决方案中的架构，在指定架构**架构**的文档字段**属性**窗口中，并标识的架构`xsi:schemaLocation`和`xsi:noNamespaceSchemaLocation`属性。  
 
  下表说明随“XML 编辑器”安装的架构。  
-
 
 |     Filename      |                                                      描述                                                      |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------|
@@ -56,7 +49,7 @@ ms.locfileid: "49833143"
  编辑器在加载“XML 编辑器”软件包时加载架构缓存目录，并在运行时监视是否发生更改。 如果架构已添加，将自动加载到已知架构的内存中索引。 如果架构已移除，它将自动从内存中索引移除。 如果架构已更新，将自动使此架构的内存中缓存失效。  
 
 > [!NOTE]
->  由于架构缓存目录适用于整个计算机，因此，只应在此处添加标准的、适用于在计算机上可能创建的所有 Visual Studio 项目的架构。  
+> 由于架构缓存目录适用于整个计算机，因此，只应在此处添加标准的、适用于在计算机上可能创建的所有 Visual Studio 项目的架构。  
 
  “XML 编辑器”还支持在架构缓存目录中包含任意数目的架构编录文件。 架构编录可以指向您始终希望编辑器了解的其他架构位置。 catalog.xsd 文件定义编录文件的格式并包含在架构缓存目录中。 catalog.xml 文件是默认的编录，包含指向 %InstallDir% 中的其他架构的链接。 以下是 catalog.xml 文件的示例：  
 
@@ -86,7 +79,7 @@ ms.locfileid: "49833143"
 
 - LCID  
 
-  编录文档可以包含 `Catalog` 元素，该元素指向其他编录。 可以使用 `Catalog` 元素指向您的团队或公司共享的中心编录或与业务伙伴共享的联机编录。 `href` 属性是其他编录的文件路径或 http URL。 以下是 `Catalog` 元素的示例：  
+  编录文档可以包含 `Catalog` 元素，该元素指向其他编录。 可以使用 `Catalog` 元素指向你的团队或公司共享的中心编录或与业务伙伴共享的联机编录。 `href` 属性是其他编录的文件路径或 http URL。 以下是 `Catalog` 元素的示例：  
 
 ```  
 <Catalog href="file://c:/xcbl/xcblCatalog.xml"/>  
@@ -112,30 +105,27 @@ ms.locfileid: "49833143"
  你可以自定义架构缓存使用的位置**杂项**选项页。 如果有包含喜欢的架构的目录，可以将编辑器配置为转为使用这些架构。  
 
 > [!NOTE]
->  此更改只影响当前的 Visual Studio 用户。  
+> 此更改只影响当前的 Visual Studio 用户。  
 
 #### <a name="to-change-the-schema-cache-location"></a>更改架构缓存的位置  
 
-1.  从**工具**菜单中，选择**选项**。  
+1. 从**工具**菜单中，选择**选项**。  
 
-2.  展开**文本编辑器**，展开**XML**，然后单击**杂项**。  
+2. 展开**文本编辑器**，展开**XML**，然后单击**杂项**。  
 
-3.  单击**浏览**按钮**架构**字段。  
+3. 单击**浏览**按钮**架构**字段。  
 
-4.  选择架构缓存的文件夹，然后单击**确定**。  
+4. 选择架构缓存的文件夹，然后单击**确定**。  
 
 #### <a name="to-add-another-directory-of-common-schemas"></a>添加其他常见架构目录  
 
-1.  在“XML 编辑器”的架构缓存目录中编辑 catalog.xml 文件。  
+1. 在“XML 编辑器”的架构缓存目录中编辑 catalog.xml 文件。  
 
-2.  添加一个新的 `<Catalog href="…"/>` 元素，指向其他架构的目录。  
+2. 添加一个新的 `<Catalog href="…"/>` 元素，指向其他架构的目录。  
 
-3.  保存更改。  
+3. 保存更改。  
 
      将自动重新加载编录。  
 
 ## <a name="see-also"></a>请参阅  
  [XML 编辑器](../xml-tools/xml-editor.md)
-
-
-

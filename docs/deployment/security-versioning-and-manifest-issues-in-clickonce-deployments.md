@@ -1,5 +1,5 @@
 ---
-title: 安全、 版本和 ClickOnce 部署中的清单问题 |Microsoft Docs
+title: ClickOnce 部署中的安全/版本控制/清单问题
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - ClickOnce applications, security issues
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 366e384ec01c67a1beb6b08b018365cbb3c73bf4
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: bb2ec5229132265feb1095c9ee921d73a1568dd2
+ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53927137"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66745608"
 ---
 # <a name="security-versioning-and-manifest-issues-in-clickonce-deployments"></a>ClickOnce 部署中的安全、版本控制和清单问题
 
@@ -59,7 +59,7 @@ ms.locfileid: "53927137"
 
 ## <a name="specify-individual-net-framework-assemblies-in-the-manifest"></a>在清单中指定单独的.NET Framework 程序集
 
-你的应用程序将无法加载如果您已手动编辑[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]部署，以引用较旧版本的[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]程序集。 例如，如果添加了对版本的 System.Net 程序集引用[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]之前在清单中指定的版本，则会出现错误。 一般情况下，不应尝试指定单个引用[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]程序集，作为版本的[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]对运行应用程序被指定为应用程序清单中的依赖项。
+你的应用程序将无法加载如果您已手动编辑[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]部署，以引用较旧版本的.NET Framework 程序集。 例如，如果添加到清单中指定的版本之前的.NET Framework 的版本的 System.Net 程序集的引用时，会发生错误。 一般情况下，您不应尝试指定单独的.NET Framework 程序集的引用如对其运行应用程序的.NET framework 的版本指定为应用程序清单中的依赖项。
 
 ## <a name="manifest-parsing-issues"></a>清单分析问题
 
@@ -96,6 +96,6 @@ ms.locfileid: "53927137"
 
 ## <a name="see-also"></a>请参阅
 
-[ClickOnce 部署疑难解答](../deployment/troubleshooting-clickonce-deployments.md)  
-[Securw ClickOnce 应用程序](../deployment/securing-clickonce-applications.md)  
+[ClickOnce 部署进行故障排除](../deployment/troubleshooting-clickonce-deployments.md)
+[保护 ClickOnce 应用程序](../deployment/securing-clickonce-applications.md)
 [选择 ClickOnce 部署策略](../deployment/choosing-a-clickonce-deployment-strategy.md)

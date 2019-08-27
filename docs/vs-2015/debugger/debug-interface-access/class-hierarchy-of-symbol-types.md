@@ -1,14 +1,9 @@
 ---
 title: 类符号类型的层次结构 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 0ccd6990-4654-44cd-a6f3-bdd82fe90f6c
 caps.latest.revision: 13
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 4c400479f761cb7d1bbe02c1aedade916da5596a
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 3a7b3edb0262e3e2b4f0cde51b499e25b04aba51
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51793030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63442913"
 ---
 # <a name="class-hierarchy-of-symbol-types"></a>符号类型的类层次结构
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -51,12 +46,9 @@ ms.locfileid: "51793030"
 |[维度](../../debugger/debug-interface-access/dimension.md)|数组维数的符号。|  
   
 > [!NOTE]
->  每个符号可以保存有关符号，以及对其他符号的引用信息的属性。 单个符号主题中列出了这些属性。  
+> 每个符号可以保存有关符号，以及对其他符号的引用信息的属性。 单个符号主题中列出了这些属性。  
   
 ## <a name="see-also"></a>请参阅  
  [CV_access_e 枚举](../../debugger/debug-interface-access/cv-access-e.md)   
  [符号类型的词法层次结构](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)   
  [符号和符号标记](../../debugger/debug-interface-access/symbols-and-symbol-tags.md)
-
-
-

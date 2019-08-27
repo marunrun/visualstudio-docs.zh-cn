@@ -5,18 +5,17 @@ ms.topic: reference
 ms.assetid: ce5822dd-4f10-4c86-b707-7766837be216
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8e0d7c00cf902baa41586301ff338ebfef78c5aa
-ms.sourcegitcommit: 59c48e1e42b48ad25a4e198af670faa4d8dae370
-ms.translationtype: MTE95
+ms.openlocfilehash: ae3b86be9ec26f9bb8c9b8978a6276169262933d
+ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54204052"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65457894"
 ---
-# <a name="warning-changes-have-been-made-to-the-configure-behavior-dialog-box-that-have-not-been-applied"></a>警告:尚未应用对“配置行为”对话框所做的更改
+# <a name="warning-changes-have-been-made-to-the-configure-behavior-dialog-box-that-have-not-been-applied"></a>警告：尚未应用对“配置行为”对话框所做的更改
 
 警告。 尚未应用对“配置行为”对话框所做的更改。 是否要应用您所做的更改?
 
@@ -30,5 +29,4 @@ ms.locfileid: "54204052"
 
 ## <a name="see-also"></a>请参阅
 
-- [O-R 设计器消息](../data-tools/o-r-designer-messages.md)
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

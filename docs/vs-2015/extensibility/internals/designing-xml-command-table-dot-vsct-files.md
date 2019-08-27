@@ -1,26 +1,21 @@
 ---
 title: 设计 XML 命令表 (。Vsct) 文件 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - VSCT files, designing
 ms.assetid: bb87a322-bac4-4258-92bc-9a876f05d653
 caps.latest.revision: 28
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 6c7a4e07c45c5d651af057e1eb33c23d37601cb3
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: HT
+manager: jillfra
+ms.openlocfilehash: 987536af051de4a66b3eccadb105fd98455ddf06
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51762809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68196851"
 ---
 # <a name="designing-xml-command-table-vsct-files"></a>设计 XML 命令表 (。Vsct) 文件
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -32,7 +27,7 @@ XML 命令表格 (.vsct) 文件描述的布局和外观的命令项对为 VSPack
   
  通过运行时创建新的 VSPackage[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]包模板，模板生成所需的元素具有菜单命令、 工具窗口中，或自定义编辑器中的，具体取决于你选择的.vsct 文件。 然后可以修改此.vsct 文件以满足特定的 VSPackage 的要求。 有关如何修改.vsct 文件的示例，请参阅中的示例[扩展菜单和命令](../../extensibility/extending-menus-and-commands.md)。  
   
- 若要创建新的、 空白.vsct 文件，请参阅[如何： 创建。Vsct 文件](../../extensibility/internals/how-to-create-a-dot-vsct-file.md)。 创建后，您将添加 XML 元素、 属性和值到描述命令项布局的文件。 有关详细的 XML 架构，请参阅[VSCT XML Schema Reference](../../extensibility/vsct-xml-schema-reference.md)。  
+ 若要创建新的、 空白.vsct 文件，请参阅[如何：创建。Vsct 文件](../../extensibility/internals/how-to-create-a-dot-vsct-file.md)。 创建后，您将添加 XML 元素、 属性和值到描述命令项布局的文件。 有关详细的 XML 架构，请参阅[VSCT XML Schema Reference](../../extensibility/vsct-xml-schema-reference.md)。  
   
 ## <a name="differences-between-ctc-and-vsct-files"></a>.Ctc 和.vsct 文件之间的差异  
  虽然.vsct 文件中的 XML 标记背后的含义是相同的为中现已弃用.ctc 文件格式，其实现是稍有不同。  
@@ -41,9 +36,9 @@ XML 命令表格 (.vsct) 文件描述的布局和外观的命令项对为 VSPack
   
 - 而.vsct 文件的支持 **/include**语句，.ctc 文件执行操作，它还具有一个新\<**导入 >** 元素。 其差异是， **/include**引入了**所有**的信息，但\<**导入 >** 将仅在名称中。  
   
-- 虽然.ctc 文件需要在其中定义预处理器指令的标头文件，其中一个不需要的.vsct 文件。 相反，将在指令放置在符号表中，位于**\<符号 >** 元素，位于.vsct 文件的底部。  
+- 虽然.ctc 文件需要在其中定义预处理器指令的标头文件，其中一个不需要的.vsct 文件。 相反，将在指令放置在符号表中，位于 **\<符号 >** 元素，位于.vsct 文件的底部。  
   
-- .vsct 文件功能**\<批注 >** 标记，它使您可以嵌入您喜欢，如说明或甚至图片的任何信息。  
+- .vsct 文件功能 **\<批注 >** 标记，它使您可以嵌入您喜欢，如说明或甚至图片的任何信息。  
   
 - 值存储为项的特性。  
   
@@ -71,7 +66,7 @@ XML 命令表格 (.vsct) 文件描述的布局和外观的命令项对为 VSPack
   
   新的编译器、 vsct.exe，编译.ctc 和.vsct 文件。 旧 ctc.exe 编译器，但是，将不识别也不编译.vsct 文件。  
   
-  Vsct.exe 编译器可用于将现有.cto 文件转换成一个.vsct 文件。 有关详细信息，请参阅[如何： 创建。从现有的 Vsct 文件。首席技术官文件](../../misc/how-to-create-a-dot-vsct-file-from-an-existing-dot-cto-file.md)。  
+  Vsct.exe 编译器可用于将现有.cto 文件转换成一个.vsct 文件。 有关详细信息，请参阅[如何：创建。从现有的 Vsct 文件。首席技术官文件](../../misc/how-to-create-a-dot-vsct-file-from-an-existing-dot-cto-file.md)。  
   
 ## <a name="the-vsct-file-elements"></a>.Vsct 文件元素  
  命令表具有以下层次结构和元素：  
@@ -105,19 +100,19 @@ XML 命令表格 (.vsct) 文件描述的布局和外观的命令项对为 VSPack
 ## <a name="vsct-file-design-guidelines"></a>.Vsct 文件设计指南  
  若要成功设计一个.vsct 文件，请遵循以下准则。  
   
--   可以仅为组中置于命令、 组可放置仅在菜单和菜单可以放置仅在组中。 仅菜单实际显示在 IDE 中，组和命令不。  
+- 可以仅为组中置于命令、 组可放置仅在菜单和菜单可以放置仅在组中。 仅菜单实际显示在 IDE 中，组和命令不。  
   
--   子菜单不能直接分配给一个菜单，但必须将分配给一个组，该组又分配给一个菜单。  
+- 子菜单不能直接分配给一个菜单，但必须将分配给一个组，该组又分配给一个菜单。  
   
--   命令、 子菜单和组可以分配给一个父级组或使用其定义的指令的父字段的菜单。  
+- 命令、 子菜单和组可以分配给一个父级组或使用其定义的指令的父字段的菜单。  
   
--   组织仅通过的指令中的父字段的命令表有一个明显的限制。 定义对象的指令可能只有一个父参数。  
+- 组织仅通过的指令中的父字段的命令表有一个明显的限制。 定义对象的指令可能只有一个父参数。  
   
--   重复使用的命令、 组或子菜单需要新的指令以创建对象的新实例有其自身使用`GUID:ID`对。  
+- 重复使用的命令、 组或子菜单需要新的指令以创建对象的新实例有其自身使用`GUID:ID`对。  
   
--   每个`GUID:ID`对都必须唯一。 重复使用，例如，已放在菜单上，工具栏上，或上下文菜单上的命令由处理<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>接口。  
+- 每个`GUID:ID`对都必须唯一。 重复使用，例如，已放在菜单上，工具栏上，或上下文菜单上的命令由处理<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>接口。  
   
--   命令和子菜单还可以分配给多个组和组可以分配给使用多个菜单[Commands 元素](../../extensibility/commands-element.md)。  
+- 命令和子菜单还可以分配给多个组和组可以分配给使用多个菜单[Commands 元素](../../extensibility/commands-element.md)。  
   
 ## <a name="vsct-file-notes"></a>.Vsct 文件说明  
  如果您同时对其进行编译，并将其放在本机附属 DLL 后，可以对.vsct 文件进行任何更改，则应运行**devenv.exe /setup /nosetupvstemplates**。 执行此操作将强制在实验性注册表以重新读取和描述的内部数据库中所指定的 VSPackage 资源[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]重新生成。  
@@ -130,4 +125,3 @@ XML 命令表格 (.vsct) 文件描述的布局和外观的命令项对为 VSPack
   
 ## <a name="see-also"></a>请参阅  
  [扩展菜单和命令](../../extensibility/extending-menus-and-commands.md)
-

@@ -2,22 +2,21 @@
 title: 工作流设计器-SendAndReceiveReply 模板设计器
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - System.ServiceModel.Activities.SendAndReceiveReply.UI
 - System.ServiceModel.Activities.ReceiveReply.UI
 ms.assetid: 818a8c84-6593-416d-b016-1d91b85ffb68
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e1bd37924a818fce26e3f3263aec691be66aee29
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e71615e90a23ad8ca6de6e01495de1ea8538a644
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53960480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809539"
 ---
 # <a name="sendandreceivereply-template-designer"></a>SendAndReceiveReply 模板设计器
 
@@ -42,7 +41,6 @@ ms.locfileid: "53960480"
 ### <a name="properties-of-receivereply"></a>ReceiveReply 的属性
 
 下表显示<xref:System.ServiceModel.Activities.ReceiveReply>属性并说明它们如何使用在设计器中。 可以在属性网格中编辑这些属性，一些可以在工作流设计器图面上进行编辑。
-
 
 | 属性名 | 必需 | 用法 |
 |-|----------|-|

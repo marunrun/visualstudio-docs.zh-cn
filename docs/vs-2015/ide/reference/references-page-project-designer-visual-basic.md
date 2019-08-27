@@ -1,14 +1,9 @@
 ---
 title: 项目设计器 ->“引用”页 (Visual Basic) | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - vb.ProjectPropertiesReference
 - vb.ProjectPropertiesUnusedReference
@@ -21,18 +16,17 @@ ms.assetid: 5a47c595-e084-401c-86e1-74e0bf74fd86
 caps.latest.revision: 40
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 0dabf5b84eb1adde1d6e579b7ec5ad6a6c443723
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 4cdda457fec0b98e6d90760376688727b9018f8b
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49859052"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65689841"
 ---
 # <a name="references-page-project-designer-visual-basic"></a>项目设计器 ->“引用”页 (Visual Basic)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 使用项目设计器的“引用”页可以管理项目中的引用、Web 引用和导入的命名空间。 项目可包含对 COM 组件、XML Web service、.NET Framework 类库或程序集以及其他类库的引用。 有关使用引用的详细信息，请参阅[管理项目中的引用](../../ide/managing-references-in-a-project.md)。  
   
  若要访问“引用”页，请在“解决方案资源管理器”中选择项目节点（而非“解决方案”节点）。 然后在菜单栏上依次选择“项目”、“属性”。 当“项目设计器”出现时，单击“引用”选项卡。  
@@ -49,12 +43,12 @@ ms.locfileid: "49859052"
  单击此按钮，访问“引用路径”对话框。  
   
 > [!NOTE]
->  当项目系统查找一个程序集引用时，系统通过在以下位置查找，按以下顺序解析引用：  
+> 当项目系统查找一个程序集引用时，系统通过在以下位置查找，按以下顺序解析引用：  
 > 
 > 1. 项目文件夹。 “显示所有文件”未生效时，解决方案资源管理器中会出现项目文件夹文件。  
->    2.  在“引用路径”对话框中指定的文件夹。  
->    3.  其文件出现在“添加引用”对话框中的文件夹。  
->    4.  项目的 obj 文件夹。 （向项目添加 COM 引用时，可将一个或多个程序集添加到项目的 obj 文件夹中。）  
+>    2. 在“引用路径”对话框中指定的文件夹。  
+>    3. 其文件出现在“添加引用”对话框中的文件夹。  
+>    4. 项目的 obj 文件夹。 （向项目添加 COM 引用时，可将一个或多个程序集添加到项目的 obj 文件夹中。）  
   
  **参考资料**  
  此列表显示项目中的所有引用，包括使用的或未使用的引用。  
@@ -86,17 +80,14 @@ ms.locfileid: "49859052"
  更新用户导入  
  在命名空间列表中选择用户指定的命名空间，在“导入的命名空间”框中键入要替换的名称，然后单击此按钮，更改为新的命名空间。 只有当所选的命名空间是通过使用“添加用户导入”按钮添加到列表中时，按钮才是活动的。 可以添加：  
   
--   类或命名空间，例如 <xref:System.Math?displayProperty=fullName>。  
+- 类或命名空间，例如 <xref:System.Math?displayProperty=fullName>。  
   
--   别名导入，例如 `VB=Microsoft.VisualBasic`。  
+- 别名导入，例如 `VB=Microsoft.VisualBasic`。  
   
--   XML 命名空间，例如 `<xmlns:xsl="http://www.w3.org/1999/XSL/Transform">`。  
+- XML 命名空间，例如 `<xmlns:xsl="http://www.w3.org/1999/XSL/Transform">`。  
   
 ## <a name="see-also"></a>请参阅  
- [NIB 如何：使用“添加引用”对话框添加或删除引用](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)   
- [如何：添加或移除导入的命名空间 (Visual Basic)](../../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md)   
- [NIB: Web 引用添加对话框](http://msdn.microsoft.com/en-us/bdf05776-c591-40af-bfd7-e1e2aa1e87b5)   
- [Imports 语句（XML 命名空间）](http://msdn.microsoft.com/library/1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4)
-
-
-
+ [NIB 如何：添加或删除引用通过使用添加引用对话框](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)   
+ [如何：添加或删除导入命名空间 (Visual Basic)](../../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md)   
+ [NIB：添加 Web 引用对话框](https://msdn.microsoft.com/bdf05776-c591-40af-bfd7-e1e2aa1e87b5)   
+ [Imports 语句（XML 命名空间）](https://msdn.microsoft.com/library/1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4)

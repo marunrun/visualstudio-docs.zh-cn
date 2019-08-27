@@ -2,7 +2,6 @@
 title: ISetNextStatement 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -12,12 +11,12 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ac2d6dd0da14be5a624cff0b55985770b8d70fdf
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: de300a7af8492e6431f6b8513cde84a15895ad96
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54344052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786303"
 ---
 # <a name="isetnextstatement-interface"></a>ISetNextStatement 接口
 此接口由解释器以允许进程调试管理器更新当前语句实现。 从堆栈帧对象中，实现并 PDM 获取此接口通过 QueryInterface。  

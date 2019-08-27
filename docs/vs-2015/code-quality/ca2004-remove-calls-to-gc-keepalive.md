@@ -1,14 +1,9 @@
 ---
-title: CA2004： 移除对 GC 的调用。KeepAlive |Microsoft Docs
-ms.custom: ''
+title: CA2004:移除对 GC 的调用。KeepAlive |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - RemoveCallsToGCKeepAlive
 - CA2004
@@ -20,14 +15,14 @@ caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 944862f742e96ef061c3c425bb28c0addcb4fb4e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: e75ab22212945e5a6b4465e1e1f64ca48a9daa4a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49829061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68189040"
 ---
-# <a name="ca2004-remove-calls-to-gckeepalive"></a>CA2004：移除对 GC.KeepAlive 的调用
+# <a name="ca2004-remove-calls-to-gckeepalive"></a>CA2004:移除对 GC.KeepAlive 的调用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -48,6 +43,3 @@ ms.locfileid: "49829061"
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  仅当不从技术上讲正确，将转换为可取消显示此警告`SafeHandle`在类中的使用情况。
-
-
-

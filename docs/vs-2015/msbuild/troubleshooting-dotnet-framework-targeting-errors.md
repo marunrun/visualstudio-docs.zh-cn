@@ -1,14 +1,9 @@
 ---
 title: .NET Framework 目标错误疑难解答 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: troubleshooting
 f1_keywords:
 - vs.FrameworkTargetingErrors
 - MSBuild.ResolveAssemblyReference.FailedToResolveReferenceBecausePrimaryAssemblyInExclusionList
@@ -22,18 +17,17 @@ ms.assetid: 830e3e45-9a93-4279-a249-75b84599aefb
 caps.latest.revision: 32
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: acadd858a1327380fc606bed36994ba0dda47169
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: ae55e34f929acca6c708dfc39477f3bd6546f53f
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49280548"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65703787"
 ---
 # <a name="troubleshooting-net-framework-targeting-errors"></a>.NET Framework 目标错误疑难解答
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 本主题介绍可能由引用问题导致的 MSBuild 错误以及解决这些错误的方法。  
   
 ## <a name="you-have-referenced-a-project-or-assembly-that-targets-a-different-version-of-the-net-framework"></a>已引用面向不同版本的 .NET Framework 的项目或程序集  
@@ -60,13 +54,10 @@ ms.locfileid: "49280548"
 ```  
   
 > [!NOTE]
->  关闭并重新打开项目后，还应重新生成该项目以确保所有引用正确解析。  
+> 关闭并重新打开项目后，还应重新生成该项目以确保所有引用正确解析。  
   
 ## <a name="see-also"></a>请参阅  
- [如何：面向某个版本的 .NET Framework](../ide/how-to-target-a-version-of-the-dotnet-framework.md)   
- [.NET Framework Client Profile](http://msdn.microsoft.com/library/f0219919-1f02-4588-8704-327a62fd91f1)   
+ [如何：面向.NET Framework 版本](../ide/how-to-target-a-version-of-the-dotnet-framework.md)   
+ [.NET Framework Client Profile](https://msdn.microsoft.com/library/f0219919-1f02-4588-8704-327a62fd91f1)   
  [面向特定的 .NET Framework 版本](../ide/targeting-a-specific-dotnet-framework-version.md)   
  [多定向](../msbuild/msbuild-multitargeting-overview.md)
-
-
-

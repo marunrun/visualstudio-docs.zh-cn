@@ -18,67 +18,67 @@ helpviewer_keywords:
 ms.assetid: c92b193b-054d-4923-834b-d4226a4c7a1a
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 784d4b6df24a5f4327a87c638b9624a0e4cec46c
-ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
-ms.translationtype: MTE95
+ms.openlocfilehash: 81ee263b3bb908daace4bf27f86cff710ae90684
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "53893592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63406795"
 ---
 # <a name="localize-clickonce-applications"></a>本地化 ClickOnce 应用程序
-本地化是使你的应用程序适用于特定区域性的过程。 此过程涉及使用正确的日期和货币格式、调整窗体上控件的大小以及根据需要从右到左镜像处理控件，从而将用户界面 (UI) 文本转换为特定于区域的语言。  
-  
- 对应用程序进行本地化将创建一个或多个附属程序集。 每个程序集均包含用户界面字符串、图像和其他特定于给定区域性的资源。 （应用程序的主可执行文件包含用于应用程序的默认区域性的字符串。）  
-  
- 本主题介绍为其他区域性部署 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序的三种方法：  
-  
--   在单个部署中包括所有附属程序集。  
-  
--   为每种区域性生成一个部署，且每个部署中均包括单个附属程序集。  
-  
--   按需下载附属程序集。  
-  
-## <a name="including-all-satellite-assemblies-in-a-deployment"></a>在一个部署中包括所有附属程序集  
- 与发布多个 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署不同，你可以发布单个包含所有附属程序集的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署。  
-  
- 此方法在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中为默认。 若要在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中使用此方法，则无需进行任何其他工作。  
-  
- 若要与 MageUI.exe 一起使用此方法，则必须在 MageUI.exe 中将应用程序的区域性设置为“非特定语言”。 接下来，必须手动将所有附属程序集包括在你的部署中。 在 MageUI.exe 中，可以通过使用应用程序清单“文件”选项卡上的“填充”按钮添加附属程序集。  
-  
- 此方法的好处在于它可创建单个部署，并简化已本地化的部署。 在运行时，将根据用户 Windows 操作系统的默认区域性使用适当的附属程序集。 此方法的缺点为只要客户端计算机上安装或更新了应用程序，此方法就会下载所有附属程序集。 如果你的应用程序具有大量字符串，或客户的网络连接速度慢，则此过程在应用程序更新期间会影响性能。  
-  
+本地化是使你的应用程序适用于特定区域性的过程。 此过程涉及使用正确的日期和货币格式、调整窗体上控件的大小以及根据需要从右到左镜像处理控件，从而将用户界面 (UI) 文本转换为特定于区域的语言。
+
+ 对应用程序进行本地化将创建一个或多个附属程序集。 每个程序集均包含用户界面字符串、图像和其他特定于给定区域性的资源。 （应用程序的主可执行文件包含用于应用程序的默认区域性的字符串。）
+
+ 本主题介绍为其他区域性部署 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序的三种方法：
+
+- 在单个部署中包括所有附属程序集。
+
+- 为每种区域性生成一个部署，且每个部署中均包括单个附属程序集。
+
+- 按需下载附属程序集。
+
+## <a name="including-all-satellite-assemblies-in-a-deployment"></a>在一个部署中包括所有附属程序集
+ 与发布多个 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署不同，你可以发布单个包含所有附属程序集的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署。
+
+ 此方法在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中为默认。 若要在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中使用此方法，则无需进行任何其他工作。
+
+ 若要与 MageUI.exe 一起使用此方法，则必须在 MageUI.exe 中将应用程序的区域性设置为“非特定语言”。 接下来，必须手动将所有附属程序集包括在你的部署中。 在 MageUI.exe 中，可以通过使用应用程序清单“文件”选项卡上的“填充”按钮添加附属程序集。
+
+ 此方法的好处在于它可创建单个部署，并简化已本地化的部署。 在运行时，将根据用户 Windows 操作系统的默认区域性使用适当的附属程序集。 此方法的缺点为只要客户端计算机上安装或更新了应用程序，此方法就会下载所有附属程序集。 如果你的应用程序具有大量字符串，或客户的网络连接速度慢，则此过程在应用程序更新期间会影响性能。
+
 > [!NOTE]
->  此方法假定你的应用程序将自动调整控件的高度、宽度和位置以适应不同区域性中不同的文本字符串大小。 Windows 窗体包含各种控件和技术，这些控件和技术使你可以设计更易于本地化的窗体，其中包括 <xref:System.Windows.Forms.FlowLayoutPanel> 和 <xref:System.Windows.Forms.TableLayoutPanel> 控件以及 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性。  另请参阅[如何：支持对使用 AutoSize 和 TableLayoutPanel 控件的 Windows 窗体的本地化](/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))。  
-  
-## <a name="generate-one-deployment-for-each-culture"></a>为每种区域性生成一个部署  
- 在此部署策略中，可以生成多个部署。 在每个部署中，仅包括特定区域性所需的附属程序集，并将该部署标记为特定于该区域性。  
-  
- 若要在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中使用此方法，请在“发布”选项卡上将“发布语言”属性设置为所需的区域。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 将自动包括所选区域所需的附属程序集，并将排除部署中的所有其他附属程序集。  
-  
- 可通过在 Microsoft [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] 中使用 MageUI.exe 工具实现相同的操作。 使用应用程序清单“文件”选项卡上的“填充”按钮排除应用程序目录中的所有其他附属程序集，然后为 MageUI.exe 中的部署清单设置“名称”选项卡上的“区域性”字段。 这些步骤不仅包括正确的附属程序集，同时也将部署清单中 `assemblyIdentity` 元素上的 `language` 属性设置为相应的区域性。  
-  
- 发布应用程序后，必须为应用程序支持的每种其他区域性重复此步骤。 必须确保每次发布到不同的 Web 服务器目录或文件共享目录，因为每个应用程序清单将引用不同的附属程序集，并且每个部署清单将具有不同的 `language` 属性值。  
-  
-## <a name="download-satellite-assemblies-on-demand"></a>按需下载附属程序集  
- 如果决定在单个部署中包括所有附属程序集，则可通过使用按需下载来提高性能，这使你能够将程序集标记为可选。 安装或更新应用程序时，将不会下载已标记的程序集。 可通过调用 <xref:System.Deployment.Application.ApplicationDeployment> 类上的 <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroup%2A> 方法，根据需要安装程序集。  
-  
- 按需下载附属程序集与按需下载其他类型的程序集略有不同。 有关如何启用此方案中使用的详细信息和代码示例[!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)]工具[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]，请参阅[演练： 使用 ClickOnce 部署 API 按需下载附属程序集](../deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api.md)。  
-  
- 还可以在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中启用此方案。  另请参阅[演练： 使用 ClickOnce 部署 API 使用设计器按需下载附属程序集](/previous-versions/visualstudio/visual-studio-2012/ms366788(v=vs.110))或[演练： 使用 ClickOnce 部署 API 按需下载附属程序集使用设计器](/previous-versions/visualstudio/visual-studio-2013/ms366788(v=vs.120))。  
-  
-## <a name="testing-localized-clickonce-applications-before-deployment"></a>在部署前测试已本地化的 ClickOnce 应用程序  
- 仅当应用程序主线程的 <xref:System.Threading.Thread.CurrentUICulture%2A> 属性设置为附属程序集的区域性时，才将附属程序集用于 Windows 窗体应用程序。 本地市场中的客户可能已经在运行 Windows 的本地化版本，并且已将区域性设置为相应默认值。  
-  
- 向客户提供应用程序前，你有如下三个选项，供测试已本地化的部署：  
-  
-- 可在 Windows 相应的本地化版本上运行自己的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序。  
-  
-- 可在应用程序中以编程方式设置 <xref:System.Threading.Thread.CurrentUICulture%2A> 属性。 （必须在调用 <xref:System.Windows.Forms.Application.Run%2A> 方法前设置该属性。）  
-  
-## <a name="see-also"></a>请参阅  
- [\<assemblyIdentity > 元素](../deployment/assemblyidentity-element-clickonce-deployment.md)   
- [ClickOnce 安全性和部署](../deployment/clickonce-security-and-deployment.md)   
- [全球化 Windows 窗体](/dotnet/framework/winforms/advanced/globalizing-windows-forms)
+> 此方法假定你的应用程序将自动调整控件的高度、宽度和位置以适应不同区域性中不同的文本字符串大小。 Windows 窗体包含各种控件和技术，这些控件和技术使你可以设计更易于本地化的窗体，其中包括 <xref:System.Windows.Forms.FlowLayoutPanel> 和 <xref:System.Windows.Forms.TableLayoutPanel> 控件以及 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性。  另请参阅[如何：支持对使用 AutoSize 和 TableLayoutPanel 控件的 Windows 窗体的本地化](/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))。
+
+## <a name="generate-one-deployment-for-each-culture"></a>为每种区域性生成一个部署
+ 在此部署策略中，可以生成多个部署。 在每个部署中，仅包括特定区域性所需的附属程序集，并将该部署标记为特定于该区域性。
+
+ 若要在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中使用此方法，请在“发布”选项卡上将“发布语言”属性设置为所需的区域。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 将自动包括所选区域所需的附属程序集，并将排除部署中的所有其他附属程序集。
+
+ 可通过在 Microsoft [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] 中使用 MageUI.exe 工具实现相同的操作。 使用应用程序清单“文件”选项卡上的“填充”按钮排除应用程序目录中的所有其他附属程序集，然后为 MageUI.exe 中的部署清单设置“名称”选项卡上的“区域性”字段。 这些步骤不仅包括正确的附属程序集，同时也将部署清单中 `assemblyIdentity` 元素上的 `language` 属性设置为相应的区域性。
+
+ 发布应用程序后，必须为应用程序支持的每种其他区域性重复此步骤。 必须确保每次发布到不同的 Web 服务器目录或文件共享目录，因为每个应用程序清单将引用不同的附属程序集，并且每个部署清单将具有不同的 `language` 属性值。
+
+## <a name="download-satellite-assemblies-on-demand"></a>按需下载附属程序集
+ 如果决定在单个部署中包括所有附属程序集，则可通过使用按需下载来提高性能，这使你能够将程序集标记为可选。 安装或更新应用程序时，将不会下载已标记的程序集。 可通过调用 <xref:System.Deployment.Application.ApplicationDeployment> 类上的 <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroup%2A> 方法，根据需要安装程序集。
+
+ 按需下载附属程序集与按需下载其他类型的程序集略有不同。 有关如何启用此方案中使用的详细信息和代码示例[!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)]工具[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]，请参阅[演练：下载附属程序集使用 ClickOnce 部署 API 按需](../deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api.md)。
+
+ 还可以在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中启用此方案。  另请参阅[演练：下载按需使用 ClickOnce 部署 API 使用设计器的附属程序集](/previous-versions/visualstudio/visual-studio-2012/ms366788(v=vs.110))或[演练：下载附属程序集使用 ClickOnce 部署使用设计器的 API 按需](/previous-versions/visualstudio/visual-studio-2013/ms366788(v=vs.120))。
+
+## <a name="testing-localized-clickonce-applications-before-deployment"></a>在部署前测试已本地化的 ClickOnce 应用程序
+ 仅当应用程序主线程的 <xref:System.Threading.Thread.CurrentUICulture%2A> 属性设置为附属程序集的区域性时，才将附属程序集用于 Windows 窗体应用程序。 本地市场中的客户可能已经在运行 Windows 的本地化版本，并且已将区域性设置为相应默认值。
+
+ 向客户提供应用程序前，你有如下三个选项，供测试已本地化的部署：
+
+- 可在 Windows 相应的本地化版本上运行自己的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序。
+
+- 可在应用程序中以编程方式设置 <xref:System.Threading.Thread.CurrentUICulture%2A> 属性。 （必须在调用 <xref:System.Windows.Forms.Application.Run%2A> 方法前设置该属性。）
+
+## <a name="see-also"></a>请参阅
+- [\<assemblyIdentity > 元素](../deployment/assemblyidentity-element-clickonce-deployment.md)
+- [ClickOnce 安全和部署](../deployment/clickonce-security-and-deployment.md)
+- [全球化 Windows 窗体](/dotnet/framework/winforms/advanced/globalizing-windows-forms)

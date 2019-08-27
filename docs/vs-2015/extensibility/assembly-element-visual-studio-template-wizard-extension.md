@@ -1,14 +1,9 @@
 ---
 title: Assembly 元素 （Visual Studio 模板向导扩展） |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#Assembly
 helpviewer_keywords:
@@ -17,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 0c3dc280-1753-4ea2-a13c-d31d13b935b2
 caps.latest.revision: 13
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 556906747d086d6ec3193c58811806bf72e4ff35
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: d947c0f2996bcaaeff6c6dbf084151237f1fdb3d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51741217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68184730"
 ---
 # <a name="assembly-element-visual-studio-template-wizard-extension"></a>Assembly 元素（Visual Studio 模板向导扩展）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,7 +26,7 @@ ms.locfileid: "51741217"
 指定的名称或实现的程序集的强名称`IWizard`接口。  
   
  \<VSTemplate >  
-\<WizardExtension >  
+\<WizardExtension>  
 \<程序集 >  
   
 ## <a name="syntax"></a>语法  
@@ -58,7 +53,7 @@ ms.locfileid: "51741217"
 ## <a name="text-value"></a>文本值  
  需要一个文本值。  
   
- 此文本指定实现的程序集`IWizard`接口。 此程序集名称必须指定为完整的程序集名称。 例如 `MyAssembly, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11dd0a3a, Custom = null`。  
+ 此文本指定实现的程序集`IWizard`接口。 此程序集名称必须指定为完整的程序集名称。 例如， `MyAssembly, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11dd0a3a, Custom = null` 。  
   
 ## <a name="remarks"></a>备注  
  `Assembly` 是 `WizardExtension` 的必需子元素。  
@@ -98,4 +93,3 @@ ms.locfileid: "51741217"
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)   
  [如何：使用向导来处理项目模板](../extensibility/how-to-use-wizards-with-project-templates.md)
-

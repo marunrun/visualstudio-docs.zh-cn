@@ -1,14 +1,9 @@
 ---
 title: 产品和包架构引用 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: reference
 f1_keywords:
 - MSBuild.GenerateBootstrapper.CircularIncludes
 - MSBuild.ResolveManifestFiles.PublishFileNotFound
@@ -30,13 +25,13 @@ ms.assetid: 5a74878f-b896-4cca-b968-98d00fe78fb0
 caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: 6fb70a1dff0f166aabeaf0facdd4b031f3d4fb6e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 2fe0d270593ef526405b0be4cde8bc5da10af413
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49271021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68188953"
 ---
 # <a name="product-and-package-schema-reference"></a>产品和包架构引用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -47,13 +42,13 @@ ms.locfileid: "49271021"
   
 |元素|描述|特性|  
 |-------------|-----------------|----------------|  
-|[\<产品 > 元素](../deployment/product-element-bootstrapper.md)|所需的产品文件的顶级元素。|无|  
-|[\<包 > 元素](../deployment/package-element-bootstrapper.md)|必需的包文件的顶级元素。|`Culture`<br /><br /> `Name`<br /><br /> `EULA`|  
-|[\<RelatedProducts > 元素](../deployment/relatedproducts-element-bootstrapper.md)|产品文件的可选元素。 中的其他产品的此产品安装或依赖于。|无|  
-|[\<InstallChecks > 元素](../deployment/installchecks-element-bootstrapper.md)|必需的元素。 列出的依赖项检查过程中要执行本地计算机上安装。|无|  
-|[\<命令 > 元素](../deployment/commands-element-bootstrapper.md)|必需的元素。  执行一个或多个安装检查，如中所述`InstallChecks`，表示要安装的包应检查失败。|无|  
-|[\<PackageFiles > 元素](../deployment/packagefiles-element-bootstrapper.md)|必需的元素。 列出可能情况下此安装过程中安装的包。|无|  
-|[\<字符串 > 元素](../deployment/strings-element-bootstrapper.md)|必需的元素。 存储的本地化版本的产品名称和错误字符串。|无|  
+|[\<Product> 元素](../deployment/product-element-bootstrapper.md)|所需的产品文件的顶级元素。|无|  
+|[\<Package> 元素](../deployment/package-element-bootstrapper.md)|必需的包文件的顶级元素。|`Culture`<br /><br /> `Name`<br /><br /> `EULA`|  
+|[\<RelatedProducts> 元素](../deployment/relatedproducts-element-bootstrapper.md)|产品文件的可选元素。 中的其他产品的此产品安装或依赖于。|无|  
+|[\<InstallChecks> 元素](../deployment/installchecks-element-bootstrapper.md)|必需的元素。 列出的依赖项检查过程中要执行本地计算机上安装。|无|  
+|[\<Commands> 元素](../deployment/commands-element-bootstrapper.md)|必需的元素。  执行一个或多个安装检查，如中所述`InstallChecks`，表示要安装的包应检查失败。|无|  
+|[\<PackageFiles> 元素](../deployment/packagefiles-element-bootstrapper.md)|必需的元素。 列出可能情况下此安装过程中安装的包。|无|  
+|[\<Strings> 元素](../deployment/strings-element-bootstrapper.md)|必需的元素。 存储的本地化版本的产品名称和错误字符串。|None|  
   
 ## <a name="remarks"></a>备注  
  包架构供 Setup.exe，包含其自己的小硬编码的逻辑的 MS 生成启动任务生成的存根 （stub） 程序。 该架构可以促进安装过程的各个方面。  
@@ -168,6 +163,3 @@ ms.locfileid: "49271021"
 ## <a name="see-also"></a>请参阅  
  [ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md)   
  [ndptecclick](../deployment/clickonce-application-manifest.md)
-
-
-

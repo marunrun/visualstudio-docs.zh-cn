@@ -1,28 +1,28 @@
 ---
 title: “高级生成设置”对话框 (C#)
 ms.date: 06/20/2017
-ms.prod: visual-studio-dev15
+ms.technology: vs-ide-compile
 ms.topic: reference
 f1_keywords:
 - cs.AdvancedBuildSettings
 helpviewer_keywords:
 - Build options [C#], advanced
 ms.assetid: 141f2dee-1563-4ce6-ba37-32920b082519
-author: gewarren
-ms.author: gewarren
-manager: douge
+author: ghogen
+ms.author: ghogen
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 83dc69bb3856a7fe98e35cf66b0a6325c97a0651
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 306cecc6bdc194e0022c056ac0a87e2ab063d20b
+ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53930130"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68461886"
 ---
 # <a name="advanced-build-settings-dialog-box-c"></a>“高级生成设置”对话框 (C#)
 
-使用“项目设计器”的“高级生成设置”对话框可指定项目的高级生成配置属性。 此对话框仅适用于 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 项目。
+使用“项目设计器”的“高级生成设置”对话框可指定项目的高级生成配置属性   。 此对话框仅适用于 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 项目。
 
 ## <a name="general"></a>常规
 
@@ -46,7 +46,7 @@ ms.locfileid: "53930130"
 
 **内部编译器错误报告**
 
-指定是否向 Microsoft 报告编译器错误。 如果设置为“提示”（默认），则在发生内部编译器错误时将收到提示，可以选择向 Microsoft 发送电子版错误报告。 如果设置为“发送”，则将自动发送错误报告。 如果设置为“队列”，则错误报告将排入队列。 如果设置为“无”，将仅在编译器的文本输出中报告错误。 有关详细信息，请参阅 [/errorreport（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/errorreport-compiler-option)。
+指定是否向 Microsoft 报告编译器错误。 如果设置为“提示”  （默认），则在发生内部编译器错误时将收到提示，可以选择向 Microsoft 发送电子版错误报告。 如果设置为“发送”  ，则将自动发送错误报告。 如果设置为“队列”  ，则错误报告将排入队列。 如果设置为“无”  ，将仅在编译器的文本输出中报告错误。 有关详细信息，请参阅 [/errorreport（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/errorreport-compiler-option)。
 
 **检查运算上溢/下溢**
 
@@ -56,7 +56,7 @@ ms.locfileid: "53930130"
 
 指定是否将 mscorlib.dll 导入程序，同时定义整个 <xref:System> 命名空间。 如果想要定义或创建自己的 <xref:System> 命名空间和对象，请选中此框。 有关详细信息，请参阅 [/nostdlib（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/nostdlib-compiler-option)。
 
-## <a name="output"></a>输出
+## <a name="output"></a>Output
 
 使用以下选项可以指定高级输出选项。
 
@@ -76,7 +76,7 @@ ms.locfileid: "53930130"
 
    允许在调试器中启动程序时进行源代码调试，但仅在正在运行的程序附加到调试器时才显示汇编程序。
 
--  **portable**
+- **portable**
 
    生成 .PDB 文件，这是一种未特定于任何平台的可移植符号文件，可提供其他工具（尤其是调试器）、主可执行文件内容的相关信息及其生成方式。 有关详细信息，请参阅 [Portable PDB](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md)（可移植 PDB）。
 
@@ -92,9 +92,9 @@ ms.locfileid: "53930130"
 
 **库基址**
 
-指定要加载 DLL 的首选基址。 DLL 的默认基址由 [!INCLUDE[dnprdnshort](../../code-quality/includes/dnprdnshort_md.md)] 公共语言运行时设置。 有关详细信息，请参阅 [/baseaddress（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/baseaddress-compiler-option)。
+指定要加载 DLL 的首选基址。 DLL 的默认基址由 .NET Framework 公共语言运行时设置。 有关详细信息，请参阅 [/baseaddress（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/baseaddress-compiler-option)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编译器选项](/dotnet/csharp/language-reference/compiler-options/index)
 - [“项目设计器”->“生成”页 (C#)](../../ide/reference/build-page-project-designer-csharp.md)

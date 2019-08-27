@@ -1,25 +1,20 @@
 ---
 title: Attach | Microsoft 文档
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 79614283-6733-4592-a53a-d428052271ad
 caps.latest.revision: 17
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 136ee79c8fc7a3c6d627d186cb2f0dd0266b7a42
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 6b9adb5a0a47c1ee98e0e390cfaf8b3a6dc78146
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51727347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63433798"
 ---
 # <a name="attach"></a>Attach
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,7 +24,7 @@ VSPerfCmd.exe“Attach”选项开始对进程 ID (PID) 指定的运行过程进
  若要使用“Attach”选项，必须在“Start”选项中指定“Sample”方法。  
   
 > [!NOTE]
->  如果已使用“Crosssession”选项指定“Start”选项，则对 VSPerfCmd /Attach 或 VSPerfCmd /Detach 的任何调用也必须指定“Crosssession”。  
+> 如果已使用“Crosssession”选项指定“Start”选项，则对 VSPerfCmd /Attach 或 VSPerfCmd /Detach 的任何调用也必须指定“Crosssession”。  
   
 ## <a name="syntax"></a>语法  
   
@@ -65,13 +60,13 @@ VSPerfCmd.exe /Attach:ProcessID [Options]
  Timer[:`Cycles`]PF[:`Events`]Sys[:Events]Counter[:`Name`,`Reload`,`FriendlyName`]  
  指定采样间隔的数量和类型。  
   
--   Timer - 每 `Cycles` 个处理器时钟周期采样一次。 如果未指定 `Cycles`，则使用 10,000,000 个周期。  
+- Timer - 每 `Cycles` 个处理器时钟周期采样一次。 如果未指定 `Cycles`，则使用 10,000,000 个周期。  
   
--   PF - 每 `Events` 个页面错误采样一次。 如果未指定 `Events`，则使用 10 个页面错误。  
+- PF - 每 `Events` 个页面错误采样一次。 如果未指定 `Events`，则使用 10 个页面错误。  
   
--   Sys - 每 `Events` 次操作系统调用采样一次。 如果未指定 `Events`，则使用 10 次系统调用。  
+- Sys - 每 `Events` 次操作系统调用采样一次。 如果未指定 `Events`，则使用 10 次系统调用。  
   
--   Counter - 每 `Reload` 个 `Name` 所指定的 CPU 性能计数器采样一次。 或者，`FriendlyName` 可指定一个字符串，将其用作探查器报告中的列标头。  
+- Counter - 每 `Reload` 个 `Name` 所指定的 CPU 性能计数器采样一次。 或者，`FriendlyName` 可指定一个字符串，将其用作探查器报告中的列标头。  
   
 ## <a name="example"></a>示例  
  此示例演示如何附加到进程 ID 为 12345 的正在运行的应用程序实例。  
@@ -86,6 +81,3 @@ VSPerfCmd.exe /Attach:12345
  [分析独立应用程序](../profiling/command-line-profiling-of-stand-alone-applications.md)   
  [分析 ASP.NET Web 应用程序](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
  [分析服务](../profiling/command-line-profiling-of-services.md)
-
-
-

@@ -1,25 +1,20 @@
 ---
-title: 演练： 调试因着色引起的呈现错误 |Microsoft Docs
-ms.custom: ''
+title: 演练：调试因着色引起的呈现错误 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 01875b05-cc7b-4add-afba-f2b776f86974
 caps.latest.revision: 17
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 5d65c3d2525533e5881b4626941e43fb302ce2aa
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: b4c158c4ce6762b69f73a55915cc459f84cd7fff
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51733199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68183582"
 ---
 # <a name="walkthrough-debugging-rendering-errors-due-to-shading"></a>演练：调试因着色引起的呈现错误
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,13 +23,13 @@ ms.locfileid: "51733199"
   
  本演练演示了如何：  
   
--   检查图形日志文档来标识显示问题的像素。  
+- 检查图形日志文档来标识显示问题的像素。  
   
--   使用“图形像素历史记录”  窗口进一步检查像素状态。  
+- 使用“图形像素历史记录”  窗口进一步检查像素状态。  
   
--   使用“HLSL 调试器”  检查像素和顶点着色器。  
+- 使用“HLSL 调试器”  检查像素和顶点着色器。  
   
-## <a name="scenario"></a>方案  
+## <a name="scenario"></a>应用场景  
  当顶点着色器向像素着色器传递不正确或不完整的信息时，通常会在对象上错误着色。  
   
  在此方案中，你最近向应用添加了对象，并添加了用于转换该对象并为其提供独特外观的新顶点和像素着色器。 在测试过程中运行该应用时，该对象将呈现为纯黑色。 通过使用“图形诊断”，捕获图形日志的问题，以便调试该应用。 应用中的问题如下所示：  
@@ -46,9 +41,9 @@ ms.locfileid: "51733199"
   
 #### <a name="to-examine-a-frame-in-a-graphics-log"></a>检查图形日志中的帧  
   
-1. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中，加载包含显示缺少模型的帧的图形日志。 新的图形日志文档窗口将显示在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中。 此窗口的顶部是所选帧的呈现目标输出。 底部是“帧列表” ，以缩略图的形式显示每个捕获的帧。  
+1. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中，加载包含显示缺少模型的帧的图形日志。 新的图形日志文档窗口将显示在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中。 此窗口的顶部是所选帧的呈现目标输出。 底部是“帧列表”  ，以缩略图的形式显示每个捕获的帧。  
   
-2. 在“帧列表” 中，选择其中对象外观不正确的帧。 更新呈现目标以反映所选的帧。 在此方案中，图形日志文档窗口如下所示：  
+2. 在“帧列表”  中，选择其中对象外观不正确的帧。 更新呈现目标以反映所选的帧。 在此方案中，图形日志文档窗口如下所示：  
   
     ![图形日志文档在 Visual Studio 中。](../debugger/media/gfx-diag-demo-render-error-shader-step-1.png "gfx_diag_demo_render_error_shader_step_1")  
   
@@ -56,7 +51,7 @@ ms.locfileid: "51733199"
   
 #### <a name="to-examine-a-pixel"></a>检查像素  
   
-1. 打开“图形像素历史记录”  窗口。 在“图形诊断”  工具栏上，选择“像素历史记录” 。  
+1. 打开“图形像素历史记录”  窗口。 在“图形诊断”  工具栏上，选择“像素历史记录”  。  
   
 2. 选择要检查的像素。 在图形日志文档窗口上，选择未正确着色的对象上的某个像素：  
   
@@ -72,7 +67,7 @@ ms.locfileid: "51733199"
   
 #### <a name="to-examine-the-pixel-shader"></a>检查像素着色器  
   
-1. 开始调试像素着色器。 在“图形像素历史记录”  窗口中，在该对象的基元之下“像素着色器” 旁，选择“启动调试”  按钮。  
+1. 开始调试像素着色器。 在“图形像素历史记录”  窗口中，在该对象的基元之下“像素着色器”  旁，选择“启动调试”  按钮。  
   
 2. 在此方案中，由于像素着色器仅传递来自顶点着色器的颜色，因此很容易注意到像素着色器并非问题根源。  
   
@@ -86,11 +81,11 @@ ms.locfileid: "51733199"
   
 #### <a name="to-examine-the-vertex-shader"></a>检查顶点着色器  
   
-1. 开始调试顶点着色器。 在“图形像素历史记录”  窗口中，在该对象的基元之下“顶点着色器” 旁，选择“启动调试”  按钮。  
+1. 开始调试顶点着色器。 在“图形像素历史记录”  窗口中，在该对象的基元之下“顶点着色器”  旁，选择“启动调试”  按钮。  
   
 2. 找到顶点着色器的输出结构，它是像素着色器的输入。 在这种情况下，此结构名为 `output`。 检查顶点着色器代码，您会发现 `color` 结构的 `output` 成员已显式设置为完全不透明黑，可能是某人进行调试所产生的结果。  
   
-3. 确认绝不会从输入结构中复制颜色成员。 由于 `output.color` 的值仅在返回 `output` 结构之前设置为完全不透明黑，因此确保在上一行上不正确初始化 `output` 的值是个好主意。 在您看到 `output.color` 的值时，逐句通过顶点着色器代码，直至到达将 `output.color` 设置为黑色的行。 请注意，在 `output.color` 设置为黑色之前，其值不进行初始化。 这可确认应修改而不是删除将 `output.color` 设置为黑色的代码行。  
+3. 确认绝不会从输入结构中复制颜色成员。 由于 `output.color` 的值仅在返回 `output` 结构之前设置为完全不透明黑，因此确保在上一行上不正确初始化 `output` 的值是个好主意。 在您看到 `output.color` 的值时，逐句通过顶点着色器代码，直至到达将 `output.color`设置为黑色的行。 请注意，在 `output.color` 设置为黑色之前，其值不进行初始化。 这可确认应修改而不是删除将 `output.color` 设置为黑色的代码行。  
   
     !["Output.color"的值为黑色。](../debugger/media/gfx-diag-demo-render-error-shader-step-7.png "gfx_diag_demo_render_error_shader_step_7")  
   
@@ -113,6 +108,3 @@ output.color = input.color;
  修复代码后，重新生成并运行应用以查明呈现的问题是否已解决。  
   
  ![使用的颜色正确呈现的对象。](../debugger/media/gfx-diag-demo-render-error-shader-resolution.png "gfx_diag_demo_render_error_shader_resolution")
-
-
-

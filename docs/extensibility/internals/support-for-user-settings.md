@@ -7,51 +7,50 @@ helpviewer_keywords:
 - user settings [Visual Studio SDK], registering persistence support
 - persistence, registering settings
 ms.assetid: ad9beac3-4f8d-4093-ad0e-6fb00444a709
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d4394d101ffb158392d8c8e3ed1c9365b6c68ef7
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 90f04d5657fb6f680139ee6de5a47625304b5dbd
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53930903"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66309761"
 ---
 # <a name="support-for-user-settings"></a>支持用户设置
-VSPackage 可以定义一个或多个设置类别，是一组保留在用户选择时的状态变量**导入/导出设置**命令**工具**菜单。 若要启用此持久性，您使用的设置 Api 中[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]。  
+VSPackage 可以定义一个或多个设置类别，是一组保留在用户选择时的状态变量**导入/导出设置**命令**工具**菜单。 若要启用此持久性，您使用的设置 Api 中[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]。
 
- 自定义设置点和一个 GUID 称为一个注册表项定义的 VSPackage 的设置类别。 VSPackage 可以支持多个设置类别，每个定义的自定义设置点。  
+ 自定义设置点和一个 GUID 称为一个注册表项定义的 VSPackage 的设置类别。 VSPackage 可以支持多个设置类别，每个定义的自定义设置点。
 
--   实现基于互操作程序集的设置 (使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsUserSettings>接口) 应通过编辑注册表，或者使用注册器脚本 （.rgs 文件） 创建自定义设置点。 有关详细信息，请参阅 [Creating Registrar Scripts](/cpp/atl/creating-registrar-scripts)。  
+- 实现基于互操作程序集的设置 (使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsUserSettings>接口) 应通过编辑注册表，或者使用注册器脚本 （.rgs 文件） 创建自定义设置点。 有关详细信息，请参阅 [Creating Registrar Scripts](/cpp/atl/creating-registrar-scripts)。
 
--   使用托管包框架 (MPF) 的代码应通过将附加创建自定义设置点<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>到每个自定义设置点的 VSPackage。  
+- 使用托管包框架 (MPF) 的代码应通过将附加创建自定义设置点<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>到每个自定义设置点的 VSPackage。
 
-     如果单个 VSPackage 支持多个自定义设置点，由一个单独的类，实现每个自定义设置点并且每个注册的唯一实例<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>类。 因此，实现类设置可以支持多个设置类别。  
+     如果单个 VSPackage 支持多个自定义设置点，由一个单独的类，实现每个自定义设置点并且每个注册的唯一实例<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>类。 因此，实现类设置可以支持多个设置类别。
 
-## <a name="custom-settings-point-registry-entry-details"></a>自定义设置点注册表项的详细信息  
- 在以下位置的注册表条目中创建自定义设置点：HKLM\Software\Microsoft\VisualStudio\\*\<版本 >* \UserSettings\\`<CSPName>`，其中`<CSPName>`是 VSPackage 支持的自定义设置点的名称并*\<版本 >* 是版本[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]，例如 8.0。  
+## <a name="custom-settings-point-registry-entry-details"></a>自定义设置点注册表项的详细信息
+ 在以下位置的注册表条目中创建自定义设置点：HKLM\Software\Microsoft\VisualStudio\\ *\<版本 >* \UserSettings\\`<CSPName>`，其中`<CSPName>`是 VSPackage 支持的自定义设置点的名称并 *\<版本 >* 是版本[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]，例如 8.0。
 
 > [!NOTE]
->  根路径的 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*\<版本 >* 可以重写使用备用根时[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]集成的开发环境 (IDE) 是初始化。 有关详细信息，请参阅[命令行开关](../../extensibility/command-line-switches-visual-studio-sdk.md)。  
+> 根路径的 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ *\<版本 >* 可以重写使用备用根时[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]集成的开发环境 (IDE) 是初始化。 有关详细信息，请参阅[命令行开关](../../extensibility/command-line-switches-visual-studio-sdk.md)。
 
- 注册表项的结构如下图所示：  
+ 注册表项的结构如下图所示：
 
- HKLM\Software\Microsoft\VisualStudio\\*\<版本 >* \UserSettings\  
+ HKLM\Software\Microsoft\VisualStudio\\ *\<Version>* \UserSettings\
 
- `<CSPName`> = '#12345' s  
+ `<CSPName`>= s '#12345'
 
- 包 = ' {XXXXXX XXXX XXXX XXXX XXXXXXXXX}  
+ 包 = ' {XXXXXX XXXX XXXX XXXX XXXXXXXXX}
 
- 类别 = ' {YYYYYY YYYY YYYY YYYY YYYYYYYYY}  
+ Category = '{YYYYYY YYYY YYYY YYYY YYYYYYYYY}'
 
- ResourcePackage = ' {ZZZZZZ ZZZZ ZZZZ ZZZZ ZZZZZZZZZ}  
+ ResourcePackage = '{ZZZZZZ ZZZZ ZZZZ ZZZZ ZZZZZZZZZ}'
 
- AlternateParent = CategoryName  
+ AlternateParent = CategoryName
 
-
-| name | 类型 | 数据 | 描述 |
+| 名称 | 类型 | 数据 | 描述 |
 |-----------------|--------| - | - |
 | (默认) | REG_SZ | 自定义设置点的名称 | 密钥的名称， `<CSPName`>，是自定义设置点的未本地化的名称。<br /><br /> 为基于 MPF 实现，该密钥的名称获取通过组合`categoryName`并`objectName`的参数<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>构造函数到`categoryName_objectName`。<br /><br /> 键可以是空的也可以包含在附属 DLL 中的本地化字符串的引用的 ID。 此值从获取`objectNameResourceID`自变量<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>构造函数。 |
 | package | REG_SZ | GUID | 实现自定义设置点的 VSPackage 的 GUID。<br /><br /> 实现基于使用 MPF<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>类中，使用构造函数的`objectType`参数，其中包含 VSPackage 的<xref:System.Type>和反射来获取此值。 |

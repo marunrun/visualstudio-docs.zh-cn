@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.assetid: 789f7a1c-38b4-41d0-809b-14f4d96c8116
 author: corob
 ms.author: mblome
-manager: douge
+manager: jillfra
 f1_keywords:
 - VC.Project.AndroidDebugger.DebuggerType
 - VC.Project.AndroidDebugger.AndroidDeviceID
@@ -15,16 +15,16 @@ f1_keywords:
 - VC.Project.AndroidDebugger.LaunchActivity
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: be240ed2cea05194d51040fd29a17de9a4472fc9
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: 9a4d7baa970008c2de7a3bc28966f7edbad68b21
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39232639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62819498"
 ---
 # <a name="android-debugger-properties"></a>Android 调试器属性
 
-属性 | 描述 | 选项
+Property | 说明 | 选项
 --- | ---| ---
 调试器类型 | 指定要调试的代码类型。 | **仅限本机**<br>仅限 Java<br>
 调试目标 | 指定要用于调试的仿真器或设备。 如果没有仿真器正在运行，请使用“Android 虚拟设备(AVD)管理器”启动设备。

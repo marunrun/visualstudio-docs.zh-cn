@@ -1,4 +1,18 @@
 ---
+title: 查看最近的作业
+author: lisawong19
+ms.author: liwong
+manager: routlaw
+ms.date: 11/13/2017
+ms.topic: conceptual
+ms.workload:
+- multiple
+ms.openlocfilehash: a2970c0086ec18789347eebdea752487be18ce7d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62548385"
 ---
 # <a name="view-recent-job-performance-and-details"></a>查看最近的作业性能和详细信息
 

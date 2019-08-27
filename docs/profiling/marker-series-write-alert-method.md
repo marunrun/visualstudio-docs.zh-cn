@@ -9,36 +9,35 @@ helpviewer_keywords:
 ms.assetid: 9d5465c7-f862-47a7-b249-4116605075a6
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 43da603670f2eccca408b8a47b13c8a9b9ea79ec
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 635f767f97ea3d237aeff843e99735eccae31efc
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53950019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831379"
 ---
 # <a name="markerserieswritealert-method"></a>marker_series::write_alert 方法
-向并发可视化工具跟踪文件写入一个警报。  
-  
-## <a name="syntax"></a>语法  
-  
-```cpp  
-void write_alert(  
-   _In_ LPCTSTR _Format,  
-   ...  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `_Format`  
- 一个复合格式字符串，其中包含与零个或多个格式项混合的文本，这些格式项对应于参数列表中的对象。  
-  
-## <a name="requirements"></a>要求  
- **标头：** cvmarkersobj.h  
-  
- **命名空间：** Concurrency::diagnostic  
-  
-## <a name="see-also"></a>请参阅  
- [marker_series 类](../profiling/marker-series-class.md)
+向并发可视化工具跟踪文件写入一个警报。
+
+## <a name="syntax"></a>语法
+
+```cpp
+void write_alert(
+   _In_ LPCTSTR _Format,
+   ...
+);
+```
+
+#### <a name="parameters"></a>参数
+ `_Format` 一个复合格式字符串，其中包含与零个或多个格式项混合的文本，这些格式项对应于参数列表中的对象。
+
+## <a name="requirements"></a>要求
+ **标头：** cvmarkersobj.h
+
+ **命名空间：** Concurrency::diagnostic
+
+## <a name="see-also"></a>请参阅
+- [marker_series 类](../profiling/marker-series-class.md)

@@ -1,14 +1,9 @@
 ---
-title: Ca1024： 在适用处使用属性 |Microsoft Docs
-ms.custom: ''
+title: CA1024:在适用处使用属性 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - UsePropertiesWhereAppropriate
 - CA1024
@@ -20,14 +15,14 @@ caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: f7d5b5e459d80c69f856860a9b2aa0302191a968
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 43487aa97afcd41a5375bacc26efba705cbaa76c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49858922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68144812"
 ---
-# <a name="ca1024-use-properties-where-appropriate"></a>CA1024：在适用处使用属性
+# <a name="ca1024-use-properties-where-appropriate"></a>CA1024:在适用处使用属性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -125,6 +120,3 @@ namespace Microsoft.Samples
  下面的示例包含多个方法，应将转换为属性，并且多个，应该不是因为它们不类似于字段。
 
  [!code-csharp[FxCop.Design.MethodsProperties#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.MethodsProperties/cs/FxCop.Design.MethodsProperties.cs#1)]
-
-
-

@@ -1,14 +1,9 @@
 ---
 title: 使命令可 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - menus [Visual Studio SDK], commands
 - best practices, menu and toolbar commands
@@ -17,22 +12,22 @@ helpviewer_keywords:
 ms.assetid: 3ffc4312-c6db-4759-a946-a4bb85f4a17a
 caps.latest.revision: 36
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 00ed8231641718b6d0dce8d535b0c43e40b83dd8
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: cab4244fbf9173895159a4b104260006fc93f0c2
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51783033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63436249"
 ---
 # <a name="making-commands-available"></a>提供可用命令
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 当多个 Vspackage 添加到 Visual Studio 中时，用户界面 (UI) 可能会变得 overcrowded 命令。 您可以编写您的程序包以帮助减少此问题，请按如下所示：  
   
--   计划包，以便仅当用户加载需要它。  
+- 计划包，以便仅当用户加载需要它。  
   
--   编程包，以便仅在它们可能需要在集成的开发环境 (IDE) 的当前状态的上下文中时显示其命令。  
+- 编程包，以便仅在它们可能需要在集成的开发环境 (IDE) 的当前状态的上下文中时显示其命令。  
   
 ## <a name="delayed-loading"></a>延迟加载  
  若要启用的典型方法延迟加载是设计 VSPackage，使其命令显示在 UI 中，但直到用户单击其中一个命令不会加载包本身。 若要为此，在.vsct 文件中，创建不具有任何命令标志的命令。  
@@ -99,14 +94,14 @@ ms.locfileid: "51783033"
 ### <a name="custom-context-guids"></a>自定义上下文 Guid  
  如果尚未定义 GUID 不适当的命令上下文中，可以定义一个在你的 VSPackage 中，然后编写它是活动或非活动所需控制命令的可见性。 使用<xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>到服务：  
   
--   注册上下文 Guid (通过调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.GetCmdUIContextCookie%2A>方法)。  
+- 注册上下文 Guid (通过调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.GetCmdUIContextCookie%2A>方法)。  
   
--   获取上下文的状态`GUID`(通过调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A>方法)。  
+- 获取上下文的状态`GUID`(通过调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A>方法)。  
   
--   打开上下文`GUID`s 打开和关闭 (通过调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.SetCmdUIContext%2A>方法)。  
+- 打开上下文`GUID`s 打开和关闭 (通过调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.SetCmdUIContext%2A>方法)。  
   
     > [!CAUTION]
-    >  请确保你的 VSPackage 不因为其他 Vspackage 可能依赖于这些影响任何现有上下文 GUID 的状态。  
+    > 请确保你的 VSPackage 不因为其他 Vspackage 可能依赖于这些影响任何现有上下文 GUID 的状态。  
   
 ## <a name="example"></a>示例  
  VSPackage 命令的下面的示例演示由命令上下文而不加载 VSPackage 的命令的动态可见性。  
@@ -156,4 +151,3 @@ ms.locfileid: "51783033"
  [Vspackage 如何添加用户界面元素](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
  [Vspackage 中的命令传送](../../extensibility/internals/command-routing-in-vspackages.md)   
  [动态添加菜单项](../../extensibility/dynamically-adding-menu-items.md)
-

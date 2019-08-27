@@ -1,27 +1,22 @@
 ---
 title: MSSCCPRJ。SCC 文件 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, MSSCCPRJ.SCC file
 - MSSCCPRJ.SCC file
 ms.assetid: 6f2e39d6-b79d-407e-976f-b62a3cedd378
 caps.latest.revision: 16
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: a04429bafb7da0b3d4922905bd712e82ba16a4ba
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 705e0fa821000716dc9cd729901fbb7db5fd759c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51736158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68194213"
 ---
 # <a name="mssccprjscc-file"></a>MSSCCPRJ.SCC 文件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,19 +27,19 @@ ms.locfileid: "51736158"
   
  源代码管理插件支持 MSSCCPRJ。SCC 文件必须遵守以下准则：  
   
--   只能有一个 MSSCCPRJ。SCC 文件，每个目录。  
+- 只能有一个 MSSCCPRJ。SCC 文件，每个目录。  
   
--   MSSCCPRJ。SCC 文件可以为给定目录中的源代码管理下的多个文件包含"AuxPath"和"项目名称"。  
+- MSSCCPRJ。SCC 文件可以为给定目录中的源代码管理下的多个文件包含"AuxPath"和"项目名称"。  
   
--   "AuxPath"字符串不能在其中的引号。 它允许包含引号作为分隔符 （例如，一对双引号可用来指示空字符串）。 从 MSSCCPRJ 中读取时，IDE 将条带"AuxPath"字符串中的所有引号。SCC 文件。  
+- "AuxPath"字符串不能在其中的引号。 它允许包含引号作为分隔符 （例如，一对双引号可用来指示空字符串）。 从 MSSCCPRJ 中读取时，IDE 将条带"AuxPath"字符串中的所有引号。SCC 文件。  
   
--   MSSCCPRJ 中的"项目名称"字符串。SCC 文件必须从返回的字符串完全匹配`SccGetProjPath`函数。 如果该函数返回的字符串具有引号，MSSCCPRJ 中的字符串。SCC 文件必须包含引号，反之亦然。  
+- MSSCCPRJ 中的"项目名称"字符串。SCC 文件必须从返回的字符串完全匹配`SccGetProjPath`函数。 如果该函数返回的字符串具有引号，MSSCCPRJ 中的字符串。SCC 文件必须包含引号，反之亦然。  
   
--   MSSCCPRJ。SCC 文件创建或更新时将文件置于源代码管理下。  
+- MSSCCPRJ。SCC 文件创建或更新时将文件置于源代码管理下。  
   
--   如果检测到 MSSCCPRJ。获取删除源代码管理文件、 一个提供程序应重新生成该下一次执行源代码管理操作，有关该目录。  
+- 如果检测到 MSSCCPRJ。获取删除源代码管理文件、 一个提供程序应重新生成该下一次执行源代码管理操作，有关该目录。  
   
--   MSSCCPRJ。SCC 文件必须严格遵循定义的格式。  
+- MSSCCPRJ。SCC 文件必须严格遵循定义的格式。  
   
 ## <a name="an-illustration-of-the-mssccprjscc-file-format"></a>MSSCCPRJ 进行了说明。SCC 文件格式  
  下面是 MSSCCPRJ 的示例。SCC 文件格式 （仅作为指南，提供和不应在文件正文中包含的行号）：  
@@ -82,4 +77,3 @@ ms.locfileid: "51736158"
 ## <a name="see-also"></a>请参阅  
  [源代码管理插件](../extensibility/source-control-plug-ins.md)   
  [作为用于查找源代码管理插件的密钥的字符串](../extensibility/strings-used-as-keys-for-finding-a-source-control-plug-in.md)
-

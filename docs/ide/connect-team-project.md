@@ -1,17 +1,16 @@
 ---
 title: 连接到团队资源管理器中的项目
 ms.date: 12/04/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.author: gewarren
 author: gewarren
-ms.manager: douge
-ms.openlocfilehash: 28c051375811a79775af53dbb0d796ed74d25003
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.manager: jillfra
+ms.openlocfilehash: d65ea17ad642ea882820bc04f5d217e6290a8a6d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53848293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62976637"
 ---
 # <a name="connect-to-projects-in-team-explorer"></a>连接到团队资源管理器中的项目
 

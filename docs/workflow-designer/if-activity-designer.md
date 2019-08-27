@@ -2,21 +2,20 @@
 title: 工作流设计器-如果活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - System.Activities.Statements.If.UI
 ms.assetid: 930a8fa2-db98-43e9-ad6d-a85cc7a6519a
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: de237acd09f4c4139bdf79f986dbb43c1a1f8343
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 762199906bbb84701c044b5fa9f3f3b8c6fdfdae
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53988412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62949196"
 ---
 # <a name="if-activity-designer"></a>If 活动设计器
 

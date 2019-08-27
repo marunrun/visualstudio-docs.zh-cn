@@ -1,27 +1,22 @@
 ---
 title: 验证旧版语言服务中的断点 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - breakpoint validation
 - language services [managed package framework], breakpoint validation
 ms.assetid: a7e873cd-dfe1-474f-bda5-fd7532774b15
 caps.latest.revision: 15
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 0868e516720fd32a445f60f05f345936d24d6d7a
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: f54dc683aa4287145a27e22d49397241b395f69f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51734972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68163683"
 ---
 # <a name="validating-breakpoints-in-a-legacy-language-service"></a>验证旧版语言服务中的断点
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -32,13 +27,13 @@ ms.locfileid: "51734972"
   
 ## <a name="implementing-support-for-validating-breakpoints"></a>实现支持用于验证断点  
   
--   <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A>方法给定的断点的位置。 您的实现必须确定位置有效，以及指示此通过返回标识的代码的文本跨距关联的行位置断点。  
+- <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A>方法给定的断点的位置。 您的实现必须确定位置有效，以及指示此通过返回标识的代码的文本跨距关联的行位置断点。  
   
--   返回<xref:Microsoft.VisualStudio.VSConstants.S_OK>位置是否有效，或<xref:Microsoft.VisualStudio.VSConstants.S_FALSE>如果不是有效。  
+- 返回<xref:Microsoft.VisualStudio.VSConstants.S_OK>位置是否有效，或<xref:Microsoft.VisualStudio.VSConstants.S_FALSE>如果不是有效。  
   
--   如果断点有效文本范围将突出显示以及断点。  
+- 如果断点有效文本范围将突出显示以及断点。  
   
--   如果断点无效，在状态栏中会显示一条错误消息。  
+- 如果断点无效，在状态栏中会显示一条错误消息。  
   
 ### <a name="example"></a>示例  
  此示例演示一种实现<xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A>方法，用于指定位置处调用分析器以获取代码的范围 （如果有）。  
@@ -107,4 +102,3 @@ namespace TestLanguagePackage
   
 ## <a name="see-also"></a>请参阅  
  [旧版语言服务功能](../../extensibility/internals/legacy-language-service-features1.md)
-

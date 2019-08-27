@@ -1,14 +1,9 @@
 ---
 title: “资源争用”视图 - 争用数据 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.view.resourcecontention
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 14a7f774-211f-4ef8-af05-94d1c8f65d2f
 caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: dddc9c85731137c6499e976b4b571396af297f7a
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: c6a7d4d1e80323b4d260ac558661c222f72ec3c1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51810346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68149268"
 ---
 # <a name="resource-contentions-view---contention-data"></a>“资源争用”视图 - 争用数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,9 +33,9 @@ ms.locfileid: "51810346"
 ### <a name="function-values"></a>函数值  
  函数值基于在调用树中表示的执行路径中出现的函数实例。  
   
--   独占值基于函数在自己的函数体中执行语句时发生的事件。 在函数调用的函数中发生的事件不包含在独占值中。  
+- 独占值基于函数在自己的函数体中执行语句时发生的事件。 在函数调用的函数中发生的事件不包含在独占值中。  
   
--   非独占值基于函数或函数调用的函数在执行时发生的事件。  
+- 非独占值基于函数或函数调用的函数在执行时发生的事件。  
   
 ### <a name="percentage-values"></a>百分比值  
  百分比值基于分析数据中的总时间或争用事件数。 如果筛选分析运行的报告或视图，则只有经过筛选的数据中的阻塞时间和争用数才会用作总计值。  
@@ -65,6 +60,3 @@ ms.locfileid: "51810346"
 |**进程 ID**|在其中执行模块的进程的进程 ID (PID)。|  
 |**进程名**|进程的名称。|  
 |**源文件**|此函数的定义所在的源文件。|
-
-
-

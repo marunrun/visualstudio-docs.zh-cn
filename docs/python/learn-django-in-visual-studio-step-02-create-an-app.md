@@ -3,21 +3,20 @@ title: 了解 Visual Studio 中的 Django 教程步骤 2，视图和页面模板
 titleSuffix: ''
 description: Visual Studio 项目上下文中 Django 基础知识的演练，具体介绍了创建应用以及使用视图和模板的步骤。
 ms.date: 11/19/2018
-ms.prod: visual-studio-dev15
 ms.topic: tutorial
-author: kraigb
-ms.author: kraigb
-manager: douge
+author: JoshuaPartlow
+ms.author: joshuapa
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ce819f5d0a7167c4fce2871894df7c6edd26e6a6
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: de486593c21813746c6c13fa835506d7b1703279
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53871698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62958155"
 ---
 # <a name="step-2-create-a-django-app-with-views-and-page-templates"></a>步骤 2：使用视图和页面模板创建 Django 应用
 
@@ -35,7 +34,7 @@ ms.locfileid: "53871698"
 
 ## <a name="step-2-1-create-an-app-with-a-default-structure"></a>步骤 2-1：创建具有默认结构的应用
 
-Django 应用是一个单独的 Python 包，其中包含一组用于特定用途的相关文件。 一个 Django 项目可以包含任意数量的应用，这反映了一个事实：Web 主机可用于满足单个域名中任意数量的单独入口点。 例如，像 contoso.com 这样的域的 Django 项目可能包含一个面向 www.contoso.com 的应用、一个面向 support.contoso.com 的应用以及一个面向 docs.contoso.com 的应用。 在这种情况下，Django 项目处理网站级 URL 路由和设置（在其 urls.py 和 settings.py 文件中），同时每个应用在其内部路由、视图、模型、静态文件和管理界面中都有其自己的不同样式和行为。
+Django 应用是一个单独的 Python 包，其中包含一组用于特定用途的相关文件。 一个 Django 项目可以包含任意数量的应用，这反映了一个事实：Web 主机可用于满足单个域名中任意数量的单独入口点。 例如，像 contoso.com 这样的域的 Django 项目可能包含一个面向 `www.contoso.com` 的应用、一个面向 support.contoso.com 的应用以及一个面向 docs.contoso.com 的应用。 在这种情况下，Django 项目处理网站级 URL 路由和设置（在其 urls.py 和 settings.py 文件中），同时每个应用在其内部路由、视图、模型、静态文件和管理界面中都有其自己的不同样式和行为。
 
 Django 应用通常以一组标准文件开始。 Visual Studio 提供项模板来初始化 Django 项目中的 Django 应用，并提供起到相同作用的集成菜单命令：
 

@@ -1,7 +1,6 @@
 ---
 title: CA1063:正确实现 IDisposable
-ms.date: 02/12/2018
-ms.prod: visual-studio-dev15
+ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
 - ImplementIDisposableCorrectly
@@ -12,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: 12afb1ea-3a17-4a3f-a1f0-fcdb853e2359
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 55ebe4c74bcaf2a8d5299018b7666328ff51c028
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 837659ca24eb66995626668185500db7bc32bbd7
+ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53949045"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69547372"
 ---
 # <a name="ca1063-implement-idisposable-correctly"></a>CA1063:正确实现 IDisposable
 
@@ -31,63 +30,75 @@ ms.locfileid: "53949045"
 |TypeName|ImplementIDisposableCorrectly|
 |CheckId|CA1063|
 |类别|Microsoft.Design|
-|是否重大更改|非换行|
+|是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
 
-<xref:System.IDisposable?displayProperty=nameWithType>接口的实现不正确。 可能的原因包括：
+<xref:System.IDisposable?displayProperty=nameWithType>接口未正确实现。 此情况的可能原因包括:
 
-- <xref:System.IDisposable> 在类中重新实现。
+- <xref:System.IDisposable>在类中是重新实现。
 
-- 最终确定 reoverridden。
+- `Finalize`再次重写。
 
-- 重写 dispose （）。
+- `Dispose()`被重写。
 
-- Dispose （） 方法不是公共的[密封](/dotnet/csharp/language-reference/keywords/sealed)，或已命名**Dispose**。
+- 方法不是公共、[密封](/dotnet/csharp/language-reference/keywords/sealed)或名为**Dispose。** `Dispose()`
 
-- Dispose （bool） 不受保护、 虚拟或未密封。
+- `Dispose(bool)`不受保护、虚拟或未密封。
 
-- 在未密封类型中，dispose （） 必须调用 dispose （true）。
+- 在未密封的`Dispose()`类型中`Dispose(true)`, 必须调用。
 
-- 对于非密封类型 Finalize 实现不会调用一个或两个 dispose （bool） 或基类的终结器。
+- 对于未密封类型, `Finalize`实现不会调用或同时`Dispose(bool)`调用或基类终结器。
 
-冲突的任何一种模式触发警告 CA1063。
+违反其中任何一种模式都会触发警告 CA1063。
 
-每个非密封的类型声明并实现<xref:System.IDisposable>接口必须提供其自己受保护的虚拟 void dispose （bool） 方法。 Dispose （） 应调用 Dipose(true)，和终结器应调用 dispose （false）。 如果您创建未密封的类型的声明并实现<xref:System.IDisposable>接口，必须定义 dispose （bool），调用它。 有关详细信息，请参阅[清理非托管资源 （.NET 指南）](/dotnet/standard/garbage-collection/unmanaged)并[Dispose 模式](/dotnet/standard/design-guidelines/dispose-pattern)。
+声明和实现接口的<xref:System.IDisposable>每个未密封类型都必须提供其自己`protected virtual void Dispose(bool)`的方法。 `Dispose()`应调用`Dispose(true)`, 并且终结器应调用`Dispose(false)`。 如果创建声明和实现<xref:System.IDisposable>接口的非密封类型, 则必须定义`Dispose(bool)`并调用它。 有关详细信息, 请参阅[清理非托管资源 (.net 指南)](/dotnet/standard/garbage-collection/unmanaged)和[Dispose 模式](/dotnet/standard/design-guidelines/dispose-pattern)。
+
+默认情况下, 此规则仅查看外部可见类型, 但这是[可配置](#configurability)的。
 
 ## <a name="rule-description"></a>规则说明
 
-所有<xref:System.IDisposable>的类型应该实现[Dispose 模式](/dotnet/standard/design-guidelines/dispose-pattern)正确。
+所有<xref:System.IDisposable>类型都应正确实现[Dispose 模式](/dotnet/standard/design-guidelines/dispose-pattern)。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-检查你的代码并确定哪些以下解决方法将修复此冲突：
+检查你的代码并确定以下哪种解决方法会修复此冲突:
 
-- 删除<xref:System.IDisposable>从列表中的由您的类型，实现，而是重写 Dispose 基类实现的接口。
+- 从<xref:System.IDisposable>类型实现的接口列表中删除, 而改为重写基类释放实现。
 
-- 根据您的类型中移除终结器，重写 Dispose (bool disposing)，其中 disposing 为 false 的代码路径中加入终结逻辑。
+- 从类型中删除终结器, 重写 Dispose (bool 释放), 并在 "释放" 为 false 的代码路径中放置终止逻辑。
 
-- 重写 Dispose (bool disposing)，并且其中 disposing 为 true 的代码路径中加入释放逻辑。
+- 重写 Dispose (bool 释放), 并将 dispose 逻辑放在 "释放" 为 true 的代码路径中。
 
-- 请确保 dispose （） 被声明为公共和[密封](/dotnet/csharp/language-reference/keywords/sealed)。
+- 请确保 Dispose () 被声明为 public 和[sealed](/dotnet/csharp/language-reference/keywords/sealed)。
 
-- 重命名为 dispose 方法**Dispose** ，并确保它被声明为公共和[密封](/dotnet/csharp/language-reference/keywords/sealed)。
+- 重命名 dispose 方法以**释放**, 并确保将其声明为 public 和[sealed](/dotnet/csharp/language-reference/keywords/sealed)。
 
-- 请确保 dispose （bool） 声明为 protected、 virtual 和 unsealed。
+- 请确保 Dispose (bool) 声明为 protected、virtual 和未密封。
 
-- 修改 dispose （），使其调用 dispose （true），然后调用<xref:System.GC.SuppressFinalize%2A>上的当前对象实例 (`this`，或`Me`在 Visual Basic 中)，然后返回。
+- 修改 dispose (), 使其调用 dispose (true), 然后调用<xref:System.GC.SuppressFinalize%2A>当前对象实例 (`this`或`Me` Visual Basic), 然后返回。
 
-- 修改您终结器，使其调用 dispose （false），然后返回。
+- 修改终结器, 使其调用 Dispose (false), 然后返回。
 
-- 如果您创建未密封的类型的声明并实现<xref:System.IDisposable>接口，请确保实现<xref:System.IDisposable>遵循本部分前面所述的模式。
+- 如果你创建了一个声明并实现<xref:System.IDisposable>接口的非密封类型, 请确保的<xref:System.IDisposable>实现遵循本部分前面所述的模式。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
 不禁止显示此规则发出的警告。
 
+## <a name="configurability"></a>配置
+
+如果从[FxCop 分析器](install-fxcop-analyzers.md)(而不是传统分析) 运行此规则, 则可以根据其可访问性, 将基本代码的哪些部分配置为在上运行此规则。 例如, 若要指定规则只应针对非公共 API 图面运行, 请在项目中的 editorconfig 文件中添加以下键/值对:
+
+```ini
+dotnet_code_quality.ca1063.api_surface = private, internal
+```
+
+您可以为此规则、所有规则或此类别中的所有规则 (设计) 配置此选项。 有关详细信息, 请参阅[配置 FxCop 分析器](configure-fxcop-analyzers.md)。
+
 ## <a name="pseudo-code-example"></a>伪代码示例
 
-下面的伪代码提供了应如何使用托管的类中实现 dispose （bool） 和本机资源的常规示例。
+下面的伪代码提供了一个示例, 说明如何在使用托管资源和本机资源的类中实现 Dispose (bool)。
 
 ```csharp
 public class Resource : IDisposable
@@ -135,5 +146,5 @@ public class Resource : IDisposable
 
 ## <a name="see-also"></a>请参阅
 
-- [释放模式 （framework 设计准则）](/dotnet/standard/design-guidelines/dispose-pattern)
-- [清理非托管资源 （.NET 指南）](/dotnet/standard/garbage-collection/unmanaged)
+- [Dispose 模式 (框架设计准则)](/dotnet/standard/design-guidelines/dispose-pattern)
+- [清理非托管资源 (.NET 指南)](/dotnet/standard/garbage-collection/unmanaged)

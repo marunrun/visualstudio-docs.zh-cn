@@ -1,43 +1,40 @@
 ---
 title: 自定义和扩展域特定语言 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language Tools, creating solutions
 ms.assetid: b155eb79-4e0a-4a99-a6f2-ca4f811fb5ca
 caps.latest.revision: 50
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 3d5b55a9b9a55d00cbfb7928295699c254f72639
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 0bd0feefb2d184a6d9b9667b2b4498403a5868b8
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49180682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63433309"
 ---
 # <a name="customizing-and-extending-a-domain-specific-language"></a>自定义和扩展域特定语言
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio 建模和可视化效果 SDK (VMSDK) 提供了可以在其中定义建模工具的多个级别：  
   
-1.  定义使用 DSL 定义关系图的特定于域的语言 (DSL)。 关系图表示法、 可读的 XML 格式，与生成代码和其他项目所需的基本工具，可以快速创建 DSL。  
+1. 定义使用 DSL 定义关系图的特定于域的语言 (DSL)。 关系图表示法、 可读的 XML 格式，与生成代码和其他项目所需的基本工具，可以快速创建 DSL。  
   
      有关详细信息，请参阅[如何定义特定于域的语言](../modeling/how-to-define-a-domain-specific-language.md)。  
   
-2.  使用 DSL 定义的更高级的功能来微调 DSL。 例如，可以使其他用户创建的元素时，将显示的链接。 这些技术主要实现在 DSL 定义中，并且某些需要少量的程序代码行。  
+2. 使用 DSL 定义的更高级的功能来微调 DSL。 例如，可以使其他用户创建的元素时，将显示的链接。 这些技术主要实现在 DSL 定义中，并且某些需要少量的程序代码行。  
   
-3.  通过使用程序代码来扩展你的建模工具。 VMSDK 专门用于轻松将扩展和从 DSL 定义生成的代码相集成。  有关详细信息，请参阅[编写代码以自定义域特定于域的语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)。  
+3. 通过使用程序代码来扩展你的建模工具。 VMSDK 专门用于轻松将扩展和从 DSL 定义生成的代码相集成。  有关详细信息，请参阅[编写代码以自定义域特定于域的语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)。  
   
 > [!NOTE]
->  当有更新 DSL 定义文件时，请不要忘记单击**转换所有模板**之前重新生成解决方案的解决方案资源管理器工具栏中。  
+> 当有更新 DSL 定义文件时，请不要忘记单击**转换所有模板**之前重新生成解决方案的解决方案资源管理器工具栏中。  
   
-##  <a name="customShapes"></a> 在本部分中  
+## <a name="customShapes"></a> 在本部分中  
   
 |若要实现此效果|请参阅本主题|  
 |----------------------------|-------------------------|  
@@ -61,14 +58,14 @@ Visual Studio 建模和可视化效果 SDK (VMSDK) 提供了可以在其中定�
 |删除、 重新设置父级，或删除元素时重新链接相关的元素。|设置**传播删除**关系角色的值。 对于更复杂的影响，重写`ShouldVisitRelationship`并`ShouldVisitRolePlayer`中的方法`MyDslDeleteClosure`类，如**DomainModel.cs**<br /><br /> 请参阅[自定义删除行为](../modeling/customizing-deletion-behavior.md)|  
 |保留形状布局和外观上复制和拖放。|将形状和连接线添加到复制`ElementGroupPrototype`。 重写的最简便方法是 `ElementOperations.CreateElementGroupPrototype()`<br /><br /> 请参阅[自定义复制行为](../modeling/customizing-copy-behavior.md)。|  
 |在所选位置（例如当前光标位置）粘贴形状。|重写`ClipboardCommandSet.ProcessOnCopy()`若要使用特定于位置的新版`ElementOperations.Merge().`请参阅[自定义复制行为](../modeling/customizing-copy-behavior.md)。|  
-|在粘贴上创建其他链接|重写 ClipboardCommandSet.ProcessOnPasteCommand()|  
-|启用拖放此关系图中，其他 Dsl 或 UML 关系图和 Windows 元素|请参阅[如何： 添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)|  
+|在粘贴上创建其他链接|Override ClipboardCommandSet.ProcessOnPasteCommand()|  
+|启用拖放此关系图中，其他 Dsl 或 UML 关系图和 Windows 元素|请参阅[如何：添加拖放句柄](../modeling/how-to-add-a-drag-and-drop-handler.md)|  
 |允许的形状或工具拖放到子形状，例如端口，如同已拖动到父级上。|元素合并指令在类上定义目标对象，将转发到父级的拖放的对象。 请参阅[自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)。|  
 |允许的形状或工具拖动到形状上，并让其他链接或创建的对象。 例如，若要允许拖放到它是要链接的项的注释。|在目标域类上定义元素合并指令，定义要生成的链接。 在复杂的情况下，可以添加自定义代码。 请参阅[自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)。|  
 |使用一种工具创建一的组元素。 例如，具有一组固定的端口组件。|重写 ToolboxHelper.cs 中的工具箱初始化方法。 创建包含元素和其关系链接元素组原型 (EGP)。 请参阅[自定义工具和工具箱](../modeling/customizing-tools-and-the-toolbox.md)。<br /><br /> 中 EGP，包括主体和端口形状，或者定义 BoundsRules EGP 实例化时定位端口形状。 请参阅[BoundsRules 约束形状位置和大小](../modeling/boundsrules-constrain-shape-location-and-size.md)。|  
 |使用一个连接工具将实例化几种类型的关系。|将链接连接指令 (LCD) 添加到该工具由调用连接生成器。 LCDs 确定两个元素的类型中的关系类型。 若要使这取决于元素的状态，可以添加自定义代码。 请参阅[自定义工具和工具箱](../modeling/customizing-tools-and-the-toolbox.md)。|  
 |粘滞工具-用户可以双击任何工具连续创建多个形状或连接符。|在 DSL 资源管理器中选择`Editor`节点。 在属性窗口中设置**使用粘滞工具箱项**。|  
-|定义菜单命令|请参阅[如何： 修改标准的菜单命令](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)|  
+|定义菜单命令|请参阅[如何：修改标准菜单命令](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)|  
 |约束具有验证规则的模型|请参阅[域特定语言中的验证](../modeling/validation-in-a-domain-specific-language.md)|  
 |从 DSL 中生成代码、 配置文件或文档。|[从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)|  
 |自定义模型的方式保存到文件。|请参阅[自定义文件存储和 XML 序列化](../modeling/customizing-file-storage-and-xml-serialization.md)|  
@@ -81,6 +78,3 @@ Visual Studio 建模和可视化效果 SDK (VMSDK) 提供了可以在其中定�
  [如何定义特定于域的语言](../modeling/how-to-define-a-domain-specific-language.md)   
  [编写代码以自定义域特定于域的语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)   
  [Visual Studio 的建模 SDK - 特定于域的语言](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)
-
-
-

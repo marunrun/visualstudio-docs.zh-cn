@@ -8,14 +8,13 @@ helpviewer_keywords:
 ms.assetid: 175d1d58-f09a-4449-b132-a29a394a7c8e
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 47caaa39a1783588994277ba079e64e353a167a6
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 466ea9a7e0b877af55219be497eefde963e80853
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53925097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62949846"
 ---
 # <a name="how-to-select-a-load-test-run-setting-to-use-from-the-command-line"></a>如何：从命令行选择要使用的负载测试运行设置
 
@@ -27,11 +26,11 @@ ms.locfileid: "53925097"
 
 ## <a name="to-change-the-run-setting-from-the-command-line"></a>从命令行更改运行设置
 
-1.  如果要从命令行使用不同的运行设置来利用上下文参数策略，请使用以下命令：
+1. 如果要从命令行使用不同的运行设置来利用上下文参数策略，请使用以下命令：
 
     `Set Test.UseRunSetting= CorporateStagingWebServer`
 
-2.  使用 mstest 运行负载测试：
+2. 使用 mstest 运行负载测试：
 
     `mstest /testcontainer:loadtest1.loadtest`
 

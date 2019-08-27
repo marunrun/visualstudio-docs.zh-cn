@@ -1,14 +1,9 @@
 ---
 title: 分析应用商店应用中的能量使用 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -18,26 +13,26 @@ ms.assetid: 96d06843-b97e-45a8-8126-07478a40bfc4
 caps.latest.revision: 39
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 102302a1c14f379745007135593cc039aa9f8836
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: c2b25d0fa57659b3081b54c51b7493621423188f
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51742009"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65696994"
 ---
 # <a name="analyze-energy-use-in-store-apps"></a>分析应用商店应用中的能量使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio 的 **“能耗”** 探查器可以帮助你分析低功率平板设备上的 Windows 应用商店应用的功率和能耗情况，这些低功率平板设备在所有时间或部分时间内靠自有电池运行。 在电池供电的设备上，如果应用程序使用过多的能量，可能导致客户非常不满，最终客户甚至可能将其卸载。 能量利用的优化可使更多的客户选择并使用你的应用程序。  
   
-##  <a name="BKMK_What_the_Energy_Consumption_tool_is__how_it_works__and_what_it_measures"></a> “能量消耗”探查器的定义、工作机制和测量内容  
+## <a name="BKMK_What_the_Energy_Consumption_tool_is__how_it_works__and_what_it_measures"></a> “能量消耗”探查器的定义、工作机制和测量内容  
  “能耗”探查器在分析会话期间捕获设备的显示器、CPU 和网络连接的活动。 然后生成这些活动所使用功率的估计值和分析会话使用的总能量。  
   
 > [!NOTE]
->  能耗探查器使用标准参考设备硬件（具有可能运行你的应用程序的低功率平板电脑设备的代表性）的软件模型来估计功率和能量使用情况。 若要提供最佳估计值，我们建议你收集低功率平板电脑设备上的分布曲线数据。  
+> 能耗探查器使用标准参考设备硬件（具有可能运行你的应用程序的低功率平板电脑设备的代表性）的软件模型来估计功率和能量使用情况。 若要提供最佳估计值，我们建议你收集低功率平板电脑设备上的分布曲线数据。  
 >   
->  虽然该模型可提供多种低功率设备的合理估计值，但你分析的设备的实际值可能不同。 使用这些值来查找相对于其他资源使用消耗能量多的显示器、CPU 和网络活动，因此这些活动可能是最适合优化的部分。  
+> 虽然该模型可提供多种低功率设备的合理估计值，但你分析的设备的实际值可能不同。 使用这些值来查找相对于其他资源使用消耗能量多的显示器、CPU 和网络活动，因此这些活动可能是最适合优化的部分。  
   
  “能量消耗”探查器使用下面 *功率* 和 *能量*的定义：  
   
@@ -51,7 +46,7 @@ Visual Studio 的 **“能耗”** 探查器可以帮助你分析低功率平板
   
   例如，平板电脑中充满电的电池存储了一定数量的能量。 当能量用于执行网络通信、计算值或显示图像等任务时，电池的功率以不同的速率消耗。 对于任意一段时间，消耗的功率的总和还可按能量进行衡量。  
   
-##  <a name="BKMK_Identify_scenarios_with_user_marks"></a> 用用户标记标识方案  
+## <a name="BKMK_Identify_scenarios_with_user_marks"></a> 用用户标记标识方案  
  可以向分析数据添加“用户标记”  以帮助标识时间线标尺中的区域。  
   
  ![时间线中的用户标记](../profiling/media/profilers-usermarktimeline.png "PROFILERS_UserMarkTimeline")  
@@ -60,13 +55,13 @@ Visual Studio 的 **“能耗”** 探查器可以帮助你分析低功率平板
   
  **向 C#、Visual Basic、C++ 代码添加标记**  
   
- 若要向 C#、Visual Basic、C++ 代码添加标记，请先创建一个 [Windows.Foundation.Diagnostics LoggingChannel](http://msdn.microsoft.com/library/windows/apps/windows.foundation.diagnostics.loggingchannel.aspx) 对象。 然后在代码中要标记的位置插入对 [LoggingChannel.LogMessage](http://msdn.microsoft.com/library/windows/apps/dn264210.aspx) 方法的调用。 在调用中使用 [LoggingLevel.Information](http://msdn.microsoft.com/library/windows/apps/windows.foundation.diagnostics.logginglevel.aspx) 。  
+ 若要向 C#、Visual Basic、C++ 代码添加标记，请先创建一个 [Windows.Foundation.Diagnostics LoggingChannel](https://msdn.microsoft.com/library/windows/apps/windows.foundation.diagnostics.loggingchannel.aspx) 对象。 然后在代码中要标记的位置插入对 [LoggingChannel.LogMessage](https://msdn.microsoft.com/library/windows/apps/dn264210.aspx) 方法的调用。 在调用中使用 [LoggingLevel.Information](https://msdn.microsoft.com/library/windows/apps/windows.foundation.diagnostics.logginglevel.aspx) 。  
   
  执行此方法时，用户标记将与消息一起添加到分析数据中。  
   
 > [!NOTE]
-> - Windows.Foundation.Diagnostics LoggingChannel 实现[Windows.Foundation.IClosable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.iclosable.aspx)接口 (计划为[System.IDisposable](http://msdn.microsoft.com/library/System.IDisposable.aspx)在 C# 和 VB 中)。若要避免操作系统资源泄露，请调用[LoggingChannel.Close](http://msdn.microsoft.com/library/windows/apps/windows.foundation.diagnostics.loggingchannel.close.aspx)（) (C# 和 VB 中 Windows.Foundation.Diagnostics.LoggingChannel.Dispose()) 日志记录通道完成之后。  
->   -   每个打开的日志记录通道都必须有唯一的名称。 尝试创建与未释放的通道同名的新日志记录通道会导致出现异常。  
+> - Windows.Foundation.Diagnostics LoggingChannel 实现 [Windows.Foundation.IClosable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iclosable.aspx) 接口（在 C# 和 VB 中表现为 [System.IDisposable](https://msdn.microsoft.com/library/System.IDisposable.aspx)）。若要避免操作系统资源泄露，请在完成日志记录通道时调用 [LoggingChannel.Close](https://msdn.microsoft.com/library/windows/apps/windows.foundation.diagnostics.loggingchannel.close.aspx)()（在 C# 和 VB 中为 Windows.Foundation.Diagnostics.LoggingChannel.Dispose()）。  
+>   - 每个打开的日志记录通道都必须有唯一的名称。 尝试创建与未释放的通道同名的新日志记录通道会导致出现异常。  
   
  有关示例，请参阅 Windows SDK 示例 [LoggingSession 示例](http://code.msdn.microsoft.com/windowsapps/LoggingSession-Sample-ccd52336) 。  
   
@@ -82,34 +77,34 @@ if (performance && performance.mark) {
   
  *markDescription* 是包含要在用户标记工具提示中显示的消息的字符串。  
   
-##  <a name="BKMK_Configure_your_environment_for_profiling"></a> 配置要分析的环境  
+## <a name="BKMK_Configure_your_environment_for_profiling"></a> 配置要分析的环境  
  若要获取合理估计值，你需要分析由电池供电的低功率设备上的应用程序的能量使用情况。 由于 Visual Studio 不能在大多数的此类设备上运行，因此你需要使用 Visual Studio 远程工具将 Visual Studio 计算机连接到此类设备。 若要连接到远程设备，需要配置 Visual Studio 项目和此远程设备。 有关详细信息，请参阅[在远程计算机上运行 Windows 应用商店应用](../debugger/run-windows-store-apps-on-a-remote-machine.md)。  
   
 > [!TIP]
 > - 我们建议不要在 Windows 应用商店模拟器或 Visual Studio 计算机上进行能量分析。 在实际的设备上进行分析可获得更加真实的数据。  
->   -   在由电池供电的目标设备上进行分析。  
->   -   关闭可能使用相同资源（网络、CPU 或显示屏）的其他应用程序。  
+>   - 在由电池供电的目标设备上进行分析。  
+>   - 关闭可能使用相同资源（网络、CPU 或显示屏）的其他应用程序。  
   
-##  <a name="BKMK_Collect_energy_profile_data_for_your_app"></a> 收集应用的能量分布曲线数据  
+## <a name="BKMK_Collect_energy_profile_data_for_your_app"></a> 收集应用的能量分布曲线数据  
   
-1.  在“调试”  菜单中，选择 “启动诊断（不调试）”。  
+1. 在“调试”  菜单中，选择 “启动诊断（不调试）”。  
   
      ![在诊断中心中选择“能量消耗”](../profiling/media/energyprof-diagnosticshub.png "ENERGYPROF_DiagnosticsHub")  
   
-2.  选择 **“能耗”** ，然后选择 **“启动”**。  
+2. 选择 **“能耗”** ，然后选择 **“启动”**。  
   
     > [!NOTE]
-    >  启动 **“能耗”** 探查器时，可能会看到 **“用户帐户控制”** 窗口，要求你提供运行 VsEtwCollector.exe 的权限。 选择 **“是”**。  
+    > 启动 **“能耗”** 探查器时，可能会看到 **“用户帐户控制”** 窗口，要求你提供运行 VsEtwCollector.exe 的权限。 选择 **“是”**。  
   
-3.  执行你的应用程序以收集数据。  
+3. 执行你的应用程序以收集数据。  
   
-4.  若要停止分析，请切回到 Visual Studio (Alt + Tab) 并在“诊断中心”页面上选择 **“停止收集”** 。  
+4. 若要停止分析，请切回到 Visual Studio (Alt + Tab) 并在“诊断中心”页面上选择 **“停止收集”** 。  
   
      ![停止收集数据](../profiling/media/xamlprof-stopcollection.png "XAMLProf_StopCollection")  
   
      Visual Studio 将分析收集的数据并显示结果。  
   
-##  <a name="BKMK_Collect_energy_profile_data_for_an_installed_app"></a> 收集已安装应用的能量分布曲线数据  
+## <a name="BKMK_Collect_energy_profile_data_for_an_installed_app"></a> 收集已安装应用的能量分布曲线数据  
  能耗工具只能在从 Visual Studio 解决方案启动或从 Windows 应用商店中安装的 Window Store 8.1 应用程序上运行。 在 Visual Studio 中打开解决方案时，默认目标为 **“启动项目”**。 面向已安装的应用程序：  
   
 1. 选择 **“更改目标”** ，然后选择 **“已安装的应用程序”**。  
@@ -122,7 +117,7 @@ if (performance && performance.mark) {
   
    若要停止分析，请切回到 Visual Studio (Alt + Tab) 并在“诊断中心”页面上选择 **“停止收集”** 。  
   
-##  <a name="BKMK_Analyze_energy_profile_data"></a> 分析能量分布曲线数据  
+## <a name="BKMK_Analyze_energy_profile_data"></a> 分析能量分布曲线数据  
  能量分布曲线数据显示在 Visual Studio 文档窗口中：  
   
  ![“能量探查器”报表页](../profiling/media/energyprof-all.png "ENERGYPROF_All")  
@@ -140,7 +135,7 @@ if (performance && performance.mark) {
   
  找到资源功率达到高峰的区域。 将高峰区域与应用程序的功能联系起来。 然后使用时间线上的时间线控制条放大到此区域。 如果关注网络使用率，请展开 **“资源(打开/关闭)”** 图中的 **“网络”**  节点，对比网络连接的打开时间和应用程序通过连接接收或传输数据的时间。 减少不必要的网络打开时间是非常有效的优化。  
   
-##  <a name="BKMK_Optimize_energy_use"></a> 优化能量利用  
+## <a name="BKMK_Optimize_energy_use"></a> 优化能量利用  
  除了传输数据，网络连接的初始化、维护和关闭也会消耗能量。 某些网络在发送或接收数据后会将连接维持一段时间，以便通过一个连接传输更多数据。 你可以使用 **“资源(打开/关闭)”** 窗格检查你的应用程序与连接的交互方式。  
   
  ![“资源(打开/关闭)”窗格](../profiling/media/energyprof-resources.png "ENERGYPROF_Resources")  
@@ -151,13 +146,10 @@ if (performance && performance.mark) {
   
  对于显示所消耗的能量，你的控制力较小。 大多数屏幕显示亮色比显示暗色所需要的能量更多，因此使用暗色背景可以降低成本。  
   
-##  <a name="BKMK_Other_resources"></a> 其他资源  
+## <a name="BKMK_Other_resources"></a> 其他资源  
   
--   Windows 开发人员中心中 [C#/VB/C++ 和 XAML](http://msdn.microsoft.com/en-us/0ee0b706-8432-4d49-9801-306ed90764e1) 和 [JavaScript 和 HTML](http://msdn.microsoft.com/en-us/372afa6a-1c7c-4657-967d-03a77cd8e933) 的“连接状态和成本管理”  部分介绍了提供网络连接信息的 Windows API，你的应用程序可以使用这些信息最大程度降低网络通信成本。  
+- Windows 开发人员中心中 [C#/VB/C++ 和 XAML](https://msdn.microsoft.com/0ee0b706-8432-4d49-9801-306ed90764e1) 和 [JavaScript 和 HTML](https://msdn.microsoft.com/372afa6a-1c7c-4657-967d-03a77cd8e933) 的“连接状态和成本管理” 部分介绍了提供网络连接信息的 Windows API，你的应用程序可以使用这些信息最大程度降低网络通信成本。  
   
      使用 Windows 应用商店应用程序的 Visual Studio 模拟器可以模拟网络信息 API 的数据连接属性。 请参见 [Run Windows Store apps in the simulator](../debugger/run-windows-store-apps-in-the-simulator.md)  
   
--   **“JavaScript 函数计时”** 和 **“CPU 使用量”** 工具有助于降低由低效函数导致的 CPU 负载。 请参阅[分析 CPU 使用情况](../profiling/analyze-cpu-usage-in-a-windows-universal-app.md)。
-
-
-
+- **“JavaScript 函数计时”** 和 **“CPU 使用量”** 工具有助于降低由低效函数导致的 CPU 负载。 请参阅[分析 CPU 使用情况](../profiling/analyze-cpu-usage-in-a-windows-universal-app.md)。

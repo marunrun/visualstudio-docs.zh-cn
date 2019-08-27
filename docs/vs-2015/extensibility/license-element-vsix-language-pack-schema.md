@@ -1,24 +1,19 @@
 ---
 title: 许可证元素 （VSIX 语言包架构） |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 ms.assetid: 57dac3b7-0cdd-405c-9af5-30ed9ca45e53
 caps.latest.revision: 9
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: b390c9d390a23a8a5030d06acdb0f2470a946fde
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: a079dee3fc01995d70f77a9fa9791a5ab0f42561
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51740314"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65680597"
 ---
 # <a name="license-element-vsix-language-pack-schema"></a>License 元素 （VSIX 语言包架构）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,19 +33,19 @@ ms.locfileid: "51740314"
   
 |特性|描述|  
 |---------------|-----------------|  
-|无||  
+|None||  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|无||  
+|None||  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[VSIX LanguagePack 元素](../extensibility/vsixlanguagepack-element-vsix-language-pack-schema.md)|必须的。 VSIX 语言包中提供的根元素。|  
+|[VSIX LanguagePack 元素](../extensibility/vsixlanguagepack-element-vsix-language-pack-schema.md)|必需。 VSIX 语言包中提供的根元素。|  
   
 ## <a name="text-value"></a>文本值  
  要显示的本地化的许可证文件的相对路径。  
@@ -70,5 +65,4 @@ ms.locfileid: "51740314"
 ## <a name="see-also"></a>请参阅  
  [VSX 语言包架构参考](../extensibility/vsx-language-pack-schema-reference.md)   
  [本地化 VSIX 包](../extensibility/localizing-vsix-packages.md)   
- [VSIX 扩展架构 1.0 参考](http://msdn.microsoft.com/en-us/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)
-
+ [VSIX 扩展架构 1.0 参考](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)

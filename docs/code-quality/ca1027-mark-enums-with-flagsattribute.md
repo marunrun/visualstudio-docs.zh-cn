@@ -1,7 +1,6 @@
 ---
 title: CA1027:用 FlagsAttribute 标记枚举
-ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
+ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
 - MarkEnumsWithFlags
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 249e882c-8cd1-4c00-a2de-7b6bdc1849ff
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a559c20cd45ae39210421b647e8efd6c0928ade
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 92b74bcf587492155445c500252ea10773a5978b
+ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53882099"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69547801"
 ---
 # <a name="ca1027-mark-enums-with-flagsattribute"></a>CA1027:用 FlagsAttribute 标记枚举
 
@@ -29,29 +28,48 @@ ms.locfileid: "53882099"
 |TypeName|MarkEnumsWithFlags|
 |CheckId|CA1027|
 |类别|Microsoft.Design|
-|是否重大更改|非换行|
+|是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 公共枚举的值为 2 的幂或是在枚举中定义其他值的组合和<xref:System.FlagsAttribute?displayProperty=fullName>属性不存在。 若要减少误报，此规则不会报告具有连续值的枚举冲突。
+
+枚举的值是2的幂或是枚举中定义的其他值的组合, 且该<xref:System.FlagsAttribute?displayProperty=fullName>属性不存在。 若要减少误报, 此规则不对具有连续值的枚举报告冲突。
+
+默认情况下, 此规则仅查看公共枚举, 但这是[可配置](#configurability)的。
 
 ## <a name="rule-description"></a>规则说明
- 枚举是一种值类型，它定义一组相关的已命名常数。 将应用<xref:System.FlagsAttribute>到枚举时可以有意义的方式组合已命名的常数。 例如，考虑应用程序，用于跟踪提供了哪一天的资源中星期几的枚举。 如果通过使用枚举具有编码的每个资源可用性<xref:System.FlagsAttribute>可以表示存在，天内的任意组合。 如果没有属性，可以表示只有一个日期是星期几。
 
- 对于存储可组合枚举的字段，单独的枚举值被视为位字段中的组。 因此，此类字段有时称为*位域*。 若要组合的枚举值的位域中的存储，使用布尔条件运算符。 若要测试以确定是否存在特定的枚举值的位字段，请使用布尔逻辑运算符。 对于存储和检索正确组合的枚举值的位字段，每个枚举中定义的值必须是 2 的幂。 除非该条件，否则布尔逻辑运算符不能提取字段中存储的单独的枚举值。
+枚举是一种值类型，它定义一组相关的已命名常数。 当<xref:System.FlagsAttribute>枚举的命名常量可以有意义组合时, 应用于枚举。 例如, 考虑一个应用程序中一周中的几天的枚举, 该枚举跟踪可用的日期。 如果每个资源的可用性使用已<xref:System.FlagsAttribute>存在的枚举进行编码, 则可以表示任意日期组合。 如果没有属性, 则只能表示一周中的一天。
+
+对于存储可组合枚举的字段, 单独的枚举值在字段中被视为位组。 因此, 此类字段有时被称为*位域*。 若要将存储的枚举值组合到位域中, 请使用布尔条件运算符。 若要测试位域以确定是否存在特定的枚举值, 请使用布尔逻辑运算符。 若要使位域正确存储和检索组合的枚举值, 枚举中定义的每个值都必须是2的幂。 除非这样, 否则布尔逻辑运算符将无法提取存储在字段中的单个枚举值。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复此规则的冲突，请添加<xref:System.FlagsAttribute>到枚举。
+
+若要修复与此规则的冲突, <xref:System.FlagsAttribute>请将添加到枚举。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 如果不希望可组合的枚举值，禁止显示此规则的警告。
+
+如果你不希望枚举值可组合, 请禁止显示此规则发出的警告。
+
+## <a name="configurability"></a>配置
+
+如果从[FxCop 分析器](install-fxcop-analyzers.md)(而不是传统分析) 运行此规则, 则可以根据其可访问性, 将基本代码的哪些部分配置为在上运行此规则。 例如, 若要指定规则只应针对非公共 API 图面运行, 请在项目中的 editorconfig 文件中添加以下键/值对:
+
+```ini
+dotnet_code_quality.ca1027.api_surface = private, internal
+```
+
+您可以为此规则、所有规则或此类别中的所有规则 (设计) 配置此选项。 有关详细信息, 请参阅[配置 FxCop 分析器](configure-fxcop-analyzers.md)。
 
 ## <a name="example"></a>示例
- 在以下示例中，`DaysEnumNeedsFlags`是满足的要求使用一个枚举<xref:System.FlagsAttribute>，但不是希望其。 `ColorEnumShouldNotHaveFlag`枚举不具有值 2 的幂，但未正确指定<xref:System.FlagsAttribute>。 这违反了规则[CA2217:执行不使用 FlagsAttribute 标记枚举](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)。
 
- [!code-csharp[FxCop.Design.EnumFlags#1](../code-quality/codesnippet/CSharp/ca1027-mark-enums-with-flagsattribute_1.cs)]
+在下面的示例中`DaysEnumNeedsFlags` , 是一个满足使用<xref:System.FlagsAttribute>要求的枚举, 但没有该枚举。 枚举的值不是2的幂, 但指定<xref:System.FlagsAttribute>的值不正确。 `ColorEnumShouldNotHaveFlag` 这违反了[规则 CA2217:不要用 FlagsAttribute](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)标记枚举。
 
-## <a name="related-rules"></a>相关的规则
- [CA2217:不使用 FlagsAttribute 标记枚举](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
+[!code-csharp[FxCop.Design.EnumFlags#1](../code-quality/codesnippet/CSharp/ca1027-mark-enums-with-flagsattribute_1.cs)]
+
+## <a name="related-rules"></a>相关规则
+
+- [CA2217不要用 FlagsAttribute 标记枚举](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
 
 ## <a name="see-also"></a>请参阅
- <xref:System.FlagsAttribute?displayProperty=fullName>
+
+- <xref:System.FlagsAttribute?displayProperty=fullName>

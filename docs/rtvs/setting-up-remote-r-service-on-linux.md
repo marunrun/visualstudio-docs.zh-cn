@@ -2,20 +2,19 @@
 title: 在 Linux 上设置远程 R 服务
 description: 如何在 Ubuntu 和适用于 Linux 的 Windows 子系统上设置远程 R 服务。
 ms.date: 12/04/2017
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 ms.reviewer: karthiknadig
-manager: douge
+manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: c9406db2f7ae97a40936d672fb01d4943aeadcce
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c4d65388db0ef90f807ec85b8c9216d717c2b571
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53835940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809552"
 ---
 # <a name="remote-r-service-for-linux"></a>适用于 Linux 的远程 R 服务
 
@@ -167,5 +166,6 @@ ms.locfileid: "53835940"
     ```bash
     az container create --image myimage:latest --name myaz-container --resource-group myaz-container-res --ip-address public --port 5444 --cpu 2 --memory 4 --command-line "rtvsd"
     ```
+
 1. 使用 `az container list` 命令检查状态。 查找 `provisioningState`：`Succeeded`。
 1. 如果预配成功，则现在可以连接到容器。 在 `ipAddress` 字段中查找公共 IP 地址，此 IP 地址与 docker 文件中的凭据配合使用，可用于从 RTVS 连接到容器。

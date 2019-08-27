@@ -1,14 +1,9 @@
 ---
-title: CA1063： 实现 IDisposable 正确 |Microsoft Docs
-ms.custom: ''
+title: CA1063:正确实现 IDisposable |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - ImplementIDisposableCorrectly
 - CA1063
@@ -20,14 +15,14 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 94d13514800bac80723031c6bba7920d28ac83e6
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 90f218165c0543c1881857191efd202717c6e372
+ms.sourcegitcommit: 51dad3e11d7580567673e0d426ab3b0a17584319
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49877291"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66820883"
 ---
-# <a name="ca1063-implement-idisposable-correctly"></a>CA1063：正确实现 IDisposable
+# <a name="ca1063-implement-idisposable-correctly"></a>CA1063:正确实现 IDisposable
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -56,7 +51,7 @@ ms.locfileid: "49877291"
 
   这些模式的任何一个冲突将触发此警告。
 
-  每个未密封的根 IDisposable 类型都必须提供其自己受保护的虚拟 void dispose （bool） 方法。 Dispose （） 应调用 Dipose(true) 和 Finalize 应调用 dispose （false）。 如果要创建未密封的根 IDisposable 类型，必须定义 dispose （bool），调用它。 有关详细信息，请参阅[清理了非托管资源](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)中[Framework 设计准则](http://msdn.microsoft.com/library/5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b).NET Framework 文档的部分。
+  每个未密封的根 IDisposable 类型都必须提供其自己受保护的虚拟 void dispose （bool） 方法。 Dispose （） 应调用 dispose （true） 和 Finalize 应调用 dispose （false）。 如果要创建未密封的根 IDisposable 类型，必须定义 dispose （bool），调用它。 有关详细信息，请参阅[清理了非托管资源](https://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)中[Framework 设计准则](https://msdn.microsoft.com/library/5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b).NET Framework 文档的部分。
 
 ## <a name="rule-description"></a>规则说明
  所有的 IDisposable 类型都应当正确实现 Dispose 模式。
@@ -64,23 +59,23 @@ ms.locfileid: "49877291"
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  检查你的代码并确定哪些以下解决方法将修复此冲突。
 
--   从由实现的接口列表中移除 IDisposable {0} ，而是重写 Dispose 基类实现。
+- 从由实现的接口列表中移除 IDisposable {0} ，而是重写 Dispose 基类实现。
 
--   从类型中移除终结器{0}、 重写 Dispose (bool disposing)，和其中 disposing 为 false 的代码路径中加入终结逻辑。
+- 从类型中移除终结器{0}、 重写 Dispose (bool disposing)，和其中 disposing 为 false 的代码路径中加入终结逻辑。
 
--   删除{0}、 重写 Dispose (bool disposing)，和其中 disposing 为 true 的代码路径中加入释放逻辑。
+- 删除{0}、 重写 Dispose (bool disposing)，和其中 disposing 为 true 的代码路径中加入释放逻辑。
 
--   确保{0}声明为 public 和密封的。
+- 确保{0}声明为 public 和密封的。
 
--   重命名{0}为 Dispose，并确保它被声明为 public 和 sealed。
+- 重命名{0}为 Dispose，并确保它被声明为 public 和 sealed。
 
--   请确保{0}声明为受保护，虚拟的并为其未密封的。
+- 请确保{0}声明为受保护，虚拟的并为其未密封的。
 
--   修改{0}，以便它将调用 dispose （true），然后调用 GC。当前对象实例上的 SuppressFinalize (this 或 Me [!INCLUDE[vbprvb](../includes/vbprvb-md.md)])，然后返回。
+- 修改{0}，以便它将调用 dispose （true），然后调用 GC。当前对象实例上的 SuppressFinalize (this 或 Me [!INCLUDE[vbprvb](../includes/vbprvb-md.md)])，然后返回。
 
--   修改{0}，以便它调用 dispose （false），然后返回。
+- 修改{0}，以便它调用 dispose （false），然后返回。
 
--   如果你正在编写一个未密封的根 IDisposable 类，请确保 IDisposable 实现遵循本部分前面所述的模式。
+- 如果你正在编写一个未密封的根 IDisposable 类，请确保 IDisposable 实现遵循本部分前面所述的模式。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  不禁止显示此规则发出的警告。
@@ -129,6 +124,3 @@ public class Resource : IDisposable
     }
 }
 ```
-
-
-

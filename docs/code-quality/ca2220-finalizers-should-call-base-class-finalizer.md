@@ -1,7 +1,6 @@
 ---
 title: CA2220:终结器应调用基类的终结器
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - CA2220
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 48329f42-170d-45ee-a381-e33f55a240c5
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4befae0ca3095994c3d48d20647045d4825154e4
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 034f80c9198ab098070e6642f4a4d96cff1744c5
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53825391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62541853"
 ---
 # <a name="ca2220-finalizers-should-call-base-class-finalizer"></a>CA2220:终结器应调用基类的终结器
 

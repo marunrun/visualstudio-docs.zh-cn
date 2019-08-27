@@ -2,7 +2,6 @@
 title: IDebugDocumentContext 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,12 +13,12 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 998a219e8a58927ca62ec90e6b105586a64bbf2b
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: df4c8b8639a6d4b232f82cf87fff7b069829cc46
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54349577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62783189"
 ---
 # <a name="idebugdocumentcontext-interface"></a>IDebugDocumentContext 接口
 提供正在调试的一部分文档的抽象表示形式。 文本文档，这种表示形式包含字符位置范围。  

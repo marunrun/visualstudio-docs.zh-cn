@@ -8,14 +8,13 @@ helpviewer_keywords:
 ms.assetid: d0b5b23c-7e94-4637-be6c-2620a5442d46
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 4d2463c9c81e963494ed6865956b6e9c36934e07
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: fc1d609bab25b6a8e0dd573807aa02fefbe87a71
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53988918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62950171"
 ---
 # <a name="how-to-create-a-request-level-plug-in"></a>如何：创建请求级插件
 
@@ -31,52 +30,44 @@ ms.locfileid: "53988918"
 
 ## <a name="to-create-a-request-level-plug-in"></a>创建请求级插件
 
-1.  在解决方案资源管理器中，右键单击解决方案，选择“添加”，然后选择“新建项目”。
+1. 在解决方案资源管理器中，右键单击解决方案，选择“添加”，然后选择“新建项目”。
 
-     随即出现“添加新项目”对话框。
+2. 创建新的“类库”项目。
 
-2.  在“已安装的模板”下，选择“Visual C#”。
-
-3.  在模板列表中，选择“类库”。
-
-4.  在“名称”文本框中，键入类的名称并选择“确定”。
-
-     新的类库项目将添加到解决方案资源管理器中，并且新类会出现在代码编辑器中。
-
-5.  在解决方案资源管理器中，右击新类库中的“引用”文件夹并选择“添加引用”。
+3. 在解决方案资源管理器中，右击新类库中的“引用”文件夹并选择“添加引用”。
 
      将显示“添加引用”对话框。
 
-6.  选择“.NET”选项卡，向下滚动，选择“Microsoft.VisualStudio.QualityTools.WebTestFramework”，然后选择“确定”
+4. 选择“.NET”选项卡，向下滚动，选择“Microsoft.VisualStudio.QualityTools.WebTestFramework”，然后选择“确定”
 
      对“Microsoft.VisualStudio.QualityTools.WebTestFramework”的引用将添加到解决方案资源管理器的“引用”文件夹中。
 
-7.  在解决方案资源管理器中，右键单击 Web 性能和负载测试项目（其中包含要添加 Web 性能测试请求测试插件的负载测试）的顶级节点。 选择“添加引用”。
+5. 在解决方案资源管理器中，右键单击 Web 性能和负载测试项目（其中包含要添加 Web 性能测试请求测试插件的负载测试）的顶级节点。 选择“添加引用”。
 
      将显示“添加引用”对话框。
 
-8.  选择“项目”选项卡，选择“类库项目”，然后选择“确定”。
+6. 选择“项目”选项卡，选择“类库项目”，然后选择“确定”。
 
-9. 在代码编辑器中，编写插件的代码。 首先，创建一个从 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin> 派生的新公共类。
+7. 在代码编辑器中，编写插件的代码。 首先，创建一个从 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin> 派生的新公共类。
 
-10. 实现 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin.PreRequest*> 或/和 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin.PostRequest*> 事件处理程序内的代码。 有关示例实现，请参见下面的“示例”部分。
+8. 实现 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin.PreRequest*> 或/和 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin.PostRequest*> 事件处理程序内的代码。 有关示例实现，请参见下面的“示例”部分。
 
-11. 在编写完代码后，生成新项目。
+9. 在编写完代码后，生成新项目。
 
-12. 打开要在其中添加请求插件的 Web 性能测试。
+10. 打开要在其中添加请求插件的 Web 性能测试。
 
-13. 右击要在其中添加请求插件的请求，然后选择“添加请求插件”。
+11. 右击要在其中添加请求插件的请求，然后选择“添加请求插件”。
 
      随即显示“添加 Web 测试请求插件”对话框。
 
-14. 在“选择插件”下，选择新插件。
+12. 在“选择插件”下，选择新插件。
 
-15. 在“选定插件的属性”窗格中，设置要在运行时使用的插件的初始值。
+13. 在“选定插件的属性”窗格中，设置要在运行时使用的插件的初始值。
 
     > [!NOTE]
     > 可根据需要从插件中公开任意多个属性；只需将其设置为公共、可设置并属于 Integer、Boolean 或 String 等基本类型。 以后还可以使用“属性”窗口更改 Web 性能测试插件属性。
 
-16. 选择 **“确定”**。
+14. 选择 **“确定”**。
 
      将插件添加到“请求插件”文件夹中，该文件夹是 HTTP 请求的子文件夹。
 
@@ -87,15 +78,15 @@ ms.locfileid: "53988918"
     >
     > 如果对任何插件进行代码更改并创建新 DLL 版本 (Version=0.0.0.0)，则会引发这种情况，但插件仍会引用原来的插件版本。 若要更正此问题，请执行以下步骤：
     >
-    > 1.  在 Web 性能和负载测试项目中，将看到引用警告。 移除和重新添加对插件 DLL 的引用。
-    > 2.  从测试或适当位置移除插件，然后再重新添加。
+    > 1. 在 Web 性能和负载测试项目中，将看到引用警告。 移除和重新添加对插件 DLL 的引用。
+    > 2. 从测试或适当位置移除插件，然后再重新添加。
 
 ## <a name="example"></a>示例
 
 可以使用以下代码来创建自定义的 Web 性能测试插件，其中会显示两个对话框。 一个对话框显示与要附加请求外接程序的请求相关联的 URL。 第二个对话框显示代理的计算机名称。
 
 > [!NOTE]
-> 下面的代码要求你添加对 System.Windows.Forms 的引用。
+> 下面的代码要求您添加对 System.Windows.Forms 的引用。
 
 ```csharp
 using System;

@@ -1,21 +1,17 @@
 ---
 title: VSIX 颜色编辑器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 70879c5d-e0f0-4845-993c-2f4229869706
 caps.latest.revision: 6
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 7ac81f039bf5357f9488aeba439c27814cdf7e3d
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: fe8e54876f5b2ab3eda5c1bd8d35f0b0d0c788b2
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51727602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68197265"
 ---
 # <a name="vsix-color-editor"></a>VSIX 颜色编辑器
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -32,13 +28,13 @@ Visual Studio 扩展颜色编辑器工具可以创建和编辑 Visual Studio 的
   
  颜色标记由四个元素组成：  
   
--   **类别名称：** 的颜色集的逻辑分组。 如果已有特定于所需的 UI 元素或组的用户界面元素的颜色，请使用现有的类别名称。  
+- **类别名称：** 一组颜色逻辑分组。 如果已有特定于所需的 UI 元素或组的用户界面元素的颜色，请使用现有的类别名称。  
   
--   **令牌名称：** 的颜色标记和标记集的描述性名称。 设置包括背景和前景 （文本） 的标记名称，以及所有其状态，以及这些，因此很容易识别对，并且它们应用于的状态应命名为。  
+- **令牌名称：** 设置颜色的令牌和令牌的描述性名称。 设置包括背景和前景 （文本） 的标记名称，以及所有其状态，以及这些，因此很容易识别对，并且它们应用于的状态应命名为。  
   
--   **颜色值 （或色调）：** 所需的每个彩色的主题。 始终创建背景和文本颜色值对。 以便始终在其绘制的背景色对可读的文本 （前景） 颜色背景/前景的配对颜色。 这些颜色链接，将在 UI 中一起使用。 如果在后台不专用于与文本一起使用，不要定义前景色。  
+- **颜色值 （或色调）：** 所需的每个彩色的主题。 始终创建背景和文本颜色值对。 以便始终在其绘制的背景色对可读的文本 （前景） 颜色背景/前景的配对颜色。 这些颜色链接，将在 UI 中一起使用。 如果在后台不专用于与文本一起使用，不要定义前景色。  
   
--   **系统颜色名称：** 在高对比度显示中使用。  
+- **系统颜色名称：** 在高对比度显示中使用。  
   
 ## <a name="how-to-use-the-tool"></a>如何使用该工具  
  尽可能多地，并在适当的情况而不是使新的应重复使用现有的 Visual Studio 颜色。 但是，在其中定义没有适当的颜色的情况下，自定义颜色应为创建以保留扩展主题设置兼容。  
@@ -57,9 +53,9 @@ Visual Studio 扩展颜色编辑器工具可以创建和编辑 Visual Studio 的
   
 5. 在 Visual Studio 中测试所做的更改。  
   
-   **步骤 1： 确定类别和新的颜色标记的标记名称。**  
+   **步骤 1：确定新的颜色标记的类别和标记名称。**  
   
-   首选命名方案为 VSColor **[类别] [UI 类型] [State]**。 不要 VSColor 名称中使用单词"color"，因为它是冗余。  
+   首选命名方案为 VSColor **[类别] [UI 类型] [State]** 。 不要 VSColor 名称中使用单词"color"，因为它是冗余。  
   
    类别名称提供逻辑分组，而应定义为窄越好。 例如，单个工具窗口的名称可能是一个类别名称，但不是整个业务单元或项目组的名称。 分组为类别的项可帮助防止产生混乱之间具有相同名称的颜色。  
   
@@ -71,11 +67,11 @@ Visual Studio 扩展颜色编辑器工具可以创建和编辑 Visual Studio 的
   
 - 活动的  
   
-- 非活动状态  
+- 非活动  
   
 - MouseOver  
   
-- 鼠标按下  
+- MouseDown  
   
 - 已选定  
   
@@ -99,11 +95,11 @@ Visual Studio 扩展颜色编辑器工具可以创建和编辑 Visual Studio 的
   
 - ListItemDisabledBorder  
   
-  **步骤 2： 选择高对比度的 UI 元素将用于每个主题和系统颜色的色调。**  
+  **步骤 2：选择高对比度的 UI 元素将用于每个主题和系统颜色的色调。**  
   
   在自定义颜色选择 ui 时，选择类似现有的 UI 元素，并为基础使用它的颜色。 框中的 UI 元素的颜色经过了检查和测试，因此它们将查找适当并在所有主题中的正确行为。  
   
-  **步骤 3： 使用颜色编辑器创建新的颜色标记。**  
+  **步骤 3：使用颜色编辑器创建新的颜色标记。**  
   
   启动颜色编辑器和打开或创建新的自定义主题颜色.xml 文件。 选择**编辑 > 新颜色**菜单中。 这将打开一个对话框用于指定类别，该类别中颜色条目的一个或多个名称：  
   
@@ -129,11 +125,11 @@ Visual Studio 扩展颜色编辑器工具可以创建和编辑 Visual Studio 的
   
   对于不需要显示文本的组件，请输入一个颜色值： 背景色。 否则，输入的文本和背景色，由正斜杠分隔的值。  
   
-  高对比度的输入值时, 输入有效的 Windows 系统颜色名称。 不要输入 ARGB 硬编码值。 可以通过从颜色值下拉列表菜单中选择"背景:: 系统"或"前景色:: 系统"来查看有效的系统颜色名称的列表。 创建具有文本组件的元素时，使用正确的背景文本系统颜色对或文本可能是不可读。  
+  高对比度的输入值时, 输入有效的 Windows 系统颜色名称。 不要输入 ARGB 硬编码值。 您可以查看有效的系统颜色名称的列表，通过选择"背景：系统"或"前景色：System"的颜色值下拉列表菜单。 创建具有文本组件的元素时，使用正确的背景文本系统颜色对或文本可能是不可读。  
   
   完成创建、 设置和编辑的颜色标记的操作之后，将它们保存到所需的.xml 或.pkgdef 格式。 令牌具有两背景的颜色也前台集将保存为.xml 格式的空颜色，但.pkgdef 格式中将被丢弃。 如果你尝试将空颜色保存到.pkgdef 文件，对话框会警告您可能颜色丢失。  
   
-  **步骤 4： 使用 Visual Studio 扩展中的颜色。**  
+  **步骤 4：在 Visual Studio 扩展中使用的颜色。**  
   
   定义新的颜色后令牌，使用"生成操作"设置为"Content"在项目文件中包含.pkgdef 和"包括在 VSIX"设置为"True。  
   
@@ -183,7 +179,7 @@ namespace MyCustomColors
 </UserControl>  
 ```  
   
- **步骤 5： 在 Visual Studio 中测试所做的更改。**  
+ **步骤 5：在 Visual Studio 中测试所做的更改。**  
   
  颜色编辑器可以暂时将颜色标记应用于 Visual Studio 以查看实时更改颜色，而无需重新生成扩展包的运行实例。 若要执行此操作，请单击位于每个主题列标题上的"将此主题应用于运行 windows 的 Visual Studio"按钮。 VSIX 颜色编辑器关闭时，此临时主题将消失。  
   
@@ -297,4 +293,3 @@ namespace MyNamespace
   <Color x:Key="{x:Static colors:MyColors.ColorName4TextColorKey}" A="255" R="255" G="255" B="255" />  
 </ResourceDictionary>  
 ```
-

@@ -1,14 +1,9 @@
 ---
-title: '&lt;摘要&gt;(JavaScript) |Microsoft Docs'
-ms.custom: ''
+title: '&lt;摘要&gt; (JavaScript) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - summary JavaScript XML tag
 - <summary> JavaScript XML tag
@@ -16,15 +11,15 @@ ms.assetid: 6540582d-bdb3-42ec-ad2f-c176783e6f9c
 caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 8ee08ed1e2a5feb1f5a87f7d6337a4b5f1e47a22
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 81d41918d61bbe95cfe19d2382535449a47deb8c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49252403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62431415"
 ---
-# <a name="ltsummarygt-javascript"></a>&lt;摘要&gt;(JavaScript)
+# <a name="ltsummarygt-javascript"></a>&lt;summary&gt; (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 指定函数或方法的说明。  
@@ -38,16 +33,16 @@ ms.locfileid: "49252403"
   
 #### <a name="parameters"></a>参数  
  `locid`  
- 可选。 有关函数或方法的本地化信息标识符。 该标识符是任一成员 ID 或其对应于`name`属性在 OpenAjax 元数据定义消息绑定中的值。 标识符类型取决于中指定的格式[ \<loc >](../ide/loc-javascript.md)元素。  
+ 可选。 有关函数或方法的本地化信息的标识符。 标识符是成员 ID 或对应于 OpenAjax 元数据定义的消息绑定中的 `name` 属性值。 标识符类型取决于 [\<loc>](../ide/loc-javascript.md) 元素中指定的格式。  
   
  `description`  
- 可选。 函数或方法的说明。  
+ 可选。 函数或方法的描述。  
   
 ## <a name="remarks"></a>备注  
- 用于批注函数，它包含的元素[\<摘要 >](../ide/summary-javascript.md)， [ \<param >](../ide/param-javascript.md)，以及[\<返回 >](../ide/returns-javascript.md)，必须在任何语句之前在函数体中放置。  
+ 用于批注函数的元素（包括 [\<summary>](../ide/summary-javascript.md)、[\<param>](../ide/param-javascript.md) 和 [\<returns>](../ide/returns-javascript.md)）必须置于任何语句前的函数体中。  
   
 ## <a name="example"></a>示例  
- 下面的代码演示如何使用`<summary>`元素。  
+ 下面的代码演示如何使用 `<summary>` 元素。  
   
 ```javascript  
 function areaFunction(radiusParam)  
@@ -64,6 +59,3 @@ function areaFunction(radiusParam)
   
 ## <a name="see-also"></a>请参阅  
  [XML 文档注释](../ide/xml-documentation-comments-javascript.md)
-
-
-

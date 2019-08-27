@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: afe6cb8a-dc6a-428b-b07b-903ac02c890b
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: ef3d2b5fd9f5172a79daef185d7153905976ba88
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: 31b41a9c18a9e055c9d144c7115d3673ee2e4443
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53989120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62566570"
 ---
 # <a name="save-data-back-to-the-database"></a>将数据保存回数据库
 
@@ -42,7 +41,7 @@ ms.locfileid: "53989120"
 
 如果您熟悉使用 Tableadapter，您可以直接跳转到以下主题之一：
 
-|主题|说明|
+|主题|描述|
 |-----------|-----------------|
 |[将新记录插入数据库](../data-tools/insert-new-records-into-a-database.md)|如何执行更新和插入使用 Tableadapter 或命令对象|
 |[使用 TableAdapter 更新数据](../data-tools/update-data-by-using-a-tableadapter.md)|如何执行与 Tableadapter 的更新|
@@ -73,22 +72,22 @@ ms.locfileid: "53989120"
 
 |DataRowVersion|目标数据库|源数据集|
 | - | - | - |
-|原始|James Wilson|James C.Wilson|
-|当前|Jim Wilson|James C.Wilson|
+|原始|James Wilson|James C. Wilson|
+|当前|Jim Wilson|James C. Wilson|
 
 调用<xref:System.Data.DataSet.Merge%2A>方法使用了上表`preserveChanges=false targetDataset.Merge(sourceDataset)`将导致以下数据：
 
 |DataRowVersion|目标数据库|源数据集|
 | - | - | - |
-|原始|James C.Wilson|James C.Wilson|
-|当前|James C.Wilson|James C.Wilson|
+|原始|James C. Wilson|James C. Wilson|
+|当前|James C. Wilson|James C. Wilson|
 
 调用<xref:System.Data.DataSet.Merge%2A>方法替换`preserveChanges = true targetDataset.Merge(sourceDataset, true)`将导致以下数据：
 
 |DataRowVersion|目标数据库|源数据集|
 | - | - | - |
-|原始|James C.Wilson|James C.Wilson|
-|当前|Jim Wilson|James C.Wilson|
+|原始|James C. Wilson|James C. Wilson|
+|当前|Jim Wilson|James C. Wilson|
 
 > [!CAUTION]
 > 在中`preserveChanges = true`方案中，如果<xref:System.Data.DataSet.RejectChanges%2A>在目标数据集中，记录上调用方法，则它将恢复为原始数据从*源*数据集。 这意味着，如果你尝试更新原始数据源与目标数据集，它可能不能以查找要更新的原始行。 通过使用数据源的已更新的记录填充另一个数据集，然后执行合并来防止并发冲突，可以防止并发冲突。 （另一个用户修改数据源中的记录后填充数据集时出现的并发冲突。）
@@ -126,7 +125,7 @@ ms.locfileid: "53989120"
 
 下表详细说明的可能值<xref:System.Data.DataRowState>枚举：
 
-|DataRowState 值|说明|
+|DataRowState 值|描述|
 | - |-----------------|
 |<xref:System.Data.DataRowState.Added>|行添加到的项作为<xref:System.Data.DataRowCollection>。 (处于此状态的行不具有相应的原始版本，因为它不存在时最后一个<xref:System.Data.DataRow.AcceptChanges%2A>调用方法)。|
 |<xref:System.Data.DataRowState.Deleted>|使用已删除该行<xref:System.Data.DataRow.Delete%2A>的<xref:System.Data.DataRow>对象。|
@@ -140,7 +139,7 @@ ms.locfileid: "53989120"
 
 下表详细说明的可能值<xref:System.Data.DataRowVersion>枚举：
 
-|DataRowVersion 值|说明|
+|DataRowVersion 值|描述|
 | - |-----------------|
 |<xref:System.Data.DataRowVersion.Current>|一条记录的当前版本包含在上次记录执行的所有修改<xref:System.Data.DataRow.AcceptChanges%2A>调用。 如果行已被删除，则没有当前版本。|
 |<xref:System.Data.DataRowVersion.Default>|一条记录，定义数据集架构或数据源的默认值。|

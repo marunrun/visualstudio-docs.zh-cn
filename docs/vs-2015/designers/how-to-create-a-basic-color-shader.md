@@ -1,25 +1,20 @@
 ---
-title: 如何：创建基本颜色着色器 | Microsoft Docs
-ms.custom: ''
+title: 如何：创建基本颜色着色器 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: c301328a-079a-49e8-b688-4749c01657c0
 caps.latest.revision: 26
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 3bcbbb8ede9f30ed1c0340098ffb358cf5715487
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 59259d8186803d966e79f27012e6be6c22b47dd8
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49813203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63414704"
 ---
 # <a name="how-to-create-a-basic-color-shader"></a>如何：创建基本颜色着色器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,13 +23,13 @@ ms.locfileid: "49813203"
   
  本文档演示了这些活动：  
   
--   删除关系图中的节点  
+- 删除关系图中的节点  
   
--   将节点添加到关系图  
+- 将节点添加到关系图  
   
--   设置节点属性  
+- 设置节点属性  
   
--   连接节点  
+- 连接节点  
   
 ## <a name="creating-a-flat-color-shader"></a>创建平面颜色着色器  
  可将 RGB 颜色常量的颜色值写入最终输出颜色来实现平面颜色着色器。  
@@ -56,7 +51,7 @@ ms.locfileid: "49813203"
    下图显示了已完成的着色器关系图和应用于立方体的着色器预览。  
   
 > [!NOTE]
->  在图中，指定橙色以更好地展示着色器的效果。  
+> 在图中，指定橙色以更好地展示着色器的效果。  
   
  ![着色器关系图及其在三维模型上的结果](../designers/media/digit-flat-color-effect.png "Digit-Flat-Color-Effect")  
   
@@ -67,6 +62,3 @@ ms.locfileid: "49813203"
  [如何：导出着色器](../designers/how-to-export-a-shader.md)   
  [着色器设计器](../designers/shader-designer.md)   
  [着色器设计器节点](../designers/shader-designer-nodes.md)
-
-
-

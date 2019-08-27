@@ -1,14 +1,9 @@
 ---
 title: 控制数据收集 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - advanced tasks for profiling tools
 - profiling tools, advanced tasks
@@ -16,18 +11,18 @@ ms.assetid: e713ad63-b948-46f3-8db9-59b30922ebe5
 caps.latest.revision: 32
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: c8022dd8fdd480e4bc545923eeb96d64f16ed9a9
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: e34c4db965cacefabe752774e393a4339042040e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51803417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68182708"
 ---
 # <a name="controlling-data-collection"></a>控制数据收集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-通过 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 分析工具可控制性能会话期间收集分析数据的时间，并指定分析的函数。 本节介绍如何从“性能资源管理器”和“数据收集控制”窗口启动和停止数据收集，以及如何限制要收集其分析数据的对象。  
+通过 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 分析工具可控制性能会话期间收集分析数据的时间，并指定分析的函数。 本节介绍如何从“性能资源管理器”  和“数据收集控制”  窗口启动和停止数据收集，以及如何限制要收集其分析数据的对象。  
   
 ## <a name="common-tasks"></a>常规任务  
   
@@ -39,8 +34,5 @@ ms.locfileid: "51803417"
 ## <a name="related-sections"></a>相关章节  
  [配置性能会话](../profiling/configuring-performance-sessions.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [性能资源管理器](../profiling/performance-explorer.md)
-
-
-

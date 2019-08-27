@@ -1,14 +1,9 @@
 ---
 title: 如何：指定其他检测选项 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.property.advanced
 helpviewer_keywords:
@@ -19,13 +14,13 @@ ms.assetid: 639afe26-8335-4bd4-8aa5-f2c607b81f07
 caps.latest.revision: 21
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: a8e8fa3029f98084645bc56e490a93d5d8880b06
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: d4bc6eeb208ab6d80168431f110f0f6169abbc82
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51743053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63442140"
 ---
 # <a name="how-to-specify-additional-instrumentation-options"></a>如何：指定其他检测选项
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,26 +29,23 @@ ms.locfileid: "51743053"
   
  **要求**  
   
--   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
+- [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
 > [!IMPORTANT]
->  每个插入的探测都将稍微修改原始程序的行为。 此修改将导致分析时产生系统开销。 即使减去此系统开销的近似值，它仍然对多线程应用程序有细微计时影响。 [VSInstr](../profiling/vsinstr.md) 工具选项在分析期间帮助控制数据收集。  
+> 每个插入的探测都将稍微修改原始程序的行为。 此修改将导致分析时产生系统开销。 即使减去此系统开销的近似值，它仍然对多线程应用程序有细微计时影响。 [VSInstr](../profiling/vsinstr.md) 工具选项在分析期间帮助控制数据收集。  
   
 ### <a name="to-specify-additional-instrumentation-option"></a>指定其他检测选项  
   
-1.  在“性能资源管理器”中，选择“性能会话”，然后右键单击并选择“属性”。  
+1. 在“性能资源管理器”中，选择“性能会话”，然后右键单击并选择“属性”。  
   
-2.  在“属性页”中，单击“高级”属性。  
+2. 在“属性页”中，单击“高级”属性。  
   
-3.  在“其他检测选项”框中键入选项。  
+3. 在“其他检测选项”框中键入选项。  
   
      例如，使用 /CONTROL:THREAD 指定分析级别。 有关选项的完整列表，请参阅 [VSInstr](../profiling/vsinstr.md)。  
   
-4.  单击 **“确定”**。  
+4. 单击 **“确定”**。  
   
 ## <a name="see-also"></a>请参阅  
  [配置性能会话](../profiling/configuring-performance-sessions.md)   
  [从命令行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)
-
-
-

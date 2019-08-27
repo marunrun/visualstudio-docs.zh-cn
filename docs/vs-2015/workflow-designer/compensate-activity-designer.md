@@ -1,11 +1,8 @@
 ---
 title: Compensate 活动设计器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.Compensate.UI
@@ -13,13 +10,13 @@ ms.assetid: 7347c947-bfff-4bad-becd-5cd23e7b24cd
 caps.latest.revision: 5
 author: gewarren
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: ae01f59e6d1b1c9d9e0baa4214a693b3e6d390d8
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 0f643770482c2d01f3f091157e63f8e987853da5
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49245929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62977197"
 ---
 # <a name="compensate-activity-designer"></a>Compensate 活动设计器
 **Compensate**活动设计器用于创建和配置<xref:System.Activities.Statements.Compensate>活动。  
@@ -46,5 +43,5 @@ ms.locfileid: "49245929"
  [事务](../workflow-designer/transaction-activity-designers.md)   
  [CompensableActivity](../workflow-designer/compensableactivity-activity-designer.md)   
  [Compensate 活动设计器](../workflow-designer/compensate-activity-designer.md)   
- [确认](../workflow-designer/confirm-activity-designer.md)   
+ [Confirm](../workflow-designer/confirm-activity-designer.md)   
  [TransactionScope](../workflow-designer/transactionscope-activity-designer.md)

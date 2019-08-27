@@ -1,12 +1,9 @@
 ---
 title: 域特定语言中的验证 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, constraints
 - Domain-Specific Language, validation
@@ -14,13 +11,13 @@ ms.assetid: 65b93df8-af3c-462b-904c-60292f8ed381
 caps.latest.revision: 35
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 30a29c9b8921d72f717aea21ed202766f0874389
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 19ba3b3ee9e68a7329c077567136697b3acbe502
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49950781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63437477"
 ---
 # <a name="validation-in-a-domain-specific-language"></a>域特定语言中的验证
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +29,7 @@ ms.locfileid: "49950781"
  如果你要编写可处理用户的模型的文本模板或其他工具，则验证尤其重要。 验证可确保模型满足由这些工具假定的前提条件。  
   
 > [!WARNING]
->  还可以允许验证约束以及扩展菜单命令和笔势处理程序一起定义在对 DSL 的单独扩展中。 除了 DSL，用户还可以选择安装这些扩展。 有关详细信息，请参阅[通过使用 MEF 扩展 DSL](../modeling/extend-your-dsl-by-using-mef.md)。  
+> 还可以允许验证约束以及扩展菜单命令和笔势处理程序一起定义在对 DSL 的单独扩展中。 除了 DSL，用户还可以选择安装这些扩展。 有关详细信息，请参阅[通过使用 MEF 扩展 DSL](../modeling/extend-your-dsl-by-using-mef.md)。  
   
 ## <a name="running-validation"></a>运行验证  
  当用户编辑模型时（即域特定语言的实例），以下操作可运行验证：  
@@ -55,19 +52,19 @@ ms.locfileid: "49950781"
  每个验证方法都将报告它找到的所有错误。  
   
 > [!NOTE]
->  验证方法报告错误，但不更改模型。 如果你想要调整或阻止某些更改，请参阅[验证的替代方法](#alternatives)。  
+> 验证方法报告错误，但不更改模型。 如果你想要调整或阻止某些更改，请参阅[验证的替代方法](#alternatives)。  
   
 #### <a name="to-define-a-validation-constraint"></a>定义验证约束  
   
 1. 中启用验证**编辑器 \ 验证**节点：  
   
-   1.  打开**Dsl\DslDefinition.dsl**。  
+   1. 打开**Dsl\DslDefinition.dsl**。  
   
-   2.  在 DSL 资源管理器，展开**编辑器**节点，然后选择**验证**。  
+   2. 在 DSL 资源管理器，展开**编辑器**节点，然后选择**验证**。  
   
-   3.  在属性窗口中设置**使用**属性设置为`true`。 设置所有这些属性非常方便。  
+   3. 在属性窗口中设置**使用**属性设置为`true`。 设置所有这些属性非常方便。  
   
-   4.  单击**转换所有模板**解决方案资源管理器工具栏中。  
+   4. 单击**转换所有模板**解决方案资源管理器工具栏中。  
   
 2. 为一个或多个域类或域关系编写分部类定义。 中的新代码文件中编写这些定义**Dsl**项目。  
   
@@ -77,7 +74,7 @@ ms.locfileid: "49950781"
    [ValidationState(ValidationState.Enabled)]  
    ```  
   
-   -   默认情况下，此特性还将针对派生类启用验证。 如果想要针对特定派生类禁用验证，则可以使用 `ValidationState.Disabled`。  
+   - 默认情况下，此特性还将针对派生类启用验证。 如果想要针对特定派生类禁用验证，则可以使用 `ValidationState.Disabled`。  
   
 4. 将验证方法添加到类。 每个验证方法都可以具有任何名称，但要具有类型 <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationContext> 的一个参数。  
   
@@ -221,7 +218,7 @@ partial class MyLanguageCommandSet
   
 ```  
   
- 有关详细信息，请参阅[如何： 向快捷菜单添加命令](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)。  
+ 有关详细信息，请参阅[如何：将命令添加到快捷菜单](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)。  
   
  还可以创建单独的验证控制器，并自行管理错误。 例如：  
   
@@ -307,7 +304,7 @@ namespace Company.FamilyTree
   
  在影响链接或元素的“撤消”或“重做”操作后，还将调用处理程序。  
   
-##  <a name="custom"></a> 自定义验证类别  
+## <a name="custom"></a> 自定义验证类别  
  除了标准验证类别（如“菜单”和“打开”），还可以定义自己的类别。 可以从程序代码调用这些类别。 用户无法直接调用它们。  
   
  自定义类别通常用于定义测试模型是否满足特定工具的前提条件的类别。  
@@ -323,7 +320,7 @@ private void TestForCircularLinks(ValidationContext context)
 ```  
   
 > [!NOTE]
->  你可以为方法添加带有任意数目的 `[ValidationMethod()]` 特性的前缀。 可以将方法同时添加到自定义类别和标准类别。  
+> 你可以为方法添加带有任意数目的 `[ValidationMethod()]` 特性的前缀。 可以将方法同时添加到自定义类别和标准类别。  
   
  若要调用自定义验证，请执行以下操作：  
   
@@ -335,7 +332,7 @@ validationController.ValidateCustom
    "PreconditionsForGeneratePartsList");  
 ```  
   
-##  <a name="alternatives"></a> 验证的替代方法  
+## <a name="alternatives"></a> 验证的替代方法  
  验证约束报告错误，但不更改模型。 相反，如果你想要防止模型变为无效，则可以使用其他技术。  
   
  但是，不建议使用这些技术。 通常，最好让用户决定如何更正无效的模型。  
@@ -345,11 +342,8 @@ validationController.ValidateCustom
  **如果尝试无效的更改，则，回滚事务。** 你还可以为此，可以定义规则，但在某些情况下就可以重写属性处理程序**onvaluechanging （)**，或重写一个方法，如`OnDeleted().`若要回滚事务，请使用`this.Store.TransactionManager.CurrentTransaction.Rollback().`的详细信息信息，请参阅[域属性值更改处理程序](../modeling/domain-property-value-change-handlers.md)。  
   
 > [!WARNING]
->  请确保用户知道更改已调整或已回滚。 例如，使用 `System.Windows.Forms.MessageBox.Show("message").`  
+> 请确保用户知道更改已调整或已回滚。 例如，使用 `System.Windows.Forms.MessageBox.Show("message").`  
   
 ## <a name="see-also"></a>请参阅  
  [导航和更新程序代码中的模型](../modeling/navigating-and-updating-a-model-in-program-code.md)   
  [事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)
-
-
-

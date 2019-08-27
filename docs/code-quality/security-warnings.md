@@ -1,7 +1,6 @@
 ---
 title: 安全警告
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - vs.codeanalysis.securityrules
@@ -13,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 60d4e8ea-230a-494f-aa6a-b91db77540e4
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 648625164d58dca8449196bc80373a0fbfa96d9d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c52db730e471d845989b8fdfbadd259b5d166e8f
+ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53825404"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66715228"
 ---
 # <a name="security-warnings"></a>安全警告
 
@@ -37,7 +36,7 @@ ms.locfileid: "53825404"
 |[CA2104:不要声明只读可变引用类型](../code-quality/ca2104-do-not-declare-read-only-mutable-reference-types.md)|外部可见类型包含外部可见的只读字段，该字段为可变的引用类型。 可变类型是实例数据可被修改的类型。|
 |[CA2105:不应仅读取数组字段](../code-quality/ca2105-array-fields-should-not-be-read-only.md)|向包含数组的字段应用 readonly（在 Visual Basic 中为 ReadOnly）修饰符时，无法将该字段更改为引用其他数组。 但是，可以更改在只读字段中存储的数组的元素。|
 |[CA2106:安全断言](../code-quality/ca2106-secure-asserts.md)|某个方法断言权限，但不对调用方执行任何安全检查。 如果在不执行任何安全检查的情况下断言安全权限，则会在代码中留下可利用的安全漏洞。|
-|[CA2107:检查 deny 权限和允许仅使用情况](../code-quality/ca2107-review-deny-and-permit-only-usage.md)|PermitOnly 方法和 CodeAccessPermission.Deny 安全操作只应由掌握 .NET Framework 高级安全知识的人员使用。 应当对使用这些安全操作的代码进行安全检查。|
+|[CA2107:检查 deny 权限和允许仅使用情况](../code-quality/ca2107-review-deny-and-permit-only-usage.md)|使用 PermitOnly 方法和 CodeAccessPermission.Deny 安全操作应使用只由那些与.NET 安全性的高级知识。 应当对使用这些安全操作的代码进行安全检查。|
 |[CA2108:检查有关值类型的声明性安全](../code-quality/ca2108-review-declarative-security-on-value-types.md)|公共或受保护值类型受数据访问或链接要求保护。|
 |[CA2109:检查可见的事件处理程序](../code-quality/ca2109-review-visible-event-handlers.md)|检测到公共事件处理方法或受保护事件处理方法。 除非绝对必要，否则不应公开事件处理方法。|
 |[CA2111:指针不应是可见](../code-quality/ca2111-pointers-should-not-be-visible.md)|指针不是私有、内部或只读指针。 恶意代码可以更改指针的值，这样就有可能访问内存中的任意位置或导致应用程序或系统故障。|
@@ -78,5 +77,5 @@ ms.locfileid: "53825404"
 |[CA2153:避免处理损坏状态异常](../code-quality/ca2153-avoid-handling-corrupted-state-exceptions.md)|[损坏状态异常 (CSE)](https://msdn.microsoft.com/magazine/dd419661.aspx) 指示进程中存在内存损坏。 如果攻击者可以将攻击放置到损坏的内存区域，则捕获它们（而非允许进程崩溃）可能导致安全漏洞。|
 |[CA3075:不安全的 DTD 处理](../code-quality/ca3075-insecure-dtd-processing.md)|如果使用不安全的 DTDProcessing 实例或引用外部实体源，分析器可能会接受不受信任的输入并将敏感信息泄露给攻击者。|
 |[CA3076:不安全的 XSLT 脚本执行](../code-quality/ca3076-insecure-xslt-script-execution.md)|如果在 .NET 应用程序中不安全地执行可扩展样式表语言转换 (XSLT)，处理器可能会解析不受信任的 URI 引用，这种引用会把敏感信息泄露给攻击者，从而导致拒绝服务和跨站点攻击。|
-|[CA3077:API 设计、 XML 文档和 XML 文本读取器中的不安全处理](../code-quality/ca3077-insecure-processing-in-api-design-xml-document-and-xml-text-reader.md)|当设计派生自 XMLDocument 和 XMLTextReader 的 API 时，请注意 DtdProcessing。  当引用或解析外部实体源或设置 XML 中的不安全值时，使用不安全的 DTDProcessing 实例可能会导致信息泄露。|
+|[CA3077:API 设计、 XML 文档和 XML 文本读取器中的不安全处理](../code-quality/ca3077-insecure-processing-in-api-design-xml-document-and-xml-text-reader.md)|当设计派生自 XMLDocument 和 XMLTextReader 的 API 时，请注意 DtdProcessing。 当引用或解析外部实体源或设置 XML 中的不安全值时，使用不安全的 DTDProcessing 实例可能会导致信息泄露。|
 |[CA3147:将标记与 ValidateAntiForgeryToken 谓词处理程序](../code-quality/ca3147-mark-verb-handlers-with-validateantiforgerytoken.md)|在设计时的 ASP.NET MVC 控制器，留意跨站点请求伪造攻击。 跨站点请求伪造攻击可以将恶意请求从身份验证的用户发送到 ASP.NET MVC 控制器。|

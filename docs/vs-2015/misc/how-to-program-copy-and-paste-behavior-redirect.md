@@ -1,25 +1,20 @@
 ---
-title: 如何： 程序复制和粘贴行为-重定向 |Microsoft Docs
-ms.custom: ''
+title: 如何：编程复制和粘贴行为-重定向 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: devlang-csharp
+ms.topic: conceptual
 ms.assetid: 04445417-65c1-4938-9db3-79a40aa5d56d
 caps.latest.revision: 6
 author: gewarren
 ms.author: gewarren
-manager: kamrani
-ms.openlocfilehash: 09d52691e48289264cec2c61266f622aa771f0d4
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: f454456b0bd0c5fd604cc836843cc341281904ae
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51790870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62938589"
 ---
-# <a name="how-to-program-copy-and-paste-behavior---redirect"></a>如何：程序复制和粘贴行为 - 重定向
+# <a name="how-to-program-copy-and-paste-behavior---redirect"></a>如何：编程复制和粘贴行为-重定向
 本主题的内容已合并与类似主题。 请参阅[自定义复制行为](../modeling/customizing-copy-behavior.md)。

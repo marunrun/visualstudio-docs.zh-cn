@@ -1,33 +1,28 @@
 ---
 title: TASK_STATE_WAITING_ON_CHILDREN 字段 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - TASK_STATE_WAITING_ON_CHILDREN field, Task class [.NET Framework debug engines]
 ms.assetid: 6f26b098-84ad-4f6e-ba27-6136581ba630
 caps.latest.revision: 11
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: a8d0c6823c530d7c546a956ecebb3876c1ad6715
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: e2dfb7ca683b7a05151539feda92a2575197b189
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51720839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68176717"
 ---
 # <a name="taskstatewaitingonchildren-field"></a>TASK_STATE_WAITING_ON_CHILDREN 字段
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 任务已完成执行其委托，隐式等待附加的子任务完成。  
   
- **Namespace**：<xref:System.Threading.Tasks?displayProperty=fullName>  
+ **命名空间：** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
  **程序集：** mscorlib （在 mscorlib.dll 中)  
   
@@ -44,4 +39,3 @@ ms.locfileid: "51720839"
   
 ## <a name="see-also"></a>请参阅  
  [Task 类](../../extensibility/debugger/task-class-internal-members.md)
-

@@ -1,9 +1,8 @@
 ---
 title: 为企业部署设置默认值
 description: 了解 Visual Studio 企业部署的域策略和其他配置操作。
-ms.date: 05/05/2017
+ms.date: 03/30/2019
 ms.custom: seodec18
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - gpo
@@ -14,17 +13,19 @@ helpviewer_keywords:
 ms.assetid: 9B7B4608-7A3F-4FF4-BDCE-42D9F7CE6DBA
 author: heaths
 ms.author: tglee
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 55bc436db77b90f30cec39fe2d0d33e3a8c60bb1
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.prod: visual-studio-windows
+ms.technology: vs-installation
+ms.openlocfilehash: 3f1ddb1f1d39255c14e03d114891145c8f2dece5
+ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53906067"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69551186"
 ---
-# <a name="set-defaults-for-enterprise-deployments-of-visual-studio-2017"></a>为 Visual Studio 2017 企业部署设置默认值
+# <a name="set-defaults-for-enterprise-deployments-of-visual-studio"></a>为 Visual Studio 企业部署设置默认值
 
 可以设置影响 Visual Studio 部署的注册表策略。 这些策略对新安装程序全局适用，并将影响：
 
@@ -49,20 +50,21 @@ ms.locfileid: "53906067"
 
 可以设置以下注册表值：
 
-| **名称** | **Type** | **默认** | **说明** |
+| **Name** | **Type** | **默认** | **说明** |
 | -------- | -------- | ----------- | --------------- |
-| `CachePath` | `REG_SZ` 或 `REG_EXPAND_SZ` | %ProgramData%\Microsoft\VisualStudio\Packages | 用于存储包清单和有效负载（可选）的目录。 有关详细信息，请了解如何[禁用或移动包缓存](disable-or-move-the-package-cache.md)。 |
-| `KeepDownloadedPayloads` | `REG_DWORD` | 1 | 即使在安装后，也仍会保留包有效负载。 随时都可以更改值。 禁用此策略会删除你修复或修改的实例的任何已缓存包有效负载。 有关详细信息，请了解如何[禁用或移动包缓存](disable-or-move-the-package-cache.md)。 |
+| `CachePath` | `REG_SZ` 或 `REG_EXPAND_SZ` | %ProgramData%\Microsoft\VisualStudio\Packages | 用于存储包清单和有效负载（可选）的目录。 有关详细信息，请参阅[禁用或移动包缓存](disable-or-move-the-package-cache.md)页面。 |
+| `KeepDownloadedPayloads` | `REG_DWORD` | 1 | 即使在安装后，也仍会保留包有效负载。 随时都可以更改值。 禁用此策略会删除你修复或修改的实例的任何已缓存包有效负载。 有关详细信息，请参阅[禁用或移动包缓存](disable-or-move-the-package-cache.md)页面。 |
 | `SharedInstallationPath` | `REG_SZ` 或 `REG_EXPAND_SZ` | %ProgramFiles(x86)%\Microsoft Visual Studio\Shared | 用于安装跨 Visual Studio 实例版本共享的一些包的目录。 虽然随时都可以更改值，但更改只会影响今后执行的安装。 不得移动旧位置上已安装的任何产品，否则它们可能无法正常运行。 |
+| `BackgroundDownloadDisabled` |`REG_DWORD` | 1 | 阻止安装程序为所有已安装的 Visual Studio 产品自动下载更新。 随时都可以更改值。 |
 
 > [!IMPORTANT]
-> 如果在执行任何安装后更改 `CachePath` 注册表策略，必须将现有包缓存移到新位置上，并确保其受安全保护，以便 `SYSTEM` 和 `Administrators` 拥有完全控制权限，并且 `Everyone` 拥有读取访问权限。
+> 如果在任何安装后更改 `CachePath` 注册表策略，必须将现有包缓存移到新位置，并确保其受安全保护，以便 `SYSTEM` 和 `Administrators` 拥有完全控制权限，并且 `Everyone` 拥有读取访问权限。
 > 如果无法移动现有缓存或无法确保其受安全保护，可能导致今后执行的安装出现问题。
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>请参阅
 
- * [安装 Visual Studio](install-visual-studio.md)
- * [禁用或移动包缓存](disable-or-move-the-package-cache.md)
- * [使用命令行参数安装 Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
+- [安装 Visual Studio](install-visual-studio.md)
+- [禁用或移动包缓存](disable-or-move-the-package-cache.md)
+- [使用命令行参数安装 Visual Studio](use-command-line-parameters-to-install-visual-studio.md)

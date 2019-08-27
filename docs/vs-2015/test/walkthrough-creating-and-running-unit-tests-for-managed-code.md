@@ -1,14 +1,9 @@
 ---
-title: 演练：创建并运行托管代码的单元测试 | Microsoft Docs
-ms.custom: ''
+title: 演练：创建并运行单元测试的托管代码 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-test
+ms.topic: conceptual
 helpviewer_keywords:
 - unit tests, walkthrough
 - unit tests, creating
@@ -18,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 2b018b18-b412-4e0e-b0ee-b580a2f3ba9c
 caps.latest.revision: 85
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 50d8190f386a4923fd05cbfaec137791bd9f2b5a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 2e120499893a5b2a85d9a40a57e078f3d8f6586d
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49874496"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65695053"
 ---
-# <a name="walkthrough-creating-and-running-unit-tests-for-managed-code"></a>演练：创建并运行托管代码的单元测试
+# <a name="walkthrough-creating-and-running-unit-tests-for-managed-code"></a>演练：创建和运行托管代码的单元测试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本演练将使用托管代码的 Microsoft 单元测试框架和 Visual Studio 测试资源管理器引导你逐步完成一系列单元测试的创建、运行和自定义。 你将从正处于开发过程中的 C# 项目开始，创建执行该项目代码的测试，运行测试并检查结果。 然后，可以更改项目代码并重新运行测试。  
@@ -52,36 +47,36 @@ ms.locfileid: "49874496"
   [使用单元测试以改进代码](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Use_unit_tests_to_improve_your_code)  
   
 > [!NOTE]
->  此演练使用用于托管代码的 Microsoft 单元测试框架。 测试资源管理器还可以在具有测试资源管理器适配器的第三方单元测试框架中运行测试。 有关详细信息，请参阅[安装第三方单元测试框架](../test/install-third-party-unit-test-frameworks.md)  
+> 此演练使用用于托管代码的 Microsoft 单元测试框架。 测试资源管理器还可以在具有测试资源管理器适配器的第三方单元测试框架中运行测试。 有关详细信息，请参阅[安装第三方单元测试框架](../test/install-third-party-unit-test-frameworks.md)  
   
 > [!NOTE]
->  有关如何从命令行运行测试的信息，请参阅[演练：使用命令行测试实用工具](http://msdn.microsoft.com/library/52c11992-9e94-4067-a4b7-59f19d69d867)。  
+> 有关如何从命令行运行测试的信息，请参阅[演练：使用命令行测试实用工具](https://msdn.microsoft.com/library/52c11992-9e94-4067-a4b7-59f19d69d867)。  
   
 ## <a name="prerequisites"></a>系统必备  
   
--   Bank 项目。 请参阅[用于创建单元测试的示例项目](../test/sample-project-for-creating-unit-tests.md)。  
+- Bank 项目。 请参阅[用于创建单元测试的示例项目](../test/sample-project-for-creating-unit-tests.md)。  
   
-##  <a name="BKMK_Prepare_the_walkthrough"></a>准备演练  
+## <a name="BKMK_Prepare_the_walkthrough"></a>准备演练  
   
 1. 打开 Visual Studio。  
   
-2. 在 **“文件”** 菜单上指向 **“新建”** ，然后单击 **“项目”**。  
+2. 在 **“文件”** 菜单上指向 **“新建”** ，然后单击 **“项目”** 。  
   
     此时将出现 **“新建项目”** 对话框。  
   
-3. 在 **“已安装的模板”** 下单击 **“Visual C#”**。  
+3. 在 **“已安装的模板”** 下单击 **“Visual C#”** 。  
   
-4. 在应用程序类型的列表中单击 **“类库”**。  
+4. 在应用程序类型的列表中单击 **“类库”** 。  
   
-5. 在 **“名称”** 框中键入 `Bank` ，然后单击 **“确定”**。  
+5. 在 **“名称”** 框中键入 `Bank` ，然后单击 **“确定”** 。  
   
    > [!NOTE]
-   >  如果名称“Bank”已被使用，请为该项目选择其他名称。  
+   > 如果名称“Bank”已被使用，请为该项目选择其他名称。  
   
     将创建新的 Bank 项目并将其显示在解决方案资源管理器中，而且将在代码编辑器中打开 Class1.cs 文件。  
   
    > [!NOTE]
-   >  如果代码编辑器中未打开 Class1.cs 文件，请在解决方案资源管理器中双击文件 Class1.cs 将其打开。  
+   > 如果代码编辑器中未打开 Class1.cs 文件，请在解决方案资源管理器中双击文件 Class1.cs 将其打开。  
   
 6. 复制[用于创建单元测试的示例项目](../test/sample-project-for-creating-unit-tests.md)中的源代码。  
   
@@ -89,9 +84,9 @@ ms.locfileid: "49874496"
   
 8. 将文件保存为 BankAccount.cs  
   
-9. 在 **“生成”** 菜单上，单击 **“生成解决方案”**。  
+9. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。  
   
-   现在你有一个名为“Bank”的项目。 它包含要测试的源代码和用于对该源代码进行测试的工具。 Bank 的命名空间 **“BankAccountNS”** 包含公共类 **“BankAccount”**，在以下过程中将对该类的方法进行测试。  
+   现在你有一个名为“Bank”的项目。 它包含要测试的源代码和用于对该源代码进行测试的工具。 Bank 的命名空间 **“BankAccountNS”** 包含公共类 **“BankAccount”** ，在以下过程中将对该类的方法进行测试。  
   
    在本次快速入门中，我们重点关注 `Debit` 方法。Debit 方法是在从帐户提取资金时调用的，包含以下代码：  
   
@@ -112,33 +107,33 @@ public void Debit(double amount)
   
 ```  
   
-##  <a name="BKMK_Create_a_unit_test_project"></a> 创建单元测试项目  
- **系统必备**：按照 [Prepare the walkthrough](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Prepare_the_walkthrough)过程中的步骤执行操作。  
+## <a name="BKMK_Create_a_unit_test_project"></a> 创建单元测试项目  
+ **先决条件**:按照该过程中的步骤[准备演练](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Prepare_the_walkthrough)。  
   
 #### <a name="to-create-a-unit-test-project"></a>创建单元测试项目  
   
-1.  在 **“文件”** 菜单中，选择 **“添加”**，再选择 **“新建项目...”**。  
+1. 在 **“文件”** 菜单中，选择 **“添加”** ，再选择 **“新建项目...”** 。  
   
-2.  在“新建项目”对话框中，依次展开 **“已安装”**、 **“Visual C#”**，然后选择 **“测试”**。  
+2. 在“新建项目”对话框中，依次展开 **“已安装”** 、 **“Visual C#”** ，然后选择 **“测试”** 。  
   
-3.  从模板列表中选择 **“单元测试项目”**。  
+3. 从模板列表中选择 **“单元测试项目”** 。  
   
-4.  在 **“名称”** 框中，输入 BankTest，然后选择 **“确定”**。  
+4. 在 **“名称”** 框中，输入 BankTest，然后选择 **“确定”** 。  
   
-     将“BankTests”项目添加到“Bank”解决方案。  
+     将“BankTests”  项目添加到“Bank”  解决方案。  
   
-5.  在 **“BankTests”** 项目中，添加对 **“Bank”** 解决方案的引用。  
+5. 在 **“BankTests”** 项目中，添加对 **“Bank”** 解决方案的引用。  
   
      在“解决方案资源管理器”中，选择 **“BankTests”** 项目中的 **“引用”** ，然后从上下文菜单中选择 **“添加引用...”** 。  
   
-6.  在“引用管理器”对话框中，展开 **“解决方案”** ，然后选中 **“Bank”** 项。  
+6. 在“引用管理器”对话框中，展开 **“解决方案”** ，然后选中 **“Bank”** 项。  
   
-##  <a name="BKMK_Create_the_test_class"></a> 创建测试类  
+## <a name="BKMK_Create_the_test_class"></a> 创建测试类  
  我们需要一个测试类来验证 `BankAccount` 类。 我们可以使用由项目模板生成的 UnitTest1.cs，但在对文件和类命名时应更具描述性。 通过重命名“解决方案资源管理器”中的文件，我们就可以一步完成这个操作。  
   
  **重命名类文件**  
   
- 在“解决方案资源管理器”中，从 BankTests 项目中选择 UnitTest1.cs 文件。 从上下文菜单中，选择 **“重命名”**，然后将该文件重命名为 BankAccountTests.cs。 当显示对话框询问你是否希望重命名项目中对代码元素“UnitTest1”的所有引用时，选择 **“是”** 。 此步骤会将类的名称更改为 `BankAccountTest`。  
+ 在“解决方案资源管理器”中，从 BankTests 项目中选择 UnitTest1.cs 文件。 从上下文菜单中，选择 **“重命名”** ，然后将该文件重命名为 BankAccountTests.cs。 当显示对话框询问你是否希望重命名项目中对代码元素“UnitTest1”的所有引用时，选择 **“是”** 。 此步骤会将类的名称更改为 `BankAccountTest`。  
   
  BankAccountTests.cs 文件现包含下列代码：  
   
@@ -168,7 +163,7 @@ namespace BankTests
 using BankAccountNS;  
 ```  
   
-###  <a name="BKMK_Test_class_requirements"></a> 测试类要求  
+### <a name="BKMK_Test_class_requirements"></a> 测试类要求  
  对测试类的最低要求如下：  
   
 - 在托管代码的 Microsoft 单元测试框架中，任何包含要在“测试资源管理器”中运行的单元测试方法的类都需要有 `[TestClass]` 特性。  
@@ -177,12 +172,12 @@ using BankAccountNS;
   
   单元测试项目中可以具有不含 `[TestClass]` 特性的其他类，测试类中可以具有不含 `[TestMethod]` 特性的其他方法。 可以在测试方法中使用这些其他的类和方法。  
   
-##  <a name="BKMK_Create_the_first_test_method"></a> 创建第一个测试方法  
+## <a name="BKMK_Create_the_first_test_method"></a> 创建第一个测试方法  
  在此过程中，我们将编写单元测试方法以验证 `Debit` 类的 `BankAccount` 方法的行为。 方法如上所列。  
   
  通过分析所测试的方法，我们确定至少需要检查三个行为：  
   
-1. 该方法将引发 [ArgumentOutOfRangeException] (<!-- TODO: review code entity reference <xref:assetId:///ArgumentOutOfRangeException?qualifyHint=False&amp;autoUpgrade=True>  -->) 如果借方金额大于余额。  
+1. 该方法将引发一个 [ArgumentOutOfRangeException] （<!-- TODO: review code entity reference <xref:assetId:///ArgumentOutOfRangeException?qualifyHint=False&amp;autoUpgrade=True>  -->) 如果借方金额大于余额。  
   
 2. 如果借方金额小于零，它还会引发 `ArgumentOutOfRangeException` 。  
   
@@ -218,31 +213,31 @@ using BankAccountNS;
   
    此方法更加简单。 我们设置了有期初余额的新 `BankAccount` 对象，然后提取有效金额。 使用托管代码 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A> 方法的 Microsoft 单元测试框架来验证期末余额是否符合我们的预期。  
   
-###  <a name="BKMK_Test_method_requirements"></a> 测试方法要求  
+### <a name="BKMK_Test_method_requirements"></a> 测试方法要求  
  测试方法必须满足以下要求：  
   
--   必须用 `[TestMethod]` 特性修饰该方法。  
+- 必须用 `[TestMethod]` 特性修饰该方法。  
   
--   该方法必须返回 `void`。  
+- 该方法必须返回 `void`。  
   
--   该方法不能含有参数。  
+- 该方法不能含有参数。  
   
-##  <a name="BKMK_Build_and_run_the_test"></a> 生成并运行测试  
+## <a name="BKMK_Build_and_run_the_test"></a> 生成并运行测试  
   
 #### <a name="to-build-and-run-the-test"></a>生成并运行测试  
   
-1.  在 **“生成”** 菜单上，选择 **“生成解决方案”**。  
+1. 在 **“生成”** 菜单上，选择 **“生成解决方案”** 。  
   
-     如果没有错误，会显示“单元测试资源管理器”窗口，其中 **“Debit_WithValidAmount_UpdatesBalance”** 在 **“未运行的测试”** 组中列出。 如果“测试资源管理器”在成功生成后未显示，请在菜单上选择 **“测试”** ，再选择 **“窗口”**，然后选择  **“测试资源管理器”**。  
+     如果没有错误，会显示“单元测试资源管理器”窗口，其中 **“Debit_WithValidAmount_UpdatesBalance”** 在 **“未运行的测试”** 组中列出。 如果“测试资源管理器”在成功生成后未显示，请在菜单上选择 **“测试”** ，再选择 **“窗口”** ，然后选择  **“测试资源管理器”** 。  
   
-2.  选择 **“全部运行”** 以运行测试。 运行测试时，窗口顶部的状态栏是动画处理的。 测试运行结束时，如果测试方法全部通过，状态栏将变为绿色；如果有任何测试失败，状态栏将变为红色。  
+2. 选择 **“全部运行”** 以运行测试。 运行测试时，窗口顶部的状态栏是动画处理的。 测试运行结束时，如果测试方法全部通过，状态栏将变为绿色；如果有任何测试失败，状态栏将变为红色。  
   
-3.  在这种情况下，测试就失败了。 测试方法将移动到 **“失败的测试”**。 组中列出。 在“测试资源管理器”中选择该方法可在窗口底部查看详细信息。  
+3. 在这种情况下，测试就失败了。 测试方法将移动到 **“失败的测试”** 。 组中列出。 在“测试资源管理器”中选择该方法可在窗口底部查看详细信息。  
   
-##  <a name="BKMK_Fix_your_code_and_rerun_your_tests"></a> 修复代码并重新运行测试  
+## <a name="BKMK_Fix_your_code_and_rerun_your_tests"></a> 修复代码并重新运行测试  
  **分析测试结果**  
   
- 测试结果包含一条描述失败的消息。 对于 `AreEquals` 方法，消息会显示预期的内容（预期\<XXX>参数）以及实际接收到的内容（实际\<YYY>参数）。 我们本来预期余额会比期初余额越来越少，但却增加了取款金额。  
+ 测试结果包含一条描述失败的消息。 对于 `AreEquals` 方法，消息会显示预期的内容（预期\<XXX>参数）以及实际接收到的内容（实际\<YYY>参数）。     我们本来预期余额会比期初余额越来越少，但却增加了取款金额。  
   
  复查 Debit 代码后发现，单元测试成功找到 bug。 取款金额本应从帐户余额中减去，结果却增加到帐户余额中。  
   
@@ -264,7 +259,7 @@ m_balance -= amount;
   
  在“测试资源管理器”中，选择 **“全部运行”** 以重新运行测试。 红色/绿色栏变为绿色，测试移动到 **“已通过的测试”** 组。  
   
-##  <a name="BKMK_Use_unit_tests_to_improve_your_code"></a> 使用单元测试以改进代码  
+## <a name="BKMK_Use_unit_tests_to_improve_your_code"></a> 使用单元测试以改进代码  
  本部分介绍了分析的迭代过程、单元测试开发和重构如何帮助你增加成品代码的可靠性和有效性。  
   
  **分析问题**  
@@ -423,6 +418,3 @@ public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()
 ```  
   
  在最后部分，我们为改进测试代码而做出的努力最终提高了测试方法的可靠性和信息量。 但更重要的是，额外的分析也改善了所测试项目中的代码。
-
-
-

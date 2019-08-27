@@ -1,7 +1,6 @@
 ---
 title: CA1048:不要在密封类型中声明虚拟成员
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - DoNotDeclareVirtualMembersInSealedTypes
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 5dcf4a30-6f98-48a8-b8cc-7b89ea757262
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 026a1b2cbcd75bd2f39cc6f169b0a1a2feddb258
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 430ed0b23d62bd46a9764bfb0a3834e0decd476b
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53872877"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68922598"
 ---
 # <a name="ca1048-do-not-declare-virtual-members-in-sealed-types"></a>CA1048:不要在密封类型中声明虚拟成员
 
@@ -32,20 +31,20 @@ ms.locfileid: "53872877"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 公共类型密封的将方法同时声明`virtual`(`Overridable`在 Visual Basic 中) 并不是最终。 此规则不会报告冲突，委托类型，必须遵循此模式。
+公共类型是密封的, 并声明一个方法, 该`virtual`方法`Overridable`既是 Visual Basic 的, 也不是最终的。 此规则不报告委托类型的冲突, 必须遵循此模式。
 
 ## <a name="rule-description"></a>规则说明
- 类型将方法声明为虚方法，使继承类型可以重写虚方法的实现。 根据定义，不能继承密封类型，使得在密封类型上的虚拟方法没有意义。
+类型将方法声明为虚方法，使继承类型可以重写虚方法的实现。 按照定义, 不能从密封类型继承, 使虚方法在密封类型上无意义。
 
- Visual Basic 和 C# 编译器不允许违反此规则的类型。
+Visual Basic 和C#编译器不允许类型违反此规则。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要解决此规则的冲突，使该方法成为非虚方法或使该类型可继承。
+若要修复与此规则的冲突, 请将该方法设置为非虚拟方法, 或使该类型可继承。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 不禁止显示此规则发出的警告。 在其当前状态使类型可能会导致维护问题，它不提供任何权益。
+不禁止显示此规则发出的警告。 使类型保持当前状态可能会导致维护问题, 而且不会带来任何好处。
 
 ## <a name="example"></a>示例
- 下面的示例显示了与此规则冲突的类型。
+下面的示例演示违反此规则的类型。
 
- [!code-cpp[FxCop.Design.SealedVirtual#1](../code-quality/codesnippet/CPP/ca1048-do-not-declare-virtual-members-in-sealed-types_1.cpp)]
+[!code-cpp[FxCop.Design.SealedVirtual#1](../code-quality/codesnippet/CPP/ca1048-do-not-declare-virtual-members-in-sealed-types_1.cpp)]

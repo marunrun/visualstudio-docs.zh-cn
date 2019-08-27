@@ -1,25 +1,22 @@
 ---
 title: 在建模图上定义菜单命令 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - UML - extending, menu commands
 ms.assetid: 79c277de-5871-4fc7-9701-55eec5c3cd46
 caps.latest.revision: 63
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: c211c37817ba996105d7496dc49e91db9fa9298e
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 9ec230a5bf32ab6e70967e76d31030af3a7a351a
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51809098"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65687604"
 ---
 # <a name="define-a-menu-command-on-a-modeling-diagram"></a>在建模图上定义菜单命令
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,13 +31,13 @@ ms.locfileid: "51809098"
 ## <a name="defining-the-menu-command"></a>定义菜单命令  
  要为 UML 设计器创建菜单命令，必须创建一个用于定义命令行为的类，并将该类嵌入 Visual Studio 集成扩展 (VSIX) 中。 VSIX 用作可安装该命令的容器。 有两种替代方法可以定义菜单命令：  
 
--   **在使用项目模板其自身 VSIX 中创建菜单命令。** 此方法更快。 如果不希望将菜单命令与其他类型的扩展（如验证扩展、自定义工具箱项或笔势处理程序）组合在一起，可以采用此方法。  
+- **在使用项目模板其自身 VSIX 中创建菜单命令。** 此方法更快。 如果不希望将菜单命令与其他类型的扩展（如验证扩展、自定义工具箱项或笔势处理程序）组合在一起，可以采用此方法。  
 
--   **创建单独的菜单命令和 VSIX 项目。** 如果希望将多种类型的扩展组合到同一个 VSIX 中，可以采用此方法。 例如，如果菜单命令要求模型遵守特定的约束，则可以将该菜单命令作为一种验证方法嵌入同一 VSIX 中。  
+- **创建单独的菜单命令和 VSIX 项目。** 如果希望将多种类型的扩展组合到同一个 VSIX 中，可以采用此方法。 例如，如果菜单命令要求模型遵守特定的约束，则可以将该菜单命令作为一种验证方法嵌入同一 VSIX 中。  
 
 #### <a name="to-create-a-menu-command-in-its-own-vsix"></a>若要在自己的 VSIX 中创建菜单命令  
 
-1. 在  “新建项目”对话框中的 “建模项目”下，选择 “命令扩展”。  
+1. 在  “新建项目”对话框中的  “建模项目”下，选择  “命令扩展”。  
 
 2. 在新项目中打开 **.cs** 文件并修改 `CommandExtension` 类，以实现命令。  
 
@@ -58,31 +55,29 @@ ms.locfileid: "51809098"
 
 1. 在新的 Visual Studio 解决方案或现有解决方案中创建类库项目。  
 
-   1.  在“文件”  菜单上，选择“新建” 、“项目” 。  
+   1. 在“文件”  菜单上，选择“新建”  、“项目”  。  
 
-   2.  在 “已安装的模板”下，选择  “Visual C#”或 “Visual Basic”。 在中间栏中，选择 “类库”。  
+   2. 在  “已安装的模板”下，选择  “Visual C#”或  “Visual Basic”。 在中间栏中，选择  “类库”。  
 
-   3.  设置 **“解决方案”** 以指示你是希望创建新的解决方案，还是希望向已打开的 VSIX 解决方案添加组件。  
+   3. 设置 **“解决方案”** 以指示你是希望创建新的解决方案，还是希望向已打开的 VSIX 解决方案添加组件。  
 
-   4.  设置项目的名称和位置，然后单击“确定”。  
+   4. 设置项目的名称和位置，然后单击“确定”。  
 
 2. 将下列引用添加到项目中。  
 
-
-   |                                                                                                    参考                                                                                                    |                                                                                                  由此可执行的操作                                                                                                  |
+   |                                                                                                    参考                                                                                                    |                                                                                                  允许执行的操作                                                                                                  |
    |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |                                                                                        System.ComponentModel.Composition                                                                                        |                                         通过使用 [Managed Extensibility Framework (MEF)](http://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde)定义组件。                                          |
+   |                                                                                        System.ComponentModel.Composition                                                                                        |                                         通过使用 [Managed Extensibility Framework (MEF)](https://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde)定义组件。                                          |
    |                                                                                      Microsoft.VisualStudio.Uml.Interfaces                                                                                      |                                                                                        读取并更改模型元素的属性。                                                                                         |
    |                                                                             Microsoft.VisualStudio.ArchitectureTools.Extensibility                                                                              |                                                                                      在关系图上创建模型元素、修改形状。                                                                                       |
    |                                                                                  Microsoft.VisualStudio.Modeling.Sdk.[版本号]                                                                                  | 定义模型事件处理程序。<br /><br /> 将一系列更改封装到模型中。 有关详细信息，请参阅[通过使用事务链接 UML 模型更新](../modeling/link-uml-model-updates-by-using-transactions.md)。 |
    |                                                            Microsoft.VisualStudio.Modeling.Sdk.Diagrams.[version]<br /><br /> （并不总是需要）                                                             |                                                                                   访问笔势处理程序的其他关系图元素。                                                                                   |
    | Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer<br /><br /> 仅层关系图上的命令需要。 有关详细信息，请参阅[扩展层关系图](../modeling/extend-layer-diagrams.md)。 |                                                                                             在层关系图上定义命令。                                                                                              |
 
-
 3. 将类文件添加到项目中，并将其内容设置为下面的代码。  
 
    > [!NOTE]
-   >  根据你的喜好更改 `Text` 返回的命名空间、类名和值。  
+   > 根据你的喜好更改 `Text` 返回的命名空间、类名和值。  
    >   
    >  如果定义多个命令，它们将按类名的字母顺序出现在菜单上。  
 
@@ -147,31 +142,31 @@ ms.locfileid: "51809098"
 
 #### <a name="to-add-a-menu-command-to-a-vsix-project"></a>若要向 VSIX 项目中添加一个菜单命令  
 
-1.  如果已使用自己的 VSIX 创建了菜单命令，则不需要此过程。  
+1. 如果已使用自己的 VSIX 创建了菜单命令，则不需要此过程。  
 
-2.  创建一个 VSIX 项目（如果解决方案中已有一个 VSIX 项目，则无需执行此步骤）。  
+2. 创建一个 VSIX 项目（如果解决方案中已有一个 VSIX 项目，则无需执行此步骤）。  
 
-    1.  在“解决方案资源管理器” 中，在该解决方案的快捷菜单上依次选择“添加” 、“新建项目” 。  
+    1. 在“解决方案资源管理器”  中，在该解决方案的快捷菜单上依次选择“添加”  、“新建项目”  。  
 
-    2.  在 “已安装的模板”下，展开  “Visual C#”或 “Visual Basic”，然后选择 “扩展性”。 在中间栏中，选择“VSIX 项目” 。  
+    2. 在  “已安装的模板”下，展开  “Visual C#”或  “Visual Basic”，然后选择  “扩展性”。 在中间栏中，选择“VSIX 项目”  。  
 
-3.  在“解决方案资源管理器”中，在该 VSIX 项目的快捷菜单上选择 “设为启动项目”。  
+3. 在“解决方案资源管理器”中，在该 VSIX 项目的快捷菜单上选择  “设为启动项目”。  
 
-4.  打开 **source.extension.vsixmanifest**。  
+4. 打开 **source.extension.vsixmanifest**。  
 
-    1.  在“元数据”  选项卡上，设置 VSIX 的名称。  
+    1. 在“元数据”  选项卡上，设置 VSIX 的名称。  
 
-    2.  在“安装目标”  选项卡上，将 Visual Studio 版本设置为目标。  
+    2. 在“安装目标”  选项卡上，将 Visual Studio 版本设置为目标。  
 
-    3.  在“资产”  选项卡上，选择 “新建”，并在对话框中进行如下设置：  
+    3. 在“资产”  选项卡上，选择  “新建”，并在对话框中进行如下设置：  
 
          **类型** = **MEF 组件**  
 
-          = **当前解决方案中的项目**  
+          = **当前解决方案中的项目**   
 
-          = *你的类库项目*  
+           = *你的类库项目*  
 
-##  <a name="Implementing"></a> 实现菜单命令  
+## <a name="Implementing"></a> 实现菜单命令  
  该菜单命令类为 <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> 实现所需的方法。  
 
 |||  
@@ -214,71 +209,71 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
  但请注意，该模型库并不是线程安全的。 应始终使用用户界面 (UI) 线程进行更新，如果可能，应阻止用户在后台操作正在进行的过程中执行编辑。 有关示例，请参阅[中更新 UML 模型从后台线程](../modeling/update-a-uml-model-from-a-background-thread.md)。  
 
-##  <a name="Executing"></a> 执行菜单命令  
+## <a name="Executing"></a> 执行菜单命令  
  出于测试目的，在调试模式下执行命令。  
 
 #### <a name="to-test-the-menu-command"></a>测试菜单命令  
 
-1.  按“F5” ，或在“调试”  菜单上，选择“开始调试” 。  
+1. 按“F5”  ，或在“调试”  菜单上，选择“开始调试”  。  
 
      此时将启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例。  
 
-     **疑难解答**：如果新的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 未启动：  
+     **故障排除**:如果新[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]不会启动：  
 
-    -   如果你有多个项目，请确保将 VSIX 项目设置为解决方案的启动项目。  
+    - 如果你有多个项目，请确保将 VSIX 项目设置为解决方案的启动项目。  
 
-    -   在“解决方案资源管理器”中，在启动或唯一项目的快捷菜单上选择“属性” 。 在项目属性编辑器中，选择“调试”  选项卡。请确保“启动外部程序” ** 字段中的字符串是 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的完整路径名，通常为：  
+    - 在“解决方案资源管理器”中，在启动或唯一项目的快捷菜单上选择“属性”  。 在项目属性编辑器中，选择“调试”  选项卡。请确保“启动外部程序”  字段中的字符串是 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的完整路径名，通常为：  
 
          `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`  
 
-2.  在实验性 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中，打开或创建一个建模项目，然后打开或创建一个建模图。 使用属于菜单命令类的特性中列出的某个类型的关系图。  
+2. 在实验性 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中，打开或创建一个建模项目，然后打开或创建一个建模图。 使用属于菜单命令类的特性中列出的某个类型的关系图。  
 
-3.  在关系图上的任意位置打开快捷菜单。 你的命令应出现在菜单中。  
+3. 在关系图上的任意位置打开快捷菜单。 你的命令应出现在菜单中。  
 
-     **故障排除**：如果菜单上没有该命令，请确保：  
+     **故障排除**:如果命令不会出现在菜单上，请确保：  
 
-    -   该菜单命令项目作为一个 MEF 组件在  “资产”选项卡中列出，该选项卡位于 VSIX 项目的 **source.extensions.manifest** 中。  
+    - 该菜单命令项目作为一个 MEF 组件在  “资产”选项卡中列出，该选项卡位于 VSIX 项目的 **source.extensions.manifest** 中。  
 
-    -   `Import` 和 `Export` 特性的参数有效。  
+    - `Import` 和 `Export` 特性的参数有效。  
 
-    -   `QueryStatus`方法不设置`command`。`Enabled` 或`Visible`字段设置为`false`。  
+    - `QueryStatus`方法不设置`command`。`Enabled` 或`Visible`字段设置为`false`。  
 
-    -   正在使用的模型关系图的类型（UML 类、序列等）作为菜单命令类特性（ `[ClassDesignerExtension]`、 `[SequenceDesignerExtension]` 等）之一列出。  
+    - 正在使用的模型关系图的类型（UML 类、序列等）作为菜单命令类特性（ `[ClassDesignerExtension]`、 `[SequenceDesignerExtension]` 等）之一列出。  
 
-##  <a name="Installing"></a> 安装和卸载扩展  
+## <a name="Installing"></a> 安装和卸载扩展  
  你可以在自己的计算机和其他计算机上安装 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 扩展。  
 
 #### <a name="to-install-an-extension"></a>若要安装扩展  
 
-1.  在你的计算机中，找到由 VSIX 项目生成的 **.vsix** 文件。  
+1. 在你的计算机中，找到由 VSIX 项目生成的 **.vsix** 文件。  
 
-    1.  在“解决方案资源管理器” 中，在 VSIX 项目的快捷菜单上，选择“在 Windows 资源管理器中打开文件夹” 。  
+    1. 在“解决方案资源管理器”  中，在 VSIX 项目的快捷菜单上，选择“在 Windows 资源管理器中打开文件夹”  。  
 
-    2.  找到的文件**bin\\\*\\**_YourProject_**.vsix**  
+    2. 找到的文件**bin\\\*\\** _YourProject_ **.vsix**  
 
-2.  将 **.vsix** 文件复制到要安装该扩展的目标计算机。 该计算机可以是自己的计算机或其他计算机。  
+2. 将 **.vsix** 文件复制到要安装该扩展的目标计算机。 该计算机可以是自己的计算机或其他计算机。  
 
      目标计算机必须具有的版本之一[!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]中指定**source.extension.vsixmanifest**。  
 
-3.  在目标计算机上，打开 **.vsix** 文件，例如双击打开。  
+3. 在目标计算机上，打开 **.vsix** 文件，例如双击打开。  
 
-     “” 将会打开并安装扩展。  
+     “”  将会打开并安装扩展。  
 
-4.  启动或重启 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]。  
+4. 启动或重启 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]。  
 
 #### <a name="to-uninstall-an-extension"></a>若要卸载扩展  
 
-1. 在“工具”  菜单上，选择“扩展和更新” 。  
+1. 在“工具”  菜单上，选择“扩展和更新”  。  
 
-2. 展开“已安装的扩展” 。  
+2. 展开“已安装的扩展”  。  
 
-3. 选择扩展，然后选择“卸载” 。  
+3. 选择扩展，然后选择“卸载”  。  
 
    在极少数情况下，有错误的扩展无法加载并在错误窗口中创建报告，但不显示在扩展管理器中。 在这种情况下，可以通过从以下位置删除文件来删除扩展：  
 
-   *%Localappdata%* **\Local\Microsoft\VisualStudio\\[version] \Extensions**  
+   *%LocalAppData%* **\Local\Microsoft\VisualStudio\\[version]\Extensions**  
 
-##  <a name="MenuExample"></a> 示例  
+## <a name="MenuExample"></a> 示例  
  下面的示例演示一个菜单命令的代码，该命令用于交换类图中两个元素的名称。 此代码必须在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展项目中生成，并按前面几节所述进行安装。  
 
 ```  
@@ -375,7 +370,4 @@ namespace SwapClassNames
  [为 UML 模型定义验证约束](../modeling/define-validation-constraints-for-uml-models.md)   
  [使用 UML API 编辑 UML 序列图](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md)   
  [使用 UML API 编程](../modeling/programming-with-the-uml-api.md)   
- [示例： 对齐 UML 关系图上的形状的命令](http://go.microsoft.com/fwlink/?LinkID=213809)
-
-
-
+ [示例：若要对齐 UML 关系图上的形状的命令](http://go.microsoft.com/fwlink/?LinkID=213809)

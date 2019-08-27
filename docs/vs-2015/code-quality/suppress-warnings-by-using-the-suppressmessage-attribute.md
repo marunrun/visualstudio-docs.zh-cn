@@ -1,14 +1,9 @@
 ---
 title: 使用 SuppressMessage 特性禁止显示警告 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCFxCopTool.InputAssemblyFileName
 - VC.Project.VCFxCopTool.FxCopModuleSuppressionsFile
@@ -24,12 +19,12 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 91ae1c5d15ddbb364aeba16c2c4de49ce19d09c6
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: aaeedb0784a8e5deaf8c3ddb0dd306fddf4a9ecf
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49205954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62550196"
 ---
 # <a name="suppress-warnings-by-using-the-suppressmessage-attribute"></a>使用 SuppressMessage 特性禁止显示警告
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,6 +40,3 @@ ms.locfileid: "49205954"
   
 ## <a name="related-sections"></a>相关章节  
  [分析托管代码质量](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)
-
-
-

@@ -1,19 +1,18 @@
 ---
 title: 生成构造函数快速操作
 ms.date: 01/26/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6c7f46bd93e476c3f9ffe08831c5016a449ee4bc
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: faef5f2420f4abd30ecec9151212b8a731736886
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53895293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795117"
 ---
 # <a name="generate-a-constructor-in-visual-studio"></a>在 Visual Studio 中生成构造函数
 
@@ -31,11 +30,11 @@ ms.locfileid: "53895293"
 
 方法：有多种生成构造函数的方法：
 
-   - [生成构造函数并选择成员](#pick)
-   - [从所选字段生成构造函数](#selection)
-   - [从新用法生成构造函数](#usage)
-   - [向现有的构造函数添加参数](#addparameter)
-   - [从构造函数参数创建和初始化字段/属性](#create)
+- [生成构造函数并选择成员](#pick)
+- [从所选字段生成构造函数](#selection)
+- [从新用法生成构造函数](#usage)
+- [向现有的构造函数添加参数](#addparameter)
+- [从构造函数参数创建和初始化字段/属性](#create)
 
 ## <a id = "pick"></a> 生成构造函数并选择成员（仅限 C#）
 
@@ -49,7 +48,7 @@ ms.locfileid: "53895293"
       - 按“Ctrl”+**。** 触发“快速操作和重构”菜单。
    - **鼠标**
       - 右键单击并选择“快速操作和重构”菜单。
-      - 单击 ![灯泡](media/bulb-cs.png) 图标（如果文本光标已在此类中的空行上，它会出现在左边缘）。
+      - 单击 ![左边缘中](media/screwdriver.png) 图标（如果文本光标已在此类中的空行上，它会出现在左边缘）。
 
    ![生成构造函数预览](media/constructor1-preview-cs.png)
 
@@ -80,7 +79,7 @@ ms.locfileid: "53895293"
       - 按“Ctrl”+**。** 触发“快速操作和重构”菜单。
    - **鼠标**
       - 右键单击并选择“快速操作和重构”菜单。
-      - 单击 ![灯泡](media/bulb-cs.png) 图标（如果文本光标已在包含选定内容的行上，它会出现在左边缘）。
+      - 单击 ![左边缘中](media/screwdriver.png) 图标（如果文本光标已在包含选定内容的行上，它会出现在左边缘）。
 
       ![生成构造函数预览](media/constructor2-preview-cs.png)
 
@@ -108,8 +107,8 @@ ms.locfileid: "53895293"
       - 按“Ctrl”+**。** 触发“快速操作和重构”菜单。
    - **鼠标**
       - 右键单击并选择“快速操作和重构”菜单。
-      - 将鼠标悬停在红色波形曲线上，然后单击出现的 ![灯泡](media/bulb-cs.png) 图标。
-      - 单击 ![灯泡](media/bulb-cs.png) 图标（如果文本光标已在具有红色波形曲线的行上，它会出现在左边缘）。
+      - 将鼠标悬停在红色波形曲线上，然后单击出现的 ![错误灯泡](media/error-bulb.png) 图标。
+      - 单击 ![错误灯泡](media/error-bulb.png) 图标（如果文本光标已在具有红色波形曲线的行上，它会出现在左边缘）。
 
       ![生成构造函数预览](media/constructor-preview-cs.png)
 
@@ -142,8 +141,8 @@ ms.locfileid: "53895293"
       - 按“Ctrl”+**。** 触发“快速操作和重构”菜单。
    - **鼠标**
       - 右键单击并选择“快速操作和重构”菜单。
-      - 将鼠标悬停在红色波形曲线上，然后单击出现的 ![灯泡](media/bulb-cs.png) 图标。
-      - 单击 ![灯泡](media/bulb-cs.png) 图标（如果文本光标已在具有红色波形曲线的行上，它会出现在左边缘）。
+      - 将鼠标悬停在红色波形曲线上，然后单击出现的 ![错误灯泡](media/error-bulb.png) 图标。
+      - 单击 ![错误灯泡](media/error-bulb.png) 图标（如果文本光标已在具有红色波形曲线的行上，它会出现在左边缘）。
 
       ![生成构造函数预览](media/constructor4-preview-cs.png)
 
@@ -169,7 +168,7 @@ ms.locfileid: "53895293"
       - 按“Ctrl”+**。** 触发“快速操作和重构”菜单。
    - **鼠标**
       - 右键单击并选择“快速操作和重构”菜单。
-      - 单击 ![灯泡](media/bulb-cs.png) 图标（如果文本光标已在包含所添加的参数的行上，它会出现在左边缘）。
+      - 单击 ![左边缘中](media/screwdriver.png) 图标（如果文本光标已在包含所添加的参数的行上，它会出现在左边缘）。
 
    ![生成构造函数预览](media/constructor5-preview-cs.png)
 

@@ -1,14 +1,9 @@
 ---
-title: CA2219： 不引发异常子句中的异常 |Microsoft Docs
-ms.custom: ''
+title: CA2219:不会引发异常子句中的异常 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - DoNotRaiseExceptionsInExceptionClauses
 - CA2219
@@ -20,14 +15,14 @@ caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 2b5f08043985b6a2eb2b5fe0267fefb58ad00587
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 506b9d243ef83242b7e17c295dfc13ef9039d1f6
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49891175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68201624"
 ---
-# <a name="ca2219-do-not-raise-exceptions-in-exception-clauses"></a>CA2219：在异常子句中不引发异常
+# <a name="ca2219-do-not-raise-exceptions-in-exception-clauses"></a>CA2219:在异常子句中不引发异常
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -54,10 +49,7 @@ ms.locfileid: "49891175"
  不要禁止显示此规则的警告。 没有在其下在异常子句中引发的异常提供了一项权益对执行代码的方案。
 
 ## <a name="related-rules"></a>相关的规则
- [CA1065：不要在意外的位置引发异常](../code-quality/ca1065-do-not-raise-exceptions-in-unexpected-locations.md)
+ [CA1065:不会引发意外的位置中的异常](../code-quality/ca1065-do-not-raise-exceptions-in-unexpected-locations.md)
 
 ## <a name="see-also"></a>请参阅
  [设计警告](../code-quality/design-warnings.md)
-
-
-

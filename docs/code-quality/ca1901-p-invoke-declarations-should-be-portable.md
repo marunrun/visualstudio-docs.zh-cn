@@ -1,7 +1,6 @@
 ---
 title: CA1901:P-Invoke 声明应为可移植声明
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - CA1901
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 90361812-55ca-47f7-bce9-b8775d3b8803
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cbc1bbb0bc298973a9cfc3714049fb6dd7dd9302
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 4a45b7061ae9d183ec7ee02a3b733ee9340b3689
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53825628"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68921305"
 ---
 # <a name="ca1901-pinvoke-declarations-should-be-portable"></a>CA1901:P/Invoke 声明应为可移植声明
 
@@ -29,26 +28,26 @@ ms.locfileid: "53825628"
 |TypeName|PInvokeDeclarationsShouldBePortable|
 |CheckId|CA1901|
 |类别|Microsoft.Portability|
-|是否重大更改|是-如果 P/Invoke 是程序集外部可见。 否-如果 P/Invoke 不是程序集外部可见。|
+|是否重大更改|如果在程序集外部可见, 则为。 否-如果 P/Invoke 在程序集外部不可见, 则为。|
 
 ## <a name="cause"></a>原因
- 此规则计算每个参数的大小和 P/Invoke 的返回值，并验证它们的大小，封送到 32 位和 64 位平台上的非托管代码时正确。 此规则的最常见的冲突是传递需要依赖于平台的指针大小的变量的固定大小的整数。
+此规则将评估每个参数的大小和 P/Invoke 的返回值, 并验证在对32位和64位平台上的非托管代码进行封送处理时, 其大小是否正确。 此规则最常见的冲突是传递固定大小的整数, 其中需要使用平台相关的指针大小变量。
 
 ## <a name="rule-description"></a>规则说明
- 以下任一情况与此规则冲突发生：
+以下任何一种情况都会违反此规则:
 
-- 返回值或参数的类型为固定大小的整数类型应为`IntPtr`。
+- 如果返回值或参数的类型为固定大小的整数, 则将其`IntPtr`类型化为。
 
-- 返回值或参数被类型化为`IntPtr`时它的类型应为固定大小的整数。
+- `IntPtr`如果返回值或参数的类型应为固定大小的整数, 则返回值或参数的类型为。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 您可以通过使用来解决此冲突`IntPtr`或`UIntPtr`来表示句柄而不是`Int32`或`UInt32`。
+您可以通过`IntPtr`使用或`UIntPtr`表示句柄而不是`Int32`或`UInt32`来解决此冲突。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 不应取消显示此警告。
+不应禁止显示此警告。
 
 ## <a name="example"></a>示例
- 下面的示例演示了此规则的冲突。
+下面的示例演示违反此规则的情况。
 
 ```csharp
 internal class NativeMethods
@@ -59,7 +58,7 @@ internal class NativeMethods
 }
 ```
 
- 在此示例中，`nIconIndex`参数声明为`IntPtr`，这是 32 位平台和 8 个字节宽，在 64 位平台上宽度为 4 个字节。 在后面的非托管声明，您可以看到，`nIconIndex`是在所有平台上的 4 字节无符号的整数。
+在此示例中, `nIconIndex`将参数声明`IntPtr`为, 它在32位平台上的宽度为4个字节, 64 位平台上的宽度为8个字节。 在下面的非托管声明中, 可以看到`nIconIndex` , 是所有平台上的4字节无符号整数。
 
 ```csharp
 HICON ExtractIcon(HINSTANCE hInst, LPCTSTR lpszExeFileName,
@@ -67,15 +66,15 @@ HICON ExtractIcon(HINSTANCE hInst, LPCTSTR lpszExeFileName,
 ```
 
 ## <a name="example"></a>示例
- 若要解决冲突，请将声明更改为以下：
+若要解决此冲突, 请将声明更改为以下内容:
 
 ```csharp
 internal class NativeMethods{
-    [DllImport("shell32.dll", CharSet=CharSet.Auto)] 
+    [DllImport("shell32.dll", CharSet=CharSet.Auto)]
     internal static extern IntPtr ExtractIcon(IntPtr hInst,
         string lpszExeFileName, uint nIconIndex);
 }
 ```
 
 ## <a name="see-also"></a>请参阅
- [Portability Warnings](../code-quality/portability-warnings.md)
+[Portability Warnings](../code-quality/portability-warnings.md)

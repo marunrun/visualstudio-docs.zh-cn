@@ -1,26 +1,21 @@
 ---
-title: 演练： 通过编辑器扩展访问 DTE 对象 |Microsoft Docs
-ms.custom: ''
+title: 演练：从编辑器扩展访问 DTE 对象 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - getting the DTE object
 ms.assetid: c1f40bab-c6ec-45b0-8333-ea5ceb02a39d
 caps.latest.revision: 23
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: b86f33390068b04d9e54c0022e8adeb77ed4700f
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 4b14b59465b94ddd0a09748f0e309166bf3d4114
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51720765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68148879"
 ---
 # <a name="walkthrough-accessing-the-dte-object-from-an-editor-extension"></a>演练：通过编辑器扩展访问 DTE 对象
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,17 +29,17 @@ ms.locfileid: "51720765"
   
 #### <a name="to-get-the-dte-object-from-the-serviceprovider"></a>若要从该服务提供商获取 DTE 对象  
   
-1.  创建一个名为 C# VSIX 项目`DTETest`。 添加编辑器分类器项模板并将其命名`DTETest`。 有关详细信息，请参阅[使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)。  
+1. 创建一个名为 C# VSIX 项目`DTETest`。 添加编辑器分类器项模板并将其命名`DTETest`。 有关详细信息，请参阅[使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)。  
   
-2.  添加对项目的以下程序集引用：  
+2. 添加对项目的以下程序集引用：  
   
-    -   EnvDTE  
+    - EnvDTE  
   
-    -   EnvDTE80  
+    - EnvDTE80  
   
-    -   Microsoft.VisualStudio.Shell.Immutable.10.0  
+    - Microsoft.VisualStudio.Shell.Immutable.10.0  
   
-3.  转到 DTETest.cs 文件，并添加以下`using`指令：  
+3. 转到 DTETest.cs 文件，并添加以下`using`指令：  
   
     ```csharp  
     using EnvDTE;  
@@ -53,7 +48,7 @@ ms.locfileid: "51720765"
   
     ```  
   
-4.  在中`GetDTEProvider`类中，导入<xref:Microsoft.VisualStudio.Shell.SVsServiceProvider>。  
+4. 在中`GetDTEProvider`类中，导入<xref:Microsoft.VisualStudio.Shell.SVsServiceProvider>。  
   
     ```csharp  
     [Import]  
@@ -61,15 +56,14 @@ ms.locfileid: "51720765"
   
     ```  
   
-5.  在 `GetClassifier()` 方法中，添加以下代码。  
+5. 在 `GetClassifier()` 方法中，添加以下代码。  
   
     ```csharp  
     DTE dte = (DTE)ServiceProvider.GetService(typeof(DTE));  
   
     ```  
   
-6.  如果您必须使用<xref:EnvDTE80.DTE2>接口，可以强制转换为它的 DTE 对象。  
+6. 如果您必须使用<xref:EnvDTE80.DTE2>接口，可以强制转换为它的 DTE 对象。  
   
 ## <a name="see-also"></a>请参阅  
  [语言服务和编辑器扩展点](../extensibility/language-service-and-editor-extension-points.md)
-

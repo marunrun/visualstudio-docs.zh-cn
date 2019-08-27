@@ -1,14 +1,9 @@
 ---
-title: IDebugCoreServer3::GetServerFriendlyName |Microsoft Docs
-ms.custom: ''
+title: IDebugCoreServer3::GetServerFriendlyName | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - IDebugCoreServer3::GetServerFriendlyName
 helpviewer_keywords:
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 7035b904-b3d7-4d9b-98d9-65714b8a8b9f
 caps.latest.revision: 9
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 5c0a774ef2ca295565c36179b6cc87a77d587667
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: fa81daf7ab1d592e6a2cd460268e5d66925f61e1
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51740737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63445271"
 ---
 # <a name="idebugcoreserver3getserverfriendlyname"></a>IDebugCoreServer3::GetServerFriendlyName
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -48,7 +43,7 @@ int GetServerFriendlyName(
  [out]返回服务器的友好名称。  
   
 > [!NOTE]
->  调用方负责释放字符串。  
+> 调用方负责释放字符串。  
   
 ## <a name="return-value"></a>返回值  
  如果成功，则返回`S_OK`; 否则为将返回错误代码。  
@@ -61,4 +56,3 @@ int GetServerFriendlyName(
 ## <a name="see-also"></a>请参阅  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)   
  [GetServerName](../../../extensibility/debugger/reference/idebugcoreserver3-getservername.md)
-

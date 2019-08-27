@@ -1,26 +1,21 @@
 ---
 title: 网站支持属性 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - web site projects, registration
 ms.assetid: 46d52e2c-ca2a-4bbd-8500-5b0129768aec
 caps.latest.revision: 10
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 312d8a760cc7005afc4308b637b12a292bd20329
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 75401eb0d5acd5d363d05aec57909eef5b9855e3
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51756694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68144301"
 ---
 # <a name="web-site-support-attributes"></a>网站支持属性
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -52,7 +47,7 @@ ms.locfileid: "51756694"
 ## <a name="provideintellisenseproviderattribute"></a>ProvideIntellisenseProviderAttribute  
  此特性置于语言项目包。 它将选择的语言的 Intellisense 提供程序。  
   
- 例如：  
+ 例如:  
   
 ```  
 [ProvideIntellisenseProvider(typeof(PythonIntellisenseProvider), "IronPythonCodeProvider", "Iron Python", ".py", "IronPython;Python", "IronPython")]public class PythonPackage : Package, IOleComponent  
@@ -64,4 +59,3 @@ ms.locfileid: "51756694"
   
 ## <a name="see-also"></a>请参阅  
  [网站支持](../../extensibility/internals/web-site-support.md)
-

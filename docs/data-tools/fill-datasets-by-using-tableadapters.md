@@ -16,27 +16,26 @@ helpviewer_keywords:
 ms.assetid: 55f3bfbe-db78-4486-add3-c62f49e6b9a0
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 260ea65af041e6a50afb163f697d5ff366cff825
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: f0047ee38a6fda4738c773c36a85e14cba1e37fe
+ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53835979"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66745543"
 ---
 # <a name="fill-datasets-by-using-tableadapters"></a>使用 Tableadapter 填充数据集
 
 TableAdapter 组件填充数据库，基于一个或多个查询或您指定的存储的过程中的数据的数据集。 Tableadapter 还可以执行添加、 更新和删除数据库来保存对数据集所做的更改。 此外可以颁发任何特定表，该表不相关的全局命令。
 
 > [!NOTE]
-> Tableadapter 是由 Visual Studio 设计器生成的。 如果要以编程方式创建数据集，然后使用 DataAdapter，这是.NET Framework 类。
+> Tableadapter 是由 Visual Studio 设计器生成的。 如果要以编程方式创建数据集，然后使用 DataAdapter，是一个.NET 类。
 
 TableAdapter 操作有关的详细信息，您可以直接跳到以下主题之一：
 
-|主题|说明|
+|主题|描述|
 |-----------|-----------------|
 |[创建和配置 Tableadapter](../data-tools/create-and-configure-tableadapters.md)|如何使用设计器创建和配置 Tableadapter|
 |[创建参数化 TableAdapter 查询](../data-tools/create-parameterized-tableadapter-queries.md)|如何使用户能够为 TableAdapter 过程或查询提供参数|
@@ -53,7 +52,7 @@ Tableadapter 是设计器生成的组件，连接到数据库、 运行的查询
 
 ![客户端应用程序中的数据流](../data-tools/media/clientdatadiagram.gif)
 
-Tableadapter 的设计时**数据集设计器**，不会作为嵌套类的生成的 TableAdapter 类<xref:System.Data.DataSet>。 它们位于特定于每个数据集的单独命名空间中。 例如，如果您有一个名为的数据集`NorthwindDataSet`，与关联的 Tableadapter<xref:System.Data.DataTable>中的 s`NorthwindDataSet`会采用`NorthwindDataSetTableAdapters`命名空间。 若要以编程方式访问特定的 TableAdapter，您必须声明 TableAdapter 的新实例。 例如:
+Tableadapter 的设计时**数据集设计器**，不会作为嵌套类的生成的 TableAdapter 类<xref:System.Data.DataSet>。 它们位于特定于每个数据集的单独命名空间中。 例如，如果您有一个名为的数据集`NorthwindDataSet`，与关联的 Tableadapter<xref:System.Data.DataTable>中的 s`NorthwindDataSet`会采用`NorthwindDataSetTableAdapters`命名空间。 若要以编程方式访问特定的 TableAdapter，您必须声明 TableAdapter 的新实例。 例如：
 
 [!code-csharp[VbRaddataTableAdapters#7](../data-tools/codesnippet/CSharp/fill-datasets-by-using-tableadapters_1.cs)]
 [!code-vb[VbRaddataTableAdapters#7](../data-tools/codesnippet/VisualBasic/fill-datasets-by-using-tableadapters_1.vb)]
@@ -86,11 +85,11 @@ Tableadapter 扩展标准数据适配器的功能通过封装一个已配置<xre
 
 ## <a name="tableadapter-methods-and-properties"></a>TableAdapter 方法和属性
 
-TableAdapter 类不是属于[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]。 这意味着你不能查找其文档中或**对象浏览器**。 在设计时，当你使用前面所述的向导之一创建。 在创建时分配到 TableAdapter 的名称基于你正在使用的表的名称。 例如，当创建基于一个名为数据库中的表的 TableAdapter `Orders`，名为 TableAdapter `OrdersTableAdapter`。 可以使用更改类名称的 TableAdapter**名称**属性中的**数据集设计器**。
+TableAdapter 类不是.NET 类型。 这意味着你不能查找其文档中或**对象浏览器**。 在设计时，当你使用前面所述的向导之一创建。 在创建时分配到 TableAdapter 的名称基于你正在使用的表的名称。 例如，当创建基于一个名为数据库中的表的 TableAdapter `Orders`，名为 TableAdapter `OrdersTableAdapter`。 可以使用更改类名称的 TableAdapter**名称**属性中的**数据集设计器**。
 
 以下是常用的方法和 Tableadapter 的属性：
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |`TableAdapter.Fill`|TableAdapter 的关联的数据的 TableAdapter 的结果表中填充`SELECT`命令。|
 |`TableAdapter.Update`|将更改发送回数据库，并返回一个整数，表示更新影响的行数。 有关详细信息，请参阅[使用 TableAdapter 更新数据](../data-tools/update-data-by-using-a-tableadapter.md)。|
@@ -115,7 +114,7 @@ Tableadapter 使用数据命令来读取和写入数据库中。 使用 TableAda
 
 ## <a name="tableadapter-support-for-nullable-types"></a>TableAdapter 支持可以为 null 的类型
 
-Tableadapter 支持可以为 null 的类型`Nullable(Of T)`和`T?`。 若要深入了解 Visual Basic 中可以为 null 的类型，请参阅[可以为 null 的值类型](/dotnet/visual-basic/programming-guide/language-features/data-types/nullable-value-types)。 有关详细信息中可以为 null 的类型C#，请参阅[使用 null 的类型](/dotnet/csharp/programming-guide/nullable-types/using-nullable-types)。
+Tableadapter 支持可以为 null 的类型`Nullable(Of T)`和`T?`。 若要深入了解 Visual Basic 中可以为 null 的类型，请参阅[可以为 null 的值类型](/dotnet/visual-basic/programming-guide/language-features/data-types/nullable-value-types)。 有关 C# 中可以为 null 类型的详细信息，请参阅[使用 null 的类型](/dotnet/csharp/programming-guide/nullable-types/using-nullable-types)。
 
 <a name="tableadaptermanager-reference"></a>
 
@@ -123,11 +122,11 @@ Tableadapter 支持可以为 null 的类型`Nullable(Of T)`和`T?`。 若要深�
 
 默认情况下，创建包含相关的表的数据集时，将生成一个 TableAdapterManager 类。 若要防止此类生成的值更改`Hierarchical Update`为 false 将数据集属性。 当拖放到设计图面上的 Windows 窗体或 WPF 页的关系的表时，Visual Studio 声明类的成员变量。 如果不使用数据绑定，您必须手动将该变量的声明。
 
-TableAdapterManager 类不是属于[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]。 因此，你不能查找其文档中。 在设计时数据集创建过程的一部分创建。
+TableAdapterManager 类不是.NET 类型。 因此，你不能查找其文档中。 在设计时数据集创建过程的一部分创建。
 
 以下是常用的方法和属性`TableAdapterManager`类：
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |`UpdateAll` 方法|将保存数据的所有表中的所有数据。|
 |`BackUpDataSetBeforeUpdate` 属性|确定是否在执行前创建数据集的备份副本`TableAdapterManager.UpdateAll`方法。一个布尔值。|

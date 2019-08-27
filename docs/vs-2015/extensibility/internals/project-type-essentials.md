@@ -1,26 +1,21 @@
 ---
 title: 项目类型基础知识 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project types [Visual Studio SDK]
 ms.assetid: 09991589-2300-430e-b6a4-7f2b95fe676f
 caps.latest.revision: 12
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 5a719ea26473874cb0d771b46ee05ea15092fb17
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 7e45d5f252deaf1788ae5093048ef8afb900fbe4
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51746460"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65704066"
 ---
 # <a name="project-type-essentials"></a>项目类型基础知识
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -39,7 +34,7 @@ ms.locfileid: "51746460"
   
   必须创建新项目类型的项目的基于一种语言以外[!INCLUDE[csprcs](../../includes/csprcs-md.md)]和[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]如果你想要支持的一个或多项操作：  
   
-- 生成  
+- Build  
   
 - 部署  
   
@@ -59,7 +54,7 @@ ms.locfileid: "51746460"
   
 - 项目类型是在 VSPackage 中实现的接口集的对象[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]要求。 如果你使用 C# 开发的项目类型，托管包框架项目类为您实现必要的接口，让您继承该实现。 有关详细信息，请参阅[使用托管包框架来实现一种项目类型 (C#)](../../extensibility/internals/using-the-managed-package-framework-to-implement-a-project-type-csharp.md)。  
   
-- 对于 c + + 开发人员，HierUtil 库中的类以类似的方式工作。 有关详细信息，请参阅[不在生成： 使用 HierUtil7 项目类以实现项目类型 （c + +）](http://msdn.microsoft.com/en-us/a5c16a09-94a2-46ef-87b5-35b815e2f346)。  
+- 有关C++以类似的方式工作的开发人员，HierUtil 库中的类。 有关详细信息，请参阅[不在生成中：使用 HierUtil7 项目类来实现一种项目类型 (C++)](https://msdn.microsoft.com/a5c16a09-94a2-46ef-87b5-35b815e2f346)。  
   
 - 项目类型可支持典型的源代码生成为.exe 或.dll 程序集的代码文件之外的数据。 例如，[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]数据库项目包含对存储在磁盘上的脚本和查询文件的引用，并将命令添加到**解决方案资源管理器**执行脚本和针对数据库中，但项目的查询不支持生成行为。 有关详细信息，请参阅[打开和保存项目项](../../extensibility/internals/opening-and-saving-project-items.md)。  
   
@@ -73,4 +68,3 @@ ms.locfileid: "51746460"
   
 ## <a name="see-also"></a>请参阅  
  [部署项目类型](../../extensibility/internals/deploying-project-types.md)
-

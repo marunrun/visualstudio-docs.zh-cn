@@ -1,7 +1,6 @@
 ---
 title: CA1812:避免未实例化的内部类
-ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
+ms.date: 05/16/2019
 ms.topic: reference
 f1_keywords:
 - CA1812
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1bb92a42-322a-44cc-98a8-8858212c1e1f
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f69e3179ffc61faca2706436444a741a238aa73
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 6946434708e38bde7f6efcfc8404da14f91b41ee
+ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53836658"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744704"
 ---
 # <a name="ca1812-avoid-uninstantiated-internal-classes"></a>CA1812:避免未实例化的内部类
 
@@ -33,11 +32,11 @@ ms.locfileid: "53836658"
 
 ## <a name="cause"></a>原因
 
-程序集级别类型的实例不是由程序集中的代码创建的。
+永远不会实例化的内部 （程序集级别） 类型。
 
 ## <a name="rule-description"></a>规则说明
 
-此规则会尝试查找对该类型的构造函数之一的调用，并报告冲突，如果不找到任何调用。
+此规则会尝试查找一个类型的构造函数调用，并报告冲突，如果不找到任何调用。
 
 该规则不检查以下类型：
 
@@ -51,19 +50,17 @@ ms.locfileid: "53836658"
 
 - 编译器发出的数组类型
 
-- 类型无法实例化和用于定义`static`(`Shared`在 Visual Basic 中) 只方法。
+- 类型不能实例化，且仅定义了[ `static` ](/dotnet/csharp/language-reference/keywords/static) ([ `Shared` Visual Basic 中](/dotnet/visual-basic/language-reference/modifiers/shared)) 方法。
 
-如果将应用<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute?displayProperty=fullName>对所分析的程序集，此规则不会标记为任何构造函数上发生`internal`因为无法确定是否一个字段正由另一个`friend`程序集。
-
-即使您不能解决此限制在 Visual Studio 代码分析中，外部的独立 FxCop 会发生内部构造函数上每个`friend`程序集是在分析中存在。
+如果将应用<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute?displayProperty=fullName>到要分析的程序集，此规则将标记作为标记的类型[ `internal` ](/dotnet/csharp/language-reference/keywords/internal) ([ `Friend`在 Visual Basic 中](/dotnet/visual-basic/language-reference/modifiers/friend)) 字段可能是因为由友元程序集。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-若要修复此规则的冲突，请删除类型或添加使用它的代码。 如果类型仅包含静态方法，请将以下项之一添加到要阻止编译器发出的默认公共实例构造函数的类型：
+若要修复此规则的冲突，请删除类型或添加使用它的代码。 如果该类型仅包含`static`向要阻止编译器发出的默认公共实例构造函数的类型的方法，添加以下项之一：
+
+- `static`修饰符C#.NET Framework 2.0 或更高版本为目标的类型。
 
 - 私有构造函数的类型的目标.NET Framework 1.0 和 1.1 版。
-
-- `static` (`Shared`在 Visual Basic 中) 修饰符类型面向[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
@@ -71,9 +68,9 @@ ms.locfileid: "53836658"
 
 - 如通过反射后期绑定方法创建的类<xref:System.Activator.CreateInstance%2A?displayProperty=fullName>。
 
-- 类是由运行时或 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 自动创建的。 例如，用于实现 <xref:System.Configuration.IConfigurationSectionHandler?displayProperty=fullName> 或 <xref:System.Web.IHttpHandler?displayProperty=fullName> 的类。
+- 类是由运行时或 ASP.NET 会自动创建。 自动创建类的一些示例包括实现的那些<xref:System.Configuration.IConfigurationSectionHandler?displayProperty=fullName>或<xref:System.Web.IHttpHandler?displayProperty=fullName>。
 
-- 类是作为具有一个新约束的泛型类型参数传递。 例如，下面的示例将引发此规则。
+- 类作为具有一个类型参数传递[`new`约束](/dotnet/csharp/language-reference/keywords/new-constraint)。 下面的示例将由规则 CA1812 标记：
 
     ```csharp
     internal class MyClass
@@ -89,17 +86,13 @@ ms.locfileid: "53836658"
             return new T();
         }
     }
-    // [...]
+
     MyGeneric<MyClass> mc = new MyGeneric<MyClass>();
     mc.Create();
     ```
 
-  在这些情况下，我们建议您取消显示此警告。
-
 ## <a name="related-rules"></a>相关的规则
 
-[CA1811:避免使用未调用的私有代码](../code-quality/ca1811-avoid-uncalled-private-code.md)
-
-[CA1801:检查未使用的参数](../code-quality/ca1801-review-unused-parameters.md)
-
-[CA1804:删除未使用的局部变量](../code-quality/ca1804-remove-unused-locals.md)
+- [CA1811:避免使用未调用的私有代码](../code-quality/ca1811-avoid-uncalled-private-code.md)
+- [CA1801:检查未使用的参数](../code-quality/ca1801-review-unused-parameters.md)
+- [CA1804:删除未使用的局部变量](../code-quality/ca1804-remove-unused-locals.md)

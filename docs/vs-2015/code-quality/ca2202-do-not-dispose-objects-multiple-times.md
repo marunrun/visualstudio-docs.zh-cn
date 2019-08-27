@@ -1,14 +1,9 @@
 ---
-title: CA2202： 不要释放对象多次 |Microsoft Docs
-ms.custom: ''
+title: CA2202:不要释放对象多次 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA2202
 - Do not dispose objects multiple times
@@ -20,14 +15,14 @@ caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: de3bc29e6d843532e4c15db1e33673d4f63c5179
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 3dfe606e3083c937db3ba3d1e6cd49d34bace853
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49830712"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65697973"
 ---
-# <a name="ca2202-do-not-dispose-objects-multiple-times"></a>CA2202：不要多次释放对象
+# <a name="ca2202-do-not-dispose-objects-multiple-times"></a>CA2202:不要多次释放对象
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -44,7 +39,7 @@ ms.locfileid: "49830712"
  正确实现<xref:System.IDisposable.Dispose%2A>方法可以多次调用而不引发异常。 但是，不保证和以避免产生<xref:System.ObjectDisposedException?displayProperty=fullName>不应调用<xref:System.IDisposable.Dispose%2A>不止一次对某个对象。
 
 ## <a name="related-rules"></a>相关的规则
- [CA2000：超出范围前释放对象](../code-quality/ca2000-dispose-objects-before-losing-scope.md)
+ [CA2000： 超出范围前释放对象](../code-quality/ca2000-dispose-objects-before-losing-scope.md)
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复此规则的冲突，请更改的代码路径中，因此，而不考虑实现<xref:System.IDisposable.Dispose%2A>仅调用一次的对象。
@@ -89,7 +84,4 @@ finally
 ```
 
 ## <a name="see-also"></a>请参阅
- <xref:System.IDisposable?displayProperty=fullName> [释放模式](http://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb)
-
-
-
+ <xref:System.IDisposable?displayProperty=fullName> [释放模式](https://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb)

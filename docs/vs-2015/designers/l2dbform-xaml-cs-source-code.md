@@ -1,25 +1,20 @@
 ---
 title: L2DBForm.xaml.cs 源代码 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: 5a40dad3-6763-4576-b3ad-874df3f2c8d9
 caps.latest.revision: 4
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 6ac13d8998972ddf60576537f8b0af55d832d820
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: ba6262ef3174428dc14c5f747c4346b5f04e35ee
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49817530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62427996"
 ---
 # <a name="l2dbformxamlcs-source-code"></a>L2DBForm.xaml.cs Source Code
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,9 +24,9 @@ ms.locfileid: "49817530"
 ## <a name="data-members"></a>数据成员  
  使用两个私有数据成员将此类与 L2DBForm.xaml 中使用的窗口资源相关联。  
   
--   命名空间变量 `myBooks` 初始化为 `"http://www.mybooks.com"`。  
+- 命名空间变量 `myBooks` 初始化为 `"http://www.mybooks.com"`。  
   
--   用下面的行将构造函数中的成员 `bookList` 初始化为 L2DBForm.xaml 中的 CDATA 字符串：  
+- 用下面的行将构造函数中的成员 `bookList` 初始化为 L2DBForm.xaml 中的 CDATA 字符串：  
   
     ```  
     bookList = (XElement)((ObjectDataProvider)Resources["LoadedBooks"]).Data;  
@@ -40,11 +35,11 @@ ms.locfileid: "49817530"
 ## <a name="onaddbook-event-handler"></a>OnAddBook 事件处理程序  
  此方法包含下面三个语句：  
   
--   第一个条件语句用于输入验证。  
+- 第一个条件语句用于输入验证。  
   
--   第二个语句根据用户在“添加新书籍”用户界面 (UI) 区域中输入的字符串值新建 <xref:System.Xml.Linq.XElement>。  
+- 第二个语句根据用户在“添加新书籍”用户界面 (UI) 区域中输入的字符串值新建 <xref:System.Xml.Linq.XElement>。  
   
--   最后一个语句将此新书籍元素添加到 L2DBForm.xaml 中的数据提供程序。 因此，动态数据绑定将用此新项自动更新 UI；不需要用户提供额外的代码。  
+- 最后一个语句将此新书籍元素添加到 L2DBForm.xaml 中的数据提供程序。 因此，动态数据绑定将用此新项自动更新 UI；不需要用户提供额外的代码。  
   
 ## <a name="onremove-event-handler"></a>OnRemove 事件处理程序  
  由于两个原因，`OnRemove` 处理程序比 `OnAddBook` 处理程序更复杂。 首先，由于原始 XML 包含保留的空白，因此还必须与书籍条目一起移除匹配的换行符。 其次，出于方便，对所选项进行的选择会重置为列表中以前的选择。  
@@ -145,6 +140,3 @@ namespace LinqToXmlDataBinding {
 ## <a name="see-also"></a>请参阅  
  [演练：LinqToXmlDataBinding 示例](../designers/walkthrough-linqtoxmldatabinding-example.md)   
  [L2DBForm.xaml 源代码](../designers/l2dbform-xaml-source-code.md)
-
-
-

@@ -1,37 +1,32 @@
 ---
-title: 生成新项目： 揭秘，第二部分 |Microsoft Docs
-ms.custom: ''
+title: 生成新项目：实质上，第二部分 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio], new project dialog
 - projects [Visual Studio], new project generation
 ms.assetid: 73ce91d8-0ab1-4a1f-bf12-4d3c49c01e13
 caps.latest.revision: 15
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: a5732db4ab36a7e198ee6ebdce185294d3b5bc31
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 6643c52ff8e5801c562524e99c4e3f03c00f74b9
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51722474"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65687484"
 ---
 # <a name="new-project-generation-under-the-hood-part-two"></a>生成新项目：揭秘，第 2 部分
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-在中[生成新项目： 揭秘，第一部分](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md)我们已了解如何**新项目**填充框的对话框。 让我们假定你已选择了**Visual C# Windows 应用程序**中，已填写**名称**并**位置**文本框中，然后单击确定。  
+在[生成新项目：实质上，第一部分](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md)我们已了解如何**新建项目**填充框的对话框。 让我们假定你已选择了**Visual C# Windows 应用程序**中，已填写**名称**并**位置**文本框中，然后单击确定。  
   
 ## <a name="generating-the-solution-files"></a>生成解决方案文件  
  选择应用程序模板会将定向[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]解压缩，然后打开相应的.vstemplate 文件，并启动一个模板来解释此文件中的 XML 命令。 这些命令创建新的或现有解决方案中项目和项目项。  
   
- 该模板解压缩源文件，保存.vstemplate 文件的同一个.zip 文件夹从调用项模板。 该模板将这些文件复制到新项目中，相应地自定义它们。 项目和项模板的概述，请参阅[NIB: Visual Studio 模板](http://msdn.microsoft.com/en-us/141fccaa-d68f-4155-822b-27f35dd94041)。  
+ 该模板解压缩源文件，保存.vstemplate 文件的同一个.zip 文件夹从调用项模板。 该模板将这些文件复制到新项目中，相应地自定义它们。 项目和项模板的概述，请参阅[NIB:Visual Studio 模板](https://msdn.microsoft.com/141fccaa-d68f-4155-822b-27f35dd94041)。  
   
 ### <a name="template-parameter-replacement"></a>模板参数替换  
  模板复制到新的项目项模板，它也将与字符串以自定义文件中替换任何模板参数。 模板参数是一个特殊的标记，是前面和后面一个美元符号，例如、 $date$。  
@@ -82,7 +77,7 @@ namespace Simple
 </VSTemplate>  
 ```  
   
- 我们会学会\<TemplateData > 部分中[生成新项目： 揭秘，第一部分](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md)。 在本部分中的标记用于控制的外观**新的项目**对话框。  
+ 我们会学会\<TemplateData > 部分中[生成新项目：实质上，第一部分](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md)。 在本部分中的标记用于控制的外观**新的项目**对话框。  
   
  中的标记\<TemplateContent > 部分的新项目和项目项生成的控件。 下面是\<TemplateContent > \Program Files\Microsoft Visual Studio 8\Common7\IDE\ProjectTemplates\CSharp\Windows\1033\WindowsApplication.zip 文件夹中的 cswindowsapplication.vstemplate 文件中的部分。  
   
@@ -163,5 +158,3 @@ namespace Simple
 ## <a name="see-also"></a>请参阅  
  [生成新项目：揭秘，第 1 部分](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md)  
  [MSBuild](../../msbuild/msbuild.md)
-
-

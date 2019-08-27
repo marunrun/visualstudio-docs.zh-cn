@@ -2,21 +2,20 @@
 title: 适用于 Python 的 Django Web 项目模板
 description: Visual Studio 为使用 Python 快速创建 Django web 应用程序提供了全面的模板。
 ms.date: 11/12/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
-author: kraigb
-ms.author: kraigb
-manager: douge
+author: JoshuaPartlow
+ms.author: joshuapa
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3512e67ed7a97c4f8cb4c6aa0be256c32087de40
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 136c03ef11071e5d548e36e45a6a541cffce1469
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53923778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62784795"
 ---
 # <a name="django-web-project-template"></a>Django Web 项目模板
 
@@ -38,7 +37,7 @@ Visual Studio 为 Django 项目提供完整的 IntelliSense：
 
     ![JavaScript IntelliSense](media/template-django-intellisense-js.png)
 
-Visual Studio 还为 Django 项目提供完整的[调试支持](debugging-python-in-visual-studio.md)： 
+Visual Studio 还为 Django 项目提供完整的[调试支持](debugging-python-in-visual-studio.md)：
 
 ![断点](media/template-django-debugging.png)
 

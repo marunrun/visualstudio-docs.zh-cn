@@ -1,7 +1,6 @@
 ---
 title: CA1301:避免快捷键重复
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - CA1301
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 20570a00-864b-459c-a1fa-a6e9db5f1001
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d20ec103b2861fbdb80d45b82135686c26b91c9
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 16cd44f00db13027d737b6a6b496877075ac6fa9
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53944981"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68922258"
 ---
 # <a name="ca1301-avoid-duplicate-accelerators"></a>CA1301:避免快捷键重复
 
@@ -29,27 +28,27 @@ ms.locfileid: "53944981"
 |TypeName|AvoidDuplicateAccelerators|
 |CheckId|CA1301|
 |类别|Microsoft.Globalization|
-|是否重大更改|非换行|
+|是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 类型扩展<xref:System.Windows.Forms.Control?displayProperty=fullName>和包含两个或多个具有相同的访问密钥存储在资源文件中的顶级控件。
+类型扩展<xref:System.Windows.Forms.Control?displayProperty=fullName>并包含两个或多个具有存储在资源文件中的相同访问键的顶级控件。
 
 ## <a name="rule-description"></a>规则说明
 
-访问密钥，也称为快捷键，允许使用的键盘访问控件**Alt**密钥。 如果多个控件具有相同的访问密钥，不是定义完善的访问密钥的行为。 用户可能无法再访问目标的控件使用的访问密钥，并且可能会启用旨在以外的控件。
+访问键 (也称为快捷键) 允许通过使用**Alt**键对控件进行键盘访问。 如果多个控件具有相同的访问键, 则访问键的行为定义不正确。 用户可能不能使用访问键访问预期的控件, 并且不能启用所需的控件。
 
-此规则的当前实现将忽略菜单项。 但是，相同的子菜单中的菜单项不应具有相同的访问密钥。
+此规则的当前实现忽略菜单项。 但是, 同一子菜单中的菜单项不应具有相同的访问键。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复此规则的冲突，请定义所有控件的唯一访问的密钥。
+若要修复与此规则的冲突, 请为所有控件定义唯一的访问密钥。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 不禁止显示此规则发出的警告。
+不禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
- 下面的示例演示一个包含具有相同的访问键的两个控件的最小窗体。 密钥存储在资源文件中，而不会显示。 但是，其值显示在注释掉`checkBox.Text`行。 可以通过交换检查的快捷键重复行为`checkBox.Text`具有对应的注释掉的行。 但是，在这种情况下，该示例不会生成警告规则。
+下面的示例演示一个包含两个具有相同访问键的控件的最小形式。 密钥存储在不显示的资源文件中。 但是, 它们的值显示在注释掉`checkBox.Text`的行中。 可以通过将`checkBox.Text`行与注释掉的对应行交换来检查重复快捷键的行为。 但是, 在这种情况下, 该示例不会从规则生成警告。
 
- [!code-csharp[FxCop.Globalization.AvoidDuplicateAccels#1](../code-quality/codesnippet/CSharp/ca1301-avoid-duplicate-accelerators_1.cs)]
+[!code-csharp[FxCop.Globalization.AvoidDuplicateAccels#1](../code-quality/codesnippet/CSharp/ca1301-avoid-duplicate-accelerators_1.cs)]
 
 ## <a name="see-also"></a>请参阅
 

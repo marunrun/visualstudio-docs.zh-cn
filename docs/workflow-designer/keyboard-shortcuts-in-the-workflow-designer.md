@@ -1,22 +1,21 @@
 ---
-title: 工作流设计器的工作流设计器中的键盘快捷键
+title: 工作流设计器：键盘快捷键
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - WFDKeyboardShortcuts.UI
 ms.assetid: 9be75438-a4a3-4781-94e5-45b7ec082358
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c092a4bcb419039b145bccf3f6c0cd952f0ff85
-ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
+ms.openlocfilehash: b2026c61d05425f0f0d48a9fb722c62f760fcba2
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54269574"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67825514"
 ---
 # <a name="keyboard-shortcuts-in-the-workflow-designer"></a>工作流设计器中的键盘快捷键
 
@@ -32,7 +31,7 @@ ms.locfileid: "54269574"
 
 |快捷键|用途|
 |-|-------------|
-|Ctrl+E，A|显示或隐藏参数设计器。|
+|Ctrl+E，A|显示或隐藏自变量设计器。|
 |Ctrl+E，C|就地折叠所选择的活动。|
 |Ctrl+E，E|就地展开所选择的活动。|
 |Ctrl+E，F|连接流程图中所选择的活动。|
@@ -58,13 +57,13 @@ ms.locfileid: "54269574"
 
 - 连接活动：
 
-    1.  通过按 Tab 键定位到活动来选择源活动。
+    1. 通过按 Tab 键定位到活动来选择源活动。
 
-    2.  根据需要按 Ctrl+E，M 多次将键盘焦点移至目标活动。
+    2. 根据需要按 Ctrl+E，M 多次将键盘焦点移至目标活动。
 
-    3.  按 Ctrl+E，S 将目标活动添加到选择范围。
+    3. 按 Ctrl+E，S 将目标活动添加到选择范围。
 
-    4.  按 Ctrl+E，F 添加从源到目标的连接器。
+    4. 按 Ctrl+E，F 添加从源到目标的连接器。
 
 有关通过键盘连接活动的说明：
 
@@ -80,11 +79,11 @@ ms.locfileid: "54269574"
 
 - 重新映射以下命令的键盘快捷键无效。 编辑表达式时，只能使用默认的键盘快捷键访问这些命令。
 
-   - 剪切
-   - 复制
-   - 粘贴
-   - 全选
-   - 撤消
-   - 重做
+  - 剪切
+  - 复制
+  - 粘贴
+  - 全选
+  - 撤消
+  - 重做
 
 - 若要重新映射在 Visual Studio 中的工作流设计器内的表达式编辑命令的键盘快捷键，编辑工作流设计器作用域中的快捷方式。 工作流设计器自动不适用于在文本编辑器作用域中所做的更改。 如果您希望在这两个位置都重新映射快捷键，则必须应用两次更改（每个作用域应用一次）。

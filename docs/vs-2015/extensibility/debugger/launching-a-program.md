@@ -1,27 +1,22 @@
 ---
 title: 启动程序 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debug engines, launching
 - programs, launching
 ms.assetid: 6857e9c6-e44a-468a-afa4-f7c4a0b77844
 caps.latest.revision: 22
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: c3af2c1f571287a4a33c1dd57340e2a66197bd59
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: b54250a54960f346f60c5d668755fb5d28ab376e
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51753951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63430207"
 ---
 # <a name="launching-a-program"></a>启动程序
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -37,12 +32,12 @@ ms.locfileid: "51753951"
     如果未指定 DE，端口将调用要启动程序，这会导致程序的运行时环境要加载的操作系统。  
   
    > [!NOTE]
-   >  如果部署用于启动某个程序，则很可能相同 DE 将被附加到该程序。  
+   > 如果部署用于启动某个程序，则很可能相同 DE 将被附加到该程序。  
   
 3. 具体取决于是否 DE 或端口启动程序，DE 或运行时环境的程序说明或节点，然后创建通知程序正在运行的端口。  
   
    > [!NOTE]
-   >  建议在运行时环境创建的程序节点中，因为程序节点是可调试的程序的轻量表示形式。 没有无需加载整个 DE 只是为了创建和注册程序节点。 如果设计 DE 运行 IDE，但没有 IDE 的过程中实际上正在运行，需要有一个组件，它可以将程序节点添加到该端口。  
+   > 建议在运行时环境创建的程序节点中，因为程序节点是可调试的程序的轻量表示形式。 没有无需加载整个 DE 只是为了创建和注册程序节点。 如果设计 DE 运行 IDE，但没有 IDE 的过程中实际上正在运行，需要有一个组件，它可以将程序节点添加到该端口。  
   
    新创建的程序，以及任何其他程序相关的或不相关的、 启动或附加到相同的 IDE，从编写调试会话。  
   
@@ -66,4 +61,3 @@ ms.locfileid: "51753951"
 ## <a name="related-sections"></a>相关章节  
  [调试任务](../../extensibility/debugger/debugging-tasks.md)  
  包含指向不同的调试任务，如启动程序和计算表达式。
-

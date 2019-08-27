@@ -1,14 +1,9 @@
 ---
 title: 任务批处理中的项元数据 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: conceptual
 helpviewer_keywords:
 - batching [MSBuild]
 - MSBuild, batching
@@ -18,18 +13,17 @@ ms.assetid: 31e480f8-fe4d-4633-8c54-8ec498e2306d
 caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: c117f6864aadd7c981aa2b89302c06ccfd6c9768
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 15a6eeea6ebf75513419cc763b2e29a6b6264391
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49923779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63436797"
 ---
 # <a name="item-metadata-in-task-batching"></a>任务批处理中的项元数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 能够基于项元数据将项列表划分为不同类别或批，并对每个批一次运行一个任务。 要准确了解哪个批中正在传递什么项可能比较困难。 本主题介绍了以下涉及批处理的常见方案。  
   
 - 将一个项列表划分为多个批  
@@ -92,7 +86,7 @@ ms.locfileid: "49923779"
  [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 可基于相同元数据将多个项列表划分为多个批。 这样可以轻松地将不同项列表划分为多个批来生成多个程序集。 例如，可将 .cs 文件的项列表划分为一个应用程序批和一个程序集批，并将资源文件的项列表划分为一个应用程序批和程序集批。 然后，可以使用批处理将这些项列表传递到一个任务，并生成应用程序和程序集。  
   
 > [!NOTE]
->  如果正被传递到任务的项列表不包含任何具有引用元数据的项，则该项列表中的每个项会被传递到每个批。  
+> 如果正被传递到任务的项列表不包含任何具有引用元数据的项，则该项列表中的每个项会被传递到每个批。  
   
  以下示例演示了如何基于项元数据将多个项列表划分为多个批。 `ExampColl` 项列表和 `ExampColl2` 项列表基于 `Number` 项元数据分别被划分为三个批。 若 `Text` 属性中存在 `%(Number)`，则会通知 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 应执行批处理。 `ExampColl` 项列表和 `ExampColl2` 项列表基于 `Number` 元数据被划分为三个批，其中每个批被单独传递到任务。  
   
@@ -233,6 +227,3 @@ Items in ExampColl: Item2;Item5
  [批处理](../msbuild/msbuild-batching.md)   
  [MSBuild 概念](../msbuild/msbuild-concepts.md)   
  [MSBuild 参考](../msbuild/msbuild-reference.md)
-
-
-

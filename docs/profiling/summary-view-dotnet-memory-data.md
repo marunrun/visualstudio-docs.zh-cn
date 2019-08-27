@@ -7,46 +7,46 @@ helpviewer_keywords:
 ms.assetid: 0cb317c3-0ae6-4531-aaa8-447576eec037
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5f821f936ffa8e157eb61e5daab25d1421c6899
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b11815a709cf91d4e29c8f04dfc2dd9e1fadb75e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53935211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62423993"
 ---
 # <a name="summary-view---net-memory-data"></a>“摘要”视图 - .NET 内存数据
-“摘要”视图显示有关分配最多内存的 .NET 函数和类型以及在分析运行中创建次数最多的类型的信息。 有关详细信息（包括通知链接和报告列表的说明），请参阅[“摘要”视图](../profiling/summary-view.md)。  
-  
-## <a name="timeline-graph"></a>时间线关系图  
- “摘要”视图中的时间线关系图按分析的应用程序显示在进行分析的时间内的处理器 (CPU) 利用率。 可以使用时间线关系图将视图筛选到所选时间范围。 有关更多信息，请参见[如何：从摘要时间线中筛选报表视图](../profiling/how-to-filter-report-views-from-the-summary-timeline.md)。  
-  
-## <a name="functions-allocating-most-memory"></a>分配最多内存的函数  
- 列出在分析运行中分配了最大内存字节数的函数。  
-  
-|列|说明|  
-|------------|-----------------|  
-|**名称**|函数名。|  
-|**字节数百分比**|由此函数或此函数调用的子函数分配的字节数占分析运行中分配的所有字节数的百分比。|  
-  
-## <a name="types-with-most-memory-allocated"></a>内存分配最多的类型  
- 列出在分析运行中为其分配了最大内存字节数的类型。  
-  
-|列|说明|  
-|------------|-----------------|  
-|**名称**|类型的名称。|  
-|**字节数百分比**|为此类型分配的字节数占分析运行中分配的所有字节数的百分比。|  
-  
-## <a name="types-with-most-instances"></a>实例最多的类型  
- 列出在分析运行期间创建次数最多的类型。 具有  
-  
-|列|说明|  
-|------------|-----------------|  
-|**名称**|类型的名称。|  
-|**实例数百分比**|属于此类型的实例的 .NET 对象数占分析运行中创建的 .NET 对象总数的百分比。|  
-  
-## <a name="see-also"></a>请参阅  
- [“摘要”视图 - 采样数据](../profiling/summary-view-sampling-data.md)   
- [“摘要”视图 - 检测数据](../profiling/summary-view-instrumentation-data.md)
+“摘要”视图显示有关分配最多内存的 .NET 函数和类型以及在分析运行中创建次数最多的类型的信息。 有关详细信息（包括通知链接和报告列表的说明），请参阅[“摘要”视图](../profiling/summary-view.md)。
+
+## <a name="timeline-graph"></a>时间线关系图
+ “摘要”视图中的时间线关系图按分析的应用程序显示在进行分析的时间内的处理器 (CPU) 利用率。 可以使用时间线关系图将视图筛选到所选时间范围。 有关详细信息，请参阅[如何：从摘要时间线中筛选报表视图](../profiling/how-to-filter-report-views-from-the-summary-timeline.md)。
+
+## <a name="functions-allocating-most-memory"></a>分配最多内存的函数
+ 列出在分析运行中分配了最大内存字节数的函数。
+
+|列|说明|
+|------------|-----------------|
+|**名称**|函数名。|
+|**字节数百分比**|由此函数或此函数调用的子函数分配的字节数占分析运行中分配的所有字节数的百分比。|
+
+## <a name="types-with-most-memory-allocated"></a>内存分配最多的类型
+ 列出在分析运行中为其分配了最大内存字节数的类型。
+
+|列|说明|
+|------------|-----------------|
+|**名称**|类型的名称。|
+|**字节数百分比**|为此类型分配的字节数占分析运行中分配的所有字节数的百分比。|
+
+## <a name="types-with-most-instances"></a>实例最多的类型
+ 列出在分析运行期间创建次数最多的类型。 具有
+
+|列|说明|
+|------------|-----------------|
+|**名称**|类型的名称。|
+|**实例数百分比**|属于此类型的实例的 .NET 对象数占分析运行中创建的 .NET 对象总数的百分比。|
+
+## <a name="see-also"></a>请参阅
+- [“摘要”视图 - 采样数据](../profiling/summary-view-sampling-data.md)
+- [“摘要”视图 - 检测数据](../profiling/summary-view-instrumentation-data.md)

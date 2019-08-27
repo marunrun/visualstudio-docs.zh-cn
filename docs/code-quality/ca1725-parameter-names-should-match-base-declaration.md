@@ -1,7 +1,6 @@
 ---
 title: CA1725:参数名应与基方法中的声明保持一致
-ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
+ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
 - ParameterNamesShouldMatchBaseDeclaration
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 9b657ab0-fe81-4f4c-9481-ba746988c922
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9135ab768d3439cc996478da31343553902706fa
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b0d5afd33ffb73c47b0f373f70c56166dbfced6d
+ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53860592"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69547115"
 ---
 # <a name="ca1725-parameter-names-should-match-base-declaration"></a>CA1725:参数名应与基方法中的声明保持一致
 
@@ -32,13 +31,29 @@ ms.locfileid: "53860592"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 外部可见方法重写中参数的名称与基声明的方法或该方法的接口声明中参数的名称中的参数的名称不匹配。
+
+方法重写中的参数名称与方法的基声明中的参数名称或该方法的接口声明中的参数名称不匹配。
+
+默认情况下, 此规则仅查看外部可见方法, 但这是[可配置](#configurability)的。
 
 ## <a name="rule-description"></a>规则说明
- 以一致的方式命名重写层次结构中的参数可以提高方法重写的可用性。 如果派生方法中的参数名与基声明中的名称不同，可能会导致无法区分出该方法是基方法的重写还是该方法的新重载。
+
+以一致的方式命名重写层次结构中的参数可以提高方法重写的可用性。 如果派生方法中的参数名与基声明中的名称不同，可能会导致无法区分出该方法是基方法的重写还是该方法的新重载。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复此规则的冲突，请重命名参数以匹配基声明。 解决方法是一项重大更改对 COM 可见方法。
+
+若要修复与此规则的冲突, 请重命名参数以匹配基声明。 此修补程序是对 COM 可见方法的重大更改。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 不要禁止显示除以前发布的库中的 COM 可见方法的此规则的警告。
+
+请勿禁止显示此规则发出的警告, 但之前已发布的库中的 COM visible 方法除外。
+
+## <a name="configurability"></a>配置
+
+如果从[FxCop 分析器](install-fxcop-analyzers.md)(而不是传统分析) 运行此规则, 则可以根据其可访问性, 将基本代码的哪些部分配置为在上运行此规则。 例如, 若要指定规则只应针对非公共 API 图面运行, 请在项目中的 editorconfig 文件中添加以下键/值对:
+
+```ini
+dotnet_code_quality.ca1725.api_surface = private, internal
+```
+
+您可以为此规则、所有规则或此类别中的所有规则 (命名) 配置此选项。 有关详细信息, 请参阅[配置 FxCop 分析器](configure-fxcop-analyzers.md)。

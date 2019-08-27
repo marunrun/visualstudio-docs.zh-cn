@@ -1,14 +1,9 @@
 ---
 title: “项目设计器”->“代码分析” | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - vs29106
 helpviewer_keywords:
@@ -18,18 +13,17 @@ ms.assetid: 71743d26-4da5-4f7d-a403-7ab96cf2ef2e
 caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 9e2af505b7cf5700a521903a873c117c7daf4681
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: fa2aa4b3055ff49f59da329ea828e0dbcfc8ec05
+ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49245162"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "62419931"
 ---
 # <a name="code-analysis-project-designer"></a>“项目设计器”->“代码分析”
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 包含可供你选择用于运行代码的代码分析工具。 工具报告有关程序集的信息，例如违反了 Microsoft .NET Framework 设计准则中规定的编程和设计规则。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
@@ -69,10 +63,7 @@ ms.locfileid: "49245162"
  用法规则  
  启用或禁用用法规则。 还可以通过展开此项来启用或禁用单个规则。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [托管代码的代码分析警告](../../code-quality/code-analysis-for-managed-code-warnings.md)   
  [托管代码的代码分析概述](../../code-quality/code-analysis-for-managed-code-overview.md)   
  [演练：对托管代码进行代码缺陷分析](../../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)
-
-
-

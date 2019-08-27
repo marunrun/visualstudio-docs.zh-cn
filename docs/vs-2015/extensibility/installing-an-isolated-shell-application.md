@@ -1,27 +1,22 @@
 ---
 title: 安装独立的 Shell 应用程序 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Shell [Visual Studio], deploying shell-based applications
 - Visual Studio shell, deploying shell-based applications
 ms.assetid: 33416226-9083-41b5-b153-10d2bf35c012
 caps.latest.revision: 41
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 1ecec7963b66c20ef08d1e5f3f0917a66f885aa0
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 60862d631d93788f10c372310da9eb3d181943ef
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51796297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63414546"
 ---
 # <a name="installing-an-isolated-shell-application"></a>安装独立的 Shell 应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -50,13 +45,13 @@ ms.locfileid: "51796297"
   
 #### <a name="to-prepare-a-shell-application-for-msi-deployment"></a>若要准备 MSI 部署一个外壳应用程序  
   
-1.  编辑你的解决方案中每个的.vsixmanifest 文件。  
+1. 编辑你的解决方案中每个的.vsixmanifest 文件。  
   
      在中`Identifier`元素中，添加`InstalledByMSI`元素和一个`SystemComponent`元素，然后将其值设置为`true`。  
   
      这些元素可防止 VSIX 安装程序尝试从使用卸载安装您的组件和用户**扩展和更新**对话框。  
   
-2.  有关每个项目包含 VSIX 清单，请编辑生成任务输出内容将在其中安装 MSI 的位置。 包括在 VSIX 清单中生成输出，但不生成.vsix 文件。  
+2. 有关每个项目包含 VSIX 清单，请编辑生成任务输出内容将在其中安装 MSI 的位置。 包括在 VSIX 清单中生成输出，但不生成.vsix 文件。  
   
 ## <a name="creating-an-msi-for-your-shell"></a>为你的 Shell 中创建 MSI  
  若要生成 MSI 包，我们建议你使用[Windows Installer XML 工具集](http://go.microsoft.com/fwlink/?LinkId=82720)因为它提供更大的灵活性比标准安装程序项目。  
@@ -90,7 +85,7 @@ ms.locfileid: "51796297"
   
 ##### <a name="to-set-the-layout-of-shell-components"></a>若要设置布局的外壳程序组件  
   
-1.  创建层次结构的`Directory`元素来表示所有要在目标计算机上，在文件系统上创建如下例所示的目录。  
+1. 创建层次结构的`Directory`元素来表示所有要在目标计算机上，在文件系统上创建如下例所示的目录。  
   
     ```xml  
     <Directory Id="TARGETDIR" Name="SourceDir">  
@@ -110,10 +105,10 @@ ms.locfileid: "51796297"
   
      这些目录到引用的`Id`时指定必须安装的文件。  
   
-2.  标识外壳和外壳应用程序需要，如以下示例所示的组件。  
+2. 标识外壳和外壳应用程序需要，如以下示例所示的组件。  
   
     > [!NOTE]
-    >  某些元素可以引用其他.wxs 文件中定义。  
+    > 某些元素可以引用其他.wxs 文件中定义。  
   
     ```xml  
     <Feature Id="ProductFeature" Title="$(var.ShortProductName)Shell" Level="1">  
@@ -128,7 +123,7 @@ ms.locfileid: "51796297"
     </Feature>  
     ```  
   
-    1.  `ComponentRef`元素引用另一个标识当前组件所需文件的.wxs 文件。 例如，GeneralProfile HelpAbout.wxs 中具有以下定义。  
+    1. `ComponentRef`元素引用另一个标识当前组件所需文件的.wxs 文件。 例如，GeneralProfile HelpAbout.wxs 中具有以下定义。  
   
         ```xml  
         <Fragment Id="FragmentProfiles">  
@@ -144,7 +139,7 @@ ms.locfileid: "51796297"
   
          `DirectoryRef`元素指定在用户的计算机上转这些文件。 `Directory`元素指定，则将安装到子目录，而每台`File`元素表示的文件生成或，作为解决方案的一部分存在，并且标识该文件可以找到创建的 MSI 文件时。  
   
-    2.  `ComponentGroupRef`元素表示一组的其他组件 （或组件以及组件组）。 例如， `ComponentGroupRef` ApplicationGroup 下定义，如下所示 Application.wxs 中。  
+    2. `ComponentGroupRef`元素表示一组的其他组件 （或组件以及组件组）。 例如， `ComponentGroupRef` ApplicationGroup 下定义，如下所示 Application.wxs 中。  
   
         ```xml  
         <ComponentGroup Id="ApplicationGroup">  
@@ -164,51 +159,51 @@ ms.locfileid: "51796297"
         ```  
   
     > [!NOTE]
-    >  所需的 Shell （独立） 应用程序的依赖项： DebuggerProxy，MasterPkgDef，资源 （尤其是.winprf 文件），应用程序和 PkgDefs。  
+    > Shell （独立） 应用程序必需的依赖项是：DebuggerProxy，MasterPkgDef，资源 （尤其是.winprf 文件），应用程序和 PkgDefs。  
   
 ### <a name="registry-entries"></a>注册表项  
  Shell （独立） 项目模板包括*ProjectName*合并安装上的注册表项的.reg 文件。 这些注册表项必须是安装和清理目的的 MSI 的一部分。 此外必须在 ApplicationRegistry.wxs 中创建匹配的注册表基块。  
   
 ##### <a name="to-integrate-registry-entries-into-the-msi"></a>若要将集成到 MSI 的注册表项  
   
-1.  在中**外壳自定义设置**文件夹中，打开*ProjectName*。 地区  
+1. 在中**外壳自定义设置**文件夹中，打开*ProjectName*。 地区  
   
-2.  $RootFolder$ 令牌的所有实例都替换为目标安装目录的路径。  
+2. $RootFolder$ 令牌的所有实例都替换为目标安装目录的路径。  
   
-3.  添加应用程序所需的任何其他注册表项。  
+3. 添加应用程序所需的任何其他注册表项。  
   
-4.  打开 ApplicationRegistry.wxs。  
+4. 打开 ApplicationRegistry.wxs。  
   
-5.  为在每个注册表条目*ProjectName*.reg，添加相应的注册表块，如以下示例所示。  
+5. 为在每个注册表条目*ProjectName*.reg，添加相应的注册表块，如以下示例所示。  
   
     |*ProjectName*.reg|ApplicationRegisty.wxs|  
     |-----------------------|----------------------------|  
-    |[HKEY_CLASSES_ROOT\CLSID\\{bb431796-a179-4df7-b65d-c0df6bda7cc6}]<br /><br /> @="PhotoStudio DTE 对象"|\<注册表项 Id = DteClsidRegKey 根 = HKCR 键 = $（var。DteClsidRegKey) 操作 createAndRemoveOnUninstall = ><br /><br /> \<RegistryValue 类型 = string 名称 = @ 值 = $（var。ShortProductName) DTE 对象 / ><br /><br /> \</ RegistryKey >|  
-    |[HKEY_CLASSES_ROOT\CLSID\\{bb431796-a179-4df7-b65d-c0df6bda7cc6} \LocalServer32]<br /><br /> @="$RootFolder$\PhotoStudio.exe"|\<注册表项 Id = DteLocSrv32RegKey 根 = HKCR 键 = $（var。DteClsidRegKey) \LocalServer32 操作 createAndRemoveOnUninstall = ><br /><br /> \<RegistryValue 类型 = string 名称 = @ 值 = [INSTALLDIR] $（var。ShortProductName).exe / ><br /><br /> \</ RegistryKey >|  
+    |[HKEY_CLASSES_ROOT\CLSID\\{bb431796-a179-4df7-b65d-c0df6bda7cc6}]<br /><br /> @="PhotoStudio DTE Object"|\<RegistryKey Id='DteClsidRegKey' Root='HKCR' Key='$(var.DteClsidRegKey)' Action='createAndRemoveOnUninstall'><br /><br /> \<RegistryValue Type='string' Name='@' Value='$(var.ShortProductName) DTE Object' /><br /><br /> \</RegistryKey>|  
+    |[HKEY_CLASSES_ROOT\CLSID\\{bb431796-a179-4df7-b65d-c0df6bda7cc6}\LocalServer32]<br /><br /> @="$RootFolder$\PhotoStudio.exe"|\<RegistryKey Id='DteLocSrv32RegKey' Root='HKCR' Key='$(var.DteClsidRegKey)\LocalServer32' Action='createAndRemoveOnUninstall'><br /><br /> \<RegistryValue Type='string' Name='@' Value='[INSTALLDIR]$(var.ShortProductName).exe' /><br /><br /> \</RegistryKey>|  
   
      在此示例中，Var.DteClsidRegKey 解析为最上面一行中的注册表项。 Var.ShortProductName 解析为`PhotoStudio`。  
   
 ## <a name="creating-a-setup-bootstrapper"></a>创建安装程序引导程序  
  仅当首次安装所有必备组件，将安装已完成的 MSI。 若要简化最终用户体验，创建收集并安装你的应用程序之前安装所有必备组件的安装程序。 若要确保成功安装，请执行以下操作：  
   
--   强制执行由管理员安装。  
+- 强制执行由管理员安装。  
   
--   检测是否安装了 Visual Studio Shell （独立）。  
+- 检测是否安装了 Visual Studio Shell （独立）。  
   
--   按顺序运行一个或两个命令行程序安装程序。  
+- 按顺序运行一个或两个命令行程序安装程序。  
   
--   处理重新启动请求。  
+- 处理重新启动请求。  
   
--   运行 MSI。  
+- 运行 MSI。  
   
 ### <a name="enforcing-installation-by-administrator"></a>强制执行由管理员安装  
  此过程需启用安装程序来访问所需的目录，如 \Program Files\\。  
   
 ##### <a name="to-enforce-installation-by-administrator"></a>若要强制执行由管理员安装  
   
-1.  打开安装项目的快捷菜单，然后选择**属性**。  
+1. 打开安装项目的快捷菜单，然后选择**属性**。  
   
-2.  下**配置属性 / 链接器 / 清单文件**，请设置**UAC 执行级别**到**requireAdministrator**。  
+2. 下**配置属性 / 链接器 / 清单文件**，请设置**UAC 执行级别**到**requireAdministrator**。  
   
      此属性将放到嵌入的清单文件，以管理员身份运行该程序所需的属性。  
   
@@ -216,7 +211,7 @@ ms.locfileid: "51796297"
  若要确定是否必须安装 Visual Studio Shell （独立），请首先确定是否已安装通过检查 HKLM\Software\Microsoft\DevDiv\vs\Servicing\ShellVersion\isoshell\LCID\Install 的注册表值。  
   
 > [!NOTE]
->  由 Shell 检测块中 Product.wxs 还读取这些值。  
+> 由 Shell 检测块中 Product.wxs 还读取这些值。  
   
  HKLM\Software\Microsoft\AppEnv\14.0\ShellFolder 指定的位置的已安装 Visual Studio Shell，并可以检查那里文件。  
   
@@ -257,15 +252,15 @@ dwResult = ExecCmd("Vs_IsoShellLP.exe /norestart /q", TRUE);
   
  若要处理的重启，请执行以下操作：  
   
--   设置注册表以继续安装，Windows 启动时。  
+- 设置注册表以继续安装，Windows 启动时。  
   
--   执行双引导程序重新启动。  
+- 执行双引导程序重新启动。  
   
--   删除命令行程序安装程序 ResumeData 密钥。  
+- 删除命令行程序安装程序 ResumeData 密钥。  
   
--   重启 Windows。  
+- 重启 Windows。  
   
--   重置的 MSI 开始路径。  
+- 重置的 MSI 开始路径。  
   
 ### <a name="setting-the-registry-to-resume-setup-when-windows-starts"></a>当 Windows 启动时恢复安装程序将注册表设置  
  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce\ 注册表项在使用管理权限的系统启动时执行，然后清除。 HKEY_CURRENT_USER 包含类似的密钥，但它以普通用户身份运行，并不适用于安装。 可以通过将一个字符串值放入 RunOnce 项调用您的安装程序继续安装。 但是，我们建议使用调用安装程序**重启**或类似的参数，以通知它正在恢复而不启动该应用程序。 此外可以包含参数来指示安装过程中，这可能需要多次重新启动的安装中特别有用的。  
@@ -375,4 +370,3 @@ dwResult = ExecCmd(boutiqueInstallCmd, FALSE);
   
 ## <a name="see-also"></a>请参阅  
  [演练：创建基本的独立 Shell 应用程序](../extensibility/walkthrough-creating-a-basic-isolated-shell-application.md)
-

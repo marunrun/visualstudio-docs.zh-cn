@@ -9,18 +9,17 @@ helpviewer_keywords:
 ms.assetid: d1508121-8499-4084-8eb5-fa89fa7b17d3
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 f1_keywords:
 - vs.performancecenter
-ms.prod: visual-studio-dev15
 ms.workload:
 - multiple
-ms.openlocfilehash: 39dd45f7b66dfe0966f3a8c62841f591d56a195a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 60302646abbf36034756f38183d7be7f0d28c1ca
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53865539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812483"
 ---
 # <a name="optimize-visual-studio-startup-time"></a>优化 Visual Studio 启动时间
 
@@ -28,7 +27,7 @@ Visual Studio 可快速高效地启动。 但是，某些 Visual Studio 扩展�
 
 ## <a name="startup-behavior"></a>启动行为
 
-为了避免启动时间延长，Visual Studio 2017 使用按需方法加载扩展。 该行为意味着不会在 Visual Studio 启动后立即打开扩展，而是根据需要打开。 此外，由于在之前的 Visual Studio 会话中保持工具窗口的打开状态会使启动时间变慢，因此 Visual Studio 以更智能的方式打开工具窗口，从而避免影响启动时间。
+为了避免启动时间延长，Visual Studio 使用按需方法加载扩展。 该行为意味着不会在 Visual Studio 启动后立即打开扩展，而是根据需要打开。 此外，由于在之前的 Visual Studio 会话中保持工具窗口的打开状态会使启动时间变慢，因此 Visual Studio 以更智能的方式打开工具窗口，从而避免影响启动时间。
 
 如果 Visual Studio 检测到启动速度较慢，则会弹出一条消息，提示你导致速度变慢的扩展或工具窗口。 此消息提供了指向“管理 Visual Studio 性能”对话框的链接。 还可以通过在菜单栏中选择“帮助” > “管理 Visual Studio 性能”，访问此对话框。
 
@@ -67,10 +66,10 @@ Visual Studio 可快速高效地启动。 但是，某些 Visual Studio 扩展�
      ![管理 Visual Studio 性能 - 工具窗口视图](../ide/media/vside_perfdialog_toolwindows.png)
 
 > [!NOTE]
-> Visual Studio 2017 的某些早期版本中提供一种名为“轻型解决方案加载”的功能。 Visual Studio 2017 版本 15.5 及更高版本中不再提供此功能。 在 Visual Studio 2017 版本 15.5 及更高版本中，包含托管代码的大型解决方案的加载速度比以前快许多，即使在不具备轻型解决方案加载功能的情况下亦如此。
+> Visual Studio 2017 的某些早期版本中提供一种名为“轻型解决方案加载”的功能。 在当前版本中，包含托管代码的大型解决方案的加载速度比以前快许多，即使在不具备轻型解决方案加载功能的情况下亦如此。
 
 ## <a name="see-also"></a>请参阅
 
 - [优化 Visual Studio 性能](../ide/optimize-visual-studio-performance.md)
 - [Visual Studio 性能提示和技巧](../ide/visual-studio-performance-tips-and-tricks.md)
-- [Visual Studio blog - Load solutions faster with Visual Studio 2017 version 15.6](https://blogs.msdn.microsoft.com/visualstudio/2018/04/04/load-solutions-faster-with-visual-studio-2017-version-15-6/)（Visual Studio 博客 - 使用 Visual Studio 2017 版本 15.6 更快地加载解决方案）
+- [Visual Studio blog - Load solutions faster with Visual Studio 2017 version 15.6](https://devblogs.microsoft.com/visualstudio/load-solutions-faster-with-visual-studio-2017-version-15-6/)（Visual Studio 博客 - 使用 Visual Studio 2017 版本 15.6 更快地加载解决方案）

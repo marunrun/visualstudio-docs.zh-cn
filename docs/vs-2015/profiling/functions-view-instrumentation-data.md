@@ -1,27 +1,22 @@
 ---
 title: “函数”视图 - 检测数据 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Function view
 ms.assetid: 595d91c8-a42b-4644-85b8-39e8140a5dfe
 caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: c19175af6af583120c9fd648328ecf90deaeb3a7
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: ef2375fc4132e0274e7cded6daf5bdd0a58891c4
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51786794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62580220"
 ---
 # <a name="functions-view---instrumentation-data"></a>“函数”视图 - 检测数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,7 +26,7 @@ ms.locfileid: "51786794"
 ## <a name="general"></a>常规  
  常规列标识视图行中的函数。  
   
-|列|描述|  
+|列|说明|  
 |------------|-----------------|  
 |**函数名**|函数名。|  
 |**函数地址**|函数的地址。|  
@@ -48,7 +43,7 @@ ms.locfileid: "51786794"
 ## <a name="elapsed-inclusive-values"></a>已用非独占值  
  已用非独占值表示函数位于调用堆栈上的时间。 此时间包括函数调用的函数中所用的时间，以及调用操作系统期间花费的时间，例如上下文切换和输入/输出操作。  
   
-|列|描述|  
+|列|说明|  
 |------------|-----------------|  
 |**已用非独占时间**|对此函数的所有调用的总已用非独占时间。|  
 |**已用非独占时间百分比**|此函数的已用非独占时间占分析运行期间所用的总已用非独占时间的百分比。|  
@@ -59,7 +54,7 @@ ms.locfileid: "51786794"
 ## <a name="elapsed-exclusive-values"></a>已用独占值  
  已用独占时间值表示函数在函数体中执行代码（即该函数在调用堆栈顶部时）的时间。 此时间包括调用操作系统期间花费的时间，例如上下文切换和输入/输出操作，但不包括函数调用的函数中所用的时间。  
   
-|列|描述|  
+|列|说明|  
 |------------|-----------------|  
 |**已用独占时间**|对此函数的所有调用的总已用独占时间。|  
 |**已用独占时间百分比**|此函数的总已用独占时间占分析运行期间所用的总已用独占时间的百分比。|  
@@ -70,7 +65,7 @@ ms.locfileid: "51786794"
 ## <a name="application-inclusive-values"></a>应用程序非独占值  
  应用程序非独占值表示函数位于调用堆栈上的时间。 此时间不包括调用操作系统期间花费的时间，例如上下文切换和输入/输出操作，但包括函数调用的函数中所用的时间。  
   
-|列|描述|  
+|列|说明|  
 |------------|-----------------|  
 |**应用程序非独占时间**|对此函数的所有调用的总应用程序非独占时间。|  
 |**应用程序非独占时间百分比**|此函数的应用程序总非独占时间占分析运行期间所用的总已用非独占时间的百分比。|  
@@ -81,7 +76,7 @@ ms.locfileid: "51786794"
 ## <a name="application-exclusive-values"></a>应用程序独占值  
  应用程序独占值表示函数在调用堆栈顶部直接执行的时间。 此时间不包括调用操作系统期间花费的时间，例如上下文切换和输入/输出操作，也不包括函数调用的函数中所用的时间。  
   
-|列|描述|  
+|列|说明|  
 |------------|-----------------|  
 |**应用程序独占时间**|对此函数的所有调用的总应用程序独占时间。|  
 |**应用程序独占时间百分比**|此函数的应用程序总独占时间占分析运行期间所用的总已用独占时间的百分比。|  
@@ -94,6 +89,3 @@ ms.locfileid: "51786794"
  [“函数”视图](../profiling/functions-view-sampling-data.md)   
  [“函数”视图 - 采样](../profiling/functions-view-dotnet-memory-sampling-data.md)   
  [“函数”视图 - 检测](../profiling/functions-view-dotnet-memory-instrumentation-data.md)
-
-
-

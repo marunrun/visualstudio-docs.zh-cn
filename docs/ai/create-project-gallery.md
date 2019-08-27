@@ -1,5 +1,5 @@
 ---
-title: 在 AI Tools for Visual studio 中创建项目
+title: 创建项目
 description: 使用 Azure 机器学习库中的示例创建项目
 keywords: ai, visual studio, azure 机器学习
 author: lisawong19
@@ -7,18 +7,16 @@ ms.author: liwong
 manager: routlaw
 ms.date: 11/13/2017
 ms.topic: conceptual
-ms.devlang: multiple
-ms.service: multiple
 ms.workload:
 - multiple
-ms.openlocfilehash: ad28d01fdb1bbb91aaff3fb5530bbaa77444bb35
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5694bfe49e88d0ea5911e72abba842e98f54e373
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53873504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62538015"
 ---
-## <a name="create-an-ai-project-from-the-azure-machine-learning-gallery-in-visual-studio"></a>在 Visual Studio 中通过 Azure 机器学习库创建 AI 项目
+# <a name="create-an-ai-project-from-the-azure-machine-learning-gallery-in-visual-studio"></a>在 Visual Studio 中通过 Azure 机器学习库创建 AI 项目
 
 Azure 机器学习与 Visual Studio Tools for AI 集成在一起。 可以使用它将机器学习作业提交到远程计算目标，如 Azure 虚拟机、Spark 群集等。 详细了解 [Azure 机器学习试验](https://docs.microsoft.com/azure/machine-learning/preview/experimentation-service-configuration)
 

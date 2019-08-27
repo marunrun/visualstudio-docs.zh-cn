@@ -1,26 +1,21 @@
 ---
 title: 项目类型体系结构 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], architecture
 ms.assetid: 9c1d940f-8a54-41f7-a8aa-c870e324371c
 caps.latest.revision: 7
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: c04f760adc61b011acd51d9bdcdf7275ec6b6a28
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 775656d2190a36f62c2b047c1ff7f1e02575c1ca
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51759046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68154147"
 ---
 # <a name="project-types-architecture"></a>项目类型体系结构
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -46,4 +41,3 @@ ms.locfileid: "51759046"
   
  [项目类型](../../extensibility/internals/project-types.md)  
  基本构建块的形式提供的项目概述[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]集成的开发环境 (IDE)。 提供了指向介绍项目生成和编译代码的控制的其他主题的链接。
-

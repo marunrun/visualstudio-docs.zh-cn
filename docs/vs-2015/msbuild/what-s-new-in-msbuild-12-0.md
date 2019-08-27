@@ -1,25 +1,20 @@
 ---
 title: MSBuild 12.0 中的新增功能 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: conceptual
 ms.assetid: 9976a6ad-c052-4017-b848-35b5ae4a2f66
 caps.latest.revision: 26
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 3f10fa5496795947c041482d5ae5dc7b6112da67
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 9746b156d2ec959f2ffb5bbff41b3891516d130f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49247386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68193611"
 ---
 # <a name="what39s-new-in-msbuild-120"></a>MSBuild 12.0 中的新增功能
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,21 +27,19 @@ MSBuild 现已作为 Visual Studio 的一部分而不是 .NET Framework 的一�
 ## <a name="changed-properties"></a>更改的属性  
  下面的 MSBuild 属性由于新版本号而更改：  
   
--   此版工具的 `MSBuildToolsVersion` 为 12.0。  
+- 此版工具的 `MSBuildToolsVersion` 为 12.0。  
   
--   `MSBuildToolsPath` 现在为 %ProgramFiles%\MSBuild\12.0\bin（对于 32 位操作系统）或 %ProgramFiles%\MSBuild\12.0\bin\amd64（对于 64 位操作系统）。  
+- `MSBuildToolsPath` 现在为 %ProgramFiles%\MSBuild\12.0\bin（对于 32 位操作系统）或 %ProgramFiles%\MSBuild\12.0\bin\amd64（对于 64 位操作系统）。  
   
--   `ToolsVersion` 值可以在 HKLM\SOFTWARE\Microsoft\MSBuild\ToolsVersions\12.0（对于 32 位操作系统）或 HKLM\SOFTWARE\Wow6432Node\Microsoft\MSBuild\ToolsVersions\12.0（64 位操作系统）中找到。  
+- `ToolsVersion` 值可以在 HKLM\SOFTWARE\Microsoft\MSBuild\ToolsVersions\12.0（对于 32 位操作系统）或 HKLM\SOFTWARE\Wow6432Node\Microsoft\MSBuild\ToolsVersions\12.0（64 位操作系统）中找到。  
   
--   `SDK35ToolsPath` 和 `SDK40ToolsPath` 属性指向与此版 Visual Studio 一起打包的 .NET Framework SDK（例如，对于 4.X 工具，则指向 8.1A）。  
+- `SDK35ToolsPath` 和 `SDK40ToolsPath` 属性指向与此版 Visual Studio 一起打包的 .NET Framework SDK（例如，对于 4.X 工具，则指向 8.1A）。  
   
 ## <a name="new-properties"></a>新增的属性  
   
--   `MSBuildFrameworkToolsPath` 是一个新属性，其值为 %windir%\Microsoft.NET\Framework\v4.0.30319（对于 32 位操作系统）或 %windir%\Microsoft.NET\Framework64\v4.0.30319（对于 64 位操作系统）。 它替代了 `MSBuildToolsPath`，可用于指向 .NET Framework 工具和实用程序。  
+- `MSBuildFrameworkToolsPath` 是一个新属性，其值为 %windir%\Microsoft.NET\Framework\v4.0.30319（对于 32 位操作系统）或 %windir%\Microsoft.NET\Framework64\v4.0.30319（对于 64 位操作系统）。 它替代了 `MSBuildToolsPath`，可用于指向 .NET Framework 工具和实用程序。  
   
--   `MSBuildToolsPath` 和 `MSBuildFrameworkToolsPath` 具有 32 位等效项 `MSBuildToolsPath32` 和 `MSBuildFrameworkToolsPath32`，它们始终指向 32 位位置，而不论使用 32 位还是 64 位的 MSBuild。
+- `MSBuildToolsPath` 和 `MSBuildFrameworkToolsPath` 具有 32 位等效项 `MSBuildToolsPath32` 和 `MSBuildFrameworkToolsPath32`，它们始终指向 32 位位置，而不论使用 32 位还是 64 位的 MSBuild。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 [MSBuild](msbuild.md)
-
-

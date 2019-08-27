@@ -1,14 +1,9 @@
 ---
-title: DA0021：第 1 代垃圾回收的速率很高 | Microsoft Docs
-ms.custom: ''
+title: DA0021：第 1 代垃圾回收率高 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 f1_keywords:
 - vs.performance.21
 - vs.performance.DA0021
@@ -17,21 +12,21 @@ ms.assetid: ebf5d9b3-a1ac-4688-8f0f-39a85f4dd15f
 caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 77bcfd877bb0e5a8bf20caa629c226c4f304fafa
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 2a4502be6c683376b93bc144ef5b3568550a1c9e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51765847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62584029"
 ---
-# <a name="da0021-high-rate-of-gen-1-garbage-collections"></a>DA0021: 第 1 代垃圾回收的速率很高
+# <a name="da0021-high-rate-of-gen-1-garbage-collections"></a>DA0021：第 1 代垃圾回收率高
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 规则 Id |DA0021 |  
 |类别 |。NET Framework 使用情况 |  
 |分析方法 |所有 |  
-|消息 |没有第 1 代垃圾回收的发生率非常高。 按设计来说，如果分配了大部分程序的数据结构且其保留时间较长，那么这通常并不是问题。 但是，如果此行为不在计划内，则表示应用程序可能锁定了对象。 如果您不确定，则可以收集.NET 内存分配数据和对象生存期信息，若要了解你的应用程序使用的内存分配模式。 |  
+|消息 |没有第 1 代垃圾回收的发生率非常高。 按设计来说，如果分配了大部分程序的数据结构且其保留时间较长，那么这通常并不是问题。 但是，如果此行为不在计划内，则表示应用程序可能锁定了对象。 如果不确定，可以收集 .NET 内存分配数据和对象生存期信息，便于了解应用程序使用的内存分配模式。|  
 |规则类型 |信息 |  
   
  使用采样法、.NET 内存或资源争用方法进行分析时，必须收集至少 10 个样本才能触发此规则。  
@@ -52,6 +47,3 @@ ms.locfileid: "51765847"
  若要了解应用程序的托管内存使用模式，请运行 .NET 内存分配分析再次进行分析，并请求“对象生存期”度量值。  
   
  有关如何提高垃圾回收性能的信息，请参阅 Microsoft 网站上的 [Garbage Collector Basics and Performance Hints](http://go.microsoft.com/fwlink/?LinkId=148226)（垃圾回收器基础知识和性能提示）。 有关自动垃圾回收的开销的信息，请参阅[大型对象堆揭密](http://go.microsoft.com/fwlink/?LinkId=177836)。
-
-
-

@@ -1,25 +1,22 @@
 ---
 title: 在 UML 模型中创建元素和关系 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - UML API
 ms.assetid: cae81d32-8cc7-4f7c-9f00-20119952bc51
 caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 5ed918bc96168196400dd34d87ec65574fdfc5b6
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: ce1f236347ad811f1c5d115f30907b7e3356e3af
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51785867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68159636"
 ---
 # <a name="create-elements-and-relationships-in-uml-models"></a>在 UML 模型中创建元素和关系
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -55,7 +52,7 @@ IPackage linkedPackage = Context.CurrentDiagram.Element as IPackage;
 |`ILifeline, IMessage, ICombinedFragment`|`IInteraction`|  
   
 ### <a name="invoke-the-create-method-on-the-owner"></a>对所有者调用 Create 方法  
- 方法名称的形式： `Create` *OwnedType*`()`。 例如：  
+ 方法名称的形式：`Create`*OwnedType*`()`。 例如:  
   
 ```  
 IUseCase usecase1 = linkedPackage.CreateUseCase();  
@@ -90,11 +87,11 @@ using Microsoft.VisualStudio.Uml.Extensions;
   
 #### <a name="to-create-an-association"></a>创建关联  
   
-1.  获取关联的所有者，它通常是包含关系源端的包或模型。  
+1. 获取关联的所有者，它通常是包含关系源端的包或模型。  
   
-2.  对所有者调用所需的 Create 方法。  
+2. 对所有者调用所需的 Create 方法。  
   
-3.  设置关系的属性，比如其名称。  
+3. 设置关系的属性，比如其名称。  
   
      例如：  
   
@@ -103,7 +100,7 @@ using Microsoft.VisualStudio.Uml.Extensions;
     association .Name = "Observes";  
     ```  
   
-4.  设置关系各端的属性。 始终有两个 `MemberEnds`。 例如：  
+4. 设置关系各端的属性。 始终有两个 `MemberEnds`。 例如:  
   
     ```  
     association .MemberEnds[0].Name = "subject";   // role name  
@@ -128,13 +125,10 @@ anElement.Delete();
   
  从模型中删除元素时：  
   
--   也将删除链接到它的每个关系。  
+- 也将删除链接到它的每个关系。  
   
--   还将删除关系图上表示它的每个形状。  
+- 还将删除关系图上表示它的每个形状。  
   
 ## <a name="see-also"></a>请参阅  
  [扩展 UML 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)   
  [在关系图上显示 UML 模型](../modeling/display-a-uml-model-on-diagrams.md)
-
-
-

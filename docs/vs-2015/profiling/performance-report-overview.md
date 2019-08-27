@@ -1,14 +1,9 @@
 ---
 title: 性能报告概述 | Microsoft 文档
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - profiling tools, about performance rerports
 - performance, reports
@@ -17,13 +12,13 @@ ms.assetid: 7324c24c-fd09-479b-b2ad-e0c3b613e040
 caps.latest.revision: 50
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 6b9a729698841d1bbbcd9b49ffe0d3dd9bddccc8
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: fd8732a914581b39566bac88fe73698850893f77
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51790508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63434274"
 ---
 # <a name="performance-report-overview"></a>性能报告概述
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,9 +26,9 @@ ms.locfileid: "51790508"
 在 Visual Studio Team System Development Edition 集成开发环境 (IDE) 的“性能报告”窗口中，可以查看性能会话的分析数据。 分析数据保存在 .vsp 和 .vsps 文件中。 报告视图窗口可用于查看和分析应用程序性能问题。  
   
 > [!CAUTION]
->  分析数据文件包含敏感信息，如计算机名、操作系统的版本、文件路径、内存信息和其他计算机设置信息。 无论是采用本机 .vsp 格式，还是导出到 .csv 或 .xml 文件时，都应对数据的分发保持严格控制。  
+> 分析数据文件包含敏感信息，如计算机名、操作系统的版本、文件路径、内存信息和其他计算机设置信息。 无论是采用本机 .vsp 格式，还是导出到 .csv 或 .xml 文件时，都应对数据的分发保持严格控制。  
 >   
->  如果事件跟踪数据作为性能会话的一部分进行收集，则其他信息可能会出现在事件跟踪日志 (.etl) 文件中。 此信息包括域和用户名；因此，应对日志文件的分发保持严格控制。  
+> 如果事件跟踪数据作为性能会话的一部分进行收集，则其他信息可能会出现在事件跟踪日志 (.etl) 文件中。 此信息包括域和用户名；因此，应对日志文件的分发保持严格控制。  
   
 ## <a name="performance-report-window"></a>“性能报告”窗口  
  “性能报告”窗口是一个工具窗口，用于查看、管理和筛选性能数据，包含可自定义查询控制。  
@@ -87,23 +82,20 @@ ms.locfileid: "51790508"
 ## <a name="customizable-filter-control"></a>可自定义筛选器控件  
  可自定义筛选器控件具有以下选项：  
   
--   **导入筛选器** - 检索以前保存的自定义查询。  
+- **导入筛选器** - 检索以前保存的自定义查询。  
   
--   **导出筛选器** - 将自定义查询保存到指定位置。  
+- **导出筛选器** - 将自定义查询保存到指定位置。  
   
--   **执行查询** - 运行在自定义查询控件中显示的查询。  
+- **执行查询** - 运行在自定义查询控件中显示的查询。  
   
--   **停止查询** - 停止正在运行的查询的执行。 如果没有查询正在运行，则此按钮不可用。  
+- **停止查询** - 停止正在运行的查询的执行。 如果没有查询正在运行，则此按钮不可用。  
   
--   **显示查询** - 显示/隐藏自定义查询控件。  
+- **显示查询** - 显示/隐藏自定义查询控件。  
   
--   **保存分析结果** - 将报告及其当前分析保存为 .vsps 文件。  
+- **保存分析结果** - 将报告及其当前分析保存为 .vsps 文件。  
   
--   **导出** - 将当前报告保存在 .CVS 格式或 .XML 格式文件中（可以选择保存不同的视图）。  
+- **导出** - 将当前报告保存在 .CVS 格式或 .XML 格式文件中（可以选择保存不同的视图）。  
   
 ## <a name="see-also"></a>请参阅  
  [分析性能工具数据](../profiling/analyzing-performance-tools-data.md)   
  [性能报告视图](../profiling/performance-report-views.md)
-
-
-

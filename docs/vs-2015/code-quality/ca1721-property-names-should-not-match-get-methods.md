@@ -1,14 +1,9 @@
 ---
-title: CA1721： 属性名不应与 get 方法 |Microsoft Docs
-ms.custom: ''
+title: CA1721:属性名不应与 get 方法 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA1721
 - PropertyNamesShouldNotMatchGetMethods
@@ -20,14 +15,14 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 6d2c9bec4d7bfc1059bde61f730c157e25a499bb
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: 94d120a7656fc9270543ceeb57063124764c4bca
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49880415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63431191"
 ---
-# <a name="ca1721-property-names-should-not-match-get-methods"></a>CA1721：属性名不应与 get 方法冲突
+# <a name="ca1721-property-names-should-not-match-get-methods"></a>CA1721:属性名不应与 get 方法冲突
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -52,7 +47,7 @@ ms.locfileid: "49880415"
  不禁止显示此规则发出的警告。
 
 > [!NOTE]
->  如果 Get 方法由实现 IExtenderProvider 接口可能排除此警告。
+> 如果 Get 方法由实现 IExtenderProvider 接口可能排除此警告。
 
 ## <a name="example"></a>示例
  下面的示例包含方法和属性都与此规则冲突。
@@ -61,7 +56,4 @@ ms.locfileid: "49880415"
  [!code-vb[FxCop.Naming.GetMethod#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Naming.GetMethod/vb/FxCop.Naming.GetMethod.vb#1)]
 
 ## <a name="related-rules"></a>相关的规则
- [CA1024：在适用处使用属性](../code-quality/ca1024-use-properties-where-appropriate.md)
-
-
-
+ [CA1024： 在适用处在适用处使用属性](../code-quality/ca1024-use-properties-where-appropriate.md)

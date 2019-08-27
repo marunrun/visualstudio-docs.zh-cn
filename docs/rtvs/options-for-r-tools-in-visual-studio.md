@@ -2,7 +2,6 @@
 title: R 工具选项
 description: Visual Studio 中有关 R 语言及相关功能的选项的参考。
 ms.date: 12/04/2017
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - vs.toolsoptionspages.text_editor.r.advanced
@@ -11,15 +10,15 @@ f1_keywords:
 - vs.toolsoptionspages.r_tools.#150
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 2d48f59be1bb8e41e5cb587a6c5defcfb6e3227f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c7c2cb57dc96d7bb0df09248eb7a877820e50521
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53900556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999032"
 ---
 # <a name="r-tools-for-visual-studio-options"></a>针对 Visual Studio 的 R 工具选项
 

@@ -1,14 +1,9 @@
 ---
-title: CA1062： 验证公共方法的参数 |Microsoft Docs
-ms.custom: ''
+title: CA1062:验证公共方法的参数 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA1062
 - ValidateArgumentsOfPublicMethods
@@ -21,14 +16,14 @@ caps.latest.revision: 29
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 7d5b5039c08e27dd97c0119948c87d7295756d7b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 13ea687ea9ca68693af7e2aa5c22881a36207d2e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49811972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68200434"
 ---
-# <a name="ca1062-validate-arguments-of-public-methods"></a>CA1062：验证公共方法的自变量
+# <a name="ca1062-validate-arguments-of-public-methods"></a>CA1062:验证公共方法的参数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -124,6 +119,3 @@ public class Person
     }
 }
 ```
-
-
-

@@ -1,23 +1,24 @@
 ---
 layout: LandingPage
 title: 代码分析
-description: 了解如何使用 Visual Studio 2017 来分析代码质量。
+description: 了解如何使用 Visual Studio 来分析代码质量。
 ms.date: 12/03/2018
-ms.prod: visual-studio-dev15
 ms.topic: landing-page
 ms.author: gewarren
 author: gewarren
-manager: douge
-ms.openlocfilehash: c5a4d238c897b60258d87ed231d6d4cced26e476
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 9cc40bdd7b0e120e3a8e3e5be28f4d399afb9210
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53936628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62820728"
 ---
 # <a name="code-analysis-in-visual-studio"></a>Visual Studio 中的代码分析
 
 Visual Studio 提供众多不同的工具用于分析和提升代码质量。
+
+<!-- markdownlint-disable MD033 -->
 
 <br />
 

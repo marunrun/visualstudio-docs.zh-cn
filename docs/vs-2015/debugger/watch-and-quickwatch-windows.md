@@ -1,14 +1,9 @@
 ---
 title: 监视窗口和快速监视 Windows |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.watch
 dev_langs:
@@ -28,13 +23,13 @@ ms.assetid: d5c18377-2a0e-4819-a645-407e24ccc58c
 caps.latest.revision: 50
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: b171352475b6c0b3bc916d27ab4ba351e84be42b
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: c3f79e492440f98f733488afb241fa6f86e220b9
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51791666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63444232"
 ---
 # <a name="watch-and-quickwatch-windows"></a>监视和快速监视窗口
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -59,15 +54,15 @@ static void Main(string[] args)
   
  你可以在如下所示的“快速监视”窗口中观察变量：  
   
-1.  在 `a = a + b;` 行上设置断点。  
+1. 在 `a = a + b;` 行上设置断点。  
   
-2.  开始调试。 执行在断点处停止。  
+2. 开始调试。 执行在断点处停止。  
   
-3.  打开“快速监视”  窗口（右键单击，然后选择 “调试”/“快速监视”，或者按 **SHIFT+F9**）。你可以打开窗口，然后向“表达式”  窗口中添加变量，然后单击“重新计算” 。 你应该会在“值”  窗口中看到一个变量，其值为 2。  
+3. 打开“快速监视”  窗口（右键单击，然后选择 “调试”/“快速监视”，或者按 **SHIFT+F9**）。你可以打开窗口，然后向“表达式”  窗口中添加变量，然后单击“重新计算” 。 你应该会在“值”  窗口中看到一个变量，其值为 2。  
   
-4.  “快速监视”  窗口是一个模式对话框窗口，因此只要该窗口处于打开状态，就无法继续进行调试。 你可以通过单击“添加监视”  向“监视” 窗口添加变量。  
+4. “快速监视”  窗口是一个模式对话框窗口，因此只要该窗口处于打开状态，就无法继续进行调试。 你可以通过单击“添加监视”  向“监视” 窗口添加变量。  
   
-5.  关闭“快速监视”  窗口。 现在你可以继续进行调试，同时观察“监视”  窗口中的值  
+5. 关闭“快速监视”  窗口。 现在你可以继续进行调试，同时观察“监视”  窗口中的值  
   
 ## <a name="observing-variables-with-the-watch-window"></a>使用“监视”窗口观察变量  
  可以通过“监视”  窗口观察多个变量。 例如，如果你有以下代码：  
@@ -117,7 +112,7 @@ static void Main(string[] args)
   
  ![WatchExpressionError](../debugger/media/watchexpressionerror.png "WatchExpressionError")  
   
-##  <a name="bkmk_refreshWatch"></a> 刷新过期的“监视”值  
+## <a name="bkmk_refreshWatch"></a> 刷新过期的“监视”值  
  在特定环境中，当在计算“监视”  窗口中的表达式时，你可能会看到一个刷新图标（一个带有两个箭头的圆圈，或带有两个波浪条纹的圆圈）。  例如，如果你关闭了属性计算（**“工具”/“选项”/“调试”/“启用”属性计算和其他隐式函数调用**），那么你具有以下代码：  
   
 ```csharp  
@@ -148,7 +143,7 @@ static void Main(string[] args)
   
   如果看到的图标是一个带有像线程一样的波浪条纹的圆圈，则由于一个潜在的跨线程的依赖项而未计算表达式。 换言之，计算代码需要暂时运行应用程序中的其他线程。 处于中断模式时，应用程序中的所有线程通常停止。 允许其他线程暂时运行可能会对程序状态产生意外影响，并会导致调试器忽略断点和在这些线程上引发的异常等事件。  
   
-##  <a name="bkmk_sideEffects"></a> Side Effects and Expressions  
+## <a name="bkmk_sideEffects"></a> Side Effects and Expressions  
  计算某些表达式可以更改变量的值，或会影响程序的状态。 例如，计算下列表达式会更改 `var1`的值：  
   
 ```  
@@ -167,7 +162,7 @@ var1 = var2
  存在你想要观察特定对象的行为的情况；例如，你可能想要在一个局部变量超出范围时跟踪一个由该变量引用的对象。 在 C# 和 Visual Basic 中，你可以创建引用类型的特定实例的对象 ID，并在“监视”窗口中和断点条件下使用它们。 对象 ID 由公共语言运行时 (CLR) 调试服务生成并与该对象关联。  
   
 > [!NOTE]
->  对象 ID 创建弱引用，且不会阻止对象被垃圾回收。 它们仅对当前调试会话有效。  
+> 对象 ID 创建弱引用，且不会阻止对象被垃圾回收。 它们仅对当前调试会话有效。  
   
  在以下代码中，一个方法使用局部变量创建 `Person` ，但你想要找出另一个不同方法中 `Person`的名称是什么：  
   
@@ -207,20 +202,20 @@ public class Program
   
  你可以在“监视” `Person`**窗口中向该** 对象添加引用，如下所示：  
   
-1.  在对象已被创建后的某个时间在代码中设置断点。  
+1. 在对象已被创建后的某个时间在代码中设置断点。  
   
-2.  启动调试，当执行在断点处停止时，在“局部变量”  窗口中找到该变量，右键单击该变量，然后选择“创建对象 ID” 。  
+2. 启动调试，当执行在断点处停止时，在“局部变量”  窗口中找到该变量，右键单击该变量，然后选择“创建对象 ID” 。  
   
-3.  应该会在“局部变量” **$** 窗口中看到 **$** 窗口。 这就是对象 ID。  
+3. 应该会在“局部变量” **$** 窗口中看到 **$** 窗口。 这就是对象 ID。  
   
-4.  将对象 ID 添加到“监视”窗口中。  
+4. 将对象 ID 添加到“监视”窗口中。  
   
-5.  在想要观察对象行为的地方设置断点。  在以上代码中，这个位置是在 `DoSomething()` 方法中。  
+5. 在想要观察对象行为的地方设置断点。  在以上代码中，这个位置是在 `DoSomething()` 方法中。  
   
-6.  继续调试，当执行在 `DoSomething()` 方法处停止时，“监视”  窗口会显示 `Person` 对象。  
+6. 继续调试，当执行在 `DoSomething()` 方法处停止时，“监视”  窗口会显示 `Person` 对象。  
   
 > [!NOTE]
->  如果想要查看对象属性，如以上示例中的 `Person.Name` ，必须启用属性计算。  
+> 如果想要查看对象属性，如以上示例中的 `Person.Name` ，必须启用属性计算。  
   
 ## <a name="using-registers-in-the-watch-window-c-only"></a>在“监视”窗口（仅 C++）中使用寄存器  
  如果正在调试本机代码，则可以添加寄存器名，以及使用的变量名 **$\<注册名称 >** 或 **@\<注册名称 >**.  有关详细信息，请参阅 [Pseudovariables](../debugger/pseudovariables.md)。  
@@ -238,7 +233,7 @@ public class Program
   
  如果想要针对一个对象仅显示“动态视图”  ，可以使用“动态”  格式说明符：  
   
-- C#: **ObjectName, dynamic**  
+- C#：**ObjectName, dynamic**  
   
 - Visual Basic:: **$dynamic, ObjectName**  
   
@@ -246,8 +241,3 @@ public class Program
   
 ## <a name="see-also"></a>请参阅  
  [调试器窗口](../debugger/debugger-windows.md)
-
-
-
-
-

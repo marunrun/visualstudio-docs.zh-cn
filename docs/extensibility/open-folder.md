@@ -9,11 +9,11 @@ manager: viveis
 ms.workload:
 - vssdk
 ms.openlocfilehash: 2bb74703f639848d643f536edf620e30b1836310
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53986006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806436"
 ---
 # <a name="open-folder-extensibility"></a>打开文件夹可扩展性
 
@@ -24,7 +24,7 @@ ms.locfileid: "53986006"
 * 转到导航
 * 文件搜索中找到
 
-当与此类与.NET 和 c + + 开发工作负荷一起使用，用户还将获得：
+与一起使用时的工作负荷此类与.NET 和C++开发，用户可获得：
 
 * 丰富的 Intellisense
 * 特定于语言的功能
@@ -33,7 +33,7 @@ ms.locfileid: "53986006"
 
 ## <a name="an-api-without-project-systems"></a>API 而无需项目系统
 
-从历史上看，Visual Studio 仅了解一种解决方案和项目使用项目系统中的文件。 项目系统负责加载的项目的功能和用户交互。 它知道哪些文件及其项目包含项目内容，在其他项目的依赖关系的可视表示形式，并且基础修改项目文件。 正是通过这些层次结构和其他组件代表用户执行工作的功能。 并非所有代码库中的项目和解决方案的结构很好的体现。 脚本语言和 c + + 编写适用于 Linux 的开放源代码代码是很好的示例。 打开文件夹时，Visual Studio 允许用户使用其源代码进行交互的新方法。
+从历史上看，Visual Studio 仅了解一种解决方案和项目使用项目系统中的文件。 项目系统负责加载的项目的功能和用户交互。 它知道哪些文件及其项目包含项目内容，在其他项目的依赖关系的可视表示形式，并且基础修改项目文件。 正是通过这些层次结构和其他组件代表用户执行工作的功能。 并非所有代码库中的项目和解决方案的结构很好的体现。 脚本编写语言和开放源代码代码编写的C++适用于 Linux 是很好示例。 打开文件夹时，Visual Studio 允许用户使用其源代码进行交互的新方法。
 
 打开文件夹 Api 是下`Microsoft.VisualStudio.Workspace.*`命名空间和可用的扩展程序来生成和使用数据或周围打开文件夹中的文件的操作。 扩展可以使用这些 Api 提供了许多领域，包括功能：
 

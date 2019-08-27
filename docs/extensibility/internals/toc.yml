@@ -3,13 +3,15 @@
 - name: Visual Studio Shell
   href: visual-studio-shell.md
 - name: 命令、菜单和工具栏
-  href: commands-menus-and-toolbars.md
   items:
+    - name: 命令、菜单和工具栏
+      href: commands-menus-and-toolbars.md
     - name: VSPackage 如何添加用户界面元素
       href: how-vspackages-add-user-interface-elements.md
     - name: Visual Studio 命令表格 (.Vsct) 文件
-      href: visual-studio-command-table-dot-vsct-files.md
       items:
+        - name: Visual Studio 命令表格 (.Vsct) 文件
+          href: visual-studio-command-table-dot-vsct-files.md
         - name: 创作 .Vsct 文件
           href: authoring-dot-vsct-files.md
         - name: 设计 XML 命令表格 (.Vsct) 文件
@@ -21,8 +23,9 @@
     - name: 默认命令、组和工具栏位置
       href: default-command-group-and-toolbar-placement.md
     - name: IDE 定义的命令、菜单和组
-      href: ide-defined-commands-menus-and-groups.md
       items:
+        - name: IDE 定义的命令、菜单和组
+          href: ide-defined-commands-menus-and-groups.md
         - name: Visual Studio 菜单中的 GUID 和 ID
           href: guids-and-ids-of-visual-studio-menus.md
         - name: Visual Studio 工具栏中的 GUID 和 ID
@@ -30,8 +33,9 @@
         - name: Visual Studio 命令中的 GUID 和 ID
           href: guids-and-ids-of-visual-studio-commands.md
     - name: 命令设计
-      href: command-design.md
       items:
+        - name: 命令设计
+          href: command-design.md
         - name: 命令实现
           href: command-implementation.md
         - name: 命令可用性
@@ -45,8 +49,9 @@
     - name: 提供可用命令
       href: making-commands-available.md
     - name: 使用互操作程序集的命令和菜单
-      href: commands-and-menus-that-use-interop-assemblies.md
       items:
+        - name: 使用互操作程序集的命令和菜单
+          href: commands-and-menus-that-use-interop-assemblies.md
         - name: 使用互操作程序集确定命令状态
           href: determining-command-status-by-using-interop-assemblies.md
         - name: 互操作程序集中的命令协定
@@ -58,8 +63,9 @@
     - name: VSPackage 中的命令传送
       href: command-routing-in-vspackages.md
 - name: VSPackages
-  href: vspackages.md
   items:
+    - name: VSPackages
+      href: vspackages.md
     - name: 指定 VS Shell 的 VSPackage 文件位置
       href: specifying-vspackage-file-location-to-the-vs-shell.md
     - name: VSPackage 中的资源
@@ -69,11 +75,13 @@
     - name: 注册 VSPackage
       href: registering-vspackages.md
 - name: 文档窗口
-  href: document-windows.md
   items:
+    - name: 文档窗口
+      href: document-windows.md
     - name: 运行文档表
-      href: running-document-table.md
       items:
+        - name: 运行文档表
+          href: running-document-table.md
         - name: RDT_ReadLock 用法
           href: rdt-readlock-usage.md
         - name: 持久性和正在运行的文档表
@@ -81,22 +89,25 @@
     - name: 文档加载延迟
       href: delayed-document-loading.md
 - name: 旧版语言服务扩展性
-  href: legacy-language-service-extensibility.md
   items:
+    - name: 旧版语言服务扩展性
+      href: legacy-language-service-extensibility.md
     - name: 迁移旧版语言服务
       href: migrating-a-legacy-language-service.md
     - name: 旧版语言服务基础知识
       href: legacy-language-service-essentials.md
     - name: 开发旧版语言服务
-      href: developing-a-legacy-language-service.md
       items:
+        - name: 开发旧版语言服务
+          href: developing-a-legacy-language-service.md
         - name: 旧版语言服务模型
           href: model-of-a-legacy-language-service.md
         - name: 旧版语言服务接口
           href: legacy-language-service-interfaces.md
         - name: 截获旧版语言服务命令
-          href: intercepting-legacy-language-service-commands.md
           items:
+            - name: 截获旧版语言服务命令
+              href: intercepting-legacy-language-service-commands.md
             - name: 语言服务筛选器的重要命令
               href: important-commands-for-language-service-filters.md
         - name: 注册旧版语言服务 2
@@ -104,11 +115,13 @@
         - name: 清单：创建旧版语言服务
           href: checklist-creating-a-legacy-language-service.md
         - name: 旧版语言服务功能 2
-          href: legacy-language-service-features2.md
           items:
+            - name: 旧版语言服务功能 2
+              href: legacy-language-service-features2.md
             - name: 在旧版语言服务中进行语法着色
-              href: syntax-coloring-in-a-legacy-language-service.md
               items:
+                - name: 在旧版语言服务中进行语法着色
+                  href: syntax-coloring-in-a-legacy-language-service.md
                 - name: 实现语法着色
                   href: implementing-syntax-coloring.md
                 - name: 使用内置的可着色项
@@ -122,8 +135,9 @@
             - name: 旧版语言服务中的语句完成
               href: statement-completion-in-a-legacy-language-service.md
             - name: 旧版语言服务中的大纲显示和隐藏文本
-              href: outlining-and-hidden-text-in-a-legacy-language-service.md
               items:
+                - name: 旧版语言服务中的大纲显示和隐藏文本
+                  href: outlining-and-hidden-text-in-a-legacy-language-service.md
                 - name: 支持旧版语言服务中的大纲显示
                   href: how-to-support-outlining-in-a-legacy-language-service.md
                 - name: 提供旧版语言服务中的隐藏文本
@@ -133,8 +147,9 @@
             - name: 用于调试的语言服务支持
               href: language-service-support-for-debugging.md
     - name: 实现旧版语言服务 1
-      href: implementing-a-legacy-language-service1.md
       items:
+        - name: 实现旧版语言服务 1
+          href: implementing-a-legacy-language-service1.md
         - name: 旧版语言服务概述
           href: legacy-language-service-overview.md
         - name: 实现旧版语言服务 2
@@ -145,11 +160,12 @@
           href: legacy-language-service-parser-and-scanner.md
         - name: 演练：创建旧版语言服务
           href: walkthrough-creating-a-legacy-language-service.md
-        - name: 演练：获取已安装代码片段（旧版实现）的列表
+        - name: 演练：获取包含已安装的代码片段的列表（旧版实现）
           href: walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md
         - name: 旧版语言服务功能 1
-          href: legacy-language-service-features1.md
           items:
+            - name: 旧版语言服务功能 1
+              href: legacy-language-service-features1.md
             - name: 旧版语言服务中的大括号匹配
               href: brace-matching-in-a-legacy-language-service.md
             - name: 在旧版语言服务中注释代码
@@ -179,8 +195,9 @@
             - name: 验证旧版语言服务中的断点
               href: validating-breakpoints-in-a-legacy-language-service.md
     - name: 支持符号浏览工具
-      href: supporting-symbol-browsing-tools.md
       items:
+        - name: 支持符号浏览工具
+          href: supporting-symbol-browsing-tools.md
         - name: 使用对象管理器注册库
           href: how-to-register-a-library-with-the-object-manager.md
         - name: 向对象管理器公开库提供的符号列表
@@ -188,23 +205,26 @@
         - name: 识别库中的符号
           href: how-to-identify-symbols-in-a-library.md
 - name: 项目
-  href: projects.md
   items:
+    - name: 项目
+      href: projects.md
     - name: 生成新项目：揭秘，第 1 部分
       href: new-project-generation-under-the-hood-part-one.md
     - name: 生成新项目：揭秘，第 2 部分
       href: new-project-generation-under-the-hood-part-two.md
     - name: 项目类型
-      href: project-types.md
       items:
+        - name: 项目类型
+          href: project-types.md
         - name: 项目类型基础知识
           href: project-type-essentials.md
         - name: 创建项目类型
-          href: creating-project-types.md
           items:
+            - name: 创建项目类型
+              href: creating-project-types.md
             - name: 项目类型设计决策
               href: project-type-design-decisions.md
-            - name: 清单：新建项目类型
+            - name: 清单：创建新的项目类型
               href: checklist-creating-new-project-types.md
             - name: 使用项目工厂创建项目实例
               href: creating-project-instances-by-using-project-factories.md
@@ -217,8 +237,9 @@
             - name: 使用 MSBuild
               href: using-msbuild.md
         - name: 添加项目和项目项模板
-          href: adding-project-and-project-item-templates.md
           items:
+            - name: 添加项目和项目项模板
+              href: adding-project-and-project-item-templates.md
             - name: 项目上下文
               href: project-context.md
             - name: 项目优先级
@@ -238,8 +259,9 @@
             - name: 通常用于扩展项目的对象的 CATID
               href: catids-for-objects-that-are-typically-used-to-extend-projects.md
         - name: 打开和保存项目项
-          href: opening-and-saving-project-items.md
           items:
+            - name: 打开和保存项目项
+              href: opening-and-saving-project-items.md
             - name: 使用“打开文件”命令显示文件
               href: displaying-files-by-using-the-open-file-command.md
             - name: 使用“通过命令打开”显示文件
@@ -251,8 +273,9 @@
             - name: 确定使用哪个编辑器打开项目中的文件
               href: determining-which-editor-opens-a-file-in-a-project.md
         - name: 管理配置选项
-          href: managing-configuration-options.md
           items:
+            - name: 管理配置选项
+              href: managing-configuration-options.md
             - name: 配置选项概述
               href: configuration-options-overview.md
             - name: 属性页
@@ -268,8 +291,9 @@
             - name: 用于输出的项目配置
               href: project-configuration-for-output.md
         - name: 支持源代码管理
-          href: supporting-source-control.md
           items:
+            - name: 支持源代码管理
+              href: supporting-source-control.md
             - name: 源代码管理包的模型
               href: model-for-source-control-packages.md
             - name: 源代码管理设计决策
@@ -281,8 +305,9 @@
             - name: 源代码管理运行时详细信息
               href: source-control-runtime-details.md
         - name: 嵌套项目
-          href: nesting-projects.md
           items:
+            - name: 嵌套项目
+              href: nesting-projects.md
             - name: 实现嵌套项目
               href: how-to-implement-nested-projects.md
             - name: 卸载和重新加载嵌套项目的注意事项
@@ -296,8 +321,9 @@
         - name: 升级项目
           href: upgrading-projects.md
         - name: 项目类型体系结构
-          href: project-types-architecture.md
           items:
+            - name: 项目类型体系结构
+              href: project-types-architecture.md
             - name: 项目模型的元素
               href: elements-of-a-project-model.md
             - name: 项目模型核心组件
@@ -305,8 +331,9 @@
             - name: 何时创建项目类型
               href: when-to-create-project-types.md
             - name: 层次结构和选择
-              href: hierarchies-and-selection.md
               items:
+                - name: 层次结构和选择
+                  href: hierarchies-and-selection.md
                 - name: Visual Studio 中的层次结构
                   href: hierarchies-in-visual-studio.md
                 - name: IDE 中的选择和货币
@@ -316,8 +343,9 @@
                 - name: 为用户提供反馈
                   href: feedback-to-the-user.md
     - name: 项目子类型
-      href: project-subtypes.md
       items:
+        - name: 项目子类型
+          href: project-subtypes.md
         - name: 项目子类型设计
           href: project-subtypes-design.md
         - name: 项目子类型的初始化序列
@@ -333,13 +361,15 @@
         - name: 构成“添加新项”对话框
           href: contributing-to-the-add-new-item-dialog-box.md
     - name: Web 项目
-      href: web-projects.md
       items:
+        - name: Web 项目
+          href: web-projects.md
         - name: Web 项目基础知识
           href: web-project-essentials.md
         - name: 网站支持
-          href: web-site-support.md
           items:
+            - name: 网站支持
+              href: web-site-support.md
             - name: 网站支持模板
               href: web-site-support-templates.md
             - name: 网站支持属性
@@ -347,8 +377,9 @@
     - name: 处理专用部署
       href: handling-specialized-deployment.md
     - name: Contributing to the Automation Model
-      href: contributing-to-the-automation-model.md
       items:
+        - name: Contributing to the Automation Model
+          href: contributing-to-the-automation-model.md
         - name: 自动化模型概述
           href: automation-model-overview.md
         - name: 提供适用于 VSPackage 的自动化
@@ -370,17 +401,17 @@
         - name: Configuration 和 SelectedItem 对象的自动化
           href: automation-for-configuration-and-selecteditem-objects.md
 - name: 解决方案
-  href: solutions.md
   items:
-    - name: 解决方案概述
+    - name: 解决方案
       href: solutions-overview.md
     - name: 解决方案 (.Sln) 文件
       href: solution-dot-sln-file.md
     - name: 解决方案用户选项 (.Suo) 文件
       href: solution-user-options-dot-suo-file.md
 - name: 扩展属性
-  href: extending-properties.md
   items:
+    - name: 扩展属性
+      href: extending-properties.md
     - name: 属性窗口概述
       href: properties-window-overview.md
     - name: 模板策略和属性窗口
@@ -396,42 +427,49 @@
     - name: 支持项目和配置属性
       href: support-for-project-and-configuration-properties.md
 - name: 选项和选项页
-  href: options-and-options-pages.md
   items:
+    - name: 选项和选项页
+      href: options-and-options-pages.md
     - name: 创建选项页
       href: creating-options-pages.md
 - name: 支持用户设置
   href: support-for-user-settings.md
 - name: 服务基础知识
-  href: service-essentials.md
   items:
+    - name: 服务基础知识
+      href: service-essentials.md
     - name: 可用服务的列表
       href: list-of-available-services.md
 - name: Visual Studio 调试器可扩展性
   href: ../debugger/toc.yml
 - name: 源代码管理
-  href: source-control.md
   items:
+    - name: 源代码管理
+      href: source-control.md
     - name: 源代码管理集成基础知识
       href: source-control-integration-essentials.md
     - name: 源代码管理集成概述
-      href: source-control-integration-overview.md
       items:
+        - name: 源代码管理集成概述
+          href: source-control-integration-overview.md
         - name: 源代码管理中的新增功能
           href: what-s-new-in-source-control.md
     - name: 创建源代码管理插件
-      href: creating-a-source-control-plug-in.md
       items:
+        - name: 创建源代码管理插件
+          href: creating-a-source-control-plug-in.md
         - name: 源代码管理插件入门
-          href: getting-started-with-source-control-plug-ins.md
           items:
+            - name: 源代码管理插件入门
+              href: getting-started-with-source-control-plug-ins.md
             - name: 安装源代码管理插件
               href: how-to-install-a-source-control-plug-in.md
             - name: 源代码管理插件 API 版本 1.3 中的新增功能
               href: what-s-new-in-the-source-control-plug-in-api-version-1-3.md
             - name: 源代码管理插件 API 版本 1.2 中的新增功能
-              href: what-s-new-in-the-source-control-plug-in-api-version-1-2.md
               items:
+                - name: 源代码管理插件 API 版本 1.2 中的新增功能
+                  href: what-s-new-in-the-source-control-plug-in-api-version-1-2.md
                 - name: 清除 ~SAK 文件
                   href: elimination-of-tilde-sak-files.md
                 - name: 跨多个项目连接应用设置
@@ -445,13 +483,14 @@
         - name: 源代码管理插件体系结构
           href: source-control-plug-in-architecture.md
         - name: 源代码管理插件的测试指南
-          href: test-guide-for-source-control-plug-ins.md
           items:
-            - name: 测试区域 1：添加到源代码管理或从源代码管理打开
+            - name: 源代码管理插件的测试指南
+              href: test-guide-for-source-control-plug-ins.md
+            - name: 测试区域 1：添加到源代码管理/从源代码管理打开
               href: test-area-1-add-to-open-from-source-control.md
             - name: 测试区域 2：从源代码管理获取
               href: test-area-2-get-from-source-control.md
-            - name: 测试区域 3：签出/撤销签出
+            - name: 测试区域 3：签出/撤消签出
               href: test-area-3-check-out-undo-checkout.md
             - name: 测试区域 4：签入
               href: test-area-4-check-in.md
@@ -464,18 +503,21 @@
             - name: 测试区域 8：插件切换
               href: test-area-8-plug-in-switching.md
     - name: 创建源代码管理 VSPackage
-      href: creating-a-source-control-vspackage.md
       items:
+        - name: 创建源代码管理 VSPackage
+          href: creating-a-source-control-vspackage.md
         - name: 源代码管理 VSPackage 入门
-          href: getting-started-with-source-control-vspackages.md
           items:
+            - name: 源代码管理 VSPackage 入门
+              href: getting-started-with-source-control-vspackages.md
             - name: 确定是否实现源代码管理 VSPackage
               href: determining-whether-to-implement-a-source-control-vspackage.md
         - name: 源代码管理 VSPackage 体系结构
           href: source-control-vspackage-architecture.md
         - name: 源代码管理 VSPackage 功能
-          href: source-control-vspackage-features.md
           items:
+            - name: 源代码管理 VSPackage 功能
+              href: source-control-vspackage-features.md
             - name: 注册和选择（源代码管理 VSPackage）
               href: registration-and-selection-source-control-vspackage.md
             - name: 查询编辑查询保存（源代码管理 VSPackage）
@@ -485,8 +527,9 @@
             - name: 自定义用户界面（源代码管理 VSPackage）
               href: custom-user-interface-source-control-vspackage.md
         - name: 源代码管理 VSPackage 设计元素
-          href: source-control-vspackage-design-elements.md
           items:
+            - name: 源代码管理 VSPackage 设计元素
+              href: source-control-vspackage-design-elements.md
             - name: VSPackage 结构（源代码管理 VSPackage）
               href: vspackage-structure-source-control-vspackage.md
             - name: 相关服务和界面（源代码管理 VSPackage）
@@ -494,8 +537,9 @@
             - name: 提供的服务（源代码管理 VSPackage）
               href: services-provided-source-control-vspackage.md
 - name: 向导
-  href: wizards.md
   items:
+    - name: 向导
+      href: wizards.md
     - name: 模板目录说明 (.Vsdir) 文件
       href: template-directory-description-dot-vsdir-files.md
     - name: 向导 (.Vsz) 文件
@@ -507,8 +551,9 @@
     - name: 自定义参数
       href: custom-parameters.md
 - name: 自定义工具
-  href: custom-tools.md
   items:
+    - name: 自定义工具
+      href: custom-tools.md
     - name: 实现单个文件生成器
       href: implementing-single-file-generators.md
     - name: 注册单个文件生成器
@@ -516,11 +561,13 @@
     - name: 向可视化设计器公开类型
       href: exposing-types-to-visual-designers.md
 - name: VSSDK 实用工具
-  href: vssdk-utilities.md
   items:
+    - name: VSSDK 实用工具
+      href: vssdk-utilities.md
     - name: RegPkg 实用工具
-      href: regpkg-utility.md
       items:
+        - name: RegPkg 实用工具
+          href: regpkg-utility.md
         - name: RegPkg 包注册疑难解答
           href: troubleshooting-regpkg-package-registration.md
     - name: CreatePkgDef 实用工具
@@ -528,15 +575,17 @@
     - name: CreateExpInstance 实用工具
       href: createexpinstance-utility.md
     - name: 颜色主题工具
-      href: color-theming-tools.md
       items:
+        - name: 颜色主题工具
+          href: color-theming-tools.md
         - name: VSIX 颜色编辑器
           href: vsix-color-editor.md
         - name: VSIX 颜色编译器
           href: vsix-color-compiler.md
     - name: 图像服务工具
-      href: image-service-tools.md
       items:
+        - name: 图像服务工具
+          href: image-service-tools.md
         - name: Manifest from Resources
           href: manifest-from-resources.md
         - name: Manifest to Code
@@ -544,8 +593,9 @@
         - name: 图像库查看器
           href: image-library-viewer.md
 - name: 使用 Windows Installer 安装 VSPackage
-  href: installing-vspackages-with-windows-installer.md
   items:
+    - name: 使用 Windows Installer 安装 VSPackage
+      href: installing-vspackages-with-windows-installer.md
     - name: Windows Installer 基本知识
       href: windows-installer-basics.md
     - name: VSPackage 安装方案

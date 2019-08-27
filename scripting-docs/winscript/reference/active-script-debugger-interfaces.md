@@ -2,7 +2,6 @@
 title: 活动脚本调试器接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -15,18 +14,18 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f260df5a23ef6b5ef6ef7253726b1fea7bc00269
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
-ms.translationtype: MT
+ms.openlocfilehash: ed8ff0361396deaaffd46f14ca1fc38869988593
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54345456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63422464"
 ---
 # <a name="active-script-debugger-interfaces"></a>活动脚本调试器接口
 Activdbg.h 和 activdbg100.h 标头文件提供接口、 枚举和结构在本部分中列出。 它们是用于调试脚本。  
   
 > [!NOTE]
->  `IJSDebug*`接口和`IEnumJsStackFrames`接口首次发布 Internet Explorer 11 中，用于调试脚本的本机代码。 这些接口的标头文件是 jscript9diag.h。  
+> `IJSDebug*`接口和`IEnumJsStackFrames`接口首次发布 Internet Explorer 11 中，用于调试脚本的本机代码。 这些接口的标头文件是 jscript9diag.h。  
   
 ## <a name="in-this-section"></a>本节内容  
  以下接口允许使用非特定于语言的、 中性主机调试：  

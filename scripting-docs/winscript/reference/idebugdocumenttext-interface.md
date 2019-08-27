@@ -2,7 +2,6 @@
 title: IDebugDocumentText 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,12 +13,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 763678b08c22fe34ec6ffebbe670fb8b50af6576
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: 8878e1ce6e9ad05fc94b134a2e71847b67d578d2
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54344390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63008610"
 ---
 # <a name="idebugdocumenttext-interface"></a>IDebugDocumentText 接口
 提供纯文本版本的调试文档的访问权限。 此接口使用以下约定：  

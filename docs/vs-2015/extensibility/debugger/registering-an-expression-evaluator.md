@@ -1,33 +1,28 @@
 ---
 title: 注册表达式计算器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], expression evaluation
 - expression evaluators, registering
 ms.assetid: 236be234-e05f-4ad8-9200-24ce51768ecf
 caps.latest.revision: 14
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 29aaef797ad18fd63e4f587901dbf3b29dbb73b0
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 3595daa51fddf5c9c027d5643382918d85f83cc1
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51808325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63435679"
 ---
 # <a name="registering-an-expression-evaluator"></a>注册表达式计算器
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 > [!IMPORTANT]
->  在 Visual Studio 2015 中，这种方式实现表达式计算器已弃用。 有关实现 CLR 表达式计算器的信息，请参阅[CLR 表达式计算器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)并[托管表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。  
+> 在 Visual Studio 2015 中，这种方式实现表达式计算器已弃用。 有关实现 CLR 表达式计算器的信息，请参阅[CLR 表达式计算器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)并[托管表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。  
   
  表达式计算器 (EE) 必须将自身注册为使用 Windows COM 环境和 Visual Studio 的类工厂。 EE 作为 DLL 实现，以便它可以注入到调试引擎 (DE) 地址空间或 Visual Studio 的地址空间，具体取决于实体实例化 EE。  
   
@@ -109,14 +104,14 @@ namespace EEMC
  EE DLL 实现`DllRegisterServer`函数以将自身注册 COM 环境以及 Visual Studio。  
   
 > [!NOTE]
->  可在文件 dllentry.cpp，它位于下 EnVSDK\MyCPkgs\MyCEE VSIP 安装 MyCEE 注册表的代码示例。  
+> 可在文件 dllentry.cpp，它位于下 EnVSDK\MyCPkgs\MyCEE VSIP 安装 MyCEE 注册表的代码示例。  
   
 ### <a name="dll-server-process"></a>DLL 服务器进程  
  当注册 EE，DLL 服务器：  
   
-1.  注册类工厂`CLSID`根据正常 COM 约定。  
+1. 注册类工厂`CLSID`根据正常 COM 约定。  
   
-2.  调用帮助器函数`SetEEMetric`若要通过 Visual Studio 注册以下表中所示的 EE 度量值。 该函数`SetEEMetric`和下面指定的指标是 dbgmetric.lib 库的一部分。 请参阅[以便进行调试的 SDK 帮助程序](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)有关详细信息。  
+2. 调用帮助器函数`SetEEMetric`若要通过 Visual Studio 注册以下表中所示的 EE 度量值。 该函数`SetEEMetric`和下面指定的指标是 dbgmetric.lib 库的一部分。 请参阅[以便进行调试的 SDK 帮助程序](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)有关详细信息。  
   
     |指标|描述|  
     |------------|-----------------|  
@@ -126,12 +121,12 @@ namespace EEMC
     |`metricEngine`|`GUID`秒的处理此 EE 的调试引擎 (DE)|  
   
     > [!NOTE]
-    >  `metricLanguage``GUID`标识的名称，但它的语言是`guidLang`参数`SetEEMetric`选择语言。 当编译器生成调试信息文件时，它应编写相应`guidLang`以便 DE 知道要使用哪个 EE。 DE 通常会符号提供程序要求此语言`GUID`，它存储在调试信息文件。  
+    > `metricLanguage``GUID`标识的名称，但它的语言是`guidLang`参数`SetEEMetric`选择语言。 当编译器生成调试信息文件时，它应编写相应`guidLang`以便 DE 知道要使用哪个 EE。 DE 通常会符号提供程序要求此语言`GUID`，它存储在调试信息文件。  
   
-3.  注册 Visual Studio，通过创建密钥下 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*X.Y*，其中*X.Y*是 Visual Studio 将注册到的版本。  
+3. 注册 Visual Studio，通过创建密钥下 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*X.Y*，其中*X.Y*是 Visual Studio 将注册到的版本。  
   
 ### <a name="example"></a>示例  
- 此函数显示非托管的代码 （c + +） EE 如何注册和注销本身与 Visual Studio。  
+ 此函数演示如何将非托管代码 (C++) EE 注册并使用 Visual Studio 中取消注册自身。  
   
 ```cpp#  
 /*---------------------------------------------------------  
@@ -220,4 +215,3 @@ static HRESULT RegisterMetric( bool registerIt )
 ## <a name="see-also"></a>请参阅  
  [编写 CLR 表达式计算器](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)   
  [用于调试的 SDK 帮助程序](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)
-

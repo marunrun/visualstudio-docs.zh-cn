@@ -6,17 +6,17 @@ helpviewer_keywords:
 - VSPackages, structure
 - source control packages, VSPackage overview
 ms.assetid: 92722be7-b397-48c3-a7a7-0b931a341961
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 83e8207ffb52fd41c82eac896611f7454bd7379d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d609efe52955dba53b8c8890a6fcb44bb7f3f352
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53874675"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66332742"
 ---
 # <a name="vspackage-structure-source-control-vspackage"></a>VSPackage 结构（源代码管理 VSPackage）
 
@@ -28,23 +28,23 @@ VSPackage 声明其菜单项，并建立通过.vsct 文件的默认项状态。 
 
 源代码管理 VSPackage 深入地集成到 Visual Studio。 VSPackage 语义包括：
 
--   由于正在 VSPackage 实现的接口 (`IVsPackage`接口)
+- 由于正在 VSPackage 实现的接口 (`IVsPackage`接口)
 
--   UI 命令实现 (.vsct 文件和实现<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>接口)
+- UI 命令实现 (.vsct 文件和实现<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>接口)
 
--   使用 Visual Studio VSPackage 的注册。
+- 使用 Visual Studio VSPackage 的注册。
 
 源代码管理 VSPackage 必须与这些其他 Visual Studio 实体通信：
 
--   项目
+- 项目
 
--   编辑器
+- 编辑器
 
--   解决方案
+- 解决方案
 
--   Windows
+- Windows
 
--   运行文档表
+- 运行文档表
 
 ### <a name="visual-studio-environment-services-that-may-be-consumed"></a>可能使用的 visual Studio 环境服务
 

@@ -1,23 +1,20 @@
 ---
 title: FinalState 活动设计器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 ms.assetid: aa186893-8775-40dd-981f-8593ead831d0
 caps.latest.revision: 5
 author: steved0x
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: 48c44dc585ce1c9cf4e7b29970b4014f128b873d
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 0a969b81e3291191cf42df4e1775c4212f54e4cf
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49209165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62951991"
 ---
 # <a name="finalstate-activity-designer"></a>FinalState 活动设计器
 <xref:System.Activities.Core.Presentation.FinalState> 设计器用于创建终止状态机实例的 <xref:System.Activities.Statements.State>。  
@@ -34,6 +31,6 @@ ms.locfileid: "49209165"
 |<xref:System.Activities.Statements.State.Entry%2A>|False|指定在转换到此状态时发生的操作。 此值可以设置通过拖动将活动从**工具箱**并将其放置到<xref:System.Activities.Statements.State.Entry%2A>状态的部分。|  
   
 ## <a name="see-also"></a>请参阅  
- [状态机](../workflow-designer/statemachine-activity-designer.md)   
+ [StateMachine](../workflow-designer/statemachine-activity-designer.md)   
  [状态](../workflow-designer/state-activity-designer.md)   
  [Transition](../workflow-designer/transition-activity-designer.md)

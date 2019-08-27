@@ -7,19 +7,18 @@ helpviewer_keywords:
 - walkthroughs [text templates], directive processor
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 44eb71a4bbb209453ee7deef6adf3b10c561e8af
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 661d8670f857240fdd4ed7714ca389c851d83601
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53951821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62935355"
 ---
 # <a name="walkthrough-create-a-custom-directive-processor"></a>演练：创建自定义指令处理器
 
@@ -43,7 +42,7 @@ ms.locfileid: "53951821"
 
 `<#@ CoolDirective Processor="CustomDirectiveProcessor" FileName="<Your Path>DocFile.xml" #>`
 
-自定义指令处理器将变量和属性添加到生成转换类。 你编写的指令使用 <xref:System.CodeDom> 类创建引擎添加到生成转换类的代码。 <xref:System.CodeDom>类中 Visual C# 或 Visual Basic 中，具体取决于中指定的语言创建代码`language`参数的`template`指令。 指令处理器的语言和访问指令处理器的文本模板的语言不必一致。
+自定义指令处理器将变量和属性添加到生成转换类。 您编写的指令使用 <xref:System.CodeDom> 类创建引擎添加到生成转换类的代码。 <xref:System.CodeDom>类中 Visual C# 或 Visual Basic 中，具体取决于中指定的语言创建代码`language`参数的`template`指令。 指令处理器的语言和访问指令处理器的文本模板的语言不必一致。
 
 指令创建的代码如下所示：
 
@@ -332,7 +331,7 @@ End Property
             {
                 XmlDocument d = new XmlDocument();
 
-                using (XmlTextReader reader = new XmlTextReader(fileName))
+                using (XmlReader reader = XmlReader.Create(fileName))
                 {
                     try
                     {
@@ -582,7 +581,7 @@ End Property
 
                 Dim d As XmlDocument = New XmlDocument()
 
-                Using reader As XmlTextReader = New XmlTextReader(fileName)
+                Using reader As XmlReader = XmlReader.Create(fileName)
 
                     Try
                         d.Load(reader)
@@ -655,8 +654,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
 
      注册表项应具有以下值：
 
-
-   | name | 类型 | 数据 |
+   | 名称 | 类型 | 数据 |
    |-|-|-|
    | (默认) | REG_SZ | (未设置值) |
    | 类 | REG_SZ | CustomDP.CustomDirectiveProcessor |
@@ -664,13 +662,11 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
 
      如果已将程序集放置在 GAC 中，则值应如下所示：
 
-
-   | name | 类型 | 数据 |
+   | 名称 | 类型 | 数据 |
    |-|-|-|
    | (默认) | REG_SZ | (未设置值) |
    | 类 | REG_SZ | CustomDP.CustomDirectiveProcessor |
    | Assembly | REG_SZ | CustomDP.dll |
-
 
 6. 重新启动 Visual Studio。
 

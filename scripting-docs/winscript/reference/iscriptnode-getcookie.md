@@ -2,7 +2,6 @@
 title: IScriptNode::GetCookie |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e133afbac4b75a5b9c24ee33148edd1114b33452
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: b05d184af3ecd6302fc05893600fd7026eeca3ad
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54094232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787047"
 ---
 # <a name="iscriptnodegetcookie"></a>IScriptNode::GetCookie
 返回用于将 scriptlet 与该主机对象相关联的应用程序定义的值。  

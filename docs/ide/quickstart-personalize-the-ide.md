@@ -1,29 +1,38 @@
 ---
 title: 设置颜色主题和字体
 ms.date: 11/20/2017
-ms.prod: visual-studio-dev15
 ms.topic: quickstart
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b0f81c04c06d8e016ef62a41d2e3083a1daafb3a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: eccbc834f4038ec18c2f84244488b81a59ecbfbf
+ms.sourcegitcommit: 614d5b99576ea27a41957cd94062dc95cbd29c1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53919714"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65531560"
 ---
-# <a name="quickstart-personalize-the-visual-studio-ide-and-editor"></a>快速入门：个性化设置 Visual Studio IDE 和编辑器
+# <a name="personalize-the-visual-studio-ide-and-editor"></a>个性化设置 Visual Studio IDE 和编辑器
 
-在这个 5-10 分钟的快速入门中，我们将选择深色主题来自定义 Visual Studio 颜色主题。 我们还将在文本编辑器中为两种不同类型的文本自定义颜色。
+在这个 5-10 分钟的教程中，我们将选择深色主题来自定义 Visual Studio 颜色主题。 我们还将在文本编辑器中为两种不同类型的文本自定义颜色。
 
-如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)页免费安装。
+::: moniker range="vs-2017"
+
+如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)页免费安装。
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)页免费安装。
+
+::: moniker-end
 
 ## <a name="set-the-color-theme"></a>设置颜色主题
 
-Visual Studio 2017 用户界面的默认颜色主题命名为“蓝色”。 让我们将其更改为“深色”。
+Visual Studio 用户界面的默认颜色主题命名为“蓝色”。 让我们将其更改为“深色”。
 
 1. 在菜单栏上，这是“文件”和“编辑”等菜单的行，选择“工具” > “选项”。
 
@@ -31,7 +40,17 @@ Visual Studio 2017 用户界面的默认颜色主题命名为“蓝色”。 让
 
    将整个 Visual Studio 开发环境 (IDE) 的颜色主题更改为“深色”。
 
-   ![使用深色主题的 VS](media/quickstart-personalize-dark-theme.png)
+   ::: moniker range="vs-2017"
+
+   ![深色主题中的 Visual Studio 2017](media/quickstart-personalize-dark-theme.png)
+
+   ::: moniker-end
+
+   ::: moniker range="vs-2019"
+
+   ![深色主题中的 Visual Studio 2019](media/vs-2019/dark-theme.png)
+
+   ::: moniker-end
 
 > [!TIP]
 > 可以通过从 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor) 中安装“Visual Studio 颜色主题编辑器”来安装其他预定义的主题。 安装此工具后，其他颜色主题将显示在“颜色主题”下拉列表中。
@@ -98,5 +117,5 @@ Visual Studio 2017 用户界面的默认颜色主题命名为“蓝色”。 让
 
 ## <a name="see-also"></a>请参阅
 
-- [自定义编辑器](../ide/customizing-the-editor.md)
+- [自定义编辑器](../ide/how-to-change-text-case-in-the-editor.md)
 - [Visual Studio IDE 概述](../get-started/visual-studio-ide.md)

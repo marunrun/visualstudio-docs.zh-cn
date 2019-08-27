@@ -1,27 +1,24 @@
 ---
 title: 添加新的连接 |Microsoft Docs
-ms.custom: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-data-tools
 ms.date: 11/15/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8a93c287-2834-4a83-a590-bdc3fe8d293f
 caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 03407962b4ea8160d492971367f121835fa39aae
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: ff1ec43d6faec329db6138598d84e47db009113e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49218499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68192528"
 ---
 # <a name="add-new-connections"></a>添加新连接
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 可以测试连接到数据库或服务，并浏览数据库内容和架构，通过使用**服务器资源管理器**，**云资源管理器**，或**SQL Server 对象资源管理器**. 某种程度上重叠的这些 windows 功能。 基本区别如下：  
   
  服务器资源管理器  
@@ -56,4 +53,3 @@ ms.locfileid: "49218499"
   
 ## <a name="see-also"></a>请参阅  
  [适用于 NET 的 Visual Studio Data Tools](../data-tools/visual-studio-data-tools-for-dotnet.md)
-

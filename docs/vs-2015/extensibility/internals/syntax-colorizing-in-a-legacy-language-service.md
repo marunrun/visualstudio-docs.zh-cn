@@ -1,14 +1,9 @@
 ---
 title: 旧版语言服务中的语法着色 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - language services [managed package framework], syntax highlighting
 - colorization, supporting in language services [managed package framework]
@@ -17,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 1ca1736a-f554-42e4-a9c7-fe8c3c1717df
 caps.latest.revision: 29
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 20655534439fa187488087e1ae819a7ffca4c27a
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 64e57ebc80320ccc133261781eb8ee6611c8e2a0
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51730282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63441230"
 ---
 # <a name="syntax-colorizing-in-a-legacy-language-service"></a>旧版语言服务中的语法着色
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -33,7 +28,7 @@ ms.locfileid: "51730282"
  旧版语言服务实现 VSPackage 的一部分，但实现语言服务功能的较新方法是使用 MEF 扩展。 若要获取详细信息，请参阅[扩展编辑器和语言服务](../../extensibility/extending-the-editor-and-language-services.md)。  
   
 > [!NOTE]
->  我们建议在开始尽可能快地使用新编辑器 API。 这将提高您的语言服务的性能，让您充分利用新的编辑器功能。  
+> 我们建议在开始尽可能快地使用新编辑器 API。 这将提高您的语言服务的性能，让您充分利用新的编辑器功能。  
   
 ## <a name="implementation"></a>实现  
  若要支持着色，托管的包框架 (MPF) 包括<xref:Microsoft.VisualStudio.Package.Colorizer>类，该类实现<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>接口。 与此类交互<xref:Microsoft.VisualStudio.Package.IScanner>以确定令牌和颜色。 扫描程序的详细信息，请参阅[旧版语言服务分析器和扫描程序](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)。 <xref:Microsoft.VisualStudio.Package.Colorizer>类，然后将标记每个字符的具有颜色信息的令牌和该信息返回到编辑器中显示的源文件。  
@@ -44,10 +39,10 @@ ms.locfileid: "51730282"
  若要提供自己的自定义可着色项，必须重写<xref:Microsoft.VisualStudio.Package.LanguageService.GetItemCount%2A>并<xref:Microsoft.VisualStudio.Package.LanguageService.GetColorableItem%2A>方法<xref:Microsoft.VisualStudio.Package.LanguageService>类。 第一种方法返回的语言服务支持的自定义可着色项数和第二个按索引获取自定义可着色项。 创建自定义可着色项的默认列表。 在语言服务的构造函数中，您需要做是提供一个名称与每个可着色项。 Visual Studio 会自动处理其中用户选择一组不同的可着色项的情况。 此名称将会出现在**字体和颜色**上的属性页**选项**对话框 (可从 Visual Studio**工具**菜单) 和此名称确定将哪个用户已重写的颜色。 在注册表中缓存中存储和访问的颜色名称的用户的选择。 **字体和颜色**属性页列出了所有的颜色名称按字母顺序，因此可以按你的语言名称; 每个颜色名称之前分组自定义颜色，如"**TestLanguage 注释**"和"**TestLanguage-关键字**"。 可以按类型，你可着色项进行分组或者"**注释 (TestLanguage)**"和"**关键字 (TestLanguage)**"。 按语言名称分组是首选方法。  
   
 > [!CAUTION]
->  强烈建议在要避免与现有的可着色项名称发生冲突的可着色项名称中包括的语言名称。  
+> 强烈建议在要避免与现有的可着色项名称发生冲突的可着色项名称中包括的语言名称。  
   
 > [!NOTE]
->  如果在开发过程中更改一个您的颜色的名称，必须重置 Visual Studio 创建第一次访问了您的颜色的缓存。 可以执行此操作通过运行**重置实验性配置单元**从 Visual Studio SDK 程序菜单命令。  
+> 如果在开发过程中更改一个您的颜色的名称，必须重置 Visual Studio 创建第一次访问了您的颜色的缓存。 可以执行此操作通过运行**重置实验性配置单元**从 Visual Studio SDK 程序菜单命令。  
   
  请注意，永远不会引用可着色项列表中的第一个项。 Visual Studio 始终会将默认文本颜色和该项的属性提供。 解决此问题的最简单方法是提供作为第一项的占位符可着色项。  
   
@@ -155,4 +150,3 @@ namespace TestLanguagePackage
  [旧版语言服务功能](../../extensibility/internals/legacy-language-service-features1.md)   
  [旧版语言服务分析器和扫描程序](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)   
  [注册旧版语言服务](../../extensibility/internals/registering-a-legacy-language-service1.md)
-

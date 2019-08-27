@@ -1,22 +1,21 @@
 ---
 title: 选项，文本编辑器，C#，高级
-ms.date: 10/29/2018
-ms.prod: visual-studio-dev15
+ms.date: 01/16/2019
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Outlining
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Advanced
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4fdb52b4fbdeac437a3833e0030acedfa382f81c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 010f2a2e6dc163f24a29e8e352b21d8ef8d72b48
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53887901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62811819"
 ---
 # <a name="options-text-editor-c-advanced"></a>选项，文本编辑器，C#，高级
 
@@ -47,7 +46,7 @@ ms.locfileid: "53887901"
    using Newtonsoft.Json;
    using System;
    ```
-   
+
    排序后：
 
    ```csharp
@@ -58,7 +57,7 @@ ms.locfileid: "53887901"
    using FluentValidation;
    using Newtonsoft.Json;
    ```
-   
+
 - 单独的 using 指令组
 
    当你选择右键单击菜单中的“删除和排序 Using”命令后，它会在具有相同根命名空间的指令组之间插入空行，以将 `using` 指令分隔开来。
@@ -73,28 +72,28 @@ ms.locfileid: "53887901"
    using Newtonsoft.Json;
    using System;
    ```
-   
+
    排序后：
-   
+
    ```csharp
    using AutoMapper;
-   
+
    using FluentValidation;
-   
+
    using Newtonsoft.Json;
-   
+
    using System;
    using System.Collections.Generic;
    using System.Linq;
    ```
-   
-- 建议对引用程序集中的类型使用 using 
-- 建议对 NuGet 包中的类型使用 using 
+
+- 建议对引用程序集中的类型使用 using
+- 建议对 NuGet 包中的类型使用 using
 
    选择这些选项时，[快速操作](../quick-actions.md)可用于安装 NuGet 包，并为未引用的类型添加 `using` 指令。
 
    ![用于在 Visual Studio 中安装 NuGet 包的快速操作](media/nuget-lightbulb.png)
-  
+
 ## <a name="highlighting"></a>Highlighting
 
 - 突出显示对光标下符号的引用
@@ -109,13 +108,17 @@ ms.locfileid: "53887901"
 
 - 显示过程行分隔符
 
-   文本编辑器指示过程的可视范围。 在项目的 .vb 源文件中，在下表列出的位置处绘制行：
+   文本编辑器指示过程的可视范围。 在项目的 .cs 源文件中，在下表列出的位置处绘制行：
 
-   |.vb 源文件中的位置|行位置示例|
+   |.cs 源文件中的位置|行位置示例|
    |---------------------------------|------------------------------|
    |在块声明构造结束之后|-   在类、结构、模块、接口或枚举的末尾<br />-   在属性、函数或子类之后<br />-   不在属性中的 get 和 set 子句之间|
    |在一组单行构造之后|-   在类文件中的导入语句之后，在类型定义之前<br />-   在类中声明的变量之后，在所有过程之前|
    |在单行声明（非块级声明）之后|-   在导入语句、继承语句、变量声明、事件声明、委托声明和 DLL 声明语句之后|
+
+## <a name="block-structure-guides"></a>块结构指南
+
+如果选中这些复选框，可以在代码中的大括号 ({}) 之间显示虚竖线。 然后，就可以轻松查看声明级构造和代码级构造的各个代码块了。
 
 ## <a name="editor-help"></a>编辑器帮助
 

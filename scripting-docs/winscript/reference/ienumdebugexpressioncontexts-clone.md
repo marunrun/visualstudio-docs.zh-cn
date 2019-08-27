@@ -1,8 +1,7 @@
 ---
-title: IEnumDebugExpressionContexts::Clone |Microsoft Docs
+title: IEnumDebugExpressionContexts::Clone | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: aa3c8c230b22733cf9b36b0674297460fd30c7d0
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: c0579ec43d46698f4ba1ba40a9bc7610263cc996
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54088330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62963528"
 ---
 # <a name="ienumdebugexpressioncontextsclone"></a>IEnumDebugExpressionContexts::Clone
 创建一个包含与当前枚举数相同的状态的枚举器。  

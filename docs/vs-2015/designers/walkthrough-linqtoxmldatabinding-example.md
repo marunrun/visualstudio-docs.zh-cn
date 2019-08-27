@@ -1,25 +1,20 @@
 ---
-title: 演练：LinqToXmlDataBinding 示例 | Microsoft Docs
-ms.custom: ''
+title: 演练：LinqToXmlDataBinding 示例 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: aedf42e8-896c-48fa-88df-7f7c9536aa69
 caps.latest.revision: 4
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 3c69c69cfed53b0080614984853b3128908c2e89
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 379c95e4de7831c833d8d82d48643a9da10be323
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49893645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68187477"
 ---
 # <a name="walkthrough-linqtoxmldatabinding-example"></a>演练：LinqToXmlDataBinding 示例
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,7 +22,7 @@ ms.locfileid: "49893645"
 本演练介绍 LinqToXmlDataBinding 示例，解释它的两个主要源文件 L2DBForm.xaml 和 L2DBForm.xaml.cs 的一些更值得关注的内容。  
   
 ## <a name="prerequisites"></a>系统必备  
- 阅读此演练之前，强烈建议你按照[如何：生成并运行 LinqToXmlDataBinding 示例](../designers/how-to-build-and-run-the-linqtoxmldatabinding-example.md)中的描述生成并运行 LinqToXmlDataBinding 程序。  
+ 在阅读本演练之前，强烈建议按照[如何：生成并运行 LinqToXmlDataBinding 示例](../designers/how-to-build-and-run-the-linqtoxmldatabinding-example.md)。  
   
 ## <a name="remarks"></a>备注  
  LinqToXmlDataBinding 程序是一个 Windows Presentation Foundation (WPF) 应用程序，由 C# 和 XAML 源文件组成。 它包含定义书籍列表的嵌入式 XML 文档，允许用户查看、添加、删除和编辑这些项。 它由以下两个主要源文件组成：  
@@ -38,13 +33,13 @@ ms.locfileid: "49893645"
   
   主窗口分为以下四个垂直用户界面部分：  
   
-- “XML”显示嵌入式书籍列表的原始 XML 源。  
+- “XML”  显示嵌入式书籍列表的原始 XML 源。  
   
-- “Book List”（书籍列表）以标准文本形式显示书籍项，允许用户选择和删除各项。  
+- “Book List”（书籍列表）  以标准文本形式显示书籍项，允许用户选择和删除各项。  
   
-- “Edit Selected Book”（编辑所选书籍）允许用户编辑与当前所选书籍项关联的值。  
+- “Edit Selected Book”（编辑所选书籍）  允许用户编辑与当前所选书籍项关联的值。  
   
-- “Add New Book”（添加新书籍）允许根据用户输入的值创建新书。  
+- “Add New Book”（添加新书籍）  允许根据用户输入的值创建新书。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -55,7 +50,4 @@ ms.locfileid: "49893645"
   
 ## <a name="see-also"></a>请参阅  
  [使用 LINQ to XML 的 WPF 数据绑定示例](../designers/wpf-data-binding-using-linq-to-xml-example.md)   
- [如何：生成和运行 LinqToXmlDataBinding 示例](../designers/how-to-build-and-run-the-linqtoxmldatabinding-example.md)
-
-
-
+ [如何：生成并运行 LinqToXmlDataBinding 示例](../designers/how-to-build-and-run-the-linqtoxmldatabinding-example.md)

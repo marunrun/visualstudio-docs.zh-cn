@@ -8,15 +8,14 @@ manager: routlaw
 ms.date: 11/13/2017
 ms.topic: tutorial
 ms.devlang: python
-ms.service: multiple
 ms.workload:
 - multiple
-ms.openlocfilehash: c64658a6c3cf23d2e27a7d2122d257082bc25cab
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: adb3720f1624f355b99d75bfe446fafab1c5e0ae
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53839542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62427527"
 ---
 # <a name="train-a-tensorflow-model-in-the-cloud"></a>在云中训练 TensorFlow 模型
 

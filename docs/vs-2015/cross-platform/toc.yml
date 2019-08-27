@@ -1,0 +1,78 @@
+- name: 跨平台移动开发
+  items:
+    - name: 跨平台移动开发
+      href: cross-platform-mobile-development-in-visual-studio.md
+    - name: Visual Studio 和 Xamarin
+      items:
+        - name: Visual Studio 和 Xamarin
+          href: visual-studio-and-xamarin.md
+        - name: 设置和安装
+          href: setup-and-install.md
+        - name: 了解关于使用 Xamarin 进行移动开发的信息
+          href: learn-about-mobile-development-with-xamarin.md
+        - name: 验证 Xamarin 环境
+          href: verify-your-xamarin-environment.md
+        - name: 学习在 Visual Studio 中使用 Xamarin.Forms 生成应用的基础知识
+          href: learn-app-building-basics-with-xamarin-forms-in-visual-studio.md
+        - name: 在 Visual Studio 中使用 Xamarin 生成具有本机 UI 的应用
+          href: build-apps-with-native-ui-using-xamarin-in-visual-studio.md
+        - name: 适用于 Xamarin 应用的应用程序生命周期管理 (ALM)
+          href: application-lifecycle-management-alm-with-xamarin-apps.md
+        - name: Mac 用户的设置、安装和验证
+          href: setup-install-and-verifications-for-mac-users.md
+    - name: Visual Studio Tools for Apache Cordova
+      href: visual-studio-tools-for-apache-cordova.md
+    - name: Visual Studio Tools for Unity
+      items:
+        - name: Visual Studio Tools for Unity
+          href: visual-studio-tools-for-unity.md
+        - name: 概述
+          href: overview-of-visual-studio-tools-for-unity.md
+        - name: 入门
+          href: getting-started-with-visual-studio-tools-for-unity.md
+        - name: 使用 Visual Studio Tools for Unity
+          href: using-visual-studio-tools-for-unity.md
+        - name: Visual Studio Tools for Unity 编程
+          items:
+            - name: Visual Studio Tools for Unity 编程
+              href: programming-visual-studio-tools-for-unity.md
+            - name: 示例 - 项目文件生成
+              href: customize-project-files-created-by-vstu.md
+            - name: 示例 - 日志回调
+              href: share-the-unity-log-callback-with-vstu.md
+        - name: 疑难解答和已知问题
+          href: troubleshooting-and-known-issues-visual-studio-tools-for-unity.md
+        - name: 更改日志
+          href: change-log-visual-studio-tools-for-unity.md
+        - name: 适用于 Unity 应用的 Visual Studio 应用程序生命周期管理 (ALM)
+          href: application-lifecycle-management-alm-with-unity-apps.md
+    - name: 用于跨平台移动开发的 Visual C++
+      items:
+        - name: 用于跨平台移动开发的 Visual C++
+          href: visual-cpp-for-cross-platform-mobile-development.md
+        - name: 安装用于跨平台移动开发的 Visual C++
+          items:
+            - name: 安装用于跨平台移动开发的 Visual C++
+              href: install-visual-cpp-for-cross-platform-mobile-development.md
+            - name: Install and Configure Tools to Build using iOS
+              href: install-and-configure-tools-to-build-using-ios.md
+        - name: 创建 Android 本机活动应用
+          href: create-an-android-native-activity-app.md
+        - name: 在 Android 和 iOS 上生成 OpenGL ES 应用程序
+          href: build-an-opengl-es-application-on-android-and-ios.md
+        - name: 导入 XCode 项目
+          href: import-an-xcode-project.md
+        - name: 在 XCode 和 Visual Studio 之间同步更改
+          href: sync-changes-between-xcode-and-visual-studio.md
+        - name: 跨平台移动开发示例
+          href: cross-platform-mobile-development-examples.md
+    - name: 开发通用 Windows 平台 (UWP) 的应用
+      href: develop-apps-for-the-universal-windows-platform-uwp.md
+    - name: 适用于 Android 的 Visual Studio 仿真程序
+      items:
+        - name: 适用于 Android 的 Visual Studio 仿真程序
+          href: visual-studio-emulator-for-android.md
+        - name: System requirements for the Visual Studio Emulator for Android
+          href: system-requirements-for-the-visual-studio-emulator-for-android.md
+        - name: Troubleshooting the Visual Studio Emulator for Android
+          href: troubleshooting-the-visual-studio-emulator-for-android.md

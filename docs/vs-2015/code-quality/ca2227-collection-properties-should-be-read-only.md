@@ -1,14 +1,9 @@
 ---
-title: CA2227： 集合属性应为只读 |Microsoft Docs
-ms.custom: ''
+title: CA2227:集合属性应为只读 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA2227
 - CollectionPropertiesShouldBeReadOnly
@@ -20,14 +15,14 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 1db0ab6bae6a374726e953e505247896864c7f0d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 3182a254ed5e22c560523911f87dc852708a9eb1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49830439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68201582"
 ---
-# <a name="ca2227-collection-properties-should-be-read-only"></a>CA2227：集合属性应为只读
+# <a name="ca2227-collection-properties-should-be-read-only"></a>CA2227:集合属性应为只读
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -59,7 +54,4 @@ ms.locfileid: "49830439"
  [!code-vb[FxCop.Usage.PropertiesReturningCollections#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.PropertiesReturningCollections/vb/FxCop.Usage.PropertiesReturningCollections.vb#1)]
 
 ## <a name="related-rules"></a>相关的规则
- [CA1819：属性不应返回数组](../code-quality/ca1819-properties-should-not-return-arrays.md)
-
-
-
+ [CA1819:属性不应返回数组](../code-quality/ca1819-properties-should-not-return-arrays.md)

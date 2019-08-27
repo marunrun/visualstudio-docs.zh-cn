@@ -3,25 +3,25 @@ title: 语言服务器协议概述 |Microsoft Docs
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.assetid: 6a7d93c2-31ea-4bae-8b29-6988a567ddf2
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1b2329b54ba90a37e0d6d5e782e66c4af923a646
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8f6f114d7165b85051092234ea33dfc7f73e1487
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53828220"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66309623"
 ---
 # <a name="language-server-protocol"></a>语言服务器协议
 
 ## <a name="what-is-the-language-server-protocol"></a>什么是语言服务器协议？
 
-支持丰富的编辑功能等源的代码自动完成或**转到定义**编辑器或 IDE 中的编程语言是传统上非常困难并花费较长时间。 通常需要编写编程语言的编辑器或 IDE 中的域模型 （扫描器、 分析器、 类型检查器、 生成器和的详细信息）。 例如，提供了支持 C/c + + 在 Eclipse IDE 的 Eclipse CDT 插件是用 Java 编写由于 Eclipse IDE 本身用 Java 编写。 按照此方法，它将表示为 Visual Studio 在 C# 中实现针对 Visual Studio Code，TypeScript 中的 C/c + + 域模型和单独的域模型。
+支持丰富的编辑功能等源的代码自动完成或**转到定义**编辑器或 IDE 中的编程语言是传统上非常困难并花费较长时间。 通常需要编写编程语言的编辑器或 IDE 中的域模型 （扫描器、 分析器、 类型检查器、 生成器和的详细信息）。 例如，Eclipse CDT 插件，它提供对 C /C++在 Eclipse IDE 中用 Java 编写由于 Eclipse IDE 本身用 Java 编写。 按照此方法，则意味着实现 C /C++用于 Visual Studio Code，TypeScript 中的域模型和中的单独的域模型C#用于 Visual Studio。
 
-创建特定于语言的域模型也是容易得多，如果一个开发工具，可以重复使用现有的特定于语言的库。 但是，这些库通常实现的编程语言本身 （例如，好 C/c + + 域模型在 C/c + + 中实现）。 集成到编辑器以 TypeScript 编写 C/c + + 库是从技术上讲可能但艰巨的任务。
+创建特定于语言的域模型也是容易得多，如果一个开发工具，可以重复使用现有的特定于语言的库。 但是，这些库通常实现本身的编程语言 (例如，良好的 C /C++在 C 中实现域模型 /C++)。 集成了 C /C++到编辑器中编写的 TypeScript 库从技术上讲是可行的但艰巨的任务。
 
 ### <a name="language-servers"></a>语言服务器
 
@@ -49,17 +49,17 @@ LSP 不断发展变化，并且立即在 3.0 版。 它启动时的语言服务�
 
 ![lsp 数据流关系图](media/lsp-flow-diagram.png)
 
-* **用户在该工具中打开文件 （也称为文档）**:该工具将通知语言服务器文档打开时 (textDocument/didOpen)。 从现在起，文档的内容方面的真相不再位于文件系统上，但保留在内存中的工具。
+* **用户在该工具中打开文件 （也称为文档）** :该工具将通知语言服务器文档打开时 (textDocument/didOpen)。 从现在起，文档的内容方面的真相不再位于文件系统上，但保留在内存中的工具。
 
 * **用户所做的编辑**:该工具将通知有关文档更改 (textDocument/didChange) 的服务器，该程序的语义信息更新语言服务器。 发生这种情况，如语言服务器分析该信息并通知包含检测到的错误和警告 (textDocument/publishDiagnostics) 的工具。
 
 * **用户执行"转到定义"在编辑器中的符号**:该工具会发送包含两个参数的 textDocument/定义请求：（1） 的文档 URI，请转到定义请求初始化到服务器之前的位置 （2） 的文本位置。 服务器使用的文档 URI 和文档内部的符号的定义的位置做出响应。
 
-* **在用户关闭文档 （文件）**:从工具，通知文档现在不再在内存中的当前内容是现在最新的文件系统上的语言服务器发送 textDocument/didClose 通知。
+* **在用户关闭文档 （文件）** :从工具，通知文档现在不再在内存中的当前内容是现在最新的文件系统上的语言服务器发送 textDocument/didClose 通知。
 
 此示例说明了与编辑器功能，如"转到定义"，"查找所有引用"级别语言服务器协议的通信方式。 协议使用的数据类型是编辑器或 IDE 数据类型，如当前打开的文本文档和光标的位置。 在编程语言域模型通常提供抽象语法树和编译器符号 （例如，解析类型、 命名空间，...） 的级别不是数据类型。这大大简化了该协议。
 
-现在让我们看一下更多详细信息中的 textDocument/定义请求。 下面是客户端工具，并在 c + + 文档中的"转到定义"请求的语言服务器之间的负载。
+现在让我们看一下更多详细信息中的 textDocument/定义请求。 下面是客户端工具和语言中的"转到定义"请求服务器之间的负载C++文档。
 
 这是请求：
 

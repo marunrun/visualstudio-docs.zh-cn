@@ -1,14 +1,9 @@
 ---
-title: CA2243： 因此特性字符串文本应正确分析 |Microsoft Docs
-ms.custom: ''
+title: CA2243:应正确分析特性字符串文本 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA2243
 - AttributeStringLiteralsShouldParseCorrectly
@@ -20,14 +15,14 @@ caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 3155006ecfc0e65365f23a6e09f6ec23e9d0e12d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: f23db8a9674de621090be70067a555ef4fca2b99
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49914731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68201503"
 ---
-# <a name="ca2243-attribute-string-literals-should-parse-correctly"></a>CA2243：应正确分析特性字符串文本
+# <a name="ca2243-attribute-string-literals-should-parse-correctly"></a>CA2243:特性字符串文本应正确分析
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -60,14 +55,11 @@ ms.locfileid: "49914731"
 
  通过以下方法触发此规则：
 
--   包含版本，并且不能解析为 System.Version 的参数。
+- 包含版本，并且不能解析为 System.Version 的参数。
 
--   包含 guid 并且不能解析为 System.Guid 的参数。
+- 包含 guid 并且不能解析为 System.Guid 的参数。
 
--   参数包含 uri、 urn 或 url 并不能解析为 System.Uri。
+- 参数包含 uri、 urn 或 url 并不能解析为 System.Uri。
 
 ## <a name="see-also"></a>请参阅
- [CA1054：URI 参数不应为字符串](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)
-
-
-
+ [CA1054:URI 参数不应为字符串](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)

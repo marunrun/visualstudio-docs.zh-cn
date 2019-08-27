@@ -1,25 +1,20 @@
 ---
-title: 如何：创建基本纹理 | Microsoft Docs
-ms.custom: ''
+title: 如何：创建基本纹理 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: 0222e8bf-d29f-421b-9b1f-123d500fa179
 caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 2312b82fbcb6f4cd4ed00b288cb87283538cb372
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: bd1a9a2a269c173ef9dcb47b39921073802fe1ee
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49855828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63438414"
 ---
 # <a name="how-to-create-a-basic-texture"></a>如何：创建基本纹理
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,15 +23,15 @@ ms.locfileid: "49855828"
   
  本文档演示了这些活动：  
   
--   设置纹理的大小  
+- 设置纹理的大小  
   
--   设置前景色和背景色  
+- 设置前景色和背景色  
   
--   使用 alpha 通道（透明度）  
+- 使用 alpha 通道（透明度）  
   
--   使用“填充”和“椭圆形”工具  
+- 使用“填充”和“椭圆形”工具  
   
--   设置工具属性  
+- 设置工具属性  
   
 ## <a name="creating-a-basic-texture"></a>创建基本纹理  
  可使用图像编辑器创建和修改游戏或应用的图像和纹理。  
@@ -60,7 +55,7 @@ ms.locfileid: "49855828"
 5. 在“图像编辑器”工具栏上，选择“填充”工具，然后按住 Shift 键并选择图像中的任意点。 使用 Shift 键让填充颜色的 Alpha 值替换图像中的颜色；否则，Alpha 值将用于将填充颜色与图像中的颜色进行混合。  
   
    > [!IMPORTANT]
-   >  此步骤和上一步中的颜色选择一起确保为要绘制的“靶心”目标纹理准备好了基本图像。 当用透明黑色填充图像时（因为目标的边框是黑色的），目标周围将没有混叠的项。  
+   > 此步骤和上一步中的颜色选择一起确保为要绘制的“靶心”目标纹理准备好了基本图像。 当用透明黑色填充图像时（因为目标的边框是黑色的），目标周围将没有混叠的项。  
   
 6. 在“图像编辑器”工具栏上，选择“椭圆形”工具。  
   
@@ -75,7 +70,7 @@ ms.locfileid: "49855828"
 11. 使用“椭圆形”工具，从像素坐标 `(3, 3)` 到像素坐标 `(508, 508)` 绘制一个圆。 为了更轻松地绘制圆形，可以在绘制时按住 Shift 键。  
   
     > [!NOTE]
-    >  当前指针位置的像素坐标显示在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 状态栏上。  
+    > 当前指针位置的像素坐标显示在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 状态栏上。  
   
 12. 更改背景色。 将“R”设置为 `44`、将“G” 设置为 `165`、将“B” 设置为 `211`、将“A” 设置为 `255`。  
   
@@ -93,10 +88,7 @@ ms.locfileid: "49855828"
   
     ![完整的“靶心”目标纹理](../designers/media/gfx-image-demo-bullseye.png "gfx_image_demo_bullseye")  
   
-    作为下一步，可以为此纹理生成 MIP 级别。 有关信息，请参阅[如何：创建和修改 MIP 级别](../designers/how-to-create-and-modify-mip-levels.md)。  
+    作为下一步，可以为此纹理生成 MIP 级别。 有关详细信息，请参阅[如何：创建和修改 MIP 级别](../designers/how-to-create-and-modify-mip-levels.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [图像编辑器](../designers/image-editor.md)
-
-
-

@@ -1,22 +1,21 @@
 ---
 title: 类设计器中的 Visual C++ 枚举
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - Class Designer [Visual Studio], enumerations
 ms.assetid: 11e90ba1-18cd-44f8-9e26-e3746a7a19d1
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dde9e749a58935e0b50b604897092f69f16300b3
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f31f153183d0cdd809bd9dde9187ade32b20ddd2
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53869198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62975016"
 ---
 # <a name="visual-c-enumerations-in-class-designer"></a>类设计器中的 Visual C++ 枚举
 

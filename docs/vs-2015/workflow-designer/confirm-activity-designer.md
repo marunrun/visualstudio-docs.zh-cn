@@ -1,11 +1,8 @@
 ---
 title: Confirm 活动设计器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.Confirm.UI
@@ -13,13 +10,13 @@ ms.assetid: c753b67b-b0e7-462a-bb4e-ba8db04a078d
 caps.latest.revision: 5
 author: gewarren
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: df1943314163ab71925620a2f8a2f8431a8033d7
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 29635044eb4cca558d631ab959b1b4f5480dbdbe
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49237726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62977386"
 ---
 # <a name="confirm-activity-designer"></a>Confirm 活动设计器
 **Confirm**活动设计器用于创建和配置<xref:System.Activities.Statements.Confirm>活动。  

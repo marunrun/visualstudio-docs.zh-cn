@@ -1,8 +1,7 @@
 ---
-title: IActiveScript::GetScriptThreadState |Microsoft Docs
+title: IActiveScript::GetScriptThreadState | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2b191f1b70aa522cba0a04e0781ada69a8fe5ca5
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: a0066894830c111a8e0ad18f7acdc09d6114162e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54097521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62935598"
 ---
 # <a name="iactivescriptgetscriptthreadstate"></a>IActiveScript::GetScriptThreadState
 检索脚本线程的当前的状态。  
@@ -41,7 +40,7 @@ HRESULT GetScriptThreadState(
  `stidThread`  
  [in]为其状态所需的线程的标识符或下列特殊线程标识符之一：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |SCRIPTTHREADID_BASE|基础线程;也就是说，在其中的脚本引擎的线程已实例化。|  
 |SCRIPTTHREADID_CURRENT|当前正在执行的线程。|  

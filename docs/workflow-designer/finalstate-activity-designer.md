@@ -2,19 +2,18 @@
 title: 工作流设计器-FinalState 活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 ms.assetid: aa186893-8775-40dd-981f-8593ead831d0
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 55fc609ffd327d1e3bea8ee52849c92746055410
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8292e22bac6063a36286930584e1d7c227913511
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53950522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62949680"
 ---
 # <a name="finalstate-activity-designer"></a>FinalState 活动设计器
 

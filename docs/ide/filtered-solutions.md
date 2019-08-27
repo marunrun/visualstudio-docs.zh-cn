@@ -1,26 +1,25 @@
 ---
 title: 加载项目的子集
-ms.date: 12/04/2018
-ms.topic: conceptual
+ms.date: 04/22/2019
 ms.prod: visual-studio-dev16
+ms.topic: conceptual
 helpviewer_keywords:
 - filtered solution
 - solution filtering
 author: gewarren
 ms.author: stsu
-manager: douge
-ms.openlocfilehash: 689f0f2c4ba6d6b8e2e94c2b7982604b1d444745
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+monikerRange: '>= vs-2019'
+ms.openlocfilehash: 2612770b760bec70ec9ee6c679c47804d4e69f42
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53822792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63439867"
 ---
 # <a name="filtered-solutions-in-visual-studio"></a>Visual Studio 中筛选的解决方案
 
-**Visual Studio 2019 预览版 1 中的新增功能**
-
-大型开发团队通常使用包含许多项目的单个大型解决方案进行协作。 但是，个别开发人员通常只处理这些项目的一小部分。 为了在打开大型解决方案时提高性能，Visual Studio 2019 预览版 1 中引入了解决方案筛选。 通过解决方案筛选，可打开仅加载选择性项目的解决方案。 在解决方案中加载项目子集可以减少解决方案加载、构建和测试运行时间，并实现更有针对性的审查。
+大型开发团队通常使用包含许多项目的单个大型解决方案进行协作。 但是，个别开发人员通常只处理这些项目的一小部分。 为了在打开大型解决方案时提高性能，Visual Studio 2019 中引入了解决方案筛选。 通过解决方案筛选，可打开仅加载选择性项目的解决方案。 在解决方案中加载项目子集可以减少解决方案加载、构建和测试运行时间，并实现更有针对性的审查。
 
 可以使用以下功能：
 
@@ -32,11 +31,15 @@ ms.locfileid: "53822792"
 
 ## <a name="open-a-filtered-solution"></a>打开已筛选的解决方案
 
-要打开仅加载了某些项目的解决方案，请执行以下步骤：
+直接从“打开项目”对话框或通过[命令行](#command-line)打开解决方案时，可以不加载任何项目。
+
+### <a name="open-project-dialog"></a>“打开项目”对话框
+
+若要使用“打开项目”对话框打开一个解决方案而不加载它的任何项目，请执行以下操作：
 
 1. 在菜单栏上，依次选择“文件” > “打开” > “项目/解决方案”。
 
-2. 在“新建项目”对话框中，选择解决方案，然后选择“不加载项目”。
+2. 在“打开项目”对话框中，选择解决方案，然后选择“不加载项目”。
 
    ![Visual Studio 的“打开项目”对话框，其中已选中“不加载项目”](media/filtered-solutions/do-not-load-projects.png)
 
@@ -50,15 +53,31 @@ ms.locfileid: "53822792"
 
    Visual Studio 将记住下次在本地打开解决方案时要加载的项目。
 
+### <a name="command-line"></a>命令行
+
+（Visual Studio 2019 版本 16.1 中的新增功能。）
+
+如果要从命令行打开某个解决方案但不加载任何项目，可以使用如下示例所示的 [`/donotloadprojects`](../ide/reference/donotloadprojects-devenv-exe.md) 开关：
+
+```cmd
+devenv /donotloadprojects MySln.sln
+```
+
 ## <a name="toggle-unloaded-project-visibility"></a>切换已卸载的项目可见性
 
 可以选择在“解决方案资源管理器”中使用以下选项之一查看解决方案中的所有项目或仅查看已加载的项目：
 
 - 右键单击解决方案，然后选择“显示已卸载的项目”或“隐藏已卸载的项目”。
 
-- 选择“显示所有文件”按钮来切换已卸载项目的可见性。
+- 选择解决方案节点来启用“显示所有文件”按钮；然后单击按钮切换已卸载项目的可见性。
 
    ![Visual Studio“解决方案资源管理器”中的“显示所有文件”按钮](media/filtered-solutions/show-all-files.PNG)
+
+## <a name="load-project-dependencies"></a>加载项目依赖项
+
+在只加载选定项目的解决方案中，可能并未加载项目的全部项目依赖项。 使用“加载项目依赖项”菜单选项，确保同时加载项目所依赖的任何项目。 右键单击“解决方案资源管理器”中一个或多个已加载的项目，然后选择“加载项目依赖项”。
+
+![在 Visual Studio 2019 中加载项目依赖项](media/filtered-solutions/load-project-dependencies.png)
 
 ## <a name="solution-filter-files"></a>解决方案筛选器文件
 

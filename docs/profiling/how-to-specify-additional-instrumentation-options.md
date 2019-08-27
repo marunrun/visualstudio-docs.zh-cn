@@ -10,15 +10,15 @@ helpviewer_keywords:
 - performance sessions, options
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a4e7d75724d6980be5d3a51947e3dd3e4eeeca08
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c95add435824663e798d226e0be11ddbe06b8aba
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53858664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62539135"
 ---
 # <a name="how-to-specify-additional-instrumentation-options"></a>如何：指定其他检测选项
 
@@ -41,5 +41,5 @@ ms.locfileid: "53858664"
 
 ## <a name="see-also"></a>请参阅
 
-[配置性能会话](../profiling/configuring-performance-sessions.md)  
-[通过命令行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)
+[配置性能会话](../profiling/configuring-performance-sessions.md)
+[来自命令行的配置文件](../profiling/using-the-profiling-tools-from-the-command-line.md)

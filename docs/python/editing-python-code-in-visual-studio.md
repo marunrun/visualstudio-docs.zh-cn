@@ -1,32 +1,27 @@
 ---
 title: 编辑 Python 代码
 description: 对于 Python，Visual Studio 提供丰富的 IntelliSense、代码片段和导航功能，以及格式设置、linting 和重构。
-ms.date: 11/19/2018
-ms.prod: visual-studio-dev15
+ms.date: 03/13/2019
 ms.topic: conceptual
-author: kraigb
-ms.author: kraigb
-manager: douge
+author: JoshuaPartlow
+ms.author: joshuapa
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 62d22b286b6f0e58f6b833ba1975a07a6ab0500b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b111d3b0fe2f4af9098186aff3ef661045215473
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53964359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62959137"
 ---
 # <a name="edit-python-code"></a>编辑 Python 代码
 
 由于将大量开发时间都用在了代码编辑器中，因此可借助 [Visual Studio 中的 Python 的支持](installing-python-support-in-visual-studio.md)中的功能来提高工作效率。 这些功能包括 IntelliSense 语法突出显示、自动完成、签名帮助、方法重写、搜索和导航。
 
 编辑器还集成了 Visual Studio 中的交互式窗口，便于在两者之间交换代码。 请参阅[教程步骤 3：使用 REPL 交互窗口](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)和[使用交互窗口：Send to Interactive 命令](python-interactive-repl-in-visual-studio.md#send-to-interactive-command)了解详细信息。
-
-|   |   |
-|---|---|
-| ![视频的摄像机图标](../install/media/video-icon.png "观看视频") | 有关编辑 Python 代码的演示，请[观看视频（Microsoft 虚拟学院）](https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Editing-Python-Code-r2iQH5LWE_4605918567)（2 分 30 秒）。|
 
 有关在 Visual Studio 中编辑代码的常规文档，请参阅[代码编辑器功能](../ide/writing-code-in-the-code-and-text-editor.md)。 另请参阅[大纲显示](../ide/outlining.md)，有助于将重点放在代码的特定部分。
 
@@ -36,9 +31,9 @@ ms.locfileid: "53964359"
 
 IntelliSense 可提供[完成](#completions)、[签名帮助](#signature-help)、[快速信息](#quick-info)和[代码着色](#code-coloring)等功能。 Visual Studio 2017 版本 15.7 及更高版本还支持[类型提示](#type-hints)。
 
-为了提高性能，**Visual Studio 2017 版本 15.5** 和更早版本中的 IntelliSense 将取决于为项目中的每个 Python 环境生成的完成数据库。 添加、删除或更新包后可能需要刷新数据库。 数据库状态将显示在“IntelliSense”选项卡上的“Python 环境”窗口（解决方案资源管理器的同级）中（请参阅[环境窗口引用](python-environments-window-tab-reference.md#intellisense-tab)）。
+为了提高性能，Visual Studio 2017 15.5 及更早版本中的 IntelliSense 将依赖于为项目中的每个 Python 环境生成的完成数据库。 添加、删除或更新包后可能需要刷新数据库。 数据库状态将显示在“IntelliSense”选项卡上的“Python 环境”窗口（解决方案资源管理器的同级）中（请参阅[环境窗口引用](python-environments-window-tab-reference.md#intellisense-tab)）。
 
-**Visual Studio 2017 版本 15.6**和更高版本使用不同的方法提供不依赖于数据库的 IntelliSense 完成。
+Visual Studio 2017 版本 15.6 及更高版本使用另外一种方法提供不依赖于数据库的 IntelliSense 完成。
 
 ### <a name="completions"></a>完成
 
@@ -114,10 +109,20 @@ commas_to_colons(1)
 
 ![验证类型提示的 mypy 的示例结果](media/code-editing-type-hints-validation-error.png)
 
+::: moniker range="vs-2017"
 > [!Tip]
-> 对于 Python 3.5 之前的版本，Visual Studio 也显示用户通过存根文件 (.pyi) 提供的类型提示。 如果不希望直接在代码中添加类型提示，或希望创建不直接使用它们的库的类型提示，可以使用存根文件。 有关详细信息，请参阅 mypy 项目 wiki 中的[为 Python 模块创建存根](https://github.com/python/mypy/wiki/Creating-Stubs-For-Python-Modules)。
+> 对于 Python 3.5 之前的版本，Visual Studio 也显示用户通过 Typeshed 存根文件 (.pyi) 提供的类型提示。 如果不希望直接在代码中添加类型提示，或希望创建不直接使用它们的库的类型提示，可以使用存根文件。 有关详细信息，请参阅 mypy 项目 wiki 中的[为 Python 模块创建存根](https://github.com/python/mypy/wiki/Creating-Stubs-For-Python-Modules)。
 >
 > 目前，Visual Studio 不支持注释中的类型提示。
+::: moniker-end
+::: moniker range=">=vs-2019"
+> [!Tip]
+> 对于 Python 3.5 之前的版本，Visual Studio 也显示用户通过 Typeshed 存根文件 (.pyi) 提供的类型提示。 如果不希望直接在代码中添加类型提示，或希望创建不直接使用它们的库的类型提示，可以使用存根文件。 有关详细信息，请参阅 mypy 项目 wiki 中的[为 Python 模块创建存根](https://github.com/python/mypy/wiki/Creating-Stubs-For-Python-Modules)。
+>
+> Visual Studio 包括适用于 Python 2 和 3 的一组 Typeshed 文件，这样就不再需要其他下载。 但是，如果想要使用一组不同的文件，可以在“工具” > “选项” > “Python” > “语言服务器”选项中指定路径。 请参阅[选项 - 语言服务器](python-support-options-and-settings-in-visual-studio.md#language-server-options)。
+>
+> 目前，Visual Studio 不支持注释中的类型提示。
+::: moniker-end
 
 ### <a name="signature-help"></a>签名帮助
 

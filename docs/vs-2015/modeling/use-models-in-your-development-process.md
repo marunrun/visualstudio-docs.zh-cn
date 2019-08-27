@@ -1,13 +1,8 @@
 ---
 title: 在您的开发过程中使用模型 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-techdebt
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
 ms.topic: conceptual
 helpviewer_keywords:
 - UML, using models
@@ -15,18 +10,18 @@ ms.assetid: a33ac8fc-4ba0-4850-b71b-014dc8674e54
 caps.latest.revision: 31
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 56534483f8b9cda99b756524d87408efbedfe275
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 92e8e236be1c6aa07709d03274a4c964b17b1bad
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51757706"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65700717"
 ---
 # <a name="use-models-in-your-development-process"></a>在你的开发过程中使用模型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在 Visual Studio 中，你可以使用模型帮助你理解和更改系统、应用程序或组件。 模型能帮助你可视化系统工作的环境、阐明用户需求、定义你系统的体系结构、分析代码并确保你的代码符合要求。 请参阅[第 9 频道视频： 通过建模改善体系结构](http://go.microsoft.com/fwlink/?LinkID=252078)。  
+在 Visual Studio 中，你可以使用模型帮助你理解和更改系统、应用程序或组件。 模型能帮助你可视化系统工作的环境、阐明用户需求、定义你系统的体系结构、分析代码并确保你的代码符合要求。 请参阅[第 9 频道视频：通过建模改善体系结构](http://go.microsoft.com/fwlink/?LinkID=252078)。  
   
  若要查看支持每种类型的模型的 Visual Studio 版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。  
   
@@ -57,25 +52,25 @@ ms.locfileid: "51757706"
   
  通常与模型一起使用的其他方面的规范包括以下内容。 具体取决于项目的大小和样式，你可以使用这些方面中的几个，也可以根本不适用它们：  
   
--   用户情景。 用户情景是与用户和其他利益干系人一起讨论的系统行为方面的简短描述，该行为将在项目的迭代之一中出现。 典型的用户情景以“客户将能够...”开始 用户情景可能会引入一组用例，也可以定义先前已开发的用例的扩展。 定义或扩展用例有助于使用户情景更清晰。  
+- 用户情景。 用户情景是与用户和其他利益干系人一起讨论的系统行为方面的简短描述，该行为将在项目的迭代之一中出现。 典型的用户情景以“客户将能够...”开始 用户情景可能会引入一组用例，也可以定义先前已开发的用例的扩展。 定义或扩展用例有助于使用户情景更清晰。  
   
--   更改请求。 更正式项目中的更改请求非常类似于敏捷项目中的用户情景。 敏捷方法会将所有需求视为对之前迭代中所开发内容进行的更改。  
+- 更改请求。 更正式项目中的更改请求非常类似于敏捷项目中的用户情景。 敏捷方法会将所有需求视为对之前迭代中所开发内容进行的更改。  
   
--   用例描述。 用例表示用户与系统交互以达到特定目标的一种方法。 完整的描述包括目标、事件的主要和备选序列以及异常结果。 用例图可帮助汇总并提供用例的概述。  
+- 用例描述。 用例表示用户与系统交互以达到特定目标的一种方法。 完整的描述包括目标、事件的主要和备选序列以及异常结果。 用例图可帮助汇总并提供用例的概述。  
   
--   方案。 方案是事件序列的非常详细的说明，这些事件显示系统、用户及其他系统如何协同工作以向利益干系人提供价值。 它可能会采用以下形式：用户界面的幻灯片放映或用户界面的原型。 它可以描述一个用例或一个用例序列。  
+- 方案。 方案是事件序列的非常详细的说明，这些事件显示系统、用户及其他系统如何协同工作以向利益干系人提供价值。 它可能会采用以下形式：用户界面的幻灯片放映或用户界面的原型。 它可以描述一个用例或一个用例序列。  
   
--   词汇表。 项目的需求词汇表描述了客户用于讨论其领域的单词。 用户界面和需求模型也应使用这些术语。 类图可以帮助阐明其中大多数术语之间的关系。 创建关系图和词汇表不仅可减少用户和开发人员之间的误解，而且几乎总是会揭露不同的业务利益干系人之间的误解。  
+- 词汇表。 项目的需求词汇表描述了客户用于讨论其领域的单词。 用户界面和需求模型也应使用这些术语。 类图可以帮助阐明其中大多数术语之间的关系。 创建关系图和词汇表不仅可减少用户和开发人员之间的误解，而且几乎总是会揭露不同的业务利益干系人之间的误解。  
   
--   业务规则。 许多业务规则都能表示为需求类模型中关联和特性上的固定约束，也可表示为序列图上的约束。  
+- 业务规则。 许多业务规则都能表示为需求类模型中关联和特性上的固定约束，也可表示为序列图上的约束。  
   
--   高级设计。 描述主要部件以及它们如何组合在一起。 组件、序列和界面图都是高级设计的主要部件。  
+- 高级设计。 描述主要部件以及它们如何组合在一起。 组件、序列和界面图都是高级设计的主要部件。  
   
--   设计模式。 描述系统的不同部件之间共享的设计规则。  
+- 设计模式。 描述系统的不同部件之间共享的设计规则。  
   
--   测试规范。 测试脚本和测试代码的设计可以更好地利用活动和序列图来描述测试步骤的序列。 系统测试应按照需求模型来表达，这样在需求更改时它们也能轻松更改。  
+- 测试规范。 测试脚本和测试代码的设计可以更好地利用活动和序列图来描述测试步骤的序列。 系统测试应按照需求模型来表达，这样在需求更改时它们也能轻松更改。  
   
--   项目计划。 项目计划或积压工作定义何时发送每个功能。 你可以通过声明它实现或扩展了什么用例和业务规则来定义每个功能。 你可以直接在计划中引用用例和业务规则，也可以在一个单独的文档中定义一组功能并在计划中使用该功能标题。  
+- 项目计划。 项目计划或积压工作定义何时发送每个功能。 你可以通过声明它实现或扩展了什么用例和业务规则来定义每个功能。 你可以直接在计划中引用用例和业务规则，也可以在一个单独的文档中定义一组功能并在计划中使用该功能标题。  
   
 ### <a name="use-models-in-iteration-planning"></a>在迭代计划中使用模型  
  虽然所有项目的大小和组织不同，典型的项目计划为二到六周之间的一系列迭代。 重要的是计划足够的迭代以允许来自早期迭代的反馈能用于调整后续迭代的范围和计划。  
@@ -85,28 +80,28 @@ ms.locfileid: "51757706"
 #### <a name="sharpen-focus-as-each-iteration-approaches"></a>随着每次迭代临近逐渐聚焦  
  随着每次迭代的临近，使用模型来帮助定义要在迭代末尾传递的内容。  
   
--   不要在早期迭代中对所有内容详细建模。 第一次迭代中，在用户术语表中为主要项目创建一个类图，绘制主要用例的关系图，并绘制主要组件的关系图。 不要详细地描述这些关系图，因为项目中的详细信息在以后将会更改。 使用此模型中定义的术语来创建功能或主要用户情景的列表。 将功能分配到迭代，以便大约平衡整个项目的估计工作负荷。 这些分配之后将在项目中作出更改。  
+- 不要在早期迭代中对所有内容详细建模。 第一次迭代中，在用户术语表中为主要项目创建一个类图，绘制主要用例的关系图，并绘制主要组件的关系图。 不要详细地描述这些关系图，因为项目中的详细信息在以后将会更改。 使用此模型中定义的术语来创建功能或主要用户情景的列表。 将功能分配到迭代，以便大约平衡整个项目的估计工作负荷。 这些分配之后将在项目中作出更改。  
   
--   尝试在早期迭代中实现所有最重要用例的简化版本。 在后续迭代中扩展这些用例。 此方法有助于降低太晚发现项目中需求或体系结构的缺陷而无法补救的风险。  
+- 尝试在早期迭代中实现所有最重要用例的简化版本。 在后续迭代中扩展这些用例。 此方法有助于降低太晚发现项目中需求或体系结构的缺陷而无法补救的风险。  
   
--   每次迭代接近结束时，举办一次需求研讨会，以详细定义将在下个迭代中开发的需求或用户情景。 邀请能够确定优先级的用户和业务利益干系人，以及开发人员和系统测试员。 允许用三个小时为一个 2 周的迭代定义需求。  
+- 每次迭代接近结束时，举办一次需求研讨会，以详细定义将在下个迭代中开发的需求或用户情景。 邀请能够确定优先级的用户和业务利益干系人，以及开发人员和系统测试员。 允许用三个小时为一个 2 周的迭代定义需求。  
   
--   该研讨会的目标是使每个人就下个迭代结束时将完成的内容达成一致。 将模型用作一种工具来帮助阐明需求。 该研讨会的输出是一个迭代积压工作：即 [!INCLUDE[esprfound](../includes/esprfound-md.md)] 中的开发任务列表和 [!INCLUDE[TCMext](../includes/tcmext-md.md)] 中的测试套件。  
+- 该研讨会的目标是使每个人就下个迭代结束时将完成的内容达成一致。 将模型用作一种工具来帮助阐明需求。 该研讨会的输出是一个迭代积压工作：即 [!INCLUDE[esprfound](../includes/esprfound-md.md)] 中的开发任务列表和 [!INCLUDE[TCMext](../includes/tcmext-md.md)] 中的测试套件。  
   
--   在需求研讨会中，仅在你需要为开发任务确定估计值的范围内讨论设计。 否则，请保持讨论用户可以直接体验的系统行为。 保持需求模型与体系结构模型分开。  
+- 在需求研讨会中，仅在你需要为开发任务确定估计值的范围内讨论设计。 否则，请保持讨论用户可以直接体验的系统行为。 保持需求模型与体系结构模型分开。  
   
--   从你这里获取一些指导后，非技术性的利益干系人对理解 UML 关系图通常不会有问题。  
+- 从你这里获取一些指导后，非技术性的利益干系人对理解 UML 关系图通常不会有问题。  
   
 #### <a name="link-model-to-work-items"></a>将模型链接到工作项  
  需求研讨会结束后，请详细说明需求模型的的详细信息，并将模型链接到开发任务。 你可以通过将 [!INCLUDE[esprfound](../includes/esprfound-md.md)] 中的工作项链接到模型中的元素来实现此操作。 若要了解如何执行此操作，请参阅[链接模型元素和工作项](../modeling/link-model-elements-and-work-items.md)。  
   
  你可以将任意元素链接到工作项，但最有用的元素如下所示：  
   
--   用例。 你可以将用例链接到将实现它的开发任务。  
+- 用例。 你可以将用例链接到将实现它的开发任务。  
   
--   用例扩展。 如果迭代中将仅实现用例的一个方面，则可以将它分离为具有一个或多个扩展的基础用例。 扩展是以 «extend» 关系链接到基础用例的用例。 有关用例扩展的详细信息，请参阅[UML 用例图： 参考](../modeling/uml-use-case-diagrams-reference.md)。  
+- 用例扩展。 如果迭代中将仅实现用例的一个方面，则可以将它分离为具有一个或多个扩展的基础用例。 扩展是以 «extend» 关系链接到基础用例的用例。 有关用例扩展的详细信息，请参阅[UML 用例图：参考](../modeling/uml-use-case-diagrams-reference.md)。  
   
--   描述业务规则或服务质量要求的注释。 有关详细信息，请参阅[建立用户需求模型](../modeling/model-user-requirements.md)。  
+- 描述业务规则或服务质量要求的注释。 有关详细信息，请参阅[建立用户需求模型](../modeling/model-user-requirements.md)。  
   
 #### <a name="link-model-to-tests"></a>将模型链接到测试  
  使用需求模型来指导验收测试的设计。 在开发工作进行的同时创建这些测试。  
@@ -137,18 +132,15 @@ ms.locfileid: "51757706"
   
 |**类别**|**链接**|  
 |------------------|---------------|  
-|**视频**|![视频链接](../data-tools/media/playvideo.gif "播放视频") [MSDN 如何实现视频： 如何创建和使用 UML 模型和关系图 (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![视频链接](../data-tools/media/playvideo.gif "播放视频")[第 9 频道： Visual Studio 2010 中的 UML](http://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![视频链接](../data-tools/media/playvideo.gif "播放视频") [MSDN 如何实现系列： UML 工具和扩展性 (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkID=214467)|  
+|**视频**|![视频链接](../data-tools/media/playvideo.gif "播放视频") [MSDN 如何实现视频：如何创建和使用 UML 模型和关系图 (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![视频链接](../data-tools/media/playvideo.gif "播放视频")[第 9 频道：Visual Studio 2010 中的 UML](http://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![视频链接](../data-tools/media/playvideo.gif "播放视频") [MSDN 如何实现系列：UML 工具和扩展性 (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkID=214467)|  
 |**论坛**|-   [Visual Studio 可视化和建模工具](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio 可视化和建模 SDK（DSL 工具）](http://go.microsoft.com/fwlink/?LinkId=184721)|  
 |**博客**|[Visual Studio ALM + Team Foundation Server 博客](http://go.microsoft.com/fwlink/?LinkID=201340)|  
 |**技术文章和日志**|[MSDN 体系结构中心](http://go.microsoft.com/fwlink/?LinkId=201343)<br /><br /> [Visual Studio 体系结构工具指南](../modeling/visual-studio-architecture-tooling-guidance.md)|  
   
 ## <a name="see-also"></a>请参阅  
- [在敏捷开发中使用模型](http://msdn.microsoft.com/en-us/592ac27c-3d3e-454a-9c38-b76658ed137f)   
+ [在敏捷开发中使用模型](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)   
  [为您的应用程序创建模型](../modeling/create-models-for-your-app.md)   
  [建立用户需求模型](../modeling/model-user-requirements.md)   
  [应用程序的体系结构建模](../modeling/model-your-app-s-architecture.md)   
  [基于模型开发测试](../modeling/develop-tests-from-a-model.md)   
  [安排建模解决方案](../modeling/structure-your-modeling-solution.md)
-
-
-

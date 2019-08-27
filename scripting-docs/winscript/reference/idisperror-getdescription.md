@@ -1,8 +1,7 @@
 ---
-title: IDispError::GetDescription |Microsoft Docs
+title: IDispError::GetDescription | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fa0c837be9a98829551b9c7820faf154779479e4
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
-ms.translationtype: MT
+ms.openlocfilehash: 5505113ee650c6618be5a95bc77244daf90cfcb7
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54096949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63446946"
 ---
 # <a name="idisperrorgetdescription"></a>IDispError::GetDescription
 返回此错误的文本说明。  
@@ -51,7 +50,7 @@ HRESULT GetDescription(
  在指定的区域设置标识符 (LCID) 传递到的语言中返回的文本`IDispatchEx::InvokeEx`遇到了错误的方法。  
   
 > [!NOTE]
->  未实现此方法。  
+> 未实现此方法。  
   
 ## <a name="see-also"></a>请参阅  
  [IDispError 接口](../../winscript/reference/idisperror-interface.md)   

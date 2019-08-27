@@ -1,7 +1,6 @@
 ---
 title: 如何：自定义类图（类设计器）
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - class diagrams, customizing
@@ -11,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: e9030aea-c77d-4cc1-b8f6-b6ca469b692d
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ac0ff3943d1209b0442c29785408c70b55cef43
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c23e24c9e087ff8ca64f90db1714ca2569bf02c0
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53882927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62975211"
 ---
 # <a name="how-to-customize-class-diagrams"></a>如何：自定义类图
 
@@ -38,7 +37,7 @@ ms.locfileid: "53882927"
 
 2. 在“类设计器”工具栏中，单击“放大”或“缩小”按钮以更改设计器图面的缩放级别。
 
-     或
+     or
 
      指定特定的缩放值。 可以使用“缩放”下拉列表进行选择或键入有效的缩放级别（有效范围介于 10% 到 400% 之间）。
 

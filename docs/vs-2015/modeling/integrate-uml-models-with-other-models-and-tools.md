@@ -1,25 +1,22 @@
 ---
 title: 将 UML 模型与其他模型和工具集成 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - UML - extending, references to models
 ms.assetid: 9e75e7d1-93cf-4196-baa3-bd10b9af16d3
 caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: d1cc5a26a9c2febb0dd1dff3c0d14ba3786dde9f
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 1a8b67e5c784e24b1af71089d33e7db60cb1f92c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51764141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68190391"
 ---
 # <a name="integrate-uml-models-with-other-models-and-tools"></a>将 UML 模型与其他模型和工具集成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,7 +40,7 @@ UML 模型可与其他模型和特定于域的语言集成。
   
    有关详细信息，请参阅[定义用于扩展 UML 的配置文件](../modeling/define-a-profile-to-extend-uml.md)。  
   
-   有关示例项目，在其中部署了配置文件与菜单命令和笔势处理程序，请参阅[示例： UML 配置文件](http://go.microsoft.com/fwlink/?LinkID=213811)。  
+   有关示例项目，在其中部署了配置文件与菜单命令和笔势处理程序，请参阅[示例：UML 配置文件](http://go.microsoft.com/fwlink/?LinkID=213811)。  
   
 - **引用。** 你可以将一组字符串附加到任何 UML 元素。 你可以编写用于存储信息的代码，如另一个元素的文件名或 GUID。 无需提供其他定义就可完成此操作。 引用并不直接对用户可见。  
   
@@ -68,12 +65,12 @@ UML 模型可与其他模型和特定于域的语言集成。
   
 2. **VMSDK 事件**可以用于模型外部传播更改 – 例如，若要更改的文件名相链接的文档，或更改另一个模型中的元素。  
   
-   有关这两种机制的信息，请参阅[如何： 响应 UML 模型中的更改](../misc/how-to-respond-to-changes-in-a-uml-model.md)。  
+   有关这两种机制的信息，请参阅[如何：响应 UML 模型中的更改](../misc/how-to-respond-to-changes-in-a-uml-model.md)。  
   
    拖动元素以将它们从一个模型复制到另一个模型  
    你可以通过将项拖到 UML 关系图上来让用户创建元素。 创建的元素不必是原始元素的副本。 例如，你可以让用户将一个活动关系图从解决方案资源管理器拖到另一个活动关系图上，以创建新的操作。  
   
-   有关详细信息请参阅[建模图上定义笔势处理程序](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md)并[如何： 添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)。  
+   有关详细信息请参阅[建模图上定义笔势处理程序](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md)和[如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)。  
   
 ## <a name="samples"></a>示例  
  代码示例，请参阅[UML 元素链接到关系图或其他文件](http://go.microsoft.com/fwlink/?LinkId=213813)。 此示例允许用户将文件拖到任何 UML 元素上，并在之后通过双击该元素来打开该文件。 例如，可以将活动关系图链接到用例元素。 图标显示哪些元素具有链接。  
@@ -98,15 +95,12 @@ UML 模型可与其他模型和特定于域的语言集成。
   
    此示例演示如何处理从 Windows 资源管理器（或文件资源管理器）、解决方案资源管理器及其他 UML 元素拖动的项。  
   
-  有关 DSL 读取 UML 模型是一个示例，请参阅[如何： 添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)。  
+  有关 DSL 读取 UML 模型是一个示例，请参阅[如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)   
  [在建模图上定义笔势处理程序](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md)   
- [如何： 添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)   
- [如何： 响应 UML 模型中的更改](../misc/how-to-respond-to-changes-in-a-uml-model.md)   
- [示例： UML 配置文件](http://go.microsoft.com/fwlink/?LinkID=213811)   
+ [如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)   
+ [如何：响应 UML 模型中的更改](../misc/how-to-respond-to-changes-in-a-uml-model.md)   
+ [示例：UML 配置文件](http://go.microsoft.com/fwlink/?LinkID=213811)   
  [将 UML 元素链接到关系图或其他文件](http://go.microsoft.com/fwlink/?LinkId=213813)
-
-
-

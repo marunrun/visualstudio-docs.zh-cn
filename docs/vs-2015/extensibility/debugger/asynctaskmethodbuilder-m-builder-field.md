@@ -1,33 +1,28 @@
 ---
 title: AsyncTaskMethodBuilder.m_builder 字段 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - m_builder field, AsyncTaskMethodBuilder structure [.NET Framework debug engines]
 ms.assetid: bfaf25a2-0f08-413f-b474-9ce0d97c0eeb
 caps.latest.revision: 5
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 24c8397a45b684e5bf4d980e95214cd039fbdbee
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: ae8e79d948bb95a8f55e43985e80bc7ab949ff76
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51742634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68197391"
 ---
 # <a name="asynctaskmethodbuildermbuilder-field"></a>AsyncTaskMethodBuilder.m_builder 字段
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 表示此非泛型实例委托的泛型生成器对象。  
   
- **Namespace**：<xref:System.Runtime.CompilerServices?displayProperty=fullName>  
+ **命名空间：** <xref:System.Runtime.CompilerServices?displayProperty=fullName>  
   
  **程序集：** mscorlib （在 mscorlib.dll 中)  
   
@@ -44,4 +39,3 @@ ms.locfileid: "51742634"
 ## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder>   
  [.NET Framework 的并行扩展内幕](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
-

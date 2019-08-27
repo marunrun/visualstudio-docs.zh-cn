@@ -1,14 +1,9 @@
 ---
 title: 本地化 VSIX 包 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - localize package
 - localize extension
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 10e80b13-b39e-466c-a7c8-774a862355af
 caps.latest.revision: 14
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 2f6bc666e244fed2bc2922ce4878434730a643e5
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 6143b21884bc92ac79ae0fd7292a11780fec4478
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51750585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63439762"
 ---
 # <a name="localizing-vsix-packages"></a>本地化 VSIX 包
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +31,7 @@ ms.locfileid: "51750585"
   
  MyExtension.dll  
   
- extension.vsixmanifest  
+ Extension.vsixmanifest  
   
  [Content_Types].xml  
   
@@ -49,18 +44,18 @@ ms.locfileid: "51750585"
  Extension.vsixlangpack  
   
 > [!NOTE]
->  中的 VSIX 支持的项目模板[!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]生成 VSIX 清单并将其命名 source.extension.vsixmanifest。 当 Visual Studio 生成项目时，它将复制该文件的内容到 Extension.VsixManifest VSIX 包中。  
+> 中的 VSIX 支持的项目模板[!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]生成 VSIX 清单并将其命名 source.extension.vsixmanifest。 当 Visual Studio 生成项目时，它将复制该文件的内容到 Extension.VsixManifest VSIX 包中。  
   
 ## <a name="the-extensionvsixlangpack-file"></a>Extension.vsixlangpack 文件  
- Extension.vsixlangpack 文件遵循[VSIX 语言包架构](../extensibility/vsx-language-pack-schema-reference.md)。 此架构具有[VSIXLanguagePack](../extensibility/vsixlanguagepack-element-vsix-language-pack-schema.md)根元素，而且这些四个子元素： [LocalizedName](../extensibility/localizedname-element-vsix-language-pack-schema.md)， [LocalizedDescription](../extensibility/localizeddescription-element-vsix-language-pack-schema.md)， [MoreInfoURL](../extensibility/moreinfourl-element-vsix-language-pack-schema.md)，并[许可证](../extensibility/license-element-vsix-language-pack-schema.md)。 这些子元素对应于`Name`， `Description`， `MoreInfoURL`，和`License`的子元素`Identifier`Extension.vsixmanifest 文件的元素。  
+ Extension.vsixlangpack 文件遵循[VSIX 语言包架构](../extensibility/vsx-language-pack-schema-reference.md)。 此架构具有[VSIXLanguagePack](../extensibility/vsixlanguagepack-element-vsix-language-pack-schema.md)根元素，而且这些四个子元素：[LocalizedName](../extensibility/localizedname-element-vsix-language-pack-schema.md)， [LocalizedDescription](../extensibility/localizeddescription-element-vsix-language-pack-schema.md)， [MoreInfoURL](../extensibility/moreinfourl-element-vsix-language-pack-schema.md)，并且[许可证](../extensibility/license-element-vsix-language-pack-schema.md)。 这些子元素对应于`Name`， `Description`， `MoreInfoURL`，和`License`的子元素`Identifier`Extension.vsixmanifest 文件的元素。  
   
  在创建 vsixlangpack 文件时，必须设置`Include in Vsix`属性设置为`true`。 否则，将忽略的本地化的安装文本。  
   
 #### <a name="to-set-the-include-in-vsix-property"></a>若要设置包括在 Vsix 属性  
   
-1.  在中**解决方案资源管理器**，右键单击 Extension.vsixlangpack 文件，然后单击**属性**。  
+1. 在中**解决方案资源管理器**，右键单击 Extension.vsixlangpack 文件，然后单击**属性**。  
   
-2.  在属性网格中，单击**包含在 Vsix**，并将其值设置为`true`。  
+2. 在属性网格中，单击**包含在 Vsix**，并将其值设置为`true`。  
   
 ## <a name="example"></a>示例  
   
@@ -101,4 +96,3 @@ ms.locfileid: "51750585"
  [VSIX LanguagePack 元素](../extensibility/vsixlanguagepack-element-vsix-language-pack-schema.md)   
  [VSIX 包的剖析](../extensibility/anatomy-of-a-vsix-package.md)   
  [VSIX 项目模板](../extensibility/vsix-project-template.md)
-

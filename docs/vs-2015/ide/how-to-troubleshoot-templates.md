@@ -1,29 +1,24 @@
 ---
-title: 如何：进行模板的故障排除 | Microsoft Docs
-ms.custom: ''
+title: 如何：模板故障排除 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: troubleshooting
 helpviewer_keywords:
 - Visual Studio templates, troubleshooting
 ms.assetid: 3e577ad2-f725-4c11-93b3-477f2404ec81
 caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: a68097745de1f1d94e5c09963a474a0095588fba
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 246ce82eef63559060c9c4ea4daabd3ae1e5a284
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49296421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63435124"
 ---
-# <a name="how-to-troubleshoot-templates"></a>如何：进行模板的故障排除
+# <a name="how-to-troubleshoot-templates"></a>如何：模板故障排除
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 如果模板在开发环境中无法加载，可以采用以下几种方法找出问题。  
@@ -33,24 +28,24 @@ ms.locfileid: "49296421"
   
 #### <a name="to-validate-the-vstemplate-file"></a>验证 .vstemplate 文件  
   
-1.  找到包含模板的 .zip 文件。  
+1. 找到包含模板的 .zip 文件。  
   
-2.  解压缩 .zip 文件。  
+2. 解压缩 .zip 文件。  
   
-3.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的“文件”菜单上，单击“打开”，再单击“文件”。  
+3. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的“文件”菜单上，单击“打开”，再单击“文件”。  
   
-4.  选择模板的 .vstemplate 文件，然后单击“打开”。  
+4. 选择模板的 .vstemplate 文件，然后单击“打开”。  
   
-5.  验证 .vstemplate 文件的 XML 是否遵循 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 模板架构。 有关 .vstemplate 架构的详细信息，请参阅 [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)。  
+5. 验证 .vstemplate 文件的 XML 是否遵循 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 模板架构。 有关 .vstemplate 架构的详细信息，请参阅 [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)。  
   
     > [!NOTE]
-    >  若要获取在创作.vstemplate 文件时 IntelliSense 支持，请添加`xmlns`归于`VSTemplate`元素并将其分配的值为 http://schemas.microsoft.com/developer/vstemplate/2005。  
+    > 要在创作 .vstemplate 文件时获得 IntelliSense 支持，请将`xmlns` 属性添加到 `VSTemplate` 元素，并为其赋值 http://schemas.microsoft.com/developer/vstemplate/2005。  
   
-6.  保存并关闭 .vstemplate 文件。  
+6. 保存并关闭 .vstemplate 文件。  
   
-7.  选择模板中包括的文件，右键单击，选择“发送到”，然后单击“压缩(zipped)文件夹”。 所选的文件被压缩到一个 .zip 文件中。  
+7. 选择模板中包括的文件，右键单击，选择“发送到”，然后单击“压缩(zipped)文件夹”。 所选的文件被压缩到一个 .zip 文件中。  
   
-8.  将新的 .zip 文件与旧的 .zip 文件放在同一目录中。  
+8. 将新的 .zip 文件与旧的 .zip 文件放在同一目录中。  
   
 9. 删除解压缩的模板文件和旧的 .zip 模板文件。  
   
@@ -59,18 +54,15 @@ ms.locfileid: "49296421"
   
 #### <a name="to-locate-template-errors-in-event-viewer"></a>在“事件查看器”中查找模板错误  
   
-1.  在 Windows 中，单击“开始”，再单击“控制面板”，双击“管理工具”，再双击“事件查看器”。  
+1. 在 Windows 中，单击“开始”，再单击“控制面板”，双击“管理工具”，再双击“事件查看器”。  
   
-2.  在左窗格中单击“应用程序”。  
+2. 在左窗格中单击“应用程序”。  
   
-3.  查找“源”值为 `Visual Studio - VsTemplate` 的事件。  
+3. 查找“源”值为 `Visual Studio - VsTemplate` 的事件。  
   
-4.  双击模板事件以查看错误。  
+4. 双击模板事件以查看错误。  
   
 ## <a name="see-also"></a>请参阅  
  [自定义模板](../ide/customizing-project-and-item-templates.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)   
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
-
-
-

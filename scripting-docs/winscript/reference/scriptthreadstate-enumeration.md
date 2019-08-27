@@ -2,7 +2,6 @@
 title: SCRIPTTHREADSTATE 枚举 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2c66d078effd510b3f64cf1f443926984ff2e282
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: 906a309b25a1fe606fb37f8cbab70040e5a4c46f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54347666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62840182"
 ---
 # <a name="scriptthreadstate-enumeration"></a>SCRIPTTHREADSTATE 枚举
 脚本引擎中指定的线程的状态。 此枚举由[IActiveScript::GetScriptThreadState](../../winscript/reference/iactivescript-getscriptthreadstate.md)方法。  

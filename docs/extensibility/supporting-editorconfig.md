@@ -1,21 +1,21 @@
 ---
-title: 扩展语言服务以在 Visual Studio 中支持 EditorConfig |Microsoft Docs
+title: 扩展语言服务以支持 EditorConfig
 ms.date: 11/22/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - editorconfig [extensibility]
 - editorconfig, supporting in a language service
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3061f1a2efdf05a775f563311ccfbb4c48c49bc9
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5c6974c7943a751f50cafb0b141ba9c1dfc85677
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53830886"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66353497"
 ---
 # <a name="supporting-editorconfig-for-your-language-service"></a>支持 EditorConfig 语言服务
 
@@ -45,5 +45,5 @@ Microsoft.VisualStudio.TextManager.Interop.LANGPREFERENCES.uTabSize<br/>Microsof
 
 ## <a name="see-also"></a>请参阅
 
-[创建可移植的编辑器设置，请使用 EditorConfig](../ide/create-portable-custom-editor-options.md)  
-[扩展的编辑器和语言服务](../extensibility/extending-the-editor-and-language-services.md)
+- [创建可移植的编辑器设置，请使用 EditorConfig](../ide/create-portable-custom-editor-options.md)
+- [扩展的编辑器和语言服务](../extensibility/extending-the-editor-and-language-services.md)

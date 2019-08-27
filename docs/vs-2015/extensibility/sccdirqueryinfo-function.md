@@ -1,14 +1,9 @@
 ---
 title: SccDirQueryInfo 函数 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - SccDirQueryInfo
 helpviewer_keywords:
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 459e2d99-573d-47c4-b834-6d82c5e14162
 caps.latest.revision: 15
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: f2df4dd52ff9984059eb28f21edf49b9db741358
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 7334ddd1ce6c7f9feac63253246e55b65121e18b
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51784892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63432442"
 ---
 # <a name="sccdirqueryinfo-function"></a>SccDirQueryInfo 函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -69,9 +64,8 @@ LPLONG  lpStatus
  IDE 使用此函数之前目录已重命名，以检查是否该目录位于源控件下通过查询其是否具有相应的项目。 如果目录不受源代码管理中，IDE 可以向用户提供正确的警告。  
   
 > [!NOTE]
->  如果源代码管理插件选择实现一个或多个状态的值，则未实现的位应设置为零。  
+> 如果源代码管理插件选择实现一个或多个状态的值，则未实现的位应设置为零。  
   
 ## <a name="see-also"></a>请参阅  
  [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)   
  [目录状态代码](../extensibility/directory-status-code-enumerator.md)
-

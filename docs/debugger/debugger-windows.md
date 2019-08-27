@@ -1,31 +1,31 @@
 ---
-title: 调试器窗口 |Microsoft Docs
+title: 检查数据使用调试器窗口 |Microsoft Docs
 ms.custom: seodec18
-ms.date: 04/25/2017
+ms.date: 04/25/2018
 ms.topic: conceptual
 ms.assetid: 4c6fe8f1-b015-4989-bb31-72ebac390026
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c546bd408d1c4c91ec19962536e1e4fe774dbd84
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: e14f1864452edd00237164e14af74330e3c209f7
+ms.sourcegitcommit: 91c7f1b525e0c22d938bc4080ba4ceac2483474f
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53875801"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67033003"
 ---
-# <a name="learn-about-debugger-windows-in-visual-studio"></a>了解有关 Visual Studio 中的调试器 Windows
+# <a name="inspect-data-using-debugger-windows-in-visual-studio"></a>检查数据使用 Visual Studio 中的调试器窗口
 
-调试程序时可以打开大多数调试器窗口。 若要查看调试器窗口列表，请设置断点并开始调试。 命中断点并且执行停止时，请单击“调试”>“窗口”。
+调试程序时可以打开大多数调试器窗口。 若要查看调试器窗口列表，请设置断点并开始调试。 命中断点并且执行停止时，请单击“调试”>“窗口”  。
 
 ||||
 |-|-|-|
 |**窗口**|**热键**|**请参阅主题**|
 |断点|CTRL+ALT+B|[使用断点](../debugger/using-breakpoints.md)|
 |异常设置|CTRL+ALT+E|[管理调试器的异常](../debugger/managing-exceptions-with-the-debugger.md)|
-|输出|CTRL+ALT+O|[输出窗口](../ide/reference/output-window.md)|
+|Output|CTRL+ALT+O|[输出窗口](../ide/reference/output-window.md)|
 |监视|CTRL+ALT+W、（1、2、3、4）|[监视和快速监视窗口](../debugger/watch-and-quickwatch-windows.md)|
 |快速监视|SHIFT+F9|[监视和快速监视窗口](../debugger/watch-and-quickwatch-windows.md)|
 |自动|CTRL+ALT+V、A|[“自动”和“局部变量”窗口](../debugger/autos-and-locals-windows.md)|

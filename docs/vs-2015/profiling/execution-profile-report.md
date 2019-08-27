@@ -1,14 +1,9 @@
 ---
 title: 执行分析报告 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.cv.threads.report.execution
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: c8128472-a8ed-46f4-b1c8-a25358d6f2c1
 caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 4c211271bbc4be147d22ab4cb0262b591f4b839a
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: a0d95d4593939b878194d2aeef79bdd0a8ad946a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51763601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68160646"
 ---
 # <a name="execution-profile-report"></a>执行分析报告
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +31,7 @@ ms.locfileid: "51763601"
   
   下表显示报告中的列。  
   
-|列|描述|  
+|列|Description|  
 |------------|-----------------|  
 |name|调用堆栈每个级别的函数的名称。|  
 |非独占样本数|为汇总到此调用堆栈树级别的所有堆栈收集的样本总数。 非独占数是此函数的独占样本数和所有子节点的非独占计数器的总和。|  
@@ -47,8 +42,5 @@ ms.locfileid: "51763601"
   
  可在[执行时间（“线程”视图）](../profiling/execution-time-threads-view.md)视图中查看此报告表格。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [线程视图](../profiling/threads-view-parallel-performance.md)
-
-
-

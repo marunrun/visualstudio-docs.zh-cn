@@ -6,15 +6,15 @@ helpviewer_keywords:
 - MSBuild, SDKs, SDK
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e5640e02813c22465815576e1435210e2d55712
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 172dfae63fbfb95432a1635490ac703f7bbd9021
+ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53935220"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67852242"
 ---
 # <a name="how-to-use-msbuild-project-sdks"></a>如何：使用 MSBuild 项目 SDK
 
@@ -56,7 +56,15 @@ ms.locfileid: "53935220"
     </Project>
     ```
 
-    将隐式导入添加到项目的顶部和底部，如上文所述。  `Sdk` 属性的格式为 `Name[/Version]`，其中版本可选。  例如，你可以指定 `My.Custom.Sdk/1.2.3`。
+    将隐式导入添加到项目的顶部和底部，如上文所述。
+    
+    若要指定特定版本的 SDK，可以将其追加到 `Sdk` 属性：
+
+    ```xml
+    <Project Sdk="My.Custom.Sdk/1.2.3">
+        ...
+    </Project>
+    ```
 
     > [!NOTE]
     > 这是目前在 Visual Studio for Mac 中引用项目 SDK 的唯一受支持的方式。
@@ -94,7 +102,7 @@ ms.locfileid: "53935220"
 导入评估时，[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 将基于名称和你指定的版本动态解析到项目 SDK 的路径。  此外，[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 还具有已注册的 SDK 解析程序，它是在计算机上查找项目 SDK 的插件。  这些插件包括：
 
 1. 基于 NuGet 的解析程序，用于查询为 NuGet 包配置的包源是否匹配所指定 SDK 的 ID 和版本。<br/>
-   如果你指定的是可选版本，并且它可以用于任何自定义项目 SDK，该解析程序才有效。  
+   如果你指定的是可选版本，并且它可以用于任何自定义项目 SDK，该解析程序才有效。
 2. .NET CLI 解析程序，用于解析随 .NET CLI 一起安装的 SDK。<br/>
    此解析程序查找项目 SDK，如 `Microsoft.NET.Sdk` 和 `Microsoft.NET.Sdk.Web`，这些项目是该产品的一部分。
 3. 默认解析程序，用于解析随 MSBuild 一起安装的 SDK。
@@ -110,11 +118,11 @@ ms.locfileid: "53935220"
 }
 ```
 
-在生成期间，只能使用每个项目 SDK 的一个版本。  如果你正在引用同一项目 SDK 的两个不同版本，MSBuild 将发出警告。  如果在 global.json 中指定了版本，则不建议在项目中指定版本。  
+在生成期间，只能使用每个项目 SDK 的一个版本。  如果你正在引用同一项目 SDK 的两个不同版本，MSBuild 将发出警告。  如果在 global.json 中指定了版本，则不建议在项目中指定版本   。
 
 ## <a name="see-also"></a>请参阅
 
- [MSBuild 概念](../msbuild/msbuild-concepts.md)   
- [自定义生成](../msbuild/customize-your-build.md)   
- [包、元数据和框架](/dotnet/core/packages)   
- [.NET Core 的 csproj 格式的新增内容](/dotnet/core/tools/csproj)
+- [MSBuild 概念](../msbuild/msbuild-concepts.md)
+- [自定义生成](../msbuild/customize-your-build.md)
+- [包、元数据和框架](/dotnet/core/packages)
+- [.NET Core 的 csproj 格式的新增内容](/dotnet/core/tools/csproj)

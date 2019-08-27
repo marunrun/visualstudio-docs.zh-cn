@@ -1,14 +1,9 @@
 ---
 title: Error 任务 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#Error
 dev_langs:
@@ -23,24 +18,23 @@ ms.assetid: e96a90ee-a8ae-4e5b-8ef2-b5cf5fedd8b2
 caps.latest.revision: 23
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: ff957a54c27c4ae4860e31e4fb7001b7f831ab3a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: b220d12b872a81cba5f46bd14fdebafaa58cf4a1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49212714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68201811"
 ---
 # <a name="error-task"></a>Error 任务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 基于评估的条件语句，停止生成操作并记录错误。  
   
 ## <a name="parameters"></a>参数  
  下表描述了 `Error` 任务的参数。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |`Code`|可选 `String` 参数。<br /><br /> 与错误关联的错误代码。|  
 |`File`|可选 `String` 参数。<br /><br /> 包含错误的文件的名称。 如果未提供任何文件名称，将使用包含 Error 任务的文件。|  
@@ -71,9 +65,6 @@ ms.locfileid: "49212714"
 </Project>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [任务参考](../msbuild/msbuild-task-reference.md)   
  [获取生成日志](../msbuild/obtaining-build-logs-with-msbuild.md)
-
-
-

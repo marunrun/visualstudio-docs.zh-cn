@@ -1,27 +1,22 @@
 ---
 title: 实现自定义类别和显示项 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - font and color control [Visual Studio SDK], categories
 - custom categories
 ms.assetid: 99311a93-d642-4344-bbf9-ff6e7fa5bf7f
 caps.latest.revision: 26
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 394f8f99539ab49c1201fa61ce612aee22ff2064
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 474d5c66507b56bea609568b6acfe9f5eff75e9c
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51769112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63414608"
 ---
 # <a name="implementing-custom-categories-and-display-items"></a>实现自定义类别和显示项
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -58,10 +53,10 @@ VSPackage 可以提供控件的字体和颜色对其文本的[!INCLUDE[vsprvs](.
   
 - 填充注册表具有两个值：  
   
-  |name|类型|数据|描述|  
+  |名称|类型|数据|描述|  
   |----------|----------|----------|-----------------|  
   |类别|REG_SZ|GUID|创建标识类别的 GUID。|  
-  |Package|REG_SZ|GUID|支持类别的 VSPackage 服务的 GUID。|  
+  |package|REG_SZ|GUID|支持类别的 VSPackage 服务的 GUID。|  
   
   在注册表中指定的服务必须提供的实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults>相应类别。  
   
@@ -73,10 +68,10 @@ VSPackage 可以提供控件的字体和颜色对其文本的[!INCLUDE[vsprvs](.
   
 - 填充注册表具有两个值：  
   
-  |name|类型|数据|描述|  
+  |名称|类型|数据|描述|  
   |----------|----------|----------|-----------------|  
   |类别|REG_SZ|GUID|创建以确定组的 GUID。|  
-  |Package|REG_SZ|GUID|支持类别的服务的 GUID。|  
+  |package|REG_SZ|GUID|支持类别的服务的 GUID。|  
   
   在注册表中指定的服务必须提供的实现`T:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup`为相应的组。  
   
@@ -88,24 +83,24 @@ VSPackage 可以提供控件的字体和颜色对其文本的[!INCLUDE[vsprvs](.
   
 - 方法实现通过<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults>必须提供与 IDE:  
   
-  -   列出的**显示的项**中**类别。**  
+  - 列出的**显示的项**中**类别。**  
   
-  -   可本地化的名称**显示的项**。  
+  - 可本地化的名称**显示的项**。  
   
-  -   显示的每个成员的信息**类别**。  
+  - 显示的每个成员的信息**类别**。  
   
   > [!NOTE]
-  >  每个**类别**必须包含至少一个**显示项**。  
+  > 每个**类别**必须包含至少一个**显示项**。  
   
 - IDE 使用`T:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup`接口可定义多个类别的联合。  
   
    其实现提供了与 IDE:  
   
-  -   一系列**类别**组成给定的组。  
+  - 一系列**类别**组成给定的组。  
   
-  -   对实例的访问<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults>支持每个**类别**组内。  
+  - 对实例的访问<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults>支持每个**类别**组内。  
   
-  -   可本地化的组名称。  
+  - 可本地化的组名称。  
   
 - 正在更新 IDE:  
   
@@ -116,18 +111,18 @@ VSPackage 可以提供控件的字体和颜色对其文本的[!INCLUDE[vsprvs](.
 ## <a name="to-handle-font-and-color-changes"></a>若要处理字体和颜色更改  
  若要正确支持 VSPackage 显示的文本的颜色，支持 VSPackage 的着色服务必须响应通过所做的用户启动的更改**字体和颜色**属性页。 VSPackage 可以做到这一点：  
   
--   通过实现处理 IDE 生成的事件<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents>接口。  
+- 通过实现处理 IDE 生成的事件<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents>接口。  
   
      IDE 调用相应的方法遵循的用户修改**字体和颜色**页。 例如，它调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents.OnFontChanged%2A>如果选择新字体的方法。  
   
      或  
   
--   轮询更改 IDE。  
+- 轮询更改 IDE。  
   
      这可以通过系统实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>接口。 主要用于支持暂留，尽管<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetItem%2A>方法可用于获取字体和颜色信息**显示项**。 有关详细信息，请参阅[访问存储的字体和颜色设置](../extensibility/accessing-stored-font-and-color-settings.md)。  
   
     > [!NOTE]
-    >  若要确保正确轮询所获得的结果，可能会使用很有用<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorCacheManager>接口，以确定是否刷新的缓存和 update 之前调用的检索方法所需<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>接口。  
+    > 若要确保正确轮询所获得的结果，可能会使用很有用<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorCacheManager>接口，以确定是否刷新的缓存和 update 之前调用的检索方法所需<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>接口。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A>   
@@ -138,6 +133,5 @@ VSPackage 可以提供控件的字体和颜色对其文本的[!INCLUDE[vsprvs](.
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaultsProvider>   
  [获取字体和颜色信息对文本着色](../extensibility/getting-font-and-color-information-for-text-colorization.md)   
  [访问存储的字体和颜色设置](../extensibility/accessing-stored-font-and-color-settings.md)   
- [如何： 访问内置的字体和配色方案](../extensibility/how-to-access-the-built-in-fonts-and-color-scheme.md)   
+ [如何：访问内置的字体和配色方案](../extensibility/how-to-access-the-built-in-fonts-and-color-scheme.md)   
  [字体和颜色概述](../extensibility/font-and-color-overview.md)
-

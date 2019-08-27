@@ -1,26 +1,21 @@
 ---
 title: 将附加到程序 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debug engines, attaching to programs
 ms.assetid: 9a3f5b83-60b5-4ef0-91fe-a432105bd066
 caps.latest.revision: 11
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 8c16c13b4dec412fa44be5cbfbbdd8494b805545
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: ab9301f31976b084c3c8565329dca248503e40ae
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51777937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63437416"
 ---
 # <a name="attaching-to-the-program"></a>附加到程序
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -50,19 +45,19 @@ ms.locfileid: "51777937"
   
   之后`IDebugEngine2::Attach`方法调用时，请执行以下步骤的实现中`IDebugEngine2::Attach`方法：  
   
-1.  发送[IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md)到 SDM 事件对象。 有关详细信息，请参阅[发送事件](../../extensibility/debugger/sending-events.md)。  
+1. 发送[IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md)到 SDM 事件对象。 有关详细信息，请参阅[发送事件](../../extensibility/debugger/sending-events.md)。  
   
-2.  调用[GetProgramId](../../extensibility/debugger/reference/idebugprogram2-getprogramid.md)方法[IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md)对象传递给`IDebugEngine2::Attach`方法。  
+2. 调用[GetProgramId](../../extensibility/debugger/reference/idebugprogram2-getprogramid.md)方法[IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md)对象传递给`IDebugEngine2::Attach`方法。  
   
      这将返回`GUID`用于标识程序。 `GUID`必须存储在该对象表示本地编程为 DE，且必须返回何时`IDebugProgram2::GetProgramId`上调用方法`IDebugProgram2`接口。  
   
     > [!NOTE]
-    >  如果你实现了`IDebugProgramNodeAttach2`接口，该程序的`GUID`传递给`IDebugProgramNodeAttach2::OnAttach`方法。 这`GUID`用于控制程序`GUID`返回的`IDebugProgram2::GetProgramId`方法。  
+    > 如果你实现了`IDebugProgramNodeAttach2`接口，该程序的`GUID`传递给`IDebugProgramNodeAttach2::OnAttach`方法。 这`GUID`用于控制程序`GUID`返回的`IDebugProgram2::GetProgramId`方法。  
   
-3.  发送[IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md)事件对象，以通知 SDM 的本地`IDebugProgram2`创建对象时用于表示 DE 程序。 有关详细信息，请参阅[发送事件](../../extensibility/debugger/sending-events.md)。  
+3. 发送[IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md)事件对象，以通知 SDM 的本地`IDebugProgram2`创建对象时用于表示 DE 程序。 有关详细信息，请参阅[发送事件](../../extensibility/debugger/sending-events.md)。  
   
     > [!NOTE]
-    >  这是不相同`IDebugProgram2`对象传递到`IDebugEngine2::Attach`方法。 以前已通过`IDebugProgram2`对象被端口仅识别，是一个单独的对象。  
+    > 这是不相同`IDebugProgram2`对象传递到`IDebugEngine2::Attach`方法。 以前已通过`IDebugProgram2`对象被端口仅识别，是一个单独的对象。  
   
 ## <a name="see-also"></a>请参阅  
  [基于启动的附件](../../extensibility/debugger/launch-based-attachment.md)   
@@ -77,4 +72,3 @@ ms.locfileid: "51777937"
  [IDebugProgramEx2](../../extensibility/debugger/reference/idebugprogramex2.md)   
  [附加](../../extensibility/debugger/reference/idebugprogramex2-attach.md)   
  [附加](../../extensibility/debugger/reference/idebugengine2-attach.md)
-

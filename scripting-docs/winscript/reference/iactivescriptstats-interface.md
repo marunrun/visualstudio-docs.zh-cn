@@ -2,7 +2,6 @@
 title: IActiveScriptStats 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,12 +13,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: da69920ca78ad47e283fa8f99a28d037edbbe44d
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: e7a0e1e616fdee2dac58c8a5a1d24ed120b28bc2
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54350136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62991978"
 ---
 # <a name="iactivescriptstats-interface"></a>IActiveScriptStats 接口
 使宿主可以查询正在运行的脚本的统计信息。 主机可以使用此信息以确定是否脚本具有执行操作太长时间才能完成。  

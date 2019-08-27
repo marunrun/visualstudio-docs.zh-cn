@@ -2,21 +2,20 @@
 title: 为 Python 项目定义自定义菜单命令
 description: 通过编辑项目和目标文件，可以将自定义命令添加到 Visual Studio 中的 Python 项目上下文菜单，用于调用可执行程序、脚本、模块、内联代码片段和 pip。
 ms.date: 11/12/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
-author: kraigb
-ms.author: kraigb
-manager: douge
+author: JoshuaPartlow
+ms.author: joshuapa
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3cf0e0984c8051c0301ccb20c5f8dce2850c1514
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ec53a67980866ed6422fae5764bbf6a9313ef91e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53820987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62957644"
 ---
 # <a name="define-custom-commands-for-python-projects"></a>为 Python 项目定义自定义命令
 
@@ -145,7 +144,7 @@ Visual Studio 中的某些 Python 项目模板已使用其 .targets 文件添加
 | 特性 | 必需 | 说明 |
 | --- | --- | --- |
 | TargetType | 是 | 指定 Target 属性包含的内容以及如何将其与 Arguments 属性一并使用：<ul><li>**可执行文件：** 运行在 Target 中命名的可执行文件，附加 Arguments 的值，就如在命令行中直接输入一般。 值仅可包含项目名称且不可带有参数。</li><li>**脚本**：向 Target 中的文件名运行 python.exe，再执行 Arguments 中的值。</li><li>**模块**：在 Target 中运行后接模块名的 `python -m`，再运行 Arguments 中的值。</li><li>**代码**：运行 Target 中包含的内联代码。 这会忽略 Arguments 值。</li><li>**pip**：通过 Target 中的命令运行 `pip`，后接 Arguments；但如果 ExecuteIn 设置为“输出”，pip 则假定 `install` 命令并使用 Target 作为包名称。</li></ul> |
-| 目标 | 是 | 要使用的文件名、模块名、代码或 pip 命令（取决于 TargetType）。 |
+| Target | 是 | 要使用的文件名、模块名、代码或 pip 命令（取决于 TargetType）。 |
 | 自变量 | Optional | 指定要赋值给目标的参数字符串（若有）。 请注意，如果 TargetType 是 `script`，则向 Python 项目赋予参数，而不是 python.exe。 `code` TargetType 忽略此项。 |
 | ExecuteIn | 是 | 指定要运行命令的环境：<ul><li>**控制台**：（默认）如同直接在命令行上直接输入 Target 和 Arguments 一样运行它们。 这会在运行 Target 时显示命令窗口，该窗口随后自动关闭。</li><li>**consolepause**：与控制台相同，但必须按键才能关闭窗口。</li><li>**输出**：运行 Target 并在 Visual Studio 的“输出”窗口中显示其结果。 如果 TargetType 为“pip”，则 Visual Studio 使用 Target 作为包名称并附加 Arguments。</li><li>**repl**：在 [Python 交互式](python-interactive-repl-in-visual-studio.md)窗口中运行 Target；可选显示名称用作窗口的标题。</li><li>无：与控制台的行为相同。</li></ul>|
 | WorkingDirectory | Optional | 要在其中运行命令的文件夹。 |

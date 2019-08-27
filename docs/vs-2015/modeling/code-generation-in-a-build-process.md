@@ -1,12 +1,9 @@
 ---
 title: 生成过程中的代码生成 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - text templates, build tasks
 - text templates, transforming by using msbuild
@@ -14,13 +11,13 @@ ms.assetid: 4da43429-2a11-4d7e-b2e0-9e4af7033b5a
 caps.latest.revision: 30
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: e7cadbf9d4d99fa9deaf4d71545f43d2bf49a3f3
-ms.sourcegitcommit: c9a01c599ce19a5845605b3b28c0229fd0abb93f
+manager: jillfra
+ms.openlocfilehash: f5ecf6f09efb64e521740b74151fc160112fe7a3
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52281805"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826040"
 ---
 # <a name="code-generation-in-a-build-process"></a>生成过程中的代码生成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,31 +27,31 @@ Visual Studio 解决方案生成过程的一部分，可以调用文本转换。
 
 这意味着当你在 MSBuild 中生成文本模板时，你无法以相同的方式访问项目文件名等内容。 但是，你可以[通过生成参数，将环境信息传递到文本模板和指令处理器](#parameters)。
 
-##  <a name="buildserver"></a> 配置计算机
+## <a name="buildserver"></a> 配置计算机
 
-若要启用在开发计算机上的生成任务，请安装[Visual Studio 的建模 SDK](http://www.microsoft.com/download/details.aspx?id=40754)。
+若要启用在开发计算机上的生成任务，请安装[Visual Studio 的建模 SDK](https://www.microsoft.com/download/details.aspx?id=48148)。
 
-如果[您的生成服务器](http://msdn.microsoft.com/library/788443c3-0547-452e-959c-4805573813a9)运行在其未安装 Visual Studio，在计算机上的将以下文件复制到生成计算机，从开发计算机。 用最新的版本号替换‘*’。
+如果[您的生成服务器](https://msdn.microsoft.com/library/788443c3-0547-452e-959c-4805573813a9)运行在其未安装 Visual Studio，在计算机上的将以下文件复制到生成计算机，从开发计算机。 用最新的版本号替换‘*’。
 
--   $(ProgramFiles)\MSBuild\Microsoft\VisualStudio\v*.0\TextTemplating
+- $(ProgramFiles)\MSBuild\Microsoft\VisualStudio\v*.0\TextTemplating
 
-    -   Microsoft.VisualStudio.TextTemplating.Sdk.Host.*.0.dll
+  - Microsoft.VisualStudio.TextTemplating.Sdk.Host.*.0.dll
 
-    -   Microsoft.TextTemplating.Build.Tasks.dll
+  - Microsoft.TextTemplating.Build.Tasks.dll
 
-    -   Microsoft.TextTemplating.targets
+  - Microsoft.TextTemplating.targets
 
--   $(ProgramFiles)\Microsoft Visual Studio *.0\VSSDK\VisualStudioIntegration\Common\Assemblies\v4.0
+- $(ProgramFiles)\Microsoft Visual Studio *.0\VSSDK\VisualStudioIntegration\Common\Assemblies\v4.0
 
-    -   Microsoft.VisualStudio.TextTemplating.*.0.dll
+  - Microsoft.VisualStudio.TextTemplating.*.0.dll
 
-    -   Microsoft.VisualStudio.TextTemplating.Interfaces.*.0.dll（多个文件）
+  - Microsoft.VisualStudio.TextTemplating.Interfaces.*.0.dll（多个文件）
 
-    -   Microsoft.VisualStudio.TextTemplating.VSHost.*.0.dll
+  - Microsoft.VisualStudio.TextTemplating.VSHost.*.0.dll
 
--   $(ProgramFiles)\Microsoft Visual Studio *.0\Common7\IDE\PublicAssemblies\
+- $(ProgramFiles)\Microsoft Visual Studio *.0\Common7\IDE\PublicAssemblies\
 
-    -   Microsoft.VisualStudio.TextTemplating.Modeling.*.0.dll
+  - Microsoft.VisualStudio.TextTemplating.Modeling.*.0.dll
 
 ## <a name="to-edit-the-project-file"></a>编辑项目文件
 
@@ -93,7 +90,7 @@ Visual Studio 解决方案生成过程的一部分，可以调用文本转换。
 
 有一些属性你可插入项目文件以控制转换任务：
 
--   在每次生成开始时运行转换任务：
+- 在每次生成开始时运行转换任务：
 
     ```xml
     <PropertyGroup>
@@ -101,7 +98,7 @@ Visual Studio 解决方案生成过程的一部分，可以调用文本转换。
     </PropertyGroup>
     ```
 
--   例如，覆盖只读文件，因为不会签出这些文件：
+- 例如，覆盖只读文件，因为不会签出这些文件：
 
     ```xml
     <PropertyGroup>
@@ -109,7 +106,7 @@ Visual Studio 解决方案生成过程的一部分，可以调用文本转换。
     </PropertyGroup>
     ```
 
--   每次转换所有模板：
+- 每次转换所有模板：
 
     ```xml
     <PropertyGroup>
@@ -216,7 +213,7 @@ $(IncludeFolders);$(MSBuildProjectDirectory)\Include;AnotherFolder;And\Another</
 </PropertyGroup>
 ```
 
-##  <a name="parameters"></a> 将生成上下文数据传递到模板
+## <a name="parameters"></a> 将生成上下文数据传递到模板
 
 你可以在项目文件中设置参数值。 例如，您可以将生成属性和[环境变量](../msbuild/how-to-use-environment-variables-in-a-build.md):
 
@@ -237,7 +234,7 @@ $(IncludeFolders);$(MSBuildProjectDirectory)\Include;AnotherFolder;And\Another</
 The project folder is: <#= ProjectFolder #>
 ```
 
-##  <a name="msbuild"></a> 使用项目属性中的程序集和 include 指令
+## <a name="msbuild"></a> 使用项目属性中的程序集和 include 指令
 
 Visual Studio 宏（如 $(SolutionDir）在 MSBuild 中不起作用。 你可以改用项目属性。
 
@@ -274,13 +271,13 @@ Visual Studio 宏（如 $(SolutionDir）在 MSBuild 中不起作用。 你可以
 
 **其他选项还有哪些用于转换文本模板？**
 
--   [TextTransform 实用工具](../modeling/generating-files-with-the-texttransform-utility.md)可以在命令脚本中使用。 在大多数情况下，使用 MSBuild 更为方便。
+- [TextTransform 实用工具](../modeling/generating-files-with-the-texttransform-utility.md)可以在命令脚本中使用。 在大多数情况下，使用 MSBuild 更为方便。
 
--   [在 VS 扩展中调用文本转换](../modeling/invoking-text-transformation-in-a-vs-extension.md)
+- [在 VS 扩展中调用文本转换](../modeling/invoking-text-transformation-in-a-vs-extension.md)
 
--   [设计时文本模板](../modeling/design-time-code-generation-by-using-t4-text-templates.md)由 Visual Studio 转换。
+- [设计时文本模板](../modeling/design-time-code-generation-by-using-t4-text-templates.md)由 Visual Studio 转换。
 
--   [运行时文本模板](../modeling/run-time-text-generation-with-t4-text-templates.md)在应用程序中的运行时转换。
+- [运行时文本模板](../modeling/run-time-text-generation-with-t4-text-templates.md)在应用程序中的运行时转换。
 
 ## <a name="read-more"></a>阅读详细信息
 
@@ -288,4 +285,4 @@ Visual Studio 宏（如 $(SolutionDir）在 MSBuild 中不起作用。 你可以
 
 - [编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)
 - [Visual Studio 可视化和建模 SDK](http://go.microsoft.com/fwlink/?LinkID=185579)
-- [Oleg Sych： 了解 T4:MSBuild 集成](http://www.olegsych.com/2010/04/understanding-t4-msbuild-integration/)
+- [Oleg Sych:了解 T4:MSBuild 集成](https://github.com/olegsych/T4Toolbox)

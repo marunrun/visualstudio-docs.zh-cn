@@ -3,22 +3,23 @@ title: 编写和管理代码
 description: 了解如何使用 Visual Studio 中的代码编辑器和其他工具来编写、导航、管理和改进代码。
 ms.date: 01/01/2018
 layout: LandingPage
-ms.prod: visual-studio-dev15
 ms.topic: landing-page
 author: gewarren
 ms.author: gewarren
 ms.workload:
 - multiple
-ms.openlocfilehash: 06ce24ab0e0d668f4eef524826f2bf46a6fb29a5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d18ca688c1eac02fc2b24c3f8cb0f9551e4939ae
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53855425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62430286"
 ---
 # <a name="write-and-manage-code-using-visual-studio"></a>使用 Visual Studio 编写和管理代码
 
 了解如何使用 Visual Studio 中的代码编辑器和其他工具来编写、导航、管理和改进代码。
+
+<!-- markdownlint-disable MD033 -->
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -245,7 +246,7 @@ ms.locfileid: "53855425"
         </a>
     </li>
     <li>
-        <a href="/visualstudio/ide/quickstart-uwp-csharp">
+        <a href="/visualstudio/get-started/csharp/tutorial-uwp">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">

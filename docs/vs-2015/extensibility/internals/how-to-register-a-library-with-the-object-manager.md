@@ -1,14 +1,9 @@
 ---
-title: 如何： 使用对象管理器注册库 |Microsoft Docs
-ms.custom: ''
+title: 如何：使用对象管理器注册库 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - libraries, registering with object manager
 - IVsLibrary2 interface, registering library with object manager
@@ -18,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: f124dd05-cb0f-44ad-bb2a-7c0b34ef4038
 caps.latest.revision: 27
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: ed547d82ccacec44383fed29a0c04bb363b10084
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: c40c695a912e97269263ba14747b72382847324d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51732949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68162038"
 ---
-# <a name="how-to-register-a-library-with-the-object-manager"></a>如何： 使用对象管理器注册库
+# <a name="how-to-register-a-library-with-the-object-manager"></a>如何：使用对象管理器注册库
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 符号浏览工具，如**类视图**，**对象浏览器**，**调用浏览器**并**查找符号结果**，可以查看在项目中或在外部组件的符号。 符号包括命名空间、 类、 接口、 方法和其他语言元素。 库跟踪这些符号和公开到[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]对象管理器填充的数据的工具。  
@@ -45,7 +40,7 @@ ms.locfileid: "51732949"
   
 #### <a name="to-register-a-library-with-the-object-manager"></a>若要向对象管理器注册库  
   
-1.  创建一个库。  
+1. 创建一个库。  
   
     ```vb  
     Private m_CallBrowserLibrary As CallBrowser.Library = Nothing  
@@ -62,7 +57,7 @@ ms.locfileid: "51732949"
   
     ```  
   
-2.  获取对的对象的引用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2>类型并调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A>方法。  
+2. 获取对的对象的引用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2>类型并调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A>方法。  
   
     ```vb  
     Private Sub RegisterLibrary()  
@@ -118,7 +113,7 @@ ms.locfileid: "51732949"
   
 #### <a name="to-unregister-a-library-with-the-object-manager"></a>若要注销的对象管理器库  
   
-1.  获取对的对象的引用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2>类型并调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.UnregisterLibrary%2A>方法。  
+1. 获取对的对象的引用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2>类型并调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.UnregisterLibrary%2A>方法。  
   
     ```vb  
     Private Sub UnregisterLibrary()  
@@ -175,4 +170,3 @@ ms.locfileid: "51732949"
  [旧版语言服务扩展性](../../extensibility/internals/legacy-language-service-extensibility.md)   
  [支持符号浏览工具](../../extensibility/internals/supporting-symbol-browsing-tools.md)   
  [如何：向对象管理器公开库提供的符号列表](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)
-

@@ -1,21 +1,20 @@
 ---
 title: 安装测试代理和测试控制器
-ms.date: 10/24/2018
-ms.prod: visual-studio-dev15
+ms.date: 04/17/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - configure test agents, test lab
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fc0ea16ea10f4479fb635d4b84cb2eaee24c8b7
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c6597c47fd272beec2c82f7d4c2644291b168b5f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53879863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62965409"
 ---
 # <a name="install-test-agents-and-test-controllers"></a>安装测试代理和测试控制器
 
@@ -25,7 +24,7 @@ ms.locfileid: "53879863"
 
 ## <a name="system-requirements"></a>系统要求
 
-下表显示了为 Visual Studio 2017 安装测试代理或测试控制器的系统要求：
+下表显示了为 Visual Studio 安装测试代理或测试控制器的系统要求：
 
 | 项 | 要求 |
 | ---- | ------------ |
@@ -35,9 +34,9 @@ ms.locfileid: "53879863"
 
 ## <a name="install-the-test-controller-and-test-agents"></a>安装测试控制器和测试代理
 
-可从 [visualstudio.microsoft.com](https://visualstudio.microsoft.com/downloads/?q=agents) 中下载 Visual Studio 2017 的代理。 查找 Visual Studio 2017 的代理 ，选择“代理”或“控制器”，然后选择“下载”。 运行已下载的可执行文件，以安装测试代理或控制器。
+可从 [visualstudio.microsoft.com](https://visualstudio.microsoft.com/downloads/?q=agents) 中下载 Visual Studio 的代理。 查找 Visual Studio 2019 的代理，选择“代理”或“控制器”，然后选择“下载”。 运行已下载的可执行文件，以安装测试代理或控制器。
 
-可以从[早期下载](https://visualstudio.microsoft.com/vs/older-downloads/)页中下载 Visual Studio 2015 和 Visual Studio 2013 的代理。
+可以从[早期版本下载](https://visualstudio.microsoft.com/vs/older-downloads/)页中下载 Visual Studio 2017、Visual Studio 2015 和 Visual Studio 2013 的代理。
 
 这些安装程序可用作 ISO 文件，便于在虚拟机上安装。
 

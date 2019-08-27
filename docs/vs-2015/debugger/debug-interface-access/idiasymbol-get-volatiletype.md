@@ -1,14 +1,9 @@
 ---
-title: 'Idiasymbol:: Get_volatiletype |Microsoft Docs'
-ms.custom: ''
+title: IDiaSymbol::get_volatileType | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 19782a4d-40a8-467b-ab7d-58bc4d812309
 caps.latest.revision: 11
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: f05a19d619993c961f22da3d00f5acaa93cefc51
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: d36d688c29894bd65eae29e033ef1d94869e04fd
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51739812"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "64824694"
 ---
 # <a name="idiasymbolgetvolatiletype"></a>IDiaSymbol::get_volatileType
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -46,13 +41,10 @@ HRESULT get_volatileType ( 
  如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
   
 > [!NOTE]
->  返回值为`S_FALSE`表示该属性不是可用于符号。  
+> 返回值为`S_FALSE`表示该属性不是可用于符号。  
   
 ## <a name="remarks"></a>备注  
- 在 c + +，UDT 可标记为`volatile`关键字，指示其内容不能假定存在一个访问从到下一步。  
+ 在C++，可以使用标记 UDT`volatile`关键字，指示其内容不能假定存在一个访问从到下一步。  
   
 ## <a name="see-also"></a>请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
-
-
-

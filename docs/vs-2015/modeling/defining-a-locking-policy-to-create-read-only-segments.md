@@ -1,23 +1,20 @@
 ---
 title: 定义锁定策略以创建只读段 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 ms.assetid: fa549c71-2bf6-4b08-b7b2-7756dd6f1dc8
 caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 298e649704731157164db363dfa198ff6f2cdc41
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 6044e9c47a0dcbc95fd1503906cbd81ac8e44526
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49893816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63422659"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>定义锁定策略以创建只读段
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,7 +24,7 @@ ms.locfileid: "49893816"
  此外，作为 DSL，作者可以定义*锁定策略。* 锁定策略定义哪些锁是允许、 不允许，或强制。 例如，当发布 DSL 时，您可以鼓励第三方开发人员能够扩展使用的新命令。 但也可以使用锁定策略以防止其更改模型的指定部分的只读状态。  
   
 > [!NOTE]
->  可以通过使用反射避开锁定策略。 它为第三方开发人员提供明确的边界，但不是提供强安全性。  
+> 可以通过使用反射避开锁定策略。 它为第三方开发人员提供明确的边界，但不是提供强安全性。  
   
  详细信息和示例目前[!INCLUDE[vsprvs](../includes/vsprvs-md.md)][可视化和建模 SDK](http://go.microsoft.com/fwlink/?LinkId=186128) Web 站点。  
   
@@ -61,15 +58,15 @@ partition.SetLocks(Locks.Delete);
 ### <a name="using-locks"></a>使用锁  
  可以使用锁来实现方案如下所示：  
   
--   不允许对所有元素和关系，除非表示注释的那些更改。 这允许用户对模型进行批注而不更改它。  
+- 不允许对所有元素和关系，除非表示注释的那些更改。 这允许用户对模型进行批注而不更改它。  
   
--   不允许更改中默认分区，但允许在关系图分区中进行更改。 用户可以重新排列关系图中，但不能更改基础模型。  
+- 不允许更改中默认分区，但允许在关系图分区中进行更改。 用户可以重新排列关系图中，但不能更改基础模型。  
   
--   不允许更改到存储在一个单独的数据库中注册的用户的组除外。 对于其他用户，关系图和模型是只读的。  
+- 不允许更改到存储在一个单独的数据库中注册的用户的组除外。 对于其他用户，关系图和模型是只读的。  
   
--   不允许对模型进行更改，如果关系图的布尔属性设置为 true。 提供更改该属性的菜单命令。 这有助于确保它们无法表达的用户意外更改。  
+- 不允许对模型进行更改，如果关系图的布尔属性设置为 true。 提供更改该属性的菜单命令。 这有助于确保它们无法表达的用户意外更改。  
   
--   不允许添加和删除的元素和关系的特定类，但允许属性更改。 用户提供一个固定的窗体，它们可以在其中填充属性。  
+- 不允许添加和删除的元素和关系的特定类，但允许属性更改。 用户提供一个固定的窗体，它们可以在其中填充属性。  
   
 ## <a name="lock-values"></a>锁值  
  可以在应用商店、 分区或单独的模型元素上设置锁。 锁是`Flags`枚举： 可以使用其值进行组合&#124;。  
@@ -82,7 +79,7 @@ partition.SetLocks(Locks.Delete);
   
 |“值”|这意味着如果`IsLocked(Value)`为 true|  
 |-----------|------------------------------------------|  
-|无|没有限制。|  
+|None|没有限制。|  
 |属性|不能更改域属性的元素。 这不适用于生成的域类在关系中的角色的属性。|  
 |添加|不能在分区中创建新元素和链接或存储。<br /><br /> 不适用于`ModelElement`。|  
 |移动|如果无法将元素移动各个分区之间`element.IsLocked(Move)`为 true，或者如果`targetPartition.IsLocked(Move)`为 true。|  
@@ -100,9 +97,9 @@ partition.SetLocks(Locks.Delete);
   
  若要定义锁定策略，必须：  
   
--   创建用于实现 <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy> 的类。  
+- 创建用于实现 <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy> 的类。  
   
--   将此类添加到可通过你的 DSL 的 DocData 的服务。  
+- 将此类添加到可通过你的 DSL 的 DocData 的服务。  
   
 ### <a name="to-define-a-locking-policy"></a>若要定义锁定策略  
  <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy> 具有以下定义：  
@@ -193,6 +190,3 @@ namespace Company.YourDsl.DslPackage // Change
     }  
 }  
 ```
-
-
-

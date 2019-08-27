@@ -8,16 +8,15 @@ helpviewer_keywords:
 - text templates, functions that generate text
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: b78e34205c2b7af36f3c43f2307fd62bfca6fe39
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MT
+ms.openlocfilehash: 2549ad27f0f05d3425dd6625e9d48fdfab4db3a6
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53990511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63386069"
 ---
 # <a name="writing-a-t4-text-template"></a>编写 T4 文本模板
 文本模板包含将从其生成的文本。 例如，用于创建网页的模板将包含"\<html >..."和所有其他标准部件的 HTML 页。 插入到模板中都*控制块*，这是程序代码的片段。 控制块提供变化值，允许文本部件是条件和重复的。
@@ -26,11 +25,11 @@ ms.locfileid: "53990511"
 
  文本模板由以下部件组成：
 
--   **指令**-控制模板的处理方式的元素。
+- **指令**-控制模板的处理方式的元素。
 
--   **文本块**-内容的直接复制到输出。
+- **文本块**-内容的直接复制到输出。
 
--   **控制块**-程序代码，用于将变量值插入到文本，以及控制条件或重复的文本部分。
+- **控制块**-程序代码，用于将变量值插入到文本，以及控制条件或重复的文本部分。
 
 若要试用此主题中的示例，将它们复制到模板文件中所述[使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)。 编辑模板文件后, 保存该文件，，然后检查输出 **.txt**文件。
 
@@ -95,7 +94,7 @@ Hello!
  在代码中，可以使用 `Write();` 语句的位置都可以插入文本块。
 
 > [!NOTE]
->  当嵌入例如循环或条件的复合语句内的文本块时，请始终使用大括号 {...} 若要包含文本块。
+> 当嵌入例如循环或条件的复合语句内的文本块时，请始终使用大括号 {...} 若要包含文本块。
 
 ### <a name="expression-control-blocks"></a>表达式控制块
  表达式控制块计算表达式并将其转换为字符串。 该字符串将插入到输出文件中。
@@ -108,7 +107,7 @@ Hello!
 <#= 2 + 3 #>
 ```
 
- 请注意，开始符号有三个字符“<#=”。
+ 请注意，开始符号有三个字符"< #="。
 
  表达式可以包含作用域中的任何变量。 例如，下面的块输出数字行：
 

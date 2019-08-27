@@ -1,14 +1,9 @@
 ---
 title: 'Idiadatasource:: Opensession |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: a3319ed0-3979-483b-9852-c0af96852c48
 caps.latest.revision: 10
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 79c3ec1974341ddee0a147830491bf324b1fe0c5
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 4bec5507d15374e6e88afd4567d4b0fec9ca6cb7
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51769847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68198604"
 ---
 # <a name="idiadatasourceopensession"></a>IDiaDataSource::openSession
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -45,10 +40,10 @@ HRESULT openSession ( 
 ## <a name="return-value"></a>返回值  
  如果成功，则返回`S_OK`; 否则为返回错误代码。 下表显示了可能的此方法的返回值。  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |E_UNEXPECTED|[IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)对象之前尚未初始化了一个来源为符号。|  
-|E_INVALIDARG|无效`ppSession`参数。|  
+|E_INVALIDARG|`ppSession` 参数无效。|  
 |E_OUTOFMEMORY|内存不足，无法打开会话。|  
   
 ## <a name="remarks"></a>备注  
@@ -72,6 +67,3 @@ if (FAILED(hr))
  [概述](../../debugger/debug-interface-access/overview-debug-interface-access-sdk.md)   
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [查询 .Pdb 文件](../../debugger/debug-interface-access/querying-the-dot-pdb-file.md)
-
-
-

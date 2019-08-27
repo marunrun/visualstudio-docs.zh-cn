@@ -1,7 +1,6 @@
 ---
 title: CA1058:类型不应扩展某些基类型
-ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
+ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
 - TypesShouldNotExtendCertainBaseTypes
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 8446ee40-beb1-49fa-8733-4d8e813471c0
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d52d4f38dc01380c097afb9486963b42faa3c98
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 38d92194a5aa2b46a0cb65a1525bc01d9de67b86
+ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53864902"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69547367"
 ---
 # <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058:类型不应扩展某些基类型
 
@@ -32,33 +31,31 @@ ms.locfileid: "53864902"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 外部可见的类型扩展某些基类型。 目前，此规则将报告从以下类型派生的类型：
+
+类型扩展了以下基类型之一:
 
 - <xref:System.ApplicationException?displayProperty=fullName>
-
 - <xref:System.Xml.XmlDocument?displayProperty=fullName>
-
 - <xref:System.Collections.CollectionBase?displayProperty=fullName>
-
 - <xref:System.Collections.DictionaryBase?displayProperty=fullName>
-
 - <xref:System.Collections.Queue?displayProperty=fullName>
-
 - <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>
-
 - <xref:System.Collections.SortedList?displayProperty=fullName>
-
 - <xref:System.Collections.Stack?displayProperty=fullName>
 
-## <a name="rule-description"></a>规则说明
- 对于.NET Framework 版本 1，它建议派生新异常从<xref:System.ApplicationException>。 已更改的建议和新的异常应派生自<xref:System.Exception?displayProperty=fullName>或在其子类之一<xref:System>命名空间。
+默认情况下, 此规则仅查看外部可见类型, 但这是[可配置](#configurability)的。
 
- 不创建一个子类<xref:System.Xml.XmlDocument>如果你想要创建的基础对象模型或数据源的 XML 视图。
+## <a name="rule-description"></a>规则说明
+
+异常应派生自<xref:System.Exception?displayProperty=fullName> <xref:System>命名空间中的或它的其中一个子类。
+
+<xref:System.Xml.XmlDocument>如果要创建基础对象模型或数据源的 XML 视图, 请不要创建的子类。
 
 ### <a name="non-generic-collections"></a>非泛型集合
- 使用和/或扩展尽可能的泛型集合。 除非以前交付之后不会扩展在代码中，非泛型集合。
 
- **不正确的用法的示例**
+尽可能使用和/或扩展泛型集合。 不要在代码中扩展非泛型集合, 除非你之前已将其发布。
+
+**错误用法的示例**
 
 ```csharp
 public class MyCollection : CollectionBase
@@ -70,7 +67,7 @@ public class MyReadOnlyCollection : ReadOnlyCollectionBase
 }
 ```
 
- **正确用法的示例**
+**正确用法的示例**
 
 ```csharp
 public class MyCollection : Collection<T>
@@ -83,7 +80,19 @@ public class MyReadOnlyCollection : ReadOnlyCollection<T>
 ```
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复与此规则的冲突，派生从不同的基类型或泛型集合类型。
+
+若要修复与此规则的冲突, 请从其他基类型或泛型集合派生该类型。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 不禁止有关显示此规则冲突的警告<xref:System.ApplicationException>。 则可以安全地禁止有关显示此规则冲突的警告<xref:System.Xml.XmlDocument>。 安全地禁止显示非泛型集合有关的警告，如果代码以前发布它。
+
+不要禁止显示此规则发出的有关<xref:System.ApplicationException>的冲突。 可以安全地禁止显示此规则发出的有关<xref:System.Xml.XmlDocument>冲突的警告。 如果以前发布了代码, 则可以安全地禁止显示非泛型集合的警告。
+
+## <a name="configurability"></a>配置
+
+如果从[FxCop 分析器](install-fxcop-analyzers.md)(而不是传统分析) 运行此规则, 则可以根据其可访问性, 将基本代码的哪些部分配置为在上运行此规则。 例如, 若要指定规则只应针对非公共 API 图面运行, 请在项目中的 editorconfig 文件中添加以下键/值对:
+
+```ini
+dotnet_code_quality.ca1058.api_surface = private, internal
+```
+
+您可以为此规则、所有规则或此类别中的所有规则 (设计) 配置此选项。 有关详细信息, 请参阅[配置 FxCop 分析器](configure-fxcop-analyzers.md)。

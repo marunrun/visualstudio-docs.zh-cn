@@ -9,16 +9,15 @@ helpviewer_keywords:
 ms.assetid: 821de34b-eaa9-40af-b9aa-b8305de16899
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 064e6042e734b5564c1f7270ef41a1747919b877
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: 9115e675c43e04496712784371ac2301ef7c2f8a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53880320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62566685"
 ---
 # <a name="compatible-database-systems-for-visual-studio"></a>适用于 Visual Studio 的兼容数据库系统
 
@@ -28,7 +27,7 @@ ms.locfileid: "53880320"
 
 如果使用 Azure 存储 Api，Azure 存储仿真程序在本地计算机上安装在开发过程中为了避免产生费用，直到准备好部署到生产环境。 有关详细信息，请参阅[使用 Azure 存储模拟器进行开发和测试](/azure/storage/common/storage-use-emulator)。
 
-以下列表包含一些更受欢迎的数据库系统，可在 Visual Studio 项目中。 列表并不详尽。 提供 ADO.NET 数据提供程序，与 Visual Studio 工具的深度集成的第三方供应商的列表，请参阅[ADO.NET 数据提供程序](/dotnet/framework/data/adonet/data-providers)。
+以下列表包含一些更受欢迎的数据库系统，可在 Visual Studio 项目中。 表格并不详尽。 提供 ADO.NET 数据提供程序，与 Visual Studio 工具的深度集成的第三方供应商的列表，请参阅[ADO.NET 数据提供程序](/dotnet/framework/data/adonet/data-providers)。
 
 ## <a name="microsoft-sql-server"></a>Microsoft SQL Server
 

@@ -1,14 +1,9 @@
 ---
-title: CA1004： 泛型方法应提供类型参数 |Microsoft Docs
-ms.custom: ''
+title: CA1004:泛型方法应提供类型参数 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA1004
 - GenericMethodsShouldProvideTypeParameter
@@ -20,14 +15,14 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 1e47276ad5be70308dc4c6e249204a65ef9f08b1
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 458817ee19269735be181e08ed12ee1ecdee329f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49880203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68182624"
 ---
-# <a name="ca1004-generic-methods-should-provide-type-parameter"></a>CA1004：泛型方法应提供类型参数
+# <a name="ca1004-generic-methods-should-provide-type-parameter"></a>CA1004:泛型方法应提供类型参数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -56,16 +51,16 @@ ms.locfileid: "49880203"
  [!code-vb[FxCop.Design.Inference#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.Inference/vb/FxCop.Design.Inference.vb#1)]
 
 ## <a name="related-rules"></a>相关的规则
- [CA1005：避免泛型类型的参数过多](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
+ [CA1005:避免泛型类型参数过多](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
 
- [CA1010：集合应实现泛型接口](../code-quality/ca1010-collections-should-implement-generic-interface.md)
+ [CA1010:集合应实现泛型接口](../code-quality/ca1010-collections-should-implement-generic-interface.md)
 
- [CA1000：不要在泛型类型中声明静态成员](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)
+ [CA1000:不要在泛型类型中声明静态成员](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)
 
- [CA1002：不要公开泛型列表](../code-quality/ca1002-do-not-expose-generic-lists.md)
+ [CA1002:不要公开泛型列表](../code-quality/ca1002-do-not-expose-generic-lists.md)
 
- [CA1006：不要将泛型类型嵌套在成员签名中](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
+ [CA1006:不要将嵌套在成员签名中的泛型类型](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
 
- [CA1003：使用泛型事件处理程序实例](../code-quality/ca1003-use-generic-event-handler-instances.md)
+ [CA1003:使用泛型事件处理程序实例](../code-quality/ca1003-use-generic-event-handler-instances.md)
 
- [CA1007：在适用处使用泛型](../code-quality/ca1007-use-generics-where-appropriate.md)
+ [CA1007： 在适用处在适用处使用泛型](../code-quality/ca1007-use-generics-where-appropriate.md)

@@ -1,7 +1,6 @@
 ---
 title: 类设计器错误
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: troubleshooting
 f1_keywords:
 - vs.classdesigner.CPlusPlusViewInDiagramNoTypeFound
@@ -26,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 79d70e70-704c-4255-ab68-c10d6949470e
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cfafcedae225522ec71e0bc35854d827047af2fe
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: aadc0cfb66226f463ff8a2049d4dbf81e7bcf62b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53901683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62975569"
 ---
 # <a name="class-designer-errors"></a>类设计器错误
 

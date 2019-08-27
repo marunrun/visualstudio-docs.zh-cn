@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Office development in Visual Studio, installing tools
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 47435fb5767b19ca36fc94387bdbefe3578f6325
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e559ddfec8570077a78fe980632366b4a57605de
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53955940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62930956"
 ---
 # <a name="configure-a-computer-to-develop-office-solutions"></a>配置计算机以开发 Office 解决方案
 
@@ -27,7 +27,7 @@ ms.locfileid: "53955940"
 |--------------|------------------------|
 |Visual Studio 2017| 与任何版本**Office/SharePoint 开发**工作负荷。|
 |.NET Framework|-.NET Framework 4 或更高版本。|
-|Microsoft Office|<ul><li>任何 Office 套件版本，包括 Office Professional Plus for Office 365。</li><li>以下任一独立应用程序：<br /><br /> <ul><li>Excel</li><li>InfoPath（仅 Office 2013 和 Office 2010）</li><li>Outlook</li><li>PowerPoint</li><li>项目</li><li>Visio</li><li>Word</li></ul></li></ul><br /> Visual Basic for Applications (VBA) 必须作为 Office 的一部分安装。 **重要提示：** Office 2010 应用程序的“即点即用”版本不受支持。|
+|Microsoft Office|<ul><li>任何 Office 套件版本，包括 Office Professional Plus for Office 365。</li><li>以下任一独立应用程序：<br /><br /> <ul><li>Excel</li><li>InfoPath（仅 Office 2013 和 Office 2010）</li><li>Outlook</li><li>PowerPoint</li><li>项目</li><li>Visio</li><li>字</li></ul></li></ul><br /> Visual Basic for Applications (VBA) 必须作为 Office 的一部分安装。 **重要提示：** Office 2010 应用程序的“即点即用”版本不受支持。|
 
 有关详细的安装步骤，请参阅[如何：配置计算机以开发 Office 解决方案](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)。
 
@@ -41,16 +41,15 @@ ms.locfileid: "53955940"
 
      若要确保安装这些工具，请启动 Visual Studio 安装程序，然后选择**修改**按钮。 选中 **“Microsoft Office 开发人员工具”** 复选框，然后选择 **“更新”** 按钮。
 
-- 请确保你未正在运行的即用已传送的 Office 版本。 请参阅[操作说明：验证 Outlook 是否是一台计算机上的即用应用程序](/previous-versions/office/developer/office-2010/ff864733(v=office.14))。
+- 请确保你未正在运行的即用已传送的 Office 版本。 请参阅[如何：验证 Outlook 是否是一台计算机上的即用应用程序](/previous-versions/office/developer/office-2010/ff864733(v=office.14))。
 
 - 确保运行只有一个版本的 Microsoft Office。
 
 如果继续遇到问题，请参阅[Office 解决方案错误的其他支持](../vsto/additional-support-for-errors-in-office-solutions.md)。
 
 ## <a name="see-also"></a>请参阅
-
-[开始&#40;Visual Studio 中的 Office 开发&#41;](../vsto/getting-started-office-development-in-visual-studio.md)  
-[如何：配置计算机以开发 Office 解决方案](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)  
-[如何：安装 Visual Studio Tools for Office runtime 可再发行组件](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)  
-[如何：安装 Office 主互操作程序集](../vsto/how-to-install-office-primary-interop-assemblies.md)  
-[按 Office 应用程序和项目类型提供的功能](../vsto/features-available-by-office-application-and-project-type.md)
+- [开始&#40;Visual Studio 中的 Office 开发&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
+- [如何：配置计算机以开发 Office 解决方案](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)
+- [如何：安装 Visual Studio Tools for Office runtime 可再发行组件](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)
+- [如何：安装 Office 主互操作程序集](../vsto/how-to-install-office-primary-interop-assemblies.md)
+- [按 Office 应用程序和项目类型提供的功能](../vsto/features-available-by-office-application-and-project-type.md)

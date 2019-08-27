@@ -1,14 +1,9 @@
 ---
 title: 大纲显示 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - outlining
 - Visual Studio, expand/collapse code
@@ -21,13 +16,13 @@ ms.assetid: d1476758-9d35-4d74-b63c-310661932ecd
 caps.latest.revision: 38
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: af7f854f6e097471cdd744537a4be4cbd1646400
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: db33392deb16664e48c3b2d90df883294d5cfbaa
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49282511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63441169"
 ---
 # <a name="outlining"></a>大纲显示
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,7 +36,7 @@ ms.locfileid: "49282511"
  “编辑”菜单上的“撤消”和“重做”命令会影响这些操作。 **复制**、**剪切**、**粘贴**和拖放操作可保留大纲信息，但是不保留可折叠区域的状态。 例如，如果复制处于折叠状态的区域，那么**粘贴**操作将把复制的文本作为展开的区域进行粘贴。  
   
 > [!CAUTION]
->  如果更改大纲显示区域，那么大纲显示可能失效。 例如，删除或“查找和替换”操作可能删除区域的结尾标记。  
+> 如果更改大纲显示区域，那么大纲显示可能失效。 例如，删除或“查找和替换”操作可能删除区域的结尾标记。  
   
  “编辑”/“大纲显示”子菜单包含以下命令。  
   
@@ -57,6 +52,3 @@ ms.locfileid: "49282511"
 |全部折叠：\<逻辑结构>|(Visual C++) 折叠函数内的所有结构。|  
   
  你还可以使用 Visual Studio SDK 定义想要展开或折叠的文本区域。 请参阅[演练：大纲显示](../extensibility/walkthrough-outlining.md)。
-
-
-

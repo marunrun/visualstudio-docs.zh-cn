@@ -1,7 +1,6 @@
 ---
 title: 使用类设计器
 ms.date: 05/08/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.diagram
@@ -14,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 40ed2c9d-0ce0-4b95-ad78-5dec2065ccea
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6533827c3aa962cf8856752c0482678684e65755
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ee4910471693a2941ec9548773a2f50e443a639b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53853419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62975560"
 ---
 # <a name="design-and-view-classes-and-types-with-class-designer"></a>使用类设计器设计和查看类和类型
 
@@ -51,7 +50,7 @@ ms.locfileid: "53853419"
 
 除了定义类图显示的内容，还可以更改信息的呈现方式的；有关详细信息，请参阅[如何：自定义类图](how-to-customize-class-diagrams.md)。
 
-在对一个或多个类图进行微调之后，你可以将它们复制到 Microsoft Office 文档中并打印出来，或是将它们作为图像文件导出。 有关更多信息，请参见[如何：将类图元素复制到 Microsoft Office 文档](how-to-copy-class-diagram-elements-to-a-microsoft-office-document.md)、[如何：打印类图](how-to-print-class-diagrams.md)以及[如何：将类图作为图像导出](how-to-export-class-diagrams-as-images.md)。
+在对一个或多个类图进行微调之后，你可以将它们复制到 Microsoft Office 文档中并打印出来，或是将它们作为图像文件导出。 有关详细信息，请参阅[如何：将类图元素复制到 Microsoft Office 文档](how-to-copy-class-diagram-elements-to-a-microsoft-office-document.md)、[如何：打印类图](how-to-print-class-diagrams.md)以及[如何：将类图作为图像导出](how-to-export-class-diagrams-as-images.md)。
 
 > [!NOTE]
 > 类设计器不会跟踪源文件的位置，因此更改项目结构或移动项目中的源文件就可能导致类设计器无法继续对类型进行跟踪，尤其是 typedef 的源类型、基类或关联类型。 可能会收到错误，如“类设计器无法显示此类型”。 如果收到错误，要将修改过的或被重新定位的源代码再次拖到类图中以重新显示。

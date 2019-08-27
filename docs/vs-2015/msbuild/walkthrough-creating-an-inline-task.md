@@ -1,14 +1,9 @@
 ---
 title: 演练：创建内联任务 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 helpviewer_keywords:
 - MSBuild, tutorial
 - MSBuild, tasks
@@ -16,18 +11,17 @@ ms.assetid: 438194cb-668c-41a9-a7e2-c118d14c1ea7
 caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: a399e8285b7b041488a4cecdf2007f8fd1647b2d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: ad081a4d6954d402aa295a94edae3f5bdf50ef4c
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49840710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63445618"
 ---
 # <a name="walkthrough-creating-an-inline-task"></a>演练：创建内联任务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 通常，MSBuild 任务通过编译实现 <xref:Microsoft.Build.Framework.ITask> 接口的类进行创建。 从 .NET Framework 版本 4 开始，可以在项目文件中创建内联任务。 无需创建单独的程序集来承载该任务。 有关详细信息，请参阅[内联任务](../msbuild/msbuild-inline-tasks.md)。  
   
  此演练演示如何创建和运行以下内联任务：  
@@ -53,15 +47,15 @@ ms.locfileid: "49840710"
   
 #### <a name="to-create-and-modify-a-project-file"></a>创建和修改项目文件  
   
-1.  在 Visual Studio 中的“文件”菜单上，单击“新建”，然后单击“项目”。  
+1. 在 Visual Studio 中的“文件”菜单上，单击“新建”，然后单击“项目”。  
   
-2.  在“新建项目”对话框中，选择 Visual C# 项目类型，然后选择“Windows 窗体应用程序”模板。 在“名称”框中键入 `InlineTasks`。 键入解决方案的“位置”，例如 `D:\`。 请确保选择“创建解决方案目录”和清除“添加到源代码管理”，并确保“解决方案名称”为 `InlineTasks`。  
+2. 在“新建项目”对话框中，选择 Visual C# 项目类型，然后选择“Windows 窗体应用程序”模板。 在“名称”框中键入 `InlineTasks`。 键入解决方案的“位置”，例如 `D:\`。 请确保选择“创建解决方案目录”和清除“添加到源代码管理”，并确保“解决方案名称”为 `InlineTasks`。  
   
      单击“确定”创建项目文件。  
   
-3.  在“解决方案资源管理器”中，右键单击 InlineTasks 项目节点，然后单击“卸载项目”。  
+3. 在“解决方案资源管理器”中，右键单击 InlineTasks 项目节点，然后单击“卸载项目”。  
   
-4.  再次右键单击项目节点，然后单击“编辑 InlineTasks.csproj”。  
+4. 再次右键单击项目节点，然后单击“编辑 InlineTasks.csproj”。  
   
      该项目文件出现在代码编辑器中。  
   
@@ -110,7 +104,7 @@ ms.locfileid: "49840710"
     `Hello, world!`  
   
    > [!NOTE]
-   >  如果未显示问候消息，请尝试再次保存项目文件，然后运行 Hello 任务。  
+   > 如果未显示问候消息，请尝试再次保存项目文件，然后运行 Hello 任务。  
   
    通过在代码编辑器和“命令提示符窗口”之间进行交替，可更改项目文件并快速查看结果。  
   
@@ -263,6 +257,3 @@ ms.locfileid: "49840710"
  [内联任务](../msbuild/msbuild-inline-tasks.md)   
  [任务](../msbuild/msbuild-tasks.md)   
  [目标](../msbuild/msbuild-targets.md)
-
-
-

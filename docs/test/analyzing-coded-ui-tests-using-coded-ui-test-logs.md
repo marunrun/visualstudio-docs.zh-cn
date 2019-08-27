@@ -1,19 +1,18 @@
 ---
 title: 使用编码的 UI 测试日志分析编码的 UI 测试
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 7a0913159b59e12c4491331a123045074cbea35f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 76aac39d50dc724916bca3d863c71bacf53407d9
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53944955"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67824487"
 ---
 # <a name="analyzing-coded-ui-tests-using-coded-ui-test-logs"></a>使用编码的 UI 测试日志分析编码的 UI 测试
 
@@ -25,54 +24,56 @@ ms.locfileid: "53944955"
 
 根据方案使用以下方法之一启用日志：
 
-- 在测试项目中不存在 App.config 文件的目标 .NET Framework 版本 4：
+- 测试项目中不存在 App.config  文件：
 
-   1. 打开 *QTAgent32_40.exe.config* 文件。 默认情况下，此文件位于 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE 中。
+   1. 确定运行测试时启动了哪个 QTAgent\*.exe  进程。 一种方法是查看 Windows“任务管理器”  中的“详细信息”  选项卡。
+   
+   2. 从 %ProgramFiles(x86)%\Microsoft Visual Studio\\\<version>\\\<edition>\Common7\IDE  文件夹打开相应的 .config  文件。 例如，如果运行的进程是 QTAgent_40.exe  ，则打开 QTAgent_40.exe.config  。
 
-   2. 将 EqtTraceLevel 的值修改为你想要的日志级别。
-
-   3. 保存该文件。
-
-- 在测试项目中不存在 App.config 文件的目标 .NET Framework 版本 4.5：
-
-   1. 打开 *QTAgent32.exe.config* 文件。 默认情况下，此文件位于 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE 中。
-
-   2. 将 EqtTraceLevel 的值修改为你想要的日志级别。
-
-   3. 保存该文件。
-
-- 存在于测试项目中的 App.config 文件：
-
-    - 打开项目中 App.config 文件，并在配置节点下添加以下代码：
-
+   2. 将 EqtTraceLevel  的值修改为所需的日志级别。
+   
       ```xml
-      <system.diagnostics>
-        <switches>
-          <add name="EqtTraceLevel" value="4" />
-        </switches>
-      </system.diagnostics>`
+      <!-- You must use integral values for "value".
+           Use 0 for off, 1 for error, 2 for warn, 3 for info, and 4 for verbose. -->
+      <add name="EqtTraceLevel" value="4" />
       ```
+
+   3. 保存该文件。
+
+- 如果测试项目中存在 App.config  文件：
+
+  - 打开项目中 App.config 文件，并在配置节点下添加以下代码  ：
+
+    ```xml
+    <system.diagnostics>
+      <switches>
+        <add name="EqtTraceLevel" value="4" />
+      </switches>
+    </system.diagnostics>`
+    ```
 
 - 从测试代码本身启用日志记录：
 
-   <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.LoggerOverrideState%2A> = HtmlLoggerState.AllActionSnapshot；
+   ```csharp
+   Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.LoggerOverrideState = HtmlLoggerState.AllActionSnapshot;
+   ```
 
 ## <a name="step-2-run-your-coded-ui-test-and-view-the-log"></a>步骤 2：运行编码的 UI 测试并查看日志
 
-对 QTAgent32.exe.config 文件就地运行编码的 UI 测试并对其进行修改时，可在“测试资源管理器”结果中看到一条输出链接。 日志文件不仅在测试失败时生成，而且在跟踪级别设置为“详细”时也会对成功的测试生成。
+对 QTAgent\*.exe.config  文件就地运行编码的 UI 测试并对其进行修改时，可在“测试资源管理器”  结果中看到一条输出链接。 日志文件不仅在测试失败时生成，而且在跟踪级别设置为“详细”  时也会对成功的测试生成。
 
-1.  在“测试”菜单上，选择“窗口”，然后选择“测试资源管理器”。
+1. 在“测试”菜单上，选择“窗口”，然后选择“测试资源管理器”    。
 
-2.  在 **“生成”** 菜单上，选择 **“生成解决方案”**。
+2. 在 **“生成”** 菜单上，选择 **“生成解决方案”** 。
 
-3.  在测试资源管理器中，选择想要运行的编码的 UI 测试、打开其快捷菜单，然后选择“运行选定测试”。
+3. 在测试资源管理器中，选择想要运行的编码的 UI 测试、打开其快捷菜单，然后选择“运行选定测试”   。
 
      自动测试会运行并指示它们是否通过。
 
     > [!TIP]
-    > 要查看测试资源管理器，请选择“测试” > “窗口”，然后选择“测试资源管理器”。
+    > 要查看测试资源管理器，请选择“测试” > “窗口”，然后选择“测试资源管理器”     。
 
-4.  在“测试资源管理器”结果中选择“输出”链接。
+4. 在“测试资源管理器”结果中选择“输出”链接   。
 
      ![测试资源管理器中的输出链接](../test/media/cuit_htmlactionlog1.png)
 
@@ -80,7 +81,7 @@ ms.locfileid: "53944955"
 
      ![编码的 UI 测试中的结果和输出链接](../test/media/cuit_htmlactionlog2.png)
 
-5.  选择 UITestActionLog.html 链接。
+5. 选择 UITestActionLog.html 链接  。
 
      该日志显示在你的 Web 浏览器中。
 

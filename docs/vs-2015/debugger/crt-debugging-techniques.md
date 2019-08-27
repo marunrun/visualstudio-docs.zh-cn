@@ -1,14 +1,9 @@
 ---
 title: CRT 调试技术 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - c.runtime.debugging
 dev_langs:
@@ -25,25 +20,25 @@ ms.assetid: 9be561f6-14a8-44ff-925d-d911d5b8e6ff
 caps.latest.revision: 23
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 6745a31dcb7c37d12551248473b072d440116501
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: a69defe75b80ef1f395931017dfc942398ca2710
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51801025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68161477"
 ---
 # <a name="crt-debugging-techniques"></a>CRT 调试方法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-如果调试使用 C 运行库的程序，这些调试方法可能会有用。  
+如果调试使用 C 运行时库的程序，这些调试方法可能会有用。  
   
 ## <a name="in-this-section"></a>本节内容  
  [CRT 调试库使用](../debugger/crt-debug-library-use.md)  
  描述由 C 运行库提供的调试支持并提供有关访问这些工具的说明。  
   
  [用于报告的宏](../debugger/macros-for-reporting.md)  
- 提供以下信息 **_RPTn**并 **_RPTFn**宏 （在 CRTDBG 中定义。H)，将其替换为使用`printf`语句进行调试。  
+ 提供有关 _RPTn 和 _RPTFn 宏（在 CRTDBG.H 中定义）的信息，它们取代了用于调试的 `printf` 语句   。  
   
  [堆分配函数的调试版本](../debugger/debug-versions-of-heap-allocation-functions.md)  
  讨论堆分配函数的特殊“Debug”版本，包括：CRT 如何映射调用、显式调用它们的好处、如何避免转换、跟踪客户端块中单独的分配类型和不调用 _DEBUG 的结果。  
@@ -63,6 +58,3 @@ ms.locfileid: "51801025"
   
  [调试器安全](../debugger/debugger-security.md)  
  提供更为安全的调试的建议。
-
-
-

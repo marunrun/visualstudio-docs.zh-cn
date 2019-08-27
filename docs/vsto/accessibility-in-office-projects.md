@@ -1,7 +1,6 @@
 ---
 title: Office 项目中的辅助功能
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - accessibility [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 32d44c33192d9d4e4fdcf1b8db8cb47102a1df61
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a54c9d5322b35092d635edd00e3b200ee67997a9
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53833321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62945214"
 ---
 # <a name="accessibility-in-office-projects"></a>Office 项目中的辅助功能
 
@@ -41,21 +40,21 @@ Microsoft Visual Studio 和 Microsoft Office 包含许多辅助功能，使你�
 
 #### <a name="to-view-shortcut-keys-for-ribbon-tabs-and-controls-in-the-designer"></a>若要在设计器中查看有关功能区选项卡和控件的键盘快捷方式
 
-1.  在 Visual Studio 中，在**工具**菜单上，单击**选项**。
+1. 在 Visual Studio 中，在**工具**菜单上，单击**选项**。
 
-2.  展开**Office 工具**节点，然后选择**Microsoft Office Excel 键盘**或**Microsoft Office Word 键盘**根据。
+2. 展开**Office 工具**节点，然后选择**Microsoft Office Excel 键盘**或**Microsoft Office Word 键盘**根据。
 
-3.  选择**动态键盘方案**。
+3. 选择**动态键盘方案**。
 
      将出现一条表明必须重新启动 Visual Studio 的更改才会生效。
 
-4.  单击 **“确定”**。
+4. 单击 **“确定”**。
 
-5.  重新启动 Visual Studio 中，并重新打开你的项目。
+5. 重新启动 Visual Studio 中，并重新打开你的项目。
 
-6.  打开你的项目的文档或工作簿设计器。
+6. 打开你的项目的文档或工作簿设计器。
 
-7.  按**F6**为功能区显示键盘快捷方式。
+7. 按**F6**为功能区显示键盘快捷方式。
 
 ## <a name="accessibility-at-runtime"></a>在运行时可访问性
 

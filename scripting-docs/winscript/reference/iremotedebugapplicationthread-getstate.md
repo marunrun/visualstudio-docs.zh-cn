@@ -2,7 +2,6 @@
 title: IRemoteDebugApplicationThread::GetState |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 481beb69d2c4729bb2a030d257e802598131ea00
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: 6534f57c92776dcd3cde9083335becbd66002a32
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54088876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788112"
 ---
 # <a name="iremotedebugapplicationthreadgetstate"></a>IRemoteDebugApplicationThread::GetState
 获取此线程的状态。  
@@ -40,7 +39,7 @@ HRESULT GetState(
  `pState`  
  [out]以下线程状态标志的组合：  
   
-|返回的常量|值|描述|  
+|返回的常量|“值”|描述|  
 |--------------|-----------|-----------------|  
 |THREAD_STATE_RUNNING|0x00000001|线程正在运行。|  
 |THREAD_STATE_SUSPENDED|0x00000002|线程被挂起。|  

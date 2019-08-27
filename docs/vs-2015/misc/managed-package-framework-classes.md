@@ -1,14 +1,9 @@
 ---
 title: 托管包框架类 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: devlang-csharp
+ms.topic: conceptual
 helpviewer_keywords:
 - managed package framework, helper classes
 - managed package helper classes
@@ -16,19 +11,19 @@ helpviewer_keywords:
 - classes [Visual Studio SDK], managed package framework
 ms.assetid: 15aedcc3-c79a-460b-b620-43223f1ae81e
 caps.latest.revision: 24
-manager: douge
-ms.openlocfilehash: 931e73af72d2239ec04ac248b9fa426fe24f249a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 75f7cb153a976614ff790095141a820af80b5834
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49188989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63422752"
 ---
 # <a name="managed-package-framework-classes"></a>托管包框架类
 使用托管代码，托管包框架 (MPF) 类可以用于创建 Vspackage。 它们提供许多 VSPackage 接口的默认实现。 通过隐藏实现细节和复杂性，MPF 使你能够利用最少量的代码创建 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 集成产品。  
   
 > [!WARNING]
->  大多包含托管包框架类的程序集都附带有 Visual Studio SDK。 可以在 [项目的托管包框架](http://mpfproj11.codeplex.com/)下载适用于项目 的托管包框架的源代码。  
+> 大多包含托管包框架类的程序集都附带有 Visual Studio SDK。 可以在 [项目的托管包框架](http://mpfproj11.codeplex.com/)下载适用于项目 的托管包框架的源代码。  
   
 ## <a name="mpf-namespaces"></a>MPF 命名空间  
  下表列出了由 [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]提供的 MPF 命名空间。  

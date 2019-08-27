@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: bd5e0612-a0dc-41cf-a7af-1e87d0d5c35f
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 957077335b8df286d6fa2fbd34b6b81874fddbaa
-ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
-ms.translationtype: MTE95
+ms.openlocfilehash: b32dc6372a6ce4983e9bd11e05a4a662d0ad44ba
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54227767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62901568"
 ---
-# <a name="using-the-tasks-window-c-visual-basic-c"></a>使用任务窗口 (C#，Visual Basic、 c + +)
+# <a name="using-the-tasks-window-c-visual-basic-c"></a>使用任务窗口 (C#，Visual Basic 中， C++)
 
 “任务”窗口与“线程”窗口类似，但它显示的是有关 <xref:System.Threading.Tasks.Task?displayProperty=fullName>、[task_handle](/cpp/parallel/concrt/reference/task-group-class) 或 [WinJS.Promise](/previous-versions/windows/apps/br211867(v=win.10)) 对象（而不是各个线程）的信息。 与线程一样，任务表示可并行运行的异步操作；但是，多个任务可以在同一个线程上运行。
 
@@ -45,7 +45,7 @@ ms.locfileid: "54227767"
 
 “任务”窗口中的列显示了以下信息。
 
-|列名|说明|
+|列名|描述|
 |-----------------|-----------------|
 |**标记**|显示哪些任务已被标记，并且你可以标记或取消标记任务。|
 |**图标**|黄色箭头指示当前任务。 当前任务是当前线程上处于最顶层的任务。<br /><br /> 白色箭头指示中断的任务，即调用调试器时的任务。<br /><br /> 暂停图标指示已被用户冻结的任务。 在列表中右击某一任务可以冻结或取消冻结该任务。|
@@ -55,7 +55,7 @@ ms.locfileid: "54227767"
 |**持续时间**|任务已处于活动状态的秒数。|
 |**完成时间**|任务完成的时间。|
 |**位置**|任务调用堆栈中的当前位置。 将鼠标指针悬停在此单元格上可以查看任务的整个调用堆栈。 已计划的任务在该列中没有相应的值。|
-|**Task**|创建任务时传递到该任务的初始方法以及任何自变量。|
+|**Task**|创建任务时传递到该任务的初始方法以及任何参数。|
 |**AsyncState**|对于托管代码，即任务状态。 默认情况下，此列被隐藏。 若要显示此列，请打开其中一个列标题的上下文菜单。 选择“列”，再选择“AsyncState”。|
 |**父级**|创建此任务的任务的 ID。 如果为空白，则说明该任务没有父级。 这仅适用于托管程序。|
 |**线程分配**|运行任务的线程的 ID 和名称。|
@@ -68,7 +68,7 @@ ms.locfileid: "54227767"
  ![在任务窗口中的快捷方式查看菜单](../debugger/media/parallel_tasks_contextmenu.png "Parallel_Tasks_ContextMenu")
 
 ## <a name="sorting-tasks"></a>对任务进行排序
- 若要按列条件对任务进行排序，请单击相应的列标题。 例如，通过单击**ID**列标题，可以按任务 ID 任务进行排序：等等。 若要反转排序顺序，请再次单击相应的列标题。 当前排序列和排序顺序由该列上的箭头指示。
+ 若要按列条件对任务进行排序，请单击相应的列标题。 例如，通过单击**ID**列标题，可以按任务 ID 任务进行排序：1,2,3,4,5 等。 若要反转排序顺序，请再次单击相应的列标题。 当前排序列和排序顺序由该列上的箭头指示。
 
 ## <a name="grouping-tasks"></a>对任务进行分组
  你可以根据列表视图中的任何列对任务进行分组。 例如，通过右击“状态”列标题并单击“按 > [状态]分组”，可以将所有具有相同状态的任务划分为一个组。 例如，你可以快速查看正在等待任务，以便你可以专注于其阻止原因。 您还可以在调试会话期间折叠不相关的组。 同样，还可以按其他列进行分组。 只需单击组标题旁的按钮即可标记或取消标记组。 下图显示了处于分组模式下的“任务”窗口。

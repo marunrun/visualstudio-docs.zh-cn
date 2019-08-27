@@ -1,7 +1,6 @@
 ---
 title: CA2205:使用 Win32 API 的托管等效项
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - UseManagedEquivalentsOfWin32Api
@@ -12,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 1c65ab59-3e50-4488-a727-3969c7f6cbe4
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: d0b43d328dc122a60d2c397cc59e39426e4c4f4c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 99d53296ad72aef1910a39299be64c7cb03dd49a
+ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53860736"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66714714"
 ---
 # <a name="ca2205-use-managed-equivalents-of-win32-api"></a>CA2205:使用 Win32 API 的托管等效项
 
@@ -36,7 +35,7 @@ ms.locfileid: "53860736"
 
 ## <a name="cause"></a>原因
 
-平台调用定义方法和.NET Framework 类库中存在具有等效功能的方法。
+平台调用定义方法和.NET 中存在具有等效功能的方法。
 
 ## <a name="rule-description"></a>规则说明
 

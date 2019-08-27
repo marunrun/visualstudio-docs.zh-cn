@@ -1,14 +1,9 @@
 ---
 title: 提取接口重构 (C#) |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - vs.csharp.refactoring.extractinterface
 dev_langs:
@@ -20,26 +15,26 @@ ms.assetid: 7d0aa225-3b33-4331-9652-5a67cac6f3d0
 caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
-manager: wpickett
-ms.openlocfilehash: e7c3af675155cf3d47d82457aadbfb6327895d4f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: deb2e446ff051b52e9c34d28abfa99436c064ad6
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49279898"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65680906"
 ---
 # <a name="extract-interface-refactoring-c"></a>提取接口重构 (C#)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 提取接口是重构操作，提供了与来自现有类、 结构或接口的成员创建一个新接口的简单方法。  
   
- 当多个客户端使用的类、 结构或接口中的成员的同一子集或多个类、 结构或接口的共同点成员的子集时，它可用于体现在接口中的成员的子集。 有关使用接口的详细信息，请参阅[接口](http://msdn.microsoft.com/library/2feda177-ce11-432d-81b4-d50f5f35fd37)。  
+ 当多个客户端使用的类、 结构或接口中的成员的同一子集或多个类、 结构或接口的共同点成员的子集时，它可用于体现在接口中的成员的子集。 有关使用接口的详细信息，请参阅[接口](https://msdn.microsoft.com/library/2feda177-ce11-432d-81b4-d50f5f35fd37)。  
   
  提取接口的新文件中生成一个接口，并将光标置于新文件的开头。 可以指定要提取到新的界面、 新接口的名称和生成的文件使用的名称的成员**提取接口**对话框。  
   
 ### <a name="to-use-extract-interface"></a>若要使用提取接口  
   
-1.  创建名为一个控制台应用程序`ExtractInterface`，然后替换`Program`用下面的代码  
+1. 创建名为一个控制台应用程序`ExtractInterface`，然后替换`Program`用下面的代码  
   
     ```csharp  
     // Invoke Extract Interface on ProtoA.  
@@ -50,7 +45,7 @@ ms.locfileid: "49279898"
     }  
     ```  
   
-2.  将光标放在`MethodB`，然后单击**提取接口**上**重构**菜单。  
+2. 将光标放在`MethodB`，然后单击**提取接口**上**重构**菜单。  
   
      **提取接口**对话框随即出现。  
   
@@ -58,9 +53,9 @@ ms.locfileid: "49279898"
   
      此外可以右键单击鼠标，指向**重构**，然后单击**提取接口**以显示**提取接口**对话框。  
   
-3.  单击**全**。  
+3. 单击**全**。  
   
-4.  单击 **“确定”**。  
+4. 单击 **“确定”**。  
   
      可看到新文件： IProtoA.cs 和以下代码：  
   

@@ -2,38 +2,37 @@
 title: 工作流设计器-如何：将注释添加到工作流
 ms.date: 11/04/2016
 ms.topic: conceptual
-ms.prod: visual-studio-dev15
 f1_keywords:
 - System.Activities.Presentation.Annotations.Annotation.UI
 - Annotation
 ms.assetid: 9aa0e8d6-8129-4438-8389-d460611581a7
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 2f440102f1a155f179273f145adc58be54c275e8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c7eb15c6d19ab40df6913dd67466dc20012492b7
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53882784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62950394"
 ---
 # <a name="how-to-add-comments-to-a-workflow-in-the-workflow-designer"></a>如何：在工作流设计器中向工作流添加注释
 
 为方便创建更大、 更复杂的工作流，.NET Framework 4.5，开发人员可将批注添加到以下类型的设计器中的项：
 
--   <xref:System.Activities.Activity>
+- <xref:System.Activities.Activity>
 
--   <xref:System.Activities.Statements.State>
+- <xref:System.Activities.Statements.State>
 
--   <xref:System.Activities.Statements.Transition>
+- <xref:System.Activities.Statements.Transition>
 
--   从 <xref:System.Activities.Statements.FlowNode> 中派生的类
+- 从 <xref:System.Activities.Statements.FlowNode> 中派生的类
 
--   <xref:System.Activities.Variable>
+- <xref:System.Activities.Variable>
 
--   <xref:System.Activities.Argument>
+- <xref:System.Activities.Argument>
 
 > [!IMPORTANT]
 > 批注的内容作为纯文本保存到与工作流关联的 XAML 文件，并可能被其他人读取。 将敏感信息输入批注时要谨慎。
@@ -76,16 +75,16 @@ ms.locfileid: "53882784"
 
 1. 若要同时删除所有批注，请右键单击工作流设计器，然后选择**批注**，**都删除所有批注**。
 
-## <a name="adding-editing-and-deleting-an-annotation-for-a-variable-or-argument"></a>添加、编辑和删除变量或自变量的批注
+## <a name="adding-editing-and-deleting-an-annotation-for-a-variable-or-argument"></a>添加、编辑和删除变量或参数的批注
 
 1. 右键单击某个变量或参数，然后选择“添加批注”。
 
 1. 输入批注的文本。 变量或参数显示的批注图标。
 
-1. 右键单击有批注的某个变量或自变量。 选择“编辑批注”。
+1. 右键单击有批注的某个变量或参数。 选择“编辑批注”。
 
    批注打开以进行编辑。
 
-1. 右键单击有批注的某个变量或自变量。 选择“删除批注”。
+1. 右键单击有批注的某个变量或参数。 选择“删除批注”。
 
    删除批注。

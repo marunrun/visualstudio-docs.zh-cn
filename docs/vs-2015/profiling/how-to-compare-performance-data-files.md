@@ -1,14 +1,9 @@
 ---
 title: 如何：比较性能数据文件 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vsperf.choosediffbinaries
 helpviewer_keywords:
@@ -18,13 +13,13 @@ ms.assetid: 1905b45d-c6b3-43c8-87b1-1aee734f37f9
 caps.latest.revision: 25
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: cf80c86f233a40ba0d65d239ae1668d575a66bb2
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 185494623e019ef666374bd46e52bca0d58738f4
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51752625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68185939"
 ---
 # <a name="how-to-compare-performance-data-files"></a>如何：比较性能数据文件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,31 +34,28 @@ ms.locfileid: "51752625"
   
 ### <a name="to-create-comparison-file-view-for-a-project-in-performance-explorer"></a>在“性能资源管理器”中为项目创建比较文件视图  
   
-1.  在“性能资源管理器”中的“报表”下，选择想要用作用于比较的基线值的 .vsp 或 .vsps 报表文件。  
+1. 在“性能资源管理器”  中的“报表”  下，选择想要用作用于比较的基线值的 .vsp 或 .vsps 报表文件。  
   
-2.  选择要比较的 .vsp 或 .vsps 报表文件。  
+2. 选择要比较的 .vsp 或 .vsps 报表文件。  
   
-3.  右键单击其中一个所选文件，然后单击“比较报告”。  
+3. 右键单击其中一个所选文件，然后单击“比较报告”  。  
   
 ### <a name="to-compare-values"></a>比较值  
   
-1.  在“报表视图”窗口中选择“比较报告”。  
+1. 在“报表视图”窗口中选择“比较报告”  。  
   
-2.  在“表”下拉列表中，选择要比较的函数或模块。  
+2. 在“表”  下拉列表中，选择要比较的函数或模块。  
   
-3.  在“列”下拉列表中，选择要比较的值。  
+3. 在“列”  下拉列表中，选择要比较的值。  
   
-4.  （可选）键入“阈值”的值。  
+4. （可选）键入“阈值”  的值。  
   
-5.  单击“应用”。  
+5. 单击“应用”  。  
   
 ### <a name="to-compare-report-files"></a>比较报表文件  
   
-1.  在“分析”菜单上，选择“比较性能报告”。  
+1. 在“分析”  菜单上，选择“比较性能报告”  。  
   
-2.  在“选择要比较的分析文件”窗口中，浏览并选择“基线文件”分析文件（.vsp 或 .vsps）和“比较文件”（.vsp 或.vsps）。  
+2. 在“选择要比较的分析文件”  窗口中，浏览并选择“基线文件”  分析文件（.vsp 或 .vsps）和“比较文件”  （.vsp 或.vsps）。  
   
-3.  单击 **“确定”**。
-
-
-
+3. 单击 **“确定”** 。

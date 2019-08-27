@@ -1,39 +1,34 @@
 ---
-title: 常见问题： 将外接程序转换为 VSPackage 扩展 |Microsoft Docs
-ms.custom: ''
+title: 常见问题解答：将外接程序转换为 VSPackage 扩展 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 3a01d333-6e31-423f-ae06-5091a4fcb7a9
 caps.latest.revision: 23
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: b2318ff719f51660b4cec0eec6b7a051ea54aa67
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: bc6ed31f96fc2021d0d9e104692f0440cfb78a5e
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51817342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63433741"
 ---
-# <a name="faq-converting-add-ins-to-vspackage-extensions"></a>常见问题：将外接程序转换为 VSPackage 扩展
+# <a name="faq-converting-add-ins-to-vspackage-extensions"></a>常见问题解答：将外接程序转换为 VSPackage 扩展
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 外接程序现在已弃用。 若要使新的 Visual Studio 扩展，您需要创建 VSIX 扩展。 以下是一些有关如何将 Visual Studio 外接程序转换为 VSIX 扩展的常见问题的答案。  
   
 > [!WARNING]
->  对于 C# 和 Visual Basic 项目，开始在 Visual Studio 2015 中，可以使用 VSIX 项目并添加项模板的菜单命令、 工具窗口和 Vspackage。 有关详细信息，请参阅[What's New in Visual Studio 2015 SDK](../extensibility/what-s-new-in-the-visual-studio-2015-sdk.md)。  
+> 对于 C# 和 Visual Basic 项目，开始在 Visual Studio 2015 中，可以使用 VSIX 项目并添加项模板的菜单命令、 工具窗口和 Vspackage。 有关详细信息，请参阅[What's New in Visual Studio 2015 SDK](../extensibility/what-s-new-in-the-visual-studio-2015-sdk.md)。  
   
 > [!IMPORTANT]
->  在许多情况下可只需将外接程序代码传输到 VSPackage 项目项具有的 VSIX 项目。 你可以通过在 <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> 方法中调用 <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> 获取 DTE 自动化对象。  
+> 在许多情况下可只需将外接程序代码传输到 VSPackage 项目项具有的 VSIX 项目。 你可以通过在 <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> 方法中调用 <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> 获取 DTE 自动化对象。  
 >   
->  `DTE2 dte = (DTE2)GetService(typeof(DTE));`  
+> `DTE2 dte = (DTE2)GetService(typeof(DTE));`  
 >   
->  有关详细信息，请参阅[如何在 VSPackage 中运行我的外接程序代码？](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_RunAddin)下面。  
+> 有关详细信息，请参阅[如何在 VSPackage 中运行我的外接程序代码？](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_RunAddin)下面。  
   
 ## <a name="what-software-do-i-need-to-develop-vsix-extensions"></a>开发的 VSIX 扩展需要哪些软件？  
  从 Visual Studio 2015 开始，您并不安装 Visual Studio SDK 从下载中心获得。 它是作为 Visual Studio 安装程序中的可选功能包含在内。 此外可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md)。  
@@ -44,22 +39,22 @@ ms.locfileid: "51817342"
 ## <a name="can-i-convert-my-add-in-project-to-a-vsix-project"></a>可以将我的外接程序项目转换为一个 VSIX 项目中？  
  不能直接向 VSIX 项目转换外接程序项目，因为在 VSIX 项目中使用的机制不是与外接程序项目中的相同。 VSIX 项目模板，以及正确的项目项模板具有大量使它相对容易建立并作为 VSIX 扩展正在运行的代码。  
   
-##  <a name="BKMK_StartDeveloping"></a> 如何开始开发 VSIX 扩展？  
+## <a name="BKMK_StartDeveloping"></a> 如何开始开发 VSIX 扩展？  
  下面是如何使 VSIX 具有菜单命令：  
   
 #### <a name="to-make-a-vsix-extension-that-has-a-menu-command"></a>若要使 VSIX 扩展具有菜单命令  
   
-1.  创建 VSIX 项目。 (**文件**，**新建**，**项目**，或类型**项目**中**快速启动**窗口)。 在**新的项目**对话框框中，展开**Visual C# / 可扩展性**或**Visual Basic / 扩展性**，然后选择**VSIX 项目**。)将项目命名**TestExtension**并为其指定一个位置。  
+1. 创建 VSIX 项目。 (**文件**，**新建**，**项目**，或类型**项目**中**快速启动**窗口)。 在**新的项目**对话框框中，展开**Visual C# / 可扩展性**或**Visual Basic / 扩展性**，然后选择**VSIX 项目**。)将项目命名**TestExtension**并为其指定一个位置。  
   
-2.  添加**自定义命令**项目项模板。 (右键单击项目节点中的**解决方案资源管理器**，然后选择**添加 / 新项**。 在**新的项目**的 Visual C# 或 Visual Basic 中，选择对话框**扩展性**节点，然后选择**自定义命令**。)  
+2. 添加**自定义命令**项目项模板。 (右键单击项目节点中的**解决方案资源管理器**，然后选择**添加 / 新项**。 在**新的项目**的 Visual C# 或 Visual Basic 中，选择对话框**扩展性**节点，然后选择**自定义命令**。)  
   
-3.  按 F5 以在调试模式下生成并运行项目。  
+3. 按 F5 以在调试模式下生成并运行项目。  
   
      将出现 Visual Studio 的第二个实例。 此第二个实例称为实验实例，它具有的设置可能与你要用来编写代码的 Visual Studio 实例的设置不相同。 第一次运行实验实例时，系统将要求你登录到 VS Online 并指定你的主题和配置文件。  
   
-     上**工具**看到名为的按钮 （在实验实例中） 的菜单**我的命令名**。 当选择此按钮时，应显示一条消息： **Testvspackagepackage.menuitemcallback**。  
+     上**工具**看到名为的按钮 （在实验实例中） 的菜单**我的命令名**。 当选择此按钮时，应显示一条消息：**Inside TestVSPackagePackage.MenuItemCallback()** .  
   
-##  <a name="BKMK_RunAddin"></a> 如何在 VSPackage 中运行我的外接程序代码？  
+## <a name="BKMK_RunAddin"></a> 如何在 VSPackage 中运行我的外接程序代码？  
  通常采用以下两种方式之一来运行外接程序代码：  
   
 - 由菜单命令触发（代码位于 `IDTCommandTarget.Exec` 方法中）  
@@ -272,4 +267,3 @@ public void OnItemRenamed(EnvDTE.ProjectItem projItem, string oldName)
     string s = "[Event] Renamed " + oldName + " to " + Path.GetFileName(projItem.get_FileNames(1) + " in project " + projItem.ContainingProject.Name;   
 }  
 ```
-

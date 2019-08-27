@@ -4,16 +4,15 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 6e6c790677ea49ad784e7ff5d48326a1d5e216ad
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 1b4748cd71416ce4d3e9cce64826f1ec97ceef85
+ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53986162"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67692986"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>使用 MEF 扩展 DSL
 
@@ -25,7 +24,7 @@ ms.locfileid: "53986162"
 
 ### <a name="to-enable-your-dsl-to-be-extended-by-mef"></a>若要启用由 MEF 扩展 DSL
 
-1.  创建一个名为的新文件夹**MefExtension**内**DslPackage**项目。 将以下文件添加到它：
+1. 创建一个名为的新文件夹**MefExtension**内**DslPackage**项目。 将以下文件添加到它：
 
      文件名： `CommandExtensionVSCT.tt`
 
@@ -73,7 +72,7 @@ ms.locfileid: "53986162"
     <#@ include file="DslPackage\PackageExtensionEnablement.tt" #>
     ```
 
-2.  创建一个名为的新文件夹**MefExtension**内**Dsl**项目。 将以下文件添加到它：
+2. 创建一个名为的新文件夹**MefExtension**内**Dsl**项目。 将以下文件添加到它：
 
      文件名： `DesignerExtensionMetaDataAttribute.tt`
 
@@ -96,7 +95,7 @@ ms.locfileid: "53986162"
     <#@ include file="Dsl\GestureExtensionController.tt" #>
     ```
 
-3.  将以下行添加到名为现有文件**DslPackage\Commands.vsct**:
+3. 将以下行添加到名为现有文件**DslPackage\Commands.vsct**:
 
     ```xml
     <Include href="MefExtension\CommandExtensionVSCT.vsct"/>
@@ -104,51 +103,51 @@ ms.locfileid: "53986162"
 
     在现有之后插入行`<Include>`指令。
 
-4.  打开*DslDefinition.dsl*。
+4. 打开*DslDefinition.dsl*。
 
-5.  在 DSL 资源管理器中选择**编辑器 \ 验证**。
+5. 在 DSL 资源管理器中选择**编辑器 \ 验证**。
 
-6.  在属性窗口中，请确保至少一个属性名为**使用**是`true`。
+6. 在属性窗口中，请确保至少一个属性名为**使用**是`true`。
 
-7.  在中**解决方案资源管理器**工具栏上，单击**转换所有模板**。
+7. 在中**解决方案资源管理器**工具栏上，单击**转换所有模板**。
 
      下面的每个文件添加显示附属文件。
 
-8.  生成并运行解决方案，以验证仍然正常工作。
+8. 生成并运行解决方案，以验证仍然正常工作。
 
 你的 DSL 现已启用 MEF 的。 您可以编写作为 MEF 扩展的菜单命令、 笔势处理程序和验证约束。 您可以在 DSL 解决方案以及其他自定义代码中编写这些扩展。 此外，您或其他开发人员可以编写扩展 DSL 的单独 Visual Studio 扩展。
 
-## <a name="creating-an-extension-for-a-mef-enabled-dsl"></a>创建适用于启用了 MEF 的 DSL 扩展
+## <a name="create-an-extension-for-a-mef-enabled-dsl"></a>为启用 MEF 的 DSL 创建扩展
 
 如果你有权访问由自己或其他人创建的启用 MEF 的 DSL，你可以为其编写扩展。 扩展可用于添加菜单命令、 笔势处理程序或验证约束。 若要创作这些扩展，您可以使用 Visual Studio 扩展 (VSIX) 解决方案。 该解决方案由两部分组成： 一个类库项目的生成代码的程序集，并打包程序集的 VSIX 项目。
 
-#### <a name="to-create-a-dsl-extension-vsix"></a>若要创建 DSL 扩展 VSIX
+### <a name="to-create-a-dsl-extension-vsix"></a>若要创建 DSL 扩展 VSIX
 
-1. 创建一个新类库项目。 若要执行此操作，在**新的项目**对话框中，选择**Visual Basic**或**Visual C#** ，然后选择**类库**。
+1. 创建新的“类库”项目  。
 
-2. 新类库项目中，将添加到 DSL 的程序集的引用。
+2. 在新的项目中，将添加到 DSL 的程序集的引用。
 
    - 此程序集通常具有文件名结尾"。Dsl.dll"。
 
-   - 如果你有权访问 DSL 项目，可以找到程序集文件的目录下**Dsl\bin\\\\***
+   - 如果你有权访问 DSL 项目，可以找到程序集文件的目录下**Dsl\\bin\\\***
 
    - 如果你有权访问的 DSL 的 VSIX 文件，您可以通过 VSIX 文件的文件扩展名更改为".zip"找到程序集。 解压缩.zip 文件。
 
 3. 添加以下.NET 程序集的引用：
 
-   -   Microsoft.VisualStudio.Modeling.Sdk.11.0.dll
+   - Microsoft.VisualStudio.Modeling.Sdk.11.0.dll
 
-   -   Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0.dll
+   - Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0.dll
 
-   -   Microsoft.VisualStudio.Modeling.Sdk.Shell.11.0.dll
+   - Microsoft.VisualStudio.Modeling.Sdk.Shell.11.0.dll
 
-   -   System.ComponentModel.Composition.dll
+   - System.ComponentModel.Composition.dll
 
-   -   System.Windows.Forms.dll
+   - System.Windows.Forms.dll
 
-4. 在同一解决方案中创建一个 VSIX 项目。 若要执行此操作，在**新的项目**对话框框中，展开**Visual Basic**或**Visual C#**，单击**扩展性**，然后选择**VSIX 项目**。
+4. 创建一个新**VSIX 项目**项目。
 
-5. 在解决方案资源管理器，右键单击 VSIX 项目，然后单击**设为启动项目**。
+5. 在中**解决方案资源管理器**，右键单击 VSIX 项目并选择**设为启动项目**。
 
 6. 在新的项目中，打开**source.extension.vsixmanifest**。
 
@@ -158,7 +157,7 @@ ms.locfileid: "53986162"
 
    1. 在中**source.extension.vsixmanifest**，单击**添加引用**
 
-   2. 在对话框中，单击**添加负载**，然后查找的 DSL 的 VSIX 文件。 在 DSL 解决方案中生成的 VSIX 文件 * * DslPackage\bin\\\\* * *。
+   2. 在对话框中，单击**添加负载**，然后查找的 DSL 的 VSIX 文件。 在 DSL 解决方案中生成的 VSIX 文件**DslPackage\\bin\\\*** 。
 
        这允许用户在同时安装 DSL 和扩展。 如果用户已安装 DSL，则将安装你的扩展。
 
@@ -248,7 +247,7 @@ namespace MyMefExtension
 
 笔势处理程序可以处理拖动到关系图上从任何位置、 内部或外部 Visual Studio 的对象。 下面的示例使用户可以将文件从 Windows 资源管理器拖动到关系图上。 它将创建包含文件名称的元素。
 
-可以编写处理程序来处理来自其他 DSL 模型和 UML 模型拖动的。 有关更多信息，请参见[如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)。
+可以编写处理程序来处理来自其他 DSL 模型和 UML 模型拖动的。 有关详细信息，请参阅[如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)。
 
 ```csharp
 using System.ComponentModel.Composition;
@@ -377,5 +376,5 @@ namespace MefExtension
 
 - [传送 Visual Studio 扩展](../extensibility/shipping-visual-studio-extensions.md)
 - [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)
-- [如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)
+- [如何：添加拖放句柄](../modeling/how-to-add-a-drag-and-drop-handler.md)
 - [域特定语言中的验证](../modeling/validation-in-a-domain-specific-language.md)

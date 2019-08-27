@@ -1,25 +1,22 @@
 ---
 title: 使用 Visual Studio API 打开 UML 模型 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - UML API, opening models in Visual Studio
 ms.assetid: 38423682-f2a7-4d2a-a2cd-fd680e9b4b4d
 caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 62b8700e85ccab271dbfdc4f9bac504ee64197a6
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 5baa2168eeae12f1a85fdce0b2981e267dcd6fbc
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51779614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68158895"
 ---
 # <a name="open-a-uml-model-by-using-the-visual-studio-api"></a>使用 Visual Studio API 打开 UML 模型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,11 +25,11 @@ ms.locfileid: "51779614"
   
  如果你只想读取程序代码中的模型而不使其对用户可见，你可以使用以下方法：  
   
--   Visual Studio 模型总线允许你访问他们中的模型和元素，并提供一种在模型间建立连接的标准方法。 有关详细信息，请参阅[与其他模型和工具集成 UML 模型](../modeling/integrate-uml-models-with-other-models-and-tools.md)。  
+- Visual Studio 模型总线允许你访问他们中的模型和元素，并提供一种在模型间建立连接的标准方法。 有关详细信息，请参阅[与其他模型和工具集成 UML 模型](../modeling/integrate-uml-models-with-other-models-and-tools.md)。  
   
--   你可以在只读模式下打开某个模型。 有关详细信息，请参阅[读取程序代码中的 UML 模型](../modeling/read-a-uml-model-in-program-code.md)。  
+- 你可以在只读模式下打开某个模型。 有关详细信息，请参阅[读取程序代码中的 UML 模型](../modeling/read-a-uml-model-in-program-code.md)。  
   
-##  <a name="Showing"></a> 在 Visual Studio 中打开模型和关系图  
+## <a name="Showing"></a> 在 Visual Studio 中打开模型和关系图  
  若要在用户界面中打开某个模型，请使用标准 Visual Studio API `EnvDTE.DTE`。 有两个有用的强制转换，你可以在建模项目项上执行：  
   
 - 如果项目是建模项目，并且已在当前 AppDomain 中加载该项目，则 `EnvDTE.Project` 可以在 `IModelingProject` 间来回转换。  
@@ -47,7 +44,7 @@ ms.locfileid: "51779614"
   
 - Microsoft.VisualStudio.Modeling.Sdk.[版本号]  
   
-- Microsoft.VisualStudio.Modeling.Sdk.Diagrams.[版本号]  
+- Microsoft.VisualStudio.Modeling.Sdk.Diagrams.[version]  
   
 - Microsoft.VisualStudio.Shell.Immutable.[版本号]  
   
@@ -121,6 +118,3 @@ foreach (ProjectItem item in project.ProjectItems)
 ## <a name="see-also"></a>请参阅  
  [使用 UML API 编程](../modeling/programming-with-the-uml-api.md)   
  [扩展 UML 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)
-
-
-

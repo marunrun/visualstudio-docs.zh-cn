@@ -2,7 +2,6 @@
 title: IJsDebugStackWalker 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -12,12 +11,12 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d79950c6d5595a0a8a95623a7510c5523f16e41b
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: d06af2c509339d9499f66e1f267c54c69951e225
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54087889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62977807"
 ---
 # <a name="ijsdebugstackwalker-interface"></a>IJsDebugStackWalker 接口
 表示指定线程的堆栈查看器。  

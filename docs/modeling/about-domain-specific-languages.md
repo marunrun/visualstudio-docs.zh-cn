@@ -6,16 +6,15 @@ helpviewer_keywords:
 - Domain-Specific Language
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: bef799b564c4d7bc7eada541bf0c88067403738e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 4684a0256e01cafe79fc90ae1ae97dfc2be047d6
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53940808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823357"
 ---
 # <a name="about-domain-specific-languages"></a>关于域特定语言
 
@@ -25,11 +24,11 @@ ms.locfileid: "53940808"
 
 你的业务和你的项目还处理特殊组无法与 DSL 所述的概念。 例如，可以定义一个这些应用程序的 DSL:
 
--   在网站中的导航路径的计划。
+- 在网站中的导航路径的计划。
 
--   电子组件的绑定关系图。
+- 电子组件的绑定关系图。
 
--   传送带和行李处理设备的机场的网络。
+- 传送带和行李处理设备的机场的网络。
 
 在设计 DSL 时，您定义*域类*为每个域，如网页、 lamp 或机场签入服务台中的重要概念。 您定义*域关系*如超链接、 网络或传送带将概念连接在一起。
 
@@ -115,12 +114,12 @@ DSL 的典型的应用程序是生成程序代码或其他项目。 在定义 DS
 
 使用域特定语言的大多数软件开发团队按照以下步骤来创建和使用其模型：
 
--   团队将永远不会更改的部分从域的变量部分区分开来。
+- 团队将永远不会更改的部分从域的变量部分区分开来。
 
--   开发人员编写代码的固定部分，并保留的变量部分的扩展点。
+- 开发人员编写代码的固定部分，并保留的变量部分的扩展点。
 
--   首席软件开发人员或架构师创建一种特定于域的语言，其中包含域和变量部分的扩展点的固定部分的设计模式。
+- 首席软件开发人员或架构师创建一种特定于域的语言，其中包含域和变量部分的扩展点的固定部分的设计模式。
 
--   首席软件开发人员或架构师团队生成的各种应用程序的开发人员到部署域特定语言。
+- 首席软件开发人员或架构师团队生成的各种应用程序的开发人员到部署域特定语言。
 
--   每个开发人员创建适用于特定应用程序的模型。
+- 每个开发人员创建适用于特定应用程序的模型。

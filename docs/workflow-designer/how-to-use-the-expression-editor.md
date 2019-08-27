@@ -2,21 +2,20 @@
 title: 工作流设计器-如何：使用表达式编辑器
 ms.date: 11/04/2016
 ms.topic: conceptual
-ms.prod: visual-studio-dev15
 f1_keywords:
 - System.Activities.Presentation.View.ExpressionTextBox.UI
 ms.assetid: b5f961dd-6dda-41a9-9cae-0383d479ef3d
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 63fca3051ce50f728cf83976f6ef6a5204ad35b8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ce46f1db900aa5c37b49a1cc228290d7d99d29a2
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53956239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62949534"
 ---
 # <a name="how-to-use-the-expression-editor"></a>如何：使用表达式编辑器
 
@@ -37,18 +36,18 @@ ms.locfileid: "53956239"
 
 ## <a name="use-the-expression-editor"></a>使用表达式编辑器
 
-1.  在 Visual Studio 中，打开一个新的或现有的工作流项目。
+1. 在 Visual Studio 中，打开一个新的或现有的工作流项目。
 
-2.  向工作流添加诸如 <xref:System.Activities.Statements.Assign> 之类的活动。
+2. 向工作流添加诸如 <xref:System.Activities.Statements.Assign> 之类的活动。
 
     > [!NOTE]
-    > 多种工作流活动具有表达式编辑器。 表达式 TextBlock 还显示在变量设计器、参数设计器和动态参数设计器中。 <xref:System.Activities.Statements.Assign> 活动用作一个示例。
+    > 多种工作流活动具有表达式编辑器。 表达式 TextBlock 还显示在变量设计器、自变量设计器和动态自变量设计器中。 <xref:System.Activities.Statements.Assign> 活动用作一个示例。
 
-3.  在 <xref:System.Activities.Statements.Assign> 活动的活动设计器中单击左侧表达式编辑器。
+3. 在 <xref:System.Activities.Statements.Assign> 活动的活动设计器中单击左侧表达式编辑器。
 
-     灰色水印字符串**\<到 >** 并**\<输入 VB 表达式 >** 是默认文本字符串中的表达式编辑器<xref:System.Activities.Statements.Assign>活动。
+     灰色水印字符串 **\<到>** 并 **\<输入VB 表达式>** 是默认文本字符串中的表达式编辑器<xref:System.Activities.Statements.Assign>活动。
 
-4.  输入表达式。 如果您输入一个字符串，请确保在该字符串两端加上引号。 如果你选择将表达式自变量绑定到一个变量，请不要使用引号。
+4. 输入表达式。 如果您输入一个字符串，请确保在该字符串两端加上引号。 如果你选择将表达式自变量绑定到一个变量，请不要使用引号。
 
      完成后，选择区域或区域外部表达式编辑器来将焦点移到设计器的另一个部分。 转移焦点会导致编译器以验证该表达式，如前面所述。
 

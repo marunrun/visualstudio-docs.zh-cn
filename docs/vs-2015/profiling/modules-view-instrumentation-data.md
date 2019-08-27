@@ -1,27 +1,22 @@
 ---
 title: “模块”视图 - 检测数据 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Modules view
 ms.assetid: 895b9589-1987-4160-916f-53b898a69cf0
 caps.latest.revision: 15
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 55a01dab80d15bcd7356bc059db2be6d10f504a7
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 4455f850ad533f17cd9f6cb33e7e874621d0bb2c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51808514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68205886"
 ---
 # <a name="modules-view---instrumentation-data"></a>“模块”视图 - 检测数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,7 +26,7 @@ ms.locfileid: "51808514"
 ## <a name="general"></a>常规  
  常规列标识视图行中的函数。  
   
-|列|描述|  
+|列|说明|  
 |------------|-----------------|  
 |**名称**|函数或模块的名称。|  
 |**函数行号**|此函数在源文件中的起始行号。|  
@@ -47,7 +42,7 @@ ms.locfileid: "51808514"
 ## <a name="elapsed-inclusive-values"></a>已用非独占值  
  已用非独占值表示函数位于调用堆栈上的时间。 此时间包括子函数中和对操作系统的调用中所用的时间，如上下文切换和输入/输出操作。  
   
-|列|描述|  
+|列|说明|  
 |------------|-----------------|  
 |**已用非独占时间**|-   对于函数，是此函数中所用的时间。 这包括子函数中和对操作系统的调用中所用的时间，如上下文切换和输入/输出操作。<br />-   对于模块，是模块中的至少一个函数处于调用堆栈中的时间。|  
 |**已用非独占时间百分比**|此模块或函数的总已用非独占时间占分析运行期间所用的总已用非独占时间的百分比。|  
@@ -58,7 +53,7 @@ ms.locfileid: "51808514"
 ## <a name="elapsed-exclusive-values"></a>已用独占值  
  已用独占值表示函数在调用堆栈顶部直接执行的时间。 此时间包括对操作系统的调用所用的时间，如上下文切换和输入/输出操作，但不包括子函数所用的时间。  
   
-|列|描述|  
+|列|说明|  
 |------------|-----------------|  
 |**已用独占时间**|-   对于函数，是此模块或函数中所用的时间。 这包括对操作系统的调用，如上下文切换和输入/输出操作，但不包括子函数中所用的时间。<br />-   对于模块，是此模块中函数的已用独占时间之和。|  
 |**已用独占时间百分比**|此模块或函数的总已用独占时间占分析运行期间所用的总已用独占时间的百分比。|  
@@ -69,7 +64,7 @@ ms.locfileid: "51808514"
 ## <a name="application-inclusive-values"></a>应用程序非独占值  
  应用程序非独占值表示函数位于调用堆栈上的时间。 此时间不包括对操作系统的调用中所用的时间，如上下文切换和输入/输出操作。但是，此时间包括子函数中所用的时间。  
   
-|列|描述|  
+|列|说明|  
 |------------|-----------------|  
 |**应用程序非独占时间**|-   对于函数，是对此函数的调用中所用的时间。 这包括子函数中所用的时间，但不包括对操作系统的调用，如上下文切换和输入/输出操作。<br />-   对于模块，是模块中的至少一个函数处于调用堆栈中的时间。 这不包括对操作系统的调用中所用的时间。|  
 |**应用程序非独占时间百分比**|此模块或函数的应用程序非独占时间占分析运行期间所用的总已用非独占时间的百分比。|  
@@ -80,7 +75,7 @@ ms.locfileid: "51808514"
 ## <a name="application-exclusive-values"></a>应用程序独占值  
  应用程序独占值表示此模块或函数中所用的时间。 此值不包括子函数中所用的时间，也不包括对操作系统的调用，如上下文切换和输入/输出操作。  
   
-|列|描述|  
+|列|说明|  
 |------------|-----------------|  
 |**应用程序独占时间**|对此模块或函数的所有调用的总应用程序独占时间。|  
 |**应用程序独占时间百分比**|此模块或函数的应用程序独占时间占分析运行期间所用的总已用独占时间的百分比。|  
@@ -88,10 +83,7 @@ ms.locfileid: "51808514"
 |**最长应用程序独占时间**|-   对于函数，是对此函数的调用的最长应用程序独占时间。<br />-   对于模块，是对此模块中函数的所有调用的最长应用程序独占时间。|  
 |**最短应用程序独占时间**|-   对于函数，是对此模块或函数的调用的最短应用程序独占时间。<br />-   对于模块，是对此模块中函数的所有调用的最短应用程序独占时间。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [“模块”视图](../profiling/modules-view-sampling-data.md)   
  [“模块”视图 - 检测](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   
  [“模块”视图 - 采样](../profiling/modules-view-dotnet-memory-sampling-data.md)
-
-
-

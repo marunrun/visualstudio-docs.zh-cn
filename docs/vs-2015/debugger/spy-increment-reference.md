@@ -1,14 +1,9 @@
 ---
 title: Spy + + 参考 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 helpviewer_keywords:
 - reference, Spy++
 - Spy++ reference
@@ -16,13 +11,13 @@ ms.assetid: 2cf41bc9-55f3-4bb6-b28d-08c75215debd
 caps.latest.revision: 7
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: ed7aea0617db31c6edec9a739d7bae66d8fbe43f
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: c3402eefb480efe2ec1d82b9f689f94235c2934a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51817589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68148126"
 ---
 # <a name="spy-reference"></a>Spy++ 参考
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,7 +28,7 @@ ms.locfileid: "51817589"
  [菜单命令](../debugger/menu-commands.md)  
  介绍每个 Spy + + 菜单上可用的命令。  
   
- [字体对话框](../debugger/font-dialog-box-microsoft-spy-increment-help.md)  
+ [“字体”对话框](../debugger/font-dialog-box-microsoft-spy-increment-help.md)  
  用于配置在 Spy + + 视图窗口中使用的字符字体。  
   
  [Spy++ 视图的搜索工具](../debugger/search-tools-for-spy-increment-views.md)  
@@ -59,10 +54,7 @@ ms.locfileid: "51817589"
   
 ## <a name="related-sections"></a>相关章节  
  [使用 Spy++](../debugger/using-spy-increment.md)  
- 引入了 Spy + + 工具，并说明如何使用它。  
+ 介绍 Spy + + 工具，并说明如何使用它。  
   
  [Spy++ 视图](../debugger/spy-increment-views.md)  
  介绍 windows、 消息、 进程和线程的 Spy + + 树的视图。
-
-
-

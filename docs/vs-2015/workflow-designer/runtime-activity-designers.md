@@ -1,23 +1,20 @@
 ---
 title: 运行时活动设计器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 ms.assetid: be18aa36-7909-4dd6-a786-b46959675a58
 caps.latest.revision: 3
 author: gewarren
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: 4385a692167fcfa0c39cb5c5f2bc18c7695733e6
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 72b5c30750486d8078fc44b7d49716eb5e8488e5
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49306860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007335"
 ---
 # <a name="runtime-activity-designers"></a>运行时活动设计器
 各运行时活动设计器用于持久保存和终止工作流活动。 本节中包含的主题介绍如何使用 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 活动设计器。  

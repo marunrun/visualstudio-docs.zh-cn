@@ -1,14 +1,9 @@
 ---
-title: 如何： 为 ASP.NET 应用程序启用调试 |Microsoft Docs
-ms.custom: ''
+title: 如何：为 ASP.NET 应用程序启用调试 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -22,13 +17,13 @@ ms.assetid: 3beed819-cece-4864-8184-bd410000973a
 caps.latest.revision: 40
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: c199e03af8a21b3134ae0e2afac7bd9b153be2f4
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 07036fd7c1db7dc8b56502ab9c914f1ba808e876
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51749121"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65703666"
 ---
 # <a name="how-to-enable-debugging-for-aspnet-applications"></a>如何：为 ASP.NET 应用程序启用调试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,36 +31,36 @@ ms.locfileid: "51749121"
 若要启用调试，必须同时在“项目属性”  页和应用程序的 web.config 文件中启用它。  
   
 > [!NOTE]  
-> 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+> 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ### <a name="to-enable-aspnet-debugging-in-the-project-properties-visual-basicc"></a>在项目属性中启用 ASP.NET 调试 (Visual Basic/C#)  
   
-1.  在 **“解决方案资源管理器”** 中，右键单击 Web 项目的名称，然后选择 **“属性”**。  
+1. 在 **“解决方案资源管理器”** 中，右键单击 Web 项目的名称，然后选择 **“属性”**。  
   
-2.  在项目属性页中，单击 **“Web”** 选项卡。  
+2. 在项目属性页中，单击 **“Web”** 选项卡。  
   
-3.  在“调试器” 下，选中“ASP.NET”  复选框。  
+3. 在“调试器” 下，选中“ASP.NET”  复选框。  
   
 ### <a name="to-enable-debugging-in-the-webconfig-file"></a>在 web.config 文件中启用调试  
   
-1.  通过使用任何标准文本编辑器或 XML 分析器打开 web.config 文件。  
+1. 通过使用任何标准文本编辑器或 XML 分析器打开 web.config 文件。  
   
     > [!NOTE]  
     > 但是，不可以通过使用 Web 浏览器远程访问该文件。 出于安全原因， [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 将 Microsoft IIS 配置为帮助防止对 Web.config 文件的直接浏览器访问。 如果你尝试使用浏览器访问配置文件，则将遇到 HTTP 访问错误 403（禁止访问）。  
   
-2.  Web.config 是一个 XML 文件，因此包含使用标记来标记的嵌套节。 查找 `configuration/system.web/compilation` 元素。 如果 compilation 元素不存在，则创建它。  
+2. Web.config 是一个 XML 文件，因此包含使用标记来标记的嵌套节。 查找 `configuration/system.web/compilation` 元素。 如果 compilation 元素不存在，则创建它。  
   
-3.  如果 `compilation` 元素不包含 `debug` 特性，请向元素添加该特性。  
+3. 如果 `compilation` 元素不包含 `debug` 特性，请向元素添加该特性。  
   
-4.  确保 `debug` 特性值设置为 `true`。  
+4. 确保 `debug` 特性值设置为 `true`。  
   
 web.config 文件应类似于下面的示例。 请注意，在 configuration 和 system.web 元素之间可存在节  
   
--   configuration 和 system.web 元素之间的元素节  
+- configuration 和 system.web 元素之间的元素节  
   
--   system.web 和 compilation 元素之间的元素节  
+- system.web 和 compilation 元素之间的元素节  
   
--   compilation 元素可以包含其他特性和元素  
+- compilation 元素可以包含其他特性和元素  
   
 ## <a name="example"></a>示例  
   
@@ -94,8 +89,3 @@ web.config 文件应类似于下面的示例。 请注意，在 configuration �
   
 ## <a name="see-also"></a>请参阅  
 [调试 ASP.NET 和 AJAX 应用程序](../debugger/debugging-aspnet-and-ajax-applications.md)  
-  
-
-
-
-

@@ -1,5 +1,5 @@
 ---
-title: 在文档级解决方案中的文档保护
+title: 文档级解决方案中的文档保护
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,49 +13,49 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], restricted permissions
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b6894aa05adf55945383cb3c2e28b8c5fdebdc16
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5a894f1e0fb9d5e9d55f46c442bc975de0bd900d
+ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53908848"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68872073"
 ---
-# <a name="document-protection-in-document-level-solutions"></a>在文档级解决方案中的文档保护
-  可以使用 Microsoft Office Word 和 Microsoft Office Excel 文档级项目中的保护的功能。 这些功能可以阻止未经授权的用户对受保护文档各部分进行更改。  
-  
- [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
-  
- 使用 Excel，你可以启用保护打开和关闭设计器中打开该工作簿时发生。 使用 Word，可以启用保护仅在设计器之外。 在运行时，可以启用或禁用保护，以编程方式为 Word 和 Excel。  
-  
- 在设计器中打开的文档上启用文档保护后，所有控件都将都从中**工具箱**进行不可用，或不能将任何内容，从**数据源**对文档的窗口。  
-  
-## <a name="serverdocument-and-protected-documents"></a>ServerDocument 和受保护的文档  
- 如果保护文档，则数据缓存不能从外部文档进行访问。 不能使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>类来检索或处理数据缓存在受保护的文档，或使用其他方法的<xref:Microsoft.VisualStudio.Tools.Applications.Runtime.ServerDocument>类。  
-  
-## <a name="word-document-protection-in-the-designer"></a>在设计器中的 Word 文档保护  
- 如果在 Visual Studio 中打开时，可添加到 Word 文档或模板保护，不能启动强制在设计器中的保护。 文档是在设计模式下，虽然它在 Visual Studio 中打开，且它之前，必须在运行模式可以开始实施保护。  
-  
- 但是，如果创建使用启用了保护的现有 Word 文档的项目，在设计器中打开时保护此文档。 不能编辑受保护的文档，部分，但您仍然可以编写代码在代码编辑器中自动执行该文档。 在 Visual Studio 中打开文档时启用保护，也不能生成项目。  
-  
- 在文档处于设计器中打开，以便可以编辑该文档并生成项目时，你可以关闭保护。 在进行调试; 时不能将关闭设计器中复制的保护在调试期间打开的文档是从设计器中打开的单独副本 (输出副本存储在*\bin*目录的 Visual Basic 中，并*\bin\debug*目录C#).  
-  
- 可以启用在副本上的文档的设计器中打开通过关闭 Visual Studio 中的项目中，打开位于项目目录中的文档的副本并开启保护的保护。  
-  
-## <a name="enforce-word-document-protection-on-build"></a>强制在生成的 Word 文档保护  
- Visual Studio 将启动强制在生成过程中，为 Word 文档和模板保护，以便文档打开以进行调试时启用保护。 使用空密码保护此文档。  
-  
- 保护是在过程中启用生成因此，如果在文档中的代码<xref:Microsoft.Office.Tools.Word.Document.Startup>可能会导致异常或更改应用程序的行为的事件，此代码可以正确调试。 如果启用保护后打开文档时，不能调试或测试初始化代码。  
-  
-## <a name="setting-the-password"></a>设置密码  
- Visual Studio 会自动启用保护，但默认情况下提供没有密码。 如果你想拥有密码的文档保护，必须将其添加，然后再部署你的解决方案。 添加密码，可允许授权的用户从文档中; 删除保护如果没有密码，不能轻松地删除保护。 有关设置密码的详细信息，请参阅特定 Office 应用程序中的帮助。  
-  
-## <a name="see-also"></a>请参阅  
- [如何：以编程方式保护文档和文档的某些部分](../vsto/how-to-programmatically-protect-documents-and-parts-of-documents.md)   
- [Office 开发示例和演练](../vsto/office-development-samples-and-walkthroughs.md)   
- [信息权限管理和托管的代码扩展概述](../vsto/information-rights-management-and-managed-code-extensions-overview.md)   
- [Office 文档上的密码保护](../vsto/password-protection-on-office-documents.md)   
- [如何：允许代码以使用受限权限的文档的后台运行](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)   
- [设计和创建 Office 解决方案](../vsto/designing-and-creating-office-solutions.md)  
+# <a name="document-protection-in-document-level-solutions"></a>文档级解决方案中的文档保护
+  可以在文档级项目中使用 Microsoft Office Word 和 Microsoft Office Excel 的保护功能。 这些功能会阻止未经授权的用户更改文档的受保护部分。
+
+ [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
+
+ 使用 Excel, 可以在设计器中打开工作簿时打开和关闭保护。 使用 Word, 只能在设计器外部打开保护。 在运行时, 可以以编程方式为 Word 和 Excel 启用或禁用保护。
+
+ 在设计器中打开的文档上启用文档保护时, 将从 "**工具箱**" 中删除所有控件或使其不可用, 您不能将任何内容从 "**数据源**" 窗口拖动到文档中。
+
+## <a name="serverdocument-and-protected-documents"></a>ServerDocument 和受保护文档
+ 如果文档受到保护, 则无法从文档外部访问数据缓存。 不能使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>类来检索或操作缓存在受保护文档中的数据, 也不能使用<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>类的其他方法。
+
+## <a name="word-document-protection-in-the-designer"></a>设计器中的 Word 文档保护
+ 如果在 Visual Studio 中打开 Word 文档或模板时向其中添加保护, 则无法在设计器中执行保护。 文档在 Visual Studio 中打开时处于设计模式, 并且它必须处于运行模式, 然后才能开始强制保护。
+
+ 但是, 如果您创建一个项目, 该项目使用启用了保护的现有 Word 文档, 则该文档将在设计器中打开时受到保护。 您无法编辑文档的受保护部分, 但您仍可以在代码编辑器中编写代码以自动执行文档。 如果在 Visual Studio 中打开该文档时启用了保护, 则也无法生成该项目。
+
+ 在设计器中打开文档时, 可以关闭保护, 以便可以编辑文档和生成项目。 在进行调试; 时不能将关闭设计器中复制的保护在调试期间打开的文档是从设计器中打开的单独副本 (输出副本存储在 *\bin* 目录的 Visual Basic 中，并 *\bin\debug* 目录C#).
+
+ 通过在 Visual Studio 中关闭项目、打开项目目录中的文档副本和打开保护, 你可以在设计器中打开的文档的副本上启用保护。
+
+## <a name="enforce-word-document-protection-on-build"></a>在生成时强制执行 Word 文档保护
+ Visual Studio 在生成过程中开始对 Word 文档和模板进行保护, 以便在打开文档进行调试时启用保护。 文档使用空密码进行保护。
+
+ 在生成过程中启用保护, 因此, 如果文档<xref:Microsoft.Office.Tools.Word.Document.Startup>事件中有可能导致异常或更改应用程序行为的代码, 则可以正确调试此代码。 如果在打开文档后启用保护, 则无法调试或测试初始化代码。
+
+## <a name="setting-the-password"></a>设置密码
+ Visual Studio 会自动启用保护, 但默认情况下不提供密码。 如果希望文档保护具有密码, 则必须在部署解决方案之前添加密码。 通过添加密码, 你可以允许授权用户从文档中删除保护;如果没有密码, 则无法轻松删除保护。 有关设置密码的详细信息, 请参阅特定 Office 应用程序中的帮助。
+
+## <a name="see-also"></a>请参阅
+- [如何：以编程方式保护文档和文档的某些部分](../vsto/how-to-programmatically-protect-documents-and-parts-of-documents.md)
+- [Office 开发示例和演练](../vsto/office-development-samples-and-walkthroughs.md)
+- [信息权限管理和托管代码扩展概述](../vsto/information-rights-management-and-managed-code-extensions-overview.md)
+- [Office 文档上的密码保护](../vsto/password-protection-on-office-documents.md)
+- [如何：允许代码在具有受限权限的文档的后台运行](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)
+- [设计和创建 Office 解决方案](../vsto/designing-and-creating-office-solutions.md)

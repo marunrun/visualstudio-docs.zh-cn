@@ -1,38 +1,33 @@
 ---
-title: 如何：创建基本朗伯着色器 | Microsoft Docs
-ms.custom: ''
+title: 如何：创建基本朗伯着色器 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: ec5c10fb-9600-4240-8280-d59451ea1d68
 caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 1f4fbf209e970367ded8e019087287d429bad8fc
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 227c9c84022e3c3340b4821df9dbd2dbe9465a03
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49929720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63414685"
 ---
-# <a name="how-to-create-a-basic-lambert-shader"></a>如何：创建基本朗伯着色器
+# <a name="how-to-create-a-basic-lambert-shader"></a>如何：创建基本 Lambert 着色器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本文档演示如何使用着色器设计器和定向关系图着色器语言 (DGSL) 创建实现经典朗伯照明模型的照明着色器。  
   
  本文档演示了这些活动：  
   
--   将节点添加到着色器关系图  
+- 将节点添加到着色器关系图  
   
--   断开节点  
+- 断开节点  
   
--   连接节点  
+- 连接节点  
   
 ## <a name="the-lambert-lighting-model"></a>朗伯照明模型  
  朗伯照明模型将环境照明和方向照明应用到三维场景中的阴影对象。 环境分量在三维场景中提供基本照明级别。 方向分量提供来自定向（远）光源的额外照明。 环境照明会均匀影响场景中的所有表面，而不考虑其方向。 对于给定表面，它是表面的环境色和场景中环境照明的颜色和强度的结合产物。 定向照明根据相对于光源方向的表面方向，以不同方式影响场景中的每个表面。 它是表面的漫射颜色和方向，以及光源的颜色、强度和方向生成的结果。 直接面向光源的表面接收比例最大，直接背对的表面无接收比例。 在朗伯照明模型下，会结合环境分量和一个或多个定向分量来确定对象上每个点的总漫射颜色比例。  
@@ -54,7 +49,7 @@ ms.locfileid: "49929720"
    下图显示了已完成的着色器关系图和应用于茶壶体的着色器预览。  
   
 > [!NOTE]
->  为了更好地演示该图着色器的效果，使用着色器的 **MaterialDiffuse** 参数指定了橙色。 游戏或应用可使用此参数为每个对象提供唯一的颜色值。 有关材质参数的信息，请参阅[着色器设计器](../designers/shader-designer.md)中的“预览着色器”部分。  
+> 为了更好地演示该图着色器的效果，使用着色器的 **MaterialDiffuse** 参数指定了橙色。 游戏或应用可使用此参数为每个对象提供唯一的颜色值。 有关材质参数的信息，请参阅[着色器设计器](../designers/shader-designer.md)中的“预览着色器”部分。  
   
  ![着色器关系图及其效果预览。](../designers/media/digit-lambert-effect-graph.png "Digit-Lambert-Effect-Graph")  
   
@@ -64,14 +59,11 @@ ms.locfileid: "49929720"
   
  ![应用于模型的朗伯照明。](../designers/media/digit-lambert-effect-result.png "Digit-Lambert-Effect-Result")  
   
- 若要深入了解如何将向三维模型应用着色器，请参阅[如何：向三维模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)。  
+ 有关如何向三维模型应用着色器的详细信息，请参阅[如何：向三维模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [如何：向三维模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)   
  [如何：导出着色器](../designers/how-to-export-a-shader.md)   
- [如何：创建基本冯氏着色器](../designers/how-to-create-a-basic-phong-shader.md)   
+ [如何：创建基本 Phong 着色器](../designers/how-to-create-a-basic-phong-shader.md)   
  [着色器设计器](../designers/shader-designer.md)   
  [着色器设计器节点](../designers/shader-designer-nodes.md)
-
-
-

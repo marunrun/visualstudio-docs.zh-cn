@@ -7,16 +7,15 @@ helpviewer_keywords:
 - models, versions of Visual Studio
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 06a34bd09c84c3afc4162c4930fc34963b56b8fb
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7d8366c0f87830a77f550dabbce2e8f875171418
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53905447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823976"
 ---
 # <a name="read-models-and-diagrams-in-other-visual-studio-editions"></a>在其他 Visual Studio 版本中读取模型和关系图
 
@@ -35,16 +34,16 @@ ms.locfileid: "53905447"
 
 若要读取依赖项关系图，所需的文件的最小集如下所示：
 
--   两个关系图文件为你想要读取，例如，该关系图**MyDiagram.classdiagram 和 MyDiagram.classdiagram.layout**。
+- 两个关系图文件为你想要读取，例如，该关系图**MyDiagram.classdiagram 和 MyDiagram.classdiagram.layout**。
 
     > [!NOTE]
     > 有关依赖项关系图，还应具有名为的文件_MyDiagram_**。 layerdiagram.suppressions**。
 
--   建模项目文件 (**MyModel.modelproj**)
+- 建模项目文件 (**MyModel.modelproj**)
 
--   根模型文件 (**ModelDefinition\MyModel.uml**)
+- 根模型文件 (**ModelDefinition\MyModel.uml**)
 
--   在关系图中引用的任何包的包文件 (**ModelDefinition\MyPackage.uml**)
+- 在关系图中引用的任何包的包文件 (**ModelDefinition\MyPackage.uml**)
 
 ## <a name="changes-that-you-can-make-in-read-only-mode"></a>在只读模式下可执行的更改
 
@@ -58,5 +57,5 @@ ms.locfileid: "53905447"
 
 ## <a name="see-also"></a>请参阅
 
-- [依赖项关系图：引用](../modeling/layer-diagrams-reference.md)
+- [依赖项关系图：参考](../modeling/layer-diagrams-reference.md)
 - [为应用程序创建模型](../modeling/create-models-for-your-app.md)

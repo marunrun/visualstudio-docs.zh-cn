@@ -1,90 +1,36 @@
 ---
-title: 通过测试资源管理器进行测试驱动开发
-ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
+title: 测试驱动开发演练
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: f38b38fbce688b405887ec39cc6e234f5d7b70d2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 17ee82630e75e0b0ea8b4a069249c2dccad9010e
+ms.sourcegitcommit: 9fc8b144d4ed1c46aba87c0b7e1d24454e0eea9d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53833923"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68493165"
 ---
-# <a name="quickstart-test-driven-development-with-test-explorer"></a>快速入门：通过测试资源管理器进行测试驱动开发
+# <a name="walkthrough-test-driven-development-using-test-explorer"></a>演练：通过测试资源管理器进行测试驱动开发
 
-我们建议你创建单元测试来帮助保持你的代码在众多递进式开发步骤中正确运行。 你可以使用几个框架来编写单元测试，包括第三方开发的一些框架。 某些测试框架专用于不同语言或平台中的测试。 “测试资源管理器”为其中任意框架中的单元测试提供了一个接口。 大多数常用框架都有适配器，你可以为其他框架编写自己的适配器。
+创建单元测试，以通过增量代码更改来帮助保持代码正常工作。 你可以使用几个框架来编写单元测试，包括第三方开发的一些框架。 某些测试框架专用于不同语言或平台中的测试。 “测试资源管理器”为其中任意框架中的单元测试提供了一个接口。 有关测试资源管理器的详细信息，请参阅[使用测试资源管理器运行单元测试](run-unit-tests-with-test-explorer.md)和[测试资源管理器常见问题解答](test-explorer-faq.md)  。
 
- “测试资源管理器”将取代 Visual Studio 早期版本中的单元测试窗口。 其优点包括：
+本演练演示如何使用 Microsoft 测试框架 (MSTest) 开发 C# 语言的受测试方法。 你可以将其轻松改写为其他语言，也可加以调整以使用其他测试框架，例如 NUnit。 有关详细信息，请参阅[安装第三方单元测试框架](install-third-party-unit-test-frameworks.md)。
 
--   使用一个接口运行 .NET 未托管的数据库和其他类型的测试。
+## <a name="create-a-test-and-generate-code"></a>创建测试并生成代码
 
--   使用选定的单元测试框架，如 NUnit 或 MSTest 框架。
+1. 选择 C#“类库(.NET Standard)”项目  。 此项目将包含我们要测试的代码。 将项目命名为 MyMath  。
 
--   在一个窗口中查看你需要的所有信息。
+2. 在同一解决方案中，添加一个新的“MSTest 测试项目(.NET Core)”项目  。 将该测试项目命名为 MathTests  。
 
-## <a name="use-test-explorer"></a>测试资源管理器
- ![显示“全部运行”按钮的单元测试资源管理器](../test/media/unittestexplorer-beta-.png)
+   ![新建代码和测试项目](../test/media/test-driven-development-ide.png)
 
-### <a name="to-run-unit-tests-by-using-test-explorer"></a>使用测试资源管理器运行单元测试
-
-1. 使用你选择的测试框架创建单元测试。
-
-    例如，创建使用 MSTest 框架的测试：
-
-   1.  创建测试项目。
-
-        在“新建项目”对话框中，展开“Visual Basic”、“Visual C#”或“Visual C++”，再选择“测试”。
-
-        选择 **“单元测试项目”**。
-
-   2.  将每个单元测试编写为一个方法。 为每个测试方法添加 `[TestMethod]` 特性为前缀。
-
-2. 如果各个测试没有防止其以任何顺序运行的依赖项，则可使用工具栏上的 ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png) 切换按钮来打开并行测试执行。 这可以显著降低运行所有测试所需的时间。
-
-3. 在菜单栏上，依次选择“测试” > “运行单元测试” > “所有测试”。
-
-    解决方案生成，测试运行。
-
-    “测试资源管理器”将打开并显示结果摘要。
-
-   **查看完整的测试列表：** 请在任一类别中选择“全部显示”。
-
-   **查看测试结果的详细信息：** 请在“测试资源管理器”中选择该测试以查看详细信息，例如详细信息窗格中的异常消息。
-
-   **导航到测试的代码：** 请在“测试资源管理器”中双击该测试或从快捷菜单上选择“打开测试”。
-
-   **调试测试：** 请打开一个或多个测试的快捷菜单，然后选择“调试选定的测试”。
-
-> [!IMPORTANT]
-> 显示的结果是最近运行的测试结果。 彩色的结果栏仅显示曾经运行的测试的结果。 例如，你运行过多个测试，其中部分失败，然后仅运行了成功的测试，则结果栏将完全显示绿色。
-
-
-> [!NOTE]
-> 如果未显示任何测试，请确保已安装适配器，将“测试资源管理器”与你使用的测试框架连接起来。 有关详细信息，请参阅[安装第三方单元测试框架](install-third-party-unit-test-frameworks.md)。
-
-
-##  <a name="walkthrough-using-unit-tests-to-develop-a-method"></a>演练：使用单元测试开发方法
- 本演练演示如何使用 Microsoft 单元测试框架开发 C# 语言的受测试方法。 你可以将其轻松改写为其他语言，也可加以调整以使用其他测试框架，例如 NUnit。 有关详细信息，请参阅[安装第三方单元测试框架](install-third-party-unit-test-frameworks.md)。
-
-### <a name="create-the-test-and-method"></a>创建测试和方法
-
-1. 创建 Visual C# 类库项目。 此项目将包含我们希望提供的代码。 在此示例中，该类名为 `MyMath`。
-
-2. 创建测试项目。
-
-   -   在“新建项目”对话框中，依次选择“Visual C#” > “测试”，然后选择“单元测试项目”。
-
-        ![新建代码和测试项目](../test/media/unittestexplorerwalk1.png)
-
-3. 编写基本测试方法。 根据特定输入验证获取的结果：
+3. 编写一个简单的测试方法，用于验证针对特定输入获得的结果。 将下面的代码添加到 `UnitTest1` 类中:
 
    ```csharp
-
    [TestMethod]
    public void BasicRooterTest()
    {
@@ -96,98 +42,93 @@ ms.locfileid: "53833923"
      // Run the method under test:
      double actualResult = rooter.SquareRoot(input);
      // Verify the result:
-     Assert.AreEqual(expectedResult, actualResult,
-         delta: expectedResult / 100);
+     Assert.AreEqual(expectedResult, actualResult, delta: expectedResult / 100);
    }
    ```
 
-4. 从测试中生成方法。
+4. 从测试代码生成类型。
 
-   1.  将游标放在 `Rooter` 上，然后在快捷菜单中依次选择“生成” > “新类型”。
+   1. 将光标放在 `Rooter` 上，然后在灯泡菜单中，选择“生成类型 Rooter” > “生成新类型”   。
 
-   2.  在 **“生成新类型”** 对话框中，将 **“项目”** 设置为类库项目。 在此示例中，设为 `MyMath`。
+      ![生成新类型快速操作](media/test-driven-development-generate-new-type.png)
 
-   3.  将游标放在 `SquareRoot` 上，然后在快捷菜单中依次选择“生成” > “方法存根”。
+   2. 在“生成类型”对话框中，将“项目”设置为 MyMath，并选择类库项目，然后选择“确定”     。
 
-5. 运行单元测试。
+      ![Visual Studio 2019 中的“生成类型”对话框](media/test-driven-development-generate-type-dialog.png)
 
-   1.  在“测试”菜单上，依次选择“运行单元测试” > “所有测试”。
+5. 从测试代码生成方法。 将光标放在 `SquareRoot` 上，然后在灯泡菜单中，选择“生成方法 Rooter.SquareRoot”  。
 
-        解决方案将生成并运行。
+6. 运行单元测试。
 
-        “测试资源管理器”将打开并显示结果。
+   1. 要打开“测试资源管理器”，请在“测试”菜单中，依次选择“Windows” > “测试资源管理器”     。
 
-        测试显示在 **“失败的测试”** 下。
+   2. 在“测试资源管理器”中，选择“全部运行”按钮运行测试   。
 
-6. 选择测试名称。
+   解决方案生成，测试运行但失败。
 
-    “测试资源管理器”的下半部分将显示测试的详细信息。
+7. 选择测试名称。
 
-7. 选择 **“堆栈跟踪”** 下的项以查看测试失败位置。
+   “测试详细信息摘要”窗格中将显示测试的详细信息  。
 
-   ![显示失败的测试的单元测试资源管理器。](../test/media/unittestexplorerwalkthrough2.png)
+   ![测试资源管理器中的测试详细信息摘要](media/test-driven-development-test-detail-summary.png)
 
-   此时，你已创建了测试和存根，在此基础上进行修改以使测试通过。
+8. 选择“堆栈跟踪”下的顶部链接，跳到测试失败的位置  。
 
-#### <a name="after-every-change-make-all-the-tests-pass"></a>在每次更改之后，都要使所有测试通过
+此时，你已创建了测试和存根，在此基础上进行修改以使测试通过。
 
-1.  在 MyMath\Rooter.cs 中，改进 `SquareRoot` 代码：
+## <a name="verify-a-code-change"></a>验证代码更改
+
+1. 在 Class1.cs 文件中，改进 `SquareRoot` 的代码  ：
 
     ```csharp
     public double SquareRoot(double input)
-     {
-       return input / 2;
-     }
+    {
+        return input / 2;
+    }
     ```
 
-2.  在“测试资源管理器”中，选择 **“全部运行”**。
+2. 在“测试资源管理器”  中，选择“全部运行”  。
 
-     代码将生成，测试运行。
+   解决方案生成，测试运行并通过。
 
-     测试通过。
+   ![显示通过的测试的测试资源管理器](../test/media/test-driven-development-passed-test.png)
 
-     ![显示通过的测试的单元测试资源管理器。](../test/media/unittestexplorerwalkthrough3.png)
+## <a name="extend-the-range-of-inputs"></a>扩展输入的范围
 
-#### <a name="add-tests-to-extend-the-range-of-inputs"></a>添加测试以扩展输入的范围
+要提高代码在所有情况下均正常运行的概率，请添加扩大输入值范围的测试。
 
-1.  若要提高代码在所有情况下均正常运行的概率，请添加扩大输入值范围的测试。
+> [!TIP]
+> 避免修改已通过的现有测试。 相反，请添加新测试。 仅当用户需求变化时更改现有测试。 此策略有助于确保在扩展代码时不丢失现有功能。
 
-    > [!TIP]
-    > 避免修改已通过的现有测试。 相反，请添加新测试。 仅当用户需求变化时更改现有测试。 此策略有助于确保在扩展代码时不丢失现有功能。
-
-     在测试类中，添加以下测试，其中涉及到一系列输入值：
+1. 在测试类中，添加以下测试，其中涉及到一系列输入值：
 
     ```csharp
     [TestMethod]
     public void RooterValueRange()
     {
-      // Create an instance to test:
-      Rooter rooter = new Rooter();
-      // Try a range of values:
-      for (double expectedResult = 1e-8;
-          expectedResult < 1e+8;
-          expectedResult = expectedResult * 3.2)
-      {
-        RooterOneValue(rooter, expectedResult);
-      }
+        // Create an instance to test.
+        Rooter rooter = new Rooter();
+
+        // Try a range of values.
+        for (double expected = 1e-8; expected < 1e+8; expected *= 3.2)
+        {
+            RooterOneValue(rooter, expected);
+        }
     }
 
     private void RooterOneValue(Rooter rooter, double expectedResult)
     {
-      double input = expectedResult * expectedResult;
-      double actualResult = rooter.SquareRoot(input);
-      Assert.AreEqual(expectedResult, actualResult,
-          delta: expectedResult / 1000);
+        double input = expectedResult * expectedResult;
+        double actualResult = rooter.SquareRoot(input);
+        Assert.AreEqual(expectedResult, actualResult, delta: expectedResult / 1000);
     }
     ```
 
-2.  在“测试资源管理器”中，选择 **“全部运行”**。
+2. 在“测试资源管理器”  中，选择“全部运行”  。
 
-     新测试失败，但第一个测试仍然通过。
+   新测试失败（但第一个测试仍然通过）。 要查找失败位置，请选择失败的测试，然后在“测试详细信息摘要”窗格中查看详细信息  。
 
-     若要查找失败位置，请选择失败的测试，然后在“测试资源管理器”的下半部分，选择 **“堆栈跟踪”** 顶部的项。
-
-3.  检查所测试的方法，以查明可能出错的地方。 在 `MyMath.Rooter` 类中，重写代码：
+3. 检查所测试的方法，以查明可能出错的地方。 按如下所示更改 `SquareRoot` 代码：
 
     ```csharp
     public double SquareRoot(double input)
@@ -203,89 +144,86 @@ ms.locfileid: "53833923"
     }
     ```
 
-4.  在“测试资源管理器”中，选择 **“全部运行”**。
+4. 在“测试资源管理器”  中，选择“全部运行”  。
 
-     现在两个测试均通过。
+   现在两个测试均通过。
 
-#### <a name="add-tests-for-exceptional-cases"></a>为异常用例添加测试
+## <a name="add-tests-for-exceptional-cases"></a>为异常用例添加测试
 
-1.  为负输入添加测试：
+1. 为负输入添加新测试：
 
     ```csharp
     [TestMethod]
-     public void RooterTestNegativeInputx()
-     {
-         Rooter rooter = new Rooter();
-         try
-         {
-             rooter.SquareRoot(-10);
-         }
-         catch (ArgumentOutOfRangeException e)
-         {
-             return;
-         }
-         Assert.Fail();
-     }
+    public void RooterTestNegativeInputx()
+    {
+        Rooter rooter = new Rooter();
+        try
+        {
+            rooter.SquareRoot(-10);
+        }
+        catch (System.ArgumentOutOfRangeException)
+        {
+            return;
+        }
+        Assert.Fail();
+    }
     ```
 
-2.  在“测试资源管理器”中，选择 **“全部运行”**。
+2. 在“测试资源管理器”  中，选择“全部运行”  。
 
-     所测试的方法形成循环，必须手动取消。
+   所测试的方法形成循环，必须手动取消。
 
-3.  选择 **“取消”**。
+3. 在“测试资源管理器”的工具栏上选择“取消”   。
 
-     测试在 10 秒后停止。
+   测试将停止执行。
 
-4.  修正方法代码：
+4. 通过在方法的开头添加以下 `if` 语句来修复 `SquareRoot` 代码：
 
     ```csharp
-
     public double SquareRoot(double input)
     {
-      if (input <= 0.0)
-      {
-        throw new ArgumentOutOfRangeException();
-      }
-    ...
-    ```
-
-5.  在“测试资源管理器”中，选择 **“全部运行”**。
-
-     所有测试均通过。
-
-#### <a name="refactor-without-changing-tests"></a>在不更改测试的情况下重构代码
-
-1.  简化代码，但不要更改测试。
-
-    > [!TIP]
-    >  重构是旨在提高代码性能或易理解性的更改。 其目的不在于更改代码的行为，因此不更改测试。
-    >
-    > 我们建议你分开进行功能扩展和重构步骤。 保持测试不变，就能有信心在重构时不意外引入 bug。
-
-    ```csharp
-    public class Rooter
-    {
-      public double SquareRoot(double input)
-      {
         if (input <= 0.0)
         {
-          throw new ArgumentOutOfRangeException();
+            throw new ArgumentOutOfRangeException();
         }
+        ...
+    ```
+
+5. 在“测试资源管理器”  中，选择“全部运行”  。
+
+   所有测试均通过。
+
+## <a name="refactor-the-code-under-test"></a>重构所测试的代码
+
+重构代码，但不要更改测试。
+
+> [!TIP]
+> 重构是旨在提高代码性能或易理解性的更改  。 其目的不在于更改代码的行为，因此不更改测试。
+>
+> 我们建议你分开进行功能扩展和重构步骤。 保持测试不变，就能有信心在重构时不意外引入 bug。
+
+1. 按如下所示更改在 `SquareRoot` 方法中计算 `result` 的行：
+
+    ```csharp
+    public double SquareRoot(double input)
+    {
+        if (input <= 0.0)
+        {
+            throw new ArgumentOutOfRangeException();
+        }
+
         double result = input;
         double previousResult = -input;
         while (Math.Abs(previousResult - result) > result / 1000)
         {
-          previousResult = result;
-          result = (result + input / result) / 2;
-          //was: result = result - (result * result - input) / (2*result);
+            previousResult = result;
+            result = (result + input / result) / 2;
+            //was: result = result - (result * result - input) / (2*result);
         }
         return result;
-      }
     }
     ```
 
-2.  选择 **“全部运行”**。
+2. 选择“全部运行”，并验证所有测试是否仍然通过  。
 
-     所有测试仍然通过。
-
-     ![显示 3 个通过的测试的单元测试资源管理器。](../test/media/unittestexplorerwalkthrough4.png)
+   ![显示 3 个通过的测试的测试资源管理器](../test/media/test-driven-development-three-passed-tests.png)

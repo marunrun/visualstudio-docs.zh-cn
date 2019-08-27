@@ -1,14 +1,9 @@
 ---
 title: '&lt;签名&gt;(JavaScript) |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - <signature> JavaScript XML tag
 - signature JavaScript XML tag
@@ -16,13 +11,13 @@ ms.assetid: 319138e7-cfbe-4b37-9643-2ddb7f9c63d4
 caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 0b3278087545a4d49d5f4f2f0d3f6942c4ec6d9a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 02a4c36f3969ca0f9ef61e817afb82eb8247f041
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49293002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68203487"
 ---
 # <a name="ltsignaturegt-javascript"></a>&lt;签名&gt;(JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,10 +40,10 @@ ms.locfileid: "49293002"
  可选。 指定在其中查找文件的名称`externalid`。 如果没有，则忽略此特性`externalid`存在。 此为可选属性。 默认值为但而不是.js 的.xml 文件扩展名的当前文件的名称。 默认情况下，用于本地化的托管的资源查找规则用于找到的文件。  
   
  `helpKeyword`  
- 可选。 F1 帮助关键字。  
+ 可选。 F1 帮助的关键字。  
   
  `locid`  
- 可选。 有关字段的本地化信息的标识符。 该标识符是任一成员 ID 或其对应于`name`属性在 OpenAjax 元数据定义消息绑定中的值。 标识符类型取决于中指定的格式[ \<loc >](../ide/loc-javascript.md)标记。  
+ 可选。 有关字段的本地化信息的标识符。 标识符是成员 ID 或对应于 OpenAjax 元数据定义的消息绑定中的 `name` 属性值。 标识符类型取决于 [\<loc>](../ide/loc-javascript.md) 标记中指定的格式。  
   
 ## <a name="remarks"></a>备注  
  使用一个`<signature>`元素为每个重载中的.js 文件或使用以下任意函数说明`<signature>`元素指定每个外部成员 ID。  
@@ -56,7 +51,7 @@ ms.locfileid: "49293002"
  `<signature>`元素必须置于任何语句之前在函数体中。 使用时[\<摘要 >](../ide/summary-javascript.md)， [ \<param >](../ide/param-javascript.md)，或者[\<返回 >](../ide/returns-javascript.md)元素`<signature>`元素，将放置在其他元素`<signature>`块。  
   
 ## <a name="example"></a>示例  
- 下面的代码示例演示如何使用`<signature>`元素。  
+ 下面的代码示例演示如何使用 `<signature>` 元素。  
   
 ```javascript  
 // Use of <signature> with externalid.  
@@ -98,8 +93,5 @@ function add(a, b) {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 文档注释](../ide/xml-documentation-comments-javascript.md)
-
-
-

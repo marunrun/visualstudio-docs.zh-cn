@@ -1,4 +1,4 @@
-﻿---
+---
 title: 通过导入发布设置发布到 Azure
 description: 创建并导入发布配置文件，以便将应用程序从 Visual Studio 部署到 Azure 应用服务
 ms.date: 05/07/2018
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - deployment, publish settings
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b0af5732e80098cabeda8f11901e968ebb3d4a9a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: bd040b613a5b982050d651f341456c5fafc2954b
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53853939"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65679193"
 ---
 # <a name="publish-an-application-to-azure-app-service-by-importing-publish-settings-in-visual-studio"></a>通过在 Visual Studio 中导入发布设置将应用程序发布到 Azure 应用服务
 
 可使用“发布”工具导入发布设置，然后部署应用。 在本文中，我们使用 Azure 应用服务的发布设置，但你可以使用类似的步骤从 [IIS](../deployment/tutorial-import-publish-settings-iis.md) 导入发布设置。 在某些情况下，对于每个 Visual Studio 安装，使用发布设置配置文件比为服务手动配置部署要快。
 
-这些步骤适用于 Visual Studio 中的 ASP.NET、ASP.NET Core 和 .NET Core 应用。 也可以为 [Python](../python/publishing-python-web-applications-to-azure-from-visual-studio.md) 应用导入发布设置。 这些步骤对应于 Visual Studio 2017 版本 15.6。
+这些步骤适用于 Visual Studio 中的 ASP.NET、ASP.NET Core 和 .NET Core 应用。 也可以为 [Python](../python/publishing-python-web-applications-to-azure-from-visual-studio.md) 应用导入发布设置。
 
 在本教程中，你将：
 
@@ -37,19 +37,31 @@ ms.locfileid: "53853939"
 
 ## <a name="prerequisites"></a>系统必备
 
-* 须安装 Visual Studio 2017 且具有 ASP.NET 和 .NET Framework 开发工作负载。 对于 .NET Core 应用，还需要 .NET Core 工作负载。
+::: moniker range=">=vs-2019"
 
-    如果尚未安装 Visual Studio，请转到  [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 页免费安装。
+* 必须安装 Visual Studio 2019 且具有 ASP.NET 和 web 开发工作负载。
+
+    如果尚未安装 Visual Studio，请转到  [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/) 页免费安装。
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+* 须安装 Visual Studio 2017 且具有 ASP.NET 和 web 开发工作负载。
+
+    如果尚未安装 Visual Studio，请转到  [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/) 页免费安装。
+::: moniker-end
 
 * 创建 Azure 应用服务。 有关详细说明，请参阅[使用 Visual Studio 将 ASP.NET Core Web 应用部署到 Azure](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)。
 
 ## <a name="create-a-new-aspnet-project-in-visual-studio"></a>在 Visual Studio 中新建 ASP.NET 项目
 
-1. 在运行 Visual Studio 的计算机中，依次选择“文件” > “新建项目”。
+1. 在运行 Visual Studio 的计算机上，创建新项目。
 
-1. 在 Visual C# 或 Visual Basic 下选择“Web”，然后在中间窗格中选择“ASP.NET Web 应用程序(.NET Framework)”或（仅限 C#）“ASP.NET Core Web 应用程序”，然后单击“确定”。
+    选择正确的模板。 在此示例中，选择“ASP.NET Web 应用程序(.NET Framework)”或“ASP.NET Core Web 应用程序”（仅限 C#），然后单击“确定”。
 
-    如果没有看到指定的项目模板，请单击“新建项目”对话框左侧窗格中的“打开 Visual Studio 安装程序”链接。 Visual Studio 安装程序启动。 请参阅本文中的先决条件，以确定必须安装的必需 Visual Studio 工作负载。
+    如果没有看到指定的项目模板，请单击“新建项目”对话框左侧窗格中的“打开 Visual Studio 安装程序”链接。 Visual Studio 安装程序启动。 安装“ASP.NET 和 Web 开发”工作负载。
+
+    选择的项目模板（ASP.NET 或 ASP.NET Core）必须与安装在 Web 服务器上的 ASP.NET 版本相对应。
 
 1. 选择“MVC”(.NET Framework) 或“Web 应用程序(模型-视图-控制器)”（适用于 .NET Core），并确保已选中“无身份验证”，然后单击“确定”。
 
@@ -88,6 +100,7 @@ ms.locfileid: "53853939"
       </publishProfile>
     </publishData>
     ```
+
     通常，前面的 *.publishsettings 文件包含两个可在 Visual Studio 中使用的发布配置文件：一个使用 Web 部署进行部署，另一个使用 FTP 进行部署。 前面的代码显示了 Web 部署配置文件。 导入配置文件时，稍后将导入两个配置文件。
 
 ## <a name="import-the-publish-settings-in-visual-studio-and-deploy"></a>在 Visual Studio 中导入发布设置并进行部署

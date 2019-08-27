@@ -7,14 +7,13 @@ helpviewer_keywords:
 ms.assetid: 0c86918b-cd63-4468-8f49-6d547a1276dc
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: d244d7139e8dfd7aca6e8e85702a1c2fc6ea7657
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 751dda344f65160fc76a528380d1f61e2cae5bec
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53933751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62784125"
 ---
 # <a name="configure-load-test-run-settings"></a>配置负载测试运行设置
 

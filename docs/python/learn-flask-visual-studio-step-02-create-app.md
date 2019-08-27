@@ -3,21 +3,20 @@ title: 学习 Visual Studio 中的 Flask 教程的第 2 步，视图和模板
 titleSuffix: ''
 description: Visual Studio 项目上下文中 Flask 基础知识的演练，具体介绍了创建应用以及使用视图和模板的步骤。
 ms.date: 01/07/2019
-ms.prod: visual-studio-dev15
 ms.topic: tutorial
-author: kraigb
-ms.author: kraigb
-manager: douge
+author: JoshuaPartlow
+ms.author: joshuapa
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 85c592145708adf713589d5844861dc8ee3133c8
-ms.sourcegitcommit: a7e6675185fd34ac8084f09627b2038046cdd2b1
+ms.openlocfilehash: 188865b715c7c071222f7132c6f9bdd9b3dc596a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54060734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62961722"
 ---
 # <a name="step-2-create-a-flask-app-with-views-and-page-templates"></a>步骤 2：使用视图和页面模板创建 Flask 应用
 
@@ -78,6 +77,7 @@ ms.locfileid: "54060734"
 
         app.run(HOST, PORT)
     ```
+
 6. 项目结构应如下图所示：
 
     ![重构代码后的项目结构](media/flask/step02-project-structure.png)

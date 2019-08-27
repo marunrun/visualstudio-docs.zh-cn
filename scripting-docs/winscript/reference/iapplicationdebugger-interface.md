@@ -2,7 +2,6 @@
 title: IApplicationDebugger 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,12 +13,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8b364422afcdf72deaee3d56123a71672769ed61
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: a1c0cc89c61665ce468457b64bbdd4b5d293649b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54348316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62991456"
 ---
 # <a name="iapplicationdebugger-interface"></a>IApplicationDebugger 接口
 由调试器所公开的主接口。 除了继承的方法之外`IUnknown`，则`IApplicationDebugger`接口公开以下方法。  

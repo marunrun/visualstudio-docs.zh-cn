@@ -1,19 +1,18 @@
 ---
 title: 对编码的 UI 测试使用不同的 Web 浏览器
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 77af6795e8c00a9226c54ee8d9c0de09c9154065
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 1b7cad6d52dc3fabc182881b99163cf15e1a260c
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53986136"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68926572"
 ---
 # <a name="use-different-web-browsers-with-coded-ui-tests"></a>对编码的 UI 测试使用不同的 Web 浏览器
 
@@ -25,13 +24,13 @@ ms.locfileid: "53986136"
 
 ## <a name="whats-supported-across-all-web-browsers"></a>哪些是所有 Web 浏览器都支持的功能？
 
--   [添加用于控制功能（如属性、搜索和播放等待应用）的自定义代码](https://blogs.msdn.microsoft.com/devops/2012/12/09/coded-ui-test-configuring-search-properties-while-recording-on-internet-explorer/)。
+- [添加用于控制功能（如属性、搜索和播放等待应用）的自定义代码](https://devblogs.microsoft.com/devops/coded-ui-test-configuring-search-properties-while-recording-on-internet-explorer/)。
 
--   弹出窗口和对话框
+- 弹出窗口和对话框
 
--   [执行不含返回类型的基本 JavaScript](https://blogs.msdn.microsoft.com/devops/2013/01/18/introducing-javascript-execution-on-internetexplorer-and-crossbrowser-in-coded-ui-test/)
+- [执行不含返回类型的基本 JavaScript](https://devblogs.microsoft.com/devops/introducing-javascript-execution-on-internetexplorer-and-crossbrowser-in-coded-ui-test/)
 
--   搜索恢复能力（使用智能匹配）和[性能提升](https://blogs.msdn.microsoft.com/devops/2012/01/31/guidelines-on-improving-performance-of-coded-ui-test-playback/)
+- 搜索恢复能力（使用智能匹配）和[性能提升](https://devblogs.microsoft.com/devops/guidelines-on-improving-performance-of-coded-ui-test-playback/)
 
 ## <a name="why-should-i-use-coded-ui-tests-across-multiple-web-browser-types"></a>为什么应在多个 Web 浏览器类型中使用编码的 UI 测试?
 
@@ -44,19 +43,31 @@ ms.locfileid: "53986136"
 > [!NOTE]
 > 你无法使用 Google Chrome 或 Mozilla Firefox 浏览器记录编码的 UI 测试。
 
- **使用 Internet Explorer 播放：** 如果未明确指定浏览器，则默认情况下将在 Internet Explorer 上运行测试。 可以在测试代码中设置 **BrowserWindow.CurrentBrowser** 属性来显式声明要使用的浏览器。 对于 Internet Explorer，应将此属性设为“IE”或“Internet Explorer”。
+**使用 Internet Explorer 播放：** 如果未明确指定浏览器，则默认情况下将在 Internet Explorer 上运行测试。 可以在测试代码中设置 **BrowserWindow.CurrentBrowser** 属性来显式声明要使用的浏览器。 对于 Internet Explorer，应将此属性设为“IE”  或“Internet Explorer”  。
 
- **使用非 Internet Explorer Web 浏览器播放：** 要在非 Internet Explorer Web 浏览器中播放，请将测试代码中的 BrowserWindow.CurrentBrowser 属性更改为“Firefox”或“Chrome”。
+**使用非 Internet Explorer Web 浏览器播放：** 要在非 Internet Explorer Web 浏览器中播放，请将测试代码中的 BrowserWindow.CurrentBrowser 属性更改为“Firefox”或“Chrome”   。
 
- 必须**用于编码的 UI 跨浏览器测试的 Selenium 组件**，才能在非 IE 浏览器上播放测试。
+必须**用于编码的 UI 跨浏览器测试的 Selenium 组件**，才能在非 IE 浏览器上播放测试。
 
 ### <a name="install-selenium-components"></a>安装 Selenium 组件
 
-1.  在“工具”  菜单上，选择“扩展和更新” 。
+::: moniker range="vs-2017"
 
-2.  在“扩展和更新”对话框中，搜索“`Selenium components for Cross Browser Testing`”。
+1. 在“工具”  菜单上，选择“扩展和更新”  。
 
-3.  依次选择扩展和“下载”。
+2. 在“扩展和更新”对话框中，  搜索“`Selenium components for Cross Browser Testing`”。
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+1. 在“扩展”菜单中，选择  “管理扩展”  。
+
+2. 在“管理扩展”  对话框中，搜索“`Selenium components for Cross Browser Testing`”。
+
+::: moniker-end
+
+3. 依次选择扩展和“下载”  。
 
     > [!TIP]
     > 还可以从[此处](https://marketplace.visualstudio.com/items?itemName=AtinBansal.SeleniumcomponentsforCodedUICrossBrowserTesting)下载用于编码的 UI 跨浏览器测试的 Selenium 组件。
@@ -67,17 +78,17 @@ ms.locfileid: "53986136"
 
 若要能够调试 Web 应用程序，则必须完成以下配置选项：
 
-1.  启用“仅我的代码”：
+1. 启用“仅我的代码”：
 
-    1.  在“工具”菜单上，依次选择“选项”和“调试”。
+    1. 在“工具”  菜单上，依次选择“选项”  和“调试”  。
 
-    2.  选择“启用‘仅我的代码’”。
+    2. 选择“启用‘仅我的代码’”  。
 
-2.  禁用 CLR 异常：
+2. 禁用 CLR 异常：
 
-    1.  选择“调试”菜单上的“异常”。
+    1. 选择“调试”  菜单上的“异常”  。
 
-    2.  对于“公共语言运行时异常”，请取消选中“用户未处理的”。
+    2. 对于“公共语言运行时异常”  ，请取消选中“用户未处理的”  。
 
 如果在编码的 UI 测试中没有看到用于更改 `BrowserWindow.CurrentBrowser` 的选项，则使用的 Visual Studio 版本可能不支持使用各种 Web 浏览器的编码的 UI 测试。 若要使用此类编码的 UI 测试，必须使用 Visual Studio Enterprise 版本。
 
@@ -93,7 +104,7 @@ ms.locfileid: "53986136"
 
 ## <a name="tips"></a>提示
 
-你可以配置输出以在编码的 UI 日志中包含屏幕快照。 为此，需要在 QTAgent32.exe.config 文件中设置某些配置设置。 默认情况下，该文件安装在以下位置：
+你可以配置输出以在编码的 UI 日志中包含屏幕快照。 为此，需要在 QTAgent32.exe.config 文件中设置某些配置设置  。 默认情况下，该文件安装在以下位置：
 
 *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE*
 
@@ -109,15 +120,15 @@ ms.locfileid: "53986136"
 
 ## <a name="video-resources"></a>视频资源
 
- [在 IE 上录制并在所有位置上播放](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!183&authkey=!ANqaLtCZbtJrImU)
+[在 IE 上录制并在所有位置上播放](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!183&authkey=!ANqaLtCZbtJrImU)
 
- [使用编码的 UI 测试生成器创作跨浏览器测试](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!184&authkey=!AKG8CSow_qmeTq8)
+[使用编码的 UI 测试生成器创作跨浏览器测试](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!184&authkey=!AKG8CSow_qmeTq8)
 
- [使用不含 UI 映射的纯手工编码创作跨浏览器测试](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!186&authkey=!AJaEvxJnsefyAT4)
+[使用不含 UI 映射的纯手工编码创作跨浏览器测试](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!186&authkey=!AJaEvxJnsefyAT4)
 
- [在多个浏览器上依序运行跨浏览器测试](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!187&authkey=!ADI8eCQkxHnpOR8)
+[在多个浏览器上依序运行跨浏览器测试](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!187&authkey=!ADI8eCQkxHnpOR8)
 
- [跨浏览器测试问题排查](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!182&authkey=!AEpS48i295B49FI)
+[跨浏览器测试问题排查](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!182&authkey=!AEpS48i295B49FI)
 
 ## <a name="see-also"></a>请参阅
 

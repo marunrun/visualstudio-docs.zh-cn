@@ -2,7 +2,6 @@
 title: IDebugApplicationNode100 Interface | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,18 +13,18 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4a6cbe92c6789b702adc69f598a995f84c01ef86
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
-ms.translationtype: MT
+ms.openlocfilehash: d8de6f57cabe808df1506870fe65da31ef74e644
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54347445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63436033"
 ---
 # <a name="idebugapplicationnode100-interface"></a>IDebugApplicationNode100 接口
 `IDebugApplicationNode100`接口扩展的功能[IDebugApplicationNode 接口](../../winscript/reference/idebugapplicationnode-interface.md)。 您可以对的实现调用 QueryInterface 来获取此接口的实例[IDebugApplicationNode 接口](../../winscript/reference/idebugapplicationnode-interface.md)。  
   
 > [!IMPORTANT]
->  此接口由 PDM 10.0 版及更高版本实现。 在 activdbg100.h 中发现。  
+> 此接口由 PDM 10.0 版及更高版本实现。 在 activdbg100.h 中发现。  
   
 ## <a name="methods"></a>方法  
  `IDebugApplicationNode100` 接口公开以下方法。  

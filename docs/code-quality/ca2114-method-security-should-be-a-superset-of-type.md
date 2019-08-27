@@ -1,7 +1,6 @@
 ---
 title: CA2114:方法安全性应是类型安全性的超集
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - MethodSecurityShouldBeASupersetOfType
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 663f7aa4-8be5-4bd5-be92-4e9444f07077
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ec58e8060447a02309a0a902bcf63eea8805ca8c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d83da42a029d746899bfaccf5d62f8856a040611
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53881787"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68921106"
 ---
 # <a name="ca2114-method-security-should-be-a-superset-of-type"></a>CA2114:方法安全性应是类型安全性的超集
 
@@ -32,28 +31,28 @@ ms.locfileid: "53881787"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 一种类型具有声明性安全，并且某一方法具有相同的安全操作中，声明性安全和安全操作不是[链接要求](/dotnet/framework/misc/link-demands)，和类型检查的权限不是权限的子集该方法检查。
+类型具有声明性安全, 其中一种方法为同一安全操作提供声明性安全, 并且安全操作不是[链接要求](/dotnet/framework/misc/link-demands), 且由该类型检查的权限不是方法所检查的权限的子集。
 
 ## <a name="rule-description"></a>规则说明
- 同时相同的操作方法级别和类型级别的声明性安全，不应具有一种方法。 不会合并两个检查;仅方法级别要求应用。 例如，如果一个类型要求的权限`X`，并且其方法之一将请求权限`Y`，代码不需要具有权限`X`来执行此方法。
+一个方法不应同时具有相同操作的方法级别和类型级别的声明性安全。 这两个检查不组合在一起;仅应用方法级需求。 例如, 如果某一类型要求权限`X`, 并且它的某个方法要求权限`Y`, 则代码不需要具有执行方法`X`的权限。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 检查代码，请确保这两种操作所需。 如果这两种操作是必需的请确保方法级别的操作包括在类型级别上指定的安全性。 例如，如果类型要求权限`X`，而它的方法必须要求权限`Y`，该方法应显式要求`X`和`Y`。
+检查代码以确保这两个操作都是必需的。 如果这两个操作都是必需的, 请确保方法级别的操作包括在类型级别指定的安全性。 例如, 如果你的类型需要权限`X`, 并且其方法还必须需要权限`Y`, 则该方法应显式`X`需要`Y`和。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 它可以安全地禁止显示此规则的警告，如果该方法不需要指定类型的安全性。 但是，这不是普通的方案，可能表明需要进行仔细的设计检查。
+如果方法不需要类型指定的安全性, 则可以安全地禁止显示此规则发出的警告。 但这并不是一个普通方案, 可能表明需要仔细设计评审。
 
 ## <a name="example-1"></a>示例 1
 
-以下示例使用环境的权限来演示违反此规则的危险。 在此示例中，应用程序代码之前拒绝类型所需的权限创建受保护的类型的实例。 在实际的威胁情况下，应用程序将需要另一种方法获取对象的实例。
+下面的示例使用环境权限来演示违反此规则的危险。 在此示例中, 应用程序代码在拒绝类型所需的权限之前创建了受保护类型的实例。 在实际威胁方案中, 应用程序需要另一种方法来获取对象的实例。
 
-在以下示例中，库要求的写入权限的类型和读取权限的方法。
+在下面的示例中, 库请求类型的写入权限和对方法的读取权限。
 
 [!code-csharp[FxCop.Security.MethodLevelSecurity#1](../code-quality/codesnippet/CSharp/ca2114-method-security-should-be-a-superset-of-type_1.cs)]
 
 ## <a name="example-2"></a>示例 2
 
-下面的应用程序代码通过调用方法，即使它不满足类型级别的安全要求演示库的漏洞。
+以下应用程序代码通过调用方法来演示库的漏洞, 即使它不符合类型级安全要求。
 
 [!code-csharp[FxCop.Security.TestMethodLevelSecurity#1](../code-quality/codesnippet/CSharp/ca2114-method-security-should-be-a-superset-of-type_2.cs)]
 

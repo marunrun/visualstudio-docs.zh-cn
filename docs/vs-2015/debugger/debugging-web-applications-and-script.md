@@ -1,14 +1,9 @@
 ---
 title: 调试 Web 应用程序和脚本 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -26,13 +21,13 @@ ms.assetid: 6968625d-9783-4ad6-8bf5-eb85b548844c
 caps.latest.revision: 35
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 0f44dc85d6378f4a8303fac846ad32528081b54b
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 4ca10653fd177826e2b236d432c685535993fbba
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51797762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68155906"
 ---
 # <a name="debugging-web-applications-and-script"></a>调试 Web 应用程序和脚本
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,7 +44,7 @@ ms.locfileid: "51797762"
  列出在调试 Web 应用程序时可能遇到的错误，并提出修复建议。  
   
  [演练：调试并行应用程序](../debugger/walkthrough-debugging-a-parallel-application.md)  
- 介绍如何使用**并行任务**并**并行堆栈**工具窗口调试并行应用程序。  
+ 描述如何使用“并行任务”  和“并行堆栈”  工具窗口调试并行应用程序。  
   
 ## <a name="related-sections"></a>相关章节  
  [ASP.NET Web 应用程序](../debugger/debugging-preparation-aspnet-web-applications.md)  
@@ -67,6 +62,3 @@ ms.locfileid: "51797762"
 ## <a name="see-also"></a>请参阅  
  [调试器安全](../debugger/debugger-security.md)   
  [在 Visual Studio 中进行调试](../debugger/debugging-in-visual-studio.md)
-
-
-

@@ -1,34 +1,33 @@
 ---
 title: 教程 3：创建匹配游戏
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.assetid: 525815c8-2845-45e8-be96-100d1f144725
 author: TerryGLee
 ms.author: tglee
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 724d61fcebe85a512afa346e4deed58f16260c46
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 151b9be68b82f2b9fdcb20cd105890914333a2b6
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53963824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62821516"
 ---
 # <a name="tutorial-3-create-a-matching-game"></a>教程 3：创建匹配游戏
 
 在本教程中，将生成一个匹配游戏，在该游戏中，玩家必须匹配隐藏的图标对。 您将学习如何：
 
--   在 <xref:System.Collections.Generic.List%601> 对象中存储对象，例如图标。
+- 在 <xref:System.Collections.Generic.List%601> 对象中存储对象，例如图标。
 
--   使用 `foreach` 循环（Visual C# 中）或 `For Each` 循环（Visual Basic 中）循环访问列表中的各项。
+- 使用 `foreach` 循环（Visual C# 中）或 `For Each` 循环（Visual Basic 中）循环访问列表中的各项。
 
--   使用引用变量跟踪窗体的状态。
+- 使用引用变量跟踪窗体的状态。
 
--   生成事件处理程序，以响应可用于多个对象的事件。
+- 生成事件处理程序，以响应可用于多个对象的事件。
 
--   创建一个计时器，进行倒计时，然后在启动后立即准确触发事件。
+- 创建一个计时器，进行倒计时，然后在启动后立即准确触发事件。
 
 当你完成本教程时，程序将类似下图所示：
 

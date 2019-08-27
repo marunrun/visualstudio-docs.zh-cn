@@ -1,32 +1,27 @@
 ---
 title: 历史调试 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 7cc5ddf2-2f7c-4f83-b7ca-58e92e9bfdd2
 caps.latest.revision: 9
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: d43e48b67cdbfabcb38703469f8570f78336dcab
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: c7db175535e0eebdcf1974f0f85123959ba5a3ed
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51794590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68192182"
 ---
 # <a name="historical-debugging"></a>历史调试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 历史调试是取决于 IntelliTrace 所收集的信息的模式模式。 它允许你向前和前后移动应用程序的执行，并检查其状态。  
   
- 可以在 Visual Studio Enterprise 版（但不可在 Professional 或 Community 版）中使用 IntelliTrace。  
+ 可以在 Visual Studio 企业版（但不可在专业版或社区版）中使用 IntelliTrace。  
   
 ## <a name="why-use-historical-debugging"></a>为什么要使用历史调试？  
  设置断点以查找 Bug 会是一件没有太多确定性的事情。 在紧邻代码中你怀疑可能存在 Bug 的位置设置断点，然后在调试中程序中运行应用程序，并希望命中断点且执行中断的位置可以揭示 Bug 的源。 如果没有命中，则需要尝试在代码中的其他位置设置断点并重新运行调试程序，反复执行测试步骤直到发现问题。  
@@ -36,7 +31,7 @@ ms.locfileid: "51794590"
  可以使用 IntelliTrace 和历史调试在应用程序中四处漫游，并能在不设置断点、不重启调试且不重复测试步骤的情况下检查其状态（调用堆栈和局部变量）。 这可以为你节省大量时间，特别是在 Bug 位于需要很长时间才能完成执行的测试方案的深处时。  
   
 ## <a name="how-do-i-start-using-historical-debugging"></a>如何开始使用历史调试？  
- 默认启用 IntelliTrace。 只需决定你对哪些事件和函数调用感兴趣即可。 有关定义你想要查找的详细信息，请参阅[IntelliTrace 功能](../debugger/intellitrace-features.md)。 有关使用 IntelliTrace 进行调试的逐步说明，请参阅[演练： 使用 IntelliTrace](../debugger/walkthrough-using-intellitrace.md)。  
+ 默认启用 IntelliTrace。 只需决定你对哪些事件和函数调用感兴趣即可。 要详细了解如何定义想查看的内容，请参阅 [IntelliTrace 功能](../debugger/intellitrace-features.md)。 有关使用 IntelliTrace 进行调试的逐步说明，请参阅[演练：使用 IntelliTrace](../debugger/walkthrough-using-intellitrace.md)。  
   
 ## <a name="navigating-your-code-with-historical-debugging"></a>使用历史调试导航代码  
  让我们从有 Bug 的简单程序开始。 在 C# 控制台应用程序中，添加以下代码：  
@@ -73,7 +68,7 @@ private static int AddInt(int add)
   
 2. 在 `Console.WriteLine(resultInt);` 行上设置断点。  
   
-3. 开始调试。 代码执行到断点。 在**局部变量**窗口中，你可以看到的值`resultInt`是 44。  
+3. 开始调试。 代码执行到断点处。 在“局部变量”窗口中，可以看到 `resultInt` 的值是 44  。  
   
 4. 打开**诊断工具**窗口 (**调试 / 显示诊断工具**)。 代码窗口应如下所示：  
   
@@ -87,13 +82,8 @@ private static int AddInt(int add)
   
     ![历史调试模式中的代码窗口](../debugger/media/historicaldebuggingback.png "HistoricalDebuggingBack")  
   
-6. 现在，可以单步执行`AddAll()`方法 (**F11**，则**单步执行**导航线中的按钮。 单步前进 (**F10**，或**转到下一个调用**导航线中。 粉红色的行现在变为 `j = AddInt(j);` 行。 **F10**这种情况下不会单步执行到下一行代码。 相反，它将单步执行到下一个函数调用。 历史调试在调用之间进行导航，并跳过不包括函数调用的代码行。  
+6. 现在，可以单步执行 `AddAll()` 方法（按 **F11** 或导航条中的“单步执行”按钮）  。 单步前进（按 **F10** 或导航条中的“转到下一个调用”）  。 粉红线现在位于 `j = AddInt(j);` 行。 在这种情况下，按 **F10** 不会单步执行到下一行代码， 而是会单步执行到下一个函数调用。 历史调试在调用之间移动，并跳过不包含函数调用的代码行。  
   
 7. 现在单步执行到 `AddInt()` 方法。 应该立即看到此代码中的 Bug。  
   
-   此过程仅粗略介绍使用历史调试可以完成的事项。 若要了解有关不同的设置和导航线中的不同按钮的效果的详细信息，请参阅[IntelliTrace 功能](../debugger/intellitrace-features.md)。
-
-
-
-
-
+   此过程仅粗略介绍使用历史调试可以完成的事项。 要了解有关不同设置和导航线中不同按钮的效果的详细信息，请参阅 [IntelliTrace 功能](../debugger/intellitrace-features.md)。

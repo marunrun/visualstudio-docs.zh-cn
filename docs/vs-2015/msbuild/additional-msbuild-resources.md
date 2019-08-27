@@ -1,14 +1,9 @@
 ---
 title: 其他 MSBuild 资源 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: conceptual
 f1_keywords:
 - MSBuild.UnregisterAssembly.UnregisterTlbFileNotRegistered
 - MSBuild.DollarSignInTaskOutputPropertyName
@@ -603,18 +598,17 @@ ms.assetid: 29dd85ee-1530-43c1-b085-bb2330ac5a48
 caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 935d73f8dd1a5c1dedb3fb4d1e7a727d19e5d10b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 5bf30e3267939385a3cca3459390c4c7591909a6
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49222737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68187096"
 ---
 # <a name="additional-msbuild-resources"></a>其他 MSBuild 资源
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 尝试解决问题时，如果无法在文档中找到所需信息，可以参考其他资源，如知识库文章、开发人员社区或产品支持。  
   
 ## <a name="knowledge-base-articles"></a>知识库文章  
@@ -628,8 +622,5 @@ ms.locfileid: "49222737"
 ## <a name="product-support"></a>产品支持  
  如果借助其他资源仍不能解决问题，则可以访问 [Microsoft 帮助和支持](http://go.microsoft.com/fwlink/?linkid=1782)网站，与 Microsoft 支持服务联系。 若要了解所在区域中可用的产品支持，请参阅[与我们联系](../ide/talk-to-us.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [.NET Framework 目标错误疑难解答](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md)
-
-
-

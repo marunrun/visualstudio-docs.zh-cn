@@ -1,14 +1,9 @@
 ---
-title: 如何： 标记线程和取消标记线程 |Microsoft Docs
-ms.custom: ''
+title: 如何：标记线程和取消标记线程 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -20,13 +15,13 @@ ms.assetid: 952d579d-6911-413e-b3e5-54e7e797e70c
 caps.latest.revision: 36
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 5816007476da56321e58182e636b54a5a5697994
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: b6d6a49dd9b90172686a90d92e6b630dd70b5cf0
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51817485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68189440"
 ---
 # <a name="how-to-flag-and-unflag-threads"></a>如何：标记线程和取消标记线程
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,37 +32,34 @@ ms.locfileid: "51817485"
   
 ### <a name="to-flag-or-unflag-a-thread-by-using-the-threads-window"></a>使用“线程”窗口标记或取消标记线程  
   
--   在中**线程**窗口中，找到您感兴趣的线程，然后单击标志图标可选择或清除标志。  
+- 在中**线程**窗口中，找到您感兴趣的线程，然后单击标志图标可选择或清除标志。  
   
 ### <a name="to-unflag-all-threads"></a>取消标记所有线程  
   
--   在中**线程**窗口中，右击任何线程，然后单击**取消标记所有线程**。  
+- 在“线程”窗口中右击任意线程，然后单击“取消标志所有线程”   。  
   
 ### <a name="to-display-only-flagged-threads"></a>仅显示标记的线程  
   
--   在调试窗口选择标记按钮。  
+- 在调试窗口选择标记按钮。  
   
 ### <a name="to-flag-just-my-code"></a>标记“仅我的代码”  
   
-1.  在顶部的工具栏上**线程**窗口中，单击标志图标。  
+1. 在“线程”窗口顶部的工具栏中，单击标志图标  。  
   
-2.  在下拉列表中，单击**标记 ' 仅我的代码**。  
+2. 在下拉列表中，单击“标记‘仅我的代码’”  。  
   
 ### <a name="to-flag-threads-that-are-associated-with-selected-modules"></a>标记与选定模块关联的线程  
   
-1.  在工具栏上的**线程**窗口中，单击标志图标。  
+1. 在“线程”窗口的工具栏中，单击标志图标  。  
   
-2.  在下拉列表中，单击**标记自定义模块选择**。  
+2. 在下拉列表中，单击“标记自定义模块选择”  。  
   
-3.  在中**选择模块**对话框框中，选择所需的模块。  
+3. 在“选择模块”对话框中，选择需要的模块  。  
   
-4.  （可选）在中**搜索**框中，键入要搜索特定模块的字符串。  
+4. （可选）在“搜索”框中，键入用于搜索特定模块的字符串  。  
   
-5.  单击 **“确定”**。  
+5. 单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [调试多线程应用程序](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
  [演练：调试多线程应用程序](../debugger/walkthrough-debugging-a-multithreaded-application.md)
-
-
-

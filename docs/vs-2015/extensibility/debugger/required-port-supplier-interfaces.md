@@ -1,27 +1,22 @@
 ---
 title: 所需端口提供程序接口 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - port suppliers, required interfaces
 - debugging [Debugging SDK], port suppliers
 ms.assetid: 0c2cdd40-9f6f-425e-b305-858f7734161e
 caps.latest.revision: 14
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 485c295e7258f09aaf4114d5945f8136057447e6
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: a065389a6b9b67b8bce82394569ce65afb0f8d55
+ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51782799"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821435"
 ---
 # <a name="required-port-supplier-interfaces"></a>所需的端口提供程序接口
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -30,19 +25,19 @@ ms.locfileid: "51782799"
   
  由于端口提供程序都提供端口，它还必须实现它们。 因此，它必须实现以下接口：  
   
--   [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)  
+- [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)  
   
      描述该端口和可枚举的端口上运行的所有进程。  
   
--   [IDebugPortEx2](../../extensibility/debugger/reference/idebugportex2.md)  
+- [IDebugPortEx2](../../extensibility/debugger/reference/idebugportex2.md)  
   
      提供用于启动和终止进程的端口上。  
   
--   [IDebugPortNotify2](../../extensibility/debugger/reference/idebugportnotify2.md)  
+- [IDebugPortNotify2](../../extensibility/debugger/reference/idebugportnotify2.md)  
   
      提供了一种机制，通知程序节点创建和析构的此端口的上下文中运行的程序。 有关详细信息，请参阅[程序节点](../../extensibility/debugger/program-nodes.md)。  
   
--   `IConnectionPointContainer`  
+- `IConnectionPointContainer`  
   
      提供的连接点[IDebugPortEvents2](../../extensibility/debugger/reference/idebugportevents2.md)。  
   
@@ -53,40 +48,39 @@ ms.locfileid: "51782799"
   
  因为一个端口可以启动和终止进程的物理和逻辑的程序，还必须调试引擎中实现这些接口：  
   
--   [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md)  
+- [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md)  
   
-     介绍了物理过程。 至少必须实现以下方法：  
+  介绍了物理过程。 至少必须实现以下方法：  
+
+  - [EnumPrograms](../../extensibility/debugger/reference/idebugprocess2-enumprograms.md)  
+
+  - [GetName](../../extensibility/debugger/reference/idebugprocess2-getname.md)  
+
+  - [GetServer](../../extensibility/debugger/reference/idebugprocess2-getserver.md)  
+
+  - [GetPhysicalProcessId](../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)  
+
+  - [GetProcessId](../../extensibility/debugger/reference/idebugprocess2-getprocessid.md)  
+
+  - [GetAttachedSessionName](../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md)  
+
+- [IDebugProcessEx2](../../extensibility/debugger/reference/idebugprocessex2.md)  
   
-    -   [EnumPrograms](../../extensibility/debugger/reference/idebugprocess2-enumprograms.md)  
+    提供有关 SDM，附加和分离本身从进程的方法。  
   
-    -   [GetName](../../extensibility/debugger/reference/idebugprocess2-getname.md)  
+- [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md)  
   
-    -   [GetServer](../../extensibility/debugger/reference/idebugprocess2-getserver.md)  
+  描述逻辑的程序。 至少必须实现以下方法：  
+
+  - [GetName](../../extensibility/debugger/reference/idebugprogram2-getname.md)  
+
+  - [GetProcess](../../extensibility/debugger/reference/idebugprogram2-getprocess.md)  
+
+  - [GetProgramId](../../extensibility/debugger/reference/idebugprogram2-getprogramid.md)  
   
-    -   [GetPhysicalProcessId](../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)  
-  
-    -   [GetProcessId](../../extensibility/debugger/reference/idebugprocess2-getprocessid.md)  
-  
-    -   [GetAttachedSessionName](../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md)  
-  
--   [IDebugProcessEx2](../../extensibility/debugger/reference/idebugprocessex2.md)  
-  
-     提供有关 SDM，附加和分离本身从进程的方法。  
-  
--   [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md)  
-  
-     描述逻辑的程序。 至少必须实现以下方法：  
-  
-    -   [GetName](../../extensibility/debugger/reference/idebugprogram2-getname.md)  
-  
-    -   [GetProcess](../../extensibility/debugger/reference/idebugprogram2-getprocess.md)  
-  
-    -   [GetProgramId](../../extensibility/debugger/reference/idebugprogram2-getprogramid.md)  
-  
--   [IDebugProgramEx2](../../extensibility/debugger/reference/idebugprogramex2.md)  
+- [IDebugProgramEx2](../../extensibility/debugger/reference/idebugprogramex2.md)  
   
      提供有关 SDM，附加到此程序的方法。  
   
 ## <a name="see-also"></a>请参阅  
  [实现端口提供程序](../../extensibility/debugger/implementing-a-port-supplier.md)
-

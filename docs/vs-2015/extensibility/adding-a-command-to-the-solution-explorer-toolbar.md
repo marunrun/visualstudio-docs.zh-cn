@@ -1,14 +1,9 @@
 ---
 title: 将命令添加到解决方案资源管理器中工具栏 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - toolbars [Visual Studio], adding buttons
 - buttons [Visual Studio], adding to Solution Explorer
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: f6411557-2f4b-4e9f-b02e-fce12a6ac7e9
 caps.latest.revision: 40
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 52e963a202d75c29c65521729e70e062a579d479
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: ac07a2c6becd46a2536e6a9b3340d075d5f078f2
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51753648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63403246"
 ---
 # <a name="adding-a-command-to-the-solution-explorer-toolbar"></a>将命令添加到解决方案资源管理器工具栏
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,7 +29,7 @@ ms.locfileid: "51753648"
  有关菜单、 工具栏命令和.vsct 文件的详细信息，请参阅[命令、 菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)。  
   
 > [!NOTE]
->  使用 XML 命令表格 (.vsct) 文件而不是命令表格 (.ctc) 配置文件来定义菜单和命令在你的 Vspackage 中的显示方式。 有关详细信息，请参阅 [Visual Studio Command Table (.Vsct) Files](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)。  
+> 使用 XML 命令表格 (.vsct) 文件而不是命令表格 (.ctc) 配置文件来定义菜单和命令在你的 Vspackage 中的显示方式。 有关详细信息，请参阅 [Visual Studio Command Table (.Vsct) Files](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)。  
   
 ## <a name="prerequisites"></a>系统必备  
  从 Visual Studio 2015 开始，您并不安装 Visual Studio SDK 从下载中心获得。 它是作为 Visual Studio 安装程序中的可选功能包含在内。 此外可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md)。  
@@ -45,13 +40,13 @@ ms.locfileid: "51753648"
 ## <a name="adding-a-button-to-the-solution-explorer-toolbar"></a>将按钮添加到解决方案资源管理器工具栏  
  本演练的本部分演示如何将添加到按钮**解决方案资源管理器**工具栏。 单击按钮时，运行中的回调方法的代码。  
   
-1.  在 ToolbarButtonPackage.vsct 文件中，转到`<Symbols>`部分。 `<GuidSymbol>`节点包含的菜单组和由包模板生成的命令。 添加`<IDSymbol>`到此节点，以声明将保存您的命令组的元素。  
+1. 在 ToolbarButtonPackage.vsct 文件中，转到`<Symbols>`部分。 `<GuidSymbol>`节点包含的菜单组和由包模板生成的命令。 添加`<IDSymbol>`到此节点，以声明将保存您的命令组的元素。  
   
     ```xml  
     <IDSymbol name="SolutionToolbarGroup" value="0x0190"/>  
     ```  
   
-2.  在`<Groups>`部分中，现有组项之后, 您声明的新组中定义在上一步。  
+2. 在`<Groups>`部分中，现有组项之后, 您声明的新组中定义在上一步。  
   
     ```xml  
     <Group guid="guidToolbarButtonPackageCmdSet"  
@@ -62,7 +57,7 @@ ms.locfileid: "51753648"
   
      Guid: id 对的父级设置为`guidSHLMainMenu`并`IDM_VS_TOOL_PROJWIN`放入此组**解决方案资源管理器**工具栏中，并在设置高优先级值将其放在其他命令组的后面。  
   
-3.  在中`<Buttons>`部分中，更改所生成的父 ID`<Button>`条目以反映您在上一步中定义的组。 已修改`<Button>`元素应如下所示：  
+3. 在中`<Buttons>`部分中，更改所生成的父 ID`<Button>`条目以反映您在上一步中定义的组。 已修改`<Button>`元素应如下所示：  
   
     ```xml  
     <Button guid="guidToolbarButtonPackageCmdSet" id="ToolbarButtonId" priority="0x0100" type="Button">  
@@ -74,11 +69,11 @@ ms.locfileid: "51753648"
     </Button>  
     ```  
   
-4.  生成项目并启动调试。 将显示在实验实例。  
+4. 生成项目并启动调试。 将显示在实验实例。  
   
      **解决方案资源管理器**工具栏应显示现有按钮右侧的新建命令按钮。 该按钮的图标带删除线。  
   
-5.  单击新建按钮。  
+5. 单击新建按钮。  
   
      包含消息的对话框**ToolbarButtonPackage 内 SolutionToolbar.ToolbarButton.MenuItemCallback()** 应显示。  
   
@@ -125,4 +120,3 @@ ms.locfileid: "51753648"
   
 ## <a name="see-also"></a>请参阅  
  [命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)
-

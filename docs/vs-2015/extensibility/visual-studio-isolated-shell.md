@@ -1,14 +1,9 @@
 ---
 title: Visual Studio 独立 Shell |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Shell [Visual Studio], shell-based applications%2C isolated mode
 - Visual Studio shell, isolated mode
@@ -18,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d2620e71-be9e-44c9-b5b7-03a4c8d9cf0b
 caps.latest.revision: 36
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: d7fcb0a838f2849ab74d202785709164ec5af6d7
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 0309019cc36e9f81596061dbbede0f84b0b78a05
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51740659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63403585"
 ---
 # <a name="visual-studio-isolated-shell"></a>Visual Studio 独立 Shell
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,10 +31,10 @@ Visual Studio 独立 shell，可创建独立的应用程序可以运行的同时
  若要创建独立的 shell 应用程序，请使用 Visual Studio Shell 独立项目开始。 此项目包含你开发和测试独立的 shell 应用程序所需的所有内容。 若要编写部署你的应用程序安装程序准备就绪后，必须获取从独立的 shell 可再发行组件包[Microsoft Visual Studio Shell （独立） Redistributable Package](http://go.microsoft.com/fwlink/?LinkId=616022)。  
   
 > [!NOTE]
->  在可以访问独立的 shell 可再发行组件包之前，系统将要求填写份简短的客户调查。  填写调查之后, 你将定向到 Visual Studio Connect 页面使用可再发行组件包下载链接。  可以在以后访问下的 Visual Studio Connect 站点上找到的下载链接**程序&#124;VISUAL STUDIO 2015 集成和独立 SHELL**选项卡。  
+> 在可以访问独立的 shell 可再发行组件包之前，系统将要求填写份简短的客户调查。  填写调查之后, 你将定向到 Visual Studio Connect 页面使用可再发行组件包下载链接。  可以在以后访问下的 Visual Studio Connect 站点上找到的下载链接**程序&#124;VISUAL STUDIO 2015 集成和独立 SHELL**选项卡。  
   
 > [!NOTE]
->  有关如何部署独立的基于 shell 的应用程序的详细信息，请参阅[演练： 创建基本的独立 Shell 应用程序](../extensibility/walkthrough-creating-a-basic-isolated-shell-application.md)。  
+> 有关如何部署独立的基于 shell 的应用程序的详细信息，请参阅[演练：创建基本的独立 Shell 应用程序](../extensibility/walkthrough-creating-a-basic-isolated-shell-application.md)。  
   
 ## <a name="working-with-the-isolated-shell"></a>使用独立 shell  
  Visual Studio 独立 shell 应用程序具有对 Visual Studio 服务的完全访问权限，并支持特殊的自定义和品牌。 有几种方法可以自定义独立的 shell 应用程序：  
@@ -62,7 +57,7 @@ Visual Studio 独立 shell，可创建独立的应用程序可以运行的同时
 |功能类别|功能|  
 |----------------------|-------------|  
 |IDE 功能|导入/导出设置<br /><br /> 工具箱控件安装程序<br /><br /> 任务列表和错误列表<br /><br /> 输出窗口<br /><br /> 起始页<br /><br /> 属性窗口<br /><br /> 工具箱<br /><br /> “解决方案资源管理器”<br /><br /> “书签”窗口<br /><br /> 类视图<br /><br /> 对象浏览器<br /><br /> “命令”窗口<br /><br /> 文档大纲<br /><br /> 资源视图<br /><br /> 外部工具<br /><br /> Windows Communication Foundation (WCF) 添加服务引用<br /><br /> 语言集成查询 (LINQ) 支持|  
-|编辑器/设计器|代码浏览工具 （统一的查找、 源定义，继承）<br /><br /> IntelliSense<br /><br /> 智能标记<br /><br /> 代码片段管理器<br /><br /> 代码段<br /><br /> 重构<br /><br /> 整齐排列<br /><br /> IntelliSense 筛选<br /><br /> “代码定义”窗口<br /><br /> 应用程序设计器<br /><br /> Windows 窗体设计器<br /><br /> Windows Presentation Foundation (WPF) 设计器|  
+|编辑器/设计器|代码浏览工具 （统一的查找、 源定义，继承）<br /><br /> IntelliSense<br /><br /> SmartTags<br /><br /> 代码片段管理器<br /><br /> 代码段<br /><br /> 重构<br /><br /> 整齐排列<br /><br /> IntelliSense 筛选<br /><br /> “代码定义”窗口<br /><br /> 应用程序设计器<br /><br /> Windows Forms Designer — Windows 窗体设计器<br /><br /> Windows Presentation Foundation (WPF) 设计器|  
 |调试|C# 表达式计算器<br /><br /> 本地调试<br /><br /> 托管调试<br /><br /> 编辑并继续<br /><br /> 跨线程调试<br /><br /> 可视化效果<br /><br /> 数据提示<br /><br /> 本机调试<br /><br /> 脚本调试<br /><br /> 互操作调试<br /><br /> 实时 (JIT) 调试<br /><br /> 多进程调试<br /><br /> XSLT 调试<br /><br /> 附加到本地进程<br /><br /> 跟踪点<br /><br /> 断点约束|  
 |数据|服务器资源管理器 （简体-仅限数据）<br /><br /> 将数据绑定到本地数据 (。MDF 或。MDB)<br /><br /> 数据绑定到对象<br /><br /> 数据绑定到 Web 服务<br /><br /> 完整的数据控件集<br /><br /> XML 编辑器<br /><br /> 将数据绑定到本地数据库服务器<br /><br /> “数据源”窗口|  
 |Web|HTML 编辑器<br /><br /> Web 浏览器<br /><br /> Web 窗体设计器<br /><br /> 网站项目<br /><br /> Web 应用程序项目|  
@@ -70,4 +65,3 @@ Visual Studio 独立 shell，可创建独立的应用程序可以运行的同时
   
 ## <a name="see-also"></a>请参阅  
  [Shell（独立或集成）](../extensibility/shell-isolated-or-integrated.md)
-

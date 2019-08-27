@@ -2,18 +2,17 @@
 title: Visual Studio 中的索引编制的工作区 |Microsoft Docs
 ms.date: 02/21/2018
 ms.topic: conceptual
-ms.assetid: 3163e98c-1c79-48a7-813f-7923be894ba1
 author: vukelich
 ms.author: svukel
 manager: viveis
 ms.workload:
 - vssdk
-ms.openlocfilehash: 90722b540fd0569ab54ff945f5c1caa43668dccf
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9bf7df777d27003fa5763debc772a8804ec28ef5
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53899738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62952689"
 ---
 # <a name="workspace-indexing"></a>工作区索引
 
@@ -26,7 +25,7 @@ ms.locfileid: "53899738"
 |数据|文件扫描程序类型|索引查询结果类型|相关的类型|
 |--|--|--|--|
 |参考资料|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileReferenceInfo>|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileReferenceResult>|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileReferenceInfoType>|
-|符号|<xref:Microsoft.VisualStudio.Workspace.Indexing.SymbolDefinition>|<xref:Microsoft.VisualStudio.Workspace.Indexing.SymbolDefinitionSearchResult>|<xref:Microsoft.VisualStudio.Workspace.Indexing.ISymbolService> 应使用而不是`IIndexWorkspaceService`的查询|
+|Symbols|<xref:Microsoft.VisualStudio.Workspace.Indexing.SymbolDefinition>|<xref:Microsoft.VisualStudio.Workspace.Indexing.SymbolDefinitionSearchResult>|<xref:Microsoft.VisualStudio.Workspace.Indexing.ISymbolService> 应使用而不是`IIndexWorkspaceService`的查询|
 |数据值|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileDataValue>|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileDataResult`1>||
 
 ## <a name="querying-for-indexed-data"></a>查询索引数据

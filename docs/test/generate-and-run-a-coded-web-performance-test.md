@@ -13,14 +13,13 @@ dev_langs:
 - VB
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 21c4f8a7c1f8e5d5449f576740e8f901d25d9006
-ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
+manager: jillfra
+ms.openlocfilehash: 49691b2031d1d935871a73833924e9dc4aa46dcd
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54269526"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68918409"
 ---
 # <a name="generate-and-run-a-coded-web-performance-test"></a>生成和运行编码的 Web 性能测试
 
@@ -30,13 +29,13 @@ ms.locfileid: "54269526"
 
 ## <a name="generate-a-coded-web-performance-test"></a>生成编码的 Web 性能测试
 
-1.  如果尚未创建 Web 性能测试，请参阅[记录 Web 性能测试](/azure/devops/test/load-test/run-performance-tests-app-before-release#create-a-web-performance-and-load-test-project?view=vsts)。
+1. 如果尚未创建 Web 性能测试，请参阅[记录 Web 性能测试](/azure/devops/test/load-test/run-performance-tests-app-before-release#create-a-web-performance-and-load-test-project)。
 
-2.  生成编码的测试。
+2. 生成编码的测试。
 
      ![生成编码的 Web 性能测试](../test/media/web_test_coded_generate.png)
 
-3.  为测试命名。
+3. 为测试命名。
 
      ![输入编码 Web 性能测试的名称](../test/media/web_test_coded_generate_nametest.png)
 
@@ -48,7 +47,7 @@ ms.locfileid: "54269526"
 
      你可在代码中看到 C# 中的 GetRequestEnumerator() 方法或 Visual Basic 中的 Run() 方法包括每个验证规则和已记录测试中的 Web 请求。
 
-4.  若要展示添加一些简单代码的操作，请向下滚动到所选方法的末尾，并在最后一个 Web 请求的代码后面添加以下代码：
+4. 若要展示添加一些简单代码的操作，请向下滚动到所选方法的末尾，并在最后一个 Web 请求的代码后面添加以下代码：
 
     ```c#
     if (DateTime.Today.DayOfWeek == DayOfWeek.Wednesday)
@@ -73,9 +72,9 @@ ms.locfileid: "54269526"
     End If
     ```
 
-5.  生成解决方案来验证你的自定义代码是否编译。
+5. 生成解决方案来验证你的自定义代码是否编译。
 
-6.  运行测试。
+6. 运行测试。
 
      ![运行编码的 Web 性能测试](../test/media/web_test_coded_generate_run.png)
 
@@ -86,16 +85,16 @@ ms.locfileid: "54269526"
 ## <a name="qa"></a>问题解答
 
 ### <a name="q-can-i-run-more-than-one-test-at-a-time"></a>问：是否能一次运行多个测试？
- **答：** 能，请使用“解决方案资源管理器”中的右键单击菜单（关联菜单）。
+**答：** 能，请使用“解决方案资源管理器”  中的右键单击菜单（关联菜单）。
 
 ### <a name="q-should-i-add-a-data-source-before-or-after-i-generate-a-coded-test"></a>问：我是否应在生成编码的测试之前和之后添加数据源？
- **答：** 可在你生成编码的测试之前更轻松地添加[数据源](../test/add-a-data-source-to-a-web-performance-test.md)，因为将为你自动生成代码。
+**答：** 可在你生成编码的测试之前更轻松地添加[数据源](../test/add-a-data-source-to-a-web-performance-test.md)，因为将为你自动生成代码。
 
- 当你使用数据源运行编码测试时，你可能看到以下错误消息：
+当你使用数据源运行编码测试时，你可能看到以下错误消息：
 
- **无法运行测试\<测试名称 > 代理\<计算机名 >：对象引用未设置为某个对象的实例。**
+**无法运行测试\<测试名称 > 代理\<计算机名 >：对象引用未设置为某个对象的实例。**
 
- 发生此错误的原因是，你有为测试类定义的 DataSourceAttribute，而没有相应的 DataBindingAttribute。 若要纠正此错误，请添加适当的 DataBindingAttribute 并将其删除，或从代码中将其注释掉。
+发生此错误的原因是，你有为测试类定义的 DataSourceAttribute，而没有相应的 DataBindingAttribute。 若要纠正此错误，请添加适当的 DataBindingAttribute 并将其删除，或从代码中将其注释掉。
 
 ### <a name="q-should-i-add-validation-and-extraction-rules-before-or-after-i-generate-a-coded-test"></a>问：我是否应在生成编码的测试之前和之后添加验证和提取规则？
- **答：** 在你生成编码的测试之前，可以更轻松地添加验证规则和提取规则；但是，我们建议你使用[编码的 UI 测试](../test/use-ui-automation-to-test-your-code.md)来进行验证。
+**答：** 在你生成编码的测试之前，可以更轻松地添加验证规则和提取规则；但是，我们建议你使用[编码的 UI 测试](../test/use-ui-automation-to-test-your-code.md)来进行验证。

@@ -1,14 +1,9 @@
 ---
 title: “工具箱”->“HTML”选项卡 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - vs.toolbox.html
 helpviewer_keywords:
@@ -19,27 +14,26 @@ ms.assetid: 9bfdd3b8-f5ac-4a5f-bdbf-c2b4e97641d8
 caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 31ee75c419870d9047b3892c668c5e4665850654
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 7639225229aeaa37cd682307239d3097be313b66
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49292066"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65689930"
 ---
 # <a name="toolbox-html-tab"></a>工具箱，“HTML”选项卡
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 “工具箱”的“HTML”选项卡提供可用于网页和 Web 窗体的组件。 若要查看此选项卡，首先在 HTML 设计器中打开要编辑的文档。 在“视图”菜单上，单击“工具箱”，然后单击“工具箱”的“HTML”选项卡。  
   
  若要在“HTML”选项卡上创建工具的实例，可以双击此工具将其添加到文档中的当前插入点，或选择该工具并将其拖动到编辑图面上所需的位置。  
   
 ## <a name="tasks"></a>任务  
   
--   [如何：管理“工具箱”窗口](http://msdn.microsoft.com/en-us/a022c3fe-298c-4a59-a48f-b050da90ebc2)  
+- [如何：管理“工具箱”窗口](https://msdn.microsoft.com/a022c3fe-298c-4a59-a48f-b050da90ebc2)  
   
--   [如何：操作工具箱选项卡](http://msdn.microsoft.com/en-us/21285050-cadd-455a-b1f5-a2289a89c4db)  
+- [如何：操作工具箱选项卡](https://msdn.microsoft.com/21285050-cadd-455a-b1f5-a2289a89c4db)  
   
 ## <a name="ui-elements"></a>UI 元素  
  默认情况下，“HTML”选项卡提供下列工具。  
@@ -47,7 +41,7 @@ ms.locfileid: "49292066"
  **指针**  
  ![ASP.NET 移动设计器 HTML 页指针](../../ide/reference/media/vxpointer.gif "vxPointer")  
   
- 打开任一工具箱选项卡时，此工具默认处于选中状态。 无法删除此工具。 使用指针可将对象拖动到“设计”视图图面上、调整其大小，并在页面或窗体中对其重新定位。 有关详细信息，请参阅[如何：管理“工具箱”窗口](http://msdn.microsoft.com/en-us/a022c3fe-298c-4a59-a48f-b050da90ebc2)和[如何：操作工具箱选项卡](http://msdn.microsoft.com/en-us/21285050-cadd-455a-b1f5-a2289a89c4db)。  
+ 打开任一工具箱选项卡时，此工具默认处于选中状态。 无法删除此工具。 使用指针可将对象拖动到“设计”视图图面上、调整其大小，并在页面或窗体中对其重新定位。 有关详细信息，请参阅[如何：管理“工具箱”窗口](https://msdn.microsoft.com/a022c3fe-298c-4a59-a48f-b050da90ebc2)和[如何：操作工具箱选项卡](https://msdn.microsoft.com/21285050-cadd-455a-b1f5-a2289a89c4db)。  
   
  **Input (Button)**  
  ![HTML 网页按钮](../../ide/reference/media/vxbutton.gif "vxButton")  
@@ -60,7 +54,7 @@ ms.locfileid: "49292066"
 <input id="Button1" type="button" value="Button" name="Button1">  
 ```  
   
- 有关详细信息，请参阅[HTML 输入控件](http://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)， [HtmlInputButton 服务器控件声明性语法](http://msdn.microsoft.com/en-us/99ccf7fb-7e2a-4ba1-bcd9-981b619a16aa)， [NIB： 如何： 创建脚本和编辑事件处理程序](http://msdn.microsoft.com/en-us/69d71d13-c68b-4ecd-869b-a42edf6d1f6d)， [按钮 Web 服务器控件内容导航图](http://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf)， <xref:System.Web.UI.HtmlControls.HtmlInputButton>， <xref:System.Web.UI.HtmlControls.HtmlButton>，和<xref:System.Web.UI.WebControls.Button>。  
+ 有关详细信息，请参阅 [HTML 输入控件](https://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)、[HtmlInputButton 服务器控件声明性语法](https://msdn.microsoft.com/99ccf7fb-7e2a-4ba1-bcd9-981b619a16aa)、[NIB：如何：创建脚本和编辑事件处理程序](https://msdn.microsoft.com/69d71d13-c68b-4ecd-869b-a42edf6d1f6d)、[按钮 Web 服务器控件内容映射](https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf)、<xref:System.Web.UI.HtmlControls.HtmlInputButton>、<xref:System.Web.UI.HtmlControls.HtmlButton> 和 <xref:System.Web.UI.WebControls.Button>。  
   
  **Input (Reset)**  
  ![HTMLpageResetButton 屏幕截图](../../ide/reference/media/vxreset.gif "vxReset")  
@@ -73,7 +67,7 @@ ms.locfileid: "49292066"
 <input id="Reset1" type="reset" value="Reset" name="Reset1">  
 ```  
   
- 有关详细信息，请参阅[HTML 输入控件](http://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)， [HtmlInputReset 服务器控件声明性语法](http://msdn.microsoft.com/en-us/cfc1f1fb-d33a-464d-9bb5-204e66174979)， <xref:System.Web.UI.HtmlControls.HtmlInputButton>，并<xref:System.Web.UI.WebControls.Button>。  
+ 有关详细信息，请参阅 [HTML 输入控件](https://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)、[HtmlInputFile 服务器控件声明性语法](https://msdn.microsoft.com/cfc1f1fb-d33a-464d-9bb5-204e66174979)、<xref:System.Web.UI.HtmlControls.HtmlInputButton> 和 <xref:System.Web.UI.WebControls.Button>。  
   
  **Input (Submit)**  
  ![HTMLpageToolbarSubmitButton 屏幕截图](../../ide/reference/media/vxsubmit.gif "vxSubmit")  
@@ -86,7 +80,7 @@ ms.locfileid: "49292066"
 <input id="Submit1" type="submit" value="Submit" name="Submit1">  
 ```  
   
- 有关详细信息，请参阅[HTML 输入控件](http://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)， [HtmlInputSubmit 服务器控件声明性语法](http://msdn.microsoft.com/en-us/eef2a157-f184-4ce9-b256-d1eacc7930f2)， <xref:System.Web.UI.HtmlControls.HtmlInputButton>，并<xref:System.Web.UI.WebControls.Button>。  
+ 有关详细信息，请参阅 [HTML 输入控件](https://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)、[HtmlInputSubmit 服务器控件声明性语法](https://msdn.microsoft.com/eef2a157-f184-4ce9-b256-d1eacc7930f2)、<xref:System.Web.UI.HtmlControls.HtmlInputButton> 和 <xref:System.Web.UI.WebControls.Button>。  
   
  **Input (Text)**  
  ![HTMLpageToolbarTextField 屏幕截图](../../ide/reference/media/vxtextfield.gif "vxTextfield")  
@@ -99,10 +93,10 @@ ms.locfileid: "49292066"
 <input id="Text1" TYPE="text" value="Text Field" name="Text1">  
 ```  
   
- 有关详细信息，请参阅[HTML 输入控件](http://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)， [HtmlInputText 服务器控件声明性语法](http://msdn.microsoft.com/en-us/87060d90-a11c-434d-9fc9-b03a8487041e)， [TextBox Web 服务器控件概述](http://msdn.microsoft.com/library/ab354bc1-f23a-48fc-93d8-d4d7c1b7396f)， <xref:System.Web.UI.HtmlControls.HtmlInputText>，和<xref:System.Web.UI.WebControls.TextBox>.  
+ 有关详细信息，请参阅 [HTML 输入控件](https://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)、[HtmlInputText 服务器控件声明性语法](https://msdn.microsoft.com/87060d90-a11c-434d-9fc9-b03a8487041e)、[TextBox Web 服务器控件概述](https://msdn.microsoft.com/library/ab354bc1-f23a-48fc-93d8-d4d7c1b7396f)、<xref:System.Web.UI.HtmlControls.HtmlInputText> 和 <xref:System.Web.UI.WebControls.TextBox>。  
   
 > [!IMPORTANT]
->  建议对所有用户输入进行验证。 有关详细信息，请参阅[在 ASP.NET 网页中验证用户输入](http://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461)。  
+> 建议对所有用户输入进行验证。 有关详细信息，请参阅[在 ASP.NET 网页中验证用户输入](https://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461)。  
   
  **Input (File)**  
  ![HTML 页文件字段](../../ide/reference/media/vxfilefield.gif "vxFilefield")  
@@ -115,10 +109,10 @@ ms.locfileid: "49292066"
 <input id="File1" type="file" name="File1">  
 ```  
   
- 有关详细信息，请参阅[HTML 输入控件](http://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)， [HtmlInputFile 服务器控件声明性语法](http://msdn.microsoft.com/en-us/a817b4a0-056f-4c17-a696-b9fdcde43db6)，和<xref:System.Web.UI.HtmlControls.HtmlInputFile>。  
+ 有关详细信息，请参阅 [HTML 输入控件](https://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)、[HtmlInputFile 服务器控件声明性语法](https://msdn.microsoft.com/a817b4a0-056f-4c17-a696-b9fdcde43db6) 和 <xref:System.Web.UI.HtmlControls.HtmlInputFile>。  
   
 > [!IMPORTANT]
->  建议对所有用户输入进行验证。 有关详细信息，请参阅[在 ASP.NET 网页中验证用户输入](http://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461)。  
+> 建议对所有用户输入进行验证。 有关详细信息，请参阅[在 ASP.NET 网页中验证用户输入](https://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461)。  
   
  **Input (Password)**  
  ![Visual Studio 密码字段](../../ide/reference/media/vxpassword.gif "vxPassword")  
@@ -131,10 +125,10 @@ ms.locfileid: "49292066"
 <input id="Password1" type="password" name="Password1">  
 ```  
   
- 有关详细信息，请参阅 [HTML 输入控件](http://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)、[HtmlInputPassword 服务器控件声明性语法](http://msdn.microsoft.com/en-us/df703dd0-1624-4e5a-a547-c97f2f331b9f)、[如何：设置 TextBox Web 服务器控件以输入密码](http://msdn.microsoft.com/library/5b5069f3-64a1-435a-aee6-da263f4e6310)和[演练：验证 Web 窗体页中的用户输入](http://msdn.microsoft.com/library/7141d6ba-34f3-410b-b5cd-2102a24cb436)。  
+ 有关详细信息，请参阅 [HTML 输入控件](https://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)、[HtmlInputPassword 服务器控件声明性语法](https://msdn.microsoft.com/df703dd0-1624-4e5a-a547-c97f2f331b9f)、[如何：设置 TextBox Web 服务器控件以输入密码](https://msdn.microsoft.com/library/5b5069f3-64a1-435a-aee6-da263f4e6310)和[演练：验证 Web 窗体页中的用户输入](https://msdn.microsoft.com/library/7141d6ba-34f3-410b-b5cd-2102a24cb436)。  
   
 > [!IMPORTANT]
->  如果应用程序传输用户名和密码，则应配置网站使用安全套接字层 (SSL) 对传输进行加密。 有关详细信息，请参阅 [IIS 操作指南](http://go.microsoft.com/fwlink/?linkid=47856)中的“使用 SSL 保护连接”。 此外，建议对所有用户输入进行验证。 有关详细信息，请参阅[在 ASP.NET 网页中验证用户输入](http://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461)。  
+> 如果应用程序传输用户名和密码，则应配置网站使用安全套接字层 (SSL) 对传输进行加密。 有关详细信息，请参阅 [IIS 操作指南](http://go.microsoft.com/fwlink/?linkid=47856)中的“使用 SSL 保护连接”。 此外，建议对所有用户输入进行验证。 有关详细信息，请参阅[在 ASP.NET 网页中验证用户输入](https://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461)。  
   
  **Input (Check box)**  
  ![HTML 网页工具箱复选框选项](../../ide/reference/media/vxcheckbox.gif "vxCheckbox")  
@@ -147,7 +141,7 @@ ms.locfileid: "49292066"
 <input id="Checkbox1" type="checkbox" name="Checkbox1">   
 ```  
   
- 有关详细信息，请参阅[HTML 输入控件](http://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)， [HtmlInputCheckBox 服务器控件声明性语法](http://msdn.microsoft.com/en-us/4a509586-89d8-4ccf-a0b8-b9160ce6e4a6)，[复选框和 CheckBoxList Web 服务器控件概述](http://msdn.microsoft.com/library/3028dfd3-e2c5-451d-9150-d02c8ffb92bf)，<xref:System.Web.UI.HtmlControls.HtmlInputCheckBox>，和<xref:System.Web.UI.WebControls.CheckBox>。  
+ 有关详细信息，请参阅 [HTML 输入控件](https://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)、[HtmlInputCheckBox 服务器控件声明性语法](https://msdn.microsoft.com/4a509586-89d8-4ccf-a0b8-b9160ce6e4a6)、[CheckBox 和 CheckBoxList Web 服务器控件概述](https://msdn.microsoft.com/library/3028dfd3-e2c5-451d-9150-d02c8ffb92bf)、<xref:System.Web.UI.HtmlControls.HtmlInputCheckBox> 和 <xref:System.Web.UI.WebControls.CheckBox>。  
   
  **Input (Radio)**  
  ![VisualStudioHTMLpageRadioButton 屏幕截图](../../ide/reference/media/vxradio.gif "vxRadio")  
@@ -160,7 +154,7 @@ ms.locfileid: "49292066"
 <input id="Radio1" type="radio" name="Radio1">  
 ```  
   
- 有关详细信息，请参阅[HTML 输入控件](http://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)， [HtmlInputRadioButton 服务器控件声明性语法](http://msdn.microsoft.com/en-us/6e60ff63-cc57-46ef-bf96-e829e204ba33)， [RadioButton 和 RadioButtonList Web 服务器控件概述](http://msdn.microsoft.com/library/20eb383c-4b59-432b-bba3-e9d785107747)， <xref:System.Web.UI.HtmlControls.HtmlInputRadioButton>，和<xref:System.Web.UI.WebControls.RadioButton>。  
+ 有关详细信息，请参阅 [HTML 输入控件](https://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)、[HtmlInputRadioButton 服务器控件声明性语法](https://msdn.microsoft.com/6e60ff63-cc57-46ef-bf96-e829e204ba33)、[RadioButton 和 RadioButtonList Web 服务器控件概述](https://msdn.microsoft.com/library/20eb383c-4b59-432b-bba3-e9d785107747)、<xref:System.Web.UI.HtmlControls.HtmlInputRadioButton> 和 <xref:System.Web.UI.WebControls.RadioButton>。  
   
  **Input (Hidden)**  
  ![HTML 页隐藏项](../../ide/reference/media/vxhidden.gif "vxhidden")  
@@ -173,7 +167,7 @@ ms.locfileid: "49292066"
 <input id="Hidden1" type="hidden" name="Hidden1">   
 ```  
   
- 有关详细信息，请参阅[HTML 输入控件](http://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)， [HtmlInputHidden 服务器控件声明性语法](http://msdn.microsoft.com/en-us/4194e44d-1d74-4bfc-9cc7-743a2e1ea5f9)，和<xref:System.Web.UI.HtmlControls.HtmlInputHidden>。  
+ 有关详细信息，请参阅 [HTML 输入控件](https://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)、[HtmlInputHidden 服务器控件声明性语法](https://msdn.microsoft.com/4194e44d-1d74-4bfc-9cc7-743a2e1ea5f9) 和 <xref:System.Web.UI.HtmlControls.HtmlInputHidden>。  
   
  **Textarea**  
  ![HTML 页工具栏文本区域](../../ide/reference/media/vxtextarea.gif "vxTextarea")  
@@ -186,10 +180,10 @@ ms.locfileid: "49292066"
 <textarea id=" textarea 1 name=" textarea 1" rows=2 cols=20></textarea>   
 ```  
   
- 有关详细信息，请参阅[HtmlTextArea 服务器控件声明性语法](http://msdn.microsoft.com/en-us/5a103ffa-235b-4452-ba2b-a4fb8ba8cb87)， <xref:System.Web.UI.HtmlControls.HtmlTextArea>，和<xref:System.Web.UI.WebControls.TextBox>。  
+ 有关详细信息，请参阅 [HtmlTextArea 服务器控件声明性语法](https://msdn.microsoft.com/5a103ffa-235b-4452-ba2b-a4fb8ba8cb87)、<xref:System.Web.UI.HtmlControls.HtmlTextArea> 和 <xref:System.Web.UI.WebControls.TextBox>。  
   
 > [!IMPORTANT]
->  建议对所有用户输入进行验证。 有关详细信息，请参阅[在 ASP.NET 网页中验证用户输入](http://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461)。  
+> 建议对所有用户输入进行验证。 有关详细信息，请参阅[在 ASP.NET 网页中验证用户输入](https://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461)。  
   
  **Table**  
  ![HTMLpageToolbarTable 屏幕截图](../../ide/reference/media/vxtable.gif "vxTable")  
@@ -202,7 +196,7 @@ ms.locfileid: "49292066"
 <table cellspacing="1" width="75%" border=1> <tr><td></td></tr></table>   
 ```  
   
- 有关详细信息，请参阅[HtmlTable 服务器控件声明性语法](http://msdn.microsoft.com/en-us/625b06d8-0f69-4112-a1d4-8ef2a9fbcda9)， [Table、 TableRow 和 TableCell Web 服务器控件概述](http://msdn.microsoft.com/library/2fbd0582-cf69-4c8d-9e35-21f35e2cee1a)， <xref:System.Web.UI.HtmlControls.HtmlTable>，并<xref:System.Web.UI.WebControls.Table>。  
+ 有关详细信息，请参阅 [HtmlTable 服务器控件声明性语法](https://msdn.microsoft.com/625b06d8-0f69-4112-a1d4-8ef2a9fbcda9)、[Table、TableRow 和 TableCell Web 服务器控件概述](https://msdn.microsoft.com/library/2fbd0582-cf69-4c8d-9e35-21f35e2cee1a)、<xref:System.Web.UI.HtmlControls.HtmlTable> 和 <xref:System.Web.UI.WebControls.Table>。  
   
  **Image**  
  ![HTML 页图像项](../../ide/reference/media/vximage.gif "vxImage")  
@@ -215,7 +209,7 @@ ms.locfileid: "49292066"
 <img alt="" src="">  
 ```  
   
- 有关详细信息，请参阅[HtmlImage 服务器控件声明性语法](http://msdn.microsoft.com/en-us/528430e8-ced1-47d1-8db2-942e734a61f6)，[图像 Web 服务器控件概述](http://msdn.microsoft.com/library/096a8d8d-58ee-4ee8-ab82-6594a0f3a0a9)， <xref:System.Web.UI.HtmlControls.HtmlImage>， <xref:System.Web.UI.HtmlControls.HtmlInputImage>，和<xref:System.Web.UI.WebControls.Image>。  
+ 有关详细信息，请参阅 [HtmlImage 服务器控件声明性语法](https://msdn.microsoft.com/528430e8-ced1-47d1-8db2-942e734a61f6)、[Image Web 服务器控件概述](https://msdn.microsoft.com/library/096a8d8d-58ee-4ee8-ab82-6594a0f3a0a9)、<xref:System.Web.UI.HtmlControls.HtmlImage>、<xref:System.Web.UI.HtmlControls.HtmlInputImage> 和 <xref:System.Web.UI.WebControls.Image>。  
   
  **选择**  
  ![HTML 页工具箱下拉列表](../../ide/reference/media/vxdropdown.gif "vxDropdown")  
@@ -230,7 +224,7 @@ ms.locfileid: "49292066"
   
  通过增加 size 属性的值可以创建多行 `select` 元素。  
   
- 有关详细信息，请参阅[HtmlSelect 服务器控件声明性语法](http://msdn.microsoft.com/en-us/ee93bdec-b343-441a-a8ff-56ffcafe9ae5)， [NIB： 如何： 创建脚本和编辑事件处理程序](http://msdn.microsoft.com/en-us/69d71d13-c68b-4ecd-869b-a42edf6d1f6d)， [DropDownList Web 服务器控件概述](http://msdn.microsoft.com/library/517dd1a4-8df3-4c9f-8c89-1549a1aee608)， [ListBox Web 服务器控件概述](http://msdn.microsoft.com/library/c08ee025-787a-408d-858e-a4a5fdb61d97)， <xref:System.Web.UI.HtmlControls.HtmlSelect>，并<xref:System.Web.UI.WebControls.DropDownList>。  
+ 有关详细信息，请参阅 [HtmlSelect 服务器控件声明性语法](https://msdn.microsoft.com/ee93bdec-b343-441a-a8ff-56ffcafe9ae5)、[NIB：如何：创建脚本和编辑事件处理程序](https://msdn.microsoft.com/69d71d13-c68b-4ecd-869b-a42edf6d1f6d)、[DropDownList Web 服务器控件概述](https://msdn.microsoft.com/library/517dd1a4-8df3-4c9f-8c89-1549a1aee608)、[ListBox Web 服务器控件概述](https://msdn.microsoft.com/library/c08ee025-787a-408d-858e-a4a5fdb61d97)、<xref:System.Web.UI.HtmlControls.HtmlSelect> 和 <xref:System.Web.UI.WebControls.DropDownList>。  
   
  **Horizontal Rule**  
  ![HTML 页水平标尺项](../../ide/reference/media/vxhorizontal.gif "vxHorizontal")  
@@ -243,7 +237,7 @@ ms.locfileid: "49292066"
 <hr width="100%" size=1>   
 ```  
   
- 有关详细信息，请参阅 [HTML 水平标尺控件](http://msdn.microsoft.com/library/bf6df0a8-9844-404d-8a9a-3455b0180f2f)。  
+ 有关详细信息，请参阅 [HTML 水平标尺控件](https://msdn.microsoft.com/library/bf6df0a8-9844-404d-8a9a-3455b0180f2f)。  
   
  **Div**  
  ![HTML 页标签](../../ide/reference/media/vxlabel.gif "vxLabel")  
@@ -256,12 +250,9 @@ ms.locfileid: "49292066"
 <div ms_positioning="FlowLayout" style="width: 70px; position: relative; height: 15px">Label</div>  
 ```  
   
- 有关详细信息，请参阅[HTML Div 控件](http://msdn.microsoft.com/library/585fa702-4408-4af1-a92b-68d77ee5e995)， [Label Web 服务器控件概述](http://msdn.microsoft.com/library/990558d1-4b22-4f28-b100-78a434b3c5ac)，和<xref:System.Web.UI.WebControls.Label>。  
+ 有关详细信息，请参阅 [HTML Div 控件](https://msdn.microsoft.com/library/585fa702-4408-4af1-a92b-68d77ee5e995)、[Label Web 服务器控件概述](https://msdn.microsoft.com/library/990558d1-4b22-4f28-b100-78a434b3c5ac)和 <xref:System.Web.UI.WebControls.Label>。  
   
 ## <a name="see-also"></a>请参阅  
  [工具箱](../../ide/reference/toolbox.md)   
- [工具箱 ->“标准”选项卡](http://msdn.microsoft.com/library/35e9320d-fcbd-474b-8b8f-55705e9a1870)   
- [HTML 控件](http://msdn.microsoft.com/library/83bc6f7e-a2b5-4fe9-9a34-eb34aef673be)
-
-
-
+ [工具箱 ->“标准”选项卡](https://msdn.microsoft.com/library/35e9320d-fcbd-474b-8b8f-55705e9a1870)   
+ [HTML 控件](https://msdn.microsoft.com/library/83bc6f7e-a2b5-4fe9-9a34-eb34aef673be)

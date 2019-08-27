@@ -1,14 +1,9 @@
 ---
-title: CA1305： 指定 IFormatProvider |Microsoft Docs
-ms.custom: ''
+title: CA1305:指定 IFormatProvider |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - SpecifyIFormatProvider
 - CA1305
@@ -20,14 +15,14 @@ caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 084fd28106a3ac5af9a40d46cf687d4982f53690
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 93bf7f17f77008ce8e9898c1871926edf2e8439f
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49834284"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65694775"
 ---
-# <a name="ca1305-specify-iformatprovider"></a>CA1305：指定 IFormatProvider
+# <a name="ca1305-specify-iformatprovider"></a>CA1305:指定 IFormatProvider
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -40,11 +35,11 @@ ms.locfileid: "49834284"
 ## <a name="cause"></a>原因
  某方法或构造函数调用的重载接受一个或多个成员<xref:System.IFormatProvider?displayProperty=fullName>参数，该方法或构造函数不调用的重载的<xref:System.IFormatProvider>参数。 此规则将忽略对调用[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]方法被记录为忽略<xref:System.IFormatProvider>参数还另外包含以下方法：
 
--   <xref:System.Activator.CreateInstance%2A?displayProperty=fullName>
+- <xref:System.Activator.CreateInstance%2A?displayProperty=fullName>
 
--   <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=fullName>
+- <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=fullName>
 
--   <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=fullName>
+- <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=fullName>
 
 ## <a name="rule-description"></a>规则说明
  当<xref:System.Globalization.CultureInfo?displayProperty=fullName>或<xref:System.IFormatProvider>未提供对象，则重载成员提供的默认值可能不想要在所有区域设置中起作用。 此外，[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]成员选择默认区域性和格式设置基于可能不为你的代码正确的假设。 若要确保代码按预期为方案运行，应提供特定于区域性的信息，按照以下原则：
@@ -80,10 +75,7 @@ ms.locfileid: "49834284"
  **1900 年 6 月 4 日下午 12:15:12**
 **06/04/1900年 12:15:12**
 ## <a name="related-rules"></a>相关的规则
- [CA1304：指定 CultureInfo](../code-quality/ca1304-specify-cultureinfo.md)
+ [CA1304:指定 CultureInfo](../code-quality/ca1304-specify-cultureinfo.md)
 
 ## <a name="see-also"></a>请参阅
- [NIB： 使用 CultureInfo 类](http://msdn.microsoft.com/en-us/d4329e34-64c3-4d1e-8c73-5b0ee626ba7a)
-
-
-
+ [NIB：使用 CultureInfo 类](https://msdn.microsoft.com/d4329e34-64c3-4d1e-8c73-5b0ee626ba7a)

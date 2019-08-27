@@ -1,14 +1,9 @@
 ---
 title: SccHistory 函数 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - SccHistory
 helpviewer_keywords:
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: a636d9d3-47c1-4b48-ac6b-bcfde19d6cf9
 caps.latest.revision: 17
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 8621b437cd21d0294abee65386c40465888bd3e8
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 8df85c03201e46768c43fb64cc41b7fa081eb91a
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51740060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63446829"
 ---
 # <a name="scchistory-function"></a>SccHistory 函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -81,9 +76,8 @@ SCCRTN SccHistory(
  请注意，在某些情况下，此调用的执行期间可能会更改要检查的文件。 例如， [!INCLUDE[vsvss](../includes/vsvss-md.md)] history 命令使用户有机会以获取文件的旧版本。 在这种情况下，源代码管理插件返回`SCC_I_RELOAD`来警告 IDE，它需要重新加载该文件。  
   
 > [!NOTE]
->  如果源代码管理插件不支持此函数的文件的数组，可以显示仅的第一个文件文件历史记录。  
+> 如果源代码管理插件不支持此函数的文件的数组，可以显示仅的第一个文件文件历史记录。  
   
 ## <a name="see-also"></a>请参阅  
  [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccOpenProject](../extensibility/sccopenproject-function.md)
-

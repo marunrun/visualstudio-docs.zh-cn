@@ -1,14 +1,9 @@
 ---
 title: 即时窗口 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.ImmediateWindow
 helpviewer_keywords:
@@ -19,18 +14,17 @@ ms.assetid: d33e7937-73f3-4c69-9df0-777a8713c6f2
 caps.latest.revision: 28
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: be77104c4570068cbebf6c25801f600757a6ee0d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: e6bbbd4fa2ad051407ece3e05c1806c1231ef2e8
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49850420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63437116"
 ---
 # <a name="immediate-window"></a>即时窗口
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 **即时**窗口用于调试和计算表达式、执行语句、输出变量值等。 借助即时窗口，用户可输入要在调试期间使用开发语言计算或执行的表达式。 若要显示**即时**窗口，请打开要编辑的项目，然后从“调试”菜单中选择“窗口”，再选择“即时”，或按 CTRL+ALT+I。  
   
  用户可使用此窗口发出单个 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 命令。 可用的命令包括 `EvaluateStatement`，该命令可用于为变量赋值。 **即时**窗口还支持 IntelliSense。  
@@ -51,7 +45,7 @@ ms.locfileid: "49850420"
  此命令的这两个版本都将返回变量 `varA` 的值。  
   
 > [!NOTE]
->  若要在**即时**窗口中发出 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 命令，必须以大于号 (>) 作为命令的开头。 若要输入多个命令，请切换到**命令**窗口。  
+> 若要在**即时**窗口中发出 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 命令，必须以大于号 (>) 作为命令的开头。 若要输入多个命令，请切换到**命令**窗口。  
   
 ## <a name="design-time-expression-evaluation"></a>设计时表达式计算  
  用户可在设计时使用**即时**窗口执行函数或子例程。  
@@ -80,7 +74,7 @@ ms.locfileid: "49850420"
   
     **即时**窗口将运行 `MyFunction` 并显示 `4`。  
   
-   如果函数或子例程包含断点，则 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 会在适当断点处中断执行。 随后即可使用调试器窗口检查程序状态。 有关详细信息，请参阅[演练：在设计时调试](../../debugger/walkthrough-debugging-at-design-time.md)。  
+   如果函数或子例程包含断点，则 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 会在适当断点处中断执行。 随后即可使用调试器窗口检查程序状态。 有关详细信息，请参见[演练：在设计时调试](../../debugger/walkthrough-debugging-at-design-time.md)。  
   
    不能在需要启动执行环境的项目类型（包括 [!INCLUDE[trprVSTOshort](../../includes/trprvstoshort-md.md)] 项目、Web 项目、智能设备项目和 SQL 项目）中使用设计时表达式计算。  
   
@@ -124,9 +118,9 @@ ms.locfileid: "49850420"
   
 #### <a name="to-toggle-first-chance-exception-notifications-in-the-immediate-window"></a>在“即时”窗口中切换首次异常通知开关  
   
-1.  在“视图”菜单上单击“其他窗口”，然后单击“输出”。  
+1. 在“视图”菜单上单击“其他窗口”，然后单击“输出”。  
   
-2.  右键单击**输出**窗口的文本区域，然后选择或取消选择“异常消息”。  
+2. 右键单击**输出**窗口的文本区域，然后选择或取消选择“异常消息”。  
   
 ## <a name="see-also"></a>请参阅  
  [Navigating through Code with the Debugger](../../debugger/navigating-through-code-with-the-debugger.md) （使用调试器浏览代码）  
@@ -136,6 +130,3 @@ ms.locfileid: "49850420"
  [演练：在设计时调试](../../debugger/walkthrough-debugging-at-design-time.md)   
  [Visual Studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)   
  [在 Visual Studio 中使用正则表达式](../../ide/using-regular-expressions-in-visual-studio.md)
-
-
-

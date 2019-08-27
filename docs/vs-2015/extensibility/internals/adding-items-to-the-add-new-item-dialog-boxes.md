@@ -1,26 +1,21 @@
 ---
 title: 将项添加到添加新项对话框 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Add New Item dialog box, adding items
 ms.assetid: 2f70863b-425b-4e65-86b4-d6a898e29dc7
 caps.latest.revision: 19
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: ca9ae7d9e4f0ffc031d2dc8db3e940c9b844c57e
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: ecdacfc4ac65e0dc18512bfb56eb870545c66a9b
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51778548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63443478"
 ---
 # <a name="adding-items-to-the-add-new-item-dialog-boxes"></a>将项添加到“添加新项”对话框
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -28,28 +23,28 @@ ms.locfileid: "51778548"
 将项添加到的过程**添加新项**对话框的开头的注册表项。 以下注册表项中所示，AddItemTemplates 部分包含的路径和名称中提供的项中的目录**添加新项**放入对话框。  
   
 > [!NOTE]
->  紧跟代码段的表包含有关注册表项的其他信息。  
+> 紧跟代码段的表包含有关注册表项的其他信息。  
   
  本部分位于 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0Exp\Projects] 下。  
   
  首个 GUID 是此类型; 的项目的 CLSID第二个 GUID 指示添加的项模板的已注册的项目类型。  
   
- \\{C061DB26-5833-11D2-96F5-000000000000} \AddItemTemplates\TemplateDirs\ {ACEF4EB2-57CF-11D2-96F4-000000000000} \1  
+ \\{C061DB26-5833-11D2-96F5-000000000000}\AddItemTemplates\TemplateDirs\ {ACEF4EB2-57CF-11D2-96F4-000000000000}\1  
   
  @="#6"  
   
- "TemplatesDir"="\<Visual Studio SDK 安装路径\\\VSIntegration\\\SomeFolder\\\SomePackage\\\SomeProject\\\SomeProjectItems"  
+ "TemplatesDir"="\<Visual Studio SDK installation path\\\VSIntegration\\\SomeFolder\\\SomePackage\\\SomeProject\\\SomeProjectItems"  
   
- "SortPriority"= dword:00000064  
+ "SortPriority"=dword:00000064  
   
-|name|类型|（从.rgs 文件） 的数据|描述|  
+|名称|类型|（从.rgs 文件） 的数据|描述|  
 |----------|----------|-----------------------------|-----------------|  
-|@ （默认值）|REG_SZ|#%IDS_ADDITEM_TEMPLATES_ENTRY %|资源 ID**添加项**模板。|  
+|@ （默认值）|REG_SZ|#%IDS_ADDITEM_TEMPLATES_ENTRY%|资源 ID**添加项**模板。|  
 |Val TemplatesDir|REG_SZ|%TEMPLATE_PATH%\SomeProjectItems|在对话框中显示的项目项的路径**添加新项**向导。|  
 |Val SortPriority|REG_DWORD|100 ([!INCLUDE[vcprx64](../../includes/vcprx64-md.md)])|确定文件中显示的树节点中的排序顺序**添加新项**对话框。|  
   
 > [!NOTE]
->  对于 Visual C# 和 Visual Basic 项目类型 GUID 是按如下所示：[!INCLUDE[csprcs](../../includes/csprcs-md.md)]: {FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]: {F184B08F-C81C-45F6-A57F-5ABD9991F28F}  
+> 对于 Visual C# 和 Visual Basic 项目类型 GUID 是按如下所示：[!INCLUDE[csprcs](../../includes/csprcs-md.md)]: {FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]: {F184B08F-C81C-45F6-A57F-5ABD9991F28F}  
   
  该目录所列的 TemplateDirs，为 %template_path%\someprojectitems，是在左侧的节点**添加新项**对话框框树。 在树中的其他元素都基于该根目录中的子目录。 可用于添加到项目文件是在右窗格中的项**添加新项**对话框。  
   
@@ -58,7 +53,7 @@ ms.locfileid: "51778548"
  但是，没有一个.vsdir 文件中将所有内容。 您可以在目录中的每个项的一个.vsdir 文件。 有关详细信息，请参阅[向导 (。在 Vsz) 文件](../../extensibility/internals/wizard-dot-vsz-file.md)和[模板目录说明 (。Vsdir) 文件](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)。  
   
 > [!NOTE]
->  模板目录中的.vsdir 文件是可选的。 如果只是想要将在目录中的项目元素和其显示在**添加新项**对话框中，可以将此文件放在 TemplatesDir 语句中指定的模板目录中。 然后，该文件将显示在右窗格中**添加新项**对话框中的为该项目。 但是，如果你想要显示的文件或图标的本地化的标题，则必须包含至少一个.vsdir 文件模板目录中。  
+> 模板目录中的.vsdir 文件是可选的。 如果只是想要将在目录中的项目元素和其显示在**添加新项**对话框中，可以将此文件放在 TemplatesDir 语句中指定的模板目录中。 然后，该文件将显示在右窗格中**添加新项**对话框中的为该项目。 但是，如果你想要显示的文件或图标的本地化的标题，则必须包含至少一个.vsdir 文件模板目录中。  
   
 ## <a name="grouping-project-items"></a>分组项目项  
  如果你想要包含在文件夹中的模板组**添加新项**对话框框树中，你必须使用项模板根目录下的子目录中。 当**添加新项**向用户显示对话框中，它们还可以查看子文件夹，并可以从中选择项目元素。  
@@ -89,4 +84,3 @@ ms.locfileid: "51778548"
  [添加项目和项目项模板](../../extensibility/internals/adding-project-and-project-item-templates.md)   
  [模板目录说明 (。Vsdir) 文件](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)   
  [向导 (.Vsz) 文件](../../extensibility/internals/wizard-dot-vsz-file.md)
-

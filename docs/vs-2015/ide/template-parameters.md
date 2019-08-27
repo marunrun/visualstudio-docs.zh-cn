@@ -1,14 +1,9 @@
 ---
 title: 模板参数 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio templates, parameters
 - template parameters [Visual Studio]
@@ -18,13 +13,13 @@ ms.assetid: 1b567143-08c6-4d7a-b484-49f0671754fe
 caps.latest.revision: 27
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: ef4e1a6e3c56df744ce5375a1cb3a1dbd53a6fad
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: ed7dd478f63cf4d5dba38f6d721d4b728e1856b4
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49238896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63419623"
 ---
 # <a name="template-parameters"></a>模板参数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,21 +27,21 @@ ms.locfileid: "49238896"
 在对模板进行实例化时，您可以通过在模板中使用参数来替换模板的关键部分的值，如类名和命名空间。 用户在“新建项目”或“添加新项”对话框中单击“确定”时，后台运行的模板向导会替换这些参数。  
   
 ## <a name="declaring-and-enabling-template-parameters"></a>声明和启用模板参数  
- 模板参数以 $参数$ 的格式进行声明。 例如：  
+ 模板参数以 $参数$ 的格式进行声明。 例如:  
   
--   $safeprojectname$  
+- $safeprojectname$  
   
--   $guid1$  
+- $guid1$  
   
--   $guid5$  
+- $guid5$  
   
 #### <a name="to-enable-parameter-substitution-in-templates"></a>在模板中启用参数替换  
   
-1.  在模板的 .vstemplate 文件中，定位到与要为其启用参数替换的项对应的 `ProjectItem` 元素。  
+1. 在模板的 .vstemplate 文件中，定位到与要为其启用参数替换的项对应的 `ProjectItem` 元素。  
   
-2.  将 `ReplaceParameters` 元素的 `ProjectItem` 属性设置为 `true`。  
+2. 将 `ReplaceParameters` 元素的 `ProjectItem` 属性设置为 `true`。  
   
-3.  在项目项的代码文件中，在适当位置上包括参数。 例如，以下参数指定安全项目名称用于文件中的命名空间：  
+3. 在项目项的代码文件中，在适当位置上包括参数。 例如，以下参数指定安全项目名称用于文件中的命名空间：  
   
     ```  
     namespace $safeprojectname$  
@@ -56,9 +51,9 @@ ms.locfileid: "49238896"
  下表列出可供任何模板使用的保留模板参数。  
   
 > [!NOTE]
->  模板参数区分大小写。  
+> 模板参数区分大小写。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |`clrversion`|公共语言运行时 (CLR) 的当前版本。|  
 |`GUID [1-10]`|一个用于替换项目文件中的项目 GUID 的 GUID。 可指定最多 10 个唯一的 GUID（例如，`guid1)`。|  
@@ -130,6 +125,3 @@ namespace $safeprojectname$
   
 ## <a name="see-also"></a>请参阅  
  [自定义模板](../ide/customizing-project-and-item-templates.md)
-
-
-

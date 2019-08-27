@@ -1,8 +1,8 @@
 ---
-title: C + + 静态代码分析应用商店应用程序
+title: C++静态代码分析应用商店应用程序
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.technology: vs-ide-general
+ms.technology: vs-ide-test
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.propertypages.native.express
@@ -10,13 +10,13 @@ ms.assetid: c5355e43-a37c-4686-a969-18e3dfc59a9c
 caps.latest.revision: 15
 author: alexhomer1
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 2382ad7d73069ce66e57e685a05f4319cc8986d0
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
-ms.translationtype: MTE95
+manager: jillfra
+ms.openlocfilehash: 799e75dff8202ef041399cc6e0fcfb791dc7e868
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53064149"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65686537"
 ---
 # <a name="analyze-c-code-quality-of-store-apps-using-visual-studio-static-code-analysis"></a>使用 Visual Studio 静态代码分析来分析应用商店应用的 C++ 代码质量
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "53064149"
  Visual Studio Express 版本中的代码分析工具可检查代码中是否存在一组常见问题以及违反良好编程习惯的情况。 代码分析警告与编译器错误和警告不同，因为代码分析工具搜索的是虽然有效但仍会为你或使用你代码的其他人员带来问题的特定代码模式。 代码分析还可在代码中找到通过测试难以发现的缺陷。 在开发过程中定期运行代码分析工具可提高所编写的应用程序的质量。
 
 > [!NOTE]
-> 在 Visual Studio 旗舰版、Visual Studio 高级专业版和 Visual Studio 专业版中，可使用完整的代码分析工具。 请参阅 MSDN 库中的 [Analyzing Application Quality by Using Code Analysis Tools](http://msdn.microsoft.com/library/dd264897.aspx)（使用代码分析工具分析应用程序质量）。
+> 在 Visual Studio 旗舰版、Visual Studio 高级专业版和 Visual Studio 专业版中，可使用完整的代码分析工具。 请参阅 MSDN 库中的 [Analyzing Application Quality by Using Code Analysis Tools](https://msdn.microsoft.com/library/dd264897.aspx)（使用代码分析工具分析应用程序质量）。
 
-##  <a name="BKMK_Run"></a>运行代码分析
+## <a name="BKMK_Run"></a>运行代码分析
  若要对 Visual Studio 解决方案运行代码分析，请执行以下操作：
 
 - 在“生成”菜单上，选择“对解决方案运行代码分析”。
@@ -43,7 +43,7 @@ ms.locfileid: "53064149"
 
    ![代码分析窗口](../test/media/ca-cpp-collapsed.png "CA_CPP_Collapsed")
 
-##  <a name="BKMK_Analyze"></a>分析和解决代码分析警告
+## <a name="BKMK_Analyze"></a>分析和解决代码分析警告
  若要分析某个具体的警告，请在“代码分析”窗口中选择该警告的标题。 随后该警告将展开，显示有关问题的详细信息。 如果可能，代码分析将显示导致该警告的行号和分析逻辑。
 
  ![展开代码分析警告](../test/media/ca-cpp-expanded-callout.png "CA_CPP_Expanded_Callout")
@@ -55,9 +55,9 @@ ms.locfileid: "53064149"
  了解问题后，可在代码中解决该问题。 然后重新运行代码分析，以确保警告不再显示在“代码分析”窗口中，并且修复未引发新的警告。
 
 > [!TIP]
->  可从“代码分析”窗口中重新运行代码分析。 选择“分析”按钮，然后选择分析的范围。 可对整个解决方案对所选项目重新运行分析。
+> 可从“代码分析”窗口中重新运行代码分析。 选择“分析”按钮，然后选择分析的范围。 可对整个解决方案对所选项目重新运行分析。
 
-##  <a name="BKMK_Suppress"></a>禁止显示代码分析警告
+## <a name="BKMK_Suppress"></a>禁止显示代码分析警告
  有时，你可能会决定不修复代码分析警告。 你可能会觉得与代码的任何真实实现中引发问题的可能性相比，解决警告所需的重新编码工作量过大。 或者，你可能会认为在警告中使用的分析不适合特定的上下文。 可禁止显示个别警告，以使“代码分析”窗口中不再显示这些警告。
 
  若要禁止显示警告，请执行以下操作：
@@ -70,16 +70,15 @@ ms.locfileid: "53064149"
 
    禁止显示消息会插入用于禁止显示代码行的警告的 `#pragma(warning:`*WarningId*`)`。
 
-##  <a name="BKMK_Search"></a>搜索和筛选代码分析结果
+## <a name="BKMK_Search"></a>搜索和筛选代码分析结果
  可搜索冗长的警告消息列表，也可在多项目解决方案中筛选警告。
 
  ![搜索并筛选代码分析窗口](../test/media/ca-searchfilter.png "CA_SearchFilter")
 
-##  <a name="Warnings"></a>C++ 代码分析警告
+## <a name="Warnings"></a>C++ 代码分析警告
  代码分析可引发以下有关 C++ 代码的警告：
 
-
-|                                      规则                                      |                                                  说明                                                  |
+|                                      规则                                      |                                                  描述                                                  |
 |--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
 |                       [C6001](../code-quality/c6001.md)                        |                                          使用未初始化的内存                                           |
 |                       [C6011](../code-quality/c6011.md)                        |                                          取消引用 Null 指针                                           |
@@ -117,7 +116,7 @@ ms.locfileid: "53064149"
 |                       [C6504](../code-quality/c6504.md)                        |                                              在非指针参数中为 Null                                              |
 |                       [C6505](../code-quality/c6505.md)                        |                                               对 Void 类型使用 MustCheck 属性                                               |
 |                       [C6506](../code-quality/c6506.md)                        |                                      非指针参数或数组的缓冲区大小                                      |
-| [C6507](http://msdn.microsoft.com/18f88cd1-d035-4403-a6a4-12dd0affcf21)        |                                       取消引用零处的 Null 不匹配                                       |
+| [C6507](https://msdn.microsoft.com/18f88cd1-d035-4403-a6a4-12dd0affcf21)        |                                       取消引用零处的 Null 不匹配                                       |
 |                       [C6508](../code-quality/c6508.md)                        |                                           常量缓冲区上的写入权限                                            |
 |                       [C6509](../code-quality/c6509.md)                        |                                          返回使用的前置条件                                          |
 |                       [C6510](../code-quality/c6510.md)                        |                                        在非指针参数中以 Null 结尾的参数                                         |
@@ -128,13 +127,12 @@ ms.locfileid: "53064149"
 |                       [C6516](../code-quality/c6516.md)                        |                                          在特性上无属性                                           |
 |                       [C6517](../code-quality/c6517.md)                        |                                       有效的不可读缓冲区的大小                                       |
 |                       [C6518](../code-quality/c6518.md)                        |                                     不可写的缓冲区的可写入大小                                      |
-| [C6519](http://msdn.microsoft.com/2b6326b0-0539-4d26-8fb1-720114933232)  |                  无效的批注：“NeedsRelease”属性的值必须为 Yes 或 No                   |
-| [C6521](http://msdn.microsoft.com/e98d0ae3-6f13-47b2-9a15-15d4055af9ef)  |                                        取消引用无效大小的字符串                                        |
+| [C6521](https://msdn.microsoft.com/e98d0ae3-6f13-47b2-9a15-15d4055af9ef)  |                                        取消引用无效大小的字符串                                        |
 |                       [C6522](../code-quality/c6522.md)                        |                                           无效大小的字符串类型                                            |
-| [C6523](http://msdn.microsoft.com/11397a31-b224-46b0-afb7-d49ca576a3bb)  |                                         无效大小的字符串参数                                         |
+| [C6523](https://msdn.microsoft.com/11397a31-b224-46b0-afb7-d49ca576a3bb)  |                                         无效大小的字符串参数                                         |
 |                       [C6525](../code-quality/c6525.md)                        |                                   无效大小字符串的不可访问的位置                                    |
-| [C6526](http://msdn.microsoft.com/59c590c7-0098-4166-a1ac-87f324596002)  |                                        无效大小的字符串缓冲区类型                                        |
-|                       [C6527](../code-quality/c6527.md)                        |              无效的批注：无法对 void 类型的值使用“NeedsRelease”属性               |
+| [C6526](https://msdn.microsoft.com/59c590c7-0098-4166-a1ac-87f324596002)  |                                        无效大小的字符串缓冲区类型                                        |
+|                       [C6527](../code-quality/c6527.md)                        |              无效的批注：NeedsRelease 属性不用于 void 类型的值               |
 |                       [C6530](../code-quality/c6530.md)                        |                                       无法识别的格式字符串样式                                        |
 |                       [C6540](../code-quality/c6540.md)                        | 对该函数使用属性批注将使其现有的所有 __declspec 批注无效  |
 |                       [C6551](../code-quality/c6551.md)                        |                              大小规范无效：表达式不可分析                              |
@@ -194,7 +192,6 @@ ms.locfileid: "53064149"
 |                      [C28254](../code-quality/c28254.md)                       |                               批注中不支持 dynamic_cast<>()                                |
 |                      [C28262](../code-quality/c28262.md)                       |                    对于批注，在函数中找到了批注的语法错误                     |
 |                      [C28263](../code-quality/c28263.md)                       |                 在条件批注中找到内部批注的语法错误                 |
-| [C28264](http://msdn.microsoft.com/bf6ea983-a06e-4752-a042-747a7dbf338c) |                                    结果列出了必须为常量的值。                                     |
 |                      [C28267](../code-quality/c28267.md)                       |                    在函数中找到了批注的语法错误。                    |
 |                      [C28272](../code-quality/c28272.md)                       |      在检查参数时，函数的批注与函数声明不一致      |
 |                      [C28273](../code-quality/c28273.md)                       |                    对于函数，线索与函数声明不一致                     |

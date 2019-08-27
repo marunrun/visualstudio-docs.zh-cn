@@ -2,7 +2,6 @@
 title: IActiveScript::Close | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 886ab1c4c39cf7c64571862bfd28f2fbd1062694
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: 53b71471ada55751de301391fdcc70387c1bb6c2
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54348798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62935674"
 ---
 # <a name="iactivescriptclose"></a>IActiveScript::Close
 使脚本引擎放弃所有当前加载的脚本，会丢失其状态，并释放任何对其他对象，因此进入关闭的状态的接口指针。 事件接收器、 立即执行的脚本文本和宏已正在进行的调用完成之前的状态更改 (使用[iactivescript:: Interruptscriptthread](../../winscript/reference/iactivescript-interruptscriptthread.md)取消正在运行的脚本线程)。 接口发布若要避免循环引用问题之前，必须通过创建主机调用此方法。  
@@ -37,7 +36,7 @@ HRESULT Close(void);
 ## <a name="return-value"></a>返回值  
  返回以下值之一：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |`S_OK`|成功。|  
 |`E_UNEXPECTED`|不应在调用 （例如，脚本引擎本来就处于关闭状态）。|  

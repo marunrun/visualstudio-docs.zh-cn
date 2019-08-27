@@ -1,35 +1,30 @@
 ---
 title: 属性窗口概述 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Properties window
 ms.assetid: 289ed4f2-02ac-4899-855e-42dfe57ee05f
 caps.latest.revision: 12
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 8b733a6845a61a71f15d8574666b345dedbf6f50
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: fd4be229338d1a09c22b4d81384dc90f0544fa39
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51752102"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65700746"
 ---
 # <a name="properties-window-overview"></a>属性窗口概述
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 **属性**窗口用于显示在 windows 中可用的两个主要类型中选择的对象的属性[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]集成的开发环境 (IDE)。 Windows 这两种类型是：  
   
--   如解决方案资源管理器、 类视图和对象浏览器的工具窗口  
+- 如解决方案资源管理器、 类视图和对象浏览器的工具窗口  
   
--   包含此类编辑器和设计器为窗体设计器、 XML 编辑器和 HTML 编辑器的文档窗口  
+- 包含此类编辑器和设计器为窗体设计器、 XML 编辑器和 HTML 编辑器的文档窗口  
   
 ## <a name="using-the-properties-window"></a>使用属性窗口  
  **属性**窗口显示单个或多个选定的项的属性。 如果选择了多个项，会显示所有选定对象的所有属性的交集。  
@@ -43,7 +38,7 @@ ms.locfileid: "51752102"
 |接口名称|描述|  
 |--------------------|-----------------|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties>|提供了一系列为类别**属性**窗口，并将每个属性映射到某个类别。|  
-|[IDispatch 接口](http://msdn.microsoft.com/en-us/ebbff4bc-36b2-4861-9efa-ffa45e013eb5)|公开对象的方法和属性到编程的工具和其他应用程序支持自动化。|  
+|[IDispatch 接口](https://msdn.microsoft.com/ebbff4bc-36b2-4861-9efa-ffa45e013eb5)|公开对象的方法和属性到编程的工具和其他应用程序支持自动化。|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IProvidePropertyBuilder>|提供了名为的省略号 （...） 按钮*生成器*的打开模式对话框窗口本身的对象实现。 在文本字段中用户无法轻松地键入一个值时使用。 例如，它可能会用于打开颜色选取器，用于确定为你的 RGB 值。|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>|提供对用于更新中显示信息的对象的访问**属性**窗口。 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> 是为每个窗口，其中包含要显示相关属性与可选择对象实现的 Vspackage。|  
 |<xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo>|提供有关如方法的对象类型的接口和结构的字段的信息。|  
@@ -58,4 +53,3 @@ ms.locfileid: "51752102"
 ## <a name="see-also"></a>请参阅  
  [扩展属性](../../extensibility/internals/extending-properties.md)   
  [属性窗口字段和界面](../../extensibility/internals/properties-window-fields-and-interfaces.md)
-

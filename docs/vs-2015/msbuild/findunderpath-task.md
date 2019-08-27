@@ -1,14 +1,9 @@
 ---
 title: FindUnderPath 任务 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#FindUnderPath
 dev_langs:
@@ -23,24 +18,23 @@ ms.assetid: 3c6d58b0-36e8-47aa-bfca-b73dd2045d91
 caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: a6ff04bad3f2f8c18175c8e96647fa1217c44725
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 1c679352fb8db81379ab93e800efa9f631773c36
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49198531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68149732"
 ---
 # <a name="findunderpath-task"></a>FindUnderPath 任务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 确定指定项集合中的哪些项具有指定文件夹及其子文件夹的路径。  
   
 ## <a name="parameters"></a>参数  
  下表描述了 `FindUnderPath` 任务的参数。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |`Files`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定应将其路径与 `Path` 参数指定的路径进行比较的文件。|  
 |`InPath`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 包括在指定路径下找到的项。|  
@@ -81,10 +75,7 @@ ms.locfileid: "49198531"
 </Project>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [任务参考](../msbuild/msbuild-task-reference.md)   
  [任务](../msbuild/msbuild-tasks.md)   
  [MSBuild 概念](../msbuild/msbuild-concepts.md)
-
-
-

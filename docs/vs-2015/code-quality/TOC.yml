@@ -1,561 +1,577 @@
-items:
 - name: 分析应用程序质量
   href: analyzing-application-quality-by-using-code-analysis-tools.md
+  expanded: true
   items:
-  - name: 分析托管代码质量
-    href: analyzing-managed-code-quality-by-using-code-analysis.md
-    items:
-    - name: 托管代码的代码分析概述
-      href: code-analysis-for-managed-code-overview.md
-    - name: 如何：启用和禁用自动代码分析
-      href: how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md
-    - name: 如何：启用和禁用完整解决方案分析
-      href: how-to-enable-and-disable-full-solution-analysis-for-managed-code.md
-    - name: 自动功能挂起
-      href: automatic-feature-suspension.md
-    - name: 如何：手动运行代码分析
-      href: how-to-run-code-analysis-manually-for-managed-code.md
-    - name: 演练：分析托管代码的代码缺陷
-      href: walkthrough-analyzing-managed-code-for-code-defects.md
-    - name: 使用 SuppressMessage 特性禁止显示警告
-      href: suppress-warnings-by-using-the-suppressmessage-attribute.md
+    - name: 分析托管代码质量
       items:
-      - name: “源代码中禁止显示”概述
-        href: in-source-suppression-overview.md
-      - name: 如何：使用菜单项禁止显示警告
-        href: how-to-suppress-warnings-by-using-the-menu-item.md
-    - name: 如何：禁止显示所生成代码的警告
-      href: how-to-suppress-code-analysis-warnings-for-generated-code.md
-    - name: 如何：自定义代码分析字典
-      href: how-to-customize-the-code-analysis-dictionary.md
-    - name: 匿名方法和代码分析
-      href: anonymous-methods-and-code-analysis.md
-    - name: 如何：查看托管代码缺陷
-      href: how-to-view-managed-code-defects.md
-    - name: 如何：创建托管代码缺陷的工作项
-      href: how-to-create-a-work-item-for-a-managed-code-defect.md
-    - name: 托管代码的代码分析警告
-      href: code-analysis-for-managed-code-warnings.md
-      items:
-      - name: 按 CheckId 排列的警告
-        href: code-analysis-warnings-for-managed-code-by-checkid.md
-      - name: 加密警告
-        href: cryptography-warnings.md
-        items:
-        - name: CA5350:请勿使用弱加密算法
-          href: ca5350-do-not-use-weak-cryptographic-algorithms.md
-        - name: CA5351 不使用损坏的加密算法
-          href: ca5351-do-not-use-broken-cryptographic-algorithms.md
-      - name: 设计警告
-        href: design-warnings.md
-        items:
-        - name: CA1000:不要在泛型类型中声明静态成员
-          href: ca1000-do-not-declare-static-members-on-generic-types.md
-        - name: CA1001:具有可释放字段的类型应该是可释放的
-          href: ca1001-types-that-own-disposable-fields-should-be-disposable.md
-        - name: CA1002:不要公开泛型列表
-          href: ca1002-do-not-expose-generic-lists.md
-        - name: CA1003:使用泛型事件处理程序实例
-          href: ca1003-use-generic-event-handler-instances.md
-        - name: CA1004:泛型方法应提供类型参数
-          href: ca1004-generic-methods-should-provide-type-parameter.md
-        - name: CA1005:避免泛型类型的参数过多
-          href: ca1005-avoid-excessive-parameters-on-generic-types.md
-        - name: CA1006:不要将泛型类型嵌套在成员签名中
-          href: ca1006-do-not-nest-generic-types-in-member-signatures.md
-        - name: CA1007:在适用处使用泛型
-          href: ca1007-use-generics-where-appropriate.md
-        - name: CA1008:枚举应具有零值
-          href: ca1008-enums-should-have-zero-value.md
-        - name: CA1009:正确声明事件处理程序
-          href: ca1009-declare-event-handlers-correctly.md
-        - name: CA1010:集合应实现泛型接口
-          href: ca1010-collections-should-implement-generic-interface.md
-        - name: CA1011:考虑将基类型作为参数传递
-          href: ca1011-consider-passing-base-types-as-parameters.md
-        - name: CA1012:抽象类型不应具有构造函数
-          href: ca1012-abstract-types-should-not-have-constructors.md
-        - name: CA1013:重载加法方法和减法方法时重载相等运算符
-          href: ca1013-overload-operator-equals-on-overloading-add-and-subtract.md
-        - name: CA1014:用 CLSCompliantAttribute 标记程序集
-          href: ca1014-mark-assemblies-with-clscompliantattribute.md
-        - name: CA1016:用 AssemblyVersionAttribute 标记程序集
-          href: ca1016-mark-assemblies-with-assemblyversionattribute.md
-        - name: CA1017:用 ComVisibleAttribute 标记程序集
-          href: ca1017-mark-assemblies-with-comvisibleattribute.md
-        - name: CA1018:用 AttributeUsageAttribute 标记特性
-          href: ca1018-mark-attributes-with-attributeusageattribute.md
-        - name: CA1019:定义特性参数的访问器
-          href: ca1019-define-accessors-for-attribute-arguments.md
-        - name: CA1020:避免使用类型极少的命名空间
-          href: ca1020-avoid-namespaces-with-few-types.md
-        - name: CA1021:避免使用 out 参数
-          href: ca1021-avoid-out-parameters.md
-        - name: CA1023:索引器不应是多维的
-          href: ca1023-indexers-should-not-be-multidimensional.md
-        - name: CA1024:在适用处使用属性
-          href: ca1024-use-properties-where-appropriate.md
-        - name: CA1025:用形参数组替换重复的实参
-          href: ca1025-replace-repetitive-arguments-with-params-array.md
-        - name: CA1026:不应使用默认形参
-          href: ca1026-default-parameters-should-not-be-used.md
-        - name: CA1027:用 FlagsAttribute 标记枚举
-          href: ca1027-mark-enums-with-flagsattribute.md
-        - name: CA1028:枚举存储应为 Int32
-          href: ca1028-enum-storage-should-be-int32.md
-        - name: CA1030:在适用处使用事件
-          href: ca1030-use-events-where-appropriate.md
-        - name: CA1031:不要捕捉一般异常类型
-          href: ca1031-do-not-catch-general-exception-types.md
-        - name: CA1032:实现标准异常构造函数
-          href: ca1032-implement-standard-exception-constructors.md
-        - name: CA1033:接口方法应可由子类型调用
-          href: ca1033-interface-methods-should-be-callable-by-child-types.md
-        - name: CA1034:嵌套类型不应是可见的
-          href: ca1034-nested-types-should-not-be-visible.md
-        - name: CA1035:ICollection 实现含有强类型成员
-          href: ca1035-icollection-implementations-have-strongly-typed-members.md
-        - name: CA1036:重写可比较类型中的方法
-          href: ca1036-override-methods-on-comparable-types.md
-        - name: CA1038:枚举数应强类型化
-          href: ca1038-enumerators-should-be-strongly-typed.md
-        - name: CA1039:列表已强类型化
-          href: ca1039-lists-are-strongly-typed.md
-        - name: CA1040:避免使用空接口
-          href: ca1040-avoid-empty-interfaces.md
-        - name: CA1041:提供 ObsoleteAttribute 消息
-          href: ca1041-provide-obsoleteattribute-message.md
-        - name: CA1043:将整型或字符串参数用于索引器
-          href: ca1043-use-integral-or-string-argument-for-indexers.md
-        - name: CA1044:属性不应是只写的
-          href: ca1044-properties-should-not-be-write-only.md
-        - name: CA1045:不要通过引用来传递类型
-          href: ca1045-do-not-pass-types-by-reference.md
-        - name: CA1046:不要对引用类型重载相等运算符
-          href: ca1046-do-not-overload-operator-equals-on-reference-types.md
-        - name: CA1047:不要在密封类型中声明受保护的成员
-          href: ca1047-do-not-declare-protected-members-in-sealed-types.md
-        - name: CA1048:不要在密封类型中声明虚拟成员
-          href: ca1048-do-not-declare-virtual-members-in-sealed-types.md
-        - name: CA1049:拥有本机资源的类型应是可释放的
-          href: ca1049-types-that-own-native-resources-should-be-disposable.md
-        - name: CA1050:在命名空间中声明类型
-          href: ca1050-declare-types-in-namespaces.md
-        - name: CA1051:不要声明可见实例字段
-          href: ca1051-do-not-declare-visible-instance-fields.md
-        - name: CA1052:应密封静态容器类型
-          href: ca1052-static-holder-types-should-be-sealed.md
-        - name: CA1053:静态容器类型不应具有构造函数
-          href: ca1053-static-holder-types-should-not-have-constructors.md
-        - name: CA1054:URI 参数不应为字符串
-          href: ca1054-uri-parameters-should-not-be-strings.md
-        - name: CA1055:URI 返回值不应是字符串
-          href: ca1055-uri-return-values-should-not-be-strings.md
-        - name: CA1056:URI 属性不应是字符串
-          href: ca1056-uri-properties-should-not-be-strings.md
-        - name: CA1057:字符串 URI 重载调用 System.Uri 重载
-          href: ca1057-string-uri-overloads-call-system-uri-overloads.md
-        - name: CA1058:类型不应扩展某些基类型
-          href: ca1058-types-should-not-extend-certain-base-types.md
-        - name: CA1059:成员不应公开某些具体类型
-          href: ca1059-members-should-not-expose-certain-concrete-types.md
-        - name: CA1060:将 P/Invoke 移动到 NativeMethods 类
-          href: ca1060-move-p-invokes-to-nativemethods-class.md
-        - name: CA1061:不要隐藏基类方法
-          href: ca1061-do-not-hide-base-class-methods.md
-        - name: CA1062:验证公共方法的参数
-          href: ca1062-validate-arguments-of-public-methods.md
-        - name: CA1063:正确实现 IDisposable
-          href: ca1063-implement-idisposable-correctly.md
-        - name: CA1064:异常应该是公共的
-          href: ca1064-exceptions-should-be-public.md
-        - name: CA1065:不要在意外的位置引发异常
-          href: ca1065-do-not-raise-exceptions-in-unexpected-locations.md
-        - name: CA2210:程序集应具有有效的强名称
-          href: ca2210-assemblies-should-have-valid-strong-names.md
-      - name: 全球化警告
-        href: globalization-warnings.md
-        items:
-        - name: CA1300:指定 MessageBoxOptions
-          href: ca1300-specify-messageboxoptions.md
-        - name: CA1301:避免快捷键重复
-          href: ca1301-avoid-duplicate-accelerators.md
-        - name: CA1302:请不要对区域设置特定的字符串进行硬编码
-          href: ca1302-do-not-hardcode-locale-specific-strings.md
-        - name: CA1303:请不要将文本作为本地化参数传递
-          href: ca1303-do-not-pass-literals-as-localized-parameters.md
-        - name: CA1304:指定 CultureInfo
-          href: ca1304-specify-cultureinfo.md
-        - name: CA1305:指定 IFormatProvider
-          href: ca1305-specify-iformatprovider.md
-        - name: CA1306:设置数据类型的区域设置
-          href: ca1306-set-locale-for-data-types.md
-        - name: CA1307:指定 StringComparison
-          href: ca1307-specify-stringcomparison.md
-        - name: CA1308:将字符串规范化为大写
-          href: ca1308-normalize-strings-to-uppercase.md
-        - name: CA1309:使用按顺序的 StringComparison
-          href: ca1309-use-ordinal-stringcomparison.md
-        - name: CA2101:指定对 P/Invoke 字符串自变量进行封送处理
-          href: ca2101-specify-marshaling-for-p-invoke-string-arguments.md
-      - name: 互操作性警告
-        href: interoperability-warnings.md
-        items:
-        - name: CA1400:P/Invoke 入口点应该存在
-          href: ca1400-p-invoke-entry-points-should-exist.md
-        - name: CA1401:P/Invokes 应该是不可见的
-          href: ca1401-p-invokes-should-not-be-visible.md
-        - name: CA1402:避免在 COM 可见接口中进行重载
-          href: ca1402-avoid-overloads-in-com-visible-interfaces.md
-        - name: CA1403:自动布局类型不应对 COM 可见
-          href: ca1403-auto-layout-types-should-not-be-com-visible.md
-        - name: CA1404:紧接在 P/Invoke 之后调用 GetLastError
-          href: ca1404-call-getlasterror-immediately-after-p-invoke.md
-        - name: CA1405:COM 可见类型的基类型应对 COM 可见
-          href: ca1405-com-visible-type-base-types-should-be-com-visible.md
-        - name: CA1406:避免对 Visual Basic 6 客户端使用 Int64 参数
-          href: ca1406-avoid-int64-arguments-for-visual-basic-6-clients.md
-        - name: CA1407:避免在 COM 可见类型中使用静态成员
-          href: ca1407-avoid-static-members-in-com-visible-types.md
-        - name: CA1408:请不要使用 AutoDual ClassInterfaceType
-          href: ca1408-do-not-use-autodual-classinterfacetype.md
-        - name: CA1409:COM 可见类型应该是可创建的
-          href: ca1409-com-visible-types-should-be-creatable.md
-        - name: CA1410:应对 COM 注册方法进行匹配
-          href: ca1410-com-registration-methods-should-be-matched.md
-        - name: CA1411:COM 注册方法应该是不可见的
-          href: ca1411-com-registration-methods-should-not-be-visible.md
-        - name: CA1412:将 ComSource 接口标记为 IDispatch
-          href: ca1412-mark-comsource-interfaces-as-idispatch.md
-        - name: CA1413:避免在 COM 可见值类型中使用非公共字段
-          href: ca1413-avoid-non-public-fields-in-com-visible-value-types.md
-        - name: CA1414:用 MarshalAs 标记布尔型 P/Invoke 参数
-          href: ca1414-mark-boolean-p-invoke-arguments-with-marshalas.md
-        - name: CA1415:正确声明 P/Invoke
-          href: ca1415-declare-p-invokes-correctly.md
-      - name: 维护性警告
-        href: maintainability-warnings.md
-        items:
-        - name: CA1500:变量名不应与字段名相同
-          href: ca1500-variable-names-should-not-match-field-names.md
-        - name: CA1501:避免过度继承
-          href: ca1501-avoid-excessive-inheritance.md
-        - name: CA1502:避免过度复杂
-          href: ca1502-avoid-excessive-complexity.md
-        - name: CA1504:检查令人误解的字段名
-          href: ca1504-review-misleading-field-names.md
-        - name: CA1505:避免使用无法维护的代码
-          href: ca1505-avoid-unmaintainable-code.md
-        - name: CA1506:避免过度类耦合度
-          href: ca1506-avoid-excessive-class-coupling.md
-      - name: 移动性警告
-        href: mobility-warnings.md
-        items:
-        - name: CA1600:不要使用 Idle 进程优先级
-          href: ca1600-do-not-use-idle-process-priority.md
-        - name: CA1601:不要使用阻止电源状态更改的计时器
-          href: ca1601-do-not-use-timers-that-prevent-power-state-changes.md
-      - name: 命名警告
-        href: naming-warnings.md
-        items:
-        - name: CA1700:不要命名“Reserved”枚举值
-          href: ca1700-do-not-name-enum-values-reserved.md
-        - name: CA1701:资源字符串组合词应采用正确的大小写
-          href: ca1701-resource-string-compound-words-should-be-cased-correctly.md
-        - name: CA1702:组合词应采用正确的大小写
-          href: ca1702-compound-words-should-be-cased-correctly.md
-        - name: CA1703:资源字符串应正确拼写
-          href: ca1703-resource-strings-should-be-spelled-correctly.md
-        - name: CA1704:标识符应正确拼写
-          href: ca1704-identifiers-should-be-spelled-correctly.md
-        - name: CA1707:标识符不应包含下划线
-          href: ca1707-identifiers-should-not-contain-underscores.md
-        - name: CA1708:标识符应以大小写之外的差别进行区分
-          href: ca1708-identifiers-should-differ-by-more-than-case.md
-        - name: CA1709:标识符的大小写应当正确
-          href: ca1709-identifiers-should-be-cased-correctly.md
-        - name: CA1710:标识符应具有正确的后缀
-          href: ca1710-identifiers-should-have-correct-suffix.md
-        - name: CA1711:标识符应采用正确的后缀
-          href: ca1711-identifiers-should-not-have-incorrect-suffix.md
-        - name: CA1712:不要将类型名用作枚举值的前缀
-          href: ca1712-do-not-prefix-enum-values-with-type-name.md
-        - name: CA1713:事件不应具有 before 或 after 前缀
-          href: ca1713-events-should-not-have-before-or-after-prefix.md
-        - name: CA1714:Flags 枚举应采用复数形式的名称
-          href: ca1714-flags-enums-should-have-plural-names.md
-        - name: CA1715:标识符应具有正确的前缀
-          href: ca1715-identifiers-should-have-correct-prefix.md
-        - name: CA1716:标识符不应与关键字冲突
-          href: ca1716-identifiers-should-not-match-keywords.md
-        - name: CA1717:只有 FlagsAttribute 枚举应采用复数形式的名称
-          href: ca1717-only-flagsattribute-enums-should-have-plural-names.md
-        - name: CA1719:参数名不应与成员名冲突
-          href: ca1719-parameter-names-should-not-match-member-names.md
-        - name: CA1720:标识符不应包含类型名称
-          href: ca1720-identifiers-should-not-contain-type-names.md
-        - name: CA1721:属性名不应与 get 方法冲突
-          href: ca1721-property-names-should-not-match-get-methods.md
-        - name: CA1722:标识符应采用正确的前缀
-          href: ca1722-identifiers-should-not-have-incorrect-prefix.md
-        - name: CA1725:参数名应与基方法中的声明保持一致
-          href: ca1725-parameter-names-should-match-base-declaration.md
-        - name: CA1724:类型名不应与命名空间冲突
-          href: ca1724-type-names-should-not-match-namespaces.md
-        - name: CA1726:使用首选词条
-          href: ca1726-use-preferred-terms.md
-      - name: 性能警告
-        href: performance-warnings.md
-        items:
-        - name: CA1800:避免进行不必要的强制转换
-          href: ca1800-do-not-cast-unnecessarily.md
-        - name: CA1802:在合适的位置使用文本
-          href: ca1802-use-literals-where-appropriate.md
-        - name: CA1804:移除未使用的局部变量
-          href: ca1804-remove-unused-locals.md
-        - name: CA1809:避免过多的局部变量
-          href: ca1809-avoid-excessive-locals.md
-        - name: CA1810:以内联方式初始化引用类型的静态字段
-          href: ca1810-initialize-reference-type-static-fields-inline.md
-        - name: CA1811:避免使用未调用的私有代码
-          href: ca1811-avoid-uncalled-private-code.md
-        - name: CA1812:避免未实例化的内部类
-          href: ca1812-avoid-uninstantiated-internal-classes.md
-        - name: CA1813:避免使用非密封特性
-          href: ca1813-avoid-unsealed-attributes.md
-        - name: CA1814:与多维数组相比，首选使用交错数组
-          href: ca1814-prefer-jagged-arrays-over-multidimensional.md
-        - name: CA1815:重写值类型上的 Equals 和相等运算符
-          href: ca1815-override-equals-and-operator-equals-on-value-types.md
-        - name: CA1819:属性不应返回数组
-          href: ca1819-properties-should-not-return-arrays.md
-        - name: CA1820:使用字符串长度测试是否有空字符串
-          href: ca1820-test-for-empty-strings-using-string-length.md
-        - name: CA1821:移除空终结器
-          href: ca1821-remove-empty-finalizers.md
-        - name: CA1822:将成员标记为 static
-          href: ca1822-mark-members-as-static.md
-        - name: CA1823:避免未使用的私有字段
-          href: ca1823-avoid-unused-private-fields.md
-        - name: CA1824:用 NeutralResourcesLanguageAttribute 标记程序集
-          href: ca1824-mark-assemblies-with-neutralresourceslanguageattribute.md
-      - name: 可移植性警告
-        href: portability-warnings.md
-        items:
-        - name: CA1900:值类型字段应为可移植字段
-          href: ca1900-value-type-fields-should-be-portable.md
-        - name: CA1901:P/Invoke 声明应为可移植声明
-          href: ca1901-p-invoke-declarations-should-be-portable.md
-        - name: CA1903:仅使用目标框架中的 API
-          href: ca1903-use-only-api-from-targeted-framework.md
-      - name: 可靠性警告
-        href: reliability-warnings.md
-        items:
-        - name: CA2000:丢失范围之前释放对象
-          href: ca2000-dispose-objects-before-losing-scope.md
-        - name: CA2001:避免调用有问题的方法
-          href: ca2001-avoid-calling-problematic-methods.md
-        - name: CA2002:不要锁定具有弱标识的对象
-          href: ca2002-do-not-lock-on-objects-with-weak-identity.md
-        - name: CA2003:不要将纤程视为线程
-          href: ca2003-do-not-treat-fibers-as-threads.md
-        - name: CA2004:移除对 GC.KeepAlive 的调用
-          href: ca2004-remove-calls-to-gc-keepalive.md
-        - name: CA2006:使用 SafeHandle 封装本机资源
-          href: ca2006-use-safehandle-to-encapsulate-native-resources.md
-      - name: 安全警告
-        href: security-warnings.md
-        items:
-        - name: CA2100:检查 SQL 查询是否存在安全漏洞
-          href: ca2100-review-sql-queries-for-security-vulnerabilities.md
-        - name: CA2102:在常规处理程序中捕捉非 CLSCompliant 异常
-          href: ca2102-catch-non-clscompliant-exceptions-in-general-handlers.md
-        - name: CA2103:检查命令性安全
-          href: ca2103-review-imperative-security.md
-        - name: CA2104:不要声明只读可变引用类型
-          href: ca2104-do-not-declare-read-only-mutable-reference-types.md
-        - name: CA2105:数组字段不应为只读
-          href: ca2105-array-fields-should-not-be-read-only.md
-        - name: CA2106:保护断言
-          href: ca2106-secure-asserts.md
-        - name: CA2107:检查 deny 权限和 permit only 权限的使用情况
-          href: ca2107-review-deny-and-permit-only-usage.md
-        - name: CA2108:检查有关值类型的声明性安全
-          href: ca2108-review-declarative-security-on-value-types.md
-        - name: CA2109:检查可见的事件处理程序
-          href: ca2109-review-visible-event-handlers.md
-        - name: CA2111:指针应为不可见
-          href: ca2111-pointers-should-not-be-visible.md
-        - name: CA2112:受保护的类型不应公开字段
-          href: ca2112-secured-types-should-not-expose-fields.md
-        - name: CA2114:方法安全性应是类型安全性的超集
-          href: ca2114-method-security-should-be-a-superset-of-type.md
-        - name: CA2115:使用本机资源时调用 GC.KeepAlive
-          href: ca2115-call-gc-keepalive-when-using-native-resources.md
-        - name: CA2116:APTCA 方法应只调用 APTCA 方法
-          href: ca2116-aptca-methods-should-only-call-aptca-methods.md
-        - name: CA2117:APTCA 类型应只扩展 APTCA 基类型
-          href: ca2117-aptca-types-should-only-extend-aptca-base-types.md
-        - name: CA2118:检查 SuppressUnmanagedCodeSecurityAttribute 用法
-          href: ca2118-review-suppressunmanagedcodesecurityattribute-usage.md
-        - name: CA2119:密封满足私有接口的方法
-          href: ca2119-seal-methods-that-satisfy-private-interfaces.md
-        - name: CA2120:保护序列化构造函数
-          href: ca2120-secure-serialization-constructors.md
-        - name: CA2121:静态构造函数应为私有
-          href: ca2121-static-constructors-should-be-private.md
-        - name: CA2122:不要使用链接请求间接公开方法
-          href: ca2122-do-not-indirectly-expose-methods-with-link-demands.md
-        - name: CA2123:重写链接请求应与基相同
-          href: ca2123-override-link-demands-should-be-identical-to-base.md
-        - name: CA2124:在外部 try 块中包装易受攻击的 finally 子句
-          href: ca2124-wrap-vulnerable-finally-clauses-in-outer-try.md
-        - name: CA2126:类型链接请求需要继承请求
-          href: ca2126-type-link-demands-require-inheritance-demands.md
-        - name: CA2130:安全关键常量应是透明的
-          href: ca2130-security-critical-constants-should-be-transparent.md
-        - name: CA2131:安全关键类型不能参与类型等效
-          href: ca2131-security-critical-types-may-not-participate-in-type-equivalence.md
-        - name: CA2132:默认构造函数必须至少与基类型默认构造函数一样关键
-          href: ca2132-default-constructors-must-be-at-least-as-critical-as-base-type-default-constructors.md
-        - name: CA2133:委托必须绑定到具有一致透明度的方法
-          href: ca2133-delegates-must-bind-to-methods-with-consistent-transparency.md
-        - name: CA2134:在重写基方法时，方法必须保持一致的透明度
-          href: ca2134-methods-must-keep-consistent-transparency-when-overriding-base-methods.md
-        - name: CA2135:级别 2 程序集不应包含 LinkDemand
-          href: ca2135-level-2-assemblies-should-not-contain-linkdemands.md
-        - name: CA2136:成员不应具有冲突的透明度批注
-          href: ca2136-members-should-not-have-conflicting-transparency-annotations.md
-        - name: CA2137:透明方法只能包含可验证的 IL
-          href: ca2137-transparent-methods-must-contain-only-verifiable-il.md
-        - name: CA2138:透明方法不得调用具有 SuppressUnmanagedCodeSecurity 特性的方法
-          href: ca2138-transparent-methods-must-not-call-methods-with-the-suppressunmanagedcodesecurity-attribute.md
-        - name: CA2139:透明方法不能使用 HandleProcessCorruptingExceptions 特性
-          href: ca2139-transparent-methods-may-not-use-the-handleprocesscorruptingexceptions-attribute.md
-        - name: CA2140:透明代码不得引用安全关键项
-          href: ca2140-transparent-code-must-not-reference-security-critical-items.md
-        - name: CA2141：透明方法不得满足 LinkDemand
-          href: ca2141-transparent-methods-must-not-satisfy-linkdemands.md
-        - name: CA2142:不应使用 LinkDemand 保护透明代码
-          href: ca2142-transparent-code-should-not-be-protected-with-linkdemands.md
-        - name: CA2143:透明方法不应使用安全请求
-          href: ca2143-transparent-methods-should-not-use-security-demands.md
-        - name: CA2144:透明代码不应从字节数组加载程序集
-          href: ca2144-transparent-code-should-not-load-assemblies-from-byte-arrays.md
-        - name: CA2145:不应使用 SuppressUnmanagedCodeSecurityAttribute 修饰透明方法
-          href: ca2145-transparent-methods-should-not-be-decorated-with-the-suppressunmanagedcodesecurityattribute.md
-        - name: CA2146:类型必须至少与其基类型和接口一样关键
-          href: ca2146-types-must-be-at-least-as-critical-as-their-base-types-and-interfaces.md
-        - name: CA2147:透明方法不得使用安全断言
-          href: ca2147-transparent-methods-may-not-use-security-asserts.md
-        - name: CA2149:透明方法不得调入本机代码
-          href: ca2149-transparent-methods-must-not-call-into-native-code.md
-        - name: CA2151:具有关键类型的字段应为安全关键的
-          href: ca2151-fields-with-critical-types-should-be-security-critical.md
-        - name: CA5122 P/Invoke 声明不应是安全关键的
-          href: ca5122-p-invoke-declarations-should-not-be-safe-critical.md
-        - name: CA2153:避免处理损坏状态异常
-          href: ca2153-avoid-handling-corrupted-state-exceptions.md
-        - name: CA3075:不安全的 DTD 处理
-          href: ca3075-insecure-dtd-processing.md
-        - name: CA3076:不安全的 XSLT 脚本执行
-          href: ca3076-insecure-xslt-script-execution.md
-        - name: CA3077:API 设计、XML 文档和 XML 文本读取器中的不安全处理
-          href: ca3077-insecure-processing-in-api-design-xml-document-and-xml-text-reader.md
-      - name: 用法警告
-        href: usage-warnings.md
-        items:
-        - name: CA1801:检查未使用的参数
-          href: ca1801-review-unused-parameters.md
-        - name: CA1806:不要忽略方法结果
-          href: ca1806-do-not-ignore-method-results.md
-        - name: CA1816:正确调用 GC.SuppressFinalize
-          href: ca1816-call-gc-suppressfinalize-correctly.md
-        - name: CA2200:再次引发以保留堆栈详细信息
-          href: ca2200-rethrow-to-preserve-stack-details.md
-        - name: CA2201:不要引发保留的异常类型
-          href: ca2201-do-not-raise-reserved-exception-types.md
-        - name: CA2202:不要多次释放对象
-          href: ca2202-do-not-dispose-objects-multiple-times.md
-        - name: CA2204:文字应正确拼写
-          href: ca2204-literals-should-be-spelled-correctly.md
-        - name: CA2205:使用 Win32 API 的托管等效项
-          href: ca2205-use-managed-equivalents-of-win32-api.md
-        - name: CA2207:以内联方式初始化值类型的静态字段
-          href: ca2207-initialize-value-type-static-fields-inline.md
-        - name: CA2208:正确实例化参数异常
-          href: ca2208-instantiate-argument-exceptions-correctly.md
-        - name: CA2211:非常量字段不应是可见的
-          href: ca2211-non-constant-fields-should-not-be-visible.md
-        - name: CA2212:不要使用 WebMethod 标记服务组件
-          href: ca2212-do-not-mark-serviced-components-with-webmethod.md
-        - name: CA2213:应释放可释放的字段
-          href: ca2213-disposable-fields-should-be-disposed.md
-        - name: CA2214:不要在构造函数中调用可重写的方法
-          href: ca2214-do-not-call-overridable-methods-in-constructors.md
-        - name: CA2215:Dispose 方法应调用基类释放
-          href: ca2215-dispose-methods-should-call-base-class-dispose.md
-        - name: CA2216:可释放类型应声明终结器
-          href: ca2216-disposable-types-should-declare-finalizer.md
-        - name: CA2217:不要使用 FlagsAttribute 标记枚举
-          href: ca2217-do-not-mark-enums-with-flagsattribute.md
-        - name: CA2218:重写 Equals 时重写 GetHashCode
-          href: ca2218-override-gethashcode-on-overriding-equals.md
-        - name: CA2219:在异常子句中不引发异常
-          href: ca2219-do-not-raise-exceptions-in-exception-clauses.md
-        - name: CA2220:终结器应调用基类的终结器
-          href: ca2220-finalizers-should-call-base-class-finalizer.md
-        - name: CA2221:终结器应受到保护
-          href: ca2221-finalizers-should-be-protected.md
-        - name: CA2222:不要递减继承成员的可见性
-          href: ca2222-do-not-decrease-inherited-member-visibility.md
-        - name: CA2223:成员不应只是返回类型不同
-          href: ca2223-members-should-differ-by-more-than-return-type.md
-        - name: CA2224:重载相等运算符时重写 Equals 方法
-          href: ca2224-override-equals-on-overloading-operator-equals.md
-        - name: CA2225:运算符重载具有命名的备用项
-          href: ca2225-operator-overloads-have-named-alternates.md
-        - name: CA2226:运算符应有对称重载
-          href: ca2226-operators-should-have-symmetrical-overloads.md
-        - name: CA2227:集合属性应为只读
-          href: ca2227-collection-properties-should-be-read-only.md
-        - name: CA2228:不要发行未发布的资源格式
-          href: ca2228-do-not-ship-unreleased-resource-formats.md
-        - name: CA2229:实现序列化构造函数
-          href: ca2229-implement-serialization-constructors.md
-        - name: CA2230:对可变数量的参数使用 params
-          href: ca2230-use-params-for-variable-arguments.md
-        - name: CA2231:重写 ValueType.Equals 时应重载相等运算符
-          href: ca2231-overload-operator-equals-on-overriding-valuetype-equals.md
-        - name: CA2232:使用 STAThread 标记 Windows 窗体的入口点
-          href: ca2232-mark-windows-forms-entry-points-with-stathread.md
-        - name: CA2233:运算不应溢出
-          href: ca2233-operations-should-not-overflow.md
-        - name: CA2234:传递 System.Uri 对象，而不传递字符串
-          href: ca2234-pass-system-uri-objects-instead-of-strings.md
-        - name: CA2235:标记所有不可序列化的字段
-          href: ca2235-mark-all-non-serializable-fields.md
-        - name: CA2236:对 ISerializable 类型调用基类方法
-          href: ca2236-call-base-class-methods-on-iserializable-types.md
-        - name: CA2237:用 SerializableAttribute 标记 ISerializable 类型
-          href: ca2237-mark-iserializable-types-with-serializableattribute.md
-        - name: CA2238:正确实现序列化方法
-          href: ca2238-implement-serialization-methods-correctly.md
-        - name: CA2239:为可选字段提供反序列化方法
-          href: ca2239-provide-deserialization-methods-for-optional-fields.md
-        - name: CA2240:正确实现 ISerializable
-          href: ca2240-implement-iserializable-correctly.md
-        - name: CA2241:为格式化方法提供正确的自变量
-          href: ca2241-provide-correct-arguments-to-formatting-methods.md
-        - name: CA2242:正确测试 NaN
-          href: ca2242-test-for-nan-correctly.md
-        - name: CA2243:特性字符串文本应正确分析
-          href: ca2243-attribute-string-literals-should-parse-correctly.md
-      - name: 代码分析策略错误
-        href: code-analysis-policy-errors.md
-  - name: 分析 C/C++ 代码质量
-    href: analyzing-c-cpp-code-quality-by-using-code-analysis.md
-    items:
+        - name: 分析托管代码质量
+          href: analyzing-managed-code-quality-by-using-code-analysis.md
+        - name: 托管代码的代码分析概述
+          href: code-analysis-for-managed-code-overview.md
+        - name: 如何：启用和禁用自动代码分析
+          href: how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md
+        - name: 如何：启用和禁用完整解决方案分析
+          href: how-to-enable-and-disable-full-solution-analysis-for-managed-code.md
+        - name: 自动功能挂起
+          href: automatic-feature-suspension.md
+        - name: 如何：手动运行代码分析
+          href: how-to-run-code-analysis-manually-for-managed-code.md
+        - name: 演练：分析托管代码的代码缺陷
+          href: walkthrough-analyzing-managed-code-for-code-defects.md
+        - name: 使用 SuppressMessage 特性禁止显示警告
+          items:
+            - name: 使用 SuppressMessage 特性禁止显示警告
+              href: suppress-warnings-by-using-the-suppressmessage-attribute.md
+            - name: “源代码中禁止显示”概述
+              href: in-source-suppression-overview.md
+            - name: 如何：使用菜单项禁止显示警告
+              href: how-to-suppress-warnings-by-using-the-menu-item.md
+            - name: 如何：禁止显示所生成代码的警告
+              href: how-to-suppress-code-analysis-warnings-for-generated-code.md
+            - name: 如何：自定义代码分析字典
+              href: how-to-customize-the-code-analysis-dictionary.md
+            - name: 匿名方法和代码分析
+              href: anonymous-methods-and-code-analysis.md
+            - name: 如何：查看托管代码缺陷
+              href: how-to-view-managed-code-defects.md
+            - name: 如何：创建托管代码缺陷的工作项
+              href: how-to-create-a-work-item-for-a-managed-code-defect.md
+            - name: 托管代码的代码分析警告
+              items:
+                - name: 托管代码的代码分析警告
+                  href: code-analysis-for-managed-code-warnings.md
+                - name: 按 CheckId 排列的警告
+                  href: code-analysis-warnings-for-managed-code-by-checkid.md
+                - name: 加密警告
+                  items:
+                    - name: 加密警告
+                      href: cryptography-warnings.md
+                    - name: 'CA5350:请勿使用弱加密算法'
+                      href: ca5350-do-not-use-weak-cryptographic-algorithms.md
+                    - name: CA5351 不使用损坏的加密算法
+                      href: ca5351-do-not-use-broken-cryptographic-algorithms.md
+            - name: 设计警告
+              items:
+                - name: 设计警告
+                  href: design-warnings.md
+                - name: 'CA1000:不要在泛型类型中声明静态成员'
+                  href: ca1000-do-not-declare-static-members-on-generic-types.md
+                - name: 'CA1001:具有可释放字段的类型应该是可释放的'
+                  href: ca1001-types-that-own-disposable-fields-should-be-disposable.md
+                - name: 'CA1002:不要公开泛型列表'
+                  href: ca1002-do-not-expose-generic-lists.md
+                - name: 'CA1003:使用泛型事件处理程序实例'
+                  href: ca1003-use-generic-event-handler-instances.md
+                - name: 'CA1004:泛型方法应提供类型参数'
+                  href: ca1004-generic-methods-should-provide-type-parameter.md
+                - name: 'CA1005:避免泛型类型的参数过多'
+                  href: ca1005-avoid-excessive-parameters-on-generic-types.md
+                - name: 'CA1006:不要将泛型类型嵌套在成员签名中'
+                  href: ca1006-do-not-nest-generic-types-in-member-signatures.md
+                - name: 'CA1007:在适用处使用泛型'
+                  href: ca1007-use-generics-where-appropriate.md
+                - name: 'CA1008:枚举应具有零值'
+                  href: ca1008-enums-should-have-zero-value.md
+                - name: 'CA1009:正确声明事件处理程序'
+                  href: ca1009-declare-event-handlers-correctly.md
+                - name: 'CA1010:集合应实现泛型接口'
+                  href: ca1010-collections-should-implement-generic-interface.md
+                - name: 'CA1011:考虑将基类型作为参数传递'
+                  href: ca1011-consider-passing-base-types-as-parameters.md
+                - name: 'CA1012:抽象类型不应具有构造函数'
+                  href: ca1012-abstract-types-should-not-have-constructors.md
+                - name: 'CA1013:重载加法方法和减法方法时重载相等运算符'
+                  href: ca1013-overload-operator-equals-on-overloading-add-and-subtract.md
+                - name: 'CA1014:用 CLSCompliantAttribute 标记程序集'
+                  href: ca1014-mark-assemblies-with-clscompliantattribute.md
+                - name: 'CA1016:用 AssemblyVersionAttribute 标记程序集'
+                  href: ca1016-mark-assemblies-with-assemblyversionattribute.md
+                - name: 'CA1017:用 ComVisibleAttribute 标记程序集'
+                  href: ca1017-mark-assemblies-with-comvisibleattribute.md
+                - name: 'CA1018:用 AttributeUsageAttribute 标记特性'
+                  href: ca1018-mark-attributes-with-attributeusageattribute.md
+                - name: 'CA1019:定义特性参数的访问器'
+                  href: ca1019-define-accessors-for-attribute-arguments.md
+                - name: 'CA1020:避免使用类型极少的命名空间'
+                  href: ca1020-avoid-namespaces-with-few-types.md
+                - name: 'CA1021:避免使用 out 参数'
+                  href: ca1021-avoid-out-parameters.md
+                - name: 'CA1023:索引器不应是多维的'
+                  href: ca1023-indexers-should-not-be-multidimensional.md
+                - name: 'CA1024:在适用处使用属性'
+                  href: ca1024-use-properties-where-appropriate.md
+                - name: 'CA1025:用形参数组替换重复的实参'
+                  href: ca1025-replace-repetitive-arguments-with-params-array.md
+                - name: 'CA1026:不应使用默认形参'
+                  href: ca1026-default-parameters-should-not-be-used.md
+                - name: 'CA1027:用 FlagsAttribute 标记枚举'
+                  href: ca1027-mark-enums-with-flagsattribute.md
+                - name: 'CA1028:枚举存储应为 Int32'
+                  href: ca1028-enum-storage-should-be-int32.md
+                - name: 'CA1030:在适用处使用事件'
+                  href: ca1030-use-events-where-appropriate.md
+                - name: 'CA1031:不要捕捉一般异常类型'
+                  href: ca1031-do-not-catch-general-exception-types.md
+                - name: 'CA1032:实现标准异常构造函数'
+                  href: ca1032-implement-standard-exception-constructors.md
+                - name: 'CA1033:接口方法应可由子类型调用'
+                  href: ca1033-interface-methods-should-be-callable-by-child-types.md
+                - name: 'CA1034:嵌套类型不应是可见的'
+                  href: ca1034-nested-types-should-not-be-visible.md
+                - name: 'CA1035:ICollection 实现含有强类型成员'
+                  href: ca1035-icollection-implementations-have-strongly-typed-members.md
+                - name: 'CA1036:重写可比较类型中的方法'
+                  href: ca1036-override-methods-on-comparable-types.md
+                - name: 'CA1038:枚举数应强类型化'
+                  href: ca1038-enumerators-should-be-strongly-typed.md
+                - name: 'CA1039:列表已强类型化'
+                  href: ca1039-lists-are-strongly-typed.md
+                - name: 'CA1040:避免使用空接口'
+                  href: ca1040-avoid-empty-interfaces.md
+                - name: 'CA1041:提供 ObsoleteAttribute 消息'
+                  href: ca1041-provide-obsoleteattribute-message.md
+                - name: 'CA1043:将整型或字符串参数用于索引器'
+                  href: ca1043-use-integral-or-string-argument-for-indexers.md
+                - name: 'CA1044:属性不应是只写的'
+                  href: ca1044-properties-should-not-be-write-only.md
+                - name: 'CA1045:不要通过引用来传递类型'
+                  href: ca1045-do-not-pass-types-by-reference.md
+                - name: 'CA1046:不要对引用类型重载相等运算符'
+                  href: ca1046-do-not-overload-operator-equals-on-reference-types.md
+                - name: 'CA1047:不要在密封类型中声明受保护的成员'
+                  href: ca1047-do-not-declare-protected-members-in-sealed-types.md
+                - name: 'CA1048:不要在密封类型中声明虚拟成员'
+                  href: ca1048-do-not-declare-virtual-members-in-sealed-types.md
+                - name: 'CA1049:拥有本机资源的类型应是可释放的'
+                  href: ca1049-types-that-own-native-resources-should-be-disposable.md
+                - name: 'CA1050:在命名空间中声明类型'
+                  href: ca1050-declare-types-in-namespaces.md
+                - name: 'CA1051:不要声明可见实例字段'
+                  href: ca1051-do-not-declare-visible-instance-fields.md
+                - name: 'CA1052:应密封静态容器类型'
+                  href: ca1052-static-holder-types-should-be-sealed.md
+                - name: 'CA1053:静态容器类型不应具有构造函数'
+                  href: ca1053-static-holder-types-should-not-have-constructors.md
+                - name: 'CA1054:URI 参数不应为字符串'
+                  href: ca1054-uri-parameters-should-not-be-strings.md
+                - name: 'CA1055:URI 返回值不应是字符串'
+                  href: ca1055-uri-return-values-should-not-be-strings.md
+                - name: 'CA1056:URI 属性不应是字符串'
+                  href: ca1056-uri-properties-should-not-be-strings.md
+                - name: 'CA1057:字符串 URI 重载调用 System.Uri 重载'
+                  href: ca1057-string-uri-overloads-call-system-uri-overloads.md
+                - name: 'CA1058:类型不应扩展某些基类型'
+                  href: ca1058-types-should-not-extend-certain-base-types.md
+                - name: 'CA1059:成员不应公开某些具体类型'
+                  href: ca1059-members-should-not-expose-certain-concrete-types.md
+                - name: 'CA1060:将 P/Invoke 移动到 NativeMethods 类'
+                  href: ca1060-move-p-invokes-to-nativemethods-class.md
+                - name: 'CA1061:不要隐藏基类方法'
+                  href: ca1061-do-not-hide-base-class-methods.md
+                - name: 'CA1062:验证公共方法的参数'
+                  href: ca1062-validate-arguments-of-public-methods.md
+                - name: 'CA1063:正确实现 IDisposable'
+                  href: ca1063-implement-idisposable-correctly.md
+                - name: 'CA1064:异常应该是公共的'
+                  href: ca1064-exceptions-should-be-public.md
+                - name: 'CA1065:不要在意外的位置引发异常'
+                  href: ca1065-do-not-raise-exceptions-in-unexpected-locations.md
+                - name: 'CA2210:程序集应具有有效的强名称'
+                  href: ca2210-assemblies-should-have-valid-strong-names.md
+            - name: 全球化警告
+              items:
+                - name: 全球化警告
+                  href: globalization-warnings.md
+                - name: 'CA1300:指定 MessageBoxOptions'
+                  href: ca1300-specify-messageboxoptions.md
+                - name: 'CA1301:避免快捷键重复'
+                  href: ca1301-avoid-duplicate-accelerators.md
+                - name: 'CA1302:请不要对区域设置特定的字符串进行硬编码'
+                  href: ca1302-do-not-hardcode-locale-specific-strings.md
+                - name: 'CA1303:请不要将文本作为本地化参数传递'
+                  href: ca1303-do-not-pass-literals-as-localized-parameters.md
+                - name: 'CA1304:指定 CultureInfo'
+                  href: ca1304-specify-cultureinfo.md
+                - name: 'CA1305:指定 IFormatProvider'
+                  href: ca1305-specify-iformatprovider.md
+                - name: 'CA1306:设置数据类型的区域设置'
+                  href: ca1306-set-locale-for-data-types.md
+                - name: 'CA1307:指定 StringComparison'
+                  href: ca1307-specify-stringcomparison.md
+                - name: 'CA1308:将字符串规范化为大写'
+                  href: ca1308-normalize-strings-to-uppercase.md
+                - name: 'CA1309:使用按顺序的 StringComparison'
+                  href: ca1309-use-ordinal-stringcomparison.md
+                - name: 'CA2101:指定对 P/Invoke 字符串参数进行封送处理'
+                  href: ca2101-specify-marshaling-for-p-invoke-string-arguments.md
+            - name: 互操作性警告
+              items:
+                - name: 互操作性警告
+                  href: interoperability-warnings.md
+                - name: 'CA1400:P/Invoke 入口点应该存在'
+                  href: ca1400-p-invoke-entry-points-should-exist.md
+                - name: 'CA1401:P/Invokes 应该是不可见的'
+                  href: ca1401-p-invokes-should-not-be-visible.md
+                - name: 'CA1402:避免在 COM 可见接口中进行重载'
+                  href: ca1402-avoid-overloads-in-com-visible-interfaces.md
+                - name: 'CA1403:自动布局类型不应对 COM 可见'
+                  href: ca1403-auto-layout-types-should-not-be-com-visible.md
+                - name: 'CA1404:紧接在 P/Invoke 之后调用 GetLastError'
+                  href: ca1404-call-getlasterror-immediately-after-p-invoke.md
+                - name: 'CA1405:COM 可见类型的基类型应对 COM 可见'
+                  href: ca1405-com-visible-type-base-types-should-be-com-visible.md
+                - name: 'CA1406:避免对 Visual Basic 6 客户端使用 Int64 参数'
+                  href: ca1406-avoid-int64-arguments-for-visual-basic-6-clients.md
+                - name: 'CA1407:避免在 COM 可见类型中使用静态成员'
+                  href: ca1407-avoid-static-members-in-com-visible-types.md
+                - name: 'CA1408:请不要使用 AutoDual ClassInterfaceType'
+                  href: ca1408-do-not-use-autodual-classinterfacetype.md
+                - name: 'CA1409:COM 可见类型应该是可创建的'
+                  href: ca1409-com-visible-types-should-be-creatable.md
+                - name: 'CA1410:应对 COM 注册方法进行匹配'
+                  href: ca1410-com-registration-methods-should-be-matched.md
+                - name: 'CA1411:COM 注册方法应该是不可见的'
+                  href: ca1411-com-registration-methods-should-not-be-visible.md
+                - name: 'CA1412:将 ComSource 接口标记为 IDispatch'
+                  href: ca1412-mark-comsource-interfaces-as-idispatch.md
+                - name: 'CA1413:避免在 COM 可见值类型中使用非公共字段'
+                  href: ca1413-avoid-non-public-fields-in-com-visible-value-types.md
+                - name: 'CA1414:用 MarshalAs 标记布尔型 P/Invoke 参数'
+                  href: ca1414-mark-boolean-p-invoke-arguments-with-marshalas.md
+                - name: 'CA1415:正确声明 P/Invoke'
+                  href: ca1415-declare-p-invokes-correctly.md
+                - name: 维护性警告
+                  items:
+                    - name: 维护性警告
+                      href: maintainability-warnings.md
+                    - name: 'CA1500:变量名不应与字段名相同'
+                      href: ca1500-variable-names-should-not-match-field-names.md
+                    - name: 'CA1501:避免过度继承'
+                      href: ca1501-avoid-excessive-inheritance.md
+                    - name: 'CA1502:避免过度复杂'
+                      href: ca1502-avoid-excessive-complexity.md
+                    - name: 'CA1504:检查令人误解的字段名'
+                      href: ca1504-review-misleading-field-names.md
+                    - name: 'CA1505:避免使用无法维护的代码'
+                      href: ca1505-avoid-unmaintainable-code.md
+                    - name: 'CA1506:避免过度类耦合度'
+                      href: ca1506-avoid-excessive-class-coupling.md
+                    - name: 移动性警告
+                      items:
+                        - name: 移动性警告
+                          href: mobility-warnings.md
+                        - name: 'CA1600:不要使用 Idle 进程优先级'
+                          href: ca1600-do-not-use-idle-process-priority.md
+                        - name: 'CA1601:不要使用阻止电源状态更改的计时器'
+                          href: ca1601-do-not-use-timers-that-prevent-power-state-changes.md
+                    - name: 命名警告
+                      items:
+                        - name: 命名警告
+                          href: naming-warnings.md
+                        - name: 'CA1700:不要命名“Reserved”枚举值'
+                          href: ca1700-do-not-name-enum-values-reserved.md
+                        - name: 'CA1701:资源字符串组合词应采用正确的大小写'
+                          href: ca1701-resource-string-compound-words-should-be-cased-correctly.md
+                        - name: 'CA1702:组合词应采用正确的大小写'
+                          href: ca1702-compound-words-should-be-cased-correctly.md
+                        - name: 'CA1703:资源字符串应正确拼写'
+                          href: ca1703-resource-strings-should-be-spelled-correctly.md
+                        - name: 'CA1704:标识符应正确拼写'
+                          href: ca1704-identifiers-should-be-spelled-correctly.md
+                        - name: 'CA1707:标识符不应包含下划线'
+                          href: ca1707-identifiers-should-not-contain-underscores.md
+                        - name: 'CA1708:标识符应以大小写之外的差别进行区分'
+                          href: ca1708-identifiers-should-differ-by-more-than-case.md
+                        - name: 'CA1709:标识符的大小写应当正确'
+                          href: ca1709-identifiers-should-be-cased-correctly.md
+                        - name: 'CA1710:标识符应具有正确的后缀'
+                          href: ca1710-identifiers-should-have-correct-suffix.md
+                        - name: 'CA1711:标识符应采用正确的后缀'
+                          href: ca1711-identifiers-should-not-have-incorrect-suffix.md
+                        - name: 'CA1712:不要将类型名用作枚举值的前缀'
+                          href: ca1712-do-not-prefix-enum-values-with-type-name.md
+                        - name: 'CA1713:事件不应具有 before 或 after 前缀'
+                          href: ca1713-events-should-not-have-before-or-after-prefix.md
+                        - name: 'CA1714:Flags 枚举应采用复数形式的名称'
+                          href: ca1714-flags-enums-should-have-plural-names.md
+                        - name: 'CA1715:标识符应具有正确的前缀'
+                          href: ca1715-identifiers-should-have-correct-prefix.md
+                        - name: 'CA1716:标识符不应与关键字冲突'
+                          href: ca1716-identifiers-should-not-match-keywords.md
+                        - name: 'CA1717:只有 FlagsAttribute 枚举应采用复数形式的名称'
+                          href: ca1717-only-flagsattribute-enums-should-have-plural-names.md
+                        - name: 'CA1719:参数名不应与成员名冲突'
+                          href: ca1719-parameter-names-should-not-match-member-names.md
+                        - name: 'CA1720:标识符不应包含类型名称'
+                          href: ca1720-identifiers-should-not-contain-type-names.md
+                        - name: 'CA1721:属性名不应与 get 方法冲突'
+                          href: ca1721-property-names-should-not-match-get-methods.md
+                        - name: 'CA1722:标识符应采用正确的前缀'
+                          href: ca1722-identifiers-should-not-have-incorrect-prefix.md
+                        - name: 'CA1725:参数名应与基方法中的声明保持一致'
+                          href: ca1725-parameter-names-should-match-base-declaration.md
+                        - name: 'CA1724:类型名不应与命名空间冲突'
+                          href: ca1724-type-names-should-not-match-namespaces.md
+                        - name: 'CA1726:使用首选词条'
+                          href: ca1726-use-preferred-terms.md
+                    - name: 性能警告
+                      items:
+                        - name: 性能警告
+                          href: performance-warnings.md
+                        - name: 'CA1800:避免进行不必要的强制转换'
+                          href: ca1800-do-not-cast-unnecessarily.md
+                        - name: 'CA1802:在合适的位置使用文本'
+                          href: ca1802-use-literals-where-appropriate.md
+                        - name: 'CA1804:移除未使用的局部变量'
+                          href: ca1804-remove-unused-locals.md
+                        - name: 'CA1809:避免过多的局部变量'
+                          href: ca1809-avoid-excessive-locals.md
+                        - name: 'CA1810:以内联方式初始化引用类型的静态字段'
+                          href: ca1810-initialize-reference-type-static-fields-inline.md
+                        - name: 'CA1811:避免使用未调用的私有代码'
+                          href: ca1811-avoid-uncalled-private-code.md
+                        - name: 'CA1812:避免未实例化的内部类'
+                          href: ca1812-avoid-uninstantiated-internal-classes.md
+                        - name: 'CA1813:避免使用非密封特性'
+                          href: ca1813-avoid-unsealed-attributes.md
+                        - name: 'CA1814:与多维数组相比，首选使用交错数组'
+                          href: ca1814-prefer-jagged-arrays-over-multidimensional.md
+                        - name: 'CA1815:重写值类型上的 Equals 和相等运算符'
+                          href: ca1815-override-equals-and-operator-equals-on-value-types.md
+                        - name: 'CA1819:属性不应返回数组'
+                          href: ca1819-properties-should-not-return-arrays.md
+                        - name: 'CA1820:使用字符串长度测试是否有空字符串'
+                          href: ca1820-test-for-empty-strings-using-string-length.md
+                        - name: 'CA1821:移除空终结器'
+                          href: ca1821-remove-empty-finalizers.md
+                        - name: 'CA1822:将成员标记为 static'
+                          href: ca1822-mark-members-as-static.md
+                        - name: 'CA1823:避免未使用的私有字段'
+                          href: ca1823-avoid-unused-private-fields.md
+                        - name: 'CA1824:用 NeutralResourcesLanguageAttribute 标记程序集'
+                          href: ca1824-mark-assemblies-with-neutralresourceslanguageattribute.md
+                    - name: 可移植性警告
+                      items:
+                        - name: 可移植性警告
+                          href: portability-warnings.md
+                        - name: 'CA1900:值类型字段应为可移植字段'
+                          href: ca1900-value-type-fields-should-be-portable.md
+                        - name: 'CA1901:P/Invoke 声明应为可移植声明'
+                          href: ca1901-p-invoke-declarations-should-be-portable.md
+                        - name: 'CA1903:仅使用目标框架中的 API'
+                          href: ca1903-use-only-api-from-targeted-framework.md
+                    - name: 可靠性警告
+                      items:
+                        - name: 可靠性警告
+                          href: reliability-warnings.md
+                        - name: 'CA2000:丢失范围之前释放对象'
+                          href: ca2000-dispose-objects-before-losing-scope.md
+                        - name: 'CA2001:避免调用有问题的方法'
+                          href: ca2001-avoid-calling-problematic-methods.md
+                        - name: 'CA2002:不要锁定具有弱标识的对象'
+                          href: ca2002-do-not-lock-on-objects-with-weak-identity.md
+                        - name: 'CA2003:不要将纤程视为线程'
+                          href: ca2003-do-not-treat-fibers-as-threads.md
+                        - name: 'CA2004:移除对 GC.KeepAlive 的调用'
+                          href: ca2004-remove-calls-to-gc-keepalive.md
+                        - name: 'CA2006:使用 SafeHandle 封装本机资源'
+                          href: ca2006-use-safehandle-to-encapsulate-native-resources.md
+                    - name: 安全警告
+                      items:
+                        - name: 安全警告
+                          href: security-warnings.md
+                        - name: 'CA2100:检查 SQL 查询是否存在安全漏洞'
+                          href: ca2100-review-sql-queries-for-security-vulnerabilities.md
+                        - name: 'CA2102:在常规处理程序中捕捉非 CLSCompliant 异常'
+                          href: ca2102-catch-non-clscompliant-exceptions-in-general-handlers.md
+                        - name: 'CA2103:检查命令性安全'
+                          href: ca2103-review-imperative-security.md
+                        - name: 'CA2104:不要声明只读可变引用类型'
+                          href: ca2104-do-not-declare-read-only-mutable-reference-types.md
+                        - name: 'CA2105:数组字段不应为只读'
+                          href: ca2105-array-fields-should-not-be-read-only.md
+                        - name: 'CA2106:保护断言'
+                          href: ca2106-secure-asserts.md
+                        - name: 'CA2107:检查 deny 权限和 permit only 权限的使用情况'
+                          href: ca2107-review-deny-and-permit-only-usage.md
+                        - name: 'CA2108:检查有关值类型的声明性安全'
+                          href: ca2108-review-declarative-security-on-value-types.md
+                        - name: 'CA2109:检查可见的事件处理程序'
+                          href: ca2109-review-visible-event-handlers.md
+                        - name: 'CA2111:指针应为不可见'
+                          href: ca2111-pointers-should-not-be-visible.md
+                        - name: 'CA2112:受保护的类型不应公开字段'
+                          href: ca2112-secured-types-should-not-expose-fields.md
+                        - name: 'CA2114:方法安全性应是类型安全性的超集'
+                          href: ca2114-method-security-should-be-a-superset-of-type.md
+                        - name: 'CA2115:使用本机资源时调用 GC.KeepAlive'
+                          href: ca2115-call-gc-keepalive-when-using-native-resources.md
+                        - name: 'CA2116:APTCA 方法应只调用 APTCA 方法'
+                          href: ca2116-aptca-methods-should-only-call-aptca-methods.md
+                        - name: 'CA2117:APTCA 类型应只扩展 APTCA 基类型'
+                          href: ca2117-aptca-types-should-only-extend-aptca-base-types.md
+                        - name: 'CA2118:检查 SuppressUnmanagedCodeSecurityAttribute 用法'
+                          href: ca2118-review-suppressunmanagedcodesecurityattribute-usage.md
+                        - name: 'CA2119:密封满足私有接口的方法'
+                          href: ca2119-seal-methods-that-satisfy-private-interfaces.md
+                        - name: 'CA2120:保护序列化构造函数'
+                          href: ca2120-secure-serialization-constructors.md
+                        - name: 'CA2121:静态构造函数应为私有'
+                          href: ca2121-static-constructors-should-be-private.md
+                        - name: 'CA2122:不要使用链接请求间接公开方法'
+                          href: ca2122-do-not-indirectly-expose-methods-with-link-demands.md
+                        - name: 'CA2123:重写链接请求应与基相同'
+                          href: ca2123-override-link-demands-should-be-identical-to-base.md
+                        - name: 'CA2124:在外部 try 块中包装易受攻击的 finally 子句'
+                          href: ca2124-wrap-vulnerable-finally-clauses-in-outer-try.md
+                        - name: 'CA2126:类型链接请求需要继承请求'
+                          href: ca2126-type-link-demands-require-inheritance-demands.md
+                        - name: 'CA2130:安全关键常量应是透明的'
+                          href: ca2130-security-critical-constants-should-be-transparent.md
+                        - name: 'CA2131:安全关键类型不能参与类型等效'
+                          href: ca2131-security-critical-types-may-not-participate-in-type-equivalence.md
+                        - name: 'CA2132:默认构造函数必须至少与基类型默认构造函数一样关键'
+                          href: ca2132-default-constructors-must-be-at-least-as-critical-as-base-type-default-constructors.md
+                        - name: 'CA2133:委托必须绑定到具有一致透明度的方法'
+                          href: ca2133-delegates-must-bind-to-methods-with-consistent-transparency.md
+                        - name: 'CA2134:在重写基方法时，方法必须保持一致的透明度'
+                          href: ca2134-methods-must-keep-consistent-transparency-when-overriding-base-methods.md
+                        - name: 'CA2135:级别 2 程序集不应包含 LinkDemand'
+                          href: ca2135-level-2-assemblies-should-not-contain-linkdemands.md
+                        - name: 'CA2136:成员不应具有冲突的透明度批注'
+                          href: ca2136-members-should-not-have-conflicting-transparency-annotations.md
+                        - name: 'CA2137:透明方法只能包含可验证的 IL'
+                          href: ca2137-transparent-methods-must-contain-only-verifiable-il.md
+                        - name: 'CA2138:透明方法不得调用具有 SuppressUnmanagedCodeSecurity 特性的方法'
+                          href: ca2138-transparent-methods-must-not-call-methods-with-the-suppressunmanagedcodesecurity-attribute.md
+                        - name: 'CA2139:透明方法不能使用 HandleProcessCorruptingExceptions 特性'
+                          href: ca2139-transparent-methods-may-not-use-the-handleprocesscorruptingexceptions-attribute.md
+                        - name: 'CA2140:透明代码不得引用安全关键项'
+                          href: ca2140-transparent-code-must-not-reference-security-critical-items.md
+                        - name: CA2141：透明方法不得满足 LinkDemand
+                          href: ca2141-transparent-methods-must-not-satisfy-linkdemands.md
+                        - name: 'CA2142:不应使用 LinkDemand 保护透明代码'
+                          href: ca2142-transparent-code-should-not-be-protected-with-linkdemands.md
+                        - name: 'CA2143:透明方法不应使用安全请求'
+                          href: ca2143-transparent-methods-should-not-use-security-demands.md
+                        - name: 'CA2144:透明代码不应从字节数组加载程序集'
+                          href: ca2144-transparent-code-should-not-load-assemblies-from-byte-arrays.md
+                        - name: 'CA2145:不应使用 SuppressUnmanagedCodeSecurityAttribute 修饰透明方法'
+                          href: ca2145-transparent-methods-should-not-be-decorated-with-the-suppressunmanagedcodesecurityattribute.md
+                        - name: 'CA2146:类型必须至少与其基类型和接口一样关键'
+                          href: ca2146-types-must-be-at-least-as-critical-as-their-base-types-and-interfaces.md
+                        - name: 'CA2147:透明方法不得使用安全断言'
+                          href: ca2147-transparent-methods-may-not-use-security-asserts.md
+                        - name: 'CA2149:透明方法不得调入本机代码'
+                          href: ca2149-transparent-methods-must-not-call-into-native-code.md
+                        - name: 'CA2151:具有关键类型的字段应为安全关键的'
+                          href: ca2151-fields-with-critical-types-should-be-security-critical.md
+                        - name: CA5122 P/Invoke 声明不应是安全关键的
+                          href: ca5122-p-invoke-declarations-should-not-be-safe-critical.md
+                        - name: 'CA2153:避免处理损坏状态异常'
+                          href: ca2153-avoid-handling-corrupted-state-exceptions.md
+                        - name: 'CA3075:不安全的 DTD 处理'
+                          href: ca3075-insecure-dtd-processing.md
+                        - name: 'CA3076:不安全的 XSLT 脚本执行'
+                          href: ca3076-insecure-xslt-script-execution.md
+                        - name: 'CA3077:API 设计、XML 文档和 XML 文本读取器中的不安全处理'
+                          href: ca3077-insecure-processing-in-api-design-xml-document-and-xml-text-reader.md
+                    - name: 用法警告
+                      items:
+                        - name: 用法警告
+                          href: usage-warnings.md
+                        - name: 'CA1801:检查未使用的参数'
+                          href: ca1801-review-unused-parameters.md
+                        - name: 'CA1806:不要忽略方法结果'
+                          href: ca1806-do-not-ignore-method-results.md
+                        - name: 'CA1816:正确调用 GC.SuppressFinalize'
+                          href: ca1816-call-gc-suppressfinalize-correctly.md
+                        - name: 'CA2200:再次引发以保留堆栈详细信息'
+                          href: ca2200-rethrow-to-preserve-stack-details.md
+                        - name: 'CA2201:不要引发保留的异常类型'
+                          href: ca2201-do-not-raise-reserved-exception-types.md
+                        - name: 'CA2202:不要多次释放对象'
+                          href: ca2202-do-not-dispose-objects-multiple-times.md
+                        - name: 'CA2204:文字应正确拼写'
+                          href: ca2204-literals-should-be-spelled-correctly.md
+                        - name: 'CA2205:使用 Win32 API 的托管等效项'
+                          href: ca2205-use-managed-equivalents-of-win32-api.md
+                        - name: 'CA2207:以内联方式初始化值类型的静态字段'
+                          href: ca2207-initialize-value-type-static-fields-inline.md
+                        - name: 'CA2208:正确实例化参数异常'
+                          href: ca2208-instantiate-argument-exceptions-correctly.md
+                        - name: 'CA2211:非常量字段不应是可见的'
+                          href: ca2211-non-constant-fields-should-not-be-visible.md
+                        - name: 'CA2212:不要使用 WebMethod 标记服务组件'
+                          href: ca2212-do-not-mark-serviced-components-with-webmethod.md
+                        - name: 'CA2213:应释放可释放的字段'
+                          href: ca2213-disposable-fields-should-be-disposed.md
+                        - name: 'CA2214:不要在构造函数中调用可重写的方法'
+                          href: ca2214-do-not-call-overridable-methods-in-constructors.md
+                        - name: 'CA2215:Dispose 方法应调用基类释放'
+                          href: ca2215-dispose-methods-should-call-base-class-dispose.md
+                        - name: 'CA2216:可释放类型应声明终结器'
+                          href: ca2216-disposable-types-should-declare-finalizer.md
+                        - name: 'CA2217:不要使用 FlagsAttribute 标记枚举'
+                          href: ca2217-do-not-mark-enums-with-flagsattribute.md
+                        - name: 'CA2218:重写 Equals 时重写 GetHashCode'
+                          href: ca2218-override-gethashcode-on-overriding-equals.md
+                        - name: 'CA2219:在异常子句中不引发异常'
+                          href: ca2219-do-not-raise-exceptions-in-exception-clauses.md
+                        - name: 'CA2220:终结器应调用基类的终结器'
+                          href: ca2220-finalizers-should-call-base-class-finalizer.md
+                        - name: 'CA2221:终结器应受到保护'
+                          href: ca2221-finalizers-should-be-protected.md
+                        - name: 'CA2222:不要递减继承成员的可见性'
+                          href: ca2222-do-not-decrease-inherited-member-visibility.md
+                        - name: 'CA2223:成员不应只是返回类型不同'
+                          href: ca2223-members-should-differ-by-more-than-return-type.md
+                        - name: 'CA2224:重载相等运算符时重写 Equals 方法'
+                          href: ca2224-override-equals-on-overloading-operator-equals.md
+                        - name: 'CA2225:运算符重载具有命名的备用项'
+                          href: ca2225-operator-overloads-have-named-alternates.md
+                        - name: 'CA2226:运算符应有对称重载'
+                          href: ca2226-operators-should-have-symmetrical-overloads.md
+                        - name: 'CA2227:集合属性应为只读'
+                          href: ca2227-collection-properties-should-be-read-only.md
+                        - name: 'CA2228:不要发行未发布的资源格式'
+                          href: ca2228-do-not-ship-unreleased-resource-formats.md
+                        - name: 'CA2229:实现序列化构造函数'
+                          href: ca2229-implement-serialization-constructors.md
+                        - name: 'CA2230:对可变数量的参数使用 params'
+                          href: ca2230-use-params-for-variable-arguments.md
+                        - name: 'CA2231:重写 ValueType.Equals 时应重载相等运算符'
+                          href: ca2231-overload-operator-equals-on-overriding-valuetype-equals.md
+                        - name: 'CA2232:使用 STAThread 标记 Windows 窗体的入口点'
+                          href: ca2232-mark-windows-forms-entry-points-with-stathread.md
+                        - name: 'CA2233:运算不应溢出'
+                          href: ca2233-operations-should-not-overflow.md
+                        - name: 'CA2234:传递 System.Uri 对象，而不传递字符串'
+                          href: ca2234-pass-system-uri-objects-instead-of-strings.md
+                        - name: 'CA2235:标记所有不可序列化的字段'
+                          href: ca2235-mark-all-non-serializable-fields.md
+                        - name: 'CA2236:对 ISerializable 类型调用基类方法'
+                          href: ca2236-call-base-class-methods-on-iserializable-types.md
+                        - name: 'CA2237:用 SerializableAttribute 标记 ISerializable 类型'
+                          href: ca2237-mark-iserializable-types-with-serializableattribute.md
+                        - name: 'CA2238:正确实现序列化方法'
+                          href: ca2238-implement-serialization-methods-correctly.md
+                        - name: 'CA2239:为可选字段提供反序列化方法'
+                          href: ca2239-provide-deserialization-methods-for-optional-fields.md
+                        - name: 'CA2240:正确实现 ISerializable'
+                          href: ca2240-implement-iserializable-correctly.md
+                        - name: 'CA2241:为格式化方法提供正确的参数'
+                          href: ca2241-provide-correct-arguments-to-formatting-methods.md
+                        - name: 'CA2242:正确测试 NaN'
+                          href: ca2242-test-for-nan-correctly.md
+                        - name: 'CA2243:特性字符串文本应正确分析'
+                          href: ca2243-attribute-string-literals-should-parse-correctly.md
+                - name: 代码分析策略错误
+                  href: code-analysis-policy-errors.md
+- name: 分析 C/C++ 代码质量
+  items:
+    - name: 分析 C/C++ 代码质量
+      href: analyzing-c-cpp-code-quality-by-using-code-analysis.md
     - name: 快速入门：C/C++ 代码分析
       href: quick-start-code-analysis-for-c-cpp.md
     - name: 使用规则集指定要运行的 C++ 规则
@@ -567,746 +583,750 @@ items:
     - name: 如何：设置 C/C++ 项目的代码分析属性
       href: how-to-set-code-analysis-properties-for-c-cpp-projects.md
     - name: 演练：分析 C/C++ 代码的缺陷
-      href: walkthrough-analyzing-c-cpp-code-for-defects.md
       items:
-      - name: 演示示例
-        href: demo-sample.md
+        - name: 演练：分析 C/C++ 代码的缺陷
+          href: walkthrough-analyzing-c-cpp-code-for-defects.md
+        - name: 演示示例
+          href: demo-sample.md
     - name: 使用 SAL 批注以减少 C/C++ 代码缺陷
-      href: using-sal-annotations-to-reduce-c-cpp-code-defects.md
       items:
-      - name: 了解 SAL
-        href: understanding-sal.md
-      - name: 对函数参数和返回值进行批注
-        href: annotating-function-parameters-and-return-values.md
-      - name: 对函数行为进行批注
-        href: annotating-function-behavior.md
-      - name: 批注结构和类
-        href: annotating-structs-and-classes.md
-      - name: 对锁定行为进行批注
-        href: annotating-locking-behavior.md
-      - name: 指定何时以及在何处应用批注
-        href: specifying-when-and-where-an-annotation-applies.md
-      - name: 内部函数
-        href: intrinsic-functions.md
-      - name: 最佳做法和示例
-        href: best-practices-and-examples-sal.md
-    - name: 如何：使用 _analysis_assume 指定其他代码信息
-      href: how-to-specify-additional-code-information-by-using-analysis-assume.md
-    - name: C/C++ 代码分析警告
-      href: code-analysis-for-c-cpp-warnings.md
-      items:
-      - name: C1250
-        href: c1250.md
-      - name: C1251
-        href: c1251.md
-      - name: C1252
-        href: c1252.md
-      - name: C1253
-        href: c1253.md
-      - name: C1254
-        href: c1254.md
-      - name: C1255
-        href: c1255.md
-      - name: C1256
-        href: c1256.md
-      - name: C1257
-        href: c1257.md
-      - name: C6001
-        href: c6001.md
-      - name: C6011
-        href: c6011.md
-      - name: C6014
-        href: c6014.md
-      - name: C6029
-        href: c6029.md
-      - name: C6031
-        href: c6031.md
-      - name: C6053
-        href: c6053.md
-      - name: C6054
-        href: c6054.md
-      - name: C6059
-        href: c6059.md
-      - name: C6063
-        href: c6063.md
-      - name: C6064
-        href: c6064.md
-      - name: C6066
-        href: c6066.md
-      - name: C6067
-        href: c6067.md
-      - name: C6101
-        href: c6101.md
-      - name: C6102
-        href: c6102.md
-      - name: C6103
-        href: c6103.md
-      - name: C6200
-        href: c6200.md
-      - name: C6201
-        href: c6201.md
-      - name: C6211
-        href: c6211.md
-      - name: C6214
-        href: c6214.md
-      - name: C6215
-        href: c6215.md
-      - name: C6216
-        href: c6216.md
-      - name: C6217
-        href: c6217.md
-      - name: C6219
-        href: c6219.md
-      - name: C6220
-        href: c6220.md
-      - name: C6221
-        href: c6221.md
-      - name: C6225
-        href: c6225.md
-      - name: C6226
-        href: c6226.md
-      - name: C6230
-        href: c6230.md
-      - name: C6235
-        href: c6235.md
-      - name: C6236
-        href: c6236.md
-      - name: C6237
-        href: c6237.md
-      - name: C6239
-        href: c6239.md
-      - name: C6240
-        href: c6240.md
-      - name: C6242
-        href: c6242.md
-      - name: C6244
-        href: c6244.md
-      - name: C6246
-        href: c6246.md
-      - name: C6248
-        href: c6248.md
-      - name: C6250
-        href: c6250.md
-      - name: C6255
-        href: c6255.md
-      - name: C6258
-        href: c6258.md
-      - name: C6259
-        href: c6259.md
-      - name: C6260
-        href: c6260.md
-      - name: C6262
-        href: c6262.md
-      - name: C6263
-        href: c6263.md
-      - name: C6268
-        href: c6268.md
-      - name: C6269
-        href: c6269.md
-      - name: C6270
-        href: c6270.md
-      - name: C6271
-        href: c6271.md
-      - name: C6272
-        href: c6272.md
-      - name: C6273
-        href: c6273.md
-      - name: C6274
-        href: c6274.md
-      - name: C6276
-        href: c6276.md
-      - name: C6277
-        href: c6277.md
-      - name: C6278
-        href: c6278.md
-      - name: C6279
-        href: c6279.md
-      - name: C6280
-        href: c6280.md
-      - name: C6281
-        href: c6281.md
-      - name: C6282
-        href: c6282.md
-      - name: C6283
-        href: c6283.md
-      - name: C6284
-        href: c6284.md
-      - name: C6285
-        href: c6285.md
-      - name: C6286
-        href: c6286.md
-      - name: C6287
-        href: c6287.md
-      - name: C6288
-        href: c6288.md
-      - name: C6289
-        href: c6289.md
-      - name: C6290
-        href: c6290.md
-      - name: C6291
-        href: c6291.md
-      - name: C6292
-        href: c6292.md
-      - name: C6293
-        href: c6293.md
-      - name: C6294
-        href: c6294.md
-      - name: C6295
-        href: c6295.md
-      - name: C6296
-        href: c6296.md
-      - name: C6297
-        href: c6297.md
-      - name: C6298
-        href: c6298.md
-      - name: C6299
-        href: c6299.md
-      - name: C6302
-        href: c6302.md
-      - name: C6303
-        href: c6303.md
-      - name: C6305
-        href: c6305.md
-      - name: C6306
-        href: c6306.md
-      - name: C6308
-        href: c6308.md
-      - name: C6310
-        href: c6310.md
-      - name: C6312
-        href: c6312.md
-      - name: C6313
-        href: c6313.md
-      - name: C6314
-        href: c6314.md
-      - name: C6315
-        href: c6315.md
-      - name: C6316
-        href: c6316.md
-      - name: C6317
-        href: c6317.md
-      - name: C6318
-        href: c6318.md
-      - name: C6319
-        href: c6319.md
-      - name: C6320
-        href: c6320.md
-      - name: C6322
-        href: c6322.md
-      - name: C6323
-        href: c6323.md
-      - name: C6324
-        href: c6324.md
-      - name: C6326
-        href: c6326.md
-      - name: C6328
-        href: c6328.md
-      - name: C6329
-        href: c6329.md
-      - name: C6330
-        href: c6330.md
-      - name: C6331
-        href: c6331.md
-      - name: C6332
-        href: c6332.md
-      - name: C6333
-        href: c6333.md
-      - name: C6334
-        href: c6334.md
-      - name: C6335
-        href: c6335.md
-      - name: C6336
-        href: c6336.md
-      - name: C6340
-        href: c6340.md
-      - name: C6381
-        href: c6381.md
-      - name: C6383
-        href: c6383.md
-      - name: C6384
-        href: c6384.md
-      - name: C6385
-        href: c6385.md
-      - name: C6386
-        href: c6386.md
-      - name: C6387
-        href: c6387.md
-      - name: C6388
-        href: c6388.md
-      - name: C6400
-        href: c6400.md
-      - name: C6401
-        href: c6401.md
-      - name: C6411
-        href: c6411.md
-      - name: C6412
-        href: c6412.md
-      - name: C6500
-        href: c6500.md
-      - name: C6501
-        href: c6501.md
-      - name: C6503
-        href: c6503.md
-      - name: C6504
-        href: c6504.md
-      - name: C6505
-        href: c6505.md
-      - name: C6506
-        href: c6506.md
-      - name: C6508
-        href: c6508.md
-      - name: C6509
-        href: c6509.md
-      - name: C6510
-        href: c6510.md
-      - name: C6511
-        href: c6511.md
-      - name: C6513
-        href: c6513.md
-      - name: C6514
-        href: c6514.md
-      - name: C6515
-        href: c6515.md
-      - name: C6516
-        href: c6516.md
-      - name: C6517
-        href: c6517.md
-      - name: C6518
-        href: c6518.md
-      - name: C6522
-        href: c6522.md
-      - name: C6525
-        href: c6525.md
-      - name: C6527
-        href: c6527.md
-      - name: C6530
-        href: c6530.md
-      - name: C6540
-        href: c6540.md
-      - name: C6551
-        href: c6551.md
-      - name: C6552
-        href: c6552.md
-      - name: C6701
-        href: c6701.md
-      - name: C6702
-        href: c6702.md
-      - name: C6703
-        href: c6703.md
-      - name: C6704
-        href: c6704.md
-      - name: C6705
-        href: c6705.md
-      - name: C6706
-        href: c6706.md
-      - name: C6707
-        href: c6707.md
-      - name: C6993
-        href: c6993.md
-      - name: C6995
-        href: c6995.md
-      - name: C6997
-        href: c6997.md
-      - name: C26100
-        href: c26100.md
-      - name: C26101
-        href: c26101.md
-      - name: C26105
-        href: c26105.md
-      - name: C26110
-        href: c26110.md
-      - name: C26111
-        href: c26111.md
-      - name: C26112
-        href: c26112.md
-      - name: C26115
-        href: c26115.md
-      - name: C26116
-        href: c26116.md
-      - name: C26117
-        href: c26117.md
-      - name: C26130
-        href: c26130.md
-      - name: C26135
-        href: c26135.md
-      - name: C26140
-        href: c26140.md
-      - name: C26160
-        href: c26160.md
-      - name: C26165
-        href: c26165.md
-      - name: C26166
-        href: c26166.md
-      - name: C26167
-        href: c26167.md
-      - name: C28020
-        href: c28020.md
-      - name: C28021
-        href: c28021.md
-      - name: C28022
-        href: c28022.md
-      - name: C28023
-        href: c28023.md
-      - name: C28024
-        href: c28024.md
-      - name: C28039
-        href: c28039.md
-      - name: C28103
-        href: c28103.md
-      - name: C28104
-        href: c28104.md
-      - name: C28105
-        href: c28105.md
-      - name: C28106
-        href: c28106.md
-      - name: C28107
-        href: c28107.md
-      - name: C28108
-        href: c28108.md
-      - name: C28109
-        href: c28109.md
-      - name: C28112
-        href: c28112.md
-      - name: C28113
-        href: c28113.md
-      - name: C28125
-        href: c28125.md
-      - name: C28137
-        href: c28137.md
-      - name: C28138
-        href: c28138.md
-      - name: C28159
-        href: c28159.md
-      - name: C28160
-        href: c28160.md
-      - name: C28163
-        href: c28163.md
-      - name: C28164
-        href: c28164.md
-      - name: C28182
-        href: c28182.md
-      - name: C28183
-        href: c28183.md
-      - name: C28193
-        href: c28193.md
-      - name: C28194
-        href: c28194.md
-      - name: C28195
-        href: c28195.md
-      - name: C28196
-        href: c28196.md
-      - name: C28197
-        href: c28197.md
-      - name: C28198
-        href: c28198.md
-      - name: C28199
-        href: c28199.md
-      - name: C28202
-        href: c28202.md
-      - name: C28203
-        href: c28203.md
-      - name: C28204
-        href: c28204.md
-      - name: C28205
-        href: c28205.md
-      - name: C28206
-        href: c28206.md
-      - name: C28207
-        href: c28207.md
-      - name: C28208
-        href: c28208.md
-      - name: C28209
-        href: c28209.md
-      - name: C28210
-        href: c28210.md
-      - name: C28211
-        href: c28211.md
-      - name: C28212
-        href: c28212.md
-      - name: C28213
-        href: c28213.md
-      - name: C28214
-        href: c28214.md
-      - name: C28215
-        href: c28215.md
-      - name: C28216
-        href: c28216.md
-      - name: C28217
-        href: c28217.md
-      - name: C28218
-        href: c28218.md
-      - name: C28219
-        href: c28219.md
-      - name: C28220
-        href: c28220.md
-      - name: C28221
-        href: c28221.md
-      - name: C28222
-        href: c28222.md
-      - name: C28223
-        href: c28223.md
-      - name: C28224
-        href: c28224.md
-      - name: C28225
-        href: c28225.md
-      - name: C28226
-        href: c28226.md
-      - name: C28227
-        href: c28227.md
-      - name: C28228
-        href: c28228.md
-      - name: C28229
-        href: c28229.md
-      - name: C28230
-        href: c28230.md
-      - name: C28231
-        href: c28231.md
-      - name: C28232
-        href: c28232.md
-      - name: C28233
-        href: c28233.md
-      - name: C28234
-        href: c28234.md
-      - name: C28235
-        href: c28235.md
-      - name: C28236
-        href: c28236.md
-      - name: C28237
-        href: c28237.md
-      - name: C28238
-        href: c28238.md
-      - name: C28239
-        href: c28239.md
-      - name: C28240
-        href: c28240.md
-      - name: C28241
-        href: c28241.md
-      - name: C28243
-        href: c28243.md
-      - name: C28244
-        href: c28244.md
-      - name: C28245
-        href: c28245.md
-      - name: C28246
-        href: c28246.md
-      - name: C28250
-        href: c28250.md
-      - name: C28251
-        href: c28251.md
-      - name: C28252
-        href: c28252.md
-      - name: C28253
-        href: c28253.md
-      - name: C28254
-        href: c28254.md
-      - name: C28262
-        href: c28262.md
-      - name: C28263
-        href: c28263.md
-      - name: C28267
-        href: c28267.md
-      - name: C28272
-        href: c28272.md
-      - name: C28273
-        href: c28273.md
-      - name: C28275
-        href: c28275.md
-      - name: C28278
-        href: c28278.md
-      - name: C28279
-        href: c28279.md
-      - name: C28280
-        href: c28280.md
-      - name: C28282
-        href: c28282.md
-      - name: C28283
-        href: c28283.md
-      - name: C28284
-        href: c28284.md
-      - name: C28285
-        href: c28285.md
-      - name: C28286
-        href: c28286.md
-      - name: C28287
-        href: c28287.md
-      - name: C28288
-        href: c28288.md
-      - name: C28289
-        href: c28289.md
-      - name: C28290
-        href: c28290.md
-      - name: C28291
-        href: c28291.md
-      - name: C28300
-        href: c28300.md
-      - name: C28301
-        href: c28301.md
-      - name: C28302
-        href: c28302.md
-      - name: C28303
-        href: c28303.md
-      - name: C28304
-        href: c28304.md
-      - name: C28305
-        href: c28305.md
-      - name: C28306
-        href: c28306.md
-      - name: C28307
-        href: c28307.md
-      - name: C28308
-        href: c28308.md
-      - name: C28309
-        href: c28309.md
-      - name: C28310
-        href: c28310.md
-      - name: C28311
-        href: c28311.md
-      - name: C28312
-        href: c28312.md
-      - name: C28350
-        href: c28350.md
-      - name: C28351
-        href: c28351.md
-  - name: 使用规则集对代码分析规则进行分组
-    href: using-rule-sets-to-group-code-analysis-rules.md
-    items:
-    - name: 演练：配置和使用自定义规则集
-      href: walkthrough-configuring-and-using-a-custom-rule-set.md
-    - name: 如何：为托管代码项目配置代码分析
-      href: how-to-configure-code-analysis-for-a-managed-code-project.md
-    - name: 如何：为 ASP.NET Web 应用程序配置代码分析
-      href: how-to-configure-code-analysis-for-an-aspnet-web-application.md
-    - name: 如何：将代码项目规则集与团队项目签入策略同步
-      href: how-to-synchronize-code-project-rule-sets-with-team-project-check-in-policy.md
-    - name: 如何：为解决方案中的多个项目指定规则集
-      href: how-to-specify-managed-code-rule-sets-for-multiple-projects-in-a-solution.md
-    - name: 创建自定义规则集
-      href: creating-custom-code-analysis-rule-sets.md
-      items:
-      - name: 如何：创建自定义规则集
-        href: how-to-create-a-custom-rule-set.md
-      - name: 使用规则集编辑器
-        href: working-in-the-code-analysis-rule-set-editor.md
-    - name: 代码分析规则集参考
-      href: code-analysis-rule-set-reference.md
-      items:
-      - name: “所有规则”规则集
-        href: all-rules-rule-set.md
-      - name: 托管代码的“基本更正规则”规则集
-        href: basic-correctness-rules-rule-set-for-managed-code.md
-      - name: 托管代码的“基本设计准则规则”规则集
-        href: basic-design-guideline-rules-rule-set-for-managed-code.md
-      - name: 托管代码的“扩展的更正规则”规则集
-        href: extended-correctness-rules-rule-set-for-managed-code.md
-      - name: 托管代码的“扩展的设计准则规则”规则集
-        href: extended-design-guidelines-rules-rule-set-for-managed-code.md
-      - name: 托管代码的“全球化规则”规则集
-        href: globalization-rules-rule-set-for-managed-code.md
-      - name: 托管代码的“托管最少量规则”规则集
-        href: managed-minimun-rules-rule-set-for-managed-code.md
-      - name: 托管代码的“托管建议规则”规则集
-        href: managed-recommended-rules-rule-set-for-managed-code.md
-      - name: “混合最少量规则”规则集
-        href: mixed-minimum-rules-rule-set.md
-      - name: “混合建议规则”规则集
-        href: mixed-recommended-rules-rule-set.md
-      - name: “本机最少量规则”规则集
-        href: native-minimum-rules-rule-set.md
-      - name: “本机建议规则”规则集
-        href: native-recommended-rules-rule-set.md
-      - name: 托管代码的“安全规则”规则集
-        href: security-rules-rule-set-for-managed-code.md
-  - name: 代码分析应用程序错误
-    href: code-analysis-application-errors.md
-    items:
-    - name: CA0001
-      href: ca0001.md
-    - name: CA0051
-      href: ca0051.md
-    - name: CA0052
-      href: ca0052.md
-    - name: CA0053
-      href: ca0053.md
-    - name: CA0054
-      href: ca0054.md
-    - name: CA0055
-      href: ca0055.md
-    - name: CA0056
-      href: ca0056.md
-    - name: CA0057
-      href: ca0057.md
-    - name: CA0058
-      href: ca0058.md
-    - name: CA0059
-      href: ca0059.md
-    - name: CA0060
-      href: ca0060.md
-    - name: CA0061
-      href: ca0061.md
-    - name: CA0062
-      href: ca0062.md
-    - name: CA0063
-      href: ca0063.md
-    - name: CA0064
-      href: ca0064.md
-    - name: CA0065
-      href: ca0065.md
-    - name: CA0066
-      href: ca0066.md
-    - name: CA0067
-      href: ca0067.md
-    - name: CA0068
-      href: ca0068.md
-    - name: CA0069
-      href: ca0069.md
-    - name: CA0070
-      href: ca0070.md
-    - name: CA0501
-      href: ca0501.md
-    - name: CA0502
-      href: ca0502.md
-    - name: CA0503
-      href: ca0503.md
-    - name: CA0504
-      href: ca0504.md
-    - name: CA0505
-      href: ca0505.md
-    - name: FxCopCmd 错误
-      href: fxcopcmd-errors.md
-  - name: 利用团队项目签入策略提高代码质量
-    href: enhancing-code-quality-with-team-project-check-in-policies.md
-    items:
-    - name: 创建和使用代码分析签入策略
-      href: creating-and-using-code-analysis-check-in-policies.md
-      items:
-      - name: 如何：创建或更新标准代码分析签入策略
-        href: how-to-create-or-update-standard-code-analysis-check-in-policies.md
-      - name: 对托管代码实施自定义签入策略
-        href: implementing-custom-code-analysis-check-in-policies-for-managed-code.md
-      - name: 如何：使用代码分析签入策略强制实现可维护的代码
-        href: how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy.md
-      - name: 代码分析签入策略的版本兼容性
-        href: version-compatibility-for-code-analysis-check-in-policies.md
-  expanded: true
+        - name: 使用 SAL 批注以减少 C/C++ 代码缺陷
+          href: using-sal-annotations-to-reduce-c-cpp-code-defects.md
+        - name: 了解 SAL
+          href: understanding-sal.md
+        - name: 对函数参数和返回值进行批注
+          href: annotating-function-parameters-and-return-values.md
+        - name: 对函数行为进行批注
+          href: annotating-function-behavior.md
+        - name: 批注结构和类
+          href: annotating-structs-and-classes.md
+        - name: 对锁定行为进行批注
+          href: annotating-locking-behavior.md
+        - name: 指定何时以及在何处应用批注
+          href: specifying-when-and-where-an-annotation-applies.md
+        - name: 内部函数
+          href: intrinsic-functions.md
+        - name: 最佳做法和示例
+          href: best-practices-and-examples-sal.md
+        - name: 如何：使用 _analysis_assume 指定其他代码信息
+          href: how-to-specify-additional-code-information-by-using-analysis-assume.md
+        - name: C/C++ 代码分析警告
+          items:
+            - name: C/C++ 代码分析警告
+              href: code-analysis-for-c-cpp-warnings.md
+            - name: C1250
+              href: c1250.md
+            - name: C1251
+              href: c1251.md
+            - name: C1252
+              href: c1252.md
+            - name: C1253
+              href: c1253.md
+            - name: C1254
+              href: c1254.md
+            - name: C1255
+              href: c1255.md
+            - name: C1256
+              href: c1256.md
+            - name: C1257
+              href: c1257.md
+            - name: C6001
+              href: c6001.md
+            - name: C6011
+              href: c6011.md
+            - name: C6014
+              href: c6014.md
+            - name: C6029
+              href: c6029.md
+            - name: C6031
+              href: c6031.md
+            - name: C6053
+              href: c6053.md
+            - name: C6054
+              href: c6054.md
+            - name: C6059
+              href: c6059.md
+            - name: C6063
+              href: c6063.md
+            - name: C6064
+              href: c6064.md
+            - name: C6066
+              href: c6066.md
+            - name: C6067
+              href: c6067.md
+            - name: C6101
+              href: c6101.md
+            - name: C6102
+              href: c6102.md
+            - name: C6103
+              href: c6103.md
+            - name: C6200
+              href: c6200.md
+            - name: C6201
+              href: c6201.md
+            - name: C6211
+              href: c6211.md
+            - name: C6214
+              href: c6214.md
+            - name: C6215
+              href: c6215.md
+            - name: C6216
+              href: c6216.md
+            - name: C6217
+              href: c6217.md
+            - name: C6219
+              href: c6219.md
+            - name: C6220
+              href: c6220.md
+            - name: C6221
+              href: c6221.md
+            - name: C6225
+              href: c6225.md
+            - name: C6226
+              href: c6226.md
+            - name: C6230
+              href: c6230.md
+            - name: C6235
+              href: c6235.md
+            - name: C6236
+              href: c6236.md
+            - name: C6237
+              href: c6237.md
+            - name: C6239
+              href: c6239.md
+            - name: C6240
+              href: c6240.md
+            - name: C6242
+              href: c6242.md
+            - name: C6244
+              href: c6244.md
+            - name: C6246
+              href: c6246.md
+            - name: C6248
+              href: c6248.md
+            - name: C6250
+              href: c6250.md
+            - name: C6255
+              href: c6255.md
+            - name: C6258
+              href: c6258.md
+            - name: C6259
+              href: c6259.md
+            - name: C6260
+              href: c6260.md
+            - name: C6262
+              href: c6262.md
+            - name: C6263
+              href: c6263.md
+            - name: C6268
+              href: c6268.md
+            - name: C6269
+              href: c6269.md
+            - name: C6270
+              href: c6270.md
+            - name: C6271
+              href: c6271.md
+            - name: C6272
+              href: c6272.md
+            - name: C6273
+              href: c6273.md
+            - name: C6274
+              href: c6274.md
+            - name: C6276
+              href: c6276.md
+            - name: C6277
+              href: c6277.md
+            - name: C6278
+              href: c6278.md
+            - name: C6279
+              href: c6279.md
+            - name: C6280
+              href: c6280.md
+            - name: C6281
+              href: c6281.md
+            - name: C6282
+              href: c6282.md
+            - name: C6283
+              href: c6283.md
+            - name: C6284
+              href: c6284.md
+            - name: C6285
+              href: c6285.md
+            - name: C6286
+              href: c6286.md
+            - name: C6287
+              href: c6287.md
+            - name: C6288
+              href: c6288.md
+            - name: C6289
+              href: c6289.md
+            - name: C6290
+              href: c6290.md
+            - name: C6291
+              href: c6291.md
+            - name: C6292
+              href: c6292.md
+            - name: C6293
+              href: c6293.md
+            - name: C6294
+              href: c6294.md
+            - name: C6295
+              href: c6295.md
+            - name: C6296
+              href: c6296.md
+            - name: C6297
+              href: c6297.md
+            - name: C6298
+              href: c6298.md
+            - name: C6299
+              href: c6299.md
+            - name: C6302
+              href: c6302.md
+            - name: C6303
+              href: c6303.md
+            - name: C6305
+              href: c6305.md
+            - name: C6306
+              href: c6306.md
+            - name: C6308
+              href: c6308.md
+            - name: C6310
+              href: c6310.md
+            - name: C6312
+              href: c6312.md
+            - name: C6313
+              href: c6313.md
+            - name: C6314
+              href: c6314.md
+            - name: C6315
+              href: c6315.md
+            - name: C6316
+              href: c6316.md
+            - name: C6317
+              href: c6317.md
+            - name: C6318
+              href: c6318.md
+            - name: C6319
+              href: c6319.md
+            - name: C6320
+              href: c6320.md
+            - name: C6322
+              href: c6322.md
+            - name: C6323
+              href: c6323.md
+            - name: C6324
+              href: c6324.md
+            - name: C6326
+              href: c6326.md
+            - name: C6328
+              href: c6328.md
+            - name: C6329
+              href: c6329.md
+            - name: C6330
+              href: c6330.md
+            - name: C6331
+              href: c6331.md
+            - name: C6332
+              href: c6332.md
+            - name: C6333
+              href: c6333.md
+            - name: C6334
+              href: c6334.md
+            - name: C6335
+              href: c6335.md
+            - name: C6336
+              href: c6336.md
+            - name: C6340
+              href: c6340.md
+            - name: C6381
+              href: c6381.md
+            - name: C6383
+              href: c6383.md
+            - name: C6384
+              href: c6384.md
+            - name: C6385
+              href: c6385.md
+            - name: C6386
+              href: c6386.md
+            - name: C6387
+              href: c6387.md
+            - name: C6388
+              href: c6388.md
+            - name: C6400
+              href: c6400.md
+            - name: C6401
+              href: c6401.md
+            - name: C6411
+              href: c6411.md
+            - name: C6412
+              href: c6412.md
+            - name: C6500
+              href: c6500.md
+            - name: C6501
+              href: c6501.md
+            - name: C6503
+              href: c6503.md
+            - name: C6504
+              href: c6504.md
+            - name: C6505
+              href: c6505.md
+            - name: C6506
+              href: c6506.md
+            - name: C6508
+              href: c6508.md
+            - name: C6509
+              href: c6509.md
+            - name: C6510
+              href: c6510.md
+            - name: C6511
+              href: c6511.md
+            - name: C6513
+              href: c6513.md
+            - name: C6514
+              href: c6514.md
+            - name: C6515
+              href: c6515.md
+            - name: C6516
+              href: c6516.md
+            - name: C6517
+              href: c6517.md
+            - name: C6518
+              href: c6518.md
+            - name: C6522
+              href: c6522.md
+            - name: C6525
+              href: c6525.md
+            - name: C6527
+              href: c6527.md
+            - name: C6530
+              href: c6530.md
+            - name: C6540
+              href: c6540.md
+            - name: C6551
+              href: c6551.md
+            - name: C6552
+              href: c6552.md
+            - name: C6701
+              href: c6701.md
+            - name: C6702
+              href: c6702.md
+            - name: C6703
+              href: c6703.md
+            - name: C6704
+              href: c6704.md
+            - name: C6705
+              href: c6705.md
+            - name: C6706
+              href: c6706.md
+            - name: C6707
+              href: c6707.md
+            - name: C6993
+              href: c6993.md
+            - name: C6995
+              href: c6995.md
+            - name: C6997
+              href: c6997.md
+            - name: C26100
+              href: c26100.md
+            - name: C26101
+              href: c26101.md
+            - name: C26105
+              href: c26105.md
+            - name: C26110
+              href: c26110.md
+            - name: C26111
+              href: c26111.md
+            - name: C26112
+              href: c26112.md
+            - name: C26115
+              href: c26115.md
+            - name: C26116
+              href: c26116.md
+            - name: C26117
+              href: c26117.md
+            - name: C26130
+              href: c26130.md
+            - name: C26135
+              href: c26135.md
+            - name: C26140
+              href: c26140.md
+            - name: C26160
+              href: c26160.md
+            - name: C26165
+              href: c26165.md
+            - name: C26166
+              href: c26166.md
+            - name: C26167
+              href: c26167.md
+            - name: C28020
+              href: c28020.md
+            - name: C28021
+              href: c28021.md
+            - name: C28022
+              href: c28022.md
+            - name: C28023
+              href: c28023.md
+            - name: C28024
+              href: c28024.md
+            - name: C28039
+              href: c28039.md
+            - name: C28103
+              href: c28103.md
+            - name: C28104
+              href: c28104.md
+            - name: C28105
+              href: c28105.md
+            - name: C28106
+              href: c28106.md
+            - name: C28107
+              href: c28107.md
+            - name: C28108
+              href: c28108.md
+            - name: C28109
+              href: c28109.md
+            - name: C28112
+              href: c28112.md
+            - name: C28113
+              href: c28113.md
+            - name: C28125
+              href: c28125.md
+            - name: C28137
+              href: c28137.md
+            - name: C28138
+              href: c28138.md
+            - name: C28159
+              href: c28159.md
+            - name: C28160
+              href: c28160.md
+            - name: C28163
+              href: c28163.md
+            - name: C28164
+              href: c28164.md
+            - name: C28182
+              href: c28182.md
+            - name: C28183
+              href: c28183.md
+            - name: C28193
+              href: c28193.md
+            - name: C28194
+              href: c28194.md
+            - name: C28195
+              href: c28195.md
+            - name: C28196
+              href: c28196.md
+            - name: C28197
+              href: c28197.md
+            - name: C28198
+              href: c28198.md
+            - name: C28199
+              href: c28199.md
+            - name: C28202
+              href: c28202.md
+            - name: C28203
+              href: c28203.md
+            - name: C28204
+              href: c28204.md
+            - name: C28205
+              href: c28205.md
+            - name: C28206
+              href: c28206.md
+            - name: C28207
+              href: c28207.md
+            - name: C28208
+              href: c28208.md
+            - name: C28209
+              href: c28209.md
+            - name: C28210
+              href: c28210.md
+            - name: C28211
+              href: c28211.md
+            - name: C28212
+              href: c28212.md
+            - name: C28213
+              href: c28213.md
+            - name: C28214
+              href: c28214.md
+            - name: C28215
+              href: c28215.md
+            - name: C28216
+              href: c28216.md
+            - name: C28217
+              href: c28217.md
+            - name: C28218
+              href: c28218.md
+            - name: C28219
+              href: c28219.md
+            - name: C28220
+              href: c28220.md
+            - name: C28221
+              href: c28221.md
+            - name: C28222
+              href: c28222.md
+            - name: C28223
+              href: c28223.md
+            - name: C28224
+              href: c28224.md
+            - name: C28225
+              href: c28225.md
+            - name: C28226
+              href: c28226.md
+            - name: C28227
+              href: c28227.md
+            - name: C28228
+              href: c28228.md
+            - name: C28229
+              href: c28229.md
+            - name: C28230
+              href: c28230.md
+            - name: C28231
+              href: c28231.md
+            - name: C28232
+              href: c28232.md
+            - name: C28233
+              href: c28233.md
+            - name: C28234
+              href: c28234.md
+            - name: C28235
+              href: c28235.md
+            - name: C28236
+              href: c28236.md
+            - name: C28237
+              href: c28237.md
+            - name: C28238
+              href: c28238.md
+            - name: C28239
+              href: c28239.md
+            - name: C28240
+              href: c28240.md
+            - name: C28241
+              href: c28241.md
+            - name: C28243
+              href: c28243.md
+            - name: C28244
+              href: c28244.md
+            - name: C28245
+              href: c28245.md
+            - name: C28246
+              href: c28246.md
+            - name: C28250
+              href: c28250.md
+            - name: C28251
+              href: c28251.md
+            - name: C28252
+              href: c28252.md
+            - name: C28253
+              href: c28253.md
+            - name: C28254
+              href: c28254.md
+            - name: C28262
+              href: c28262.md
+            - name: C28263
+              href: c28263.md
+            - name: C28267
+              href: c28267.md
+            - name: C28272
+              href: c28272.md
+            - name: C28273
+              href: c28273.md
+            - name: C28275
+              href: c28275.md
+            - name: C28278
+              href: c28278.md
+            - name: C28279
+              href: c28279.md
+            - name: C28280
+              href: c28280.md
+            - name: C28282
+              href: c28282.md
+            - name: C28283
+              href: c28283.md
+            - name: C28284
+              href: c28284.md
+            - name: C28285
+              href: c28285.md
+            - name: C28286
+              href: c28286.md
+            - name: C28287
+              href: c28287.md
+            - name: C28288
+              href: c28288.md
+            - name: C28289
+              href: c28289.md
+            - name: C28290
+              href: c28290.md
+            - name: C28291
+              href: c28291.md
+            - name: C28300
+              href: c28300.md
+            - name: C28301
+              href: c28301.md
+            - name: C28302
+              href: c28302.md
+            - name: C28303
+              href: c28303.md
+            - name: C28304
+              href: c28304.md
+            - name: C28305
+              href: c28305.md
+            - name: C28306
+              href: c28306.md
+            - name: C28307
+              href: c28307.md
+            - name: C28308
+              href: c28308.md
+            - name: C28309
+              href: c28309.md
+            - name: C28310
+              href: c28310.md
+            - name: C28311
+              href: c28311.md
+            - name: C28312
+              href: c28312.md
+            - name: C28350
+              href: c28350.md
+            - name: C28351
+              href: c28351.md
+        - name: 使用规则集对代码分析规则进行分组
+          items:
+            - name: 使用规则集对代码分析规则进行分组
+              href: using-rule-sets-to-group-code-analysis-rules.md
+            - name: 演练：配置和使用自定义规则集
+              href: walkthrough-configuring-and-using-a-custom-rule-set.md
+            - name: 如何：为托管代码项目配置代码分析
+              href: how-to-configure-code-analysis-for-a-managed-code-project.md
+            - name: 如何：为 ASP.NET Web 应用程序配置代码分析
+              href: how-to-configure-code-analysis-for-an-aspnet-web-application.md
+            - name: 如何：将代码项目规则集与团队项目签入策略同步
+              href: how-to-synchronize-code-project-rule-sets-with-team-project-check-in-policy.md
+            - name: 如何：为解决方案中的多个项目指定规则集
+              href: how-to-specify-managed-code-rule-sets-for-multiple-projects-in-a-solution.md
+            - name: 创建自定义规则集
+              items:
+                - name: 创建自定义规则集
+                  href: creating-custom-code-analysis-rule-sets.md
+                - name: 如何：创建自定义规则集
+                  href: how-to-create-a-custom-rule-set.md
+                - name: 使用规则集编辑器
+                  href: working-in-the-code-analysis-rule-set-editor.md
+            - name: 代码分析规则集参考
+              items:
+                - name: 代码分析规则集参考
+                  href: code-analysis-rule-set-reference.md
+                - name: “所有规则”规则集
+                  href: all-rules-rule-set.md
+                - name: 托管代码的“基本更正规则”规则集
+                  href: basic-correctness-rules-rule-set-for-managed-code.md
+                - name: 托管代码的“基本设计准则规则”规则集
+                  href: basic-design-guideline-rules-rule-set-for-managed-code.md
+                - name: 托管代码的“扩展的更正规则”规则集
+                  href: extended-correctness-rules-rule-set-for-managed-code.md
+                - name: 托管代码的“扩展的设计准则规则”规则集
+                  href: extended-design-guidelines-rules-rule-set-for-managed-code.md
+                - name: 托管代码的“全球化规则”规则集
+                  href: globalization-rules-rule-set-for-managed-code.md
+                - name: 托管代码的“托管最少量规则”规则集
+                  href: managed-minimun-rules-rule-set-for-managed-code.md
+                - name: 托管代码的“托管建议规则”规则集
+                  href: managed-recommended-rules-rule-set-for-managed-code.md
+                - name: “混合最少量规则”规则集
+                  href: mixed-minimum-rules-rule-set.md
+                - name: “混合建议规则”规则集
+                  href: mixed-recommended-rules-rule-set.md
+                - name: “本机最少量规则”规则集
+                  href: native-minimum-rules-rule-set.md
+                - name: “本机建议规则”规则集
+                  href: native-recommended-rules-rule-set.md
+                - name: 托管代码的“安全规则”规则集
+                  href: security-rules-rule-set-for-managed-code.md
+        - name: 代码分析应用程序错误
+          items:
+            - name: 代码分析应用程序错误
+              href: code-analysis-application-errors.md
+            - name: CA0001
+              href: ca0001.md
+            - name: CA0051
+              href: ca0051.md
+            - name: CA0052
+              href: ca0052.md
+            - name: CA0053
+              href: ca0053.md
+            - name: CA0054
+              href: ca0054.md
+            - name: CA0055
+              href: ca0055.md
+            - name: CA0056
+              href: ca0056.md
+            - name: CA0057
+              href: ca0057.md
+            - name: CA0058
+              href: ca0058.md
+            - name: CA0059
+              href: ca0059.md
+            - name: CA0060
+              href: ca0060.md
+            - name: CA0061
+              href: ca0061.md
+            - name: CA0062
+              href: ca0062.md
+            - name: CA0063
+              href: ca0063.md
+            - name: CA0064
+              href: ca0064.md
+            - name: CA0065
+              href: ca0065.md
+            - name: CA0066
+              href: ca0066.md
+            - name: CA0067
+              href: ca0067.md
+            - name: CA0068
+              href: ca0068.md
+            - name: CA0069
+              href: ca0069.md
+            - name: CA0070
+              href: ca0070.md
+            - name: CA0501
+              href: ca0501.md
+            - name: CA0502
+              href: ca0502.md
+            - name: CA0503
+              href: ca0503.md
+            - name: CA0504
+              href: ca0504.md
+            - name: CA0505
+              href: ca0505.md
+            - name: FxCopCmd 错误
+              href: fxcopcmd-errors.md
+        - name: 利用团队项目签入策略提高代码质量
+          items:
+            - name: 利用团队项目签入策略提高代码质量
+              href: enhancing-code-quality-with-team-project-check-in-policies.md
+            - name: 创建和使用代码分析签入策略
+              items:
+                - name: 创建和使用代码分析签入策略
+                  href: creating-and-using-code-analysis-check-in-policies.md
+                - name: 如何：创建或更新标准代码分析签入策略
+                  href: how-to-create-or-update-standard-code-analysis-check-in-policies.md
+                - name: 对托管代码实施自定义签入策略
+                  href: implementing-custom-code-analysis-check-in-policies-for-managed-code.md
+                - name: 如何：使用代码分析签入策略强制实现可维护的代码
+                  href: how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy.md
+                - name: 代码分析签入策略的版本兼容性
+                  href: version-compatibility-for-code-analysis-check-in-policies.md
 - name: 测量托管代码的复杂性和可维护性
-  href: measuring-complexity-and-maintainability-of-managed-code.md
   items:
-  - name: 代码度量值
-    href: code-metrics-values.md
-  - name: 如何：生成代码度量数据
-    href: how-to-generate-code-metrics-data.md
-  - name: 使用代码度量数据
-    href: working-with-code-metrics-data.md
+    - name: 测量托管代码的复杂性和可维护性
+      href: measuring-complexity-and-maintainability-of-managed-code.md
+    - name: 代码度量值
+      href: code-metrics-values.md
+    - name: 如何：生成代码度量数据
+      href: how-to-generate-code-metrics-data.md
+    - name: 使用代码度量数据
+      href: working-with-code-metrics-data.md
 - name: 质量工具疑难解答
-  href: troubleshooting-quality-tools.md
   items:
-  - name: 代码分析问题疑难解答
-    href: troubleshooting-code-analysis-issues.md
-  - name: 代码度量值问题疑难解答
-    href: troubleshooting-code-metrics-issues.md
-ms.openlocfilehash: b87277390ab7e6c176a8e50574aaec0c1f3024a9
-ms.sourcegitcommit: 35bebf794f528d73d82602e096fd97d7b8f82c25
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53562408"
+    - name: 质量工具疑难解答
+      href: troubleshooting-quality-tools.md
+    - name: 代码分析问题疑难解答
+      href: troubleshooting-code-analysis-issues.md
+    - name: 代码度量值问题疑难解答
+      href: troubleshooting-code-metrics-issues.md

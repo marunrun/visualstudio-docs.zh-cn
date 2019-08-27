@@ -8,22 +8,22 @@ helpviewer_keywords:
 - web site performance profiling
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bc3c83e81608d671db8bad655c4853e5262ea467
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 3d8e4c2b8b5f557f9f7eff26972593c4f40146be
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53863626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62539355"
 ---
 # <a name="how-to-profile-javascript-code-in-web-pages"></a>如何：分析网页中的 JavaScript 代码
 
 Visual Studio 分析工具可以通过使用检测分析方法收集在 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 应用程序、任意网页或 JavaScript 应用程序中执行的 JavaScript 代码的性能数据。 需要 Internet Explorer 8 或更高版本。
 
 > [!WARNING]
-> 若要分析 UWP 应用中的 JavaScript，请参阅 [JavaScript 内存](../profiling/javascript-memory.md) 
+> 若要分析 UWP 应用中的 JavaScript，请参阅 [JavaScript 内存](../profiling/javascript-memory.md)
 
 可以使用“分析向导”创建性能会话。 指定检测方法，然后在该性能会话的属性对话框的“检测”页上指定 JavaScript 分析选项。
 

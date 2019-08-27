@@ -1,27 +1,22 @@
 ---
-title: 测试区域 4： 签入 |Microsoft Docs
-ms.custom: ''
+title: 测试区域 4：签入 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], checking items in
 - source control plug-ins, checking items in
 ms.assetid: d0329fa8-7a8d-4d30-b67b-6f2a97b75a30
 caps.latest.revision: 12
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 97a610325a5165a1de2cc50fede5bbabf182ef5e
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 738b2608d5afa188cad38d92ed613307d2919ca0
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51783296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68155962"
 ---
 # <a name="test-area-4-check-in"></a>测试区域 4：签入
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -40,16 +35,16 @@ ms.locfileid: "51783296"
   
 ## <a name="common-expected-behavior"></a>常见的预期的行为  
   
--   项目和文件添加到解决方案或项目源代码管理下的出现在**签入**对话框和**挂起的签入**窗口。  
+- 项目和文件添加到解决方案或项目源代码管理下的出现在**签入**对话框和**挂起的签入**窗口。  
   
--   在签入后添加的项显示在源代码管理中。  
+- 在签入后添加的项显示在源代码管理中。  
   
--   后签入中，已更新的项目的正确版本控制的存储中。  
+- 后签入中，已更新的项目的正确版本控制的存储中。  
   
 ## <a name="test-cases"></a>测试用例  
  以下是有关签入测试区域的特定测试用例。  
   
-### <a name="case-4a-modified-items"></a>Case 4a： 修改项目  
+### <a name="case-4a-modified-items"></a>Case 4a:修改的项目  
  描述如何使用操作中检查更新已修改的源控件下的文件。  
   
 |操作|测试步骤|若要验证的预期的结果|  
@@ -57,7 +52,7 @@ ms.locfileid: "51783296"
 |修改已签出的文本文件，请在文件中仅检查 (**签入**对话框)|1.使用文本文件创建一个新的项目。<br />2.将解决方案添加到源代码管理。<br />3.请查看并修改的文本文件。<br />4.签入通过签入对话框中 (**文件**，**源代码管理**，**签入**)。|常见的预期的行为。|  
 |修改已签出的文本文件，请在文件中仅检查 (**挂起的签入**窗口)|1.使用文本文件创建一个新的项目。<br />2.将解决方案添加到源代码管理。<br />3.请查看并修改的文本文件。<br />4.通过签入**挂起的签入**窗口。|常见的预期的行为。|  
   
-### <a name="case-4b-adding-files"></a>Case 4b： 将文件添加  
+### <a name="case-4b-adding-files"></a>Case 4b:添加文件  
  将文件添加到项目或解决方案的项，当项目或解决方案必须也更改。 因此父文件同时签出以及必须签入才能完成添加。  
   
 |操作|测试步骤|若要验证的预期的结果|  
@@ -65,7 +60,7 @@ ms.locfileid: "51783296"
 |将一个文本文件添加并签入所有内容 (**签入**对话框)|1.创建新项目。<br />2.将解决方案添加到源代码管理。<br />3.将文本文件添加到项目。<br />4.如果系统提示您，接受签出的项目。<br />5.选择中的解决方案**解决方案资源管理器**。<br />6.通过签入**签入**对话框。|常见的预期的行为。|  
 |将一个文本文件添加并签入所有内容 (**挂起的签入**窗口)|1.创建新项目。<br />2.将解决方案添加到源代码管理。<br />3.将文本文件添加到项目。<br />4.如果系统提示您，接受签出的项目。<br />5.从解决方案签入**挂起的签入**窗口。|常见的预期的行为|  
   
-### <a name="case-4c-adding-projects"></a>Case 4c： 添加项目  
+### <a name="case-4c-adding-projects"></a>用例 4 c:添加项目  
  向解决方案添加一个项目，该解决方案还必须将更改。 因此解决方案文件同时签出以及必须签入才能完成添加。  
   
 |操作|测试步骤|若要验证的预期的结果|  
@@ -75,4 +70,3 @@ ms.locfileid: "51783296"
   
 ## <a name="see-also"></a>请参阅  
  [源代码管理插件的测试指南](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)
-

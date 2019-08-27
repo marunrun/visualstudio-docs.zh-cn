@@ -1,20 +1,19 @@
-items:
-- name: Visual Studio 中的 C#
+- name: 'C# 教程'
   href: index.yml
+- name: 概述
   items:
-  - name: 概述
-    items:
-    - name: 关于 Visual Studio 2017
+    - name: 关于 Visual Studio
       href: visual-studio-ide.md
     - name: 关于代码编辑器
       href: tutorial-editor.md
     - name: 关于项目和解决方案
-      href: tutorial-projects-solutions.md
+      href: ../tutorial-projects-solutions.md?toc=/visualstudio/get-started/csharp/toc.json&bc=/visualstudio/get-started/csharp/breadcrumb/toc.json
     - name: 更多 Visual Studio 功能
-      href: ../../ide/advanced-feature-overview.md?toc=/visualstudio/csharp/toc.json&bc=/visualstudio/csharp/breadcrumb/toc.json
-  - name: 教程
-    items:
-    - name: 创建自己的第一个 C# 应用
+      href: ../../ide/advanced-feature-overview.md?toc=/visualstudio/get-started/csharp/toc.json&bc=/visualstudio/get-started/csharp/breadcrumb/toc.json
+- name: 创建应用
+  expanded: true
+  items:
+    - name: '创建自己的第一个 C# 应用'
       href: tutorial-console.md
     - name: 创建 Web 应用
       href: tutorial-aspnet-core.md
@@ -22,9 +21,23 @@ items:
       href: tutorial-uwp.md
     - name: 创建 WPF 应用程序
       href: tutorial-wpf.md
-    expanded: true
-  - name: 学习 Visual Studio
-    items:
+    - name: 视频教程 - 创建 ASP.NET Core Web 应用
+      items:
+        - name: 1 - 安装 Visual Studio
+          href: tutorial-aspnet-core-ef-step-01.md
+        - name: 2 - 创建首个 ASP.NET Core Web 应用
+          href: tutorial-aspnet-core-ef-step-02.md
+        - name: 3 - 使用数据
+          href: tutorial-aspnet-core-ef-step-03.md
+        - name: 4 - 公开 Web API
+          href: tutorial-aspnet-core-ef-step-04.md
+        - name: 5 - 将 ASP.NET Core 应用部署到 Azure
+          href: tutorial-aspnet-core-ef-step-05.md
+- name: 学习 Visual Studio
+  expanded: true
+  items:
+    - name: 打开存储库中的项目
+      href: ../tutorial-open-project-from-repo.md?toc=/visualstudio/get-started/csharp/toc.json&bc=/visualstudio/get-started/csharp/breadcrumb/toc.json
     - name: 编写和编辑代码
       href: tutorial-editor.md
     - name: 编译和生成
@@ -32,14 +45,8 @@ items:
     - name: 调试代码
       href: ../csharp/tutorial-debugger.md
     - name: 单元测试
-      href: ../../test/getting-started-with-unit-testing.md?toc=/visualstudio/csharp/toc.json&bc=/visualstudio/csharp/breadcrumb/toc.json
+      href: ../../test/getting-started-with-unit-testing.md?toc=/visualstudio/get-started/csharp/toc.json&bc=/visualstudio/get-started/csharp/breadcrumb/toc.json
     - name: 部署项目
       href: ../../deployment/index.md
     - name: 访问数据
-      href: ../../data-tools/create-a-sql-database-by-using-a-designer.md?toc=/visualstudio/csharp/toc.json&bc=/visualstudio/csharp/breadcrumb/toc.json
-ms.openlocfilehash: cb9bc5df898e902292b2cf53bcb43f72f4464454
-ms.sourcegitcommit: a715de2ba8c703f37aa2102567b1aa2c0f05a117
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53442903"
+      href: ../../data-tools/create-a-sql-database-by-using-a-designer.md?toc=/visualstudio/get-started/csharp/toc.json&bc=/visualstudio/get-started/csharp/breadcrumb/toc.json

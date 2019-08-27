@@ -1,20 +1,19 @@
 ---
 title: 如何：向三维模型应用着色器
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.assetid: a3877bd6-abd8-4a9d-842c-6848b6c2f335
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c0c7b304b5fd435d739252db821232f977b75a3
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 896cc39ae3e9f53d96a30f6485c40afc8259e270
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53837152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62845036"
 ---
 # <a name="how-to-apply-a-shader-to-a-3d-model"></a>如何：向三维模型应用着色器
 

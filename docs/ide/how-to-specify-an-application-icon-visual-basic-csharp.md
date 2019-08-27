@@ -1,7 +1,6 @@
 ---
 title: 如何：指定应用程序图标（Visual Basic、C#）
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - icons [Visual Studio], application
@@ -9,15 +8,15 @@ helpviewer_keywords:
 - application icons [Visual Studio]
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2839b29d61c7ab87ad0dcbeaacc385c488fce254
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f2903821c0e0843de43f68d67cc64c344ab95e02
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53924507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62547775"
 ---
 # <a name="how-to-specify-an-application-icon-visual-basic-c"></a>如何：指定应用程序图标（Visual Basic、C#）
 

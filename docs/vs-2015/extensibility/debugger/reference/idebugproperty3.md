@@ -1,14 +1,9 @@
 ---
-title: IDebugProperty3 |Microsoft Docs
-ms.custom: ''
+title: IDebugProperty3 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - IDebugProperty3
 helpviewer_keywords:
@@ -16,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 8f9be68d-4490-4eca-8f6b-8a10ed77e226
 caps.latest.revision: 13
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: e209c41df5b9994d206fb07f47909cf8523364bf
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 479827cc83486d6bb9c68d0749b8870cd6c41861
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51817277"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65694765"
 ---
 # <a name="idebugproperty3"></a>IDebugProperty3
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 此接口提供以下支持：  
   
--   正在检索任意长度的字符串与属性关联。  
+- 正在检索任意长度的字符串与属性关联。  
   
--   将与属性关联的唯一 ID。  
+- 将与属性关联的唯一 ID。  
   
--   正在检索的属性的自定义查看器的列表。  
+- 正在检索的属性的自定义查看器的列表。  
   
--   设置属性的值与报告产生的任何错误的功能  
+- 设置属性的值与报告产生的任何错误的功能  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +42,7 @@ IDebugProperty3 : IDebugProperty2
  调试引擎 (DE) 实现此接口上实现的相同对象[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)长字符串、 属性 Id 和自定义查看器提供支持。  
   
 ## <a name="notes-for-callers"></a>调用方的说明  
- 调用[QueryInterface](http://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3)上`IDebugProperty2`接口，以获得此接口。  
+ 调用[QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3)上`IDebugProperty2`接口，以获得此接口。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法  
  除了继承的方法之外`IDebugProperty2`，则`IDebugProperty3`接口公开以下方法。  
@@ -68,12 +63,11 @@ IDebugProperty3 : IDebugProperty2
 ## <a name="requirements"></a>要求  
  标头： msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间:Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>请参阅  
  [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [IDebugCustomViewer](../../../extensibility/debugger/reference/idebugcustomviewer.md)
-

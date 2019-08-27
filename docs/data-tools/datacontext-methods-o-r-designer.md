@@ -5,16 +5,15 @@ ms.topic: conceptual
 ms.assetid: c149f4e5-3b61-4c33-892e-3e26d47f3eeb
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 2279e938c9b2367ea917da8e3ec89196e39eaa27
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: 83ca0059e576683571435764914bf0087eded2fa
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53880255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62567121"
 ---
 # <a name="datacontext-methods-or-designer"></a>DataContext 方法（O/R 设计器）
 
@@ -24,7 +23,7 @@ ms.locfileid: "53880255"
 
 ## <a name="methods-pane"></a>方法窗格
 
-<xref:System.Data.Linq.DataContext> 将映射到存储的过程和函数的方法显示在**方法**窗格**O/R 设计器**。 “方法”窗格位于“实体”窗格（主设计图面）的旁边。 **方法**窗格列出了所有<xref:System.Data.Linq.DataContext>创建的使用方法**O/R 设计器**。 默认情况下**方法**窗格为空; 将存储过程或函数从**服务器资源管理器**或**数据库资源管理器**拖到**O/R 设计器**来创建<xref:System.Data.Linq.DataContext>方法并填充**方法**窗格。 有关更多信息，请参见[如何：创建映射到存储过程和函数的 DataContext 方法（O/R 设计器）](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)。
+<xref:System.Data.Linq.DataContext> 将映射到存储的过程和函数的方法显示在**方法**窗格**O/R 设计器**。 “方法”窗格位于“实体”窗格（主设计图面）的旁边。 **方法**窗格列出了所有<xref:System.Data.Linq.DataContext>创建的使用方法**O/R 设计器**。 默认情况下**方法**窗格为空; 将存储过程或函数从**服务器资源管理器**或**数据库资源管理器**拖到**O/R 设计器**来创建<xref:System.Data.Linq.DataContext>方法并填充**方法**窗格。 有关详细信息，请参阅[如何：创建映射到存储过程和函数的 DataContext 方法（O/R 设计器）](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)。
 
 > [!NOTE]
 > 打开和关闭方法窗格中右键单击**O/R 设计器**，然后单击**隐藏方法窗格**或**显示方法窗格**，或使用键盘快捷方式**CTRL**+**1**。
@@ -35,18 +34,18 @@ DataContext 方法指的是那些映射到数据库中的存储过程和函数�
 
 - 返回一个或多个结果集的 <xref:System.Data.Linq.DataContext> 方法：
 
-   如果应用程序只需运行数据库中的存储过程和函数并返回结果，可创建这种 <xref:System.Data.Linq.DataContext> 方法。 有关更多信息，请参见[如何：创建映射到存储的过程和函数 （O/R 设计器） 的 DataContext 方法](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)，System.Data.Linq.ISingleResult\<T >，和<xref:System.Data.Linq.IMultipleResults>。
+   如果应用程序只需运行数据库中的存储过程和函数并返回结果，可创建这种 <xref:System.Data.Linq.DataContext> 方法。 有关详细信息，请参阅[如何：创建映射到存储的过程和函数 （O/R 设计器） 的 DataContext 方法](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)，System.Data.Linq.ISingleResult\<T >，和<xref:System.Data.Linq.IMultipleResults>。
 
 - 不返回结果集的 <xref:System.Data.Linq.DataContext> 方法，例如：对特定实体类执行插入、更新和删除操作。
 
-   如果应用程序需要运行存储过程而不是使用默认 <xref:System.Data.Linq.DataContext> 行为来保存实体类和数据库之间修改的数据，可创建这种 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 方法。 有关更多信息，请参见[如何：分配存储过程以便执行更新、插入和删除操作（O/R 设计器）](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)。
+   如果应用程序需要运行存储过程而不是使用默认 <xref:System.Data.Linq.DataContext> 行为来保存实体类和数据库之间修改的数据，可创建这种 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 方法。 有关详细信息，请参阅[如何：分配存储过程以便执行更新、插入和删除操作（O/R 设计器）](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)。
 
 ## <a name="return-types-of-datacontext-methods"></a>DataContext 方法的返回类型
 
 当您将存储的过程和函数从**服务器资源管理器**或**数据库资源管理器**拖到**O/R 设计器**，生成的返回类型<xref:System.Data.Linq.DataContext>方法不同，具体取决于您在何处放置项。 删除现有实体类上直接项创建<xref:System.Data.Linq.DataContext>实体类的返回类型具有方法; 删除项的空白区域**O/R 设计器**（在任一窗格） 创建<xref:System.Data.Linq.DataContext>方法返回自动生成的类型。 自动生成的类型有匹配的存储的过程或函数名称和属性映射到存储的过程或函数返回的字段的名称。
 
 > [!NOTE]
-> 在将 <xref:System.Data.Linq.DataContext> 方法添加到方法窗格后可以更改该方法的返回类型。 若要检查或更改 <xref:System.Data.Linq.DataContext> 方法的返回类型，请选中该方法并在“属性”窗口中检查“返回类型”属性。 有关更多信息，请参见[如何：更改 DataContext 方法的返回类型（O/R 设计器）](../data-tools/how-to-change-the-return-type-of-a-datacontext-method-o-r-designer.md)。
+> 在将 <xref:System.Data.Linq.DataContext> 方法添加到方法窗格后可以更改该方法的返回类型。 若要检查或更改 <xref:System.Data.Linq.DataContext> 方法的返回类型，请选中该方法并在“属性”窗口中检查“返回类型”属性。 有关详细信息，请参阅[如何：更改 DataContext 方法的返回类型（O/R 设计器）](../data-tools/how-to-change-the-return-type-of-a-datacontext-method-o-r-designer.md)。
 
 从数据库到 O/R 设计器图面上拖动的对象自动进行命名，基于数据库中对象的名称。 如果您多次拖动同一个对象，到区别名称的新名称的末尾添加一个数字。 如果数据库对象名称包含空格或 Visual Basic 或 C# 中不支持的字符，将使用下划线替代空格或无效字符。
 

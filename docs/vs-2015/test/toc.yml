@@ -1,0 +1,172 @@
+- name: 提高代码质量
+  items:
+    - name: 单元测试代码
+      items:
+        - name: 单元测试代码
+          href: unit-test-your-code.md
+        - name: 单元测试基础
+          href: unit-test-basics.md
+        - name: 创建单元测试项目
+          href: create-a-unit-test-project.md
+        - name: 使用 IntelliTest 为你的代码生成单元测试
+          href: generate-unit-tests-for-your-code-with-intellitest.md
+        - name: 安装第三方单元测试框架
+          href: install-third-party-unit-test-frameworks.md
+        - name: 升级 Visual Studio 2010 单元测试项目
+          href: upgrade-visual-studio-2010-unit-test-projects.md
+        - name: 使用测试资源管理器运行单元测试
+          items:
+            - name: 使用测试资源管理器运行单元测试
+              href: run-unit-tests-with-test-explorer.md
+            - name: 将单元测试作为 64 位进程运行
+              href: run-a-unit-test-as-a-64-bit-process.md
+            - name: 为 Windows 应用商店应用创建和运行单元测试
+              href: walkthrough-creating-and-running-unit-tests-for-windows-store-apps.md
+        - name: 使用 .runsettings 文件配置单元测试
+          href: configure-unit-tests-by-using-a-dot-runsettings-file.md
+        - name: 用 Microsoft 适用于托管代码的单元测试框架编写 .NET Framework 的单元测试
+          items:
+            - name: 用 Microsoft 适用于托管代码的单元测试框架编写 .NET Framework 的单元测试
+              href: writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md
+            - name: 创建并运行托管代码的单元测试
+              href: walkthrough-creating-and-running-unit-tests-for-managed-code.md
+            - name: 通过测试资源管理器进行测试驱动开发
+              href: quick-start-test-driven-development-with-test-explorer.md
+            - name: 在单元测试中使用 Microsoft.VisualStudio.TestTools.UnitTesting 成员
+              href: using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md
+            - name: 使用 Assert 类
+              href: using-the-assert-classes.md
+            - name: 用 Microsoft Fakes 隔离测试代码
+              items:
+                - name: 用 Microsoft Fakes 隔离测试代码
+                  href: isolating-code-under-test-with-microsoft-fakes.md
+                - name: 使用存根针对单元测试隔离应用程序的各个部分
+                  href: using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md
+                - name: 使用填充码针对单元测试将应用程序与程序集隔离
+                  href: using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md
+                - name: Microsoft Fakes 中的代码生成、编译和命名约定
+                  href: code-generation-compilation-and-naming-conventions-in-microsoft-fakes.md
+            - name: 创建数据驱动的单元测试
+              items:
+                - name: 创建数据驱动的单元测试
+                  href: how-to-create-a-data-driven-unit-test.md
+                - name: 使用配置文件定义数据源
+                  href: walkthrough-using-a-configuration-file-to-define-a-data-source.md
+            - name: 泛型方法的单元测试
+              href: unit-tests-for-generic-methods.md
+            - name: 面向 .NET 的早期版本
+              href: how-to-configure-unit-tests-to-target-an-earlier-version-of-the-dotnet-framework.md
+            - name: 用于创建单元测试的示例项目
+              href: sample-project-for-creating-unit-tests.md
+        - name: 用 Microsoft 适用于 C++ 的单元测试框架编写 C/C++ 单元测试
+          items:
+            - name: 用 Microsoft 适用于 C++ 的单元测试框架编写 C/C++ 单元测试
+              href: writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp.md
+            - name: 向现有的 C++ 应用程序添加单元测试
+              href: unit-testing-existing-cpp-applications-with-test-explorer.md
+            - name: 使用 Microsoft.VisualStudio.TestTools.CppUnitTestFramework
+              href: using-microsoft-visualstudio-testtools-cppunittestframework.md
+        - name: 使用代码覆盖率确定所测试的代码量
+          items:
+            - name: 使用代码覆盖率确定所测试的代码量
+              href: using-code-coverage-to-determine-how-much-code-is-being-tested.md
+            - name: 自定义代码覆盖率分析
+              href: customizing-code-coverage-analysis.md
+            - name: 在生成验证测试中分析代码覆盖率
+              href: analyzing-code-coverage-in-build-verification-tests.md
+            - name: 代码覆盖率疑难解答
+              href: troubleshooting-code-coverage.md
+        - name: 使用模拟器分离 Sharepoint 2010 单元测试
+          href: using-emulators-to-isolate-unit-tests-for-sharepoint-2010-applications.md
+    - name: 使用 UI 自动化来测试代码
+      items:
+        - name: 使用 UI 自动化来测试代码
+          href: use-ui-automation-to-test-your-code.md
+        - name: 创建、编辑和维护已编码 UI 测试
+          href: walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md
+        - name: 使用编码的 UI 测试来测试 Windows UWP 和应用商店 8.1 应用
+          href: test-windows-store-8-1-apps-with-coded-ui-tests.md
+        - name: 使用编码的 UI 测试来测试 Windows UWP 和 Phone 8.1 应用
+          href: test-windows-phone-8-1-apps-with-coded-ui-tests.md
+        - name: 为 Windows 应用商店控件设置唯一的自动化属性以进行测试
+          href: set-a-unique-automation-property-for-windows-store-controls-for-testing.md
+        - name: 在编码的 UI 测试中使用 HTML5 控件
+          href: using-html5-controls-in-coded-ui-tests.md
+        - name: 使用编码的 UI 测试来测试 SharePoint 2010 应用程序
+          href: testing-sharepoint-2010-applications-with-coded-ui-tests.md
+        - name: 创建数据驱动的编码的 UI 测试
+          href: creating-a-data-driven-coded-ui-test.md
+        - name: 播放期间让编码的 UI 测试等待特定事件
+          href: making-coded-ui-tests-wait-for-specific-events-during-playback.md
+        - name: 对编码的 UI 测试使用不同的 Web 浏览器
+          href: using-different-web-browsers-with-coded-ui-tests.md
+        - name: 使用编码的 UI 测试编辑器编辑编码的 UI 测试
+          href: editing-coded-ui-tests-using-the-coded-ui-test-editor.md
+        - name: 使用编码的 UI 测试日志分析编码的 UI 测试
+          href: analyzing-coded-ui-tests-using-coded-ui-test-logs.md
+        - name: 编码的 UI 测试剖析
+          href: anatomy-of-a-coded-ui-test.md
+        - name: 编码的 UI 测试的最佳做法
+          href: best-practices-for-coded-ui-tests.md
+        - name: 使用多个 UI 映射测试大型应用程序
+          href: testing-a-large-application-with-multiple-ui-maps.md
+        - name: 启用控件的编码的 UI 测试
+          href: enable-coded-ui-testing-of-your-controls.md
+        - name: 支持编码的 UI 测试和操作录制的配置和平台
+          href: supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md
+        - name: 扩展编码的 UI 测试和操作录制以支持 Microsoft Excel
+          items:
+            - name: 扩展编码的 UI 测试和操作录制以支持 Microsoft Excel
+              href: extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md
+            - name: 用于编码的 UI 测试的示例 Excel 外接程序
+              href: sample-excel-add-in-for-coded-ui-testing.md
+            - name: 示例 Excel Communicator 接口
+              href: sample-excel-communicator-interface.md
+            - name: 适用于 Excel 的示例编码的 UI 测试扩展
+              items:
+                - name: 适用于 Excel 的示例编码的 UI 测试扩展
+                  href: sample-coded-ui-test-extension-for-excel.md
+                - name: ExtensionPackage 类
+                  href: sample-excel-extension-extensionpackage-class.md
+                - name: TechnologyManager 类
+                  href: sample-excel-extension-technologymanager-class.md
+                - name: PropertyProvider 类
+                  href: sample-excel-extension-propertyprovider-class.md
+                - name: Element 类
+                  href: sample-excel-extension-element-classes.md
+                - name: ActionFilter 类
+                  href: sample-excel-extension-actionfilter-class.md
+        - name: 从 Visual Studio 2010 升级编码的 UI 测试
+          href: upgrading-coded-ui-tests-from-visual-studio-2010.md
+    - name: 分析应用程序质量
+      href: ../code-quality/analyzing-application-quality-by-using-code-analysis-tools.md
+    - name: 质量工具疑难解答
+      items:
+        - name: 质量工具疑难解答
+          href: troubleshooting-quality-tools.md
+        - name: 代码分析问题疑难解答
+          href: troubleshooting-code-analysis-issues.md
+        - name: 代码度量值问题疑难解答
+          href: troubleshooting-code-metrics-issues.md
+    - name: 使用 Visual Studio 测试应用商店应用
+      items:
+        - name: 使用 Visual Studio 测试应用商店应用
+          href: testing-store-apps-with-visual-studio.md
+        - name: 创建并运行单元测试
+          items:
+            - name: 创建并运行单元测试
+              href: create-and-run-unit-tests-for-a-store-app-in-visual-studio.md
+            - name: 对 C++ DLL 进行单元测试
+              href: unit-testing-a-visual-cpp-dll-for-store-apps.md
+            - name: '单元测试 C# 代码'
+              href: unit-testing-visual-csharp-code-in-a-store-app.md
+            - name: 在测试资源管理器中运行单元测试
+              href: run-unit-tests-for-store-apps-in-visual-studio.md
+        - name: 使用静态代码分析来分析代码质量
+          items:
+            - name: 使用静态代码分析来分析代码质量
+              href: analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md
+            - name: '分析 Visual Basic 和 C# 代码质量'
+              href: analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md
+            - name: 分析 C++ 代码质量
+              href: analyze-cpp-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md

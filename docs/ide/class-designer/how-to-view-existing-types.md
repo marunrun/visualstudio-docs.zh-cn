@@ -1,7 +1,6 @@
 ---
 title: 如何：查看现有类型（类设计器）
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.CannotShowBaseType
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: de110a4e-5b51-4a40-9dee-615df4d8f999
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e78e92e5d6f8b21dde2660491a944620ac19069b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ef2882fec8d213c38a2e125d4e3f0c3f22d1d581
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53916661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62975159"
 ---
 # <a name="how-to-view-existing-types-in-class-designer"></a>如何：在类设计器中查看现有类型
 
@@ -32,9 +31,9 @@ ms.locfileid: "53916661"
 
 ## <a name="to-see-types-in-a-project-on-a-class-diagram"></a>在类图上查看项目中的类型
 
-1.  从解决方案资源管理器的项目中，打开现有类图 (.cd) 文件。 如果不存在任何类图，请向项目中添加新类图。 请参阅[操作说明：向项目添加类图](how-to-add-class-diagrams-to-projects.md)。
+1. 从解决方案资源管理器的项目中，打开现有类图 (.cd) 文件。 如果不存在任何类图，请向项目中添加新类图。 请参阅[如何：向项目添加类图](how-to-add-class-diagrams-to-projects.md)。
 
-2.  从解决方案资源管理器的项目中，将源代码文件拖动到类图中。
+2. 从解决方案资源管理器的项目中，将源代码文件拖动到类图中。
 
     > [!NOTE]
     > 如果你的解决方案有共享跨多个应用的代码的项目，则可以仅从以下源将文件或代码拖动到类图：

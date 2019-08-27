@@ -1,23 +1,20 @@
 ---
 title: T4 文本模板编写准则 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 ms.assetid: 04dd3fc4-10e8-488a-bdea-4d615f50f063
 caps.latest.revision: 11
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: c3ed1415572dc00509abf36e7cb84311f95e4805
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: f88666d15293e6900ae99cecdc39853cda8e2f9e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49812735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62546604"
 ---
 # <a name="guidelines-for-writing-t4-text-templates"></a>T4 文本模板编写准则
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -57,7 +54,7 @@ ms.locfileid: "49812735"
   将通用材料移动到包含文件或运行时模板  
   若要避免重复类似的文本块和多个模板中的代码，使用`<#@ include #>`指令。 有关详细信息，请参阅[T4 包含指令](../modeling/t4-include-directive.md)。  
   
-  您可以还生成一个单独的项目中的运行时文本模板，然后从设计时模板调用它们。 若要执行此操作，请使用`<#@ assembly #>`指令以访问单独的项目。 有关示例，请参阅["继承中的文本模板"Gareth Jones 博客中](http://go.microsoft.com/fwlink/?LinkId=208373)。  
+  您可以还生成一个单独的项目中的运行时文本模板，然后从设计时模板调用它们。 若要执行此操作，请使用`<#@ assembly #>`指令以访问单独的项目。
   
   请考虑将较大的代码块移动到单独的程序集。  
   如果有大型代码块和类功能块时，可能会将此代码的一些移动到在一个单独的项目进行编译的方法很有用。 可以使用`<#@ assembly #>`指令来访问模板中的代码。 有关详细信息，请参阅[T4 程序集指令](../modeling/t4-assembly-directive.md)。  
@@ -160,6 +157,3 @@ Team Members:
 ## <a name="see-also"></a>请参阅  
  [使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)   
  [使用 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)
-
-
-

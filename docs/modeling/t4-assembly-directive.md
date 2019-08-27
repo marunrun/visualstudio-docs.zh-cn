@@ -4,16 +4,15 @@ ms.date: 11/04/2016
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 8ed24958d0f8bf214aa701261df3dacea56107c6
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MT
+ms.openlocfilehash: e5dfb9a6489fed2c21d05799e9196c813a224571
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53844270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63422946"
 ---
 # <a name="t4-assembly-directive"></a>T4 程序集指令
 
@@ -22,7 +21,7 @@ ms.locfileid: "53844270"
  编写文本模板的一般概述，请参阅[编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
 
 > [!NOTE]
->  运行时（预处理）文本模板中不需要 `assembly` 指令。 相反，将添加到必需的程序集**引用**的 Visual Studio 项目。
+> 运行时（预处理）文本模板中不需要 `assembly` 指令。 相反，将添加到必需的程序集**引用**的 Visual Studio 项目。
 
 ## <a name="using-the-assembly-directive"></a>使用 Assembly 指令
  该指令的语法如下所示：
@@ -33,7 +32,7 @@ ms.locfileid: "53844270"
 
  程序集名称应为以下各项之一：
 
-- GAC 中程序集的强名称，例如 `System.Xml.dll`。 还可以使用长形式，例如 `name="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"`。 有关详细信息，请参阅<xref:System.Reflection.AssemblyName>。
+- GAC 中程序集的强名称，例如 `System.Xml.dll`。 还可以使用长形式，例如 `name="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"`。 有关详细信息，请参阅 <xref:System.Reflection.AssemblyName>。
 
 - 程序集的绝对路径
 

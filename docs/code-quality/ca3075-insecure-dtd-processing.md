@@ -1,20 +1,19 @@
 ---
 title: CA3075:不安全的 DTD 处理
-ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
+ms.date: 03/18/2019
 ms.topic: reference
 ms.assetid: 65798d66-7a30-4359-b064-61a8660c1eed
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cb8d3cf4a9a05710fc5f1d338d0ba134bce8417d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 6de817e3aaecbdd1c89cc2174e91126ea39d99d7
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53861729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62541111"
 ---
 # <a name="ca3075-insecure-dtd-processing"></a>CA3075:不安全的 DTD 处理
 
@@ -31,7 +30,7 @@ ms.locfileid: "53861729"
 
 ## <a name="rule-description"></a>规则说明
 
-XML 分析器可以通过两种方式确定文档有效性， *文档类型定义 (DTD)* 是其中一种（根据  [万维网联合会 (W3C) 可扩展标记语言 (XML) 1.0](http://www.w3.org/TR/2008/REC-xml-20081126/)的定义）。 此规则查找接受不受信任数据的某些属性和实例以提醒开发人员有关的潜在 [Information Disclosure](/dotnet/framework/wcf/feature-details/information-disclosure) 威胁，该威胁可能会导致 [拒绝服务 (DoS)](/dotnet/framework/wcf/feature-details/denial-of-service) 攻击。 在以下情况下触发此规则：
+XML 分析器可以通过两种方式确定文档有效性， *文档类型定义 (DTD)* 是其中一种（根据  [万维网联合会 (W3C) 可扩展标记语言 (XML) 1.0](http://www.w3.org/TR/2008/REC-xml-20081126/)的定义）。 此规则查找某些属性和实例中接受不受信任的数据以提醒开发人员有关的潜在[信息泄露](/dotnet/framework/wcf/feature-details/information-disclosure)威胁或[拒绝服务 (DoS)](/dotnet/framework/wcf/feature-details/denial-of-service)攻击。 在以下情况下触发此规则：
 
 - 在 <xref:System.Xml.XmlReader> 实例上启用了 DtdProcessing，它使用 <xref:System.Xml.XmlUrlResolver>解析外部 XML 实体。
 
@@ -39,27 +38,27 @@ XML 分析器可以通过两种方式确定文档有效性， *文档类型定�
 
 - <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> 属性设置为分析。
 
-- 使用 <xref:System.Xml.XmlResolver> 而不是 <xref:System.Xml.XmlSecureResolver> 处理不受信任的输入。
+- 不受信任的使用处理输入<xref:System.Xml.XmlResolver>而不是<xref:System.Xml.XmlSecureResolver>。
 
-- XmlReader。<xref:System.Xml.XmlReader.Create%2A> 方法使用了不安全调用<xref:System.Xml.XmlReaderSettings>实例或根本没有实例。
+- <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType>方法调用使用了不安全<xref:System.Xml.XmlReaderSettings>实例或根本没有实例。
 
 - <xref:System.Xml.XmlReader> 使用不安全的默认设置或值创建。
 
-在这些情况下，结果均相同：来自文件系统或来自处理 XML 的计算机的网络共享的文件都将面临攻击，其随后可能会被用作 DoS 向量。
+在每个这种情况下，结果也是相同： 来自任一文件系统或网络共享从 XML 被处理的计算机的内容会公开给攻击者，或 DTD 处理可用作 DoS 向量。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
 - 捕获和处理所有 XmlTextReader 异常正确以避免路径信息泄露。
 
-- 使用 <xref:System.Xml.XmlSecureResolver> 来限制 XmlTextReader 可以访问的资源。
+- 使用<xref:System.Xml.XmlSecureResolver>来限制 XmlTextReader 可以访问的资源。
 
 - 通过将 <xref:System.Xml.XmlReader> 属性设置为 <xref:System.Xml.XmlResolver> null **，不允许**打开任何外部资源。
 
-- 确保从可信的源分配 <xref:System.Data.DataViewManager.DataViewSettingCollectionString%2A> 的 <xref:System.Data.DataViewManager> 属性。
+- 确保<xref:System.Data.DataViewManager.DataViewSettingCollectionString%2A?displayProperty=nameWithType>从受信任的源分配给属性。
 
 **.NET 3.5 及更早版本**
 
-- 如果正在处理不可信的源，请通过将 <xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A> 属性设置为 **true** 禁用 DTD 处理。
+- 禁用 DTD 处理，如果正在通过设置处理不可信的源<xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A>属性设置为**true**。
 
 - XmlTextReader 类具有完全信任继承要求。
 
@@ -205,7 +204,7 @@ public static void TestMethod(string xml)
 {
     XmlDocument doc = new XmlDocument() { XmlResolver = null };
     System.IO.StringReader sreader = new System.IO.StringReader(xml);
-    XmlTextReader reader = new XmlTextReader(sreader) { DtdProcessing = DtdProcessing.Prohibit };
+    XmlReader reader = XmlReader.Create(sreader, new XmlReaderSettings() { XmlResolver = null });
     doc.Load(reader);
 }
 ```
@@ -244,7 +243,7 @@ namespace TestNamespace
         public void TestMethod(Stream stream)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(UseXmlReaderForDeserialize));
-            XmlTextReader reader = new XmlTextReader(stream) { DtdProcessing = DtdProcessing.Prohibit } ;
+            XmlReader reader = XmlReader.Create(stream, new XmlReaderSettings() { XmlResolver = null });
             serializer.Deserialize(reader );
         }
     }
@@ -281,7 +280,7 @@ namespace TestNamespace
     {
         public void TestMethod(string path)
         {
-            XmlTextReader reader = new XmlTextReader(path) { DtdProcessing = DtdProcessing.Prohibit };
+            XmlReader reader = XmlReader.Create(path, new XmlReaderSettings() { XmlResolver = null });
             XPathDocument doc = new XPathDocument(reader);
         }
     }
@@ -317,22 +316,6 @@ namespace TestNamespace
 ```
 
 ### <a name="violations"></a>冲突
-
-```csharp
-using System.Xml;
-
-namespace TestNamespace
-{
-    public class TestClass
-    {
-        public void TestMethod(string path)
-        {
-            XmlReaderSettings settings = new XmlReaderSettings(){ DtdProcessing = DtdProcessing.Parse };
-            XmlReader reader = XmlReader.Create(path, settings); // warn
-        }
-    }
-}
-```
 
 ```csharp
 using System.Xml;
@@ -379,7 +362,7 @@ namespace TestNamespace
     {
         public void TestMethod(string path)
         {
-            XmlReaderSettings settings = new XmlReaderSettings(){ DtdProcessing = DtdProcessing.Prohibit };
+            XmlReaderSettings settings = new XmlReaderSettings() { XmlResolver = null };
             XmlReader reader = XmlReader.Create(path, settings);
         }
     }

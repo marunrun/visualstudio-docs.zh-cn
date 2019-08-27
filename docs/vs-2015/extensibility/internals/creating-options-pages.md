@@ -1,27 +1,22 @@
 ---
 title: 创建选项页 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - managed package framework, creating Tools Options pages
 - Tools Options pages [Visual Studio SDK], creating using managed package framework
 ms.assetid: 1bf11fec-dece-4943-8053-6de1483c43eb
 caps.latest.revision: 30
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 076c4934fe4f81bd56edc70356ecdcc1101456e8
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 8c2b993a6c6947adfa3b01f2947b992b23236b8f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51760331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68196943"
 ---
 # <a name="creating-options-pages"></a>创建选项页
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -32,9 +27,9 @@ ms.locfileid: "51760331"
   
  因为环境要实例化实现特定的对象**工具选项**页面时 IDE 将显示该特定页：  
   
--   一个**工具选项**应实现页，在其自己的对象，而不是实现 VSPackage 的对象。  
+- 一个**工具选项**应实现页，在其自己的对象，而不是实现 VSPackage 的对象。  
   
--   一个对象不能实现多个**工具选项**页。  
+- 一个对象不能实现多个**工具选项**页。  
   
 ## <a name="registering-as-a-tools-options-page-provider"></a>注册为工具选项页上提供程序  
  通过的 VSPackage 支持的用户配置**工具选项**页面指示的对象提供这些**工具选项**通过应用的实例的页面<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>应用于<xref:Microsoft.VisualStudio.Shell.Package>实现。  
@@ -92,4 +87,3 @@ ms.locfileid: "51760331"
 ## <a name="see-also"></a>请参阅  
  [扩展用户设置和选项](../../extensibility/extending-user-settings-and-options.md)   
  [选项页的自动化支持](../../extensibility/internals/automation-support-for-options-pages.md)
-

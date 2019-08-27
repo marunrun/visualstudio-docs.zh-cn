@@ -2,22 +2,21 @@
 title: 工作流设计器-InvokeDelegate
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - InvokeDelegate Designer
 - System.Activities.Statements.InvokeDelegate.UI
 ms.assetid: 289a7498-5127-453f-beb5-05f05b80d26f
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: fd490d15d5dc1760222446a1ae507d0e764c73f4
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 511d73ea2992887f31bc8750cc9ba32934bddd91
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53870529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62537083"
 ---
 # <a name="invokedelegate"></a>InvokeDelegate
 
@@ -39,8 +38,8 @@ ms.locfileid: "53870529"
 |-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.InvokeDelegate> 活动的友好名称。 默认值为 InvokeDelegate。<br /><br /> 尽管<xref:System.Activities.Activity.DisplayName%2A>并不严格要求，最好是使用其中一个。|
 |<xref:System.Activities.Statements.InvokeDelegate.Delegate%2A>|True|要在执行活动时调用的 <xref:System.Activities.ActivityDelegate> 的名称。 此属性可编辑设计器图面，并且是必需的。|
-|<xref:System.Activities.Statements.InvokeDelegate.DelegateArguments%2A>|False|调用委托的自变量集合。 键是参数对象的名称上<xref:System.Activities.ActivityDelegate>，而值是其表达式进行计算并分配到相应的参数对象的参数。 若要显示**DelegateArguments**对话框中，你可以设置此属性，请单击中的省略号按钮**DelegateArguments**属性网格的字段。 单击**创建自变量**字段以添加自变量。|
+|<xref:System.Activities.Statements.InvokeDelegate.DelegateArguments%2A>|False|调用委托的参数集合。 键是参数对象的名称上<xref:System.Activities.ActivityDelegate>，而值是其表达式进行计算并分配到相应的参数对象的参数。 若要显示**DelegateArguments**对话框中，你可以设置此属性，请单击中的省略号按钮**DelegateArguments**属性网格的字段。 单击**创建自变量**字段以添加自变量。|
 
 ## <a name="see-also"></a>请参阅
 
-- [如何：定义和使用工作流设计器中的活动委托](../workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer.md)
+- [如何：在工作流设计器中定义和使用活动委托](../workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer.md)

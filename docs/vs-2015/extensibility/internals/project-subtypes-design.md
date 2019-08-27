@@ -1,26 +1,21 @@
 ---
 title: 项目子设计 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project subtypes, design
 ms.assetid: 405488bb-1362-40ed-b0f1-04a57fc98c56
 caps.latest.revision: 33
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 96ab44df6512b4288cf01f4c1f99d435a9c24bd5
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 0e7cd96324e5a2bbd6c9b0acf4125bc0450cfd06
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51806121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62430521"
 ---
 # <a name="project-subtypes-design"></a>项目子类型设计
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -29,11 +24,11 @@ ms.locfileid: "51806121"
   
  以下主题详细说明的基本设计和实现项目子类型：  
   
--   项目子类型设计。  
+- 项目子类型设计。  
   
--   多级别聚合。  
+- 多级别聚合。  
   
--   支持接口。  
+- 支持接口。  
   
 ## <a name="project-subtype-design"></a>项目子类型设计  
  项目子类型的初始化通过聚合主<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>和<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject>对象。 这种聚合将使项目子类型重写或增强的大多数功能的基础项目。 项目子类型获取处理所使用的属性的第一个机会<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>，使用的命令<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>并<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>，和项目项管理使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>。 此外可以扩展项目子类型：  
@@ -76,11 +71,11 @@ ms.locfileid: "51806121"
 ## <a name="multi-level-aggregation"></a>多级别的聚合  
  包装较低级别的项目子类型的项目子类型实现需要以协作方式进行编程以允许内部项目子类型，才能正常工作。 一系列编程职责包括：  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>包装的内部的子类型的项目子类型的实现必须委托给<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>内部项目子类型的两个实现<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Load%2A>和<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Save%2A>方法。  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>包装的内部的子类型的项目子类型的实现必须委托给<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>内部项目子类型的两个实现<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Load%2A>和<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Save%2A>方法。  
   
--   <xref:EnvDTE80.IInternalExtenderProvider>包装项目子类型的实现必须委托给其内部项目子类型的。 具体而言，实现<xref:EnvDTE80.IInternalExtenderProvider.GetExtenderNames%2A>需要从内部项目子类型获取名称的字符串，然后执行连接它想要添加为扩展程序的字符串。  
+- <xref:EnvDTE80.IInternalExtenderProvider>包装项目子类型的实现必须委托给其内部项目子类型的。 具体而言，实现<xref:EnvDTE80.IInternalExtenderProvider.GetExtenderNames%2A>需要从内部项目子类型获取名称的字符串，然后执行连接它想要添加为扩展程序的字符串。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider>包装项目子类型的实现必须实例化<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg>对象其内部项目子类型，然后将其保留为私有委托，因为仅基项目的项目配置对象直接知道包装器项目子类型配置对象存在。 外部项目子类型可以最初选择想要直接处理配置接口，然后委托给内部项目子类型实现的其余部分<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg.get_CfgType%2A>。  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider>包装项目子类型的实现必须实例化<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg>对象其内部项目子类型，然后将其保留为私有委托，因为仅基项目的项目配置对象直接知道包装器项目子类型配置对象存在。 外部项目子类型可以最初选择想要直接处理配置接口，然后委托给内部项目子类型实现的其余部分<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg.get_CfgType%2A>。  
   
 ## <a name="supporting-interfaces"></a>支持接口  
  基础项目调用委托给支持项目子类型，通过添加接口来扩展其实现的各个方面。 这包括扩展项目配置对象和各种属性浏览器对象。 这些接口通过调用检索`QueryInterface`上`punkOuter`(指向的`IUnknown`) 的最外层项目子类型聚合器。  
@@ -97,4 +92,3 @@ ms.locfileid: "51806121"
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID>   
  <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID2>
-

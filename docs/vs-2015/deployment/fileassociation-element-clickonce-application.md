@@ -1,14 +1,9 @@
 ---
 title: '&lt;fileAssociation&gt;元素 （ClickOnce 应用程序） |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,13 +15,13 @@ ms.assetid: 8f951b4f-54f9-412e-a9e5-af4e379fcf08
 caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: e827f0829cfe0436f491196b7f1dab99ac87c4fc
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 4b31ac34627b244cb61b6fdb5c6ca214675ec045
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49234450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68150844"
 ---
 # <a name="ltfileassociationgt-element-clickonce-application"></a>&lt;fileAssociation&gt;元素 （ClickOnce 应用程序）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -50,10 +45,10 @@ ms.locfileid: "49234450"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`extension`|必须的。 要与应用程序相关联的文件扩展名。|  
-|`description`|必须的。 使用 shell 的文件类型的说明。|  
-|`progid`|必须的。 唯一标识文件类型的名称。|  
-|`defaultIcon`|必须的。 指定要使用此扩展名的文件的图标。 必须通过使用指定的图标文件[\<文件 > 元素](../deployment/file-element-clickonce-application.md)内[\<程序集 > 元素](../deployment/assembly-element-clickonce-application.md)，其中包含此元素。|  
+|`extension`|必需。 要与应用程序相关联的文件扩展名。|  
+|`description`|必需。 使用 shell 的文件类型的说明。|  
+|`progid`|必需。 唯一标识文件类型的名称。|  
+|`defaultIcon`|必需。 指定要使用此扩展名的文件的图标。 必须通过使用指定的图标文件[\<文件 > 元素](../deployment/file-element-clickonce-application.md)内[\<程序集 > 元素](../deployment/assembly-element-clickonce-application.md)，其中包含此元素。|  
   
 ## <a name="remarks"></a>备注  
  此元素必须包含的 XML 命名空间引用"urn： 架构-microsoft-com:clickonce.v1"。 如果`<fileAssociation>`元素，它必须出现后`<application>`元素中其父级[\<程序集 > 元素](../deployment/assembly-element-clickonce-application.md)。  
@@ -88,6 +83,3 @@ ms.locfileid: "49234450"
   
 ## <a name="see-also"></a>请参阅  
  [ndptecclick](../deployment/clickonce-application-manifest.md)
-
-
-

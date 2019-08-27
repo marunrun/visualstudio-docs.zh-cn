@@ -1,8 +1,7 @@
 ---
-title: IActiveScriptProfilerControl2::PrepareProfilerStop |Microsoft Docs
+title: IActiveScriptProfilerControl2::PrepareProfilerStop | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,12 +13,12 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 086ec8b4a126c65162638afde4d8081269757e1c
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: 11a32f36ec6eddcc06faa77e093f19e8df503fa4
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54089513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62968758"
 ---
 # <a name="iactivescriptprofilercontrol2prepareprofilerstop"></a>IActiveScriptProfilerControl2::PrepareProfilerStop
 通知探查器要停止分析在所有适用的脚本引擎。 通过使用此方法，您可以获得完整的调用堆栈，如果[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]时停止分析正在运行。  

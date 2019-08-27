@@ -1,5 +1,5 @@
 ---
-title: 'Idiaenumlinenumbers:: Reset |Microsoft Docs'
+title: IDiaEnumLineNumbers::Reset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -9,27 +9,27 @@ helpviewer_keywords:
 ms.assetid: d50e73aa-11a1-4813-ba23-d5861090ee12
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c73fe81631938f70f42d03494f6c98dc59ff10f5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: fb1ed8a531e7302bd184490b8017679712ef131a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53963170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833529"
 ---
 # <a name="idiaenumlinenumbersreset"></a>IDiaEnumLineNumbers::Reset
-将枚举序列重置到开头。  
-  
-## <a name="syntax"></a>语法  
-  
-```C++  
-HRESULT Reset();  
-```  
-  
-## <a name="return-value"></a>返回值  
- 返回 `S_OK`。  
-  
-## <a name="see-also"></a>请参阅  
- [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)
+将枚举序列重置到开头。
+
+## <a name="syntax"></a>语法
+
+```C++
+HRESULT Reset();
+```
+
+## <a name="return-value"></a>返回值
+ 返回 `S_OK`。
+
+## <a name="see-also"></a>请参阅
+- [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)

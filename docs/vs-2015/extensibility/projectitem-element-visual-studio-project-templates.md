@@ -1,14 +1,9 @@
 ---
 title: ProjectItem 元素 （Visual Studio 项目模板） |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#ProjectItem
 helpviewer_keywords:
@@ -17,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 82879fbe-7756-42cd-9a07-c10edf5b4673
 caps.latest.revision: 19
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: bca26cba66169758aa882535c07846cfa451d172
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 84fb371460bc697660e176ca9df4c984d2b234bf
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51737065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63438375"
 ---
 # <a name="projectitem-element-visual-studio-project-templates"></a>ProjectItem 元素（Visual Studio 项目模板）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,12 +26,12 @@ ms.locfileid: "51737065"
 指定项目模板中包含的文件。  
   
 > [!NOTE]
->  `ProjectItem`元素接受不同的属性，具体取决于该模板是针对某个项目或项。 本主题介绍了`ProjectItem`项目模板的元素。 有关的说明`ProjectItem`元素的项模板，请参阅[ProjectItem 元素 （Visual Studio 项模板）](../extensibility/projectitem-element-visual-studio-item-templates.md)。  
+> `ProjectItem`元素接受不同的属性，具体取决于该模板是针对某个项目或项。 本主题介绍了`ProjectItem`项目模板的元素。 有关的说明`ProjectItem`元素的项模板，请参阅[ProjectItem 元素 （Visual Studio 项模板）](../extensibility/projectitem-element-visual-studio-item-templates.md)。  
   
- \<VSTemplate >  
- \<TemplateContent >  
+ \<VSTemplate>  
+ \<TemplateContent>  
  \<Project>  
- \<ProjectItem >  
+ \<ProjectItem>  
   
 ## <a name="syntax"></a>语法  
   
@@ -95,21 +90,21 @@ ms.locfileid: "51737065"
   
 ### <a name="to-rename-files-with-parameters"></a>若要使用的参数重命名文件  
   
-1.  在.vstemplate 文件中使用以下 XML:  
+1. 在.vstemplate 文件中使用以下 XML:  
   
     ```  
     <ProjectItem TargetFileName="$safeprojectname$.vb">MyFile.vb</ProjectItem>  
     ```  
   
-2.  打开项目文件 (对于.vbproj[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]项目) 中的文本编辑器或[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。  
+2. 打开项目文件 (对于.vbproj[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]项目) 中的文本编辑器或[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。  
   
-3.  看起来类似于下面的 XML 项目文件中找到的行：  
+3. 看起来类似于下面的 XML 项目文件中找到的行：  
   
     ```  
     <Compile Include="MyFile.vb">  
     ```  
   
-4.  代码行替换为以下 XML:  
+4. 代码行替换为以下 XML:  
   
     ```  
     <Compile Include="$safeprojectname$.vb">  
@@ -149,4 +144,3 @@ ms.locfileid: "51737065"
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)   
  [模板参数](../ide/template-parameters.md)   
  [ProjectItem 元素（Visual Studio 项模板）](../extensibility/projectitem-element-visual-studio-item-templates.md)
-

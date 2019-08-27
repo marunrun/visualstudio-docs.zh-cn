@@ -1,12 +1,9 @@
 ---
-title: UML 组件图： 准则 |Microsoft Docs
-ms.custom: ''
+title: UML 组件图：指导原则 |Microsoft Docs
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - UML diagrams, component
 - diagrams - modeling, component
@@ -17,13 +14,13 @@ ms.assetid: 6c1bdd60-369e-477e-83ed-7f6fe75c9f0b
 caps.latest.revision: 37
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 7400bac1fa6dcbf086718e54d18288b8ab80f1b0
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: ef8a152293ef5e1cf9137540abb5590eb43c057a
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51801457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63424448"
 ---
 # <a name="uml-component-diagrams-guidelines"></a>UML 组件图：准则
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,37 +37,37 @@ ms.locfileid: "51801457"
   
 - 考虑与主要块有关的设计，可帮助开发团队理解现有设计并创建新设计。  
   
-- 认为系统是具有定义完善的提供接口和所需接口的组件集合，从而可以改进组件之间的分离。 这反过来又使设计更易于理解，且在要求发生更改时可以更容易地做出相应更改。  
+- 认为系统是具有定义完善的提供接口和所需接口的组件集合，从而可以改进组件之间的分离。 这反过来又使设计更易于理解，且在需求发生更改时可以更容易地做出相应更改。  
   
   无论设计已在使用或将要使用的语言或平台如何，您都可以使用组件图来表示您的设计。  
   
-##  <a name="OtherDiagrams"></a> 与其他关系图的关系  
+## <a name="OtherDiagrams"></a> 与其他关系图的关系  
  您以将组件图与其他关系图结合使用。  
   
 |其他关系图|帮助您讨论和传达设计的这些方面|  
 |-------------------|--------------------------------------------------------------------|  
-|UML 序列图|-系统的组件之间的交互<br />交互和组件中的部件之间。<br /><br /> 有关详细信息，请参阅[UML 序列图： 准则](../modeling/uml-sequence-diagrams-guidelines.md)。|  
-|UML 类图|的组件接口。 类图可让你详细了解接口的方法。<br />-通过组件的接口中参数发送的数据。<br /><br /> 有关详细信息，请参阅[UML 类图： 准则](../modeling/uml-class-diagrams-guidelines.md)。|  
-|活动图|-响应传入消息中某个组件的执行的内部处理。<br /><br /> 有关详细信息，请参阅[UML 活动图： 准则](../modeling/uml-activity-diagrams-guidelines.md)。|  
-|层关系图|的您的组件逻辑体系结构层。<br /><br /> 有关详细信息，请参阅[层关系图： 参考](../modeling/layer-diagrams-reference.md)。|  
+|UML 序列图|-系统的组件之间的交互<br />交互和组件中的部件之间。<br /><br /> 有关详细信息，请参阅[UML 序列图：指导原则](../modeling/uml-sequence-diagrams-guidelines.md)。|  
+|UML 类图|的组件接口。 类图可让你详细了解接口的方法。<br />-通过组件的接口中参数发送的数据。<br /><br /> 有关详细信息，请参阅 [UML 类图：指导原则](../modeling/uml-class-diagrams-guidelines.md)。|  
+|活动图|-响应传入消息中某个组件的执行的内部处理。<br /><br /> 有关详细信息，请参阅[UML 活动图：指导原则](../modeling/uml-activity-diagrams-guidelines.md)。|  
+|层关系图|的您的组件逻辑体系结构层。<br /><br /> 有关详细信息，请参阅[层关系图：参考](../modeling/layer-diagrams-reference.md)。|  
   
-##  <a name="Basics"></a> 绘制组件图的基本步骤  
- 有关参考信息的元素的组件图，请参阅[UML 组件图： 参考](../modeling/uml-component-diagrams-reference.md)。  
+## <a name="Basics"></a> 绘制组件图的基本步骤  
+ 有关参考信息的元素的组件图，请参阅[UML 组件图：参考](../modeling/uml-component-diagrams-reference.md)。  
   
  有关如何使用组件图设计过程中的详细信息，请参阅[应用程序的体系结构建模](../modeling/model-your-app-s-architecture.md)。  
   
 > [!NOTE]
->  创建任何建模图的详细的步骤所述[编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)。  
+> 创建任何建模图的详细的步骤所述[编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)。  
   
 #### <a name="to-create-a-component-diagram"></a>创建组件图  
   
-1.  上**体系结构**菜单上，单击**新建 UML 或层关系图**。  
+1. 上**体系结构**菜单上，单击**新建 UML 或层关系图**。  
   
-2.  下**模板**，单击**UML 组件图**。  
+2. 下**模板**，单击**UML 组件图**。  
   
-3.  命名该关系图。  
+3. 命名该关系图。  
   
-4.  在中**添加到建模项目**，在解决方案中，选择一个现有建模项目或**创建新的建模项目**，然后单击**确定**...  
+4. 在中**添加到建模项目**，在解决方案中，选择一个现有建模项目或**创建新的建模项目**，然后单击**确定**...  
   
      新的组件图将显示与 UML**组件图**工具箱。 该工具箱中包含所需的元素和关系。  
   
@@ -83,25 +80,25 @@ ms.locfileid: "51801457"
   
 ##### <a name="to-create-components"></a>创建组件  
   
-1.  单击**组件**在工具箱中，然后单击关系图的空白部分。  
+1. 单击**组件**在工具箱中，然后单击关系图的空白部分。  
   
      \- 或 -  
   
      复制并粘贴现有组件。  
   
-    1.  查找现有组件在关系图中或在**UML 模型资源管理器**。  
+    1. 查找现有组件在关系图中或在**UML 模型资源管理器**。  
   
-    2.  右键单击该组件，然后单击**复制**。  
+    2. 右键单击该组件，然后单击**复制**。  
   
-    3.  打开希望在其中显示复制的组件的关系图。  
+    3. 打开希望在其中显示复制的组件的关系图。  
   
-    4.  右键单击关系图的空白部分，然后单击**粘贴**。  
+    4. 右键单击关系图的空白部分，然后单击**粘贴**。  
   
          组件的副本随即以新名称显示。  
   
-2.  单击组件的名称以更改它。  
+2. 单击组件的名称以更改它。  
   
-3.  如果您只想看到组件的标头，请单击 V 形 (5)。  
+3. 如果您只想看到组件的标头，请单击 V 形 (5)。  
   
 ### <a name="showing-the-ports-of-a-component"></a>显示组件的端口  
  一个*端口*(2，3） 表示一组消息或传入或传出组件的操作调用。 组由接口描述，而接口定义端口的类型。 端口可以提供接口也可以需要接口。  
@@ -147,24 +144,24 @@ ms.locfileid: "51801457"
   
 ##### <a name="to-add-a-port-for-an-existing-interface-to-a-component"></a>将现有接口的端口添加到组件  
   
--   查找中的界面**UML 模型资源管理器**，然后将其从拖动到组件。  
+- 查找中的界面**UML 模型资源管理器**，然后将其从拖动到组件。  
   
      或  
   
--   复制引用并将其粘贴到关系图中的接口。  
+- 复制引用并将其粘贴到关系图中的接口。  
   
-    1.  在类图或组件图上，右键单击接口，然后单击**复制**。  
+    1. 在类图或组件图上，右键单击接口，然后单击**复制**。  
   
-    2.  在组件图中，右键单击该组件，然后单击**粘贴引用**。  
+    2. 在组件图中，右键单击该组件，然后单击**粘贴引用**。  
   
          提供的接口随即显示在组件上。 旁边显示了一个操作标记。  
   
         > [!NOTE]
-        >  如果您使用**粘贴**而不是**粘贴引用**，将创建一个具有新名称的新接口。  
+        > 如果您使用**粘贴**而不是**粘贴引用**，将创建一个具有新名称的新接口。  
   
-    3.  如果你想要创建所需的接口，单击该操作标记，然后单击**将转换为所需的接口**。  
+    3. 如果你想要创建所需的接口，单击该操作标记，然后单击**将转换为所需的接口**。  
   
-##  <a name="Parts"></a> 显示组件的内部部件  
+## <a name="Parts"></a> 显示组件的内部部件  
  ![显示内部部件的组件图](../modeling/media/uml-compshowing.png "UML_CompShowing")  
   
  可以将部件 (3) 放置在组件 (1) 中，以显示彼此进行交互的较小组件如何组成该组件。  
@@ -183,9 +180,9 @@ ms.locfileid: "51801457"
   
 #### <a name="to-add-parts-to-a-component"></a>将部件添加到组件  
   
-1.  为您认为是父组件的部件的每个主要功能单元创建一个部件。  
+1. 为您认为是父组件的部件的每个主要功能单元创建一个部件。  
   
-    1.  单击**组件**在工具箱中，然后单击在父组件 (1)。  
+    1. 单击**组件**在工具箱中，然后单击在父组件 (1)。  
   
          新部件 (3) 随即显示在父组件中。  
   
@@ -205,9 +202,9 @@ ms.locfileid: "51801457"
   
          新部件 (3) 随即显示在父组件中。 其类型为所复制的组件。  
   
-    2.  单击新部件的名称以更改它。 您无法更改该部件的类型。  
+    2. 单击新部件的名称以更改它。 您无法更改该部件的类型。  
   
-    3.  可以将提供的接口和所需的接口（4、5）添加到新部件。 单击**提供的接口**或**所需的接口**工具，并单击部件中。  
+    3. 可以将提供的接口和所需的接口（4、5）添加到新部件。 单击**提供的接口**或**所需的接口**工具，并单击部件中。  
   
          \- 或 -  
   
@@ -215,15 +212,15 @@ ms.locfileid: "51801457"
   
          接口随即添加到部件的类型，并显示在部件本身上。 父组件会根据需要调整接口的大小。  
   
-2.  将部件相互连接。  
+2. 将部件相互连接。  
   
-    -   使用**依赖项**工具连接不同部件 (6) 的端口。  
+    - 使用**依赖项**工具连接不同部件 (6) 的端口。  
   
-3.  将部件连接到父组件的端口：  
+3. 将部件连接到父组件的端口：  
   
-    1.  在父组件上创建一个或多个端口 (7)。 单击**所需的接口**或**提供的接口**工具箱，然后单击父组件。  
+    1. 在父组件上创建一个或多个端口 (7)。 单击**所需的接口**或**提供的接口**工具箱，然后单击父组件。  
   
-    2.  将端口委托 (9) 给一个或多个部件。 单击**委派**工具，则父组件上的端口，然后选择上一部分的端口。 可以通过相同方式连接提供接口或需要接口的端口。  
+    2. 将端口委托 (9) 给一个或多个部件。 单击**委派**工具，则父组件上的端口，然后选择上一部分的端口。 可以通过相同方式连接提供接口或需要接口的端口。  
   
 ### <a name="showing-the-parts-of-a-part"></a>显示部件的多个部件  
  将组件分解为多个部件后，可以将每个部件类型分解为其自己的内部部件。  
@@ -232,13 +229,13 @@ ms.locfileid: "51801457"
   
 ##### <a name="to-place-a-parts-type-on-a-diagram"></a>将部件的类型放置到关系图上  
   
-1.  确定部件的类型的完全限定名。  
+1. 确定部件的类型的完全限定名。  
   
      右键单击该部件，然后单击**属性**。  
   
      类型名称将显示在**类型**字段的属性窗口。  
   
-2.  找到部件的类型中**UML 模型资源管理器**。  
+2. 找到部件的类型中**UML 模型资源管理器**。  
   
      单击**视图**，依次指向**其他 Windows**，然后单击**UML 模型资源管理器**。  
   
@@ -248,9 +245,9 @@ ms.locfileid: "51801457"
   
      如果需要，可以在此处更改类型的名称。  
   
-3.  打开或创建另一个组件图。  
+3. 打开或创建另一个组件图。  
   
-4.  从 UML 模型资源管理器中的类型拖动到该关系图上。  
+4. 从 UML 模型资源管理器中的类型拖动到该关系图上。  
   
      类型的视图显示为关系图中的组件。  
   
@@ -258,7 +255,7 @@ ms.locfileid: "51801457"
   
      现在可以向组件中添加部件。  
   
-##  <a name="Designing"></a> 设计组件  
+## <a name="Designing"></a> 设计组件  
   
 ### <a name="describing-how-the-parts-collaborate"></a>介绍部件的协作方式  
  您可以绘制一个序列图，以显示各部件如何协同工作以响应到达父组件的消息。  
@@ -277,23 +274,23 @@ ms.locfileid: "51801457"
   
 ##### <a name="to-draw-a-sequence-diagram-that-shows-collaboration-between-parts"></a>绘制显示各部件间的协作的序列图  
   
-1.  创建新的序列图。  
+1. 创建新的序列图。  
   
-     有关详细信息，请参阅[UML 序列图： 准则](../modeling/uml-sequence-diagrams-guidelines.md)。  
+     有关详细信息，请参阅[UML 序列图：指导原则](../modeling/uml-sequence-diagrams-guidelines.md)。  
   
-2.  为向组件发送消息的外部组件、用户、设备或其他参与者 (1) 创建生命线。  
+2. 为向组件发送消息的外部组件、用户、设备或其他参与者 (1) 创建生命线。  
   
      可以设置**Actor**属性为 true，以指示它是外部的组件正在考虑此生命线。 在生命线上方会出现一个简图。  
   
-3.  为所选参与者向其发送消息的组件的提供的接口 (2) 创建生命线。  
+3. 为所选参与者向其发送消息的组件的提供的接口 (2) 创建生命线。  
   
-4.  为组件的每个部件 (3) 创建生命线。  
+4. 为组件的每个部件 (3) 创建生命线。  
   
-5.  为组件的每个所需的接口 (4) 创建生命线。  
+5. 为组件的每个所需的接口 (4) 创建生命线。  
   
-6.  基于外部参与者 (5) 绘制消息。 显示如何将消息传递给部件以及部件如何协同工作以响应消息。  
+6. 基于外部参与者 (5) 绘制消息。 显示如何将消息传递给部件以及部件如何协同工作以响应消息。  
   
-7.  根据需要，显示发送到所需的接口 (6) 的消息。 不必显示执行消息时的任何详细信息。  
+7. 根据需要，显示发送到所需的接口 (6) 的消息。 不必显示执行消息时的任何详细信息。  
   
 ### <a name="is-the-component-more-than-its-parts"></a>组件是否比其部件要多？  
  在某些情况下，组件只是为部件集合指定的名称。 所有工作都由部件完成，在运行时，没有任何表示组件的代码或其他项目。  
@@ -301,7 +298,7 @@ ms.locfileid: "51801457"
  通过设置可以指示在模型中这**间接实例化**组件的属性。 在这种情况下，组件的所有接口都应位于端口上，且委托给内部部件。  
   
 ### <a name="describing-the-process-inside-each-part"></a>介绍每个部件内的进程  
- 可以使用活动图显示组件处理每个传入消息的方式。 有关详细信息，请参阅[UML 活动图： 准则](../modeling/uml-activity-diagrams-guidelines.md)。  
+ 可以使用活动图显示组件处理每个传入消息的方式。 有关详细信息，请参阅[UML 活动图：指导原则](../modeling/uml-activity-diagrams-guidelines.md)。  
   
  ![带有数据缓冲区的活动图](../modeling/media/uml-compdescribingproc.png "UML_CompDescribingProc")  
   
@@ -312,11 +309,11 @@ ms.locfileid: "51801457"
 ### <a name="defining-data-and-classes"></a>定义数据和类  
  可以使用 UML 类图描述以下方面的详细内容：  
   
--   组件的接口。 在将 requires 或 provides 端口添加到组件时，接口将显示在 UML 模型资源管理器中。 你可以将此接口拖动或复制到 UML 类图中，以显示其特性和操作以及与其他接口的关系。  
+- 组件的接口。 在将 requires 或 provides 端口添加到组件时，接口将显示在 UML 模型资源管理器中。 你可以将此接口拖动或复制到 UML 类图中，以显示其特性和操作以及与其他接口的关系。  
   
--   在接口的操作参数中传递的数据。  
+- 在接口的操作参数中传递的数据。  
   
--   组件中存储的数据，例如活动图的对象流中所示。  
+- 组件中存储的数据，例如活动图的对象流中所示。  
   
 ### <a name="general-dependencies-between-components"></a>组件之间的普通依赖项  
  使用组件图只是显示设计的主要部件及其相互依赖项。  
@@ -337,12 +334,9 @@ ms.locfileid: "51801457"
   
 ## <a name="see-also"></a>请参阅  
  [编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)   
- [UML 组件图： 参考](../modeling/uml-component-diagrams-reference.md)   
- [UML 序列图： 参考](../modeling/uml-sequence-diagrams-reference.md)   
- [UML 用例图： 参考](../modeling/uml-use-case-diagrams-reference.md)   
- [UML 类图： 参考](../modeling/uml-class-diagrams-reference.md)   
- [UML 组件图： 参考](../modeling/uml-component-diagrams-reference.md)   
- [视频： 使用组件图设计物理结构](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-6-Designing-a-Projects-Physical-Structure/)
-
-
-
+ [UML 组件关系图：引用](../modeling/uml-component-diagrams-reference.md)   
+ [UML 序列关系图：引用](../modeling/uml-sequence-diagrams-reference.md)   
+ [UML 用例关系图：引用](../modeling/uml-use-case-diagrams-reference.md)   
+ [UML 类关系图：引用](../modeling/uml-class-diagrams-reference.md)   
+ [UML 组件关系图：引用](../modeling/uml-component-diagrams-reference.md)   
+ [视频：使用组件图设计物理结构](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-6-Designing-a-Projects-Physical-Structure/)

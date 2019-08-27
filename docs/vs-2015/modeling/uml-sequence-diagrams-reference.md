@@ -1,12 +1,9 @@
 ---
-title: UML 序列图： 参考 |Microsoft Docs
-ms.custom: ''
+title: UML 序列图：引用 |Microsoft Docs
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: reference
 f1_keywords:
 - vs.teamarch.sequencediagram.diagram
 - vs.teamarch.UMLModelExplorer.sequencediagram
@@ -21,13 +18,13 @@ ms.assetid: 366fc324-aeeb-4894-bd13-ec2e40754b8e
 caps.latest.revision: 43
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 5c92d9eb8ee7858a036fdbb8dfb621c269e3ed4c
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 3990d43ae11db3db8eb792883ba62a030cde3a2f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51797021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62548554"
 ---
 # <a name="uml-sequence-diagrams-reference"></a>UML 序列图：参考
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,10 +40,10 @@ ms.locfileid: "51797021"
   
  ![序列图的部分](../modeling/media/uml-sequence.png "UML_Sequence")  
   
-|**形状**|**元素**|**说明**|  
+|**Shape**|**元素**|**说明**|  
 |---------------|-----------------|---------------------|  
-|1|**生命线**|竖线表示交互期间参与者中发生的事件序列，而时间发展沿此线向下。 此参与者可以是类、组件或参与者的实例。|  
-|2|**执行组件**|你开发的系统之外的参与者。<br /><br /> 可以使参与者符号显示在生命线的顶部，通过设置其**Actor**属性。|  
+|1|**Lifeline**|竖线表示交互期间参与者中发生的事件序列，而时间发展沿此线向下。 此参与者可以是类、组件或参与者的实例。|  
+|2|**Actor**|你开发的系统之外的参与者。<br /><br /> 可以使参与者符号显示在生命线的顶部，通过设置其**Actor**属性。|  
 |3|**同步消息**|在它继续之前，发件人将等待同步消息响应。 图表同时显示了调用和返回。 同步消息用于表示程序中普通函数调用，并以相同方式表示其他种类消息的行为。|  
 |4|**异步消息**|在发件人继续之前无需响应的消息。 异步消息仅显示来自发件人的调用 用于表示单独的线程之间的通信或新线程的创建。|  
 |5|**执行匹配项**|带有阴影的垂直矩形显示在参与者的生命线上并表示参与者执行操作的时间段。<br /><br /> 执行开始时参与者会收到一条消息。 如果初始消息是一个同步消息，则执行以一个返回给发件人的 «返回» 箭头结束。|  
@@ -61,15 +58,12 @@ ms.locfileid: "51797021"
 |14|**片段临界**|可用于表明与是否出现片段相关的条件。<br /><br /> 若要设置临界，请选择一个片段，然后选择该临界并键入一个值。|  
 |**X**|**析构事件**|表示对象被删除或不再可访问的点。 显示在每个生命线底部。|  
 ||**交互**|在序列图中显示的邮件和生命线的集合。 若要查看交互的属性，必须选择在其**UML 模型资源管理器**。|  
-||**序列图**|用于显示交互的关系图。 若要查看其属性，请单击关系图的空白部分。 **注意：** 序列关系图中，它将显示，并包含在关系图的文件可以各不相同的交互的名称。|  
+||**序列图**|用于显示交互的关系图。 若要查看其属性，请单击关系图的空白部分。 **注意：** 序列图的名称、其显示的交互以及包含图的文件可以不相同。|  
   
 ## <a name="see-also"></a>请参阅  
- [UML 序列图： 准则](../modeling/uml-sequence-diagrams-guidelines.md)   
+ [UML 序列关系图：指导原则](../modeling/uml-sequence-diagrams-guidelines.md)   
  [编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)   
- [UML 用例图： 参考](../modeling/uml-use-case-diagrams-reference.md)   
- [UML 类图： 参考](../modeling/uml-class-diagrams-reference.md)   
- [UML 组件图： 参考](../modeling/uml-component-diagrams-reference.md)   
- [UML 组件图：参考](../modeling/uml-component-diagrams-reference.md)
-
-
-
+ [UML 用例关系图：引用](../modeling/uml-use-case-diagrams-reference.md)   
+ [UML 类关系图：引用](../modeling/uml-class-diagrams-reference.md)   
+ [UML 组件关系图：引用](../modeling/uml-component-diagrams-reference.md)   
+ [UML 组件关系图：参考](../modeling/uml-component-diagrams-reference.md)

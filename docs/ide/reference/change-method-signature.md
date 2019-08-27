@@ -1,11 +1,11 @@
 ---
-title: 重构方法签名
+title: 更改方法签名
+description: 删除或更改方法参数的顺序。 右键单击该方法，选择“快速操作和重构”，然后选择“更改签名”。
 ms.date: 01/26/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
-manager: douge
+author: mikadumont
+ms.author: midumont
+manager: jillfra
 f1_keywords:
 - vs.csharp.refactoring.remove
 - vs.csharp.refactoring.reorder
@@ -14,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 68c814fca9d5e1df2c01e803b13cd5b03e8935e4
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 97c03c798732b5d722b2dc49f3ec7ffa490b4f06
+ms.sourcegitcommit: 3e74ec49a54e5c3da7631f4466128cdf4384af6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53968399"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68711260"
 ---
 # <a name="change-a-method-signature-refactoring"></a>“更改方法签名”重构
 
@@ -33,7 +33,7 @@ ms.locfileid: "53968399"
 
 **使用时机：** 想要移动或删除当前用于多个位置的方法参数时。
 
-操作原因：可以手动删除和重新排列参数，然后找到对此方法的所有调用并逐一更改，但这样可能会引发错误。  此重构工具可自动执行此任务。
+操作原因：  可以手动删除和重新排列参数，然后找到对此方法的所有调用并逐一更改，但这样可能会引发错误。  此重构工具可自动执行此任务。
 
 ## <a name="how-to"></a>操作说明
 
@@ -50,27 +50,27 @@ ms.locfileid: "53968399"
 2. 接下来，执行以下操作之一：
 
    - **键盘**
-      - 按“Ctrl+R”，然后按“Ctrl+V”。  （请注意，键盘快捷方式可能因所选的配置文件而有所不同。）
-      - 按“Ctrl”+**。** 触发“快速操作和重构”菜单，然后从“预览”弹出窗口选择“更改签名”。
+      - 按“Ctrl+R”  ，然后按“Ctrl+V”  。  （请注意，键盘快捷方式可能因所选的配置文件而有所不同。）
+      - 按“Ctrl”  + **。** 触发“快速操作和重构”  菜单，然后从“预览”弹出窗口选择“更改签名”  。
    - **鼠标**
-      - 选择“编辑 > 重构 > 删除参数”。
-      - 选择“编辑 > 重构 > 重新排列参数”。
-      - 右键单击代码，选择“快速操作和重构”菜单，然后从“预览”弹出窗口选择“更改签名”。
+      - 选择“编辑 > 重构 > 删除参数”  。
+      - 选择“编辑 > 重构 > 重新排列参数”  。
+      - 右键单击代码，选择“快速操作和重构”菜单，然后从“预览”弹出窗口选择“更改签名”。  
 
-3. 在弹出的“更改签名”对话框中，可以使用右侧的按钮更改方法签名：
+3. 在弹出的“更改签名”对话框中，可以使用右侧的按钮更改方法签名： 
 
    ![“更改签名”对话框](media/changesignature-dialog-cs.png)
 
    | Button | 说明
    | ------ | ---
-   | 上移/下移 | 在列表中向上和向下移动所选的参数
+   | 上移/下移  | 在列表中向上和向下移动所选的参数
    | **移除** | 从列表删除所选的参数
-   | 还原 | 将所选择的已删除参数还原到列表
+   | 还原  | 将所选择的已删除参数还原到列表
 
    > [!TIP]
-   > 提交前，使用“预览引用更改”复选框[查看最后的结果](../../ide/preview-changes.md)。
+   > 提交前，使用“预览引用更改”复选框[查看最后的结果](../../ide/preview-changes.md)  。
 
-4. 完成后，按“确定”按钮进行更改。
+4. 完成后，按“确定”按钮进行更改。 
 
    - C#：
 

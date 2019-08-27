@@ -1,14 +1,9 @@
 ---
 title: 代码分析策略错误 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.policyfailures
 helpviewer_keywords:
@@ -18,12 +13,12 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 4582f19882cc283acd3712236cdbb081e2f8f3ae
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 9b61d7d9718e9557ef153474718542f889ad7629
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49859813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62576736"
 ---
 # <a name="code-analysis-policy-errors"></a>代码分析策略错误
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +27,7 @@ ms.locfileid: "49859813"
   
  **一个或多个项目的代码分析设置不兼容与代码分析策略。**  
   
- 一个或多个代码项目未满足签入到团队项目源代码管理的代码分析需求。 此错误可能是由以下一种或多种情况引起的：  
+ 一个或多个代码项目未满足签入到团队项目源代码管理的代码分析要求。 此错误可能是由以下一种或多种情况引起的：  
   
 1. 未对解决方案中所有项目的生成版本启用代码分析。  
   
@@ -76,12 +71,9 @@ ms.locfileid: "49859813"
   
    应用于此错误[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]项目和 Web 项目。 该策略需要托管的代码分析，以执行，但未启用客户端上的当前项目中。  
   
-   **必须在项目中启用 C/c + + 代码分析{0}属性和之前的版本签入。**  
+   **必须启用 C /C++项目中的代码分析{0}属性和之前的版本签入。**  
   
-   此错误适用于非托管项目。 代码分析策略要求代码分析 C/c + +，但它未启用客户端上的当前项目中。  
+   此错误适用于非托管项目。 代码分析策略要求代码分析 c /C++，但它未启用客户端上的当前项目中。  
   
 ## <a name="see-also"></a>请参阅  
  [代码分析应用程序错误](../code-quality/code-analysis-application-errors.md)
-
-
-

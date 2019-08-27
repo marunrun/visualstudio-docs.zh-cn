@@ -1,7 +1,6 @@
 ---
 title: -RunExit (devenv.exe)
 ms.date: 12/10/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 helpviewer_keywords:
 - RunExit Devenv switch
@@ -10,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: bfc94875-5fc0-4110-b961-d59c0b403790
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ebeba5afc1eb50703f62e386f7453d7c0c3c1f6
-ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
+ms.openlocfilehash: 3fa010e72267dadfb1974f7ce8be3b6b9a3e1cff
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54227182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62935039"
 ---
 # <a name="runexit-devenvexe"></a>/RunExit (devenv.exe)
 

@@ -1,28 +1,23 @@
 ---
 title: 使用旧版 API 访问的文本缓冲区 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - text buffers
 ms.assetid: cd6cf4ae-fff5-4e23-b293-7cbafdb8aed2
 caps.latest.revision: 16
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 7c52e4beb1397e9919c3bf670e009d7ca1060ce1
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: f2cfbd84bc4f9298358a2a2d1ba87f76d6e5303c
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51722188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68185004"
 ---
-# <a name="accessing-the-text-buffer-by-using-the-legacy-api"></a>使用旧版 API 访问的文本缓冲区
+# <a name="accessing-the-text-buffer-by-using-the-legacy-api"></a>使用旧版 API 访问文本缓冲区
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 文本是负责管理文本流和文件暂留。 尽管缓冲区可以读取或写入其他格式与缓冲区的所有普通通信执行通过使用 Unicode。 在传统的 Api 中的文本缓冲区可以使用一个-或二维坐标系统以确定在缓冲区中的字符位置。  
@@ -46,4 +41,3 @@ ms.locfileid: "51722188"
   
 ## <a name="see-also"></a>请参阅  
  [核心编辑器内](../extensibility/inside-the-core-editor.md)
-

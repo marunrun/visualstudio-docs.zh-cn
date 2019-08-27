@@ -1,14 +1,9 @@
 ---
 title: 项目属性引用 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 helpviewer_keywords:
 - user interface [Visual Studio], projects
 - projects [Visual Studio], user interface
@@ -16,23 +11,22 @@ ms.assetid: eec49aec-5474-48a7-889d-709045b9a475
 caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 497afd9c7fb6f1449d8d9c2227c7ae1ee7af44b8
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 5d36a521db2c82ed207b3f77a51908ca7fad3d27
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49297526"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65695999"
 ---
 # <a name="project-properties-reference"></a>项目属性引用
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 详细了解如何配置和自定义项目属性。  
   
 ## <a name="project-properties-pages"></a>项目属性页  
   
-|标题|描述|  
+|Title|说明|  
 |-----------|-----------------|  
 |[“项目设计器”->“应用程序”页 (Visual Basic)](../../ide/reference/application-page-project-designer-visual-basic.md)|使用此页指定 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 项目的应用程序设置和属性。|  
 |[“项目设计器”->“应用程序”页 (C#)](../../ide/reference/application-page-project-designer-csharp.md)|使用此页指定 [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 项目的应用程序设置和属性。|  
@@ -51,8 +45,5 @@ ms.locfileid: "49297526"
 |||  
   
 ## <a name="see-also"></a>请参阅  
- [项目设计器简介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)   
+ [项目设计器简介](https://msdn.microsoft.com/898dd854-c98d-430c-ba1b-a913ce3c73d7)   
  [解决方案和项目](../../ide/solutions-and-projects-in-visual-studio.md)
-
-
-

@@ -2,21 +2,20 @@
 title: 编写 Python 的 C++ 扩展
 description: 使用 Visual Studio、CPython 和 PyBind11 创建适用于 Python 的 C++ 扩展的演练，包括混合模式调试。
 ms.date: 11/19/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
-author: kraigb
-ms.author: kraigb
-manager: douge
+author: JoshuaPartlow
+ms.author: joshuapa
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 96921c3b711fa1f2d01bee343d68891cf246bc6b
-ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.openlocfilehash: 9c81984e8921e44e32b58ae7f5c5c27c5fe8b12f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54315626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62956925"
 ---
 # <a name="create-a-c-extension-for-python"></a>创建适用于 Python 的 C++ 扩展
 
@@ -39,7 +38,7 @@ ms.locfileid: "54315626"
 
 ## <a name="prerequisites"></a>系统必备
 
-- 将 **C++ 桌面开发**和 **Python 开发**工作负载作为默认选项安装的 Visual Studio 2017。
+- 将 C++ 桌面开发和 Python 开发工作负载作为默认选项安装的 Visual Studio 2017 或更高版本。
 - 在“Python 开发”工作负载中，同时选择右侧的“Python 本机开发工具”方框。 此选项设置本文所述的大部分配置。 （此选项还自动包括 C++ 工作负载。）
 
     ![选择“Python 本机开发工具”选项](media/cpp-install-native.png)
@@ -108,7 +107,7 @@ ms.locfileid: "54315626"
 1. 搜索“C++”，选择“空项目”，指定名称“superfastcode”（第二个项目则指定名称“superfastcode2”），然后选择“确定”。
 
     > [!Tip]
-    > 如果在 Visual Studio 2017 中安装了 Python 本机开发工具，则可改为从 Python 扩展模块模板开始，其中有许多现成的以下所述的内容。 但是，对于本演练，从空项目开始可以逐步演示如何生成扩展模块。 了解该过程后，在编写自己的扩展时，使用模板可帮助你节省时间。
+    > 如果在 Visual Studio 中安装了 Python 本机开发工具，则可改为从 Python 扩展模块模板开始，其中有许多现成的以下所述的内容。 但是，对于本演练，从空项目开始可以逐步演示如何生成扩展模块。 了解该过程后，在编写自己的扩展时，使用模板可帮助你节省时间。
 
 1. 在新项目中创建 C++ 文件，方法是右键单击“源文件”节点，然后选择“添加” > “新建项”，选择“C++ 文件”，将其命名为 `module.cpp`，然后选择“确定”。
 
@@ -121,7 +120,7 @@ ms.locfileid: "54315626"
 
 1. 如下表所述设置特定属性，然后选择“确定”。
 
-    | Tab | Property | “值” |
+    | Tab | Property | 值 |
     | --- | --- | --- |
     | **常规** | **常规** > **目标名称** | 指定想要在 `from...import` 语句中从 Python 引用的模块的名称。 定义 Python 的模块时，在 C++ 中使用相同的名称。 如果想要将项目的名称用作模块名称，请保留默认值 $(ProjectName)。 |
     | | **常规** > **目标扩展名** | **.pyd** |
@@ -135,7 +134,7 @@ ms.locfileid: "54315626"
     > 如果在项目属性中未看到 C/C++ 选项卡，这是因为项目不包含标识为 C/C++ 源文件的任何文件。 如果创建的源文件不含 .c 或 .cpp 扩展名，则可能出现这种情况。 例如，如果之前在“新建项”对话框中不小心输入了 `module.coo`（而不是 `module.cpp`），则 Visual Studio 会创建文件，但不会将文件类型设置为“C/C+ 代码”，而正是它激活 C/C++ 属性选项卡。即使将文件重命名为带 `.cpp`，此类识别错误仍会存在。 为了正确设置文件类型，请在“解决方案资源管理器”中右键单击文件，选择“属性”，然后将“文件类型”设置为“C/C++ 代码”。
 
     > [!Warning]
-    > 即使对于调试配置，也始终将“C/C++” > “代码生成” > “运行时库”选项设置为“多线程 DLL (/MD)”，因为此设置是生成非调试 Python 二进制文件时使用的设置。 使用 CPython 时，如果碰巧设置了“多线程调试 DLL (/MDd)”选项，生成“调试”配置会生成错误“C1189:Py_LIMITED_API is incompatible with Py_DEBUG, Py_TRACE_REFS, and Py_REF_DEBUG”。 此外，如果删除 `Py_LIMITED_API`（使用 CPython 时必须这样做，但在使用 PyBind11 时则不是）以免出现生成错误，Python 会在尝试导入模块时发生故障。 （如下所述，对 `PyModule_Create` 的 DLL 调用中发生故障，显示输出消息“Python 错误:PyThreadState_Get: 无当前线程”。）
+    > 即使对于调试配置，也始终将“C/C++” > “代码生成” > “运行时库”选项设置为“多线程 DLL (/MD)”，因为此设置是生成非调试 Python 二进制文件时使用的设置。 使用 CPython 时，如果碰巧设置了“多线程调试 DLL (/MDd)”选项，生成“调试”配置会生成错误“C1189:Py_LIMITED_API is incompatible with Py_DEBUG, Py_TRACE_REFS, and Py_REF_DEBUG”**。 此外，如果删除 `Py_LIMITED_API`（使用 CPython 时必须这样做，但在使用 PyBind11 时则不是）以免出现生成错误，Python 会在尝试导入模块时发生故障。 （如下所述，对 `PyModule_Create` 的 DLL 调用中发生故障，显示输出消息“Python 错误:PyThreadState_Get: 无当前线程”**。）
     >
     > /MDd 选项用于生成 Python 调试二进制文件（例如 python_d.exe），但对扩展 DLL 选择此选项仍会导致 `Py_LIMITED_API` 的生成错误。
 
@@ -265,7 +264,7 @@ ms.locfileid: "54315626"
 
 C++ 模块可能无法编译的原因如下：
 
-- 无法找到 Python.h（E1696：无法打开源文件 "Python.h" 和/或 C1083：无法打开 include 文件："Python.h"：没有此类文件或目录）：验证项目属性中的“C/C++” > “常规” > “附加 Include 目录”中的路径是否指向 Python 安装的“include”文件夹。 请参阅[创建核心 C++ 项目](#create-the-core-c-projects)中的步骤 6。
+- 无法找到 Python.h（E1696：无法打开源文件 "Python.h" 和/或 C1083：无法打开 include 文件："Python.h"：没有此类文件或目录）：验证项目属性中的“C/C++” > “常规” > “附加 Include 目录”中的路径是否指向 Python 安装的“include”文件夹**。 请参阅[创建核心 C++ 项目](#create-the-core-c-projects)中的步骤 6。
 
 - 无法找到 Python 库：验证项目属性中的“链接器” > “常规” > “附加库目录”中的路径是否指向 Python 安装的“libs”文件夹。 请参阅[创建核心 C++ 项目](#create-the-core-c-projects)中的步骤 6。
 
@@ -285,7 +284,7 @@ C++ 模块可能无法编译的原因如下：
 
 另一种方法，如以下步骤所述，在全局 Python 环境中安装模块，使其也可供其他 Python 项目使用。 （执行此操作通常需要在 Visual Studio 2017 版本 15.5 和更早版本中刷新该环境的 IntelliSense 完成数据库。 从环境中删除模块时也必须执行刷新。）
 
-1. 如果使用的是 Visual Studio 2017，请运行 Visual Studio 安装程序，选择“修改”，然后选择“各个组件” > “编译器、生成工具和运行时” > “Visual C++ 2015.3 v140 工具集”。 此步骤是必需的，因为 Python（适用于 Windows）本身是使用 Visual Studio 2015（版本 14.0）生成的，并期望通过此处所述的方法生成扩展时能够使用这些工具。 （请注意，可能需要安装 32 位版本的 Python，并将 DLL 定向到 Win32 而不是 x64。）
+1. 如果使用的是 Visual Studio 2017 或更高版本，请运行 Visual Studio 安装程序，选择“修改”，然后选择“单个组件” > “编译器、生成工具和运行时” > “Visual C++ 2015.3 v140 工具集”。 此步骤是必需的，因为 Python（适用于 Windows）本身是使用 Visual Studio 2015（版本 14.0）生成的，并期望通过此处所述的方法生成扩展时能够使用这些工具。 （请注意，可能需要安装 32 位版本的 Python，并将 DLL 定向到 Win32 而不是 x64。）
 
 1. 右键单击 C++ 项目，然后选择“添加” > “新建项”，在项目中创建名为 setup.py 的文件。 然后选择“C++ 文件 (.cpp)”并命名为 `setup.py`，再选择“确定”（尽管使用了 C++ 文件模板，但使用 .py 扩展命名文件可让 Visual Studio 将其识别为 Python）。 编辑器中出现该文件时，以适合扩展方法的形式将以下代码粘贴到其中：
 
@@ -323,7 +322,7 @@ C++ 模块可能无法编译的原因如下：
 
     setup(
         name = 'superfastcode2',
-        version = '1.0',    
+        version = '1.0',
         description = 'Python package with superfastcode2 C++ extension (PyBind11)',
         ext_modules = [sfc_module],
     )
@@ -409,7 +408,7 @@ Visual Studio 支持一起调试 Python 和 C++ 代码。 本节演示了使用 
 | ctype | 2003 | [oscrypto](https://github.com/wbond/oscrypto) | 无编译，广泛可用性。 | 访问和转变 C 结构的过程比较繁琐且容易出错。 |
 | SWIG | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | 针对多种语言立即生成绑定。 | 如果 Python 是唯一目标，则开销过大。 |
 | cffi | 2013 | [cryptography](https://cryptography.io/en/latest/)、[pypy](https://pypy.org/) | 易于集成，与 PyPy 兼容。 | 较新，不够成熟。 |
-| [cppyy](https://cppyy.readthedocs.io/en/latest/) | 2017 | | 类似于使用 C++ 的 cffi。 | 较新，与 VS 2017 有一些兼容性问题。 |  
+| [cppyy](https://cppyy.readthedocs.io/en/latest/) | 2017 | | 类似于使用 C++ 的 cffi。 | 较新，与 VS 2017 有一些兼容性问题。 |
 
 ## <a name="see-also"></a>请参阅
 

@@ -2,7 +2,6 @@
 title: 工作流设计器-FlowSwitch<T>活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - System.Activities.Core.Presentation.FlowSwitchLink.UI
 - System.Activities.Statements.FlowSwitch`1.UI
@@ -11,15 +10,15 @@ f1_keywords:
 ms.assetid: 5b9c5afe-7499-4ee8-8c33-28aff14bde07
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 046dd00b89b8f14da3082e60a04a92f8152ecc08
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d3f6d396acb62b9cac8f34ef106ac96257eec612
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53942380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62949625"
 ---
 # <a name="flowswitcht-activity-designer"></a>FlowSwitch\<T > 活动设计器
 

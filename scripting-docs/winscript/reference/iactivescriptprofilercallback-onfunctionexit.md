@@ -2,7 +2,6 @@
 title: IActiveScriptProfilerCallback::OnFunctionExit |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -16,12 +15,12 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fb3f71e9a8a383e2362bacb17698f4eec58f464e
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: 9c84b64a12b1a6b61399f70b7209c86dd8d2a9a4
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54092193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62993327"
 ---
 # <a name="iactivescriptprofilercallbackonfunctionexit"></a>IActiveScriptProfilerCallback::OnFunctionExit
 通知探查器对象，脚本引擎已完成执行函数调用不是调用到文档对象模型 (DOM)。  

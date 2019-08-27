@@ -2,7 +2,6 @@
 title: IDebugProperty 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,12 +13,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2e5e5274e8a3d1c81ce010afc3893b27510a0fad
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: 963b11a4760fad8086822f13db129fae76467802
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54348355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62979057"
 ---
 # <a name="idebugproperty-interface"></a>IDebugProperty 接口
 用于描述任何层次结构正在调试的实体的属性具有名称、 类型和值。 大多数情况下，`IDebugProperty`用于描述表达式计算、 语句评估或注册评估的结果。  

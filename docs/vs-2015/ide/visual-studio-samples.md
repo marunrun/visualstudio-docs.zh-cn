@@ -1,26 +1,22 @@
 ---
 title: 示例 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sample applications [Visual Studio]
 ms.assetid: 3070fa13-46c7-4252-a1c2-857b4a2c9528
 caps.latest.revision: 58
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: c604684fea431d29c76098a77218e36a63fc770f
-ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
-ms.translationtype: MTE95
+manager: jillfra
+ms.openlocfilehash: b84292e35fd07a7ab3d47c36a6a6c7a79224c201
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "53936563"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65698143"
 ---
 # <a name="visual-studio-samples"></a>Visual Studio 示例
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,18 +28,18 @@ ms.locfileid: "53936563"
 ## <a name="finding-samples"></a>查找示例
  以下是其他一些可以查找示例的位置。
 
-|区域|说明|
+|区域|描述|
 |----------|-----------------|
 |[Windows 开发人员中心示例](http://go.microsoft.com/fwlink/?LinkID=255278)|演示如何开发 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 应用。|
-|[.NET Framework 示例](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)|显示 C# 和 Visual Basic 中 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 的各个方面。|
+|[.NET Framework 示例](https://msdn.microsoft.com/177055f8-4a1f-43e7-aee6-995c196079b1)|显示 C# 和 Visual Basic 中 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 的各个方面。|
 |[C# 示例](http://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)|演示如何使用 C# 的不同功能。|
 |[Visual Basic 示例](http://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=VB&f%5B0%5D.Text=VB.NET)|演示如何使用 Visual Basic 的不同功能。|
 |[F# 示例](http://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=F%23&f%5B0%5D.Text=F%23)|演示如何使用 F# 的不同功能。|
 |[JavaScript 示例](http://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=JavaScript)|演示如何使用 JavaScript 中的不同功能。|
 |[C++ 示例](http://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B)|演示如何使用 C++ 中的不同功能。|
 |[DirectX 示例](http://code.msdn.microsoft.com/site/search?query=DirectX&f%5B1%5D.Value=DirectX&f%5B1%5D.Type=SearchText&f%5B0%5D.Value=C%20%20&f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Text=Invalid%20Value&ac=2)|演示如何使用 DirectX。|
-|[Office 开发示例](http://msdn.microsoft.com/library/9ebc7de2-59dd-414c-888b-7549d3c3543c)|演示如何使用 Visual Studio 中的 Office 开发工具。 有关最新示例的信息，请参阅 [MSDN 开发人员示例：通过代码学习](http://go.microsoft.com/fwlink/?LinkID=248199)。|
-|[VSSDK 示例](http://aka.ms/vs2015sdksamples)|演示如何扩展 Visual Studio。|
+|[Office 开发示例](https://msdn.microsoft.com/library/9ebc7de2-59dd-414c-888b-7549d3c3543c)|演示如何使用 Visual Studio 中的 Office 开发工具。 有关最新示例的信息，请参阅 [MSDN 开发人员示例：通过代码学习](http://go.microsoft.com/fwlink/?LinkID=248199)。|
+|[VSSDK 示例](https://aka.ms/vs2015sdksamples)|演示如何扩展 Visual Studio。|
 
 ## <a name="see-also"></a>请参阅
  [Visual C# 和 Visual Basic 入门](../ide/getting-started-with-visual-csharp-and-visual-basic.md)

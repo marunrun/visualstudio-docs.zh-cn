@@ -1,27 +1,22 @@
 ---
 title: 实现和注册端口提供程序 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], registering port suppliers
 - port suppliers, registering
 ms.assetid: fb057052-ee16-4272-8e16-a4da5dda0ad4
 caps.latest.revision: 18
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 3844d6beca76781f741bfbe0c6bff71923075d36
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 377aa88df71fd0d3c42745fe2d3ce3b648191aa4
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51728942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63430260"
 ---
 # <a name="implementing-and-registering-a-port-supplier"></a>实现和注册端口提供程序
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -62,7 +57,7 @@ RemoveMetric(metrictypePortSupplier,
 ```  
   
 > [!NOTE]
->  [以便进行调试的 SDK 帮助程序](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)`SetMetric`和`RemoveMetric`dbgmetric.h 中定义并编译为 ad2de.lib 静态函数。 `metrictypePortSupplier`， `metricCLSID`，和`metricName`dbgmetric.h 中也定义了帮助程序。  
+> [以便进行调试的 SDK 帮助程序](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)`SetMetric`和`RemoveMetric`dbgmetric.h 中定义并编译为 ad2de.lib 静态函数。 `metrictypePortSupplier`， `metricCLSID`，和`metricName`dbgmetric.h 中也定义了帮助程序。  
   
  端口提供程序可以通过方法提供其名称和 GUID [GetPortSupplierName](../../extensibility/debugger/reference/idebugportsupplier2-getportsuppliername.md)并[GetPortSupplierId](../../extensibility/debugger/reference/idebugportsupplier2-getportsupplierid.md)分别。  
   
@@ -70,4 +65,3 @@ RemoveMetric(metrictypePortSupplier,
  [实现端口提供程序](../../extensibility/debugger/implementing-a-port-supplier.md)   
  [用于调试的 SDK 帮助程序](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)   
  [端口提供程序](../../extensibility/debugger/port-suppliers.md)
-

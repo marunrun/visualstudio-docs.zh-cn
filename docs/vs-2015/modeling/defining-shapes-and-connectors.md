@@ -1,30 +1,27 @@
 ---
 title: 定义形状和连接线 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 ms.assetid: 1fae548d-9288-4dd5-a24f-ff0d69c73628
 caps.latest.revision: 5
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 61cd27b307b4761e3f7773f91583965466892285
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 761e0e77a0fe9f6f32f08045d81f6eab815801dd
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49812941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68181895"
 ---
 # <a name="defining-shapes-and-connectors"></a>定义形状和连接线
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 在域特定语言 (DSL) 中，有多种基本类型的形状，可用于在关系图上显示信息。  
   
-##  <a name="shapeTypes"></a> 基本类型的形状和连接线  
+## <a name="shapeTypes"></a> 基本类型的形状和连接线  
  DSL 关系图显示了一系列*形状*连接符的行或*连接器*。  通常情况下（但并非总是如此）：  
   
 - 形状是模型元素的可视表示形式。  
@@ -48,8 +45,5 @@ ms.locfileid: "49812941"
 |泳道|泳道将关系图分为水平或垂直段。 在该关系图上，泳道始终位于其他形状的下方。<br /><br /> 通常泳道的模型元素是模型根上的父级，而其他元素是它们的父级。 有关示例，请从任务流解决方案模板中创建 DSL。|  
 |连接符|在形状之间绘制的线条通常表示引用关系。 可设置选项以使连接符绘制为直线或折线，并带有不同类型的箭头。|  
   
-##  <a name="shapeInheritance"></a> 形状继承  
+## <a name="shapeInheritance"></a> 形状继承  
  一个形状可继承自另一个形状。 但是，这些形状的类型必须相同。 例如，几何形状只能继承自几何形状。 继承形状具有其基形状的隔离舱和修饰器。 连接符可继承自连接符。
-
-
-

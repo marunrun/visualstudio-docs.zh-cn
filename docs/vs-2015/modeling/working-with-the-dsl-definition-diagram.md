@@ -1,12 +1,9 @@
 ---
 title: 使用 DSL 定义关系图 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 f1_keywords:
 - vs.dsltools.dsldesigner.diagram
 - vs.dsltools.dsldesigner.dsldiagram
@@ -20,13 +17,13 @@ ms.assetid: 1a4c7a58-e134-438e-848e-efd98f92bf10
 caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 1fc0dbc007dcb3e15891a4176fc5bdb96babbfa8
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: bd4b15fb7c0f1cbc0630779ecef0373977bb2056
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49208580"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65694210"
 ---
 # <a name="working-with-the-dsl-definition-diagram"></a>使用 DSL 定义图表
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -68,17 +65,14 @@ ms.locfileid: "49208580"
 ### <a name="expandcollapse-inheritance-tree"></a>展开/折叠继承树  
  如果域类是其他域类的基类，则可以通过右键单击该域类定义，然后单击隐藏继承树**折叠继承树**。 若要显示继承树，右键单击定义元素，然后单击**展开继承树**。  
   
-### <a name="bring-tree-here"></a>Bring Tree Here  
+### <a name="bring-tree-here"></a>将树放在此处  
  可以通过右键单击占位符域类，然后单击合并关系图**将树放在此处**。 该占位符域类将成为定义元素并显示继承和关系树。 如果前一个定义元素是关系的目标元素或继承关系中的子元素，则它将成为占位符元素；否则，它将消失。  
   
 ### <a name="split-tree"></a>Split Tree  
  您可通过右键单击显示它们的域类定义，然后单击中断继承或关系树**拆分树**。 该定义元素将成为占位符元素，并且定义域类连同其继承和关系树现在都可显示在分区底部。  
   
-### <a name="show-as-class"></a>Show As Class  
+### <a name="show-as-class"></a>显示为类  
  如果域关系有派生关系，或如果它具有与其他域关系的嵌入或引用关系，您可以显示此关系为一个类，通过右键单击该关系，然后单击**显示为类**. 将会显示此关系**域属性**隔离舱，将显示继承和关系树。  
   
 ## <a name="see-also"></a>请参阅  
- [域特定语言工具术语表](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)
-
-
-
+ [域特定语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

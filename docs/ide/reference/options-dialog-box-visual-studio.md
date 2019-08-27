@@ -1,7 +1,6 @@
 ---
 title: “选项”对话框
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - vs.toolsoptionspages
@@ -13,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 02b09877-1df1-4531-a0d1-a4ca17c7f857
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 50def05f181ae311ae3f4d4a3fc167e9c23e680f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: eecbd3582257d4c141c82be95c0e7ea06504ffcf
+ms.sourcegitcommit: 2ee11676af4f3fc5729934d52541e9871fb43ee9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53859433"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65839606"
 ---
 # <a name="options-dialog-box-visual-studio"></a>“选项”对话框 (Visual Studio)
 
@@ -46,4 +45,4 @@ ms.locfileid: "53859433"
 
 ## <a name="see-also"></a>请参阅
 
-- [自定义编辑器](../../ide/customizing-the-editor.md)
+- [自定义编辑器](../how-to-change-text-case-in-the-editor.md)

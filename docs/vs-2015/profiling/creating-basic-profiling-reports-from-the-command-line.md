@@ -1,25 +1,20 @@
 ---
 title: 从命令行创建基本分析报告 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 6d73e21e-c04e-48ea-91cc-e517a5f2cd3f
 caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 30361f0f4ae147458252400a5232a657574553d4
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 5f13921dea810ab2185e626cc2889f339d9d174f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51786753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62537175"
 ---
 # <a name="creating-basic-profiling-reports-from-the-command-line"></a>从命令行创建基本分析报告
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -59,6 +54,3 @@ ms.locfileid: "51786753"
 |**Contention**|资源争用。|-   [资源争用](../profiling/resource-contentions-view-contention-data.md)|  
 |**RuleWarnings**|列出性能规则问题。|-   列出规则问题的 CheckId、描述和源代码位置。|  
 |**ETW**|列出分析运行期间收集的 Windows 事件跟踪 (ETW) 事件。|-   [ETW 报告](../profiling/event-tracing-for-windows-etw-report.md)|
-
-
-

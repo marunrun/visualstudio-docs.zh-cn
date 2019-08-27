@@ -1,25 +1,20 @@
 ---
-title: 演练： 缺少对象因顶点着色而 |Microsoft Docs
-ms.custom: ''
+title: 演练：因顶点着色而缺少对象 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: e42b54a0-8092-455c-945b-9ecafb129d93
 caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 2ecff22d99eb995f0dbe70e93783460f4343d74f
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: d54fdce78528f348e99436c3a58d15e1cbe861b7
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51745937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63444271"
 ---
 # <a name="walkthrough-missing-objects-due-to-vertex-shading"></a>演练：因顶点着色而缺少对象
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,13 +23,13 @@ ms.locfileid: "51745937"
   
  此演练阐释了以下任务：  
   
--   使用“图形事件列表”  定位问题的潜在根源。  
+- 使用“图形事件列表”  定位问题的潜在根源。  
   
--   使用“图形管道阶段”  窗口检查 `DrawIndexed` Direct3D API 调用的影响。  
+- 使用“图形管道阶段”  窗口检查 `DrawIndexed` Direct3D API 调用的影响。  
   
--   使用“HLSL 调试器”  检查顶点着色器。  
+- 使用“HLSL 调试器”  检查顶点着色器。  
   
--   使用“图形事件调用堆栈”  帮助查找错误 HLSL 常量的源。  
+- 使用“图形事件调用堆栈”  帮助查找错误 HLSL 常量的源。  
   
 ## <a name="scenario"></a>方案  
  当顶点着色器以不正确或意外的方式变换对象顶点的形状时，会出现三维应用中缺少对象的一个常见原因 — 例如，对象可能缩放到很小的尺寸或变形而导致出现在照相机后面而不是前面。  
@@ -69,7 +64,7 @@ ms.locfileid: "51745937"
     在“图形管道阶段”  窗口中，“输入装配器”  阶段将显示转换前的对象的几何图形，而“顶点着色器”  阶段显示转换后的相同对象。 在此方案中，当“输入装配器”  阶段中显示缺失的对象而“顶点着色器”  阶段中不显示任何项目时，即可知已找到该对象。  
   
    > [!NOTE]
-   >  如果其他几何阶段（例如外壳着色器、域着色器或几何着色器阶段）处理该对象，则这些阶段可能是问题的原因。 通常情况下，该问题与结果未显示或以意外方式显示的最早阶段相关联。  
+   > 如果其他几何阶段（例如外壳着色器、域着色器或几何着色器阶段）处理该对象，则这些阶段可能是问题的原因。 通常情况下，该问题与结果未显示或以意外方式显示的最早阶段相关联。  
   
 4. 当到达对应于缺失对象的绘图调用时即停止。 在此方案中，“图形管道阶段”  窗口指示几何图形发布到 GPU（由存在“输入装配器”缩略图指示），但由于在顶点着色器阶段出现问题而未显示于呈现目标中（由“顶点着色器”缩略图指示）。  
   
@@ -112,9 +107,9 @@ ms.locfileid: "51745937"
     ![设置对象的常量缓冲区的代码](../debugger/media/gfx-diag-demo-missing-object-shader-step-7.png "gfx_diag_demo_missing_object_shader_step_7")  
   
    > [!TIP]
-   >  如果同时调试你的应用，则可以在此位置设置一个断点，在呈现下一帧时将命中该断点。 你随后还可以检查 `m_marbleConstantBufferData` 的成员，以确认填充常量缓冲区后是否已将 `projection` 成员的值设置为全零。  
+   > 如果同时调试你的应用，则可以在此位置设置一个断点，在呈现下一帧时将命中该断点。 你随后还可以检查 `m_marbleConstantBufferData` 的成员，以确认填充常量缓冲区后是否已将 `projection` 成员的值设置为全零。  
   
-   找到填充常量缓冲区的位置并发现其值来自该变量后`m_marbleConstantBufferData`下, 一步是找出`m_marbleConstantBufferData.projection`成员设置为全零。 可以使用“查找所有引用”  快速扫描更改 `m_marbleConstantBufferData.projection`的值的代码。  
+   找到填充常量缓冲区的位置，并发现其值来自变量 `m_marbleConstantBufferData` 之后，下一步是找出将 `m_marbleConstantBufferData.projection` 成员设置为全零的位置。 可以使用“查找所有引用”  快速扫描更改 `m_marbleConstantBufferData.projection`的值的代码。  
   
 #### <a name="to-find-where-the-projection-member-is-set-in-your-apps-source-code"></a>在应用的源代码中查找设置投影成员的位置  
   
@@ -133,6 +128,3 @@ ms.locfileid: "51745937"
    修复代码后，你可以重新生成并运行应用以查明呈现的问题是否已解决：  
   
    ![现在该对象显示。](../debugger/media/gfx-diag-demo-missing-object-shader-resolution.png "gfx_diag_demo_missing_object_shader_resolution")
-
-
-

@@ -1,14 +1,9 @@
 ---
 title: 了解性能收集方法 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.wizard.methodpage
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: ea4881fd-bd04-4875-9b7b-28490d6706f9
 caps.latest.revision: 25
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 1a941b3c9dff3a80adea61026c6176dcf4c44361
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: e398d7e5e297daa68663902efb8a9fa0775c86fa
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51809046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63431630"
 ---
 # <a name="understanding-performance-collection-methods"></a>了解性能收集方法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,7 +26,7 @@ ms.locfileid: "51809046"
 Visual Studio 分析工具提供了五种可以用于收集性能数据的方法。 本主题介绍了不同方法，并提供了一些适合使用特定方法收集数据的建议方案。  
   
 > [!NOTE]
->  Windows 8 和 Windows Server 2012 中增强的安全功能需要以 Visual Studio 探查器在这些平台上收集数据的方式进行重大更改。 Windows 应用商店应用程序也需要新的收集技术。 请参阅 [Windows 8 和 Windows Server 2012 应用程序上的性能工具](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)。  
+> Windows 8 和 Windows Server 2012 中增强的安全功能需要以 Visual Studio 探查器在这些平台上收集数据的方式进行重大更改。 Windows 应用商店应用程序也需要新的收集技术。 请参阅 [Windows 8 和 Windows Server 2012 应用程序上的性能工具](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)。  
   
 |方法|描述|  
 |------------|-----------------|  
@@ -43,7 +38,7 @@ Visual Studio 分析工具提供了五种可以用于收集性能数据的方法
   
  通过使用一些分析方法，还可以收集其他数据，如软件和硬件性能计数器。 有关详细信息，请参阅[收集其他性能数据](../profiling/collecting-additional-performance-data.md)。  
   
-##  <a name="sampling"></a> 采样  
+## <a name="sampling"></a> 采样  
  采样分析方法收集有关应用程序在分析运行过程中执行的工作的统计数据。 采样方法是轻量级的，对应用程序方法的执行几乎没有什么影响。  
   
  采样是 Visual Studio 分析工具的默认方法。 它可用于以下情况：  
@@ -62,7 +57,7 @@ Visual Studio 分析工具提供了五种可以用于收集性能数据的方法
   
   [采样方法数据视图](../profiling/profiler-sampling-method-data-views.md)  
   
-##  <a name="instrumentation"></a> 检测  
+## <a name="instrumentation"></a> 检测  
  检测分析方法为分析的应用程序中的函数调用收集详细计时。 检测分析可用于以下情况：  
   
 - 调查输入/输出瓶颈（如磁盘 I/O）。  
@@ -87,7 +82,7 @@ Visual Studio 分析工具提供了五种可以用于收集性能数据的方法
   
   [检测方法数据视图](../profiling/instrumentation-method-data-views.md)  
   
-##  <a name="concurrency"></a> 并发  
+## <a name="concurrency"></a> 并发  
  并发分析收集有关多线程应用程序的信息。 资源争用分析收集每次争用线程被迫等待访问共享资源时的详细调用堆栈信息。 并发可视化还收集有关多线程应用程序如何与自己、硬件、操作系统和主计算机上的其他进程进行交互的更多常规信息：  
   
 - 资源争用报告显示争用的总数，以及对于在其中发生等待的模块、函数、源代码行和指令，等待资源所用的总时间。 时间线关系图也会在争用发生时显示争用。  
@@ -102,7 +97,7 @@ Visual Studio 分析工具提供了五种可以用于收集性能数据的方法
   
   [并发可视化工具](../profiling/concurrency-visualizer.md)  
   
-##  <a name="net_memory"></a> .NET 内存  
+## <a name="net_memory"></a> .NET 内存  
  .NET 内存分配分析方法在分析的应用程序中每次分配 .NET Framework 对象时都中断计算机处理器。 同时收集对象生存期数据时，探查器会在每个 .NET Framework 垃圾回收之后中断处理器。  
   
  探查器收集有关在分配中创建的对象或在垃圾回收中销毁的对象的类型、大小和数量的信息。  
@@ -123,7 +118,7 @@ Visual Studio 分析工具提供了五种可以用于收集性能数据的方法
   
   [.NET 内存数据视图](../profiling/dotnet-memory-data-views.md)  
   
-##  <a name="tier_interaction"></a> 层交互  
+## <a name="tier_interaction"></a> 层交互  
  层交互分析将有关 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 页面或其他应用程序与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库之间的同步 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 调用的信息添加到分析数据文件。 这些数据包括调用的数量和时间，以及最大和最小次数。 层交互数据可以添加到使用采样、检测、.NET 内存或并发方法收集的分析数据。  
   
  ![层交互分析数据](../profiling/media/tierinteraction-profilingtools.png "TierInteraction_ProfilingTools")  
@@ -136,6 +131,3 @@ Visual Studio 分析工具提供了五种可以用于收集性能数据的方法
 ## <a name="see-also"></a>请参阅  
  [如何：为 Web 站点收集性能数据](../profiling/how-to-collect-performance-data-for-a-web-site.md)   
  [性能分析初学者指南](../profiling/beginners-guide-to-performance-profiling.md)
-
-
-

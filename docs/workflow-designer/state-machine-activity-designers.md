@@ -2,19 +2,18 @@
 title: 工作流设计器的状态机活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 ms.assetid: 97f0bff5-7e48-4914-8f04-8015a1c6bfae
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: f105a583937650fbccf176efdf04faee3993914d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: de928ff095c5700506060b9fceb609003f1b9ab1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53873643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809516"
 ---
 # <a name="state-machine-activity-designers"></a>状态机活动设计器
 

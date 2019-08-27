@@ -1,14 +1,9 @@
 ---
 title: 有关类设计器错误的附加信息 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.CPlusPlusViewInDiagramNoTypeFound
 - vs.classdesigner.CPlusPlusNoTypeFound
@@ -33,18 +28,18 @@ ms.assetid: 79d70e70-704c-4255-ab68-c10d6949470e
 caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 1a957630de193d805b1a516d45c72bd1483f0278
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 66a895b48051ed8797644b36d6f6663e1e35a8e6
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49188521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68145674"
 ---
 # <a name="additional-information-about-class-designer-errors"></a>有关类设计器错误的附加信息
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-类设计器不会跟踪源文件的位置，因此修改项目结构或移动项目中的源文件就可能导致类设计器无法继续对类型（尤其是 typedef 的源类型、基类或关联类型）进行跟踪。 可能会收到错误，如“类设计器无法显示此类型”。 如果收到错误，要将修改过的或被重新定位的源代码再次拖到类图中以重新显示。  
+类设计器不会跟踪源文件的位置，因此修改项目结构或移动项目中的源文件就可能导致类设计器无法继续对类型（尤其是 typedef 的源类型、基类或关联类型）进行跟踪。 可能会收到错误，如“类设计器无法显示此类型”  。 如果收到错误，要将修改过的或被重新定位的源代码再次拖到类图中以重新显示。  
   
  你在以下资源中找到关于其他错误和警告的协助：  
   
@@ -54,8 +49,5 @@ ms.locfileid: "49188521"
  [Visual Studio 类设计器论坛](http://go.microsoft.com/fwlink/?LinkId=160754)  
  提供一个有关类设计器相关问题的论坛。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设计和查看类与类型](../ide/designing-and-viewing-classes-and-types.md)
-
-
-

@@ -1,7 +1,6 @@
 ---
 title: 如何：创建类型之间的继承（类设计器）
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.inheritanceline
@@ -11,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 3786a21c-8022-4bf5-9d13-740fd354e93c
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b94d89f6051b47f8500886348b335754abae9b72
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5c1a4f8db08ec80714fe2cd74e4d1300d68a56e5
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53925558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62975367"
 ---
 # <a name="how-to-create-inheritance-between-types-in-class-designer"></a>如何：在类设计器中创建类型之间的继承
 
@@ -27,21 +26,21 @@ ms.locfileid: "53925558"
 
 ## <a name="to-create-an-inheritance-between-types"></a>在类型之间创建继承
 
-1.  从解决方案资源管理器的项目中，打开一个类图 (.cd) 文件。
+1. 从解决方案资源管理器的项目中，打开一个类图 (.cd) 文件。
 
-     如果你尚未拥有类图，请创建一个。 请参阅[操作说明：向项目添加类图](how-to-add-class-diagrams-to-projects.md)。
+     如果你尚未拥有类图，请创建一个。 请参阅[如何：向项目添加类图](how-to-add-class-diagrams-to-projects.md)。
 
-2.  在“工具箱”的“类设计器”下，单击“继承”。
+2. 在“工具箱”的“类设计器”下，单击“继承”。
 
-3.  在类关系图上，在你想要的两个类型之间绘制一条继承连线，从:
+3. 在类关系图上，在你想要的两个类型之间绘制一条继承连线，从:
 
-    -   派生类到基类
+    - 派生类到基类
 
-    -   实现类到已实现接口
+    - 实现类到已实现接口
 
-    -   扩展接口到已扩展接口
+    - 扩展接口到已扩展接口
 
-4.  （可选）当你有从泛型类型派生的类型时，单击该继承连线。 在“属性”窗口中，设置“类型参数”属性，使其与要用于泛型类型的类型匹配。
+4. （可选）当你有从泛型类型派生的类型时，单击该继承连线。 在“属性”窗口中，设置“类型参数”属性，使其与要用于泛型类型的类型匹配。
 
     > [!NOTE]
     > 如果父抽象类至少包含一个抽象成员，则所有这些成员都将作为非抽象的继承类实现。

@@ -1,20 +1,19 @@
 ---
-title: 从图形视图和 XML 架构设计器的内容模型视图打印关系图
+title: XML 架构：在关系图视图和内容模型视图打印关系图
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.assetid: 7e1785e4-4aaf-4c66-8735-51e7ca035565
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bd147b5a7b491c17e0ed0024cfe471762e6160b1
-ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
+ms.openlocfilehash: c04b35d0b90de888ad11af0920ddb0cf123638ad
+ms.sourcegitcommit: 51dad3e11d7580567673e0d426ab3b0a17584319
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54269704"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66820544"
 ---
 # <a name="how-to-print-diagrams-from-the-graph-view-and-the-content-model-view"></a>如何：从图形视图和内容模型视图打印关系图
 
@@ -22,13 +21,13 @@ ms.locfileid: "54269704"
 
 ## <a name="to-print-diagrams-from-the-xml-schema-designer"></a>从 XML 架构设计器中打印关系图
 
-1.  在 Visual Studio 中打开 XSD 文件并添加到某些节点[XML 架构设计器工作区](../xml-tools/xml-schema-designer-workspace.md)。
+1. 在 Visual Studio 中打开 XSD 文件并添加到某些节点[XML 架构设计器工作区](../xml-tools/xml-schema-designer-workspace.md)。
 
-2.  通过使用关系图导出到 XPS 文件**关系图导出为图像**设计图面中的图形视图或内容模型视图的上下文 （右键单击） 菜单项。
+2. 通过使用关系图导出到 XPS 文件**关系图导出为图像**设计图面中的图形视图或内容模型视图的上下文 （右键单击） 菜单项。
 
      从图形视图导出关系图时，整个设计图面将导出到 XPS 文件。 当从内容模型视图导出关系图将多个节点出现在内容模型视图的设计图面上时，只有第一个节点将导出到 XPS 文件。
 
-3.  通过使用 XPS 查看器，打印在 XPS 文件中保存的图像。
+3. 通过使用 XPS 查看器，打印在 XPS 文件中保存的图像。
 
 ## <a name="see-also"></a>请参阅
 

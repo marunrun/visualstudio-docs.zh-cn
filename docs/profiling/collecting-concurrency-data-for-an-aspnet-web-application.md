@@ -1,5 +1,5 @@
 ---
-title: 使用探查器命令行收集 ASP.NET Web 应用程序的并发数据 | Microsoft Docs
+title: 使用探查器命令行获取 ASP.NET Web 应用程序并发数据
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,50 +8,49 @@ helpviewer_keywords:
 ms.assetid: 0ba431c1-9eaf-4af9-8ce0-669c0835cdc2
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 6a11614d7dbd7d72dfadcaebc4a0f789bf29c123
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d7ff0ff01e7f99592e33035c7d9502d3b83fc859
+ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53913564"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66263766"
 ---
 # <a name="collect-concurrency-data-for-an-aspnet-web-application-using-the-profiler-command-line"></a>使用探查器命令行收集 ASP.NET Web 应用程序的并发数据
-可通过 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 分析工具的并发方法收集资源争用数据。  
-  
-## <a name="common-tasks"></a>常见任务
-  
-|任务|相关内容|  
-|----------|---------------------|  
-|将探查器附加到正在运行的 ASP.NET 应用程序|-   [如何：将探查器附加到 ASP.NET 应用程序以收集并发数据](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-concurrency-data-by-using-the-command-line.md)|  
-  
-## <a name="reference"></a>参考  
- [命令行分析工具参考](../profiling/command-line-profiling-tools-reference.md)  
-  
-## <a name="related-tasks"></a>相关任务
-  
-### <a name="profile-aspnet-applications"></a>分析 ASP.NET 应用程序  
-  
-|任务|相关内容|  
-|----------|---------------------|  
-|**使用采样方法进行分析**|-   [使用采样收集应用程序统计信息](../profiling/collecting-application-statistics-for-aspnet-using-the-profiler-sampling-method.md)|  
-|**使用检测方法进行分析**|-   [使用检测收集详细计时数据](../profiling/collecting-detailed-timing-data-aspnet-profiler-instrumentation-method.md)|  
-|**分析内存分配和垃圾回收**|-   [收集内存数据](../profiling/collecting-memory-data-from-an-aspnet-web-application.md)|  
+可通过 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 分析工具的并发方法收集资源争用数据。
 
-  
-### <a name="profile-concurrency-issues"></a>分析并发问题  
-  
-|任务|相关内容|  
-|----------|---------------------|  
-|**分析独立（客户端）应用程序**|-   [收集并发数据](../profiling/collecting-concurrency-data-for-stand-alone-applications.md)|  
-|**分析服务**|-   [收集并发数据](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md)|  
-  
-### <a name="analyze-concurrency-data-views-and-reports"></a>分析并发数据视图和报告  
- [资源争用数据视图](../profiling/resource-contention-data-views.md)  
-  
- [并发可视化工具](../profiling/concurrency-visualizer.md)  
-  
-## <a name="reference"></a>参考  
- [命令行分析工具参考](../profiling/command-line-profiling-tools-reference.md)
+## <a name="common-tasks"></a>常见任务
+
+|任务|相关内容|
+|----------|---------------------|
+|将探查器附加到正在运行的 ASP.NET 应用程序|-   [如何：将探查器附加到 ASP.NET 应用程序以收集并发数据](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-concurrency-data-by-using-the-command-line.md)|
+
+## <a name="reference"></a>参考
+- [命令行分析工具参考](../profiling/command-line-profiling-tools-reference.md)
+
+## <a name="related-tasks"></a>相关任务
+
+### <a name="profile-aspnet-applications"></a>分析 ASP.NET 应用程序
+
+|任务|相关内容|
+|----------|---------------------|
+|**使用采样方法进行分析**|-   [使用采样收集应用程序统计信息](../profiling/collecting-application-statistics-for-aspnet-using-the-profiler-sampling-method.md)|
+|**使用检测方法进行分析**|-   [使用检测收集详细计时数据](../profiling/collecting-detailed-timing-data-aspnet-profiler-instrumentation-method.md)|
+|**分析内存分配和垃圾回收**|-   [收集内存数据](../profiling/collecting-memory-data-from-an-aspnet-web-application.md)|
+
+### <a name="profile-concurrency-issues"></a>分析并发问题
+
+|任务|相关内容|
+|----------|---------------------|
+|**分析独立（客户端）应用程序**|-   [收集并发数据](../profiling/collecting-concurrency-data-for-stand-alone-applications.md)|
+|**分析服务**|-   [收集并发数据](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md)|
+
+### <a name="analyze-concurrency-data-views-and-reports"></a>分析并发数据视图和报告
+- [资源争用数据视图](../profiling/resource-contention-data-views.md)
+
+- [并发可视化工具](../profiling/concurrency-visualizer.md)
+
+## <a name="reference"></a>参考
+- [命令行分析工具参考](../profiling/command-line-profiling-tools-reference.md)

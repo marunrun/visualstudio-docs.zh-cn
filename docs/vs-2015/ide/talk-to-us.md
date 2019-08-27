@@ -1,12 +1,8 @@
 ---
 title: 与我们交流 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - product support [Visual Studio]
 - Help [Visual Studio], product support
@@ -14,20 +10,18 @@ ms.assetid: e0846d4d-2ce1-48e3-b219-674ff070bf4e
 caps.latest.revision: 34
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: d046603919c0639427b29cb23cdfa6f8ea74337c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 3f3238a94f027ad27b69682ec6f797de0dbdd6d9
+ms.sourcegitcommit: 90c3187d804ad7544367829d07ed4b47d3f8a72d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49289830"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821501"
 ---
 # <a name="talk-to-us"></a>Talk to Us
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 2017 的最新文档，请参阅[与我们交流](https://docs.microsoft.com/visualstudio/ide/talk-to-us)docs.microsoft.com 上。  
-
-  
+有关 Visual Studio 的最新文档, 请参阅[与我们交流](https://docs.microsoft.com/visualstudio/ide/feedback-options)。  
 
 我们很希望了解你为改进我们的文档所提出的建议。 我们无法一一答复，但我们保证你的反馈会传达给相应的负责人。  
   
@@ -35,13 +29,13 @@ Visual Studio 2017 的最新文档，请参阅[与我们交流](https://docs.mic
  请使用我们位于页面底部的反馈按钮（“此页面是否有所帮助?”）。 所有 MSDN 页面上都有这个按钮。 如果你正在寻找某个问题的答案但却找不到，请告诉我们你想要查找的信息。  
   
 ## <a name="i-would-like-to-report-a-problem-with-visual-studio"></a>我想要报告使用 Visual Studio 的问题  
- 如果正在使用 Visual Studio 崩溃、 性能缓慢、 意外的行为等问题，请将问题报告给我们，请右键单击反馈图标旁边**快速启动**，或选择**帮助&#124;发送反馈&#124;报告的问题**主菜单中。 有关详细信息，请参阅[如何报告 Visual Studio 的问题](../ide/how-to-report-a-problem-with-visual-studio-2015.md)。  
+ 如果使用 Visual Studio (例如崩溃、性能缓慢、意外行为等) 遇到问题, 请通过右键单击 "**快速启动**" 旁边的反馈图标, 或选择 "**帮助&#124;发送" 向我们报告问题:反馈&#124;报告**主菜单中的问题。 有关详细信息，请参阅[如何报告 Visual Studio 的问题](../ide/how-to-report-a-problem-with-visual-studio-2015.md)。  
   
 ## <a name="i-want-to-make-a-suggestion-about-visual-studio-features"></a>我想提有关 Visual Studio 功能的建议  
- 如果有任何改进建议，请联系我们！ 选择“提供建议”  ，向 Visual Studio 团队提供功能或更改的建议。 你的建议将自动发布到 [UserVoice](https://visualstudio.uservoice.com) ，其他人可在这里为它投票。  
+ 如果有任何改进建议，请联系我们！ 选择“提供建议” ，向 Visual Studio 团队提供功能或更改的建议。   
   
 ## <a name="rate-this-product"></a>评价此产品  
- Visual Studio 的预发布版本具有“评价此产品”  菜单项，使你能够发送有关正在运行版本的质量反馈。 而已发布的产品版本中没有此功能。  
+ Visual Studio 的预发布版本具有“评价此产品” 菜单项，使你能够发送有关正在运行版本的质量反馈。 而已发布的产品版本中没有此功能。  
   
 ## <a name="i-need-help"></a>我需要帮助！  
  请参阅 [Microsoft 支持](http://go.microsoft.com/fwlink/?LinkID=99019) 以获取联机帮助。  

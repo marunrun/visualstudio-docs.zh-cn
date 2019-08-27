@@ -1,14 +1,9 @@
 ---
 title: AssignCulture 任务 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#AssignCulture
 dev_langs:
@@ -23,24 +18,23 @@ ms.assetid: 8f8314cc-82a6-4f16-a62d-b9f0d1d5e274
 caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: c35d949f2d3cf3924a63ce6db0e596af1fccddbd
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 23b991efaa32e2c1886e6e0cd64bb9d6181190d0
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49235646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68187043"
 ---
 # <a name="assignculture-task"></a>AssignCulture 任务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-  
 此任务接受文件名中可能包含有效 .NET 区域性标识符字符串的项的列表，并且生成包含相应的区域性标识符且名为 `Culture` 的元数据的项。 例如，文件名 Form1.fr-fr.resx 具有嵌入的区域性标识符“fr-fr”，因此该任务会生成具有相同文件名的项，其中元数据 `Culture` 为 `fr-fr`。 该任务还会生成文件名中删除了区域性的文件名列表。  
   
 ## <a name="task-parameters"></a>任务参数  
  下表描述了 `AssignCulture` 任务的参数。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |`AssignedFiles`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 包含 `Files` 参数收到的项列表，同时向每个项添加 `Culture` 元数据条目。<br /><br /> 如果来自 `Files` 参数的传入项已包含 `Culture` 元数据条目，则使用原始的元数据条目。<br /><br /> 如果文件名包含有效的区域性标识符，则该任务仅分配 `Culture` 元数据条目。 区域性标识符必须位于文件名中最后两个点之间。|  
 |`AssignedFilesWithCulture`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 包含 `AssignedFiles` 参数中具有 `Culture` 元数据条目的项的子集。|  
@@ -86,9 +80,6 @@ ms.locfileid: "49235646"
 |`OutAssignedFilesWithNoCulture`|`MyResource2.XX.resx`（无其他元数据）|  
 |`OutCultureNeutralAssignedFiles`|`MyResource1.resx (Culture="fr")`<br /><br /> `MyResource2.XX.resx (`无其他元数据）|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [任务](../msbuild/msbuild-tasks.md)   
  [任务参考](../msbuild/msbuild-task-reference.md)
-
-
-

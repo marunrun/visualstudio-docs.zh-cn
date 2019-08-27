@@ -1,7 +1,6 @@
 ---
 title: 代码片段架构参考
-ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
+ms.date: 02/25/2019
 ms.topic: reference
 helpviewer_keywords:
 - schema reference [Visual Studio]
@@ -11,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 58a60621-725f-4763-93b7-62ea5424ef88
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 55780d7e1990a9d10e504c781953cf3f95dd3dc1
-ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.openlocfilehash: e35641371ebac33c7a89426290927b6045bc4e3e
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54315587"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68924082"
 ---
 # <a name="code-snippets-schema-reference"></a>代码片段架构参考
 
@@ -41,7 +40,7 @@ IntelliSense 代码片段是预编写的代码段，可以随时使用 Visual St
 | - |-----------------|
 |[Reference 元素](../ide/code-snippets-schema-reference.md#reference-element)|包含有关代码段所需的程序集引用的信息。|
 
- 需要一个文本值。 此文本指定代码段引用的程序集。
+需要一个文本值。 此文本指定代码段引用的程序集。
 
 ## <a name="author-element"></a>Author 元素
 
@@ -57,7 +56,7 @@ IntelliSense 代码片段是预编写的代码段，可以随时使用 Visual St
 | - |-----------------|
 |[Header 元素](../ide/code-snippets-schema-reference.md#header-element)|包含有关代码段的常规信息。|
 
- 需要一个文本值。 此文本指定代码段的作者。
+需要一个文本值。 此文本指定代码段的作者。
 
 ## <a name="code-element"></a>代码元素
 
@@ -109,7 +108,7 @@ $selected$ is a great color. I love $selected$.
 
 以下三种属性可用于 Code 元素：
 
-- **语言**  -  该必选属性用于指定代码片段的语言。 值可以是下列任一值：
+- **语言**  -  该必选属性用于指定代码片段的语言  。 值可以是下列任一值：
 
    |值|说明|
    |-----|-----------|
@@ -118,10 +117,11 @@ $selected$ is a great color. I love $selected$.
    |`CPP`|标识 C++ 代码段。|
    |`XML`|标识 XML 代码段。|
    |`JavaScript`|标识 JavaScript 代码段。|
+   |`TypeScript`|标识 TypeScript 代码片段。|
    |`SQL`|标识 SQL 代码段。|
    |`HTML`|标识 HTML 代码段。|
 
-- **类型**  -  该可选属性用于指定代码片段包含的代码的类型，以及编译代码片段时代码片段必须插入的位置。 值可以是下列任一值：
+- **类型**  -  该可选属性用于指定代码片段包含的代码的类型，以及编译代码片段时代码片段必须插入的位置  。 值可以是下列任一值：
 
    |值|说明|
    |-----|-----------|
@@ -131,7 +131,7 @@ $selected$ is a great color. I love $selected$.
    |`file`|指定代码段为完整的代码文件。 这些代码段可单独插入到代码文件或命名空间中。|
    |`any`|指定代码段可插入到任何位置。 此标记可用于上下文独立的代码段（例如注释）。|
 
-- **分隔符**  -  该可选属性用于指定用于描述代码中的文本和对象的分隔符。 默认情况下，分隔符为 `$`。
+- **分隔符**  -  该可选属性用于指定用于描述代码中的文本和对象的分隔符  。 默认情况下，分隔符为 `$`。
 
 ### <a name="parent-element"></a>父元素
 
@@ -212,7 +212,7 @@ $selected$ is a great color. I love $selected$.
 |[Literal 元素](../ide/code-snippets-schema-reference.md#literal-element)|定义代码段的可编辑文本字段。|
 |[Object 元素](../ide/code-snippets-schema-reference.md#object-element)|定义代码段的可编辑对象字段。|
 
- 需要一个文本值。 此文本指定文本或对象的默认值，该默认值用于填充你可以编辑的代码段的字段。
+需要一个文本值。 此文本指定文本或对象的默认值，该默认值用于填充你可以编辑的代码段的字段。
 
 ## <a name="description-element"></a>Description 元素
 
@@ -228,7 +228,7 @@ $selected$ is a great color. I love $selected$.
 | - |-----------------|
 |[Header 元素](../ide/code-snippets-schema-reference.md#header-element)|包含有关代码段的常规信息。|
 
- 需要一个文本值。 此文本描述代码段。
+需要一个文本值。 此文本描述代码段。
 
 ## <a name="function-element"></a>Function 元素
 
@@ -248,7 +248,7 @@ $selected$ is a great color. I love $selected$.
 |[Literal 元素](../ide/code-snippets-schema-reference.md#literal-element)|定义代码段的可编辑文本字段。|
 |[Object 元素](../ide/code-snippets-schema-reference.md#object-element)|定义代码段的可编辑对象字段。|
 
- 需要一个文本值。 此文本指定当文本或对象字段在 Visual Studio 中获得焦点时要执行的函数。
+需要一个文本值。 此文本指定当文本或对象字段在 Visual Studio 中获得焦点时要执行的函数。
 
 ## <a name="header-element"></a>Header 元素
 
@@ -268,12 +268,12 @@ $selected$ is a great color. I love $selected$.
 
 |子元素|说明|
 |-------------------|-----------------|
-|[Author 元素](../ide/code-snippets-schema-reference.md#author-element)|可选元素。 编写代码段的人员或公司的姓名或名称。 `Author` 元素中可能有零个或一个 `Header` 元素。|
-|[Description 元素](../ide/code-snippets-schema-reference.md#description-element)|可选元素。 代码段说明。 `Description` 元素中可能有零个或一个 `Header` 元素。|
+|[Author 元素](../ide/code-snippets-schema-reference.md#author-element)|可选元素。 编写代码段的人员或公司的姓名或名称。 `Header` 元素中可能有零个或一个 `Author` 元素。|
+|[Description 元素](../ide/code-snippets-schema-reference.md#description-element)|可选元素。 代码段说明。 `Header` 元素中可能有零个或一个 `Description` 元素。|
 |[HelpUrl 元素](../ide/code-snippets-schema-reference.md#helpurl-element)|可选元素。 包含有关代码段的详细信息的 URL。 Header 元素中可能有零个或一个 `HelpURL` 元素。 **注意：** Visual Studio 不使用 `HelpUrl` 元素。 该元素是 IntelliSense 代码段 XML 架构的一部分，包含该元素的任何代码段将进行验证，但是从不使用该元素的值。|
-|[Keywords 元素](../ide/code-snippets-schema-reference.md#keywords-element)|可选元素。 对 `Keyword` 元素进行分组。 `Keywords` 元素中可能有零个或一个 `Header` 元素。|
-|[Shortcut 元素](../ide/code-snippets-schema-reference.md#shortcut-element)|可选元素。 指定可用于插入代码段的快捷方式文本。 `Shortcut` 元素中可能有零个或一个 `Header` 元素。|
-|[SnippetTypes 元素](../ide/code-snippets-schema-reference.md#snippettypes-element)|可选元素。 对 `SnippetType` 元素进行分组。 `SnippetTypes` 元素中可能有零个或一个 `Header` 元素。 如果没有 `SnippetTypes` 元素，代码段将一直有效。|
+|[Keywords 元素](../ide/code-snippets-schema-reference.md#keywords-element)|可选元素。 对 `Keyword` 元素进行分组。 `Header` 元素中可能有零个或一个 `Keywords` 元素。|
+|[Shortcut 元素](../ide/code-snippets-schema-reference.md#shortcut-element)|可选元素。 指定可用于插入代码段的快捷方式文本。 `Header` 元素中可能有零个或一个 `Shortcut` 元素。|
+|[SnippetTypes 元素](../ide/code-snippets-schema-reference.md#snippettypes-element)|可选元素。 对 `SnippetType` 元素进行分组。 `Header` 元素中可能有零个或一个 `SnippetTypes` 元素。 如果没有 `SnippetTypes` 元素，代码段将一直有效。|
 |[Title 元素](../ide/code-snippets-schema-reference.md#title-element)|必需的元素。 代码段的友好名称。 `Title` 元素中必须有且仅有一个 `Header` 元素。|
 
 |父元素|说明|
@@ -320,9 +320,6 @@ $selected$ is a great color. I love $selected$.
 
 指定 IntelliSense 代码段使用的导入的命名空间。
 
-> [!NOTE]
-> 只有 Visual Basic 项目支持 `Import` 元素。
-
 ```xml
 <Import>
     <Namespace>... </Namespace>
@@ -340,9 +337,6 @@ $selected$ is a great color. I love $selected$.
 ## <a name="imports-element"></a>Imports 元素
 
 对单个 `Import` 元素进行分组。
-
-> [!NOTE]
-> 只有 Visual Basic 项目支持 `Imports` 元素。
 
 ```xml
 <Imports>
@@ -415,7 +409,7 @@ $selected$ is a great color. I love $selected$.
 |子元素|说明|
 |-------------------|-----------------|
 |[Default 元素](../ide/code-snippets-schema-reference.md#default-element)|必需的元素。 指定插入代码段时文本的默认值。 `Default` 元素中必须有且仅有一个 `Literal` 元素。|
-|[Function 元素](../ide/code-snippets-schema-reference.md#function-element)|可选元素。 指定当文本在 Visual Studio 中获得焦点时要执行的函数。 `Function` 元素中可能有零个或一个 `Literal` 元素。|
+|[Function 元素](../ide/code-snippets-schema-reference.md#function-element)|可选元素。 指定当文本在 Visual Studio 中获得焦点时要执行的函数。 `Literal` 元素中可能有零个或一个 `Function` 元素。|
 |[ID 元素](../ide/code-snippets-schema-reference.md#id-element)|必需的元素。 指定文本的唯一标识符。 `ID` 元素中必须有且仅有一个 `Literal` 元素。|
 |[ToolTip 元素](../ide/code-snippets-schema-reference.md#tooltip-element)|可选元素。 描述文本的预期值和用法。 `Literal` 元素中可能有零个或一个 **Tooltip** 元素。|
 
@@ -425,10 +419,7 @@ $selected$ is a great color. I love $selected$.
 
 ## <a name="namespace-element"></a>Namespace 元素
 
-指定使代码段能够正常编译和运行而必须导入的命名空间。 如果尚不存在命名空间，系统会将 `Namespace` 元素中指定的命名空间自动添加到代码起始位置处的 `Imports` 语句中。
-
-> [!NOTE]
-> 只有 Visual Basic 项目支持 `Namespace` 元素。
+指定使代码段能够正常编译和运行而必须导入的命名空间。 如果尚不存在命名空间，系统会将 `Namespace` 元素中指定的命名空间自动添加到代码起始位置处的 `using` 指令或 `Imports` 语句中。
 
 ```xml
 <Namespace>
@@ -463,7 +454,7 @@ $selected$ is a great color. I love $selected$.
 |子元素|说明|
 |-------------------|-----------------|
 |[Default 元素](../ide/code-snippets-schema-reference.md#default-element)|必需的元素。 指定插入代码段时文本的默认值。 `Default` 元素中必须有且仅有一个 `Literal` 元素。|
-|[Function 元素](../ide/code-snippets-schema-reference.md#function-element)|可选元素。 指定当文本在 Visual Studio 中获得焦点时要执行的函数。 `Function` 元素中可能有零个或一个 `Literal` 元素。|
+|[Function 元素](../ide/code-snippets-schema-reference.md#function-element)|可选元素。 指定当文本在 Visual Studio 中获得焦点时要执行的函数。 `Literal` 元素中可能有零个或一个 `Function` 元素。|
 |[ID 元素](../ide/code-snippets-schema-reference.md#id-element)|必需的元素。 指定文本的唯一标识符。 `ID` 元素中必须有且仅有一个 `Literal` 元素。|
 |[ToolTip 元素](../ide/code-snippets-schema-reference.md#tooltip-element)|可选元素。 描述文本的预期值和用法。 `Literal` 元素中可能有零个或一个 **Tooltip** 元素。|
 |[Type 元素](../ide/code-snippets-schema-reference.md#type-element)|必需的元素。 指定对象的类型。 `Type` 元素中必须有且仅有一个 `Object` 元素。|
@@ -486,7 +477,7 @@ $selected$ is a great color. I love $selected$.
 |子元素|说明|
 |-------------------|-----------------|
 |[Assembly 元素](../ide/code-snippets-schema-reference.md#assembly-element)|必需的元素。 包含代码段引用的程序集的名称。 `Assembly` 元素中必须有且仅有一个 `Reference` 元素。|
-|[Url 元素](../ide/code-snippets-schema-reference.md#url-element)|可选元素。 包含一个提供有关所引用程序集的详细信息的 URL。 `Url` 元素中可能有零个或一个 `Reference` 元素。|
+|[Url 元素](../ide/code-snippets-schema-reference.md#url-element)|可选元素。 包含一个提供有关所引用程序集的详细信息的 URL。 `Reference` 元素中可能有零个或一个 `Url` 元素。|
 
 |父元素|说明|
 | - |-----------------|
@@ -527,7 +518,7 @@ $selected$ is a great color. I love $selected$.
 | - |-----------------|
 |[Header 元素](../ide/code-snippets-schema-reference.md#header-element)|包含有关代码段的常规信息。|
 
- 文本值是可选的。 此文本可作为插入代码段的快捷方式使用。
+文本值是可选的。 此文本可作为插入代码段的快捷方式使用。
 
 ## <a name="snippet-element"></a>Snippet 元素
 
@@ -545,9 +536,9 @@ $selected$ is a great color. I love $selected$.
 |子元素|说明|
 |-------------------|-----------------|
 |[Code 元素](../ide/code-snippets-schema-reference.md#code-element)|必需的元素。 指定要插入到文档文件中的代码。 `Code` 元素中必须有且仅有一个 `Snippet` 元素。|
-|[Declarations 元素](../ide/code-snippets-schema-reference.md#declarations-element)|可选元素。 指定作为某个代码段组成部分的文本和对象，你可以对该代码段进行编辑。 `Declarations` 元素中可能有零个或一个 `Snippet` 元素。|
-|[Imports 元素](../ide/code-snippets-schema-reference.md#imports-element)|可选元素。 对单个 `Import` 元素进行分组。 `Imports` 元素中可能有零个或一个 `Snippet` 元素。|
-|[References 元素](../ide/code-snippets-schema-reference.md#references-element)|可选元素。 对单个 `Reference` 元素进行分组。 `References` 元素中可能有零个或一个 `Snippet` 元素。|
+|[Declarations 元素](../ide/code-snippets-schema-reference.md#declarations-element)|可选元素。 指定作为某个代码段组成部分的文本和对象，你可以对该代码段进行编辑。 `Snippet` 元素中可能有零个或一个 `Declarations` 元素。|
+|[Imports 元素](../ide/code-snippets-schema-reference.md#imports-element)|可选元素。 对单个 `Import` 元素进行分组。 `Snippet` 元素中可能有零个或一个 `Imports` 元素。|
+|[References 元素](../ide/code-snippets-schema-reference.md#references-element)|可选元素。 对单个 `Reference` 元素进行分组。 `Snippet` 元素中可能有零个或一个 `References` 元素。|
 
 |父元素|说明|
 | - |-----------------|
@@ -569,11 +560,11 @@ $selected$ is a great color. I love $selected$.
 
 此文本值必须为以下值之一：
 
--   `SurroundsWith`：允许将代码段放置在一段选定的代码周围。
+- `SurroundsWith`：允许将代码段放置在一段选定的代码周围。
 
--   `Expansion`：允许将代码段插入到光标处。
+- `Expansion`：允许将代码段插入到光标处。
 
--   `Refactoring`：指定在 C# 重构过程中使用代码片段。 不能在自定义代码段中使用 `Refactoring`。
+- `Refactoring`：指定在 C# 重构过程中使用代码片段。 不能在自定义代码段中使用 `Refactoring`。
 
 ## <a name="snippettypes-element"></a>SnippetTypes 元素
 
@@ -608,7 +599,7 @@ $selected$ is a great color. I love $selected$.
 | - |-----------------|
 |[Header 元素](../ide/code-snippets-schema-reference.md#header-element)|指定有关代码段的常规信息。|
 
- 需要一个文本值。 此文本指定代码段的标题。
+需要一个文本值。 此文本指定代码段的标题。
 
 ## <a name="tooltip-element"></a>ToolTip 元素
 
@@ -625,7 +616,7 @@ $selected$ is a great color. I love $selected$.
 |[Literal 元素](../ide/code-snippets-schema-reference.md#literal-element)|定义代码段的可编辑文本字段。|
 |[Object 元素](../ide/code-snippets-schema-reference.md#object-element)|定义代码段的可编辑对象字段。|
 
- 需要一个文本值。 此文本指定要与代码段中的对象或文本关联的工具提示说明。
+需要一个文本值。 此文本指定要与代码段中的对象或文本关联的工具提示说明。
 
 ## <a name="type-element"></a>Type 元素
 
@@ -641,7 +632,11 @@ $selected$ is a great color. I love $selected$.
 | - |-----------------|
 |[Object 元素](../ide/code-snippets-schema-reference.md#object-element)|定义代码段的可编辑对象字段。|
 
- 需要一个文本值。 此文本指定对象的类型。
+需要一个文本值。 此文本指定对象的类型。 例如:
+
+```xml
+<Type>System.Data.SqlClient.SqlConnection</Type>
+```
 
 ## <a name="url-element"></a>Url 元素
 

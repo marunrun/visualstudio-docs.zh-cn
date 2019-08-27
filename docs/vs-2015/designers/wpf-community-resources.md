@@ -1,24 +1,20 @@
 ---
 title: WPF 社区资源 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: 89604bcf-da25-4180-a1d2-c5f22ab67bb6
 caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 7ebfbc4d20de9cb540fdfcd9362de2280933a37c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 63a4e207172d4f726091691985e7d1f84bb2e708
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53832172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68187454"
 ---
 # <a name="wpf-community-resources"></a>WPF 社区资源
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,6 +32,6 @@ Microsoft 公开各种社区资源以便于你了解、讨论 Windows Presentati
 
  [Windows Presentation Foundation 开发人员中心](https://www.visualstudio.com/features/wpf-vs)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 Windows Presentation Foundation 创建新式桌面应用程序](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)

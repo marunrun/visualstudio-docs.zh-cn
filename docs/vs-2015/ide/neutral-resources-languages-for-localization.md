@@ -1,14 +1,9 @@
 ---
 title: 用于本地化的非特定资源语言 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - localization [Visual Studio], resources
 - NeutralResourcesLanguageAttribute class
@@ -20,13 +15,13 @@ ms.assetid: ef064995-3b84-4698-a708-9689b7723533
 caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 45fadacc75b2772ba32d7cb0d796c972076b81ef
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: da39ed9373daaa1dbef21ad36931ce97ea1f1e1b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49256684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62558263"
 ---
 # <a name="neutral-resources-languages-for-localization"></a>用于本地化的非特定资源语言
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,4 +47,3 @@ ms.locfileid: "49256684"
  [用于本地化的资源的分层组织](../ide/hierarchical-organization-of-resources-for-localization.md)   
  [本地化应用程序](../ide/localizing-applications.md)   
  [对应用程序进行全球化和本地化](../ide/globalizing-and-localizing-applications.md)
-

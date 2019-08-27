@@ -1,7 +1,6 @@
 ---
 title: 以管理员身份运行
 ms.date: 06/05/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio, user permissions
@@ -10,15 +9,15 @@ helpviewer_keywords:
 - permissions
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 14d82825d9f1db2cd95222f4722d19b2f9347186
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 1d012c0902aa82eb057f9d69c0b85b13262e847a
+ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53833586"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66747622"
 ---
 # <a name="user-permissions-and-visual-studio"></a>用户权限与 Visual Studio
 
@@ -33,8 +32,8 @@ ms.locfileid: "53833586"
 |----------|----------| - |
 |安装|安装 Visual Studio。|[安装 Visual Studio](../install/install-visual-studio.md)|
 ||安装、更新或删除本地帮助内容。|[安装和管理本地帮助内容](../help-viewer/install-manage-local-content.md)|
-|工具箱|将经典 COM 控件添加到“工具箱”。|[工具箱](../ide/reference/toolbox.md)|
-|生成|使用注册组件的生成后事件。|[了解自定义生成步骤和生成事件](/cpp/ide/understanding-custom-build-steps-and-build-events)|
+|工具箱|将经典 COM 控件添加到“工具箱”  。|[工具箱](../ide/reference/toolbox.md)|
+|生成|使用注册组件的生成后事件。|[了解自定义生成步骤和生成事件](/cpp/build/understanding-custom-build-steps-and-build-events)|
 ||在生成 C++ 项目时包括一个注册步骤。||
 |调试|调试使用提升的权限运行的应用程序。|[调试器设置和准备](../debugger/debugger-settings-and-preparation.md)|
 ||调试在其他用户帐户下运行的应用程序，例如 ASP.NET 网站。|[调试 ASP.NET 和 AJAX 应用程序](../debugger/how-to-enable-debugging-for-aspnet-applications.md)|
@@ -51,11 +50,25 @@ ms.locfileid: "53833586"
 > [!NOTE]
 > 这些说明适用于Windows 10。 它们与其他版本的 Windows 类似。
 
-1. 打开“开始”菜单，并滚动到 Visual Studio 2017。
+::: moniker range="vs-2017"
 
-1. 从右键菜单或从 Visual Studio 2017 的上下文菜单中，依次选择“更多” > “以管理员身份运行”。
+1. 打开“开始”  菜单，并滚动到 Visual Studio 2017。
 
-   Visual Studio 启动时，标题栏的产品名后显示“(管理员)”。
+1. 从右键单击或 Visual Studio 2017 的上下文菜单中，依次选择“更多”>“以管理员身份运行”    。
+
+   Visual Studio 启动时，标题栏的产品名后显示“(管理员)”  。
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+1. 打开“开始”菜单，并滚动到 Visual Studio 2019  。
+
+1. 从右键单击或 Visual Studio 2019 的上下文菜单中，依次选择“更多”>“以管理员身份运行”    。
+
+   Visual Studio 启动时，标题栏的产品名后显示“(管理员)”  。
+
+::: moniker-end
 
 此外可以修改应用程序快捷方式，以便始终利用管理权限运行。
 

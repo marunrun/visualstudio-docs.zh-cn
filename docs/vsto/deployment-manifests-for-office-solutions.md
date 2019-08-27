@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Office development in Visual Studio, deployment manifests
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8e2b45ac44cafd757aaa4ff96c97995c88ab10ed
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 3c96f0d87f5a49add1f0e8cebb61bab9659277e6
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53835378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62972390"
 ---
 # <a name="deployment-manifests-for-office-solutions"></a>Office 解决方案的部署清单
   部署清单是 XML 文件，用于描述 Office 解决方案的部署设置，并标识当前应用程序版本。

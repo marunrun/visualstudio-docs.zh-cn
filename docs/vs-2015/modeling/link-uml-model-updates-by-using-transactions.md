@@ -1,25 +1,22 @@
 ---
 title: 通过使用事务链接 UML 模型更新 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 helpviewer_keywords:
 - UML API, transactions
 ms.assetid: a1df6c38-a3d1-4a3f-82bc-c8f363ab916e
 caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: fb8bb5dfd5238871324b786f120d618d70f14b43
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: f938e08d2bc9363be5e3f9e1ac247dea36f25a80
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51800401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68191718"
 ---
 # <a name="link-uml-model-updates-by-using-transactions"></a>使用事务链接 UML 模型更新
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,7 +32,7 @@ ms.locfileid: "51800401"
 ## <a name="to-group-changes-into-a-single-transaction"></a>将更改分组到单个事务中  
  确保你的项目引用包含该 .NET 程序集：  
   
- **Microsoft.VisualStudio.Modeling.Sdk。[版本].dll**  
+ **Microsoft.VisualStudio.Modeling.Sdk.[version].dll**  
   
  在你的类内部，声明具有类型 <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ILinkedUndoContext> 的导入属性 ：  
   
@@ -65,15 +62,15 @@ ms.locfileid: "51800401"
   
  注意下列事项：  
   
--   必须始终在事务结束时包括 `Commit()`。 如果在不提交的情况下释放事务，则事务将回滚。 也就是说，该模型将还原到其事务开始时的状态。  
+- 必须始终在事务结束时包括 `Commit()`。 如果在不提交的情况下释放事务，则事务将回滚。 也就是说，该模型将还原到其事务开始时的状态。  
   
--   如果发生在事务内未捕获到的异常，则事务将回滚。 这是一种常见的模式，用于将 `using` 事务块包括到 `try…catch`块中。  
+- 如果发生在事务内未捕获到的异常，则事务将回滚。 这是一种常见的模式，用于将 `using` 事务块包括到 `try…catch`块中。  
   
--   你可以嵌套事务。  
+- 你可以嵌套事务。  
   
--   你可以向 `BeginTransaction()` 提供任何非空白名称。  
+- 你可以向 `BeginTransaction()` 提供任何非空白名称。  
   
--   仅 UML 模型存储区受这些事务影响。 建模事务不会影响：变量、外部存储（如文件和数据库）、层关系图和模型代码。  
+- 仅 UML 模型存储区受这些事务影响。 建模事务不会影响：变量、外部存储（如文件和数据库）、层关系图和模型代码。  
   
 ## <a name="example"></a>示例  
   
@@ -115,6 +112,3 @@ ms.locfileid: "51800401"
  [使用 UML API 编程](../modeling/programming-with-the-uml-api.md)   
  [在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)   
  [扩展 UML 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)
-
-
-

@@ -1,14 +1,9 @@
 ---
-title: IDebugCoreServer2::GetMachineUtilities_V7 |Microsoft Docs
-ms.custom: ''
+title: IDebugCoreServer2::GetMachineUtilities_V7 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - IDebugCoreServer2::GetMachineUtilities_V7
 helpviewer_keywords:
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 64c1f08f-853b-4498-9810-29791581ef2f
 caps.latest.revision: 18
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 2e9c35354a9325854a3b30fbb0fc64a59989796d
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 131f5a5f276b3f93d2ede3d088556b6832cc3651
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51779380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63445288"
 ---
 # <a name="idebugcoreserver2getmachineutilitiesv7"></a>IDebugCoreServer2::GetMachineUtilities_V7
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -30,7 +25,7 @@ ms.locfileid: "51779380"
 此方法获取服务器的计算机实用程序。  
   
 > [!NOTE]
->  此方法已过时： 不要使用 ([!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]始终返回`E_NOTIMPL`如果调用此方法)。 保留历史原因。  
+> 此方法已过时： 不要使用 ([!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]始终返回`E_NOTIMPL`如果调用此方法)。 保留历史原因。  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,4 +53,3 @@ int GetMachineUtilities_V7(
   
 ## <a name="see-also"></a>请参阅  
  [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)
-

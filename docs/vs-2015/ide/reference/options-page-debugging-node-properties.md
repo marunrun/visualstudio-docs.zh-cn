@@ -1,36 +1,30 @@
 ---
 title: “选项”页 ->“调试”节点属性 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 ms.assetid: 564cc8b2-0084-420e-b560-200cc5621a7e
 caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 8bcc4637ebb933c2d6cc8a06d15ad70c1fbb76c1
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: bd02ae0c3cd9f05e817e335b942a76c849655e44
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49223843"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65674733"
 ---
 # <a name="options-page-debugging-node-properties"></a>“选项”页 ->“调试”节点属性
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 下表描述了与“选项”对话框的“调试”类别 `DTE.Properties("Debugging", <Property Page>)` 关联的页面（或属性集合）。  
   
 ## <a name="general"></a>常规  
  `DTE.Properties("Debugging", "General")`  
   
-|属性项名称|“值”|描述|  
+|属性项名称|值|说明|  
 |------------------------|-----------|-----------------|  
 |PromptOnBreakpointDelete|Get/Set (Boolean)|确定调试器是否在删除项目中的所有断点之前请示授权。|  
 |BreakAllProcesses|Get/Set (Boolean)|确定调试器是否在单个进程中断时中断所有进程。|  
@@ -60,7 +54,7 @@ ms.locfileid: "49223843"
 ## <a name="edit-and-continue"></a>编辑并继续  
  `DTE.Properties("Debugging", "EditAndContinue")`  
   
-|属性项名称|“值”|描述|  
+|属性项名称|值|说明|  
 |------------------------|-----------|-----------------|  
 |EnableEditAndContinue|Get/Set (Boolean)|确定是否启用“编辑并继续”。 此选项适用于所有支持“编辑并继续”的语言。|  
 |InvokedByCommands|Get/Set (Boolean)|确定当用户选择调试命令（例如“单步执行”或“继续”）时，是否自动将“编辑并继续”应用代码更改。 此选项仅适用于本机代码。|  
@@ -72,7 +66,7 @@ ms.locfileid: "49223843"
 ## <a name="just-in-time"></a>实时  
  `DTE.Properties("Debugging", "JustInTime")`  
   
-|属性项名称|“值”|描述|  
+|属性项名称|值|说明|  
 |------------------------|-----------|-----------------|  
 |JitManaged|Get/Set (Boolean)|确定是否为托管代码启用实时调试。|  
 |JitNative|Get/Set (Boolean)|确定是否为本机代码启用实时调试。|  
@@ -81,19 +75,16 @@ ms.locfileid: "49223843"
 ## <a name="native"></a>Native  
  `DTE.Properties("Debugging", "Native")`  
   
-|属性项名称|“值”|描述|  
+|属性项名称|值|说明|  
 |------------------------|-----------|-----------------|  
 |LoadDllExports|Get/Set (Boolean)|确定调试器是否加载 DLL 导出表。|  
 |EnableRPC|Get/Set (Boolean)|确定调试器是否可以单步执行 COM 远程过程调用。|  
   
 ## <a name="see-also"></a>请参阅  
- [控制选项设置](http://msdn.microsoft.com/library/a09ed242-7494-4cde-bbd1-7a8ec617965d)   
- [确定“选项”页中属性项的名称](http://msdn.microsoft.com/library/d450422d-47c7-4eeb-9f9f-3286264bc5aa)   
+ [控制选项设置](https://msdn.microsoft.com/library/a09ed242-7494-4cde-bbd1-7a8ec617965d)   
+ [确定“选项”页中属性项的名称](https://msdn.microsoft.com/library/d450422d-47c7-4eeb-9f9f-3286264bc5aa)   
  [“选项”页 ->“字体和颜色”节点属性](../../ide/reference/options-page-fonts-and-colors-node-properties.md)   
  [“选项”页 ->“文本编辑器”节点属性](../../ide/reference/options-page-text-editor-node-properties.md)   
  [“选项”对话框 ->“调试”->“常规”](../../debugger/general-debugging-options-dialog-box.md)   
- [“选项”对话框 ->“调试”->“编辑并继续”](http://msdn.microsoft.com/library/009d225f-ef65-463f-a146-e4c518f86103)   
+ [“选项”对话框 ->“调试”->“编辑并继续”](https://msdn.microsoft.com/library/009d225f-ef65-463f-a146-e4c518f86103)   
  [“选项”对话框 ->“调试”->“实时”](../../debugger/just-in-time-debugging-options-dialog-box.md)
-
-
-

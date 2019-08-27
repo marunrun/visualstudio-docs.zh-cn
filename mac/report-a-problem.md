@@ -2,16 +2,16 @@
 title: 报告 Visual Studio for Mac 的问题
 description: 如何提出建议或报告使用 Visual Studio for Mac 时遇到的问题。
 ms.topic: troubleshooting
-author: jmatthiesen
-ms.author: jomatthi
-ms.date: 11/16/2018
+author: therealjohn
+ms.author: johmil
+ms.date: 06/18/2019
 ms.assetid: 1C7AC52E-754E-473F-A5B5-00C3A40DAACD
-ms.openlocfilehash: 510bdac23b29289687441b8a82620a1cede7542b
-ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
+ms.openlocfilehash: 2b5fd2fd115c4461659ba1b4f211e645367851d2
+ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51948824"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67691228"
 ---
 # <a name="how-to-report-a-problem-in-visual-studio-for-mac"></a>如何报告 Visual Studio for Mac 的问题
 
@@ -21,17 +21,17 @@ ms.locfileid: "51948824"
 
 若要报告 Visual Studio for Mac 的问题，最佳选择是从 Visual Studio for Mac 启动报告。 通过 Visual Studio for Mac 进行报告可在报告中自动包含诊断信息。 如果无法使用 Visual Studio for Mac（例如，崩溃），则可以直接在[开发人员社区](https://developercommunity.visualstudio.com/content/problem/post.html?space=41)网站上报告该问题。
 
-若要报告 Visual Studio for Mac 的问题，请从菜单栏中选择“帮助”>“报告问题”：
+若要报告 Visual Studio for Mac 的问题，请从菜单栏中选择“帮助”>“报告问题”  ：
 
 ![“报告问题”链接](media/report-problem-image1.png)
 
-1. 如果未登录，选择“登录”；它位于工具右侧，如下面的屏幕截图中所示。 按照屏幕上的说明登录。
+1. 如果未登录，选择“登录”  ；它位于工具右侧，如下面的屏幕截图中所示。 按照屏幕上的说明登录。
 
     ![带有“登录”按钮的对话框](media/report-problem-image2.png)
 
     登录后，可以报告遇到的问题。 此外，还可以对上面发布的任何其他问题投票或发表评论。
 
-1. 登录后，你将能够在“关注的问题和解决方案”屏幕中查看所报告的问题和解决方案
+1. 登录后，你将能够在“关注的问题和解决方案”屏幕中查看所报告的问题和解决方案 
 
     ![报告的问题列表](media/report-problem-image3.png)
 
@@ -41,10 +41,7 @@ ms.locfileid: "51948824"
 
    ![搜索类似的问题并为其投票](media/report-problem-image4.png)
 
-1. 如果未找到所遇到的问题，请选择屏幕一侧的“报告新问题”。
-
-   > [!NOTE]
-   > “报告新问题”按钮仅出现在开发人员社区的 Visual Studio for Mac 界面中。 无法直接在[开发人员社区](https://developercommunity.visualstudio.com/)网站上报告问题。
+1. 如果未找到所遇到的问题，请选择屏幕一侧的“报告新问题”  。
 
 1. 为此问题创建一个描述性标题，帮助我们将其发送到正确的 Visual Studio for Mac 团队。
 
@@ -52,13 +49,13 @@ ms.locfileid: "51948824"
 
    ![报告新问题](media/report-problem-image5.png)
 
-1. 选择“下一步”，移至“包括附件”选项卡。在此处，可截取当前屏幕并将其发送给 Microsoft。 若要附加日志文件，请单击![附加日志](media/report-problem-attach-logs.png)图标，或若要附加其他屏幕截图和其他文件，请单击![附加文件](media/report-problem-attach-file.png)图标。
+1. 选择“下一步”，移至“包括附件”选项卡   。在此处，可截取当前屏幕并将其发送给 Microsoft。 若要附加日志文件，请单击![附加日志](media/report-problem-attach-logs.png)图标，或若要附加其他屏幕截图和其他文件，请单击![附加文件](media/report-problem-attach-file.png)图标。
 
    ![将屏幕截图附加到 Visual Studio for Mac 问题报告](media/report-problem-image6.png)
 
-1. 单击“提交”发送报告，以及任何图像和日志文件。
+1. 单击“提交”发送报告，以及任何图像和日志文件  。
 
-   有关所收集数据的信息，请参阅[我们收集的数据](/visualstudio/ide/developer-community-privacy.md#data-we-collect)。
+   有关所收集数据的信息，请参阅[我们收集的数据](/visualstudio/ide/developer-community-privacy#data-we-collect)。
 
 ## <a name="search-for-solutions-or-provide-feedback"></a>搜索解决方案或提供反馈
 

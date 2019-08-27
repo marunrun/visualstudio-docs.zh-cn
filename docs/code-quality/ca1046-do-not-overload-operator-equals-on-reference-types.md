@@ -1,7 +1,6 @@
 ---
 title: CA1046:不要对引用类型重载相等运算符
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - DoNotOverloadOperatorEqualsOnReferenceTypes
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: c1dfbfe3-63f9-4005-a81a-890427b77e79
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 14229e6f73e93aa1ca4323ba12d965270e3228cb
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d765bfda87fe184256304b86f145f4f02adb7db6
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53904729"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68922633"
 ---
 # <a name="ca1046-do-not-overload-operator-equals-on-reference-types"></a>CA1046:不要对引用类型重载相等运算符
 
@@ -32,25 +31,25 @@ ms.locfileid: "53904729"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 公共或嵌套公共引用类型重载相等运算符。
+公共或嵌套公共引用类型重载相等运算符。
 
 ## <a name="rule-description"></a>规则说明
- 对于引用类型，相等运算符的默认实现几乎始终是正确的。 默认情况下，仅当两个引用指向同一对象时，它们才相等。
+对于引用类型，相等运算符的默认实现几乎始终是正确的。 默认情况下，仅当两个引用指向同一对象时，它们才相等。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复此规则的冲突，请删除相等运算符的实现。
+若要修复与此规则的冲突, 请删除相等运算符的实现。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 它可以安全地禁止显示此规则的警告时引用类型的行为类似于内置值类型。 如果它是类型的有意义，若要执行相加或相减实例，则可能是类型的正确实现相等运算符，并禁止显示冲突。
+当引用类型的行为与内置值类型相同时, 可以安全地禁止显示此规则发出的警告。 如果在该类型的实例上执行加法或减法运算是有意义的, 则实现相等运算符并取消此冲突可能是正确的。
 
 ## <a name="example"></a>示例
- 比较两个引用时，下面的示例演示默认行为。
+下面的示例演示了在比较两个引用时的默认行为。
 
- [!code-csharp[FxCop.Design.RefTypesNoEqualityOp#1](../code-quality/codesnippet/CSharp/ca1046-do-not-overload-operator-equals-on-reference-types_1.cs)]
+[!code-csharp[FxCop.Design.RefTypesNoEqualityOp#1](../code-quality/codesnippet/CSharp/ca1046-do-not-overload-operator-equals-on-reference-types_1.cs)]
 
 ## <a name="example"></a>示例
 
-下面的应用程序将一些引用进行比较。
+以下应用程序比较一些引用。
 
 [!code-csharp[FxCop.Design.TestRefTypesNoEqualityOp#1](../code-quality/codesnippet/CSharp/ca1046-do-not-overload-operator-equals-on-reference-types_2.cs)]
 
@@ -63,9 +62,9 @@ b and a are == ? No
 c and a are == ? Yes
 ```
 
-## <a name="related-rules"></a>相关的规则
+## <a name="related-rules"></a>相关规则
 
-[CA1013:重载相等运算符，加法和减法](../code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract.md)
+[CA1013重载加法和减法时重载运算符 equals](../code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract.md)
 
 ## <a name="see-also"></a>请参阅
 

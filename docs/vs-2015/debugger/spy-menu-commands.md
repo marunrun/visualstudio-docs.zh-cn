@@ -1,27 +1,22 @@
 ---
 title: 监视菜单命令 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Spy menu commands
 ms.assetid: 802549be-dbd8-4df0-a18b-971900eaa769
 caps.latest.revision: 7
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: b025feb66de9c533f6a291db3772c1b8f6f696b8
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: eb8ecf72e83f12900db77b912d66ff28493ca98e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51780264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68153847"
 ---
 # <a name="spy-menu-commands"></a>“监视”菜单命令
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,8 +38,5 @@ ms.locfileid: "51780264"
  **查找窗口**  
  显示**FindWindow**对话框可以使用鼠标选择窗口。  
   
- **Exit**  
+ <bpt id="p1">**</bpt>Exit<ept id="p1">**</ept>  
  关闭 Spy + + 实用程序。
-
-
-

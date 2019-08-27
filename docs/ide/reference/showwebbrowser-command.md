@@ -1,7 +1,6 @@
 ---
 title: ShowWebBrowser 命令
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - view.showwebbrowser
@@ -11,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: c6a4fbd6-8e9d-45cc-8b2f-93990d065e78
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: df5983b0cbc33abe0f5919a93af1450394134a99
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 14e2d6f2c753c56d1628d20e921b7dff2aa83471
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53985818"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68926010"
 ---
 # <a name="showwebbrowser-command"></a>ShowWebBrowser 命令
 
@@ -32,30 +31,30 @@ View.ShowWebBrowser URL [/new][/ext]
 ```
 
 ## <a name="arguments"></a>自变量
- `URL`
+`URL`
 
- 必需。 网站的 URL（统一资源定位器）。
+必需。 网站的 URL（统一资源定位器）。
 
 ## <a name="switches"></a>开关
- /new
+/new
 
- 可选。 指定在 Web 浏览器的新实例中显示页。
+可选。 指定在 Web 浏览器的新实例中显示页。
 
- /ext
+/ext
 
- 可选。 指定在 IDE 外部的默认 Web 浏览器中显示页。
+可选。 指定在 IDE 外部的默认 Web 浏览器中显示页。
 
 ## <a name="remarks"></a>备注
- ShowWebBrowser 命令的别名是“导航”或“nav”。
+ShowWebBrowser 命令的别名是“导航”或“nav”    。
 
 ## <a name="example"></a>示例
- 以下示例显示在 IDE 外部的 Web 浏览器中的 Microsoft Docs 主页。 如果 Web 浏览器的实例已打开，则使用它；否则启动一个新实例。
+以下示例显示在 IDE 外部的 Web 浏览器中的 Microsoft Docs 主页。 如果 Web 浏览器的实例已打开，则使用它；否则启动一个新实例。
 
 ```cmd
 >View.ShowWebBrowser https://docs.microsoft.com /ext
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)
 - [“命令”窗口](../../ide/reference/command-window.md)

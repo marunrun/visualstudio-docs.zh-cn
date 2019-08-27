@@ -2,18 +2,17 @@
 title: 在 Visual Studio 中的工作区文件上下文 |Microsoft Docs
 ms.date: 02/21/2018
 ms.topic: conceptual
-ms.assetid: 7aaa0e65-f492-49ea-a845-35bd14910ca7
 author: vukelich
 ms.author: svukel
 manager: viveis
 ms.workload:
 - vssdk
-ms.openlocfilehash: 93690eab989cee62d756a774675bf1d46da017fb
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 36f986db6f2c7b483b46060e1f514acc8dd9e758
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53826859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62952803"
 ---
 # <a name="workspace-file-contexts"></a>工作区文件上下文
 
@@ -27,7 +26,7 @@ ms.locfileid: "53826859"
 
 ## <a name="file-context-lifecycle"></a>文件上下文生命周期
 
-为生命周期`FileContext`非确定性函数。 在任何时候，组件可以以异步方式请求上下文类型的一些组。 将查询支持的请求上下文类型的一些子集的提供程序。 `IWorkspace`实例充当中间人之间的使用者和提供程序通过<xref:Microsoft.VisualStudio.Workspace.IWorkspace.GetFileContextsAsync%2A>方法。 使用者可能会请求上下文和执行某些基于上下文，而其他人可能会请求上下文并维护且生存期较长的引用的短期操作。 
+为生命周期`FileContext`非确定性函数。 在任何时候，组件可以以异步方式请求上下文类型的一些组。 将查询支持的请求上下文类型的一些子集的提供程序。 `IWorkspace`实例充当中间人之间的使用者和提供程序通过<xref:Microsoft.VisualStudio.Workspace.IWorkspace.GetFileContextsAsync%2A>方法。 使用者可能会请求上下文和执行某些基于上下文，而其他人可能会请求上下文并维护且生存期较长的引用的短期操作。
 
 可能会导致文件上下文过时的文件发生更改。 提供程序可以引发一个事件上`FileContext`以通知使用者的更新。 例如，如果生成上下文提供的一些文件，但磁盘上的更改使该上下文，原始制造者可以调用该事件。 仍会引用的任何使用者`FileContext`可以然后重新用于新查询`FileContext`。
 

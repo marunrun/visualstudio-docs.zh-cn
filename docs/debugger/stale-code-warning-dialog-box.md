@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 594b894c-e652-4e13-a980-9909473d5712
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82731ba2c22c18b880e8a035712280eb5e5afe68
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: 9173563239084b8367d9815b46f28d0626ebe04a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53877453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62902486"
 ---
 # <a name="stale-code-warning-dialog-box"></a>“陈旧代码警告”对话框
 

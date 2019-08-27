@@ -2,21 +2,20 @@
 title: 工作流设计器-发送活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - System.ServiceModel.Activities.Send.UI
 ms.assetid: b514f2e4-767c-4b94-ac61-dd3a54d4b96d
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 788884590054b29ae31df9c5ba2ca31ac0ea5c49
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8d27bd9be1b769215dd77d1e906a5698e17bd18b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53954008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63009124"
 ---
 # <a name="send-activity-designer"></a>Send 活动设计器
 
@@ -37,7 +36,6 @@ ms.locfileid: "53954008"
 ### <a name="the-send-activity-properties"></a>Send 活动属性
 
 下表列出 <xref:System.ServiceModel.Activities.Send> 属性并说明如何在设计器中使用它们。 在属性网格中或在工作流设计器图面上，可以编辑这些属性。
-
 
 | 属性名 | 必需 | 用法 |
 |-|----------|-|

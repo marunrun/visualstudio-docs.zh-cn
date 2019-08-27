@@ -1,14 +1,9 @@
 ---
 title: Extern 元素 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: reference
 f1_keywords:
 - Extern
 helpviewer_keywords:
@@ -17,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: db6c3ddd-a1ba-450a-897a-bb568a5377fc
 caps.latest.revision: 16
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 2ca5932976b2115b6d9095a5dd4cc61e72800dd1
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 17477b7eb60aa332f6910019e28f4c53aa31ebf1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51726865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68204400"
 ---
 # <a name="extern-element"></a>Extern 元素
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Extern 元素引用任何要在编译时合并使用.vsct 文件的外部标头 (.h) 文件。 要合并的文件必须位于包含路径提供给 VSCT 编译器或引用的[包括元素](../extensibility/include-element.md)。 这些文件可能是其他.vsct 文件或 c + + 标头文件。  
+Extern 元素引用任何要在编译时合并使用.vsct 文件的外部标头 (.h) 文件。 要合并的文件必须位于包含路径提供给 VSCT 编译器或引用的[包括元素](../extensibility/include-element.md)。 这些文件可能是其他.vsct 文件或C++标头文件。  
   
  标头文件中的定义必须是窗体的"#define [符号] [值]"的值可能是另一个符号，如果以前已定义。 定义可用于条件语句的命令项。 实际上未使用任何符号将被放弃。  
   
@@ -48,9 +43,9 @@ Extern 元素
   
 |特性|描述|  
 |---------------|-----------------|  
-|href|必须的。 标头文件的路径：<br /><br /> href="stdidcmd.h"|  
+|href|必需。 标头文件的路径：<br /><br /> href="stdidcmd.h"|  
 |条件|可选。 请参阅[条件属性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|  
-|语言|可选。 默认语言的所有[\<字符串 >](../extensibility/strings-element.md)命令表中的元素：<br /><br /> 语言 ="en-我们"|  
+|语言|可选。 默认语言的所有[\<字符串 >](../extensibility/strings-element.md)命令表中的元素：<br /><br /> language="en-us"|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -80,4 +75,3 @@ Extern 元素
  [Visual Studio 命令表 (。Vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)   
  [Vspackage 如何添加用户界面元素](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
  [命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)
-

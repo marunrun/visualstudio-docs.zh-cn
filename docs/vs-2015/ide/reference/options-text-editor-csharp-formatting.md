@@ -1,14 +1,9 @@
 ---
 title: “选项”->“文本编辑器”->“C#”->“格式设置”| Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Formatting.Spacing
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Formatting.NewLines
@@ -30,29 +25,28 @@ ms.assetid: 5a7bb668-1d0c-4ffe-9508-24592813162e
 caps.latest.revision: 29
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 9acd9d882fb2cf0decff4c9f4ab657cf831e74ee
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: f75d2b73946a006057945b1e68f018a358e38279
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49281250"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65674202"
 ---
 # <a name="options-text-editor-c-formatting"></a>选项、文本编辑器、C#、格式设置
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-  
 使用“格式设置”属性页对话框可以在代码编辑器中设置格式设置代码的选项。 若要访问此对话框，请单击“工具”菜单上的“选项”，展开“文本编辑器”，再展开“C#”，然后单击“格式设置”。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+> 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ## <a name="general-settings"></a>常规设置  
  常规设置影响代码编辑器将格式设置选项应用于代码的方式。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
   
-|Label|描述|  
+|Label|说明|  
 |-----------|-----------------|  
 |**输入 ; 时自动设置已完成语句的格式**|如果选中此项，会根据为代码编辑器选择的格式设置选项在完成时对语句进行格式设置。 如果不希望代码编辑器更改语句，请清除此框。|  
 |**输入 } 时自动设置已完成块的格式**|如果选中此项，完成代码块后，立即根据为代码编辑器选择的格式设置选项设置代码块的格式。 如果不希望代码编辑器更改代码块，请清除此框。|  
@@ -66,6 +60,3 @@ ms.locfileid: "49281250"
   
 ## <a name="see-also"></a>请参阅  
  [“选项”对话框 ->“环境”->“常规”](../../ide/reference/general-environment-options-dialog-box.md)
-
-
-

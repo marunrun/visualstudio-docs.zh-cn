@@ -2,19 +2,18 @@
 title: 示例 R 项目
 description: R 和 Visual Studio 入门示例集合的索引。
 ms.date: 01/24/2018
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 80553e54489b5c887facca57f3491fd81fd8d24b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: adcc5ce422cdd06e641408b3506fb751a4c730d1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53837454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62950489"
 ---
 # <a name="r-tools-for-visual-studio-sample-projects"></a>针对 Visual Studio 的 R 工具示例项目
 
@@ -48,7 +47,7 @@ ms.locfileid: "53837454"
 
     ![基准绘图示例](media/samples-mro-benchmark-plot.png)
 
-- `Bike_Rental_Estimation_with_MRS` 使用 Microsoft ML Server 基于历史数据集创建单车租赁需求预测模型。 
+- `Bike_Rental_Estimation_with_MRS` 使用 Microsoft ML Server 基于历史数据集创建单车租赁需求预测模型。
 
 - `Data_Exploration` 包含三个脚本：
 
@@ -59,14 +58,14 @@ ms.locfileid: "53837454"
       ![使用 ggplot2.R 示例的输出](media/samples-3d-interactive.png)
 
 - `Datasets` 包含其他示例使用的三个 .csv 文件
-- `Flight_Delays_Prediction_with_R` 和 `Flight_Delays_Prediction_with_MRS` 演示如何使用 R 机器学习、历史实时性能和天气数据预测航班延误。 
+- `Flight_Delays_Prediction_with_R` 和 `Flight_Delays_Prediction_with_MRS` 演示如何使用 R 机器学习、历史实时性能和天气数据预测航班延误。
 - `Machine learning` 包含三个示例，用于学习如何预测航班延迟、住房价格和自行车租金。 总体而言，这些示例演示了 R 和 Microsoft ML Server 在实际问题中的应用。 它们还演示如何使用多个热门机器学习模型，以及如何使用 [Azure 机器学习](https://azure.microsoft.com/services/machine-learning/)工作区将这些模型部署为 Azure Web 服务。
 
 - `R_MRO_MRS_Comparison` 是一个由六部分构成的比较，展示了 R、Microsoft R Open 和 Microsoft ML Server 在命令、语法、构造和性能方面的异同。
 
 ## <a name="whats-special-about-microsoft-r-open-and-microsoft-ml-server"></a>Microsoft R Open 和 Microsoft ML Server 有什么特别之处？
 
-[Microsoft R Open](http://aka.ms/rtvs-r-open) 是 Microsoft R 的分发，与 [CRAN R](https://cran.r-project.org/) 相比有两个重大差异：
+[Microsoft R Open](https://aka.ms/rtvs-r-open) 是 Microsoft R 的分发，与 [CRAN R](https://cran.r-project.org/) 相比有两个重大差异：
 
 1. 如果与 [Intel Math Kernel Libraries](https://software.intel.com/intel-mkl) 配合使用，可获得[更好的计算性能](https://mran.revolutionanalytics.com/rro/#intelmkl1)。 可从 Microsoft 免费下载这些库，以便与 Microsoft R Open 配合使用。
 

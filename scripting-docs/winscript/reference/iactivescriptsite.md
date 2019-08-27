@@ -2,7 +2,6 @@
 title: IActiveScriptSite | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -14,12 +13,12 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b7ebbd5301ea1d8ea7cabf235ae3f3c7bb1ba3b2
-ms.sourcegitcommit: 8bf9e51c77a5a602fab9513b9187e59e57dfebad
+ms.openlocfilehash: 67e16e2825f03c9ae452e639d6a086bee584ac95
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54346886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992556"
 ---
 # <a name="iactivescriptsite"></a>IActiveScriptSite
 实现的主机来创建 Windows 脚本引擎的站点。 通常情况下，此站点将会向脚本 （例如，ActiveX 控件） 的所有对象的容器与相关联。 通常情况下，此容器将对应于正在查看的页的文档。 例如，Microsoft Internet Explorer 中，将创建此类容器显示每个 HTML 页。 每个 ActiveX 控件 （或其他自动化对象） 上的网页和脚本引擎本身，将可枚举此容器中。  

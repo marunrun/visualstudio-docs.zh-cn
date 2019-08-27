@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: fa0c4dd9-612f-4a57-b8eb-458f129d9cda
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: fcbe7979765fe921ccc42f7adfa556bc0b52b7d1
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 602327d49733077e3c180c0e192027be6374afe6
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53950428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62950017"
 ---
 # <a name="how-to-select-a-load-test-results-repository"></a>如何：选择负载测试结果存储库
 
@@ -33,26 +32,26 @@ ms.locfileid: "53950428"
 
 ## <a name="identify-a-results-store-for-load-test-data"></a>标识负载测试数据的结果存储区
 
-1.  在“解决方案资源管理器”中，打开负载测试文件。
+1. 在“解决方案资源管理器”中，打开负载测试文件。
 
-2.  从“负载测试”工具栏中，选择“管理测试控制器”。 此时将显示“管理测试控制器”对话框。 如果要远程使用代理，则必须选择一个控制器。
+2. 从“负载测试”工具栏中，选择“管理测试控制器”。 此时将显示“管理测试控制器”对话框。 如果要远程使用代理，则必须选择一个控制器。
 
      ![负载测试结果存储区的连接属性](../test/media/loadtestconnectionproperties.png)负载测试结果存储区的连接属性
 
-3.  在“负载测试测结果存储区”中单击“(…)”，以显示“连接属性”对话框。
+3. 在“负载测试测结果存储区”中单击“(…)”，以显示“连接属性”对话框。
 
-4.  在“服务器名称”中，键入在其中运行 `LoadTest` 脚本的服务器的名称。
+4. 在“服务器名称”中，键入在其中运行 `LoadTest` 脚本的服务器的名称。
 
     > [!TIP]
     > 如果在本地计算机上将 SQL Express 用于负载测试存储，请输入 \<计算机名>\sqlexpress（例如，MyComputer\sqlexpress）。
 
-5.  在“登录到服务器”下，可以选择“使用 Windows 身份验证”。 可以指定用户名和密码，但是如果要指定就必须选择“保存密码”选项。
+5. 在“登录到服务器”下，可以选择“使用 Windows 身份验证”。 可以指定用户名和密码，但是如果要指定就必须选择“保存密码”选项。
 
-6.  在“连接到一个数据库”下，选择“选择或输入一个数据库名”。 从下拉列表框中选择“LoadTest”。
+6. 在“连接到一个数据库”下，选择“选择或输入一个数据库名”。 从下拉列表框中选择“LoadTest”。
 
-7.  选择 **“确定”**。 可通过选择“测试连接”测试该连接。
+7. 选择 **“确定”**。 可通过选择“测试连接”测试该连接。
 
-8.  在“管理测试控制器”对话框中，选择“关闭”。
+8. 在“管理测试控制器”对话框中，选择“关闭”。
 
 ## <a name="see-also"></a>请参阅
 

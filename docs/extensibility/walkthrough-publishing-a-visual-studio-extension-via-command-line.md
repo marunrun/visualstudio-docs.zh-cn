@@ -1,22 +1,22 @@
 ---
-title: 演练：发布 Visual Studio 扩展通过命令行 |Microsoft Docs
+title: 发布扩展使用命令行
 ms.date: 07/12/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing extensions
 - extension, publishing
 ms.assetid: 6ff9efc4-919d-4071-a80d-6dbdd2ceb2f8
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cb35365220ade512defc180b06e46b95999dfa7b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8a6b5531bc5dc138f2f90a0a67da39f9583bc4b0
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53857210"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66320641"
 ---
 # <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>演练：发布 Visual Studio 扩展中的通过命令行
 
@@ -34,7 +34,7 @@ VsixPublisher.exe 是发布到 Marketplace 的 Visual Studio 扩展的命令行�
 |---------|---------|
 |有效负载 （必需） | 若要发布的有效负载或将其用作"详细信息 URL"的链接到的路径。 |
 |publishManifest （必需） | 发布路径清单文件使用。 |
-|ignoreWarnings | 要发布扩展时忽略的警告的列表。 发布扩展时，将为命令行的消息中显示这些警告。 (例如，"VSIXValidatorWarning01，VSIXValidatorWarning02")  
+|ignoreWarnings | 要发布扩展时忽略的警告的列表。 发布扩展时，将为命令行的消息中显示这些警告。 (例如，"VSIXValidatorWarning01，VSIXValidatorWarning02")
 |personalAccessToken | 个人访问令牌 (PAT) 用于进行身份验证发布服务器。 如果未提供，则会从登录的用户获取 PAT。 |
 
 ```
@@ -92,7 +92,7 @@ VsixPublisher.exe deleteExtension -extensionName "{Extension Name}" -publisherNa
 |---------|---------|
 |（所需的 personalAccessToken | 个人访问令牌用于进行身份验证发布服务器。 |
 |publisherName （必需） | 发布服务器 （例如，标识符） 的名称。 |
-|覆盖 | 指定应使用新的个人访问令牌覆盖任何现有发布服务器。 |
+|overwrite | 指定应使用新的个人访问令牌覆盖任何现有发布服务器。 |
 
 ```
 VsixPublisher.exe login -personalAccessToken "{Personal Access Token}" -publisherName "{Publisher Name}"
@@ -218,7 +218,7 @@ This is test extension.
 
 1. 在 Visual Studio 中，开始调试。 若要打开的 Visual Studio 实验实例。
 
-2. 在实验实例中，转到**工具**菜单，然后单击**扩展和更新...**.TestPublish 扩展应显示在中心窗格中，启用。
+2. 在实验实例中，转到**工具**菜单，然后单击**扩展和更新...** .TestPublish 扩展应显示在中心窗格中，启用。
 
 3. 上**工具**菜单中，请确保您看到测试命令。
 
@@ -262,11 +262,11 @@ This is test extension.
 
 现在，发布扩展时，在 Visual Studio 中安装它，然后对其进行测试。
 
-1. 在 Visual Studio 中，在**工具**菜单上，单击**扩展和更新...**.
+1. 在 Visual Studio 中，在**工具**菜单上，单击**扩展和更新...** .
 
 2. 单击**Online** TestPublish 然后搜索。
 
-3. 单击 **“下载”**。 然后将安装计划扩展。
+3. 单击 **“下载”** 。 然后将安装计划扩展。
 
 4. 若要完成安装，请关闭 Visual Studio 的所有实例。
 
@@ -290,7 +290,7 @@ This is test extension.
 
 ### <a name="to-remove-the-extension-from-your-computer"></a>若要从您的计算机中删除扩展
 
-1. 在 Visual Studio 中，在**工具**菜单上，单击**扩展和更新...**.
+1. 在 Visual Studio 中，在**工具**菜单上，单击**扩展和更新**。
 
 2. 选择"MyVsixExtension"，然后单击**卸载**。 然后将卸载计划扩展。
 

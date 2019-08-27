@@ -1,0 +1,1002 @@
+- name: 在 Visual Studio 中进行调试
+  href: debugging-in-visual-studio.md
+- name: 调试器基础知识
+  items:
+    - name: 调试器基础知识
+      href: debugger-basics.md
+    - name: 调试程序入门
+      href: getting-started-with-the-debugger.md
+    - name: 使用调试器浏览代码
+      href: navigating-through-code-with-the-debugger.md
+    - name: 使用断点
+      href: using-breakpoints.md
+    - name: 调试器窗口
+      items:
+        - name: 调试器窗口
+          href: debugger-windows.md
+        - name: “自动”和“局部变量”窗口
+          href: autos-and-locals-windows.md
+        - name: 监视和快速监视窗口
+          items:
+            - name: 监视和快速监视窗口
+              href: watch-and-quickwatch-windows.md
+            - name: 调试器中的表达式
+              items:
+                - name: 调试器中的表达式
+                  href: expressions-in-the-debugger.md
+                - name: C++ 中的格式说明符
+                  href: format-specifiers-in-cpp.md
+                - name: 上下文运算符 (C++)
+                  href: context-operator-cpp.md
+                - name: 'C# 中的格式说明符'
+                  href: format-specifiers-in-csharp.md
+                - name: 伪变量
+                  href: pseudovariables.md
+        - name: 使用“反汇编”窗口
+          items:
+            - name: 使用“反汇编”窗口
+              href: how-to-use-the-disassembly-window.md
+            - name: 在内存中向上或向下翻页
+              href: how-to-page-up-or-down-in-memory.md
+        - name: 使用“调用堆栈”窗口
+          items:
+            - name: 使用“调用堆栈”窗口
+              href: how-to-use-the-call-stack-window.md
+            - name: “调用堆栈”窗口中的混合代码与丢失信息
+              href: mixed-code-and-missing-information-in-the-call-stack-window.md
+            - name: 在“调用堆栈”窗口中缺少本机框架时单步执行托管代码
+              href: how-to-step-out-of-managed-code-when-native-frames-are-missing-from-the-call-stack-window.md
+        - name: 使用“寄存器”窗口
+          items:
+            - name: 使用“寄存器”窗口
+              href: how-to-use-the-registers-window.md
+            - name: “寄存器”窗口
+              href: debugging-basics-registers-window.md
+            - name: 显示和隐藏寄存器组
+              href: how-to-display-and-hide-register-groups.md
+            - name: 编辑寄存器值
+              href: how-to-edit-a-register-value.md
+        - name: 使用“模块”窗口
+          items:
+            - name: 使用“模块”窗口
+              href: how-to-use-the-modules-window.md
+            - name: 查找程序在哪个 DLL 中发生故障
+              href: how-to-find-which-dll-your-program-crashed-in.md
+        - name: “内存”窗口
+          href: memory-windows.md
+    - name: 仅我的代码
+      href: just-my-code.md
+    - name: 管理调试器的异常
+      items:
+        - name: 管理调试器的异常
+          href: managing-exceptions-with-the-debugger.md
+        - name: 在出现异常之后继续执行
+          href: continuing-execution-after-an-exception.md
+        - name: 在发生异常后检查系统代码
+          href: how-to-examine-system-code-after-an-exception.md
+        - name: 使用本机运行时检查
+          items:
+            - name: 使用本机运行时检查
+              href: how-to-use-native-run-time-checks.md
+            - name: 本机运行时检查自定义
+              href: native-run-time-checks-customization.md
+            - name: 编写运行时错误报告函数
+              href: how-to-write-a-run-time-error-reporting-function.md
+            - name: 使用无 C 运行库的运行时检查
+              href: using-run-time-checks-without-the-c-run-time-library.md
+    - name: 附加到正在运行的进程
+      href: attach-to-running-processes-with-the-visual-studio-debugger.md
+    - name: 指定符号 (.pdb) 文件和源文件
+      href: specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md
+    - name: 调试 64 位应用程序
+      href: debug-64-bit-applications.md
+    - name: 调试器安全
+      href: debugger-security.md
+- name: 更多调试功能
+  items:
+    - name: 更多调试功能
+      href: more-debugging-features.md
+    - name: 在调试时检查 XAML 属性
+      href: inspect-xaml-properties-while-debugging.md
+    - name: 调试器设置和准备
+      items:
+        - name: 调试器设置和准备
+          href: debugger-settings-and-preparation.md
+        - name: 调试器项目设置
+          items:
+            - name: 调试器项目设置
+              href: debugger-project-settings.md
+            - name: 指定调试器设置
+              href: how-to-specify-debugger-settings.md
+            - name: 设置调试和发布配置
+              href: how-to-set-debug-and-release-configurations.md
+            - name: C++ 调试配置的项目设置
+              items:
+                - name: C++ 调试配置的项目设置
+                  href: project-settings-for-a-cpp-debug-configuration.md
+                - name: 在 Visual C++ 中启用调试功能 (/D_DEBUG)
+                  href: enabling-debug-features-in-visual-cpp-d-debug.md
+            - name: Web 项目的属性页设置
+              href: property-pages-settings-for-web-projects.md
+            - name: 'C# 调试配置的项目设置'
+              href: project-settings-for-csharp-debug-configurations.md
+            - name: Project Settings for a Visual Basic Debug Configuration
+              href: project-settings-for-a-visual-basic-debug-configuration.md
+        - name: 调试 DLL 项目
+          items:
+            - name: 调试 DLL 项目
+              href: debugging-dll-projects.md
+            - name: 从 DLL 项目调试
+              href: how-to-debug-from-a-dll-project.md
+            - name: 在混合模式下调试
+              href: how-to-debug-in-mixed-mode.md
+            - name: Web 控件库（托管代码）
+              href: web-control-library-managed-code.md
+        - name: 控制台项目
+          href: debugging-preparation-console-projects.md
+        - name: ASP.NET Web 应用程序
+          href: debugging-preparation-aspnet-web-applications.md
+        - name: 调试不属于 Visual Studio 解决方案的可执行文件
+          href: how-to-debug-an-executable-not-part-of-a-visual-studio-solution.md
+        - name: 使用 Code Center Premium 源进行调试
+          href: how-to-debug-with-code-center-premium-source.md
+        - name: 调试和承载进程
+          href: debugging-and-the-hosting-process.md
+        - name: 指定用于调试的 .NET Framework 版本
+          href: how-to-specify-a-dotnet-framework-version-for-debugging.md
+    - name: 查看调试器中的数据
+      items:
+        - name: 查看调试器中的数据
+          href: viewing-data-in-the-debugger.md
+        - name: 查看数据提示中的数据值
+          href: view-data-values-in-data-tips-in-the-code-editor.md
+        - name: 创建本机对象的自定义视图
+          href: create-custom-views-of-native-objects.md
+        - name: 创建托管对象的自定义视图
+          items:
+            - name: 创建托管对象的自定义视图
+              href: create-custom-views-of-dot-managed-objects.md
+            - name: 使用 DebuggerTypeProxy 特性
+              href: using-debuggertypeproxy-attribute.md
+            - name: 使用 DebuggerDisplay 特性
+              href: using-the-debuggerdisplay-attribute.md
+        - name: 创建自定义可视化工具
+          items:
+            - name: 创建自定义可视化工具
+              href: create-custom-visualizers-of-data.md
+            - name: 编写可视化工具
+              items:
+                - name: 编写可视化工具
+                  href: how-to-write-a-visualizer.md
+                - name: 可视化工具体系结构
+                  href: visualizer-architecture.md
+                - name: '用 C# 编写可视化工具'
+                  href: walkthrough-writing-a-visualizer-in-csharp.md
+                - name: 用 Visual Basic 编写可视化工具
+                  href: walkthrough-writing-a-visualizer-in-visual-basic.md
+                - name: 可视化工具安全注意事项
+                  href: visualizer-security-considerations.md
+            - name: 安装可视化工具
+              href: how-to-install-a-visualizer.md
+            - name: 测试和调试可视化工具
+              href: how-to-test-and-debug-a-visualizer.md
+            - name: 可视化工具 API 参考
+              href: visualizer-api-reference.md
+        - name: 查看脚本文档
+          href: how-to-view-script-documents.md
+        - name: 调试时映射调用堆栈上的方法
+          href: map-methods-on-the-call-stack-while-debugging-in-visual-studio.md
+    - name: 实时调试
+      href: just-in-time-debugging-in-visual-studio.md
+    - name: 在设计时调试
+      href: walkthrough-debugging-at-design-time.md
+    - name: 编辑并继续
+      items:
+        - name: 编辑并继续
+          href: edit-and-continue.md
+        - name: 启用和禁用“编辑并继续”
+          href: how-to-enable-and-disable-edit-and-continue.md
+        - name: 停止代码更改
+          href: how-to-stop-code-changes.md
+        - name: Edit and Continue (Visual C++)
+          items:
+            - name: Edit and Continue (Visual C++)
+              href: edit-and-continue-visual-cpp.md
+            - name: 受支持的代码更改 (C++)
+              href: supported-code-changes-cpp.md
+        - name: '编辑并继续 (Visual C#)'
+          items:
+            - name: '编辑并继续 (Visual C#)'
+              href: edit-and-continue-visual-csharp.md
+            - name: '使用“编辑并继续”(C#)'
+              href: how-to-use-edit-and-continue-csharp.md
+            - name: '受支持的代码更改 (C#)'
+              href: supported-code-changes-csharp.md
+        - name: 编辑并继续 (Visual Basic)
+          items:
+            - name: 编辑并继续 (Visual Basic)
+              href: edit-and-continue-visual-basic.md
+            - name: 使用“编辑并继续”在中断模式下应用编辑
+              href: how-to-apply-edits-in-break-mode-with-edit-and-continue.md
+            - name: Visual Basic“编辑并继续”中不支持的编辑
+              href: unsupported-edits-in-visual-basic-edit-and-continue.md
+        - name: 'F# 不支持“编辑并继续”'
+          href: edit-and-continue-not-supported-for-f-hash.md
+    - name: 使用转储文件
+      items:
+        - name: 使用转储文件
+          href: using-dump-files.md
+        - name: 转储文件摘要扩展性 API
+          href: dump-file-summary-extensibility-api.md
+    - name: 还原隐藏的调试器命令
+      href: how-to-restore-hidden-debugger-commands.md
+- name: Remote Debugging
+  items:
+    - name: Remote Debugging
+      href: remote-debugging.md
+    - name: 配置 Windows 防火墙以便进行远程调试
+      href: configure-the-windows-firewall-for-remote-debugging.md
+    - name: 远程调试器端口分配
+      href: remote-debugger-port-assignments.md
+    - name: 远程调试远程 IIS 计算机上的 ASP.NET
+      href: remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md
+    - name: 远程调试错误和疑难解答
+      items:
+        - name: 远程调试错误和疑难解答
+          href: remote-debugging-errors-and-troubleshooting.md
+        - name: 远程计算机上的 Microsoft Visual Studio 远程调试监视器没有连接到此计算机的权限
+          href: error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-does-not-have-permission-to-connect-to-this-computer.md
+        - name: 尝试联系远程计算机时出现 DCOM 错误。 拒绝访问。
+          href: a-dcom-error-occurred-trying-to-contact-the-remote-computer-access-is-denied.md
+        - name: 远程计算机上的 Microsoft Visual Studio 远程调试监视器正在以其他用户身份运行 |Microsoft Docs
+          href: error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-is-running-as-a-different-user.md
+        - name: 无法自动单步执行服务器
+          href: error-unable-to-automatically-step-into-the-server.md
+        - name: 工作组远程登录失败
+          href: error-workgroup-remote-logon-failure.md
+        - name: Kerberos 身份验证失败
+          href: error-kerberos-authentication-failed.md
+        - name: 确保目标计算机上正确配置了 DNS
+          href: error-ensure-that-dns-is-correctly-configured-on-the-target-computer.md
+        - name: Microsoft Visual Studio 远程调试监视器 (MSVSMON.EXE) 似乎没有在远程计算机上运行。
+          href: error-the-microsoft-visual-studio-remote-debugging-monitor-msvsmon-exe-does-not-appear-to-be-running-on-the-remote-computer.md
+        - name: Unable to Connect to the Microsoft Visual Studio Remote Debugging Monitor
+          href: unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor.md
+        - name: 无法启动 DCOM 通信
+          href: error-unable-to-initiate-dcom-communication.md
+        - name: 远程计算机无法启动 DCOM 通信
+          href: error-remote-computer-could-not-initiate-dcom-communications.md
+        - name: 本地计算机上的防火墙
+          href: error-firewall-on-local-machine.md
+        - name: 防火墙无身份验证
+          href: error-firewall-no-authentication.md
+        - name: RPC 要求身份验证
+          href: error-rpc-requires-authentication.md
+        - name: 没有检查进程标识的权限
+          href: error-you-do-not-have-permission-to-inspect-the-process-s-identity.md
+        - name: 目标计算机上的 Visual Studio 远程调试器服务无法重新连接到此计算机 | Microsoft Docs
+          href: error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer.md
+        - name: 网站工作进程已被 IIS 终止
+          href: error-web-site-worker-process-has-been-terminated-by-iis.md
+        - name: 无法连接到计算机 \<name>。 网络上找不到该计算机。
+          href: error-unable-to-connect-to-the-machine-name-the-machine-cannot-be-found-on-the-network.md
+        - name: 仅当使用 Microsoft .NET Framework 2.0 或更高版本时，才支持混合模式调试
+          href: error-mixed-mode-debugging-is-supported-only-when-using-microsoft-dotnet-framework-2-0-or-greater.md
+        - name: 不支持对 IA64 进程执行混合模式调试
+          href: error-mixed-mode-debugging-for-ia64-processes-is-unsupported.md
+        - name: 仅当使用 Microsoft .NET Framework 4 或更高版本时才支持对 x64 进程执行混合模式调试
+          href: error-mixed-mode-debugging-for-x64-processes-is-supported-only-when-using-microsoft-dotnet-framework-4-or-greater.md
+        - name: 远程计算机未显示在“远程连接”对话框中
+          href: error-remote-machine-does-not-appear-in-a-remote-connections-dialog.md
+- name: 调试多线程应用程序
+  items:
+    - name: 调试多线程应用程序
+      href: debug-multithreaded-applications-in-visual-studio.md
+    - name: 调试线程和进程
+      href: debug-threads-and-processes.md
+    - name: 调试多个进程
+      href: debug-multiple-processes.md
+    - name: 使用“线程”窗口
+      href: how-to-use-the-threads-window.md
+    - name: 在调试时切换到另一个线程
+      href: how-to-switch-to-another-thread-while-debugging.md
+    - name: 标记线程和取消标记线程
+      href: how-to-flag-and-unflag-threads.md
+    - name: 在本机代码中设置线程名称
+      href: how-to-set-a-thread-name-in-native-code.md
+    - name: 在托管代码中设置线程名称
+      href: how-to-set-a-thread-name-in-managed-code.md
+    - name: 调试多线程应用程序
+      href: walkthrough-debugging-a-multithreaded-application.md
+    - name: 在高性能群集上调试
+      href: how-to-debug-on-a-high-performance-cluster.md
+    - name: 调试本机代码中的线程时的提示
+      href: tips-for-debugging-threads-in-native-code.md
+    - name: 使用“任务”窗口
+      href: using-the-tasks-window.md
+    - name: 使用“并行堆栈”窗口
+      href: using-the-parallel-stacks-window.md
+    - name: 调试并行应用程序
+      href: walkthrough-debugging-a-parallel-application.md
+    - name: 使用“并行监视”窗口
+      href: how-to-use-the-parallel-watch-window.md
+    - name: 使用 GPU 线程窗口
+      href: how-to-use-the-gpu-threads-window.md
+- name: IntelliTrace
+  items:
+    - name: IntelliTrace
+      href: intellitrace.md
+    - name: 使用 IntelliTrace
+      href: walkthrough-using-intellitrace.md
+    - name: IntelliTrace 功能
+      href: intellitrace-features.md
+    - name: 历史调试
+      href: historical-debugging.md
+    - name: 诊断部署后出现的问题
+      href: diagnose-problems-after-deployment.md
+    - name: 使用 IntelliTrace 独立收集器
+      href: using-the-intellitrace-stand-alone-collector.md
+    - name: 使用 Microsoft Monitoring Agent
+      href: using-the-microsoft-monitoring-agent.md
+    - name: 使用保存的 IntelliTrace 数据
+      href: using-saved-intellitrace-data.md
+    - name: IntelliTrace 扩展性的 API 参考
+      href: api-reference-for-intellitrace-extensibility.md
+- name: 调试应用程序
+  items:
+    - name: 调试应用程序
+      href: debugging-applications.md
+    - name: 调试 Windows 应用商店和 Windows 通用应用
+      items:
+        - name: 调试 Windows 应用商店和 Windows 通用应用
+          href: debugging-windows-store-and-windows-universal-apps.md
+        - name: 从 Visual Studio 运行应用
+          items:
+            - name: 从 Visual Studio 运行应用
+              href: run-store-apps-from-visual-studio.md
+            - name: 在本地计算机上运行 Windows 应用商店应用程序
+              href: run-windows-store-apps-on-the-local-machine.md
+            - name: 在模拟器中运行 Windows 应用商店应用程序
+              href: run-windows-store-apps-in-the-simulator.md
+            - name: 在远程计算机上运行 Windows 应用商店应用
+              href: run-windows-store-apps-on-a-remote-machine.md
+            - name: 在仿真程序中运行 Windows Phone 应用
+              href: run-windows-phone-apps-in-the-emulator.md
+            - name: 从 Visual Studio 部署 Windows 应用商店应用程序
+              href: deploy-windows-store-apps-from-visual-studio.md
+        - name: Debug apps in Visual Studio
+          items:
+            - name: Debug apps in Visual Studio
+              href: debug-store-apps-in-visual-studio.md
+            - name: 启动调试会话 (JavaScript)
+              href: start-a-debugging-session-for-store-apps-in-visual-studio-javascript.md
+            - name: 在调试会话中控制执行 (JavaScript)
+              items:
+                - name: 在调试会话中控制执行 (JavaScript)
+                  href: control-execution-of-a-store-app-in-a-visual-studio-debug-session-for-windows-store-apps-javascript.md
+                - name: 调试器导航示例代码 (JavaScript)
+                  href: debugger-navigation-sample-code-javascript.md
+            - name: 调试 HTML 和 CSS
+              items:
+                - name: 调试 HTML 和 CSS
+                  href: quickstart-debug-html-and-css.md
+                - name: 使用 DOM 资源管理器调试 CSS 样式
+                  href: debug-css-styles-using-dom-explorer.md
+                - name: 查看 DOM 事件侦听器
+                  href: view-dom-event-listeners.md
+                - name: 使用 DOM 资源管理器调试布局
+                  href: debug-layout-using-dom-explorer.md
+                - name: 刷新应用程序 (JavaScript)
+                  href: refresh-an-app-javascript.md
+                - name: 调试 WebView 控件
+                  href: debug-a-webview-control.md
+                - name: 键盘快捷键
+                  href: keyboard-shortcuts-html-and-javascript.md
+                - name: 调试 HTML、CSS 和 JavaScript 示例代码
+                  href: debug-html-css-and-javascript-sample-code.md
+            - name: 调试 JavaScript
+              items:
+                - name: 调试 JavaScript
+                  href: quickstart-debug-javascript-using-the-console.md
+                - name: JavaScript Console commands
+                  href: javascript-console-commands.md
+            - name: '启动调试会话（VB、C#、C++ 和 XAML）'
+              href: start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md
+            - name: 在 Blend for Visual Studio 中调试 XAML
+              href: debug-xaml-in-blend.md
+            - name: '导航调试会话（Xaml 和 C#）'
+              items:
+                - name: '导航调试会话（Xaml 和 C#）'
+                  href: navigate-a-debugging-session-in-visual-studio-xaml-and-csharp.md
+                - name: '调试器导航示例代码（XAML 和 C#）'
+                  href: debugger-navigation-sample-code-xaml-and-csharp.md
+            - name: 触发 Windows 应用商店的挂起、继续和后台事件）
+              href: how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md
+        - name: 预提取 Windows 应用商店应用的内容
+          href: prefetch-content-for-windows-store-apps.md
+    - name: 调试托管代码
+      items:
+        - name: 调试托管代码
+          href: debugging-managed-code.md
+        - name: 'C#、F# 和 Visual Basic 项目类型'
+          items:
+            - name: 'C#、F# 和 Visual Basic 项目类型'
+              href: debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md
+            - name: 建议的属性设置
+              href: managed-debugging-recommended-property-settings.md
+            - name: Windows 窗体应用程序
+              href: debugging-preparation-windows-forms-applications.md
+            - name: Windows 服务
+              href: debugging-preparation-windows-services.md
+        - name: 调试部分信任应用程序
+          href: how-to-debug-a-partial-trust-application.md
+        - name: “输出”窗口中的诊断消息
+          href: diagnostic-messages-in-the-output-window.md
+        - name: 托管代码中的断言
+          href: assertions-in-managed-code.md
+        - name: Visual Basic 中的 Stop 语句
+          href: stop-statements-in-visual-basic.md
+        - name: 调试 Windows 窗体
+          href: walkthrough-debugging-a-windows-form.md
+        - name: 调试 OnStart 方法
+          href: how-to-debug-the-onstart-method.md
+        - name: 调试混合模式应用程序
+          href: debugging-mixed-mode-applications.md
+        - name: JIT 优化和调试
+          href: jit-optimization-and-debugging.md
+        - name: 调试 LINQ
+          href: debugging-linq.md
+        - name: 无法进行调试，因为系统上已启用内核调试程序
+          href: error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md
+        - name: 调试 .NET Framework 源
+          href: how-to-debug-dotnet-framework-source.md
+        - name: 调试 WPF
+          items:
+            - name: 调试 WPF
+              href: debugging-wpf.md
+            - name: 使用 WPF 树可视化工具
+              href: how-to-use-the-wpf-tree-visualizer.md
+            - name: 显示 WPF 跟踪信息
+              href: how-to-display-wpf-trace-information.md
+        - name: '调试 F#'
+          href: debugging-f-hash.md
+    - name: 调试本机代码
+      items:
+        - name: 调试本机代码
+          href: debugging-native-code.md
+        - name: Visual C++ 项目类型
+          href: debugging-preparation-visual-cpp-project-types.md
+        - name: 调试优化的代码
+          href: how-to-debug-optimized-code.md
+        - name: DebugBreak 和 __debugbreak
+          href: debugbreak-and-debugbreak.md
+        - name: C/C++ 断言
+          href: c-cpp-assertions.md
+        - name: 调试内联程序集代码
+          href: how-to-debug-inline-assembly-code.md
+        - name: MFC 调试方法
+          href: mfc-debugging-techniques.md
+        - name: CRT 调试方法
+          items:
+            - name: CRT 调试方法
+              href: crt-debugging-techniques.md
+            - name: CRT 调试库使用
+              href: crt-debug-library-use.md
+            - name: 用于报告的宏
+              href: macros-for-reporting.md
+            - name: 堆分配函数的“Debug”版本
+              href: debug-versions-of-heap-allocation-functions.md
+            - name: CRT 调试堆详细信息
+              href: crt-debug-heap-details.md
+            - name: 编写调试挂钩函数
+              items:
+                - name: 编写调试挂钩函数
+                  href: debug-hook-function-writing.md
+                - name: 客户端块挂钩函数
+                  href: client-block-hook-functions.md
+                - name: 分配挂钩函数
+                  items:
+                    - name: 分配挂钩函数
+                      href: allocation-hook-functions.md
+                    - name: 分配挂钩和 C 运行时内存分配
+                      href: allocation-hooks-and-c-run-time-memory-allocations.md
+                - name: 报表挂钩函数
+                  href: report-hook-functions.md
+            - name: 使用 CRT 库查找内存泄漏
+              href: finding-memory-leaks-using-the-crt-library.md
+        - name: 调试本机代码常见问题
+          items:
+            - name: 调试本机代码常见问题
+              href: debugging-native-code-faqs.md
+            - name: 如何调试访问冲突？
+              href: how-can-i-debug-an-access-violation-q.md
+            - name: 在调试器外部运行程序时如何调试访问冲突？
+              href: how-can-i-debug-access-violations-when-running-my-program-outside-the-debugger-q.md
+            - name: 如何查明指针是否损坏了内存地址？
+              href: how-can-i-find-out-if-my-pointers-corrupt-a-memory-address-q.md
+            - name: 如何查明谁在传递错误的参数值？
+              href: how-can-i-find-out-who-is-passing-a-wrong-parameter-value-q.md
+            - name: 当一个函数被调用数百次时，如何确定哪次调用失败了？
+              href: when-calling-a-function-hundreds-of-times-how-do-i-know-which-call-failed-q.md
+            - name: 可以在哪里查阅 Win32 错误代码？
+              href: where-can-i-look-up-win32-error-codes-q.md
+            - name: 如何在逐句通过程序时保持焦点？
+              href: how-can-i-keep-focus-when-stepping-through-my-program-q.md
+            - name: 调试前台程序时如何使用调试器窗口？
+              href: how-can-i-use-debugger-windows-while-debugging-a-foreground-program-q.md
+            - name: 如何调试 Windows API 函数？
+              href: how-can-i-debug-windows-api-functions-q.md
+            - name: 返回到在中断时调用了 MFC 的函数
+              href: how-to-get-back-to-the-function-that-called-mfc-if-halted.md
+        - name: 调试 COM 和 ActiveX
+          items:
+            - name: 调试 COM 和 ActiveX
+              href: com-and-activex-debugging.md
+            - name: 调试 COM 服务器和容器
+              items:
+                - name: 调试 COM 服务器和容器
+                  href: com-server-and-container-debugging.md
+                - name: 调试 COM 服务器
+                  items:
+                    - name: 调试 COM 服务器
+                      href: how-to-debug-com-servers.md
+                    - name: SDI 服务器应用程序
+                      href: sdi-server-applications.md
+                - name: 使用 RPC 调试来调试 COM 客户端和服务器
+                  href: how-to-debug-com-clients-and-servers-using-rpc-debugging.md
+            - name: 调试 ActiveX 控件
+              items:
+                - name: 调试 ActiveX 控件
+                  href: how-to-debug-an-activex-control.md
+                - name: 调试数据绑定 ActiveX 控件
+                  href: debugging-a-data-bound-activex-control.md
+            - name: COM 调试工具
+              href: com-debugging-tools.md
+        - name: 调试本机 DLL
+          href: how-to-debug-native-dlls.md
+        - name: 调试插入的代码
+          href: how-to-debug-injected-code.md
+    - name: 调试 GPU 代码
+      href: debugging-gpu-code.md
+    - name: 图形诊断（调试 DirectX 图形）
+      items:
+        - name: 图形诊断（调试 DirectX 图形）
+          href: visual-studio-graphics-diagnostics.md
+        - name: 概述
+          href: overview-of-visual-studio-graphics-diagnostics.md
+        - name: 入门
+          href: getting-started-with-visual-studio-graphics-diagnostics.md
+        - name: 捕获图形信息
+          href: capturing-graphics-information.md
+        - name: GPU 使用情况
+          href: gpu-usage.md
+        - name: 图形日志文档
+          href: graphics-log-document.md
+        - name: 帧分析
+          items:
+            - name: 帧分析
+              href: graphics-frame-analysis.md
+            - name: 1x1 视口大小变量
+              href: 1x1-viewport-size-variant.md
+            - name: 0x/2x/4x MSAA 变量
+              href: 0x-2x-4x-msaa-variants.md
+            - name: Point、Bilinear、Trilinear 和 Anisotropic 纹理过滤变量
+              href: point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md
+            - name: 16bpp 呈现目标格式变量
+              href: 16bpp-render-target-format-variant.md
+            - name: Mip-map 生成变量
+              href: mip-map-generation-variant.md
+            - name: Half/Quarter 纹理维度变量
+              href: half-quarter-texture-dimensions-variant.md
+            - name: BC 纹理压缩变量
+              href: bc-texture-compression-variant.md
+        - name: 事件列表
+          href: graphics-event-list.md
+        - name: 状态
+          href: graphics-state.md
+        - name: 管道阶段
+          href: graphics-pipeline-stages.md
+        - name: 事件调用堆栈
+          href: graphics-event-call-stack.md
+        - name: 像素历史记录
+          href: graphics-pixel-history.md
+        - name: 对象表
+          href: graphics-object-table.md
+        - name: HLSL 调试器
+          href: hlsl-shader-debugger.md
+        - name: 命令行捕获工具
+          href: command-line-capture-tool.md
+        - name: 示例
+          items:
+            - name: 示例
+              href: graphics-diagnostics-examples.md
+            - name: 捕获图形信息
+              href: walkthrough-capturing-graphics-information.md
+            - name: 以编程方式捕获图形信息
+              href: walkthrough-capturing-graphics-information-programmatically.md
+            - name: 因设备状态而缺少对象
+              href: walkthrough-missing-objects-due-to-device-state.md
+            - name: 因顶点着色而缺少对象
+              href: walkthrough-missing-objects-due-to-vertex-shading.md
+            - name: 因管道误配置而缺少对象
+              href: walkthrough-missing-objects-due-to-misconfigured-pipeline.md
+            - name: 调试因着色引起的呈现错误
+              href: walkthrough-debugging-rendering-errors-due-to-shading.md
+            - name: 使用图形诊断来调试计算着色器
+              href: walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader.md
+            - name: 更改图形诊断播放计算机
+              href: how-to-change-the-graphics-diagnostics-playback-machine.md
+            - name: 将图形诊断用于 ARM 设备
+              href: how-to-use-graphics-diagnostics-with-an-arm-device.md
+        - name: 参考
+          items:
+            - name: 参考
+              href: reference-programmatic-capture.md
+            - name: VsgDbg 类
+              items:
+                - name: VsgDbg 类
+                  href: vsgdbg-class.md
+                - name: VsgDbg（构造函数）
+                  href: vsgdbg-vsgdbg-constructor.md
+                - name: ~VsgDbg（析构函数）
+                  href: vsgdbg-tilde-vsgdbg-destructor.md
+                - name: AddMessage
+                  href: addmessage.md
+                - name: BeginCapture
+                  href: begincapture.md
+                - name: CaptureCurrentFrame
+                  href: capturecurrentframe.md
+                - name: 复制（编程捕获）
+                  href: copy-programmatic-capture.md
+                - name: EndCapture
+                  href: endcapture.md
+                - name: Init
+                  href: init.md
+                - name: ToggleHUD
+                  href: togglehud.md
+                - name: UnInit
+                  href: uninit.md
+            - name: DONT_SAVE_VSGLOG_TO_TEMP
+              href: dont-save-vsglog-to-temp.md
+            - name: VSG_DEFAULT_RUN_FILENAME
+              href: vsg-default-run-filename.md
+            - name: VSG_NODEFAULT_INSTANCE
+              href: vsg-nodefault-instance.md
+    - name: 调试 Web 应用程序和脚本
+      items:
+        - name: 调试 Web 应用程序和脚本
+          href: debugging-web-applications-and-script.md
+        - name: 调试 ASP.NET 和 AJAX 应用程序
+          items:
+            - name: 调试 ASP.NET 和 AJAX 应用程序
+              href: debugging-aspnet-and-ajax-applications.md
+            - name: 调试 ASP.NET 的准备工作
+              items:
+                - name: 调试 ASP.NET 的准备工作
+                  href: preparing-to-debug-aspnet.md
+                - name: 系统要求
+                  href: aspnet-debugging-system-requirements.md
+                - name: 为 ASP.NET 应用程序启用调试
+                  items:
+                    - name: 为 ASP.NET 应用程序启用调试
+                      href: how-to-enable-debugging-for-aspnet-applications.md
+                    - name: 在用户帐户下运行工作进程
+                      href: how-to-run-the-worker-process-under-a-user-account.md
+                - name: 远程调试 Web 应用程序的必备组件
+                  items:
+                    - name: 远程调试 Web 应用程序的必备组件
+                      href: prerequistes-for-remote-debugging-web-applications.md
+                    - name: 查找 ASP.NET 进程名称
+                      href: how-to-find-the-name-of-the-aspnet-process.md
+            - name: 调试 Web 应用程序
+              items:
+                - name: 调试 Web 应用程序
+                  href: debugging-web-applications.md
+                - name: 调试 Web 应用程序
+                  href: how-to-debug-web-applications.md
+                - name: 调试已部署的 Web 应用程序
+                  href: debugging-deployed-web-applications.md
+                - name: 客户端脚本调试
+                  items:
+                    - name: 客户端脚本调试
+                      href: client-side-script-debugging.md
+                    - name: 脚本调试的限制
+                      href: limitations-on-script-debugging.md
+                    - name: 附加到脚本
+                      items:
+                        - name: 附加到脚本
+                          href: how-to-attach-to-script.md
+                        - name: 脚本调试已禁用
+                          href: warning-script-debugging-disabled.md
+                - name: 调试 Web 窗体
+                  href: walkthrough-debugging-a-web-form.md
+                - name: 调试 ASP.NET 异常
+                  href: how-to-debug-aspnet-exceptions.md
+        - name: 错误和疑难解答
+          items:
+            - name: 错误和疑难解答
+              href: debugging-web-applications-errors-and-troubleshooting.md
+            - name: 疑难解答
+              items:
+                - name: 疑难解答
+                  href: debugging-web-applications-troubleshooting.md
+                - name: 验证 IIS 属性设置
+                  href: how-to-verify-iis-property-settings.md
+            - name: 站点使用 IP 地址
+              href: error-site-uses-ip-address.md
+            - name: 安全检查失败，因为 IIS 管理服务没有响应
+              href: error-a-security-check-failed-because-the-iis-admin-service-did-not-respond.md
+            - name: 未安装 ASP.NET
+              href: error-aspnet-not-installed.md
+            - name: 调试失败，因为没有启用集成 Windows 身份验证
+              href: error-debugging-failed-because-integrated-windows-authentication-is-not-enabled.md
+            - name: Web 服务器已被锁定，并阻止 DEBUG 谓词
+              href: error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb.md
+            - name: 调试 Web 服务时超时
+              href: error-timeout-while-debugging-web-services.md
+            - name: 无法在 Web 服务器上启动调试
+              items:
+                - name: 无法在 Web 服务器上启动调试
+                  href: error-unable-to-start-debugging-on-the-web-server.md
+                - name: Web 服务器找不到所请求的资源
+                  href: error-the-web-server-could-not-find-the-requested-resource.md
+                - name: Web 服务器配置不正确
+                  href: error-the-web-server-is-not-configured-correctly.md
+    - name: 调试 WCF 服务
+      items:
+        - name: 调试 WCF 服务
+          href: debugging-wcf-services.md
+        - name: WCF 调试的限制
+          href: limitations-on-wcf-debugging.md
+        - name: 单步执行 WCF 服务
+          href: how-to-step-into-wcf-services.md
+        - name: 调试自托管 WCF 服务
+          href: how-to-debug-a-self-hosted-wcf-service.md
+- name: 调试用户界面参考
+  items:
+    - name: 调试用户界面参考
+      href: debugging-user-interface-reference.md
+    - name: “选择断点”对话框
+      href: choose-breakpoints-dialog-box.md
+    - name: “为远程调试配置防火墙”对话框
+      href: configure-firewall-for-remote-debugging-dialog-box.md
+    - name: “选项”对话框 ->“调试”
+      items:
+        - name: “选项”对话框 ->“调试”
+          href: debugging-options-dialog-box.md
+        - name: “选项”对话框 ->“调试”->“常规”
+          href: general-debugging-options-dialog-box.md
+        - name: “选项”对话框 ->“调试”->“实时”
+          href: just-in-time-debugging-options-dialog-box.md
+        - name: “选项”对话框 ->“调试”->“输出”窗口
+          href: output-window-debugging-options-dialog-box.md
+    - name: “数据集可视化工具”对话框
+      href: dataset-visualizer-dialog-box.md
+    - name: “解决方案属性页”对话框 ->“通用属性”->“调试源文件”
+      href: debug-source-files-common-properties-solution-property-pages-dialog-box.md
+    - name: “编辑并继续”对话框
+      href: edit-and-continue-dialog-box.md
+    - name: “异常助手”对话框
+      href: exception-assistant-dialog-box.md
+    - name: “选择代码类型”对话框
+      href: select-code-type-dialog-box.md
+    - name: “停止正在进行的调试”对话框
+      href: stop-debugging-in-progress-dialog-box.md
+    - name: 字符串可视化工具对话框
+      href: string-visualizer-dialog-box.md
+    - name: “符号加载信息”对话框
+      href: symbol-load-information-dialog-box.md
+    - name: “命中断点时”对话框
+      href: when-breakpoint-is-hit-dialog-box.md
+    - name: “调试错误和警告”对话框
+      items:
+        - name: “调试错误和警告”对话框
+          href: debugging-errors-and-warning-dialog-boxes.md
+        - name: “断言失败”对话框
+          href: assertion-failed-dialog-box.md
+        - name: “无法更改值”对话框
+          href: cannot-change-value-dialog-box.md
+        - name: 调试器不能显示源代码或反汇编
+          href: debugger-cannot-display-source-code-or-disassembly.md
+        - name: “调试会话的可执行文件”对话框
+          href: executable-for-debugging-session-dialog-box.md
+        - name: “编辑并继续”对话框 (C++)
+          href: edit-and-continue-dialog-box-cpp.md
+        - name: “Microsoft Visual Studio 调试器（引发异常）”对话框
+          href: microsoft-visual-studio-debugger-exception-thrown-dialog-box.md
+        - name: 无可用的源
+          href: no-source-available.md
+        - name: “解析多义性”对话框
+          href: resolve-ambiguity-dialog-box.md
+        - name: “陈旧代码警告”对话框
+          href: stale-code-warning-dialog-box.md
+        - name: 无法附加到进程
+          href: unable-to-attach-to-the-process.md
+        - name: “编辑并继续”错误消息对话框
+          href: edit-and-continue-error-message-dialog-box.md
+        - name: 评估函数“function”超时，需要以不安全的方式中止
+          href: error-evaluating-the-function-function-timed-out-and-needed-to-be-aborted-in-an-unsafe-way.md
+        - name: 无法连接到远程计算机上的 SQL Server
+          href: error-unable-to-connect-to-sql-server-on-remote-machine.md
+        - name: 无法访问 SQL Server 调试接口
+          href: error-unable-to-access-the-sql-server-debugging-interface.md
+        - name: SQL 找不到 SSDEBUGPS
+          href: error-sql-can-t-find-ssdebugps.md
+        - name: Transact-SQL 执行未经调试便已结束
+          href: error-transact-sql-execution-ended-without-debugging.md
+        - name: 用户无法执行存储过程 sp_enable_sql_debug
+          href: error-user-could-not-execute-stored-procedure-sp-enable-sql-debug.md
+        - name: 已配置 Windows 文件共享...
+          href: error-windows-file-sharing-has-been-configured-dot-dot-dot.md
+        - name: 附加到不受信任的用户所拥有的进程可能很危险。 如果以下信息看上去可疑或者你无法确定，请勿附加到此进程
+          href: /visualstudio/debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user?view=vs-2015
+        - name: 调试器必须执行不受信任的命令
+          href: security-warning-debugger-must-execute-untrusted-command.md
+        - name: 源服务器安全警报
+          href: source-server-security-alert.md
+        - name: 仅当使用 Microsoft .NET Framework 4 或更高版本时，才支持对 x64 进程进行混合模式调试
+          href: mixed-mode-debugging-for-x64-processes-is-only-supported-when-using-microsoft-dotnet-framework-4-or-greater.md
+        - name: 不支持对 IA64 进程执行混合模式调试。
+          href: mixed-mode-debugging-for-ia64-processes-is-unsupported.md
+        - name: 仅当使用 Microsoft .NET Framework 2.0 或 3.0 时才支持混合模式调试
+          href: mixed-mode-debugging-is-only-supported-when-using-microsoft-dotnet-framework-2-0-or-3-0.md
+- name: 调试接口访问 SDK
+  href: debug-interface-access\TOC.md
+- name: Spy++ 帮助
+  items:
+    - name: Spy++ 帮助
+      href: spy-increment-help.md
+    - name: 使用 Spy++
+      items:
+        - name: 使用 Spy++
+          href: using-spy-increment.md
+        - name: Spy++ 简介
+          href: introducing-spy-increment.md
+        - name: 启动 Spy++
+          href: how-to-start-spy-increment.md
+        - name: Spy++ 工具栏
+          href: spy-increment-toolbar.md
+        - name: 显示 Spy++ 视图
+          href: how-to-display-spy-increment-views.md
+        - name: 刷新视图
+          href: how-to-refresh-the-view.md
+        - name: 更改字体
+          href: how-to-change-fonts.md
+        - name: 展开和折叠 Spy++ 树
+          href: how-to-expand-and-collapse-spy-increment-trees.md
+    - name: Spy++ 视图
+      items:
+        - name: Spy++ 视图
+          href: spy-increment-views.md
+        - name: 窗口视图
+          items:
+            - name: 窗口视图
+              href: windows-view.md
+            - name: 使用查找程序工具
+              href: how-to-use-the-finder-tool.md
+            - name: 在窗口视图中搜索窗口
+              href: how-to-search-for-a-window-in-windows-view.md
+            - name: 显示窗口属性
+              href: how-to-display-window-properties.md
+        - name: 消息视图
+          items:
+            - name: 消息视图
+              href: messages-view.md
+            - name: 控制消息视图
+              href: how-to-control-messages-view.md
+            - name: 从“查找”窗口打开消息视图
+              href: how-to-open-messages-view-from-find-window.md
+            - name: 在消息视图中搜索消息
+              href: how-to-search-for-a-message-in-messages-view.md
+            - name: 开始和停止消息日志显示
+              href: how-to-start-and-stop-the-message-log-display.md
+            - name: 消息代码
+              href: message-codes.md
+            - name: 显示消息属性
+              href: how-to-display-message-properties.md
+        - name: 进程视图
+          items:
+            - name: 进程视图
+              href: processes-view.md
+            - name: 在进程视图中搜索进程
+              href: how-to-search-for-a-process-in-processes-view.md
+            - name: 显示进程属性
+              href: how-to-display-process-properties.md
+        - name: 线程视图
+          items:
+            - name: 线程视图
+              href: threads-view.md
+            - name: 在线程视图中搜索线程
+              href: how-to-search-for-a-thread-in-threads-view.md
+            - name: 显示线程属性
+              href: how-to-display-thread-properties.md
+    - name: Spy++ 参考
+      items:
+        - name: Spy++ 参考
+          href: spy-increment-reference.md
+        - name: 菜单命令
+          items:
+            - name: 菜单命令
+              href: menu-commands.md
+            - name: “监视”菜单命令
+              href: spy-menu-commands.md
+            - name: “树”菜单命令
+              href: tree-menu-commands.md
+            - name: “搜索”菜单命令
+              href: search-menu-commands.md
+            - name: “视图”菜单命令
+              href: view-menu-commands.md
+            - name: “消息”菜单命令
+              href: messages-menu-commands.md
+            - name: “窗口”菜单命令
+              href: window-menu-commands.md
+            - name: “帮助”菜单命令
+              href: help-menu-commands.md
+        - name: “字体”对话框（Microsoft Spy++ 帮助）
+          href: font-dialog-box-microsoft-spy-increment-help.md
+        - name: Spy++ 视图的搜索工具
+          items:
+            - name: Spy++ 视图的搜索工具
+              href: search-tools-for-spy-increment-views.md
+            - name: “查找窗口”对话框
+              href: find-window-dialog-box.md
+            - name: “窗口搜索”对话框
+              href: window-search-dialog-box.md
+            - name: “消息搜索”对话框
+              href: message-search-dialog-box.md
+            - name: “进程搜索”对话框
+              href: process-search-dialog-box.md
+            - name: “线程搜索”对话框
+              href: thread-search-dialog-box.md
+        - name: “窗口属性”对话框
+          items:
+            - name: “窗口属性”对话框
+              href: window-properties-dialog-box.md
+            - name: “窗口属性”对话框 ->“常规”选项卡
+              href: general-tab-window-properties-dialog-box.md
+            - name: “窗口属性”对话框 ->“样式”选项卡
+              href: styles-tab-window-properties-dialog-box.md
+            - name: “窗口属性”对话框 ->“窗口”选项卡
+              href: windows-tab-window-properties-dialog-box.md
+            - name: “窗口属性”对话框 ->“类”选项卡
+              href: class-tab-window-properties-dialog-box.md
+            - name: “窗口属性”对话框 ->“进程”选项卡
+              href: process-tab-window-properties-dialog-box.md
+        - name: “消息选项”对话框
+          items:
+            - name: “消息选项”对话框
+              href: message-options-dialog-box.md
+            - name: “消息选项”对话框 ->“窗口”选项卡
+              href: windows-tab-message-options-dialog-box.md
+            - name: “消息选项”对话框 ->“消息”选项卡
+              href: messages-tab-message-options-dialog-box.md
+            - name: “消息选项”对话框 ->“输出”选项卡
+              href: output-tab-message-options-dialog-box.md
+        - name: “消息属性”对话框
+          href: message-properties-dialog-box.md
+        - name: “进程属性”对话框
+          items:
+            - name: “进程属性”对话框
+              href: process-properties-dialog-box.md
+            - name: “进程属性”对话框 ->“常规”选项卡
+              href: general-tab-process-properties-dialog-box.md
+            - name: “进程属性”对话框 ->“内存”选项卡
+              href: memory-tab-process-properties-dialog-box.md
+            - name: “进程属性”对话框 ->“页文件”选项卡
+              href: page-file-tab-process-properties-dialog-box.md
+            - name: “进程属性”对话框 ->“空间”选项卡
+              href: space-tab-process-properties-dialog-box.md
+        - name: “线程属性”对话框
+          items:
+            - name: “线程属性”对话框
+              href: thread-properties-dialog-box.md
+            - name: “线程属性”对话框 ->“常规”选项卡
+              href: general-tab-thread-properties-dialog-box.md
+        - name: 其他对话框
+          items:
+            - name: 其他对话框
+              href: other-dialog-boxes.md
+            - name: 关于 Microsoft Spy++
+              href: about-microsoft-spy-increment.md
+            - name: Spy++ 帮助的版权声明
+              href: copyright-notice-for-spy-increment-help.md

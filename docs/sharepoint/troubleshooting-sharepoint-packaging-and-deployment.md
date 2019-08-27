@@ -18,17 +18,17 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, packaging
 - SharePoint development in Visual Studio, troubleshooting
 - SharePoint development in Visual Studio, deployment conflict resolution
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a12e24ea0db662931651feb3031ec0da71926f24
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 0c949f9a5d8c56f44e0754715d056b4d3837f76a
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53878700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63008320"
 ---
 # <a name="troubleshoot-sharepoint-packaging-and-deployment"></a>SharePoint 打包和部署进行故障排除
   本主题论述了您在打包和部署 SharePoint 解决方案时可能遇到的各种问题。
@@ -40,18 +40,18 @@ ms.locfileid: "53878700"
  可以通过包设计器向包中添加项目输出。 但是，在添加项目输出时，请确保项目的平台与 SharePoint 解决方案的平台匹配。 我们建议你使用**任何 CPU**你想要将部署到 SharePoint 服务器的程序集的目标平台。 有关详细信息，请参阅[编译页，项目设计器&#40;Visual Basic&#41; ](../ide/reference/compile-page-project-designer-visual-basic.md)并[高级编译器设置对话框&#40;Visual Basic&#41;](../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md)。
 
 ## <a name="validation-warnings-and-errors"></a>验证警告和错误
- Visual Studio 中的 SharePoint 开发工具将执行验证步骤来验证解决方案包的格式是否正确。 也可以为功能和包创建自定义验证步骤。 有关更多信息，请参见[如何：创建自定义功能和包验证规则为 SharePoint 解决方案](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)。
+ Visual Studio 中的 SharePoint 开发工具将执行验证步骤来验证解决方案包的格式是否正确。 也可以为功能和包创建自定义验证步骤。 有关详细信息，请参阅[如何：创建自定义功能和包验证规则为 SharePoint 解决方案](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)。
 
 ## <a name="deployment-conflict-resolution"></a>部署冲突解决方法
  在部署 SharePoint 解决方案时，当服务器上的项与解决方案包中的项具有相同的名称、URL 或 ID 时，您可能会发现冲突。 您可以更改**部署冲突解决方法**属性来解决、 报告或忽略模块、 Web 部件、 列表实例和内容类型的冲突。
 
  下表演示了用于设置**部署冲突解决方法**属性。
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |自动|自动检测冲突和解决冲突。|
 |提示|检测冲突并在解决冲突之前向开发人员报告冲突。|
-|无|不检测冲突。|
+|None|不检测冲突。|
 
 ## <a name="differences-between-f5-deployment"></a>F5 部署之间的差异
  当你使用 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 将 SharePoint 项目部署到本地 SharePoint 服务器进行测试和调试时，[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 将执行一些其他步骤。
@@ -73,9 +73,9 @@ ms.locfileid: "53878700"
 ### <a name="resolution"></a>解决方法
  若要解决此问题，请执行以下步骤：
 
-1.  Microsoft 支持文章中所述安装更新 KB967535[修复：修补程序是可用于两个问题 ASP.NET IIS 7.0 上修复适用于 Windows Vista 和 Windows Server 2008](http://go.microsoft.com/fwlink/?LinkId=179055)。
+1. Microsoft 支持文章中所述安装更新 KB967535[修复：修补程序是可用于两个问题 ASP.NET IIS 7.0 上修复适用于 Windows Vista 和 Windows Server 2008](http://go.microsoft.com/fwlink/?LinkId=179055)。
 
-2.  将以下行添加到 Web.config 文件中：
+2. 将以下行添加到 Web.config 文件中：
 
     ```xml
     <compilation batch="false" optimizeCompilations="true">

@@ -2,21 +2,20 @@
 title: 工作流设计器-ParallelForEach&lt;T&gt;活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - System.Activities.Statements.ParallelForEach`1.UI
 ms.assetid: e93a4843-aef2-4d3e-9a0a-a2d3d1411aa7
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e411f5e72566753d66ded4e445868e5ab245bf9
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: be522112dd4cfa16744d0c9e54601ba7a0492704
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53873903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004225"
 ---
 # <a name="parallelforeach-activity-designer"></a>ParallelForEach 活动设计器
 

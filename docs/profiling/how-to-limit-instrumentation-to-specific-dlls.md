@@ -6,15 +6,15 @@ helpviewer_keywords:
 - performance tools, runtime profiling control window
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c20dde749f95a24c6d83c7b6693220a5552f89fe
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b39689219b113343162aa0e814cfa68e2422f08d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53885163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62980910"
 ---
 # <a name="how-to-limit-instrumentation-to-specific-dlls"></a>如何：将检测限定为特定 DLL
 
@@ -69,5 +69,5 @@ ms.locfileid: "53885163"
 
 ## <a name="see-also"></a>请参阅
 
-[控制数据收集](../profiling/controlling-data-collection.md)  
+[控制数据收集](../profiling/controlling-data-collection.md)
 [如何：将检测限定为特定函数](../profiling/how-to-limit-instrumentation-to-specific-functions.md)

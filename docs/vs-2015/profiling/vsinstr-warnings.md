@@ -1,14 +1,9 @@
 ---
 title: VSInstr 警告 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - instrumentation, VSInstr tool
 - warnings
@@ -19,23 +14,23 @@ ms.assetid: 47512bc9-a8e9-4628-883a-d9888edab786
 caps.latest.revision: 25
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: be30404e4fb9cff6c53bb3afbdedb4ce03ba2d80
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: b178afb59558f5e684d704137039891aefbf0e3a
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51765142"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65683246"
 ---
 # <a name="vsinstr-warnings"></a>VSInstr 警告
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 下表列出了由 VSInstr.exe 工具发出的警告。 可使用 NOWARN 选项及警告编号来禁止显示警告。  
   
-|警告编号|描述|  
+|警告编号|说明|  
 |--------------------|-----------------|  
 |**VSP2000**|内部错误。 无法获取此可执行文件的模块文件名。|  
-|**VSP2001**|\<程序集名称> 是强名称程序集。 必须先对其重新签名，然后才能执行它。<br /><br /> 当检测到签名程序集时，将发出此警告。 可使用 sn.exe 工具重新签名二进制，或暂时关闭强名称要求。 有关详细信息，请参阅 [Sn.exe （强名称工具）](http://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6)。|  
+|**VSP2001**|\<程序集名称> 是强名称程序集。 必须先对其重新签名，然后才能执行它。<br /><br /> 当检测到签名程序集时，将发出此警告。 可使用 sn.exe 工具重新签名二进制，或暂时关闭强名称要求。 有关详细信息，请参阅 [Sn.exe （强名称工具）](https://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6)。|  
 |**VSP2002**|未能在文件 \<文件名> 中找到函数 \<函数名><br /><br /> 如果无法在指定文件中找到某个函数，将出现此警告。|  
 |**VSP2003**|未能在文件 \<文件名> 中找到任何指向函数 \<函数名> 的交叉跳转。<br /><br /> 如果 VSInstr 无法置空交叉跳转，将出现此警告。 交叉跳转用于代码优化。|  
 |**VSP2004**|已通过 EXCLUDE 命令行开关排除了函数 \<函数名>，但因为该函数包含交叉跳转，所以仍需要它。<br /><br /> 如果使用 EXCLUDE 选项排除了函数，但在检测过程中仍需要该函数，则将出现此警告。 探查器会自动包括所需的函数。|  
@@ -52,6 +47,3 @@ ms.locfileid: "51765142"
   
 ## <a name="see-also"></a>请参阅  
  [VSInstr](../profiling/vsinstr.md)
-
-
-

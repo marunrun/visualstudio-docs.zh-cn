@@ -1,14 +1,9 @@
 ---
-title: 错误： TRANSACT-SQL 执行结束，而不进行调试 |Microsoft Docs
-ms.custom: ''
+title: 错误：TRANSACT-SQL 执行未经调试便已结束 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 f1_keywords:
 - vs.debug.error.sqlde_sql_executed_but_not_debugged
 dev_langs:
@@ -21,13 +16,13 @@ ms.assetid: 7a4d4999-3973-4339-ba6a-f0d19bcb1d4a
 caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: b67900f02a81a6a28279268c3fe6fa067bcdaedc
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: cdfcaa42c55f87711b0889c6a67d1a4799b84fed
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51787635"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65681078"
 ---
 # <a name="error-transact-sql-execution-ended-without-debugging"></a>错误：Transact-SQL 执行未经调试便已结束
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -48,17 +43,14 @@ ms.locfileid: "51787635"
   
   若要纠正此错误，可能需要：  
   
-- 验证权限设置。 有关详细信息，请参阅[如何： 设置 SQL Server 调试权限](http://msdn.microsoft.com/en-us/84e088d0-0409-41d4-841b-f5d4b0fda414)。  
+- 验证权限设置。 有关详细信息，请参阅[如何：设置 SQL Server 权限以进行调试](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414)。  
   
 - 如果设置正确，请确保 SQL 调试也正确。  
   
 - 请咨询网络或数据库管理员。  
   
 ## <a name="see-also"></a>请参阅  
- [设置 SQL 调试](http://msdn.microsoft.com/en-us/3db09e68-edcc-42de-9c22-4e97cfd55ab3)   
- [如何： 设置 SQL Server 权限以进行调试](http://msdn.microsoft.com/en-us/84e088d0-0409-41d4-841b-f5d4b0fda414)   
+ [设置 SQL 调试](https://msdn.microsoft.com/3db09e68-edcc-42de-9c22-4e97cfd55ab3)   
+ [如何：设置 SQL Server 权限以进行调试](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414)   
  [调试器设置和准备](../debugger/debugger-settings-and-preparation.md)   
- [Remote Debugging](../debugger/remote-debugging.md)
-
-
-
+ [远程调试](../debugger/remote-debugging.md)

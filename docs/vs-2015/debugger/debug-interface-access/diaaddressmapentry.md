@@ -1,14 +1,9 @@
 ---
-title: DiaAddressMapEntry |Microsoft Docs
-ms.custom: ''
+title: DiaAddressMapEntry | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 5d0ae226-981d-4541-a801-fc4993fe663b
 caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: fa2824b7fbd10e7628e5c6b0a016615620933df9
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 67c0a3e297f3eebfbf44724e64c4989d9bb979fb
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51756240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68164358"
 ---
 # <a name="diaaddressmapentry"></a>DiaAddressMapEntry
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -53,9 +48,9 @@ struct DiaAddressMapEntry { 
   
 1. 搜索的项映射`e`，，最大`rva`小于或等于`addrA`。  
   
-2. 设置`delta = addrA – e.rva`。  
+2. 设置 `delta = addrA – e.rva`。  
   
-3. 设置`addrB = e.rvaTo + delta`。  
+3. 设置 `addrB = e.rvaTo + delta`。  
   
    一个数组`DiaAddressMapEntry`结构传递给[idiaaddressmap:: Set_addressmap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)方法。  
   
@@ -65,6 +60,3 @@ struct DiaAddressMapEntry { 
 ## <a name="see-also"></a>请参阅  
  [枚举和结构](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [IDiaAddressMap::set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)
-
-
-

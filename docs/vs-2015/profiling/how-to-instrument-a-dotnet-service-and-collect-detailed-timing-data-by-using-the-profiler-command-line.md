@@ -1,37 +1,32 @@
 ---
 title: 如何：使用探查器命令行检测 .NET 服务和收集详细计时数据 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 9f73593a-69a7-41b7-a21c-81d3ab0eb8fe
 caps.latest.revision: 32
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: dc95a776713876f559bf3d72b50dc6f24e055dc8
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: b438cac78aa863eab4f04e250ed768d54a2fbc4c
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51737656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63432689"
 ---
-# <a name="how-to-instrument-a-net-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line"></a>如何：使用探查器命令行检测 .NET 服务和收集详细计时数据
+# <a name="how-to-instrument-a-net-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line"></a>如何：检测.NET 服务和收集详细的计时数据使用 Profiler 命令行
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本主题介绍如何使用 [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] 分析工具命令行工具检测 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 服务和收集详细计时数据。  
 
 > [!NOTE]
->  如果某服务在计算机启动之后无法重启（此类服务只能在操作系统启动时启动），则无法使用检测方法分析该服务。  
+> 如果某服务在计算机启动之后无法重启（此类服务只能在操作系统启动时启动），则无法使用检测方法分析该服务。  
 >   
->  分析工具的命令行工具位于 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 安装目录的 \Team Tools\Performance Tools 子目录中。 在 64 位计算机上，同时提供 64 位和 32 位版本的工具。 若要使用探查器命令行工具，必须将工具路径添加到命令提示符窗口的 PATH 环境变量中，或将其添加到命令本身。 有关详细信息，请参阅[指定命令行工具的路径](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)。  
+> 分析工具的命令行工具位于 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 安装目录的 \Team Tools\Performance Tools 子目录中。 在 64 位计算机上，同时提供 64 位和 32 位版本的工具。 若要使用探查器命令行工具，必须将工具路径添加到命令提示符窗口的 PATH 环境变量中，或将其添加到命令本身。 有关详细信息，请参阅[指定命令行工具的路径](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)。  
 >   
->  若要将层交互数据添加到分析运行，需要使用命令行分析工具执行特定的步骤。 请参阅[收集层交互数据](../profiling/adding-tier-interaction-data-from-the-command-line.md)。  
+> 若要将层交互数据添加到分析运行，需要使用命令行分析工具执行特定的步骤。 请参阅[收集层交互数据](../profiling/adding-tier-interaction-data-from-the-command-line.md)。  
 
  若要使用检测方法从 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 服务收集详细计时数据，可使用 [VSInstr.exe](../profiling/vsinstr.md) 工具生成该组件的受检测版本。 然后，将该服务的非检测版本替换为检测版本，确保将该服务配置为手动启动。 使用 [VSPerfCLREnv.cmd](../profiling/vsperfclrenv.md) 工具初始化全局分析环境变量，然后重启主计算机。 然后启动探查器。  
 
@@ -68,7 +63,7 @@ ms.locfileid: "51737656"
      可以将以下任一选项与 /start:trace 选项一起使用。  
 
    > [!NOTE]
-   >  /User 和 /crosssession 选项通常为分析服务所需选项。  
+   > /User 和 /crosssession 选项通常为分析服务所需选项。  
 
    |                                 选项                                  |                                                                                                                                            描述                                                                                                                                             |
    |-------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -81,7 +76,6 @@ ms.locfileid: "51737656"
    |         [/automark](../profiling/automark.md) **:** `Interval`          |                                                                           仅与 **/wincounter** 一起使用。 指定两次 Windows 性能计数器收集事件相隔的毫秒数。 默认值为 500 毫秒。                                                                            |
    |       [/events](../profiling/events-vsperfcmd.md) **:** `Config`        |                                                                              指定要在分析期间收集的 Windows 事件跟踪 (ETW) 事件。 ETW 事件收集在单独的 (.etl) 文件中。                                                                              |
 
-
 8. 从 Windows 服务控制管理器启动服务。  
 
 ## <a name="controlling-data-collection"></a>控制数据收集  
@@ -89,7 +83,7 @@ ms.locfileid: "51737656"
 
 #### <a name="to-start-and-stop-data-collection"></a>启动和停止数据收集  
 
--   以下 **VSPerfCmd** 选项对可启动和停止数据收集。 在单独的命令行上指定每个选项。 可多次打开和关闭数据收集。  
+- 以下 **VSPerfCmd** 选项对可启动和停止数据收集。 在单独的命令行上指定每个选项。 可多次打开和关闭数据收集。  
 
     |选项|描述|  
     |------------|-----------------|  
@@ -104,23 +98,20 @@ ms.locfileid: "51737656"
 
 #### <a name="to-end-a-profiling-session"></a>结束分析会话  
 
-1.  从服务控制管理器停止服务。  
+1. 从服务控制管理器停止服务。  
 
-2.  关闭探查器。 类型：  
+2. 关闭探查器。 类型：  
 
      **VSPerfCmd /shutdown**  
 
-3.  完成所有分析后，清除分析环境变量。 类型：  
+3. 完成所有分析后，清除分析环境变量。 类型：  
 
      VSPerfClrEnv /globaloff  
 
-4.  使用原始模块替换被检测模块。 如有必要，重新配置服务的“启动类型”。  
+4. 使用原始模块替换被检测模块。 如有必要，重新配置服务的“启动类型”。  
 
-5.  重新启动计算机。  
+5. 重新启动计算机。  
 
 ## <a name="see-also"></a>请参阅  
  [分析服务](../profiling/command-line-profiling-of-services.md)   
  [检测方法数据视图](../profiling/instrumentation-method-data-views.md)
-
-
-

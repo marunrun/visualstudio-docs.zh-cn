@@ -1,5 +1,5 @@
 ---
-title: 'Idiaenumsymbolsbyaddr:: Clone |Microsoft Docs'
+title: IDiaEnumSymbolsByAddr::Clone | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -9,33 +9,34 @@ helpviewer_keywords:
 ms.assetid: f4582c69-bc3f-4a26-bcca-b641102b85fe
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d6208116cf3a9028acbcf55bae49ae8ad2d6a0f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: a5304c578949becd33dcef519706efab72eee4be
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53912670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62830303"
 ---
 # <a name="idiaenumsymbolsbyaddrclone"></a>IDiaEnumSymbolsByAddr::Clone
-创建一个对象的副本。  
-  
-## <a name="syntax"></a>语法  
-  
-```C++  
-HRESULT Clone (   
-   IDiaEnumSymbolsByAddr** ppenum  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- ppenum  
- [out]返回[IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)对象，其中包含重复的枚举器。 未复制符号，仅枚举器。  
-  
-## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
-  
-## <a name="see-also"></a>请参阅  
- [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)
+创建一个对象的副本。
+
+## <a name="syntax"></a>语法
+
+```C++
+HRESULT Clone ( 
+   IDiaEnumSymbolsByAddr** ppenum
+);
+```
+
+#### <a name="parameters"></a>参数
+ ppenum
+
+[out]返回[IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)对象，其中包含重复的枚举器。 未复制符号，仅枚举器。
+
+## <a name="return-value"></a>返回值
+ 如果成功，则返回`S_OK`; 否则为返回错误代码。
+
+## <a name="see-also"></a>请参阅
+- [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)

@@ -1,27 +1,22 @@
 ---
 title: 为游戏和应用程序使用三维资产 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 f1_keywords:
 - vs.graphics
 ms.assetid: 910d673b-c884-4eeb-9928-0e89f3d38cb6
 caps.latest.revision: 26
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: bdf19958ec7b3cfe72ee00ea84e0e23724a51458
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 020c934d3427dda77c41fb410143972d6f48656b
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49265223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63438100"
 ---
 # <a name="working-with-3-d-assets-for-games-and-apps"></a>为游戏和应用程序使用三维资产
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,7 +44,7 @@ ms.locfileid: "49265223"
  可以使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 着色器设计器，它是一个基于图形的着色器设计工具，用户可以在不懂 HLSL 编程的情况下创建自定义可视化效果。  
   
 > [!NOTE]
->  有关如何开始 DirectX 编程的详细信息，请参阅 [DirectX](http://go.microsoft.com/fwlink/p/?LinkId=224633)。 有关如何调试基于 DirectX 的应用的详细信息，请参阅[图形诊断（调试 DirectX 图形）](../debugger/visual-studio-graphics-diagnostics.md)。  
+> 有关如何开始 DirectX 编程的详细信息，请参阅 [DirectX](http://go.microsoft.com/fwlink/p/?LinkId=224633)。 有关如何调试基于 DirectX 的应用的详细信息，请参阅[图形诊断（调试 DirectX 图形）](../debugger/visual-studio-graphics-diagnostics.md)。  
   
 ## <a name="directx-version-compatibility"></a>DirectX 版本兼容性  
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 使用 DirectX 来呈现二维和三维资产。 可以选择 DirectX 11 呈现器或 Windows 高级光栅化平台 (WARP) 软件呈现器。 DirectX 11 呈现器在 DirectX 11 和 DirectX 10 GPU 上提供高性能、硬件加速呈现。 WARP 呈现器有助于确保资产适用于一系列计算机，其中包括没有新式图形硬件的计算机和具有集成图形硬件的计算机。 有关 WARP 的详细信息，请参见 [Windows 高级光栅化平台 (WARP) 指南](http://go.microsoft.com/fwlink/p/?LinkId=224634)。  
@@ -62,6 +57,3 @@ ms.locfileid: "49265223"
 |[使用三维模型](../designers/working-with-3-d-models.md)|介绍如何使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 处理三维模型。|  
 |[使用着色器](../designers/working-with-shaders.md)|介绍如何使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 着色器设计器创建和修改自定义着色器效果。|  
 |[在游戏或应用程序中使用三维资产](../designers/using-3-d-assets-in-your-game-or-app.md)|介绍如何使用通过图像编辑器、模型编辑器或着色器设计器创建的游戏或应用中的资产。|
-
-
-

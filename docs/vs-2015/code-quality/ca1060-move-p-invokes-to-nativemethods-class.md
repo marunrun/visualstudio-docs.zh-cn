@@ -1,14 +1,9 @@
 ---
-title: CA1060： 移动-Invokes 到 NativeMethods 类 |Microsoft Docs
-ms.custom: ''
+title: CA1060:将 P-invoke 移动到 NativeMethods 类 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - MovePInvokesToNativeMethodsClass
 - CA1060
@@ -20,14 +15,14 @@ caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 026f568d71c80af95d2d4bee640dc11d1042713f
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: f47fa4326da9914171e5014decbd6d6923c2f02e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49913860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68200482"
 ---
-# <a name="ca1060-move-pinvokes-to-nativemethods-class"></a>CA1060：将 P/Invoke 移动到 NativeMethods 类
+# <a name="ca1060-move-pinvokes-to-nativemethods-class"></a>CA1060:将 P/Invoke 移动到 NativeMethods 类
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -94,7 +89,7 @@ ms.locfileid: "49913860"
 ## <a name="unsafenativemethods-example"></a>UnsafeNativeMethods 示例
 
 ### <a name="description"></a>描述
- P/Invoke 方法，不能安全地调用和任何可导致副作用应置于名为的类**UnsafeNativeMethods**。 应严格检查这些方法，以确保它们不公开给用户无意中。 该规则[CA2118： 检查 SuppressUnmanagedCodeSecurityAttribute 用法](../code-quality/ca2118-review-suppressunmanagedcodesecurityattribute-usage.md)对此有所帮助。 或者，方法应具有另一个而不是所需的权限**UnmanagedCode**何时使用它们。
+ P/Invoke 方法，不能安全地调用和任何可导致副作用应置于名为的类**UnsafeNativeMethods**。 应严格检查这些方法，以确保它们不公开给用户无意中。 该规则[CA2118:检查 SuppressUnmanagedCodeSecurityAttribute 用法](../code-quality/ca2118-review-suppressunmanagedcodesecurityattribute-usage.md)对此有所帮助。 或者，方法应具有另一个而不是所需的权限**UnmanagedCode**何时使用它们。
 
  下面的示例演示**Cursor.Hide**方法，用于包装**ShowCursor** user32.dll 函数。
 
@@ -104,6 +99,3 @@ ms.locfileid: "49913860"
 
 ## <a name="see-also"></a>请参阅
  [设计警告](../code-quality/design-warnings.md)
-
-
-

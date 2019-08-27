@@ -1,14 +1,9 @@
 ---
 title: '&lt;PackageFiles&gt;元素 （引导程序） |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -20,13 +15,13 @@ ms.assetid: 3ea252d7-18a3-47d8-af83-47feebcfe82b
 caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: b4cddd6752872cf03ef5f5d55b0cbbb88aa1e66a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 382689dada13adce1ee530e66fef6ba78452efaa
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49302778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68188984"
 ---
 # <a name="ltpackagefilesgt-element-bootstrapper"></a>&lt;PackageFiles&gt;元素 （引导程序）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -63,7 +58,7 @@ ms.locfileid: "49302778"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`Name`|必须的。 包文件的名称。 这是名称的`Command`元素将引用此项定义的包将安装在其下的条件。 此值还用作的键`Strings`表以检索这样的工具的本地化的名称[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]将用于描述包。|  
+|`Name`|必需。 包文件的名称。 这是名称的`Command`元素将引用此项定义的包将安装在其下的条件。 此值还用作的键`Strings`表以检索这样的工具的本地化的名称[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]将用于描述包。|  
 |`HomeSite`|可选。 在远程服务器上，如果不包括与安装程序的包的位置。|  
 |`CopyOnBuild`|可选。 指定引导程序在生成时是否应将复制到磁盘上的包文件。 默认值为 true。|  
 |`PublicKey`|加密的包的证书签名者的公钥。 如果使用`HomeSite`使用; 否则为可选。|  
@@ -85,6 +80,3 @@ ms.locfileid: "49302778"
  [\<产品 > 元素](../deployment/product-element-bootstrapper.md)   
  [\<包 > 元素](../deployment/package-element-bootstrapper.md)   
  [产品和包架构引用](../deployment/product-and-package-schema-reference.md)
-
-
-

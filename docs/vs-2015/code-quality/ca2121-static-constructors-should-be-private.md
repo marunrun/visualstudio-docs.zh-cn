@@ -1,14 +1,9 @@
 ---
-title: CA2121： 静态构造函数应为私有 |Microsoft Docs
-ms.custom: ''
+title: CA2121:静态构造函数应为私有 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA2121
 - StaticConstructorsShouldBePrivate
@@ -20,14 +15,14 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 24fcd6970d368bfee739e47f9b7e0407f5cd6307
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: d7894b4ec0039b28a579239605c22c2397c300f3
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49918540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68154344"
 ---
-# <a name="ca2121-static-constructors-should-be-private"></a>CA2121：静态构造函数应为私有
+# <a name="ca2121-static-constructors-should-be-private"></a>CA2121:静态构造函数应为私有
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -41,7 +36,7 @@ ms.locfileid: "49918540"
  类型具有不是私有的静态构造函数。
 
 ## <a name="rule-description"></a>规则说明
- 静态构造函数，也称为类构造函数，用于初始化的类型。 系统在创建第一个类型实例或引用任何静态成员之前调用静态构造函数。 用户可以调用静态构造函数时没有控制。 如果静态构造函数不是私有，则系统以外的代码可以调用它。 根据构造函数中执行的操作，这可能导致意外行为。
+ 静态构造函数，也称为类构造函数，用于初始化的类型。 系统在创建第一个类型实例或引用任何静态成员之前调用静态构造函数。 用户无法控制何时调用静态构造函数。 如果静态构造函数不是私有，则系统以外的代码可以调用它。 根据构造函数中执行的操作，这可能导致意外行为。
 
  此规则由 C# 和 Visual Basic.NET 编译器强制执行。
 
@@ -56,6 +51,3 @@ ms.locfileid: "49918540"
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  不要禁止显示这些冲突。 如果您的软件设计要求显式静态构造函数调用，则很可能设计存在严重缺陷，应进行检查。
-
-
-

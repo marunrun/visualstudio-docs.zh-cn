@@ -1,27 +1,22 @@
 ---
 title: 命令的 Vspackage 中的路由 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - commands, routing
 - command routing, Visual Studio SDK
 ms.assetid: a9c7f9ae-3594-4557-a314-8cf76f5f8772
 caps.latest.revision: 25
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 805b0bcf4b2087626060595f9cd6e86d10ad719f
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 954d3f25a425652d8adcb31bd36fab06de0d04d2
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51781733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68195088"
 ---
 # <a name="command-routing-in-vspackages"></a>VSPackage 中的命令传送
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -44,4 +39,3 @@ ms.locfileid: "51781733"
   
  [命令、菜单和工具栏](../../extensibility/internals/commands-menus-and-toolbars.md)  
  说明如何创建包含菜单、工具栏和命令组合框的 UI。
-

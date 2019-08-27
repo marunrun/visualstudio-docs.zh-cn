@@ -1,14 +1,9 @@
 ---
 title: ClickOnce 缓存概述 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -21,13 +16,13 @@ ms.assetid: e379921e-9ef1-4326-bbf3-53ba67925526
 caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: 5e976877a045b6efc7ca3d9fb103b9d1a8e88df7
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 58ea758ea10e2c58ff123a2bc991f14191db0aa1
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49217290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68151655"
 ---
 # <a name="clickonce-cache-overview"></a>ClickOnce 缓存概述
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,6 +38,3 @@ ms.locfileid: "49217290"
   
 ## <a name="see-also"></a>请参阅  
  [在 ClickOnce 应用程序中访问本地数据和远程数据](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)
-
-
-

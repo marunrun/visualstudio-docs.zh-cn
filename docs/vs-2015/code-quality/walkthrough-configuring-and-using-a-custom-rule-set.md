@@ -1,14 +1,9 @@
 ---
-title: 演练： 配置和使用自定义规则集 |Microsoft Docs
-ms.custom: ''
+title: 演练：配置和使用自定义规则集 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, walkthroughs
 - code analysis, rule sets
@@ -17,12 +12,12 @@ caps.latest.revision: 42
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 5976ee0c0fbfc4befe97f2ab25c46744a8267134
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: fa3a91df779094e3e11722dfc7bfc03c58bcea7e
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49906036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63383410"
 ---
 # <a name="walkthrough-configuring-and-using-a-custom-rule-set"></a>演练：配置和使用自定义规则集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,21 +26,21 @@ ms.locfileid: "49906036"
   
  在本演练中，将逐步完成以下过程：  
   
--   创建一个类库。  
+- 创建一个类库。  
   
--   选择**Microsoft 基本设计准则规则**代码分析规则集。  
+- 选择**Microsoft 基本设计准则规则**代码分析规则集。  
   
--   将你自己的代码添加到类。  
+- 将你自己的代码添加到类。  
   
--   运行代码分析。  
+- 运行代码分析。  
   
--   自定义规则集。  
+- 自定义规则集。  
   
--   运行代码分析，请参阅如何设置自定义行为的工作方式的规则。  
+- 运行代码分析，请参阅如何设置自定义行为的工作方式的规则。  
   
 ## <a name="prerequisites"></a>系统必备  
   
--   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、[!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] 或 [!INCLUDE[vsPro](../includes/vspro-md.md)]  
+- [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、[!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] 或 [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
 ## <a name="using-rule-sets-with-code-analysis"></a>使用规则集对代码分析  
  首先，创建一个简单的类库。  
@@ -54,9 +49,9 @@ ms.locfileid: "49906036"
   
 1. 在 **文件** 菜单上，单击 **新建** ，然后单击 **项目**。  
   
-2. 在中**新的项目**对话框中的**项目类型**，单击**Visual C#**。  
+2. 在中**新的项目**对话框中的**项目类型**，单击**Visual C#** 。  
   
-3. 下**Visual C#**，选择**类库**。  
+3. 下**Visual C#** ，选择**类库**。  
   
 4. 在中**名称**文本框中，键入**RuleSetSample** ，然后单击**确定**。  
   
@@ -75,9 +70,9 @@ ms.locfileid: "49906036"
     在文件菜单上单击**保存选定项**使用所选规则集有关的信息和其设置更新项目文件。  
   
    > [!TIP]
-   >  在实际情况下，为了优先处理你想要针对的代码分析的问题的好办法是首先**最少量建议规则**规则集和更正所需的问题，以及如何以增量方式将要查找和更正的其他问题的更多的规则集。  
+   > 在实际情况下，为了优先处理你想要针对的代码分析的问题的好办法是首先**最少量建议规则**规则集和更正所需的问题，以及如何以增量方式将要查找和更正的其他问题的更多的规则集。  
   
-   接下来，会将一些代码添加到类库，用于演示 CA1704 冲突"的标识符应正确拼写"代码分析规则。 有关详细信息，请参阅[CA1704： 标识符应正确拼写](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)。  
+   接下来，会将一些代码添加到类库，用于演示 CA1704 冲突"的标识符应正确拼写"代码分析规则。 有关详细信息，请参阅[CA1704:标识符应正确拼写](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)。  
   
 #### <a name="add-your-own-code"></a>添加你自己的代码  
   
@@ -115,7 +110,7 @@ ms.locfileid: "49906036"
   
 2. 在错误列表窗口中，单击**警告**，然后单击**说明**列标题进行排序警告进行排序。  
   
-    在实际应用程序中，你修复值得在此情况下，修复任何规则冲突或 （可选） 关闭或取消一条规则，如果你确定它值得修复不是。 有关详细信息，请参阅[使用 SuppressMessage 特性通过禁止显示警告](../code-quality/suppress-warnings-by-using-the-suppressmessage-attribute.md)。  
+    在实际应用程序中，你修复值得在此情况下，修复任何规则冲突或 （可选） 关闭或取消一条规则，如果你确定它值得修复不是。 有关详细信息，请参阅[使用 SuppressMessage 特性禁止显示警告](../code-quality/suppress-warnings-by-using-the-suppressmessage-attribute.md)。  
   
 3. 请注意 CA1704 警告。 此规则的这些冲突指示应"考虑的一个更有意义的名称的参数。" 无法在代码中更正此问题或下一个过程中所述，可以禁用该规则。  
   
@@ -145,7 +140,7 @@ ms.locfileid: "49906036"
   
 2. 在中**属性**选项卡上，单击**代码分析**。  
   
-    在中**运行此规则集**下拉列表中，单击**\<浏览...>**。 导航到你的代码项目的根文件夹，然后选择**MyCustomRuleSet.ruleset**。 这是在上一过程中创建的新规则集。  
+    在中**运行此规则集**下拉列表中，单击 **\<浏览...>** 。 导航到你的代码项目的根文件夹，然后选择**MyCustomRuleSet.ruleset**。 这是在上一过程中创建的新规则集。  
   
 3. 上**文件**菜单上，单击**保存**以保存项目配置。 自定义规则集现在可与你的项目。  
   
@@ -153,13 +148,10 @@ ms.locfileid: "49906036"
   
 #### <a name="run-code-analysis-on-the-rulesetsample-project-for-the-second-time"></a>第二次对 RuleSetSample 项目运行代码分析  
   
-1.  上**分析**菜单上，单击**RuleSetSample 对运行代码分析**。  
+1. 上**分析**菜单上，单击**RuleSetSample 对运行代码分析**。  
   
-2.  在错误列表窗口中，请注意，当您单击**警告**，不会再看到"标识符应正确拼写"规则冲突的 CA1704 警告。  
+2. 在错误列表窗口中，请注意，当您单击**警告**，不会再看到"标识符应正确拼写"规则冲突的 CA1704 警告。  
   
 ## <a name="see-also"></a>请参阅  
- [如何： 配置托管的代码项目的代码分析](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)   
+ [如何：配置托管的代码项目的代码分析](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)   
  [代码分析规则集参考](../code-quality/code-analysis-rule-set-reference.md)
-
-
-

@@ -5,15 +5,15 @@ ms.topic: conceptual
 ms.assetid: 46b0a1e3-7e69-47c9-9d8d-a1815d6c3896
 author: BertanAygun
 ms.author: bertaygu
-manager: douge
+manager: jillfra
 ms.workload:
 - bertaygu
-ms.openlocfilehash: fd51728f5e57af1017cb4b280f9ffc9d1c50df98
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 3d8fb5de23cbc4664ea322a9149653598956aed7
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53943416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863272"
 ---
 # <a name="measuring-extension-impact-in-startup"></a>测量中启动扩展影响
 
@@ -74,11 +74,11 @@ ms.locfileid: "53943416"
 
 一个包初始化中的常见模式是初始化由或包中的包提供的服务`constructor`或`initialize`方法。 虽然这可确保服务是可供使用，它还可以添加不必要的成本打包加载如果不立即使用这些服务。 而是应按需以最大程度减少中包初始化完成的工作已初始化此类服务。
 
-对于提供的包的全局服务，你可以使用`AddService`采用一个函数为延迟初始化该服务，它是一个组件的请求的方法。 对于包中使用的服务，可以使用 Lazy<T>或 AsyncLazy<T>以确保服务是在首次使用初始化/查询。
+对于提供的包的全局服务，你可以使用`AddService`采用一个函数为延迟初始化该服务，它是一个组件的请求的方法。 对于包中使用的服务，可以使用 Lazy\<T > 或 AsyncLazy\<T > 若要确保服务是在首次使用初始化/查询。
 
 ## <a name="measuring-impact-of-auto-loaded-extensions-using-activity-log"></a>测量的自动影响加载扩展使用活动日志
 
-从 Visual Studio 2017 Update 3 开始，Visual Studio 活动日志现在将包含包的性能影响的条目启动和解决方案加载过程。 若要查看这些度量值，必须使用 /log 开关启动 Visual Studio 并打开*ActivityLog.xml*文件。
+从 Visual Studio 2017 Update 3 开始，Visual Studio 活动日志现在将包含包的性能影响的条目启动和解决方案加载过程。 若要查看这些度量值，必须使用 /log 开关打开 Visual Studio 并打开*ActivityLog.xml*文件。
 
 在活动日志条目将位于"管理 Visual Studio 性能"源，并看起来如下例所示：
 
@@ -141,9 +141,9 @@ private void DoMoreWork()
 
 ![perfview 收集菜单](media/perfview-collect-menu.png)
 
-默认选项将为 CPU 消耗量提供的调用堆栈，但由于我们感兴趣以及阻塞的时间，因此还应启用**线程时间**堆栈。 准备好设置后，可以单击**开始收集**并启动 Visual Studio 后启动录制。
+默认选项将为 CPU 消耗量提供的调用堆栈，但由于我们感兴趣以及阻塞的时间，因此还应启用**线程时间**堆栈。 准备好设置后，你可以单击**开始收集**，然后开始录制后打开 Visual Studio。
 
-停止收集之前，你想要确保完全初始化 Visual Studio，主窗口是完全可见，如果您的扩展有自动显示任何 UI 块，它们都是可见的。 Visual Studio 是完全加载并初始化您的扩展插件，可以停止记录分析跟踪。
+停止收集之前，你想要确保完全初始化 Visual Studio，主窗口是完全可见，如果您的扩展有自动显示任何 UI 块，它们都是可见的。 Visual Studio 是完全加载和初始化您的扩展插件，可以停止录制分析跟踪。
 
 **分析使用 PerfView 跟踪：**
 

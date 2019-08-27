@@ -1,14 +1,9 @@
 ---
 title: 阻塞时间分析报告 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.cv.threads.report.blocking
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 3bc45af0-3ba6-4fa3-a336-be8e9ae95107
 caps.latest.revision: 21
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 31be25e5fb41f2e7a92ee2c19803d74c442fcad4
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 0efeb7fb0eb481d0b8d62ff4a9ebf9daad98c39f
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51807018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68147246"
 ---
 # <a name="blocking-time-profile-report"></a>阻塞时间分析报告
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,12 +29,12 @@ ms.locfileid: "51807018"
   
 - 如果设置了降噪值，则将跳过低于指定频率的排序堆栈。  
   
-  展开所有调用树项，找到消耗阻塞时间的代码行。 若要找到某一项的源行，请在其快捷菜单上选择“查看源”。 若要找到调用此项的代码行，请在快捷菜单上选择“查看调用站点”。 如果只有一个调用站点可用，则此命令将连接到该调用站点的突出显示代码行。 如果有多个调用站点可用，则此命令将打开一个对话框，可选择其中一项，然后选择“转到源”按钮以找到突出显示的调用站点。 在查看具有最多实例和/或最大时间的调用站点的源代码时，这往往最为有用。  
+  展开所有调用树项，找到消耗阻塞时间的代码行。 若要找到某一项的源行，请在其快捷菜单上选择“查看源”  。 若要找到调用此项的代码行，请在快捷菜单上选择“查看调用站点”  。 如果只有一个调用站点可用，则此命令将连接到该调用站点的突出显示代码行。 如果有多个调用站点可用，则此命令将打开一个对话框，可选择其中一项，然后选择“转到源”  按钮以找到突出显示的调用站点。 在查看具有最多实例和/或最大时间的调用站点的源代码时，这往往最为有用。  
   
 ## <a name="blocking-time-report-columns"></a>阻塞时间报表列  
  下表显示每个阻塞时间报表的列。  
   
-|列名称|描述|  
+|列名称|说明|  
 |-----------------|-----------------|  
 |name|调用堆栈每个级别的函数的名称。|  
 |实例数|可见时间段内阻塞调用的实例数。|  
@@ -66,8 +61,5 @@ ms.locfileid: "51807018"
 ### <a name="ui-processing"></a>UI 处理  
  UI 处理报表显示对在 UI 处理块上进行阻止的片段的调用，以及每个调用堆栈的合计阻塞时间。 有关详细信息，请参阅 [UI 处理时间](../profiling/ui-processing-time.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [线程视图](../profiling/threads-view-parallel-performance.md)
-
-
-

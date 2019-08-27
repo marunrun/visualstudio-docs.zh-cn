@@ -1,14 +1,9 @@
 ---
 title: 调试器可扩展性入门 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - getting started, Debugging SDK
 - debugging [Debugging SDK], getting started
@@ -16,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: d6ce6f43-1409-4bf7-93cd-f3464ca23504
 caps.latest.revision: 18
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: bafdd45b57a9fe660e97127c2c99c333ead0e60a
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: d1c616c7cf8ed90ec3d76046892167b9b742a1b0
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51721162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68152709"
 ---
 # <a name="getting-started-with-debugger-extensibility"></a>调试器可扩展性入门
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -35,11 +30,11 @@ ms.locfileid: "51721162"
   
  最大效用[!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]，您应熟悉以下：  
   
--   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]集成的开发环境 (IDE)  
+- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]集成的开发环境 (IDE)  
   
--   C + + 编程语言  
+- C++编程语言  
   
--   ATL COM  
+- ATL COM  
   
 ## <a name="in-this-section"></a>本节内容  
  [扩展调试器的路线图](../../extensibility/debugger/roadmap-for-extending-the-debugger.md)  
@@ -56,4 +51,3 @@ ms.locfileid: "51721162"
   
  [调试任务](../../extensibility/debugger/debugging-tasks.md)  
  包含指向不同的调试任务，如启动程序和计算表达式。
-

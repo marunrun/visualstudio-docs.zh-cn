@@ -1,26 +1,21 @@
 ---
 title: 提供撤消向设计器支持 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - designers [Visual Studio SDK], undo support
 ms.assetid: 43eb1f14-b129-404a-8806-5bf9b099b67b
 caps.latest.revision: 18
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 3043bf41c3420644bcf8d65a2d8bbde86eff6910
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 6136caaec0cb8f0d79e3fb7b96245fc3fd070710
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51778496"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65675344"
 ---
 # <a name="supplying-undo-support-to-designers"></a>向设计器提供撤消支持
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,7 +30,7 @@ ms.locfileid: "51778496"
   
 - 通过实现来支持提供持久性和 CodeDOM<xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>和<xref:System.ComponentModel.Design.IComponentChangeService>类。  
   
-  有关编写使用设计器的详细信息[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]，请参阅[扩展设计时支持](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)。  
+  有关编写使用设计器的详细信息[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]，请参阅[扩展设计时支持](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)。  
   
   [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]提供的默认撤消基础结构：  
   
@@ -46,11 +41,11 @@ ms.locfileid: "51778496"
 ## <a name="obtaining-undo-support-automatically"></a>自动获取撤消支持  
  在中创建任何设计器[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]具有自动和完全撤消支持 if、 设计器：  
   
--   利用<xref:System.Windows.Forms.Control>基于其用户界面的类。  
+- 利用<xref:System.Windows.Forms.Control>基于其用户界面的类。  
   
--   为代码生成和持久性采用标准基于 CodeDOM 的代码生成和分析系统。  
+- 为代码生成和持久性采用标准基于 CodeDOM 的代码生成和分析系统。  
   
-     有关如何使用 Visual Studio CodeDOM 支持的详细信息，请参阅[动态源代码生成和编译](http://msdn.microsoft.com/library/d077a3e8-bd81-4bdf-b6a3-323857ea30fb)  
+     有关如何使用 Visual Studio CodeDOM 支持的详细信息，请参阅[动态源代码生成和编译](https://msdn.microsoft.com/library/d077a3e8-bd81-4bdf-b6a3-323857ea30fb)  
   
 ## <a name="when-to-use-explicit-designer-undo-support"></a>何时使用显式设计器的撤消支持  
  如果他们使用称为视图适配器，不是由提供的图形用户界面设计器必须提供其自己撤消管理<xref:System.Windows.Forms.Control>。  
@@ -85,15 +80,15 @@ ms.locfileid: "51778496"
   
 - 这<xref:System.IServiceProvider>类必须提供以下服务：  
   
-  -   <xref:System.ComponentModel.Design.IDesignerHost>。  
+  - <xref:System.ComponentModel.Design.IDesignerHost>。  
   
-  -   <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>  
+  - <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>  
   
        使用设计器[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]CodeDOM 序列化可能选择使用<xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService>随附[!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]作为其实现的<xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>。  
   
        在这种情况下，<xref:System.IServiceProvider>类提供给<xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine>构造函数应返回此对象的实现作为<xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>类。  
   
-  -   <xref:System.ComponentModel.Design.IComponentChangeService>  
+  - <xref:System.ComponentModel.Design.IComponentChangeService>  
   
        使用默认的设计器<xref:System.ComponentModel.Design.DesignSurface>提供的[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]设计宿主可以保证的默认实现<xref:System.ComponentModel.Design.IComponentChangeService>类。  
   
@@ -110,5 +105,4 @@ ms.locfileid: "51778496"
 ## <a name="see-also"></a>请参阅  
  <xref:System.ComponentModel.Design.UndoEngine>   
  <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine>   
- [扩展设计时支持](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)
-
+ [扩展设计时支持](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)

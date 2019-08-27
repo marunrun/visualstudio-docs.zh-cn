@@ -1,12 +1,9 @@
 ---
 title: 类图上 UML 类型的属性 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: reference
 f1_keywords:
 - vs.teamarch.logicalclassdiagram.shapes.properties
 helpviewer_keywords:
@@ -15,13 +12,13 @@ ms.assetid: 6e1ef2d0-d67a-401a-bd64-d5e034decd2c
 caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: e8baad41658cc6144f08d0b6b4d415aa4ff6e499
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 996f2f75499a54e0d5514590f2b087130b73ffb5
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51750103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63387777"
 ---
 # <a name="properties-of-types-on-uml-class-diagrams"></a>UML 类图上类型的属性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,17 +26,17 @@ ms.locfileid: "51750103"
 在 UML 类图中，*类型*是类、 接口或枚举。  
   
 > [!NOTE]
->  本主题介绍 UML 类图中的类型的属性。 有关详细信息，请参阅下列主题：  
+> 本主题介绍 UML 类图中的类型的属性。 有关详细信息，请参阅下列主题：  
   
--   [UML 类图：参考](../modeling/uml-class-diagrams-reference.md)  
+- [UML 类关系图：参考](../modeling/uml-class-diagrams-reference.md)  
   
--   [UML 类图：准则](../modeling/uml-class-diagrams-guidelines.md)  
+- [UML 类关系图：指南](../modeling/uml-class-diagrams-guidelines.md)  
   
--   [UML 类图上特性的属性](../modeling/properties-of-attributes-on-uml-class-diagrams.md)  
+- [UML 类图上特性的属性](../modeling/properties-of-attributes-on-uml-class-diagrams.md)  
   
--   [UML 类图中操作的属性](../modeling/properties-of-operations-on-uml-class-diagrams.md)  
+- [UML 类图中操作的属性](../modeling/properties-of-operations-on-uml-class-diagrams.md)  
   
--   [UML 类图上关联的属性](../modeling/properties-of-associations-on-uml-class-diagrams.md)  
+- [UML 类图上关联的属性](../modeling/properties-of-associations-on-uml-class-diagrams.md)  
   
 ## <a name="properties"></a>属性  
  这些是类、接口或枚举的属性。  
@@ -49,8 +46,8 @@ ms.locfileid: "51750103"
 |**Property**|**默认**|显示范围|描述|  
 |------------------|-----------------|----------------|-----------------|  
 |**名称**|默认名称|所有元素|标识元素。|  
-|**限定的名称**|所含包 :: 类型名称|所有元素|唯一标识元素。 以包含它的包的限定名为前缀。|  
-|**颜色**|类型种类的默认值|所有元素|此形状的颜色。 与其他属性不同，这不是基础模型元素的属性。 相同类型的不同视图可以具有不同的颜色。|  
+|**限定的名称**|包含包::类型名称|所有元素|唯一标识元素。 以包含它的包的限定名为前缀。|  
+|**Color**|类型种类的默认值|所有元素|此形状的颜色。 与其他属性不同，这不是基础模型元素的属性。 相同类型的不同视图可以具有不同的颜色。|  
 |**是抽象的**|False|类|如果为 true，则无法实例化类，且类旨在用作基类。|  
 |**是叶**|False|类、接口|如果为 true，则类型不需要具有派生类型。|  
 |**处于活动状态**|False|类|如果为 true，则此类型的每个实例都与控制线程关联。|  
@@ -64,7 +61,4 @@ ms.locfileid: "51750103"
  [UML 类图上特性的属性](../modeling/properties-of-attributes-on-uml-class-diagrams.md)   
  [UML 类图上的操作的属性](../modeling/properties-of-operations-on-uml-class-diagrams.md)   
  [UML 类图上关联的属性](../modeling/properties-of-associations-on-uml-class-diagrams.md)   
- [UML 类图：准则](../modeling/uml-class-diagrams-guidelines.md)
-
-
-
+ [UML 类关系图：指南](../modeling/uml-class-diagrams-guidelines.md)

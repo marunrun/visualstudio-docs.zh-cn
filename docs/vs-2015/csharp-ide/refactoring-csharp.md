@@ -1,14 +1,9 @@
 ---
 title: 重构 (C#) |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vs.csharp.refactoring.preview
 - vs.csharp.refactoring.issues
@@ -22,13 +17,13 @@ ms.assetid: a39e656a-f81f-4c87-b484-a23168ff1dfc
 caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
-manager: wpickett
-ms.openlocfilehash: b4f74017a067d4681eb14ba4eb826df504497430
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: fa8fbfd8837fb35617b79089fffd11ea3b8d2e93
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49262309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63444528"
 ---
 # <a name="refactoring-c"></a>重构 (C#)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,17 +32,17 @@ ms.locfileid: "49262309"
   
  Visual C# 上提供以下重构命令**重构**菜单：  
   
--   [提取方法重构 (C#)](../csharp-ide/extract-method-refactoring-csharp.md)  
+- [提取方法重构 (C#)](../csharp-ide/extract-method-refactoring-csharp.md)  
   
--   [重命名重构 (C#)](../csharp-ide/rename-refactoring-csharp.md)  
+- [重命名重构 (C#)](../csharp-ide/rename-refactoring-csharp.md)  
   
--   [封装字段重构 (C#)](../csharp-ide/encapsulate-field-refactoring-csharp.md)  
+- [封装字段重构 (C#)](../csharp-ide/encapsulate-field-refactoring-csharp.md)  
   
--   [提取接口重构 (C#)](../csharp-ide/extract-interface-refactoring-csharp.md)  
+- [提取接口重构 (C#)](../csharp-ide/extract-interface-refactoring-csharp.md)  
   
--   [移除参数重构 (C#)](../csharp-ide/remove-parameters-refactoring-csharp.md)  
+- [移除参数重构 (C#)](../csharp-ide/remove-parameters-refactoring-csharp.md)  
   
--   [重新排列参数重构 [C#]](../csharp-ide/reorder-parameters-refactoring-csharp.md)  
+- [重新排列参数重构 [C#]](../csharp-ide/reorder-parameters-refactoring-csharp.md)  
   
 ## <a name="multi-project-refactoring"></a>多项目重构  
  Visual Studio 支持多项目重构用于项目的同一解决方案中。 更正文件中引用的重构操作的所有更正这些引用在同一语言的所有项目。 这适用于任何项目到项目引用。 例如，如果已重命名类库类型时引用的类库的控制台应用程序 (使用`Rename`重构操作)，还将更新对该控制台应用程序中的类库类型的引用。  
@@ -59,7 +54,7 @@ ms.locfileid: "49262309"
  如果编译器没有全面了解您的程序，并且可以重构引擎可能不会更新所有适当的引用，将显示警告对话框。 此警告对话框中还提供了您可以预览中的代码有机会**预览更改**对话框之前提交的更改。  
   
 > [!NOTE]
->  如果方法包含语法错误 （从而以红色的波浪下划线指示 IDE），然后重构引擎不会更新对该方法中的某个元素的任何引用。 下面的示例阐释了这一点。  
+> 如果方法包含语法错误 （从而以红色的波浪下划线指示 IDE），然后重构引擎不会更新对该方法中的某个元素的任何引用。 下面的示例阐释了这一点。  
   
  默认情况下，如果您执行重构操作而不预览引用更改和编译错误检测到在应用程序中，然后开发环境将显示此警告对话框。  
   
@@ -113,4 +108,4 @@ class Example
   
 ## <a name="see-also"></a>请参阅  
  [使用适用于 C# Visual Studio 开发环境](../csharp-ide/using-the-visual-studio-development-environment-for-csharp.md)   
- [如何：还原 C# 重构代码片段](../ide/how-to-restore-csharp-refactoring-snippets.md)
+ [如何：还原 C# 重构代码段](../ide/how-to-restore-csharp-refactoring-snippets.md)

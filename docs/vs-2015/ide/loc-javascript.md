@@ -1,14 +1,9 @@
 ---
-title: '&lt;loc&gt; (JavaScript) |Microsoft Docs'
-ms.custom: ''
+title: '&lt;loc&gt; (JavaScript) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - <loc> JavaScript XML tag
 - loc JavaScript XML tag
@@ -16,13 +11,13 @@ ms.assetid: 0d3349b6-4bdd-418f-bc11-73665305baae
 caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 9314453b5e75e31f98d6989efa274278706bc5a4
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 8029dc6282e7b5a4ff9075257bcb1b6213a4a6b4
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49244005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68186105"
 ---
 # <a name="ltlocgt-javascript"></a>&lt;loc&gt; (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -108,8 +103,5 @@ function illuminate(a)
   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 文档注释](../ide/xml-documentation-comments-javascript.md)
-
-
-

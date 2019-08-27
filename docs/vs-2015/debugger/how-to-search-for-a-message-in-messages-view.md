@@ -1,14 +1,9 @@
 ---
-title: 如何： 在消息视图中的消息搜索 |Microsoft Docs
-ms.custom: ''
+title: 如何：消息在消息视图中搜索 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Message Search dialog box
 - Messages view
@@ -17,13 +12,13 @@ ms.assetid: 732b7ccc-54ea-41db-823b-2b96e3e4083e
 caps.latest.revision: 8
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 08a2a08014d0927ecea29b1acb6bb36620f1a15a
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 6c89a763389abe364fe70166e63b41f932581837
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51802079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63430910"
 ---
 # <a name="how-to-search-for-a-message-in-messages-view"></a>如何：在消息视图中搜索消息
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -51,13 +46,10 @@ ms.locfileid: "51802079"
 4. 清除不想为其指定值的任何字段。  
   
    > [!TIP]
-   >  若要减少屏幕混乱，请选择**隐藏 Spy**选项。 此选项将隐藏主 Spy + + 窗口中，并仅留下**查找窗口**对话框显示在其他应用程序的前面。 Spy + + 主窗口将还原时，单击**确定**或**取消**，或如果清除**隐藏 Spy + +** 选项。  
+   > 若要减少屏幕混乱，请选择**隐藏 Spy**选项。 此选项将隐藏主 Spy + + 窗口中，并仅留下**查找窗口**对话框显示在其他应用程序的前面。 Spy + + 主窗口将还原时，单击**确定**或**取消**，或如果清除**隐藏 Spy + +** 选项。  
   
 5. 选择**向上**或**向下**搜索的初始方向。  
   
 6. 单击 **“确定”**。  
   
    如果找到匹配的消息时，它将突出显示在消息视图窗口中。 请参阅[消息视图](../debugger/messages-view.md)。
-
-
-

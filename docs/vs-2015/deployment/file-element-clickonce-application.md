@@ -1,14 +1,9 @@
 ---
 title: '&lt;文件&gt;元素 （ClickOnce 应用程序） |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 f1_keywords:
 - http://www.w3.org/2000/09/xmldsig#Transform
 - urn:schemas-microsoft-com:asm.v2#file
@@ -27,13 +22,13 @@ ms.assetid: 56e3490c-eed5-4841-b1bf-eefe778b6ac9
 caps.latest.revision: 26
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: 16c301d55738519f3e097138f08b6b2c2fe2b4c7
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 88fce548d5adbd6d4dc930db767fd3e52690490b
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49270726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68148779"
 ---
 # <a name="ltfilegt-element-clickonce-application"></a>&lt;文件&gt;元素 （ClickOnce 应用程序）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -96,20 +91,20 @@ ms.locfileid: "49270726"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`name`|必须的。 标识文件的名称。|  
-|`size`|必须的。 指定大小，以字节为单位的文件。|  
+|`name`|必需。 标识文件的名称。|  
+|`size`|必需。 指定大小，以字节为单位的文件。|  
 |`group`|可选，如果`optional`特性是未指定或设置为`false`; 如果`optional`是`true`。 此文件所属的组的名称。 名称可以是由开发人员，选择任何 Unicode 字符串值，用于下载文件中使用按需<xref:System.Deployment.Application.ApplicationDeployment>类。|  
 |`optional`|可选。 指定此文件必须下载第一个应用程序时运行，或是否该文件之前按需的应用程序请求它应驻留只能在服务器上。 如果`false`或未定义，该文件将下载应用程序首次运行或安装时。 如果`true`、`group`必须为有效的应用程序清单中指定。 `optional` 不能为 true 如果`writeableType`的值指定`applicationData`。|  
-|`writeableType`|可选。 指定此文件是一个数据文件。 目前，唯一有效的值是`applicationData`。|  
+|`writeableType`|可选。 指定此文件是一个数据文件。 当前，唯一有效的值是：`applicationData`。|  
   
-## <a name="typelib"></a>类型库  
+## <a name="typelib"></a>typelib  
  `typelib`元素是可选元素的子文件。 元素描述为 COM 组件所属的类型库。 元素具有以下属性。  
   
 |特性|描述|  
 |---------------|-----------------|  
-|`tlbid`|必须的。 分配给类型库的 GUID。|  
-|`version`|必须的。 类型库的版本号。|  
-|`helpdir`|必须的。 包含有关该组件的帮助文件的目录。 可能是长度为零。|  
+|`tlbid`|必需。 分配给类型库的 GUID。|  
+|`version`|必需。 类型库的版本号。|  
+|`helpdir`|必需。 包含有关该组件的帮助文件的目录。 可能是长度为零。|  
 |`resourceid`|可选。 区域设置标识符 (LCID) 的十六进制字符串表示形式。 它是一到四个十六进制数字不带 0x 前缀和不带前导零。 LCID 可能有一个非特定语言的子语言标识符。|  
 |`flags`|可选。 此类型库的类型库标志的字符串表示形式。 具体而言，它应为"RESTRICTED"、"控制"、"隐藏"和"HASDISKIMAGE"之一。|  
   
@@ -118,7 +113,7 @@ ms.locfileid: "49270726"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`clsid`|必须的。 以 GUID 形式表示的 COM 组件的类 ID。|  
+|`clsid`|必需。 以 GUID 形式表示的 COM 组件的类 ID。|  
 |`description`|可选。 类名。|  
 |`threadingModel`|可选。 使用进程内 COM 类的线程处理模型。 如果此属性为 null，则使用没有线程模型。 客户端的主线程上创建组件和来自其他线程的调用封送到此线程。 以下列表显示了有效的值：<br /><br /> `Apartment`、 `Free`、 `Both`和 `Neutral`。|  
 |`tlbid`|可选。 此 COM 组件的类型库的的 GUID。|  
@@ -134,7 +129,7 @@ ms.locfileid: "49270726"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`iid`|必须的。 接口 ID (IID) 由该代理服务器提供服务。 IID 必须具有与之相关的大括号。|  
+|`iid`|必需。 接口 ID (IID) 由该代理服务器提供服务。 IID 必须具有与之相关的大括号。|  
 |`baseInterface`|可选。 从其引用的接口的接口的 IID`iid`派生。|  
 |`numMethods`|可选。 实现由接口的方法数。|  
 |`name`|可选。 该接口作为它的名称将显示在代码中。|  
@@ -146,7 +141,7 @@ ms.locfileid: "49270726"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`iid`|必须的。 接口 ID (IID) 由该代理服务器提供服务。 IID 必须具有与之相关的大括号。|  
+|`iid`|必需。 接口 ID (IID) 由该代理服务器提供服务。 IID 必须具有与之相关的大括号。|  
 |`baseInterface`|可选。 从其引用的接口的接口的 IID`iid`派生。|  
 |`numMethods`|可选。 实现由接口的方法数。|  
 |`Name`|可选。 该接口作为它的名称将显示在代码中。|  
@@ -208,6 +203,3 @@ ms.locfileid: "49270726"
   
 ## <a name="see-also"></a>请参阅  
  [ndptecclick](../deployment/clickonce-application-manifest.md)
-
-
-

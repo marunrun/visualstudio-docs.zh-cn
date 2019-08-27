@@ -1,11 +1,8 @@
 ---
 title: InvokeMethod 活动设计器 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: .net-framework-4.6
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev14
+ms.technology: vs-workflow-designer
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.InvokeMethod.UI
@@ -13,13 +10,13 @@ ms.assetid: 15e6efdc-52ca-46d8-9c5e-063f7c8265a6
 caps.latest.revision: 6
 author: gewarren
 ms.author: gewarren
-manager: erikre
-ms.openlocfilehash: a3fa1c07bbb32bc1da963a0d2f0a91ae6c193a30
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+manager: jillfra
+ms.openlocfilehash: 61398efe1849c6038e13a68ae3b2e2f5f80f1d5d
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49863680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62952004"
 ---
 # <a name="invokemethod-activity-designer"></a>InvokeMethod 活动设计器
 **InvokeMethod**设计器用于创建和配置<xref:System.Activities.Statements.InvokeMethod>活动。  
@@ -51,15 +48,15 @@ ms.locfileid: "49863680"
   
  在 <xref:System.Activities.Activity.CacheMetadata%2A> 中注册这些参数的算法如下所列：  
   
-1. 注册 <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> 参数。  
+1. 注册 <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> 自变量。  
   
-2. 注册 <xref:System.Activities.Statements.InvokeMethod.Result%2A> 参数。  
+2. 注册 <xref:System.Activities.Statements.InvokeMethod.Result%2A> 自变量。  
   
-3. 循环访问 <xref:System.Activities.Statements.InvokeMethod.Parameters%2A> 集合并注册每个参数。  
+3. 循环访问 <xref:System.Activities.Statements.InvokeMethod.Parameters%2A> 集合并注册每个自变量。  
   
-   产生的异常的类型为 <xref:System.Activities.InvalidWorkflowException> 并带有以下消息：“InvokeMethod”: 已存在名为“TargetObject”的变量、RuntimeArgument 或 DelegateArgument。 在环境作用域中，名称必须唯一。  
+   产生的异常的类型是<xref:System.Activities.InvalidWorkflowException>并显示以下消息：InvokeMethod:变量、 RuntimeArgument 或 DelegateArgument 已存在名为 TargetObject。 在环境作用域中，名称必须唯一。  
   
-   此限制不适用于 <xref:System.Activities.Statements.InvokeMethod.TargetType%2A> 和 <xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A>，因为它们不是工作流自变量，因此在 <xref:System.Activities.Statements.InvokeMethod.GenericTypeArguments%2A> 方法中而不在 <xref:System.Activities.Statements.InvokeMethod> 活动的 <xref:System.Activities.Activity.CacheMetadata%2A> 集合中注册。  
+   此限制不适用于 <xref:System.Activities.Statements.InvokeMethod.TargetType%2A> 和 <xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A>，因为它们不是工作流参数，因此在 <xref:System.Activities.Statements.InvokeMethod.GenericTypeArguments%2A> 方法中而不在 <xref:System.Activities.Statements.InvokeMethod> 活动的 <xref:System.Activities.Activity.CacheMetadata%2A> 集合中注册。  
   
 ## <a name="see-also"></a>请参阅  
  [基元](../workflow-designer/primitives-activity-designers.md)   

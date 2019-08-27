@@ -1,8 +1,7 @@
 ---
-title: IScriptEntry::SetName |Microsoft Docs
+title: IScriptEntry::SetName | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2c7929d9d073e7b21030dcddc3db04abc977bdd3
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
+ms.openlocfilehash: f6476869a54921cfdac34e9f1ed202adef909ddf
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54086666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787596"
 ---
 # <a name="iscriptentrysetname"></a>IScriptEntry::SetName
 对于表示单个对象 （如某个函数） 的条目，设置的对象的名称。  
@@ -43,7 +42,7 @@ HRESULT SetName(
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   

@@ -6,16 +6,15 @@ helpviewer_keywords:
 - text templates, transformation process
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: 1f4cadbbf9de2f9f02a8bc95a4f436f399e2052b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 271d9625ba5c41599af6c92504b3f17a166a2ee7
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53908652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63001375"
 ---
 # <a name="the-text-template-transformation-process"></a>文本模板转换过程
 文本模板转换过程将文本模板文件作为输入并生成一个新的文本文件作为输出。 例如，可以使用文本模板来生成 Visual Basic 或 C# 代码，或可以生成一份 HTML 报告。
@@ -38,19 +37,19 @@ ms.locfileid: "53908652"
 ## <a name="the-host"></a>主机
  主机负责向外转换过程，其中包括环境相关的任何内容：
 
--   定位文本和二进制文件请求的引擎或指令处理器。 宿主可以搜索目录和全局程序集缓存，以查找程序集。 主机可以找到该引擎的自定义指令处理器代码。 主机还可以查找和读取文本文件并返回其内容作为字符串。
+- 定位文本和二进制文件请求的引擎或指令处理器。 宿主可以搜索目录和全局程序集缓存，以查找程序集。 主机可以找到该引擎的自定义指令处理器代码。 主机还可以查找和读取文本文件并返回其内容作为字符串。
 
--   提供标准的程序集和该引擎用于创建生成的转换类的命名空间的列表。
+- 提供标准的程序集和该引擎用于创建生成的转换类的命名空间的列表。
 
--   提供当引擎编译并执行生成的转换类时使用的应用程序域。 主机应用程序免受模板代码中的错误将使用单独的应用程序域。
+- 提供当引擎编译并执行生成的转换类时使用的应用程序域。 主机应用程序免受模板代码中的错误将使用单独的应用程序域。
 
--   写入生成的输出文件。
+- 写入生成的输出文件。
 
--   设置适用于生成的输出文件的默认扩展。
+- 设置适用于生成的输出文件的默认扩展。
 
--   处理文本模板转换错误。 例如，主机可以在用户界面中显示的错误或将其写入到文件。 （在 Visual Studio 中，错误显示在错误消息窗口中。）
+- 处理文本模板转换错误。 例如，主机可以在用户界面中显示的错误或将其写入到文件。 （在 Visual Studio 中，错误显示在错误消息窗口中。）
 
--   如果用户已调用指令，而无需提供一个值，请提供所需的参数值。 指令处理器可指定的指令，并使用参数名称，并要求宿主提供的默认值，如果有的话。
+- 如果用户已调用指令，而无需提供一个值，请提供所需的参数值。 指令处理器可指定的指令，并使用参数名称，并要求宿主提供的默认值，如果有的话。
 
 ## <a name="directives-and-directive-processors"></a>指令和指令处理器
  指令是在文本模板中的命令。 它提供了生成过程的参数。 通常，指令定义的源和类型的模型或其他输入和输出文件的文件扩展名。

@@ -1,14 +1,9 @@
 ---
 title: '&lt;compatibleFrameworks&gt;元素 （ClickOnce 部署） |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,13 +14,13 @@ ms.assetid: f6c3ee55-9e65-403d-8664-3ebde872c7d4
 caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
-manager: wpickett
-ms.openlocfilehash: 051fd3eea0ffab2a7c5f088538d7208c8286d1d6
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: ef54062bd74c9395e187503dd12db1c0cd70d822
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49176577"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65675419"
 ---
 # <a name="ltcompatibleframeworksgt-element-clickonce-deployment"></a>&lt;compatibleFrameworks&gt;元素 （ClickOnce 部署）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,18 +28,18 @@ ms.locfileid: "49176577"
 标识此应用程序可在其上安装和运行的 .NET Framework 版本。  
   
 > [!NOTE]
->  [MageUI.exe](http://msdn.microsoft.com/library/f9e130a6-8117-49c4-839c-c988f641dc14)不支持`compatibleFrameworks`元素时保存应用程序清单已签名证书使用[MageUI.exe](http://msdn.microsoft.com/library/f9e130a6-8117-49c4-839c-c988f641dc14)。 这种情况下必须使用 [Mage.exe](http://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)。  
+> [MageUI.exe](https://msdn.microsoft.com/library/f9e130a6-8117-49c4-839c-c988f641dc14)不支持`compatibleFrameworks`元素时保存应用程序清单已签名证书使用[MageUI.exe](https://msdn.microsoft.com/library/f9e130a6-8117-49c4-839c-c988f641dc14)。 这种情况下必须使用 [Mage.exe](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
 <compatibleFrameworks  
-      SupportUrl>   
+      SupportUrl>   
    <framework  
       targetVersion  
       profile  
       supportedRuntime  
-   />   
+   />   
 </ compatibleFrameworks>  
 ```  
   
@@ -58,13 +53,13 @@ ms.locfileid: "49176577"
 |`S` `upportUrl`|可选。 指定首选的兼容.NET Framework 版本，可以下载的 URL。|  
   
 ## <a name="framework"></a>框架  
- 必须的。 下表列出了属性的`framework`元素支持。  
+ 必需。 下表列出了属性的`framework`元素支持。  
   
 |特性|描述|  
 |---------------|-----------------|  
-|`targetVersion`|必须的。 指定的目标.NET Framework 的版本号。|  
-|`profile`|必须的。 指定目标.NET Framework 的配置文件。|  
-|`supportedRuntime`|必须的。 指定的目标.NET Framework 与相关联的运行时的版本号。|  
+|`targetVersion`|必需。 指定的目标.NET Framework 的版本号。|  
+|`profile`|必需。 指定目标.NET Framework 的配置文件。|  
+|`supportedRuntime`|必需。 指定的目标.NET Framework 与相关联的运行时的版本号。|  
   
 ## <a name="remarks"></a>备注  
   
@@ -82,6 +77,3 @@ ms.locfileid: "49176577"
   
 ## <a name="see-also"></a>请参阅  
  [ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md)
-
-
-

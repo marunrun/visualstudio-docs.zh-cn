@@ -1,7 +1,6 @@
 ---
 title: CA1722:标识符应采用正确的前缀
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
 - IdentifiersShouldNotHaveIncorrectPrefix
@@ -12,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: c3313c51-d004-4f9a-a0d1-6c4c4a1fb1e6
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bea94b555be5079deae5a021cb5ecbd2ccd07adb
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5daf51cd8bef4910a327b8e261f15332ad6522da
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53904742"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68921613"
 ---
 # <a name="ca1722-identifiers-should-not-have-incorrect-prefix"></a>CA1722:标识符应采用正确的前缀
 
@@ -32,20 +31,20 @@ ms.locfileid: "53904742"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 标识符具有不正确的前缀。
+标识符具有不正确的前缀。
 
 ## <a name="rule-description"></a>规则说明
- 按照约定，只有某些编程元素具有以特定前缀开头的名称。
+按照约定，只有某些编程元素具有以特定前缀开头的名称。
 
- 类型名称不具有特定前缀，并且不应使用 C 作为前缀。 此规则报告的类型名称，例如 CMyClass 冲突，并不会报告的类型名称，例如缓存冲突。
+类型名称没有特定的前缀, 不应使用 "C" 作为前缀。 此规则报告类型名称 (例如 "CMyClass") 的冲突, 但不报告类型名称 (如 "Cache") 的冲突。
 
- 命名约定提供了通用的外观对于库面向公共语言运行时。 这种一致性可减少所需的新软件库，并使客户进一步库由必须在托管代码中开发的专业知识的人学习曲线。
+命名约定为面向公共语言运行时的库提供了通用的外观。 这种一致性可减少新软件库所需的学习曲线, 并使客户可以放心地了解库是由具有开发托管代码的专业技能的人员开发的。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 删除从标识符的前缀。
+从标识符中删除前缀。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 不禁止显示此规则发出的警告。
+不禁止显示此规则发出的警告。
 
-## <a name="related-rules"></a>相关的规则
- [CA1715:标识符应具有正确的前缀](../code-quality/ca1715-identifiers-should-have-correct-prefix.md)
+## <a name="related-rules"></a>相关规则
+[CA1715标识符应具有正确的前缀](../code-quality/ca1715-identifiers-should-have-correct-prefix.md)

@@ -7,16 +7,14 @@ ms.author: liwong
 manager: routlaw
 ms.date: 11/13/2017
 ms.topic: conceptual
-ms.devlang: multiple
-ms.service: multiple
 ms.workload:
 - multiple
-ms.openlocfilehash: ab5101d6b6ddca4a86e635fff70b52429888001a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a81c1869bf7587aa30dbc02f0e9aec4c97776e5f
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53821096"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68918045"
 ---
 # <a name="installation"></a>安装
 
@@ -26,27 +24,27 @@ ms.locfileid: "53821096"
 
 此扩展适用于 Visual Studio 2015、Visual Studio 2017、社区版或更高版本。
 
-可以从 [Visual Studio Marketplace](http://aka.ms/vstoolsforai) 或 Visual Studio 中下载工具：
+可以从 [Visual Studio Marketplace](https://aka.ms/vstoolsforai) 或 Visual Studio 中下载工具：
 
-1. 依次选择“工具” > “扩展和更新”。
+1. 依次选择“工具”   > “扩展和更新”  。
 
    ![Visual Studio 中的“扩展和更新”菜单](media/installation/extensions.png)
 
-2. 在“扩展和更新”对话框的左侧，选择“联机”。
+2. 在“扩展和更新”  对话框的左侧，选择“联机”  。
 3. 在右上角的搜索框中，键入或输入“tools for ai”。
-4. 从结果中选择“Visual Studio Tools for AI”。
-5. 单击 **“下载”**。
+4. 从结果中选择“Visual Studio Tools for AI”  。
+5. 单击 **“下载”** 。
 
 ## <a name="prepare-your-local-machine"></a>准备本地计算机
 
-在本地计算机上定型深度学习模型前，请先确保已安装适用的先决条件工具。 这包括确保已安装 NVIDIA GPU（若有）的最新驱动程序和库。 还应确保已安装 Python 和 Python 库（如 NumPy、SciPy），以及你打算在项目中使用的相应深度学习框架（如 Microsoft Cognitive Toolkit (CNTK)、TensorFlow、Caffe2、MXNet、Keras、Theano、PyTorch 和 Chainer）。
+在本地计算机上定型深度学习模型前，请先确保已安装适用的先决条件工具。 这包括确保已安装 NVIDIA GPU（若有）的最新驱动程序和库。 还要确保已安装 Python 和 Python 库（如 NumPy、SciPy），以及你打算在项目中使用的相应深度学习框架（如 Microsoft Cognitive Toolkit (CNTK)、TensorFlow、Caffe2、MXNet、Keras、Theano、PyTorch 和 Chainer）。
 
 > [!NOTE]
 > 以下各小节中的软件简介摘自其主页。
 
 ### <a name="nvidia-gpu-driver"></a>NVIDIA GPU 驱动程序
 
-深入学习框架利用 NVIDIA GPU 让机器按照针对真实人工智能的速度、准确性和规模进行学习。 如果计算机具有 NVIDIA GPU 卡，请访问[此处](http://www.nvidia.com/Download/index.aspx)或尝试进行操作系统更新以安装最新驱动程序。
+深入学习框架利用 NVIDIA GPU 让机器按照针对真实人工智能的速度、准确性和规模进行学习。 如果计算机具有 NVIDIA GPU 卡，请参阅 [NVIDIA 驱动程序下载](http://www.nvidia.com/Download/index.aspx)或尝试更新操作系统以安装最新驱动程序。
 
 ### <a name="cuda"></a>CUDA
 
@@ -89,26 +87,28 @@ Python 已成为用于深入学习应用程序的主要编程语言。 需要 **
 随后需要验证是否正确安装了 Python 3.5 并将 pip 升级到最新版本，具体方法是在终端中执行以下命令：
 
 - **Windows**
-    ```cmd
-    C:\Users\test>python -V
-    Python 3.5.4
 
-    C:\Users\test>pip3.5 -V
-    pip 9.0.1 from c:\users\test\appdata\local\programs\python\python35\lib\site-packages (python 3.5)
+  ```cmd
+  C:\Users\test>python -V
+  Python 3.5.4
 
-    C:\Users\test>python -m pip install -U pip
-    ```
+  C:\Users\test>pip3.5 -V
+  pip 9.0.1 from c:\users\test\appdata\local\programs\python\python35\lib\site-packages (python 3.5)
+
+  C:\Users\test>python -m pip install -U pip
+  ```
 
 - **macOS**
-    ```bash
-    MyMac:~ test$ python3.5 -V
-    Python 3.5.4
 
-    MyMac:~ test$ pip3.5 -V
-    pip 9.0.1 from /Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages (python 3.5)
+  ```bash
+  MyMac:~ test$ python3.5 -V
+  Python 3.5.4
 
-    MyMac:~ test$ python3.5 -m pip install -U pip
-    ```
+  MyMac:~ test$ pip3.5 -V
+  pip 9.0.1 from /Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages (python 3.5)
+
+  MyMac:~ test$ python3.5 -m pip install -U pip
+  ```
 
 ### <a name="python-on-visual-studio"></a>Visual Studio 中的 Python
 
@@ -137,7 +137,7 @@ pip3.5 install -U numpy scipy
 > [!NOTE]
 > CNTK 当前不支持 macOS。
 
-若要安装 CNTK Python 程序包，请参阅[如何安装 CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
+若要安装 CNTK Python 包，请参阅[如何安装 CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)。
 
 ### <a name="tensorflow"></a>TensorFlow
 
@@ -161,13 +161,16 @@ pip3.5 install -U numpy scipy
 若要安装 MXNet，请在终端中运行以下命令：
 
 - 具有 GPU
-    ```bash
-    pip3.5 install mxnet-cu80==0.12.0
-    ```
+
+  ```bash
+  pip3.5 install mxnet-cu80==0.12.0
+  ```
+
 - 没有 GPU
-    ```bash
-    pip3.5 install mxnet==0.12.0
-    ```
+
+  ```bash
+  pip3.5 install mxnet==0.12.0
+  ```
 
 ### <a name="keras"></a>Keras
 
@@ -199,23 +202,34 @@ pip3.5 install Theano==0.9.0
 若要安装 PyTorch，请在终端中运行以下命令：
 
 - **Windows**
-    - 尚没有官方滚轮程序包。 可以下载第三方 [Anaconda PyTorch 程序包](https://anaconda.org/pytorch/repo?type=all)。
-    - 将它解压缩到主目录，例如“C:\Users\test\pytorch”。
-    - 将“C:\Users\test\pytorch\Lib\site-packages”添加到 %PYTHONPATH% 环境变量。
+
+  尚没有官方滚轮程序包。 从 [Anaconda](https://anaconda.org/pytorch/repo?type=all) 或[加利福尼亚大学](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pytorch)可以下载第三方程序包。
+
+  - 将它解压缩到主目录，例如 C:\Users\test\pytorch  。
+  - 将 C:\Users\test\pytorch\Lib\site-packages 添加到 %PYTHONPATH% 环境变量  。
+
+    ```bash
+    pip3 install http://download.pytorch.org/whl/cu80/torch-0.4.0-cp36-cp36m-win_amd64.whl
+    pip3 install torchvision
+    ```
 
 - **macOS**
-    ```bash
-    pip3.5 install http://download.pytorch.org/whl/torch-0.2.0.post3-cp35-cp35m-macosx_10_7_x86_64.whl
-    ```
-    > [!NOTE]
-    > macOS 二进制文件不支持 CUDA，如果需要 CUDA，请从源提供程序进行安装
+
+  ```bash
+  pip3.5 install http://download.pytorch.org/whl/torch-0.2.0.post3-cp35-cp35m-macosx_10_7_x86_64.whl
+  ```
+
+  > [!NOTE]
+  > macOS 二进制文件不支持 CUDA，如果需要 CUDA，请从源提供程序进行安装
 
 - **Linux**
-    ```bash
-    pip3.5 install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl
-    ```
-    > [!NOTE]
-    > 此单个程序包支持 GPU 和 CPU。
+
+  ```bash
+  pip3.5 install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl
+  ```
+
+  > [!NOTE]
+  > 此单个程序包支持 GPU 和 CPU。
 
 最后，在非 Windows 上安装 torchvision：
 
@@ -225,7 +239,7 @@ pip3.5 install torchvision
 
 ### <a name="chainer"></a>Chainer
 
-[Chainer](https://chainer.org/) 是旨在提高灵活性的基于 Python 的深入学习框架。 它提供基于**按运行定义方法**（也称为 动态计算关系图）的自动区分 API 以及面向对象的高级 API 来构建并训练神经网络。
+[Chainer](https://chainer.org/) 是旨在提高灵活性的基于 Python 的深入学习框架。 它提供基于通过运行定义方法（也称为动态计算图）的自动差异化 API 以及面向对象的高级 API 来构建和训练神经网络。
 
 若要启用 CUDA 支持，请安装 [CuPy](https://github.com/cupy/cupy)：
 

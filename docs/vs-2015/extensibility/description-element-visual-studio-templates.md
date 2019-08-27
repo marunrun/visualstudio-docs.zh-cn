@@ -1,26 +1,21 @@
 ---
 title: Description 元素 （Visual Studio 模板） |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 helpviewer_keywords:
 - Description element [Visual Studio project templates]
 ms.assetid: 6e12be73-081f-4c7d-898f-027c307a9fe1
 caps.latest.revision: 17
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 5cd2598c434860b0818159aa53855e9779986bed
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: d60244ea827433678afbd09dd1e8cf1c972595cd
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51771879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68162115"
 ---
 # <a name="description-element-visual-studio-templates"></a>Description 元素（Visual Studio 模板）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -50,8 +45,8 @@ ms.locfileid: "51771879"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`Package`|适用于高级的用户情形的可选属性。<br /><br /> 指定 Visual Studio 包的 GUID id。|  
-|`ID`|适用于高级的用户情形的可选属性。<br /><br /> 指定 Visual Studio 资源 id。|  
+|`Package`|适用于高级的用户情形的可选属性。<br /><br /> 指定 Visual Studio 包 ID 的 GUID。|  
+|`ID`|适用于高级的用户情形的可选属性。<br /><br /> 指定 Visual Studio 资源 ID。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -63,7 +58,7 @@ ms.locfileid: "51771879"
 |[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需的元素。<br /><br /> 将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|  
   
 ## <a name="text-value"></a>文本值  
- 文本值是必需的除非`Package`和`ID`使用属性。  
+ 若未使用 `Package` 和 `ID` 属性，则必须提供文本值。  
   
  此文本提供模板的说明。  
   
@@ -100,4 +95,3 @@ ms.locfileid: "51771879"
 ## <a name="see-also"></a>请参阅  
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)
-

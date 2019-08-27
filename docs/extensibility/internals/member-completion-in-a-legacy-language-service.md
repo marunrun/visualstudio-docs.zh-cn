@@ -7,17 +7,17 @@ helpviewer_keywords:
 - Member Completion, supporting in language services [managed package framework]
 - language services [managed package framework], IntelliSense Member Completion
 ms.assetid: 500f718d-9028-49a4-8615-ba95cf47fc52
-author: gregvanl
-ms.author: gregvanl
-manager: douge
+author: madskristensen
+ms.author: madsk
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 173ec03743e9dc1eaf78ae0cca0b3396f0600295
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 2c969b0f857e45279488d9ba667b431064375da6
+ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53955589"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66349311"
 ---
 # <a name="member-completion-in-a-legacy-language-service"></a>旧版语言服务中的成员完成
 
@@ -38,7 +38,7 @@ IntelliSense 成员完成是工具提示显示特定的作用域，如类、 结
 
 - <xref:Microsoft.VisualStudio.Package.IScanner>扫描程序检测到的成员完成字符和设置的令牌触发器[TokenTriggers.MemberSelect](<xref:Microsoft.VisualStudio.Package.TokenTriggers.MemberSelect>) ，该字符。
 
-成员完成字符表示的类、 结构或枚举成员遵循。 例如，在 C# 或 Visual Basic 中的成员完成字符是`.`，而 c + + 中的字符是任一`.`或`->`。 触发器值的成员选择字符扫描时设置。
+成员完成字符表示的类、 结构或枚举成员遵循。 例如，在C#或 Visual Basic 的成员完成字符`.`，在C++字符可以是`.`或`->`。 触发器值的成员选择字符扫描时设置。
 
 ### <a name="the-intellisense-member-list-command"></a>IntelliSense 成员 List 命令
 

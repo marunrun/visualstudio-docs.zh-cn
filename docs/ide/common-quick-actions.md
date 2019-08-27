@@ -1,26 +1,26 @@
 ---
 title: 常见快速操作
+description: C# 和 Visual Basic 最常用的快速操作包括修复拼错的关键字或符号、解决合并冲突、删除必要的导入、生成类型、引入局部变量等。
 ms.date: 03/28/2018
-ms.prod: visual-studio-dev15
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c2491ba0968f60f5e67e9829a19994b7d4cbe7d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 2ceedf18b936c0b1e8553ceb3bb1fdbc75035dfa
+ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53877440"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69551442"
 ---
 # <a name="common-quick-actions"></a>常见快速操作
 
-此主题的各个部分列出了同时适用于 C# 和 Visual Basic 代码的一些常见“快速操作”。 这些操作是适用于编译器诊断或 Visual Studio 中的内置 [.NET Compiler Platform 分析器](../code-quality/roslyn-analyzers-overview.md)的代码修复。
+此主题的各个部分列出了同时适用于 C# 和 Visual Basic 代码的一些常见“快速操作”  。 这些操作是适用于编译器诊断或 Visual Studio 中的内置 [.NET Compiler Platform 分析器](../code-quality/roslyn-analyzers-overview.md)的代码修复  。
 
 ## <a name="actions-that-fix-errors"></a>修复错误的操作
 
@@ -30,7 +30,7 @@ ms.locfileid: "53877440"
 
 ### <a name="correct-misspelled-symbol-or-keyword"></a>更正拼写错误的符号或关键字
 
-如果在 Visual Studio 中意外拼错类型或关键字，此“快速操作”会自动更正拼写错误。 灯泡菜单***“将* *‘拼写错误的单词’更改为***‘正确单词’”中会显示这些项。 例如:
+如果在 Visual Studio 中意外拼错类型或关键字，此“快速操作”会自动更正拼写错误。 灯泡菜单 ***“将* *‘拼写错误的单词’更改为*** ‘正确单词’”中会显示这些项。 例如:
 
 ```csharp
 // Before
@@ -96,7 +96,7 @@ private void MyMethod()
 
 ### <a name="remove-unnecessary-usingsimports"></a>删除不必要的 using/Import
 
-“删除不必要的 using/Import”快速操作将删除当前文件中任何未使用的 `using` 和 `Import` 语句。 选择此项后，将删除未使用的命名空间导入。
+“删除不必要的 using/Import”  快速操作将删除当前文件中任何未使用的 `using` 和 `Import` 语句。 选择此项后，将删除未使用的命名空间导入。
 
 | 适用的语言 | 支持的版本 |
 | -------------------- | ---------------- |
@@ -104,7 +104,7 @@ private void MyMethod()
 
 ### <a name="remove-unnecessary-cast"></a>删除不必要的 cast
 
-如果你将一种类型强制转换为另一种不需要强制转换的类型，“删除不必要的强制转换”快速操作可删除不必要的强制转换。
+如果你将一种类型强制转换为另一种不需要强制转换的类型，“删除不必要的强制转换”  快速操作可删除不必要的强制转换。
 
 ```csharp
 // before
@@ -159,7 +159,7 @@ public MyMethod()
 
 ### <a name="remove-type-from-default-value-expression"></a>从“默认”值表达式中删除类型
 
-此快速操作从默认值表达式中删除值类型，并在编译器可推断出表达式类型时使用 [默认文本](/dotnet/csharp/programming-guide/statements-expressions-operators/default-value-expressions#default-literal-and-type-inference)。
+此快速操作从默认值表达式中删除值类型，并在编译器可推断出表达式类型时使用 [默认文本](/dotnet/csharp/language-reference/operators/default#default-literal)。
 
 ```csharp
 // Before
@@ -179,7 +179,7 @@ void DoWork(CancellationToken cancellationToken = default) { ... }
 
 ### <a name="add-usingsimports-for-types-in-reference-assemblies-nuget-packages-or-other-types-in-your-solution"></a>在引用程序集、NuGet 包或解决方案的其他类型中为类型添加 using/import
 
-位于解决方案其他项目中的 using 类型将自动显示快速操作，但其他类型的快速操作则需要从“工具”>“选项”>“C#”或“基本”>“高级”选项卡中启用：
+位于解决方案其他项目中的 using 类型将自动显示快速操作，但其他类型的快速操作则需要从“工具”>“选项”>“C#”  或“基本”>“高级”  选项卡中启用：
 
 - 建议对引用程序集中的类型使用 using/import
 - 建议对 NuGet 包中的类型使用 using/import
@@ -252,7 +252,7 @@ Select Case myEnum
 End Select
 ```
 
-使用“添加二者”快速操作可填充缺少的案例，并添加默认案例：
+使用“添加二者”  快速操作可填充缺少的案例，并添加默认案例：
 
 ```csharp
 switch(myEnum)
@@ -876,7 +876,7 @@ Console.WriteLine($"{x} {y}");
 
 ### <a name="make-method-synchronous"></a>使方法同步
 
-如果对方法使用 `async` 或 `Async` 关键字，还应在相应方法中使用 `await` 或 `Await` 关键字。 不过，如果不是这种情况，则会显示快速操作，可用于删除 `async` 或 `Async` 关键字并更改返回类型，从而让方法变成同步方法。 从“快速操作”菜单中使用“使方法同步”选项。
+如果对方法使用 `async` 或 `Async` 关键字，还应在相应方法中使用 `await` 或 `Await` 关键字。 不过，如果不是这种情况，则会显示快速操作，可用于删除 `async` 或 `Async` 关键字并更改返回类型，从而让方法变成同步方法。 从“快速操作”菜单中使用“使方法同步”  选项。
 
 ```csharp
 // Before
@@ -914,7 +914,7 @@ End Function
 
 ### <a name="make-method-asynchronous"></a>使方法异步
 
-如果你在方法内使用的是 `await` 或 `Await` 关键字，方法应标记有 `async` 或 `Async` 关键字。 不过，如果不是这种情况，便会看到让方法异步的快速操作。 从“快速操作”菜单中使用“使方法/函数异步”选项。
+如果你在方法内使用的是 `await` 或 `Await` 关键字，方法应标记有 `async` 或 `Async` 关键字。 不过，如果不是这种情况，便会看到让方法异步的快速操作。 从“快速操作”菜单中使用“使方法/函数异步”  选项。
 
 ```csharp
 // Before

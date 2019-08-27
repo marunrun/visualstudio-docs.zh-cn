@@ -1,12 +1,9 @@
 ---
 title: 自定义元素创建和移动 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
-ms.prod: visual-studio-tfs-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-modeling
+ms.topic: conceptual
 f1_keywords:
 - vs.dsltools.dsldesigner.elementmergedirective
 helpviewer_keywords:
@@ -15,13 +12,13 @@ ms.assetid: cbd28f15-dfd7-46bd-ab79-5430e3ed83c8
 caps.latest.revision: 38
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 470ff89dfd864443206c1d9131fb126d58280859
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: f956f492c3dc690ef2edb67d9a7c75e6c0108820
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49853826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63433275"
 ---
 # <a name="customizing-element-creation-and-movement"></a>自定义元素创建和移动
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -75,11 +72,11 @@ ms.locfileid: "49853826"
    例如，可以使用该模型中的新位置中的数据合并的元素中设置属性。  
   
 > [!NOTE]
->  如果你编写自定义的合并代码，它会影响使用此 EMD 执行的唯一合并。 如果合并相同类型的对象，其他 EMDs 或如果没有其他自定义代码，而无需使用 EMD 创建这些对象，然后它们将不会影响你的自定义的合并代码。  
+> 如果你编写自定义的合并代码，它会影响使用此 EMD 执行的唯一合并。 如果合并相同类型的对象，其他 EMDs 或如果没有其他自定义代码，而无需使用 EMD 创建这些对象，然后它们将不会影响你的自定义的合并代码。  
 >   
->  如果你想要确保新的元素或新的关系始终处理由自定义代码，请考虑定义`AddRule`上的嵌入关系和`DeleteRule`元素的域类上。 有关详细信息，请参阅[规则将传播的更改中的模式](../modeling/rules-propagate-changes-within-the-model.md)。  
+> 如果你想要确保新的元素或新的关系始终处理由自定义代码，请考虑定义`AddRule`上的嵌入关系和`DeleteRule`元素的域类上。 有关详细信息，请参阅[规则将传播的更改中的模式](../modeling/rules-propagate-changes-within-the-model.md)。  
   
-## <a name="example-defining-an-emd-without-custom-code"></a>示例： 定义 EMD 而无需自定义代码  
+## <a name="example-defining-an-emd-without-custom-code"></a>示例:定义 EMD 而无需自定义代码  
  以下示例允许用户通过从工具箱拖到现有的形状拖动在同一时间创建元素和连接器。 该示例将 EMD 添加到 DSL 定义中。 在这种修改之前, 用户可以在实际应用到关系图中，但不是到现有的形状上拖动工具。  
   
  用户还可以粘贴到其他元素上的元素。  
@@ -92,9 +89,9 @@ ms.locfileid: "49853826"
   
 2. 若要允许用户将元素拖到合并`ExampleElement`形状，创建在新 EMD`ExampleElement`域类：  
   
-   1.  在中**DSL 资源管理器**，展开**域类**。 右键单击`ExampleElement`，然后单击**添加新元素合并指令**。  
+   1. 在中**DSL 资源管理器**，展开**域类**。 右键单击`ExampleElement`，然后单击**添加新元素合并指令**。  
   
-   2.  请确保**DSL 详细信息**窗口处于打开状态，以便您可以看到新 EMD 的详细信息。 (菜单：**视图**，**其他 Windows**， **DSL 详细信息**。)  
+   2. 请确保**DSL 详细信息**窗口处于打开状态，以便您可以看到新 EMD 的详细信息。 (菜单：**查看**，**其他 Windows**， **DSL 详细信息**。)  
   
 3. 设置**索引类**在 DSL 详细信息窗口中，若要定义哪一类别的元素可以合并到`ExampleElement`对象。  
   
@@ -114,7 +111,7 @@ ms.locfileid: "49853826"
   
       路径导航工具可用于创建每个路径：  
   
-   3. 下**通过在创建路径的链接处理合并**，单击**\<添加路径 >**。  
+   3. 下**通过在创建路径的链接处理合并**，单击 **\<添加路径 >** 。  
   
    4. 单击列表项的右侧的下拉箭头。 将显示树视图。  
   
@@ -122,52 +119,52 @@ ms.locfileid: "49853826"
   
 5. 测试 DSL:  
   
-   1.  按 f5 键以重新生成并运行解决方案。  
+   1. 按 f5 键以重新生成并运行解决方案。  
   
         重新生成需要比平常较长时间，因为将从文本模板以符合新的 DSL 定义更新生成的代码。  
   
-   2.  当实验实例的[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]已启动，打开你的 DSL 的模型文件。 创建一些示例元素。  
+   2. 当实验实例的[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]已启动，打开你的 DSL 的模型文件。 创建一些示例元素。  
   
-   3.  从拖动**示例元素**工具拖到现有的形状上。  
+   3. 从拖动**示例元素**工具拖到现有的形状上。  
   
         新形状就显示，并链接到现有的形状与连接器。  
   
-   4.  复制现有的形状。 选择另一个形状并粘贴。  
+   4. 复制现有的形状。 选择另一个形状并粘贴。  
   
         创建第一个形状的副本。  它具有新名称，并链接到连接器第二个形状。  
   
    请注意此过程中的以下几点：  
   
--   通过创建元素合并指令，您可以允许要接受任何其他元素的任何类。 在接收方的域类中，创建 EMD 和接受的域类中指定**Index 类**字段。  
+- 通过创建元素合并指令，您可以允许要接受任何其他元素的任何类。 在接收方的域类中，创建 EMD 和接受的域类中指定**Index 类**字段。  
   
--   通过定义路径，可以指定哪个链接应该用于连接到现有模型的新元素。  
+- 通过定义路径，可以指定哪个链接应该用于连接到现有模型的新元素。  
   
      您指定的链接应包含一个嵌入关系。  
   
--   EMD 影响这两种创建从工具箱以及粘贴操作。  
+- EMD 影响这两种创建从工具箱以及粘贴操作。  
   
      如果您编写自定义创建新元素的代码，可以通过使用显式调用 EMD`ElementOperations.Merge`方法。 这可确保你的代码链接到模型的新元素的其他操作的方式相同。 有关详细信息，请参阅[自定义复制行为](../modeling/customizing-copy-behavior.md)。  
   
-## <a name="example-adding-custom-accept-code-to-an-emd"></a>示例： 将自定义接受代码添加到 EMD  
+## <a name="example-adding-custom-accept-code-to-an-emd"></a>示例:将自定义接受代码添加到 EMD  
  通过将自定义代码添加到 EMD，您可以定义更复杂的合并行为。 这个简单的示例可防止用户将添加到关系图的多个固定数量的元素。 该示例修改默认 EMD 附带的嵌入关系。  
   
 #### <a name="to-write-custom-accept-code-to-restrict-what-the-user-can-add"></a>编写自定义接受用于限制用户可添加的代码  
   
-1.  通过使用创建的 DSL**最小语言**解决方案模板。 打开 DSL 定义关系图。  
+1. 通过使用创建的 DSL**最小语言**解决方案模板。 打开 DSL 定义关系图。  
   
-2.  在 DSL 资源管理器，展开**域类**， `ExampleModel`，**元素合并指令**。 选择名为的元素合并指令`ExampleElement`。  
+2. 在 DSL 资源管理器，展开**域类**， `ExampleModel`，**元素合并指令**。 选择名为的元素合并指令`ExampleElement`。  
   
      此 EMD 控制用户可以创建新`ExampleElement`在模型中，例如通过从工具箱中拖动的对象。  
   
-3.  在中**DSL 详细信息**窗口中，选择**使用自定义接受**。  
+3. 在中**DSL 详细信息**窗口中，选择**使用自定义接受**。  
   
-4.  重新生成解决方案。 这将需要比平常长，因为生成的代码将从该模型进行更新。  
+4. 重新生成解决方案。 这将需要比平常长，因为生成的代码将从该模型进行更新。  
   
-     生成错误将报告，类似于:"Company.ElementMergeSample.ExampleElement 不包含一个定义为 CanMergeExampleElement..."  
+     生成错误将报告，类似于："Company.ElementMergeSample.ExampleElement 不包含一个定义为 CanMergeExampleElement..."  
   
      必须实现的方法`CanMergeExampleElement`。  
   
-5.  创建新的代码文件中**Dsl**项目。 其内容替换为以下代码并将命名空间更改为你的项目的命名空间。  
+5. 创建新的代码文件中**Dsl**项目。 其内容替换为以下代码并将命名空间更改为你的项目的命名空间。  
   
     ```csharp  
     using Microsoft.VisualStudio.Modeling;  
@@ -197,21 +194,21 @@ ms.locfileid: "49853826"
   
      这个简单的示例将限制可以合并到父模型的元素数。 对于更有趣的条件，该方法可以检查任何属性，以及接收对象的链接。 它还可以检查中携带的合并元素的属性<xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype>。 有关详细信息`ElementGroupPrototypes`，请参阅[自定义复制行为](../modeling/customizing-copy-behavior.md)。 有关如何编写读取模型的代码的详细信息，请参阅[导航和更新程序代码中的模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。  
   
-6.  测试 DSL:  
+6. 测试 DSL:  
   
-    1.  按 f5 键以重新生成解决方案。 当实验实例的[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]随即打开，打开你的 DSL 的实例。  
+    1. 按 f5 键以重新生成解决方案。 当实验实例的[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]随即打开，打开你的 DSL 的实例。  
   
-    2.  以下几种方式创建新元素：  
+    2. 以下几种方式创建新元素：  
   
-        1.  从拖动**示例元素**工具拖到关系图上的。  
+        1. 从拖动**示例元素**工具拖到关系图上的。  
   
-        2.  在中**示例模型资源管理器**，右键单击根节点，然后单击**添加新示例元素**。  
+        2. 在中**示例模型资源管理器**，右键单击根节点，然后单击**添加新示例元素**。  
   
-        3.  复制并粘贴关系图上的元素。  
+        3. 复制并粘贴关系图上的元素。  
   
-    3.  验证不能使用以下任一方式将四个元素添加到模型。 这是因为它们都使用元素合并指令。  
+    3. 验证不能使用以下任一方式将四个元素添加到模型。 这是因为它们都使用元素合并指令。  
   
-## <a name="example-adding-custom-merge-code-to-an-emd"></a>示例： 将自定义合并代码添加到 EMD  
+## <a name="example-adding-custom-merge-code-to-an-emd"></a>示例:将合并自定义代码添加到 EMD  
  在自定义的合并代码中，可以定义在用户拖动一个工具，或粘贴到元素上时，会发生什么情况。 有两种方法来定义自定义合并：  
   
 1. 设置**使用自定义合并**并提供所需的代码。 你的代码替换生成的合并代码。 如果你想要彻底重定义合并的作用，请使用此选项。  
@@ -222,19 +219,19 @@ ms.locfileid: "49853826"
   
 #### <a name="to-override-mergerelate"></a>若要重写 MergeRelate  
   
-1.  在 DSL 定义中，请确保已定义你想要将代码添加的 EMD。 如果需要，可以将路径添加和定义自定义接受代码，如前面各节中所述。  
+1. 在 DSL 定义中，请确保已定义你想要将代码添加的 EMD。 如果需要，可以将路径添加和定义自定义接受代码，如前面各节中所述。  
   
-2.  在 DslDefinition 关系图中，选择合并在接收类。 通常它是嵌入关系的源端的类。  
+2. 在 DslDefinition 关系图中，选择合并在接收类。 通常它是嵌入关系的源端的类。  
   
      例如，在从最小语言解决方案生成的 DSL，选择`ExampleModel`。  
   
-3.  在中**属性**窗口中，将**生成双派生**到**true**。  
+3. 在中**属性**窗口中，将**生成双派生**到**true**。  
   
-4.  重新生成解决方案。  
+4. 重新生成解决方案。  
   
-5.  检查的内容**Dsl\Generated Files\DomainClasses.cs**。 搜索方法名为`MergeRelate`并检查其内容。 这将帮助您编写您自己的版本。  
+5. 检查的内容**Dsl\Generated Files\DomainClasses.cs**。 搜索方法名为`MergeRelate`并检查其内容。 这将帮助您编写您自己的版本。  
   
-6.  在新代码文件中，编写在接收类的分部类，并重写`MergeRelate`方法。 请记住调用基方法。 例如：  
+6. 在新代码文件中，编写在接收类的分部类，并重写`MergeRelate`方法。 请记住调用基方法。 例如：  
   
     ```csharp  
     partial class ExampleModel  
@@ -288,23 +285,23 @@ ms.locfileid: "49853826"
   
 #### <a name="to-create-a-forward-merge-directive"></a>若要创建转发合并指令  
   
-1.  创建[!INCLUDE[dsl](../includes/dsl-md.md)]解决方案使用组件模型模板。  
+1. 创建[!INCLUDE[dsl](../includes/dsl-md.md)]解决方案使用组件模型模板。  
   
-2.  显示**DSL 资源管理器**通过打开 DslDefinition.dsl。  
+2. 显示**DSL 资源管理器**通过打开 DslDefinition.dsl。  
   
-3.  在中**DSL 资源管理器**，展开**域类**。  
+3. 在中**DSL 资源管理器**，展开**域类**。  
   
-4.  **ComponentPort**抽象域类是两个基类**InPort**并**OutPort**。 右键单击**ComponentPort** ，然后单击**添加新元素合并指令**。  
+4. **ComponentPort**抽象域类是两个基类**InPort**并**OutPort**。 右键单击**ComponentPort** ，然后单击**添加新元素合并指令**。  
   
      一个新**元素合并指令**节点下显示**元素合并指令**节点。  
   
-5.  选择**元素合并指令**节点，然后打开**DSL 详细信息**窗口。  
+5. 选择**元素合并指令**节点，然后打开**DSL 详细信息**窗口。  
   
-6.  在索引类列表中，选择**ComponentPort**。  
+6. 在索引类列表中，选择**ComponentPort**。  
   
-7.  选择**将合并转发到其他域类**。  
+7. 选择**将合并转发到其他域类**。  
   
-8.  在路径选择列表中，展开**ComponentPort**，展开**ComponentHasPorts**，然后选择**组件**。  
+8. 在路径选择列表中，展开**ComponentPort**，展开**ComponentHasPorts**，然后选择**组件**。  
   
      新路径应类似于此：  
   
@@ -324,6 +321,3 @@ ms.locfileid: "49853826"
  [导航和更新程序代码中的模型](../modeling/navigating-and-updating-a-model-in-program-code.md)   
  [自定义工具和工具箱](../modeling/customizing-tools-and-the-toolbox.md)   
  [线路关系图示例 DSL](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
-
-
-

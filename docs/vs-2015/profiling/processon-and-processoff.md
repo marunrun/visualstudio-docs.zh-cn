@@ -1,25 +1,20 @@
 ---
 title: ProcessOn 和 ProcessOff | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: d3dc6a7e-bc0f-48a6-a4ec-f386348bb296
 caps.latest.revision: 13
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 64ebad6b1491fd599f27e98b0f61e12017434ffe
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 77e21a280700520b6861dd42e01a4aefa4faa704
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51761017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68180206"
 ---
 # <a name="processon-and-processoff"></a>ProcessOn 和 ProcessOff
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -58,7 +53,7 @@ VSPerfCmd.exe /{ProcessOff|ProcessOn}:PID [Options]
  **Start:** `Method`  
  初始化命令行分析会话并设置指定的分析方法。  
   
- **Launch：**`AppName`  
+ **Launch：** `AppName`  
  启动指定的应用程序并开始使用采样方法进行分析。  
   
  **Attach:** `PID`  
@@ -67,7 +62,7 @@ VSPerfCmd.exe /{ProcessOff|ProcessOn}:PID [Options]
  **GlobalOff**&#124;**GlobalOn**  
  停止或启动对命令行分析会话中所有进程的分析。  
   
- {**ThreadOff**|**ThreadOn**}**:**`TID`  
+ {**ThreadOff**|**ThreadOn**} **:** `TID`  
  停止或启动对指定线程的分析（仅限检测方法）。  
   
 ## <a name="example"></a>示例  
@@ -85,11 +80,8 @@ VSPerfCmd /Shutdown
   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [分析独立应用程序](../profiling/command-line-profiling-of-stand-alone-applications.md)   
  [分析 ASP.NET Web 应用程序](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
  [分析服务](../profiling/command-line-profiling-of-services.md)
-
-
-

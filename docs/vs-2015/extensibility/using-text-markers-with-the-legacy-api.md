@@ -1,26 +1,21 @@
 ---
 title: 旧版 API 中使用文本标记 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - text markers
 ms.assetid: 937a0b19-1216-45d5-a7ad-4fe1d6f73097
 caps.latest.revision: 17
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 600e9635fb0ee5ea78226277860ac41e183f47b5
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 3dff5e6ecf60d389730841e99b87db584465e020
+ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51745909"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65695482"
 ---
 # <a name="using-text-markers-with-the-legacy-api"></a>旧版 API 中使用文本标记
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,18 +25,18 @@ ms.locfileid: "51745909"
  由于与文本标记相关的性能开销，而不要创建多个标记的文本缓冲区。 每个标记是用户编辑缓冲区内容每次更新。  
   
 > [!NOTE]
->  用户可以更改可见标记类型，但不是其形状和样式的颜色。 有关详细信息，请参阅[字体和 Colors，Environment，Options Dialog Box](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)。  
+> 用户可以更改可见标记类型，但不是其形状和样式的颜色。 有关详细信息，请参阅[字体和 Colors，Environment，Options Dialog Box](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)。  
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|说明|  
 |-----------|-----------------|  
 |[如何：添加标准文本标记](../extensibility/how-to-add-standard-text-markers.md)|描述如何添加由提供的标准文本标记类型[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]核心编辑器文本视图。|  
 |[如何：实现错误标记](../extensibility/how-to-implement-error-markers.md)|介绍如何实现的实例[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]标记，用于通过使用红色的波浪形下划线指示错误。|  
 |[如何：创建自定义文本标记](../extensibility/how-to-create-custom-text-markers.md)|介绍如何创建和自定义文本标记类型添加到文本视图。|  
 |[如何：使用文本标记](../extensibility/how-to-use-text-markers.md)|介绍如何添加文本标记。|  
 |[核心编辑器内](../extensibility/inside-the-core-editor.md)|介绍核心编辑器的功能，并提供有关如何自定义核心编辑器的详细信息。|  
-|[编辑器功能](http://msdn.microsoft.com/en-us/bdac940d-1f14-4019-a01f-fd0bb3dc7198)|描述中提供的功能[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]核心编辑器。|  
+|[编辑器功能](https://msdn.microsoft.com/bdac940d-1f14-4019-a01f-fd0bb3dc7198)|描述中提供的功能[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]核心编辑器。|  
   
 ## <a name="reference"></a>参考  
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsPackageDefinedTextMarkerType>  
@@ -76,4 +71,3 @@ ms.locfileid: "51745909"
   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStreamMarker>  
  提供对访问和使用一维的坐标调整文本标记的文本缓冲区中的位置。 如果可能，不要使用此接口。
-

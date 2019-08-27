@@ -2,21 +2,20 @@
 title: 工作流设计器-WriteLine 活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
-ms.prod: visual-studio-dev15
 f1_keywords:
 - System.Activities.Statements.WriteLine.UI
 ms.assetid: 1b5f29a8-b7fd-477e-949e-2f689cae3c96
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: baea87d2ab750da3ee0cfef2450ec0ad04d231cc
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 17dd6e3c617749d82533d8bccb7f0caaa073ac26
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53857538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62838615"
 ---
 # <a name="writeline-activity-designer"></a>WriteLine 活动设计器
 

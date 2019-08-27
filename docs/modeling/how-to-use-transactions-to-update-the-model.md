@@ -4,16 +4,15 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: f42c7a384b4f46864e4c79d386cd82ca39949a61
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9a7514e3ff0c876a669f514a7e17bb02b73c19c2
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53938337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936844"
 ---
 # <a name="how-to-use-transactions-to-update-the-model"></a>如何：使用事务更新模型
 事务，请确保对在存储区所做的更改被视为一个组。 可以提交或回滚作为一个单元进行分组的更改。
@@ -58,9 +57,9 @@ catch (Exception ex)
 ## <a name="rolling-back-a-transaction"></a>回滚事务
  若要确保在存储区将保留在或将恢复到事务执行前的状态，可以使用这些策略之一：
 
-1.  引发未捕获事务的作用域内的异常。
+1. 引发未捕获事务的作用域内的异常。
 
-2.  回滚显式事务：
+2. 回滚显式事务：
 
     ```csharp
     this.Store.TransactionManager.CurrentTransaction.Rollback();

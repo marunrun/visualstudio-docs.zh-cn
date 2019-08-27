@@ -4,16 +4,15 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.prod: visual-studio-dev15
-ms.openlocfilehash: f95cc7fad1b4aaac3da687352cf5561a7d72ff8e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 36c49d3447a5f1fafcf4601057c66ebedcb193ec
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53897834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63003381"
 ---
 # <a name="sharing-classes-between-dsls-by-using-a-dsl-library"></a>使用 DSL 库在 DSL 之间共享类
 在 Visual Studio 可视化和建模 SDK 中，可以创建可导入到另一个 DSL 的 DSL 定义不完整。 这允许您考虑通用部分类似的模型。
@@ -22,11 +21,11 @@ ms.locfileid: "53897834"
 
 #### <a name="to-create-a-dsl-library"></a>若要创建的 DSL 库
 
-1.  创建一个新的 DSL 项目，并选择的 Dsl 解决方案模板。
+1. 创建一个新的 DSL 项目，并选择的 Dsl 解决方案模板。
 
      使用空模型，将创建单个的 DSL 项目。
 
-2.  您可以添加域类、 关系、 形状等。
+2. 您可以添加域类、 关系、 形状等。
 
      库中的元素不需要形成单个嵌入树。
 
@@ -34,15 +33,15 @@ ms.locfileid: "53897834"
 
      请考虑设置**继承修饰符**到的域类的`Abstract`。
 
-3.  您可以添加在 DSL 资源管理器，如连接生成器中定义的元素。
+3. 您可以添加在 DSL 资源管理器，如连接生成器中定义的元素。
 
-4.  您可以添加自定义项，需要额外的代码，例如验证约束。
+4. 您可以添加自定义项，需要额外的代码，例如验证约束。
 
-5.  单击**转换所有模板**。
+5. 单击**转换所有模板**。
 
-6.  生成项目。
+6. 生成项目。
 
-7.  当你将分发的其他人使用 DSL 时，必须提供编译的程序集 (DLL) 和文件`DslDefinition.dsl`。 可以下的文件夹中找到的已编译的程序集 `Dsl\bin\*`
+7. 当你将分发的其他人使用 DSL 时，必须提供编译的程序集 (DLL) 和文件`DslDefinition.dsl`。 可以下的文件夹中找到的已编译的程序集 `Dsl\bin\*`
 
 #### <a name="to-import-a-dsl-library"></a>将 DSL 库导入
 

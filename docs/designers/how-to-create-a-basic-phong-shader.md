@@ -1,20 +1,19 @@
 ---
 title: 如何：创建基本 Phong 着色器
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.assetid: c7c69da8-142b-4d3b-9be9-4be0d5970b25
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ef3120142b2d6fae7c8ee02c81f6ae76efb0aaaa
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 895b797ad07018a9f4d4bf4c14b7f358a26f8eaa
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53934117"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68924418"
 ---
 # <a name="how-to-create-a-basic-phong-shader"></a>如何：创建基本 Phong 着色器
 
@@ -26,39 +25,39 @@ ms.locfileid: "53934117"
 
 有关 Lambert 光照模型的详细信息，请参阅[如何：创建基本 Lambert 着色器](../designers/how-to-create-a-basic-lambert-shader.md)。
 
-开始前，请确保显示“属性”窗口和“工具箱”。
+开始前，请确保显示“属性”  窗口和“工具箱”  。
 
-1. 按[如何：创建基本 Lambert 着色器](../designers/how-to-create-a-basic-lambert-shader.md)。
+1. 按照以下方法创建 Lambert 着色器：[如何：创建基本 Lambert 着色器](../designers/how-to-create-a-basic-lambert-shader.md)。
 
-2. 从“最终颜色”节点断开“朗伯”节点。 选择“朗伯”节点的“RGB”终端，然后选择“断开链接”。 这为在下一步中添加的节点腾出空间。
+2. 从“最终颜色”  节点断开“朗伯”  节点。 选择“朗伯”  节点的“RGB”  终端，然后选择“断开链接”  。 这为在下一步中添加的节点腾出空间。
 
-3. 向关系图添加“添加”节点。 在“工具箱”中的“数学”下选择“添加”，然后将其移到设计图面。
+3. 向关系图添加“添加”  节点。 在“工具箱”  中的“数学”  下选择“添加”  ，然后将其移到设计图面。
 
-4. 向关系图添加“反射”节点。 在“工具箱”中的“实用工具”下，选择“反射”，然后将其移到设计图面。
+4. 向关系图添加“反射”  节点。 在“工具箱”  中的“实用工具”  下，选择“反射”  ，然后将其移到设计图面。
 
-5. 添加反射比例。 将“反射”节点的“输出”终端移到“添加”节点的“X”终端，然后将“朗伯”节点的“输出”终端移到“添加”节点的“Y”终端。 这些连接会组合像素的总漫射比例和总反射颜色比例。
+5. 添加反射比例。 将“反射”  节点的“输出”  终端移到“添加”  节点的“X”  终端，然后将“朗伯”  节点的“输出”  终端移到“添加”  节点的“Y”  终端。 这些连接会组合像素的总漫射比例和总反射颜色比例。
 
-6. 将计算得出的颜色值连接到最终颜色。 将“添加”节点的“输出”终端移到“最终颜色”节点的“RGB”终端。
+6. 将计算得出的颜色值连接到最终颜色。 将“添加”  节点的“输出”  终端移到“最终颜色”  节点的“RGB”  终端。
 
    下图显示了已完成的着色器关系图和应用于茶壶体的着色器预览。
 
 > [!NOTE]
 > 为了更好地演示该图中着色器的效果，使用着色器的 **MaterialDiffuse** 参数指定了橙色，并使用  **MaterialSpecular** 和 **MaterialSpecularPower**  参数指定了金属外观。 有关材质参数的信息，请参阅[着色器设计器](../designers/shader-designer.md)中的“预览着色器”部分。
 
- ![着色器图及其效果预览](../designers/media/digit-lighting-graph.png)
+![着色器图及其效果预览](../designers/media/digit-lighting-graph.png)
 
- 某些形状可能会增强某些着色器的预览效果。 若要深入了解如何在着色器设计器中预览着色器，请参阅[着色器设计器](../designers/shader-designer.md)中的“预览着色器”部分
+某些形状可能会增强某些着色器的预览效果。 若要深入了解如何在着色器设计器中预览着色器，请参阅[着色器设计器](../designers/shader-designer.md)中的“预览着色器”部分
 
- 下图显示了本文档中所述的应用于三维模型的着色器。 **MaterialSpecular** 属性设置为 (1.00, 0.50, 0.20, 0.00)，并将其 **MaterialSpecularPower** 属性设置为 16。
+下图显示了本文档中所述的应用于三维模型的着色器。 **MaterialSpecular** 属性设置为 (1.00, 0.50, 0.20, 0.00)，并将其 **MaterialSpecularPower** 属性设置为 16。
 
 > [!NOTE]
 > **MaterialSpecular** 属性确定表面材质的表面光洁度。 高光泽表面（如玻璃或塑料）往往具有白色明亮阴影的反射颜色。 金属表面往往具有接近其漫射颜色的反射颜色。 缎面表面往往具有深灰色的反射颜色。
 >
 > **MaterialSpecularPower** 属性确定高光的强度。 高反射强度模拟更暗淡、更局部化的高光效果。 较低的反射强度模拟大幅度的强烈高光，其可能会过度饱和并遮掩整个表面的颜色。
 
- ![应用于模型的 Phong 照明](../designers/media/digit-lighting-model.png)
+![应用于模型的 Phong 照明](../designers/media/digit-lighting-model.png)
 
- 有关如何向三维模型应用着色器的详细信息，请参阅[如何：向三维模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)。
+有关如何向三维模型应用着色器的详细信息，请参阅[如何：向三维模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)。
 
 ## <a name="see-also"></a>请参阅
 

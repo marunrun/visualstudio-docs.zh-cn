@@ -1,27 +1,22 @@
 ---
 title: 窗口搜索对话框 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Window Search
 ms.assetid: 9c30390d-dc3c-4c27-ae1a-9d92dc076d2b
 caps.latest.revision: 7
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: c2f32bf9800bc2ce08039fffcec26f965cbab444
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 72405ced4348228432bc7cf75d135e317a3fd833
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51748082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68185332"
 ---
 # <a name="window-search-dialog-box"></a>“窗口搜索”对话框
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,7 +33,7 @@ ms.locfileid: "51748082"
  **隐藏 Spy + +**  
  移除 Spy + + 主窗口，但仍**窗口**对话框显示在其他应用程序的前面。  
   
- **句柄**  
+ **图柄**  
  若要搜索的窗口的唯一 ID。  
   
  **标题**  
@@ -61,7 +56,7 @@ ms.locfileid: "51748082"
  介绍 windows、 消息、 进程和线程的 Spy + + 树的视图。  
   
  [使用 Spy++](../debugger/using-spy-increment.md)  
- 引入了 Spy + + 工具，并说明如何使用它。  
+ 介绍 Spy + + 工具，并说明如何使用它。  
   
  [“查找窗口”对话框](../debugger/find-window-dialog-box.md)  
  用于查看的属性或特定的窗口中的消息。  
@@ -70,7 +65,4 @@ ms.locfileid: "51748082"
  用于显示 Windows 视图中选择窗口的属性。  
   
  [Spy++ 参考](../debugger/spy-increment-reference.md)  
- 包含描述每个 Spy + + 菜单和对话框中的各个部分。
-
-
-
+ 包含描述每个 Spy + + 菜单和对话框的章节。

@@ -1,20 +1,19 @@
 ---
 title: 如何：创建基本纹理
 ms.date: 11/04/2016
-ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.assetid: 0222e8bf-d29f-421b-9b1f-123d500fa179
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 680ec789c4a52e0855651fbe4d5caed7b945a8e8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d36aa18cb4d641f1a5f22618e98615222cb844d6
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53822095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844938"
 ---
 # <a name="how-to-create-a-basic-texture"></a>如何：创建基本纹理
 

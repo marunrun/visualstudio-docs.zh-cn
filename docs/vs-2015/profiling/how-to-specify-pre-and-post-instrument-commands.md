@@ -1,14 +1,9 @@
 ---
 title: 如何：指定检测前和检测后命令 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.property.instrument
 helpviewer_keywords:
@@ -19,13 +14,13 @@ ms.assetid: 6a8d5340-1d1b-4d81-88dd-8e1f435eb828
 caps.latest.revision: 33
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: b88d49be8ee4651d82135b3e8d27bef8218ffd43
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: ab7ecbe97ba0b174a1cc4c0f0d169834ce25e8d8
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51772217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63439715"
 ---
 # <a name="how-to-specify-pre--and-post-instrument-commands"></a>如何：指定检测前和检测后命令
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -58,44 +53,41 @@ ms.locfileid: "51772217"
   
 ### <a name="to-specify-pre-instrument-commands"></a>指定检测前命令  
   
-1.  执行以下步骤之一：  
+1. 执行以下步骤之一：  
   
-    -   若要为性能会话中的所有二进制文件指定检测前命令，请在“性能资源管理器”中选择性能会话节点，然后右键单击并选择“属性”。  
+    - 若要为性能会话中的所有二进制文件指定检测前命令，请在“性能资源管理器”中选择性能会话节点，然后右键单击并选择“属性”。  
   
-    -   若要为某个特定的二进制文件指定检测前命令，请在性能会话的“目标”列表中右键单击该二进制文件的名称，然后选择“属性”。  
+    - 若要为某个特定的二进制文件指定检测前命令，请在性能会话的“目标”列表中右键单击该二进制文件的名称，然后选择“属性”。  
   
-2.  在“属性页”中，单击“检测”。  
+2. 在“属性页”中，单击“检测”。  
   
-3.  在“检测前事件”下的“命令行”文本框中键入命令。  
+3. 在“检测前事件”下的“命令行”文本框中键入命令。  
   
     > [!NOTE]
-    >  可以单击“命令行”框旁边的省略号按钮“(…)”浏览到相应的 .exe、.cmd 或 .bat 文件并选择该文件。  
+    > 可以单击“命令行”框旁边的省略号按钮“(…)”浏览到相应的 .exe、.cmd 或 .bat 文件并选择该文件。  
   
-4.  单击 **“确定”**。  
+4. 单击 **“确定”**。  
   
      若要禁止命令运行但不删除它，请选中“从检测中排除”复选框。 若要修改编译器或链接器设置，请使用项目属性页。  
   
 ### <a name="to-specify-post-instrument-commands"></a>指定检测后命令  
   
-1.  执行以下步骤之一：  
+1. 执行以下步骤之一：  
   
-    -   若要为性能会话中的所有二进制文件指定检测后命令，请在“性能资源管理器”中选择性能会话节点，然后右键单击并选择“属性”。  
+    - 若要为性能会话中的所有二进制文件指定检测后命令，请在“性能资源管理器”中选择性能会话节点，然后右键单击并选择“属性”。  
   
-    -   若要为某个特定的二进制文件指定检测后命令，请在性能会话的“目标”列表中右键单击该二进制文件的名称，然后选择“属性”。  
+    - 若要为某个特定的二进制文件指定检测后命令，请在性能会话的“目标”列表中右键单击该二进制文件的名称，然后选择“属性”。  
   
-2.  在“属性页”中，单击“检测”。  
+2. 在“属性页”中，单击“检测”。  
   
-3.  在“检测后事件”下的“命令行”文本框中键入命令。  
+3. 在“检测后事件”下的“命令行”文本框中键入命令。  
   
     > [!NOTE]
-    >  可以单击“命令行”框旁边的省略号按钮“(…)”浏览到相应的 .exe、.cmd 或 .bat 文件并选择该文件。  
+    > 可以单击“命令行”框旁边的省略号按钮“(…)”浏览到相应的 .exe、.cmd 或 .bat 文件并选择该文件。  
   
-4.  单击 **“确定”**。  
+4. 单击 **“确定”**。  
   
      若要禁止命令运行但不删除它，请选中“从检测中排除”复选框。 若要修改编译器或链接器设置，请使用项目属性页。  
   
 ## <a name="see-also"></a>请参阅  
  [配置性能会话](../profiling/configuring-performance-sessions.md)
-
-
-

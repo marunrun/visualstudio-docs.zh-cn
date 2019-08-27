@@ -8,38 +8,37 @@ dev_langs:
 ms.assetid: c83ba0bb-5425-4d47-8891-6b4dbf937701
 author: gewarren
 ms.author: gewarren
-manager: douge
-ms.prod: visual-studio-dev15
+manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: bf99d44e25bf33a773865e0bcf2084d3ac0bbe10
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
-ms.translationtype: MTE95
+ms.openlocfilehash: 31933e2045981fd6a0f38fb19a9480787c9f282a
+ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53888616"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68925588"
 ---
 # <a name="typed-vs-untyped-datasets"></a>类型化与非类型化数据集
-类型化数据集是首先派生自基本的数据集<xref:System.Data.DataSet>类，然后使用中的信息**数据集设计器**，它存储在一个.xsd 文件，生成一个新强类型化数据集类。 生成并编译到这个新的数据集类作为第一类对象和属性的一组架构 （表、 列等） 中的信息。 由于类型化数据集继承自基类<xref:System.Data.DataSet>类，类型化的类假定所有的功能<xref:System.Data.DataSet>类，并可用于的一个实例的方法<xref:System.Data.DataSet>类作为参数。
+类型化数据集是第一个派生自基类<xref:System.Data.DataSet>的数据集, 然后使用存储在 .xsd 文件中的**数据集设计器**中的信息来生成新的强类型化数据集类。 将生成架构 (表、列等) 中的信息, 并将其作为一组第一类对象和属性编译到这个新的数据集类中。 因为类型化数据集继承自基类<xref:System.Data.DataSet> , 所以类型化类将假定<xref:System.Data.DataSet>类的所有功能, 并且可与<xref:System.Data.DataSet>采用类的实例作为参数的方法一起使用。
 
- 非类型化的数据集，与此相反，有没有相应的内置架构。 类型化数据集，如中所示的非类型化数据集包含表、 列等，但那些仅作为集合公开。 (但是，手动创建的表和其他数据元素中的非类型化数据集后，您可以导出数据集的结构作为架构通过使用数据集的<xref:System.Data.DataSet.WriteXmlSchema%2A>方法。)
+与此相反, 非类型化数据集没有对应的内置架构。 与类型化数据集中一样, 非类型化数据集包含表、列等, 但它们只作为集合公开。 (但是, 在您手动在非类型化数据集中创建表和其他数据元素后, 您可以使用数据集的<xref:System.Data.DataSet.WriteXmlSchema%2A>方法将该数据集的结构导出为架构。)
 
-## <a name="contrast-data-access-in-typed-and-untyped-datasets"></a>在类型化和非类型化数据集的对比度数据访问
- 类型化数据集的类已在其中的属性采用的表和列的实际名称的对象模型。 例如，如果您正在使用类型化数据集，您可以通过使用如下所示的代码引用的列：
+## <a name="contrast-data-access-in-typed-and-untyped-datasets"></a>对类型化和非类型化数据集中的数据访问进行对比度
+类型化数据集的类具有一个对象模型, 其中其属性采用表和列的实际名称。 例如, 如果使用类型化数据集, 则可以通过使用如下所示的代码来引用列:
 
- [!code-csharp[VbRaddataDatasets#4](../data-tools/codesnippet/CSharp/typed-vs-untyped-datasets_1.cs)]
- [!code-vb[VbRaddataDatasets#4](../data-tools/codesnippet/VisualBasic/typed-vs-untyped-datasets_1.vb)]
+[!code-csharp[VbRaddataDatasets#4](../data-tools/codesnippet/CSharp/typed-vs-untyped-datasets_1.cs)]
+[!code-vb[VbRaddataDatasets#4](../data-tools/codesnippet/VisualBasic/typed-vs-untyped-datasets_1.vb)]
 
- 与此相反，如果您正在使用的非类型化数据集，则是等效的代码：
+相反, 如果使用非类型化的数据集, 则等效的代码为:
 
- [!code-csharp[VbRaddataDatasets#5](../data-tools/codesnippet/CSharp/typed-vs-untyped-datasets_2.cs)]
- [!code-vb[VbRaddataDatasets#5](../data-tools/codesnippet/VisualBasic/typed-vs-untyped-datasets_2.vb)]
+[!code-csharp[VbRaddataDatasets#5](../data-tools/codesnippet/CSharp/typed-vs-untyped-datasets_2.cs)]
+[!code-vb[VbRaddataDatasets#5](../data-tools/codesnippet/VisualBasic/typed-vs-untyped-datasets_2.vb)]
 
- 类型化的访问才不易于阅读，但还完全支持的 Visual Studio 中的 IntelliSense**代码编辑器**。 除了要更轻松地使用，类型化数据集的语法提供了类型检查在编译时，极大地减少中将值分配到数据集成员的错误的可能性。 如果更改中的列的名称在<xref:System.Data.DataSet>类，然后编译你的应用程序，您将收到生成错误。 通过双击中的生成错误**任务列表**，您可以直接转到行或行的代码引用旧的列名称。 访问表和列在类型化数据集也是在运行时速度稍快由于访问权限取决于在编译时，不能通过在运行时的集合。
+类型化访问不仅更易于阅读, 还可以在 Visual Studio**代码编辑器**中的 IntelliSense 完全支持。 除了更易于使用以外, 类型化的数据集的语法还在编译时提供类型检查, 大大降低了向数据集成员赋值时出现错误的可能性。 如果更改<xref:System.Data.DataSet>类中列的名称, 并编译应用程序, 则会收到生成错误。 通过双击**任务列表**中的生成错误, 可以直接跳到引用旧列名称的代码行或代码行。 在运行时, 对类型化数据集中的表和列的访问也稍微快一些, 因为访问是在编译时确定的, 而不是在运行时集合。
 
- 即使类型化数据集有许多优点，非类型化数据集是在很多情况下很有用。 最显而易见的情形是无架构数据集不可用。 这可能会出现，例如，如果你的应用程序与返回的数据集的组件进行交互，但您不知道提前其结构是什么。 同样，有些的时候当您正在使用不具有静态、 可预测结构的数据。 在这种情况下，它是不切实际的使用类型化数据集，因为您将需要重新生成具有数据结构中每个更改的类型化数据集类。
+即使类型化数据集有很多优点, 但在各种情况下, 非类型化数据集也很有用。 最显而易见的情况是, 没有可用于数据集的架构。 例如, 如果您的应用程序与返回数据集的组件交互, 但您事先并不知道它的结构是什么, 就可能会发生这种情况。 同样, 在使用不具有静态可预测结构的数据时也是如此。 在这种情况下, 使用类型化数据集是不切实际的, 因为您必须重新生成数据结构中每个更改的类型化数据集类。
 
- 一般来说，有很多时候您可能无可用架构动态创建的数据集。 在这种情况下，数据集是只是方便使用的结构，您可以在其中保存信息，只要数据可以表示关系的方式。 同时，可以充分利用数据集的功能，例如，序列化的信息将传递到另一个进程，或写出 XML 文件的能力。
+更常见的情况是, 在没有可用架构的情况下, 可能会动态创建一个数据集。 在这种情况下, 数据集只是一个方便的结构, 您可以在其中保留信息, 只要数据可以以关系方式表示。 同时, 你可以利用数据集的功能, 例如序列化信息以传递到另一个进程或写出 XML 文件。
 
 ## <a name="see-also"></a>请参阅
 

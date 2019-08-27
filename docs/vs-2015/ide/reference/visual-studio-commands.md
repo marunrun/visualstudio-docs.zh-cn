@@ -1,13 +1,9 @@
 ---
 title: 命令 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 helpviewer_keywords:
 - Visual Studio, commands
 - commands, Visual Studio
@@ -16,17 +12,16 @@ ms.assetid: 76ffa394-ee89-4629-aba9-1a62b72e6cc1
 caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 8bfcac20d0facea28734e27cbb60966717cdcdc2
-ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
-ms.translationtype: MTE95
+manager: jillfra
+ms.openlocfilehash: 10ce4bd59567d7d055dd107dd05358d994d22c36
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "53869802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "68160869"
 ---
 # <a name="visual-studio-commands"></a>Visual Studio 命令
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
-
 
 Visual Studio 命令允许你调用“命令”  窗口、“即时”  窗口或“查找/命令”  框中的命令。 在每种情况下，都使用大于号 (`>`) 指示后面跟随的是命令，而不是搜索或调试操作。
 
@@ -46,7 +41,7 @@ Visual Studio 命令允许你调用“命令”  窗口、“即时”  窗口�
 
  以下命令采用参数和/或开关。
 
-|命令名：|说明|
+|命令名：|描述|
 |------------------|-----------------|
 |[添加现有项](../../ide/reference/add-existing-item-command.md)|将现有文件添加到当前解决方案中并打开它。|
 |[添加现有项目](../../ide/reference/add-existing-project-command.md)|将现有项目添加到当前解决方案中。|

@@ -1,25 +1,20 @@
 ---
 title: Blend 中的键盘快捷方式 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: 3a1b6830-30c2-4a36-bd14-6961f5edf9cb
 caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 4cf0dd03a496d97f883bd1543f133f9f5213ba93
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+manager: jillfra
+ms.openlocfilehash: 4f96dcdeb8c53645f314c9456a3328ddb6e7959e
+ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49262491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62428009"
 ---
 # <a name="keyboard-shortcuts-in-blend"></a>Blend 中的键盘快捷键
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -124,6 +119,3 @@ ms.locfileid: "49262491"
 |重置活动工作区布局|Ctrl+Shift+R|  
 |平移工作区|按住空格键|  
 |临时使用“选择”工具（在其他工具处于选定状态的情况下）|按住 Ctrl|
-
-
-

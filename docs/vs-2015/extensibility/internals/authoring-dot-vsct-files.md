@@ -1,26 +1,21 @@
 ---
 title: 创作。Vsct 文件 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - VSCT files, manual authoring
 ms.assetid: e9f715dc-12b7-439b-bdf3-f3dc75e62f1c
 caps.latest.revision: 13
 ms.author: gregvanl
-manager: ghogen
-ms.openlocfilehash: 50dc50aee377a4685527e57dc2af5d9946639946
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 85e466e7ebb6294a77e89040260c16fe0043e372
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51772165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63437671"
 ---
 # <a name="authoring-vsct-files"></a>创作。Vsct 文件
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -30,16 +25,16 @@ ms.locfileid: "51772165"
  对于新项目，我们建议你使用 Visual Studio 包模板，因为它会生成一个.vsct 文件，具体取决于你的选择，已具有菜单命令、 工具窗口，或自定义编辑器所需的元素。 您可以修改此.vsct 文件以满足你的 VSPackage 的要求。 有关如何修改.vsct 文件的详细信息，请参阅中的示例[扩展菜单和命令](../../extensibility/extending-menus-and-commands.md)。  
   
 ## <a name="authoring-the-file"></a>编写文件  
- 创作.vsct 文件在以下阶段： 创建文件和资源的结构、 声明的 UI 元素、 将 UI 元素放在 IDE 中，并添加任何专用的行为。  
+ 在这些阶段中创作.vsct 文件：创建文件和资源的结构、 声明的 UI 元素、 将 UI 元素放在 IDE 中，并添加任何专用的行为。  
   
 ### <a name="file-structure"></a>文件结构  
  .Vsct 文件的基本结构[CommandTable](../../extensibility/commandtable-element.md)根元素，其中包含[命令](../../extensibility/commands-element.md)元素和一个[符号](../../extensibility/symbols-element.md)元素。  
   
 ##### <a name="to-create-the-file-structure"></a>若要创建的文件结构  
   
-1.  按照中的步骤将.vsct 文件添加到你的项目[如何： 创建。Vsct 文件](../../extensibility/internals/how-to-create-a-dot-vsct-file.md)。  
+1. 按照中的步骤将.vsct 文件添加到你的项目[如何：创建。Vsct 文件](../../extensibility/internals/how-to-create-a-dot-vsct-file.md)。  
   
-2.  添加到所需命名空间`CommandTable`元素，如下面的示例中所示。  
+2. 添加到所需命名空间`CommandTable`元素，如下面的示例中所示。  
   
     ```xml  
     <CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable"   
@@ -47,7 +42,7 @@ ms.locfileid: "51772165"
   
     ```  
   
-3.  在中`CommandTable`元素中，添加`Commands`要承载您的自定义菜单、 工具栏、 命令组和命令的所有元素。 以便可以加载自定义的 UI 元素，`Commands`元素必须具有其`Package`属性设置为包的名称。  
+3. 在中`CommandTable`元素中，添加`Commands`要承载您的自定义菜单、 工具栏、 命令组和命令的所有元素。 以便可以加载自定义的 UI 元素，`Commands`元素必须具有其`Package`属性设置为包的名称。  
   
      之后`Commands`元素中，添加`Symbols`元素定义的包和名称的 Guid 和命令 Id 的 UI 元素。  
   
@@ -56,28 +51,28 @@ ms.locfileid: "51772165"
   
 ##### <a name="to-include-visual-studio-resources"></a>若要包括的 Visual Studio 资源  
   
-1.  在顶部`CommandTable`元素中，添加一个`Extern`元素为每个外部文件引用，并设置`href`属性的文件的名称。 你可以引用以下的标头文件，若要访问 Visual Studio 资源：  
+1. 在顶部`CommandTable`元素中，添加一个`Extern`元素为每个外部文件引用，并设置`href`属性的文件的名称。 你可以引用以下的标头文件，若要访问 Visual Studio 资源：  
   
-    -   Stdidcmd.h，由 Visual Studio 公开的所有命令的定义 Id。  
+    - Stdidcmd.h，由 Visual Studio 公开的所有命令的定义 Id。  
   
-    -   Vsshlids.h，包含用于 Visual Studio 菜单的命令 Id。  
+    - Vsshlids.h，包含用于 Visual Studio 菜单的命令 Id。  
   
-2.  如果您的包调用由 Visual Studio 或其他包定义的任何命令，将添加`UsedCommands`元素后的`Commands`元素。 填充此元素与[UsedCommand](../../extensibility/usedcommand-element.md)调用是不是您的包的一部分的每个命令的元素。 设置`guid`并`id`的属性`UsedCommand`元素与要调用的命令 GUID 和 ID 值。 有关如何查找 Guid 和 Id 的 Visual Studio 命令的详细信息，请参阅[Guid 和 Id 的 Visual Studio 命令](../../extensibility/internals/guids-and-ids-of-visual-studio-commands.md)。 若要从其他包调用命令，使用 GUID 和这些包在.vsct 文件中定义的命令的 ID。  
+2. 如果您的包调用由 Visual Studio 或其他包定义的任何命令，将添加`UsedCommands`元素后的`Commands`元素。 填充此元素与[UsedCommand](../../extensibility/usedcommand-element.md)调用是不是您的包的一部分的每个命令的元素。 设置`guid`并`id`的属性`UsedCommand`元素与要调用的命令 GUID 和 ID 值。 有关如何查找 Guid 和 Id 的 Visual Studio 命令的详细信息，请参阅[Guid 和 Id 的 Visual Studio 命令](../../extensibility/internals/guids-and-ids-of-visual-studio-commands.md)。 若要从其他包调用命令，使用 GUID 和这些包在.vsct 文件中定义的命令的 ID。  
   
 ### <a name="declaring-ui-elements"></a>声明 UI 元素  
  声明中的所有新 UI 元素`Symbols`.vsct 文件的部分。  
   
 ##### <a name="to-declare-ui-elements"></a>若要声明的 UI 元素  
   
-1.  在中`Symbols`元素中，添加三个[GuidSymbol](../../extensibility/guidsymbol-element.md)元素。 每个`GuidSymbol`元素具有`name`属性和一个`value`属性。 设置`name`属性，以便其能够反映元素的用途。 `value`属性采用一个 GUID。 (若要在生成 GUID，**工具**菜单上，单击**创建 GUID**，然后选择**注册表格式**。)  
+1. 在中`Symbols`元素中，添加三个[GuidSymbol](../../extensibility/guidsymbol-element.md)元素。 每个`GuidSymbol`元素具有`name`属性和一个`value`属性。 设置`name`属性，以便其能够反映元素的用途。 `value`属性采用一个 GUID。 (若要在生成 GUID，**工具**菜单上，单击**创建 GUID**，然后选择**注册表格式**。)  
   
      第一个`GuidSymbol`元素表示您的软件包，并通常没有任何子级。 第二个`GuidSymbol`元素表示该命令设置，并将包含所有菜单、 组和命令定义的符号。 第三个`GuidSymbol`元素表示映像存储区，并包含所有命令的图标的符号。 如果不必须使用图标的任何命令，则可以省略第三个`GuidSymbol`元素。  
   
-2.  在中`GuidSymbol`元素，它表示命令集，添加一个或多个[IDSymbol](../../extensibility/idsymbol-element.md)元素。 每个表示菜单、 工具栏、 组或要添加到用户界面的命令。  
+2. 在中`GuidSymbol`元素，它表示命令集，添加一个或多个[IDSymbol](../../extensibility/idsymbol-element.md)元素。 每个表示菜单、 工具栏、 组或要添加到用户界面的命令。  
   
      每个`IDSymbol`元素中，设置`name`属性为您的名称将用于指代相应的菜单、 组或命令，然后设置`value`为十六进制数字表示其命令 id 的元素。没有两个`IDSymbol`具有相同的父元素可以具有相同的值。  
   
-3.  如果任何 UI 元素需要的图标，添加`IDSymbol`元素的每个图标到`GuidSymbol`元素，它表示映像存储区。  
+3. 如果任何 UI 元素需要的图标，添加`IDSymbol`元素的每个图标到`GuidSymbol`元素，它表示映像存储区。  
   
 ### <a name="putting-ui-elements-in-the-ide"></a>在 IDE 中将 UI 元素  
  [菜单](../../extensibility/menus-element.md)元素，[组](../../extensibility/groups-element.md)元素，并[按钮](../../extensibility/buttons-element.md)元素包含的所有菜单、 组和您的包中定义的命令定义。 通过使用在 IDE 中放置这些菜单、 组和命令[父](../../extensibility/parent-element.md)元素，它是一部分的 UI 元素定义，或使用[CommandPlacement](../../extensibility/commandplacement-element.md)元素的其他位置定义。  
@@ -91,7 +86,7 @@ ms.locfileid: "51772165"
     设置`guid`并`id`的属性`Menu`元素，并设置`type`的所需的菜单类型的属性。 此外可以设置`priority`特性来确定父组中的菜单的相对位置。  
   
    > [!NOTE]
-   >  `priority`属性不适用于工具栏和上下文菜单。  
+   > `priority`属性不适用于工具栏和上下文菜单。  
   
 2. Visual Studio IDE 中的所有命令都必须直接子项的菜单和工具栏的命令组由都承载。 如果要向 IDE 添加新菜单或工具栏，它们必须包含新的命令组。 可能还向现有菜单和工具栏添加命令组，以便你命令可以直观地进行分组。  
   
@@ -104,14 +99,14 @@ ms.locfileid: "51772165"
    1. 设置`guid`并`id`每个属性`Button`元素，并设置`type`的所需的按钮类型的属性。 此外可以设置`priority`特性来确定父组中的命令的相对位置。  
   
       > [!NOTE]
-      >  使用`type="button"`标准菜单命令和工具栏上的按钮。  
+      > 使用`type="button"`标准菜单命令和工具栏上的按钮。  
   
    2. 在中`Button`元素中，添加[字符串](../../extensibility/strings-element.md)元素，其中包含[ButtonText](../../extensibility/buttontext-element.md)元素和一个[CommandName](../../extensibility/commandname-element.md)元素。 `ButtonText`元素提供为菜单项或工具栏按钮的工具提示的文本标签。 `CommandName`元素提供要在命令中也使用的命令的名称。  
   
    3. 如果您的命令将具有一个图标，创建[图标](../../extensibility/icon-element.md)中的元素`Button`元素，并将设置其`guid`并`id`属性到`Bitmap`图标的元素。  
   
       > [!NOTE]
-      >  工具栏按钮必须具有图标。  
+      > 工具栏按钮必须具有图标。  
   
       有关详细信息，请参阅[MenuCommands 与。OleMenuCommands](../../misc/menucommands-vs-olemenucommands.md)。  
   
@@ -125,9 +120,9 @@ ms.locfileid: "51772165"
   
     目标的`Parent`元素是菜单或将包含菜单上的组、 组或命令。  
   
-   1.  设置`guid`属性的名称为`GuidSymbol`元素，用于定义设置的命令。 如果目标元素不是包的一部分，该命令集，使用的 guid 对应的.vsct 文件中定义。  
+   1. 设置`guid`属性的名称为`GuidSymbol`元素，用于定义设置的命令。 如果目标元素不是包的一部分，该命令集，使用的 guid 对应的.vsct 文件中定义。  
   
-   2.  设置`id`属性以匹配`id`目标菜单或组的属性。 有关菜单和由 Visual Studio 公开的组的列表，请参阅[Guid 和 Id 的 Visual Studio 菜单](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)或[Guid 和 Id 的 Visual Studio 工具栏](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)。  
+   2. 设置`id`属性以匹配`id`目标菜单或组的属性。 有关菜单和由 Visual Studio 公开的组的列表，请参阅[Guid 和 Id 的 Visual Studio 菜单](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)或[Guid 和 Id 的 Visual Studio 工具栏](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)。  
   
    如果有大量的 UI 元素将在 IDE 中，或者您有应出现在多个位置的元素，定义在其位置[CommandPlacements](../../extensibility/commandplacements-element.md)元素，如以下步骤中所示。  
   
@@ -150,11 +145,11 @@ ms.locfileid: "51772165"
   
 1. 若要在加载解决方案时显示仅在某些 UI 上下文中，例如，UI 元素，使用可见性限制。  
   
-   1.  之后`Commands`元素中，添加`VisibilityConstraints`元素。  
+   1. 之后`Commands`元素中，添加`VisibilityConstraints`元素。  
   
-   2.  若要将限制每个 UI 项，将添加[VisibilityItem](../../extensibility/visibilityitem-element.md)元素。  
+   2. 若要将限制每个 UI 项，将添加[VisibilityItem](../../extensibility/visibilityitem-element.md)元素。  
   
-   3.  每个`VisibilityItem`元素中，设置`guid`并`id`与菜单、 组或命令和设置的属性`context`属性为所需的 UI 上下文中定义<xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80>类。 有关详细信息，请参阅[VisibilityItem 元素](../../extensibility/visibilityitem-element.md)。  
+   3. 每个`VisibilityItem`元素中，设置`guid`并`id`与菜单、 组或命令和设置的属性`context`属性为所需的 UI 上下文中定义<xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80>类。 有关详细信息，请参阅[VisibilityItem 元素](../../extensibility/visibilityitem-element.md)。  
   
 2. 若要在代码中设置的可见性或可用性 UI 项，使用一个或多个以下的命令标志：  
   
@@ -208,7 +203,7 @@ ms.locfileid: "51772165"
   
    - CommandWellOnly  
   
-   - 筛选键  
+   - FilterKeys  
   
    - NoAutoComplete  
   
@@ -244,4 +239,3 @@ ms.locfileid: "51772165"
  [扩展菜单和命令](../../extensibility/extending-menus-and-commands.md)   
  [Visual Studio 命令表 (。Vsct) 文件](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)   
  [VSCT XML 架构参考](../../extensibility/vsct-xml-schema-reference.md)
-

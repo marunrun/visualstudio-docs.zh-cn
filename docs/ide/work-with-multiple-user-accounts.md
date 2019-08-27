@@ -1,19 +1,18 @@
 ---
 title: 使用多个用户帐户
-ms.date: 12/10/2018
-ms.prod: visual-studio-dev15
+ms.date: 07/23/2019
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d74351e891b3bac4fe96e7e5b2ca9e46c412ca72
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a68b22b5a4fedb7d3548ac3aceda7c4dc109bebe
+ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53920519"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68870860"
 ---
 # <a name="work-with-multiple-user-accounts"></a>使用多个用户帐户
 
@@ -24,7 +23,7 @@ ms.locfileid: "53920519"
 > [!NOTE]
 > 尽管帐户名可漫游，但凭据却不能。 第一次尝试在新的计算机上使用其资源时，将提示你输入这些其他帐户的凭据。
 
-本文介绍如何将多个帐户添加到 Visual Studio。 还显示如何查看可从“添加连接的服务”对话框、“服务器资源管理器”和“团队资源管理器”等位置的帐户访问的资源。
+本文介绍如何将多个帐户添加到 Visual Studio。 还显示如何查看可从“添加连接的服务”对话框、“服务器资源管理器”和“团队资源管理器”等位置的帐户访问的资源    。
 
 ## <a name="sign-in-to-visual-studio"></a>登录 Visual Studio
 
@@ -34,29 +33,41 @@ ms.locfileid: "53920519"
 
 ### <a name="access-your-azure-account-in-server-explorer"></a>在服务器资源管理器中访问你的 Azure 帐户
 
-按 Ctrl+Alt+S，打开“服务器资源管理器”。 展开“Azure”节点，注意它包含 Azure 帐户中可用的资源，该资源与用于登录 Visual Studio 的帐户相关联。 它看上去类似于下图：
+若要打开服务器资源管理器，请选择“查看” > “服务器资源管理器”   （或者，如果使用的是“常规”[环境设置](../ide/environment-settings.md)  ，请按 Ctrl+Alt+S）   。 展开“Azure”节点，注意它包含 Azure 帐户中可用的资源，该资源与用于登录 Visual Studio 的帐户相关联  。 它看上去类似于下图：
 
 ![展开了 Azure 节点的服务器资源管理器](../ide/media/work-with-multiple-user-accounts/server-explorer.png)
 
-在任何特定设备上首次使用 Visual Studio 时，对话框都将只显示在登录的账户下注册的订阅。 通过右键单击“Azure”节点、选择“管理和筛选订阅”并从帐户选取器控件添加帐户，可以直接从“服务器资源管理器”访问任何其他帐户的资源。 如果需要，可以通过单击向下箭头，从帐户列表中选择另一个帐户。 选择帐户之后，可以自定义帐户下的哪些订阅在“服务器资源管理器”中显示。
+在任何特定设备上首次使用 Visual Studio 时，对话框都将只显示在登录的账户下注册的订阅。 通过右键单击“Azure”节点、选择“管理和筛选订阅”并从帐户选取器控件添加帐户，可以直接从“服务器资源管理器”访问任何其他帐户的资源    。 如果需要，可以通过单击向下箭头，从帐户列表中选择另一个帐户。 选择帐户之后，可以自定义帐户下的哪些订阅在“服务器资源管理器”中显示  。
 
 ![“管理 Azure 订阅”对话框](../ide/media/vs2015_manage_subs.png)
 
-下次打开“服务器资源管理器”时，将显示所选订阅的资源。
+下次打开“服务器资源管理器”时，将显示所选订阅的资源  。
 
 ### <a name="access-your-azure-account-via-add-connected-service-dialog"></a>通过“添加连接的服务”对话框，访问你的 Azure 帐户
 
 1. 打开一个现有项目，或创建一个新项目。
 
-1. 选择“解决方案资源管理器”中的项目节点，然后右键单击并选择“添加” > “连接的服务”。
+1. 选择“解决方案资源管理器”中的项目节点，然后右键单击并选择“添加” > “连接的服务”    。
 
-   随即出现“添加连接的服务”向导，其中显示与 Visual Studio 个性化账户相关联的 Azure 帐户中的服务列表。 无需单独登录 Azure。 但是，第一次尝试从另一计算机访问其资源时，你需要登录到其他帐户。
+   随即出现“添加连接的服务”向导，其中显示与 Visual Studio 个性化账户相关联的 Azure 帐户中的服务列表  。 无需单独登录 Azure。 但是，第一次尝试从另一计算机访问其资源时，你需要登录到其他帐户。
 
 ### <a name="access-azure-active-directory-in-a-web-project"></a>在 Web 项目中访问 Azure Active Directory
 
 Azure Active Directory (AAD) 支持 ASP.NET MVC web 应用中的最终用户单一登录或 Web API 服务中的 AD 身份验证。 域身份验证与单个用户帐户身份验证不同。 有权访问 Active Directory 域的用户可以使用其现有的 AAD 帐户连接到 web 应用程序。 Office 365 应用还可以使用域身份验证。
 
-为此，请创建一个 Web 应用程序（“文件” > “新建项目” > “C#” > ->“云” > ->“ASP.NET Web 应用程序”）。 在“新的 ASP.NET 项目”对话框中，选择“更改身份验证”。 身份验证向导随即显示，你能够选择要在你的应用程序中使用的身份验证类型。
+::: moniker range="vs-2017"
+
+要了解此操作，请创建一个新的“ASP.NET Core Web 应用程序”项目  。 在“新建 ASP.NET Core Web 应用程序”对话框中，选择“Web 应用程序”模板，然后选择“更改身份验证”    。
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+要了解此操作，请创建一个新的“ASP.NET Core Web 应用程序”项目  。 在“创建新 ASP.NET Core Web 应用程序”页中，选择“Web 应用程序”模板，然后在“身份验证”下选择“更改”     。
+
+::: moniker-end
+
+随即显示“更改身份验证”对话框，你可以在该对话框中选择要在应用程序中使用的身份验证类型  。
 
 ![适用于 ASP.NET 的更改身份验证对话框](../ide/media/vs2015_change_authentication.png)
 
@@ -64,7 +75,7 @@ Azure Active Directory (AAD) 支持 ASP.NET MVC web 应用中的最终用户单�
 
 ### <a name="access-your-azure-devops-organization"></a>访问 Azure DevOps 组织
 
-在主菜单中，选择“团队” > “管理连接”以打开“团队资源管理器 - 连接”窗口。 选择“管理连接” > “连接到项目”。 在“连接到项目”对话框中，从列表中选择一个项目（或选择“添加 TFS 服务器”并输入服务器的 URL）。 选择 URL 后，无需重新输入凭据即可登录。
+在主菜单中，选择“团队” > “管理连接”以打开“团队资源管理器 - 连接”窗口    。 选择“管理连接” > “连接到项目”   。 在“连接到项目”对话框中，从列表中选择一个项目（或选择“添加 TFS 服务器”并输入服务器的 URL）   。 选择 URL 后，无需重新输入凭据即可登录。
 
 有关详细信息，请参阅[连接到团队资源管理器中的项目](connect-team-project.md)。
 
@@ -72,37 +83,37 @@ Azure Active Directory (AAD) 支持 ASP.NET MVC web 应用中的最终用户单�
 
 若要将其他帐户添加到 Visual Studio：
 
-1. 选择“文件” > “帐户设置”。
+1. 选择“文件” > “帐户设置”   。
 
-1. 在“所有帐户”下，选择“添加帐户”。
+1. 在“所有帐户”下，选择“添加帐户”   。
 
-1. 在“登录到你的帐户”页面上，选择该帐户或选择“使用另一个帐户”。 按照提示输入新的帐户凭据。
+1. 在“登录到你的帐户”页面上，选择该帐户或选择“使用另一个帐户”   。 按照提示输入新的帐户凭据。
 
-（可选）现在可以转到“服务器资源管理器”，并查看与刚添加的帐户相关联的 Azure 服务。 在“服务器资源管理器”中，右键单击“Azure”节点并选择“管理和筛选订阅”。 通过单击当前帐户旁的下拉箭头选择新的帐户，然后选择想要在“服务器资源管理器”中显示的订阅。 应可以看到与指定订阅关联的所有服务。 即使当前未使用第二个帐户登录到 Visual Studio，也可登录到该帐户的服务和资源。 “项目” > “添加连接的服务”和“团队” > “连接到 Team Foundation Server”也是如此。
+（可选）现在可以转到“服务器资源管理器”，并查看与刚添加的帐户相关联的 Azure 服务  。 在“服务器资源管理器”中，右键单击“Azure”节点并选择“管理和筛选订阅”    。 通过单击当前帐户旁的下拉箭头选择新的帐户，然后选择想要在“服务器资源管理器”中显示的订阅  。 应可以看到与指定订阅关联的所有服务。 即使当前未使用第二个帐户登录到 Visual Studio，也可登录到该帐户的服务和资源。 “项目”   > “添加连接的服务”  和“团队”   > “连接到 Team Foundation Server”  也是如此。
 
 ### <a name="add-an-account-using-device-code-flow"></a>使用设备代码流添加帐户
 
-在某些情况下，无法以常规方式登录或添加帐户。 如果 Internet Explorer 因某种原因被阻止，或网络设置了防火墙，则可能发生这种情况。 要解决此问题，可以启用“设备代码流”来添加帐户或重新验证帐户。 借助设备代码流，可使用另一种浏览器或在另一个物理或虚拟 (VM) 机&mdash;上登录。
+在某些情况下，无法以常规方式登录或添加帐户。 如果 Internet Explorer 因某种原因被阻止，或网络设置了防火墙，则可能发生这种情况。 要解决此问题，可以启用“设备代码流”来添加帐户或重新验证帐户  。 借助设备代码流，可使用另一种浏览器或在另一个物理或虚拟 (VM) 机&mdash;上登录。
 
 使用设备代码流登录：
 
-1. 打开“工具” > “选项” > “环境”下的 [“帐户”](reference/accounts-environment-options-dialog-box.md)页面，然后选择“在添加或重新验证帐户时启用设备代码流”。 选择“确定”关闭选项页。
+1. 打开“工具” > “选项” > “环境”下的 [“帐户”](reference/accounts-environment-options-dialog-box.md)页面，然后选择“在添加或重新验证帐户时启用设备代码流”      。 选择“确定”关闭选项页  。
 
-1. 选择“文件” > “帐户设置”以打开帐户管理页面。
+1. 选择“文件” > “帐户设置”以打开帐户管理页面   。
 
-1. 在“所有帐户”下，选择“添加帐户”。
+1. 在“所有帐户”下，选择“添加帐户”   。
 
    会出现一个对话框，其中显示了要粘贴到 web 浏览器中的 URL 和代码。
 
    ![设备代码流 URL 和代码](media/work-with-multiple-user-accounts/device-login-code.png)
 
-1. 按“Ctrl+C”复制对话框文本，然后选择“确定”关闭对话框。 将复制的文本粘贴到文本编辑器（如记事本）中。 这使得在下一步中复制代码更加容易。
+1. 按“Ctrl+C”复制对话框文本，然后选择“确定”关闭对话框    。 将复制的文本粘贴到文本编辑器（如记事本）中。 这使得在下一步中复制代码更加容易。
 
-1. 导航到机器或 web 浏览器上用于登录到 Visual Studio 的设备登录 URL，然后将复制的代码粘贴或输入到“代码”框中。
+1. 导航到机器或 web 浏览器上用于登录到 Visual Studio 的设备登录 URL，然后将复制的代码粘贴或输入到“代码”框中  。
 
-   “Visual Studio”应用名称应会显示在页面的更下方。
+   “Visual Studio”应用名称应会显示在页面的更下方  。
 
-1. 在“Visual Studio”下，选择“继续”。
+1. 在“Visual Studio”下，选择“继续”   。
 
    ![device-login-page.png](media/work-with-multiple-user-accounts/device-login-page.png)
 
@@ -112,7 +123,7 @@ Azure Active Directory (AAD) 支持 ASP.NET MVC web 应用中的最终用户单�
 
    ![通过浏览器登录 visual Studio 这一操作已完成](media/work-with-multiple-user-accounts/sign-in-browser-complete.png)
 
-1. 返回 Visual Studio 中的帐户管理页面，其中的“所有帐户”下列出了新添加的帐户。 选择“关闭”。
+1. 返回 Visual Studio 中的帐户管理页面，其中的“所有帐户”下列出了新添加的帐户  。 选择“关闭”  。
 
 ## <a name="see-also"></a>请参阅
 

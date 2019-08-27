@@ -2,7 +2,6 @@
 title: 'Idebugdocumenthelper:: Adddeferredtext |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: windows-script-interfaces
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ba6f945e6c7fa4df83a5e301d73b3fc0bb9da92b
-ms.sourcegitcommit: 116e9614867e0b3c627ce9001012a4c39435a42b
-ms.translationtype: MT
+ms.openlocfilehash: b2f2a7c134142668613cc38cee9357e42cb95096
+ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54096078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63433931"
 ---
 # <a name="idebugdocumenthelperadddeferredtext"></a>IDebugDocumentHelper::AddDeferredText
 给定的文本可用，但它不提供字符通知帮助器。  
@@ -47,7 +46,7 @@ HRESULT AddDeferredText(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
 |`E_FAIL`|该方法失败。|  
@@ -58,10 +57,10 @@ HRESULT AddDeferredText(
  假定调用一次`IDebugDocumentText::GetText`可以从多个调用中获取字符`AddDeferredText`。 帮助程序类可能会要求延迟字符的相同范围超过一次。  
   
 > [!NOTE]
->  调用`AddDeferredText`不应通过调用混`AddUnicodeText`或`AddDBCSText`。 如果发生这种情况，`E_FAIL`返回。  
+> 调用`AddDeferredText`不应通过调用混`AddUnicodeText`或`AddDBCSText`。 如果发生这种情况，`E_FAIL`返回。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugDocumentHelper 接口](../../winscript/reference/idebugdocumenthelper-interface.md)   
- [Idebugdocumenthelper:: Addunicodetext](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)   
- [Idebugdocumenthelper:: Adddbcstext](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)   
+ [IDebugDocumentHelper::AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)   
+ [IDebugDocumentHelper::AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)   
  [IDebugDocumentText::GetText](../../winscript/reference/idebugdocumenttext-gettext.md)
