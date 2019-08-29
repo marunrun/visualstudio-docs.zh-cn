@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6362d3f14065aaf9661e85266753642e4201ca48
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 5c5af5c98be92e52c356e0f20eaf437f66878690
+ms.sourcegitcommit: 8a699df154464387f327691dce507d7c3d0e2aab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69548036"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70060446"
 ---
 # <a name="use-code-analyzers"></a>使用代码分析器
 
@@ -62,6 +62,18 @@ ms.locfileid: "69548036"
 
 如果将分析器作为 NuGet 包进行[安装](../code-quality/install-roslyn-analyzers.md), 则可以配置分析器规则或*诊断*的严重性。 下表显示了用于诊断的严重性选项:
 
+
+::: moniker range="vs-2019"
+|Severity|生成时行为|编辑器行为|
+|-|-|-|
+|Error|冲突在**错误列表**和命令行生成输出中显示为*错误*, 并导致生成失败。|出现问题的代码带有红色的波浪下划线, 并由滚动条中的小小框标记。|
+|警告|冲突在**错误列表**和命令行生成输出中显示为*警告*, 但不会导致生成失败。|出现问题的代码带有绿色的波浪下划线, 并由滚动条中的小绿色框标记。|
+|建议|冲突显示为**错误列表**中的消息, 而不是命令行生成输出中的*消息*。|令人讨厌的代码带灰色的波浪下划线, 并由滚动条中的小灰色框标记。|
+|自行|对用户不可见。|对用户不可见。 但会将诊断报告给 IDE 诊断引擎。|
+|无|完全取消。|完全取消。|
+::: moniker-end
+
+::: moniker range="< vs-2019"
 |Severity|生成时行为|编辑器行为|
 |-|-|-|
 |Error|冲突在**错误列表**和命令行生成输出中显示为*错误*, 并导致生成失败。|出现问题的代码带有红色的波浪下划线, 并由滚动条中的小小框标记。|
@@ -69,6 +81,7 @@ ms.locfileid: "69548036"
 |T:System.Diagnostics.Switch|冲突显示为**错误列表**中的消息, 而不是命令行生成输出中的*消息*。|令人讨厌的代码带灰色的波浪下划线, 并由滚动条中的小灰色框标记。|
 |Hidden|对用户不可见。|对用户不可见。 但会将诊断报告给 IDE 诊断引擎。|
 |无|完全取消。|完全取消。|
+::: moniker-end
 
 此外, 还可以通过将规则的严重性设置为**默认值**来将其重置。 每个诊断的默认严重性都可以在 "**属性**" 窗口中查看。
 
