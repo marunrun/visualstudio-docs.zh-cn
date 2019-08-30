@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f567e07ea085844672f04194e4a4ffc5a9318e4
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 6f670449be9b416d1c54bc83379bae4a6733d932
+ms.sourcegitcommit: f42b5318c5c93e2b5ecff44f408fab8bcdfb193d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67824811"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976723"
 ---
 # <a name="synchronize-visual-studio-settings-across-multiple-computers"></a>跨多台计算机同步 Visual Studio 设置
 
@@ -71,7 +71,7 @@ ms.locfileid: "67824811"
 
 1. 升级到 Visual Studio 2017 版本 15.3 或更高版本。
 
-2. 使用“导入\导出”设置向导将所有现有设置导出到“%localappdata%\Microsoft\VisualStudio\15.0_xxxxxxxx”文件夹之外的某个位置   。
+2. 使用“导入和导出设置向导”将所有现有设置导出到“%localappdata%\Microsoft\VisualStudio\15.0_xxxxxxxx”文件夹之外的某个位置   。
 
 3. 打开“VS 2017 开发人员命令提示”并运行 `devenv /resetuserdata`  。
 
@@ -84,6 +84,10 @@ ms.locfileid: "67824811"
 某些设置（如工具窗口布局）不会在 Visual Studio 的不同并行安装之间共享。 %userprofile%\Documents\Visual Studio 2019\Settings 中的 CurrentSettings.vssettings 文件位于特定于安装的文件夹中，该文件夹类似于 %localappdata%\Microsoft\VisualStudio\16.0_xxxxxxxx\Settings    。
 
 ::: moniker-end
+
+## <a name="reset-synchronized-settings"></a>重置已同步的设置
+
+要将所有设置重置为其默认设置，请登录到 Visual Studio，然后选择“工具” > “导入和导出设置”以打开“导入和导出设置向导”    。 选择“重置所有设置”，然后执行向导的其余步骤  。
 
 ## <a name="see-also"></a>请参阅
 

@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e439ab3ca22fdb26992164c3927269a0f58a1f3b
-ms.sourcegitcommit: 5b34052a1c7d86179d7898ed532babb2d9dad4a3
+ms.openlocfilehash: 5060b2a3b532de26d78eca4ce16661768748bbd7
+ms.sourcegitcommit: 673b9364fc9a96b027662dcb4cf5d61cab60ef11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490733"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69891346"
 ---
 # <a name="unit-test-basics"></a>单元测试基础知识
 
@@ -209,7 +209,7 @@ public void Withdraw_AmountMoreThanBalance_Throws()
 
 ## <a name="set-timeouts-for-unit-tests"></a>为单元测试设置超时值
 
-若要在单个测试方法上设置超时：
+如果使用的是 MSTest 框架，则可以使用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TimeoutAttribute> 在单个测试方法上设置超时：
 
 ```csharp
 [TestMethod]
