@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 01ccad0c1cdcde27d1d43b832ce7e4ca4da7b716
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: 5c3456ab48822873fb51ad8614ff9a6dd5f07598
+ms.sourcegitcommit: f42b5318c5c93e2b5ecff44f408fab8bcdfb193d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461604"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976717"
 ---
 # <a name="how-to-sign-application-and-deployment-manifests"></a>如何：对应用程序和部署清单签名
 
@@ -47,7 +47,7 @@ ms.locfileid: "68461604"
      “选择证书”  对话框将会出现并显示 Windows 证书存储中的内容。
 
     > [!TIP]
-    > 如果单击“单击此处查看证书属性”  ，将会出现“证书详细信息”  对话框。 此对话框中包括有关证书的详细信息以及其他选项。 可以单击“证书”查看其他帮助信息  。
+    > 如果单击“单击此处查看证书属性”  ，将会出现“证书详细信息”  对话框。 此对话框中包括有关证书的详细信息以及其他选项。 单击“证书”查看其他帮助信息  。
 
 3. 选择要用于对清单进行签名的证书。
 
@@ -68,7 +68,10 @@ ms.locfileid: "68461604"
 
      “输入密码以打开文件”  对话框随即出现。 （如果 .pfx 文件已经存储在 Windows 证书存储中或没有密码保护，则不会提示输入密码。） 
 
-4. 输入访问密钥文件的密码，然后按 Enter  。
+4. 输入访问密钥文件的密码，然后选择 Enter  。
+
+> [!NOTE]
+> .pfx 文件不能包含证书链信息  。 如果包含，则会发生以下导入错误：**找不到用于解密的证书和私钥**。
 
 ## <a name="sign-using-a-test-certificate"></a>使用测试证书签名
 

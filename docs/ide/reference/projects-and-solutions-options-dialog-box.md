@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 37d31f76a448933bb3809cd609ebd355c8e0a04b
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: 31d829a668a2c9690333315c30904623187fe51d
+ms.sourcegitcommit: f42b5318c5c93e2b5ecff44f408fab8bcdfb193d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68605949"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976742"
 ---
 # <a name="options-dialog-box-projects-and-solutions--general"></a>“选项”对话框：“项目和解决方案”\>“常规”
 
@@ -70,11 +70,31 @@ ms.locfileid: "68605949"
 
 ## <a name="reopen-documents-on-solution-load"></a>加载解决方案时重新打开文档
 
-**在 Visual Studio 2017 版本 15.8 中引入**
-
 选中后，此解决方案上次关闭时打开的文档将在解决方案打开时自动打开。
 
 重新打开某些类型的文件或设计器会延迟解决方案加载。 如果不想还原解决方案的上一个上下文，请取消选中此选项以[提高解决方案加载性能](../../ide/visual-studio-performance-tips-and-tricks.md#disable-automatic-file-restore)。
+
+::: moniker range=">=vs-2019"
+
+## <a name="restore-solution-explorer-project-hierarchy-state-on-solution-load"></a>加载解决方案时还原解决方案资源管理器项目层次结构状态
+
+选择该选项后，将根据解决方案上次打开时是否展开或折叠节点，还原解决方案资源管理器中的节点状态。 取消选择此选项可缩短大型解决方案的解决方案加载时间。
+
+> [!TIP]
+> 如果禁用此选项，要导航到解决方案资源管理器中的活动文档，一种简单的方法就是在“解决方案资源管理器”工具栏上选择“与活动文档同步”   。
+>
+> ![与解决方案资源管理器中的活动文档同步](media/sync-active-document.png)
+
+## <a name="open-sdk-style-project-files-with-double-click-or-the-enter-key"></a>通过双击或按 Enter 打开 SDK 样式项目文件
+
+选择此选项后，双击解决方案资源管理器中的 SDK 样式项目节点或选择它，然后按 Enter，项目文件（例如 .csproj 文件）将在编辑器中以 XML 格式打开  \*。 取消选择后，在解决方案资源管理器中双击 SDK 样式的项目节点或选择它并按 Enter 只可展开或折叠节点  。
+
+如果未选择此选项并且要编辑 SDK 样式的项目文件，请在解决方案资源管理器中右键单击项目节点，然后选择“编辑项目文件”  。 对于其他项目类型，必须先卸载项目，然后才能在 Visual Studio 中进行编辑。
+
+> [!TIP]
+> SDK 样式的项目或[项目 SDK](../../msbuild/how-to-use-project-sdk.md) 具有较新的、更精简的项目文件格式，该格式已在 MSBuild 15.0 中引入  。 SDK 样式的项目在 `Project` 元素上包含 `Sdk` 属性，例如 `<Project Sdk="Microsoft.NET.Sdk">`。 例如，从 Visual Studio 模板之一创建一个新的 .NET Core 项目时，Visual Studio 将创建一个 SDK 样式的项目。
+
+::: moniker-end
 
 ## <a name="see-also"></a>请参阅
 

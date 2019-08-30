@@ -3,7 +3,7 @@ title: 修改 Visual Studio
 titleSuffix: ''
 description: 了解如何逐步修改 Visual Studio。
 ms.custom: H1Hack27Feb2017,seodec18
-ms.date: 07/31/2019
+ms.date: 08/23/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - modify Visual Studio
@@ -18,12 +18,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: ad5b8a0c261ed967710480b0abd3a2b9d34f01ce
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: a97db7e6b81eb9e807902d1b9bd0ea8ee6efa55e
+ms.sourcegitcommit: 0bd63f3bc429ae059b9df6e45c6b8dcae6152940
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68681397"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70026490"
 ---
 # <a name="modify-visual-studio-by-adding-or-removing-workloads-and-components"></a>通过添加或删除工作负载和组件修改 Visual Studio
 
@@ -41,15 +41,17 @@ ms.locfileid: "68681397"
 
 操作方法如下。
 
-## <a name="modify-workloads"></a>修改工作负载
-
- 工作负载包含所用编程语言或平台必需的功能。 可以使用工作负载来修改 Visual Studio，以便在需要执行某项操作时为其提供支持。
-
 >[!IMPORTANT]
 >若要安装、更新或修改 Visual Studio，必须使用具有管理权限的帐户登录。 有关详细信息，请参阅[用户权限与 Visual Studio](../ide/user-permissions-and-visual-studio.md)。
 
->[!TIP]
-> 以下过程假定你具有 Internet 连接。 有关如何修改先前创建的 Visual Studio [脱机安装](create-an-offline-installation-of-visual-studio.md)的详细信息，请参阅[控制对基于网络的 Visual Studio 部署的更新](controlling-updates-to-visual-studio-deployments.md)页。
+## <a name="modify-workloads"></a>修改工作负载
+
+ [工作负载](https://visualstudio.microsoft.com/vs/visual-studio-workloads/)包含所用编程语言或平台必需的功能。 可以使用工作负载来修改 Visual Studio，以便在需要执行某项操作时为其提供支持。
+
+>[!NOTE]
+> 以下过程假定你具有 Internet 连接。
+>
+> 有关如何修改先前创建的 Visual Studio [脱机安装](create-an-offline-installation-of-visual-studio.md)的详细信息，请参阅[更新基于网络的 Visual Studio 安装](update-a-network-installation-of-visual-studio.md)页和[控制对基于网络的 Visual Studio 部署的更新](controlling-updates-to-visual-studio-deployments.md)页。
 
 ::: moniker range="vs-2017"
 
@@ -59,7 +61,7 @@ ms.locfileid: "68681397"
 
      ![Visual Studio 安装程序](media/vs2017-locate-the-visual-studio-installer.PNG "查找 Microsoft Visual Studio 安装程序")
 
-     >[!NOTE]
+     >[!TIP]
      >对于某些计算机，Visual Studio 安装程序可能列在字母 **“M”** 下，即 **Microsoft Visual Studio 安装程序**。<br/><br/> 或者，可以在以下位置找到 Visual Studio 安装程序：`C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
 1. 单击或点击以启动安装程序，然后选择“修改”  。
@@ -117,12 +119,14 @@ ms.locfileid: "68681397"
 
 ## <a name="modify-individual-components"></a>修改各个组件
 
-如果不想通过安装工作负载来自定义 Visual Studio 安装，请从 Visual Studio 安装程序中选择“各个组件”选项卡，选择所需组件，然后按提示操作  。
+如果不想通过安装[工作负载](https://visualstudio.microsoft.com/vs/visual-studio-workloads/)来自定义 Visual Studio 安装，请从 Visual Studio 安装程序中选择“单个组件”选项卡，选择所需组件，然后按提示操作  。
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>请参阅
 
+* [了解有关 Visual Studio 工作负载的详细信息](https://visualstudio.microsoft.com/vs/visual-studio-workloads/)
+* [Visual Studio 工作负载和组件 ID 列表](workload-and-component-ids.md)
 * [更新 Visual Studio](update-visual-studio.md)
 * [更新基于网络的 Visual Studio 安装](update-a-network-installation-of-visual-studio.md)
 * [在维修基线上更新 Visual Studio](update-servicing-baseline.md)

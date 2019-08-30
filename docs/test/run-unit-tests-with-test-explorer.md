@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a3839a28ce0c37c5ccf43ca1f8ddba1ecd52365
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: d18f510b3b30207079b644e540d8b5db22609f97
+ms.sourcegitcommit: 673b9364fc9a96b027662dcb4cf5d61cab60ef11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68918173"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69891334"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>使用测试资源管理器运行单元测试
 
@@ -96,7 +96,7 @@ Visual Studio 包含适用于托管和本机代码的 Microsoft 单元测试框�
 
 ## <a name="view-test-results"></a>查看测试结果
 
-当你运行、编写以及重新运行测试时，测试资源管理器将在 **“失败的测试”** 、 **“通过的测试”** 、 **“跳过的测试”** 和 **“未运行的测试”** 组中显示结果。 测试运行的摘要显示在测试资源管理器底部的细节窗格中。
+当你运行、编写以及重新运行测试时，测试资源管理器将在 **“失败的测试”** 、 **“通过的测试”** 、 **“跳过的测试”** 和 **“未运行的测试”** 组中显示结果。 测试运行的摘要显示在测试资源管理器底部或侧面的细节窗格中。
 
 ### <a name="view-test-details"></a>查看测试详细信息
 
@@ -181,7 +181,7 @@ Visual Studio 包含适用于托管和本机代码的 Microsoft 单元测试框�
 |-|-----------------|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute>|“所有者”类别由单元测试框架定义，并要求你提供所有者的字符串值。|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.PriorityAttribute>|“优先级”类别由单元测试框架定义，并要求你提供优先级的整数值。|
-|<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute>|你可以通过 TestCategory 属性提供类别而不提供值。 由 TestCategory 属性定义的类别也可以是 TestProperty 属性的类别。|
+|<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute>|你可以通过 TestCategory 属性提供类别而不提供值。|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute>|你可以通过 TestProperty 属性定义特征类别/值对。|
 
 
@@ -215,7 +215,7 @@ Visual Studio 包含适用于托管和本机代码的 Microsoft 单元测试框�
 
 ![在单独的“测试资源管理器”选项卡中打开播放列表](../test/media/vs-2019/test-explorer-playlist-tab-16-2.png)
 
-**若要将测试添加到播放列表**，请在测试资源管理器中选择一个或多个测试。 右键单击并选择“添加到播放列表” > “新建播放列表”   。
+**若要创建播放列表**，请在测试资源管理器中选择一个或多个测试。 右键单击并选择“添加到播放列表” > “新建播放列表”   。
 
 若要打开播放列表，请选择 Visual Studio 工具栏中的播放列表图标，然后从菜单中选择以前保存的播放列表文件  。
 ::: moniker-end
@@ -236,7 +236,7 @@ Visual Studio 包含适用于托管和本机代码的 Microsoft 单元测试框�
 
 * 若要更改列的顺序，请单击列标题并将其向左或向右拖动。
 
-* 若要对列进行排序，请单击列标题。 并非所有列都可以进行排序。
+* 若要对列进行排序，请单击列标题。 并非所有列都可以进行排序。 还可通过按住 Shift 并单击其他列标头来按辅助列进行排序  。
 
   ![列排序](../test/media/vs-2019/test-explorer-sort-column-16-2.png)
 ::: moniker-end
@@ -253,7 +253,7 @@ Visual Studio 包含适用于托管和本机代码的 Microsoft 单元测试框�
 
 2. 选择新条件。
 
-3. 在引号中输入筛选值。
+3. 在引号中输入筛选值。 如果要在字符串上搜索完全匹配，而不是包含匹配，请使用等于号 (=) 而不是冒号 (:)。
 
 ::: moniker range="vs-2017"
 ![在测试资源管理器中筛选测试](../test/media/ute_filtertestlist.png)
@@ -265,15 +265,28 @@ Visual Studio 包含适用于托管和本机代码的 Microsoft 单元测试框�
 > [!NOTE]
 > 搜索不区分大小，并将指定字符串与条件值的任何部分匹配。
 
+::: moniker range="vs-2017"
 |限定符|说明|
 |-|-----------------|
 |**特征**|搜索特征类别和值的匹配项。 用于指定特征类别和值的语法由单元测试框架定义。|
 |**Project**|搜索测试项目名称的匹配项。|
 |**错误消息**|搜索由失败的断言返回的用户定义错误消息的匹配项。|
 |**文件路径**|搜索测试源文件的完全限定文件名的匹配项。|
-|**完全限定名**|搜索测试命名空间、类和方法的完全限定文件名的匹配项。|
+|**完全限定名**|搜索测试命名空间、类和方法的完全限定名的匹配项。|
 |**输出**|搜索写入标准输出 (stdout) 或标准错误 (stderr) 的用户定义错误消息。 用于指定输出消息的语法由单元测试框架定义。|
 |**结果**|搜索“测试资源管理器”类别名中的匹配项：失败的测试、跳过的测试和通过的测试    。|
+::: moniker-end
+::: moniker range=">=vs-2019"
+|限定符|说明|
+|-|-----------------|
+|**状态**|搜索“测试资源管理器”类别名中的匹配项：失败的测试、跳过的测试和通过的测试    。|
+|**特征**|搜索特征类别和值的匹配项。 用于指定特征类别和值的语法由单元测试框架定义。|
+|**完全限定名**|搜索测试命名空间、类和方法的完全限定名的匹配项。|
+|**Project**|搜索测试项目名称的匹配项。|
+|**目标框架**|搜索“测试资源管理器”类别名中的匹配项：失败的测试、跳过的测试和通过的测试    。|
+|**命名空间**|搜索测试命名空间的匹配项。|
+|**类**|搜索测试类名的匹配项。|
+::: moniker-end
 
 若要排除筛选结果的一个子集，请使用以下语法：
 

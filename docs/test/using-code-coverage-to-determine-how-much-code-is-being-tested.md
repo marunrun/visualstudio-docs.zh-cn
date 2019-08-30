@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a25fbffa21a7caeab1cf5910e1da95d7fba09e5
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: f6aa9cb62bc0ae956a85acd75d1a9615a2283133
+ms.sourcegitcommit: f42b5318c5c93e2b5ecff44f408fab8bcdfb193d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416456"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976778"
 ---
 # <a name="use-code-coverage-to-determine-how-much-code-is-being-tested"></a>使用代码覆盖率确定所测试的代码量
 
@@ -36,7 +36,12 @@ ms.locfileid: "68416456"
 
 ## <a name="to-analyze-code-coverage-on-unit-tests-in-test-explorer"></a>分析测试资源管理器中的单元测试的代码覆盖率
 
+::: moniker range="vs-2017"
 1. 在“测试”  菜单上，选择“分析代码覆盖率”  。
+::: moniker-end
+::: moniker range=">=vs-2019"
+1. 在“测试资源管理器”中的“运行”菜单中选择“分析代码覆盖率”    。
+::: moniker-end
 
 2. 若要查看已运行的行，请选择![显示代码覆盖率着色图标](../test/media/codecoverage-showcoloringicon.png)**显示代码覆盖率着色**。
 

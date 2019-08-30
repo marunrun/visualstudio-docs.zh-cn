@@ -1,20 +1,20 @@
 ---
-title: 开放式许可证订单管理 | Microsoft Docs
+title: 为客户管理 Visual Studio 订阅的合作伙伴 | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/23/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
-description: 了解如何使用开放式许可证计划管理订阅订单。
-ms.openlocfilehash: ecbd5c4b861683742ec8b9e3d9fca571932ae887
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+description: 了解合作伙伴如何为其客户管理 Visual Studio 订阅。
+ms.openlocfilehash: 8a1e0bcaac4cc66f0c1682010102a657c47e770b
+ms.sourcegitcommit: c90a998716b3dfa614dedc61a1bea515364efbec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68605839"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000903"
 ---
-# <a name="open-and-open-license-management-for-new-orders"></a>新订单的 Open 和 Open License 管理
-要管理 [Visual Studio 订阅管理门户](https://manage.visualstudio.com)中的订阅，合作伙伴和客户需要执行某些步骤。 该进程为：
+# <a name="partners-managing-subscriptions-on-behalf-of-customers"></a>合作伙伴代表客户管理订阅
+要管理 [Visual Studio 订阅管理门户](https://manage.visualstudio.com)中的订阅，需要执行某些步骤。 该进程为：
 - 合作伙伴代表客户下新订单，并输入客户企业电子邮箱地址。
 - 客户收到通知，受邀在 [Visual Studio 订阅管理门户](https://manage.visualstudio.com)中分配管理员并访问其订阅。
 - 为代表客户管理订阅，合作伙伴需要在管理门户上注册。 以下列出了获取访问权限的各种方法（类似于 add-open 进程）。
@@ -38,6 +38,7 @@ ms.locfileid: "68605839"
 
 > [!NOTE]
 > 客户将收到通知电子邮件，告知他们已将合作伙伴添加到 Open License 中。 他们可选择删除合作伙伴的访问权限。
+
 
 ## <a name="new-partners-visiting-the-visual-studio-subscriptions-administration-portal-directly"></a>新合作伙伴直接访问 Visual Studio 订阅管理门户
 此方案适用于已订购新的开放式许可证但尚未在 [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) 上注册并直接转到 [Visual Studio 订阅管理门户](https://manage.visualstudio.com)的新合作伙伴。  请执行这些步骤：
