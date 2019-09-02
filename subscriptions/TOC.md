@@ -45,7 +45,6 @@
 ##### [MSDN Magazine 订阅](vs-msdn.md)
 ##### [Pluralsight](vs-pluralsight.md)
 #### 支持 
-##### [Azure 顾问聊天](vs-azure-advisory-chat.md)
 ##### [Azure 社区](vs-azure-community.md)
 ##### [接待支持](vs-concierge-chat.md)
 ##### [技术支持](vs-tech-support.md)

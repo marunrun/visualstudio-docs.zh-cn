@@ -1,18 +1,18 @@
 ---
 title: 自定义代码覆盖率分析
-ms.date: 11/04/2016
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 5bd7fa0bcff67573e61d40a2172e17620910a421
-ms.sourcegitcommit: 5b34052a1c7d86179d7898ed532babb2d9dad4a3
+ms.openlocfilehash: e78487628a7604245d59f44220b91be73249e7fb
+ms.sourcegitcommit: f42b5318c5c93e2b5ecff44f408fab8bcdfb193d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490628"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976762"
 ---
 # <a name="customize-code-coverage-analysis"></a>自定义代码覆盖率分析
 
@@ -34,26 +34,26 @@ ms.locfileid: "69490628"
 
 ::: moniker range="vs-2017"
 
-3. 若要选择运行设置文件，在“测试”菜单上，选择“测试设置” > “选择测试设置文件”    。 若要指定运行设置文件以从命令行或在生成工作流中运行测试，请参阅[使用 .runsettings 文件配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#specify-a-run-settings-file)  。
+3. 若要选择运行设置文件，在“测试”菜单上，选择“测试设置” > “选择测试设置文件”    。 若要指定运行设置文件以从命令行中运行测试，请参阅[配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#command-line)。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. 若要选择运行设置文件，请在“测试资源管理器”中，选择“设置”按钮上的箭头，然后选择“选择设置文件”    。 若要指定运行设置文件以从命令行或在生成工作流中运行测试，请参阅[使用 .runsettings 文件配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#specify-a-run-settings-file)  。
+3. 若要选择运行设置文件，请在“测试资源管理器”中，选择“设置”按钮上的箭头，然后选择“选择设置文件”    。 若要指定运行设置文件以从命令行中运行测试，请参阅[配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#command-line)。
 
 ::: moniker-end
 
    选择“分析代码覆盖率”时，会从运行设置文件读取配置信息  。
 
    > [!TIP]
-   > 在运行测试或更新代码时，之前的代码覆盖率结果和代码着色不会自动隐藏。
+   > 运行测试或更新代码时，之前的任何代码覆盖率结果和代码着色都不会自动隐藏。
 
 ::: moniker range="vs-2017"
 
 若要关闭和启用自定义设置，请在“测试”>“测试设置”菜单中取消选择或选择该文件   。
 
-![包含自定义设置文件的测试设置菜单](../test/media/codecoverage-settingsfile.png)
+![Visual Studio 2017 中包含自定义设置文件的测试设置菜单](../test/media/codecoverage-settingsfile.png)
 
 ::: moniker-end
 
@@ -65,7 +65,7 @@ ms.locfileid: "69490628"
 
 ### <a name="specify-symbol-search-paths"></a>指定符号搜索路径
 
-代码覆盖率需要程序集的符号文件（.pdb 文件）  。 对于解决方案生成的程序集，符号文件通常与二进制文件一起出现，且代码覆盖率将自动工作。 但在某些情况下，你可能需要在你的代码覆盖率分析中包含引用的程序集。 在这种情况下，.pdb 文件可能不会与二进制文件相邻，但可在 .runsettings 文件中指定符号搜索路径   。
+代码覆盖率需要程序集的符号文件（.pdb 文件）  。 对于解决方案生成的程序集，符号文件通常与二进制文件一起出现，且代码覆盖率将自动工作。 在某些情况下，你可能需要在你的代码覆盖率分析中包含引用的程序集。 在这种情况下，.pdb 文件可能不会与二进制文件相邻，但可在 .runsettings 文件中指定符号搜索路径   。
 
 ```xml
 <SymbolSearchPaths>
@@ -90,7 +90,7 @@ ms.locfileid: "69490628"
 </ModulePaths>
 ```
 
-或者，你也可以指定应包含的程序集。 此方法的一个缺点是，当你将多个程序集添加到解决方案时，必须记住将它们添加到列表：
+或者，你也可以指定应包含的程序集。 此方法的一个缺点是，将多个程序集添加到解决方案时，必须同时将它们添加到列表：
 
 ```xml
 <ModulePaths>
@@ -101,13 +101,11 @@ ms.locfileid: "69490628"
 </ModulePaths>
 ```
 
-如果“Include”为空，那么代码覆盖率会处理已加载且能找到 .pdb 文件的所有程序集   。 代码覆盖率不包括与“Exclude”列表中子句匹配的项  。
-
-先处理“Include”，再处理“Exclude”   。
+如果“Include”为空，那么代码覆盖率会处理已加载且能找到 .pdb 文件的所有程序集   。 代码覆盖率不包括与“Exclude”列表中子句匹配的项  。 先处理“Include”，再处理“Exclude”   。
 
 ### <a name="regular-expressions"></a>正则表达式
 
-包括和排除节点使用正则表达式。 有关详细信息，请参阅[在 Visual Studio 中使用正则表达式](../ide/using-regular-expressions-in-visual-studio.md)。 正则表达式与通配符不同。 具体而言：
+Include 和 exclude 节点使用正则表达式，它们与通配符不同。 有关详细信息，请参阅[在 Visual Studio 中使用正则表达式](../ide/using-regular-expressions-in-visual-studio.md)。 下面是一些示例：
 
 -  .\* 与任意字符组成的字符串匹配
 
@@ -153,7 +151,10 @@ ms.locfileid: "69490628"
 
 - **Source** - 按在其中定义元素的源文件路径名称匹配元素。
 
-- **Attribute** - 匹配附加特定属性的元素。 指定属性的全名并在名称结尾处包括“Attribute”。
+- **Attribute** - 匹配附加特定属性的元素。 指定属性的完整名称，例如 `<Attribute>^System\.Diagnostics\.DebuggerHiddenAttribute$</Attribute>`。
+
+  > [!TIP]
+  > 如果排除 <xref:System.Runtime.CompilerServices.CompilerGeneratedAttribute> 属性，将从代码覆盖率分析中排除使用语言功能（如 `async`、`await`、`yield return` 和自动实现的属性）的代码。 要排除真正生成的代码，只需排除 <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> 属性。
 
 - **Function** - 按完全限定名匹配过程、函数或方法。 若要匹配函数名称，则正则表达式必须与函数的完全限定名匹配，包括命名空间、类名、方法名称和参数列表。 例如:
 
@@ -243,9 +244,8 @@ Included items must then not match any entries in the exclude list to remain inc
                 <!-- Don't forget "Attribute" at the end of the name -->
                 <Attribute>^System\.Diagnostics\.DebuggerHiddenAttribute$</Attribute>
                 <Attribute>^System\.Diagnostics\.DebuggerNonUserCodeAttribute$</Attribute>
-                <Attribute>^System\.Runtime\.CompilerServices.CompilerGeneratedAttribute$</Attribute>
-                <Attribute>^System\.CodeDom\.Compiler.GeneratedCodeAttribute$</Attribute>
-                <Attribute>^System\.Diagnostics\.CodeAnalysis.ExcludeFromCodeCoverageAttribute$</Attribute>
+                <Attribute>^System\.CodeDom\.Compiler\.GeneratedCodeAttribute$</Attribute>
+                <Attribute>^System\.Diagnostics\.CodeAnalysis\.ExcludeFromCodeCoverageAttribute$</Attribute>
               </Exclude>
             </Attributes>
 

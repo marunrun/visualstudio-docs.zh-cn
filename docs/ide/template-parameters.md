@@ -10,12 +10,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 7442eebcd566470616382367fbdaad5cce774155
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 90035e99c13484bd1b49e59350489ed1090b5f4e
+ms.sourcegitcommit: 673b9364fc9a96b027662dcb4cf5d61cab60ef11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62950349"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69891271"
 ---
 # <a name="template-parameters"></a>模板参数
 
@@ -57,7 +57,8 @@ ms.locfileid: "62950349"
 |projectname|创建项目时由用户提供的名称。|
 |registeredorganization|来自 HKLM\Software\Microsoft\Windows NT\CurrentVersion\RegisteredOrganization 的注册表项值。|
 |rootnamespace|当前项目的根命名空间。 此参数仅适用于项模板。|
-|safeitemname|与 `itemname` 相同，但删除了所有不安全字符和空格。|
+|safeitemname|与 `itemname` 相同，但所有不安全字符和空格替换为了下划线。|
+|safeitemrootname|与 `safeitemname` 相同。|
 |safeprojectname|用户在创建项目时提供的名称，但名称中删除了所有不安全字符和空格。|
 |time|以 DD/MM/YYYY 00:00:00 格式表示的当前时间。|
 |SpecificSolutionName|解决方案的名称。 在选中“创建解决方案目录”时，`SpecificSolutionName` 具有解决方案名称。 在未选中“创建解决方案目录”时，`SpecificSolutionName` 为空。|
