@@ -64,7 +64,7 @@ ms.locfileid: "68787750"
 如果用户尚未激活其 Visual Studio 订阅，可能是因为他们未收到邀请电子邮件。  你也可以从 Visual Studio 管理门户中请求我们向用户重新发送激活邀请。
 
 ## <a name="view-visual-studio-pricing-for-csp-partners"></a>查看适用于 CSP 合作伙伴的 Visual Studio 定价
-若要查看适用于 CSP 合作伙伴的 Visual Studio 定价，请登录[合作伙伴中心](https://partnercenter.microsoft.com)。  从左侧导航栏中选择“定价和优惠”  。  选择右上方“基于使用情况的服务”下的当前月份定价文件  。 下载 Excel 电子表格后，转到“Azure 价目表”工作表，并在“计量类别”列筛选出“Visual Studio”    。
+若要查看适用于 CSP 合作伙伴的 Visual Studio 定价，请登录[合作伙伴中心](https://partnercenter.microsoft.com)。  从左侧导航栏中选择“定价和套餐”  。  选择右上方“基于使用情况的服务”下的当前月份定价文件  。 下载 Excel 电子表格后，转到“Azure 价目表”工作表，并在“计量类别”列筛选出“Visual Studio”    。
 
 下面解释了在此电子表格中看到的内容：
 
