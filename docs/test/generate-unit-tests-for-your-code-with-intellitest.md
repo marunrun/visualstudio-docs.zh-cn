@@ -24,7 +24,7 @@ IntelliTest 浏览你的 .NET 代码，以生成测试数据和单元测试套�
 
 ## <a name="availability-and-extensions"></a>可用性和扩展
 
-“创建 IntelliTest”和“运行 IntelliTest”菜单命令：
+“创建 IntelliTest”  和“运行 IntelliTest”  菜单命令：
 
 * 仅适用于 Visual Studio Enterprise 版。
 
@@ -40,7 +40,7 @@ IntelliTest 浏览你的 .NET 代码，以生成测试数据和单元测试套�
 
 1. 在 Visual Studio 中打开解决方案，然后打开包含要测试的方法的类文件。
 
-2. 右键单击一种方法并选择“运行 IntelliTest”，为方法中的代码生成单元测试。
+2. 右键单击一个方法并选择“运行 IntelliTest”，为方法中的代码生成单元测试  。
 
    ![在方法中右键单击以生成单元测试](../test/media/runpex.png)
 
@@ -48,7 +48,7 @@ IntelliTest 浏览你的 .NET 代码，以生成测试数据和单元测试套�
 
    ![将显示浏览结果窗口，其中列出测试](../test/media/pexexplorationresults.png)
 
-要为一个类中的所有公共方法生成单元测试，只需右键单击类而不是特定的方法，然后选择“运行 IntelliTest”。 使用“浏览结果”窗口中的下拉列表，显示类中每个方法的单元测试和输入数据。
+要为一个类中的所有公共方法生成单元测试，只需右键单击类而不是特定的方法，然后选择“运行 IntelliTest”  。 使用“浏览结果”  窗口中的下拉列表，显示类中每个方法的单元测试和输入数据。
 
 ![选择测试结果以从列表中查看](../test/media/selectpextest.png)
 
@@ -60,7 +60,7 @@ IntelliTest 浏览你的 .NET 代码，以生成测试数据和单元测试套�
 
      ![选择测试，右键单击并选择“保存”](../test/media/savepextests.png)
 
-     你可以查看已创建的测试项目和参数化单元测试，单个单元测试（对应于每个行）保存在测试项目的 .g.cs 文件中，参数化单元测试保存在其对应的 .cs 文件中。 可以从测试资源管理器运行这些单元测试并查看结果，正如手动创建的任何单元测试一样。
+     你可以查看已创建的测试项目和参数化单元测试，单个单元测试（对应于每个行）保存在测试项目的 .g.cs  文件中，参数化单元测试保存在其对应的 .cs  文件中。 可以从测试资源管理器运行这些单元测试并查看结果，正如手动创建的任何单元测试一样。
 
      ![在测试方法中打开类文件以查看单元测试](../test/media/testmethodpex.png)
 
@@ -80,7 +80,7 @@ IntelliTest 浏览你的 .NET 代码，以生成测试数据和单元测试套�
 
      ![右键单击警告，然后选择“修复”](../test/media/pexfixwarning.png)
 
-     此选择会添加到 PexAssemblyInfo.cs 文件中。
+     此选择会添加到 PexAssemblyInfo.cs  文件中。
 
      `[assembly: PexUseType(typeof(Camera))]`
 
@@ -130,7 +130,7 @@ IntelliTest 浏览你的 .NET 代码，以生成测试数据和单元测试套�
 
 ### <a name="NoRun"></a> 问：是否可以无需首先运行 IntelliTest 便生成参数化单元测试？
 
-**答：** 可以，在类或方法中单击右键，然后选择“创建 IntelliTest”。
+**答：** 可以，在类或方法中单击右键，然后选择“创建 IntelliTest”  。
 
 ![右键单击编辑器，选择“创建 IntelliTest”](../test/media/pexcreateintellitest.png)
 
@@ -151,7 +151,7 @@ Visual Studio Marketplace 中也提供了测试框架扩展：
 
 ![选择 IntelliTest 的其他单元测试框架](../test/media/pexcreateintellitestextensions.png)
 
-然后，运行 IntelliTest 以在其相应的 .g.cs 文件中生成单个单元测试。
+然后，运行 IntelliTest 以在其相应的 .g.cs  文件中生成单个单元测试。
 
 ### <a name="q-can-i-learn-more-about-how-the-tests-are-generated"></a>问：是否可以了解有关如何生成测试的详细信息？
 
