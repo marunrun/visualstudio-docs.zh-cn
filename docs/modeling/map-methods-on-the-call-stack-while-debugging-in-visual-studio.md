@@ -28,12 +28,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8641a677ae36ad5a3c1f0f4344fc5c12b8798d7d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 061204de382e95349e141e3321aa033fcf9ccdbc
+ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445137"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70180070"
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>在 Visual Studio 中调试时映射调用堆栈上的方法
 
@@ -51,7 +51,7 @@ ms.locfileid: "63445137"
 
 ::: moniker range="vs-2019"
 
-- [Visual Studio Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
+- [Visual Studio Enterprise](https://visualstudio.microsoft.com/downloads)
 
 ::: moniker-end
 
@@ -59,7 +59,7 @@ ms.locfileid: "63445137"
 
   请参阅：
 
-- [视频：直观地调试与代码图调试器集成 (通道 9)](http://go.microsoft.com/fwlink/?LinkId=293418)
+- [视频：用代码图调试器集成进行可视化调试 (第9频道)](http://go.microsoft.com/fwlink/?LinkId=293418)
 
 - [映射调用堆栈](#MapStack)
 
@@ -79,7 +79,7 @@ ms.locfileid: "63445137"
 
 1. 开始调试。 （键盘：**F5**)
 
-2. 你的应用进入中断模式或你单步执行函数后，请选择**Code Map**。 （键盘：**Ctrl** + **Shift** + **`**)
+2. 你的应用进入中断模式或你单步执行函数后，请选择**Code Map**。 （键盘：**Ctrl** + **Shift**) +  **`**
 
      ![选择代码图以开始映射调用堆栈](../debugger/media/debuggermap_choosecodemap.png)
 
@@ -105,7 +105,7 @@ ms.locfileid: "63445137"
 
  现在你已生成图-什么下一步？ 如果您正在使用 C# 或 Visual Basic，添加项，例如字段、 属性和其他方法，来跟踪代码中发生的情况。
 
- 双击某个方法以查看其代码定义，或者使用该方法的快捷菜单。 （键盘：选择方法在图上按**F12**)
+ 双击某个方法以查看其代码定义，或者使用该方法的快捷菜单。 （键盘：在地图上选择方法, 然后按**F12**)
 
  ![转到代码图上某方法的代码定义](../debugger/media/debuggermap_gotocodedefinition.png)
 
@@ -156,7 +156,7 @@ ms.locfileid: "63445137"
 
    更改图不会影响任何方式中的代码。 你可随意在图上重命名、移动或移除任何内容。
 
-- **此消息是什么意思："关系图可能基于代码的较旧版本"？**
+- **此消息的含义:"关系图可能基于较旧版本的代码"？**
 
    在你上次更新图后，代码可能已发生更改。 例如，图中的某个调用可能已在代码中不存在了。 请关闭此消息，然后在再次更新图之前，尝试重新生成解决方案。
 
@@ -178,7 +178,7 @@ ms.locfileid: "63445137"
 
 - **如何停止自动添加新的调用堆栈中的映射？**
 
-   选择![按钮&#45;显示调用自动堆栈代码图上](../debugger/media/debuggermap_automaticupdateicon.gif)图工具栏上。 若要手动添加到映射的当前调用堆栈，请按**Ctrl** + **Shift** + **`**。
+   选择![按钮&#45;显示调用自动堆栈代码图上](../debugger/media/debuggermap_automaticupdateicon.gif)图工具栏上。 若要手动添加到映射的当前调用堆栈，请按**Ctrl** + **Shift** +  **`** 。
 
    图中将继续进行调试时突出显示地图上的现有调用堆栈。
 

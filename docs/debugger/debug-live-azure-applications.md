@@ -12,12 +12,12 @@ manager: jillfra
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: fae6be8932731e5589dbc27f5084bcbc509680c1
-ms.sourcegitcommit: 9fc8b144d4ed1c46aba87c0b7e1d24454e0eea9d
+ms.openlocfilehash: 6944c930ba6357fffeebba417a32cd167bd4debd
+ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68493321"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70179824"
 ---
 # <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>使用 Snapshot Debugger 调试实时 ASP.NET Azure 应用
 
@@ -37,7 +37,7 @@ Snapshot Debugger 会在你感兴趣的代码执行时为生产中的应用拍�
 * 仅在 Visual Studio 2017 Enterprise 版本15.5 或更高版本的**Azure 开发工作负荷**中开始使用 Snapshot Debugger。 （可在“各个组件”选项卡的“调试和测试” > “Snapshot Debugger”下找到它。）
 
    ::: moniker range=">=vs-2019"
-   如果尚未安装, 请安装[Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 如果要从以前的 Visual Studio 安装中进行更新, 请运行 Visual Studio 安装程序, 并在**ASP.NET 和 web 开发工作负荷**中检查 Snapshot Debugger 组件。
+   如果尚未安装, 请安装[Visual Studio 2019](https://visualstudio.microsoft.com/downloads)。 如果要从以前的 Visual Studio 安装中进行更新, 请运行 Visual Studio 安装程序, 并在**ASP.NET 和 web 开发工作负荷**中检查 Snapshot Debugger 组件。
    ::: moniker-end
    ::: moniker range="<=vs-2017"
    如果尚未安装，请安装 [Visual Studio 2017 Enterprise 版本 15.5](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) 或更高版本。 如果要从以前的 Visual Studio 2017 安装进行更新, 请运行 Visual Studio 安装程序, 并在**ASP.NET 和 web 开发工作负荷**中检查 Snapshot Debugger 组件。
