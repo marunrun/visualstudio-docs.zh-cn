@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 983e25e65600a4174c305557b2a58e20b91f63f1
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.openlocfilehash: 034d4c1e528ff33343b6da1dab3a2de96a0228fc
+ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68143620"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70197100"
 ---
 ## <a name="prerequisites"></a>系统必备
 
 ::: moniker range=">=vs-2019"
 
-* 安装有 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 并具有所选语言相应的工作负载：
+* 安装有 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) 并具有所选语言相应的工作负载：
   * ASP.NET：**ASP.NET 和 Web 开发**
   * Python：  Python 开发
   * Node.js：  Node.js 开发

@@ -3,14 +3,14 @@ title: 设置 Git 存储库
 description: 使用 Visual Studio for Mac 中的 Git 和 Subversion。
 author: jmatthiesen
 ms.author: jomatthi
-ms.date: 02/15/2018
+ms.date: 02/15/2019
 ms.assetid: E992FA1D-B2AD-4A28-ADC6-47E4FC471060
-ms.openlocfilehash: 4fbee486a2e0263621f501b511d62abddbda8059
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: 9b21ed322d2b22be619a71e474a3b5078607bbe5
+ms.sourcegitcommit: cf8c0fef2b9690595e99ce3802586cdd55fd37c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67692392"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107894"
 ---
 # <a name="set-up-a-git-repository"></a>设置 Git 存储库
 
@@ -81,7 +81,7 @@ Git 是分布式版本控制系统，使团队可以同时在同一文档上工�
 
     ![“版本控制”菜单](media/version-control-git10.png)
 
-10. 开始进行其他更改时，请选择“发布更改”将更改推送到远程存储库。 ****   ****   这可让所有相应的用户在 github.com 上进行查看：
+10. 开始进行其他更改时，请选择“推送更改”  将更改推送到“远程”  存储库。 这可让所有相应的用户在 github.com 上进行查看：
 
     ![将更改推送到远程存储库](media/version-control-git11.png)
 

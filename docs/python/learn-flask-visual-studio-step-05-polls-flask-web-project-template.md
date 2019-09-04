@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 734a192a00ee0c509ed16e71a8629837155888ae
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c540dfef9d2d46bb621432b3e37438e0b6b07298
+ms.sourcegitcommit: 3cda0d58c5cf1985122b8977b33a171c7359f324
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62957002"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154898"
 ---
 # <a name="step-5-use-the-polls-flask-web-project-template"></a>步骤 5：使用投票 Flask Web 项目模板
 
@@ -36,15 +36,15 @@ Visual Studio 还提供了“投票 Flask/Jade Web 项目”模板，该模板�
 
 ## <a name="step-5-1-create-the-project"></a>步骤 5-1：创建项目
 
-1. 在 Visual Studio 中，转到解决方案资源管理器，右键单击本教程中之前创建的“LearningFlask”解决方案，并选择“添加” > “新项目”。 （或者，如果想要使用新的解决方案，请改为选择“文件” > “新建” > “项目”。）
+1. 在 Visual Studio 中，转到解决方案资源管理器，右键单击本教程中之前创建的“LearningFlask”解决方案，并选择“添加” > “新项目”     。 （或者，如果想要使用新的解决方案，请改为选择“文件”   > “新建”   > “项目”  。）
 
-1. 在“新项目”对话框中，搜索并选择“投票 Flask Web 项目”模板，调用项目“FlaskPolls”并选择“确定”。
+1. 在“新项目”对话框中，搜索并选择“投票 Flask Web 项目”模板，调用项目“FlaskPolls”并选择“确定”   。
 
-1. 与 Visual Studio 中的其他项目模板类似，“投票 Flask Web 项目”模板包括 requirements.txt 文件，Visual Studio 会询问在何处安装这些依赖项。 选择“安装到虚拟环境”选项，然后在“添加虚拟环境”对话框中，选择“创建”以接受默认设置。 （此模板需要 Flask 以及 azure-storage 和 pymongo 包；“投票 Flask/Jade Web 项目”还需要 pyjade。）
+1. 与 Visual Studio 中的其他项目模板类似，“投票 Flask Web 项目”模板包括 requirements.txt 文件，Visual Studio 会询问在何处安装这些依赖项  。 选择“安装到虚拟环境”  选项，然后在“添加虚拟环境”  对话框中，选择“创建”  以接受默认设置。 （此模板需要 Flask 以及 azure-storage 和 pymongo 包；“投票 Flask/Jade Web 项目”还需要 pyjade。）
 
-1. 在解决方案资源管理器中右键单击“FlaskPolls”项目，然后选择“设为启动项目”，从而将该项目设置为 Visual Studio 解决方案的默认值。 启动项目（以粗体显示）会在启动调试器时运行。
+1. 在解决方案资源管理器中右键单击“FlaskPolls”项目，然后选择“设为启动项目”，从而将该项目设置为 Visual Studio 解决方案的默认值    。 启动项目（以粗体显示）会在启动调试器时运行。
 
-1. 选择“调试” > “启动调试”(F5) 或使用工具栏上的“Web 服务器”按钮运行服务器：
+1. 选择“调试” > “启动调试”(F5) 或使用工具栏上的“Web 服务器”按钮运行服务器     ：
 
     ![Visual Studio 中的运行 Web 服务器工具栏按钮](media/django/run-web-server-toolbar-button.png)
 
@@ -52,7 +52,7 @@ Visual Studio 还提供了“投票 Flask/Jade Web 项目”模板，该模板�
 
     ![投票 Flask Web 项目应用的完整视图](media/flask/step06-full-app-view.png)
 
-1. 在主页上，“创建样本投票”按钮使用 models/samples.json 页中介绍的三种不同投票来初始化应用的数据存储。 默认情况下，应用使用内存中数据库（如“关于”页中所示），每当应用重启时，它都会重置。 该应用还包含适用于 Azure 存储和 Mongo DB 的代码，如后文所述。
+1. 在主页上，“创建样本投票”按钮使用 models/samples.json 页中介绍的三种不同投票来初始化应用的数据存储   。 默认情况下，应用使用内存中数据库（如“关于”页中所示），每当应用重启时，它都会重置。 该应用还包含适用于 Azure 存储和 Mongo DB 的代码，如后文所述。
 
 1. 初始化数据存储后，可以对主页上显示的不同调查进行投票（为简洁起见，省略了导航栏和页脚）：
 
@@ -68,7 +68,7 @@ Visual Studio 还提供了“投票 Flask/Jade Web 项目”模板，该模板�
 
 1. 可以在以下各节中使应用保持运行状态。
 
-    若要停止应用并[将更改提交到源代码管理](learn-flask-visual-studio-step-02-create-app.md#commit-to-source-control)，首先打开团队资源管理器中的“更改”页，右键单击虚拟环境的文件夹（可能是 env），然后选择“忽略这些本地项”。
+    若要停止应用并[将更改提交到源代码管理](learn-flask-visual-studio-step-02-create-app.md#commit-to-source-control)，首先打开团队资源管理器中的“更改”页，右键单击虚拟环境的文件夹（可能是 env），然后选择“忽略这些本地项”     。
 
 ### <a name="examine-the-project-contents"></a>检查项目内容
 
@@ -76,7 +76,7 @@ Visual Studio 还提供了“投票 Flask/Jade Web 项目”模板，该模板�
 
 ## <a name="step-5-2-understand-the-data-models"></a>步骤 5-2：了解数据模型
 
-应用的数据模型是名为 Poll 和 Choice 的 Python 类，它们在 models/\_\_init\_\_.py 中进行定义。 Poll 表示一个问题，Choice 实例集合表示该问题的可选答案。 Poll 还会保留（任意选项的）总票数，以及统计信息的计算方法（这些信息将用于生成视图）：
+应用的数据模型是名为 Poll 和 Choice 的 Python 类，它们在 models/\_\_init\_\_.py 中进行定义  。 Poll 表示一个问题，Choice 实例集合表示该问题的可选答案。 Poll 还会保留（任意选项的）总票数，以及统计信息的计算方法（这些信息将用于生成视图）：
 
 ```python
 class Poll(object):
@@ -116,14 +116,14 @@ class Choice(object):
 
 数据存储机制的工作原理如下：
 
-1. 通过 `REPOSITORY_NAME` 环境变量指定存储库类型，可将其设置为“memory”、“azuretablestore”或“mongodb”。 settings.py 中的一段代码检索名称（默认使用“memory”）。 如果想要更改后备存储，则必须设置环境变量并重启应用。
+1. 通过 `REPOSITORY_NAME` 环境变量指定存储库类型，可将其设置为“memory”、“azuretablestore”或“mongodb”。 settings.py 中的一段代码检索名称（默认使用“memory”）  。 如果想要更改后备存储，则必须设置环境变量并重启应用。
 
     ```python
     from os import environ
     REPOSITORY_NAME = environ.get('REPOSITORY_NAME', 'memory')
     ```
 
-1. settings.py 代码随后初始化 `REPOSITORY_SETTINGS` 对象。 如果想要使用 Azure 表存储或 Mondo DB，则必须首先在其他位置初始化这些数据存储，然后设置必需的环境变量，用于告知应用如何连接到存储：
+1. settings.py 代码随后初始化 `REPOSITORY_SETTINGS` 对象  。 如果想要使用 Azure 表存储或 Mondo DB，则必须首先在其他位置初始化这些数据存储，然后设置必需的环境变量，用于告知应用如何连接到存储：
 
     ```python
     if REPOSITORY_NAME == 'azuretablestorage':
@@ -145,7 +145,7 @@ class Choice(object):
         raise ValueError('Unknown repository.')
     ```
 
-1. 在 views.py 中，应用调用工厂方法，使用数据存储名称和设置来初始化 `Repository` 对象：
+1. 在 views.py 中，应用调用工厂方法，使用数据存储名称和设置来初始化 `Repository` 对象  ：
 
     ```python
     from FlaskPolls.models import PollNotFound
@@ -155,7 +155,7 @@ class Choice(object):
     repository = create_repository(REPOSITORY_NAME, REPOSITORY_SETTINGS)
     ```
 
-1. 在 models\factory.py 中找到 `factory.create_repository` 方法，该方法只导入相应的存储库模块，然后创建一个 `Repository` 实例：
+1. 在 models\factory.py 中找到 `factory.create_repository` 方法，该方法只导入相应的存储库模块，然后创建一个 `Repository` 实例  ：
 
     ```python
     def create_repository(name, settings):
@@ -174,20 +174,20 @@ class Choice(object):
         return Repository(settings)
     ```
 
-1. 特定于每个数据存储的 `Repository` 类的实现可在 models\azuretablestorage.py、models\mongodb.py 和 models\memory.py 中找到。 Azure 存储实现使用 azure-storage 包；Mongo DB 实现使用 pymongo 包。 如步骤 5-1 中所述，这两个包都包含在项目模板的 requirements.txt 文件中。 浏览详细信息将作为读者的一个练习。
+1. 特定于每个数据存储的 `Repository` 类的实现可在 models\azuretablestorage.py、models\mongodb.py 和 models\memory.py 中找到    。 Azure 存储实现使用 azure-storage 包；Mongo DB 实现使用 pymongo 包。 如步骤 5-1 中所述，这两个包都包含在项目模板的 requirements.txt 文件中  。 浏览详细信息将作为读者的一个练习。
 
 简言之，`Repository` 类提取数据存储的详细信息，应用在运行时使用环境变量来选择要使用三种实现中的哪一种并进行配置。
 
 如果需要，可通过以下步骤添加对其他数据存储（除项目模板提供的这三种数据存储外）的支持：
 
-1. 将 memory.py 复制到新文件，这样即可拥有 `Repository` 类的基本接口。
+1. 将 memory.py 复制到新文件，这样即可拥有 `Repository` 类的基本接口  。
 1. 修改类的实现，使其适合正在使用的数据存储。
-1. 修改 factory.py，添加其他 `elif` 事例，用于识别添加的数据存储的名称，并导入相应模块。
-1. 修改 settings.py，识别 `REPOSITORY_NAME` 环境变量中的其他名称，然后相应地初始化 `REPOSITORY_SETTINGS`。
+1. 修改 factory.py，添加其他 `elif` 事例，用于识别添加的数据存储的名称，并导入相应模块  。
+1. 修改 settings.py，识别 `REPOSITORY_NAME` 环境变量中的其他名称，然后相应地初始化 `REPOSITORY_SETTINGS`  。
 
 ### <a name="seed-the-data-store-from-samplesjson"></a>从 samples.json 设定数据存储种子
 
-任何选定的数据存储最初都没有投票，因此应用的主页会显示消息“没有可用投票”和“创建样本投票”按钮。 但是，选择按钮后，该视图就会更改为显示可用投票。 通过 templates\index.html 中的条件标记可实现此切换（为简洁起见，省略了一些空白行）：
+任何选定的数据存储最初都没有投票，因此应用的主页会显示消息“没有可用投票”和“创建样本投票”按钮   。 但是，选择按钮后，该视图就会更改为显示可用投票。 通过 templates\index.html 中的条件标记可实现此切换（为简洁起见，省略了一些空白行）  ：
 
 ```html
 {% extends "layout.html" %}
@@ -218,7 +218,7 @@ class Choice(object):
 
 模板中的 `polls` 变量来自对 `repository.get_polls` 的调用，在数据存储初始化之前，它不会返回任何内容。
 
-选择“创建样本投票”按钮，导航到 /seed URL。 在 views.py 中定义该路由的处理程序：
+选择“创建样本投票”按钮，导航到 /seed URL  。 在 views.py 中定义该路由的处理程序  ：
 
 ```python
 @app.route('/seed', methods=['POST'])
@@ -228,13 +228,13 @@ def seed():
     return redirect('/')
 ```
 
-`repository.add_sample_polls()` 调用结束，最终将显示所选数据存储的某个特定 `Repository` 实现。 每个实现都调用 models\_\_init\_\_.py 中的 `_load_samples_json` 方法，将 models\samples.json 文件加载到内存中，再循环访问相应数据，以在数据存储中创建必要的 `Poll` 和 `Choice` 对象。
+`repository.add_sample_polls()` 调用结束，最终将显示所选数据存储的某个特定 `Repository` 实现。 每个实现都调用 models\_\_init\_\_.py  中的 `_load_samples_json` 方法，将 models\samples.json  文件加载到内存中，再循环访问相应数据，以在数据存储中创建必要的 `Poll` 和 `Choice` 对象。
 
-完成此过程后，`seed` 方法中的 `redirect('/')` 语句将返回到主页。 此时，因为 `repository.get_polls` 现在返回一个数据对象，所以 templates\index.html 中的条件标记会呈现一个包含投票的表。
+完成此过程后，`seed` 方法中的 `redirect('/')` 语句将返回到主页。 此时，因为 `repository.get_polls` 现在返回一个数据对象，所以 templates\index.html 中的条件标记会呈现一个包含投票的表  。
 
 ### <a name="question-how-does-one-add-new-polls-to-the-app"></a>问：如何向应用添加新的投票？
 
-答：通过项目模板提供的应用没有添加或编辑投票的功能。 可通过修改 models\samples.json 来创建新的初始化数据，但这样意味着重置数据存储。 要实现编辑功能，需要借助某些用于方法来扩展 `Repository` 类接口，创建必要的 `Choice` 和 `Poll` 实例，然后在使用这些方法的其他页中实现 UI。
+答：通过项目模板提供的应用没有添加或编辑投票的功能。 可通过修改 models\samples.json 来创建新的初始化数据，但这样意味着重置数据存储  。 要实现编辑功能，需要借助某些用于方法来扩展 `Repository` 类接口，创建必要的 `Choice` 和 `Poll` 实例，然后在使用这些方法的其他页中实现 UI。
 
 ## <a name="step-5-4-understand-the-poll-detail-and-results-views"></a>步骤 5-4：了解投票详情和结果视图
 
@@ -242,7 +242,7 @@ def seed():
 
 剩下的部分将介绍如何查看单个投票的投票（详情）和结果视图。
 
-从主页选择某项投票时，应用将导航至 URL /poll/\<key\>，其中 key 是该项投票的唯一标识符。 在 views.py 中，可以发现分配了 `details` 函数来处理 GET 和请求的 URL 路由。 还可发现在 URL 路由中使用 `<key>` 同时将该表单的任意路由映射到同一个函数，并生成与其同名称的函数的参数：
+从主页选择某项投票时，应用将导航至 URL /poll/\<key\>，其中 key 是该项投票的唯一标识符  。 在 views.py 中，可以发现分配了 `details` 函数来处理 GET 和请求的 URL 路由  。 还可发现在 URL 路由中使用 `<key>` 同时将该表单的任意路由映射到同一个函数，并生成与其同名称的函数的参数：
 
 ```python
 @app.route('/poll/<key>', methods=['GET', 'POST'])
@@ -266,7 +266,7 @@ def details(key):
     )
 ```
 
-为显示投票（GET 请求），该函数只调用 templates\details.html，用于循环访问投票的 `choices` 数组，从而为每项创建一个单选按钮。
+为显示投票（GET 请求），该函数只调用 templates\details.html，用于循环访问投票的 `choices` 数组，从而为每项创建一个单选按钮  。
 
 ```html
 {% extends "layout.html" %}
@@ -296,9 +296,9 @@ def details(key):
 {% endblock %}
 ```
 
-“投票”按钮具有 `type="submit"`，因此选中它会生成一个 POST 请求，该请求返回再次路由到 `details` 函数的同一 URL。 不过，此时它从表单数据中提取选项并且重定向到 /results/\<choice\>。
+“投票”按钮具有 `type="submit"`，因此选中它会生成一个 POST 请求，该请求返回再次路由到 `details` 函数的同一 URL  。 不过，此时它从表单数据中提取选项并且重定向到 /results/\<choice\>。
 
-然后，/result/\<key\> URL 将路由到 views.py 中的 `results` 函数，该函数随后调用投票的 `calculate_stats` 方法并使用 templates\results.html 呈现：
+然后，/result/\<key\> URL 将路由到 views.py 中的 `results` 函数，该函数随后调用投票的 `calculate_stats` 方法并使用 templates\results.html 呈现   ：
 
 ```python
 @app.route('/results/<key>')
@@ -314,7 +314,7 @@ def results(key):
     )
 ```
 
-就其而言，results.html 模板只循环访问投票的选项并为每个选项生成一个进度栏：
+就其而言，results.html 模板只循环访问投票的选项并为每个选项生成一个进度栏  ：
 
 ```html
 {% extends "layout.html" %}
@@ -354,6 +354,6 @@ def results(key):
 
 - 将 Web 应用部署到生产服务器，如 Azure 应用服务。 请参阅[发布到 Azure 应用服务](publishing-python-web-applications-to-azure-from-visual-studio.md)。
 
-- 添加一个使用其他生产级数据存储的存储库实现，如 PostgreSQL、MySQL 和 SQL Server（它们都可以在 Azure 上托管）。 另外，还可使用 [Azure SDK for Python](/python/azure/?view=azure-python)，以便使用表和 blob 等 Azure 存储服务以及 Cosmos DB。
+- 添加一个使用其他生产级数据存储的存储库实现，如 PostgreSQL、MySQL 和 SQL Server（它们都可以在 Azure 上托管）。 另外，还可使用 [Azure SDK for Python](/azure/python/)，以便使用表和 blob 等 Azure 存储服务以及 Cosmos DB。
 
 - 在 Azure DevOps 等服务上设置持续集成/持续部署管道。 除了使用源代码管理（通过 Azure Repos、GitHub 或在其他位置）外，还可以将 Azure DevOps 项目配置为自动运行单元测试作为发布的先决条件，并在部署到生产环境之前，将管道配置为部署到暂存服务器以进行附加测试。 此外，Azure DevOps 还与 App Insights 等监视解决方案集成，并使用敏捷规划工具闭合整个周期。 有关详细信息，请参阅[在 Azure DevOps Projects 中为 Python 创建 CI/CD 管道](/azure/devops-project/azure-devops-project-python?view=vsts)以及常规 [Azure DevOps 文档](/azure/devops/?view=vsts)。

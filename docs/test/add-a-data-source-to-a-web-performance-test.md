@@ -9,12 +9,12 @@ ms.assetid: 2ada376d-f168-455d-9643-6acb535360c1
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: c22d9327deb0c04790a3adfc809d9ae5da483916
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e6fad5424e74c8a65ea8ce889412b834cda6a790
+ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834777"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70180155"
 ---
 # <a name="add-a-data-source-to-a-web-performance-test"></a>将数据源添加到 Web 性能测试
 
@@ -24,7 +24,7 @@ ms.locfileid: "62834777"
 
 ![将数据绑定到 Web 性能测试](../test/media/web_test_databinding_conceptual.png)
 
-我们将使用一个示例 ASP.NET 应用程序。 它有三个 .aspx 页：默认页、红色页和蓝色页。 默认页具有一个用于选择红色或蓝色的单选控件和一个提交按钮。 其他两个 .aspx 页非常简单。 一个具有名为“红色”的标签，另一个具有名为“蓝色”的标签。 当您选择在默认页上进行提交时，将显示其他两个页面之一。 可以下载 [ColorWebApp](https://code.msdn.microsoft.com/Sample-ColorWebApp-76ff7506) 示例，或者直接使用自己的 Web 应用来跟随我们操作。
+我们将使用一个示例 ASP.NET 应用程序。 它有三个 .aspx 页：默认页、红色页和蓝色页  。 默认页具有一个用于选择红色或蓝色的单选控件和一个提交按钮。 其他两个 .aspx 页非常简单  。 一个具有名为“红色”的标签，另一个具有名为“蓝色”的标签。 当您选择在默认页上进行提交时，将显示其他两个页面之一。 可以下载 [ColorWebApp](https://code.msdn.microsoft.com/Sample-ColorWebApp-76ff7506) 示例，或者直接使用自己的 Web 应用来跟随我们操作。
 
 ![运行要测试的 Web 应用程序](../test/media/web_test_databinding_runwebapp.png)
 
@@ -66,7 +66,7 @@ ms.locfileid: "62834777"
 
 ::: moniker range="vs-2019"
 
-1. 如果还没有 Visual Studio Enterprise，可以从 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)页进行下载。
+1. 如果还没有 Visual Studio Enterprise，可以从 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads)页进行下载。
 
 2. 创建一个 SQL 数据库。
 
@@ -124,11 +124,11 @@ ms.locfileid: "62834777"
 
 ## <a name="bind-the-data"></a>绑定数据
 
-1. 绑定 ColorName 字段。
+1. 绑定 ColorName 字段  。
 
      ![将 ColorName 字段绑定到 RadioButtonList1 值](../test/media/web_test_databinding_sql_binddatasource.png)
 
-2. 在“解决方案资源管理器”中，打开 Local.testsettings 文件并选择“每数据源行运行一次”选项。
+2. 在“解决方案资源管理器”中，打开 Local.testsettings 文件并选择“每数据源行运行一次”选项    。
 
      ![编辑测试设置文件](../test/media/web_test_databinding_sql_testsettings.png)
 
@@ -140,13 +140,13 @@ ms.locfileid: "62834777"
 
      ![运行 Web 性能测试来验证绑定](../test/media/web_test_databinding_sql_runtest.png)
 
-     为每个数据行显示两个运行。 运行 1 发送页 Red.aspx 的请求，运行 2 发送页 Blue.aspx 的请求。
+     为每个数据行显示两个运行。 运行 1 发送页 Red.aspx 的请求，运行 2 发送页 Blue.aspx 的请求   。
 
      ![测试运行结果](../test/media/web_test_databinding_sql_runresults.png)
 
-     在绑定到数据源时，可能会违反默认响应 URL 规则。 在这种情况下，运行 2 中的错误是由规则引起的，该规则期望来自原始测试记录的 Red.aspx 页，而数据绑定现在将其指向 Blue.aspx 页。
+     在绑定到数据源时，可能会违反默认响应 URL 规则。 在这种情况下，运行 2 中的错误是由规则引起的，该规则期望来自原始测试记录的 Red.aspx 页，而数据绑定现在将其指向 Blue.aspx 页   。
 
-2. 通过删除“响应 URL”验证规则并重新运行测试来纠正验证错误。
+2. 通过删除“响应 URL”验证规则并重新运行测试来纠正验证错误  。
 
      ![删除响应 URL 验证规则](../test/media/web_test_databinding_sql_deleteresponseurl.png)
 
@@ -200,11 +200,11 @@ ms.locfileid: "62834777"
 
 **答：** 如果不能添加列标头，则可以使用架构说明文件将 CSV 文件视为数据库。
 
-1. 添加名为 schema.ini 的新文本文件。
+1. 添加名为 schema.ini 的新文本文件  。
 
      ![添加 schema.ini 文件](../test/media/web_test_databinding_schemafile.png)
 
-2. 编辑该 schema.ini 文件，添加描述数据结构的信息。 例如，描述 CSV 文件的架构文件可能如下所示：
+2. 编辑该 schema.ini 文件，添加描述数据结构的信息  。 例如，描述 CSV 文件的架构文件可能如下所示：
 
     ```text
     [testdata.csv]
@@ -215,7 +215,7 @@ ms.locfileid: "62834777"
 
      ![向 Web 性能测试添加数据源](../test/media/web_test_databinding_sql_adddatasource.png)
 
-4. 如果正在使用 schema.ini 文件，请选择“数据库”（不是 CSV 文件）作为数据源，并为其命名。
+4. 如果正在使用 schema.ini 文件，请选择“数据库”（不是 CSV 文件）作为数据源，并为其命名   。
 
      ![添加数据库数据源](../test/media/web_test_databinding_adddatasourcecolortext.png)
 
@@ -227,11 +227,11 @@ ms.locfileid: "62834777"
 
      ![选择 .NET Framework OLE DB 数据提供程序](../test/media/web_test_databinding_adddatasourcecolortext2.png)
 
-7. 选择“高级”。
+7. 选择“高级”  。
 
      ![选择“高级”](../test/media/web_test_databinding_advanced.png)
 
-8. 对于 Provider 属性，请选择 Microsoft.Jet.OLEDB.4.0，并将“扩展属性”设置为 Text;HDR=NO。
+8. 对于 Provider 属性，请选择 Microsoft.Jet.OLEDB.4.0，并将“扩展属性”设置为 Text;HDR=NO  。
 
      ![应用高级属性](../test/media/web_test_databinding_advancedproperties.png)
 

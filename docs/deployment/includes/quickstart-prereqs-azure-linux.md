@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 29aedc73173de34723f0db846a26c82cbde64f41
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.openlocfilehash: 6c2065eee7663b627623bf7c68a4a94027c9be57
+ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68143628"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70197099"
 ---
 ## <a name="prerequisites"></a>系统必备
 
 ::: moniker range=">=vs-2019"
 
-* 安装有 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 并具有所选语言相应的工作负载：
+* 安装有 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) 并具有所选语言相应的工作负载：
   * ASP.NET：**ASP.NET 和 Web 开发**
 ::: moniker-end
 ::: moniker range="vs-2017"

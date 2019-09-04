@@ -20,12 +20,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c4024209ac0c1b2766b67984710b8349c6d66d91
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: eb1dbbcc4adf8305aad119ac8a4cb223e0f89902
+ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68605442"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70180285"
 ---
 # <a name="options-dialog-box-environment--general"></a>“选项”对话框：环境 \> 常规
 
@@ -62,7 +62,7 @@ ms.locfileid: "68605442"
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Windows 10 包含设置，指示“让 Windows 尝试修复应用，以便它们不再模糊”  。 如果 Visual Studio 在显示器上模糊显示，建议启用  该设置。 请考虑升级到 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)，该版本大大提高了显示清晰度，因为它是每显示器每英寸点数感知应用程序。
+> Windows 10 包含设置，指示“让 Windows 尝试修复应用，以便它们不再模糊”  。 如果 Visual Studio 在显示器上模糊显示，建议启用  该设置。 请考虑升级到 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)，该版本大大提高了显示清晰度，因为它是每显示器每英寸点数感知应用程序。
 
 ::: moniker-end
 

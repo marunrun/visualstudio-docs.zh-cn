@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c4e461fd69e048e406fbe062ff297da9baab3696
-ms.sourcegitcommit: 8562a337cc9f674c756a4a0b2c7e288ebd61b51e
+ms.openlocfilehash: 755554b73fc80df151550f36e1846e07db70bcd8
+ms.sourcegitcommit: fe212f8960d7882a1b0fdae9e22f008996aacf3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345737"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222741"
 ---
 # <a name="use-regular-expressions-in-visual-studio"></a>在 Visual Studio 中使用正则表达式
 
@@ -33,7 +33,7 @@ Visual Studio 使用 [.NET 正则表达式](/dotnet/standard/base-types/regular-
 
 |目标|表达式|示例|
 |-------------|----------------|-------------|
-|与任何单个字符匹配（换行符除外）。 有关详细信息，请参阅[任意字符](/dotnet/standard/base-types/character-classes-in-regular-expressions#any-character-)。|.|`a.o` 匹配“around”中的“aro”及“about”中的“abo”，但不匹配“across”中的“acro”。|
+|与任何单个字符匹配（换行符除外）。 有关详细信息，请参阅[任意字符](/dotnet/standard/base-types/character-classes-in-regular-expressions#any-character-)。|。|`a.o` 匹配“around”中的“aro”及“about”中的“abo”，但不匹配“across”中的“acro”。|
 |零次或多次匹配前面的表达式（匹配尽可能多的字符）。 有关详细信息，请参阅[零次或多次匹配](/dotnet/standard/base-types/quantifiers-in-regular-expressions#match-zero-or-more-times-)。|*|`a*r` 匹配“rack”中的“r”，“ark”中的“ar”和“aardvark”中的“aar”|
 |零次或多次匹配任何字符（通配符 \*）|.*|`c.*e` 匹配“racket”中的“cke”，“comment”中的“comme”和“code”中的“code”|
 |一次或多次匹配前面的表达式（匹配尽可能多的字符）。 有关详细信息，请参阅[一次或多次匹配](/dotnet/standard/base-types/quantifiers-in-regular-expressions#match-one-or-more-times-)。|+|`e.+d` 匹配“feeder”中的“eed”，而不是“ed”。|
@@ -48,7 +48,7 @@ Visual Studio 使用 [.NET 正则表达式](/dotnet/standard/base-types/regular-
 |捕获包含在括号中的表达式并对其进行隐式编号|()|`([a-z])X\1` 匹配“aXa”和“bXb”，但不匹配“aXb”。 “\1”指第一个表达式组“[a-z]”。 有关详细信息，请参阅[捕获组和替换模式](#capture-groups-and-replacement-patterns)。 |
 |使匹配无效|(?!abc)|`real(?!ity)` 匹配“realty”和“really”中的“real”，但不匹配“reality”。 它还可找到“realityreal”中的第二个“real”（而非第一个“real”）。|
 |与不在给定字符集中的任意字符匹配。 有关详细信息，请参阅[负字符组](/dotnet/standard/base-types/character-classes-in-regular-expressions#negative-character-group-)。|[^abc]|`be[^n-t]` 匹配“before”中的“bef”，“behind”中的“beh”和“below”中的“bel”，但不匹配“beneath”。|
-|与符号前或符号后的表达式匹配|&#124;|`(sponge\|mud) bath` 匹配“sponge bath”和“mud bath”。|
+|与符号前或符号后的表达式匹配|&#124;|`(sponge|mud) bath` 匹配“sponge bath”和“mud bath”。|
 |[对反斜杠后面的字符进行转义](/dotnet/standard/base-types/character-escapes-in-regular-expressions)| \\ |`\^` 匹配字符 ^。|
 |指定前面的字符或组的出现次数。 有关详细信息，请参阅 [n 次完全匹配](/dotnet/standard/base-types/quantifiers-in-regular-expressions#match-exactly-n-times-n)。|{n}，其中“n”是出现次数|`x(ab){2}x` 匹配“xababx”，`x(ab){2,3}x` 匹配“xababx”和“xabababx”，但不匹配“xababababx”。|
 |[匹配 Unicode 类别中的文本](/dotnet/standard/base-types/character-classes-in-regular-expressions#unicode-category-or-unicode-block-p)。 有关 Unicode 字符类的详细信息，请参阅 [Unicode 标准 5.2 字符属性](http://www.unicode.org/versions/Unicode5.2.0/ch04.pdf)。|\p{X}，其中“X”是 Unicode 数字。|`\p{Lu}` 匹配“Thomas Doe”中的“T”和“D”。|
