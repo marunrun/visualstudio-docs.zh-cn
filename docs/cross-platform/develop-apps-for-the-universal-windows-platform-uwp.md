@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: f0bd256f293cefc037a8950bdecd3615fad483f3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3bfe4b1a172158740705e392c573de7911016583
+ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62819558"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70179866"
 ---
 # <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>开发通用 Windows 平台 (UWP) 的应用
 
@@ -24,7 +24,7 @@ ms.locfileid: "62819558"
 
 在 Windows 10 手机、Windows 10 台式机或 Xbox 上运行应用。 它是相同的应用包！ 通过引入 Windows 10 的单个统一核心，一个应用程序包可以跨所有平台运行。 多个平台都具有可添加到应用以利用平台特定行为的扩展 SDK。 例如，用于移动功能的扩展 SDK 控制 Windows phone 上按下的后退按钮。 如果在项目中引用扩展 SDK，只需添加运行时检查来测试该 SDK 是否可在该平台上可用。 这就是对每个平台使用相同应用包的方法！
 
-什么是 Windows 核心？
+什么是 Windows 核心？ 
 
 这是首次将 Windows 重构从而跨所有 Windows 10 平台共用一个核心。 存在一个共用源、一个共用 Windows 内核、一个文件 I/O 堆栈和一个应用模型。 对于 UI，只有一个 XAML UI 框架和一个 HTML UI 框架。 你可专注于创建出色的应用，因为我们已让在不同的 Windows 10 设备上运行应用变得容易。
 
@@ -52,7 +52,7 @@ ms.locfileid: "62819558"
 
 - [Windows 10](http://windows.microsoft.com/windows/downloads)。 Visual Studio 2019 只在 Windows 10 上支持 UWP 开发。 有关详细信息，请参阅 Visual Studio [平台目标](/visualstudio/releases/2019/compatibility/)和[系统要求](/visualstudio/releases/2019/system-requirements/)。
 
-- [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 你还需要通用 Windows 平台开发工作负荷（可选）。
+- [Visual Studio](https://visualstudio.microsoft.com/downloads)。 你还需要通用 Windows 平台开发工作负荷（可选）。
 
      ![UWP 工作负荷](media/uwp_workload.png)
 

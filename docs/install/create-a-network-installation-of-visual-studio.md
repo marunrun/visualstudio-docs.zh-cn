@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 766e3a35c6f9b775373fb7a096000177cfee131d
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 1d18d3a3de423cc63569911bbe49477b5e6f5f26
+ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68870776"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70180289"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>创建 Visual Studio 的网络安装
 
@@ -90,7 +90,7 @@ ms.locfileid: "68870776"
 
 ::: moniker range="vs-2017"
 
-示例:
+示例：
 
 ```cmd
 xcopy /e c:\vsoffline \\server\products\VS2017
@@ -249,7 +249,7 @@ vs_enterprise.exe --layout c:\VSLayout --all
 ::: moniker range="vs-2019"
 
 > [!NOTE]
-> 每次运行 [visualstudio.microsoft.com](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 上提供的 Visual Studio 引导程序时，都会下载并安装可用的最新版 Visual Studio。
+> 每次运行 [visualstudio.microsoft.com](https://visualstudio.microsoft.com/downloads) 上提供的 Visual Studio 引导程序时，都会下载并安装可用的最新版 Visual Studio。
 >
 > 因此，如果立即下载 Visual Studio 引导程序，并从现在开始运行 6 个月，那么会安装运行引导程序时的最新 Visual Studio 版本  。
 >

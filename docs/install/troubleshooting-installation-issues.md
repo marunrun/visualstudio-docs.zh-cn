@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 5ea7b0c934dfeeee6825c558868388a65a8bdcd2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fbecfb7e74b38bb935414e701618cef361bf0506
+ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62997440"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70180027"
 ---
 # <a name="troubleshoot-visual-studio-installation-and-upgrade-issues"></a>Visual Studio 安装和升级问题疑难解答
 
@@ -62,7 +62,7 @@ Visual Studio 安装程序引导程序是最轻型的可执行文件，用于安
 
 1. 关闭 Visual Studio 安装程序。
 2. 删除 Visual Studio 安装程序目录。 通常，该目录是 `C:\Program Files (x86)\Microsoft Visual Studio\Installer`。
-3. 运行 Visual Studio 安装程序引导程序。 引导程序位于“下载”文件夹中，文件名格式为 `vs_[Visual Studio edition]__*.exe`。 如果找不到此应用程序，可以转到 [Visual Studio 下载](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)页，然后单击你的 Visual Studio 版本所对应的“下载”，便可下载引导程序。 然后，运行此可执行文件，重置安装元数据。
+3. 运行 Visual Studio 安装程序引导程序。 引导程序位于“下载”文件夹中，文件名格式为 `vs_[Visual Studio edition]__*.exe`。 如果找不到此应用程序，可以转到 [Visual Studio 下载](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)页，然后单击你的 Visual Studio 版本所对应的“下载”  ，便可下载引导程序。 然后，运行此可执行文件，重置安装元数据。
 4. 尝试重新安装或更新 Visual Studio。 如果安装程序仍无法安装，请转到下一步。
 
 ::: moniker-end
@@ -71,7 +71,7 @@ Visual Studio 安装程序引导程序是最轻型的可执行文件，用于安
 
 1. 关闭 Visual Studio 安装程序。
 2. 删除 Visual Studio 安装程序目录。 通常，该目录是 `C:\Program Files (x86)\Microsoft Visual Studio\Installer`。
-3. 运行 Visual Studio 安装程序引导程序。 引导程序位于“下载”文件夹中，文件名格式为 `vs_[Visual Studio edition]__*.exe`。 如果找不到此应用程序，可以转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)页，然后单击你的 Visual Studio 版本所对应的“下载”，便可下载引导程序。 然后，运行此可执行文件，重置安装元数据。
+3. 运行 Visual Studio 安装程序引导程序。 引导程序位于“下载”文件夹中，文件名格式为 `vs_[Visual Studio edition]__*.exe`。 如果找不到此应用程序，可以转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads)页，然后单击你的 Visual Studio 版本所对应的“下载”  ，便可下载引导程序。 然后，运行此可执行文件，重置安装元数据。
 4. 尝试重新安装或更新 Visual Studio。 如果安装程序仍无法安装，请转到下一步。
 
 ::: moniker-end
@@ -83,20 +83,20 @@ Visual Studio 安装程序引导程序是最轻型的可执行文件，用于安
 ::: moniker range="vs-2017"
 
 1. 收集安装日志。 有关详细信息，请参阅[如何获取 Visual Studio 安装日志](#how-to-get-visual-studio-installation-logs)。
-2. 打开 Visual Studio 安装程序，然后单击“报告问题”，打开 Visual Studio 反馈工具。
+2. 打开 Visual Studio 安装程序，然后单击“报告问题”  ，打开 Visual Studio 反馈工具。
 ![可以使用 Tab 键定位到“提供反馈”按钮，从而打开反馈工具](media/report-a-problem.png)
-3. 为问题报告命名一个标题，然后输入相关详细信息。 单击“下一步”，转到“附件”部分，然后附加生成的日志文件（此文件通常位于 `%TEMP%\vslogs.zip`）。
-4. 单击“下一步”，检查问题报告，然后单击“提交”。
+3. 为问题报告命名一个标题，然后输入相关详细信息。 单击“下一步”  ，转到“附件”  部分，然后附加生成的日志文件（此文件通常位于 `%TEMP%\vslogs.zip`）。
+4. 单击“下一步”  ，检查问题报告，然后单击“提交”  。
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
 1. 收集安装日志。 有关详细信息，请参阅[如何获取 Visual Studio 安装日志](#how-to-get-visual-studio-installation-logs)。
-2. 打开 Visual Studio 安装程序，然后单击“报告问题”，打开 Visual Studio 反馈工具。
+2. 打开 Visual Studio 安装程序，然后单击“报告问题”  ，打开 Visual Studio 反馈工具。
 ![可以使用 Tab 键定位到“提供反馈”按钮，从而打开反馈工具](media/vs-2019/vs-installer-report-problem.png)
-3. 为问题报告命名一个标题，然后输入相关详细信息。 单击“下一步”，转到“附件”部分，然后附加生成的日志文件（此文件通常位于 `%TEMP%\vslogs.zip`）。
-4. 单击“下一步”，检查问题报告，然后单击“提交”。
+3. 为问题报告命名一个标题，然后输入相关详细信息。 单击“下一步”  ，转到“附件”  部分，然后附加生成的日志文件（此文件通常位于 `%TEMP%\vslogs.zip`）。
+4. 单击“下一步”  ，检查问题报告，然后单击“提交”  。
 
 ::: moniker-end
 
@@ -110,7 +110,7 @@ Visual Studio 安装程序引导程序是最轻型的可执行文件，用于安
 
 ### <a name="step-6---contact-us-optional"></a>第 6 步 - 与我们联系（可选）
 
-如果上述步骤均未帮助你成功安装或升级 Visual Studio，请使用我们的[实时聊天](https://visualstudio.microsoft.com/vs/support/#talktous)支持选项（仅英语）与我们联系，以获取进一步的帮助。
+如果上述步骤均未帮助你成功安装或升级 Visual Studio，请使用我们的[实时聊天  ](https://visualstudio.microsoft.com/vs/support/#talktous)支持选项（仅英语）与我们联系，以获取进一步的帮助。
 
 ## <a name="how-to-troubleshoot-an-offline-installation"></a>如何解决脱机安装问题
 
@@ -118,7 +118,7 @@ Visual Studio 安装程序引导程序是最轻型的可执行文件，用于安
 
 | 问题       | 项                   | 解决方案 |
 | ----------- | ---------------------- | -------- |
-| 用户没有访问文件的权限。 | 权限 (ACL) | 请确保调整权限 (ACL)，以便他们在共享脱机安装前先向其他用户授予“读取”权限。 |
+| 用户没有访问文件的权限。 | 权限 (ACL) | 请确保调整权限 (ACL)，以便他们在共享脱机安装前  先向其他用户授予“读取”权限。 |
 | 无法安装新的工作负载、组件或语言。  | `--layout`  | 若要通过部分布局进行安装，并选择之前未在此部分布局中下载过的工作负载、组件或语言，请确保可连接到 Internet。 |
 
 ## <a name="how-to-get-visual-studio-installation-logs"></a>如何获取 Visual Studio 安装日志
