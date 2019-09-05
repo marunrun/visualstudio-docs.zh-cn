@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f494674acdf8b272029ad02a762897b379212ae4
-ms.sourcegitcommit: 9cfd3ef6c65f671a26322320818212a1ed5955fe
+ms.openlocfilehash: cf78e17d4d804c94392da045a90c98869319d185
+ms.sourcegitcommit: fe212f8960d7882a1b0fdae9e22f008996aacf3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68533364"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222623"
 ---
 # <a name="first-look-at-deployment-in-visual-studio"></a>先查看 Visual Studio 中的部署
 
@@ -96,6 +96,13 @@ ms.locfileid: "68533364"
 - **Windows 桌面**：从 Visual Studio 2017 15.4 版开始可以使用桌面桥部署到 Microsoft Store。 若要执行此操作，首先创建一个 Windows 应用程序打包项目。 有关详细信息，请参阅[为 Microsoft Store 打包桌面应用（桌面桥）](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)。
 
     ![桌面桥](../deployment/media/feature-tour-desktop-bridge.png)
+
+## <a name="deploy-net-packages-to-nugetorg"></a>将 .NET 包部署到 NuGet.org
+
+若要将捆绑代码部署到包含已编译代码（如 DLL）的“包”以及使用这些包的项目中所需的其他内容，可以使用 Visual Studio 创建 NuGet 包和 CLI 工具来发出最终部署命令。
+
+- [创建并发布 .NET Standard 包](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
+- [创建并发布 .NET Framework 包](/nuget/quickstart/create-and-publish-a-package-using-visual-studio-net-framework)
 
 ## <a name="deploy-to-a-device-uwp"></a>部署到设备 (UWP)
 
