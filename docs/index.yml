@@ -8,12 +8,12 @@ metadata:
   description: 了解如何使用 Visual Studio 并以喜欢的语言来开发适用于任何平台或设备的应用程序、服务和工具。
   ms.topic: hub-page
   monikerRange: '>=vs-2017'
-  ms.openlocfilehash: b24bc5b3e1427a6f3675398e05a639b45c376571
-  ms.sourcegitcommit: d2b234e0a4a875c3cba09321cdf246842670d872
+  ms.openlocfilehash: 22c6d731d3c7bfaefb6ee0d89d7bae088d86c035
+  ms.sourcegitcommit: fe212f8960d7882a1b0fdae9e22f008996aacf3c
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 07/01/2019
-  ms.locfileid: "67493719"
+  ms.lasthandoff: 09/03/2019
+  ms.locfileid: "70222663"
 highlightedContent:
   items:
   - title: 设置和安装
@@ -135,7 +135,7 @@ additionalContent:
       summary: 对项目运行测试。
       url: test/improve-code-quality.md
     - title: 部署
-      summary: 使用 Web 部署、InstallShield 和持续集成等共享应用。
+      summary: 使用 Web 部署、InstallShield、NuGet 和持续集成等共享应用和代码。
       url: deployment/index.md
     - title: 版本控制
       summary: 使用 Git、TFVC 等版本控制技术共享代码。
@@ -192,7 +192,7 @@ additionalContent:
         url: cross-platform/visual-studio-tools-for-unity.md
       - text: 使用 JavaScript 的移动开发
         url: /visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017
-        note: (Visual Studio 2017 and 2015 only)
+        note: （仅限 Visual Studio 2017 和 Visual Studio 2015）
       - text: 使用 C++ 的移动开发
         url: /visualstudio/cross-platform/
       - text: 使用 C++ 的游戏开发

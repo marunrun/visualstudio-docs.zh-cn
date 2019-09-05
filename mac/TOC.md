@@ -57,7 +57,6 @@
 
 # 版本控制
 ## [概述](version-control.md)
-## [TF 版本控制](tf-version-control.md)
 ## [设置 Git 存储库](set-up-git-repository.md)
 ## [使用 Git](working-with-git.md)
 ## [设置 Subversion 存储库](set-up-subversion-repository.md)
@@ -100,6 +99,7 @@
 ## [日志和异常](troubleshooting.md)
 ## [Visual Studio 客户体验改善计划](visual-studio-experience-improvement-program.md)
 ## [报告问题](report-a-problem.md)
+## [排除故障：Visual Studio for Mac 是否支持 Team Foundation 版本控制？](tf-version-control.md)
 ## [排除故障：为什么看不到所有模板？](troubleshooting-no-templates.md)
 ## [排除故障：更新程序在检索信息时发生错误](updater-troubleshooting.md)
 
