@@ -17,20 +17,20 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 38a243c965199e75622ceff43e742424d3e4977a
-ms.sourcegitcommit: 92a04c57ac0a49f304fa2ea5043436f30068c3cd
+ms.openlocfilehash: e102636793c306a4e8141294ad2573b57f03e889
+ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65976214"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70180014"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>在防火墙或代理服务器后面安装和使用 Visual Studio 和 Azure 服务
 
 如果你或贵组织使用防火墙或代理服务器等安全措施，则会有可能需要将其添加到“允许列表”的域 URL，以及可能需要打开的端口和协议，以便在安装和使用 Visual Studio 以及 Azure 服务时获得最佳体验。
 
-* **[安装 Visual Studio](#install-visual-studio)**：这些表包括要添加到允许列表的域 URL，以便你可访问所需的所有组件和工作负载。
+* **[安装 Visual Studio](#install-visual-studio)** ：这些表包括要添加到允许列表的域 URL，以便你可访问所需的所有组件和工作负载。
 
-* **[使用 Visual Studio 和 Azure 服务](#use-visual-studio-and-azure-services)**：此表包括要添加到允许列表的域 URL 以及要打开的端口和协议，以便你可访问所需的所有功能和服务。
+* **[使用 Visual Studio 和 Azure 服务](#use-visual-studio-and-azure-services)** ：此表包括要添加到允许列表的域 URL 以及要打开的端口和协议，以便你可访问所需的所有功能和服务。
 
 > [!NOTE]
 > 本文针对 Windows 上的 Visual Studio 编写，但部分信息也适用于在防火墙或代理服务器后[安装 Visual Studio for Mac](/visualstudio/mac/install-behind-a-firewall-or-proxy-server)。
@@ -105,7 +105,7 @@ ms.locfileid: "65976214"
 | Python 包 <br>发现<br><br>Python 包 <br>管理<br><br>新建 <br>Python <br> 项目 <br>模板 | pypi.org<br> <br>pypi.python.org <br>bootstrap.pypa.io<br><br>go.microsoft.com | https | 443 | 提供搜索 pip 包的能力<br><br>用于自动安装 pip（如缺失） <br><br>用于将以下 Python 项目模板解析为 cookiecutter 模板 URL：<br> - 分类器项目<br>- 聚类分析项目 <br> - 回归项目 <br> - 使用 PyKinect 的 PyGame <br> - Pyvot 项目 |
 | Office Web <br>Add-in — 外接程序 <br> file:/// <br>确认 <br>服务 | verificationservice.osi.office.net | https | 443 | 用于验证 Office Web 外接程序的清单 |
 | SharePoint 和 <br>Office 外接程序 | sharepoint.com | https | 443 | 用于将 SharePoint 和 Office 外接程序发布到 SharePoint Online 并对其进行测试 |
-| 工作流管理器 <br>测试服务<br> Host | | http | 12292 | 自动创建的防火墙规则，用于测试带工作流的 SharePoint 外接程序 |
+| 工作流管理器 <br>测试服务<br> 主机 | | http | 12292 | 自动创建的防火墙规则，用于测试带工作流的 SharePoint 外接程序 |
 | 自动收集 <br>可靠性统计信息 <br>和其他 <br>客户体验 <br>改善计划 (CEIP)<br> 面向 Azure SDK 和 <br>面向 SQL 工具 <br><br> | vortex.data.microsoft.com<br> <br>dc.services.visualstudio.com | https | 443 | 用于将可靠性统计信息（故障/挂起数据）从用户发送到 Microsoft。 在启用 Windows 错误报告的情况下，仍将上传实际故障/挂起转储；只会禁止统计信息； <br>用于向 Visual Studio 显示 Azure Tools SDK 扩展的匿名使用模式，并向 Visual Studio 显示 SQL 工具的使用模式 |
 | Visual Studio <br> 客户体验 <br>改善计划 (CEIP) <br><br>PerfWatson.exe | vortex.data.microsoft.com<br>dc.services.visualstudio.com<br>visualstudio-devdiv-c2s.msedge.net<br>az667904.vo.msecnd.net <br>scus-breeziest-in.cloudapp.net<br> | https | 443 | 用于收集匿名使用模式和错误日志 <br><br>用于跟踪 UI 冻结问题 |
 | 创建和<br>管理 <br>Azure 资源 | management.azure.com <br>management.core.windows.net | https | 443 | 用于创建 Azure 网站或其他资源，以支持 Web 应用、Azure Functions 或 WebJobs 的发布 |
@@ -122,7 +122,7 @@ ms.locfileid: "65976214"
 | Azure 流分析 <br><br>HDInsight | Management.azure.com | https | 443 | 用于查看、提交、运行和管理 ASA 作业 <br><br> 用于浏览 HDI 群集，以及提交、诊断和调试 HDI 作业 |
 | Azure Data Lake | &#42;.azuredatalakestore.net <br>&#42;.azuredatalakeanalytics.net | https | 443 | 用于编译、提交、查看、诊断和调试作业；用于浏览 ADLS 文件；用于上传和下载文件 |
 | 打包服务 | [account].visualstudio.com <br/> [account].\*.visualstudio.com <br/> \*.blob.core.windows.net <br/> registry.npmjs.org </br> nodejs.org <br/> dist.nuget.org <br/> nuget.org | https | 443 | 仅特定生成任务方案（例如：NuGet 工具安装程序、节点工具安装程序）或者打算将公共上游与源结合使用时才需使用 \*.npmjs.org、\*.nuget.org 和 \*.nodejs.org。 要使用打包服务的核心功能，还需具备其他三个域。 |
-| Azure DevOps Services | \*.vsassets.io <br/> static2.sharepointonline.com | | | 用于连接 Azure DevOps Services |
+| Azure DevOps Services | \*.vsassets.io <br/> static2.sharepointonline.com <br/> dev.azure.com | | | 用于连接 Azure DevOps Services |
 | | | | | |
 
 ## <a name="troubleshoot-network-related-errors"></a>与网络相关错误的疑难解答
@@ -131,7 +131,7 @@ ms.locfileid: "65976214"
 
 ## <a name="get-support"></a>获取支持
 
-对于安装相关问题，我们提供[实时聊天](https://visualstudio.microsoft.com/vs/support/#talktous)（仅限英语）支持选项。
+对于安装相关问题，我们提供[实时聊天  ](https://visualstudio.microsoft.com/vs/support/#talktous)（仅限英语）支持选项。
 
 下面是另外几个支持选项：
 

@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e35641371ebac33c7a89426290927b6045bc4e3e
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 8db5921b7f4ce4722389ca10765f079db10bf04a
+ms.sourcegitcommit: fe212f8960d7882a1b0fdae9e22f008996aacf3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68924082"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222689"
 ---
 # <a name="code-snippets-schema-reference"></a>代码片段架构参考
 
@@ -121,7 +121,7 @@ $selected$ is a great color. I love $selected$.
    |`SQL`|标识 SQL 代码段。|
    |`HTML`|标识 HTML 代码段。|
 
-- **类型**  -  该可选属性用于指定代码片段包含的代码的类型，以及编译代码片段时代码片段必须插入的位置  。 值可以是下列任一值：
+- **Kind** - 用于指定代码片段包含的代码种类的可选属性  。 值可以是下列任一值：
 
    |值|说明|
    |-----|-----------|
