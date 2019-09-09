@@ -31,7 +31,7 @@ Visual Studio 包含一组核心的 .NET Compiler Platform (*Roslyn*) 分析器�
 2. 使用[包管理器控制台](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console)或[包管理器 UI](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console), 在 Visual Studio 中安装包。
 
    > [!NOTE]
-   > 每个分析器包的 "www.nuget.org" 页将显示要粘贴到**包管理器控制台**中的命令。 还有一个用于将文本复制到剪贴板的方便的按钮。
+   > 每个分析器包的 www.nuget.org 页将显示要粘贴到**包管理器控制台**中的命令。 还有一个用于将文本复制到剪贴板的方便的按钮。
 
    分析器程序集安装并显示在**引用** > **分析器**下的**解决方案资源管理器**中。
 
