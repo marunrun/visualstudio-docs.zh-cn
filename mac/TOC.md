@@ -106,7 +106,7 @@
 # [发行说明](https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-relnotes)
 # [预览发行说明](https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-preview-relnotes)
 # 示例
-## [特色示例](samples.yml)
+## [特色示例](samples/index.yml)
 ## [所有 ASP.NET Core 示例](https://docs.microsoft.com/samples/browse/?products=aspnet-core)
 ## [所有 .NET Core 示例](https://docs.microsoft.com/samples/browse/?products=dotnet-core)
 ## [所有 Xamarin.Forms 示例](https://docs.microsoft.com/xamarin/xamarin-forms/samples/)

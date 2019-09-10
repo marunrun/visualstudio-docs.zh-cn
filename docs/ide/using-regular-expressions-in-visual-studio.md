@@ -33,7 +33,7 @@ Visual Studio 使用 [.NET 正则表达式](/dotnet/standard/base-types/regular-
 
 |目标|表达式|示例|
 |-------------|----------------|-------------|
-|与任何单个字符匹配（换行符除外）。 有关详细信息，请参阅[任意字符](/dotnet/standard/base-types/character-classes-in-regular-expressions#any-character-)。|。|`a.o` 匹配“around”中的“aro”及“about”中的“abo”，但不匹配“across”中的“acro”。|
+|与任何单个字符匹配（换行符除外）。 有关详细信息，请参阅[任意字符](/dotnet/standard/base-types/character-classes-in-regular-expressions#any-character-)。|.|`a.o` 匹配“around”中的“aro”及“about”中的“abo”，但不匹配“across”中的“acro”。|
 |零次或多次匹配前面的表达式（匹配尽可能多的字符）。 有关详细信息，请参阅[零次或多次匹配](/dotnet/standard/base-types/quantifiers-in-regular-expressions#match-zero-or-more-times-)。|*|`a*r` 匹配“rack”中的“r”，“ark”中的“ar”和“aardvark”中的“aar”|
 |零次或多次匹配任何字符（通配符 \*）|.*|`c.*e` 匹配“racket”中的“cke”，“comment”中的“comme”和“code”中的“code”|
 |一次或多次匹配前面的表达式（匹配尽可能多的字符）。 有关详细信息，请参阅[一次或多次匹配](/dotnet/standard/base-types/quantifiers-in-regular-expressions#match-one-or-more-times-)。|+|`e.+d` 匹配“feeder”中的“eed”，而不是“ed”。|
