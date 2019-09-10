@@ -42,3 +42,7 @@
       items:
         - name: 容器应用的 MSBuild 属性
           href: container-msbuild-properties.md
+        - name: Docker Compose 项目的设置
+          href: docker-compose-properties.md
+        - name: 启动设置
+          href: container-launch-settings.md
