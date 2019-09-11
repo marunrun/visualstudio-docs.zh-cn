@@ -692,6 +692,8 @@
                   href: ca3011-review-code-for-dll-injection-vulnerabilities.md
                 - name: CA3012：查看正则表达式注入漏洞的代码
                   href: ca3012-review-code-for-regex-injection-vulnerabilities.md
+                - name: CA3061：请勿按 URL 添加架构
+                  href: ca3061.md
                 - name: 'CA3075:不安全的 DTD 处理'
                   href: ca3075-insecure-dtd-processing.md
                 - name: 'CA3076:不安全的 XSLT 脚本执行'
@@ -702,12 +704,30 @@
                   href: ca3147-mark-verb-handlers-with-validateantiforgerytoken.md
                 - name: CA5361：不禁用 SChannel 使用强加密
                   href: ca5361.md
+                - name: CA5363：请勿禁用请求验证
+                  href: ca5363.md
                 - name: CA5364：不使用已弃用的安全协议
                   href: ca5364.md
+                - name: CA5369：将 XmlReader 用于反序列化
+                  href: ca5369.md
+                - name: CA5370：将 XmlReader 用于验证读取器
+                  href: ca5370.md
+                - name: CA5371：将 XmlReader 用于架构读取
+                  href: ca5371.md
+                - name: CA5372：将 XmlReader 用于 XPathDocument
+                  href: ca5372.md
+                - name: CA5373：请勿使用已过时的密钥派生功能
+                  href: ca5373.md
                 - name: CA5378：不禁用 ServicePointManagerSecurityProtocols
                   href: ca5378.md
+                - name: CA5380：请勿将证书添加到根存储中
+                  href: ca5380.md
+                - name: CA5381：请确保证书未添加到根存储中
+                  href: ca5381.md
                 - name: CA5386：避免对 SecurityProtocolType 值进行硬编码
                   href: ca5386.md
+                - name: CA5389：请勿将存档项的路径添加到目标文件系统路径中
+                  href: ca5389.md
                 - name: CA5397：不使用已弃用的 SslProtocols 值
                   href: ca5397.md
                 - name: CA5398：避免硬编码的 SslProtocols 值
