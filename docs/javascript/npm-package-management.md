@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 6d9fd531016a4ac5784f927641a181ac05e4c9ae
-ms.sourcegitcommit: 044bb54cb4552c8f4651feb11d62e52726117e75
+ms.openlocfilehash: de92c3f1f0d0e29d1ba2dfaf5d536a42e636be2c
+ms.sourcegitcommit: 9f11537a721e69879a612979a1aca98f40bb4d4d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661869"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383741"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>在 Visual Studio 中管理 npm 包
 
@@ -31,7 +31,10 @@ ms.locfileid: "68661869"
 这些功能协同工作，并与项目系统和项目中的 package.json  文件同步。
 
 > [!Important]
-> NPM 在项目根目录中需要 node_modules 文件夹和 package.json   。 如果你的应用的文件夹结构不同，则可以[将项目作为文件夹打开](npm-package-management.md)；或者，如果你希望使用 Visual Studio 来管理 npm 包，则可以更新文件夹结构。
+> NPM 在项目根目录中需要 node_modules 文件夹和 package.json   。 如果应用的文件夹结构不同，并且希望使用 Visual Studio 来管理 npm 包，则可以更新文件夹结构。
+
+> [!NOTE]
+> 对于现有的 NPM 项目，请使用“基于现有 Node.js 代码”解决方案模板  。
 
 ## <a name="npmInstallWindow"></a>从解决方案资源管理器安装包
 

@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 32335f010db2d030d64ae1319f3cc893526a30e0
-ms.sourcegitcommit: d4920babfc3d24a3fe1d4bf446ed3fe73b344467
+ms.openlocfilehash: f6da512f6322bed074b8009d45e569626afcd996
+ms.sourcegitcommit: 0f44ec8ba0263056ad04d2d0dc904ad4206ce8fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67160050"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766035"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Visual Studio 中的默认键盘快捷方式
 
@@ -341,9 +341,13 @@ ms.locfileid: "67160050"
 |--------------| - |
 |测试资源管理器.调试所有测试|**Ctrl+R、Ctrl+A**|
 |测试资源管理器.调试上下文中的所有测试|**Ctrl+R、Ctrl+T**|
+|TestExplorer.DebugLastRun|Ctrl+R、D |
 |测试资源管理器.重复上次运行|**Ctrl+R、L**|
 |测试资源管理器.运行所有测试|**Ctrl+R、A**|
 |测试资源管理器.运行上下文中的所有测试|**Ctrl+R、T**|
+|TestExplorer.ShowTestExplorer|Ctrl+E、T |
+|LiveUnitTesting.OpenTab|Ctrl+E、L |
+|Test.CodeCoverageResults|**Ctrl+E、C**|
 
 ### <a name="bkmk_tools"></a>工具
 
@@ -401,6 +405,7 @@ ms.locfileid: "67160050"
 |视图.Web浏览器|**Ctrl+Alt+R**|
 |视图.放大|**Ctrl+Shift+.**|
 |视图.缩小|**Ctrl+Shift+,**|
+|TestExplorer.ShowTestExplorer|Ctrl+E、T |
 
 ### <a name="bkmk_window"></a>窗口
 
@@ -828,7 +833,7 @@ ms.locfileid: "67160050"
 | 编辑.行尾扩展列 | **Shift+Alt+End** |
 | 编辑.上开新行 | **Ctrl+Enter** |
 | 编辑.下开新行 | **Ctrl+Shift+Enter** |
-| 编辑.行首 | **主文件夹** |
+| 编辑.行首 | **Home** |
 | 编辑.扩展到行首 | **Shift+Home** |
 | 编辑.行首扩展列 | **Shift+Alt+Home** |
 | 编辑.行转置 | **Shift+Alt+T** |
@@ -1035,7 +1040,7 @@ ms.locfileid: "67160050"
 |编辑.向右扩展一个字符|**Shift+向右键**|
 |编辑.文档结尾|**End**|
 |编辑.文档结尾扩展|**Shift+End**|
-|编辑.文档开始|**主文件夹**|
+|编辑.文档开始|**Home**|
 |编辑.文档开始扩展|**Shift+Home**|
 |编辑.插入制表符|Tab |
 |编辑.向下移动一行|向下键 |
