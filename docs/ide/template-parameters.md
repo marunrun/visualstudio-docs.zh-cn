@@ -10,12 +10,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 90035e99c13484bd1b49e59350489ed1090b5f4e
-ms.sourcegitcommit: 673b9364fc9a96b027662dcb4cf5d61cab60ef11
+ms.openlocfilehash: 2fbc9d95a6e334c3dcd788c4b686a222c417b0df
+ms.sourcegitcommit: 0f44ec8ba0263056ad04d2d0dc904ad4206ce8fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69891271"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766115"
 ---
 # <a name="template-parameters"></a>模板参数
 
@@ -61,7 +61,7 @@ ms.locfileid: "69891271"
 |safeitemrootname|与 `safeitemname` 相同。|
 |safeprojectname|用户在创建项目时提供的名称，但名称中删除了所有不安全字符和空格。|
 |time|以 DD/MM/YYYY 00:00:00 格式表示的当前时间。|
-|SpecificSolutionName|解决方案的名称。 在选中“创建解决方案目录”时，`SpecificSolutionName` 具有解决方案名称。 在未选中“创建解决方案目录”时，`SpecificSolutionName` 为空。|
+|specifiedSolutionName|解决方案的名称。 在选中“创建解决方案目录”时，`specifiedSolutionName` 具有解决方案名称。 在未选中“创建解决方案目录”时，`specifiedSolutionName` 为空。|
 |userdomain|当前的用户域。|
 |username|当前的用户名称。|
 |webnamespace|当前网站的名称。 此参数在 Web 窗体模板中用于保证类名是唯一的。 如果网站在 Web 服务器的根目录下，则此模板参数解析为 Web 服务器的根目录。|
@@ -74,7 +74,7 @@ ms.locfileid: "69891271"
 
 除了在参数替换过程中使用的默认保留的模板参数之外，还可以指定自己的模板参数和值。 有关详细信息，请参阅 [CustomParameters 元素（Visual Studio 模板）](../extensibility/customparameters-element-visual-studio-templates.md)。
 
-## <a name="example-use-the-project-name-for-a-file-name"></a>示例:对文件名使用项目名称
+## <a name="example-use-the-project-name-for-a-file-name"></a>示例：对文件名使用项目名称
 
 可以使用属性 `TargetFileName` 中的参数为项目项指定变量文件名。
 
@@ -91,7 +91,7 @@ ms.locfileid: "69891271"
 </TemplateContent>
 ```
 
-## <a name="example-use-the-safe-project-name-for-the-namespace-name"></a>示例:对命名空间名称使用安全项目名称
+## <a name="example-use-the-safe-project-name-for-the-namespace-name"></a>示例：对命名空间名称使用安全项目名称
 
 要将安全的项目名称用于 C# 类文件中的命名空间，请使用以下语法：
 

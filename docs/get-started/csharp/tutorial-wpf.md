@@ -14,22 +14,26 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d146416190924c8f1835ef17bc0fb622fcc53e03
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: facd2ed28ae4eb3e34843bff331567c4c8c55526
+ms.sourcegitcommit: 78e2637e4fbfadd4509b55276816b64f5c24c606
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180215"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70864823"
 ---
 # <a name="tutorial-create-a-simple-application-with-c"></a>教程：使用 C\# 创建简单应用
 
 通过完成本教程，你将熟悉在使用 Visual Studio 开发应用程序时可使用的许多工具、对话框和设计器。 你将创建“Hello, World”应用程序、设计 UI、添加代码并调试错误。在此期间，你将了解如何使用集成开发环境 ([IDE](visual-studio-ide.md))。
 
+## <a name="prerequisites"></a>系统必备
+
 ::: moniker range="vs-2017"
-如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)页免费安装。
+如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/vs/older-downloads/?)页免费安装。
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads)页免费安装。
+
+- 如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/)页免费安装。
+- 在本教程中，可以使用 .NET Framework 或 .NET Core。 .NET Core 是较新的、更新式的框架。 .NET Core 需要 Visual Studio 2019 16.3 或更高版本。
 ::: moniker-end
 
 ## <a name="configure-the-ide"></a>配置 IDE
@@ -76,9 +80,12 @@ ms.locfileid: "70180215"
 
    ![查看“创建新项目”窗口](../../get-started/media/vs-2019/start-window-create-new-project.png "“创建新项目”窗口的屏幕截图")
 
-1. 在“创建新项目”屏幕上  ，搜索“WPF”，选择“WPF 应用 (.NET Framework)”  ，然后选择“下一步”  。
+1. 在“创建新项目”屏幕上，搜索“WPF”，选择“WPF 应用(.NET Core)”，然后选择“下一步”    。
 
    ![“创建新项目”对话框中的 WPF 应用模板](media/vs-2019/exploreide-newprojectcsharp-vs2019.png "“创建新项目”对话框中 WPF 应用模板的屏幕截图")
+
+   > [!NOTE]
+   > 你可能会发现两个 WPF 桌面模板，一个用于 .NET Framework，另一个用于 .NET Core。 .NET Core 模板在 Visual Studio 2019 16.3 及更高版本中可用。 你可以在本教程中使用任何一个，但建议使用 .NET Core 进行新的开发。
 
 1. 在下一个屏幕中，为项目指定名称“HelloWPFApp”  ，然后选择“创建”  。
 
@@ -99,31 +106,23 @@ Visual Studio 将创建 HelloWPFApp 项目和解决方案，“解决方案资�
 
 ### <a name="change-the-name-of-mainwindowxaml"></a>更改 MainWindow.xaml 的名称
 
-为 MainWindow 指定更具体的名称。
-
-1. 在“解决方案资源管理器”  中，选择 MainWindow.xaml  。 此时应看到“属性”窗口，如果没有，请选择“视图”菜单，然后再选择“属性窗口”项    。 （或按 F4  。）
-
-1. 将 **“文件名称”** 属性更改为 `Greetings.xaml`。
-
-     ![突出显示文件名称的“属性”窗口](../media/exploreide-filenameinpropertieswindow.png "突出显示文件名称的“属性”窗口的屏幕截图")
-
-     “解决方案资源管理器”  显示文件现在名为“Greetings.xaml”  ，而嵌套代码文件现在名为“Greetings.xaml.cs”  。 此代码文件嵌套在 .xaml  文件节点下，表明它们的关系十分紧密。
-
-     ![“属性”窗口和包含问候语文件名称的“解决方案资源管理器”窗口](../media/exploreide-greetingsfilename.png "“属性”窗口和包含问候语文件名称的“解决方案资源管理器”窗口的屏幕截图")     
+为 MainWindow 指定更具体的名称。 在“解决方案资源管理器”中，右键单击“MainWindow.xaml”，然后选择“重命名”    。 将该文件重命名为“Greetings.xaml”  。
 
 ## <a name="design-the-user-interface-ui"></a>设计用户界面 (UI)
+
+如果设计器未打开，请选择“Greetings.xaml”，然后按“Shift+F7”打开设计器    。
 
 我们会将三种类型的控件添加到此应用程序：一个 <xref:System.Windows.Controls.TextBlock> 控件、两个 <xref:System.Windows.Controls.RadioButton> 控件和一个 <xref:System.Windows.Controls.Button> 控件。
 
 ### <a name="add-a-textblock-control"></a>添加 TextBlock 控件
 
-1. 输入“Ctrl+Q”以激活搜索框，然后键入“工具箱”    。 从结果列表中选择“查看”>“工具箱”  。
+1. 按“Ctrl+Q”激活搜索框，然后键入“工具箱”    。 从结果列表中选择“查看”>“工具箱”  。
 
 1. 在“工具箱”  中，展开“公共 WPF 控件”  节点以查看 TextBlock 控件。
 
      ![突出显示 TextBlock 控件的“工具箱”](../media/exploreide-textblocktoolbox.png "突出显示 TextBlock 控件的“工具箱”的屏幕截图")
 
-1. 通过选择“TextBlock”  项并将其拖到设计图面的窗口中，将 TextBlock 控件添加到设计图面中。 把控件居中到窗口的顶部附近。
+1. 通过选择“TextBlock”  项并将其拖到设计图面的窗口中，将 TextBlock 控件添加到设计图面中。 把控件居中到窗口的顶部附近。 在 Visual Studio 2019 和更高版本中，可以使用红色参考线来使控件居中。
 
     你的窗口应与下图类似：
 
@@ -159,7 +158,7 @@ Visual Studio 将创建 HelloWPFApp 项目和解决方案，“解决方案资�
 
      ![选中 RadioButton 控件的“工具箱”窗口](../media/exploreide-radiobuttontoolbox.png "选中 RadioButton 控件的“工具箱”窗口的屏幕截图")
 
-1. 通过选择“RadioButton”  项并将其拖到设计图面的窗口中，将两个 RadioButton 控件添加到设计图面中。 移动按钮（通过选择它们并使用箭头键），以便按钮并排显示在 TextBlock 控件下。
+1. 通过选择“RadioButton”  项并将其拖到设计图面的窗口中，将两个 RadioButton 控件添加到设计图面中。 移动按钮（通过选择它们并使用箭头键），以便按钮并排显示在 TextBlock 控件下。 使用红色参考线来对齐控件。
 
    你的窗口应如下所示：
 
@@ -175,11 +174,7 @@ Visual Studio 将创建 HelloWPFApp 项目和解决方案，“解决方案资�
 
 ### <a name="add-display-text-for-each-radio-button"></a>添加每个单选按钮的显示文本
 
-1. 在设计界面上，通过在 HelloButton 上按鼠标右键打开 HelloButton 的快捷菜单，选择“编辑文本”  ，然后输入 `Hello`。
-
-1. 在 GoodbyeButton 上按鼠标右键打开 GoodbyeButton 的快捷菜单，选择“编辑文本”  ，然后输入 `Goodbye`。
-
-   XAML 标记现在应类似于以下示例：
+1. 在 XAML 中将`HelloButton` 和 `GoodbyeButton` 的“内容”属性更新为 `"Hello"` 和 `"Goodbye"`  。 XAML 标记现在应类似于以下示例：
 
    ```xaml
    <Grid>
@@ -211,7 +206,7 @@ Visual Studio 将创建 HelloWPFApp 项目和解决方案，“解决方案资�
 
 ### <a name="add-the-button-control"></a>添加按钮控件
 
-1. 在“工具箱”  中，找到“按钮”  控件，然后通过将控件拖到设计视图的窗体中，将其添加到 RadioButton 控件下方的设计界面中。
+1. 在“工具箱”  中，找到“按钮”  控件，然后通过将控件拖到设计视图的窗体中，将其添加到 RadioButton 控件下方的设计界面中。 如果使用的是 Visual Studio 2019 或更高版本，则会出现一条红线，帮助你使控件居中。
 
 1. 在 XAML 视图中，将 Button 控件的“内容”  值从 `Content="Button"` 更改为 `Content="Display"`，然后保存更改。
 
@@ -239,7 +234,7 @@ Visual Studio 将创建 HelloWPFApp 项目和解决方案，“解决方案资�
      此时，“Greetings.xaml.cs”  打开，光标位于 `Button_Click` 事件上。
 
     ```csharp
-    private void Button_Click_1(object sender, RoutedEventArgs e)
+    private void Button_Click(object sender, RoutedEventArgs e)
     {
 
     }
@@ -286,7 +281,16 @@ Visual Studio 将创建 HelloWPFApp 项目和解决方案，“解决方案资�
 
 1. 将 `StartupUri="MainWindow.xaml"` 更改为 `StartupUri="Greetings.xaml"`，然后保存更改。
 
-再次启动调试程序 （按“F5”  ）。 应可看到应用程序的 Greetings  窗口。 现在关闭应用程序窗口，停止调试。
+再次启动调试程序 （按“F5”  ）。 应可看到应用程序的 Greetings  窗口。
+
+::: moniker range="vs-2017"
+![正在运行的应用的屏幕截图](media/exploreide-wpf-running-app.png)
+::: moniker-end
+::: moniker range=">=vs-2019"
+![正在运行的应用的屏幕截图](media/vs-2019/exploreide-wpf-running-app.png)
+::: moniker-end
+
+现在关闭应用程序窗口，停止调试。
 
 ### <a name="debug-with-breakpoints"></a>使用断点进行调试
 
@@ -325,6 +329,12 @@ Visual Studio 将创建 HelloWPFApp 项目和解决方案，“解决方案资�
 1. 关闭应用程序窗口，停止调试。
 
 1. 在菜单栏上，选择“调试”   > “禁用所有断点”  。
+
+### <a name="view-a-representation-of-the-ui-elements"></a>查看 UI 元素的表示形式
+
+在正在运行的应用中，你会看到窗口顶部显示了一个小组件。 这是一个运行时帮助程序，通过它可以快速访问一些有用的调试功能。 单击第一个按钮“转到实时可视化树”  。 随即会看到一个包含一个树的窗口，树中包含页面的所有可视元素。 展开节点，找到你添加的按钮。
+
+![实时可视化树窗口的屏幕截图](media/vs-2019/exploreide-live-visual-tree.png)
 
 ### <a name="build-a-release-version-of-the-application"></a>生成应用程序的发布版本
 

@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: fbecfb7e74b38bb935414e701618cef361bf0506
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 2f2ff06cc920568b8c344fef42d01408d3134fd8
+ms.sourcegitcommit: dae5dfd626277b58ebd7b21a75757f683f1eacc5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180027"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739308"
 ---
 # <a name="troubleshoot-visual-studio-installation-and-upgrade-issues"></a>Visual Studio 安装和升级问题疑难解答
 
@@ -29,9 +29,9 @@ ms.locfileid: "70180027"
 
 本疑难解答指南包含可解决大多数安装问题的分步说明。
 
-## <a name="how-to-troubleshoot-an-online-installation"></a>如何解决联机安装问题
+## <a name="troubleshoot-an-online-installation"></a>解决联机安装问题
 
-以下步骤针对典型的联机安装进行了优化。 有关影响脱机安装的问题，请参阅[如何解决脱机安装问题](#how-to-troubleshoot-an-offline-installation)。
+以下步骤针对典型的联机安装进行了优化。 有关影响脱机安装的问题，请参阅[如何解决脱机安装问题](#troubleshoot-an-offline-installation)。
 
 ### <a name="step-1---check-whether-this-problem-is-a-known-issue"></a>第 1 步 - 检查此问题是否是已知问题
 
@@ -82,7 +82,7 @@ Visual Studio 安装程序引导程序是最轻型的可执行文件，用于安
 
 ::: moniker range="vs-2017"
 
-1. 收集安装日志。 有关详细信息，请参阅[如何获取 Visual Studio 安装日志](#how-to-get-visual-studio-installation-logs)。
+1. 收集安装日志。 有关详细信息，请参阅[如何获取 Visual Studio 安装日志](#get-installation-logs)。
 2. 打开 Visual Studio 安装程序，然后单击“报告问题”  ，打开 Visual Studio 反馈工具。
 ![可以使用 Tab 键定位到“提供反馈”按钮，从而打开反馈工具](media/report-a-problem.png)
 3. 为问题报告命名一个标题，然后输入相关详细信息。 单击“下一步”  ，转到“附件”  部分，然后附加生成的日志文件（此文件通常位于 `%TEMP%\vslogs.zip`）。
@@ -92,7 +92,7 @@ Visual Studio 安装程序引导程序是最轻型的可执行文件，用于安
 
 ::: moniker range="vs-2019"
 
-1. 收集安装日志。 有关详细信息，请参阅[如何获取 Visual Studio 安装日志](#how-to-get-visual-studio-installation-logs)。
+1. 收集安装日志。 有关详细信息，请参阅[如何获取 Visual Studio 安装日志](#get-installation-logs)。
 2. 打开 Visual Studio 安装程序，然后单击“报告问题”  ，打开 Visual Studio 反馈工具。
 ![可以使用 Tab 键定位到“提供反馈”按钮，从而打开反馈工具](media/vs-2019/vs-installer-report-problem.png)
 3. 为问题报告命名一个标题，然后输入相关详细信息。 单击“下一步”  ，转到“附件”  部分，然后附加生成的日志文件（此文件通常位于 `%TEMP%\vslogs.zip`）。
@@ -112,7 +112,7 @@ Visual Studio 安装程序引导程序是最轻型的可执行文件，用于安
 
 如果上述步骤均未帮助你成功安装或升级 Visual Studio，请使用我们的[实时聊天  ](https://visualstudio.microsoft.com/vs/support/#talktous)支持选项（仅英语）与我们联系，以获取进一步的帮助。
 
-## <a name="how-to-troubleshoot-an-offline-installation"></a>如何解决脱机安装问题
+## <a name="troubleshoot-an-offline-installation"></a>解决脱机安装问题
 
 下面的表格列出了通过本地布局进行安装时的已知问题和可能会对你有所帮助的解决办法。
 
@@ -121,7 +121,7 @@ Visual Studio 安装程序引导程序是最轻型的可执行文件，用于安
 | 用户没有访问文件的权限。 | 权限 (ACL) | 请确保调整权限 (ACL)，以便他们在共享脱机安装前  先向其他用户授予“读取”权限。 |
 | 无法安装新的工作负载、组件或语言。  | `--layout`  | 若要通过部分布局进行安装，并选择之前未在此部分布局中下载过的工作负载、组件或语言，请确保可连接到 Internet。 |
 
-## <a name="how-to-get-visual-studio-installation-logs"></a>如何获取 Visual Studio 安装日志
+## <a name="get-installation-logs"></a>获取安装日志
 
 若要排查大部分的安装问题，需要有安装日志。 使用 Visual Studio 安装程序中的[报告问题](../ide/how-to-report-a-problem-with-visual-studio.md)提交问题时，这些日志会自动添加到报告中。
 

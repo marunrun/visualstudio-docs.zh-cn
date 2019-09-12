@@ -116,9 +116,9 @@
             - name: 概述
               displayName: Tutorial 1 Picture viewer
               href: ../ide/tutorial-1-create-a-picture-viewer.md
-            - name: 步骤 1：创建 Windows 窗体应用程序项目
+            - name: 步骤 1：创建 Windows 窗体应用项目
               href: ../ide/step-1-create-a-windows-forms-application-project.md
-            - name: 步骤 2：运行程序
+            - name: 步骤 2：运行你的应用
               href: ../ide/step-2-run-your-program.md
             - name: 步骤 3：设置窗体属性
               href: ../ide/step-3-set-your-form-properties.md
@@ -136,7 +136,7 @@
               href: ../ide/step-9-review-comment-and-test-your-code.md
             - name: 步骤 10：为其他按钮和复选框编写代码
               href: ../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md
-            - name: 步骤 11：运行程序并尝试其他功能
+            - name: 步骤 11：运行应用并尝试其他功能
               href: ../ide/step-11-run-your-program-and-try-other-features.md
         - name: '教程 2：创建计时数学测验 (C#)'
           items:
