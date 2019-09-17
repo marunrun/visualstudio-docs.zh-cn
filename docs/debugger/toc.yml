@@ -126,8 +126,12 @@
               href: edit-and-continue-visual-basic.md
             - name: 使用“编辑并继续”在中断模式下应用编辑
               href: how-to-apply-edits-in-break-mode-with-edit-and-continue.md
-        - name: 编写和调试正在运行的 XAML 代码
-          href: xaml-hot-reload.md
+        - name: XAML 热重载
+          items:
+            - name: 编写和调试正在运行的 XAML 代码
+              href: xaml-hot-reload.md
+            - name: 排查 XAML 热重载问题
+              href: xaml-hot-reload-troubleshooting.md
         - name: 'F# 不支持“编辑并继续”'
           href: edit-and-continue-not-supported-for-f-hash.md
     - name: 查看调试程序数据
