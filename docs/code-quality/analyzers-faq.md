@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae41d9ac30567a32780af422c3af1e2b0d6a63ae
-ms.sourcegitcommit: b761a4a457646d04adfda510c8837734ee4d8f17
+ms.openlocfilehash: 26e48664c40db018df60f2b6d600fab0767a7b72
+ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929766"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062169"
 ---
 # <a name="code-analysis-faq"></a>代码分析常见问题解答
 
@@ -24,15 +24,15 @@ ms.locfileid: "70929766"
 
 **问**:是否应该使用代码分析或 EditorConfig 来检查代码样式？
 
-**答**：代码分析和 editorconfig 文件工作。 在[editorconfig 文件](../ide/editorconfig-code-style-settings-reference.md)或 "[文本编辑器" 选项](../ide/code-styles-and-code-cleanup.md)页上定义代码样式时，实际上是在配置内置于 Visual Studio 中的代码分析器。 EditorConfig 文件还可用于配置一些 NuGet 分析器包，例如[FxCop 分析器](configure-fxcop-analyzers.md)。
+**答**：代码分析和 EditorConfig 文件工作。 在[EditorConfig 文件](../ide/editorconfig-code-style-settings-reference.md)或 "[文本编辑器" 选项](../ide/code-styles-and-code-cleanup.md)页上定义代码样式时，实际上是在配置 Visual Studio 中内置的代码分析器。 EditorConfig 文件还可用于配置一些 NuGet 分析器包，例如[FxCop 分析器](configure-fxcop-analyzers.md)。
 
 ## <a name="editorconfig-versus-rule-sets"></a>EditorConfig 与规则集
 
-**问**:我应该使用规则集还是 editorconfig 文件配置分析器？
+**问**:我应该使用规则集还是 EditorConfig 文件配置分析器？
 
-**答**：规则集和 editorconfig 文件是用于配置分析器的相互排斥的方式。 它们可以共存。 [规则集](analyzer-rule-sets.md)使你可以启用和禁用规则并设置其严重性。 EditorConfig 文件提供了其他配置规则的方法。 对于 FxCop 分析器，editorconfig 文件允许[定义要分析的代码类型](fxcop-analyzer-options.md)。 对于内置于 Visual Studio 的分析器，editorconfig 文件允许你为基本代码[定义首选代码样式](../ide/editorconfig-code-style-settings-reference.md)。
+**答**：规则集和 EditorConfig 文件可以共存，并可同时用于配置分析器。 [规则集](analyzer-rule-sets.md)使你可以启用和禁用规则并设置其严重性。 EditorConfig 文件提供了其他配置规则的方法。 对于 FxCop 分析器，EditorConfig 文件允许[定义要分析的代码类型](fxcop-analyzer-options.md)。 对于内置于 Visual Studio 中的代码样式分析器，EditorConfig 文件允许你为基本代码[定义首选代码样式](../ide/editorconfig-code-style-settings-reference.md)。
 
-除了规则集和 editorconfig 文件外，某些分析器还通过使用标记为C#和 VB 编译器的[附加文件](../ide/build-actions.md#build-action-values)的文本文件进行配置。
+除了规则集和 EditorConfig 文件外，某些分析器还通过使用标记为C#和 VB 编译器的[附加文件](../ide/build-actions.md#build-action-values)的文本文件进行配置。
 
 > [!NOTE]
 > 不能使用 EditorConfig 文件来配置旧分析，而规则集也可以。
