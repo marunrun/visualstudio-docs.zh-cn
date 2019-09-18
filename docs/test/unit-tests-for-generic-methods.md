@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: f71767571c6ea041a16eca5a66856c567be72b60
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 96cb1cc275b5eb521bc998ea26d7c742bbeabdfb
+ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925713"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913354"
 ---
 # <a name="unit-tests-for-generic-methods"></a>泛型方法的单元测试
 
@@ -162,13 +162,11 @@ namespace ClassLibrary2
 
 换而言之，当从测试方法 `DataTest()` 调用 `DataTestHelper<T>()` 方法时，必须传递 `Employee` 类型的参数或从 `Employee` 派生的类。
 
-`using ClassLibrary2;`
-
-`using Microsoft.VisualStudio.TestTools.UnitTesting;`
-
-`namespace TestProject1`
-
 ```csharp
+using ClassLibrary2;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace TestProject1
 {
     [TestClass()]
     public class GenericList_NodeTest
