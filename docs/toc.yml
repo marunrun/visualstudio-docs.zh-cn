@@ -139,7 +139,7 @@
       displayName: Feature tour
       href: ide/quickstart-ide-orientation.md
     - name: C++：创建控制台应用
-      href: ide/getting-started-with-cpp-in-visual-studio.md
+      href: /cpp/get-started/tutorial-console-cpp
     - name: Python：创建 Web 应用
       href: ide/quickstart-python.md
     - name: Node.js：创建 Web 应用
@@ -767,7 +767,7 @@
           href: ide/reference/add-new-item-command.md
         - name: “别名”命令
           href: ide/reference/alias-command.md
-        - name: Evaluate Statement 命令
+        - name: “计算语句”命令
           href: ide/reference/evaluate-statement-command.md
         - name: “查找”命令
           href: ide/reference/find-command.md
@@ -799,7 +799,7 @@
           href: ide/reference/open-file-command.md
         - name: “打开项目”命令
           href: ide/reference/open-project-command.md
-        - name: “打印”命令
+        - name: Print 命令
           href: ide/reference/print-command.md
         - name: “快速监视”命令
           href: ide/reference/quick-watch-command.md
