@@ -1,6 +1,6 @@
 ---
 title: 在调试器中使用跟踪点 |Microsoft Docs
-ms.date: 9/4/2019
+ms.date: 9/17/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - tracepoints, about tracepoints
@@ -9,12 +9,12 @@ ms.author: sashe
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: fe9d96290474283164ed9761a0cb9aa7734f1a9d
-ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
-ms.translationtype: HT
+ms.openlocfilehash: 7680b305fad6f8ea1d7961ec5a70ddafd578c77d
+ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71069030"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095253"
 ---
 # <a name="use-tracepoints-in-the-visual-studio-debugger"></a>在 Visual Studio 调试器中使用跟踪点
 
@@ -96,7 +96,6 @@ ms.locfileid: "71069030"
 
 ![更改时的条件表达式](../debugger/media/conditionalexpressionwhenchanged.png "更改时的条件表达式")
 
-
 不同编程语言的 "**更改时**" 选项的行为不同。
 
 - 对于本机代码，调试器不会将条件的第一次计算视为一次更改，因此不会命中第一次计算中的跟踪点。
@@ -133,3 +132,11 @@ ms.locfileid: "71069030"
 有时，当您检查对象的属性或属性时，它的值可能会更改。 这不是由跟踪点功能引起的 bug，但值得一提的是，使用跟踪点来检查对象并不能避免这些意外修改。
 
 在 "**操作**消息" 框中计算表达式的方式可能不同于当前用于开发的语言。 例如，若要输出字符串，你无需将消息包装在引号中，即使你通常在使用`Debug.WriteLine()`或`console.log()`时也是如此。 此外，对于输出表达式，大`{ }`括号语法（）也可能不同于在开发语言中输出值的约定。 （但是，大括号（`{ }`）内的内容仍应使用开发语言的语法编写）。
+
+## <a name="see-also"></a>请参阅
+
+- [什么是调试？](../debugger/what-is-debugging.md)
+- [使用 Visual C# Studio 编写更好的代码](../debugger/write-better-code-with-visual-studio.md)
+- [首先查看调试](../debugger/debugger-feature-tour.md)
+- [调试器中的表达式](expressions-in-the-debugger.md)
+- [使用断点](../debugger/using-breakpoints.md)
