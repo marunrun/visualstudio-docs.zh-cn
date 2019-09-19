@@ -9,19 +9,19 @@ ms.devlang:
 - csharp
 - vb
 dev_langs:
-- csharp
-- vb
+- CSharp
+- VB
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34f4b8272494e4d1bdef1f073cf602a6c2397445
-ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
+ms.openlocfilehash: 86f9cd4d5b0f7af2c543c2fdcea8864d092d2971
+ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70887933"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062430"
 ---
 # <a name="step-9-review-comment-and-test-your-code"></a>步骤 9：检查代码、为代码添加注释和测试代码
 
@@ -61,7 +61,7 @@ ms.locfileid: "70887933"
     > 使用此页右上角的编程语言控件查看 C# 代码片段或 Visual Basic 代码片段。<br><br>![Docs.Microsoft.com 的编程语言控件](../ide/media/docs-programming-language-control.png)
 
      [!code-csharp[VbExpressTutorial1Step9_10#1](../ide/codesnippet/CSharp/step-9-review-comment-and-test-your-code_1.cs)]
-     
+
      [!code-vb[VbExpressTutorial1Step9_10#1](../ide/codesnippet/VisualBasic/step-9-review-comment-and-test-your-code_1.vb)]
 
     “showButton”  按钮的 <xref:System.Windows.Forms.Control.Click> 事件处理程序现已完成并可正常使用。 您已开始编写代码（从 `if` 语句开始）。 `if` 语句用于告知应用“检查此项，如果为 true，请执行这些操作。” 在本例中，告知应用打开“打开文件”对话框，如果用户选择一个文件并选择“确定”按钮，则会在“PictureBox”中加载此文件    。
@@ -99,7 +99,7 @@ ms.locfileid: "70887933"
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅[步骤 10：为其他按钮和复选框编写代码](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md)  。
+- 要转到下一个教程步骤，请参阅[步骤 10：为其他按钮和复选框编写代码](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md)** 。
 
 - 要返回上一个教程步骤，请参阅[步骤 8：为“显示图片”按钮事件处理程序编写代码](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md)。
 

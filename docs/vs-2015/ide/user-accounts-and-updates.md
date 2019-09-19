@@ -9,15 +9,19 @@ caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: e955eaacd2f290558c5d786439373a9cc8febb35
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4ecd7a4d237a53a19286790346f790b82b981f60
+ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68158284"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062880"
 ---
 # <a name="user-accounts-and-updates"></a>用户帐户和更新
+
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
+
+> [!WARNING]
+> Visual Studio 2015 无法访问为条件访问配置的资源。 若要使用这些资源，请升级到 Visual Studio 2017 或更高版本。
 
 Visual Studio 自身就是一个连接的环境。 登录后，你可以访问与你用户帐户以及链接到该帐户的所有帐户关联的所有服务。 无论你在何处使用 Visual Studio，你的帐户设置都随你一起漫游。 你可以为单个用户配置对特定 Visual Studio 实例的权限级别。 此外，当安装的任何组件（例如 SDK）有可用更新时，Visual Studio 都会通知你。  
   
@@ -31,5 +35,6 @@ Visual Studio 自身就是一个连接的环境。 登录后，你可以访问�
 |[如何解锁 Visual Studio](../ide/how-to-unlock-visual-studio.md)|描述在各种应用情景中如何解锁 Visual Studio。|  
 |[通知](../ide/visual-studio-notifications.md)|描述 Visual Studio 如何在组件（例如 SDK 或 Visual Studio 自身）有可用更新时通知你。|  
   
-## <a name="see-also"></a>另请参阅  
- [Visual Studio IDE](../ide/visual-studio-ide.md)
+## <a name="see-also"></a>请参阅
+
+- [Visual Studio IDE](../ide/visual-studio-ide.md)
