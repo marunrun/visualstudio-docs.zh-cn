@@ -332,8 +332,17 @@
                   href: ca1064-exceptions-should-be-public.md
                 - name: 'CA1065:不要在意外的位置引发异常'
                   href: ca1065-do-not-raise-exceptions-in-unexpected-locations.md
+                - name: 'CA1068:CancellationToken 参数必须最后出现'
+                  href: ca1068.md
                 - name: 'CA2210:程序集应具有有效的强名称'
                   href: ca2210-assemblies-should-have-valid-strong-names.md
+            - name: 文档警告
+              items:
+                - name: 概述
+                  displayName: documentation warnings
+                  href: documentation-warnings.md
+                - name: 'CA1200:不要使用带前缀的 cref 标记'
+                  href: ca1200.md
             - name: 全球化警告
               items:
                 - name: 概述
@@ -514,6 +523,8 @@
                   href: ca1823-avoid-unused-private-fields.md
                 - name: 'CA1824:用 NeutralResourcesLanguageAttribute 标记程序集'
                   href: ca1824-mark-assemblies-with-neutralresourceslanguageattribute.md
+                - name: 'CA1825:避免数组分配长度为零'
+                  href: ca1825.md
             - name: 可移植性警告
               items:
                 - name: 概述

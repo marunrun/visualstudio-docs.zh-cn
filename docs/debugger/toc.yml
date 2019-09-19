@@ -42,6 +42,8 @@
       items:
         - name: 使用断点
           href: using-breakpoints.md
+        - name: 使用跟踪点
+          href: using-tracepoints.md
         - name: 断点故障排除
           href: troubleshooting-breakpoints.md
     - name: 数据检查
