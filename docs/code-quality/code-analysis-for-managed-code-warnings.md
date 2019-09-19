@@ -15,12 +15,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d6238919db971492ffd226708209b97bceceb9e0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: HT
+ms.openlocfilehash: 9d3a8c087e6b07bad34c76865bbbb852d115e055
+ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62540763"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062424"
 ---
 # <a name="code-analysis-for-managed-code-warnings"></a>托管代码的代码分析警告
 托管代码分析工具可以发出警告，指示托管代码库中存在违反规则的情况。 这些警告将被分类到各个规则领域，例如设计、本地化、性能和安全性。 每个警告表示一次托管代码分析规则冲突。 本部分深入讨论每个托管代码分析警告，并提供相关示例。
@@ -46,15 +46,16 @@ ms.locfileid: "62540763"
 |-|-|
 |[按 CheckId 排列的警告](../code-quality/code-analysis-warnings-for-managed-code-by-checkid.md)|列出按 CheckId 排列的所有警告|
 |[加密警告](../code-quality/cryptography-warnings.md)|支持通过正确使用加密机制提高库和应用程序安全的警告。|
-|[设计警告](../code-quality/design-warnings.md)|支持由.NET Framework 设计准则指定的正确库设计的警告。|
+|[设计警告](../code-quality/design-warnings.md)|支持由 .NET 设计准则指定的正确库设计的警告。|
+|[文档警告](../code-quality/documentation-warnings.md)|通过正确使用 XML 文档注释来支持记录良好的库设计的警告。|
 |[全球化警告](../code-quality/globalization-warnings.md)|支持世界通用库和应用程序的警告。|
 |[互操作性警告](../code-quality/interoperability-warnings.md)|支持与 COM 客户端交互的警告。|
 |[维护性警告](../code-quality/maintainability-warnings.md)|支持库和应用程序维护的警告。|
 |[Mobility Warnings](../code-quality/mobility-warnings.md)|支持高效使用电源的警告。|
-|[命名警告](../code-quality/naming-warnings.md)|支持对.NET Framework 设计准则的命名约定的遵从性的警告。|
+|[命名警告](../code-quality/naming-warnings.md)|支持遵守 .NET 设计准则命名约定的警告。|
 |[性能警告](../code-quality/performance-warnings.md)|支持高性能库和应用程序的警告。|
 |[Portability Warnings](../code-quality/portability-warnings.md)|支持跨不同平台的可移植性的警告。|
 |[可靠性警告](../code-quality/reliability-warnings.md)|支持库和应用程序可靠性（例如正确使用内存和线程）的警告。|
 |[安全警告](../code-quality/security-warnings.md)|支持更安全的库和应用程序的警告。|
-|[用法警告](../code-quality/usage-warnings.md)|支持的.NET Framework 使用情况的警告。|
+|[用法警告](../code-quality/usage-warnings.md)|支持 .NET 的适当使用的警告。|
 |[Code Analysis Policy Errors](../code-quality/code-analysis-policy-errors.md)|签入时未满足代码分析策略而发生的错误。|

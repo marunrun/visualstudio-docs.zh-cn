@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b5591d9c05ee0449b9ff77729d73722c18e4d3a
-ms.sourcegitcommit: 0e482cfc15f809b564c3de61646f29ecd7bfcba6
+ms.openlocfilehash: aedc785a86966cf6425dfe35c5925efc9b78a509
+ms.sourcegitcommit: b02c40c1ba193e38b5ace14590a6d57590d3270f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70987652"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71012603"
 ---
 # <a name="write-and-debug-running-xaml-code-with-xaml-hot-reload-in-visual-studio"></a>在 Visual Studio 中通过 XAML 热重载编写和调试正在运行的 XAML 代码
 
@@ -66,5 +66,5 @@ XAML 热重载在这些情况下特别有用：
 
 ## <a name="see-also"></a>请参阅
 
-[排查](xaml-hot-reload-troubleshooting.md)
-[适用于 Xamarin 的 xaml 热重载 xaml 热重载](/xamarin/xamarin-forms/xaml/hot-reload)问题
+* [排查 XAML 热重载问题](xaml-hot-reload-troubleshooting.md)
+* [适用于 Xamarin 的 XAML 热重载](/xamarin/xamarin-forms/xaml/hot-reload)
