@@ -10,12 +10,12 @@ metadata:
   monikerRange: '>=vs-2017'
   f1_keywords:
   - MSDNSTART
-  ms.openlocfilehash: 0853a20309869e5cde753685f20584bbd0a3e7dd
-  ms.sourcegitcommit: 78e2637e4fbfadd4509b55276816b64f5c24c606
+  ms.openlocfilehash: f8d8ed358779471d68a460ae923df5f9d316c2b0
+  ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70864657"
+  ms.lasthandoff: 09/19/2019
+  ms.locfileid: "71128262"
 highlightedContent:
   items:
   - title: 设置和安装
@@ -138,7 +138,7 @@ additionalContent:
       url: test/improve-code-quality.md
     - title: 部署
       summary: 使用 Web 部署、InstallShield、NuGet 和持续集成等共享应用和代码。
-      url: deployment/index.md
+      url: deployment/index.yml
     - title: 版本控制
       summary: 使用 Git、TFVC 等版本控制技术共享代码。
       url: version-control/index.md
@@ -147,7 +147,7 @@ additionalContent:
       url: /azure/devops
     - title: 测量性能
       summary: 通过使用诊断工具来标识瓶颈，并优化代码性能。
-      url: profiling/index.md
+      url: profiling/index.yml
     - title: 扩展
       summary: 将自己的功能添加到 Visual Studio IDE，从而改进开发体验。
       url: extensibility/index.md
