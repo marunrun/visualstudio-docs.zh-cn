@@ -9,19 +9,19 @@ ms.devlang:
 - csharp
 - vb
 dev_langs:
-- csharp
-- vb
+- CSharp
+- VB
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 26bfd4d74580fecd15b1891895e5ae28a18f3296
-ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
+ms.openlocfilehash: 744fd81fe8121936def42277b442d8e54ea88786
+ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70887967"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062858"
 ---
 # <a name="step-8-write-code-for-the-show-a-picture-button-event-handler"></a>步骤 8：为“显示图片”按钮事件处理程序编写代码
 
@@ -42,6 +42,9 @@ IntelliSense 会尝试确定你接下来要做的事情，并自动跳到你从�
 1. 在两个大括号 `{ }` 之间的空行上键入一个 `i`。 （在 Visual Basic 中，应在 `Private Sub...` 和 `End Sub` 之间的空行上键入。）“IntelliSense”窗口随即打开，如下图所示  。
 
     ![包含 Visual C&#35; 代码的 IntelliSense](../ide/media/express_ifintellisense.png)
+
+    > [!NOTE]
+    > 代码可能未使用 camelCase 字母形式显示事件处理程序。
 
 1. “IntelliSense”窗口应该会突出显示 `if` 一词  。 （如果没有，请输入小写的 `f`，它将突出显示。）注意，“IntelliSense”窗口旁会显示一个小的工具提示框，其中包含说明“if 语句的代码片段”    。 （在 Visual Basic 中，该工具提示还指明这是一个代码段，但用词会略有不同。）你希望使用此代码片段，因此请选择 Tab  键将 `if` 插入代码中。 然后再次选择 Tab  键即可使用 `if` 代码片段。 （如果选择其他位置后“IntelliSense”  窗口消失，那么请按 Backspace 删除 `i` 并重新键入它，此时“IntelliSense”  窗口将再次打开。）
 

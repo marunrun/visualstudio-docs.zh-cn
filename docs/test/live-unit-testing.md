@@ -9,12 +9,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.workload:
 - dotnet
-ms.openlocfilehash: bfe1affaad05d2c20a27fb0e315fc1d3b263f22b
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: e4ace476a2454c7f6735f19cd07f222d6c06564e
+ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68923753"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913338"
 ---
 # <a name="live-unit-testing-with-visual-studio"></a>使用 Visual Studio 执行 Live Unit Testing
 
@@ -177,6 +177,12 @@ Live Unit Testing 自动运行、更新测试结果与通过“测试资源管�
 - 对于 xUnit：`[Trait("Category", "SkipWhenLiveUnitTesting")]`
 - 对于 NUnit：`[Category("SkipWhenLiveUnitTesting")]`
 - 对于 MSTest：`[TestCategory("SkipWhenLiveUnitTesting")]`
+
+还可从 Live Unit Testing 中排除整个测试程序集：
+
+- 对于 xUnit：`[assembly: AssemblyTrait("Category", "SkipWhenLiveUnitTesting")]`
+- 对于 NUnit：`[assembly: Category("SkipWhenLiveUnitTesting")]`
+- 对于 MSTest：`[assembly: TestCategory("SkipWhenLiveUnitTesting")]`
 
 ## <a name="see-also"></a>请参阅
 

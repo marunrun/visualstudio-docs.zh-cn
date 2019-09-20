@@ -2,7 +2,7 @@
 title: 教程：Visual Basic 入门
 description: 了解如何在 Visual Studio 中逐步创建 Visual Basic 控制台应用。
 ms.custom: seodec18, get-started
-ms.date: 03/23/2019
+ms.date: 09/11/2019
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
@@ -14,12 +14,12 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 899c47154a3d55811579ff01786096f35272593a
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: eb0bbc0cdf7aff548053c813cdf1b29ed1fed080
+ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180420"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913305"
 ---
 # <a name="tutorial-get-started-with-visual-basic-in-visual-studio"></a>教程：Visual Studio 中的 Visual Basic 入门
 
@@ -47,7 +47,7 @@ ms.locfileid: "70180420"
 
 2. 从顶部菜单栏中选择“文件”  >“新建”  >“项目”  。
 
-3. 在“新建项目”对话框左侧的窗格中，展开“Visual Basic”，然后选择“.NET Core”    。 在中间窗格中，选择“控制台应用(.NET Core)”  。 随后将文件命名为 HelloWorld  。
+3. 在“新建项目”对话框左侧的窗格中，展开“Visual Basic”，然后选择“.NET Core”    。 在中间窗格中，选择“控制台应用(.NET Core)”  。 随后将项目命名为“WhatIsYourName”  。
 
    ![Visual Studio IDE 中“新建项目”对话框中的控制台应用 (.NET Core) 项目模板](media/new-project-vb-dotnetcore-whatisyourname-console-app.png)
 
