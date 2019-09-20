@@ -1,28 +1,33 @@
 ---
 title: 步骤 1：创建项目并向窗体添加标签
 ms.date: 05/31/2019
-ms.topic: conceptual
+ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.assetid: f44e50be-a5f5-4d77-9cff-dd52374c3f74
+ms.devlang:
+- csharp
+- vb
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c04e0700a9913548b33e1ef3e9092f774cddc77
-ms.sourcegitcommit: aeb1a1135dd789551e15aa5124099a5fe3f0f32b
+ms.openlocfilehash: 88ec1c96bea4ebbe3465a489354d90fbbe906858
+ms.sourcegitcommit: 0e482cfc15f809b564c3de61646f29ecd7bfcba6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66501138"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70987954"
 ---
 # <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>步骤 1：创建项目并向窗体添加标签
 
 在开发此测验的过程中，首先应创建项目并将数个标签、一个按钮和其他控件添加到窗体。 此外还要设置已添加各个控件的属性。 项目将包含窗体、控件和代码（在本教程下文中）。 按钮用于启动测验，标签用于显示测验问题，其他控件则用于显示测验答案和完成测验所剩时间。
 
 > [!NOTE]
-> 本主题是基本编码概念教程系列中的一部分。 有关本教程的概述，请参阅[教程 2：创建计时数学测验](../ide/tutorial-2-create-a-timed-math-quiz.md)。
+> 本主题是基本编码概念教程系列中的一部分。 
+> - 有关本教程的概述，请参阅[教程 2：创建计时数学测验](../ide/tutorial-2-create-a-timed-math-quiz.md)。 
+> - 若要下载完整版代码，请参阅[数学测验教程的完整示例](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c)。
 
 ## <a name="to-create-a-project-for-a-form"></a>为窗体创建项目
 
@@ -102,7 +107,7 @@ ms.locfileid: "66501138"
 
 7. 选择“Font”  属性旁边的加号 (+  )，然后将“Size”  属性的值更改为“15.75”  。
 
-     如下图所示，您可以更改多个字体属性。
+     可更改多个字体属性，如以下屏幕截图所示。
 
      ![显示字号的“属性”窗口](../ide/media/express_setfontsize.png)
 
@@ -150,7 +155,7 @@ ms.locfileid: "66501138"
 
 16. 将“NumericUpDown”控件的“(Name)”  属性值更改为“sum”  。
 
-     如下图所示，您已创建了第一行。
+     如下图所示，你已创建了第一行。
 
      ![数学测验的第一行](../ide/media/express_firstrow.png)
 
@@ -200,7 +205,7 @@ ms.locfileid: "66501138"
 
 7. 将 NumericUpDown sum 控件的“TabIndex”属性值设置为“2”，将 difference 控件的此属性值设置为“3”，将 product 控件的此属性值设置为“4”，将 quotient 控件的此属性值设置为“5”。     
 
-     窗体看上去应该如下图所示。
+     窗体应如以下屏幕截图所示。
 
      ![初始数学测验窗体](../ide/media/express_formlaidout.png)
 
@@ -208,6 +213,6 @@ ms.locfileid: "66501138"
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅[步骤 2：创建随机加法问题](../ide/step-2-create-a-random-addition-problem.md)。
+- 要转到下一个教程步骤，请参阅[步骤 2：创建随机加法题](../ide/step-2-create-a-random-addition-problem.md)  。
 
 - 要返回概述主题，请参阅[教程 2：创建计时数学测验](../ide/tutorial-2-create-a-timed-math-quiz.md)。

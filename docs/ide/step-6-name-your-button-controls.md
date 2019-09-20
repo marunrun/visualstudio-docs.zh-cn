@@ -9,19 +9,19 @@ ms.devlang:
 - csharp
 - vb
 dev_langs:
-- csharp
-- vb
+- CSharp
+- VB
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fc843cceea35d196e3f9719a0690764611865600
-ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
+ms.openlocfilehash: 397f65639b6ac277aa6975964ba8317adea58a49
+ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70887975"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062851"
 ---
 # <a name="step-6-name-your-button-controls"></a>步骤 6：命名按钮控件
 
@@ -52,7 +52,7 @@ ms.locfileid: "70887975"
 包含 C# 代码的“Form1.cs”选项卡 
 
     > [!NOTE]
-    > Form1.cs 选项卡可能会将“showButton”改为显示为“ShowButton”   。
+    > Form1.cs 或 Form1.vb 选项卡可能会将“showButton”改为显示为“ShowButton”   。
 
 1. 重点考虑这一部分的代码。
 
@@ -64,7 +64,7 @@ ms.locfileid: "70887975"
 
     ```vb
         Private Sub showButton_Click() Handles showButton.Click
-    
+
     End Sub
     ```
 
@@ -83,8 +83,11 @@ ms.locfileid: "70887975"
     下面显示了你在代码编辑器中看到的新代码。
 
     [!code-csharp[VbExpressTutorial1Step6_#2](../ide/codesnippet/CSharp/step-6-name-your-button-controls_2.cs)]
-    
+
     [!code-vb[VbExpressTutorial1Step6_#2](../ide/codesnippet/VisualBasic/step-6-name-your-button-controls_2.vb)]
+
+    > [!NOTE]
+    > 代码可能未使用 camelCase 字母形式显示事件处理程序。
 
     你所添加的五个方法称为“事件处理程序”，原因是每当事件（如用户选择按钮或选择框）发生时应用程序都将调用这些方法  。
 

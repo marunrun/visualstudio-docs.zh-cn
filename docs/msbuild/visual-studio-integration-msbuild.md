@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a160d28a3953196a53673b64ae7d9ef9974a731
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 00d64b060b340302107ddffaf1d69cad802a283b
+ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66747436"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913278"
 ---
 # <a name="visual-studio-integration-msbuild"></a>Visual Studio 集成 (MSBuild)
 Visual Studio 承载有 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ，用以加载和生成托管项目。 由于 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 负责处理项目，因此，可以在 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 中成功使用几乎任何 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]格式的项目（即使项目是用另一种工具编写的，而且这些项目有自定义的生成过程）。
@@ -176,7 +176,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
    项目系统调用具有已知名称 `ResolveNativeReferences`的目标。 此目标应当产生具有项类型名称 `NativeReferenceFile`的项。 除了名为 `OriginalItemSpec`（包含引用的原始项规范）的新元数据片段以外，项应当让来自输入项的所有元数据通过。
 
 ## <a name="performance-shortcuts"></a>性能快捷方式
- 如果在 Visual Studio UI 中启动调试（通过选择 F5 键或选择菜单栏中的“调试”   > “启动调试”  ），则生成过程将使用快速更新检查来提高性能。 在有些情况下，当自定义的生成创建轮流生成的文件时，快速更新检查无法正确标识更改的文件。 通过设置环境变量 `DISABLEFASTUPTODATECHECK=1`，需要更彻底更新检查的项目可以关闭快速检查。 或者，项目可在项目或项目导入的文件中将此变量设置为 MSBuild 属性。
+ 如果使用 Visual Studio IDE 开始调试（通过选择 F5 或选择菜单栏中的“调试”   > “启动调试”  ）或生成项目（例如，通过选择“生成”   > “生成解决方案”  ），则生成过程将使用快速更新检查来提高性能。 在有些情况下，当自定义的生成创建轮流生成的文件时，快速更新检查无法正确标识更改的文件。 通过设置环境变量 `DISABLEFASTUPTODATECHECK=1`，需要更彻底更新检查的项目可以关闭快速检查。 或者，项目可在项目或项目导入的文件中将此变量设置为 MSBuild 属性。
 
  对于 Visual Studio 中的常规生成，将不适用快速更新检查，项目的生成就像在命令提示符处调用生成一样。
 

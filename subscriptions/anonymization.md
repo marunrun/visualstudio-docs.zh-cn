@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/19/2019
 ms.topic: conceptual
 description: 了解订阅访问丢失时订阅者数据的匿名方式。
-ms.openlocfilehash: 8ba1a462083281c2228f2d6e25c42485ead8aa19
-ms.sourcegitcommit: 485881e6ba872c7b28a7b17ceaede845e5bea4fe
+ms.openlocfilehash: d15fce8d5e1a64066a42cea69b770f55c9607f06
+ms.sourcegitcommit: 02acadb912faced7eaffe27c2c19104bf0428bcd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68377956"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70936916"
 ---
 # <a name="anonymization-of-visual-studio-subscriber-information"></a>Visual Studio 订阅者信息匿名化
 当发生阻止订阅者使用订阅的事件时，例如订阅到期或删除订阅者的登录帐户，用户的个人信息（如姓名和登录帐户）基本上被扰乱以使其无法使用。  这样做是为了保护订阅者的个人信息。
@@ -35,6 +35,11 @@ ms.locfileid: "68377956"
 
 ### <a name="q--im-an-administrator-for-my-organizations-subscriptions--if-one-of-my-subscribers-information-is-anonymized-can-that-subscription-be-reassigned-to-another-user"></a>问：我是组织的订阅的管理员。  如果某个订阅者的信息是匿名的，那么该订阅是否可以重新分配给其他用户？
 答：是的 - 只要订阅尚未过期，就可以将其重新分配给其他订阅者。
+
+### <a name="q-how-can-i-prevent-anonymization-caused-by-deleting-a-sign-in-email-address"></a>问：如何避免由删除登录电子邮件地址导致的匿名化问题？
+答：可通过两种方式避免该问题：
+- 部署单一标识管理系统（MSA 或AAD），但不能同时部署这两者。  
+- 通过租户关联 AAD 和 MSA 标识。 
 
 ## <a name="next-steps"></a>后续步骤
 通过[链接 MSA 和 AAD 标识](/azure/active-directory/b2b/add-users-administrator)了解如何防止匿名。

@@ -1,6 +1,6 @@
 ---
-title: 步骤 11：运行应用并尝试其他功能
-ms.date: 08/30/2019
+title: 步骤 11：运行图片查看器应用并尝试其他功能
+ms.date: 09/11/2019
 ms.assetid: 656614d0-4fe7-4a67-8edc-c10919377d09
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,16 +13,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e82e0002255a406f02f85cbb2636be1aa249529
-ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
+ms.openlocfilehash: 672156f9c1274189e904c79eb74a0c01e10f3a60
+ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/11/2019
-ms.locfileid: "70887947"
+ms.locfileid: "70913132"
 ---
-# <a name="step-11-run-your-app-and-try-other-features"></a>步骤 11：运行应用并尝试其他功能
+# <a name="step-11-run-your-picture-viewer-app-and-try-other-features"></a>步骤 11：运行图片查看器应用并尝试其他功能
 
-你的应用已完成并已做好运行准备。 可以运行应用并设置 <xref:System.Windows.Forms.PictureBox> 的背景色。 要了解更多信息，请尝试通过以下操作来改进应用程序：更改窗体的颜色、自定义按钮和复选框以及更改窗体的属性。
+图片查看器应用已完成并已做好运行准备。 可以运行应用并设置 <xref:System.Windows.Forms.PictureBox> 的背景色。 要了解更多信息，请尝试通过以下操作来改进应用程序：更改窗体的颜色、自定义按钮和复选框以及更改窗体的属性。
 
 ## <a name="how-to-run-your-app-and-set-the-background-color"></a>如何运行应用并设置背景色
 

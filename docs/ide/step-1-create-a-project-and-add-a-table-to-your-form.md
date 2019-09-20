@@ -1,21 +1,24 @@
 ---
 title: 步骤 1：创建项目并向窗体添加表
 ms.date: 05/31/2019
-ms.topic: conceptual
+ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
+ms.devlang:
+- csharp
+- vb
 ms.assetid: 1cac4ba4-f3cd-43bd-ad5d-50fc599234e8
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 64ebd8469eb763af9565609dd680ba1e256ed6c5
-ms.sourcegitcommit: aeb1a1135dd789551e15aa5124099a5fe3f0f32b
+ms.openlocfilehash: 0e7d11f023cc239a3aaa4124cb1ac12a4e4ae9eb
+ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66501146"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71079615"
 ---
 # <a name="step-1-create-a-project-and-add-a-table-to-your-form"></a>步骤 1：创建项目并向窗体添加表
 
@@ -122,9 +125,9 @@ ms.locfileid: "66501146"
    > [!NOTE]
    > 如果粘贴次数太多，IDE 会将一个新行添加到 TableLayoutPanel 中，以便提供添加新 Label 控件的位置。 您可以撤消此操作。 若要删除新单元格，请按 Ctrl  +Z  键，或在菜单栏上依次选择“编辑”   > “撤消”  。
 
-    现在，窗体布局已设置完毕。其外观应类似于下图。
+    现在，窗体布局已设置完毕。它应如下图所示。
 
-    ![初始匹配游戏窗体](../ide/media/express_tut4step1.png)<br/>   初始匹配游戏窗体
+    ![初始匹配游戏窗体](../ide/media/express_tut4step1.png)<br/>*初始匹配游戏窗体*
 
 ## <a name="to-continue-or-review"></a>继续或查看
 

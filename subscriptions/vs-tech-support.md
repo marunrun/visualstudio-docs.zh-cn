@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/29/2019
 ms.topic: conceptual
 description: 了解如何激活 Visual Studio 订阅中包含的技术支持权益。
-ms.openlocfilehash: 705ec75afc2ba870b5e596f63e27fae92fbedf58
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: 6474cf3322b878055053eaaf1f1943ebc546b206
+ms.sourcegitcommit: 02acadb912faced7eaffe27c2c19104bf0428bcd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68681601"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70936908"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>激活并使用 Visual Studio 订阅中的技术支持权益
 Visual Studio 订阅中的技术支持权益用于解决仍处于[支持生命周期](https://support.microsoft.com/lifecycle/search)的主流支持阶段产品的“非生产环境”中的中断修复问题  。 Visual Studio Enterprise 标准版和年度云订阅接收四个事件，但 Visual Studio Professional 标准版和年度云订阅接收两个事件，从权益激活开始最多一年。 权益激活必须在订阅为最新状态时进行。
@@ -23,6 +23,13 @@ Visual Studio 订阅中的技术支持权益用于解决仍处于[支持生命�
 > 并非所有给定级别的订阅都符合接收支持事件的条件。 通过 FTE、NFR、MPN、MCT 和其他程序获得的订阅不会收到支持事件。 如果订阅不符合接收技术支持事件的条件，则可用权益中不会显示“技术支持”磁贴。
 
 要使用权益提交支持请求，必须先激活该权益 **。** 按照下一节中的步骤完成激活操作。
+
+## <a name="supported-products"></a>支持的产品 
+通过 Visual Studio 订阅，Visual Studio IDE 和 Azure DevOps Server 等开发人员工具可获得主流支持和扩展支持。
+
+从 Visual Studio 订阅下载的非开发人员产品（例如 SQL、Windows 和 SharePoint）仅可获取主流支持。 这些产品的许可范围仅为在开发环境中设计、开发、测试或演示应用程序。 这些产品不具有用于生产环境的许可。
+
+产品级别说明 -  如果支持计划不可用于指定产品的支持 (Code:8)，请展开“不可用的支持计划”。 你的支持合同不适用于你所选的产品版本。
 
 ## <a name="how-to-activate-the-benefit"></a>如何激活权益
 1. 请转到 https://my.visualstudio.com/Benefits ，向下滚动到“支持”部分，在“技术支持”磁贴上单击“聊天激活”  。

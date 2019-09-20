@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c0c7f3695be87f6cb4081b3aa02fc7a129869a4c
-ms.sourcegitcommit: 9c07ae6fb18204ea080c8248994a683fa12e5c82
+ms.openlocfilehash: 51bda0a85735bf2b1dae5044b9e4ab8e5384f8ae
+ms.sourcegitcommit: 0e482cfc15f809b564c3de61646f29ecd7bfcba6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293697"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70987879"
 ---
 # <a name="tutorial-2-create-a-timed-math-quiz"></a>教程 2：创建计时数学测验
 
@@ -31,7 +31,7 @@ ms.locfileid: "70293697"
 
 - 使用代码执行基本算术运算。
 
-完成时，你的测验看上去与下图类似，但数字有所不同。
+结束时，除数字不同外，测验应与以下屏幕截图类似：
 
 ![包含四个问题的数学测验](../ide/media/express_finishedquiz.png)
 
@@ -40,7 +40,7 @@ ms.locfileid: "70293697"
 若要下载测验的完整版本，请参阅[数学测验教程的完整示例](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c)。
 
 > [!NOTE]
-> 本教程中同时涉及 Visual C# 和 Visual Basic，因此请关注特定于您所用编程语言的信息。
+> 本教程中同时涉及 C# 和 Visual Basic，因此请关注特定于你所用编程语言的信息。
 
 ## <a name="related-topics"></a>相关主题
 

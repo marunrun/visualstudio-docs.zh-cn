@@ -6,12 +6,12 @@ ms.author: sayedha
 ms.date: 04/02/2019
 ms.assetid: 6E8B0C90-33D6-4546-8207-CE0787584565
 ms.custom: video
-ms.openlocfilehash: 9dcd1b65e9d8ea60f082304b4f84a7108efb99a6
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: d07849a362779f3fad8f7544899dc23b9d4538d6
+ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67692946"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913318"
 ---
 # <a name="getting-started-with-aspnet-core"></a>ASP.NET Core 入门
 
@@ -38,7 +38,7 @@ ms.locfileid: "67692946"
 
 ![ASP.NET 项目选项](media/asp-net-core-2019-new-asp-core.png)
 
-选择“ASP.NET Core 空 Web 应用”，然后按“下一步”   。 为项目指定名称，并按“创建”  。 这将创建新的 ASP.NET Core 应用，类似于下图：
+选择“ASP.NET Core 空 Web 应用”，然后按“下一步”   。 为项目指定名称，并按“创建”  。 这会创建新的 ASP.NET Core 应用。 在 Solution Pad 的左窗格中，展开第二个箭头，然后选择“Startup.cs”  。 如下图所示：
 
 ![新 ASP.NET Core 空项目视图](media/asp-net-core-2019-empty-project.png)
 

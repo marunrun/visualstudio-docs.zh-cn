@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: da1ca71cb420bcc2bbc6ba00eb1eca5deaa2b2c9
-ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
+ms.openlocfilehash: 1cf71ca26a26aecceb605c0483499bc0b0e24d30
+ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/11/2019
-ms.locfileid: "70887901"
+ms.locfileid: "70913153"
 ---
 # <a name="step-3-set-your-form-properties"></a>步骤 3：设置窗体属性
 
@@ -77,7 +77,7 @@ ms.locfileid: "70887901"
 
 * 要转到下一个教程步骤，请参阅[步骤 4：使用 TableLayoutPanel 控件设置窗体布局](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)  。
 
-* 要返回上一个教程步骤，请参阅[步骤 2：运行图片查看器应用(../ide/step-2-run-your-program.md)。
+* 要返回上一个教程步骤，请参阅[步骤 2：运行运行图片查看器应用](../ide/step-2-run-your-program.md)。
 
 ## <a name="see-also"></a>请参阅
 

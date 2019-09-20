@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 7aef839027639770e60292210aaddf998c97fce0
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: abd5075d04f26b9795695bfcd4fcd387e1a15d24
+ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926541"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71079585"
 ---
 # <a name="troubleshoot-code-coverage"></a>代码覆盖率疑难解答
 
@@ -56,6 +56,8 @@ Visual Studio 中的代码覆盖率分析工具可收集本机和托管程序集
 .pdb 文件必须从与 .dll 或 .exe 文件相同的生成中产生    。
 
 解决方法 &mdash; 确保生成设置生成了 .pdb 文件  。 如果 .pdb 文件在项目生成时未更新，则打开项目属性，选择“生成”页，选择“高级”，然后查看“调试信息”     。
+
+对于 C++ 项目，请确保生成的 .pdb 文件包含完整的调试信息。 打开项目属性，确保“生成调试信息”（“链接器”   > “调试”   > “生成调试信息”  ）设置为“生成为共享和发布而优化的调试信息(/DEBUG:FULL)”  。
 
 如果 .pdb 与 .dll 或 .exe 文件在不同的位置，请将 .pdb 文件复制到相同的目录     。 也可配置代码覆盖率引擎以在另一个位置搜索 .pdb 文件  。 有关详细信息，请参阅[自定义代码覆盖率分析](../test/customizing-code-coverage-analysis.md)。
 
