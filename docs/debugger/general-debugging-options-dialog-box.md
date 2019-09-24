@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 03634b5a2bd1417e75f843fd9026712313f1923d
-ms.sourcegitcommit: 0e482cfc15f809b564c3de61646f29ecd7bfcba6
+ms.openlocfilehash: db4756107bb9f5e7e766634897013649db351faa
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70987633"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211026"
 ---
 # <a name="general-debugging-options"></a>常规调试选项
 
@@ -59,17 +59,17 @@ ms.locfileid: "70987633"
 > [!NOTE]
 > 对于托管代码，此选项以前称为“启用异常助手”。
 
-**启用“仅我的代码”** ：调试器仅显示和单步执行用户代码（“我的代码”），而忽略系统代码和其他经过优化或没有调试符号的代码。
+**启用“仅我的代码”**：调试器仅显示和单步执行用户代码（“我的代码”），而忽略系统代码和其他经过优化或没有调试符号的代码。
 
-- **启动时若没有用户代码则发出警告(仅限托管)** ： 如果在调试时启用“仅我的代码”，此选项会在没有用户代码（“我的代码”）的情况下发出警告。
+- **启动时若没有用户代码则发出警告(仅限托管)**： 如果在调试时启用“仅我的代码”，此选项会在没有用户代码（“我的代码”）的情况下发出警告。
 
 **启用 .NET Framework 源代码单步执行**：允许调试器单步执行 .NET Framework 源代码。 启用此选项会自动禁用“仅我的代码”。 .NET Framework 符号将下载到缓存位置。 使用“选项”对话框>“调试类别”>“符号”页面可更改缓存位置。
 
-**单步执行属性和运算符(仅限托管)** ：防止调试器单步执行托管代码中的属性和运算符。
+**单步执行属性和运算符(仅限托管)**：防止调试器单步执行托管代码中的属性和运算符。
 
 **启用属性求值和其他隐式函数调用**：在变量窗口和“快速监视”对话框中打开属性的自动求值和隐式函数调用。
 
-- **在变量窗口中对对象调用字符串转换函数(仅限 C# 和 JavaScript)** ：在变量窗口中计算对象时，执行隐式字符串转换调用。 结果显示为字符串而不是类型名称。 仅在 C# 代码中进行调试时适用。 此设置可以由 DebuggerDisplay 特性重写（请参阅[使用 DebuggerDisplay 属性](../debugger/using-the-debuggerdisplay-attribute.md)）。
+- **在变量窗口中对对象调用字符串转换函数(仅限 C# 和 JavaScript)**：在变量窗口中计算对象时，执行隐式字符串转换调用。 结果显示为字符串而不是类型名称。 仅在 C# 代码中进行调试时适用。 此设置可以由 DebuggerDisplay 特性重写（请参阅[使用 DebuggerDisplay 属性](../debugger/using-the-debuggerdisplay-attribute.md)）。
 
 **启用源服务器支持**：指示 Visual Studio 调试器从实现 SrcSrv (`srcsrv.dll`) 协议的源服务器中获取源文件。 Team Foundation Server 和 Windows 的调试工具是实现协议的两个源服务器。 有关 Srcsrv.ini 设置的详细信息，请参阅[srcsrv.ini](/windows-hardware/drivers/debugger/srcsrv)文档。 此外，请参阅[指定符号（.pdb）和源文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)。
 
@@ -78,7 +78,7 @@ ms.locfileid: "70987633"
 
 - **将源服务器诊断消息打印到“输出”窗口**： 如果启用源服务器支持，此设置会打开诊断显示。
 
-- **允许源服务器中的部分信任程序集(仅限托管)** ： 若源服务器支持已启用，此设置将替代不检索部分信任程序集的源这一默认行为。
+- **允许源服务器中的部分信任程序集(仅限托管)**： 若源服务器支持已启用，此设置将替代不检索部分信任程序集的源这一默认行为。
 
 - **始终运行不受信任的源服务器命令并且不再提示**： 若源服务器支持已启用，此设置将替代运行不受信任的命令时进行提示这一默认行为。
 
@@ -89,7 +89,7 @@ ms.locfileid: "70987633"
 
 - **对于所有源链接请求，回退到 Git 凭据管理器身份验证**： 若源链接支持已启用且源链接请求未通过身份验证，则 Visual Studio 调用 Git 凭据管理器。
 
-**突出显示断点和当前语句所在的整个行（仅限 C++）** ：调试器突出显示断点或当前语句时，会突出显示整个行。
+**突出显示断点和当前语句所在的整个行（仅限 C++）**：调试器突出显示断点或当前语句时，会突出显示整个行。
 
 **要求源文件与原始版本完全匹配**：指示调试器验证源文件是否与用于构建待调试的可执行文件的源代码版本匹配。 若版本不匹配，系统会提示你查找匹配的源。 若找不到匹配的源，调试过程中将不会显示源代码。
 
@@ -97,9 +97,9 @@ ms.locfileid: "70987633"
 
 **在变量窗口中显示对象的原始结构**：禁用所有对象的结构视图自定义。 有关视图自定义的详细信息，请参阅[创建 .managed 对象的自定义视图](../debugger/create-custom-views-of-dot-managed-objects.md)。
 
-**在模块加载时取消 JIT 优化(仅限托管)** ：在附加调试器的情况下，加载模块并编译 JIT 后，禁用托管代码的 JIT 优化。 禁用优化可能更易于调试某些问题，尽管这会降低性能。 如果正在使用“仅我的代码”，则取消 JIT 优化会导致非用户代码显示为用户代码（“我的代码”）。 有关详细信息，请参阅[JIT 优化和调试](../debugger/jit-optimization-and-debugging.md)。
+**在模块加载时取消 JIT 优化(仅限托管)**：在附加调试器的情况下，加载模块并编译 JIT 后，禁用托管代码的 JIT 优化。 禁用优化可能更易于调试某些问题，尽管这会降低性能。 如果正在使用“仅我的代码”，则取消 JIT 优化会导致非用户代码显示为用户代码（“我的代码”）。 有关详细信息，请参阅[JIT 优化和调试](../debugger/jit-optimization-and-debugging.md)。
 
-**启用适用于 ASP.NET 的 JavaScript 调试（Chrome、Edge 和 IE）** ：为 ASP.NET 应用启用脚本调试。 第一次在 Chrome 中使用时，可能需要登录到浏览器来启用已安装的 Chrome 扩展。 禁用此选项以恢复到旧行为。
+**启用适用于 ASP.NET 的 JavaScript 调试（Chrome、Edge 和 IE）**：为 ASP.NET 应用启用脚本调试。 第一次在 Chrome 中使用时，可能需要登录到浏览器来启用已安装的 Chrome 扩展。 禁用此选项以恢复到旧行为。
 
 **启动适用于 UWP JavaScript 应用（实验性）的 Edge 开发人员工具**: 在 Microsoft Edge 中启用适用于 UWP JavaScript 应用的开发人员工具。
 
@@ -107,7 +107,7 @@ ms.locfileid: "70987633"
 
 以管理员身份运行 Visual Studio 时，使用实验性方法启动 Chrome JavaScript 调试: 通知 Visual Studio 在 JavaScript 调试期间尝试新的启动 Chrome 的方式。
 
-**加载 dll 导出(限本机)** ：加载 DLL 导出表。 处理 Windows 消息、Windows 过程 (WindowProc)、COM 对象、封送或不具有其符号的任何 DLL 时，DLL 导出表中的符号信息将很有用。 读取 DLL 导出信息会占用一些系统开销。 因此，默认情况下此功能被禁用。
+**加载 dll 导出(限本机)**：加载 DLL 导出表。 处理 Windows 消息、Windows 过程 (WindowProc)、COM 对象、封送或不具有其符号的任何 DLL 时，DLL 导出表中的符号信息将很有用。 读取 DLL 导出信息会占用一些系统开销。 因此，默认情况下此功能被禁用。
 
 若要查看 DLL 导出表中的可用符号，请使用 `dumpbin /exports`。 符号可用于任何 32 位系统 DLL。 从 `dumpbin /exports` 输出中，可以查看到精确的函数名，包括非字母数字字符。 这对于在函数上设置断点很有用。 DLL 导出表中的函数名在调试器的其他位置似乎被截断了。 调用将按调用顺序列出，当前函数（嵌套最深的函数）位于顶端。 有关详细信息，请参阅 [dumpbin /exports](/cpp/build/reference/dash-exports)。
 
@@ -128,7 +128,7 @@ ms.locfileid: "70987633"
 
 使用自定义调试器可视化工具时，针对可能不安全的进程发出警告（仅限托管）: 如果使用自定义调试器可视化工具在调试的进程中运行代码，Visual Studio 会发出警告，因为该调试器可能运行不安全的代码。
 
-**启用 Windows 调试堆分配器(仅限本地)** ：启用 Windows 调试堆以改进堆诊断。 启用此选项会影响调试性能。
+**启用 Windows 调试堆分配器(仅限本地)**：启用 Windows 调试堆以改进堆诊断。 启用此选项会影响调试性能。
 
 **启用 XAML 的 UI 调试工具**：当开始调试 (F5) 支持的项目类型时，会显示实时可视化树和实时属性资源管理器窗口。 有关详细信息，请参阅[调试时检查 XAML 属性](../debugger/inspect-xaml-properties-while-debugging.md)。
 
@@ -142,20 +142,20 @@ ms.locfileid: "70987633"
 
 **在调试过程中显示运行时间 PerfTip**：在进行调试时，代码窗口会显示给定方法调用的运行时间。
 
-**启用“编辑并继续”** ：在调试时启用 "编辑并继续" 功能。
+**启用“编辑并继续”**：在调试时启用 "编辑并继续" 功能。
 
-- **启用本机“编辑并继续”** ：在调试本机 C++ 代码时，你可以使用“编辑并继续”功能。 有关详细信息，请参阅[编辑并继续 (Visual C++)](../debugger/edit-and-continue-visual-cpp.md)。
+- **启用本机“编辑并继续”**：在调试本机 C++ 代码时，你可以使用“编辑并继续”功能。 有关详细信息，请参阅[编辑并继续 (Visual C++)](../debugger/edit-and-continue-visual-cpp.md)。
 
-- **继续执行进程时应用更改（仅限本机）** : 从中断状态中恢复并继续执行进程时，Visual Studio 会自动编译并应用任何待执行的代码更改。 可选择使用“调试”菜单下的“应用代码更改”项来应用更改（如果尚未选择）。
+- **继续执行进程时应用更改（仅限本机）**: 从中断状态中恢复并继续执行进程时，Visual Studio 会自动编译并应用任何待执行的代码更改。 可选择使用“调试”菜单下的“应用代码更改”项来应用更改（如果尚未选择）。
 
-- **针对旧代码发出警告（仅限本机）** ： 收到关于陈旧代码的警告。
+- **针对旧代码发出警告（仅限本机）**： 收到关于陈旧代码的警告。
 
 **调试时在编辑器中显示“运行以单击”按钮**：选中此选项后，在调试时，将会显示[运行以单击](../debugger/debugger-feature-tour.md#run-to-a-point-in-your-code-quickly-using-the-mouse)按钮。
 
 **调试停止时自动关闭控制台**：通知 Visual Studio 在调试会话结束时关闭控制台。
 
 ::: moniker range=">= vs-2019" 
-**启用快速表达式计算（仅限托管）** ：允许调试器通过模拟简单属性和方法的执行来尝试更快速地进行评估。
+**启用快速表达式计算（仅限托管）**：允许调试器通过模拟简单属性和方法的执行来尝试更快速地进行评估。
 ::: moniker-end
 
 ## <a name="options-available-in-older-versions-of-visual-studio"></a>早期版本的 Visual Studio 中可用的选项
@@ -166,7 +166,7 @@ ms.locfileid: "70987633"
 
 **在未经处理的异常上展开调用堆栈**：导致“调用堆栈”窗口将调用堆栈回滚到未经处理的异常发生之前的时间点。
 
-**启动时若无符号则发出警告(仅限本机)** ：当调试器没有所调试程序的符号信息时，显示一个警告对话框。
+**启动时若无符号则发出警告(仅限本机)**：当调试器没有所调试程序的符号信息时，显示一个警告对话框。
 
 **如果启动时禁用了脚本调试，发出警告**：如果在启动调试器时禁用了脚本调试，则会显示警告对话框。
 
@@ -176,5 +176,5 @@ ms.locfileid: "70987633"
 
 ## <a name="see-also"></a>请参阅
 
-- [在 Visual Studio 中进行调试](../debugger/index.md)
+- [在 Visual Studio 中进行调试](../debugger/index.yml)
 - [初探调试器](../debugger/debugger-feature-tour.md)

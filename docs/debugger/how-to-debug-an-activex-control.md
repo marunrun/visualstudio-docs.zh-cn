@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c76167468d9eb6fbe93c3bef0c4ae8c15634fc5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c1d02cb4d581a7234ad2dd950fa51f46a5d128b2
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894425"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211082"
 ---
 # <a name="how-to-debug-an-activex-control"></a>如何：调试 ActiveX 控件
 
@@ -42,7 +42,7 @@ ms.locfileid: "62894425"
 
 1. 在“解决方案资源管理器”中，选择项目。
 
-2. 从**视图**菜单中，选择**属性页**。
+2. 从 "**视图**" 菜单中选择 "**属性页**"。
 
 3. 在“项目属性页”对话框中，打开“配置属性”文件夹并选定“调试”。
 
@@ -61,5 +61,5 @@ ms.locfileid: "62894425"
 - [ActiveX 控件](/cpp/mfc/activex-controls)
 - [使用测试容器测试属性和事件](/cpp/mfc/testing-properties-and-events-with-test-container)
 - [调试 COM 和 ActiveX](../debugger/com-and-activex-debugging.md)
-- [在 Visual Studio 中进行调试](../debugger/index.md)
+- [在 Visual Studio 中进行调试](../debugger/index.yml)
 - [初探调试器](../debugger/debugger-feature-tour.md)

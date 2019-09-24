@@ -1,6 +1,6 @@
 ---
-title: 调试托管的代码 |Microsoft Docs
-ms.date: 11/04/2016
+title: 调试托管代码 |Microsoft Docs
+ms.date: 09/23/2019
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -16,16 +16,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a5cf348b06bca6127690c7b5a7301881bdf75078
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c94de629026cfa1b78429aaf2209b81eead7da4f
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851871"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211198"
 ---
-# <a name="debugging-managed-code"></a>调试托管代码
+# <a name="debug-managed-code-c-visual-basic-f-ccli"></a>调试托管代码（C#，Visual Basic， F#， C++/cli）
 
-本节包含了托管应用程序或使用面向公共语言运行时的语言（如 Visual Basic、C# 和 C++）编写的应用程序的常见调试问题和调试技术。 此处介绍的技术都是高级技术。 [初探调试器](../debugger/debugger-feature-tour.md)。
+本部分介绍了托管应用程序的常见调试问题和技术，或以面向公共语言运行时的语言编写的应用程序， C#如 Visual Basic C++、和/cli 此处介绍的技术都是高级技术。 [初探调试器](../debugger/debugger-feature-tour.md)。
 
 ## <a name="in-this-section"></a>本节内容
 
@@ -47,7 +47,7 @@ ms.locfileid: "62851871"
 [混合模式调试](../debugger/debugging-mixed-mode-applications.md)\
 讨论调试混合模式的应用程序。 这表示合并本机代码和托管代码的任何应用程序。
 
-[错误：由于在系统上启用了内核调试器，因此，不可能调试](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)\
+[错误：由于系统上启用了内核调试程序，因此不可能进行调试](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)\
 描述当尝试在以调试模式启动的 [!INCLUDE[win7](../debugger/includes/win7_md.md)]、[!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)]、[!INCLUDE[winxp](../code-quality/includes/winxp_md.md)]、[!INCLUDE[Win2kFamily](../code-quality/includes/win2kfamily_md.md)] 或 Windows NT 系统上调试托管代码时出现的错误消息。
 
 [JIT 优化和调试](../debugger/jit-optimization-and-debugging.md)\
@@ -83,5 +83,5 @@ ms.locfileid: "62851871"
 
 - [演练：在设计时调试自定义 Windows 窗体控件](/dotnet/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time)
 - [调试器安全](../debugger/debugger-security.md)
-- [在 Visual Studio 中进行调试](../debugger/index.md)
+- [在 Visual Studio 中进行调试](../debugger/index.yml)
 - [初探调试器](../debugger/debugger-feature-tour.md)

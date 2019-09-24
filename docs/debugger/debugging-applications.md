@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b918559742e9570ba3ad0ad1233ab643d087fdd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 63d393e5ab056f16e54382b2295a667f079ede95
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62852249"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211166"
 ---
 # <a name="debugging-applications"></a>调试应用程序
 以下各节介绍了对不同类型的应用程序进行调试的信息。 不同类型的应用程序和编程语言，需要的设置和技术也会不同，需要调试的问题也不同。
@@ -27,11 +27,13 @@ ms.locfileid: "62852249"
 
 |||
 |-|-|
-|[调试 UWP 应用](../debugger/debugging-windows-store-and-windows-universal-apps.md)|描述如何调试 UWP 应用。|
-|[调试托管代码](../debugger/debugging-managed-code.md)|描述如何调试托管代码（Visual C#、Visual Basic 和 F3）。|
+|[调试 UWP 应用](../debugger/debugging-windows-store-and-windows-universal-apps.md)|介绍如何调试 UWP 应用。|
+|[调试托管代码](../debugger/debugging-managed-code.md)|描述如何调试托管代码（视觉对象C#、Visual Basic、 F#和C++/cli）。|
 |[调试本机代码](../debugger/debugging-native-code.md)|描述如何调试不同类型的本机 C ++ 应用程序。|
 |[调试 GPU 代码](../debugger/debugging-gpu-code.md)|描述如何调试在图形处理单元 (GPU) 上运行的 C++ 代码。|
 |[图形诊断（调试 DirectX 图形）](/visualstudio/debugger/graphics/visual-studio-graphics-diagnostics)|描述如何调试 DirectX 图形。|
-|[调试 ASP.NET 应用程序](../debugger/how-to-enable-debugging-for-aspnet-applications.md)|描述如何调试 ASP.NET 应用程序。|
+|[调试 ASP.NET 应用程序](../debugger/how-to-enable-debugging-for-aspnet-applications.md)|介绍如何调试 ASP.NET 应用程序。|
+|[调试 Python 代码](../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md)|描述如何调试 Python 代码|
+|[调试 JavaScript 和 TypeScript 应用程序](/javascript/debug-nodejs.md)|描述如何调试 JavaScript、TypeScript 和 node.js 应用程序|
 |[调试 Web 应用程序](../debugger/debugging-web-applications.md)|描述如何调试 Web 应用程序和脚本。|
 |[调试 WCF 服务](../debugger/debugging-wcf-services.md)|描述如何调试 Windows Communication Foundation 服务。|
