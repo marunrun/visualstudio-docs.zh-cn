@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d459e1c6611fa1b20e05ba2d5bd24e23750109d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 28757580b7f45e3d63cba1782f17283ad01f26c6
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62852178"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211050"
 ---
 # <a name="debugging-user-interface-reference"></a>调试用户界面参考
 您在调试应用程序时可能会遇到以下对话框。
@@ -43,6 +43,6 @@ ms.locfileid: "62852178"
 - [“调试错误和警告”对话框](../debugger/debugging-errors-and-warning-dialog-boxes.md)
 
 ## <a name="see-also"></a>请参阅
-- [在 Visual Studio 中进行调试](../debugger/index.md)
+- [在 Visual Studio 中进行调试](../debugger/index.yml)
 - [初探调试器](../debugger/debugger-feature-tour.md)
 - [“命令”窗口](../ide/reference/command-window.md)
