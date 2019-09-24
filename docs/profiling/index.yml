@@ -1,0 +1,60 @@
+### YamlMime:Landing
+title: 在 Visual Studio 中评估应用性能
+summary: 分析和诊断工具有助于诊断内存和 CPU 使用率以及其他应用程序级别问题。 借助这些工具，可以在运行应用程序时累积性能数据。
+metadata:
+  title: 在 Visual Studio 中度量性能
+  description: 了解如何通过 Visual Studio 使用分析工具来度量性能。
+  ms.topic: landing-page
+  author: mikejo5000
+  ms.author: mikejo
+  manager: jillfra
+  ms.date: 09/17/2019
+  ms.openlocfilehash: fcb3e40870d6f916cf754368359a90215ce1b665
+  ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 09/19/2019
+  ms.locfileid: "71130616"
+landingContent:
+- title: 关于分析
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 首先了解分析工具
+      url: profiling-feature-tour.md
+  - linkListType: concept
+    links:
+    - text: 运行分析工具的方法
+      url: running-profiling-tools-with-or-without-the-debugger.md
+- title: 入门
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: 分析 CPU 使用情况（C#、Visual Basic）
+      url: quickstart-cpu-usage-managed.md
+    - text: 分析 CPU 使用情况 (C++)
+      url: quickstart-cpu-usage-native.md
+    - text: 分析 CPU 使用情况 (ASP.NET)
+      url: quickstart-cpu-usage-aspnet.md
+  - linkListType: tutorial
+    links:
+    - text: 开始分析 CPU 使用情况
+      url: beginners-guide-to-performance-profiling.md
+    - text: 开始度量内存使用情况
+      url: beginners-guide-to-performance-profiling.md
+- title: 更多性能工具
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 性能提示
+      url: perftips.md
+    - text: 分析资源消耗情况 (XAML)
+      url: application-timeline.md
+    - text: 分析 GPU 使用情况 (Direct3D)
+      url: gpu-usage.md
+    - text: 分析网络使用情况 (UWP)
+      url: network-usage.md
+    - text: 分析能量使用情况 (UWP)
+      url: analyze-energy-use-in-store-apps.md
+    - text: 性能资源管理器（旧版）
+      url: performance-explorer.md
