@@ -1,5 +1,5 @@
 - name: 部署文档
-  href: index.md
+  href: index.yml
 - name: 概述
   items:
     - name: 部署概述
@@ -22,8 +22,8 @@
       items:
         - name: 使用发布工具部署 .NET Core 应用程序
           href: /dotnet/core/deploying/deploy-with-vs
-        - name: 为 Microsoft Store 打包桌面应用（桌面桥）
-          href: /windows/uwp/porting/desktop-to-uwp-packaging-dot-net
+        - name: 为 Microsoft Store 打包桌面应用
+          href: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
         - name: 使用 ClickOnce 部署桌面应用
           href: how-to-publish-a-clickonce-application-using-the-publish-wizard.md
         - name: 从命令行生成 ClickOnce 应用程序
@@ -38,14 +38,12 @@
           href: tutorial-import-publish-settings-azure.md
         - name: 使用 Git 将 ASP.NET Core 持续部署到 Azure
           href: /aspnet/core/publishing/azure-continuous-deployment
-        - name: 使用 Visual Studio Kubernetes 工具发布到 Kubernetes
-          href: ../containers/tutorial-kubernetes-tools.md?toc=/visualstudio/deployment/toc.json
     - name: C++
       items:
         - name: 部署 C/C++ 应用
           href: /cpp/ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project
-        - name: 为 Microsoft Store 打包桌面应用（桌面桥）
-          href: /windows/uwp/porting/desktop-to-uwp-packaging-dot-net
+        - name: 为 Microsoft Store 打包桌面应用
+          href: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
         - name: 使用 ClickOnce 部署 C++/CLR 应用...
           href: /cpp/ide/clickonce-deployment-for-visual-cpp-applications
     - name: UWP
@@ -80,7 +78,7 @@
               href: localizing-clickonce-applications.md
             - name: 发布具有特定区域设置的项目
               href: how-to-publish-a-project-that-has-a-specific-locale.md
-        - name: 安全
+        - name: 安全性
           items:
             - name: 保护 ClickOnce 应用程序
               href: securing-clickonce-applications.md
