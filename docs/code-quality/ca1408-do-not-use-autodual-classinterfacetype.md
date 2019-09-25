@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: b79483e8703ea297634d0d81d5449c09b58c9fb7
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: b26d92ca63a94cac7e293a688b1c7b3331586877
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68921988"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71234795"
 ---
 # <a name="ca1408-do-not-use-autodual-classinterfacetype"></a>CA1408:请不要使用 AutoDual ClassInterfaceType
 
@@ -31,24 +31,24 @@ ms.locfileid: "68921988"
 |TypeName|DoNotUseAutoDualClassInterfaceType|
 |CheckId|CA1408|
 |类别|Microsoft.Interoperability|
-|是否重大更改|重大|
+|重大更改|重大|
 
 ## <a name="cause"></a>原因
-组件对象模型 (COM) 可见类型被标记<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>为属性设置`AutoDual`为的值<xref:System.Runtime.InteropServices.ClassInterfaceType>。
+组件对象模型（COM）可见类型被标记<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>为属性设置`AutoDual`为的值<xref:System.Runtime.InteropServices.ClassInterfaceType>。
 
 ## <a name="rule-description"></a>规则说明
-使用双重接口的类型使客户端可以绑定到特定的接口布局。 如果在将来的版本中对该类型或任何基类型的布局进行更改，将中断绑定到该接口的 COM 客户端。 默认情况下, 如果<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>未指定属性, 则使用仅调度接口。
+使用双重接口的类型使客户端可以绑定到特定的接口布局。 如果在将来的版本中对该类型或任何基类型的布局进行更改，将中断绑定到该接口的 COM 客户端。 默认情况下，如果<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>未指定属性，则使用仅调度接口。
 
-除非另行标记, 否则所有公共非泛型类型都对 COM 可见;所有非公共和泛型类型对 COM 都不可见。
+除非另行标记，否则所有公共非泛型类型都对 COM 可见;所有非公共和泛型类型对 COM 都不可见。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
-若要修复与此规则的冲突, 请将<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>属性的值更改`None`为的值<xref:System.Runtime.InteropServices.ClassInterfaceType> , 并显式定义接口。
+若要修复与此规则的冲突，请将<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>属性的值更改`None`为的值<xref:System.Runtime.InteropServices.ClassInterfaceType> ，并显式定义接口。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
-请勿禁止显示此规则发出的警告, 除非确定类型及其基类型的布局在未来版本中将不会更改。
+请勿禁止显示此规则发出的警告，除非确定类型及其基类型的布局在未来版本中将不会更改。
 
 ## <a name="example"></a>示例
-下面的示例演示一个与规则冲突的类, 以及一个用于使用显式接口的类的重新声明。
+下面的示例演示一个与规则冲突的类，以及一个用于使用显式接口的类的重新声明。
 
 [!code-csharp[FxCop.Interoperability.AutoDual#1](../code-quality/codesnippet/CSharp/ca1408-do-not-use-autodual-classinterfacetype_1.cs)]
 [!code-vb[FxCop.Interoperability.AutoDual#1](../code-quality/codesnippet/VisualBasic/ca1408-do-not-use-autodual-classinterfacetype_1.vb)]

@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f9af307158ecd8d5a1f93ebd1f8575cad5cf51e5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f2729e74e3abf6be2ae5b17a836d920c1376decd
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62540854"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71236954"
 ---
 # <a name="ca5351-do-not-use-broken-cryptographic-algorithms"></a>CA5351 不使用损坏的加密算法
 
@@ -22,7 +22,7 @@ ms.locfileid: "62540854"
 |TypeName|DoNotUseBrokenCryptographicAlgorithms|
 |CheckId|CA5351|
 |类别|Microsoft.Cryptography|
-|是否重大更改|非重大更改|
+|重大更改|不间断|
 
 > [!NOTE]
 > 此警告上次更新于 2015 年 11 月。
@@ -35,7 +35,7 @@ ms.locfileid: "62540854"
 
 ## <a name="rule-description"></a>规则说明
 
-损坏的加密算法不安全，不鼓励继续使用。 尽管具体的漏洞因使用环境的不同而异，但 MD5 哈希算法仍易遭到已知的冲突攻击。  哈希算法用于确保数据完整性 （例如，文件签名或数字证书） 尤其易被攻击。  在这种情况下，攻击者可能会生成两个独立的数据块，以便在不更改哈希值或使相关数字签名无效的情况下，将良性数据替换为恶意数据。
+损坏的加密算法不安全，不鼓励继续使用。 尽管具体的漏洞因使用环境的不同而异，但 MD5 哈希算法仍易遭到已知的冲突攻击。  用于确保数据完整性的哈希算法（例如文件签名或数字证书）尤其易被攻击。  在这种情况下，攻击者可能会生成两个独立的数据块，以便在不更改哈希值或使相关数字签名无效的情况下，将良性数据替换为恶意数据。
 
 对于加密算法：
 
@@ -49,7 +49,7 @@ ms.locfileid: "62540854"
 
 使用更强大的加密选项：
 
-- 对于 MD5，请使用哈希[sha-2](/windows/desktop/SecCrypto/hash-and-signature-algorithms)系列 (例如， <xref:System.Security.Cryptography.SHA512>， <xref:System.Security.Cryptography.SHA384>， <xref:System.Security.Cryptography.SHA256>)。
+- 对于 MD5，请使用[sha-1](/windows/desktop/SecCrypto/hash-and-signature-algorithms)系列中的哈希（例如<xref:System.Security.Cryptography.SHA512> <xref:System.Security.Cryptography.SHA384> <xref:System.Security.Cryptography.SHA256>、、）。
 
 - 对于 DES 和 RC2，请使用 <xref:System.Security.Cryptography.Aes> 加密。
 
@@ -59,7 +59,7 @@ ms.locfileid: "62540854"
 
 ## <a name="pseudo-code-examples"></a>伪代码示例
 
-下面的伪代码示例演示了此规则和可能的替代检测到的模式。
+下面的伪代码示例说明了此规则检测到的模式和可能的替代方法。
 
 ### <a name="md5-hashing-violation"></a>MD5 哈希冲突
 

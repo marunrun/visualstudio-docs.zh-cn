@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a047ec190652e3559e8bf83fe14834ed95d8a69
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 53d049cad426201a8aaa48662061a4a424116b26
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68920114"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237932"
 ---
 # <a name="ca2237-mark-iserializable-types-with-serializableattribute"></a>CA2237:用 SerializableAttribute 标记 ISerializable 类型
 
@@ -31,19 +31,19 @@ ms.locfileid: "68920114"
 |TypeName|MarkISerializableTypesWithSerializable|
 |CheckId|CA2237|
 |类别|Microsoft.Usage|
-|是否重大更改|非重大更改|
+|重大更改|不间断|
 
 ## <a name="cause"></a>原因
-外部可见类型实现<xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>接口, 且类型没有<xref:System.SerializableAttribute?displayProperty=fullName>用特性标记。 规则将忽略基类型无法序列化的派生类型。
+外部可见类型实现<xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>接口，且类型没有<xref:System.SerializableAttribute?displayProperty=fullName>用特性标记。 规则将忽略基类型无法序列化的派生类型。
 
 ## <a name="rule-description"></a>规则说明
-要由公共语言运行时识别为可序列化, 即使类型通过实现<xref:System.SerializableAttribute> <xref:System.Runtime.Serialization.ISerializable>接口使用自定义序列化例程, 也必须用特性标记类型。
+要由公共语言运行时识别为可序列化，即使类型通过实现<xref:System.SerializableAttribute> <xref:System.Runtime.Serialization.ISerializable>接口使用自定义序列化例程，也必须用特性标记类型。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
-若要修复与此规则的冲突, 请<xref:System.SerializableAttribute>将属性应用于该类型。
+若要修复与此规则的冲突，请<xref:System.SerializableAttribute>将属性应用于该类型。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
-请勿禁止显示此规则中的异常类的警告, 因为它们必须是可序列化的, 才能在应用程序域间正常工作。
+请勿禁止显示此规则中的异常类的警告，因为它们必须是可序列化的，才能在应用程序域间正常工作。
 
 ## <a name="example"></a>示例
 下面的示例演示违反规则的类型。 取消对<xref:System.SerializableAttribute>特性行的注释以满足规则。

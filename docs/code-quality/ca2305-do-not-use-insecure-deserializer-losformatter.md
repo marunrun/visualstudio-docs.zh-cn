@@ -1,5 +1,5 @@
 ---
-title: CA2305:不要使用不安全反序列化程序 losformatter 将其中
+title: CA2305：请勿使用不安全的反序列化程序 LosFormatter
 ms.date: 05/01/2019
 ms.topic: reference
 author: dotpaul
@@ -13,25 +13,25 @@ ms.workload:
 f1_keywords:
 - CA2305
 - DoNotUseInsecureDeserializerLosFormatter
-ms.openlocfilehash: 4e589bbea53dd6a73a6e6e4fc44b6cb397d6dcbd
-ms.sourcegitcommit: db30651dc0ce4d0b274479b23a6bd102a5559098
+ms.openlocfilehash: 145d45d79f1dda27d5c69f0c481277572d3eeaa2
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65135455"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237732"
 ---
-# <a name="ca2305-do-not-use-insecure-deserializer-losformatter"></a>CA2305:不要使用不安全反序列化程序 losformatter 将其中
+# <a name="ca2305-do-not-use-insecure-deserializer-losformatter"></a>CA2305：请勿使用不安全的反序列化程序 LosFormatter
 
 |||
 |-|-|
 |TypeName|DoNotUseInsecureDeserializerLosFormatter|
 |CheckId|CA2305|
 |类别|Microsoft.Security|
-|是否重大更改|非重大更改|
+|重大更改|不间断|
 
 ## <a name="cause"></a>原因
 
-一个<xref:System.Web.UI.LosFormatter?displayProperty=nameWithType>反序列化方法是调用或引用。
+调用<xref:System.Web.UI.LosFormatter?displayProperty=nameWithType>或引用了反序列化方法。
 
 ## <a name="rule-description"></a>规则说明
 

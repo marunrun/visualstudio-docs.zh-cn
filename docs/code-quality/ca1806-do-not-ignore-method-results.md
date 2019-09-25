@@ -16,12 +16,12 @@ dev_langs:
 - CSharp
 - VB
 manager: jillfra
-ms.openlocfilehash: 2e68fb6b4c40c165a09ae2631a2ad0a64bf52fbc
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 2bf4833aebdb6a92b9bd05294dd314dc2967738e
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68921554"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71233676"
 ---
 # <a name="ca1806-do-not-ignore-method-results"></a>CA1806:不要忽略方法结果
 
@@ -30,38 +30,38 @@ ms.locfileid: "68921554"
 |TypeName|DoNotIgnoreMethodResults|
 |CheckId|CA1806|
 |类别|Microsoft.Usage|
-|是否重大更改|非重大更改|
+|重大更改|不间断|
 
 ## <a name="cause"></a>原因
 
-此警告有几个可能的原因:
+此警告有几个可能的原因：
 
-- 创建了一个新的对象, 但从未使用过。
+- 创建了一个新的对象，但从未使用过。
 
-- 将调用一个创建并返回一个新字符串的方法, 并且永远不会使用新的字符串。
+- 将调用一个创建并返回一个新字符串的方法，并且永远不会使用新的字符串。
 
-- COM 或 P/Invoke 方法, 它返回从未使用过的 HRESULT 或错误代码。 规则说明
+- COM 或 P/Invoke 方法，它返回从未使用过的 HRESULT 或错误代码。 规则说明
 
 不必要的对象创建和未使用对象的关联垃圾回收会降低性能。
 
-字符串是不可变的, ToUpper 返回字符串的新实例, 而不是在调用方法中修改字符串的实例。
+字符串是不可变的，ToUpper 返回字符串的新实例，而不是在调用方法中修改字符串的实例。
 
 忽略 HRESULT 或错误代码可能导致在错误情况下或资源不足的情况下出现意外的行为。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
-如果方法 A 创建从未使用的 B 对象的新实例, 则将该实例作为参数传递给另一个方法, 或将该实例分配给一个变量。 如果不需要创建对象, 则将其删除。-或-
+如果方法 A 创建从未使用的 B 对象的新实例，则将该实例作为参数传递给另一个方法，或将该实例分配给一个变量。 如果不需要创建对象，则将其删除。-或-
 
-如果方法 A 调用方法 B, 但不使用方法 B 返回的新字符串实例, 则为。 将该实例作为参数传递给其他方法, 并将该实例分配给一个变量。 如果不需要, 则删除该调用。
+如果方法 A 调用方法 B，但不使用方法 B 返回的新字符串实例，则为。 将该实例作为参数传递给其他方法，并将该实例分配给一个变量。 如果不需要，则删除该调用。
 
- 或
+ -或-
 
-如果方法 A 调用方法 B, 但不使用该方法返回的 HRESULT 或错误代码, 则为。 在条件语句中使用结果, 将结果赋给变量, 或将其作为参数传递给其他方法。
+如果方法 A 调用方法 B，但不使用该方法返回的 HRESULT 或错误代码，则为。 在条件语句中使用结果，将结果赋给变量，或将其作为参数传递给其他方法。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
-请勿禁止显示此规则发出的警告, 除非创建对象的行为可用于实现某些目的。
+请勿禁止显示此规则发出的警告，除非创建对象的行为可用于实现某些目的。
 
 ## <a name="example"></a>示例
-下面的示例演示一个类, 该类忽略调用字符串的结果。
+下面的示例演示一个类，该类忽略调用字符串的结果。
 
 [!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults3#1](../code-quality/codesnippet/CSharp/ca1806-do-not-ignore-method-results_1.cs)]
 [!code-vb[FxCop.Usage.DoNotIgnoreMethodResults3#1](../code-quality/codesnippet/VisualBasic/ca1806-do-not-ignore-method-results_1.vb)]

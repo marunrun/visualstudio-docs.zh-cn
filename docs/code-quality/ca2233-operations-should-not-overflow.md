@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c07dde4c3b992db30c9fc72a0dfa01f0f13b31e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b99aae681dbe7bbeece557a15d78aed0b3f07f6f
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62806597"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71230822"
 ---
 # <a name="ca2233-operations-should-not-overflow"></a>CA2233:运算不应溢出
 
@@ -31,32 +31,32 @@ ms.locfileid: "62806597"
 |TypeName|OperationsShouldNotOverflow|
 |CheckId|CA2233|
 |类别|Microsoft.Usage|
-|是否重大更改|非重大更改|
+|重大更改|不间断|
 
 ## <a name="cause"></a>原因
 
-某方法执行的算术运算，并且不会验证事先操作数以防止溢出。
+方法执行算术运算，而不事先验证操作数以防止溢出。
 
 ## <a name="rule-description"></a>规则说明
 
-请不要在没有首先验证操作数以确保操作的结果不涉及的数据类型的可能值的范围之外执行算术运算。 根据执行上下文和涉及的数据类型，算术溢出可能导致在<xref:System.OverflowException?displayProperty=fullName>或放弃结果的最高有效位。
+不要首先验证操作数，就不要执行算术运算，以确保运算结果不在涉及的数据类型的可能值范围之外。 根据执行上下文和所涉及的数据类型的不同，算术溢出会导致<xref:System.OverflowException?displayProperty=fullName>或结果的最高有效位被丢弃。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-若要修复此规则的冲突，请验证操作数之前执行该操作。
+若要修复与此规则的冲突，请在执行操作之前验证操作数。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
-它可以安全地禁止显示此规则的警告，如果操作数的可能的值将永远不会导致算术运算溢出。
+如果操作数的可能值永远不会导致算术运算溢出，则可以安全地禁止显示此规则发出的警告。
 
-## <a name="example-of-a-violation"></a>冲突的示例
+## <a name="example-of-a-violation"></a>冲突示例
 
-下面的示例中的方法可操作违反了此规则的整数。 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 需要**删除**整数溢出选项禁用此激发。
+下面的示例中的方法操作了违反此规则的整数。 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]需要禁用**删除**整数溢出选项，此选项才会激发。
 
 [!code-vb[FxCop.Usage.OperationOverflow#1](../code-quality/codesnippet/VisualBasic/ca2233-operations-should-not-overflow_1.vb)]
 [!code-csharp[FxCop.Usage.OperationOverflow#1](../code-quality/codesnippet/CSharp/ca2233-operations-should-not-overflow_1.cs)]
 
-如果在此示例中该方法传递<xref:System.Int32.MinValue?displayProperty=fullName>，则操作将下溢。 这会导致要放弃的结果的最高有效位。 下面的代码演示如何发生这种情况。
+如果传递<xref:System.Int32.MinValue?displayProperty=fullName>本示例中的方法，则操作将下溢。 这会导致放弃结果的最高有效位。 下面的代码演示了这种情况。
 
 ```csharp
 public static void Main()
@@ -81,32 +81,32 @@ End Sub
 2147483647
 ```
 
-## <a name="fix-with-input-parameter-validation"></a>使用输入的参数验证修复
+## <a name="fix-with-input-parameter-validation"></a>修复了输入参数验证
 
-下面的示例通过验证输入的值来修复了上一冲突。
+下面的示例通过验证输入的值修复了之前的冲突。
 
 [!code-csharp[FxCop.Usage.OperationOverflowFixed#1](../code-quality/codesnippet/CSharp/ca2233-operations-should-not-overflow_2.cs)]
 [!code-vb[FxCop.Usage.OperationOverflowFixed#1](../code-quality/codesnippet/VisualBasic/ca2233-operations-should-not-overflow_2.vb)]
 
-## <a name="fix-with-a-checked-block"></a>Checked 块修复
+## <a name="fix-with-a-checked-block"></a>使用 Checked 块修复
 
-下面的示例通过选中块中包装操作修复了上一冲突。 如果该操作会导致溢出时，<xref:System.OverflowException?displayProperty=fullName>将引发。
+下面的示例通过在已检查的块中包装操作来修复前面的冲突。 如果操作导致溢出， <xref:System.OverflowException?displayProperty=fullName>将引发。
 
-Checked 的块中不支持[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]。
+检查的块在中[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]不受支持。
 
 [!code-csharp[FxCop.Usage.OperationOverflowChecked#1](../code-quality/codesnippet/CSharp/ca2233-operations-should-not-overflow_3.cs)]
 
-## <a name="turn-on-checked-arithmetic-overflowunderflow"></a>开启检查算术上溢/下溢
+## <a name="turn-on-checked-arithmetic-overflowunderflow"></a>打开选中的算术溢出/下溢
 
-如果您打开已检查算术上溢/下溢 C# 中，相当于选中块中包装每个整数操作。
+如果在中C#打开选中的算术溢出/下溢，则等效于在已检查的块中包装每个整数操作。
 
-若要启用检查算术上溢/下溢 C# 中：
+若要在中C#打开选中的算术溢出/下溢：
 
-1. 在中**解决方案资源管理器**，右键单击项目，然后选择**属性**。
+1. 在**解决方案资源管理器**中，右键单击项目，然后选择 "**属性**"。
 
 2. 选择“生成”选项卡，然后单击“高级”。
 
-3. 选择**检查算术上溢/下溢**然后单击**确定**。
+3. 选择 "**检查算术溢出/下溢**" 并单击 **"确定"** 。
 
 ## <a name="see-also"></a>请参阅
 

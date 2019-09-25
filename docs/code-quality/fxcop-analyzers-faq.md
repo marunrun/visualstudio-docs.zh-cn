@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4dec35fb978b3c751e07cb6d0612ff5da27c74e5
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 42581e632c08550fce3cd685949401a155a060f6
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551118"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253182"
 ---
 # <a name="frequently-asked-questions-about-fxcop-and-fxcop-analyzers"></a>有关 FxCop 和 FxCop 分析器的常见问题解答
 
@@ -31,7 +31,7 @@ FxCop 分析器基于 .NET Compiler Platform（“Roslyn”）。 [将它们安�
 
 ## <a name="does-the-run-code-analysis-command-run-fxcop-analyzers"></a>“运行代码分析”命令是否运行 FxCop 分析器？
 
-不是。 当你选择 "**分析** > **运行代码分析**" 时, 它会执行旧式分析。 “运行代码分析”对基于 Roslyn 的分析器没有影响，包括基于 Roslyn 的 FxCop 分析器。
+不是。 当你选择 "**分析** > **运行代码分析**" 时，它会执行旧式分析。 “运行代码分析”对基于 Roslyn 的分析器没有影响，包括基于 Roslyn 的 FxCop 分析器。
 
 ## <a name="does-the-runcodeanalysis-msbuild-project-property-run-analyzers"></a>RunCodeAnalysis msbuild 项目属性是否运行分析器？
 
@@ -43,7 +43,7 @@ FxCop 分析器基于 .NET Compiler Platform（“Roslyn”）。 [将它们安�
 
 ## <a name="i-get-warning-ca0507-even-after-ive-installed-the-fxcop-analyzers-nuget-package"></a>即使在安装了 FxCop 分析器 NuGet 包之后，我仍会收到 CA0507 警告
 
-如果已安装 FxCop 分析器，但继续收到“‘运行代码分析’已被弃用，以支持在生成期间运行的 FxCop 分析器”的 CA0507 警告，可能需要将项目文件中的“RunCodeAnalysis”msbuild 属性设置为“false”。 否则, 将在每次生成后执行旧式分析。
+如果已安装了 FxCop 分析器但继续获取警告 CA0507 **"运行代码分析" 已弃用（在生成过程中运行**），则可能需要在项目中设置**RunCodeAnalysis** msbuild 属性[文件](../ide/solutions-and-projects-in-visual-studio.md#project-file)设置为**false**。 否则，将在每次生成后执行旧式分析。
 
 ```xml
 <RunCodeAnalysis>false</RunCodeAnalysis>
@@ -51,7 +51,7 @@ FxCop 分析器基于 .NET Compiler Platform（“Roslyn”）。 [将它们安�
 
 ## <a name="which-rules-have-been-ported-to-fxcop-analyzers"></a>哪些规则已移植到 FxCop 分析器？
 
-有关哪些旧分析规则已移植到[FxCop 分析器](install-fxcop-analyzers.md)的信息, 请参阅[fxcop 规则端口状态](fxcop-rule-port-status.md)。
+有关哪些旧分析规则已移植到[FxCop 分析器](install-fxcop-analyzers.md)的信息，请参阅[fxcop 规则端口状态](fxcop-rule-port-status.md)。
 
 ## <a name="see-also"></a>请参阅
 

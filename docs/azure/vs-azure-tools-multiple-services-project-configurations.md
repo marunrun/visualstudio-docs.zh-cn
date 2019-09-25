@@ -9,18 +9,18 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: dfb58c9eabb135b69033c065fa606511043a2c8b
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
-ms.translationtype: HT
+ms.openlocfilehash: 5314e92065cb29691aca75d424a331d10284a558
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66260654"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253432"
 ---
 # <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>使用多种服务配置来配置 Visual Studio 中的 Azure 项目
 
 Visual Studio 中的 Azure 云服务项目包括三个配置文件：`ServiceDefinition.csdef`、`ServiceConfiguration.Local.cscfg` 和 `ServiceConfiguration.Cloud.cscfg`。
 
-- `ServiceDefinition.csdef` 部署到 Azure 来描述云服务及其角色的要求，并提供适用于所有实例的设置。 可以在运行时使用 Azure 服务托管运行时 API 读取这些设置。 只有当云服务停止时，才可以在 Azure 上更新此文件。
+- `ServiceDefinition.csdef` 部署到 Azure 来描述云服务及其角色的要求，并提供适用于所有实例的设置。 可以在运行时使用 Azure 服务托管运行时 API 读取设置。 只有当云服务停止时，才可以在 Azure 上更新此文件。
 - `ServiceConfiguration.Local.cscfg` 和 `ServiceConfiguration.Cloud.cscfg` 为定义文件中的设置提供值，并为每个角色指定要运行的实例数。 “本地”文件包含在本地调试中使用的值；“云”文件作为 `ServiceConfiguration.cscfg` 部署到 Azure，并提供针对服务器环境的设置。 在 Azure 中运行云服务时，可以更新此文件。
 
 在 Visual Studio 中，使用适用角色的属性页面来管理和修改配置设置（右键单击角色并选择“属性”，或双击角色）。 可将更改范围限定为在“服务配置”下拉列表中所选择的任何配置。 除了以下各节所描述的内容以外，Web 角色和辅助角色的属性是很相似的。
@@ -55,7 +55,7 @@ Visual Studio 中的 Azure 云服务项目包括三个配置文件：`ServiceDef
 
 ## <a name="settings-page"></a>“设置”页
 
-在“设置”页上，可以将设置以名称/值对形式添加到配置中。 角色中运行的代码可以使用 [Azure 托管库](http://go.microsoft.com/fwlink?LinkID=171026)提供的类（具体而言，[GetConfigurationSettingValue](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleenvironment.getconfigurationsettingvalue.aspx) 方法），在运行时读取配置设置的值。
+在“设置”页上，可以将设置以名称/值对形式添加到配置中。 在角色中运行的代码可以使用[Azure 托管库](http://go.microsoft.com/fwlink?LinkID=171026)提供的类（特别是[GetConfigurationSettingValue](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleenvironment.getconfigurationsettingvalue.aspx)方法）在运行时读取配置设置的值。
 
 ### <a name="configuring-a-connection-string-for-a-storage-account"></a>为存储帐户配置连接字符串
 

@@ -10,12 +10,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 603dc08650ca5e54cac3f590f5d32de98e3ae5da
-ms.sourcegitcommit: 2ee11676af4f3fc5729934d52541e9871fb43ee9
+ms.openlocfilehash: bd454ffad1efc9d7df84d88630fe71eebc8ca6fc
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65841463"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71238124"
 ---
 # <a name="ca3001-review-code-for-sql-injection-vulnerabilities"></a>CA3001：查看 SQL 注入漏洞的代码
 
@@ -24,7 +24,7 @@ ms.locfileid: "65841463"
 |TypeName|ReviewCodeForSqlInjectionsVulnerabilities|
 |CheckId|CA3001|
 |类别|Microsoft.Security|
-|是否重大更改|非重大更改|
+|重大更改|不间断|
 
 ## <a name="cause"></a>原因
 
@@ -32,23 +32,23 @@ ms.locfileid: "65841463"
 
 ## <a name="rule-description"></a>规则说明
 
-在使用时不受信任的输入和 SQL 命令，请注意 SQL 注入式攻击。 SQL 注入攻击可以执行恶意 SQL 命令，牺牲安全性和完整性的应用程序。 典型的方法包括使用单个引号或撇号分隔文本字符串，两个短划线注释，并使用分号的语句的末尾。 有关详细信息，请参阅[SQL 注入](/sql/relational-databases/security/sql-injection)。
+使用不受信任的输入和 SQL 命令时，请注意 SQL 注入攻击。 SQL 注入攻击可以执行恶意的 SQL 命令，从而降低应用程序的安全性和完整性。 典型的技术包括对分隔文本字符串使用单引号或撇号，为注释提供两个短划线，将分号用于语句的末尾。 有关详细信息，请参阅[SQL 注入](/sql/relational-databases/security/sql-injection)。
 
-此规则会尝试查找与 HTTP 请求到达 SQL 命令的文本输入。
-
-> [!NOTE]
-> 此规则不能跨程序集跟踪数据。 例如，如果一个程序集读取 HTTP 请求输入，然后将其传递给执行 SQL 命令的另一个程序集，此规则不会生成一条警告。
+此规则尝试从发出 SQL 命令文本的 HTTP 请求查找输入。
 
 > [!NOTE]
-> 没有可配置限制深度此规则将分析数据流，在方法调用之间。 请参阅[分析器的配置](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md#dataflow-analysis)了解用于某个 EditorConfig 文件中配置限制。
+> 此规则无法跟踪程序集中的数据。 例如，如果一个程序集读取 HTTP 请求输入，然后将其传递给执行 SQL 命令的另一个程序集，则此规则不会产生警告。
+
+> [!NOTE]
+> 此规则将跨方法调用分析数据流的程度有可配置的限制。 有关如何在 EditorConfig 文件中配置限制的说明，请参阅[分析器配置](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md#dataflow-analysis)。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-包含不受信任的输入参数中使用参数化的 SQL 命令或存储的过程。
+使用参数化的 SQL 命令或存储过程，其中的参数包含不受信任的输入。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
-它可以安全地禁止显示此规则的警告，如果知道输入始终验证一组已知安全的字符。
+如果你知道始终针对已知的安全字符集验证输入，则可以安全地禁止显示此规则发出的警告。
 
 ## <a name="pseudo-code-examples"></a>伪代码示例
 
@@ -107,7 +107,7 @@ Namespace VulnerableWebApp
 End Namespace
 ```
 
-### <a name="parameterized-solution"></a>参数化的解决方案
+### <a name="parameterized-solution"></a>参数化解决方案
 
 ```csharp
 using System;
@@ -165,7 +165,7 @@ Namespace VulnerableWebApp
 End Namespace
 ```
 
-### <a name="stored-procedure-solution"></a>存储的过程的解决方案
+### <a name="stored-procedure-solution"></a>存储过程解决方案
 
 ```csharp
 using System;

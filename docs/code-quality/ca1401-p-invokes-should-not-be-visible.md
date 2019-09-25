@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: e26daf68e0031358605427b310bb7284d43baf1b
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: d4a0a1c001407d947988497c422fdb8e88dd7c83
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68922138"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71234897"
 ---
 # <a name="ca1401-pinvokes-should-not-be-visible"></a>CA1401:P/Invokes 应该是不可见的
 
@@ -31,16 +31,16 @@ ms.locfileid: "68922138"
 |TypeName|PInvokesShouldNotBeVisible|
 |CheckId|CA1401|
 |类别|Microsoft.Interoperability|
-|是否重大更改|重大|
+|重大更改|重大|
 
 ## <a name="cause"></a>原因
-公共类型中的公共或受保护方法具有<xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>特性 (也在中`Declare` [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]由关键字实现)。
+公共类型中的公共或受保护方法具有<xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>特性（也在中`Declare` [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]由关键字实现）。
 
 ## <a name="rule-description"></a>规则说明
-使用<xref:System.Runtime.InteropServices.DllImportAttribute>特性 (或中`Declare` [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]使用关键字定义的方法) 标记的方法使用平台调用服务来访问非托管代码。 这些方法不能公开。 通过使这些方法保持私有或内部, 你可以通过允许调用方访问不能调用的非托管 Api 来确保你的库不能用于破坏安全性。
+使用<xref:System.Runtime.InteropServices.DllImportAttribute>特性（或中`Declare` [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]使用关键字定义的方法）标记的方法使用平台调用服务来访问非托管代码。 这些方法不能公开。 通过使这些方法保持私有或内部，你可以通过允许调用方访问不能调用的非托管 Api 来确保你的库不能用于破坏安全性。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
-若要修复与此规则的冲突, 请更改该方法的访问级别。
+若要修复与此规则的冲突，请更改该方法的访问级别。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 不禁止显示此规则发出的警告。

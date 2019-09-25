@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f6f40308255e0496b2bcccddf4299e83ea93100
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: e9582fb6bbdbda8aefbb60e2c69d16380eec3dff
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68922043"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71234746"
 ---
 # <a name="ca1411-com-registration-methods-should-not-be-visible"></a>CA1411:COM 注册方法应该是不可见的
 
@@ -31,17 +31,17 @@ ms.locfileid: "68922043"
 |TypeName|ComRegistrationMethodsShouldNotBeVisible|
 |CheckId|CA1411|
 |类别|Microsoft.Interoperability|
-|是否重大更改|重大|
+|重大更改|重大|
 
 ## <a name="cause"></a>原因
 
 <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName> 用<xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName>或特性标记的方法在外部可见。
 
 ## <a name="rule-description"></a>规则说明
-当向组件对象模型 (COM) 注册程序集时, 会将项添加到程序集中每个 COM 可见类型的注册表中。 标记有<xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute>和<xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute>特性的方法将分别在注册和注销过程中调用, 以运行特定于这些类型的注册/注销的用户代码。 不应在这些进程外调用此代码。
+当向组件对象模型（COM）注册程序集时，会将项添加到程序集中每个 COM 可见类型的注册表中。 标记有<xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute>和<xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute>特性的方法将分别在注册和注销过程中调用，以运行特定于这些类型的注册/注销的用户代码。 不应在这些进程外调用此代码。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
-若要修复与此规则的冲突, 请将方法的可访问`private`性`internal`更改为[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]或 (`Friend`在中为)。
+若要修复与此规则的冲突，请将方法的可访问`private`性`internal`更改为[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]或（`Friend`在中为）。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 不禁止显示此规则发出的警告。

@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5c1038d0d7e7d20c28cdd0cb52804461376a4e89
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 385b2d451d8202356d56ab7b1a5fd5158d267f1c
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551710"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253738"
 ---
 # <a name="office-primary-interop-assemblies"></a>Office 主互操作程序集
 
@@ -37,7 +37,7 @@ ms.locfileid: "69551710"
 
 - [Microsoft Office 应用程序的主互操作程序集的完整列表](#pialist)
 
-有关主互操作程序集的详细信息, 请参阅[主互操作程序集](/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))。
+有关主互操作程序集的详细信息，请参阅[主互操作程序集](/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))。
 
 <a name="separateassemblies"></a>
 
@@ -59,21 +59,21 @@ Visual Studio 在开发计算机上使用不同的 PIA 集。 这些不同的程
 
 这些 PIA 副本帮助 Visual Studio 避免在全局程序集缓存中注册 PIA 的不同版本时可能发生的多种开发问题。
 
-从 Visual Studio 2017 开始, 这些 Pia 副本安装在开发计算机上的下列共享位置:
+从 Visual Studio 2017 开始，这些 Pia 副本安装在开发计算机上的下列共享位置：
 
 - *%ProgramFiles%\Microsoft Visual Studio\Shared\Visual Studio Tools for Office\PIA\*
 
-- (或 *% ProgramFiles (x86)% \ Microsoft Visual Studio\Shared\Visual Studio Tools for Office\PIA\* on 64 位操作系统)
+- （或 *% ProgramFiles （x86）% \ Microsoft Visual Studio\Shared\Visual Studio Tools for Office\PIA\* on 64 位操作系统）
 
 > [!NOTE]
-> 对于较旧版本的 Visual Studio, 这些 Pia 将安装到该版本的 Visual Studio 的 *% ProgramFiles% 文件夹下的 Visual Studio Tools Office\PIA "文件夹中。  
-> 例如: *% ProgramFiles (x86)% \ Microsoft Visual Studio 14.0 \ Visual Studio Tools 用于 Office\PIA\*
+> 对于较旧版本的 Visual Studio，这些 Pia 将安装到该版本的 Visual Studio 的 *% ProgramFiles% 文件夹下的 Visual Studio Tools Office\PIA "文件夹中。
+> 例如： *% ProgramFiles （x86）% \ Microsoft Visual Studio 14.0 \ Visual Studio Tools 用于 Office\PIA\*
 
 ### <a name="primary-interop-assemblies-in-the-global-assembly-cache"></a>全局程序集缓存中的主互操作程序集
 
-若要执行某些开发任务，必须在开发计算机上的全局程序集缓存中安装并注册 PIA。 通常，在开发计算机上安装 Office 时会自动安装 PIA。 有关详细信息, 请参阅[配置计算机以开发 Office 解决方案](../vsto/configuring-a-computer-to-develop-office-solutions.md)。
+若要执行某些开发任务，必须在开发计算机上的全局程序集缓存中安装并注册 PIA。 通常，在开发计算机上安装 Office 时会自动安装 PIA。 有关详细信息，请参阅[配置计算机以开发 Office 解决方案](../vsto/configuring-a-computer-to-develop-office-solutions.md)。
 
-若要运行 Office 解决方案，无需在最终用户计算机上安装 Office PIA。 有关详细信息, 请参阅[设计和创建 Office 解决方案](../vsto/designing-and-creating-office-solutions.md)。
+若要运行 Office 解决方案，无需在最终用户计算机上安装 Office PIA。 有关详细信息，请参阅[设计和创建 Office 解决方案](../vsto/designing-and-creating-office-solutions.md)。
 
 <a name="usingfeatures"></a>
 
@@ -81,12 +81,12 @@ Visual Studio 在开发计算机上使用不同的 PIA 集。 这些不同的程
 
 Visual Studio 中的每个 Office 项目模板旨在与单个 Microsoft Office 应用程序配合使用。 若要使用多个 Microsoft Office 应用程序的功能，或者使用 Visual Studio 中没有项目的应用程序或组件的功能，必须添加对所需 PIA 的引用。
 
-在大多数情况下, 应添加对 Visual Studio 安装在`%ProgramFiles(x86)%\Microsoft Visual Studio\Shared\Visual Studio Tools for Office\PIA\`目录下的 pia 的引用。 这些版本的程序集显示在 "**引用管理器**" 对话框的 "**框架**" 选项卡上。 有关详细信息，请参阅[如何：通过主互操作程序集](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)面向 Office 应用程序。
+在大多数情况下，应添加对 Visual Studio 安装在`%ProgramFiles(x86)%\Microsoft Visual Studio\Shared\Visual Studio Tools for Office\PIA\`目录下的 pia 的引用。 这些版本的程序集显示在 "**引用管理器**" 对话框的 "**框架**" 选项卡上。 有关详细信息，请参阅[如何：通过主互操作程序集](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)面向 Office 应用程序。
 
 如果你在全局程序集缓存中安装并注册了 PIA，则这些版本的程序集显示在 **“引用管理器”** 对话框的 **“COM”** 选项卡上。 你应当避免添加对这些版本的程序集的引用，因为使用它们时可能会出现某些开发问题。 例如，如果你在全局程序集缓存中注册了 PIA 的不同版本，则项目将自动绑定到你最后一次注册的程序集版本，即使在 **“引用管理器”** 对话框的 **“COM”** 选项卡上指定了其他程序集版本也是如此。
 
 > [!NOTE]
-> 添加一个引用某些程序集的程序集时，这些被引用的程序集将自动添加到项目中。 例如, 当你添加对 Word、Excel、Outlook、Microsoft Forms 或 Graph 程序集的引用时, 将自动添加对*Office .dll*程序集和*microsoft.*
+> 添加一个引用某些程序集的程序集时，这些被引用的程序集将自动添加到项目中。 例如，当你添加对 Word、Excel、Outlook、Microsoft Forms 或 Graph 程序集的引用时，将自动添加对*Office .dll*程序集和*microsoft.*
 
 <a name="pialist"></a>
 
@@ -112,7 +112,7 @@ Visual Studio 中的每个 Office 项目模板旨在与单个 Microsoft Office �
 |Microsoft Publisher 14.0 对象库<br /><br /> Microsoft Publisher 15.0 对象库|Microsoft.Office.Interop.Publisher.dll|
 |Microsoft SharePoint Designer 14.0 Web 对象引用库|Microsoft.Office.Interop.SharePointDesigner.dll|
 |Microsoft SharePoint Designer 14.0 Page 对象引用库|Microsoft.Office.Interop.SharePointDesignerPage.dll|
-|Microsoft 智能标记2.0 类型库**说明:** 在 [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)] 和 [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]中弃用了智能标记。|Microsoft.Office.Interop.SmartTag.dll|
+|Microsoft 智能标记2.0 类型库**说明：** 在 [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)] 和 [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]中弃用了智能标记。|Microsoft.Office.Interop.SmartTag.dll|
 |Microsoft Visio 14.0 类型库<br /><br /> Microsoft Visio 15.0 类型库|Microsoft.Office.Interop.Visio.dll|
 |Microsoft Visio 14.0 Save As Web 类型库<br /><br /> Microsoft Visio 15.0 Save As Web 类型库|Microsoft.Office.Interop.Visio.SaveAsWeb.dll|
 |Microsoft Visio 14.0 绘图控件类型库<br /><br /> Microsoft Visio 15.0 绘图控件类型库|Microsoft.Office.Interop.VisOcx.dll|

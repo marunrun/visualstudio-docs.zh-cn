@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 2763d7dd167ad0027509c44b8f9d43523f03976b
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: d312618c80abb6a4ce6e1a2676903d85867f4989
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69547793"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71236155"
 ---
 # <a name="ca1024-use-properties-where-appropriate"></a>CA1024:在适用处使用属性
 
@@ -31,23 +31,23 @@ ms.locfileid: "69547793"
 |TypeName|UsePropertiesWhereAppropriate|
 |CheckId|CA1024|
 |类别|Microsoft.Design|
-|是否重大更改|重大|
+|重大更改|重大|
 
 ## <a name="cause"></a>原因
 
-方法具有以开头`Get`的名称, 不使用任何参数, 并且返回的值不是数组。
+方法具有以开头`Get`的名称，不使用任何参数，并且返回的值不是数组。
 
-默认情况下, 此规则仅查看公共和受保护的方法, 但这是[可配置](#configurability)的。
+默认情况下，此规则仅查看公共和受保护的方法，但这是[可配置](#configurability)的。
 
 ## <a name="rule-description"></a>规则说明
 
-在大多数情况下, 属性表示数据并执行操作。 像字段一样访问属性, 这样可以更方便地使用它们。 如果存在以下情况之一, 则方法非常适合成为属性:
+在大多数情况下，属性表示数据并执行操作。 像字段一样访问属性，这样可以更方便地使用它们。 如果存在以下情况之一，则方法非常适合成为属性：
 
-- 不采用任何参数, 并返回对象的状态信息。
+- 不采用任何参数，并返回对象的状态信息。
 
 - 接受单个参数以设置对象状态的某些部分。
 
-属性的行为应与字段相同;如果该方法不能, 则不应将其更改为属性。 方法比以下情况下的属性更好:
+属性的行为应与字段相同;如果该方法不能，则不应将其更改为属性。 方法比以下情况下的属性更好：
 
 - 方法执行耗时的操作。 方法的 perceivably 慢于设置或获取字段值所需的时间。
 
@@ -59,31 +59,31 @@ ms.locfileid: "69547793"
 
 - 连续调用方法两次会产生不同的结果。
 
-- 方法是静态的, 但会返回可由调用方更改的对象。 检索字段的值不允许调用方更改字段存储的数据。
+- 方法是静态的，但会返回可由调用方更改的对象。 检索字段的值不允许调用方更改字段存储的数据。
 
 - 方法返回一个数组。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-若要修复与此规则的冲突, 请将方法更改为属性。
+若要修复与此规则的冲突，请将方法更改为属性。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
-如果方法至少满足前面列出的一个条件, 则禁止显示此规则发出的警告。
+如果方法至少满足前面列出的一个条件，则禁止显示此规则发出的警告。
 
 ## <a name="configurability"></a>配置
 
-如果从[FxCop 分析器](install-fxcop-analyzers.md)(而不是传统分析) 运行此规则, 则可以根据其可访问性, 将基本代码的哪些部分配置为在上运行此规则。 例如, 若要指定规则只应针对非公共 API 图面运行, 请在项目中的 editorconfig 文件中添加以下键/值对:
+如果从[FxCop 分析器](install-fxcop-analyzers.md)（而不是传统分析）运行此规则，则可以根据其可访问性，将基本代码的哪些部分配置为在上运行此规则。 例如，若要指定规则只应针对非公共 API 图面运行，请在项目中的 editorconfig 文件中添加以下键/值对：
 
 ```ini
 dotnet_code_quality.ca1024.api_surface = private, internal
 ```
 
-您可以为此规则、所有规则或此类别中的所有规则 (设计) 配置此选项。 有关详细信息, 请参阅[配置 FxCop 分析器](configure-fxcop-analyzers.md)。
+您可以为此规则、所有规则或此类别中的所有规则（设计）配置此选项。 有关详细信息，请参阅[配置 FxCop 分析器](configure-fxcop-analyzers.md)。
 
 ## <a name="control-property-expansion-in-the-debugger"></a>调试器中的控件属性扩展
 
-程序员避免使用属性的原因之一是, 它们不希望调试器自动展开它。 例如, 属性可能涉及到分配一个大型对象或调用 P/Invoke, 但它实际上可能不会有任何明显的副作用。
+程序员避免使用属性的原因之一是，它们不希望调试器自动展开它。 例如，属性可能涉及到分配一个大型对象或调用 P/Invoke，但它实际上可能不会有任何明显的副作用。
 
 可以通过应用<xref:System.Diagnostics.DebuggerBrowsableAttribute?displayProperty=fullName>来阻止调试器 autoexpanding 属性。 下面的示例演示如何将此特性应用于实例属性。
 
@@ -135,6 +135,6 @@ namespace Microsoft.Samples
 
 ## <a name="example"></a>示例
 
-下面的示例包含多个应转换为属性的方法, 而不应转换为多个方法, 因为它们的行为类似于字段。
+下面的示例包含多个应转换为属性的方法，而不应转换为多个方法，因为它们的行为类似于字段。
 
 [!code-csharp[FxCop.Design.MethodsProperties#1](../code-quality/codesnippet/CSharp/ca1024-use-properties-where-appropriate_1.cs)]

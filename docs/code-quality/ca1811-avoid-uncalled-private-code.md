@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c144db920bfa04055c81227e4cc2c230ed2f097d
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 92a7542499eceeccbd62ce327b386dc099b726b2
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68921327"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71233622"
 ---
 # <a name="ca1811-avoid-uncalled-private-code"></a>CA1811:避免使用未调用的私有代码
 
@@ -28,10 +28,10 @@ ms.locfileid: "68921327"
 |TypeName|AvoidUncalledPrivateCode|
 |CheckId|CA1811|
 |类别|Microsoft.Performance|
-|是否重大更改|不间断|
+|重大更改|不间断|
 
 ## <a name="cause"></a>原因
-私有或内部 (程序集级别) 成员在程序集中没有调用方, 公共语言运行时不会调用该成员, 并且委托不会调用该成员。 此规则不检查以下成员:
+私有或内部（程序集级别）成员在程序集中没有调用方，公共语言运行时不会调用该成员，并且委托不会调用该成员。 此规则不检查以下成员：
 
 - 显式接口成员。
 
@@ -44,10 +44,10 @@ ms.locfileid: "68921327"
 - 要重写的成员。
 
 ## <a name="rule-description"></a>规则说明
-如果出现不是由规则逻辑标识的入口点, 则此规则可报告误报。 此外, 编译器可能会将 noncallable 代码发送到程序集。
+如果出现不是由规则逻辑标识的入口点，则此规则可报告误报。 此外，编译器可能会将 noncallable 代码发送到程序集。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
-若要修复与此规则的冲突, 请删除 noncallable 代码或添加调用它的代码。
+若要修复与此规则的冲突，请删除 noncallable 代码或添加调用它的代码。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 可以安全地禁止显示此规则发出的警告。

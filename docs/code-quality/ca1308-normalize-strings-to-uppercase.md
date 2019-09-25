@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 06fe8d4fbd4def14bfb8a24f4f211a121c809930
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: c33f4b0b55728d659c34e0ffc8723f555a6d074d
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68922239"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71234918"
 ---
 # <a name="ca1308-normalize-strings-to-uppercase"></a>CA1308:将字符串规范化为大写
 
@@ -28,19 +28,19 @@ ms.locfileid: "68922239"
 |TypeName|NormalizeStringsToUppercase|
 |CheckId|CA1308|
 |类别|Microsoft.Globalization|
-|是否重大更改|不间断|
+|重大更改|不间断|
 
 ## <a name="cause"></a>原因
 操作将字符串规范化为小写。
 
 ## <a name="rule-description"></a>规则说明
-字符串应正常化为大写字母。 将一小部分字符转换为小写字符后, 不能进行往返。 若要进行往返, 需将字符从一个区域设置转换为另一个表示字符数据的区域设置, 然后从转换后的字符中准确检索原始字符。
+字符串应正常化为大写字母。 将一小部分字符转换为小写字符后，不能进行往返。 若要进行往返，需将字符从一个区域设置转换为另一个表示字符数据的区域设置，然后从转换后的字符中准确检索原始字符。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
-将字符串转换为小写的操作, 以便将字符串转换为大写形式。 例如，将 `String.ToLower(CultureInfo.InvariantCulture)` 更改为 `String.ToUpper(CultureInfo.InvariantCulture)`。
+将字符串转换为小写的操作，以便将字符串转换为大写形式。 例如，将 `String.ToLower(CultureInfo.InvariantCulture)` 更改为 `String.ToUpper(CultureInfo.InvariantCulture)`。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
-如果不是基于结果做出安全决策 (例如, 在用户界面中显示), 则可以安全地禁止显示警告消息。
+如果不是基于结果做出安全决策（例如，在用户界面中显示），则可以安全地禁止显示警告消息。
 
 ## <a name="see-also"></a>请参阅
 [全球化警告](../code-quality/globalization-warnings.md)

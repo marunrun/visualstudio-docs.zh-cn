@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b3e34bec0e199e1eb0b49a88517e9551b9b13cd
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 2aa55993758df24346b78eb4d9ad022014d9d81c
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68921631"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71233990"
 ---
 # <a name="ca1719-parameter-names-should-not-match-member-names"></a>CA1719:参数名不应与成员名冲突
 
@@ -28,10 +28,10 @@ ms.locfileid: "68921631"
 |TypeName|ParameterNamesShouldNotMatchMemberNames|
 |CheckId|CA1719|
 |类别|Microsoft.Naming|
-|是否重大更改|重大|
+|重大更改|重大|
 
 ## <a name="cause"></a>原因
-在不区分大小写的情况下, 外部可见成员的名称与它的其中一个参数的名称匹配。
+在不区分大小写的情况下，外部可见成员的名称与它的其中一个参数的名称匹配。
 
 ## <a name="rule-description"></a>规则说明
 参数名称应传达参数的含义，成员名称应传达成员的含义。 两者相同的设计非常少见。 使参数与其成员同名会导致不直观的效果，会使库难以使用。
@@ -40,7 +40,7 @@ ms.locfileid: "68921631"
 选择与成员名称不匹配的参数名称。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
-对于新开发, 不会发生任何已知方案, 你必须禁止显示此规则发出的警告。 对于装运库, 可能必须禁止显示此规则发出的警告。
+对于新开发，不会发生任何已知方案，你必须禁止显示此规则发出的警告。 对于装运库，可能必须禁止显示此规则发出的警告。
 
 ## <a name="related-rules"></a>相关规则
 [CA1709标识符应采用正确的大小写](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)

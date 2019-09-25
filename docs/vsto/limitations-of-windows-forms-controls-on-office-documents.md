@@ -1,5 +1,5 @@
 ---
-title: Office 文档上的 Windows 窗体控件的限制
+title: Office 文档 Windows 窗体控件的限制
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -20,26 +20,26 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d5cb4bf5788e1d30933a807e2e97e064118fc076
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 81a7da585f49b2a2d1f7df4df11d0c78b7a35d69
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67823409"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251917"
 ---
-# <a name="limitations-of-windows-forms-controls-on-office-documents"></a>Office 文档上的 Windows 窗体控件的限制
+# <a name="limitations-of-windows-forms-controls-on-office-documents"></a>Office 文档 Windows 窗体控件的限制
 
-没有添加到 Microsoft Office Word 文档或 Microsoft Office Excel 工作表的 Windows 窗体控件和 Windows 窗体控件添加到 Windows 窗体之间的一些差异。 例如，添加<xref:Microsoft.Office.Tools.Word.Controls.Button>控制到文档中，属性，例如<xref:System.Windows.Forms.Control.Dock>， <xref:System.Windows.Forms.Control.Anchor>，和<xref:System.Windows.Forms.Control.TabIndex>不像您所料。
+添加到 Microsoft Office Word 文档或 Microsoft Office Excel 工作表的 Windows 窗体控件与添加到 Windows 窗体的 Windows 窗体控件之间存在一些差异。 例如，将<xref:Microsoft.Office.Tools.Word.Controls.Button>控件添加到文档时，属性<xref:System.Windows.Forms.Control.Dock>（例如、 <xref:System.Windows.Forms.Control.Anchor>和<xref:System.Windows.Forms.Control.TabIndex> ）不会像预期那样工作。
 
-其中许多差异导致顺便提一下控件位于该 Windows 窗体上的文档。 当 Windows 窗体控件添加到文档，[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]嵌入然后承载 Windows 窗体控件在文档中的 ActiveX 控件。 在 Windows 窗体控件不嵌入在文档中直接。
+其中许多差异是由 Windows 窗体控件在文档上的宿主方式导致的。 将 Windows 窗体控件添加到文档中时，会将[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]一个 ActiveX Windows 窗体控件嵌入到文档中。 Windows 窗体控件不会直接嵌入到文档中。
 
 [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]
 
 ## <a name="limitations-of-methods-and-properties-of-windows-forms-controls"></a>Windows 窗体控件的方法和属性的限制
 
-有多种方法和不起作用的相同的方式对文档以及它们会在 Windows 窗体上，因此，建议它们无法在使用 Windows 窗体控件的属性。 例如，如设置属性<xref:System.Windows.Forms.Control.Dock>和<xref:System.Windows.Forms.Control.Anchor>仅影响将控件与容器 ActiveX 控件，而不是文档的位置。 下面是不支持的方法和 Word 和 Excel 的 Windows 窗体控件的属性的列表：
+Windows 窗体控件有很多方法和属性，这些方法和属性在文档中的使用方式与在 Windows 窗体上的工作方式相同，因此建议不要使用这些方法和属性。 例如，设置属性（ <xref:System.Windows.Forms.Control.Dock>如和<xref:System.Windows.Forms.Control.Anchor> ）只会影响控件对于容器 ActiveX 控件的位置，而不影响文档的位置。 下面列出了 Word 和 Excel Windows 窗体控件的不受支持的方法和属性：
 
-- 不支持的 Excel 控件的属性：
+- 不支持 Excel 控件的属性：
 
   - <xref:System.Windows.Forms.Control.Anchor>
   - <xref:System.Windows.Forms.Control.Dock>
@@ -48,7 +48,7 @@ ms.locfileid: "67823409"
   - <xref:System.Windows.Forms.Control.TabStop>
   - <xref:System.Windows.Forms.Control.TopLevelControl>
 
-- 不受支持的方法和属性的 Word 控件：
+- Word 控件的方法和属性不受支持：
 
   - <xref:System.Windows.Forms.Control.Hide%2A>
   - <xref:System.Windows.Forms.Control.Show%2A>
@@ -60,47 +60,47 @@ ms.locfileid: "67823409"
   - <xref:System.Windows.Forms.Control.TopLevelControl>
   - <xref:System.Windows.Forms.Control.Visible>
 
-您还不能设置<xref:System.Windows.Forms.Control.Left>或<xref:System.Windows.Forms.Control.Top>与 Word 文档的文本对齐的 Windows 窗体控件的属性。 添加 Windows 窗体控件，与在以下情况下的文本对齐：
+还不能设置<xref:System.Windows.Forms.Control.Left> Word 文档中包含文本的 Windows 窗体控件的或<xref:System.Windows.Forms.Control.Top>属性。 在以下情况下，将在文本行中添加 Windows 窗体控件：
 
-- 可以以编程方式向 Word 文档添加控件，并使用指定的位置的范围的方法。
+- 以编程方式将控件添加到 Word 文档，并使用指定位置范围的方法。
 
-- 在设计时向 Word 文档添加 Windows 窗体控件。 可以通过修改控件在设计器中的对此进行更改。
+- 在设计时向 Word 文档添加 Windows 窗体控件。 可以通过修改设计器中的控件来更改此项。
 
-## <a name="differences-in-windows-forms-controls-on-office-documents"></a>Office 文档上的 Windows 窗体控件之间的差异
+## <a name="differences-in-windows-forms-controls-on-office-documents"></a>Office 文档 Windows 窗体控件之间的差异
 
-Windows 窗体控件通常具有相同的行为上的 Office 文档上 Windows 窗体，但也存在一些差异。 下表描述了 Office 文档上的 Windows 窗体控件存在的差异。
+Windows 窗体控件在 Office 文档中的行为通常与 Windows 窗体上的行为相同，但存在一些差异。 下表描述了 Office 文档上 Windows 窗体控件存在的差异。
 
 |功能|差值|
 |-------------------|----------------|
-|控件 tab 键顺序|您不能通过在 Excel 工作表或 Word 文档上放置的控件选项卡。|
-|控件分组|不能使用<xref:System.Windows.Forms.GroupBox>控件，以包含 Office 文档上的其他控件。 直接向文档添加多个单选按钮的单选按钮是不互相排斥。 可以编写代码以使单选按钮相互排斥;但是，首选的方法是向用户控件添加单选按钮，然后将用户控件添加到文档。 有关详细信息，请参阅的 Word 控件示例或 Excel 控件示例[Office 开发示例和演练](../vsto/office-development-samples-and-walkthroughs.md)。|
-|控件类型|使用文档上的 Windows 窗体控件包装在提供的一类[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]，使得的控件特定的其他功能的 Excel 工作表或 Word 文档。 例如，如果你有**按钮**对 Excel 工作表的 control 权限，请确保将类型指定为<xref:Microsoft.Office.Tools.Excel.Controls.Button>而非<xref:System.Windows.Forms.Button>时引用或将对象强制转换。|
-|控件位置和大小|由属于容器 ActiveX 控件的属性确定的大小和位置的控件。 ActiveX 控件属性采用比等效的 Windows 窗体控件的属性的不同值。 当您将设置`Top`， `Left`， `Height`，或`Width`控件的属性，它用来衡量中点，而不是像素为单位。|
-|在 Word 文档上的控件位置|如果将控件添加到基于流的布局，请记住，控件将随内容流动内容发生变化。 您不能将控件锚定到段落时将其从**工具箱**因为该控件添加到 Word 文档与文本对齐。 如果使用另一种方法来添加控件，如双击该控件，根据您已为插入图片设置单词选项插入控件。<br /><br /> 不能设置`Left`或`Top`是嵌入文字控件的属性。<br /><br /> 无法将控件放在页眉或页脚，还是在一个子文档。|
-|控件事件|选中控件后，它会引发事件按以下顺序：<br /><br /> 1.  `Enter`<br />2.  `GotFocus`<br /><br /> 取消选择该控件，则它会引发事件按以下顺序：<br /><br /> 1.  `Leave`<br />2.  `Validating`<br />3.  `Validated`<br />4.  `LostFocus`|
-|缩放控件|当为 100%以外的任何更改文档的缩放设置时，将禁用控件，尽管它们会对显示与文档一起缩放。 例如，如果您的文档位于 130%缩放时，单击一个按钮，它将显示一条消息已在控件被禁用，直到缩放设置为 100%。 将缩放比例更改为 100%时，控件将正常工作。|
-|控件的属性值|尽管 Windows 窗体上控件的属性设置为一个整数值，它们将设置为单个 Word 文档上的控件。 在 Excel 中，控件的属性值设置为一个双精度值。 如果`Height`和`Width`工作表上控件的属性超过了工作表或屏幕的大小，将截断的值。|
-|控件的大小调整|如果在调整大小的文档使用八个大小调整句柄之一上的控件中, 不会反映新的控件尺寸**属性**窗口后，才能看到该控件。|
-|控制行为|拆分工作表窗口时，Excel 工作表上的控件可能行为异常。 例如，访问<xref:Microsoft.Office.Tools.Excel.Controls.TextBox>工作表上可能仅可在一个窗口中。|
-|控制命名|不能使用保留的字来命名控件。 例如，如果您将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>到工作表并将名称更改为**系统**，生成项目时出现错误。|
-|以编程方式添加控件|不使用控件的构造函数以将控件添加到你在运行时的文档。 请改用提供的帮助器方法[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]。 例如，使用<xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddButton%2A>方法向工作表中添加一个按钮。 如果你想要添加这些帮助器方法不支持的控件，则可以使用`AddControl`方法。 有关详细信息，请参阅[在运行时向 Office 文档添加控件](../vsto/adding-controls-to-office-documents-at-run-time.md)。|
-|复制控件|如果将 Windows 窗体控件复制并粘贴到文档中在运行时，空容器 ActiveX 控件将粘贴到文档。 Windows 窗体控件不会出现在新的位置，并且代码隐藏原始控件不会复制到 ActiveX 控件的容器。|
+|控件 tab 键顺序|不能通过 tab 键将控件放置在 Excel 工作表或 Word 文档中。|
+|控件分组|不能使用<xref:System.Windows.Forms.GroupBox>控件在 Office 文档上包含其他控件。 当您将多个单选按钮直接添加到文档时，单选按钮并不是互相排斥的。 你可以编写代码以使单选按钮互斥;但是，首选方法是将单选按钮添加到用户控件，然后将该用户控件添加到文档中。 有关详细信息，请参阅[Office 开发示例和演练](../vsto/office-development-samples-and-walkthroughs.md)中的 Word 控件示例或 Excel 控件示例。|
+|控件类型|文档上使用的 Windows 窗体控件包装在由[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]提供的类中，该类为控件提供特定于 Excel 工作表或 Word 文档的附加功能。 例如，如果在 Excel 工作表上有一个 "**按钮**" 控件，请确保指定类型<xref:Microsoft.Office.Tools.Excel.Controls.Button> ，而不是<xref:System.Windows.Forms.Button>引用或强制转换对象。|
+|控件位置和大小|控件的大小和位置由容器 ActiveX 控件中的属性确定。 ActiveX 控件属性采用与 Windows 窗体控件的等效属性不同的值。 当您设置控件`Top`的`Left`、 `Height`、或`Width`属性时，它将以磅而不是像素来度量。|
+|控件在 Word 文档上的位置|如果将控件添加到基于流的布局中，请记住，当内容更改时，控件将与内容一起流动。 将控件从 "**工具箱**" 中拖动时，不能将其定位到某个段落，因为该控件已与文本一起添加到 Word 文档中。 如果使用另一种方法添加控件，如双击控件，则将根据为插入图片而设置的单词选项插入控件。<br /><br /> 不能设置与`Left`文本`Top`内联的控件的或属性。<br /><br /> 不能将控件放置在页眉或页脚中或子文档中。|
+|控件事件|选择该控件后，它将按以下顺序引发事件：<br /><br /> 1.  `Enter`<br />2.  `GotFocus`<br /><br /> 取消选择控件后，它将按以下顺序引发事件：<br /><br /> 1.  `Leave`<br />2.  `Validating`<br />3.  `Validated`<br />4.  `LostFocus`|
+|控件缩放|如果将文档的缩放设置更改为 100% 之外的任何内容，则会禁用控件，尽管它们看上去与文档一起缩放。 例如，如果您在文档处于 130% 缩放时单击按钮，则它将显示一条消息，指示该控件已被禁用，直到 "缩放" 设置为 100%。 将缩放更改为 100% 时，控件将正常运行。|
+|控件属性值|尽管 Windows 窗体上控件的属性设置为一个整数值，但对于 Word 文档中的控件，它们设置为单一。 在 Excel 中，将控件的属性值设置为双精度值。 如果工作`Height`表`Width`上的控件的和属性超出了工作表或屏幕的大小，则该值将被截断。|
+|控件调整大小|如果使用八个大小调整控点之一调整文档上的控件大小，则在控件只有之前，新的控件尺寸不会反映在 "**属性**" 窗口中。|
+|控制行为|拆分工作表窗口时，Excel 工作表上的控件的行为可能无法预测。 例如，对工作表上<xref:Microsoft.Office.Tools.Excel.Controls.TextBox>的的访问可能只在一个窗口中可用。|
+|控件命名|不能使用保留字来命名控件。 例如，如果将添加<xref:Microsoft.Office.Tools.Excel.Controls.Button>到工作表中并将名称更改为**System**，生成项目时将发生错误。|
+|以编程方式添加控件|不要使用控件的构造函数在运行时向文档添加控件。 相反，请使用提供[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]的帮助器方法。 例如，使用<xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddButton%2A>方法将按钮添加到工作表。 如果要添加这些帮助器方法不支持的控件，可以使用`AddControl`方法。 有关详细信息，请参阅[在运行时向 Office 文档添加控件](../vsto/adding-controls-to-office-documents-at-run-time.md)。|
+|复制控件|如果复制 Windows 窗体控件并在运行时将其粘贴到文档中，则会将空容器 ActiveX 控件粘贴到文档中。 Windows 窗体控件不会出现在新位置，并且原始控件的隐藏代码不会复制到容器 ActiveX 控件。|
 
 ## <a name="limitations-in-document-level-projects"></a>文档级项目中的限制
 
-使用文档上的 Windows 窗体控件的某些限制是唯一的文档级项目。
+对文档使用 Windows 窗体控件的某些限制对于文档级项目是唯一的。
 
-### <a name="control-support-at-design-time"></a>在设计时控件支持
+### <a name="control-support-at-design-time"></a>设计时的控件支持
 
-某些 Windows 窗体控件都将从中**工具箱**Excel 工作表或 Word 文档时在 Visual Studio 设计器中打开。 这是由于技术限制或因为功能已在 Word 或 Excel 内可用。 Excel 和 Word 项目支持的所有 Windows 窗体控件和其他组件中出现**工具箱**当文档具有焦点，而且还可以将第三方控件添加到工作表或文档。
-
-> [!NOTE]
-> 所有控件都将都从中**工具箱**受保护文档时。 文档保护有关的信息，请参阅[文档在文档级解决方案中的保护](../vsto/document-protection-in-document-level-solutions.md)。
+当 Excel 工作表或 Word 文档在 Visual Studio 设计器中打开时，某些 Windows 窗体控件将从**工具箱**中移除。 这是因为技术限制或功能已在 Word 或 Excel 中可用。 Excel 和 Word 项目支持在文档具有焦点时在**工具箱**中显示的所有 Windows 窗体控件和其他组件，也可以将第三方控件添加到工作表或文档中。
 
 > [!NOTE]
-> 第三方控件都必须有<xref:System.Runtime.InteropServices.ComVisibleAttribute>属性设置为**true**若要在 Office 解决方案中使用。
+> 文档受到保护时，将从**工具箱**中删除所有控件。 有关文档保护的信息，请参阅文档[级解决方案中的文档保护](../vsto/document-protection-in-document-level-solutions.md)。
 
-以下控件和组件中不可**工具箱**:
+> [!NOTE]
+> 第三方控件必须<xref:System.Runtime.InteropServices.ComVisibleAttribute>将属性设置为**true** ，才能在 Office 解决方案中使用。
+
+**工具箱**中没有以下控件和组件：
 
 - <xref:System.Windows.Forms.BindingNavigator>
 
@@ -178,13 +178,13 @@ Windows 窗体控件通常具有相同的行为上的 Office 文档上 Windows �
 
 - <xref:System.Windows.Forms.ToolStripPanel>
 
-### <a name="support-for-legacy-activex-controls"></a>旧式 ActiveX 控件的支持
+### <a name="support-for-legacy-activex-controls"></a>支持旧版 ActiveX 控件
 
-如果创建使用现有的 Word 文档或 Excel 工作簿包含 ActiveX 控件的文档级 Office 项目时，ActiveX 控件的功能不会丢失;但是，不是支持将新的 ActiveX 控件添加到您从 Visual Studio 中的文档。 例如，如果您的 Word 文档都有一个按钮从**控制**工具箱中运行 Visual Basic Applications (VBA) 宏，它将继续运行宏，Office 项目中使用了文档之后。 但是，建议删除 ActiveX 控件和 VBA 宏并将它们替换为 Windows 窗体控件和托管代码。
+如果创建的文档级 Office 项目使用的是包含 ActiveX 控件的现有 Word 文档或 Excel 工作簿，则 ActiveX 控件的功能不会丢失;但是，不支持从 Visual Studio 中向文档添加新的 ActiveX 控件。 例如，如果 Word 文档的**控件**工具箱中有一个按钮，该按钮运行 VISUAL BASIC FOR APPLICATIONS （VBA）宏，则在 Office 项目中使用该文档后，该文档将继续运行宏。 但是，建议删除 ActiveX 控件和 VBA 宏，并将其替换为 Windows 窗体控件和托管代码。
 
 ## <a name="see-also"></a>请参阅
 
 - [Office 文档上的控件](../vsto/controls-on-office-documents.md)
-- [Windows 窗体控件在 Office 文档概述](../vsto/windows-forms-controls-on-office-documents-overview.md)
-- [在运行时向 Office 文档添加控件](../vsto/adding-controls-to-office-documents-at-run-time.md)
+- [Office 文档上的 Windows 窗体控件概述](../vsto/windows-forms-controls-on-office-documents-overview.md)
+- [在运行时将控件添加到 Office 文档](../vsto/adding-controls-to-office-documents-at-run-time.md)
 - [如何：向 Office 文档添加 Windows 窗体控件](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)

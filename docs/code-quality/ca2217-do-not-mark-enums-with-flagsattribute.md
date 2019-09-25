@@ -18,12 +18,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 377188183acdaa9aa86ae3344c8f6d5727b82ccc
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 1a3b07e5c2678bb7116d79eaba41caf3cd736f44
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546839"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71231207"
 ---
 # <a name="ca2217-do-not-mark-enums-with-flagsattribute"></a>CA2217:不要使用 FlagsAttribute 标记枚举
 
@@ -32,21 +32,21 @@ ms.locfileid: "69546839"
 |TypeName|DoNotMarkEnumsWithFlags|
 |CheckId|CA2217|
 |类别|Microsoft.Usage|
-|是否重大更改|非重大更改|
+|重大更改|不间断|
 
 ## <a name="cause"></a>原因
 
-枚举标记有<xref:System.FlagsAttribute> , 它具有一个或多个不是两个或一个或多个枚举上已定义值组合的值。
+枚举标记有<xref:System.FlagsAttribute> ，它具有一个或多个不是两个或一个或多个枚举上已定义值组合的值。
 
-默认情况下, 此规则仅查看外部可见的枚举, 但这是[可配置](#configurability)的。
+默认情况下，此规则仅查看外部可见的枚举，但这是[可配置](#configurability)的。
 
 ## <a name="rule-description"></a>规则说明
 
-仅当枚举中<xref:System.FlagsAttribute>定义的每个值都是2的幂或定义的值的组合时, 枚举才应该存在。
+仅当枚举中<xref:System.FlagsAttribute>定义的每个值都是2的幂或定义的值的组合时，枚举才应该存在。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-若要修复与此规则的冲突, <xref:System.FlagsAttribute>请从枚举中删除。
+若要修复与此规则的冲突， <xref:System.FlagsAttribute>请从枚举中删除。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
@@ -54,23 +54,23 @@ ms.locfileid: "69546839"
 
 ## <a name="configurability"></a>配置
 
-如果从[FxCop 分析器](install-fxcop-analyzers.md)(而不是传统分析) 运行此规则, 则可以根据其可访问性, 将基本代码的哪些部分配置为在上运行此规则。 例如, 若要指定规则只应针对非公共 API 图面运行, 请在项目中的 editorconfig 文件中添加以下键/值对:
+如果从[FxCop 分析器](install-fxcop-analyzers.md)（而不是传统分析）运行此规则，则可以根据其可访问性，将基本代码的哪些部分配置为在上运行此规则。 例如，若要指定规则只应针对非公共 API 图面运行，请在项目中的 editorconfig 文件中添加以下键/值对：
 
 ```ini
 dotnet_code_quality.ca2217.api_surface = private, internal
 ```
 
-您可以为此规则、所有规则或此类别中的所有规则 (使用情况) 配置此选项。 有关详细信息, 请参阅[配置 FxCop 分析器](configure-fxcop-analyzers.md)。
+您可以为此规则、所有规则或此类别中的所有规则（使用情况）配置此选项。 有关详细信息，请参阅[配置 FxCop 分析器](configure-fxcop-analyzers.md)。
 
 ## <a name="examples"></a>示例
 
-下面的代码演示一个包含值`Color`3 的枚举。 3不是2的幂, 也不是任何定义的值的组合。 枚举不应<xref:System.FlagsAttribute>标记为。 `Color`
+下面的代码演示一个包含值`Color`3 的枚举。 3不是2的幂，也不是任何定义的值的组合。 枚举不应<xref:System.FlagsAttribute>标记为。 `Color`
 
 [!code-cpp[FxCop.Usage.EnumNoFlags#1](../code-quality/codesnippet/CPP/ca2217-do-not-mark-enums-with-flagsattribute_1.cpp)]
 [!code-csharp[FxCop.Usage.EnumNoFlags#1](../code-quality/codesnippet/CSharp/ca2217-do-not-mark-enums-with-flagsattribute_1.cs)]
 [!code-vb[FxCop.Usage.EnumNoFlags#1](../code-quality/codesnippet/VisualBasic/ca2217-do-not-mark-enums-with-flagsattribute_1.vb)]
 
-下面的代码演示一个满足`Days` <xref:System.FlagsAttribute>标记的要求的枚举:
+下面的代码演示一个满足`Days` <xref:System.FlagsAttribute>标记的要求的枚举：
 
 [!code-cpp[FxCop.Usage.EnumNoFlags2#1](../code-quality/codesnippet/CPP/ca2217-do-not-mark-enums-with-flagsattribute_2.cpp)]
 [!code-csharp[FxCop.Usage.EnumNoFlags2#1](../code-quality/codesnippet/CSharp/ca2217-do-not-mark-enums-with-flagsattribute_2.cs)]

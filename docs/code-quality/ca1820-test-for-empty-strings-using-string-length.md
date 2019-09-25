@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bb5160ef663375ee3dd4b45797e8f4536acdf793
-ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
+ms.openlocfilehash: b197cacc764f1f5472d3eb074ac89199db508408
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66744644"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71233421"
 ---
 # <a name="ca1820-test-for-empty-strings-using-string-length"></a>CA1820:使用字符串长度测试是否有空字符串
 
@@ -28,28 +28,28 @@ ms.locfileid: "66744644"
 |TypeName|TestForEmptyStringsUsingStringLength|
 |CheckId|CA1820|
 |类别|Microsoft.Performance|
-|是否重大更改|非换行|
+|重大更改|不间断|
 
 ## <a name="cause"></a>原因
 
-使用为空字符串比较字符串<xref:System.Object.Equals%2A?displayProperty=nameWithType>。
+使用<xref:System.Object.Equals%2A?displayProperty=nameWithType>将字符串与空字符串进行比较。
 
 ## <a name="rule-description"></a>规则说明
 
-比较字符串使用<xref:System.String.Length%2A?displayProperty=nameWithType>属性或<xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType>方法的速度快于使用<xref:System.Object.Equals%2A>。 这是因为<xref:System.Object.Equals%2A>执行以外的更多 MSIL 指令<xref:System.String.IsNullOrEmpty%2A>或执行要检索的指令数<xref:System.String.Length%2A>属性值和比较为零。
+使用<xref:System.String.Length%2A?displayProperty=nameWithType>属性<xref:System.Object.Equals%2A>或方法比较字符串比使用更快。 <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType> 这是因为<xref:System.Object.Equals%2A>执行的 MSIL 指令<xref:System.String.IsNullOrEmpty%2A>比用于检索<xref:System.String.Length%2A>属性值并将其与零比较的指令数更多。
 
-对于空字符串<xref:System.Object.Equals%2A>和`<string>.Length == 0`行为不同。 如果尝试获取的值<xref:System.String.Length%2A>null 字符串的属性，公共语言运行时将引发<xref:System.NullReferenceException?displayProperty=fullName>。 如果执行 null 字符串和空字符串之间的比较，公共语言运行时不会引发异常，并返回`false`。 测试 null 不显著影响这两种方法的相对性能。 如果面向.NET Framework 2.0 或更高版本，使用<xref:System.String.IsNullOrEmpty%2A>方法。 否则，请使用<xref:System.String.Length%2A>= = 0 比较只要有可能。
+对于 null 字符串， <xref:System.Object.Equals%2A>和`<string>.Length == 0`的行为不同。 如果尝试获取 null 字符串的<xref:System.String.Length%2A>属性值，则公共语言运行时将<xref:System.NullReferenceException?displayProperty=fullName>引发。 如果在空字符串和空字符串之间执行比较，则公共语言运行时不会引发异常，并返回`false`。 测试 null 不会对这两种方法的相对性能产生显著影响。 面向 .NET Framework 2.0 或更高版本时， <xref:System.String.IsNullOrEmpty%2A>请使用方法。 否则，请尽可能<xref:System.String.Length%2A>使用 = = 0 比较。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-若要修复此规则的冲突，请更改要使用的比较<xref:System.String.IsNullOrEmpty%2A>方法。
+若要修复与此规则的冲突，请将比较更改为<xref:System.String.IsNullOrEmpty%2A>使用方法。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
-它可以安全地禁止显示此规则的警告，如果性能不是问题。
+如果性能不是问题，则可以安全地禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
 
-下面的示例说明了用于查找空字符串的不同技术。
+下面的示例演示了用于查找空字符串的不同技术。
 
 [!code-csharp[FxCop.Performance.StringTest#1](../code-quality/codesnippet/CSharp/ca1820-test-for-empty-strings-using-string-length_1.cs)]

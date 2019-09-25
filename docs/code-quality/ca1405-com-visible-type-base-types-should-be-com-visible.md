@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 56e6e7a53f5f8b07d1afc8b68ef641c576524316
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 8e4e5c4ed258bcc88fedbb6d015fed576d326a0f
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68922058"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71234960"
 ---
 # <a name="ca1405-com-visible-type-base-types-should-be-com-visible"></a>CA1405:COM 可见类型的基类型应对 COM 可见
 
@@ -31,16 +31,16 @@ ms.locfileid: "68922058"
 |TypeName|ComVisibleTypeBaseTypesShouldBeComVisible|
 |CheckId|CA1405|
 |类别|Microsoft.Interoperability|
-|是否重大更改|DependsOnFix|
+|重大更改|DependsOnFix|
 
 ## <a name="cause"></a>原因
-组件对象模型 (COM) 可见类型派生自非 COM 可见的类型。
+组件对象模型（COM）可见类型派生自非 COM 可见的类型。
 
 ## <a name="rule-description"></a>规则说明
-当 COM 可见类型在新版本中添加成员时, 必须遵守严格指导原则, 以避免中断绑定到当前版本的 COM 客户端。 对于 COM 不可见的类型, 假设在添加新成员时, 不需要遵循这些 COM 版本控制规则。 但是, 如果 com 可见类型派生自 com 不可见类型并公开<xref:System.Runtime.InteropServices.ClassInterfaceType?displayProperty=fullName>或<xref:System.Runtime.InteropServices.ClassInterfaceType>的类接口 (默认值), 则该基类型的所有公共成员 (除非它们专门标记为不可见, 这将是冗余的)向 COM 公开。 如果基类型在后续版本中添加了新成员, 则绑定到派生类型的类接口的任何 COM 客户端都可能会中断。 COM 可见类型应仅从 COM 可见类型派生, 以减少中断 COM 客户端的可能性。
+当 COM 可见类型在新版本中添加成员时，必须遵守严格指导原则，以避免中断绑定到当前版本的 COM 客户端。 对于 COM 不可见的类型，假设在添加新成员时，不需要遵循这些 COM 版本控制规则。 但是，如果 com 可见类型派生自 com 不可见类型并公开<xref:System.Runtime.InteropServices.ClassInterfaceType?displayProperty=fullName>或<xref:System.Runtime.InteropServices.ClassInterfaceType>的类接口（默认值），则该基类型的所有公共成员（除非它们专门标记为不可见，这将是冗余的）向 COM 公开。 如果基类型在后续版本中添加了新成员，则绑定到派生类型的类接口的任何 COM 客户端都可能会中断。 COM 可见类型应仅从 COM 可见类型派生，以减少中断 COM 客户端的可能性。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
-若要修复与此规则的冲突, 请使基类型 COM 可见或派生类型 COM 不可见。
+若要修复与此规则的冲突，请使基类型 COM 可见或派生类型 COM 不可见。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 不禁止显示此规则发出的警告。

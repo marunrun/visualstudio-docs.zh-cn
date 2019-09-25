@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ab7cf2c5a4f17966ed5b4da30657e05a4683738
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 3114ea004c425567ae479343e0449d2cbc3aa669
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68922650"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71235712"
 ---
 # <a name="ca1047-do-not-declare-protected-members-in-sealed-types"></a>CA1047:不要在密封类型中声明受保护的成员
 
@@ -31,21 +31,21 @@ ms.locfileid: "68922650"
 |TypeName|DoNotDeclareProtectedMembersInSealedTypes|
 |CheckId|CA1047|
 |类别|Microsoft.Design|
-|是否重大更改|不间断|
+|重大更改|不间断|
 
 ## <a name="cause"></a>原因
-公共类型为 ( `sealed` `NotInheritable`在 Visual basic 中为), 并声明受保护的成员或受保护的嵌套类型。 此规则不报告<xref:System.Object.Finalize%2A>方法冲突, 这些方法必须遵循此模式。
+公共类型为（ `sealed` `NotInheritable`在 Visual basic 中为），并声明受保护的成员或受保护的嵌套类型。 此规则不报告<xref:System.Object.Finalize%2A>方法冲突，这些方法必须遵循此模式。
 
 ## <a name="rule-description"></a>规则说明
-类型声明受保护的成员，使继承类型可以访问或重写该成员。 按照定义, 不能从密封类型继承, 这意味着不能调用密封类型上的受保护方法。
+类型声明受保护的成员，使继承类型可以访问或重写该成员。 按照定义，不能从密封类型继承，这意味着不能调用密封类型上的受保护方法。
 
 C#编译器会发出此错误的警告。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
-若要修复与此规则的冲突, 请将成员的访问级别更改为 private, 或使该类型可继承。
+若要修复与此规则的冲突，请将成员的访问级别更改为 private，或使该类型可继承。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
-不禁止显示此规则发出的警告。 使类型保持当前状态可能会导致维护问题, 而且不会带来任何好处。
+不禁止显示此规则发出的警告。 使类型保持当前状态可能会导致维护问题，而且不会带来任何好处。
 
 ## <a name="example"></a>示例
 下面的示例演示违反此规则的类型。

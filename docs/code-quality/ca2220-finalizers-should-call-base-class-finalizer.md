@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 034f80c9198ab098070e6642f4a4d96cff1744c5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e5af6b7872f0fa05183334e6acd2bc4922f84990
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62541853"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71231163"
 ---
 # <a name="ca2220-finalizers-should-call-base-class-finalizer"></a>CA2220:终结器应调用基类的终结器
 
@@ -28,30 +28,30 @@ ms.locfileid: "62541853"
 |TypeName|FinalizersShouldCallBaseClassFinalizer|
 |CheckId|CA2220|
 |类别|Microsoft.Usage|
-|是否重大更改|非重大更改|
+|重大更改|不间断|
 
 ## <a name="cause"></a>原因
 
-重写的类型<xref:System.Object.Finalize%2A?displayProperty=fullName>不会调用<xref:System.Object.Finalize%2A>中其基本类的方法。
+重写<xref:System.Object.Finalize%2A?displayProperty=fullName>的类型不会在其<xref:System.Object.Finalize%2A>基类中调用方法。
 
 ## <a name="rule-description"></a>规则说明
 
-终止必须通过继承层次结构传播。 若要确保这一点，类型必须调用其基类<xref:System.Object.Finalize%2A>方法从其自身<xref:System.Object.Finalize%2A>方法。 C# 编译器会自动添加到基类的终结器调用。
+终止必须通过继承层次结构传播。 若要确保这一点，类型必须从其<xref:System.Object.Finalize%2A>自身<xref:System.Object.Finalize%2A>的方法中调用其基类方法。 C#编译器自动添加对基类终结器的调用。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-若要修复此规则的冲突，请调用基类型<xref:System.Object.Finalize%2A>方法从你<xref:System.Object.Finalize%2A>方法。
+若要修复与此规则的冲突，请<xref:System.Object.Finalize%2A> <xref:System.Object.Finalize%2A>从方法中调用基类型的方法。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
-不禁止显示此规则发出的警告。 面向公共语言运行时的某些编译器对基类型的终结器的调用插入到 Microsoft 中间语言 (MSIL)。 如果报告此规则的警告，则编译器不会插入调用，并必须将其添加到你的代码。
+不禁止显示此规则发出的警告。 针对公共语言运行时的某些编译器会将对基类型的终结器的调用插入到 Microsoft 中间语言（MSIL）中。 如果报告了此规则发出的警告，则编译器不会插入调用，你必须将其添加到你的代码中。
 
 ## <a name="example"></a>示例
 
-下面的 Visual Basic 示例显示了一种类型`TypeB`的正确调用<xref:System.Object.Finalize%2A>中其基本类的方法。
+下面的 Visual Basic 示例显示了一个`TypeB`正确调用其基类<xref:System.Object.Finalize%2A>中的方法的类型。
 
 [!code-vb[FxCop.Usage.IDisposableBaseCalled#1](../code-quality/codesnippet/VisualBasic/ca2220-finalizers-should-call-base-class-finalizer_1.vb)]
 
 ## <a name="see-also"></a>请参阅
 
-- [Dispose 模式](/dotnet/standard/design-guidelines/dispose-pattern)
+- [释放模式](/dotnet/standard/design-guidelines/dispose-pattern)

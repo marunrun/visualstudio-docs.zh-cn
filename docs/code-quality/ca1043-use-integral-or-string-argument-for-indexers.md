@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: aeec6e202ccb7f3075b04d29bdef7d171ae545f7
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 298c92263903c3799f1e7e184a554f896366566c
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69547687"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71235846"
 ---
 # <a name="ca1043-use-integral-or-string-argument-for-indexers"></a>CA1043:将整型或字符串参数用于索引器
 
@@ -32,35 +32,35 @@ ms.locfileid: "69547687"
 |TypeName|UseIntegralOrStringArgumentForIndexers|
 |CheckId|CA1043|
 |类别|Microsoft.Design|
-|是否重大更改|重大|
+|重大更改|重大|
 
 ## <a name="cause"></a>原因
 
-类型包含索引器, 该索引器使用的索引类型<xref:System.Int32?displayProperty=fullName>不<xref:System.Int64?displayProperty=fullName>是<xref:System.Object?displayProperty=fullName>、、 <xref:System.String?displayProperty=fullName>或。
+类型包含索引器，该索引器使用的索引类型<xref:System.Int32?displayProperty=fullName>不<xref:System.Int64?displayProperty=fullName>是<xref:System.Object?displayProperty=fullName>、、 <xref:System.String?displayProperty=fullName>或。
 
-默认情况下, 此规则仅查看公共和受保护的类型, 但这是[可配置](#configurability)的。
+默认情况下，此规则仅查看公共和受保护的类型，但这是[可配置](#configurability)的。
 
 ## <a name="rule-description"></a>规则说明
 
-索引器 (即索引属性) 应将整型或字符串类型用于索引。 这些类型通常用于索引数据结构并提高库的可用性。 应将<xref:System.Object>类型的使用限制为在设计时无法指定特定整数或字符串类型的情况。 如果设计需要索引的其他类型, 请重新考虑该类型是否表示逻辑数据存储区。 如果它不表示逻辑数据存储, 请使用方法。
+索引器（即索引属性）应将整型或字符串类型用于索引。 这些类型通常用于索引数据结构并提高库的可用性。 应将<xref:System.Object>类型的使用限制为在设计时无法指定特定整数或字符串类型的情况。 如果设计需要索引的其他类型，请重新考虑该类型是否表示逻辑数据存储区。 如果它不表示逻辑数据存储，请使用方法。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-若要修复与此规则的冲突, 请将索引更改为整数或字符串类型, 或者使用方法而不是索引器。
+若要修复与此规则的冲突，请将索引更改为整数或字符串类型，或者使用方法而不是索引器。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
-仅在仔细考虑非标准索引器的需求之后, 禁止显示此规则发出的警告。
+仅在仔细考虑非标准索引器的需求之后，禁止显示此规则发出的警告。
 
 ## <a name="configurability"></a>配置
 
-如果从[FxCop 分析器](install-fxcop-analyzers.md)(而不是传统分析) 运行此规则, 则可以根据其可访问性, 将基本代码的哪些部分配置为在上运行此规则。 例如, 若要指定规则只应针对非公共 API 图面运行, 请在项目中的 editorconfig 文件中添加以下键/值对:
+如果从[FxCop 分析器](install-fxcop-analyzers.md)（而不是传统分析）运行此规则，则可以根据其可访问性，将基本代码的哪些部分配置为在上运行此规则。 例如，若要指定规则只应针对非公共 API 图面运行，请在项目中的 editorconfig 文件中添加以下键/值对：
 
 ```ini
 dotnet_code_quality.ca1043.api_surface = private, internal
 ```
 
-您可以为此规则、所有规则或此类别中的所有规则 (设计) 配置此选项。 有关详细信息, 请参阅[配置 FxCop 分析器](configure-fxcop-analyzers.md)。
+您可以为此规则、所有规则或此类别中的所有规则（设计）配置此选项。 有关详细信息，请参阅[配置 FxCop 分析器](configure-fxcop-analyzers.md)。
 
 ## <a name="example"></a>示例
 

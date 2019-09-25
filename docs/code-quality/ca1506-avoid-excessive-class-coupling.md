@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b655609548d3de293abe2adc0ec3fb5c6fcf297b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1721fd52c00c5b312c88f19d48b668b12d28f050
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62546103"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71234493"
 ---
 # <a name="ca1506-avoid-excessive-class-coupling"></a>CA1506:避免过度类耦合度
 
@@ -28,25 +28,25 @@ ms.locfileid: "62546103"
 |TypeName|AvoidExcessiveClassCoupling|
 |CheckId|CA1506|
 |类别|Microsoft.Maintainability|
-|是否重大更改|重大|
+|重大更改|重大|
 
 ## <a name="cause"></a>原因
 
-与许多其他类型结合使用的类型或方法。
+类型或方法与许多其他类型耦合在一起。
 
 ## <a name="rule-description"></a>规则说明
 
 此规则通过计算类型或方法包含的唯一类型引用的个数来衡量类耦合。
 
-具有类耦合度很高的类型和方法可能很难维护。 最好能够表现出低耦合和高聚合的类型和方法。
+类耦合度较高的类型和方法可能很难维护。 有一个很好的做法，就是使用显示低耦合和高聚合的类型和方法。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-若要解决此冲突，请尝试重新设计的类型或方法来减少之耦合的类型的数。
+若要解决此冲突，请尝试重新设计类型或方法，以减少其耦合的类型的数量。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
-如果类型或方法被视为可维护性，尽管其大量的其他类型的依赖项，请排除此警告。
+当类型或方法被视为可维护（尽管它对其他类型的依赖项很多）时，请排除此警告。
 
 ## <a name="see-also"></a>请参阅
 
