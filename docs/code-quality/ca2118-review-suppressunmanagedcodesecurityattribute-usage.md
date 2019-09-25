@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50c82cd77969da5cbf302b6774f07da1a6a8b040
-ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
+ms.openlocfilehash: b64551ec81de6a1eae7831af9f3382a2cd4c3b0e
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66714001"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71232635"
 ---
 # <a name="ca2118-review-suppressunmanagedcodesecurityattribute-usage"></a>CA2118:检查 SuppressUnmanagedCodeSecurityAttribute 用法
 
@@ -28,7 +28,7 @@ ms.locfileid: "66714001"
 |TypeName|ReviewSuppressUnmanagedCodeSecurityUsage|
 |CheckId|CA2118|
 |类别|Microsoft.Security|
-|是否重大更改|重大|
+|重大更改|重大|
 
 ## <a name="cause"></a>原因
 
@@ -36,15 +36,15 @@ ms.locfileid: "66714001"
 
 ## <a name="rule-description"></a>规则说明
 
-<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> 执行使用 COM 互操作或平台调用的非托管的代码的成员更改默认的安全系统行为。 通常情况下，系统会进行[数据和建模](/dotnet/framework/data/index)非托管的代码权限。 此要求发生在运行时为每个成员，并且检查权限的调用堆栈中每个调用方。 当存在该属性时，系统会进行[链接要求](/dotnet/framework/misc/link-demands)的权限： 调用方进行 JIT 编译时检查直接调用方的权限。
+<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>为使用 COM 互操作或平台调用执行非托管代码的成员更改默认的安全系统行为。 通常，系统为非托管代码权限进行[数据和建模](/dotnet/framework/data/index)。 此要求在运行时针对每个成员调用发生，并检查调用堆栈中的每个调用方是否有权限。 当存在属性时，系统会对权限进行[链接要求](/dotnet/framework/misc/link-demands)：调用调用程序时，将检查直接调用方的权限。
 
-该特性主要用于提高性能；不过，提高性能的同时会显著增加安全风险。 如果该属性将在调用本机方法的公共成员上时中 （而不是直接调用方） 的调用堆栈, 的调用方不需要执行非托管的代码的非托管的代码权限。 具体取决于公共成员的操作和输入的处理，它可能允许不受信任调用方访问通常限制为可信的代码的功能。
+该特性主要用于提高性能；不过，提高性能的同时会显著增加安全风险。 如果将属性放置在调用本机方法的公共成员上，调用堆栈中的调用方（而不是直接调用方）不需要非托管代码权限即可执行非托管代码。 根据公共成员的操作和输入处理，它可能会允许不受信任的调用方访问通常限制为可信代码的功能。
 
-.NET 依赖于安全性检查，以防止调用方直接访问当前进程的地址空间。 此特性会绕过常规安全，因为你的代码将造成严重的威胁，如果可用于读取或写入到该进程的内存。 请注意风险并不局限于有意提供访问权限来处理内存; 方法该按钮还出现在任何情况下，其中恶意代码可以访问通过任何方式，例如，通过实现提供令人惊讶、 格式不正确，或无效输入。
+.NET 依赖于安全检查来防止调用方获取对当前进程的地址空间的直接访问。 由于此属性会跳过正常的安全性，因此，如果代码可用于读取或写入进程的内存，则代码会带来严重的威胁。 请注意，此风险并不局限于有意提供对处理内存的访问的方法;在任何情况下，恶意代码都可以通过任何方式获取访问权限，例如，提供令人吃惊、格式不正确或无效的输入。
 
-默认安全策略不会向程序集授予非托管的代码权限，除非它执行从本地计算机或者是以下组之一的成员：
+默认安全策略不向程序集授予非托管代码权限，除非它是从本地计算机执行或是下列组之一的成员：
 
-- 我的计算机的区域代码组
+- 我的电脑区域代码组
 
 - Microsoft 强名称代码组
 
@@ -52,27 +52,27 @@ ms.locfileid: "66714001"
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-请仔细查看代码，以确保此属性是绝对必要。 如果你不熟悉托管的代码安全或不了解使用此属性的安全隐患，请在代码中将其删除。 如果该属性是必需的您必须确保调用方不能出于恶意使用你的代码。 如果你的代码没有权限来执行非托管的代码，此属性不起作用，应删除。
+仔细检查代码以确保此属性是绝对必要的。 如果你不熟悉托管代码安全性，或者不了解使用此属性的安全影响，请将其从代码中删除。 如果该属性是必需的，则必须确保调用方不能恶意使用您的代码。 如果你的代码没有执行非托管代码的权限，则此属性不起作用，因此应将其删除。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
-若要安全地禁止显示此规则的警告，必须确保你的代码不提供调用方对本机操作或可以以破坏方式使用的资源的访问权限。
+若要安全地禁止显示此规则发出的警告，您必须确保您的代码不会向调用方提供对可通过破坏性方式使用的本机操作或资源的访问权限。
 
 ## <a name="example-1"></a>示例 1
 
-下面的示例与规则冲突。
+下面的示例与此规则冲突。
 
 [!code-csharp[FxCop.Security.TypesDoNotSuppress#1](../code-quality/codesnippet/CSharp/ca2118-review-suppressunmanagedcodesecurityattribute-usage_1.cs)]
 
 ## <a name="example-2"></a>示例 2
 
-在以下示例中，`DoWork`方法提供的平台调用方法的可公开访问的代码路径`FormatHardDisk`。
+在下面的示例中， `DoWork`方法提供了一个可公开访问的平台调用方法`FormatHardDisk`的代码路径。
 
 [!code-csharp[FxCop.Security.PInvokeAndSuppress#1](../code-quality/codesnippet/CSharp/ca2118-review-suppressunmanagedcodesecurityattribute-usage_2.cs)]
 
 ## <a name="example-3"></a>示例 3
 
-在下面的示例中，公共方法`DoDangerousThing`会导致冲突。 若要解决冲突，`DoDangerousThing`应设为专用，并对它的访问应通过公共方法受保护的安全要求，如所示`DoWork`方法。
+在下面的示例中，公共方法`DoDangerousThing`导致了冲突。 若要解决此冲突`DoDangerousThing` ，应使其成为私有方法，并应通过安全要求所保护的公共方法来访问它，如方法所`DoWork`示。
 
 [!code-csharp[FxCop.Security.TypeInvokeAndSuppress#1](../code-quality/codesnippet/CSharp/ca2118-review-suppressunmanagedcodesecurityattribute-usage_3.cs)]
 

@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: a086ad80bd13fb18f866769db34d72cae3e67496
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: ead932af202bd1a44464025a1b09baa698acb7b1
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68922863"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71236038"
 ---
 # <a name="ca1034-nested-types-should-not-be-visible"></a>CA1034:嵌套类型不应是可见的
 
@@ -32,7 +32,7 @@ ms.locfileid: "68922863"
 |TypeName|NestedTypesShouldNotBeVisible|
 |CheckId|CA1034|
 |类别|Microsoft.Design|
-|是否重大更改|重大|
+|重大更改|重大|
 
 ## <a name="cause"></a>原因
 
@@ -43,12 +43,12 @@ ms.locfileid: "68922863"
 
 不要使用外部可见的嵌套类型进行逻辑分组或避免名称冲突;请改用命名空间。
 
-嵌套类型包括成员可访问性的概念, 而某些程序员并不清楚清楚。
+嵌套类型包括成员可访问性的概念，而某些程序员并不清楚清楚。
 
-在高级自定义方案中, 可以在子类和嵌套类型中使用受保护的类型。
+在高级自定义方案中，可以在子类和嵌套类型中使用受保护的类型。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
-如果不想让嵌套类型在外部可见, 请更改类型的可访问性。 否则, 请从其父级中删除嵌套类型。 如果嵌套的目的是对嵌套类型进行分类, 请改用命名空间来创建层次结构。
+如果不想让嵌套类型在外部可见，请更改类型的可访问性。 否则，请从其父级中删除嵌套类型。 如果嵌套的目的是对嵌套类型进行分类，请改用命名空间来创建层次结构。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 不禁止显示此规则发出的警告。

@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: c0cd59ec30ce45c94ac3422c4271959d74073bff
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: cf2e30956879c0c61bb57d65b89445962f34959a
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68920053"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237898"
 ---
 # <a name="ca2239-provide-deserialization-methods-for-optional-fields"></a>CA2239:为可选字段提供反序列化方法
 
@@ -31,19 +31,19 @@ ms.locfileid: "68920053"
 |TypeName|ProvideDeserializationMethodsForOptionalFields|
 |CheckId|CA2239|
 |类别|Microsoft.Usage|
-|是否重大更改|非重大更改|
+|重大更改|不间断|
 
 ## <a name="cause"></a>原因
-类型具有用<xref:System.Runtime.Serialization.OptionalFieldAttribute?displayProperty=fullName>特性标记的字段, 并且该类型不提供反序列化事件处理方法。
+类型具有用<xref:System.Runtime.Serialization.OptionalFieldAttribute?displayProperty=fullName>特性标记的字段，并且该类型不提供反序列化事件处理方法。
 
 ## <a name="rule-description"></a>规则说明
-<xref:System.Runtime.Serialization.OptionalFieldAttribute>特性对序列化没有影响; 用特性标记的字段被序列化。 但是, 在反序列化时将忽略字段, 并保留与类型关联的默认值。 反序列化事件处理程序应该在反序列化过程中声明为设置字段。
+<xref:System.Runtime.Serialization.OptionalFieldAttribute>特性对序列化没有影响; 用特性标记的字段被序列化。 但是，在反序列化时将忽略字段，并保留与类型关联的默认值。 反序列化事件处理程序应该在反序列化过程中声明为设置字段。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
-若要修复与此规则的冲突, 请将反序列化事件处理方法添加到该类型。
+若要修复与此规则的冲突，请将反序列化事件处理方法添加到该类型。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
-如果应该在反序列化过程中忽略该字段, 则可以安全地禁止显示此规则发出的警告。
+如果应该在反序列化过程中忽略该字段，则可以安全地禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
 下面的示例演示一个具有可选字段和反序列化事件处理方法的类型。

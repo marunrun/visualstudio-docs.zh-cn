@@ -26,15 +26,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5c8837c1c95dc5f032a10773645f93a46ec29662
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 3cef71cc5f6c4e25d04e6045be7059d81c06b484
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551205"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71254942"
 ---
 # <a name="word-solutions"></a>Word 解决方案
-  Visual Studio 提供可用于创建适用于 Microsoft Office Word 的文档级自定义项和 VSTO 外接程序的项目模板。 你可以使用这些解决方案来实现 Word 自动化、扩展 Word 功能以及自定义 Word 用户界面 (UI)。 有关文档级自定义项和 VSTO 外接程序之间的差异的详细信息, 请参阅[Office 解决方案&#40;开发&#41;概述 VSTO](../vsto/office-solutions-development-overview-vsto.md)。
+  Visual Studio 提供可用于创建适用于 Microsoft Office Word 的文档级自定义项和 VSTO 外接程序的项目模板。 你可以使用这些解决方案来实现 Word 自动化、扩展 Word 功能以及自定义 Word 用户界面 (UI)。 有关文档级自定义项和 VSTO 外接程序之间的差异的详细信息，请参阅[Office 解决方案&#40;开发&#41;概述 VSTO](../vsto/office-solutions-development-overview-vsto.md)。
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
@@ -51,24 +51,24 @@ ms.locfileid: "69551205"
 - [自定义 Word 的用户界面](#UI)。
 
 ## <a name="automating"></a>自动执行 Word
- Word 对象模型公开了许多可用于实现 Word 自动化的类型。 例如，可以通过编程方式创建表格、设置文档格式以及设置范围和段落中的文本。 有关详细信息, 请参阅[Word 对象模型概述](../vsto/word-object-model-overview.md)。
+ Word 对象模型公开了许多可用于实现 Word 自动化的类型。 例如，可以通过编程方式创建表格、设置文档格式以及设置范围和段落中的文本。 有关详细信息，请参阅[Word 对象模型概述](../vsto/word-object-model-overview.md)。
 
- 在 Visual Studio 中开发 Word 解决方案时，还可以使用解决方案中的 *主机项* 和 *主机控件* 。 这些对象可扩展 Word 对象模型中的某些常用对象，例如 <xref:Microsoft.Office.Interop.Word.Document> 和 <xref:Microsoft.Office.Interop.Word.ContentControl> 对象。 扩展对象的行为类似于其所基于的 Word 对象，但它们可以将其他事件和数据绑定功能添加到对象。 有关详细信息, 请参阅[使用扩展对象实现 Word 自动化](../vsto/automating-word-by-using-extended-objects.md)。
+ 在 Visual Studio 中开发 Word 解决方案时，还可以使用解决方案中的 *主机项* 和 *主机控件* 。 这些对象可扩展 Word 对象模型中的某些常用对象，例如 <xref:Microsoft.Office.Interop.Word.Document> 和 <xref:Microsoft.Office.Interop.Word.ContentControl> 对象。 扩展对象的行为类似于其所基于的 Word 对象，但它们可以将其他事件和数据绑定功能添加到对象。 有关详细信息，请参阅[使用扩展对象实现 Word 自动化](../vsto/automating-word-by-using-extended-objects.md)。
 
 ## <a name="doclevel"></a>开发 Word 的文档级自定义项
  Microsoft Office Word 的文档级自定义项包含与特定文档相关联的程序集。 此程序集通常可通过自定义 UI 和自动化 Word 来扩展文档。 不同于与 Word 自身相关联的 VSTO 外接程序，在自定义中实现的功能只有当关联文档在 Word 中打开时才可用。
 
  若要创建 Word 的文档级自定义项目，可使用 Visual Studio 的 **“新建项目”** 对话框中的“Word 文档”或“Word 模板”项目模板。 有关详细信息，请参阅[如何：在 Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)中创建 Office 项目。
 
- 有关文档级自定义项如何工作的详细信息, 请查看[文档级自定义项的体系结构](../vsto/architecture-of-document-level-customizations.md)。
+ 有关文档级自定义项如何工作的详细信息，请查看[文档级自定义项的体系结构](../vsto/architecture-of-document-level-customizations.md)。
 
 ### <a name="word-customization-programming-model"></a>Word 自定义项编程模型
  在创建 Word 的文档级项目时，Visual Studio 将生成一个名为 `ThisDocument`的类，这是解决方案的基础。 此类表示与解决方案相关联的文档，并提供用于编写代码的起点。
 
- 有关可在文档级`ThisDocument`项目中使用的类和其他功能的详细信息, 请参阅[程序文档级自定义项](../vsto/programming-document-level-customizations.md)。
+ 有关可在文档级`ThisDocument`项目中使用的类和其他功能的详细信息，请参阅[程序文档级自定义项](../vsto/programming-document-level-customizations.md)。
 
 ## <a name="applevel"></a>开发 Word 的 VSTO 外接程序
- Microsoft Office Word 的 VSTO 外接程序包含由 Word 加载的程序集。 此程序集通常可通过自定义 UI 和自动化 Word 来扩展 Word。 不同于与特定文档相关联的文档级自定义项, 在 VSTO 外接程序中实现的功能不局限于任何单个文档。
+ Microsoft Office Word 的 VSTO 外接程序包含由 Word 加载的程序集。 此程序集通常可通过自定义 UI 和自动化 Word 来扩展 Word。 不同于与特定文档相关联的文档级自定义项，在 VSTO 外接程序中实现的功能不局限于任何单个文档。
 
  若要创建 Word 的 VSTO 外接程序项目，可使用 Visual Studio 的 **“新建项目”** 对话框中的 Word 外接程序项目模板。 有关详细信息，请参阅[如何：在 Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)中创建 Office 项目。
 
@@ -77,7 +77,7 @@ ms.locfileid: "69551205"
 ### <a name="word-add-in-programming-model"></a>Word 外接程序编程模型
  在创建 Word VSTO 外接程序项目时，Visual Studio 将生成一个名为 `ThisAddIn`的类，这是解决方案的基础。 此类提供编写代码的起点，并且还对 VSTO 外接程序公开 Word 的对象模型。
 
- 有关可以在 VSTO 外`ThisAddIn`接程序中使用的类和其他功能的详细信息, 请参阅[Program vsto 外接程序](../vsto/programming-vsto-add-ins.md)。
+ 有关可以在 VSTO 外`ThisAddIn`接程序中使用的类和其他功能的详细信息，请参阅[Program vsto 外接程序](../vsto/programming-vsto-add-ins.md)。
 
 ## <a name="UI"></a>自定义 Word 的用户界面
  可通过若干不同方式来自定义 Word 的用户界面。 某些选项适用于所有项目类型，而其他选项仅适用于 VSTO 外接程序或文档级自定义项。

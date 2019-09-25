@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f8a672056c8663c2e27ec730e542083aee9738f
-ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
+ms.openlocfilehash: b3c6298c2186b6a73b4a7ef441b5f4c42c90ff6a
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66714978"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71231064"
 ---
 # <a name="ca2228-do-not-ship-unreleased-resource-formats"></a>CA2228:不要发行未发布的资源格式
 
@@ -28,19 +28,19 @@ ms.locfileid: "66714978"
 |TypeName|DoNotShipUnreleasedResourceFormats|
 |CheckId|CA2228|
 |类别|Microsoft.Usage|
-|是否重大更改|非重大更改|
+|重大更改|不间断|
 
 ## <a name="cause"></a>原因
 
-使用当前不支持的.NET 版本的生成资源文件。
+资源文件是使用当前不受支持的 .NET 版本生成的。
 
 ## <a name="rule-description"></a>规则说明
 
-通过使用.NET 的预发布版本生成的资源文件可能不是可由支持的.NET 版本。
+使用 .NET 的预发布版本生成的资源文件可能无法由受支持的 .NET 版本使用。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-若要修复与此规则的冲突，生成使用受支持的.NET 版本的资源。
+若要修复与此规则的冲突，请使用受支持的 .NET 版本生成资源。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 

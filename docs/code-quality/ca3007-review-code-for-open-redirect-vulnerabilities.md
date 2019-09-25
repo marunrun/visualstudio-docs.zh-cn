@@ -10,12 +10,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: e60d0fad1262138b57f079485bc7455e55c7ec25
-ms.sourcegitcommit: 2ee11676af4f3fc5729934d52541e9871fb43ee9
+ms.openlocfilehash: 0226c0e2e66a6543b81cd8ee674a743766b65f3e
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65841335"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237272"
 ---
 # <a name="ca3007-review-code-for-open-redirect-vulnerabilities"></a>CA3007：查看公开重定向漏洞的代码
 
@@ -24,37 +24,37 @@ ms.locfileid: "65841335"
 |TypeName|ReviewCodeForOpenRedirectVulnerabilities|
 |CheckId|CA3007|
 |类别|Microsoft.Security|
-|是否重大更改|非重大更改|
+|重大更改|不间断|
 
 ## <a name="cause"></a>原因
 
-可能不受信任的 HTTP 请求输入可能会达到的 HTTP 响应重定向。
+可能不受信任的 HTTP 请求输入达到 HTTP 响应重定向。
 
 ## <a name="rule-description"></a>规则说明
 
-在使用时不受信任的输入，留意打开重定向漏洞。 攻击者可以利用开放重定向漏洞，使用你的网站提供外观是合法的 URL，但重定向到网络钓鱼网站或其他恶意网页戒心访问者。
+使用不受信任的输入时，请注意开放重定向漏洞。 攻击者可以利用开放的重定向漏洞来使用您的网站来获得合法 URL 的外观，但将不受信任的访问者重定向到仿冒网站或其他恶意网页。
 
-此规则会尝试查找与到达 HTTP 重定向 URL 的 HTTP 请求的输入。
-
-> [!NOTE]
-> 此规则不能跨程序集跟踪数据。 例如，如果一个程序集读取 HTTP 请求输入，然后将其传递给另一个程序集使用的 HTTP 重定向响应，此规则不会生成一条警告。
+此规则尝试从访问 HTTP 重定向 URL 的 HTTP 请求查找输入。
 
 > [!NOTE]
-> 没有可配置限制深度此规则将分析数据流，在方法调用之间。 请参阅[分析器的配置](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md#dataflow-analysis)了解用于某个 EditorConfig 文件中配置限制。
+> 此规则无法跟踪程序集中的数据。 例如，如果一个程序集读取 HTTP 请求输入，然后将其传递给使用 HTTP 重定向响应的另一个程序集，则此规则不会产生警告。
+
+> [!NOTE]
+> 此规则将跨方法调用分析数据流的程度有可配置的限制。 有关如何在 EditorConfig 文件中配置限制的说明，请参阅[分析器配置](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md#dataflow-analysis)。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-修复打开重定向漏洞的一些方法包括：
+解决开放重定向漏洞的一些方法包括：
 
 - 不允许用户启动重定向。
-- 不允许用户重定向方案中指定的 URL 的任何部分。
-- 限制对预定义"允许列表"的 Url 重定向。
+- 不允许用户在重定向方案中指定 URL 的任何部分。
+- 限制重定向到 Url 的预定义 "允许列表"。
 - 验证重定向 Url。
-- 如果适用，请考虑使用免责声明页，当用户被重定向离开你的站点。
+- 如果适用，请考虑在用户从站点中重定向时使用免责声明页面。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
-如果您知道在验证了要被限制为预期的 Url 的输入，也没关系，若要取消显示此警告。
+如果你知道已经验证输入限制为所需的 Url，可以禁止显示此警告。
 
 ## <a name="pseudo-code-examples"></a>伪代码示例
 

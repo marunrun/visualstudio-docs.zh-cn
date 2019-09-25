@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e88f22f25ff0620a88685dee93fd5658c302db74
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 827a8ee01575d6d263c8f8ee423de72cfe939e39
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68920246"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71231177"
 ---
 # <a name="ca2221-finalizers-should-be-protected"></a>CA2221:终结器应受到保护
 
@@ -28,22 +28,22 @@ ms.locfileid: "68920246"
 |TypeName|FinalizersShouldBeProtected|
 |CheckId|CA2221|
 |类别|Microsoft.Usage|
-|是否重大更改|非重大更改|
+|重大更改|不间断|
 
 ## <a name="cause"></a>原因
-公共类型实现不指定族 (受保护) 访问的终结器。
+公共类型实现不指定族（受保护）访问的终结器。
 
 ## <a name="rule-description"></a>规则说明
 终结器必须使用族访问修饰符。 此规则由C#、Visual Basic 和 Visual C++编译器强制执行。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
-若要修复与此规则的冲突, 请将终结器更改为可以进行系列访问。
+若要修复与此规则的冲突，请将终结器更改为可以进行系列访问。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 不禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
-任何高级 .NET 语言中都不能违反此规则;如果你正在编写 Microsoft 中间语言, 则可能会违反此方法。
+任何高级 .NET 语言中都不能违反此规则;如果你正在编写 Microsoft 中间语言，则可能会违反此方法。
 
 ```
 // =============== CLASS MEMBERS DECLARATION ===================

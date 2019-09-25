@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 40fdeefc2d664b80bb6e17c109349cb5912b0516
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8f4f165b4b00f46b478907c9affca672b4c7f113
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62545350"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71232956"
 ---
 # <a name="ca2104-do-not-declare-read-only-mutable-reference-types"></a>CA2104:不要声明只读可变引用类型
 
@@ -32,10 +32,10 @@ ms.locfileid: "62545350"
 |TypeName|DoNotDeclareReadOnlyMutableReferenceTypes|
 |CheckId|CA2104|
 |类别|Microsoft.Security|
-|是否重大更改|非换行|
+|重大更改|不间断|
 
 > [!NOTE]
-> 规则 CA2104 已过时，将 Visual Studio 的未来版本中删除。 不将作为实现[分析器](roslyn-analyzers-overview.md)由于所需确定一种类型的实际不变性的复杂分析。
+> 规则 CA2104 已过时，并将在 Visual Studio 的未来版本中删除。 它不会作为[分析器](roslyn-analyzers-overview.md)来实现，因为需要进行复杂分析来确定类型的实际不可变性。
 
 ## <a name="cause"></a>原因
 
@@ -43,25 +43,25 @@ ms.locfileid: "62545350"
 
 ## <a name="rule-description"></a>规则说明
 
-可变类型是实例数据可被修改的类型。 <xref:System.Text.StringBuilder?displayProperty=fullName>类是可变引用类型的一个示例。 它包含可以更改的类的实例值的成员。 不可变的引用类型的一个示例是<xref:System.String?displayProperty=fullName>类。 已实例化后，其值可能永远不会更改。
+可变类型是实例数据可被修改的类型。 <xref:System.Text.StringBuilder?displayProperty=fullName>类是可变引用类型的示例。 它包含可以更改类的实例值的成员。 <xref:System.String?displayProperty=fullName>类是不可变引用类型的一个示例。 在实例化后，其值永远不会更改。
 
-只读修饰符 ([readonly](/dotnet/csharp/language-reference/keywords/readonly)中C#， [ReadOnly](/dotnet/visual-basic/language-reference/modifiers/readonly)在 Visual Basic 中，和[const](/cpp/cpp/const-cpp)在C++) 的引用类型字段上 (或指针中的C++)防止字段替换为引用类型的不同实例。 但是，修饰符不会阻止通过引用类型进行修改的字段的实例数据。
+引用类型字段（或中C++的指针C#）的只读修饰符（[readonly](/dotnet/csharp/language-reference/keywords/readonly) in、 C++ [readonly](/dotnet/visual-basic/language-reference/modifiers/readonly) in Visual Basic 和[const](/cpp/cpp/const-cpp) in）可防止该字段被引用类型的其他实例替换。 但是，修饰符不会阻止通过引用类型修改字段的实例数据。
 
-此规则可能会无意中显示一种类型的冲突的是，实际上，不可变。 在这种情况下，则可以安全地禁止显示警告。
+此规则可能会无意中显示类型为 "不变" 的冲突。 在这种情况下，可以安全地禁止显示该警告。
 
-只读数组字段不受此规则，但是会导致违反了[CA2105:不应仅读取数组字段](../code-quality/ca2105-array-fields-should-not-be-read-only.md)规则。
+只读数组字段不受此规则的破坏，而是导致[CA2105 的冲突：数组字段不应为只读](../code-quality/ca2105-array-fields-should-not-be-read-only.md)规则。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-若要修复此规则的冲突，请删除只读修饰符，或接受一项重大更改时，该字段将替换为不可变类型。
+若要修复与此规则的冲突，请删除只读修饰符，或者，如果可接受重大更改，请将该字段替换为不可变类型。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
-它可以安全地禁止显示此规则的警告，如果字段类型是不可变。
+如果字段类型为不可变，则可以安全地禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
 
-下面的示例演示了一个导致该规则的冲突的字段声明：
+下面的示例演示了导致违反此规则的字段声明：
 
 [!code-cpp[FxCop.Security.MutableReferenceTypes#1](../code-quality/codesnippet/CPP/ca2104-do-not-declare-read-only-mutable-reference-types_1.cpp)]
 [!code-csharp[FxCop.Security.MutableReferenceTypes#1](../code-quality/codesnippet/CSharp/ca2104-do-not-declare-read-only-mutable-reference-types_1.cs)]

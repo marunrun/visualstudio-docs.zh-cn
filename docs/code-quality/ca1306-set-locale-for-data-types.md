@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 893844741c848bee759f56dd027c9976a21902e8
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: aaf16ccd187681be7406fdadbde620a167a40c96
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68922790"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71235030"
 ---
 # <a name="ca1306-set-locale-for-data-types"></a>CA1306:设置数据类型的区域设置
 
@@ -28,19 +28,19 @@ ms.locfileid: "68922790"
 |TypeName|SetLocaleForDataTypes|
 |CheckId|CA1306|
 |类别|Microsoft.Globalization|
-|是否重大更改|不间断|
+|重大更改|不间断|
 
 ## <a name="cause"></a>原因
-方法或构造函数创建了一个或<xref:System.Data.DataTable?displayProperty=fullName>多<xref:System.Data.DataSet?displayProperty=fullName>个或实例, 但未显式设置区域设置<xref:System.Data.DataTable.Locale%2A?displayProperty=fullName>属性<xref:System.Data.DataSet.Locale%2A?displayProperty=fullName>(或)。
+方法或构造函数创建了一个或<xref:System.Data.DataTable?displayProperty=fullName>多<xref:System.Data.DataSet?displayProperty=fullName>个或实例，但未显式设置区域设置<xref:System.Data.DataTable.Locale%2A?displayProperty=fullName>属性<xref:System.Data.DataSet.Locale%2A?displayProperty=fullName>（或）。
 
 ## <a name="rule-description"></a>规则说明
-区域设置确定数据的区域性特定的表示法元素, 例如用于数值、货币符号和排序顺序的格式设置。 创建<xref:System.Data.DataTable> 或<xref:System.Data.DataSet>时, 应显式设置区域设置。 默认情况下, 这些类型的区域设置为当前区域性。 对于存储在数据库或文件中并且全局共享的数据, 区域设置通常应设置为固定区域性 (<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>)。 如果跨区域性共享数据, 则使用默认区域设置可能会导致<xref:System.Data.DataTable>或<xref:System.Data.DataSet>无法正确地显示或解释的内容。
+区域设置确定数据的区域性特定的表示法元素，例如用于数值、货币符号和排序顺序的格式设置。 创建<xref:System.Data.DataTable> 或<xref:System.Data.DataSet>时，应显式设置区域设置。 默认情况下，这些类型的区域设置为当前区域性。 对于存储在数据库或文件中并且全局共享的数据，区域设置通常应设置为固定区域性（<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>）。 如果跨区域性共享数据，则使用默认区域设置可能会导致<xref:System.Data.DataTable>或<xref:System.Data.DataSet>无法正确地显示或解释的内容。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
-若要修复与此规则的冲突, 请显式设置<xref:System.Data.DataTable>或<xref:System.Data.DataSet>的区域设置。
+若要修复与此规则的冲突，请显式设置<xref:System.Data.DataTable>或<xref:System.Data.DataSet>的区域设置。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
-如果库或应用程序适用于受限制的本地用户、数据不共享或默认设置在所有支持的方案中生成所需的行为, 则可以安全地禁止显示此规则发出的警告。
+如果库或应用程序适用于受限制的本地用户、数据不共享或默认设置在所有支持的方案中生成所需的行为，则可以安全地禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
 下面的示例创建两<xref:System.Data.DataTable>个实例。

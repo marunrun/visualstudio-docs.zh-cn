@@ -10,12 +10,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 10b9091df08368674511b770158ea47c247aade7
-ms.sourcegitcommit: 2ee11676af4f3fc5729934d52541e9871fb43ee9
+ms.openlocfilehash: c0c99d5d0adb145a061693f8a83b1f674e05eed4
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65841364"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237339"
 ---
 # <a name="ca3005-review-code-for-ldap-injection-vulnerabilities"></a>CA3005：查看 LDAP 注入漏洞的代码
 
@@ -24,36 +24,36 @@ ms.locfileid: "65841364"
 |TypeName|ReviewCodeForLdapInjectionVulnerabilities|
 |CheckId|CA3005|
 |类别|Microsoft.Security|
-|是否重大更改|非重大更改|
+|重大更改|不间断|
 
 ## <a name="cause"></a>原因
 
-可能不受信任的 HTTP 请求输入达到 LDAP 语句。
+可能不受信任的 HTTP 请求输入达到了 LDAP 语句。
 
 ## <a name="rule-description"></a>规则说明
 
-在使用时不受信任的输入，留意的轻型目录访问协议 (LDAP) 注入式攻击。 攻击者可以针对信息目录运行恶意 LDAP 语句。 使用用户输入构造动态 LDAP 语句来访问目录服务的应用程序是特别容易受到攻击。
+使用不受信任的输入时，请注意轻型目录访问协议（LDAP）注入攻击。 攻击者可能会对信息目录运行恶意 LDAP 语句。 使用用户输入来构建动态 LDAP 语句以访问目录服务的应用程序特别容易受到攻击。
 
-此规则会尝试查找来自 HTTP 请求到达的 LDAP 语句的输入。
-
-> [!NOTE]
-> 此规则不能跨程序集跟踪数据。 例如，如果一个程序集读取 HTTP 请求输入，然后将其传递给执行 LDAP 语句的另一个程序集，此规则不会生成一条警告。
+此规则尝试从进入 LDAP 语句的 HTTP 请求查找输入。
 
 > [!NOTE]
-> 没有可配置限制深度此规则将分析数据流，在方法调用之间。 请参阅[分析器的配置](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md#dataflow-analysis)了解用于某个 EditorConfig 文件中配置限制。
+> 此规则无法跟踪程序集中的数据。 例如，如果一个程序集读取 HTTP 请求输入，然后将其传递给另一个执行 LDAP 语句的程序集，则此规则不会产生警告。
+
+> [!NOTE]
+> 此规则将跨方法调用分析数据流的程度有可配置的限制。 有关如何在 EditorConfig 文件中配置限制的说明，请参阅[分析器配置](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md#dataflow-analysis)。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-LDAP 语句的用户控制部分，请考虑之一：
-- 允许安全列表的非特殊字符。
+对于 LDAP 语句的用户控制部分，请考虑以下各项之一：
+- 仅允许非特殊字符的安全列表。
 - 不允许特殊字符
-- 特殊字符进行转义。
+- 转义特殊字符。
 
-请参阅[OWASP 的 LDAP 注入预防速查表](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/LDAP_Injection_Prevention_Cheat_Sheet.md)有关更多指导。
+有关更多指导，请参阅[OWASP 的 LDAP 注入防护工作表](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/LDAP_Injection_Prevention_Cheat_Sheet.md)。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
-如果您知道验证输入或将其转义为安全起见，则可以禁止显示此警告。
+如果你知道输入已验证或转义为安全，则可以禁止显示此警告。
 
 ## <a name="pseudo-code-examples"></a>伪代码示例
 

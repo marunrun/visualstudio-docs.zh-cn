@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 740edb9861d2e3e758a36dfc067cb85fe4fc2c7e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fbc3fbeac6d01b718af2022a09bddb92e9c7c2c6
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62807155"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71234575"
 ---
 # <a name="ca1500-variable-names-should-not-match-field-names"></a>CA1500:变量名不应与字段名相同
 
@@ -31,19 +31,19 @@ ms.locfileid: "62807155"
 |TypeName|VariableNamesShouldNotMatchFieldNames|
 |CheckId|CA1500|
 |类别|Microsoft.Maintainability|
-|是否重大更改|当触发对与字段具有相同名称的参数：<br /><br /> --否-如果外的程序集，而不考虑所做的更改都不可见的字段和方法，它将参数声明。<br />-是-如果更改字段的名称和程序集外可见。<br />-是参数的-如果您更改名称和程序集外可见声明它的方法。<br /><br /> 如果在与字段具有相同名称的本地变量上引发：<br /><br /> --否-如果该字段不能看到外部程序集，而不考虑所做的更改。<br />--否-如果更改本地变量的名称，而不更改的字段的名称。<br />-是-如果您更改字段的名称并且可将它视为程序集外部的。|
+|重大更改|对与字段具有相同名称的参数触发时：<br /><br /> -"不间断"-如果在程序集外部不显示声明参数的字段和方法，无论所做的更改如何。<br />-中断-如果更改字段的名称，则可以在程序集外部查看。<br />-如果您更改参数的名称，则可以在程序集外部查看该参数的名称。<br /><br /> 当在与字段同名的局部变量上触发时：<br /><br /> -"不间断"-如果在程序集外部不能查看该字段，无论你进行了何种更改。<br />-"非换行"-如果更改本地变量的名称，并且不更改字段的名称，则为。<br />-如果更改字段的名称，则可以在程序集外部查看。|
 
 ## <a name="cause"></a>原因
 
-实例方法声明的参数或局部变量的名称匹配的声明类型的实例字段。 若要捕获与规则冲突的本地变量，测试的程序集必须使用调试信息来生成和关联的程序数据库 (.pdb) 文件必须可用。
+实例方法声明的参数或本地变量的名称与声明类型的实例字段匹配。 若要捕获违反规则的局部变量，则必须使用调试信息来生成经过测试的程序集，并且关联的程序数据库（.pdb）文件必须可用。
 
 ## <a name="rule-description"></a>规则说明
 
-当某一实例字段的名称匹配的参数或局部变量的名称时，使用访问实例字段`this`(`Me`中[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) 的方法主体内的关键字。 当维护代码，很容易忘记了这种差异，假定参数/本地变量引用实例字段，这将导致错误。 这是特别是对于较长的方法正文，则返回 true。
+当实例字段的名称与参数或局部变量名称匹配时，将在方法体中使用`this` （`Me` in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]）关键字来访问实例字段。 维护代码时，很容易忘记这种差异，并假设参数/局部变量引用实例字段，这将导致错误。 这适用于较长的方法体。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-若要修复此规则的冲突，请重命名参数/变量或字段。
+若要修复与此规则的冲突，请重命名参数/变量或字段。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
@@ -51,7 +51,7 @@ ms.locfileid: "62807155"
 
 ## <a name="example"></a>示例
 
-下面的示例演示两个规则的冲突。
+下面的示例显示了两个规则冲突。
 
 [!code-vb[FxCop.Maintainability.VarMatchesField#1](../code-quality/codesnippet/VisualBasic/ca1500-variable-names-should-not-match-field-names_1.vb)]
 [!code-csharp[FxCop.Maintainability.VarMatchesField#1](../code-quality/codesnippet/CSharp/ca1500-variable-names-should-not-match-field-names_1.cs)]

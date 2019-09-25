@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a6d9acc3a74505f766fbf9cfe26fc6878fdbb4b
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 2640fddcde0d8777363a3c56e398e7ff307a20c7
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68920048"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237882"
 ---
 # <a name="ca2240-implement-iserializable-correctly"></a>CA2240:正确实现 ISerializable
 
@@ -32,23 +32,23 @@ ms.locfileid: "68920048"
 |TypeName|ImplementISerializableCorrectly|
 |CheckId|CA2240|
 |类别|Microsoft.Usage|
-|是否重大更改|非重大更改|
+|重大更改|不间断|
 
 ## <a name="cause"></a>原因
 
-外部可见类型可分配给<xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>接口, 并满足以下条件之一:
+外部可见类型可分配给<xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>接口，并满足以下条件之一：
 
-- 该类型将继承, 但不会<xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName>重写方法, 并且该类型声明未标记<xref:System.NonSerializedAttribute?displayProperty=fullName>为属性的实例字段。
+- 该类型将继承，但不会<xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName>重写方法，并且该类型声明未标记<xref:System.NonSerializedAttribute?displayProperty=fullName>为属性的实例字段。
 
-- 该类型不是密封的, 并且该类型<xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A>实现的方法不能在外部可见并且可重写。
+- 该类型不是密封的，并且该类型<xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A>实现的方法不能在外部可见并且可重写。
 
 ## <a name="rule-description"></a>规则说明
-在继承<xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>接口的类型中声明的实例字段不会自动包括在序列化过程中。 若要包含字段, 类型必须实现<xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A>方法和序列化构造函数。 如果不应序列化字段, 请将<xref:System.NonSerializedAttribute>属性应用于字段以显式指示决策。
+在继承<xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>接口的类型中声明的实例字段不会自动包括在序列化过程中。 若要包含字段，类型必须实现<xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A>方法和序列化构造函数。 如果不应序列化字段，请将<xref:System.NonSerializedAttribute>属性应用于字段以显式指示决策。
 
-在未密封的类型中, <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A>方法的实现应在外部可见。 因此, 方法可由派生类型调用, 并且是可重写的。
+在未密封的类型中， <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A>方法的实现应在外部可见。 因此，方法可由派生类型调用，并且是可重写的。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
-若要修复与此规则的冲突, 请<xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A>使该方法可见并可重写, 并确保所有实例字段都包括在序列化过程中<xref:System.NonSerializedAttribute> , 或者使用特性显式标记这些字段。
+若要修复与此规则的冲突，请<xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A>使该方法可见并可重写，并确保所有实例字段都包括在序列化过程中<xref:System.NonSerializedAttribute> ，或者使用特性显式标记这些字段。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 不禁止显示此规则发出的警告。

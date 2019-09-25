@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 455ab619f293981c5ebd3afba6336c63f2fe7f49
-ms.sourcegitcommit: 0f44ec8ba0263056ad04d2d0dc904ad4206ce8fc
+ms.openlocfilehash: 296e8cb4753d487573957de1108a8cb27778ef4c
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766060"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71235795"
 ---
 # <a name="ca1051-do-not-declare-visible-instance-fields"></a>CA1051:不要声明可见实例字段
 
@@ -28,7 +28,7 @@ ms.locfileid: "70766060"
 |TypeName|DoNotDeclareVisibleInstanceFields|
 |CheckId|CA1051|
 |类别|Microsoft.Design|
-|是否重大更改|重大|
+|重大更改|重大|
 
 ## <a name="cause"></a>原因
 

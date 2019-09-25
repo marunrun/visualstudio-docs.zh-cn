@@ -12,18 +12,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e5219e6e3977be59d89b7835413092f1fbeb200
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: 5fe671b10a701bb355a476ff9bc577bb4cdca71b
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680622"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71252535"
 ---
-# <a name="using-the-intellitrace-stand-alone-collector-c-visual-basic"></a>使用 IntelliTrace 独立收集器 (C#、Visual Basic)
+# <a name="using-the-intellitrace-stand-alone-collector-c-visual-basic"></a>使用 IntelliTrace 独立收集器（C#、Visual Basic）
 
 **IntelliTrace 独立收集器** 可让你收集生产服务器或其他环境中应用的 IntelliTrace 诊断数据，而无需在目标计算机上安装 Visual Studio 或更改目标系统环境。 IntelliTrace 独立收集器可用于 Web、SharePoint、WPF 和 Windows 窗体应用中。 数据收集完毕后，只需删除收集器以进行卸载。
 
- 观看运行中的 IntelliTrace：[收集和分析生产中的 IntelliTrace 数据以便进行调试 (第9频道视频)](http://go.microsoft.com/fwlink/?LinkID=251851)
+ 观看运行中的 IntelliTrace：[收集和分析生产中的 IntelliTrace 数据以便进行调试（第9频道视频）](http://go.microsoft.com/fwlink/?LinkID=251851)
 
 > [!NOTE]
 > 通过在 **跟踪** 模式下使用 **Microsoft 监视代理** ，你还可以收集远程计算机上运行的 Web 及 SharePoint 应用的相同 IntelliTrace 数据。
@@ -52,7 +52,7 @@ ms.locfileid: "68680622"
 
 ## <a name="WhatApps"></a> 哪些应用上可使用该收集器？
 
-- Internet Information Services (IIS) 版本7.0、7.5、8.0、12.0 和16.0 上托管的 ASP.NET Web 应用
+- Internet Information Services （IIS）版本7.0、7.5、8.0、12.0 和16.0 上托管的 ASP.NET Web 应用
 
 - SharePoint 2010 及 SharePoint 2013 应用程序
 
@@ -70,7 +70,7 @@ ms.locfileid: "68680622"
 
 5. [从 Web 应用程序或 SharePoint 应用程序中收集数据](#BKMK_Collect_Data_from_IIS_Application_Pools)
 
-     或
+     -或-
 
      [收集托管应用中的数据](#BKMK_Collect_Data_from_Executables)
 
@@ -82,7 +82,7 @@ ms.locfileid: "68680622"
 
 2. 从[Microsoft 下载中心](https://visualstudio.microsoft.com/downloads/#intellitrace-standalone-collector-for-visual-studio-2019)、 [My.visualstudio.com](https://my.visualstudio.com/Downloads?q=intellitrace%20standalone%20collector%20visual%20studio%202017)或 Visual Studio 2013 Update 3 安装文件夹中获取收集器。 [IntelliTrace Collector for Visual Studio 2013 Update 4](https://www.microsoft.com/en-us/download/details.aspx?id=44909)：
 
-   - **Microsoft 下载中心**或**my.visualstudio.com**:
+   - **Microsoft 下载中心**或**my.visualstudio.com**：
 
      1. 选择 **IntelliTraceCollector.exe**旁的“下载”。
 
@@ -94,11 +94,11 @@ ms.locfileid: "68680622"
 
    - **Visual Studio 安装文件夹**：
 
-     1. 从安装收集器的文件夹中复制 Intellitracecollection.cab, 例如:
+     1. 从安装收集器的文件夹中复制 Intellitracecollection.cab，例如：
 
           **..\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\CommonExtensions\Microsoft\IntelliTrace**
 
-          或者, 对于以前版本的 Visual Studio:
+          或者，对于以前版本的 Visual Studio：
 
           **..\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\IntelliTrace\12.0.0**
 
@@ -110,18 +110,18 @@ ms.locfileid: "68680622"
 
    2. 浏览到收集器目录，如：**C:\IntelliTraceCollector**
 
-   3. 使用 **expand** 命令来扩展 IntelliTraceCollection.cab，加上最后的句点（“.”）  ：
+   3. 使用 **expand** 命令来扩展 IntelliTraceCollection.cab，加上最后的句点（“.”）：
 
         `expand  /f:* IntelliTraceCollection.cab .`
 
        > [!NOTE]
-       > 该句点（“.”）  保留包含本地化收集计划的子文件夹。
+       > 该句点（“.”）保留包含本地化收集计划的子文件夹。
 
 ## <a name="ConfigurePermissionsRunningCollector"></a> 设置回收器目录的权限
 
 1. 以管理员身份打开应用服务器上的命令提示符窗口。
 
-2. 使用 Windows **icacls** 命令授予服务器管理员访问收集器目录的完全权限。 例如：
+2. 使用 Windows **icacls** 命令授予服务器管理员访问收集器目录的完全权限。 例如:
 
      `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\AdministratorID>* `":F`
 
@@ -129,7 +129,7 @@ ms.locfileid: "68680622"
 
     1. 向将运行 IntelliTrace PowerShell cmdlet 的人员授予访问收集器目录的完全权限。
 
-         例如：
+         例如:
 
          `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\UserID>* `":F`
 
@@ -195,7 +195,7 @@ ms.locfileid: "68680622"
 
         `icacls "C:\IntelliTraceLogFiles" /grant "IIS APPPOOL\SharePoint - 80":F`
 
-       或
+       -或-
 
    - 要设置 Windows 资源管理器（或文件资源管理器）的权限，请：
 
@@ -203,9 +203,9 @@ ms.locfileid: "68680622"
 
      2. 在“安全” 选项卡上，选择“编辑”，然后单击“添加”。
 
-     3. 确保“内置安全主体” 出现在“选择此对象类型” 框中。 如果“内置安全主体”未在那里出现，请选择“对象类型”  进行添加。
+     3. 确保“内置安全主体” 出现在“选择此对象类型” 框中。 如果“内置安全主体”未在那里出现，请选择“对象类型”进行添加。
 
-     4. 确保本地计算机出现在“从此处” 框中。 如果本地计算机未在那里出现，请选择“位置”  进行更改。
+     4. 确保本地计算机出现在“从此处” 框中。 如果本地计算机未在那里出现，请选择“位置”进行更改。
 
      5. 在“输入要选择的对象名称” 框中，添加 Web 应用或 SharePoint 应用程序的应用程序池。
 
@@ -238,7 +238,7 @@ ms.locfileid: "68680622"
 
 2. 再现此问题。
 
-3. 若要创建 .Itrace 文件的检查点, 请使用以下语法:
+3. 若要创建 .Itrace 文件的检查点，请使用以下语法：
 
      `Checkpoint-IntelliTraceCollection` `"` *\<ApplicationPool>* `"`
 
@@ -315,7 +315,7 @@ ms.locfileid: "68680622"
 
   - 可通过禁用与应用无关的事件来减少启动时间。 如，禁用未使用 Windows 工作流的应用的 Windows 工作流事件。
 
-  - 可通过禁用访问注册表但不显示注册表设置问题的应用的注册表事件，提高启动及运行时性能。
+  - 可以通过禁用访问注册表但不显示注册表设置问题的应用的注册表事件，提高启动和运行时性能。
 
 - 检查 IntelliTrace 要收集数据的收集计划中的模块。 编辑收集计划，只加入你感兴趣的模块：
 

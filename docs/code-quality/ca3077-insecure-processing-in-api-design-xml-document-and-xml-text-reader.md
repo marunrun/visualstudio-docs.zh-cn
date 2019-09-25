@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ca39cef1fb4f1bf1114673dd96a91a1ac8e105cc
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 68aada736b2a22b623502d8586415dc8024c2622
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68919881"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237069"
 ---
 # <a name="ca3077-insecure-processing-in-api-design-xml-document-and-xml-text-reader"></a>CA3077:API 设计、XML 文档和 XML 文本读取器中的不安全处理
 
@@ -22,7 +22,7 @@ ms.locfileid: "68919881"
 |TypeName|InsecureDTDProcessingInAPIDesign|
 |CheckId|CA3077|
 |类别|Microsoft.Security|
-|是否重大更改|非重大更改|
+|重大更改|不间断|
 
 ## <a name="cause"></a>原因
 当设计派生自 XMLDocument 和 XMLTextReader 的 API 时，请注意 <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A>。  当引用或解析外部实体源或设置 XML 中的不安全值时，使用不安全的 DTDProcessing 实例可能会导致信息泄露。
@@ -36,7 +36,7 @@ XML 分析器可以通过两种方式确定文档有效性， *文档类型定�
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-- 正确捕获并处理所有 XmlTextReader 异常, 以避免路径信息泄漏。
+- 正确捕获并处理所有 XmlTextReader 异常，以避免路径信息泄漏。
 
 - 使用<xref:System.Xml.XmlSecureResolver>而不是 XmlResolver 来限制 XmlTextReader 可访问的资源。
 
