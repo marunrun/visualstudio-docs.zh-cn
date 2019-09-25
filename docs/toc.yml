@@ -1,4 +1,4 @@
-- name: Visual Studio 文档
+- name: Visual Studio IDE 文档
   href: ide/index.yml
   pdf_name: Visual Studio documentation
 - name: 概述
@@ -115,7 +115,7 @@
                   href: install/workload-component-id-vs-test-agent.md
                 - name: Visual Studio Test Controller
                   href: install/workload-component-id-vs-test-controller.md
-                - name: Visual Studio Test Professional
+                - name: Visual Studio 专业测试工具版
                   href: install/workload-component-id-vs-test-professional.md
                 - name: Visual Studio Feedback Client
                   href: install/workload-component-id-vs-feedback-client.md
@@ -140,7 +140,7 @@
       href: ide/quickstart-ide-orientation.md
     - name: C++：创建控制台应用
       href: /cpp/get-started/tutorial-console-cpp
-    - name: 'Python:创建 Web 应用'
+    - name: Python：创建 Web 应用
       href: ide/quickstart-python.md
     - name: Node.js：创建 Web 应用
       href: ide/quickstart-nodejs.md
@@ -744,7 +744,7 @@
           href: ide/reference/accessibility-products-and-services-from-microsoft.md
 - name: 参考
   items:
-    - name: 键盘快捷方式
+    - name: 键盘快捷键
       items:
         - name: 常用命令
           displayName: keyboard shortcuts
@@ -922,7 +922,7 @@
                       href: ide/reference/options-text-editor-all-languages-scroll-bars.md
                     - name: 制表符
                       href: ide/reference/options-text-editor-all-languages-tabs.md
-                - name: 基本
+                - name: Basic
                   items:
                     - name: 高级
                       href: ide/reference/options-text-editor-basic-visual-basic.md
@@ -942,11 +942,11 @@
                   items:
                     - name: 高级
                       href: ide/reference/options-text-editor-c-cpp-advanced.md
-                    - name: 试验
+                    - name: 实验
                       href: ide/reference/options-text-editor-c-cpp-experimental.md
-                    - name: 格式设置
+                    - name: 格式化
                       href: ide/reference/options-text-editor-c-cpp-formatting.md
-                    - name: 查看
+                    - name: 视图
                       href: ide/reference/options-text-editor-c-cpp-view.md
                 - name: 'F#'
                   items:
@@ -960,9 +960,9 @@
                       href: ide/reference/options-text-editor-fsharp-intellisense.md
                 - name: HTML (Web Forms)
                   items:
-                    - name: 格式设置
+                    - name: 格式化
                       href: ide/reference/options-text-editor-html-formatting.md
-                    - name: 其他
+                    - name: 杂项
                       href: ide/reference/options-text-editor-html-miscellaneous.md
                     - name: 验证
                       href: ide/reference/options-text-editor-html-validation.md
@@ -970,31 +970,31 @@
                   items:
                     - name: 代码验证
                       href: ide/reference/options-text-editor-javascript-code-validation.md
-                    - name: 格式设置
+                    - name: 格式化
                       href: ide/reference/options-text-editor-javascript-formatting.md
                     - name: IntelliSense
                       href: ide/reference/options-text-editor-javascript-intellisense.md
                     - name: Linting
                       href: ide/reference/options-text-editor-javascript-linting.md
-                    - name: Project
+                    - name: 项目
                       href: ide/reference/options-text-editor-javascript-project.md
                 - name: U-SQL
                   items:
-                    - name: 格式设置
+                    - name: 格式化
                       href: ide/reference/options-text-editor-usql-formatting.md
                     - name: IntelliSense
                       href: ide/reference/options-text-editor-usql-intellisense.md
                 - name: XAML
                   items:
-                    - name: 格式设置
+                    - name: 格式化
                       href: ide/reference/options-text-editor-xaml-formatting.md
-                    - name: 其他
+                    - name: 杂项
                       href: ide/reference/options-text-editor-xaml-miscellaneous.md
                 - name: XML
                   items:
-                    - name: 格式设置
+                    - name: 格式化
                       href: ide/reference/options-text-editor-xml-formatting.md
-                    - name: 其他
+                    - name: 杂项
                       href: ide/reference/options-text-editor-xml-miscellaneous.md
             - name: Windows Forms Designer — Windows 窗体设计器
               items:
@@ -1004,7 +1004,7 @@
                   href: ide/reference/options-windows-forms-designer-data-ui-customization.md
             - name: XAML 设计器
               href: ide/reference/xaml-designer.md
-        - name: 输出窗口
+        - name: “输出”窗口
           href: ide/reference/output-window.md
         - name: 项目属性
           items:
@@ -1137,7 +1137,7 @@
           href: ide/reference/upgrade-devenv-exe.md
         - name: '-UseEnv (devenv.exe)'
           href: ide/reference/useenv-devenv-exe.md
-    - name: 安全
+    - name: 安全性
       items:
         - name: 开发安全应用程序
           href: ide/securing-applications.md
