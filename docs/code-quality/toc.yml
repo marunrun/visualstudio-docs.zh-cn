@@ -15,7 +15,7 @@
           href: use-roslyn-analyzers.md
         - name: 启用完整解决方案分析
           href: how-to-enable-and-disable-full-solution-analysis-for-managed-code.md
-        - name: FAQ
+        - name: 常见问题解答
           href: analyzers-faq.md
     - name: 旧版分析
       items:
@@ -123,9 +123,11 @@
           items:
             - name: 概述
               href: configure-fxcop-analyzers.md
-            - name: EditorConfig 选项
+            - name: 作用域选项
               href: fxcop-analyzer-options.md
-        - name: FAQ
+            - name: 预定义规则集
+              href: analyzer-rule-sets.md
+        - name: 常见问题解答
           href: fxcop-analyzers-faq.md
     - name: 从旧版分析迁移到 FxCop 分析器
       items:
@@ -137,8 +139,6 @@
       items:
         - name: 概述
           href: using-rule-sets-to-group-code-analysis-rules.md
-        - name: 分析器包规则集
-          href: analyzer-rule-sets.md
         - name: 配置规则集
           href: how-to-configure-code-analysis-for-a-managed-code-project.md
         - name: 为 ASP.NET Web 应用配置代码分析
@@ -186,7 +186,7 @@
               href: native-minimum-rules-rule-set.md
             - name: 本机建议规则
               href: native-recommended-rules-rule-set.md
-            - name: 安全性规则
+            - name: 安全规则
               href: security-rules-rule-set-for-managed-code.md
         - name: 禁止显示警告
           href: in-source-suppression-overview.md
