@@ -1,5 +1,5 @@
 - name: 调试程序文档
-  href: index.md
+  href: index.yml
 - name: 概述
   items:
     - name: 什么是调试？
@@ -162,7 +162,7 @@
               href: just-in-time-debugging-in-visual-studio.md
     - name: 配置调试
       items:
-        - name: 异常
+        - name: 例外
           items:
             - name: 管理调试器的异常
               href: managing-exceptions-with-the-debugger.md
@@ -288,7 +288,7 @@
               href: remote-debugging-errors-and-troubleshooting.md
             - name: 远程计算机上的 Microsoft Visual Studio 远程调试监视器没有连接到此计算机的权限
               href: error-the-microsoft-visual-studio-remote-debugging-monitor-no-permission.md
-            - name: 尝试联系远程计算机时出现 DCOM 错误。 拒绝访问。
+            - name: 尝试联系远程计算机时出现 DCOM 错误。 访问被拒绝。
               href: a-dcom-error-occurred-trying-to-contact-the-remote-computer-access-is-denied.md
             - name: 远程计算机上的 Microsoft Visual Studio 远程调试监视器正在以其他用户身份运行 |Microsoft Docs
               href: error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-is-running-as-a-different-user.md
@@ -450,7 +450,7 @@
               href: how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md
             - name: 预提取 Microsoft Store 应用的内容
               href: prefetch-content-for-windows-store-apps.md
-        - name: 托管代码
+        - name: '托管代码（C#、Visual Basic、F#）'
           items:
             - name: 调试托管代码
               href: debugging-managed-code.md
@@ -494,7 +494,7 @@
                   href: how-to-display-wpf-trace-information.md
             - name: '调试 F#'
               href: debugging-f-hash.md
-        - name: 本机代码
+        - name: C/C++ 代码
           items:
             - name: 调试本机代码
               href: debugging-native-code.md
@@ -582,7 +582,7 @@
                   href: com-debugging-tools.md
             - name: 调试插入的代码
               href: how-to-debug-injected-code.md
-        - name: 调试 GPU 代码
+        - name: GPU 代码
           href: debugging-gpu-code.md
         - name: 图形诊断
           href: graphics/toc.yml
@@ -632,6 +632,10 @@
                       href: error-the-web-server-could-not-find-the-requested-resource.md
                     - name: Web 服务器配置不正确
                       href: error-the-web-server-is-not-configured-correctly.md
+        - name: Python
+          href: ../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md
+        - name: JavaScript 和 TypeScript
+          href: ../javascript/debug-nodejs.md
         - name: Web 应用
           items:
             - name: 调试 Web 应用程序
@@ -824,7 +828,7 @@
                   href: how-to-search-for-a-process-in-processes-view.md
                 - name: 显示进程属性
                   href: how-to-display-process-properties.md
-            - name: 线程
+            - name: 线程数
               items:
                 - name: 线程视图
                   href: threads-view.md
