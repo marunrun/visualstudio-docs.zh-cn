@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34cf1d58250568da1ed64ad0f296f1f8efe43e2a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c70e30a8c8367678c6df156e8ea3a5b76889e468
+ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62777291"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71128275"
 ---
 # <a name="analyze-performance-tools-data"></a>分析性能工具数据
 通过 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 分析工具的性能报告可查看并分析应用程序性能问题。 本部分概述了可用于检查性能数据的性能报告和视图。
@@ -41,5 +41,5 @@ ms.locfileid: "62777291"
 
 ## <a name="see-also"></a>请参阅
 - [性能资源管理器](../profiling/performance-explorer.md)
-- [使用 Visual Studio 分析](../profiling/index.md)
+- [使用 Visual Studio 分析](../profiling/index.yml)
 - [首先了解分析工具](../profiling/profiling-feature-tour.md)

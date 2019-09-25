@@ -5,9 +5,6 @@ ms.assetid: 185cf370-ab39-4ac0-b6bc-601d5b95a4a2
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.devlang:
-- csharp
-- vb
 dev_langs:
 - CSharp
 - VB
@@ -16,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d2e77b3bfd62bf1dfdf15ff083b07459bd3bf77
-ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
+ms.openlocfilehash: e99e3bf3f6b8adc88eca94be4d9f5a1bb9b8c7a7
+ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062672"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118931"
 ---
 # <a name="step-10-write-code-for-additional-buttons-and-a-check-box"></a>步骤 10：为其他按钮和复选框编写代码
 
@@ -47,7 +44,7 @@ ms.locfileid: "71062672"
 
 ## <a name="next-steps"></a>后续步骤
 
-* 要转到下一个教程步骤，请参阅[步骤 11：运行应用并尝试其他功能](../ide/step-11-run-your-program-and-try-other-features.md)  。
+* 要转到下一个教程步骤，请参阅[步骤 11：运行应用并尝试其他功能](../ide/step-11-run-your-program-and-try-other-features.md)** 。
 
 * 要返回上一个教程步骤，请参阅[步骤 9：检查代码、为代码添加注释和测试代码](../ide/step-9-review-comment-and-test-your-code.md)。
 

@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fe8528b9e6ad302319f1fb1ebb010c7f55b93932
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 2c99408530344c72d2e9669178c5e79f7c34d551
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416592"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211258"
 ---
 # <a name="compile-and-build-in-visual-studio"></a>在 Visual Studio 中编译和生成
 
@@ -25,7 +25,7 @@ ms.locfileid: "68416592"
 
 通过经常生成你的代码，你可以快速识别编译时错误，如不正确的语法、拼错的关键字和类型不匹配项。 还可以通过生成并运行调试版本的代码来检测和纠正运行时错误，如逻辑错误和语义错误。
 
-成功的生成会验证应用程序的源代码是否包含正确的语法，并且是否可以解析对库、程序集和其他组件的所有静态引用。 这会生成一个应用程序可执行文件，可以在[调试环境](../debugger/index.md)中或通过各种手动和自动的[验证代码质量](../test/improve-code-quality.md)测试来测试该可执行文件以便正常运行。 该应用程序经过完全测试后，可以编译一个发布版本以部署到客户。 要简要了解此过程，请参阅[演练：生成应用程序](../ide/walkthrough-building-an-application.md)。
+成功的生成会验证应用程序的源代码是否包含正确的语法，并且是否可以解析对库、程序集和其他组件的所有静态引用。 这会生成一个应用程序可执行文件，可以在[调试环境](../debugger/index.yml)中或通过各种手动和自动的[验证代码质量](../test/improve-code-quality.md)测试来测试该可执行文件以便正常运行。 该应用程序经过完全测试后，可以编译一个发布版本以部署到客户。 要简要了解此过程，请参阅[演练：生成应用程序](../ide/walkthrough-building-an-application.md)。
 
 可以使用以下任何方法来生成应用程序：Visual Studio IDE、MSBuild 命令行工具和 Azure Pipelines：
 

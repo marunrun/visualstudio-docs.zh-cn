@@ -3,15 +3,15 @@ title: 安装预览版或更新
 description: 更新 Visual Studio for Mac 和访问预览版（包括 Visual Studio 2019 for Mac 预览版）的相关说明。
 author: asb3993
 ms.author: amburns
-ms.date: 08/27/2019
+ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: 0E1EF257-9DE4-4653-9DF4-805CE007A1A1
-ms.openlocfilehash: 217f068622919b85fcb7952178db31cfca6f446a
-ms.sourcegitcommit: cf8c0fef2b9690595e99ce3802586cdd55fd37c2
+ms.openlocfilehash: 307344404128e9eabec9dc5aa27c29a17961a5b5
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108218"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211346"
 ---
 # <a name="install-a-preview-version-of-visual-studio-for-mac"></a>安装 Visual Studio for Mac 的预览版本
 

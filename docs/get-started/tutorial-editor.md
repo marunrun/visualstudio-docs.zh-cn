@@ -11,12 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: b6741b40925f5d9914152d396be4686d166bf222
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 0f83304daa0e86bb9d4f999262f827615923fe4d
+ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180197"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095351"
 ---
 # <a name="learn-to-use-the-code-editor"></a>了解如何使用代码编辑器
 
@@ -36,7 +36,7 @@ ms.locfileid: "70180197"
 
 ::: moniker-end
 
-本文假定你已熟悉编程语言。 如果不熟悉，则建议首先查看其中一个编程快速入门，如使用 [Python](../ide/quickstart-python.md) 或 [C#](../get-started/csharp/tutorial-aspnet-core.md) 创建 Web 应用，或使用 [Visual Basic](../ide/quickstart-visual-basic-console.md) 或 [C++](../ide/getting-started-with-cpp-in-visual-studio.md) 创建控制台应用。
+本文假定你已熟悉编程语言。 如果不熟悉，则建议首先查看其中一个编程快速入门，如使用 [Python](../ide/quickstart-python.md) 或 [C#](../get-started/csharp/tutorial-aspnet-core.md) 创建 Web 应用，或使用 [Visual Basic](../ide/quickstart-visual-basic-console.md) 或 [C++](/cpp/get-started/tutorial-console-cpp) 创建控制台应用。
 
 ## <a name="create-a-new-code-file"></a>创建新代码文件
 

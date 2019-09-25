@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0713ae13038991ec65dcbebe350c9085f7d6a94a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 93703bdd4bf2f0046176ceb1f6febd5564f61705
+ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62797949"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71128309"
 ---
 # <a name="perftips"></a>性能提示
 Visual Studio 调试器 *性能提示* 和调试器集成的 **“诊断工具”** 可帮助在调试时监视和分析应用的性能。
@@ -26,7 +26,7 @@ Visual Studio 调试器 *性能提示* 和调试器集成的 **“诊断工具�
  ![PerfTip](../profiling/media/dbgdiag_perf_perftip.png "DBGDIAG_PERF_PerfTip")
 
 ## <a name="diagnostics-tools-window"></a>“诊断工具”窗口
- 断点以及关联计时数据记录在“诊断工具”窗口中。
+ 断点以及关联计时数据记录在“诊断工具”窗口中  。
 
  下图显示 Visual Studio 2015 Update 1 中的“诊断工具”  窗口：
 
@@ -43,17 +43,17 @@ Visual Studio 调试器 *性能提示* 和调试器集成的 **“诊断工具�
 ## <a name="turn-perftips-on-or-off"></a>打开或关闭性能提示
  启用或禁用性能提示：
 
-1. 在 **“调试”** 菜单上，选择 **“选项”**。
+1. 在 **“调试”** 菜单上，选择 **“选项”** 。
 
-2. 选中或清除 **“在调试过程中显示占用时间性能提示”**。
+2. 选中或清除 **“在调试过程中显示占用时间性能提示”** 。
 
 ## <a name="turn-the-diagnostic-tools-window-on-or-off"></a>打开或关闭“诊断工具”窗口
  启用或禁用“诊断工具”窗口：
 
-1. 在 **“调试”** 菜单上，选择 **“选项”**。
+1. 在 **“调试”** 菜单上，选择 **“选项”** 。
 
-2. 选中或清除 **“在调试过程中启用诊断工具”**。
+2. 选中或清除 **“在调试过程中启用诊断工具”** 。
 
 ## <a name="see-also"></a>请参阅
-- [使用 Visual Studio 分析](../profiling/index.md)
+- [使用 Visual Studio 分析](../profiling/index.yml)
 - [首先了解分析工具](../profiling/profiling-feature-tour.md)

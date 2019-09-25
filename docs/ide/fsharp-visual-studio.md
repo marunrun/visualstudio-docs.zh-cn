@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f71e17eae1e728ab755d048daee2c0d156425964
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: fef50748942aaa800cf1181e4c8f8b8a030f99ee
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66747587"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211301"
 ---
 # <a name="develop-with-visual-f-in-visual-studio"></a>在 Visual Studio 中使用 Visual F# 进行开发
 
@@ -146,7 +146,7 @@ F# 中支持 Visual Studio 代码和文本编辑器的以下功能：
 |逐语句|支持提前执行和移动到任何函数调用。|是|
 |逐过程|支持在当前堆栈帧中提前执行和跳过任何函数调用。|是|
 
-有关 Visual Studio 调试器的常规信息，请参阅[在 Visual Studio 中进行调试](../debugger/index.md)。
+有关 Visual Studio 调试器的常规信息，请参阅[在 Visual Studio 中进行调试](../debugger/index.yml)。
 
 ## <a name="additional-tools"></a>其他工具
 

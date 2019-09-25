@@ -4,9 +4,6 @@ ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.devlang:
-- csharp
-- vb
 dev_langs:
 - CSharp
 - VB
@@ -16,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 521467f7948f9ed62540028ab8c8b116e8cbbac9
-ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
+ms.openlocfilehash: bd5958c089998d35dea4324c59f85c368adf900c
+ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71079421"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118987"
 ---
 # <a name="step-6-add-a-timer"></a>步骤 6：添加计时器
 接下来，要向匹配游戏中添加 <xref:System.Windows.Forms.Timer> 控件。 计时器等待指定的毫秒数后，触发一个称为“Tick”  的事件。 这对于启动操作或定时重复操作很有用。 在本例中，你将使用一个计时器，让玩家开始选择两个图标，而如果图标不匹配，则在短暂时间后再次隐藏这两个图标。

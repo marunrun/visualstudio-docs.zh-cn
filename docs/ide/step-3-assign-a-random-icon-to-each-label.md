@@ -4,9 +4,6 @@ ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.devlang:
-- csharp
-- vb
 dev_langs:
 - CSharp
 - VB
@@ -16,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ef6929f91d8e4df63c847a470b4b61f5dd09e05
-ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
+ms.openlocfilehash: 598ed320e910f1f2e40e9ff84b7c317bff704741
+ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71079446"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118773"
 ---
 # <a name="step-3-assign-a-random-icon-to-each-label"></a>步骤 3：向每个标签分配一个随机图标
 如果图标显示在每个游戏的相同单元格中，就不是很有挑战性。 为避免这种情况，请使用 `AssignIconsToSquares()` 方法将图标随机分配给 Label 控件。

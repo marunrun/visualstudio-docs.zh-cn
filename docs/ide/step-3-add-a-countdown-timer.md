@@ -4,9 +4,6 @@ ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.devlang:
-- csharp
-- vb
 dev_langs:
 - CSharp
 - VB
@@ -16,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 67c2b34bf37f5f1b0ea7fb5222c6fcb8655fcc74
-ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
+ms.openlocfilehash: 197a52894a8c0ed3c2c38b9036a521a558c1005d
+ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71079561"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118786"
 ---
 # <a name="step-3-add-a-countdown-timer"></a>步骤 3：添加倒计时计时器
 
@@ -118,6 +115,6 @@ ms.locfileid: "71079561"
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅[步骤 4：添加 CheckTheAnswer() 方法](../ide/step-4-add-the-checktheanswer-parens-method.md)  。
+- 要转到下一个教程步骤，请参阅[步骤 4：添加 CheckTheAnswer() 方法](../ide/step-4-add-the-checktheanswer-parens-method.md)** 。
 
 - 要返回上一个教程步骤，请参阅[步骤 2：创建随机加法问题](../ide/step-2-create-a-random-addition-problem.md)。

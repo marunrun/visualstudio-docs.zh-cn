@@ -20,12 +20,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: ac40a7e7d62417d2d89302304501fb2b3ecd34f4
-ms.sourcegitcommit: 9c07ae6fb18204ea080c8248994a683fa12e5c82
+ms.openlocfilehash: 5d83086720a94c23d0ceb3f07d9398a7d5256f68
+ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293709"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095369"
 ---
 # <a name="install-visual-studio"></a>安装 Visual Studio
 
@@ -236,7 +236,7 @@ ms.locfileid: "70293709"
 
 3. 选择一种项目类型。
 
-   例如，若要[生成 C++ 应用](../ide/getting-started-with-cpp-in-visual-studio.md)，请选择“已安装”，展开“Visual C++”，然后选择要生成的 C++ 项目类型   。
+   例如，若要[生成 C++ 应用](/cpp/get-started/tutorial-console-cpp)，请选择“已安装”，展开“Visual C++”，然后选择要生成的 C++ 项目类型   。
 
    若要[生成 C# 应用](../get-started/csharp/tutorial-console.md)，请选择“已安装”，展开“Visual C#”，然后选择要生成的 C# 项目类型   。
 
