@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 41d3db6e4807c77236868e3ab5746da971ddce6c
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: e6bd77a49690979ea7ab3c4619fdd578a80bb77c
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68922494"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71235512"
 ---
 # <a name="ca1057-string-uri-overloads-call-systemuri-overloads"></a>CA1057:字符串 URI 重载调用 System.Uri 重载
 
@@ -32,20 +32,20 @@ ms.locfileid: "68922494"
 |TypeName|StringUriOverloadsCallSystemUriOverloads|
 |CheckId|CA1057|
 |类别|Microsoft.Design|
-|是否重大更改|不间断|
+|重大更改|不间断|
 
 ## <a name="cause"></a>原因
 
-类型声明仅通过将字符串参数替换为<xref:System.Uri?displayProperty=fullName>参数而有所不同的方法重载, 而采用字符串参数的重载不调用<xref:System.Uri>采用参数的重载。
+类型声明仅通过将字符串参数替换为<xref:System.Uri?displayProperty=fullName>参数而有所不同的方法重载，而采用字符串参数的重载不调用<xref:System.Uri>采用参数的重载。
 
 ## <a name="rule-description"></a>规则说明
-由于重载只是字符串或<xref:System.Uri>参数的不同之处, 因此假定字符串表示统一资源标识符 (URI)。 URI 的字符串表示形式容易导致分析和编码错误，并且可造成安全漏洞。 <xref:System.Uri>类以安全安全的方式提供这些服务。 为了获得<xref:System.Uri>类的优点, 字符串重载应使用字符串参数<xref:System.Uri>调用重载。
+由于重载只是字符串或<xref:System.Uri>参数的不同之处，因此假定字符串表示统一资源标识符（URI）。 URI 的字符串表示形式容易导致分析和编码错误，并且可造成安全漏洞。 <xref:System.Uri>类以安全安全的方式提供这些服务。 为了获得<xref:System.Uri>类的优点，字符串重载应使用字符串参数<xref:System.Uri>调用重载。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
-重新实现使用 URI 的字符串表示形式的方法, 以便它使用字符串参数创建<xref:System.Uri>类的实例, 然后将该<xref:System.Uri>对象传递给具有<xref:System.Uri>参数的重载。
+重新实现使用 URI 的字符串表示形式的方法，以便它使用字符串参数创建<xref:System.Uri>类的实例，然后将该<xref:System.Uri>对象传递给具有<xref:System.Uri>参数的重载。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
-如果 string 参数不表示 URI, 则可以安全地禁止显示此规则发出的警告。
+如果 string 参数不表示 URI，则可以安全地禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
 下面的示例演示正确实现的字符串重载。

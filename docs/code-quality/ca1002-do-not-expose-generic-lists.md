@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 621bb7292ca467d6d3197636f662a4662712d483
-ms.sourcegitcommit: 0f44ec8ba0263056ad04d2d0dc904ad4206ce8fc
+ms.openlocfilehash: 0612886bf92a4ca6a30e5e15ae1c4a4950d9ddad
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766027"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71236661"
 ---
 # <a name="ca1002-do-not-expose-generic-lists"></a>CA1002:不要公开泛型列表
 
@@ -28,7 +28,7 @@ ms.locfileid: "70766027"
 |TypeName|DoNotExposeGenericLists|
 |CheckId|CA1002|
 |类别|Microsoft.Design|
-|是否重大更改|重大|
+|重大更改|重大|
 
 ## <a name="cause"></a>原因
 

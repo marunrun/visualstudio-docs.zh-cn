@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 20bee606fd8cd98482a7304e068aaa7cbd5773a7
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 45ff4831875150df02d04553e75cebcab9a9f572
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68923225"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71236509"
 ---
 # <a name="ca1006-do-not-nest-generic-types-in-member-signatures"></a>CA1006:不要将泛型类型嵌套在成员签名中
 
@@ -31,7 +31,7 @@ ms.locfileid: "68923225"
 |TypeName|DoNotNestGenericTypesInMemberSignatures|
 |CheckId|CA1006|
 |类别|Microsoft.Design|
-|是否重大更改|重大|
+|重大更改|重大|
 
 ## <a name="cause"></a>原因
 外部可见成员具有包含嵌套类型参数的签名。
@@ -40,13 +40,13 @@ ms.locfileid: "68923225"
 嵌套类型参数是一个类型参数，也是一个泛型类型。 若要调用签名包含嵌套类型参数的成员，用户必须实例化一个泛型类型，并将此类型传递到另一个泛型类型的构造函数。 所需的过程和语法很复杂，应当避免。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
-若要修复与此规则的冲突, 请将设计更改为删除嵌套类型参数。
+若要修复与此规则的冲突，请将设计更改为删除嵌套类型参数。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
-不禁止显示此规则发出的警告。 在易于理解和使用的语法中提供泛型, 可减少学习和增加新库的采用率所需的时间。
+不禁止显示此规则发出的警告。 在易于理解和使用的语法中提供泛型，可减少学习和增加新库的采用率所需的时间。
 
 ## <a name="example"></a>示例
-下面的示例演示一个方法, 该方法违反了规则, 以及调用违例方法所需的语法。
+下面的示例演示一个方法，该方法违反了规则，以及调用违例方法所需的语法。
 
 [!code-vb[FxCop.Design.NestedGenerics#1](../code-quality/codesnippet/VisualBasic/ca1006-do-not-nest-generic-types-in-member-signatures_1.vb)]
 [!code-csharp[FxCop.Design.NestedGenerics#1](../code-quality/codesnippet/CSharp/ca1006-do-not-nest-generic-types-in-member-signatures_1.cs)]

@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d765bfda87fe184256304b86f145f4f02adb7db6
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 23358d104c891ff9e230f0daad0f5e6ca57b46c2
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68922633"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71235766"
 ---
 # <a name="ca1046-do-not-overload-operator-equals-on-reference-types"></a>CA1046:不要对引用类型重载相等运算符
 
@@ -28,7 +28,7 @@ ms.locfileid: "68922633"
 |TypeName|DoNotOverloadOperatorEqualsOnReferenceTypes|
 |CheckId|CA1046|
 |类别|Microsoft.Design|
-|是否重大更改|重大|
+|重大更改|重大|
 
 ## <a name="cause"></a>原因
 公共或嵌套公共引用类型重载相等运算符。
@@ -37,10 +37,10 @@ ms.locfileid: "68922633"
 对于引用类型，相等运算符的默认实现几乎始终是正确的。 默认情况下，仅当两个引用指向同一对象时，它们才相等。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
-若要修复与此规则的冲突, 请删除相等运算符的实现。
+若要修复与此规则的冲突，请删除相等运算符的实现。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
-当引用类型的行为与内置值类型相同时, 可以安全地禁止显示此规则发出的警告。 如果在该类型的实例上执行加法或减法运算是有意义的, 则实现相等运算符并取消此冲突可能是正确的。
+当引用类型的行为与内置值类型相同时，可以安全地禁止显示此规则发出的警告。 如果在该类型的实例上执行加法或减法运算是有意义的，则实现相等运算符并取消此冲突可能是正确的。
 
 ## <a name="example"></a>示例
 下面的示例演示了在比较两个引用时的默认行为。
