@@ -9,18 +9,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 97ed8dda2ea5d338bc7d60be845fafad6a30b47f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a368a9b8f6d25753993a2cc10ea9ca94734d6709
+ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62777508"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71128281"
 ---
 # <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>分析资源消耗情况和 UI 线程活动 (XAML)
 
 使用 **“应用程序时间线”** 探查器查找并修正 XAML 应用程序中应用程序交互的相关性能问题。 此工具通过显示应用程序资源使用情况的详细视图来帮助提高 XAML 应用程序的性能。 可以分析应用程序准备 UI 框架（布局和呈现）以及为网络和磁盘请求提供服务所花费的时间，以及在应用程序启动、页面加载以及调整窗口大小等应用场景中花费的时间。
 
-应用程序时间线是可使用调试 > 性能探测器命令启动的工具之一。
+ 应用程序时间线是可使用调试 > 性能探测器   命令启动的工具之一。
 
 此工具可替换属于 Visual Studio 2013 诊断工具集的一部分的 **“XAML UI 响应能力”** 工具。
 
@@ -45,12 +45,12 @@ ms.locfileid: "62777508"
 
 1. 打开 AML 应用。
 
-2. 单击“调试/性能探查器...”。 应在 .diagsession 窗口中看到分析工具列表。
+2. 单击“调试/性能探查器...”  。 应在 .diagsession 窗口中看到分析工具列表。
 
 3. 选择 **“应用程序时间线”** ，然后单击窗口底部的 **“启动”** 。
 
    > [!NOTE]
-   > 可能会出现“用户帐户控制”窗口，请求你提供运行 VsEtwCollector.exe 的权限。 单击 **“是”**。
+   > 可能会出现“用户帐户控制”窗口，请求你提供运行 VsEtwCollector.exe 的权限  。 单击 **“是”** 。
 
 4. 在应用中运行你想要对其进行分析的方案，以收集性能数据。
 
@@ -64,9 +64,9 @@ ms.locfileid: "62777508"
 
 收集分析数据之后，可以按照以下步骤开始分析：
 
-1. 查看“UI 线程使用率”和“可视吞吐量 (FPS)”图中的信息，然后使用时间线导航栏选择要分析的时间范围。
+1. 查看“UI 线程使用率”和“可视吞吐量 (FPS)”图中的信息，然后使用时间线导航栏选择要分析的时间范围   。
 
-2. 使用“UI 线程使用率”或“可视吞吐量 (FPS)”图中的信息，检查“时间线详细信息”视图中的详细信息可以找到导致任何明显缺少响应能力情况的可能原因。
+2. 使用“UI 线程使用率”或“可视吞吐量 (FPS)”图中的信息，检查“时间线详细信息”视图中的详细信息可以找到导致任何明显缺少响应能力情况的可能原因    。
 
 ### <a name="BKMK_Report_scenarios_categories_and_events"></a> 报表方案、类别和事件
 
@@ -100,7 +100,7 @@ ms.locfileid: "62777508"
 
 |||
 |-|-|
-|**分析**|分析 XAML 文件并创建对象所耗用的时间。<br /><br /> 展开“时间线详细信息”中的“分析”节点将显示由于根事件进行分析的所有 XAML 文件的依赖关系链。 此提示可让你识别性能敏感方案中不必要的文件分析和对象创建并对其进行优化。|
+|**分析**|分析 XAML 文件并创建对象所耗用的时间。<br /><br /> 展开“时间线详细信息”中的“分析”节点将显示由于根事件进行分析的所有 XAML 文件的依赖关系链   。 此提示可让你识别性能敏感方案中不必要的文件分析和对象创建并对其进行优化。|
 |**布局**|在大型应用程序中，可能会同时在屏幕上显示数千个元素。 此显示可能会导致 UI 帧速率降低以及应用程序响应能力相应地变差。 布局事件准确地确定布局每个元素的成本（即在 Arrange、Measure、ApplyTemplate、ArrangeOverride 和 MeasureOverride 中所用的时间）。 它还会生成参与布局过程的可视化树。 可以使用此可视化效果来确定要删除的逻辑树，或评估其他延期机制，以优化布局过程。|
 |**呈现**|在屏幕上绘制 XAML 元素所耗用的时间。|
 |**I/0**|从本地磁盘或从通过 [Microsoft Windows Internet (WinINet) API](/windows/desktop/WinInet/portal)访问的网络资源中检索数据所耗用的时间。|
@@ -126,5 +126,5 @@ ms.locfileid: "62777508"
 - [WPF 团队博客：用于 WPF 应用程序的新 UI 性能分析工具](https://blogs.msdn.microsoft.com/wpf/2015/01/16/new-ui-performance-analysis-tool-for-wpf-applications/)
 - [使用 C++、C# 和 Visual Basic 的 UWP 应用的性能最佳做法](/previous-versions/windows/apps/hh750313\(v\=win.10\))
 - [优化 WPF 应用程序性能](/dotnet/framework/wpf/advanced/optimizing-wpf-application-performance)
-- [使用 Visual Studio 分析](../profiling/index.md)
+- [使用 Visual Studio 分析](../profiling/index.yml)
 - [首先了解分析工具](../profiling/profiling-feature-tour.md)

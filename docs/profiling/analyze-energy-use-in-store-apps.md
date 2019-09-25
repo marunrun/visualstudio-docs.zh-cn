@@ -13,16 +13,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: e16261020a737651fc79c3fb3eb1da6a539cee34
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1259f92b89fc6d83bb0b7296cc07844bf25df705
+ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62777110"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71128325"
 ---
 # <a name="analyze-energy-use-in-uwp-apps"></a>分析 UWP 应用中的能量使用
 
-Visual Studio 的“能耗”探查器可以帮助你分析低功率平板设备上的 UWP 应用的功率和能耗情况，这些低功率平板设备在所有时间或部分时间内靠自有电池运行。 在电池供电的设备上，如果应用程序使用过多的能量，可能导致客户非常不满，最终客户甚至可能将其卸载。 能量利用的优化可使更多的客户选择并使用你的应用程序。
+Visual Studio 的“能耗”  探查器可以帮助你分析低功率平板设备上的 UWP 应用的功率和能耗情况，这些低功率平板设备在所有时间或部分时间内靠自有电池运行。 在电池供电的设备上，如果应用程序使用过多的能量，可能导致客户非常不满，最终客户甚至可能将其卸载。 能量利用的优化可使更多的客户选择并使用你的应用程序。
 
 ## <a name="what-the-energy-consumption-profiler-is-how-it-works-and-what-it-measures"></a>“能量消耗”探查器的定义、工作机制和测量内容
 
@@ -35,11 +35,11 @@ Visual Studio 的“能耗”探查器可以帮助你分析低功率平板设备
 
 “能量消耗”探查器使用下面 *功率* 和 *能量*的定义：
 
-- 功率 用于衡量一段时间内做功而用力的速率。 在电力学中，功率的标准单位是瓦特 ，其定义为一安培电流流经一伏特的电位差时做功的速率。 在“电源使用”  关系图中，单位显示为毫瓦“mW”  ，这是一瓦的千分之一。
+- 功率  用于衡量一段时间内做功而用力的速率。 在电力学中，功率的标准单位是瓦特  ，其定义为一安培电流流经一伏特的电位差时做功的速率。 在“电源使用”  关系图中，单位显示为毫瓦“mW”  ，这是一瓦的千分之一。
 
    请注意，由于功率是一种速率，它有方向（功可以在一段时间内增加或减少）和速度（功的增加量或减少量）。
 
-- 能量 以电容或电势的形式衡量总功率数，如电池的功率容量或在一段时间内消耗的总功率。 能量单位为瓦时，即一瓦持续作用一小时所产生的功率数量。 在 **“能量摘要”** 中，单位显示为毫瓦时 **“mW-h”**。
+- 能量  以电容或电势的形式衡量总功率数，如电池的功率容量或在一段时间内消耗的总功率。 能量单位为瓦时，即一瓦持续作用一小时所产生的功率数量。 在 **“能量摘要”** 中，单位显示为毫瓦时 **“mW-h”** 。
 
 ![能量容量、已用功率和已用总能量](../profiling/media/energyprof_capcitypowerused.png)
 
@@ -88,14 +88,14 @@ if (performance && performance.mark) {
 
 ## <a name="collect-energy-profile-data-for-your-app"></a>收集应用的能量分布曲线数据
 
-1. 在“调试”  菜单中，选择 “启动诊断（不调试）”。
+1. 在“调试”  菜单中，选择  “启动诊断（不调试）”。
 
      ![在诊断中心中选择“能量消耗”](../profiling/media/energyprof_diagnosticshub.png "ENERGYPROF_DiagnosticsHub")
 
-2. 选择 **“能耗”** ，然后选择 **“启动”**。
+2. 选择 **“能耗”** ，然后选择 **“启动”** 。
 
     > [!NOTE]
-    > 启动“能耗”探查器时，可能会看到“用户帐户控制”窗口，要求你提供运行 VsEtwCollector.exe 的权限。 选择 **“是”**。
+    > 启动“能耗”探查器时，可能会看到“用户帐户控制”窗口，要求你提供运行 VsEtwCollector.exe 的权限    。 选择 **“是”** 。
 
 3. 执行你的应用程序以收集数据。
 
@@ -106,9 +106,9 @@ if (performance && performance.mark) {
      Visual Studio 将分析收集的数据并显示结果。
 
 ## <a name="collect-energy-profile-data-for-an-installed-app"></a>收集已安装应用的能量分布曲线数据
- 只能对通过 Visual Studio 解决方案启动或从 Microsoft Store 中安装的 UWP 应用运行“能耗”工具。 在 Visual Studio 中打开解决方案时，默认目标为 **“启动项目”**。 面向已安装的应用程序：
+ 只能对通过 Visual Studio 解决方案启动或从 Microsoft Store 中安装的 UWP 应用运行“能耗”工具。 在 Visual Studio 中打开解决方案时，默认目标为 **“启动项目”** 。 面向已安装的应用程序：
 
-1. 选择 **“更改目标”** ，然后选择 **“已安装的应用程序”**。
+1. 选择 **“更改目标”** ，然后选择 **“已安装的应用程序”** 。
 
 2. 从 **“选择已安装的应用程序包”** 列表中选择目标。
 
@@ -149,13 +149,13 @@ if (performance && performance.mark) {
 
 ## <a name="other-resources"></a>其他资源
 
-- [C#/VB/C++ 和 XAML](/previous-versions/windows/apps/hh452985\(v\=win.10\)) 的“连接状态和成本管理”部分介绍了提供网络连接信息的 Windows API，应用程序可以使用这些信息最大程度降低网络通信成本。
+- [C#/VB/C++ 和 XAML](/previous-versions/windows/apps/hh452985\(v\=win.10\)) 的“连接状态和成本管理”部分介绍了提供网络连接信息的 Windows API，应用程序可以使用这些信息最大程度降低网络通信成本  。
 
    使用 UWP 应用的 Visual Studio 模拟器可以模拟网络信息 API 的数据连接属性。 请参阅[在模拟器中运行 UWP 应用](../debugger/run-windows-store-apps-in-the-simulator.md)
 
-- “CPU 使用情况”工具有助于降低由低效函数导致的 CPU 负载。 请参阅[分析 CPU 使用情况](../profiling/beginners-guide-to-performance-profiling.md)。
+- “CPU 使用情况”工具有助于降低由低效函数导致的 CPU 负载  。 请参阅[分析 CPU 使用情况](../profiling/beginners-guide-to-performance-profiling.md)。
 
 ## <a name="see-also"></a>请参阅
 
-- [使用 Visual Studio 分析](../profiling/index.md)
+- [使用 Visual Studio 分析](../profiling/index.yml)
 - [首先了解分析工具](../profiling/profiling-feature-tour.md)

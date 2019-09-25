@@ -5,20 +5,17 @@ ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.assetid: f44e50be-a5f5-4d77-9cff-dd52374c3f74
-ms.devlang:
-- csharp
-- vb
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 88ec1c96bea4ebbe3465a489354d90fbbe906858
-ms.sourcegitcommit: 0e482cfc15f809b564c3de61646f29ecd7bfcba6
+ms.openlocfilehash: b52851ce3e344293faede243413fc796e9882196
+ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70987954"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71119055"
 ---
 # <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>步骤 1：创建项目并向窗体添加标签
 
@@ -213,6 +210,6 @@ ms.locfileid: "70987954"
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅[步骤 2：创建随机加法题](../ide/step-2-create-a-random-addition-problem.md)  。
+- 要转到下一个教程步骤，请参阅[步骤 2：创建随机加法题](../ide/step-2-create-a-random-addition-problem.md)** 。
 
 - 要返回概述主题，请参阅[教程 2：创建计时数学测验](../ide/tutorial-2-create-a-timed-math-quiz.md)。

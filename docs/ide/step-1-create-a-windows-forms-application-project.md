@@ -5,20 +5,17 @@ ms.assetid: 16ac2422-e720-4e3a-b511-bc2a54201a86
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.devlang:
-- csharp
-- vb
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 65339eabcffdf0f333036442ea8473ecf8c8f06e
-ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
+ms.openlocfilehash: be7b9bd67ed88b9f59ed279211bf15c96ae59569
+ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70888014"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71119008"
 ---
 # <a name="step-1-create-a-windows-forms-app-project"></a>步骤 1：创建 Windows 窗体应用项目
 
@@ -114,7 +111,7 @@ Visual Studio 将为你的应用创建解决方案。 解决方案充当应用�
 
 ## <a name="next-steps"></a>后续步骤
 
-* 要转到下一个教程步骤，请参阅[步骤 2：运行应用](../ide/step-2-run-your-program.md)  。
+* 要转到下一个教程步骤，请参阅[步骤 2：运行应用](../ide/step-2-run-your-program.md)** 。
 
 * 要返回概述主题，请参阅[教程 1：创建图片查看器](../ide/tutorial-1-create-a-picture-viewer.md)。
 

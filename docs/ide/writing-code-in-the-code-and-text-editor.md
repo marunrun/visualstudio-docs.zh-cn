@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aa2c9a4585947fb7d2e21d1eea4e6613cdd33964
-ms.sourcegitcommit: 614d5b99576ea27a41957cd94062dc95cbd29c1c
+ms.openlocfilehash: 3d2540b0c725860ea9a21f32d1d01074cf39380f
+ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65531669"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095289"
 ---
 # <a name="features-of-the-code-editor"></a>代码编辑器功能
 
@@ -90,6 +90,6 @@ Visual Studio 编辑器提供了许多功能，可方便你更加轻松地编写
 
 - [源编辑器 (Visual Studio for Mac)](/visualstudio/mac/source-editor)
 - [Visual Studio IDE](../get-started/visual-studio-ide.md)
-- [Visual Studio 中的 C++ 入门](../ide/getting-started-with-cpp-in-visual-studio.md)
+- [Visual Studio 中的 C++ 入门](/cpp/get-started/tutorial-console-cpp)
 - [Visual Studio 中的 C# 和 ASP.NET 入门](../get-started/csharp/tutorial-aspnet-core.md)
 - [Visual Studio 中的 Python 入门](../ide/quickstart-python.md)

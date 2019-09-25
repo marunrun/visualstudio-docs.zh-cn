@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f6da512f6322bed074b8009d45e569626afcd996
-ms.sourcegitcommit: 0f44ec8ba0263056ad04d2d0dc904ad4206ce8fc
+ms.openlocfilehash: 106a2be4797bc3c442006f74bce98e4f1e8c9a5c
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766035"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71238205"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Visual Studio 中的默认键盘快捷方式
 
@@ -794,7 +794,7 @@ ms.locfileid: "70766035"
 | 编辑.折叠当前区域 | **Ctrl+M、Ctrl+S** |
 | 编辑.折叠标记 | **Ctrl+M、Ctrl+T** |
 | Edit.CollapseToDefinitions | **Ctrl+M、Ctrl+O**（字母“O”） |
-| Edit.ContractSelection | **Shift+Alt+-** （仅非 C++） |
+| Edit.ContractSelection | **Shift+Alt+-** |
 | 编辑.注释选定内容 | **Ctrl+K、Ctrl+C** |
 | 编辑.完成单词 | **Ctrl+空格键**<br /><br /> or<br /><br /> **Alt+向右键** |
 | 编辑.复制参数提示 | **Ctrl+Shift+Alt+C** |
@@ -807,7 +807,7 @@ ms.locfileid: "70766035"
 | 编辑.文档开始扩展 | **Ctrl+Shift+Home** |
 | 编辑.展开所有大纲显示 | **Ctrl+M、Ctrl+X** |
 | 编辑.展开当前区域 | **Ctrl+M、Ctrl+E** |
-| Edit.ExpandSelection | **Shift+Alt+=** （仅非 C++） |
+| Edit.ExpandSelection | **Shift+Alt+=** |
 | Edit.ExpandSelectiontoContainingBlock | **Shift+Alt+]** |
 | 编辑.编排文档格式 | **Ctrl+K、Ctrl+D** |
 | 编辑.格式化选定内容 | **Ctrl+K、Ctrl+F** |

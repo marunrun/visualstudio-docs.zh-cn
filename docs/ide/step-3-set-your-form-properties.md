@@ -5,20 +5,17 @@ ms.assetid: 634ef037-1525-48c8-ac7f-abf04be69376
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.devlang:
-- csharp
-- vb
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1cf71ca26a26aecceb605c0483499bc0b0e24d30
-ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
+ms.openlocfilehash: 870179243f99501cac7aaa68ce9929ae589ba79e
+ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913153"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118965"
 ---
 # <a name="step-3-set-your-form-properties"></a>步骤 3：设置窗体属性
 
@@ -75,7 +72,7 @@ ms.locfileid: "70913153"
 
 ## <a name="next-steps"></a>后续步骤
 
-* 要转到下一个教程步骤，请参阅[步骤 4：使用 TableLayoutPanel 控件设置窗体布局](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)  。
+* 要转到下一个教程步骤，请参阅[步骤 4：使用 TableLayoutPanel 控件设置窗体布局](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)** 。
 
 * 要返回上一个教程步骤，请参阅[步骤 2：运行运行图片查看器应用](../ide/step-2-run-your-program.md)。
 
