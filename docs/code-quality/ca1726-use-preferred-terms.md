@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e4e068fee014d767b7afcdf8183ac6611b299f36
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 3f359f7aa24ada0edf2c98a7d527ed715df85086
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68921574"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71233920"
 ---
 # <a name="ca1726-use-preferred-terms"></a>CA1726:使用首选词条
 
@@ -27,7 +27,7 @@ ms.locfileid: "68921574"
 |TypeName|UsePreferredTerms|
 |CheckId|CA1726|
 |类别|Microsoft.Naming|
-|是否重大更改|正在进行-对程序集引发时<br /><br /> 非中断-在类型参数上触发时|
+|重大更改|正在进行-对程序集引发时<br /><br /> 非中断-在类型参数上触发时|
 
 ## <a name="cause"></a>原因
 
@@ -65,10 +65,10 @@ ms.locfileid: "68921574"
 |`Writeable`|`Writable`|
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
-若要修复与此规则的冲突, 请将此术语替换为首选替代项。
+若要修复与此规则的冲突，请将此术语替换为首选替代项。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
-仅当标识符的名称是有意的并且特别与原始字词相关, 而不是首选字词时, 才禁止显示此规则的警告。
+仅当标识符的名称是有意的并且特别与原始字词相关，而不是首选字词时，才禁止显示此规则的警告。
 
 ## <a name="related-rules"></a>相关规则
 [命名警告](../code-quality/naming-warnings.md)

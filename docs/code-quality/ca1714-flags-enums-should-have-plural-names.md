@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d71200c6c7fbb61e7994119fde5e75f7623fa669
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 79585cd9cae31f46a9506085c9c8faf5b5844d44
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69547189"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71234093"
 ---
 # <a name="ca1714-flags-enums-should-have-plural-names"></a>CA1714:Flags 枚举应采用复数形式的名称
 
@@ -28,37 +28,37 @@ ms.locfileid: "69547189"
 |TypeName|FlagsEnumsShouldHavePluralNames|
 |CheckId|CA1714|
 |类别|Microsoft.Naming|
-|是否重大更改|重大|
+|重大更改|重大|
 
 ## <a name="cause"></a>原因
 
-枚举具有<xref:System.FlagsAttribute?displayProperty=fullName> , 且其名称不以 "" 结尾。
+枚举具有<xref:System.FlagsAttribute?displayProperty=fullName> ，且其名称不以 "" 结尾。
 
-默认情况下, 此规则仅查看外部可见的枚举, 但这是[可配置](#configurability)的。
+默认情况下，此规则仅查看外部可见的枚举，但这是[可配置](#configurability)的。
 
 ## <a name="rule-description"></a>规则说明
 
-标记有的类型<xref:System.FlagsAttribute>具有复数形式的名称, 因为该特性指示可以指定多个值。 例如, 定义一周中各天的枚举可能适用于可指定多天的应用程序。 此枚举应具有<xref:System.FlagsAttribute> , 并且可以称为 "Days"。 只允许指定一天的类似枚举不具有属性, 并且可以称为 "Day"。
+标记有的类型<xref:System.FlagsAttribute>具有复数形式的名称，因为该特性指示可以指定多个值。 例如，定义一周中各天的枚举可能适用于可指定多天的应用程序。 此枚举应具有<xref:System.FlagsAttribute> ，并且可以称为 "Days"。 只允许指定一天的类似枚举不具有属性，并且可以称为 "Day"。
 
-命名约定为面向公共语言运行时的库提供了通用的外观。 这减少了新软件库所需的学习曲线, 并使客户可以放心地了解库是由具有开发托管代码的专业技能的人员开发的。
+命名约定为面向公共语言运行时的库提供了通用的外观。 这减少了新软件库所需的学习曲线，并使客户可以放心地了解库是由具有开发托管代码的专业技能的人员开发的。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-将枚举的名称设置为复数字, 如果不应同时<xref:System.FlagsAttribute>指定多个枚举值, 则删除该属性。
+将枚举的名称设置为复数字，如果不应同时<xref:System.FlagsAttribute>指定多个枚举值，则删除该属性。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
-如果名称是复数形式的单词, 但不是以 "" 结尾, 则可以安全地禁止显示冲突。 例如, 如果前面介绍的多天枚举名为 "DaysOfTheWeek", 则这将违反规则的逻辑, 而不是其意图。 应抑制此类冲突。
+如果名称是复数形式的单词，但不是以 "" 结尾，则可以安全地禁止显示冲突。 例如，如果前面介绍的多天枚举名为 "DaysOfTheWeek"，则这将违反规则的逻辑，而不是其意图。 应抑制此类冲突。
 
 ## <a name="configurability"></a>配置
 
-如果从[FxCop 分析器](install-fxcop-analyzers.md)(而不是传统分析) 运行此规则, 则可以根据其可访问性, 将基本代码的哪些部分配置为在上运行此规则。 例如, 若要指定规则只应针对非公共 API 图面运行, 请在项目中的 editorconfig 文件中添加以下键/值对:
+如果从[FxCop 分析器](install-fxcop-analyzers.md)（而不是传统分析）运行此规则，则可以根据其可访问性，将基本代码的哪些部分配置为在上运行此规则。 例如，若要指定规则只应针对非公共 API 图面运行，请在项目中的 editorconfig 文件中添加以下键/值对：
 
 ```ini
 dotnet_code_quality.ca1714.api_surface = private, internal
 ```
 
-您可以为此规则、所有规则或此类别中的所有规则 (命名) 配置此选项。 有关详细信息, 请参阅[配置 FxCop 分析器](configure-fxcop-analyzers.md)。
+您可以为此规则、所有规则或此类别中的所有规则（命名）配置此选项。 有关详细信息，请参阅[配置 FxCop 分析器](configure-fxcop-analyzers.md)。
 
 ## <a name="related-rules"></a>相关规则
 

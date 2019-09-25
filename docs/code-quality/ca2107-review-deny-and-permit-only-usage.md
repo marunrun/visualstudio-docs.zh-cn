@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c7f3bdc6351f30d5cad60a7ed9663824fa3d434
-ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
+ms.openlocfilehash: fdb2bab3231613772b1eda1895d925f8dd40ee93
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66714709"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71232843"
 ---
 # <a name="ca2107-review-deny-and-permit-only-usage"></a>CA2107:检查 deny 权限和 permit only 权限的使用情况
 
@@ -28,47 +28,47 @@ ms.locfileid: "66714709"
 |TypeName|ReviewDenyAndPermitOnlyUsage|
 |CheckId|CA2107|
 |类别|Microsoft.Security|
-|是否重大更改|重大|
+|重大更改|重大|
 
 ## <a name="cause"></a>原因
 
-方法包含指定 PermitOnly 或拒绝安全操作的安全检查。
+方法包含指定 PermitOnly 或 Deny 安全操作的安全检查。
 
 ## <a name="rule-description"></a>规则说明
 
-<xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName>安全操作应仅由具有.NET 安全性的高级的知识的用户使用。 应当对使用这些安全操作的代码进行安全检查。
+<xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName>安全操作应仅由高级了解 .net 安全的用户使用。 应当对使用这些安全操作的代码进行安全检查。
 
-拒绝更改而发生响应安全要求的堆栈审核的默认行为。 它允许你指定必须未在拒绝的方法，而不考虑调用堆栈中的调用方的实际权限的持续时间内授予的权限。 如果堆栈遍历检测到拒绝，受保护的方法，并且如果要求的权限包含在被拒绝的权限，则堆栈审核失败。 PermitOnly 也会更改堆栈遍历的默认行为。 它允许指定调用方的权限也是如此，可授予这些权限的代码。 如果堆栈遍历检测到 PermitOnly，受保护的方法和中所指定的 PermitOnly 的权限不包括所需的权限，则堆栈审核失败。
+Deny 改变出现的堆栈审核的默认行为，以响应安全要求。 它使你能够指定在拒绝方法的持续时间内不得授予的权限，而不考虑调用堆栈中调用方的实际权限。 如果堆栈审核检测到受 Deny 保护的方法，并且所请求的权限包含在拒绝的权限中，堆栈审核会失败。 PermitOnly 还会改变堆栈审核的默认行为。 它允许代码仅指定可授予的权限，而与调用方的权限无关。 如果堆栈审核检测到由 PermitOnly 保护的方法，并且在 PermitOnly 指定的权限中未包含请求的权限，则堆栈审核会失败。
 
-依赖于这些操作代码应认真评估存在安全漏洞，因为其用途有限和细微的行为。 考虑以下情况：
+应认真评估依赖于这些操作的代码是否存在安全漏洞，因为它们的有用性和微妙行为有限。 考虑以下情况：
 
-- [链接需求](/dotnet/framework/misc/link-demands)的 Deny 或 PermitOnly 不会影响。
+- 拒绝或 PermitOnly 不会影响[链接需求](/dotnet/framework/misc/link-demands)。
 
-- 如果 Deny 或 PermitOnly 发生导致堆栈遍历需求相同的堆栈帧中，安全操作将产生任何影响。
+- 如果拒绝或 PermitOnly 与引起堆栈审核的需求出现在同一堆栈帧中，则安全操作不起作用。
 
-- 通常可以通过多种方法指定用于构造基于路径的权限的值。 拒绝访问路径的一个窗体不拒绝所有窗体的访问。 例如，如果文件共享\\\Server\Share 映射到网络驱动器 x:，以拒绝访问的文件共享上，则必须拒绝\\\Server\Share\File、 X:\File 和每个其他访问文件的路径。
+- 通常可以通过多种方式指定用于构造基于路径的权限的值。 拒绝访问一种形式的路径不会拒绝对所有窗体的访问。 例如，如果将文件共享\\\Server\Share 映射到网络驱动器 X：，则若要拒绝对共享上的文件的访问，必须拒绝\\\Server\Share\File、X:\File 以及访问该文件的每个其他路径。
 
-- <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName>达到 Deny 或 PermitOnly 之前可以终止堆栈遍历。
+- <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName>可以在达到 Deny 或 PermitOnly 之前终止堆栈遍历。
 
-- 如果拒绝都没有任何效果，即当调用方具有的权限被拒绝，阻止调用方可以访问受保护的资源直接，绕过拒绝。 同样，如果调用方没有被拒绝的权限，堆栈审核会失败而无需拒绝。
+- 如果拒绝有任何影响，即，当调用方具有拒绝阻止的权限时，调用方可以直接访问受保护的资源，绕过拒绝。 同样，如果调用方不具有拒绝的权限，堆栈审核将失败，且不会出现 Deny。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-任何使用这些安全操作而导致违反了。 若要解决冲突，不要使用这些安全操作。
+任何使用这些安全操作都会导致冲突。 若要解决冲突，请不要使用这些安全操作。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
-只有在完成安全审查后，禁止显示此规则的警告。
+仅在完成安全检查后，禁止显示此规则发出的警告。
 
 ## <a name="example-1"></a>示例 1
 
-下面的示例演示了拒绝的一些限制。 库包含具有相同，仅对其进行保护的安全需求的两个方法的类。
+下面的示例演示 Deny 的一些限制。 库包含一个类，该类具有与保护它们的安全要求不同的两个方法。
 
 [!code-csharp[FxCop.Security.PermitAndDeny#1](../code-quality/codesnippet/CSharp/ca2107-review-deny-and-permit-only-usage_1.cs)]
 
 ## <a name="example-2"></a>示例 2
 
-下面的应用程序库中演示的拒绝对受保护的方法的影响。
+下面的应用程序演示 Deny 对库中的安全方法的影响。
 
 [!code-csharp[FxCop.Security.TestPermitAndDeny#1](../code-quality/codesnippet/CSharp/ca2107-review-deny-and-permit-only-usage_2.cs)]
 

@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: de64e0271370a3cdcc6f0963dbf06925621b9b65
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 5283c96a484f47fe280a07c5889b8db877db5ffc
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68920187"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71230989"
 ---
 # <a name="ca2223-members-should-differ-by-more-than-return-type"></a>CA2223:成员不应只是返回类型不同
 
@@ -28,22 +28,22 @@ ms.locfileid: "68920187"
 |TypeName|MembersShouldDifferByMoreThanReturnType|
 |CheckId|CA2223|
 |类别|Microsoft.Usage|
-|是否重大更改|重大|
+|重大更改|重大|
 
 ## <a name="cause"></a>原因
-两个公共或受保护成员具有相同的签名 (返回类型除外)。
+两个公共或受保护成员具有相同的签名（返回类型除外）。
 
 ## <a name="rule-description"></a>规则说明
-尽管公共语言运行时允许使用返回类型来区分其他完全相同的成员, 但此功能并不属于公共语言规范, 也不是 .NET 编程语言的常见功能。 如果成员的差异仅在于返回类型, 开发人员和开发工具可能无法正确区分它们。
+尽管公共语言运行时允许使用返回类型来区分其他完全相同的成员，但此功能并不属于公共语言规范，也不是 .NET 编程语言的常见功能。 如果成员的差异仅在于返回类型，开发人员和开发工具可能无法正确区分它们。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
-若要修复与此规则的冲突, 请更改成员的设计, 使其仅基于其名称和参数类型是唯一的, 否则不公开成员。
+若要修复与此规则的冲突，请更改成员的设计，使其仅基于其名称和参数类型是唯一的，否则不公开成员。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 不禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
-下面的示例 (在 Microsoft 中间语言 (MSIL) 中) 显示了违反此规则的类型。 请注意, 不能使用C#或 Visual Basic 违反此规则。
+下面的示例（在 Microsoft 中间语言（MSIL）中）显示了违反此规则的类型。 请注意，不能使用C#或 Visual Basic 违反此规则。
 
 ```
 .namespace UsageLibrary

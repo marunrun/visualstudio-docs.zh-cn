@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5dbd8580f5aaeb88c08d35b50258510cb1a85ba2
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 8699e3434dc9c4cf9d3eccc37916c20ff7f34015
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68920293"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71231188"
 ---
 # <a name="ca2218-override-gethashcode-on-overriding-equals"></a>CA2218:重写 Equals 时重写 GetHashCode
 
@@ -28,13 +28,13 @@ ms.locfileid: "68920293"
 |TypeName|OverrideGetHashCodeOnOverridingEquals|
 |CheckId|CA2218|
 |类别|Microsoft.Usage|
-|是否重大更改|非重大更改|
+|重大更改|不间断|
 
 ## <a name="cause"></a>原因
 公共类型重写<xref:System.Object.Equals%2A?displayProperty=fullName>但不重写<xref:System.Object.GetHashCode%2A?displayProperty=fullName>。
 
 ## <a name="rule-description"></a>规则说明
- <xref:System.Object.GetHashCode%2A>基于当前实例返回一个值, 该值适用于哈希算法和数据结构 (如哈希表)。 两个相同类型且相等的对象必须返回相同的哈希代码, 以确保以下类型的实例正常工作:
+ <xref:System.Object.GetHashCode%2A>基于当前实例返回一个值，该值适用于哈希算法和数据结构（如哈希表）。 两个相同类型且相等的对象必须返回相同的哈希代码，以确保以下类型的实例正常工作：
 
 - <xref:System.Collections.Hashtable?displayProperty=fullName>
 
@@ -55,7 +55,7 @@ ms.locfileid: "68920293"
 - 实现的类型<xref:System.Collections.Generic.IEqualityComparer%601?displayProperty=fullName>
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
-若要修复与此规则的冲突, 请提供的<xref:System.Object.GetHashCode%2A>实现。 对于同一类型的一对对象, 如果实现<xref:System.Object.Equals%2A>对的返回`true` , 则必须确保实现返回相同的值。
+若要修复与此规则的冲突，请提供的<xref:System.Object.GetHashCode%2A>实现。 对于同一类型的一对对象，如果实现<xref:System.Object.Equals%2A>对的返回`true` ，则必须确保实现返回相同的值。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 不禁止显示此规则发出的警告。
@@ -63,7 +63,7 @@ ms.locfileid: "68920293"
 ## <a name="class-example"></a>类示例
 
 ### <a name="description"></a>描述
-下面的示例演示违反此规则的类 (引用类型)。
+下面的示例演示违反此规则的类（引用类型）。
 
 ### <a name="code"></a>代码
 [!code-csharp[FxCop.Usage.GetHashCodeErrorClass#1](../code-quality/codesnippet/CSharp/ca2218-override-gethashcode-on-overriding-equals_1.cs)]
@@ -77,7 +77,7 @@ ms.locfileid: "68920293"
 ## <a name="structure-example"></a>结构示例
 
 ### <a name="description"></a>描述
-下面的示例演示违反此规则的结构 (值类型)。
+下面的示例演示违反此规则的结构（值类型）。
 
 ### <a name="code"></a>代码
 [!code-csharp[FxCop.Usage.GetHashCodeErrorStruct#1](../code-quality/codesnippet/CSharp/ca2218-override-gethashcode-on-overriding-equals_3.cs)]

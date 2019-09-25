@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 43b294d72c8f8ec317803f2aa400e9cc50693162
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 832d2c9fc1d4b9138a7cd1bc39868b3c4bf1b814
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62545682"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71232646"
 ---
 # <a name="ca2117-aptca-types-should-only-extend-aptca-base-types"></a>CA2117:APTCA 类型应只扩展 APTCA 基类型
 
@@ -28,51 +28,51 @@ ms.locfileid: "62545682"
 |TypeName|AptcaTypesShouldOnlyExtendAptcaBaseTypes|
 |CheckId|CA2117|
 |类别|Microsoft.Security|
-|是否重大更改|重大|
+|重大更改|重大|
 
 ## <a name="cause"></a>原因
 
-公共或受保护的程序集中类型<xref:System.Security.AllowPartiallyTrustedCallersAttribute?displayProperty=fullName>属性继承自不具有属性的程序集中声明的类型。
+具有<xref:System.Security.AllowPartiallyTrustedCallersAttribute?displayProperty=fullName>属性的程序集中的公共或受保护类型从不具有属性的程序集中声明的类型继承。
 
 ## <a name="rule-description"></a>规则说明
 
-默认情况下，使用强名称的程序集中的公共或受保护类型隐式受[InheritanceDemand](xref:System.Security.Permissions.SecurityAction#System_Security_Permissions_SecurityAction_InheritanceDemand)的完全信任。 用强名称的程序集标记<xref:System.Security.AllowPartiallyTrustedCallersAttribute>(APTCA) 特性不具有这种保护。 该属性禁用继承要求。 公开的类型声明中没有继承要求的程序集是由不具有完全信任的类型继承。
+默认情况下，具有强名称的程序集中的公共或受保护类型由[InheritanceDemand](xref:System.Security.Permissions.SecurityAction#System_Security_Permissions_SecurityAction_InheritanceDemand)隐式保护以实现完全信任。 用<xref:System.Security.AllowPartiallyTrustedCallersAttribute> （APTCA）特性标记的强名称程序集不具有此保护。 特性禁用继承要求。 不具有继承要求的程序集中声明的公开类型可由不具有完全信任的类型继承。
 
-APTCA 属性是完全受信任的程序集，并在程序集中的类型继承自的类型不允许部分受信任调用方，则可能会产生安全问题。 如果两个类型`T1`并`T2`满足以下条件，则恶意调用方可以使用类型`T1`绕过的隐式完全信任继承要求保护`T2`:
+当完全受信任的程序集上存在 APTCA 特性，并且程序集中的类型从不允许部分受信任调用方的类型继承时，可能会出现安全漏洞。 如果两种`T1`类型`T2`满足以下条件，则恶意调用方可以使用该`T1`类型绕过受保护`T2`的隐式完全信任继承请求：
 
-- `T1` 在完全受信任的程序集具有 APTCA 特性中声明的公共类型。
+- `T1`是在具有 APTCA 特性的完全受信任的程序集中声明的公共类型。
 
-- `T1` 类型继承`T2`其程序集外部。
+- `T1`从其程序集`T2`外部的类型继承。
 
-- `T2`程序集不具有 APTCA 特性，并且，因此，不应由部分受信任的程序集中的类型继承。
+- `T2`的程序集没有 APTCA 特性，因此不应由部分受信任的程序集中的类型继承。
 
-部分受信任的类型`X`可以继承自`T1`，并向它授予访问权限的继承成员中声明`T2`。 因为`T2`不具有 APTCA 属性，其直接派生类型 (`T1`) 必须满足的完全信任; 继承要求`T1`具有完全信任权限，因此满足此检查。 安全风险是因为`X`不参与满足继承要求保护`T2`来自不受信任的子类化。 出于此原因，用 APTCA 特性的类型不能扩展没有该属性的类型。
+部分受信任的`X`类型可以从`T1`继承，这使它可以访问在中`T2`声明的继承成员。 由于`T2`没有 APTCA 特性，因此它的直接派生类型（`T1`）必须满足完全信任的继承要求;`T1`具有完全信任，因此满足此检查。 安全风险是因为`X`不参与满足防止`T2`不受信任的子类的继承要求。 出于此原因，具有 APTCA 特性的类型不能扩展没有特性的类型。
 
-另一个安全问题和可能是一个更常见的活动，是派生的类型 (`T1`) 可以通过编程器错误公开受保护的成员需要完全信任的类型 (`T2`)。 此信息时，不受信任调用方访问应仅供完全受信任的类型的信息。
+另一个安全问题（可能更常见）是派生类型（`T1`）可以通过程序员错误，从需要完全信任（`T2`）的类型公开受保护的成员。 出现这种情况时，不受信任的调用方可以访问只对完全受信任的类型提供的信息。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-如果不需要 APTCA 特性的程序集中的冲突报告的类型，请将其删除。
+如果冲突报告的类型位于不需要 APTCA 属性的程序集中，请将其删除。
 
-如果 APTCA 特性是必需的添加一个针对完全信任继承要求为类型。 继承要求可防止不受信任的类型继承。
+如果 APTCA 特性是必需的，则为该类型添加完全信任的继承要求。 继承要求可防止不受信任的类型继承。
 
-就可以通过将 APTCA 特性添加到报告的冲突的基类型的程序集修复与冲突。 请执行此操作必须首先进行严格的安全审查的程序集中的所有代码和依赖程序集的所有代码。
+可以通过将 APTCA 特性添加到冲突报告的基类型的程序集来修复冲突。 如果没有先对程序集中的所有代码和依赖程序集的所有代码进行大量的安全检查，请不要执行此操作。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
-若要安全地禁止显示此规则的警告，必须确保受保护的成员公开你的类型不直接或间接允许不受信任调用方访问敏感信息、 操作或可以以破坏方式使用的资源。
+若要安全地禁止显示此规则发出的警告，您必须确保您的类型公开的受保护成员不直接或间接允许不受信任的调用方访问可通过破坏性方式使用的敏感信息、操作或资源。
 
 ## <a name="example"></a>示例
 
-以下示例使用两个程序集和测试应用程序来演示此规则检测到的安全漏洞。 第一个程序集不具有 APTCA 属性，不应由部分受信任的类型继承 (由`T2`前面讨论)。
+下面的示例使用两个程序集和一个测试应用程序来说明此规则检测到的安全漏洞。 第一个程序集没有 APTCA 特性，不应由部分受信任的类型继承（由前面讨论`T2`中的表示）。
 
 [!code-csharp[FxCop.Security.NoAptcaInherit#1](../code-quality/codesnippet/CSharp/ca2117-aptca-types-should-only-extend-aptca-base-types_1.cs)]
 
-第二个程序集，由表示`T1`前面讨论中是完全受信任，允许部分受信任调用方。
+第二个程序集（ `T1`在上一讨论中表示）是完全受信任的，允许部分受信任的调用方。
 
 [!code-csharp[FxCop.Security.YesAptcaInherit#1](../code-quality/codesnippet/CSharp/ca2117-aptca-types-should-only-extend-aptca-base-types_2.cs)]
 
-测试类型，由表示`X`在前面的讨论，是在部分受信任的程序集中。
+上一讨论中表示的`X`测试类型位于部分受信任的程序集中。
 
 [!code-csharp[FxCop.Security.TestAptcaInherit#1](../code-quality/codesnippet/CSharp/ca2117-aptca-types-should-only-extend-aptca-base-types_3.cs)]
 
@@ -84,9 +84,9 @@ From Test: sunny meadow
 Meet at the sunny meadow 2/22/2003 12:00:00 AM!
 ```
 
-## <a name="related-rules"></a>相关的规则
+## <a name="related-rules"></a>相关规则
 
-[CA2116:APTCA 方法应只调用 APTCA 方法](../code-quality/ca2116-aptca-methods-should-only-call-aptca-methods.md)
+[CA2116APTCA 方法应只调用 APTCA 方法](../code-quality/ca2116-aptca-methods-should-only-call-aptca-methods.md)
 
 ## <a name="see-also"></a>请参阅
 
