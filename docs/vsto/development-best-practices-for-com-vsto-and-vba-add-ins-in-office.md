@@ -1,5 +1,5 @@
 ---
-title: 开发最佳做法：在 Office 中的 COM、 VSTO 和 VBA 外接程序
+title: 开发最佳做法：Office 中的 COM、VSTO & VBA 外接程序
 ms.date: 07/25/2017
 ms.topic: conceptual
 dev_langs:
@@ -11,57 +11,57 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4689f14a6ce66f509a7af1f4a9a1d50a0f8d37cd
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
+ms.openlocfilehash: 35b39aef2865f0438e6165bd6bf2c5418e8fbcb0
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66401420"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71254644"
 ---
-# <a name="development-best-practices-for-com-vsto-and-vba-add-ins-in-office"></a>在 Office 中的 COM、 VSTO 和 VBA 外接程序的开发最佳实践
-  如果你 office 开发 COM、 VSTO 或 VBA 的加载项，请按照本文中所述的开发最佳做法。   这将有助于确保：
+# <a name="development-best-practices-for-com-vsto-and-vba-add-ins-in-office"></a>Office 中 COM、VSTO 和 VBA 外接程序的开发最佳做法
+  如果要开发适用于 Office 的 COM、VSTO 或 VBA 外接程序，请遵循本文中所述的开发最佳实践。   这将有助于确保:
 
-- 加载项在不同版本和 Office 的部署之间的兼容性。
-- 外接程序部署的用户和 IT 管理员的复杂性较低。
-- 不会发生的外接程序的意外的安装或运行时失败。
+- 不同版本和 Office 部署之间的外接程序的兼容性。
+- 降低了用户和 IT 管理员的加载项部署复杂性。
+- 外接程序的意外安装或运行时失败不会发生。
 
->注意:使用[桌面桥](/windows/uwp/porting/desktop-to-uwp-root)若要准备您的 COM，VSTO 或 VBA 外接程序不支持 Windows 应用商店。 不能在 Windows 应用商店或 Office 应用商店中分布 COM、 VSTO 和 VBA 加载项。
+>注意：不支持使用[桌面桥](/windows/uwp/porting/desktop-to-uwp-root)为 Windows 应用商店准备 COM、VSTO 或 VBA 外接程序。 无法在 Windows 应用商店或 Office 应用商店中分发 COM、VSTO 和 VBA 外接程序。
 
-## <a name="do-not-check-for-office-during-installation"></a>不会检查 office 安装过程
- 我们不建议在外接程序检测是否在外接程序安装过程中安装 Office。 如果未安装 Office，您可以安装外接程序和用户将能够访问它后安装 Office。
+## <a name="do-not-check-for-office-during-installation"></a>安装期间不检查 Office
+ 建议你不要在外接程序安装过程中让你的加载项检测是否安装了 Office。 如果未安装 Office，则可以安装外接程序，并且用户在安装 Office 后可以访问它。
 
-## <a name="use-embedded-interop-types-nopia"></a>使用嵌入的互操作类型 (NoPIA)
-如果你的解决方案使用.NET 4.0 或更高版本，使用嵌入的互操作类型 (NoPIA) 而不是具体取决于 Office 主互操作程序集 (PIA) 可再发行组件。 使用类型嵌入可以减少解决方案的安装大小，并确保将来的兼容性。 Office 2010 是 office 的最新版本随附 PIA 可再发行组件。 有关详细信息，请参见[演练：嵌入 Microsoft Office 程序集中的类型信息](https://msdn.microsoft.com/library/ee317478.aspx)并[类型等效性和嵌入的互操作类型](/windows/uwp/porting/desktop-to-uwp-root)。
+## <a name="use-embedded-interop-types-nopia"></a>使用嵌入的互操作类型（NoPIA）
+如果你的解决方案使用 .NET 4.0 或更高版本，请使用嵌入的互操作类型（NoPIA），而不是取决于 Office 主互操作程序集（PIA）可再发行组件。 使用类型嵌入可降低解决方案的安装大小，并可确保将来的兼容性。 Office 2010 是交付 PIA 可再发行组件的最新版本的 Office。 有关详细信息，请参见[演练：嵌入来自 Microsoft Office 程序集](https://msdn.microsoft.com/library/ee317478.aspx)和[类型等效性和嵌入互操作类型](/windows/uwp/porting/desktop-to-uwp-root)的类型信息。
 
-如果您的解决方案使用.NET 的早期版本，我们建议你更新你的解决方案使用.NET 4.0 或更高版本。 使用.NET 4.0 或更高版本可减少在较新版本的 Windows 运行时必备组件。
+如果你的解决方案使用的是早期版本的 .NET，我们建议你将解决方案更新为使用 .NET 4.0 或更高版本。 使用 .NET 4.0 或更高版本可在较新版本的 Windows 上减少运行时必备组件。
 
-## <a name="avoid-depending-on-specific-office-versions"></a>避免具体取决于特定的 Office 版本
-如果您的解决方案使用选项仅适用于较新版本的 Office 的功能，验证在运行时 （例如，使用异常处理或通过检查版本） 的功能存在 （如果可能，请在功能级别）。 验证最小版本中，而不是特定版本中，使用支持的 Api 中的对象模型，如[Application.Version 属性](<xref:Microsoft.Office.Interop.Excel._Application.Version%2A>)。 我们不建议您依赖于 Office 二进制元数据、 安装路径或注册表项的，因为它们可以安装、 环境和版本之间进行更改。
+## <a name="avoid-depending-on-specific-office-versions"></a>避免根据特定 Office 版本
+如果你的解决方案使用仅在较新版本的 Office 中可用的功能，请在运行时验证该功能是否存在（如果可能，在功能级别）（例如，使用异常处理或通过检查版本）。 使用对象模型中支持的 Api （如[Application. Version 属性](<xref:Microsoft.Office.Interop.Excel._Application.Version%2A>)）验证最低版本，而不是特定版本。 不建议你依赖于 Office 二进制元数据、安装路径或注册表项，因为它们可能在安装、环境和版本之间发生更改。
 
-## <a name="enable-both-32-bit-and-64-bit-office-usage"></a>启用 32 位和 64 位 Office 使用情况
-在默认的 build 目标应支持 (x86) 32 位和 64 位 (x64)，除非你的解决方案依赖于它们仅适用于特定位数的库。 在采用，尤其是在大数据环境增加 Office 的 64 位版本。 支持 32 位和 64 位简化你的用户的 Office 的 32 位和 64 位版本之间的转换。
+## <a name="enable-both-32-bit-and-64-bit-office-usage"></a>同时启用32位和64位办公室
+默认的生成目标应同时支持32位（x86）和64位（x64），除非你的解决方案依赖于仅可用于特定位数的库。 64位版本的 Office 正在采用，尤其是在大数据环境中。 同时支持32位和64位使用户能够更轻松地在 Office 的32位和64位版本之间过渡。
 
-编写 VBA 代码时，使用 64 位安全声明语句，并将转换为相应的变量。 此外，请确保可以通过提供有关每个位数的代码运行 32 位或 64 位版本的 Office 的用户之间共享文档。 有关详细信息，请参阅[64 位 Visual Basic 应用程序概述](/office/vba/Language/Concepts/Getting-Started/64-bit-visual-basic-for-applications-overview)。
+编写 VBA 代码时，请使用64位安全声明语句并根据需要转换变量。 此外，通过提供每个位数的代码，确保可在运行32位或64位版本 Office 的用户之间共享文档。 有关详细信息，请参阅[应用程序的64位 Visual Basic](/office/vba/Language/Concepts/Getting-Started/64-bit-visual-basic-for-applications-overview)。
 
-## <a name="support-restricted-environments"></a>支持受限制的环境
-你的解决方案应该不需要用户帐户提升或管理员权限。 此外，该解决方案不应依赖于设置或更改：
+## <a name="support-restricted-environments"></a>支持受限环境
+解决方案不应要求用户帐户提升或管理员权限。 此外，该解决方案不应依赖于设置或更改：
 
-- 当前工作目录中。
-- 加载 DLL 的目录。
-- PATH 变量中。
+- 当前工作目录。
+- DLL 加载目录。
+- 路径变量。
 
-## <a name="change-the-save-location-of-shared-data-and-settings"></a>将更改保存共享的数据和设置的位置
-如果解决方案包含外接程序和进程外部的 Office，不要使用用户的应用程序数据文件夹或注册表来交换数据或外接程序和外部进程之间的设置。 相反，请考虑使用用户的临时文件夹、 文档文件夹或你的解决方案的安装目录。
+## <a name="change-the-save-location-of-shared-data-and-settings"></a>更改共享数据和设置的保存位置
+如果解决方案包含外接程序和 Office 外部的进程，请不要使用用户的应用程序数据文件夹或注册表在外接程序和外部进程之间交换数据或设置。 而应考虑使用用户的临时文件夹、documents 文件夹或解决方案的安装目录。
 
-## <a name="increment-the-version-number-with-each-update"></a>每次更新版本号便会递增
-在你的解决方案中设置的二进制文件的版本号，并增加每次更新。 这将使用户更轻松地识别版本之间的更改和评估兼容性。
+## <a name="increment-the-version-number-with-each-update"></a>递增每个更新的版本号
+设置解决方案中二进制文件的版本号，并将其与每个更新递增。 这会使用户更轻松地识别版本之间的更改并评估兼容性。
 
-## <a name="provide-support-statements-for-the-latest-versions-of-office"></a>提供最新版本的 Office 的支持声明
-客户询问 Isv 提供其 COM、 VSTO 和 VBA 加载项在 Office 中运行的支持声明。 列出您使用 Office 365 专业增强版的显式支持语句可帮助客户准备工具了解你的支持。
+## <a name="provide-support-statements-for-the-latest-versions-of-office"></a>为 Office 的最新版本提供支持声明
+客户要求 Isv 为在 Office 中运行的 COM、VSTO 和 VBA 外接程序提供支持声明。 列出你的显式支持声明可帮助使用 Office 365 ProPlus 准备工具的客户了解你的支持。
 
-若要提供 Office 客户端应用程序 （例如，Word 或 Excel） 的支持声明，请首先验证加载项在当前的 Office 版本中，运行，然后再提交到如果外接程序中断的未来版本中提供更新。 无需在 Microsoft 发布新的生成或对 Office 的更新时测试加载项。 Microsoft 很少更改在 Office 中的 COM、 VSTO 和 VBA 扩展性平台并妥善记录这些更改。
+若要为 Office 客户端应用程序（例如，Word 或 Excel）提供支持语句，请先验证外接程序是否在当前 Office 版本中运行，然后在将来的版本中的外接程序中断的情况下提交以提供更新。 当 Microsoft 发布新版本或 Office 更新时，无需测试外接程序。 Microsoft 很少在 Office 中更改 COM、VSTO 和 VBA 扩展性平台，这些更改将会很好地记录下来。
 
->重要提示：Microsoft 将维护一组用于准备情况报告和 ISV 的联系信息的加载项支持。 若要获取外接程序列出，请参阅[ https://aka.ms/readyforwindows ](https://aka.ms/readyforwindows)。
+>重要提示：Microsoft 维护了一个列表，其中列出了准备就绪报表的支持外接程序，以及 ISV 联系信息。 若要使外接程序列出，请[https://aka.ms/readyforwindows](https://aka.ms/readyforwindows)参阅。
 
-## <a name="use-process-monitor-to-help-debug-installation-or-loading-issues"></a>使用进程监视器来帮助调试安装或加载问题
-如果外接程序在安装或负载期间存在兼容性问题，它们可能与文件或注册表访问问题。 使用[Process Monitor](/sysinternals/downloads/procmon)或类似的调试工具进行记录和比较行为对工作环境，以帮助识别问题。
+## <a name="use-process-monitor-to-help-debug-installation-or-loading-issues"></a>使用进程监视器帮助调试安装或加载问题
+如果你的外接程序在安装或加载过程中存在兼容性问题，它们可能与文件或注册表访问问题有关。 使用[进程监视器](/sysinternals/downloads/procmon)或类似的调试工具来记录和比较工作环境的行为，以帮助确定问题。

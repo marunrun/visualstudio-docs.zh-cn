@@ -7,12 +7,12 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: 478efc77bd1fb14f6241e026cfe280355a90746a
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 27570e282c230d4bec47e70aa1bcdd053b75597c
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68919448"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71236747"
 ---
 # <a name="best-practices-and-examples-sal"></a>最佳做法和示例 (SAL)
 下面是一些关于充分利用源代码批注语言 (SAL)，并避免一些常见问题的方法。
@@ -44,7 +44,7 @@ void Func2(_Inout_ PCHAR p1)
 
 ## <a name="_opt_"></a>\_opt\_
 
-如果不允许调用方传递 null 指针，请使用 `_In_` 或 `_Out_`，而不是 `_In_opt_` 或 `_Out_opt_`。 这甚至适用于函数，该函数会检查其参数，如果参数不应为 NULL 但却为 NULL，则会返回错误。 尽管让函数检查其参数中是否存在意外的 NULL 并正常返回是一种很好的防御性编码做法, 但并不意味着参数批注可以是可选`_*Xxx*_opt_`类型 ()。
+如果不允许调用方传递 null 指针，请使用 `_In_` 或 `_Out_`，而不是 `_In_opt_` 或 `_Out_opt_`。 这甚至适用于函数，该函数会检查其参数，如果参数不应为 NULL 但却为 NULL，则会返回错误。 尽管让函数检查其参数中是否存在意外的 NULL 并正常返回是一种很好的防御性编码做法，但并不意味着参数批注可以是可选`_*Xxx*_opt_`类型（）。
 
 ```cpp
 
@@ -238,11 +238,11 @@ _Ret_maybenull_ void *MightReturnNullPtr2();
 
 ## <a name="see-also"></a>请参阅
 
-[使用 SALC++注释减少 C/代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
-[了解 SAL](../code-quality/understanding-sal.md)
-[注释函数参数和返回值](../code-quality/annotating-function-parameters-and-return-values.md)
-[注释函数行为](../code-quality/annotating-function-behavior.md)
-[批注结构和类](../code-quality/annotating-structs-and-classes.md)
-[注释锁定行为](../code-quality/annotating-locking-behavior.md)
-[指定何时以及在何处应用](../code-quality/specifying-when-and-where-an-annotation-applies.md)
-[内部函数](../code-quality/intrinsic-functions.md)
+[使用 SAL 批注以减少 C/C++ 代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)  
+[了解 SAL](../code-quality/understanding-sal.md)  
+[对函数参数和返回值进行批注](../code-quality/annotating-function-parameters-and-return-values.md)  
+[对函数行为进行批注](../code-quality/annotating-function-behavior.md)  
+[批注结构和类](../code-quality/annotating-structs-and-classes.md)  
+[对锁定行为进行批注](../code-quality/annotating-locking-behavior.md)  
+[指定何时以及在何处应用批注](../code-quality/specifying-when-and-where-an-annotation-applies.md)  
+[内部函数](../code-quality/intrinsic-functions.md)  

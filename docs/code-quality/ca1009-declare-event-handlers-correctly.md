@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: a98ec47688f289fadba66401aca9fcee7b602cdc
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: e923730213ca31a4429d8547fdaaf980692f9a96
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68923571"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71236479"
 ---
 # <a name="ca1009-declare-event-handlers-correctly"></a>CA1009:正确声明事件处理程序
 
@@ -32,24 +32,24 @@ ms.locfileid: "68923571"
 |TypeName|DeclareEventHandlersCorrectly|
 |CheckId|CA1009|
 |类别|Microsoft.Design|
-|是否重大更改|重大|
+|重大更改|重大|
 
 ## <a name="cause"></a>原因
 处理公共或受保护事件的委托不具有正确的签名、返回类型或参数名称。
 
 ## <a name="rule-description"></a>规则说明
-事件处理程序方法采用两个参数。 第一种类型<xref:System.Object?displayProperty=fullName>为, 名称为 "sender"。 它是引发事件的对象。 第二个参数的类型<xref:System.EventArgs?displayProperty=fullName>为, 名称为 "e"。 这是与该事件关联的数据。 例如, 如果在打开文件时引发事件, 则事件数据通常包含文件的名称。
+事件处理程序方法采用两个参数。 第一种类型<xref:System.Object?displayProperty=fullName>为，名称为 "sender"。 它是引发事件的对象。 第二个参数的类型<xref:System.EventArgs?displayProperty=fullName>为，名称为 "e"。 这是与该事件关联的数据。 例如，如果在打开文件时引发事件，则事件数据通常包含文件的名称。
 
-事件处理程序方法不应返回值。 在C#编程语言中, 这由返回类型`void`指示。 事件处理程序可以在多个对象中调用多个方法。 如果允许方法返回值, 则每个事件将会出现多个返回值, 并且只有调用的最后一个方法的值可用。
+事件处理程序方法不应返回值。 在C#编程语言中，这由返回类型`void`指示。 事件处理程序可以在多个对象中调用多个方法。 如果允许方法返回值，则每个事件将会出现多个返回值，并且只有调用的最后一个方法的值可用。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
-若要修复与此规则的冲突, 请更正该委托的签名、返回类型或参数名称。 有关详细信息, 请参阅以下示例。
+若要修复与此规则的冲突，请更正该委托的签名、返回类型或参数名称。 有关详细信息，请参阅以下示例。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 不禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
-下面的示例演示适合处理事件的委托。 此事件处理程序可调用的方法符合设计准则中指定的签名。 `AlarmEventHandler`委托的类型名称。 `AlarmEventArgs`从事件数据<xref:System.EventArgs>的基类派生, 并保存警报事件数据。
+下面的示例演示适合处理事件的委托。 此事件处理程序可调用的方法符合设计准则中指定的签名。 `AlarmEventHandler`委托的类型名称。 `AlarmEventArgs`从事件数据<xref:System.EventArgs>的基类派生，并保存警报事件数据。
 
 [!code-cpp[FxCop.Design.EventsTwoParams#1](../code-quality/codesnippet/CPP/ca1009-declare-event-handlers-correctly_1.cpp)]
 [!code-csharp[FxCop.Design.EventsTwoParams#1](../code-quality/codesnippet/CSharp/ca1009-declare-event-handlers-correctly_1.cs)]

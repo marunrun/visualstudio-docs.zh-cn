@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: b3e05f53c4efd16f02bc71c3c478e5ffe3ef8bc8
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 0fb424627d88ede6c0677b8c45de4aab487ae498
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69547579"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71235822"
 ---
 # <a name="ca1044-properties-should-not-be-write-only"></a>CA1044:属性不应是只写的
 
@@ -31,21 +31,21 @@ ms.locfileid: "69547579"
 |TypeName|PropertiesShouldNotBeWriteOnly|
 |CheckId|CA1044|
 |类别|Microsoft.Design|
-|是否重大更改|重大|
+|重大更改|重大|
 
 ## <a name="cause"></a>原因
 
-属性具有 set 访问器, 但不具有 get 访问器。
+属性具有 set 访问器，但不具有 get 访问器。
 
-默认情况下, 此规则仅查看公共类型, 但这是[可配置](#configurability)的。
+默认情况下，此规则仅查看公共类型，但这是[可配置](#configurability)的。
 
 ## <a name="rule-description"></a>规则说明
 
-Get 访问器提供对属性的读取访问权限, 而 set 访问器提供写入访问权限。 虽然可以接受且经常需要使用只读属性，但设计准则禁止使用只写属性。 这是因为允许用户设置一个值, 然后阻止用户查看该值不提供任何安全性。 而且，如果没有读访问，将无法查看共享对象的状态，使其用处受到限制。
+Get 访问器提供对属性的读取访问权限，而 set 访问器提供写入访问权限。 虽然可以接受且经常需要使用只读属性，但设计准则禁止使用只写属性。 这是因为允许用户设置一个值，然后阻止用户查看该值不提供任何安全性。 而且，如果没有读访问，将无法查看共享对象的状态，使其用处受到限制。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-若要修复与此规则的冲突, 请将 get 访问器添加到属性。 或者, 如果需要只写属性的行为, 请考虑将该属性转换为方法。
+若要修复与此规则的冲突，请将 get 访问器添加到属性。 或者，如果需要只写属性的行为，请考虑将该属性转换为方法。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
@@ -53,17 +53,17 @@ Get 访问器提供对属性的读取访问权限, 而 set 访问器提供写入
 
 ## <a name="configurability"></a>配置
 
-如果从[FxCop 分析器](install-fxcop-analyzers.md)(而不是传统分析) 运行此规则, 则可以根据其可访问性, 将基本代码的哪些部分配置为在上运行此规则。 例如, 若要指定规则只应针对非公共 API 图面运行, 请在项目中的 editorconfig 文件中添加以下键/值对:
+如果从[FxCop 分析器](install-fxcop-analyzers.md)（而不是传统分析）运行此规则，则可以根据其可访问性，将基本代码的哪些部分配置为在上运行此规则。 例如，若要指定规则只应针对非公共 API 图面运行，请在项目中的 editorconfig 文件中添加以下键/值对：
 
 ```ini
 dotnet_code_quality.ca1044.api_surface = private, internal
 ```
 
-您可以为此规则、所有规则或此类别中的所有规则 (设计) 配置此选项。 有关详细信息, 请参阅[配置 FxCop 分析器](configure-fxcop-analyzers.md)。
+您可以为此规则、所有规则或此类别中的所有规则（设计）配置此选项。 有关详细信息，请参阅[配置 FxCop 分析器](configure-fxcop-analyzers.md)。
 
 ## <a name="example"></a>示例
 
-在下面的示例中`BadClassWithWriteOnlyProperty` , 是一个具有只写属性的类型。 `GoodClassWithReadWriteProperty`包含更正后的代码。
+在下面的示例中`BadClassWithWriteOnlyProperty` ，是一个具有只写属性的类型。 `GoodClassWithReadWriteProperty`包含更正后的代码。
 
 [!code-vb[FxCop.Design.PropertiesNotWriteOnly#1](../code-quality/codesnippet/VisualBasic/ca1044-properties-should-not-be-write-only_1.vb)]
 [!code-csharp[FxCop.Design.PropertiesNotWriteOnly#1](../code-quality/codesnippet/CSharp/ca1044-properties-should-not-be-write-only_1.cs)]

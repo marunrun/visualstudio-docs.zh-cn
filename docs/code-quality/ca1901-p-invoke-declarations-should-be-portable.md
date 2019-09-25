@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a45b7061ae9d183ec7ee02a3b733ee9340b3689
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: d878572c4391805773a9a711ee88e7b58f507c65
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68921305"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71233297"
 ---
 # <a name="ca1901-pinvoke-declarations-should-be-portable"></a>CA1901:P/Invoke 声明应为可移植声明
 
@@ -28,17 +28,17 @@ ms.locfileid: "68921305"
 |TypeName|PInvokeDeclarationsShouldBePortable|
 |CheckId|CA1901|
 |类别|Microsoft.Portability|
-|是否重大更改|如果在程序集外部可见, 则为。 否-如果 P/Invoke 在程序集外部不可见, 则为。|
+|重大更改|如果在程序集外部可见，则为。 不间断-如果 P/Invoke 在程序集外部不可见，则为。|
 
 ## <a name="cause"></a>原因
-此规则将评估每个参数的大小和 P/Invoke 的返回值, 并验证在对32位和64位平台上的非托管代码进行封送处理时, 其大小是否正确。 此规则最常见的冲突是传递固定大小的整数, 其中需要使用平台相关的指针大小变量。
+此规则将评估每个参数的大小和 P/Invoke 的返回值，并验证在对32位和64位平台上的非托管代码进行封送处理时，其大小是否正确。 此规则最常见的冲突是传递固定大小的整数，其中需要使用平台相关的指针大小变量。
 
 ## <a name="rule-description"></a>规则说明
-以下任何一种情况都会违反此规则:
+以下任何一种情况都会违反此规则：
 
-- 如果返回值或参数的类型为固定大小的整数, 则将其`IntPtr`类型化为。
+- 如果返回值或参数的类型为固定大小的整数，则将其`IntPtr`类型化为。
 
-- `IntPtr`如果返回值或参数的类型应为固定大小的整数, 则返回值或参数的类型为。
+- `IntPtr`如果返回值或参数的类型应为固定大小的整数，则返回值或参数的类型为。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 您可以通过`IntPtr`使用或`UIntPtr`表示句柄而不是`Int32`或`UInt32`来解决此冲突。
@@ -58,7 +58,7 @@ internal class NativeMethods
 }
 ```
 
-在此示例中, `nIconIndex`将参数声明`IntPtr`为, 它在32位平台上的宽度为4个字节, 64 位平台上的宽度为8个字节。 在下面的非托管声明中, 可以看到`nIconIndex` , 是所有平台上的4字节无符号整数。
+在此示例中， `nIconIndex`将参数声明`IntPtr`为，它在32位平台上的宽度为4个字节，64位平台上的宽度为8个字节。 在下面的非托管声明中，可以看到`nIconIndex` ，是所有平台上的4字节无符号整数。
 
 ```csharp
 HICON ExtractIcon(HINSTANCE hInst, LPCTSTR lpszExeFileName,
@@ -66,7 +66,7 @@ HICON ExtractIcon(HINSTANCE hInst, LPCTSTR lpszExeFileName,
 ```
 
 ## <a name="example"></a>示例
-若要解决此冲突, 请将声明更改为以下内容:
+若要解决此冲突，请将声明更改为以下内容：
 
 ```csharp
 internal class NativeMethods{
