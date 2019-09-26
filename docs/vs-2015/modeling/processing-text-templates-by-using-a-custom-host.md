@@ -50,7 +50,7 @@ string output = engine.ProcessTemplate(templateString, host);
 
  宿主必须能记录错误、解析对程序集和包含文件的引用、提供可在其中执行模板的应用程序域并为每条指令调用相应的处理器。
 
- <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>是在**VisualStudio. TextTemplating.\*中定义的。** [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))在 TextTemplating 中定义 **\*。 VisualStudio.。0 .dll**。
+ <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName> 是在 **Microsoft.VisualStudio.TextTemplating.\*0.dll 中定义的。** [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)) 是在 **Microsoft.VisualStudio.TextTemplating.Interfaces\*0.dll**中定义的。
 
 ## <a name="in-this-section"></a>本节内容
  [演练：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)向您演示如何创建自定义文本模板宿主, 使文本模板功能在外部[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]可用。
