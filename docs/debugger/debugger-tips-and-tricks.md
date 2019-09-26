@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 61c1efea7340425090adbdd1c9bc865c4a056d42
-ms.sourcegitcommit: 0e482cfc15f809b564c3de61646f29ecd7bfcba6
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70987767"
 ---
 # <a name="learn-productivity-tips-and-tricks-for-the-debugger-in-visual-studio"></a>了解 Visual Studio 调试器在工作效率方面的提示和技巧
@@ -41,7 +41,7 @@ ms.locfileid: "70987767"
 
 ## <a name="edit-xaml-code-and-continue-debugging"></a>编辑 XAML 代码并继续调试
 
-若要在调试会话期间修改 XAML 代码，请参阅[使用 Xaml 热重载编写和调试正在运行的 xaml 代码](xaml-hot-reload.md)。
+若要在调试会话期间修改 XAML 代码，请参阅[使用 XAML 热重载编写和调试正在运行的 XAML 代码](xaml-hot-reload.md)。
 
 ## <a name="debug-issues-that-are-hard-to-reproduce"></a>调试难以重现的问题
 

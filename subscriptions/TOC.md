@@ -41,6 +41,7 @@
 ##### [WhiteSource Bolt](vs-whitesource.md)
 ##### [Windows 开发人员帐户](vs-windows-dev.md)
 #### 专业开发
+##### [MSDN 杂志](vs-code-magazine.md)
 ##### [DataCamp](vs-datacamp.md)
 ##### [LinkedIn 学习](vs-linkedin-learning.md)
 ##### [MSDN Magazine 订阅](vs-msdn.md)
