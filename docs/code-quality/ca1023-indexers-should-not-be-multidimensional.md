@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 08a45219eb2fceeaa9c58a140990ea577c941ff7
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: f788ded21ef5dd9c84d218cedb55ec8dcf7eff2d
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68923041"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71236169"
 ---
 # <a name="ca1023-indexers-should-not-be-multidimensional"></a>CA1023:索引器不应是多维的
 
@@ -32,22 +32,22 @@ ms.locfileid: "68923041"
 |TypeName|IndexersShouldNotBeMultidimensional|
 |CheckId|CA1023|
 |类别|Microsoft.Design|
-|是否重大更改|重大|
+|重大更改|重大|
 
 ## <a name="cause"></a>原因
 公共或受保护类型包含一个使用多个索引的公共或受保护索引器。
 
 ## <a name="rule-description"></a>规则说明
-索引器 (即索引属性) 应使用单个索引。 多维索引器可能会显著降低库的可用性。 如果设计需要多个索引, 请重新考虑该类型是否表示逻辑数据存储区。 否则, 请使用方法。
+索引器（即索引属性）应使用单个索引。 多维索引器可能会显著降低库的可用性。 如果设计需要多个索引，请重新考虑该类型是否表示逻辑数据存储区。 否则，请使用方法。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
-若要修复与此规则的冲突, 请将设计更改为使用单独的整数或字符串索引, 或使用方法而不是索引器。
+若要修复与此规则的冲突，请将设计更改为使用单独的整数或字符串索引，或使用方法而不是索引器。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
-仅在仔细考虑非标准索引器的需求之后, 禁止显示此规则发出的警告。
+仅在仔细考虑非标准索引器的需求之后，禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
-下面的示例演示一个类型, `DayOfWeek03`该类型具有与规则冲突的多维索引器。 索引器可被视为一种类型的转换, 因此更适合作为方法公开。 此类型在中`RedesignedDayOfWeek03`进行了重新设计, 以满足规则。
+下面的示例演示一个类型， `DayOfWeek03`该类型具有与规则冲突的多维索引器。 索引器可被视为一种类型的转换，因此更适合作为方法公开。 此类型在中`RedesignedDayOfWeek03`进行了重新设计，以满足规则。
 
 [!code-vb[FxCop.Design.OneDimensionForIndexer#1](../code-quality/codesnippet/VisualBasic/ca1023-indexers-should-not-be-multidimensional_1.vb)]
 [!code-cpp[FxCop.Design.OneDimensionForIndexer#1](../code-quality/codesnippet/CPP/ca1023-indexers-should-not-be-multidimensional_1.cpp)]

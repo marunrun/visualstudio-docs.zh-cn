@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 595b8ea35799effd36e4a8599c61b3ab42efb940
-ms.sourcegitcommit: a1e899248adaf104697fa7dea32a36e69e9cc119
+ms.openlocfilehash: 365037d3eeeec5077d724ca72d43cce5dcbe0ebd
+ms.sourcegitcommit: 528178a304e66c0cb7ab98b493fe3c409f87493a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71159949"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273359"
 ---
 # <a name="create-a-database-and-add-tables-in-visual-studio"></a>在 Visual Studio 中创建数据库并添加表
 
@@ -68,6 +68,9 @@ ms.locfileid: "71159949"
 
 - 或者，如果该窗口尚未打开，还可以选择 "**查看** > **服务器资源管理器**"。 展开 "**数据连接**" 节点，右键单击 sampledatabase.mdf，然后选择 "**属性**"，以打开属性窗口 *。*
 
+  > [!TIP]
+  > 如果无法展开 "数据连接" 节点，或未列出 Sampledatabase.mdf 连接，请在服务器资源管理器工具栏中选择 "**连接到数据库**" 按钮。 在 "**添加连接**" 对话框中，确保在 "**数据源**" 下选择 " **Microsoft SQL Server 数据库文件**"，然后浏览到并选择 sampledatabase.mdf 文件。 通过选择 **"确定"** 完成添加连接。
+
 ## <a name="create-tables-and-keys-by-using-table-designer"></a>使用表设计器创建表和键
 
 在本部分中，将创建两个表、每个表中有一个主键和几行示例数据。 你还将创建外键以指定一个表中的记录如何对应于另一个表中的记录。
@@ -75,6 +78,8 @@ ms.locfileid: "71159949"
 ### <a name="create-the-customers-table"></a>创建 Customers 表
 
 1. 在**服务器资源管理器**中，展开 "**数据连接**" 节点，然后展开 " **sampledatabase.mdf** " 节点。
+
+   如果无法展开 "数据连接" 节点，或未列出 Sampledatabase.mdf 连接，请在服务器资源管理器工具栏中选择 "**连接到数据库**" 按钮。 在 "**添加连接**" 对话框中，确保在 "**数据源**" 下选择 " **Microsoft SQL Server 数据库文件**"，然后浏览到并选择 sampledatabase.mdf 文件。 通过选择 **"确定"** 完成添加连接。
 
 2. 右键单击 "**表**"，然后选择 "**添加新表**"。
 
