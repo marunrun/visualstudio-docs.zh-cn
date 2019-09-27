@@ -1,12 +1,10 @@
 ---
-title: Visual Basic 中的 stop 语句 |Microsoft Docs
+title: Visual Basic 中的 Stop 语句Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
-- FSharp
-- C++
 helpviewer_keywords:
 - End statements
 - breakpoints, Stop statements
@@ -19,25 +17,26 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 329a3aa2805e8a95e14a5d78dc2231ade81ad6e4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8f9ab4ef453a921371ab7ef4f272cd0e38f4108a
+ms.sourcegitcommit: 4d2620bee4688fb881e09a07ea4a264b99f0743e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929736"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71322537"
 ---
 # <a name="stop-statements-in-visual-basic"></a>Visual Basic 中的 Stop 语句
-Visual Basic Stop 语句提供了一种以编程方式设置断点的替换方法。 当调试器遇到 Stop 语句时，它将中断程序的执行（进入中断模式）。 C# 程序员可通过调用 System.Diagnostics.Debugger.Break 达到同样的效果。
 
- 通过编辑源代码来设置或移除 Stop 语句。 不能使用调试器命令设置或清除 Stop 语句，而对于断点却可以使用调试器命令。
+Visual Basic Stop 语句提供了一种以编程方式设置断点的替换方法。 当调试器遇到 Stop 语句时，它将中断程序的执行（进入中断模式）。 C#程序员可以通过调用来<xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType>实现同样的效果。
 
- 不同于 End 语句，Stop 语句不重置变量或返回设计模式。 可以从“调试”菜单中选择“继续”继续运行应用程序。
+通过编辑源代码来设置或移除 Stop 语句。 不能使用调试器命令设置或清除 Stop 语句，而对于断点却可以使用调试器命令。
 
- 当在调试器外部运行 Visual Basic 应用程序时，如果启用了实时调试，Stop 语句将启动调试器。 如果没有启用实时调试，Stop 语句的行为如同 End 语句，终止执行。 没有发生 QueryUnload 或 Unload 事件，因此必须从 Visual Basic 应用程序的发布版本中移除所有的 Stop 语句。 有关详细信息，请参阅[实时调试](../debugger/just-in-time-debugging-in-visual-studio.md)。
+不同于 End 语句，Stop 语句不重置变量或返回设计模式。 可以从“调试”菜单中选择“继续”继续运行应用程序。
+
+在调试器外部运行 Visual Basic 应用程序时，如果启用了实时调试，Stop 语句会启动调试器。 如果未启用实时调试，则 Stop 语句的行为就像它是结束语句并终止执行。 没有发生 QueryUnload 或 Unload 事件，因此必须从 Visual Basic 应用程序的发布版本中移除所有的 Stop 语句。 有关详细信息，请参阅[实时调试](just-in-time-debugging-in-visual-studio.md)。
 
  若要避免移除 Stop 语句，可以使用条件编译：
 
-```cpp
+```vb
 #If DEBUG Then
    Stop
 #Else
@@ -45,19 +44,28 @@ Visual Basic Stop 语句提供了一种以编程方式设置断点的替换方�
 #End If
 ```
 
- 另一种方法是使用 Assert 语句，而不使用 Stop 语句。 Debug.Assert 语句只有在没有满足指定条件时才中断执行，并且当生成发布版本时该语句被自动移除。 有关详细信息，请参阅[托管代码中的断言](../debugger/assertions-in-managed-code.md)。 如果想让 Assert 语句总是在调试版本中中断执行，可以这样做：
+另一种方法是使用<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>语句而不是 Stop 语句。 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>语句仅在未满足指定条件时中断执行。 <xref:System.Diagnostics.Debug.Assert%2A>生成发布版本时，将自动删除语句。 有关详细信息，请参阅[托管代码中的断言](assertions-in-managed-code.md)。 如果希望<xref:System.Diagnostics.Debug.Assert%2A>语句始终在调试版本中中断执行，可以执行以下操作：
 
 ```csharp
-Debug.Assert(false)
+Debug.Assert(false);
 ```
 
- 还有一种方法是使用 Debug.Fail 方法：
+```vb
+Debug.Assert(False)
+```
+
+另一种<xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>方法是使用方法：
 
 ```csharp
+Debug.Fail("a clever output string goes here");
+```
+
+```vb
 Debug.Fail("a clever output string goes here")
 ```
 
 ## <a name="see-also"></a>请参阅
-- [调试器安全](../debugger/debugger-security.md)
-- [C#, F#, and Visual Basic Project Types](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)（C#、F# 和 Visual Basic 项目类型）
-- [调试托管代码](../debugger/debugging-managed-code.md)
+
+- [调试器安全](debugger-security.md)
+- [C#, F#, and Visual Basic Project Types](debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)（C#、F# 和 Visual Basic 项目类型）
+- [调试托管代码](debugging-managed-code.md)
