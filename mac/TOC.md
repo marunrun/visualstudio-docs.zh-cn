@@ -67,7 +67,7 @@
 ## [发布到 Azure 应用服务](publish-app-svc.md)
 ## [发布到文件夹](publish-folder.md)
 
-# 工作负荷
+# 工作负载
 ## [可用工作负载](workloads.md)
 ## ASP.NET Core
 ### [.NET Core 支持](net-core-support.md)
@@ -87,7 +87,7 @@
 
 ## Unity 游戏开发
 ### [Unity 游戏开发](unity-tools.md)
-### [设置](setup-vsmac-tools-unity.md)
+### [安装](setup-vsmac-tools-unity.md)
 ### [Unity 入门](unity-walkthrough.md)
 ### [使用 Unity 工具](using-vsmac-tools-unity.md)
 ### [在 Unity 中使用 .NET 4.x](/visualstudio/cross-platform/unity-scripting-upgrade/?context=visualstudio/mac/context)
@@ -95,14 +95,18 @@
 ## [使用 Xamarin 的移动应用](/visualstudio/mac/xamarin)
 
 # [辅助功能](accessibility.md)
+## [设置 IDE 辅助功能选项](accessibility-ide-options.md)
+## [使用 macOS 辅助工具](accessibility-macos.md)
+### [使用键盘导航](accessibility-keyboard.md)
+### [使用 VoiceOver](accessibility-voiceover.md)
 
 # 疑难解答
 ## [日志和异常](troubleshooting.md)
 ## [Visual Studio 客户体验改善计划](visual-studio-experience-improvement-program.md)
 ## [报告问题](report-a-problem.md)
-## [故障排除：Visual Studio for Mac 是否支持 Team Foundation 版本控制？](tf-version-control.md)
-## [故障排除：为什么看不到所有模板？](troubleshooting-no-templates.md)
-## [故障排除：更新程序在检索信息时发生错误](updater-troubleshooting.md)
+## [排除故障：Visual Studio for Mac 是否支持 Team Foundation 版本控制？](tf-version-control.md)
+## [排除故障：为什么看不到所有模板？](troubleshooting-no-templates.md)
+## [排除故障：更新程序在检索信息时发生错误](updater-troubleshooting.md)
 
 # [发行说明](https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-relnotes)
 # [预览发行说明](https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-preview-relnotes)

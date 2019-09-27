@@ -162,7 +162,7 @@
               href: just-in-time-debugging-in-visual-studio.md
     - name: 配置调试
       items:
-        - name: 例外
+        - name: 异常
           items:
             - name: 管理调试器的异常
               href: managing-exceptions-with-the-debugger.md
@@ -288,7 +288,7 @@
               href: remote-debugging-errors-and-troubleshooting.md
             - name: 远程计算机上的 Microsoft Visual Studio 远程调试监视器没有连接到此计算机的权限
               href: error-the-microsoft-visual-studio-remote-debugging-monitor-no-permission.md
-            - name: 尝试联系远程计算机时出现 DCOM 错误。 访问被拒绝。
+            - name: 尝试联系远程计算机时出现 DCOM 错误。 拒绝访问。
               href: a-dcom-error-occurred-trying-to-contact-the-remote-computer-access-is-denied.md
             - name: 远程计算机上的 Microsoft Visual Studio 远程调试监视器正在以其他用户身份运行 |Microsoft Docs
               href: error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-is-running-as-a-different-user.md
@@ -666,6 +666,10 @@
               href: how-to-step-into-wcf-services.md
             - name: 调试自托管 WCF 服务
               href: how-to-debug-a-self-hosted-wcf-service.md
+    - name: 协作
+      items:
+        - name: 使用 Live Share 编写和调试代码
+          href: /visualstudio/liveshare/use/vs
     - name: 转储文件
       items:
         - name: 使用转储文件
@@ -828,7 +832,7 @@
                   href: how-to-search-for-a-process-in-processes-view.md
                 - name: 显示进程属性
                   href: how-to-display-process-properties.md
-            - name: 线程数
+            - name: 线程
               items:
                 - name: 线程视图
                   href: threads-view.md
