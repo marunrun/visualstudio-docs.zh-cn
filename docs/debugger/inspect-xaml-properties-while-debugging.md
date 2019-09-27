@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: fdb973718e56279e7bfb04c9d412bcd83410223d
-ms.sourcegitcommit: 0e482cfc15f809b564c3de61646f29ecd7bfcba6
+ms.openlocfilehash: 182c9e37764a247ec24b4b477975ccb7b8811c4b
+ms.sourcegitcommit: 4d2620bee4688fb881e09a07ea4a264b99f0743e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70987751"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71322550"
 ---
 # <a name="inspect-xaml-properties-while-debugging"></a>在调试时检查 XAML 属性
 通过“实时可视化树”和“实时属性资源管理器”，可以获取正在运行 XAML 代码的实时视图。 这些工具为你提供了正在运行的 XAML 应用程序的 UI 元素的树视图，并显示你选择的任何 UI 元素的运行时属性。
@@ -81,7 +81,10 @@ private void button_Click(object sender, RoutedEventArgs e)
 
 返回到应用程序窗口并再添加几个项。 “实时可视化树”中应会显示更多列表框项。
 
-现在让我们看看其中一个列表框项的属性。 选择“实时可视化树”中的第一个列表框项并单击工具栏上的“显示属性”图标。 应显示“实时属性资源管理器”。 请注意，“内容”字段是“Item1”，“背景”字段是 #FFFFFFE0（浅黄色）。 返回到“实时可视化树”，然后选择第二个列表框项。 “实时属性资源管理器”应显示“内容”字段是“Item2”，“背景”字段是 #FFD3D3D3（浅灰色）。
+现在让我们看看其中一个列表框项的属性。 选择“实时可视化树”中的第一个列表框项并单击工具栏上的“显示属性”图标。 应显示“实时属性资源管理器”。 请注意，"**内容**" 字段是 "Item1"，**背景** > **色**字段 **#FFFFFFE0**。 返回到“实时可视化树”，然后选择第二个列表框项。 "**实时属性资源管理器**" 应显示 "**内容**" 字段是 "Item2"，并且 **#FFD3D3D3** **背景** > **色**字段。
+
+> [!NOTE]
+> **实时属性资源管理器**中的属性周围的黄色边框表示属性值是通过绑定（如`Color = {BindingExpression}`）设置的。 绿色边框表示使用资源（如`Color = {StaticResource MyBrush}`）设置该值。
 
 XAML 的实际结构具有大量你可能并不直接感兴趣的元素，并且如果不熟悉代码，可能很难导航树以查找正在寻找的内容。 因此“实时可视化树”有几种方法可使用应用程序的 UI 来帮助找到想要检查的元素。
 
