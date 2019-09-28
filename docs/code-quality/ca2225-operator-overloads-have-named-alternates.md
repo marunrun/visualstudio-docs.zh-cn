@@ -12,14 +12,14 @@ ms.assetid: af8f7ab1-63ad-4861-afb9-b7a7a2be15e1
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.workload:
-- multiple
-ms.openlocfilehash: c027bc4581919f814b4d93eacba77248349fdf8b
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+dev_langs:
+- CSharp
+ms.openlocfilehash: b4db3074d334fe32f95c4d1b8446921c4e4d47ba
+ms.sourcegitcommit: 16175e0cea6af528e9ec76f0b94690faaf1bed30
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71231091"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71481776"
 ---
 # <a name="ca2225-operator-overloads-have-named-alternates"></a>CA2225:运算符重载具有命名的备用项
 
@@ -38,12 +38,16 @@ ms.locfileid: "71231091"
 
 ## <a name="rule-description"></a>规则说明
 
-运算符重载允许使用符号来表示类型的计算。 例如，重载加号（+）以添加的类型通常具有一个名为 "Add" 的备用成员。 命名的备用成员提供与运算符相同的功能的访问权限，并且为以不支持重载运算符的语言编写的开发人员提供。
+运算符重载允许使用符号来表示类型的计算。 例如，重载加符号 `+` 以便添加的类型通常具有名为 `Add` 的备用成员。 命名的备用成员提供与运算符相同的功能的访问权限。 它适用于以不支持重载运算符的语言编写的开发人员。
 
-此规则检查下表中列出的运算符。
+此规则检查：
 
-|C#|Visual Basic|C++|备用名称|
-|---------|------------------|-----------|--------------------|
+- 类型中的隐式和显式强制转换运算符，通过检查名为 `To<typename>` 和 `From<typename>` 的方法。
+
+- 下表中列出的运算符：
+
+|C#|Visual Basic|C++|备用方法名称|
+|-|-|-|-|
 |+ （二进制）|+|+ （二进制）|添加|
 |+=|+=|+=|添加|
 |&|且|&|BitwiseAnd|
@@ -56,14 +60,14 @@ ms.locfileid: "71231091"
 |==|=|==|Equals|
 |^|Xor|^|Xor|
 |^=|Xor =|^=|Xor|
-|>|>|>|比较|
-|>=|>=|>=|比较|
+|>|>|>|CompareTo 或比较|
+|>=|>=|>=|CompareTo 或比较|
 |++|不可用|++|递增|
-|<>|!=|Equals|
+|!=|<>|!=|Equals|
 |<<|<<|<<|LeftShift|
 |<<=|<<=|<<=|LeftShift|
-|<|<|<|比较|
-|<=|<=|\<=|比较|
+|<|<|<|CompareTo 或比较|
+|<=|<=|\<=|CompareTo 或比较|
 |&&|不可用|&&|LogicalAnd|
 |&#124;&#124;|不可用|&#124;&#124;|LogicalOr|
 |!|不可用|!|LogicalNot|
@@ -71,25 +75,24 @@ ms.locfileid: "71231091"
 |%=|不可用|%=|Mod|
 |* （二进制）|*|*|相乘|
 |*=|不可用|*=|相乘|
-|~|非|~|OnesComplement|
+|~|Not|~|OnesComplement|
 |>>|>>|>>|RightShift|
 =|不可用|>>=|RightShift|
 |-（二进制）|-（二进制）|-（二进制）|减|
 |-=|不可用|-=|减|
-|true|IsTrue|不可用|IsTrue （属性）|
+|真|IsTrue|不可用|IsTrue （属性）|
 |-（一元）|不可用|-|抵消|
 |+ （一元）|不可用|+|加大|
-|false|IsFalse|False|IsTrue （属性）|
+|假|IsFalse|False|IsTrue （属性）|
 
-不能以所选语言重载 N/A = =。
+\* N/A 表示无法使用所选语言重载运算符。
 
-此规则还通过检查名为`SomeType` `ToSomeType`和`FromSomeType`的方法，检查类型（）中的隐式和显式强制转换运算符。
-
-在C#中，当重载二元运算符时，也会隐式重载相应的赋值运算符（如果有）。
+> [!NOTE]
+> 在C#中，当重载二元运算符时，也会隐式重载相应的赋值运算符（如果有）。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-若要修复与此规则的冲突，请为运算符实现替代方法;使用建议的备用名称将其命名为。
+若要修复与此规则的冲突，请为运算符实现替代方法。 使用建议的备用名称将其命名为。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
