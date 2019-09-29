@@ -1,7 +1,7 @@
 ---
 title: 更改日志（Visual Studio Tools for Unity、Windows）| Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2019
+ms.date: 09/18/2019
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: ea490b7e-fc0d-44b1-858a-a725ce20e396
@@ -10,16 +10,101 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: d9b89be226ca7cafbfe66a14cd606f50678a013a
-ms.sourcegitcommit: 044bb54cb4552c8f4651feb11d62e52726117e75
+ms.openlocfilehash: 713535bb11b4bd9cab4ef1b31507b96fe1c9897a
+ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661956"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185987"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>更改日志（Visual Studio Tools for Unity、Windows）
 
 Visual Studio Tools for Unity 更改日志。
+
+## <a name="4330"></a>4.3.3.0
+
+发布日期：2019 年 9 月 23 日
+
+### <a name="bug-fixes"></a>Bug 修复
+
+- **集成：**
+
+  - 修复了轻量级版本的错误和警告报告。
+
+## <a name="4320"></a>4.3.2.0
+
+发布日期：2019 年 9 月 16 日
+
+### <a name="new-features"></a>新增功能
+
+- **集成：**
+
+  - 通过添加特定于 Unity 的新诊断，深化了 Visual Studio 对 Unity 项目的理解。 还通过取消不适用于 Unity 项目的一般 C# 诊断，使 IDE 更智能。 例如，IDE 不会显示将检查器变量更改为 `readonly` 的快速修复，因此这会阻止你修改 Unity 编辑器中的变量。
+    - `UNT0001`：即使 Unity 消息为空，运行时也会调用它们，请勿声明它们，以避免 Unity 运行时进行不必要的处理。
+    - `UNT0002`：使用字符串相等比较标记的速度比内置的 CompareTag 方法慢。
+    - `UNT0003`：为了获得类型安全性，最好使用 GetComponent 的通用形式。
+    - `UNT0004`：更新消息依赖于帧速率，应使用 Time.deltaTime 而不是 Time.fixedDeltaTime。
+    - `UNT0005`：固定更新消息与帧速率无关，应使用 Time.fixedDeltaTime 而不是 Time.deltaTime。
+    - `UNT0006`：检测到此 Unity 消息的方法签名不正确。
+    - `UNT0007`：Unity 重写与 null 合并不兼容的 Unity 对象的 null 比较运算符。
+    - `UNT0008`：Unity 重写与 null 传播不兼容的 Unity 对象的 null 比较运算符。
+    - `UNT0009`：将 InitializeOnLoad 特性应用于类时，需要提供静态构造函数。 InitializeOnLoad 特性可确保在编辑器启动时调用该函数。
+    - `UNT0010`：应只使用 AddComponent() 创建 MonoBehaviours。 MonoBehaviour 是一个组件，需要附加到 GameObject。
+    - `UNT0011`：应只使用 CreateInstance() 创建 ScriptableObject。 ScriptableObject 需要由 Unity 引擎创建，才能处理 Unity 消息方法。
+    - `USP0001` 对于 `IDE0029`：Unity 对象不应使用 Null 合并。
+    - `USP0002` 对于 `IDE0031`：Unity 对象不应使用 Null 传播。
+    - `USP0003` 对于 `IDE0051`：Unity 消息由 Unity 运行时调用。
+    - `USP0004` 对于 `IDE0044`：不应将具有 SerializeField 特性的字段设为只读。
+
+## <a name="4310"></a>4.3.1.0
+
+发布日期：2019 年 9 月 4 日
+
+### <a name="new-features"></a>新增功能
+
+- **评估版：**
+
+  - 添加了对更佳类型显示的支持，即 `List<object>`，而不是 `List'1[[System.Object, <corlib...>]]`。
+
+  - 添加了对指针成员访问的支持，即 `p->data->member`。
+
+  - 添加了对数组初始值设定项中的隐式转换的支持，即 `new byte [] {1,2,3,4}`。
+
+## <a name="4300"></a>4.3.0.0
+
+发布日期：2019 年 8 月 13 日
+
+### <a name="new-features"></a>新增功能
+
+- **调试器：**
+
+  - 增加了对 MDS 协议 2.51 的支持。
+
+- **集成：**
+
+  - 改进了“附加到 Unity 实例”窗口的排序、搜索和刷新功能。 现在甚至为本地播放机显示 PID（通过查询系统上的侦听套接字以检索拥有的进程）。
+
+  - 增加了对 asmdef 文件的支持。
+
+### <a name="bug-fixes"></a>Bug 修复
+
+- **集成：**
+
+  - 修复了与 Unity 播放器通信时格式错误消息的处理。
+
+- **评估版：**
+
+  - 修复了表达式中命名空间的处理。
+
+  - 修复了 IntPtr 类型的检测。
+  
+  - 修复了出现异常的单步执行问题。
+
+  - 修复了伪标识符（如 $exception）计算问题。
+
+  - 防止在取消引用无效地址时出现故障。  
+
+  - 修复了已卸载的 appdomains 的问题。
 
 ## <a name="4201"></a>4.2.0.1
 
@@ -79,7 +164,7 @@ Visual Studio Tools for Unity 更改日志。
 
   - 使用 2019.x 更新了项目名称提取机制。
 
-  - 添加了对 UPE 中的 Unity 包的支持。 只有引用包（使用 ```Packages``` 文件夹中的 manifest.json）和本地包（嵌入在 ```Packages``` 文件夹中）是可见的。
+  - 添加了对 UPE 中的 Unity 包的支持。 只有引用包（使用 `Packages` 文件夹中的 manifest.json）和本地包（嵌入在 `Packages` 文件夹中）是可见的。
 
 - **项目生成：**
 
@@ -89,7 +174,7 @@ Visual Studio Tools for Unity 更改日志。
 
   - 添加了对别名限定名称的支持（目前仅支持全局命名空间）。 因此，表达式计算器现在正在使用 global::namespace.type 窗体接受类型。
 
-  - 添加了对 ```pointer[index]``` 窗体的支持，在语义上等同于指针取消引用 ```*(pointer+index)``` 窗体。
+  - 添加了对 `pointer[index]` 窗体的支持，在语义上等同于指针取消引用 `*(pointer+index)` 窗体。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
@@ -129,7 +214,7 @@ Visual Studio Tools for Unity 更改日志。
 
   - 增加了对安装过程中正确检测 Unity 进程，并允许安装引擎更好地处理文件锁的支持。
 
-  - 更新了 ScriptableObject API。
+  - 更新了 `ScriptableObject` API。
 
 ## <a name="4003"></a>4.0.0.3
 
@@ -139,13 +224,13 @@ Visual Studio Tools for Unity 更改日志。
 
 - **项目生成：**
 
-  - 公共字段和序列化字段将不再引发警告。 在创建这些消息的 Unity 项目中，我们自动禁止了 CS0649 和 IDE0051 编译器警告。
+  - 公共字段和序列化字段将不再引发警告。 在创建这些消息的 Unity 项目中，我们自动禁止了 `CS0649` 和 `IDE0051` 编译器警告。
 
 - **集成：**
 
   - 改进了显示 Unity 编辑器和播放器实例的用户体验（现可调整窗口大小、使用统一边距并显示大小调整手柄）。 添加了 Unity 编辑器的进程 ID 信息。
 
-  - 更新了 MonoBehaviour API。
+  - 更新了 `MonoBehaviour` API。
 
 - **评估版：**
 

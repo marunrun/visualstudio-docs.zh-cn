@@ -1,7 +1,7 @@
 ---
 title: 自动应用产品密钥
 description: 了解如何在部署 Visual Studio 时以编程方式应用产品密钥。
-ms.date: 04/10/2019
+ms.date: 09/24/2019
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: d79260be-6234-4fd3-89b5-a9756b4a93c1
@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: dabaf63e205d3e76432767743e323c90ed389846
-ms.sourcegitcommit: 673b9364fc9a96b027662dcb4cf5d61cab60ef11
+ms.openlocfilehash: 85fe84878dabc1270c60be24b6d6f644b284c045
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69891308"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253827"
 ---
 # <a name="automatically-apply-product-keys-when-deploying-visual-studio"></a>在部署 Visual Studio 时自动应用产品密钥
 
@@ -99,10 +99,10 @@ ms.locfileid: "69891308"
 | `PID_ACTION_FAILURE`      | 5    |
 | `PID_ACTION_NOUPGRADE`    | 6    |
 
-[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
-
 > [!NOTE]
-> 要对虚拟实例进行故障排除，请运行 C:\Program Files (x86)\Microsoft Visual Studio \<version\>\Common7\IDE\DDConfigCA.exe  。
+> 运行 Visual Studio 的虚拟实例时，请确保也虚拟化了本地 AppData 文件夹和注册表。 要对虚拟实例进行故障排除，请运行 C:\Program Files (x86)\Microsoft Visual Studio\ <version\> \Common7\IDE\DDConfigCA.exe  。  
+
+[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>请参阅
 

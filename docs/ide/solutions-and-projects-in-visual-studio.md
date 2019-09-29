@@ -20,33 +20,32 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 42a8dbc2fd9a6fc89b0be62271b048f8275a82b2
-ms.sourcegitcommit: ba5e072c9fedeff625a1332f22dcf3644d019f51
+ms.openlocfilehash: c63bc4b52e47c52096d0aa2d339b3c6dc96d7fe9
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66432210"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251887"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Visual Studio 中的解决方案和项目
 
-本文介绍了 Visual Studio 中的项目和解决方案的概念   。 它还简要介绍了如何创建新项目以及“解决方案资源管理器”工具窗口  。
+本页介绍了 Visual Studio 中的项目和解决方案的概念   。 它还简要介绍了“解决方案资源管理器”工具窗口以及如何创建新项目。
 
 > [!NOTE]
 > 本主题适用于 Visual Studio  Windows 版。 对于 Visual Studio for Mac，请参阅 [Visual Studio for Mac 中的项目和解决方案](/visualstudio/mac/projects-and-solutions)。
 
 ## <a name="projects"></a>项目
 
-在 Visual Studio 中创建应用、网站、插件等时，会从项目开始  。 在逻辑意义上，项目包含所有将编译到可执行文件、库或网站中的源代码文件、图标、图像、数据文件等。 项目还包含编译器设置以及程序将与之通信的各种服务或组件需要的其他配置文件。
+在 Visual Studio 中创建应用或网站时，请从项目开始  。 从逻辑上讲，项目包含所有编译为可执行文件、库或网站的文件。 这些文件可以包括源代码、图标、图像、数据文件等。 项目还包含编译器设置以及程序将与之通信的各种服务或组件需要的其他配置文件。
+
+### <a name="project-file"></a>项目文件
+
+Visual Studio 使用 [MSBuild](../msbuild/msbuild.md) 生成解决方案中的每个项目，每个项目都包含一个 MSBuild 项目文件。 文件扩展名反映项目的类型（例如，C# 项目 (.csproj)、Visual Basic 项目 (.vbproj) 或数据库项目 (.dbproj)）。 项目文件是一个 XML 文档，其中包含 MSBuild 生成项目所需的所有信息和说明，包括内容、平台要求、版本控制信息、Web 服务器或数据库服务器设置以及要执行的任务。
+
+项目文件基于 [MSBuild XML 架构](../msbuild/msbuild-project-file-schema-reference.md)。 要在 Visual Studio 中查看较新的 [SDK 样式项目文件](../msbuild/how-to-use-project-sdk.md)的内容，请在解决方案资源管理器中右键单击项目节点，然后选择“编辑 \<projectname\>”   。 要查看该样式的 .NET Framework 和其他项目的内容，请先卸载该项目（右键单击“解决方案资源管理器”中的项目节点并选择“卸载项目”   ）。 然后，右键单击该项目并选择“编辑 \<projectname\>”  。
 
 > [!NOTE]
 > 无需在 Visual Studio 中使用解决方案或项目来编辑、生成和调试代码。 只需在 Visual Studio 中打开包含源文件的文件夹并开始编辑。 有关详细信息，请参阅[在 Visual Studio 中开发代码而无需创建项目或解决方案](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)。
-
-项目在扩展名为 .vbproj、.csproj 或 .vcxproj 等的 XML 文件中进行定义    。 此文件包含虚拟文件夹层次结构以及项目中所有项的路径。 它还包含生成设置。
-
-> [!TIP]
-> 若要在 Visual Studio 中查看项目文件的内容，请先卸载项目，方法是在“解决方案资源管理器”中选择项目名称，然后在上下文菜单（或右键单击菜单）中选择“卸载项目”   。 然后，再次打开上下文菜单，依次选择“编辑”、“项目名称” **\<\>** 。
-
-在 Visual Studio 中，“解决方案资源管理器”使用项目文件来显示项目内容和设置  。 编译项目时，MSBuild 引擎会使用项目文件创建可执行文件。 还可以自定义项目以生成其他类型的输出。
 
 ## <a name="solutions"></a>解决方案
 

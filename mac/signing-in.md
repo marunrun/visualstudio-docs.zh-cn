@@ -3,14 +3,14 @@ title: 登录 Visual Studio for Mac
 description: 如何登录 Visual Studio for Mac
 author: asb3993
 ms.author: amburns
-ms.date: 08/08/2019
+ms.date: 09/18/2019
 ms.assetid: E4CFD03C-03AF-48CA-B409-6DB1CA45E991
-ms.openlocfilehash: a3911826314710f5b47fb248e452b4a10b56e2dd
-ms.sourcegitcommit: 6f3cf7a1bfc81a61f9a603461a1c34fd2221f100
+ms.openlocfilehash: 7b1e912583cf0ac63307bf1c75912059c39fe427
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957372"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71213661"
 ---
 # <a name="sign-in-to-visual-studio-for-mac"></a>登录 Visual Studio for Mac
 
@@ -29,17 +29,17 @@ ms.locfileid: "68957372"
 > [!TIP]
 > 登录到 Visual Studio for Mac 之前，请确保已连接到 Internet。 > 订阅只能联机激活。 如果未连接，请选择“稍后再执行此操作”，并在连接后通过菜单登录。
 
-要登录 Visual Studio for Mac，请执行以下步骤：
+要在第一次启动时登录 Visual Studio for Mac，请执行以下步骤：
 
 1. 单击登录窗口中的“使用 Microsoft 登录”按钮  ：
 
-    ![Visual Studio for Mac 中的“帐户”对话框](media/signing-in-image12.png)
+    ![Visual Studio for Mac 中的“帐户”对话框](media/ide-tour-2019-start-signin.png)
 
 2. 输入 Microsoft 凭据：
 
     ![“Microsoft 凭据”对话框](media/signing-in-image13.png)
 
-3. 登录后，可看到 Visual Studio 2019 for Mac 启动窗口。 可在此处打开或创建新项目：
+4. 登录后，你将看到一个选择键盘快捷方式的选项。 选择要使用的选项，然后继续操作  。 Visual Studio 2019 for Mac“启动”窗口将提醒你。 可在此处打开或创建新项目：
 
     ![登录成功](media/signing-in-image14.png)
 

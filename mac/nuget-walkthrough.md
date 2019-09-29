@@ -3,15 +3,15 @@ title: 在项目中包括 NuGet 包
 description: 本文档介绍如何使用 Visual Studio for Mac 在项目中包含 NuGet 包。 文档将介绍如何查找和下载包，同时介绍 IDE 集成功能。
 author: jmatthiesen
 ms.author: jomatthi
-ms.date: 09/17/2019
+ms.date: 09/18/2019
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
 ms.custom: conceptual
-ms.openlocfilehash: 22b2e07509403d8e19e3a3e920d45b064c2e51c0
-ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
+ms.openlocfilehash: 55b4691a7adb03d4ee8fd5e05e7bd9d7daa28f13
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71079539"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71213684"
 ---
 # <a name="install-and-manage-nuget-packages-in-visual-studio-for-mac"></a>在 Visual Studio for Mac 中安装和管理 NuGet 包
 
@@ -23,17 +23,17 @@ ms.locfileid: "71079539"
 
 ## <a name="find-and-install-a-package"></a>查找和安装包
 
-1. 对于 Visual Studio for Mac 中打开的项目，右键单击“Solution Pad”中的“依赖项”文件夹（如果使用 Xamarin 项目，则为“包”文件夹）并选择“添加包”     。
+1. 对于 Visual Studio for Mac 中打开的项目，右键单击“Solution Pad”中的“依赖项”文件夹（如果使用 Xamarin 项目，则为“包”文件夹）并选择“管理 NuGet 包...”     。
 
-    ![添加新的 NuGet 包上下文操作](media/nuget-walkthrough-PackagesMenu.png)
+    ![添加新的 NuGet 包上下文操作](media/nuget-walkthrough-packages-menu.png)
 
-2. 此操作将启动“添加包”窗口  。 确保对话框左上角的“源”下拉框设置为 `nuget.org`。
+2. 此时会启动“管理 NuGet 包”窗口  。 确保对话框左上角的“源”下拉框设置为 `nuget.org`。
 
-    ![列出 NuGet 包](media/nuget-walkthrough-AddPackages1.png)
+    ![列出 NuGet 包](media/nuget-walkthrough-add-packages1.png)
 
 3. 使用右上角的搜索框查找特定的包，如 `EntityFramework`。 找到希望使用的包后，请选择它并单击“添加包”按钮以开始安装  。
 
-    ![添加 Azure NuGet 包](media/nuget-walkthrough-AddPackages2.png)
+    ![添加 EntityFramework NuGet 包](media/nuget-walkthrough-add-packages2.png)
 
 4. 包下载完毕后会添加到项目中。 解决方案将根据正在编辑的项目类型而发生变化：
 
@@ -43,7 +43,7 @@ ms.locfileid: "71079539"
     
     **.NET Core 项目**
 
-    “NuGet”节点（“依赖项”>“NuGet”）显示每个已下载的 NuGet 包  。 可以更新该列表中的包，或从列表中删除包。
+    * “NuGet”节点（“依赖项”>“NuGet”）显示每个已下载的 NuGet 包  。 可以更新该列表中的包，或从列表中删除包。
 
 ## <a name="using-nuget-packages"></a>使用 NuGet 包
 
@@ -59,11 +59,11 @@ using Newtonsoft.Json;
 
 ## <a name="updating-packages"></a>更新包
 
-通过右键单击“依赖项”节点（对于 Xamarin 项目为“包”节点）可以一次性完成所有包更新，也可以在每个组件上单独进行包更新   。
+通过右键单击“依赖项”节点（对于 Xamarin 项目为“包”节点）可以一次性完成所有包更新，也可以在每个包上单独进行包更新   。 提供新版本的 NuGet 包时，更新图标会显示为![带有圆圈的向上箭头](media/nuget-walkthrough-update-icon.png)。
 
-右键单击“依赖项”以访问上下文菜单： 
+右键单击“依赖项”，以访问上下文菜单，然后选择“更新”以更新所有包   ：
 
-![包菜单](media/nuget-walkthrough-PackagesMenu.png)
+![包菜单](media/nuget-walkthrough-packages-menu-update.png)
 
 * **管理 NuGet 包** - 打开窗口，将更多包添加到项目。
 * 更新  - 检查每个包的源服务器并下载任何更新版本。

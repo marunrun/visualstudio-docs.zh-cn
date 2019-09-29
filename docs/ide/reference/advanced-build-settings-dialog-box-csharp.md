@@ -1,6 +1,6 @@
 ---
 title: “高级生成设置”对话框 (C#)
-ms.date: 06/20/2017
+ms.date: 08/05/2019
 ms.technology: vs-ide-compile
 ms.topic: reference
 f1_keywords:
@@ -13,16 +13,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 306cecc6bdc194e0022c056ac0a87e2ab063d20b
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: c4a1c902047b76ef3b29814d10cfc112ab9c7274
+ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461886"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186786"
 ---
 # <a name="advanced-build-settings-dialog-box-c"></a>“高级生成设置”对话框 (C#)
 
-使用“项目设计器”的“高级生成设置”对话框可指定项目的高级生成配置属性   。 此对话框仅适用于 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 项目。
+使用“项目设计器”的“高级生成设置”对话框可指定项目的高级生成配置属性   。 此对话框仅适用于 C# 项目。
 
 ## <a name="general"></a>常规
 
@@ -30,19 +30,19 @@ ms.locfileid: "68461886"
 
 **语言版本**
 
-指定要使用的语言版本。 每个版本中的功能集是不同的，因此，可使用此选项强制编译器仅允许已实现功能的子集，或仅启用与现有标准兼容的功能。 此设置具有以下选项：
+::: moniker range=">=vs-2019"
 
-- **default**
+指向 [/langversion（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/langversion-compiler-option)的链接，它提供有关如何根据项目的目标框架选择默认语言版本的信息。
 
-   面向当前版本。
+::: moniker-end
 
-- **ISO-1** 和 **ISO-2**
+::: moniker range="vs-2017"
 
-   分别面向 ISO-1 和 ISO-2 标准功能。
+指定要使用的语言版本。 每个版本中的功能集是不同的，因此，可使用此选项强制编译器仅允许已实现功能的子集，或仅启用与现有标准兼容的功能。
 
-- **C# [版本号]**
+默认值是 C# 7.0。
 
-   面向特定版本的 C#。 有关详细信息，请参阅 [/langversion（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/langversion-compiler-option)。
+::: moniker-end
 
 **内部编译器错误报告**
 
@@ -97,4 +97,4 @@ ms.locfileid: "68461886"
 ## <a name="see-also"></a>另请参阅
 
 - [C# 编译器选项](/dotnet/csharp/language-reference/compiler-options/index)
-- [“项目设计器”->“生成”页 (C#)](../../ide/reference/build-page-project-designer-csharp.md)
+- [项目设计器的“生成”页 (C#)](../../ide/reference/build-page-project-designer-csharp.md)

@@ -23,16 +23,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cf78e17d4d804c94392da045a90c98869319d185
-ms.sourcegitcommit: fe212f8960d7882a1b0fdae9e22f008996aacf3c
+ms.openlocfilehash: 02e8beae03dc2828d81b80813325300fe31b3cea
+ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222623"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71128161"
 ---
 # <a name="first-look-at-deployment-in-visual-studio"></a>先查看 Visual Studio 中的部署
 
-通过部署应用程序、服务或组件，你可以将其分发以便安装于其他计算机、设备、或服务器上，或云中。 你需要在 Visual Studio 中为所需的部署类型选择适当的方法。 （许多应用类型支持此处未描述的其他部署工具，如命令行部署或 NuGet。）
+通过部署应用程序、服务或组件，你可以将其分发以便安装于其他计算机、设备、或服务器上，或云中。 你需要在 Visual Studio 中为所需的部署类型选择适当的方法。 （许多应用类型支持此处未介绍的其他部署工具，如命令行部署。）
 
 有关分步部署说明，请参阅快速入门和教程。 有关部署选项的概述，请参阅[哪些发布选项适合我？](deploying-applications-services-and-components-resources.md#what-publishing-options-are-right-for-me)
 
@@ -44,7 +44,7 @@ ms.locfileid: "70222623"
 
     ![选择发布](../deployment/media/quickstart-publish.png)
 
-- Windows 桌面  可以使用 ClickOnce 部署将 Windows 桌面应用程序发布到文件夹。 用户随后只需一次单击即可安装应用程序。 有关详细信息，请参阅[使用 ClickOnce 部署桌面应用](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)（C# 和 Visual Basic）。 对于 C++/CLR，请参阅[使用 ClickOnce 部署本机应用](/cpp/windows/clickonce-deployment-for-visual-cpp-applications)，或者对于 C/C++，请参阅[使用安装项目部署本机应用](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project)。
+- Windows 桌面  可以使用 ClickOnce 部署将 Windows 桌面应用程序发布到文件夹。 用户随后只需一次单击即可安装应用程序。 有关详细信息，请参阅[使用 ClickOnce 部署桌面应用](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)（C# 和 Visual Basic）。 对于 C++/CLI，请参阅[使用 ClickOnce 部署本机应用](/cpp/windows/clickonce-deployment-for-visual-cpp-applications)；对于 C/C++，请参阅[使用安装项目部署本机应用](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project)。
 
 ## <a name="publish-to-azure"></a>发布到 Azure
 
@@ -83,7 +83,7 @@ ms.locfileid: "70222623"
 
     也可以采用多种不同的方式部署 ASP.NET 应用程序和服务。 有关详细信息，请参阅[部署 ASP.NET Web 应用程序和服务](http://www.asp.net/aspnet/overview/deployment)。
 
-- **Windows 桌面** 可以使用 ClickOnce 部署将 Windows 桌面应用程序发布到 Web 服务器或网络文件共享。 用户随后只需一次单击即可安装应用程序。 有关详细信息，请参阅[使用 ClickOnce 部署桌面应用](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)（C# 和 Visual Basic）。 对于 C++/CLR，请参阅[使用 ClickOnce 部署本机应用](/cpp/windows/clickonce-deployment-for-visual-cpp-applications)，或者对于 C/C++，请参阅[使用安装项目部署本机应用](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project)。
+- **Windows 桌面** 可以使用 ClickOnce 部署将 Windows 桌面应用程序发布到 Web 服务器或网络文件共享。 用户随后只需一次单击即可安装应用程序。 有关详细信息，请参阅[使用 ClickOnce 部署桌面应用](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)（C# 和 Visual Basic）。 对于 C++/CLI，请参阅[使用 ClickOnce 部署本机应用](/cpp/windows/clickonce-deployment-for-visual-cpp-applications)；对于 C/C++，请参阅[使用安装项目部署本机应用](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project)。
 
 ## <a name="publish-to-microsoft-store"></a>发布到 Microsoft Store
 
@@ -93,9 +93,9 @@ ms.locfileid: "70222623"
 
     ![创建应用程序包](../deployment/media/feature-tour-create-app-package.jpg)
 
-- **Windows 桌面**：从 Visual Studio 2017 15.4 版开始可以使用桌面桥部署到 Microsoft Store。 若要执行此操作，首先创建一个 Windows 应用程序打包项目。 有关详细信息，请参阅[为 Microsoft Store 打包桌面应用（桌面桥）](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)。
+- **Windows 桌面**：从 Visual Studio 2017 15.4 版开始，可以部署到 Microsoft Store。 若要执行此操作，首先创建一个 Windows 应用程序打包项目。 有关详细信息，请参阅[为 Microsoft Store 打包桌面应用](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)。
 
-    ![桌面桥](../deployment/media/feature-tour-desktop-bridge.png)
+    ![打包桌面应用](../deployment/media/feature-tour-desktop-bridge.png)
 
 ## <a name="deploy-net-packages-to-nugetorg"></a>将 .NET 包部署到 NuGet.org
 

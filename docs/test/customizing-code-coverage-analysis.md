@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: e78487628a7604245d59f44220b91be73249e7fb
-ms.sourcegitcommit: f42b5318c5c93e2b5ecff44f408fab8bcdfb193d
+ms.openlocfilehash: a22bdbc30fc222e26c01a10afdd7a666eebcb9f6
+ms.sourcegitcommit: a2df993dc5e11c5131dbfcba686f0028a589068f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976762"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71150112"
 ---
 # <a name="customize-code-coverage-analysis"></a>自定义代码覆盖率分析
 
@@ -63,7 +63,7 @@ ms.locfileid: "69976762"
 
 ::: moniker-end
 
-### <a name="specify-symbol-search-paths"></a>指定符号搜索路径
+## <a name="symbol-search-paths"></a>符号搜索路径
 
 代码覆盖率需要程序集的符号文件（.pdb 文件）  。 对于解决方案生成的程序集，符号文件通常与二进制文件一起出现，且代码覆盖率将自动工作。 在某些情况下，你可能需要在你的代码覆盖率分析中包含引用的程序集。 在这种情况下，.pdb 文件可能不会与二进制文件相邻，但可在 .runsettings 文件中指定符号搜索路径   。
 
@@ -77,9 +77,11 @@ ms.locfileid: "69976762"
 > [!NOTE]
 > 符号解析可能很耗时，尤其是在使用包含大量程序集的远程文件位置时。 因此，请考虑将 .pdb 文件复制到与二进制文件（.dll 和 .exe）相同的本地位置    。
 
-### <a name="exclude-and-include"></a>排除和包含
+## <a name="include-or-exclude-assemblies-and-members"></a>包括或排除程序集和成员
 
-你可以从代码覆盖率分析中排除指定的程序集。 例如:
+可在代码覆盖范围分析中包括或排除程序集或特定类型和成员。 如果“包括”部分为空或省略，则包括已加载并具有关联 PDB 文件的所有程序集  。 如果程序集或成员与“排除”部分中的子句匹配，则将其从代码覆盖范围中排除  。 “排除”部分优先于“包括”部分：如果程序集同时列于“包括”和“排除”中，则不包括在代码覆盖范围中     。
+
+例如，下面的 XML 通过指定程序集的名称将一个程序集排除：
 
 ```xml
 <ModulePaths>
@@ -90,7 +92,7 @@ ms.locfileid: "69976762"
 </ModulePaths>
 ```
 
-或者，你也可以指定应包含的程序集。 此方法的一个缺点是，将多个程序集添加到解决方案时，必须同时将它们添加到列表：
+下面的示例指定在代码覆盖范围中只应包括一个程序集：
 
 ```xml
 <ModulePaths>
@@ -101,11 +103,20 @@ ms.locfileid: "69976762"
 </ModulePaths>
 ```
 
-如果“Include”为空，那么代码覆盖率会处理已加载且能找到 .pdb 文件的所有程序集   。 代码覆盖率不包括与“Exclude”列表中子句匹配的项  。 先处理“Include”，再处理“Exclude”   。
+下表显示各种匹配程序集和成员的方式，使其在代码覆盖范围中包括或排除。
+
+| XML 元素 | 匹配项 |
+| - | - |
+| ModulePath | 匹配程序集名称或文件路径指定的程序集。 |
+| CompanyName | 按“公司”特性匹配程序集  。 |
+| PublicKeyToken | 按公钥标记匹配签名程序集。 |
+| 源 | 按在其中定义元素的源文件的路径名称匹配元素。 |
+| 特性 | 匹配具有指定特性的元素。 指定属性的完整名称，例如 `<Attribute>^System\.Diagnostics\.DebuggerHiddenAttribute$</Attribute>`。<br/><br/>如果排除 <xref:System.Runtime.CompilerServices.CompilerGeneratedAttribute> 属性，将从代码覆盖率分析中排除使用语言功能（如 `async`、`await`、`yield return` 和自动实现的属性）的代码。 要排除真正生成的代码，只需排除 <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> 属性。 |
+| 函数 | 按完全限定的名称匹配过程、函数或方法，包括参数列表。 还可以使用[正则表达式](#regular-expressions)来匹配部分名称。<br/><br/>示例：<br/><br/>`Fabrikam.Math.LocalMath.SquareRoot(double);` (C#)<br/><br/>`Fabrikam::Math::LocalMath::SquareRoot(double)` (C++) |
 
 ### <a name="regular-expressions"></a>正则表达式
 
-Include 和 exclude 节点使用正则表达式，它们与通配符不同。 有关详细信息，请参阅[在 Visual Studio 中使用正则表达式](../ide/using-regular-expressions-in-visual-studio.md)。 下面是一些示例：
+Include 和 exclude 节点使用正则表达式，它们与通配符不同。 所有匹配项都不区分大小写。 下面是一些示例：
 
 -  .\* 与任意字符组成的字符串匹配
 
@@ -119,9 +130,7 @@ Include 和 exclude 节点使用正则表达式，它们与通配符不同。 �
 
 - **$** 与字符串的结尾匹配
 
-所有匹配项都不区分大小写。
-
-例如:
+下面的 XML 演示如何使用正则表达式来包括和排除特定程序集：
 
 ```xml
 <ModulePaths>
@@ -138,48 +147,27 @@ Include 和 exclude 节点使用正则表达式，它们与通配符不同。 �
 </ModulePaths>
 ```
 
+下面的 XML 演示如何使用正则表达式来包括和排除特定函数：
+
+```xml
+<Functions>
+  <Include>
+    <!-- Include methods in the Fabrikam namespace: -->
+    <Function>^Fabrikam\..*</Function>
+    <!-- Include all methods named EqualTo: -->
+    <Function>.*\.EqualTo\(.*</Function>
+  </Include>
+  <Exclude>
+    <!-- Exclude methods in a class or namespace named UnitTest: -->
+    <Function>.*\.UnitTest\..*</Function>
+  </Exclude>
+</Functions>
+```
+
 > [!WARNING]
 > 如果正则表达式中存在错误（如存在未转义或不匹配的括号），则不会运行代码覆盖率分析。
 
-### <a name="other-ways-to-include-or-exclude-elements"></a>包括或排除元素的其他方法
-
-- **ModulePath** - 匹配程序集文件路径指定的程序集。
-
-- **CompanyName** - 按“公司”属性匹配程序集  。
-
-- **PublicKeyToken** - 按公钥标记匹配签名的程序集。
-
-- **Source** - 按在其中定义元素的源文件路径名称匹配元素。
-
-- **Attribute** - 匹配附加特定属性的元素。 指定属性的完整名称，例如 `<Attribute>^System\.Diagnostics\.DebuggerHiddenAttribute$</Attribute>`。
-
-  > [!TIP]
-  > 如果排除 <xref:System.Runtime.CompilerServices.CompilerGeneratedAttribute> 属性，将从代码覆盖率分析中排除使用语言功能（如 `async`、`await`、`yield return` 和自动实现的属性）的代码。 要排除真正生成的代码，只需排除 <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> 属性。
-
-- **Function** - 按完全限定名匹配过程、函数或方法。 若要匹配函数名称，则正则表达式必须与函数的完全限定名匹配，包括命名空间、类名、方法名称和参数列表。 例如:
-
-   ```csharp
-   Fabrikam.Math.LocalMath.SquareRoot(double);
-   ```
-
-   ```cpp
-   Fabrikam::Math::LocalMath::SquareRoot(double)
-   ```
-
-   ```xml
-   <Functions>
-     <Include>
-       <!-- Include methods in the Fabrikam namespace: -->
-       <Function>^Fabrikam\..*</Function>
-       <!-- Include all methods named EqualTo: -->
-       <Function>.*\.EqualTo\(.*</Function>
-     </Include>
-     <Exclude>
-       <!-- Exclude methods in a class or namespace named UnitTest: -->
-       <Function>.*\.UnitTest\..*</Function>
-     </Exclude>
-   </Functions>
-   ```
+有关正则表达式的详细信息，请参阅[在 Visual Studio 中使用正则表达式](../ide/using-regular-expressions-in-visual-studio.md)。
 
 ## <a name="sample-runsettings-file"></a>示例 .runsettings 文件
 
@@ -282,9 +270,14 @@ Included items must then not match any entries in the exclude list to remain inc
             </PublicKeyTokens>
 
             <!-- We recommend you do not change the following values: -->
+            
+            <!-- Set this to True to collect coverage information for functions marked with the "SecuritySafeCritical" attribute. Instead of writing directly into a memory location from such functions, code coverage inserts a probe that redirects to another function, which in turns writes into memory. -->
             <UseVerifiableInstrumentation>True</UseVerifiableInstrumentation>
+            <!-- When set to True, collects coverage information from child processes that are launched with low-level ACLs, for example, UWP apps. -->
             <AllowLowIntegrityProcesses>True</AllowLowIntegrityProcesses>
+            <!-- When set to True, collects coverage information from child processes that are launched by test or production code. -->
             <CollectFromChildProcesses>True</CollectFromChildProcesses>
+            <!-- When set to True, restarts the IIS process and collects coverage information from it. -->
             <CollectAspDotNet>False</CollectAspDotNet>
 
           </CodeCoverage>

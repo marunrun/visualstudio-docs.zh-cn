@@ -1,21 +1,21 @@
 ---
-title: Visual Studio + GitHub 捆绑包 | Microsoft Docs
+title: Visual Studio + GitHub 套餐 | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.date: 07/19/2019
 ms.topic: conceptual
-description: 了解新的 Visual Studio + GitHub 捆绑包
-ms.openlocfilehash: 1d7b55a32c796747d50fac8dae14d6af2f847c46
-ms.sourcegitcommit: 485881e6ba872c7b28a7b17ceaede845e5bea4fe
+description: 了解新的 Visual Studio + GitHub 套餐
+ms.openlocfilehash: 09168bffbdb8caf9e6366335f5d08f5bf81573f9
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68377649"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71238145"
 ---
 # <a name="introducing-visual-studio-subscriptions-with-github-enterprise"></a>带有 GitHub Enterprise 的 Visual Studio 订阅简介  
 
-与 Microsoft 签订了企业协议 (EA) 的客户有资格购买新的订阅捆绑包，该捆绑包将 Visual Studio 标准订阅和 GitHub Enterprise 结合在了一起。 这是 Visual Studio 订阅者获取 GitHub Enterprise 的一种简单而实惠的方式。 
+与 Microsoft 签订了企业协议 (EA) 的客户有资格购买新的订阅套餐，该套餐将 Visual Studio 标准订阅和 GitHub Enterprise 结合在了一起。 这是 Visual Studio 订阅者获取 GitHub Enterprise 的一种简单而实惠的方式。 
 
 - Visual Studio 和 GitHub 将开源代码、社区和最佳做法引入到你的 IDE 和工作流中，让你能够进行大规模创新。
 - 使用一流的开发工具和服务，它们向开发人员提供了一组超全面的资源来创建、部署和管理卓越的应用程序。 
@@ -28,11 +28,11 @@ ms.locfileid: "68377649"
 - 带有 GitHub Enterprise 的 Visual Studio Enterprise
 - 带有 GitHub Enterprise 的 Visual Studio Professional
 
-如果你的组织具有企业协议但尚未到续订日期，则你可购买“升级”SKU，以将 GitHub Enterprise 添加到现有 Visual Studio Enterprise 或 Visual Studio Professional 订阅。  之后可在你的协议续订时购买该捆绑包。
+如果你的组织具有企业协议但尚未到续订日期，则你可购买“升级”SKU，以将 GitHub Enterprise 添加到现有 Visual Studio Enterprise 或 Visual Studio Professional 订阅。 之后可在你的协议续订时购买该套餐。
 
 适合 Visual Studio Enterprise、Visual Studio Professional 和 GitHub Enterprise 的现有 SKU 仍将继续单独提供。 
 
-要详细了解相关权益、选项和定价，请访问 https://visualstudio.microsoft.com/subscriptions/visual-studio-github 。 
+要详细了解相关权益和选项，请访问 https://visualstudio.microsoft.com/subscriptions/visual-studio-github 。 
 
 ## <a name="getting-your-subscriptions"></a>获取你的订阅
 
@@ -40,7 +40,7 @@ ms.locfileid: "68377649"
 1. Visual Studio 订阅（Enterprise 或 Professional）
 2. GitHub Enterprise 订阅
 
-当你的组织购买订阅时，由管理员进行分配。  Visual Studio 订阅和 GitHub Enterprise 订阅会单独分配。  
+当你的组织购买订阅时，由管理员进行分配。 Visual Studio 订阅和 GitHub Enterprise 订阅会单独分配。  
 
 如果向你分配了 Visual Studio + GitHub 订阅，你将收到一封电子邮件，其中指出你的 Visual Studio 订阅管理员已向你分配了一个订阅。  此时，你将能在 https://my.visualstudio.com/subscriptions 处看到此订阅。  
 

@@ -3,7 +3,7 @@ title: 使用 Visual Studio 和 C# 创建通用 Windows 平台 (UWP) 应用
 description: 使用 XAML 和 C# 在 Visual Studio 中创建 UWP 应用
 titleSuffix: ''
 ms.custom: seodec18, get-started
-ms.date: 03/23/2019
+ms.date: 09/20/2019
 ms.technology: vs-ide-general
 ms.topic: tutorial
 ms.devlang: CSharp
@@ -14,12 +14,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: dab237eeb99f4d4d67652dba583bf9851b6d6175
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 1be0e656489c4bbff9064db329fb8b015b446297
+ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180465"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186832"
 ---
 # <a name="tutorial-create-your-first-universal-windows-platform-application-in-visual-studio-with-xaml-and-c35"></a>教程：在 Visual Studio 中使用 XAML 和 C&#35 创建第一个通用 Windows 平台应用程序；
 
@@ -62,6 +62,10 @@ ms.locfileid: "70180465"
 
    > [!NOTE]
    > 如果没有看到“空白应用(通用 Windows)”  项目模板，请单击“安装多个工具和功能”  链接。<br><br>![单击“安装多个工具和功能”链接](media/vs-2019/uwp-not-finding.png)<br><br>Visual Studio 安装程序启动。 选择“通用 Windows 平台开发”工作负载，然后选择“修改”   。<br><br>![Visual Studio 安装程序中的通用 Windows 平台开发工作负载](media/uwp-dev-workload.png)
+
+1. 为项目提供名称“HelloWorld”，然后选择“创建”   。
+
+   ![配置项目屏幕](media/vs-2019/uwp-configure-your-project.png)
 
 1. 接接受“新式通用 Windows 平台项目”对话框中的默认目标版本和最小版本设置受“新式通用 Windows 平台项目”  对话框中的默认目标版本  和最小版本  设置。
 
@@ -154,13 +158,15 @@ ms.locfileid: "70180465"
 
 ## <a name="run-the-application"></a>运行此应用程序
 
+
+::: moniker range="vs-2017"
 该生成、部署和启动“Hello World”UWP 应用了，以了解它的视听效果。 操作方法如下。
 
 1. 使用“播放”按钮（它包含文本“本地计算机”  ）在本地计算机上启动应用程序。
 
    ![单击“本地计算机”以启动并调试 UWP 应用](media/uwp-start-or-debug.png)
 
-   （或者，也可以从菜单栏中选择“调试”   > “启动调试”  或按 F5 启动应用。）
+   （或者，也可以从菜单栏中选择“调试”>“启动调试”或按 F5 启动应用。   ）
 
 1. 应用在初始屏幕消失后不久出现，请查看该应用。 此应用应类似于以下所示：
 
@@ -172,9 +178,36 @@ ms.locfileid: "70180465"
 
 1. 要关闭应用，请在工具栏中单击“停止调试”按钮  （或者，从菜单栏中选择“调试”   > “停止调试”  或按 Shift+F5。）
 
+::: moniker-end
+::: moniker range=">=vs-2019"
+该生成、部署和启动“Hello World”UWP 应用了，以了解它的视听效果。 操作方法如下。
+
+1. 使用“播放”按钮（它包含文本“本地计算机”  ）在本地计算机上启动应用程序。
+
+   ![单击“本地计算机”以启动并调试 UWP 应用](media/uwp-start-or-debug.png)
+
+   （或者，也可以从菜单栏中选择“调试”>“启动调试”或按 F5 启动应用。   ）
+
+1. 应用在初始屏幕消失后不久出现，请查看该应用。 此应用应类似于以下所示：
+
+   ![UWP“Hello World”应用](media/vs-2019/uwp-hello-world-app.png)
+
+1. 单击“Hello world”按钮  。
+
+   Windows 10 设备将直接说“Hello, World!”
+
+1. 要关闭应用，请在工具栏中单击“停止调试”按钮  （或者，从菜单栏中选择“调试”   > “停止调试”  或按 Shift+F5。）
+
+::: moniker-end
+
 ## <a name="next-steps"></a>后续步骤
 
 恭喜你完成本教程！ 我们希望你能了解一些与 UWP 和 Visual Studio IDE 有关的基础知识。 要更加深入地了解，请继续学习下面的教程：
 
 > [!div class="nextstepaction"]
 > [创建用户界面](/windows/uwp/design/basics/xaml-basics-ui)
+
+## <a name="see-also"></a>请参阅
+
+- [UWP 概述](/windows/uwp/get-started/universal-application-platform-guide)
+- [获取 UWP 应用示例](/windows/uwp/get-started/get-uwp-app-samples)
