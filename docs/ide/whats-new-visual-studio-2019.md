@@ -2,7 +2,7 @@
 title: Visual Studio 2019 中的新增功能
 titleSuffix: ''
 description: 了解 Visual Studio 2019 中的新增功能。
-ms.date: 07/23/2019
+ms.date: 09/24/2019
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,16 +15,16 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c9526a0cbf33278bbc3cab8120bb20ab0f5377a
-ms.sourcegitcommit: 9c07ae6fb18204ea080c8248994a683fa12e5c82
+ms.openlocfilehash: 5871e782ee84e49762d26a925380ad481e3623d1
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293720"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211331"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019 中的新增功能
 
-已针对[版本 16.2](/visualstudio/releases/2019/release-notes/) 进行更新 
+已针对[版本 16.3](/visualstudio/releases/2019/release-notes/) 进行更新 
 
 >[!div class="button"]
 >[下载 Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
@@ -107,6 +107,12 @@ C# 中有很多新颖有用的重构，更便于组织代码。 它们在灯泡�
 **16.2 中的新增功能**：更新了测试资源管理器，改进了大型测试集的处理，简化了筛选，增加了可发现的命令和选项卡式播放列表视图，并增加了允许微调所显示测试信息的可自定义列。
 
    ![在测试资源管理器中显示用户界面改进的屏幕截图](media/vs-2019/test-explorer-ui.png)
+
+### <a name="net-core"></a>.NET Core
+
+**16.3 中的新增功能**：提供了对 .NET Core 3.0 的支持。 跨平台、开放源代码且由 Microsoft 完全支持。 
+
+有关详细信息，请参阅[宣布推出 .NET Core 3.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/) 博客文章。
 
 ## <a name="collaborate"></a>协作
 

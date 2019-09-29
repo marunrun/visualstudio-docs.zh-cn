@@ -2,31 +2,31 @@
 title: 发布到文件夹
 ms.date: 04/02/2019
 helpviewer_keywords:
-- deployment, website
+- deployment, website, console, publish
 ms.assetid: e963fb4b-6d32-4d45-86bb-ef7e4d3028b0
 author: sayedihashimi
 ms.author: sayedha
 manager: unniravindranathan
 ms.prod: visual-studio-mac
-ms.openlocfilehash: e22176d2188df92f0956f88c912d48cb9c954dd9
-ms.sourcegitcommit: fe212f8960d7882a1b0fdae9e22f008996aacf3c
+ms.openlocfilehash: 165cfc38b8289946e0966083785defd18ca87d77
+ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222764"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095414"
 ---
-# <a name="publish-a-web-app-to-a-folder-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 将 Web 应用发布到文件夹
+# <a name="publish-to-a-folder-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 发布到文件夹
 
-可使用“发布”工具将 ASP.NET Core 应用发布到文件夹。
+可使用“发布”工具将 .NET Core 控制台或 ASP.NET Core 应用发布到文件夹。
 
 ## <a name="prerequisites"></a>系统必备
 
-- 已安装 [Visual Studio 2019 for Mac](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2019)，并启用了 ASP.NET Core。
-- ASP.NET Core 项目。 如果还没有项目，则可以[创建一个新的项目](https://docs.microsoft.com/visualstudio/mac/create-new-projects?view=vsmac-2019)。
+- 已安装 [Visual Studio 2019 for Mac](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2019)，并启用了 .NET Core。
+- .NET Core 控制台或 ASP.NET Core 项目。 如果还没有项目，则可以[创建一个新的项目](https://docs.microsoft.com/visualstudio/mac/create-new-projects?view=vsmac-2019)。
 
 ## <a name="publish-to-folder"></a>发布到文件夹
 
-使用 Visual Studio for Mac 通过“发布”工具可以将 ASP.NET Core 项目发布到文件夹。 发布到文件夹后可以将文件传输到 Web 服务器，以将它带到其他环境。 若要发布到文件夹，请执行以下步骤。
+使用 Visual Studio for Mac 通过“发布”工具可以将 .NET Core 项目发布到文件夹。 将文件发布到文件夹后，可以将它们传输到其他环境。 若要发布到文件夹，请执行以下步骤。
 
  1. 在 Solution Pad 中，右键单击项目，选择“发布”  。
 

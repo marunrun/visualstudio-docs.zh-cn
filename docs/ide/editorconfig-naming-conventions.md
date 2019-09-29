@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab118197c29ef950907839e8c04d6e49a9843f1a
-ms.sourcegitcommit: 6f3cf7a1bfc81a61f9a603461a1c34fd2221f100
+ms.openlocfilehash: 644c73dea58936773acde98ccc535dfc61979288
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957430"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251694"
 ---
 # <a name="net-naming-conventions-for-editorconfig"></a>EditorConfig 适用的 .NET 命名约定
 
@@ -50,9 +50,9 @@ ms.locfileid: "68957430"
 - 属性
 - 方法
 - Field — 字段
-- Event — 事件
+- 事件
 - 委托
-- 参数
+- 参数 (parameter)
 - type_parameter
 - 本地
 - local_function
@@ -155,7 +155,7 @@ ms.locfileid: "68957430"
 > [!NOTE]
 > 必须在命名样式中指定大写样式，否则会忽略命名样式。
 
-## <a name="severity"></a>严重性
+## <a name="severity"></a>Severity
 
 要描述命名规则冲突的严重性，请按照以下格式指定一个属性：
 
@@ -163,7 +163,7 @@ ms.locfileid: "68957430"
 
 下表显示允许的严重性值及其含义：
 
-严重性 | 效果
+Severity | 效果
 ------------ | -------------
 无 | 完全禁止显示规则。
 重构或无提示 | 如未遵循此样式，则不会向用户显示任何内容，但自动生成的代码会遵循此样式。

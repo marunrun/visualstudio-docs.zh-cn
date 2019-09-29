@@ -1,7 +1,7 @@
 ---
 title: 更改日志（Visual Studio Tools for Unity、Mac）| Microsoft Docs
 ms.custom: ''
-ms.date: 04/02/2019
+ms.date: 09/18/2019
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: 33a6ac54-d997-4308-b5a0-af7387460849
@@ -10,16 +10,84 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: ff2bcce9e041ff28393020c48563fe345c4fa076
-ms.sourcegitcommit: 044bb54cb4552c8f4651feb11d62e52726117e75
+ms.openlocfilehash: 897851055bd2eacc10edea9fdff2ab3ecd61b963
+ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661822"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185960"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-mac"></a>更改日志（Visual Studio Tools for Unity、Mac）
 
 Visual Studio Tools for Unity 更改日志。
+
+## <a name="2330"></a>2.3.3.0
+
+发布日期：2019 年 9 月 23 日
+
+### <a name="new-features"></a>新增功能
+
+- **集成：**
+
+  - 为 IDE0060 添加了新的抑制器，防止 IDE 显示针对删除未使用参数的快速修复。
+    - `USP0005` 对于 `IDE0060`：Unity 消息由 Unity 运行时调用。
+
+## <a name="2320"></a>2.3.2.0
+
+发布日期：2019 年 9 月 16 日
+
+### <a name="new-features"></a>新增功能
+
+- **集成：**
+
+  - 通过添加特定于 Unity 的新诊断，深化了 Visual Studio 对 Unity 项目的理解。 还通过取消不适用于 Unity 项目的一般 C# 诊断，使 IDE 更智能。 例如，IDE 不会显示将检查器变量更改为 `readonly` 的快速修复，因此这会阻止你修改 Unity 编辑器中的变量。
+    - `UNT0001`：即使 Unity 消息为空，运行时也会调用它们，请勿声明它们，以避免 Unity 运行时进行不必要的处理。
+    - `UNT0002`：使用字符串相等比较标记的速度比内置的 CompareTag 方法慢。
+    - `UNT0003`：为了获得类型安全性，最好使用 GetComponent 的通用形式。
+    - `UNT0004`：更新消息依赖于帧速率，应使用 Time.deltaTime 而不是 Time.fixedDeltaTime。
+    - `UNT0005`：固定更新消息与帧速率无关，应使用 Time.fixedDeltaTime 而不是 Time.deltaTime。
+    - `UNT0006`：检测到此 Unity 消息的方法签名不正确。
+    - `UNT0007`：Unity 重写与 null 合并不兼容的 Unity 对象的 null 比较运算符。
+    - `UNT0008`：Unity 重写与 null 传播不兼容的 Unity 对象的 null 比较运算符。
+    - `UNT0009`：将 InitializeOnLoad 特性应用于类时，需要提供静态构造函数。 InitializeOnLoad 特性可确保在编辑器启动时调用该函数。
+    - `UNT0010`：应只使用 AddComponent() 创建 MonoBehaviours。 MonoBehaviour 是一个组件，需要附加到 GameObject。
+    - `UNT0011`：应只使用 CreateInstance() 创建 ScriptableObject。 ScriptableObject 需要由 Unity 引擎创建，才能处理 Unity 消息方法。
+    - `USP0001` 对于 `IDE0029`：Unity 对象不应使用 Null 合并。
+    - `USP0002` 对于 `IDE0031`：Unity 对象不应使用 Null 传播。
+    - `USP0003` 对于 `IDE0051`：Unity 消息由 Unity 运行时调用。
+    - `USP0004` 对于 `IDE0044`：不应将具有 SerializeField 特性的字段设为只读。
+
+## <a name="2310"></a>2.3.1.0
+
+发布日期：2019 年 9 月 4 日
+
+### <a name="new-features"></a>新增功能
+
+- **评估版：**
+
+  - 添加了对更佳类型显示的支持，即 `List<object>`，而不是 `List'1[[System.Object, <corlib...>]]`。
+
+  - 添加了对指针成员访问的支持，即 `p->data->member`。
+
+  - 添加了对数组初始值设定项中的隐式转换的支持，即 `new byte [] {1,2,3,4}`。
+
+  - 添加了检查字节数组和字符串时对十六进制编辑器的支持。
+
+## <a name="2300"></a>2.3.0.0
+
+发布日期：2019 年 8 月 13 日
+
+### <a name="bug-fixes"></a>Bug 修复
+
+- **评估版：**
+
+  - 修复了出现异常的单步执行问题。
+
+  - 修复了伪标识符（如 $exception）计算问题。
+
+  - 防止在取消引用无效地址时出现故障。  
+
+  - 修复了已卸载的 appdomains 的问题。
 
 ## <a name="2200"></a>2.2.0.0
 
@@ -103,7 +171,7 @@ Visual Studio Tools for Unity 更改日志。
 
   - 禁用了 Unity 项目的完整生成，取而代之的是使用 IntelliSense 错误和警告。 事实上，Unity 使用表示 Unity 内部所执行操作的类库项目创建 Visual Studio 解决方案。 尽管如此，Visual Studio 中的生成结果从未由 Unity 使用或选取，因为其编译管道已关闭。 在 Visual Studio 中生成只是使用资源。 如果由于你具有工具或具有依赖于完整生成的安装程序而需要完整生成，则可以禁用此优化（设置/Tools for Unity/禁用项目的完整生成）。
   
-  - 添加了对 UPE 中的 Unity 包的支持。 只有引用包（使用 Packages 文件夹中的 manifest.json）和本地包（嵌入在 Packages 文件夹中）是可见的。
+  - 添加了对 UPE 中的 Unity 包的支持。 只有引用包（使用 `Packages` 文件夹中的 manifest.json）和本地包（嵌入在 `Packages` 文件夹中）是可见的。
 
 ## <a name="2021"></a>2.0.2.1
 
@@ -164,6 +232,12 @@ Visual Studio Tools for Unity 更改日志。
 - **项目生成：**
 
   - 处理解决方案文件时，请保留外部属性。
+  
+- **评估版：**
+
+  - 添加了对别名限定名称的支持（目前仅支持全局命名空间）。 因此，表达式计算器现在正在使用 global::namespace.type 窗体接受类型。
+
+  - 添加了对 `pointer[index]` 窗体的支持，在语义上等同于指针取消引用 `*(pointer+index)` 窗体。
 
 ## <a name="2004"></a>2.0.0.4
 
@@ -173,7 +247,7 @@ Visual Studio Tools for Unity 更改日志。
 
 - **集成：**
 
-  - 更新了 ScriptableObject API。
+  - 更新了 `ScriptableObject` API。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
@@ -189,7 +263,7 @@ Visual Studio Tools for Unity 更改日志。
 
 - **项目生成：**
 
-  - 公共字段和序列化字段将不再引发警告。 在创建这些消息的 Unity 项目中，我们自动禁止了 CS0649 和 IDE0051 编译器警告。
+  - 公共字段和序列化字段将不再引发警告。 在创建这些消息的 Unity 项目中，我们自动禁止了 `CS0649` 和 `IDE0051` 编译器警告。
 
 - **集成：**
 

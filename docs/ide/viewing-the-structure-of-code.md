@@ -1,7 +1,7 @@
 ---
 title: 类视图、调用层次结构、对象浏览器和代码定义窗口
-ms.date: 05/18/2018
-ms.topic: conceptual
+ms.date: 09/19/2019
+ms.topic: reference
 f1_keywords:
 - vs.documentoutline.window
 - vs.objectbrowser
@@ -25,12 +25,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 685915d963e506d86c81a6bc4f7fc62998a0f7d9
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 616f62110dbaa18d53b4ecc3cade7737f551e5f9
+ms.sourcegitcommit: a2df993dc5e11c5131dbfcba686f0028a589068f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66747712"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71150130"
 ---
 # <a name="view-the-structure-of-code-using-different-tool-windows"></a>使用不同的工具窗口查看代码结构
 
@@ -68,18 +68,17 @@ ms.locfileid: "66747712"
 |||
 |-|-|
 |**显示基类型**|显示基类型。|
-|**显示派生类型**|显示派生类型。|
+|**显示项目引用**|显示项目引用。|
 |**显示隐藏类型和成员**|隐藏类型和成员（不供客户端使用）以浅灰色文本显示。|
 |**显示公共成员**|显示公共成员。|
 |**显示保护成员**|显示受保护的成员。|
 |**显示私有成员**|显示私有成员。|
 |**显示其他成员**|显示其他类型的成员，包括内部（或 Visual Basic 中的 Friend）成员。|
 |**显示继承成员**|显示继承成员。|
-|**显示扩展方法**|显示扩展方法。|
 
 ### <a name="class-view-shortcut-menu"></a>“类视图”快捷菜单
 
-“类视图”中的快捷菜单可能包含以下命令，具体取决于所选项目的类型  ：
+“类视图”中的快捷菜单（或右键单击）可能包含以下命令，具体取决于所选项目的类型  ：
 
 |||
 |-|-|
@@ -157,7 +156,6 @@ ms.locfileid: "66747712"
 |**查看命名空间**|在左窗格中显示命名空间，而不是物理容器。 合并多个物理容器中存储的命名空间。|
 |**查看容器**|在左窗格中显示物理容器，而不是命名空间。 “查看命名空间”和“查看容器”是相互排斥的设置   。|
 |**显示基类型**|显示基类型。|
-|**显示派生类型**|显示派生类型。|
 |**显示隐藏类型和成员**|在浅灰色文本中显示隐藏类型和成员（不供客户端使用）。|
 |**显示公共成员**|显示公共成员。|
 |**显示保护成员**|显示受保护的成员。|
@@ -168,7 +166,7 @@ ms.locfileid: "66747712"
 
 ### <a name="object-browser-shortcut-menu-commands"></a>“对象浏览器”快捷菜单命令
 
-“对象浏览器”中的快捷菜单可能包含以下命令，具体取决于所选项的类型  ：
+“对象浏览器”中的快捷菜单（或右键单击）可能包含以下命令，具体取决于所选项的类型  ：
 
 |||
 |-|-|
@@ -197,7 +195,7 @@ ms.locfileid: "66747712"
 
 ### <a name="code-definition-shortcut-menu"></a>“代码定义”快捷菜单
 
-“代码定义”  窗口中的快捷菜单可能包含以下命令：
+“代码定义”窗口中的快捷菜单（或右键单击）可能包含以下命令  ：
 
 |||
 |-|-|

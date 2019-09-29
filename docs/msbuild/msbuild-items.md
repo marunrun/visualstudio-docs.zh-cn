@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e7000e8a95dbe115e5afe853c9dd55a797d23ec3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cebf824785fed39cfd824b9b90f9d19be5df8c64
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62842300"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251715"
 ---
 # <a name="msbuild-items"></a>MSBuild 项
 MSBuild 项是生成系统的输入，通常表示文件（文件在 `Include` 属性中指定）。 根据项元素名称，将其组成不同的项类型。 项类型是项的命名列表，可用作任务参数。 任务使用项值来执行生成过程。
@@ -33,7 +33,7 @@ MSBuild 项是生成系统的输入，通常表示文件（文件在 `Include` �
 </ItemGroup>
 ```
 
- 项“file2.cs”不会替换项“file1.cs”；相反，将在 `Compile` 项类型的值列表中追加该文件名。
+ 项“file2.cs”不会替换项“file1.cs”；相反，将在 `Compile` 项类型的值列表中追加该文件名   。
 
  以下 XML 通过在一个 `Include` 属性中声明两个文件，创建相同的项类型。 请注意，文件名由分号分隔。
 
@@ -82,7 +82,7 @@ MSBuild 项是生成系统的输入，通常表示文件（文件在 `Include` �
 有关通配符的详细信息，请参阅[如何：选择要生成的文件](../msbuild/how-to-select-the-files-to-build.md)。
 
 ## <a name="use-the-exclude-attribute"></a>使用 Exclude 属性
- 项元素可包含 `Exclude` 属性，该属性用于从项类型中排除特定项（文件）。 `Exclude` 属性通常与通配符一起使用。 例如，除 DoNotBuild.cs 文件外，以下 XML 将目录中的每个 .cs 文件都添加到 CSFile 项类型。
+ 项元素可包含 `Exclude` 属性，该属性用于从项类型中排除特定项（文件）。 `Exclude` 属性通常与通配符一起使用。 例如，除 DoNotBuild.cs 文件外，以下 XML 将目录中的每个 .cs 文件都添加到 CSFile 项类型   。
 
 ```xml
 <ItemGroup>
@@ -90,7 +90,7 @@ MSBuild 项是生成系统的输入，通常表示文件（文件在 `Include` �
 </ItemGroup>
 ```
 
- `Exclude` 属性只会影响同时包含这两种属性的项目文件中由 `Include` 属性添加的项。 以下示例不会排除在之前的项元素中添加的文件 Form1.cs。
+ `Exclude` 属性只会影响同时包含这两种属性的项目文件中由 `Include` 属性添加的项。 以下示例不会排除在之前的项元素中添加的文件 Form1.cs  。
 
 ```xml
 <Compile Include="*.cs" />
@@ -104,7 +104,7 @@ MSBuild 项是生成系统的输入，通常表示文件（文件在 `Include` �
 
  元数据是键值对集合，其在项目文件中声明为项元素的子元素。 子元素的名称是元数据的名称，且子元素的值是元数据的值。
 
- 元数据与包含它的项元素相关联。 例如，以下 XML 将具有值 `Fr` 的元数据 `Culture` 添加到 CSFile 项类型的 “one.cs”和“one.cs”项。
+ 元数据与包含它的项元素相关联。 例如，以下 XML 将具有值 `Fr` 的元数据 `Culture` 添加到 CSFile 项类型的 “one.cs”和“one.cs”项   。
 
 ```xml
 <ItemGroup>
@@ -139,7 +139,7 @@ MSBuild 项是生成系统的输入，通常表示文件（文件在 `Include` �
  向项类型添加项时，会向该项分配一些常见元数据。 例如，所有项都具有常见元数据 %(\<Filename>)，其值是项的文件名。 有关详细信息，请参阅[常见项元数据](../msbuild/msbuild-well-known-item-metadata.md)。
 
 ### <a name="BKMK_Transforming"></a>使用元数据转换项类型
- 通过使用元数据，可将项列表转换为新的项列表。 例如，可使用 `@(CppFiles -> '%(Filename).obj')` 表达式将含有表示 .cpp 文件的项的项类型 `CppFiles` 转换为相应的 .obj 文件列表。
+ 通过使用元数据，可将项列表转换为新的项列表。 例如，可使用 `@(CppFiles -> '%(Filename).obj')` 表达式将含有表示 .cpp 文件的项的项类型 `CppFiles` 转换为相应的 .obj 文件列表   。
 
  以下代码创建 `CultureResource` 项类型，其中含有所有带 `Culture` 元数据的 `EmbeddedResource` 项的副本。 `Culture` 元数据值将成为新的 `CultureResource.TargetDirectory` 元数据的值。
 
@@ -157,7 +157,7 @@ MSBuild 项是生成系统的输入，通常表示文件（文件在 `Include` �
  有关详细信息，请参阅[转换](../msbuild/msbuild-transforms.md)。
 
 ## <a name="item-definitions"></a>项定义
- 从.NET Framework 3.5 起，即可使用 [ItemDefinitionGroup 元素](../msbuild/itemdefinitiongroup-element-msbuild.md)向任何项类型添加默认元数据。 与已知元数据一样，默认元数据与指定项类型的所有项关联。 可在项定义中显式重写默认元数据。 例如，下面的 XML 向 `Compile` 项“one.cs”和“three.cs”提供值为“Monday”的 `BuildDay` 元数据。 代码会向“two.cs”项提供值为“Tuesday”的 `BuildDay` 元数据。
+ 从.NET Framework 3.5 起，即可使用 [ItemDefinitionGroup 元素](../msbuild/itemdefinitiongroup-element-msbuild.md)向任何项类型添加默认元数据。 与已知元数据一样，默认元数据与指定项类型的所有项关联。 可在项定义中显式重写默认元数据。 例如，下面的 XML 向 `Compile` 项“one.cs”和“three.cs”提供值为“Monday”的 `BuildDay` 元数据   。 代码会向“two.cs”项提供值为“Tuesday”的 `BuildDay` 元数据  。
 
 ```xml
 <ItemDefinitionGroup>
@@ -179,9 +179,9 @@ MSBuild 项是生成系统的输入，通常表示文件（文件在 `Include` �
  从 .NET Framework 3.5 起，`Target` 元素可能会包含 [ItemGroup](../msbuild/itemgroup-element-msbuild.md) 元素，后者可能会包含项元素。 为 `Target` 中 `ItemGroup` 内的项指定此部分中属性时，该属性有效。
 
 ### <a name="BKMK_RemoveAttribute"></a>删除属性
- `Remove` 属性从项类型中删除特定项（文件）。 虽然此属性是在 .NET Framework 3.5 中引入，但只能在低于 MSBuild 15.0 的版本中用于目标。
+ `Remove` 属性从项类型中删除特定项（文件）。 此属性是在 .NET Framework 3.5 中推出的（仅限内部目标）。 从 MSBuild 15.0 开始，同时支持内部和外部目标。
 
- 以下示例从 Compile 项类型删除所有 .config 文件。
+ 以下示例从 Compile 项类型删除所有 .config 文件  。
 
 ```xml
 <Target>

@@ -10,21 +10,21 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a18082810feeabe0dcb17796f65e3dbd744e2da2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 131cc61614c9f3e814cca5bcbc0ff6db303414cf
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62996715"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253760"
 ---
 # <a name="resolve-assemblies-at-design-time"></a>在设计时解析程序集
-当通过“添加引用”对话框的“.NET”选项卡添加对程序集的引用时，引用将指向一个中间引用程序集；所谓中间引用程序集，是指包含所有类型和签名信息但不一定包含任何代码的程序集。 “.NET”选项卡列出 .NET Framework 中运行时程序集对应的引用程序集。 此外，它还列出第三方使用的注册 AssemblyFoldersEx 文件夹中运行时程序集所对应的引用程序集。
+当通过“添加引用”  对话框的“.NET”  选项卡添加对程序集的引用时，引用将指向一个中间引用程序集；所谓中间引用程序集，是指包含所有类型和签名信息但不一定包含任何代码的程序集。 “.NET”  选项卡列出 .NET Framework 中运行时程序集对应的引用程序集。 此外，它还列出第三方使用的注册 AssemblyFoldersEx 文件夹中运行时程序集所对应的引用程序集。
 
 ## <a name="multi-targeting"></a>多目标
  通过 [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)]，可将在公共语言运行时 (CLR) 版本 2.0 或版本 4 上运行的多个 .NET Framework 版本作为目标。 这些版本包括包括 .NET Framework 2.0、3.0、3.5、4、4.5 和 4.5.1 版，以及 Silverlight 1.0、2.0 和 3.0 版。 如果发行了基于 CLR 版本 2.0 或版本 4 的 .NET Framework 新版本，则可使用目标包安装 Framework，且 Framework 会在 Visual Studio 中作为目标自动显示。
 
 ## <a name="how-type-resolution-works"></a>类型解析的工作原理
- 在运行时，CLR 通过查找 GAC、bin 目录和任何探测路径来解析程序集中的类型。 这由融合加载程序处理。 但是，融合加载程序如何知道其要查找的内容？ 这取决于设计时（生成应用程序时）创建的解决方案。
+ 在运行时，CLR 通过查找 GAC、bin 目录和任何探测路径来解析程序集中的类型  。 这由融合加载程序处理。 但是，融合加载程序如何知道其要查找的内容？ 这取决于设计时（生成应用程序时）创建的解决方案。
 
  在生成期间，编译器使用引用程序集解析应用程序类型。 在 .NET Framework 2.0、3.0、3.5、4、4.5 和 4.5.1 版中，引用程序集将随 .NET Framework 一起安装。
 

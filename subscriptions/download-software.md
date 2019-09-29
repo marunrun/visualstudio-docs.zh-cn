@@ -6,18 +6,18 @@ manager: lank
 ms.date: 07/18/2019
 ms.topic: conceptual
 description: 了解如何在 Visual Studio 订阅中查找和下载 Microsoft 软件标题
-ms.openlocfilehash: 1386add84ef86b5bf4c255d176b86d5fd9f294f6
-ms.sourcegitcommit: 485881e6ba872c7b28a7b17ceaede845e5bea4fe
+ms.openlocfilehash: 003d27e1c8344c6c4cb22a69e06efc94238bb622
+ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68377882"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095398"
 ---
 # <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>下载 Visual Studio 订阅中的软件标题
 根据你所订阅的 Visual Studio，你可以获得各种各样的 Microsoft 软件标题。  本文将概述如何查找和下载所需的软件，以便最大限度地利用订阅。 
 
 > [!NOTE]
-> [下载](https://my.visualstudio.com/downloads/featured)页仅显示订阅中包含的下载内容。  如果具有多个订阅或计划成员身份，即使目前正在查看其它订阅，也会显示你所具有的最高订阅的下载内容  。  例如，如果你的 Visual Studio Professional 订阅和 Visual Studio Test Professional 订阅都关联了同一个登录 ID，即使你目前正在查看 Dev Essentials 权益，也会显示 Professional 级别订阅中包含的下载内容。
+> [下载](https://my.visualstudio.com/downloads/featured)页仅显示订阅中包含的下载内容。  如果具有多个订阅或计划成员身份，即使目前正在查看其它订阅，也会显示你所具有的最高订阅的下载内容  。  例如，如果你的 Visual Studio Enterprise 订阅和 Visual Studio Professional 订阅都关联了同一个登录 ID，即使你目前正在查看 Professional 订阅权益，也会显示 Enterprise 订阅中包含的下载内容。
 
 ## <a name="how-do-i-find-downloads-in-the-subscriber-portal"></a>如何在订阅者门户中找到下载内容？
 访问[下载](https://my.visualstudio.com/downloads/featured?wt.mc_id=o~msft~docs)页时，可以看到按产品类型分组的热门下载。  可以在所示的热门下载中选择一项产品，也可以使用页面顶部的搜索栏搜索任何产品。

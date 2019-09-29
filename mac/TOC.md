@@ -1,5 +1,8 @@
 # [Visual Studio for Mac](index.yml)
-# [IDE 教程](ide-tour.md)
+
+# 入门
+## [IDE 教程](ide-tour.md)
+## [面向 Windows 用户的 Visual Studio for Mac](vsmac-for-windows-users.md)
 
 # 安装
 ## [安装 Visual Studio 2019 for Mac](installation.md)
@@ -94,11 +97,15 @@
 ### [更改日志](/visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac/?context=visualstudio/mac/context)
 ## [使用 Xamarin 的移动应用](/visualstudio/mac/xamarin)
 
-# [辅助功能](accessibility.md)
+# 可访问性
+## [概述](accessibility.md)
 ## [设置 IDE 辅助功能选项](accessibility-ide-options.md)
-## [使用 macOS 辅助工具](accessibility-macos.md)
+## macOS 辅助工具和功能
+### [使用 macOS 辅助工具](accessibility-macos.md)
 ### [使用键盘导航](accessibility-keyboard.md)
 ### [使用 VoiceOver](accessibility-voiceover.md)
+
+# [面向 Windows 用户的 Visual Studio for Mac](vsmac-for-windows-users.md)
 
 # 疑难解答
 ## [日志和异常](troubleshooting.md)

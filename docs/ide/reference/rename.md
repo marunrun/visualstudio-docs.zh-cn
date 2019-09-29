@@ -12,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2b18f5763d68487e7642f5632c05516d2f1bd9e2
-ms.sourcegitcommit: aeb1a1135dd789551e15aa5124099a5fe3f0f32b
+ms.openlocfilehash: d1b4ff448f04ff6f683fac06cbc0b31797edf587
+ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500943"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186596"
 ---
 # <a name="rename-a-code-symbol-refactoring"></a>“重命名代码符号”重构
 
@@ -70,6 +70,10 @@ ms.locfileid: "66500943"
 
 ## <a name="remarks"></a>备注
 
+- 从 Visual Studio 2019 版本 16.3 开始，在重命名与它所在的文件的名称相匹配的类型时，将出现一个复选框，你可以在其中同时重命名该文件。 重命名类、接口或枚举时，也会显示此选项。 具有多个定义的分部类型不支持此选项。
+
+   ![使用文件重命名动画 - C#](media/rename-with-file-animated-cs.gif)
+   
 - 如果所用名称已存在（这可能导致冲突），“重命名”框将发出警告  。
 
    ![重命名冲突](media/rename-conflict-cs.png)
