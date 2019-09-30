@@ -82,7 +82,7 @@ ms.locfileid: "71253146"
 
 1. 在 zip 文件中，导航到 lib/netstandard2.0 目录并复制 Newtonsoft.Json.dll 文件   。
 
-1. 在 Unity 项目的根资产文件夹中，创建一个名为“Plugins”的新文件夹   。 Plugins是 Unity 中的特殊文件夹名称 有关详细信息，请参阅 [Unity 文档](https://docs.unity3d.com/Manual/Plugins.html)。
+1. 在 Unity 项目的根 Assests 文件夹中，创建一个名为“Plugins”的新文件夹   。 Plugins是 Unity 中的特殊文件夹名称 有关详细信息，请参阅 [Unity 文档](https://docs.unity3d.com/Manual/Plugins.html)。
 
 1. 将 Newtonsoft.Json.dll 文件粘贴到 Unity 项目的“Plugins”目录中   。
 
