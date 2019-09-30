@@ -120,6 +120,6 @@ Visual Studio 订阅中的技术支持权益用于解决仍处于[支持生命�
 
 <sup>1</sup>  *包括：Imagine Premium、BizSpark。不包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 合作伙伴网络 (MPN)、FTE、MCT 软件和服务开发人员、Imagine Standard、最有价值专家 (MVP)、区域总监 (RD)、MCT 软件和服务。*
 
-<sup>2</sup>  *包括：Imagine 标准版  。
+<sup>2</sup>  包括：  Imagine 标准版。
 
 无法确定正在使用哪些订阅？  连接到 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)，查看分配给电子邮件地址的所有订阅。 如果没有看到所有订阅，则可能是有一个或多个订阅分配给了不同的电子邮件地址。  你需要使用其他电子邮件地址登录来查看那些订阅。

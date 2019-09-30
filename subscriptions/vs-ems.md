@@ -30,7 +30,7 @@ Visual Studio Enterprise 年度云订阅和标准订阅包含企业移动性 + �
 | MSDN 平台（标准）                                          | VL、零售                                              | 不可用                                              |  不可用          |
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure | 不可用 | 不可用 |
 
-<sup>1</sup>  *包括：限制转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 合作伙伴网络 (MPN)、FTE、MCT 软件和服务开发人员、BizSpark。不包括：最有价值专家 (MVP)、区域总监 (RD)、MCT 软件和服务、Imagine、Microsoft 合作伙伴网络 (Professional)。 
+<sup>1</sup>  *包括：限制转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 合作伙伴网络 (MPN)、FTE、MCT 软件和服务开发人员、BizSpark。不包括：最有价值专家 (MVP)、区域总监 (RD)、MCT 软件和服务、Imagine、Microsoft 合作伙伴网络 (Professional)。*
 
 <sup>2</sup> 不包括：Microsoft 合作伙伴网络 (Professional) 
 
