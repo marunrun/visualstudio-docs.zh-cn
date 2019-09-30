@@ -160,7 +160,7 @@ Visual Studio 2019 中会默认安装此服务。
 
 ### <a name="performance-gains"></a>性能提升
 
-我们采用了曾经排他的 C++ 数据断点，并将其用于 .NET Core 应用程序。
+我们采用了曾经 C++ 独有的数据断点，并将其用于 .NET Core 应用程序。
 
    ![显示 Visual Studio 2019 中的调试数据断点的动画](media/vs-2019/debug-data-breakpoints.gif)
 
