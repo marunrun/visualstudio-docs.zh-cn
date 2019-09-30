@@ -29,7 +29,7 @@ ms.locfileid: "68787655"
    > [!IMPORTANT]
    > 单击 Pluralsight 权益磁贴上的“获取代码”链接时，可能会收到以下消息：
    >
-   > **“请注意： 如果此前已通过 Visual Studio 订阅激活其他 Pluralsight 套餐，使用此代码可能无法创建新的 Pluralsight 帐户。” 
+   > “请注意：  如果此前已通过 Visual Studio 订阅激活其他 Pluralsight 套餐，使用此代码可能无法创建新的 Pluralsight 帐户。”
 
 2. 你将收到一条通知消息，指示已成功检索到优惠券代码。  单击“激活”  。
 
