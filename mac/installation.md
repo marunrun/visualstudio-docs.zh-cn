@@ -27,7 +27,7 @@ ms.locfileid: "71211454"
 
 要为 iOS 或 macOS 构建 Xamarin 应用，还需要：
 
-- Xcode 10.0 或更高版本。 通常建议使用稳定的最新版本。
+- Xcode 10.0 或更高版本。 通常建议使用最新的稳定版本。
 - 一个 Apple ID。 如果没有 Apple ID，请在 https://appleid.apple.com 新建一个。 需要 Apple ID 才可安装和登录 Xcode。
 
 ## <a name="installation-instructions"></a>安装说明
@@ -83,9 +83,9 @@ ms.locfileid: "71211454"
 > [!NOTE]
 > 如果在原始安装期间选择不安装平台或工具（方法为在第 #6 步中取消选择相关项），必须要在稍后添加组件时再次运行安装程序。
 
-## <a name="install-visual-studio-for-mac-behind-a-firewall-or-proxy-server"></a>在防火墙或代理服务器后安装 Visual Studio for Mac
+## <a name="install-visual-studio-for-mac-behind-a-firewall-or-proxy-server"></a>在有防火墙或代理服务器的情况下安装 Visual Studio for Mac
 
-若要在防火墙后面安装 Visual Studio for Mac，必须将某些终结点设置为可供访问，以允许下载所需的工具和更新软件。
+若要在有防火墙情况下安装 Visual Studio for Mac，必须将某些终结点设置为可供访问，以允许下载所需的工具和更新软件。
 
 配置网络以允许访问下列位置：
 
