@@ -82,7 +82,7 @@ ms.locfileid: "71253146"
 
 1. 在 zip 文件中，导航到 lib/netstandard2.0 目录并复制 Newtonsoft.Json.dll 文件   。
 
-1. 在 Unity 项目的根 Assests 文件夹中，创建一个名为“Plugins”的新文件夹   。 Plugins是 Unity 中的特殊文件夹名称 有关详细信息，请参阅 [Unity 文档](https://docs.unity3d.com/Manual/Plugins.html)。
+1. 在 Unity 项目的根 Assests 文件夹中，创建一个名为“Plugins”的新文件夹   。 Plugins是 Unity 中的特殊文件夹名称。 有关详细信息，请参阅 [Unity 文档](https://docs.unity3d.com/Manual/Plugins.html)。
 
 1. 将 Newtonsoft.Json.dll 文件粘贴到 Unity 项目的“Plugins”目录中   。
 
@@ -300,7 +300,7 @@ private void Start ()
 
 ### <a name="using-static"></a>Using static
 
-[Using static](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/using-static) 允许使用静态函数，且无需键入其类名。 通过 using static，在需要使用同一类中的多个静态函数时，可节省空间和时间：
+[Using static](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/using-static) 允许使用静态函数，且无需键入其类名。 虽然此步骤专用于此库，但在处理其他以类似方式使用反射的库时可能会遇到问题
 
 ```csharp
 // .NET 3.5

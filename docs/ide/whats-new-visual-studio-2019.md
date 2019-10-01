@@ -74,7 +74,7 @@ C# 中有很多新颖有用的重构，更便于组织代码。 它们在灯泡�
 * 发现难以察觉的代码问题
 * 将关注点集中到重要领域，从而专注代码评审
 
-在首次预览作为 Visual Studio 扩展的 IntelliCode 时，我们最初仅支持 C#。 现在，在 16.1 的新增功能中，我们添加了对 C# 和 XAML“in-the-box”的支持  。 （但是，对 C++ 和 TypeScript/JavaScript 的支持仍处于预览状态。）
+在 IntelliCode 以 Visual Studio 扩展形式首次预览时，我们最初仅支持 C#。 现在，在 16.1 的新增功能中，我们添加了对 C# 和 XAML“in-the-box”的支持  。 （但是，对 C++ 和 TypeScript/JavaScript 的支持仍处于预览状态。）
 
 如果你使用的是 C#，我们还添加了在你自己的代码上训练自定义模型的功能。
 
@@ -132,11 +132,11 @@ C# 中有很多新颖有用的重构，更便于组织代码。 它们在灯泡�
 
 启动窗口还包括用于打开项目或解决方案、打开本地文件夹，或创建新项目的选项。
 
-有关详细信息，请参阅博客文章 [Get to code:How we designed the new Visual Studio start window](https://devblogs.microsoft.com/visualstudio/get-to-code-how-we-designed-the-new-visual-studio-start-window/)（开始编码：如何设计新的 Visual Studio 开始窗口）。
+有关详细信息，请参阅博客文章 [Get to code:How we designed the new Visual Studio start window](https://devblogs.microsoft.com/visualstudio/get-to-code-how-we-designed-the-new-visual-studio-start-window/)（开始编码：如何设计新的 Visual Studio 启动窗口）。
 
 ### <a name="live-share"></a>Live Share
 
-[Visual Studio Live Share](https://visualstudio.microsoft.com/services/live-share/) 是一项开发者服务，可让你与团队成员共享代码库及其上下文，并直接从 Visual Studio 内获得即时双向协作。 利用“实时共享”，团队成员可以无缝且安全地读取、导航、编辑和调试已与他们共享的项目。
+[Visual Studio Live Share](https://visualstudio.microsoft.com/services/live-share/) 是一项开发者服务，可让你与团队成员共享代码库及其上下文，并直接从 Visual Studio 内获得即时双向协作。 借助“Live Share”，团队成员可以无缝且安全地读取、导航、编辑和调试已与他们共享的项目。
 
 Visual Studio 2019 中会默认安装此服务。
 
