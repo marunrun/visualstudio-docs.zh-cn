@@ -94,7 +94,7 @@ ms.locfileid: "71095369"
 
 ::: moniker range="vs-2019"
 
-有关使用 Visual Studio 2019 并排运行 Visual Studio 先前版本的问题，请参阅 [Visual Studio 2019 平台目标和兼容性](/visualstudio/releases/2019/compatibility/)页面。
+有关同时运行 Visual Studio 2019 和 Visual Studio 先前版本的问题，请参阅 [Visual Studio 2019 平台目标和兼容性](/visualstudio/releases/2019/compatibility/)页面。
 
 ::: moniker-end
 
@@ -134,7 +134,7 @@ ms.locfileid: "71095369"
 
 ## <a name="step-4---choose-workloads"></a>第 4 步 - 选择工作负载
 
-安装该安装程序后，可以通过选择所需的功能集或工作负载来使用该程序自定义安装。 操作方法如下。
+在安装程序完成安装后，可通过该程序，选择所需的功能集或工作负载，实现自定义安装。 操作方法如下。
 
  ::: moniker range="vs-2017"
 
@@ -167,9 +167,9 @@ ms.locfileid: "71095369"
 > [!TIP]
 > 在安装之后，可以随时安装最初未安装的工作负荷或组件。 如果已打开 Visual Studio，请转到“工具”   > “获取工具和功能...”  ，这会打开 Visual Studio 安装程序。 或者，从“开始”菜单打开“Visual Studio 安装程序”  。 在此处可以选择要安装的工作负载或组件。 然后，选择“修改”  。
 
-## <a name="step-5---choose-individual-components-optional"></a>第 5 步 - 选择各个组件（可选）
+## <a name="step-5---choose-individual-components-optional"></a>第 5 步 - 选择单个组件（可选）
 
-如果不想使用工作负载功能来自定义 Visual Studio 安装，或者想要添加比工作负载安装更多的组件，可通过从“各个组件”选项卡上安装或添加各个组件来完成此操作  。选择所需组件，然后按照提示进行操作。
+如果不想使用工作负载功能来自定义 Visual Studio 安装，或者想要添加比工作负载安装更多的组件，可通过从“单个组件”选项卡上安装或添加单个组件来完成此操作  。选择所需组件，然后按照提示进行操作。
 
 ::: moniker range="vs-2017"
 
