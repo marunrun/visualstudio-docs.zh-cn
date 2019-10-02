@@ -8,22 +8,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6307dcad45b7e2c8164aa892c4598d577e4ea464
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a409a4fe4ffe843df536e3c9e17a3a5a3b6560db
+ms.sourcegitcommit: 4d2620bee4688fb881e09a07ea4a264b99f0743e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62998964"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71322495"
 ---
 # <a name="waitstart"></a>WaitStart
-仅当探查器已初始化，或已超过指定秒数时，WaitStart 选项才使 VSPerfCmd.exe Start 子命令返回。 默认情况下，Start 命令将立即返回。 如果 Start 子命令在未初始化探查器的情况下就返回，则将返回一个错误。 如果未指定秒数，Start 命令将无限期等待。
+仅当探查器已初始化，或已超过指定秒数时，WaitStart 选项才使 VSPerfCmd.exe Start 子命令返回  。 默认情况下，Start 命令将立即返回。 如果 Start 子命令在未初始化探查器的情况下就返回，则将返回一个错误。 如果未指定秒数，Start 命令将无限期等待。
 
  WaitStart 选项在批处理文件中十分有用，可确保探查器已经过初始化。
 
 ## <a name="syntax"></a>语法
 
 ```cmd
-VSPerfCmd.exe /Start:Method /Output:FileName[Options] /StartWait[:Seconds]
+VSPerfCmd.exe /Start:Method /Output:FileName[Options] /WaitStart[:Seconds]
 ```
 
 #### <a name="parameters"></a>参数
@@ -32,7 +32,7 @@ VSPerfCmd.exe /Start:Method /Output:FileName[Options] /StartWait[:Seconds]
 ## <a name="required-options"></a>必需选项
  WaitStart 选项仅可与 Start 子命令一起使用。
 
- **输出：**`filename` 指定输出文件名。
+ **输出：** `filename` 指定输出文件名。
 
 ## <a name="remarks"></a>备注
 
