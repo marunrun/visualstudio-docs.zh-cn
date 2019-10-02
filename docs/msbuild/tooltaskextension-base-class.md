@@ -2,8 +2,6 @@
 title: ToolTaskExtension 基类 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- MSBuild.ToolTask.ToolCommandFailed
 dev_langs:
 - VB
 - CSharp
@@ -15,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 061d78a1e6415d6e7386fdc4de76aa1dd8ddd6d6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7734f852da997836cf2f42fd3f6b96e9decdf8dd
+ms.sourcegitcommit: 628eb202a1153ebfe69c668f966f821b98b34b34
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62938910"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71720561"
 ---
 # <a name="tooltaskextension-base-class"></a>ToolTaskExtension 基类
 很多任务继承自 <xref:Microsoft.Build.Tasks.ToolTaskExtension> 类，该类继承自 <xref:Microsoft.Build.Utilities.ToolTask> 类，后者本身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 此继承链向从它们派生的任务添加了几个参数。 本文档中列出了这些参数。
@@ -33,7 +31,7 @@ ms.locfileid: "62938910"
 | <xref:Microsoft.Build.Utilities.Task.BuildEngine%2A> | 可选 <xref:Microsoft.Build.Framework.IBuildEngine> 参数。<br /><br /> 指定可供任务使用的生成引擎接口。 生成引擎会自动设置此参数，以允许任务回调到其中。 |
 | <xref:Microsoft.Build.Utilities.Task.BuildEngine2%2A> | 可选 <xref:Microsoft.Build.Framework.IBuildEngine2> 参数。<br /><br /> 指定可供任务使用的生成引擎接口。 生成引擎会自动设置此参数，以允许任务回调到其中。<br /><br /> 这是一个便捷属性，使从此类继承的任务作者不必将值从 `IBuildEngine` 强制转换为 `IBuildEngine2`。 |
 | <xref:Microsoft.Build.Utilities.Task.BuildEngine3%2A> | 可选 <xref:Microsoft.Build.Framework.IBuildEngine3> 参数。<br /><br /> 指定主机使用的生成引擎接口。 |
-| <xref:Microsoft.Build.Utilities.ToolTask.EchoOff%2A> | 可选 `bool` 参数。<br /><br /> 设置为 `true` 时，此任务会将 /Q 传递到 cmd.exe 命令行，以便命令行不会复制到 stdout。 |
+| <xref:Microsoft.Build.Utilities.ToolTask.EchoOff%2A> | 可选 `bool` 参数。<br /><br /> 设置为 `true` 时，此任务会将 /Q  传递到 cmd.exe  命令行，以便命令行不会复制到 stdout。 |
 | <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A> | 可选的 `String` 数组参数。<br /><br /> 环境变量对的数组（使用等号分隔）。 这些变量会传递到生成的可执行文件以及（有选择地重写）常规环境块。 |
 | <xref:Microsoft.Build.Utilities.ToolTask.ExitCode%2A> | 可选 `Int32` 输出只读参数。<br /><br /> 指定执行的命令提供的退出代码。 如果任务记录了任何错误，但进程的退出代码为 0（成功），则这设置为 -1。 |
 | <xref:Microsoft.Build.Utilities.Task.HostObject%2A> | 可选 <xref:Microsoft.Build.Framework.ITaskHost> 参数。<br /><br /> 指定主机对象实例（可以为 null）。 如果主机 IDE 具有与此特定任务关联的主机对象，则生成引擎会设置此属性。 |
