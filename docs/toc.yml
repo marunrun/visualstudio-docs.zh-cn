@@ -708,7 +708,7 @@
         - name: 启动行为
           displayName: Start page window
           href: ide/customizing-the-start-page-for-visual-studio.md
-        - name: 查找和使用 Visual Studio 扩展
+        - name: 管理扩展
           href: ide/finding-and-using-visual-studio-extensions.md
           displayName: 'marketplace, gallery, vsix'
         - name: 管理外部工具
