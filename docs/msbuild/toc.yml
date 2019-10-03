@@ -22,7 +22,7 @@
               href: how-to-build-the-same-source-files-with-different-options.md
             - name: 属性函数
               href: property-functions.md
-        - name: Items
+        - name: 项
           items:
             - name: MSBuild 项
               href: msbuild-items.md
@@ -166,7 +166,7 @@
           href: customize-your-build.md
         - name: MSBuild 最佳做法
           href: msbuild-best-practices.md
-    - name: 日志记录
+    - name: Logging
       items:
         - name: MSBuild 中的日志记录 - 概述
           href: logging-in-msbuild.md
@@ -292,6 +292,8 @@
               href: taskextension-base-class.md
             - name: ToolTaskExtension 基类
               href: tooltaskextension-base-class.md
+            - name: 诊断任务失败
+              href: diagnosing-task-failures.md
             - name: AL（程序集链接器）任务
               href: al-assembly-linker-task.md
             - name: AspNetCompiler 任务
