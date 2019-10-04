@@ -6,6 +6,8 @@
       href: what-is-debugging.md
     - name: 调试技术和工具
       href: write-better-code-with-visual-studio.md
+    - name: 查找调试任务
+      href: find-your-debugging-task.md
 - name: 快速入门
   items:
     - name: 初探调试器
@@ -236,7 +238,7 @@
                   href: visual-cpp-custom-visualizer-compatibility.md
             - name: 自定义视图（托管）
               items:
-                - name: 创建托管对象的自定义视图
+                - name: 创建对象的自定义视图
                   href: create-custom-views-of-dot-managed-objects.md
                 - name: 告诉调试程序要显示什么
                   href: using-the-debuggerdisplay-attribute.md
@@ -352,9 +354,9 @@
               href: how-to-use-the-gpu-threads-window.md
         - name: 调试多个进程
           href: debug-multiple-processes.md
-        - name: 演练：使用“线程”窗口进行调试
+        - name: 使用“线程”窗口进行调试
           href: how-to-use-the-threads-window.md
-        - name: 演练：调试并行应用程序
+        - name: 调试并行应用程序
           href: walkthrough-debugging-a-parallel-application.md
         - name: 在调试时切换到另一个线程
           href: how-to-switch-to-another-thread-while-debugging.md
