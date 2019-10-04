@@ -31,6 +31,7 @@
 ##### [CAST 突出显示](vs-cast.md)
 ##### [CloudPilot](vs-cloudpilot.md)
 ##### [企业移动性和安全性](vs-ems.md)
+##### [Microsoft 365](vs-m365.md)
 ##### [Office 365 开发人员订阅](vs-office-dev.md)
 ##### [Office 365 订阅](vs-office365.md)
 ##### [Parasoft](vs-parasoft.md)
