@@ -23,33 +23,32 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 911f0423184f22919be016691b9333b2f62d1b61
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 36e875bc8101bc8a1b0eb1bec6671c76e3b0c9b2
+ms.sourcegitcommit: 8a3545329a58e446672181cfed2083f850e1ad14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744789"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71814300"
 ---
-# <a name="create-custom-views-of-objects-c-visual-basic-c"></a>创建自定义视图的对象 (C#，Visual Basic 中， C++)
+# <a name="create-custom-views-of-objects-c-visual-basic-f-ccli"></a>创建对象的自定义视图C#（、Visual Basic F#、 C++、/cli）
 可以在调试器变量窗口中自定义 Visual Studio 显示数据类型的方式。
-
-## <a name="native-code"></a>本机代码
-
-有关C++代码中，您可以添加自定义数据类型扩展使用 Natvis 框架，如中所述[创建自定义视图的C++在调试器中的对象](/visualstudio/debugger/create-custom-views-of-native-objects)。 有关C++/CLI 代码中，您还可以使用本文中的此处所述的特性。
 
 ## <a name="attributes"></a>特性
 
-在C#，Visual Basic 和C++(C++仅 /CLI 代码)，可以添加自定义数据使用的扩展<xref:System.Diagnostics.DebuggerTypeProxyAttribute>， <xref:System.Diagnostics.DebuggerDisplayAttribute>，和<xref:System.Diagnostics.DebuggerBrowsableAttribute>。
+在C#、Visual Basic、 F#和C++ （C++仅限/cli 代码）中，你可以使用 <xref:System.Diagnostics.DebuggerTypeProxyAttribute>、<xref:System.Diagnostics.DebuggerDisplayAttribute> 和 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 为自定义数据添加扩展。
 
-在.NET Framework 2.0 代码中，Visual Basic 不支持 DebuggerBrowsable 特性。 此项限制在 .NET Framework 较高版本中已经删除。
+在 .NET Framework 2.0 代码中，Visual Basic 不支持 DebuggerBrowsable 属性。 此项限制在 .NET Framework 较高版本中已经删除。
 
 ## <a name="visualizers"></a>可视化工具
 
 可以编写可视化工具来显示任何托管数据类型。 有关详细信息，请参阅[如何：编写可视化工具](/visualstudio/debugger/create-custom-visualizers-of-data)。
 
+> [!NOTE]
+> 对于C++代码，可以使用 Natvis 框架添加自定义数据类型扩展，如在[调试器中创建对象的C++自定义视图](/visualstudio/debugger/create-custom-views-of-native-objects)中所述。
+
 ## <a name="see-also"></a>请参阅
 
-- [让调试程序要演示如何使用 DebuggerDisplay 特性](../debugger/using-the-debuggerdisplay-attribute.md)
-- [让调试器在哪种类型来演示如何使用 DebuggerTypeProxy 特性](../debugger/using-debuggertypeproxy-attribute.md)
+- [使用 DebuggerDisplay 特性告诉调试器要显示的内容](../debugger/using-the-debuggerdisplay-attribute.md)
+- [使用 DebuggerTypeProxy 特性告诉调试器要显示的类型](../debugger/using-debuggertypeproxy-attribute.md)
 - [监视和快速监视窗口](../debugger/watch-and-quickwatch-windows.md)
 - [使用调试器显示特性增强调试](/dotnet/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes)
