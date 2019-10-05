@@ -13,21 +13,19 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a1b09b77eb051d32a3aabb929e9058786215cfb4
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 86aa308369ef93792126c7f8da5f59f94ef0c02a
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551047"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71975105"
 ---
 # <a name="how-to-configure-legacy-analysis-for-managed-code"></a>如何：为托管代码配置旧分析
 
-在 Visual Studio 中, 可以从要应用于托管代码项目的代码分析[规则集](../code-quality/rule-set-reference.md)列表中进行选择。 默认情况下**Microsoft 最少量建议规则**选择规则集，但可以应用不同的规则，如果所需的设置。 可以将规则集应用到解决方案中的一个或多个项目。
-
-有关如何为 ASP.NET web 应用程序配置规则集的信息, 请参阅[如何:为 ASP.NET web 应用程序](../code-quality/how-to-configure-code-analysis-for-an-aspnet-web-application.md)配置代码分析。
+在 Visual Studio 中，可以从要应用于托管代码项目的代码分析[规则集](../code-quality/rule-set-reference.md)列表中进行选择。 默认情况下**Microsoft 最少量建议规则**选择规则集，但可以应用不同的规则，如果所需的设置。 可以将规则集应用到解决方案中的一个或多个项目。
 
 > [!NOTE]
-> 本文适用于传统分析, 不适用于[基于 .NET Compiler Platform 的代码分析器](use-roslyn-analyzers.md), 不在生成后运行代码分析。
+> 本文适用于传统分析，不适用于[基于 .NET Compiler Platform 的代码分析器](use-roslyn-analyzers.md)。
 
 ## <a name="configure-a-rule-set-for-a-net-framework-project"></a>为 .NET Framework 项目配置规则集
 
@@ -37,20 +35,40 @@ ms.locfileid: "69551047"
 
    - 右键单击该项目中的**解决方案资源管理器**，然后选择**属性**，然后选择**代码分析**选项卡。
 
-1. 在中**配置**并**平台**列表中，选择生成配置和目标平台。
+2. 在中**配置**并**平台**列表中，选择生成配置和目标平台。
 
-1. 若要运行代码分析，每次使用所选的配置生成项目，选择**生成时启用代码分析**复选框。 您可以还手动运行代码分析通过选择**分析** > **运行代码分析** > **上运行代码分析\<项目名称 >** .
+::: moniker range="vs-2017"
 
-1. 默认情况下，代码分析不报告由外部工具自动生成的代码所产生的警告。 若要查看生成的代码，请清除**禁止显示生成代码的结果**复选框。
+3. 若要在每次使用所选配置生成项目时运行代码分析，请选择 "**生成时启用代码分析**"。 您可以还手动运行代码分析通过选择**分析** > **运行代码分析** > **上运行代码分析\<项目名称 >** .
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+3. 若要在每次使用所选配置生成项目时运行代码分析，请在**二进制分析器**部分中选择 "**生成时运行**"。 您可以还手动运行代码分析通过选择**分析** > **运行代码分析** > **上运行代码分析\<项目名称 >** .
+
+::: moniker-end
+
+4. 若要查看生成的代码，请清除**禁止显示生成代码的结果**复选框。
 
     > [!NOTE]
-    > 当生成的代码所产生的代码分析错误和警告出现在窗体和模板中时，此选项不会取消显示它们。 您可以查看和维护窗体或模板的源代码，而无需再对其覆盖。
+    > 当生成的代码所产生的代码分析错误和警告出现在窗体和模板中时，此选项不会取消显示它们。 您可以查看和维护窗体或模板的源代码，而不会被覆盖。
 
-1. 在中**运行此规则集**列表中，执行下列操作之一：
+::: moniker range="vs-2017"
+
+5. 在中**运行此规则集**列表中，执行下列操作之一：
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+5. 在 "**活动规则**" 列表中，执行下列操作之一：
+
+::: moniker-end
 
     - 选择你想要使用的规则集。
 
-    - 选择 **\<浏览...>** 若要查找的现有的自定义规则集不在列表中。
+    - 选择 **\<Browse >** 查找不在列表中的现有自定义规则集。
 
     - 定义[自定义规则集](../code-quality/how-to-create-a-custom-rule-set.md)。
 
@@ -77,4 +95,3 @@ ms.locfileid: "69551047"
 ## <a name="see-also"></a>请参阅
 
 - [代码分析规则集参考](../code-quality/rule-set-reference.md)
-- [如何：为 ASP.NET web 应用程序配置代码分析](../code-quality/how-to-configure-code-analysis-for-an-aspnet-web-application.md)

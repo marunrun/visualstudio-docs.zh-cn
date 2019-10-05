@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 182c9e37764a247ec24b4b477975ccb7b8811c4b
-ms.sourcegitcommit: 4d2620bee4688fb881e09a07ea4a264b99f0743e
+ms.openlocfilehash: e1d26886eecf09ff8195b7a38338fa62e7f1d0bf
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71322550"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974950"
 ---
 # <a name="inspect-xaml-properties-while-debugging"></a>在调试时检查 XAML 属性
 通过“实时可视化树”和“实时属性资源管理器”，可以获取正在运行 XAML 代码的实时视图。 这些工具为你提供了正在运行的 XAML 应用程序的 UI 元素的树视图，并显示你选择的任何 UI 元素的运行时属性。
@@ -71,20 +71,22 @@ private void button_Click(object sender, RoutedEventArgs e)
 
 生成项目并启动调试。 （生成配置必须为“调试”，而不是“发布”。 有关生成配置的详细信息，请参阅[了解生成配置](../ide/understanding-build-configurations.md)。）
 
-当窗口出现时，单击“添加项”按钮两次。 将显示如下所示的内容：
+当窗口出现时，应会看到应用内工具栏出现在正在运行的应用程序中。 
 
-![应用的主窗口](../debugger/media/livevisualtree-app.png "LiveVIsualTree-应用")
+![应用](../debugger/media/livevisualtree-app.png "LiveVIsualTree")应用程序的主窗口
 
-现在打开“实时可视化树”窗口（“调试”>“Windows”>“实时可视化树”，或沿 IDE 左侧查找它）。 将其拖离其停靠位置以便我们可以并排查看此窗口和“实时属性”窗口。 在“实时可视化树”窗口中，展开 ContentPresenter 节点。 它应包含按钮和列表框的节点。 展开该列表框（然后展开 ScrollContentPresenter 和 ItemsPresenter）以查找列表框各项。 该窗口应如下所示：
+现在，单击 "**添加项**" 按钮几次，以将新项添加到列表中。
+
+接下来，单击 "应用程序中" 工具栏（或转到 "**调试" > Windows > "实时可视化树**"）的左上方按钮，打开 "**实时可视化树**" 窗口。 打开后，将其拖离其停靠位置，以便我们可以并排查看此窗口和 "**实时属性**" 窗口。 在“实时可视化树”窗口中，展开 ContentPresenter 节点。 它应包含按钮和列表框的节点。 展开该列表框（然后展开 ScrollContentPresenter 和 ItemsPresenter）以查找列表框各项。 该窗口应如下所示：
 
 ![实时可视化树中的 listboxitem](../debugger/media/livevisualtree-listboxitems.png "LiveVisualTree-listboxitem")
 
 返回到应用程序窗口并再添加几个项。 “实时可视化树”中应会显示更多列表框项。
 
-现在让我们看看其中一个列表框项的属性。 选择“实时可视化树”中的第一个列表框项并单击工具栏上的“显示属性”图标。 应显示“实时属性资源管理器”。 请注意，"**内容**" 字段是 "Item1"，**背景** > **色**字段 **#FFFFFFE0**。 返回到“实时可视化树”，然后选择第二个列表框项。 "**实时属性资源管理器**" 应显示 "**内容**" 字段是 "Item2"，并且 **#FFD3D3D3** **背景** > **色**字段。
+现在让我们看看其中一个列表框项的属性。 选择“实时可视化树”中的第一个列表框项并单击工具栏上的“显示属性”图标。 应显示“实时属性资源管理器”。 请注意，"**内容**" 字段是 "Item1"，而 "**后台**@no__t 2"**颜色**字段 **#FFFFFFE0**。 返回到“实时可视化树”，然后选择第二个列表框项。 "**实时属性资源管理器**" 应显示 "**内容**" 字段是 "Item2"，并且 **#FFD3D3D3** **背景**@no__t "**颜色**" 字段。
 
 > [!NOTE]
-> **实时属性资源管理器**中的属性周围的黄色边框表示属性值是通过绑定（如`Color = {BindingExpression}`）设置的。 绿色边框表示使用资源（如`Color = {StaticResource MyBrush}`）设置该值。
+> **实时属性资源管理器**中的属性周围的黄色边框表示通过绑定设置属性值，如 `Color = {BindingExpression}`。 绿色边框表示使用资源（例如 `Color = {StaticResource MyBrush}`）设置该值。
 
 XAML 的实际结构具有大量你可能并不直接感兴趣的元素，并且如果不熟悉代码，可能很难导航树以查找正在寻找的内容。 因此“实时可视化树”有几种方法可使用应用程序的 UI 来帮助找到想要检查的元素。
 
@@ -92,7 +94,7 @@ XAML 的实际结构具有大量你可能并不直接感兴趣的元素，并且
 
 在运行的应用程序中显示布局装饰器。 当选择“启用选择”按钮右侧紧靠的按钮时，可以启用此模式。 当“显示布局装饰器”打开时，它会导致应用程序窗口沿所选对象的边界显示水平线和垂直线，以便看到它与什么对齐，以及显示边距的矩形。 例如，打开“启用选择”和“显示布局”这两项，然后选择应用程序中的“添加项”文本块。 应看到“实时可视化树”中的文本块节点和“实时属性查看器”中的文本块属性，以及文本块边界上的水平线和垂直线。
 
-![DisplayLayout 中的 displaylayout](../debugger/media/livevisualtreelivepropertyviewer-displaylayout.png "LiveVisualTreeLivePropertyViewer-DisplayLayout")
+![DisplayLayout LiveVisualTreeLivePropertyViewer 中](../debugger/media/livevisualtreelivepropertyviewer-displaylayout.png "的 displaylayout-DisplayLayout")
 
 预览所选内容。 你可以通过选择“实时可视化树”工具栏上从左侧起第三个按钮来启用此模式。 如果你有访问该应用程序的源代码的权限，则此模式将在声明元素处显示 XAML。 选择“启用选择”和“预览所选内容”，然后在测试应用程序中选择该按钮。 MainWindow.xaml 文件在 Visual Studio 中打开并且光标放置在定义按钮的行上。
 

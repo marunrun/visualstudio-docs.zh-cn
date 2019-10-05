@@ -10,18 +10,18 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: da1567dd088ecc060f031e59827ff33024e9e955
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: 313b578743fd734da3354989a8cee16022779242
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71185950"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974694"
 ---
 # <a name="rule-sets-for-analyzer-packages"></a>分析器包规则集
 
 某些 NuGet 分析器包附带了预定义规则集。 例如， [CodeAnalysis. FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) NuGet 分析器包附带的规则集（从版本2.6.2 开始）根据规则的类别（如安全性、命名或性能）启用或禁用规则。 使用规则集可以轻松地快速查看与特定规则类别相关的规则冲突。
 
-规则集是用于标识目标问题和特定条件的代码分析规则的分组。 规则集使你可以启用或禁用规则并设置各个规则冲突的严重性。 FxCop 分析器 NuGet 包包含以下规则类别的预定义规则集:
+规则集是用于标识目标问题和特定条件的代码分析规则的分组。 规则集使你可以启用或禁用规则并设置各个规则冲突的严重性。 FxCop 分析器 NuGet 包包含以下规则类别的预定义规则集：
 
 - 设计
 - 文档
@@ -36,7 +36,7 @@ ms.locfileid: "71185950"
 
 ## <a name="use-analyzer-package-rule-sets"></a>使用分析器包规则集
 
-[安装 NuGet 分析器包](install-roslyn-analyzers.md)后，请*在其 "规则集*" 目录中找到预定义的规则集。 例如，如果你`Microsoft.CodeAnalysis.FxCopAnalyzers`引用了分析器包，则可以在% USERPROFILE% *\\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers\\\<版本中找到其规则集目录\rulesets\>* 。 在此处复制一个或多个规则集，并将其粘贴到包含你的 Visual Studio 项目或直接**解决方案资源管理器**的目录中。
+[安装 NuGet 分析器包](install-roslyn-analyzers.md)后，请*在其 "规则集*" 目录中找到预定义的规则集。 例如，如果引用了 `Microsoft.CodeAnalysis.FxCopAnalyzers` analyzer 包，则可以在 *% USERPROFILE% \\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers @ no__t-4 @ no__t-5version @ no__t-6\rulesets*中找到其*规则集*目录。 在此处复制一个或多个规则集，并将其粘贴到包含你的 Visual Studio 项目或直接**解决方案资源管理器**的目录中。
 
 你还可以[自定义预定义的规则集](how-to-create-a-custom-rule-set.md)，并将其设置为首选项。 例如，你可以更改一个或多个规则的严重性，使冲突在**错误列表**中显示为错误或警告。
 
@@ -46,7 +46,7 @@ ms.locfileid: "71185950"
 
 ### <a name="net-core"></a>.NET Core
 
-若要将规则设置为在 .NET Core 或 .NET Standard 项目中进行分析，请手动将**CodeAnalysisRuleSet**属性添加到项目文件。 例如，以下代码片段设置`HelloWorld.ruleset`为活动规则集。
+若要将规则设置为在 .NET Core 或 .NET Standard 项目中进行分析，请手动将**CodeAnalysisRuleSet**属性添加到项目文件。 例如，以下代码片段将 `HelloWorld.ruleset` 设置为活动规则集。
 
 ```xml
 <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -57,11 +57,29 @@ ms.locfileid: "71185950"
 
 ### <a name="net-framework"></a>.NET Framework
 
-若要将规则设置为 .NET Framework 项目中的 "分析"，请在**解决方案资源管理器**中右键单击该项目，然后选择 "**属性**"。 在项目属性页中，选择 "**代码分析**" 选项卡。在 "**运行此规则集**" 下，选择 "**浏览**"，然后选择已复制到项目目录的所需规则集。 现在，你只会看到在所选规则集中启用的那些规则的规则冲突。
+若要将规则设置为 .NET Framework 项目中的分析的活动规则集：
+
+- 右键单击 "**解决方案资源管理器**中的项目，然后选择"**属性**"。
+
+- 在项目属性页中，选择 "**代码分析**" 选项卡。
+
+::: moniker range="vs-2017"
+
+- 在 "**运行此规则集**" 下，选择 "**浏览**"，然后选择已复制到项目目录的所需规则集。
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+- 在 "**活动规则**" 下，选择 "**浏览**"，然后选择已复制到项目目录的所需规则集。
+
+::: moniker-end
+
+   现在，你只会看到在所选规则集中启用的那些规则的规则冲突。
 
 ## <a name="available-rule-sets"></a>可用规则集
 
-预定义的分析器规则集包括三个规则集，这些规则会影响&mdash;包中的所有规则，其中所有规则都允许所有规则，一个用于禁用所有规则，另一个用于接受每个规则的默认严重性和启用设置：
+预定义的分析器规则集包括三个规则集，这些规则会影响 package @ no__t-0one 中的所有规则，这些规则可启用所有规则，一个用于禁用所有规则，另一个用于接受每个规则的默认严重性和启用设置：
 
 - AllRulesEnabled.ruleset
 - AllRulesDisabled.ruleset
