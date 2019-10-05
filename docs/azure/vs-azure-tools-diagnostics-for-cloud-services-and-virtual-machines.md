@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.workload: azure-vs
 ms.date: 06/28/2018
 ms.author: mikejo
-ms.openlocfilehash: 0b212ee44809f925bb4d2d78efc972a4986602a5
-ms.sourcegitcommit: 13ab9a5ab039b070b9cd9251d0b83dd216477203
-ms.translationtype: HT
+ms.openlocfilehash: 911a366aa69cf0a45cb030bb83017895500ad32f
+ms.sourcegitcommit: dc12a7cb66124596089f01d3e939027ae562ede9
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66177337"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71962979"
 ---
 # <a name="set-up-diagnostics-for-azure-cloud-services-and-virtual-machines"></a>为 Azure 云服务和虚拟机设置诊断
 需要对 Azure 云服务或虚拟机进行故障排除时，可使用 Visual Studio 更轻松地设置 Azure 诊断。 诊断可以在运行云服务的虚拟机和虚拟机实例上捕获系统数据和日志记录数据。 诊断数据传输到所选的存储帐户。 有关 Azure 中诊断日志记录的详细信息，请参阅[为 Azure 应用服务中的 Web 应用启用诊断日志记录](/azure/app-service/web-sites-enable-diagnostic-log)。
@@ -83,7 +83,7 @@ ms.locfileid: "66177337"
 5. 若要查看“诊断配置”对话框，请选择“配置”。 每个选项卡（“常规”和“日志目录”除外）都表示可以收集的诊断数据源。 默认的“常规”选项卡提供以下诊断数据收集选项：“仅限错误”、“所有信息”和“自定义计划”。 默认的“仅限错误”选项占用最少量的存储，因为该选项不传输警告或跟踪消息。 “所有信息”选项传输的信息最多，占用最多的存储，因此是成本最高的选项。
 
    > [!NOTE]
-   > “磁盘配额(以 MB 为单位)”支持的最小大小为 4GB。 但是，如果要收集内存转储，请将此限制提高到更高值（如 10GB）。
+   > "磁盘配额（MB）" 支持的最小大小为50MB，默认大小为4GB。 但是，如果要收集内存转储，请将此限制提高到更高值（如 10GB）。
    >
 
     ![启用 Azure 诊断和配置](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC758144.png)

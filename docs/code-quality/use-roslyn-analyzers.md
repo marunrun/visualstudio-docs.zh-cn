@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1845647dc1848a7fcd99ef59c29eb163bece979d
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: 3222509ccc5ec20cd1433d215ca3d69609af6bcb
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186036"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71975023"
 ---
 # <a name="use-code-analyzers"></a>使用代码分析器
 
@@ -62,7 +62,7 @@ ms.locfileid: "71186036"
 
 | 严重性（解决方案资源管理器） | 严重性（EditorConfig 文件） | 生成时行为 | 编辑器行为 |
 |-|-|-|
-| 错误 | `error` | 冲突在错误列表和命令行生成输出中显示为*错误*，并导致生成失败。| 出现问题的代码带有红色的波浪下划线，并由滚动条中的小小框标记。 |
+| Error | `error` | 冲突在错误列表和命令行生成输出中显示为*错误*，并导致生成失败。| 出现问题的代码带有红色的波浪下划线，并由滚动条中的小小框标记。 |
 | 警告 | `warning` | 冲突在错误列表和命令行生成输出中显示为*警告*，但不会导致生成失败。 | 出现问题的代码带有绿色的波浪下划线，并由滚动条中的小绿色框标记。 |
 | T:System.Diagnostics.Switch | `suggestion` | 冲突显示为错误列表中的消息，而不是命令行生成输出中的*消息*。 | 令人讨厌的代码带灰色的波浪下划线，并由滚动条中的小灰色框标记。 |
 | Hidden | `silent` | 对用户不可见。 | 对用户不可见。 但会将诊断报告给 IDE 诊断引擎。 |
@@ -93,7 +93,7 @@ ms.locfileid: "71186036"
 
 1. 如果你的项目还没有 EditorConfig 文件，则[添加一个](../ide/create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project)。
 
-2. 在相应的文件扩展名下为要配置的每个规则添加一个条目。 例如，若要将[CA1822](ca1822-mark-members-as-static.md) `error` C#的严重性设置为，则该条目如下所示：
+2. 在相应的文件扩展名下为要配置的每个规则添加一个条目。 例如，若要将[CA1822](ca1822-mark-members-as-static.md)的严重性设置为 `error` （ C#对于文件），条目如下所示：
 
    ```ini
    [*.cs]
@@ -101,15 +101,15 @@ ms.locfileid: "71186036"
    ```
 
 > [!NOTE]
-> 对于 IDE 代码样式分析器，还可以使用不同的语法（例如） `dotnet_style_qualification_for_field = false:suggestion`在 EditorConfig 文件中配置它们。 但是，如果使用`dotnet_diagnostic`语法设置了严重性，则优先使用该语法。 有关详细信息，请参阅[EditorConfig 的语言约定](../ide/editorconfig-language-conventions.md)。
+> 对于 IDE 代码样式分析器，还可以使用不同的语法（例如 `dotnet_style_qualification_for_field = false:suggestion`）在 EditorConfig 文件中配置它们。 但是，如果使用 `dotnet_diagnostic` 语法设置了严重性，则优先使用。 有关详细信息，请参阅[EditorConfig 的语言约定](../ide/editorconfig-language-conventions.md)。
 
 #### <a name="automatically-configure-rule-severity"></a>自动配置规则严重性
 
 Visual Studio 提供了一种简便的方法，可用于在 "[快速操作](../ide/quick-actions.md)" 灯泡菜单中配置规则的严重性。
 
-1. 发生冲突后，将鼠标悬停在编辑器中的冲突波形曲线上，并打开灯泡菜单。 或者，将光标放在行上，然后按**Ctrl**+键 **。** （句点）。
+1. 发生冲突后，将鼠标悬停在编辑器中的冲突波形曲线上，并打开灯泡菜单。 或者，将光标放在行上，然后按**Ctrl**+ **。** （句点）。
 
-2. 在灯泡菜单中，选择 "**配置或抑制问题** > " "**配置\<规则 ID > 严重性**"。
+2. 在灯泡菜单中，选择 "**配置" 或 "禁止显示问题**" @no__t**配置 @no__t 3rule ID > 严重性**。
 
    ![在 Visual Studio 中配置灯泡菜单中的规则严重性](media/configure-rule-severity.png)
 
@@ -126,7 +126,7 @@ Visual Studio 提供了一种简便的方法，可用于在 "[快速操作](../i
 
 ### <a name="set-rule-severity-from-solution-explorer"></a>设置解决方案资源管理器的规则严重性
 
-1. 在**解决方案资源管理器**中，展开**引用** > **分析器**（或 .net Core 项目的**依赖项** > **分析器**）。
+1. 在**解决方案资源管理器**中，展开 "**引用**"  > **分析器**（或适用于 .net Core 项目的**依赖项** > **分析器**）。
 
 1. 展开包含要为其设置严重性的规则的程序集。
 
@@ -138,9 +138,9 @@ Visual Studio 提供了一种简便的方法，可用于在 "[快速操作](../i
 
 ![解决方案资源管理器中的规则集文件](media/ruleset-in-solution-explorer.png)
 
-1. 打开活动[规则集](analyzer-rule-sets.md)文件，方法是在**解决方案资源管理器**中双击该文件，选择 "**引用** > **分析器**" 节点的右键单击菜单上的 "**打开活动规则集**"，或选择 "**打开**方式"项目的 "**代码分析**" 属性页。
+1. 打开活动[规则集](analyzer-rule-sets.md)文件，方法是在**解决方案资源管理器**中双击该文件，在 "**引用** > **分析器**" 节点的右键单击菜单中选择 "**打开活动规则集**"，**或选择** **项目的代码分析**属性页。
 
-   如果这是你首次编辑规则集，则 Visual Studio 会生成默认规则集文件的副本，并将其 *\<* 命名为项目名称 ">"，并将其添加到你的项目中。 此自定义规则集还会成为项目的活动规则集。
+   如果这是你第一次编辑规则集，则 Visual Studio 将创建默认规则集文件的副本，并将其命名为 *@no__t 1projectname > 规则*集，并将其添加到你的项目中。 此自定义规则集还会成为项目的活动规则集。
 
    > [!NOTE]
    > .NET Core 和 .NET Standard 项目不支持**解决方案资源管理器**中规则集的菜单命令，例如，**打开活动规则集**。 若要为 .NET Core 或 .NET Standard 项目指定非默认规则集，请手动[将**CodeAnalysisRuleSet**属性添加](using-rule-sets-to-group-code-analysis-rules.md#specify-a-rule-set-for-a-project)到项目文件。 你仍可以在 Visual Studio 规则集编辑器 UI 中配置规则集内的规则。
@@ -159,13 +159,21 @@ Visual Studio 提供了一种简便的方法，可用于在 "[快速操作](../i
 
 - 在**EditorConfig 文件**中
 
-  将严重性设置为`none`， `dotnet_diagnostic.CA1822.severity = none`例如。
-
-::: moniker-end
+  将严重性设置为 `none`，例如 `dotnet_diagnostic.CA1822.severity = none`。
 
 - 从 "**分析**" 菜单
 
-  在菜单栏上选择 "**分析** > **运行代码分析" 和 "取消活动问题**"，禁止显示所有当前冲突。 这有时称为 "基线"。
+  选择 "**分析** > " 在菜单栏上**生成和取消显示活动问题**，禁止显示所有当前冲突。 这有时称为 "基线"。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+- 从 "**分析**" 菜单
+
+  选择 "**分析** > "**运行代码分析并取消**菜单栏上的活动问题以禁止显示所有当前冲突。 这有时称为 "基线"。
+
+::: moniker-end
 
 - From**解决方案资源管理器**
 
@@ -177,19 +185,19 @@ Visual Studio 提供了一种简便的方法，可用于在 "[快速操作](../i
 
 - 从**代码编辑器**
 
-  将光标置于带有冲突的代码行中，然后按**Ctrl**+**句点（.）** 以打开 "**快速操作**" 菜单。 选择 **"在源/禁止显示文件中** **取消 CAXXXX** > "。
+  将光标放在包含冲突的代码行中，按**Ctrl**+**句点（.）** 以打开 "**快速操作**" 菜单。 选择 "在**源/禁止显示文件中** **取消 CAXXXX** > "。
 
   ![禁止显示 "快速操作" 菜单中的诊断](media/suppress-diagnostic-from-editor.png)
 
 - 从**错误列表**
 
-  选择要禁止显示的规则，然后右键单击并选择 "在**源/隐藏文件**中**取消** > "。
+  选择要禁止显示的规则，然后右键单击并选择 "取消"，并选择 "**禁止** **在源/隐藏文件中** > "。
 
   - 如果在 "**源" 中**取消显示，则 "**预览更改**" 对话框将打开C# ，并显示[#pragma 警告](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning)或 Visual Basic 添加到源代码中[#Disable 警告](/dotnet/visual-basic/language-reference/directives/directives)指令的预览。
 
     ![在代码文件中添加 #pragma 警告的预览](media/pragma-warning-preview.png)
 
-  - 如果选择 "**在禁止显示文件中**"，则将打开 "**预览更改**" 对话框<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> ，并显示添加到全局禁止显示文件的属性的预览。
+  - 如果选择 "**在禁止显示文件中**"，则 "**预览更改**" 对话框将打开，并显示添加到全局禁止显示文件的 @no__t 2 属性的预览。
 
     ![向禁止显示文件添加 SuppressMessage 属性的预览](media/preview-changes-in-suppression-file.png)
 

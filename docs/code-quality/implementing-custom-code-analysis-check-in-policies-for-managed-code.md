@@ -1,5 +1,5 @@
 ---
-title: 自定义代码分析签入策略的托管代码
+title: 托管代码的自定义代码分析签入策略
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6619e3bb988a555fba5718f609ff3a5f0584063b
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 55294f7418de085cb4ceccd4063a4b2b55cbc6c4
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66260830"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71975038"
 ---
 # <a name="implement-custom-code-analysis-check-in-policies-for-managed-code"></a>实现托管代码的自定义代码分析签入策略
 
@@ -110,10 +110,18 @@ ms.locfileid: "66260830"
 
 4. 如有必要，单击中相应的选项**配置**并**平台**列出。
 
-5. 若要使用指定的配置生成的代码项目中的每次运行代码分析，请选择**启用生成代码分析 （定义 CODE_ANALYSIS 常量）** 复选框。
+::: moniker range="vs-2017"
 
-6. 若要忽略来自其他公司的组件中的代码，请选择**禁止显示生成代码的结果**复选框。
+5. 若要在每次使用指定配置生成代码项目时运行代码分析，请选择 **"生成时启用代码分析**"。
 
-7. 在中**运行此规则集**列表中，单击 **\<浏览...>** 。
+::: moniker-end
 
-8. 指定签入策略规则集文件的本地版本。
+::: moniker range=">=vs-2019"
+
+5. 若要在每次使用指定配置生成代码项目时运行代码分析，请选择 "**二进制分析器**" 部分中的 "**生成时运行**"。
+
+::: moniker-end
+
+6. 在 "**运行此规则集**" 列表中，单击 " **\<Browse >** "。
+
+8. 选择签入策略规则集文件的本地版本。

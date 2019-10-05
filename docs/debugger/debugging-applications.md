@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 63d393e5ab056f16e54382b2295a667f079ede95
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 9848b666df985ddc7c2c4d0cf56f9ae4cafcb347
+ms.sourcegitcommit: dc12a7cb66124596089f01d3e939027ae562ede9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211166"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71962897"
 ---
 # <a name="debugging-applications"></a>调试应用程序
 以下各节介绍了对不同类型的应用程序进行调试的信息。 不同类型的应用程序和编程语言，需要的设置和技术也会不同，需要调试的问题也不同。
@@ -34,6 +34,6 @@ ms.locfileid: "71211166"
 |[图形诊断（调试 DirectX 图形）](/visualstudio/debugger/graphics/visual-studio-graphics-diagnostics)|描述如何调试 DirectX 图形。|
 |[调试 ASP.NET 应用程序](../debugger/how-to-enable-debugging-for-aspnet-applications.md)|介绍如何调试 ASP.NET 应用程序。|
 |[调试 Python 代码](../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md)|描述如何调试 Python 代码|
-|[调试 JavaScript 和 TypeScript 应用程序](/javascript/debug-nodejs.md)|描述如何调试 JavaScript、TypeScript 和 node.js 应用程序|
+|[调试 JavaScript 和 TypeScript 应用程序](/javascript/debug-nodejs)|描述如何调试 JavaScript、TypeScript 和 node.js 应用程序|
 |[调试 Web 应用程序](../debugger/debugging-web-applications.md)|描述如何调试 Web 应用程序和脚本。|
 |[调试 WCF 服务](../debugger/debugging-wcf-services.md)|描述如何调试 Windows Communication Foundation 服务。|
