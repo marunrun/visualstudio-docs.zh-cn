@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: faf7738019680085020b9650094931d5860bc29b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3acdaabffc35122616cced4113abbc5a43beb9a1
+ms.sourcegitcommit: 16175e0cea6af528e9ec76f0b94690faaf1bed30
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62577357"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71481979"
 ---
 # <a name="verifyfilehash-task"></a>VerifyFileHash 任务
 
@@ -34,9 +34,8 @@ ms.locfileid: "62577357"
 
 |参数|说明|
 |---------------|-----------------|
-|`File`|必选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br />要进行哈希处理和验证的文件。|
+|`File`|必选 `String` 参数。<br /><br />要进行哈希处理和验证的文件。|
 |`Hash`|必选 `String` 参数。<br /><br />预期的文件哈希。|
-|`Items`|<xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br />`Files` 输入以及文件哈希的其他元数据集。|
 |`Algorithm`|可选 `String` 参数。<br /><br />算法。 允许的值：`SHA256`、`SHA384`、`SHA512`。 默认值 = `SHA256`。|
 |`HashEncoding`|可选 `String` 参数。<br /><br />用于生成哈希的编码。 默认为 `hex`。 允许的值 = `hex`、`base64`。|
 

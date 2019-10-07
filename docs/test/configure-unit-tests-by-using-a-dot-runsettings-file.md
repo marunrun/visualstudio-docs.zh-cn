@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 25d0f49939a42d9a9b8cc56f03ed37ab83aa98f2
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: bdf67f78d1a4cc7e2d17336a7272b919fcc6fba9
+ms.sourcegitcommit: d3e423a9a4ed773a54d14b247e1b5bfc95de8816
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251832"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71693028"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>使用 .runsettings 文件配置单元测试 
 
@@ -38,11 +38,11 @@ ms.locfileid: "71251832"
 
 ::: moniker range=">=vs-2019"
 
-若要在 IDE 中指定运行设置文件，请在“测试资源管理器”中选择“设置”按钮上的箭头，然后选择“选择设置文件”    。 浏览到并选择 .runsettings 文件  。
+若要在 IDE 中指定运行设置文件，请选择“测试”   > “选择设置文件”  。 浏览到并选择 .runsettings 文件  。
 
-![在 Visual Studio 2019 中选择测试设置文件菜单](media/vs-2019/select-test-settings-file.png)
+![在 Visual Studio 2019 中选择测试设置文件菜单](media/vs-2019/select-settings-file.png)
 
-该文件将显示在“测试资源管理器”中的“测试设置”菜单上，你可以选择或取消选择它。 选择后，每当选择“分析代码覆盖率”时，都会应用运行设置文件  。
+该文件将显示在“测试”菜单上，你可以选择或取消选择它。 选择后，每当选择“分析代码覆盖率”时，都会应用运行设置文件  。
 
 ::: moniker-end
 
@@ -97,7 +97,7 @@ ms.locfileid: "71251832"
 
 ::: moniker range=">=vs-2019"
 
-3. 若要选择运行设置文件，请在“测试资源管理器”中，选择“设置”按钮上的箭头，然后选择“选择设置文件”    。 浏览到创建的 .runsettings 文件，然后选择“确定”   。
+3. 若要选择运行设置文件，请选择“测试”   > “选择设置文件”  。 浏览到创建的 .runsettings 文件，然后选择“确定”   。
 
 ::: moniker-end
 
@@ -118,7 +118,7 @@ ms.locfileid: "71251832"
     <ResultsDirectory>.\TestResults</ResultsDirectory>
 
     <!-- x86 or x64 -->
-    <!-- You can also change it from the test settings menu; choose "Processor Architecture for AnyCPU Projects" -->
+    <!-- You can also change it from the Test menu; choose "Processor Architecture for AnyCPU Projects" -->
     <TargetPlatform>x86</TargetPlatform>
 
     <!-- Framework35 | [Framework40] | Framework45 -->
@@ -149,7 +149,7 @@ ms.locfileid: "71251832"
             <AllowLowIntegrityProcesses>True</AllowLowIntegrityProcesses>
             <CollectFromChildProcesses>True</CollectFromChildProcesses>
             <CollectAspDotNet>False</CollectAspDotNet>
-
+            
           </CodeCoverage>
         </Configuration>
       </DataCollector>
@@ -157,11 +157,12 @@ ms.locfileid: "71251832"
       <DataCollector uri="datacollector://microsoft/VideoRecorder/1.0" assemblyQualifiedName="Microsoft.VisualStudio.TestTools.DataCollection.VideoRecorder.VideoRecorderDataCollector, Microsoft.VisualStudio.TestTools.DataCollection.VideoRecorder, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" friendlyName="Screen and Voice Recorder">
         <!--Video data collector was introduced in Visual Studio 2017 version 15.5 -->
         <Configuration>
-           <!-- Change to "false" to only add video attachments to failed tests -->
-          <MediaRecorder sendRecordedMediaForPassedTestCase="true" xmlns="" />
+          <!-- Set "sendRecordedMediaForPassedTestCase" to "false" to add video attachments to failed tests only -->
+          <MediaRecorder sendRecordedMediaForPassedTestCase="true"  xmlns="">           
+            <ScreenCaptureVideo bitRate="512" frameRate="2" quality="20" />
+          </MediaRecorder>
         </Configuration>
       </DataCollector>
-
     </DataCollectors>
   </DataCollectionRunSettings>
 

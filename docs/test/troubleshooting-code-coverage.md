@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: abd5075d04f26b9795695bfcd4fcd387e1a15d24
-ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
+ms.openlocfilehash: 6416045f040e9825bab6eeb33dd4b75478166ee3
+ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71079585"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342474"
 ---
 # <a name="troubleshoot-code-coverage"></a>代码覆盖率疑难解答
 
@@ -29,6 +29,7 @@ Visual Studio 中的代码覆盖率分析工具可收集本机和托管程序集
 ## <a name="possible-reasons-for-seeing-no-results-or-old-results"></a>看不到结果或看到旧结果的可能原因
 
 ### <a name="do-you-have-the-right-edition-of-visual-studio"></a>你是否有正确版本的 Visual Studio？
+
 需要 Visual Studio Enterprise。
 
 ### <a name="no-tests-were-executed"></a>未执行测试
@@ -43,7 +44,7 @@ Visual Studio 中的代码覆盖率分析工具可收集本机和托管程序集
 
 在修改并重新运行测试时，前一个代码覆盖率结果可能仍是可见的，包括来自上次运行的代码着色。
 
-1. 运行“分析代码覆盖率”。
+1. 运行“分析代码覆盖率”  。
 
 2. 确保选择了“代码覆盖率结果”窗口中的最新结果集  。
 

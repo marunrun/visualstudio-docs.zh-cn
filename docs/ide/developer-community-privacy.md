@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 447a06d64691af1d77a634179631ce7822b6d43d
-ms.sourcegitcommit: 78e2637e4fbfadd4509b55276816b64f5c24c606
+ms.openlocfilehash: a40cbc30850edc96b569bd8d716b14b5d2035089
+ms.sourcegitcommit: 528178a304e66c0cb7ab98b493fe3c409f87493a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70864684"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273396"
 ---
 # <a name="developer-community-data-privacy"></a>开发人员社区数据隐私
 
@@ -70,10 +70,6 @@ ms.locfileid: "70864684"
 
 - Windows 窗体日志（如果存在）
 
-> [!NOTE]
-> 仅当你提供权限（即提交包含日志文件的问题报告）时，才会将日志文件发送给 Microsoft。 你可以在“报告问题”窗口的“摘要”步骤中查看哪些文件包含在内（请参阅本说明中的屏幕截图）。 收集的日志存储在 %temp% 文件夹中，并在每次上传后定期清理。 如果你不想在问题报告中包含日志，请在提交报告之前从 %temp% 文件夹中删除该文件。  
-  > ![报告问题 - 收集的日志摘要](media/report-a-problem-logs-collected.png)
-
 - 屏幕截图（如果选择随附该项）
   
 - 记录数据（如果选择包含记录），其中包括：
@@ -84,8 +80,10 @@ ms.locfileid: "70864684"
 
   - 转储文件
 
-  > [!NOTE]
-  > 提交报表前，可删除任何不想提交的记录数据。
+> [!NOTE]
+> 仅当你提供权限（即提交包含日志文件、屏幕截图和记录数据的问题报告）时，才会将日志文件、屏幕截图和记录数据发送给 Microsoft。 你可以在“报告问题”窗口的“摘要”步骤中查看哪些文件包含在内（请参阅本说明中的屏幕截图）。 收集的日志和文件存储在 %temp% 文件夹中，并在每次上传后定期清理。 如果你不想在问题报告中包含日志，请在提交报告之前从 %temp% 文件夹中删除该文件。  
+  > ![报告问题 - 收集的日志摘要](media/report-a-problem-logs-collected.png)
+ 
 
 ## <a name="see-also"></a>请参阅
 

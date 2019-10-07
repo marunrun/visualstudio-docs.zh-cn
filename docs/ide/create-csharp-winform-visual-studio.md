@@ -1,28 +1,28 @@
 ---
-title: 使用 Visual Basic 创建 Windows 窗体应用
-description: 了解如何在 Visual Studio 中使用 Visual Basic 分步创建 Windows 窗体应用。
-ms.date: 09/27/2019
+title: 使用 C# 创建 Windows 窗体应用
+description: 了解如何在 Visual Studio 中使用 C# 分步创建 Windows 窗体应用。
+ms.date: 09/26/2019
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.devlang: vb
+ms.devlang: CSharp
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 dev_langs:
-- VB
+- CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 8be3edaaab970dab7ef41bd8bce75c84bac54a2e
+ms.openlocfilehash: 4017ee2da040ccef36c58b17d896abab199c3517
 ms.sourcegitcommit: 13decf878b33fc0c5d665a88067170c2861b261b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/30/2019
-ms.locfileid: "71681578"
+ms.locfileid: "71685528"
 ---
-# <a name="create-a-windows-forms-app-in-visual-studio-with-visual-basic"></a>在 Visual Studio 中使用 Visual Basic 创建 Windows 窗体应用
+# <a name="create-a-windows-forms-app-in-visual-studio-with-c"></a>在 Visual Studio 中使用 C# 创建 Windows 窗体应用
 
-在此 Visual Studio 集成开发环境 (IDE) 简介中，了解如何创建具有基于 Windows 的用户界面 (UI) 的简单 Visual Basic 应用程序。
+在此 Visual Studio 集成开发环境 (IDE) 简介中，了解如何创建具有基于 Windows 的用户界面 (UI) 的简单 C# 应用程序。
 
 ::: moniker range="vs-2017"
 
@@ -41,7 +41,7 @@ ms.locfileid: "71681578"
 
 ## <a name="create-a-project"></a>创建项目
 
-首先，先创建一个 Visual Basic 应用程序项目。 项目类型随附了所需的全部模板文件，无需添加任何内容。
+首先，创建 C# 应用程序项目。 项目类型随附了所需的全部模板文件，无需添加任何内容。
 
 ::: moniker range="vs-2017"
 
@@ -49,7 +49,7 @@ ms.locfileid: "71681578"
 
 1. 从顶部菜单栏中选择“文件”  >“新建”  >“项目”  。
 
-1. 在“新建项目”对话框左侧的窗格中，展开“Visual Basic”，然后选择“Windows 桌面”    。 在中间窗格中，选择“Windows 窗体应用(.NET Framework)”  。 随后将文件命名为 `HelloWorld`。
+1. 在“新建项目”  对话框左侧的窗格中，展开“Visual C#”  ，然后选择“Windows 桌面”  。 在中间窗格中，选择“Windows 窗体应用(.NET Framework)”  。 随后将文件命名为 `HelloWorld`。
 
      如果没有看到“Windows 窗体应用(.NET Framework)”项目模板，则取消“新建项目”对话框，然后在顶部菜单栏中依次选择“工具” > “获取工具和功能”     。 Visual Studio 安装程序启动。 选择“.NET 桌面开发”工作负载，然后选择“修改”   。
 
@@ -65,11 +65,11 @@ ms.locfileid: "71681578"
 
    ![查看“创建新项目”窗口](../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
-1. 在“创建新项目”  窗口中，选择适用于 Visual Basic 的“Windows 窗体应用(.NET Framework)”  模板。
+1. 在“创建新项目”  窗口中，为 C# 选择“Windows 窗体应用(.NET Framework)”  模板。
 
-   （如果愿意，你可以优化搜索以快速找到所需的模板。 例如，在搜索框中输入或键入“Windows 窗体应用”  。 接下来，从“语言”列表中选择“Visual Basic”  ，然后从“平台”列表中选择“Windows”  。）  
+   如果愿意，你可以优化搜索以快速找到所需的模板。 例如，在搜索框中输入或键入“Windows 窗体应用”  。 接下来，从“语言”列表中选择“C#”  ，然后从“平台”列表中选择“Windows”  。）  
 
-   ![为“Windows 窗体应用(.NET Framework)”选择 Visual Basic 模板](../get-started/visual-basic/media/vs-2019/vb-create-new-project-search-winforms-filtered.png)
+   ![为 Windows 窗体应用 (.NET Framework) 选择 C# 模板](../get-started/csharp/media/vs-2019/csharp-create-new-winforms-project-nonfiltered.png)
 
    > [!NOTE]
    > 如果未看到“Windows 窗体应用(.NET Framework)”  模板，则可以通过“创建新项目”  窗口安装该模板。 在“找不到所需内容?”消息中，选择“安装更多工具和功能”链接   。
@@ -84,7 +84,7 @@ ms.locfileid: "71681578"
 
 1. 在“配置新项目”窗口中，在“项目名称”框中键入或输入“HelloWorld”    。 然后，选择“创建”  。
 
-   ![在“配置新项目”窗口中，将项目命名为“HelloWorld”](../get-started/visual-basic/media/vs-2019/vb-name-your-winform-project-helloworld.png)
+   ![在“配置新项目”窗口中，将项目命名为“HelloWorld”](../get-started/csharp/media/vs-2019/csharp-name-your-winform-project-helloworld.png)
 
    此时，Visual Studio 将打开新项目。
 
@@ -92,29 +92,29 @@ ms.locfileid: "71681578"
 
 ## <a name="create-the-application"></a>创建应用程序
 
-选择 Visual Basic 项目模板并为文件命名后，Visual Studio 会打开一个窗体。 窗体就是 Windows 用户界面。 通过向窗体添加控件创建“Hello World”应用程序，然后运行该应用程序。
+选择 C# 项目模板并为文件命名后，Visual Studio 会打开一个窗体。 窗体就是 Windows 用户界面。 通过向窗体添加控件创建“Hello World”应用程序，然后运行该应用程序。
 
 ### <a name="add-a-button-to-the-form"></a>向窗体添加按钮
 
-1. 单击“工具箱”，打开“工具箱”弹出窗口  。
+1. 选择“工具箱”，打开“工具箱”弹出窗口  。
 
-     ![单击“工具箱”，打开“工具箱”窗口](../ide/media/vb-toolbox-toolwindow.png)
+     ![选择“工具箱”，打开“工具箱”窗口](../ide/media/csharp-toolbox-toolwindow.png)
 
      （如果看不到“工具箱”弹出选项，可从菜单栏打开  。 为此，请选择“视图”   > “工具箱”  。 或按 Ctrl+Alt+X。）   
 
-1. 单击“固定”图标，固定“工具箱”窗口   。
+1. 选择“固定”  图标，固定“工具箱”  窗口。
 
-     ![单击“固定”图标，将“工具箱”窗口固定到 IDE](../ide/media/vb-pin-the-toolbox-window.png)
+     ![选择“固定”图标，将“工具箱”窗口固定到 IDE](../ide/media/vb-pin-the-toolbox-window.png)
 
-1. 单击“按钮”控件，然后将其拖到窗体上  。
+1. 选择“按钮”  控件，然后将其拖到窗体上。
 
-     ![向窗体添加按钮](../ide/media/vb-add-a-button-to-form1.png)
+     ![向窗体添加按钮](../ide/media/csharp-add-button-form1.png)
 
-1. 在“属性”  窗口的“外观”  （或“字体”  部分）部分，键入 `Click this`，然后按 Enter  。
+1. 在“属性”  窗口中，找到“文本”  ，将名称从“Button1”  更改为 `Click this`然后按 Enter  。
 
      ![向窗体上的按钮添加文本](../ide/media/vb-button-control-text.png)
 
-     （如果看不到“属性”窗口，可从菜单栏打开  。 若要执行此操作，请单击“视图” > “属性窗口”   。 或按 F4。） 
+     （如果看不到“属性”窗口，可从菜单栏打开  。 若要执行此操作，请选择“视图”   > “属性窗口”  。 或按 F4。） 
 
 1. 在“属性”窗口的“设计”部分，将名称从“Button1”更改为 `btnClickThis`，然后按 Enter     。
 
@@ -129,27 +129,27 @@ ms.locfileid: "71681578"
 
 1. 从“工具箱”窗口选择“标签”控件，然后将其拖到窗体上，并放到“单击此处”按钮下方    。
 
-1. 在“属性”  窗口的“设计”  部分或“(DataBindings)”  部分，将“Label1”  的名称更改为 `lblHelloWorld`，然后按 Enter  。
+1. 在“属性”  窗口的“设计”  部分或 (DataBindings)  部分，将名称从“Label1”  更改为 `lblHelloWorld`，然后按 Enter  。
 
 ### <a name="add-code-to-the-form"></a>向窗体添加代码
 
-1. 在“Form1.vb [设计]”窗口中，双击“单击此处”按钮，打开“Form1.vb”窗口    。
+1. 在“Form1.cs &#91;设计&#93;”  窗口中，双击“单击此处”  按钮，打开“Form1.cs”窗口  。
 
-      （或者，可在解决方案资源管理器中展开“Form1.vb”，然后单击“Form1”。    ）
+      （或者，可在“解决方案资源管理器”  中展开“Form1.cs”  ，然后选择“Form1”  。）
 
-1. 在“Form1.vb”  窗口中，在“Private Sub”  和“End Sub”  行之间，键入或输入 `lblHelloWorld.Text = "Hello World!"`，如以下屏幕截图所示：
+1. 在“Form1.cs”  窗口中，在“private void”  行后，键入或输入 `lblHelloWorld.Text = "Hello World!";`，如以下屏幕截图所示：
 
-     ![向窗体添加代码](../ide/media/vb-add-code-to-the-form.png)
+     ![向窗体添加代码](../get-started/csharp/media/csharp-winforms-add-code.png)
 
 ## <a name="run-the-application"></a>运行此应用程序
 
-1. 单击“启动”按钮运行应用程序  。
+1. 选择“启动”  按钮运行应用程序。
 
-     ![单击“启动”，调试和运行应用](../ide/media/vb-click-start-hello-world.png)
+     ![选择“启动”，调试和运行应用](../ide/media/vb-click-start-hello-world.png)
 
    将出现以下几种情况。 在 Visual Studio IDE 中，“诊断工具”窗口打开，同时还会打开一个“输出”窗口   。 在 IDE 外部，会出现一个“Form1”对话框  。 其中包含“单击此处”按钮和显示“Label1”的文本   。
 
-1. 单击“Form1”对话框中的“单击此处”按钮   。 请注意，“Label1”文本会更改为“Hello World!”   。
+1. 选择“Form1”  对话框中的“单击此处”  按钮。 请注意，“Label1”文本会更改为“Hello World!”   。
 
     ![包含 Label1 文本的“Form1”对话框 ](../ide/media/vb-form1-dialog-hello-world.png)
 
@@ -164,6 +164,6 @@ ms.locfileid: "71681578"
 
 ## <a name="see-also"></a>请参阅
 
-* [更多 Visual Basic 教程](/visualstudio/get-started/visual-basic/)
-* [C# 教程](/visualstudio/get-started/csharp/)
+* [更多 C# 教程](/visualstudio/get-started/csharp/)
+* [Visual Basic 教程](/visualstudio/get-started/visual-basic/)
 * [C++ 教程](/cpp/get-started/tutorial-console-cpp)

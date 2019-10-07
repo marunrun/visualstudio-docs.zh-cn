@@ -6,12 +6,12 @@ manager: lank
 ms.date: 08/02/2019
 ms.topic: conceptual
 description: 了解有关所选的 Visual Studio 订阅中随附的 Pluralsight 培训订阅。
-ms.openlocfilehash: 897790684420c35d173f1d8144f735815ca4034f
-ms.sourcegitcommit: a124076dfd6b4e5aecda4d01984fee7b0c034745
+ms.openlocfilehash: 25a699f0e97f88fefaaf5b62f752ef579c0cd736
+ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787655"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342378"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Pluralsight 培训权益
 
@@ -47,8 +47,6 @@ ms.locfileid: "68787655"
    
 
 6. 成功创建帐户后，收到的电子邮件将包含用户名，并请求创建密码。  提供密码，再次输入以确认，然后单击“登录到 Pluralsight”。 
-   > [!div class="mx-imgBorder"]
-   > ![Pluralsight 权益欢迎电子邮件](_img/vs-pluralsight/vs-pluralsight-welcome-email.png)
 
 7. 输入欢迎电子邮件提供的用户名和刚刚创建的密码，然后单击“登录”。 
 

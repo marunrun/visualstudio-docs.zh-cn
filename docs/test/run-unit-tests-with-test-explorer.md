@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d18f510b3b30207079b644e540d8b5db22609f97
-ms.sourcegitcommit: 673b9364fc9a96b027662dcb4cf5d61cab60ef11
+ms.openlocfilehash: 27ca8a39d39fcc8b4e5ddca2cbedf72e44c6cc81
+ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69891334"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342449"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>使用测试资源管理器运行单元测试
 
@@ -320,6 +320,7 @@ FilterName:"Criteria" -FilterName:"SubsetCriteria"
 在解决方案中为测试方法运行代码覆盖率：
 
 ::: moniker range="vs-2017"
+
 1. 在顶部菜单栏上选择“测试”，然后选择“分析代码覆盖率”   。
 
 2. 从子菜单中选择下列命令之一：
@@ -327,9 +328,13 @@ FilterName:"Criteria" -FilterName:"SubsetCriteria"
     - **选定的测试** 运行你在测试资源管理器中选择的测试方法。
 
     - **所有测试** 在解决方案中运行所有测试方法。
+
 ::: moniker-end
+
 ::: moniker range=">=vs-2019"
+
 * 在测试资源管理器中单击鼠标右键，然后选择“分析所选测试的代码覆盖率” 
+
 ::: moniker-end
 
 “代码覆盖率结果”窗口显示行、函数、类、命名空间和模块执行的产品代码块的百分比  。
@@ -338,7 +343,7 @@ FilterName:"Criteria" -FilterName:"SubsetCriteria"
 
 ## <a name="test-shortcuts"></a>测试快捷方式
 
-可以从“测试资源管理器”运行测试，方法是：在代码编辑器中右键单击测试，并选择“运行测试”，或者在 Visual Studio 中使用默认的[测试资源管理器快捷方式](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_testexplorerGLOBAL)。   一些快捷方式是基于上下文的。 这意味着它们根据光标在代码编辑器中的位置来运行或调试测试。 如果光标位于某一测试方法内，则运行该测试方法。 如果光标位于类级别，则运行该类中的所有测试。 如果光标位于命名空间级别，则运行该命名空间级别中的所有测试。
+可以从“测试资源管理器”运行测试，方法是：在代码编辑器中右键单击测试，并选择“运行测试”  ，或者在 Visual Studio 中使用默认的[测试资源管理器快捷方式](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_testexplorerGLOBAL)。 一些快捷方式是基于上下文的。 这意味着它们根据光标在代码编辑器中的位置来运行或调试测试。 如果光标位于某一测试方法内，则运行该测试方法。 如果光标位于类级别，则运行该类中的所有测试。 如果光标位于命名空间级别，则运行该命名空间级别中的所有测试。
 
 |常见命令| 键盘快捷键|
 |-|------------------------|

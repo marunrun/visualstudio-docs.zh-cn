@@ -1,19 +1,19 @@
 ---
 title: 编写适用于 C/C++ 的单元测试
 description: 使用各种测试框架（包括 CTest、Boost.Test 和 Google Test）在 Visual Studio 中编写 C++ 单元测试。
-ms.date: 05/06/2019
+ms.date: 09/27/2019
 ms.topic: conceptual
 ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: 6c236a8454c9710bedbf080f4d7a09cfff6a7fac
-ms.sourcegitcommit: d4920babfc3d24a3fe1d4bf446ed3fe73b344467
+ms.openlocfilehash: 75244cc728b238a04569875ac01f1c2a3f27d336
+ms.sourcegitcommit: 16175e0cea6af528e9ec76f0b94690faaf1bed30
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67160175"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71481920"
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>在 Visual Studio 中编写 C/C++ 单元测试
 
@@ -86,6 +86,8 @@ C++ 单元测试项目支持 [CodeLens](../ide/find-code-changes-and-other-histo
 接下来，在单元测试 .cpp 文件中，为声明要测试的类型和函数的任何头文件添加 `#include` 指令  。 输入 `#include "`，随后 IntelliSense 会激活以帮助进行选择。 对任何其他头文件重复此操作。
 
 ![添加 include 指令](media/cpp-add-includes-test-project.png)
+
+若要避免必须在源文件的每个 include 语句中键入完整路径，可以在“项目”   > “属性”   > “C/C++”   > “常规”   > “附加包含目录”  中添加所需的文件夹。
 
 ### <a name="write-test-methods"></a>编写测试方法
 
