@@ -11,12 +11,12 @@ dev_langs:
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 24bc4c54e455f43aa5fd5fee0ce0d5a44042e497
-ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
+ms.openlocfilehash: 1962a977cb282613405342f225d63140f1854453
+ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913188"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342427"
 ---
 # <a name="use-code-coverage-to-determine-how-much-code-is-being-tested"></a>使用代码覆盖率确定所测试的代码量
 
@@ -46,11 +46,11 @@ ms.locfileid: "70913188"
 
 ::: moniker range=">=vs-2019"
 
-1. 在“测试资源管理器”中的“运行”菜单中，选择“分析所有测试的代码覆盖率”    。
+1. 在“测试”  菜单中，选择“分析所有测试的代码覆盖率”  。
 
    ![在 VS 2019 中分析代码覆盖率](../test/media/vs-2019/analyze-code-coverage.png)
 
-   如果“测试资源管理器”  未打开，请依次选择“测试”  >“Windows”  >“测试资源管理器”  或按 Ctrl+E,T    将其打开。
+   你还可以从“测试资源管理器”工具窗口中运行代码覆盖率。
 
 ::: moniker-end
 

@@ -1,6 +1,6 @@
 ---
 title: 使用 PerfView 收集 ETL 跟踪
-ms.date: 06/27/2019
+ms.date: 09/27/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - perfview
@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - multiple
 ms.description: Use perfview.exe to collect ETL traces for troubleshooting issues with Visual Studio
-ms.openlocfilehash: 6b1f61888fa642ed544c6da7d1cf77c43b52b2d9
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: ca2e44c41952a251d747f80fe27732c1d9dbd18b
+ms.sourcegitcommit: 16175e0cea6af528e9ec76f0b94690faaf1bed30
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461542"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71481948"
 ---
 # <a name="collect-an-etl-trace-with-perfview"></a>使用 PerfView 收集 ETL 跟踪
 
@@ -28,7 +28,7 @@ PerfView 是一个基于 [Windows 事件跟踪](/windows/desktop/ETW/event-traci
 
 ## <a name="install-perfview"></a>安装 PerfView
 
-从 [Microsoft 下载中心](http://www.microsoft.com/download/details.aspx?id=28567)下载 PerfView。
+从 [GitHub](https://github.com/Microsoft/perfview/blob/master/documentation/Downloading.md) 下载 PerfView。
 
 ## <a name="run-perfview"></a>运行 PerfView
 

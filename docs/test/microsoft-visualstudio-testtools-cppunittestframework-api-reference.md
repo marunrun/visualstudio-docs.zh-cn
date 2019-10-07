@@ -1,26 +1,24 @@
 ---
 title: Microsoft.VisualStudio.TestTools.CppUnitTestFramework API
-ms.date: 06/13/2019
+ms.date: 09/27/2019
 ms.topic: reference
 ms.author: mblome
 manager: jillfra
 ms.workload:
 - multiple
 author: mikeblome
-ms.openlocfilehash: 36681858506a05d5d8c9f0a5be25a70b833ee022
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 327aa6f79f7eda6ecc3f1c0a7b2576a87287b1c0
+ms.sourcegitcommit: 628eb202a1153ebfe69c668f966f821b98b34b34
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926612"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71720517"
 ---
 # <a name="microsoftvisualstudiotesttoolscppunittestframework-api-reference"></a>Microsoft.VisualStudio.TestTools.CppUnitTestFramework API 参考
 
 本主题列出了 `Microsoft::VisualStudio::CppUnitTestFramework` 命名空间的公共成员。 使用这些 API 可编写基于 Microsoft 本机单元测试框架的 C++ 单元测试。 本主题末尾有一个[用法示例](#example)。
 
-头文件位于 _VisualStudio2012[x86]InstallFolder_ **\VC\UnitTest\include** 文件夹中。
-
-lib 文件位于 _VisualStudio2012[x86]InstallFolder_ **\VC\UnitTest\lib** 文件夹。
+标头和 lib 文件位于 \<Visual Studio 安装文件夹>\VC\Auxiliary\VS\UnitTest  下。
 
 头文件和 lib 路径会在本机测试项目中自动配置。
 
@@ -126,7 +124,7 @@ TEST_METHOD_INITIALIZE(methodName)
 }
 ```
 
-将 methodName  定义为在运行每个测试方法运行之前的方法。 `TEST_METHOD_INITIALIZE` 只能在测试类中定义一次，且必须在测试类中定义。
+将 methodName  定义为在运行每个测试方法运行之前的方法。 `TEST_METHOD_INITIALIZE` 只能在测试类中定义一次，且必须在测试类的范围内定义。
 
 ```cpp
 TEST_METHOD_CLEANUP(methodName)

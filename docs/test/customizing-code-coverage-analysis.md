@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: a22bdbc30fc222e26c01a10afdd7a666eebcb9f6
-ms.sourcegitcommit: a2df993dc5e11c5131dbfcba686f0028a589068f
+ms.openlocfilehash: 517f3f5911df6c7de1f59232a4e836bcdc84c448
+ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71150112"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342355"
 ---
 # <a name="customize-code-coverage-analysis"></a>自定义代码覆盖率分析
 
@@ -40,7 +40,7 @@ ms.locfileid: "71150112"
 
 ::: moniker range=">=vs-2019"
 
-3. 若要选择运行设置文件，请在“测试资源管理器”中，选择“设置”按钮上的箭头，然后选择“选择设置文件”    。 若要指定运行设置文件以从命令行中运行测试，请参阅[配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#command-line)。
+3. 若要选择运行设置文件，在“测试”  菜单上，选择“选择设置文件”  。 若要指定运行设置文件以从命令行中运行测试，请参阅[配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#command-line)。
 
 ::: moniker-end
 
@@ -59,7 +59,7 @@ ms.locfileid: "71150112"
 
 ::: moniker range=">=vs-2019"
 
-若要关闭和启用自定义设置，请在“测试资源管理器”的“设置”菜单中取消选择或选择该文件   。
+若要禁用和启用自定义设置，请在“测试”  菜单中取消选择或选择该文件。
 
 ::: moniker-end
 
@@ -270,7 +270,7 @@ Included items must then not match any entries in the exclude list to remain inc
             </PublicKeyTokens>
 
             <!-- We recommend you do not change the following values: -->
-            
+
             <!-- Set this to True to collect coverage information for functions marked with the "SecuritySafeCritical" attribute. Instead of writing directly into a memory location from such functions, code coverage inserts a probe that redirects to another function, which in turns writes into memory. -->
             <UseVerifiableInstrumentation>True</UseVerifiableInstrumentation>
             <!-- When set to True, collects coverage information from child processes that are launched with low-level ACLs, for example, UWP apps. -->
