@@ -21,12 +21,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 493db26aed1a4e5f41acdd054dba266577159809
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
-ms.translationtype: HT
+ms.openlocfilehash: 3a20637b7c7c3afcf594d1498b6030c685e4be72
+ms.sourcegitcommit: e95dd8cedcd180e0bce6a75c86cf861757918290
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018484"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163052"
 ---
 # <a name="code-analysis-for-cc-overview"></a>C/C++ 代码分析概述
 
@@ -46,7 +46,7 @@ C/C++ Code 分析工具提供有关您的 C/C++源代码中可能存在的缺陷
 C:\>cl /analyze Sample.cpp
 ```
 
-**Visual Studio 2017 版本15.7 及更高版本**你可以从命令行运行该工具，其中包含任何生成系统，包括 CMake。
+**Visual Studio 2017 版本 15.7 及更高版本：** 你可以从命令行运行该工具，其中包含任何生成系统，包括 CMake。
 
 ## <a name="pragma-support"></a>#pragma 支持
 
