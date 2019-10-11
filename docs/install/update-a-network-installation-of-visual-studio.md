@@ -1,7 +1,7 @@
 ---
 title: 更新基于网络的安装
 description: 了解如何使用 --layout 命令更新基于网络的 Visual Studio 安装
-ms.date: 03/30/2019
+ms.date: 10/07/2019
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: fd7277c4c42856ceea5e4da0a45d54613bf66c74
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2157a6142f95b6ffe34503a8ee80419fcb9ca506
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62971363"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018812"
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>更新基于网络的 Visual Studio 安装
 
@@ -42,7 +42,7 @@ ms.locfileid: "62971363"
 
 ::: moniker-end
 
-如果在文件共享上托管布局，则应更新布局的私有副本（例如 c:\vsoffline），然后下载所有已更新内容，并将其复制到文件共享（例如 \\server\products\VS）。 如果不这样做，那么任何在布局更新时运行安装程序的用户，将更有可能无法通过布局获取所有内容，因为布局并未完全更新。
+如果在文件共享上托管布局，则应更新布局的私有副本（例如 c:\VSLayout），然后下载所有已更新内容，并将其复制到文件共享（例如 \\server\products\VS）。 如果不这样做，那么任何在布局更新时运行安装程序的用户，将更有可能无法通过布局获取所有内容，因为布局并未完全更新。
 
 请浏览下面几个示例，它们说明如何创建并更新布局：
 
@@ -64,7 +64,7 @@ ms.locfileid: "62971363"
   vs_enterprise.exe --layout c:\VSLayout --passive
   ```
 
-* 添加额外工作负载和本地化语言的方法如下所示。  （此命令添加 Azure 开发工作负载。）现在，此布局中同时加入了托管桌面和 Azure。  这些工作负载中还同时加入了英语和德语的语言资源。  并且已将布局更新至最新的可用版本。
+* 添加额外工作负载和本地化语言的方法如下所示。  （此命令添加 Azure 开发工作负载。  ）现在，此布局中同时加入了托管桌面和 Azure。  这些工作负载中还同时加入了英语和德语的语言资源。  并且已将布局更新至最新的可用版本。
 
   ```cmd
   vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --lang de-DE
@@ -75,7 +75,7 @@ ms.locfileid: "62971363"
     >
     > **解决方法**：升级后运行单独的修改操作以安装缺少的组件。
 
-* 最后，有关如何在不更新版本的前提下添加其他工作负载和本地化语言的说明详见此处。 （此命令添加“ASP.NET 和 Web 开发”工作负载。）当前，托管桌面、Azure 以及 ASP.NET 和 Web 开发工作负载已加入此布局。 这些工作负载中还加入了英语、德语和法语的语言资源。  但在运行此命令时，布局不会更新至最新的可用版本。 它将维持现有版本。
+* 最后，有关如何在不更新版本的前提下添加其他工作负载和本地化语言的说明详见此处。 （此命令添加“ASP.NET 和 Web 开发”工作负载  。）当前，托管桌面、Azure 以及 ASP.NET 和 Web 开发工作负载已加入此布局。 这些工作负载中还加入了英语、德语和法语的语言资源。  但在运行此命令时，布局不会更新至最新的可用版本。 它将维持现有版本。
 
   ```cmd
   vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.NetWeb --lang fr-FR --keepLayoutVersion
@@ -87,7 +87,7 @@ ms.locfileid: "62971363"
 
 * 用户可以更新通过脱机安装文件夹安装的 Visual Studio 实例：
   * 运行 Visual Studio 安装程序。
-  * 然后，单击“更新”。
+  * 然后，单击“更新”  。
 
 ::: moniker range="vs-2017"
 

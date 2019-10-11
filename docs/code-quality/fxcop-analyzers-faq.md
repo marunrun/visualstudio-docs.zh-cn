@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3dc304d8d6bf844fb9c23f0e92efc5250da91e4d
-ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
+ms.openlocfilehash: 277155bdab713ec12daa380fc2721a31b5d932a2
+ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71975139"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72000117"
 ---
 # <a name="frequently-asked-questions-about-fxcop-and-fxcop-analyzers"></a>有关 FxCop 和 FxCop 分析器的常见问题解答
 
@@ -52,6 +52,10 @@ FxCop 分析器基于 .NET Compiler Platform（“Roslyn”）。 [将它们安�
 ## <a name="which-rules-have-been-ported-to-fxcop-analyzers"></a>哪些规则已移植到 FxCop 分析器？
 
 有关哪些旧分析规则已移植到[FxCop 分析器](install-fxcop-analyzers.md)的信息，请参阅[fxcop 规则端口状态](fxcop-rule-port-status.md)。
+
+## <a name="code-analysis-warnings-are-treated-as-errors"></a>代码分析警告被视为错误
+
+如果你的项目使用 "生成" 选项将警告视为错误，则 FxCop 分析器警告可能会显示为错误。 若要防止代码分析警告被视为错误，请按照[代码分析常见问题解答](../code-quality/analyzers-faq.md#treat-warnings-as-errors)中的步骤进行操作。
 
 ## <a name="see-also"></a>请参阅
 

@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f8d971792fb55789fb6dcd7e0d90829ac723ba6
-ms.sourcegitcommit: 8a3545329a58e446672181cfed2083f850e1ad14
+ms.openlocfilehash: 21ce539296f02599a1f8afa0344413fb556eea45
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71817508"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018775"
 ---
 # <a name="find-your-debugging-task-in-visual-studio"></a>在 Visual Studio 中查找调试任务
 
@@ -34,7 +34,10 @@ ms.locfileid: "71817508"
 
 ### <a name="pause-code-only-when-a-specific-objects-property-or-value-changes"></a>仅当特定对象的属性或值更改时暂停代码
 
-对于C++，请设置[数据断点](using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus)。 对于使用 .NET Core 3 的应用，还可以设置[数据断点](using-breakpoints.md#BKMK_set_a_data_breakpoint_managed)。
+对于C++，请设置[数据断点](using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus)。 
+::: moniker range=">= vs-2019"
+对于使用 .NET Core 3 的应用，还可以设置[数据断点](using-breakpoints.md#BKMK_set_a_data_breakpoint_managed)。
+::: moniker-end
 
 否则，仅C#对于F#和，你可以[使用条件断点跟踪对象 ID](using-breakpoints.md#using-object-ids-in-breakpoint-conditions-c-and-f)。
 

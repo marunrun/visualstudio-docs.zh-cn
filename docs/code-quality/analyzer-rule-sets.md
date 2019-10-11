@@ -1,6 +1,6 @@
 ---
-title: FxCop 分析器规则集
-ms.date: 09/23/2019
+title: FxCop 分析器规则集和 editorconfig 文件
+ms.date: 10/08/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - analyzer packages, rule sets
@@ -10,41 +10,66 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 313b578743fd734da3354989a8cee16022779242
-ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
+ms.openlocfilehash: c8602483554ebd311ab6eebb13ff8d2de00d7e09
+ms.sourcegitcommit: b23d73c86ec7720c4cd9a58050860bc559623a3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974694"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172783"
 ---
-# <a name="rule-sets-for-analyzer-packages"></a>分析器包规则集
+# <a name="enable-a-category-of-rules"></a>启用规则类别
 
-某些 NuGet 分析器包附带了预定义规则集。 例如， [CodeAnalysis. FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) NuGet 分析器包附带的规则集（从版本2.6.2 开始）根据规则的类别（如安全性、命名或性能）启用或禁用规则。 使用规则集可以轻松地快速查看与特定规则类别相关的规则冲突。
+分析器包可能包含预定义的[EditorConfig](use-roslyn-analyzers.md#set-rule-severity-in-an-editorconfig-file)和[规则集](using-rule-sets-to-group-code-analysis-rules.md)文件，使你能够快速轻松地启用一类规则，如安全性或设计规则。 [CodeAnalysis. FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) NuGet 分析器包包括两个规则集（从版本2.6.2 开始）和 EditorConfig 文件（从版本2.9.5 开始）。 通过启用特定类别的规则，可以确定目标问题和特定条件。
 
-规则集是用于标识目标问题和特定条件的代码分析规则的分组。 规则集使你可以启用或禁用规则并设置各个规则冲突的严重性。 FxCop 分析器 NuGet 包包含以下规则类别的预定义规则集：
+> [!NOTE]
+> 从 Visual Studio 2019 16.3 版开始，支持使用 EditorConfig 文件启用分析器规则并设置其严重性。
 
+FxCop 分析器 NuGet 包包含以下规则类别的预定义规则集和 EditorConfig 文件：
+
+- 所有规则
+- 数据流
 - 设计
 - 文档
-- 可维护性
+- 全球化
+- 互操作性
+- 易
 - 命名
 - 性能
+- 从 FxCop 移植
 - 可靠性
 - 安全性
 - 用法
 
-如果要从旧的 "FxCop" 分析迁移到基于 .NET Compiler Platform 的代码分析，则这些规则集使你可以继续使用[之前使用的](rule-set-reference.md)类似规则配置。
+每类规则都有一个 EditorConfig 或规则集文件，用于：
 
-## <a name="use-analyzer-package-rule-sets"></a>使用分析器包规则集
+- 启用类别中的所有规则（并禁用所有其他规则）
+- 使用每个规则的默认严重性和启用设置（并禁用所有其他规则）
 
-[安装 NuGet 分析器包](install-roslyn-analyzers.md)后，请*在其 "规则集*" 目录中找到预定义的规则集。 例如，如果引用了 `Microsoft.CodeAnalysis.FxCopAnalyzers` analyzer 包，则可以在 *% USERPROFILE% \\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers @ no__t-4 @ no__t-5version @ no__t-6\rulesets*中找到其*规则集*目录。 在此处复制一个或多个规则集，并将其粘贴到包含你的 Visual Studio 项目或直接**解决方案资源管理器**的目录中。
+> [!TIP]
+> "所有规则" 类别具有一个附加的 EditorConfig 或规则集文件，用于禁用所有规则。 使用此文件可快速删除项目中的任何分析器警告或错误。
+
+> [!TIP]
+> 如果要从旧的 "FxCop" 分析迁移到基于 .NET Compiler Platform 的代码分析，则可以使用 EditorConfig 和规则集文件继续使用与[之前使用的](rule-set-reference.md)规则相同的规则配置。
+
+## <a name="predefined-editorconfig-files"></a>预定义的 EditorConfig 文件
+
+FxCopAnalyzers 分析器包的预定义 EditorConfig 文件位于 *% USERPROFILE% \\ 中。 nuget\packages\microsoft.codeanalysis.fxcopanalyzers @ no__t-2 @ no__t-3version @ no__t-4\editorconfig*目录。 例如，启用所有安全规则的 EditorConfig 文件位于 *% USERPROFILE% \\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers @ no__t-2 @ no__t-3version @ no__t-4\editorconfig\SecurityRulesEnabled @ no__editorconfig*。
+
+将所选的 editorconfig 文件复制到项目的根目录。
+
+## <a name="predefined-rule-sets"></a>预定义规则集
+
+CodeAnalysis. FxCopAnalyzers 分析器包的预定义规则集文件位于 *% USERPROFILE% \\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers @ no__t-2 @ no__t-3version @ no__t-4\rulesets*文件夹. 例如，启用所有安全规则的规则集文件位于 *% USERPROFILE% @no__t-nuget\packages\microsoft.codeanalysis.fxcopanalyzers @ no__t-2 @ no__t-3version @ no__t-4\rulesets\SecurityRulesEnabled.ruleset*。
+
+复制一个或多个规则集，并将其粘贴到包含你的 Visual Studio 项目或直接**解决方案资源管理器**的目录中。
 
 你还可以[自定义预定义的规则集](how-to-create-a-custom-rule-set.md)，并将其设置为首选项。 例如，你可以更改一个或多个规则的严重性，使冲突在**错误列表**中显示为错误或警告。
 
-## <a name="set-the-active-rule-set"></a>设置活动规则集
+### <a name="set-the-active-rule-set"></a>设置活动规则集
 
 设置活动规则集的过程稍有不同，具体取决于你是否有 .NET Core/.net Standard 项目或 .NET Framework 项目。
 
-### <a name="net-core"></a>.NET Core
+#### <a name="net-core"></a>.NET Core
 
 若要将规则设置为在 .NET Core 或 .NET Standard 项目中进行分析，请手动将**CodeAnalysisRuleSet**属性添加到项目文件。 例如，以下代码片段将 `HelloWorld.ruleset` 设置为活动规则集。
 
@@ -55,7 +80,7 @@ ms.locfileid: "71974694"
 </PropertyGroup>
 ```
 
-### <a name="net-framework"></a>.NET Framework
+#### <a name="net-framework"></a>.NET Framework
 
 若要将规则设置为 .NET Framework 项目中的分析的活动规则集：
 
@@ -76,27 +101,6 @@ ms.locfileid: "71974694"
 ::: moniker-end
 
    现在，你只会看到在所选规则集中启用的那些规则的规则冲突。
-
-## <a name="available-rule-sets"></a>可用规则集
-
-预定义的分析器规则集包括三个规则集，这些规则会影响 package @ no__t-0one 中的所有规则，这些规则可启用所有规则，一个用于禁用所有规则，另一个用于接受每个规则的默认严重性和启用设置：
-
-- AllRulesEnabled.ruleset
-- AllRulesDisabled.ruleset
-- AllRulesDefault.ruleset
-
-此外，包中的每个规则类别都有两个规则集，如性能或安全性。 一个规则集启用类别的所有规则，一个规则集遵循类别中每个规则的默认严重性和启用设置。
-
-[CodeAnalysis. FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) NuGet 分析器包包含以下类别的规则集：
-
-- 设计
-- 文档
-- 可维护性
-- 命名
-- 性能
-- 可靠性
-- 安全性
-- 用法
 
 ## <a name="see-also"></a>请参阅
 

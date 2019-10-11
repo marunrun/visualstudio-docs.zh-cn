@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 06/06/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 4bc6cb4221d85bd43b98b2ac36c34c919937960b
-ms.sourcegitcommit: 3cda0d58c5cf1985122b8977b33a171c7359f324
+ms.openlocfilehash: 987d358abcccadf36d15593722ff55ba4b879d03
+ms.sourcegitcommit: 6ae0a289f1654dec63b412bfa22035511a2ef5ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "71126057"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71950690"
 ---
 # <a name="container-tools-build-properties"></a>容器工具生成属性
 
@@ -27,25 +27,26 @@ ms.locfileid: "71126057"
 
 可以向现有 `PropertyGroup` 元素添加属性设置，如果没有，则新建一个 `PropertyGroup` 元素。
 
-下表显示可用于容器项目的 MSBuild 属性。
+下表显示可用于容器项目的 MSBuild 属性。 NuGet 包版本应用于 [Microsoft.VisualStudio.Azure.Containers.Tools.Targets](https://www.nuget.org/packages/Microsoft.VisualStudio.Azure.Containers.Tools.Targets/)。
 
-| 属性名称 | 说明 | 默认值  |
-|---------------|-------------|----------------|
-| DockerfileFile | 描述用于生成/运行项目容器的默认 Dockerfile。 此属性也可以是路径。 | Dockerfile |
-| DockerfileTag | 生成 Docker 映像时使用的标记。 在调试过程中，将“:dev”追加到标记中。 | 使用以下规则去除非字母数字字符后的程序集名称： <br/> 如果生成的标记全部为数值，则将“image”作为前缀插入（例如 image2314） <br/> 如果生成的标记为空字符串，则将“image”用作标记。 |
-| DockerContext | 生成 Docker 映像时使用的默认上下文。 | 由 Visual Studio 设置。 |
-| ContainerDevelopmentMode | 控制是否启用“build-on-host”优化（“快速模式”调试）。  允许的值为“快速”和“常规”   。 | 快速 |
-| DockerDefaultTargetOS | 生成 Docker 映像时使用的默认目标操作系统。 | 由 Visual Studio 设置。 |
-| DockerImageLabels | 应用于 Docker 映像的默认标签集。 | com.microsoft.created-by=visual-studio;com.microsoft.visual-studio.project-name=$(MSBuildProjectName) |
-| ContainerVsDbgPath | VSDBG 调试器的路径。 | `%USERPROFILE%\vsdbg\vs2017u5` |
-| DockerfileBuildArguments | 传递给 Docker 生成命令的其他参数。 | 不适用。 |
-| DockerfileRunArguments | 传递给 Docker 运行命令的其他参数。 | 不适用。 |
-| DockerfileRunEnvironmentFiles | Docker 运行过程中应用的以分号分隔的环境文件列表。 | 不适用。 |
+| 属性名称 | 说明 | 默认值  | NuGet 包版本|
+|---------------|-------------|----------------|----------------------|
+| ContainerDevelopmentMode | 控制是否启用“build-on-host”优化（“快速模式”调试）。  允许的值为“快速”和“常规”   。 | 快速 |1.0.1872750 或更高版本|
+| ContainerVsDbgPath | VSDBG 调试器的路径。 | `%USERPROFILE%\vsdbg\vs2017u5` |1.0.1985401 或更高版本|
+| DockerDebuggeeArguments | 调试时，指示调试器将这些参数传递给已启动的可执行文件。 | 不适用于 ASP.NET .NET Framework 项目 |1.7.8 或更高版本|
+| DockerDebuggeeProgram | 调试时，指示调试器启动此可执行文件。 | 对于 .NET Core 项目：dotnet、ASP.NET .NET Framework 项目：不适用（始终使用 IIS） |1.7.8 或更高版本|
+| DockerDebuggeeKillProgram | 此命令用于在容器中终止正在运行的进程。 | 不适用于 ASP.NET .NET Framework 项目 |1.7.8 或更高版本|
+| DockerDebuggeeWorkingDirectory | 调试时，指示调试器使用此路径作为工作目录。 | C:\app (Windows) 或 /app (Linux) |1.7.8 或更高版本|
+| DockerDefaultTargetOS | 生成 Docker 映像时使用的默认目标操作系统。 | 由 Visual Studio 设置。 |1.0.1985401 或更高版本|
+| DockerImageLabels | 应用于 Docker 映像的默认标签集。 | com.microsoft.created-by=visual-studio;com.microsoft.visual-studio.project-name=$(MSBuildProjectName) |1.5.4 或更高版本|
+| DockerFastModeProjectMountDirectory|在“快速模式”中，此属性控制将项目输出目录批量安装到运行容器的位置  。|C:\app (Windows) 或 /app (Linux)|1.9.2 或更高版本|
+| DockerfileBuildArguments | 传递给 Docker 生成命令的其他参数。 | 不适用。 |1.0.1872750 或更高版本|
+| DockerfileContext | 生成 Docker 映像时使用的默认上下文。 | 由 Visual Studio 设置。 |1.0.1872750 或更高版本|
 | DockerfileFastModeStage | 在调试模式下生成图像时要使用的 Dockerfile 阶段（即目标）。 | 在 Dockerfile 中找到的第一阶段（基本） |
-| DockerDebuggeeProgram | 调试时，指示调试器启动此可执行文件。 | 对于 .NET Core 项目：dotnet、ASP.NET .NET Framework 项目：不适用（始终使用 IIS） |
-| DockerDebuggeeArguments | 调试时，指示调试器将这些参数传递给已启动的可执行文件。 | 不适用于 ASP.NET .NET Framework 项目 |
-| DockerDebuggeeWorkingDirectory | 调试时，指示调试器使用此路径作为工作目录。 | C:\app (Windows) 或 /app (Linux) |
-| DockerDebuggeeKillProgram | 此命令用于在容器中终止正在运行的进程。 | 不适用于 ASP.NET .NET Framework 项目 |
+| DockerfileFile | 描述用于生成/运行项目容器的默认 Dockerfile。 此属性也可以是路径。 | Dockerfile |1.0.1872750 或更高版本|
+| DockerfileRunArguments | 传递给 Docker 运行命令的其他参数。 | 不适用。 |1.0.1872750 或更高版本|
+| DockerfileRunEnvironmentFiles | Docker 运行过程中应用的以分号分隔的环境文件列表。 | 不适用。 |1.0.1872750 或更高版本|
+| DockerfileTag | 生成 Docker 映像时使用的标记。 在调试过程中，将“:dev”追加到标记中。 | 使用以下规则去除非字母数字字符后的程序集名称： <br/> 如果生成的标记全部为数值，则将“image”作为前缀插入（例如 image2314） <br/> 如果生成的标记为空字符串，则将“image”用作标记。 |1.0.1872750 或更高版本|
 
 ## <a name="next-steps"></a>后续步骤
 

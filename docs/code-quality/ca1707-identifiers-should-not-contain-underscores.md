@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: adfa0ccd63d0433d367b0e7278693608bb83d685
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 5ba9e8dda927edca08565b088cbde90d63443908
+ms.sourcegitcommit: 3e94d9fb6dc56fa8b23fbacd5d11cf8d6e7e18f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234274"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252568"
 ---
 # <a name="ca1707-identifiers-should-not-contain-underscores"></a>CA1707:标识符不应包含下划线
 
@@ -46,9 +46,9 @@ ms.locfileid: "71234274"
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
-不禁止显示此规则发出的警告。
+不要禁止显示生产代码的警告。 但是，对于测试代码，可以安全地禁止显示此警告。 可以通过将警告的[严重级别](use-roslyn-analyzers.md#rule-severity)设置为 "**无**" 来禁止显示此规则的警告。 
 
 ## <a name="related-rules"></a>相关规则
 
-- [CA1709标识符应采用正确的大小写](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
-- [CA1708标识符的差别应超过大小写](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+- [CA1709：标识符应采用正确的大小写 @ no__t-0
+- [CA1708：标识符的差别应超过 @ no__t-0
