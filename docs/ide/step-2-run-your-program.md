@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 772b80452c20d84b1145a5b8762365f2fe3a8e69
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: f31153dab172451681b5e1eb8292f505141c2ff9
+ms.sourcegitcommit: 6ae0a289f1654dec63b412bfa22035511a2ef5ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118836"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71950717"
 ---
 # <a name="step-2-run-your-picture-viewer-app"></a>步骤 2：运行图片查看器应用
 
@@ -55,11 +55,11 @@ Windows 窗体应用正在运行
     - 选择“Form1”  窗口上角的 X  按钮。
 
     > [!NOTE]
-    > 在从 IDE 内部运行应用时，这一操作称为“调试”，因为通常将使用此操作来查找并修复应用程序中的 bug（错误）。 虽然此应用很小，并且实际上不执行任何操作，但它仍是一个真正的程序。 您可以执行相同的过程来运行和调试其他程序。 要了解有关调试的详细信息，请参阅[初探调试器](../debugger/debugger-feature-tour.md)。
+    > 在从 IDE 内部运行应用时，这一操作称为“调试”，因为通常将使用此操作来查找并修复应用程序中的 bug（错误）。 虽然此应用很小，并且实际上未执行多少操作，但它仍是一个真正的程序。 您可以执行相同的过程来运行和调试其他程序。 要了解有关调试的详细信息，请参阅[初探调试器](../debugger/debugger-feature-tour.md)。
 
 ## <a name="next-steps"></a>后续步骤
 
-* 要转到下一个教程步骤，请参阅 **[步骤 3：设置窗体属性](../ide/step-3-set-your-form-properties.md)** 。
+* 要转到下一个教程步骤，请参阅 **[步骤 3：设置窗体属性](../ide/step-3-set-your-form-properties.md)  。
 
 * 若要返回上一个教程步骤，请参阅[步骤 1：创建 Windows 窗体应用项目](../ide/step-1-create-a-windows-forms-application-project.md)。
 

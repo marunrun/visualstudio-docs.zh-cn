@@ -12,12 +12,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 517437bb1042d052520019c10899173cbc0bf988
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 5bbca5e46ee83764a6a431ae13829a882b1d859f
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180249"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71975157"
 ---
 # <a name="learn-to-use-the-code-editor"></a>了解如何使用代码编辑器
 
@@ -58,7 +58,7 @@ ms.locfileid: "70180249"
 
 ::: moniker-end
 
-2. 在菜单栏上的“文件”菜单中，选择“新建” > “文件”    。
+2. 在菜单栏上的“文件”菜单中，选择“新建” > “文件”，或按 Ctrl+N      。
 
 3. 在“新建文件”对话框的“常规”类别中，选择“Visual C# 类”，然后选择“打开”     。
 
@@ -80,7 +80,7 @@ Visual Studio 提供了实用的代码片段，可用于快速方便地生成常
 
    你会看到 `static void Main()` 方法签名被添加到文件。 [Main()](/dotnet/csharp/programming-guide/main-and-command-args/) 方法是 C# 应用程序的入口点。
 
-对于不同编程语言，可用的代码片段不同。 依次选择“编辑” > “IntelliSense” > “插入代码片段”，然后选择语言的文件夹，即可查看该语言的可用代码片段    。 对于 C#，该列表如下所示：
+对于不同编程语言，可用的代码片段不同。 依次选择“编辑” > “IntelliSense” > “插入代码片段”，或按 Ctrl+K、Ctrl+X，然后选择语言的文件夹，即可查看该语言的可用代码片段        。 对于 C#，该列表如下所示：
 
 ![C# 代码片段列表](../media/tutorial-code-snippet-list.png)
 
