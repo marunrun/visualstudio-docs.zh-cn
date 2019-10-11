@@ -9,25 +9,25 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7619b040343720198e190f551741f565e62fa145
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: 62dd64dfe4e801f91731b1ed569e3a809156d0d1
+ms.sourcegitcommit: b23d73c86ec7720c4cd9a58050860bc559623a3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186398"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172789"
 ---
 # <a name="configure-fxcop-analyzers"></a>配置 FxCop 分析器
 
-[FxCop 分析器包](install-fxcop-analyzers.md)包含从旧分析转换为基于 .NET Compiler Platform 的代码分析器的最重要的 "FxCop" 规则。 对于某些 FxCop 规则，你可以通过[可配置的选项](fxcop-analyzer-options.md)来优化应应用的基本代码部分。 每个选项都通过将键值对添加到[EditorConfig](https://editorconfig.org)文件来指定。 配置文件可以[特定于项目,](#per-project-configuration)也可以在两个或多个项目之间[共享](#shared-configuration)。
+[FxCop 分析器包](install-fxcop-analyzers.md)包含从旧分析转换为基于 .NET Compiler Platform 的代码分析器的最重要的 "FxCop" 规则。 对于某些 FxCop 规则，你可以通过[可配置的选项](fxcop-analyzer-options.md)来优化应应用的基本代码部分。 每个选项都通过将键值对添加到[EditorConfig](https://editorconfig.org)文件来指定。 配置文件可以[特定于项目，](#per-project-configuration)也可以在两个或多个项目之间[共享](#shared-configuration)。
 
 > [!TIP]
-> 可以通过在**解决方案资源管理器**中右键单击项目, 然后选择 "**添加** > **新项**", 将 editorconfig 文件添加到项目。 在 "**添加新项**" 窗口中, 在 "搜索" 框中输入**editorconfig** 。 选择 " **Editorconfig 文件 (默认)** " 模板, 然后选择 "**添加**"。
+> 在**解决方案资源管理器**中右键单击项目，然后选择 "**添加** > **新项**"，将 editorconfig 文件添加到项目。 在 "**添加新项**" 窗口中，在 "搜索" 框中输入**editorconfig** 。 选择 " **Editorconfig 文件（默认）** " 模板，然后选择 "**添加**"。
 >
 > ![在 Visual Studio 中将 editorconfig 文件添加到项目](media/add-editorconfig-file.png)
 
 ::: moniker range=">=vs-2019"
 
-有关配置规则的严重性（例如，是错误还是警告）的信息，请参阅[在 EditorConfig 文件中设置规则严重性](use-roslyn-analyzers.md#set-rule-severity-in-an-editorconfig-file)。 或者，你可以选择一个内置[规则集](analyzer-rule-sets.md)来快速启用或禁用一类规则。
+有关配置规则的严重性（例如，是错误还是警告）的信息，请参阅[在 EditorConfig 文件中设置规则严重性](use-roslyn-analyzers.md#set-rule-severity-in-an-editorconfig-file)。 或者，可以选择一个内置的[EditorConfig 文件或规则集](analyzer-rule-sets.md)来快速启用或禁用一类规则。
 
 ::: moniker-end
 
@@ -50,7 +50,7 @@ ms.locfileid: "71186398"
 
 ### <a name="category-of-rules"></a>规则类别
 
-为规则*类别*(如命名、设计或性能) 配置选项的语法如下所示:
+为规则*类别*（如命名、设计或性能）配置选项的语法如下所示：
 
 |语法|示例|
 |-|-|
@@ -68,7 +68,7 @@ ms.locfileid: "71186398"
 
 若要为特定项目启用基于 EditorConfig 的分析器配置，请将*EditorConfig*文件添加到项目的根目录。
 
-目前, 对于在不同目录级别 (例如, 解决方案和项目级别) 存在的 "组合" editorconfig 文件, 不提供分层支持。
+目前，对于在不同目录级别（例如，解决方案和项目级别）存在的 "组合" editorconfig 文件，不提供分层支持。
 
 ## <a name="shared-configuration"></a>共享配置
 
@@ -76,7 +76,7 @@ ms.locfileid: "71186398"
 
 1. 将*editorconfig*文件保存到常见位置。
 
-2. 创建具有以下内容的*属性*文件:
+2. 创建具有以下内容的*属性*文件：
 
    ```xml
    <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -89,7 +89,7 @@ ms.locfileid: "71186398"
    </Project>
    ```
 
-3. 向 *.csproj*或 *.vbproj*文件添加一行, 以导入在上一步中创建的*属性*文件。 必须将此行置于导入 FxCop*属性*文件的任何行之前。 例如, 如果你的属性文件命名为*editorconfig。属性*:
+3. 向 *.csproj*或 *.vbproj*文件添加一行，以导入在上一步中创建的*属性*文件。 必须将此行置于导入 FxCop*属性*文件的任何行之前。 例如，如果你的属性文件命名为*editorconfig。属性*：
 
    ```xml
    ...

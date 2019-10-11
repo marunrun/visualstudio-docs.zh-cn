@@ -7,24 +7,24 @@ helpviewer_keywords:
 ms.assetid: f1429463-136e-41ed-8a75-a8dbf0b4fd89
 author: mikeblome
 ms.author: mblome
-manager: wpickett
+manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b725d0ee49590062ebdde9a1ef27f838678ccf5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fc6c7c1dbc5009129e9e793f3b8eea1f7927b2bb
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62540789"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018448"
 ---
 # <a name="c-core-guidelines-checker-reference"></a>C + + Core Guidelines 检查程序引用
 
-本部分列出了 c + + 核心准则检查程序警告。 有关代码分析的信息，请参阅[/analyze （代码分析）](/cpp/build/reference/analyze-code-analysis)和[快速启动：为 C 代码分析 /C++](../code-quality/quick-start-code-analysis-for-c-cpp.md)。
+本部分列出了 c + + 核心准则检查程序警告。 有关代码分析的信息，请参阅[/analyze （代码分析）](/cpp/build/reference/analyze-code-analysis)和 [Quick Start：C/C++@no__t 的代码分析。
 
 > [!NOTE]
 > 一些警告属于多个组，而不是所有警告都有一个完整的参考主题。
 
-## <a name="ownerpointer-group"></a>OWNER_POINTER 组
+## <a name="owner_pointer-group"></a>OWNER_POINTER 组
 
 [C26402 DONT_HEAP_ALLOCATE_MOVABLE_RESULT](C26402.md)返回限定了作用域的对象而不是堆分配，如果它具有移动构造函数。 请参阅[c + + 核心准则 R.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rr-ptr)。
 
@@ -44,7 +44,7 @@ ms.locfileid: "62540789"
 
 [C26431 DONT_TEST_NOTNULL](C26431.md)表达式 %expr%的类型已经是 gsl:: not_null。 测试它为 null。 请参阅[c + + 核心准则 F.23](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#f23-use-a-not_nullt-to-indicate-that-null-is-not-a-valid-value)。
 
-## <a name="rawpointer-group"></a>RAW_POINTER 组
+## <a name="raw_pointer-group"></a>RAW_POINTER 组
 
 [C26400 NO_RAW_POINTER_ASSIGNMENT](c26400.md)不执行分配或函数调用的结果将包含所有者\<T > 的值返回到原始指针; 使用所有者\<T > 改为。 请参阅[c + + 核心准则 I.11](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Ri-raw)。
 
@@ -65,9 +65,9 @@ ms.locfileid: "62540789"
 [C26481 NO_POINTER_ARITHMETIC](C26481.md)不使用指针算法。 请改用跨度。 请参阅[c + + 核心准则 Bounds.1](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)。
 
 [C26485 NO_ARRAY_TO_POINTER_DECAY](C26485.md)。
-表达式 %expr%:没有到指针的衰减数组。 请参阅[c + + 核心准则 Bounds.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)。
+表达式 "% expr%"：没有要进行指针衰减的数组。 请参阅[c + + 核心准则 Bounds.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)。
 
-## <a name="uniquepointer-group"></a>UNIQUE_POINTER 组
+## <a name="unique_pointer-group"></a>UNIQUE_POINTER 组
 
 [C26410 NO_REF_TO_CONST_UNIQUE_PTR](C26410.md)参数 %参数 %是指`const`唯一指针，使用 const T * 或 const T &。 请参阅[c + + 核心准则 R.32](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rr-uniqueptrparam)。
 
@@ -77,7 +77,7 @@ ms.locfileid: "62540789"
 
 [C26415 SMART_PTR_NOT_NEEDED](C26415.md)智能指针参数 %符号 %仅用于访问包含的指针。 改用 T * 或 &。 请参阅[c + + 核心准则 R.30](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rr-smartptrparam)。
 
-## <a name="sharedpointer-group"></a>SHARED_POINTER 组
+## <a name="shared_pointer-group"></a>SHARED_POINTER 组
 
 [C26414 RESET_LOCAL_SMART_PTR](C26414.md)移动、 复制、 重新分配，或重置本地智能指针 %符号 %。 请参阅[c + + 核心准则 R.5](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rr-scoped)。
 
@@ -95,21 +95,21 @@ ms.locfileid: "62540789"
 
 [C26427 NO_GLOBAL_INIT_EXTERNS](C26427.md)全局初始值设定项访问外部对象 %符号 %。 请参阅[c + + 核心准则 I.22](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#i22-avoid-complex-initialization-of-global-objects)。
 
-[C26444 NO_UNNAMED_RAII_OBJECTS](c26444.md)避免未命名的自定义构造和析构的对象。 请参阅[ES.84:无 （尝试） 声明没有名称的本地变量](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)。
+[C26444 NO_UNNAMED_RAII_OBJECTS](c26444.md)避免未命名的自定义构造和析构的对象。 请参阅 [ES：请勿（尝试）声明不带 name @ no__t 的局部变量。
 
 ## <a name="class-group"></a>类组
 
 [C26432 DEFINE_OR_DELETE_SPECIAL_OPS](C26432.md)定义或删除类型 %符号 %中的任何默认操作，如果定义或将其全部删除。 请参阅[c + + 核心准则 C.21](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c21-if-you-define-or-delete-any-default-operation-define-or-delete-them-all)。
 
-[C26433 OVERRIDE_EXPLICITLY](c26433.md)函数 '%符号 %' 应标记为 override。 请参阅[C.128:虚函数应明确指定的虚拟的重写时，或最终](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c128-virtual-functions-should-specify-exactly-one-of-virtual-override-or-final)。
+[C26433 OVERRIDE_EXPLICITLY](c26433.md)函数 '%符号 %' 应标记为 override。 请参阅 [C：虚函数应仅指定 virtual、override 或 final @ no__t 中的一个。
 
 [C26434 DONT_HIDE_METHODS](C26434.md)函数 %symbol_1 移动 %将隐藏非虚拟函数 %symbol_2%。 请参阅[c + + 核心准则 C.128](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c128-virtual-functions-should-specify-exactly-one-of-virtual-override-or-final)。
 
-[C26435 SINGLE_VIRTUAL_SPECIFICATION](c26435.md)函数 '%符号 %' 应明确指定为 virtual、 替代或 final。 请参阅[C.128:虚函数应明确指定的虚拟的重写时，或最终](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)。
+[C26435 SINGLE_VIRTUAL_SPECIFICATION](c26435.md)函数 '%符号 %' 应明确指定为 virtual、 替代或 final。 请参阅 [C：虚函数应仅指定 virtual、override 或 final @ no__t 中的一个。
 
 [C26436 NEED_VIRTUAL_DTOR](C26436.md)类型具有虚拟函数的 %符号 %需要任一公共虚拟或受保护非虚拟析构函数。 请参阅[c + + 核心准则 C.35](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c35-a-base-class-destructor-should-be-either-public-and-virtual-or-protected-and-nonvirtual)。
 
-[C26443 NO_EXPLICIT_DTOR_OVERRIDE](c26443.md)重写析构函数不应使用显式重写或虚拟说明符。 请参阅[C.128:虚函数应明确指定的虚拟的重写时，或最终](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)。
+[C26443 NO_EXPLICIT_DTOR_OVERRIDE](c26443.md)重写析构函数不应使用显式重写或虚拟说明符。 请参阅 [C：虚函数应仅指定 virtual、override 或 final @ no__t 中的一个。
 
 ## <a name="type-group"></a>组类型
 
@@ -126,7 +126,7 @@ ms.locfileid: "62540789"
 [C26440 DECLARE_NOEXCEPT](C26440.md)可将函数 '%符号 %' 声明`noexcept`。 请参阅[c + + 核心准则 F.6](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#f6-if-your-function-may-not-throw-declare-it-noexcept)。
 
 [C26447 DONT_THROW_IN_NOEXCEPT](c26447.md)该函数声明**noexcept**但调用一个函数，它可能会引发异常。
-请参阅[C++核心指导原则：F.6:如果你的函数可能不会引发，将其声明 noexcept](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#f6-if-your-function-may-not-throw-declare-it-noexcept)。
+请参阅 @no__t-C++ 0 核心准则：F. 6：如果函数可能不会引发，则将其声明 noexcept @ no__t-0。
 
 ## <a name="concurrency-group"></a>并发组
 
@@ -136,7 +136,7 @@ ms.locfileid: "62540789"
 
 [C26460 USE_CONST_REFERENCE_ARGUMENTS](c26460.md)函数 %函数 %的引用参数 %参数 %可以标记为`const`。 请参阅[c + + 核心准则 con.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rconst-ref)。
 
-[C26461 USE_CONST_POINTER_ARGUMENTS](c26461.md):函数 %函数 %的指针参数 '%参数 %' 可以标记为指向`const`。 请参阅[c + + 核心准则 con.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rconst-ref)。
+[C26461 USE_CONST_POINTER_ARGUMENTS](c26461.md)：函数 "% function%" 的指针参数 "% argument%" 可标记为指向 @no__t 的指针。 请参阅[c + + 核心准则 con.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rconst-ref)。
 
 [C26462 USE_CONST_POINTER_FOR_VARIABLE](c26462.md)指向由 %变量 %的值分配仅一次，将其标记为指向`const`。 请参阅[c + + 核心准则 con.4](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con4-use-const-to-define-objects-with-values-that-do-not-change-after-construction)。
 
@@ -180,7 +180,7 @@ ms.locfileid: "62540789"
 
 ## <a name="bounds-group"></a>边界组
 
-[C26446 USE_GSL_AT](c26446.md)更愿意使用`gsl::at()`而不是未选中的下标运算符。 请参阅[C++核心指导原则：Bounds.4:不使用标准库函数和类型不是边界检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile)。
+[C26446 USE_GSL_AT](c26446.md)更愿意使用`gsl::at()`而不是未选中的下标运算符。 请参阅 @no__t-C++ 0 核心准则：范围4：不要使用非边界选中 @ no__t 的标准库函数和类型。
 
 [C26481 NO_POINTER_ARITHMETIC](C26481.md)。
 请勿使用指针算法。 请改用跨度。 请参阅[c + + 核心准则 Bounds.1](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
@@ -189,19 +189,19 @@ ms.locfileid: "62540789"
 
 [C26483 STATIC_INDEX_OUT_OF_RANGE](c26483.md)值 %value%已超出界限 （0，%绑定的 %） 的变量 %变量 %。 仅使用数组界限内的常量表达式在数组索引。 请参阅[c + + 核心准则 Bounds.2](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
 
-[C26485 NO_ARRAY_TO_POINTER_DECAY](C26485.md)表达式 %expr%:没有到指针的衰减数组。 请参阅[c + + 核心准则 Bounds.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
+[C26485 NO_ARRAY_TO_POINTER_DECAY](C26485.md)表达式 "% expr%"：没有要进行指针衰减的数组。 请参阅[c + + 核心准则 Bounds.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
 
 ## <a name="gsl-group"></a>GSL 组
 
 [C26445 NO_SPAN_REF](c26445.md)对的引用`gsl::span`或`std::string_view`可能表示存在生存期问题。
-请参阅[C++核心准则 GSL.view:视图](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gslview-views)
+请参阅 @no__t-C++ 0 CORE 准则 GSL：视图 @ no__t-0
 
-[C26446 USE_GSL_AT](c26446.md)更愿意使用`gsl::at()`而不是未选中的下标运算符。 请参阅[C++核心指导原则：Bounds.4:不使用标准库函数和类型不是边界检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile)。
+[C26446 USE_GSL_AT](c26446.md)更愿意使用`gsl::at()`而不是未选中的下标运算符。 请参阅 @no__t-C++ 0 核心准则：范围4：不要使用非边界选中 @ no__t 的标准库函数和类型。
 
-[C26448 USE_GSL_FINALLY](c26448.md)请考虑使用`gsl::finally`如果旨在最终操作。 请参阅[C++核心指导原则：GSL.util:实用程序](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-utilities)。
+[C26448 USE_GSL_FINALLY](c26448.md)如果要执行最终操作，请考虑使用 `gsl::finally`。 请参阅 @no__t-C++ 0 核心准则：GSL. util：实用工具 @ no__t。
 
 [C26449 NO_SPAN_FROM_TEMPORARY](c26449.md) 
- `gsl::span`或`std::string_view`创建从该临时将无效时临时失效。 请参阅[C++核心指导原则：GSL.view:视图](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gslview-views)。
+ `gsl::span`或`std::string_view`创建从该临时将无效时临时失效。 请参阅 @no__t-C++ 0 核心准则：GSL：Views @ no__t。
 
 ## <a name="deprecated-warnings"></a>已弃用的警告
 

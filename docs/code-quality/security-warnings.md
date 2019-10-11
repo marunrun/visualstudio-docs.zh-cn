@@ -15,12 +15,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 52ddee2e876576508573fbadedcc407f81703e18
-ms.sourcegitcommit: 9f6f63a2d76c6e579b4b67a96ec86faba99ad1df
+ms.openlocfilehash: bf1f318d8138bb455e965d7df44ae45e192904e3
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71933120"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018762"
 ---
 # <a name="security-warnings"></a>安全警告
 
@@ -48,7 +48,7 @@ ms.locfileid: "71933120"
 |[CA2118：查看 SuppressUnmanagedCodeSecurityAttribute 用法 @ no__t-0|SuppressUnmanagedCodeSecurityAttribute 为执行使用 COM 互操作或平台调用的非托管代码的成员更改默认的安全系统行为。 该特性主要用于提高性能；不过，提高性能的同时会显著增加安全风险。|
 |[CA2119：密封满足私有接口 @ no__t 的方法|可继承的公共类型为 internal（在 Visual Basic 中为 Friend）接口提供可重写的方法实现。 若要修复与此规则的冲突，请禁止方法在程序集外重写。|
 |[CA2120：保护序列化构造函数 @ no__t|此类型的构造函数采用了 System.Runtime.Serialization.SerializationInfo 对象和 System.Runtime.Serialization.StreamingContext 对象（序列化构造函数的签名）。 此构造函数不受安全检查的保护，但类型中的一个或多个常规构造函数受保护。|
-|[CA2121：静态构造函数应为私有](../code-quality/ca2121-static-constructors-should-be-private.md)|系统在创建第一个类型实例或引用任何静态成员之前调用静态构造函数。 如果静态构造函数不是私有，则系统以外的代码可以调用它。 根据构造函数中执行的操作，这可能导致意外行为。|
+|[CA2121：静态构造函数应为私有](../code-quality/ca2121.md)|系统在创建第一个类型实例或引用任何静态成员之前调用静态构造函数。 如果静态构造函数不是私有，则系统以外的代码可以调用它。 根据构造函数中执行的操作，这可能导致意外行为。|
 |[CA2122：不要通过链接要求间接公开方法 @ no__t-0|公共或受保护成员具有链接要求，且由不执行任何安全检查的成员调用。 链接请求仅检查直接调用方的权限。|
 |[CA2123：重写链接请求应与 base @ no__t 相同-0|该规则将一个方法与其基方法（该基方法为另一个类型中的接口或虚方法）相匹配，然后比较两者的链接请求。 如果与此规则冲突，则恶意调用方只需调用不安全的方法，即可跳过该链接要求。|
 |[CA2124：外部 try @ no__t 中的有漏洞的 finally 子句|公共或受保护方法中含有 try/finally 块。 finally 块似乎要重置安全状态，并且自身不包括在某个 finally 块中。|
@@ -64,7 +64,7 @@ ms.locfileid: "71933120"
 |[CA2138：透明方法不得调用具有 SuppressUnmanagedCodeSecurity 特性 @ no__t 的方法-0|一个安全透明方法调用使用 SuppressUnmanagedCodeSecurityAttribute 特性标记的方法。|
 |[CA2139：透明方法不能使用 HandleProcessCorruptingExceptions 属性 @ no__t-0|此规则对任何透明的方法触发，并尝试通过使用 HandleProcessCorruptedStateExceptionsAttribute 特性处理进程损坏异常。 进程损坏异常是 CLR 版本4.0 异常分类（例如 <xref:System.AccessViolationException>）。 HandleProcessCorruptedStateExceptionsAttribute 特性只由安全关键方法使用，并且如果应用于透明的方法，则将被忽略。|
 |[CA2140：透明代码不得引用安全关键项 @ no__t-0|标有 SecurityTransparentAttribute 的方法调用标为 SecurityCritical 的非公共成员。 此规则分析混合透明和严重的程序集中的所有方法和类型，并将对透明代码的任何调用标记为未标记为 SecurityTreatAsSafe 的非公共关键代码。|
-|[CA2141：透明方法不得满足 LinkDemand](../code-quality/ca2141-transparent-methods-must-not-satisfy-linkdemands.md)|安全透明方法调用未用 AllowPartiallyTrustedCallersAttribute (APTCA) 特性标记的程序集中的方法，或者安全透明方法满足某个类型或方法的 LinkDemand。|
+|[CA2141：透明方法不得满足 LinkDemand](../code-quality/ca2141.md)|安全透明方法调用未用 AllowPartiallyTrustedCallersAttribute (APTCA) 特性标记的程序集中的方法，或者安全透明方法满足某个类型或方法的 LinkDemand。|
 |[CA2142：不应通过 Linkdemand @ no__t 保护透明代码-0|对于需要 LinkDemand 来访问它们的透明方法，将会引发此规则。 安全透明代码不应负责验证某个操作的安全，因此不应要求权限。|
 |[CA2143：透明方法不应使用安全要求 @ no__t-0|安全透明代码不应负责验证某个操作的安全，因此不应要求权限。 安全透明代码应使用完整的需求来作出安全决策并且安全关键代码不应依赖透明代码以进行完全的请求。|
 |[CA2144：透明代码不应从字节数组 @ no__t 加载程序集|透明代码安全检查不像关键代码的安全检查一样全面，因为透明代码不能执行安全敏感的操作。 从字节数组中加载的程序集在不透明的代码中可能不会被注意到，并且该字节数组可能包含确实需要审核的关键或更重要的安全关键代码。|
@@ -73,12 +73,39 @@ ms.locfileid: "71933120"
 |[CA2147：透明方法不能使用安全断言 @ no__t-0|此规则分析完全透明或混合透明/关键的程序集中的所有方法和类型，并标记 Assert 的任何声明性或命令性用法。|
 |[CA2149：透明方法不得调入本机代码 @ no__t-0|此规则对通过 P/Invoke 直接调用本机代码的任何透明方法引发。 违反此规则会导致级别 2 透明度模型中的 MethodAccessException，以及级别 1 透明度模型中对 UnmanagedCode 的完全要求。|
 |[CA2151：具有关键类型的字段应为安全关键 @ no__t-0|若要使用安全关键类型，引用该类型的代码必须是安全关键或安全可靠关键。 即使引用是间接的，也需如此。 因此，具有安全透明字段或安全可靠关键字段具有误导性，因为透明代码仍然无法访问该字段。|
-|[CA5122 P/Invoke 声明不应为安全临界](../code-quality/ca5122-p-invoke-declarations-should-not-be-safe-critical.md)|当方法执行安全敏感性操作时，将被标记为 SecuritySafeCritical，但透明代码使用它们也是安全的。 透明代码决不能通过通过 P/Invoke 直接调用本机代码。 因此，将 P/Invoke 标记为安全关键将使透明代码无法调用它，并且会误导安全分析。|
 |[CA2153：避免处理损坏状态异常 @ no__t-0|[损坏状态异常 (CSE)](https://msdn.microsoft.com/magazine/dd419661.aspx) 指示进程中存在内存损坏。 如果攻击者可以将攻击放置到损坏的内存区域，则捕获它们（而非允许进程崩溃）可能导致安全漏洞。|
+|[CA2300：不要使用不安全的反序列化程序 BinaryFormatter @ no__t-0|反序列化不受信任的数据时，不安全的反会很容易 攻击者可能会修改序列化的数据，使其包含意外类型，以注入具有恶意副作用的对象。|
+|[CA2301：如果不先设置 BinaryFormatter @ no__t，请不要调用 BinaryFormatter|反序列化不受信任的数据时，不安全的反会很容易 攻击者可能会修改序列化的数据，使其包含意外类型，以注入具有恶意副作用的对象。|
+|[CA2302：请确保在调用 BinaryFormatter 之前设置 BinaryFormatter @ no__t-0|反序列化不受信任的数据时，不安全的反会很容易 攻击者可能会修改序列化的数据，使其包含意外类型，以注入具有恶意副作用的对象。|
+|[CA2305：不要使用不安全的反序列化程序 LosFormatter @ no__t-0|反序列化不受信任的数据时，不安全的反会很容易 攻击者可能会修改序列化的数据，使其包含意外类型，以注入具有恶意副作用的对象。|
+|[CA2310：不要使用不安全的反序列化程序 NetDataContractSerializer @ no__t-0|反序列化不受信任的数据时，不安全的反会很容易 攻击者可能会修改序列化的数据，使其包含意外类型，以注入具有恶意副作用的对象。|
+|[CA2311：不先设置 NetDataContractSerializer，不要反序列化 @ no__t-0|反序列化不受信任的数据时，不安全的反会很容易 攻击者可能会修改序列化的数据，使其包含意外类型，以注入具有恶意副作用的对象。|
+|[CA2312：确保在反序列化 @ no__t 之前设置 NetDataContractSerializer|反序列化不受信任的数据时，不安全的反会很容易 攻击者可能会修改序列化的数据，使其包含意外类型，以注入具有恶意副作用的对象。|
+|[CA2315：不要使用不安全的反序列化程序 ObjectStateFormatter @ no__t-0|反序列化不受信任的数据时，不安全的反会很容易 攻击者可能会修改序列化的数据，使其包含意外类型，以注入具有恶意副作用的对象。|
+|[CA2321：不要使用 SimpleTypeResolver @ no__t 反序列化 JavaScriptSerializer|反序列化不受信任的数据时，不安全的反会很容易 攻击者可能会修改序列化的数据，使其包含意外类型，以注入具有恶意副作用的对象。|
+|[CA2322：在反序列化 @ no__t-0 之前，请确保 JavaScriptSerializer 未初始化为 SimpleTypeResolver|反序列化不受信任的数据时，不安全的反会很容易 攻击者可能会修改序列化的数据，使其包含意外类型，以注入具有恶意副作用的对象。|
+|[CA2326：不要使用 None @ no__t 的 TypeNameHandling 值-0|反序列化不受信任的数据时，不安全的反会很容易 攻击者可能会修改序列化的数据，使其包含意外类型，以注入具有恶意副作用的对象。|
+|[CA2327：不要使用不安全的 JsonSerializerSettings @ no__t-0|反序列化不受信任的数据时，不安全的反会很容易 攻击者可能会修改序列化的数据，使其包含意外类型，以注入具有恶意副作用的对象。|
+|[CA2328：确保 JsonSerializerSettings 为 secure @ no__t-0|反序列化不受信任的数据时，不安全的反会很容易 攻击者可能会修改序列化的数据，使其包含意外类型，以注入具有恶意副作用的对象。|
+|[CA2329：不要使用不安全配置 @ no__t 反序列化 JsonSerializer|反序列化不受信任的数据时，不安全的反会很容易 攻击者可能会修改序列化的数据，使其包含意外类型，以注入具有恶意副作用的对象。|
+|[CA2330：反序列化 @ no__t 时确保 JsonSerializer 的安全配置为-0|反序列化不受信任的数据时，不安全的反会很容易 攻击者可能会修改序列化的数据，使其包含意外类型，以注入具有恶意副作用的对象。|
+|[CA3001：查看 SQL 注入漏洞 @ no__t 的代码|使用不受信任的输入和 SQL 命令时，请注意 SQL 注入攻击。 SQL 注入攻击可以执行恶意的 SQL 命令，从而降低应用程序的安全性和完整性。|
+|[CA3002：查看 XSS 漏洞 @ no__t 的代码|当处理 web 请求中的不受信任输入时，请注意跨站点脚本（XSS）攻击。 XSS 攻击会将不受信任的输入注入原始 HTML 输出，使攻击者可以执行恶意脚本或恶意修改网页中的内容。|
+|[CA3003：查看文件路径注入漏洞 @ no__t 的代码|当处理 web 请求中的不受信任输入时，请注意在指定文件路径时使用用户控制输入。|
+|[CA3004：查看有关信息泄漏漏洞 @ no__t 的代码|泄露异常信息可让攻击者深入了解应用程序的内部机制，从而帮助攻击者找到其他漏洞来利用这些漏洞。|
+|[CA3006：查看进程命令注入漏洞 @ no__t 的代码|使用不受信任的输入时，请注意命令注入攻击。 命令注入攻击可以在基础操作系统上执行恶意命令，从而危及服务器的安全和完整性。|
+|[CA3007：查看打开重定向漏洞 @ no__t 的代码|使用不受信任的输入时，请注意开放重定向漏洞。 攻击者可以利用开放的重定向漏洞来使用您的网站来获得合法 URL 的外观，但将不受信任的访问者重定向到仿冒网站或其他恶意网页。|
+|[CA3008：查看 XPath 注入漏洞 @ no__t 的代码|使用不受信任的输入时，请注意 XPath 注入式攻击。 使用不受信任输入构造 XPath 查询时，攻击者可能会恶意地操作查询以返回意外的结果，并可能会泄漏所查询的 XML 的内容。|
+|[CA3009：查看 XML 注入漏洞 @ no__t 的代码|使用不受信任的输入时，请注意 XML 注入攻击。|
+|[CA3010：查看 XAML 注入漏洞 @ no__t 的代码|使用不受信任的输入时，请注意 XAML 注入攻击。 XAML 是一种直接表示对象实例化和执行的标记语言。 这意味着在 XAML 中创建的元素可以与系统资源（例如，网络访问和文件系统 IO）交互。|
+|[CA3011：查看 DLL 注入漏洞 @ no__t 的代码|使用不受信任的输入时，请注意加载不受信任的代码。 如果你的 web 应用程序加载不受信任的代码，攻击者可能能够将恶意 Dll 注入到你的进程中并执行恶意代码。|
+|[CA3012：查看适用于 regex 注入漏洞 @ no__t 的代码|使用不受信任的输入时，请注意 regex 注入式攻击。 攻击者可以使用 regex 注入来恶意地修改正则表达式，以使 regex 与意外结果匹配，或使 regex 消耗过多的 CPU，导致拒绝服务攻击。|
+|[CA3061：不按 URL 添加架构 @ no__t-0|不要使用 Add 方法的 unsafe 重载，因为这可能会导致危险的外部引用。|
 |[CA3075：非安全 DTD 处理 @ no__t-0|如果使用不安全的 DTDProcessing 实例或引用外部实体源，分析器可能会接受不受信任的输入并将敏感信息泄露给攻击者。|
 |[CA3076：不安全的 XSLT 脚本执行 @ no__t-0|如果在 .NET 应用程序中不安全地执行可扩展样式表语言转换 (XSLT)，处理器可能会解析不受信任的 URI 引用，这种引用会把敏感信息泄露给攻击者，从而导致拒绝服务和跨站点攻击。|
 |[CA3077：API 设计、XML 文档和 XML 文本读取器中的不安全处理 @ no__t-0|当设计派生自 XMLDocument 和 XMLTextReader 的 API 时，请注意 DtdProcessing。 当引用或解析外部实体源或设置 XML 中的不安全值时，使用不安全的 DTDProcessing 实例可能会导致信息泄露。|
 |[CA3147：用 ValidateAntiForgeryToken @ no__t 标记谓词处理程序-0|设计 ASP.NET MVC 控制器时，请注意跨站点请求伪造攻击。 跨站点请求伪造攻击可以将经过身份验证的用户的恶意请求发送到 ASP.NET MVC 控制器。|
+|[CA5122 P/Invoke 声明不应为安全临界](../code-quality/ca5122.md)|当方法执行安全敏感性操作时，将被标记为 SecuritySafeCritical，但透明代码使用它们也是安全的。 透明代码决不能通过通过 P/Invoke 直接调用本机代码。 因此，将 P/Invoke 标记为安全关键将使透明代码无法调用它，并且会误导安全分析。|
 |[CA5361：不要禁止 SChannel 使用强加密 @ no__t-0|将 @no__t 设置为 `true` 受损传出传输层安全性（TLS）连接中使用的加密。 较弱的加密可能会危及应用程序与服务器之间通信的机密性，使攻击者更容易窃听敏感数据。|
 |[CA5363：不要禁用请求验证 @ no__t-0|请求验证是 ASP.NET 中的一项功能，用于检查 HTTP 请求并确定这些请求是否包含可能导致注入攻击（包括跨站点脚本）的潜在危险内容。|
 |[CA5364：不要使用已弃用的安全协议 @ no__t-0|传输层安全性（TLS）保护计算机之间的通信，最常见的是通过超文本传输协议（HTTPS）进行通信。 较早的 TLS 协议版本不如 TLS 1.2 和 TLS 1.3 安全，更有可能出现新的漏洞。 避免旧协议版本来最大程度地降低风险。|

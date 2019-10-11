@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 09e1b9f7-5916-4ed6-a001-5c2d7e710682
 author: mikeblome
 ms.author: mblome
-manager: wpickett
+manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: ad28cae5e548a35e0166e1d8ed451450264241f7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 648d00cd59d056e0874c91338a39667088d93e2e
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62820787"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018441"
 ---
 # <a name="sample-c-project-for-code-analysis"></a>用于代码分析的示例 C++ 项目
 
@@ -28,43 +28,43 @@ ms.locfileid: "62820787"
 
 - 名为 Annotations 的静态库项目。
 
-这些过程还提供了标头代码以及静态库的 .cpp 文件。
+这些过程还提供了标头代码以及静态库的 .cpp 文件  。
 
 ## <a name="create-the-cppdemo-solution-and-the-codedefects-project"></a>创建 CppDemo 解决方案和 CodeDefects 项目
 
-1. 单击“文件”菜单，指向“新建”，然后单击“新建项目”。
+1. 单击“文件”菜单，指向“新建”，然后单击“新建项目”    。
 
-2. 在“项目类型”树列表中，如果 Visual C++ 不是 VS 中的默认语言，则展开“其他语言”。
+2. 在“项目类型”树列表中，如果 Visual C++ 不是 VS 中的默认语言，则展开“其他语言”   。
 
-3. 展开“Visual C++”，然后单击“常规”。
+3. 展开“Visual C++”，然后单击“常规”   。
 
-4. 在“模板”中单击“空项目”。
+4. 在“模板”中单击“空项目”   。
 
-5. 在“名称”文本框中，键入“CodeDefects”。
+5. 在“名称”文本框中，键入“CodeDefects”   。
 
-6. 选择“为解决方案创建目录”复选框。
+6. 选择“为解决方案创建目录”复选框  。
 
-7. 在“解决方案名称”文本框中，键入“CppDemo”。
+7. 在“解决方案名称”文本框中，键入“CppDemo”   。
 
 ## <a name="configure-the-codedefects-project-as-a-static-library"></a>将 CodeDefects 项目配置为静态库
 
-1. 在“解决方案资源管理器”中右键单击 CodeDefects，再单击“属性”。
+1. 在“解决方案资源管理器”中右键单击 CodeDefects，再单击“属性”   。
 
-2. 展开“配置属性”，然后单击“常规”。
+2. 展开“配置属性”，然后单击“常规”   。
 
-3. 在“常规”列表中，选择“目标扩展”旁边的列中的文本，然后键入“.lib”。
+3. 在“常规”列表中，选择“目标扩展”旁边的列中的文本，然后键入“.lib”    。
 
-4. 在“项目默认值”中，单击“配置类型”旁边的列，然后单击“静态库(.lib)”。
+4. 在“项目默认值”中，单击“配置类型”旁边的列，然后单击“静态库(.lib)”    。
 
 ## <a name="add-the-header-and-source-file-to-the-codedefects-project"></a>将标头和源文件添加到 CodeDefects 项目
 
-1. 在解决方案资源管理器中，展开 CodeDefects，右键单击“头文件”，单击“添加”，然后单击“新项”。
+1. 在解决方案资源管理器中，展开 CodeDefects，右键单击“头文件”，单击“添加”，然后单击“新项”     。
 
-2. 在“添加新项”对话框中，单击“代码”，然后单击“头文件(.h)”。
+2. 在“添加新项”对话框中，单击“代码”，然后单击“头文件(.h)”    。
 
-3. 在“名称”框中，键入“Bug.h”，然后单击“添加”。
+3. 在“名称”框中，键入“Bug.h”，然后单击“添加”    。
 
-4. 复制以下代码并将其粘贴到 Visual Studio 编辑器中的“Bug.h”文件中。
+4. 复制以下代码并将其粘贴到 Visual Studio 编辑器中的“Bug.h”文件中  。
 
     ```cpp
     #include <windows.h>
@@ -86,13 +86,13 @@ ms.locfileid: "62820787"
     const int ACCOUNT_DOMAIN_LEN = 128;
     ```
 
-5. 在解决方案资源管理器中，右键单击“源文件”，指向“新建”，然后单击“新项”。
+5. 在解决方案资源管理器中，右键单击“源文件”，指向“新建”，然后单击“新项”    。
 
-6. 在“添加新项”对话框中，单击“C++ 文件(.cpp)”
+6. 在“添加新项”对话框中，单击“C++ 文件(.cpp)”  
 
-7. 在“名称”框中，键入“Bug.cpp”，然后单击“添加”。
+7. 在“名称”框中，键入“Bug.cpp”，然后单击“添加”    。
 
-8. 复制以下代码并将其粘贴到 Visual Studio 编辑器中的 Bug.cpp 文件中。
+8. 复制以下代码并将其粘贴到 Visual Studio 编辑器中的 Bug.cpp 文件中  。
 
     ```cpp
     #include <stdlib.h>
@@ -152,33 +152,33 @@ ms.locfileid: "62820787"
     }
     ```
 
-9. 单击“文件”菜单，然后单击“全部保存”。
+9. 单击“文件”菜单，然后单击“全部保存”   。
 
 ## <a name="add-the-annotations-project-and-configure-it-as-a-static-library"></a>添加 Annotations 项目并将其配置为静态库
 
-1. 在解决方案资源管理器中，单击“CppDemo”，指向“添加”，然后单击“新项目”。
+1. 在解决方案资源管理器中，单击“CppDemo”，指向“添加”，然后单击“新项目”    。
 
-2. 在“添加新项目”对话框中，展开 Visual C++，单击“常规”，然后单击“空项目”。
+2. 在“添加新项目”对话框中，展开 Visual C++，单击“常规”，然后单击“空项目”    。
 
-3. 在“名称”文本框中，键入“Annotations”，然后单击“添加”。
+3. 在“名称”文本框中，键入“Annotations”，然后单击“添加”    。
 
-4. 在解决方案资源管理器中，右键单击“Annotations”，然后单击“属性”。
+4. 在解决方案资源管理器中，右键单击“Annotations”，然后单击“属性”   。
 
-5. 展开“配置属性”，然后单击“常规”。
+5. 展开“配置属性”，然后单击“常规”   。
 
-6. 在“常规”列表中，选择“目标扩展”旁边的列中的文本，然后键入“.lib”。
+6. 在“常规”列表中，选择“目标扩展”旁边的列中的文本，然后键入“.lib”    。
 
-7. 在“项目默认值”中，单击“配置类型”旁边的列，然后单击“静态库(.lib)”。
+7. 在“项目默认值”中，单击“配置类型”旁边的列，然后单击“静态库(.lib)”    。
 
 ## <a name="add-the-header-file-and-source-file-to-the-annotations-project"></a>将头文件和源文件添加到 Annotations 项目
 
-1. 在解决方案资源管理器中，展开“Annotations”，右键单击“头文件”，单击“添加”，然后单击“新项”。
+1. 在解决方案资源管理器中，展开“Annotations”，右键单击“头文件”，单击“添加”，然后单击“新项”     。
 
-2. 在“添加新项”对话框中，单击“头文件(.h)”。
+2. 在“添加新项”对话框中，单击“头文件(.h)”   。
 
-3. 在“名称”框中，键入“annotations.h”，然后单击“添加”。
+3. 在“名称”框中，键入“annotations.h”，然后单击“添加”    。
 
-4. 复制以下代码并将其粘贴到 Visual Studio 编辑器中的“annotations.h”文件中。
+4. 复制以下代码并将其粘贴到 Visual Studio 编辑器中的“annotations.h”文件中  。
 
     ```cpp
     #include <CodeAnalysis/SourceAnnotations.h>
@@ -195,13 +195,13 @@ ms.locfileid: "62820787"
 
     ```
 
-5. 在解决方案资源管理器中，右键单击“源文件”，指向“新建”，然后单击“新项”。
+5. 在解决方案资源管理器中，右键单击“源文件”，指向“新建”，然后单击“新项”    。
 
-6. 在“添加新项”对话框中，单击“代码”，然后单击“C++文件(.cpp)”
+6. 在“添加新项”对话框中，单击“代码”，然后单击“C++文件(.cpp)”   
 
-7. 在“名称”框中，键入“annotations.cpp”，然后单击“添加”。
+7. 在“名称”框中，键入“annotations.cpp”，然后单击“添加”    。
 
-8. 复制以下代码并将其粘贴到 Visual Studio 编辑器中的“annotations.cpp”文件中。
+8. 复制以下代码并将其粘贴到 Visual Studio 编辑器中的“annotations.cpp”文件中  。
 
     ```cpp
     #include <CodeAnalysis/SourceAnnotations.h>
@@ -230,4 +230,4 @@ ms.locfileid: "62820787"
 
     ```
 
-9. 单击“文件”菜单，然后单击“全部保存”。
+9. 单击“文件”菜单，然后单击“全部保存”   。

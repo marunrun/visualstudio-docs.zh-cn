@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: a16e47d0-6f3e-4ed6-8883-459b2874e9a4
 author: mikeblome
 ms.author: mblome
-manager: wpickett
+manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e968879e10456137033f53d57f7351de5522fe46
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 6e2a11d62500424db7fd1969ade840b2d3484a83
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68923780"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018262"
 ---
 # <a name="using-sal-annotations-to-reduce-cc-code-defects"></a>使用 SAL 批注以减少 C/C++ 代码缺陷
-SAL 是 Microsoft 源代码批注语言。 通过使用源代码批注, 你可以使代码的意图清晰。 这些批注还启用了自动化静态分析工具, 以便更准确地分析代码, 但使用的误报和漏报都要少得多。
+SAL 是 Microsoft 源代码批注语言。 通过使用源代码批注，你可以使代码的意图清晰。 这些批注还启用了自动化静态分析工具，以便更准确地分析代码，但使用的误报和漏报都要少得多。
 
-文档的此部分中的文章讨论 SAL 的各个方面, 提供 SAL 语法参考, 并提供其用法的示例。
+文档的此部分中的文章讨论 SAL 的各个方面，提供 SAL 语法参考，并提供其用法的示例。
 
 - [了解 SAL](../code-quality/understanding-sal.md)
 
@@ -46,7 +46,7 @@ SAL 是 Microsoft 源代码批注语言。 通过使用源代码批注, 你可�
 
 - [指定何时以及在何处应用批注](../code-quality/specifying-when-and-where-an-annotation-applies.md)
 
-     列出指定其他 SAL 批注的条件或范围 (位置) 的 SAL 批注。
+     列出指定其他 SAL 批注的条件或范围（位置）的 SAL 批注。
 
 - [内部函数](../code-quality/intrinsic-functions.md)
 

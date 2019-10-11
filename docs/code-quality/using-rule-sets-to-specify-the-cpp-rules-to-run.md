@@ -4,15 +4,15 @@ ms.date: 04/28/2018
 ms.topic: conceptual
 author: mikeblome
 ms.author: mblome
-manager: wpickett
+manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e14602c3eeb204255f699b0ff07164616da4a25
-ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
-ms.translationtype: MT
+ms.openlocfilehash: 061b52a683992bdc2fe5792ab05e00f788434a0f
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974922"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018226"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>使用规则集指定要运行C++的规则
 
@@ -36,7 +36,7 @@ ms.locfileid: "71974922"
 
      \- 或 -
 
-   - 选择 **\<Browse >** ，以指定不在列表中的现有规则集。
+   - 选择**\<Browse >** ，以指定不在列表中的现有规则集。
 
 4. 选择 "**打开**" 以在规则集编辑器中显示规则。
 
@@ -62,7 +62,7 @@ ms.locfileid: "71974922"
 
 - 若要折叠所有组中的规则，请选择 "**全部折叠**"。
 
-- 若要更改对规则进行分组所依据的字段，请从 "**分组依据**" 列表中选择字段。 若要显示未分组的规则，请选择 **\<None >** "。
+- 若要更改对规则进行分组所依据的字段，请从 "**分组依据**" 列表中选择字段。 若要显示未分组的规则，请选择**\<None >**"。
 
 - 若要在规则列中添加或删除字段，请选择**列选项**。
 

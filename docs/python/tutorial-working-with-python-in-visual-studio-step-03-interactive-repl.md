@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3576e34b52e524b88300c089c2beda0be6ed0e28
-ms.sourcegitcommit: b56dc6fadc6c924beed36bb4c2ccc16cf6bcfa1c
+ms.openlocfilehash: 15e0b45fd77096ba2227391736aad5c895014d1c
+ms.sourcegitcommit: 0554b59a2a251661e56824fb9cd6e9b1f326cef1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68740023"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71831875"
 ---
 # <a name="step-3-use-the-interactive-repl-window"></a>步骤 3：使用交互式 REPL 窗口
 
@@ -54,7 +54,7 @@ ms.locfileid: "68740023"
         return ' ' * int(20 * cos(radians(x)) + 20) + 'o'
     ```
 
-1. 仅选择 .py  文件中的 `import` 和 `from` 语句，单击鼠标右键，选择“发送到交互窗口”  （或按 Ctrl  ++Enter  ）。 代码片段会立即粘贴至交互  窗口并运行。 现在选择 `make_dot_string` 函数，重复相同的命令，即再次运行该代码片段。 由于代码定义了一个函数，因此可通过数次调用它来快速测试该函数：
+1. 选择 .py 文件中的 `import`、`from` 和 `make_dot_string` 函数语句，单击鼠标右键，选择“发送到交互窗口”（或按 Ctrl+Enter）     。 代码片段会立即粘贴至交互  窗口并运行。 现在选择 `make_dot_string` 函数，重复相同的命令，即再次运行该代码片段。 由于代码定义了一个函数，因此可通过数次调用它来快速测试该函数：
 
     ![将代码发送到交互窗口并测试它](media/vs-getting-started-python-14-interactive4.png)
 

@@ -29,22 +29,22 @@ f1_keywords:
 ms.assetid: 07769c25-9b97-4ab7-b175-d1c450308d7a
 author: mikeblome
 ms.author: mblome
-manager: wpickett
+manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 68e57a10b9bd36b07a2d4993626604f2a00558ca
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 976a66901ae60bd6edc053d5acbb516aa87c1a7c
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68919579"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72015991"
 ---
 # <a name="annotating-locking-behavior"></a>对锁定行为进行批注
 若要避免多线程程序中的并发 Bug，请遵循适当的锁定规则并使用 SAL 批注。
 
 并发 Bug 很难重现、诊断和调试，因为它们是非确定性的。 有关线程交错的推理是最困难的，如果设计包含多个线程的代码体，这会变得不切实际。 因此，最好在多线程程序中遵循锁定规则。 例如，在获取多个锁时遵守锁定顺序可以帮助避免死锁，在访问共享资源之前获取适当的保护锁有助于避免争用条件。
 
-遗憾的是，看似简单的锁定规则在实践中会很难遵循。 当今编程语言和编译器的根本限制是, 它们不直接支持并发要求的规范和分析。 程序员必须依赖于非正式的代码批注来表示他们对于使用锁定的意图。
+遗憾的是，看似简单的锁定规则在实践中会很难遵循。 当今编程语言和编译器的根本限制是，它们不直接支持并发要求的规范和分析。 程序员必须依赖于非正式的代码批注来表示他们对于使用锁定的意图。
 
 并发 SAL 批注用于帮助您指定锁定的副作用、锁定责任、数据保护、锁的顺序层次结构，以及其他预期的锁定行为。 通过将隐式规则设置为显式，SAL 并发批注可提供一致方式，用于说明代码使用锁定规则的方式。 并发批注还可增强代码分析工具查找争用条件、死锁、不匹配的同步操作和其他细微并发错误的能力。
 
@@ -106,16 +106,16 @@ SAL 支持许多不同类型的锁定基元，例如临界区、互斥锁、自�
 |`_Write_guarded_by_(expr)`|批注变量并表明变量每次受到修改时，`expr` 命名的锁对象的锁计数至少为 1。|
 
 ## <a name="smart-lock-and-raii-annotations"></a>Smart Lock 和 RAII 批注
-智能锁通常会包装本机锁并管理其生存期。 下表列出了可用于支持`move`语义的智能锁和 RAII 编码模式的批注。
+智能锁通常会包装本机锁并管理其生存期。 下表列出了可与智能锁定和 RAII 编码模式结合使用的批注，支持 `move` 语义。
 
 |批注|描述|
 |----------------|-----------------|
 |`_Analysis_assume_smart_lock_acquired_`|通知分析器假设已获取智能锁定。 此批注需要引用锁类型作为其参数。|
 |`_Analysis_assume_smart_lock_released_`|通知分析器假设已释放智能锁定。 此批注需要引用锁类型作为其参数。|
-|`_Moves_lock_(target, source)`|描述`move constructor`将锁定状态`source`从对象传输到的`target`操作。 被`target`视为新构造的对象, 因此它之前的任何状态都将丢失并替换`source`为状态。 `source`还将重置为无锁计数或别名目标的干净状态, 但指向它的别名仍保持不变。|
-|`_Replaces_lock_(target, source)`|描述`move assignment operator`在从源传输状态之前释放目标锁的语义。 这可以被视为后跟的组合`_Moves_lock_(target, source)`。 `_Releases_lock_(target)`|
-|`_Swaps_locks_(left, right)`|描述假设对象`swap` `left` 并`right`交换其状态的标准行为。 交换状态包括 "锁计数" 和 "别名目标" (如果存在)。 指向和`left` `right`对象的别名保持不变。|
-|`_Detaches_lock_(detached, lock)`|描述锁定包装类型允许取消关联遭拒与其包含的资源的方案。 这类似于其内部`std::unique_ptr`指针的工作方式: 它允许程序员提取指针并使其智能指针容器处于干净状态。 支持类似的`std::unique_lock`逻辑, 并且可在自定义锁包装器中实现。 分离的锁将保留其状态 (如果有), 而包装将重置为包含零个锁计数, 而不会保留其自己的别名。 锁定计数没有操作 (释放和获取)。 此批注的行为完全`_Moves_lock_`相同, 只不过分离的参数`return`应为而`this`不是。|
+|`_Moves_lock_(target, source)`|介绍 `move constructor` 操作，该操作将锁定状态从 @no__t 对象传输到 `target`。 @No__t 将被视为一个新构造的对象，因此它之前的任何状态都将丢失并替换为 `source` 状态。 @No__t 还将重置为无锁计数或别名目标的干净状态，但指向它的别名仍保持不变。|
+|`_Replaces_lock_(target, source)`|介绍 `move assignment operator` 语义，其中在从源传输状态之前释放目标锁。 这可以被视为 @no__t `_Moves_lock_(target, source)` 的组合。|
+|`_Swaps_locks_(left, right)`|描述标准 `swap` 行为，该行为假设对象 `left` 和 `right` 交换其状态。 交换状态包括 "锁计数" 和 "别名目标" （如果存在）。 指向 @no__t 0 和 @no__t 1 对象的别名保持不变。|
+|`_Detaches_lock_(detached, lock)`|描述锁定包装类型允许取消关联遭拒与其包含的资源的方案。 这与 `std::unique_ptr` 与其内部指针的工作方式类似：它允许程序员提取指针并使其智能指针容器处于干净状态。 @No__t-0 支持类似的逻辑，可以在自定义锁包装器中实现。 分离的锁将保留其状态（如果有），而包装将重置为包含零个锁计数，而不会保留其自己的别名。 锁定计数没有操作（释放和获取）。 此批注的行为与 `_Moves_lock_` 完全相同，不同之处在于，分离的参数应 `return` 而不是 `this`。|
 
 ## <a name="see-also"></a>请参阅
 

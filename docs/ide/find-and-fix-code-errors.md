@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 30ee7364ba925eebb18d66fc8ede2b7983d46116
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 331c346e7322543bef0814818a776c705b773846
+ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211366"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72000190"
 ---
 # <a name="make-code-work-in-visual-studio"></a>确保代码在 Visual Studio 中正常运行
 
@@ -74,7 +74,7 @@ Visual Studio 提供了一组功能强大的项目构建和调试工具。 在�
 
 ### <a name="c-and-visual-basic-code-analysis"></a>C# 和 Visual Basic 代码分析
 
-Visual Studio 包括一系列内置的 [.NET Compiler Platform 分析器](../code-quality/roslyn-analyzers-overview.md)，这些分析器在用户键入时检查 C# 和 Visual Basic 代码。 可以将其他分析器作为 Visual Studio 扩展或 NuGet 包安装。 如果发现违反规则，将同时在代码编辑器（冲突代码下方有波浪线）和错误列表中报告  。
+Visual Studio 包括一系列内置的 [.NET Compiler Platform 分析器](../code-quality/roslyn-analyzers-overview.md)，这些分析器在用户键入时检查 C# 和 Visual Basic 代码。 可以将其他分析器作为 Visual Studio 扩展或 NuGet 包安装。 如果发现规则冲突，将同时在错误列表和代码编辑器（违规代码下方有波浪线）中报告。
 
 ### <a name="c-code-analysis"></a>C++ 代码分析
 

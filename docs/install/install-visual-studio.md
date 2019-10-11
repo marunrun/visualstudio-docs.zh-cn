@@ -2,7 +2,7 @@
 title: 安装 Visual Studio
 titleSuffix: ''
 description: 了解如何逐步安装 Visual Studio。
-ms.date: 04/16/2019
+ms.date: 10/07/2019
 ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +20,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 5d83086720a94c23d0ceb3f07d9398a7d5256f68
-ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
+ms.openlocfilehash: 6cd91fadea397955b756461383ed8e17030b4c3b
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095369"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018849"
 ---
 # <a name="install-visual-studio"></a>安装 Visual Studio
 
@@ -82,7 +82,7 @@ ms.locfileid: "71095369"
 
 1. 重新启动。 重新启动可确保挂起的任何安装或更新都不会影响 Visual Studio 安装。
 
-1. 释放空间。 通过运行磁盘清理应用程序等方式，从 %SystemDrive% 删除不需要的文件和应用程序。 
+1. 释放空间。 通过运行磁盘清理应用程序等方式，从 %SystemDrive% 删除不需要的文件和应用程序。
 
 ::: moniker-end
 
@@ -94,22 +94,23 @@ ms.locfileid: "71095369"
 
 ::: moniker range="vs-2019"
 
-有关同时运行 Visual Studio 2019 和 Visual Studio 先前版本的问题，请参阅 [Visual Studio 2019 平台目标和兼容性](/visualstudio/releases/2019/compatibility/)页面。
+有关使用 Visual Studio 2019 并排运行 Visual Studio 先前版本的问题，请参阅 [Visual Studio 2019 平台目标和兼容性](/visualstudio/releases/2019/compatibility/)页面。
 
 ::: moniker-end
 
 ## <a name="step-2---download-visual-studio"></a>第 2 步 - 下载 Visual Studio
 
-接下来，下载 Visual Studio 引导程序文件。 为此，请选择下面的按钮，选择所需的 Visual Studio 版本，选择“保存”，然后选择“打开文件夹”   。
+接下来，下载 Visual Studio 引导程序文件。
 
 ::: moniker range="vs-2017"
 
- > [!div class="button"]
- > [下载 Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)
+若要获取 Visual Studio 2017 的引导程序，请参阅 [Visual Studio 早期版本](https://visualstudio.microsoft.com/vs/older-downloads/)下载页，获取关于如何执行此操作的详细信息。
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
+
+为此，请选择下面的按钮，选择所需的 Visual Studio 版本，选择“保存”，然后选择“打开文件夹”   。
 
  > [!div class="button"]
  > [下载 Visual Studio](https://visualstudio.microsoft.com/downloads)
@@ -134,7 +135,7 @@ ms.locfileid: "71095369"
 
 ## <a name="step-4---choose-workloads"></a>第 4 步 - 选择工作负载
 
-在安装程序完成安装后，可通过该程序，选择所需的功能集或工作负载，实现自定义安装。 操作方法如下。
+安装该安装程序后，可以通过选择所需的功能集或工作负载来使用该程序自定义安装。 操作方法如下。
 
  ::: moniker range="vs-2017"
 
@@ -167,9 +168,9 @@ ms.locfileid: "71095369"
 > [!TIP]
 > 在安装之后，可以随时安装最初未安装的工作负荷或组件。 如果已打开 Visual Studio，请转到“工具”   > “获取工具和功能...”  ，这会打开 Visual Studio 安装程序。 或者，从“开始”菜单打开“Visual Studio 安装程序”  。 在此处可以选择要安装的工作负载或组件。 然后，选择“修改”  。
 
-## <a name="step-5---choose-individual-components-optional"></a>第 5 步 - 选择单个组件（可选）
+## <a name="step-5---choose-individual-components-optional"></a>第 5 步 - 选择各个组件（可选）
 
-如果不想使用工作负载功能来自定义 Visual Studio 安装，或者想要添加比工作负载安装更多的组件，可通过从“单个组件”选项卡上安装或添加单个组件来完成此操作  。选择所需组件，然后按照提示进行操作。
+如果不想使用工作负载功能来自定义 Visual Studio 安装，或者想要添加比工作负载安装更多的组件，可通过从“各个组件”选项卡上安装或添加各个组件来完成此操作  。选择所需组件，然后按照提示进行操作。
 
 ::: moniker range="vs-2017"
 
@@ -250,7 +251,7 @@ ms.locfileid: "71095369"
 
 1. 在搜索框中，输入要创建的应用类型，查看可用模板列表。 模板列表取决于在安装期间选择的工作负载。 若要查看其他模板，请选择其他工作负载。
 
-   此外，还可使用“语言”下拉列表筛选搜索特定编程语言  。 也可使用“平台”列表和“项目类型”列表进行筛选   。 
+   此外，还可使用“语言”下拉列表筛选搜索特定编程语言  。 也可使用“平台”列表和“项目类型”列表进行筛选   。
 
 1. Visual Studio 会打开新的项目，然后便可开始编码！
 

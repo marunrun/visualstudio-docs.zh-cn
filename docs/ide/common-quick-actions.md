@@ -11,12 +11,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ceedf18b936c0b1e8553ceb3bb1fdbc75035dfa
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 600fb1b4abea2103c28e3a5067d640228d68b755
+ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551442"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72000140"
 ---
 # <a name="common-quick-actions"></a>常见快速操作
 
@@ -30,7 +30,7 @@ ms.locfileid: "69551442"
 
 ### <a name="correct-misspelled-symbol-or-keyword"></a>更正拼写错误的符号或关键字
 
-如果在 Visual Studio 中意外拼错类型或关键字，此“快速操作”会自动更正拼写错误。 灯泡菜单 ***“将* *‘拼写错误的单词’更改为*** ‘正确单词’”中会显示这些项。 例如:
+如果在 Visual Studio 中意外拼错类型或关键字，此“快速操作”会自动更正拼写错误。 灯泡菜单“将‘\<拼写错误的单词>’更改为‘\<正确单词>’”中会显示这些项  。 例如:
 
 ```csharp
 // Before
@@ -58,9 +58,9 @@ Function MyFunction as Integer
 End Function
 ```
 
-| 错误 ID | 适用的语言 | 支持的版本 |
-| ------- | -------------------- | ---------------- |
-| CS0103、BC30002 | C# 和 Visual Basic | Visual Studio 2015 Update 2 |
+| 错误 ID | 适用的语言 |
+| - | - |
+| CS0103、BC30002 | C# 和 Visual Basic |
 
 ### <a name="resolve-git-merge-conflict"></a>解决 git 合并冲突
 
@@ -90,7 +90,7 @@ private void MyMethod()
 
 | 错误 ID | 适用的语言 | 支持的版本 |
 | ------- | -------------------- | ---------------- |
-| CS8300、BC37284 | C# 和 Visual Basic | Visual Studio 2017 版本 15.3 |
+| CS8300、BC37284 | C# 和 Visual Basic | Visual Studio 2017 版本 15.3 及更高版本 |
 
 ## <a name="actions-that-remove-unnecessary-code"></a>删除不必要代码的操作
 
@@ -99,8 +99,8 @@ private void MyMethod()
 “删除不必要的 using/Import”  快速操作将删除当前文件中任何未使用的 `using` 和 `Import` 语句。 选择此项后，将删除未使用的命名空间导入。
 
 | 适用的语言 | 支持的版本 |
-| -------------------- | ---------------- |
-| C# 和 Visual Basic | Visual Studio 2015 RTW |
+| - | - |
+| C# 和 Visual Basic | Visual Studio 2015 及更高版本 |
 
 ### <a name="remove-unnecessary-cast"></a>删除不必要的 cast
 
@@ -128,7 +128,7 @@ Dim number as Integer = 3
 
 | 诊断 ID | 适用的语言 | 支持的版本 |
 | ------- | -------------------- | ---------------- |
-| IDE0004 | C# 和 Visual Basic | Visual Studio 2015 RTW |
+| IDE0004 | C# 和 Visual Basic | Visual Studio 2015 及更高版本 |
 
 ### <a name="remove-unused-variables"></a>删除未使用的变量
 
@@ -155,7 +155,7 @@ public MyMethod()
 
 | 诊断 ID | 适用的语言 | 支持的版本 |
 | ------- | -------------------- | ---------------- |
-| CS0219、BC42024 | C# 和 Visual Basic | Visual Studio 2017 版本 15.3 |
+| CS0219、BC42024 | C# 和 Visual Basic | Visual Studio 2017 版本 15.3 及更高版本 |
 
 ### <a name="remove-type-from-default-value-expression"></a>从“默认”值表达式中删除类型
 
@@ -173,7 +173,7 @@ void DoWork(CancellationToken cancellationToken = default) { ... }
 
 | 诊断 ID | 适用的语言 | 支持的版本 |
 | ------- | -------------------- | ---------------- |
-| IDE0034 | C# 7.1+ | Visual Studio 2017 版本 15.3 |
+| IDE0034 | C# 7.1+ | Visual Studio 2017 版本 15.3 及更高版本 |
 
 ## <a name="actions-that-add-missing-code"></a>添加缺失代码的操作
 
@@ -210,9 +210,9 @@ Imports System.Diagnostics
 Debug.WriteLine("Hello")
 ```
 
-| 诊断 ID | 适用的语言 | 支持的版本 |
-| ------- | -------------------- | ---------------- |
-| CS0103、BC30451 | C# 和 Visual Basic| Visual Studio 2015 Update 2 |
+| 诊断 ID | 适用的语言 |
+| - | - |
+| CS0103、BC30451 | C# 和 Visual Basic|
 
 ### <a name="add-missing-casesdefault-caseboth"></a>添加缺少的 case/默认 case/二者
 
@@ -281,7 +281,7 @@ End Select
 
 | 诊断 ID | 适用的语言 | 支持的版本 |
 | ------- | -------------------- | ---------------- |
-| IDE0010 | C# 和 Visual Basic| Visual Studio 2017 版本 15.3 |
+| IDE0010 | C# 和 Visual Basic| Visual Studio 2017 版本 15.3 及更高版本 |
 
 ### <a name="add-null-checks-for-parameters"></a>添加 null 参数检查
 
@@ -315,7 +315,7 @@ class MyClass
 
 | 适用的语言 | 支持的版本 |
 | -------------------- | ---------------- |
-| C# 和 Visual Basic| Visual Studio 2017 版本 15.3 |
+| C# 和 Visual Basic| Visual Studio 2017 版本 15.3 及更高版本 |
 
 ### <a name="add-argument-name"></a>添加参数名称
 
@@ -331,7 +331,7 @@ var date = new DateTime(year: 1997, month: 7, day: 8);
 
 | 适用的语言 | 支持的版本 |
 | -------------------- | ---------------- |
-| C# 和 Visual Basic| Visual Studio 2017 版本 15.3 |
+| C# 和 Visual Basic| Visual Studio 2017 版本 15.3 及更高版本 |
 
 ### <a name="add-braces"></a>添加大括号
 
@@ -353,7 +353,7 @@ if (true)
 
 | 诊断 ID | 适用的语言 | 支持的版本 |
 | ------- | -------------------- | ---------------- |
-| IDE0011 | C# | Visual Studio 2017 RTW |
+| IDE0011 | C# | Visual Studio 2017 及更高版本 |
 
 ### <a name="add-and-order-modifiers"></a>添加修饰符并对其排序
 
@@ -387,8 +387,8 @@ private static int thisFieldIsPublic;
 
 | 诊断 ID | 适用的语言 | 支持的版本 |
 | ------- | -------------------- | ---------------- |
-| IDE0036 | C# 和 Visual Basic| Visual Studio 2017 版本 15.5 |
-| IDE0040 | C# 和 Visual Basic| Visual Studio 2017 版本 15.5 |
+| IDE0036 | C# 和 Visual Basic| Visual Studio 2017 版本 15.5 及更高版本 |
+| IDE0040 | C# 和 Visual Basic| Visual Studio 2017 版本 15.5 及更高版本 |
 
 ## <a name="code-transformations"></a>代码转换
 
@@ -445,7 +445,7 @@ End Select
 
 | 适用的语言 | 支持的版本 |
 | -------------------- | ---------------- |
-| C# 和 Visual Basic| Visual Studio 2017 版本 15.3 |
+| C# 和 Visual Basic| Visual Studio 2017 版本 15.3 及更高版本 |
 
 ### <a name="convert-to-interpolated-string"></a>转换为内插字符串
 
@@ -477,7 +477,7 @@ Dim s As String = $"My string with {num} in the middle"
 
 | 适用的语言 | 支持的版本 |
 | -------------------- | ---------------- |
-| C# 6.0+ 和 Visual Basic 14+ | Visual Studio 2017 RTW |
+| C# 6.0+ 和 Visual Basic 14+ | Visual Studio 2017 及更高版本 |
 
 ### <a name="use-object-initializers"></a>使用对象初始值设定项
 
@@ -507,7 +507,7 @@ Dim c = New Customer() With {.Age = 21}
 
 | 诊断 ID | 适用的语言 | 支持的版本 |
 | ------- | -------------------- | ---------------- |
-| IDE0017 | C# 和 Visual Basic | Visual Studio 2017 RTW |
+| IDE0017 | C# 和 Visual Basic | Visual Studio 2017 及更高版本 |
 
 ### <a name="use-collection-initializers"></a>使用集合初始值设定项
 
@@ -541,7 +541,7 @@ Dim list = New List(Of Integer) From {1, 2, 3}
 
 | 诊断 ID | 适用的语言 | 支持的版本 |
 | ------- | -------------------- | ---------------- |
-| IDE0028 | C# 和 Visual Basic | Visual Studio 2017 RTW |
+| IDE0028 | C# 和 Visual Basic | Visual Studio 2017 及更高版本 |
 
 ### <a name="convert-auto-property-to-full-property"></a>将自动属性转换为完整属性
 
@@ -582,7 +582,7 @@ End Property
 
 | 适用的语言 | 支持的版本 |
 | -------------------- | ---------------- |
-| C# 和 Visual Basic | Visual Studio 2017 版本 15.5 |
+| C# 和 Visual Basic | Visual Studio 2017 版本 15.5 及更高版本 |
 
 ### <a name="convert-block-body-to-expression-bodied-member"></a>将程序块主体转换为 expression-bodied 成员
 
@@ -635,7 +635,7 @@ class MyClass4
 
 | 诊断 ID | 适用的语言 | 支持的版本 |
 | ------- | -------------------- | ---------------- |
-| IDE0021-27 | C# 6.0+ | Visual Studio 2017 RTW |
+| IDE0021-27 | C# 6.0+ | Visual Studio 2017 及更高版本 |
 
 ### <a name="convert-anonymous-function-to-local-function"></a>将匿名函数转换为本地函数
 
@@ -662,7 +662,7 @@ int fibonacci(int n)
 
 | 诊断 ID | 适用的语言 | 支持的版本 |
 | ------- | -------------------- | ---------------- |
-| IDE0041 | C# 7.0+ | Visual Studio 2017 版本 15.5 |
+| IDE0041 | C# 7.0+ | Visual Studio 2017 版本 15.5 及更高版本 |
 
 此快速操作建议尽可能使用[模式匹配](/dotnet/csharp/pattern-matching)，而不是 ```ReferenceEquals``` 代码模式。
 
@@ -686,7 +686,7 @@ if (value is null)
 
 | 诊断 ID | 适用的语言 | 支持的版本 |
 | ------- | -------------------- | ---------------- |
-| IDE0039 | C# 7.0+ | Visual Studio 2017 版本 15.5 |
+| IDE0039 | C# 7.0+ | Visual Studio 2017 版本 15。 及更高版本 |
 
 ### <a name="introduce-pattern-matching"></a>引入模式匹配
 
@@ -728,8 +728,8 @@ if (o is string s)
 
 | 诊断 ID | 适用的语言 | 支持的版本 |
 | ------- | -------------------- | ---------------- |
-| IDE0020 | C# 7.0+ | Visual Studio 2017 RTW |
-| IDE0019 | C# 7.0+ | Visual Studio 2017 RTW |
+| IDE0020 | C# 7.0+ | Visual Studio 2017 及更高版本 |
+| IDE0019 | C# 7.0+ | Visual Studio 2017 及更高版本 |
 
 ### <a name="change-base-for-numeric-literals"></a>更改数字参数的基数
 
@@ -757,7 +757,7 @@ Dim countdown As Integer = &H200000
 
 | 适用的语言 | 支持的版本 |
 | ------- | -------------------- | ---------------- |
-| C# 7.0+ 和 Visual Basic 14+ | Visual Studio 2017 版本 15.3 |
+| C# 7.0+ 和 Visual Basic 14+ | Visual Studio 2017 版本 15.3 及更高版本 |
 
 ### <a name="insert-digit-separators-into-literals"></a>将数字分隔符插入数字文本
 
@@ -785,7 +785,7 @@ Dim countdown As Integer = 1_000_000
 
 | 适用的语言 | 支持的版本 |
 | ------- | -------------------- | ---------------- |
-| C# 7.0+ 和 Visual Basic 14+ | Visual Studio 2017 版本 15.3 |
+| C# 7.0+ 和 Visual Basic 14+ | Visual Studio 2017 版本 15.3 及更高版本 |
 
 ### <a name="use-explicit-tuple-names"></a>使用显式元组名称
 
@@ -817,7 +817,7 @@ Dim name = customer.name
 
 | 诊断 ID | 适用的语言 | 支持的版本 |
 | ------- | -------------------- | ---------------- |
-| IDE0033 | C# 7.0+ 和 Visual Basic 15+ | Visual Studio 2017 RTW |
+| IDE0033 | C# 7.0+ 和 Visual Basic 15+ | Visual Studio 2017 及更高版本 |
 
 ### <a name="use-inferred-names"></a>使用推断名称
 
@@ -845,8 +845,8 @@ var tuple = (age, name);
 
 | 诊断 ID | 适用的语言 | 支持的版本 |
 | ------- | -------------------- | ---------------- |
-| IDE0037 | C# | Visual Studio 2017 v. 15.5 |
-| IDE0037 | C# 7.1+ | Visual Studio 2017 v. 15.5 |
+| IDE0037 | C# | Visual Studio 2017 版本 15.5 及更高版本 |
+| IDE0037 | C# 7.1+ | Visual Studio 2017 版本 15.5 及更高版本 |
 
 ### <a name="deconstruct-tuple-declaration"></a>析构元组声明
 
@@ -872,7 +872,7 @@ Console.WriteLine($"{x} {y}");
 
 | 诊断 ID | 适用的语言 | 支持的版本 |
 | ------- | -------------------- | ---------------- |
-| IDE0042 | C# 7.0+ | Visual Studio 2017 v. 15.5 |
+| IDE0042 | C# 7.0+ | Visual Studio 2017 版本 15.5 及更高版本 |
 
 ### <a name="make-method-synchronous"></a>使方法同步
 
@@ -908,9 +908,9 @@ Function MyAsyncMethod() As Integer
 End Function
 ```
 
-| 错误 ID | 适用的语言 | 支持的版本 |
-| ------- | -------------------- | ---------------- |
-| CS1998、BC42356 | C# 和 Visual Basic | Visual Studio 2015 Update 2 |
+| 错误 ID | 适用的语言 |
+| ------- | -------------------- |
+| CS1998、BC42356 | C# 和 Visual Basic |
 
 ### <a name="make-method-asynchronous"></a>使方法异步
 
@@ -948,7 +948,7 @@ End Function
 
 | 错误 ID | 适用的语言 | 支持的版本 |
 | ------- | -------------------- | ---------------- |
-| CS4032、BC37057 | C# 和 Visual Basic | Visual Studio 2017 |
+| CS4032、BC37057 | C# 和 Visual Basic | Visual Studio 2017 及更高版本 |
 
 ## <a name="see-also"></a>请参阅
 
