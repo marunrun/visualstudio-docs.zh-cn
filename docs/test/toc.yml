@@ -62,13 +62,14 @@
           href: using-the-assert-classes.md
         - name: Microsoft Fakes
           items:
-            - name: 用 Microsoft Fakes 隔离测试代码
+            - name: 隔离正在测试中的代码
+              displayName: 'shim, stub, fakes'
               href: isolating-code-under-test-with-microsoft-fakes.md
-            - name: 使用存根隔离应用程序的各个部分以进行单元测试
+            - name: 使用存根隔离应用的各个部分
               href: using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md
-            - name: 使用填充码针对单元测试将应用程序与程序集隔离
+            - name: 使用填充码将你的应用与其他程序集隔离开来
               href: using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md
-            - name: Microsoft Fakes 中的代码生成、编译和命名约定
+            - name: 代码生成、编译和命名约定
               href: code-generation-compilation-and-naming-conventions-in-microsoft-fakes.md
         - name: 数据驱动的单元测试
           items:

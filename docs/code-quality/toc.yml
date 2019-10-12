@@ -532,11 +532,11 @@
                   displayName: portability warnings
                   href: portability-warnings.md
                 - name: 'CA1900:值类型字段应为可移植字段'
-                  href: ca1900-value-type-fields-should-be-portable.md
+                  href: ca1900.md
                 - name: 'CA1901:P-Invoke 声明应为可移植声明'
-                  href: ca1901-p-invoke-declarations-should-be-portable.md
+                  href: ca1901.md
                 - name: 'CA1903:仅使用目标框架中的 API'
-                  href: ca1903-use-only-api-from-targeted-framework.md
+                  href: ca1903.md
             - name: 可靠性警告
               items:
                 - name: 概述
@@ -847,7 +847,7 @@
       href: quick-start-code-analysis-for-c-cpp.md
     - name: 分析 C/C++ 代码的缺陷
       href: walkthrough-analyzing-c-cpp-code-for-defects.md
-    - name: 演示示例
+    - name: 示例项目
       href: demo-sample.md
     - name: 使用 C++ Core Guidelines 检查器
       href: using-the-cpp-core-guidelines-checkers.md
@@ -855,6 +855,8 @@
       href: how-to-set-code-analysis-properties-for-c-cpp-projects.md
     - name: C++ 代码规则集
       href: using-rule-sets-to-specify-the-cpp-rules-to-run.md
+    - name: 使用 Clang-Tidy
+      href: clang-tidy.md
     - name: 使用 SAL 注释减少代码缺陷
       items:
         - name: 概述

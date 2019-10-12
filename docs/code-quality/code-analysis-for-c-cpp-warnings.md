@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 28f3fda6-35e8-485b-9755-1991aaccec3f
 author: mikeblome
 ms.author: mblome
-manager: wpickett
+manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc3f09575085039986a0b2fbbf3eb386ee5f5e1b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a8a1c77a7db2a16b05c1b6b0eeb5e02abef4c9c3
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62540775"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018459"
 ---
 # <a name="code-analysis-for-cc-warnings"></a>C/C++ 代码分析警告
-本部分列出了 C /C++代码分析警告除了那些会引发[ C++ Core Guidelines 检查器](code-analysis-for-cpp-corecheck.md)。 有关代码分析的信息，请参阅[/analyze （代码分析）](/cpp/build/reference/analyze-code-analysis)和[快速启动：为 C 代码分析 /C++](../code-quality/quick-start-code-analysis-for-c-cpp.md)。
+本节列出了除C++ [ C++核心准则检查](code-analysis-for-cpp-corecheck.md)程序引发的警告外的 C/代码分析警告。 有关代码分析的信息，请参阅[/analyze （代码分析）](/cpp/build/reference/analyze-code-analysis)和 [Quick Start：C/C++@no__t 的代码分析。
 
 ## <a name="see-also"></a>请参阅
 

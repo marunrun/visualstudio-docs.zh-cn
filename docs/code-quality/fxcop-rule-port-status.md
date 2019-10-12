@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 07a5130edd534008b4343ab439bf20bf63bc3cde
-ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
+ms.openlocfilehash: 04a4738181c579617711150da4eb99e08aeb039c
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062404"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018421"
 ---
 # <a name="fxcop-rule-port-status"></a>Fxcop 规则端口状态
 
@@ -67,10 +67,10 @@ Roslyn 存储库中自动[生成的文档页面](https://github.com/dotnet/rosly
 [CA1063](ca1063-implement-idisposable-correctly.md) | 正确实现 IDisposable
 [CA1064](ca1064-exceptions-should-be-public.md) | 异常应该是公共的
 [CA1065](ca1065-do-not-raise-exceptions-in-unexpected-locations.md) | 不要在意外的位置引发异常
-CA1066 | 类型{0}应实现 IEquatable\<T > 因为它重写 Equals
-CA1067 | 实现 IEquatable\<T 时重写对象 Equals （对象） >
-[CA1068](ca1068.md) | CancellationToken 参数必须位于最后
-CA1200 | 避免使用带有前缀的 cref 标记
+CA1066 | 类型 @no__t 应实现 IEquatable @ no__t-1T >，因为它重写 Equals
+CA1067 | 实现 IEquatable @ no__t-0T 时重写对象 Equals （对象） >
+[CA1068](ca1068.md) | CancellationToken 参数必须最后出现
+CA1200 | 不要使用带前缀的 cref 标记
 [CA1303](ca1303-do-not-pass-literals-as-localized-parameters.md) | 请不要将文本作为本地化参数传递
 [CA1304](ca1304-specify-cultureinfo.md) | 指定 CultureInfo
 [CA1305](ca1305-specify-iformatprovider.md) | 指定 IFormatProvider
@@ -149,28 +149,28 @@ CA2010 | 始终使用由 PreserveSigAttribute 标记的方法返回的值
 [CA2242](ca2242-test-for-nan-correctly.md) | 正确测试 NaN
 [CA2243](ca2243-attribute-string-literals-should-parse-correctly.md) | 特性字符串文本应正确分析
 CA2244 | 不复制索引元素初始化
-[CA2300](ca2300-do-not-use-insecure-deserializer-binaryformatter.md) | 请勿使用不安全的反序列化程序 BinaryFormatte
-[CA2301](ca2301-do-not-call-binaryformatter-deserialize-without-first-setting-binaryformatter-binder.md) | 在未先设置 BinaryFormatter.Binder 的情况下，请不要调用 BinaryFormatter.Deserialize
-[CA2302](ca2302-ensure-binaryformatter-binder-is-set-before-calling-binaryformatter-deserialize.md) | 在调用 BinaryFormatter.Deserialize 之前，确保设置 BinaryFormatter.Binder
-[CA2305](ca2305-do-not-use-insecure-deserializer-losformatter.md) | 请勿使用不安全的反序列化程序 LosFormatter
-[CA2310](ca2310-do-not-use-insecure-deserializer-netdatacontractserializer.md) | 请勿使用不安全的反序列化程序 NetDataContractSerializer
-[CA2311](ca2311-do-not-deserialize-without-first-setting-netdatacontractserializer-binder.md) | 在未先设置 NetDataContractSerializer.Binder 的情况下，请不要反序列化
-[CA2312](ca2312-ensure-netdatacontractserializer-binder-is-set-before-deserializing.md) | 确保在反序列化之前设置 NetDataContractSerializer.Binder
-[CA2315](ca2315-do-not-use-insecure-deserializer-objectstateformatter.md) | 请勿使用不安全的反序列化程序 ObjectStateFormatter
+[CA2300](ca2300.md) | 请勿使用不安全的反序列化程序 BinaryFormatte
+[CA2301](ca2301.md) | 在未先设置 BinaryFormatter.Binder 的情况下，请不要调用 BinaryFormatter.Deserialize
+[CA2302](ca2302.md) | 在调用 BinaryFormatter.Deserialize 之前，确保设置 BinaryFormatter.Binder
+[CA2305](ca2305.md) | 请勿使用不安全的反序列化程序 LosFormatter
+[CA2310](ca2310.md) | 请勿使用不安全的反序列化程序 NetDataContractSerializer
+[CA2311](ca2311.md) | 在未先设置 NetDataContractSerializer.Binder 的情况下，请不要反序列化
+[CA2312](ca2312.md) | 确保在反序列化之前设置 NetDataContractSerializer.Binder
+[CA2315](ca2315.md) | 请勿使用不安全的反序列化程序 ObjectStateFormatter
 [CA2321](ca2321.md) | 请勿使用 SimpleTypeResolver 对 JavaScriptSerializer 进行反序列化
 [CA2322](ca2322.md) | 确保在反序列化之前没有使用 SimpleTypeResolver 初始化 JavaScriptSerializer
-[CA3001](ca3001-review-code-for-sql-injection-vulnerabilities.md) | 查看 SQL 注入漏洞的代码
-[CA3002](ca3002-review-code-for-xss-vulnerabilities.md) | 查看 XSS 漏洞的代码
-[CA3003](ca3003-review-code-for-file-path-injection-vulnerabilities.md) | 查看文件路径注入漏洞的代码
-[CA3004](ca3004-review-code-for-information-disclosure-vulnerabilities.md) | 查看信息泄露漏洞的代码
-[CA3005](ca3005-review-code-for-ldap-injection-vulnerabilities.md) | 查看 LDAP 注入漏洞的代码
-[CA3006](ca3006-review-code-for-process-command-injection-vulnerabilities.md) | 查看进程命令注入漏洞的代码
-[CA3007](ca3007-review-code-for-open-redirect-vulnerabilities.md) | 查看公开重定向漏洞的代码
-[CA3008](ca3008-review-code-for-xpath-injection-vulnerabilities.md) | 查看 XPath 注入漏洞的代码
-[CA3009](ca3009-review-code-for-xml-injection-vulnerabilities.md) | 查看 XML 注入漏洞的代码
-[CA3010](ca3010-review-code-for-xaml-injection-vulnerabilities.md) | 查看 XAML 注入漏洞的代码
-[CA3011](ca3011-review-code-for-dll-injection-vulnerabilities.md) | 查看 DLL 注入漏洞的代码
-[CA3012](ca3012-review-code-for-regex-injection-vulnerabilities.md) | 查看正则表达式注入漏洞的代码
+[CA3001](ca3001.md) | 查看 SQL 注入漏洞的代码
+[CA3002](ca3002.md) | 查看 XSS 漏洞的代码
+[CA3003](ca3003.md) | 查看文件路径注入漏洞的代码
+[CA3004](ca3004.md) | 查看信息泄露漏洞的代码
+[CA3005](ca3005.md) | 查看 LDAP 注入漏洞的代码
+[CA3006](ca3006.md) | 查看进程命令注入漏洞的代码
+[CA3007](ca3007.md) | 查看公开重定向漏洞的代码
+[CA3008](ca3008.md) | 查看 XPath 注入漏洞的代码
+[CA3009](ca3009.md) | 查看 XML 注入漏洞的代码
+[CA3010](ca3010.md) | 查看 XAML 注入漏洞的代码
+[CA3011](ca3011.md) | 查看 DLL 注入漏洞的代码
+[CA3012](ca3012.md) | 查看正则表达式注入漏洞的代码
 CA3061 | 不按 URL 添加架构
 [CA3075](ca3075-insecure-dtd-processing.md) | XML 中不安全的 DTD 处理
 [CA3076](ca3076-insecure-xslt-script-execution.md) | 不安全的 XSLT 脚本处理。
@@ -337,7 +337,7 @@ CA9999 | 分析器版本不匹配
 - [CA2210](ca2210-assemblies-should-have-valid-strong-names.md)
 - [CA2220](ca2220-finalizers-should-call-base-class-finalizer.md)
 - [CA2221](ca2221-finalizers-should-be-protected.md)
-- [CA2222](ca2222-do-not-decrease-inherited-member-visibility.md)（[理由](https://github.com/dotnet/roslyn-analyzers/issues/1378)）
+- [CA2222](ca2222-do-not-decrease-inherited-member-visibility.md) （[理由](https://github.com/dotnet/roslyn-analyzers/issues/1378)）
 - [CA2223](ca2223-members-should-differ-by-more-than-return-type.md)
 - [CA2228](ca2228-do-not-ship-unreleased-resource-formats.md)
 - [CA2230](ca2230-use-params-for-variable-arguments.md)

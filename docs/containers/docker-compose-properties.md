@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 08/12/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 06a1c5b637ca2ed9306162ee1960c60d103e5843
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: 2178881c6ea0e597aef5e25074e3648162d3f6e9
+ms.sourcegitcommit: 6ae0a289f1654dec63b412bfa22035511a2ef5ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71185979"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71950641"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose 生成属性
 
@@ -46,7 +46,7 @@ ms.locfileid: "71185979"
 |DockerTargetOS| dcproj | 生成 Docker 映像时使用的目标 OS。|-|
 
 > [!NOTE]
-> DockerComposeBuildArguments、DockerComposeDownArguments 和 DockerComposeUpArguments 是 Visual Studio 2019 版本 16.3 预览版 3 中的新增内容。
+> DockerComposeBuildArguments、DockerComposeDownArguments 和 DockerComposeUpArguments 是 Visual Studio 2019 版本 16.3 中的新增内容。
 
 ## <a name="docker-compose-file-labels"></a>Docker Compose 文件标签
 

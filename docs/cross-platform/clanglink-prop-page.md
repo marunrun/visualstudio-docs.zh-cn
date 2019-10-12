@@ -5,8 +5,8 @@ ms.date: 10/23/2017
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
 ms.assetid: 66e88848-116c-4eb0-bc57-183394d35b57
-author: corob
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: jillfra
 f1_keywords:
 - VC.Project.VCLinkerTool.OutputFile
@@ -32,12 +32,12 @@ f1_keywords:
 - VC.Project.VCLinkerTool.LibraryDependencies
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 16dcb7ff5925f341fc78b57f1d9a4f011a27d576
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e8f138b6c496f9dec32ad44dbdfa2064dd639990
+ms.sourcegitcommit: 6ae0a289f1654dec63b412bfa22035511a2ef5ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62815772"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71950680"
 ---
 # <a name="clang-linker-properties-android-c"></a>Clang 链接器属性 (Android C++)
 
@@ -54,7 +54,7 @@ Version | -version 选项让链接器将版本号置于可执行文件的标头�
 优化内存使用率 | 如有必要，通过重读符号表优化内存使用率。
 忽略特定默认库 | 指定一个或多个要忽略的默认库的名称。
 强制符号引用 | 强制将符号作为未定义符号输入到输出文件中。
-调试器符号信息 | 输出文件中的调试程序符号信息。 | 全部包含<br>忽略不需要的符号以进行重定位处理<br>仅忽略调试器符号信息<br>忽略所有符号信息<br>
+调试器符号信息 | 输出文件中的调试程序符号信息。 | 全部包含 <br>忽略不需要的符号以进行重定位处理 <br>仅忽略调试器符号信息 <br>忽略所有符号信息 <br>
 打包调试器符号信息 | 在打包之前剥离调试器符号信息。  使用原始二进制文件的副本进行调试。
 映射文件名 | “映射”选项通知链接器使用用户指定的名称创建映射文件。
 重定位之后将变量标记为只读 | 此选项在重定位之后将变量标记为只读。
@@ -63,4 +63,4 @@ Version | -version 选项让链接器将版本号置于可执行文件的标头�
 整个存档 | 整个存档使用来自源和其他依赖项的所有代码。
 附加选项 | 附加选项。
 附加依赖项 | 指定要添加到链接命令行的附加项。
-库依赖项 | 此选项可指定要添加到链接器命令行的附加库。 附加库会添加到链接器命令行末尾，并以“lib”开头，以“.a”或“.so”扩展名结尾。  (-lFILE)
+库依赖项 | 此选项可指定要添加到链接器命令行的附加库。 附加库会添加到链接器命令行末尾，并以“lib”  开头，以“.a”  或“.so”  扩展名结尾。  (-lFILE)
