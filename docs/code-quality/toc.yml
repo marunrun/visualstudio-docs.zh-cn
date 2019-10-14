@@ -33,7 +33,7 @@
                   href: configure-fxcop-analyzers.md
                 - name: 作用域选项
                   href: fxcop-analyzer-options.md
-                - name: 预定义规则集
+                - name: 启用一种类别的规则
                   href: analyzer-rule-sets.md
             - name: FAQ
               href: fxcop-analyzers-faq.md
