@@ -120,13 +120,13 @@
     - name: 介绍
       displayName: Live Unit Testing introduction
       href: live-unit-testing-intro.md
-    - name: Live Unit Testing 中的新增功能
+    - name: 新增功能
       href: live-unit-testing-whats-new.md
-    - name: Live Unit Testing 入门
+    - name: 入门
       href: live-unit-testing-start.md
-    - name: 使用 Enterprise Edition 中的 Live Unit Testing
+    - name: 配置并使用
       href: live-unit-testing.md
-    - name: Live Unit Testing 常见问题解答
+    - name: FAQ
       href: live-unit-testing-faq.md
 - name: Web 性能和负载测试
   items:
