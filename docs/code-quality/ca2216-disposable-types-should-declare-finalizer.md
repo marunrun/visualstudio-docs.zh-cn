@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1616e889b3892aa656692a3e5b0895d4b131b7f1
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 3ac52bdb17aeb7d04e434d2b02ff9a905eab49a2
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71231257"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305928"
 ---
 # <a name="ca2216-disposable-types-should-declare-finalizer"></a>CA2216:可释放类型应声明终结器
 
@@ -32,7 +32,7 @@ ms.locfileid: "71231257"
 
 ## <a name="cause"></a>原因
 
-一种类型， <xref:System.IDisposable?displayProperty=fullName>该类型实现并具有建议使用非托管资源的字段，并不按<xref:System.Object.Finalize%2A?displayProperty=fullName>描述实现终结器。
+一个实现 <xref:System.IDisposable?displayProperty=fullName> 的类型，并且具有建议使用非托管资源的字段，不按 <xref:System.Object.Finalize%2A?displayProperty=fullName> 所述实现终结器。
 
 ## <a name="rule-description"></a>规则说明
 
@@ -46,11 +46,11 @@ ms.locfileid: "71231257"
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-若要修复与此规则的冲突，请实现调用<xref:System.IDisposable.Dispose%2A>方法的终结器。
+若要修复与此规则的冲突，请实现调用 <xref:System.IDisposable.Dispose%2A> 方法的终结器。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
-如果该类型未实现<xref:System.IDisposable>以释放非托管资源，则可以安全地禁止显示此规则发出的警告。
+如果该类型未实现 <xref:System.IDisposable> 以释放非托管资源，则可以安全地禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
 
@@ -60,11 +60,11 @@ ms.locfileid: "71231257"
 
 ## <a name="related-rules"></a>相关规则
 
-[CA2115调用 GC。使用本机资源时 KeepAlive](../code-quality/ca2115-call-gc-keepalive-when-using-native-resources.md)
+[CA2115：调用 GC。使用本机资源时 KeepAlive no__t-0
 
-[CA1816调用 GC。Gc.suppressfinalize 正确](../code-quality/ca1816-call-gc-suppressfinalize-correctly.md)
+[CA1816：调用 GC。Gc.suppressfinalize 正确 @ no__t-0
 
-[CA1049拥有本机资源的类型应是可释放的](../code-quality/ca1049-types-that-own-native-resources-should-be-disposable.md)
+[CA1049：拥有本机资源的类型应为可释放 @ no__t-0
 
 ## <a name="see-also"></a>请参阅
 
@@ -73,4 +73,4 @@ ms.locfileid: "71231257"
 - <xref:System.Runtime.InteropServices.HandleRef?displayProperty=fullName>
 - <xref:System.UIntPtr?displayProperty=fullName>
 - <xref:System.Object.Finalize%2A?displayProperty=fullName>
-- [释放模式](/dotnet/standard/design-guidelines/dispose-pattern)
+- [Dispose 模式](/dotnet/standard/design-guidelines/dispose-pattern)

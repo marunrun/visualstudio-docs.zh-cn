@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 5cb5631da1bcf455874d459a69216b45062a5754
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: c53fe96163a3913c024eefeb5deb8a47df691e1f
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236224"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306146"
 ---
 # <a name="ca1019-define-accessors-for-attribute-arguments"></a>CA1019:定义特性参数的访问器
 
@@ -37,9 +37,9 @@ ms.locfileid: "71236224"
 在其构造函数中，属性定义了不具有相应属性的参数。
 
 ## <a name="rule-description"></a>规则说明
-特性可以定义强制自变量，在对目标应用该特性时必须指定这些自变量。 这些自变量也称为位置自变量，因为它们将作为位置参数提供给特性构造函数。 对于每一个强制变量，特性还必须提供一个相应的只读属性，以便可以在执行时检索该变量的值。 此规则检查是否为每个构造函数参数定义了相应的属性。
+特性可以定义强制自变量，在对目标应用该特性时必须指定这些自变量。 这些自变量也称为位置自变量，因为它们将作为位置参数提供给特性构造函数。 对于每一个强制自变量，特性还必须提供一个相应的只读属性，以便可以在执行时检索该自变量的值。 此规则检查是否为每个构造函数参数定义了相应的属性。
 
-特性还可以定义可选实参，可选实参也称为命名实参。 这些变量按名称提供给特性构造函数，并且必须具有相应的读/写属性。
+特性还可以定义可选自变量，可选自变量也称为命名自变量。 这些变量按名称提供给特性构造函数，并且必须具有相应的读/写属性。
 
 对于必需参数和可选参数，对应的属性和构造函数参数应该使用相同的名称，但大小写不同。 属性使用 Pascal 大小写，参数使用 camel 大小写。
 
@@ -69,7 +69,7 @@ ms.locfileid: "71236224"
 [!code-csharp[FxCop.Design.AttributeAccessorsNamedApplied#1](../code-quality/codesnippet/CSharp/ca1019-define-accessors-for-attribute-arguments_3.cs)]
 
 ## <a name="related-rules"></a>相关规则
-[CA1813避免未密封的特性](../code-quality/ca1813-avoid-unsealed-attributes.md)
+[CA1813：避免未密封的属性 @ no__t
 
 ## <a name="see-also"></a>请参阅
-[特性](/dotnet/standard/design-guidelines/attributes)
+[属性](/dotnet/standard/design-guidelines/attributes)

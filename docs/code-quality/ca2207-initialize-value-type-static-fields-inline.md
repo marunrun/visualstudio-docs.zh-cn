@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 46f579b6776ffab6d0ed3b2e216e29d36d2065ee
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 695f15c73120f766157fabb09193d32115dda588
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71231690"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305942"
 ---
 # <a name="ca2207-initialize-value-type-static-fields-inline"></a>CA2207:以内联方式初始化值类型的静态字段
 
@@ -34,9 +34,9 @@ ms.locfileid: "71231690"
 值类型声明显式静态构造函数。
 
 ## <a name="rule-description"></a>规则说明
-当声明值类型时，它会经历默认初始化，其中所有值类型字段均设置为零，所有引用类型字段都设置为`null` （`Nothing`在 Visual Basic 中）。 仅保证在调用类型的实例构造函数或静态成员之前运行显式静态构造函数。 因此，如果创建类型时未调用实例构造函数，则不保证静态构造函数运行。
+当声明值类型时，它会经历默认初始化，其中所有值类型字段均设置为零，所有引用类型字段都设置为 `null` （Visual Basic 中 `Nothing`）。 仅保证在调用类型的实例构造函数或静态成员之前运行显式静态构造函数。 因此，如果创建类型时未调用实例构造函数，则不保证静态构造函数运行。
 
-如果所有静态数据都以内联方式初始化并且未声明显式静态构造函数C# ，则和 Visual Basic 编译器`beforefieldinit`会将标志添加到 MSIL 类定义。 编译器还会添加包含静态初始化代码的私有静态构造函数。 此私有静态构造函数保证在访问类型的任何静态字段之前运行。
+如果所有静态数据都以内联方式初始化，且未声明显式静态构造C#函数，则和 Visual Basic 编译器会将 @no__t 1 标志添加到 MSIL 类定义。 编译器还会添加包含静态初始化代码的私有静态构造函数。 此私有静态构造函数保证在访问类型的任何静态字段之前运行。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 若要修复与此规则的冲突，请在声明时初始化所有静态数据，并删除静态构造函数。
@@ -45,4 +45,4 @@ ms.locfileid: "71231690"
 不禁止显示此规则发出的警告。
 
 ## <a name="related-rules"></a>相关规则
-[CA1810以内联方式初始化引用类型的静态字段](../code-quality/ca1810-initialize-reference-type-static-fields-inline.md)
+[CA1810：以内联方式初始化引用类型静态字段 @ no__t-0

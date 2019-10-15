@@ -8,18 +8,18 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9ec1bdaf421e3976872a3460dc22fecd24b4386b
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.openlocfilehash: 4d2f123301eb2dd4df662891f2a9248b0cac7173
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69585107"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305861"
 ---
 # <a name="extended-correctness-rules-rule-set-for-managed-code"></a>托管代码的“扩展的更正规则”规则集
 
-Microsoft 扩展的正确性规则集可最大程度地提高代码分析报告的逻辑和框架使用错误。 对特定方案 (如 COM 互操作性和移动应用程序) 施加了额外的强调。 如果其中一个方案适用于你的项目或在项目中发现其他问题, 则应考虑包含此规则集。
+Microsoft 扩展的正确性规则集可最大程度地提高代码分析报告的逻辑和框架使用错误。 对特定方案（如 COM 互操作性和移动应用程序）施加了额外的强调。 如果其中一个方案适用于你的项目或在项目中发现其他问题，则应考虑包含此规则集。
 
-Microsoft 扩展的正确性规则集包括 "[基本更正规则](../code-quality/basic-correctness-rules-rule-set-for-managed-code.md)" 规则集中的规则, 其中包含 "[托管建议规则](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md)" 规则集中的规则。
+Microsoft 扩展的正确性规则集包括 "[基本更正规则](../code-quality/basic-correctness-rules-rule-set-for-managed-code.md)" 规则集中的规则，其中包含 "[托管建议规则](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md)" 规则集中的规则。
 
 下表介绍了 Microsoft 扩展的正确性规则集中的所有规则。
 
@@ -42,7 +42,7 @@ Microsoft 扩展的正确性规则集包括 "[基本更正规则](../code-qualit
 |[CA1405](../code-quality/ca1405-com-visible-type-base-types-should-be-com-visible.md)|COM 可见类型的基类型应对 COM 可见|
 |[CA1410](../code-quality/ca1410-com-registration-methods-should-be-matched.md)|应对 COM 注册方法进行匹配|
 |[CA1415](../code-quality/ca1415-declare-p-invokes-correctly.md)|正确声明 P/Invoke|
-|[CA1821](../code-quality/ca1821-remove-empty-finalizers.md)|移除空终结器|
+|[CA1821](../code-quality/ca1821.md)|移除空终结器|
 |[CA1900](../code-quality/ca1900-value-type-fields-should-be-portable.md)|值类型字段应为可移植字段|
 |[CA1901](../code-quality/ca1901-p-invoke-declarations-should-be-portable.md)|P/Invoke 声明应为可移植声明|
 |[CA2002](../code-quality/ca2002-do-not-lock-on-objects-with-weak-identity.md)|不要锁定具有弱标识的对象|
@@ -91,10 +91,10 @@ Microsoft 扩展的正确性规则集包括 "[基本更正规则](../code-qualit
 |[CA1013](../code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract.md)|重载加法方法和减法方法时重载相等运算符|
 |[CA1303](../code-quality/ca1303-do-not-pass-literals-as-localized-parameters.md)|请不要将文本作为本地化参数传递|
 |[CA1308](../code-quality/ca1308-normalize-strings-to-uppercase.md)|将字符串规范化为大写|
-|[CA1806](../code-quality/ca1806-do-not-ignore-method-results.md)|不要忽略方法结果|
-|[CA1816](../code-quality/ca1816-call-gc-suppressfinalize-correctly.md)|正确调用 GC.SuppressFinalize|
-|[CA1819](../code-quality/ca1819-properties-should-not-return-arrays.md)|属性不应返回数组|
-|[CA1820](../code-quality/ca1820-test-for-empty-strings-using-string-length.md)|使用字符串长度测试是否有空字符串|
+|[CA1806](../code-quality/ca1806.md)|不要忽略方法结果|
+|[CA1816](../code-quality/ca1816.md)|正确调用 GC.SuppressFinalize|
+|[CA1819](../code-quality/ca1819.md)|属性不应返回数组|
+|[CA1820](../code-quality/ca1820.md)|使用字符串长度测试是否有空字符串|
 |[CA1903](../code-quality/ca1903-use-only-api-from-targeted-framework.md)|仅使用目标框架中的 API|
 |[CA2004](../code-quality/ca2004-remove-calls-to-gc-keepalive.md)|移除对 GC.KeepAlive 的调用|
 |[CA2006](../code-quality/ca2006-use-safehandle-to-encapsulate-native-resources.md)|使用 SafeHandle 封装本机资源|
@@ -132,7 +132,7 @@ Microsoft 扩展的正确性规则集包括 "[基本更正规则](../code-qualit
 |[CA1414](../code-quality/ca1414-mark-boolean-p-invoke-arguments-with-marshalas.md)|用 MarshalAs 标记布尔型 P/Invoke 参数|
 |[CA1600](../code-quality/ca1600-do-not-use-idle-process-priority.md)|不要使用 Idle 进程优先级|
 |[CA1601](../code-quality/ca1601-do-not-use-timers-that-prevent-power-state-changes.md)|不要使用阻止电源状态更改的计时器|
-|[CA1824](../code-quality/ca1824-mark-assemblies-with-neutralresourceslanguageattribute.md)|用 NeutralResourcesLanguageAttribute 标记程序集|
+|[CA1824](../code-quality/ca1824.md)|用 NeutralResourcesLanguageAttribute 标记程序集|
 |[CA2001](../code-quality/ca2001-avoid-calling-problematic-methods.md)|避免调用有问题的方法|
 |[CA2003](../code-quality/ca2003-do-not-treat-fibers-as-threads.md)|不要将纤程视为线程|
 |[CA2135](../code-quality/ca2135-level-2-assemblies-should-not-contain-linkdemands.md)|级别 2 程序集不应包含 LinkDemand|

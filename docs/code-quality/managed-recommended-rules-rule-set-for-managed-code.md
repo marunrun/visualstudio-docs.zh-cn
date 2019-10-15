@@ -8,16 +8,16 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2060c9c2db3dd3d60efb07b1e23c445a47d54b5d
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.openlocfilehash: 4a4257327e8f1346ce99ce44aad9bcf4f6a466cd
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69585063"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305649"
 ---
 # <a name="managed-recommended-rules-rule-set-for-managed-code"></a>托管代码的“托管建议规则”规则集
 
-使用 "Microsoft 托管建议规则" 规则集来重点关注托管代码中最关键的问题, 包括潜在的安全漏洞、应用程序崩溃和其他重要的逻辑和设计错误。 此规则集包括 "[托管最小规则](managed-minimum-rules-rule-set-for-managed-code.md)" 规则集中的所有规则。
+使用 "Microsoft 托管建议规则" 规则集来重点关注托管代码中最关键的问题，包括潜在的安全漏洞、应用程序崩溃和其他重要的逻辑和设计错误。 此规则集包括 "[托管最小规则](managed-minimum-rules-rule-set-for-managed-code.md)" 规则集中的所有规则。
 
 在你为项目创建的任何自定义规则集中包含此规则集。
 
@@ -40,7 +40,7 @@ ms.locfileid: "69585063"
 |[CA1405](../code-quality/ca1405-com-visible-type-base-types-should-be-com-visible.md)|COM 可见类型的基类型应对 COM 可见|
 |[CA1410](../code-quality/ca1410-com-registration-methods-should-be-matched.md)|应对 COM 注册方法进行匹配|
 |[CA1415](../code-quality/ca1415-declare-p-invokes-correctly.md)|正确声明 P/Invoke|
-|[CA1821](../code-quality/ca1821-remove-empty-finalizers.md)|移除空终结器|
+|[CA1821](../code-quality/ca1821.md)|移除空终结器|
 |[CA1900](../code-quality/ca1900-value-type-fields-should-be-portable.md)|值类型字段应为可移植字段|
 |[CA1901](../code-quality/ca1901-p-invoke-declarations-should-be-portable.md)|P/Invoke 声明应为可移植声明|
 |[CA2002](../code-quality/ca2002-do-not-lock-on-objects-with-weak-identity.md)|不要锁定具有弱标识的对象|
