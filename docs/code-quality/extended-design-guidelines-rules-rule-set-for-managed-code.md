@@ -8,18 +8,18 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b2270caa0cf7db230fa030cb620d51f1677d9dec
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.openlocfilehash: 3ad443a149b1c3a49c4bbbc260a4121d0a721aed
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69585075"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305823"
 ---
 # <a name="extended-design-guidelines-rules-rule-set-for-managed-code"></a>托管代码的“扩展的设计准则规则”规则集
 
-Microsoft 扩展的设计准则规则集对基本设计准则规则进行了扩展, 以最大程度地提高所报告的可用性和可维护性问题。 特别强调的是命名准则。 如果你的项目包含库代码, 或者如果你想要强制编写易于维护的代码, 则应考虑包含此规则集。
+Microsoft 扩展的设计准则规则集对基本设计准则规则进行了扩展，以最大程度地提高所报告的可用性和可维护性问题。 特别强调的是命名准则。 如果你的项目包含库代码，或者如果你想要强制编写易于维护的代码，则应考虑包含此规则集。
 
-扩展的设计准则规则包括 "[基本设计准则规则](../code-quality/basic-design-guideline-rules-rule-set-for-managed-code.md)" 规则集中的所有规则, 其中包括 "[托管建议规则](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md)" 规则集中的规则。
+扩展的设计准则规则包括 "[基本设计准则规则](../code-quality/basic-design-guideline-rules-rule-set-for-managed-code.md)" 规则集中的所有规则，其中包括 "[托管建议规则](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md)" 规则集中的规则。
 
 下表介绍了 Microsoft 扩展的设计准则规则集中的所有规则。
 
@@ -42,7 +42,7 @@ Microsoft 扩展的设计准则规则集对基本设计准则规则进行了扩�
 |[CA1405](../code-quality/ca1405-com-visible-type-base-types-should-be-com-visible.md)|COM 可见类型的基类型应对 COM 可见|
 |[CA1410](../code-quality/ca1410-com-registration-methods-should-be-matched.md)|应对 COM 注册方法进行匹配|
 |[CA1415](../code-quality/ca1415-declare-p-invokes-correctly.md)|正确声明 P/Invoke|
-|[CA1821](../code-quality/ca1821-remove-empty-finalizers.md)|移除空终结器|
+|[CA1821](../code-quality/ca1821.md)|移除空终结器|
 |[CA1900](../code-quality/ca1900-value-type-fields-should-be-portable.md)|值类型字段应为可移植字段|
 |[CA1901](../code-quality/ca1901-p-invoke-declarations-should-be-portable.md)|P/Invoke 声明应为可移植声明|
 |[CA2002](../code-quality/ca2002-do-not-lock-on-objects-with-weak-identity.md)|不要锁定具有弱标识的对象|
@@ -138,19 +138,19 @@ Microsoft 扩展的设计准则规则集对基本设计准则规则进行了扩�
 |[CA1502](../code-quality/ca1502-avoid-excessive-complexity.md)|避免过度复杂|
 |[CA1708](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)|标识符应以大小写之外的差别进行区分|
 |[CA1716](../code-quality/ca1716-identifiers-should-not-match-keywords.md)|标识符不应与关键字冲突|
-|[CA1801](../code-quality/ca1801-review-unused-parameters.md)|检查未使用的参数|
-|[CA1804](../code-quality/ca1804-remove-unused-locals.md)|移除未使用的局部变量|
-|[CA1809](../code-quality/ca1809-avoid-excessive-locals.md)|避免过多的局部变量|
-|[CA1810](../code-quality/ca1810-initialize-reference-type-static-fields-inline.md)|以内联方式初始化引用类型的静态字段|
-|[CA1811](../code-quality/ca1811-avoid-uncalled-private-code.md)|避免使用未调用的私有代码|
-|[CA1812](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)|避免未实例化的内部类|
-|[CA1813](../code-quality/ca1813-avoid-unsealed-attributes.md)|避免使用非密封特性|
-|[CA1814](../code-quality/ca1814-prefer-jagged-arrays-over-multidimensional.md)|与多维数组相比，首选使用交错数组|
-|[CA1815](../code-quality/ca1815-override-equals-and-operator-equals-on-value-types.md)|重写值类型上的 Equals 和相等运算符|
-|[CA1819](../code-quality/ca1819-properties-should-not-return-arrays.md)|属性不应返回数组|
-|[CA1820](../code-quality/ca1820-test-for-empty-strings-using-string-length.md)|使用字符串长度测试是否有空字符串|
-|[CA1822](../code-quality/ca1822-mark-members-as-static.md)|将成员标记为 static|
-|[CA1823](../code-quality/ca1823-avoid-unused-private-fields.md)|避免未使用的私有字段|
+|[CA1801](../code-quality/ca1801.md)|检查未使用的参数|
+|[CA1804](../code-quality/ca1804.md)|移除未使用的局部变量|
+|[CA1809](../code-quality/ca1809.md)|避免过多的局部变量|
+|[CA1810](../code-quality/ca1810.md)|以内联方式初始化引用类型的静态字段|
+|[CA1811](../code-quality/ca1811.md)|避免使用未调用的私有代码|
+|[CA1812](../code-quality/ca1812.md)|避免未实例化的内部类|
+|[CA1813](../code-quality/ca1813.md)|避免使用非密封特性|
+|[CA1814](../code-quality/ca1814.md)|与多维数组相比，首选使用交错数组|
+|[CA1815](../code-quality/ca1815.md)|重写值类型上的 Equals 和相等运算符|
+|[CA1819](../code-quality/ca1819.md)|属性不应返回数组|
+|[CA1820](../code-quality/ca1820.md)|使用字符串长度测试是否有空字符串|
+|[CA1822](../code-quality/ca1822.md)|将成员标记为 static|
+|[CA1823](../code-quality/ca1823.md)|避免未使用的私有字段|
 |[CA2201](../code-quality/ca2201-do-not-raise-reserved-exception-types.md)|不要引发保留的异常类型|
 |[CA2205](../code-quality/ca2205-use-managed-equivalents-of-win32-api.md)|使用 Win32 API 的托管等效项|
 |[CA2208](../code-quality/ca2208-instantiate-argument-exceptions-correctly.md)|正确实例化参数异常|

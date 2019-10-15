@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a4c7d0aa4da7e672db06675c65e008d1f71f8bc7
-ms.sourcegitcommit: b23d73c86ec7720c4cd9a58050860bc559623a3d
+ms.openlocfilehash: 81c1c200ba9ab0a50381192b34bad5e9b221fb29
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172804"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305666"
 ---
 # <a name="use-code-analyzers"></a>使用代码分析器
 
@@ -93,7 +93,7 @@ ms.locfileid: "72172804"
 
 1. 如果你的项目还没有 EditorConfig 文件，则[添加一个](../ide/create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project)。
 
-2. 在相应的文件扩展名下为要配置的每个规则添加一个条目。 例如，若要将[CA1822](ca1822-mark-members-as-static.md)的严重性设置为 `error` （ C#对于文件），条目如下所示：
+2. 在相应的文件扩展名下为要配置的每个规则添加一个条目。 例如，若要将[CA1822](ca1822.md)的严重性设置为 `error` （ C#对于文件），条目如下所示：
 
    ```ini
    [*.cs]
@@ -229,7 +229,7 @@ Visual Studio 提供了一种简便的方法，可用于在 "[快速操作](../i
 msbuild myproject.csproj /target:rebuild /verbosity:minimal
 ```
 
-下图显示了生成包含分析器规则冲突的项目的命令行生成输出：
+以下图像显示了生成包含分析器规则冲突的项目时的命令行生成输出：
 
 ![带规则冲突的 MSBuild 输出](media/command-line-build-analyzers.png)
 

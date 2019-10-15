@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a76d1c5d2268c0119fc6822167537b500371cdb5
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.openlocfilehash: 6f895506d27c98daf9d69be1a2ea4db5fbe158b7
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69585010"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305465"
 ---
 # <a name="basic-correctness-rules-rule-set-for-managed-code"></a>托管代码的“基本更正规则”规则集
 
@@ -40,7 +40,7 @@ ms.locfileid: "69585010"
 |[CA1405](../code-quality/ca1405-com-visible-type-base-types-should-be-com-visible.md)|COM 可见类型的基类型应对 COM 可见|
 |[CA1410](../code-quality/ca1410-com-registration-methods-should-be-matched.md)|应对 COM 注册方法进行匹配|
 |[CA1415](../code-quality/ca1415-declare-p-invokes-correctly.md)|正确声明 P/Invoke|
-|[CA1821](../code-quality/ca1821-remove-empty-finalizers.md)|移除空终结器|
+|[CA1821](../code-quality/ca1821.md)|移除空终结器|
 |[CA1900](../code-quality/ca1900-value-type-fields-should-be-portable.md)|值类型字段应为可移植字段|
 |[CA1901](../code-quality/ca1901-p-invoke-declarations-should-be-portable.md)|P/Invoke 声明应为可移植声明|
 |[CA2002](../code-quality/ca2002-do-not-lock-on-objects-with-weak-identity.md)|不要锁定具有弱标识的对象|
@@ -89,10 +89,10 @@ ms.locfileid: "69585010"
 |[CA1013](../code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract.md)|重载加法方法和减法方法时重载相等运算符|
 |[CA1303](../code-quality/ca1303-do-not-pass-literals-as-localized-parameters.md)|请不要将文本作为本地化参数传递|
 |[CA1308](../code-quality/ca1308-normalize-strings-to-uppercase.md)|将字符串规范化为大写|
-|[CA1806](../code-quality/ca1806-do-not-ignore-method-results.md)|不要忽略方法结果|
-|[CA1816](../code-quality/ca1816-call-gc-suppressfinalize-correctly.md)|正确调用 GC.SuppressFinalize|
-|[CA1819](../code-quality/ca1819-properties-should-not-return-arrays.md)|属性不应返回数组|
-|[CA1820](../code-quality/ca1820-test-for-empty-strings-using-string-length.md)|使用字符串长度测试是否有空字符串|
+|[CA1806](../code-quality/ca1806.md)|不要忽略方法结果|
+|[CA1816](../code-quality/ca1816.md)|正确调用 GC.SuppressFinalize|
+|[CA1819](../code-quality/ca1819.md)|属性不应返回数组|
+|[CA1820](../code-quality/ca1820.md)|使用字符串长度测试是否有空字符串|
 |[CA1903](../code-quality/ca1903-use-only-api-from-targeted-framework.md)|仅使用目标框架中的 API|
 |[CA2004](../code-quality/ca2004-remove-calls-to-gc-keepalive.md)|移除对 GC.KeepAlive 的调用|
 |[CA2006](../code-quality/ca2006-use-safehandle-to-encapsulate-native-resources.md)|使用 SafeHandle 封装本机资源|

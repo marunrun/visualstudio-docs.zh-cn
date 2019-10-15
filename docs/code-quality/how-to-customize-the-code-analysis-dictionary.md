@@ -12,22 +12,22 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b43d731634022a2f3fcb9e00b552e75e5322db8c
-ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
+ms.openlocfilehash: 9c7c88e565de4f4b3e3b25b6523ff04f1831a70d
+ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66715235"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314142"
 ---
 # <a name="how-to-customize-the-code-analysis-dictionary"></a>如何：自定义代码分析字典
 
-代码分析使用内置的字典来检查拼写、 语法的情况下和其他命名约定的.NET 设计准则中的错误代码中的标识符。 可以创建要添加、 删除或修改条款、 缩写和首字母缩写词到内置词典的自定义词典 Xml 文件。
+代码分析使用内置字典检查代码中的标识符，以了解 .NET 设计准则的拼写、语法用例和其他命名约定中的错误。 您可以创建自定义字典 Xml 文件，以添加、删除或修改内置字典的术语、缩写和首字母缩写词。
 
-例如，假设您的代码包含一个名为类**DoorKnokker**。 代码分析可以确定两个单词的复合的名称：**门**并**knokker**。 然后，它将引发一个警告， **knokker**拼写不正确。 若要强制代码分析，以识别拼写是否正确，可以添加字词**knokker**到自定义字典。
+例如，假设代码包含一个名为**DoorKnokker**的类。 代码分析会将名称标识为两个词的组合：**门**和**knokker**。 然后，它会发出警告，指出**knokker**拼写不正确。 若要强制代码分析识别拼写，可以将字词**knokker**添加到自定义字典中。
 
-## <a name="to-create-a-custom-dictionary"></a>若要创建自定义词典
+## <a name="to-create-a-custom-dictionary"></a>创建自定义字典
 
-创建名为的文件**CustomDictionary.xml**。
+创建名为**CustomDictionary**的文件。
 
 使用以下 XML 结构定义自定义字词：
 
@@ -58,25 +58,25 @@ ms.locfileid: "66715235"
    </Dictionary>
 ```
 
-## <a name="custom-dictionary-elements"></a>自定义词典元素
+## <a name="custom-dictionary-elements"></a>自定义字典元素
 
-可以通过将条款添加为自定义字典中的以下元素的内部文本来修改代码分析字典中的行为：
+您可以通过将字词作为以下元素的内部文本添加到自定义字典中来修改代码分析字典的行为：
 
-- [字典/单词/识别/中的单词](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsRecognizedWord)
+- [字典/字词/识别/字](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsRecognizedWord)
 
-- [字典/单词/无法识别的/中的单词](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsUnrecognizedWord)
+- [字典/字词/无法识别/Word](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsUnrecognizedWord)
 
 - [Dictionary/Words/Deprecated/Term[@PreferredAlternate]](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsDeprecatedTermPreferredAlternate)
 
-- [Dictionary/Words/Compound/Term[@CompoundAlternate]](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsCompoundTermCompoundAlternate)
+- [字典/字词/复合/字词 [@CompoundAlternate]](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsCompoundTermCompoundAlternate)
 
 - [Dictionary/Words/DiscreteExceptions/Term](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsDiscreteExceptionsTerm)
 
 - [Dictionary/Acronyms/CasingExceptions/Acronym](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryAcronymsCasingExceptionsAcronym)
 
-### <a name="BKMK_DictionaryWordsRecognizedWord"></a> 字典/单词/识别/中的单词
+### <a name="BKMK_DictionaryWordsRecognizedWord"></a>字典/字词/识别/字
 
-若要包括的代码分析会正确标识的字词列表中的一个术语，拼写，作为字典/单词/识别/Word 元素的内部文本添加术语。 字典/单词/识别/Word 元素中的条款不区分大小写。
+若要在代码分析标识为正确拼写的字词列表中包括字词，请将该字词添加为字典/字词/识别/Word 元素的内部文本。 字典/字词/识别/Word 元素中的字词不区分大小写。
 
 **示例**
 
@@ -93,25 +93,25 @@ ms.locfileid: "66715235"
 </Dictionary>
 ```
 
-字典/单词/识别节点中的条款被应用于以下的代码分析规则：
+字典/字词/识别的节点中的字词适用于以下代码分析规则：
 
-- [CA1701:资源字符串复合词应采用正确的大小写](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
+- [CA1701：资源字符串复合词应采用正确的大小写 @ no__t-0
 
-- [CA1702:复合词应采用正确的大小写](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
+- [CA1702：复合词应采用正确的大小写 @ no__t-0
 
-- [CA1703:资源字符串应正确拼写](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
+- [CA1703：资源字符串应正确拼写 @ no__t-0
 
-- [CA1704:标识符应正确拼写](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)
+- [CA1704：标识符应正确拼写 @ no__t-0
 
-- [CA1709:标识符应采用正确的大小写](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+- [CA1709：标识符应采用正确的大小写 @ no__t-0
 
-- [CA1726:使用首选的词条](../code-quality/ca1726-use-preferred-terms.md)
+- [CA1726：使用首选字词 @ no__t-0
 
-- [CA2204:应正确拼写文本](../code-quality/ca2204-literals-should-be-spelled-correctly.md)
+- [CA2204：应正确拼写文本 @ no__t-0
 
-### <a name="BKMK_DictionaryWordsUnrecognizedWord"></a> 字典/单词/无法识别的/中的单词
+### <a name="BKMK_DictionaryWordsUnrecognizedWord"></a>字典/字词/无法识别/Word
 
-若要从代码分析可确定会正确拼写的术语的列表中排除一个术语，添加要作为字典/单词/无法识别/Word 元素的内部文本中排除的术语。 字典/单词/无法识别/Word 元素中的条款不区分大小写。
+若要从代码分析标识为正确拼写的字词列表中排除字词，请添加要排除为字典/字词/无法识别/Word 元素的内部文本的字词。 字典/字词/无法识别/Word 元素中的词不区分大小写。
 
 **示例**
 
@@ -128,31 +128,31 @@ ms.locfileid: "66715235"
 </Dictionary>
 ```
 
-无法识别的单词/字典/节点中的条款被应用于以下的代码分析规则：
+字典/字词/无法识别的节点中的字词应用于以下代码分析规则：
 
-- [CA1701:资源字符串复合词应采用正确的大小写](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
+- [CA1701：资源字符串复合词应采用正确的大小写 @ no__t-0
 
-- [CA1702:复合词应采用正确的大小写](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
+- [CA1702：复合词应采用正确的大小写 @ no__t-0
 
-- [CA1703:资源字符串应正确拼写](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
+- [CA1703：资源字符串应正确拼写 @ no__t-0
 
-- [CA1704:标识符应正确拼写](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)
+- [CA1704：标识符应正确拼写 @ no__t-0
 
-- [CA1709:标识符应采用正确的大小写](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+- [CA1709：标识符应采用正确的大小写 @ no__t-0
 
-- [CA1726:使用首选的词条](../code-quality/ca1726-use-preferred-terms.md)
+- [CA1726：使用首选字词 @ no__t-0
 
-- [CA2204:应正确拼写文本](../code-quality/ca2204-literals-should-be-spelled-correctly.md)
+- [CA2204：应正确拼写文本 @ no__t-0
 
-### <a name="BKMK_DictionaryWordsDeprecatedTermPreferredAlternate"></a> Dictionary/Words/Deprecated/Term[@PreferredAlternate]
+### <a name="BKMK_DictionaryWordsDeprecatedTermPreferredAlternate"></a>字典/字词/弃用/字词 [@PreferredAlternate]
 
-若要在代码分析可确定为不推荐使用的术语列表中包含一个术语，将添加为字典/单词/已弃用/术语元素的内部文本的一词。 不推荐使用的术语是一个单词的拼写正确，但不应使用。
+若要在代码分析识别为不推荐使用的字词列表中包括字词，请将该字词添加为字典/字词/弃用/字词元素的内部文本。 弃用的字词是拼写正确但不应使用的单词。
 
-若要包含在警告中建议的替代字词，字词元素 PreferredAlternate 属性中指定备用服务器。 如果不希望建议一个替代，可以将属性值留空。
+若要在警告中包括建议的备用字词，请在 PreferredAlternate 属性中指定字词元素的备用项。 如果不想建议替代，则可以将属性值留空。
 
-- 字典/单词中的不推荐使用的词条/已弃用/术语元素不是区分大小写。
+- 字典/字词/弃用/字词元素中的弃用字词不区分大小写。
 
-- PreferredAlternate 属性值是区分大小写。 对于复合备用项使用 Pascal 大小写。
+- PreferredAlternate 特性值区分大小写。 将 Pascal 大小写用于复合备用。
 
 **示例**
 
@@ -169,25 +169,25 @@ ms.locfileid: "66715235"
 </Dictionary>
 ```
 
-已弃用的单词/字典/节点中的条款被应用于以下的代码分析规则：
+字典/字词/弃用节点中的词条适用于以下代码分析规则：
 
-- [CA1701:资源字符串复合词应采用正确的大小写](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
+- [CA1701：资源字符串复合词应采用正确的大小写 @ no__t-0
 
-- [CA1702:复合词应采用正确的大小写](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
+- [CA1702：复合词应采用正确的大小写 @ no__t-0
 
-- [CA1703:资源字符串应正确拼写](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
+- [CA1703：资源字符串应正确拼写 @ no__t-0
 
-- [CA1704:标识符应正确拼写](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)
+- [CA1704：标识符应正确拼写 @ no__t-0
 
-- [CA1726:使用首选的词条](../code-quality/ca1726-use-preferred-terms.md)
+- [CA1726：使用首选字词 @ no__t-0
 
-### <a name="BKMK_DictionaryWordsCompoundTermCompoundAlternate"></a> Dictionary/Words/Compound/Term[@CompoundAlternate]
+### <a name="BKMK_DictionaryWordsCompoundTermCompoundAlternate"></a>字典/字词/复合/字词 [@CompoundAlternate]
 
-内置词典标识作为单一的离散的术语，而不是一个复合术语的一些术语。 若要与搜索条件的代码分析标识为一个组合词列表中包括一个术语，并指定正确的大小写的字词，添加一词作为字典/单词/复合/术语元素的内部文本。 术语元素 CompoundAlternate 属性中指定的单个单词利用不同的单词 （Pascal 大小写） 的第一个字母组成的复合术语。 请注意，内部文本中指定的术语自动添加到字典/单词/DiscreteExceptions 列表。
+内置字典将一些字词标识为单个离散术语，而不是复合字词。 若要在代码分析识别为组合词并指定正确的字词大小写的字词列表中包括字词，请将该字词添加为字典/字词/复合/字词元素的内部文本。 在 Term 元素的 CompoundAlternate 属性中，通过将单个单词的首字母大写（Pascal 大小写）来指定构成该复合字词的各个单词。 请注意，在内部文本中指定的术语会自动添加到 Dictionary/Words/DiscreteExceptions 列表中。
 
-- 字典/单词中的不推荐使用的词条/已弃用/术语元素不是区分大小写。
+- 字典/字词/复合/字词元素中的复合字词不区分大小写。
 
-- PreferredAlternate 属性值是区分大小写。 对于复合备用项使用 Pascal 大小写。
+- CompoundAlternate 特性值区分大小写。 将 Pascal 大小写用于复合备用。
 
 **示例**
 
@@ -204,19 +204,19 @@ ms.locfileid: "66715235"
 </Dictionary>
 ```
 
-字典/单词/化合物节点中的条款被应用于以下的代码分析规则：
+字典/字词/复合节点中的词条适用于以下代码分析规则：
 
-- [CA1701:资源字符串复合词应采用正确的大小写](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
+- [CA1701：资源字符串复合词应采用正确的大小写 @ no__t-0
 
-- [CA1702:复合词应采用正确的大小写](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
+- [CA1702：复合词应采用正确的大小写 @ no__t-0
 
-- [CA1703:资源字符串应正确拼写](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
+- [CA1703：资源字符串应正确拼写 @ no__t-0
 
-- [CA1704:标识符应正确拼写](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)
+- [CA1704：标识符应正确拼写 @ no__t-0
 
-### <a name="BKMK_DictionaryWordsDiscreteExceptionsTerm"></a> 字典/单词/DiscreteExceptions/术语
+### <a name="BKMK_DictionaryWordsDiscreteExceptionsTerm"></a>字典/字词/DiscreteExceptions/字词
 
-若要排除的代码分析作为单个标识的字词列表中的字词，离散 word 字词被选中的组合词的大小写规则时，将添加为字典/单词/DiscreteExceptions/术语元素的内部文本的术语。 字典/单词/DiscreteExceptions/术语元素中的字词不区分大小写。
+若要在由复合单词的大小写规则检查字词时，将代码分析识别为一个离散单词的字词列表中的字词，请将该字词添加为 Dictionary/Words/DiscreteExceptions/Term 元素的内部文本。 字典/字词/DiscreteExceptions/字词元素中的词不区分大小写。
 
 **示例**
 
@@ -233,15 +233,15 @@ ms.locfileid: "66715235"
 </Dictionary>
 ```
 
-字典/单词/DiscreteExceptions 节点中的条款被应用于以下的代码分析规则：
+字典/字词/DiscreteExceptions 节点中的字词适用于以下代码分析规则：
 
-- [CA1701:资源字符串复合词应采用正确的大小写](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
+- [CA1701：资源字符串复合词应采用正确的大小写 @ no__t-0
 
-- [CA1702:复合词应采用正确的大小写](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
+- [CA1702：复合词应采用正确的大小写 @ no__t-0
 
-### <a name="BKMK_DictionaryAcronymsCasingExceptionsAcronym"></a> Dictionary/Acronyms/CasingExceptions/Acronym
+### <a name="BKMK_DictionaryAcronymsCasingExceptionsAcronym"></a>字典/缩写词/CasingExceptions/缩写
 
-中的代码分析将标识为拼写正确的字词列表包括首字母缩略词并指示如何的首字母缩写词大小写被选中时规则的组合词，将字词添加为字典/首字母缩写词/CasingExceptions 的内部文本 /首字母缩略词元素。 字典/首字母缩写词/CasingExceptions/首字母缩略词元素中的首字母缩写是区分大小写。
+若要在代码分析标识为正确拼写的字词列表中包括首字母缩写，并指示用复合单词的大小写规则检查字词时首字母缩写词，请将该词添加为字典/缩写词/CasingExceptions/的内部文本缩写词元素。 字典/缩写词/CasingExceptions/缩写元素中的首字母缩写词区分大小写。
 
 **示例**
 
@@ -258,20 +258,20 @@ ms.locfileid: "66715235"
 </Dictionary>
 ```
 
-字典/首字母缩写词/CasingExceptions 节点中的条款被应用于以下的代码分析规则：
+字典/首字母缩写/CasingExceptions 节点中的词条适用于以下代码分析规则：
 
-- [CA1709:标识符应采用正确的大小写](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+- [CA1709：标识符应采用正确的大小写 @ no__t-0
 
-## <a name="BKMK_ToApplyACustomDictionaryToAProject"></a> 若要应用于项目的自定义词典
+## <a name="BKMK_ToApplyACustomDictionaryToAProject"></a>向项目应用自定义字典
 
-1. 在中**解决方案资源管理器**，使用以下过程之一：
+1. 在**解决方案资源管理器**中，使用以下过程之一：
 
-2. 要将字典添加到单个项目中，右键单击项目名称，然后单击**添加现有项**。 指定的文件中**添加现有项**对话框。
+2. 若要将字典添加到单个项目中，请右键单击项目名称，然后单击 "**添加现有项**"。 在 "**添加现有项**" 对话框中指定该文件。
 
-3. 若要添加一个字典，其中在两个或多个项目间共享，请找到共享中的文件**添加现有项**对话框框中，单击向下箭头**添加**按钮，然后单击**添加为链接**.
+3. 若要添加两个或多个项目之间共享的字典，请在 "**添加现有项**" 对话框中找到要共享的文件，单击 "**添加**" 按钮上的向下箭头，然后单击 "**添加为链接**"。
 
-4. 在中**解决方案资源管理器**，右键单击**CustomDictionary.xml**文件名称，然后单击**属性**。
+4. 在**解决方案资源管理器**中，右键单击**CustomDictionary**文件名称，然后单击 "**属性**"。
 
-5. 从**生成操作**列表中，选择**CodeAnalysisDictionary**。
+5. 从 "**生成操作**" 列表中，选择 " **CodeAnalysisDictionary**"。
 
-6. 从**复制到输出目录**列表中，选择**不要复制**。
+6. 从 "**复制到输出目录**" 列表中，选择 "不**复制**"。
