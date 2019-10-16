@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 197a52894a8c0ed3c2c38b9036a521a558c1005d
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: f5ee65126fb89f2725b69d196e0659c622d9c389
+ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118786"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314102"
 ---
 # <a name="step-3-add-a-countdown-timer"></a>步骤 3：添加倒计时计时器
 
@@ -36,8 +36,7 @@ ms.locfileid: "71118786"
      [!code-vb[VbExpressTutorial3Step3#5](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_1.vb)]
      [!code-csharp[VbExpressTutorial3Step3#5](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_1.cs)]
 
-   > [!IMPORTANT]
-   > 使用此页右上角的编程语言控件查看 C# 代码片段或 Visual Basic 代码片段。<br><br>![Docs.Microsoft.com 的编程语言控件](../ide/media/docs-programming-language-control.png)
+     [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
      现在您需要一个进行实际读秒的方法（例如计时器），此方法在您指定的时间后将引发一个事件。
 
