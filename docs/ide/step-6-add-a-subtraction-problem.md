@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 47932e8a647cb9a5ae555de09778fcd67da397e2
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: 8acc67aa82bb0d7cf81cf6794bfdbb4e0c912ebe
+ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118732"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314243"
 ---
 # <a name="step-6-add-a-subtraction-problem"></a>步骤 6：添加减法问题
 在本教程的第 6 部分中，你将添加一道减法题并了解如何执行以下任务：
@@ -43,8 +43,7 @@ ms.locfileid: "71118732"
      [!code-vb[VbExpressTutorial3Step5_6#12](../ide/codesnippet/VisualBasic/step-6-add-a-subtraction-problem_1.vb)]
      [!code-csharp[VbExpressTutorial3Step5_6#12](../ide/codesnippet/CSharp/step-6-add-a-subtraction-problem_1.cs)]
 
-     > [!IMPORTANT]
-     > 使用此页右上角的编程语言控件查看 C# 代码片段或 Visual Basic 代码片段。<br><br>![Docs.Microsoft.com 的编程语言控件](../ide/media/docs-programming-language-control.png)
+     [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
      新的整型变量的名称（“minuend”和“subtrahend”）不是编程术语。   它们是传统的算术名称，分别是指要减去的数字（subtrahend，减数）和从中减去减数的数字（minuend，被减数）。 差值是被减数减去减数的结果。 你可以使用其他名称，因为程序不要求变量、控件、组件或方法使用特定的名称。 你必须遵循诸如名称不得以数字开头等规则，但通常可以使用 x1、、x2、x3 和 x4 等名称。 但是，通用名称会使代码难以理解，而且几乎无法查明问题。 为了使变量名称保持唯一性和有用性，在本教程的后面部分中，你将使用传统的乘法名称（multiplicand × multiplier = product，被乘数 × 乘数 = 积）和除法名称（dividend ÷ divisor = quotient，被除数 ÷ 除数 = 商）。
 

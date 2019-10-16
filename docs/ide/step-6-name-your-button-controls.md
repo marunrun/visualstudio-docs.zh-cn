@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ce9f55dd54dbe85f64226c1ca7f0b4f75b1cdfc
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: ff8c43e42d63208c1119f1f545697a57173fdd7a
+ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118694"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313964"
 ---
 # <a name="step-6-name-your-button-controls"></a>步骤 6：命名按钮控件
 
@@ -65,8 +65,7 @@ ms.locfileid: "71118694"
     End Sub
     ```
 
-   > [!IMPORTANT]
-   > 使用此页右上角的编程语言控件查看 C# 代码片段或 Visual Basic 代码片段。<br><br>![Docs.Microsoft.com 的编程语言控件](../ide/media/docs-programming-language-control.png)
+   [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
    你正在查看名为 `showButton_Click()`（或者 `ShowButton_Click()`）的代码。 当你打开“showButton”  按钮的代码文件时，IDE 已将此代码添加到窗体的代码中。 在设计时，当你打开窗体中的某个控件的代码文件时，如果该控件没有代码，则将为该控件生成代码。 运行应用并选择控件（在本例中为“显示图片”按钮）时，该代码（称为“方法”）将会运行   。
 
