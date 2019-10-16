@@ -14,29 +14,29 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 74a43a0c601fa8a96c8737644bf5bd0261f59796
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 75d984617b56525e640a74aa4badd6f520c0b892
+ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254058"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381316"
 ---
 # <a name="walkthrough-bind-to-data-from-a-service-in-a-vsto-add-in-project"></a>演练：在 VSTO 外接程序项目中绑定到服务中的数据
   可以将数据绑定到 VSTO 外接程序项目中的宿主控件。 本演练演示如何在运行时将控件添加到 Microsoft Office Word 文档中、将控件绑定到从 MSDN Content Service 检索到的数据以及响应事件。
 
- **适用于:** 本主题中的信息适用于 Word 2010 的应用程序级项目。 有关详细信息，请参阅 [Features Available by Office Application and Project Type](../vsto/features-available-by-office-application-and-project-type.md)。
+ **适用于：** 本主题中的信息适用于 Word 2010 的应用程序级项目。 有关详细信息，请参阅[按 Office 应用程序和项目类型提供的功能](../vsto/features-available-by-office-application-and-project-type.md)。
 
  本演练阐释了以下任务：
 
 - 在运行时将 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 控件添加到文档中。
 
-- <xref:Microsoft.Office.Tools.Word.RichTextContentControl>将控件绑定到 web 服务中的数据。
+- 将 @no__t 0 控件绑定到 web 服务中的数据。
 
 - 响应 <xref:Microsoft.Office.Tools.Word.ContentControlBase.Entering> 控件的 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 事件。
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>Prerequisites
  你需要以下组件来完成本演练：
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "71254058"
 
 1. 使用 Visual Basic 或 C# 创建一个名为 **MTPS Content Service**的 Word VSTO 外接程序项目。
 
-     有关详细信息，请参阅[如何：在 Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)中创建 Office 项目。
+     有关详细信息，请参阅[如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
      Visual Studio 会打开 `ThisAddIn.vb` 或 `ThisAddIn.cs` 文件并将项目添加到“解决方案资源管理器”中。
 
@@ -65,7 +65,7 @@ ms.locfileid: "71254058"
 
 3. 在“地址” 字段中键入下面的 URL：
 
-     **http：\//services.msdn.microsoft.com/ContentServices/ContentService.asmx**
+   `http://services.msdn.microsoft.com/ContentServices/ContentService.asmx`
 
 4. 单击 **“转到”** 。
 

@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c7c88e565de4f4b3e3b25b6523ff04f1831a70d
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
+ms.openlocfilehash: b4a6c94f5784d57a90dd31f21f8829b3141140d0
+ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314142"
+ms.locfileid: "72349594"
 ---
 # <a name="how-to-customize-the-code-analysis-dictionary"></a>如何：自定义代码分析字典
 
@@ -66,13 +66,13 @@ ms.locfileid: "72314142"
 
 - [字典/字词/无法识别/Word](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsUnrecognizedWord)
 
-- [Dictionary/Words/Deprecated/Term[@PreferredAlternate]](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsDeprecatedTermPreferredAlternate)
+- [字典/字词/弃用/字词 [@PreferredAlternate]](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsDeprecatedTermPreferredAlternate)
 
 - [字典/字词/复合/字词 [@CompoundAlternate]](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsCompoundTermCompoundAlternate)
 
-- [Dictionary/Words/DiscreteExceptions/Term](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsDiscreteExceptionsTerm)
+- [字典/字词/DiscreteExceptions/字词](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsDiscreteExceptionsTerm)
 
-- [Dictionary/Acronyms/CasingExceptions/Acronym](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryAcronymsCasingExceptionsAcronym)
+- [字典/缩写词/CasingExceptions/缩写](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryAcronymsCasingExceptionsAcronym)
 
 ### <a name="BKMK_DictionaryWordsRecognizedWord"></a>字典/字词/识别/字
 
@@ -95,19 +95,19 @@ ms.locfileid: "72314142"
 
 字典/字词/识别的节点中的字词适用于以下代码分析规则：
 
-- [CA1701：资源字符串复合词应采用正确的大小写 @ no__t-0
+- [CA1701：资源字符串复合词应采用正确的大小写](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
 
-- [CA1702：复合词应采用正确的大小写 @ no__t-0
+- [CA1702：复合词应采用正确的大小写](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
 
-- [CA1703：资源字符串应正确拼写 @ no__t-0
+- [CA1703：资源字符串应正确拼写](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
 
-- [CA1704：标识符应正确拼写 @ no__t-0
+- [CA1704：标识符应正确拼写](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)
 
-- [CA1709：标识符应采用正确的大小写 @ no__t-0
+- [CA1709：标识符的大小写应当正确](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
 
-- [CA1726：使用首选字词 @ no__t-0
+- [CA1726：使用首选词条](../code-quality/ca1726-use-preferred-terms.md)
 
-- [CA2204：应正确拼写文本 @ no__t-0
+- [CA2204：应正确拼写文本](../code-quality/ca2204.md)
 
 ### <a name="BKMK_DictionaryWordsUnrecognizedWord"></a>字典/字词/无法识别/Word
 
@@ -130,19 +130,19 @@ ms.locfileid: "72314142"
 
 字典/字词/无法识别的节点中的字词应用于以下代码分析规则：
 
-- [CA1701：资源字符串复合词应采用正确的大小写 @ no__t-0
+- [CA1701：资源字符串复合词应采用正确的大小写](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
 
-- [CA1702：复合词应采用正确的大小写 @ no__t-0
+- [CA1702：复合词应采用正确的大小写](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
 
-- [CA1703：资源字符串应正确拼写 @ no__t-0
+- [CA1703：资源字符串应正确拼写](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
 
-- [CA1704：标识符应正确拼写 @ no__t-0
+- [CA1704：标识符应正确拼写](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)
 
-- [CA1709：标识符应采用正确的大小写 @ no__t-0
+- [CA1709：标识符的大小写应当正确](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
 
-- [CA1726：使用首选字词 @ no__t-0
+- [CA1726：使用首选词条](../code-quality/ca1726-use-preferred-terms.md)
 
-- [CA2204：应正确拼写文本 @ no__t-0
+- [CA2204：应正确拼写文本](../code-quality/ca2204.md)
 
 ### <a name="BKMK_DictionaryWordsDeprecatedTermPreferredAlternate"></a>字典/字词/弃用/字词 [@PreferredAlternate]
 
@@ -171,15 +171,15 @@ ms.locfileid: "72314142"
 
 字典/字词/弃用节点中的词条适用于以下代码分析规则：
 
-- [CA1701：资源字符串复合词应采用正确的大小写 @ no__t-0
+- [CA1701：资源字符串复合词应采用正确的大小写](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
 
-- [CA1702：复合词应采用正确的大小写 @ no__t-0
+- [CA1702：复合词应采用正确的大小写](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
 
-- [CA1703：资源字符串应正确拼写 @ no__t-0
+- [CA1703：资源字符串应正确拼写](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
 
-- [CA1704：标识符应正确拼写 @ no__t-0
+- [CA1704：标识符应正确拼写](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)
 
-- [CA1726：使用首选字词 @ no__t-0
+- [CA1726：使用首选词条](../code-quality/ca1726-use-preferred-terms.md)
 
 ### <a name="BKMK_DictionaryWordsCompoundTermCompoundAlternate"></a>字典/字词/复合/字词 [@CompoundAlternate]
 
@@ -206,13 +206,13 @@ ms.locfileid: "72314142"
 
 字典/字词/复合节点中的词条适用于以下代码分析规则：
 
-- [CA1701：资源字符串复合词应采用正确的大小写 @ no__t-0
+- [CA1701：资源字符串复合词应采用正确的大小写](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
 
-- [CA1702：复合词应采用正确的大小写 @ no__t-0
+- [CA1702：复合词应采用正确的大小写](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
 
-- [CA1703：资源字符串应正确拼写 @ no__t-0
+- [CA1703：资源字符串应正确拼写](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
 
-- [CA1704：标识符应正确拼写 @ no__t-0
+- [CA1704：标识符应正确拼写](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)
 
 ### <a name="BKMK_DictionaryWordsDiscreteExceptionsTerm"></a>字典/字词/DiscreteExceptions/字词
 
@@ -235,9 +235,9 @@ ms.locfileid: "72314142"
 
 字典/字词/DiscreteExceptions 节点中的字词适用于以下代码分析规则：
 
-- [CA1701：资源字符串复合词应采用正确的大小写 @ no__t-0
+- [CA1701：资源字符串复合词应采用正确的大小写](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
 
-- [CA1702：复合词应采用正确的大小写 @ no__t-0
+- [CA1702：复合词应采用正确的大小写](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
 
 ### <a name="BKMK_DictionaryAcronymsCasingExceptionsAcronym"></a>字典/缩写词/CasingExceptions/缩写
 
@@ -260,7 +260,7 @@ ms.locfileid: "72314142"
 
 字典/首字母缩写/CasingExceptions 节点中的词条适用于以下代码分析规则：
 
-- [CA1709：标识符应采用正确的大小写 @ no__t-0
+- [CA1709：标识符的大小写应当正确](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
 
 ## <a name="BKMK_ToApplyACustomDictionaryToAProject"></a>向项目应用自定义字典
 

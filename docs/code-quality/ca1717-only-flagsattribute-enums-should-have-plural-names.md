@@ -1,5 +1,5 @@
 ---
-title: CA1717:只有 FlagsAttribute 枚举应采用复数形式的名称
+title: CA1717：只有 FlagsAttribute 枚举应采用复数形式的名称
 ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
@@ -14,39 +14,39 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b352d8f49cb92f70b449427179229fd882dbc9ce
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 113df599f793e92c41b7aa6b8a8f52a4c188982a
+ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234060"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72348902"
 ---
-# <a name="ca1717-only-flagsattribute-enums-should-have-plural-names"></a>CA1717:只有 FlagsAttribute 枚举应采用复数形式的名称
+# <a name="ca1717-only-flagsattribute-enums-should-have-plural-names"></a>CA1717：只有 FlagsAttribute 枚举应采用复数形式的名称
 
 |||
 |-|-|
 |TypeName|OnlyFlagsEnumsShouldHavePluralNames|
 |CheckId|CA1717|
-|类别|Microsoft.Naming|
+|类别|Microsoft。命名|
 |重大更改|重大|
 
 ## <a name="cause"></a>原因
 
-枚举的名称以复数形式结束，并且未使用<xref:System.FlagsAttribute?displayProperty=fullName>特性标记枚举。
+枚举的名称以复数形式结束，并且枚举未标记为 <xref:System.FlagsAttribute?displayProperty=fullName> 属性。
 
 默认情况下，此规则仅查看外部可见的枚举，但这是[可配置](#configurability)的。
 
 ## <a name="rule-description"></a>规则说明
 
-命名约定规定，复数名称的枚举指示可以同时指定多个枚举值。 <xref:System.FlagsAttribute>告诉编译器，应将枚举视为对枚举启用按位运算的位域。
+命名约定规定，复数名称的枚举指示可以同时指定多个枚举值。 @No__t 为编译器告诉编译器，应将枚举作为位域来实现对枚举的按位运算。
 
-如果一次只能指定一个枚举值，则枚举的名称应为单数形式的单词。 例如，定义一周中各天的枚举可能适用于可指定多天的应用程序。 此枚举应具有<xref:System.FlagsAttribute> ，并且可以称为 "Days"。 只允许指定一天的类似枚举不具有属性，并且可以称为 "Day"。
+如果一次只能指定一个枚举值，则枚举的名称应为单数形式的单词。 例如，定义一周中各天的枚举可能适用于可指定多天的应用程序。 此枚举应具有 <xref:System.FlagsAttribute>，并且可以称为 "Days"。 只允许指定一天的类似枚举不具有属性，并且可以称为 "Day"。
 
 命名约定为面向公共语言运行时的库提供了通用的外观。 这减少了学习新软件库所需的时间，并使客户对库的开发更加自信，因为有开发托管代码的专业技能。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-使枚举名称成为单数字或添加<xref:System.FlagsAttribute>。
+将枚举的名称设置为单数字，或添加 <xref:System.FlagsAttribute>。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
@@ -64,9 +64,9 @@ dotnet_code_quality.ca1717.api_surface = private, internal
 
 ## <a name="related-rules"></a>相关规则
 
-- [CA1714标志枚举应包含复数名称](../code-quality/ca1714-flags-enums-should-have-plural-names.md)
-- [CA1027用 FlagsAttribute 标记枚举](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
-- [CA2217不要用 FlagsAttribute 标记枚举](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
+- [CA1714：Flags 枚举应采用复数形式的名称](../code-quality/ca1714-flags-enums-should-have-plural-names.md)
+- [CA1027：用 FlagsAttribute 标记枚举](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
+- [CA2217：不要使用 FlagsAttribute 标记枚举](../code-quality/ca2217.md)
 
 ## <a name="see-also"></a>请参阅
 

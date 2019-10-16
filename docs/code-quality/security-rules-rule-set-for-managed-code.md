@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 85bf4e140b3a379221c3b7e5a05428b29e3a985b
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: 3449cf131aad8413cf192bb758e27746cc80d051
+ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018379"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72349491"
 ---
 # <a name="security-rules-rule-set-for-managed-code"></a>托管代码的“安全规则”规则集
 
@@ -63,7 +63,7 @@ ms.locfileid: "72018379"
 |[CA2146](../code-quality/ca2146-types-must-be-at-least-as-critical-as-their-base-types-and-interfaces.md)|类型必须至少与其基类型和接口一样关键|
 |[CA2147](../code-quality/ca2147-transparent-methods-may-not-use-security-asserts.md)|透明方法不得使用安全断言|
 |[CA2149](../code-quality/ca2149-transparent-methods-must-not-call-into-native-code.md)|透明方法不得调入本机代码|
-|[CA2210](../code-quality/ca2210-assemblies-should-have-valid-strong-names.md)|程序集应具有有效的强名称|
+|[CA2210](../code-quality/ca2210.md)|程序集应具有有效的强名称|
 |[CA2300](ca2300.md)|请勿使用不安全的反序列化程序 BinaryFormatte|
 |[CA2301](ca2301.md)|在未先设置 BinaryFormatter.Binder 的情况下，请不要调用 BinaryFormatter.Deserialize|
 |[CA2302](ca2302.md)|在调用 BinaryFormatter.Deserialize 之前，确保设置 BinaryFormatter.Binder|

@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ed996aa19f9fda1310dccc117f8abfb6efa29e1f
-ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
+ms.openlocfilehash: 898a11be40d29c2e6181886c2c90af9315af6e3e
+ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305541"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72349558"
 ---
 # <a name="mixed-minimum-rules-rule-set"></a>“混合最少量规则”规则集
 
@@ -71,7 +71,7 @@ Microsoft 混合的最小规则重点介绍支持公共语言运行C++时的项�
 |[C6518](../code-quality/c6518.md)|不可写的缓冲区的可写入大小|
 |[C6522](../code-quality/c6522.md)|无效大小的字符串类型|
 |[C6525](../code-quality/c6525.md)|无效大小字符串的不可访问的位置|
-|[C6527](../code-quality/c6527.md)|无效的批注："NeedsRelease" 属性不能用于 void 类型的值|
+|[C6527](../code-quality/c6527.md)|无效的批注：“NeedsRelease”属性可能不可用于 void 类型的值|
 |[C6530](../code-quality/c6530.md)|无法识别的格式字符串样式|
 |[C6540](../code-quality/c6540.md)|对该函数使用属性批注将使其现有的所有 __declspec 批注无效|
 |[C6551](../code-quality/c6551.md)|大小规范无效：表达式不可分析|
@@ -155,5 +155,5 @@ Microsoft 混合的最小规则重点介绍支持公共语言运行C++时的项�
 |[C28351](../code-quality/c28351.md)|批注介绍了在条件中无法使用动态值（变量）的位置。|
 |[CA1001](../code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable.md)|具有可释放字段的类型应该是可释放的|
 |[CA1821](../code-quality/ca1821.md)|移除空终结器|
-|[CA2213](../code-quality/ca2213-disposable-fields-should-be-disposed.md)|应释放可释放的字段|
-|[CA2231](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)|重写 ValueType.Equals 时应重载相等运算符|
+|[CA2213](../code-quality/ca2213.md)|应释放可释放的字段|
+|[CA2231](../code-quality/ca2231.md)|重写 ValueType.Equals 时应重载相等运算符|

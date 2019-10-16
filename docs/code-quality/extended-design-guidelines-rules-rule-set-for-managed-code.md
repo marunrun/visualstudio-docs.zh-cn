@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3ad443a149b1c3a49c4bbbc260a4121d0a721aed
-ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
+ms.openlocfilehash: 24e5f0ef0c78c99ae04214739cce1af567358032
+ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305823"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72349614"
 ---
 # <a name="extended-design-guidelines-rules-rule-set-for-managed-code"></a>托管代码的“扩展的设计准则规则”规则集
 
@@ -69,24 +69,24 @@ Microsoft 扩展的设计准则规则集对基本设计准则规则进行了扩�
 |[CA2146](../code-quality/ca2146-types-must-be-at-least-as-critical-as-their-base-types-and-interfaces.md)|类型必须至少与其基类型和接口一样关键|
 |[CA2147](../code-quality/ca2147-transparent-methods-may-not-use-security-asserts.md)|透明方法不得使用安全断言|
 |[CA2149](../code-quality/ca2149-transparent-methods-must-not-call-into-native-code.md)|透明方法不得调入本机代码|
-|[CA2200](../code-quality/ca2200-rethrow-to-preserve-stack-details.md)|再次引发以保留堆栈详细信息|
-|[CA2202](../code-quality/ca2202-do-not-dispose-objects-multiple-times.md)|不要多次释放对象|
-|[CA2207](../code-quality/ca2207-initialize-value-type-static-fields-inline.md)|以内联方式初始化值类型的静态字段|
-|[CA2212](../code-quality/ca2212-do-not-mark-serviced-components-with-webmethod.md)|不要使用 WebMethod 标记服务组件|
-|[CA2213](../code-quality/ca2213-disposable-fields-should-be-disposed.md)|应释放可释放的字段|
-|[CA2214](../code-quality/ca2214-do-not-call-overridable-methods-in-constructors.md)|不要在构造函数中调用可重写的方法|
-|[CA2216](../code-quality/ca2216-disposable-types-should-declare-finalizer.md)|可释放类型应声明终结器|
-|[CA2220](../code-quality/ca2220-finalizers-should-call-base-class-finalizer.md)|终结器应调用基类的终结器|
-|[CA2229](../code-quality/ca2229-implement-serialization-constructors.md)|实现序列化构造函数|
-|[CA2231](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)|重写 ValueType.Equals 时应重载相等运算符|
-|[CA2232](../code-quality/ca2232-mark-windows-forms-entry-points-with-stathread.md)|使用 STAThread 标记 Windows 窗体的入口点|
-|[CA2235](../code-quality/ca2235-mark-all-non-serializable-fields.md)|标记所有不可序列化的字段|
-|[CA2236](../code-quality/ca2236-call-base-class-methods-on-iserializable-types.md)|对 ISerializable 类型调用基类方法|
-|[CA2237](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)|用 SerializableAttribute 标记 ISerializable 类型|
-|[CA2238](../code-quality/ca2238-implement-serialization-methods-correctly.md)|正确实现序列化方法|
-|[CA2240](../code-quality/ca2240-implement-iserializable-correctly.md)|正确实现 ISerializable|
-|[CA2241](../code-quality/ca2241-provide-correct-arguments-to-formatting-methods.md)|为格式化方法提供正确的参数|
-|[CA2242](../code-quality/ca2242-test-for-nan-correctly.md)|正确测试 NaN|
+|[CA2200](../code-quality/ca2200.md)|再次引发以保留堆栈详细信息|
+|[CA2202](../code-quality/ca2202.md)|不要多次释放对象|
+|[CA2207](../code-quality/ca2207.md)|以内联方式初始化值类型的静态字段|
+|[CA2212](../code-quality/ca2212.md)|不要使用 WebMethod 标记服务组件|
+|[CA2213](../code-quality/ca2213.md)|应释放可释放的字段|
+|[CA2214](../code-quality/ca2214.md)|不要在构造函数中调用可重写的方法|
+|[CA2216](../code-quality/ca2216.md)|可释放类型应声明终结器|
+|[CA2220](../code-quality/ca2220.md)|终结器应调用基类的终结器|
+|[CA2229](../code-quality/ca2229.md)|实现序列化构造函数|
+|[CA2231](../code-quality/ca2231.md)|重写 ValueType.Equals 时应重载相等运算符|
+|[CA2232](../code-quality/ca2232.md)|使用 STAThread 标记 Windows 窗体的入口点|
+|[CA2235](../code-quality/ca2235.md)|标记所有不可序列化的字段|
+|[CA2236](../code-quality/ca2236.md)|对 ISerializable 类型调用基类方法|
+|[CA2237](../code-quality/ca2237.md)|用 SerializableAttribute 标记 ISerializable 类型|
+|[CA2238](../code-quality/ca2238.md)|正确实现序列化方法|
+|[CA2240](../code-quality/ca2240.md)|正确实现 ISerializable|
+|[CA2241](../code-quality/ca2241.md)|为格式化方法提供正确的参数|
+|[CA2242](../code-quality/ca2242.md)|正确测试 NaN|
 |[CA1000](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)|不要在泛型类型中声明静态成员|
 |[CA1002](../code-quality/ca1002-do-not-expose-generic-lists.md)|不要公开泛型列表|
 |[CA1003](../code-quality/ca1003-use-generic-event-handler-instances.md)|使用泛型事件处理程序实例|
@@ -151,22 +151,22 @@ Microsoft 扩展的设计准则规则集对基本设计准则规则进行了扩�
 |[CA1820](../code-quality/ca1820.md)|使用字符串长度测试是否有空字符串|
 |[CA1822](../code-quality/ca1822.md)|将成员标记为 static|
 |[CA1823](../code-quality/ca1823.md)|避免未使用的私有字段|
-|[CA2201](../code-quality/ca2201-do-not-raise-reserved-exception-types.md)|不要引发保留的异常类型|
-|[CA2205](../code-quality/ca2205-use-managed-equivalents-of-win32-api.md)|使用 Win32 API 的托管等效项|
-|[CA2208](../code-quality/ca2208-instantiate-argument-exceptions-correctly.md)|正确实例化参数异常|
-|[CA2211](../code-quality/ca2211-non-constant-fields-should-not-be-visible.md)|非常量字段不应是可见的|
-|[CA2217](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)|不要使用 FlagsAttribute 标记枚举|
-|[CA2219](../code-quality/ca2219-do-not-raise-exceptions-in-exception-clauses.md)|在异常子句中不引发异常|
-|[CA2221](../code-quality/ca2221-finalizers-should-be-protected.md)|终结器应受到保护|
-|[CA2222](../code-quality/ca2222-do-not-decrease-inherited-member-visibility.md)|不要递减继承成员的可见性|
-|[CA2223](../code-quality/ca2223-members-should-differ-by-more-than-return-type.md)|成员不应只是返回类型不同|
-|[CA2224](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)|重载相等运算符时重写 Equals 方法|
-|[CA2225](../code-quality/ca2225-operator-overloads-have-named-alternates.md)|运算符重载具有命名的备用项|
-|[CA2226](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)|运算符应有对称重载|
-|[CA2227](../code-quality/ca2227-collection-properties-should-be-read-only.md)|集合属性应为只读|
-|[CA2230](../code-quality/ca2230-use-params-for-variable-arguments.md)|对可变数量的参数使用 params|
-|[CA2234](../code-quality/ca2234-pass-system-uri-objects-instead-of-strings.md)|传递 System.Uri 对象，而不传递字符串|
-|[CA2239](../code-quality/ca2239-provide-deserialization-methods-for-optional-fields.md)|为可选字段提供反序列化方法|
+|[CA2201](../code-quality/ca2201.md)|不要引发保留的异常类型|
+|[CA2205](../code-quality/ca2205.md)|使用 Win32 API 的托管等效项|
+|[CA2208](../code-quality/ca2208.md)|正确实例化参数异常|
+|[CA2211](../code-quality/ca2211.md)|非常量字段不应是可见的|
+|[CA2217](../code-quality/ca2217.md)|不要使用 FlagsAttribute 标记枚举|
+|[CA2219](../code-quality/ca2219.md)|在异常子句中不引发异常|
+|[CA2221](../code-quality/ca2221.md)|终结器应受到保护|
+|[CA2222](../code-quality/ca2222.md)|不要递减继承成员的可见性|
+|[CA2223](../code-quality/ca2223.md)|成员不应只是返回类型不同|
+|[CA2224](../code-quality/ca2224.md)|重载相等运算符时重写 Equals 方法|
+|[CA2225](../code-quality/ca2225.md)|运算符重载具有命名的备用项|
+|[CA2226](../code-quality/ca2226.md)|运算符应有对称重载|
+|[CA2227](../code-quality/ca2227.md)|集合属性应为只读|
+|[CA2230](../code-quality/ca2230.md)|对可变数量的参数使用 params|
+|[CA2234](../code-quality/ca2234.md)|传递 System.Uri 对象，而不传递字符串|
+|[CA2239](../code-quality/ca2239.md)|为可选字段提供反序列化方法|
 |[CA1020](../code-quality/ca1020-avoid-namespaces-with-few-types.md)|避免使用类型极少的命名空间|
 |[CA1021](../code-quality/ca1021-avoid-out-parameters.md)|避免使用 out 参数|
 |[CA1040](../code-quality/ca1040-avoid-empty-interfaces.md)|避免使用空接口|
@@ -197,4 +197,4 @@ Microsoft 扩展的设计准则规则集对基本设计准则规则进行了扩�
 |[CA1724](../code-quality/ca1724-type-names-should-not-match-namespaces.md)|类型名不应与命名空间冲突|
 |[CA1725](../code-quality/ca1725-parameter-names-should-match-base-declaration.md)|参数名应与基方法中的声明保持一致|
 |[CA1726](../code-quality/ca1726-use-preferred-terms.md)|使用首选词条|
-|[CA2204](../code-quality/ca2204-literals-should-be-spelled-correctly.md)|文字应正确拼写|
+|[CA2204](../code-quality/ca2204.md)|文字应正确拼写|

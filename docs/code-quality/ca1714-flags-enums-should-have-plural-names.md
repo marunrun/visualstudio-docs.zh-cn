@@ -1,5 +1,5 @@
 ---
-title: CA1714:Flags 枚举应采用复数形式的名称
+title: CA1714：Flags 枚举应采用复数形式的名称
 ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
@@ -14,37 +14,37 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 79585cd9cae31f46a9506085c9c8faf5b5844d44
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 0a648978eaf65faa66dd1ac10a4224c7e5168510
+ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234093"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72348926"
 ---
-# <a name="ca1714-flags-enums-should-have-plural-names"></a>CA1714:Flags 枚举应采用复数形式的名称
+# <a name="ca1714-flags-enums-should-have-plural-names"></a>CA1714：Flags 枚举应采用复数形式的名称
 
 |||
 |-|-|
 |TypeName|FlagsEnumsShouldHavePluralNames|
 |CheckId|CA1714|
-|类别|Microsoft.Naming|
+|类别|Microsoft。命名|
 |重大更改|重大|
 
 ## <a name="cause"></a>原因
 
-枚举具有<xref:System.FlagsAttribute?displayProperty=fullName> ，且其名称不以 "" 结尾。
+枚举的 @no__t 为0，其名称不以 ' 结尾 ' 结尾。
 
 默认情况下，此规则仅查看外部可见的枚举，但这是[可配置](#configurability)的。
 
 ## <a name="rule-description"></a>规则说明
 
-标记有的类型<xref:System.FlagsAttribute>具有复数形式的名称，因为该特性指示可以指定多个值。 例如，定义一周中各天的枚举可能适用于可指定多天的应用程序。 此枚举应具有<xref:System.FlagsAttribute> ，并且可以称为 "Days"。 只允许指定一天的类似枚举不具有属性，并且可以称为 "Day"。
+标记为 <xref:System.FlagsAttribute> 的类型具有复数形式的名称，因为该特性指示可以指定多个值。 例如，定义一周中各天的枚举可能适用于可指定多天的应用程序。 此枚举应具有 <xref:System.FlagsAttribute>，并且可以称为 "Days"。 只允许指定一天的类似枚举不具有属性，并且可以称为 "Day"。
 
 命名约定为面向公共语言运行时的库提供了通用的外观。 这减少了新软件库所需的学习曲线，并使客户可以放心地了解库是由具有开发托管代码的专业技能的人员开发的。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-将枚举的名称设置为复数字，如果不应同时<xref:System.FlagsAttribute>指定多个枚举值，则删除该属性。
+如果不应同时指定多个枚举值，请将枚举的名称设置为复数单词，或删除 <xref:System.FlagsAttribute> 属性。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
@@ -62,8 +62,8 @@ dotnet_code_quality.ca1714.api_surface = private, internal
 
 ## <a name="related-rules"></a>相关规则
 
-- [CA1027用 FlagsAttribute 标记枚举](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
-- [CA2217不要用 FlagsAttribute 标记枚举](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
+- [CA1027：用 FlagsAttribute 标记枚举](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
+- [CA2217：不要使用 FlagsAttribute 标记枚举](../code-quality/ca2217.md)
 
 ## <a name="see-also"></a>请参阅
 

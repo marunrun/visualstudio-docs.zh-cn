@@ -1,5 +1,5 @@
 ---
-title: CA1704:标识符应正确拼写
+title: CA1704：标识符应正确拼写
 ms.date: 03/28/2018
 ms.topic: reference
 f1_keywords:
@@ -14,20 +14,20 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fa04ca237134c1947b5c58b921f87f32a1ecfb16
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: f2e42e68f008c625c8d6b5150d0348d14e29d3dc
+ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234297"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72348950"
 ---
-# <a name="ca1704-identifiers-should-be-spelled-correctly"></a>CA1704:标识符应正确拼写
+# <a name="ca1704-identifiers-should-be-spelled-correctly"></a>CA1704：标识符应正确拼写
 
 |||
 |-|-|
 |TypeName|IdentifiersShouldBeSpelledCorrectly|
 |CheckId|CA1704|
-|类别|Microsoft.Naming|
+|类别|Microsoft。命名|
 |重大更改|重大|
 
 ## <a name="cause"></a>原因
@@ -69,13 +69,13 @@ ms.locfileid: "71234297"
 
 ### <a name="to-add-words-to-a-custom-dictionary"></a>向自定义字典添加单词
 
-将自定义字典命名为*CustomDictionary*。 将字典放置在工具的安装目录、项目目录或与用户配置文件（ *\\%USERPROFILE%\Application Data ...* ）下的工具关联的目录中。若要了解如何将自定义字典添加到 Visual Studio 中的项目， [请参阅如何：自定义代码分析字典](../code-quality/how-to-customize-the-code-analysis-dictionary.md)。
+将自定义字典命名为*CustomDictionary*。 将字典放置在工具的安装目录、项目目录或与用户配置文件（ *%USERPROFILE%\Application Data @ no__t-1 ...* ）下的工具关联的目录中。若要了解如何将自定义字典添加到 Visual Studio 中的项目，请参阅[如何：自定义代码分析字典](../code-quality/how-to-customize-the-code-analysis-dictionary.md)。
 
 - 添加不应在字典/字词/识别路径下产生冲突的单词。
 
 - 添加应在字典/字词/无法识别的路径下引发冲突的单词。
 
-- 添加在字典/字词/弃用路径下应标记为过时的字词。 请参阅相关规则主题[CA1726：使用首选字词](../code-quality/ca1726-use-preferred-terms.md)获取详细信息。
+- 添加在字典/字词/弃用路径下应标记为过时的字词。 有关详细信息，请参阅相关规则主题[CA1726：使用首选字词](../code-quality/ca1726-use-preferred-terms.md)。
 
 - 将例外项大小写规则添加到字典/缩写词/CasingExceptions 路径中。
 
@@ -110,12 +110,12 @@ ms.locfileid: "71234297"
 
 ## <a name="related-rules"></a>相关规则
 
-- [CA2204文字应正确拼写](../code-quality/ca2204-literals-should-be-spelled-correctly.md)
-- [CA1703资源字符串应正确拼写](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
-- [CA1709标识符应采用正确的大小写](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
-- [CA1708标识符的差别应超过大小写](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
-- [CA1707标识符不应包含下划线](../code-quality/ca1707-identifiers-should-not-contain-underscores.md)
-- [CA1726使用首选字词](../code-quality/ca1726-use-preferred-terms.md)
+- [CA2204：应正确拼写文本](../code-quality/ca2204.md)
+- [CA1703：资源字符串应正确拼写](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
+- [CA1709：标识符的大小写应当正确](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+- [CA1708：标识符不应仅以大小写进行区分](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+- [CA1707：标识符不应包含下划线](../code-quality/ca1707-identifiers-should-not-contain-underscores.md)
+- [CA1726：使用首选词条](../code-quality/ca1726-use-preferred-terms.md)
 
 ## <a name="see-also"></a>请参阅
 
