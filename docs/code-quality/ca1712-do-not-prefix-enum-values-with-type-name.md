@@ -1,5 +1,5 @@
 ---
-title: CA1712:不要将类型名用作枚举值的前缀
+title: CA1712：不要将类型名用作枚举值的前缀
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,20 +18,20 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b5966c9685bc4bbc5ba997f8acf47abbbfca1a2
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: f151296fce00ca92209c588c4be0361f9adfc7fd
+ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234111"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72348939"
 ---
-# <a name="ca1712-do-not-prefix-enum-values-with-type-name"></a>CA1712:不要将类型名用作枚举值的前缀
+# <a name="ca1712-do-not-prefix-enum-values-with-type-name"></a>CA1712：不要将类型名用作枚举值的前缀
 
 |||
 |-|-|
 |TypeName|DoNotPrefixEnumValuesWithTypeName|
 |CheckId|CA1712|
-|类别|Microsoft.Naming|
+|类别|Microsoft。命名|
 |重大更改|重大|
 
 ## <a name="cause"></a>原因
@@ -56,11 +56,11 @@ ms.locfileid: "71234111"
 [!code-vb[FxCop.Naming.EnumValues#1](../code-quality/codesnippet/VisualBasic/ca1712-do-not-prefix-enum-values-with-type-name_1.vb)]
 
 ## <a name="related-rules"></a>相关规则
-[CA1711标识符不应具有正确的后缀](../code-quality/ca1711-identifiers-should-not-have-incorrect-suffix.md)
+[CA1711：标识符应采用正确的后缀](../code-quality/ca1711-identifiers-should-not-have-incorrect-suffix.md)
 
-[CA1027用 FlagsAttribute 标记枚举](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
+[CA1027：用 FlagsAttribute 标记枚举](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
 
-[CA2217不要用 FlagsAttribute 标记枚举](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
+[CA2217：不要使用 FlagsAttribute 标记枚举](../code-quality/ca2217.md)
 
 ## <a name="see-also"></a>请参阅
 

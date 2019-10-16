@@ -1,5 +1,5 @@
 ---
-title: CA1065:不要在意外的位置引发异常
+title: CA1065：不要在意外的位置引发异常
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,20 +14,20 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 257100be0eb2766ef413854795c934b230e29370
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: b45e98fde35e8be3296ce1c6916f61ef7b76a306
+ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235249"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72349033"
 ---
-# <a name="ca1065-do-not-raise-exceptions-in-unexpected-locations"></a>CA1065:不要在意外的位置引发异常
+# <a name="ca1065-do-not-raise-exceptions-in-unexpected-locations"></a>CA1065：不要在意外的位置引发异常
 
 |||
 |-|-|
 |TypeName|DoNotRaiseExceptionsInUnexpectedLocations|
 |CheckId|CA1065|
-|类别|Microsoft.Design|
+|类别|Microsoft. Design|
 |重大更改|不间断|
 
 ## <a name="cause"></a>原因
@@ -66,13 +66,13 @@ ms.locfileid: "71235249"
 
 可以从属性 get 方法引发以下异常：
 
-- <xref:System.InvalidOperationException?displayProperty=fullName>和所有派生（包括<xref:System.ObjectDisposedException?displayProperty=fullName>）
+- <xref:System.InvalidOperationException?displayProperty=fullName> 以及所有派生项（包括 <xref:System.ObjectDisposedException?displayProperty=fullName>）
 
-- <xref:System.NotSupportedException?displayProperty=fullName>和所有派生
+- <xref:System.NotSupportedException?displayProperty=fullName> 和所有派生项
 
-- <xref:System.ArgumentException?displayProperty=fullName>（仅从索引 get 获取）
+- <xref:System.ArgumentException?displayProperty=fullName> （仅从索引 get 获取）
 
-- <xref:System.Collections.Generic.KeyNotFoundException>（仅从索引 get 获取）
+- <xref:System.Collections.Generic.KeyNotFoundException> （仅从索引 get 获取）
 
 ### <a name="event-accessor-methods"></a>事件访问器方法
 
@@ -80,11 +80,11 @@ ms.locfileid: "71235249"
 
 事件访问器可能会引发以下异常：
 
-- <xref:System.InvalidOperationException?displayProperty=fullName>和所有派生（包括<xref:System.ObjectDisposedException?displayProperty=fullName>）
+- <xref:System.InvalidOperationException?displayProperty=fullName> 以及所有派生项（包括 <xref:System.ObjectDisposedException?displayProperty=fullName>）
 
-- <xref:System.NotSupportedException?displayProperty=fullName>和所有派生
+- <xref:System.NotSupportedException?displayProperty=fullName> 和所有派生项
 
-- <xref:System.ArgumentException>和派生
+- <xref:System.ArgumentException> 和派生
 
 ### <a name="equals-methods"></a>Equals 方法
 
@@ -94,7 +94,7 @@ ms.locfileid: "71235249"
 
 - <xref:System.IEquatable%601.Equals%2A>
 
-**Equals**方法应返回`true`或`false`而不是引发异常。 例如，如果将 Equals 传递两个不匹配的类型，则`false`应只返回， <xref:System.ArgumentException>而不是引发。
+**Equals**方法应返回 `true` 或 `false` 而不是引发异常。 例如，如果将 Equals 传递两个不匹配的类型，则应只返回 `false`，而不是引发 <xref:System.ArgumentException>。
 
 ### <a name="gethashcode-methods"></a>GetHashCode 方法
 
@@ -106,11 +106,11 @@ ms.locfileid: "71235249"
 
 **GetHashCode**应始终返回值。 否则，可能会丢失哈希表中的项。
 
-采用参数的**GetHashCode**的版本可能会引发<xref:System.ArgumentException>。 但是， **GetHashCode**不应引发异常。
+采用参数的**GetHashCode**的版本可能引发 <xref:System.ArgumentException>。 但是， **GetHashCode**不应引发异常。
 
 ### <a name="tostring-methods"></a>ToString 方法
 
-调试器使用<xref:System.Object.ToString%2A?displayProperty=fullName>来帮助以字符串格式显示有关对象的信息。 因此， **ToString**不应更改对象的状态，并且不应引发异常。
+调试器使用 <xref:System.Object.ToString%2A?displayProperty=fullName> 来帮助显示字符串格式的对象的相关信息。 因此， **ToString**不应更改对象的状态，并且不应引发异常。
 
 ### <a name="static-constructors"></a>静态构造函数
 
@@ -122,13 +122,13 @@ ms.locfileid: "71235249"
 
 ### <a name="dispose-methods"></a>Dispose 方法
 
-<xref:System.IDisposable.Dispose%2A?displayProperty=fullName>方法不应引发异常。 Dispose 通常作为`finally`子句中清理逻辑的一部分来调用。 因此，从 Dispose 显式引发异常将强制用户在`finally`子句内添加异常处理。
+@No__t 0 方法不应引发异常。 Dispose 通常在 `finally` 子句的清理逻辑中调用。 因此，从 Dispose 显式引发异常将强制用户添加 `finally` 子句内的异常处理。
 
 **Dispose （false）** 代码路径应永远不会引发异常，因为释放几乎始终是从终结器调用的。
 
 ### <a name="equality-operators--"></a>相等运算符（= =，！ =）
 
-与 Equals 方法一样，相等运算符应返回`true`或`false`，而不应引发异常。
+与 Equals 方法一样，相等运算符应返回 `true` 或 `false`，而不应引发异常。
 
 ### <a name="implicit-cast-operators"></a>隐式强制转换运算符
 
@@ -146,7 +146,7 @@ ms.locfileid: "71235249"
 
 ## <a name="related-rules"></a>相关规则
 
-- [CA2219在异常子句中不引发异常](../code-quality/ca2219-do-not-raise-exceptions-in-exception-clauses.md)
+- [CA2219：在异常子句中不引发异常](../code-quality/ca2219.md)
 
 ## <a name="see-also"></a>请参阅
 

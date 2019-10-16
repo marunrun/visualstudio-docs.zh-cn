@@ -12,24 +12,25 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fbe3ff31d00945ef462c5c20eb1c4b33c250f97
-ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
+ms.openlocfilehash: 866ad705f16e9eabb097e9c0c9064d2c379ebf9f
+ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70887751"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72349625"
 ---
 # <a name="tell-the-debugger-what-to-show-using-the-debuggerdisplay-attribute-c-visual-basic-f-ccli"></a>使用 DebuggerDisplay 特性（C#、Visual Basic、 F#、 C++/cli）告诉调试器要显示的内容
+
 <xref:System.Diagnostics.DebuggerDisplayAttribute> 控制对象、属性或字段在调试器变量窗口中的显示方式。 此特性可应用于类型、委托、属性、字段和程序集。 如果应用于基类型，则属性也适用于子类。
 
 `DebuggerDisplay` 特性有一个参数，此参数是要在值列中为类型的实例显示的字符串。 此字符串可以包含大括号（`{` 和 `}`）。 一对大括号之间的文本将作为字段、属性或方法进行计算。
 
-如果一个类中有重写的 `ToString()` 方法，调试器将使用该重写的方法而非默认 `{<typeName>}`。 因此，如果你已重写 `ToString()` 方法，调试器将使用重写的方法而非默认`{<typeName>}`，你无需使用 `DebuggerDisplay`。 如果同时使用，`DebuggerDisplay` 属性优先于替代的 `ToString()` 方法。 特性还优先于子类中的重`ToString()`写方法。 `DebuggerDisplay`
+如果一个类中有重写的 `ToString()` 方法，调试器将使用该重写的方法而非默认 `{<typeName>}`。 因此，如果你已重写 `ToString()` 方法，调试器将使用重写的方法而非默认`{<typeName>}`，你无需使用 `DebuggerDisplay`。 如果同时使用，`DebuggerDisplay` 属性优先于替代的 `ToString()` 方法。 @No__t-0 特性还优先于子类中重写的 `ToString()` 方法。
 
-调试器是否计算此隐式 `ToString()` 调用取决于“工具”/“选项”/“调试” 对话框中的用户设置。 Visual Basic 不实现此隐式 `ToString()` 计算。
+调试器是否计算此隐式 `ToString()` 调用取决于“工具”/“选项”/“调试”  对话框中的用户设置。 Visual Basic 不实现此隐式 `ToString()` 计算。
 
 > [!IMPORTANT]
-> 如果在“工具”/“选项”/“调试” 对话框中选中了“在变量窗口中显示对象的原始结构” 复选框，则将忽略 `DebuggerDisplay` 特性。
+> 如果在“工具”/“选项”/“调试”  对话框中选中了“在变量窗口中显示对象的原始结构”  复选框，则将忽略 `DebuggerDisplay` 特性。
 
 > [!NOTE]
 > 对于本机代码，此属性仅在/Cli 代码C++中受支持。
@@ -43,10 +44,10 @@ ms.locfileid: "70887751"
 
 `DebuggerDisplay` 还可以接受命名参数。
 
-|参数|用途|
+|参数|目标|
 |----------------|-------------|
-|`Name`, `Type`|这些参数影响变量窗口的 **“名称”** 和 **“类型”** 列。 （可将它们设置为使用与构造函数相同的语法的字符串。）如果过度使用这些参数或使用这些参数不当，则会导致混乱的输出。|
-|`Target`, `TargetTypeName`|指定在程序集级别使用该特性时的目标类型。|
+|`Name`，`Type`|这些参数影响变量窗口的 **“名称”** 和 **“类型”** 列。 （可将它们设置为使用与构造函数相同的语法的字符串。）如果过度使用这些参数或使用这些参数不当，则会导致混乱的输出。|
+|`Target`，`TargetTypeName`|指定在程序集级别使用该特性时的目标类型。|
 
 autoexp.cs 文件在程序集级别使用 DebuggerDisplay 特性。 autoexp.cs 文件确定 Visual Studio 用于 .NET 对象的默认扩展。 可以检查 autoexp.cs 文件以获得如何使用 DebuggerDisplay 特性的示例，也可以修改和编译 autoexp.cs 文件以更改默认扩展。 在修改 autoexp.cs 文件之前，一定要对该文件进行备份。
 
@@ -62,7 +63,7 @@ csc /t:library autoexp.cs
 ## <a name="using-expressions-in-debuggerdisplay"></a>在 DebuggerDisplay 中使用表达式
 虽然您可以在 DebuggerDisplay 特性中的大括号之间使用常规表达式，但建议不要这样做。
 
-DebuggerDisplay 中的常规表达式只能隐式访问目标类型的当前实例的 `this` 指针。 该表达式不能访问别名、局部变量或指针。 如果表达式引用属性，则不处理这些属性上的特性。 例如，如果字段 `count` 是 8，则 C# 代码 `[DebuggerDisplay("Object {count - 2}")]` 将显示 `Object 6`。
+DebuggerDisplay 中的常规表达式只能隐式访问目标类型的当前实例的 `this` 指针。 该表达式不能访问别名、局部变量或指针。 如果表达式引用属性，则不处理这些属性上的特性。 例如，如果字段 `[DebuggerDisplay("Object {count - 2}")]` 是 8，则 C# 代码 `Object 6` 将显示 `count`。
 
 在 DebuggerDisplay 中使用表达式可能导致以下问题：
 
@@ -95,10 +96,10 @@ public sealed class MyClass
 ## <a name="example"></a>示例
 下面的代码示例演示如何使用 `DebuggerDisplay`以及 `DebuggerBrowseable` 和 `DebuggerTypeProxy`。 在调试器变量窗口（如 **“监视”** 窗口）中查看时，它生成类似以下内容的扩展：
 
-|**Name**|**“值”**|**Type**|
+|**名称**|**“值”**|**Type**|
 |--------------|---------------|--------------|
-|Key|"three"|object {string}|
-|值|3|object {int}|
+|项|"three"|object {string}|
+|“值”|3|object {int}|
 
 ```csharp
 [DebuggerDisplay("{value}", Name = "{key}")]

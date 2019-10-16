@@ -1,5 +1,5 @@
 ---
-title: CA1049:拥有本机资源的类型应是可释放的
+title: CA1049：拥有本机资源的类型应是可释放的
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,20 +17,20 @@ dev_langs:
 - VB
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03b8d222fc2349022ef324c9905279677fc86849
-ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
+ms.openlocfilehash: a39d1e03da062f3030571820e98898d5122d495f
+ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72306117"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72349089"
 ---
-# <a name="ca1049-types-that-own-native-resources-should-be-disposable"></a>CA1049:拥有本机资源的类型应是可释放的
+# <a name="ca1049-types-that-own-native-resources-should-be-disposable"></a>CA1049：拥有本机资源的类型应是可释放的
 
 |||
 |-|-|
 |TypeName|TypesThatOwnNativeResourcesShouldBeDisposable|
 |CheckId|CA1049|
-|类别|Microsoft.Design|
+|类别|Microsoft. Design|
 |重大更改|不间断|
 
 ## <a name="cause"></a>原因
@@ -56,15 +56,15 @@ ms.locfileid: "72306117"
 [!code-vb[FxCop.Design.UnmanagedResources#1](../code-quality/codesnippet/VisualBasic/ca1049-types-that-own-native-resources-should-be-disposable_1.vb)]
 
 ## <a name="related-rules"></a>相关规则
-[CA2115：调用 GC。使用本机资源时 KeepAlive no__t-0
+[CA2115：使用本机资源时调用 GC.KeepAlive](../code-quality/ca2115-call-gc-keepalive-when-using-native-resources.md)
 
-[CA1816：调用 GC。Gc.suppressfinalize 正确 @ no__t-0
+[CA1816：正确调用 GC.SuppressFinalize](../code-quality/ca1816.md)
 
-[CA2216：可释放类型应声明终结器 @ no__t-0
+[CA2216：可释放类型应声明终结器](../code-quality/ca2216.md)
 
 [CA1001：具有可释放字段的类型应该是可释放的](../code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable.md)
 
 ## <a name="see-also"></a>请参阅
 
 - [清理未托管资源](/dotnet/standard/garbage-collection/unmanaged)（清理未托管资源）
-- [Dispose 模式](/dotnet/standard/design-guidelines/dispose-pattern)
+- [释放模式](/dotnet/standard/design-guidelines/dispose-pattern)

@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4a4257327e8f1346ce99ce44aad9bcf4f6a466cd
-ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
+ms.openlocfilehash: 2c0b5fb735309e87dab31631d088f14ac9fa9d41
+ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305649"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72349523"
 ---
 # <a name="managed-recommended-rules-rule-set-for-managed-code"></a>托管代码的“托管建议规则”规则集
 
@@ -67,21 +67,21 @@ ms.locfileid: "72305649"
 |[CA2146](../code-quality/ca2146-types-must-be-at-least-as-critical-as-their-base-types-and-interfaces.md)|类型必须至少与其基类型和接口一样关键|
 |[CA2147](../code-quality/ca2147-transparent-methods-may-not-use-security-asserts.md)|透明方法不得使用安全断言|
 |[CA2149](../code-quality/ca2149-transparent-methods-must-not-call-into-native-code.md)|透明方法不得调入本机代码|
-|[CA2200](../code-quality/ca2200-rethrow-to-preserve-stack-details.md)|再次引发以保留堆栈详细信息|
-|[CA2202](../code-quality/ca2202-do-not-dispose-objects-multiple-times.md)|不要多次释放对象|
-|[CA2207](../code-quality/ca2207-initialize-value-type-static-fields-inline.md)|以内联方式初始化值类型的静态字段|
-|[CA2212](../code-quality/ca2212-do-not-mark-serviced-components-with-webmethod.md)|不要使用 WebMethod 标记服务组件|
-|[CA2213](../code-quality/ca2213-disposable-fields-should-be-disposed.md)|应释放可释放的字段|
-|[CA2214](../code-quality/ca2214-do-not-call-overridable-methods-in-constructors.md)|不要在构造函数中调用可重写的方法|
-|[CA2216](../code-quality/ca2216-disposable-types-should-declare-finalizer.md)|可释放类型应声明终结器|
-|[CA2220](../code-quality/ca2220-finalizers-should-call-base-class-finalizer.md)|终结器应调用基类的终结器|
-|[CA2229](../code-quality/ca2229-implement-serialization-constructors.md)|实现序列化构造函数|
-|[CA2231](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)|重写 ValueType.Equals 时应重载相等运算符|
-|[CA2232](../code-quality/ca2232-mark-windows-forms-entry-points-with-stathread.md)|使用 STAThread 标记 Windows 窗体的入口点|
-|[CA2235](../code-quality/ca2235-mark-all-non-serializable-fields.md)|标记所有不可序列化的字段|
-|[CA2236](../code-quality/ca2236-call-base-class-methods-on-iserializable-types.md)|对 ISerializable 类型调用基类方法|
-|[CA2237](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)|用 SerializableAttribute 标记 ISerializable 类型|
-|[CA2238](../code-quality/ca2238-implement-serialization-methods-correctly.md)|正确实现序列化方法|
-|[CA2240](../code-quality/ca2240-implement-iserializable-correctly.md)|正确实现 ISerializable|
-|[CA2241](../code-quality/ca2241-provide-correct-arguments-to-formatting-methods.md)|为格式化方法提供正确的参数|
-|[CA2242](../code-quality/ca2242-test-for-nan-correctly.md)|正确测试 NaN|
+|[CA2200](../code-quality/ca2200.md)|再次引发以保留堆栈详细信息|
+|[CA2202](../code-quality/ca2202.md)|不要多次释放对象|
+|[CA2207](../code-quality/ca2207.md)|以内联方式初始化值类型的静态字段|
+|[CA2212](../code-quality/ca2212.md)|不要使用 WebMethod 标记服务组件|
+|[CA2213](../code-quality/ca2213.md)|应释放可释放的字段|
+|[CA2214](../code-quality/ca2214.md)|不要在构造函数中调用可重写的方法|
+|[CA2216](../code-quality/ca2216.md)|可释放类型应声明终结器|
+|[CA2220](../code-quality/ca2220.md)|终结器应调用基类的终结器|
+|[CA2229](../code-quality/ca2229.md)|实现序列化构造函数|
+|[CA2231](../code-quality/ca2231.md)|重写 ValueType.Equals 时应重载相等运算符|
+|[CA2232](../code-quality/ca2232.md)|使用 STAThread 标记 Windows 窗体的入口点|
+|[CA2235](../code-quality/ca2235.md)|标记所有不可序列化的字段|
+|[CA2236](../code-quality/ca2236.md)|对 ISerializable 类型调用基类方法|
+|[CA2237](../code-quality/ca2237.md)|用 SerializableAttribute 标记 ISerializable 类型|
+|[CA2238](../code-quality/ca2238.md)|正确实现序列化方法|
+|[CA2240](../code-quality/ca2240.md)|正确实现 ISerializable|
+|[CA2241](../code-quality/ca2241.md)|为格式化方法提供正确的参数|
+|[CA2242](../code-quality/ca2242.md)|正确测试 NaN|

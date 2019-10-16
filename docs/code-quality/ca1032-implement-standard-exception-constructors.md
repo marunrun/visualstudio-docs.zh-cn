@@ -1,5 +1,5 @@
 ---
-title: CA1032:实现标准异常构造函数
+title: CA1032：实现标准异常构造函数
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,25 +14,25 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 06fdc566abd9bd16758f224f8a9fe805cddb2c61
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: c39ca1d1a1edd9ac2182a3d6d55896c41c189030
+ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236051"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72349113"
 ---
-# <a name="ca1032-implement-standard-exception-constructors"></a>CA1032:实现标准异常构造函数
+# <a name="ca1032-implement-standard-exception-constructors"></a>CA1032：实现标准异常构造函数
 
 |||
 |-|-|
 |TypeName|ImplementStandardExceptionConstructors|
 |CheckId|CA1032|
-|类别|Microsoft.Design|
+|类别|Microsoft. Design|
 |重大更改|不间断|
 
 ## <a name="cause"></a>原因
 
-类型扩展<xref:System.Exception?displayProperty=fullName>但不声明所有必需的构造函数。
+类型扩展 <xref:System.Exception?displayProperty=fullName> 但不声明所有必需的构造函数。
 
 ## <a name="rule-description"></a>规则说明
 
@@ -48,9 +48,9 @@ ms.locfileid: "71236051"
 
 - protected 或 private NewException （SerializationInfo，StreamingContext）
 
-如果不能提供完整的构造函数集，要正确处理异常将变得比较困难。 例如，具有签名`NewException(string, Exception)`的构造函数用于创建由其他异常导致的异常。 如果不使用此构造函数，则不能创建和引发包含内部（嵌套）异常的自定义异常的实例，在这种情况下，托管代码应执行此操作。
+如果不能提供完整的构造函数集，要正确处理异常将变得比较困难。 例如，具有签名 `NewException(string, Exception)` 的构造函数用于创建由其他异常导致的异常。 如果不使用此构造函数，则不能创建和引发包含内部（嵌套）异常的自定义异常的实例，在这种情况下，托管代码应执行此操作。
 
-前三个异常构造函数按约定公开。 第四个构造函数在非密封类中受保护，在密封类中是私有的。 有关详细信息，请[参阅 CA2229：实现序列化](../code-quality/ca2229-implement-serialization-constructors.md)构造函数。
+前三个异常构造函数按约定公开。 第四个构造函数在非密封类中受保护，在密封类中是私有的。 有关详细信息，请参阅[CA2229：实现序列化构造函数](../code-quality/ca2229.md)。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
@@ -58,7 +58,7 @@ ms.locfileid: "71236051"
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
 
-如果冲突是通过对公共构造函数使用不同访问级别引起的，则可以安全地禁止显示此规则发出的警告。 此外，如果您要生成可移植类库（PCL `NewException(SerializationInfo, StreamingContext)` ），则可以取消构造函数的警告。
+如果冲突是通过对公共构造函数使用不同访问级别引起的，则可以安全地禁止显示此规则发出的警告。 此外，如果您要生成可移植类库（PCL），则可以禁止显示 `NewException(SerializationInfo, StreamingContext)` 构造函数的警告。
 
 ## <a name="example"></a>示例
 
@@ -68,4 +68,4 @@ ms.locfileid: "71236051"
 
 ## <a name="see-also"></a>请参阅
 
-[CA2229：实现序列化构造函数](../code-quality/ca2229-implement-serialization-constructors.md)
+[CA2229：实现序列化构造函数](../code-quality/ca2229.md)

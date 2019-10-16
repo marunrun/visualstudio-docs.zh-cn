@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e922be19db0128f515b63157be32cec84d81313d
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: ee8794fd94a50f51b7293fee025f2eb1abdf6db5
+ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211188"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72349728"
 ---
 # <a name="debugger-settings-and-preparation"></a>调试器设置和准备
 本节描述与调试器相关的属性设置，以及为了使用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 调试器调试程序所需要的准备工作。 如果在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中使用项目模板创建程序，则调试配置中将为你正确配置这些设置。
@@ -31,17 +31,20 @@ ms.locfileid: "71211188"
  有关详细信息，请参阅[如何：设置调试和发布配置](../debugger/how-to-set-debug-and-release-configurations.md)。
 
 ## <a name="in-this-section"></a>本节内容
+
+ [如何：指定调试器设置](../debugger/how-to-specify-debugger-settings.md)介绍 "**选项**" 对话框中的调试器设置。
+ 
  [调试器项目设置](../debugger/debugger-project-settings.md)说明如何指定调试器设置，如何设置调试和发布配置，以及如何管理符号和源代码。 另外还描述了用于 C++、C#、F# 和 Visual Basic 调试配置的相应项目设置，以及 Web 项目的相应设置。
 
  [调试 DLL 项目](../debugger/debugging-dll-projects.md)描述用于调试 DLL 项目的推荐项目设置，如何从 DLL 项目进行调试，如何在混合模式下调试，以及如何调试托管代码 Web 控件库。
 
  [控制台项目](../debugger/debugging-preparation-console-projects.md)提供有关如何配置控制台项目以进行调试的说明。
 
- [如何：调试不属于 visual studio 解决方案](../debugger/how-to-debug-an-executable-not-part-of-a-visual-studio-solution.md)的可执行文件说明了如何调试未作为 visual studio 项目的一部分创建的可执行文件。
+ [如何：调试不属于 Visual Studio 解决方案的可执行文件](../debugger/how-to-debug-an-executable-not-part-of-a-visual-studio-solution.md)说明如何调试未作为 Visual Studio 项目的一部分创建的可执行文件。
 
  [调试64位应用程序](../debugger/debug-64-bit-applications.md)描述如何调试64位应用程序。
 
- [如何：指定用于调试](../debugger/how-to-specify-a-dotnet-framework-version-for-debugging.md)的 .NET Framework 版本介绍如何将注册表项设置为向调试器指示要使用的版本。
+ [如何：指定用于调试的 .NET Framework 版本](../debugger/how-to-specify-a-dotnet-framework-version-for-debugging.md)描述如何设置注册表项以指示调试器使用哪个版本。
 
 ## <a name="see-also"></a>请参阅
 - [调试器安全](../debugger/debugger-security.md)

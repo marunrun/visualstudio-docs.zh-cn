@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 21ce539296f02599a1f8afa0344413fb556eea45
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: a4667fc630d86691d95e9dc9cd205b29f7b0f525
+ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018775"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72349709"
 ---
 # <a name="find-your-debugging-task-in-visual-studio"></a>在 Visual Studio 中查找调试任务
 
@@ -65,6 +65,12 @@ ms.locfileid: "72018775"
 
 可以通过[在 "反汇编" 窗口中设置断点](using-breakpoints.md#BKMK_Set_a_breakpoint_from_debugger_windows)来实现此目的。
 
+## <a name="execute-code"></a>执行代码
+
+### <a name="learn-the-commands-to-step-through-your-code-while-debugging"></a>了解在调试时逐句通过代码的命令
+
+有关详细信息，请参阅[在调试器中导航代码](navigating-through-code-with-the-debugger.md)。
+
 ## <a name="inspect-data"></a>检查数据
 
 ### <a name="check-the-value-of-variables-while-running-your-app"></a>在运行应用程序时检查变量的值
@@ -79,19 +85,7 @@ ms.locfileid: "72018775"
 
 调试时打开内置的[字符串可视化工具](view-strings-visualizer.md)。
 
-## <a name="additional-tasks"></a>其他任务
-
-### <a name="learn-the-commands-to-step-through-your-code-while-debugging"></a>了解在调试时逐句通过代码的命令
-
-有关详细信息，请参阅[在调试器中导航代码](navigating-through-code-with-the-debugger.md)。
-
-### <a name="edit-code-during-a-debugging-session"></a>在调试会话期间编辑代码
-
-使用 "[编辑并继续](edit-and-continue.md)"。 对于 XAML，请使用[Xaml 热重载](xaml-hot-reload.md)。
-
-### <a name="send-messages-to-the-output-window-without-modifying-code"></a>将消息发送到 "输出" 窗口而不修改代码
-
-设置跟踪点。 有关详细信息，请参阅[使用跟踪点](using-tracepoints.md)。
+## <a name="configure-debugging"></a>配置调试
 
 ### <a name="customize-information-shown-in-the-debugger"></a>自定义调试器中显示的信息
 
@@ -102,6 +96,16 @@ ms.locfileid: "72018775"
 ### <a name="configure-debugger-settings"></a>配置调试器设置
 
 若要配置调试器选项和调试器项目设置，请参阅[调试器设置和准备](debugger-settings-and-preparation.md)。
+
+## <a name="additional-tasks"></a>其他任务
+
+### <a name="edit-code-during-a-debugging-session"></a>在调试会话期间编辑代码
+
+使用 "[编辑并继续](edit-and-continue.md)"。 对于 XAML，请使用[Xaml 热重载](xaml-hot-reload.md)。
+
+### <a name="send-messages-to-the-output-window-without-modifying-code"></a>将消息发送到 "输出" 窗口而不修改代码
+
+设置跟踪点。 有关详细信息，请参阅[使用跟踪点](using-tracepoints.md)。
 
 ### <a name="debug-on-remote-machines"></a>在远程计算机上调试
 
