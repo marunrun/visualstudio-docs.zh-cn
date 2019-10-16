@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 705ddc48e37c557a1d0c77fc3f1ca82cbb3995e7
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: 7b60f9bb1fffb9fb36311ad3fda504c1ff2260ce
+ms.sourcegitcommit: a5a54b147e772dc39e519da74ec41a0c25d99628
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118763"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289686"
 ---
 # <a name="step-4-add-a-click-event-handler-to-each-label"></a>步骤 4：向每个标签添加一个 Click 事件处理程序
 
@@ -48,6 +48,9 @@ ms.locfileid: "71118763"
 
      [!code-csharp[VbExpressTutorial4Step2_3_4#4](../ide/codesnippet/CSharp/step-4-add-a-click-event-handler-to-each-label_1.cs)]
      [!code-vb[VbExpressTutorial4Step2_3_4#4](../ide/codesnippet/VisualBasic/step-4-add-a-click-event-handler-to-each-label_1.vb)]
+
+     > [!IMPORTANT]
+     > 使用此页右上角的编程语言控件查看 C# 代码片段或 Visual Basic 代码片段。<br><br>![Docs.Microsoft.com 的编程语言控件](../ide/media/docs-programming-language-control.png)
 
     > [!NOTE]
     > 如果你复制和粘贴 `label_Click()` 代码块，而不是手动输入代码，请确保替换现有的 `label_Click()` 代码。 否则，你将得到重复的代码块。

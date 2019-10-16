@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 402817ace34f12fb7659b7251cbe755d036ebc4b
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: cee7b855256f352c9ac9ed39994191f4a9e6d946
+ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118634"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314210"
 ---
 # <a name="step-8-customize-the-quiz"></a>步骤 8：自定义测验
 
@@ -41,8 +41,7 @@ ms.locfileid: "71118634"
   timeLabel.BackColor = Color.Red
   ```
 
-  > [!IMPORTANT]
-  > 使用此页右上角的编程语言控件查看 C# 代码片段或 Visual Basic 代码片段。<br><br>![Docs.Microsoft.com 的编程语言控件](../ide/media/docs-programming-language-control.png)
+  [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
   当测验结束时重置颜色。
 

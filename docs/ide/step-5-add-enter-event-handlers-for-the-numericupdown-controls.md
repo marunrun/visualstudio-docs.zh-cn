@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8edebff5af7affebf166ea07ca7aa813037c13c2
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: 7de9fafa32922792e21eb672df0aa9128c25dbe2
+ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118750"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314122"
 ---
 # <a name="step-5-add-enter-event-handlers-for-the-numericupdown-controls"></a>步骤 5：为 NumericUpDown 控件添加 Enter 事件处理程序
 
@@ -62,8 +62,7 @@ ms.locfileid: "71118750"
      [!code-vb[VbExpressTutorial3Step5_6#11](../ide/codesnippet/VisualBasic/step-5-add-enter-event-handlers-for-the-numericupdown-controls_1.vb)]
      [!code-csharp[VbExpressTutorial3Step5_6#11](../ide/codesnippet/CSharp/step-5-add-enter-event-handlers-for-the-numericupdown-controls_1.cs)]
 
-     > [!IMPORTANT]
-     > 使用此页右上角的编程语言控件查看 C# 代码片段或 Visual Basic 代码片段。<br><br>![Docs.Microsoft.com 的编程语言控件](../ide/media/docs-programming-language-control.png)
+     [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
      此代码可能看起来复杂，但如果分步来看就可以理解。 首先，查看方法的顶部：在 C# 中为 `object sender`，在 Visual Basic 中为 `sender As System.Object`。 此参数引用已触发其事件的对象，即发送方。 在此示例中，发送方对象为 NumericUpDown 控件。 因此，在此方法的第一行中，您指定发送方不是任何一般对象，而是具体的 NumericUpDown 控件。 （每个 NumericUpDown 控件都是一个对象，但并不是每个对象都是 NumericUpDown 控件。）在此方法中，NumericUpDown 控件命名为“answerBox”，因为它将用于窗体上的所有 NumericUpDown 控件，而不仅是 sum NumericUpDown 控件。  由于您在此方法中声明了 answerBox 变量，因此其范围仅适用于此方法。 换言之，该变量只能在此方法内使用。
 

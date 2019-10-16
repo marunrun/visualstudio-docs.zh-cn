@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e30894ec98dd1db4de0b724082467a681a0fa696
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9cb4ac65442d9dbcb384ee3765f6fa827e3fa5d8
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970682"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306157"
 ---
 # <a name="da0006-override-equals-for-value-types"></a>DA0006：替代值类型的 Equals()
 
@@ -39,4 +39,4 @@ ms.locfileid: "62970682"
  有关如何重写 Equals 和相等运算符的详细信息，请参阅 [Equals 和相等运算符 (==) 的实现准则](http://go.microsoft.com/fwlink/?LinkId=177818)。
 
 ## <a name="how-to-investigate-a-warning"></a>如何调查警告
- 有关实现 Equals 和相等运算符的示例，请参阅代码分析规则 [CA1815：替代值类型上的 Equals 和相等运算符](../code-quality/ca1815-override-equals-and-operator-equals-on-value-types.md)
+ 有关实现 Equals 和相等运算符的示例，请参阅代码分析规则 [CA1815：替代值类型上的 Equals 和相等运算符](../code-quality/ca1815.md)
