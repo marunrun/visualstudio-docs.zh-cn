@@ -7,12 +7,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cf1c226fceff6ea17a7f83d750a93d6406a31c7d
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: cf2b8669fe9b516f3150829612d6999895cc69f8
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263740"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306247"
 ---
 # <a name="update-an-existing-application-for-msbuild-15"></a>将现有的应用程序更新到 MSBuild 15
 
@@ -22,11 +22,11 @@ ms.locfileid: "66263740"
 
 ## <a name="use-msbuild-from-visual-studio"></a>从 Visual Studio 使用 MSBuild
 
-为确保以编程方式从应用程序生成的项目与 Visual Studio 或 MSBuild.exe 中生成的项目相匹配，请从 Visual Studio 加载 MSBuild 程序集，并使用 Visual Studio 中提供的 SDK。 Microsoft.Build.Locator NuGet 包简化了这一过程。
+为确保以编程方式从应用程序生成的项目与 Visual Studio 或 MSBuild.exe 中生成的项目相匹配，请从 Visual Studio 加载 MSBuild 程序集，并使用 Visual Studio 中提供的 SDK。  Microsoft.Build.Locator NuGet 包简化了这一过程。
 
 ## <a name="use-microsoftbuildlocator"></a>使用 Microsoft.Build.Locator
 
-如果将 Microsoft.Build.Locator.dll 与应用程序一起重新分发，则无需分发其他 MSBuild 程序集。
+如果将 Microsoft.Build.Locator.dll  与应用程序一起重新分发，则无需分发其他 MSBuild 程序集。
 
 若要更新项目以使用 MSBuild 15 和定位符 API，需要对项目进行一些更改，如下所述。 若要查看更新项目所需更改的示例，请参阅[在 MSBuildLocator 存储库中对示例项目进行的提交](https://github.com/Microsoft/MSBuildLocator/commits/example-updating-to-msbuild-15)。
 
@@ -65,11 +65,11 @@ MSBuild 包的主要版本和次要版本须低于或等于希望支持的 Visua
 
 #### <a name="binding-redirects"></a>绑定重定向
 
-引用 Microsoft.Build.Locator 包会自动让应用程序使用 MSBuild 所有版本的程序集所需的绑定重定向到 `15.1.0.0` 版本。
+引用 Microsoft.Build.Locator 包会自动让应用程序使用所需的绑定重定向到 15.1.0.0 版本。 绑定重定向到此版本支持 MSBuild 15 和 MSBuild 16。
 
 ### <a name="ensure-output-is-clean"></a>确保输出清洁
 
-生成项目并检查输出目录，以确保它不包含任何 Microsoft.Build.\*.dll 程序集（除 Microsoft.Build.Locator.dll 以外，它在下一步中添加）。
+生成项目并检查输出目录，以确保它不包含任何 Microsoft.Build.\*.dll 程序集（除 Microsoft.Build.Locator.dll 以外，它在下一步中添加）。  
 
 ### <a name="add-package-reference-for-microsoftbuildlocator"></a>为 Microsoft.Build.Locator 添加包引用
 

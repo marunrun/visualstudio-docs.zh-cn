@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 586d28c1e04c7f1e85a077b559586098093812bb
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 38da720b63c8f5ba6d2ceb89fe8b414c6700cbcd
+ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66745889"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381362"
 ---
 # <a name="common-msbuild-project-properties"></a>常用的 MSBuild 项目属性
 下表列出了在 Visual Studio 项目文件中定义的或者在 MSBuild 提供的 .targets 文件中包括的经常使用的属性  。
@@ -50,7 +50,7 @@ ms.locfileid: "66745889"
 | CleanFile | 将用作“清理缓存”的文件的名称。 清理缓存是要在清理操作期间删除的已生成文件的列表。 该文件由生成过程放在中间输出路径中。<br /><br /> 此属性只指定没有路径信息的文件名。 |
 | CodePage | 指定要用于编译中所有源代码文件的代码页。 此属性等效于 `/codepage` 编译器开关。 |
 | CompilerResponseFile | 可以传递给编译器任务的可选响应文件。 |
-| Configuration | 正在生成的配置，为“调试”或“发布”。 |
+| 配置 | 正在生成的配置，为“调试”或“发布”。 |
 | CscToolPath | [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 编译器 csc.exe 的路径  。 |
 | CustomBeforeMicrosoftCommonTargets | 要在公用目标导入前自动导入的项目文件或目标文件的名称。 |
 | DebugSymbols | 一个布尔值，指示是否由生成来生成符号。<br /><br /> 在命令行中设置 -p:DebugSymbols=false  会禁止生成程序数据库 (.pdb  ) 符号文件。 |
@@ -67,7 +67,7 @@ ms.locfileid: "66745889"
 | ExcludeDeploymentUrl | [GenerateDeploymentManifest 任务](../msbuild/generatedeploymentmanifest-task.md)会在项目文件包含下列任何元素时向部署清单中添加 deploymentProvider 标记：<br /><br /> -   UpdateUrl<br />-   InstallUrl<br />-   PublishUrl<br /><br /> 不过，使用 ExcludeDeploymentUrl，可以防止 deploymentProvider 标记添加到部署清单，即使指定了任何上述 URL。 为此，请将以下属性添加到项目文件：<br /><br /> `<ExcludeDeploymentUrl>true</ExcludeDeploymentUrl>` <br /><br />**注意：** ExcludeDeploymentUrl 在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE 中未显示，并且仅可通过手动编辑项目文件进行设置。 设置此属性不影响在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中发布；即 deploymentProvider 标记仍将添加到 PublishUrl 指定的 URL。 |
 | FileAlignment | 指定输出文件各部分的对齐位置，以字节为单位。 有效值为 512、1024、2048、4096、8192。 此属性等效于 `/filealignment` 编译器开关。 |
 | FrameworkPathOverride | 指定 mscorlib.dll 和 microsoft.visualbasic.dll 的位置   。 此参数等效于 vbc.exe 编译器的 `/sdkpath` 开关  。 |
-| GenerateDocumentation | （仅限 Visual Basic）一个布尔型参数，指示是否由生成来生成文档。 如果设置为 `true`，生成过程将生成文档信息，并将此信息与生成任务所创建的可执行文件或库的名称一同放置在 .xml 文件中  。 |
+| GenerateDocumentation | （C#、Visual Basic）一个布尔型参数，指示是否由生成来生成文档。 如果设置为 `true`，生成过程将生成文档信息，并将此信息与生成任务所创建的可执行文件或库的名称一同放置在 .xml 文件中  。 |
 | GenerateSerializationAssemblies | 指示是否应通过 SGen.exe 生成 XML 序列化程序集，它可以设置为开、自动或关  。 此属性用于仅面向 .NET Framework 的程序集。 要生成 .NET Standard 或 .NET Core 程序集的 XML 序列化程序集，请参考 Microsoft.XmlSerializer.Generator NuGet 包  。 |
 | IntermediateOutputPath | 如果未指定路径，则为从 `BaseIntermediateOutputPath` 派生的完整中间输出路径。 例如 \obj\debug\\  。 |
 | KeyContainerName | 强名称密钥容器的名称。 |

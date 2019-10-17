@@ -3,28 +3,21 @@ title: Live Unit Testing 常见问题解答
 ms.date: 10/03/2017
 ms.topic: conceptual
 helpviewer_keywords:
-- Visual Studio ALM
 - Live Unit Testing FAQ
-author: rpetrusha
-ms.author: ronpet
+author: gewarren
+ms.author: gewarren
 ms.workload:
 - dotnet
-ms.openlocfilehash: 41d5248106b831accf4d71f97aeaeb72fdbc5018
-ms.sourcegitcommit: 044bb54cb4552c8f4651feb11d62e52726117e75
+ms.openlocfilehash: 545c8974e3d0dea196a6168db03586a37d15ed72
+ms.sourcegitcommit: 1a3c2ca995fd44fc72741b3a100c6e57f4f8702c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68662026"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72262291"
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Live Unit Testing 常见问题解答
 
-## <a name="latest-features"></a>最新功能
-
-Live Unit Testing 定期进行改进和增强。  如何查找有关最新功能和增强功能的信息？
-
-要了解 Live Unit Testing 的新增功能和增强功能，请参阅 [Live Unit Testing 中的新增功能](live-unit-testing-whats-new.md)。
-
-## <a name="supported-frameworks-and-versions"></a>支持的框架和版本
+## <a name="supported-frameworks"></a>支持的框架
 
 Live Unit Testing 支持哪些测试框架和最低版本？ 
 
@@ -36,21 +29,21 @@ Live Unit Testing 适用于下表中列出的三个常用的单元测试框架�
 |NUnit |NUnit3TestAdapter 版本 3.7.0 |NUnit 版本 3.5.0 |
 |MSTest |MSTest.TestAdapter 1.1.4-预览版 |MSTest.TestFramework 1.0.5-预览版 |
 
-如果你有引用 `Microsoft.VisualStudio.QualityTools.UnitTestFramework` 的测试项目（该项目是基于较旧的 MSTest），并且不想移动到较新的 MSTest NuGet 包，请升级到 Visual Studio 2017 版本 15.4 或更高版本。
+如果你有引用 `Microsoft.VisualStudio.QualityTools.UnitTestFramework` 的测试项目（该项目是基于较旧的 MSTest），并且不想移动到较新的 MSTest NuGet 包，请升级到 Visual Studio 2019 或 Visual Studio 2017。
 
-在某些情况下，可能需要显式还原解决方案中项目引用的 NuGet 包，以便 Live Unit Testing 可正常运行。 可以先通过显式生成解决方案（从顶级 Visual Studio 菜单中选择“生成”、“重新生成解决方案”）或通过还原解决方案中的包（右键单击解决方案并选择“还原 NuGet 包”）来还原包，然后再启用 Living Unit Testing。   
+在某些情况下，可能需要显式还原解决方案中项目引用的 NuGet 包，以便 Live Unit Testing 可正常运行。 可以先通过显式生成解决方案（从顶级 Visual Studio 菜单中选择“生成” > “重新生成解决方案”）或通过还原解决方案中的包（右键单击解决方案并选择“还原 NuGet 包”）来还原包，然后再启用 Living Unit Testing。   
 
 ## <a name="net-core-support"></a>.NET Core 支持
 
 Live Unit Testing 是否适用于 .NET Core？ 
 
-可以。 Live Unit Testing 可与 .NET Core 和 .NET Framework 配合使用。 在 Visual Studio 2017 版本 15.3 中增加了对 .NET Core 的支持。 若希望 Live Unit Testing 支持 .NET Core，请将 Visual Studio 升级到此版本或更高版本。
+可以。 Live Unit Testing 可与 .NET Core 和 .NET Framework 配合使用。
 
 ## <a name="configuration"></a>配置
 
 启用 Live Unit Testing 后，为什么它不工作？ 
 
-**输出**窗口（选中 Live Unit Testing 下拉列表时）应会告知 Live Unit Testing 不工作的原因。 Live Unit Testing 可能由于以下原因之一而不工作：
+“输出”窗口（选中 Live Unit Testing 下拉列表时）应会告知 Live Unit Testing 不工作的原因。 Live Unit Testing 可能由于以下原因之一而不工作：
 
 - 如果未还原解决方案中项目引用的 NuGet 包，Live Unit Testing 不工作。 启用 Live Unit Testing 前，对解决方案执行显式生成或还原解决方案中的 NuGet 包应可解决此问题。
 
@@ -92,7 +85,7 @@ Live Unit Testing 是否适用于 .NET Core？
 </Target>
 ```
 
-## <a name="error-messages-with-ltoutputpathgt-or-ltoutdirgt"></a>&lt;OutputPath&gt;或&lt;OutDir&gt; 错误消息
+## <a name="error-messages-with-outputpath-or-outdir"></a>\<OutputPath> 或 \<OutDir> 错误消息
 
 Live Unit Testing 尝试生成解决方案时为什么出现了以下错误：“….似乎无条件地设置 `<OutputPath>` 或 `<OutDir>`。  Live Unit Testing 将不会从输出程序集执行测试”？
 
@@ -123,13 +116,13 @@ Live Unit Testing 尝试生成解决方案时为什么出现了以下错误：�
 
 请勿直接在生成过程中替代 `<OutDir>`；请转而替代 `<OutputPath>` 以将生成项目放置到特定位置。
 
-## <a name="set-the-location-of-build-artifacts"></a>设置生成项目的位置
+## <a name="build-artifact-location"></a>生成项目位置
 
 **我想要将 Live Unit Testing 生成的项目转到特定位置，而不是 .vs 文件夹下的默认位置  。可如何进行更改？**
 
 将 `LiveUnitTesting_BuildRoot` 用户级环境变量设置为想要放置 Live Unit Testing 生成项目的路径。 
 
-## <a name="test-explorer-vs-live-unit-testing-test-runs"></a>测试资源管理器与Live Unit Testing 测试运行
+## <a name="test-explorer-versus-live-unit-testing"></a>测试资源管理器与 Live Unit Testing
 
 从测试资源管理器窗口运行测试与在 Live Unit Testing 中运行测试有何不同之处？ 
 
@@ -139,11 +132,11 @@ Live Unit Testing 尝试生成解决方案时为什么出现了以下错误：�
 
 - Live Unit Testing 不会创建新的应用程序域来运行测试，但从测试资源管理器窗口运行的测试确实会创建新的应用程序域  。
 
-- Live Unit Testing 按顺序运行每个测试程序集中的测试；在“测试资源管理器”窗口中，可以选择并行运行多个测试  。
+- Live Unit Testing 按顺序运行每个测试程序集中的测试。 在“测试资源管理器”中，可以选择并行运行多个测试  。
 
 - Live Unit Testing 中测试的发现和执行使用 `TestPlatform` 版本 2，而测试资源管理器窗口使用版本 1  。 但在大多数情况下，将不会注意到有差异。
 
-- 测试资源管理器当前默认以单线程单元 (STA) 运行测试，而 Live Unit Testing 以多线程单元 (MTA) 运行测试  。 若要在 Live Unit Testing 中以 STA 实运行 MSTest 测试，请 `MSTest.STAExtensions 1.0.3-beta` NuGet 包中可找到的 `<STATestMethod>` 或 `<STATestClass>` 属性修饰测试方法或所包含的类。 对于 NUnit，请使用 `<RequiresThread(ApartmentState.STA)>` 属性修饰测试方法，对于 xUnit，则使用 `<STAFact>` 属性。
+- 测试资源管理器默认以单线程单元 (STA) 运行测试，而 Live Unit Testing 以多线程单元 (MTA) 运行测试  。 若要在 Live Unit Testing 中以 STA 实运行 MSTest 测试，请 `MSTest.STAExtensions 1.0.3-beta` NuGet 包中可找到的 `<STATestMethod>` 或 `<STATestClass>` 属性修饰测试方法或所包含的类。 对于 NUnit，请使用 `<RequiresThread(ApartmentState.STA)>` 属性修饰测试方法，对于 xUnit，则使用 `<STAFact>` 属性。
 
 ## <a name="exclude-tests"></a>排除测试
 
@@ -174,6 +167,8 @@ public class Class1
 }
 ```
 
+::: moniker range="vs-2017"
+
 ## <a name="win32-pe-headers"></a>Win32 PE 标头
 
 为什么 Win32 PE 标头在 Live Unit Testing 生成的已检测程序集中不同？ 
@@ -190,27 +185,15 @@ Visual Studio 2017 版本 15.3 或更高版本已修复此问题，再也不会�
 
 由 Live Unit Testing 执行依赖于这些值的测试时，测试可能会失败。
 
+::: moniker-end
+
 ## <a name="continuous-builds"></a>持续生成
 
 为什么即使我没有进行任何编辑，Live Unit Testing 仍一直生成我的解决方案？ 
 
-如果解决方案的生成过程生成的源代码属于解决方案本身，并且生成目标文件没有指定相应的输入和输出，即使没有进行编辑，也可生成解决方案。 应给定目标一个输入和输出列表，使 MSBuild 可执行适当的最新检查，并确定是否需要新的生成。
+如果生成过程生成的源代码属于解决方案本身，并且生成目标文件没有指定相应的输入和输出，则即使没有进行编辑，也可生成解决方案。 应给定目标一个输入和输出列表，使 MSBuild 可执行适当的最新检查，并确定是否需要新的生成。
 
-Live Unit Testing 只要检测到源文件已更改，就会启动一个生成。 由于解决方案的生成过程生成源文件，Live Unit Testing 将进入一个无限的生成循环。 但如果 Live Unit Testing 启动第二次生成时（从上一生成中检测到新生成的源代码文件后）检查了目标的输入和输出，它将中断该生成循环，因为输入和输出检查将表明所有内容都为最新。  
-
-## <a name="new-process-coverage"></a>新进程覆盖率
-
-为什么 Live Unit Testing 不会从由测试创建的新进程中捕获覆盖率？ 
-
-这是一个已知问题，后续版本中应会修复该问题。
-
-## <a name="including-or-excluding-tests-doesnt-work"></a>包含或排除测试不起作用
-
-从 Live Test 集中包含或排除测试后，为什么未执行任何操作？ 
-
-Visual Studio 2017 版本 15.3 或更高版本已修复此问题，再也不会遇到了。
-
-对于较旧版本的 Visual Studio 2017，这是一个已知问题。 若要解决此问题，需要在添加或排除测试后，编辑任何文件。
+Live Unit Testing 只要检测到源文件已更改，就会启动一个生成。 由于解决方案的生成过程生成源文件，Live Unit Testing 将进入一个无限的生成循环。 但如果 Live Unit Testing 启动第二次生成时（从上一生成中检测到新生成的源代码文件后）检查了目标的输入和输出，它将中断该生成循环，因为输入和输出检查将表明所有内容都为最新。
 
 ## <a name="editor-icons"></a>编辑器图标
 

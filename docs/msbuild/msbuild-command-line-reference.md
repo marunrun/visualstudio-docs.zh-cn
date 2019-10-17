@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b96d242a8c7af44f47db3ebad5e6af03389a6fc0
-ms.sourcegitcommit: cf8c0fef2b9690595e99ce3802586cdd55fd37c2
+ms.openlocfilehash: 7a23a82afcc484cbbe71bf167ecd0884f399e656
+ms.sourcegitcommit: 3e94d9fb6dc56fa8b23fbacd5d11cf8d6e7e18f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107366"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252649"
 ---
 # <a name="msbuild-command-line-reference"></a>MSBuild 命令行参考
 使用 MSBuild.exe 生成项目或解决方案文件时，可以包含几个开关来指定过程的各个方面  。
@@ -66,7 +66,7 @@ MSBuild.exe [Switches] [ProjectFile]
 
 |开关|缩写形式|说明|
 |------------|----------------|-----------------|
-|-consoleloggerparameters:<br /><br /> `parameters`|-clp:`parameters`|将指定的参数传递到控制台记录器，后者会在控制台窗口中显示生成信息。 可以指定以下参数：<br /><br /> -   **PerformanceSummary**。 显示在任务、目标和项目中所花费的时间。<br />-   **Summary**。 在末尾显示错误和警告摘要。<br />-   **NoSummary**。 不在末尾显示错误和警告摘要。<br />-   **ErrorsOnly**。 仅显示错误。<br />-   **WarningsOnly**。 仅显示警告。<br />-   **NoItemAndPropertyList**。 如果详细级别设置为 `diagnostic`，则不在每个项目生成开头显示项和属性的列表。<br />-   **ShowCommandLine**。 显示 `TaskCommandLineEvent` 消息。<br />-   **ShowTimestamp**。 将时间戳显示为任何消息的前缀。<br />-   **ShowEventId**。 显示每个已启动事件、已完成事件和消息的事件 ID。<br />-   **ForceNoAlign**。 不将文本与控制台缓冲区大小对齐。<br />-   **DisableConsoleColor**。 将默认控制台颜色用于所有日志记录消息。<br />-   **DisableMPLogging**。 在非多处理器模式下运行时，禁用输出的多处理器日志记录样式。<br />-   **EnableMPLogging**。 启用多处理器日志记录样式（即使在非多处理器模式下运行）。 默认情况下，此日志记录样式处于启用状态。<br />-   **Verbosity**。 重写此记录器的 -verbosity  设置。<br /><br /> 使用分号或逗号分隔多个参数，如以下示例所示：<br /><br /> `-consoleloggerparameters:PerformanceSummary;NoSummary -verbosity:minimal`|
+|-consoleloggerparameters:<br /><br /> `parameters`|-clp:`parameters`|将指定的参数传递到控制台记录器，后者会在控制台窗口中显示生成信息。 可以指定以下参数：<br /><br /> -   **PerformanceSummary**。 显示在任务、目标和项目中所花费的时间。<br />-   **Summary**。 在末尾显示错误和警告摘要。<br />-   **NoSummary**。 不在末尾显示错误和警告摘要。<br />-   **ErrorsOnly**。 仅显示错误。<br />-   **WarningsOnly**。 仅显示警告。<br />-   **NoItemAndPropertyList**。 如果详细级别设置为 `diagnostic`，则不在每个项目生成开头显示项和属性的列表。<br />-   **ShowCommandLine**。 显示 `TaskCommandLineEvent` 消息。<br />-   **ShowTimestamp**。 将时间戳显示为任何消息的前缀。<br />-   **ShowEventId**。 显示每个已启动事件、已完成事件和消息的事件 ID。<br />-   **ForceNoAlign**。 不将文本与控制台缓冲区大小对齐。<br />-   **DisableConsoleColor**。 将默认控制台颜色用于所有日志记录消息。<br />-   **DisableMPLogging**。 在非多处理器模式下运行时，禁用输出的多处理器日志记录样式。<br />-   **EnableMPLogging**。 启用多处理器日志记录样式（即使在非多处理器模式下运行）。 默认情况下，此日志记录样式处于启用状态。<br />-   **Verbosity**。 重写此记录器的 -verbosity  设置。<br /><br /> 使用分号分隔多个参数，如以下示例所示：<br /><br /> `-consoleloggerparameters:PerformanceSummary;NoSummary -verbosity:minimal`|
 |-distributedFileLogger|-dfl|将每个 MSBuild 节点的生成输出记录到其自己的文件。 这些文件的初始位置是当前目录。 默认情况下，这些文件命名为“MSBuild\<NodeId>.log”  。 可使用 -fileLoggerParameters  开关指定文件位置和 fileLogger 的其他参数。<br /><br /> 如果你使用 -fileLoggerParameters  开关命名日志文件，分布式记录器会在为每个节点创建日志文件时，将相应名称用作模板，并将节点 ID 追加到相应名称中。|
 |-distributedlogger:<br /><br /> `central logger`*<br /><br /> `forwarding logger`|-dl:`central logger`*`forwarding logger`|记录 MSBuild 中的事件，将不同记录器实例附加到每个节点。 若要指定多个记录器，请分别指定每个记录器。<br /><br /> 使用记录器语法指定记录器。 有关记录器语法，请参阅下面的 logger  开关。<br /><br /> 下面的示例演示如何使用此开关：<br /><br /> `-dl:XMLLogger,MyLogger,Version=1.0.2,Culture=neutral`<br /><br /> `-dl:MyLogger,C:\My.dll*ForwardingLogger,C:\Logger.dll`|
 |-fileLogger<br /><br /> *[number]*|-fl[`number`]|将生成输出记录到当前目录中的单个文件。 如果没有指定 `number`，输出文件名为 msbuild.log  。 如果指定 `number`，输出文件名为 msbuild\<n>.log，其中 \<n> 是 `number`  。 `Number` 可以是 1 到 9 的数字。<br /><br /> 可使用 -fileLoggerParameters  开关指定文件位置和 fileLogger 的其他参数。|

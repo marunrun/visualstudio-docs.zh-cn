@@ -2,7 +2,7 @@
 title: 使用命令行参数安装 Visual Studio
 titleSuffix: ''
 description: 了解如何使用命令行参数来控制或自定义 Visual Studio 安装。
-ms.date: 10/07/2019
+ms.date: 10/11/2019
 ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 306928b7a28465923ae0a5e2cc7773094458594e
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: 0b1388aa7ac993ba4b98837ec8ac46d516b567da
+ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018803"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381030"
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio"></a>使用命令行参数安装 Visual Studio
 
@@ -56,6 +56,9 @@ ms.locfileid: "72018803"
 * vs_enterprise.exe
 * vs_professional.exe
 * vs_community.exe
+
+>[!TIP]
+>如果以前下载过引导程序文件，并且想要验证其版本，则操作方法如下。 在 Windows 中，打开文件资源管理器，右键单击引导程序文件，依次选择“属性”、“详细信息”选项卡，然后查看“产品版本”号    。 若要将该编号与 Visual Studio 的版本匹配，请参阅 [Visual Studio 内部版本号和发布日期](visual-studio-build-numbers-and-release-dates.md)页。
 
 ## <a name="command-line-parameters"></a>命令行参数
 
@@ -128,7 +131,7 @@ ms.locfileid: "72018803"
 | `--cache` | **15.2 中新增的可选选项**：如果指定，将在安装后保存包，以便后续修复时使用。 这会替代用于后续安装、修复或修改的全局策略设置。 默认策略是缓存包。 对于卸载命令，忽略此选项。 有关详细信息，请了解如何[禁用或移动包缓存](disable-or-move-the-package-cache.md)。 |
 | `--nocache` | **15.2 中新增的可选选项**：如果指定，将在安装或修复完成后删除包。 只有在需要时才会重新下载，并且会在使用后再次删除。 这会替代用于后续安装、修复或修改的全局策略设置。 默认策略是缓存包。 对于卸载命令，忽略此选项。 有关详细信息，请了解如何[禁用或移动包缓存](disable-or-move-the-package-cache.md)。 |
 | `--noUpdateInstaller` | **15.2 中新增的可选选项**：如果存在，指定无提示安装时阻止安装程序进行自我更新。 如果在需要更新安装程序时通过无提示安装指定 noUpdateInstaller，则安装程序将忽略该命令并返回非零退出代码。 |
-| `--noWeb` | **15.3 版中新增的可选选项**：如果存在，Visual Studio 安装程序将使用布局目录中的文件来安装 Visual Studio。 如果用户尝试安装不在布局中的组件，安装程序将失败。  有关详细信息，请参阅[从网络安装点进行部署](create-a-network-installation-of-visual-studio.md)。 <br/><br/> **重要说明**：此开关不会阻止 Visual Studio 安装程序检查更新。 有关详细信息，请参阅[控制对基于网络的 Visual Studio 部署的更新](controlling-updates-to-visual-studio-deployments.md)。|
+| `--noWeb` | **15.3 版中新增的可选选项**：如果存在，Visual Studio 安装程序将使用布局目录中的文件来安装 Visual Studio。 如果用户尝试安装不在布局中的组件，安装程序将失败。  有关详细信息，请参阅[从网络安装点进行部署](create-a-network-installation-of-visual-studio.md)。 <br/><br/> **重要说明**：此开关不会阻止 Visual Studio 安装程序检查更新。 有关详细信息，请参阅[控制对基于网络的 Visual Studio 部署的更新](controlling-updates-to-visual-studio-deployments.md)。 **16.3.5 中的新增功能**：此开关可防止错误并提高脱机安装和更新的性能。|
 | `--path <name>=<path>` | **15.7 版中新增的可选选项**：用于指定安装的自定义安装路径。 支持的路径名称有 shared、cache 和 install。 |
 | `--path cache=<path>` | **15.7 版中新增的可选选项**：使用指定的位置下载安装文件。 只可以在首次安装 Visual Studio 时设置此位置。 示例：`--path cache="C:\VS\cache"` |
 | `--path shared=<path>` | **15.7 版中新增的可选选项**：包含用于并行 Visual Studio 安装的共享文件。 某些工具和 SDK 会安装到此驱动器上的某个位置，而其他一些工具可能会替代此设置并安装到另一个驱动器。 示例：`--path shared="C:\VS\shared"` <br><br>重要提示：只能在首次安装 Visual Studio 时对此设置一次。 |

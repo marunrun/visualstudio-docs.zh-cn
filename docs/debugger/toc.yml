@@ -44,8 +44,6 @@
       items:
         - name: 使用断点
           href: using-breakpoints.md
-        - name: 使用跟踪点
-          href: using-tracepoints.md
         - name: 断点故障排除
           href: troubleshooting-breakpoints.md
     - name: 数据检查
@@ -138,6 +136,8 @@
               href: xaml-hot-reload-troubleshooting.md
         - name: 'F# 不支持“编辑并继续”'
           href: edit-and-continue-not-supported-for-f-hash.md
+    - name: 记录到“输出”窗口
+      href: using-tracepoints.md
     - name: 查看调试程序数据
       items:
         - name: 模块
@@ -238,7 +238,7 @@
                   href: visual-cpp-custom-visualizer-compatibility.md
             - name: 自定义视图（托管）
               items:
-                - name: 创建对象的自定义视图
+                - name: 创建托管对象的自定义视图
                   href: create-custom-views-of-dot-managed-objects.md
                 - name: 告诉调试程序要显示什么
                   href: using-the-debuggerdisplay-attribute.md

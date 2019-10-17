@@ -1,5 +1,5 @@
 - name: 代码分析文档
-  href: index.md
+  href: index.yml
 - name: 分析托管代码
   items:
     - name: 概述
@@ -203,9 +203,9 @@
                   displayName: cryptography warnings
                   href: cryptography-warnings.md
                 - name: 'CA5350:请勿使用弱加密算法'
-                  href: ca5350-do-not-use-weak-cryptographic-algorithms.md
+                  href: ca5350.md
                 - name: CA5351 不使用损坏的加密算法
-                  href: ca5351-do-not-use-broken-cryptographic-algorithms.md
+                  href: ca5351.md
             - name: 设计警告
               items:
                 - name: 概述
@@ -370,7 +370,7 @@
                 - name: 'CA1309:使用按顺序的 StringComparison'
                   href: ca1309-use-ordinal-stringcomparison.md
                 - name: 'CA2101:指定对 P-Invoke 字符串自变量进行封送处理'
-                  href: ca2101-specify-marshaling-for-p-invoke-string-arguments.md
+                  href: ca2101.md
             - name: 互操作性警告
               items:
                 - name: 概述

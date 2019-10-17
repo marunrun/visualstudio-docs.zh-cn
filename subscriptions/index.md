@@ -7,12 +7,12 @@ layout: LandingPage
 ms.date: 06/25/2018
 ms.topic: landing-page
 description: 欢迎使用 Visual Studio 订阅
-ms.openlocfilehash: 9c2981ddf109a253f55e4c72dd4e88ceb2c820ff
-ms.sourcegitcommit: 9f11537a721e69879a612979a1aca98f40bb4d4d
+ms.openlocfilehash: 5848ccca0468b6293f7e31785944f5cb8b14a17c
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383706"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516854"
 ---
 # <a name="visual-studio-subscriptions"></a>Visual Studio 订阅
 
@@ -194,7 +194,6 @@ Visual Studio 订阅提供全面的资源集合，便于你在首选平台和设
                             <li><a href="/visualstudio/subscriptions/vs-pluralsight">Pluralsight</a>（云、设计、移动和数据）</li>
                             <li><a href="/visualstudio/subscriptions/vs-datacamp">Data Camp</a>（数据科学和 AI）</li>
                             <li><a href="/visualstudio/subscriptions/vs-tech-support">Microsoft 专业技术支持事件</a></li>
-                            <li><a href="/visualstudio/subscriptions/vs-azure-advisory-chat">Azure 顾问聊天</a></li>
                             <li><a href="/visualstudio/subscriptions/vs-azure-community">Azure 社区</a></li>
                         </ul>
                     </div>

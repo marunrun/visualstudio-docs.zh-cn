@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/30/2019
 ms.topic: conceptual
 description: 了解如何以 Visual Studio 订阅者身份使用 Azure DevOps。
-ms.openlocfilehash: 00a60415af16f31362b359944c8007fb3d21351f
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: 227ba1652c592a6fdf3f20bdb5052d9330f142a1
+ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68681626"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314155"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Visual Studio 订阅者的 Azure DevOps 权益
 作为权益，有效 Visual Studio 订阅者可使用订阅随附的一系列 Azure DevOps 功能。 可以在所属的每个 Azure DevOps 组织中使用这些相同的功能，无论你是创建了组织，还是被其他人添加到组织中。
@@ -24,15 +24,14 @@ ms.locfileid: "68681626"
 ## <a name="eligibility"></a>资格
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise（标准、月度云）   | VL、Azure、零售、所选 NFR<sup>1</sup>、FTE  | Azure Boards 和 Azure Repos（基础版）、Azure Test Plans、Azure Artifacts<sup>2</sup>、Azure Pipelines（自承载）       |  是          |
-| Visual Studio Professional（标准、月度云） | VL、Azure、零售、                                        | Azure Boards 和 Azure Repos（基础版）、Azure Artifacts<sup>2</sup>                                                            |  是          |
+| Visual Studio Enterprise（标准、月度云）   | VL、Azure、零售、所选 NFR<sup>1</sup>  | Azure Boards 和 Azure Repos（基础版）、Azure Test Plans、Azure Pipelines（自承载）       |  是          |
+| Visual Studio Professional（标准、月度云） | VL、Azure、零售、                                        | Azure Boards 和 Azure Repos（基础版）                                                            |  是          |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | Azure Boards 和 Azure Repos（基础版）、Azure Test Plans                                              |  是          |
 | MSDN 平台（标准）                                          | VL、零售                                              | Azure Boards 和 Azure Repos（基础版）、Azure Test Plans                                              |  是          |
 ||
 
-<sup>1</sup>  *包括：不得转售 (NFR)、最有价值专家 (MVP)、区域总监 (RD)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 合作伙伴网络 (Enterprise)、BizSpark、MCT 软件和服务开发人员。不包括：MCT 软件和服务、Imagine*。
+<sup>1</sup>  包括：*不得转售 (NFR)、最有价值专家 (MVP)、区域总监 (RD)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 合作伙伴网络 (Enterprise)、BizSpark、MCT 软件和服务开发人员、FTE。不包括：MCT 软件和服务、Imagine  。
 
-<sup>2</sup>  *免费包含 2GB*
 
 > [!NOTE]
 > Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 我们鼓励新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) 以浏览购买 Visual Studio 的不同选项。
