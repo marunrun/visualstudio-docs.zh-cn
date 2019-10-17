@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 249b8aa88b11643ed0b353df25bef3a054ef5e55
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 06665aa6a30d67e27f654e92029dcbd3d2aea2ef
+ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "70987793"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72349759"
 ---
 # <a name="first-look-at-the-visual-studio-debugger"></a>初步了解 Visual Studio 调试器
 
@@ -201,6 +201,14 @@ F11 是一种以最详尽方式检查执行流的好方法。 （为了更快地
 > 异常帮助程序取代了从 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] 开始提供的异常情况助手。
 
 展开“异常设置”节点以查看有关如何处理此异常类型的更多选项，但对于本教程无需更改任何内容  ！
+
+## <a name="configure-debugging"></a>配置调试
+
+可以将要生成的项目配置为[调试或发布配置](../debugger/how-to-set-debug-and-release-configurations.md)，配置项目属性进行调试，或配置[常规设置](../debugger/how-to-specify-debugger-settings.md)进行调试。 此外，还可以将调试器配置为使用 [DebuggerDisplay](using-the-debuggerdisplay-attribute.md) 特性或 [NatVis 框架](create-custom-views-of-native-objects.md)（对于 C/C++）等功能显示自定义信息。
+
+调试属性特定于每个项目类型。 例如，在启动应用程序后，可以指定要传递给应用程序的参数。 在解决方案资源管理器中，右键单击项目并选择“属性”  ，可以访问特定于项目的属性。 调试属性通常显示在“生成”  或“调试”  选项卡中，具体取决于特定的项目类型。
+
+![项目属性](../debugger/media/dbg-tour-project-properties.png "项目属性")
 
 ## <a name="debug-live-aspnet-apps-in-azure-app-service"></a>在 Azure 应用服务中调试实时 ASP.NET 应用
 

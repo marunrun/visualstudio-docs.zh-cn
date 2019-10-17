@@ -4,43 +4,39 @@ description: 了解 Live Unit Testing 的优势以及在对项目进行单元测
 ms.date: 09/11/2017
 ms.topic: conceptual
 helpviewer_keywords:
-- Visual Studio ALM
 - Live Unit Testing
-author: rpetrusha
-ms.author: ronpet
+author: gewarren
+ms.author: gewarren
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a5acf1857309236727cd0bab4d9d981d814292b9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 87242c99fe2692b799ff6a5d965249ad5d944cf9
+ms.sourcegitcommit: 1a3c2ca995fd44fc72741b3a100c6e57f4f8702c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786076"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72262299"
 ---
-# <a name="live-unit-testing-introduction"></a>Live Unit Testing 简介
+# <a name="live-unit-testing-overview"></a>Live Unit Testing 概述
 
-Live Unit Testing 是 Visual Studio 2017 中引入的一种技术。 进行代码更改时，它会自动执行单元测试。
+进行代码更改时，Live Unit Testing 会自动执行单元测试。 让你更有信心地对代码进行重构和更改。 Live Unit Testing 在编辑代码时自动执行所有受影响的测试，确保所做更改不会引入回归。
 
-Live Unit Testing：
+Live Unit Testing 指示单元测试是否充分覆盖代码。 它以图形方式实时展示代码覆盖率。 你可以一目了然地看到每个代码行所涵盖的测试数以及任何单元测试未涵盖哪些行。
 
-- 让你更有信心地对代码进行重构和更改。 Live Unit Testing 在编辑代码时自动执行所有受影响的测试，确保所做更改不会中断测试。
-
-- 指示单元测试是否充分覆盖代码，并显示未被单元测试覆盖的代码。 Live Unit Testing 以图形方式实时描绘代码覆盖率，以便一眼就能看到每行代码覆盖的测试数，以及未被任何单元测试覆盖的行。
-
-如果有包含一个或多个单元测试项目的解决方案，可从顶级 Visual Studio 菜单中依次选择“测试” > “Live Unit Testing” > “启动”来启用 Live Unit Testing    。
+如果有包含一个或多个单元测试项目的解决方案，可从 Visual Studio 的顶级菜单栏中依次选择“测试” > “Live Unit Testing” > “启动”来启用 Live Unit Testing    。
 
 > [!NOTE]
 > 只有 Visual Studio Enterprise Edition 中提供 Live Unit Testing。
 
 了解有关 Live Unit Testing 的详细信息：
 
-- 请尝试学习入门教程，[Live Unit Testing 入门](live-unit-testing-start.md)。
+- 阅读介绍性教程：[Live Unit Testing 入门](live-unit-testing-start.md)。
 
 - 阅读详细的文档：[在 Visual Studio Enterprise Edition 中使用 Live Unit Testing](live-unit-testing.md)。
 
 - 阅读 [Live Unit Testing 常见问题解答](live-unit-testing-faq.md)，了解 Live Unit Testing 中的新增功能以及相关提示和技巧。
 
-- 观看第 9 频道的视频，获取 Live Unit Testing 及其功能的概述。 </p>
+- 观看第 9 频道的视频，获取 Live Unit Testing 及其功能的概述。</p>
 
    > [!VIDEO https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T105/player]
 

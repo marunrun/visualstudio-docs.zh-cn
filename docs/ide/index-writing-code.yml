@@ -1,0 +1,61 @@
+### YamlMime:Landing
+title: 在 Visual Studio 中编辑代码
+summary: 了解诸如打开项目、使用代码编辑器功能和维护一致的代码样式等编辑任务。
+metadata:
+  title: 代码编辑器功能
+  description: 了解 Visual Studio 中的代码编辑功能。
+  ms.prod: visual-studio-windows
+  ms.technology: vs-ide-general
+  ms.topic: landing-page
+  author: gewarren
+  ms.author: gewarren
+  ms.date: 10/15/2019
+  ms.openlocfilehash: 275ac40ff1c2edf70a8388b09e50fc3d496e8050
+  ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 10/16/2019
+  ms.locfileid: "72391525"
+landingContent:
+- title: 打开或创建项目
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: 创建新项目
+      url: create-new-project.md
+    - text: 打开存储库中的项目
+      url: ../get-started/tutorial-open-project-from-repo.md
+  - linkListType: how-to-guide
+    links:
+    - text: 使用 Visual Studio 而无需项目或解决方案
+      url: develop-code-in-visual-studio-without-projects-or-solutions.md
+- title: 使用编辑功能
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 使用代码编辑器
+      url: writing-code-in-the-code-and-text-editor.md
+    - text: 导航代码
+      url: navigating-code.md
+    - text: 生成和修复代码
+      url: code-generation-in-visual-studio.md
+    - text: 将 IntelliSense 用于代码完成
+      url: using-intellisense.md
+    - text: 管理代码样式首选项
+      url: code-styles-and-code-cleanup.md
+    - text: 代码分析
+      url: ../code-quality/roslyn-analyzers-overview.md
+- title: 编程语言入门
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Visual Studio 中的 C# 和 ASP.NET Core 入门
+      url: tutorial-csharp-aspnet-core.md
+    - text: 在 Visual Studio 中创建 C++ 控制台应用程序
+      url: /cpp/get-started/tutorial-console-cpp
+    - text: Visual Studio 中的 Python 入门
+      url: quickstart-python.md
+    - text: 使用 Visual Basic 创建控制台应用
+      url: quickstart-visual-basic-console.md
+    - text: 使用 Node.js 创建 Web 应用
+      url: quickstart-nodejs.md
