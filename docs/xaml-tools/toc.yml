@@ -1,0 +1,114 @@
+- name: Visual Studio 中的 XAML 工具
+  href: index.yml
+- name: XAML 概述
+  href: xaml-overview.md
+- name: XAML 设计器
+  items:
+    - name: 在 Visual Studio 和 Blend 中设计 XAML
+      href: designing-xaml-in-visual-studio.md
+    - name: XAML 设计器概述
+      href: creating-a-ui-by-using-xaml-designer-in-visual-studio.md
+    - name: 使用元素
+      href: working-with-elements-in-xaml-designer.md
+    - name: 将对象组织到布局容器中
+      href: organize-objects-into-layout-containers-in-xaml-designer.md
+    - name: 创建和应用资源
+      href: how-to-create-and-apply-a-resource.md
+    - name: 演练：绑定到数据
+      href: walkthrough-binding-to-data-in-xaml-designer.md
+    - name: 调试或禁用项目代码
+      href: debugging-or-disabling-project-code-in-xaml-designer.md
+    - name: Blend for Visual Studio
+      items:
+        - name: 概述
+          href: creating-a-ui-by-using-blend-for-visual-studio.md
+        - name: 绘制形状和路径
+          href: draw-shapes-and-paths.md
+        - name: 修改对象样式
+          href: modify-the-style-of-objects-in-blend.md
+        - name: 动态显示对象
+          href: animate-objects-in-xaml-designer.md
+        - name: 显示数据
+          href: display-data-in-blend.md
+    - name: 参考
+      items:
+        - name: XAML 错误和警告
+          href: xaml-errors-warnings.md
+        - name: XAML 设计器的键盘快捷方式
+          href: keyboard-shortcuts-for-xaml-designer.md
+        - name: 用于 Blend 的键盘快捷键
+          href: keyboard-shortcuts-in-blend.md
+        - name: 美工板修改键 (Blend)
+          href: artboard-modifier-keys-in-blend.md
+        - name: “触笔”工具修改键 (Blend)
+          href: pen-tool-modifier-keys-in-blend.md
+        - name: “路径选择”工具修改键 (Blend)
+          href: direct-selection-tool-modifier-keys-in-blend.md
+- name: 调试 XAML
+  items:
+    - name: 在调试时检查 XAML 属性
+      href: inspect-xaml-properties-while-debugging.md
+    - name: XAML 热重载
+      items:
+        - name: 编写和调试正在运行的 XAML 代码
+          href: xaml-hot-reload.md
+        - name: 疑难解答
+          href: xaml-hot-reload-troubleshooting.md
+    - name: 在 Blend 中调试 XAML
+      href: debug-xaml-in-blend.md
+    - name: 调试 UWP 应用 >>
+      href: ../debugger/debugging-windows-store-and-windows-universal-apps.md
+- name: Windows Presentation Foundation (WPF)
+  items:
+    - name: 入门
+      displayName: Windows Presentation Foundation (WPF)
+      href: ../designers/getting-started-with-wpf.md
+    - name: WPF 概述
+      href: ../designers/introduction-to-wpf.md
+    - name: 数据绑定
+      items:
+        - name: 使用 LINQ to XML 进行 WPF 数据绑定
+          href: ../designers/wpf-data-binding-with-linq-to-xml-overview.md
+        - name: LINQ to XML 动态属性
+          items:
+            - name: 概述
+              displayName: LINQ to XML dynamic properties
+              href: ../designers/linq-to-xml-dynamic-properties.md
+            - name: XAttribute 类动态属性
+              items:
+                - name: 值（XAttribute 动态属性）
+                  href: ../designers/value-xattribute-dynamic-property.md
+            - name: XElement 类动态属性
+              items:
+                - name: 特性（XElement 动态属性）
+                  href: ../designers/attribute-xelement-dynamic-property.md
+                - name: 元素（XElement 动态属性）
+                  href: ../designers/element-xelement-dynamic-property.md
+                - name: 元素（XElement 动态属性）
+                  href: ../designers/elements-xelement-dynamic-property.md
+                - name: 子代（XElement 动态属性）
+                  href: ../designers/descendants-xelement-dynamic-property.md
+                - name: 值（XElement 动态属性）
+                  href: ../designers/value-xelement-dynamic-property.md
+                - name: Xml（XElement 动态属性）
+                  href: ../designers/xml-xelement-dynamic-property.md
+            - name: 示例
+              items:
+                - name: 使用 LINQ to XML 的 WPF 数据绑定
+                  href: ../designers/wpf-data-binding-using-linq-to-xml-example.md
+                - name: 生成并运行 LinqToXmlDataBinding 示例
+                  href: ../designers/how-to-build-and-run-the-linqtoxmldatabinding-example.md
+                - name: 演练：LINQ to XML 数据绑定
+                  href: ../designers/walkthrough-linqtoxmldatabinding-example.md
+                - name: L2DBForm.xaml 源代码
+                  href: ../designers/l2dbform-xaml-source-code.md
+                - name: L2DBForm.xaml.cs 源代码
+                  href: ../designers/l2dbform-xaml-cs-source-code.md
+    - name: 调试 WPF 应用
+      items:
+        - name: 调试 WPF
+          href: ../debugger/debugging-wpf.md?toc=/visualstudio/xaml-tools/toc.json
+        - name: 使用 WPF 树可视化工具
+          href: ../debugger/how-to-use-the-wpf-tree-visualizer.md?toc=/visualstudio/xaml-tools/toc.json
+        - name: 显示 WPF 跟踪信息
+          href: ../debugger/how-to-display-wpf-trace-information.md?toc=/visualstudio/xaml-tools/toc.json
