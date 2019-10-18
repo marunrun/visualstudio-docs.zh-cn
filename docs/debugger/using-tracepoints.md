@@ -9,12 +9,12 @@ ms.author: sashe
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: 7680b305fad6f8ea1d7961ec5a70ddafd578c77d
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 263657213f1720eaca7a0462bb31585adaacf9bb
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71095253"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516390"
 ---
 # <a name="use-tracepoints-in-the-visual-studio-debugger"></a>在 Visual Studio 调试器中使用跟踪点
 
@@ -22,7 +22,7 @@ ms.locfileid: "71095253"
 
 ## <a name="let39s-take-an-example"></a>让&#39;我们举个例子
 
-下面的示例程序是一个简单`for`的循环，其中包含一个计数器变量，每次循环运行另一个迭代时都会增加一个。
+下面的示例程序是一个简单的 `for` 循环，其中包含一个计数器变量，每次循环运行另一个迭代时都会增加一个。
 
 ![计数器示例](../debugger/media/counterexample.png "计数器示例")
 
@@ -47,19 +47,19 @@ ms.locfileid: "71095253"
 
 5. 在 **"输出窗口**" 文本框中输入要登录的消息（有关详细信息，请参阅本文后面的部分）。
 
-   现在已设置了跟踪点。 &quot;如果只想要做的就是将一些&quot;信息记录到输出窗口。
+   现在已设置了跟踪点。 如果只想要做的就是将一些信息记录到输出窗口，请点击 "&quot;Close" &quot; "按钮。
 
 6. 如果要添加确定是否显示消息的条件，请选中 "**条件**" 复选框。
 
    ![选中条件框](../debugger/media/checkedconditionsbox.png "选中条件框")
 
-   有三个条件选项：**条件表达式**、**筛选器**和**命中次数**。
+   有三种条件选项：**条件表达式**、**筛选器**和**命中次数**。
 
 ## <a name="actions-menu"></a>操作菜单
 
 使用此菜单可以将消息记录到 "输出" 窗口。 键入要输出到消息框中的字符串（不需要引号）。 如果要显示变量的值，请确保将其括在大括号中。
 
-例如，如果要在输出控制台中显示变量的值`counter` ，请在 "消息" 文本框中键入 "{counter}"。
+例如，如果要在输出控制台中显示 `counter` 变量的值，请在 "消息" 文本框中键入 "{counter}"。
 
 ![计数器输出消息](../debugger/media/counteroutputmessage.png "计数器输出消息")
 
@@ -88,11 +88,11 @@ ms.locfileid: "71095253"
 ### <a name="conditional-expression"></a>条件表达式
 对于条件表达式，只在满足某些条件时才显示输出消息。
 
-对于条件表达式，你可以将跟踪点设置为在特定条件为 true 或更改时输出消息。 例如，如果只想在`for`循环迭代期间显示计数器的值，则可以选择 "**为 true** " 选项，然后在 "消息" 文本框中`i%2 == 0`键入。
+对于条件表达式，你可以将跟踪点设置为在特定条件为 true 或更改时输出消息。 例如，如果只想在 `for` 循环的迭代期间显示计数器的值，则可以选择 "**为 true** " 选项，然后在 "消息" 文本框中键入 `i%2 == 0`。
 
 ![条件表达式为 True](../debugger/media/conditionalexpressionistrue.png "条件表达式为 True")
 
-如果要在`for`循环迭代发生更改时打印计数器的值，请选择 "**更改时**" 选项，并在 " `i`消息" 文本框中键入。
+如果要在 `for` 循环的迭代发生变化时打印计数器的值，请选择 "**更改时**" 选项，并在 "消息" 文本框中键入 `i`。
 
 ![更改时的条件表达式](../debugger/media/conditionalexpressionwhenchanged.png "更改时的条件表达式")
 
@@ -101,7 +101,7 @@ ms.locfileid: "71095253"
 - 对于本机代码，调试器不会将条件的第一次计算视为一次更改，因此不会命中第一次计算中的跟踪点。
 - 对于托管代码，在选择 "**更改**后，调试器会命中第一个计算的跟踪点"。
 
-有关设置条件时可使用的有效表达式的详细信息，请参阅[调试器中的表达式](expressions-in-the-debugger.md)
+有关设置条件时可使用的有效表达式的详细信息，请参阅[调试器中的表达式](expressions-in-the-debugger.md)。
 
 ### <a name="hit-count"></a>命中计数
 命中次数条件允许您仅在设置了跟踪点的代码行执行指定的次数后发送输出。
@@ -110,7 +110,7 @@ ms.locfileid: "71095253"
 
 ![条件表达式命中计数](../debugger/media/conditionalexpressionhitcount.png "条件表达式命中计数")
 
-### <a name="filter"></a>筛选器
+### <a name="filter"></a>筛选器筛选器
 对于筛选条件，请指定显示的设备、进程或线程的输出。
 
 ![条件表达式筛选器](../debugger/media/conditionalexpressionfilter.png "条件表达式筛选器")
@@ -123,7 +123,7 @@ ms.locfileid: "71095253"
 - ThreadId = value
 - ThreadName = "name"
 
-用双引号将字符串（如名称）括起来。 输入的值不带引号。 `&`您可以使用（`AND`）、 `||` （`OR`）、 `!` （`NOT`）和括号组合子句。
+用双引号将字符串（如名称）括起来。 输入的值不带引号。 您可以使用 `&` （`AND`）、`||` （`OR`）、`!` （`NOT`）和括号来合并子句。
 
 ## <a name="considerations"></a>注意事项
 
@@ -131,7 +131,9 @@ ms.locfileid: "71095253"
 
 有时，当您检查对象的属性或属性时，它的值可能会更改。 这不是由跟踪点功能引起的 bug，但值得一提的是，使用跟踪点来检查对象并不能避免这些意外修改。
 
-在 "**操作**消息" 框中计算表达式的方式可能不同于当前用于开发的语言。 例如，若要输出字符串，你无需将消息包装在引号中，即使你通常在使用`Debug.WriteLine()`或`console.log()`时也是如此。 此外，对于输出表达式，大`{ }`括号语法（）也可能不同于在开发语言中输出值的约定。 （但是，大括号（`{ }`）内的内容仍应使用开发语言的语法编写）。
+在 "**操作**消息" 框中计算表达式的方式可能不同于当前用于开发的语言。 例如，若要输出字符串，你无需将消息包装在引号中，即使你通常在使用 `Debug.WriteLine()` 或 `console.log()` 时也是如此。 此外，大括号语法（`{ }`）到输出表达式也可能不同于在开发语言中输出值的约定。 （但是，大括号（`{ }`）中的内容仍应使用开发语言的语法来编写）。
+
+如果尝试调试活动应用程序并查找类似的功能，请查看 Snapshot Debugger 中的记录点功能。 快照调试器是用于调查生产应用程序中的问题的工具。 记录点还允许将消息发送到输出窗口，而无需修改源代码，也不会影响正在运行的应用程序。 有关详细信息，请参阅[调试实时 Azure 应用程序](../debugger/debug-live-azure-applications.md)。
 
 ## <a name="see-also"></a>请参阅
 
@@ -140,3 +142,4 @@ ms.locfileid: "71095253"
 - [首先查看调试](../debugger/debugger-feature-tour.md)
 - [调试器中的表达式](expressions-in-the-debugger.md)
 - [使用断点](../debugger/using-breakpoints.md)
+- [调试实时 Azure 应用程序](../debugger/debug-live-azure-applications.md)

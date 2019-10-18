@@ -11,12 +11,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c68bb94a66be2c9fc1da4365cb77adf8d1330a1
-ms.sourcegitcommit: e95dd8cedcd180e0bce6a75c86cf861757918290
+ms.openlocfilehash: 4beaff14e896eae15d4ce68acf35331d03203246
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163025"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72445643"
 ---
 # <a name="quickstart-code-analysis-for-cc"></a>快速入门：C/C++ 代码分析
 
@@ -28,7 +28,7 @@ ms.locfileid: "72163025"
 
 2. 根据需要，在 "**配置**" 和 "**平台**" 列表中，选择生成配置和目标平台。
 
-3. 若要运行代码分析，每次使用所选的配置生成项目，选择**生成时启用代码分析**复选框。 还可以通过打开 "**分析**" 菜单，然后选择 "对*项目名称***运行代码分析**" 或 **"对文件运行代码分析"** ，手动运行代码分析。
+3. 若要在每次使用所选配置生成项目时运行代码分析，请选中 "**生成时启用代码分析**" 复选框。 还可以通过打开 "**分析**" 菜单，然后选择 "对*项目名称***运行代码分析**" 或 **"对文件运行代码分析"** ，手动运行代码分析。
 
 4. 选择要使用的[规则集](../code-quality/using-rule-sets-to-specify-the-cpp-rules-to-run.md)或创建[自定义规则集](../code-quality/how-to-create-a-custom-rule-set.md)。 如果使用 LLVM/clang-cl，请参阅[在 Visual Studio 中使用 clang](../code-quality/clang-tidy.md)来配置 clang 整理的分析选项。
 
@@ -83,7 +83,7 @@ Visual Studio 包括两个本机代码标准规则集：
 
 3. 选择 "**禁止显示消息**"，然后选择 **"在源中"** 。
 
-   禁止消息插入 `#pragma warning (disable:[warning ID])`，禁止显示代码行的警告。
+   禁止显示消息会插入禁止显示代码行警告的 `#pragma warning (disable:[warning ID])`。
 
 ## <a name="create-work-items-for-code-analysis-warnings"></a>为代码分析警告创建工作项
 
@@ -103,7 +103,7 @@ Visual Studio 包括两个本机代码标准规则集：
 
 可搜索冗长的警告消息列表，也可在多项目解决方案中筛选警告。
 
-- **按标题或警告 ID 筛选警告**：在 "搜索" 框中输入关键字。
+- **按标题或警告 ID 筛选警告**：在搜索框中输入关键字。
 
 - **按严重性筛选警告**：默认情况下，将为代码分析消息分配严重性 "**警告**"。 可以将一个或多个消息的严重性指定为自定义规则集中的**错误**。 在**错误列表**的 "**严重性**" 列中，选择下拉箭头，然后选择 "筛选器" 图标。 选择 "**警告**" 或 "**错误**" 以仅显示分配了相应严重性的消息。 选择 "全**选**" 以显示所有消息。
 

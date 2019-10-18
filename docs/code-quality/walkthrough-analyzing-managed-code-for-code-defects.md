@@ -10,12 +10,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6ced3448863d7236dc309dad3bb101cdead4837e
-ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
-ms.translationtype: MT
+ms.openlocfilehash: 79855f6915bbb0ed15bfd09f99fab0403290f09e
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72349466"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448718"
 ---
 # <a name="walkthrough-use-static-code-analysis-to-find-code-defects"></a>演练：使用静态代码分析查找代码缺陷
 
@@ -93,7 +93,7 @@ ms.locfileid: "72349466"
 
 1. 使用以下提示来更正警告：
 
-   [CA1014：用 CLSCompliantAttribute 标记程序集](../code-quality/ca1014-mark-assemblies-with-clscompliantattribute.md)：将代码 `[assembly: CLSCompliant(true)]` 添加到 AssemblyInfo.cs 文件的末尾。
+   [CA1014：用 CLSCompliantAttribute 标记程序集](../code-quality/ca1014-mark-assemblies-with-clscompliantattribute.md)：向 AssemblyInfo.cs 文件的末尾添加代码 `[assembly: CLSCompliant(true)]`。
 
    [CA1032：实现标准异常构造函数](../code-quality/ca1032-implement-standard-exception-constructors.md)：将构造函数 `public demo (String s) : base(s) { }` 添加到类 `demo`。
 
@@ -111,7 +111,7 @@ ms.locfileid: "72349466"
 
    [CA1710：标识符应具有正确的后缀](../code-quality/ca1710-identifiers-should-have-correct-suffix.md)：将类及其构造函数的名称更改为 `DemoException`。
 
-   [CA2237：用 SerializableAttribute 标记 ISerializable 类型](../code-quality/ca2237.md)：将 `[Serializable ()]` 属性添加到类 `demo`。
+   [CA2237：用 SerializableAttribute 标记 ISerializable 类型](../code-quality/ca2237.md)：向类 `demo` 添加 `[Serializable ()]` 特性。
 
    [CA2210：程序集应具有有效的强名称](../code-quality/ca2210.md)：使用强名称密钥签名 "CodeAnalysisManagedDemo"：
 

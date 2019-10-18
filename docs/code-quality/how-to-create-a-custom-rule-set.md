@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b52bb573b9a98c5a797f67cdbd4608f8b8636da
-ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
+ms.openlocfilehash: 33d8d97a5d036a2bd931bfa951fea2715569830a
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71975101"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448998"
 ---
 # <a name="customize-a-rule-set"></a>自定义规则集
 
@@ -24,7 +24,7 @@ ms.locfileid: "71975101"
 
 ## <a name="create-a-custom-rule-set-from-an-existing-rule-set"></a>基于现有规则集创建自定义规则集
 
-若要创建自定义规则集，可以在**规则集编辑器**中打开内置规则集。 在此处，你可以添加或删除特定规则，并且可以更改违反规则 @ no__t-0for 示例时发生的操作，并显示警告或错误。
+若要创建自定义规则集，可以在**规则集编辑器**中打开内置规则集。 你可以从此处添加或删除特定的规则，并且可以更改违反规则时所发生的操作 &mdash;for 示例，显示警告或错误。
 
 1. 在**解决方案资源管理器**中，右键单击项目，然后选择 "**属性**"。
 
@@ -51,13 +51,13 @@ ms.locfileid: "71975101"
 4. 选择 "**打开**" 以在规则集编辑器中显示规则。
 
 > [!NOTE]
-> 如果你有 .NET Core 或 .NET Standard 项目，该过程会稍有不同，因为没有**代码分析**属性选项卡。按照以下步骤将[预定义的规则集复制到项目中，并将其设置为活动规则集](analyzer-rule-sets.md)。 复制规则集之后，可以[在 Visual Studio 规则集编辑器中进行编辑](working-in-the-code-analysis-rule-set-editor.md)，方法是从**解决方案资源管理器**中打开它。
+> 如果你有 .NET Core 或 .NET Standard 项目，该过程会稍有不同，因为没有**代码分析**属性选项卡。请按照以下步骤将[预定义规则集复制到你的项目，并将其设置为活动规则集](analyzer-rule-sets.md)。 复制规则集之后，可以[在 Visual Studio 规则集编辑器中进行编辑](working-in-the-code-analysis-rule-set-editor.md)，方法是从**解决方案资源管理器**中打开它。
 
 ## <a name="create-a-new-rule-set"></a>创建新规则集
 
 您可以通过 "**新建文件**" 对话框创建新的规则集文件：
 
-1. 选择 " **File**@no__t-**1 New** > "**文件**，或按**Ctrl**+**N**。
+1. 选择 "**文件**"  > **新建** > **文件**，或按**Ctrl** +**N**。
 
 2. 在 "**新建文件**" 对话框中，选择左侧的 "**常规**" 类别，然后选择 "**代码分析规则集**"。
 
@@ -76,13 +76,13 @@ ms.locfileid: "71975101"
 
 ::: moniker range="vs-2017"
 
-3. 从 "**运行此规则集** **> 选择 @no__t 1Choose 多个规则集**"。
+3. 选择 "**运行此规则集** **> \<Choose 多个规则集**"。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. 从**活动规则**中选择 **\<Choose 多个规则集 >** 。
+3. 从 "**活动规则**" **> 选择 \<Choose 多个规则集**。
 
 ::: moniker-end
 
@@ -98,7 +98,7 @@ ms.locfileid: "71975101"
 
 ## <a name="rule-precedence"></a>规则优先级
 
-- 如果在具有不同严重性的规则集中多次列出相同的规则，则编译器将生成错误。 例如：
+- 如果在具有不同严重性的规则集中多次列出相同的规则，则编译器将生成错误。 例如:
 
    ```xml
    <RuleSet Name="Rules for ClassLibrary21" Description="Code analysis rules for ClassLibrary21.csproj." ToolsVersion="15.0">
@@ -111,9 +111,9 @@ ms.locfileid: "71975101"
 
 - 如果在具有*相同*严重性的规则集中多次列出相同的规则，则可能会在**错误列表**中看到以下警告：
 
-   **CA0063：未能加载规则集文件 @no__t "0your" 或其依赖规则集文件之一。此文件不符合规则集架构。**
+   **CA0063：无法加载规则集文件 "\[your]、规则集或其依赖规则集文件之一。此文件不符合规则集架构。**
 
-- 如果规则集包括使用**包含**标记的子规则集，并且子规则和父规则集都列出相同的规则但严重性不同，则父规则集中的严重性优先。 例如：
+- 如果规则集包括使用**包含**标记的子规则集，并且子规则和父规则集都列出相同的规则但严重性不同，则父规则集中的严重性优先。 例如:
 
    ```xml
    <!-- Parent rule set -->
@@ -136,7 +136,7 @@ ms.locfileid: "71975101"
 
 ## <a name="name-and-description"></a>名称和描述
 
-若要更改编辑器中打开的规则集的显示名称，请在菜单栏上选择 "**视图** >  属性"**窗口**以打开 "**属性**" 窗口。 在 "**名称**" 框中输入显示名称。 还可以输入规则集的说明。
+若要更改编辑器中打开的规则集的显示名称，请在菜单栏上选择 "**视图** >  属性"**窗口**，打开 "**属性**" 窗口。 在 "**名称**" 框中输入显示名称。 还可以输入规则集的说明。
 
 ## <a name="next-steps"></a>后续步骤
 
@@ -147,5 +147,5 @@ ms.locfileid: "71975101"
 
 ## <a name="see-also"></a>请参阅
 
-- [如何：为托管代码项目配置代码分析 @ no__t-0
+- [如何：配置托管代码项目的代码分析](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)
 - [代码分析规则集参考](../code-quality/rule-set-reference.md)
