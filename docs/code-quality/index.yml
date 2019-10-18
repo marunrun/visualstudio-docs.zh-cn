@@ -1,0 +1,61 @@
+### YamlMime:Landing
+title: Visual Studio 中的代码分析
+summary: Visual Studio 提供众多不同的工具用于分析和提升代码质量。
+metadata:
+  title: 代码分析器
+  description: 了解 Visual Studio 可如何帮助你分析代码质量。
+  ms.prod: visual-studio-windows
+  ms.technology: vs-ide-general
+  ms.topic: landing-page
+  author: gewarren
+  ms.author: gewarren
+  ms.date: 10/15/2019
+  ms.openlocfilehash: eb7be803a8c9751550f46880cfd485dac2850527
+  ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 10/16/2019
+  ms.locfileid: "72450584"
+landingContent:
+- title: 分析 C 和 C++ 代码
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 分析 C 和 C++ 代码
+      url: code-analysis-for-c-cpp-overview.md
+  - linkListType: reference
+    links:
+    - text: C++ 代码分析警告
+      url: code-analysis-for-c-cpp-warnings.md
+- title: 分析托管代码的质量
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 源分析
+      url: roslyn-analyzers-overview.md
+    - text: 旧版分析
+      url: static-code-analysis-for-managed-code-overview.md
+  - linkListType: concept
+    links:
+    - text: FAQ
+      url: analyzers-faq.md
+  - linkListType: how-to-guide
+    links:
+    - text: 安装 FxCop 分析器
+      url: install-fxcop-analyzers.md
+  - linkListType: reference
+    links:
+    - text: 托管代码分析警告
+      url: code-analysis-for-managed-code-warnings.md
+- title: 分析托管代码样式
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 分析代码样式
+      url: ../ide/create-portable-custom-editor-options.md
+- title: 测量代码复杂性
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 代码度量
+      url: code-metrics-values.md
