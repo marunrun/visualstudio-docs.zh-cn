@@ -7,12 +7,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 994f8151b209d58617a23edbb4bba38836570710
-ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
-ms.translationtype: MT
+ms.openlocfilehash: 2ce642ee57112561ba687b7ebe962150ce4e268e
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72349540"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72446531"
 ---
 # <a name="mixed-recommended-rules-rule-set"></a>“混合建议规则”规则集
 
@@ -151,7 +151,7 @@ Microsoft 混合推荐的规则重点介绍支持公共语言运行时的C++项�
 |[C28020](../code-quality/c28020.md)|此调用中的表达式不为 true|
 |[C28021](../code-quality/c28021.md)|批注的参数必须为指针型|
 |[C28022](../code-quality/c28022.md)|此函数上的函数类与用于定义此函数的 typedef 上的函数类不匹配。|
-|[C28023](../code-quality/c28023.md)|分配或传递的函数应具有至少一个类的 \_Function @ no__t-1class @ no__t 批注|
+|[C28023](../code-quality/c28023.md)|分配或传递的函数应具有一个 \_Function \_class 至少一个类的 \_ 批注|
 |[C28024](../code-quality/c28024.md)|向其分配的函数指针是用函数类（不包含在函数类列表中）进行批注的。|
 |[C28039](../code-quality/c28039.md)|实参的类型应与类型完全匹配|
 |[C28112](../code-quality/c28112.md)|通过互锁函数访问的变量必须始终通过联锁函数访问。|
@@ -169,14 +169,14 @@ Microsoft 混合推荐的规则重点介绍支持公共语言运行时的C++项�
 |[C28196](../code-quality/c28196.md)|不满足要求。 （该表达式的计算结果不为 true。）|
 |[C28202](../code-quality/c28202.md)|非法引用非静态成员|
 |[C28203](../code-quality/c28203.md)|对类成员的不明确的引用。|
-|[C28205](../code-quality/c28205.md)|@no__t 在非法上下文中使用 @ no__t-1 或 \_On @ no__t-3failure @ no__t|
+|[C28205](../code-quality/c28205.md)|\_Success 在非法上下文中使用 \_ 或 \_On \_failure \_|
 |[C28206](../code-quality/c28206.md)|若左操作数指向结构，则使用“->”|
 |[C28207](../code-quality/c28207.md)|若左操作数是一个结构，则使用“.”|
 |[C28209](../code-quality/c28209.md)|符号的声明具有冲突的声明|
 |[C28210](../code-quality/c28210.md)|__on_failure 上下文的批注不得位于显式的 pre 上下文中|
 |[C28211](../code-quality/c28211.md)|SAL_context 所需的静态上下文名称|
 |[C28212](../code-quality/c28212.md)|批注所需的指针表达式|
-|[C28213](../code-quality/c28213.md)|@No__t-0Use @ no__t-1decl @ no__t-2annotations @ no__t @ 批注必须用于引用，而无需修改以前的声明。|
+|[C28213](../code-quality/c28213.md)|@No__t_0Use \_decl \_annotations \_ 批注必须用于引用，而无需修改以前的声明。|
 |[C28214](../code-quality/c28214.md)|特性参数的名称必须为 p1...p9|
 |[C28215](../code-quality/c28215.md)|不能将 typefix 应用于已包含 typefix 的参数|
 |[C28216](../code-quality/c28216.md)|checkReturn 批注仅应用于特定函数参数的后置条件。|
@@ -219,7 +219,7 @@ Microsoft 混合推荐的规则重点介绍支持公共语言运行时的C++项�
 |[C28267](../code-quality/c28267.md)|在函数中找到了批注的语法错误。|
 |[C28272](../code-quality/c28272.md)|在检查参数时，函数的批注与函数声明不一致|
 |[C28273](../code-quality/c28273.md)|对于函数，线索与函数声明不一致|
-|[C28275](../code-quality/c28275.md)|@No__t-0Macro @ no__t-1value @ no__t-2 的参数为 null|
+|[C28275](../code-quality/c28275.md)|@No__t_0Macro \_value \_ 的参数为 null|
 |[C28279](../code-quality/c28279.md)|对于符号，已找到“起始”符号，但没有匹配的“结束”符号|
 |[C28280](../code-quality/c28280.md)|对于符号，已找到“结束”符号，但没有匹配的“起始”符号|
 |[C28282](../code-quality/c28282.md)|格式字符串必须位于前置条件中|
@@ -258,32 +258,32 @@ Microsoft 混合推荐的规则重点介绍支持公共语言运行时的C++项�
 |[CA1410](../code-quality/ca1410-com-registration-methods-should-be-matched.md)|应对 COM 注册方法进行匹配|
 |[CA1415](../code-quality/ca1415-declare-p-invokes-correctly.md)|正确声明 P/Invoke|
 |[CA1821](../code-quality/ca1821.md)|移除空终结器|
-|[CA1900](../code-quality/ca1900-value-type-fields-should-be-portable.md)|值类型字段应为可移植字段|
-|[CA1901](../code-quality/ca1901-p-invoke-declarations-should-be-portable.md)|P/Invoke 声明应为可移植声明|
-|[CA2002](../code-quality/ca2002-do-not-lock-on-objects-with-weak-identity.md)|不要锁定具有弱标识的对象|
-|[CA2100](../code-quality/ca2100-review-sql-queries-for-security-vulnerabilities.md)|检查 SQL 查询是否存在安全漏洞|
-|[CA2101](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)|指定对 P/Invoke 字符串参数进行封送处理|
-|[CA2108](../code-quality/ca2108-review-declarative-security-on-value-types.md)|检查有关值类型的声明性安全|
-|[CA2111](../code-quality/ca2111-pointers-should-not-be-visible.md)|指针应为不可见|
-|[CA2112](../code-quality/ca2112-secured-types-should-not-expose-fields.md)|受保护的类型不应公开字段|
-|[CA2114](../code-quality/ca2114-method-security-should-be-a-superset-of-type.md)|方法安全性应是类型安全性的超集|
-|[CA2116](../code-quality/ca2116-aptca-methods-should-only-call-aptca-methods.md)|APTCA 方法应只调用 APTCA 方法|
-|[CA2117](../code-quality/ca2117-aptca-types-should-only-extend-aptca-base-types.md)|APTCA 类型应只扩展 APTCA 基类型|
-|[CA2122](../code-quality/ca2122-do-not-indirectly-expose-methods-with-link-demands.md)|不要使用链接请求间接公开方法|
-|[CA2123](../code-quality/ca2123-override-link-demands-should-be-identical-to-base.md)|重写链接请求应与基相同|
-|[CA2124](../code-quality/ca2124-wrap-vulnerable-finally-clauses-in-outer-try.md)|在外部 try 块中包装易受攻击的 finally 子句|
-|[CA2126](../code-quality/ca2126-type-link-demands-require-inheritance-demands.md)|类型链接请求需要继承请求|
-|[CA2131](../code-quality/ca2131-security-critical-types-may-not-participate-in-type-equivalence.md)|安全关键类型不能参与类型等效|
-|[CA2132](../code-quality/ca2132-default-constructors-must-be-at-least-as-critical-as-base-type-default-constructors.md)|默认构造函数必须至少与基类型默认构造函数一样关键|
-|[CA2133](../code-quality/ca2133-delegates-must-bind-to-methods-with-consistent-transparency.md)|委托必须绑定到具有一致透明度的方法|
-|[CA2134](../code-quality/ca2134-methods-must-keep-consistent-transparency-when-overriding-base-methods.md)|在重写基方法时，方法必须保持一致的透明度|
-|[CA2137](../code-quality/ca2137-transparent-methods-must-contain-only-verifiable-il.md)|透明方法只能包含可验证的 IL|
-|[CA2138](../code-quality/ca2138-transparent-methods-must-not-call-methods-with-the-suppressunmanagedcodesecurity-attribute.md)|透明方法不得调用具有 SuppressUnmanagedCodeSecurity 特性的方法|
-|[CA2140](../code-quality/ca2140-transparent-code-must-not-reference-security-critical-items.md)|透明代码不得引用安全关键项|
-|[CA2141](../code-quality/ca2141-transparent-methods-must-not-satisfy-linkdemands.md)|透明方法不得满足 LinkDemand|
-|[CA2146](../code-quality/ca2146-types-must-be-at-least-as-critical-as-their-base-types-and-interfaces.md)|类型必须至少与其基类型和接口一样关键|
-|[CA2147](../code-quality/ca2147-transparent-methods-may-not-use-security-asserts.md)|透明方法不得使用安全断言|
-|[CA2149](../code-quality/ca2149-transparent-methods-must-not-call-into-native-code.md)|透明方法不得调入本机代码|
+|[CA1900](../code-quality/ca1900.md)|值类型字段应为可移植字段|
+|[CA1901](../code-quality/ca1901.md)|P/Invoke 声明应为可移植声明|
+|[CA2002](../code-quality/ca2002.md)|不要锁定具有弱标识的对象|
+|[CA2100](../code-quality/ca2100.md)|检查 SQL 查询是否存在安全漏洞|
+|[CA2101](../code-quality/ca2101.md)|指定对 P/Invoke 字符串参数进行封送处理|
+|[CA2108](../code-quality/ca2108.md)|检查有关值类型的声明性安全|
+|[CA2111](../code-quality/ca2111.md)|指针应为不可见|
+|[CA2112](../code-quality/ca2112.md)|受保护的类型不应公开字段|
+|[CA2114](../code-quality/ca2114.md)|方法安全性应是类型安全性的超集|
+|[CA2116](../code-quality/ca2116.md)|APTCA 方法应只调用 APTCA 方法|
+|[CA2117](../code-quality/ca2117.md)|APTCA 类型应只扩展 APTCA 基类型|
+|[CA2122](../code-quality/ca2122.md)|不要使用链接请求间接公开方法|
+|[CA2123](../code-quality/ca2123.md)|重写链接请求应与基相同|
+|[CA2124](../code-quality/ca2124.md)|在外部 try 块中包装易受攻击的 finally 子句|
+|[CA2126](../code-quality/ca2126.md)|类型链接请求需要继承请求|
+|[CA2131](../code-quality/ca2131.md)|安全关键类型不能参与类型等效|
+|[CA2132](../code-quality/ca2132.md)|默认构造函数必须至少与基类型默认构造函数一样关键|
+|[CA2133](../code-quality/ca2133.md)|委托必须绑定到具有一致透明度的方法|
+|[CA2134](../code-quality/ca2134.md)|在重写基方法时，方法必须保持一致的透明度|
+|[CA2137](../code-quality/ca2137.md)|透明方法只能包含可验证的 IL|
+|[CA2138](../code-quality/ca2138.md)|透明方法不得调用具有 SuppressUnmanagedCodeSecurity 特性的方法|
+|[CA2140](../code-quality/ca2140.md)|透明代码不得引用安全关键项|
+|[CA2141](../code-quality/ca2141.md)|透明方法不得满足 LinkDemand|
+|[CA2146](../code-quality/ca2146.md)|类型必须至少与其基类型和接口一样关键|
+|[CA2147](../code-quality/ca2147.md)|透明方法不得使用安全断言|
+|[CA2149](../code-quality/ca2149.md)|透明方法不得调入本机代码|
 |[CA2200](../code-quality/ca2200.md)|再次引发以保留堆栈详细信息|
 |[CA2202](../code-quality/ca2202.md)|不要多次释放对象|
 |[CA2207](../code-quality/ca2207.md)|以内联方式初始化值类型的静态字段|

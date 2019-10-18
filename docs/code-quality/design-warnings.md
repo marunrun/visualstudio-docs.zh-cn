@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 975b4440a922c1971f02937f6da007da6aa96864
-ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
-ms.translationtype: MT
+ms.openlocfilehash: 5229084f34a8c2a674d327ad86f7f3d2bbb1aae5
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72349658"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72449181"
 ---
 # <a name="design-warnings"></a>设计警告
 
@@ -84,7 +84,7 @@ ms.locfileid: "72349658"
 | [CA1057：字符串 URI 重载调用 System.Uri 重载](../code-quality/ca1057-string-uri-overloads-call-system-uri-overloads.md) | 某个类型声明的方法重载与 System.Uri 参数仅在字符串参数的放置方面有所不同。 采用字符串参数的重载不调用采用 URI 参数的重载。 |
 | [CA1058：类型不应扩展某些基类型](../code-quality/ca1058-types-should-not-extend-certain-base-types.md) | 外部可见的类型扩展某些基类型。 请使用某个备选项。 |
 | [CA1059：成员不应公开某些具体类型](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md) | 具体类型是指具有一个完整实现因此可以实例化的类型。 若要使成员可以得到广泛使用，请使用建议的接口来替换具体类型。 |
-| [CA1060：将 P/Invoke 移动到](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md) NativeMethods 类 | 平台调用方法（如用 <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> 标记的方法或在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中使用 Declare 关键字定义的方法）访问非托管代码。 这些方法应属于 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 类。 |
+| [CA1060：将 P/Invoke 移动到](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md) NativeMethods 类 | 平台调用方法（如使用 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中的 Declare 关键字定义的 <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> 或方法）访问非托管代码。 这些方法应属于 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 类。 |
 | [CA1061：不要隐藏基类方法](../code-quality/ca1061-do-not-hide-base-class-methods.md) | 如果派生方法的参数签名只是在类型方面有所不同，而且与基方法的参数签名中的对应类型相比，这些类型的派生方式更弱，则基类型中的方法由派生类型中的同名方法隐藏。 |
 | [CA1062：验证公共方法的参数](../code-quality/ca1062-validate-arguments-of-public-methods.md) | 对于传递给外部可见方法的所有引用自变量，都应检查其是否为 null。 |
 | [CA1063：正确实现 IDisposable](../code-quality/ca1063-implement-idisposable-correctly.md) | 所有的 IDisposable 类型都应当正确实现 Dispose 模式。 |

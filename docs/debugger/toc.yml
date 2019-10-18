@@ -239,7 +239,7 @@
             - name: 自定义视图（托管）
               items:
                 - name: 创建托管对象的自定义视图
-                  href: create-custom-views-of-dot-managed-objects.md
+                  href: create-custom-views-of-managed-objects.md
                 - name: 告诉调试程序要显示什么
                   href: using-the-debuggerdisplay-attribute.md
                 - name: 告诉调试程序要显示什么类型

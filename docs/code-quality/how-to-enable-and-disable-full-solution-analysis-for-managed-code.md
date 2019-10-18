@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0b192b29190d530d22943e8ba2a396ae1fe9ad87
-ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
+ms.openlocfilehash: 26cd267f80f8c7c220771a5c2220d22b66929051
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71975129"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448921"
 ---
 # <a name="how-to-enable-and-disable-full-solution-analysis-for-managed-code"></a>如何：启用和禁用托管代码的完整解决方案分析
 
@@ -34,7 +34,7 @@ ms.locfileid: "71975129"
 
 1. 若要打开 "**选项**" 对话框，请在 Visual Studio 的菜单栏中选择 "**工具**"  > **选项**。
 
-1. 在 "**选项**" 对话框中，选择 "**文本编辑器**@no__t**C#** -2" 或 "**基本** > **高级**"。
+1. 在 "**选项**" 对话框中，选择 "**文本编辑器**"  > **C#** 或 "**基本** > **高级**"。
 
 1. 选中 "**启用完整解决方案分析**" 复选框以启用完整解决方案分析，或者清除该复选框以禁用它。 完成后，请选择 **"确定"** 。
 
@@ -44,4 +44,4 @@ ms.locfileid: "71975129"
 
 如果 Visual Studio 检测到可用于 200 MB 或更少的系统内存，则它会自动禁用完整解决方案分析（以及其他一些功能）（如果已启用）。 如果出现这种情况，则会出现一个警报，通知你 Visual Studio 已禁用某些功能。 利用按钮，可以根据需要重新启用完整解决方案分析。
 
-![警报文本中挂起完整解决方案分析](../code-quality/media/fsa_alert.png)
+![暂停完整解决方案分析的警报文本](../code-quality/media/fsa_alert.png)

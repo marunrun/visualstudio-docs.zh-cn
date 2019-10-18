@@ -18,12 +18,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c27300244998765d13d485d617c17c5032bad7b
-ms.sourcegitcommit: e95dd8cedcd180e0bce6a75c86cf861757918290
+ms.openlocfilehash: 27f3d68d28b8d1799c52fcf83c6a00dc5f81f48a
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163047"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448916"
 ---
 # <a name="how-to-set-code-analysis-properties-for-cc-projects"></a>如何：设置 C/C++ 项目的代码分析属性
 
@@ -45,7 +45,7 @@ ms.locfileid: "72163047"
 
 ## <a name="cmake-configuration"></a>CMake 配置
 
-在 CMake 项目中，在 `CMakeSettings.json` 中更改 `enableMicrosoftCodeAnalysis` 和 @no__t 键的值，以启用或禁用代码分析。 有关详细信息，请参阅[在 Visual Studio 中使用 Clang-整洁](../code-quality/clang-tidy.md)。
+在 CMake 项目中，更改 "`enableMicrosoftCodeAnalysis`" 和 "`enableClangTidyCodeAnalysis` `CMakeSettings.json` 中" 键的值，以启用或禁用代码分析。 有关详细信息，请参阅[在 Visual Studio 中使用 Clang-整洁](../code-quality/clang-tidy.md)。
 
 ## <a name="see-also"></a>请参阅
 

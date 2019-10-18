@@ -21,15 +21,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 008dde8239c2b4b70220159275b12066b8cf70bb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f11a170878e3efefc123ad7d61d0889f5bd95c12
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851021"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72435724"
 ---
-# <a name="edit-code-and-continue-debugging-in-visual-studio-c-vb-c"></a>编辑代码并在 Visual Studio 中继续调试 (C#，VB， C++)
-“编辑并继续”是一种省时的功能，使你能够在程序处于中断模式时更改源代码。 通过选择执行命令如恢复程序执行时**继续**或**步骤**、 编辑和继续自动应用代码更改有一些限制。 这允许你在调试会话期间更改代码，而不是停止程序，重新编译整个程序，再重新启动调试会话。
+# <a name="edit-code-and-continue-debugging-in-visual-studio-c-vb-c"></a>在 Visual Studio 中编辑代码并继续调试C#（、VB C++、）
+“编辑并继续”是一种省时的功能，使你能够在程序处于中断模式时更改源代码。 通过选择执行命令（如 "**继续**" 或 "**单步**执行"）继续执行程序时，"编辑并继续" 会自动应用代码更改，但有一些限制。 这允许你在调试会话期间更改代码，而不是停止程序，重新编译整个程序，再重新启动调试会话。
 
  本节包括下列主题：
 
@@ -37,7 +37,7 @@ ms.locfileid: "62851021"
 
  [如何：停止代码更改](../debugger/how-to-stop-code-changes.md)
 
- [Edit and Continue (Visual C++)](../debugger/edit-and-continue-visual-cpp.md)
+ [编辑并继续（C++）](../debugger/edit-and-continue-visual-cpp.md)
 
  [编辑并继续 (Visual C#)](../debugger/edit-and-continue-visual-csharp.md)
 

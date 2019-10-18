@@ -263,12 +263,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 61a7619d5237c0e801440be8939177bf34fea2dd
-ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
-ms.translationtype: MT
+ms.openlocfilehash: bb9b5d916373ca3a49446234cd5144d3e4e8174a
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72348242"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72442482"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>托管代码的代码分析警告（按 CheckId）
 
@@ -398,81 +398,81 @@ ms.locfileid: "72348242"
 | CA1726 | [CA1726：使用首选词条](../code-quality/ca1726-use-preferred-terms.md) | 在外部可见的标识符的名称中，包括一个存在首选备用词条的词条。 或者，名称中包含“Flag”或“Flags”一词。 |
 | CA1800 | [CA1800：避免进行不必要的强制转换](../code-quality/ca1800.md) | 重复强制转换会降低性能，特别是在精简的迭代语句中执行强制转换时。 |
 | CA1801 | [CA1801：检查未使用的参数](../code-quality/ca1801.md) | 方法签名包含一个没有在方法体中使用的参数。 |
-| CA1802 |[CA1802：在合适的位置使用文本](../code-quality/ca1802.md) |某个字段被声明为 static 和 read-only（在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中为 Shared 和 ReadOnly），并使用可在编译时计算的值初始化。 由于分配给目标字段的值是在编译时可的，因此请将该声明更改为 const （[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中的 Const）字段，以便在编译时（而非运行时）计算此值。 |
+| CA1802 |[CA1802：在合适的位置使用文本](../code-quality/ca1802.md) |某个字段被声明为 static 和 read-only（在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中为 Shared 和 ReadOnly），并使用可在编译时计算的值初始化。 由于分配给目标字段的值是在编译时可的，因此请将声明更改为 const （[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中的 Const）字段，以便在编译时（而不是在运行时）计算此值。 |
 | CA1804 | [CA1804：移除未使用的局部变量](../code-quality/ca1804.md) | 未使用的局部变量和不必要的赋值会增加程序集的大小并降低性能。 |
 | CA1806 | [CA1806：不要忽略方法结果](../code-quality/ca1806.md) | 创建一个新对象，但从不使用该对象；或者调用会创建并返回一个新字符串的方法，但从不使用这个新字符串；或者 COM 或 P/Invoke 方法返回一个从不使用的 HRESULT 或错误代码。 |
 | CA1809 |[CA1809：避免过多的局部变量](../code-quality/ca1809.md) | 优化性能的常见方法是将值存储于处理器寄存器，而不是内存中，这称为“注册值”。 为了增加所有局部变量的 enregistered，将局部变量的数目限制为64。 |
 | CA1810 | [CA1810：以内联方式初始化引用类型的静态字段](../code-quality/ca1810.md) | 当一个类型声明显式静态构造函数时，实时 (JIT) 编译器会向该类型的每个静态方法和实例构造函数中添加一项检查，以确保之前已调用该静态构造函数。 静态构造函数检查会降低性能。 |
 | CA1811 | [CA1811：避免使用未调用的私有代码](../code-quality/ca1811.md) | 某个私有或内部（程序集级别）成员在程序集中没有调用方，既不是由公共语言运行时调用的，也不是由委托调用的。 |
-| CA1812 | [CA1812：避免未实例化的内部类](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md) | 程序集级别类型的实例不是由程序集中的代码创建的。 |
+| CA1812 | [CA1812：避免未实例化的内部类](../code-quality/ca1812.md) | 程序集级别类型的实例不是由程序集中的代码创建的。 |
 | CA1813 | [CA1813：避免使用未密封的特性](../code-quality/ca1813.md) | .NET 提供了用于检索自定义特性的方法。 默认情况下，这些方法搜索特性继承层次结构。 通过密封特性，将无需搜索继承层次结构，且能够提高性能。 |
 | CA1814 | [CA1814：与多维数组相比，首选使用交错的数组](../code-quality/ca1814.md) | 交错数组是元素为数组的数组。 构成元素的数组可以是不同的大小，以减少某些数据集的浪费空间。 |
-| CA1815 | [CA1815：重写值类型上的 Equals 和相等运算符](../code-quality/ca1815-override-equals-and-operator-equals-on-value-types.md) | 对于值类型，Equals 的继承的实现使用反射库，并比较所有字段的内容。 反射需要消耗大量计算资源，可能没有必要比较每一个字段是否相等。 如果希望用户对实例进行比较或排序，或者希望用户将实例用作哈希表键，则值类型应实现 Equals。 |
+| CA1815 | [CA1815：重写值类型上的 Equals 和相等运算符](../code-quality/ca1815.md) | 对于值类型，Equals 的继承的实现使用反射库，并比较所有字段的内容。 反射需要消耗大量计算资源，可能没有必要比较每一个字段是否相等。 如果希望用户对实例进行比较或排序，或者希望用户将实例用作哈希表键，则值类型应实现 Equals。 |
 | CA1816 | [CA1816：正确调用 GC.SuppressFinalize](../code-quality/ca1816.md) | 作为 Dispose 实现的方法不调用 GC。Gc.suppressfinalize或者不是 Dispose 的实现的方法会调用 GC。Gc.suppressfinalize或方法调用 GC。Gc.suppressfinalize 并传递除此外的其他内容（我在 Visual Basic 中）。 |
-| CA1819 | [CA1819：属性不应返回数组](../code-quality/ca1819-properties-should-not-return-arrays.md) | 即使属性是只读的，该属性返回的数组也不是写保护的。 若要使数组不会被更改，属性必须返回数组的副本。 通常，用户不能理解调用这种属性的负面性能影响。 |
-| CA1820 | [CA1820：使用字符串长度测试是否有空字符串](../code-quality/ca1820-test-for-empty-strings-using-string-length.md) | 使用 String.Length 属性或 String.IsNullOrEmpty 方法比较字符串要比使用 Equals 的速度快得多。 |
-| CA1821 | [CA1821：移除空的终结器](../code-quality/ca1821-remove-empty-finalizers.md) | 应尽可能避免终结器，因为跟踪对象生存期会产生额外的性能系统开销。 空的终结器只会徒增系统开销，没有一点好处。 |
+| CA1819 | [CA1819：属性不应返回数组](../code-quality/ca1819.md) | 即使属性是只读的，该属性返回的数组也不是写保护的。 若要使数组不会被更改，属性必须返回数组的副本。 通常，用户不能理解调用这种属性的负面性能影响。 |
+| CA1820 | [CA1820：使用字符串长度测试是否有空字符串](../code-quality/ca1820.md) | 使用 String.Length 属性或 String.IsNullOrEmpty 方法比较字符串要比使用 Equals 的速度快得多。 |
+| CA1821 | [CA1821：移除空的终结器](../code-quality/ca1821.md) | 应尽可能避免终结器，因为跟踪对象生存期会产生额外的性能系统开销。 空的终结器只会徒增系统开销，没有一点好处。 |
 | CA1822 |[CA1822：将成员标记为 static](../code-quality/ca1822.md) | 可以将不访问实例数据或不调用实例方法的成员标记为 static（在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中为 Shared）。 在将这些方法标记为 static 之后，编译器将向这些成员发出非虚拟调用站点。 这会使性能敏感的代码的性能得到显著提高。 |
-| CA1823 | [CA1823：避免未使用的私有字段](../code-quality/ca1823-avoid-unused-private-fields.md) | 检测到程序集内有似乎未访问过的私有字段。 |
-| CA1824 |[CA1824：用 NeutralResourcesLanguageAttribute 标记程序集](../code-quality/ca1824-mark-assemblies-with-neutralresourceslanguageattribute.md) | NeutralResourcesLanguage 属性通知资源管理器，该语言用于显示程序集的非特定区域性的资源。 这将改进所加载的第一个资源的查找性能，并缩小工作集。 |
+| CA1823 | [CA1823：避免未使用的私有字段](../code-quality/ca1823.md) | 检测到程序集内有似乎未访问过的私有字段。 |
+| CA1824 |[CA1824：用 NeutralResourcesLanguageAttribute 标记程序集](../code-quality/ca1824.md) | NeutralResourcesLanguage 属性通知资源管理器，该语言用于显示程序集的非特定区域性的资源。 这将改进所加载的第一个资源的查找性能，并缩小工作集。 |
 | CA1825 |[CA1825：避免长度为零的数组分配](../code-quality/ca1825.md) | 初始化长度为零的数组将导致不必要的内存分配。 相反，请通过调用 <xref:System.Array.Empty%2A?displayProperty=nameWithType> 来使用静态分配的空数组实例。 内存分配在此方法的所有调用之间共享。 |
-| CA1900 | [CA1900：值类型字段应为可移植字段](../code-quality/ca1900-value-type-fields-should-be-portable.md) | 此规则对以下项进行检查：当用显式布局声明的结构封送到 64 位操作系统上的非托管代码时，是否正确对齐。 |
-| CA1901 | [CA1901：P/Invoke 声明应为可移植声明](../code-quality/ca1901-p-invoke-declarations-should-be-portable.md) | 此规则计算 P/Invoke 的每个参数和返回值的大小，还验证它们在封送到 32 位和 64 位操作系统上的非托管代码时参数的大小是否正确。 |
-| CA1903 | [CA1903：仅使用目标框架中的 API](../code-quality/ca1903-use-only-api-from-targeted-framework.md) | 一个成员或类型使用了某个 Service Pack 中引入的成员或类型，该 Service Pack 没有与项目的目标框架一起包括。 |
-| CA2000 | [CA2000：超出范围前释放对象](../code-quality/ca2000-dispose-objects-before-losing-scope.md) | 由于可能发生异常事件，导致对象的终结器无法运行，因此，应显式释放对象，以避免对该对象的所有引用超出范围。 |
-| CA2001 | [CA2001：避免调用有问题的方法](../code-quality/ca2001-avoid-calling-problematic-methods.md) | 某个成员调用可能存在危险或有问题的方法。 |
-| CA2002 |[CA2002：不要锁定具有弱标识的对象](../code-quality/ca2002-do-not-lock-on-objects-with-weak-identity.md) |当可以跨应用程序域边界直接进行访问对象时，则认为该对象具有弱标识。 对于尝试获取对具有弱标识的对象的锁的线程，该线程可能会被其他应用程序域中持有对同一对象的锁的另一线程所阻止。 |
-| CA2003 |[CA2003：不要将纤程视为线程](../code-quality/ca2003-do-not-treat-fibers-as-threads.md) | 托管线程被视为 [!INCLUDE[TLA2#tla_win32](../code-quality/includes/tla2sharptla_win32_md.md)] 线程。 |
-| CA2004 | [CA2004：移除对 GC.KeepAlive 的调用](../code-quality/ca2004-remove-calls-to-gc-keepalive.md) | 如果转换为使用 SafeHandle，请移除所有对 GC.KeepAlive (object) 的调用。 在这种情况下，类不必调用 GC.KeepAlive。 这将假定它们没有终结器，而只是依赖 SafeHandle 来为它们完成 OS 句柄。 |
-| CA2006 | [CA2006：使用 SafeHandle 封装本机资源](../code-quality/ca2006-use-safehandle-to-encapsulate-native-resources.md) | 在托管代码中使用 IntPtr 可能意味着潜在的安全性和可靠性方面的问题。 必须检查所有使用 IntPtr 之处，以确定是否需要在该处使用 SafeHandle 或类似的技术。 |
+| CA1900 | [CA1900：值类型字段应为可移植字段](../code-quality/ca1900.md) | 此规则对以下项进行检查：当用显式布局声明的结构封送到 64 位操作系统上的非托管代码时，是否正确对齐。 |
+| CA1901 | [CA1901：P/Invoke 声明应为可移植声明](../code-quality/ca1901.md) | 此规则计算 P/Invoke 的每个参数和返回值的大小，还验证它们在封送到 32 位和 64 位操作系统上的非托管代码时参数的大小是否正确。 |
+| CA1903 | [CA1903：仅使用目标框架中的 API](../code-quality/ca1903.md) | 一个成员或类型使用了某个 Service Pack 中引入的成员或类型，该 Service Pack 没有与项目的目标框架一起包括。 |
+| CA2000 | [CA2000：超出范围前释放对象](../code-quality/ca2000.md) | 由于可能发生异常事件，导致对象的终结器无法运行，因此，应显式释放对象，以避免对该对象的所有引用超出范围。 |
+| CA2001 | [CA2001：避免调用有问题的方法](../code-quality/ca2001.md) | 某个成员调用可能存在危险或有问题的方法。 |
+| CA2002 |[CA2002：不要锁定具有弱标识的对象](../code-quality/ca2002.md) |当可以跨应用程序域边界直接进行访问对象时，则认为该对象具有弱标识。 对于尝试获取对具有弱标识的对象的锁的线程，该线程可能会被其他应用程序域中持有对同一对象的锁的另一线程所阻止。 |
+| CA2003 |[CA2003：不要将纤程视为线程](../code-quality/ca2003.md) | 托管线程被视为 [!INCLUDE[TLA2#tla_win32](../code-quality/includes/tla2sharptla_win32_md.md)] 线程。 |
+| CA2004 | [CA2004：移除对 GC.KeepAlive 的调用](../code-quality/ca2004.md) | 如果转换为使用 SafeHandle，请移除所有对 GC.KeepAlive (object) 的调用。 在这种情况下，类不必调用 GC.KeepAlive。 这将假定它们没有终结器，而只是依赖 SafeHandle 来为它们完成 OS 句柄。 |
+| CA2006 | [CA2006：使用 SafeHandle 封装本机资源](../code-quality/ca2006.md) | 在托管代码中使用 IntPtr 可能意味着潜在的安全性和可靠性方面的问题。 必须检查所有使用 IntPtr 之处，以确定是否需要在该处使用 SafeHandle 或类似的技术。 |
 | CA2007 | [CA2007：不直接等待任务](ca2007-do-not-directly-await-task.md) | 异步方法会直接[等待](/dotnet/csharp/language-reference/keywords/await)@no__t 1。 当异步方法直接等待 @no__t 0 时，将在创建任务的同一线程中发生延续任务。 此行为在性能方面可能会很大，并且可能会在 UI 线程上导致死锁。 请考虑调用 <xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType> 以通知你的继续符。 |
-| CA2100 | [CA2100：检查 SQL 查询中是否有安全漏洞](../code-quality/ca2100-review-sql-queries-for-security-vulnerabilities.md) | 一个方法使用按该方法的字符串参数生成的字符串设置 System.Data.IDbCommand.CommandText 属性。 此规则假定字符串参数中包含用户输入。 基于用户输入生成的 SQL 命令字符串易于受到 SQL 注入式攻击。 |
-| CA2101 |[CA2101：指定对 P/Invoke 字符串参数进行封送处理](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md) | 某平台调用成员允许部分受信任的调用方，具有一个字符串参数，并且不显式封送该字符串。 这可能导致潜在的安全漏洞。 |
-| CA2102 | [CA2102：在常规处理程序中捕捉非 CLSCompliant 异常](../code-quality/ca2102-catch-non-clscompliant-exceptions-in-general-handlers.md) | 程序集中未用 RuntimeCompatibilityAttribute 标记或用 RuntimeCompatibility(WrapNonExceptionThrows = false) 标记的某个成员包含一个处理 System.Exception 的 catch 块，而不包含紧跟其后的一般 catch 块。 |
-| CA2103 | [CA2103：检查命令性安全](../code-quality/ca2103-review-imperative-security.md) |某个方法使用命令性安全，并且可能正在使用在要求处于活动状态时可以更改的状态信息或返回值来构造权限。 应尽可能使用声明性安全。 |
-| CA2104 |[CA2104：不要声明只读可变引用类型](../code-quality/ca2104-do-not-declare-read-only-mutable-reference-types.md) | 外部可见类型包含外部可见的只读字段，该字段为可变的引用类型。 可变类型是实例数据可被修改的类型。 |
-| CA2105 | [CA2105：数组字段不应为只读](../code-quality/ca2105-array-fields-should-not-be-read-only.md) |向包含数组的字段应用 readonly（在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中为 ReadOnly）修饰符时，无法将该字段更改为引用其他数组。 但是，可以更改在只读字段中存储的数组的元素。 |
-| CA2106 | [CA2106：保护断言](../code-quality/ca2106-secure-asserts.md) | 某个方法断言权限，但不对调用方执行任何安全检查。 如果在不执行任何安全检查的情况下断言安全权限，则会在代码中留下可利用的安全漏洞。 |
-| CA2107 | [CA2107：检查 deny 权限和 permit only 权限的使用情况](../code-quality/ca2107-review-deny-and-permit-only-usage.md) |PermitOnly 方法和 Codeaccesspermission.deny 安全操作只应由精通 .NET 安全的用户使用。 应当对使用这些安全操作的代码进行安全检查。 |
-| CA2108 | [CA2108：检查有关值类型的声明性安全](../code-quality/ca2108-review-declarative-security-on-value-types.md) | 公共或受保护值类型受数据访问或链接要求保护。 |
-| CA2109 | [CA2109：检查可见的事件处理程序](../code-quality/ca2109-review-visible-event-handlers.md) | 检测到公共事件处理方法或受保护事件处理方法。 除非绝对必要，否则不应公开事件处理方法。 |
-| CA2111 |[CA2111：指针应为不可见](../code-quality/ca2111-pointers-should-not-be-visible.md) | 指针不是私有、内部或只读指针。 恶意代码可以更改指针的值，这样就有可能访问内存中的任意位置或导致应用程序或系统故障。 |
-| CA2112 | [CA2112：受保护的类型不应公开字段](../code-quality/ca2112-secured-types-should-not-expose-fields.md) | 一个公共或受保护类型包含公共字段，并受链接要求保护。 如果代码可以访问受链接要求保护的类型的实例，则该代码不必满足此链接要求就可以访问该类型的字段。 |
-| CA2114 | [CA2114：方法安全性应是类型安全性的超集](../code-quality/ca2114-method-security-should-be-a-superset-of-type.md) | 一个方法不应同时有同一操作的方法级别和类型级别的声明性安全。 |
-| CA2115 | [CA2115：使用本机资源时调用 GC.KeepAlive](../code-quality/ca2115-call-gc-keepalive-when-using-native-resources.md) | 该规则检测由于在非托管代码仍在使用非托管资源时终止该非托管资源而可能发生的错误。 |
-| CA2116 | [CA2116：APTCA 方法应只调用 APTCA 方法](../code-quality/ca2116-aptca-methods-should-only-call-aptca-methods.md) |当完全受信任的程序集上存在 APTCA (AllowPartiallyTrustedCallersAttribute) 时，如果该程序集执行另一个不允许部分受信任调用方的程序集中的代码，则可能会产生安全漏洞。 |
-| CA2117 | [CA2117：APTCA 类型应只扩展 APTCA 基类型](../code-quality/ca2117-aptca-types-should-only-extend-aptca-base-types.md) | 当完全受信任的程序集上存在 APTCA 时，如果程序集中的某个类型是从不允许部分受信任调用方的类型继承而来，则可能会产生安全漏洞。 |
-| CA2118 | [CA2118：检查 SuppressUnmanagedCodeSecurityAttribute 用法](../code-quality/ca2118-review-suppressunmanagedcodesecurityattribute-usage.md) |SuppressUnmanagedCodeSecurityAttribute 为执行使用 COM 互操作或操作系统调用的非托管代码的成员更改默认的安全系统行为。 此特性主要用于提高性能；不过，提高性能的同时会显著增加安全风险。 |
-| CA2119 | [CA2119：密封满足私有接口的方法](../code-quality/ca2119-seal-methods-that-satisfy-private-interfaces.md) | 可继承的公共类型为内部（在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中为 Friend）接口提供可重写的方法实现。 若要修复与此规则的冲突，请禁止方法在程序集外重写。 |
-| CA2120 | [CA2120：保护序列化构造函数](../code-quality/ca2120-secure-serialization-constructors.md) | 此类型的构造函数采用了 System.Runtime.Serialization.SerializationInfo 对象和 System.Runtime.Serialization.StreamingContext 对象（序列化构造函数的签名）。 此构造函数不受安全检查的保护，但类型中的一个或多个常规构造函数受保护。 |
-| CA2121 | [CA2121：静态构造函数应为私有](../code-quality/ca2121-static-constructors-should-be-private.md) | 系统在创建第一个类型实例或引用任何静态成员之前调用静态构造函数。 如果静态构造函数不是私有，则系统以外的代码可以调用它。 根据构造函数中执行的操作，这可能导致意外行为。 |
-| CA2122 | [CA2122：不要使用链接请求间接公开方法](../code-quality/ca2122-do-not-indirectly-expose-methods-with-link-demands.md) | 公共或受保护成员具有链接要求，且由不执行任何安全检查的成员调用。 链接请求仅检查直接调用方的权限。 |
-| CA2123 | [CA2123：重写的链接请求应与基相同](../code-quality/ca2123-override-link-demands-should-be-identical-to-base.md) | 该规则将一个方法与其基方法（该基方法为另一个类型中的接口或虚方法）相匹配，然后比较两者的链接请求。 如果与此规则冲突，则恶意调用方只需调用不安全的方法，即可跳过该链接要求。 |
-| CA2124 | [CA2124：在外部 try 块中包装易受攻击的 finally 子句](../code-quality/ca2124-wrap-vulnerable-finally-clauses-in-outer-try.md) | 公共或受保护方法中含有 try/finally 块。 finally 块似乎要重置安全状态，并且自身不包括在某个 finally 块中。 |
-| CA2126 | [CA2126：类型链接请求需要继承请求](../code-quality/ca2126-type-link-demands-require-inheritance-demands.md) | 一个公共的非密封类型受链接要求保护，并且具有可重写的方法。 类型和方法都不受继承要求保护。 |
-| CA2127 | [CA2136：成员不应有相互冲突的透明度注释](../code-quality/ca2136-members-should-not-have-conflicting-transparency-annotations.md) | 100透明的程序集中不能出现关键代码。 此规则将为类型、字段和方法级别的任何 SecurityCritical 批注分析 100%-透明程序集。 |
-| CA2128 |[CA2147：透明方法不得使用安全断言](../code-quality/ca2147-transparent-methods-may-not-use-security-asserts.md) | 此规则分析程序集中的所有方法和类型均为 100%-透明或混合透明/关键，并标记 Assert 的任何声明性或命令性使用。 |
-| CA2129 | [CA2140：透明代码不得引用安全关键项](../code-quality/ca2140-transparent-code-must-not-reference-security-critical-items.md) | 用 SecurityTransparentAttribute 标记的方法调用标为 SecurityCritical 的非公共成员。 此规则分析混合透明/关键的程序集中的所有方法和类型，并标记透明代码中对未标为 SecurityTreatAsSafe 的非公共关键代码的任何调用。 |
-| CA2130 | [CA2130：安全关键常量应是透明的](../code-quality/ca2130-security-critical-constants-should-be-transparent.md) | 未对常数值实施透明强制，因为编译器内联常数值以便在运行时不需要查找。 常数字段应为安全透明的，以便代码评审阅者不会假定透明代码不能访问常数。 |
-| CA2131 | [CA2131：安全关键类型不能参与类型等效](../code-quality/ca2131-security-critical-types-may-not-participate-in-type-equivalence.md) | 某个类型参与了类型等效，该类型本身或该类型的成员或字段用 SecurityCriticalAttribute 特性标记。 对于任何关键的类型或包含参与类型等效的关键方法或字段的类型，将引发此规则。 当 CLR 检测到这样的类型时，在运行时将不会加载它并引发 TypeLoadException。 通常，仅在用户手动实现类型等效而不是通过依赖 tlbimp 和编译器进行类型等效时，才会引发此规则。 |
-| CA2132 | [CA2132：默认构造函数必须至少与基类型默认构造函数具有同样的关键性](../code-quality/ca2132-default-constructors-must-be-at-least-as-critical-as-base-type-default-constructors.md) |具有 SecurityCriticalAttribute 的类型和成员无法供 Silverlight 应用程序代码使用。 安全关键类型和成员只能供 .NET Framework for Silverlight 类库中的受信任代码使用。 因为派生类中的某个公共或受保护构造必须有与其基类相同或更大的透明度，所以不能从标记为 SecurityCritical 类中派生应用程序中的类。 |
-| CA2133 | [CA2133：委托必须绑定到具有一致透明度的方法](../code-quality/ca2133-delegates-must-bind-to-methods-with-consistent-transparency.md) | 将对一个具有以下特点的方法引发此警告：该方法将用 SecurityCriticalAttribute 标记的委托绑定到一个透明的或用 SecuritySafeCriticalAttribute 标记的方法。 还会对另一个具有以下特点的方法引发此警告：该方法将透明的或安全关键的委托绑定到一个关键方法。 |
-| CA2134 | [CA2134：在重写基方法时，方法必须保持一致的透明度](../code-quality/ca2134-methods-must-keep-consistent-transparency-when-overriding-base-methods.md) |当用 SecurityCriticalAttribute 标记的方法重写一个透明的或用 SecuritySafeCriticalAttribute 标记的方法时，将会引发此规则。 当一个透明的或用 SecuritySafeCriticalAttribute 标记的方法重写一个用 SecurityCriticalAttribute 标记的方法时，也会引发此规则。 该规则在重写虚方法或实现接口时应用。 |
-| CA2135 | [CA2135：级别 2 程序集不应包含 LinkDemand](../code-quality/ca2135-level-2-assemblies-should-not-contain-linkdemands.md) | 在级别为 2 的安全规则集中已弃用 LinkDemand。 现在使用 SecurityCriticalAttribute 特性标记方法、类型和字段，而不是使用 LinkDemand 在实时 (JIT) 编译时进行强制安全检查。 |
-| CA2136 | [CA2136：成员不应有相互冲突的透明度注释](../code-quality/ca2136-members-should-not-have-conflicting-transparency-annotations.md) | 将透明特性从较大作用域的代码元素应用到较小作用域的元素。 具有较大作用域的代码元素的透明特性优于第一个元素中包含的代码元素的透明特性。 例如，用 SecurityCriticalAttribute 特性标记的类不能包含用 SecuritySafeCriticalAttribute 特性标记的方法。 |
-| CA2137 | [CA2137：透明方法必须仅包含可验证 IL](../code-quality/ca2137-transparent-methods-must-contain-only-verifiable-il.md) | 某个方法包含无法验证的代码或通过引用返回类型。 在尝试通过安全透明代码执行无法验证的 Microsoft 中间语言 (MSIL) 时将引发此规则。 但是，此规则不包含完整的 IL 验证程序，而是使用试探法来捕捉 MSIL 验证的大部分冲突。 |
-| CA2138 | [CA2138：透明方法不得调用具有 SuppressUnmanagedCodeSecurity 特性的方法](../code-quality/ca2138-transparent-methods-must-not-call-methods-with-the-suppressunmanagedcodesecurity-attribute.md) | 一个安全透明方法调用使用 SuppressUnmanagedCodeSecurityAttribute 特性标记的方法。 |
-| CA2139 | [CA2139：透明方法不能使用 HandleProcessCorruptingExceptions 特性](../code-quality/ca2139-transparent-methods-may-not-use-the-handleprocesscorruptingexceptions-attribute.md) | 任何透明的并尝试通过使用 HandleProcessCorruptedStateExceptionsAttribute 特性处理进程损坏异常的方法将会引发此规则。 进程损坏异常属于异常的 CLR 版本 4.0 异常分类，如 AccessViolationException。 HandleProcessCorruptedStateExceptionsAttribute 特性只由安全关键方法使用，并且如果应用于透明的方法，则将被忽略。 |
-| CA2140 | [CA2140：透明代码不得引用安全关键项](../code-quality/ca2140-transparent-code-must-not-reference-security-critical-items.md) | 用 SecurityCriticalAttribute 特性标记的代码元素是安全关键的。 透明方法不能使用安全关键元素。 如果透明类型尝试使用安全关键类型，则会引发 TypeAccessException、MethodAccessException 或 FieldAccessException。 |
-| CA2141 |[CA2141：透明方法不得满足 LinkDemand](../code-quality/ca2141-transparent-methods-must-not-satisfy-linkdemands.md) | 安全透明方法调用未用 APTCA 特性标记的程序集中的方法，或者安全透明方法满足某个类型或方法的 LinkDemand。 |
-| CA2142 | [CA2142：不应使用 LinkDemand 保护透明代码](../code-quality/ca2142-transparent-code-should-not-be-protected-with-linkdemands.md) | 对于需要 LinkDemand 来访问它们的透明方法，将会引发此规则。 安全透明代码不应负责验证某个操作的安全，因此不应要求权限。 |
-| CA2143 | [CA2143：透明方法不应使用安全要求](../code-quality/ca2143-transparent-methods-should-not-use-security-demands.md) | 安全透明代码不应负责验证某个操作的安全，因此不应要求权限。 安全透明代码应使用完整的需求来作出安全决策并且安全关键代码不应依赖透明代码以进行完全的请求。 |
-| CA2144 | [CA2144：透明代码不应从字节数组加载程序集](../code-quality/ca2144-transparent-code-should-not-load-assemblies-from-byte-arrays.md) | 透明代码安全检查不像关键代码的安全检查一样全面，因为透明代码不能执行安全敏感的操作。 从字节数组中加载的程序集在透明代码中可能不会被注意到，并且该字节数组可能包含确实需要审核的关键或更重要的安全关键代码。 |
-| CA2145 | [CA2145：不应使用 SuppressUnmanagedCodeSecurityAttribute 修饰透明方法](../code-quality/ca2145-transparent-methods-should-not-be-decorated-with-the-suppressunmanagedcodesecurityattribute.md) | 用 SuppressUnmanagedCodeSecurityAttribute 特性修饰的方法有一个隐式的 LinkDemand 作用于调用它的任何方法。 此 LinkDemand 要求调用代码是关键安全的。 用 SecurityCriticalAttribute 特性标记使用 SuppressUnmanagedCodeSecurity 的方法会使此需求对方法的调用方更加明显。 |
-| CA2146 | [CA2146：类型必须至少与其基类型和接口一样关键](../code-quality/ca2146-types-must-be-at-least-as-critical-as-their-base-types-and-interfaces.md) | 当派生类型具有的安全透明特性与其基类型或实现的接口不是同样关键时，将引发此规则。 只有关键类型可以从关键基类型派生或实现关键接口，并且只有关键或关键安全类型可以从安全关键基类型派生或实现关键安全接口。 |
-| CA2147 |[CA2147：透明方法不得使用安全断言](../code-quality/ca2147-transparent-methods-may-not-use-security-asserts.md) | 标记为 SecurityTransparentAttribute 的代码未被授予足够的权限进行断言。 |
-| CA2149 | [CA2149：透明方法不得调入本机代码](../code-quality/ca2149-transparent-methods-must-not-call-into-native-code.md) | 对于直接调用到本机代码中（例如通过使用 P/Invoke）的任何透明方法，将引发此规则。 违反此规则会导致级别 2 透明度模型中的 MethodAccessException，以及级别 1 透明度模型中对 UnmanagedCode 的完全要求。 |
-| CA2151 |[CA2151：具有关键类型的字段应是安全关键的](../code-quality/ca2151-fields-with-critical-types-should-be-security-critical.md) | 若要使用安全关键类型，引用该类型的代码必须是安全关键或安全可靠关键。 即使引用是间接的，也需如此。 因此，具有安全透明字段或安全可靠关键字段具有误导性，因为透明代码仍然无法访问该字段。 |
+| CA2100 | [CA2100：检查 SQL 查询中是否有安全漏洞](../code-quality/ca2100.md) | 一个方法使用按该方法的字符串参数生成的字符串设置 System.Data.IDbCommand.CommandText 属性。 此规则假定字符串参数中包含用户输入。 基于用户输入生成的 SQL 命令字符串易于受到 SQL 注入式攻击。 |
+| CA2101 |[CA2101：指定对 P/Invoke 字符串参数进行封送处理](../code-quality/ca2101.md) | 某平台调用成员允许部分受信任的调用方，具有一个字符串参数，并且不显式封送该字符串。 这可能导致潜在的安全漏洞。 |
+| CA2102 | [CA2102：在常规处理程序中捕捉非 CLSCompliant 异常](../code-quality/ca2102.md) | 程序集中未用 RuntimeCompatibilityAttribute 标记或用 RuntimeCompatibility(WrapNonExceptionThrows = false) 标记的某个成员包含一个处理 System.Exception 的 catch 块，而不包含紧跟其后的一般 catch 块。 |
+| CA2103 | [CA2103：检查命令性安全](../code-quality/ca2103.md) |某个方法使用命令性安全，并且可能正在使用在要求处于活动状态时可以更改的状态信息或返回值来构造权限。 应尽可能使用声明性安全。 |
+| CA2104 |[CA2104：不要声明只读可变引用类型](../code-quality/ca2104.md) | 外部可见类型包含外部可见的只读字段，该字段为可变的引用类型。 可变类型是实例数据可被修改的类型。 |
+| CA2105 | [CA2105：数组字段不应为只读](../code-quality/ca2105.md) |向包含数组的字段应用 readonly（在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中为 ReadOnly）修饰符时，无法将该字段更改为引用其他数组。 但是，可以更改在只读字段中存储的数组的元素。 |
+| CA2106 | [CA2106：保护断言](../code-quality/ca2106.md) | 某个方法断言权限，但不对调用方执行任何安全检查。 如果在不执行任何安全检查的情况下断言安全权限，则会在代码中留下可利用的安全漏洞。 |
+| CA2107 | [CA2107：检查 deny 权限和 permit only 权限的使用情况](../code-quality/ca2107.md) |PermitOnly 方法和 Codeaccesspermission.deny 安全操作只应由精通 .NET 安全的用户使用。 应当对使用这些安全操作的代码进行安全检查。 |
+| CA2108 | [CA2108：检查有关值类型的声明性安全](../code-quality/ca2108.md) | 公共或受保护值类型受数据访问或链接要求保护。 |
+| CA2109 | [CA2109：检查可见的事件处理程序](../code-quality/ca2109.md) | 检测到公共事件处理方法或受保护事件处理方法。 除非绝对必要，否则不应公开事件处理方法。 |
+| CA2111 |[CA2111：指针应为不可见](../code-quality/ca2111.md) | 指针不是私有、内部或只读指针。 恶意代码可以更改指针的值，这样就有可能访问内存中的任意位置或导致应用程序或系统故障。 |
+| CA2112 | [CA2112：受保护的类型不应公开字段](../code-quality/ca2112.md) | 一个公共或受保护类型包含公共字段，并受链接要求保护。 如果代码可以访问受链接要求保护的类型的实例，则该代码不必满足此链接要求就可以访问该类型的字段。 |
+| CA2114 | [CA2114：方法安全性应是类型安全性的超集](../code-quality/ca2114.md) | 一个方法不应同时有同一操作的方法级别和类型级别的声明性安全。 |
+| CA2115 | [CA2115：使用本机资源时调用 GC.KeepAlive](../code-quality/ca2115.md) | 该规则检测由于在非托管代码仍在使用非托管资源时终止该非托管资源而可能发生的错误。 |
+| CA2116 | [CA2116：APTCA 方法应只调用 APTCA 方法](../code-quality/ca2116.md) |当完全受信任的程序集上存在 APTCA (AllowPartiallyTrustedCallersAttribute) 时，如果该程序集执行另一个不允许部分受信任调用方的程序集中的代码，则可能会产生安全漏洞。 |
+| CA2117 | [CA2117：APTCA 类型应只扩展 APTCA 基类型](../code-quality/ca2117.md) | 当完全受信任的程序集上存在 APTCA 时，如果程序集中的某个类型是从不允许部分受信任调用方的类型继承而来，则可能会产生安全漏洞。 |
+| CA2118 | [CA2118：检查 SuppressUnmanagedCodeSecurityAttribute 用法](../code-quality/ca2118.md) |SuppressUnmanagedCodeSecurityAttribute 为执行使用 COM 互操作或操作系统调用的非托管代码的成员更改默认的安全系统行为。 此特性主要用于提高性能；不过，提高性能的同时会显著增加安全风险。 |
+| CA2119 | [CA2119：密封满足私有接口的方法](../code-quality/ca2119.md) | 可继承的公共类型为内部（在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中为 Friend）接口提供可重写的方法实现。 若要修复与此规则的冲突，请禁止方法在程序集外重写。 |
+| CA2120 | [CA2120：保护序列化构造函数](../code-quality/ca2120.md) | 此类型的构造函数采用了 System.Runtime.Serialization.SerializationInfo 对象和 System.Runtime.Serialization.StreamingContext 对象（序列化构造函数的签名）。 此构造函数不受安全检查的保护，但类型中的一个或多个常规构造函数受保护。 |
+| CA2121 | [CA2121：静态构造函数应为私有](../code-quality/ca2121.md) | 系统在创建第一个类型实例或引用任何静态成员之前调用静态构造函数。 如果静态构造函数不是私有，则系统以外的代码可以调用它。 根据构造函数中执行的操作，这可能导致意外行为。 |
+| CA2122 | [CA2122：不要使用链接请求间接公开方法](../code-quality/ca2122.md) | 公共或受保护成员具有链接要求，且由不执行任何安全检查的成员调用。 链接请求仅检查直接调用方的权限。 |
+| CA2123 | [CA2123：重写的链接请求应与基相同](../code-quality/ca2123.md) | 该规则将一个方法与其基方法（该基方法为另一个类型中的接口或虚方法）相匹配，然后比较两者的链接请求。 如果与此规则冲突，则恶意调用方只需调用不安全的方法，即可跳过该链接要求。 |
+| CA2124 | [CA2124：在外部 try 块中包装易受攻击的 finally 子句](../code-quality/ca2124.md) | 公共或受保护方法中含有 try/finally 块。 finally 块似乎要重置安全状态，并且自身不包括在某个 finally 块中。 |
+| CA2126 | [CA2126：类型链接请求需要继承请求](../code-quality/ca2126.md) | 一个公共的非密封类型受链接要求保护，并且具有可重写的方法。 类型和方法都不受继承要求保护。 |
+| CA2127 | [CA2136：成员不应有相互冲突的透明度注释](../code-quality/ca2136.md) | 100透明的程序集中不能出现关键代码。 此规则将为类型、字段和方法级别的任何 SecurityCritical 批注分析 100%-透明程序集。 |
+| CA2128 |[CA2147：透明方法不得使用安全断言](../code-quality/ca2147.md) | 此规则分析程序集中的所有方法和类型均为 100%-透明或混合透明/关键，并标记 Assert 的任何声明性或命令性使用。 |
+| CA2129 | [CA2140：透明代码不得引用安全关键项](../code-quality/ca2140.md) | 用 SecurityTransparentAttribute 标记的方法调用标为 SecurityCritical 的非公共成员。 此规则分析混合透明/关键的程序集中的所有方法和类型，并标记透明代码中对未标为 SecurityTreatAsSafe 的非公共关键代码的任何调用。 |
+| CA2130 | [CA2130：安全关键常量应是透明的](../code-quality/ca2130.md) | 未对常数值实施透明强制，因为编译器内联常数值以便在运行时不需要查找。 常数字段应为安全透明的，以便代码评审阅者不会假定透明代码不能访问常数。 |
+| CA2131 | [CA2131：安全关键类型不能参与类型等效](../code-quality/ca2131.md) | 某个类型参与了类型等效，该类型本身或该类型的成员或字段用 SecurityCriticalAttribute 特性标记。 对于任何关键的类型或包含参与类型等效的关键方法或字段的类型，将引发此规则。 当 CLR 检测到这样的类型时，在运行时将不会加载它并引发 TypeLoadException。 通常，仅在用户手动实现类型等效而不是通过依赖 tlbimp 和编译器进行类型等效时，才会引发此规则。 |
+| CA2132 | [CA2132：默认构造函数必须至少与基类型默认构造函数具有同样的关键性](../code-quality/ca2132.md) |具有 SecurityCriticalAttribute 的类型和成员无法供 Silverlight 应用程序代码使用。 安全关键类型和成员只能供 .NET Framework for Silverlight 类库中的受信任代码使用。 因为派生类中的某个公共或受保护构造必须有与其基类相同或更大的透明度，所以不能从标记为 SecurityCritical 类中派生应用程序中的类。 |
+| CA2133 | [CA2133：委托必须绑定到具有一致透明度的方法](../code-quality/ca2133.md) | 将对一个具有以下特点的方法引发此警告：该方法将用 SecurityCriticalAttribute 标记的委托绑定到一个透明的或用 SecuritySafeCriticalAttribute 标记的方法。 还会对另一个具有以下特点的方法引发此警告：该方法将透明的或安全关键的委托绑定到一个关键方法。 |
+| CA2134 | [CA2134：在重写基方法时，方法必须保持一致的透明度](../code-quality/ca2134.md) |当用 SecurityCriticalAttribute 标记的方法重写一个透明的或用 SecuritySafeCriticalAttribute 标记的方法时，将会引发此规则。 当一个透明的或用 SecuritySafeCriticalAttribute 标记的方法重写一个用 SecurityCriticalAttribute 标记的方法时，也会引发此规则。 该规则在重写虚方法或实现接口时应用。 |
+| CA2135 | [CA2135：级别 2 程序集不应包含 LinkDemand](../code-quality/ca2135.md) | 在级别为 2 的安全规则集中已弃用 LinkDemand。 现在使用 SecurityCriticalAttribute 特性标记方法、类型和字段，而不是使用 LinkDemand 在实时 (JIT) 编译时进行强制安全检查。 |
+| CA2136 | [CA2136：成员不应有相互冲突的透明度注释](../code-quality/ca2136.md) | 将透明特性从较大作用域的代码元素应用到较小作用域的元素。 具有较大作用域的代码元素的透明特性优于第一个元素中包含的代码元素的透明特性。 例如，用 SecurityCriticalAttribute 特性标记的类不能包含用 SecuritySafeCriticalAttribute 特性标记的方法。 |
+| CA2137 | [CA2137：透明方法必须仅包含可验证 IL](../code-quality/ca2137.md) | 某个方法包含无法验证的代码或通过引用返回类型。 在尝试通过安全透明代码执行无法验证的 Microsoft 中间语言 (MSIL) 时将引发此规则。 但是，此规则不包含完整的 IL 验证程序，而是使用试探法来捕捉 MSIL 验证的大部分冲突。 |
+| CA2138 | [CA2138：透明方法不得调用具有 SuppressUnmanagedCodeSecurity 特性的方法](../code-quality/ca2138.md) | 一个安全透明方法调用使用 SuppressUnmanagedCodeSecurityAttribute 特性标记的方法。 |
+| CA2139 | [CA2139：透明方法不能使用 HandleProcessCorruptingExceptions 特性](../code-quality/ca2139.md) | 任何透明的并尝试通过使用 HandleProcessCorruptedStateExceptionsAttribute 特性处理进程损坏异常的方法将会引发此规则。 进程损坏异常属于异常的 CLR 版本 4.0 异常分类，如 AccessViolationException。 HandleProcessCorruptedStateExceptionsAttribute 特性只由安全关键方法使用，并且如果应用于透明的方法，则将被忽略。 |
+| CA2140 | [CA2140：透明代码不得引用安全关键项](../code-quality/ca2140.md) | 用 SecurityCriticalAttribute 特性标记的代码元素是安全关键的。 透明方法不能使用安全关键元素。 如果透明类型尝试使用安全关键类型，则会引发 TypeAccessException、MethodAccessException 或 FieldAccessException。 |
+| CA2141 |[CA2141：透明方法不得满足 LinkDemand](../code-quality/ca2141.md) | 安全透明方法调用未用 APTCA 特性标记的程序集中的方法，或者安全透明方法满足某个类型或方法的 LinkDemand。 |
+| CA2142 | [CA2142：不应使用 LinkDemand 保护透明代码](../code-quality/ca2142.md) | 对于需要 LinkDemand 来访问它们的透明方法，将会引发此规则。 安全透明代码不应负责验证某个操作的安全，因此不应要求权限。 |
+| CA2143 | [CA2143：透明方法不应使用安全要求](../code-quality/ca2143.md) | 安全透明代码不应负责验证某个操作的安全，因此不应要求权限。 安全透明代码应使用完整的需求来作出安全决策并且安全关键代码不应依赖透明代码以进行完全的请求。 |
+| CA2144 | [CA2144：透明代码不应从字节数组加载程序集](../code-quality/ca2144.md) | 透明代码安全检查不像关键代码的安全检查一样全面，因为透明代码不能执行安全敏感的操作。 从字节数组中加载的程序集在透明代码中可能不会被注意到，并且该字节数组可能包含确实需要审核的关键或更重要的安全关键代码。 |
+| CA2145 | [CA2145：不应使用 SuppressUnmanagedCodeSecurityAttribute 修饰透明方法](../code-quality/ca2145.md) | 用 SuppressUnmanagedCodeSecurityAttribute 特性修饰的方法有一个隐式的 LinkDemand 作用于调用它的任何方法。 此 LinkDemand 要求调用代码是关键安全的。 用 SecurityCriticalAttribute 特性标记使用 SuppressUnmanagedCodeSecurity 的方法会使此需求对方法的调用方更加明显。 |
+| CA2146 | [CA2146：类型必须至少与其基类型和接口一样关键](../code-quality/ca2146.md) | 当派生类型具有的安全透明特性与其基类型或实现的接口不是同样关键时，将引发此规则。 只有关键类型可以从关键基类型派生或实现关键接口，并且只有关键或关键安全类型可以从安全关键基类型派生或实现关键安全接口。 |
+| CA2147 |[CA2147：透明方法不得使用安全断言](../code-quality/ca2147.md) | 标记为 SecurityTransparentAttribute 的代码未被授予足够的权限进行断言。 |
+| CA2149 | [CA2149：透明方法不得调入本机代码](../code-quality/ca2149.md) | 对于直接调用到本机代码中（例如通过使用 P/Invoke）的任何透明方法，将引发此规则。 违反此规则会导致级别 2 透明度模型中的 MethodAccessException，以及级别 1 透明度模型中对 UnmanagedCode 的完全要求。 |
+| CA2151 |[CA2151：具有关键类型的字段应是安全关键的](../code-quality/ca2151.md) | 若要使用安全关键类型，引用该类型的代码必须是安全关键或安全可靠关键。 即使引用是间接的，也需如此。 因此，具有安全透明字段或安全可靠关键字段具有误导性，因为透明代码仍然无法访问该字段。 |
 | CA2200 | [CA2200：再次引发以保留堆栈详细信息](../code-quality/ca2200.md) | 再次引发某个异常，在 throw 语句中显式指定了该异常。 如果通过在 throw 语句中指定异常来重新引发该异常，则引发该异常的原始方法与当前方法之间的方法调用的列表将丢失。 |
 | CA2201 | [CA2201：不要引发保留的异常类型](../code-quality/ca2201.md) | 这使得很难检测和调试原始错误。 |
 | CA2202 | [CA2202：不要多次释放对象](../code-quality/ca2202.md) |某个方法实现所包含的代码路径可能导致对同一对象多次调用 System.IDisposable.Dispose 或与 Dispose 等效的方法（例如，用于某些类型的 Close() 方法）。 |
@@ -514,4 +514,4 @@ ms.locfileid: "72348242"
 | CA2241 | [CA2241：为格式化方法提供正确的参数](../code-quality/ca2241.md) | 传递给 System.String.Format 的 format 自变量不包含对应于每个对象自变量的格式项，反之亦然。 |
 | CA2242 |[CA2242：正确测试 NaN](../code-quality/ca2242.md) | 此表达式对照 Single.Nan 或 Double.Nan 测试某个值。 使用 Single.IsNan(Single) 或 Double.IsNan(Double) 测试该值。 |
 | CA2243 |[CA2243：应正确分析特性字符串文本](../code-quality/ca2243.md) | 特性的字符串文本参数不能正确解析为 URL、GUID 或版本。 |
-| CA5122 | [CA5122 P/Invoke 声明不应为安全临界](../code-quality/ca5122-p-invoke-declarations-should-not-be-safe-critical.md) | 当方法执行安全敏感性操作时，将被标记为 SecuritySafeCritical，但透明代码使用它们也是安全的。 透明代码决不能通过通过 P/Invoke 直接调用本机代码。 因此，将 P/Invoke 标记为安全关键将使透明代码无法调用它，并且会误导安全分析。 |
+| CA5122 | [CA5122 P/Invoke 声明不应为安全临界](../code-quality/ca5122.md) | 当方法执行安全敏感性操作时，将被标记为 SecuritySafeCritical，但透明代码使用它们也是安全的。 透明代码决不能通过通过 P/Invoke 直接调用本机代码。 因此，将 P/Invoke 标记为安全关键将使透明代码无法调用它，并且会误导安全分析。 |

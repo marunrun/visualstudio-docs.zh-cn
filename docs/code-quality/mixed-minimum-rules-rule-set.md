@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 898a11be40d29c2e6181886c2c90af9315af6e3e
-ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
-ms.translationtype: MT
+ms.openlocfilehash: 3d941022427cbfa8d16efe98f716feceff980583
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72349558"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72445661"
 ---
 # <a name="mixed-minimum-rules-rule-set"></a>“混合最少量规则”规则集
 
@@ -86,13 +86,13 @@ Microsoft 混合的最小规则重点介绍支持公共语言运行C++时的项�
 |[C28182](../code-quality/c28182.md)|取消引用 NULL 指针。 该指针包含与另一指针相同的 NULL 值。|
 |[C28202](../code-quality/c28202.md)|非法引用非静态成员|
 |[C28203](../code-quality/c28203.md)|对类成员的不明确的引用。|
-|[C28205](../code-quality/c28205.md)|@no__t 在非法上下文中使用 @ no__t-1 或 \_On @ no__t-3failure @ no__t|
+|[C28205](../code-quality/c28205.md)|\_Success 在非法上下文中使用 \_ 或 \_On \_failure \_|
 |[C28206](../code-quality/c28206.md)|若左操作数指向结构，则使用“->”|
 |[C28207](../code-quality/c28207.md)|若左操作数是一个结构，则使用“.”|
 |[C28210](../code-quality/c28210.md)|__on_failure 上下文的批注不得位于显式的 pre 上下文中|
 |[C28211](../code-quality/c28211.md)|SAL_context 所需的静态上下文名称|
 |[C28212](../code-quality/c28212.md)|批注所需的指针表达式|
-|[C28213](../code-quality/c28213.md)|@No__t-0Use @ no__t-1decl @ no__t-2annotations @ no__t @ 批注必须用于引用，而无需修改以前的声明。|
+|[C28213](../code-quality/c28213.md)|@No__t_0Use \_decl \_annotations \_ 批注必须用于引用，而无需修改以前的声明。|
 |[C28214](../code-quality/c28214.md)|特性参数的名称必须为 p1...p9|
 |[C28215](../code-quality/c28215.md)|不能将 typefix 应用于已包含 typefix 的参数|
 |[C28216](../code-quality/c28216.md)|checkReturn 批注仅应用于特定函数参数的后置条件。|
@@ -134,7 +134,7 @@ Microsoft 混合的最小规则重点介绍支持公共语言运行C++时的项�
 |[C28267](../code-quality/c28267.md)|在函数中找到了批注的语法错误。|
 |[C28272](../code-quality/c28272.md)|在检查参数时，函数的批注与函数声明不一致|
 |[C28273](../code-quality/c28273.md)|对于函数，线索与函数声明不一致|
-|[C28275](../code-quality/c28275.md)|@No__t-0Macro @ no__t-1value @ no__t-2 的参数为 null|
+|[C28275](../code-quality/c28275.md)|@No__t_0Macro \_value \_ 的参数为 null|
 |[C28279](../code-quality/c28279.md)|对于符号，已找到“起始”符号，但没有匹配的“结束”符号|
 |[C28280](../code-quality/c28280.md)|对于符号，已找到“结束”符号，但没有匹配的“起始”符号|
 |[C28282](../code-quality/c28282.md)|格式字符串必须位于前置条件中|

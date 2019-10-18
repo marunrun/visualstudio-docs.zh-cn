@@ -8,16 +8,16 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 61a1f74d964c2d6f43608f23b9898054048bb86b
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: e3740b9a7544d6cc6d5b9eceb548ae66e7d3f474
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018244"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72445599"
 ---
 # <a name="understanding-sal"></a>了解 SAL
 
-Microsoft 源代码注释语言（SAL）提供了一组可用于描述函数如何使用其参数的注释、对它们做出的假设，以及在完成时的保证。 批注在标头文件中定义 `<sal.h>`。 适用于的C++ Visual Studio 代码分析使用 SAL 批注来修改其函数分析。 有关适用于 Windows 驱动程序开发的 SAL 2.0 的详细信息，请参阅[Windows 驱动程序的 sal 2.0 注释](http://go.microsoft.com/fwlink/?LinkId=250979)。
+Microsoft 源代码注释语言（SAL）提供了一组可用于描述函数如何使用其参数的注释、对它们做出的假设，以及在完成时的保证。 批注是在标头文件 `<sal.h>` 中定义的。 适用于的C++ Visual Studio 代码分析使用 SAL 批注来修改其函数分析。 有关适用于 Windows 驱动程序开发的 SAL 2.0 的详细信息，请参阅[Windows 驱动程序的 sal 2.0 注释](http://go.microsoft.com/fwlink/?LinkId=250979)。
 
 对于开发人员而言C++ ，在本机和 C 中仅提供有限的方式，以一致的方式来表达意图和不变性。 通过使用 SAL 批注，可以更详细地描述函数，以便使用它们的开发人员可以更好地了解如何使用它们。
 
@@ -38,14 +38,14 @@ void * memcpy(
 );
 ```
 
-您能否知道此函数的作用？ 当实现或调用函数时，必须保持某些属性以确保程序的正确性。 只需查看示例中的声明，就不知道这些内容。 如果没有 SAL 批注，则必须依赖文档或代码注释。 下面是有关 @no__t 的 MSDN 文档的内容：
+您能否知道此函数的作用？ 当实现或调用函数时，必须保持某些属性以确保程序的正确性。 只需查看示例中的声明，就不知道这些内容。 如果没有 SAL 批注，则必须依赖文档或代码注释。 下面是有关 `memcpy` 的 MSDN 文档的内容：
 
 > "将计数字节的源复制到目标。 如果源和目标重叠，则 memcpy 的行为是不确定的。 使用 memmove 处理重叠区域。
-> **安全说明：** 确保目标缓冲区等于或大于源缓冲区。 有关详细信息，请参阅避免缓冲区溢出。
+> **安全说明：** 请确保目标缓冲区的大小等于或大于源缓冲区的大小。 有关详细信息，请参阅避免缓冲区溢出。
 
 文档包含一些信息，这些信息表明你的代码必须维护某些属性以确保程序的正确性：
 
-- `memcpy` 将字节的 @no__t 字节从源缓冲区复制到目标缓冲区。
+- `memcpy` 将字节的 `count` 从源缓冲区复制到目标缓冲区。
 
 - 目标缓冲区的大小必须至少与源缓冲区的大小相同。
 
@@ -60,7 +60,7 @@ void * memcpy(
 );
 ```
 
-请注意，这些批注与 MSDN 文档中的信息类似，但它们更简洁，它们遵循语义模式。 阅读此代码后，你可以快速了解此函数的属性，以及如何避免缓冲区溢出的安全问题。 更好的是，SAL 提供的语义模式可以在潜在 bug 的早期发现中提高自动化代码分析工具的效率和有效性。 假设有人将此错误实现写入 `wmemcpy`：
+请注意，这些批注与 MSDN 文档中的信息类似，但它们更简洁，它们遵循语义模式。 阅读此代码后，你可以快速了解此函数的属性，以及如何避免缓冲区溢出的安全问题。 更好的是，SAL 提供的语义模式可以在潜在 bug 的早期发现中提高自动化代码分析工具的效率和有效性。 假设有人将此错误实现 `wmemcpy`：
 
 ```cpp
 
@@ -114,13 +114,13 @@ SAL 定义了四种基本类型的参数，这些参数按使用模式分类。
 
 2. 在菜单栏上，选择 "**生成**"、 **"对解决方案运行代码分析**"。
 
-     请考虑本节中的 \_In @ no__t-1 示例。 如果对其运行代码分析，将显示以下警告：
+     请考虑本节中 \_In \_ 示例。 如果对其运行代码分析，将显示以下警告：
 
     > **C6387 参数值无效**"指向" 可能是 "0"：这不符合函数 "InCallee" 的规范。
 
-### <a name="example-the-_in_-annotation"></a>例如：@No__t 0In @ no__t 批注
+### <a name="example-the-_in_-annotation"></a>示例： \_In \_ 批注
 
-@No__t 0 注释指示：
+@No__t_0 批注指示：
 
 - 参数必须有效且不会被修改。
 
@@ -128,9 +128,9 @@ SAL 定义了四种基本类型的参数，这些参数按使用模式分类。
 
 - 调用方必须提供缓冲区并对其进行初始化。
 
-- @no__t 指定 "只读"。 常见的错误是将 `_In_` 应用于应改为 @no__t 的参数。
+- `_In_` 指定 "只读"。 常见的错误是将 `_In_` 应用于应改为 `_Inout_` 批注的参数。
 
-- 在非指针标量上，分析器允许使用 `_In_`，但不允许使用。
+- 在非指针标量上，分析器允许使用 `_In_` 但不允许使用。
 
 ```cpp
 void InCallee(_In_ int *pInt)
@@ -154,11 +154,11 @@ void BadInCaller()
 }
 ```
 
-如果在此示例中使用 Visual Studio Code 分析，它将验证调用方是否将非 Null 指针传递到 @no__t 的已初始化缓冲区。 在这种情况下，`pInt` 指针不能为 NULL。
+如果在此示例中使用 Visual Studio Code 分析，它将验证调用方是否将非 Null 指针传递到 `pInt` 的已初始化缓冲区。 在这种情况下，`pInt` 指针不能为 NULL。
 
-### <a name="example-the-_in_opt_-annotation"></a>例如：@No__t-0In @ no__t-1opt @ no__t 批注
+### <a name="example-the-_in_opt_-annotation"></a>示例： \_In \_opt \_ 批注
 
-`_In_opt_` 与 `_In_` 相同，不同之处在于允许输入参数为 NULL，因此函数应检查此项。
+`_In_opt_` 与 `_In_` 相同，不同之处在于允许输入参数为 NULL，因此函数应检查此值。
 
 ```cpp
 
@@ -184,7 +184,7 @@ void InOptCaller()
 
 Visual Studio Code 分析验证函数在访问缓冲区之前是否检查是否为 NULL。
 
-### <a name="example-the-_out_-annotation"></a>例如：@No__t 0Out @ no__t 批注
+### <a name="example-the-_out_-annotation"></a>示例： \_Out \_ 批注
 
 `_Out_` 支持一个常见情况，即在其中传递指向元素缓冲区的非 NULL 指针，并且该函数将初始化元素。 调用方无需在调用之前初始化缓冲区;被调用的函数承诺在返回之前对其进行初始化。
 
@@ -208,11 +208,11 @@ void OutCaller()
 }
 ```
 
-Visual Studio Code 分析工具将验证调用方是否将非 NULL 指针传递到 @no__t 为0的缓冲区，并验证该缓冲区是否在返回之前由函数进行了初始化。
+Visual Studio Code 分析工具将验证调用方是否将非 NULL 指针传递到 `pInt` 的缓冲区，并验证该缓冲区是否在返回之前由函数进行了初始化。
 
-### <a name="example-the-_out_opt_-annotation"></a>例如：@No__t-0Out @ no__t-1opt @ no__t 批注
+### <a name="example-the-_out_opt_-annotation"></a>示例： \_Out \_opt \_ 批注
 
-`_Out_opt_` 与 `_Out_` 相同，不同之处在于允许参数为 NULL，因此函数应检查此项。
+`_Out_opt_` 与 `_Out_` 相同，不同之处在于允许参数为 NULL，因此该函数应检查此值。
 
 ```cpp
 void GoodOutOptCallee(_Out_opt_ int *pInt)
@@ -235,14 +235,14 @@ void OutOptCaller()
 }
 ```
 
-Visual Studio Code 分析验证此函数在取消引用 @no__t 之前是否检查 NULL，如果 @no__t 为 not NULL，则该函数将在返回前通过函数初始化缓冲区。
+Visual Studio Code 分析验证此函数在取消引用 `pInt` 之前是否检查 NULL，如果 `pInt` 不为 NULL，则该函数将在返回前通过函数初始化缓冲区。
 
-### <a name="example-the-_inout_-annotation"></a>例如：@No__t 0Inout @ no__t 批注
+### <a name="example-the-_inout_-annotation"></a>示例： \_Inout \_ 批注
 
 `_Inout_` 用于批注可能由函数更改的指针参数。 指针必须指向有效的已初始化数据，然后才能调用，即使它发生更改，返回的值也必须有效。 批注指定函数可以从单元素缓冲区自由读取和写入。 调用方必须提供缓冲区并对其进行初始化。
 
 > [!NOTE]
-> 与 `_Out_` 一样，`_Inout_` 必须应用于可修改值。
+> 与 `_Out_` 一样，`_Inout_` 必须应用于可修改的值。
 
 ```cpp
 void InOutCallee(_Inout_ int *pInt)
@@ -266,11 +266,11 @@ void BadInOutCaller()
 }
 ```
 
-Visual Studio Code 分析验证调用方将非 NULL 指针传递到 @no__t 为0的已初始化缓冲区，并且在返回之前，`pInt` 仍为非 NULL，并且初始化缓冲区。
+Visual Studio Code 分析验证调用方将非 NULL 指针传递到 `pInt` 的已初始化缓冲区，并且在返回之前，`pInt` 仍为非 NULL，并且已初始化缓冲区。
 
-### <a name="example-the-_inout_opt_-annotation"></a>示例：@No__t-0Inout @ no__t-1opt @ no__t 批注
+### <a name="example-the-_inout_opt_-annotation"></a>示例： \_Inout \_opt \_ 批注
 
-`_Inout_opt_` 与 `_Inout_` 相同，不同之处在于允许输入参数为 NULL，因此函数应检查此项。
+`_Inout_opt_` 与 `_Inout_` 相同，不同之处在于允许输入参数为 NULL，因此函数应检查此值。
 
 ```cpp
 void GoodInOutOptCallee(_Inout_opt_ int *pInt)
@@ -295,9 +295,9 @@ void InOutOptCaller()
 }
 ```
 
-Visual Studio Code 分析验证此函数在访问缓冲区之前是否检查是否为 NULL，如果 `pInt` 不为 NULL，则在函数返回之前，将由函数对其进行初始化。
+Visual Studio Code 分析验证此函数在访问缓冲区之前是否检查是否为 NULL，如果 `pInt` 不为 NULL，则该函数将在返回前通过函数初始化缓冲区。
 
-### <a name="example-the-_outptr_-annotation"></a>例如：@No__t 0Outptr @ no__t 批注
+### <a name="example-the-_outptr_-annotation"></a>示例： \_Outptr \_ 批注
 
 `_Outptr_` 用于批注要返回指针的参数。  参数本身不应为 NULL，并且被调用的函数在其中返回非 NULL 指针，该指针指向已初始化的数据。
 
@@ -325,9 +325,9 @@ void OutPtrCaller()
 }
 ```
 
-Visual Studio Code 分析验证调用方是否将非 NULL 指针传递到 0 @no__t，并验证该缓冲区是否在返回前由函数进行初始化。
+Visual Studio Code 分析验证调用方传递 `*pInt` 的非 NULL 指针，并验证该缓冲区是否在返回前由函数进行了初始化。
 
-### <a name="example-the-_outptr_opt_-annotation"></a>例如：@No__t-0Outptr @ no__t-1opt @ no__t 批注
+### <a name="example-the-_outptr_opt_-annotation"></a>示例： \_Outptr \_opt \_ 批注
 
 `_Outptr_opt_` 与 `_Outptr_` 相同，不同之处在于参数是可选的，调用方可以传入参数的 NULL 指针。
 
@@ -357,11 +357,11 @@ void OutPtrOptCaller()
 }
 ```
 
-Visual Studio Code 分析验证此函数 @no__t 在取消引用之前是否检查 NULL，并验证该函数是否在返回前由函数进行了初始化。
+Visual Studio Code 分析验证此函数在取消引用 `*pInt` 之前是否检查 NULL，并验证该函数是否在返回之前由函数进行了初始化。
 
-### <a name="example-the-_success_-annotation-in-combination-with-_out_"></a>示例：与 \_Out @ no__t 组合的 \_Success @ no__t 批注
+### <a name="example-the-_success_-annotation-in-combination-with-_out_"></a>示例： \_Success 与 \_Out 结合 \_ 注释 \_
 
-批注可应用于大多数对象。  特别是，您可以批注整个函数。  函数最明显的特征之一是它可以成功或失败。 但就像缓冲区及其大小之间的关联，C/C++无法表示函数成功或失败。 使用 @no__t 0 注释时，可以说出函数的成功情况。  @No__t 批注的参数只是一个表达式，该表达式为 true 时表示函数已成功。 表达式可以是批注分析器可处理的任何内容。 当函数返回后，批注的效果仅适用于函数成功。 此示例显示 `_Success_` 与 @no__t 进行交互的方式。 可以使用关键字 `return` 来表示返回值。
+批注可应用于大多数对象。  特别是，您可以批注整个函数。  函数最明显的特征之一是它可以成功或失败。 但就像缓冲区及其大小之间的关联，C/C++无法表示函数成功或失败。 通过使用 `_Success_` 注释，可以说出函数的成功情况。  @No__t_0 批注的参数只是一个表达式，表示函数已成功。 表达式可以是批注分析器可处理的任何内容。 当函数返回后，批注的效果仅适用于函数成功。 此示例演示 `_Success_` 如何与 `_Out_` 进行交互以执行正确的操作。 您可以使用关键字 `return` 来表示返回值。
 
 ```cpp
 _Success_(return != false) // Can also be stated as _Success_(return)
@@ -376,7 +376,7 @@ bool GetValue(_Out_ int *pInt, bool flag)
 }
 ```
 
-@No__t 的批注将导致 Visual Studio Code 分析验证调用方将非 NULL 指针传递到 @no__t 为1的缓冲区，并且该缓冲区在返回前由函数进行初始化。
+@No__t_0 批注将导致 Visual Studio Code 分析验证调用方将非 NULL 指针传递到用于 `pInt` 的缓冲区，并且该缓冲区在返回前由函数进行初始化。
 
 ## <a name="sal-best-practice"></a>SAL 最佳做法
 

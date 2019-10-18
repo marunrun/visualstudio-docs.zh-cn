@@ -7,12 +7,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7d9ca8c8bd46b4f8455c7aa750170d38f03321f6
-ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
+ms.openlocfilehash: de4fdbbdf54976ba3ee12c3621f7038cd4704a76
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72349682"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72449059"
 ---
 # <a name="rule-scope-options-for-fxcop-analyzers"></a>FxCop 分析器的规则作用域选项
 
@@ -21,9 +21,9 @@ ms.locfileid: "72349682"
 从[FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet 包的版本2.6.3 开始提供这些配置选项。
 
 > [!TIP]
-> 若要查看可用于给定版本的 FxCopAnalyzers 包的选项的完整列表，请查看包的*文档*文件夹中的*Analyzer Configuration.md*文件。 文件位于 *% USERPROFILE% \\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers @ no__t-2 @ no__t-3version @ no__t-4\documentation\Analyzer Configuration.md*。 此配置文档文件包含在包的每个版本中，从版本2.6.5 开始。 下面是一个示例，说明如何在*Analyzer Configuration.md*文件中记录一个选项：
+> 若要查看可用于给定版本的 FxCopAnalyzers 包的选项的完整列表，请查看包的*文档*文件夹中的*Analyzer Configuration.md*文件。 文件位于 *% USERPROFILE% \\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers \\ \<version \> \documentation\analyzer Configuration.md*。 此配置文档文件包含在包的每个版本中，从版本2.6.5 开始。 下面是一个示例，说明如何在*Analyzer Configuration.md*文件中记录一个选项：
 >
-> 选项名称： `sufficient_IterationCount_for_weak_KDF_algorithm` @ no__t-1
+> 选项名称： `sufficient_IterationCount_for_weak_KDF_algorithm` \
 > 选项值：整数值 \
 > 默认值：特定于每个可配置的规则（默认情况下，对于大多数规则为 "100000"） \
 > 示例：`dotnet_code_quality.CA5387.sufficient_IterationCount_for_weak_KDF_algorithm = 100000`
