@@ -1,5 +1,5 @@
 ---
-title: 缺少数字 |Microsoft Docs
+title: 应为数字 |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,19 +14,19 @@ ms.assetid: b272f51a-97c2-4398-8b46-9cc49a5c0bd6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e07b9e55ddfff54d0668433137079a38c0ddd296
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9f26a9c42db6771c0624bd7091147088e3ddc21a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63007417"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573757"
 ---
 # <a name="number-expected"></a>缺少数字
-你尝试调用**Number.prototype.toString**或**Number.prototype.valueOf**以外的类型的对象上的方法**数**。 调用此类型的对象的类型必须是**数**。  
+试图对不是**number**的类型的对象调用**valueOf**方法，则尝试**调用此方法**。 此类调用的对象必须是**Number**类型。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 仅调用**Number.prototype.toString**或**Number.prototype.valueOf**类型的对象上的方法**数**。  
+- 仅对**number**类型的对象调用 ValueOf 或**number** .**方法。**  
   
 ## <a name="see-also"></a>请参阅  
  [Number 对象](../../javascript/reference/number-object-javascript.md)   

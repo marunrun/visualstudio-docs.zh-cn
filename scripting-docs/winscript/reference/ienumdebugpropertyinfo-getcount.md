@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugPropertyInfo::GetCount |Microsoft Docs
+title: IEnumDebugPropertyInfo：： GetCount |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 06ed69926b47d8c40c3914acbd2b0208e55f709a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fea4872761dbc67a297400dba77f660ae2e3076b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62963437"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574211"
 ---
 # <a name="ienumdebugpropertyinfogetcount"></a>IEnumDebugPropertyInfo::GetCount
-获取数`DebugPropertyInfo`枚举器中的结构。  
+获取枚举器中 `DebugPropertyInfo` 结构的数目。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,10 +37,10 @@ HRESULT GetCount (
   
 #### <a name="parameters"></a>参数  
  `pcelt`  
- [out]返回的数`DebugPropertyInfo`枚举器中的结构。  
+ 弄返回枚举器中 `DebugPropertyInfo` 的结构数。  
   
 ## <a name="return-value"></a>返回值  
- 返回一个有效`HRESULT`，通常`S_OK`。  
+ 返回一个有效 `HRESULT`，通常 `S_OK`。  
   
 ## <a name="see-also"></a>请参阅  
  [IEnumDebugPropertyInfo 接口](../../winscript/reference/ienumdebugpropertyinfo-interface.md)   

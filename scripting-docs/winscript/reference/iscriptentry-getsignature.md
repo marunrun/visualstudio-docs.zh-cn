@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::GetSignature | Microsoft Docs
+title: IScriptEntry：： GetSignature |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 70cc1939ae4eb1e3c58d31b3d42b7f1b4603ce9e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e7b07ac64ce7e427a793f0af0db9a7905441d39b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787788"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575419"
 ---
 # <a name="iscriptentrygetsignature"></a>IScriptEntry::GetSignature
-返回类型信息`IScriptEntry`函数对象。  
+返回 `IScriptEntry` 函数对象的类型信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,10 +38,10 @@ HRESULT GetSignature(
   
 #### <a name="parameters"></a>参数  
  `ppti`  
- [out]键入与此相关联的信息`IScriptEntry`函数对象。  
+ 弄键入与此 `IScriptEntry` 函数对象关联的信息。  
   
  `piMethod`  
- [out]中的方法索引`ITypeInfo`对象。  
+ 弄@No__t_0 对象中的方法索引。  
   
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -51,7 +51,7 @@ HRESULT GetSignature(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 使用设置类型信息[IScriptEntry::SetSignature](../../winscript/reference/iscriptentry-setsignature.md)或[IScriptNode::CreateChildHandler](../../winscript/reference/iscriptnode-createchildhandler.md)。 此外可以通过基于内部函数表示形式的条目生成类型信息。  
+ 使用[IScriptEntry：： SetSignature](../../winscript/reference/iscriptentry-setsignature.md)或[IScriptNode：： CreateChildHandler](../../winscript/reference/iscriptnode-createchildhandler.md)设置类型信息。 还可以根据内部函数表示形式，通过项生成类型信息。  
   
 ## <a name="see-also"></a>请参阅  
  [IScriptEntry 接口](../../winscript/reference/iscriptentry-interface.md)

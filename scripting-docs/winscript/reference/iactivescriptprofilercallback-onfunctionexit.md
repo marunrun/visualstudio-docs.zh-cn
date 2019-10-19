@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerCallback::OnFunctionExit |Microsoft Docs
+title: IActiveScriptProfilerCallback：： OnFunctionExit |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9c84b64a12b1a6b61399f70b7209c86dd8d2a9a4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 87801b7873e43498031264ff4719fb47eca99f40
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993327"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571681"
 ---
 # <a name="iactivescriptprofilercallbackonfunctionexit"></a>IActiveScriptProfilerCallback::OnFunctionExit
-通知探查器对象，脚本引擎已完成执行函数调用不是调用到文档对象模型 (DOM)。  
+通知探查器对象：脚本引擎已执行不是调用文档对象模型（DOM）的函数调用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,17 +35,17 @@ HRESULT OnFunctionExit(
   
 #### <a name="parameters"></a>参数  
  `scriptId`  
- [in]该脚本，该函数属于的唯一 ID。 由脚本引擎分配此 ID。  
+ 中函数所属脚本的唯一 ID。 此 ID 由脚本引擎分配。  
   
  `functionId`  
- [in]函数的唯一 ID。 由脚本引擎分配此 ID。  
+ 中函数的唯一 ID。 此 ID 由脚本引擎分配。  
   
 ## <a name="return-value"></a>返回值  
- 此方法的返回值是脚本引擎忽略。  
+ 脚本引擎将忽略此方法的返回值。  
   
 ## <a name="remarks"></a>备注  
- 对于 DOM 调用，脚本引擎将调用[IActiveScriptProfilerCallback2::OnFunctionExitByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionexitbyname.md)而不是`IActiveScriptProfilerCallback::OnFunctionExit`。 这是由于大量的唯一方法和属性的数组。  
+ 对于 DOM 调用，脚本引擎将调用[IActiveScriptProfilerCallback2：： OnFunctionExitByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionexitbyname.md)而不是 `IActiveScriptProfilerCallback::OnFunctionExit`。 这是因为 DOM 中存在大量的唯一方法和属性。  
   
 ## <a name="see-also"></a>请参阅  
- [IActiveScriptProfilerCallback::OnFunctionEnter](../../winscript/reference/iactivescriptprofilercallback-onfunctionenter.md)   
+ [IActiveScriptProfilerCallback：： OnFunctionEnter](../../winscript/reference/iactivescriptprofilercallback-onfunctionenter.md)    
  [IActiveScriptProfilerCallback 接口](../../winscript/reference/iactivescriptprofilercallback-interface.md)

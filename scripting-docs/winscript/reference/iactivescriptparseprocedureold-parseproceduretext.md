@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptParseProcedureOld::ParseProcedureText | Microsoft Docs
+title: IActiveScriptParseProcedureOld：:P arseProcedureText |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8e521bbdcd8d7397c1c2dfb377fd9b41811499f5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 116cbc7fac0d53b55c9766945d56ecebd27b6785
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993210"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577453"
 ---
 # <a name="iactivescriptparseprocedureoldparseproceduretext"></a>IActiveScriptParseProcedureOld::ParseProcedureText
-分析给定的代码过程并将匿名过程添加到命名空间。  
+分析给定的代码过程，并将匿名过程添加到命名空间。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,37 +45,37 @@ HRESULT ParseProcedureText(
   
 #### <a name="parameters"></a>参数  
  `pstrCode`  
- [in]要评估的过程文本。 此字符串的解释取决于脚本语言。  
+ 中要计算的过程文本。 此字符串的解释取决于脚本语言。  
   
  `pstrFormalParams`  
- [in]该过程的正式参数名称。 参数名称必须与脚本引擎的适当分隔符分隔。 名称不应括在括号中。  
+ 中过程的形参名称。 参数名称必须与脚本引擎的相应分隔符分隔开。 名称不应括在括号中。  
   
  `pstrItemName`  
- [in]提供该过程将在其中计算的上下文的命名项的名称。 如果此参数为`NULL`，脚本引擎的全局上下文中计算代码。  
+ 中命名项的名称，该名称提供要在其中计算过程的上下文。 如果 `NULL` 此参数，则在脚本引擎的全局上下文中计算代码。  
   
  `punkContext`  
- [in]上下文对象中。 此对象保留在调试环境，可能会由调试器来表示活动的运行时上下文中提供此类上下文中使用。 如果此参数为`NULL`，该引擎使用`pstrItemName`来标识上下文。  
+ 中上下文对象。 此对象保留供在调试环境中使用，调试器可能会提供此类上下文来表示活动的运行时上下文。 如果 `NULL` 此参数，则引擎将使用 `pstrItemName` 来标识上下文。  
   
  `pstrDelimiter`  
- [in]过程结束分隔符。 当`pstrCode`进行分析的文本流，从主机通常使用分隔符，如两个单引号 （'），来检测该过程结束。 此参数指定主机使用，允许脚本引擎来提供某些条件的分隔符 （例如，使用用作分隔符的两个单引号替换单引号 [']） 的原始预处理。 完全如何 （以及是否） 脚本的引擎使用此信息取决于脚本引擎。 将此参数设置为`NULL`如果主机不使用分隔符来标记该过程的结尾。  
+ 中过程末尾分隔符。 当从文本流分析 `pstrCode` 时，主机通常使用分隔符（如两个单引号（' '）来检测过程的结尾。 此参数指定主机使用的分隔符，允许脚本引擎提供某些条件基元预处理（例如，用两个单引号替换单引号 ['] 以用作分隔符）。 脚本引擎使用此信息的确切方式取决于脚本引擎。 如果主机未使用分隔符来标记过程的结束，则将此参数设置为 `NULL`。  
   
  `dwSourceContextCookie`  
- [in]用于调试目的的应用程序定义的值。  
+ 中用于调试的应用程序定义的值。  
   
  `ulStartingLineNumber`  
- [in]从零开始的值，指定在哪一行分析将开始。  
+ 中从零开始的值，指定分析将开始的行。  
   
  `dwFlags`  
- [in]与该过程关联的标志。 可以是这些值的组合。  
+ 中与过程关联的标志。 可以是这些值的组合。  
   
 |返回的常量|“值”|含义|  
 |--------------|-----------|-------------|  
-|SCRIPTPROC_ISEXPRESSION|0x00000020|指示中的代码`pstrCode`一个表达式，表示该过程的返回值。|  
-|SCRIPTPROC_IMPLICIT_THIS|0x00000100|指示`this`指针包括在该过程的范围。|  
-|SCRIPTPROC_IMPLICIT_PARENTS|0x00000200|指示的父级`this`指针包括在该过程的范围。|  
+|SCRIPTPROC_ISEXPRESSION|0x00000020|指示 `pstrCode` 中的代码是表示过程的返回值的表达式。|  
+|SCRIPTPROC_IMPLICIT_THIS|0x00000100|指示 `this` 指针包含在过程的作用域中。|  
+|SCRIPTPROC_IMPLICIT_PARENTS|0x00000200|指示 `this` 指针的父项包含在过程的作用域中。|  
   
  `ppdisp`  
- [out]返回一个调度包装器位置的默认方法是通过此方法分析的过程。  
+ 弄返回一个调度包装，其中默认方法是此方法分析的过程。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -84,16 +84,16 @@ HRESULT ParseProcedureText(
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
 |`E_INVALIDARG`|参数无效。|  
-|`E_POINTER`|指定了无效的指针。|  
-|`E_NOTIMPL`|不支持此方法。 脚本引擎不支持运行时添加到命名空间的过程。|  
-|`E_UNEXPECTED`|不应在调用 （例如，脚本引擎处于未初始化或已关闭状态）。|  
-|`OLESCRIPT_E_SYNTAX`|在过程中出现未指定的语法错误。|  
-|`S_FALSE`|脚本引擎不支持的调度对象;`ppdisp`参数设置为`NULL`。|  
+|`E_POINTER`|指定的指针无效。|  
+|`E_NOTIMPL`|不支持此方法。 脚本引擎不支持将过程的运行时添加到命名空间。|  
+|`E_UNEXPECTED`|不应进行调用（例如，脚本引擎处于未初始化或已关闭状态）。|  
+|`OLESCRIPT_E_SYNTAX`|过程中出现未指定的语法错误。|  
+|`S_FALSE`|脚本引擎不支持调度对象;`ppdisp`parameter 设置为 `NULL`。|  
   
 ## <a name="remarks"></a>备注  
- 在此调用; 期间不计算任何脚本代码相反，该过程编译到方法上`ppdisp`，它可以由调用脚本更高版本。  
+ 此调用期间不计算任何脚本代码;相反，该过程编译到 `ppdisp` 的方法中，稍后脚本可以在该方法中调用它。  
   
- 此接口已弃用的`IActiveScriptParseProcedure`接口。 `IActiveScriptParseProcedure::ParseProcedureText`方法类似于这种方法，但它允许指定的过程名称。 在所有情况下，`IActiveScriptParseProcedure::ParseProcedureText`应使用。  
+ 此接口已弃用，以支持 `IActiveScriptParseProcedure` 接口。 @No__t_0 方法类似于此方法，但允许指定过程名称。 在所有情况下，都应使用 `IActiveScriptParseProcedure::ParseProcedureText`。  
   
 ## <a name="see-also"></a>请参阅  
  [IActiveScriptParseProcedureOld 接口](../../winscript/reference/iactivescriptparseprocedureold-interface.md)   

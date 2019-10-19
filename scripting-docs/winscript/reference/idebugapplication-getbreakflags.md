@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::GetBreakFlags | Microsoft Docs
+title: IDebugApplication：： GetBreakFlags |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 389f50cf6883cd59cd540ef278aa1b4f69a6a629
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a614429ebb8cc9271a0444536d14c45b69a9588f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62990896"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574978"
 ---
 # <a name="idebugapplicationgetbreakflags"></a>IDebugApplication::GetBreakFlags
 返回应用程序的当前中断标志。  
@@ -38,10 +38,10 @@ HRESULT GetBreakFlags(
   
 #### <a name="parameters"></a>参数  
  `pabf`  
- [out]应用程序当前中断标志。  
+ 弄应用程序的当前中断标志。  
   
  `pprdatSteppingThread`  
- [out]当前正在运行的线程。  
+ 弄当前正在运行的线程。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -51,7 +51,7 @@ HRESULT GetBreakFlags(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法返回该应用程序的当前中断标志。  
+ 此方法返回应用程序的当前中断标志。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugApplication 接口](../../winscript/reference/idebugapplication-interface.md)   

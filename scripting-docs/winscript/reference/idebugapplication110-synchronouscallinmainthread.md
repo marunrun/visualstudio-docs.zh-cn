@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication110::SynchronousCallInMainThread | Microsoft Docs
+title: IDebugApplication110：： SynchronousCallInMainThread |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d98f28f441096886c9ef7f26e63d876455a264e7
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: db2b94d51cc5c9a65355aae7405fb162f564e0cc
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446362"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573649"
 ---
 # <a name="idebugapplication110synchronouscallinmainthread"></a>IDebugApplication110::SynchronousCallInMainThread
-将主线程上同步调用。  
+在主线程上进行同步调用。  
   
 > [!IMPORTANT]
-> [IDebugApplication110 接口](../../winscript/reference/idebugapplication110-interface.md)是实现由 PDM v11.0 和更高版本。 在 activdbg100.h 中发现。  
+> [IDebugApplication110 接口](../../winscript/reference/idebugapplication110-interface.md)由 PDM 11.0 和更高版本实现。 在 activdbg100.h 中发现。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +34,7 @@ HRESULT SynchronousCallInMainThread([in] IDebugThreadCall* pptc, [in] DWORD_PTR 
   
 #### <a name="parameters"></a>参数  
  `pptc`  
- [IDebugThreadCall 接口](../../winscript/reference/idebugthreadcall-interface.md)对象调用。  
+ 要调用的[IDebugThreadCall 接口](../../winscript/reference/idebugthreadcall-interface.md)对象。  
   
  `dwParam1`  
  调用的第一个参数。  

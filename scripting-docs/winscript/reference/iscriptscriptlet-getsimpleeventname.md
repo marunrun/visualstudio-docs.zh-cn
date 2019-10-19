@@ -1,5 +1,5 @@
 ---
-title: IScriptScriptlet::GetSimpleEventName | Microsoft Docs
+title: IScriptScriptlet：： GetSimpleEventName |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e767c260dcdda2d92a7d90f7fd12af6918ac16d4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 51b8d3b31c92006c4f5b91a874bbb9d66ffa0b1b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786884"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72561506"
 ---
-# <a name="iscriptscriptlet-getsimpleeventname"></a>IScriptScriptlet::GetSimpleEventName
-返回与 scriptlet 相关联的简单事件名称。 这是不包含任何空白区域的单个词名称。  
+# <a name="iscriptscriptlet-getsimpleeventname"></a>IScriptScriptlet:: GetSimpleEventName
+返回与 scriptlet 关联的简单事件名称。 这是一个不包含任何空格的单字名称。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT GetSimpleEventName(
   
 #### <a name="parameters"></a>参数  
  `pbstr`  
- [out]包含与之关联的简单事件名称的缓冲区`IScriptScriptlet`对象。  
+ 弄一个缓冲区，其中包含与 `IScriptScriptlet` 对象关联的简单事件名称。  
   
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  

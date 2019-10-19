@@ -1,5 +1,5 @@
 ---
-title: return 语句在函数外的 |Microsoft Docs
+title: 函数外部的 "return" 语句 |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,32 +14,32 @@ ms.assetid: 03568f9f-5f4f-4a10-a738-9a73f3832b9e
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 01ef96385d5fe3dccf14a7491e67983d39913280
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a90af6de8e2c238e3660111b19d13c1eaf628c9e
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63006401"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573690"
 ---
 # <a name="return-statement-outside-of-function"></a>“return”语句在函数之外
-您使用`return`全局作用域中的代码的语句。 `return`语句应仅出现在函数体。  
+在代码的全局范围内使用了 `return` 语句。 @No__t_0 语句应仅出现在函数体中。  
   
- 调用的函数`()`运算符是一个表达式。 所有表达式都具有值;`return`语句用于指定函数返回的值。 常规形式为：  
+ 使用 `()` 运算符调用函数是一个表达式。 所有表达式都具有值;`return` 语句用于指定函数返回的值。 一般形式为：  
   
 ```js
   
 return [ expression ];  
 ```  
   
- 当`return`执行语句时，*表达式*是评估并作为函数值返回。 如果没有任何表达式**未定义**返回。  
+ 执行 `return` 语句时，将计算*表达式*并将其作为函数的值返回。 如果没有表达式，则返回**undefined** 。  
   
- 函数的执行停止时`return`即使还有其他语句仍在函数体中执行语句。 此规则的例外是如果**返回**语句出现在**尝试**块中，且相应**最后**阻止，请在代码**最后**块将执行该函数返回之前。  
+ 当执行 `return` 语句时，即使函数体中仍存在其他语句，函数的执行也会停止。 此规则的例外情况是，如果**return**语句发生在**try**块中，并且存在相应的**finally**块，则**finally**块中的代码将在函数返回之前执行。  
   
- 如果函数返回，因为无需执行到达函数体的终点`return`语句，返回的值是**未定义**值 （这就意味着函数结果不能用作较大表达式的一部分).  
+ 如果函数因到达函数体的末尾而不执行 `return` 语句而返回，则返回的值是**未定义**的值（这意味着函数结果不能用作更大的表达式的一部分）。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 删除`return`语句从你的代码 （全局范围） 的主要部分。  
+- 从代码的主体（全局范围）中删除 `return` 语句。  
   
 ## <a name="see-also"></a>请参阅  
  [return 语句](../../javascript/reference/return-statement-javascript.md)   

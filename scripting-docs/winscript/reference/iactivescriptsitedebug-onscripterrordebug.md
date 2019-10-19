@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteDebug::OnScriptErrorDebug | Microsoft Docs
+title: IActiveScriptSiteDebug：： OnScriptErrorDebug |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 50e8c7baa42d6f2f36dc71b768797dfe2a464bf3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 894767b3dae9db54e8bc438a82b27195308a4342
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992433"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572206"
 ---
 # <a name="iactivescriptsitedebugonscripterrordebug"></a>IActiveScriptSiteDebug::OnScriptErrorDebug
-允许智能主机以确定如何处理运行时错误。  
+允许智能主机确定如何处理运行时错误。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,16 +39,16 @@ HRESULT OnScriptErrorDebug(
   
 #### <a name="parameters"></a>参数  
  `pErrorDebug`  
- [in]发生的运行时错误  
+ 中发生的运行时错误  
   
  `pfEnterDebugger`  
- [out]指示是否将错误传递给调试程序执行 JIT 调试标记。  
+ 弄指示是否将错误传递到调试器以执行 JIT 调试的标志。  
   
  `pfCallOnScriptErrorWhenContinuing`  
- [out]指示是否将调用`IActiveScriptSite::OnScriptError`当用户决定继续而不进行调试。  
+ 弄指示当用户决定在不调试的情况下继续时是否调用 `IActiveScriptSite::OnScriptError` 的标志。  
   
 ## <a name="return-value"></a>返回值  
- 该方法返回 `HRESULT`。 可能的值包括但不限于以下表中的值。  
+ 该方法返回 `HRESULT`。 可能的值包括但不限于下表中的值。  
   
 |“值”|描述|  
 |-----------|-----------------|  

@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 913e8209462867be09b2730ac606b208da6191aa
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 7083723c2d7eae889fd5b87fcdba17d53a377423
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72448883"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72535781"
 ---
 # <a name="managed-recommended-rules-rule-set-for-managed-code"></a>托管代码的“托管建议规则”规则集
 
@@ -23,23 +23,23 @@ ms.locfileid: "72448883"
 
 |规则|描述|
 |----------|-----------------|
-|[CA1001](../code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable.md)|具有可释放字段的类型应该是可释放的|
-|[CA1009](../code-quality/ca1009-declare-event-handlers-correctly.md)|正确声明事件处理程序|
-|[CA1016](../code-quality/ca1016-mark-assemblies-with-assemblyversionattribute.md)|用 AssemblyVersionAttribute 标记程序集|
-|[CA1033](../code-quality/ca1033-interface-methods-should-be-callable-by-child-types.md)|接口方法应可由子类型调用|
-|[CA1049](../code-quality/ca1049-types-that-own-native-resources-should-be-disposable.md)|拥有本机资源的类型应是可释放的|
-|[CA1060](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)|将 P/Invoke 移动到 NativeMethods 类|
-|[CA1061](../code-quality/ca1061-do-not-hide-base-class-methods.md)|不要隐藏基类方法|
-|[CA1063](../code-quality/ca1063-implement-idisposable-correctly.md)|正确实现 IDisposable|
-|[CA1065](../code-quality/ca1065-do-not-raise-exceptions-in-unexpected-locations.md)|不要在意外的位置引发异常|
-|[CA1301](../code-quality/ca1301-avoid-duplicate-accelerators.md)|避免快捷键重复|
-|[CA1400](../code-quality/ca1400-p-invoke-entry-points-should-exist.md)|P/Invoke 入口点应该存在|
-|[CA1401](../code-quality/ca1401-p-invokes-should-not-be-visible.md)|P/Invokes 应该是不可见的|
-|[CA1403](../code-quality/ca1403-auto-layout-types-should-not-be-com-visible.md)|自动布局类型不应对 COM 可见|
-|[CA1404](../code-quality/ca1404-call-getlasterror-immediately-after-p-invoke.md)|紧接在 P/Invoke 之后调用 GetLastError|
-|[CA1405](../code-quality/ca1405-com-visible-type-base-types-should-be-com-visible.md)|COM 可见类型的基类型应对 COM 可见|
-|[CA1410](../code-quality/ca1410-com-registration-methods-should-be-matched.md)|应对 COM 注册方法进行匹配|
-|[CA1415](../code-quality/ca1415-declare-p-invokes-correctly.md)|正确声明 P/Invoke|
+|[CA1001](../code-quality/ca1001.md)|具有可释放字段的类型应该是可释放的|
+|[CA1009](../code-quality/ca1009.md)|正确声明事件处理程序|
+|[CA1016](../code-quality/ca1016.md)|用 AssemblyVersionAttribute 标记程序集|
+|[CA1033](../code-quality/ca1033.md)|接口方法应可由子类型调用|
+|[CA1049](../code-quality/ca1049.md)|拥有本机资源的类型应是可释放的|
+|[CA1060](../code-quality/ca1060.md)|将 P/Invoke 移动到 NativeMethods 类|
+|[CA1061](../code-quality/ca1061.md)|不要隐藏基类方法|
+|[CA1063](../code-quality/ca1063.md)|正确实现 IDisposable|
+|[CA1065](../code-quality/ca1065.md)|不要在意外的位置引发异常|
+|[CA1301](../code-quality/ca1301.md)|避免快捷键重复|
+|[CA1400](../code-quality/ca1400.md)|P/Invoke 入口点应该存在|
+|[CA1401](../code-quality/ca1401.md)|P/Invokes 应该是不可见的|
+|[CA1403](../code-quality/ca1403.md)|自动布局类型不应对 COM 可见|
+|[CA1404](../code-quality/ca1404.md)|紧接在 P/Invoke 之后调用 GetLastError|
+|[CA1405](../code-quality/ca1405.md)|COM 可见类型的基类型应对 COM 可见|
+|[CA1410](../code-quality/ca1410.md)|应对 COM 注册方法进行匹配|
+|[CA1415](../code-quality/ca1415.md)|正确声明 P/Invoke|
 |[CA1821](../code-quality/ca1821.md)|移除空终结器|
 |[CA1900](../code-quality/ca1900.md)|值类型字段应为可移植字段|
 |[CA1901](../code-quality/ca1901.md)|P/Invoke 声明应为可移植声明|

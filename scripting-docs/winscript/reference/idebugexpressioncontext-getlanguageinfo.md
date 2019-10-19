@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionContext::GetLanguageInfo | Microsoft Docs
+title: IDebugExpressionContext：： GetLanguageInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ed5546f07a81d9c2825f3dbdc4f2bb28887948f9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5e6dd3d3bb254cd91f411da3b6b587bc37c3a777
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946285"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576408"
 ---
 # <a name="idebugexpressioncontextgetlanguageinfo"></a>IDebugExpressionContext::GetLanguageInfo
-返回拥有此上下文中的语言名称和 GUID。  
+返回拥有此上下文的语言的名称和 GUID。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,10 +38,10 @@ HRESULT GetLanguageInfo(
   
 #### <a name="parameters"></a>参数  
  `pbstrLanguageName`  
- [out]语言的名称。  
+ 弄语言的名称。  
   
  `pLanguageID`  
- [out]语言的唯一 id。  
+ 弄语言的唯一 id。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -51,7 +51,7 @@ HRESULT GetLanguageInfo(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法返回拥有此上下文中的语言名称和 GUID。  
+ 此方法返回拥有此上下文的语言的名称和 GUID。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugExpressionContext 接口](../../winscript/reference/idebugexpressioncontext-interface.md)

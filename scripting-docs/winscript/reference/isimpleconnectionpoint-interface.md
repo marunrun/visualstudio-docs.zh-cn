@@ -13,28 +13,28 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0d18c8f9eef6ddb1a38473eb19984bd9cf7dbd96
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 549d7f38b01937f992b240cb6f1d651bc848236c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63001500"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571792"
 ---
 # <a name="isimpleconnectionpoint-interface"></a>ISimpleConnectionPoint 接口
-用于描述和枚举的特定连接点上触发的事件提供一个简单的方法。 此接口，还可轻松挂接`IDispatch`这些事件的对象。 此接口是实现由进程调试管理器 (PDM)，并使用的脚本引擎。  
+提供了一种简单的方法来描述和枚举在特定连接点上激发的事件。 此接口还可以轻松地将 `IDispatch` 对象挂钩到这些事件。 此接口由进程调试管理器（PDM）实现，由脚本引擎使用。  
   
- 此接口是可从`IDebugHelper::CreateSimpleConnectionPoint`。  
+ @No__t_0 提供此接口。  
   
- 除了继承的方法之外`IUnknown`，则`ISimpleConnectionPoint`接口公开以下方法。  
+ 除了从 `IUnknown` 继承的方法之外，`ISimpleConnectionPoint` 接口还公开以下方法。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[ISimpleConnectionPoint::Advise](../../winscript/reference/isimpleconnectionpoint-advise.md)|建立简单连接点对象和客户端的接收器之间的连接。|  
-|[ISimpleConnectionPoint::DescribeEvents](../../winscript/reference/isimpleconnectionpoint-describeevents.md)|在指定范围的事件返回的 DISPID 和每个事件的名称。|  
-|[ISimpleConnectionPoint::GetEventCount](../../winscript/reference/isimpleconnectionpoint-geteventcount.md)|返回此接口上公开的事件数。|  
-|[ISimpleConnectionPoint::Unadvise](../../winscript/reference/isimpleconnectionpoint-unadvise.md)|终止先前通过建立的通知连接`ISimpleConnectionPoint::Advise`。|  
+|[ISimpleConnectionPoint::Advise](../../winscript/reference/isimpleconnectionpoint-advise.md)|在简单连接点对象和客户端接收器之间建立连接。|  
+|[ISimpleConnectionPoint::DescribeEvents](../../winscript/reference/isimpleconnectionpoint-describeevents.md)|返回指定事件范围内每个事件的 DISPID 和名称。|  
+|[ISimpleConnectionPoint::GetEventCount](../../winscript/reference/isimpleconnectionpoint-geteventcount.md)|返回在此接口上公开的事件数。|  
+|[ISimpleConnectionPoint::Unadvise](../../winscript/reference/isimpleconnectionpoint-unadvise.md)|终止先前通过 `ISimpleConnectionPoint::Advise` 建立的通知连接。|  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugProperty 接口](../../winscript/reference/idebugproperty-interface.md)

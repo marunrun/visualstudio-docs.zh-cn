@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentInfo::GetName | Microsoft Docs
+title: IDebugDocumentInfo：： GetName |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9975563c27b986190fbd2731c3f36b1e32719c0b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bc098da29367a322bd93b4f60ba0e090aee9ee91
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970960"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72570957"
 ---
 # <a name="idebugdocumentinfogetname"></a>IDebugDocumentInfo::GetName
 返回指定的文档名称。  
@@ -38,10 +38,10 @@ HRESULT GetName(
   
 #### <a name="parameters"></a>参数  
  `dnt`  
- [in]要返回的文档名称的类型。  
+ 中要返回的文档名称的类型。  
   
  `pbstrName`  
- [out]包含名称的字符串。  
+ 弄包含名称的字符串。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  

@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthor::GetRoot | Microsoft Docs
+title: IActiveScriptAuthor：： GetRoot |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6cdb3246ccae2eabb34696162f67e82a60374550
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ca2aab154d56cd98c3c2acede61f86f725ce9c1b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955102"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576190"
 ---
 # <a name="iactivescriptauthorgetroot"></a>IActiveScriptAuthor::GetRoot
-返回`IScriptNode`作者的脚本树的根。  
+返回作者脚本树的 `IScriptNode` 根。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT GetRoot(
   
 #### <a name="parameters"></a>参数  
  `ppsp`  
- [out]一个变量来接收指向指针的地址`IScriptNode`根节点的接口。  
+ 弄一个变量的地址，该变量接收指向根节点的 `IScriptNode` 接口的指针。  
   
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  

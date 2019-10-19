@@ -13,32 +13,32 @@ caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 13bf20f9e1e642b948ddaa72ae9dca7bb457fba2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 38ab73ddb1bd924035cb6ba61d26e65f16f53eed
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786769"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577506"
 ---
 # <a name="iscriptnode-interface"></a>IScriptNode 接口
-一个对象，实现`IScriptNode`接口表示 Web 页。  
+实现 `IScriptNode` 接口的对象表示网页。  
   
- 除了继承的方法之外`IUnknown`，则`IScriptNode`接口公开以下方法。  
+ 除了从 `IUnknown` 继承的方法之外，`IScriptNode` 接口还公开以下方法。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法  
   
 |方法|描述|  
 |------------|-----------------|  
 |[IScriptNode::Alive](../../winscript/reference/iscriptnode-alive.md)|指示对象是否仍处于活动状态。|  
-|[IScriptNode::CreateChildEntry](../../winscript/reference/iscriptnode-createchildentry.md)|添加的子实例`IScriptEntry`。|  
-|[IScriptNode::CreateChildHandler](../../winscript/reference/iscriptnode-createchildhandler.md)|将作为子实例添加 scriptlet `IScriptNode`。|  
+|[IScriptNode:: CreateChildEntry](../../winscript/reference/iscriptnode-createchildentry.md)|添加 `IScriptEntry` 的子实例。|  
+|[IScriptNode::CreateChildHandler](../../winscript/reference/iscriptnode-createchildhandler.md)|添加 scriptlet 作为 `IScriptNode` 的子实例。|  
 |[IScriptNode::Delete](../../winscript/reference/iscriptnode-delete.md)|删除对象树。|  
-|[IScriptNode::GetChild](../../winscript/reference/iscriptnode-getchild.md)|返回位于指定索引中的节点的子级。|  
-|[IScriptNode::GetCookie](../../winscript/reference/iscriptnode-getcookie.md)|返回用于将 scriptlet 与该主机对象相关联的应用程序定义的值。|  
+|[IScriptNode::GetChild](../../winscript/reference/iscriptnode-getchild.md)|返回位于节点中指定索引处的子级。|  
+|[IScriptNode::GetCookie](../../winscript/reference/iscriptnode-getcookie.md)|返回应用程序定义的值，该值用于将 scriptlet 与宿主对象相关联。|  
 |[IScriptNode::GetIndexInParent](../../winscript/reference/iscriptnode-getindexinparent.md)|返回父级的子列表中的对象的索引。|  
-|[IScriptNode::GetLanguage](../../winscript/reference/iscriptnode-getlanguage.md)|返回由当前的脚本节点的脚本语言。|  
-|[IScriptNode::GetNumberOfChildren](../../winscript/reference/iscriptnode-getnumberofchildren.md)|返回的子节点数目`IScriptNode`对象。|  
-|[IScriptNode::GetParent](../../winscript/reference/iscriptnode-getparent.md)|返回`IScriptNode`是父对象的对象。|  
+|[IScriptNode::GetLanguage](../../winscript/reference/iscriptnode-getlanguage.md)|返回当前脚本节点所使用的脚本语言。|  
+|[IScriptNode::GetNumberOfChildren](../../winscript/reference/iscriptnode-getnumberofchildren.md)|返回 `IScriptNode` 对象的子节点数。|  
+|[IScriptNode::GetParent](../../winscript/reference/iscriptnode-getparent.md)|返回作为对象的父对象的 `IScriptNode` 对象。|  
   
 ## <a name="see-also"></a>请参阅  
  [活动脚本创作接口](../../winscript/reference/active-script-authoring-interfaces.md)

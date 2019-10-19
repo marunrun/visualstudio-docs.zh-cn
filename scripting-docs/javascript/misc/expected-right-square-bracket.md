@@ -1,5 +1,5 @@
 ---
-title: 预期] |Microsoft Docs
+title: 应输入 "]" |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,19 +14,19 @@ ms.assetid: 8a437ace-c73e-4340-885c-70ccb4bb2ee4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3c88b40c0d20d370929bd8c1cd5e8604ea3781e6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 802c9aa7988c4f19ee74dac4345d5c7077cc466c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62433911"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576527"
 ---
 # <a name="expected-"></a>应有“]”
-进行对数组元素的引用，但并未包含右方括号。 引用的数组元素的任何表达式必须包含左中括号和右括号。  
+您对数组元素进行了引用，但未包含右大括号。 引用数组元素的任何表达式都必须包括左括号和右括号。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 将右方括号添加到引用的数组元素的表达式。  
+- 向引用数组元素的表达式添加右括号。  
   
 ## <a name="see-also"></a>请参阅  
  [使用数组](../../javascript/advanced/using-arrays-javascript.md)   

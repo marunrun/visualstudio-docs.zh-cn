@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText::GetContextOfPosition | Microsoft Docs
+title: IDebugDocumentText：： GetContextOfPosition |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: df63362c422289652d45ed4bbc80f117e17fb73c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d6a35a85a6e4761e1bd0db67caafd0913e7e28a3
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63008712"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572137"
 ---
 # <a name="idebugdocumenttextgetcontextofposition"></a>IDebugDocumentText::GetContextOfPosition
 创建与提供的字符位置范围对应的文档上下文对象。  
@@ -39,13 +39,13 @@ HRESULT GetContextOfPosition(
   
 #### <a name="parameters"></a>参数  
  `cCharacterPosition`  
- [in]开始位置范围内的字符位置。  
+ 中字符位置范围的起始位置。  
   
  `cNumChars`  
- [in]范围内的字符数。  
+ 中范围内的字符数。  
   
  `ppsc`  
- [out]对应于指定的字符位置范围的文档上下文对象。  
+ 弄与指定字符位置范围对应的文档上下文对象。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -55,7 +55,7 @@ HRESULT GetContextOfPosition(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法创建一个对应于提供的字符位置范围的文档上下文对象。  
+ 此方法创建与提供的字符位置范围对应的文档上下文对象。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugDocumentText 接口](../../winscript/reference/idebugdocumenttext-interface.md)

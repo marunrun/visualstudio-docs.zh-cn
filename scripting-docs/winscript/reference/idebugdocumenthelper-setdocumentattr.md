@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHelper::SetDocumentAttr |Microsoft Docs
+title: IDebugDocumentHelper：： SetDocumentAttr |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b3c19e5b2091bf9dd30359f30e27019fa778b675
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e2210557a1ca2b23d19d151d6fe6f3b5d25e7082
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62948962"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574607"
 ---
 # <a name="idebugdocumenthelpersetdocumentattr"></a>IDebugDocumentHelper::SetDocumentAttr
-设置本文档的特性。  
+设置此文档的属性。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT SetDocumentAttr(
   
 #### <a name="parameters"></a>参数  
  `pszAttributes`  
- [in]要应用到文档的属性。  
+ 中要应用于文档的属性。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  

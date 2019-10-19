@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthor::RemoveTypeLib | Microsoft Docs
+title: IActiveScriptAuthor：： RemoveTypeLib |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f8dd75bfa5474eb93a51af790f7efd6431a9aaa0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 182d13785b20f9c5ba298ab72cd8d28977d455ba
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955128"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576138"
 ---
 # <a name="iactivescriptauthorremovetypelib"></a>IActiveScriptAuthor::RemoveTypeLib
-从创作引擎命名空间的脚本中删除类型库。  
+从脚本创作引擎命名空间中删除类型库。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,13 +39,13 @@ HRESULT RemoveTypeLib(
   
 #### <a name="parameters"></a>参数  
  `rguidTypeLib`  
- [in]CLSID （类标识符） 的类型库的删除。  
+ 中要移除的类型库的 CLSID （类标识符）。  
   
  `dwMajor`  
- [in]主版本号。  
+ 中主版本号。  
   
  `dwMinor`  
- [in]次版本号。  
+ 中次版本号。  
   
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  

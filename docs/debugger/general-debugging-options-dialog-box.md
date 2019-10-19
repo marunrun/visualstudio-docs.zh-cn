@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d3fa7ae62c19a7af45188bab08ce9b3144032b7d
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
-ms.translationtype: HT
+ms.openlocfilehash: bbd99d260ba61d9e3ae9e877ecc1cefb1a22892e
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72435718"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72569064"
 ---
 # <a name="general-debugging-options"></a>常规调试选项
 
@@ -95,11 +95,11 @@ ms.locfileid: "72435718"
 
 将**所有输出窗口文本重定向到即时窗口**：将通常显示在 "**输出**" 窗口中的所有调试器消息改为发送到 "**即时**" 窗口。
 
-**在变量窗口中显示对象的原始结构**：关闭所有对象结构视图自定义。 有关视图自定义的详细信息，请参阅[创建 .managed 对象的自定义视图](../debugger/create-custom-views-of-dot-managed-objects.md)。
+**在变量窗口中显示对象的原始结构**：关闭所有对象结构视图自定义。 有关视图自定义的详细信息，请参阅[创建托管对象的自定义视图](../debugger/create-custom-views-of-managed-objects.md)。
 
 **在模块加载时取消 jit 优化（仅限托管）** ：在加载模块时禁用托管代码的 jit 优化，并在附加调试器时编译 jit。 禁用优化可能更易于调试某些问题，尽管这会降低性能。 如果正在使用“仅我的代码”，则取消 JIT 优化会导致非用户代码显示为用户代码（“我的代码”）。 有关详细信息，请参阅[JIT 优化和调试](../debugger/jit-optimization-and-debugging.md)。
 
-**为 ASP.NET 启用 JavaScript 调试（Chrome、Edge 和 IE）** ：为 ASP.NET 应用启用脚本调试器。 第一次在 Chrome 中使用时，可能需要登录到浏览器来启用已安装的 Chrome 扩展。 禁用此选项以恢复到旧行为。
+**为 ASP.NET （Chrome、Microsoft Edge 和 IE）启用 JavaScript 调试**：为 ASP.NET 应用启用脚本调试器。 第一次在 Chrome 中使用时，可能需要登录到浏览器来启用已安装的 Chrome 扩展。 禁用此选项以恢复到旧行为。
 
 **启用 Uwp Javascript 应用的边缘开发人员工具（实验）** ：在 Microsoft Edge 中启用适用于 uwp javascript 应用的开发人员工具。
 
@@ -117,7 +117,7 @@ ms.locfileid: "72435718"
 
 **使用托管兼容模式**：将默认调试引擎替换为旧版本，以启用以下方案：
 
-- 使用 C#、Visual Basic 或 F# 以外的 .NET Framework 语言，该语言提供自己的表达式计算器（包括 C + + CLI）。
+- 你使用的不是C#、Visual Basic 的 .net 语言，或者F#提供自己的表达式计算器的 .net 语言（ C++这包括/cli）。
 
 - 想要在混合模式调试过程中为 C++ 项目启用“编辑并继续”。
 

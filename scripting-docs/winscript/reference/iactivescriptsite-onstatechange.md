@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSite::OnStateChange |Microsoft Docs
+title: IActiveScriptSite：： OnStateChange |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ad5719a93aec2940f1180a6ff45a028b937b0dfe
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ba8441d36f193f287dfec7406d5f136280c5a42e
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992539"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72570149"
 ---
 # <a name="iactivescriptsiteonstatechange"></a>IActiveScriptSite::OnStateChange
-通知主机脚本引擎已更改状态。  
+向宿主通知脚本引擎已更改状态。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT OnStateChange(
   
 #### <a name="parameters"></a>参数  
  `ssScriptState`  
- [in]值，该值指示新的脚本状态。 请参阅[IActiveScript::GetScriptState](../../winscript/reference/iactivescript-getscriptstate.md)方法有关的状态说明。  
+ 中指示新脚本状态的值。 有关状态的说明，请参阅[IActiveScript：： GetScriptState](../../winscript/reference/iactivescript-getscriptstate.md)方法。  
   
 ## <a name="return-value"></a>返回值  
  如果成功，则返回 `S_OK`。  

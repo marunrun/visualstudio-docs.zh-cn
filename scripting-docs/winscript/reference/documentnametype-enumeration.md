@@ -17,12 +17,12 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5ee258602c47951f4731dc1378542cc83d57d72b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 401eb759523ed1a33d24c3a298db0b3de2b7d5a7
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955207"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575880"
 ---
 # <a name="documentnametype-enumeration"></a>DOCUMENTNAMETYPE 枚举
 描述为文档获取哪种类型。  
@@ -38,15 +38,15 @@ typedef enum tagDOCUMENTNAMETYPE {
 DOCUMENTNAMETYPE_UNIQUE_TITLE,} DOCUMENTNAMETYPE;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|DOCUMENTNAMETYPE_APPNODE|显示在应用程序树中获取的名称。|  
-|DOCUMENTNAMETYPE_TITLE|在查看器标题栏上显示获取的名称。|  
-|DOCUMENTNAMETYPE_FILE_TAIL|获取不含路径的文件名称。|  
+|DOCUMENTNAMETYPE_APPNODE|获取应用程序树中显示的名称。|  
+|DOCUMENTNAMETYPE_TITLE|获取显示在查看器标题栏上的名称。|  
+|DOCUMENTNAMETYPE_FILE_TAIL|获取不带路径的文件名。|  
 |DOCUMENTNAMETYPE_URL|获取文档的 URL。|  
-|DOCUMENTNAMETYPE_UNIQUE_TITLE|获取附加的标识的枚举的标题。|  
+|DOCUMENTNAMETYPE_UNIQUE_TITLE|获取用枚举追加的标题，用于标识。|  
   
 ## <a name="see-also"></a>请参阅  
  [活动脚本调试器常量、枚举和结构](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)

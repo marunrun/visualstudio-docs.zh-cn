@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication110::CallableWaitForHandles |Microsoft Docs
+title: IDebugApplication110：： CallableWaitForHandles |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f74e3faa57e9ee4a38f77110334383bc2c72fe2f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 22af0e9dcf548bbd2f0f8c179b4889d5294eb284
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446390"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575078"
 ---
 # <a name="idebugapplication110callablewaitforhandles"></a>IDebugApplication110::CallableWaitForHandles
-等待任何指定的句柄，以向发出信号，同时允许跨线程调用发布到此线程。 必须从调试器线程调用此方法。  
+等待任何指定的句柄终止，同时允许跨线程调用发送到此线程。 必须从调试器线程调用此方法。  
   
 > [!IMPORTANT]
-> [IDebugApplication110 接口](../../winscript/reference/idebugapplication110-interface.md)是实现由 PDM v11.0 和更高版本。 在 activdbg100.h 中发现。  
+> [IDebugApplication110 接口](../../winscript/reference/idebugapplication110-interface.md)由 PDM 11.0 和更高版本实现。 在 activdbg100.h 中发现。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,13 +34,13 @@ HRESULT CallableWaitForHandles([in] DWORD handleCount, [in, size_is(handleCount)
   
 #### <a name="parameters"></a>参数  
  `handleCount`  
- 若要等待的句柄数。  
+ 要等待的句柄数。  
   
  `pHandles`  
- 组的句柄等待。  
+ 要等待的句柄集。  
   
  `pIndex`  
- HRESULT 值时的索引，则为 S_OK，`pHandles`已发出信号的句柄。  
+ 如果 HRESULT 值为 S_OK，则为已发出信号的句柄 `pHandles` 的索引。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugApplication110 接口](../../winscript/reference/idebugapplication110-interface.md)

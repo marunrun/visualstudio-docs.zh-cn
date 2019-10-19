@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptParse::AddScriptlet | Microsoft Docs
+title: IActiveScriptParse：： AddScriptlet |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ee5d76060789118e9051c2d8dcc5fc570617f6a8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c1b4ac460afea1efd538c64224d84afef49d1a67
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62954948"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573540"
 ---
 # <a name="iactivescriptparseaddscriptlet"></a>IActiveScriptParse::AddScriptlet
-将代码 scriptlet 添加到该脚本。 此方法使用环境中使用主机文档混合在一起的持久状态的脚本主机负责还原脚本，而不通过`IPersist*`接口。 主要示例是允许要附加到内部事件的 HTML 文档中嵌入的代码 scriptlet 的 HTML 脚本语言 (例如，ONCLICK="button1.text='Exit")。  
+向脚本中添加代码 scriptlet。 此方法用于以下环境：该脚本的持久状态与主机文档过度交织，而主机负责还原脚本，而不是通过 `IPersist*` 接口。 主要示例是 HTML 脚本语言，它们允许将嵌入在 HTML 文档中的代码 scriptlet 附加到内部事件（例如 ONCLICK = "button1 = ' Exit '"）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,42 +47,42 @@ HRESULT AddScriptlet(
   
 #### <a name="parameters"></a>参数  
  `pstrDefaultName`  
- [in]若要将与 scriptlet 相关联的默认名称的地址。 如果 scriptlet 不包含命名信息 （如上面的 ONCLICK 示例），此名称将用于标识 scriptlet。 如果此参数为`NULL`，脚本引擎生成的唯一名称，如有必要。  
+ 中要与 scriptlet 关联的默认名称的地址。 如果 scriptlet 不包含命名信息（如上面的 ONCLICK 示例所示），则此名称将用于识别 scriptlet。 如果此参数 `NULL`，则脚本引擎将根据需要制造唯一名称。  
   
  `pstrCode`  
- [in]要添加的 scriptlet 文本的地址。 此字符串的解释取决于脚本语言。  
+ 中要添加的 scriptlet 文本的地址。 此字符串的解释取决于脚本语言。  
   
  `pstrItemName`  
- [in]包含与此 scriptlet 相关联的项名称的缓冲区的地址。 此参数，除了`pstrSubItemName`，标识 scriptlet 为事件处理程序的对象。  
+ 中包含与此 scriptlet 关联的项名称的缓冲区的地址。 除了 `pstrSubItemName` 之外，此参数还标识 scriptlet 为其事件处理程序的对象。  
   
  `pstrSubItemName`  
- [in]包含的名称的缓冲区的地址`subobject`与此 scriptlet 相关联; 必须在命名的项的类型信息中找到此名称的命名项。 此参数为 NULL，如果要与命名项而不是关联 scriptlet `subitem`。 此参数，除了`pstrItemName`，标识 scriptlet 为事件处理程序的特定对象。  
+ 中缓冲区的地址，其中包含与此 scriptlet 关联的已命名项的 `subobject` 名称;此名称必须在命名项的类型信息中找到。 如果 scriptlet 要与命名项而不是 `subitem` 相关联，则此参数为 NULL。 除了 `pstrItemName` 之外，此参数还标识 scriptlet 为其事件处理程序的特定对象。  
   
  `pstrEventName`  
- [in]包含为其 scriptlet 是一个事件处理程序的事件名称的缓冲区的地址。  
+ 中缓冲区的地址，该缓冲区包含 scriptlet 为其事件处理程序的事件的名称。  
   
  `pstrDelimiter`  
- [in]结束 scriptlet 分隔符的地址。 当`pstrCode`参数分析从文本流，主机通常使用分隔符，如两个单引号 （'），检测 scriptlet 的末尾。 此参数指定主机使用，允许脚本引擎来提供某些条件的原始预处理的分隔符 （例如，与使用用作分隔符的两个单引号替换单引号 [']）。 完全如何 （以及是否） 引擎建立使用此信息取决于脚本引擎的脚本。 如果主机不使用分隔符来标记 scriptlet 的末尾，此参数设置为 NULL。  
+ 中Scriptlet 分隔符的地址。 从文本流分析 `pstrCode` 参数时，主机通常使用分隔符（如两个单引号（' '）来检测 scriptlet 的末尾。 此参数指定主机使用的分隔符，允许脚本引擎提供某些条件基元预处理（例如，用两个单引号替换单引号 ['] 以用作分隔符）。 脚本引擎使用此信息的确切方式取决于脚本引擎。 如果主机未使用分隔符来标记 scriptlet 的末尾，则将此参数设置为 NULL。  
   
  `dwSourceContextCookie`  
- [in]用于调试目的的应用程序定义的值。  
+ 中用于调试的应用程序定义的值。  
   
  `ulStartingLineNumber`  
- [in]指定分析开始的行的从零开始值。  
+ 中从零开始的值，指定分析将从哪个行开始。  
   
  `dwFlags`  
- [in]与 scriptlet 相关联的标志。 可以是以下值的组合：  
+ 中与 scriptlet 关联的标志。 可以是以下值的组合：  
   
 |返回值|含义|  
 |------------------|-------------|  
-|SCRIPTTEXT_ISVISIBLE|指示脚本文本应显示 (并因此可按名称调用) 作为脚本的名称空间中的全局方法。|  
-|SCRIPTTEXT_ISPERSISTENT|指示是否保存脚本引擎应保存在此调用过程中添加的代码 (例如，通过调用`IPersist*::Save`)，或如果脚本引擎通过转换为初始化状态重置。 有关此状态的详细信息，请参阅脚本引擎状态。|  
+|SCRIPTTEXT_ISVISIBLE|指示脚本文本应显示为脚本的命名空间中的全局方法（因此可按名称调用）。|  
+|SCRIPTTEXT_ISPERSISTENT|指示如果保存脚本引擎（例如，通过调用 `IPersist*::Save`）或者通过转换回已初始化状态重置脚本引擎，则应保存在此调用过程中添加的代码。 有关此状态的详细信息，请参阅脚本引擎状态。|  
   
  `pbstrName` ,  
- [out]用来标识 scriptlet 的实际名称。 这是为了按优先顺序是： scriptlet 文本中显式指定一个名称，在提供的默认名称`pstrDefaultName`，或通过脚本引擎合成的唯一名称。  
+ 弄用于标识 scriptlet 的实际名称。 这是按优先顺序排列的：在 scriptlet 文本中显式指定的名称、`pstrDefaultName` 中提供的默认名称或脚本引擎合成的唯一名称。  
   
  `pexcepinfo` ,  
- [out]一个包含异常信息结构的地址。 如果返回 DISP_E_EXCEPTION，应填充此结构。  
+ 弄包含异常信息的结构的地址。 如果返回 DISP_E_EXCEPTION，则应填写此结构。  
   
 ## <a name="return-value"></a>返回值  
  返回以下值之一：  
@@ -90,13 +90,13 @@ HRESULT AddScriptlet(
 |返回值|含义|  
 |------------------|-------------|  
 |`S_OK`|成功。|  
-|`DISP_E_EXCEPTION`|Scriptlet 的分析中发生了异常。 `pexcepinfo`参数包含有关异常的信息。|  
+|`DISP_E_EXCEPTION`|分析 scriptlet 时出现异常。 @No__t_0 参数包含有关异常的信息。|  
 |`E_INVALIDARG`|参数无效。|  
-|`E_NOTIMPL`|不支持此方法;脚本引擎不支持添加事件接收 scriptlet。|  
-|`E_POINTER`|指定了无效的指针。|  
-|`E_UNEXPECTED`|不应在调用 （例如，脚本引擎具有尚未加载或初始化），因此失败。|  
-|`OLESCRIPT_E_INVALIDNAME`|提供的默认名称是在此脚本语言中无效。|  
-|`OLESCRIPT_E_SYNTAX`|Scriptlet 中出现未指定的语法错误。|  
+|`E_NOTIMPL`|此方法不受支持;脚本引擎不支持添加事件-接收 scriptlet。|  
+|`E_POINTER`|指定的指针无效。|  
+|`E_UNEXPECTED`|不应进行调用（例如，脚本引擎尚未加载或初始化），因此失败。|  
+|`OLESCRIPT_E_INVALIDNAME`|提供的默认名称在此脚本语言中无效。|  
+|`OLESCRIPT_E_SYNTAX`|Scriptlet 中发生未指定的语法错误。|  
   
 ## <a name="see-also"></a>请参阅  
  [IActiveScriptParse](../../winscript/reference/iactivescriptparse.md)

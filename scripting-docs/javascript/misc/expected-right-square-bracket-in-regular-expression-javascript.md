@@ -1,5 +1,5 @@
 ---
-title: 预期] 在正则表达式 (JavaScript) |Microsoft Docs
+title: 正则表达式中需要 "]" （JavaScript） |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,23 +14,23 @@ ms.assetid: 1ca2079a-44dd-479f-a1e3-e04a14d0739e
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 66fa8ba2396185bd402e4bc31a3da6b1f8bf95ab
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 9af38a5fa754a811416f1a998b90946345f3e4a2
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446501"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576479"
 ---
 # <a name="expected--in-regular-expression-javascript"></a>正则表达式中应有“]”(JavaScript)
-尝试创建字符类的正则表达式匹配项，但并未包含右方括号。 通过将它们放在方括号内，各个文本字符的组合可以组合成字符类。 字符类匹配包含任何一个字符。 例如，/ [abc] 匹配任何一个字母"a"、"b"或"c"。  
+试图为正则表达式匹配创建字符类，但未包含右大括号。 可以通过将各个文本字符组合放在方括号中来将它们组合到字符类中。 字符类与它所包含的任何一个字符匹配。 例如，/[abc]/匹配任何字母 "a"、"b" 或 "c"。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 将右方括号添加到正则表达式。  
+- 向正则表达式添加右括号。  
   
     > [!NOTE]
-    > 如果您希望匹配一个方括号，对其进行转义反斜杠- \\[-这样，它不被视为特殊字符的[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]。  
+    > 如果要匹配单个方括号，请使用反斜杠 \\ [-进行转义，以便 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 不将其解释为特殊字符。  
   
 ## <a name="see-also"></a>请参阅  
  [正则表达式对象](../../javascript/reference/regular-expression-object-javascript.md)   
- [正则表达式语法 (JavaScript)](https://msdn.microsoft.com/library/1400241x)
+ [正则表达式语法（JavaScript）](https://msdn.microsoft.com/library/1400241x)

@@ -1,5 +1,5 @@
 ---
-title: 缺少 JavaScript 对象 |Microsoft Docs
+title: 应为 JavaScript 对象 |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,19 +14,19 @@ ms.assetid: cc7cc32b-e444-4afa-9be1-802c83fdf5ae
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ceaae323c974a1f41b6f5bd2a3ca093ef7c0b2d9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 20b9b6b17ac0e0aeeeeae99c39954bfd6b283fe2
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63007430"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573790"
 ---
 # <a name="javascript-object-expected"></a>缺少 JavaScript 对象
-尝试将非[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]要求的内置函数的对象[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]对象。 各种内置函数需要中定义的对象[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]（而不是对象定义的主机或外部组件和控件一样）。  
+尝试将非 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 对象传递到需要 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 对象的内置函数。 各种内置函数需要在 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 中定义的对象（而不是由宿主定义的对象或控件等外部组件）。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 请确保您正在传入的因为参数是正确类型的对象。  
+- 确保作为参数传入的对象类型正确。  
   
 ## <a name="see-also"></a>请参阅  
  [对象和数组](../../javascript/objects-and-arrays-javascript.md)   

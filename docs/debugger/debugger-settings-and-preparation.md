@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ee8794fd94a50f51b7293fee025f2eb1abdf6db5
-ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
+ms.openlocfilehash: d6603ca7ffc39ecc819fb2e54024776760ccfa60
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72349728"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72536065"
 ---
 # <a name="debugger-settings-and-preparation"></a>调试器设置和准备
 本节描述与调试器相关的属性设置，以及为了使用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 调试器调试程序所需要的准备工作。 如果在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中使用项目模板创建程序，则调试配置中将为你正确配置这些设置。
@@ -44,7 +44,7 @@ ms.locfileid: "72349728"
 
  [调试64位应用程序](../debugger/debug-64-bit-applications.md)描述如何调试64位应用程序。
 
- [如何：指定用于调试的 .NET Framework 版本](../debugger/how-to-specify-a-dotnet-framework-version-for-debugging.md)描述如何设置注册表项以指示调试器使用哪个版本。
+ [如何：指定用于调试的旧 .NET Framework 版本](../debugger/how-to-specify-a-dotnet-framework-version-for-debugging.md)描述如何设置注册表项以指示调试器使用哪个版本。
 
 ## <a name="see-also"></a>请参阅
 - [调试器安全](../debugger/debugger-security.md)

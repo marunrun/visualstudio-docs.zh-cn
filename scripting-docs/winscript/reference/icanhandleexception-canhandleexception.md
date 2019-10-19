@@ -1,5 +1,5 @@
 ---
-title: ICanHandleException::CanHandleException | Microsoft Docs
+title: ICanHandleException：： CanHandleException |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 406787d5ee6811b80f9e6831e5a67cab8367e7d0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c536d35dcb9f0faca8b033ecd39aec520a2e260a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62991386"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575719"
 ---
 # <a name="icanhandleexceptioncanhandleexception"></a>ICanHandleException::CanHandleException
-确定是否脚本引擎的调用方可以处理指定的异常。  
+确定脚本引擎的调用方是否可以处理指定的异常。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,10 +38,10 @@ HRESULT CanHandleException(
   
 #### <a name="parameters"></a>参数  
  `pExcepInfo`  
- [in]指向`EXCEPINFO`结构，它包含不发现任何异常处理程序的情况下报告的信息。  
+ 中指向 `EXCEPINFO` 结构的指针，该结构包含在未找到异常处理程序时将报告的信息。  
   
  `pvar`  
- [in]关联的异常，如引发的值的值`throw`语句。 此参数可以为 `NULL`。  
+ 中与异常关联的值，如 `throw` 语句引发的值。 此参数可以为 `NULL`。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -49,10 +49,10 @@ HRESULT CanHandleException(
 |“值”|描述|  
 |-----------|-----------------|  
 |`S_OK`|调用方可以处理异常|  
-|`E_FAIL`|调用方无法处理该异常。|  
+|`E_FAIL`|调用方无法处理此异常。|  
   
 ## <a name="remarks"></a>备注  
- 如果调用`IDispatchEx::InvokeEx`，或类似的方法会导致异常，支持的脚本的调用方链中的调用方的脚本引擎检查`ICanHandleException`接口，并指示它能够处理该异常。 如果没有调用方可以处理异常，脚本引擎就会停止。  
+ 如果调用 `IDispatchEx::InvokeEx` 或类似方法导致异常，则脚本引擎将在支持 `ICanHandleException` 接口的脚本调用方链中检查调用方，并指示它可以处理该异常。 如果调用方不能处理异常，则脚本引擎将暂停。  
   
 ## <a name="see-also"></a>请参阅  
  [ICanHandleException 接口](../../winscript/reference/icanhandleexception-interface.md)   

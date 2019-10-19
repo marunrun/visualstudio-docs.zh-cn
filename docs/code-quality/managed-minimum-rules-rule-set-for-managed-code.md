@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1648f2aac0a0ace7f42ef923a0b26f6041204b27
-ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
-ms.translationtype: MT
+ms.openlocfilehash: 10758bbabeb21f00ea10dd779bc6a44acdcc6bba
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72349579"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72535786"
 ---
 # <a name="managed-minimum-rules-rule-set-for-managed-code"></a>托管代码的“托管最少量规则”规则集
 
@@ -21,7 +21,7 @@ ms.locfileid: "72349579"
 
 |规则|描述|
 |----------|-----------------|
-|[CA1001](../code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable.md)|具有可释放字段的类型应该是可释放的|
+|[CA1001](../code-quality/ca1001.md)|具有可释放字段的类型应该是可释放的|
 |[CA1821](../code-quality/ca1821.md)|移除空终结器|
 |[CA2213](../code-quality/ca2213.md)|应释放可释放的字段|
 |[CA2231](../code-quality/ca2231.md)|重写时重载运算符 equals `ValueType.Equals`|

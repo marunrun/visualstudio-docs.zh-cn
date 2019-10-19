@@ -11,15 +11,15 @@ caps.latest.revision: 3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e652f845fd039549ee8e32e9d87e668b3ca759c1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cb882d8230672f61789c504b5157ade196b63e43
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840299"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574431"
 ---
-# <a name="scripterecorded-error-code"></a>SCRIPT_E_RECORDED 错误代码
-脚本引擎和主机之间传递了错误。 主机需要传递给调用方的错误代码。  
+# <a name="script_e_recorded-error-code"></a>SCRIPT_E_RECORDED 错误代码
+脚本引擎和主机之间已传递错误。 主机需要将错误代码传递给调用方。  
   
 ## <a name="syntax"></a>语法  
   

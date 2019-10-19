@@ -11,15 +11,15 @@ caps.latest.revision: 3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4466869f4da6a0efe20955af6e6ef35ca9479f6c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0cc754d8a50e35e2a2731e6b036cd777795f9283
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840260"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574422"
 ---
-# <a name="scriptereported-error-code"></a>SCRIPT_E_REPORTED 错误代码
-脚本引擎已报告通过主机到未经处理的异常[IActiveScriptSite::OnScriptError](../../winscript/reference/iactivescriptsite-onscripterror.md)。 主机可以忽略此错误。  
+# <a name="script_e_reported-error-code"></a>SCRIPT_E_REPORTED 错误代码
+脚本引擎通过[IActiveScriptSite：： OnScriptError](../../winscript/reference/iactivescriptsite-onscripterror.md)向主机报告了未经处理的异常。 宿主可以忽略此错误。  
   
 ## <a name="syntax"></a>语法  
   

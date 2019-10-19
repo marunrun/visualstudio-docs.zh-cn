@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: bc279f0ae9e0420810e12c21f5f7cf29de0d15e7
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 636443a65922e72bfcede09d5692e441c6c2cb36
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72449152"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72535909"
 ---
 # <a name="extended-correctness-rules-rule-set-for-managed-code"></a>托管代码的“扩展的更正规则”规则集
 
@@ -25,23 +25,23 @@ Microsoft 扩展的正确性规则集包括 "[基本更正规则](../code-qualit
 
 |规则|描述|
 |----------|-----------------|
-|[CA1001](../code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable.md)|具有可释放字段的类型应该是可释放的|
-|[CA1009](../code-quality/ca1009-declare-event-handlers-correctly.md)|正确声明事件处理程序|
-|[CA1016](../code-quality/ca1016-mark-assemblies-with-assemblyversionattribute.md)|用 AssemblyVersionAttribute 标记程序集|
-|[CA1033](../code-quality/ca1033-interface-methods-should-be-callable-by-child-types.md)|接口方法应可由子类型调用|
-|[CA1049](../code-quality/ca1049-types-that-own-native-resources-should-be-disposable.md)|拥有本机资源的类型应是可释放的|
-|[CA1060](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)|将 P/Invoke 移动到 NativeMethods 类|
-|[CA1061](../code-quality/ca1061-do-not-hide-base-class-methods.md)|不要隐藏基类方法|
-|[CA1063](../code-quality/ca1063-implement-idisposable-correctly.md)|正确实现 IDisposable|
-|[CA1065](../code-quality/ca1065-do-not-raise-exceptions-in-unexpected-locations.md)|不要在意外的位置引发异常|
-|[CA1301](../code-quality/ca1301-avoid-duplicate-accelerators.md)|避免快捷键重复|
-|[CA1400](../code-quality/ca1400-p-invoke-entry-points-should-exist.md)|P/Invoke 入口点应该存在|
-|[CA1401](../code-quality/ca1401-p-invokes-should-not-be-visible.md)|P/Invokes 应该是不可见的|
-|[CA1403](../code-quality/ca1403-auto-layout-types-should-not-be-com-visible.md)|自动布局类型不应对 COM 可见|
-|[CA1404](../code-quality/ca1404-call-getlasterror-immediately-after-p-invoke.md)|紧接在 P/Invoke 之后调用 GetLastError|
-|[CA1405](../code-quality/ca1405-com-visible-type-base-types-should-be-com-visible.md)|COM 可见类型的基类型应对 COM 可见|
-|[CA1410](../code-quality/ca1410-com-registration-methods-should-be-matched.md)|应对 COM 注册方法进行匹配|
-|[CA1415](../code-quality/ca1415-declare-p-invokes-correctly.md)|正确声明 P/Invoke|
+|[CA1001](../code-quality/ca1001.md)|具有可释放字段的类型应该是可释放的|
+|[CA1009](../code-quality/ca1009.md)|正确声明事件处理程序|
+|[CA1016](../code-quality/ca1016.md)|用 AssemblyVersionAttribute 标记程序集|
+|[CA1033](../code-quality/ca1033.md)|接口方法应可由子类型调用|
+|[CA1049](../code-quality/ca1049.md)|拥有本机资源的类型应是可释放的|
+|[CA1060](../code-quality/ca1060.md)|将 P/Invoke 移动到 NativeMethods 类|
+|[CA1061](../code-quality/ca1061.md)|不要隐藏基类方法|
+|[CA1063](../code-quality/ca1063.md)|正确实现 IDisposable|
+|[CA1065](../code-quality/ca1065.md)|不要在意外的位置引发异常|
+|[CA1301](../code-quality/ca1301.md)|避免快捷键重复|
+|[CA1400](../code-quality/ca1400.md)|P/Invoke 入口点应该存在|
+|[CA1401](../code-quality/ca1401.md)|P/Invokes 应该是不可见的|
+|[CA1403](../code-quality/ca1403.md)|自动布局类型不应对 COM 可见|
+|[CA1404](../code-quality/ca1404.md)|紧接在 P/Invoke 之后调用 GetLastError|
+|[CA1405](../code-quality/ca1405.md)|COM 可见类型的基类型应对 COM 可见|
+|[CA1410](../code-quality/ca1410.md)|应对 COM 注册方法进行匹配|
+|[CA1415](../code-quality/ca1415.md)|正确声明 P/Invoke|
 |[CA1821](../code-quality/ca1821.md)|移除空终结器|
 |[CA1900](../code-quality/ca1900.md)|值类型字段应为可移植字段|
 |[CA1901](../code-quality/ca1901.md)|P/Invoke 声明应为可移植声明|
@@ -87,10 +87,10 @@ Microsoft 扩展的正确性规则集包括 "[基本更正规则](../code-qualit
 |[CA2240](../code-quality/ca2240.md)|正确实现 ISerializable|
 |[CA2241](../code-quality/ca2241.md)|为格式化方法提供正确的参数|
 |[CA2242](../code-quality/ca2242.md)|正确测试 NaN|
-|[CA1008](../code-quality/ca1008-enums-should-have-zero-value.md)|枚举应具有零值|
-|[CA1013](../code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract.md)|重载加法方法和减法方法时重载相等运算符|
-|[CA1303](../code-quality/ca1303-do-not-pass-literals-as-localized-parameters.md)|请不要将文本作为本地化参数传递|
-|[CA1308](../code-quality/ca1308-normalize-strings-to-uppercase.md)|将字符串规范化为大写|
+|[CA1008](../code-quality/ca1008.md)|枚举应具有零值|
+|[CA1013](../code-quality/ca1013.md)|重载加法方法和减法方法时重载相等运算符|
+|[CA1303](../code-quality/ca1303.md)|请不要将文本作为本地化参数传递|
+|[CA1308](../code-quality/ca1308.md)|将字符串规范化为大写|
 |[CA1806](../code-quality/ca1806.md)|不要忽略方法结果|
 |[CA1816](../code-quality/ca1816.md)|正确调用 GC.SuppressFinalize|
 |[CA1819](../code-quality/ca1819.md)|属性不应返回数组|
@@ -116,22 +116,22 @@ Microsoft 扩展的正确性规则集包括 "[基本更正规则](../code-qualit
 |[CA2226](../code-quality/ca2226.md)|运算符应有对称重载|
 |[CA2227](../code-quality/ca2227.md)|集合属性应为只读|
 |[CA2239](../code-quality/ca2239.md)|为可选字段提供反序列化方法|
-|[CA1032](../code-quality/ca1032-implement-standard-exception-constructors.md)|实现标准异常构造函数|
-|[CA1054](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)|URI 参数不应为字符串|
-|[CA1055](../code-quality/ca1055-uri-return-values-should-not-be-strings.md)|URI 返回值不应是字符串|
-|[CA1056](../code-quality/ca1056-uri-properties-should-not-be-strings.md)|URI 属性不应是字符串|
-|[CA1057](../code-quality/ca1057-string-uri-overloads-call-system-uri-overloads.md)|字符串 URI 重载调用 System.Uri 重载|
-|[CA1402](../code-quality/ca1402-avoid-overloads-in-com-visible-interfaces.md)|避免在 COM 可见接口中进行重载|
-|[CA1406](../code-quality/ca1406-avoid-int64-arguments-for-visual-basic-6-clients.md)|避免对 Visual Basic 6 客户端使用 Int64 参数|
-|[CA1407](../code-quality/ca1407-avoid-static-members-in-com-visible-types.md)|避免在 COM 可见类型中使用静态成员|
-|[CA1408](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)|请不要使用 AutoDual ClassInterfaceType|
-|[CA1409](../code-quality/ca1409-com-visible-types-should-be-creatable.md)|COM 可见类型应该是可创建的|
-|[CA1411](../code-quality/ca1411-com-registration-methods-should-not-be-visible.md)|COM 注册方法应该是不可见的|
-|[CA1412](../code-quality/ca1412-mark-comsource-interfaces-as-idispatch.md)|将 ComSource 接口标记为 IDispatch|
-|[CA1413](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)|避免在 COM 可见值类型中使用非公共字段|
-|[CA1414](../code-quality/ca1414-mark-boolean-p-invoke-arguments-with-marshalas.md)|用 MarshalAs 标记布尔型 P/Invoke 参数|
-|[CA1600](../code-quality/ca1600-do-not-use-idle-process-priority.md)|不要使用 Idle 进程优先级|
-|[CA1601](../code-quality/ca1601-do-not-use-timers-that-prevent-power-state-changes.md)|不要使用阻止电源状态更改的计时器|
+|[CA1032](../code-quality/ca1032.md)|实现标准异常构造函数|
+|[CA1054](../code-quality/ca1054.md)|URI 参数不应为字符串|
+|[CA1055](../code-quality/ca1055.md)|URI 返回值不应是字符串|
+|[CA1056](../code-quality/ca1056.md)|URI 属性不应是字符串|
+|[CA1057](../code-quality/ca1057.md)|字符串 URI 重载调用 System.Uri 重载|
+|[CA1402](../code-quality/ca1402.md)|避免在 COM 可见接口中进行重载|
+|[CA1406](../code-quality/ca1406.md)|避免对 Visual Basic 6 客户端使用 Int64 参数|
+|[CA1407](../code-quality/ca1407.md)|避免在 COM 可见类型中使用静态成员|
+|[CA1408](../code-quality/ca1408.md)|请不要使用 AutoDual ClassInterfaceType|
+|[CA1409](../code-quality/ca1409.md)|COM 可见类型应该是可创建的|
+|[CA1411](../code-quality/ca1411.md)|COM 注册方法应该是不可见的|
+|[CA1412](../code-quality/ca1412.md)|将 ComSource 接口标记为 IDispatch|
+|[CA1413](../code-quality/ca1413.md)|避免在 COM 可见值类型中使用非公共字段|
+|[CA1414](../code-quality/ca1414.md)|用 MarshalAs 标记布尔型 P/Invoke 参数|
+|[CA1600](../code-quality/ca1600.md)|不要使用 Idle 进程优先级|
+|[CA1601](../code-quality/ca1601.md)|不要使用阻止电源状态更改的计时器|
 |[CA1824](../code-quality/ca1824.md)|用 NeutralResourcesLanguageAttribute 标记程序集|
 |[CA2001](../code-quality/ca2001.md)|避免调用有问题的方法|
 |[CA2003](../code-quality/ca2003.md)|不要将纤程视为线程|

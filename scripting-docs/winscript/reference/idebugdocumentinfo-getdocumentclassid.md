@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentInfo::GetDocumentClassId | Microsoft Docs
+title: IDebugDocumentInfo：： GetDocumentClassId |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c9e86c42954fafd4135956845f9465629cde9990
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 996e6d751807bba1e1a74cbb7e579db25193c32b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62971077"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72569079"
 ---
 # <a name="idebugdocumentinfogetdocumentclassid"></a>IDebugDocumentInfo::GetDocumentClassId
-返回`CLSID`标识文档类型。  
+返回标识文档类型的 `CLSID`。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT GetDocumentClassId(
   
 #### <a name="parameters"></a>参数  
  `pclsidDocument`  
- [out]一个`CLSID`标识文档类型。  
+ 弄标识文档类型 `CLSID`。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -47,9 +47,9 @@ HRESULT GetDocumentClassId(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法允许主机自定义查看器的调试器 IDE 为此文档。  
+ 此方法允许调试器 IDE 为此文档托管自定义查看器。  
   
- 如果文档不具有可查看的数据，返回值`pclsidDocument`是`CLSID_NULL`。  
+ 如果文档没有可查看的数据，则 `CLSID_NULL` `pclsidDocument` 的返回值。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugDocumentInfo 接口](../../winscript/reference/idebugdocumentinfo-interface.md)

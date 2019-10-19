@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthor::GetChars | Microsoft Docs
+title: IActiveScriptAuthor：： GetChars |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 69cdeb16fa0791b3ff8c0cce4a4e67fe110eefc2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2ce2b46d65c2ce92111bc4b6f44f66ce9dc4ce5f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935368"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576256"
 ---
 # <a name="iactivescriptauthorgetchars"></a>IActiveScriptAuthor::GetChars
-返回请求的完成上下文完成字符组。  
+为请求的完成上下文返回完成字符集。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,19 +38,19 @@ HRESULT GetChars(
   
 #### <a name="parameters"></a>参数  
  `fRequestedList`  
- [in]请求的完成上下文中。  
+ 中请求的完成上下文。  
   
 |返回的常量|“值”|描述|  
 |--------------|-----------|-----------------|  
-|SCRIPT_CMPL_ENUM_TRIGGER|0x0001|请求的左侧和右侧枚举。|  
-|SCRIPT_CMPL_MEMBER_TRIGGER|0x0002|请求的成员完成上下文。|  
-|SCRIPT_CMPL_PARAM_TRIGGER|0x0003|请求的参数列表。|  
-|SCRIPT_CMPL_COMMIT|0x0004|参数列表的请求完成。|  
+|SCRIPT_CMPL_ENUM_TRIGGER|0x0001|请求左侧枚举。|  
+|SCRIPT_CMPL_MEMBER_TRIGGER|0x0002|请求成员完成上下文。|  
+|SCRIPT_CMPL_PARAM_TRIGGER|0x0003|请求参数列表。|  
+|SCRIPT_CMPL_COMMIT|0x0004|请求完成参数列表。|  
   
  `pbstrChars`  
- [out]请求的完成上下文所对应的字符。  
+ 弄与请求的完成上下文相对应的字符。  
   
-|`fRequestedList` 参数|返回字符|  
+|`fRequestedList` 参数|返回的字符|  
 |--------------------------------|-------------------------|  
 |SCRIPT_CMPL_ENUM_TRIGGER|"."|  
 |SCRIPT_CMPL_MEMBER_TRIGGER|"="|  

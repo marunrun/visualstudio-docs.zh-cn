@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::GetRange | Microsoft Docs
+title: IScriptEntry：： GetRange |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7baa284be4fa7f45f247df7f4b3d140869f254b1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0a6e1b1600c93aa05bbe9669fb57a23a8c9344a1
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787732"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575438"
 ---
 # <a name="iscriptentrygetrange"></a>IScriptEntry::GetRange
-返回的起始位置和长度的一个条目。  
+返回项的开始位置和长度。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,18 +38,18 @@ HRESULT GetRange(
   
 #### <a name="parameters"></a>参数  
  `pichMin`  
- [out]有关`IScriptEntry`对象指定脚本块，则返回 0。  
+ 弄对于指定脚本块的 `IScriptEntry` 对象，将返回0。  
   
- 有关`IScriptEntry`当前脚本块中指定一个函数对象的对象返回该函数的起始位置。  
+ 对于指定函数对象 `IScriptEntry` 对象，返回函数在当前脚本块中的开始位置。  
   
- 有关`IScriptScriptlet`对象，则返回 0。  
+ 对于 `IScriptScriptlet` 对象，返回0。  
   
  `pcch`  
- [out]有关`IScriptEntry`这些对象指定脚本块中，返回文本的长度。  
+ 弄对于指定脚本块的 `IScriptEntry` 对象，返回文本的长度。  
   
- 有关`IScriptEntry`指定一个函数对象的对象返回的函数定义长度。  
+ 对于指定函数对象 `IScriptEntry` 对象，返回函数定义的长度。  
   
- 有关`IScriptScriptlet`对象，则返回项的长度。  
+ 对于 `IScriptScriptlet` 对象，返回条目的长度。  
   
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  

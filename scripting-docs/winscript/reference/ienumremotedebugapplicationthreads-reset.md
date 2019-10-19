@@ -1,5 +1,5 @@
 ---
-title: IEnumRemoteDebugApplicationThreads::Reset | Microsoft Docs
+title: IEnumRemoteDebugApplicationThreads：： Reset |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7a7c6fca01af5a3413ace6d95ca5c5879f4318ee
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ab1f2b4afdcaa9cdb6f506c64b1c7563cd218624
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62807181"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577784"
 ---
 # <a name="ienumremotedebugapplicationthreadsreset"></a>IEnumRemoteDebugApplicationThreads::Reset
-将枚举序列重置到开头。  
+将枚举序列重置到开始处。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +34,7 @@ HRESULT Reset();
 ```  
   
 #### <a name="parameters"></a>参数  
- 此方法需要任何参数。  
+ 此方法不采用任何参数。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -44,7 +44,7 @@ HRESULT Reset();
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法将枚举序列重置到开头。  
+ 此方法将枚举序列重置到开始处。  
   
 ## <a name="see-also"></a>请参阅  
  [IEnumRemoteDebugApplicationThreads 接口](../../winscript/reference/ienumremotedebugapplicationthreads-interface.md)

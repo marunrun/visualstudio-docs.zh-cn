@@ -29,12 +29,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d0b9fb6e809f1124a10a6a2b4e35bc59806787a6
-ms.sourcegitcommit: 8a3545329a58e446672181cfed2083f850e1ad14
+ms.openlocfilehash: 21573f1f8bd49782739027f7dfc2034bb7501a2f
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71814336"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72535988"
 ---
 # <a name="view-the-call-stack-and-use-the-call-stack-window-in-the-debugger"></a>查看调用堆栈并使用调试器中的 "调用堆栈" 窗口
 
@@ -54,7 +54,7 @@ ms.locfileid: "71814336"
 
 - 调试过程中，在 "**调试**" 菜单中选择 " **Windows > 调用堆栈**"。
 
-  "![调用堆栈" 窗口](../debugger/media/dbg_basics_callstack_window.png "CallStackWindow")
+  ![调用堆栈窗口](../debugger/media/dbg_basics_callstack_window.png "CallStackWindow")
 
 一个黄色箭头标识执行指针当前所位于的堆栈帧。 默认情况下，此堆栈帧的信息显示在 "源"、"**本地**" **、"自动"、** "**监视**" 和 "**反汇编**" 窗口中。 若要将调试器上下文更改为堆栈上的另一个帧，请[切换到另一个堆栈帧](#bkmk_switch)。
 
@@ -96,7 +96,7 @@ ms.locfileid: "71814336"
 
 在 Visual Studio Enterprise （仅限）中，你可以在调试时查看调用堆栈的代码图。
 
-- 在“调用堆栈”窗口中，打开快捷菜单。 选择 **"在代码图上显示调用堆栈"** （**Ctrl** + **Shift** +  **`** ）。
+- 在“调用堆栈”窗口中，打开快捷菜单。 选择 **"在代码图上显示调用堆栈"** （**Ctrl**  + **Shift**  +  **`** ）。
 
     有关详细信息，请参阅[调试时在调用堆栈上映射方法](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)。
 
@@ -108,11 +108,11 @@ ms.locfileid: "71814336"
 
 ## <a name="change-the-optional-information-displayed"></a>更改显示的可选信息
 
-- 右键单击 "**调用堆栈**" 窗口，然后设置或清除 "**显示 \<** _" 所需的信息_ **>** 。
+- 右键单击 "**调用堆栈**" 窗口，然后设置或清除 "**显示 \<** _要 > 的信息_。
 
 ## <a name="bkmk_symbols"></a>为模块加载符号（C#、 C++、Visual Basic） F#
 
-在“调用堆栈”窗口中，可以为当前还未加载符号的代码加载调试符号。 这些符号可以是从 Microsoft 公共符号服务器下载的 .NET Framework 符号或系统符号，也可以是正在调试的计算机上的某个符号路径中的符号。
+在“调用堆栈”窗口中，可以为当前还未加载符号的代码加载调试符号。 这些符号可以是从 Microsoft 公共符号服务器下载的 .NET 或系统符号，也可以是正在调试的计算机上的符号路径中的符号。
 
 请参阅[指定符号 (.pdb) 和源文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)。
 

@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptStringCompare::StrComp | Microsoft Docs
+title: IActiveScriptStringCompare：： StrComp |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 66cccb4281e19aebb25b3b4cde06705b500f53a3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 233c427b634306527b0b0d496397e82f889560e2
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62991434"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577941"
 ---
 # <a name="iactivescriptstringcomparestrcomp"></a>IActiveScriptStringCompare::StrComp
 定义脚本引擎的字符串比较方法。  
@@ -48,7 +48,7 @@ HRESULT StrComp(
  第二个字符串。  
   
  `iRet`  
- 比较的结果。 0`bszStr1`并`bszStr2`完全相同; 如果`bszStr1`  <  `bszStr2`; 1，如果`bszStr1`  >  `bszStr2`。  
+ 比较的结果。 如果 `bszStr1` 和 `bszStr2`are 相同，则为 0;如果 `bszStr1`  <  `bszStr2`，则为-1;如果 `bszStr1`  >  `bszStr2`，则为1。  
   
 ## <a name="return-value"></a>返回值  
  返回以下值之一：  
@@ -57,13 +57,13 @@ HRESULT StrComp(
 |------------------|-------------|  
 |`S_OK`|成功。|  
 |`E_INVALIDARG`|自变量无效。|  
-|`E_UNEXPECTED`|不应在调用 （例如，脚本引擎具有尚未加载或初始化）。|  
+|`E_UNEXPECTED`|不应进行调用（例如，尚未加载或初始化脚本引擎）。|  
   
 ## <a name="remarks"></a>备注  
- 此方法是执行字符串比较每次调用。  
+ 每次执行字符串比较时都将调用此方法。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何重载的字符串比较函数。 当您使用重载允许[IActiveScriptProperty::SetProperty](../../winscript/reference/iactivescriptproperty-setproperty.md)设置 SCRIPTPROP_STRINGCOMPAREINSTANCE。  
+ 下面的示例演示如何重载字符串比较函数。 使用[IActiveScriptProperty：： SetProperty](../../winscript/reference/iactivescriptproperty-setproperty.md)设置 SCRIPTPROP_STRINGCOMPAREINSTANCE 时允许重载。  
   
 ```cpp#  
 cpp_quote("// {58562769-ED52-42f7-8403-4963514E1F11}")  

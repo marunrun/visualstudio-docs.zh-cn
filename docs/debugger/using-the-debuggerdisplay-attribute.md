@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 866ad705f16e9eabb097e9c0c9064d2c379ebf9f
-ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
+ms.openlocfilehash: f16040408def290536ac5dadfec77ade9577c821
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72349625"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72568918"
 ---
 # <a name="tell-the-debugger-what-to-show-using-the-debuggerdisplay-attribute-c-visual-basic-f-ccli"></a>使用 DebuggerDisplay 特性（C#、Visual Basic、 F#、 C++/cli）告诉调试器要显示的内容
 
@@ -25,12 +25,12 @@ ms.locfileid: "72349625"
 
 `DebuggerDisplay` 特性有一个参数，此参数是要在值列中为类型的实例显示的字符串。 此字符串可以包含大括号（`{` 和 `}`）。 一对大括号之间的文本将作为字段、属性或方法进行计算。
 
-如果一个类中有重写的 `ToString()` 方法，调试器将使用该重写的方法而非默认 `{<typeName>}`。 因此，如果你已重写 `ToString()` 方法，调试器将使用重写的方法而非默认`{<typeName>}`，你无需使用 `DebuggerDisplay`。 如果同时使用，`DebuggerDisplay` 属性优先于替代的 `ToString()` 方法。 @No__t-0 特性还优先于子类中重写的 `ToString()` 方法。
+如果一个类中有重写的 `ToString()` 方法，调试器将使用该重写的方法而非默认 `{<typeName>}`。 因此，如果你已重写 `ToString()` 方法，调试器将使用重写的方法而非默认`{<typeName>}`，你无需使用 `DebuggerDisplay`。 如果同时使用，`DebuggerDisplay` 属性优先于替代的 `ToString()` 方法。 @No__t_0 特性还优先于子类中重写的 `ToString()` 方法。
 
-调试器是否计算此隐式 `ToString()` 调用取决于“工具”/“选项”/“调试”  对话框中的用户设置。 Visual Basic 不实现此隐式 `ToString()` 计算。
+调试器是否计算此隐式 `ToString()` 调用取决于“工具”/“选项”/“调试” 对话框中的用户设置。 Visual Basic 不实现此隐式 `ToString()` 计算。
 
 > [!IMPORTANT]
-> 如果在“工具”/“选项”/“调试”  对话框中选中了“在变量窗口中显示对象的原始结构”  复选框，则将忽略 `DebuggerDisplay` 特性。
+> 如果在“工具”/“选项”/“调试” 对话框中选中了“在变量窗口中显示对象的原始结构” 复选框，则将忽略 `DebuggerDisplay` 特性。
 
 > [!NOTE]
 > 对于本机代码，此属性仅在/Cli 代码C++中受支持。
@@ -182,6 +182,6 @@ class MyHashtable
 ## <a name="see-also"></a>请参阅
 
 - [使用 DebuggerTypeProxy 特性](../debugger/using-debuggertypeproxy-attribute.md)
-- [创建托管对象的自定义视图](../debugger/create-custom-views-of-dot-managed-objects.md)
+- [创建托管对象的自定义视图](../debugger/create-custom-views-of-managed-objects.md)
 - [C# 中的格式说明符](../debugger/format-specifiers-in-csharp.md)
 - [使用调试器显示特性增强调试](/dotnet/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes)
