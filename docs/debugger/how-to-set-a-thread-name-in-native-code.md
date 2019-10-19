@@ -16,32 +16,32 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37a028fb5af099484d81374e52cfd12af727f94
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a89dce28f33bef0ffdb13d6254b2ac6b86ac25db
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62847533"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589024"
 ---
 # <a name="how-to-set-a-thread-name-in-native-code"></a>如何：在本机代码中设置线程名称
-在 Visual Studio 的任何版本中都可以使用线程命名功能。 线程命名功能可用于标识的感兴趣的线程**线程**窗口调试正在运行的进程时。 具有 recognizably 名为线程也会有所帮助时执行事后调试通过崩溃转储检查和分析性能捕获使用各种工具。
+在 Visual Studio 的任何版本中都可以使用线程命名功能。 当调试正在运行的进程时，线程命名有助于标识 "**线程**" 窗口中感兴趣的线程。 在通过故障转储检查并使用各种工具分析性能捕获时，具有 recognizably 命名的线程也会有所帮助。
 
-## <a name="ways-to-set-a-thread-name"></a>如何设置线程名称
+## <a name="ways-to-set-a-thread-name"></a>设置线程名称的方法
 
-有两种方法来设置线程名称。 第一种是通过[SetThreadDescription](https://docs.microsoft.com/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreaddescription)函数。 第二个是通过 Visual Studio 调试器附加到进程时引发特定异常。 每种方法都有优点和需要注意的问题。
+可以通过两种方法来设置线程名称。 第一种方式是通过[SetThreadDescription](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreaddescription)函数。 第二种方法是在 Visual Studio 调试器附加到进程时引发特定异常。 每种方法都有优点和注意事项。 从 Windows 10 版本1607或 Windows Server 2016 开始，支持使用 `SetThreadDescription`。
 
-值得注意的是_同时_方法可以一起使用，如果需要，因为它们的工作所依据的机制是相互独立。
+值得注意的是，_这两_种方法可以一起使用（如果需要），因为它们的工作机制彼此独立。
 
-### <a name="set-a-thread-name-by-using-setthreaddescription"></a>通过设置线程名称 `SetThreadDescription`
+### <a name="set-a-thread-name-by-using-setthreaddescription"></a>使用 `SetThreadDescription` 设置线程名称
 
 优点：
-* 在 Visual Studio 中，而不考虑在调试器已附加到进程调用 SetThreadDescription 时进行调试时，线程名称是可见的。
-* 执行事后通过加载 Visual Studio 中的故障转储调试时，线程名称是可见的。
-* 线程名称也是可见时使用其他工具，如[WinDbg](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-tools)调试器并[Windows Performance Analyzer](https://docs.microsoft.com/windows-hardware/test/wpt/windows-performance-analyzer)性能分析器。
+* 在 Visual Studio 中进行调试时，线程名称是可见的，无论调试程序是否已在调用 SetThreadDescription 时附加到进程。
+* 在 Visual Studio 中加载故障转储后，线程名称将在执行事后调试时可见。
+* 使用其他工具（如[WinDbg](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-tools)调试器和[Windows 性能分析器](https://docs.microsoft.com/windows-hardware/test/wpt/windows-performance-analyzer)性能分析器）时，也会显示线程名称。
 
 注意：
-* 线程名称将仅显示在 Visual Studio 2017 版本 15.6 及更高版本。
-* 事后调试崩溃转储文件，线程名称时，仅在 Windows 10 版本 1607年中，Windows Server 2016 或更高版本的 Windows 上创建在崩溃时可见。
+* 线程名称只在 Visual Studio 2017 版本15.6 及更高版本中可见。
+* 当事后调试故障转储文件时，只有在 Windows 10 版本1607、Windows Server 2016 或更高版本的 Windows 上创建了崩溃后，线程名称才可见。
 
 *示例：*
 
@@ -63,18 +63,18 @@ int main()
 
 ### <a name="set-a-thread-name-by-throwing-an-exception"></a>通过引发异常来设置线程名称
 
-若要在程序中设置线程名称的另一种方法是通过引发专门配置异常到 Visual Studio 调试器通信所需的线程名称。
+在程序中设置线程名称的另一种方法是，通过引发专门配置的异常将所需的线程名称传达给 Visual Studio 调试器。
 
 优点：
-* 所有版本的 Visual Studio 中的工作原理。
+* 适用于所有版本的 Visual Studio。
 
 注意：
-* 仅适用于将调试器附加于的基于异常的方法的时间。
-* 使用此方法设置线程名称在转储或性能分析工具中将不可用。
+* 仅在使用基于异常的方法时附加调试器时才起作用。
+* 使用此方法设置的线程名称将在转储或性能分析工具中不可用。
 
 *示例：*
 
-`SetThreadName`函数如下所示演示此基于异常的方法。 请注意，线程名称将自动复制到线程，以便为内存`threadName`参数可以释放后`SetThreadName`调用完成。
+下面显示的 `SetThreadName` 函数演示了此基于异常的方法。 请注意，线程名称将自动复制到线程，以便 `threadName` 参数的内存可在 `SetThreadName` 调用完成后释放。
 
 ```C++
 //
