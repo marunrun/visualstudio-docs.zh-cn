@@ -1,5 +1,5 @@
 ---
-title: CA1714:枚举应采用复数形式的名称 |Microsoft Docs
+title: CA1714：标志枚举应包含复数名称 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,44 +12,44 @@ helpviewer_keywords:
 - FlagsEnumsShouldHavePluralNames
 ms.assetid: 95ef5b43-7681-49e9-a5a3-ac0357cf1be7
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: bf0e75596bfc2b274f12d9b58d2718881931b7df
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: ca3709411f50d0b65f33bb8eed6457cfd1325ff6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65700511"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669137"
 ---
-# <a name="ca1714-flags-enums-should-have-plural-names"></a>CA1714:Flags 枚举应采用复数形式的名称
+# <a name="ca1714-flags-enums-should-have-plural-names"></a>CA1714：Flags 枚举应采用复数形式的名称
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|FlagsEnumsShouldHavePluralNames|
 |CheckId|CA1714|
-|类别|Microsoft.Naming|
+|类别|Microsoft。命名|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 公共枚举具有<xref:System.FlagsAttribute?displayProperty=fullName>和其名称不会结束中的。
+ 公共枚举具有 <xref:System.FlagsAttribute?displayProperty=fullName>，且其名称不以 "" 结尾。
 
 ## <a name="rule-description"></a>规则说明
- 使用标记的类型<xref:System.FlagsAttribute>具有采用复数形式，因为该属性指示可以指定多个值的名称。 例如，枚举，用于定义每周天数可能被用于应用程序中您可以在其中指定多天。 此枚举应具有<xref:System.FlagsAttribute>且无法调用天。 允许仅指定一天的类似枚举将没有属性，并可能是名为 Day。
+ 标记为 <xref:System.FlagsAttribute> 的类型具有复数形式的名称，因为该特性指示可以指定多个值。 例如，定义一周中各天的枚举可能适用于可指定多天的应用程序。 此枚举应具有 <xref:System.FlagsAttribute>，并且可以称为 "Days"。 只允许指定一天的类似枚举不具有属性，并且可以称为 "Day"。
 
- 命名约定提供了通用的外观对于库面向公共语言运行时。 这会减少所需的新软件库，并会增加客户信心库由必须在托管代码中开发的专业知识的人学习曲线。
+ 命名约定为面向公共语言运行时的库提供了通用的外观。 这减少了新软件库所需的学习曲线，并使客户可以放心地了解库是由具有开发托管代码的专业技能的人员开发的。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 确保枚举名称的复数形式的单词，或删除<xref:System.FlagsAttribute>属性如果不应同时指定多个枚举值。
+ 如果不应同时指定多个枚举值，请将枚举的名称设置为复数单词，或删除 <xref:System.FlagsAttribute> 属性。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 则可以安全地禁止显示冲突，如果名称为复数形式的单词，但不是以结尾的。 例如，如果所述的多个天枚举以前名为 DaysOfTheWeek，这会违反该规则，但不是其意图的逻辑。 此类违规情况应禁止显示。
+ 如果名称是复数形式的单词，但不是以 "" 结尾，则可以安全地禁止显示冲突。 例如，如果前面介绍的多天枚举名为 "DaysOfTheWeek"，则这将违反规则的逻辑，而不是其意图。 此类冲突应为 suppressd。
 
-## <a name="related-rules"></a>相关的规则
- [CA1027:用 FlagsAttribute 标记枚举](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
+## <a name="related-rules"></a>相关规则
+ [CA1027：用 FlagsAttribute 标记枚举](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
 
- [CA2217:不使用 FlagsAttribute 标记枚举](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
+ [CA2217：不要使用 FlagsAttribute 标记枚举](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
 
 ## <a name="see-also"></a>请参阅
- <xref:System.FlagsAttribute?displayProperty=fullName> [枚举设计](https://msdn.microsoft.com/library/dd53c952-9d9a-4736-86ff-9540e815d545)
+ <xref:System.FlagsAttribute?displayProperty=fullName>[枚举设计](https://msdn.microsoft.com/library/dd53c952-9d9a-4736-86ff-9540e815d545)

@@ -8,24 +8,24 @@ helpviewer_keywords:
 - UML activity diagrams, programming
 ms.assetid: 8cdd0203-85ef-4c62-9abc-da4cb26fa504
 caps.latest.revision: 27
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d0bebbb4e6dfe25ce9834595be11aad0fd1f1ba0
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: cbc7a6ce7edede6759c0562df1e524d932f62b91
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871873"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669716"
 ---
 # <a name="edit-uml-sequence-diagrams-by-using-the-uml-api"></a>使用 UML API 编辑 UML 序列图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 交互是一组生命线之间的消息序列。 交互显示在 UML 序列图上。
 
- 有关 API 的完整详细信息, 请参阅[VisualStudio](/previous-versions/dd493373(v=vs.140))。
+ 有关 API 的完整详细信息，请参阅[VisualStudio](/previous-versions/dd493373(v=vs.140))。
 
- 有关编写用于 UML 关系图的命令和笔势处理程序的更一般的介绍, 请参阅[在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)。
+ 有关编写用于 UML 关系图的命令和笔势处理程序的更一般的介绍，请参阅[在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)。
 
 ## <a name="basic-code"></a>基本代码
 
@@ -52,7 +52,7 @@ using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation;
    // for diagrams and context
 ```
 
- 有关详细信息, 请参阅[在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)。
+ 有关详细信息，请参阅[在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)。
 
 ### <a name="getting-the-context"></a>获取上下文
  如果正在编辑作为序列图中命令或笔势处理程序一部分的交互，则可以获取对上下文的引用。 例如:
@@ -118,7 +118,7 @@ public void Execute (IMenuCommand command)
 ## <a name="updating-an-interaction-and-its-layout"></a>更新交互及其布局
  更新交互时，请始终通过使用以下方法之一更新其布局来结束你的操作：
 
-- `ISequenceDiagram.UpdateShapePositions()`调整最近插入或移动的形状的位置及其相邻形状。
+- `ISequenceDiagram.UpdateShapePositions()` 调整最近插入或移动的形状的位置及其相邻形状。
 
 - `ISequenceDiagram.Layout([SequenceDiagramLayoutKinds])` 重绘整个关系图。 你可以使用该参数来指定生命线和/或消息的重新定位。
 
@@ -141,7 +141,7 @@ using (ILinkedUndoTransaction transaction = LinkedUndoContext.BeginTransaction("
 [Import] ILinkedUndoContext LinkedUndoContext { get; set; }
 ```
 
- 有关详细信息, 请参阅[使用事务链接 UML 模型更新](../modeling/link-uml-model-updates-by-using-transactions.md)。
+ 有关详细信息，请参阅[使用事务链接 UML 模型更新](../modeling/link-uml-model-updates-by-using-transactions.md)。
 
 ## <a name="building-an-interaction"></a>生成交互
 

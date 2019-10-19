@@ -6,31 +6,30 @@ ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.assetid: fbeba971-c468-4429-8017-0f12ab55638c
 caps.latest.revision: 7
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 945b6f7b4f7b1e6418f45e5130ef08edaabf8b53
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7f02c3fe2e3d8fa67cb8a996ba14dddce7b1a3a8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68185681"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72657068"
 ---
 # <a name="writing-unit-tests-for-the-net-framework-with-the-microsoft-unit-test-framework-for-managed-code"></a>用 Microsoft 适用于托管代码的单元测试框架编写 .NET Framework 的单元测试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-本节内容  
- [演练：创建并运行托管代码的单元测试](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)  
-  
- [快速入门：通过测试资源管理器进行测试驱动开发](../test/quick-start-test-driven-development-with-test-explorer.md)  
-  
- [在单元测试中使用 Microsoft.VisualStudio.TestTools.UnitTesting 成员](../test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md)  
-  
- [使用 Assert 类](../test/using-the-assert-classes.md)  
-  
- [如何：创建数据驱动的单元测试](../test/how-to-create-a-data-driven-unit-test.md)  
-  
- [泛型方法的单元测试](../test/unit-tests-for-generic-methods.md)  
-  
- [如何：面向 .NET 的早期版本](../test/how-to-configure-unit-tests-to-target-an-earlier-version-of-the-dotnet-framework.md)  
-  
+本部分[演练：为托管代码创建和运行单元测试](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)
+
+ [快速入门：通过测试资源管理器进行测试驱动开发](../test/quick-start-test-driven-development-with-test-explorer.md)
+
+ [在单元测试中使用 Microsoft.VisualStudio.TestTools.UnitTesting 成员](../test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md)
+
+ [使用 Assert 类](../test/using-the-assert-classes.md)
+
+ [如何：创建数据驱动的单元测试](../test/how-to-create-a-data-driven-unit-test.md)
+
+ [泛型方法的单元测试](../test/unit-tests-for-generic-methods.md)
+
+ [如何：面向 .NET 的早期版本](../test/how-to-configure-unit-tests-to-target-an-earlier-version-of-the-dotnet-framework.md)
+
  [用于创建单元测试的示例项目](../test/sample-project-for-creating-unit-tests.md)

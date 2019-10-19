@@ -1,23 +1,23 @@
 ---
-title: 工作流设计器的控制流活动设计器
+title: 工作流设计器控制流活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: ba74af23-5398-4e62-bd90-c50612e3bfef
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a3bcbf5ee70b90a0606c7e4cb3d691d28298c2d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f1e7d7548eef3fd6ca6a21bb8c2fe5cb23e27df1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949864"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650606"
 ---
 # <a name="control-flow-activity-designers"></a>控制流活动设计器
 
-工作流设计器包括大量的系统提供构造工作流时可以使用的活动。 本节包含系统提供的活动中用于控制工作流中的流的活动。 以下主题介绍这些活动以及如何使用它们。
+工作流设计器包括多个系统提供的活动，这些活动在构造工作流时可以使用。 本节包含系统提供的活动中用于控制工作流中的流的活动。 以下主题介绍这些活动以及如何使用它们。
 
 ## <a name="reference"></a>参考
 
@@ -45,7 +45,7 @@ ms.locfileid: "62949864"
 
 ## <a name="related-sections"></a>相关章节
 
-有关其他类型的活动设计器，请参阅以下主题：
+对于其他类型的活动设计器，请参阅以下主题：
 
  [使用活动设计器](../workflow-designer/using-the-activity-designers.md)
 
@@ -59,7 +59,7 @@ ms.locfileid: "62949864"
 
  [事务](../workflow-designer/transaction-activity-designers.md)
 
- [集合](../workflow-designer/collection-activity-designers.md)
+ [收集](../workflow-designer/collection-activity-designers.md)
 
  [错误处理](../workflow-designer/error-handling-activity-designers.md)
 

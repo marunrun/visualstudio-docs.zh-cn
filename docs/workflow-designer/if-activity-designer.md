@@ -1,21 +1,21 @@
 ---
-title: 工作流设计器-如果活动设计器
+title: 工作流设计器-If 活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.If.UI
 ms.assetid: 930a8fa2-db98-43e9-ad6d-a85cc7a6519a
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 762199906bbb84701c044b5fa9f3f3b8c6fdfdae
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4e0c08d655393a953e1abae9d33086d43e281500
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949196"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650241"
 ---
 # <a name="if-activity-designer"></a>If 活动设计器
 
@@ -27,9 +27,9 @@ ms.locfileid: "62949196"
 
 |属性名|必需|用法|
 |-|--------------|-|
-|<xref:System.Activities.Statements.If.Condition%2A>|True|用于确定要执行哪个子活动的条件。 若要设置<xref:System.Activities.Statements.If.Condition%2A>，键入 Visual Basic 表达式**条件**框**如果**活动设计器或在属性网格中。|
-|<xref:System.Activities.Statements.If.Else%2A>|False|要执行的活动<xref:System.Activities.Statements.If.Condition%2A>是**false**。 若要添加活动，则由<xref:System.Activities.Statements.If.Else%2A>分支中，将活动从**工具箱**到**Else**框**如果**带提示文本的活动设计器"在此处放置活动"。|
-|<xref:System.Activities.Statements.If.Then%2A>|False|要执行的活动<xref:System.Activities.Statements.If.Condition%2A>是**true**。 若要添加活动，则由<xref:System.Activities.Statements.If.Then%2A>分支中，将活动从**工具箱**到**然后**框**如果**带提示文本的活动设计器"在此处放置活动"。|
+|<xref:System.Activities.Statements.If.Condition%2A>|True|用于确定要执行哪个子活动的条件。 若要设置 <xref:System.Activities.Statements.If.Condition%2A>，请在 " **If** " 活动设计器或属性网格中的 "**条件**" 框中键入 Visual Basic 表达式。|
+|<xref:System.Activities.Statements.If.Else%2A>|False|@No__t_0 为**false**时要执行的活动。 若要添加 <xref:System.Activities.Statements.If.Else%2A> 分支执行的活动，请将活动从 "**工具箱**" 拖放到 " **If** " 活动设计器上带提示文本 "将活动放置到此处" 的 " **Else** " 框中。|
+|<xref:System.Activities.Statements.If.Then%2A>|False|@No__t_0 为**true**时要执行的活动。 若要添加由 <xref:System.Activities.Statements.If.Then%2A> 分支执行的活动，请将活动从 "**工具箱**" 拖放到 " **If** " 活动设计器上的 "Then" 框，并提示文本 "**将**活动放在此处"。|
 
 ## <a name="see-also"></a>请参阅
 

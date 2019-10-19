@@ -1,5 +1,5 @@
 ---
-title: 如何：强制执行可维护的代码使用代码分析签入策略 |Microsoft Docs
+title: 如何：使用代码分析签入策略强制实现代码的可维护性 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -8,57 +8,56 @@ helpviewer_keywords:
 - code analysis, check-in policies
 ms.assetid: d1b3b04f-4dd9-40e6-b2d4-b414d33fb647
 caps.latest.revision: 10
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 27593a450f7c2a1b34c1c84bc1d4e7ea5bb5919f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0d54ca9a31e8a1bbd2496bf8689a119e53580c79
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68142262"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660221"
 ---
-# <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>如何：使用代码分析签入策略强制实现可维护的代码
+# <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>如何：使用代码分析签入策略强制实现代码的可维护性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-开发人员可以使用代码度量值工具来衡量的复杂性和可维护性的其代码，但不是能调用代码度量值作为签入策略的一部分。 但是，团队可以启用代码分析规则，验证其代码符合代码度量标准和强制实施通过签入策略的规则。 代码度量值的详细信息，请参阅[代码度量值](../code-quality/code-metrics-values.md)。  
-  
- 开发人员可以实现继承深度、 类耦合、 可维护性指数和复杂性规则以强制实施通过代码分析签入策略可维护的代码。 这些规则的所有四个代码分析策略编辑器中找到"可维护性规则"类别下。  
-  
- 版本控制的管理员为[!INCLUDE[esprfound](../includes/esprfound-md.md)]可以将代码分析可维护性规则添加到签入策略要求。 这些签入策略要求开发人员运行代码分析签入启动之前基于这些规则的更改。  
-  
-### <a name="to-open-the-code-analysis-policy-editor"></a>若要打开代码分析策略编辑器  
-  
-1. 在中**团队资源管理器**，右键单击团队项目，单击**团队项目设置**，然后单击**源代码管理**。  
-  
-     **源代码管理**对话框随即出现。  
-  
-2. 上**签入策略**选项卡，然后单击**添加**。  
-  
-     **添加签入策略**对话框随即出现。  
-  
-3. 在中**签入策略**列表中，选择**代码分析**复选框，然后依次**确定**。  
-  
-     **代码分析策略编辑器**对话框随即出现。  
-  
-### <a name="to-enable-code-analysis-maintainability-rules"></a>若要启用代码分析可维护性规则  
-  
-1. 在中**代码分析策略编辑器**对话框中的**规则设置**，展开**可维护性规则**节点。  
-  
-2. 选择以下规则对应的复选框：  
-  
-    - 继承深度：**CA1501 AvoidExcessiveInheritance** -阈值：在 5 个以上级别深度警告  
-  
-    - 复杂性：**CA1502 AvoidExcessiveComplexity** -阈值：在超过 25 种的警告  
-  
-    - 可维护性索引：**CA1505 AvoidUnmaintainableCode** -阈值：少于 20 发出警告  
-  
-    - 类耦合度：**CA1506 AvoidExcessiveClassCoupling** -阈值：在多个类的 80 和多个方法，为 30 的警告  
-  
-    - 此外，如果你想禁止生成规则冲突，则选择**将警告视为错误**规则说明旁边的复选框。  
-  
-3. 单击 **“确定”** 。 新签入策略现在适用于未来的签入。  
-  
-## <a name="see-also"></a>请参阅  
- [代码度量值](../code-quality/code-metrics-values.md)   
- [创建和使用代码分析签入策略](../code-quality/creating-and-using-code-analysis-check-in-policies.md)
+开发人员可以使用代码度量工具来度量其代码的复杂性和可维护性，但不能将代码度量值作为签入策略的一部分来调用。 但是，团队可以启用代码分析规则来验证其代码的符合性和代码度量标准，并通过签入策略强制执行这些规则。 有关代码度量值的详细信息，请参阅[代码度量值](../code-quality/code-metrics-values.md)。
+
+ 开发人员可以通过代码分析签入策略来实现继承、类耦合、可维护性索引和复杂性规则的深度，从而强制实现代码的可维护性。 所有这四个规则都位于 "代码分析策略编辑器" 中的 "可维护性规则" 类别下。
+
+ @No__t_0 的版本控制管理员可以将代码分析可维护性规则添加到签入策略要求。 这些签入策略要求开发人员在启动签入之前根据这些规则更改运行代码分析。
+
+### <a name="to-open-the-code-analysis-policy-editor"></a>打开代码分析策略编辑器
+
+1. 在**团队资源管理器**中，右键单击团队项目，单击 "**团队项目设置**"，然后单击 "**源代码管理**"。
+
+     此时将显示 "**源代码管理**" 对话框。
+
+2. 在 "**签入策略**" 选项卡上，单击 "**添加**"。
+
+     此时将显示 "**添加签入策略**" 对话框。
+
+3. 在 "**签入策略**" 列表中，选择 "**代码分析**" 复选框，然后单击 **"确定"** 。
+
+     此时将显示 "**代码分析策略编辑器**" 对话框。
+
+### <a name="to-enable-code-analysis-maintainability-rules"></a>启用代码分析可维护性规则
+
+1. 在 "**代码分析策略编辑器**" 对话框中的 "**规则设置**" 下，展开 "可**维护性规则**" 节点。
+
+2. 选中以下规则的复选框：
+
+    - 继承深度： **CA1501 AvoidExcessiveInheritance** -阈值：警告，深度超过5层
+
+    - 复杂性： **CA1502 AvoidExcessiveComplexity** -阈值：警告（超过25个）
+
+    - 可维护性索引： **CA1505 AvoidUnmaintainableCode** -阈值：警告低于20
+
+    - 类耦合： **CA1506 AvoidExcessiveClassCoupling** -阈值：对于类超过80的警告，对于方法为30个以上
+
+    - 此外，如果你希望规则冲突阻止生成，请选中规则说明旁边的 "将**警告视为错误**" 复选框。
+
+3. 单击“确定”。 新的签入策略现在适用于将来的签入。
+
+## <a name="see-also"></a>请参阅
+ [代码度量值](../code-quality/code-metrics-values.md)[创建和使用代码分析签入策略](../code-quality/creating-and-using-code-analysis-check-in-policies.md)

@@ -6,20 +6,20 @@ f1_keywords:
 - vs.dsltools.dsldesigner.editor
 helpviewer_keywords:
 - Domain-Specific Language Tools, user interface
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bcc16b5287e4980d94a7cbcc4dff4d1f5f63d00
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e9a99eef692eb776908c6b8c4a32eb361092855a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62808314"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658309"
 ---
 # <a name="overview-of-the-domain-specific-language-tools-user-interface"></a>域特定语言工具用户界面的概述
-当首次在 Visual Studio 中打开的域特定语言工具 （DSL 工具） 解决方案时，用户界面类似于下图。
+首次在 Visual Studio 中打开特定于域的语言工具（DSL 工具）解决方案时，用户界面将与下图类似。
 
  ![dsl 设计器](../modeling/media/dsl_designer.png)
 

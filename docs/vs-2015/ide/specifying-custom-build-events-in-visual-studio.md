@@ -8,15 +8,15 @@ helpviewer_keywords:
 - build events, customizing
 ms.assetid: 69e935a5-e208-4bcd-865c-3e5f9b047ca8
 caps.latest.revision: 15
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d00c520f75869e6cf886074c482575f1170e923a
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: fabbd4dc42ac4f66c7f53b639c6e7ed1f432878c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65679532"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667129"
 ---
 # <a name="specifying-custom-build-events-in-visual-studio"></a>在 Visual Studio 中指定自定义生成事件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "65679532"
 
 - Visual Basic--[如何：指定生成事件 (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md)。
 
-- VisualC#和F#-[如何：指定生成事件 (C#)](../ide/how-to-specify-build-events-csharp.md)。
+- Visual C# 和 F#--[如何：指定生成事件 (C#)](../ide/how-to-specify-build-events-csharp.md)。
 
 - Visual C++--[指定生成事件](https://msdn.microsoft.com/library/788a6c18-2dbe-4a49-8cd6-86c1ad7a95cc)。
 

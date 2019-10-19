@@ -5,15 +5,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, disable
 - disable code analysis
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 77c189e4a15f2ae4049c45d2c8463079895f5be2
-ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
+ms.openlocfilehash: cb1a41642e405046459f6196a98cd6290a217223
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71975151"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649654"
 ---
 # <a name="how-to-disable-source-code-analysis-for-managed-code"></a>如何禁用托管代码的源代码分析
 
@@ -27,11 +27,11 @@ ms.locfileid: "71975151"
 
 - NuGet 分析器包与 VSIX 或内置分析器
 
-  目前，无法为内置分析器禁用实时代码分析，例如，规则 ID IDE0067。 同样，你不能为作为 Visual Studio 扩展（VSIX）的一部分安装的分析器禁用实时代码分析。 若要取消内置和基于 VSIX 的分析器中的错误和警告，请选择 "**分析** > "**生成并取消**菜单栏上的活动问题。 您*可以*对作为 NuGet 包的一部分安装的分析器禁用实时分析和生成时分析。
+  目前，无法为内置分析器禁用实时代码分析，例如，规则 ID IDE0067。 同样，你不能为作为 Visual Studio 扩展（VSIX）的一部分安装的分析器禁用实时代码分析。 若要取消内置和基于 VSIX 的分析器中的错误和警告，请选择 "**分析** > **生成和取消显示**菜单栏上的活动问题"。 您*可以*对作为 NuGet 包的一部分安装的分析器禁用实时分析和生成时分析。
 
 - 源分析与传统分析
 
-  本主题适用于源代码分析，不适用于旧版（二进制）分析。 有关禁用旧分析的信息，请参阅 [How to：启用和禁用旧代码分析 @ no__t。
+  本主题适用于源代码分析，不适用于旧版（二进制）分析。 有关禁用旧分析的信息，请参阅[如何：启用和禁用旧代码分析](how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)。
 
 ## <a name="net-core-and-net-standard-projects"></a>.NET Core 和 .NET Standard 项目
 
@@ -45,17 +45,17 @@ ms.locfileid: "71975151"
 - 若要禁用实时源分析，请取消选中 "**在实时分析上运行**" 选项。
 
 > [!NOTE]
-> 即使未选择 **"在实时分析上运行"** ，内置和基于 VSIX 的分析器也将继续提供代码的实时分析。 如果要禁止显示这些分析器中的错误和警告，请选择 "**分析** > "**生成并取消**菜单栏上的活动问题。
+> 即使未选择 **"在实时分析上运行"** ，内置和基于 VSIX 的分析器也将继续提供代码的实时分析。 如果要禁止显示这些分析器中的错误和警告，请选择 "**分析** > **生成和取消显示**菜单栏上的活动问题。
 
 ## <a name="net-framework-projects"></a>.NET Framework 项目
 
 若要关闭作为 NuGet 包的一部分安装的分析器的源代码分析，请将以下一个或多个 MSBuild 属性添加到[项目文件](../ide/solutions-and-projects-in-visual-studio.md#project-file)。
 
-| MSBuild 属性 | 描述 | 默认 |
+| MSBuild 属性 | 描述 | Default |
 | - | - | - |
 | `RunAnalyzersDuringBuild` | 控制基于 NuGet 的分析器是否在生成时运行。 | `true` |
 | `RunAnalyzersDuringLiveAnalysis` | 控制基于 NuGet 的分析器是否在设计时实时分析代码。 | `true` |
-| `RunAnalyzers` | 在生成和设计时禁用基于 NuGet 的分析器。 此属性的优先级高于 `RunAnalyzersDuringBuild` 和 `RunAnalyzersDuringLiveAnalysis`。 | `true` |
+| `RunAnalyzers` | 在生成和设计时禁用基于 NuGet 的分析器。 此属性优先于 `RunAnalyzersDuringBuild` 和 `RunAnalyzersDuringLiveAnalysis`。 | `true` |
 
 例如：
 
@@ -71,17 +71,17 @@ ms.locfileid: "71975151"
 
 ## <a name="source-analysis"></a>源分析
 
-你无法在 Visual Studio 2017 中关闭[源分析](roslyn-analyzers-overview.md)。 如果要从错误列表中清除分析器错误，则可以通过选择 "**分析** > " "运行代码分析" 并在菜单栏上**取消显示活动问题**来禁止所有当前冲突。 有关详细信息，请参阅[取消冲突](use-roslyn-analyzers.md#suppress-violations)。
+你无法在 Visual Studio 2017 中关闭[源分析](roslyn-analyzers-overview.md)。 如果要从错误列表中清除分析器错误，则可以通过选择 "**分析** > **运行代码分析并取消**菜单栏上的活动问题来禁止所有当前冲突。 有关详细信息，请参阅[取消冲突](use-roslyn-analyzers.md#suppress-violations)。
 
 从 Visual Studio 2019 版本16.3 开始，你可以禁用基于 NuGet 的源代码分析。 请考虑升级到 Visual Studio 2019。
 
 ## <a name="legacy-analysis"></a>旧版分析
 
-您可以在 "**代码分析**" 属性页上禁用旧的生成时分析。 有关详细信息，请参阅[如何：启用和禁用旧代码分析 @ no__t。
+您可以在 "**代码分析**" 属性页上禁用旧的生成时分析。 有关详细信息，请参阅[如何：启用和禁用旧代码分析](how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)。
 
 ::: moniker-end
 
 ## <a name="see-also"></a>请参阅
 
 - [禁止冲突](use-roslyn-analyzers.md#suppress-violations)
-- [如何：启用和禁用旧代码分析 @ no__t-0
+- [如何：启用和禁用旧代码分析](how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)

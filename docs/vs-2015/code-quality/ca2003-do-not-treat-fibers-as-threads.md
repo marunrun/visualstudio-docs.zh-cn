@@ -1,5 +1,5 @@
 ---
-title: CA2003:不要将纤程视为线程 |Microsoft Docs
+title: CA2003：不要将纤程视为线程 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,34 +12,34 @@ helpviewer_keywords:
 - DoNotTreatFibersAsThreads
 ms.assetid: 15398fb1-f384-4bcc-ad93-00e1c0fa9ddf
 caps.latest.revision: 18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 0a1683c8cb9b9c6dc856f40ddbc7864d773f2101
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 943b52f9703e60f14756bde97ce6f27c0c6f5296
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68189061"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672502"
 ---
-# <a name="ca2003-do-not-treat-fibers-as-threads"></a>CA2003:不要将纤程视为线程
+# <a name="ca2003-do-not-treat-fibers-as-threads"></a>CA2003：不要将纤程视为线程
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|DoNotTreatFibersAsThreads|
 |CheckId|CA2003|
-|类别|Microsoft.Reliability|
-|是否重大更改|非换行|
+|类别|Microsoft 可靠性|
+|是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 托管的线程是被视为 Win32 线程。
+ 托管线程被视为 Win32 线程。
 
 ## <a name="rule-description"></a>规则说明
- 不要假设托管的线程是 Win32 线程。 它是纤程。 公共语言运行时 (CLR) 将作为纤程的实际线程所拥有的 SQL 上下文中运行托管的线程。 在 SQL Server 进程中，可以在应用程序域和甚至数据库之间共享这些线程。 使用托管的线程本地存储将起作用，但不是能使用非托管的线程本地存储区，也不能假定，您的代码将在当前操作系统线程上再次运行。 不要更改如线程的区域设置的设置。 因为它们要求进入锁的线程也必须退出锁，请勿调用 CreateCriticalSection 或通过 P/Invoke CreateMutex。 由于使用纤程时，不会向这种情况，Win32 临界区和互斥将无用的 SQL。 在托管 System.Thread 对象上，可以安全地使用大部分状态。 这包括托管的线程本地存储和线程的当前用户界面 (UI) 区域性。 但是，有关编程模型，因此，您将无法再更改线程的当前区域性，当您使用 SQL;这将强制实施通过新的权限。
+ 不要假设托管线程是 Win32 线程。 它是一个纤程。 公共语言运行时（CLR）将在 SQL 拥有的实际线程的上下文中将托管线程作为纤程运行。 这些线程可以在 Appdomain 甚至是 SQL Server 进程中的数据库之间共享。 使用托管线程本地存储可正常运行，但不能使用非托管线程本地存储，也不会假设你的代码将再次在当前 OS 线程上运行。 不要更改设置，例如线程的区域设置。 不要通过 P/Invoke 调用 CreateCriticalSection 或 CreateMutex，因为它们要求进入锁定的线程还必须退出锁。 由于使用纤程时不会出现这种情况，因此在 SQL 中将不会用到 Win32 关键部分和互斥体。 您可以安全地在托管的系统上使用大部分状态。 这包括托管线程本地存储和线程的当前用户界面（UI）区域性。 然而，出于编程模型的原因，使用 SQL 时将无法更改线程的当前区域性;这将通过新的权限强制执行。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 检查你的线程的使用情况，并相应地更改您的代码。
+ 检查线程的使用情况，并相应地更改代码。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  不应禁止显示此规则。

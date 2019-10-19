@@ -1,21 +1,21 @@
 ---
-title: CA3076:不安全的 XSLT 脚本执行 |Microsoft Docs
+title: CA3076：不安全的 XSLT 脚本执行 |Microsoft Docs
 ms.date: 11/15/2016
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 ms.assetid: 53cb7a46-c564-488f-bc51-0e210a7853c9
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 0a6b1efa5b5ee84092531a67421d03583afc3578
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 558e205fa37569bfa12d7b93f989d0f8ebabab43
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65680723"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669059"
 ---
-# <a name="ca3076-insecure-xslt-script-execution"></a>CA3076:不安全的 XSLT 脚本执行
+# <a name="ca3076-insecure-xslt-script-execution"></a>CA3076: 不安全的 XSLT 脚本执行
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -31,11 +31,11 @@ ms.locfileid: "65680723"
 ## <a name="rule-description"></a>规则说明
  [XSLT](https://msdn.microsoft.com/6377ce5f-3c45-42a6-b7a9-ec8da588b60c) 是万维网联合会 (W3C) 标准，用于转换 XML 数据。 XSLT 通常用于编写样式表，以将 XML 数据转换为其他格式，如 HTML、固定长度的文本、以逗号分隔的文本或其他 XML 格式。 尽管默认情况下禁止，你仍可以选择为项目启用该功能。
 
- 若要确保不会公开攻击面，此规则将触发每当 XslCompiledTransform。<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 接收的不安全组合实例<xref:System.Xml.Xsl.XsltSettings>和<xref:System.Xml.XmlResolver>，它允许处理恶意脚本。
+ 若要确保不暴露攻击面，此规则将在 XslCompiledTransform 时触发。<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 接收 <xref:System.Xml.Xsl.XsltSettings> 和 <xref:System.Xml.XmlResolver> 的不安全组合实例，这允许处理恶意脚本。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-- 不安全的 XsltSettings 参数替换为 XsltSettings。<xref:System.Xml.Xsl.XsltSettings.Default%2A> 或者与实例的已禁用文档函数和脚本执行。
+- 将不安全的 XsltSettings 参数替换为 XsltSettings。<xref:System.Xml.Xsl.XsltSettings.Default%2A> 或使用已禁用文档函数和脚本执行的实例。
 
 - 将 <xref:System.Xml.XmlResolver> 参数替换为 null 或 <xref:System.Xml.XmlSecureResolver> 实例。
 

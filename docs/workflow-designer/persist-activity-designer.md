@@ -5,31 +5,31 @@ ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.Persist.UI
 ms.assetid: be8648dd-3eb9-4a50-8ec1-57a8be804692
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7be70d18b1fc8ff12e2d1fb177b41775954334ed
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 882a68e006ac139d717320b0b8b7ce4d75aceb38
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254850"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650120"
 ---
 # <a name="persist-activity-designer"></a>Persist 活动设计器
 
-"**持久**" 活动设计器用于创建和配置<xref:System.Activities.Statements.Persist>活动。
+"**持久**" 活动设计器用于创建和配置 <xref:System.Activities.Statements.Persist> 活动。
 
 ## <a name="the-persist-activity"></a>Persist 活动
 
-<xref:System.Activities.Statements.Persist> 活动用于将工作流保存到磁盘中（如有可能）。 <xref:System.Activities.Statements.Persist> 活动无法在非持久性区域中执行，例如，在 <xref:System.Activities.Statements.TransactionScope> 活动中。 如果在非持久性作用<xref:System.Activities.Statements.Persist>域中使用活动，则在运行时将引发异常。
+<xref:System.Activities.Statements.Persist> 活动用于将工作流保存到磁盘中（如有可能）。 <xref:System.Activities.Statements.Persist> 活动无法在非持久性区域中执行，例如，在 <xref:System.Activities.Statements.TransactionScope> 活动中。 如果在非持久性作用域中使用 <xref:System.Activities.Statements.Persist> 活动，则在运行时将引发异常。
 
 ### <a name="using-the-persist-activity-designer"></a>使用 Persist 活动设计器
 
 "**持久**" 活动设计器可在 "**工具箱**" 的 "**运行时**" 类别中找到，可通过单击 "**工具箱**" 选项卡（或者，从 "**视图**" 菜单中选择 "**工具箱**" 或按 CTRL + ALT + X 来访问）。
 
-可以将 "**持久**" 活动设计器从 "**工具箱**" 拖放到工作流设计器图面上通常放置活动的任何位置，例如<xref:System.Activities.Statements.Sequence>中。 这将创建<xref:System.Activities.Statements.Persist>一个活动，其中默认**DisplayName**为 "持久"。 可以在 "**持久**" 活动设计器的标头中或在属性网格的 "DisplayName" 框中编辑。 <xref:System.Activities.Activity.DisplayName%2A>
+可以将 "**持久**" 活动设计器从 "**工具箱**" 拖放到工作流设计器图面上通常放置活动的任何位置，如 <xref:System.Activities.Statements.Sequence> 内。 这将创建一个 <xref:System.Activities.Statements.Persist> 活动，其中默认**DisplayName**为 "持久"。 可以在 "**持久**" 活动设计器的标头中或在属性网格的 " **DisplayName** " 框中编辑 <xref:System.Activities.Activity.DisplayName%2A>。
 
 ### <a name="the-persist-properties"></a>Persist 属性
 

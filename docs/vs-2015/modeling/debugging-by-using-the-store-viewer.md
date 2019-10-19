@@ -9,48 +9,47 @@ helpviewer_keywords:
 - Domain-Specific Language, store
 ms.assetid: 0178db2e-ae99-4ed3-9b87-8620fa9fa8e4
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1a76cd9b726e534271937cb67a8d3f946d4eb477
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: a870c66b1c14dc6ddf3e38fb6e5be8c116be3573
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433199"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654889"
 ---
 # <a name="debugging-by-using-the-store-viewer"></a>使用存储查看器进行调试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-使用存储查看器中，可以检查的状态*存储*由[!INCLUDE[dsl](../includes/dsl-md.md)]。 存储查看器显示所有在元素属性的元素之间的链接以及特定商店中的域模型元素。  
-  
-## <a name="opening-store-viewer"></a>打开存储查看器  
- 当你处于[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]实验性生成，请停止在断点处代码在其中存储的实例包含模型的信息。 然后，通过键入以下命令中的打开存储查看器**即时**窗口：  
-  
-```  
-Microsoft.VisualStudio.Modeling.Diagnostics.StoreViewer.Show(mystore);  
-```  
-  
+使用存储查看器，可以检查 [!INCLUDE[dsl](../includes/dsl-md.md)] 所使用的*存储*的状态。 存储查看器将显示特定存储中的所有域模型元素，以及元素的属性和元素之间的链接。
+
+## <a name="opening-store-viewer"></a>打开存储查看器
+ 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 实验版本中时，请在存储实例包含模型信息的断点处停止代码。 然后，在 "**即时**" 窗口中键入以下命令，打开存储查看器：
+
+```
+Microsoft.VisualStudio.Modeling.Diagnostics.StoreViewer.Show(mystore);
+```
+
 > [!NOTE]
-> 必须将为`mystore`与存储实例的名称。 此外，如果将命名空间添加到你的代码，您可以键入用于显示存储查看器，而无需完全限定的命名空间命令：  
->   
-> `using Microsoft.VisualStudio.Modeling.Diagnostics;`  
->   
-> `…`  
->   
-> `StoreViewer.Show(mystore);`  
-  
- `Show`方法有若干重载。 可以作为参数来指定应用商店或分区的实例。  
-  
- 或者，可以放置的任何位置可存储查看器显示代码中的代码行的参数传递给`Show`方法处于范围。 当作为存储的内容的快照执行的代码行时，此操作将显示存储查看器。  
-  
-### <a name="using-store-viewer"></a>使用存储查看器  
- 存储查看器打开后，无模式 Windows 窗体窗口出现，如下图所示。  
-  
- ![](../modeling/media/storeviewer2.png "storeviewer2")  
-存储查看器  
-  
- 存储查看器有三个窗格： 右上方窗格中，左窗格中，右下方的窗格。 左窗格中是树视图中的类型的`DomainDataDirectory`存储区的成员。 如果您展开分区节点，并单击一个元素，在右上方窗格中显示元素的属性。 如果元素链接到其他元素，右下方窗格中显示的其他元素。 如果您双击右下方窗格中的元素，该元素的左窗格中突出显示。  
-  
-## <a name="see-also"></a>请参阅  
+> 必须将 `mystore` 替换为存储实例的名称。 此外，如果将命名空间添加到代码中，则可以键入命令来显示存储查看器，而无需完全限定的命名空间：
+>
+> `using Microsoft.VisualStudio.Modeling.Diagnostics;`
+>
+> `…`
+>
+> `StoreViewer.Show(mystore);`
+
+ @No__t_0 方法有多个重载。 可以指定存储或分区的实例作为参数。
+
+ 作为替代方法，你可以将显示存储查看器的代码行放在代码中你传递到 `Show` 方法的参数位于范围内的任何位置。 此操作在代码行作为存储内容的快照执行时显示商店查看器。
+
+### <a name="using-store-viewer"></a>使用存储查看器
+ 当存储区查看器打开时，将显示无模式 Windows 窗体窗口，如下图所示。
+
+ ![](../modeling/media/storeviewer2.png "storeviewer2")存储查看器
+
+ 存储查看器有三个窗格：左窗格、右上窗格和右下窗格。 左窗格是存储的 `DomainDataDirectory` 成员中的类型的树视图。 如果展开分区节点并单击某个元素，则该元素的属性将显示在右上窗格中。 如果元素链接到其他元素，则其他元素将显示在右下窗格中。 如果双击右下方窗格中的某个元素，则将在左窗格中突出显示该元素。
+
+## <a name="see-also"></a>请参阅
  [在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)

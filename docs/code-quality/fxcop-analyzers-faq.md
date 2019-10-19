@@ -4,17 +4,17 @@ ms.date: 09/06/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - code analysis FAQ
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 277155bdab713ec12daa380fc2721a31b5d932a2
-ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
+ms.openlocfilehash: dffc3773714336162b3b863fa03a6964b68a3673
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72000117"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649580"
 ---
 # <a name="frequently-asked-questions-about-fxcop-and-fxcop-analyzers"></a>有关 FxCop 和 FxCop 分析器的常见问题解答
 
@@ -31,7 +31,7 @@ FxCop 分析器基于 .NET Compiler Platform（“Roslyn”）。 [将它们安�
 
 ## <a name="does-the-run-code-analysis-command-run-fxcop-analyzers"></a>“运行代码分析”命令是否运行 FxCop 分析器？
 
-否。 选择 "**分析** > "**运行代码分析**时，它会执行旧分析。 “运行代码分析”对基于 Roslyn 的分析器没有影响，包括基于 Roslyn 的 FxCop 分析器。
+否。 选择 "**分析** > "**运行代码分析**"时，会执行旧式分析。 “运行代码分析”对基于 Roslyn 的分析器没有影响，包括基于 Roslyn 的 FxCop 分析器。
 
 ## <a name="does-the-runcodeanalysis-msbuild-project-property-run-analyzers"></a>RunCodeAnalysis msbuild 项目属性是否运行分析器？
 

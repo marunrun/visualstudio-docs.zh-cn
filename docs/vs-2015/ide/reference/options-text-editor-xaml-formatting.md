@@ -28,15 +28,15 @@ helpviewer_keywords:
 - XAML view settings, attribute spacing
 ms.assetid: ad3820b1-0d94-4807-a74c-c3467ed973a2
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8f820ac16667a9550db17bc252c547f16b81e70b
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 319e09d2438b23c217f7820fe4288758a595be56
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65696010"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662219"
 ---
 # <a name="options-text-editor-xaml-formatting"></a>选项，文本编辑器，XAML，格式
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "65696010"
 使用“格式设置”属性页可指定如何在 XAML 文档中设置元素和特性的格式。 若要打开“选项”对话框，请单击“工具”菜单，然后单击“选项”。 若要访问“格式设置”属性页，请依次展开“文本编辑器”、“XAML”、“格式设置”节点。
 
 > [!NOTE]
-> 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。
+> 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。
 
 ## <a name="auto-formatting-events"></a>自动格式化事件
 检测到以下任一事件时，可能引发自动格式设置。
@@ -117,16 +117,16 @@ ms.locfileid: "65696010"
 
 |||
 |-|-|
-|**始终在完整的 XAML 视图中打开文档**|指定是否仅在 XAML 视图中，而无需设计视图中显示 XAML 文档。 对于加载大型文档很有用。|
+|**始终在完整 XAML 视图中打开文档**|指定 XAML 文档是否仅出现在 XAML 视图中，无设计视图。 用于加载大型文档。|
 
 ## <a name="toolbox"></a>工具箱
-使用此设置指定用户控件和自定义控件显示在工具箱中。
+使用此设置可指定是否在工具箱中显示用户控件和自定义控件。
 
 |||
 |-|-|
 |**自动填充工具箱项**|指定当前解决方案中的用户控件和自定义控件是否自动显示在工具箱中。|
 
 ## <a name="see-also"></a>请参阅
-[WPF 中的 XAML](https://msdn.microsoft.com/library/5d858575-a83b-42df-ad3f-047ed2d6e3c8)  
-[如何：更改 XAML 视图设置](https://msdn.microsoft.com/aee87c79-ca01-4f84-8fb7-a9e47048ee47)  
-[XAML 和代码演练](https://msdn.microsoft.com/b3ff41a0-a2a3-4f61-b698-ac88ec8f799c)
+[WPF 中的 xaml](https://msdn.microsoft.com/library/5d858575-a83b-42df-ad3f-047ed2d6e3c8) 
+ 如何：在[Xaml 和代码演练](https://msdn.microsoft.com/b3ff41a0-a2a3-4f61-b698-ac88ec8f799c)
+[更改 xaml 视图设置](https://msdn.microsoft.com/aee87c79-ca01-4f84-8fb7-a9e47048ee47)

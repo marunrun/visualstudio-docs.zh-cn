@@ -8,21 +8,21 @@ helpviewer_keywords:
 - coded UI tests, data-driven
 ms.assetid: 5838f02d-001f-49ce-adce-c9ea1afaec2f
 caps.latest.revision: 58
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8431c1ed983a2b1d4054d067e53d072c996acb94
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 63c960fd68aba444ff24c0e5f24bab70cbe0746e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871744"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660633"
 ---
 # <a name="creating-a-data-driven-coded-ui-test"></a>创建数据驱动的编码的 UI 测试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 若要测试不同的情况，你可以使用不同的参数值多次运行测试。 数据驱动的编码的 UI 测试就是执行该操作的一个便捷方法。 对数据源中参数值进行定义后，数据源中的每一行都是编码的 UI 测试的一个迭代。 测试的总结果将取决于所有迭代的结果。 例如，如果一个测试迭代失败，则测试总结果是失败。
 
- **要求**
+ **惠?**
 
 - Visual Studio Enterprise
 
@@ -98,7 +98,7 @@ ms.locfileid: "68871744"
 
 1. 在名为 `data.csv` 的 dataDrivenSample 项目中添加文本文件。
 
-     ![将逗号分隔值文件添加到项目](../test/media/cuit-datadriven-addcsvfile.png "CUIT_dataDriven_AddCSVFile")
+     ![向项目添加逗号分隔值文件](../test/media/cuit-datadriven-addcsvfile.png "CUIT_dataDriven_AddCSVFile")
 
 2. 使用以下数据填充 .csv 文件:
 
@@ -110,13 +110,13 @@ ms.locfileid: "68871744"
 
      添加的数据之后，文件如下所示：
 
-     ![使用数据填充 .CSV 文件](../test/media/cuit-datadriven-adddatatocsvfile.png "CUIT_dataDriven_AddDataToCSVFile")
+     ![填充。包含数据的 CSV 文件](../test/media/cuit-datadriven-adddatatocsvfile.png "CUIT_dataDriven_AddDataToCSVFile")
 
 3. 务必使用正确的编码保存 .csv 文件。 在“文件”菜单上，选择“高级保存选项”并选择“Unicode (无签名的 UTF-8) - 代码页 65001”作为编码。
 
 4. 必须将 .csv 文件复制到输出目录，否则测试无法运行。 使用属性窗口进行复制。
 
-     ![部署 .CSV 文件](../test/media/cuit-datadriven-deploycsvfile.png "CUIT_dataDriven_DeployCSVFile")
+     ![部署。CSV 文件](../test/media/cuit-datadriven-deploycsvfile.png "CUIT_dataDriven_DeployCSVFile")
 
      数据集已经创建，接下来将数据绑定到测试。
 
@@ -189,11 +189,11 @@ ms.locfileid: "68871744"
 
     - 选择 UI 操作并观察相应的 UI 控件映射。 注意映射是如何响应代码的，例如，`this.UIMap.UICalculatorWindow.UIItemWindow.UIItem1Button`。
 
-         ![使用编码的 UI 测试编辑器以辅助代码](../test/media/cuit-datadriven-testeditor.png "CUIT_dataDriven_TestEditor")
+         ![使用编码的 UI 测试编辑器帮助编写代码](../test/media/cuit-datadriven-testeditor.png "CUIT_dataDriven_TestEditor")
 
     - 在属性窗口中，打开“搜索属性”。 搜索属性“名称”值为使用数据源在代码中对其进行操作的值。 例如，`SearchProperties` 被分配给每个数据行第一列中的值：`UIItem1Button.SearchProperties[WinButton.PropertyNames.Name] = TestContext.DataRow["Num1"].ToString();`。 对于这三个迭代，测试会将搜索属性的“名称”值依次更改为 3、5、6。
 
-         ![使用搜索属性辅助编码](../test/media/cuit-datadriven-searchproperties.png "CUIT_dataDriven_SearchProperties")
+         ![使用搜索属性帮助进行编码](../test/media/cuit-datadriven-searchproperties.png "CUIT_dataDriven_SearchProperties")
 
 3. 保存解决方案。
 
@@ -205,7 +205,7 @@ ms.locfileid: "68871744"
 
    **指南**
 
-   有关其他信息, 请[参阅通过 Visual Studio 2012 对持续交付进行测试-第2章:单元测试：](http://go.microsoft.com/fwlink/?LinkID=255188) 在[Visual Studio 2012-第5章:自动系统测试](http://go.microsoft.com/fwlink/?LinkID=255196)
+   有关其他信息，请参阅 [Testing for Continuous Delivery with Visual Studio 2012 – Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188)（使用 Visual Studio 2012 测试连续交付 - 第 2 章：单元测试：测试内部）和 [Testing for Continuous Delivery with Visual Studio 2012 – Chapter 5: Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196)（使用 Visual Studio 2012 测试连续交付 - 第 5 章：自动化系统测试）
 
 ## <a name="q--a"></a>问题解答
 
@@ -234,7 +234,7 @@ ms.locfileid: "68871744"
 
      `[DataSource("System.Data.SqlClient", "Data Source=.\\sqlexpress;Initial Catalog=tempdb;Integrated Security=True", "Data", DataAccessMethod.Sequential), TestMethod]`
 
-### <a name="q-can-i-use-data-driven-tests-on-my-windows-phone-app"></a>问:能否在 Windows Phone 应用上使用数据驱动的测试？
+### <a name="q-can-i-use-data-driven-tests-on-my-windows-phone-app"></a>问：我可以在 Windows Phone 应用上使用数据驱动的测试吗？
  **答：** 可以。 适用于 Windows Phone 的数据驱动的编码 UI 测试使用测试方法中的 DataRow 特性定义。 在以下示例中，x 和 y 为测试的第一次迭代使用值 1 和 2，为第二次迭代使用值 -1 和 -2。
 
 ```
@@ -245,8 +245,8 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 
 ```
 
-### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>问:为什么无法修改 UIMap 文件中的代码？
- **答：** 每次使用“UIMap - 编码的 UI 测试生成器”生成代码时，都会覆盖在 UIMapDesigner.cs 文件中进行的所有代码更改。 在该示例中以及大多数情况下，为了让测试可以使用某项数据而需要更改代码，这时可以对该测试的源代码文件（即 CodedUITest1.cs）进行更改。
+### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>问：为什么我无法修改 UIMap.Designer 文件中的代码？
+ **答：** 每次使用“UIMap - 编码的 UI 测试生成器”生成代码时，都将覆盖在 UIMapDesigner.cs 文件中所做的任何代码更改。 在该示例中以及大多数情况下，为了让测试可以使用某项数据而需要更改代码，这时可以对该测试的源代码文件（即 CodedUITest1.cs）进行更改。
 
  如果必须修改录制的方法，则必须将其复制到 UIMap.cs 文件并对其重命名。 UIMap.cs 文件可用于重写 UIMapDesigner.cs 文件中的方法和属性。 必须在 Coded UITest.cs 文件中删除对原始方法的引用，并将其替换为重命名的方法名称。
 

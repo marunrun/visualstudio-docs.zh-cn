@@ -1,21 +1,21 @@
 ---
-title: CA3075:不安全的 DTD 处理 |Microsoft Docs
+title: CA3075：不安全的 DTD 处理 |Microsoft Docs
 ms.date: 11/15/2016
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 ms.assetid: 65798d66-7a30-4359-b064-61a8660c1eed
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 694b72327d8e059fe12a227afdab79219081ef92
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 7cf9da2f295d94ac68c74039458f4cdbfda3ae5c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65693412"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661627"
 ---
-# <a name="ca3075-insecure-dtd-processing"></a>CA3075:不安全的 DTD 处理
+# <a name="ca3075-insecure-dtd-processing"></a>CA3075：不安全的 DTD 处理
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -35,31 +35,31 @@ ms.locfileid: "65693412"
 
 - 设置了 XML 中的 <xref:System.Xml.XmlNode.InnerXml%2A> 属性。
 
-- <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> 属性设置为分析。
+- <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> 属性设置为 Parse。
 
 - 使用 <xref:System.Xml.XmlResolver> 而不是 <xref:System.Xml.XmlSecureResolver> 处理不受信任的输入。
 
-- XmlReader。<xref:System.Xml.XmlReader.Create%2A> 方法使用了不安全调用<xref:System.Xml.XmlReaderSettings>实例或根本没有实例。
+- XmlReader。<xref:System.Xml.XmlReader.Create%2A> 使用不安全的 <xref:System.Xml.XmlReaderSettings> 实例或根本不使用任何实例调用方法。
 
-- <xref:System.Xml.XmlReader> 使用不安全的默认设置或值创建。
+- 创建 <xref:System.Xml.XmlReader> 时，默认设置或值不安全。
 
   在这些情况下，结果均相同：来自文件系统或来自处理 XML 的计算机的网络共享的文件都将面临攻击，其随后可能会被用作 DoS 向量。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-- 捕获和处理所有 XmlTextReader 异常正确以避免路径信息泄露。
+- 正确捕获并处理所有 XmlTextReader 异常，以避免路径信息泄漏。
 
-- 使用 <xref:System.Xml.XmlSecureResolver>来限制 XmlTextReader 可以访问的资源。
+- 使用  <xref:System.Xml.XmlSecureResolver> 来限制 XmlTextReader 可以访问的资源。
 
-- 不允许 <xref:System.Xml.XmlReader>通过设置打开任何外部资源<xref:System.Xml.XmlResolver>属性设置为 **null**。
+- 不要允许  <xref:System.Xml.XmlReader> 通过将 <xref:System.Xml.XmlResolver> 属性设置为 **null**来打开任何外部资源。
 
 - 确保从可信的源分配 <xref:System.Data.DataViewManager.DataViewSettingCollectionString%2A> 的 <xref:System.Data.DataViewManager> 属性。
 
   .NET 3.5 及更早版本
 
-- 禁用 DTD 处理，如果正在通过设置处理不可信的源 <xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A>属性设置为 **true** 。
+- 如果要处理不受信任的源，请将  <xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A> 属性设置为 **true** ，以禁用 DTD 处理。
 
-- XmlTextReader 类具有完全信任继承要求。 请参阅 [继承需求](https://msdn.microsoft.com/28b9adbb-8f08-4f10-b856-dbf59eb932d9)有关详细信息。
+- XmlTextReader 类具有完全信任继承要求。 有关详细信息，请参阅 [继承要求](https://msdn.microsoft.com/28b9adbb-8f08-4f10-b856-dbf59eb932d9)。
 
   .NET 4 及更高版本
 

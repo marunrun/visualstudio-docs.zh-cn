@@ -5,17 +5,17 @@ ms.topic: reference
 helpviewer_keywords:
 - fxcop rules
 - fxcop analyzers, ported rules
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7dec16291758b330614d8a522aaf3825ae461047
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 2ad427c058265694205444c3ade04e317e407072
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72449057"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649569"
 ---
 # <a name="fxcop-rule-port-status"></a>Fxcop 规则端口状态
 
@@ -67,8 +67,8 @@ Roslyn 存储库中自动[生成的文档页面](https://github.com/dotnet/rosly
 [CA1063](ca1063-implement-idisposable-correctly.md) | 正确实现 IDisposable
 [CA1064](ca1064-exceptions-should-be-public.md) | 异常应该是公共的
 [CA1065](ca1065-do-not-raise-exceptions-in-unexpected-locations.md) | 不要在意外的位置引发异常
-CA1066 | 类型 @no__t 应实现 IEquatable @ no__t-1T >，因为它重写 Equals
-CA1067 | 实现 IEquatable @ no__t-0T 时重写对象 Equals （对象） >
+CA1066 | 类型 {0} 应该实现 IEquatable \<T >，因为它重写 Equals
+CA1067 | 实现 IEquatable 时重写对象 Equals （对象） \<T >
 [CA1068](ca1068.md) | CancellationToken 参数必须最后出现
 CA1200 | 不要使用带前缀的 cref 标记
 [CA1303](ca1303-do-not-pass-literals-as-localized-parameters.md) | 请不要将文本作为本地化参数传递
