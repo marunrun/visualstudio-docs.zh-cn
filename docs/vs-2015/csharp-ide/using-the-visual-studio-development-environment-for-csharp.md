@@ -1,5 +1,5 @@
 ---
-title: 使用的开发环境C#|Microsoft Docs
+title: 使用的开发环境C# |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,27 +14,27 @@ helpviewer_keywords:
 - Visual C#, development environment
 ms.assetid: e10e2cba-641f-47a3-88a3-6748965254d7
 caps.latest.revision: 29
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6e5b52e74eac3e9301ebb10d91c560929b1ef313
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 0cd8d8f2be0a653189130de6b38c8586957948d9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65688033"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72673161"
 ---
-# <a name="using-the-visual-studio-development-environment-for-c"></a>使用用于 C 的 Visual Studio 开发环境\#
+# <a name="using-the-visual-studio-development-environment-for-c"></a>使用适用于 C 的 Visual Studio 开发环境 \#
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 集成的开发环境 (IDE) 是通过一个通用用户界面公开的开发工具的集合。 有些工具是与其他 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 语言共享的，还有一些工具（如 C# 编译器）是 Visual C# 特有的。 本主题提供指向最重要的 Visual C# 工具的链接。
+Visual Studio 集成开发环境（IDE）是通过常用用户界面公开的开发工具的集合。 有些工具是与其他 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 语言共享的，还有一些工具（如 C# 编译器）是 Visual C# 特有的。 本主题提供指向最重要的 Visual C# 工具的链接。
 
 ## <a name="related-topics"></a>相关主题
 
 |Title|描述|
 |-----------|-----------------|
-|[演练：创建简单的应用程序](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)|概述了 Visual Studio 中包含的用于应用程序开发的许多功能和工具。|
+|[演练：创建简单应用程序](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)|概述了 Visual Studio 中包含的用于应用程序开发的许多功能和工具。|
 |[创建解决方案和项目](../ide/creating-solutions-and-projects.md)|描述如何创建一个项目，其中包含所有源代码文件、资源文件（例如图标）、对外部文件的引用，以及配置数据（例如编译器设置）。|
 |[项目设计器简介](https://msdn.microsoft.com/898dd854-c98d-430c-ba1b-a913ce3c73d7)|概述可集中管理项目属性、设置和资源的项目设计器。|
 |[编写代码](../ide/writing-code-in-the-code-and-text-editor.md)|描述一些 Visual Studio 工具，这些工具可帮助你修改和操作文本、代码和标记，插入和配置控件、其他对象和命名空间，以及添加对外部组件和资源的引用。|

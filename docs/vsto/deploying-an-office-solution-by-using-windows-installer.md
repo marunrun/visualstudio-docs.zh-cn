@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 20df85952b4e76e60d6e93067c1f1e7838b692cd
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "69551715"
 ---
 # <a name="deploy-an-office-solution-by-using-windows-installer"></a>使用 Windows Installer 部署 Office 解决方案
@@ -59,7 +59,7 @@ ms.locfileid: "69551715"
 
 有关如何使用 ClickOnce 部署 Office 解决方案的详细信息，请参阅[使用 Clickonce 部署 office 解决方案](../vsto/deploying-an-office-solution-by-using-clickonce.md)。
 
-有关如何使用[!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)]创建 Windows Installer 文件的信息，请参阅[使用 Windows Installer 部署 Visual Studio 2010 Tools for Office 解决方案](http://go.microsoft.com/fwlink/?LinkId=201807)。
+有关如何使用 [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)] 创建 Windows Installer 文件的信息，请参阅[使用 Windows Installer 部署 Visual Studio 2010 Tools For Office 解决方案](http://go.microsoft.com/fwlink/?LinkId=201807)。
 
 ## <a name="Download"></a>下载示例
 本主题参考以下可下载示例。
@@ -107,7 +107,7 @@ ms.locfileid: "69551715"
 
    与本主题相关的 VSTO 外接程序示例包含一个名为 **ExcelAddIn**的项目。 文档级自定义项示例包含一个名为 **ExcelWorkbook**的项目。 本主题将通过使用这两个名称之一来引用解决方案中的 Office 项目。
 
-2. 在菜单栏上，选择 "**文件** > " "**添加** > **新项目**"。
+2. 在菜单栏上，选择 "**文件**"  >  "**添加** > "**新建项目**"。
 
    此时会打开 **“添加新项目”** 对话框。
 
@@ -133,7 +133,7 @@ ms.locfileid: "69551715"
 
 3. 在 **“项目助手”** 页下方，选择 **“应用程序文件”** 按钮，如下图所示。
 
-   !["应用程序文件" 按钮。](../vsto/media/installshield-applicationfiles.png "\"应用程序文件\" 按钮。")
+   !["应用程序文件" 按钮。](../vsto/media/installshield-applicationfiles.png "“应用程序文件”按钮。")
 
 4. 在 **“应用程序文件”** 页上，选择 **“添加项目输出”** 按钮。
 
@@ -165,7 +165,7 @@ ms.locfileid: "69551715"
 
 1. 在 **“解决方案资源管理器”** 中，展开 **“OfficeAddInSetup”** 项目节点，展开 **“指定应用程序数据”** 节点，然后选择 **“可再发行文件”** ，如下图所示。
 
-   ![解决方案资源管理器中的可再发行文件文件](../vsto/media/installshield-redistributablesfile.png "解决方案资源管理器中的可再发行文件文件")
+   ![解决方案资源管理器中的可再发行文件文件](../vsto/media/installshield-redistributablesfile.png "解决方案资源管理器中的可再发行文件")
 
 2. 在菜单栏上，选择 "**视图** > **打开**"。
 
@@ -216,7 +216,7 @@ ms.locfileid: "69551715"
    </properties>
    ```
 
-5. 在记事本的菜单栏上，选择 "**文件** > " "**保存**"。
+5. 在记事本的菜单栏上，选择 "**文件** > **保存**"。
 
 6. 在 **“另存为”** 对话框中，浏览到 **“桌面”** 文件夹。
 
@@ -231,13 +231,13 @@ ms.locfileid: "69551715"
 
 10. 从 "**桌面**" 文件夹中，将*Visual Studio 2010 Tools for Office runtime.prq*文件复制到计算机上的以下目录之一。
 
-   对于32位操作系统： *%ProgramFiles%\InstallShield\2013LE\SetupPrerequisites\\*
+   对于32位操作系统： *%ProgramFiles%\InstallShield\2013LE\SetupPrerequisites \\*
 
-   对于64位操作系统： *% ProgramFiles （x86）% \ 2013LE \ SetupPrerequisites\\*
+   对于64位操作系统： *% ProgramFiles （x86）% \ 2013LE \ SetupPrerequisites \\*
 
 11. 在 InstallShield 项目的 **“可再发行组件”** 页上，选择 **“刷新”** 按钮刷新可再发行组件列表，如下图所示。
 
-   !["刷新" 按钮。](../vsto/media/installshield-refreshbutton.png "\"刷新\" 按钮。")
+   !["刷新" 按钮。](../vsto/media/installshield-refreshbutton.png "“刷新”按钮。")
 
 12. 在可再发行组件列表中，选中 **“Visual Studio 2010 Tools for Office Runtime”** 复选框。
 
@@ -291,7 +291,7 @@ ms.locfileid: "69551715"
 
 2. 在 **“项目助手”** 页下方，选择 **“应用程序注册表”** 按钮，如下图所示。
 
-   !["应用程序注册表" 按钮。](../vsto/media/installshield-applicationregistry.gif "\"应用程序注册表\" 按钮。")
+   !["应用程序注册表" 按钮。](../vsto/media/installshield-applicationregistry.gif ""应用程序注册表" 按钮。")
 
    此时将显示 **“应用程序注册表项”** 页。
 
@@ -309,15 +309,15 @@ ms.locfileid: "69551715"
 
 | Office 版本<br /><br /> | InstallShield 配置路径<br /><br /> |
 |----------------------------| - |
-| 32 位<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE(32-Bit)\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
-| 64 位<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE(64-Bit)\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
+| 32 位<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE （32位） \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
+| 64 位<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE （64位） \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
 
    **根据 Windows 版本创建的基于计算机的安装程序**
 
 | Windows 版本<br /><br /> | InstallShield 配置路径<br /><br /> |
 |-----------------------------| - |
-| 32 位<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE(32-Bit)\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
-| 64 位<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE(32-Bit)\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br />**HKEY_LOCAL_MACHINE\SOFTWARE(64-Bit)\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
+| 32 位<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE （32位） \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
+| 64 位<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE （32位） \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br />**HKEY_LOCAL_MACHINE\SOFTWARE （64位） \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
 
    > [!NOTE]
    > 64位 Windows 的安装程序需要两个注册表路径，因为用户可以在运行64位 Windows 的计算机上运行32位和64位版本的 Office。
@@ -333,11 +333,11 @@ ms.locfileid: "69551715"
 
 7. 重复此过程以创建以下值。
 
-|值类型<br /><br />|name<br /><br />|
+|值类型<br /><br />|“属性”<br /><br />|
 |--------------|--------|
 |“字符串值”<br /><br />|**FriendlyName**<br /><br />|
 |DWORD 值<br /><br />|**LoadBehavior**<br /><br />|
-|“字符串值”<br /><br />|**Manifest**<br /><br />|
+|“字符串值”<br /><br />|**清单**<br /><br />|
 
 8. 打开 **“Description”** 值的快捷菜单，然后选择 **“修改”** 。
 
@@ -384,7 +384,7 @@ ms.locfileid: "69551715"
 
 ### <a name="to-create-a-program-that-modifies-document-properties"></a>创建修改文档属性的程序
 
-1. 在菜单栏上，选择 "**文件** > " "**添加** > **新项目**"。
+1. 在菜单栏上，选择 "**文件**"  >  "**添加** > "**新建项目**"。
 
    此时，将显示 **“添加新项目”** 对话框。
 
@@ -423,7 +423,7 @@ ms.locfileid: "69551715"
 
 3. 在 **“项目助手”** 页下方，选择 **“应用程序文件”** 按钮，如下图所示。
 
-   !["应用程序文件" 按钮。](../vsto/media/installshield-applicationfiles.png "\"应用程序文件\" 按钮。")
+   !["应用程序文件" 按钮。](../vsto/media/installshield-applicationfiles.png "“应用程序文件”按钮。")
 
 4. 在 **“应用程序文件”** 页上，选择 **“添加项目输出”** 按钮。
 
@@ -463,7 +463,7 @@ ms.locfileid: "69551715"
 
 13. 在记事本中打开解决方案的项目文件。 对于 Visual Basic 项目，该文件的名称为 *.vbproj*。 对于C#项目，该文件的名称为*ExcelWorkbook*。
 
-14. 在项目文件中，搜索 **&lt;SolutionID&gt;** 元素中，将其值复制到剪贴板，，然后关闭记事本。
+14. 在项目文件中，搜索 **&lt;SolutionID &gt;** 元素，将其值复制到剪贴板，然后关闭记事本。
 
     可以将该值作为参数传递到控制台应用程序。
 
@@ -500,7 +500,7 @@ ms.locfileid: "69551715"
 
 9. 在菜单栏上，选择 "**生成** > **生成 officeaddinsetup"** "。
 
-   生成完成后，可以在以下位置找到**officeaddinsetup "** *项目的 setup.exe 文件：* <em>OfficeAddInSetupProjectRoot</em> **\OfficeAddInSetup\Express\SingleImage\DiskImages\DISK1\\**
+   生成完成后，可以在以下位置找到**officeaddinsetup "** *项目的 Setup.exe 文件：* <em>OfficeAddInSetupProjectRoot</em> **\OfficeAddInSetup\Express\SingleImage\DiskImages\DISK1 \\**
 
 ## <a name="see-also"></a>请参阅
 
