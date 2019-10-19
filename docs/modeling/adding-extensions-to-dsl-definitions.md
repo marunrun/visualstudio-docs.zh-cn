@@ -2,38 +2,38 @@
 title: 向 DSL 定义中添加扩展
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fa5c02fc28e7ffec4765d94758c838ab149e7ac3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 767973705d004a46644a51ba20ad9292ab80cb39
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62960480"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654372"
 ---
 # <a name="add-extensions-to-dsl-definitions"></a>向 DSL 定义中添加扩展
 
-DSL 定义扩展插件，可创建的域特定语言 (DSL) 的扩展包。 DSL 的方式相同，DSL 扩展，它包含在 Visual Studio 集成扩展 (VSIX) 中，可以安装在用户的计算机上。 可以动态启用和禁用在运行时的其他功能。 Dsl 无需显式设计为扩展插件，并扩展可以被设计为更高版本，或者由第三方，而无需更改扩展的 DSL。
+DSL 定义扩展允许你创建一包扩展到域特定语言（DSL）的扩展。 在 Visual Studio 集成扩展（VSIX）中包含的 DSL 扩展可以与 DSL 相同的方式安装在用户的计算机上。 在运行时可以动态启用和禁用其他功能。 Dsl 无需显式设计用于扩展，并且可以在以后或第三方设计扩展，而无需更改扩展 DSL。
 
-DSL 扩展可以包括以下功能：
+DSL 扩展可以包含以下功能：
 
 - 模型和表示元素的属性
 
-- 形状和连接符的修饰器
+- 形状和连接线的修饰器
 
-- 类、 关系、 形状和连接器
+- 类、关系、形状和连接线
 
 - 验证约束
 
 - 工具箱项和选项卡
 
-扩展 DSL 的用户可以创建和保存模型，其中包含其他功能的实例。 已安装相应的扩展的其他用户可以读取模型。 未安装该扩展的用户不能使用其他功能，但它们可以更新和保存模型而不会丢失的其他功能。
+扩展 DSL 的用户可以创建和保存包含附加功能实例的模型。 已安装适当扩展的其他用户可以读取该模型。 尚未安装此扩展的用户不能使用其他功能，但可以更新和保存模型，而不会丢失其他功能。
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
 ## <a name="see-also"></a>请参阅
 
-- [相关的博客文章](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)
+- [相关博客文章](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)

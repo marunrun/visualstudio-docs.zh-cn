@@ -12,17 +12,17 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 136ee925f1ee7505e7058eb643d7bac3a9222c06
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 7901cf19b112b1a9d87dcae5bce594f5cc431d78
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71252365"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72633351"
 ---
 # <a name="dynamically-add-menu-items"></a>动态添加菜单项
-你可以在运行时添加菜单项，方法是`DynamicItemStart`在 Visual Studio 命令表（ *.vsct*）文件中的占位符按钮定义上指定命令标志，然后定义（在代码中）要显示和处理命令的菜单项的数目。 加载 VSPackage 时，会将占位符替换为动态菜单项。
+你可以在运行时添加菜单项，方法是在 Visual Studio 命令表（ *.vsct*）文件中的占位符按钮定义上指定 `DynamicItemStart` 命令标志，然后定义（在代码中）要显示和处理命令的菜单项的数目。 加载 VSPackage 时，会将占位符替换为动态菜单项。
 
- Visual Studio 在**最近使用**的（MRU）列表中使用动态列表，该列表显示最近打开的文档的名称和**windows**列表，其中显示当前打开的窗口的名称。   命令`DynamicItemStart`定义上的标志指定在 VSPackage 打开之前，该命令是占位符。 打开 VSPackage 后，占位符将被替换为0个或多个在运行时创建并添加到动态列表中的命令。 在打开 VSPackage 之前，你可能无法在菜单上看到显示动态列表的位置。  为了填充动态列表，Visual Studio 会要求 VSPackage 查找 ID 的命令，该命令的第一个字符与占位符的 ID 相同。 当 Visual Studio 查找匹配的命令时，它会将命令的名称添加到动态列表。 然后，它会递增 ID 并查找另一个匹配的命令，以将其添加到动态列表，直到没有更多动态命令。
+ Visual Studio 在**最近使用**的（MRU）列表中使用动态列表，该列表显示最近打开的文档的名称和**windows**列表，其中显示当前打开的窗口的名称。   命令定义上的 `DynamicItemStart` 标志指定在打开 VSPackage 之前该命令是占位符。 打开 VSPackage 后，占位符将被替换为0个或多个在运行时创建并添加到动态列表中的命令。 在打开 VSPackage 之前，你可能无法在菜单上看到显示动态列表的位置。  为了填充动态列表，Visual Studio 会要求 VSPackage 查找 ID 的命令，该命令的第一个字符与占位符的 ID 相同。 当 Visual Studio 查找匹配的命令时，它会将命令的名称添加到动态列表。 然后，它会递增 ID 并查找另一个匹配的命令，以将其添加到动态列表，直到没有更多动态命令。
 
  本演练演示如何在 Visual Studio 解决方案中使用**解决方案资源管理器**工具栏上的命令来设置启动项目。 它使用具有活动解决方案中项目的动态下拉列表的菜单控制器。 若要使此命令在没有打开解决方案时显示，或当打开的解决方案只有一个项目时显示，VSPackage 仅在解决方案有多个项目时才会加载。
 
@@ -30,7 +30,7 @@ ms.locfileid: "71252365"
 
 ## <a name="create-an-extension-with-a-menu-command"></a>使用菜单命令创建扩展
 
-1. 创建一个名为`DynamicMenuItems`的 VSIX 项目。
+1. 创建一个名为 `DynamicMenuItems` 的 VSIX 项目。
 
 2. 当项目打开时，添加一个自定义命令项模板并将其命名为**DynamicMenu**。 有关详细信息，请参阅[使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
 
@@ -39,7 +39,7 @@ ms.locfileid: "71252365"
 
 - 两个命令组，一个包含菜单控制器，另一个包含下拉列表中的菜单项
 
-- 类型的一个菜单元素`MenuController`
+- 一个类型的 menu 元素 `MenuController`
 
 - 两个按钮，一个用于作为菜单项的占位符，另一个用于提供工具栏上的图标和工具提示。
 
@@ -140,9 +140,9 @@ ms.locfileid: "71252365"
     ```
 
 ## <a name="implement-the-dynamic-menu-command"></a>实现动态菜单命令
- 创建一个从<xref:Microsoft.VisualStudio.Shell.OleMenuCommand>继承的动态菜单命令类。 在此实现中，构造函数指定用于匹配命令的谓词。 必须重写<xref:Microsoft.VisualStudio.Shell.OleMenuCommand.DynamicItemMatch%2A>方法，以便使用此谓词来<xref:Microsoft.VisualStudio.Shell.OleMenuCommand.MatchedCommandId%2A>设置属性，该属性用于标识要调用的命令。
+ 创建从 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> 继承的动态菜单命令类。 在此实现中，构造函数指定用于匹配命令的谓词。 必须重写 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.DynamicItemMatch%2A> 方法才能使用此谓词设置 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.MatchedCommandId%2A> 属性，该属性用于标识要调用的命令。
 
-1. 创建名为C# *DynamicItemMenuCommand.cs*的新类文件，并添加一个从 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand>继承的名为 DynamicItemMenuCommand 的类：
+1. 创建一个名C#为*DynamicItemMenuCommand.cs*的新类文件，并添加一个从 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> 继承的名为**DynamicItemMenuCommand**的类：
 
     ```csharp
     class DynamicItemMenuCommand : OleMenuCommand
@@ -152,7 +152,7 @@ ms.locfileid: "71252365"
 
     ```
 
-2. 添加以下 using 语句：
+2. 添加以下 using 指令：
 
     ```csharp
     using Microsoft.VisualStudio.Shell;
@@ -167,7 +167,7 @@ ms.locfileid: "71252365"
 
     ```
 
-4. 添加从<xref:Microsoft.VisualStudio.Shell.OleMenuCommand>构造函数继承的构造函数，并指定命令处理程序<xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus>和处理程序。 添加用于匹配命令的谓词：
+4. 添加一个从 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> 构造函数继承的构造函数，并指定一个命令处理程序和一个 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> 处理程序。 添加用于匹配命令的谓词：
 
     ```csharp
     public DynamicItemMenuCommand(CommandID rootId, Predicate<int> matches, EventHandler invokeHandler, EventHandler beforeQueryStatusHandler)
@@ -182,7 +182,7 @@ ms.locfileid: "71252365"
     }
     ```
 
-5. 重写<xref:Microsoft.VisualStudio.Shell.OleMenuCommand.MatchedCommandId%2A>方法，使其调用匹配谓词并设置属性： <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.DynamicItemMatch%2A>
+5. 重写 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.DynamicItemMatch%2A> 方法，以便它调用匹配谓词并设置 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.MatchedCommandId%2A> 属性：
 
     ```csharp
     public override bool DynamicItemMatch(int cmdId)
@@ -212,7 +212,7 @@ ms.locfileid: "71252365"
     public const uint cmdidMyCommand = 0x104;
     ```
 
-2. 在*DynamicMenu.cs*文件中，添加以下 using 语句：
+2. 在*DynamicMenu.cs*文件中，添加以下 using 指令：
 
     ```csharp
     using EnvDTE;
@@ -220,7 +220,7 @@ ms.locfileid: "71252365"
     using System.ComponentModel.Design;
     ```
 
-3. 在类中，添加私有字段**dte2。** `DynamicMenu`
+3. 在 `DynamicMenu` 类中，添加私有字段**dte2**。
 
     ```csharp
     private DTE2 dte2;
@@ -232,7 +232,7 @@ ms.locfileid: "71252365"
     private int rootItemId = 0;
     ```
 
-5. 在 DynamicMenu 构造函数中，添加菜单命令。 在下一部分中，我们将定义命令处理程序、 `BeforeQueryStatus`事件处理程序和匹配谓词。
+5. 在 DynamicMenu 构造函数中，添加菜单命令。 在下一部分中，我们将定义命令处理程序、`BeforeQueryStatus` 事件处理程序和 match 谓词。
 
     ```csharp
     private DynamicMenu(Package package)
@@ -261,9 +261,9 @@ ms.locfileid: "71252365"
     ```
 
 ## <a name="implement-the-handlers"></a>实现处理程序
- 若要在菜单控制器上实现动态菜单项，则必须在单击动态项时处理该命令。 还必须实现逻辑来设置菜单项的状态。 将处理程序添加到`DynamicMenu`类。
+ 若要在菜单控制器上实现动态菜单项，则必须在单击动态项时处理该命令。 还必须实现逻辑来设置菜单项的状态。 将处理程序添加到 `DynamicMenu` 类。
 
-1. 若要实现 "**设置启动项目**" 命令，请添加**OnInvokedDynamicItem**事件处理程序。 它会查找名称与已调用命令的文本相同的项目，并将其设置为启动项目，方法是在<xref:EnvDTE.SolutionBuild.StartupProjects%2A>属性中设置其绝对路径。
+1. 若要实现 "**设置启动项目**" 命令，请添加**OnInvokedDynamicItem**事件处理程序。 它会查找名称与已调用命令的文本相同的项目，并将其设置为启动项目，方法是在 "<xref:EnvDTE.SolutionBuild.StartupProjects%2A>" 属性中设置其绝对路径。
 
     ```csharp
     private void OnInvokedDynamicItem(object sender, EventArgs args)
@@ -286,7 +286,7 @@ ms.locfileid: "71252365"
     }
     ```
 
-2. `OnBeforeQueryStatusDynamicItem`添加事件处理程序。 这是在`QueryStatus`事件之前调用的处理程序。 它确定菜单项是否为 "真实" 项（即不是占位符项），以及该项是否已被选中（这意味着项目已设置为启动项目）。
+2. 添加 `OnBeforeQueryStatusDynamicItem` 事件处理程序。 这是在 `QueryStatus` 事件之前调用的处理程序。 它确定菜单项是否为 "真实" 项（即不是占位符项），以及该项是否已被选中（这意味着项目已设置为启动项目）。
 
     ```csharp
     private void OnBeforeQueryStatusDynamicItem(object sender, EventArgs args)
@@ -331,7 +331,7 @@ private bool IsValidDynamicItem(int commandId)
 ```
 
 ## <a name="set-the-vspackage-to-load-only-when-a-solution-has-multiple-projects"></a>将 VSPackage 设置为仅在解决方案有多个项目时加载
- 因为除非活动解决方案包含多个项目，否则 "**设置启动项目**" 命令没有意义，因此，你可以将 VSPackage 设置为仅在这种情况下自动加载。 将与<xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> UI 上下文<xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids.SolutionHasMultipleProjects>一起使用。 在*DynamicMenuPackage.cs*文件中，将以下属性添加到 DynamicMenuPackage 类：
+ 因为除非活动解决方案包含多个项目，否则 "**设置启动项目**" 命令没有意义，因此，你可以将 VSPackage 设置为仅在这种情况下自动加载。 将 <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> 与 UI 上下文 <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids.SolutionHasMultipleProjects> 一起使用。 在*DynamicMenuPackage.cs*文件中，将以下属性添加到 DynamicMenuPackage 类：
 
 ```csharp
 [PackageRegistration(UseManagedResourcesOnly = true)]

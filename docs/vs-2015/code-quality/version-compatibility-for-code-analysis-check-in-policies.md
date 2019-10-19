@@ -9,37 +9,37 @@ helpviewer_keywords:
 - check-in policies, version compatibility for code analysis
 ms.assetid: 1af376e3-3be7-4445-803b-76a858567a5b
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 0a63ead03baffaa0ce8047220ff1ce8a33c88be8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 075981569cbee05e90afe17b3afc9558d7bbb270
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68201168"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72609316"
 ---
 # <a name="version-compatibility-for-code-analysis-check-in-policies"></a>代码分析签入策略的版本兼容性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-如果您必须评估和编写代码分析签入策略使用不同版本的[!INCLUDE[esprtfc](../includes/esprtfc-md.md)]，您必须知道方式间的差异[!INCLUDE[vstsTfsOrcasLong](../includes/vststfsorcaslong-md.md)]和[!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)]评估签入策略。  
-  
-## <a name="version-compatibility-for-evaluating-check-in-policies"></a>版本兼容性评估签入策略  
-  
-- 代码分析签入策略中的计算时[!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)]，在存在任何规则[!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)]中不存在，但[!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)]将被忽略。  
-  
-- 代码分析签入策略中的计算时[!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)]，专用于的所有新规则[!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)]将被忽略。  
-  
-- 如果代码分析签入策略指定规则程序集，[!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)]将忽略所指定的程序集，它无法识别的所有规则。  
-  
-- 如果代码分析签入策略指定规则程序集的[!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)]无法识别，显示一条消息。  
-  
-## <a name="version-compatibility-for-authoring-check-in-policies"></a>创作签入策略的版本兼容性  
-  
-- 如果您通过创建代码分析签入策略[!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)]新版[!INCLUDE[esprtfc](../includes/esprtfc-md.md)]，不能使用[!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)]版本[!INCLUDE[esprtfc](../includes/esprtfc-md.md)]对其进行修改。 同样，[!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)]无法评估策略。  
-  
-- 如果您通过创建代码分析签入策略[!INCLUDE[esprtfc](../includes/esprtfc-md.md)]中[!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)]，可以使用[!INCLUDE[esprtfc](../includes/esprtfc-md.md)]中[!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)]若要修改它，并将策略可以还通过计算[!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)]。 通过使用修改的策略后[!INCLUDE[esprtfc](../includes/esprtfc-md.md)]中[!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)]，不再可以通过编辑策略[!INCLUDE[esprtfc](../includes/esprtfc-md.md)]中[!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)]。 [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] 可以评估策略，而不会出现因不匹配的强名称而引起的问题。  
-  
-- 若要创建具有两个应用的规则设置的代码分析签入策略[!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)]并[!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)]，必须创建中的策略[!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)]、 进行需要的所有更改和保存策略。 如果对规则的更改仅在存在[!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)]，修改并保存在策略[!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)]。  
-  
-     保存中的策略后[!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)]，你无法再更改中存在的规则设置[!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)]仅。
+如果你必须使用 [!INCLUDE[esprtfc](../includes/esprtfc-md.md)] 的不同版本来评估和创作代码分析签入策略，你必须知道 [!INCLUDE[vstsTfsOrcasLong](../includes/vststfsorcaslong-md.md)] 和 [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] 评估签入策略的方式之间的差异。
+
+## <a name="version-compatibility-for-evaluating-check-in-policies"></a>用于评估签入策略的版本兼容性
+
+- 在 [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] 中评估代码分析签入策略时，将忽略 [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] 中存在但在 [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] 中不存在的任何规则。
+
+- 在 [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] 中评估代码分析签入策略时，将忽略所有专用于 [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] 的新规则。
+
+- 如果代码分析签入策略指定规则程序集，[!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] 将忽略由它无法识别的程序集指定的所有规则。
+
+- 如果代码分析签入策略指定 [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] 无法识别的规则程序集，则将显示一条消息。
+
+## <a name="version-compatibility-for-authoring-check-in-policies"></a>创作签入策略的版本兼容性
+
+- 如果使用 [!INCLUDE[esprtfc](../includes/esprtfc-md.md)] 的 [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] 版本创建代码分析签入策略，则不能使用 [!INCLUDE[esprtfc](../includes/esprtfc-md.md)] 的 [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] 版本来修改它。 而且，[!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] 无法评估策略。
+
+- 如果在 [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] 中使用 [!INCLUDE[esprtfc](../includes/esprtfc-md.md)] 创建了代码分析签入策略，则可以使用 [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] 中的 [!INCLUDE[esprtfc](../includes/esprtfc-md.md)] 来修改该策略，也可以通过 [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] 来评估该策略。 使用 [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] 中的 [!INCLUDE[esprtfc](../includes/esprtfc-md.md)] 修改策略后，你将无法再使用 [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] 中的 [!INCLUDE[esprtfc](../includes/esprtfc-md.md)] 来编辑该策略。 [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] 可以评估策略，而不会出现因不匹配的强名称而引起的问题。
+
+- 若要创建同时适用于 [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] 和 [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] 的规则设置的代码分析签入策略，你必须在 [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] 中创建策略，进行所需的所有更改，并保存策略。 如果对规则所做的更改仅在 [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] 中存在，则在 [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] 中修改并保存策略。
+
+     在 [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] 中保存策略后，你将无法再更改仅存在于 [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] 中的规则的设置。

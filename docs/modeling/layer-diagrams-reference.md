@@ -15,17 +15,17 @@ helpviewer_keywords:
 - dependency diagrams
 - diagrams - modeling, layer
 - constraints, architectural
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0de634ee62387e50fed89e4465842b2801748f45
-ms.sourcegitcommit: 0f44ec8ba0263056ad04d2d0dc904ad4206ce8fc
+ms.openlocfilehash: 7711d0b0f369f43cc7becf92cbdcfc986cd3a6a8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766153"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661486"
 ---
 # <a name="dependency-diagrams-reference"></a>依赖项关系图：参考
 
@@ -48,7 +48,7 @@ ms.locfileid: "70766153"
 
 - 在开发和维护你的代码过程中，通过包括对签入的验证来强化预期体系结构并生成操作。
 
-本主题介绍可在依赖项关系图上使用的元素。 有关如何创建和绘制依赖项关系图的详细信息，请[参阅依赖项关系图：准则](../modeling/layer-diagrams-guidelines.md)。 有关分层模式的详细信息，请参阅[模式 & 实践](http://go.microsoft.com/fwlink/?LinkId=145794)。
+本主题介绍可在依赖项关系图上使用的元素。 有关如何创建和绘制依赖项关系图的详细信息，请参阅[依赖项关系图：准则](../modeling/layer-diagrams-guidelines.md)。 有关分层模式的详细信息，请参阅[模式 & 实践](http://go.microsoft.com/fwlink/?LinkId=145794)。
 
 ## <a name="reading-dependency-diagrams"></a>读取依赖项关系图
 
@@ -56,7 +56,7 @@ ms.locfileid: "70766153"
 
 下表描述了可在依赖项关系图上使用的元素。
 
-|**整形**|**元素**|**说明**|
+|**整形**|**元素**|**描述**|
 |-|-|-|
 |1|**该层**|系统中的物理项目的逻辑组。 这些项目可以是命名空间、项目、类、方法等。<br /><br /> 若要查看链接到某个层的项目，请打开该层的快捷菜单，然后选择 "**查看链接**" 以打开 "**层资源管理器**"。<br /><br /> 有关详细信息，请参阅[层资源管理器](#Explorer)。<br /><br /> -   **禁止的命名空间依赖项**-指定与此层关联的项目不能依赖于指定的命名空间。<br />-   **禁止的命名空间**-指定与此层关联的项目不能属于指定的命名空间。<br />-   **必需的命名空间**-指定与此层关联的项目必须属于某个指定的命名空间。|
 |2|**依赖项**|指示某个层可以使用另一层的功能，但反之则不然。<br /><br /> -   **方向**-指定依赖关系的方向。|
@@ -76,7 +76,7 @@ ms.locfileid: "70766153"
 
 有关链接层和项目的详细信息，请参阅：
 
-- [依赖项关系图：指南](../modeling/layer-diagrams-guidelines.md)
+- [依赖项关系图：准则](../modeling/layer-diagrams-guidelines.md)
 
 - [从代码创建依赖项关系图](../modeling/create-layer-diagrams-from-your-code.md)
 
@@ -89,11 +89,11 @@ ms.locfileid: "70766153"
 > [!NOTE]
 > 如果看不到所有这些属性，请展开 "**层资源管理器**" 窗口。
 
-|**层资源管理器中的列**|**说明**|
+|**层资源管理器中的列**|**描述**|
 |-|-|
 |**类型**|项目种类，例如类、命名空间、源文件等|
 |**该层**|链接到该项目的层|
-|**支持验证**|如果**为 True**，则层验证过程可以验证项目是否符合与此元素的依赖关系。<br /><br /> 如果**为 False**，则链接不参与层验证过程。<br /><br /> 有关详细信息，请[参阅依赖关系图：准则](../modeling/layer-diagrams-guidelines.md)。|
+|**支持验证**|如果**为 True**，则层验证过程可以验证项目是否符合与此元素的依赖关系。<br /><br /> 如果**为 False**，则链接不参与层验证过程。<br /><br /> 有关详细信息，请参阅[依赖关系图：准则](../modeling/layer-diagrams-guidelines.md)。|
 |标识符|对链接的项目的引用|
 
 ## <a name="see-also"></a>请参阅

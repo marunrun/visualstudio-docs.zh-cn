@@ -3,21 +3,21 @@ title: 如何：从 XML 架构生成 XML 代码段
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 2c128d2a-aaa6-4814-aa95-e07056afe338
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cb5b10e142c1dd62625a48c39c3860d49e8942cb
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: ae55428b61053fbd255446833cb20aec3da79b6e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926818"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645380"
 ---
 # <a name="how-to-generate-an-xml-snippet-from-an-xml-schema"></a>如何：从 XML 架构生成 XML 代码段
 
-"XML 编辑器" 可以从 XML 架构定义语言 (XSD) 架构生成 XML 代码段。 例如, 在创作 XML 文件时, 如果将其放置在元素名称旁边, 可以按**tab**键, 并使用从该元素的架构信息生成的 XML 数据来填充元素。
+"XML 编辑器" 可以从 XML 架构定义语言（XSD）架构生成 XML 代码段。 例如，在创作 XML 文件时，如果将其放置在元素名称旁边，可以按**tab**键，并使用从该元素的架构信息生成的 XML 数据来填充元素。
 
 此功能只适用于元素。 下列规则也适用：
 
@@ -50,13 +50,13 @@ ms.locfileid: "68926818"
 
 ### <a name="to-create-a-new-xml-file-and-associate-it-with-an-xml-schema"></a>创建新的 XML 文件并将其与 XML 架构关联
 
-1. 在 "**文件**" 菜单上, 指向 "**新建**", 然后单击 "**文件**"。
+1. 在 "**文件**" 菜单上，指向 "**新建**"，然后单击 "**文件**"。
 
-2. 在 "**模板**" 窗格中选择 " **XML 文件**", 然后单击 "**打开**"。
+2. 在 "**模板**" 窗格中选择 " **XML 文件**"，然后单击 "**打开**"。
 
      新文件将在编辑器中打开。 该文件包含默认的 XML 声明 `<?xml version="1.0" encoding="utf-8">`。
 
-3. 在文档 "属性" 窗口中, 单击 "**架构**" 字段上的 "浏览" 按钮 ( **...** )。
+3. 在文档 "属性" 窗口中，单击 "**架构**" 字段上的 "浏览" 按钮（ **...** ）。
 
      将显示 " **XSD 架构**" 对话框。
 
@@ -66,7 +66,7 @@ ms.locfileid: "68926818"
 
 5. 选择该架构文件并单击 "**打开**"。
 
-6. 单击 **“确定”** 。
+6. 单击“确定”。
 
      XML 架构现在与 XML 文档关联。
 
@@ -84,11 +84,11 @@ ms.locfileid: "68926818"
 
      **Contact**来添加根元素。
 
-3. 从成员列表中选择 "**联系人**", 然后按**enter**。
+3. 从成员列表中选择 "**联系人**"，然后按**enter**。
 
      编辑器将添加开始标记 `<Contact` 并将光标置于元素名的后面。
 
-4. 按**tab**键, 基于`Contact`元素的架构信息生成元素的 XML 数据。
+4. 按**tab**可根据其架构信息为 `Contact` 元素生成 XML 数据。
 
 ## <a name="input"></a>输入
 
@@ -141,7 +141,7 @@ ms.locfileid: "68926818"
 
 ### <a name="output"></a>Output
 
-以下是根据与 `Contact` 元素关联的架构信息生成的 XML 数据。 标记为`bold`的项指定 XML 代码段中的可编辑字段。
+以下是根据与 `Contact` 元素关联的架构信息生成的 XML 数据。 标记为 `bold` 的项指定 XML 代码段中的可编辑字段。
 
 ```xml
 <Contact>

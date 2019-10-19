@@ -6,23 +6,23 @@ dev_langs:
 - VB
 - CSharp
 ms.assetid: 03ff1146-706e-4780-91cb-56a83df63eea
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: cb6bbde145317d737afdbf819dba8ee53f805f72
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 14b44a16f6652fe8d94669f99107ebe59b790a0e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71252970"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72639174"
 ---
 # <a name="walkthrough-customize-the-insert-update-and-delete-behavior-of-entity-classes"></a>演练：自定义实体类的插入、更新和删除行为
 
 [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)提供了一个可视化设计图面，用于创建和编辑基于数据库中的对象 LINQ to SQL 类（实体类）。 使用[LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)，可以使用 LINQ 技术访问 SQL 数据库。 有关详细信息，请参阅 [LINQ（语言集成查询）](/dotnet/csharp/linq/)。
 
-默认情况下，LINQ to SQL 运行时提供用于执行更新的逻辑。 运行时基于表`Insert`的`Update`架构（列定义和主键信息）创建默认的、和`Delete`语句。 当不希望使用默认行为时，可以配置更新行为并指定特定的存储过程，来执行处理数据库中数据所必需的插入、更新和删除。 在不生成默认行为时（例如，实体类映射到视图时），也可以这样做。 另外，在数据库要求通过存储过程访问表时，您可以重写默认的更新行为。 有关详细信息，请参阅[使用存储过程自定义操作](/dotnet/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures)。
+默认情况下，LINQ to SQL 运行时提供用于执行更新的逻辑。 运行时根据表的架构（列定义和主键信息）创建默认 `Insert`、`Update` 和 `Delete` 语句。 当不希望使用默认行为时，可以配置更新行为并指定特定的存储过程，来执行处理数据库中数据所必需的插入、更新和删除。 在不生成默认行为时（例如，实体类映射到视图时），也可以这样做。 另外，在数据库要求通过存储过程访问表时，您可以重写默认的更新行为。 有关详细信息，请参阅[使用存储过程自定义操作](/dotnet/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures)。
 
 > [!NOTE]
 > 本演练要求可以使用 Northwind 数据库的“InsertCustomer”、“UpdateCustomer”和“DeleteCustomer”存储过程。
@@ -33,19 +33,19 @@ ms.locfileid: "71252970"
 
 - 创建新的 Windows 窗体应用程序并向其添加 LINQ to SQL 文件。
 
-- 创建映射到 Northwind `Customers`表的实体类。
+- 创建映射到 Northwind `Customers` 表的实体类。
 
-- 创建引用 LINQ to SQL `Customer`类的对象数据源。
+- 创建一个引用 LINQ to SQL `Customer` 类的对象数据源。
 
-- 创建一个 Windows 窗体，该<xref:System.Windows.Forms.DataGridView>窗体包含绑定`Customer`到类的。
+- 创建一个 Windows 窗体，该窗体包含绑定到 `Customer` 类的 <xref:System.Windows.Forms.DataGridView>。
 
 - 实现该窗体的保存功能。
 
-- 通过<xref:System.Data.Linq.DataContext>将存储过程添加到**O/R 设计器**来创建方法。
+- 通过将存储过程添加到**O/R 设计器**来创建 <xref:System.Data.Linq.DataContext> 方法。
 
-- `Customer`配置类以使用存储过程执行插入、更新和删除操作。
+- 配置 `Customer` 类以使用存储过程执行插入、更新和删除操作。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>Prerequisites
 
 本演练使用 SQL Server Express LocalDB 和 Northwind 示例数据库。
 
@@ -133,7 +133,7 @@ ms.locfileid: "71252970"
 
 3. 在代码编辑器中打开 Form1。
 
-4. 将以下代码添加到窗体中，全局到窗体，在任何特定方法之外但在`Form1`类中：
+4. 将以下代码添加到窗体中，全局到窗体，在任何特定方法之外但在 `Form1` 类中：
 
     ```vb
     Private NorthwindDataContext1 As New NorthwindDataContext
@@ -229,10 +229,10 @@ ms.locfileid: "71252970"
 
 18. 将“Original_CustomerID”方法参数映射到“CustomerID (Original)”类属性。
 
-19. 单击 **“确定”** 。
+19. 单击“确定”。
 
 > [!NOTE]
-> 虽然这对于此特定演练并不是问题，但值得注意的是，LINQ to SQL 会自动处理数据库生成的值，以便在插入和期间自动为标识（自动递增）、rowguidcol （数据库生成的 GUID）以及时间戳列处理程序. 在其他列类型中，数据库生成的值将意外导致 Null 值。 若要返回数据库生成的值，应手动将 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> 设置为 `true` 并将 <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> 设置为下列值之一：[AutoSync](<xref:System.Data.Linq.Mapping.AutoSync.Always>)、 [AutoSync](<xref:System.Data.Linq.Mapping.AutoSync.OnInsert>)或[AutoSync。](<xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>)
+> 虽然这对于此特定演练并不是问题，但值得注意的是，LINQ to SQL 会自动处理数据库生成的值，以便在插入和期间自动为标识（自动递增）、rowguidcol （数据库生成的 GUID）以及时间戳列处理程序. 在其他列类型中，数据库生成的值将意外导致 Null 值。 若要返回数据库生成的值，应手动将 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> 设置为 `true` 并将 <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> 为以下值之一： [AutoSync](<xref:System.Data.Linq.Mapping.AutoSync.Always>)、 [AutoSync](<xref:System.Data.Linq.Mapping.AutoSync.OnInsert>)或[AutoSync。](<xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>)
 
 ## <a name="test-the-application"></a>测试应用程序
 
@@ -273,6 +273,6 @@ ms.locfileid: "71252970"
 
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [DataContext 方法](../data-tools/datacontext-methods-o-r-designer.md)
-- [如何：分配存储过程以便执行更新、插入和删除操作](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)
+- [如何：分配存储过程以执行更新、插入和删除](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)
 - [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
 - [LINQ to SQL 查询](/dotnet/framework/data/adonet/sql/linq/linq-to-sql-queries)

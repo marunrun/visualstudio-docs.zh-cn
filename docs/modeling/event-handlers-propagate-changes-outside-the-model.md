@@ -5,43 +5,43 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
 - Domain-Specific Language, events
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cd02491b42e9e6a5d677eca35ccde2aa559352c4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fe60767fe61de5c49718f25281d9b547305bbe84
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62994736"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653796"
 ---
 # <a name="event-handlers-propagate-changes-outside-the-model"></a>事件处理程序在模型外部传播更改
 
-在可视化和建模 SDK，可以定义存储事件处理程序将更改传播到存储，例如非存储变量、 文件、 其他存储或其他 Visual Studio 扩展中的模型外的资源。 存储的事件处理程序在其中触发事件发生在事务结束后执行。 它们还可在撤消或重做操作。 因此，应用商店与规则不同，存储事件是最适用于更新商店外的值。 .NET 与事件不同，存储事件处理程序注册为侦听到类： 无需注册每个实例的单独处理程序。 有关如何选择不同的方式来处理更改之间的详细信息，请参阅[对的响应并传播更改](../modeling/responding-to-and-propagating-changes.md)。
+在可视化和建模 SDK 中，可以定义存储事件处理程序以将更改传播到存储区之外的资源，例如非存储变量、文件、其他存储中的模型或其他 Visual Studio 扩展。 存储事件处理程序在触发事件发生的事务结束后执行。 还会在撤消或重做操作中执行这些操作。 因此，与存储规则不同，存储事件对于更新存储区之外的值最为有用。 与 .NET 事件不同，存储事件处理程序已注册为侦听类：不必为每个实例注册单独的处理程序。 有关如何在不同方式之间进行选择以处理更改的详细信息，请参阅[响应和传播更改](../modeling/responding-to-and-propagating-changes.md)。
 
-图形表面和其他用户界面控件是可以由存储事件的外部资源的示例。
+图形表面和其他用户界面控件是可通过存储事件处理的外部资源的示例。
 
-### <a name="to-define-a-store-event"></a>若要定义的存储事件
+### <a name="to-define-a-store-event"></a>定义存储事件
 
-1. 选择你想要监视的事件的类型。 有关完整列表，请查看的属性<xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory>。 每个属性对应于事件的类型。 最常用的事件类型包括：
+1. 选择要监视的事件类型。 有关完整列表，请查看 <xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory> 的属性。 每个属性都对应于一种事件类型。 最常使用的事件类型包括：
 
-    - `ElementAdded` -当模型元素时，触发，关系链接、 形状或连接线创建。
+    - `ElementAdded`-创建模型元素、关系链接、形状或连接符时触发。
 
-    - ElementPropertyChanged-触发时的值`Normal`更改域属性。 仅当新的和旧值不相等，则触发事件。 该事件不能应用于计算的和自定义存储属性。
+    - ElementPropertyChanged-在更改 `Normal` 域属性的值时触发。 仅当新值和旧值不相等时，才会触发事件。 事件不能应用于计算的存储属性和自定义存储属性。
 
-         它不能应用于对应于关系链接在角色属性。 请改用`ElementAdded`要监视的域关系。
+         它不能应用于与关系链接对应的角色属性。 请改用 `ElementAdded` 来监视域关系。
 
-    - `ElementDeleted` -模型元素后触发，关系、 形状或连接线已被删除。 您仍然可以访问的属性值的元素，但它将具有与其他元素的任何关系。
+    - `ElementDeleted`-在删除模型元素、关系、形状或连接符后触发。 你仍可访问元素的属性值，但它不与其他元素建立关系。
 
-2. 添加的分部类定义_YourDsl_**DocData**单独的代码文件中**DslPackage**项目。
+2. 将_yourdsl 可_**DocData**的分部类定义添加到**DslPackage**项目的单独代码文件中。
 
-3. 作为方法，如以下示例所示编写事件代码。 它可以是`static`，除非你想要访问`DocData`。
+3. 以方法的形式编写事件代码，如以下示例中所示。 它可以 `static`，除非你想要访问 `DocData`。
 
-4. 重写`OnDocumentLoaded()`注册处理程序。 如果你有多个处理程序，可以在同一位置进行注册。
+4. 重写 `OnDocumentLoaded()` 以注册处理程序。 如果有多个处理程序，则可以将它们全部注册到同一位置。
 
-注册代码的位置并不重要。 `DocView.LoadView()` 是另一个位置。
+注册代码的位置并不重要。 `DocView.LoadView()` 是一种替代位置。
 
 ```csharp
 using System;
@@ -88,13 +88,13 @@ namespace Company.MusicLib
 }
 ```
 
-## <a name="use-events-to-make-undoable-adjustments-in-the-store"></a>使用事件存储区中进行可撤消的调整
+## <a name="use-events-to-make-undoable-adjustments-in-the-store"></a>使用事件在存储中进行可撤消的调整
 
-存储事件不通常用于传播更改，在存储，因为事件处理程序执行提交事务后。 相反，将使用的存储规则。 有关详细信息，请参阅[规则将传播的更改中的模式](../modeling/rules-propagate-changes-within-the-model.md)。
+存储事件通常不用于传播存储区中的更改，因为在提交事务后，事件处理程序会执行。 相反，应使用存储规则。 有关详细信息，请参阅[规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)。
 
-但是，您可以使用事件处理程序来做其他更新，到应用商店中，如果您希望用户能够撤消独立于原始事件的其他更新。 例如，假设的小写字符均唱片集标题的常见约定。 你可以编写的应用商店事件处理程序后用户已将它以大写形式键入更正为小写形式的标题。 但用户可以使用撤消命令以取消所做的更正，还原大写字符。 第二个撤消会删除用户的更改。
+但是，如果您希望用户能够从原始事件中单独撤消其他更新，则可以使用事件处理程序对存储区进行其他更新。 例如，假设小写字符是唱片集标题的常见约定。 您可以编写一个存储事件处理程序，用于在用户键入大写后将标题更正为小写。 但是，用户可以使用 "撤消" 命令取消您的更正，同时还原大写字符。 第二次撤消会删除用户的更改。
 
-与此相反，如果您编写了一个存储规则，以执行相同的操作，用户的更改和所做的更正应该在同一事务中，以便用户无法撤消而不会丢失原始更改的调整。
+与此相反，如果你编写了一个用于执行相同操作的存储规则，则用户的更改和更正将在同一事务中，因此用户无法在不丢失原始更改的情况下撤消调整。
 
 ```csharp
 partial class MusicLibDocView
@@ -158,28 +158,28 @@ private static void AlbumTitleAdjuster(object sender,
 }
 ```
 
-如果您编写更新存储的事件：
+如果编写更新存储的事件：
 
-- 使用`store.InUndoRedoOrRollback`若要避免更改中撤消的模型元素。 事务管理器将恢复到其原始状态存储中设置的所有内容。
+- 使用 `store.InUndoRedoOrRollback` 避免在撤消中更改模型元素。 事务管理器会将存储中的所有内容设置回其原始状态。
 
-- 使用`store.InSerializationTransaction`若要避免从文件加载模型时更改。
+- 使用 `store.InSerializationTransaction` 可以避免在从文件中加载模型时进行更改。
 
-- 所做的更改将导致更多的事件触发。 请确保避免无限循环。
+- 更改将导致触发更多事件。 请确保避免出现无限循环。
 
 ## <a name="store-event-types"></a>存储事件类型
 
-每个事件类型对应于 Store.EventManagerDirectory 中的集合。 可以添加或移除事件处理程序在任何时候，但通常要将文档加载时添加它们。
+每个事件类型对应于 EventManagerDirectory 中的一个集合。 你可以随时添加或删除事件处理程序，但在加载文档时通常会添加它们。
 
-|`EventManagerDirectory` 属性名称|时执行|
+|`EventManagerDirectory` 属性名称|执行时间|
 |-|-|
-|ElementAdded|创建域类、 域关系、 形状、 连接符或关系图的实例。|
-|ElementDeleted|模型元素已从存储的元素目录中删除，不再源或目标的任何关系。 元素不实际从内存中删除，但会保留在以后撤消。|
-|ElementEventsBegun|外部事务结束时调用。|
-|ElementEventsEnded|当处理完所有其他事件时调用。|
-|ElementMoved|模型元素已从一个存储分区移动到另一个。<br /><br /> 这没有与关系图上形状的位置。|
-|ElementPropertyChanged|域属性的值已更改。 这被执行仅当旧的和新值不相等。|
-|RolePlayerChanged|关系的两个角色 （结束） 之一引用的新元素。|
-|RolePlayerOrderChanged|在角色中具有多重性大于 1，已更改的一系列链接。|
+|ElementAdded|将创建域类、域关系、形状、连接符或关系图的实例。|
+|ElementDeleted|模型元素已从存储的元素目录中移除，不再是任何关系的源或目标。 实际不会从内存中删除该元素，但会在将来撤消时保留。|
+|ElementEventsBegun|在外部事务结束时调用。|
+|ElementEventsEnded|在处理完所有其他事件后调用。|
+|ElementMoved|模型元素已从一个存储区分区移到另一个。<br /><br /> 这与关系图上形状的位置无关。|
+|ElementPropertyChanged|域属性的值已更改。 仅当旧值和新值不相等时，才执行此值。|
+|RolePlayerChanged|关系的两个角色（结束）之一引用新元素。|
+|RolePlayerOrderChanged|在多重性大于1的角色中，链接序列已更改。|
 |TransactionBeginning||
 |TransactionCommitted||
 |TransactionRolledBack||
@@ -187,6 +187,6 @@ private static void AlbumTitleAdjuster(object sender,
 ## <a name="see-also"></a>请参阅
 
 - [响应并传播更改](../modeling/responding-to-and-propagating-changes.md)
-- [示例代码：线路关系图](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
+- [示例代码：线路图](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

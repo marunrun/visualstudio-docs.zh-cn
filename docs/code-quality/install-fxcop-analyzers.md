@@ -4,27 +4,29 @@ ms.date: 08/03/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - fxcop analyzers
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: fec188ba61a7e4d3f27caad03f0a5d32b6758a32
-ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
+ms.openlocfilehash: 9791e2dbb6d4a82a49539216eda53d217140bd52
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974978"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649340"
 ---
 # <a name="install-fxcop-analyzers-in-visual-studio"></a>在 Visual Studio 中安装 FxCop 分析器
 
 Microsoft 创建了一组名为[CodeAnalysis](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers)的分析器，其中包含来自旧分析的最重要的 "FxCop" 规则。 这些分析器检查代码中的安全性、性能和设计问题，等等。
 
-您可以将这些 FxCop 分析器作为 NuGet 包或 VSIX 扩展安装到 Visual Studio。 若要了解每个的优缺点，请参阅 [NuGet package 与VSIX 扩展 @ no__t。
+您可以将这些 FxCop 分析器作为 NuGet 包或 VSIX 扩展安装到 Visual Studio。 若要了解每个的优缺点，请参阅[NuGet 包与 VSIX 扩展](roslyn-analyzers-overview.md#nuget-package-versus-vsix-extension)。
 
 ## <a name="nuget-package"></a>NuGet 程序包
 
-你可以直接从项目的代码分析属性页安装[CodeAnalysis. FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet 包：
+::: moniker range=">=vs-2019"
+
+在 Visual Studio 2019 版本16.3 及更高版本中，你可以直接从项目的代码分析属性页安装[CodeAnalysis FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet 包：
 
 1. 右键单击 "**解决方案资源管理器**中的项目节点，选择"**属性**"，然后选择"**代码分析**"选项卡。
 
@@ -32,9 +34,28 @@ Microsoft 创建了一组名为[CodeAnalysis](https://www.nuget.org/packages/Mic
 
 2. 选择“安装”。
 
-   Visual Studio 将安装最新版本的 CodeAnalyzers。 FxCopAnalyzers 程序包。 程序集显示在 "**引用**"  > **分析器**下的**解决方案资源管理器**中。
+   Visual Studio 将安装最新版本的 CodeAnalyzers。 FxCopAnalyzers 程序包。 程序集显示在 "**引用** > **分析器**" 下**解决方案资源管理器**中。
 
    ![解决方案资源管理器中的分析器节点](media/solution-explorer-analyzers-node.png)
+
+如果使用的是较旧版本的 Visual Studio 2019，请使用[程序包管理器控制台](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console)或[包管理器 UI](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console)安装包。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+1. 根据你的 Visual Studio 版本确定要安装[的分析器包版本](#fxcopanalyzers-package-versions)。
+
+2. 使用[包管理器控制台](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console)或[包管理器 UI](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console)在 Visual Studio 中安装包。
+
+   > [!NOTE]
+   > 每个分析器包的 "nuget.org" 页将显示要粘贴到**包管理器控制台**中的命令。 还有一个用于将文本复制到剪贴板的方便的按钮。
+   >
+   > ![显示包管理器控制台命令的 NuGet.org 页面](media/nuget-package-manager-command.png)
+
+   分析器程序集已安装，它们显示在 "**引用**>**分析器**" 下**解决方案资源管理器**中。
+
+::: moniker-end
 
 ### <a name="custom-installation"></a>自定义安装
 
@@ -65,7 +86,7 @@ Microsoft 创建了一组名为[CodeAnalysis](https://www.nuget.org/packages/Mic
 
 在 Visual Studio 2017 版本15.5 及更高版本上，你可以安装[Microsoft 代码分析 2017](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.MicrosoftCodeAnalysis2017)扩展，其中包含托管项目的所有 FxCop 分析器。
 
-1. 在 Visual Studio 中，选择 "**工具**" @no__t "**扩展和更新**"。
+1. 在 Visual Studio 中，选择 "**工具**" > "**扩展和更新**"。
 
    此时，“扩展和更新”对话框打开。
 
@@ -84,7 +105,7 @@ Microsoft 创建了一组名为[CodeAnalysis](https://www.nuget.org/packages/Mic
 
 [Microsoft 代码分析 2019](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.MicrosoftCodeAnalysis2019)扩展包含托管项目的所有 FxCop 分析器。 若要安装此扩展：
 
-1. 在 Visual Studio 中，选择 "**扩展**>**管理扩展**"。
+1. 在 Visual Studio 中，选择 "**扩展**" > "**管理扩展**"。
 
    此时将打开 "**管理扩展**" 对话框。
 
@@ -121,13 +142,13 @@ Microsoft 创建了一组名为[CodeAnalysis](https://www.nuget.org/packages/Mic
 
 ::: moniker range="vs-2017"
 
-如果要检查是否已安装该扩展，请选择 "**工具**" @no__t "**扩展和更新**"。 在 "**扩展和更新**" 对话框中，选择左侧的 "**已安装**" 类别，然后按名称搜索扩展。
+如果要检查是否安装了该扩展，请选择 "**工具**"  >  "**扩展和更新**"。 在 "**扩展和更新**" 对话框中，选择左侧的 "**已安装**" 类别，然后按名称搜索扩展。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-如果要检查是否安装了扩展，请选择 "**扩展**"  >  "**管理扩展**。 在 "**管理扩展**" 对话框中，选择左侧的 "**已安装**" 类别，然后按名称搜索扩展。
+如果要检查是否安装了扩展，请选择 "**扩展**"  >  "**管理扩展**"。 在 "**管理扩展**" 对话框中，选择左侧的 "**已安装**" 类别，然后按名称搜索扩展。
 
 ::: moniker-end
 

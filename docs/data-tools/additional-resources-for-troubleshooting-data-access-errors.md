@@ -219,21 +219,21 @@ helpviewer_keywords:
 - troubleshooting data access
 - datasets [Visual Basic], troubleshooting
 ms.assetid: 357c9f0a-9d59-4db4-9b7c-b96cad839961
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9867f9b595937e0ae8586aabdba180f4b1d8d359
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5c92699d9d7c77c771ea1cc4aa28b918f318eca8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62818073"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648867"
 ---
-# <a name="troubleshoot-data-access-errors-on-the-forums"></a>在论坛上的数据访问错误疑难解答
+# <a name="troubleshoot-data-access-errors-on-the-forums"></a>排查论坛上的数据访问错误
 
-在 Microsoft Developer Network (MSDN) 公共论坛中，可以找到有关对错误和警告进行疑难解答的帮助。 此处有一些与数据相关的论坛 MSDN 上：
+在 Microsoft Developer Network (MSDN) 公共论坛中，可以找到有关对错误和警告进行疑难解答的帮助。 下面是一些在 MSDN 上提供的与数据相关的论坛：
 
 - [Windows 窗体数据控制和数据绑定](https://social.msdn.microsoft.com/Forums/windows/en-US/home?forum=winformsdatacontrols)
 
@@ -247,9 +247,9 @@ ms.locfileid: "62818073"
 
 - [LINQ to SQL 论坛](https://social.msdn.microsoft.com/Forums/en-US/home?forum=linqtosql)
 
-- [ADO.NET 数据提供程序论坛](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataproviders)
+- [ADO.NET 数据提供者论坛](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataproviders)
 
-有关如何解决与 SQL Server 的连接信息，请参阅[连接到 SQL Server 数据库引擎的故障排除](https://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)。
+有关如何解决与 SQL Server 的连接问题的信息，请参阅[连接到 SQL Server 数据库引擎的疑难解答](https://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)。
 
 ## <a name="see-also"></a>请参阅
 

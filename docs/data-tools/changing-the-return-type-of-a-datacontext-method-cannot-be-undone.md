@@ -3,17 +3,17 @@ title: 对 DataContext 方法的返回类型的更改操作不能撤消
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 76b161fc-5075-4192-8d94-f15b02e199e9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7aee87e353cb3b69b70e78508c20a9a9c1ed5102
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.openlocfilehash: 95d75e084b4824cf7cc8e717b1ce9174e76aa2e7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65460686"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648696"
 ---
 # <a name="changing-the-return-type-of-a-datacontext-method-cannot-be-undone"></a>对 DataContext 方法的返回类型的更改操作不能撤消
 
@@ -23,11 +23,11 @@ ms.locfileid: "65460686"
 
 ## <a name="to-change-the-return-type-of-a-datacontext"></a>更改 DataColumn 的返回类型
 
-- 单击 **“是”**。
+- 单击“是”。
 
 ## <a name="to-exit-the-message-box-and-leave-the-return-type-unchanged"></a>退出消息框，不更改返回类型
 
-- 单击“否” 。
+- 单击“否”。
 
 ## <a name="to-revert-to-the-original-return-type-after-changing-the-return-type"></a>在更改返回类型后恢复为原始返回类型
 

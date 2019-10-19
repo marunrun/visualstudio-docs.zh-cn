@@ -14,17 +14,17 @@ helpviewer_keywords:
 - typed datasets, n-tier applications
 - multiple tier applications
 ms.assetid: f6ae2ee0-ea5f-4a79-8f4b-e21c115afb20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c6da3f51a249aaf52cf3f20b90f3add6ceeb7aa1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b96f2e51048216388eea50935a1ced536d8d230b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564751"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648031"
 ---
 # <a name="work-with-datasets-in-n-tier-applications"></a>在 n 层应用程序中使用数据集
 
@@ -32,7 +32,7 @@ ms.locfileid: "62564751"
 
 类型化数据集经过改进，现在可以在相互独立的项目中生成 TableAdapter 和数据集类。 这使你可以快速分离各应用程序层及生成 N 层数据应用程序。
 
-N 层中类型化数据集支持 n 层设计应用程序体系结构的迭代的开发。它还会删除手动将代码分离到多个项目的要求。 使用设计数据层的初始**数据集设计器**。 如果已准备好对应用程序体系结构采用 n 层设计，请设置数据集的“数据集项目”属性，以在另一个项目中生成数据集类。
+使用类型化数据集的 N 层支持，可以将应用程序体系结构迭代开发到 n 层设计。它还消除了将代码手动分隔到多个项目中的要求。 使用**数据集设计器**开始设计数据层。 如果已准备好对应用程序体系结构采用 n 层设计，请设置数据集的“数据集项目”属性，以在另一个项目中生成数据集类。
 
 ## <a name="reference"></a>参考
 

@@ -2,21 +2,21 @@
 title: 如何：添加拖放处理程序
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b15e0d305140e6e04464091df59432a2cd261796
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: d20436eb7efb1d3f4212e8fc3a3ed9a3234c4114
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67821943"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667228"
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>如何：添加拖放处理程序
 
-可以对你的 DSL，添加拖放事件的处理程序，以便用户可以将项拖到关系图上从其他关系图或从 Visual Studio 的其他部分。 还可以添加诸如双击事件的处理程序。 拖放和双击处理程序在一起，称为*笔势处理程序*。
+可以向 DSL 添加拖放事件的处理程序，以便用户可以将项从其他关系图或 Visual Studio 的其他部分拖到关系图上。 还可以添加诸如双击事件的处理程序。 同时，拖放和双击处理程序称为*笔势处理程序*。
 
 本主题讨论了在其他关系图上发起的拖放笔势。 对于单个关系图内的移动和复制事件，请考虑另一种方法：定义 `ElementOperations` 的子类。 有关详细信息，请参阅[自定义复制行为](../modeling/customizing-copy-behavior.md)。 你可能还可以自定义 DSL 定义。
 
@@ -24,7 +24,7 @@ ms.locfileid: "67821943"
 
 `OnDragDrop`、`OnDoubleClick`、`OnDragOver` 以及其他可以进行重写的方法。
 
-将新的代码文件添加到 DSL 项目。 对于笔势处理程序，通常必须至少具有以下 `using` 语句：
+将新的代码文件添加到 DSL 项目。 对于笔势处理程序，通常必须至少具有以下 `using` 指令：
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;
@@ -50,7 +50,7 @@ using System.Linq;
         }
     ```
 
-- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A> -如果用户释放鼠标按钮时鼠标指针停留在此形状或关系图中，如果调用此方法`OnDragOver(DiagramDragEventArgs e)`之前设置`e.Effect`以外的值为`None`。
+- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A>-如果用户在鼠标指针停留在此形状或关系图上时释放鼠标按钮，则调用此方法，前提是 `OnDragOver(DiagramDragEventArgs e)` 之前将 `e.Effect` 为除 `None` 以外的其他值。
 
     ```csharp
     public override void OnDragDrop(DiagramDragEventArgs e)
@@ -66,13 +66,13 @@ using System.Linq;
     }
     ```
 
-- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A> -当用户双击的形状或关系图时，调用此方法。
+- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A>-当用户双击形状或关系图时，将调用此方法。
 
      有关详细信息，请参阅[如何：截获对形状或修饰器的单击](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)。
 
-定义 `IsAcceptableDropItem(e)` 以确定拖动项是否是可接受的，并定义 ProcessDragDropItem(e) 以在放置该项后更新模型。 这些方法必须先从事件参数中提取项。 有关如何执行该操作的信息，请参阅[如何获取对拖动项的引用](#to-send-an-object-from-a-source-dsl)。
+定义 `IsAcceptableDropItem(e)` 以确定拖动项是否是可接受的，并定义 ProcessDragDropItem(e) 以在放置该项后更新模型。 这些方法必须先从事件参数中提取项。 有关如何执行此操作的信息，请参阅[如何获取对拖动项的引用](#to-send-an-object-from-a-source-dsl)。
 
-## <a name="define-gesture-handlers-by-using-mef"></a>通过使用 MEF 定义笔势处理程序
+## <a name="define-gesture-handlers-by-using-mef"></a>使用 MEF 定义笔势处理程序
 
 如果希望第三方开发人员能够对你的 DSL 定义他们自己的处理程序，则使用此方法。 用户可以在安装了你的 DSL 后选择安装第三方扩展。
 
@@ -80,7 +80,7 @@ MEF (Managed Extensibility Framework) 允许定义可使用最小配置安装的
 
 ### <a name="to-define-a-mef-gesture-handler"></a>定义 MEF 笔势处理程序
 
-1. 将添加到您**Dsl**并**DslPackage**项目**MefExtension**中所述的文件[使用 MEF 扩展 DSL](../modeling/extend-your-dsl-by-using-mef.md)。
+1. 添加到**Dsl**并**DSLPACKAGE**项目[使用 MEF 扩展 Dsl](../modeling/extend-your-dsl-by-using-mef.md)中所述的**MefExtension**文件。
 
 2. 现在可以将笔势处理程序定义为 MEF 组件：
 
@@ -124,17 +124,17 @@ MEF (Managed Extensibility Framework) 允许定义可使用最小配置安装的
 
 若要发现拖动源信息可采用的格式，请在调试模式下运行代码，从而在 `OnDragOver()` 或 `CanDragDrop()` 入口设置断点。 检查 `DiagramDragEventArgs` 参数的值。 信息将采用以下两种方式提供：
 
-- <xref:System.Windows.Forms.IDataObject>  `Data` -此属性包含序列化的版本的源对象，通常在多个格式。 其最有用的函数是：
+- <xref:System.Windows.Forms.IDataObject> `Data`-此属性具有源对象的序列化版本，通常采用多种格式。 其最有用的函数是：
 
-  - diagramEventArgs.Data.GetDataFormats()-列出了可以在其中解码拖动的对象的格式。 例如，如果用户从桌面拖动文件，则可用的格式包括文件名（“`FileNameW`”）。
+  - diagramEventArgs. GetDataFormats （）-列出可用于解码拖动对象的格式。 例如，如果用户从桌面拖动文件，则可用的格式包括文件名（“`FileNameW`”）。
 
-  - `diagramEventArgs.Data.GetData(format)` -解码拖动的对象中指定的格式。 将该对象转换为相应的类型。 例如:
+  - `diagramEventArgs.Data.GetData(format)` 以指定格式对拖动的对象进行解码。 将该对象转换为相应的类型。 例如:
 
     `string fileName = diagramEventArgs.Data.GetData("FileNameW") as string;`
 
-    还可以采用自己的自定义格式从源中传输对象（例如模型总线引用）。 有关详细信息，请参阅[如何在拖放发送模型总线引用](#to-send-an-object-from-a-source-dsl)。
+    还可以采用自己的自定义格式从源中传输对象（例如模型总线引用）。 有关详细信息，请参阅[如何在拖放中发送模型总线引用](#to-send-an-object-from-a-source-dsl)。
 
-- <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> `Prototype` -如果你希望用户从 DSL 或 UML 模型拖动项，则使用此属性。 元素组原型包含一个或多个对象、链接及其属性值。 在粘贴操作中以及要从工具箱添加元素时，也会使用它。 在原型中，对象及其类型由 Guid 标识。 例如，此代码允许用户从 UML 关系图或 UML 模型资源管理器拖动类元素：
+- <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> `Prototype`-如果希望用户从 DSL 或 UML 模型中拖动项，则使用此属性。 元素组原型包含一个或多个对象、链接及其属性值。 在粘贴操作中以及要从工具箱添加元素时，也会使用它。 在原型中，对象及其类型由 Guid 标识。 例如，此代码允许用户从 UML 关系图或 UML 模型资源管理器拖动类元素：
 
     ```csharp
     private bool IsAcceptableDropItem(DiagramDragEventArgs e)
@@ -158,13 +158,13 @@ MEF (Managed Extensibility Framework) 允许定义可使用最小配置安装的
 
 ### <a name="to-prepare-a-dsl-project-for-model-bus"></a>准备用于模型总线的 DSL 项目
 
-确保源 DSL 可由 Visual Studio 模型总线访问：
+使源 DSL 可供 Visual Studio 模型总线访问：
 
 1. 如果未安装 Visual Studio 模型总线扩展，请下载并安装它。 有关详细信息，请参阅[可视化和建模 SDK](http://go.microsoft.com/fwlink/?LinkID=185579)。
 
-2. 在 DSL 设计器中打开源 DSL 的 DSL 定义文件。 右键单击设计图面，然后单击**启用 Modelbus**。 在该对话框中，选择一个或两个选项。  单击 **“确定”** 。 新项目“ModelBus”随即添加到 DSL 解决方案中。
+2. 在 DSL 设计器中打开源 DSL 的 DSL 定义文件。 右键单击设计图面，然后单击 "**启用 Modelbus**"。 在该对话框中，选择一个或两个选项。  单击“确定”。 新项目“ModelBus”随即添加到 DSL 解决方案中。
 
-3. 单击**转换所有模板**重新生成解决方案。
+3. 单击 "**转换所有模板**"，然后重新生成解决方案。
 
 ### <a name="to-send-an-object-from-a-source-dsl"></a>从源 DSL 发送对象
 
@@ -322,9 +322,9 @@ MEF (Managed Extensibility Framework) 允许定义可使用最小配置安装的
 
 ## <a name="using-mouse-actions-dragging-compartment-items"></a>使用鼠标操作：拖动隔离舱项
 
-您可以编写在形状的字段截获鼠标操作的处理程序。 下面的示例使用户可以通过使用鼠标拖动对隔离舱中的项重新排序。
+您可以编写一个处理程序，用于截获对形状字段的鼠标操作。 以下示例允许用户通过使用鼠标拖动对隔离舱中的项进行重新排序。
 
-若要生成此示例中，创建解决方案，通过使用**类图**解决方案模板。 添加代码文件和以下代码。 将命名空间调整为与你自己的命名空间相同。
+若要生成此示例，请使用 "**类图**" 解决方案模板创建解决方案。 添加代码文件和以下代码。 将命名空间调整为与你自己的命名空间相同。
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;

@@ -11,17 +11,17 @@ helpviewer_keywords:
 - code visualization [Visual Studio]
 - dependencies, visualizing
 - dependency graphs
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ecc8ae714dfb35281029a9d6e240a148e7c9511
-ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
+ms.openlocfilehash: 45fb9b1a08dc54257f24f469d3a717b82faccf45
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913348"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661541"
 ---
 # <a name="map-dependencies-with-code-maps"></a>映射与代码图的依赖项
 
@@ -38,7 +38,7 @@ ms.locfileid: "70913348"
 
 - 解决方案C#或程序集（ *.dll*或 *.exe*）中的视觉对象或 Visual Basic
 
-- 本机或托管 C 或C++ Visual C++项目中的代码、头文件（ *.h*或`#include`）或二进制文件
+- 本机或托管的 C C++或 Visual C++项目、头文件（ *.h*或 `#include`）或二进制文件中的代码
 
 - 通过 Microsoft Dynamics AX 的 .NET 模块生成的 X++ 项目和程序集
 
@@ -49,7 +49,7 @@ ms.locfileid: "70913348"
 
 若要在 Visual Studio 中创建代码图，请首先安装**代码图**和**实时依赖项验证**组件：
 
-1. 打开**Visual Studio 安装程序**。 可以通过 Windows "开始" 菜单或在 Visual Studio 中选择 "**工具** > " "**获取工具和功能**" 来打开它。
+1. 打开**Visual Studio 安装程序**。 你可以从 Windows 的 "开始" 菜单或在 Visual Studio 中通过选择 "**工具**"  > **获取工具和功能**"来打开它。
 
 1. 选择“各个组件”选项卡。
 
@@ -78,13 +78,13 @@ ms.locfileid: "70913348"
 
    解决方案的 "**解决方案项**" 文件夹中将显示一个空白地图。
 
-同样，可以通过选择 "**体系结构** > " "**新建代码图**" 或 "**文件** > " "**新建** > **文件**" 来创建新的代码映射文件，而无需将其添加到解决方案
+同样，你可以创建新的代码映射文件，而无需将其添加到解决方案中，只需选择 "**体系结构**"  > **新的代码图**或**文件** > **新**的  > **文件**中。
 
 ## <a name="generate-a-code-map-for-your-solution"></a>为解决方案生成代码图
 
 查看解决方案中的所有依赖项：
 
-1. 在菜单栏上，选择 "**体系结构** > " "**生成解决方案的代码图**"。 如果代码自上次生成后未发生更改，则**可以选择** > "在**不生成的情况下生成解决方案的代码图**"。
+1. 在菜单栏上，选择 "**体系结构**"  >  "**生成解决方案的代码图**"。 如果代码自上次生成后未发生更改，则可以选择 "**体系结构**"  > **生成解决方案的代码图**，而不是生成。
 
    ![生成代码映射命令](../modeling/media/codemapsarchitecturemenu.png)
 
@@ -162,7 +162,7 @@ ms.locfileid: "70913348"
 
    ![选择要映射的项](../modeling/media/codemapsselectinsolutionexplorer.png)
 
-1. 在**解决方案资源管理器**工具栏上，选择 "**在代码图** ![上显示" 通过所选节点](../modeling/media/createnewgraphfromselectedbutton.gif)按钮创建新关系图。 或者，打开一个或一组项目的快捷菜单，然后选择 "**在代码图上显示**"。
+1. 在**解决方案资源管理器**工具栏上，选择 "**在代码图上显示**" ![Create ](../modeling/media/createnewgraphfromselectedbutton.gif) "选定节点中的新图形" 按钮。 或者，打开一个或一组项目的快捷菜单，然后选择 "**在代码图上显示**"。
 
    还可以将项从**解决方案资源管理器**、**类视图**或**对象浏览器**拖动到[新](#add-a-code-map)的或现有的代码图中。 若要包含项的父层次结构，请在拖动项时按住**Ctrl**键，或者使用代码图工具栏上的 "**包括父级**" 按钮来指定默认操作。 你还可以从 Visual Studio 外（例如，从**Windows 资源管理器**）中拖动程序集文件。
 
@@ -177,13 +177,13 @@ ms.locfileid: "70913348"
 
    ![展开代码图中的节点](../modeling/media/dependencygraph_containment.png)
 
-   若要展开所有项，请使用**Ctrl**+**A**选择它们，然后打开映射的快捷菜单并选择 "**组** > **展开**"。 然而，如果展开所有组会生成不可用的代码图或产生内存问题，则该选项不可用。
+   若要展开所有项，请使用**Ctrl** + **，** 然后打开映射的快捷菜单并选择 "**组** > **展开**"。 然而，如果展开所有组会生成不可用的代码图或产生内存问题，则该选项不可用。
 
 5. 如果需要，请继续展开感兴趣的项，直到类和成员级别。
 
    ![将组展开到类和成员级别](../modeling/media/codemapsexpandtoclassandmember.png)
 
-   若要查看代码中的成员，但不显示在地图上，请单击组左上角![的 "**重新提取子级**" 图标重新提取儿童图标](../modeling/media/dependencygraph_deletednodesicon.png) 。
+   若要查看代码中的成员，但不显示在地图上，请单击组左上角的 "**重新提取子级**" 图标 ![Refetch 子图标 ](../modeling/media/dependencygraph_deletednodesicon.png)。
 
 6. 若要查看更多与代码图上的项相关的项，请选择其中一个，再选择代码图工具栏上的“显示相关内容” ，然后选择要添加到图中的相关项的类型。 或者，选择一个或多个项，打开快捷菜单，然后为要添加到映射的相关项的类型选择 "**显示**" 选项。 例如:
 
@@ -228,7 +228,7 @@ ms.locfileid: "70913348"
 
     ![显示此成员调用的方法](../modeling/media/codemapsshowrelatedmethods.png)
 
-7. 代码图显示关系。 在此示例中，映射显示`Find`方法调用的方法及其在解决方案中或在外部的位置。
+7. 代码图显示关系。 在此示例中，映射显示 `Find` 方法调用的方法及其在解决方案中或在外部的位置。
 
    ![显示代码图上的特定依赖关系](../modeling/media/codemapsspecificdependenciesintro.png)
 
@@ -238,7 +238,7 @@ ms.locfileid: "70913348"
 
 ## <a name="see-also"></a>请参阅
 
-- [视频：通过 Visual Studio 2015 代码图从代码中了解设计](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502)
+- [视频：利用 Visual Studio 2015 代码图从代码中了解设计](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502)
 - [使用代码图调试应用程序](../modeling/use-code-maps-to-debug-your-applications.md)
 - [调试时映射调用堆栈上的方法](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)
 - [使用代码图分析查找潜在问题](../modeling/find-potential-problems-using-code-map-analyzers.md)

@@ -5,20 +5,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - text templates, build tasks
 - text templates, transforming by using msbuild
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d26c0b464341bee7bce0b46bfdbcc89e0248a81
-ms.sourcegitcommit: e95dd8cedcd180e0bce6a75c86cf861757918290
+ms.openlocfilehash: 9c9cc0d8a40970e2ec36030ab3121d6fc02748e2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163123"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654198"
 ---
 # <a name="invoke-text-transformation-in-the-build-process"></a>在生成过程中调用文本转换
 
@@ -49,9 +49,9 @@ ms.locfileid: "72163123"
 - % ProgramFiles （x86）% \ Microsoft Visual Studio\2019\Community\Common7\IDE\PublicAssemblies
 
   - VisualStudio. TextTemplating. 15。0
-  
+
 > [!TIP]
-> 如果在生成服务器上运行 TextTemplating 生成目标时获取 CodeAnalysis 方法的 @no__t 0，请确保 Roslyn 程序集位于与生成可执行文件相同的目录中的一个名为*Roslyn*的目录中（例如， *msbuild.exe*）。
+> 如果在生成服务器上运行 TextTemplating 生成目标时获取 CodeAnalysis 方法的 `MissingMethodException`，请确保 Roslyn 程序集位于与生成可执行文件相同的目录中的一个名为*Roslyn*的目录中（例如， *msbuild.exe*）。
 
 ## <a name="edit-the-project-file"></a>编辑项目文件
 
@@ -116,11 +116,11 @@ ms.locfileid: "72163123"
     ```
 
      默认情况下，如果输出文件早于以下值，则它将重新生成输出文件：
-     
+
      - 其模板文件
      - 包含的任何文件
      - 之前已由模板或其使用的指令处理器读取的所有文件
-     
+
      这是一个功能更强大的依赖项测试，它比 Visual Studio 中的 "**转换所有模板**" 命令使用，后者仅比较模板和输出文件的日期。
 
 若要在项目中仅执行文本转换，请调用 TransformAll 任务：
@@ -285,7 +285,7 @@ Visual Studio 宏（如 **$ （SolutionDir））** 在 MSBuild 中不起作用�
 
 ## <a name="q--a"></a>问题解答
 
-@no__t 0Why 是否需要在生成服务器中转换模板？在我签入我的代码之前，我已经在 Visual Studio 中转换了模板。 **
+**为什么要在生成服务器中转换模板？在我签入我的代码之前，我已经在 Visual Studio 中转换了模板。**
 
 如果更新包含的文件或模板读取的其他文件，则 Visual Studio 不会自动转换文件。 将模板转换为生成的一部分可以确保一切都是最新的。
 
@@ -303,13 +303,13 @@ Visual Studio 宏（如 **$ （SolutionDir））** 在 MSBuild 中不起作用�
 
 ::: moniker range="vs-2017"
 
-- @No__t-0 的 T4 MSbuild 模板中提供了良好的指南
+- @No__t_0 中的 T4 MSbuild 模板有很好的指导。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- @No__t-0 的 T4 MSbuild 模板中提供了良好的指南
+- @No__t_0 中的 T4 MSbuild 模板有很好的指导。
 
 ::: moniker-end
 

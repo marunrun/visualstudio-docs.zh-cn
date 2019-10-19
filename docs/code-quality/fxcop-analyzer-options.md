@@ -2,17 +2,17 @@
 title: FxCop 分析器配置选项
 ms.date: 09/23/2019
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: de4fdbbdf54976ba3ee12c3621f7038cd4704a76
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 78967c93a990aaef0d5863446433c286bdcf46b7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72449059"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649600"
 ---
 # <a name="rule-scope-options-for-fxcop-analyzers"></a>FxCop 分析器的规则作用域选项
 
@@ -47,7 +47,7 @@ ms.locfileid: "72449059"
 
 | 描述 | 允许的值 | 默认值 | 可配置规则 |
 | - | - | - | - |
-| 是否从规则中排除单字符[类型参数](/dotnet/csharp/programming-guide/generics/generic-type-parameters)，例如，在 @no__t 中 `S` | `true`<br/>`false` | `false` | [CA1715](ca1715-identifiers-should-have-correct-prefix.md) |
+| 是否从规则中排除单字符[类型参数](/dotnet/csharp/programming-guide/generics/generic-type-parameters)，例如，在 `Collection<S>` 中 `S` | `true`<br/>`false` | `false` | [CA1715](ca1715-identifiers-should-have-correct-prefix.md) |
 
 > [!NOTE]
 > 在版本2.6.3 和更早版本的分析器包中，此选项名为 `allow_single_letter_type_parameters`。
@@ -56,4 +56,4 @@ ms.locfileid: "72449059"
 
 | 描述 | 允许的值 | 默认值 | 可配置规则 |
 | - | - | - | - |
-| 指定应分析生成此类程序集的项目中的代码 | @No__t-0 枚举的一个或多个字段<br/><br/>用逗号（，）分隔多个值 | 所有输出类型 | [CA2007](ca2007-do-not-directly-await-task.md) |
+| 指定应分析生成此类程序集的项目中的代码 | @No__t_0 枚举的一个或多个字段<br/><br/>用逗号（，）分隔多个值 | 所有输出类型 | [CA2007](ca2007-do-not-directly-await-task.md) |
