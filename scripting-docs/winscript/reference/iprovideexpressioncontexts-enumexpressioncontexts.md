@@ -1,5 +1,5 @@
 ---
-title: IProvideExpressionContexts::EnumExpressionContexts | Microsoft Docs
+title: IProvideExpressionContexts：： EnumExpressionContexts |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 965147083bdc11a3544561fdd96cd85221ccd443
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: f161c1591267af1398d5c04d00623381cfae2ad4
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63410153"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572386"
 ---
 # <a name="iprovideexpressioncontextsenumexpressioncontexts"></a>IProvideExpressionContexts::EnumExpressionContexts
-返回已知的此组件表达式上下文的枚举器。  
+返回此组件已知的表达式上下文的枚举器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT EnumExpressionContexts(
   
 #### <a name="parameters"></a>参数  
  `ppedec`  
- [out]已知的此组件表达式上下文的一个枚举器。  
+ 弄此组件已知的表达式上下文的枚举器。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -50,7 +50,7 @@ HRESULT EnumExpressionContexts(
  进程调试管理器使用此方法查找与给定线程关联的所有全局表达式上下文。  
   
 > [!NOTE]
-> 此方法是从内部所需的线程调用的。 它是由实现者确定当前线程，并返回相应的枚举器。  
+> 此方法从感兴趣的线程中调用。 由实施者确定当前线程并返回合适的枚举器。  
   
 ## <a name="see-also"></a>请参阅  
  [IProvideExpressionContexts 接口](../../winscript/reference/iprovideexpressioncontexts-interface.md)

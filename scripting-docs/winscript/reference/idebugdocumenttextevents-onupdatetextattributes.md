@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextEvents::onUpdateTextAttributes |Microsoft Docs
+title: IDebugDocumentTextEvents：： onUpdateTextAttributes |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 746339cb281d4d039759f350bb5516456ce142cf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 044eec93516bc4e16044c4bf982b48d91269ebaa
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62989800"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575985"
 ---
 # <a name="idebugdocumenttexteventsonupdatetextattributes"></a>IDebugDocumentTextEvents::onUpdateTextAttributes
-指示与底层的字符位置范围关联的文本属性已更改。  
+指示与基础字符位置范围关联的文本属性已更改。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,10 +38,10 @@ HRESULT onUpdateTextAttributes(
   
 #### <a name="parameters"></a>参数  
  `cCharacterPosition`  
- [in]属性已更改的第一个字符的字符位置。  
+ 中属性已更改的第一个字符的字符位置。  
   
  `cNumToUpdate`  
- [in]范围内的字符数。  
+ 中范围内的字符数。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -51,7 +51,7 @@ HRESULT onUpdateTextAttributes(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法指示与底层的字符位置范围关联的文本属性已更改。  
+ 此方法指示与基础字符位置范围关联的文本属性已更改。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugDocumentTextEvents 接口](../../winscript/reference/idebugdocumenttextevents-interface.md)

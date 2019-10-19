@@ -14,18 +14,18 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 00b041b4cb2009d247572d1e47dfff40d8548927
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 22e06b9723100141a0e3679e401d1bc339dddad5
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63003601"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72562206"
 ---
 # <a name="active-script-authoring-interfaces"></a>活动脚本创作接口
-ActivAut.h 标头文件提供了在本部分中列出的接口。  
+ActivAut 头文件提供本节中列出的接口。  
   
 ## <a name="in-this-section"></a>本节内容  
- 以下接口启用网页创作：  
+ 以下接口支持网页创作：  
   
 - [IActiveScriptAuthor 接口](../../winscript/reference/iactivescriptauthor-interface.md)  
   

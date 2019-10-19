@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptDebug::EnumCodeContextsOfPosition | Microsoft Docs
+title: IActiveScriptDebug：： EnumCodeContextsOfPosition |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c364d00941a65272b4d22cc7674a0f0e6178f099
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aedfe5d40d8f4086e30f3a62c070b8ccd5ef2388
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63009737"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572781"
 ---
 # <a name="iactivescriptdebugenumcodecontextsofposition"></a>IActiveScriptDebug::EnumCodeContextsOfPosition
-智能主机用于委派`IDebugDocumentContext::EnumCodeContexts`方法。  
+由智能主机用来委托 `IDebugDocumentContext::EnumCodeContexts` 方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,16 +40,16 @@ HRESULT EnumCodeContextsOfPosition(
   
 #### <a name="parameters"></a>参数  
  `dwSourceContext`  
- [in]源上下文提供给`IActiveScriptParse::ParseScriptText`或`IActiveScriptParse::AddScriptlet`。  
+ 中为 `IActiveScriptParse::ParseScriptText` 或 `IActiveScriptParse::AddScriptlet` 提供的源上下文。  
   
  `uCharacterOffset`  
- [in]字符相对于脚本文本的起始偏移量。  
+ 中相对于脚本文本开头的字符偏移量。  
   
  `uNumChars`  
- [in]在此上下文中的字符数。  
+ 中此上下文中的字符数。  
   
  `ppescc`  
- [out]指定范围中的代码上下文枚举器。  
+ 弄指定范围内的代码上下文的枚举数。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -59,7 +59,7 @@ HRESULT EnumCodeContextsOfPosition(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 智能主机使用此方法委托`IDebugDocumentContext::EnumCodeContexts`方法。  
+ 智能主机使用此方法委托 `IDebugDocumentContext::EnumCodeContexts` 方法。  
   
 ## <a name="see-also"></a>请参阅  
  [IActiveScriptDebug 接口](../../winscript/reference/iactivescriptdebug-interface.md)   

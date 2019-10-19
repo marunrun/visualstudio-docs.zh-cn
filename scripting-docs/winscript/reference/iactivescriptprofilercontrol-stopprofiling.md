@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerControl::StopProfiling |Microsoft Docs
+title: IActiveScriptProfilerControl：： StopProfiling |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 750693db9aa809e6b3521f0312cebcf45d8d720d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: da5900678093d57b3c995ac3bca8464ccd612fb2
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993003"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571550"
 ---
 # <a name="iactivescriptprofilercontrolstopprofiling"></a>IActiveScriptProfilerControl::StopProfiling
-停止分析脚本引擎上。 此方法调用[IActiveScriptProfilerCallback::Shutdown](../../winscript/reference/iactivescriptprofilercallback-shutdown.md)探查器对象，然后将其释放。  
+停止对脚本引擎的分析。 此方法对探查器对象调用[IActiveScriptProfilerCallback：： Shutdown](../../winscript/reference/iactivescriptprofilercallback-shutdown.md) ，然后释放它。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,15 +34,15 @@ HRESULT StopProfiling(
   
 #### <a name="parameters"></a>参数  
  `hrShutdownReason`  
- [in]作为参数传递的 HRESULT [IActiveScriptProfilerCallback::Shutdown](../../winscript/reference/iactivescriptprofilercallback-shutdown.md)探查器对象的方法。  
+ 中要作为参数传递到探查器对象的[IActiveScriptProfilerCallback：： Shutdown](../../winscript/reference/iactivescriptprofilercallback-shutdown.md)方法的 HRESULT。  
   
 ## <a name="return-value"></a>返回值  
- 返回一个 HRESULT。 可能的值如下：  
+ 返回 HRESULT。 可能的值如下：  
   
 |返回值|含义|  
 |------------------|-------------|  
 |`S_OK`|方法成功。|  
-|`ACTIVPROF_E_PROFILER_ABSENT`|未启用分析。|  
+|`ACTIVPROF_E_PROFILER_ABSENT`|未启用事件探查。|  
   
 ## <a name="see-also"></a>请参阅  
  [IActiveScriptProfilerControl 接口](../../winscript/reference/iactivescriptprofilercontrol-interface.md)

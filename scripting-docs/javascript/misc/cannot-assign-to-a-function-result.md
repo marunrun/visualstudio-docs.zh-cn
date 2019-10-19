@@ -1,5 +1,5 @@
 ---
-title: 无法给函数结果赋值 |Microsoft Docs
+title: 不能分配给函数结果 |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,15 +14,15 @@ ms.assetid: ee8ffb3a-1451-4cb3-99bf-5e9cf8b77d79
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 226056f139e45f432d757aff8f8774b013742de3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aca09fe3b516fbb8f27def982bf34a22d33d4ada
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946597"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572361"
 ---
 # <a name="cannot-assign-to-a-function-result"></a>无法给函数结果赋值
-你试图将值分配给函数结果。 可以将函数的结果赋给一个变量，但不能用作变量。 如果你想要将新值分配给该函数本身，则省略括号 （函数调用运算符）。 下面的示例演示的情况下，会生成此错误。  
+您尝试为函数结果赋值。 可以将函数的结果赋给变量，但不能将其用作变量。 如果要向函数本身分配新值，则省略括号（函数调用运算符）。 下面的示例演示了生成此错误的一种情况。  
   
 ```js
 myFunction() = 42;  // Attempting to assign the value 42 to the result of the function call.  
@@ -30,13 +30,13 @@ myFunction() = 42;  // Attempting to assign the value 42 to the result of the fu
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 不使用函数调用结果的值用作可以*将分配给*。 您可以将函数调用的结果的分配*给一个变量*尽管。  
+- 不要将函数调用结果的值用作可以*分配给*的内容。 不过，您可以将函数调用的结果分配*给一个变量*。  
   
     ```JavaScript  
     myVar = myFunction(42);  
     ```  
   
-- 或者，可以将该函数本身 （而不是其返回值） 分配给一个变量。  
+- 或者，可以将函数本身（而不是其返回值）分配给变量。  
   
     ```JavaScript  
     myFunction = new Function("return 42;");  

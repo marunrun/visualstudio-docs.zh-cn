@@ -1,5 +1,5 @@
 ---
-title: 缺少布尔值 |Microsoft Docs
+title: 应为布尔值 |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,15 +14,15 @@ ms.assetid: 35d71b7f-53fd-44c4-a7c7-b1550c65cfd4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 261cf0ad93208c0eac09e42dcd68853352318e88
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 91ff0ec8cbd6e5cedb5ec02a8c574ff137b1c6ad
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62817895"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576062"
 ---
 # <a name="boolean-expected"></a>缺少布尔值
-你尝试调用**Boolean.prototype.toString**或**Boolean.prototype.valueOf**方法以外的类型的对象上`Boolean`。 调用此类型的对象的类型必须是`Boolean`。 例如：
+试图对 `Boolean` 以外的类型的对象调用**valueOf**方法，而不是**调用的方法**。 此类调用的对象必须是 `Boolean` 类型。 例如:
 
 ```JavaScript
 var o = new Object;
@@ -32,7 +32,7 @@ o.f();
 
 ## <a name="to-correct-this-error"></a>更正此错误
 
-- 仅调用**Boolean.prototype.toString**或**Boolean.prototype.valueOf**类型的对象上的方法**布尔值。**
+- 仅对**布尔**类型的对象调用**valueOf** **方法或布尔**方法。
 
 ## <a name="see-also"></a>请参阅
 

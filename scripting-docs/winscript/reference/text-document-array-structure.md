@@ -13,15 +13,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9d188729b68f8086da62d40ca28fc29945c8be7f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b52b382aa1e91e509672728a3c8f931bfeae27a9
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840052"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572970"
 ---
-# <a name="textdocumentarray-structure"></a>TEXT_DOCUMENT_ARRAY 结构
-一个数组[IDebugDocumentText 接口](../../winscript/reference/idebugdocumenttext-interface.md)对象。 使用 CoTaskMemAlloc 分配成员。  
+# <a name="text_document_array-structure"></a>TEXT_DOCUMENT_ARRAY 结构
+[IDebugDocumentText 接口](../../winscript/reference/idebugdocumenttext-interface.md)对象的数组。 成员是通过 CoTaskMemAlloc 分配的。  
   
 ## <a name="syntax"></a>语法  
   
@@ -29,7 +29,7 @@ ms.locfileid: "62840052"
 typedef struct tagTEXT_DOCUMENT_ARRAY{    DWORD dwCount;    [size_is(dwCount)] IDebugDocumentText **Members;} TEXT_DOCUMENT_ARRAY;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
  `dwCount`  
  文档数。  
   

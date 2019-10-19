@@ -10,12 +10,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 79855f6915bbb0ed15bfd09f99fab0403290f09e
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
-ms.translationtype: HT
+ms.openlocfilehash: ab1e0b890d6241742770ed38ff61fc1c2c0ed2f4
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72448718"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72535701"
 ---
 # <a name="walkthrough-use-static-code-analysis-to-find-code-defects"></a>演练：使用静态代码分析查找代码缺陷
 
@@ -93,23 +93,23 @@ ms.locfileid: "72448718"
 
 1. 使用以下提示来更正警告：
 
-   [CA1014：用 CLSCompliantAttribute 标记程序集](../code-quality/ca1014-mark-assemblies-with-clscompliantattribute.md)：向 AssemblyInfo.cs 文件的末尾添加代码 `[assembly: CLSCompliant(true)]`。
+   [CA1014：用 CLSCompliantAttribute 标记程序集](../code-quality/ca1014.md)：向 AssemblyInfo.cs 文件的末尾添加代码 `[assembly: CLSCompliant(true)]`。
 
-   [CA1032：实现标准异常构造函数](../code-quality/ca1032-implement-standard-exception-constructors.md)：将构造函数 `public demo (String s) : base(s) { }` 添加到类 `demo`。
+   [CA1032：实现标准异常构造函数](../code-quality/ca1032.md)：将构造函数 `public demo (String s) : base(s) { }` 添加到类 `demo`。
 
-   [CA1032：实现标准异常构造函数](../code-quality/ca1032-implement-standard-exception-constructors.md)：将构造函数 `public demo (String s, Exception e) : base(s, e) { }` 添加到类 `demo`。
+   [CA1032：实现标准异常构造函数](../code-quality/ca1032.md)：将构造函数 `public demo (String s, Exception e) : base(s, e) { }` 添加到类 `demo`。
 
-   [CA1032：实现标准异常构造函数](../code-quality/ca1032-implement-standard-exception-constructors.md)：将构造函数 `protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { }` 添加到类演示。 还需要为 <xref:System.Runtime.Serialization?displayProperty=fullName> 添加 `using` 语句。
+   [CA1032：实现标准异常构造函数](../code-quality/ca1032.md)：将构造函数 `protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { }` 添加到类演示。 还需要为 <xref:System.Runtime.Serialization?displayProperty=fullName> 添加 `using` 语句。
 
-   [CA1032：实现标准异常构造函数](../code-quality/ca1032-implement-standard-exception-constructors.md)：将构造函数 `public demo () : base() { }` 添加到类 `demo`。
+   [CA1032：实现标准异常构造函数](../code-quality/ca1032.md)：将构造函数 `public demo () : base() { }` 添加到类 `demo`。
 
-   [CA1709：标识符应采用正确的大小](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)写：将命名空间 `testCode` 的大小写更改为 `TestCode`。
+   [CA1709：标识符应采用正确的大小](../code-quality/ca1709.md)写：将命名空间 `testCode` 的大小写更改为 `TestCode`。
 
-   [CA1709：标识符应采用正确的大小写](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)：将成员的名称更改为 `Demo`。
+   [CA1709：标识符应采用正确的大小写](../code-quality/ca1709.md)：将成员的名称更改为 `Demo`。
 
-   [CA1709：标识符应采用正确的大小写](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)：将成员的名称更改为 `Item`。
+   [CA1709：标识符应采用正确的大小写](../code-quality/ca1709.md)：将成员的名称更改为 `Item`。
 
-   [CA1710：标识符应具有正确的后缀](../code-quality/ca1710-identifiers-should-have-correct-suffix.md)：将类及其构造函数的名称更改为 `DemoException`。
+   [CA1710：标识符应具有正确的后缀](../code-quality/ca1710.md)：将类及其构造函数的名称更改为 `DemoException`。
 
    [CA2237：用 SerializableAttribute 标记 ISerializable 类型](../code-quality/ca2237.md)：向类 `demo` 添加 `[Serializable ()]` 特性。
 

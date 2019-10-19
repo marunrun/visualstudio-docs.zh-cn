@@ -1,5 +1,5 @@
 ---
-title: IActiveScript::Close | Microsoft Docs
+title: IActiveScript：： Close |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 53b71471ada55751de301391fdcc70387c1bb6c2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f858de42ef2948d218aac6c3194cc6af544da5e9
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935674"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575782"
 ---
 # <a name="iactivescriptclose"></a>IActiveScript::Close
-使脚本引擎放弃所有当前加载的脚本，会丢失其状态，并释放任何对其他对象，因此进入关闭的状态的接口指针。 事件接收器、 立即执行的脚本文本和宏已正在进行的调用完成之前的状态更改 (使用[iactivescript:: Interruptscriptthread](../../winscript/reference/iactivescript-interruptscriptthread.md)取消正在运行的脚本线程)。 接口发布若要避免循环引用问题之前，必须通过创建主机调用此方法。  
+使脚本引擎放弃当前加载的任何脚本，失去其状态，然后释放它所拥有的任何指向其他对象的接口指针，从而进入已关闭状态。 事件接收器、立即执行的脚本文本和已在进行的宏调用在状态更改之前完成（使用[IActiveScript：： InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md)取消正在运行的脚本线程）。 在释放接口之前，必须通过创建主机调用此方法，以防止出现循环引用问题。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,9 +39,9 @@ HRESULT Close(void);
 |“值”|含义|  
 |-----------|-------------|  
 |`S_OK`|成功。|  
-|`E_UNEXPECTED`|不应在调用 （例如，脚本引擎本来就处于关闭状态）。|  
-|`OLESCRIPT_S_PENDING`|已成功，该方法已排入队列但尚未未更改状态。 当状态更改的站点是上要回拨[IActiveScriptSite::OnStateChange](../../winscript/reference/iactivescriptsite-onstatechange.md)方法。|  
-|`S_FALSE`|该方法成功，但该脚本已关闭。|  
+|`E_UNEXPECTED`|不应进行调用（例如，脚本引擎已处于关闭状态）。|  
+|`OLESCRIPT_S_PENDING`|此方法已成功排队，但尚未更改状态。 当状态更改时，将在[IActiveScriptSite：： OnStateChange](../../winscript/reference/iactivescriptsite-onstatechange.md)方法上回叫该站点。|  
+|`S_FALSE`|方法已成功，但脚本已关闭。|  
   
 ## <a name="see-also"></a>请参阅  
  [IActiveScript](../../winscript/reference/iactivescript.md)

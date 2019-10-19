@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerCallback::ScriptCompiled | Microsoft Docs
+title: IActiveScriptProfilerCallback：： ScriptCompiled |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a198667e7dc30969c32b556620b139d52f833543
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f7252134fc86bfd63b74a181b18327212a1b2dc1
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993230"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571658"
 ---
 # <a name="iactivescriptprofilercallbackscriptcompiled"></a>IActiveScriptProfilerCallback::ScriptCompiled
-通知探查器对象的脚本引擎编译脚本。 为编译每个脚本调用此方法。  
+通知探查器对象脚本引擎编译了脚本。 将为编译的每个脚本调用此方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,19 +36,19 @@ HRESULT ScriptCompiled(
   
 #### <a name="parameters"></a>参数  
  `scriptId`  
- [in]编译该脚本唯一 ID。 由脚本引擎分配此 ID。  
+ 中已编译的脚本的唯一 ID。 此 ID 由脚本引擎分配。  
   
  `type`  
- [in]已编译的脚本的类型。 在中定义的值[PROFILER_SCRIPT_TYPE 枚举](../../winscript/reference/profiler-script-type-enumeration.md)。  
+ 中已编译的脚本的类型。 这些值是在[PROFILER_SCRIPT_TYPE 枚举](../../winscript/reference/profiler-script-type-enumeration.md)中定义的。  
   
  `pIDebugDocumentContext`  
- [in]如果可用，一个指向`IUnknown`探查器必须查询接口[IDebugDocumentContext 接口](../../winscript/reference/idebugdocumentcontext-interface.md)指针。 否则，这将为 null。  
+ 中如果有，则为指向 `IUnknown` 接口的指针，探查器必须查询[IDebugDocumentContext 接口](../../winscript/reference/idebugdocumentcontext-interface.md)指针。 否则，此值将为 null。  
   
 ## <a name="return-value"></a>返回值  
- 此方法的返回值是脚本引擎忽略。  
+ 脚本引擎将忽略此方法的返回值。  
   
 ## <a name="remarks"></a>备注  
- 仅当主机支持此功能，脚本引擎可以提供文档上下文。  
+ 脚本引擎只能提供此主机支持的文档上下文。  
   
 ## <a name="see-also"></a>请参阅  
  [IActiveScriptProfilerCallback 接口](../../winscript/reference/iactivescriptprofilercallback-interface.md)

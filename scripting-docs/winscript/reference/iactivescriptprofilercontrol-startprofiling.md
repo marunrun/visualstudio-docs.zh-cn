@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerControl::StartProfiling |Microsoft Docs
+title: IActiveScriptProfilerControl：： StartProfiling |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 780886e4ca21abbe11580992244cee0d6a28b134
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cfc59dd43ac3eed433f92af2cdd0aefe40392c4a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993132"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571565"
 ---
 # <a name="iactivescriptprofilercontrolstartprofiling"></a>IActiveScriptProfilerControl::StartProfiling
-启动脚本引擎的分析。 脚本引擎通过调用创建探查器对象的实例[CoCreateInstance](https://docs.microsoft.com/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)。  
+开始分析脚本引擎。 脚本引擎通过调用[CoCreateInstance](https://docs.microsoft.com/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)创建探查器对象的实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,21 +36,21 @@ HRESULT StartProfiling(
   
 #### <a name="parameters"></a>参数  
  `clsidProfilerObject`  
- [in]类标识符 (CLSID) 要创建的探查器对象。  
+ 中要创建的探查器对象的类标识符（CLSID）。  
   
  `dwEventMask`  
- [in]4 字节位掩码，用于指定事件的类型。 在中定义 bits [PROFILER_EVENT_MASK 枚举](../../winscript/reference/profiler-event-mask-enumeration.md)。  
+ 中指定事件类型的4字节位掩码。 位在[PROFILER_EVENT_MASK 枚举](../../winscript/reference/profiler-event-mask-enumeration.md)中定义。  
   
  `dwContext`  
- [in]一个 4 字节值，该值传递给探查器对象。  
+ 中传递到探查器对象的4字节值。  
   
 ## <a name="return-value"></a>返回值  
- 返回一个 HRESULT。 可能的值如下：  
+ 返回 HRESULT。 可能的值如下：  
   
 |返回值|含义|  
 |------------------|-------------|  
 |`S_OK`|方法成功。|  
-|`ACTIVPROF_E_PROFILER_PRESENT`|已启用分析。|  
+|`ACTIVPROF_E_PROFILER_PRESENT`|已启用事件探查。|  
   
 ## <a name="see-also"></a>请参阅  
  [IActiveScriptProfilerControl 接口](../../winscript/reference/iactivescriptprofilercontrol-interface.md)

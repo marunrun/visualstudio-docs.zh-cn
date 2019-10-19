@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d941022427cbfa8d16efe98f716feceff980583
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
-ms.translationtype: HT
+ms.openlocfilehash: e3c0b45fe73624a7506fbfdb52204201d286a73e
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445661"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72535769"
 ---
 # <a name="mixed-minimum-rules-rule-set"></a>“混合最少量规则”规则集
 
@@ -153,7 +153,7 @@ Microsoft 混合的最小规则重点介绍支持公共语言运行C++时的项�
 |[C28305](../code-quality/c28305.md)|在分析标记时发现错误。|
 |[C28350](../code-quality/c28350.md)|批注介绍了无条件适用的情形。|
 |[C28351](../code-quality/c28351.md)|批注介绍了在条件中无法使用动态值（变量）的位置。|
-|[CA1001](../code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable.md)|具有可释放字段的类型应该是可释放的|
+|[CA1001](../code-quality/ca1001.md)|具有可释放字段的类型应该是可释放的|
 |[CA1821](../code-quality/ca1821.md)|移除空终结器|
 |[CA2213](../code-quality/ca2213.md)|应释放可释放的字段|
 |[CA2231](../code-quality/ca2231.md)|重写 ValueType.Equals 时应重载相等运算符|

@@ -1,5 +1,5 @@
 ---
-title: 缺少 = (JavaScript) |Microsoft Docs
+title: 应输入 "=" （JavaScript） |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,19 +14,19 @@ ms.assetid: a8ce6fbf-8663-4770-8fba-677d04c84825
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6950d78da99285e5aeeeefe002c8319b08721110
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 518140ebbddcee917a03bad6ec776e4c84b248d1
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62934940"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573391"
 ---
 # <a name="expected--javascript"></a>应有“=”(JavaScript)
-尝试创建一个变量以与条件编译语句一起使用，但未将放置在变量与你想要为其分配的值之间以等号。  
+您尝试创建一个与条件编译语句一起使用的变量，但没有在变量和要分配给它的值之间放置等号。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 添加一个等号。 例如：  
+- 添加等号。 例如:  
   
     ```JavaScript  
     @set @myvar1 = 1  

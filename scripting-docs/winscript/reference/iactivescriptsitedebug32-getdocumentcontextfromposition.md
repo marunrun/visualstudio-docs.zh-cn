@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteDebug32::GetDocumentContextFromPosition |Microsoft Docs
+title: IActiveScriptSiteDebug32：： GetDocumentContextFromPosition |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -10,15 +10,15 @@ ms.assetid: 53348dff-35a6-4303-b263-90c10af06bf3
 caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: 9a52abcfa4defb49526f944469c95a2247f5d85c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7acbe2a5741fa94ac42470a85803d1720e0a8fa1
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992516"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574849"
 ---
 # <a name="iactivescriptsitedebug32getdocumentcontextfromposition"></a>IActiveScriptSiteDebug32::GetDocumentContextFromPosition
-语言引擎用于委派`IDebugCodeContext::GetSourceContext`。  
+由语言引擎用来委托 `IDebugCodeContext::GetSourceContext`。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,16 +33,16 @@ HRESULT GetDocumentContextFromPosition(
   
 #### <a name="parameters"></a>参数  
  `dwSourceContext`  
- [in]源内容提供给`ParseScriptText`或`AddScriptlet`。  
+ 中为 `ParseScriptText` 或 `AddScriptlet` 提供的源内容。  
   
  `uCharacterOffset`  
- [in]字符相对于脚本块或 scriptlet 的起始偏移量。  
+ 中相对于脚本块或 scriptlet 开始的字符偏移量。  
   
  `uNumChars`  
- [in]在此上下文中的字符数。  
+ 中此上下文中的字符数。  
   
  `ppsc`  
- [out]文档上下文对应于此字符位置范围。  
+ 弄与此字符位置范围对应的文档上下文。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -52,7 +52,7 @@ HRESULT GetDocumentContextFromPosition(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 语言引擎使用此方法委托`IDebugCodeContext::GetSourceContext`。  
+ 语言引擎使用此方法委托 `IDebugCodeContext::GetSourceContext`。  
   
 ## <a name="see-also"></a>请参阅  
  [IActiveScriptSiteDebug32 接口](../../winscript/reference/iactivescriptsitedebug32-interface.md)

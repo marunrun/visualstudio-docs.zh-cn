@@ -17,25 +17,25 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 520d3f1414447abfc7c018d36853b72aefbbf15f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 4558a0cab2aea9b56db2759bb80b1287cd33ce87
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63386168"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571423"
 ---
 # <a name="iactivescriptparseprocedureold-interface"></a>IActiveScriptParseProcedureOld 接口
-允许源代码文本有关添加到脚本中的过程。 对于已解释的脚本语言不具有独立的创作环境，例如 VBScript 中，这提供了一种替代机制 (而不`IActiveScriptParse`或`IPersist*`) 添加到命名空间的脚本过程。  
+允许将过程的源代码文本添加到脚本。 对于没有独立创作环境（如 VBScript）的解释脚本语言，这提供了一种替代机制（`IActiveScriptParse` 或 `IPersist*`）将脚本过程添加到命名空间。  
   
 > [!NOTE]
-> 此接口已弃用的`IActiveScriptParseProcedure`接口。  
+> 此接口已弃用，以支持 `IActiveScriptParseProcedure` 接口。  
   
 ## <a name="methods"></a>方法  
- 除了继承的方法之外`IUnknown`，则`IActiveScriptParseProcedureOld`接口公开以下方法。  
+ 除了从 `IUnknown` 继承的方法之外，`IActiveScriptParseProcedureOld` 接口还公开以下方法。  
   
 |方法|描述|  
 |------------|-----------------|  
-|[IActiveScriptParseProcedureOld::ParseProcedureText](../../winscript/reference/iactivescriptparseprocedureold-parseproceduretext.md)|分析给定的代码过程并将该过程添加到命名空间。|  
+|[IActiveScriptParseProcedureOld::ParseProcedureText](../../winscript/reference/iactivescriptparseprocedureold-parseproceduretext.md)|分析给定的代码过程，并将过程添加到命名空间。|  
   
 ## <a name="see-also"></a>请参阅  
  [IActiveScriptParseProcedure](../../winscript/reference/iactivescriptparseprocedure.md)
