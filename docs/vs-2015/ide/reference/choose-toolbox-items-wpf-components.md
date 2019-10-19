@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Choose Toolbox Items dialog box, WPF Components tab
 ms.assetid: 6ce1d178-88c0-4295-8915-59fdeedabb11
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3f17ac56038c5f6c1d4de026546410ece438e375
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 5c7967635d8e5d64907587fcd1a9b4d84a31d569
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869935"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660914"
 ---
 # <a name="choose-toolbox-items-wpf-components"></a>选择工具箱项，WPF 组件
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "68869935"
 
  **清除**清除筛选器字符串。
 
- **浏览**打开 "**打开**" 对话框, 通过该对话框可以导航到包含 WPF 控件的程序集。 将其用于加载不在全局程序集缓存中的程序集。
+ **浏览**打开 "**打开**" 对话框，通过该对话框可以导航到包含 WPF 控件的程序集。 将其用于加载不在全局程序集缓存中的程序集。
 
  **语言**显示包含所选 WPF 控件的程序集的本地化语言。
 
@@ -62,7 +62,7 @@ ms.locfileid: "68869935"
 
 - 如果将解决方案配置从“调试”更改为“发布”，或从“发布”更改为“调试”，则不能正确更新。 这是因为该引用不是项目引用，而是磁盘上的程序集引用。 如果控件属于当前解决方案，从“调试”更改为“发布”时，项目将继续引用该控件的调试版本。
 
-  此外, 如果将设计时元数据应用于自定义控件并且此元数据指定将[ToolboxBrowsableAttribute](/previous-versions/visualstudio/visual-studio-2010/bb547991(v=vs.100))设置为`false`, 则该控件不会出现在工具箱中。
+  此外，如果将设计时元数据应用于自定义控件，并且此元数据指定将[ToolboxBrowsableAttribute](/previous-versions/visualstudio/visual-studio-2010/bb547991(v=vs.100))设置为 `false`，则该控件不会出现在工具箱中。
 
   可以通过映射控件的命名空间和程序集，直接在 XAML 视图中引用控件。 有关详细信息，请参阅[如何：将命名空间导入 XAML](https://msdn.microsoft.com/6cda7c7a-369c-47dd-9c2d-13a35dcf737c)。
 
