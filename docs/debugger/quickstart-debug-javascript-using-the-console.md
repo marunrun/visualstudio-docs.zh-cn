@@ -16,16 +16,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 521092c26ba585381aa094f6b1b348365300bc10
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7b61147467ff27ec8b69e1a2fddfcd00138065fa
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62907003"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589059"
 ---
 # <a name="debug-javascript-using-the-console-in-visual-studio"></a>在 Visual Studio 中使用控制台调试 JavaScript
 
-可以使用 JavaScript 控制台窗口进行交互并调试 UWP 应用使用 JavaScript 构建的。 适用于 UWP 应用和创建使用 Visual Studio Tools for Apache Cordova 的应用支持这些功能。 有关控制台命令参考的信息，请参见 [JavaScript Console commands](../debugger/javascript-console-commands.md)。
+可以使用 JavaScript 控制台窗口与进行交互，并调试使用 JavaScript 生成的 UWP 应用。 对于使用 Apache Cordova Visual Studio Tools 创建的 UWP 应用和应用，支持这些功能。 有关控制台命令参考的信息，请参见 [JavaScript Console commands](../debugger/javascript-console-commands.md?view=vs-2017)。
 
 “JavaScript 控制台”窗口允许你执行以下操作：
 
@@ -39,28 +39,28 @@ ms.locfileid: "62907003"
 
 - 查看 JavaScript 错误和异常，以及文档对象模型 (DOM) 和 Windows 运行时异常。
 
-- 执行其他任务，如清除屏幕。 有关完整的命令列表，请参见 [JavaScript Console commands](../debugger/javascript-console-commands.md) 。
+- 执行其他任务，如清除屏幕。 有关完整的命令列表，请参见 [JavaScript Console commands](../debugger/javascript-console-commands.md?view=vs-2017) 。
 
 > [!TIP]
-> 如果 JavaScript 控制台窗口处于关闭状态，请依次选择“调试” >  >  以重新打开它。 该窗口仅在脚本调试会话期间出现。
+> 如果 JavaScript 控制台窗口处于关闭状态，请依次选择“调试”>  >  以重新打开它。 该窗口仅在脚本调试会话期间出现。
 
-使用“JavaScript 控制台”窗口，你可以在无需停止和重新启动调试器的情况下与应用交互。 有关详细信息，请参阅[刷新应用程序 (JavaScript)](../debugger/refresh-an-app-javascript.md)。 有关其他 JavaScript 调试功能，如使用 DOM 资源管理器和设置断点，请参阅[快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md)并[在 Visual Studio 中调试应用](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)。
+使用“JavaScript 控制台”窗口，你可以在无需停止和重新启动调试器的情况下与应用交互。 有关详细信息，请参阅[刷新应用（JavaScript）](../debugger/refresh-an-app-javascript.md)。 有关其他 JavaScript 调试功能（如使用 DOM 资源管理器和设置断点）的信息，请参阅快速入门：[在 Visual Studio 中](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)[调试 HTML、CSS](../debugger/quickstart-debug-html-and-css.md)和调试应用。
 
 ## <a name="InteractiveConsole"></a> 使用“JavaScript 控制台”窗口进行调试
 以下步骤会创建一个 `FlipView` 应用并演示如何以交互方式调试 JavaScript 编码错误。
 
 > [!NOTE]
-> 此处的示例应用是一个 UWP 应用。 但是，此处所述的控制台功能也适用于使用 Visual Studio Tools for Apache Cordova 创建的应用。
+> 此处的示例应用是 UWP 应用。 但是，此处所述的控制台功能也适用于使用 Visual Studio Tools for Apache Cordova 创建的应用。
 
 #### <a name="to-debug-javascript-code-in-the-flipview-app"></a>调试 FlipView 应用中的 JavaScript 代码
 
-1. 通过选择 **“文件”** > **“新建项目”**。
+1. 通过选择 **“文件”**  >  **“新建项目”** 。
 
-2. 选择**JavaScript** > **Windows Universal**，然后选择**WinJS 应用**。
+2. 选择 " **JavaScript**  > **Windows 通用**"，然后选择 " **WinJS 应用**"。
 
-3. 为项目输入名称（如 `FlipViewApp`），然后选择“确定”  以创建应用。
+3. 为项目输入名称（如 `FlipViewApp`），然后选择“确定” 以创建应用。
 
-4. 在正文元素的 index.html 中，将现有的 HTML 代码替换此代码：
+4. 在 index 的 BODY 元素中，将现有 HTML 代码替换为以下代码：
 
     ```html
     <div id="flipTemplate" data-win-control="WinJS.Binding.Template"
@@ -136,7 +136,7 @@ ms.locfileid: "62907003"
     })();
     ```
 
-7. 如果尚未选择调试目标，选择**本地计算机**下拉列表中下一步**设备**按钮**调试**工具栏：
+7. 如果尚未选择调试目标，请从 "**调试**" 工具栏上 "**设备**" 按钮旁边的下拉列表中选择 "**本地计算机**"：
 
     ![选择调试目标列表](../debugger/media/js_select_target.png "JS_Select_Target")
 
@@ -144,7 +144,7 @@ ms.locfileid: "62907003"
 
     应用会运行，但缺少图像。 JavaScript 控制台窗口中的 APPHOST 错误指示缺少图像。
 
-9. 与`FlipView`应用程序运行，类型`Data.items`在控制台窗口输入提示符 (下一步">>"符号)，按 Enter。
+9. 在运行 `FlipView` 应用的情况下，在控制台窗口输入提示中键入 `Data.items` （位于 "> >" 符号旁边），然后按 Enter。
 
     `items` 对象的可视化工具会出现在控制台窗口中。 这指示 `items` 对象进行了实例化，并且在当前脚本上下文中可用。 在控制台窗口中，可以在对象的各个节点中单击以查看属性值（或使用箭头键）。 如果向下单击到 `items._data` 对象（如图所示），则会发现其图像源引用不正确（与预期一样）。 该对象中存在的仍是默认图像 (logo.png)，并且有缺少的图像与预期的图像交织在一起。
 
@@ -184,11 +184,11 @@ ms.locfileid: "62907003"
 
 15. 在提示符下，键入 `Data.items.length = 3` ，并按 Enter。 这会从数据中移除额外的元素。
 
-16. 同样，查看应用程序，您将看到正确的图像位于上正确`FlipView`页。
+16. 再次检查应用，你会看到正确的图像位于正确的 `FlipView` 页面上。
 
 17. 在 DOM 资源管理器中，可以查看更新后的 DIV 元素，并且可以导航到子树中以查找预期的 IMG 元素。
 
-18. 选择 **“仿真程序 8.1 WVGA 4 英寸 512MB”** > **“停止调试”** 或按 Shift+F5 停止调试，然后修复源代码。
+18. 选择 **“仿真程序 8.1 WVGA 4 英寸 512MB”**  >  **“停止调试”** 或按 Shift+F5 停止调试，然后修复源代码。
 
     有关包含更正后的示例代码的完整 default.html 页面，请参阅[调试 HTML、CSS 和 JavaScript 示例代码](../debugger/debug-html-css-and-javascript-sample-code.md)。
 
@@ -199,15 +199,15 @@ ms.locfileid: "62907003"
 
 #### <a name="to-set-a-breakpoint-and-debug-the-app"></a>设置断点和调试应用
 
-1. 在之前创建的 `FlipView` 应用的 default.html 文件中，打开 `updateImages()` 函数的快捷菜单，然后选择 **“断点”** > **“插入断点”**。
+1. 在之前创建的 `FlipView` 应用的 default.html 文件中，打开 `updateImages()` 函数的快捷菜单，然后选择 **“断点”**  >  **“插入断点”** 。
 
-2. 选择**本地计算机**下拉列表中下一步**开始调试**按钮**调试**工具栏。
+2. 在 "**调试**" 工具栏上的 "**启动调试**" 按钮旁的下拉列表中选择 "**本地计算机**"。
 
-3. 选择 **“仿真程序 8.1 WVGA 4 英寸 512MB”** > **“本地计算机”**，或按 F5。
+3. 选择 **“仿真程序 8.1 WVGA 4 英寸 512MB”**  >  **“本地计算机”** ，或按 F5。
 
     当执行过程抵达 `updateImages()` 函数时，应用程序进入中断模式，并以黄色突出显示程序执行的当前行。
 
-    ![中断模式下使用 JavaScript 控制台](../debugger/media/js_breakmode.png "JS_BreakMode")
+    ![将中断模式与 JavaScript 控制台结合使用](../debugger/media/js_breakmode.png "JS_BreakMode")
 
     更改变量的值即可立即影响程序状态，而不会结束当前的调试会话。
 
@@ -217,7 +217,7 @@ ms.locfileid: "62907003"
 
     下图显示了此时的控件台窗口。
 
-    ![JavaScript 控制台窗口，其中显示可视化工具](../debugger/media/js_console_function_visualizer.png "JS_Console_Function_Visualizer")
+    ![显示可视化工具的 JavaScript 控制台窗口](../debugger/media/js_console_function_visualizer.png "JS_Console_Function_Visualizer")
 
 6. 将下面这行函数从输出窗口复制到输入提示符下，并将索引值更改为 3：
 
@@ -245,15 +245,15 @@ JavaScript 控制台窗口允许一次与单个执行上下文（表示 Web 平�
 
 下图显示了“JavaScript 控件台”窗口中的“目标”列表。
 
-![面向 JavaScript 控制台窗口中的选择](../debugger/media/js_console_target.png "JS_Console_Target")
+![JavaScript 控制台窗口中的目标选择](../debugger/media/js_console_target.png "JS_Console_Target")
 
 你也可以使用 `cd` 命令切换执行上下文，但是你必须知道其他执行上下文的名称并且你使用的引用必须在范围内。 **“目标”** 列表提供更好的方式来访问其他执行上下文。
 
 ## <a name="see-also"></a>请参阅
 - [在 Visual Studio 中调试应用](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)
-- [JavaScript Console commands](../debugger/javascript-console-commands.md)
+- [JavaScript Console commands](../debugger/javascript-console-commands.md?view=vs-2017)
 - [刷新应用 (JavaScript)](../debugger/refresh-an-app-javascript.md)
-- [键盘快捷键](../debugger/keyboard-shortcuts-html-and-javascript.md)
+- [键盘快捷键](../debugger/keyboard-shortcuts-html-and-javascript.md?view=vs-2017)
 - [调试 HTML、CSS 和 JavaScript 示例代码](../debugger/debug-html-css-and-javascript-sample-code.md)
 - [快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md)
 - [调试 WebView 控件](../debugger/debug-a-webview-control.md)
