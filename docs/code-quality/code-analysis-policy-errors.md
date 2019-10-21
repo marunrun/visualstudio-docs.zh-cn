@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - policy errors, code analysis
 ms.assetid: d1f221cd-68c0-4277-9397-b76ad0dbae77
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 661f029b617c430f7205552080a94affc5bd543b
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: d3c1f6761c6cef968c965a7f0d766d3b7da6183e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445886"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72622604"
 ---
 # <a name="code-analysis-policy-errors"></a>代码分析策略错误
 
