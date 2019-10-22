@@ -14,22 +14,22 @@ helpviewer_keywords:
 - command aliases
 ms.assetid: de8bb378-8c1c-4087-a9a5-537fa8314c19
 caps.latest.revision: 24
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 573c120aafdf520b137e3fb50251ed8606f5c43a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7e9419e64cd211490fc1d3785045b5de117d392e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68160884"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72657854"
 ---
 # <a name="visual-studio-command-aliases"></a>Visual Studio Command Aliases
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-别名通过缩短执行命令所需的文本提供了在“查找/命令”  框或“命令”  窗口中输入命令的方法。 例如，可以使用预定义别名 `>of`，而不是输入 `>File.OpenFile` 来显示“打开文件”  对话框。
+别名通过缩短执行命令所需的文本提供了在“查找/命令”框或“命令”窗口中输入命令的方法。 例如，可以使用预定义别名 `>of`，而不是输入 `>File.OpenFile` 来显示“打开文件”对话框。
 
- 在“命令”  窗口中键入 `alias` 可显示当前别名及其定义的列表。 键入 `>cls` 可清除“命令”  窗口中的内容。 若要查看特定命令的别名，请键入 `alias <command name>`。
+ 在“命令”窗口中键入 `alias` 可显示当前别名及其定义的列表。 键入 `>cls` 可清除“命令”窗口中的内容。 若要查看特定命令的别名，请键入 `alias <command name>`。
 
  您可以轻松地为某个 Visual Studio 命令创建您自己的别名（带有或不带参数）。 例如，用于为 `File.NewFile MyFile.txt` 创建别名的语法是 `alias MyAlias File.NewFile MyFile.txt`。 您可以使用 `alias <alias name> /delete` 删除某个别名。
 
@@ -71,7 +71,7 @@ ms.locfileid: "68160884"
 |[“启动”命令](../../ide/reference/start-command.md)|g|调试.启动|
 |[“转到”命令](../../ide/reference/go-to-command.md)|GotoLn|编辑.转到|
 |转到大括号|GotoBrace|编辑.转到大括号|
-|F1Help|Help|帮助.F1 帮助|
+|F1Help|帮助|帮助.F1 帮助|
 |即时模式|immed|Tools.ImmediateMode|
 |将文件作为文本插入|InsertFile|Edit.InsertFileAsText|
 |[“列出调用堆栈”命令](../../ide/reference/list-call-stack-command.md)|kb|Debug.ListCallStack|
@@ -99,8 +99,8 @@ ms.locfileid: "68160884"
 |跳出|pr|调试.跳出|
 |上一书签|PrevBook|编辑.上一书签|
 |打印文件|print|文件.打印|
-|属性窗口|props|视图.属性窗口|
-|停止|q|调试.停止调试|
+|“属性”窗口|props|视图.属性窗口|
+|Stop|q|调试.停止调试|
 |重做|redo|编辑.重做|
 |“寄存器”窗口|寄存器|调试.寄存器|
 |运行到光标处|rtc|调试.运行到光标处|
@@ -110,7 +110,7 @@ ms.locfileid: "68160884"
 |[Shell 命令](../../ide/reference/shell-command.md)|shell|Tools.Shell|
 |停止“在文件中查找”|StopFind|Edit.FindInFiles /stop|
 |交换定位点|SwapAnchor|编辑.交换定位点|
-|逐语句|t|调试.逐语句|
+|逐语句|T|调试.逐语句|
 |将选定内容替换为制表符|替换为制表符|Edit.TabifySelection|
 |“任务列表”窗口|TaskList|视图.任务列表|
 |“线程”窗口|线程|调试.线程|
@@ -128,4 +128,4 @@ ms.locfileid: "68160884"
 |[“列出线程”命令](../../ide/reference/list-threads-command.md)|~ ~*k ~\*kb|Debug.ListThreads Debug.ListTheads /AllThreads|
 
 ## <a name="see-also"></a>请参阅
- [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)[命令窗口](../../ide/reference/command-window.md)[查找/命令框](../../ide/find-command-box.md)
+ [Visual Studio](../../ide/reference/visual-studio-commands.md) "[命令" 窗口](../../ide/reference/command-window.md)中的["查找/命令" 框](../../ide/find-command-box.md)

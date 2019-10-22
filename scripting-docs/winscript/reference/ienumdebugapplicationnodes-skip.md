@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugApplicationNodes::Skip | Microsoft Docs
+title: IEnumDebugApplicationNodes：： Skip |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 97880e6a40efefa5f3643b474ba5d731f8dc3630
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: def20df8ee38763856fb33d6410788c934f541a5
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62951480"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573023"
 ---
 # <a name="ienumdebugapplicationnodesskip"></a>IEnumDebugApplicationNodes::Skip
-将跳过枚举序列中的指定的段数。  
+跳过枚举序列中指定数量的段。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT Skip(
   
 #### <a name="parameters"></a>参数  
  `celt`  
- [in]若要跳过枚举序列中的段的数目。  
+ 中枚举序列中要跳过的段数。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -47,7 +47,7 @@ HRESULT Skip(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法将跳过枚举序列中的指定的段数。  
+ 此方法跳过枚举序列中指定数量的段。  
   
 ## <a name="see-also"></a>请参阅  
  [IEnumDebugApplicationNodes 接口](../../winscript/reference/ienumdebugapplicationnodes-interface.md)

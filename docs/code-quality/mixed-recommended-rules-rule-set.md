@@ -2,21 +2,21 @@
 title: “混合建议规则”规则集
 ms.date: 11/04/2016
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4401417aba2055e7b2189db6bf33503668c2a658
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.openlocfilehash: 3f0daaf22f3e944dd76802060c53c64d40a4da04
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69585316"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649223"
 ---
 # <a name="mixed-recommended-rules-rule-set"></a>“混合建议规则”规则集
 
-Microsoft 混合推荐的规则重点介绍支持公共语言运行时的C++项目中最常见和最关键的问题, 包括潜在的安全漏洞、应用程序崩溃和其他重要的逻辑和设计错误。 此规则集包含 "[混合最低规则](mixed-minimum-rules-rule-set.md)" 规则集中的所有规则。
+Microsoft 混合推荐的规则重点介绍支持公共语言运行时的C++项目中最常见和最关键的问题，包括潜在的安全漏洞、应用程序崩溃和其他重要的逻辑和设计错误。 此规则集包含 "[混合最低规则](mixed-minimum-rules-rule-set.md)" 规则集中的所有规则。
 
 在为支持公共语言运行时的C++项目创建的任何自定义规则集中包含此规则集。
 
@@ -127,7 +127,7 @@ Microsoft 混合推荐的规则重点介绍支持公共语言运行时的C++项�
 |[C6518](../code-quality/c6518.md)|不可写的缓冲区的可写入大小|
 |[C6522](../code-quality/c6522.md)|无效大小的字符串类型|
 |[C6525](../code-quality/c6525.md)|无效大小字符串的不可访问的位置|
-|[C6527](../code-quality/c6527.md)|无效的批注:"NeedsRelease" 属性不能用于 void 类型的值|
+|[C6527](../code-quality/c6527.md)|无效的批注：“NeedsRelease”属性可能不可用于 void 类型的值|
 |[C6530](../code-quality/c6530.md)|无法识别的格式字符串样式|
 |[C6540](../code-quality/c6540.md)|对该函数使用属性批注将使其现有的所有 __declspec 批注无效|
 |[C6551](../code-quality/c6551.md)|大小规范无效：表达式不可分析|
@@ -151,37 +151,37 @@ Microsoft 混合推荐的规则重点介绍支持公共语言运行时的C++项�
 |[C28020](../code-quality/c28020.md)|此调用中的表达式不为 true|
 |[C28021](../code-quality/c28021.md)|批注的参数必须为指针型|
 |[C28022](../code-quality/c28022.md)|此函数上的函数类与用于定义此函数的 typedef 上的函数类不匹配。|
-|[C28023](../code-quality/c28023.md)|要分配或传递的函数应该至少有\_一个\_类\_的函数类批注|
-|[C28024](../code-quality/c28024.md)|向其分配的函数指针是用函数类 (不包含在函数类列表中) 进行批注的。|
+|[C28023](../code-quality/c28023.md)|分配或传递的函数应具有一个 \_Function \_class 至少一个类的 \_ 批注|
+|[C28024](../code-quality/c28024.md)|向其分配的函数指针是用函数类（不包含在函数类列表中）进行批注的。|
 |[C28039](../code-quality/c28039.md)|实参的类型应与类型完全匹配|
 |[C28112](../code-quality/c28112.md)|通过互锁函数访问的变量必须始终通过联锁函数访问。|
 |[C28113](../code-quality/c28113.md)|通过互锁函数访问本地变量|
 |[C28125](../code-quality/c28125.md)|必须从 try/except 块中调用函数|
-|[C28137](../code-quality/c28137.md)|变量参数应为 (文本) 常量|
+|[C28137](../code-quality/c28137.md)|变量参数应为（文本）常量|
 |[C28138](../code-quality/c28138.md)|常数参数应改为变量|
 |[C28159](../code-quality/c28159.md)|请考虑改用其他函数。|
 |[C28160](../code-quality/c28160.md)|错误批注|
 |[C28163](../code-quality/c28163.md)|绝不应从 try/except 块中调用函数|
-|[C28164](../code-quality/c28164.md)|正在将参数传递给需要指向对象的指针的函数 (而不是指向指针的指针)|
+|[C28164](../code-quality/c28164.md)|正在将参数传递给需要指向对象的指针的函数（而不是指向指针的指针）|
 |[C28182](../code-quality/c28182.md)|取消引用 NULL 指针。 该指针包含与另一指针相同的 NULL 值。|
-|[C28183](../code-quality/c28183.md)|参数可以是一个值, 并且是在指针中找到的值的副本|
+|[C28183](../code-quality/c28183.md)|参数可以是一个值，并且是在指针中找到的值的副本|
 |[C28193](../code-quality/c28193.md)|变量保存一个必须检查的值|
-|[C28196](../code-quality/c28196.md)|不满足要求。 (该表达式的计算结果不为 true。)|
+|[C28196](../code-quality/c28196.md)|不满足要求。 （该表达式的计算结果不为 true。）|
 |[C28202](../code-quality/c28202.md)|非法引用非静态成员|
 |[C28203](../code-quality/c28203.md)|对类成员的不明确的引用。|
-|[C28205](../code-quality/c28205.md)|\_在\_非法上下文\_中\_使用成功或\_失败|
+|[C28205](../code-quality/c28205.md)|\_Success 在非法上下文中使用 \_ 或 \_On \_failure \_|
 |[C28206](../code-quality/c28206.md)|若左操作数指向结构，则使用“->”|
 |[C28207](../code-quality/c28207.md)|若左操作数是一个结构，则使用“.”|
 |[C28209](../code-quality/c28209.md)|符号的声明具有冲突的声明|
 |[C28210](../code-quality/c28210.md)|__on_failure 上下文的批注不得位于显式的 pre 上下文中|
 |[C28211](../code-quality/c28211.md)|SAL_context 所需的静态上下文名称|
 |[C28212](../code-quality/c28212.md)|批注所需的指针表达式|
-|[C28213](../code-quality/c28213.md)|\_Use\_decl 批注批注\_必须用于引用之前的声明, 而无需修改。\_|
+|[C28213](../code-quality/c28213.md)|@No__t_0Use \_decl \_annotations \_ 批注必须用于引用，而无需修改以前的声明。|
 |[C28214](../code-quality/c28214.md)|特性参数的名称必须为 p1...p9|
 |[C28215](../code-quality/c28215.md)|不能将 typefix 应用于已包含 typefix 的参数|
 |[C28216](../code-quality/c28216.md)|checkReturn 批注仅应用于特定函数参数的后置条件。|
 |[C28217](../code-quality/c28217.md)|对于函数，批注的参数数目与在文件中找到的数目不匹配|
-|[C28218](../code-quality/c28218.md)|对于函数参数, 批注的参数与在文件中找到的参数不匹配|
+|[C28218](../code-quality/c28218.md)|对于函数参数，批注的参数与在文件中找到的参数不匹配|
 |[C28219](../code-quality/c28219.md)|批注中的批注参数所需的枚举成员|
 |[C28220](../code-quality/c28220.md)|批注中的批注参数所需的整数表达式|
 |[C28221](../code-quality/c28221.md)|批注中的参数所需的字符串表达式|
@@ -219,7 +219,7 @@ Microsoft 混合推荐的规则重点介绍支持公共语言运行时的C++项�
 |[C28267](../code-quality/c28267.md)|在函数中找到了批注的语法错误。|
 |[C28272](../code-quality/c28272.md)|在检查参数时，函数的批注与函数声明不一致|
 |[C28273](../code-quality/c28273.md)|对于函数，线索与函数声明不一致|
-|[C28275](../code-quality/c28275.md)|\_宏\_值的\_参数为 null|
+|[C28275](../code-quality/c28275.md)|@No__t_0Macro \_value \_ 的参数为 null|
 |[C28279](../code-quality/c28279.md)|对于符号，已找到“起始”符号，但没有匹配的“结束”符号|
 |[C28280](../code-quality/c28280.md)|对于符号，已找到“结束”符号，但没有匹配的“起始”符号|
 |[C28282](../code-quality/c28282.md)|格式字符串必须位于前置条件中|
@@ -227,7 +227,7 @@ Microsoft 混合推荐的规则重点介绍支持公共语言运行时的C++项�
 |[C28286](../code-quality/c28286.md)|对于函数，在其结尾附近出现语法错误|
 |[C28287](../code-quality/c28287.md)|对于函数，在 \_At\_() 批注中出现语法错误（无法识别的参数名）|
 |[C28288](../code-quality/c28288.md)|对于函数，在 \_At\_() 批注中出现语法错误（无效的参数名）|
-|[C28289](../code-quality/c28289.md)|对于函数:ReadableTo 或 WritableTo 没有用作参数的限制规范|
+|[C28289](../code-quality/c28289.md)|对于函数：ReadableTo 或 WritableTo 没有用作参数的限制规范|
 |[C28290](../code-quality/c28290.md)|函数的批注包含的外部对象数量多于实际的参数数量|
 |[C28291](../code-quality/c28291.md)|deref 级别 0 处的 post null/notnull 对于函数无意义。|
 |[C28300](../code-quality/c28300.md)|运算符的不可兼容类型的表达式操作数|
@@ -240,65 +240,65 @@ Microsoft 混合推荐的规则重点介绍支持公共语言运行时的C++项�
 |[C28307](../code-quality/c28307.md)|参数上的批注为 sal|
 |[C28350](../code-quality/c28350.md)|批注介绍了无条件适用的情形。|
 |[C28351](../code-quality/c28351.md)|批注介绍了在条件中无法使用动态值（变量）的位置。|
-|[CA1001](../code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable.md)|具有可释放字段的类型应该是可释放的|
-|[CA1009](../code-quality/ca1009-declare-event-handlers-correctly.md)|正确声明事件处理程序|
-|[CA1016](../code-quality/ca1016-mark-assemblies-with-assemblyversionattribute.md)|用 AssemblyVersionAttribute 标记程序集|
-|[CA1033](../code-quality/ca1033-interface-methods-should-be-callable-by-child-types.md)|接口方法应可由子类型调用|
-|[CA1049](../code-quality/ca1049-types-that-own-native-resources-should-be-disposable.md)|拥有本机资源的类型应是可释放的|
-|[CA1060](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)|将 P/Invoke 移动到 NativeMethods 类|
-|[CA1061](../code-quality/ca1061-do-not-hide-base-class-methods.md)|不要隐藏基类方法|
-|[CA1063](../code-quality/ca1063-implement-idisposable-correctly.md)|正确实现 IDisposable|
-|[CA1065](../code-quality/ca1065-do-not-raise-exceptions-in-unexpected-locations.md)|不要在意外的位置引发异常|
-|[CA1301](../code-quality/ca1301-avoid-duplicate-accelerators.md)|避免快捷键重复|
-|[CA1400](../code-quality/ca1400-p-invoke-entry-points-should-exist.md)|P/Invoke 入口点应该存在|
-|[CA1401](../code-quality/ca1401-p-invokes-should-not-be-visible.md)|P/Invokes 应该是不可见的|
-|[CA1403](../code-quality/ca1403-auto-layout-types-should-not-be-com-visible.md)|自动布局类型不应对 COM 可见|
-|[CA1404](../code-quality/ca1404-call-getlasterror-immediately-after-p-invoke.md)|紧接在 P/Invoke 之后调用 GetLastError|
-|[CA1405](../code-quality/ca1405-com-visible-type-base-types-should-be-com-visible.md)|COM 可见类型的基类型应对 COM 可见|
-|[CA1410](../code-quality/ca1410-com-registration-methods-should-be-matched.md)|应对 COM 注册方法进行匹配|
-|[CA1415](../code-quality/ca1415-declare-p-invokes-correctly.md)|正确声明 P/Invoke|
-|[CA1821](../code-quality/ca1821-remove-empty-finalizers.md)|移除空终结器|
-|[CA1900](../code-quality/ca1900-value-type-fields-should-be-portable.md)|值类型字段应为可移植字段|
-|[CA1901](../code-quality/ca1901-p-invoke-declarations-should-be-portable.md)|P/Invoke 声明应为可移植声明|
-|[CA2002](../code-quality/ca2002-do-not-lock-on-objects-with-weak-identity.md)|不要锁定具有弱标识的对象|
-|[CA2100](../code-quality/ca2100-review-sql-queries-for-security-vulnerabilities.md)|检查 SQL 查询是否存在安全漏洞|
-|[CA2101](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)|指定对 P/Invoke 字符串参数进行封送处理|
-|[CA2108](../code-quality/ca2108-review-declarative-security-on-value-types.md)|检查有关值类型的声明性安全|
-|[CA2111](../code-quality/ca2111-pointers-should-not-be-visible.md)|指针应为不可见|
-|[CA2112](../code-quality/ca2112-secured-types-should-not-expose-fields.md)|受保护的类型不应公开字段|
-|[CA2114](../code-quality/ca2114-method-security-should-be-a-superset-of-type.md)|方法安全性应是类型安全性的超集|
-|[CA2116](../code-quality/ca2116-aptca-methods-should-only-call-aptca-methods.md)|APTCA 方法应只调用 APTCA 方法|
-|[CA2117](../code-quality/ca2117-aptca-types-should-only-extend-aptca-base-types.md)|APTCA 类型应只扩展 APTCA 基类型|
-|[CA2122](../code-quality/ca2122-do-not-indirectly-expose-methods-with-link-demands.md)|不要使用链接请求间接公开方法|
-|[CA2123](../code-quality/ca2123-override-link-demands-should-be-identical-to-base.md)|重写链接请求应与基相同|
-|[CA2124](../code-quality/ca2124-wrap-vulnerable-finally-clauses-in-outer-try.md)|在外部 try 块中包装易受攻击的 finally 子句|
-|[CA2126](../code-quality/ca2126-type-link-demands-require-inheritance-demands.md)|类型链接请求需要继承请求|
-|[CA2131](../code-quality/ca2131-security-critical-types-may-not-participate-in-type-equivalence.md)|安全关键类型不能参与类型等效|
-|[CA2132](../code-quality/ca2132-default-constructors-must-be-at-least-as-critical-as-base-type-default-constructors.md)|默认构造函数必须至少与基类型默认构造函数一样关键|
-|[CA2133](../code-quality/ca2133-delegates-must-bind-to-methods-with-consistent-transparency.md)|委托必须绑定到具有一致透明度的方法|
-|[CA2134](../code-quality/ca2134-methods-must-keep-consistent-transparency-when-overriding-base-methods.md)|在重写基方法时，方法必须保持一致的透明度|
-|[CA2137](../code-quality/ca2137-transparent-methods-must-contain-only-verifiable-il.md)|透明方法只能包含可验证的 IL|
-|[CA2138](../code-quality/ca2138-transparent-methods-must-not-call-methods-with-the-suppressunmanagedcodesecurity-attribute.md)|透明方法不得调用具有 SuppressUnmanagedCodeSecurity 特性的方法|
-|[CA2140](../code-quality/ca2140-transparent-code-must-not-reference-security-critical-items.md)|透明代码不得引用安全关键项|
-|[CA2141](../code-quality/ca2141-transparent-methods-must-not-satisfy-linkdemands.md)|透明方法不得满足 LinkDemand|
-|[CA2146](../code-quality/ca2146-types-must-be-at-least-as-critical-as-their-base-types-and-interfaces.md)|类型必须至少与其基类型和接口一样关键|
-|[CA2147](../code-quality/ca2147-transparent-methods-may-not-use-security-asserts.md)|透明方法不得使用安全断言|
-|[CA2149](../code-quality/ca2149-transparent-methods-must-not-call-into-native-code.md)|透明方法不得调入本机代码|
-|[CA2200](../code-quality/ca2200-rethrow-to-preserve-stack-details.md)|再次引发以保留堆栈详细信息|
-|[CA2202](../code-quality/ca2202-do-not-dispose-objects-multiple-times.md)|不要多次释放对象|
-|[CA2207](../code-quality/ca2207-initialize-value-type-static-fields-inline.md)|以内联方式初始化值类型的静态字段|
-|[CA2212](../code-quality/ca2212-do-not-mark-serviced-components-with-webmethod.md)|不要使用 WebMethod 标记服务组件|
-|[CA2213](../code-quality/ca2213-disposable-fields-should-be-disposed.md)|应释放可释放的字段|
-|[CA2214](../code-quality/ca2214-do-not-call-overridable-methods-in-constructors.md)|不要在构造函数中调用可重写的方法|
-|[CA2216](../code-quality/ca2216-disposable-types-should-declare-finalizer.md)|可释放类型应声明终结器|
-|[CA2220](../code-quality/ca2220-finalizers-should-call-base-class-finalizer.md)|终结器应调用基类的终结器|
-|[CA2229](../code-quality/ca2229-implement-serialization-constructors.md)|实现序列化构造函数|
-|[CA2231](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)|重写 ValueType.Equals 时应重载相等运算符|
-|[CA2232](../code-quality/ca2232-mark-windows-forms-entry-points-with-stathread.md)|使用 STAThread 标记 Windows 窗体的入口点|
-|[CA2235](../code-quality/ca2235-mark-all-non-serializable-fields.md)|标记所有不可序列化的字段|
-|[CA2236](../code-quality/ca2236-call-base-class-methods-on-iserializable-types.md)|对 ISerializable 类型调用基类方法|
-|[CA2237](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)|用 SerializableAttribute 标记 ISerializable 类型|
-|[CA2238](../code-quality/ca2238-implement-serialization-methods-correctly.md)|正确实现序列化方法|
-|[CA2240](../code-quality/ca2240-implement-iserializable-correctly.md)|正确实现 ISerializable|
-|[CA2241](../code-quality/ca2241-provide-correct-arguments-to-formatting-methods.md)|为格式化方法提供正确的参数|
-|[CA2242](../code-quality/ca2242-test-for-nan-correctly.md)|正确测试 NaN|
+|[CA1001](../code-quality/ca1001.md)|具有可释放字段的类型应该是可释放的|
+|[CA1009](../code-quality/ca1009.md)|正确声明事件处理程序|
+|[CA1016](../code-quality/ca1016.md)|用 AssemblyVersionAttribute 标记程序集|
+|[CA1033](../code-quality/ca1033.md)|接口方法应可由子类型调用|
+|[CA1049](../code-quality/ca1049.md)|拥有本机资源的类型应是可释放的|
+|[CA1060](../code-quality/ca1060.md)|将 P/Invoke 移动到 NativeMethods 类|
+|[CA1061](../code-quality/ca1061.md)|不要隐藏基类方法|
+|[CA1063](../code-quality/ca1063.md)|正确实现 IDisposable|
+|[CA1065](../code-quality/ca1065.md)|不要在意外的位置引发异常|
+|[CA1301](../code-quality/ca1301.md)|避免快捷键重复|
+|[CA1400](../code-quality/ca1400.md)|P/Invoke 入口点应该存在|
+|[CA1401](../code-quality/ca1401.md)|P/Invokes 应该是不可见的|
+|[CA1403](../code-quality/ca1403.md)|自动布局类型不应对 COM 可见|
+|[CA1404](../code-quality/ca1404.md)|紧接在 P/Invoke 之后调用 GetLastError|
+|[CA1405](../code-quality/ca1405.md)|COM 可见类型的基类型应对 COM 可见|
+|[CA1410](../code-quality/ca1410.md)|应对 COM 注册方法进行匹配|
+|[CA1415](../code-quality/ca1415.md)|正确声明 P/Invoke|
+|[CA1821](../code-quality/ca1821.md)|移除空终结器|
+|[CA1900](../code-quality/ca1900.md)|值类型字段应为可移植字段|
+|[CA1901](../code-quality/ca1901.md)|P/Invoke 声明应为可移植声明|
+|[CA2002](../code-quality/ca2002.md)|不要锁定具有弱标识的对象|
+|[CA2100](../code-quality/ca2100.md)|检查 SQL 查询是否存在安全漏洞|
+|[CA2101](../code-quality/ca2101.md)|指定对 P/Invoke 字符串参数进行封送处理|
+|[CA2108](../code-quality/ca2108.md)|检查有关值类型的声明性安全|
+|[CA2111](../code-quality/ca2111.md)|指针应为不可见|
+|[CA2112](../code-quality/ca2112.md)|受保护的类型不应公开字段|
+|[CA2114](../code-quality/ca2114.md)|方法安全性应是类型安全性的超集|
+|[CA2116](../code-quality/ca2116.md)|APTCA 方法应只调用 APTCA 方法|
+|[CA2117](../code-quality/ca2117.md)|APTCA 类型应只扩展 APTCA 基类型|
+|[CA2122](../code-quality/ca2122.md)|不要使用链接请求间接公开方法|
+|[CA2123](../code-quality/ca2123.md)|重写链接请求应与基相同|
+|[CA2124](../code-quality/ca2124.md)|在外部 try 块中包装易受攻击的 finally 子句|
+|[CA2126](../code-quality/ca2126.md)|类型链接请求需要继承请求|
+|[CA2131](../code-quality/ca2131.md)|安全关键类型不能参与类型等效|
+|[CA2132](../code-quality/ca2132.md)|默认构造函数必须至少与基类型默认构造函数一样关键|
+|[CA2133](../code-quality/ca2133.md)|委托必须绑定到具有一致透明度的方法|
+|[CA2134](../code-quality/ca2134.md)|在重写基方法时，方法必须保持一致的透明度|
+|[CA2137](../code-quality/ca2137.md)|透明方法只能包含可验证的 IL|
+|[CA2138](../code-quality/ca2138.md)|透明方法不得调用具有 SuppressUnmanagedCodeSecurity 特性的方法|
+|[CA2140](../code-quality/ca2140.md)|透明代码不得引用安全关键项|
+|[CA2141](../code-quality/ca2141.md)|透明方法不得满足 LinkDemand|
+|[CA2146](../code-quality/ca2146.md)|类型必须至少与其基类型和接口一样关键|
+|[CA2147](../code-quality/ca2147.md)|透明方法不得使用安全断言|
+|[CA2149](../code-quality/ca2149.md)|透明方法不得调入本机代码|
+|[CA2200](../code-quality/ca2200.md)|再次引发以保留堆栈详细信息|
+|[CA2202](../code-quality/ca2202.md)|不要多次释放对象|
+|[CA2207](../code-quality/ca2207.md)|以内联方式初始化值类型的静态字段|
+|[CA2212](../code-quality/ca2212.md)|不要使用 WebMethod 标记服务组件|
+|[CA2213](../code-quality/ca2213.md)|应释放可释放的字段|
+|[CA2214](../code-quality/ca2214.md)|不要在构造函数中调用可重写的方法|
+|[CA2216](../code-quality/ca2216.md)|可释放类型应声明终结器|
+|[CA2220](../code-quality/ca2220.md)|终结器应调用基类的终结器|
+|[CA2229](../code-quality/ca2229.md)|实现序列化构造函数|
+|[CA2231](../code-quality/ca2231.md)|重写 ValueType.Equals 时应重载相等运算符|
+|[CA2232](../code-quality/ca2232.md)|使用 STAThread 标记 Windows 窗体的入口点|
+|[CA2235](../code-quality/ca2235.md)|标记所有不可序列化的字段|
+|[CA2236](../code-quality/ca2236.md)|对 ISerializable 类型调用基类方法|
+|[CA2237](../code-quality/ca2237.md)|用 SerializableAttribute 标记 ISerializable 类型|
+|[CA2238](../code-quality/ca2238.md)|正确实现序列化方法|
+|[CA2240](../code-quality/ca2240.md)|正确实现 ISerializable|
+|[CA2241](../code-quality/ca2241.md)|为格式化方法提供正确的参数|
+|[CA2242](../code-quality/ca2242.md)|正确测试 NaN|

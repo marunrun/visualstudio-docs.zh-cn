@@ -14,12 +14,12 @@ ms.workload:
 - multiple
 author: kendrahavens
 manager: jillfra
-ms.openlocfilehash: a37cdea4206dafe657dc8cf8adbbcf98ce18afc9
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: dca1fbb8f199db56563f4107ec88b832ec445bde
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551856"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71254551"
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio 测试资源管理器常见问题解答
 ::: moniker range=">=vs-2019"
@@ -115,7 +115,6 @@ Visual Studio 2019 中不再出现一些与测试相关的 API。  进行了哪�
 
 在 Visual Studio 2019 中，将删除以前标记为公开但从未正式记录过的某些测试窗口 API。 它们在 Visual Studio 2017 中被标记为“弃用”，提前通告扩展维护人员。 据我们所知，很少有扩展找过这些 API 并依赖于它们。 它们包括 `IGroupByProvider`、`IGroupByProvider<T>`、`KeyComparer`、`ISearchFilter`、`ISearchFilterToken`、`ISearchToken` 和 `SearchFilterTokenType`。 若此更改影响了你的扩展，请在[开发者社区](https://developercommunity.visualstudio.com)上提交一个 bug 告知我们。
 
-::: moniker range="vs-2017"
 ## <a name="test-adapter-nuget-reference"></a>测试适配器 NuGet 引用
 
 在 Visual Studio 2017 版本 15.8 中，发现了我的测试但不执行。 
@@ -126,6 +125,7 @@ Visual Studio 2019 中不再出现一些与测试相关的 API。  进行了哪�
 
 项目需要使用测试适配器 NuGet 包，而不使用测试适配器扩展。 该需求极大地提高了性能，并通过持续集成减少产生的问题。 阅读[发行说明](/visualstudio/releasenotes/vs2017-relnotes-v15.8#testadapterextension)中有关 .NET 测试适配器扩展弃用的详细信息。
 
+::: moniker range="vs-2017"
 > [!NOTE]
 > 如果使用 NUnit 2 测试适配器且无法迁移到 NUnit 3 测试适配器，则可以在 Visual Studio 15.8 版的“工具” > “选项” > “测试”中关闭这一新发现行为    。
 

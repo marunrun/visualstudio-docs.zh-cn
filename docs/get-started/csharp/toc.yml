@@ -21,6 +21,8 @@
       href: tutorial-uwp.md
     - name: 创建 WPF 应用程序
       href: tutorial-wpf.md
+    - name: 创建 Windows 窗体应用程序
+      href: ../../ide/create-csharp-winform-visual-studio.md?toc=/visualstudio/get-started/csharp/toc.json&bc=/visualstudio/get-started/csharp/breadcrumb/toc.json
     - name: 视频教程 - 创建 ASP.NET Core Web 应用
       items:
         - name: 1 - 安装 Visual Studio
@@ -47,6 +49,6 @@
     - name: 单元测试
       href: ../../test/getting-started-with-unit-testing.md?toc=/visualstudio/get-started/csharp/toc.json&bc=/visualstudio/get-started/csharp/breadcrumb/toc.json
     - name: 部署项目
-      href: ../../deployment/index.md
+      href: ../../deployment/index.yml
     - name: 访问数据
       href: ../../data-tools/create-a-sql-database-by-using-a-designer.md?toc=/visualstudio/get-started/csharp/toc.json&bc=/visualstudio/get-started/csharp/breadcrumb/toc.json

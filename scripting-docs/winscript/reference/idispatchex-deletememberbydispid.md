@@ -1,5 +1,5 @@
 ---
-title: IDispatchEx::DeleteMemberByDispID | Microsoft Docs
+title: IDispatchEx：:D eleteMemberByDispID |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 36eeeb4c28286bb5712be3908b47a5145e460597
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 38ead33fb51caff1103ca9abe6bc01f3e0aa6aa3
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63000939"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576642"
 ---
 # <a name="idispatchexdeletememberbydispid"></a>IDispatchEx::DeleteMemberByDispID
-删除成员的 DISPID。  
+按 DISPID 删除成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT DeleteMemberByDispID(
   
 #### <a name="parameters"></a>参数  
  `id`  
- 成员标识符。 使用`GetDispID`或`GetNextDispID`若要获取的调度标识符。  
+ 成员标识符。 使用 `GetDispID` 或 `GetNextDispID` 获取调度标识符。  
   
 ## <a name="return-value"></a>返回值  
  返回以下值之一：  
@@ -48,9 +48,9 @@ HRESULT DeleteMemberByDispID(
 |`S_FALSE`|成员存在，但不能删除。|  
   
 ## <a name="remarks"></a>备注  
- 如果删除该成员，则需要保持有效，DISPID `GetNextDispID`。  
+ 如果删除了成员，则 DISPID 需要对 `GetNextDispID` 仍有效。  
   
- 如果删除具有给定名称的成员，并且以后重新创建具有相同名称的成员，DISPID 应相同。 （仅大小写不同的成员名称是否"相同"与对象相关。）  
+ 如果删除具有给定名称的成员，然后重新创建同名的成员，则 DISPID 应相同。 （仅大小写不同的成员名称是否与对象相关。）  
   
 ## <a name="example"></a>示例  
   
@@ -66,5 +66,5 @@ if (SUCCEEDED(pdex->GetDispID(bstrName, fdexNameCaseSensitive, &dispid)))
   
 ## <a name="see-also"></a>请参阅  
  [IDispatchEx 接口](../../winscript/reference/idispatchex-interface.md)   
- [IDispatchEx::GetDispID](../../winscript/reference/idispatchex-getdispid.md)   
+ [IDispatchEx：： GetDispID](../../winscript/reference/idispatchex-getdispid.md)    
  [IDispatchEx::GetNextDispID](../../winscript/reference/idispatchex-getnextdispid.md)

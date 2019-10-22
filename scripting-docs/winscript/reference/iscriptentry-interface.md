@@ -13,33 +13,33 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0dc50a6aa5cf032827feac6b483b141b79f60e77
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 868322358908a32c8f14b56846cf3237f8531b4c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787719"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575399"
 ---
 # <a name="iscriptentry-interface"></a>IScriptEntry 接口
-一个对象，实现`IScriptEntry`接口表示一个脚本块或函数对象。  
+实现 `IScriptEntry` 接口的对象表示脚本块或函数对象。  
   
- 除了继承的方法之外`IScriptNode`，则`IScriptEntry`接口公开以下方法。  
+ 除了从 `IScriptNode` 继承的方法之外，`IScriptEntry` 接口还公开以下方法。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[IScriptEntry::GetBody](../../winscript/reference/iscriptentry-getbody.md)|返回对应的文本正文的`IScriptEntry`脚本块、 函数块或 scriptlet。|  
-|[IScriptEntry::GetItemName](../../winscript/reference/iscriptentry-getitemname.md)|返回标识的项名称`IScriptEntry`对象。|  
-|[IScriptEntry::GetName](../../winscript/reference/iscriptentry-getname.md)|对于表示单个对象 （如某个函数） 的条目，返回的对象的名称。|  
-|[IScriptEntry::GetRange](../../winscript/reference/iscriptentry-getrange.md)|返回的起始位置和长度的一个条目。|  
-|[IScriptEntry::GetSignature](../../winscript/reference/iscriptentry-getsignature.md)|返回类型信息`IScriptEntry`函数对象。|  
-|[IScriptEntry::GetText](../../winscript/reference/iscriptentry-gettext.md)|返回对应的文本`IScriptEntry`脚本块中或包含在源代码`IScriptScriptlet`事件处理程序。|  
-|[IScriptEntry::SetBody](../../winscript/reference/iscriptentry-setbody.md)|设置的正文中的文本`IScriptEntry`脚本块或`IScriptScriptlet`scriptlet。|  
-|[IScriptEntry::SetItemName](../../winscript/reference/iscriptentry-setitemname.md)|设置标识的项名称`IScriptEntry`对象。|  
-|[IScriptEntry::SetName](../../winscript/reference/iscriptentry-setname.md)|对于表示单个对象 （如某个函数） 的条目，设置的对象的名称。|  
-|[IScriptEntry::SetSignature](../../winscript/reference/iscriptentry-setsignature.md)|设置类型信息`IScriptEntry`函数对象。|  
-|[IScriptEntry::SetText](../../winscript/reference/iscriptentry-settext.md)|设置对应的文本`IScriptEntry`脚本块中或包含在源代码`IScriptScriptlet`事件处理程序。|  
+|[IScriptEntry::GetBody](../../winscript/reference/iscriptentry-getbody.md)|返回与 `IScriptEntry` script 块、function 块或 scriptlet 的主体对应的文本。|  
+|[IScriptEntry::GetItemName](../../winscript/reference/iscriptentry-getitemname.md)|返回标识 `IScriptEntry` 对象的项名称。|  
+|[IScriptEntry::GetName](../../winscript/reference/iscriptentry-getname.md)|对于表示单个对象的项（如函数），返回对象的名称。|  
+|[IScriptEntry::GetRange](../../winscript/reference/iscriptentry-getrange.md)|返回项的开始位置和长度。|  
+|[IScriptEntry::GetSignature](../../winscript/reference/iscriptentry-getsignature.md)|返回 `IScriptEntry` 函数对象的类型信息。|  
+|[IScriptEntry::GetText](../../winscript/reference/iscriptentry-gettext.md)|返回与 `IScriptEntry` 脚本块对应的文本，或包含在 `IScriptScriptlet` 事件处理程序中的源代码。|  
+|[IScriptEntry::SetBody](../../winscript/reference/iscriptentry-setbody.md)|设置位于 `IScriptEntry` 脚本块或 `IScriptScriptlet` scriptlet 正文中的文本。|  
+|[IScriptEntry::SetItemName](../../winscript/reference/iscriptentry-setitemname.md)|设置标识 `IScriptEntry` 对象的项名称。|  
+|[IScriptEntry::SetName](../../winscript/reference/iscriptentry-setname.md)|对于表示单个对象的项（如函数），设置该对象的名称。|  
+|[IScriptEntry::SetSignature](../../winscript/reference/iscriptentry-setsignature.md)|设置 `IScriptEntry` 函数对象的类型信息。|  
+|[IScriptEntry::SetText](../../winscript/reference/iscriptentry-settext.md)|设置与 `IScriptEntry` 脚本块对应的文本，或包含在 `IScriptScriptlet` 事件处理程序中的源代码。|  
   
 ## <a name="see-also"></a>请参阅  
  [活动脚本创作接口](../../winscript/reference/active-script-authoring-interfaces.md)

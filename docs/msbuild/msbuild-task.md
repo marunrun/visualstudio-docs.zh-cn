@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d2689113da88246470032ed658b2472c3845adcd
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: 3d0b2b0c4cee2a372bccb8ad461ed195fc5519d7
+ms.sourcegitcommit: 0554b59a2a251661e56824fb9cd6e9b1f326cef1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68681374"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71831854"
 ---
 # <a name="msbuild-task"></a>MSBuild 任务
 
@@ -47,8 +47,6 @@ ms.locfileid: "68681374"
 | `TargetOutputs` | 可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 只读输出参数。<br /><br /> 返回出自所有项目文件的生成目标的输出。 仅返回出自所指定目标的输出，不返回存在于目标所依赖的目标上的任何输出。<br /><br /> `TargetOutputs` 参数还包含以下元数据：<br /><br /> -   `MSBuildSourceProjectFile`：包含设置输出的目标的 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目文件。<br />-   `MSBuildSourceTargetName`：设置输出的目标。 **注意：** 如果要分别识别每个项目文件或目标中的输出，请为每个项目文件或目标分别运行 `MSBuild` 任务。 如果只运行一次 `MSBuild` 任务来生成所有的项目文件，则会将所有目标的输出收集到一个数组中。 |
 | `Targets` | 可选 `String` 参数。<br /><br /> 指定要在项目文件中生成的一个或多个目标。 使用分号分隔一系列目标名称。 如果未在 `MSBuild` 任务中指定任何目标，则会生成在项目文件中指定的默认目标。 **注意：** 目标必须发生在所有项目文件中。 如果它们不发生在所有文件中，则会出现生成错误。 |
 | `ToolsVersion` | 可选 `String` 参数。<br /><br /> 指定生成项目被传递到此任务时要使用的 `ToolsVersion`。<br /><br /> 使 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 任务能够生成一个项目，该项目面向 .NET Framework 的其他版本，而不是项目中指定的版本。 有效值为 `2.0`、`3.0` 和 `3.5`。 默认值是 `3.5`。 |
-| `UnloadProjectsOnCompletion` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则在操作完成后，将立即卸载项目。 |
-| `UseResultsCache` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则将返回缓存的结果（如果存在）。<br /><br />  如果运行 MSBuild 任务，其结果将被缓存在作用域中 <br /><br /> (ProjectFileName, GlobalProperties)[TargetNames]<br /><br /> 作为生成项的列表 |
 
 ## <a name="remarks"></a>备注
 

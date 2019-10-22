@@ -1,8 +1,10 @@
 ---
 title: 用于设计易于访问的应用程序的资源
 description: 了解如何创建易于访问的应用程序，以便让残障人士更轻松地使用它们。
-ms.date: 11/04/2016
+ms.date: 08/27/2019
 ms.topic: conceptual
+ms.prod: visual-studio-windows
+ms.technology: vs-ide-general
 helpviewer_keywords:
 - accessibility, Windows applications
 - Windows applications, accessibility
@@ -14,16 +16,19 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7fe2a4b57fda3ab861b5471e1af70cd4bfcc55e6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f8ac7beac67a2f1d0010ee64ae7af31108d7ec3b
+ms.sourcegitcommit: cf8c0fef2b9690595e99ce3802586cdd55fd37c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62811776"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107838"
 ---
 # <a name="resources-for-designing-accessible-applications"></a>用于设计易于访问的应用程序的资源
 
-使用以下链接可查找有关支持可访问设计的信息以及用于开发可访问 Windows 应用程序和网站的提示和示例。 可以在 [http://www.microsoft.com/enable/](http://www.microsoft.com/enable/) 处联机查找有关辅助功能的常规信息。
+详细了解支持易于访问设计的技术。 我们还提供了一些提示和指向教程的链接，可帮助你开发易于访问的 Windows 应用和网站。
+
+>[!NOTE]
+>若要详细了解如何开发可为所有用户提供支持的产品，请参阅 [Microsoft 辅助功能](https://www.microsoft.com/accessibility/)。
 
 ## <a name="technologies"></a>技术
 
@@ -39,7 +44,7 @@ ms.locfileid: "62811776"
 
 * **键盘用户界面设计的准则** 此技术文章介绍如何设计用户可以从键盘导航的 Windows 应用程序。 有关详细信息，请参阅[键盘用户界面设计的准则](/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)。
 
-* 控制台辅助功能：此技术文章介绍用于公开 Windows XP 中面向辅助工具的控制台的 API 和事件。 有关详细信息，请参阅[控制台辅助功能](/previous-versions/windows/desktop/dnacc/console-accessibility)。
+*  控制台辅助功能：此技术文章介绍用于公开 Windows XP 中面向辅助工具的控制台的 API 和事件。 有关详细信息，请参阅[控制台辅助功能](/previous-versions/windows/desktop/dnacc/console-accessibility)。
 
 ## <a name="websites"></a>网站
 
@@ -53,4 +58,5 @@ ms.locfileid: "62811776"
 
 ## <a name="see-also"></a>请参阅
 
-[Visual Studio 的辅助功能](../../ide/reference/accessibility-features-of-visual-studio.md)
+* [Visual Studio 的辅助功能](../../ide/reference/accessibility-features-of-visual-studio.md)
+* [Visual Studio for Mac 的辅助功能](/visualstudio/mac/accessibility/)

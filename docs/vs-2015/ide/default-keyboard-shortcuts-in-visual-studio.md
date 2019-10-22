@@ -12,20 +12,20 @@ helpviewer_keywords:
 - keyboard shortcuts
 ms.assetid: c2c64648-00f8-4e48-a8a0-96c67cfd968c
 caps.latest.revision: 59
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 129fa00681fcd3a9f3b19370bb553fcd5146e46e
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 9bfd13bda3e3d7ba416772123ac59ff0136a3725
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65701097"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665824"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Visual Studio 中的默认键盘快捷键
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-你可以通过选择相应的键盘快捷键，更轻松地访问 Visual Studio 中的各种命令和窗口。 本主题列出了常规开发配置文件的默认快捷键，你在安装 Visual Studio 时可能已选择该配置文件。 无论选择哪个配置文件，都可以通过打开“选项”对话框，展开“环境”节点，然后选择“键盘”，认识命令的快捷键。 你还可以为任意给定命令分配不同的快捷键，以自定义你的快捷键。
+你可以通过选择相应的键盘快捷键，更轻松地访问 Visual Studio 中的各种命令和窗口。 本主题列出了常规开发配置文件的默认快捷键，你在安装 Visual Studio 时可能已选择该配置文件。 无论选择哪个配置文件，都可以通过打开“选项”  对话框，展开“环境”  节点，然后选择“键盘”  ，认识命令的快捷键。 你还可以为任意给定命令分配不同的快捷键，以自定义你的快捷键。
 
  有关常见键盘快捷键列表和其他工作效率信息，请参阅[提示和技巧](../ide/tips-and-tricks-for-visual-studio.md)和[工作效率提示](../ide/productivity-tips-for-visual-studio.md)。
 
@@ -544,7 +544,7 @@ ms.locfileid: "65701097"
 
 |命令|键盘快捷键|
 |--------------|------------------------|
-|调试.图形.捕获帧|None|
+|调试.图形.捕获帧|无|
 |Graphics.MovePixelSelectionDown|Shift+Alt+向下键|
 |Graphics.MovePixelSelectionLeft|Shift+Alt+向左键|
 |Graphics.MovePixelSelectionRight|Shift+Alt+向右键|
@@ -839,7 +839,7 @@ ms.locfileid: "65701097"
 |                     编辑.行尾扩展列                      |                     Shift+Alt+End                     |
 |                        编辑.上开新行                         |                      Ctrl+Enter                       |
 |                        编辑.下开新行                         |                   Ctrl+Shift+Enter                    |
-|                          编辑.行首                           |                         主页                          |
+|                          编辑.行首                           |                         Home                          |
 |                       编辑.扩展到行首                        |                      Shift+Home                       |
 |                    编辑.行首扩展列                     |                    Shift+Alt+Home                     |
 |                        编辑.行转置                         |                      Shift+Alt+T                      |
@@ -1045,7 +1045,7 @@ ms.locfileid: "65701097"
 |编辑.向右扩展一个字符|Shift+向右键|
 |编辑.文档结尾|End — 结束|
 |编辑.文档结尾扩展|Shift+End|
-|编辑.文档开始|主页|
+|编辑.文档开始|Home|
 |编辑.文档开始扩展|Shift+Home|
 |编辑.插入制表符|Tab|
 |编辑.向下移动一行|向下键|
@@ -1159,5 +1159,5 @@ ms.locfileid: "65701097"
 |Xsd 设计器.显示图形视图|Ctrl+3|
 |Xsd 设计器.显示起始视图|Ctrl+1|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [图标的图像编辑器](https://msdn.microsoft.com/library/586d2b8b-0348-4883-a85d-1ff0ddbf14dd) [使用 IntelliSense](../ide/using-intellisense.md)

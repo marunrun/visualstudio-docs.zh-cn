@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 00423f3affa5c882137ee19c355252acbf23c976
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
+ms.openlocfilehash: 4c2e9c890b0b676216a02a526cad5380df4ceb57
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402117"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71252463"
 ---
 # <a name="tutorial-get-started-with-c-and-aspnet-core-in-visual-studio"></a>教程：Visual Studio 中的 C# 和 ASP.NET Core 入门
 
@@ -39,7 +39,7 @@ ms.locfileid: "66402117"
 
 ::: moniker range="vs-2019"
 
-如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)页免费安装。
+如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads)页免费安装。
 
 ::: moniker-end
 
@@ -129,9 +129,9 @@ ms.locfileid: "66402117"
 
    ![在“配置新项目”窗口中，将项目命名为“MyCoreApp”](./media/vs-2019/csharp-name-your-aspnet-mycoreapp-project.png)
 
-1. 在“创建新的 ASP.NET Core Web 应用程序”  窗口中，验证“ASP.NET Core 2.1”  是否显示在顶部下拉菜单中。 然后，选择“Web 应用程序”，其中包括示例 Razor Pages  。 接下来，选择“创建”  。
+1. 在“创建新的 ASP.NET Core Web 应用程序”窗口中，验证“ASP.NET Core 3.0”是否显示在顶部下拉菜单中   。 然后，选择“Web 应用程序”，其中包括示例 Razor Pages  。 接下来，选择“创建”  。
 
-   ![“创建新的 ASP.NET Core Web 应用程序”窗口](./media/vs-2019/csharp-create-aspnet-core-razor-pages-app.png)
+   ![“创建新的 ASP.NET Core Web 应用程序”窗口](./media/vs-2019/csharp-create-aspnet-razor-pages-app.png)
 
    此时，Visual Studio 将打开新项目。
 
@@ -141,6 +141,7 @@ ms.locfileid: "66402117"
 
 此解决方案遵循 Razor 页面  设计模式。 它与 [Model-View-Controller (MVC)](/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-2.1&tabs=aspnetcore2x) 设计模式的不同之处在于，它进行了优化，以包含 Razor Page 本身的模型和控制器代码。
 
+::: moniker range="vs-2017"
 ## <a name="tour-your-solution"></a>浏览解决方案
 
  1. 项目模板会创建一个解决方案，其中包含一个名为 MyCoreApp  的 ASP.NET Core 项目。 选择“解决方案资源管理器”  选项卡以查看其内容。
@@ -216,7 +217,7 @@ ms.locfileid: "66402117"
      public void OnGet()
      {
          string directory = Environment.CurrentDirectory;
-     Message = String.Format("Your directory is {0}.", directory);
+         Message = String.Format("Your directory is {0}.", directory);
      }
     ```
 
@@ -239,6 +240,110 @@ ms.locfileid: "66402117"
    ![查看更新的“关于”页，其中包含你所做的更改](media/csharp-aspnet-razor-browser-page-about-changed.png)
 
 1. 关闭 Web 浏览器，按 Shift  +F5  停止调试模式，然后关闭 Visual Studio。
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+## <a name="tour-your-solution"></a>浏览解决方案
+
+ 1. 项目模板会创建一个解决方案，其中包含一个名为 MyCoreApp  的 ASP.NET Core 项目。 选择“解决方案资源管理器”  选项卡以查看其内容。
+
+    ![Visual Studio 中适用于 Razor 页面解决方案的名为 MyCoreApp 的 ASP.NET 解决方案资源管理器](media/csharp-aspnet-razor-solution-explorer-mycoreapp.png)
+
+ 1. 展开“页面”文件夹  。
+
+     ![解决方案资源管理器中的 Pages 文件夹](media/vs-2019/csharp-aspnet-solution-explorer-pages.png)
+
+ 1. 查看代码编辑器中的“Index.cshtml”文件  。
+
+     ![查看 Visual Studio 代码编辑器中的 Index.cshtml 文件](media/vs-2019/csharp-aspnet-index-cshtml.png)
+
+ 1. 每个 .cshtml 文件都具有关联的代码文件。 若要在编辑器中打开代码文件，请在解决方案资源管理器中展开“Index.cshtml”节点，并选择“Index.cshtml.cs”文件   。
+
+     ![选择 Visual Studio 代码编辑器中的 Index.cshtml.cs 文件](media/vs-2019/csharp-aspnet-choose-index-cshtml.png)
+
+ 1. 查看代码编辑器中的“Index.cshtml.cs”文件  。
+
+     ![查看 Visual Studio 代码编辑器中的 About.cshtml 文件](media/vs-2019/csharp-aspnet-index-cshtml-editing.png)
+
+ 1. 该项目包含一个 wwwroot  文件夹，它是网站的根。 展开文件夹以查看其内容。
+
+     ![Visual Studio 解决方案资源管理器中的 wwwroot 文件夹](media/csharp-aspnet-razor-solution-explorer-wwwroot.png)
+
+    可将静态站点内容&mdash;如 CSS、图像和 JavaScript 库&mdash;直接放在所需的路径中。
+
+ 1. 该项目还包含在运行时管理 Web 应用的配置文件。 默认应用程序[配置](/aspnet/core/fundamentals/configuration)存储在 appsettings.json  中。 但是，可使用 appsettings.Development.json 替代这些设置  。 展开 appsettings.json 文件以查看 appsettings.Development.json 文件   。
+
+     ![Visual Studio 解决方案资源管理器中的配置文件](media/csharp-aspnet-razor-solution-explorer-appsettingsjson.png)
+
+## <a name="run-debug-and-make-changes"></a>运行、调试和更改
+
+1. 在 IDE 中选择“IIS Express”  按钮，在调试模式下生成并运行应用。 （或者，按 F5  或从菜单栏选择“调试”   > “启动调试”  。）
+
+     ![在 Visual Studio 中选择“IIS Express”按钮](media/csharp-aspnet-razor-iisexpress.png)
+
+     > [!NOTE]
+     > 如果看到内容为“无法连接到 Web 服务器‘IIS Express’”  的错误消息，请关闭 Visual Studio，再使用右键单击菜单或上下文菜单中的“以管理员身份运行”  选项打开它。 然后，再次运行应用。
+     >
+     > 系统可能会向你发送一条消息，询问你是否接受 IIS SSL Express 证书。 要在 Web 浏览器中查看代码，请选择“是”，如果收到后续的安全警告消息，也请选择“是”   。
+
+1. Visual Studio 启动浏览器窗口。 然后，应在菜单栏中看到“主页”和“隐私”页面   。
+
+1. 选择菜单栏中的“隐私”  。
+
+   浏览器中的“隐私”页呈现 Privacy.cshtml 文件中设置的文本   。
+
+   ![查看“隐私”页面上的文本](media/vs-2019/csharp-aspnet-browser-page-privacy.png)
+
+1. 返回到 Visual Studio，然后按 Shift+F5  停止调试模式。 这还会关闭浏览器窗口中的项目。
+
+1. 在 Visual Studio 中，打开要编辑的“Privacy.cshtml”  。 然后，删除“使用此页面详细说明网站的隐私策略”字词，并在其位置添加“此页面自 @ViewData["TimeStamp"] 起构建”字词   。
+
+    ![更改 Privacy.cshtml 文件中的文本](media/vs-2019/csharp-aspnet-privacy-cshtml-code-changed.png)
+
+1. 现在，让我们对代码进行更改。 选择“Privacy.cshtml.cs”  。 然后，使用以下快捷方式清理文件顶部的 `using` 指令：
+
+   选择任何灰色的 `using` 指令，插入点下方或左边距会显示[快速操作](../../ide/quick-actions.md)灯泡。 选择灯泡，然后将鼠标悬停在“删除不必要的 using”  。
+
+   ![删除 Privacy.cshtml.cs 文件中不必要的 Using](media/vs-2019/csharp-aspnet-remove-unnecessary-usings.png)
+
+   现选择“预览更改”，查看更改的内容  。
+
+   ![预览更改](media/vs-2019/csharp-aspnet-preview-changes.png)
+
+   选择“应用”。  Visual Studio 从文件中删除不必要的 `using` 指令。
+
+1. 接下来，在 `OnGet()` 方法中，将主体更改为以下代码：
+
+     ```csharp
+     public void OnGet()
+     {
+        string dateTime = DateTime.Now.ToShortDateString();
+        ViewData["TimeStamp"] = dateTime;
+     }
+    ```
+
+1. 请注意在“DateTime”下显示的两个波浪下划线  。 显示波浪下划线是因为这些类型不在作用域内。
+
+   ![OnGet 方法中使用波浪下划线标记的错误](media/vs-2019/csharp-aspnet-add-new-onget-method.png)
+
+    打开“错误列表”工具栏，查看此处列出的相同错误  。 （如果没有看到“错误列表”  工具栏，请选择顶部菜单栏中的“视图”   > “错误列表”  。）
+
+   ![Visual Studio 中的错误列表](media/vs-2019/csharp-aspnet-error-list.png)
+
+1. 让我们来解决此问题。 在代码编辑器中，将光标放在包含错误的任意一条线上，然后选择左边距中的“快速操作”灯泡。 然后，从下拉菜单中，选择“使用系统”  将此指令添加到文件顶部并解析错误。
+
+   ![添加“使用系统”指令](media/vs-2019/csharp-aspnet-add-usings.png)
+
+1. 按 F5，即可在 Web 浏览器中打开项目  。
+
+1. 在网站顶部，选择“隐私”查看你的更改  。
+
+   ![查看更新的“隐私”页，其中包含你所做的更改](media/vs-2019/csharp-aspnet-browser-page-privacy-changed.png)
+
+1. 关闭 Web 浏览器，按 Shift  +F5  停止调试模式，然后关闭 Visual Studio。
+::: moniker-end
 
 ## <a name="quick-answers-faq"></a>快速解答常见问题
 

@@ -1,5 +1,5 @@
 ---
-title: IScriptScriptlet Interface | Microsoft Docs
+title: IScriptScriptlet 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,28 +13,28 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c11aada6b8c39c7dd5f0b2a6b30cdd837aa0edda
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7b7973aee209695592f022d0e05a770caa1e694c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786706"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571883"
 ---
 # <a name="iscriptscriptlet-interface"></a>IScriptScriptlet 接口
-一个对象，实现`IScriptScriptlet`接口表示一个事件处理程序脚本。  
+实现 `IScriptScriptlet` 接口的对象表示事件处理程序脚本。  
   
- 除了继承的方法之外`IScriptEntry`，则`IScriptScriptlet`接口公开以下方法。  
+ 除了从 `IScriptEntry` 继承的方法之外，`IScriptScriptlet` 接口还公开以下方法。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[IScriptScriptlet::GetEventName](../../winscript/reference/iscriptscriptlet-geteventname.md)|返回与 scriptlet 相关联的事件的名称。|  
-|[IScriptScriptlet::GetSimpleEventName](../../winscript/reference/iscriptscriptlet-getsimpleeventname.md)|返回与 scriptlet 相关联的简单事件名称。 这是不包含任何空白区域的单个词名称。|  
-|[IScriptScriptlet::GetSubItemName](../../winscript/reference/iscriptscriptlet-getsubitemname.md)|Scriptlet 的对象主机的完全限定名称中返回的最后一个标识符。|  
-|[IScriptScriptlet::SetEventName](../../winscript/reference/iscriptscriptlet-seteventname.md)|设置与 scriptlet 相关联的事件的名称。|  
-|[IScriptScriptlet::SetSimpleEventName](../../winscript/reference/iscriptscriptlet-setsimpleeventname.md)|设置与 scriptlet 相关联的简单事件名称。 这是不包含任何空白区域的单个词名称。|  
-|[IScriptScriptlet::SetSubItemName](../../winscript/reference/iscriptscriptlet-setsubitemname.md)|Scriptlet 的对象主机的完全限定名称中设置的最后一个标识符。|  
+|[IScriptScriptlet::GetEventName](../../winscript/reference/iscriptscriptlet-geteventname.md)|返回与 scriptlet 关联的事件的名称。|  
+|[IScriptScriptlet:: GetSimpleEventName](../../winscript/reference/iscriptscriptlet-getsimpleeventname.md)|返回与 scriptlet 关联的简单事件名称。 这是一个不包含任何空格的单字名称。|  
+|[IScriptScriptlet::GetSubItemName](../../winscript/reference/iscriptscriptlet-getsubitemname.md)|返回 scriptlet 的对象主机的完全限定名中的最后一个标识符。|  
+|[IScriptScriptlet::SetEventName](../../winscript/reference/iscriptscriptlet-seteventname.md)|设置与 scriptlet 关联的事件的名称。|  
+|[IScriptScriptlet::SetSimpleEventName](../../winscript/reference/iscriptscriptlet-setsimpleeventname.md)|设置与 scriptlet 关联的简单事件名称。 这是一个不包含任何空格的单字名称。|  
+|[IScriptScriptlet::SetSubItemName](../../winscript/reference/iscriptscriptlet-setsubitemname.md)|设置 scriptlet 的对象主机的完全限定名中的最后一个标识符。|  
   
 ## <a name="see-also"></a>请参阅  
  [活动脚本创作接口](../../winscript/reference/active-script-authoring-interfaces.md)

@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: d9f47c54a530f58ea562fd942c1ef795bad37331
-ms.sourcegitcommit: 5b34052a1c7d86179d7898ed532babb2d9dad4a3
+ms.openlocfilehash: 4194a392eee1d5c9beaa0640f4006d1f01ebbace
+ms.sourcegitcommit: 1a3c2ca995fd44fc72741b3a100c6e57f4f8702c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490656"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72262314"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>使用 .runsettings 文件配置单元测试 
 
@@ -38,11 +38,11 @@ ms.locfileid: "69490656"
 
 ::: moniker range=">=vs-2019"
 
-若要在 IDE 中指定运行设置文件，请在“测试资源管理器”中选择“设置”按钮上的箭头，然后选择“选择设置文件”    。 浏览到并选择 .runsettings 文件  。
+若要在 IDE 中指定运行设置文件，请选择“测试”   > “选择设置文件”  。 浏览到并选择 .runsettings 文件  。
 
-![在 Visual Studio 2019 中选择测试设置文件菜单](media/vs-2019/select-test-settings-file.png)
+![在 Visual Studio 2019 中选择测试设置文件菜单](media/vs-2019/select-settings-file.png)
 
-该文件将显示在“测试资源管理器”中的“测试设置”菜单上，你可以选择或取消选择它。 选择后，每当选择“分析代码覆盖率”时，都会应用运行设置文件  。
+该文件将显示在“测试”菜单上，你可以选择或取消选择它。 选择后，每当选择“分析代码覆盖率”时，都会应用运行设置文件  。
 
 ::: moniker-end
 
@@ -97,7 +97,7 @@ ms.locfileid: "69490656"
 
 ::: moniker range=">=vs-2019"
 
-3. 若要选择运行设置文件，请在“测试资源管理器”中，选择“设置”按钮上的箭头，然后选择“选择设置文件”    。 浏览到创建的 .runsettings 文件，然后选择“确定”   。
+3. 若要选择运行设置文件，请选择“测试”   > “选择设置文件”  。 浏览到创建的 .runsettings 文件，然后选择“确定”   。
 
 ::: moniker-end
 
@@ -118,7 +118,7 @@ ms.locfileid: "69490656"
     <ResultsDirectory>.\TestResults</ResultsDirectory>
 
     <!-- x86 or x64 -->
-    <!-- You can also change it from the test settings menu; choose "Processor Architecture for AnyCPU Projects" -->
+    <!-- You can also change it from the Test menu; choose "Processor Architecture for AnyCPU Projects" -->
     <TargetPlatform>x86</TargetPlatform>
 
     <!-- Framework35 | [Framework40] | Framework45 -->
@@ -149,19 +149,24 @@ ms.locfileid: "69490656"
             <AllowLowIntegrityProcesses>True</AllowLowIntegrityProcesses>
             <CollectFromChildProcesses>True</CollectFromChildProcesses>
             <CollectAspDotNet>False</CollectAspDotNet>
-
+            
           </CodeCoverage>
         </Configuration>
       </DataCollector>
 
       <DataCollector uri="datacollector://microsoft/VideoRecorder/1.0" assemblyQualifiedName="Microsoft.VisualStudio.TestTools.DataCollection.VideoRecorder.VideoRecorderDataCollector, Microsoft.VisualStudio.TestTools.DataCollection.VideoRecorder, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" friendlyName="Screen and Voice Recorder">
         <!--Video data collector was introduced in Visual Studio 2017 version 15.5 -->
+        <Configuration>
+          <!-- Set "sendRecordedMediaForPassedTestCase" to "false" to add video attachments to failed tests only -->
+          <MediaRecorder sendRecordedMediaForPassedTestCase="true"  xmlns="">           
+            <ScreenCaptureVideo bitRate="512" frameRate="2" quality="20" />
+          </MediaRecorder>
+        </Configuration>
       </DataCollector>
-
     </DataCollectors>
   </DataCollectionRunSettings>
 
-  <!-- Parameters used by tests at runtime -->
+  <!-- Parameters used by tests at run time -->
   <TestRunParameters>
     <Parameter name="webAppUrl" value="http://localhost" />
     <Parameter name="webAppUserName" value="Admin" />
@@ -208,7 +213,7 @@ RunConfiguration 元素可以包含下列元素  ：
 |**ResultsDirectory**||在其中放置测试结果的目录。|
 |**TargetFrameworkVersion**|Framework40|适用于 .NET Core 源的 `FrameworkCore10`、适用于基于 UWP 源的 `FrameworkUap10`、适用于 .NET Framework 4.5 及更高版本的 `Framework45`、适用于 .NET Framework 4.0 的 `Framework40` 以及适用于 .NET Framework 3.5 的 `Framework35`。<br /><br />此设置指定使用哪一版本的单元测试框架来查找并执行测试。 它可能与你在单元测试项目的生成属性中指定的 .NET 平台的版本不同。<br /><br />如果省略 .runsettings  文件中的 `TargetFrameworkVersion` 元素，平台会基于生成的二进制文件自动确定框架版本。|
 |**TargetPlatform**|x86|x86、x64|
-|**TreatTestAdapterErrorsAsWarnings**|False|false、true|
+|**TreatTestAdapterErrorsAsWarnings**|false|false、true|
 |**TestAdaptersPaths**||TestAdapters 所在目录的一个或多个路径|
 |**MaxCpuCount**|1|此设置利用计算机上的可用内核，在运行单元测试时控制并行测试执行的程度。 测试执行引擎在每个可用内核上作为单独的进程启动，并为每个内核提供包含要运行的测试的容器。 容器可以是程序集、DLL 或相关项目。 测试容器即计划单位。 在每个容器中，测试将根据测试框架进行执行。 如果存在多个容器，进程在容器内完成测试执行时，系统会向它们提供下一个可用容器。<br /><br />MaxCpuCount 可以是：<br /><br />n，其中 1 <= n <= 内核数：最多启动 n 个进程<br /><br />n，其中 n = 任何其他值：启动的进程数最多可达可用内核数|
 |**TestSessionTimeout**||当测试会话超过给定时间，允许用户终止测试会话。 设置超时可确保资源被充分利用，并且测试会话被限制在一个设定时间内。 Visual Studio 2017 版本 15.5  及更高版本中提供了此设置。|
@@ -247,8 +252,7 @@ DataCollectors 元素指定诊断数据适配器的设置  。 诊断数据适�
 ```xml
 <TestRunParameters>
     <Parameter name="webAppUrl" value="http://localhost" />
-    <Parameter name="webAppUserName" value="Admin" />
-    <Parameter name="webAppPassword" value="Password" />
+    <Parameter name="docsUrl" value="https://docs.microsoft.com" />
 </TestRunParameters>
 ```
 
@@ -282,16 +286,16 @@ public void HomePageTest()
 
 |配置|默认|值|
 |-|-|-|
-|**ForcedLegacyMode**|False|在 Visual Studio 2012 中，对 MSTest 适配器进行了优化，使其变得更快且更具可伸缩性。 某些行为（如测试的运行顺序）可能不与 Visual Studio 早期版本中的完全一致。 将此值设置为 true 可使用旧测试适配器  。<br /><br />例如，如果为单元测试指定 app.config 文件，可能会用到此设置  。<br /><br />我们建议你考虑重构测试以便可以使用较新的适配器。|
-|**IgnoreTestImpact**|False|当在 MSTest 中或从 Microsoft 测试管理器运行时，测试影响功能会设置受最近更改影响的测试的优先级。 此设置会停用该功能。 有关详细信息，请参阅[自上一个生成后应运行哪些测试？](https://msdn.microsoft.com/library/dd286589)。|
+|**ForcedLegacyMode**|false|在 Visual Studio 2012 中，对 MSTest 适配器进行了优化，使其变得更快且更具可伸缩性。 某些行为（如测试的运行顺序）可能不与 Visual Studio 早期版本中的完全一致。 将此值设置为 true 可使用旧测试适配器  。<br /><br />例如，如果为单元测试指定 app.config 文件，可能会用到此设置  。<br /><br />我们建议你考虑重构测试以便可以使用较新的适配器。|
+|**IgnoreTestImpact**|false|当在 MSTest 中或从 Microsoft 测试管理器运行时，测试影响功能会设置受最近更改影响的测试的优先级。 此设置会停用该功能。 有关详细信息，请参阅[自上一个生成后应运行哪些测试？](https://msdn.microsoft.com/library/dd286589)。|
 |**SettingsFile**||你可以指定测试设置文件以便与此处的 MSTest 适配器配合使用。 还可以[从设置菜单](#ide)指定测试设置文件。<br /><br />如果指定此值，则还必须将“ForcedlegacyMode”  设置为“true”  。<br /><br />`<ForcedLegacyMode>true</ForcedLegacyMode>`|
-|**KeepExecutorAliveAfterLegacyRun**|False|测试运行完成后，MSTest 将关闭。 测试中启动的任何进程也将终止。 如果希望测试执行程序保持活动状态，请将此值设为 true  。 例如，可使用此设置让浏览器保持在编码的 UI 测试之间运行。|
+|**KeepExecutorAliveAfterLegacyRun**|false|测试运行完成后，MSTest 将关闭。 测试中启动的任何进程也将终止。 如果希望测试执行程序保持活动状态，请将此值设为 true  。 例如，可使用此设置让浏览器保持在编码的 UI 测试之间运行。|
 |**DeploymentEnabled**|true|如果将此值设置为 false，则不会将已在测试方法中指定的部署项目复制到部署目录中  。|
 |**CaptureTraceOutput**|true|你可以使用 <xref:System.Diagnostics.Trace.WriteLine%2A?displayProperty=nameWithType> 从测试方法写入调试跟踪。|
 |**DeleteDeploymentDirectoryAfterTestRunIsComplete**|true|若要在测试运行后保留部署目录，请将此值设置为 false  。|
-|**MapInconclusiveToFailed**|False|如果测试完成返回无结论的状态，则会映射到“测试资源管理器”中的已跳过状态  。 如果希望无结论的测试显示为失败，请将此值设为 true  。|
-|**InProcMode**|False|如果希望测试在与 MSTest 适配器相同的进程中运行，请将此值设置为 true  。 此设置将提供较小的性能提升。 但是，如果测试存在异常，则剩余测试不会运行。|
-|**AssemblyResolution**|False|查找和执行单元测试时，可以指定其他程序集的路径。 例如，对与测试程序集位于不同目录中的依赖程序集使用这些路径。 若要指定路径，请使用“Directory Path”元素  。 路径可以包括环境变量。<br /><br />`<AssemblyResolution>  <Directory Path="D:\myfolder\bin\" includeSubDirectories="false"/> </AssemblyResolution>`|
+|**MapInconclusiveToFailed**|false|如果测试完成返回无结论的状态，则会映射到“测试资源管理器”中的已跳过状态  。 如果希望无结论的测试显示为失败，请将此值设为 true  。|
+|**InProcMode**|false|如果希望测试在与 MSTest 适配器相同的进程中运行，请将此值设置为 true  。 此设置将提供较小的性能提升。 但是，如果测试存在异常，则剩余测试不会运行。|
+|**AssemblyResolution**|false|查找和执行单元测试时，可以指定其他程序集的路径。 例如，对与测试程序集位于不同目录中的依赖程序集使用这些路径。 若要指定路径，请使用“Directory Path”元素  。 路径可以包括环境变量。<br /><br />`<AssemblyResolution>  <Directory Path="D:\myfolder\bin\" includeSubDirectories="false"/> </AssemblyResolution>`|
 
 ## <a name="see-also"></a>请参阅
 

@@ -15,14 +15,14 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 597764d1e55b895c30e2b00981a7a1be53e16022
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3645e95859e2c2b785e01c7ee9a3cbee8155138d
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62968654"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571727"
 ---
-# <a name="jspropertymembers-enumeration"></a>JS_PROPERTY_MEMBERS 枚举
+# <a name="js_property_members-enumeration"></a>JS_PROPERTY_MEMBERS 枚举
 在对象成员的请求中用于指定信息类型返回的标志。  
   
 ## <a name="syntax"></a>语法  
@@ -31,17 +31,17 @@ ms.locfileid: "62968654"
 enum JS_PROPERTY_MEMBERS{   JS_PROPERTY_MEMBERS_ALL = 0,   JS_PROPERTY_MEMBERS_ARGUMENTS = 1} JS_PROPERTY_MEMBERS;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 ### <a name="values"></a>值  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
-|`JS_PROPERTY_MEMBERS_ALL`|表示要枚举所有成员的请求。|  
-|`JS_PROPERTY_MEMBERS_ARGUMENTS`|表示枚举仅参数的请求。|  
+|`JS_PROPERTY_MEMBERS_ALL`|表示枚举所有成员的请求。|  
+|`JS_PROPERTY_MEMBERS_ARGUMENTS`|表示只枚举参数的请求。|  
   
 ## <a name="requirements"></a>要求  
- **标头：** jscript9diag.h  
+ **标头：** jscript9diag  
   
 ## <a name="see-also"></a>请参阅  
  [Windows 脚本接口参考](../../winscript/reference/windows-script-interfaces-reference.md)

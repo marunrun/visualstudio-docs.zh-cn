@@ -8,14 +8,14 @@ helpviewer_keywords:
 - coded UI tests, best practices
 ms.assetid: d5aef766-a24c-4f1f-ac9b-e5462b6627d4
 caps.latest.revision: 41
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1a631823ce39e5655bba611f90c2869e8dff1d8f
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 2dffebeaa0349c149e319d20794f8b065baa5647
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871677"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660689"
 ---
 # <a name="best-practices-for-coded-ui-tests"></a>编码的 UI 测试的最佳做法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "68871677"
 
 - 如果用户界面 (UI) 更改，请重新记录测试方法或断言方法，或重新记录现有测试方法中受影响的部分。
 
-- 为受测应用程序中的每个模块创建一个单独的[UIMap](/previous-versions/dd580454(v=vs.140))文件。 有关详细信息，请参阅[使用多个 UI 映射测试大型应用程序](../test/testing-a-large-application-with-multiple-ui-maps.md)。
+- 为受测应用程序中的每个模块创建一个单独的 [UIMap](/previous-versions/dd580454(v=vs.140)) 文件。 有关详细信息，请参阅[使用多个 UI 映射测试大型应用程序](../test/testing-a-large-application-with-multiple-ui-maps.md)。
 
 - 在受测应用程序中创建 UI 控件时，请使用有意义的名称。 这比自动生成的控件名称更有意义，更易于使用。
 
-- 如果要通过使用 API 编码来创建断言, 请为`UIMap.cs`文件中的[UIMap](/previous-versions/dd580454(v=vs.140))类的部分中的每个断言创建一个方法。 从测试方法中调用此方法以执行断言。
+- 如果要通过使用 API 编码来创建断言，请为 `UIMap.cs` 文件中的[UIMap](/previous-versions/dd580454(v=vs.140))类的部分中的每个断言创建一个方法。 从测试方法中调用此方法以执行断言。
 
 - 如果直接用 API 编码，请在代码中尽可能使用 `UIMap.Designer.cs` 文件中生成的类中的属性和方法。 这些类将使您的工作更简单可靠，并帮助您提高效率。
 

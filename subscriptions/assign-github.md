@@ -1,20 +1,20 @@
 ---
-title: Visual Studio + GitHub Enterprise 捆绑包 | Microsoft Docs
+title: Visual Studio + GitHub Enterprise 套餐 | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.date: 07/28/2019
 ms.topic: conceptual
-description: 管理 Visual Studio + GitHub Enterprise 捆绑包中的订阅
-ms.openlocfilehash: 0f297eac1d6b2bc5fe322be305fab7f268f3d041
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+description: 管理 Visual Studio + GitHub Enterprise 套餐中的订阅
+ms.openlocfilehash: 29df2d7c43f934e44b7585e975e0f77328305ba5
+ms.sourcegitcommit: a2df993dc5e11c5131dbfcba686f0028a589068f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68605397"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71150134"
 ---
 # <a name="manage-visual-studio-subscriptions-with-github-enterprise"></a>管理带有 GitHub Enterprise 的 Visual Studio 订阅
-与 Microsoft 签订了企业协议 (EA) 的客户有资格购买新的订阅捆绑包，该捆绑包将 Visual Studio 标准订阅和 GitHub Enterprise 结合在了一起。 这是 Visual Studio 订阅者获取 GitHub Enterprise 的一种简单而实惠的方式。 
+与 Microsoft 签订了企业协议 (EA) 的客户有资格购买新的订阅套餐，该套餐将 Visual Studio 标准订阅和 GitHub Enterprise 结合在了一起。 这是 Visual Studio 订阅者获取 GitHub Enterprise 的一种简单而实惠的方式。 
 
 当你的组织购买带有 GitHub Enterprise 的 Visual Studio 订阅时，这些订阅将按两部分进行预配和管理。
 

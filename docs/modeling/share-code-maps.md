@@ -1,34 +1,34 @@
 ---
-title: 导出并保存代码图
+title: 导出和保存代码图
 ms.date: 05/16/2018
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70c4cd238b6e5d31eced6a35ff0c7d24ab85a280
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 991773953338e38331bad45bfa1149aeb27c748b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63003107"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670805"
 ---
 # <a name="share-code-maps"></a>共享代码图
 
-可以将代码图保存为 Visual Studio 项目的一部分，一个映像，或为 XPS 文件。
+可以将代码图另存为 Visual Studio 项目的一部分、图像或 XPS 文件。
 
 ## <a name="share-a-code-map-with-other-visual-studio-users"></a>与其他 Visual Studio 用户共享代码图
 
-使用“文件”  菜单保存代码图。
+使用“文件” 菜单保存代码图。
 
 或
 
-若要保存代码图作为特定项目的一部分图工具栏上，选择**共享** > **移动\<CodeMapName > 到.dgml**，然后选择你想要保存的项目映射。
+若要将地图保存为特定项目的一部分，请在地图工具栏上选择 "**共享**"  >  "**将 \<CodeMapName >" 移动到**"，然后选择要在其中保存地图的项目。
 
 ![将映射移动到另一个项目中](../modeling/media/codemapsmovemapmenu.png)
 
-Visual Studio 将保存为地图 *.dgml*可与 Visual Studio Enterprise 和 Visual Studio Professional 的其他用户共享的文件。
+Visual Studio 将映射保存为 *.dgml*文件，您可以与 Visual Studio Enterprise 和 Visual Studio Professional 的其他用户共享。
 
 > [!NOTE]
 > 在与使用 Visual Studio Professional 的用户共享代码图之前，请确保展开所有组、显示隐藏节点和跨组链接，并检索希望其他人在你的代码图上查看的所有已删除的节点。 否则，其他用户将无法查看这些项目。
@@ -41,22 +41,22 @@ Visual Studio 将保存为地图 *.dgml*可与 Visual Studio Enterprise 和 Visu
 
 ## <a name="export-a-code-map-as-an-image"></a>将代码图导出为图像
 
-代码图导出为图像时，您可以将它复制到其他应用程序，如 Microsoft Word 或 PowerPoint。
+将代码图导出为图像时，可以将其复制到其他应用程序，如 Microsoft Word 或 PowerPoint。
 
-1. 在代码图工具栏上选择**共享** > **作为映像的电子邮件**或**复制图像**。
+1. 在代码图工具栏上，选择 "**共享** > **电子邮件" 作为图像**或**复制图像**。
 
 2. 将该图像粘贴到另一个应用程序中。
 
-## <a name="export-the-map-as-an-xps-file"></a>代码图导出为 XPS 文件
+## <a name="export-the-map-as-an-xps-file"></a>将地图作为 XPS 文件导出
 
-在代码图导出为 XPS 文件时，您可以在 Internet Explorer 等的 XML 或 XAML 查看器中看到它。
+将代码图导出为 XPS 文件时，可以在 XML 或 XAML 查看器（如 Internet Explorer）中查看它。
 
-1. 在代码图工具栏上选择**共享** > **电子邮件为可移植 XPS**或**另存为可移植 XPS**。
+1. 在代码图工具栏上，选择 "**共享** > **电子邮件" 作为 "便携式 xps** " 或 "**另存为可移植 xps**"。
 
 2. 浏览到你要保存文件的位置。
 
-3. 对代码图命名。 请确保**另存为类型**框设置为**XPS 文件 (\*.xps)**。 选择“保存” 。
+3. 对代码图命名。 请确保将 "**保存类型**" 框设置为 " **xps 文件（\* .xps）** "。 选择“保存”。
 
 ## <a name="see-also"></a>请参阅
 
-- [使用代码映射来映射依赖项](../modeling/map-dependencies-across-your-solutions.md)
+- [映射与代码图的依赖项](../modeling/map-dependencies-across-your-solutions.md)

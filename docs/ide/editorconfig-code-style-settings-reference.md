@@ -13,20 +13,20 @@ manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4ba419c1dc20b46a08460e20a437e7edf21f2857
-ms.sourcegitcommit: b468d71052a1b8a697f477ab23a3644de139f1e9
+ms.openlocfilehash: d8be11a8705686ade370a8107aad826b7cab9851
+ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67253718"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186552"
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig 的 .NET 编码约定设置
 
 通过使用 [EditorConfig](../ide/create-portable-custom-editor-options.md) 文件，可在基本代码中定义和维护一致的代码样式。 EditorConfig 包括多个核心格式设置属性，如 `indent_style` 和 `indent_size`。 在 Visual Studio 中，还可使用 EditorConfig 文件配置 .NET 编码约定设置。 可以启用或禁用单个 .NET 编码约定，并可通过严重级别配置强制实施每个规则的程度。
 
 > [!TIP]
-> - 在 .editorconfig 文件中定义编码约定时，可配置内置到 Visual Studio 中的[代码样式分析器](../code-quality/roslyn-analyzers-overview.md)如何分析你的代码。 .editorconfig 文件是适用于这些分析器的配置文件。
-> - Visual Studio 的代码样式首选项还可以在[文本编辑器选项](code-styles-and-code-cleanup.md)对话框中进行设置。 但是，.editorconfig 设置优先使用，在“选项”中设置的首选项不与特定项目相关联  。
+> - 在 EditorConfig 文件中定义编码约定时，可配置内置到 Visual Studio 中的[代码样式分析器](../code-quality/roslyn-analyzers-overview.md)如何分析你的代码。 EditorConfig 文件是适用于这些分析器的配置文件。
+> - Visual Studio 的代码样式首选项还可以在[文本编辑器选项](code-styles-and-code-cleanup.md)对话框中进行设置。 但是，EditorConfig 设置优先使用，在“选项”中设置的首选项不与特定项目关联  。
 
 ## <a name="convention-categories"></a>约定类别
 

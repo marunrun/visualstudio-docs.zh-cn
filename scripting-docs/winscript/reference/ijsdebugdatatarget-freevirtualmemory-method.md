@@ -1,5 +1,5 @@
 ---
-title: 'Ijsdebugdatatarget:: Freevirtualmemory 方法 |Microsoft Docs'
+title: IJsDebugDataTarget：： FreeVirtualMemory 方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bf450c03d996a47f9dcd00899ddee46b75d6df32
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 835302249e95c89625c07c6d1ef3d7cbaf2905e8
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62583036"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577610"
 ---
 # <a name="ijsdebugdatatargetfreevirtualmemory-method"></a>IJsDebugDataTarget::FreeVirtualMemory 方法
-释放和/或解除目标过程虚拟地址空间内的内存区域。  
+释放和/或解除目标进程的虚拟地址空间内的内存区域。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,13 +37,13 @@ HRESULT FreeVirtualMemory(
   
 #### <a name="parameters"></a>参数  
  `address`  
- [in]在目标进程应释放内存内的地址。  
+ 中应释放内存的目标进程内的地址。  
   
  `size`  
- [in]要解除的字节数。 若要释放的内存区域，此值必须为零。  
+ 中要解除的字节数。 若要释放内存区域，此值必须为零。  
   
  `freeType`  
- [in]指示要执行的可用操作的类型。 这通常是 MEM_RELEASE (0x8000)，会释放指定的页面区域。 操作后，在页处于可用状态。 可以改为使用 MEM_DECOMMIT (0x4000)，解除页，而不释放它们。  
+ 中指示要执行的自由操作的类型。 这通常是 MEM_RELEASE （0x8000），它释放指定的页面区域。 操作完成后，页处于 "可用" 状态。 可以改为使用 MEM_DECOMMIT （0x4000）来解除页面，而无需释放它们。  
   
 ## <a name="return-value"></a>返回值  
   
@@ -51,7 +51,7 @@ HRESULT FreeVirtualMemory(
  有关其他信息，请参阅 VirtualFree Win32 API。  
   
 ## <a name="requirements"></a>要求  
- **标头：** jscript9diag.h  
+ **标头：** jscript9diag  
   
 ## <a name="see-also"></a>请参阅  
  [IJsDebugDataTarget 接口](../../winscript/reference/ijsdebugdatatarget-interface.md)

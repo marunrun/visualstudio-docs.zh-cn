@@ -9,26 +9,26 @@ helpviewer_keywords:
 - UML model, extending
 ms.assetid: c5937139-49d0-4439-8a9f-89f5e0474618
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d0cd086221b1c0ee6a4e2111cda543a3f8f4ec0e
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: b264987818e244cf016e9b54794109cafc548439
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871768"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652099"
 ---
 # <a name="programming-with-the-uml-api"></a>Programming with the UML API
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-利用 Visual Studio 的 UML API, 你可以编写代码来创建、读取和更新 UML 模型和关系图。 若要查看支持 UML 模式的 Visual Studio 版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
+利用 Visual Studio 的 UML API，你可以编写代码来创建、读取和更新 UML 模型和关系图。 若要查看支持 UML 模式的 Visual Studio 版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
  下面的主题除了介绍 API 参考页，还介绍了 API。
 
 |主题|描述的示例类型和方法|描述的功能|
 |-----------|-----------------------------------------|------------------------|
-|[使用 UML API 导航关系](../modeling/navigate-relationships-with-the-uml-api.md)|UML 元素及其属性和关联。 例如, IElement 及其后代, 其中包括:IClass、IActivity、IUseCase、IComponent、IInteraction、IModel、IPackage|在 Visual Studio 中, UML 模型符合 UML 规范版本 2.1.2, 可在 " [Uml 资源" 页](http://go.microsoft.com/fwlink/?LinkId=160796)中获取。 每种类型都是一个接口，与 UML 类型具有相同的名称，带有前缀“I”。|
+|[使用 UML API 导航关系](../modeling/navigate-relationships-with-the-uml-api.md)|UML 元素及其属性和关联。 例如，IElement 及其后代，其中包括：IClass、IActivity、IUseCase、IComponent、IInteraction、IModel 和 IPackage|在 Visual Studio 中，UML 模型符合 UML 规范版本2.1.2，可在 " [Uml 资源" 页](http://go.microsoft.com/fwlink/?LinkId=160796)中获取。 每种类型都是一个接口，与 UML 类型具有相同的名称，带有前缀“I”。|
 |[在 UML 模型中创建元素和关系](../modeling/create-elements-and-relationships-in-uml-models.md)|IPackage.CreateClass()<br /><br /> IClass.CreateOperation()|每个元素类型都具有创建其子级的方法。|
 |[在关系图上显示 UML 模型](../modeling/display-a-uml-model-on-diagrams.md)|IShape、IDiagram<br /><br /> IShape.Move()|模型中的每个元素都可以表示为关系图中的形状。 在某些情况下，可为每个对象创建新形状。 可以对这些形状进行移动、调整大小、着色和折叠或展开。|
 |[导航 UML 模型](../modeling/navigate-the-uml-model.md)|IModelStore<br /><br /> IDiagramContext|模型存储区用于存储模型。<br /><br /> 通过关系图上下文，可以访问当前关系图和存储。|
@@ -54,7 +54,7 @@ ms.locfileid: "68871768"
 |Assembly|命名空间|提供对以下内容的访问：|
 |--------------|----------------|-------------------------|
 |Microsoft.VisualStudio.Uml.Interfaces|(全部)|UML 类型。|
-|Microsoft.VisualStudio.ArchitectureTools.Extensibility|VisualStudio (Microsoft.visualstudio.architecturetools.layer.validator)|[创建方法](../modeling/create-elements-and-relationships-in-uml-models.md)|
+|Microsoft.VisualStudio.ArchitectureTools.Extensibility|VisualStudio （Microsoft.visualstudio.architecturetools.layer.validator）|[创建方法](../modeling/create-elements-and-relationships-in-uml-models.md)|
 ||Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation|[关系图和形状](../modeling/display-a-uml-model-on-diagrams.md)|
 ||Microsoft.VisualStudio.ArchitectureTools.Extensibility|[建模项目](../modeling/read-a-uml-model-in-program-code.md)|
 |Microsoft.VisualStudio.Modeling.Sdk.[版本号]|<xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement>|[菜单命令扩展](../modeling/define-a-menu-command-on-a-modeling-diagram.md)。<br /><br /> [链接的撤消事务](../modeling/link-uml-model-updates-by-using-transactions.md)。|
@@ -66,7 +66,7 @@ ms.locfileid: "68871768"
 |Microsoft.TeamFoundation.WorkItemTracking.Client|Microsoft.TeamFoundation.WorkItemTracking.Client|[工作项及其字段](../modeling/define-a-work-item-link-handler.md)。|
 |Microsoft.TeamFoundation.Client|Microsoft.TeamFoundation.Client|[工作项及其字段](../modeling/define-a-work-item-link-handler.md)。|
 |System.ComponentModel.Composition|<xref:System.ComponentModel.Composition>|[MEF 组件的导出和导入](../modeling/define-and-install-a-modeling-extension.md)|
-|System.Linq|<xref:System.Linq>|[简单地操作集合, 尤其是在处理关系时](../modeling/navigate-relationships-with-the-uml-api.md)。|
+|System.Linq|<xref:System.Linq>|[简单地操作集合，尤其是在处理关系时](../modeling/navigate-relationships-with-the-uml-api.md)。|
 
 ## <a name="see-also"></a>请参阅
- [扩展 UML 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)[UML 建模扩展性的 API 参考](../modeling/api-reference-for-uml-modeling-extensibility.md)
+ [扩展 uml 模型和关系图](../modeling/extend-uml-models-and-diagrams.md) [API 参考以实现 uml 建模扩展性](../modeling/api-reference-for-uml-modeling-extensibility.md)

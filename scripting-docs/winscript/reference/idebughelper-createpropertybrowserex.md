@@ -1,5 +1,5 @@
 ---
-title: IDebugHelper::CreatePropertyBrowserEx |Microsoft Docs
+title: IDebugHelper：： CreatePropertyBrowserEx |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 01e63d1588fd1e25f3415f22450ed5145752d711
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4d64d9dad54e029dc4c76e8b7e6c7a3f0299b0cb
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979196"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576503"
 ---
 # <a name="idebughelpercreatepropertybrowserex"></a>IDebugHelper::CreatePropertyBrowserEx
-返回包装一个变体，并允许进行自定义转换的变体的值或 VARTYPE 类型为字符串的属性浏览器。  
+返回一个属性浏览器，该浏览器包装变体，并允许对变体值或 VARTYPE 类型的自定义转换为字符串。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,19 +41,19 @@ HRESULT CreatePropertyBrowserEx(
   
 #### <a name="parameters"></a>参数  
  `pvar`  
- [in]若要浏览的根变体。  
+ 中要浏览的根变体。  
   
  `bstrName`  
- [in]提供给根名称。  
+ 中要为根指定的名称。  
   
  `pdat`  
- [in]线程在其请求属性。 如果此参数为 NULL，则执行没有封送处理。  
+ 中要请求其属性的线程。 如果此参数为 NULL，则不执行任何封送处理。  
   
  `pdf`  
- [in]提供自定义格式的变体的对象。  
+ 中为变体提供自定义格式设置的对象。  
   
  `ppdob`  
- [out]属性浏览器。  
+ 弄属性浏览器。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -63,9 +63,9 @@ HRESULT CreatePropertyBrowserEx(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法返回的包装一个变体，并允许进行自定义转换的变体的值或 VARTYPE 类型为字符串的属性浏览器。  
+ 此方法返回包装变体的属性浏览器，并允许将变体值或 VARTYPE 类型的自定义转换为字符串。  
   
 ## <a name="see-also"></a>请参阅  
- [IDebugHelper::CreatePropertyBrowser](../../winscript/reference/idebughelper-createpropertybrowser.md)   
+ [IDebugHelper：： CreatePropertyBrowser](../../winscript/reference/idebughelper-createpropertybrowser.md)    
  [IDebugHelper 接口](../../winscript/reference/idebughelper-interface.md)   
  [IDebugProperty 接口](../../winscript/reference/idebugproperty-interface.md)

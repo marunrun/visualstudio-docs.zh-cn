@@ -4,37 +4,37 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, escape sequences
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b48748c5c5d071e724be3ff35eca457f36385baa
-ms.sourcegitcommit: 6a19c5ece38a70731496a38f2ef20676ff18f8a4
+ms.openlocfilehash: 4e03f5eafc00b8431725ed06da10371a93692fb5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476614"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662922"
 ---
 # <a name="use-escape-sequences-in-text-templates"></a>在文本模板中使用转义序列
 
-在文本模板生成文本模板标记并 （在 C# 仅代码），可以使用转义序列转义控制字符和引号引起来。
+您可以在文本模板中使用转义序列来生成文本模板标记和（ C#仅在代码中）以转义控制字符和引号。
 
-若要打印的标准代码块的输出文件的打开和关闭标记，请按如下所示转义标记：
+若要将标准代码块的打开和关闭标记打印到输出文件，请按如下所示对标记进行转义：
 
 ```
 \<# ... \#>
 ```
 
-您也可以执行同样的其他文本模板指令和代码块标记。
+您可以对其他文本模板指令和代码块标记执行相同的操作。
 
-如果文本块包括用于转义文本模板标记的字符串，则可能会使用以下的转义序列：
+如果文本块包含用于转义文本模板标记的字符串，则可以使用以下转义序列：
 
-- 如果文本模板标记前面有偶数个转义 (\\) 字符在模板分析器将包括半转义字符，包括为文本模板标记序列。 例如，如果文本模板中有四个转义符，将有两个"\\"生成文件中的字符。
+- 如果文本模板标记前面有偶数个转义符（\\）字符，则模板分析器将包含一半转义符，并将序列作为文本模板标记包含在内。 例如，如果文本模板中有四个转义符，则生成的文件中将有两个 "\\" 字符。
 
-- 如果文本模板标记前面有奇数数目的转义 (\\) 字符，在模板分析器将包括的下半部分"\\"字符以及标记本身 (\<# >)。 标记不被认为是一个文本模板标记。
+- 如果文本模板标记前面有奇数个转义符（\\）字符，则模板分析器将包含一半的 "\\" 字符以及标记本身（\< # 或 # >）。 标记不被视为文本模板标记。
 
-- 如果转义符 (\\) 字符将出现在其中将转义的控制字符或引号 （在仅限 C#) 之外的任何序列中的其他任何位置，将直接输出的字符。
+- 如果转义（\\）字符出现在除转义控制字符或引号（仅在中C# ）的任何序列中的任何其他位置，则将直接输出该字符。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,56 +1,56 @@
 ---
-title: 如何：扩展特定于域的语言设计器
+title: 如何：扩展域特定语言设计器
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 85a4356837180d13428acf34636f28cca668a423
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aa03e43276c7c995c5f494c5325dd79716dcf998
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993158"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72605598"
 ---
-# <a name="how-to-extend-the-domain-specific-language-designer"></a>如何：扩展特定于域的语言设计器
+# <a name="how-to-extend-the-domain-specific-language-designer"></a>如何：扩展域特定语言设计器
 
-您可以对用来编辑 DSL 定义的设计器进行扩展。 你可以对进行包括添加的菜单命令添加处理程序拖放双击手势和特定类型的值或关系更改时触发的规则的扩展的类型。 可以打包为 Visual Studio 集成扩展 (VSIX) 扩展，并将其分发给其他用户。
+你可以对用于编辑 DSL 定义的设计器进行扩展。 可以进行的扩展类型包括添加菜单命令、添加拖放和双击笔势的处理程序，以及在特定类型的值或关系发生更改时触发的规则。 可以将扩展打包为 Visual Studio 集成扩展（VSIX），并将其分发给其他用户。
 
-有关示例代码和有关此功能的详细信息，请参阅 Visual Studio[可视化和建模 SDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)。
+有关此功能的示例代码和详细信息，请参阅 Visual Studio[可视化和建模 SDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)。
 
 ## <a name="set-up-the-solution"></a>设置解决方案
 
-设置项目包含代码的扩展，并将项目导出一个 VSIX 项目。 你的解决方案可以包含的包含在同一 VSIX 中的其他项目。
+设置包含扩展代码的项目，以及一个导出项目的 VSIX 项目。 你的解决方案可以包含合并到同一 VSIX 中的其他项目。
 
-### <a name="to-create-a-dsl-designer-extension-solution"></a>若要创建 DSL 设计器扩展解决方案
+### <a name="to-create-a-dsl-designer-extension-solution"></a>创建 DSL 设计器扩展解决方案
 
-1. 创建新项目使用**类库**项目模板。 此项目将包含你的扩展的代码。
+1. 使用**类库项目模板**创建一个新项目。 此项目将包含你的扩展的代码。
 
-2. 创建一个新**VSIX 项目**项目。
+2. 创建新的**VSIX 项目**项目。
 
-     选择**将添加到解决方案**。
+     选择 "**添加到解决方案**"。
 
-     *Source.extension.vsixmanifest* VSIX 清单编辑器中打开。
+     *Source.extension.vsixmanifest*在 VSIX 清单编辑器中打开。
 
-3. 以上内容的字段中，单击**添加内容**。
+3. 在 "内容" 字段上方，单击 "**添加内容**"。
 
-4. 在**添加内容**对话框中，将**中选择内容类型**到**MEF 组件**，并设置**项目**到你的类库项目。
+4. 在 "**添加内容**" 对话框中，将 "**选择内容类型**" 设置为 " **MEF 组件**"，并将 "**项目**" 设置为类库项目。
 
-5. 单击**选择版本**并确保选中**Visual Studio Enterprise**检查。
+5. 单击 "**选择版本**" 并确保选中**Visual Studio Enterprise** 。
 
-6. 请确保将 VSIX 项目的解决方案的启动项目。
+6. 请确保 VSIX 项目是解决方案的启动项目。
 
 7. 在类库项目中，添加对以下程序集的引用：
 
-     Microsoft.VisualStudio.CoreUtility
+     VisualStudio. CoreUtility
 
-     Microsoft.VisualStudio.Modeling.Sdk.11.0
+     VisualStudio （web.config）
 
-     Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0
+     VisualStudio. 11.0. 11。0
 
-     Microsoft.VisualStudio.Modeling.Sdk.DslDefinition.11.0
+     VisualStudio. Dsldefinition.dsl. 11。0
 
      Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0
 
@@ -64,27 +64,27 @@ ms.locfileid: "62993158"
 
 ## <a name="test-and-deployment"></a>测试和部署
 
-若要测试本主题中的任何扩展，生成并运行解决方案。 这将打开一个 Visual Studio 实验实例。 在本例中，打开 DSL 解决方案。 编辑 DslDefinition 关系图。 可以查看扩展行为。
+若要测试本主题中的任何扩展，请生成并运行解决方案。 这将打开一个 Visual Studio 实验实例。 在此实例中，打开 DSL 解决方案。 编辑 Dsldefinition.dsl 关系图。 可以查看扩展行为。
 
-将扩展部署到主要的 Visual Studio 和其他计算机，请执行以下步骤：
+若要将扩展部署到主 Visual Studio 和其他计算机，请执行以下步骤：
 
-1. 查找 VSIX 安装文件，在 VSIX 项目中 bin\\*\*\\\*.vsix
+1. 在 bin 中的 VSIX 项目中查找 VSIX 安装文件 \\ * \\ \* .vsix
 
-2. 将此文件复制到目标计算机，然后在 Windows 资源管理器 （或文件资源管理器） 中，双击它。
+2. 将此文件复制到目标计算机，然后在 Windows 资源管理器（或文件资源管理器）中双击它。
 
-     Visual Studio 扩展管理器将打开，以确认已安装扩展。
+     此时将打开 Visual Studio 扩展管理器以确认是否已安装该扩展。
 
-若要卸载该扩展，请按照下列步骤：
+若要卸载扩展，请执行以下步骤：
 
-1. 在 Visual Studio 中，在**工具**菜单上，单击**扩展管理器**。
+1. 在 Visual Studio 的 "**工具**" 菜单上，单击 "**扩展管理器**"。
 
-2. 选择扩展，并将其删除。
+2. 选择扩展并将其删除。
 
-## <a name="add-a-shortcut-menu-command"></a>添加一个快捷方式菜单命令
+## <a name="add-a-shortcut-menu-command"></a>添加快捷菜单命令
 
-若要使 DSL 设计器图面上或在 DSL 资源管理器窗口中显示的快捷方式菜单命令，请编写一个类似于以下的类。
+若要在 DSL 设计器图面上或在 DSL 资源管理器窗口中显示快捷菜单命令，请编写一个类似于下面的类。
 
-类必须实现`ICommandExtension`必须具有属性和`DslDefinitionModelCommandExtension`。
+类必须实现 `ICommandExtension` 并且必须具有属性 `DslDefinitionModelCommandExtension`。
 
 ```csharp
 using System.Collections.Generic;
@@ -148,7 +148,7 @@ namespace Fabrikam.SimpleDslDesignerExtension
 
 ## <a name="handle-mouse-gestures"></a>处理鼠标手势
 
-代码是类似于菜单命令的代码。
+此代码类似于菜单命令的代码。
 
 ```csharp
 [DslDefinitionModelGestureExtension]
@@ -208,9 +208,9 @@ namespace Fabrikam.SimpleDslDesignerExtension
  }
 ```
 
-## <a name="respond-to-value-changes"></a>响应以值发生更改
+## <a name="respond-to-value-changes"></a>响应值更改
 
-此处理程序需要域模型才能正常工作。 我们提供简单的域模型。
+此处理程序需要域模型才能正常工作。 我们提供一个简单的域模型。
 
 ```csharp
 using System.Diagnostics;
@@ -250,7 +250,7 @@ namespace Fabrikam.SimpleDslDesignerExtension
 } }  }  );
 ```
 
-下面的代码实现一个简单的模型。 创建新的 GUID 替换占位符。
+下面的代码实现了一个简单的模型。 创建新的 GUID 以替换占位符。
 
 ```csharp
 using System;

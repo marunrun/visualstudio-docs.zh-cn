@@ -1,5 +1,5 @@
 ---
-title: CA1702:复合词应采用正确的大小写 |Microsoft Docs
+title: CA1702：复合词应采用正确的大小写 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,49 +12,48 @@ helpviewer_keywords:
 - CompoundWordsShouldBeCasedCorrectly
 ms.assetid: 05481245-7ad8-48c3-a456-3aa44b6160a6
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 91a3945c6ef212ba664119a822123f326cdefc5c
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 76ce346430a249b562f00e17c3173e79128d1708
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65676391"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669254"
 ---
-# <a name="ca1702-compound-words-should-be-cased-correctly"></a>CA1702:组合词应采用正确的大小写
+# <a name="ca1702-compound-words-should-be-cased-correctly"></a>CA1702：复合词应采用正确的大小写
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 的最新文档，请参阅[CA1702:复合词应采用正确的大小写](https://docs.microsoft.com/visualstudio/code-quality/ca1702-compound-words-should-be-cased-correctly)。  
-  
-|||  
-|-|-|  
-|TypeName|CompoundWordsShouldBeCasedCorrectly|  
-|CheckId|CA1702|  
-|类别|Microsoft.Naming|  
-|是否重大更改|对程序集引发重大时。<br /><br /> 无间断-如果在类型参数上引发。|  
-  
-## <a name="cause"></a>原因  
- 标识符名称包含多个单词和至少一个单词似乎是大小写不正确的组合词。  
-  
-## <a name="rule-description"></a>规则说明  
- 标识符名称拆分为根据大小写的单词。 通过 Microsoft 拼写检查器库会检查每个连续的两个单词组合。 如果它被识别，该标识符将生成与规则的冲突。 复合词而导致违反了示例包括"CheckSum"和"多部分"应采用的大小写为"Checksum"和"多部分"，分别。 由于以前经常使用，几个例外情况内置规则，并标记了几个单个单词，例如"工具栏"和"Filename"，，应采用的大小写为两个不同的单词 （在此情况下，"工具栏"和"FileName"）。  
-  
- 命名约定提供了通用的外观对于库面向公共语言运行时。 这会减少所需的新软件库，并会增加客户信心库由必须在托管代码中开发的专业知识的人学习曲线。  
-  
-## <a name="how-to-fix-violations"></a>如何解决冲突  
- 更改名称，使其具有正确的大小写。  
-  
-## <a name="when-to-suppress-warnings"></a>何时禁止显示警告  
- 它可以安全地禁止显示此规则的警告，如果这两个部件的组合词识别由拼写字典，目的是使用两个单词。  
-  
-## <a name="related-rules"></a>相关的规则  
- [CA1701:资源字符串复合词应采用正确的大小写](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)  
-  
- [CA1709:标识符应采用正确的大小写](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)  
-  
- [CA1708:标识符不应不同于用例的详细信息](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)  
-  
-## <a name="see-also"></a>请参阅  
- [命名准则](https://msdn.microsoft.com/library/fc076d66-9b5f-42d3-aa65-61d970c794a3)   
- [大小写约定](https://msdn.microsoft.com/library/4c4ea526-9203-486f-b72d-29d61c5b3c6d)
+有关 Visual Studio 的最新文档，请参阅[CA1702：复合词应采用正确的大小写](https://docs.microsoft.com/visualstudio/code-quality/ca1702-compound-words-should-be-cased-correctly)。
+
+|||
+|-|-|
+|TypeName|CompoundWordsShouldBeCasedCorrectly|
+|CheckId|CA1702|
+|类别|Microsoft。命名|
+|是否重大更改|重大-对程序集引发时。<br /><br /> 不间断-在类型参数上触发时。|
+
+## <a name="cause"></a>原因
+ 标识符的名称包含多个字词，其中至少有一个单词显示为大小写不正确的组合词。
+
+## <a name="rule-description"></a>规则说明
+ 标识符的名称拆分为基于大小写的单词。 Microsoft 拼写检查器库检查每个连续两个单词的组合。 如果识别，标识符将生成规则冲突。 导致冲突的组合词的示例包括 "CheckSum" 和 "多部分"，分别应以 "Checksum" 和 "多部分" 的大小写形式。 由于以前的常见用法，规则中内置了几个例外，并标记了几个单个字词（如 "Toolbar" 和 "Filename"），其大小写应为两个不同的单词（在本例中为 "ToolBar" 和 "FileName"）。
+
+ 命名约定为面向公共语言运行时的库提供了通用的外观。 这减少了新软件库所需的学习曲线，并使客户可以放心地了解库是由具有开发托管代码的专业技能的人员开发的。
+
+## <a name="how-to-fix-violations"></a>如何解决冲突
+ 更改名称，使其大小写正确。
+
+## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
+ 如果拼写词典识别了复合单词的两个部分，并且目的是使用两个词，则可以安全地禁止显示此规则发出的警告。
+
+## <a name="related-rules"></a>相关规则
+ [CA1701：资源字符串复合词应采用正确的大小写](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
+
+ [CA1709：标识符的大小写应当正确](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+
+ [CA1708：标识符不应仅以大小写进行区分](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+
+## <a name="see-also"></a>请参阅
+ [命名准则](https://msdn.microsoft.com/library/fc076d66-9b5f-42d3-aa65-61d970c794a3)[大小写约定](https://msdn.microsoft.com/library/4c4ea526-9203-486f-b72d-29d61c5b3c6d)

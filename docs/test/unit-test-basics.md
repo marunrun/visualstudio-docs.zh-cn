@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5060b2a3b532de26d78eca4ce16661768748bbd7
-ms.sourcegitcommit: 673b9364fc9a96b027662dcb4cf5d61cab60ef11
+ms.openlocfilehash: aff50f5933d540297711e44487c775d93968f0fd
+ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69891346"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342442"
 ---
 # <a name="unit-test-basics"></a>单元测试基础知识
 
@@ -369,7 +369,7 @@ public void AddIntegerHelper_DataDrivenValues_AllShouldPass()
 
 你可以在选定的测试上或解决方案中的所有测试上运行代码覆盖率。 “代码覆盖率结果”窗口显示行、函数、类、命名空间和模块执行的产品代码块的百分比  。
 
-若要在解决方案中运行测试方法的代码覆盖率，请在 Visual Studio 菜单上选择“测试”  ，然后选择“分析代码覆盖率”  。
+若要在解决方案中运行测试方法的代码覆盖率，请选择“测试”   > “分析所有测试的代码覆盖率”  .。
 
 覆盖率结果将显示在“代码覆盖率结果”窗口中  。
 

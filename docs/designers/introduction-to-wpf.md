@@ -11,12 +11,12 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: f26558a8e8d7e8446e3a992b7555116b5712c364
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: bb88c5b718c0f949825a2542b5a084d4e8ca15b9
+ms.sourcegitcommit: dc12a7cb66124596089f01d3e939027ae562ede9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68924447"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71962965"
 ---
 # <a name="wpf-overview"></a>WPF 概述
 
@@ -428,7 +428,7 @@ WPF 动画支持可以使控件变大、抖动、旋转和淡出，以形成有�
 
 ### <a name="triggers"></a>触发器
 
-尽管 XAML 标记的主要用途是实现应用程序的外观，你也可以使用 XAML 来实现应用程序行为的某些方面。 其中一个示例是使用触发器来基于用户交互更改应用程序的外观。 有关详细信息，请参阅[样式设置和模板化](/dotnet/framework/wpf/controls/styling-and-templating)。
+尽管 XAML 标记的主要用途是实现应用程序的外观，你也可以使用 XAML 来实现应用程序行为的某些方面。 其中一个示例是使用触发器来基于用户交互更改应用程序的外观。 有关详细信息，请参阅[样式和模板](/dotnet/desktop-wpf/fundamentals/styles-templates-overview)。
 
 ### <a name="control-templates"></a>控件模板
 
@@ -545,7 +545,7 @@ WPF 控件的默认用户界面通常是从其他控件和形状构造的。 例
 
 ![两个橙色按钮](../designers/media/wpfintrofigure20.png)
 
-有关详细信息，请参阅[样式设置和模板化](/dotnet/framework/wpf/controls/styling-and-templating)。
+有关详细信息，请参阅[样式和模板](/dotnet/desktop-wpf/fundamentals/styles-templates-overview)。
 
 ### <a name="resources"></a>资源
 

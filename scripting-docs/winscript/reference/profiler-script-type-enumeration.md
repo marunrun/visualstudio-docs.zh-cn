@@ -15,14 +15,14 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ca90a566db422d75fefc44267ffe10504bb872ce
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e08583f9bb914adfbd144715646991c6070f3f32
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62816780"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574574"
 ---
-# <a name="profilerscripttype-enumeration"></a>PROFILER_SCRIPT_TYPE 枚举
+# <a name="profiler_script_type-enumeration"></a>PROFILER_SCRIPT_TYPE 枚举
 指定脚本的类型。  
   
 ## <a name="syntax"></a>语法  
@@ -36,17 +36,17 @@ typedef enum {
 } PROFILER_SCRIPT_TYPE;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|PROFILER_SCRIPT_TYPE_USER|指定用户编写脚本代码。|  
-|PROFILER_SCRIPT_TYPE_DYNAMIC|指定在执行期间动态生成的脚本代码。|  
-|PROFILER_SCRIPT_TYPE_NATIVE|指定本机函数和对象定义的脚本引擎的脚本类型。|  
-|PROFILER_SCRIPT_TYPE_DOM|指定到 Internet Explorer 中，例如，调用文档对象模型 (DOM) 的调用`document.getElementById`方法。|  
+|PROFILER_SCRIPT_TYPE_USER|指定用户编写的脚本代码。|  
+|PROFILER_SCRIPT_TYPE_DYNAMIC|指定在执行过程中动态生成的脚本代码。|  
+|PROFILER_SCRIPT_TYPE_NATIVE|指定本机函数和脚本引擎定义的对象的脚本类型。|  
+|PROFILER_SCRIPT_TYPE_DOM|指定对 Internet Explorer 文档对象模型（DOM）的调用，例如调用 `document.getElementById` 方法。|  
   
 ## <a name="see-also"></a>请参阅  
- [活动脚本 Profiler 常量、 枚举和结构](../../winscript/reference/active-script-profiler-constants-enumerations-and-structures.md)   
- [IActiveScriptProfilerCallback::ScriptCompiled](../../winscript/reference/iactivescriptprofilercallback-scriptcompiled.md)   
- [IActiveScriptProfilerCallback2::OnFunctionEnterByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionenterbyname.md)   
+ [活动脚本探查器常量、枚举和结构](../../winscript/reference/active-script-profiler-constants-enumerations-and-structures.md)   
+ [IActiveScriptProfilerCallback：： ScriptCompiled](../../winscript/reference/iactivescriptprofilercallback-scriptcompiled.md)    
+ [IActiveScriptProfilerCallback2：： OnFunctionEnterByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionenterbyname.md)    
  [IActiveScriptProfilerCallback2::OnFunctionExitByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionexitbyname.md)

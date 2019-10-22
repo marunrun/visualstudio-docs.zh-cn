@@ -8,15 +8,15 @@ helpviewer_keywords:
 - UML API
 ms.assetid: d52e0bbf-0166-4bb4-a2e3-cefed6188875
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 240f143015f22435deb4f1347f74bebcc8b334c3
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 380aaa5bed1e30c549334bc004ea38e3f0bdb762
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871899"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669925"
 ---
 # <a name="define-a-work-item-link-handler"></a>定义工作项链接处理程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68871899"
 
     1. 在“文件” 菜单上，选择“新建”、“项目”。
 
-    2. 在 "**已安装的模板**" 下展开 "**视觉对象C#**  " 或 " **Visual Basic**", 然后在中间栏中单击 "类库"
+    2. 在 "**已安装的模板**" 下展开 "  **C#视觉对象**" 或 " **Visual Basic**"，然后在中间栏**中单击 "类库"**
 
     3. 设置 **“解决方案”** 以指示你是希望创建新的解决方案，还是希望向已打开的 VSIX 解决方案添加组件。
 
@@ -52,7 +52,7 @@ ms.locfileid: "68871899"
 
     - 在“解决方案资源管理器”中，VSIX 项目的快捷菜单上选择“设为启动项目”。
 
-4. 在**source.extension.vsixmanifest**的 "**内容**" 下, 将类库项目添加为 MEF 组件。
+4. 在**source.extension.vsixmanifest**的 "**内容**" 下，将类库项目添加为 MEF 组件。
 
     1. 在“元数据” 选项卡上，设置 VSIX 的名称。
 
@@ -82,12 +82,12 @@ ms.locfileid: "68871899"
 
  `System.ComponentModel.Composition`
 
- `System.Drawing`-由示例代码使用
+ `System.Drawing`-代码示例使用
 
- 如果在 "**添加引用**" 对话框的 " **.net** " 选项卡下找不到其中一个引用, 请使用 "浏览" 选项卡在 \Program Files\Microsoft Visual Studio [\\version] \Common7\IDE\PrivateAssemblies 中查找它。
+ 如果在 "**添加引用**" 对话框的 " **.net** " 选项卡下找不到其中一个引用，请使用 "浏览" 选项卡在 \Program Files\Microsoft Visual Studio [version] \Common7\IDE\PrivateAssemblies \\ 中查找它。
 
 ### <a name="import-the-work-item-namespace"></a>导入工作项命名空间
- 在项目引用中, 添加对以下程序集的引用: [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
+ 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目**引用**中，添加对以下程序集的引用：
 
 - Microsoft.TeamFoundation.WorkItemTracking.Client.dll
 
@@ -160,15 +160,15 @@ namespace WorkItems
 
      此时将启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例。
 
-     **故障排除**:如果新[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的未启动, 请确保将 VSIX 项目设置为解决方案的启动项目。
+     **故障排除**：如果新的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 没有启动，请确保将 VSIX 项目设置为解决方案的启动项目。
 
 2. 在实验性 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中，打开或创建一个建模项目，然后打开或创建一个建模图。
 
 3. 创建模型元素（如 UML 类）并设置其名称。
 
-4. 右键单击元素, 然后单击 "**创建工作项**"。
+4. 右键单击元素，然后单击 "**创建工作项**"。
 
-    - 如果子菜单显示 "**打开 Team Foundation Server 连接**", 则需要关闭项目, 连接到相应的 TFS, 然后重新启动此过程。
+    - 如果子菜单显示 "**打开 Team Foundation Server 连接**"，则需要关闭项目，连接到相应的 TFS，然后重新启动此过程。
 
     - 如果子菜单显示工作项类型的列表，请单击其中一个类型。
 
@@ -180,9 +180,9 @@ namespace WorkItems
 
 7. 验证工作项现在是否以红色显示。 这将演示示例代码中的 `OnWorkItemLinked()`。
 
-     **故障排除**:如果处理程序方法未运行, 请验证:
+     **故障排除**：如果处理程序方法未运行，请验证：
 
-    - 类库项目作为一个 MEF 组件列在 VSIX 项目的 "**内容**" 列表中。
+    - 类库项目作为一个 MEF 组件列在 VSIX 项目的 "**内容**" 列表**中。**
 
     - 正确的 `Export` 特性附加到处理程序类，该类实现 `ILinkedWorkItemExtension`。
 
@@ -293,7 +293,7 @@ element.AddReference(ReferenceConstants.WorkItem, linkString, true);
 
   ```
 
-  有关引用的详细信息, 请参阅[将引用字符串附加到 UML 模型元素](../modeling/attach-reference-strings-to-uml-model-elements.md)。
+  有关引用的详细信息，请参阅[将引用字符串附加到 UML 模型元素](../modeling/attach-reference-strings-to-uml-model-elements.md)。
 
 ## <a name="see-also"></a>请参阅
 

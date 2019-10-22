@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: c9670182432b1c6bc1e763e014b04b193c399330
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.openlocfilehash: 1d3a86d9ef5823b5935ad99facd6a82bf3af9789
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65461222"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018936"
 ---
 # <a name="how-to-generate-unit-tests-by-using-intellitest"></a>如何：通过使用 IntelliTest 来生成单元测试
 
@@ -142,10 +142,7 @@ IntelliTest 浏览你的 .NET 代码，以生成测试数据和单元测试套�
 ### <a name="q-can-i-use-other-unit-test-frameworks-with-intellitest"></a>问：是否可以将其他单元测试框架用于 IntelliTest？
 
 **答：** 可以，请按照下列步骤[查找和安装其他框架](../test/install-third-party-unit-test-frameworks.md)。
-Visual Studio Marketplace 中也提供了测试框架扩展：
-
-* [适用于测试生成器的 NUnit 扩展](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension-18371)
-* [适用于测试生成器的 xUnit.net 扩展](https://marketplace.visualstudio.com/items?itemName=BradWilson.xUnitnetTestExtensions)
+Visual Studio Marketplace 中也提供了测试框架扩展，例如 [NUnit T测试生成器](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension-18371)。
 
 重新启动 Visual Studio 并重新打开你的解决方案后，在类或方法中单击右键，然后选择 **创建 IntelliTest**。 请在此处选择已安装的框架：
 

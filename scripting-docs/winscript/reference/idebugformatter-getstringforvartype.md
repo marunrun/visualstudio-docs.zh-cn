@@ -1,5 +1,5 @@
 ---
-title: IDebugFormatter::GetStringForVarType |Microsoft Docs
+title: IDebugFormatter：： GetStringForVarType |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3d83df97ac9cb6c38d989470b71da93aceb5d50b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b9b498f5b37a9fc34b0926d9c0a5601d89dde7c7
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979209"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576349"
 ---
 # <a name="idebugformattergetstringforvartype"></a>IDebugFormatter::GetStringForVarType
-返回一个字符串，表示给定的 VARTYPE 值。  
+返回表示给定 VARTYPE 值的字符串。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,13 +39,13 @@ HRESULT GetStringForVarType(
   
 #### <a name="parameters"></a>参数  
  `vt`  
- [in]VARTYPE 无法表示为一个字符串。  
+ 中要表示为字符串的 VARTYPE。  
   
  `ptdescArrayType`  
- [in]描述类型的结构数组。  
+ 中描述类型的结构的数组。  
   
  `pbstr`  
- [out]字符串，表示`vt`。  
+ 弄表示 `vt` 的字符串。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -55,7 +55,7 @@ HRESULT GetStringForVarType(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 该方法返回一个字符串，表示给定的 VARTYPE 值。  
+ 方法返回表示给定 VARTYPE 值的字符串。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugFormatter 接口](../../winscript/reference/idebugformatter-interface.md)

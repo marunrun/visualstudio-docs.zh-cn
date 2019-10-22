@@ -1,6 +1,6 @@
 ---
 title: 如何：查看、保存和配置生成日志文件 | Microsoft Docs
-ms.date: 11/04/2016
+ms.date: 08/28/2019
 ms.technology: vs-ide-compile
 ms.topic: conceptual
 ms.assetid: 75d38b76-26d6-4f43-bbe7-cbacd7cc81e7
@@ -9,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0dc172723005b6781a63b3a3956b12152d73bb0f
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 1fe1932930c869e3d4d3d74eb641da068e1cffec
+ms.sourcegitcommit: 3cda0d58c5cf1985122b8977b33a171c7359f324
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68415579"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154812"
 ---
 # <a name="how-to-view-save-and-configure-build-log-files"></a>如何：查看、保存和配置生成日志文件
 
@@ -42,6 +42,8 @@ ms.locfileid: "68415579"
 
    Visual Studio 会提示你输入用于保存生成输出的位置。
 
+还可以使用 `-fileLogger` (`-fl`) 命令行选项，通过从命令行直接运行 MSBuild 来生成日志。 请参阅[用 MSBuild 获取生成日志](../msbuild/obtaining-build-logs-with-msbuild.md)。
+
 ## <a name="to-change-the-amount-of-information-included-in-the-build-log"></a>更改包含在生成日志中的信息量
 
 1. 在菜单栏上，依次选择“工具” > “选项”   。
@@ -63,8 +65,11 @@ ms.locfileid: "68415579"
     > [!IMPORTANT]
     > 更改要在“输出”窗口（所有项目）和 \<ProjectName>.txt 文件（仅限 C++ 项目）中生效，必须重新生成该项目   。
 
+## <a name="use-binary-logs-to-make-it-easier-to-browse-large-log-files"></a>使用二进制日志更轻松地浏览大型日志文件
+
+二进制日志是 .NET 项目的一项可选功能，使你可以获得更丰富的日志浏览体验，从而可以更轻松地在大型日志中查找信息。 若要使用二进制日志，请安装[项目系统工具](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.ProjectSystemTools)。 有关详细信息，请参阅 [https://msbuildlog.com](https://msbuildlog.com) 和[二进制日志](https://github.com/microsoft/msbuild/blob/master/documentation/wiki/Binary-Log.md)
+
 ## <a name="see-also"></a>请参阅
 
-- [获取生成日志](../msbuild/obtaining-build-logs-with-msbuild.md)
 - [在 Visual Studio 中生成和清理项目和解决方案](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
 - [编译和生成](../ide/compiling-and-building-in-visual-studio.md)

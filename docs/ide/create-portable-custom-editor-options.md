@@ -7,12 +7,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: f48a690513c80b02683df61a0abf68a3cad58293
-ms.sourcegitcommit: 7eb2fb21805d92f085126f3a820ac274f2216b4e
+ms.openlocfilehash: 6b8602dfb37b1cdad046b012d62f888e77ca5343
+ms.sourcegitcommit: a2df993dc5e11c5131dbfcba686f0028a589068f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67328802"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71150178"
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>使用 EditorConfig 创建可移植的自定义编辑器设置
 
@@ -20,7 +20,20 @@ ms.locfileid: "67328802"
 
 许多代码编辑器和 IDE（包括 Visual Studio）都支持 EditorConfig 设置。 它是一种随代码移动的可移植组件，甚至可以在 Visual Studio 外强制实施编码样式。
 
-在 Visual Studio 中将 EditorConfig 文件添加到你的项目时，现有代码的格式设置不会更改，除非设置文档格式（在默认配置文件中单击“编辑” > “高级” > “设置文档格式”或按 Ctrl+K、Ctrl+D）        。 但任何新的代码行都将根据 EditorConfig 设置设置格式。
+::: moniker range=">=vs-2019"
+
+在 Visual Studio 中向项目添加 EditorConfig 文件后，将按照 EditorConfig 设置对所有新代码行的格式进行设置。 除非运行以下命令之一，否则不会更改现有代码的格式：
+
+ - [代码清除](../ide/code-styles-and-code-cleanup.md)（Ctrl+K、Ctrl+E），适用于任何空格设置（如缩进样式）和所选的代码样式设置（例如如何对 `using` 语句进行排序     ）。
+ - “编辑”>“高级”>“设置文档格式”（或在默认配置文件中按 Ctrl+K、Ctrl+D），仅应用空格设置，如缩进样式        。
+ 
+ ::: moniker-end
+ 
+::: moniker range="=vs-2017"
+
+在 Visual Studio 中向项目添加 EditorConfig 文件后，将按照 EditorConfig 设置对所有新代码行的格式进行设置。 现有代码的格式设置不会更改，除非设置文档格式（在默认配置文件中单击“编辑” > “高级” > “设置文档格式”或按 Ctrl+K、Ctrl+D）        。 文档格式设置只会影响空格设置（如缩进样式），除非已将“设置文档格式”配置为[执行其他代码清理](../ide/code-styles-and-code-cleanup.md#apply-code-styles)。
+ 
+ ::: moniker-end
 
 ::: moniker range="vs-2017"
 
@@ -59,7 +72,7 @@ Visual Studio 中的编辑器支持 [EditorConfig 属性](http://editorconfig.or
 
 ## <a name="add-and-remove-editorconfig-files"></a>添加和删除 EditorConfig 文件
 
-向项目或基本代码添加 EditorConfig 文件后，将按照 EditorConfig 文件设置编写的所有新代码行的格式。 但是，只有在设置文档的格式时，添加 EditorConfig 文件才会将现有样式转换为新样式。 例如，如果文件中存在制表符格式的缩进，并添加了以空格缩进的 EditorConfig 文件，则缩进字符不会自动转换为空格。 如果设置文档格式（“编辑”   > “高级”   > “设置文档格式”  或 Ctrl  +K  ，Ctrl  +D  ），则 EditorConfig 文件中的设置将应用到现有代码行。
+向项目或基本代码添加 EditorConfig 文件后，将按照 EditorConfig 文件设置编写的所有新代码行的格式。 但是，只有在设置文档的格式或运行[代码清理](../ide/code-styles-and-code-cleanup.md)时，添加 EditorConfig 文件才会将现有样式转换为新样式。 例如，如果文件中存在制表符格式的缩进，并添加了以空格缩进的 EditorConfig 文件，则缩进字符不会自动转换为空格。 如果设置文档格式（“编辑” > “高级” > “设置文档格式”或 Ctrl+K、Ctrl+D），则 EditorConfig 文件中的空格设置将应用到现有代码行        。
 
 如果从项目或基本代码库中删除 EditorConfig 文件，并想要使用全局编辑器设置设置新代码行的格式，必须关闭并重新打开任何打开的代码文件。
 

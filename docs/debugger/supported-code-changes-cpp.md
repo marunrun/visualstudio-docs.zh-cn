@@ -1,5 +1,5 @@
 ---
-title: 支持代码更改 (C++) |Microsoft Docs
+title: 支持的代码更改C++（） |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -20,17 +20,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d029d5cb3deb886faa4423d24ae8d5282f80e6a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8e38123be6b780aa9f37dc2b329ec36e3f18e793
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62901956"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72430569"
 ---
 # <a name="supported-code-changes-c"></a>受支持的代码更改 (C++)
-Visual C++ 的“编辑并继续”处理大多数类型的代码更改。 但是，在程序执行期间，某些更改无法应用。 若要应用这些更改，您必须停止执行并生成新版本的代码。
+项目的C++ "编辑并继续" 处理大多数类型的代码更改。 但是，在程序执行期间，某些更改无法应用。 若要应用这些更改，您必须停止执行并生成新版本的代码。
 
- 有关在 Visual Studio 中使用 C++ 编辑并继续的信息，请参阅 [Edit and Continue (Visual C++)](../debugger/edit-and-continue-visual-cpp.md) 。
+ 有关C++在 Visual Studio 中使用 "编辑并继续" 的信息，请参阅[编辑并继续（C++）](../debugger/edit-and-continue-visual-cpp.md) 。
 
 ## <a name="BKMK_Unsupported_changes"></a> 不支持的更改
  在调试会话期间，不能应用下列 C/C++ 更改：
@@ -66,7 +66,7 @@ Visual C++ 的“编辑并继续”处理大多数类型的代码更改。 但�
 
 - 调试使用 [/Zo（增强优化调试）](/cpp/build/reference/zo-enhance-optimized-debugging)编译的本机应用
 
-- 在 Visual Studio 2015 Update 1，调试 UWP 应用或组件之前的 Visual Studio 的版本。 从 Visual Studio 2015 Update 1 开始，你可以使用编辑并继续在 UWP 中C++应用和 DirectX 应用，因为它现在支持`/ZI`编译器开关与`/bigobj`切换。 你还可以使用具有二进制文件（使用 `/FASTLINK` 开关。
+- 在 Visual studio 2015 Update 1 之前的 Visual Studio 版本中，调试 UWP 应用或组件。 从 Visual Studio 2015 Update 1 开始，你可以在 UWP C++应用和 DirectX 应用中使用 "编辑并继续"，因为它现在支持使用 `/bigobj` 开关的 `/ZI` 编译器开关。 你还可以使用具有二进制文件（使用 `/FASTLINK` 开关。
 
 - 在 Windows 98 上进行调试。
 
@@ -116,7 +116,7 @@ Visual C++ 的“编辑并继续”处理大多数类型的代码更改。 但�
 
  **在“编辑并继续”之后禁用重新链接**
 
-1. 在 **“调试”** 菜单上，选择 **“选项和设置”**。
+1. 在 **“调试”** 菜单上，选择 **“选项和设置”** 。
 
 2. 在 **选项** 对话框中，在 **调试** 节点下，选择 **编辑并继续** 节点。
 
@@ -127,7 +127,7 @@ Visual C++ 的“编辑并继续”处理大多数类型的代码更改。 但�
 
  **对“编辑并继续”禁用预编译头的后台加载**
 
-1. 在 **“调试”** 菜单上，选择 **“选项和设置”**。
+1. 在 **“调试”** 菜单上，选择 **“选项和设置”** 。
 
 2. 在 **选项** 对话框中，在 **调试** 节点下，选择 **编辑并继续** 节点。
 
@@ -137,4 +137,4 @@ Visual C++ 的“编辑并继续”处理大多数类型的代码更改。 但�
  “编辑并继续”不重新生成接口定义 (IDL) 文件。 因此，调试时不反映对 IDL 特性的更改。 若要查看对 IDL 特性更改的结果，必须停止调试并重新生成应用程序。 如果 IDL 特性已更改，“编辑并继续”不生成错误或警告。 有关更多信息，请参见 [IDL 特性](/cpp/windows/idl-attributes)。
 
 ## <a name="see-also"></a>请参阅
-- [Edit and Continue (Visual C++)](../debugger/edit-and-continue-visual-cpp.md)
+- [编辑并继续（C++）](../debugger/edit-and-continue-visual-cpp.md)

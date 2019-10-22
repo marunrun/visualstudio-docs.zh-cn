@@ -3,22 +3,20 @@ title: 自定义生成系统
 description: 本文简要介绍 Visual Studio for Mac 使用的 MSBuild 生成系统
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 04/14/2017
+ms.date: 09/19/2019
 ms.assetid: 6958B102-8527-4B40-BC65-3505DB63F9D3
-ms.openlocfilehash: 97416ef126ee77f9955d8fa486d7bb7e2ceb725e
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: 0c511c448136210038f1034321a2828e5153add1
+ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67693021"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71128394"
 ---
 # <a name="customizing-the-build-system"></a>自定义生成系统
 
-MSBuild 是 Microsoft 开发的生成引擎，可生成主要 .NET 应用程序。 Mono 框架也有自己的 Microsoft 生成引擎实现，被称为“xbuild”  。 但 xbuild 已被淘汰，改而支持在所有操作系统上使用 MSBuild。
+Microsoft 生成引擎是一个用于生成应用程序的平台。 该引擎（也称为 MSBuild）是由 Microsoft 开发的，可用于生成 .NET 应用程序。 Mono 框架也有自己的 Microsoft 生成引擎实现，被称为“xbuild”  。 但目前 xbuild 已被淘汰，改而支持在所有操作系统上使用 MSBuild。
 
-MSBuild  主要用作 Visual Studio for Mac 中项目的生成系统。
-
-MSBuild 的工作原理是，将一组输入（如源文件）转换为输出（如可执行文件）。 它通过调用编译器等工具获取此输出。
+MSBuild 用作 Visual Studio for Mac 中项目的生成系统，其工作原理是获取一组输入（例如，源文件）并将其转换为输出（例如，可执行文件）  。 它通过调用编译器等工具获取此输出。
 
 ## <a name="msbuild-file"></a>MSBuild 文件
 

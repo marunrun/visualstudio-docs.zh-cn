@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c3456ab48822873fb51ad8614ff9a6dd5f07598
-ms.sourcegitcommit: f42b5318c5c93e2b5ecff44f408fab8bcdfb193d
+ms.openlocfilehash: 2edc0e1e63a716f5e2e649660a9b0333ec8bc923
+ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976717"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71079366"
 ---
 # <a name="how-to-sign-application-and-deployment-manifests"></a>如何：对应用程序和部署清单签名
 
@@ -71,7 +71,7 @@ ms.locfileid: "69976717"
 4. 输入访问密钥文件的密码，然后选择 Enter  。
 
 > [!NOTE]
-> .pfx 文件不能包含证书链信息  。 如果包含，则会发生以下导入错误：**找不到用于解密的证书和私钥**。
+> .pfx 文件不能包含证书链信息  。 如果包含，则会发生以下导入错误：**找不到用于解密的证书和私钥**。 要删除证书链信息，可以使用 Certmgr.msc 并[禁用导出 *.pfx 文件时包含所有证书的选项](/previous-versions/aa730868(v=vs.80))   。
 
 ## <a name="sign-using-a-test-certificate"></a>使用测试证书签名
 

@@ -11,12 +11,12 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e17bff10e2b876e4db2b9f3b55df29c2e87989ee
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 990ae0b874042501b64f4e2e2b39874c25c9dc9c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977785"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574067"
 ---
 # <a name="ijsdebugproperty-interface"></a>IJsDebugProperty 接口
 表示属性浏览器。  
@@ -27,17 +27,17 @@ ms.locfileid: "62977785"
 IJsDebugProperty : public IUnknown;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[IJsDebugProperty::GetMembers 方法](../../winscript/reference/ijsdebugproperty-getmembers-method.md)|获取此对象的成员。|  
 |[IJsDebugProperty::GetPropertyInfo 方法](../../winscript/reference/ijsdebugproperty-getpropertyinfo-method.md)|获取此对象的信息。|  
   
 ## <a name="requirements"></a>要求  
- **标头：** jscript9diag.h  
+ **标头：** jscript9diag  
   
 ## <a name="see-also"></a>请参阅  
  [Windows 脚本接口参考](../../winscript/reference/windows-script-interfaces-reference.md)

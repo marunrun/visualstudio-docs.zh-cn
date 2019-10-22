@@ -1,22 +1,24 @@
 ---
 title: 步骤 2：添加 Random 对象和图标列表
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: tutorial
+ms.prod: visual-studio-windows
+ms.technology: vs-ide-general
 dev_langs:
-- csharp
-- vb
+- CSharp
+- VB
 ms.assetid: 95faea28-eddc-4cfa-95fb-3b34b5a976d7
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 955cc700a6be93474e29acf1aaa0e0c36c271e16
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 9d335ba9f85688264882a0cb5fd59946c8c2df7b
+ms.sourcegitcommit: a5a54b147e772dc39e519da74ec41a0c25d99628
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416696"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289708"
 ---
 # <a name="step-2-add-a-random-object-and-a-list-of-icons"></a>步骤 2：添加 Random 对象和图标列表
 在本步骤中，你要为游戏创建一组匹配的符号。 每个符号将添加到窗体上 TableLayoutPanel 中的两个随机单元格。 为此，请使用两个 `new` 语句创建两个对象。 第一个是 <xref:System.Random> 对象，类似于数学测验游戏中使用的对象。 此代码中使用它来随机选择 TableLayoutPanel 中的单元格。 第二个对象是用于存储随机选择的符号的 <xref:System.Collections.Generic.List%601> 对象，你可能没有见过。
@@ -32,7 +34,10 @@ ms.locfileid: "68416696"
      [!code-csharp[VbExpressTutorial4Step2_3_4#1](../ide/codesnippet/CSharp/step-2-add-a-random-object-and-a-list-of-icons_1.cs)]
      [!code-vb[VbExpressTutorial4Step2_3_4#1](../ide/codesnippet/VisualBasic/step-2-add-a-random-object-and-a-list-of-icons_1.vb)]
 
-     如果你使用 Visual C#，请确保将代码放在左大括号后面，紧靠类声明 (`public partial class Form1 : Form`) 之后。 如果你使用 Visual Basic，请将代码放在紧靠类声明 (`Public Class Form1`) 之后。
+      > [!IMPORTANT]
+      > 使用此页右上角的编程语言控件查看 C# 代码片段或 Visual Basic 代码片段。<br><br>![Docs.Microsoft.com 的编程语言控件](../ide/media/docs-programming-language-control.png)
+
+      如果你使用 C#，请确保将代码放在左大括号后面，紧靠类声明 (`public partial class Form1 : Form`) 之后。 如果你使用 Visual Basic，请将代码放在紧靠类声明 (`Public Class Form1`) 之后。
 
 3. 添加 List 对象时，请注意打开的“IntelliSense”  窗口。 下面是一个 Visual C# 示例，但在 Visual Basic 中添加列表时会显示类似文本。
 

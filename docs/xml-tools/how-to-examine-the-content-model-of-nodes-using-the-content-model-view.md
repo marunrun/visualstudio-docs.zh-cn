@@ -1,35 +1,35 @@
 ---
-title: 检查节点在 XML 架构设计器中使用内容模型视图
+title: 使用 XML 架构设计器中的内容模型视图检查节点
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c42ddac8-b0e3-48d6-9832-112a19d6c104
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 63e337162dc8499bf9ac2acb5606fbf75292574f
-ms.sourcegitcommit: 51dad3e11d7580567673e0d426ab3b0a17584319
+ms.openlocfilehash: c109d167534dc969ae34c55d16f2ee55e34fe3aa
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66820465"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645899"
 ---
-# <a name="how-to-examine-the-content-model-of-nodes-using-the-content-model-view"></a>如何：检查节点上使用内容模型视图的内容模型
+# <a name="how-to-examine-the-content-model-of-nodes-using-the-content-model-view"></a>如何：使用内容模型视图检查节点的内容模型
 
-本主题介绍如何浏览使用节点[内容模型视图](../xml-tools/content-model-view.md)。
+本主题介绍如何使用[内容模型视图](../xml-tools/content-model-view.md)浏览节点。
 
 ## <a name="to-create-a-new-xsd-file-and-display-the-root-element-in-the-content-model-view"></a>创建新的 XSD 文件并显示内容模型视图中的根元素
 
 1. 创建新的 XML 架构文件。
 
-2. 单击**使用 XML 编辑器查看和编辑基础 XML 架构文件**起始视图上。
+2. 单击 "使用 XML 编辑器"，在 "开始" 视图中**查看和编辑基础 XML 架构文件**。
 
-3. 中的 XML 架构示例代码复制[示例 XML 架构： 采购订单架构](../xml-tools/sample-xsd-file-purchase-order-schema.md)并粘贴以替换默认情况下，已将它们添加到新 XSD 文件的代码。
+3. 从[示例 xml 架构：采购订单架构](../xml-tools/sample-xsd-file-purchase-order-schema.md)中复制 XML 架构示例代码，并将其粘贴以替换默认情况下添加到新 XSD 文件中的代码。
 
-4. 选择`purchaseOrder`通过右键单击架构资源管理器中的元素`purchaseOrder`元素在 XML 编辑器并选择**XML 资源管理器中显示**。
+4. 右键单击 "XML 编辑器" 中的 `purchaseOrder` 元素，然后选择 "**在 Xml 资源管理器中显示**"，在 "架构资源管理器" 中选择 `purchaseOrder` 元素。
 
-5. 右键单击`purchaseOrder`在 XML 资源管理器中，选择**在内容模型视图中显示**。
+5. 右键单击 XML 资源管理器中的 `purchaseOrder`，然后选择 "**在内容模型视图中显示**"。
 
      内容模型视图显示设计图面上的 `purchaseOrder` 元素。
 
@@ -39,6 +39,6 @@ ms.locfileid: "66820465"
 
 7. 单击 `purchaseOrder` 元素下的任何节点并查看痕迹栏，以了解所选节点在架构集中的位置。
 
-8. 单击**显示文档**XSD 工具栏来切换文档中的按钮。 还可以右击设计图面来切换文档。
+8. 单击 XSD 工具栏中的 "**显示文档**" 按钮，切换文档。 还可以右击设计图面来切换文档。
 
-9. 右键单击`purchaseOrder`节点，然后选择**生成示例 XML**若要查看 XML 实例文档。
+9. 右键单击 "`purchaseOrder`" 节点，然后选择 "**生成示例 xml** " 查看 XML 实例文档。

@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c9d776c061982b60640944737b27cda927f79e59
-ms.sourcegitcommit: 91c7f1b525e0c22d938bc4080ba4ceac2483474f
+ms.openlocfilehash: 677dddbde5e90117dc19acfaf54a941c304ae7f1
+ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67033164"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70180054"
 ---
 # <a name="first-look-at-the-visual-studio-ide"></a>初步了解 Visual Studio IDE
 
@@ -27,7 +27,7 @@ ms.locfileid: "67033164"
 
 ::: moniker range="vs-2019"
 
-如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)页免费安装。
+如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads)页免费安装。
 
 ::: moniker-end
 

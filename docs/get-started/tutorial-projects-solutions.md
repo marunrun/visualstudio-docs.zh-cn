@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 13e473d6d1512488950188b1e1649542f0341f43
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: dfa9c2871a414d5ce6be6c0b64f10b3f57ca7305
+ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68415662"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70180173"
 ---
 # <a name="learn-about-projects-and-solutions"></a>了解项目和解决方案
 
@@ -28,7 +28,7 @@ ms.locfileid: "68415662"
 
 ::: moniker range="vs-2019"
 
-如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)页免费安装。
+如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads)页免费安装。
 
 ::: moniker-end
 

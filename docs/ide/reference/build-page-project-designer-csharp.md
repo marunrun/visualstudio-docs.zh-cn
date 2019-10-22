@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 146d98701f144aacf0ff073c3099b2239ebd1872
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: 9f121c4a95d719074e3004ee21e0d49d71e4c243
+ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461457"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72000206"
 ---
 # <a name="build-page-project-designer-c"></a>“项目设计器”->“生成”页 (C#)
 
@@ -104,17 +104,14 @@ ms.locfileid: "68461457"
 
 以下设置用于指定视为错误的警告。 选择下列选项之一，指示生成遇到警告时，返回错误的条件。 有关详细信息，请参阅 [/warnaserror（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option)。
 
-**无**
+**无** - 不将任何警告视为错误。
 
-不将任何警告视为错误。
+**所有** - 将所有警告视为错误。
 
-“特定警告” 
+**特定警告** - 将特定警告视为错误。 使用逗号或分号分隔多个警告编号。
 
-将特定警告视为错误。 使用逗号或分号分隔多个警告编号。
-
-**All**
-
-将所有警告视为错误。
+> [!TIP]
+> 如果不希望将代码分析警告视为错误，请参阅[代码分析常见问题解答](../../code-quality/analyzers-faq.md#treat-warnings-as-errors)。
 
 ## <a name="output"></a>Output
 

@@ -15,12 +15,12 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8aeb2dcfc116c8c735cda95fc9d7ab9da97cab3b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f6c6470386414158a53794d1a5c580492edc0e15
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62968641"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572295"
 ---
 # <a name="jsdebugpropertyinfo-structure"></a>JsDebugPropertyInfo 结构
 指示与某一属性有关的信息。  
@@ -31,7 +31,7 @@ ms.locfileid: "62968641"
 typedef struct tagJsDebugPropertyInfo{   BSTR name;   BSTR type;   BSTR value;   BSTR fullName;   JS_PROPERTY_ATTRIBUTES attr;} JsDebugPropertyInfo;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
  `name`  
  属性的名称。  
   
@@ -48,7 +48,7 @@ typedef struct tagJsDebugPropertyInfo{   BSTR name;   BSTR type;   BSTR value;  
  一个表示属性特性的枚举。  
   
 ## <a name="requirements"></a>要求  
- **标头：** jscript9diag.h  
+ **标头：** jscript9diag  
   
 ## <a name="see-also"></a>请参阅  
  [Windows 脚本接口参考](../../winscript/reference/windows-script-interfaces-reference.md)

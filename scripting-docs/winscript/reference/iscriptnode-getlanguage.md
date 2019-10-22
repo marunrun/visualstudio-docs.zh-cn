@@ -1,5 +1,5 @@
 ---
-title: IScriptNode::GetLanguage |Microsoft Docs
+title: IScriptNode：： GetLanguage |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 36b7076bf7f261e462802174c6f9014403606ac8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 26fd5db22346292585be3cea751eaa8be1c284a9
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786953"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575698"
 ---
 # <a name="iscriptnodegetlanguage"></a>IScriptNode::GetLanguage
-返回由当前的脚本节点的脚本语言。  
+返回当前脚本节点所使用的脚本语言。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT GetLanguage(
   
 #### <a name="parameters"></a>参数  
  `pbstr`  
- [out]如果脚本节点使用 JScript 中或"VBScript"如果脚本节点使用 Visual Basic Scripting Edition (VBScript)，则返回"JScript"。  
+ 弄如果脚本节点使用 JScript，则返回 "JScript"; 如果脚本节点使用 Visual Basic Scripting Edition （VBScript），则返回 "VBScript"。  
   
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  

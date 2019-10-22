@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText::GetDocumentAttributes |Microsoft Docs
+title: IDebugDocumentText：： GetDocumentAttributes |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c8f545d9a8208440299d0dccb16145c6ef0c8731
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f3a97c42037e5f7439692e3c3185b4194e63dc2a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63008647"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572154"
 ---
 # <a name="idebugdocumenttextgetdocumentattributes"></a>IDebugDocumentText::GetDocumentAttributes
 返回文档的属性。  
@@ -37,7 +37,7 @@ HRESULT GetDocumentAttributes(
   
 #### <a name="parameters"></a>参数  
  `ptextdocattr`  
- [out]文档文本特性。  
+ 弄文档的文本特性。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -47,7 +47,7 @@ HRESULT GetDocumentAttributes(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法返回的文档的属性。  
+ 此方法返回文档的属性。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugDocumentText 接口](../../winscript/reference/idebugdocumenttext-interface.md)   

@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerCallback::FunctionCompiled |Microsoft Docs
+title: IActiveScriptProfilerCallback：： FunctionCompiled |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1a039f7a682babebdccad276adce55e69bb8e0bc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a17ce7548a6524df6911cdf952393020472b88ed
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993314"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576473"
 ---
 # <a name="iactivescriptprofilercallbackfunctioncompiled"></a>IActiveScriptProfilerCallback::FunctionCompiled
-通知探查器对象的脚本引擎编译脚本时遇到一个函数。  
+通知探查器对象脚本引擎在编译脚本时遇到了函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,25 +38,25 @@ HRESULT FunctionCompiled(
   
 #### <a name="parameters"></a>参数  
  `functionId`  
- [in]函数的唯一 ID。 由脚本引擎分配此 ID。  
+ 中函数的唯一 ID。 此 ID 由脚本引擎分配。  
   
  `scriptId`  
- [in]该脚本，该函数属于的唯一 ID。  
+ 中函数所属脚本的唯一 ID。  
   
  `pwszFunctionName`  
- [in]匿名函数的函数或为空的名称。  
+ 中函数的名称，或者为 null （对于匿名函数）。  
   
  `pwszFunctionNameHint`  
- [in]推断的函数或如果脚本引擎未推断任何名称，则为 null 的名称。  
+ 中推断函数的名称，如果脚本引擎不推断任何名称，则为 null。  
   
  `pIDebugDocumentContext`  
- [in]如果可用，指向`IUnknown`探查器必须查询接口[IDebugDocumentContext 接口](../../winscript/reference/idebugdocumentcontext-interface.md)指针。 否则为 null。  
+ 中如果可用，指向探查器必须查询[IDebugDocumentContext 接口](../../winscript/reference/idebugdocumentcontext-interface.md)指针的 `IUnknown` 接口的指针。 否则为 null。  
   
 ## <a name="return-value"></a>返回值  
- 此方法的返回值是脚本引擎忽略。  
+ 脚本引擎将忽略此方法的返回值。  
   
 ## <a name="remarks"></a>备注  
- 仅当主机支持此功能，脚本引擎可以提供文档上下文。  
+ 脚本引擎只能提供此主机支持的文档上下文。  
   
 ## <a name="see-also"></a>请参阅  
  [IActiveScriptProfilerCallback 接口](../../winscript/reference/iactivescriptprofilercallback-interface.md)

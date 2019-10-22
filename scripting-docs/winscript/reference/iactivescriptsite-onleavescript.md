@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSite::OnLeaveScript |Microsoft Docs
+title: IActiveScriptSite：： OnLeaveScript |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: da39058a8f069c4799835108372d11849d86444e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e9d872948fea14998f9c6f8140467d6e4c83d056
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992668"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72570327"
 ---
 # <a name="iactivescriptsiteonleavescript"></a>IActiveScriptSite::OnLeaveScript
-通知主机脚本引擎已返回执行脚本代码。  
+向宿主通知脚本引擎已从执行脚本代码返回。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT OnLeaveScript(void);
  如果成功，则返回 `S_OK`。  
   
 ## <a name="remarks"></a>备注  
- 脚本引擎必须在将控制权返还给调用应用程序输入脚本引擎之前调用此方法。 例如，如果该脚本调用一个对象，然后触发由脚本引擎处理事件，脚本引擎必须调用[IActiveScriptSite::OnEnterScript](../../winscript/reference/iactivescriptsite-onenterscript.md)方法，然后再执行该事件时，必须调用`IActiveScriptSite::OnLeaveScript`后返回到触发事件的对象之前执行该事件。 可以嵌套调用此方法。 每次调用`IActiveScriptSite::OnEnterScript`需要相应地调用此方法。  
+ 脚本引擎必须先调用此方法，然后才能将控制权返回给进入脚本引擎的调用应用程序。 例如，如果脚本调用了一个对象，该对象随后激发了脚本引擎处理的事件，则脚本引擎必须先调用[IActiveScriptSite：： OnEnterScript](../../winscript/reference/iactivescriptsite-onenterscript.md)方法，然后才能执行该事件，并在执行该事件之后必须调用 `IActiveScriptSite::OnLeaveScript`返回触发事件的对象。 对此方法的调用可以嵌套。 每次调用 `IActiveScriptSite::OnEnterScript` 都需要调用此方法。  
   
 ## <a name="see-also"></a>请参阅  
  [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)

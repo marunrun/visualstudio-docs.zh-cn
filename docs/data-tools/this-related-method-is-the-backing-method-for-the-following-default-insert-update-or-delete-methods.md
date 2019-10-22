@@ -3,31 +3,31 @@ title: 此相关方法是以下默认插入、更新或删除方法的支持方�
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 62afa6da-97cf-48b9-8de3-33e4d72a0377
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a5ae70462079589ba2b63ee50cf0b7a0570e056a
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.openlocfilehash: 8a7a422cff33fd361b784fd9cae6d5053fbe84fa
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65457856"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72639664"
 ---
 # <a name="this-related-method-is-the-backing-method-for-the-following-default-insert-update-or-delete-methods"></a>此相关方法是以下默认插入、更新或删除方法的支持方法
 
-此相关方法是以下默认的备份方法`Insert`， `Update`，或`Delete`方法。 如果删除这些方法，则备份方法也将被删除。 是否要继续?
+此相关方法是以下默认 `Insert`、`Update` 或 `Delete` 方法的后备方法。 如果删除这些方法，则备份方法也将被删除。 是否要继续?
 
-所选`DataContext`方法当前用作之一`Insert`， `Update`，或`Delete`方法的一个实体类上**O/R 设计器**。 删除所选的方法使实体类，则使用此方法以还原为默认运行时行为的执行插入、 更新或删除在更新过程。
+所选 `DataContext` 方法当前用作**O/R 设计器**上某个实体类的 `Insert`、`Update` 或 `Delete` 方法之一。 删除所选方法会导致使用此方法的实体类恢复为在更新过程中执行插入、更新或删除操作的默认运行时行为。
 
-## <a name="selected-method-options"></a>所选的方法选项
+## <a name="selected-method-options"></a>选择的方法选项
 
-- 若要删除所选的方法，使实体类使用运行时的更新，请单击**是**。
+- 若要删除所选方法，使实体类使用运行时更新，请单击 **"是"** 。
 
-   所选方法将被删除，并且使用此方法重写更新行为的所有类将还原为使用默认 LINQ to SQL 运行时行为。
+   将删除所选方法，并使用默认的 LINQ to SQL 运行时行为将使用此方法替代更新行为的任何类还原为。
 
-- 若要关闭消息框中，不对所选的方法保持不变，请单击**否**。
+- 若要关闭该消息框，使所选方法保持不变，请单击 "**否**"。
 
    消息框关闭，不进行任何更改。
 

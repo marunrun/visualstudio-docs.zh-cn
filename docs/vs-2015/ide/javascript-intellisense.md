@@ -23,15 +23,15 @@ helpviewer_keywords:
 - XML documentation comments [JavaScript]
 ms.assetid: af1a3171-c9d8-45a3-9c96-a763e3b163ef
 caps.latest.revision: 67
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4985196feb8c2ddd5996c51210e39f9e503e953f
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 39c90a8550736c945f04467e9366a73039cfa2b1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65675173"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670477"
 ---
 # <a name="javascript-intellisense"></a>JavaScript IntelliSense
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -273,11 +273,11 @@ IntelliSense 可在你编码时提供信息，从而有助于较快地编写代�
 
 - 编辑器中带下划线的元素。 红色的波浪下划线指出了错误。 如果将鼠标指针停留在错误上，工具提示会显示错误说明。
 
-- “错误列表”窗口。 “错误列表”窗口显示错误说明、出错的文件、行号和列号以及项目。 若要显示“错误列表”窗口，请在“视图”菜单中单击“错误列表”。
+- “错误列表”  窗口。 “错误列表”  窗口显示错误说明、出错的文件、行号和列号以及项目。 若要显示“错误列表”  窗口，请在“视图”  菜单中单击“错误列表”  。
 
 - “输出”窗口将显示未加载的引用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [使用 IntelliSense](../ide/using-intellisense.md)
 - [创建 XML 文档注释](../ide/create-xml-documentation-comments-for-javascript-intellisense.md)
 - [扩展 JavaScript IntelliSense](../ide/extending-javascript-intellisense.md)

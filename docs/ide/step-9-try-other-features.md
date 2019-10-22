@@ -1,19 +1,21 @@
 ---
 title: 步骤 9：尝试其他功能
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: tutorial
+ms.prod: visual-studio-windows
+ms.technology: vs-ide-general
 ms.assetid: 1b0c5c80-e5a6-4f69-a4a4-0e89a82d4de0
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 24637ba56c3dfa2d9ce9c7e70452bcdc6788b51b
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: aff87247afb79d62867da9e55f7a059192789d79
+ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68918720"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118853"
 ---
 # <a name="step-9-try-other-features"></a>步骤 9：尝试其他功能
 若要了解详细信息，请尝试更改图标和颜色、添加游戏计时器和声音。 若要使游戏更具挑战性，请尝试将图板变大并调整计时器。

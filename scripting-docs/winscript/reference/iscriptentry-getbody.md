@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::GetBody | Microsoft Docs
+title: IScriptEntry：： GetBody |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7f8f1ad24660401d575af2724b788387fd546af8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aba6019f4729f1b4a31933a4ca93c0eddf6159a2
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787874"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575485"
 ---
 # <a name="iscriptentrygetbody"></a>IScriptEntry::GetBody
-返回对应的文本正文的`IScriptEntry`脚本块、 函数块或 scriptlet。  
+返回与 `IScriptEntry` script 块、function 块或 scriptlet 的主体对应的文本。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,13 +37,13 @@ HRESULT GetBody(
   
 #### <a name="parameters"></a>参数  
  `pbstr`  
- [out]在以下项之一的正文中的文本：  
+ 弄位于下列其中一项的正文中的文本：  
   
-- `IScriptEntry`脚本块  
+- @No__t_0 脚本块  
   
-- `IScriptEntry`函数块中的函数  
+- 函数块中的 `IScriptEntry` 函数  
   
-- `IScriptEntry` Scriptlet 事件处理程序  
+- @No__t_0 scriptlet 事件处理程序  
   
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  

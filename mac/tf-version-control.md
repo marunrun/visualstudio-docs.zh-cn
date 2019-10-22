@@ -1,52 +1,51 @@
 ---
 title: Team Foundation 版本控制 (TFVC)
-description: 使用 Team Foundation 版本控制 (TFVC) 从 Visual Studio for Mac 连接到 Team Foundation Server/Azure DevOps。
+description: 有关 TFVC 和 macOS 的疑难解答指南。
 author: jmatthiesen
 ms.author: jomatthi
-ms.date: 06/25/2019
-ms.topic: article
+ms.date: 09/02/2019
 ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
-ms.openlocfilehash: 378d1eaf1d57818a976f41a81c1098d75bb12e48
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: fc300ccd37ade6418ef093306441afe4d10080e2
+ms.sourcegitcommit: fe212f8960d7882a1b0fdae9e22f008996aacf3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67691951"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222751"
 ---
-# <a name="connecting-to-team-foundation-version-control"></a>连接到 Team Foundation 版本控制
+# <a name="does-visual-studio-for-mac-support-team-foundation-version-control"></a>Visual Studio for Mac 是否支持 Team Foundation 版本控制？
 
-> [!NOTE]
-> 为了在 macOS 上获得最佳版本控制体验，建议使用 Git 而不是 Team Foundation 版本控制 (TFVC)。 Git 在 Visual Studio for Mac 中受支持，并且是托管在 Team Foundation Server (TFS)/Azure DevOps 中的存储库的默认选项。 要了解有关在 TFS/Azure DevOps 中使用 Git 的详细信息，请参阅[设置 Git 存储库](/visualstudio/mac/set-up-git-repository)一文。
-> 
-> 如果您以前使用过 Visual Studio for Mac 的 TFVC 扩展的预览版本，它在 Visual Studio 2019 for Mac 中已不再受支持。
+> [!CAUTION]
+> Visual Studio for Mac 的 TFVC 扩展的预览版本在 Visual Studio 2019 for Mac 中已不再受支持。
 
-Azure Repos 提供了两种版本控制模型：[Git](/azure/devops/repos/git/?view=azure-devops)，它是分布式版本控制系统，以及 [Team Foundation 版本控制](/azure/devops/repos/tfvc/index?view=azure-devops) (TFVC)，它是集中式版本控制系统。
 
-Visual Studio for Mac 提供了对 Git 存储库的全面支持，但需要一些解决方法才能使用 TFVC。 如果目前使用 TFVC 进行版本控制，可使用以下解决方案访问托管在 TFVC 中的源代码：
+## <a name="alternative-version-control-options-in-visual-studio-for-mac"></a>Visual Studio for Mac 中的备用版本控制选项
 
-* [对于图形化 UI，请使用 Visual Studio Code 和 Azure Repos 扩展](#use-visual-studio-code-and-the-azure-repos-extension)
-* [使用 Team Explorer Everywhere 命令行客户端 (TEE-CLC) 连接到存储库](#connecting-using-the-team-explorer-everywhere-command-line-client)
+为了在 macOS 上获得最佳版本控制体验，建议使用 Git  而不是 Team Foundation 版本控制 (TFVC)。 
 
-本文的其余部分将介绍上面列出的各个选项。
+Git 在 Visual Studio for Mac 中受支持，并且是托管在 Team Foundation Server (TFS)/Azure DevOps 中的存储库的默认选项。 要了解有关在 TFS/Azure DevOps 中使用 Git 的详细信息，请参阅[设置 Git 存储库](/visualstudio/mac/set-up-git-repository)指南。
 
-## <a name="requirements"></a>要求
+## <a name="unsupported-workarounds-for-tfvc"></a>TFVC 不受支持的解决方法
 
-* Visual Studio Community、Professional 或 Enterprise for Mac 7.8 和更高版本。
-* Azure DevOps Services、Team Foundation Server 2013 及更高版本，或 Azure DevOps Server 2018 及更高版本。
-* Azure DevOps Services 或 Team Foundation Server/Azure DevOps Server 中的项目，配置为使用 Team Foundation 版本控制。
+虽然 Visual Studio for Mac 并未正式支持 TFVC，但本指南的其余部分提供了一些在 macOS 上使用 TFVC 的解决方法。 如果目前使用 TFVC 进行版本控制，可使用以下解决方案访问托管在 TFVC 中的源代码：
 
-## <a name="use-visual-studio-code-and-the-azure-repos-extension"></a>使用 Visual Studio Code 和 Azure Repos 扩展
+* 选项 1. [对于图形化 UI，请使用 Visual Studio Code 和 Azure Repos 扩展](#use-visual-studio-code-and-the-azure-repos-extension)
+* 选项 2. [使用 Team Explorer Everywhere 命令行客户端 (TEE-CLC) 连接到存储库](#connecting-using-the-team-explorer-everywhere-command-line-client)
+
+### 选项 1. <a id="use-visual-studio-code-and-the-azure-repos-extension"></a> 使用 Visual Studio Code 和 Azure Repos 扩展
 
 如果要使用图形界面来管理版本控制中的文件，面向 Visual Studio Code 的 Azure Repos 扩展将提供来自 Microsoft 的支持的解决方案。 若要开始，请下载 [Visual Studio Code](https://code.visualstudio.com)，然后了解如何[配置 Azure Repos 扩展](https://marketplace.visualstudio.com/items?itemName=ms-vsts.team)。
 
-## <a name="connecting-using-the-team-explorer-everywhere-command-line-client"></a>使用 Team Explorer Everywhere 命令行客户端进行连接
+### 选项 2. <a id="connecting-using-the-team-explorer-everywhere-command-line-client"></a> 使用 Team Explorer Everywhere 命令行客户端进行连接
+
+> [!IMPORTANT]
+> 根据 Team Explorer Everywhere README 的说明，此项目[不再维护](https://github.com/microsoft/team-explorer-everywhere)。
 
 如果习惯使用 macOS 终端，Team Explorer Everywhere 命令行客户端 (TEE-CLC) 将提供一种受支持的方法，以连接到 TFVC 中的源。
 
 可以按照以下步骤设置到 TFVC 的连接并提交更改。
 
-### <a name="setting-up-the-tee-clc"></a>设置 TEE-CLC
+#### <a name="setting-up-the-tee-clc"></a>设置 TEE-CLC
 
 有两种方法可以设置 TEE-CLC。
 
@@ -70,7 +69,7 @@ Visual Studio for Mac 提供了对 Git 存储库的全面支持，但需要一�
 
 最后，要在 TFS/Azure DevOps 环境中进行身份验证，需要在服务器上创建一个个人访问令牌。 详细了解如何[使用个人访问令牌进行身份验证](https://docs.microsoft.com/azure/devops/integrate/get-started/authentication/pats?view=azure-devops)。 当创建要与 TFVC 一起使用的个人访问令牌时，请确保在配置令牌时提供完全访问权限。
 
-### <a name="using-the-tee-clc-to-connect-to-your-repo"></a>使用 TEE-CLC 连接到存储库
+#### <a name="using-the-tee-clc-to-connect-to-your-repo"></a>使用 TEE-CLC 连接到存储库
 
 若要连接到源代码，首先需要使用 `tf workspace` 命令创建工作区。 例如，以下命令连接到 Azure DevOps Services 中名为“MyOrganization”的组织： 
 
@@ -93,7 +92,7 @@ tf workfold -map $/MyRepository/WebApp.Services -workspace:MyWorkspace ~/Project
 tf get
 ```
 
-### <a name="committing-changes-using-the-tee-clc"></a>使用 TEE-CLC 提交更改
+#### <a name="committing-changes-using-the-tee-clc"></a>使用 TEE-CLC 提交更改
 
 在 Visual Studio for Mac 中对文件进行更改后，可以切换回终端以检查编辑。 `tf add` 命令用于将文件添加到待签入的挂起的更改列表中，`tf checkin` 命令执行对服务器的实际签入。 `checkin` 命令包含用于添加注释或关联相关工作项的参数。 在下面的代码片段中，`WebApp.Services` 文件夹中的所有文件都以递归方式添加到签入。 然后，用注释签入代码，并与 ID 为“42”的工作项关联。
 
@@ -107,6 +106,6 @@ tf checkin -comment:"Replaced 'Northwand' typos with the correct word Northwind"
 
 `tf help`
 
-### <a name="see-also"></a>请参阅
+## <a name="see-also"></a>请参阅
 
 - [使用 Visual Studio 开发和共享 TFVC 中的代码 (Windows)](/azure/devops/repos/tfvc/share-your-code-in-tfvc-vs)

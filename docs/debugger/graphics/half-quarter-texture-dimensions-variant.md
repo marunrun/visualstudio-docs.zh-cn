@@ -1,5 +1,5 @@
 ---
-title: Half / Quarter 纹理维度变体 |Microsoft Docs
+title: 半季度纹理维度变量 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 282e9bbb-51aa-4cd0-8e5c-0901268c29e5
@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ff7a0595da00aa6f575999499c9596ffc1424fc4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 620300d1727adc41d5655bd33dde87ad592bba1c
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62895620"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71252978"
 ---
 # <a name="halfquarter-texture-dimensions-variant"></a>Half/Quarter 纹理维度变量
 减小非呈现器目标的纹理上的纹理尺寸。
@@ -41,7 +41,7 @@ ms.locfileid: "62895620"
   如果为纹理启用 Mip 贴图，则变体将相应地减少 Mip 级别数：缩小到一半大小时降低一级，缩小到四分之一大小时降低两级。
 
 ## <a name="example"></a>示例
- 此变体在运行时（调用 `CreateTexture2D` 之前）可调整纹理大小。 我们不建议将此方法用于成品代码，因为完整大小的纹理会消耗更多的磁盘空间，而且此额外步骤会增加应用中的加载次数（对于需要大量要编码的计算资源的压缩纹理而言尤其如此）。 相反，我们建议你通过使用生成管道中包含的图像编辑器或图像处理器，在脱机状态下调整纹理大小。 这些方法将降低磁盘空间需求、消除应用中的运行时开销并提供更多的处理时间，以便你可以在收缩或压缩纹理时保持最佳图像质量。
+ 在调用`CreateTexture2D`之前，此变体将在运行时调整纹理的大小。 我们不建议将此方法用于成品代码，因为完整大小的纹理会消耗更多的磁盘空间，而且此额外步骤会增加应用中的加载次数（对于需要大量要编码的计算资源的压缩纹理而言尤其如此）。 相反，我们建议你通过使用生成管道中包含的图像编辑器或图像处理器，在脱机状态下调整纹理大小。 这些方法将降低磁盘空间需求、消除应用中的运行时开销并提供更多的处理时间，以便你可以在收缩或压缩纹理时保持最佳图像质量。
 
 ## <a name="see-also"></a>请参阅
 - [Mip 贴图生成变量](mip-map-generation-variant.md)

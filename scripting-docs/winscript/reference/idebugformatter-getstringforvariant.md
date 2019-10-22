@@ -1,5 +1,5 @@
 ---
-title: IDebugFormatter::GetStringForVariant |Microsoft Docs
+title: IDebugFormatter：： GetStringForVariant |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 901bf9648d4d16faf7386b528cc3fd877070a5b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5f703396190f1fb7791306ee9e389b676e749f8f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62996852"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576371"
 ---
 # <a name="idebugformattergetstringforvariant"></a>IDebugFormatter::GetStringForVariant
-返回一个字符串，表示给定的变体值。  
+返回一个字符串，该字符串表示给定的变量值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,13 +39,13 @@ HRESULT GetStringForVariant(
   
 #### <a name="parameters"></a>参数  
  `pvar`  
- [in]若要表示为一个字符串的变体。  
+ 中要表示为字符串的变体。  
   
  `nRadix`  
- [in]要用于数字值的基数。  
+ 中数值使用的基数。  
   
  `pbstrValue`  
- [out]字符串，表示`pvar`。  
+ 弄表示 `pvar` 的字符串。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -55,7 +55,7 @@ HRESULT GetStringForVariant(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法返回一个字符串，表示给定变量的值。  
+ 此方法返回表示给定变量值的字符串。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugFormatter 接口](../../winscript/reference/idebugformatter-interface.md)

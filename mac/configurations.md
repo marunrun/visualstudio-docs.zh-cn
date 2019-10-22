@@ -3,36 +3,41 @@ title: 了解生成配置
 description: 本文介绍 Visual Studio for Mac 中的各种生成配置
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 04/14/2017
+ms.date: 09/18/2019
 ms.assetid: 78107CFA-9308-4293-A92A-9B552A259E15
-ms.openlocfilehash: 0bd35d415a60ea64c479b19cb506c58c2c346cc0
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: d1511434a34017a7f0f7da65fe1ea6956d45d497
+ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826075"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71128403"
 ---
 # <a name="understanding-build-configurations"></a>了解生成配置
 
-## <a name="project-build-configurations"></a>项目生成配置
+在开发过程中，可以存储不同的解决方案配置和项目属性以便在各种生成中使用。 由 Visual Studio for Mac 使用模板创建的项目通常包括“调试”和“发布”配置，分别支持应用的调试和部署。 
 
-项目往往会有多种配置，生成时在这些配置之间进行切换可以得到不同的输出。 例如，调试配置将输出调试符号，使得调试程序可以从有故障的应用程序的堆栈跟踪中解决函数名称、参数或变量。 尽管此附加信息在开发期间很有用，但它会导致文件大小膨胀，并且不适合分发。
+若要创建自定义配置，请参阅[创建和编辑生成配置](/visualstudio/mac/create-and-edit-configurations)。
 
-每个平台都有针对自己生成特定的配置。
+>[!NOTE]
+>本主题适用于 Visual Studio for Mac。 对于 Windows 上的 Visual Studio，请参阅[了解生成配置](/visualstudio/ide/understanding-build-configurations)。
 
 ## <a name="solution-configurations"></a>解决方案配置
 
-与项目配置类似，解决方案配置用于创建整个项目的自定义配置。 通过使用“生成”>“配置”  项下的“配置映射”  选项卡，可以为每个解决方案项分配一个目标配置，如下图所示：
+解决方案配置用于指定解决方案中所有项目的配置。 通过使用“生成”>“配置”项下的“配置映射”选项卡，可以为打开的解决方案中的每一项分配一个目标配置   。 下图对此进行了演示：
 
 ![配置映射选项](media/projects-and-solutions-image3.png)
 
 有关配置的详细信息，请参阅 James Montemagno 的[配置管理器](https://www.youtube.com/watch?v=tjSdkqYh5Vg)视频。
 
+## <a name="project-build-configurations"></a>项目生成配置
+
+项目往往有多个配置。 项目针对的配置和平台结合使用以指定在生成时要使用的属性。 生成时在这些配置之间进行切换可以得到不同的输出。 例如，调试配置将输出调试符号，使得调试程序可以从有故障的应用程序的堆栈跟踪中解决函数名称、参数或变量。 尽管此附加信息在开发期间很有用，但它会导致文件大小膨胀，并且不适合分发。
+
+每个平台都有针对自己生成特定的配置。 可以通过导航到“项目选项”对话框中的“生成”部分来访问项目的生成配置页面   。 要打开此对话框，请右键单击项目并选择“选项”，或在解决方案资源管理器中双击项目  。
+
 ## <a name="run-configuration"></a>运行配置
 
-在 Xamarin Studio 的早期版本中，可选择选项将项目设置为“启动项目”，即使用全局运行/调试命令时运行或调试项目  。 此项目的项目名称在项目填充中用粗体表示。
-
-在 Visual Studio for Mac 中，可设置运行配置  而非设置启动项目。 在工具栏的下拉列表中，运行配置显示在生成配置选择器旁，如下所示：
+Visual Studio for Mac 允许设置运行配置  。 在工具栏的下拉列表中，运行配置显示在生成配置选择器旁，如下所示：
 
 ![“运行配置”下拉列表](media/projects-and-solutions-image8.png)
 
@@ -42,7 +47,7 @@ ms.locfileid: "67826075"
 
 ### <a name="android-run-configurations"></a>Android 运行配置
 
-Android 项目的运行配置可以在运行或调试项目时指定活动、服务或启动的广播接收器。 可以传递额外的意向数据并设置意向标记，测试不同启动条件下的组件。
+Android 项目的运行配置可以在运行或调试项目时指定要启动的特定活动、服务或广播接收器。 可以传递额外的意向数据并设置意向标记，以测试不同启动条件下的组件。
 
 `MainLauncher` 以外的活动需要添加将 `Exported=true` 添加到活动属性，以在物理设备上调试或定义意图筛选器。
 

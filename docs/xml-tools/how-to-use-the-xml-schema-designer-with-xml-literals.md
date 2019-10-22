@@ -3,21 +3,21 @@ title: 如何：将 XML 架构设计器用于 XML 文本
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: d11803e7-f81a-41a2-a145-ba494a45cc93
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e92cbdca3ac2c5c366ec054ba79f2e7324986c1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ed987a54004004fe8c4fbfba686ae1a35d12bb06
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63001815"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72601851"
 ---
-# <a name="how-to-use-the-xml-schema-designer-with-xml-literals"></a>如何：结合使用 XML 架构设计器和 XML 文本
+# <a name="how-to-use-the-xml-schema-designer-with-xml-literals"></a>如何：将 XML 架构设计器用于 XML 文本
 
 本主题描述如何查看与 Visual Basic 项目中的 XML 文本关联的架构。
 
@@ -25,25 +25,25 @@ ms.locfileid: "63001815"
 
 1. 打开 Visual Studio。
 
-2. 创建一个新的 Visual Basic**控制台应用程序**名为项目**XMLLiterals**。
+2. 创建一个名为**XMLLiterals**的新 Visual Basic**控制台应用**项目。
 
-     新项目包含一个 Visual Basic 源文件*Module1.vb*。
+     新项目包含一个 Visual Basic 源文件， *Module1*。
 
 ## <a name="add-an-existing-xsd-file"></a>添加现有的 XSD 文件
 
-1. 在记事本中打开新的文本文件。 中的 XML 架构示例代码复制[采购订单架构](../xml-tools/sample-xsd-file-simple-schema.md)并将其粘贴到该文件。
+1. 在记事本中打开一个新的文本文件。 从[采购订单架构](../xml-tools/sample-xsd-file-simple-schema.md)中复制 XML 架构示例代码，并将其粘贴到文件中。
 
-2. 将文件保存在某个位置具有名称*PurchaseOrderSchema.xsd*。
+2. 将该文件保存在一个名为*PurchaseOrderSchema*的位置。
 
-3. 在中**解决方案资源管理器**，右键单击项目的名称，选择**添加**，然后选择**现有项**。 **添加现有项**对话框随即出现。 浏览到*PurchaseOrderSchema.xsd*文件中，选择它，，然后单击**添加**。
+3. 在**解决方案资源管理器**中，右键单击项目的名称，选择 "**添加**"，然后选择 "**现有项**"。 此时将显示 "**添加现有项**" 对话框。 浏览到*PurchaseOrderSchema*文件，选择它，然后单击 "**添加**"。
 
-     XMLLiterals 项目现在包含两个文件：*Module1.vb*并*PurchaseOrderSchema.xsd*。
+     XMLLiterals 项目现在包含两个文件： *Module1*和*PurchaseOrderSchema*。
 
 ## <a name="add-code"></a>添加代码
 
-若要添加 Visual Basic 代码与 XML 文本，基于项目中包含的 XSD 文件：
+使用 XML 文本添加 Visual Basic 代码，基于项目中包含的 XSD 文件：
 
-1. 中的代码替换*Module1.vb*文件使用以下代码：
+1. 将*Module1*文件中的代码替换为以下代码：
 
    ```vb
    Imports <xmlns:ns="http://tempuri.org/PurchaseOrderSchema.xsd">
@@ -72,6 +72,6 @@ ms.locfileid: "63001815"
    End Module
    ```
 
-2. 右键单击 XML 文本或导入的 XML 命名空间中的任何 XML 节点并选择**在架构资源管理器中显示**。
+2. 右键单击 XML 文本或 XML 命名空间导入中的任何 XML 节点，然后选择 **"在架构资源管理器中显示"** 。
 
-   **XML 架构资源管理器**具有 XML 文本与 XML 架构集相关联的 Visual Basic 文件将并排显示。
+   **Xml 架构资源管理器**与具有与 xml 架构集关联的 xml 文本的 Visual Basic 文件并行显示。

@@ -1,28 +1,33 @@
 ---
 title: 步骤 2：创建随机加法问题
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: tutorial
+ms.prod: visual-studio-windows
+ms.technology: vs-ide-general
 dev_langs:
-- csharp
-- vb
+- CSharp
+- VB
 ms.assetid: 6461c4cf-f2aa-4bf5-91ed-06820a4f893d
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d5b83edaec6b81c3a2c5699184c62dbd70d71913
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 460eb832b94a1826d2d8f990b76a2afe90f992c8
+ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416878"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314096"
 ---
 # <a name="step-2-create-a-random-addition-problem"></a>步骤 2：创建随机加法问题
+
 在本教程中的第 2 部分中，您将添加几道基于随机数的数学题，从而让测验变得有挑战性。 您还将添加一个名为 `StartTheQuiz()` 的方法，此方法可填充题目并启动倒计时计时器。 在本教程的后面部分中，您将添加减法、乘法和除法问题。
 
 > [!NOTE]
-> 本主题是基本编码概念教程系列中的一部分。 有关本教程的概述，请参阅[教程 2：创建计时数学测验](../ide/tutorial-2-create-a-timed-math-quiz.md)。
+> 本主题是基本编码概念教程系列中的一部分。
+> - 有关本教程的概述，请参阅[教程 2：创建计时数学测验](../ide/tutorial-2-create-a-timed-math-quiz.md)。
+> - 若要下载完整版代码，请参阅[数学测验教程的完整示例](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c)。
 
 ## <a name="to-create-a-random-addition-problem"></a>创建随机加法问题
 
@@ -36,6 +41,8 @@ ms.locfileid: "68416878"
 
      [!code-csharp[VbExpressTutorial3Step2#1](../ide/codesnippet/CSharp/step-2-create-a-random-addition-problem_1.cs)]
      [!code-vb[VbExpressTutorial3Step2#1](../ide/codesnippet/VisualBasic/step-2-create-a-random-addition-problem_1.vb)]
+
+     [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
      已向窗体中添加一个 Random 对象，并将其命名为“randomizer”  。
 
@@ -60,7 +67,8 @@ ms.locfileid: "68416878"
 
      请注意，在代码中的 `randomizer` 后输入点 (.) 时，将打开一个 IntelliSense 窗口，并显示可调用的 Random 对象的所有方法。 例如，IntelliSense 将列出 `Next()` 方法，如下所示。
 
-     ![Next 方法](../ide/media/express_randomwhite.png)Next 方法
+     ![Next 方法](../ide/media/express_randomwhite.png)<br/>
+*Next 方法*
 
      在对象后输入点时，IntelliSense 将显示对象成员的列表，如属性、方法和事件。
 
@@ -87,14 +95,15 @@ ms.locfileid: "68416878"
 
 8. 保存并运行代码，然后选择“开始”按钮。 
 
-     此时将显示一道随机加法题，如下图所示。
+     此时将显示一道随机加法题，如以下屏幕截图所示。
 
-     ![随机加法问题](../ide/media/express_additionproblem.png)随机加法问题
+     ![随机加法题](../ide/media/express_additionproblem.png)<br/>
+*随机加法题*
 
      在本教程中的下一个步骤中，您将添加总和。
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 若要转到下一个教程步骤，请参阅[步骤 3：添加倒计时计时器](../ide/step-3-add-a-countdown-timer.md)。
+- 要转到下一个教程步骤，请参阅 **[步骤 3：添加倒计时计时器](../ide/step-3-add-a-countdown-timer.md)** 。
 
 - 若要返回上一个教程步骤，请参阅[步骤 1：创建项目并向窗体添加标签](../ide/step-1-create-a-project-and-add-labels-to-your-form.md)。

@@ -1,5 +1,5 @@
 ---
-title: 在 Visual C++ 中启用调试功能 (-D_DEBUG) |Microsoft Docs
+title: 在项目中C++启用调试功能（-D_DEBUG） |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -24,15 +24,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295bdc7b220f8977c85dd1b359f99af2f8d5d72a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7f772b74a42b9704f1fd77c731022ddb44774c68
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850962"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72430681"
 ---
-# <a name="enabling-debug-features-in-visual-c-ddebug"></a>在 Visual C++ 中启用调试功能 (/D_DEBUG)
-在[!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]中，当你使用已定义的 **_DEBUG**符号编译程序时，断言等调试功能处于启用状态。 你可以用两种方式之一定义 **_DEBUG**：
+# <a name="enabling-debug-features-in-c-projects-d_debug"></a>在项目中C++启用调试功能（/D_DEBUG）
+在 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 中，如果在编译程序时定义了 _DEBUG 符号，则将启用某些调试功能（如断言）。 可以用下列两种方法之一定义 _DEBUG：
 
 - 在源代码中指定 #define _DEBUG，或
 

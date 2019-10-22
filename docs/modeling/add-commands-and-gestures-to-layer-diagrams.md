@@ -5,26 +5,26 @@ ms.topic: conceptual
 helpviewer_keywords:
 - dependency diagrams, adding custom commands
 - dependency diagrams, adding custom gestures
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ea106d98dbd18f224e7f2a9d95734eff591dfc2b
-ms.sourcegitcommit: 6a19c5ece38a70731496a38f2ef20676ff18f8a4
+ms.openlocfilehash: 7392d6f131cc1658a04769e7e2a5fc58c76f522e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476659"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652347"
 ---
 # <a name="add-commands-and-gestures-to-dependency-diagrams"></a>向依赖项关系图添加命令和手势
 
-可以定义右键单击菜单命令和笔势处理程序在 Visual Studio 中的依赖项关系图上。 可以将这些扩展打包到 Visual Studio 集成扩展 (VSIX) 中，以便将其分发给其他 Visual Studio 用户。
+您可以在 Visual Studio 中的依赖关系图上定义右键单击菜单命令和笔势处理程序。 可以将这些扩展打包到 Visual Studio 集成扩展 (VSIX) 中，以便将其分发给其他 Visual Studio 用户。
 
-如果你愿意，可以在同一 Visual Studio 项目中定义多个命令和笔势处理程序。 还可以将多个此类项目合并到一个 VSIX 中。 例如，可以定义包含层命令和域特定语言的单个 VSIX。
+如果你愿意，可以在同一 Visual Studio 项目中定义多个命令和笔势处理程序。 还可以将多个此类项目合并到一个 VSIX 中。 例如，可以定义包含层命令的单个 VSIX 和域特定语言。
 
 > [!NOTE]
-> 此外可以自定义体系结构验证，在其中对用户的源中的代码进行比较的依赖项关系图。 应在单独的 Visual Studio 项目中定义体系结构验证。 你可以将其添加到其他扩展所在的同一 VSIX 中。 有关详细信息，请参阅[向依赖项关系图添加自定义体系结构验证](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)。
+> 还可以自定义体系结构验证，其中用户的源代码与依赖关系图进行比较。 应在单独的 Visual Studio 项目中定义体系结构验证。 你可以将其添加到其他扩展所在的同一 VSIX 中。 有关详细信息，请参阅[向依赖项关系图添加自定义体系结构验证](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -34,13 +34,13 @@ ms.locfileid: "65476659"
 
 创建扩展的最快方法是使用项目模板。 这会将代码和 VSIX 清单置于同一项目中。
 
-1. 创建一个新**层设计器命令扩展**或**层设计器笔势扩展**项目。
+1. 创建新的**层设计器命令扩展**或**层设计器笔势扩展**项目。
 
    模板将创建包含一个小型工作示例的项目。
 
-2. 若要测试此扩展，按**Ctrl**+**F5**或**F5**。
+2. 若要测试扩展，请按**Ctrl** +**f5**或**f5**。
 
-    Visual Studio 的实验实例启动。 在本例中，创建依赖项关系图。 命令或笔势扩展应在此关系图中使用。
+    启动 Visual Studio 的实验实例。 在此实例中创建依赖关系图。 命令或笔势扩展应在此关系图中使用。
 
 3. 关闭实验实例并修改示例代码。
 
@@ -52,13 +52,13 @@ ms.locfileid: "65476659"
 
 ::: moniker range="vs-2017"
 
-5. 若要安装该扩展的 Visual Studio 中，或在另一台计算机上的主实例中，找到 *.vsix*中的文件*bin*目录。 将此文件复制到想在其上安装它的计算机，然后双击它。 若要卸载它，请选择**扩展和更新**上**工具**菜单。
+5. 若要在 Visual Studio 的主实例中或另一台计算机上安装扩展，请在*bin*目录中找到 *.vsix*文件。 将此文件复制到想在其上安装它的计算机，然后双击它。 若要卸载它，请在 "**工具**" 菜单上选择 "**扩展和更新**"。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-5. 若要安装该扩展的 Visual Studio 中，或在另一台计算机上的主实例中，找到 *.vsix*中的文件*bin*目录。 将此文件复制到想在其上安装它的计算机，然后双击它。 若要卸载它，请选择**管理扩展**上**扩展**菜单。
+5. 若要在 Visual Studio 的主实例中或另一台计算机上安装扩展，请在*bin*目录中找到 *.vsix*文件。 将此文件复制到想在其上安装它的计算机，然后双击它。 若要卸载它，请选择 "**扩展**" 菜单上的 "**管理扩展**"。
 
 ::: moniker-end
 
@@ -66,26 +66,26 @@ ms.locfileid: "65476659"
 
 如果想要创建一个包含命令、层验证程序和其他扩展的 VSIX，建议创建一个项目来定义 VSIX，并分隔处理程序的项目。
 
-1. 创建新的“类库”项目  。 此项目将包含命令或笔势处理程序类。
+1. 创建新的“类库”项目。 此项目将包含命令或笔势处理程序类。
 
    > [!NOTE]
    > 可以在一个类库中定义多个命令或笔势处理程序类，但应在单独的类库中定义层验证类。
 
-2. 添加或在解决方案中创建一个 VSIX 项目。 VSIX 项目包含名为的文件**source.extension.vsixmanifest**。
+2. 在解决方案中添加或创建 VSIX 项目。 VSIX 项目包含名为**source.extension.vsixmanifest**的文件。
 
-3. 在中**解决方案资源管理器**，右键单击 VSIX 项目并选择**设为启动项目**。
+3. 在**解决方案资源管理器**中，右键单击 VSIX 项目，然后选择 "**设为启动项目**"。
 
-4. 在 **source.extension.vsixmanifest**中的“资产”  下，以 MEF 组件的形式添加命令或笔势处理程序。
+4. 在 **source.extension.vsixmanifest**中的“资产”下，以 MEF 组件的形式添加命令或笔势处理程序。
 
-    1. 在“资产”  选项卡中，选择“新建”  。
+    1. 在“资产”选项卡中，选择“新建”。
 
-    2. 在“类型”  处，选择“Microsoft.VisualStudio.MefComponent”  。
+    2. 在“类型”处，选择“Microsoft.VisualStudio.MefComponent”。
 
-    3. 在“源”  处，选择“当前解决方案中的项目”  ，然后选择命令或笔势处理程序项目的名称。
+    3. 在“源”处，选择“当前解决方案中的项目” ，然后选择命令或笔势处理程序项目的名称。
 
     4. 保存该文件。
 
-5. 返回到命令或笔势处理程序项目并添加以下项目引用：
+5. 返回到命令或笔势处理程序项目，并添加以下项目引用：
 
    |**引用**|**允许执行的操作**|
    |-|-|
@@ -102,11 +102,11 @@ ms.locfileid: "65476659"
 
      [定义笔势处理程序](#gesture)
 
-7. 若要测试此功能，按**Ctrl**+**F5**或**F5**。
+7. 若要测试此功能，请按**Ctrl** +**f5**或**f5**。
 
-   这将打开一个 Visual Studio 实验实例。 在本例中，创建或打开依赖项关系图。
+   这将打开一个 Visual Studio 实验实例。 在此实例中，创建或打开依赖关系图。
 
-8. 若要安装的 Visual Studio 中，或在另一台计算机上的主实例中的 VSIX，查找 **.vsix**中的文件**bin** VSIX 项目的目录。 将此文件复制到想在其上安装 VSIX 的计算机。 双击文件资源管理器中的 VSIX 文件。
+8. 若要在 Visual Studio 的主实例中或另一台计算机上安装 VSIX，请在 VSIX 项目的**bin**目录中找到 **.vsix**文件。 将此文件复制到想在其上安装 VSIX 的计算机。 在文件资源管理器中双击该 VSIX 文件。
 
 ## <a name="command"></a> 定义菜单命令
 
@@ -214,7 +214,7 @@ namespace MyLayerExtension // Change to your preference.
 
 ## <a name="gesture"></a> 定义笔势处理程序
 
-用户将项拖到依赖项关系图上时，当用户双击关系图中的任意位置时，笔势处理程序会做出响应。
+当用户将项拖动到依赖项关系图上时，以及当用户双击关系图中的任意位置时，笔势处理程序会响应。
 
 你可以向现有命令或笔势处理程序 VSIX 项目添加定义笔势处理程序的代码文件：
 
@@ -246,7 +246,7 @@ namespace MyLayerExtensions // change to your preference
 
      **OnDragDrop** - 用户将项放到关系图上时调用它。
 
-- 每个方法的第一个参数是 `IShape`，你可以从它获取层元素。 例如：
+- 每个方法的第一个参数是 `IShape`，你可以从它获取层元素。 例如:
 
     ```csharp
     public void OnDragDrop(IShape target, IDataObject data)
@@ -259,7 +259,7 @@ namespace MyLayerExtensions // change to your preference
     }
     ```
 
-- 已为某些类型的拖动项定义了处理程序。 例如，用户可以将项从解决方案资源管理器拖动到依赖项关系图。 无法为这些类型的项定义拖动处理程序。 在这些情况下，不会调用 `DragDrop` 方法。
+- 已为某些类型的拖动项定义了处理程序。 例如，用户可以将项从解决方案资源管理器拖动到依赖项关系图上。 无法为这些类型的项定义拖动处理程序。 在这些情况下，不会调用 `DragDrop` 方法。
 
 ## <a name="see-also"></a>请参阅
 

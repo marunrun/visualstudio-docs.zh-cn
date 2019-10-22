@@ -8,12 +8,14 @@ metadata:
   description: 了解如何使用 Visual Studio 并以喜欢的语言来开发适用于任何平台或设备的应用程序、服务和工具。
   ms.topic: hub-page
   monikerRange: '>=vs-2017'
-  ms.openlocfilehash: b24bc5b3e1427a6f3675398e05a639b45c376571
-  ms.sourcegitcommit: d2b234e0a4a875c3cba09321cdf246842670d872
+  f1_keywords:
+  - MSDNSTART
+  ms.openlocfilehash: 16566f855e2e7504616da3d4196440facf145e6b
+  ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 07/01/2019
-  ms.locfileid: "67493719"
+  ms.lasthandoff: 10/16/2019
+  ms.locfileid: "72380957"
 highlightedContent:
   items:
   - title: 设置和安装
@@ -40,7 +42,7 @@ conceptualContent:
       url: get-started/tutorial-open-project-from-repo.md
       itemType: tutorial
     - text: 编写和编辑代码
-      url: ide/index-writing-code.md
+      url: ide/index-writing-code.yml
       itemType: tutorial
     - text: 生成代码
       url: ide/compiling-and-building-in-visual-studio.md
@@ -124,28 +126,28 @@ additionalContent:
     items:
     - title: 开发
       summary: 使用代码编辑器编写和管理代码。
-      url: ide/index-writing-code.md
+      url: ide/index-writing-code.yml
     - title: 生成
       summary: 编译和生成源代码。
       url: ide/compiling-and-building-in-visual-studio.md
     - title: 调试
       summary: 调查并修复代码中的 bug。
-      url: debugger/index.md
+      url: debugger/index.yml
     - title: 测试
       summary: 对项目运行测试。
       url: test/improve-code-quality.md
     - title: 部署
-      summary: 使用 Web 部署、InstallShield 和持续集成等共享应用。
-      url: deployment/index.md
+      summary: 使用 Web 部署、InstallShield、NuGet 和持续集成等共享应用和代码。
+      url: deployment/index.yml
     - title: 版本控制
       summary: 使用 Git、TFVC 等版本控制技术共享代码。
-      url: version-control/index.md
+      url: /azure/devops/repos/index
     - title: DevOps
       summary: 在云中持续生成和发布应用，并通过 Azure DevOps Services 实现敏捷做法。
       url: /azure/devops
     - title: 测量性能
       summary: 通过使用诊断工具来标识瓶颈，并优化代码性能。
-      url: profiling/index.md
+      url: profiling/index.yml
     - title: 扩展
       summary: 将自己的功能添加到 Visual Studio IDE，从而改进开发体验。
       url: extensibility/index.md
@@ -192,7 +194,7 @@ additionalContent:
         url: cross-platform/visual-studio-tools-for-unity.md
       - text: 使用 JavaScript 的移动开发
         url: /visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017
-        note: (Visual Studio 2017 and 2015 only)
+        note: （仅限 Visual Studio 2017 和 Visual Studio 2015）
       - text: 使用 C++ 的移动开发
         url: /visualstudio/cross-platform/
       - text: 使用 C++ 的游戏开发

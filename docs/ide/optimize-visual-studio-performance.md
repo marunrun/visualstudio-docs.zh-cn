@@ -12,12 +12,12 @@ f1_keywords:
 - vs.performancecenter
 ms.workload:
 - multiple
-ms.openlocfilehash: bdc605b614fab5b11c2efc8466480ebf49a1fee7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c34755fdffb9dd2084f9999aafb01bd6b9fdb4f0
+ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62569844"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70180124"
 ---
 # <a name="optimize-visual-studio-performance"></a>优化 Visual Studio 性能
 
@@ -25,7 +25,7 @@ ms.locfileid: "62569844"
 
 ## <a name="upgrade-visual-studio"></a>升级 Visual Studio
 
-如果当前使用 Visual Studio 2015，请免费下载 [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) 或 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)，以检查其改进性能。 在 Visual Studio 2015 中，解决方案的加载速度要快两到三倍，其他方面的性能也有所改善。 Visual Studio 2017 和 Visual Studio 2019 与 Visual Studio 2015 并行兼容，因此不会因为尝试而丢失任何内容。
+如果当前使用 Visual Studio 2015，请免费下载 [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) 或 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)，以检查其改进性能。 在 Visual Studio 2015 中，解决方案的加载速度要快两到三倍，其他方面的性能也有所改善。 Visual Studio 2017 和 Visual Studio 2019 与 Visual Studio 2015 并行兼容，因此不会因为尝试而丢失任何内容。
 
 ::: moniker range="vs-2017"
 
@@ -49,7 +49,7 @@ ms.locfileid: "62569844"
 
 ## <a name="help-us-improve"></a>帮助我们改进
 
-你的反馈有助于我们改进。 使用“报告问题”功能来“记录”跟踪并发送给我们。 选择“快速启动”旁边的反馈图标，或从菜单栏中选择“帮助” > “发送反馈” > “报告问题”。 有关详细信息，请参阅[如何报告 Visual Studio 的问题](../ide/how-to-report-a-problem-with-visual-studio.md)。
+你的反馈有助于我们改进。 使用“报告问题”功能来“记录”跟踪并发送给我们  。 选择“快速启动”旁边的反馈图标，或从菜单栏中选择“帮助” > “发送反馈” > “报告问题”     。 有关详细信息，请参阅[如何报告 Visual Studio 的问题](../ide/how-to-report-a-problem-with-visual-studio.md)。
 
 ## <a name="see-also"></a>请参阅
 

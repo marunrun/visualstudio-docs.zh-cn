@@ -21,45 +21,45 @@ f1_keywords:
 ms.assetid: b8278a4a-c86e-4845-aa2a-70da21a1dd52
 author: mikeblome
 ms.author: mblome
-manager: wpickett
+manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 35be465064c9524eb0e1339794b6a19b7a595da1
-ms.sourcegitcommit: d2b234e0a4a875c3cba09321cdf246842670d872
+ms.openlocfilehash: ac3d6225bc765ec404784589d2faa06f155265ab
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67493632"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72446292"
 ---
 # <a name="annotating-structs-and-classes"></a>批注结构和类
 
-你可以通过使用类似于固定条件注释批注结构和类成员，它们都假定为满足的任何函数调用或进入/退出函数涉及封闭结构作为参数或结果值。
+您可以通过使用类似于固定条件的批注来批注结构和类成员，在任何将封闭结构作为参数或结果值的函数调用或函数入口/出口上，它们都假设为 true。
 
 ## <a name="struct-and-class-annotations"></a>结构和类批注
 
 - `_Field_range_(low, high)`
 
-     该字段是从 （含） 范围内`low`到`high`。  等效于`_Satisfies_(_Curr_ >= low && _Curr_ <= high)`通过使用适当的前置或后置条件应用于带批注的对象。
+     该字段的范围是从 `low` 到 `high`。  等效于使用合适的前置或后置条件应用于批注对象的 `_Satisfies_(_Curr_ >= low && _Curr_ <= high)`。
 
 - `_Field_size_(size)`, `_Field_size_opt_(size)`, `_Field_size_bytes_(size)`, `_Field_size_bytes_opt_(size)`
 
-     具有可写大小以元素 （或字节数） 为指定的字段`size`。
+     在 `size` 指定的元素（或字节）内具有可写大小的字段。
 
-- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`,         `_Field_size_bytes_part_(size, count)`, `_Field_size_bytes_part_opt_(size, count)`
+- `_Field_size_part_(size, count)`、`_Field_size_part_opt_(size, count)`、`_Field_size_bytes_part_(size, count)` `_Field_size_bytes_part_opt_(size, count)`
 
-     具有可写大小以元素 （或字节数） 为指定的字段`size`，和`count`这些元素 （字节） 的可读。
+     在 `size` 指定的元素（或字节）中具有可写大小的字段，以及可读的元素（字节）的 `count`。
 
 - `_Field_size_full_(size)`, `_Field_size_full_opt_(size)`, `_Field_size_bytes_full_(size)`, `_Field_size_bytes_full_opt_(size)`
 
-     具有可读和可写大小元素 （或字节数） 为指定的字段`size`。
+     在 `size` 指定的元素（或字节）中具有可读和可写大小的字段。
 
 - `_Field_z_`
 
-     一个字段，具有一个以 null 结尾的字符串。
+     具有以 null 结尾的字符串的字段。
 
 - `_Struct_size_bytes_(size)`
 
-     适用于结构或类声明。  指示该类型的有效对象，可能与指定的字节数会大于声明的类型， `size`。  例如：
+     适用于 struct 或类声明。  指示该类型的有效对象可能大于声明的类型，以及 `size` 指定的字节数。  例如:
 
     ```cpp
 
@@ -71,7 +71,7 @@ ms.locfileid: "67493632"
 
     ```
 
-     以字节为单位的参数的缓冲区大小`pM`类型的`MyStruct *`然后将其视为：
+     然后，将 `MyStruct *` 类型的参数 `pM` 的缓冲区大小（以字节为单位）为：
 
     ```cpp
     min(pM->nSize, sizeof(MyStruct))
@@ -104,11 +104,11 @@ struct MyBuffer
 };
 ```
 
-此示例中的说明：
+此示例的说明：
 
-- `_Field_z_` 与 `_Null_terminated_` 相等。  `_Field_z_` 名称字段指定名称字段，是一个以 null 结尾的字符串。
-- `_Field_range_` 有关`bufferSize`指定的值`bufferSize`应在 1 和`MaxBufferSize`（均含）。
-- 最终结果`_Struct_size_bytes_`和`_Field_size_`是等效的批注。 结构或类具有相似的布局`_Field_size_`更容易阅读和维护，因为它具有较少的引用和比等效的计算`_Struct_size_bytes_`批注。 `_Field_size_` 不需要转换为字节大小。 如果字节大小是唯一的选项，例如，对于 void 指针字段，`_Field_size_bytes_`可用。 如果这两个`_Struct_size_bytes_`和`_Field_size_`存在，同时将可供工具。 负责该工具要执行的操作如果不同意这两个批注。
+- `_Field_z_` 与 `_Null_terminated_` 相等。  "名称" 字段的 `_Field_z_` 指定名称字段为以 null 结尾的字符串。
+- `bufferSize` 的 `_Field_range_` 指定 `bufferSize` 的值应在1和 `MaxBufferSize` （两者都包含）范围内。
+- @No__t_0 和 `_Field_size_` 批注的最终结果是等效的。 对于具有类似布局的结构或类，`_Field_size_` 更易于读取和维护，因为它具有比等效 `_Struct_size_bytes_` 注释更少的引用和计算。 `_Field_size_` 不需要转换为字节大小。 如果 "字节大小" 是唯一的选项，例如，对于 void 指针字段，可以使用 `_Field_size_bytes_`。 如果同时存在 `_Struct_size_bytes_` 和 `_Field_size_`，则它们将可用于工具。 如果两个批注不一致，就会执行该操作。
 
 ## <a name="see-also"></a>请参阅
 

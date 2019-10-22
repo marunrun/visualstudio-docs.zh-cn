@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentHost::GetScriptTextAttributes |Microsoft Docs
+title: IDebugDocumentHost：： Getscripttextattribute |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6a5e56468e51f6d90e37e90c885b6b9df48d5f6e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3b18f4f49fa157b78e4f1fd6c7766e929890a6c6
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62939224"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72569199"
 ---
 # <a name="idebugdocumenthostgetscripttextattributes"></a>IDebugDocumentHost::GetScriptTextAttributes
-返回的文档文本块的文本属性。  
+返回文档文本块的文本特性。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,25 +41,25 @@ HRESULT GetScriptTextAttributes(
   
 #### <a name="parameters"></a>参数  
  `pstrCode`  
- [in]脚本块文本。 不需要此字符串不以 null 结束。  
+ 中脚本块文本。 此字符串不需要以 null 值终止。  
   
  `uNumCodeChars`  
- [in]脚本块文本中的字符数。  
+ 中脚本块文本中的字符数。  
   
  `pstrDelimiter`  
- [in]最终的脚本块分隔符的地址。 当`pstrCode`进行分析的文本流，从主机通常使用分隔符，如两个单引号 （'），以检测脚本块的末尾。 此参数指定主机使用，允许脚本引擎来提供某些条件的原始预处理的分隔符 （例如，与使用用作分隔符的两个单引号替换单引号 [']）。 完全如何 （以及是否） 脚本的引擎使用此信息取决于脚本引擎。 如果主机不使用分隔符来标记的脚本块的结尾，此参数设置为 NULL。  
+ 中脚本结束分隔符的地址。 当从文本流分析 `pstrCode` 时，主机通常使用分隔符（如两个单引号（' '）来检测脚本块的结尾。 此参数指定主机使用的分隔符，允许脚本引擎提供某些条件基元预处理（例如，用两个单引号替换单引号 ['] 以用作分隔符）。 脚本引擎使用此信息的确切方式取决于脚本引擎。 如果主机未使用分隔符来标记脚本块的末尾，则将此参数设置为 NULL。  
   
  `dwFlags`  
- [in]与脚本块关联的标志。 可以是这些值的组合：  
+ 中与脚本块关联的标志。 可以是这些值的组合：  
   
 |返回的常量|“值”|描述|  
 |--------------|-----------|-----------------|  
-|GETATTRTYPE_DEPSCAN|0x0001|指示标识符和点运算符应进行标识与 SOURCETEXT_ATTR_IDENTIFIER 和 SOURCETEXT_ATTR_MEMBERLOOKUP 标志，分别。|  
-|GETATTRFLAG_THIS|0x0100|指示当前对象的标识符应使用 SOURCETEXT_ATTR_THIS 标志来标识。|  
-|GETATTRFLAG_HUMANTEXT|0x8000|指示字符串内容和注释文本应使用 SOURCETEXT_ATTR_HUMANTEXT 标志来标识。|  
+|GETATTRTYPE_DEPSCAN|0x0001|指示应分别用 SOURCETEXT_ATTR_IDENTIFIER 和 SOURCETEXT_ATTR_MEMBERLOOKUP 标志识别标识符和点运算符。|  
+|GETATTRFLAG_THIS|0x0100|指示应通过 SOURCETEXT_ATTR_THIS 标志标识当前对象的标识符。|  
+|GETATTRFLAG_HUMANTEXT|0x8000|指示应通过 SOURCETEXT_ATTR_HUMANTEXT 标志标识字符串内容和注释文本。|  
   
  `pattr`  
- [in、 out]要包含返回的特性的缓冲区。  
+ [in，out]包含返回的属性的缓冲区。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -67,10 +67,10 @@ HRESULT GetScriptTextAttributes(
 |“值”|描述|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
-|`E_NOTIMPL`|主机使用仅默认属性。|  
+|`E_NOTIMPL`|该主机仅使用默认属性。|  
   
 ## <a name="remarks"></a>备注  
- 此方法返回的文档文本的任意块的文本属性。 它是可以接受的主机返回`E_NOTIMPL`，在这种情况下使用默认属性。  
+ 此方法返回任意文档文本块的文本特性。 主机可以 `E_NOTIMPL` 返回，在这种情况下，将使用默认属性。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugDocumentHost 接口](../../winscript/reference/idebugdocumenthost-interface.md)   

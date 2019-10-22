@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::SetItemName | Microsoft Docs
+title: IScriptEntry：： SetItemName |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d25ac4977f1fca44d63767c372db169f8cb61ea6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7ba226704f5b064c86b52c1b349650d509b2b549
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787653"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575368"
 ---
 # <a name="iscriptentrysetitemname"></a>IScriptEntry::SetItemName
-设置标识的项名称`IScriptEntry`对象。  
+设置标识 `IScriptEntry` 对象的项名称。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT SetItemName(
   
 #### <a name="parameters"></a>参数  
  `psz`  
- [in]包含的项名称的缓冲区的地址。 主机使用的项名称来标识该项。  
+ 中包含项名称的缓冲区的地址。 项名称由主机用于标识该项。  
   
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -45,12 +45,12 @@ HRESULT SetItemName(
 |“值”|描述|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
-|`E_FAIL`|该方法未成功。|  
+|`E_FAIL`|方法未成功。|  
   
 ## <a name="remarks"></a>备注  
- 有关`IScriptEntry`对象，此方法返回`S_OK`。  
+ 对于 `IScriptEntry` 对象，此方法返回 `S_OK`。  
   
- 有关`IScriptScriptlet`对象 (从其派生`IScriptEntry`)，此方法返回`E_FAIL`。 有关`IScriptScriptlet`对象，通过设置项目名称[IActiveScriptAuthor::AddScriptlet](../../winscript/reference/iactivescriptauthor-addscriptlet.md) ，并且不能更改。  
+ 对于 `IScriptScriptlet` 对象（从 `IScriptEntry` 派生），此方法返回 `E_FAIL`。 对于 `IScriptScriptlet` 对象，项名称由[IActiveScriptAuthor：： AddScriptlet](../../winscript/reference/iactivescriptauthor-addscriptlet.md)设置，不能更改。  
   
 ## <a name="see-also"></a>请参阅  
  [IScriptEntry 接口](../../winscript/reference/iscriptentry-interface.md)   

@@ -66,7 +66,7 @@ Visual Studio 中的 Windows 窗体设计器不支持缩放  。 因此，在高
 - C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
 
 > [!NOTE]
-> 如果你正在使用 Visual Studio Professional 或 Enterprise Edition，请将该项中的“Community”替换为“Professional”或“Enterprise”   **。 还可根据需要替换驱动器号。
+> 如果你正在使用 Visual Studio Professional 或 Enterprise Edition，请将该项中的“Community”替换为“Professional”或“Enterprise”    。 还可根据需要替换驱动器号。
 
 **类型**：REG_SZ
 

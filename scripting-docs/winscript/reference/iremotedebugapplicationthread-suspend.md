@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationThread::Suspend |Microsoft Docs
+title: IRemoteDebugApplicationThread：：挂起 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1ba783b1f6f275eafe05872ad3755b425b65407e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5cb5d4d8c541016de71ee1aabffe0b211f850cb7
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62788147"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575477"
 ---
 # <a name="iremotedebugapplicationthreadsuspend"></a>IRemoteDebugApplicationThread::Suspend
-将线程挂起。  
+挂起线程。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT Suspend(
   
 #### <a name="parameters"></a>参数  
  `pdwCount`  
- [out]在线程挂起计数。  
+ 弄线程的挂起计数。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -47,7 +47,7 @@ HRESULT Suspend(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 当此方法将线程挂起时，它会递增的挂起计数。  
+ 此方法挂起线程时，将递增挂起计数。  
   
 ## <a name="see-also"></a>请参阅  
  [IRemoteDebugApplicationThread 接口](../../winscript/reference/iremotedebugapplicationthread-interface.md)

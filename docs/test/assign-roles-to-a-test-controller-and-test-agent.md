@@ -12,12 +12,12 @@ ms.assetid: 57ed43ae-4e67-4139-8aec-3e9fceb0a745
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: dc7936041746872fdf30ce3159506d93c378376d
-ms.sourcegitcommit: 5b34052a1c7d86179d7898ed532babb2d9dad4a3
+ms.openlocfilehash: 6a5fcb489e403ff4297b4e8520346d0cc7be8361
+ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490605"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342330"
 ---
 # <a name="assign-roles-to-a-test-controller-and-test-agent"></a>为测试控制器和测试代理分配角色
 
@@ -97,13 +97,13 @@ ms.locfileid: "69490605"
 
 ::: moniker range="vs-2017"
 
-8. 在“测试”菜单上，选择“选择测试设置文件”，然后选择“TestSettingDistributedTestWalkthrough.testsettings”   。
+8. 在“测试”  菜单上，选择“测试设置”  和“选择测试设置文件”>  ，然后选择“TestSettingDistributedTestWalkthrough.testsettings”  文件。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-8. 在“测试资源管理器”中，选择“设置”按钮上的箭头，然后选择“选择设置文件”    。 浏览到“TestSettingDistributedTestWalkthrough.testsettings”文件并选择它  。
+8. 在“测试”  菜单上，选择“选择设置文件”  。 浏览到“TestSettingDistributedTestWalkthrough.testsettings”文件并选择它  。
 
 ::: moniker-end
 

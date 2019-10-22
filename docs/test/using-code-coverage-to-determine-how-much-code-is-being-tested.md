@@ -11,14 +11,12 @@ dev_langs:
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.workload:
-- multiple
-ms.openlocfilehash: f6aa9cb62bc0ae956a85acd75d1a9615a2283133
-ms.sourcegitcommit: f42b5318c5c93e2b5ecff44f408fab8bcdfb193d
+ms.openlocfilehash: 1962a977cb282613405342f225d63140f1854453
+ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976778"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342427"
 ---
 # <a name="use-code-coverage-to-determine-how-much-code-is-being-tested"></a>使用代码覆盖率确定所测试的代码量
 
@@ -28,33 +26,51 @@ ms.locfileid: "69976778"
 
 代码覆盖率是使用测试资源管理器运行测试方法时的一个选项。 结果表将显示在各个程序集、类和方法中运行的代码的百分比。 此外，源代码编辑器会显示已测试的代码。
 
+::: moniker range="vs-2017"
+
 ![着色的代码覆盖率结果](../test/media/codecoverage1.png)
+
+::: moniker-end
 
 ## <a name="requirements"></a>要求
 
 代码覆盖率功能仅在 Visual Studio Enterprise 版本中可用。
 
-## <a name="to-analyze-code-coverage-on-unit-tests-in-test-explorer"></a>分析测试资源管理器中的单元测试的代码覆盖率
+## <a name="analyze-code-coverage"></a>分析代码覆盖率
 
 ::: moniker range="vs-2017"
+
 1. 在“测试”  菜单上，选择“分析代码覆盖率”  。
+
 ::: moniker-end
+
 ::: moniker range=">=vs-2019"
-1. 在“测试资源管理器”中的“运行”菜单中选择“分析代码覆盖率”    。
+
+1. 在“测试”  菜单中，选择“分析所有测试的代码覆盖率”  。
+
+   ![在 VS 2019 中分析代码覆盖率](../test/media/vs-2019/analyze-code-coverage.png)
+
+   你还可以从“测试资源管理器”工具窗口中运行代码覆盖率。
+
 ::: moniker-end
 
-2. 若要查看已运行的行，请选择![显示代码覆盖率着色图标](../test/media/codecoverage-showcoloringicon.png)**显示代码覆盖率着色**。
+2. 测试运行后，若要查看已运行的行，请选择“代码覆盖率结果”窗口中的![显示代码覆盖率着色图标](../test/media/codecoverage-showcoloringicon.png)“显示代码覆盖率着色”   。 默认情况下，测试覆盖的代码以浅蓝色突出显示。
 
-   要更改颜色或使用加粗，请选择“工具” > “选项” > “环境” > “字体和颜色” > “显示其设置:      文本编辑器”。 在“显示项”  下，调整覆盖率项。
+   > [!TIP]
+   > 要更改颜色或使用加粗，请选择“工具” > “选项” > “环境” > “字体和颜色” > “显示其设置:      文本编辑器”。 在“显示项”下，调整“覆盖率”项的设置，例如“覆盖率未涉及的区域”   。
+   >
+   > ![代码覆盖率字体和颜色](media/vs-2019/coverage-fonts-and-colors.png)
 
 3. 如果结果显示覆盖率较低，请调查代码的哪些部分没有执行测试，并编写更多测试来覆盖它们。 开发团队通常以大约 80% 的代码覆盖率为目标。 在某些情况下，较低的覆盖率是可接受的。 例如，当某代码是从标准模板生成时，可接受较低的覆盖率。
 
 > [!TIP]
-> - 确保关闭编译器优化
+> - 关闭编译器优化
 > - 如果要处理非托管（本机）代码，请使用调试版本
-> - 确保为每个程序集生成 .pdb（符号）文件
+> - 为每个程序集生成 .pdb（符号）文件
 
-如果没有获得预期的结果，请参阅[代码覆盖率疑难解答](../test/troubleshooting-code-coverage.md)。 不要忘记在更新代码后再次运行代码覆盖率。 在修改代码后或运行测试时，覆盖率结果和代码着色不会自动更新。
+如果没有获得预期的结果，请参阅[代码覆盖率疑难解答](../test/troubleshooting-code-coverage.md)。
+
+不要忘记在更新代码后再次运行代码覆盖率。 在修改代码后或运行测试时，覆盖率结果和代码着色不会自动更新。
 
 ## <a name="report-in-blocks-or-lines"></a>按块或行报告
 

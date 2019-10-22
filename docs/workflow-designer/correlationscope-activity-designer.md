@@ -1,25 +1,25 @@
 ---
-title: 工作流设计器-CorrelationScope 活动设计器
+title: 工作流设计器 CorrelationScope 活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.ServiceModel.Activities.CorrelationScope.UI
 ms.assetid: 75f20664-9042-464d-8e2b-148d365a2286
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b7ca5955cae8d9b2cb1012e97f034d497bbc79e9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d65e481342f7b7e86b3ce073b7d6a15254ae72d8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949808"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650584"
 ---
 # <a name="correlationscope-activity-designer"></a>CorrelationScope 活动设计器
 
-**CorrelationScope**活动设计器用于创建和配置<xref:System.ServiceModel.Activities.CorrelationScope>提供子消息传递活动使用的隐式管理的活动<xref:System.ServiceModel.Activities.CorrelationHandle>对象。
+" **CorrelationScope** " 活动设计器用于创建和配置 <xref:System.ServiceModel.Activities.CorrelationScope> 活动，该活动使用 <xref:System.ServiceModel.Activities.CorrelationHandle> 对象提供子消息传递活动的隐式管理。
 
 ## <a name="the-correlationscope-activity"></a>CorrelationScope 活动
 
@@ -27,17 +27,17 @@ ms.locfileid: "62949808"
 
 ### <a name="use-the-correlationscope-activity-designer"></a>使用 CorrelationScope 活动设计器
 
-**CorrelationScope**活动设计器可在**消息传送**类别**工具箱**，这通过单击来访问**工具箱**左侧和右侧的工作流设计器上的选项卡。 或者，选择**工具箱**从**视图**菜单中或按**Ctrl**+**Alt** + **X**。
+" **CorrelationScope** " 活动设计器可在 "**工具箱**" 的 "**消息传送**" 类别中找到，可通过单击工作流设计器左侧的 "**工具箱**" 选项卡进行访问。 或者，从 "**视图**" 菜单中选择 **"工具箱**"，或按**Ctrl** +**Alt** +**X**。
 
-**CorrelationScope**活动设计器可以从拖动**工具箱**和放置到工作流设计器图面。 这将创建<xref:System.ServiceModel.Activities.CorrelationScope>默认值的活动**DisplayName** CorrelationScope。 <xref:System.Activities.Activity.DisplayName%2A>可以在的标头中编辑**CorrelationScope**活动设计器中或在**DisplayName**框**属性**窗口。
+可以将 " **CorrelationScope** " 活动设计器从 "**工具箱**" 拖放到工作流设计器图面上。 这将创建具有 CorrelationScope 的默认**DisplayName**的 <xref:System.ServiceModel.Activities.CorrelationScope> 活动。 可以在 " **CorrelationScope** " 活动设计器的标头中或在 "**属性**" 窗口的 " **DisplayName** " 框中编辑 <xref:System.Activities.Activity.DisplayName%2A>。
 
-若要指定<xref:System.ServiceModel.Activities.CorrelationHandle>子消息传递活动使用，请选择旁的省略号按钮**CorrelatesWith**字段中**属性**窗口中显示**表达式编辑器**对话框。 还可以在活动设计器图面上设置此属性。
+若要指定子消息传递活动使用的 <xref:System.ServiceModel.Activities.CorrelationHandle>，请在 "**属性**" 窗口中选择 " **CorrelatesWith** " 字段旁边的省略号按钮，以显示 "**表达式编辑器**" 对话框。 还可以在活动设计器图面上设置此属性。
 
-范围在相关之内的活动所指定的设计器中的放置**正文**框中**CorrelationScope**设计器。
+在相关范围内的活动是通过在**CorrelationScope**设计器内的 "**正文**" 框中删除其设计器来指定的。
 
 ### <a name="the-correlationscope-properties"></a>CorrelationScope 属性
 
-下表列出 <xref:System.ServiceModel.Activities.CorrelationScope> 属性并说明如何在设计器中使用它们。 这些属性可以是中编辑**属性**窗口或在工作流设计器图面，并经常在这种。
+下表列出 <xref:System.ServiceModel.Activities.CorrelationScope> 属性并说明如何在设计器中使用它们。 这些属性可以在 "**属性**" 窗口中或在工作流设计器图面上进行编辑，也可以在这两种情况下编辑。
 
 |属性名|必需|用法|
 |-|--------------|-|

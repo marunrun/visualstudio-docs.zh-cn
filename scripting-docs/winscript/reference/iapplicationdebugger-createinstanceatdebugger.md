@@ -1,5 +1,5 @@
 ---
-title: IApplicationDebugger::CreateInstanceAtDebugger |Microsoft Docs
+title: IApplicationDebugger：： CreateInstanceAtDebugger |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,18 +17,18 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 95489464128e706e755432bee991c5481f5af8bc
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: c15dc5d9b36a718ed41813bac46bc4b9415eb853
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63425830"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577891"
 ---
 # <a name="iapplicationdebuggercreateinstanceatdebugger"></a>IApplicationDebugger::CreateInstanceAtDebugger
-通过代码在调试器进程中允许创建的对象，它是-进程外调试器。  
+允许通过在调试器中执行的代码在调试器进程中创建对象。  
   
 > [!IMPORTANT]
-> 不应实现此方法，因为它允许不受信任的代码中的受信任的调试程序线程创建任意对象。  
+> 不应实现此方法，因为它允许不受信任的代码在受信任的调试器线程中创建任意对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,19 +44,19 @@ HRESULT CreateInstanceAtDebugger(
   
 #### <a name="parameters"></a>参数  
  `rclsid`  
- [in]要创建的对象标识符 (CLSID) 的类。  
+ 中要创建的对象的类标识符（CLSID）。  
   
  `pUnkOuter`  
- [in]如果`NULL`，并未创建该对象为一个聚合的组成部分。 否则为`pUnkOuter`是指向聚合对象的指针`IUnknown`接口 (控制`IUnknown`)。  
+ 中如果 `NULL`，则不会将对象作为聚合的一部分进行创建。 否则，`pUnkOuter` 是指向聚合对象的 `IUnknown` 接口（控制 `IUnknown`）的指针。  
   
  `dwClsContext`  
- [in]运行可执行代码的上下文。 值取自枚举`CLSCTX`。  
+ 中用于运行可执行代码的上下文。 这些值取自枚举 `CLSCTX`。  
   
  `riid`  
- [in]使用与对象进行通信的接口标识符。  
+ 中用于与对象通信的接口标识符。  
   
  `ppvObject`  
- [out]接收请求中的接口指针的指针变量的地址`riid`。 在成功返回时，*`ppvObject`包含请求的接口指针。 如果失败， \* `ppvObject`包含`NULL`。  
+ 弄指针变量的地址，该变量接收 `riid` 中请求的接口指针。 成功返回时，* `ppvObject` 包含请求的接口指针。 失败时，\* `ppvObject` 包含 `NULL`。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -66,9 +66,9 @@ HRESULT CreateInstanceAtDebugger(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法委托给`CoCreateInstance`。  
+ 此方法委托给 `CoCreateInstance`。  
   
- 目前尚未实现该方法。  
+ 当前未实现该方法。  
   
 ## <a name="see-also"></a>请参阅  
  [IApplicationDebugger 接口](../../winscript/reference/iapplicationdebugger-interface.md)

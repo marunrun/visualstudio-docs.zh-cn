@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c137b6bd8a38ac606a547ce961c4f040e60c6d87
-ms.sourcegitcommit: 9753c7544cec852ca5efd0834e0956d9e53a5734
+ms.openlocfilehash: 24bbfd276b30444742b329f30c346ac1857c2cc9
+ms.sourcegitcommit: 3cda0d58c5cf1985122b8977b33a171c7359f324
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67043361"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154957"
 ---
 # <a name="work-with-python-in-visual-studio-on-windows"></a>在 Windows 上的 Visual Studio 中使用 Python
 
@@ -157,7 +157,7 @@ Visual Studio 可帮助管理项目随时间增加的复杂性。  Visual Studio
 
 用于 Python 的 Azure 库简化了从 Windows、Mac OS X 和 Linux 应用中使用 Azure 服务的过程。 可以使用它们创建和管理 Azure 资源，以及连接到 Azure 服务。 
 
-有关详细信息，请参阅 [Azure SDK for Python](/python/azure/?view=azure-python) 和[用于 Python 的 Azure 库](/python/azure/python-sdk-azure-overview?view=azure-python)。
+有关详细信息，请参阅 [Azure SDK for Python](/azure/python/) 和[用于 Python 的 Azure 库](/azure/python/python-sdk-azure-overview)。
 
 ## <a name="questions-and-answers"></a>问题和解答
 

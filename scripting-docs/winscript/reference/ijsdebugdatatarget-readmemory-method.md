@@ -1,5 +1,5 @@
 ---
-title: 'Ijsdebugdatatarget:: Readmemory 方法 |Microsoft Docs'
+title: IJsDebugDataTarget：： ReadMemory 方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 705fff3bf2d4be78897c18c5a4c61bd74a8c2230
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 84da36433cf3546b34d3e044bb113916c9798117
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62582350"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572432"
 ---
 # <a name="ijsdebugdatatargetreadmemory-method"></a>IJsDebugDataTarget::ReadMemory 方法
 读取目标进程的内存。  
@@ -39,27 +39,27 @@ HRESULT ReadMemory(
   
 #### <a name="parameters"></a>参数  
  `address`  
- [in]要从其中读取目标进程的内存基址。  
+ 中从中读取目标进程的内存的基址。  
   
  `flags`  
- [in]控制 ReadMemory 行为的标志。  
+ 中控制 ReadMemory 行为的标志。  
   
  `pBuffer`  
- [out]该缓冲区用于接收从目标进程的地址空间的内容。 在失败时，此缓冲区内容未指定。  
+ 弄接收目标进程的地址空间中的内容的缓冲区。 出现故障时，未指定此缓冲区的内容。  
   
  `size`  
- [in]要从进程中读取的字节数。  
+ 中要从进程中读取的字节数。  
   
  `pBytesRead`  
- [out]指示从目标进程读取的字节数。 如果 JsDebugAllowPartialRead 明确，成功时此值将始终为输入大小完全相等。 如果指定 JsDebugAllowPartialRead，若成功，此值将大于零。  
+ 弄指示从目标进程中读取的字节数。 如果 JsDebugAllowPartialRead 清晰，此值将始终与输入大小完全相等。 如果指定了 JsDebugAllowPartialRead，则在成功时，此值将大于零。  
   
 ## <a name="return-value"></a>返回值  
   
 ## <a name="remarks"></a>备注  
- 成功和失败代码时返回 S_OK 用于任何错误。 如果地址不是有效，则返回 E_JsDEBUG_INVALID_MEMORY_ADDRESS。 有关详细信息，请参阅 JsDebugAllowPartialRead。  
+ 成功时返回 S_OK，错误代码用于任何错误。 如果地址无效，则返回 E_JsDEBUG_INVALID_MEMORY_ADDRESS。 有关详细信息，请参阅 JsDebugAllowPartialRead。  
   
 ## <a name="requirements"></a>要求  
- **标头：** jscript9diag.h  
+ **标头：** jscript9diag  
   
 ## <a name="see-also"></a>请参阅  
  [IJsDebugDataTarget 接口](../../winscript/reference/ijsdebugdatatarget-interface.md)

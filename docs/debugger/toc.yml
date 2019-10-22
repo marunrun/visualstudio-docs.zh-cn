@@ -1,11 +1,13 @@
 - name: 调试程序文档
-  href: index.md
+  href: index.yml
 - name: 概述
   items:
     - name: 什么是调试？
       href: what-is-debugging.md
     - name: 调试技术和工具
       href: write-better-code-with-visual-studio.md
+    - name: 查找调试任务
+      href: find-your-debugging-task.md
 - name: 快速入门
   items:
     - name: 初探调试器
@@ -89,7 +91,7 @@
         - name: 查看变量占用的内存
           href: memory-windows.md
         - name: 在调试时检查 XAML 属性
-          href: inspect-xaml-properties-while-debugging.md
+          href: ../xaml-tools/inspect-xaml-properties-while-debugging.md?toc=/visualstudio/debugger/toc.json
     - name: “调用堆栈”
       items:
         - name: 查看调用堆栈
@@ -106,9 +108,9 @@
           href: how-to-enable-and-disable-edit-and-continue.md
         - name: 停止代码更改
           href: how-to-stop-code-changes.md
-        - name: Edit and Continue (Visual C++)
+        - name: 编辑并继续 (C++)
           items:
-            - name: 编辑并继续 (Visual C++)
+            - name: 编辑并继续 (C++)
               href: edit-and-continue-visual-cpp.md
             - name: 受支持的代码更改 (C++)
               href: supported-code-changes-cpp.md
@@ -126,10 +128,16 @@
               href: edit-and-continue-visual-basic.md
             - name: 使用“编辑并继续”在中断模式下应用编辑
               href: how-to-apply-edits-in-break-mode-with-edit-and-continue.md
-        - name: 编写和调试正在运行的 XAML 代码
-          href: xaml-hot-reload.md
+        - name: XAML 热重载
+          items:
+            - name: 编写和调试正在运行的 XAML 代码
+              href: ../xaml-tools/xaml-hot-reload.md?toc=/visualstudio/debugger/toc.json
+            - name: 排查 XAML 热重载问题
+              href: ../xaml-tools/xaml-hot-reload-troubleshooting.md?toc=/visualstudio/debugger/toc.json
         - name: 'F# 不支持“编辑并继续”'
           href: edit-and-continue-not-supported-for-f-hash.md
+    - name: 记录到“输出”窗口
+      href: using-tracepoints.md
     - name: 查看调试程序数据
       items:
         - name: 模块
@@ -194,7 +202,7 @@
                   items:
                     - name: C++ 调试配置的项目设置
                       href: project-settings-for-a-cpp-debug-configuration.md
-                    - name: 在 Visual C++ 中启用调试功能 (-D_DEBUG)
+                    - name: 在 C++ 中启用调试功能 (-D_DEBUG)
                       href: enabling-debug-features-in-visual-cpp-d-debug.md
                 - name: Web 项目的属性页设置
                   href: property-pages-settings-for-web-projects.md
@@ -226,12 +234,12 @@
               items:
                 - name: 创建 C++ 对象的自定义视图
                   href: create-custom-views-of-native-objects.md
-                - name: Visual C++ 自定义可视化工具兼容性
+                - name: C++ 自定义可视化工具兼容性
                   href: visual-cpp-custom-visualizer-compatibility.md
             - name: 自定义视图（托管）
               items:
                 - name: 创建托管对象的自定义视图
-                  href: create-custom-views-of-dot-managed-objects.md
+                  href: create-custom-views-of-managed-objects.md
                 - name: 告诉调试程序要显示什么
                   href: using-the-debuggerdisplay-attribute.md
                 - name: 告诉调试程序要显示什么类型
@@ -346,9 +354,9 @@
               href: how-to-use-the-gpu-threads-window.md
         - name: 调试多个进程
           href: debug-multiple-processes.md
-        - name: 演练：使用“线程”窗口进行调试
+        - name: 使用“线程”窗口进行调试
           href: how-to-use-the-threads-window.md
-        - name: 演练：调试并行应用程序
+        - name: 调试并行应用程序
           href: walkthrough-debugging-a-parallel-application.md
         - name: 在调试时切换到另一个线程
           href: how-to-switch-to-another-thread-while-debugging.md
@@ -427,7 +435,7 @@
             - name: 调试安装的应用包
               href: debug-installed-app-package.md
             - name: 在 Blend 中调试 XAML
-              href: debug-xaml-in-blend.md
+              href: ../xaml-tools/debug-xaml-in-blend.md?toc=/visualstudio/debugger/toc.json
             - name: HTML 和 CSS
               items:
                 - name: 调试 HTML 和 CSS
@@ -444,7 +452,7 @@
               href: how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md
             - name: 预提取 Microsoft Store 应用的内容
               href: prefetch-content-for-windows-store-apps.md
-        - name: 托管代码
+        - name: '托管代码（C#、Visual Basic、F#）'
           items:
             - name: 调试托管代码
               href: debugging-managed-code.md
@@ -488,11 +496,11 @@
                   href: how-to-display-wpf-trace-information.md
             - name: '调试 F#'
               href: debugging-f-hash.md
-        - name: 本机代码
+        - name: C/C++ 代码
           items:
             - name: 调试本机代码
               href: debugging-native-code.md
-            - name: 调试准备：Visual C++ 项目类型
+            - name: 调试准备：C++ 项目类型
               href: debugging-preparation-visual-cpp-project-types.md
             - name: 调试优化的代码
               href: how-to-debug-optimized-code.md
@@ -576,7 +584,7 @@
                   href: com-debugging-tools.md
             - name: 调试插入的代码
               href: how-to-debug-injected-code.md
-        - name: 调试 GPU 代码
+        - name: GPU 代码
           href: debugging-gpu-code.md
         - name: 图形诊断
           href: graphics/toc.yml
@@ -626,6 +634,10 @@
                       href: error-the-web-server-could-not-find-the-requested-resource.md
                     - name: Web 服务器配置不正确
                       href: error-the-web-server-is-not-configured-correctly.md
+        - name: Python
+          href: ../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md
+        - name: JavaScript 和 TypeScript
+          href: ../javascript/debug-nodejs.md
         - name: Web 应用
           items:
             - name: 调试 Web 应用程序
@@ -656,6 +668,10 @@
               href: how-to-step-into-wcf-services.md
             - name: 调试自托管 WCF 服务
               href: how-to-debug-a-self-hosted-wcf-service.md
+    - name: 协作
+      items:
+        - name: 使用 Live Share 编写和调试代码
+          href: /visualstudio/liveshare/use/vs
     - name: 转储文件
       items:
         - name: 使用转储文件

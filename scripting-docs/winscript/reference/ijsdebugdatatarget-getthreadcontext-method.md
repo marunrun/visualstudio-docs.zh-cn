@@ -1,5 +1,5 @@
 ---
-title: 'Ijsdebugdatatarget:: Getthreadcontext 方法 |Microsoft Docs'
+title: IJsDebugDataTarget：： GetThreadContext 方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d7904ef81eb900c6466069267101f30d89e362a1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: da5722553b448605129adcf32cfaa52e2dc76352
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62582828"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577661"
 ---
 # <a name="ijsdebugdatatargetgetthreadcontext-method"></a>IJsDebugDataTarget::GetThreadContext 方法
-给定线程的检索上下文。  
+检索给定线程的上下文。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,21 +38,21 @@ HRESULT GetThreadContext(
   
 #### <a name="parameters"></a>参数  
  `threadId`  
- [in]目标进程中运行的线程。  
+ 中在目标进程中运行的线程。  
   
  `contextFlags`  
- [in]指定上下文的标志。 这是与 （有关详细信息，请参阅 winnt.h，搜索 context_all） CONTEXT 的 ContextFlags 字段相同。  
+ 中指定上下文标志。 这与上下文的 ContextFlags 字段相同（有关详细信息，请参阅 winnt，搜索 CONTEXT_ALL）。  
   
  `contextSize`  
- [in]Pcontext 指定的缓冲区的大小。  
+ 中PContext 指定的缓冲区大小。  
   
  `pContext`  
- [out]接收特定于平台的上下文结构到 pcontext 指定的缓冲区。  
+ 弄接收由 pContext 指定的缓冲区中特定于平台的上下文结构。  
   
 ## <a name="return-value"></a>返回值  
   
 ## <a name="requirements"></a>要求  
- **标头：** jscript9diag.h  
+ **标头：** jscript9diag  
   
 ## <a name="see-also"></a>请参阅  
  [IJsDebugDataTarget 接口](../../winscript/reference/ijsdebugdatatarget-interface.md)

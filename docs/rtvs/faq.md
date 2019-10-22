@@ -8,12 +8,12 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: b67a82a286e3772d87c4cc1ad06a6b8099205c73
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4eef8e79023bdd3bde03fec33c16a1c8f6d90446
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62550511"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306262"
 ---
 # <a name="frequently-asked-questions"></a>常见问题
 
@@ -43,13 +43,13 @@ ms.locfileid: "62550511"
 
 **问：RTVS 能否使用非英语区域设置？**
 
-答： RTVS 1.0 版仅可使用英语。 1.1 版将本地化成 Visual Studio 本身使用的一组相同语言。 在此期间，使用[适用于 Visual Studio 2015 的英语语言包](https://www.microsoft.com/download/details.aspx?id=48157)；或在 Visual Studio 2017 中，运行安装程序，并选择“语言包”选项卡中的“英语”。
+答： RTVS 1.0 版仅可使用英语。 1\.1 版将本地化成 Visual Studio 本身使用的一组相同语言。 在此期间，使用[适用于 Visual Studio 2015 的英语语言包](https://www.microsoft.com/download/details.aspx?id=48157)；或在 Visual Studio 2017 中，运行安装程序，并选择“语言包”  选项卡中的“英语”。
 
 ![Visual Studio 2017 的“区域设置”](media/FAQ-international-settings.png)
 
 **问：虽然我确实很喜欢当前的 Visual Studio 设置，但我想要尝试新的数据科学设置。我该怎么办？**
 
-答： 请通过“工具” > “导入和导出设置”保存当前的 Visual Studio 设置，然后切换到数据科学设置。 要还原已保存的设置，请再次使用“导入和导出设置”命令。
+答： 请通过“工具” > “导入和导出设置”保存当前的 Visual Studio 设置，然后切换到数据科学设置   。 要还原已保存的设置，请再次使用“导入和导出设置”命令  。
 
 **问：我能否在网络共享上存储我的 Visual Studio 项目？**
 
@@ -77,9 +77,9 @@ ms.locfileid: "62550511"
 
 答： 能，可以使用 Visual Studio 中集成的任何源代码管理系统。
 
-**问：建议对 RTVS 项目采用哪种 .gitignore 设置**？
+**问：建议对 RTVS 项目采用哪种 .gitignore 设置**  ？
 
-答： Github 继续使用所推荐 .gitignore 文件的主存储库。 请访问：[R .gitignore](https://github.com/github/gitignore/blob/master/R.gitignore)
+答： Github 继续使用所推荐 .gitignore 文件的主存储库  。 请访问：[R .gitignore](https://github.com/github/gitignore/blob/master/R.gitignore)
 
 ## <a name="remote-services"></a>远程服务
 
@@ -107,10 +107,10 @@ ms.locfileid: "62550511"
 
 **问：虽然缺少功能 X，但 RStudio 有！**
 
-答： 经过多年开发，RStudio 已成为适用于 R 的成熟优质 IDE。 RTVS 旨在囊括你取得成功所需的全部关键功能。 请参与 [RTVS 调查](https://www.surveymonkey.com/r/RTVS1)，帮助我们确定未来工作的优先次序，并在 [GitHub](https://github.com/Microsoft/RTVS/issues/) 上对问题归档。
+答： 经过多年开发，RStudio 已成为适用于 R 的成熟优质 IDE。 RTVS 旨在囊括你取得成功所需的全部关键功能。 通过在 [GitHub](https://github.com/Microsoft/RTVS/issues/) 上提交问题来帮助确定未来工作的优先级。
 
 **问：我能否参与 RTVS 发布？**
 
 答： 当然可以！ 源代码位于 [Github](https://github.com/microsoft/RTVS) 上。 请使用问题跟踪程序来提交 bug，并对已发布的文件发表评论。
 
-也欢迎你参与此文档的编写 &mdash; 只需选择任意页面右上角的“编辑”命令。 同样欢迎在任意页面的底部对文档发表评论。
+也欢迎你参与此文档的编写 &mdash; 只需选择任意页面右上角的“编辑”  命令。 同样欢迎在任意页面的底部对文档发表评论。

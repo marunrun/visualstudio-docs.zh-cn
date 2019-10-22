@@ -1,5 +1,5 @@
 ---
-title: IMachineDebugManagerCookie::AddApplication |Microsoft Docs
+title: IMachineDebugManagerCookie：： AddApplication |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c71983dd5f1273679351bc45c1db2df62757d153
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: da436308c71a66d3070d42128d8da03ae88d2935
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977651"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573916"
 ---
 # <a name="imachinedebugmanagercookieaddapplication"></a>IMachineDebugManagerCookie::AddApplication
-将添加到正在运行的应用程序的应用程序列表。  
+将应用程序添加到正在运行的应用程序列表中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,13 +39,13 @@ HRESULT AddApplication(
   
 #### <a name="parameters"></a>参数  
  `pda`  
- [in]为正在运行的应用程序的应用程序列表。  
+ 中应用程序到正在运行的应用程序列表。  
   
  `dwDebugAppCookie`  
- [in]一个标识的调试应用程序的 cookie。  
+ 中标识调试应用程序的 cookie。  
   
  `pdwAppCookie`  
- [out]一个用于从计算机调试管理器删除应用程序的 cookie。  
+ 弄用于从计算机调试管理器中删除应用程序的 cookie。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -55,9 +55,9 @@ HRESULT AddApplication(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 进程调试管理器调用此方法时`IProcessDebugManager::AddApplication`调用。  
+ 只要调用 `IProcessDebugManager::AddApplication`，进程调试管理器就会调用此方法。  
   
 ## <a name="see-also"></a>请参阅  
- [IMachineDebugManagerCookie Interface](../../winscript/reference/imachinedebugmanagercookie-interface.md)   
- [IMachineDebugManagerCookie::RemoveApplication](../../winscript/reference/imachinedebugmanagercookie-removeapplication.md)   
+ [IMachineDebugManagerCookie 接口](../../winscript/reference/imachinedebugmanagercookie-interface.md)   
+ [IMachineDebugManagerCookie：： RemoveApplication](../../winscript/reference/imachinedebugmanagercookie-removeapplication.md)    
  [IProcessDebugManager::AddApplication](../../winscript/reference/iprocessdebugmanager-addapplication.md)

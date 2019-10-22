@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText::GetText |Microsoft Docs
+title: IDebugDocumentText：： GetText |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 63e1fee3531272f18c85c23ea83b8ca12920bd2a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e6472c40802fff4dad6e5ecc8f2729c95459e09f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970856"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572081"
 ---
 # <a name="idebugdocumenttextgettext"></a>IDebugDocumentText::GetText
-检索字符和/或字符位置范围与关联的字符属性。  
+检索与字符位置范围关联的字符和/或字符特性。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,19 +41,19 @@ HRESULT GetText(
   
 #### <a name="parameters"></a>参数  
  `cCharacterPosition`  
- [in]开始位置范围内的字符位置。  
+ 中字符位置范围的起始位置。  
   
  `pcharText`  
- [in、 out]字符文本缓冲区。 缓冲区必须足够大以保存`cMaxChars`字符。 如果此参数为 NULL，则该方法不返回字符。  
+ [in，out]字符文本缓冲区。 缓冲区必须足够大才能容纳 `cMaxChars` 字符。 如果此参数为 NULL，则该方法不返回字符。  
   
  `pstaTextAttr`  
- [in、 out]字符属性缓冲区。 缓冲区必须足够大以保存`cMaxChars`字符。 如果此参数为 NULL，则该方法不返回特性。  
+ [in，out]字符特性缓冲区。 缓冲区必须足够大才能容纳 `cMaxChars` 字符。 如果此参数为 NULL，则该方法不返回特性。  
   
  `pcNumChars`  
- [in、 out]返回字符/属性数。 此参数必须设置为零之前调用此方法。  
+ [in，out]返回的字符/属性的数目。 在调用此方法之前，此参数必须设置为零。  
   
  `cMaxChars`  
- [in]中的字符位置范围的字符数。 此外指定要返回字符最大的数目。  
+ 中字符位置范围内的字符数。 还指定要返回的最大字符数。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -63,7 +63,7 @@ HRESULT GetText(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法检索字符和/或字符位置范围与关联的字符属性。 字符位置范围被指定字符位置和字符数。  
+ 此方法检索与字符位置范围关联的字符和/或字符特性。 字符位置范围由字符位置和多个字符指定。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugDocumentText 接口](../../winscript/reference/idebugdocumenttext-interface.md)   

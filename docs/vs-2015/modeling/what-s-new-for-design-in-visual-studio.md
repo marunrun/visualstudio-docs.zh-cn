@@ -1,5 +1,5 @@
 ---
-title: 什么&#39;s 设计的新增功能
+title: 设计&#39;的新增功能
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - modeling software [Visual Studio], What's New
 ms.assetid: 36ab5c17-6dc0-4075-a28e-a0fa49b11260
 caps.latest.revision: 34
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 148da7602d8198a4c85e2a7fbee2107b4e9662d1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6c68db12f8ecea523327250fec1f600639a2f267
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68187124"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659243"
 ---
-# <a name="whats-new-for-design-in-visual-studio-in-visual-studio-2015"></a>什么是 Visual Studio 2015 中的 Visual Studio 中设计的新增功能
+# <a name="whats-new-for-design-in-visual-studio-in-visual-studio-2015"></a>Visual studio 2015 中用于设计的新增功能
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 此版本的 Visual Studio 包括以下改进以帮助你更好地理解并设计代码。
 
@@ -30,7 +30,7 @@ ms.locfileid: "68187124"
 
  在最终 (RTM) 版本中，通过将命令组合为与选择、编辑、管理组和更改组内容的布局相关的部分，代码元素和链接的快捷菜单变得更加易于使用。 另请注意，测试项目的显示风格与其他项目不同，并且我们将代码图中的元素图标更新到了更合适的版本。
 
- ![在新的代码图上显示所选的项](../ide/media/codemapsshowonnewmap.png "CodeMapsShowOnNewMap")
+ ![在新代码图上显示选定项](../ide/media/codemapsshowonnewmap.png "CodeMapsShowOnNewMap")
 
  其他改进包括：
 
@@ -64,13 +64,13 @@ ms.locfileid: "68187124"
 
 - **体系结构资源管理器**。 不再能够使用体系结构资源管理器创建关系图。 但你仍可使用解决方案资源管理器。
 
-## <a name="VersionSupport"></a> 对体系结构和建模工具的版本支持
+## <a name="VersionSupport"></a>对体系结构和建模工具的版本支持
 
-Visual Studio 2015 现已推出多个版本。 并非所有这些体系结构和建模工具提供支持。 下表显示每个工具的可用性。
+Visual Studio 2015 提供多种版本。 并非所有这些都提供对体系结构和建模工具的支持。 下表显示每个工具的可用性。
 
 |**功能**|**Enterprise**|**Professional**|**Community**|**Express**|
 |-----------------|--------------------|----------------------|-------------------|-----------------|
-|**代码图**|是|仅支持读取和筛选代码图、 添加新的泛型节点和从所选内容创建新的定向关系图。|-|-|
+|**代码图**|是|仅支持读取和筛选代码映射、添加新的泛型节点，以及通过选择创建新的定向关系图。|-|-|
 |**UML 类图**|是|-|-|-|
 |**UML 序列图**|是|-|-|-|
 |**UML 用例图**|是|-|-|-|

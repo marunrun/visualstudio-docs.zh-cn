@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b1eb807143e7ee5c3283a88cff12f13515486fb
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: ee1fced0b04ae058f05dc46e4414b76b0f506213
+ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68605412"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381003"
 ---
 # <a name="how-to-change-fonts-and-colors-for-the-editor-in-visual-studio"></a>如何：在 Visual Studio 中更改编辑器中的字体和颜色
 
@@ -33,9 +33,7 @@ ms.locfileid: "68605412"
 
 ## <a name="change-the-default-font-face-size-and-colors"></a>更改默认字体、字体大小和颜色
 
-1. 从“工具”  菜单中选择“选项”  ，并在“环境”  文件夹中选择“字体和颜色”  。
-
-     [“选项”对话框 ->“环境”->“字体和颜色”](../../ide/reference/fonts-and-colors-environment-options-dialog-box.md)随即打开。
+1. 从“工具”菜单中选择“选项”   。 在“环境”  下，选择[字体和颜色](../../ide/reference/fonts-and-colors-environment-options-dialog-box.md)。
 
 2. 在“显示以下对象的设置”  中，选择“文本编辑器”  。
 

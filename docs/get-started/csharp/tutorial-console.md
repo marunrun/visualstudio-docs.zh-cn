@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5497b0a343960e3f9e7e606e45c41f188b2bdcba
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: bef87392ca9e08e38950f5e3eed53223dd38bd00
+ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67823636"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70180239"
 ---
 # <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>教程：在 Visual Studio 中创建一个简单的 C# 控制台应用程序
 
@@ -34,7 +34,7 @@ ms.locfileid: "67823636"
 
 ::: moniker range="vs-2019"
 
-如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)页免费安装。
+如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads)页免费安装。
 
 ::: moniker-end
 

@@ -1,7 +1,7 @@
 ---
 title: 创建基于网络的安装
 description: 了解如何创建用于在企业中部署 Visual Studio 的网络安装点。
-ms.date: 08/06/2019
+ms.date: 10/11/2019
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 766e3a35c6f9b775373fb7a096000177cfee131d
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: da4da0a106d37b081e0a7c57fe905048f3314174
+ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68870776"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381078"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>创建 Visual Studio 的网络安装
 
@@ -33,35 +33,44 @@ ms.locfileid: "68870776"
 
 ## <a name="download-the-visual-studio-bootstrapper"></a>下载 Visual Studio 引导程序
 
-下载所需的 Visual Studio 版本。 请确保单击“保存”  ，然后单击“打开文件夹”  。
-
-安装程序可执行文件&mdash;具体而言是引导程序文件&mdash;应与下面其中一项匹配。
+下载适用于所需版本的 Visual Studio 的引导程序文件。 请确保选择“保存”，然后选择“打开文件夹”   。
 
 ::: moniker range="vs-2017"
 
-|版本 | 下载|
-|-------------|-----------------------|
-|Visual Studio Enterprise | [**vs_enterprise.exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=15&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2017) |
-|Visual Studio Professional | [**vs_professional.exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=15&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2017) |
+若要获取 Visual Studio 2017 的引导程序，请参阅 [Visual Studio 早期版本](https://visualstudio.microsoft.com/vs/older-downloads/)下载页，获取关于如何执行此操作的详细信息。
 
-其他受支持的引导包括 [vs_buildtools.exe](https://aka.ms/vs/15/release/vs_buildtools.exe)、[vs_feedbackclient.exe](https://aka.ms/vs/15/release/vs_feedbackclient.exe)、[vs_teamexplorer.exe](https://aka.ms/vs/15/release/vs_teamexplorer.exe)、[vs_testagent.exe](https://aka.ms/vs/15/release/vs_testagent.exe)、[vs_testcontroller.exe](https://aka.ms/vs/15/release/vs_testcontroller.exe) 和 [vs_testprofessional.exe](https://aka.ms/vs/15/release/vs_testprofessional.exe)。
+安装程序可执行文件&mdash;具体而言是引导程序文件&mdash;应与下面其中一项匹配，或与之类似。
+
+| 版本 | Filename |
+|-------------|-----------------------|
+|Visual Studio Enterprise | **vs_enterprise.exe** |
+|Visual Studio Professional | **vs_professional.exe** |
+|Visual Studio 生成工具   | **vs_buildtools.exe** |
+
+其他受支持的引导程序包括 **vs_feedbackclient.exe**、**vs_teamexplorer.exe**、**vs_testagent.exe**、**vs_testcontroller.exe** 和 **vs_testprofessional.exe**。
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
+安装程序可执行文件&mdash;具体而言是引导程序文件&mdash;应与下面其中一项匹配，或与之类似。
+
 |版本 | 下载|
 |-------------|-----------------------|
 |Visual Studio Enterprise | [**vs_enterprise.exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2019) |
 |Visual Studio Professional | [**vs_professional.exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2019) |
+| Visual Studio 生成工具   | [**vs_buildtools.exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=buildtools&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019) |
 
-其他受支持的引导程序包括 [vs_buildtools.exe](https://aka.ms/vs/16/release/vs_buildtools.exe)、[vs_teamexplorer.exe](https://aka.ms/vs/16/release/vs_teamexplorer.exe)、[vs_testagent.exe](https://aka.ms/vs/16/release/vs_testagent.exe) 和 [vs_testcontroller.exe](https://aka.ms/vs/16/release/vs_testcontroller.exe)。
+其他受支持的引导程序包括 [vs_teamexplorer.exe](https://aka.ms/vs/16/release/vs_teamexplorer.exe)、[vs_testagent.exe](https://aka.ms/vs/16/release/vs_testagent.exe) 和 [vs_testcontroller.exe](https://aka.ms/vs/16/release/vs_testcontroller.exe)。
 
 ::: moniker-end
 
+>[!TIP]
+>如果以前下载过引导程序文件，并且想要验证其版本，则操作方法如下。 在 Windows 中，打开文件资源管理器，右键单击引导程序文件，依次选择“属性”、“详细信息”选项卡，然后查看“产品版本”号    。 若要将该编号与 Visual Studio 的版本匹配，请参阅 [Visual Studio 内部版本号和发布日期](visual-studio-build-numbers-and-release-dates.md)页。
+
 ## <a name="create-an-offline-installation-folder"></a>创建脱机安装文件夹
 
-必须具有 Internet 连接才能完成此步骤。 若要创建含所有语言和所有功能的脱机安装，请使用下面示例中的命令之一。
+必须具有 Internet 连接才能完成此步骤。 若要创建含所有语言和所有功能的脱机安装，请使用与下面示例相似的命令之一。
 
    > [!IMPORTANT]
    > 完整的 Visual Studio 布局至少需要 35 GB 磁盘空间，可能需要一段时间才能下载完成。 若要详细了解如何创建仅包含要安装的组件的布局，请参阅[自定义网络布局](#customize-the-network-layout)部分。
@@ -71,11 +80,11 @@ ms.locfileid: "68870776"
 
 - 对于 Visual Studio Enterprise，请运行：
 
-  ```vs_enterprise.exe --layout c:\vsoffline```
+  ```vs_enterprise.exe --layout c:\VSLayout```
 
 - 对于 Visual Studio Professional，请运行：
 
-  ```vs_professional.exe --layout c:\vsoffline```
+  ```vs_professional.exe --layout c:\VSLayout```
 
 ## <a name="modify-the-responsejson-file"></a>修改 response.json 文件
 
@@ -90,10 +99,10 @@ ms.locfileid: "68870776"
 
 ::: moniker range="vs-2017"
 
-示例:
+示例：
 
 ```cmd
-xcopy /e c:\vsoffline \\server\products\VS2017
+xcopy /e c:\VSLayout \\server\products\VS2017
 ```
 
 ::: moniker-end
@@ -101,7 +110,7 @@ xcopy /e c:\vsoffline \\server\products\VS2017
 ::: moniker range="vs-2019"
 
 ```cmd
-xcopy /e c:\vsoffline \\server\products\VS2019
+xcopy /e c:\VSLayout \\server\products\VS2019
 ```
 
 ::: moniker-end
@@ -123,37 +132,37 @@ xcopy /e c:\vsoffline \\server\products\VS2019
 * 若要下载仅一种语言的所有工作负载和组件，请运行：
 
     ```cmd
-    vs_enterprise.exe --layout C:\vsoffline --lang en-US
+    vs_enterprise.exe --layout C:\VSLayout --lang en-US
     ```
 
 * 若要下载多种语言的所有工作负载和组件，请运行：
 
     ```cmd
-    vs_enterprise.exe --layout C:\vsoffline --lang en-US de-DE ja-JP
+    vs_enterprise.exe --layout C:\VSLayout --lang en-US de-DE ja-JP
     ```
 
 * 若要下载所有语言的一个工作负载，请运行：
 
     ```cmd
-    vs_enterprise.exe --layout C:\vsoffline --add Microsoft.VisualStudio.Workload.Azure --includeRecommended
+    vs_enterprise.exe --layout C:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --includeRecommended
     ```
 
 * 若要下载三种语言的两个工作负载和一个可选组件，请运行：
 
     ```cmd
-    vs_enterprise.exe --layout C:\vsoffline --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeRecommended --lang en-US de-DE ja-JP
+    vs_enterprise.exe --layout C:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeRecommended --lang en-US de-DE ja-JP
     ```
 
 * 下载两个工作负载及其所有推荐组件：
 
     ```cmd
-    vs_enterprise.exe --layout C:\vsoffline --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeRecommended
+    vs_enterprise.exe --layout C:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeRecommended
     ```
 
 * 若要下载两个工作负载及其所有推荐和可选组件，请运行：
 
     ```cmd
-    vs_enterprise.exe --layout C:\vsoffline --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeOptional
+    vs_enterprise.exe --layout C:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeOptional
     ```
 
 ::: moniker range="vs-2017"
@@ -205,7 +214,7 @@ vs_enterprise.exe --layout c:\VSLayout --all
 * 管理员可以通过运行以下命令在无人参与模式下进行安装：
 
     ```cmd
-    \server\products\VS\vs_enterprise.exe --quiet --wait --norestart
+    \\server\products\VS\vs_enterprise.exe --quiet --wait --norestart
     ```
 
 > [!IMPORTANT]
@@ -217,6 +226,13 @@ vs_enterprise.exe --layout c:\VSLayout --all
 > 若企业管理员要在已完成的安装上执行进一步操作（例如，[向已成功的安装应用产品密钥](automatically-apply-product-keys-when-deploying-visual-studio.md)），此方法十分有用，但需要等待安装完成以处理从该安装返回的代码。
 >
 > 如果不使用 `--wait``vs_enterprise.exe` 进程将在安装完成前退出，并返回一个不能表示安装操作状态的不准确的退出代码。
+>
+
+::: moniker range="vs-2019"
+
+> 对于脱机安装，如果收到一条错误消息，指出“找不到与以下参数匹配的项目”，请确保将 --noweb 开关用于版本 16.3.5 或更高版本。
+
+::: moniker-end
 
 从布局安装时，安装内容将从布局中获取。 但是，如果选择不在布局中的组件，则会从 Internet 获取它。  要阻止 Visual Studio 安装程序下载布局中缺少的任何内容，请使用 `--noWeb` 选项。 如果使用 `--noWeb`，但布局中缺少要安装的选定内容，安装就会失败。
 
@@ -249,7 +265,7 @@ vs_enterprise.exe --layout c:\VSLayout --all
 ::: moniker range="vs-2019"
 
 > [!NOTE]
-> 每次运行 [visualstudio.microsoft.com](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 上提供的 Visual Studio 引导程序时，都会下载并安装可用的最新版 Visual Studio。
+> 每次运行 [visualstudio.microsoft.com](https://visualstudio.microsoft.com/downloads) 上提供的 Visual Studio 引导程序时，都会下载并安装可用的最新版 Visual Studio。
 >
 > 因此，如果立即下载 Visual Studio 引导程序，并从现在开始运行 6 个月，那么会安装运行引导程序时的最新 Visual Studio 版本  。
 >

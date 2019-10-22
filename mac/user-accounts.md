@@ -1,16 +1,17 @@
 ---
 title: 用户帐户
 description: 有关登录 Visual Studio for Mac 并在 Visual Studio for Mac 中启用订阅的信息
+ms.topic: overview
 author: asb3993
 ms.author: amburns
-ms.date: 05/06/2018
+ms.date: 09/18/2019
 ms.assetid: 17AB4F31-4921-4B4E-8D9D-95FB84294521
-ms.openlocfilehash: d262257c48e26928633b9325da1650e1e58e74d3
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: b8aa2a627754b8cbe81da665cadc4ae53ec8430d
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67692244"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211493"
 ---
 # <a name="user-accounts"></a>用户帐户
 

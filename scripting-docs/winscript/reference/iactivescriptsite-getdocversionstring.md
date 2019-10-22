@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSite::GetDocVersionString |Microsoft Docs
+title: IActiveScriptSite：： GetDocVersionString |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7327b71329c1f476eab9c27d5e0d5a047664abfa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8ecc592b6b7fcae5f516a3c1dd111c027e67b6dc
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992740"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571130"
 ---
 # <a name="iactivescriptsitegetdocversionstring"></a>IActiveScriptSite::GetDocVersionString
-检索唯一标识当前的文档版本的主机定义的字符串。 如果 Windows 脚本 （如下所示使用记事本正在编辑的 HTML 页的情况下） 范围内已更改的相关的文档，脚本引擎可以将它保存以及其保留的状态，强制重新编译下次加载脚本。  
+检索一个主机定义的字符串，该字符串唯一标识当前文档版本。 如果相关文档在 Windows 脚本范围外发生了更改（如使用记事本编辑 HTML 页的情况），则脚本引擎可以将其保存在持久性状态下，并在下次加载脚本时强制进行重新编译。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,13 +37,13 @@ HRESULT GetDocVersionString(
   
 #### <a name="parameters"></a>参数  
  `pstrVersionString`  
- [out]主机定义的文档版本字符串的地址。  
+ 弄主机定义的文档版本字符串的地址。  
   
 ## <a name="return-value"></a>返回值  
- 返回`S_OK`如果成功，或`E_NOTIMPL`不支持此方法。  
+ 如果成功，则返回 `S_OK`; 如果不支持此方法，则返回 `E_NOTIMPL`。  
   
 ## <a name="remarks"></a>备注  
- 如果`E_NOTIMPL`返回，脚本引擎应假定该脚本是与文档同步。  
+ 如果返回 `E_NOTIMPL`，则脚本引擎应假定脚本与文档同步。  
   
 ## <a name="see-also"></a>请参阅  
  [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)

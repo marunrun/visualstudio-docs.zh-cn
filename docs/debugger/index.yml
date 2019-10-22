@@ -1,0 +1,82 @@
+### YamlMime:Landing
+title: Visual Studio 调试程序文档
+summary: Visual Studio 调试程序有助于你观察程序的运行时行为并发现问题。
+metadata:
+  title: 在 Visual Studio 中进行调试
+  description: 了解如何使用 Visual Studio 调试应用程序和代码。
+  ms.topic: landing-page
+  author: mikejo5000
+  ms.author: mikejo
+  manager: jillfra
+  ms.date: 09/20/2019
+  ms.openlocfilehash: c98bb7851b2b959e078c954cd8f11b1d4151ce0b
+  ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 10/15/2019
+  ms.locfileid: "72349697"
+landingContent:
+- title: 关于调试
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 什么是调试？
+      url: what-is-debugging.md
+    - text: 初探调试器
+      url: debugger-feature-tour.md
+    - text: 查找调试任务
+      url: find-your-debugging-task.md
+- title: 入门
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: 零基础调试
+      url: debugging-absolute-beginners.md
+    - text: 了解如何调试 C#
+      url: /visualstudio/get-started/csharp/tutorial-debugger?toc=/visualstudio/debugger/toc.json
+    - text: 了解如何调试 C++
+      url: getting-started-with-the-debugger-cpp.md
+    - text: 了解如何调试 Visual Basic
+      url: /visualstudio/get-started/visual-basic/tutorial-debugger?toc=/visualstudio/debugger/toc.json
+    - text: 在调试器中运行 Python 代码 >>
+      url: ../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md
+- title: 暂停和导航代码
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 使用调试器浏览代码
+      url: navigating-through-code-with-the-debugger.md
+    - text: 使用断点
+      url: using-breakpoints.md
+    - text: 编辑代码并继续调试
+      url: edit-and-continue.md
+- title: 检查数据
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 检查变量
+      url: autos-and-locals-windows.md
+    - text: 对变量设置监视
+      url: watch-and-quickwatch-windows.md
+    - text: 查看调用堆栈
+      url: how-to-use-the-call-stack-window.md
+- title: 深入了解调试器
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 调试器提示和技巧
+      url: debugger-tips-and-tricks.md
+    - text: 编写和调试正在运行的 XAML 代码
+      url: xaml-hot-reload.md
+    - text: 调试实时 Azure 应用
+      url: debug-live-azure-applications.md
+    - text: 告诉调试程序要显示什么
+      url: using-the-debuggerdisplay-attribute.md
+    - text: 远程调试
+      url: remote-debugging.md
+- title: 协作
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: 使用 Live Share 编写和调试代码 >>
+      url: /visualstudio/liveshare/use/vs

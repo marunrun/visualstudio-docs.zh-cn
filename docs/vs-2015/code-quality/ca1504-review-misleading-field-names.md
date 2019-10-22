@@ -1,5 +1,5 @@
 ---
-title: CA1504:查看具有误导性字段名称 |Microsoft Docs
+title: CA1504：查看误导性字段名称 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,34 +12,34 @@ helpviewer_keywords:
 - ReviewMisleadingFieldNames
 ms.assetid: 94136ff1-4aaf-4dc2-9170-48c171ab7499
 caps.latest.revision: 17
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 2203e99974e5f232e8c90badef7c28921b971cdb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c3f1cca5dd33047a4d19c78013dd535e0e9dd6f2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68191204"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72607751"
 ---
-# <a name="ca1504-review-misleading-field-names"></a>CA1504:检查令人误解的字段名
+# <a name="ca1504-review-misleading-field-names"></a>CA1504：检查令人误解的字段名
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|ReviewMisleadingFieldNames|
 |CheckId|CA1504|
-|类别|Microsoft.Maintainability|
-|是否重大更改|非换行|
+|类别|Microsoft 可维护性|
+|是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 实例字段的名称以"s_"或名称的开头`static`(`Shared`中[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) 以"m_"开头的字段。
+ 实例字段的名称以 "s_" 开头，或者 `static` 的名称（`Shared` 在 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 中）字段以 "m_" 开头。
 
 ## <a name="rule-description"></a>规则说明
- 以"s_"开头的字段名称与相关联的静态数据由多个用户。 同样，以"m_"开头的字段名称相关联的实例 （成员） 数据。 对于更轻松地维护代码，名称应遵循通常使用的约定。
+ 以 "s_" 开头的字段名称与多个用户的静态数据相关联。 同样，以 "m_" 开头的字段名称与实例（成员）数据相关联。 为了更轻松地维护代码，名称应遵循一般使用的约定。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要解决此规则的冲突，请使用相应的前缀重命名字段。 另外，还可以使该字段通过添加或删除与当前后缀相符`static`修饰符。
+ 若要修复与此规则的冲突，请使用相应的前缀重命名该字段。 或者，通过添加或删除 `static` 修饰符，使字段与当前后缀一致。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  不禁止显示此规则发出的警告。

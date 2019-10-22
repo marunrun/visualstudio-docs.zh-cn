@@ -1,104 +1,70 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: 从二进制分析 (FxCop) 迁移到源分析 (FxCop 分析器)
+### YamlMime:Landing
+title: 从旧分析（FxCop）迁移到源分析（FxCop 分析器）
+summary: 了解如何首次分析代码，或者如何从二进制分析（FxCop）迁移到使用源分析（FxCop 分析器）分析托管代码的新方式。
 metadata:
   title: FxCop 迁移文档
-  description: 了解如何在分析代码时将旧的二进制分析 (FxCop) 转换为源分析 (FxCop 分析器)。
-  ms.date: 07/11/2019
+  description: 了解如何在分析代码时将旧的二进制分析（FxCop）转换为源分析（FxCop 分析器）。
   ms.prod: visual-studio-dev16
   ms.technology: vs-ide-code-analysis
   ms.topic: landing-page
   f1_keywords:
-    - vs.projectpropertypages.codeanalysis
-  ms.author: gewarren
+  - vs.projectpropertypages.codeanalysis
   author: gewarren
+  ms.author: gewarren
   manager: jillfra
-abstract:
-  description: '了解如何首次分析代码, 或者如何从二进制分析 (FxCop) 迁移到使用源分析 (FxCop 分析器) 分析托管代码的新方式。'
-  aside:
-    image:
-      alt: 常见管理任务徽标
-      height: 133
-      width: 48
-      src: 'https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-settings-8.svg'
-    title: null
-sections:
-  - title: 常见问题
-    items:
-      - html: 使用 FxCop 分析器获取<a href="fxcop-analyzers-faq.md"></a>有关二进制 FxCop 分析和源分析之间的差异的一些常见问题的解答。
-  - title: 如果你不熟悉代码分析 。
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 2
-        items:
-          - href: roslyn-analyzers-overview.md
-            html: <p>了解什么是分析器。</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_learn-about.svg'
-            title: 分析器概述
-          - href: install-roslyn-analyzers.md
-            html: <p>了解如何将分析器安装为 NuGet 包或 Visual Studio 扩展。</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            title: 安装分析器
-          - href: use-roslyn-analyzers.md
-            html: '<p>了解如何使用分析器并取消代码的C#冲突或 Visual Basic 代码。</p>'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
-            title: 设置规则严重性并取消显示错误
-          - href: 'use-roslyn-analyzers.md#command-line-usage'
-            html: <p>了解如何从命令行使用分析器。</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_cligeneric.svg'
-            title: 命令行用法
-  - title: 如果当前正在使用二进制分析 (FxCop) 。
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 2
-        items:
-          - href: 'roslyn-analyzers-overview.md#net-compiler-platform-based-analysis-versus-legacy-analysis'
-            html: <p>了解二进制分析 (FxCop) 与源分析 (FxCop 分析器) 之间的差异。</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_learn-about.svg'
-            title: 不同之处是什么？
-          - href: install-fxcop-analyzers.md
-            html: <p>了解如何安装 FxCop 分析器包。</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            title: 安装 FxCop 分析器
-          - href: fxcop-rule-port-status.md
-            html: <p>列出已移植到源分析 (FxCop 分析器) 的二进制分析 (FxCop) 规则。</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_upgrade.svg'
-            title: 移植和 unported 规则
-          - href: 'use-roslyn-analyzers.md#command-line-usage'
-            html: '<p>如果通常从命令行运行代码分析, 请参阅如何从命令行使用分析器。</p>'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_cligeneric.svg'
-            title: 命令行用法
-          - href: analyzer-rule-sets.md
-            html: <p>了解 analyzer 包规则集。</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_code-samples.svg'
-            title: 规则集
-  - title: 相关文章
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 2
-        items:
-          - href: code-analysis-for-c-cpp-overview.md
-            html: <p>了解如何在本机C++代码上运行代码分析。 不推荐使用C++托管代码的分析。</p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_Cplusplus.svg'
-            title: C++ 代码分析
-          - href: code-metrics-values.md
-            html: <p>了解如何获取代码度量值。 代码度量的用户体验保持不变。</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_data-collection.svg'
-            title: 代码度量
+  ms.date: 09/24/2019
+  ms.openlocfilehash: 0b86e42acaab7cf50443cc404eb81c257c9e352e
+  ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+  ms.translationtype: MT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 10/17/2019
+  ms.locfileid: "72535877"
+landingContent:
+- title: 代码分析简介
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 代码分析器概述
+      url: roslyn-analyzers-overview.md
+  - linkListType: download
+    links:
+    - text: 安装代码分析器
+      url: install-roslyn-analyzers.md
+  - linkListType: how-to-guide
+    links:
+    - text: 设置规则严重性并取消显示错误
+      url: use-roslyn-analyzers.md
+    - text: 命令行用法
+      url: use-roslyn-analyzers.md#command-line-usage
+- title: 迁移过时分析
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 不同之处
+      url: roslyn-analyzers-overview.md#source-code-analysis-versus-legacy-analysis
+  - linkListType: get-started
+    links:
+    - text: FxCop 分析器常见问题
+      url: fxcop-analyzers-faq.md
+  - linkListType: download
+    links:
+    - text: 安装 FxCop 分析器
+      url: install-fxcop-analyzers.md
+  - linkListType: how-to-guide
+    links:
+    - text: 配置 FxCop 分析器
+      url: configure-fxcop-analyzers.md
+    - text: 使用预定义的规则集
+      url: analyzer-rule-sets.md
+  - linkListType: reference
+    links:
+    - text: 移植和 unported 规则
+      url: fxcop-rule-port-status.md
+- title: 其他类型的代码分析
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: C++ 代码分析
+      url: code-analysis-for-c-cpp-overview.md
+    - text: 代码度量
+      url: code-metrics-values.md

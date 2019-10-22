@@ -11,12 +11,12 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 20d755250960ad2f5b22cc7b645ad24b91c4875f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 46a09c4bbf5ce97441f9e60c8832854356ad48d4
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62583641"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577763"
 ---
 # <a name="ijsdebug-interface"></a>IJsDebug 接口
 JavaScript 调试的入口点。  
@@ -27,16 +27,16 @@ JavaScript 调试的入口点。
 IJsDebug : public IUnknown;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
-|[IJsDebug::OpenVirtualProcess 方法](../../winscript/reference/ijsdebug-openvirtualprocess-method.md)|用于创建新虚拟过程对象的工厂方法。|  
+|[IJsDebug::OpenVirtualProcess 方法](../../winscript/reference/ijsdebug-openvirtualprocess-method.md)|用于创建新的虚拟进程对象的工厂方法。|  
   
 ## <a name="requirements"></a>要求  
- **标头：** jscript9diag.h  
+ **标头：** jscript9diag  
   
 ## <a name="see-also"></a>请参阅  
  [Windows 脚本接口参考](../../winscript/reference/windows-script-interfaces-reference.md)

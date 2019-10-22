@@ -16,15 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7948af3a6a77fd100a6965f9e50cda70ac7b868d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: ce77736bfefdc2c2e70c489a91b147cb0d2ed74a
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63427769"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71255987"
 ---
 # <a name="how-to-add-bookmark-controls-to-word-documents"></a>如何：向 Word 文档添加书签控件
-  在文档级项目中，可以添加<xref:Microsoft.Office.Tools.Word.Bookmark>控件添加到你的项目在设计时或在运行时中的文档。 在 VSTO 外接程序项目中，可以添加<xref:Microsoft.Office.Tools.Word.Bookmark>向任何打开的文档在运行时的控件。
+  在文档级项目中，你可以在设计时或在运行时向项目中的文档添加 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件。 在 VSTO 外接程序项目中，可以在运行时向任何打开的文档添加 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件。
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
@@ -36,12 +36,12 @@ ms.locfileid: "63427769"
 
 - [在运行时在 VSTO 外接程序项目中添加书签控件](#runtimeaddin)
 
-  有关详细信息<xref:Microsoft.Office.Tools.Word.Bookmark>控件，请参阅[Bookmark 控件](../vsto/bookmark-control.md)。
+  有关<xref:Microsoft.Office.Tools.Word.Bookmark>控件的详细信息，请参阅[书签控件](../vsto/bookmark-control.md)。
 
-## <a name="designtime"></a> 在设计时添加书签控件
+## <a name="designtime"></a>在设计时添加书签控件
  可通过几种方式在设计时向文档级项目中的文档添加 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件：
 
-- 从 Visual Studio **“工具箱”**。
+- 从 Visual Studio **“工具箱”** 。
 
    你可以将 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件从 **“工具箱”** 拖动到文档中。 如果你已在使用 **“工具箱”** 向文档添加 Windows 窗体控件，则你可能会想要选择这种方式。
 
@@ -65,7 +65,7 @@ ms.locfileid: "63427769"
 
 3. 选择文本或你想要包括在书签中的其他项。
 
-4. 单击 **“确定”**。
+4. 单击 **“确定”** 。
 
      如果不希望保留默认书签名称，可以在 **“属性”** 窗口中更改名称。
 
@@ -75,10 +75,10 @@ ms.locfileid: "63427769"
 
 2. 在功能区 **“插入”** 选项卡上的 **“链接”** 组中，单击 **“书签”** 按钮。
 
-3. 在 **“书签”** 对话框中，键入新书签的名称，然后单击 **“添加”**。
+3. 在 **“书签”** 对话框中，键入新书签的名称，然后单击 **“添加”** 。
 
-## <a name="runtimedoclevel"></a> 在运行时在文档级项目中添加书签控件
- 您可以添加<xref:Microsoft.Office.Tools.Word.Bookmark>到你的文档在运行时以编程方式控制使用的方法<xref:Microsoft.Office.Tools.Word.Document.Controls%2A>属性的`ThisDocument`在项目中的类。 有两种方法重载可用于按以下方式添加 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件：
+## <a name="runtimedoclevel"></a>在运行时在文档级项目中添加书签控件
+ 你可以通过使用项目中 <xref:Microsoft.Office.Tools.Word.Bookmark> 类的 <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> 属性的方法在运行时以编程方式向文档添加 `ThisDocument` 控件。 有两种方法重载可用于按以下方式添加 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件：
 
 - 在指定范围内添加 <xref:Microsoft.Office.Tools.Word.Bookmark> 。
 
@@ -96,16 +96,16 @@ ms.locfileid: "63427769"
     > [!NOTE]
     > 如果你想要从现有的 <xref:Microsoft.Office.Tools.Word.Bookmark> 创建 <xref:Microsoft.Office.Interop.Word.Bookmark>控件，请使用 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddBookmark%2A> 方法并传入现有的 <xref:Microsoft.Office.Interop.Word.Bookmark>。
 
-## <a name="runtimeaddin"></a> 在运行时在 VSTO 外接程序项目中添加书签控件
- 您可以添加<xref:Microsoft.Office.Tools.Word.Bookmark>以编程方式向任何打开的文档，在运行时由 VSTO 外接程序中使用的控件。 若要执行此操作，生成基于打开的文档的 <xref:Microsoft.Office.Tools.Word.Document> 主机项，然后使用此主机项的 <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> 属性的方法。 有两种方法重载可用于按以下方式添加 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件：
+## <a name="runtimeaddin"></a>在运行时在 VSTO 外接程序项目中添加书签控件
+ 你可以通过使用 VSTO 外接程序在运行时以编程方式将 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件添加到任何打开的文档。 若要执行此操作，生成基于打开的文档的 <xref:Microsoft.Office.Tools.Word.Document> 主机项，然后使用此主机项的 <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> 属性的方法。 有两种方法重载可用于按以下方式添加 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件：
 
 - 在指定范围内添加 <xref:Microsoft.Office.Tools.Word.Bookmark> 。
 
 - 添加基于文档中的本机书签的 <xref:Microsoft.Office.Tools.Word.Bookmark> （即， <xref:Microsoft.Office.Interop.Word.Bookmark>）。
 
-  文档关闭时，动态创建的 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件将不保留在文档中。 但是，本机 <xref:Microsoft.Office.Interop.Word.Bookmark> 保留在文档中。 在下次打开该文档时，你可以重新创建基于本机书签的 <xref:Microsoft.Office.Tools.Word.Bookmark> 。 有关详细信息，请参阅[持久保存在 Office 文档中的动态控件](../vsto/persisting-dynamic-controls-in-office-documents.md)。
+  文档关闭时，动态创建的 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件将不保留在文档中。 但是，本机 <xref:Microsoft.Office.Interop.Word.Bookmark> 保留在文档中。 在下次打开该文档时，你可以重新创建基于本机书签的 <xref:Microsoft.Office.Tools.Word.Bookmark> 。 有关详细信息，请参阅[在 Office 文档中保存动态控件](../vsto/persisting-dynamic-controls-in-office-documents.md)。
 
-  在 VSTO 外接程序项目中生成主机项的详细信息，请参阅[扩展 Word 文档和 Excel 工作簿中运行时在 VSTO 加载项](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。
+  有关在 VSTO 外接程序项目中生成主机项的详细信息，请参阅[在运行时在 Vsto 外接程序中扩展 Word 文档和 Excel 工作簿](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)。
 
 #### <a name="to-add-a-bookmark-control-at-a-specified-range"></a>若要在指定范围内添加书签控件
 
@@ -126,10 +126,10 @@ ms.locfileid: "63427769"
      [!code-csharp[Trin_WordAddInDynamicControls#5](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#5)]
 
 ## <a name="see-also"></a>请参阅
-- [通过使用扩展的对象自动化 Word](../vsto/automating-word-by-using-extended-objects.md)
+- [使用扩展对象实现 Word 自动化](../vsto/automating-word-by-using-extended-objects.md)
 - [主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)
-- [在运行时向 Office 文档添加控件](../vsto/adding-controls-to-office-documents-at-run-time.md)
-- [主机项和主机控件的编程限制](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
-- [VSTO 外接程序](../vsto/programming-vsto-add-ins.md)
-- [文档级自定义项进行编程](../vsto/programming-document-level-customizations.md)
+- [在运行时将控件添加到 Office 文档](../vsto/adding-controls-to-office-documents-at-run-time.md)
+- [宿主项和宿主控件的编程限制](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [程序 VSTO 外接程序](../vsto/programming-vsto-add-ins.md)
+- [程序文档级自定义项](../vsto/programming-document-level-customizations.md)
 - [如何：调整书签控件的大小](../vsto/how-to-resize-bookmark-controls.md)

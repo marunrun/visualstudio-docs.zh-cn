@@ -14,21 +14,21 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ed8ff0361396deaaffd46f14ca1fc38869988593
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 477374d93e4d8d5139197dcd49fef0e930e5ff32
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63422464"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572705"
 ---
 # <a name="active-script-debugger-interfaces"></a>活动脚本调试器接口
-Activdbg.h 和 activdbg100.h 标头文件提供接口、 枚举和结构在本部分中列出。 它们是用于调试脚本。  
+Activdbg 和 activdbg100 标头文件提供本节中列出的接口、枚举和结构。 它们用于调试脚本。  
   
 > [!NOTE]
-> `IJSDebug*`接口和`IEnumJsStackFrames`接口首次发布 Internet Explorer 11 中，用于调试脚本的本机代码。 这些接口的标头文件是 jscript9diag.h。  
+> 在 Internet Explorer 11 中，第一次发布了 `IJSDebug*` 接口和 `IEnumJsStackFrames` 接口，用于调试带脚本的本机代码。 这些接口的标头文件为 jscript9diag。  
   
 ## <a name="in-this-section"></a>本节内容  
- 以下接口允许使用非特定于语言的、 中性主机调试：  
+ 以下接口允许非特定语言的非特定宿主调试：  
   
 - [活动脚本调试器常量、枚举和结构](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)  
   
@@ -178,7 +178,7 @@ Activdbg.h 和 activdbg100.h 标头文件提供接口、 枚举和结构在本�
   
 - [IWebAppDiagnosticsObjectInitialization 接口](../../winscript/reference/iwebappdiagnosticsobjectinitialization-interface.md)  
   
-  以下部分列出了常量、 枚举和结构用于进行调试：  
+  以下部分列出了用于调试的常量、枚举和结构：  
   
 - [活动脚本调试器常量、枚举和结构](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)  
   

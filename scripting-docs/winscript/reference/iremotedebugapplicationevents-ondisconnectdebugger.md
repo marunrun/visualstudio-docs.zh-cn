@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationEvents::OnDisconnectDebugger | Microsoft Docs
+title: IRemoteDebugApplicationEvents：： OnDisconnectDebugger |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3d99ef6b4bcbafc78fd3e6ebcdc2c4129c3653a2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 53e26da46fcdca0db0c8a652a091e95cd83789cd
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62934568"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575585"
 ---
 # <a name="iremotedebugapplicationeventsondisconnectdebugger"></a>IRemoteDebugApplicationEvents::OnDisconnectDebugger
-句柄的调试器断开连接事件。  
+处理调试器断开连接事件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +34,7 @@ HRESULT OnDisconnectDebugger();
 ```  
   
 #### <a name="parameters"></a>参数  
- 此方法需要任何参数。  
+ 此方法不采用任何参数。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -44,7 +44,7 @@ HRESULT OnDisconnectDebugger();
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法可处理调试器断开连接事件。  
+ 此方法处理调试器断开连接事件。  
   
 ## <a name="see-also"></a>请参阅  
  [IRemoteDebugApplicationEvents 接口](../../winscript/reference/iremotedebugapplicationevents-interface.md)

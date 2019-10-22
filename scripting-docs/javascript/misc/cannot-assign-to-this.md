@@ -1,5 +1,5 @@
 ---
-title: 无法将分配给 this |Microsoft Docs
+title: 无法分配给 "this" |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,30 +14,30 @@ ms.assetid: ba2b0a2b-f0f8-4698-b335-a4ab6c166671
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4a4ba5d852a7d131a88930dd66931c026074549b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 73baa77cc63e3a43ac30e70f66081bbc7ade3020
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946584"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572346"
 ---
 # <a name="cannot-assign-to-this"></a>无法给“this”赋值
-尝试将一个值赋给**这**。 **这**是[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]关键字是指：
+您尝试为**此**分配一个值。 **这**是一个 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 关键字，该关键字引用以下方法之一：
 
-- 当前正在执行的一种方法，该对象
+- 当前正在执行方法的对象。
 
-- 如果没有当前方法 （或该方法不属于任何其他对象） 全局对象。
+- 如果没有当前方法（或者该方法不属于任何其他对象），则为全局对象。
 
-一种方法是[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]通过对象调用的函数。 在方法中，**这**关键字是通过调用该方法的对象的引用 (正好是通过调用类构造函数创建的对象**新**运算符)。
+方法是通过对象调用 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 函数。 在方法中， **this**关键字是对通过调用方法的对象的引用（这恰好是通过使用**new**运算符调用类构造函数而创建的对象）。
 
-在方法中，可以使用**这**来指代当前对象，但您不能将新值赋给**这**。
+在方法中，你可以使用**它**来引用当前对象，但不能为**此**分配新的值。
 
 ## <a name="to-correct-this-error"></a>更正此错误
 
-- 不要尝试将分配给**这**。 若要访问的属性或方法实例化的对象，请使用点运算符 (例如， **circle.radius**)。
+- 不要尝试分配到**此**。 若要访问实例化对象的属性或方法，请使用点运算符（例如， **circle**）。
 
   > [!NOTE]
-  > 不能将命名用户创建的变量**这**; 它是[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]保留字。
+  > 不能将用户创建**的变量命名**为：它是一个 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 保留字。
 
 ## <a name="see-also"></a>请参阅
 

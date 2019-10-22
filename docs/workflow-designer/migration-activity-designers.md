@@ -1,29 +1,29 @@
 ---
-title: 工作流设计器的迁移活动设计器
+title: 工作流设计器迁移活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 7598e869-1da1-4721-b4bf-6cbe402be1a2
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a7b284b370f248ed2497ece835036679af2e5a8
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: da8459db53a1ecb9a297e2a4a218791281806313
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66747017"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650124"
 ---
 # <a name="migration-activity-designers"></a>迁移活动设计器
 
-迁移活动设计器是用于从面向.NET Framework 4 工作流调用工作流 3.0/3.5 活动或更高版本。
+迁移活动设计器用于从面向 .NET Framework 4 或更高版本的工作流调用工作流 3.0/3.5 活动。
 
-在本部分中包含的主题提供如何使用工作流设计器活动设计器的指导。
+本节中包含的主题提供了有关如何使用工作流设计器活动设计器的指导。
 
 ## <a name="related-sections"></a>相关章节
 
-有关其他类型的活动设计器，请参阅以下主题：
+对于其他类型的活动设计器，请参阅以下主题：
 
 - [控制流](../workflow-designer/control-flow-activity-designers.md)
 
@@ -39,6 +39,6 @@ ms.locfileid: "66747017"
 
 - [事务](../workflow-designer/transaction-activity-designers.md)
 
-- [集合](../workflow-designer/collection-activity-designers.md)
+- [收集](../workflow-designer/collection-activity-designers.md)
 
 - [错误处理](../workflow-designer/error-handling-activity-designers.md)

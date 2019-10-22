@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [text templates], generating application code
 - walkthroughs [text templates]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 042d6b6c59489abcfbdcdd4dd10055ea4dedfff5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6650edfc3c953d54578b800e213ee27092045e56
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62934329"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666937"
 ---
 # <a name="walkthrough-generate-code-by-using-text-templates"></a>演练：使用文本模板生成代码
 
@@ -28,7 +28,7 @@ System.Xml 命名空间提供用于加载 XML 文档的综合工具，然后将�
 在此示例项目中，模板读取示例 XML 文件，并生成对应于每种节点类型的类。 在手动编写的代码中，可以使用这些类来导航 XML 文件。 此外，还可以在使用相同节点类型的任何其他文件上运行应用程序。 示例 XML 文件的目的是提供想要应用程序处理的所有节点类型的示例。
 
 > [!NOTE]
-> 应用程序[xsd.exe](http://go.microsoft.com/fwlink/?LinkId=178765)，包含在 Visual Studio 中，可以从 XML 文件中生成强类型类。 此处显示的模板作为示例提供。
+> Visual Studio 附带的应用程序[xsd.exe](http://go.microsoft.com/fwlink/?LinkId=178765)可以从 XML 文件生成强类型的类。 此处显示的模板作为示例提供。
 
 下面是示例文件：
 
@@ -73,7 +73,7 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
 }
 ```
 
-在强类型化的版本中，对 XML 架构的更改会导致更改到类。 编译器将突出显示应用程序代码必须更改的部分。 在使用泛型 XML 代码的非类型化版本中，没有此类支持。
+在强类型的版本中，对 XML 架构的更改将导致类的更改。 编译器将突出显示应用程序代码中必须更改的部分。 在使用泛型 XML 代码的非类型化版本中，没有此类支持。
 
 在此项目中，使用单个模板文件生成使类型化版本成为可能的类。
 
@@ -83,9 +83,9 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
 
 可以将此技术应用于任何代码项目。 本演练使用 C# 项目，出于测试目的，我们使用控制台应用程序。
 
-1. 在“文件”  菜单上，单击“新建”  ，然后单击“项目”  。
+1. 在“文件” 菜单上，单击“新建” ，然后单击“项目”。
 
-2. 单击“”  节点，然后在“模板”  窗格中，单击“控制台应用程序” 
+2. 单击“” 节点，然后在“模板” 窗格中，单击“控制台应用程序”
 
 ### <a name="add-a-prototype-xml-file-to-the-project"></a>将原型 XML 文件添加到项目
 
@@ -93,9 +93,9 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
 
 该文件应为项目的一部分，以便模板进行读取，但不会将其内置于已编译的应用程序中。
 
-1. 在“解决方案资源管理器”  中，右键单击项目，单击“添加”  ，然后单击“新项”  。
+1. 在“解决方案资源管理器”中，右键单击项目，单击“添加” ，然后单击“新项”。
 
-2. 在“添加新项”  对话框，从“模板”  窗格选择“XML 文件”  。
+2. 在“添加新项” 对话框，从“模板” 窗格选择“XML 文件” 。
 
 3. 将示例内容添加到该文件。
 
@@ -103,7 +103,7 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
 
 ### <a name="add-a-test-code-file"></a>添加测试代码文件
 
-将 C# 文件添加到项目，并在其中编写希望能够进行编写的代码示例。 例如：
+将 C# 文件添加到项目，并在其中编写希望能够进行编写的代码示例。 例如:
 
 ```csharp
 using System;
@@ -131,16 +131,16 @@ namespace MyProject
 
 添加文本模板文件，并将输出扩展名设置为 *.cs*。
 
-1. 在“解决方案资源管理器”  中，右键单击项目，单击“添加”  ，然后单击“新项”  。
+1. 在“解决方案资源管理器”中，右键单击项目，单击“添加”，然后单击“新项”。
 
-2. 在“添加新项”  对话框中，从“模板”  窗格选择“文本模板”  。
+2. 在“添加新项” 对话框中，从“模板” 窗格选择“文本模板” 。
 
     > [!NOTE]
     > 确保添加的是文本模板，而不是预处理文本模板。
 
 3. 在文件的模板指令中，将 `hostspecific` 属性更改为 `true`。
 
-     此更改将使模板代码有权访问 Visual Studio 服务。
+     此更改将使模板代码获得对 Visual Studio 服务的访问权限。
 
 4. 在输出指令中，将扩展属性更改为“.cs”，使该模板生成 C# 文件。 在 Visual Basic 项目中，将其更改为“.vb”。
 
@@ -258,7 +258,7 @@ class Song {}
 #>
 ```
 
-在此阶段，生成 *.cs*文件包含以下声明：
+在此阶段，生成的 *.cs*文件包含以下声明：
 
 ```csharp
 public partial class Catalog {}
@@ -270,7 +270,7 @@ public partial class Song {}
 
 ### <a name="access-the-visual-studio-api"></a>访问 Visual Studio API
 
-设置`hostspecific`属性的`<#@template#>`指令允许要获取对 Visual Studio API 访问权限的模板。 模板可通过该步骤获取项目文件的位置，避免在模板代码中使用绝对文件路径。
+设置 `<#@template#>` 指令的 `hostspecific` 属性允许模板获取对 Visual Studio API 的访问权限。 模板可通过该步骤获取项目文件的位置，避免在模板代码中使用绝对文件路径。
 
 ```
 <#@ template debug="false" hostspecific="true" language="C#" #>
@@ -406,9 +406,9 @@ namespace MyProject
 
 更改 XML 架构时，可轻松地生成新的类。 编译器将告知开发人员必须更新应用程序代码的位置。
 
-若要更改示例 XML 文件时，重新生成类，请单击**转换所有模板**中**解决方案资源管理器**工具栏。
+若要在示例 XML 文件更改时重新生成类，请单击 "**解决方案资源管理器**" 工具栏中的 "**转换所有模板**"。
 
-## <a name="conclusion"></a>结束语
+## <a name="conclusion"></a>结论
 
 本演练演示了代码生成的几种方法及其优势：
 
@@ -424,9 +424,9 @@ namespace MyProject
 
 在本演练中，程序代码实际上是从模型实例中生成的，该实例是应用程序会处理的一个典型 XML 文件示例。 在更正规的方法中，XML 架构将以 .xsd 文件或域特定语言定义的形式成为模板的输入。 这种方法将使模板在确定特征（如关系的多重性）方面更轻松。
 
-## <a name="troubleshoot-the-text-template"></a>解决文本模板
+## <a name="troubleshoot-the-text-template"></a>排查文本模板问题
 
-若在“错误列表”  中看到模板转换或编译错误，或者若未正确生成输出文件，可以借助[使用 TextTransform 实用工具生成文件](../modeling/generating-files-with-the-texttransform-utility.md)中所述的技术解决文本模板的问题。
+若在“错误列表”中看到模板转换或编译错误，或者若未正确生成输出文件，可以借助[使用 TextTransform 实用工具生成文件](../modeling/generating-files-with-the-texttransform-utility.md)中所述的技术解决文本模板的问题。
 
 ## <a name="see-also"></a>请参阅
 

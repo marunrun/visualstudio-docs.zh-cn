@@ -12,15 +12,15 @@ helpviewer_keywords:
 - language support
 ms.assetid: d78c43ee-4ef2-42e5-984e-d137de4e7e92
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 366ec5de66c3070e30d7d4f98662732a7892437b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7138784201a1ac036047e1c8df362727fa393b51
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68148260"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72620774"
 ---
 # <a name="adding-visual-studio-editor-support-for-other-languages"></a>为其他语言添加 Visual Studio 编辑器支持
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68148260"
 |||||||
 |-|-|-|-|-|-|
 |Bat|F#|Java|Markdown|Rust|Visual Basic|
-|Clojure|Go|JavaDoc|Objective-C|ShaderLab|Visual C#|
+|Clojure|前往|JavaDoc|Objective-C|ShaderLab|Visual C#|
 |CMake|Groovy|JSON|Perl|ShellScript|Visual C++|
 |CoffeeScript|HTML|LESS|Python|SQL|VBNet|
 |CSS|INI|LUA|R|Swift|XML|
@@ -80,7 +80,7 @@ ms.locfileid: "68148260"
 
  在 Windows 中，%userprofile% 解析为路径：c:\Users\\ *\<user name>* 。 如果系统上不存在扩展文件夹，则需要创建它。 如果该文件夹已存在，它将被隐藏。
 
- 有关如何创建 TextMate 语法的详细信息，请参阅[TextMate-语言语法简介：如何添加 HTML 中嵌入的源代码语法突出显示功能](https://developmentality.wordpress.com/2011/02/08/textmate-introduction-to-language-grammars/)和[关于如何为 Textmate 包创建语言语法和自定义主题的说明](https://benparizek.com/notebook/notes-on-how-to-create-a-language-grammar-and-custom-theme-for-a-textmate-bundle)。
+ 有关如何创建 TextMate 语法的详细信息，请参阅 [TextMate – Introduction to Language Grammars: How to add source code syntax highlighting embedded in HTML](https://developmentality.wordpress.com/2011/02/08/textmate-introduction-to-language-grammars/)（TextMate - 语言语法简介：如何在 HTML 中添加嵌入的源代码语法突出显示）和 [Notes on how to create a Language Grammar and Custom Theme for a Textmate Bundle](https://benparizek.com/notebook/notes-on-how-to-create-a-language-grammar-and-custom-theme-for-a-textmate-bundle)（如何创建 Textmate 包的语言语法和自定义主题说明）。
 
 ## <a name="see-also"></a>请参阅
- [Visual Studio 2013 导航到改进](https://blogs.msdn.microsoft.com/mvpawardprogram/2013/10/22/visual-studio-2013-navigate-to-improvements/)[演练：创建代码片段](../ide/walkthrough-creating-a-code-snippet.md)[演练：显示语句完成](../extensibility/walkthrough-displaying-statement-completion.md)
+ [Visual Studio 2013 导航到改进](https://blogs.msdn.microsoft.com/mvpawardprogram/2013/10/22/visual-studio-2013-navigate-to-improvements/)[演练：创建代码段](../ide/walkthrough-creating-a-code-snippet.md)[演练：显示语句完成](../extensibility/walkthrough-displaying-statement-completion.md)

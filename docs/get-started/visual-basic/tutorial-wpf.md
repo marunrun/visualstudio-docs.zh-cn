@@ -14,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 924b3000ffa0648a9086ed4771e921a939859804
-ms.sourcegitcommit: 9753c7544cec852ca5efd0834e0956d9e53a5734
+ms.openlocfilehash: 4108298eb095cf31e5f5f7089cbc7cd8780e8977
+ms.sourcegitcommit: 78e2637e4fbfadd4509b55276816b64f5c24c606
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67043558"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70864740"
 ---
 # <a name="tutorial-create-a-simple-application-with-visual-basic"></a>教程：使用 Visual Basic 创建简单应用
 
@@ -33,7 +33,7 @@ ms.locfileid: "67043558"
 
 ::: moniker range=">=vs-2019"
 
-如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)页免费安装。
+如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads)页免费安装。
 
 ::: moniker-end
 
@@ -100,29 +100,23 @@ Visual Studio 将创建 HelloWPFApp 项目和解决方案，“解决方案资�
 
 ### <a name="change-the-name-of-mainwindowxaml"></a>更改 MainWindow.xaml 的名称
 
-为 MainWindow 指定更具体的名称。
-
-1. 在“解决方案资源管理器”  中，选择 MainWindow.xaml  。 此时应看到“属性”窗口，如果没有，请选择“视图”菜单，然后再选择“属性窗口”项    。
-
-1. 将 **“文件名称”** 属性更改为 `Greetings.xaml`。
-
-     ![突出显示文件名的“属性”窗口](../media/exploreide-filenameinpropertieswindow.png)
-
-     “解决方案资源管理器”  显示文件现在名为“Greetings.xaml”  ，而嵌套代码文件现在名为“Greetings.xaml.vb”  。 此代码文件嵌套在 .xaml  文件节点下，表明它们的关系十分紧密。
+为 MainWindow 指定更具体的名称。 在“解决方案资源管理器”中，右键单击“MainWindow.xaml”，然后选择“重命名”    。 将该文件重命名为“Greetings.xaml”  。
 
 ## <a name="design-the-user-interface-ui"></a>设计用户界面 (UI)
+
+如果设计器未打开，请在“解决方案资源管理器”中选择“Greetings.xaml”，然后按“Shift+F7”打开设计器     。
 
 我们会将三种类型的控件添加到此应用程序：一个 <xref:System.Windows.Controls.TextBlock> 控件、两个 <xref:System.Windows.Controls.RadioButton> 控件和一个 <xref:System.Windows.Controls.Button> 控件。
 
 ### <a name="add-a-textblock-control"></a>添加 TextBlock 控件
 
-1. 输入“Ctrl+Q”以激活搜索框，然后键入“工具箱”    。 从结果列表中选择“查看”>“工具箱”  。
+1. 按“Ctrl+Q”激活搜索框，然后键入“工具箱”    。 从结果列表中选择“查看”>“工具箱”  。
 
 2. 在“工具箱”  中，展开“公共 WPF 控件”  节点以查看 TextBlock 控件。
 
      ![突出显示 TextBlock 控件的工具箱](../media/exploreide-textblocktoolbox.png)
 
-3. 通过选择“TextBlock”  项并将其拖到设计图面的窗口中，将 TextBlock 控件添加到设计图面中。 把控件居中到窗口的顶部附近。
+3. 通过选择“TextBlock”  项并将其拖到设计图面的窗口中，将 TextBlock 控件添加到设计图面中。 把控件居中到窗口的顶部附近。 在 Visual Studio 2019 和更高版本中，可以使用红色参考线来使控件居中。
 
 你的窗口应与下图类似：
 
@@ -152,7 +146,7 @@ XAML 标记应如下面的示例所示：
 
      ![选定 RadioButton 控件的“工具箱”窗口](../media/exploreide-radiobuttontoolbox.png)
 
-2. 通过选择“RadioButton”  项并将其拖到设计图面的窗口中，将两个 RadioButton 控件添加到设计图面中。 移动按钮（通过选择它们并使用箭头键），以便按钮并排显示在 TextBlock 控件下。
+2. 通过选择“RadioButton”  项并将其拖到设计图面的窗口中，将两个 RadioButton 控件添加到设计图面中。 移动按钮（通过选择它们并使用箭头键），以便按钮并排显示在 TextBlock 控件下。 使用红色参考线来对齐控件。
 
      你的窗口应如下所示：
 
@@ -168,9 +162,15 @@ XAML 标记应如下面的示例所示：
 
 ### <a name="add-display-text-for-each-radio-button"></a>添加每个单选按钮的显示文本
 
-1. 在设计界面上，通过在 HelloButton 上按鼠标右键打开 HelloButton 的快捷菜单，选择“编辑文本”  ，然后输入 `Hello`。
+在 XAML 中将`HelloButton` 和 `GoodbyeButton` 的“内容”属性更新为 `"Hello"` 和 `"Goodbye"`  。 XAML 标记现在应类似于以下示例：
 
-2. 在 GoodbyeButton 上按鼠标右键打开 GoodbyeButton 的快捷菜单，选择“编辑文本”  ，然后输入 `Goodbye`。
+   ```xaml
+   <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="252,47,0,0" TextWrapping="Wrap" Text="Select a message option and then choose the Display button." VerticalAlignment="Top"/>
+        <RadioButton x:Name="HelloButton" Content="Hello" HorizontalAlignment="Left" Margin="297,161,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="GoodbyeButton" Content="Goodbye" HorizontalAlignment="Left" Margin="488,161,0,0" VerticalAlignment="Top"/>
+   </Grid>
+   ```
 
 ### <a name="set-a-radio-button-to-be-checked-by-default"></a>设置要默认选中的单选按钮
 
@@ -186,7 +186,7 @@ IsChecked="True"
 
 ### <a name="add-the-button-control"></a>添加按钮控件
 
-1. 在“工具箱”  中，找到“按钮”  控件，然后通过将控件拖到设计视图的窗体中，将其添加到 RadioButton 控件下方的设计界面中。
+1. 在“工具箱”  中，找到“按钮”  控件，然后通过将控件拖到设计视图的窗体中，将其添加到 RadioButton 控件下方的设计界面中。 如果使用的是 Visual Studio 2019 或更高版本，则会出现一条红线，帮助你使控件居中。
 
 2. 在 XAML 视图中，将 Button 控件的“内容”  值从 `Content="Button"` 更改为 `Content="Display"`，然后保存更改。
 
@@ -205,7 +205,7 @@ IsChecked="True"
      此时，“Greetings.xaml.vb”  打开，光标位于 `Button_Click` 事件上。
 
     ```vb
-    Private Sub Button_Click_1(sender As Object, e As RoutedEventArgs)
+    Private Sub Button_Click(sender As Object, e As RoutedEventArgs)
 
     End Sub
     ```
@@ -248,7 +248,16 @@ IsChecked="True"
 
 2. 将 `StartupUri="MainWindow.xaml"` 更改为 `StartupUri="Greetings.xaml"`，然后保存更改。
 
-再次启动调试程序 （按“F5”  ）。 应可看到应用程序的 Greetings  窗口。 现在关闭应用程序窗口，停止调试。
+再次启动调试程序 （按“F5”  ）。 应可看到应用程序的 Greetings  窗口。
+
+::: moniker range="vs-2017"
+![正在运行的应用的屏幕截图](media/exploreide-wpf-running-app.png)
+::: moniker-end
+::: moniker range=">=vs-2019"
+![正在运行的应用的屏幕截图](media/vs-2019/exploreide-wpf-running-app.png)
+::: moniker-end
+
+ 现在关闭应用程序窗口，停止调试。
 
 ### <a name="debug-with-breakpoints"></a>使用断点进行调试
 
@@ -287,6 +296,12 @@ IsChecked="True"
 10. 关闭应用程序窗口，停止调试。
 
 11. 在菜单栏上，选择“调试”   > “禁用所有断点”  。
+
+### <a name="view-a-representation-of-the-ui-elements"></a>查看 UI 元素的表示形式
+
+在正在运行的应用中，你会看到窗口顶部显示了一个小组件。 这是一个运行时帮助程序，通过它可以快速访问一些有用的调试功能。 单击第一个按钮“转到实时可视化树”  。 随即会看到一个包含一个树的窗口，树中包含页面的所有可视元素。 展开节点，找到你添加的按钮。
+
+![实时可视化树窗口的屏幕截图](media/vs-2019/exploreide-live-visual-tree.png)
 
 ### <a name="build-a-release-version-of-the-application"></a>生成应用程序的发布版本
 

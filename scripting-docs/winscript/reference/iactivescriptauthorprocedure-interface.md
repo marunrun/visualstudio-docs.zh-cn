@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthorProcedure Interface | Microsoft Docs
+title: IActiveScriptAuthorProcedure 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,21 +13,21 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5e684a9e41165ceb266199c64a93e2e765506fb6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f5cca448b43e239866fe13ed8ef81b5dbf4631c0
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63009750"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572832"
 ---
 # <a name="iactivescriptauthorprocedure-interface"></a>IActiveScriptAuthorProcedure 接口
-除了继承的方法之外`IUnknown`，则`IScriptAuthorProcedure`接口公开以下方法。  
+除了从 `IUnknown` 继承的方法之外，`IScriptAuthorProcedure` 接口还公开以下方法。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[IActiveScriptAuthorProcedure::ParseProcedureText](../../winscript/reference/iactivescriptauthorprocedure-parseproceduretext.md)|分析代码过程中，将代码过程的文本添加到创作引擎，该脚本并创建`IScriptEntry`对应于代码过程的对象。|  
+|[IActiveScriptAuthorProcedure::ParseProcedureText](../../winscript/reference/iactivescriptauthorprocedure-parseproceduretext.md)|分析代码过程，将代码过程的文本添加到脚本创作引擎中，并创建一个与代码过程相对应的 `IScriptEntry` 对象。|  
   
 ## <a name="see-also"></a>请参阅  
  [活动脚本创作接口](../../winscript/reference/active-script-authoring-interfaces.md)

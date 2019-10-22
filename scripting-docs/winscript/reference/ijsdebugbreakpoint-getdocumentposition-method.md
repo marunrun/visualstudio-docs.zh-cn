@@ -1,5 +1,5 @@
 ---
-title: 'Ijsdebugbreakpoint:: Getdocumentposition 方法 |Microsoft Docs'
+title: IJsDebugBreakPoint：： GetDocumentPosition 方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 146eb26c887cd24d1eb7af858535fcecac62b41d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8f3bc5aff0b7079e20e2bcd49189153d2ec20d9a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62583140"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577697"
 ---
 # <a name="ijsdebugbreakpointgetdocumentposition-method"></a>IJsDebugBreakPoint::GetDocumentPosition 方法
-返回绑定断点语句的位置。  
+返回绑定断点的语句的位置。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,18 +37,18 @@ HRESULT GetDocumentPosition(
   
 #### <a name="parameters"></a>参数  
  `pDocumentId`  
- [out]源文档 （指向 idebugdocumenttext 的指针） 的唯一 ID。  
+ 弄源文档的唯一 ID （指向 IDebugDocumentText 的指针）。  
   
  `pCharacterOffset`  
- [out]从脚本开始处的从零开始的字符偏移量。  
+ 弄从脚本开头开始的从零开始的字符偏移量。  
   
  `pStatementCharCount`  
- [out]当前语句开始处的长度 * pCharacterOffset，以字符为单位。  
+ 弄当前语句的长度，以字符表示，以 * pCharacterOffset 开始。  
   
 ## <a name="return-value"></a>返回值  
   
 ## <a name="requirements"></a>要求  
- **标头：** jscript9diag.h  
+ **标头：** jscript9diag  
   
 ## <a name="see-also"></a>请参阅  
  [IJsDebugBreakPoint 接口](../../winscript/reference/ijsdebugbreakpoint-interface.md)

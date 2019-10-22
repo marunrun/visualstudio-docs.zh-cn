@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptWinRTErrorDebug::GetRestrictedErrorString |Microsoft Docs
+title: IActiveScriptWinRTErrorDebug：： GetRestrictedErrorString |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 154909183e044267053a04ebc489de6dddd55788
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 498d929fb06eea1d6717bfdecb09107bbdaafd98
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63425865"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577904"
 ---
 # <a name="iactivescriptwinrterrordebuggetrestrictederrorstring"></a>IActiveScriptWinRTErrorDebug::GetRestrictedErrorString
-如果可用，则返回 Windows 运行时限制错误字符串。  
+返回 Windows 运行时受限错误字符串（如果可用）。  
   
 > [!IMPORTANT]
-> [IActiveScriptWinRTErrorDebug 接口](../../winscript/reference/iactivescriptwinrterrordebug-interface.md)是实现由 PDM v11.0 和更高版本。 在 activdbg100.h 中发现。  
+> [IActiveScriptWinRTErrorDebug 接口](../../winscript/reference/iactivescriptwinrterrordebug-interface.md)由 PDM 11.0 和更高版本实现。 在 activdbg100.h 中发现。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +34,7 @@ HRESULT GetRestrictedErrorString([out] BSTR * errorString);
   
 #### <a name="parameters"></a>参数  
  `errorString`  
- [out]受限制的错误字符串。  
+ 弄受限制的错误字符串。  
   
 ## <a name="see-also"></a>请参阅  
  [IActiveScriptWinRTErrorDebug 接口](../../winscript/reference/iactivescriptwinrterrordebug-interface.md)

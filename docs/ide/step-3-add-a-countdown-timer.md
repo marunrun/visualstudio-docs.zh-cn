@@ -1,28 +1,33 @@
 ---
 title: 步骤 3：添加倒计时计时器
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: tutorial
+ms.prod: visual-studio-windows
+ms.technology: vs-ide-general
 dev_langs:
-- csharp
-- vb
+- CSharp
+- VB
 ms.assetid: 62670a2b-efdc-45c6-9646-9b17eeb33dcb
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 86e19e99bc6732ddadabdb3e308dcf8e0def41fa
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: f5ee65126fb89f2725b69d196e0659c622d9c389
+ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416707"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314102"
 ---
 # <a name="step-3-add-a-countdown-timer"></a>步骤 3：添加倒计时计时器
+
 在本教程的第 3 部分中，您将添加一个倒计时计时器，用于跟踪测验对象完成测验所剩秒数。
 
 > [!NOTE]
-> 本主题是基本编码概念教程系列中的一部分。 有关本教程的概述，请参阅[教程 2：创建计时数学测验](../ide/tutorial-2-create-a-timed-math-quiz.md)。
+> 本主题是基本编码概念教程系列中的一部分。
+> - 有关本教程的概述，请参阅[教程 2：创建计时数学测验](../ide/tutorial-2-create-a-timed-math-quiz.md)。
+> - 若要下载完整版代码，请参阅[数学测验教程的完整示例](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c)。
 
 ## <a name="to-add-a-countdown-timer"></a>添加倒计时计时器
 
@@ -30,6 +35,8 @@ ms.locfileid: "68416707"
 
      [!code-vb[VbExpressTutorial3Step3#5](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_1.vb)]
      [!code-csharp[VbExpressTutorial3Step3#5](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_1.cs)]
+
+     [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
      现在您需要一个进行实际读秒的方法（例如计时器），此方法在您指定的时间后将引发一个事件。
 
@@ -57,7 +64,7 @@ ms.locfileid: "68416707"
      您刚刚添加了 `if else` 语句，可通过这种方式告诉程序做出判断。 `if else` 语句如下所示。
 
     > [!NOTE]
-    > 下面的示例仅用于说明，请勿添加到你的项目。
+    > 下面的示例仅供演示，请勿添加到你的项目。
 
     ```vb
     If (something that your program will check) Then
@@ -102,10 +109,11 @@ ms.locfileid: "68416707"
 
      计时器将开始倒计时。 当时间用完时，测验将结束，并显示答案。 下图显示了正在进行的测验。
 
-     ![进行中的数学测验](../ide/media/express_addcountdown.png)进行中的数学测验
+     ![数学测验正在进行中](../ide/media/express_addcountdown.png)<br/>
+*数学测验正在进行中*
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅[步骤 4：添加 CheckTheAnswer() 方法](../ide/step-4-add-the-checktheanswer-parens-method.md)。
+- 要转到下一个教程步骤，请参阅[步骤 4：添加 CheckTheAnswer() 方法](../ide/step-4-add-the-checktheanswer-parens-method.md)** 。
 
 - 要返回上一个教程步骤，请参阅[步骤 2：创建随机加法问题](../ide/step-2-create-a-random-addition-problem.md)。

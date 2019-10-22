@@ -3,21 +3,21 @@ title: XML 编辑器中的 XML 文档验证
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: abb353bd-6c4a-4978-b03b-a8c245bbfb55
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 13574a13aecf7edbc9627e7b8288689206f278c2
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 2c4133268f2e07753ab7ecd276bf92712484e9f5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926700"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72604051"
 ---
 # <a name="xml-document-validation"></a>XML 文档验证
 
-XML 编辑器检查 XML 1.0 语法, 还会在您键入时执行数据验证。 编辑器可以使用文档类型定义 (DTD) 或架构进行验证。 红色的波浪形下划线突出显示任何 XML 1.0 格式正确的错误。 蓝色的波浪形下划线根据 DTD 或架构验证显示语义错误。 每个错误在错误列表中有关联的条目。 将鼠标光标暂时停留在波浪形下划线上，也可以查看错误消息。
+XML 编辑器检查 XML 1.0 语法，还会在您键入时执行数据验证。 编辑器可以使用文档类型定义 (DTD) 或架构进行验证。 红色的波浪形下划线突出显示任何 XML 1.0 格式正确的错误。 蓝色的波浪形下划线根据 DTD 或架构验证显示语义错误。 每个错误在错误列表中有关联的条目。 将鼠标光标暂时停留在波浪形下划线上，也可以查看错误消息。
 
 将已编译架构的 `targetNamespace` 与元素的 xmlns 声明进行匹配，可以找到验证中使用的架构。 已编译架构从下列位置之一加载（按优先级顺序列出）：
 
@@ -38,10 +38,10 @@ XML 编辑器检查 XML 1.0 语法, 还会在您键入时执行数据验证。 �
 - 架构缓存目录中的架构。
 
 ## <a name="xslt-files"></a>XSLT 文件
-在编辑 XSLT 文件时, 位于架构缓存中的*xslt .xsd*文件用于验证。 验证错误以蓝色的波浪形下划线显示。 XSLT 编译器中的错误显示为红色的波浪形下划线。
+在编辑 XSLT 文件时，位于架构缓存中的*xslt .xsd*文件用于验证。 验证错误以蓝色的波浪形下划线显示。 XSLT 编译器中的错误显示为红色的波浪形下划线。
 
-## <a name="xml-schema-xsd-files"></a>XML 架构 (XSD) 文件
-编辑 XML 架构文件时, 位于架构缓存中的*xsdschema*文件用于验证。 验证错误以蓝色的波浪形下划线显示。 任何编译错误也会显示为红色的波浪形下划线。
+## <a name="xml-schema-xsd-files"></a>XML 架构（XSD）文件
+编辑 XML 架构文件时，位于架构缓存中的*xsdschema*文件用于验证。 验证错误以蓝色的波浪形下划线显示。 任何编译错误也会显示为红色的波浪形下划线。
 
 ## <a name="see-also"></a>请参阅
 

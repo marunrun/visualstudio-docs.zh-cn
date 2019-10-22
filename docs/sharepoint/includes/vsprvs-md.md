@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 91b163a97867c591a7ecc9961dd251208ca0ce01
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "68143982"
 ---
 Visual Studio

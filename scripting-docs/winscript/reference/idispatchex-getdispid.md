@@ -1,5 +1,5 @@
 ---
-title: IDispatchEx::GetDispID | Microsoft Docs
+title: IDispatchEx：： GetDispID |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 95ab1d72e5b2f608c51ac6e56be1986df8945ec2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 57f0faf6004e2219600f0dbd63749a7e65ca438c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63000865"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576602"
 ---
 # <a name="idispatchexgetdispid"></a>IDispatchEx::GetDispID
-将单个成员名称映射到其相应的 DISPID，随后可在后续调用`IDispatchEx::InvokeEx`。  
+将单个成员名称映射到其相应的 DISPID，然后可以在后续调用 `IDispatchEx::InvokeEx` 时使用该名称。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,13 +46,13 @@ HRESULT GetDispID(
   
 |“值”|含义|  
 |-----------|-------------|  
-|fdexNameCaseSensitive|名称查找区分大小写的方式完成的请求。 可能会被忽略不支持区分大小写查找的对象。|  
-|fdexNameEnsure|如果尚不存在的情况下创建成员的请求。 应使用的值创建新成员`VT_EMPTY`。|  
-|fdexNameImplicit|指示未显式指定基对象时，调用方，对象搜索具有特定名称的成员。|  
-|fdexNameCaseInsensitive|该名称查找可在不区分大小写的方式完成的请求。 可能会被忽略不支持不区分大小写查找的对象。|  
+|fdexNameCaseSensitive|请求以区分大小写的方式进行名称查找。 对于不支持区分大小写的查找的对象，可能会被忽略。|  
+|fdexNameEnsure|请求创建成员（如果尚未存在）。 应为新成员创建值 `VT_EMPTY`。|  
+|fdexNameImplicit|指示当未显式指定基对象时，调用方正在搜索特定名称的成员的对象。|  
+|fdexNameCaseInsensitive|请求以不区分大小写的方式进行名称查找。 对于不支持不区分大小写的查找的对象，可能会被忽略。|  
   
  `pid`  
- 指向调用方分配的位置以接收 DISPID 结果的指针。 如果发生错误，`pid`包含 DISPID_UNKNOWN。  
+ 指向调用方分配的用于接收 DISPID 结果的位置的指针。 如果发生错误，`pid` 包含 DISPID_UNKNOWN。  
   
 ## <a name="return-value"></a>返回值  
  返回以下值之一：  
@@ -61,14 +61,14 @@ HRESULT GetDispID(
 |-|-|  
 |`S_OK`|成功。|  
 |`E_OUTOFMEMORY`|内存不足。|  
-|`DISP_E_UNKNOWNNAME`|不知道名称。|  
+|`DISP_E_UNKNOWNNAME`|名称未知。|  
   
 ## <a name="remarks"></a>备注  
- `GetDispID` 可以使用而不是`GetIDsOfNames`获取的给定成员的 DISPID。  
+ 可以使用 `GetDispID` 而不是 `GetIDsOfNames` 来获取给定成员的 DISPID。  
   
- 因为`IDispatchEx`允许添加和删除成员的 Dispid 集不会保持常量对象的生存期内。  
+ 由于 `IDispatchEx` 允许添加和删除成员，因此在对象的生存期内，Dispid 集不会保持不变。  
   
- 未使用`riid`中的参数`IDispatch::GetIDsOfNames`已删除。  
+ @No__t_1 中未使用的 `riid` 参数已被移除。  
   
 ## <a name="example"></a>示例  
   

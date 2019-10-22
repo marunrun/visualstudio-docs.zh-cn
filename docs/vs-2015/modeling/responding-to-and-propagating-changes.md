@@ -1,5 +1,5 @@
 ---
-title: 响应并传播更改 |Microsoft Docs
+title: 响应和传播更改 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -8,51 +8,50 @@ helpviewer_keywords:
 - Domain-Specific Language, events
 ms.assetid: fc2e9ac5-7a84-44ed-9945-94e45f89c227
 caps.latest.revision: 26
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a9838e934421e619c85f348052fbe589288391c1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b216e89e6a04fb38537f9c45336d07cf6df4abdc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68158841"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671275"
 ---
 # <a name="responding-to-and-propagating-changes"></a>响应并传播更改
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-元素是创建、 删除或更新时，您可以编写将传播到模型，其他部件或外部资源，例如文件、 数据库或其他组件的更改的代码。  
-  
-## <a name="in-this-section"></a>本节内容  
- 作为一般准则，请考虑按以下顺序这些技术：  
-  
-|技术|方案|更多相关信息|  
-|---------------|---------------|--------------------------|  
-|定义一个计算域属性。|域属性，其值计算从模型中的其他属性。 例如，其价格相关元素的价格总和。|[计算的和自定义的存储属性](../modeling/calculated-and-custom-storage-properties.md)|  
-|定义自定义存储域属性。|存储在其他部分的模型或外部域属性。 例如，无法解析为模型中的树的表达式字符串。|[计算的和自定义的存储属性](../modeling/calculated-and-custom-storage-properties.md)|  
-|重写 OnValueChanging 和 OnDeleting 等更改处理程序|使不同的元素保持同步，并保留外部值与模型同步。<br /><br /> 约束定义的范围内的值。<br /><br /> 属性值和其他更改立即之前或之后调用。 可以通过引发异常来终止此更改。|[域属性值更改处理程序](../modeling/domain-property-value-change-handlers.md)|  
-|规则|可以定义将排队等待发生更改的事务结束前，只需执行的规则。 它们不会撤消或重做上执行。 使用它们来使存储区的一部分与另一个同步。|[规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)|  
-|存储事件|建模存储提供通知的事件，例如添加或删除的元素或链接，或更改属性的值。 该事件还会执行撤消和重做。 使用存储事件更新不在存储中的值。|[事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)|  
-|.NET 事件|形状具有响应鼠标单击和其他手势的事件处理程序。 您必须注册这些事件的每个对象。 注册通常是 InitializeInstanceResources，重写中，并且必须执行的每个元素。<br /><br /> 这些事件通常发生事务之外。|[如何：在形状或修饰器上截断单击](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)|  
-|边界规则|边界规则专门用于约束形状的边界。|[BoundsRules 约束形状位置和大小](../modeling/boundsrules-constrain-shape-location-and-size.md)|  
-|选择规则|选择规则专门约束用户可以选择。|[如何：访问和约束当前选定内容](../modeling/how-to-access-and-constrain-the-current-selection.md)|  
-|OnAssocatedPropertyChanged|指示使用的形状和连接线如卷影、 箭头、 颜色和线条宽度和样式功能的模型元素的状态。|[更新形状和连接线以反映模型](../modeling/updating-shapes-and-connectors-to-reflect-the-model.md)|  
-  
-## <a name="comparing-rules-and-store-events"></a>**比较规则和存储事件**  
- 在模型中发生更改时运行更改通告程序、 规则和事件。  
-  
- 在更改已发生的最终事务通常应用规则，并提交在事务中的更改后应用的事件。  
-  
- 使用存储事件以同步模型与应用商店和规则，以保持在存储中的一致性之外的对象。  
-  
-- **创建自定义规则**作为抽象规则从派生类中创建自定义规则。 此外必须通知的自定义规则的相关框架。 有关详细信息，请参阅[规则将传播的更改中的模式](../modeling/rules-propagate-changes-within-the-model.md)。  
-  
-- **订阅事件**可以订阅事件之前，请创建一个事件处理程序和委托。 然后，使用<xref:Microsoft.VisualStudio.Modeling.Store.EventManagerDirectory%2A>属性来订阅事件。 有关详细信息，请参阅[事件处理程序传播更改外部模型](../modeling/event-handlers-propagate-changes-outside-the-model.md)。  
-  
-- **正在撤消更改**时撤销的事务，会引发事件，但不是会应用规则。 如果将值更改为一个规则，并且撤消所做的更改，值是重置为原始值在撤消操作过程。 当引发事件时，你必须手动更改回其原始值的值。 若要了解有关 transactons 和撤消的详细信息，请参阅[如何：使用事务更新模型](../modeling/how-to-use-transactions-to-update-the-model.md)。  
-  
-- **将事件自变量传递到规则和事件**这两个事件和传递规则`EventArgs`参数，其中包含有关如何信息的模型更改。  
-  
-## <a name="see-also"></a>请参阅  
- [如何：截获对形状或修饰器的单击](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)   
- [编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)
+创建、删除或更新元素时，您可以编写将更改传播到模型的其他部分的代码，或者编写为外部资源（如文件、数据库或其他组件）的代码。
+
+## <a name="in-this-section"></a>本节内容
+ 作为指导原则，请按以下顺序考虑这些技术：
+
+|采用|方案|更多相关信息|
+|---------------|---------------|--------------------------|
+|定义计算域属性。|值由模型中的其他属性计算的域属性。 例如，价格是相关元素的价格之和。|[计算的和自定义的存储属性](../modeling/calculated-and-custom-storage-properties.md)|
+|定义自定义存储域属性。|存储在模型的其他部分或外部的域属性。 例如，可以将表达式字符串分析为模型中的树。|[计算的和自定义的存储属性](../modeling/calculated-and-custom-storage-properties.md)|
+|重写更改处理程序，如 OnValueChanging 和 OnDeleting|使不同元素保持同步，并使外部值与模型保持同步。<br /><br /> 将值约束为定义的范围。<br /><br /> 紧跟在属性值和其他更改之前调用。 可以通过引发异常来终止更改。|[域属性值更改处理程序](../modeling/domain-property-value-change-handlers.md)|
+|规则|可以定义在发生更改的事务结束之前，排队等待执行的规则。 它们不会在撤消或重做时执行。 使用它们来使存储区的一部分与另一部分保持同步。|[规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)|
+|存储事件|建模应用商店提供事件通知，如添加或删除元素或链接，或更改属性的值。 此事件也会在撤消和重做时执行。 使用存储事件更新不在存储中的值。|[事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)|
+|.NET 事件|形状具有响应鼠标单击和其他笔势的事件处理程序。 必须为每个对象注册这些事件。 注册通常是在 InitializeInstanceResources 的重写中完成的，并且必须为每个元素完成。<br /><br /> 这些事件通常发生在事务外。|[如何：截获对形状或修饰器的单击](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)|
+|边界规则|边界规则专用于限制形状的边界。|[BoundsRules 约束形状位置和大小](../modeling/boundsrules-constrain-shape-location-and-size.md)|
+|选择规则|选择规则专门限制用户可以选择的内容。|[如何：访问和约束当前所选内容](../modeling/how-to-access-and-constrain-the-current-selection.md)|
+|OnAssocatedPropertyChanged|使用形状和连接线的功能（如阴影、箭头、颜色、线条宽度和样式）指示模型元素的状态。|[更新形状和连接线以反映模型](../modeling/updating-shapes-and-connectors-to-reflect-the-model.md)|
+
+## <a name="comparing-rules-and-store-events"></a>**比较规则和存储事件**
+ 更改通告、规则和事件会在模型中发生更改时运行。
+
+ 规则通常应用于发生更改的结束事务，并在提交事务中的更改后应用事件。
+
+ 使用存储事件将模型与存储外部的对象进行同步，并使用规则来保持存储中的一致性。
+
+- **创建自定义规则**您可以创建自定义规则作为抽象规则的派生类。 还必须通知框架有关自定义规则。 有关详细信息，请参阅[规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)。
+
+- **订阅事件**在订阅事件之前，请创建事件处理程序和委托。 然后使用 <xref:Microsoft.VisualStudio.Modeling.Store.EventManagerDirectory%2A>property 订阅该事件。 有关详细信息，请参阅[事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)。
+
+- **撤消更改**撤消事务时，将引发事件，但不会应用规则。 如果规则更改了某个值，而您撤消了该更改，则在撤消操作期间，该值将重置为原始值。 引发事件时，必须手动将值更改回其原始值。 若要了解有关 transactons 和 undo 的详细信息，请参阅[如何：使用事务更新模型](../modeling/how-to-use-transactions-to-update-the-model.md)。
+
+- **将事件参数传递到规则和事件**事件和规则都传递有 `EventArgs` 参数，该参数包含有关模型如何更改的信息。
+
+## <a name="see-also"></a>请参阅
+ [如何：截获对形状或修饰器的单击](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)[编写代码以定制域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)

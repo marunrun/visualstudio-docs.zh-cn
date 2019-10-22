@@ -7,12 +7,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3e1461afe5c4d6026f8532896ba837e971fed652
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4dbed81809cb3b69814fbf10dde7129b45396eaa
+ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792251"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72000193"
 ---
 # <a name="add-a-parameter-to-a-method-using-a-quick-action"></a>使用快速操作向方法添加参数
 
@@ -26,20 +26,20 @@ ms.locfileid: "62792251"
 
 **使用时机：** 需要向方法添加参数，并希望以适当方式自动声明它。
 
-操作原因：虽然可以在调用方法前向方法声明添加参数，但此功能可根据方法调用自动添加参数。
+操作原因：  虽然可以在调用方法前向方法声明添加参数，但此功能可根据方法调用自动添加参数。
 
 ## <a name="how-to-use-it"></a>使用方法
 
 1. 向方法调用添加额外参数。
 
-   调用的方法的名称下方显示红色“波形曲线”。
+   调用的方法的名称下方显示红色波形曲线。
 
-2. 将指针悬停在红色“波形曲线”上，直到“快速操作”菜单显示。 选择“快速操作”菜单中的“向下箭头”，再选择“向 [方法] 添加参数”。
+2. 将指针悬停在红色波形曲线上，直到显示“快速操作”菜单。 选择“快速操作”菜单中的“向下箭头”  ，再选择“向 [方法] 添加参数”  。
 
    ![Visual Studio 中的“向方法添加参数”快速操作](media/add-parameter-to-method.png)
 
    > [!TIP]
-   > 也可以通过下列方式访问“快速操作”菜单：将光标悬停在方法调用行上，再按 Ctrl+.， 或选择文件边距中的灯泡图标。
+   > 也可以通过下列方式访问“快速操作”菜单：将光标悬停在方法调用行上，再按 Ctrl  +.  ， （句点）或选择文件边距中的灯泡图标。
 
    此时，Visual Studio 会向方法声明添加新参数。
 

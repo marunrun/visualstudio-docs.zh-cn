@@ -1,5 +1,5 @@
 ---
-title: IBindEventHandler::BindHandler | Microsoft Docs
+title: IBindEventHandler：： BindHandler |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 01372766eb434efe73f47b265c7984bab48ea164
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 160020832509c9fb2aa95c095148127228a92e17
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62991380"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572567"
 ---
 # <a name="ibindeventhandlerbindhandler"></a>IBindEventHandler::BindHandler
-将事件绑定到一个对象。  
+将事件绑定到对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,10 +38,10 @@ HRESULT BindHandler(
   
 #### <a name="parameters"></a>参数  
  `pstrEvent`  
- [in]指定要处理的事件。  
+ 中指定要处理的事件。  
   
  `pdisp`  
- [in]指定要处理的事件的对象。  
+ 中指定用于处理事件的对象。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -51,7 +51,7 @@ HRESULT BindHandler(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法将事件绑定到一个对象。  
+ 此方法将事件绑定到对象。  
   
 ## <a name="see-also"></a>请参阅  
  [IBindEventHandler 接口](../../winscript/reference/ibindeventhandler-interface.md)

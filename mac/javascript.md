@@ -4,21 +4,20 @@ description: 有关 Visual Studio for Mac 中 JavaScript 支持的信息
 author: sayedihashimi
 ms.author: sayedha
 ms.date: 05/03/2018
-ms.topic: article
 ms.technology: vs-ide-general
 ms.assetid: 61432695-5B12-4257-B250-48D37EED106D
-ms.openlocfilehash: f5fdc28930fca1e6f70373a3f079d12208c824d4
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: 7ffe24d26af91d7d6733ec1540c2f2d810425e1e
+ms.sourcegitcommit: 9a227faafdd0bad6f017ace607dc61eb56b32d72
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67691423"
+ms.lasthandoff: 09/21/2019
+ms.locfileid: "71175418"
 ---
 # <a name="javascript-and-typescript-support"></a>JavaScript 和 TypeScript 支持
 
 Visual Studio for Mac 通过语法突出显示、代码格式设置和 IntelliSense 提供对 JavaScript 和 TypeScript 的支持。
 
-![typescript 编辑器支持](https://msdnshared.blob.core.windows.net/media/2018/03/TypeScript-editor.gif)
+![typescript 编辑器支持](/media/tsjseditor-2019.gif)
 
 有关编写 JavaScript 的详细信息，请参阅[编写 JavaScript 代码](/scripting/javascript/writing-javascript-code)指南。
 
@@ -36,13 +35,13 @@ Visual Studio for Mac 通过语法突出显示、代码格式设置和 IntelliSe
 
 Visual Studio for Mac 使用 [JavaScript Language Service](/visualstudio/ide/javascript-intellisense) 提供 IntelliSense，为用户在编写代码时提供智能代码完成、参数信息和成员列表。
 
-Visual Studio for Mac 中的 JavaScript intellisense 可以基于类型推理、JSDoc 或 TypeScript 声明。
+Visual Studio for Mac 中的 JavaScript IntelliSense 可以基于类型推理、JSDoc 或 TypeScript 声明。
 
 - **类型推理** - 对象类型是通过周围的代码上下文推出的。 有关详细信息，请参阅[基于类型推理的 IntelliSense](/visualstudio/ide/javascript-intellisense#intellisense-based-on-type-inference) 的 Visual Studio 部分。
 - **JSDoc** - 有时类型推理不提供正确的类型信息。 在这些情况下，类型信息可以由 [JSDoc](https://jsdoc.app/about-getting-started.html) 注释显式提供。 有关详细信息，请参阅[基于 JSDoc 的 IntelliSense](/visualstudio/ide/javascript-intellisense#intellisense-based-on-jsdoc) 的 Visual Studio 部分
 - **TypeScript 声明文件** - `.d.ts` 文件用于提供 JavaScript IntelliSense 的值。 该文件中声明的类型可用作 JSDoc 注释的类型。 有关详细信息，请参阅[基于 TypeScript 声明文件的 IntelliSense](/visualstudio/ide/javascript-intellisense#intellisense-based-on-typescript-declaration-files) 的 Visual Studio 部分
 
-    ![添加 typescript 定义文件](media/javascript-image3.png)
+    ![添加 typescript 定义文件](media/javascript-type-intellisense-2019.gif)
 
 ## <a name="see-also"></a>请参阅
 

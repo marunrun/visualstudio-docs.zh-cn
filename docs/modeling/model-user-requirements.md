@@ -5,21 +5,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - requirements
 - stories
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d75bfd7634e068224b12168390193773c198957a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 68aa46b3dc07813b73921b8acb5970289c30aecc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62814560"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658415"
 ---
 # <a name="model-user-requirements"></a>建立用户需求模型
 
-通过绘制有关用户的活动和你的系统在帮助他们实现自己目标上所起到的作用的关系图，Visual Studio 可帮助你了解你的用户，并与他们展开讨论、沟通其要求。 需求模型是一组这样的关系图，每一张图都将重点放在用户需求的不同方面。 有关视频演示，请参阅：[业务域建模](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain)。
+通过绘制有关用户的活动和你的系统在帮助他们实现自己目标上所起到的作用的关系图，Visual Studio 可帮助你了解你的用户，并与他们展开讨论、沟通其要求。 需求模型是一组这样的关系图，每一张图都将重点放在用户需求的不同方面。 有关视频演示，请参阅： [业务域建模](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain)。
 
 若要查看支持每种类型的模型的 Visual Studio 版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
@@ -39,7 +39,7 @@ ms.locfileid: "62814560"
 
 - 使用模型作为系统测试的基础，明确测试和要求之间的关系。 要求发生改变时，这种关系将帮助你正确地更新测试。 这可以确保系统满足新的要求。
 
-如果在与用户或其代表进行重点讨论时使用需求模型，并在每次迭代开始时重新查看需求模型，那么使用需求模型会获得最大的好处。 无需在编写代码之前详细地完成它。 即使是非常简单的部分工作的应用程序，通常也能构成与用户讨论需求时的最具激励性的基础。 模型是汇总讨论结果的一种有效方式。 有关详细信息，请参阅[在您的开发过程中使用模型](../modeling/use-models-in-your-development-process.md)。
+如果在与用户或其代表进行重点讨论时使用需求模型，并在每次迭代开始时重新查看需求模型，那么使用需求模型会获得最大的好处。 无需在编写代码之前详细地完成它。 即使是非常简单的部分工作的应用程序，通常也能构成与用户讨论需求时的最具激励性的基础。 模型是汇总讨论结果的一种有效方式。 有关详细信息，请参阅[在开发过程中使用模型](../modeling/use-models-in-your-development-process.md)。
 
 > [!NOTE]
 > 在这些主题中，“系统”表示正在开发的系统或应用程序。 它可能是许多软件和硬件组件的大型集合、单个应用程序或一个更大型系统内的某个软件组件。 在每种情况下，需求模型都描述了在系统外部可以通过用户界面或 API 看到的行为。
@@ -54,13 +54,13 @@ ms.locfileid: "62814560"
 |附加文档或工作项|性能、安全性、可用性和可靠性条件。|[描述服务质量要求](#QoSRequirements)|
 |附加文档或工作项|不针对特定用例的约束和规则|[显示业务规则](#BusinessRules)|
 
-请注意，大多数关系图类型可以用于其他目的。 有关关系图类型的概述，请参阅[为您的应用程序创建模型](../modeling/create-models-for-your-app.md)。
+请注意，大多数关系图类型可以用于其他目的。 有关关系图类型的概述，请参阅为[应用程序创建模型](../modeling/create-models-for-your-app.md)。
 
 ## <a name="BusinessRules"></a> Showing Business Rules
 
 业务规则是一个不与特定用例相关联的要求，应在整个系统中进行观察。
 
-许多业务规则受概念类间关系的约束。 您可以编写这些*静态业务规则*作为与概念类图上的相关类关联的注释。 例如：
+许多业务规则受概念类间关系的约束。 您可以编写这些*静态业务规则*作为与概念类图上的相关类关联的注释。 例如:
 
 ![附加到 Order 类的注释中的规则。](../modeling/media/uml_reqmcd2.png)
 
@@ -82,7 +82,7 @@ ms.locfileid: "62814560"
 
 - 性能
 
-- 安全性
+- 安全
 
 - 可用性
 
@@ -94,7 +94,7 @@ ms.locfileid: "62814560"
 
 如果餐厅在顾客订餐时删除了菜单项，则任何引用该菜单项的订单项将显示为红色。
 
-请参阅[应用程序的体系结构建模](../modeling/model-your-app-s-architecture.md)若要了解如何开发符合服务质量要求的代码。
+有关如何开发符合服务质量要求的代码，请参阅为[应用程序的体系结构建模](../modeling/model-your-app-s-architecture.md)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,5 +1,5 @@
 ---
-title: IApplicationDebugger::onDebuggerEvent |Microsoft Docs
+title: IApplicationDebugger：： onDebuggerEvent |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b78bb3345463dfd682534dc60a216f3e0e8fdf2a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0f8edb2a3c39d639b5b6722707d7b6c0b57a5c19
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62991367"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577869"
 ---
 # <a name="iapplicationdebuggerondebuggerevent"></a>IApplicationDebugger::onDebuggerEvent
 处理自定义应用程序事件。  
@@ -38,10 +38,10 @@ HRESULT onDebuggerEvent(
   
 #### <a name="parameters"></a>参数  
  `riid`  
- [in]对象的接口标识符。  
+ 中对象的接口标识符。  
   
  `punk`  
- [in]事件对象，用于实现所定义接口`riid`。  
+ 中事件对象，它实现 `riid` 定义的接口。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -49,14 +49,14 @@ HRESULT onDebuggerEvent(
 |“值”|描述|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
-|`E_NOTIMPL`|目前尚未实现该方法。|  
+|`E_NOTIMPL`|当前未实现该方法。|  
   
 ## <a name="remarks"></a>备注  
- 语义`IUnknown`是完全定义的应用程序/调试器。  
+ @No__t_0 的语义均定义了整个应用程序/调试器。  
   
- 此方法允许为调试器模型; 的自定义扩展插件目前尚未实现。  
+ 此方法允许调试器模型的自定义扩展;当前未实现。  
   
- 将调用此方法`IDebugApplication::FireDebuggerEvent`调用。  
+ 调用 `IDebugApplication::FireDebuggerEvent` 时调用此方法。  
   
 ## <a name="see-also"></a>请参阅  
  [IApplicationDebugger 接口](../../winscript/reference/iapplicationdebugger-interface.md)   

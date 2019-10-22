@@ -6,32 +6,32 @@ f1_keywords:
 - System.Activities.Presentation.View.ArgumentDesigner.UI
 - System.Activities.Presentation.View.DesignTimeArgument.UI
 ms.assetid: 64813fd5-1ea1-499a-98b4-ab2a44b7ee5e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c333e78de17a3af5b4f7f0be46c19cf3120231d
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 9c3f8216bb0dfe3813e4852151c351b865128d0c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66746898"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650291"
 ---
-# <a name="how-to-use-the-argument-designer"></a>如何：使用参数设计器
+# <a name="how-to-use-the-argument-designer"></a>如何：使用自变量设计器
 
-自变量设计器轻松允许数据流入和流出活动。 通过单击访问设计器**自变量**设计画布左下角的按钮。 在设计器包含一系列参数显示在表格窗体，可以按每一列标题排序除外**默认值**列。 每个自变量都包含名称、输入/输出/输入-输出/属性方向、类型和默认表达式值（如果有）。 名称和默认的表达式值都是可编辑的文本字段，类型和方向是下拉项。 有关详细信息，请参阅[变量和参数 (.NET)](/dotnet/framework/windows-workflow-foundation/variables-and-arguments)。
+利用参数设计器，可以轻松地将数据流入和流出活动。 通过单击设计画布左下角的 "**参数**" 按钮访问设计器。 该设计器包含一个参数列表，该列表以表格形式显示，并可按每个列标题进行排序（"**默认值**" 列除外）。 每个自变量都包含名称、输入/输出/输入-输出/属性方向、类型和默认表达式值（如果有）。 名称和默认的表达式值都是可编辑的文本字段，类型和方向是下拉项。 有关详细信息，请参阅[变量和参数（.net）](/dotnet/framework/windows-workflow-foundation/variables-and-arguments)。
 
 ## <a name="to-create-a-new-argument"></a>创建新自变量
 
 1. 在 Visual Studio 中打开工作流或活动解决方案。
 
-2. 通过单击打开自变量设计器**自变量**设计画布左下角的按钮。 此时将显示参数设计器。
+2. 通过单击设计画布左下角的 "**参数**" 按钮打开参数设计器。 此时将显示参数设计器。
 
-3. 单击标记为空的行**创建自变量**。 这会将新行添加使用新的自变量，使用以下默认值： 为 argumentx**名称**其中 x 是一个整数，其初始值为 1 来创建唯一的参数名称，将自动递增**中**有关**方向**，和**字符串**有关**自变量类型**。 为添加任何值**默认值**。 可以在工作流设计过程中随时更改这些值。
+3. 单击标记为 "**创建参数**" 的行。 这会使用以下默认值添加一个具有新自变量的新行： "**名称**" 为 argumentx，其中 x 是一个整数，其初始值为 "1"，将自动递增以创建唯一的参数名称，并**在**"**方向**"**参数类型**的和**字符串**。 不会为**默认值**添加值。 可以在工作流设计过程中随时更改这些值。
 
     > [!NOTE]
-    > 若要删除参数，通过单击选择该参数，然后按**删除**密钥。
+    > 若要删除某个参数，请单击该参数，然后按**delete**键。
 
 ## <a name="see-also"></a>请参阅
 

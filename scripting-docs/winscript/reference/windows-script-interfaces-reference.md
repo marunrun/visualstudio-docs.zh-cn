@@ -13,15 +13,15 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b3ccdac409b68c993fa59f164a5785ef7d22b022
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0a6b6c1f774cf6977186bc88a9dff5beb0f785ef
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840091"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572964"
 ---
 # <a name="windows-script-interfaces-reference"></a>Windows 脚本接口参考
-以下部分介绍了 Windows 脚本接口。  
+以下各节介绍了 Windows 脚本接口。  
   
 ## <a name="in-this-section"></a>本节内容  
  [活动脚本接口](../../winscript/reference/active-script-interfaces.md)  

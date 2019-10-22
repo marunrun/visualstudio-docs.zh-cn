@@ -1,5 +1,5 @@
 ---
-title: IDispError::GetHresult |Microsoft Docs
+title: IDispError：： GetHresult |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6eb4518e39fdab432590601d91b462d869c38e1a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 62661e14c36881ca83763c277dbfd5385f192fb6
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446898"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573122"
 ---
 # <a name="idisperrorgethresult"></a>IDispError::GetHresult
-检索中的错误代码`IDispError`对象。  
+从 `IDispError` 对象检索错误代码。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT GetHresult(
   
 #### <a name="parameters"></a>参数  
  `phr`  
- [out]指定的错误代码。  
+ 弄指定错误代码。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -47,7 +47,7 @@ HRESULT GetHresult(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法检索中的错误代码`IDispError`对象。  
+ 此方法从 `IDispError` 对象检索错误代码。  
   
 > [!NOTE]
 > 未实现此方法。  

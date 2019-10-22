@@ -9,29 +9,29 @@ helpviewer_keywords:
 - text templates, transforming by using msbuild
 ms.assetid: 4da43429-2a11-4d7e-b2e0-9e4af7033b5a
 caps.latest.revision: 30
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f5ecf6f09efb64e521740b74151fc160112fe7a3
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 81c4160ca6d03d55d631cd4dad8c3bce01fa9722
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826040"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667868"
 ---
 # <a name="code-generation-in-a-build-process"></a>生成过程中的代码生成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-Visual Studio 解决方案生成过程的一部分，可以调用文本转换。 有一些专用于文本转换的生成任务。 T4 生成任务运行设计时文本模板，它们还编译运行时（已预处理的）文本模板。
+可在 Visual Studio 解决方案的生成过程中调用文本转换。 有一些专用于文本转换的生成任务。 T4 生成任务运行设计时文本模板，它们还编译运行时（已预处理的）文本模板。
 
-根据你使用的引擎，生成任务可完成的操作之间是有一些差异的。 如果文本模板生成 Visual Studio 中的解决方案时，可以访问 Visual Studio API (EnvDTE) [hostspecific ="true"](../modeling/t4-template-directive.md)属性设置。 但当你从命令行生成解决方案时，或者当你通过 Visual Studio 启动服务器生成时，此操作无效。 在这些情况下，生成由 MSBuild 执行，并且使用不同的 T4 主机。
+根据你使用的引擎，生成任务可完成的操作之间是有一些差异的。 在 Visual Studio 中生成解决方案时，如果设置了[hostspecific = "true"](../modeling/t4-template-directive.md)属性，则文本模板可以访问 VISUAL studio API （EnvDTE）。 但当你从命令行生成解决方案时，或者当你通过 Visual Studio 启动服务器生成时，此操作无效。 在这些情况下，生成由 MSBuild 执行，并且使用不同的 T4 主机。
 
-这意味着当你在 MSBuild 中生成文本模板时，你无法以相同的方式访问项目文件名等内容。 但是，你可以[通过生成参数，将环境信息传递到文本模板和指令处理器](#parameters)。
+这意味着当你在 MSBuild 中生成文本模板时，你无法以相同的方式访问项目文件名等内容。 但是，可以[使用生成参数将环境信息传递到文本模板和指令处理器](#parameters)。
 
-## <a name="buildserver"></a> 配置计算机
+## <a name="buildserver"></a>配置计算机
 
-若要启用在开发计算机上的生成任务，请安装[Visual Studio 的建模 SDK](https://www.microsoft.com/download/details.aspx?id=48148)。
+若要在开发计算机上启用生成任务，请安装[适用于 Visual Studio 的建模 SDK](https://www.microsoft.com/download/details.aspx?id=48148)。
 
-如果[您的生成服务器](https://msdn.microsoft.com/library/788443c3-0547-452e-959c-4805573813a9)运行在其未安装 Visual Studio，在计算机上的将以下文件复制到生成计算机，从开发计算机。 用最新的版本号替换‘*’。
+如果[生成服务器](https://msdn.microsoft.com/library/788443c3-0547-452e-959c-4805573813a9)在未安装 Visual Studio 的计算机上运行，请将以下文件从开发计算机复制到生成计算机。 用最新的版本号替换‘*’。
 
 - $(ProgramFiles)\MSBuild\Microsoft\VisualStudio\v*.0\TextTemplating
 
@@ -57,9 +57,9 @@ Visual Studio 解决方案生成过程的一部分，可以调用文本转换。
 
 你将必须编辑你的项目文件才能在 MSBuild 中配置部分功能。
 
-在解决方案资源管理器，选择**Unload**从你的项目的上下文菜单。 这允许你在 XML 编辑器中编辑 .csproj 或 .vbproj 文件。
+在 "解决方案资源管理器" 中，从项目的上下文菜单中选择 "**卸载**"。 这允许你在 XML 编辑器中编辑 .csproj 或 .vbproj 文件。
 
-完成编辑后，选择**重新加载**。
+完成编辑后，选择 "**重新加载**"。
 
 ## <a name="import-the-text-transformation-targets"></a>导入文本转换目标
 
@@ -213,9 +213,9 @@ $(IncludeFolders);$(MSBuildProjectDirectory)\Include;AnotherFolder;And\Another</
 </PropertyGroup>
 ```
 
-## <a name="parameters"></a> 将生成上下文数据传递到模板
+## <a name="parameters"></a>将生成上下文数据传递到模板
 
-你可以在项目文件中设置参数值。 例如，您可以将生成属性和[环境变量](../msbuild/how-to-use-environment-variables-in-a-build.md):
+你可以在项目文件中设置参数值。 例如，可以传递生成属性和[环境变量](../msbuild/how-to-use-environment-variables-in-a-build.md)：
 
 ```xml
 <ItemGroup>
@@ -234,7 +234,7 @@ $(IncludeFolders);$(MSBuildProjectDirectory)\Include;AnotherFolder;And\Another</
 The project folder is: <#= ProjectFolder #>
 ```
 
-## <a name="msbuild"></a> 使用项目属性中的程序集和 include 指令
+## <a name="msbuild"></a>在 assembly 和 include 指令中使用项目属性
 
 Visual Studio 宏（如 $(SolutionDir）在 MSBuild 中不起作用。 你可以改用项目属性。
 
@@ -265,19 +265,19 @@ Visual Studio 宏（如 $(SolutionDir）在 MSBuild 中不起作用。 你可以
 
 ## <a name="q--a"></a>问题解答
 
-**我为什么要在生成服务器中转换模板？我在我的代码签入之前，我已转换 Visual Studio 中的模板。**
+**为什么要在生成服务器中转换模板？在我签入我的代码之前，我已经在 Visual Studio 中转换了模板。**
 
 如果你更新一个包含的文件或模板读取的其他文件，则 Visual Studio 将不会自动转换相应文件。 作为生成的一部分的模板转换操作将确保所有内容保持最新状态。
 
-**其他选项还有哪些用于转换文本模板？**
+**用于转换文本模板的其他选项有哪些？**
 
-- [TextTransform 实用工具](../modeling/generating-files-with-the-texttransform-utility.md)可以在命令脚本中使用。 在大多数情况下，使用 MSBuild 更为方便。
+- 可在命令脚本中使用[TextTransform 实用程序](../modeling/generating-files-with-the-texttransform-utility.md)。 在大多数情况下，使用 MSBuild 更为方便。
 
 - [在 VS 扩展中调用文本转换](../modeling/invoking-text-transformation-in-a-vs-extension.md)
 
 - [设计时文本模板](../modeling/design-time-code-generation-by-using-t4-text-templates.md)由 Visual Studio 转换。
 
-- [运行时文本模板](../modeling/run-time-text-generation-with-t4-text-templates.md)在应用程序中的运行时转换。
+- [运行时文本模板](../modeling/run-time-text-generation-with-t4-text-templates.md)在运行时在应用程序中转换。
 
 ## <a name="read-more"></a>阅读详细信息
 
@@ -285,4 +285,4 @@ Visual Studio 宏（如 $(SolutionDir）在 MSBuild 中不起作用。 你可以
 
 - [编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)
 - [Visual Studio 可视化和建模 SDK](http://go.microsoft.com/fwlink/?LinkID=185579)
-- [Oleg Sych:了解 T4:MSBuild 集成](https://github.com/olegsych/T4Toolbox)
+- [Oleg Sych：了解 T4： MSBuild 集成](https://github.com/olegsych/T4Toolbox)

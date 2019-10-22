@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: aee0029553391c30fb29eb1f9fa7aba01968e5ed
-ms.sourcegitcommit: b56dc6fadc6c924beed36bb4c2ccc16cf6bcfa1c
+ms.openlocfilehash: cbb06ac800fd21e2354b04fb2e7e46306da7ed72
+ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68740159"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70180343"
 ---
 # <a name="quickstart-create-your-first-python-web-app-using-visual-studio"></a>快速入门：使用 Visual Studio 创建第一个 Python Web 应用
 
@@ -29,7 +29,7 @@ ms.locfileid: "68740159"
 
 ::: moniker range=">=vs-2019"
 
-如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)页免费安装。 在安装程序中，请确保选择“Python 开发”工作负荷  。
+如果尚未安装 Visual Studio，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads)页免费安装。 在安装程序中，请确保选择“Python 开发”工作负荷  。
 
 ::: moniker-end
 

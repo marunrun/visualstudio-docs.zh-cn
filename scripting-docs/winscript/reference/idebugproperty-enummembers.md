@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty::EnumMembers |Microsoft Docs
+title: IDebugProperty：： EnumMembers |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 527bf9d3c51dad8ffe1645dc42081dc54189ad7b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5f8c5f2cbb107d55e9ffe602cb7d3492701de10c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979157"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72562417"
 ---
 # <a name="idebugpropertyenummembers"></a>IDebugProperty::EnumMembers
 枚举属性的成员。  
@@ -40,22 +40,22 @@ HRESULT EnumMembers (
   
 #### <a name="parameters"></a>参数  
  `dwFieldSpec`  
- [in]指定`DBGPROP_INFO_FLAGS`确定枚举的调试属性结构中的哪些字段是必填的常量。  
+ 中指定 `DBGPROP_INFO_FLAGS` 常数，这些常数确定要在枚举的调试属性结构中填充的字段。  
   
  `nRadix`  
- [in]用于解释任何数字信息的基数。  
+ 中用于解释任何数值信息的基数。  
   
  `refiid`  
- [in]为筛选枚举数传递的此 IID。 IID 是之一`IDebugPropertyEnumType`继承的接口`IDebugPropertyEnumType_All`。  
+ 中传递此 IID 用于筛选枚举器。 IID 是继承自 `IDebugPropertyEnumType_All` `IDebugPropertyEnumType` 的接口之一。  
   
  `ppEnum`  
- [out]返回`IEnumDebugPropertyInfo`枚举的成员属性的接口。  
+ 弄返回枚举成员属性的 `IEnumDebugPropertyInfo` 接口。  
   
 ## <a name="return-value"></a>返回值  
- 返回一个有效`HRESULT`，通常`S_OK`。  
+ 返回一个有效 `HRESULT`，通常 `S_OK`。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugProperty 接口](../../winscript/reference/idebugproperty-interface.md)   
- [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)   
+ [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)    
  [IDebugPropertyEnumType_All 接口](../../winscript/reference/idebugpropertyenumtype-all-interface.md)   
  [IEnumDebugPropertyInfo 接口](../../winscript/reference/ienumdebugpropertyinfo-interface.md)

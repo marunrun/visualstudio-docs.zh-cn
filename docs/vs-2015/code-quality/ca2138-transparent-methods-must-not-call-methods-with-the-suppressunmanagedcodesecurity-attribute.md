@@ -1,5 +1,5 @@
 ---
-title: CA2138:透明方法不得调用具有 SuppressUnmanagedCodeSecurity 特性的方法 |Microsoft Docs
+title: CA2138：透明方法不得调用具有 SuppressUnmanagedCodeSecurity 特性的方法 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -8,17 +8,17 @@ f1_keywords:
 - CA2138
 ms.assetid: a14c4d32-f079-4f3a-956c-a1657cde0f66
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 4e9a9e10f928efe6bcff6fb3d49c1b1cd7b1bd1c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 65e00d319bff3bbfd3c441c6b60ed8a703e69251
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68154294"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654803"
 ---
-# <a name="ca2138-transparent-methods-must-not-call-methods-with-the-suppressunmanagedcodesecurity-attribute"></a>CA2138:透明方法不得调用具有 SuppressUnmanagedCodeSecurity 特性的方法
+# <a name="ca2138-transparent-methods-must-not-call-methods-with-the-suppressunmanagedcodesecurity-attribute"></a>CA2138：透明方法不得调用具有 SuppressUnmanagedCodeSecurity 特性的方法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -29,15 +29,15 @@ ms.locfileid: "68154294"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 安全透明方法调用的方法将标有<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>属性。
+ 安全透明方法调用使用 <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> 特性标记的方法。
 
 ## <a name="rule-description"></a>规则说明
- 直接调用到本机代码，例如，通过使用任何透明方法将触发此规则通过 P/Invoke (平台 invoke) 调用。 P/Invoke 和 COM 互操作方法标记有<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>属性结果在完成针对调用方法的 LinkDemand。 由于安全透明代码无法满足 LinkDemands，代码也不能调用具有 SuppressUnmanagedCodeSecurity 特性标记的方法或具有 SuppressUnmanagedCodeSecurity 特性标记的类的方法。 该方法将失败，或需将转换为的完全要求。
+ 此规则对直接调用本机代码的任何透明方法（例如通过使用 P/Invoke （平台调用）调用）引发。 使用 <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> 特性标记的 P/Invoke 和 COM 互操作方法将导致针对调用方法执行的 LinkDemand。 由于安全透明代码不能满足 Linkdemand，此代码也无法调用用 SuppressUnmanagedCodeSecurity 特性标记的方法，也无法调用用 SuppressUnmanagedCodeSecurity 特性标记的类的方法。 方法将失败，或者要求将转换为完全请求。
 
- 违反此规则会导致<xref:System.MethodAccessException>中的第 2 级安全性透明模型，以及为的完全要求<xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A>级别 1 透明度模型中。
+ 违反此规则会导致级别2安全透明度模型中的 <xref:System.MethodAccessException>，以及对第1级透明度模型中 <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> 的完全要求。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复此规则的冲突，请删除<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>属性，此方法标记<xref:System.Security.SecurityCriticalAttribute>或<xref:System.Security.SecuritySafeCriticalAttribute>属性。
+ 若要修复与此规则的冲突，请删除 <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> 特性，并使用 <xref:System.Security.SecurityCriticalAttribute> 或 <xref:System.Security.SecuritySafeCriticalAttribute> 特性标记该方法。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  不禁止显示此规则发出的警告。

@@ -15,39 +15,39 @@ helpviewer_keywords:
 - datasets [Visual Basic], constraints
 - constraints [Visual Basic], suspending during dataset update
 ms.assetid: 553f7d0c-2faa-4c17-b226-dd02855bf1dc
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9aca29de7e9c5a01e0c2caad2c42015cd31b3f75
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b8ab7bb827c478360a64d65f44af6770c77ebf77
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62565181"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648139"
 ---
 # <a name="turn-off-constraints-while-filling-a-dataset"></a>在填充数据集时关闭约束
 
-如果数据集包含约束 （如外键约束），它们可以引发顺序对数据集执行的操作相关的错误。 例如，正在加载子记录之前加载相关的父记录可能违反了约束，并导致错误。 立即加载子记录，该约束检查相关的父记录并引发错误。
+如果数据集包含约束（例如，外键约束），则它们可能会引发与针对数据集执行的操作顺序相关的错误。 例如，在加载相关的父记录之前加载子记录可能会违反约束并导致错误。 一旦加载子记录，约束就会检查相关的父记录，并引发错误。
 
-如果没有任何机制来允许约束暂停，在每次尝试将一条记录加载到子表时，将引发错误。 若要在数据集中挂起的所有约束的另一种方法是使用<xref:System.Data.DataRow.BeginEdit%2A>，和<xref:System.Data.DataRow.EndEdit%2A>属性。
+如果没有允许临时约束挂起的机制，则每次尝试将记录加载到子表时都会引发错误。 挂起数据集中的所有约束的另一种方法是使用 <xref:System.Data.DataRow.BeginEdit%2A>，并 <xref:System.Data.DataRow.EndEdit%2A> 属性。
 
 > [!NOTE]
-> 验证事件 (例如，<xref:System.Data.DataTable.ColumnChanging>和<xref:System.Data.DataTable.RowChanging>) 时关闭约束后，不会引发。
+> 关闭约束时，将不会引发验证事件（例如 <xref:System.Data.DataTable.ColumnChanging> 和 <xref:System.Data.DataTable.RowChanging>）。
 
-## <a name="to-suspend-update-constraints-programmatically"></a>若要以编程方式挂起更新约束
+## <a name="to-suspend-update-constraints-programmatically"></a>以编程方式暂停更新约束
 
-- 下面的示例演示如何暂时关闭约束检查的数据集：
+- 下面的示例演示如何在数据集中暂时禁用约束检查：
 
      [!code-csharp[VbRaddataEditing#10](../data-tools/codesnippet/CSharp/turn-off-constraints-while-filling-a-dataset_1.cs)]
      [!code-vb[VbRaddataEditing#10](../data-tools/codesnippet/VisualBasic/turn-off-constraints-while-filling-a-dataset_1.vb)]
 
-## <a name="to-suspend-update-constraints-using-the-dataset-designer"></a>若要暂停使用数据集设计器更新约束
+## <a name="to-suspend-update-constraints-using-the-dataset-designer"></a>使用数据集设计器挂起更新约束
 
-1. 在“数据集设计器”中打开数据集。 有关详细信息，请参见[演练：在数据集设计器中创建数据集](walkthrough-creating-a-dataset-with-the-dataset-designer.md)。
+1. 在“数据集设计器”中打开数据集。 有关详细信息，请参阅[演练：在数据集设计器中创建数据集](walkthrough-creating-a-dataset-with-the-dataset-designer.md)。
 
-2. 在“属性”  窗口中，将 <xref:System.Data.DataSet.EnforceConstraints%2A> 属性设置为 `false`。
+2. 在“属性” 窗口中，将 <xref:System.Data.DataSet.EnforceConstraints%2A> 属性设置为 `false`。
 
 ## <a name="see-also"></a>请参阅
 

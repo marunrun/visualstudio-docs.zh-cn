@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextExternalAuthor::GetPathName | Microsoft Docs
+title: IDebugDocumentTextExternalAuthor：： GetPathName |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5739e7cb0cb12661ee5683051fb7b687e62dfde4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e876b41ce1bde4defffd11267c6665f9d57da077
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62978749"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575971"
 ---
 # <a name="idebugdocumenttextexternalauthorgetpathname"></a>IDebugDocumentTextExternalAuthor::GetPathName
-返回文档的完整路径和文件名称。  
+返回文档的完整路径和文件名。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,10 +38,10 @@ HRESULT GetPathName(
   
 #### <a name="parameters"></a>参数  
  `pbstrLongName`  
- [out]包含完整路径和文件名的字符串。  
+ 弄包含完整路径和文件名的字符串。  
   
  `pfIsOriginalFile`  
- [out]一个布尔值，该值指示是否路径和文件名称，请参阅对原始文档。  
+ 弄布尔值，指示路径和文件名是否引用原始文档。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -52,9 +52,9 @@ HRESULT GetPathName(
 |`E_FAIL`|无法创建或确定源文件。|  
   
 ## <a name="remarks"></a>备注  
- 此方法返回文档的完整路径和文件的名称。  
+ 此方法返回文档的完整路径和文件名。  
   
- 如果`pfIsOriginalFile`是 FALSE、 路径和文件名中`pbstrLongName`引用新创建的临时文件。  
+ 如果 `pfIsOriginalFile` 为 FALSE，则 `pbstrLongName` 中的路径和文件名引用新创建的临时文件。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugDocumentTextExternalAuthor 接口](../../winscript/reference/idebugdocumenttextexternalauthor-interface.md)

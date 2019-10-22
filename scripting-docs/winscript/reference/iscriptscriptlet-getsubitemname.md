@@ -1,5 +1,5 @@
 ---
-title: IScriptScriptlet::GetSubItemName | Microsoft Docs
+title: IScriptScriptlet：： GetSubItemName |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0c48517b7f9f5fab3250b8cff68ad288525145b9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b36f6dd98534b8122a6814f1fd154eca7882251a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786792"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571928"
 ---
 # <a name="iscriptscriptletgetsubitemname"></a>IScriptScriptlet::GetSubItemName
-Scriptlet 的对象主机的完全限定名称中返回的最后一个标识符。  
+返回 scriptlet 的对象主机的完全限定名中的最后一个标识符。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,9 +37,9 @@ HRESULT GetSubItemName(
   
 #### <a name="parameters"></a>参数  
  `pbstr`  
- [out]如果主机的完全限定 scriptlet 的名称有多个级别，`pbstr`返回在第二个级别的标识符的缓冲区地址。  
+ 弄如果主机的完全限定 scriptlet 名称具有多个级别，`pbstr` 将在第二个级别返回标识符的缓冲区地址。  
   
- 如果主机的完全限定 scriptlet 的名称有一个级别，`pbstr`返回在第一个级别的标识符的缓冲区地址。  
+ 如果主机的完全限定 scriptlet 名称有一个级别，`pbstr` 将在第一级返回标识符的缓冲区地址。  
   
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  

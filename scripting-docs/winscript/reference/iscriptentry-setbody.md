@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::SetBody | Microsoft Docs
+title: IScriptEntry：： SetBody |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 46ebccb57885480d34d79cbd27e99dc6a35b343d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1af865c8366481204ee413377a083b09d8c97383
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787640"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575379"
 ---
 # <a name="iscriptentrysetbody"></a>IScriptEntry::SetBody
-设置的正文中的文本`IScriptEntry`脚本块或`IScriptScriptlet`scriptlet。  
+设置位于 `IScriptEntry` 脚本块或 `IScriptScriptlet` scriptlet 正文中的文本。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,11 +37,11 @@ HRESULT SetBody(
   
 #### <a name="parameters"></a>参数  
  `psz`  
- [in]有关`IScriptEntry`脚本块中，`psz`是括在脚本标记中的文本。  
+ 中对于 `IScriptEntry` 脚本块，`psz` 是包含在脚本标记中的文本。  
   
- 有关`IScriptEntry`函数块`psz`是函数体。  
+ 对于 `IScriptEntry` 函数块，`psz` 是函数体。  
   
- 有关`IScriptScriptlet`对象 (派生自`IScriptEntry`)，`psz`是 scriptlet 的脚本文本。  
+ 对于 `IScriptScriptlet` 对象（从 `IScriptEntry` 派生），`psz` 是 scriptlet 的脚本文本。  
   
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  

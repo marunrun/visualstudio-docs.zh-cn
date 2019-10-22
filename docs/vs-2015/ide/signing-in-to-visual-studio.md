@@ -7,15 +7,15 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: b9531c25-e4cf-43ae-b331-a9f31a8cd171
 caps.latest.revision: 34
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 96676ee8021e09a5e7d0a9808cea1e615f58717a
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 9c732f4011c4194ce95621cf49022c2b6a9fabf3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65679843"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661222"
 ---
 # <a name="signing-in-to-visual-studio"></a>登录 Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "65679843"
 
 - **延长 Visual Studio 试用期** – 可以将 Visual Studio Professional 或 Visual Studio Enterprise 的使用延长 90 天，而不会限定为 30 天试用期。
 
-- **解锁 Visual Studio（如果使用与 MSDN 或 VSO 订阅相关联的帐户）**。 请参阅 [如何解锁 Visual Studio](../ide/how-to-unlock-visual-studio.md)。
+- **解锁 Visual Studio（如果使用与 MSDN 或 VSO 订阅相关联的帐户）** 。 请参阅 [如何解锁 Visual Studio](../ide/how-to-unlock-visual-studio.md)。
 
 - 在 IDE 中**自动连接到服务（如 Azure 和 Visual Studio Team Services）** ，而不会再次提示对同一账户输入凭据。
 
@@ -46,7 +46,7 @@ ms.locfileid: "65679843"
 
  提供设置后，Visual Studio 将启动，然后你就会进行登录并准备好开始操作。 若要验证你是否已登录，请在 Visual Studio 环境的右上角查找名称。
 
- ![当前登录的用户](../ide/media/vs2015-username.png "VS2015_UserName")
+ ![当前登录用户](../ide/media/vs2015-username.png "VS2015_UserName")
 
  除非你注销，否则当你启动 Visual Studio 时将自动登录，并自动应用于对同步设置所做的所有更改。 若要注销，请依次选择 Visual Studio 环境中的配置文件名称旁边的下箭头、 **“帐户设置”** 命令和 **“注销”** 链接。 若要再次登录，请选择 Visual Studio 环境的右上角中的 **“登录”** 命令。
 

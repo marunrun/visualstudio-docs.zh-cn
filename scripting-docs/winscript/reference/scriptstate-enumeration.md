@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fe6a05c5e73d26a8daa9e46c317422d85d1c40be
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 10dd6366e2d0783ec2e9d6bdadc001e9f999901e
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840156"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575682"
 ---
 # <a name="scriptstate-enumeration"></a>SCRIPTSTATE 枚举
-指定脚本引擎的状态。 此枚举由[IActiveScript::GetScriptState](../../winscript/reference/iactivescript-getscriptstate.md) ， [iactivescript:: Setscriptstate](../../winscript/reference/iactivescript-setscriptstate.md) ，并[IActiveScriptSite::OnStateChange](../../winscript/reference/iactivescriptsite-onstatechange.md)方法。  
+指定脚本引擎的状态。 此枚举由[IActiveScript：： GetScriptState](../../winscript/reference/iactivescript-getscriptstate.md) 、 [IActiveScript：： SetScriptState](../../winscript/reference/iactivescript-setscriptstate.md)和[IActiveScriptSite：： OnStateChange](../../winscript/reference/iactivescriptsite-onstatechange.md)方法使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,11 +44,11 @@ typedef enum tagSCRIPTSTATE {
   
 |||  
 |-|-|  
-|SCRIPTSTATE_UNINITIALIZED|脚本刚刚创建，但尚未被初始化使用`IPersist*`接口和[iactivescript:: Setscriptsite](../../winscript/reference/iactivescript-setscriptsite.md) 。|  
-|SCRIPTSTATE_INITIALIZED|脚本已初始化但未运行 （连接到其他对象或接收器事件） 或执行任何代码。 代码可以通过调用查询的执行[iactivescriptparse:: Parsescripttext](../../winscript/reference/iactivescriptparse-parsescripttext.md)方法。|  
-|SCRIPTSTATE_STARTED|脚本可执行代码，但尚不接收由添加的对象的事件[iactivescript:: Addnameditem](../../winscript/reference/iactivescript-addnameditem.md)方法。|  
-|SCRIPTSTATE_CONNECTED|脚本已加载并连接接收器事件。|  
-|SCRIPTSTATE_DISCONNECTED|脚本加载和运行时执行状态，但暂时与接收器事件断开连接。|  
+|SCRIPTSTATE_UNINITIALIZED|脚本刚刚创建，但尚未使用 `IPersist*` 接口和[IActiveScript：： SetScriptSite](../../winscript/reference/iactivescript-setscriptsite.md)进行初始化。|  
+|SCRIPTSTATE_INITIALIZED|脚本已初始化，但未运行（连接到其他对象或接收事件）或执行任何代码。 可以通过调用[IActiveScriptParse：:P arsescripttext](../../winscript/reference/iactivescriptparse-parsescripttext.md)方法查询代码的执行。|  
+|SCRIPTSTATE_STARTED|脚本可以执行代码，但尚未接收[IActiveScript：： AddNamedItem](../../winscript/reference/iactivescript-addnameditem.md)方法添加的对象的事件。|  
+|SCRIPTSTATE_CONNECTED|加载并连接脚本以接收事件。|  
+|SCRIPTSTATE_DISCONNECTED|脚本已加载并具有运行时执行状态，但暂时与接收事件断开连接。|  
 |SCRIPTSTATE_CLOSED|脚本已关闭。 脚本引擎不再运行，并不再针对多数方法返回错误。|  
   
 ## <a name="see-also"></a>请参阅  

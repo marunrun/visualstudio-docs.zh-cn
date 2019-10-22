@@ -1,5 +1,5 @@
 ---
-title: 未终止的字符串常量 (JavaScript) |Microsoft Docs
+title: 未终止的字符串常量（JavaScript） |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,23 +14,23 @@ ms.assetid: 5083809e-9828-4aea-b9b0-80f46d6f3812
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c3c5f38ba41e2cadfd0a8234413c63cc96b6744a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: a140c7587d4ca00c66590a471cfb32827cf5f780
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435643"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575881"
 ---
 # <a name="unterminated-string-constant-javascript"></a>未终止的字符串常量 (JavaScript)
-未结束你在字符串常量前面为右引号。 字符串常量必须用一对引号引起来。  
+你未使用右引号结束字符串常量。 字符串常量必须用一对引号引起来。  
   
 > [!NOTE]
-> 可以使用配对的单引号或双引号括起来。 中字符串括在单引号中，可能包含两个双引号和单引号可以包含字符串括在双引号内。  
+> 您可以使用成对的单引号或双引号。 双引号可以包含在单引号引起来的字符串中，并且在双引号括起来的字符串中可以包含单引号。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 添加到字符串的末尾的右引号。  
+- 将右引号添加到字符串的末尾。  
   
 ## <a name="see-also"></a>请参阅  
- [字符串对象](../../javascript/reference/string-object-javascript.md)   
+ [String 对象](../../javascript/reference/string-object-javascript.md)   
  [toString 方法 (Object)](../../javascript/reference/tostring-method-object-javascript.md)

@@ -1,7 +1,7 @@
 ---
 title: 在 Android 和 iOS 上生成 OpenGL ES 应用程序 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/16/2019
+ms.date: 09/17/2019
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +12,12 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: b235576f21b63a7be4170f36abf58bed9fab9df3
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 259092668c336a90758a669efdc4b154b2097cab
+ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68923852"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71079272"
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>在 Android 和 iOS 上生成 OpenGL ES 应用程序
 
@@ -25,17 +25,21 @@ ms.locfileid: "68923852"
 
 ## <a name="requirements"></a>要求
 
-在可以创建用于 iOS 和 Android 的 OpenGL ES 应用之前，确保你已满足所有系统要求。 如果尚未满足要求，请在 Visual Studio 安装程序中安装使用 C++ 的移动开发工作负载。 若要针对 iOS 进行生成，请包括可选的 C++ iOS 开发工具。 若要针对 Android 进行生成，请安装 C++ Android 开发工具和所需的第三方工具：Android NDK、Apache Ant、Google Android 仿真器和 Intel 硬件加速执行管理器。 接下来，配置 Intel HAXM 和 Android 仿真器以在系统上运行。 有关详细信息和详细说明，请参阅[安装用于跨平台移动开发的 Visual C++](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md)。 若要生成和测试 iOS 应用，将需要一台 Mac 计算机，并根据安装说明进行设置安装。 有关如何为 iOS 开发进行设置的详细信息，请参阅[安装并配置使用 iOS 进行生成的工具](../cross-platform/install-and-configure-tools-to-build-using-ios.md)。
+在可以创建用于 iOS 和 Android 的 OpenGL ES 应用之前，确保你已满足所有系统要求。 如果尚未满足要求，请在 Visual Studio 安装程序中安装使用 C++ 的移动开发工作负载。 若要针对 iOS 进行生成，请包括可选的 C++ iOS 开发工具。 若要针对 Android 进行生成，请安装 C++ Android 开发工具和所需的第三方工具：Android NDK、Apache Ant 和 Google Android Emulator。 为了提高 Intel 平台上的模拟器性能，建议同时安装 Intel 硬件加速执行管理器 (HAXM)。 接下来，配置 Intel HAXM 和 Android 仿真器以在系统上运行。 有关详细信息和详细说明，请参阅[安装用于跨平台移动开发的 Visual C++](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md)。
+
+若要生成和测试 iOS 应用，将需要一台 Mac 计算机，并根据安装说明进行设置安装。 有关如何为 iOS 开发进行设置的详细信息，请参阅[安装并配置使用 iOS 进行生成的工具](../cross-platform/install-and-configure-tools-to-build-using-ios.md)。
 
 ## <a name="create-a-new-opengles-application-project"></a>创建新的 OpenGLES 应用程序项目
 
-在本教程中，你首先创建一个新的 OpenGL ES 应用程序项目，然后在适用于 Android 的 Visual Studio 仿真程序中生成并运行默认应用。 接下来生成适用于 iOS 的应用并在 iOS 设备上运行该应用。
+本教程中首先会创建一个新的 OpenGL ES 应用程序项目， 然后在适用于 Android 的 Visual Studio 模拟器中生成并运行默认应用。 接下来生成适用于 iOS 的应用并在 iOS 设备上运行该应用。
 
-1. 在 Visual Studio 中，选择“文件” > “新建” > “项目”    。
+::: moniker range="vs-2017"
 
-1. 在  “新建项目”对话框中，在  “模板”下，选择“Visual C++”   >   “跨平台”，然后选择“OpenGLES 应用程序(Android、iOS)”  模板。
+1. 在 Visual Studio 中，依次选择“文件”  >“新建”  >“项目”  。
 
-1. 为应用命名（例如 `MyOpenGLESApp`），然后选择 **确认**。
+1. 在“新建项目”对话框中的“模板”下，选择“Visual C++”>“跨平台”，然后选择“OpenGLES 应用程序(Android、iOS)”模板      。
+
+1. 为应用命名（例如 MyOpenGLESApp），然后选择“确定”   。
 
    ![新的 OpenGLES 应用程序项目](../cross-platform/media/cppmdd_opengles_newproj.PNG "CPPMDD_OpenGLES_NewProj")
 
@@ -43,7 +47,23 @@ ms.locfileid: "68923852"
 
    ![解决方案资源管理器中的 MyOpenGLESApp](../cross-platform/media/cppmdd_opengles_solexpl.PNG "CPPMDD_OpenGLES_SolExpl")
 
-   新的 OpenGL ES 应用程序解决方案包括三个库项目和两个应用程序项目。 库文件夹包含一个共享代码项目和两个引用共享代码的特定于平台的项目：
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+1. 在 Visual Studio 中，依次选择“文件”  >“新建”  >“项目”  。
+
+1. 在“创建新项目”对话框中，选择“OpenGLES 应用程序(Android、iOS)”模板，然后选择“下一步”    。
+
+1. 在“配置新项目”对话框的“项目名称”中，输入项目名称（例如 MyOpenGLESApp），然后选择“创建”     。
+
+   Visual Studio 创建新的解决方案并打开解决方案资源管理器。
+
+   ![解决方案资源管理器中的 MyOpenGLESApp](../cross-platform/media/cppmdd_opengles_solexpl.PNG "CPPMDD_OpenGLES_SolExpl")
+
+::: moniker-end
+
+新的 OpenGL ES 应用程序解决方案包括三个库项目和两个应用程序项目。 库文件夹包含一个共享代码项目和两个引用共享代码的特定于平台的项目：
 
 - `MyOpenGLESApp.Android.NativeActivity` 包含引用和粘附代码，可将应用作为本机活动在 Android 上实现。 粘附代码入口点在 main.cpp 中实现，它包括 `MyOpenGLESApp.Shared` 中的公共共享代码。  预编译头位于 pch.h。  此本机活动应用项目编译为一个由 `MyOpenGLESApp.Android.Packaging` 项目选取的共享库 (.so) 文件。 
 

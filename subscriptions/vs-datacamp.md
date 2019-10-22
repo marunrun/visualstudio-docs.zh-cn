@@ -65,7 +65,7 @@ ms.locfileid: "68681642"
 | Visual Studio Enterprise（标准）  | NFR<sup>1</sup> |不可用  | 不可用 |
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure | 不可用 | 不可用 |
 
-<sup>1</sup>  *包括：不得转售 (NFR)、FTE、最有价值专家 (MVP)、区域总监 (RD)、Microsoft 合作伙伴网络 (MPN)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 认证培训师、BizSpark、Imagine 
+<sup>1</sup>  包括：  不得转售 (NFR)、FTE、最有价值专家 (MVP)、区域总监 (RD)、Microsoft 合作伙伴网络 (MPN)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 认证培训师、BizSpark、Imagine
 
 > [!NOTE]
 > Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 我们鼓励新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) 以浏览购买 Visual Studio 的不同选项。

@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame::GetCodeContext | Microsoft Docs
+title: IDebugStackFrame：： GetCodeContext |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: dadb440017969f3ea4c824c681c726645a5757b0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9b640238b9c1212f477c6a26a9cc251678758f22
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62934706"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574290"
 ---
 # <a name="idebugstackframegetcodecontext"></a>IDebugStackFrame::GetCodeContext
-返回与此堆栈帧关联的当前代码上下文。  
+返回与堆栈帧关联的当前代码上下文。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT GetCodeContext(
   
 #### <a name="parameters"></a>参数  
  `ppcc`  
- [out]与此堆栈帧关联的代码上下文。  
+ 弄与堆栈帧关联的代码上下文。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -47,7 +47,7 @@ HRESULT GetCodeContext(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法返回与此堆栈帧关联的当前代码上下文。  
+ 此方法返回与堆栈帧关联的当前代码上下文。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugStackFrame 接口](../../winscript/reference/idebugstackframe-interface.md)

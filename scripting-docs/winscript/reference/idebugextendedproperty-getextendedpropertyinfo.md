@@ -1,5 +1,5 @@
 ---
-title: IDebugExtendedProperty::GetExtendedPropertyInfo | Microsoft Docs
+title: IDebugExtendedProperty：： GetExtendedPropertyInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 89067720b6643c8c187e6340fb529989f2439933
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 77167c46e02bcf2bf5d3ce5836ad5de103176e93
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946097"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576380"
 ---
 # <a name="idebugextendedpropertygetextendedpropertyinfo"></a>IDebugExtendedProperty::GetExtendedPropertyInfo
-提取扩展属性，这是比更简单的详细信息的扩展的信息`IDebugProperty`。  
+提取扩展属性的扩展信息，这比简单的 `IDebugProperty` 更多。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,18 +39,18 @@ HRESULT GetExtendedPropertyInfo(
   
 #### <a name="parameters"></a>参数  
  `dwFieldSpec`  
- [in]指定确定要在中填写的字段的 EX_DBGPROP_INFO_FLAGS 常量`ExtendedDebugPropertyInfo`结构。  
+ 中指定 EX_DBGPROP_INFO_FLAGS 常量，确定要在 `ExtendedDebugPropertyInfo` 结构中填充的字段。  
   
  `nRadix`  
- [in]用于解释任何数字信息的基数。  
+ 中用于解释任何数值信息的基数。  
   
  `pExtendedPropertyInfo`  
- [out]返回`ExtendedDebugPropertyInfo`描述的属性的结构。  
+ 弄返回描述属性的 `ExtendedDebugPropertyInfo` 结构。  
   
 ## <a name="return-value"></a>返回值  
- 返回一个有效`HRESULT`，通常`S_OK`。  
+ 返回一个有效 `HRESULT`，通常 `S_OK`。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugExtendedProperty 接口](../../winscript/reference/idebugextendedproperty-interface.md)   
- [EX_DBGPROP_INFO_FLAGS](../../winscript/reference/ex-dbgprop-info-flags.md)   
+ [EX_DBGPROP_INFO_FLAGS](../../winscript/reference/ex-dbgprop-info-flags.md)    
  [ExtendedDebugPropertyInfo 结构](../../winscript/reference/extendeddebugpropertyinfo-structure.md)

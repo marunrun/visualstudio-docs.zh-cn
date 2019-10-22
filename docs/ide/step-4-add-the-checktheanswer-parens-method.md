@@ -1,30 +1,38 @@
 ---
 title: 步骤 4：添加 CheckTheAnswer() 方法
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: tutorial
+ms.prod: visual-studio-windows
+ms.technology: vs-ide-general
 dev_langs:
-- csharp
-- vb
+- CSharp
+- VB
 ms.assetid: c66f3831-b4a0-40bc-a109-8f46f4db35ed
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c691b1db57fa1a00ad33441e36ff0f7f79716f11
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 075c56a5d5bcb02ee443035ac26d7730f145a445
+ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416514"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314077"
 ---
 # <a name="step-4-add-the-checktheanswer-method"></a>步骤 4：添加 CheckTheAnswer() 方法
+
 在本教程的第 4 部分中，您将编写一个方法 `CheckTheAnswer()`，用于判定数学题的答案是否正确。 本主题是基本编码概念教程系列中的一部分。 有关本教程的概述，请参阅[教程 2：创建计时数学测验](../ide/tutorial-2-create-a-timed-math-quiz.md)。
 
 > [!NOTE]
-> 如果您一直使用 Visual Basic 学习本教程，则将使用 `Function` 关键字而不是一般的 `Sub` 关键字，因为此方法将返回一个值。 真的很简单：sub 不会返回值，但函数会返回值。
+> 本主题是基本编码概念教程系列中的一部分。
+> - 有关本教程的概述，请参阅[教程 2：创建计时数学测验](../ide/tutorial-2-create-a-timed-math-quiz.md)。
+> - 若要下载完整版代码，请参阅[数学测验教程的完整示例](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c)。
 
 ## <a name="to-verify-whether-the-answers-are-correct"></a>验证答案是否正确
+
+> [!NOTE]
+> 如果您一直使用 Visual Basic 学习本教程，则将使用 `Function` 关键字而不是一般的 `Sub` 关键字，因为此方法将返回一个值。 真的很简单：sub 不会返回值，但函数会返回值。
 
 1. 添加 `CheckTheAnswer()` 方法。
 
@@ -32,6 +40,8 @@ ms.locfileid: "68416514"
 
      [!code-vb[VbExpressTutorial3Step4#8](../ide/codesnippet/VisualBasic/step-4-add-the-checktheanswer-parens-method_1.vb)]
      [!code-csharp[VbExpressTutorial3Step4#8](../ide/codesnippet/CSharp/step-4-add-the-checktheanswer-parens-method_1.cs)]
+
+     [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
      接下来，将计时器 <xref:System.Windows.Forms.Timer.Tick> 事件处理程序方法中的代码更新为调用新方法 `CheckTheAnswer()`，从而检查答案。
 
@@ -51,6 +61,6 @@ ms.locfileid: "68416514"
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅[步骤 5：为 NumericUpDown 控件添加 Enter 事件处理程序](../ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md)。
+- 要转到下一个教程步骤，请参阅[步骤 5：为 NumericUpDown 控件添加 Enter 事件处理程序](../ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md)** 。
 
 - 要返回上一个教程步骤，请参阅[步骤 3：添加倒计时计时器](../ide/step-3-add-a-countdown-timer.md)。

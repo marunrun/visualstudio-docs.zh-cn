@@ -17,19 +17,23 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a79bcf2aade3a84e0453aec1d64e37c8a6a5c24c
-ms.sourcegitcommit: 91c7f1b525e0c22d938bc4080ba4ceac2483474f
+ms.openlocfilehash: f5dd3b1dc758a9b4f7634d4b6e73ab294289d6cd
+ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67033040"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71128294"
 ---
 # <a name="measure-application-performance-by-analyzing-cpu-usage"></a>通过分析 CPU 使用情况衡量应用程序性能
-可使用 Visual Studio 分析工具来分析应用程序中的性能问题。 此过程演示如何使用诊断工具的“CPU 使用率”  选项卡获取应用的性能数据。 Visual Studio 中的 .NET 开发（包括 ASP.NET、和本机 /C++ 开发）支持此诊断工具。
+
+可使用 Visual Studio 分析工具来分析应用程序中的性能问题。 此过程演示如何使用诊断工具的“CPU 使用率”  选项卡获取应用的性能数据。
 
 调试中断时，**CPU 使用率**工具收集有关应用程序中正在执行的函数的信息。 该工具将列出执行工作的函数，并提供时间线图，可专用于采样会话的特定部分。
 
 诊断中心提供了大量其他选项来运行和管理诊断会话。 如果**CPU 使用率**未提供所需数据，[其他分析工具](../profiling/profiling-feature-tour.md)可提供可能有帮助的不同种类的信息。 在许多情况下，CPU 以外的因素可能会导致应用程序性能瓶颈，例如内存、呈现 UI 或网络请求时间。 诊断中心提供大量其他选项，可用于记录和分析此种数据。
+
+> [!Important]
+> Visual Studio 中的 .NET 开发（包括 ASP.NET、和本机 /C++ 开发）支持此诊断工具。
 
 本文讨论在常规调试工作流中分析 CPU 使用情况。 还可以在不附加调试程序的情况下，或通过定目标到正在运行的应用来分析 CPU 使用率。有关详细信息，请参阅[在使用或不使用调试程序的情况下运行分析工具](../profiling/running-profiling-tools-with-or-without-the-debugger.md)中的[在不使用调试程序的情况下收集分析数据](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging)。
 

@@ -2,7 +2,7 @@
 title: 安装 Visual Studio
 titleSuffix: ''
 description: 了解如何逐步安装 Visual Studio。
-ms.date: 04/16/2019
+ms.date: 10/07/2019
 ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +20,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 4833c6e8e1391028fbb034ff96967450d006356a
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 6cd91fadea397955b756461383ed8e17030b4c3b
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263726"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018849"
 ---
 # <a name="install-visual-studio"></a>安装 Visual Studio
 
@@ -82,7 +82,7 @@ ms.locfileid: "66263726"
 
 1. 重新启动。 重新启动可确保挂起的任何安装或更新都不会影响 Visual Studio 安装。
 
-1. 释放空间。 通过运行磁盘清理应用程序等方式，从 %SystemDrive% 删除不需要的文件和应用程序。 
+1. 释放空间。 通过运行磁盘清理应用程序等方式，从 %SystemDrive% 删除不需要的文件和应用程序。
 
 ::: moniker-end
 
@@ -100,19 +100,20 @@ ms.locfileid: "66263726"
 
 ## <a name="step-2---download-visual-studio"></a>第 2 步 - 下载 Visual Studio
 
-接下来，下载 Visual Studio 引导程序文件。 为此，请选择下面的按钮，选择所需的 Visual Studio 版本，选择“保存”，然后选择“打开文件夹”。
+接下来，下载 Visual Studio 引导程序文件。
 
 ::: moniker range="vs-2017"
 
- > [!div class="button"]
- > [下载 Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)
+若要获取 Visual Studio 2017 的引导程序，请参阅 [Visual Studio 早期版本](https://visualstudio.microsoft.com/vs/older-downloads/)下载页，获取关于如何执行此操作的详细信息。
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
+为此，请选择下面的按钮，选择所需的 Visual Studio 版本，选择“保存”，然后选择“打开文件夹”   。
+
  > [!div class="button"]
- > [下载 Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)
+ > [下载 Visual Studio](https://visualstudio.microsoft.com/downloads)
 
 ::: moniker-end
 
@@ -120,15 +121,15 @@ ms.locfileid: "66263726"
 
 运行引导程序文件以安装 Visual Studio 安装程序。 这个新的轻型安装程序包括安装和自定义 Visual Studio 所需的一切。
 
-1. 在“下载”文件夹中，双击与下列文件之一匹配或类似的引导程序文件：
+1. 在“下载”  文件夹中，双击与下列文件之一匹配或类似的引导程序文件：
 
    * 对于 Visual Studio Community，请运行 **vs_community.exe**
    * 对于 Visual Studio Professional，请运行 **vs_professional.exe**
    * 对于 Visual Studio Enterprise，请运行 **vs_enterprise.exe**
 
-   如果收到用户帐户控制通知，请选择“是”。
+   如果收到用户帐户控制通知，请选择“是”  。
 
-2. 我们会要求确认 Microsoft [许可条款](https://visualstudio.microsoft.com/license-terms/)和 Microsoft [隐私声明](https://privacy.microsoft.com/privacystatement)。 选择“继续”。
+2. 我们会要求确认 Microsoft [许可条款](https://visualstudio.microsoft.com/license-terms/)和 Microsoft [隐私声明](https://privacy.microsoft.com/privacystatement)。 选择“继续”  。
 
    ![许可条款和隐私声明](media/privacy-and-license-terms.png "Microsoft 许可条款和隐私声明")
 
@@ -138,13 +139,13 @@ ms.locfileid: "66263726"
 
  ::: moniker range="vs-2017"
 
-1. 在“安装 Visual Studio”屏幕中找到所需的工作负载。
+1. 在“安装 Visual Studio”  屏幕中找到所需的工作负载。
 
    ![Visual Studio 2017：安装工作负载](../install/media/vs-installer-installing-workloads.png)
 
      例如，选择“.NET 桌面开发”工作负载。 它附带默认核心编辑器，该编辑器针对超过 20 种语言提供基本代码编辑支持，能够打开和编辑任意文件夹中的代码（而无需使用项目），还提供集成的源代码管理。
 
-1. 选择所需的工作负载后，选择“安装”。
+1. 选择所需的工作负载后，选择“安装”  。
 
     接下来，会出现多个显示 Visual Studio 安装进度的状态屏幕。
 
@@ -152,24 +153,24 @@ ms.locfileid: "66263726"
 
 ::: moniker range="vs-2019"
 
-1. 安装完新的工作负载和组件后，选择“启动”。
+1. 安装完新的工作负载和组件后，选择“启动”  。
 
    ![Visual Studio 2019：安装工作负载](../install/media/vs-2019/vs-installer-workloads.png)
 
      例如，选择“ASP.NET 和 Web 开发”工作负载。 它附带默认核心编辑器，该编辑器针对超过 20 种语言提供基本代码编辑支持，能够打开和编辑任意文件夹中的代码（而无需使用项目），还提供集成的源代码管理。
 
-1. 选择所需的工作负载后，选择“安装”。
+1. 选择所需的工作负载后，选择“安装”  。
 
     接下来，会出现多个显示 Visual Studio 安装进度的状态屏幕。
 
  ::: moniker-end
 
 > [!TIP]
-> 在安装之后，可以随时安装最初未安装的工作负荷或组件。 如果已打开 Visual Studio，请转到“工具” > “获取工具和功能...”，这会打开 Visual Studio 安装程序。 或者，从“开始”菜单打开“Visual Studio 安装程序”。 在此处可以选择要安装的工作负载或组件。 然后，选择“修改”。
+> 在安装之后，可以随时安装最初未安装的工作负荷或组件。 如果已打开 Visual Studio，请转到“工具”   > “获取工具和功能...”  ，这会打开 Visual Studio 安装程序。 或者，从“开始”菜单打开“Visual Studio 安装程序”  。 在此处可以选择要安装的工作负载或组件。 然后，选择“修改”  。
 
 ## <a name="step-5---choose-individual-components-optional"></a>第 5 步 - 选择各个组件（可选）
 
-如果不想使用工作负载功能来自定义 Visual Studio 安装，或者想要添加比工作负载安装更多的组件，可通过从“各个组件”选项卡上安装或添加各个组件来完成此操作。选择所需组件，然后按照提示进行操作。
+如果不想使用工作负载功能来自定义 Visual Studio 安装，或者想要添加比工作负载安装更多的组件，可通过从“各个组件”选项卡上安装或添加各个组件来完成此操作  。选择所需组件，然后按照提示进行操作。
 
 ::: moniker range="vs-2017"
 
@@ -185,7 +186,7 @@ ms.locfileid: "66263726"
 
 ## <a name="step-6---install-language-packs-optional"></a>第 6 步 - 安装语言包（可选）
 
-默认情况下，安装程序首次运行时会尝试匹配操作系统语言。 若要以所选语言安装 Visual Studio，请从 Visual Studio 安装程序中选择“语言包”选项卡，然后按照提示进行操作。
+默认情况下，安装程序首次运行时会尝试匹配操作系统语言。 若要以所选语言安装 Visual Studio，请从 Visual Studio 安装程序中选择“语言包”选项卡，然后按照提示进行操作  。
 
 ::: moniker range="vs-2017"
 
@@ -230,27 +231,27 @@ ms.locfileid: "66263726"
 
 ::: moniker range="vs-2017"
 
-1. 在 Visual Studio 安装完成后，选择“启动”按钮，开始使用 Visual Studio 进行开发。
+1. 在 Visual Studio 安装完成后，选择“启动”按钮，开始使用 Visual Studio 进行开发  。
 
-2. 选择“文件”，然后选择“新建项目”。
+2. 选择“文件”，然后选择“新建项目”   。
 
 3. 选择一种项目类型。
 
-   例如，若要[生成 C++ 应用](../ide/getting-started-with-cpp-in-visual-studio.md)，请选择“已安装”，展开“Visual C++”，然后选择要生成的 C++ 项目类型。
+   例如，若要[生成 C++ 应用](/cpp/get-started/tutorial-console-cpp)，请选择“已安装”，展开“Visual C++”，然后选择要生成的 C++ 项目类型   。
 
-   若要[生成 C# 应用](../get-started/csharp/tutorial-console.md)，请选择“已安装”，展开“Visual C#”，然后选择要生成的 C# 项目类型。
+   若要[生成 C# 应用](../get-started/csharp/tutorial-console.md)，请选择“已安装”，展开“Visual C#”，然后选择要生成的 C# 项目类型   。
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-1. 在 Visual Studio 安装完成后，选择“启动”按钮，开始使用 Visual Studio 进行开发。
+1. 在 Visual Studio 安装完成后，选择“启动”按钮，开始使用 Visual Studio 进行开发  。
 
-1. 在“开始”窗口上，选择“创建新项目”。
+1. 在“开始”窗口上，选择“创建新项目”  。
 
 1. 在搜索框中，输入要创建的应用类型，查看可用模板列表。 模板列表取决于在安装期间选择的工作负载。 若要查看其他模板，请选择其他工作负载。
 
-   此外，还可使用“语言”下拉列表筛选搜索特定编程语言。 也可使用“平台”列表和“项目类型”列表进行筛选。 
+   此外，还可使用“语言”下拉列表筛选搜索特定编程语言  。 也可使用“平台”列表和“项目类型”列表进行筛选   。
 
 1. Visual Studio 会打开新的项目，然后便可开始编码！
 

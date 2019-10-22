@@ -9,17 +9,16 @@ author: gewarren
 f1_keywords:
 - vs.startpage
 - VS.StartPage.HowDoI
-- MSDNSTART
 ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cfe4735dac41b4bdd85e85e2987f242e96fcfff9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 323f941ddb4672de8d52d56cf4e07910531c3df8
+ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62966238"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095388"
 ---
 # <a name="welcome-to-the-visual-studio-ide"></a>欢迎使用 Visual Studio IDE
 
@@ -43,7 +42,7 @@ ms.locfileid: "62966238"
 
 - [使用 Visual Studio 创建第一个 Node.js 应用](../ide/quickstart-nodejs.md)
 
-- [Visual Studio 中的 C++ 入门](../ide/getting-started-with-cpp-in-visual-studio.md)
+- [使用 Visual Studio 创建第一个 C++ 控制台应用](/cpp/get-started/tutorial-console-cpp)
 
 ## <a name="see-also"></a>请参阅
 

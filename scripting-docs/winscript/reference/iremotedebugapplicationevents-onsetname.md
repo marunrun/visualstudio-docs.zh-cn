@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationEvents::OnSetName | Microsoft Docs
+title: IRemoteDebugApplicationEvents：： OnSetName |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7cf72bb02a1ef934fcbf6a4fa32c9572a6e1afa7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cb2d3b301888015c2815725c5d1c7903758e319a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62788427"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571931"
 ---
 # <a name="iremotedebugapplicationeventsonsetname"></a>IRemoteDebugApplicationEvents::OnSetName
 处理设置名称事件。  
@@ -37,7 +37,7 @@ HRESULT OnSetName(
   
 #### <a name="parameters"></a>参数  
  `pstrName`  
- [in]新名称。  
+ 中新名称。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -47,7 +47,7 @@ HRESULT OnSetName(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法可处理设置名称事件。  
+ 此方法处理设置名称事件。  
   
 ## <a name="see-also"></a>请参阅  
  [IRemoteDebugApplicationEvents 接口](../../winscript/reference/iremotedebugapplicationevents-interface.md)

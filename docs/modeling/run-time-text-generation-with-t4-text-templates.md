@@ -10,25 +10,25 @@ helpviewer_keywords:
 - TextTemplatingFilePreprocessor custom tool
 - text templates, TransformText() method
 - text templates, generating files at run time
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 050af194c9fbdcabf99a880a0e9c5c4bf8913a3a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e1ee422ec549ced0995db22258edf9ef21540804
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62823937"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660313"
 ---
 # <a name="run-time-text-generation-with-t4-text-templates"></a>使用 T4 文本模板的运行时文本生成
 
-使用 Visual Studio 运行时文本模板，可以在运行时在应用程序中生成文本字符串。 执行应用程序的计算机无需安装 Visual Studio。 运行时模板有时被称为"预处理过的文本模板"，因为在编译时，该模板会生成在运行时执行的代码。
+可以通过使用 Visual Studio 运行时文本模板，在运行时在应用程序中生成文本字符串。 执行应用程序的计算机无需安装 Visual Studio。 运行时模板有时称为 "预处理文本模板"，因为在编译时，模板会生成在运行时执行的代码。
 
-每个模板都将出现在生成的字符串和程序代码的片段的文本的混合。 程序片段的字符串的变量部分提供值，还可以控制条件和重复部分。
+每个模板都是文本在生成的字符串中显示的混合形式，以及程序代码的片段。 程序片段为字符串的可变部分提供值，并还控制条件和重复的部分。
 
-例如，可以创建一份 HTML 报告的应用程序中使用以下模板。
+例如，下面的模板可用于创建 HTML 报表的应用程序。
 
 ```html
 <#@ template language="C#" #>
@@ -45,26 +45,26 @@ This report is Company Confidential.
 </body></html>
 ```
 
-请注意该模板是 HTML 页，在其中的变量部分已被替换为在程序代码。 您可以通过编写静态 HTML 页面的原型开始此类页面的设计。 然后可以使用程序代码到下从有一次生成各不相同的内容替换表和其他变量部分。
+请注意，该模板是一个 HTML 页面，其中的变量部分已替换为程序代码。 您可以通过编写 HTML 页面的静态原型来开始设计此类页。 然后，您可以将表和其他变量部分替换为生成内容的程序代码，该代码会因不同的不同而异。
 
-在应用程序可以使用模板是更轻松地查看输出的最终形式，比在一长串写语句。 对输出的窗体的更改是更容易且更可靠。
+在应用程序中使用模板，可以更方便地查看输出的最终形式，这与在中一样（例如，一系列长的 write 语句）更为容易。 对输出格式进行更改更简单、更可靠。
 
 ## <a name="creating-a-run-time-text-template-in-any-application"></a>在任何应用程序中创建运行时文本模板
 
-### <a name="to-create-a-run-time-text-template"></a>若要创建运行时文本模板
+### <a name="to-create-a-run-time-text-template"></a>创建运行时文本模板
 
-1. 在解决方案资源管理器，在你的项目的快捷菜单上选择**外** > **新项**。
+1. 在解决方案资源管理器中，在项目的快捷菜单上，选择 "**添加** > **新项**"。
 
-2. 在中**添加新项**对话框中，选择**运行时文本模板**。 (在 Visual Basic 中查找下**常见项** > **常规**。)
+2. 在 "**添加新项**" 对话框中，选择 "**运行时文本模板**"。 （Visual Basic  > **常规**"下的"**常见项**"。）
 
-3. 键入你的模板文件的名称。
+3. 键入模板文件的名称。
 
     > [!NOTE]
-    > 模板文件的名称将用作生成的代码中的类名称。 因此，它不应具有空格或标点。
+    > 模板文件名将用作生成的代码中的类名。 因此，它不应包含空格或标点。
 
 4. 选择“添加”。
 
-    创建新文件扩展名 **.tt**。 其**自定义工具**属性设置为**TextTemplatingFilePreprocessor**。 它包含以下行：
+    将创建一个扩展名为**tt**的新文件。 其 "**自定义工具**" 属性设置为 " **TextTemplatingFilePreprocessor**"。 它包含以下行：
 
     ```
     <#@ template language="C#" #>
@@ -76,22 +76,22 @@ This report is Company Confidential.
 
 ## <a name="converting-an-existing-file-to-a-run-time-template"></a>将现有文件转换为运行时模板
 
-创建模板的好办法是输出的将现有示例。 例如，如果你的应用程序将在生成 HTML 文件，您可以首先创建一个普通的 HTML 文件。 请确保其正常运行，并且其外观正确无误。 然后将其包含在 Visual Studio 项目并将其转换为模板。
+创建模板的一种好方法是转换输出的现有示例。 例如，如果您的应用程序将生成 HTML 文件，则可以通过创建一个纯 HTML 文件来开始。 请确保其正常工作，且其外观正确。 然后将其包含在 Visual Studio 项目中，并将其转换为模板。
 
-### <a name="to-convert-an-existing-text-file-to-a-run-time-template"></a>若要将现有文本文件转换为运行时模板
+### <a name="to-convert-an-existing-text-file-to-a-run-time-template"></a>将现有文本文件转换为运行时模板
 
-1. 在 Visual Studio 项目中包括该文件。 在解决方案资源管理器，在项目的快捷菜单上选择**外** > **现有项**。
+1. 将该文件包含在 Visual Studio 项目中。 在解决方案资源管理器中，在项目的快捷菜单上，选择 "**添加** > **现有项**"。
 
-2. 设置文件的**自定义工具**属性设置为**TextTemplatingFilePreprocessor**。 在解决方案资源管理器，在该文件的快捷菜单上选择**属性**。
+2. 将文件的 "**自定义工具**" 属性设置为 " **TextTemplatingFilePreprocessor**"。 在解决方案资源管理器的文件的快捷菜单上，选择 "**属性**"。
 
     > [!NOTE]
-    > 如果已设置该属性，请确保它是**TextTemplatingFilePreprocessor**而不**TextTemplatingFileGenerator**。 如果已具有扩展名的文件包含在发生这种情况 **.tt**。
+    > 如果已设置该属性，请确保它是**TextTemplatingFilePreprocessor**而不是**TextTemplatingFileGenerator**。 如果包含扩展名为**tt**的文件，则会发生这种情况。
 
-3. 更改到的文件扩展名 **.tt**。 尽管此步骤是可选的但它可帮助您避免在不适当的编辑器中打开该文件。
+3. 将文件扩展名更改为**tt**。 尽管此步骤是可选的，但它有助于避免在不正确的编辑器中打开文件。
 
-4. 从文件名称的主要部分中删除任何空格或标点。 例如，"我的 Web Page.tt"将是不正确，但是"MyWebPage.tt"是正确的。 文件名称将用作生成的代码中的类名称。
+4. 从文件名的主要部分删除所有空格或标点。 例如，"我的 Web Page.tt" 不正确，但 "MyWebPage.tt" 是正确的。 文件名称将用作生成的代码中的类名。
 
-5. 在文件开头插入以下行。 如果您正在 Visual Basic 项目中，将为"C#"与"VB"。
+5. 在文件开头插入以下行。 如果正在 Visual Basic 项目中操作，请将 "C#" 替换为 "VB"。
 
     `<#@ template language="C#" #>`
 
@@ -99,15 +99,15 @@ This report is Company Confidential.
 
 ### <a name="template-directive"></a>模板指令
 
-创建文件时，将保留该模板的第一行：
+保持模板的第一行与创建文件时的内容相同：
 
 `<#@ template language="C#" #>`
 
-语言参数将取决于你的项目的语言。
+Language 参数将取决于项目的语言。
 
-### <a name="plain-content"></a>纯文本内容
+### <a name="plain-content"></a>纯内容
 
-编辑 **.tt**文件以包含你希望应用程序生成的文本。 例如：
+编辑**tt**文件以包含你希望应用程序生成的文本。 例如:
 
 ```html
 <html><body>
@@ -117,9 +117,9 @@ This report is Company Confidential.
 </body></html>
 ```
 
-### <a name="embedded-program-code"></a>嵌入在程序代码
+### <a name="embedded-program-code"></a>嵌入的程序代码
 
-您可以插入程序代码之间`<#`和`#>`。 例如：
+可以在 `<#` 和 `#>` 之间插入程序代码。 例如:
 
 ```csharp
 <table>
@@ -144,19 +144,19 @@ This report is Company Confidential.
 </table>
 ```
 
-请注意之间插入语句`<# ... #>`之间插入表达式`<#= ... #>`。 有关详细信息，请参阅[编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
+请注意，将在 `<# ... #>` 中插入语句，并在 `<#= ... #>` 之间插入表达式。 有关详细信息，请参阅[编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
 
 ## <a name="using-the-template"></a>使用模板
 
-### <a name="the-code-built-from-the-template"></a>从模板生成代码
+### <a name="the-code-built-from-the-template"></a>从模板生成的代码
 
-在您保存 **.tt**文件，子公司 **.cs**或 **.vb**生成文件。 若要查看此文件中的**解决方案资源管理器**，展开 **.tt**文件节点。 在 Visual Basic 项目中，首先选择**显示所有文件**中**解决方案资源管理器**工具栏。
+保存**tt**文件时，将生成一个子 **.cs**或 **.vb**文件。 若要在**解决方案资源管理器**中查看此文件，请展开**tt**文件节点。 在 Visual Basic 项目中，首先选择**解决方案资源管理器**工具栏中的 "**显示所有文件**"。
 
-请注意附属文件包含分部类包含一个名为方法`TransformText()`。 可以从应用程序调用此方法。
+请注意，该子公司文件包含一个分部类，其中包含一个名为 `TransformText()` 的方法。 可以从应用程序中调用此方法。
 
-### <a name="generating-text-at-run-time"></a>在运行时生成的文本
+### <a name="generating-text-at-run-time"></a>在运行时生成文本
 
-在应用程序代码中，您可以生成模板使用如下所示的内容：
+在应用程序代码中，可以使用如下所示的调用来生成模板的内容：
 
 ```csharp
 MyWebPage page = new MyWebPage();
@@ -170,19 +170,19 @@ Dim pageContent = page.TransformText()
 System.IO.File.WriteAllText("outputPage.html", pageContent)
 ```
 
-若要在特定的命名空间中放置生成的类，设置**自定义工具 Namespace**文本模板文件的属性。
+若要将生成的类放入特定的命名空间，请设置文本模板文件的 "**自定义工具命名空间**" 属性。
 
 ### <a name="debugging-runtime-text-templates"></a>调试运行时文本模板
 
-调试和测试运行时文本模板为普通代码相同的方式。
+调试和测试运行时文本模板的方式与普通代码相同。
 
-文本模板中，可以设置断点。 如果在从 Visual Studio 的调试模式下启动应用程序，可以单步执行代码并按常规方式计算监视表达式。
+您可以在文本模板中设置断点。 如果从 Visual Studio 在调试模式下启动应用程序，则可以单步执行代码并按常规方式评估监视表达式。
 
 ### <a name="passing-parameters-in-the-constructor"></a>在构造函数中传递参数
 
-通常一个模板必须从应用程序的其他部分中导入一些数据。 若要使此简单，由模板生成的代码是一个分部类。 在项目中，可以在另一个文件中创建相同的类的另一个部分。 该文件可以包含带参数、 属性和由嵌入在模板中的代码以及由其他应用程序可以访问的函数的构造函数。
+通常，模板必须从应用程序的其他部分导入一些数据。 为了使此过程变得简单，模板生成的代码是一个分部类。 您可以在项目中的另一个文件中创建同一个类的另一部分。 该文件可以包含具有参数、属性和函数的构造函数，该构造函数可通过嵌入在模板中的代码和应用程序的其余部分进行访问。
 
-例如，可以创建一个单独的文件**MyWebPageCode.cs**:
+例如，可以创建单独的文件**MyWebPageCode.cs**：
 
 ```csharp
 partial class MyWebPage
@@ -191,7 +191,7 @@ partial class MyWebPage
     public MyWebPage(MyData data) { this.m_data = data; }}
 ```
 
-模板文件中**MyWebPage.tt**，可以编写：
+在模板文件**MyWebPage.tt**中，可以编写：
 
 ```html
 <h2>Sales figures</h2>
@@ -215,9 +215,9 @@ String pageContent = page.TransformText();
 System.IO.File.WriteAllText("outputPage.html", pageContent);
 ```
 
-#### <a name="constructor-parameters-in-visual-basic"></a>在 Visual Basic 中的构造函数参数
+#### <a name="constructor-parameters-in-visual-basic"></a>Visual Basic 中的构造函数参数
 
-在 Visual Basic 中，单独的文件**MyWebPageCode.vb**包含：
+在 Visual Basic 中，单独的**MyWebPageCode**文件包含：
 
 ```vb
 Namespace My.Templates
@@ -250,7 +250,7 @@ This report is Company Confidential.
 </body></html>
 ```
 
-通过将参数传递的构造函数中调用模板可以：
+可以通过在构造函数中传递参数来调用模板：
 
 ```vb
 Dim data = New My.Templates.MyData
@@ -262,57 +262,57 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
 
 #### <a name="passing-data-in-template-properties"></a>在模板属性中传递数据
 
-将数据传递到模板的替代方法是将公共属性添加到分部类定义中的模板类。 你的应用程序可以调用之前设置的属性`TransformText()`。
+将数据传递到模板的另一种方法是将公共属性添加到分部类定义的模板类中。 应用程序可以在调用 `TransformText()` 之前设置属性。
 
-此外可以向模板类的分部定义中添加字段。 这使您可以连续执行模板之间传递数据。
+你还可以将字段添加到分部定义的模板类中。 这使您可以在模板的后续执行之间传递数据。
 
-### <a name="use-partial-classes-for-code"></a>使用代码的分部类
+### <a name="use-partial-classes-for-code"></a>为代码使用分部类
 
-许多开发人员希望避免在模板中编写太多的代码。 相反，您可以为模板文件具有相同名称的分部类中定义方法。 从模板中调用这些方法。 在这种方式，模板显示更清楚地目标输出字符串将如下所示。 可以从创建它所显示的数据的逻辑分隔讨论结果的外观。
+许多开发人员更喜欢避免在模板中编写大量代码。 相反，您可以在与模板文件同名的分部类中定义方法。 从模板调用这些方法。 通过这种方式，模板可更清晰地显示目标输出字符串的外观。 有关结果外观的讨论可以从创建它所显示的数据的逻辑中分离出来。
 
 ### <a name="assemblies-and-references"></a>程序集和引用
 
-如果希望模板代码以引用.NET 或其他程序集，如**System.Xml.dll**，将其添加到项目的**引用**以通常的方式。
+如果希望模板代码引用 .NET 或其他程序集（如**system.object**），请按常规方式将其添加到项目的**引用**。
 
-如果你想要为相同的方式导入命名空间`using`语句中，您可以执行此操作与`import`指令：
+如果要以与 `using` 语句相同的方式导入命名空间，则可以使用 `import` 指令执行此操作：
 
 ```
 <#@ import namespace="System.Xml" #>
 ```
 
-必须将这些指令放置在文件的开头处后立即`<#@template`指令。
+这些指令必须置于文件的开头，紧跟在 `<#@template` 指令之后。
 
-### <a name="shared-content"></a>共享的内容
+### <a name="shared-content"></a>共享内容
 
-如果您有几个模板间共享的文本，可以将其放在单独的文件并将其包含在它应在其中显示每个文件：
+如果有多个模板之间共享的文本，可以将其放在单独的文件中，并将其包含在应显示的每个文件中：
 
 ```
 <#@include file="CommonHeader.txt" #>
 ```
 
-包含的内容可以包含的程序代码和纯文本的任意组合，它可以包含其他 include 指令和其他指令。
+包含的内容可以包含程序代码和纯文本的任意组合，还可以包含其他包含指令和其他指令。
 
-Include 指令可以任意位置使用文本模板文件或包含的文件中。
+Include 指令可用于模板文件文本或包含的文件文本中的任意位置。
 
 ### <a name="inheritance-between-run-time-text-templates"></a>运行时文本模板之间的继承
 
-可以共享运行时通过编写一个基本类模板，才能是抽象的模板之间的内容。 使用`inherits`参数的`<@#template#>`指令来引用另一个运行时模板类。
+可以通过编写一个基类模板来共享运行时模板之间的内容，该模板可以是抽象的。 使用 `<@#template#>` 指令的 `inherits` 参数引用另一个运行时模板类。
 
 #### <a name="inheritance-pattern-fragments-in-base-methods"></a>继承模式：基方法中的片段
 
-在下面的示例中使用的模式，请注意以下几点：
+在下面的示例中使用的模式中，请注意以下几点：
 
-- 类的基类`SharedFragments`定义类功能块中的方法`<#+ ... #>`。
+- 基类 `SharedFragments` 在类功能块 `<#+ ... #>` 内定义方法。
 
-- 基类中包含任何自由文本。 相反，其文本块的所有出现在类功能方法。
+- 基类不包含任何可用文本。 相反，它的所有文本块都出现在类功能方法中。
 
-- 在派生的类调用中定义的方法`SharedFragments`。
+- 派生类调用 `SharedFragments` 中定义的方法。
 
-- 应用程序调用`TextTransform()`方法的派生类中，但不是转换类的基类`SharedFragments`。
+- 应用程序调用派生类的 `TextTransform()` 方法，但不会转换基类 `SharedFragments`。
 
-- 基类和派生类是运行时文本模板;即**自定义工具**属性设置为**TextTemplatingFilePreprocessor**。
+- 基类和派生类均为运行时文本模板;也就是说，"**自定义工具**" 属性设置为**TextTemplatingFilePreprocessor**。
 
-**SharedFragments.tt:**
+**SharedFragments.tt：**
 
 ```
 <#@ template language="C#" #>
@@ -327,7 +327,7 @@ protected void SharedText(int n)
 #>
 ```
 
-**MyTextTemplate1.tt:**
+**MyTextTemplate1.tt：**
 
 ```
 <#@ template language="C#" inherits="SharedFragments" #>
@@ -336,7 +336,7 @@ begin 1
 end 1
 ```
 
-**MyProgram.cs:**
+**MyProgram.cs：**
 
 ```csharp
 ...
@@ -353,11 +353,11 @@ begin 1
 end 1
 ```
 
-#### <a name="inheritance-pattern-text-in-base-body"></a>继承模式：基本的正文中的文本
+#### <a name="inheritance-pattern-text-in-base-body"></a>继承模式：基本正文中的文本
 
-使用模板继承此备用方法，在基模板中定义的文本的大容量。 派生的模板提供的数据和文本片段适合基本内容。
+在此替代方法中，使用模板继承时，会在基本模板中定义大量文本。 派生模板提供适合基本内容的数据和文本片段。
 
-**AbstractBaseTemplate1.tt:**
+**AbstractBaseTemplate1.tt：**
 
 ```
 <#@ template language="C#" #>
@@ -380,7 +380,7 @@ End of common template.
 #>
 ```
 
-**DerivedTemplate1.tt:**
+**DerivedTemplate1.tt：**
 
 ```
 <#@ template language="C#" inherits="AbstractBaseTemplate1" #>
@@ -429,9 +429,9 @@ End material for DerivedTemplate1.
 
 ## <a name="related-topics"></a>相关主题
 
-设计时模板：如果你想要使用模板生成代码，将成为你的应用程序的一部分，请参阅[使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)。
+设计时模板：如果要使用模板生成将成为应用程序一部分的代码，请参阅[使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)。
 
-运行时模板可以使用任何应用程序中，在编译时确定的模板和其内容。 但是，如果你想要编写 Visual Studio 扩展插件从在运行时更改的模板生成文本，请参阅[VS 扩展中调用文本转换](../modeling/invoking-text-transformation-in-a-vs-extension.md)。
+可在编译时确定模板及其内容的任何应用程序中使用运行时模板。 但是，如果想要编写一个 Visual Studio 扩展，以便从运行时更改的模板生成文本，请参阅[在 VS 扩展中调用文本转换](../modeling/invoking-text-transformation-in-a-vs-extension.md)。
 
 ## <a name="see-also"></a>请参阅
 

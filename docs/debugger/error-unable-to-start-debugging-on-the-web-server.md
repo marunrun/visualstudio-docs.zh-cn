@@ -26,16 +26,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 53ffc893b63447ab75a439ea1e093ddaf4b75645
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 706a20a00792e7c67b39535322fbd2530f2a2ad3
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850096"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72588995"
 ---
 # <a name="error-unable-to-start-debugging-on-the-web-server"></a>错误：无法在 Web 服务器上启动调试
 
-当你尝试调试的 Web 服务器上运行的 ASP.NET 应用程序时，可能会收到此错误消息： `Unable to start debugging on the Web server`。
+当你尝试调试在 Web 服务器上运行的 ASP.NET 应用程序时，可能会收到以下错误消息： `Unable to start debugging on the Web server`。
 
 通常情况下，由于错误或配置发生更改，需要更新应用程序池和 / 或 IIS 重置，因此会出现此错误。 可通过打开命令提示符并键入 `iisreset` 重置 IIS。
 
@@ -43,74 +43,76 @@ ms.locfileid: "62850096"
 
 `Unable to start debugging on the Web server`是通用消息。 通常情况下，更具体的消息包含在错误字符串，也许能够帮助你确定问题或搜索更精确的修补程序的原因。 下面是几个附加到主错误消息的更常见的错误消息：
 
-- [IIS 未列出匹配发布的网站 url](#IISlist)
+- [IIS 未列出与启动 url 匹配的网站](#IISlist)
 - [Web 服务器配置不正确](#web_server_config)
 - [无法连接到 web 服务器](#unabletoconnect)
 - [Web 服务器未及时响应](#webservertimeout)
 - [Microsoft Visual Studio 远程调试监视器 (msvsmon.exe) 似乎没有在远程计算机上运行](#msvsmon)
-- [远程服务器返回了错误](#server_error)
+- [远程服务器返回了一个错误](#server_error)
 - [无法启动 ASP.NET 调试](#aspnet)
 - [调试器无法连接到远程计算机](#cannot_connect)
-- [请参阅有关常见配置错误的帮助。运行在调试器外的网页，可能会提供进一步的信息。](#see_help)
+- [请参阅有关常见配置错误的帮助。在调试器外部运行网页可能会提供进一步的信息。](#see_help)
 
-## <a name="IISlist"></a> IIS 未列出匹配发布的网站 url
+## <a name="IISlist"></a>IIS 未列出与启动 url 匹配的网站
 
-- 以管理员身份重新启动 Visual Studio ，然后重试调试。  （某些 ASP.NET 调试方案需要提升权限。）
+- 以管理员身份重新启动 Visual Studio ，然后重试调试。 （某些 ASP.NET 调试方案需要提升权限。）
 
-    你可以配置 Visual Studio 始终以管理员身份运行，请右键单击 Visual Studio 快捷方式图标，选择**属性 > 高级**，然后选择要始终以管理员身份运行。
+    可以通过右键单击 Visual Studio 快捷方式图标，然后选择 "属性" " **> 高级**"，然后选择 "始终以管理员身份运行"，将 visual studio 配置为始终以管理员身份运行。
 
 ## <a name="web_server_config"></a> Web 服务器配置不正确
 
-- 请参阅[错误：Web 服务器配置不正确](../debugger/error-the-web-server-is-not-configured-correctly.md)。
+- 请参阅[错误： web 服务器配置不正确](../debugger/error-the-web-server-is-not-configured-correctly.md)。
 
-## <a name="unabletoconnect"></a> 无法连接到 web 服务器
+## <a name="unabletoconnect"></a>无法连接到 web 服务器
 
 - 是否在同一台计算机上运行 Visual Studio 和 Web 服务器，并使用**F5** (而不是**附加到进程**)进入调试？ 打开项目属性，并确保将项目配置为连接到正确的 Web 服务器并启动 URL。 (打开**属性 > Web > 服务器**或**属性 > 调试** 具体取决于你的项目类型。 对于 Web 窗体项目，打开**属性页 > 启动选项 > 服务器**。)
 
 - 否则，请重新启动应用程序池，然后重置 IIS。 有关详细信息，请参阅[检查 IIS 配置](#vxtbshttpservererrorsthingstocheck)。
 
-## <a name="webservertimeout"></a> Web 服务器未及时响应
+## <a name="webservertimeout"></a>Web 服务器未及时响应
 
-- 重置 IIS，然后重试调试。 多个调试器实例可能会附加到 IIS 进程;重置终止它们。 有关详细信息，请参阅[检查 IIS 配置](#vxtbshttpservererrorsthingstocheck)。
+- 重置 IIS 并重试调试。 可以将多个调试器实例附加到 IIS 进程;重置将终止它们。 有关详细信息，请参阅[检查 IIS 配置](#vxtbshttpservererrorsthingstocheck)。
 
 ## <a name="msvsmon"></a> Microsoft Visual Studio 远程调试监视器 (msvsmon.exe) 似乎没有在远程计算机上运行
 
-- 如果你正在调试远程计算机上，请确保您具有[安装并正在运行远程调试器](../debugger/remote-debugging.md)。 如果该消息指出了防火墙，请确保[更正防火墙的端口](../debugger/remote-debugger-port-assignments.md)处于打开状态，尤其是当使用的第三方防火墙。
-- 如果使用的主机文件，请确保配置正确。 例如，如果使用调试**F5** (而不是**附加到进程**) 的 HOSTS 文件中必须包含相同的项目 URL，如下所示项目属性中，**属性 > Web > 服务器**或**属性 > 调试**，具体取决于项目类型。
+- 如果在远程计算机上进行调试，请确保已[安装并且正在运行远程调试器](../debugger/remote-debugging.md)。 如果消息提到了防火墙，请确保[防火墙中的正确端口](../debugger/remote-debugger-port-assignments.md)处于打开状态，尤其是在使用第三方防火墙时。
+- 如果你使用的是主机文件，请确保已正确配置该文件。 例如，如果使用**F5** （而不是**附加到进程**）进行调试，则主机文件需要包含与项目属性中相同的项目 URL、 **> Web > 服务器**或**属性 > 调试**的属性，具体取决于项目类型。
 
-## <a name="server_error"></a> 远程服务器返回了错误
+## <a name="server_error"></a>远程服务器返回了一个错误
 
 检查[IIS 日志文件](https://support.microsoft.com/help/943891/the-http-status-code-in-iis-7-0--iis-7-5--and-iis-8-0)错误子代码和其他信息，以及此 IIS 7[博客文章](https://blogs.iis.net/tomkmvp/troubleshoot-a-403)。
 
 此外，下面是一些常见的错误代码和一些建议。
 - (403) 已禁止。 此错误有许多可能的原因，因此请检查您的日志文件和网站的 IIS 安全设置。 请确保服务器的 web.config 包含`debug=true`编译元素中。 请确保你的 Web 应用程序文件夹有正确的权限并验证你的应用程序池配置正确 （密码可能已更改）。 请参阅[检查 IIS 配置](#vxtbshttpservererrorsthingstocheck)。 如果这些设置是否已正确和本地调试，还验证连接到正确的服务器类型和 URL (在**属性 > Web > 服务器**或**属性 > 调试**，具体取决于你的项目类型）。
 - (503) 服务器不可用。 由于错误或配置更改，应用程序池可能已停止。 重新启动应用程序池。
-- (404) 未找到。 请确保正确版本的 ASP.NET 中都配置了应用程序池。
+- (404) 未找到。 请确保为 ASP.NET 的正确版本配置了应用程序池。
 
-## <a name="aspnet"></a> 无法启动 ASP.NET 调试
+## <a name="aspnet"></a>无法启动 ASP.NET 调试
 
-- 重新启动应用程序池和重置 IIS。 有关详细信息，请参阅[检查 IIS 配置](#vxtbshttpservererrorsthingstocheck)。
+- 重新启动应用程序池并重置 IIS。 有关详细信息，请参阅[检查 IIS 配置](#vxtbshttpservererrorsthingstocheck)。
 - 如果正在 URL 重写，测试一个基本 web.config，没有 URL 重写的配置。 请参阅 **注意** 有关 URL 重写中的模块[检查 IIS 配置](#vxtbshttpservererrorsthingstocheck)。
 
-## <a name="cannot_connect"></a> 调试器无法连接到远程计算机
+## <a name="cannot_connect"></a>调试器无法连接到远程计算机
 
-如果正在本地调试，因为 Visual Studio 是一个 32 位应用程序中，所以它使用 64 位版远程调试器来调试 64 位应用程序时可能发生此错误。 打开项目属性，并确保将项目配置为连接到正确的 Web 服务器和 URL。 (打开**属性 > Web > 服务器**或**属性 > 调试**具体取决于您的项目类型。)
+如果要在本地调试，请在 Visual Studio 中打开项目属性，并确保将项目配置为连接到正确的 Web 服务器和 URL。 (打开**属性 > Web > 服务器**或**属性 > 调试**具体取决于您的项目类型。)
+
+当在本地调试时，可能会发生此错误，因为 Visual Studio 是一个32位应用程序，因此它使用64位版本的远程调试器来调试64位应用程序。 检查 IIS 上的应用程序池，以确保**启用32位应用程序**`true`，重新启动 IIS，然后重试。
 
 此外，如果你使用HOSTS文件，请确保配置正确。 例如，HOSTS文件中必须包含相同的项目 URL 在项目属性中，**属性 > Web > 服务器**或**属性 > 调试**，具体取决于项目类型。
 
-## <a name="see_help"></a> 请参见有关常见配置错误的帮助。 运行在调试器外的网页，可能会提供进一步的信息。
+## <a name="see_help"></a> 请参见有关常见配置错误的帮助。 在调试器外部运行网页可能会提供进一步的信息。
 
-- 在 Visual Studio 和 Web 服务器上运行在同一台计算机？ 打开项目属性，并确保将项目配置为连接到正确的 Web 服务器并启动 URL。 (打开**属性 > Web > 服务器**或**属性 > 调试**具体取决于您的项目类型。)
+- 是否在同一台计算机上运行 Visual Studio 和 Web 服务器？ 打开项目属性，并确保将项目配置为连接到正确的 Web 服务器并启动 URL。 (打开**属性 > Web > 服务器**或**属性 > 调试**具体取决于您的项目类型。)
 
-- 如果不起作用或进行远程调试，按照步骤[检查您的 IIS 配置](#vxtbshttpservererrorsthingstocheck)。
+- 如果这不起作用或正在远程调试，请按照[检查 IIS 配置](#vxtbshttpservererrorsthingstocheck)中的步骤操作。
 
-## <a name="vxtbshttpservererrorsthingstocheck"></a> 检查您的 IIS 配置
+## <a name="vxtbshttpservererrorsthingstocheck"></a>检查 IIS 配置
 
 在详细介绍了解决问题的步骤之后，在再次尝试调试前，你可能还需要重置 IIS。 你可以通过打开命令提示符并键入 `iisreset` 执行该操作。
 
 * 停止并重新启动 IIS 应用程序池，然后重试。
 
-    应用程序池可能因错误而停止。 或者，你所做的另一个配置更改可能需要你停止并重新启动应用程序池。
+    由于出现错误，应用程序池可能已停止。 或者，你所做的另一种配置更改可能要求你停止并重新启动应用程序池。
 
     > [!NOTE]
     > 如果应用程序池保持停止，你可能需要从控制面板卸载 URL 重写模块。 你也可以使用 Web 平台安装程序 (WebPI) 重新安装它。 大量的系统升级后可能出现此问题。
@@ -119,45 +121,45 @@ ms.locfileid: "62850096"
 
     可能 Visual Studio 项目版本不匹配 ASP.NET 配置的应用程序池。 更新应用程序池中的 ASP.NET 版本并重新启动它。 有关详细信息，请参阅[IIS 8.0 使用 ASP.NET 3.5 和 ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)。
 
-    此外，如果密码凭据已更改，您可能需要在你的应用程序池或网站中更新它们。  在应用程序池更新中的凭据**高级设置 > 进程模型 > 标识**。 对于网站，更新中的凭据**基本设置 > 连接为...**.重新启动应用程序池。
+    此外，如果密码凭据已更改，则可能需要在应用程序池或网站中对其进行更新。  在应用程序池的 "高级设置" 中更新凭据 **> 处理模型 > 标识**。 对于网站，请在 "基本设置" 中更新凭据 **> 连接为 ...** "。重新启动应用程序池。
 
-* 检查你的 Web 应用程序的文件夹有正确的权限。
+* 检查您的 Web 应用程序文件夹是否具有适当的权限。
 
     请确保你提供 IIS_IUSRS、IUSR、或与特定用户关联[应用程序池](/iis/manage/configuring-security/application-pool-identities)读取和执行的 Web 应用程序文件夹的权限。 修复该问题并重新启动应用程序池。
 
-* 请确保在 IIS 上安装正确版本的 ASP.NET。
+* 请确保在 IIS 上安装了正确的 ASP.NET 版本。
 
-    IIS 中的ASP.NET 与 Visual Studio 项目的版本不匹配可能会导致此问题。 您可能需要在 web.config 中设置的 framework 版本。若要在 IIS 上安装 ASP.NET，请使用[Web 平台安装程序 (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)。 另请参阅[IIS 8.0 使用 ASP.NET 3.5 和 ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)或为 ASP.NET Core [使用 IIS 的 Windows 上的主机](https://docs.asp.net/en/latest/publishing/iis.html)。
+    IIS 中的ASP.NET 与 Visual Studio 项目的版本不匹配可能会导致此问题。 你可能需要在 web.config 中设置的 framework 版本。若要在 IIS 上安装 ASP.NET，请使用[Web 平台安装程序 (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)。 另请参阅[IIS 8.0 使用 ASP.NET 3.5 和 ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)或为 ASP.NET Core [使用 IIS 的 Windows 上的主机](https://docs.asp.net/en/latest/publishing/iis.html)。
 
 * 如果只使用 IP 地址，则解决身份验证错误
 
-     默认情况下，IP 地址被假定为 Internet 的一部分，而在 Internet 上不进行 NTLM 身份验证。 如果您的网站配置为要求身份验证的 IIS 中，此身份验证失败。 若要更正此问题，可以指定而不是 IP 地址的远程计算机的名称。
+     默认情况下，IP 地址被假定为 Internet 的一部分，而在 Internet 上不进行 NTLM 身份验证。 如果你的网站已在 IIS 中配置为需要身份验证，则此身份验证将失败。 若要更正此问题，可以指定远程计算机的名称，而不是 IP 地址。
 
 ## <a name="other-causes"></a>其他原因
 
-如果 IIS 配置不会导致此问题，请尝试以下步骤：
+如果 IIS 配置未导致此问题，请尝试以下步骤：
 
-- 使用管理员权限重新启动 Visual Studio，然后重试。
+- 请用管理员权限重启 Visual Studio，然后重试。
 
     例如，使用 Web 部署一些需要提升 Visual Studio 权限的 ASP.NET 调试方案。
 
 - 如果正在运行 Visual Studio 多个实例，（使用管理员权限）重新打开你的 Visual Studio 一个实例中的项目，然后重试。
 
-- 如果使用本地地址使用主机文件，请尝试使用环回地址而不计算机的 IP 地址。
+- 如果你使用的是包含本地地址的主机文件，请尝试使用环回地址而不是计算机的 IP 地址。
 
-    如果不使用本地地址，请确保你的主机文件包含如下所示项目属性中，相同的项目 URL**属性 > Web > 服务器**或**属性 > 调试**，具体取决于你项目类型。
+    如果使用的不是本地地址，请确保主机文件包含与项目属性相同的项目 URL， **> 调试**的**属性 > Web > 服务器**或属性，具体取决于项目类型。
 
-## <a name="more-troubleshooting-steps"></a>详细故障排除步骤
+## <a name="more-troubleshooting-steps"></a>更多疑难解答步骤
 
-* 显示服务器上的浏览器中的 localhost 页。
+* 在服务器上的浏览器中打开 localhost 页。
 
      如果未正确安装 IIS，则当你在浏览器中键入 `http://localhost` 时会收到错误。
 
-     部署到 IIS 的详细信息，请参阅[IIS 8.0 使用 ASP.NET 3.5 和 ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)和适用于 ASP.NET Core[上使用 IIS 的 Windows 主机](https://docs.asp.net/en/latest/publishing/iis.html)。
+     有关部署到 IIS 的详细信息，请参阅[使用 ASP.NET 3.5 和 ASP.NET 4.5 的 iis 8.0](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45) ; 对于 ASP.NET Core，请参阅使用[iis 在 Windows 上承载](https://docs.asp.net/en/latest/publishing/iis.html)的 iis。
 
-* 在服务器上创建一个基本的 ASP.NET 应用程序 （或使用的基本 web.config 文件）。
+* 在服务器上创建基本 ASP.NET 应用程序（或使用基本的 web.config 文件）。
 
-    如果无法获取你的应用程序能够使用调试器，请尝试在服务器上本地创建基本的 ASP.NET 应用程序，尝试调试基本应用。 （您可能想要使用的默认 ASP.NET MVC 模板。）如果可以调试一个基本应用，可帮助您确定两个配置之间的差异。 查找在 web.config 文件中，设置之间的差异，如 URL 重写规则。
+    如果无法让应用程序使用调试器，请尝试在服务器上本地创建基本 ASP.NET 应用程序，并尝试调试基本应用程序。 （可能需要使用默认的 ASP.NET MVC 模板。）如果可以调试基本应用，这可能会帮助你确定两种配置的不同之处。 查找 web.config 文件中的设置差异，如 URL 重写规则。
 
 ## <a name="see-also"></a>请参阅
 - [调试 Web 应用程序：错误和疑难解答](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

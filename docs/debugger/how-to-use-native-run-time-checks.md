@@ -37,15 +37,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ccf0fea80ddfcc7db0921512391f5063a8f2dad
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3cef755721a9c5b917b080fa10f1819055a18ed7
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62846964"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72430555"
 ---
 # <a name="how-to-use-native-run-time-checks"></a>如何：使用本机运行时检查
-在 Visual C++ 中，可以使用本机 [runtime_checks](/cpp/preprocessor/runtime-checks) 捕获常见的运行时错误，例如：
+在 Visual Studio C++项目中，可以使用本机[runtime_checks](/cpp/preprocessor/runtime-checks)来捕获常见的运行时错误，例如：
 
 - 堆栈指针损坏。
 
@@ -59,7 +59,7 @@ ms.locfileid: "62846964"
 
   如果使用带有优化 ( **/RTC** ) 版本的 **/O**，将导致编译器错误。 如果在优化版本中使用 `runtime_checks` 杂注，则该杂注无效。
 
-  调试启用了运行时检查的程序时，如果出现运行时错误，该程序的默认操作是停止并切换到调试器。 可以更改任何运行时检查的此默认行为。 有关详细信息，请参阅[管理调试器的异常](../debugger/managing-exceptions-with-the-debugger.md)。
+  调试启用了运行时检查的程序时，如果出现运行时错误，该程序的默认操作是停止并切换到调试器。 可以更改任何运行时检查的此默认行为。 有关详细信息，请参阅[在调试器中管理异常](../debugger/managing-exceptions-with-the-debugger.md)。
 
   下面的过程介绍了如何在调试版本中启用本机运行时检查，以及如何修改本机运行时检查的行为。
 
@@ -78,7 +78,7 @@ ms.locfileid: "62846964"
 - 使用 `runtime_checks` 杂注。
 
 ## <a name="see-also"></a>请参阅
-- [在 Visual Studio 中进行调试](../debugger/index.md)
+- [在 Visual Studio 中进行调试](../debugger/index.yml)
 - [初探调试器](../debugger/debugger-feature-tour.md)
 - [runtime_checks](/cpp/preprocessor/runtime-checks)
 - [运行时错误检查](/cpp/c-runtime-library/run-time-error-checking)

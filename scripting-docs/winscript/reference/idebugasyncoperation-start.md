@@ -1,5 +1,5 @@
 ---
-title: IDebugAsyncOperation::Start | Microsoft Docs
+title: IDebugAsyncOperation：： Start |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b3e02869abab65878412f96b77d5782b9717a1b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 485eb34ebe200e7f7898d9338effed37cbf2aa10
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62821923"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573242"
 ---
 # <a name="idebugasyncoperationstart"></a>IDebugAsyncOperation::Start
-将导致异步操作以开始。  
+导致开始异步操作。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT Start(
   
 #### <a name="parameters"></a>参数  
  `padocb`  
- 接收来自此操作的状态事件回调接口。  
+ 从此操作接收状态事件的回调接口。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -45,13 +45,13 @@ HRESULT Start(
 |“值”|描述|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
-|`E_UNEXPECTED`|操作已处于挂起状态。|  
+|`E_UNEXPECTED`|操作已挂起。|  
   
 ## <a name="remarks"></a>备注  
- 此方法将导致`IDebugSyncOperation::Execute`获取从线程中异步调用`IDebugSyncOperation::GetTargetThread`。 调用此方法应只从在调试程序线程中;否则，它将不返回直到完成该操作。  
+ 此方法导致在从 `IDebugSyncOperation::GetTargetThread` 获取的线程中以异步方式调用 `IDebugSyncOperation::Execute`。 只应从调试器线程内调用此方法;否则，在操作完成之前，不会返回。  
   
 ## <a name="see-also"></a>请参阅  
- [IDebugAsyncOperation::Abort](../../winscript/reference/idebugasyncoperation-abort.md)   
+ [IDebugAsyncOperation：： Abort](../../winscript/reference/idebugasyncoperation-abort.md)    
  [IDebugAsyncOperation 接口](../../winscript/reference/idebugasyncoperation-interface.md)   
- [IDebugSyncOperation::Execute](../../winscript/reference/idebugsyncoperation-execute.md)   
+ [IDebugSyncOperation：： Execute](../../winscript/reference/idebugsyncoperation-execute.md)    
  [IDebugSyncOperation::GetTargetThread](../../winscript/reference/idebugsyncoperation-gettargetthread.md)

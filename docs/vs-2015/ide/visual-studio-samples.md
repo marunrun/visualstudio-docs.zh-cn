@@ -8,22 +8,22 @@ helpviewer_keywords:
 - sample applications [Visual Studio]
 ms.assetid: 3070fa13-46c7-4252-a1c2-857b4a2c9528
 caps.latest.revision: 58
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b84292e35fd07a7ab3d47c36a6a6c7a79224c201
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: ca8edf15aaf8a48ee7003d7c7a5f66d7762b87d2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65698143"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667074"
 ---
-# <a name="visual-studio-samples"></a>Visual Studio 示例
+# <a name="visual-studio-samples"></a>Visual Studio Samples
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 可以在 [MSDN 代码库](http://go.microsoft.com/fwlink/?LinkID=127810) 网站上找到 Visual Studio 示例。
 
- 你可以使用“新项目”  对话框浏览示例。 （如果要打开对话框，在菜单栏上选择“文件” ，“新建” ，“项目” 。）
+ 你可以使用“新项目” 对话框浏览示例。 （如果要打开对话框，在菜单栏上选择“文件”，“新建”，“项目”。）
 
 ## <a name="finding-samples"></a>查找示例
  以下是其他一些可以查找示例的位置。

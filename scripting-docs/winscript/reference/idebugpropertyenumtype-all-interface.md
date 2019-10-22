@@ -1,5 +1,5 @@
 ---
-title: IDebugPropertyEnumType_All Interface | Microsoft Docs
+title: IDebugPropertyEnumType_All 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b9ddd9fb24aa83a6027d6d705de6a748a96b2e28
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 737d1c5d4279a0a727f79326749dbf14a2fcd4c7
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979105"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574320"
 ---
-# <a name="idebugpropertyenumtypeall-interface"></a>IDebugPropertyEnumType_All 接口
-`IDebugPropertyEnumType`接口定义，以便其 Iid 的每个可以作为一个筛选器，传递`IDebugProperty::EnumMembers`请求相应的枚举器时。  
+# <a name="idebugpropertyenumtype_all-interface"></a>IDebugPropertyEnumType_All 接口
+定义 `IDebugPropertyEnumType` 接口，以便在请求适当的枚举器时，可以将每个 Iid 都作为筛选器传递到 `IDebugProperty::EnumMembers` 中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,9 +37,9 @@ IDebugPropertyEnumType_All : IUnknown
   
 |方法|描述|  
 |------------|-----------------|  
-|[IDebugPropertyEnumType_All::GetName](../../winscript/reference/idebugpropertyenumtype-all-getname.md)|返回描述名称的文本字符串|  
+|[IDebugPropertyEnumType_All::GetName](../../winscript/reference/idebugpropertyenumtype-all-getname.md)|返回描述名称的文本字符串。|  
   
- 以下接口继承自`IDebugPropertyEnumType_All`，并没有更多的方法。  
+ 下面的接口从 `IDebugPropertyEnumType_All` 继承，但没有其他方法。  
   
 ```cpp
 IDebugPropertyEnumType_Arguments : IDebugPropertyEnumType_All   

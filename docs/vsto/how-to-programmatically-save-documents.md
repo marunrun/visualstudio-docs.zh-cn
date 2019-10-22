@@ -75,7 +75,7 @@ ms.locfileid: "69490613"
      下面的代码示例使用新名称保存活动文档。 若要使用此代码模板，请从项目中的 `ThisDocument` 或 `ThisAddIn` 类运行它。
 
     > [!NOTE]
-    > 如果<xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A>目标目录不存在, 或者保存文件时存在其他问题, 则该方法将引发异常。 最佳做法是使用**try .。。** 围绕方法或调用<xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A>方法内部的 catch 块。
+    > 如果<xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A>目标目录不存在, 或者保存文件时存在其他问题, 则该方法将引发异常。 最佳做法是使用**try ...** 围绕方法或调用<xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A>方法内部的 catch 块。
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#10)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#10](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#10)]

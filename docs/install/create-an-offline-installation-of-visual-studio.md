@@ -1,7 +1,7 @@
 ---
 title: 创建脱机安装
 description: 了解如何在 Internet 连接不可靠或带宽较低时脱机安装 Visual Studio。
-ms.date: 07/24/2019
+ms.date: 10/11/2019
 ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
@@ -16,24 +16,24 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 616c27f16b4fca9be6f8dab3cdf70fafae52f193
-ms.sourcegitcommit: 0f5f7955076238742f2071d286ad8e896f3a6cad
+ms.openlocfilehash: 2268d71f9119cc36bdb18161a62fbe930a37b2ff
+ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68483510"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381095"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>创建 Visual Studio 的脱机安装
 
 ::: moniker range="vs-2017"
 
-Visual Studio 2017 经过精心设计，可在各种网络和计算机配置中良好运行。 虽然我们建议你试用 [Visual Studio Web 安装程序](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)&mdash;这是一个小巧文件，可及时提供最新修补程序和功能&mdash;但我们知道对你而言这也许并不可行。
+Visual Studio 2017 经过精心设计，可在各种网络和计算机配置中良好运行。 虽然我们建议你试用 [Visual Studio Web 安装程序](https://visualstudio.microsoft.com/vs/older-downloads)&mdash;这是一个小巧文件，可及时提供最新修补程序和功能&mdash;但我们知道对你而言这也许并不可行。
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Visual Studio 2019 经过精心设计，可在各种网络和计算机配置中良好运行。 虽然我们建议你试用 [Visual Studio Web 安装程序](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)&mdash;这是一个小巧文件，可及时提供最新修补程序和功能&mdash;但我们知道对你而言这也许并不可行。
+Visual Studio 2019 经过精心设计，可在各种网络和计算机配置中良好运行。 虽然我们建议你试用 [Visual Studio Web 安装程序](https://visualstudio.microsoft.com/downloads)&mdash;这是一个小巧文件，可及时提供最新修补程序和功能&mdash;但我们知道对你而言这也许并不可行。
 
 ::: moniker-end
 
@@ -75,27 +75,36 @@ Visual Studio 2019 经过精心设计，可在各种网络和计算机配置中�
 
 必须具有 Internet 连接才能完成此步骤。
 
-首先，下载选定 Visual Studio 版本的 Visual Studio 引导程序。 安装程序文件&mdash;或引导程序&mdash;将是以下项之一，或与之类似。
-
 ::: moniker range="vs-2017"
 
-| 版本                    | 文件                                                                    |
-|----------------------------|-------------------------------------------------------------------------|
-| Visual Studio Community    | [vs_community.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&rel=15&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2017)       |
-| Visual Studio Professional | [vs_professional.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=15&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2017) |
-| Visual Studio Enterprise   | [vs_enterprise.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=15&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2017)     |
+若要获取 Visual Studio 2017 的引导程序，请参阅 [Visual Studio 早期版本](https://visualstudio.microsoft.com/vs/older-downloads/)下载页，获取关于如何执行此操作的详细信息。
+
+安装程序可执行文件&mdash;具体而言是引导程序文件&mdash;应与下面其中一项匹配，或与之类似。
+
+| 版本 | Filename |
+|-------------|-----------------------|
+|Visual Studio Community | vs_community.exe |
+|Visual Studio Professional | vs_professional.exe |
+|Visual Studio Enterprise | vs_enterprise.exe |
+|Visual Studio 生成工具   | vs_buildtools.exe |
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
+
+首先，下载选定 Visual Studio 版本的 Visual Studio 引导程序。 安装程序文件&mdash;或引导程序&mdash;将是以下项之一，或与之类似。
 
 | 版本                    | 文件                                                                    |
 |----------------------------|-------------------------------------------------------------------------|
 | Visual Studio Community    | [vs_community.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019)       |
 | Visual Studio Professional | [vs_professional.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019) |
 | Visual Studio Enterprise   | [vs_enterprise.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019)     |
+| Visual Studio 生成工具   | [vs_buildtools.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=buildtools&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019)     |
 
 ::: moniker-end
+
+>[!TIP]
+>如果以前下载过引导程序文件，并且想要验证其版本，则操作方法如下。 在 Windows 中，打开文件资源管理器，右键单击引导程序文件，依次选择“属性”、“详细信息”选项卡，然后查看“产品版本”号    。 若要将该编号与 Visual Studio 的版本匹配，请参阅 [Visual Studio 内部版本号和发布日期](visual-studio-build-numbers-and-release-dates.md)页。
 
 ### <a name="step-2---create-a-local-install-cache"></a>步骤 2 - 创建本地安装缓存
 
@@ -153,6 +162,12 @@ Visual Studio 2019 经过精心设计，可在各种网络和计算机配置中�
 
 > [!TIP]
 > 当你从本地安装缓存运行时，安装程序会使用其中每个文件的本地版本。 不过，如果在安装过程中选择的组件不在缓存中，安装程序会尝试从 Internet 下载它们。
+
+::: moniker range="vs-2019"
+
+> 对于 16.1 及更高版本的安装和更新，如果在脱机系统上收到“找不到与以下参数匹配的产品”错误，请将 --noweb 开关用于 16.3.5 或更高版本。
+
+::: moniker-end
 
 若要确保仅安装先前下载的文件，请使用在创建布局缓存时所用的相同命令行选项。 例如，如果使用以下命令创建了布局缓存：
 

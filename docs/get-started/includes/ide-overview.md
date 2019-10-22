@@ -6,12 +6,12 @@ ms.author: gewarren
 author: gewarren
 manager: jillfra
 ms.topic: include
-ms.openlocfilehash: 2d0d46a39bed9600ccdc0a7f343accf74378b81e
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.openlocfilehash: 27c9c453549f753f3dfdc1664fd76f7a65d0ded5
+ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68148386"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70197102"
 ---
 Visual Studio 集成开发环境是一种创新启动板，可用于编辑、调试并生成代码，然后发布应用  。 集成开发环境 (IDE) 是一个功能丰富的程序，可用于软件开发的许多方面。 除了大多数 IDE 提供的标准编辑器和调试器之外，Visual Studio 还包括编译器、代码完成工具、图形设计器和许多其他功能，以简化软件开发过程。
 
@@ -152,7 +152,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 ::: moniker range=">=vs-2019"
 
-首先，请[下载 Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 并将其安装到你的系统上。 通过模块化安装程序，可以选择和安装工作负荷。工作负荷是你习惯使用的编程语言或平台所需的一些功能  。 若要执行[创建程序](#create-a-program)所需的步骤，请务必在安装过程中选择“.NET Core 跨平台开发”工作负载  。
+首先，请[下载 Visual Studio](https://visualstudio.microsoft.com/downloads) 并将其安装到你的系统上。 通过模块化安装程序，可以选择和安装工作负荷。工作负荷是你习惯使用的编程语言或平台所需的一些功能  。 若要执行[创建程序](#create-a-program)所需的步骤，请务必在安装过程中选择“.NET Core 跨平台开发”工作负载  。
 
 ::: moniker-end
 

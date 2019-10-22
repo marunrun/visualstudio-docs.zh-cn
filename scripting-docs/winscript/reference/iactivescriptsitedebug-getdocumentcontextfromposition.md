@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteDebug::GetDocumentContextFromPosition |Microsoft Docs
+title: IActiveScriptSiteDebug：： GetDocumentContextFromPosition |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: df6c59fea5cfd60b6ae9a1b34e7000bd38dd9920
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 61bc36b98fee31ced1f3e8e00d084b5dabcd2124
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992549"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72570171"
 ---
 # <a name="iactivescriptsitedebuggetdocumentcontextfromposition"></a>IActiveScriptSiteDebug::GetDocumentContextFromPosition
-语言引擎用于委派`IDebugCodeContext::GetSourceContext`。  
+由语言引擎用来委托 `IDebugCodeContext::GetSourceContext`。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,16 +40,16 @@ HRESULT GetDocumentContextFromPosition(
   
 #### <a name="parameters"></a>参数  
  `dwSourceContext`  
- [in]源内容提供给`ParseScriptText`或`AddScriptlet`。  
+ 中为 `ParseScriptText` 或 `AddScriptlet` 提供的源内容。  
   
  `uCharacterOffset`  
- [in]字符相对于脚本块或 scriptlet 的起始偏移量。  
+ 中相对于脚本块或 scriptlet 开始的字符偏移量。  
   
  `uNumChars`  
- [in]在此上下文中的字符数。  
+ 中此上下文中的字符数。  
   
  `ppsc`  
- [out]文档上下文对应于此字符位置范围。  
+ 弄与此字符位置范围对应的文档上下文。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -59,7 +59,7 @@ HRESULT GetDocumentContextFromPosition(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 语言引擎使用此方法委托`IDebugCodeContext::GetSourceContext`。  
+ 语言引擎使用此方法委托 `IDebugCodeContext::GetSourceContext`。  
   
 ## <a name="see-also"></a>请参阅  
  [IActiveScriptSiteDebug 接口](../../winscript/reference/iactivescriptsitedebug-interface.md)

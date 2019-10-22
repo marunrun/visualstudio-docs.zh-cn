@@ -12,38 +12,38 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 65d6dbd67debc4673173af29e0c92aa57b58c865
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: cbaaa53fe737761fdd938b7861c371e8e5619acc
+ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65703877"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71128163"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-aspnet"></a>快速入门：在 Visual Studio 中分析 CPU 使用率数据 (ASP.NET)
 
 Visual Studio 提供了许多强大的功能来帮助你分析应用程序中的性能问题。 本主题提供了一种快速了解部分基本功能的方法。 此处，我们将了解用来确定由于 CPU 使用率高而导致性能瓶颈的工具。 Visual Studio 中的 .NET 开发（包括 ASP.NET、和本机 /C++ 开发）支持此诊断工具。
 
-诊断中心提供了大量其他选项来运行和管理诊断会话。 如果此处介绍的“CPU 使用率”工具未提供所需数据，[其他分析工具](../profiling/profiling-feature-tour.md)可提供可能有帮助的不同种类的信息。 在许多情况下，CPU 以外的因素可能会导致应用程序性能瓶颈，例如内存、呈现 UI 或网络请求时间。
+诊断中心提供了大量其他选项来运行和管理诊断会话。 如果此处介绍的“CPU 使用率”  工具未提供所需数据，[其他分析工具](../profiling/profiling-feature-tour.md)可提供可能有帮助的不同种类的信息。 在许多情况下，CPU 以外的因素可能会导致应用程序性能瓶颈，例如内存、呈现 UI 或网络请求时间。
 
-要运行带调试器的分析工具（“诊断工具”窗口），需具备 Windows 8 及更高版本。 在 Windows 7 及更高版本中，可使用事后分析工具（即[性能探查器](../profiling/profiling-feature-tour.md)）。
+要运行带调试器的分析工具（“诊断工具”窗口），需具备 Windows 8 及更高版本  。 在 Windows 7 及更高版本中，可使用事后分析工具（即[性能探查器](../profiling/profiling-feature-tour.md)）。
 
 ## <a name="create-a-project"></a>创建项目
 
-1. 在 Visual Studio 中，依次选择“文件” > “新建项目”。
+1. 在 Visual Studio 中，依次选择“文件”   > “新建项目”  。
 
-1. 在“Visual C#”下，选择“Web”，然后在中间窗格中选择“ASP.NET Web 应用程序(.NET Framework)”。
+1. 在“Visual C#”  下，选择“Web”  ，然后在中间窗格中选择“ASP.NET Web 应用程序(.NET Framework)”  。
 
-    如果没有看到“ASP.NET Web 应用程序”项目模板，请单击“新建项目”对话框左侧窗格中的“打开 Visual Studio 安装程序”链接。 Visual Studio 安装程序启动。 选择“ASP.NET 和 web 开发”工作负载，然后选择“修改”。
+    如果没有看到“ASP.NET Web 应用程序”项目模板，请单击“新建项目”对话框左侧窗格中的“打开 Visual Studio 安装程序”链接    。 Visual Studio 安装程序启动。 选择“ASP.NET 和 web 开发”工作负载，然后选择“修改”   。
 
-1. 键入名称（例如 MyProfilingApp_MVC），单击“确定”。
+1. 键入名称（例如 MyProfilingApp_MVC  ），单击“确定”  。
 
-1. 在显示的对话框中，选择中间窗格中的“MVC”，然后单击“确定”。
+1. 在显示的对话框中，选择中间窗格中的“MVC”  ，然后单击“确定”  。
 
     Visual Studio 随即创建项目。 解决方案资源管理器（右窗格）显示项目文件。
 
-1. 在解决方案资源管理器中右键单击“模型”文件夹，然后选择“添加” > “类”。
+1. 在解决方案资源管理器中右键单击“模型”文件夹，然后选择“添加”   > “类”  。
 
-1. 将新类命名为 `Data.cs` 并选择“添加”。
+1. 将新类命名为 `Data.cs` 并选择“添加”  。
 
 1. 在解决方案资源管理器中，打开 `Models/Data.cs` 并将以下 `using` 语句添加到文件顶部：
 
@@ -129,7 +129,7 @@ Visual Studio 提供了许多强大的功能来帮助你分析应用程序中的
     }
     ```
 
-1. 在“解决方案资源管理器”中，打开“Controller/HomeControllers.cs”，并将以下代码：
+1. 在“解决方案资源管理器”中，打开“Controller/HomeControllers.cs”  ，并将以下代码：
 
     ```csharp
     public ActionResult About()
@@ -168,21 +168,21 @@ Visual Studio 提供了许多强大的功能来帮助你分析应用程序中的
     > [!TIP]
     > 通过设置两个断点，可将数据收集限制到想要分析的代码部分。
 
-1. 已显示“诊断工具”窗口，除非已将其关闭。 若要再次显示该窗口，请依次单击“调试” > “Windows” > “显示诊断工具”。
+1. 已显示“诊断工具”  窗口，除非已将其关闭。 若要再次显示该窗口，请依次单击“调试”   > “Windows”   > “显示诊断工具”  。
 
-1. 依次单击“调试” > “启动调试”或单击工具栏上的“启动”或按 F5。
+1. 依次单击“调试”   > “启动调试”  或单击工具栏上的“启动”  或按 F5  。
 
-1. 应用加载完成后，单击网页顶部的“关于”链接，开始运行新代码。
+1. 应用加载完成后，单击网页顶部的“关于”  链接，开始运行新代码。
 
-1. 查看显示的诊断工具的“摘要”视图。
+1. 查看显示的诊断工具的“摘要”  视图。
 
-1. 调试器暂停时，选择“记录 CPU 配置文件”以启用 CPU 使用率数据的收集，然后打开“CPU 使用率”选项卡。
+1. 调试器暂停时，选择“记录 CPU 配置文件”  以启用 CPU 使用率数据的收集，然后打开“CPU 使用率”  选项卡。
 
      ![诊断工具启用 CPU 分析](../profiling/media/quickstart-cpu-usage-summary.png)
 
      启用数据收集时，记录按钮将显示一个红圈。
 
-     选择“记录 CPU 配置文件”时，Visual Studio 将开始记录函数和执行函数所花的时间，还会提供一个时间线关系图，可使用此关系图专注于采样会话的特定分段。只有应用程序在断点处停止时，才可以查看该收集数据。
+     选择“记录 CPU 配置文件”  时，Visual Studio 将开始记录函数和执行函数所花的时间，还会提供一个时间线关系图，可使用此关系图专注于采样会话的特定分段。只有应用程序在断点处停止时，才可以查看该收集数据。
 
 6. 按 F5 将应用运行到第二个断点。
 
@@ -190,7 +190,7 @@ Visual Studio 提供了许多强大的功能来帮助你分析应用程序中的
 
      探查器开始准备线程数据。 等待其完成。
 
-     CPU 使用率工具在“CPU 使用率”选项卡中显示报表。
+     CPU 使用率工具在“CPU 使用率”  选项卡中显示报表。
 
      现在可以开始分析数据。
 
@@ -207,11 +207,11 @@ Visual Studio 提供了许多强大的功能来帮助你分析应用程序中的
 
 2. 在函数列表中，双击 `MyProfilingApp_MVC.Models.ServerClass::GetNumber` 函数。
 
-    双击该函数时，将在左侧窗格中打开“调用方/被调用方”视图。
+    双击该函数时，将在左侧窗格中打开“调用方/被调用方”  视图。
 
     ![诊断工具“调用方和被调用方”视图](../profiling/media/quickstart-cpu-usage-caller-callee-aspnet.png)
 
-    在此视图中，所选函数显示在标题和“当前函数”框中（本例中为 `ServerClass::GetNumber`）。 调用当前函数的函数显示在左侧的“调用函数”中，当前函数调用的任何函数均显示在右侧的“被调用函数”框中。 （可选择其中一个框来更改当前函数。）
+    在此视图中，所选函数显示在标题和“当前函数”  框中（本例中为 `ServerClass::GetNumber`）。 调用当前函数的函数显示在左侧的“调用函数”  中，当前函数调用的任何函数均显示在右侧的“被调用函数”  框中。 （可选择其中一个框来更改当前函数。）
 
     此视图显示总时间及函数完成执行所用的总体应用运行时间的百分比。
 
@@ -228,5 +228,5 @@ Visual Studio 提供了许多强大的功能来帮助你分析应用程序中的
 
 ## <a name="see-also"></a>请参阅
 
-- [使用 Visual Studio 分析](../profiling/index.md)
+- [使用 Visual Studio 分析](../profiling/index.yml)
 - [首先了解分析工具](../profiling/profiling-feature-tour.md)

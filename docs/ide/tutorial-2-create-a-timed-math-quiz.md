@@ -1,19 +1,20 @@
 ---
 title: 教程 2：创建计时数学测验
 ms.date: 11/04/2016
-ms.topic: conceptual
 ms.assetid: d7165d08-ace3-457d-b57d-fb8f80760a6f
+ms.topic: tutorial
+ms.technology: vs-ide-general
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ececa58d04ea7cfebe6178faae724038e353f06
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 39550eb3e2d5fe78e50257b51b52642740781600
+ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62821614"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118855"
 ---
 # <a name="tutorial-2-create-a-timed-math-quiz"></a>教程 2：创建计时数学测验
 
@@ -27,7 +28,7 @@ ms.locfileid: "62821614"
 
 - 使用代码执行基本算术运算。
 
-完成时，你的测验看上去与下图类似，但数字有所不同。
+结束时，除数字不同外，测验应与以下屏幕截图类似：
 
 ![包含四个问题的数学测验](../ide/media/express_finishedquiz.png)
 
@@ -36,7 +37,7 @@ ms.locfileid: "62821614"
 若要下载测验的完整版本，请参阅[数学测验教程的完整示例](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c)。
 
 > [!NOTE]
-> 本教程中同时涉及 Visual C# 和 Visual Basic，因此请关注特定于您所用编程语言的信息。
+> 本教程中同时涉及 C# 和 Visual Basic，因此请关注特定于你所用编程语言的信息。
 
 ## <a name="related-topics"></a>相关主题
 

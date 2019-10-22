@@ -1,58 +1,54 @@
 ---
-title: 如何：创建灰度纹理着色器 |Microsoft Docs
+title: 如何：创建灰度纹理着色器 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: 79181d81-44af-445e-9a18-03483dd70260
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b43e7806ebf6d67300fdee7be165c7cd745c4acb
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 554717d59a42bed15b37379d3bf7a5c4da727e95
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63431708"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72664513"
 ---
 # <a name="how-to-create-a-grayscale-texture-shader"></a>如何：创建灰度纹理着色器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-本文档演示如何使用着色器设计器和有向图着色器语言 (DGSL) 创建灰度纹理着色器。 此着色器将修改纹理样本的 RGB 颜色值，然后将其与未修改的 Alpha 值一起用于设置最终颜色。  
-  
-## <a name="creating-a-grayscale-texture-shader"></a>创建灰度纹理着色器  
- 可以通过在将纹理样本写入最终输出颜色之前修改纹理样本的颜色值来实现灰度纹理着色器。  
-  
- 开始前，请确保显示“属性”窗口和“工具箱”。  
-  
-#### <a name="to-create-a-grayscale-texture-shader"></a>创建灰度纹理着色器  
-  
-1. 按[如何：创建基本纹理着色器](../designers/how-to-create-a-basic-texture-shader.md)。  
-  
-2. 从“最终颜色”节点的“RGB”终端断开“纹理示例”节点的“RGB”终端。 在“选择”模式中，选择“纹理示例”节点的“RGB”终端，然后选择“断开链接”。 这为在下一步中添加的节点腾出空间。  
-  
-3. 向图添加“去除饱和度”节点。 在“工具箱”中的“文件”，选择“去除饱和度”，然后将其移到设计图面。  
-  
-4. 使用“去除饱和度”节点计算灰度值。 在“选择”模式中，将“纹理样示例”节点的“RGB”终端移到“去除饱和度”节点的“RGB”终端。  
-  
+本文档演示如何使用着色器设计器和有向图着色器语言 (DGSL) 创建灰度纹理着色器。 此着色器将修改纹理样本的 RGB 颜色值，然后将其与未修改的 Alpha 值一起用于设置最终颜色。
+
+## <a name="creating-a-grayscale-texture-shader"></a>创建灰度纹理着色器
+ 可以通过在将纹理样本写入最终输出颜色之前修改纹理样本的颜色值来实现灰度纹理着色器。
+
+ 开始前，请确保显示“属性”窗口和“工具箱”。
+
+#### <a name="to-create-a-grayscale-texture-shader"></a>创建灰度纹理着色器
+
+1. 按[如何：创建基本纹理着色器](../designers/how-to-create-a-basic-texture-shader.md)中所述创建基本纹理着色器。
+
+2. 从“最终颜色”节点的“RGB”终端断开“纹理示例”节点的“RGB”终端。 在“选择”模式中，选择“纹理示例”节点的“RGB”终端，然后选择“断开链接”。 这为在下一步中添加的节点腾出空间。
+
+3. 向图添加“去除饱和度”节点。 在“工具箱”中的“文件”，选择“去除饱和度”，然后将其移到设计图面。
+
+4. 使用“去除饱和度”节点计算灰度值。 在“选择”模式中，将“纹理样示例”节点的“RGB”终端移到“去除饱和度”节点的“RGB”终端。
+
    > [!NOTE]
-   > 默认情况下，“去除饱和度”节点完全去除输入颜色的饱和度，并使用标准亮度权重进行灰度转换。 可以通过更改“亮度”属性的值或仅部分去除输入颜色的饱和度来更改“去除饱和度”节点的行为方式。 若要部分去除输入颜色的饱和度，请向“去除饱和度”节点的“百分比”终端提供 [0,1) 范围中的标量值。  
-  
-5. 将灰度颜色值连接到最终颜色。 将“去除饱和度”节点的“输出”终端移到“最终颜色”节点的“RGB”终端。  
-  
-   下图显示了已完成的着色器关系图和应用于立方体的着色器预览。  
-  
+   > 默认情况下，“去除饱和度”节点完全去除输入颜色的饱和度，并使用标准亮度权重进行灰度转换。 可以通过更改“亮度”属性的值或仅部分去除输入颜色的饱和度来更改“去除饱和度”节点的行为方式。 若要部分去除输入颜色的饱和度，请向“去除饱和度”节点的“百分比”终端提供 [0,1) 范围中的标量值。
+
+5. 将灰度颜色值连接到最终颜色。 将“去除饱和度”节点的“输出”终端移到“最终颜色”节点的“RGB”终端。
+
+   下图显示了已完成的着色器关系图和应用于立方体的着色器预览。
+
 > [!NOTE]
-> 在此插图中，飞机用作预览形状，并且已指定一个纹理以更好地演示着色器的效果。  
-  
- ![着色器图及其效果预览](../designers/media/digit-grayscale-effect.png "Digit-Grayscale-Effect")  
-  
- 某些形状可能会增强某些着色器的预览效果。 有关在着色器设计器中预览着色器的详细信息，请参阅[着色器设计器](../designers/shader-designer.md)  
-  
-## <a name="see-also"></a>请参阅  
- [如何：向三维模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)   
- [如何：导出着色器](../designers/how-to-export-a-shader.md)   
- [图像编辑器](../designers/image-editor.md)   
- [着色器设计器](../designers/shader-designer.md)   
- [着色器设计器节点](../designers/shader-designer-nodes.md)
+> 在此插图中，飞机用作预览形状，并且已指定一个纹理以更好地演示着色器的效果。
+
+ ![着色器关系图和其效果预览](../designers/media/digit-grayscale-effect.png "数字-灰度效果")
+
+ 某些形状可能会增强某些着色器的预览效果。 有关在着色器设计器中预览着色器的详细信息，请参阅[着色器设计器](../designers/shader-designer.md)
+
+## <a name="see-also"></a>请参阅
+ [如何：向三维模型应用着色](../designers/how-to-apply-a-shader-to-a-3-d-model.md)器[如何：导出着色](../designers/how-to-export-a-shader.md)器[图像编辑器](../designers/image-editor.md)[着色器](../designers/shader-designer.md)设计器设计器[节点](../designers/shader-designer-nodes.md)

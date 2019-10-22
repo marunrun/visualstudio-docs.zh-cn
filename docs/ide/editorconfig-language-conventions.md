@@ -1,6 +1,6 @@
 ---
 title: EditorConfig 适用的 .NET 语言约定
-ms.date: 07/17/2019
+ms.date: 09/23/2019
 ms.topic: reference
 dev_langs:
 - CSharp
@@ -13,22 +13,23 @@ manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2231d3637b4a016d1da783d65d4237b9f5d6bab2
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: e4f49df2c775bc3bb95888d76da133898ab9c76e
+ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551417"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186530"
 ---
 # <a name="language-conventions"></a>语言约定
 
 Visual Studio 中 EditorConfig 的语言约定分为两类：适用于 Visual Basic 和 C# 的约定，以及特定于 C# 的约定。 语言约定会影响编程语言的各个方面的使用方式，例如修饰符和括号。
 
 > [!TIP]
-> - 使用“本文中”链接跳转到页面的不同部分  。
 > - 若要查看以首选编程语言编写的代码示例，请使用浏览器窗口右上角的语言选取器选择它。
 >
 >   ![代码语言选取器控件](media/code-language-picker.png)
+>
+> - 使用“本文中”链接跳转到页面的不同部分  。
 
 ## <a name="rule-format"></a>规则格式
 
@@ -36,19 +37,48 @@ Visual Studio 中 EditorConfig 的语言约定分为两类：适用于 Visual Ba
 
 `option_name = value:severity`
 
-对于每个语言约定，可指定一个定义是否或何时以此样式为首选项的值。 许多规则都接受 `true`（以此样式为首选项）或 `false`（不以此样式为首选项）值；其他规则接受诸如 `when_on_single_line` 或 `never` 之类的值。 此规则的第二部分指定严重性。 
+对于每个语言约定，可指定一个定义是否或何时以此样式为首选项的值。 许多规则都接受 `true` 值（以此样式为首选项）或 `false` 值（不以此样式为首选项）。 其他规则接受 `when_on_single_line` 或 `never` 等值。 此规则的第二部分指定[严重性](#severity-levels)。
 
-### <a name="severity"></a>Severity
+::: moniker range=">=vs-2019"
+
+> [!NOTE]
+> 由于语言约定由分析器强制执行，因此还可以使用分析器的默认配置语法来设置其严重性。 语法采用形式 `dotnet_diagnostic.<rule ID>.severity = <severity>`（例如，`dotnet_diagnostic.IDE0040.severity = silent`）。 有关详细信息，请参阅[在 EditorConfig 文件中设置规则严重性](../code-quality/use-roslyn-analyzers.md#set-rule-severity-in-an-editorconfig-file)。
+
+::: moniker-end
+
+## <a name="severity-levels"></a>严重性级别
 
 语言约定严重性指定在哪个级别执行该样式。 下表列出了可能的严重性值及其效果：
 
 Severity | 效果
 :------- | ------
-`none` | 如违反此规则，不会向用户显示任何内容。 但代码生成功能会以此样式生成代码。 “快速操作和重构”菜单中永远不会出现严重性为 `none` 的规则  。 大多数情况下，此情况被视为“禁用”或“忽略”。
-`silent`（在 Visual Studio 2017 版本 15.8 以及更高版本中也是 `refactoring`） | 如违反此规则，不会向用户显示任何内容。 但代码生成功能会以此样式生成代码。 严重性为 `silent` 的规则参与清理，并在“快速操作和重构”菜单中显示  。
-`suggestion` | 如违反此样式规则，会将其作为建议向用户显示。 建议显示为前两个字符下的三个灰点。
-`warning` | 如违反此样式规则，显示编译器警告。
 `error` | 如违反此样式规则，显示编译器错误。
+`warning` | 如违反此样式规则，显示编译器警告。
+`suggestion` | 如违反此样式规则，会将其作为建议向用户显示。 建议显示为前两个字符下的三个灰点。
+`silent` | 如违反此规则，不会向用户显示任何内容。 但代码生成功能会以此样式生成代码。 严重性为 `silent` 的规则参与清理，并在“快速操作和重构”菜单中显示  。
+`none` | 如违反此规则，不会向用户显示任何内容。 但代码生成功能会以此样式生成代码。 “快速操作和重构”菜单中永远不会出现严重性为 `none` 的规则  。 大多数情况下，此情况被视为“禁用”或“忽略”。
+
+::: moniker range=">=vs-2019"
+
+## <a name="automatically-configure-code-styles"></a>自动配置代码样式
+
+自 Visual Studio 2019 版本 16.3 起，在样式冲突发生之后，可以在[快速操作](quick-actions.md)灯泡菜单中配置代码样式规则。
+
+更改代码样式约定：
+
+1. 将鼠标悬停在编辑器中的波浪线上，然后打开显示的灯泡菜单。 选择“配置或取消”问题 > “配置 \<规则 ID> 代码样式”   。
+
+   ![在 Visual Studio 的灯泡菜单中配置代码样式](media/vs-2019/configure-code-style.png)
+
+2. 请在此处选择其中某个代码样式选项。
+
+   ![配置代码样式设置](media/vs-2019/configure-code-style-setting.png)
+
+   Visual Studio 在 EditorConfig 文件中添加或修改配置设置，如预览框中所示。
+
+若要更改代码样式冲突的严重性，请执行相同的步骤，但请选择“配置 \<规则 ID > 严重性”，而不选择“配置 \<规则 ID > 代码样式”   。 有关详细信息，请参阅[自动配置规则严重性](../code-quality/use-roslyn-analyzers.md#automatically-configure-rule-severity)。
+
+::: moniker-end
 
 ## <a name="net-code-style-settings"></a>.NET 代码样式设置
 

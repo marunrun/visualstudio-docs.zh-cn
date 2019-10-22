@@ -1,6 +1,6 @@
 ---
-title: 调试托管的代码 |Microsoft Docs
-ms.date: 11/04/2016
+title: 调试托管代码 |Microsoft Docs
+ms.date: 09/23/2019
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -16,16 +16,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a5cf348b06bca6127690c7b5a7301881bdf75078
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f6dd305b55e1ff7dd11b46f023906a8422b5504f
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851871"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72536044"
 ---
-# <a name="debugging-managed-code"></a>调试托管代码
+# <a name="debug-managed-code-c-visual-basic-f-ccli"></a>调试托管代码（C#，Visual Basic， F#， C++/cli）
 
-本节包含了托管应用程序或使用面向公共语言运行时的语言（如 Visual Basic、C# 和 C++）编写的应用程序的常见调试问题和调试技术。 此处介绍的技术都是高级技术。 [初探调试器](../debugger/debugger-feature-tour.md)。
+本部分介绍了托管应用程序的常见调试问题和技术，或以面向公共语言运行时的语言编写的应用程序， C#如 Visual Basic C++、和/cli 此处介绍的技术都是高级技术。 [初探调试器](../debugger/debugger-feature-tour.md)。
 
 ## <a name="in-this-section"></a>本节内容
 
@@ -38,7 +38,7 @@ ms.locfileid: "62851871"
 [Visual Basic 中的 Stop 语句](../debugger/stop-statements-in-visual-basic.md)\
 描述 `Stop` 语句，该语句提供了一种设置断点的替代方法。 还提供了代码示例并对 `Stop` 语句和 `End` 语句以及 `Stop` 和 `Assert` 语句进行了比较。
 
-[演练：调试 Windows 窗体](../debugger/walkthrough-debugging-a-windows-form.md)\
+[Walkthrough: Debugging a Windows Form](../debugger/walkthrough-debugging-a-windows-form.md)\（演练：调试 Windows 窗体）
 提供创建 Windows 窗体并调试该窗体的逐步骤说明。 Windows 窗体（托管 Windows 应用程序的标准组件）是最常见的托管应用程序之一。 本演练使用 Visual C# 和 Visual Basic，不过使用 C++ 创建 Windows 窗体的方法通常与此类似。
 
 [调试 OnStart 方法](../debugger/how-to-debug-the-onstart-method.md)\
@@ -47,7 +47,7 @@ ms.locfileid: "62851871"
 [混合模式调试](../debugger/debugging-mixed-mode-applications.md)\
 讨论调试混合模式的应用程序。 这表示合并本机代码和托管代码的任何应用程序。
 
-[错误：由于在系统上启用了内核调试器，因此，不可能调试](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)\
+[错误：无法进行调试，因为系统已启用内核调试程序](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)\
 描述当尝试在以调试模式启动的 [!INCLUDE[win7](../debugger/includes/win7_md.md)]、[!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)]、[!INCLUDE[winxp](../code-quality/includes/winxp_md.md)]、[!INCLUDE[Win2kFamily](../code-quality/includes/win2kfamily_md.md)] 或 Windows NT 系统上调试托管代码时出现的错误消息。
 
 [JIT 优化和调试](../debugger/jit-optimization-and-debugging.md)\
@@ -74,7 +74,7 @@ ms.locfileid: "62851871"
 提供调试 Windows 服务应用程序的注意事项，其中包括：设置、附加到进程、调试服务的 `OnStart` 方法中的代码和 Main 方法中的代码、设置断点以及使用服务控制管理器启动、停止、暂停和继续服务。
 
 [调试和分析](/dotnet/framework/debug-trace-profile/index)\
-探讨如何调试 .NET Framework 应用程序和配置要求。
+讨论调试 .NET 应用程序和配置要求。
 
 [调试脚本和 Web 应用程序](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)\
 描述在调试脚本和 Web 应用程序时可能会遇到的常见调试问题和技术。
@@ -83,5 +83,5 @@ ms.locfileid: "62851871"
 
 - [演练：在设计时调试自定义 Windows 窗体控件](/dotnet/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time)
 - [调试器安全](../debugger/debugger-security.md)
-- [在 Visual Studio 中进行调试](../debugger/index.md)
+- [在 Visual Studio 中进行调试](../debugger/index.yml)
 - [初探调试器](../debugger/debugger-feature-tour.md)

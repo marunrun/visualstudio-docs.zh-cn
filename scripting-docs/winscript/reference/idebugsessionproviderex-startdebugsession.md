@@ -1,5 +1,5 @@
 ---
-title: IDebugSessionProviderEx:StartDebugSession | Microsoft Docs
+title: IDebugSessionProviderEx： StartDebugSession |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fb120a9acca91014d7b8213a3ed0bd1ab575e118
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cfe26265d56b2179feeac2a9802940258074b1c7
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62934688"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574300"
 ---
 # <a name="idebugsessionproviderexstartdebugsession"></a>IDebugSessionProviderEx:StartDebugSession
-启动具有指定的应用程序的调试会话。  
+使用指定的应用程序启动调试会话。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,10 +36,10 @@ HRESULT StartDebugSession(
   
 #### <a name="parameters"></a>参数  
  `pda`  
- [in]指定调试应用程序。  
+ 中指定调试应用程序。  
   
  `fQuery`  
- [in]True 表示查询。  
+ 中True 表示查询。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -49,7 +49,7 @@ HRESULT StartDebugSession(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法会启动与指定的应用程序的调试会话。 调试程序应调用`IRemoteDebugApplication::ConnectDebugger`之前从该调用返回。  
+ 此方法使用指定的应用程序启动调试会话。 调试器应在从此调用返回前调用 `IRemoteDebugApplication::ConnectDebugger`。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugSessionProviderEx 接口](../../winscript/reference/idebugsessionproviderex-interface.md)   

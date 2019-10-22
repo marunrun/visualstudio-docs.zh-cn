@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::StepOutComplete | Microsoft Docs
+title: IDebugApplication：： StepOutComplete |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 04f8ecfb835199afa0a60f3fde3c8fbdc8812240
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f50d7e8a8936e52f4177450e7d163c4cfeaa55df
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62990617"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571037"
 ---
 # <a name="idebugapplicationstepoutcomplete"></a>IDebugApplication::StepOutComplete
-通知进程调试管理器中单步执行模式的语言引擎即将返回给调用方。  
+向进程调试管理器通知单步模式下的语言引擎将要返回到其调用方。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +34,7 @@ HRESULT StepOutComplete();
 ```  
   
 #### <a name="parameters"></a>参数  
- 此方法需要任何参数。  
+ 此方法不采用任何参数。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -44,7 +44,7 @@ HRESULT StepOutComplete();
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 语言引擎调用此方法在单步执行模式下，它们返回到其调用方之前。 进程调试管理器可利用此机会来通知他们应在第一次机会处分的所有其他脚本引擎。 此技术是如何跨语言步骤模式的实现。  
+ 语言引擎仅在单步模式下调用此方法，然后再返回到其调用方。 进程调试管理器使用此机会通知应在第一次机会时中断的所有其他脚本引擎。 此方法是实现跨语言步骤模式的方式。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugApplication 接口](../../winscript/reference/idebugapplication-interface.md)

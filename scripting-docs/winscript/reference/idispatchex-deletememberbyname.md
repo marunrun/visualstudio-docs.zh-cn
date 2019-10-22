@@ -1,5 +1,5 @@
 ---
-title: IDispatchEx::DeleteMemberByName |Microsoft Docs
+title: IDispatchEx：:D eleteMemberByName |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: dc7c8db4ab28e0bd0fcb48f352cb07595f72fd17
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2abb562f65885ee1d12f2ec9b2300fcddd3be37b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63000885"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576610"
 ---
 # <a name="idispatchexdeletememberbyname"></a>IDispatchEx::DeleteMemberByName
-按名称删除一个成员。  
+按名称删除成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,12 +41,12 @@ HRESULT DeleteMemberByName(
  要删除的成员的名称。  
   
  `grfdex`  
- 确定成员名称是否区分大小写。 这可以是下列值之一：  
+ 确定成员名称是否区分大小写。 这可以是以下值之一：  
   
 |“值”|含义|  
 |-----------|-------------|  
-|fdexNameCaseSensitive|名称查找区分大小写的方式完成的请求。 可以忽略不支持区分大小写查找的对象。|  
-|fdexNameCaseInsensitive|该名称查找可在不区分大小写的方式完成的请求。 可以忽略不支持不区分大小写查找的对象。|  
+|fdexNameCaseSensitive|请求以区分大小写的方式进行名称查找。 对于不支持区分大小写的查找的对象，可将其忽略。|  
+|fdexNameCaseInsensitive|请求以不区分大小写的方式进行名称查找。 对于不支持不区分大小写的查找的对象，可将其忽略。|  
   
 ## <a name="return-value"></a>返回值  
  返回以下值之一：  
@@ -57,9 +57,9 @@ HRESULT DeleteMemberByName(
 |`S_FALSE`|成员存在，但不能删除。|  
   
 ## <a name="remarks"></a>备注  
- 如果删除该成员，则需要保持有效，DISPID `GetNextDispID`。  
+ 如果删除了成员，则 DISPID 需要对 `GetNextDispID` 仍有效。  
   
- 如果删除具有给定名称的成员，并且以后重新创建具有相同名称的成员，DISPID 应相同。 （仅大小写不同的成员是否是"相同"与对象相关。）  
+ 如果删除具有给定名称的成员，然后重新创建同名的成员，则 DISPID 应相同。 （是否仅区分大小写的成员是与对象相关的。）  
   
 ## <a name="example"></a>示例  
   

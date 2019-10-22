@@ -1,5 +1,5 @@
 ---
-title: Windows 窗体控件在 Office 文档概述
+title: Office 文档上的 Windows 窗体控件概述
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -27,23 +27,23 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 927451ed35ce4bbdfbff7531b2828b0571354f34
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: a101f22bccb3624eccff1edcea502c9350991392
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445363"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71254913"
 ---
-# <a name="windows-forms-controls-on-office-documents-overview"></a>Windows 窗体控件在 Office 文档概述
-  Windows 窗体控件是用户可与之交互以便输入或操作数据的对象。 在 Microsoft Office Excel 和 Microsoft Office Word 文档级项目中，您可以添加 Windows 窗体控件的文档或工作簿项目中在设计时，或以编程方式可以在运行时添加这些控件。 以编程方式可以向任何打开的文档或工作表在 VSTO 外接程序中的运行时添加这些控件，Excel 或 Word。
+# <a name="windows-forms-controls-on-office-documents-overview"></a>Office 文档上的 Windows 窗体控件概述
+  Windows 窗体控件是用户可与之交互以便输入或操作数据的对象。 在 Microsoft Office Excel 和 Microsoft Office Word 的文档级项目中，你可以在设计时向项目中的文档或工作簿添加 Windows 窗体控件，也可以在运行时以编程方式添加这些控件。 在 Excel 或 Word 的 VSTO 外接程序中，可以在运行时以编程方式将这些控件添加到任何打开的文档或工作表。
 
- 有关详细信息，请参阅[如何：将 Windows 窗体控件添加到 Office 文档](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)。
+ 有关详细信息，请参阅[如何：向 Office 文档](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)添加 Windows 窗体控件。
 
  [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]
 
 ## <a name="use-windows-forms-controls"></a>使用 Windows 窗体控件
 
-可以将 Windows 窗体控件添加到文档以及可自定义用户界面 (UI) 元素中，可自定义用户界面元素包括操作窗格、自定义任务窗格和 Windows 窗体。 通常，Windows 窗体控件在文档上的行为与在其他这些 UI 元素上的行为相同，但是也存在一些差异。 有关信息，请参阅[限制的 Windows 窗体控件上的 Office 文档](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)。
+可以将 Windows 窗体控件添加到文档以及可自定义用户界面 (UI) 元素中，可自定义用户界面元素包括操作窗格、自定义任务窗格和 Windows 窗体。 通常，Windows 窗体控件在文档上的行为与在其他这些 UI 元素上的行为相同，但是也存在一些差异。 有关信息，请参阅[Office 文档上 Windows 窗体控件的限制](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)。
 
 将 Windows 窗体控件添加到文档还是添加到其他某个 UI 元素的决定，取决于多个因素。 设计解决方案的 UI 时，请考虑下表中描述的 Windows 窗体控件的用法。
 
@@ -71,15 +71,15 @@ ms.locfileid: "63445363"
 - 希望获取用户输入，并防止用户在输入被接收之前在文档中执行任何操作时。
 
 ## <a name="add-windows-forms-controls-programmatically"></a>以编程方式添加 Windows 窗体控件
- 可以将 Windows 窗体控件添加到 Word 文档和 Excel 工作表在运行时。 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 提供了用于添加最常用的 Windows 窗体控件的帮助程序方法。 利用这些帮助程序方法，可以快速向 Office 文档添加控件并访问这些控件的组合的 Windows 窗体控件功能及 Office 相关功能。
+ 可以在运行时向 Word 文档和 Excel 工作表添加 Windows 窗体控件。 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 提供了用于添加最常用的 Windows 窗体控件的帮助程序方法。 利用这些帮助程序方法，可以快速向 Office 文档添加控件并访问这些控件的组合的 Windows 窗体控件功能及 Office 相关功能。
 
  有关详细信息，请参阅[在运行时向 Office 文档添加控件](../vsto/adding-controls-to-office-documents-at-run-time.md)。
 
-## <a name="use-windows-forms-controls-in-document-level-projects"></a>在文档级项目中使用 Windows 窗体控件
+## <a name="use-windows-forms-controls-in-document-level-projects"></a>使用文档级项目中的 Windows 窗体控件
  在文档上使用 Windows 窗体控件的某些方面是特定于文档级项目的，它们允许你使用 Visual Studio 设计器设计文档的 UI。
 
 ### <a name="create-custom-user-controls"></a>创建自定义用户控件
- 可以将用户控件添加到项目中，然后将其添加到“工具箱” 。 然后可以将用户控件直接拖动到文档中，与向文档添加 Windows 窗体控件的操作一样。 在创建用户控件时，需要注意以下事项：
+ 可以将用户控件添加到项目中，然后将其添加到“工具箱”。 然后可以将用户控件直接拖动到文档中，与向文档添加 Windows 窗体控件的操作一样。 在创建用户控件时，需要注意以下事项：
 
 - 请勿创建 **sealed** 用户控件。 将控件拖到文档中时，Visual Studio 会生成一个从该用户控件派生的包装类，以扩展该用户控件并支持在文档上使用该用户控件。 如果该用户控件为 **sealed**，则 Visual Studio 不能生成包装类。
 
@@ -88,7 +88,7 @@ ms.locfileid: "63445363"
 - 向文档添加了用户控件后，请不要在项目内重命名或删除 <xref:System.Windows.Forms.UserControl> 类。 如果需要更改用户控件的名称，必须首先将其从文档中删除，更改了名称后，再将其添加到文档中。
 
 ### <a name="arrange-controls-at-design-time"></a>在设计时排列控件
- 如果在设计时将多个控件添加到 Word 和 Excel 文档中，则可以在 Visual Studio 中使用“Microsoft Office Word”  和“Microsoft Office Excel”  工具栏来快速设置所有选定控件的排列。 仅当文档或工作表在设计器中打开时，这些工具栏才可用。
+ 如果在设计时将多个控件添加到 Word 和 Excel 文档中，则可以在 Visual Studio 中使用“Microsoft Office Word” 和“Microsoft Office Excel” 工具栏来快速设置所有选定控件的排列。 仅当文档或工作表在设计器中打开时，这些工具栏才可用。
 
  在设计器中选定多个控件后，可以使用这些工具栏上的以下按钮来排列这些控件：
 
@@ -111,26 +111,26 @@ ms.locfileid: "63445363"
 > [!NOTE]
 > 在 Word 项目中，仅当所选控件未与文本对齐时，这些按钮才启用。 默认情况下，在设计时添加到文档中的控件与文本对齐。
 
-### <a name="prevent-old-data-from-appearing-in-excel-workbooks-during-loading"></a>禁止旧数据在加载期间在 Excel 工作簿中显示
+### <a name="prevent-old-data-from-appearing-in-excel-workbooks-during-loading"></a>防止加载过程中在 Excel 工作簿中显示旧数据
  在设计时将 Windows 窗体控件添加到文档或工作表后，在用户关闭文档时，这些控件将保留在文档中。 在设计时添加的控件也称为 *静态控件*。
 
- 打开一个包含静态控件的 Excel 工作簿后，该工作簿会在 ActiveX 控件中显示静态控件的位图，直到自定义项代码运行并加载实际控件。 Excel 创建此位图，并在每次保存工作簿时将位图存储在工作簿中。 位图显示上次保存工作簿时控件的外观，包括控件显示的所有数据。 有关包含 Windows 窗体控件和位图的 ActiveX 控件的详细信息，请参阅[限制的 Windows 窗体控件上的 Office 文档](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)。
+ 打开一个包含静态控件的 Excel 工作簿后，该工作簿会在 ActiveX 控件中显示静态控件的位图，直到自定义项代码运行并加载实际控件。 Excel 创建此位图，并在每次保存工作簿时将位图存储在工作簿中。 位图显示上次保存工作簿时控件的外观，包括控件显示的所有数据。 有关包含 Windows 窗体控件和位图的 ActiveX 控件的详细信息，请参阅[Office 文档中 Windows 窗体控件的限制](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)。
 
  某些情况下，代码不会进行加载而仅显示位图，例如当用户在设计模式下打开工作簿时。 而且，如果用户在未安装 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 的计算机上打开工作簿，自定义项将无法运行以加载控件，因此只有控件的位图是可见的。 在保存工作簿并将其发送给其他用户之前，应总是从工作簿上的控件中删除个人信息，以确保不会意外泄漏你的个人信息。
 
-### <a name="match-control-size-to-cell-size-on-an-excel-worksheet"></a>在 Excel 工作表的单元格大小匹配控件大小
- 可以将控件设置为当父单元格的大小更改时自动重设大小。 有关详细信息，请参阅[如何：调整工作表单元格中的控件的大小](../vsto/how-to-resize-controls-within-worksheet-cells.md)。
+### <a name="match-control-size-to-cell-size-on-an-excel-worksheet"></a>使 Excel 工作表上的控件大小与单元格大小匹配
+ 可以将控件设置为当父单元格的大小更改时自动重设大小。 有关详细信息，请参阅[如何：调整工作表单元格](../vsto/how-to-resize-controls-within-worksheet-cells.md)中的控件大小。
 
 ### <a name="add-components-that-are-shared-by-all-worksheets"></a>添加由所有工作表共享的组件
  可以将希望在所有工作表之间共享的组件（如 <xref:System.Data.DataSet>）添加到工作簿设计器而不是工作表。 该组件将出现在组件栏中。
 
-### <a name="formula-for-embedding-controls-on-an-excel-worksheet"></a>嵌入的 Excel 工作表上的控件的公式
- 当在 Excel 中选择一个控件时， **“公式栏”** 中将显示 **=EMBED("WinForms.Control.Host","")**。 此文本是必需的并且不应删除。
+### <a name="formula-for-embedding-controls-on-an-excel-worksheet"></a>用于在 Excel 工作表中嵌入控件的公式
+ 当在 Excel 中选择一个控件时， **“公式栏”** 中将显示 **=EMBED("WinForms.Control.Host","")** 。 此文本是必需的并且不应删除。
 
-### <a name="layout-style-of-controls-on-a-word-document"></a>Word 文档上的控件的布局样式
- 如果在文档级项目中使用 Visual Studio 设计器向 Word 文档添加控件，该控件将与文本对齐。 若要更改控件的布局样式，请右击控件，然后单击“设置控件格式” 。 在“设置对象格式”  对话框的“布局”  页上，选择换行样式。
+### <a name="layout-style-of-controls-on-a-word-document"></a>Word 文档中控件的布局样式
+ 如果在文档级项目中使用 Visual Studio 设计器向 Word 文档添加控件，该控件将与文本对齐。 若要更改控件的布局样式，请右击控件，然后单击“设置控件格式”。 在“设置对象格式” 对话框的“布局” 页上，选择换行样式。
 
- 通过使用不同时向在运行时的 Word 文档添加控件，可以指定新的控件的布局样式`Add` \<*控制类*> 方法重载<xref:Microsoft.Office.Tools.Word.ControlCollection>类：
+ 在运行时向 Word 文档添加控件`Add`时，可以使用<xref:Microsoft.Office.Tools.Word.ControlCollection>类的不同\<*控件类*> 方法重载来指定新控件的布局样式：
 
 - 若要使控件与文本对齐，请使用接受 <xref:Microsoft.Office.Interop.Word.Range> （用于指定该控件的位置）的重载。
 
@@ -138,9 +138,9 @@ ms.locfileid: "63445363"
 
   有关详细信息，请参阅[在运行时向 Office 文档添加控件](../vsto/adding-controls-to-office-documents-at-run-time.md)。
 
-  如果在 Visual Studio 设计器中打开 Word 模板，则模板上的非内联控件可能不可见，因为 Visual Studio 在“普通”  视图中打开该模板。 若要查看控件，请将视图更改为“打印布局” 。
+  如果在 Visual Studio 设计器中打开 Word 模板，则模板上的非内联控件可能不可见，因为 Visual Studio 在“普通” 视图中打开该模板。 若要查看控件，请将视图更改为“打印布局”。
 
-### <a name="controls-outside-the-main-document-body"></a>主文档正文外控件
+### <a name="controls-outside-the-main-document-body"></a>主文档正文外的控件
  页眉或页脚内、或子文档内不支持 Windows 窗体控件。
 
 ### <a name="add-components-at-design-time"></a>在设计时添加组件
@@ -148,18 +148,18 @@ ms.locfileid: "63445363"
 
 ## <a name="see-also"></a>请参阅
 - [Office 文档上的控件](../vsto/controls-on-office-documents.md)
-- [在运行时向 Office 文档添加控件](../vsto/adding-controls-to-office-documents-at-run-time.md)
+- [在运行时将控件添加到 Office 文档](../vsto/adding-controls-to-office-documents-at-run-time.md)
 - [主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)
 - [操作窗格概述](../vsto/actions-pane-overview.md)
 - [Windows 窗体控件](/dotnet/framework/winforms/controls/index)
-- [Office 文档上的 Windows 窗体控件的限制](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)
+- [Office 文档 Windows 窗体控件的限制](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)
 - [如何：向 Office 文档添加 Windows 窗体控件](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
-- [如何：调整工作表单元格中的控件的大小](../vsto/how-to-resize-controls-within-worksheet-cells.md)
+- [如何：调整工作表单元格中的控件大小](../vsto/how-to-resize-controls-within-worksheet-cells.md)
 - [如何：打印时隐藏工作表上的控件](../vsto/how-to-hide-controls-on-worksheets-when-printing.md)
-- [演练：更改工作表格式设置使用 CheckBox 控件](../vsto/walkthrough-changing-worksheet-formatting-using-checkbox-controls.md)
-- [演练：更改文档格式设置使用 CheckBox 控件](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)
-- [演练：在使用按钮的工作表中的文本框中显示文本](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md)
-- [演练：在文本框中使用按钮在文档中显示文本](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)
-- [Office 文档上的 Windows 窗体控件的限制](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)
-- [演练：更新的图表中使用单选按钮的文档](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md)
-- [演练：更新使用单选按钮的工作表中的图表](../vsto/walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons.md)
+- [演练：使用 CheckBox 控件更改工作表格式](../vsto/walkthrough-changing-worksheet-formatting-using-checkbox-controls.md)
+- [演练：使用 CheckBox 控件更改文档格式](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)
+- [演练：使用按钮在工作表的文本框中显示文本](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md)
+- [演练：使用按钮在文档的文本框中显示文本](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)
+- [Office 文档 Windows 窗体控件的限制](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)
+- [演练：使用单选按钮更新文档中的图表](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md)
+- [演练：使用单选按钮更新工作表中的图表](../vsto/walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons.md)

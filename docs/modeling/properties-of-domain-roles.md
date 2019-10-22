@@ -2,44 +2,44 @@
 title: 域角色的属性
 ms.date: 11/04/2016
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 048116c07f30267c6beb2703c3eaa6fb4d3655f0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a992cc06a177d329701ca98278ad14632bda8df1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62998942"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658157"
 ---
 # <a name="properties-of-domain-roles"></a>域角色的属性
-下表中的属性是与域角色相关联。 域角色的信息，请参阅[了解模型、 类和关系](../modeling/understanding-models-classes-and-relationships.md)。 有关如何使用这些属性的详细信息，请参阅[自定义和扩展域特定语言](../modeling/customizing-and-extending-a-domain-specific-language.md)。
+下表中的属性与域角色关联。 有关域角色的信息，请参阅[了解模型、类和关系](../modeling/understanding-models-classes-and-relationships.md)。 有关如何使用这些属性的详细信息，请参阅[自定义和扩展域特定语言](../modeling/customizing-and-extending-a-domain-specific-language.md)。
 
-|属性|描述|默认|
+|Property|描述|Default|
 |-|-|-|
-|集合类型|如果此角色的重数为 0..* 或 1...\*，此属性自定义的泛型类型的用于存储的链接的集合。|`(none)` - <xref:Microsoft.VisualStudio.Modeling.LinkedElementCollection%601> 使用|
-|自定义特性|你在此处指定的属性将作为属性添加到生成的代码类。|< 无\>|
-|属性是可浏览|如果`True`，如果关系的多重性 0..1 或 1..1，可以在用户浏览角色属性和**属性**窗口。 属性显示在另一端的关系链接元素的名称。|`True`|
-|是属性生成器|如果`True`，对于此角色，可用于遍历在程序代码中的关系生成角色属性。 如果将其设置 false，则可以通过使用域关系的静态方法效率较低的方式遍历关系。|`True`|
-|属性 Getter 访问修饰符|生成的属性的 getter 访问修饰符 (`public`， `internal`， `private`， `protected`，或`protected internal`)。|`public`|
-|属性 Setter 访问修饰符|生成的属性的 setter 访问修饰符 (`public`， `internal`， `private`， `protected`，或`protected internal`)。|`public`|
-|重数|这可以播放的对方角色的模型元素的数量 (`0..1`， `1..1`， `0..*`，或`1..*`)。 如果重数`0..*`或`1..*`，则生成的属性表示的集合; 否则，生成的属性表示单个模型元素。|依赖关系类型以及是否这是关系中的源或目标角色。|
-|名称|域角色的名称。 此属性不能包含空格。|此角色的角色扮演者的域类的名称。|
-|将复制传播|`DoNotPropagateCopy` -复制的角色扮演者将拥有此链接的任何副本。<br /><br /> `PropagateCopyToLinkOnly` -复制的链接将指向现有相反角色扮演者。<br /><br /> `PropagateCopyToLinkAndOppositeRolePlayer` -将复制的链接指向一份相反角色扮演者。|`PropagateCopyToLinkAndOppositeRolePlayer` 嵌入的源角色。<br /><br /> `DoNotPropagateCopy` 对于其他角色。<br /><br /> 有关详细信息，请参阅[自定义复制行为](../modeling/customizing-copy-behavior.md)|
-|将删除传播|`True` 若要删除的关联的链接，删除时播放此角色的元素。|`True` 有关嵌入角色的目标。<br /><br /> `False` 对于其他角色。|
-|属性名|角色扮演者的代码中生成的属性的名称。 此名称不能包含空格。|如果此角色具有零对一的对方角色的名称或一对一的重数;否则为对方角色的复数的名称。|
-|角色扮演者|可以在关系中扮演此角色的元素的域类。 此属性是只读的。|此角色的角色扮演者的域类。|
-|说明|域角色相关联的非正式说明。|< 无\>|
-|类别|在其下生成的属性显示在类别**属性**中生成的设计器窗口。 如果此属性为空，则生成的属性下会出现**杂项**类别|< 无\>|
-|描述|说明用于记录代码和生成的设计器在 UI 中使用。<br /><br /> 角色扮演者类上生成的属性的 IntelliSense 工具提示中显示的描述。|`Description for` *角色的完整名称*|
-|显示名称|域角色生成的设计器中显示的名称。|Name 属性的调整后的值。|
-|帮助关键字|可选的关键字用于编制索引的域角色的 F1 帮助。|\<none>|
-|属性显示名称|在生成的设计器生成的角色属性中显示的名称。|调整后的值的属性名称属性。|
+|集合类型|如果此角色的重数为 0 .. * 或1。\*，此属性自定义用于存储链接集合的泛型类型。|使用 `(none)`  -  <xref:Microsoft.VisualStudio.Modeling.LinkedElementCollection%601>|
+|自定义特性|此处指定的特性将作为特性添加到生成的代码类中。|无 < \>|
+|可浏览属性|如果 `True`，且关系的重数为 0 ..1 或 1 ..1，则用户可以在 "**属性**" 窗口中浏览 role 属性。 属性显示关系链接另一端的元素的名称。|`True`|
+|为属性生成器|如果 `True`，则会为此角色生成一个角色属性，你可以使用该属性遍历程序代码中的关系。 如果将此项设置为 false，则可以通过使用域关系的静态方法以效率较低的方式遍历关系。|`True`|
+|属性 Getter 访问修饰符|生成的属性（`public`、`internal`、`private`、`protected` 或 `protected internal`）的 getter 的访问修饰符。|`public`|
+|属性 Setter 访问修饰符|生成的属性（`public`、`internal`、`private`、`protected` 或 `protected internal`）的 setter 的访问修饰符。|`public`|
+|重数|可以扮演相反角色（`0..1`、`1..1`、`0..*` 或 `1..*`）的模型元素的数目。 如果重数为 `0..*` 或 `1..*`，则生成的属性表示一个集合;否则，生成的属性表示单个模型元素。|取决于关系类型以及这是关系中的源角色还是目标角色。|
+|“属性”|域角色的名称。 此属性不能包含空格。|此角色的角色扮演者的域类的名称。|
+|传播副本|`DoNotPropagateCopy`-复制的角色扮演者将没有此链接的副本。<br /><br /> `PropagateCopyToLinkOnly`-复制的链接指向现有的相反角色扮演者。<br /><br /> `PropagateCopyToLinkAndOppositeRolePlayer`-复制的链接指向相反角色扮演者的副本。|`PropagateCopyToLinkAndOppositeRolePlayer` 嵌入的源角色。<br /><br /> 其他角色的 `DoNotPropagateCopy`。<br /><br /> 有关详细信息，请参阅[自定义复制行为](../modeling/customizing-copy-behavior.md)|
+|传播删除|删除关联的链接时，`True` 删除将扮演此角色的元素。|用于嵌入角色目标的 `True`。<br /><br /> 其他角色的 `False`。|
+|属性名|在角色扮演者的代码中生成的属性的名称。 此名称不能包含空格。|如果此角色具有零对一或一对一的重数，则相反角色的名称;否则，相反角色的复数名称。|
+|角色扮演者|可在关系中扮演此角色的元素的域类。 此属性是只读的。|此角色的角色扮演者的域类。|
+|注意|与域角色关联的非正式注释。|无 < \>|
+|类别|生成的属性在生成的设计器的 "**属性**" 窗口中显示的类别。 如果该属性为空，则生成的属性将显示在 "**杂项**" 类别下|无 < \>|
+|描述|用于记录代码并在生成的设计器的 UI 中使用的说明。<br /><br /> 说明显示在角色扮演者类上生成的属性的 IntelliSense 工具提示中。|`Description for`*角色的完整名称*|
+|显示名称|为域角色生成的设计器中显示的名称。|Name 属性的调整后的值。|
+|帮助关键字|用于索引域角色的 F1 帮助的可选关键字。|\<none>|
+|属性显示名称|为生成的角色属性在生成的设计器中显示的名称。|"属性名称" 属性的调整后的值。|
 
 > [!NOTE]
-> 显示名称的默认值基于关联的属性值插入每个大写字符小写字符前面和未跟一个大写字符之前的空格。
+> 显示名称的默认值基于关联的属性值，方法是在每个大小写字符前面加上一个小写字符，后面不后跟另一个大写字符。
 
 ## <a name="see-also"></a>请参阅
 

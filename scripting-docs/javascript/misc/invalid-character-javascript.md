@@ -1,5 +1,5 @@
 ---
-title: 无效的字符 (JavaScript) |Microsoft Docs
+title: 无效字符（JavaScript） |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,25 +14,25 @@ ms.assetid: b6a54a93-7fc9-459a-bdd6-f42d1ce40b5f
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6ec548ff629663e647d2d153ff87caa4edb1dd21
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 267dcc5af0870132a14c679c7fc26589d6b776c9
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63007134"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576572"
 ---
 # <a name="invalid-character-javascript"></a>无效字符 (JavaScript)
-组成标识符使用字符 （或字符） 未被识别为有效的[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]编译器。 有效的字符使用以下规则：  
+使用 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 编译器无法识别为有效的字符（或字符）撰写标识符。 有效字符使用以下规则：  
   
-- 第一个字符必须是 ASCII 字母 （大写或小写） 或下划线 (_)。  
+- 第一个字符必须是 ASCII 字母（大写或小写）或下划线（_）。  
   
-- 后续字符可以是 ASCII 字母、 数字或下划线。  
+- 后面的字符可以是 ASCII 字母、数字或下划线。  
   
-- 标识符名称不能为保留的字。  
+- 标识符名称不能是保留字。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 避免使用的字符的一部分[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]语言定义的信息。  
+- 避免使用不属于 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 语言定义的字符。  
   
 ## <a name="see-also"></a>请参阅  
  [变量](../../javascript/variables-javascript.md)   

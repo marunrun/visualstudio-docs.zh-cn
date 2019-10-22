@@ -6,21 +6,21 @@ ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.assetid: 5ef1188f-89dc-413d-801d-0efdaf9b0427
 caps.latest.revision: 24
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c97ee2d05609ee6802da3503e9f514fdc07a4b85
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 920dea4e81ca2ce0c562bb6d77582fd5e3753663
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871663"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660585"
 ---
 # <a name="enable-coded-ui-testing-of-your-controls"></a>启用控件的编码的 UI 测试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 如果实现对编码的 UI 测试框架的支持，则可以更轻松地测试你的控件。 您能够以增量方式增加支持级别。 您可以先从支持录制、播放和属性验证开始。 在此基础上，您可以允许编码的 UI 测试生成器识别控件的自定义属性，并提供自定义类以便从生成的代码访问这些属性。 你还可以帮助编码的 UI 测试生成器，使之以一种与所录制操作的目的更为接近的方法来捕获操作。
 
- **在本主题中：**
+ **本主题内容：**
 
 1. [通过实现可访问性来支持录制和播放以及属性验证](../test/enable-coded-ui-testing-of-your-controls.md#recordandplayback)
 
@@ -39,12 +39,12 @@ ms.locfileid: "68871663"
 
  不过，如果实现辅助功能，则它在录制测试并生成代码时，将使用这一辅助功能来捕获有关控件的信息。 然后，当您运行测试时，生成的代码将针对您的控件重播这些事件，即使它位于用户界面中的其他位置。 测试作者还可以使用控件的基本属性创建断言。
 
- ![CUIT&#95;Record](../test/media/cuit-record.png "CUIT_Record")
+ ![CUIT&#95;记录](../test/media/cuit-record.png "CUIT_Record")
 
 ### <a name="to-support-record-and-playback-property-validation-and-navigation-for-a-windows-forms-control"></a>支持录制和播放、属性验证以及 Windows 窗体控件的导航
  根据以下过程中的概述和 <xref:System.Windows.Forms.AccessibleObject> 中的详细介绍，为您的控件实现辅助功能。
 
- ![CUIT&#95;Accessible](../test/media/cuit-accessible.png "CUIT_Accessible")
+ ![CUIT&#95;可访问](../test/media/cuit-accessible.png "CUIT_Accessible")
 
 1. 实现一个从 <xref:System.Windows.Forms.Control.ControlAccessibleObject> 派生的类，并重写 <xref:System.Windows.Forms.Control.AccessibilityObject%2A> 属性以便返回类的对象。
 
@@ -86,7 +86,7 @@ ms.locfileid: "68871663"
  ![CUIT&#95;CustomProps](../test/media/cuit-customprops.png "CUIT_CustomProps")
 
 ### <a name="to-support-custom-property-validation"></a>支持自定义属性验证
- ![CUIT&#95;Props](../test/media/cuit-props.png "CUIT_Props")
+ ![CUIT&#95;属性](../test/media/cuit-props.png "CUIT_Props")
 
 1. 重写曲线图例可访问对象的 <xref:System.Windows.Forms.AccessibleObject.Description%2A> 属性，以便传递说明字符串中丰富的属性值，并通过分号 (;) 与主说明分隔开来（如果要实现多个属性，则每个属性之间也相互分隔）。
 
@@ -410,9 +410,9 @@ Assert.AreEqual(this.AssertMethod3ExpectedValues.UIATextState, uIAText.State);
  当 Visual Studio 录制测试时，它会捕获鼠标和键盘事件。 但是，在某些情况下，在一系列鼠标和键盘事件中可能会丢失操作的目的。 例如，如果控件支持自动完成，则在其他环境中播放测试时，同一组鼠标和键盘事件可能会产生不同的值。 您可以添加一个操作筛选器插件，将一系列键盘和鼠标事件替换为单一操作。 这样一来，您就可以将结果为选择某一值的一系列鼠标和键盘事件替换为设置值的单一操作。 当从一个环境转到另一个环境时，这样可以保护编码的 UI 测试，使之不受自动完成差异的影响。
 
 ### <a name="to-support-intent-aware-actions"></a>支持目的感知操作
- ![CUIT&#95;Actions](../test/media/cuit-actions.png "CUIT_Actions")
+ ![CUIT&#95;操作](../test/media/cuit-actions.png "CUIT_Actions")
 
-1. 实现从[microsoft.visualstudio.testtools.uitest.common.uitestactionfilter>](/previous-versions/visualstudio/visual-studio-2012/dd985757(v=vs.110))派生的操作筛选器类, 并重写属性[ApplyTimeout](/previous-versions/visualstudio/visual-studio-2012/dd984649%28v%3dvs.110%29)、[类别](/previous-versions/visualstudio/visual-studio-2012/dd986905(v=vs.110))、[已启用](/previous-versions/visualstudio/visual-studio-2012/dd985633(v=vs.110))、 [FilterType](/previous-versions/visualstudio/visual-studio-2012/dd778726(v=vs.110))、[组](/previous-versions/visualstudio/visual-studio-2012/dd779219(v=vs.110))和[名称](/previous-versions/visualstudio/visual-studio-2012/dd998334(v=vs.110))。
+1. 实现从[microsoft.visualstudio.testtools.uitest.common.uitestactionfilter>](/previous-versions/visualstudio/visual-studio-2012/dd985757(v=vs.110))派生的操作筛选器类，并重写属性[ApplyTimeout](/previous-versions/visualstudio/visual-studio-2012/dd984649%28v%3dvs.110%29)、[类别](/previous-versions/visualstudio/visual-studio-2012/dd986905(v=vs.110))、[已启用](/previous-versions/visualstudio/visual-studio-2012/dd985633(v=vs.110))、 [FilterType](/previous-versions/visualstudio/visual-studio-2012/dd778726(v=vs.110))、[组](/previous-versions/visualstudio/visual-studio-2012/dd779219(v=vs.110))和[名称](/previous-versions/visualstudio/visual-studio-2012/dd998334(v=vs.110))。
 
     ```csharp
     internal class MyActionFilter : UITestActionFilter
@@ -536,7 +536,7 @@ Assert.AreEqual(this.AssertMethod3ExpectedValues.UIATextState, uIAText.State);
 ## <a name="external-resources"></a>外部资源
 
 ### <a name="guidance"></a>指导
- [通过 Visual Studio 2012 对持续交付进行测试-第2章:单元测试：测试内部](http://go.microsoft.com/fwlink/?LinkID=255188)
+ [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](http://go.microsoft.com/fwlink/?LinkID=255188)
 
 ## <a name="see-also"></a>请参阅
 

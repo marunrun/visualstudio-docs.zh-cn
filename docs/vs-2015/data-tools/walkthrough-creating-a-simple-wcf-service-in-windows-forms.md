@@ -1,5 +1,5 @@
 ---
-title: 演练：在 Windows 窗体中创建一个简单的 WCF 服务 |Microsoft Docs
+title: 演练：在 Windows 窗体中创建简单 WCF 服务 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - WCF services, walkthrough
 ms.assetid: 5fef1a64-27a4-4f10-aa57-29023e28a2d6
 caps.latest.revision: 29
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 46250ad394a2fde1e7cde6f30fab9dc6d7fb579c
-ms.sourcegitcommit: 77b4ca625674658d5c5766e684fa0e2a07cad4da
+ms.openlocfilehash: 366567a13ad23ab19ffd88f19997b92025abe952
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65615648"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671079"
 ---
 # <a name="walkthrough-creating-a-simple-wcf-service-in-windows-forms"></a>演练：在 Windows 窗体中创建简单的 WCF 服务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "65615648"
 
 #### <a name="to-create-a-wcf-service"></a>要创建 WCF 服务
 
-1. 在 **“文件”** 菜单上指向 **“新建”** ，然后单击 **“项目”**。
+1. 在 **“文件”** 菜单上指向 **“新建”** ，然后单击 **“项目”** 。
 
 2. 在“新建项目”对话框中，展开 Visual Basic 或 Visual C# 节点，然后单击 WCF，接着是“WCF 服务库”。 单击“确定”，打开项目。
 
@@ -43,7 +43,7 @@ ms.locfileid: "65615648"
 
 3. ![IService1 文件](../data-tools/media/wcf2.png "wcf2")
 
-     在中**解决方案资源管理器**、 双击 IService1.vb 或 IService1.cs 并找到以下行：
+     在**解决方案资源管理器**中，双击 "IService1" 或 "IService1.cs"，然后找到以下行：
 
      [!code-csharp[WCFWalkthrough#4](../snippets/csharp/VS_Snippets_VBCSharp/wcfwalkthrough/cs/iservice1_2.cs#4)]
      [!code-vb[WCFWalkthrough#4](../snippets/visualbasic/VS_Snippets_VBCSharp/wcfwalkthrough/vb/iservice1_2.vb#4)]
@@ -57,7 +57,7 @@ ms.locfileid: "65615648"
 
 4. ![Service1 文件](../data-tools/media/wcf3.png "wcf3")
 
-     在中**解决方案资源管理器**、 双击 Service1.vb 或 Service1.cs 并找到以下行：
+     在**解决方案资源管理器**中，双击 "Service1" 或 "Service1.cs"，然后找到以下行：
 
      [!code-csharp[WCFWalkthrough#5](../snippets/csharp/VS_Snippets_VBCSharp/wcfwalkthrough/cs/service1_2.cs#5)]
      [!code-vb[WCFWalkthrough#5](../snippets/visualbasic/VS_Snippets_VBCSharp/wcfwalkthrough/vb/service1_2.vb#5)]
@@ -71,19 +71,19 @@ ms.locfileid: "65615648"
 
 #### <a name="to-test-a-wcf-service"></a>若要测试 WCF 服务
 
-1. 按 F5 运行该服务。 一个**WCF 测试客户端**将显示窗体，它将加载此服务。
+1. 按 F5 运行该服务。 将显示**WCF 测试客户端**窗体，并将加载服务。
 
-2. 在“WCF 测试客户端”窗体中，双击 IService1 下的 GetData() 方法。 **GetData**将显示选项卡。
+2. 在“WCF 测试客户端”窗体中，双击 IService1 下的 GetData() 方法。 将**显示 "工作"** 选项卡。
 
-     ![GetData&#40; &#41;方法](../data-tools/media/wcf4.png "wcf4")
+     ![&#40; &#41;工作方式方法](../data-tools/media/wcf4.png "wcf4")
 
 3. 在“请求”框中，选择“值”字段，并键入 `Hello`。
 
      ![值字段](../data-tools/media/wcf5.png "wcf5")
 
-4. 单击“调用”按钮。 如果**安全警告**对话框中，单击**确定**。 结果将显示在**响应**框。
+4. 单击“调用”按钮。 如果显示 "**安全警告**" 对话框，请单击 **"确定"** 。 结果将显示在**响应**框中。
 
-     ![响应框中的结果](../data-tools/media/wcf6.png "wcf6")
+     !["响应" 框中的结果](../data-tools/media/wcf6.png "wcf6")
 
 5. 在“文件”菜单上单击“退出”，关闭测试窗体。
 
@@ -93,17 +93,17 @@ ms.locfileid: "65615648"
 
 1. 在“文件”菜单上，指向“添加”，然后单击“新建项目”。
 
-2. 在中**新的项目**对话框框中，展开**Visual Basic**或**Visual C#** 节点，然后选择**Windows**，然后选择**Windows 窗体应用程序**。 单击“确定”，打开项目。
+2. 在 "**新建项目**" 对话框中，展开 " **Visual Basic** " 或 "  **C#可视化**" 节点，然后选择 " **Windows**"，然后选择 " **Windows 窗体应用程序**"。 单击“确定”，打开项目。
 
      ![Windows 窗体应用程序项目](../data-tools/media/wcf7.png "wcf7")
 
-3. 右键单击 WindowsApplication1，然后单击“添加服务引用”。 **添加服务引用**对话框将出现。
+3. 右键单击 WindowsApplication1，然后单击“添加服务引用”。 将显示 "**添加服务引用**" 对话框。
 
 4. 在“添加服务引用”对话框中，单击“发现”。
 
-     ![添加服务引用对话框](../data-tools/media/wcf8.png "wcf8")
+     !["添加服务引用" 对话框](../data-tools/media/wcf8.png "wcf8")
 
-     **Service1**将显示在**Services**窗格。
+     **Service1**将显示在 "**服务**" 窗格中。
 
 5. 单击“确定”，添加服务引用。
 
@@ -113,7 +113,7 @@ ms.locfileid: "65615648"
 
 2. 从工具箱把 `TextBox` 控件、`Label` 控件和 `Button` 控件拖到窗体中。
 
-     ![将控件添加到窗体](../data-tools/media/wcf9.png "wcf9")
+     ![向窗体添加控件](../data-tools/media/wcf9.png "wcf9")
 
 3. 双击 `Button` 并将下面的代码添加到 `Click` 事件处理程序：
 
@@ -124,7 +124,7 @@ ms.locfileid: "65615648"
 
 5. 按 F5 运行项目。 输入一些文本，然后单击按钮。 该标签将显示“输入：”和您输入的文本。
 
-     ![显示结果窗体](../data-tools/media/wcf10.png "wcf10")
+     ![显示结果的窗体](../data-tools/media/wcf10.png "wcf10")
 
 ## <a name="see-also"></a>请参阅
  [Visual Studio 中的 Windows Communication Foundation 服务和 WCF 数据服务](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

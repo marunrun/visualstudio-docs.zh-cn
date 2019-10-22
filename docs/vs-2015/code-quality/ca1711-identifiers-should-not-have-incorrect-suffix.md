@@ -1,5 +1,5 @@
 ---
-title: CA1711:标识符应采用正确的后缀 |Microsoft Docs
+title: CA1711：标识符不应包含错误的后缀 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,35 +12,35 @@ helpviewer_keywords:
 - IdentifiersShouldNotHaveIncorrectSuffix
 ms.assetid: a63359ab-386d-44ae-b381-ee3a983aca29
 caps.latest.revision: 20
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: c0ed08a50ce7e4c665839f6dccb4913e13d0d774
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: f59a1c88701cf132a46c66eb6550f03eb870d63d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65676477"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72669182"
 ---
-# <a name="ca1711-identifiers-should-not-have-incorrect-suffix"></a>CA1711:标识符应采用正确的后缀
+# <a name="ca1711-identifiers-should-not-have-incorrect-suffix"></a>CA1711：标识符应采用正确的后缀
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|IdentifiersShouldNotHaveIncorrectSuffix|
 |CheckId|CA1711|
-|类别|Microsoft.Naming|
+|类别|Microsoft。命名|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 标识符具有正确的后缀。
+ 标识符的后缀不正确。
 
 ## <a name="rule-description"></a>规则说明
- 按照约定，只有扩展某些基类型或实现特定接口或从这些类型派生的类型的类型的名称应与特定的保留后缀结尾。 其他类型名称不应使用这些保留的后缀。
+ 按照约定，只有扩展某些基类型或实现某些接口的类型的名称，或从这些类型派生的类型的名称应以特定的保留后缀结尾。 其他类型名称不应使用这些保留的后缀。
 
- 下表列出了保留的后缀的基类型和接口与它们相关联。
+ 下表列出了保留的后缀以及与它们关联的基类型和接口。
 
-|Suffix|基类型/接口|
+|后缀|基类型/接口|
 |------------|--------------------------|
 |特性|<xref:System.Attribute?displayProperty=fullName>|
 |集合|<xref:System.Collections.ICollection?displayProperty=fullName><br /><br /> <xref:System.Collections.IEnumerable?displayProperty=fullName><br /><br /> <xref:System.Collections.Queue?displayProperty=fullName><br /><br /> <xref:System.Collections.Stack?displayProperty=fullName><br /><br /> <xref:System.Collections.Generic.ICollection%601?displayProperty=fullName><br /><br /> <xref:System.Data.DataSet?displayProperty=fullName><br /><br /> <xref:System.Data.DataTable?displayProperty=fullName>|
@@ -53,26 +53,26 @@ ms.locfileid: "65676477"
 |堆栈|<xref:System.Collections.Stack?displayProperty=fullName>|
 |流|<xref:System.IO.Stream?displayProperty=fullName>|
 
- 此外，以下后缀应**不**使用：
+ 此外，**不**应使用以下后缀：
 
 - 委托
 
 - Enum
 
-- 此实现-请改用 Core
+- Impl-改为使用 "Core"
 
-- Ex 或类似的后缀，以使其不同于早期版本的相同的类型
+- Ex 或类似的后缀，以将其与同一类型的早期版本区分开来
 
-  命名约定提供了通用的外观对于库面向公共语言运行时。 这会减少所需的新软件库，并会增加客户信心库由必须在托管代码中开发的专业知识的人学习曲线。
+  命名约定为面向公共语言运行时的库提供了通用的外观。 这减少了新软件库所需的学习曲线，并使客户可以放心地了解库是由具有开发托管代码的专业技能的人员开发的。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 删除类型名称的后缀。
+ 从类型名称中删除后缀。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  除非后缀在应用程序域中具有明确的含义，否则不要禁止显示来自此规则的警告。
 
-## <a name="related-rules"></a>相关的规则
- [CA1710:标识符应具有正确的后缀](../code-quality/ca1710-identifiers-should-have-correct-suffix.md)
+## <a name="related-rules"></a>相关规则
+ [CA1710：标识符应具有正确的后缀](../code-quality/ca1710-identifiers-should-have-correct-suffix.md)
 
 ## <a name="see-also"></a>请参阅
- [特性](https://msdn.microsoft.com/library/ee0038ef-b247-4747-a650-3c5c5cd58d8b) [NIB:事件和委托](https://msdn.microsoft.com/d98fd58b-fa4f-4598-8378-addf4355a115)
+ [特性](https://msdn.microsoft.com/library/ee0038ef-b247-4747-a650-3c5c5cd58d8b)[笔尖：事件和委托](https://msdn.microsoft.com/d98fd58b-fa4f-4598-8378-addf4355a115)

@@ -11,15 +11,15 @@ caps.latest.revision: 3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e6b1feac19be5f6506227b60515df70d9a737a2a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: dc6b30d574d2d3585ec9fa46e8dc63fcbd4572a5
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840274"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574445"
 ---
-# <a name="scriptepropagate-error-code"></a>SCRIPT_E_PROPAGATE 错误代码
-脚本错误被传播到调用方，这可能是在不同线程中。 主机应传递给调用方的错误代码。  
+# <a name="script_e_propagate-error-code"></a>SCRIPT_E_PROPAGATE 错误代码
+脚本错误将传播到调用方，该调用方可能在不同的线程中。 宿主应将错误代码传递给调用方。  
   
 ## <a name="syntax"></a>语法  
   

@@ -6,16 +6,16 @@ manager: lank
 ms.date: 12/28/2017
 ms.topic: conceptual
 description: 查找 Visual Studio 订阅随附的软件下载列表。
-ms.openlocfilehash: 7d6f533189bded975618e7dd65230a23d42b90f5
-ms.sourcegitcommit: 485881e6ba872c7b28a7b17ceaede845e5bea4fe
+ms.openlocfilehash: aba0af561559142c186d9bfa5728bd00b6f4d1dc
+ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68377908"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095267"
 ---
 # <a name="what-software-is-available-for-download"></a>有什么软件可供下载？
 
-可供使用的[软件下载列表](http://download.microsoft.com/download/1/5/4/15454442-CF17-47B9-A65D-DF84EF88511B/Visual_Studio_by_Subscription_Level.xlsx)取决于你正在使用的订阅。  如果有多个与同一登录地址关联的订阅，则无论你正在查看哪个订阅，都会看到最高级别订阅中包含的下载内容。  例如，如果你拥有 Visual Studio Enterprise 标准订阅和 Visual Studio Dev Essentials 成员资格，则会看到企业订阅可用的完整下载列表。  要查看订阅列表，请访问 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)。
+可供使用的[软件下载列表](http://download.microsoft.com/download/1/5/4/15454442-CF17-47B9-A65D-DF84EF88511B/Visual_Studio_by_Subscription_Level.xlsx)取决于你正在使用的订阅。  如果有多个与同一登录地址关联的订阅，则无论你正在查看哪个订阅，都会看到最高级别订阅中包含的下载内容。  例如，如果你拥有 Visual Studio Enterprise 标准订阅和 Visual Studio Professional 订阅，则会看到企业订阅可用的完整下载列表。  要查看订阅列表，请访问 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)。
 
 如果已具有 Visual Studio 订阅：
 1. 转到 [https://my.visualstudio.com/downloads](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs)

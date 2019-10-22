@@ -1,25 +1,25 @@
 ---
-title: 工作流设计器-Throw 活动设计器
+title: 工作流设计器 Throw 活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.Throw.UI
 ms.assetid: 5e97c947-be39-4a1f-af04-000e2e09528a
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7074ee2a11759983f103024033cb2b96322330cc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fe6a530888c7c28c5c1556114db03a6cd7369fe6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62434015"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649850"
 ---
 # <a name="throw-activity-designer"></a>Throw 活动设计器
 
-**引发**活动设计器用于创建和配置<xref:System.Activities.Statements.Throw>活动。
+**Throw**活动设计器用于创建和配置 <xref:System.Activities.Statements.Throw> 活动。
 
 ## <a name="the-throw-activity"></a>Throw 活动
 
@@ -27,9 +27,9 @@ ms.locfileid: "62434015"
 
 ### <a name="using-the-throw-activity-designer"></a>使用 Throw 活动设计器
 
-访问**引发**中的活动设计器**错误处理**类别**工具箱**。
+访问 "**工具箱**" 的 "**错误处理**" 类别中的 " **Throw** " 活动设计器。
 
-**引发**活动设计器可以从拖动**工具箱**只要通常放置活动的例如内放置到工作流设计器图面和<xref:System.Activities.Statements.Sequence>。 这将创建<xref:System.Activities.Statements.Throw>默认值的活动**DisplayName**的 Throw。 <xref:System.Activities.Activity.DisplayName%2A>值可以在的标头中编辑**引发**活动设计器中或在**DisplayName**属性网格的框。 <xref:System.Activities.Statements.Throw.Exception%2A> 属性必须在属性网格上编辑。
+可以将 " **Throw** " 活动设计器从 "**工具箱**" 拖放到工作流设计器图面上通常放置活动的任何位置，如 <xref:System.Activities.Statements.Sequence> 内。 这将创建一个 <xref:System.Activities.Statements.Throw> 活动，其中包含 Throw 的默认**DisplayName** 。 可以在 " **Throw** " 活动设计器的标头中或在属性网格的 " **DisplayName** " 框中编辑 <xref:System.Activities.Activity.DisplayName%2A> 值。 <xref:System.Activities.Statements.Throw.Exception%2A> 属性必须在属性网格上编辑。
 
 ### <a name="the-throw-properties"></a>Throw 属性
 
@@ -42,7 +42,7 @@ ms.locfileid: "62434015"
 
 ## <a name="see-also"></a>请参阅
 
-- [集合](../workflow-designer/collection-activity-designers.md)
+- [收集](../workflow-designer/collection-activity-designers.md)
 - [Rethrow](../workflow-designer/rethrow-activity-designer.md)
 - [Throw 活动设计器](../workflow-designer/throw-activity-designer.md)
 - [TryCatch](../workflow-designer/trycatch-activity-designer.md)

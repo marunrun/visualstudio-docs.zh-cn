@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextAuthor::ReplaceText |Microsoft Docs
+title: IDebugDocumentTextAuthor：： ReplaceText |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 920b6851f5fea42597be7ec5dcc55350024abea9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: beca5d0ce19a38346ef9b03e39169769c90ea008
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946760"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572044"
 ---
 # <a name="idebugdocumenttextauthorreplacetext"></a>IDebugDocumentTextAuthor::ReplaceText
 替换文档中的文本。  
@@ -39,13 +39,13 @@ HRESULT ReplaceText(
   
 #### <a name="parameters"></a>参数  
  `cCharacterPosition`  
- [in]启动要替换的字符范围的位置。  
+ 中要替换的字符范围的起始位置。  
   
  `cNumToReplace`  
- [in]要替换的字符数。  
+ 中要替换的字符数。  
   
  `pcharText[]`  
- [in]包含要替换旧的字符的新字符的缓冲区。  
+ 中包含用来替换旧字符的新字符的缓冲区。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  

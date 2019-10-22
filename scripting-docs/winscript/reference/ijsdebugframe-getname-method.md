@@ -1,5 +1,5 @@
 ---
-title: 'Ijsdebugframe:: Getname 方法 |Microsoft Docs'
+title: IJsDebugFrame：： GetName 方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 314a365a76533343ef14db513856a7ab16168677
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e78bd7c5b63737cd1a34d50ca6629eb173f40efb
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62558224"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573867"
 ---
 # <a name="ijsdebugframegetname-method"></a>IJsDebugFrame::GetName 方法
 获取堆栈帧的用户友好名称。  
@@ -35,12 +35,12 @@ HRESULT GetName(
   
 #### <a name="parameters"></a>参数  
  `pName`  
- [out]堆栈帧的名称。  
+ 弄堆栈帧的名称。  
   
 ## <a name="return-value"></a>返回值  
   
 ## <a name="requirements"></a>要求  
- **标头：** jscript9diag.h  
+ **标头：** jscript9diag  
   
 ## <a name="see-also"></a>请参阅  
  [IJsDebugFrame 接口](../../winscript/reference/ijsdebugframe-interface.md)

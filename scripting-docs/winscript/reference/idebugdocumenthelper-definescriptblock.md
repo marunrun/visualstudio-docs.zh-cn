@@ -1,5 +1,5 @@
 ---
-title: 'Idebugdocumenthelper:: Definescriptblock |Microsoft Docs'
+title: IDebugDocumentHelper：:D efineScriptBlock |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2a320e4e43a983ace4decbaa68de0b1a7df7d457
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6a2418b18e80ac86b672b3847f24ef9084ed1252
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62783019"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576979"
 ---
 # <a name="idebugdocumenthelperdefinescriptblock"></a>IDebugDocumentHelper::DefineScriptBlock
-指示特定范围的字符，是由给定的脚本引擎处理的脚本块帮助程序。  
+向帮助器指示特定范围的字符是由给定脚本引擎处理的脚本块。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,19 +41,19 @@ HRESULT DefineScriptBlock(
   
 #### <a name="parameters"></a>参数  
  `ulCharOffset`  
- [in]脚本块的开始位置。  
+ 中脚本块的开始位置。  
   
  `cChars`  
- [in]脚本块中的字符数。  
+ 中脚本块中的字符数。  
   
  `pas`  
- [in]此脚本块的脚本引擎。  
+ 中此脚本块的脚本引擎。  
   
  `fScriptlet`  
- [in]指示脚本块是否 scriptlet 的标志。  
+ 中指示脚本块是否为 scriptlet 的标志。  
   
  `pdwSourceContext`  
- [out]脚本块的源上下文。  
+ 弄脚本块的源上下文。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -63,13 +63,13 @@ HRESULT DefineScriptBlock(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 智能主机可以使用此方法时其文档包含嵌入式的脚本块。 当其代码包含对其他语言的嵌入式的脚本时，语言引擎可以使用此方法。  
+ 当智能主机的文档包含嵌入的脚本块时，可以使用此方法。 当语言引擎的代码包含用于其他语言的嵌入脚本时，它可以使用此方法。  
   
- 脚本引擎负责进行中的所有语法着色和代码上下文查找脚本块。  
+ 脚本引擎负责脚本块中的所有语法着色和代码上下文查找。  
   
- `DefineScriptBlock`添加文本后，应调用方法 (例如，使用`IDebugDocumentHelper::AddDBCSText`方法)，但该脚本之前已分析块 (例如，使用`IActiveScriptParse ::ParseScriptText`方法)。  
+ 在添加文本（例如，使用 `IDebugDocumentHelper::AddDBCSText` 方法）之后但在分析脚本块之前，应调用 `DefineScriptBlock` 方法（例如，使用 `IActiveScriptParse ::ParseScriptText` 方法）。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugDocumentHelper 接口](../../winscript/reference/idebugdocumenthelper-interface.md)   
- [IDebugDocumentHelper::AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)   
+ [IDebugDocumentHelper：： AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)    
  [IDebugDocumentHelper::AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)

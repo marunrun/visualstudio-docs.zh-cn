@@ -1,5 +1,5 @@
 ---
-title: IDispError::GetHelpInfo | Microsoft Docs
+title: IDispError：： GetHelpInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fa831ff511ea507e03ca858b93383ff38ead9039
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: a84e57e97bb781ad3ea0be1ac6766fd94f6f5c30
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446907"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573130"
 ---
 # <a name="idisperrorgethelpinfo"></a>IDispError::GetHelpInfo
-返回的帮助文件的路径和解释该错误，如有可能的主题的上下文 ID。  
+返回帮助文件的路径和说明错误的主题的上下文 ID （如果可能）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,10 +38,10 @@ HRESULT GetHelpInfo(
   
 #### <a name="parameters"></a>参数  
  `pbstrFileName`  
- [out]包含帮助文件的完全限定的路径的字符串。 如果没有帮助文件或者出现错误，则返回值为 NULL。  
+ 弄包含帮助文件的完全限定路径的字符串。 如果没有帮助文件或出现错误，则返回值为 NULL。  
   
  `pdwContext`  
- [out]错误的帮助上下文 ID。 如果没有帮助文件 (如果`pbstrFileName`为 NULL)，此参数没有任何意义。  
+ 弄错误的帮助上下文 ID。 如果没有帮助文件（如果 `pbstrFileName` 为 NULL），则此参数无意义。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -49,12 +49,12 @@ HRESULT GetHelpInfo(
 |“值”|描述|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
-|`E_FAIL`|发生了特定于提供程序的错误。|  
-|`E_INVALIDARG`|`pbstrFileName` 或`pdwContext`为 NULL。|  
-|`E_OUTOFMEMORY`|提供程序无法分配足够的内存用于返回的帮助文件路径。|  
+|`E_FAIL`|出现特定于提供程序的错误。|  
+|`E_INVALIDARG`|`pbstrFileName` 或 `pdwContext` 为 NULL。|  
+|`E_OUTOFMEMORY`|提供程序无法分配足够的内存来返回帮助文件路径。|  
   
 ## <a name="remarks"></a>备注  
- 此方法返回的帮助文件的路径和解释该错误，如有可能的主题的上下文 ID。  
+ 此方法返回帮助文件的路径和说明错误的主题的上下文 ID （如果可能）。  
   
 > [!NOTE]
 > 未实现此方法。  

@@ -1,5 +1,5 @@
 ---
-title: 'Ijsdebugframe:: Getdocumentpositionwithname 方法 |Microsoft Docs'
+title: IJsDebugFrame：： GetDocumentPositionWithName 方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4d3b909f3a3ebc672bf6d0a014b519de685b1677
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b818ca4dc1ec4402973026668972507861c86f22
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62558146"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575121"
 ---
 # <a name="ijsdebugframegetdocumentpositionwithname-method"></a>IJsDebugFrame::GetDocumentPositionWithName 方法
-返回此堆栈帧的用户级别文档中的当前位置。  
+返回此堆栈帧在用户级文档中的当前位置。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,18 +37,18 @@ HRESULT GetDocumentPositionWithName(
   
 #### <a name="parameters"></a>参数  
  `pDocumentName`  
- [out]用于静态脚本，文档的 URL。 针对动态脚本，则返回包含脚本 （例如，eval 代码，函数代码等） 的类型的名称。  
+ 弄对于静态脚本，为文档的 URL。 对于动态脚本，返回包含脚本类型的名称（例如，eval 代码、函数代码等）。  
   
  `pLine`  
- [out] 在文档中的基于 1 的行位置。  
+ [out] 在文档中基于1的行位置。  
   
  `pColumn`  
- [out] 在文档中的基于 1 的行位置。  
+ [out] 在文档中基于1的行位置。  
   
 ## <a name="return-value"></a>返回值  
   
 ## <a name="requirements"></a>要求  
- **标头：** jscript9diag.h  
+ **标头：** jscript9diag  
   
 ## <a name="see-also"></a>请参阅  
  [IJsDebugFrame 接口](../../winscript/reference/ijsdebugframe-interface.md)

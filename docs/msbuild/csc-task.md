@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 39287eb2b1aec27dcb0c08c40875ce579b3a6bea
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 9df54befff79b82703cb363fea92536285c68232
+ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66745787"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888025"
 ---
 # <a name="csc-task"></a>Csc 任务
 包装 csc.exe，生成可执行 (.exe) 文件、动态链接库（.dll 文件）或者代码模块（.netmodule 文件）     。 有关 csc.exe 的详细信息，请参阅 [C# 编译器选项](/dotnet/csharp/language-reference/compiler-options/index)  。
@@ -42,7 +42,7 @@ ms.locfileid: "66745787"
 | `CodePage` | 可选 `Int32` 参数。<br /><br /> 指定要用于编译中所有源代码文件的代码页。 有关详细信息，请参阅 [-codepage（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/codepage-compiler-option)。 |
 | `DebugType` | 可选 `String` 参数。<br /><br /> 指定调试类型。 `DebugType` 可以是 `full` 或 `pdbonly`。 默认值是 `full`，这使得调试程序能够附加到正在运行的程序中。 指定在调试程序中启动该程序时，`pdbonly` 启用源代码调试，但正在运行的程序附加到调试程序时，只显示汇编程序。<br /><br /> 此参数替代 `EmitDebugInformation` 参数。<br /><br /> 有关详细信息，请参阅 [-debug（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/debug-compiler-option)。 |
 | `DefineConstants` | 可选 `String` 参数。<br /><br /> 定义预处理器符号。 有关详细信息，请参阅 [-define（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/define-compiler-option)。 |
-| `DelaySign` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则指定需要完全签名的程序集。 如果为 `false`，则指定仅需要将公钥放在程序集中。<br /><br /> 此参数无任何效果，除非与 `KeyFile` 或 `KeyContainer` 参数配合使用。<br /><br /> 有关详细信息，请参阅 [-delaysign（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/delaysign-compiler-option)。 |
+| `DelaySign` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则指定仅需要将公钥放在程序集中。 如果为 `false`，则指定需要完全签名的程序集<br /><br /> 此参数无任何效果，除非与 `KeyFile` 或 `KeyContainer` 参数配合使用。<br /><br /> 有关详细信息，请参阅 [-delaysign（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/delaysign-compiler-option)。 |
 | `Deterministic` | 可选 `Boolean` 参数。<br/><br/> 如果为 `true`，则会导致编译器输出的程序集的二进制内容在整个编译中相同（如果输入相同）。<br/><br/>有关详细信息，请参阅 [（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/deterministic-compiler-option)。 |
 | `DisabledWarnings` | 可选 `String` 参数。<br /><br /> 指定要禁用的警告的列表。 有关详细信息，请参阅 [nowarn（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/nowarn-compiler-option)。 |
 | `DocumentationFile` | 可选 `String` 参数。<br /><br /> 将文档注释处理到一个 XML 文件中。 有关详细信息，请参阅 [doc（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/doc-compiler-option)。 |

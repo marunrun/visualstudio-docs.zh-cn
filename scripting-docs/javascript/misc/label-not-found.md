@@ -14,24 +14,24 @@ ms.assetid: 79e32926-b03f-457b-997c-2bb2ec8a1ec5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 72b63c699b09081e843f36daeec3fcc556ebaf4a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4acfb93808a588ed7efb4e256627f816e26a0137
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63007368"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573786"
 ---
 # <a name="label-not-found"></a>未找到标签
-您所做的引用不存在的标签。 标签可用于将标记块的代码，但在指定作用域内，必须是唯一的。  
+对不存在的标签进行了引用。 标签可用于标记代码块，但在指定范围内，必须是唯一的。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 检查以确保标签名称拼写正确。  
+- 请检查以确保你未拼写标签名称。  
   
-- 请确保所有标签引用都所引用的标签都已经在当前作用域 （这包括向前的定义） 定义。  
+- 确保对当前作用域中定义的标签进行所有标签引用（这包括前向定义）。  
   
 ## <a name="see-also"></a>请参阅  
- [标记的语句](../../javascript/reference/labeled-statement-javascript.md)   
- [switch 语句](../../javascript/reference/switch-statement-javascript.md)   
+ [标记语句](../../javascript/reference/labeled-statement-javascript.md)   
+ [Switch 语句](../../javascript/reference/switch-statement-javascript.md)   
  [break 语句](../../javascript/reference/break-statement-javascript.md)   
  [continue 语句](../../javascript/reference/continue-statement-javascript.md)

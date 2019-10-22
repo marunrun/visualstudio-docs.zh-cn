@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bfe750e8dca68876ac5d894c0ca194f82a42f21
-ms.sourcegitcommit: b593bb889f049fcbdff502c30b73178ed17dbdf0
+ms.openlocfilehash: ca5a80c07cb64cfd638542da4e1deefe7e373b18
+ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67291040"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342394"
 ---
 # <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>自定义“打开文件夹”开发的生成和调试任务
 
@@ -256,6 +256,9 @@ bin:
    ![自定义的“开始”按钮](media/customize-start-button.png)
 
    按 F5  时，调试程序会在可能已设置的任何断点启动和停止。 所有熟悉的调试程序窗口都是可用的，且具备功能性。
+
+   > [!IMPORTANT]
+   > 有关 C++ 打开文件夹项目中自定义生成和调试任务的其他详细信息，请参阅 [Visual Studio 中 C++ 生成系统的打开文件夹支持](/cpp/build/open-folder-projects-cpp)。
 
 ### <a name="specify-arguments-for-debugging"></a>指定调试参数
 

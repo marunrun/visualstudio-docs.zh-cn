@@ -2,7 +2,7 @@
 title: Visual Studio 2019 中的新增功能
 titleSuffix: ''
 description: 了解 Visual Studio 2019 中的新增功能。
-ms.date: 07/23/2019
+ms.date: 09/24/2019
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,19 +15,19 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f4a055f62fe76c701858f82b4778f7a3b19fa0a
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 5871e782ee84e49762d26a925380ad481e3623d1
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68918790"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211331"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019 中的新增功能
 
-已针对[版本 16.2](/visualstudio/releases/2019/release-notes/) 进行更新 
+已针对[版本 16.3](/visualstudio/releases/2019/release-notes/) 进行更新 
 
 >[!div class="button"]
->[下载 Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)
+>[下载 Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
 
 使用 Visual Studio 2019，你将获得面向任何开发人员、应用程序和平台的一流工具和服务。 无论是首次使用 Visual Studio 还是已经使用多年，此新版本都有很多值得称赞的地方！
 
@@ -74,7 +74,7 @@ C# 中有很多新颖有用的重构，更便于组织代码。 它们在灯泡�
 * 发现难以察觉的代码问题
 * 将关注点集中到重要领域，从而专注代码评审
 
-在首次预览作为 Visual Studio 扩展的 IntelliCode 时，我们最初仅支持 C#。 现在，在 16.1 的新增功能中，我们添加了对 C# 和 XAML“in-the-box”的支持  。 （但是，对 C++ 和 TypeScript/JavaScript 的支持仍处于预览状态。）
+在 IntelliCode 以 Visual Studio 扩展形式首次预览时，我们最初仅支持 C#。 现在，在 16.1 的新增功能中，我们添加了对 C# 和 XAML“in-the-box”的支持  。 （但是，对 C++ 和 TypeScript/JavaScript 的支持仍处于预览状态。）
 
 如果你使用的是 C#，我们还添加了在你自己的代码上训练自定义模型的功能。
 
@@ -108,6 +108,12 @@ C# 中有很多新颖有用的重构，更便于组织代码。 它们在灯泡�
 
    ![在测试资源管理器中显示用户界面改进的屏幕截图](media/vs-2019/test-explorer-ui.png)
 
+### <a name="net-core"></a>.NET Core
+
+**16.3 中的新增功能**：提供了对 .NET Core 3.0 的支持。 跨平台、开放源代码且由 Microsoft 完全支持。 
+
+有关详细信息，请参阅[宣布推出 .NET Core 3.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/) 博客文章。
+
 ## <a name="collaborate"></a>协作
 
 查看以下视频，以了解如何建立团队来解决问题。 <br><br>*视频长度：4.22 分钟*
@@ -126,11 +132,11 @@ C# 中有很多新颖有用的重构，更便于组织代码。 它们在灯泡�
 
 启动窗口还包括用于打开项目或解决方案、打开本地文件夹，或创建新项目的选项。
 
-有关详细信息，请参阅博客文章 [Get to code:How we designed the new Visual Studio start window](https://devblogs.microsoft.com/visualstudio/get-to-code-how-we-designed-the-new-visual-studio-start-window/)（开始编码：如何设计新的 Visual Studio 开始窗口）。
+有关详细信息，请参阅博客文章 [Get to code:How we designed the new Visual Studio start window](https://devblogs.microsoft.com/visualstudio/get-to-code-how-we-designed-the-new-visual-studio-start-window/)（开始编码：如何设计新的 Visual Studio 启动窗口）。
 
 ### <a name="live-share"></a>Live Share
 
-[Visual Studio Live Share](https://visualstudio.microsoft.com/services/live-share/) 是一项开发者服务，可让你与团队成员共享代码库及其上下文，并直接从 Visual Studio 内获得即时双向协作。 利用“实时共享”，团队成员可以无缝且安全地读取、导航、编辑和调试已与他们共享的项目。
+[Visual Studio Live Share](https://visualstudio.microsoft.com/services/live-share/) 是一项开发者服务，可让你与团队成员共享代码库及其上下文，并直接从 Visual Studio 内获得即时双向协作。 借助“Live Share”，团队成员可以无缝且安全地读取、导航、编辑和调试已与他们共享的项目。
 
 Visual Studio 2019 中会默认安装此服务。
 
@@ -154,7 +160,7 @@ Visual Studio 2019 中会默认安装此服务。
 
 ### <a name="performance-gains"></a>性能提升
 
-我们采用了曾经排他的 C++ 数据断点，并将其用于 .NET Core 应用程序。
+我们采用了曾经 C++ 独有的数据断点，并将其用于 .NET Core 应用程序。
 
    ![显示 Visual Studio 2019 中的调试数据断点的动画](media/vs-2019/debug-data-breakpoints.gif)
 

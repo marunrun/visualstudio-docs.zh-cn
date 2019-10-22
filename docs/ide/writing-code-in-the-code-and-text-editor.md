@@ -10,16 +10,16 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aa2c9a4585947fb7d2e21d1eea4e6613cdd33964
-ms.sourcegitcommit: 614d5b99576ea27a41957cd94062dc95cbd29c1c
+ms.openlocfilehash: 7dbb14a7ea6b3271c7608f3bbb49dd30aa605b66
+ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65531669"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72380964"
 ---
 # <a name="features-of-the-code-editor"></a>代码编辑器功能
 
-Visual Studio 编辑器提供了许多功能，可方便你更加轻松地编写和管理代码和文本。 可通过使用大纲显示来展开和折叠不同的代码块。 可通过使用 IntelliSense、“对象浏览器”  以及调用层次结构，了解有关代码的详细信息。 可使用“转到”  、“转到定义”  和“查找所有引用”  等功能查找代码。 可以将插入代码块和代码片段，并且可以通过“使用时生成”  等功能生成代码。 如果之前从未用过 Visual Studio 编辑器，请参阅[编辑代码](https://visualstudio.microsoft.com/vs/features/ide/)进行快速概览。
+Visual Studio 编辑器提供了许多功能，可方便你更加轻松地编写和管理代码和文本。 可通过使用大纲显示来展开和折叠不同的代码块。 可通过使用 IntelliSense、“对象浏览器”  以及调用层次结构，了解有关代码的详细信息。 可使用“转到”  、“转到定义”  和“查找所有引用”  等功能查找代码。 可以将插入代码块和代码片段，并且可以通过“使用时生成”  等功能生成代码。 如果之前从未用过 Visual Studio 编辑器，请参阅[了解如何使用代码编辑器](../get-started/tutorial-editor.md)。
 
 > [!NOTE]
 > 本主题适用于 Visual Studio  Windows 版。 对于 Visual Studio for Mac，请参阅[源编辑器 (Visual Studio for Mac)](/visualstudio/mac/source-editor)。
@@ -90,6 +90,6 @@ Visual Studio 编辑器提供了许多功能，可方便你更加轻松地编写
 
 - [源编辑器 (Visual Studio for Mac)](/visualstudio/mac/source-editor)
 - [Visual Studio IDE](../get-started/visual-studio-ide.md)
-- [Visual Studio 中的 C++ 入门](../ide/getting-started-with-cpp-in-visual-studio.md)
+- [Visual Studio 中的 C++ 入门](/cpp/get-started/tutorial-console-cpp)
 - [Visual Studio 中的 C# 和 ASP.NET 入门](../get-started/csharp/tutorial-aspnet-core.md)
 - [Visual Studio 中的 Python 入门](../ide/quickstart-python.md)

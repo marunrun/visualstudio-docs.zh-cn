@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::GetItemName | Microsoft Docs
+title: IScriptEntry：： GetItemName |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9d8abc6d1264ce532adcbc59c262510a39ea7a91
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: dcd1b83fa6d22fafc2123645f1f252fa1325f7f1
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787851"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575455"
 ---
 # <a name="iscriptentrygetitemname"></a>IScriptEntry::GetItemName
-返回标识的项名称`IScriptEntry`对象。  
+返回标识 `IScriptEntry` 对象的项名称。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT GetItemName(
   
 #### <a name="parameters"></a>参数  
  `pbstr`  
- [out]包含的项名称的缓冲区的地址。 主机使用的项名称来标识该项。  
+ 弄包含项名称的缓冲区的地址。 项名称由主机用于标识该项。  
   
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -47,7 +47,7 @@ HRESULT GetItemName(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 有关`IScriptScriptlet`对象，通过设置项目名称[IActiveScriptAuthor::AddScriptlet](../../winscript/reference/iactivescriptauthor-addscriptlet.md)。 对于其他接口，设置项名称使用[IScriptEntry::SetItemName](../../winscript/reference/iscriptentry-setitemname.md)。  
+ 对于 `IScriptScriptlet` 对象，您可以使用[IActiveScriptAuthor：： AddScriptlet](../../winscript/reference/iactivescriptauthor-addscriptlet.md)设置项名称。 对于其他接口，可以使用[IScriptEntry：： SetItemName](../../winscript/reference/iscriptentry-setitemname.md)设置项名称。  
   
 ## <a name="see-also"></a>请参阅  
  [IScriptEntry 接口](../../winscript/reference/iscriptentry-interface.md)

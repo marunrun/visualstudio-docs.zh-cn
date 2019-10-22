@@ -1,5 +1,5 @@
 ---
-title: IDebugApplicationNode100::QueryIsChildNode | Microsoft Docs
+title: IDebugApplicationNode100：： QueryIsChildNode |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 959de620e1e556d92a51dcab0062fa6ff055ec46
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 761b2800415adbcf298eb96f2231a74195b2291c
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446668"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574744"
 ---
 # <a name="idebugapplicationnode100queryischildnode"></a>IDebugApplicationNode100::QueryIsChildNode
-确定此节点的子节点之一是否属于指定的文档。  
+确定指定的文档是否属于此节点的一个子节点。  
   
 > [!IMPORTANT]
-> [IDebugApplicationNode100 接口](../../winscript/reference/idebugapplicationnode100-interface.md)是实现由 PDM 10.0 版及更高版本。 在 activdbg100.h 中发现。  
+> [IDebugApplicationNode100 接口](../../winscript/reference/idebugapplicationnode100-interface.md)由 PDM 10.0 及更高版本实现。 在 activdbg100.h 中发现。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +34,7 @@ HRESULT QueryIsChildNode(        [in] IDebugDocument* pSearchKey        );
   
 #### <a name="parameters"></a>参数  
  `pSearchKey`  
- 搜索键中。  
+ 搜索键。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugApplicationNode100 接口](../../winscript/reference/idebugapplicationnode100-interface.md)

@@ -1,21 +1,21 @@
 ---
 title: 自定义 IDE
-description: 可以通过多种方式自定义 Visual Studio for Mac，因此用户可以在满足效率和美观需求的环境中开发应用。 本主题将探讨调整 Visual Studio for Mac 的各种方式以满足你的需要。
+description: 可以通过多种方式自定义 Visual Studio for Mac，因此用户可以在满足效率和美观需求的环境中开发应用。 本文将探讨调整 Visual Studio for Mac 的各种方式以满足你的需要。
 author: alanjclark
 ms.author: alcl
 ms.date: 05/06/2018
 ms.assetid: F7C2A28C-0759-4E0D-A28E-B72D5AB73DB6
 ms.custom: video
-ms.openlocfilehash: ff0c7a2970a9ecfdfb9de08f487ad7dfbe768249
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: fa1e2924e810f9e37f28d5becdfd8d46243b76fe
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67691841"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71213736"
 ---
 # <a name="customizing-the-ide"></a>自定义 IDE
 
-可以通过多种方式自定义 Visual Studio for Mac，因此用户可以在同时满足效率和美观需求的环境中开发应用。 本文将探讨调整 Visual Studio for Mac 的各种方式以满足你的需要。
+可以自定义 Visual Studio for Mac，因此用户可以在同时满足效率和美观需求的环境中开发应用。 本文将探讨调整 Visual Studio for Mac 的各种方式以满足你的需要。
 
 ## <a name="dark-theme"></a>深色主题
 
@@ -62,13 +62,17 @@ Visual Studio for Mac 已采用以下 14 种语言进行本地化，便于更多
 
 ## <a name="key-bindings"></a>键绑定
 
-通过键绑定，可以调整开发环境，使得在 Visual Studio for Mac 中的移动更高效。 它为许多常用 IDE（如 Visual Studio (on Windows)、ReSharper、Visual Studio Code 和 Xcode）提供熟悉的键绑定。
+通过键绑定或键盘快捷方式，可以调整开发环境，使得在 Visual Studio for Mac 中的移动更高效。 它为许多常用 IDE（如 Visual Studio (on Windows)、ReSharper、Visual Studio Code 和 Xcode）提供熟悉的键绑定。
 
 通过浏览到“Visual Studio”>“首选项”>“环境”>“键绑定”可以设置键绑定，如下图中所示  ：
 
 ![设置键绑定](media/customizing-the-ide-image10a.png)
 
 从此处可以搜索键绑定组合、查看冲突绑定、添加新绑定和编辑现有绑定。
+
+也可以在 Visual Studio for Mac 的初始设置过程中通过“键盘选择”屏幕来设置这些绑定  ：
+
+![第一次运行时设置键绑定](media/ide-tour-2019-keyboard-shortcut.png)
 
 ## <a name="workspace-layout"></a>工作区布局
 
@@ -108,7 +112,7 @@ Visual Studio for Mac 提供包含其他信息、工具和导航帮助的面板�
 
 始终存在一个活动布局，对布局做出的任何更改（如添加或重新定位填充）只会更改活动布局。 一旦关闭 Visual Studio for Mac，将不会保存做出的更改。
 
-然而，可以使用“视图”>“保存当前布局”菜单项来创建新布局  。 此操作会将当前布局添加到菜单，以供随时选择：
+然而，可以使用“视图”>“保存当前布局”菜单项来创建新布局  。 此命令会将当前布局添加到菜单，以供随时选择：
 
 ![保存当前布局](media/customizing-the-ide-image6a.png)
 
@@ -116,7 +120,7 @@ Visual Studio for Mac 提供包含其他信息、工具和导航帮助的面板�
 
 通过 Visual Studio for Mac，可以并行打开文本编辑器，或让一个编辑器作为独立的浮动窗口。
 
-通过选择“视图”>“编辑器列”>“2 列”  ，用“视图”菜单项启用 2 列模式，或通过将编辑器选项卡拖动到编辑器区域的一个边缘来启用该模式：
+通过选择“视图”>“编辑器列”>“2 列”，用“视图”菜单项启用 2 列模式，或通过将编辑器选项卡拖动到编辑器区域的一个边缘来启用该模式  ：
 
 ![2 列并行模式](media/customizing-the-ide-sbs.png)
 

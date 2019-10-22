@@ -1,18 +1,18 @@
 ---
 title: Visual Studio 订阅
-Author: evanwindom
-Ms.author: tglee
-Manager: lank
+author: evanwindom
+ms.author: lank
+manager: lank
 layout: LandingPage
-Ms.date: 06/25/2018
-Ms.topic: landing-page
-Description: 欢迎使用 Visual Studio 订阅
-ms.openlocfilehash: 25337098dded67d28df1cea03a47ec8c28646763
-ms.sourcegitcommit: 57866dd72fd0e15ce61128df70729b427a2d02eb
+ms.date: 06/25/2018
+ms.topic: landing-page
+description: 欢迎使用 Visual Studio 订阅
+ms.openlocfilehash: 5848ccca0468b6293f7e31785944f5cb8b14a17c
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68315223"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516854"
 ---
 # <a name="visual-studio-subscriptions"></a>Visual Studio 订阅
 
@@ -194,7 +194,6 @@ Visual Studio 订阅提供全面的资源集合，便于你在首选平台和设
                             <li><a href="/visualstudio/subscriptions/vs-pluralsight">Pluralsight</a>（云、设计、移动和数据）</li>
                             <li><a href="/visualstudio/subscriptions/vs-datacamp">Data Camp</a>（数据科学和 AI）</li>
                             <li><a href="/visualstudio/subscriptions/vs-tech-support">Microsoft 专业技术支持事件</a></li>
-                            <li><a href="/visualstudio/subscriptions/vs-azure-advisory-chat">Azure 顾问聊天</a></li>
                             <li><a href="/visualstudio/subscriptions/vs-azure-community">Azure 社区</a></li>
                         </ul>
                     </div>

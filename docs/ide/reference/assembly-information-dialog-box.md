@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c36fbacfde97eb42b1feab3e9097a731437cce4e
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 411a9b1150961307a2a8ed3cdfae9842fb56701c
+ms.sourcegitcommit: 13decf878b33fc0c5d665a88067170c2861b261b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68870765"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71681617"
 ---
 # <a name="assembly-information-dialog-box"></a>“程序集信息”对话框
 
@@ -61,6 +61,9 @@ ms.locfileid: "68870765"
 
 **使程序集 COM 可见**\
 指定程序集中的类型是否可由 COM 使用。 对应到 <xref:System.Runtime.InteropServices.ComVisibleAttribute>。
+
+> [!NOTE]
+> 有关在 .NET Framework 类库中生成 NuGet 包时设置这些属性的详细信息，请参阅[配置包的项目属性](/nuget/quickstart/create-and-publish-a-package-using-visual-studio-net-framework#configure-project-properties-for-the-package)。
 
 ## <a name="see-also"></a>请参阅
 

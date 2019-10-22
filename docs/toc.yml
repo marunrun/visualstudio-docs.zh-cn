@@ -1,4 +1,4 @@
-- name: Visual Studio 文档
+- name: Visual Studio IDE 文档
   href: ide/index.yml
   pdf_name: Visual Studio documentation
 - name: 概述
@@ -139,7 +139,7 @@
       displayName: Feature tour
       href: ide/quickstart-ide-orientation.md
     - name: C++：创建控制台应用
-      href: ide/getting-started-with-cpp-in-visual-studio.md
+      href: /cpp/get-started/tutorial-console-cpp
     - name: Python：创建 Web 应用
       href: ide/quickstart-python.md
     - name: Node.js：创建 Web 应用
@@ -170,8 +170,8 @@
   items:
     - name: 开发
       items:
-        - name: 索引：使用 IDE 编写代码
-          href: ide/index-writing-code.md
+        - name: 入门
+          href: ide/index-writing-code.yml
         - name: 在 IDE 中移动
           href: ide/how-to-move-around-in-the-visual-studio-ide.md
         - name: 解决方案和项目
@@ -563,6 +563,97 @@
               href: ide/class-designer/additional-information-about-errors.md
         - name: 改进代码
           href: ide/find-and-fix-code-errors.md
+        - name: Windows 窗体开发
+          items:
+            - name: Windows 窗体设计器概述
+              href: designers/windows-forms-designer-overview.md
+            - name: Windows 窗体设计器入门
+              href: designers/walkthrough-windows-forms-designer.md
+            - name: 排列控件 >>
+              href: /dotnet/framework/winforms/controls/arranging-controls-on-windows-forms
+            - name: 创建数据绑定控件 >>
+              href: /dotnet/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form
+            - name: 创建自定义控件 >>
+              href: /dotnet/framework/winforms/controls/developing-windows-forms-controls-at-design-time
+            - name: 禁用 Windows 窗体设计器的 DPI 感知功能
+              href: designers/disable-dpi-awareness.md
+            - name: 参考
+              items:
+                - name: System.Windows.Forms API >>
+                  href: /dotnet/api/system.windows.forms
+            - name: 教程
+              items:
+                - name: '教程 1：创建图片查看器 (C#)'
+                  items:
+                    - name: 概述
+                      displayName: Tutorial 1 Picture viewer
+                      href: ide/tutorial-1-create-a-picture-viewer.md
+                    - name: 步骤 1：创建 Windows 窗体应用项目
+                      href: ide/step-1-create-a-windows-forms-application-project.md
+                    - name: 步骤 2：运行你的应用
+                      href: ide/step-2-run-your-program.md
+                    - name: 步骤 3：设置窗体属性
+                      href: ide/step-3-set-your-form-properties.md
+                    - name: 步骤 4：使用 TableLayoutPanel 控件设置窗体布局
+                      href: ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md
+                    - name: 步骤 5：向窗体添加控件
+                      href: ide/step-5-add-controls-to-your-form.md
+                    - name: 步骤 6：命名按钮控件
+                      href: ide/step-6-name-your-button-controls.md
+                    - name: 步骤 7：向窗体添加对话框组件
+                      href: ide/step-7-add-dialog-components-to-your-form.md
+                    - name: 步骤 8：为“显示图片”按钮事件处理程序编写代码
+                      href: ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md
+                    - name: 步骤 9：检查代码、为代码添加注释和测试代码
+                      href: ide/step-9-review-comment-and-test-your-code.md
+                    - name: 步骤 10：为其他按钮和复选框编写代码
+                      href: ide/step-10-write-code-for-additional-buttons-and-a-check-box.md
+                    - name: 步骤 11：运行应用并尝试其他功能
+                      href: ide/step-11-run-your-program-and-try-other-features.md
+                - name: '教程 2：创建计时数学测验 (C#)'
+                  items:
+                    - name: 概述
+                      displayName: Tutorial 2 Timed math quiz
+                      href: ide/tutorial-2-create-a-timed-math-quiz.md
+                    - name: 步骤 1：创建项目并向窗体添加标签
+                      href: ide/step-1-create-a-project-and-add-labels-to-your-form.md
+                    - name: 步骤 2：创建随机加法问题
+                      href: ide/step-2-create-a-random-addition-problem.md
+                    - name: 步骤 3：添加倒计时计时器
+                      href: ide/step-3-add-a-countdown-timer.md
+                    - name: 步骤 4：添加 CheckTheAnswer() 方法
+                      href: ide/step-4-add-the-checktheanswer-parens-method.md
+                    - name: 步骤 5：为 NumericUpDown 控件添加 Enter 事件处理程序
+                      href: ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md
+                    - name: 步骤 6：添加减法问题
+                      href: ide/step-6-add-a-subtraction-problem.md
+                    - name: 步骤 7：添加乘法和除法问题
+                      href: ide/step-7-add-multiplication-and-division-problems.md
+                    - name: 步骤 8：自定义测验
+                      href: ide/step-8-customize-the-quiz.md
+                - name: '教程 3：创建配对游戏 (C#)'
+                  items:
+                    - name: 概述
+                      displayName: Tutorial 3 Matching game
+                      href: ide/tutorial-3-create-a-matching-game.md
+                    - name: 步骤 1：创建项目并向窗体添加表
+                      href: ide/step-1-create-a-project-and-add-a-table-to-your-form.md
+                    - name: 步骤 2：添加 Random 对象和图标列表
+                      href: ide/step-2-add-a-random-object-and-a-list-of-icons.md
+                    - name: 步骤 3：向每个标签分配一个随机图标
+                      href: ide/step-3-assign-a-random-icon-to-each-label.md
+                    - name: 步骤 4：向每个标签添加一个 Click 事件处理程序
+                      href: ide/step-4-add-a-click-event-handler-to-each-label.md
+                    - name: 步骤 5：添加标签引用
+                      href: ide/step-5-add-label-references.md
+                    - name: 步骤 6：添加计时器
+                      href: ide/step-6-add-a-timer.md
+                    - name: 步骤 7：保持对可见
+                      href: ide/step-7-keep-pairs-visible.md
+                    - name: 步骤 8：添加验证玩家是否获胜的方法
+                      href: ide/step-8-add-a-method-to-verify-whether-the-player-won.md
+                    - name: 步骤 9：尝试其他功能
+                      href: ide/step-9-try-other-features.md
         - name: 跨平台移动开发
           href: cross-platform/cross-platform-mobile-development-in-visual-studio.md
         - name: 'Visual Studio 中的 F#'
@@ -584,12 +675,11 @@
             - name: 设计国际应用
               displayName: Globalization localization world-ready
               href: ide/globalizing-and-localizing-applications.md
+    - name: 使用 XAML 工具 >>
+      href: xaml-tools/index.yml
     - name: 访问数据 >>
       displayName: Data connections
       href: data-tools/accessing-data-in-visual-studio.md
-    - name: 设计用户界面 >>
-      displayName: XAML designer
-      href: designers/designing-user-interfaces.md
     - name: 使用工作流设计器开发应用 >>
       href: workflow-designer/developing-applications-with-the-workflow-designer.md
     - name: 编译和生成
@@ -654,23 +744,107 @@
         - name: 演练：创建多计算机生成环境
           href: ide/walkthrough-creating-a-multiple-computer-build-environment.md
     - name: 调试 >>
-      href: debugger/index.md
+      href: debugger/index.yml
     - name: 测试 >>
       displayName: Unit testing
       href: test/improve-code-quality.md
     - name: 测量性能 >>
       displayName: Profiling
-      href: profiling/index.md
+      href: profiling/index.yml
     - name: 分析代码质量 >>
       displayName: Code analysis FxCop Analyzers
-      href: code-quality/index.md
+      href: code-quality/index.yml
     - name: 部署 >>
-      href: deployment/index.md
+      href: deployment/index.yml
     - name: 扩展 Visual Studio >>
       displayName: Visual Studio SDK
       href: extensibility/visual-studio-sdk.md
     - name: 对体系结构进行分析和建模 >>
       href: modeling/analyze-and-model-your-architecture.md
+    - name: 三维资产
+      items:
+        - name: 处理游戏和应用的 3D 资产
+          href: designers/working-with-3-d-assets-for-games-and-apps.md
+        - name: 如何：在游戏或应用中使用三维资产
+          href: designers/using-3-d-assets-in-your-game-or-app.md
+        - name: 纹理和图像
+          items:
+            - name: 使用纹理和图像
+              href: designers/working-with-textures-and-images.md
+            - name: 图像编辑器
+              href: designers/image-editor.md
+            - name: 图像编辑器示例
+              items:
+                - name: 创建基本纹理
+                  href: designers/how-to-create-a-basic-texture.md
+                - name: 创建和修改 MIP 级别
+                  href: designers/how-to-create-and-modify-mip-levels.md
+        - name: 三维模型
+          items:
+            - name: 处理三维模型
+              href: designers/working-with-3-d-models.md
+            - name: 模型编辑器
+              href: designers/model-editor.md
+            - name: 模型编辑器示例
+              items:
+                - name: 创建基本三维模型
+                  href: designers/how-to-create-a-basic-3-d-model.md
+                - name: 修改三维模型的透视点
+                  href: designers/how-to-modify-the-pivot-point-of-a-3-d-model.md
+                - name: 构建三维地形模型
+                  href: designers/how-to-model-3-d-terrain.md
+                - name: 向三维模型应用着色器
+                  href: designers/how-to-apply-a-shader-to-a-3-d-model.md
+        - name: 着色器
+          items:
+            - name: 使用着色器
+              href: designers/working-with-shaders.md
+            - name: 着色器设计器
+              href: designers/shader-designer.md
+            - name: 着色器设计器节点
+              items:
+                - name: 概述
+                  displayName: Shader designer nodes
+                  href: designers/shader-designer-nodes.md
+                - name: 常量节点
+                  href: designers/constant-nodes.md
+                - name: 参数节点
+                  href: designers/parameter-nodes.md
+                - name: 纹理节点
+                  href: designers/texture-nodes.md
+                - name: 数学运算节点
+                  href: designers/math-nodes.md
+                - name: 实用程序节点
+                  href: designers/utility-nodes.md
+                - name: 筛选节点
+                  href: designers/filter-nodes.md
+            - name: 着色器设计器示例
+              items:
+                - name: 创建基本颜色着色器
+                  displayName: Shader designer example
+                  href: designers/how-to-create-a-basic-color-shader.md
+                - name: 创建基本朗伯着色器
+                  href: designers/how-to-create-a-basic-lambert-shader.md
+                - name: 创建基本 Phong 着色器
+                  href: designers/how-to-create-a-basic-phong-shader.md
+                - name: 创建基本纹理着色器
+                  href: designers/how-to-create-a-basic-texture-shader.md
+                - name: 创建灰度纹理着色器
+                  href: designers/how-to-create-a-grayscale-texture-shader.md
+                - name: 创建基于几何图形的渐变着色器
+                  href: designers/how-to-create-a-geometry-based-gradient-shader.md
+                - name: 演练：创建真实的三维台球
+                  href: designers/walkthrough-creating-a-realistic-3-d-billiard-ball.md
+                - name: 导出着色器
+                  href: designers/how-to-export-a-shader.md
+        - name: 导出纹理
+          items:
+            - name: 导出包含 mipmap 的纹理
+              href: designers/how-to-export-a-texture-that-contains-mipmaps.md
+            - name: 导出包含自左乘的 alpha 的纹理
+              href: designers/how-to-export-a-texture-that-has-premultiplied-alpha.md
+            - name: 使用 Direct2D 或 JavaScript 应用导出纹理以供使用
+              href: designers/how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps.md
     - name: 提示和技巧
       items:
         - name: 提高生产力的功能
@@ -708,7 +882,7 @@
         - name: 启动行为
           displayName: Start page window
           href: ide/customizing-the-start-page-for-visual-studio.md
-        - name: 查找和使用 Visual Studio 扩展
+        - name: 管理扩展
           href: ide/finding-and-using-visual-studio-extensions.md
           displayName: 'marketplace, gallery, vsix'
         - name: 管理外部工具
@@ -767,7 +941,7 @@
           href: ide/reference/add-new-item-command.md
         - name: “别名”命令
           href: ide/reference/alias-command.md
-        - name: Evaluate Statement 命令
+        - name: “计算语句”命令
           href: ide/reference/evaluate-statement-command.md
         - name: “查找”命令
           href: ide/reference/find-command.md
@@ -799,7 +973,7 @@
           href: ide/reference/open-file-command.md
         - name: “打开项目”命令
           href: ide/reference/open-project-command.md
-        - name: “打印”命令
+        - name: Print 命令
           href: ide/reference/print-command.md
         - name: “快速监视”命令
           href: ide/reference/quick-watch-command.md
@@ -1173,6 +1347,8 @@
           href: help-viewer/accessibility-features.md
         - name: 快捷键
           href: help-viewer/shortcut-keys.md
+    - name: Visual Studio 图像库
+      href: designers/the-visual-studio-image-library.md
     - name: Dotfuscator Community
       items:
         - name: 概述
