@@ -1,5 +1,5 @@
 ---
-title: IApplicationDebuggerUI::BringDocumentToTop | Microsoft Docs
+title: IApplicationDebuggerUI：： BringDocumentToTop |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a8a88b44f609113670259492eb82491b16004d29
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b51e7b588750fc72e61840c4748c006eea732c22
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62991129"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577795"
 ---
 # <a name="iapplicationdebuggeruibringdocumenttotop"></a>IApplicationDebuggerUI::BringDocumentToTop
-用户界面将包含到在调试器中的顶部指定的调试文档的窗口。  
+将包含指定调试文档的窗口引入到调试器用户界面的顶部。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT BringDocumentToTop(
   
 #### <a name="parameters"></a>参数  
  `pddt`  
- [in]调试文档，以在调试器用户界面中将放在顶部。  
+ 中调试要置于调试器用户界面顶部的文档。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -45,10 +45,10 @@ HRESULT BringDocumentToTop(
 |“值”|描述|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
-|`E_INVALIDARG`|不知道该文档。|  
+|`E_INVALIDARG`|文档未知。|  
   
 ## <a name="remarks"></a>备注  
- 此方法将包含到在调试器中的顶部指定的调试文档的窗口的用户界面。  
+ 此方法将包含指定调试文档的窗口引入到调试器用户界面的顶部。  
   
 ## <a name="see-also"></a>请参阅  
  [IApplicationDebuggerUI 接口](../../winscript/reference/iapplicationdebuggerui-interface.md)

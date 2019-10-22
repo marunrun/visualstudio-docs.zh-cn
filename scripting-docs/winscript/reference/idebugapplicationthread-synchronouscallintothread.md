@@ -1,5 +1,5 @@
 ---
-title: IDebugApplicationThread::SynchronousCallIntoThread | Microsoft Docs
+title: IDebugApplicationThread：： SynchronousCallIntoThread |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f0c9b89332b55a180220820e8ffe1e030d37a848
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d545782f8103d10b38f3eb0d2f149c4ef3b9dc95
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62822081"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574499"
 ---
 # <a name="idebugapplicationthreadsynchronouscallintothread"></a>IDebugApplicationThread::SynchronousCallIntoThread
-提供了为使调用方应用程序线程中运行代码的机制。  
+为调用方提供在应用程序线程中运行代码的机制。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,16 +40,16 @@ HRESULT SynchronousCallIntoThread(
   
 #### <a name="parameters"></a>参数  
  `pstcb`  
- [in]要调用的对象。  
+ 中要调用的对象。  
   
  `dwParam1`  
- [in]第一个参数传递给`IDebugThreadCall::ThreadCallHandler`方法。  
+ 中要传递到 `IDebugThreadCall::ThreadCallHandler` 方法的第一个参数。  
   
  `dwParam2`  
- [in]第二个参数传递给`IDebugThreadCall::ThreadCallHandler`方法。  
+ 中要传递到 `IDebugThreadCall::ThreadCallHandler` 方法的第二个参数。  
   
  `dwParam3`  
- [in]第三个参数传递给`IDebugThreadCall::ThreadCallHandler`方法。  
+ 中要传递到 `IDebugThreadCall::ThreadCallHandler` 方法的第三个参数。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -59,7 +59,7 @@ HRESULT SynchronousCallIntoThread(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法提供了为使调用方在调试器线程中运行代码的机制。 语言引擎和主机通常使用此方法以实现基于其单个线程实现自由线程对象。  
+ 此方法为调用方提供一种机制，用于在调试器线程中运行代码。 语言引擎和主机通常使用此方法在其单线程实现之上实现自由线程对象。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugApplicationThread 接口](../../winscript/reference/idebugapplicationthread-interface.md)   

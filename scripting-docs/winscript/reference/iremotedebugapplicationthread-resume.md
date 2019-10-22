@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationThread::Resume |Microsoft Docs
+title: IRemoteDebugApplicationThread：： Resume |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5b1a40d16cf017215de42e6a83312d5b756f2081
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: dc9ccb28604d3a185a1919eb8dc288df711630b6
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62788046"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571956"
 ---
 # <a name="iremotedebugapplicationthreadresume"></a>IRemoteDebugApplicationThread::Resume
 恢复线程。  
@@ -37,7 +37,7 @@ HRESULT Resume(
   
 #### <a name="parameters"></a>参数  
  `pdwCount`  
- [out]在线程挂起计数。  
+ 弄线程的挂起计数。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -47,7 +47,7 @@ HRESULT Resume(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 当此方法继续线程，它减少挂起计数。  
+ 此方法恢复线程时，它会递减挂起计数。  
   
 ## <a name="see-also"></a>请参阅  
  [IRemoteDebugApplicationThread 接口](../../winscript/reference/iremotedebugapplicationthread-interface.md)

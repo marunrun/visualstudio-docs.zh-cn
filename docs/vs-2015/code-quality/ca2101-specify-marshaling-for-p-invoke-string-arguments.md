@@ -1,5 +1,5 @@
 ---
-title: CA2101:指定对 P-invoke 字符串参数封送处理 |Microsoft Docs
+title: CA2101：为 P 调用字符串参数指定封送处理 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,41 +12,41 @@ helpviewer_keywords:
 - SpecifyMarshalingForPInvokeStringArguments
 ms.assetid: 9d1abfc3-d320-41e0-9f6e-60cefe6ffe1b
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 11916609f2efa9c0b6e208548ba51795bd276015
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 57b7214058baf63ffa5e3ee2c9a982bf411b60e7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68154392"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652183"
 ---
-# <a name="ca2101-specify-marshaling-for-pinvoke-string-arguments"></a>CA2101:指定对 P/Invoke 字符串参数进行封送处理
+# <a name="ca2101-specify-marshaling-for-pinvoke-string-arguments"></a>CA2101：指定对 P/Invoke 字符串参数进行封送处理
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|SpecifyMarshalingForPInvokeStringArguments|
 |CheckId|CA2101|
-|类别|Microsoft.Globalization|
-|是否重大更改|非换行|
+|类别|Microsoft 全球化|
+|是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 平台调用成员允许部分受信任调用方具有一个字符串参数，并且不显式封送字符串。
+ 平台调用成员允许部分受信任的调用方，具有字符串参数，并不显式封送字符串。
 
 ## <a name="rule-description"></a>规则说明
- 当你从 Unicode 转换为 ANSI 时，就可以不是所有 Unicode 字符，可以都表示特定的 ANSI 代码页。 *最佳匹配映射*尝试解决此问题，只需替换不能表示的字符的字符。 此功能的使用可能导致潜在的安全漏洞，因为您无法控制选择的字符。 例如，恶意代码会有意创建一个包含在特定代码页中，找不到该文件系统的特殊字符会转换为的字符的 Unicode 字符串 '..' 或 /。 另请注意的特殊字符的安全检查经常发生之前将字符串转换为 ANSI。
+ 从 Unicode 转换为 ANSI 时，可能并非所有 Unicode 字符都可以在特定 ANSI 代码页中表示。 *最佳映射*尝试通过将不能表示的字符替换为字符来解决此问题。 使用此功能可能会导致潜在的安全漏洞，因为您无法控制所选的字符。 例如，恶意代码可能会有意创建一个 Unicode 字符串，其中包含在特定代码页中找不到的字符，这些字符将转换为文件系统特殊字符，如 ".." 或 "/"。 另请注意，在将字符串转换为 ANSI 之前，通常会检查是否存在特殊字符。
 
- 对于非托管的转换，mb 的磁盘到 WChar 默认值为最佳的映射。 除非显式禁用最佳的映射，你的代码可能包含可利用的安全漏洞，由于此问题。
+ 最佳映射是非托管转换的默认值，WChar 到 Mb。 除非显式禁用最佳映射，否则，由于此问题，你的代码可能包含可利用的安全漏洞。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要解决此规则的冲突，显式封送字符串数据类型。
+ 若要修复与此规则的冲突，请显式封送字符串数据类型。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  不禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
- 下面的示例演示一个方法，违反了此规则，并展示了如何解决冲突。
+ 下面的示例演示违反此规则的方法，并演示如何修复冲突。
 
  [!code-csharp[FxCop.Security.PinvokeAnsiUnicode#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.PinvokeAnsiUnicode/cs/FxCop.Security.PinvokeAnsiUnicode.cs#1)]

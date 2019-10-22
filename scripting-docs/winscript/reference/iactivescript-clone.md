@@ -1,5 +1,5 @@
 ---
-title: IActiveScript::Clone | Microsoft Docs
+title: IActiveScript：： Clone |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bec912596c792a67f65434062bc0d0ed11bd3fb9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fbaad29cb31af26a0f26a1c679a900192fc77041
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935700"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575800"
 ---
 # <a name="iactivescriptclone"></a>IActiveScript::Clone
-克隆当前脚本引擎 （减去任何当前执行状态），返回当前线程中没有站点加载脚本引擎。 此新的脚本引擎的属性将与原始脚本引擎会采用如果它已转换回为初始化状态的属性相同。  
+克隆当前脚本引擎（减去任何当前执行状态），并返回在当前线程中没有站点的加载的脚本引擎。 如果将其转换回已初始化状态，则此新脚本引擎的属性将与原始脚本引擎的属性相同。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT Clone(
   
 #### <a name="parameters"></a>参数  
  `ppscript`  
- [out]接收指向的变量的地址[IActiveScript](../../winscript/reference/iactivescript.md)克隆脚本引擎的接口。 主机必须创建一个站点，然后调用[iactivescript:: Setscriptsite](../../winscript/reference/iactivescript-setscriptsite.md)上新的脚本引擎之前它将处于初始化状态的方法，因此，可使用。  
+ 弄变量的地址，该变量接收指向克隆的脚本引擎的[IActiveScript](../../winscript/reference/iactivescript.md)接口的指针。 宿主必须创建一个站点，并对新的脚本引擎调用[IActiveScript：： SetScriptSite](../../winscript/reference/iactivescript-setscriptsite.md)方法，然后它才会处于已初始化状态，因此可供使用。  
   
 ## <a name="return-value"></a>返回值  
  返回以下值之一：  
@@ -46,15 +46,15 @@ HRESULT Clone(
 |------------------|-------------|  
 |`S_OK`|成功。|  
 |`E_NOTIMPL`|不支持此方法。|  
-|`E_POINTER`|指定了无效的指针。|  
-|`E_UNEXPECTED`|不应在调用 （例如，脚本引擎具有尚未加载或初始化）。|  
+|`E_POINTER`|指定的指针无效。|  
+|`E_UNEXPECTED`|不应进行调用（例如，尚未加载或初始化脚本引擎）。|  
   
 ## <a name="remarks"></a>备注  
- `IActiveScript::Clone`方法是一种优化方式的`IPersist*::Save`， `CoCreateInstance`，和`IPersist*::Load`，因此，像原始脚本引擎的状态已保存和加载到新的脚本引擎的新的脚本引擎状态应相同。 命名的项会有重复在克隆的脚本引擎中，但每个项的特定对象指针会忘记和所获得的采用[iactivescriptsite:: Getiteminfo](../../winscript/reference/iactivescriptsite-getiteminfo.md)方法。 这允许与每个线程入口点 （单元模型） 要使用的相同对象模型。  
+ @No__t_0 方法是对 `IPersist*::Save`、`CoCreateInstance` 和 `IPersist*::Load` 的优化，因此新脚本引擎的状态应与原始脚本引擎的状态保存并加载到新的脚本引擎中的状态相同。 已命名的项在克隆的脚本引擎中重复，但会忘记每个项的特定对象指针，并通过[IActiveScriptSite：： GetItemInfo](../../winscript/reference/iactivescriptsite-getiteminfo.md)方法获取。 这允许使用与每个线程的入口点（单元模型）相同的对象模型。  
   
- 此方法用于可以运行同一个脚本的多个实例的多线程的服务器主机。 脚本引擎可能会返回`E_NOTIMPL`，在这种情况下，主机可以通过复制的持久状态并创建与脚本引擎的新实例实现相同的结果`IPersist*`接口。  
+ 此方法用于可运行同一脚本的多个实例的多线程服务器主机。 脚本引擎可能返回 `E_NOTIMPL`，在这种情况下，宿主可以通过复制持久状态并使用 `IPersist*` 接口创建脚本引擎的新实例来实现相同的结果。  
   
- 此方法可以从非基础线程调用不会导致到主机对象或一个非基本标注[IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)接口。  
+ 此方法可从非基线程调用，而不会导致非基本标注宿主对象或[IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)接口。  
   
 ## <a name="see-also"></a>请参阅  
  [IActiveScript](../../winscript/reference/iactivescript.md)

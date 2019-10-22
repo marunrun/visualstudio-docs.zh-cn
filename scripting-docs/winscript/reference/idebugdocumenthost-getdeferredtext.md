@@ -1,5 +1,5 @@
 ---
-title: 'Idebugdocumenthost:: Getdeferredtext |Microsoft Docs'
+title: IDebugDocumentHost：： GetDeferredText |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3e5800a6de15d2d59208022fa44d3c2f4c931e14
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 273b4eb52b7263d34c347dff3a00479945b809df
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446569"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72569420"
 ---
 # <a name="idebugdocumenthostgetdeferredtext"></a>IDebugDocumentHost::GetDeferredText
-返回添加的使用的字符范围`IDebugDocumentHelper::AddDeferredText`方法，请在原始主机文档。  
+返回在原始宿主文档中使用 `IDebugDocumentHelper::AddDeferredText` 方法添加的一系列字符。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,19 +41,19 @@ HRESULT GetDeferredText(
   
 #### <a name="parameters"></a>参数  
  `dwTextStartCookie`  
- [in]表示文本的起始位置的主机定义的 cookie。  
+ 中主机定义的 cookie，表示文本的起始位置。  
   
  `pcharText`  
- [in、 out]字符文本缓冲区。 此方法不返回字符，如果此参数为`NULL`。  
+ [in，out]字符文本缓冲区。 如果 `NULL` 此参数，则此方法不返回字符。  
   
  `pstaTextAttr`  
- [in、 out]字符属性缓冲区。 此方法不返回特性，如果此参数为`NULL`。  
+ [in，out]字符特性缓冲区。 如果 `NULL` 此参数，则此方法不返回特性。  
   
  `pcNumChars`  
- [in、 out]指示返回的字符/属性的实际数目。 此参数必须设置为零之前调用此方法。  
+ [in，out]指示返回的字符/属性的实际数量。 在调用此方法之前，此参数必须设置为零。  
   
  `cMaxChars`  
- [in]要返回的字符数目上限。  
+ 中要返回的最大字符数。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -61,15 +61,15 @@ HRESULT GetDeferredText(
 |“值”|描述|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
-|`E_NOTIMPL`|未实现方法。|  
+|`E_NOTIMPL`|未实现该方法。|  
   
 ## <a name="remarks"></a>备注  
- 此方法可能会返回`E_NOTIMPL`，如果主机不会调用`IDebugDocumentHelper::AddDeferredText`。  
+ 如果主机未调用 `IDebugDocumentHelper::AddDeferredText`，则此方法可能会返回 `E_NOTIMPL`。  
   
 > [!NOTE]
-> 此方法返回从原始文档的文本。 主机不会不跟踪的编辑或对文档的其他更改。  
+> 此方法返回原始文档中的文本。 宿主不跟踪对文档进行的编辑或其他更改。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugDocumentHost 接口](../../winscript/reference/idebugdocumenthost-interface.md)   
- [IDebugDocumentHelper::AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)   
+ [IDebugDocumentHelper：： AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)    
  [SOURCE_TEXT_ATTR 枚举](../../winscript/reference/source-text-attr-enumeration.md)

@@ -6,21 +6,21 @@ ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.assetid: 6b0f72a4-70ca-4e55-b236-2ea1034fd8a7
 caps.latest.revision: 32
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6eb44970cc29198ad9044281e566727a64b893c8
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: a48c01203d2e951e917482de3c0d9c2bec29ae01
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871566"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72660569"
 ---
 # <a name="extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel"></a>扩展编码的 UI 测试和操作录制以支持 Microsoft Excel
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 编码的 UI 测试和操作录制的测试框架不支持的每个可能的用户界面。 它可能不支持你想要测试的特定 UI。 例如，不能立即创建编码的 UI 测试或 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 电子表格的操作录制。 但是，你可以为编码的 UI 测试框架创建自己的扩展，该扩展将通过利用编码的 UI 测试框架的扩展性支持特定的 UI。 以下主题提供的示例说明如何扩展框架以支持创建编码的 UI 测试和 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 的操作录制。 有关支持的平台的详细信息，请参阅[支持编码的 UI 测试和操作录制的配置和平台](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)。
 
- **要求**
+ **惠?**
 
 - Visual Studio Enterprise
 
@@ -47,15 +47,15 @@ ms.locfileid: "68871566"
 ## <a name="details-about-the-sample"></a>有关该示例的详细信息
  以下各节提供有关该示例及其结构的信息。
 
-### <a name="microsoft-excel-add-in-excelcodeduiaddinhelper"></a>Microsoft Excel 外接程序:ExcelCodedUIAddinHelper
+### <a name="microsoft-excel-add-in-excelcodeduiaddinhelper"></a>Microsoft Excel 外接程序：ExcelCodedUIAddinHelper
  此项目包含在 Excel 进程中运行的外接程序。 有关外接程序项目的简要概述，请参阅[编码的 UI 测试的 Excel 外接程序示例](../test/sample-excel-add-in-for-coded-ui-testing.md)。
 
- 有关详细信息，请参见[演练：创建您的第一个 Excel](https://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)VSTO 外接程序。
+ 有关详细信息，请参阅[演练：创建你的第一个 Excel VSTO 外接程序](https://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)。
 
-### <a name="excel-ui-communication-exceluicommunicationhelper"></a>Excel UI 通信:ExcelUIcommunicationHelper
+### <a name="excel-ui-communication-exceluicommunicationhelper"></a>Excel UI 通信：ExcelUIcommunicationHelper
  此项目包括用于在编码的 UI 测试框架和 Excel 之间传递数据的 `IExcelUICommunication` 接口和信息类。 有关详细信息，请参阅[示例 Excel Communicator 接口](../test/sample-excel-communicator-interface.md)。
 
-### <a name="coded-ui-test-extension-codeduiexentsibilitysample"></a>编码的 UI 测试扩展:CodedUIExentsibilitySample
+### <a name="coded-ui-test-extension-codeduiexentsibilitysample"></a>编码的 UI 测试扩展：CodedUIExentsibilitySample
  此项目包含在 Excel 工作表的测试中使用的自定义类。 每个这些类的代码非常容易理解。 但是，我们提供每个自定义类的简短说明。 有关详细信息，请参阅[用于 Excel 的编码的 UI 测试扩展示例](../test/sample-coded-ui-test-extension-for-excel.md)。
 
 ### <a name="deploying-your-add-in-and-extension"></a>部署外接程序和扩展
@@ -74,7 +74,7 @@ ms.locfileid: "68871566"
 
 - <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider>
 - <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement>
-- [Microsoft.visualstudio.testtools.uitest.common.uitestactionfilter>](/previous-versions/visualstudio/visual-studio-2012/dd985757(v=vs.110))
+- [UITestActionFilter](/previous-versions/visualstudio/visual-studio-2012/dd985757(v=vs.110))
 - <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage>
 - [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)
 - [编码的 UI 测试的最佳做法](../test/best-practices-for-coded-ui-tests.md)

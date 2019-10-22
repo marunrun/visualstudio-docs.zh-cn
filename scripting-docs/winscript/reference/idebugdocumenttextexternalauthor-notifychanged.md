@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextExternalAuthor::NotifyChanged |Microsoft Docs
+title: IDebugDocumentTextExternalAuthor：： NotifyChanged |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1290de76f8bec5018ad83eb4499c3d92cbf9eba9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ad02db80bd24a8a5ba96abaa61e85be9d69e553e
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62978531"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575958"
 ---
 # <a name="idebugdocumenttextexternalauthornotifychanged"></a>IDebugDocumentTextExternalAuthor::NotifyChanged
-通知主机已更改的文档源。  
+通知宿主文档源已更改。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +34,7 @@ HRESULT NotifyChanged();
 ```  
   
 #### <a name="parameters"></a>参数  
- 此方法需要任何参数。  
+ 此方法不采用任何参数。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -44,7 +44,7 @@ HRESULT NotifyChanged();
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 基于文件的调试器文档是修改并保存用于通知宿主已更改的文档源后，通过外部编辑器调用此方法。 然后，主机刷新的源文件中的文档。  
+ 此方法在修改并保存基于文件的调试器文档后由外部编辑器调用，以通知宿主文档源已更改。 然后，主机将从源文件中刷新文档。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugDocumentTextExternalAuthor 接口](../../winscript/reference/idebugdocumenttextexternalauthor-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression::Abort | Microsoft Docs
+title: IDebugExpression：： Abort |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cfaee56fffc7b28d04979f39b840d0b07cde2e08
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 508939b23be53acbff269744ae4035853f977ada
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62978453"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575937"
 ---
 # <a name="idebugexpressionabort"></a>IDebugExpression::Abort
-停止该表达式。  
+停止表达式。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +34,7 @@ HRESULT Abort();
 ```  
   
 #### <a name="parameters"></a>参数  
- 此方法需要任何参数。  
+ 此方法不采用任何参数。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -44,7 +44,7 @@ HRESULT Abort();
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法停止表达式评估在最早的机会。  
+ 此方法将按最早的机会停止表达式计算。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugExpression 接口](../../winscript/reference/idebugexpression-interface.md)   

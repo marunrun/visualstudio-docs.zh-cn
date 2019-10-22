@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptSiteWindow::EnableModeless |Microsoft Docs
+title: IActiveScriptSiteWindow：： EnableModeless |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4f15135273b98a65903a5d03de87c541fc032cce
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 756bda6209b6209ff14f6d67fef18faaed0b5618
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992921"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574126"
 ---
 # <a name="iactivescriptsitewindowenablemodeless"></a>IActiveScriptSiteWindow::EnableModeless
-将导致主机启用或禁用其主窗口，以及任何无模式对话框。  
+使宿主启用或禁用其主窗口以及任何无模式对话框。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,15 +37,15 @@ HRESULT EnableModeless(
   
 #### <a name="parameters"></a>参数  
  `fEnable`  
- [in]标记，如果`TRUE`，使主窗口和无模式对话框; 如果`FALSE`，禁用它们。  
+ 中标志，如果 `TRUE`，将启用主窗口和无模式对话框，如果 `FALSE`，则禁用主窗口和无模式对话框。  
   
 ## <a name="return-value"></a>返回值  
- 返回`S_OK`如果成功，或`E_FAIL`是否发生错误。  
+ 如果成功，则返回 `S_OK`; 如果发生错误，则返回 `E_FAIL`。  
   
 ## <a name="remarks"></a>备注  
- 此方法等同于`IOleInPlaceFrame::EnableModeless`方法。  
+ 此方法与 `IOleInPlaceFrame::EnableModeless` 方法相同。  
   
- 可以嵌套调用此方法。  
+ 对此方法的调用可以嵌套。  
   
 ## <a name="see-also"></a>请参阅  
  [IActiveScriptSiteWindow](../../winscript/reference/iactivescriptsitewindow.md)

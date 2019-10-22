@@ -8,66 +8,64 @@ helpviewer_keywords:
 - text templates, custom directive processors
 ms.assetid: 422b47af-5441-4b02-b5ad-1b8b328457e3
 caps.latest.revision: 31
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ccf7c3565925eb3fe55fe500a127c666515fb41a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: eef9fd14dc78ff1f377ffb94bcf76fde0c401783
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68159046"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651220"
 ---
 # <a name="creating-custom-t4-text-template-directive-processors"></a>创建自定义 T4 文本模板指令处理器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-*文本模板转换过程*采用*文本模板*文件作为输入并生成一个文本文件作为输出。 *文本模板转换引擎*控件与文本模板转换主机和一个或多个文本模板过程中和引擎进行交互*指令处理器*完成过程。 有关详细信息，请参阅[文本模板转换过程](../modeling/the-text-template-transformation-process.md)。  
-  
- 若要创建自定义指令处理器，需要创建一个从 <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> 或 <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> 继承的类。  
-  
- 这两个区别在于<xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor>实现最小值是从用户获取参数以及生成的代码，将生成模板输出文件所必需的接口。 <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> 实现要求/提供设计模式。 <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> 处理两个特殊参数`requires`和`provides`。  例如，自定义指令处理器可能会接受来自用户打开的文件名称和读取该文件，，然后将该文件的文本存储在变量中，名为`fileText`。 子类<xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor>类可能的值作为用户需要文件名称`requires`参数，并在其中将文本存储的值为变量的名称`provides`参数。 此处理器将打开并读取该文件，然后将该文件的文本存储在指定的变量。  
-  
- 从文本模板中调用自定义指令处理器之前[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]，必须将其注册。  
-  
- 有关如何添加注册表项的详细信息，请参阅[部署自定义指令处理器](../modeling/deploying-a-custom-directive-processor.md)。  
-  
-## <a name="custom-directives"></a>自定义指令  
- 自定义的指令如下所示：  
-  
- `<#@ MyDirective Processor="MyDirectiveProcessor" parameter1="value1" … #>`  
-  
- 当你想要从文本模板访问外部数据或资源时，可以使用自定义指令处理器。  
-  
- 不同的文本模板可以共享单个指令处理器提供的功能，因此指令处理器提供一种方法来分解代码以供重复使用。 内置`include`指令非常相似，因为可以使用它来分解代码，并在不同的文本模板之间进行共享。 不同之处在于任何功能的`include`指令提供固定的不接受参数。 如果你想要提供文本模板的常用功能，并允许将参数传递的模板，则必须创建自定义指令处理器。  
-  
- 可以自定义指令处理器的一些示例：  
-  
-- 若要从作为参数接受用户名和密码的数据库中返回的数据指令处理器。  
-  
-- 打开和读取文件的指令处理器作为参数接受的文件的名称。  
-  
-### <a name="principal-parts-of-a-custom-directive-processor"></a>自定义指令处理器的主体部分  
- 若要开发指令处理器，必须创建从继承的类<xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor>或<xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor>。  
-  
- 最重要`DirectiveProcessor`必须实现的方法如下所示。  
-  
-- `bool IsDirectiveSupported(string directiveName)` -返回`true`如果指令处理器可以处理通过命名指令。  
-  
-- `void ProcessDirective (string directiveName, IDictionary<string, string> arguments)` 模板引擎调用此方法对每个模板中的指令。 您的处理器应该保存结果。  
-  
-  之后所有调用了 Processdirective 的模板化引擎将调用这些方法：  
-  
-- `string[] GetReferencesForProcessingRun()` -返回的模板代码需要的程序集的名称。  
-  
-- `string[] GetImportsForProcessingRun()` -返回可用的命名空间中的模板代码。  
-  
-- `string GetClassCodeForProcessingRun()` -返回代码的方法、 属性和模板代码可以使用其他声明。 若要执行此操作的最简单方法是构建包含 C# 或 Visual Basic 代码的字符串。 若要使能够从使用任何 CLR 语言的模板调用指令处理器，您可以将语句构造为 CodeDom 树，然后返回序列化该模板使用的语言中的树的结果。  
-  
-- 有关详细信息，请参见[演练：创建自定义指令处理器](../modeling/walkthrough-creating-a-custom-directive-processor.md)。  
-  
-## <a name="in-this-section"></a>本节内容  
- [部署自定义指令处理器](../modeling/deploying-a-custom-directive-processor.md)  
- 说明如何注册自定义指令处理器。  
-  
- [演练：创建自定义指令处理器](../modeling/walkthrough-creating-a-custom-directive-processor.md)  
- 介绍如何创建自定义指令处理器、 如何注册和测试指令处理器，以及如何将输出文件格式化为 HTML。
+*文本模板转换过程*会将*文本模板*文件作为输入，并生成一个文本文件作为输出。 *文本模板转换引擎*控制进程，引擎与文本模板转换主机和一个或多个文本模板*指令处理器*进行交互以完成该过程。 有关详细信息，请参阅[文本模板转换过程](../modeling/the-text-template-transformation-process.md)。
+
+ 若要创建自定义指令处理器，需要创建一个从 <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> 或 <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> 继承的类。
+
+ 这两者之间的区别在于 <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> 实现从用户获取参数所必需的最小接口，并生成生成模板输出文件的代码。 <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> 实现 "需要/提供" 设计模式。 <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> 处理两个特殊参数 `requires` 和 `provides`。  例如，自定义指令处理器可能会接受来自用户的文件名称，打开并读取文件，然后将该文件的文本存储在名为 `fileText` 的变量中。 @No__t_0 类的子类可能会将用户的文件名用作 `requires` 参数的值，并将该文本作为 `provides` 参数的值存储在其中的变量的名称。 此处理器将打开并读取文件，然后将该文件的文本存储在指定的变量中。
+
+ 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的文本模板调用自定义指令处理器之前，必须注册它。
+
+ 有关如何添加注册表项的详细信息，请参阅[部署自定义指令处理器](../modeling/deploying-a-custom-directive-processor.md)。
+
+## <a name="custom-directives"></a>自定义指令
+ 自定义指令如下所示：
+
+ `<#@ MyDirective Processor="MyDirectiveProcessor" parameter1="value1" … #>`
+
+ 如果要从文本模板访问外部数据或资源，则可以使用自定义指令处理器。
+
+ 不同文本模板可以共享单个指令处理器提供的功能，因此指令处理器提供了一种方法来重新使用代码。 内置 `include` 指令类似，因为可以使用它来分解代码，并在不同的文本模板之间共享代码。 不同之处在于 `include` 指令提供的任何功能都是固定的，不接受参数。 如果要为文本模板提供通用功能并允许模板传递参数，则必须创建自定义指令处理器。
+
+ 自定义指令处理器的一些示例可以是：
+
+- 指令处理器，用于从接受用户名和密码作为参数的数据库返回数据。
+
+- 指令处理器，用于打开和读取接受文件名称作为参数的文件。
+
+### <a name="principal-parts-of-a-custom-directive-processor"></a>自定义指令处理器的主体部分
+ 若要开发指令处理器，您必须创建一个继承自 <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> 或 <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> 的类。
+
+ 必须实现的最重要的 `DirectiveProcessor` 方法如下所示。
+
+- `bool IsDirectiveSupported(string directiveName)`-如果指令处理器可处理命名指令，则返回 `true`。
+
+- `void ProcessDirective (string directiveName, IDictionary<string, string> arguments)`-模板引擎为模板中的指令的每个匹配项调用此方法。 处理器应保存结果。
+
+  调用 ProcessDirective （）后，模板化引擎将调用以下方法：
+
+- `string[] GetReferencesForProcessingRun()`-返回模板代码所需的程序集的名称。
+
+- `string[] GetImportsForProcessingRun()`-返回可在模板代码中使用的命名空间。
+
+- `string GetClassCodeForProcessingRun()`-返回模板代码可使用的方法、属性和其他声明的代码。 执行此操作的最简单方法是生成包含C#或 Visual Basic 代码的字符串。 若要使指令处理器能够从使用任意 CLR 语言的模板调用，可以将语句构造为一个 CodeDom 树，然后返回按模板所使用的语言对树进行序列化的结果。
+
+- 有关详细信息，请参阅[演练：创建自定义指令处理器](../modeling/walkthrough-creating-a-custom-directive-processor.md)。
+
+## <a name="in-this-section"></a>本节内容
+ [部署自定义指令处理器](../modeling/deploying-a-custom-directive-processor.md)说明如何注册自定义指令处理器。
+
+ [演练：创建自定义指令处理器](../modeling/walkthrough-creating-a-custom-directive-processor.md)介绍如何创建自定义指令处理器，如何注册和测试指令处理器，以及如何将输出文件的格式设置为 HTML。

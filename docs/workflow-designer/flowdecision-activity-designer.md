@@ -1,21 +1,21 @@
 ---
-title: 工作流设计器-FlowDecision 活动设计器
+title: 工作流设计器 FlowDecision 活动设计器
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.FlowDecision.UI
 ms.assetid: 4a49edc3-3662-4b7b-812e-0a5ba00d6c94
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 095ffb7284b9363d3bdb04749c8cff7114927935
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2274333de9255ff818b4ee6952bfa1b2a99c59b3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949664"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650431"
 ---
 # <a name="flowdecision-activity-designer"></a>FlowDecision 活动设计器
 
@@ -27,13 +27,13 @@ ms.locfileid: "62949664"
 
 ### <a name="using-the-flowdecision-designer"></a>使用 FlowDecision 设计器
 
-**FlowDecision**设计器可在**流程图**类别**工具箱**，这通过单击来访问**工具箱**工作流设计器的选项卡。 或者，选择**工具箱**从**视图**菜单中或按**Ctrl**+**Alt** + **X**。
+**FlowDecision**设计器可在 "**工具箱**" 的 "**流程图**" 类别中找到，可通过单击工作流设计器上的 "**工具箱**" 选项卡进行访问。 或者，从 "**视图**" 菜单中选择 **"工具箱**"，或按**Ctrl** +**Alt** +**X**。
 
-**FlowDecision**设计器可以从拖动**工具箱**和放置到工作流设计器图面中**流程图**活动设计器。 这将创建<xref:System.Activities.Statements.FlowDecision>标记为**决策**内<xref:System.Activities.Statements.Flowchart>活动。 鼠标悬停在设计器和 **，则返回 True**并**False**显示正方形处理框的两个分支。
+可以将 " **FlowDecision** " 设计器从 "**工具箱**" 拖放到 "**流程图**" 活动设计器内的工作流设计器图面上。 这**会在 <xref:System.Activities.Statements.Flowchart> 活动中创建**一个标记为 "<xref:System.Activities.Statements.FlowDecision>" 的标记。 将鼠标悬停在设计器上，将显示两个分支的**True**和**False**方控点。
 
-之后**FlowDecision**设计器和其他设计器拖到**流程图**，节点可以链接在一起以指定执行顺序。 若要创建的源节点之间的链接 (包括 **，则返回 True**并**False**的分支**FlowDecision**) 和一个目标节点，鼠标悬停在设计器的源节点它的每一侧显示正方形处理框。 单击这些正方形处理框之一并按下鼠标按钮将其拖到当鼠标悬停在目标节点上时该节点周围以类似方式显示的处理框之一。 松开鼠标按钮，此时将在这两个节点之间创建一个链接，表示为从源设计器指向目标设计器的箭头。
+将**FlowDecision**设计器和其他设计器拖到**Flowchart**后，可将节点链接在一起以指定执行顺序。 若要在源节点（包括**FlowDecision**的**True**和**False**分支）和目标节点之间创建链接，请将鼠标悬停在源节点的设计器上，并在其每一侧显示正方形控点。 单击这些正方形处理框之一并按下鼠标按钮将其拖到当鼠标悬停在目标节点上时该节点周围以类似方式显示的处理框之一。 松开鼠标按钮，此时将在这两个节点之间创建一个链接，表示为从源设计器指向目标设计器的箭头。
 
-表达式，指出<xref:System.Activities.Statements.FlowDecision.Condition%2A>可以在类型化**条件**的框**属性**窗口可通过单击提示文本显示"输入 VB 表达式"。
+通过单击提示文本 "输入 VB 表达式" 的位置，可以在 "**属性**" 窗口的 "**条件**" 框中键入指明 <xref:System.Activities.Statements.FlowDecision.Condition%2A> 的表达式。
 
 ### <a name="the-flowdecision-properties"></a>FlowDecision 属性
 

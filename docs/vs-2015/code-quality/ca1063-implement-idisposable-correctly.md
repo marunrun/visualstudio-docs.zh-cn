@@ -1,5 +1,5 @@
 ---
-title: CA1063:正确实现 IDisposable |Microsoft Docs
+title: CA1063：正确实现 IDisposable |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,76 +12,76 @@ helpviewer_keywords:
 - ImplementIDisposableCorrectly
 ms.assetid: 12afb1ea-3a17-4a3f-a1f0-fcdb853e2359
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 90f218165c0543c1881857191efd202717c6e372
-ms.sourcegitcommit: 51dad3e11d7580567673e0d426ab3b0a17584319
+ms.openlocfilehash: 1fe2982ab9e1b3951583b268eadb44c97c8e4805
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66820883"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663639"
 ---
-# <a name="ca1063-implement-idisposable-correctly"></a>CA1063:正确实现 IDisposable
+# <a name="ca1063-implement-idisposable-correctly"></a>CA1063：正确实现 IDisposable
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|ImplementIDisposableCorrectly|
 |CheckId|CA1063|
-|类别|Microsoft.Design|
-|是否重大更改|非换行|
+|类别|Microsoft. Design|
+|是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- `IDisposable` 未正确实现。 此处列出了此问题的一些原因：
+ 未正确实现 `IDisposable`。 此问题的一些原因如下所示：
 
-- 在类中重新实现 IDisposable。
+- IDisposable 是在类中重新实现的。
 
-- 完成重新中被重写。
+- Finalize 重新被重写。
 
-- 重写 dispose。
+- Dispose 被重写。
 
-- Dispose （） 不是公共的密封的或名为 Dispose。
+- Dispose （）不是公共、密封或名为 Dispose。
 
-- Dispose （bool） 不受保护、 虚拟或未密封。
+- Dispose （bool）未受保护、虚拟或未密封。
 
-- 在未密封类型中，dispose （） 必须调用 dispose （true）。
+- 在未密封的类型中，Dispose （）必须调用 Dispose （true）。
 
-- 对于非密封类型 Finalize 实现不会调用一个或两个 dispose （bool） 或事例类终结器。
+- 对于未密封类型，Finalize 实现不会调用 Dispose （bool）或 case 类终结器。
 
-  这些模式的任何一个冲突将触发此警告。
+  违反上述任何一种模式都将触发此警告。
 
-  每个未密封的根 IDisposable 类型都必须提供其自己受保护的虚拟 void dispose （bool） 方法。 Dispose （） 应调用 dispose （true） 和 Finalize 应调用 dispose （false）。 如果要创建未密封的根 IDisposable 类型，必须定义 dispose （bool），调用它。 有关详细信息，请参阅[清理了非托管资源](https://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)中[Framework 设计准则](https://msdn.microsoft.com/library/5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b).NET Framework 文档的部分。
+  每个未密封的根 IDisposable 类型都必须提供其自己的受保护虚拟 void Dispose （bool）方法。 Dispose （）应调用 Dispose （true），Finalize 应调用 Dispose （false）。 如果要创建未密封的根 IDisposable 类型，则必须定义 Dispose （bool）并调用它。 有关详细信息，请参阅 .NET Framework 文档的[框架设计指南](https://msdn.microsoft.com/library/5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b)部分中的[清理非托管资源](https://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)。
 
 ## <a name="rule-description"></a>规则说明
  所有的 IDisposable 类型都应当正确实现 Dispose 模式。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 检查你的代码并确定哪些以下解决方法将修复此冲突。
+ 检查你的代码并确定以下哪种解决方法将修复此冲突。
 
-- 从由实现的接口列表中移除 IDisposable {0} ，而是重写 Dispose 基类实现。
+- 从 {0} 实现的接口列表中删除 IDisposable，并改为重写基类 Dispose 实现。
 
-- 从类型中移除终结器{0}、 重写 Dispose (bool disposing)，和其中 disposing 为 false 的代码路径中加入终结逻辑。
+- 从类型 {0} 中删除终结器，重写 Dispose （bool 释放），并在 "dispose" 为 false 的代码路径中放置终止逻辑。
 
-- 删除{0}、 重写 Dispose (bool disposing)，和其中 disposing 为 true 的代码路径中加入释放逻辑。
+- 删除 {0}，替代 Dispose （bool 释放），并将 dispose 逻辑放在 "Dispose" 为 true 的代码路径中。
 
-- 确保{0}声明为 public 和密封的。
+- 确保将 {0} 声明为 public 和 sealed。
 
-- 重命名{0}为 Dispose，并确保它被声明为 public 和 sealed。
+- 将 {0} 重命名为 "Dispose"，并确保将其声明为 public 和 sealed。
 
-- 请确保{0}声明为受保护，虚拟的并为其未密封的。
+- 请确保将 {0} 声明为 protected、virtual 和未密封。
 
-- 修改{0}，以便它将调用 dispose （true），然后调用 GC。当前对象实例上的 SuppressFinalize (this 或 Me [!INCLUDE[vbprvb](../includes/vbprvb-md.md)])，然后返回。
+- 修改 {0} 以便它调用 Dispose （true），然后调用 GC。Gc.suppressfinalize 在当前对象实例上（[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 中的 "this" 或 "Me"），然后返回。
 
-- 修改{0}，以便它调用 dispose （false），然后返回。
+- 修改 {0} 以便它调用 Dispose （false），然后返回。
 
-- 如果你正在编写一个未密封的根 IDisposable 类，请确保 IDisposable 实现遵循本部分前面所述的模式。
+- 如果要编写未密封的根 IDisposable 类，请确保 IDisposable 的实现遵循本部分前面所述的模式。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  不禁止显示此规则发出的警告。
 
 ## <a name="pseudo-code-example"></a>伪代码示例
- 下面的伪代码提供了应如何使用托管的类中实现 dispose （bool） 和本机资源的常规示例。
+ 下面的伪代码提供了一个示例，说明如何在使用托管资源和本机资源的类中实现 Dispose （bool）。
 
 ```
 public class Resource : IDisposable

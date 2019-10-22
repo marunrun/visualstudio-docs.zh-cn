@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthor::GetLanguageFlags | Microsoft Docs
+title: IActiveScriptAuthor：： GetLanguageFlags |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d9f1a68db05ac0d909108ce77587ae4b071c9a2b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 68da16513050bd87642be2c96212a330a0916608
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935466"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576202"
 ---
 # <a name="iactivescriptauthorgetlanguageflags"></a>IActiveScriptAuthor::GetLanguageFlags
-返回语言的信息。  
+返回语言信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,13 +37,13 @@ HRESULT GetLanguageFlags(
   
 #### <a name="parameters"></a>参数  
  `pgrfasa`  
- [out]包含语言信息的标志。 可以是以下值的组合：  
+ 弄包含语言信息的标志。 可以是以下值的组合：  
   
 |返回的常量|“值”|描述|  
 |--------------|-----------|-----------------|  
-|fasaPreferInternalHandler|0x0001|语言更适合于创建脚本事件处理程序创建由脚本创作而不是应用程序的引擎。|  
-|fasaSupportInternalHandler|0x0002|脚本事件处理程序创建的脚本创作引擎支持的语言。|  
-|fasaCaseSensitive|0x0004|脚本语言是区分大小写。|  
+|fasaPreferInternalHandler|0x0001|该语言首选由脚本创作引擎（而不是应用程序）创建脚本事件处理程序。|  
+|fasaSupportInternalHandler|0x0002|该语言支持脚本创作引擎创建的脚本事件处理程序。|  
+|fasaCaseSensitive|0x0004|脚本语言区分大小写。|  
   
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -53,9 +53,9 @@ HRESULT GetLanguageFlags(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 如果脚本创作引擎管理事件处理程序，应用程序应调用`CreateChildHandler`从`IScriptEntry`对象。 这将创建`IScriptScriptlet`与事件处理程序对应的对象。 该引擎还将事件处理程序添加到脚本条目。 事件处理程序是一个空的函数，其中包含指定的签名信息。  
+ 如果脚本创作引擎管理事件处理程序，则应用程序应从 `IScriptEntry` 对象调用 `CreateChildHandler`。 这将创建一个与事件处理程序对应的 `IScriptScriptlet` 对象。 引擎还会将一个事件处理程序添加到脚本条目。 事件处理程序是一个空函数，其中包含指定的签名信息。  
   
- 如果应用程序管理事件处理程序，则应调用`CreateChildHandler`从`IScriptNode`对象，表示事件处理程序 scriptlet。 这将创建`IScriptScriptlet`与事件处理程序 scriptlet 相关联的对象。 应用程序还必须将一个空函数添加为事件处理程序到新的或现有的`IScriptEntry`对象。  
+ 如果你的应用程序管理事件处理程序，它应从表示事件处理程序 scriptlet 的 `IScriptNode` 对象调用 `CreateChildHandler`。 这会创建与事件处理程序 scriptlet 关联的 `IScriptScriptlet` 对象。 应用程序还必须将空函数作为事件处理程序添加到新的或现有的 `IScriptEntry` 对象。  
   
 ## <a name="see-also"></a>请参阅  
  [IActiveScriptAuthor 接口](../../winscript/reference/iactivescriptauthor-interface.md)

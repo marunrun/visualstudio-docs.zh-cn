@@ -1,5 +1,5 @@
 ---
-title: CA2233:运算不应溢出 |Microsoft Docs
+title: CA2233：操作不应溢出 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,49 +12,49 @@ helpviewer_keywords:
 - CA2233
 ms.assetid: 3a2b06ba-6d1b-4666-9eaf-e053ef47ffaa
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 0531a739ec00c3e6224ef5caa7b1c0bf71f0e4e4
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 70a0bab8cfb3bf14a763f759e0e44a754ad878d8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65697951"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662779"
 ---
-# <a name="ca2233-operations-should-not-overflow"></a>CA2233:运算不应溢出
+# <a name="ca2233-operations-should-not-overflow"></a>CA2233：运算不应溢出
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|OperationsShouldNotOverflow|
 |CheckId|CA2233|
-|类别|Microsoft.Usage|
+|类别|Microsoft. 使用情况|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
- 某方法执行的算术运算，并且不会验证事先操作数以防止溢出。
+ 方法执行算术运算，而不事先验证操作数以防止溢出。
 
 ## <a name="rule-description"></a>规则说明
- 不应在没有首先验证操作数以确保操作的结果不涉及的数据类型的可能值的范围之外执行算术运算。 根据执行上下文和涉及的数据类型，算术溢出可能导致在<xref:System.OverflowException?displayProperty=fullName>或放弃结果的最高有效位。
+ 在未首先验证操作数的情况下，不应执行算术运算，以确保操作的结果不在涉及的数据类型的可能值范围之外。 根据执行上下文和所涉及的数据类型，算术溢出会导致 <xref:System.OverflowException?displayProperty=fullName> 或结果的最高有效位被丢弃。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复此规则的冲突，请验证操作数之前执行该操作。
+ 若要修复与此规则的冲突，请在执行操作之前验证操作数。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 它可以安全地禁止显示此规则的警告，如果操作数的可能的值将永远不会导致算术运算溢出。
+ 如果操作数的可能值永远不会导致算术运算溢出，则可以安全地禁止显示此规则发出的警告。
 
-## <a name="example-of-a-violation"></a>冲突的示例
+## <a name="example-of-a-violation"></a>冲突示例
 
 ### <a name="description"></a>描述
- 下面的示例中的方法可操作违反了此规则的整数。 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 需要**删除**整数溢出选项禁用此激发。
+ 下面的示例中的方法操作了违反此规则的整数。 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 要求禁用**删除**整数溢出选项，此选项才会激发。
 
 ### <a name="code"></a>代码
  [!code-csharp[FxCop.Usage.OperationOverflow#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OperationOverflow/cs/FxCop.Usage.OperationOverflow.cs#1)]
  [!code-vb[FxCop.Usage.OperationOverflow#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.OperationOverflow/vb/FxCop.Usage.OperationOverflow.vb#1)]
 
 ### <a name="comments"></a>注释
- 如果在此示例中该方法传递<xref:System.Int32.MinValue?displayProperty=fullName>，则操作将下溢。 这会导致要放弃的结果的最高有效位。 下面的代码演示如何发生这种情况。
+ 如果本示例中的方法传递 <xref:System.Int32.MinValue?displayProperty=fullName>，则操作将下溢。 这会导致放弃结果的最高有效位。 下面的代码演示了这种情况。
 
  [C#]
 
@@ -67,7 +67,7 @@ public static void Main()
 }
 ```
 
- [VB]
+ VB
 
 ```
 Public Shared Sub Main()
@@ -83,35 +83,35 @@ End Sub
 2147483647
 ```
 
-## <a name="fix-with-input-parameter-validation"></a>使用输入的参数验证修复
+## <a name="fix-with-input-parameter-validation"></a>修复了输入参数验证
 
 ### <a name="description"></a>描述
- 下面的示例通过验证输入的值来修复了上一冲突。
+ 下面的示例通过验证输入的值修复了之前的冲突。
 
 ### <a name="code"></a>代码
  [!code-csharp[FxCop.Usage.OperationOverflowFixed#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OperationOverflowFixed/cs/FxCop.Usage.OperationOverflowFixed.cs#1)]
  [!code-vb[FxCop.Usage.OperationOverflowFixed#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.OperationOverflowFixed/vb/FxCop.Usage.OperationOverflowFixed.vb#1)]
 
-## <a name="fix-with-a-checked-block"></a>Checked 块修复
+## <a name="fix-with-a-checked-block"></a>使用 Checked 块修复
 
 ### <a name="description"></a>描述
- 下面的示例通过选中块中包装操作修复了上一冲突。 如果该操作会导致溢出时，<xref:System.OverflowException?displayProperty=fullName>将引发。
+ 下面的示例通过在已检查的块中包装操作来修复前面的冲突。 如果操作导致溢出，将引发 <xref:System.OverflowException?displayProperty=fullName>。
 
- 请注意选中的块中不支持[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]。
+ 请注意，[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 中不支持选中的块。
 
 ### <a name="code"></a>代码
  [!code-csharp[FxCop.Usage.OperationOverflowChecked#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OperationOverflowChecked/cs/FxCop.Usage.OperationOverflowChecked.cs#1)]
 
-## <a name="turn-on-checked-arithmetic-overflowunderflow"></a>开启检查算术上溢/下溢
- 如果您打开已检查算术上溢/下溢 C# 中，相当于选中块中包装每个整数操作。
+## <a name="turn-on-checked-arithmetic-overflowunderflow"></a>打开选中的算术溢出/下溢
+ 如果在中C#打开选中的算术溢出/下溢，则等效于在已检查的块中包装每个整数操作。
 
- **若要启用检查算术上溢/下溢 C# 中**
+ **打开选中的算术溢出/下溢C#**
 
-1. 在中**解决方案资源管理器**，右键单击项目，然后选择**属性**。
+1. 在**解决方案资源管理器**中，右键单击项目，然后选择 "**属性**"。
 
 2. 选择“生成”选项卡，然后单击“高级”。
 
-3. 选择**检查算术上溢/下溢**然后单击**确定**。
+3. 选择 "**检查算术溢出/下溢**" 并单击 **"确定"** 。
 
 ## <a name="see-also"></a>请参阅
- <xref:System.OverflowException?displayProperty=fullName> [C# 运算符](https://msdn.microsoft.com/library/0301e31f-22ad-49af-ac3c-d5eae7f0ac43) [Checked 和 Unchecked](https://msdn.microsoft.com/library/a84bc877-2c7f-4396-8735-1ce97c42f35e)
+ [已选中和未选中](https://msdn.microsoft.com/library/a84bc877-2c7f-4396-8735-1ce97c42f35e)<xref:System.OverflowException?displayProperty=fullName> [ C#运算符](https://msdn.microsoft.com/library/0301e31f-22ad-49af-ac3c-d5eae7f0ac43)

@@ -11,51 +11,51 @@ helpviewer_keywords:
 - web services, as data sources
 - web services, connecting
 ms.assetid: a6b54353-05fe-4e5c-8631-90231fc95504
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7633d60ed672b64137b68bd9e6c3b860224753e5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 75efb8656d54c02f3126493504506c913a7e0f4a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62566929"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72642024"
 ---
 # <a name="how-to-connect-to-data-in-a-service"></a>如何：连接到服务中的数据
 
-通过运行从服务返回的数据将应用程序连接[数据源配置向导](../data-tools/media/data-source-configuration-wizard.png)，然后选择**服务**上**选择数据源类型**页。
+通过运行 "[数据源配置向导](../data-tools/media/data-source-configuration-wizard.png)" 并在 "**选择数据源类型**" 页上选择 "**服务**"，将应用程序连接到从服务返回的数据。
 
-在向导完成，服务引用添加到你的项目，并可立即在[数据源窗口](add-new-data-sources.md#data-sources-window)。
+完成向导后，服务引用将添加到项目中，并在 "[数据源" 窗口](add-new-data-sources.md#data-sources-window)中立即可用。
 
 > [!NOTE]
-> “数据源”窗口中显示的项取决于该服务返回的信息。 某些服务可能没有为“数据源配置”向导创建可绑定的对象提供足够的信息。 例如，如果该服务返回的非类型化数据集，显示任何项中**数据源**完成该向导时的窗口。 这是因为非类型化数据集不提供架构，所以该向导没有足够的信息来创建数据源。
+> “数据源”窗口中显示的项取决于该服务返回的信息。 某些服务可能没有为“数据源配置”向导创建可绑定的对象提供足够的信息。 例如，如果服务返回非类型化数据集，则在完成该向导时，"**数据源**" 窗口中不会显示任何项。 这是因为非类型化数据集不提供架构，因此向导没有足够的信息来创建数据源。
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="to-connect-your-application-to-a-service"></a>若要连接到服务应用程序
+## <a name="to-connect-your-application-to-a-service"></a>将应用程序连接到服务
 
-1. 在 **“数据”** 菜单上，单击 **“添加新数据源”**。
+1. 在 **“数据”** 菜单上，单击 **“添加新数据源”** 。
 
-2. 选择**服务**上**选择数据源类型**页上，然后依次**下一步**。
+2. 选择 "**选择数据源类型**" 页上的 "**服务**"，然后单击 "**下一步**"。
 
-3. 输入你想要使用，或单击该服务的地址**Discover**若要在当前解决方案中，找到服务，然后单击**转**。
+3. 输入要使用的服务的地址，或单击 "**发现**" 以定位当前解决方案中的服务，然后单击 "**开始**"。
 
-4. （可选） 您可以键入一个新**Namespace**默认值的位置。
+4. 或者，您可以键入一个新的**命名空间**来代替默认值。
 
     > [!NOTE]
-    > 单击**高级**以打开[配置服务引用对话框](../data-tools/configure-service-reference-dialog-box.md)。
+    > 单击 "**高级**" 打开 "[配置服务引用" 对话框](../data-tools/configure-service-reference-dialog-box.md)。
 
-5. 单击**确定**添加到你的项目的服务引用。
+5. 单击 **"确定"** 将服务引用添加到项目。
 
-6. 单击 **“完成”**。
+6. 单击 **“完成”** 。
 
      数据源随即添加到“数据源”窗口中。
 
 ## <a name="next-steps"></a>后续步骤
 
-若要将功能添加到你的应用程序中，选择中的项**数据源**窗口并将其拖到窗体来创建绑定的控件。 有关详细信息，请参阅[将控件绑定到 Visual Studio 中的数据](../data-tools/bind-controls-to-data-in-visual-studio.md)。
+若要向应用程序添加功能，请在 "**数据源**" 窗口中选择一个项，然后将其拖到窗体上以创建绑定控件。 有关详细信息，请参阅[在 Visual Studio 中将控件绑定到数据](../data-tools/bind-controls-to-data-in-visual-studio.md)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,5 +1,5 @@
 ---
-title: IScriptNode::CreateChildHandler | Microsoft Docs
+title: IScriptNode：： CreateChildHandler |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bca8b30021d39638f3755bace2625bb38a44242d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9e024bb7d6a81b35994edddfe9e71666b0ee8df0
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787139"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573605"
 ---
 # <a name="iscriptnodecreatechildhandler"></a>IScriptNode::CreateChildHandler
-将作为子实例添加 scriptlet `IScriptNode`。  
+添加 scriptlet 作为 `IScriptNode` 的子实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,38 +46,38 @@ HRESULT CreateChildHandler(
   
 #### <a name="parameters"></a>参数  
  `pszDefaultName`  
- [in]若要将与 scriptlet 相关联的默认名称的地址。  
+ 中要与 scriptlet 关联的默认名称的地址。  
   
  `prgpszNames`  
- [在中，size_is (`cpszNames`)] 从主机上的完全限定名称的标识符的列表。  
+ [in，size_is （`cpszNames`）]主机上的完全限定名中的标识符列表。  
   
  `cpszNames`  
- [in]中的标识符数`prgpszNames`参数。  
+ 中@No__t_0 参数中的标识符数量。  
   
  `pszEvent`  
- [in]标识与 scriptlet 相关联的事件名称的缓冲区地址。  
+ 中标识与 scriptlet 关联的事件名称的缓冲区地址。  
   
  `pszDelimiter`  
- [in]最终的脚本块分隔符的地址。 有关分析过程中，主机通常使用分隔符 （如两个单引号），来检测脚本块的末尾。  
+ 中脚本结束分隔符的地址。 为了进行分析，主机通常使用分隔符（如两个单引号）来检测脚本块的结尾。  
   
- 分隔符，预处理脚本创作引擎。 例如，该引擎可能可用一个单引号将替换为使用用作分隔符的两个单引号。 在引擎确定如何使用分隔符。  
+ 分隔符允许脚本创作引擎进行预处理。 例如，引擎可以将带有两个单引号的单引号替换为分隔符。 引擎确定如何使用分隔符。  
   
  如果没有分隔符用于标识脚本块的末尾，则设置为 NULL。  
   
  `ptiSignature`  
- [in]函数对象的类型信息。  
+ 中函数对象的类型信息。  
   
  `iMethodSignature`  
- [in]中的函数的索引`ITypeInfo``ptiSignature`参数。  
+ 中@No__t_0 参数中函数的索引。  
   
  `isn`  
- [in]子对象的父代中的索引。  
+ 中父中子级的索引。  
   
  `dwCookie`  
- [in]应用程序定义的一个值，用于将项与主机对象相关联。  
+ 中应用程序定义的值，用于将项与宿主对象相关联。  
   
  `ppse`  
- [out]一个变量来接收指向指针的地址`IScriptEntry`接口的子实例。  
+ 弄一个变量的地址，该变量接收指向子实例的 `IScriptEntry` 接口的指针。  
   
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -87,7 +87,7 @@ HRESULT CreateChildHandler(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- Scriptlet 指定事件处理程序。 如果调用此方法会创建 scriptlet`IScriptNode`对象，表示 Web 页。 如果通过其他接口调用此方法不成功。  
+ Scriptlet 指定事件处理程序。 此方法会创建一个 scriptlet，如果它由表示网页的 `IScriptNode` 对象调用。 如果其他接口调用此方法，则此方法不会成功。  
   
 ## <a name="see-also"></a>请参阅  
  [IScriptNode 接口](../../winscript/reference/iscriptnode-interface.md)   

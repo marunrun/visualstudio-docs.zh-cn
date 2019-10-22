@@ -9,15 +9,15 @@ helpviewer_keywords:
 - reference, Visual Studio templates
 ms.assetid: 5ebdd6c4-5d3e-448c-b47d-f62ec5f44d51
 caps.latest.revision: 10
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0690d37e90f910300f75880387a3f3ec44783206
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8a3e522d7c38a7f2d8b3c1614aa66bcf840e16ff
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68154925"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666561"
 ---
 # <a name="visual-studio-template-reference"></a>Visual Studio 模板参考
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "68154925"
 以下链接提供有关 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目和项模板的不同方面的参考信息。
 
 ## <a name="in-this-section"></a>本节内容
- [Visual Studio 模板架构引用](../extensibility/visual-studio-template-schema-reference.md)介绍在.vstemplate 文件中使用的 XML 元素。
+ [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)描述 .vstemplate 文件中使用的 XML 元素。
 
  [模板参数](../ide/template-parameters.md)介绍可用于项目和项模板的参数。
 

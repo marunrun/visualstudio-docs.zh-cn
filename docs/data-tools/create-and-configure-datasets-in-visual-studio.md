@@ -6,87 +6,87 @@ helpviewer_keywords:
 - typed datasets, creating
 - datasets, creating
 - datasets, configuring
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 41a7a699506853d6891c7d7b66fef4082814c06a
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.openlocfilehash: 44023543f1f7b57352448755de942af1c0c712ac
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65460621"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72642406"
 ---
 # <a name="how-to-create-and-configure-datasets-in-visual-studio"></a>如何：在 Visual Studio 中创建和配置数据集
 
-数据集是一组对象在内存中存储数据库中的数据和支持更改跟踪来使创建、 读取、 更新和删除 (CRUD) 操作，对该数据而无需始终连接到数据库。 数据集设计用于简单*对数据的窗体*业务应用程序。 对于新应用程序，请考虑使用实体框架在内存中的数据存储和建模。 若要使用的数据集，应具有数据库概念的基础知识。
+数据集是一组对象，这些对象在内存中存储数据，并支持更改跟踪，以对这些数据启用创建、读取、更新和删除（CRUD）操作，而无需始终连接到数据库。 数据集专为数据业务应用程序的简单*窗体*而设计。 对于新应用程序，请考虑使用实体框架将数据存储在内存中并对其进行建模。 若要处理数据集，您应该具有数据库概念的基本知识。
 
-您可以创建类型化<xref:System.Data.DataSet>在设计时通过使用 Visual Studio 中的类**数据源配置向导**。 有关以编程方式创建数据集的信息，请参阅[创建数据集 (ADO.NET)](/dotnet/framework/data/adonet/dataset-datatable-dataview/creating-a-dataset)。
+您可以使用 "**数据源配置向导**" 在设计时在 Visual Studio 中创建类型化 <xref:System.Data.DataSet> 类。 有关以编程方式创建数据集的信息，请参阅[创建数据集（ADO.NET）](/dotnet/framework/data/adonet/dataset-datatable-dataview/creating-a-dataset)。
 
-## <a name="create-a-new-dataset-by-using-the-data-source-configuration-wizard"></a>使用数据源配置向导创建新的数据集
+## <a name="create-a-new-dataset-by-using-the-data-source-configuration-wizard"></a>使用 "数据源配置向导" 创建新数据集
 
-1. 在 Visual Studio 中，打开你的项目，然后选择**项目** > **添加新数据源**以启动**数据源配置向导**。
+1. 在 Visual Studio 中打开项目，然后选择 "**项目**"  >  "**添加新数据源**" 以启动 "**数据源配置向导**"。
 
-2. 选择要连接到的数据源的类型。
+2. 选择要连接的数据源的类型。
 
      ![数据源配置向导](../data-tools/media/data-source-configuration-wizard.png)
 
-3. 选择将成为你的数据集的数据源的数据库。
+3. 选择将成为数据集的数据源的一个或哪些数据库。
 
-     ![数据源选择的连接](../data-tools/media/data-source-choose-a-connection.png)
+     ![数据源选择连接](../data-tools/media/data-source-choose-a-connection.png)
 
-4. 选择表 （或单个列），存储过程、 函数和从你想要在数据集中表示数据库的视图。
+4. 选择要在数据集中表示的数据库中的表（或单独的列）、存储过程、函数和视图。
 
      ![选择数据库对象](../data-tools/media/raddata-chose-objects.png)
 
-5. 单击 **“完成”**。
+5. 单击 **“完成”** 。
 
-   数据集显示为中的一个节点**解决方案资源管理器**。
+   数据集在**解决方案资源管理器**中显示为一个节点。
 
-   ![在解决方案资源管理器中的数据集](../data-tools/media/dataset-in-solution-explorer.png)
+   ![解决方案资源管理器中的数据集](../data-tools/media/dataset-in-solution-explorer.png)
 
-6. 单击中的数据集节点**解决方案资源管理器**以打开中的数据集**数据集设计器**。 在数据集中每个表都有一个关联`TableAdapter`对象，表示在底部。 表适配器用于填充数据集并根据需要将命令发送到数据库。
+6. 单击**解决方案资源管理器**中的 "数据集" 节点，在 "**数据集设计器**" 中打开数据集。 数据集中的每个表都有一个关联的 `TableAdapter` 对象，它在底部表示。 表适配器用于填充数据集，并可选择将命令发送到数据库。
 
    ![数据集设计器](../data-tools/media/dataset-designer.png)
 
-7. 连接这些表的关系行表示在数据库中定义的表之间的关系。 默认情况下，在数据库中的 foreign key 约束作为关系，表示与更新和删除规则设置为 none。 通常情况下，这是你想。 但是，可以单击这些线以显示**关系**对话框中，您可以在其中更改分层更新的行为。 有关详细信息，请参阅[中的数据集的关系](../data-tools/relationships-in-datasets.md)并[分层更新](../data-tools/hierarchical-update.md)。
+7. 连接表的关系线表示数据库中定义的表关系。 默认情况下，数据库中的外键约束仅表示为关系，更新和删除规则设置为 none。 通常，这是你想要的。 不过，您可以单击这些行以打开 "**关系**" 对话框，在其中可以更改分层更新的行为。 有关详细信息，请参阅数据集和[分层更新](../data-tools/hierarchical-update.md)[中的关系](../data-tools/relationships-in-datasets.md)。
 
      ![数据集关系对话框](../data-tools/media/raddata-relation-dialog.png)
 
-8. 单击表、 表适配器或在表中的列名称以查看其属性在**属性**窗口。 您可以修改某些此处的值。 只需记住您正在修改数据集，不是源数据库。
+8. 单击表中的表、表适配器或列名称可在 "**属性**" 窗口中查看其属性。 您可以在此处修改某些值。 请记住，你修改的是数据集，而不是源数据库。
 
      ![数据集列属性](../data-tools/media/dataset-column-properties.png)
 
-9. 可以将新的表或表适配器添加到数据集，或添加现有的表适配器的新查询或指定新通过将这些项从表之间的关系**工具箱**选项卡。时，此选项卡会出现**数据集设计器**处于活动状态。
+9. 您可以向数据集添加新的表或表适配器，或添加现有表适配器的新查询，也可以通过从 "**工具箱**" 选项卡拖动这些项来指定表之间的新关系。当**数据集设计器**聚焦时，将显示此选项卡。
 
      ![数据集工具箱](../data-tools/media/raddata-dataset-toolbox.png)
 
-接下来，你可能想要指定如何填充数据的数据集。 为此，请使用**TableAdapter 配置向导**。 有关详细信息，请参阅[使用 Tableadapter 填充数据集](../data-tools/fill-datasets-by-using-tableadapters.md)。
+接下来，你可能需要指定如何用数据填充数据集。 为此，请使用**TableAdapter 配置向导**。 有关详细信息，请参阅[使用 Tableadapter 填充数据集](../data-tools/fill-datasets-by-using-tableadapters.md)。
 
 ## <a name="add-a-database-table-or-other-object-to-an-existing-dataset"></a>将数据库表或其他对象添加到现有数据集
 
-此过程演示如何从用于首次创建数据集的相同数据库添加一个表。
+此过程说明如何从用于首次创建数据集的同一数据库中添加表。
 
-1. 单击中的数据集节点**解决方案资源管理器**以便**数据集设计器**成为焦点。
+1. 单击**解决方案资源管理器**中的数据集节点，以将**数据集设计器**纳入焦点。
 
-2. 单击**数据源**Visual Studio 中或类型的左边距中的选项卡**数据源**在搜索框中。
+2. 单击 Visual Studio 左边距中的 "**数据源**" 选项卡，或在搜索框中键入 "**数据源**"。
 
-3. 右键单击数据集节点，然后选择**使用向导配置数据源**。
+3. 右键单击 "数据集" 节点，然后选择 "**用向导配置数据源**"。
 
      ![数据源上下文菜单](../data-tools/media/data-source-context-menu.png)
 
-4. 使用向导来指定哪些其他表、 存储的过程或其他数据库对象添加到数据集。
+4. 使用该向导可以指定要添加到数据集的其他表、存储过程或其他数据库对象。
 
-## <a name="add-a-stand-alone-data-table-to-a-dataset"></a>将独立的数据表添加到数据集
+## <a name="add-a-stand-alone-data-table-to-a-dataset"></a>向数据集添加独立数据表
 
 1. 在“数据集设计器”中打开数据集。
 
-2. 拖动<xref:System.Data.DataTable>类派生**数据集**选项卡**工具箱**拖动到**数据集设计器**。
+2. 将 <xref:System.Data.DataTable> 类从 "**工具箱**" 的 "**数据集**" 选项卡拖到 "**数据集设计器**"。
 
-3. 添加列来定义您的数据的表。 右键单击该表，然后选择**外** > **列**。 使用**属性**窗口设置列和一个键的数据类型，如有必要。
+3. 添加列以定义数据表。 右键单击该表，然后选择 "**添加** > **列**"。 如果需要，可以使用 "**属性**" 窗口设置列的数据类型和键。
 
-独立的表需要实现`Fill`独立的表中的逻辑，以便可以填充数据。 有关填充独立的数据的表的信息，请参阅[填充数据集从 DataAdapter](/dotnet/framework/data/adonet/populating-a-dataset-from-a-dataadapter)。
+独立表需要在独立的表中实现 `Fill` 逻辑，以便可以用数据填充它们。 有关填充独立数据表的信息，请参阅[从 DataAdapter 填充数据集](/dotnet/framework/data/adonet/populating-a-dataset-from-a-dataadapter)。
 
 ## <a name="see-also"></a>请参阅
 

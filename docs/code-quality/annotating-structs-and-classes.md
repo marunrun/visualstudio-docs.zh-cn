@@ -24,12 +24,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 1cff36760a84821a33dcdb1ee4cc6842cd40aee0
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: ac3d6225bc765ec404784589d2faa06f155265ab
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72015965"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72446292"
 ---
 # <a name="annotating-structs-and-classes"></a>批注结构和类
 
@@ -39,15 +39,15 @@ ms.locfileid: "72015965"
 
 - `_Field_range_(low, high)`
 
-     该字段的范围是从 `low` 到 `high`。  等效于使用合适的前置或后置条件将 `_Satisfies_(_Curr_ >= low && _Curr_ <= high)` 应用到批注对象。
+     该字段的范围是从 `low` 到 `high`。  等效于使用合适的前置或后置条件应用于批注对象的 `_Satisfies_(_Curr_ >= low && _Curr_ <= high)`。
 
 - `_Field_size_(size)`, `_Field_size_opt_(size)`, `_Field_size_bytes_(size)`, `_Field_size_bytes_opt_(size)`
 
-     在由 `size` 指定的元素（或字节）内具有可写大小的字段。
+     在 `size` 指定的元素（或字节）内具有可写大小的字段。
 
-- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`,         `_Field_size_bytes_part_(size, count)`, `_Field_size_bytes_part_opt_(size, count)`
+- `_Field_size_part_(size, count)`、`_Field_size_part_opt_(size, count)`、`_Field_size_bytes_part_(size, count)` `_Field_size_bytes_part_opt_(size, count)`
 
-     在由 `size` 指定的元素（或字节）中具有可写大小的字段，以及可读取的元素（字节）的 @no__t 1。
+     在 `size` 指定的元素（或字节）中具有可写大小的字段，以及可读的元素（字节）的 `count`。
 
 - `_Field_size_full_(size)`, `_Field_size_full_opt_(size)`, `_Field_size_bytes_full_(size)`, `_Field_size_bytes_full_opt_(size)`
 
@@ -59,7 +59,7 @@ ms.locfileid: "72015965"
 
 - `_Struct_size_bytes_(size)`
 
-     适用于 struct 或类声明。  指示该类型的有效对象可能大于声明的类型，以及 @no__t 指定的字节数。  例如：
+     适用于 struct 或类声明。  指示该类型的有效对象可能大于声明的类型，以及 `size` 指定的字节数。  例如:
 
     ```cpp
 
@@ -106,9 +106,9 @@ struct MyBuffer
 
 此示例的说明：
 
-- `_Field_z_` 与 `_Null_terminated_` 相等。  对于 "名称" 字段 `_Field_z_` 指定名称字段为以 null 结尾的字符串。
-- @no__t @no__t 为-1，则指定 @no__t 的值应在1和 `MaxBufferSize` 之间（包括两者）。
-- @No__t-0 和 `_Field_size_` 批注的最终结果是等效的。 对于具有类似布局的结构或类，`_Field_size_` 更易于读取和维护，因为它具有比等效的 @no__t 1 批注更少的引用和计算。 `_Field_size_` 不需要转换为字节大小。 如果 "字节大小" 是唯一的选项，例如，对于 void 指针字段，可以使用 `_Field_size_bytes_`。 如果同时存在 `_Struct_size_bytes_` 和 `_Field_size_`，则它们将可用于工具。 如果两个批注不一致，就会执行该操作。
+- `_Field_z_` 与 `_Null_terminated_` 相等。  "名称" 字段的 `_Field_z_` 指定名称字段为以 null 结尾的字符串。
+- `bufferSize` 的 `_Field_range_` 指定 `bufferSize` 的值应在1和 `MaxBufferSize` （两者都包含）范围内。
+- @No__t_0 和 `_Field_size_` 批注的最终结果是等效的。 对于具有类似布局的结构或类，`_Field_size_` 更易于读取和维护，因为它具有比等效 `_Struct_size_bytes_` 注释更少的引用和计算。 `_Field_size_` 不需要转换为字节大小。 如果 "字节大小" 是唯一的选项，例如，对于 void 指针字段，可以使用 `_Field_size_bytes_`。 如果同时存在 `_Struct_size_bytes_` 和 `_Field_size_`，则它们将可用于工具。 如果两个批注不一致，就会执行该操作。
 
 ## <a name="see-also"></a>请参阅
 

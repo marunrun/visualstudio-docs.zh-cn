@@ -10,21 +10,21 @@ helpviewer_keywords:
 - WPF data binding [Visual Studio], walkthroughs
 - WPF Designer, data binding
 ms.assetid: 177420b9-568b-4dad-9d16-1b0e98a24d71
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b85999a22bf49923630a0abe2f9ef33950edd8fe
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 56c49f0d3cef6dbb054c8d7d97b4e875b83cb518
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62815626"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648822"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>将 WPF 控件绑定到数据集
 
-在本演练中，您将创建包含数据绑定控件的 WPF 应用程序。 这些控件将绑定到在数据集中封装的产品记录。 您还可以添加按钮以浏览产品和保存对产品记录的更改。
+在本演练中，你将创建一个包含数据绑定控件的 WPF 应用程序。 这些控件将绑定到在数据集中封装的产品记录。 还可添加按钮以浏览产品并保存对产品记录所做的更改。
 
 本演练阐释了以下任务：
 
@@ -38,19 +38,19 @@ ms.locfileid: "62815626"
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>Prerequisites
 
 你需要以下组件来完成本演练：
 
 - Visual Studio
 
-- 正在运行的 SQL Server 或 SQL Server Express 具有附加到它的 AdventureWorks 轻型 (AdventureWorksLT) 示例数据库实例的访问权限。 您可以下载 AdventureWorksLT 数据库从[CodePlex 存档](https://archive.codeplex.com/?p=awlt2008dbscript)。
+- 访问 SQL Server 或附加了 AdventureWorks 灯光（AdventureWorksLT）示例数据库的 SQL Server Express 的运行实例。 可以从[CodePlex 存档](https://archive.codeplex.com/?p=awlt2008dbscript)下载 AdventureWorksLT 数据库。
 
 事先了解以下概念也很有用，但对于完成本演练并不是必需的：
 
-- 数据集和 TableAdapter。 有关详细信息，请参阅[Visual Studio 中的数据集工具](../data-tools/dataset-tools-in-visual-studio.md)并[Tableadapter](../data-tools/create-and-configure-tableadapters.md)。
+- 数据集和 TableAdapter。 有关详细信息，请参阅[Visual Studio 中的数据集工具](../data-tools/dataset-tools-in-visual-studio.md)和[tableadapter](../data-tools/create-and-configure-tableadapters.md)。
 
-- WPF 数据绑定。 有关详细信息，请参阅[数据绑定概述](/dotnet/framework/wpf/data/data-binding-overview)。
+- WPF 数据绑定。 有关详细信息，请参阅 [数据绑定概述](/dotnet/framework/wpf/data/data-binding-overview)。
 
 ## <a name="create-the-project"></a>创建项目
 
@@ -64,9 +64,9 @@ ms.locfileid: "62815626"
 
 3. 展开“Visual Basic”或“Visual C#”，然后选择“Windows”。
 
-4. 选择**WPF 应用**项目模板。
+4. 选择 " **WPF 应用程序**" 项目模板。
 
-5. 在中**名称**框中，输入**AdventureWorksProductsEditor** ，然后选择**确定**。
+5. 在 "**名称**" 框中，输入**AdventureWorksProductsEditor** ，然后选择 **"确定"** 。
 
 ::: moniker-end
 
@@ -76,21 +76,21 @@ ms.locfileid: "62815626"
 
 2. 在“开始”窗口上，选择“创建新项目”。
 
-3. 搜索C# **WPF 应用**项目模板，然后按照步骤创建该项目，命名项目**AdventureWorksProductsEditor**。
+3. 搜索 " C# **WPF 应用程序**" 项目模板，然后按照步骤创建项目，将项目命名为 " **AdventureWorksProductsEditor**"。
 
 ::: moniker-end
 
    Visual Studio 创建 AdventureWorksProductsEditor 项目。
 
-## <a name="create-a-dataset-for-the-application"></a>创建应用程序的数据集
+## <a name="create-a-dataset-for-the-application"></a>为应用程序创建数据集
 
 必须先为应用程序定义数据模型并将此模型添加到“数据源”窗口中，然后才能创建数据绑定控件。 在本演练中，你将创建要用作数据模型的数据集。
 
-1. 在 **“数据”** 菜单上，单击 **“显示数据源”**。
+1. 在 **“数据”** 菜单上，单击 **“显示数据源”** 。
 
    “数据源”窗口随即打开。
 
-2. 在 **“数据源”** 窗口中，单击 **“添加新数据源”**。
+2. 在 **“数据源”** 窗口中，单击 **“添加新数据源”** 。
 
    “数据源配置”向导随即打开。
 
@@ -108,9 +108,9 @@ ms.locfileid: "62815626"
 
 7. 在“选择数据库对象”页面上，展开“表”，然后选择“Product (SalesLT)”表。
 
-8. 单击 **“完成”**。
+8. 单击 **“完成”** 。
 
-   Visual Studio 将添加一个新`AdventureWorksLTDataSet.xsd`项目，而且它的文件将添加对应**adventureworksltdataset**项**数据源**窗口。 `AdventureWorksLTDataSet.xsd`文件定义了名为的类型化数据集`AdventureWorksLTDataSet`和名为 TableAdapter `ProductTableAdapter`。 在本演练后面的部分中，你将使用 `ProductTableAdapter` 向数据集填充数据，并将更改保存回数据库中。
+   Visual Studio 会向项目中添加一个新的 `AdventureWorksLTDataSet.xsd` 文件，并将相应的**adventureworksltdataset.xsd**项添加到 "**数据源**" 窗口中。 @No__t_0 文件定义名为 `AdventureWorksLTDataSet` 的类型化数据集和名为 `ProductTableAdapter` 的 TableAdapter。 在本演练后面的部分中，你将使用 `ProductTableAdapter` 向数据集填充数据，并将更改保存回数据库中。
 
 9. 生成项目。
 
@@ -132,7 +132,7 @@ ms.locfileid: "62815626"
     WHERE ThumbnailPhotoFileName <> 'no_image_available_small.gif'
     ```
 
-4. 单击 **“完成”**。
+4. 单击 **“完成”** 。
 
 ## <a name="define-the-user-interface"></a>定义用户界面
 
@@ -158,7 +158,7 @@ ms.locfileid: "62815626"
 
 ## <a name="create-data-bound-controls"></a>创建数据绑定控件
 
-创建通过拖动显示客户记录的控件`Product`表从**数据源**到 WPF 设计器窗口。
+通过将 `Product` 表从 "**数据源**" 窗口拖到 WPF 设计器，创建显示客户记录的控件。
 
 1. 在“数据源”窗口中，单击“Product”节点的下拉菜单，然后选择“详细信息”。
 
@@ -183,7 +183,7 @@ ms.locfileid: "62815626"
 
 5. 从“数据源”窗口，将“Product”节点拖到包含按钮的行下方的网格行。
 
-     Visual Studio 生成 XAML，它定义了一组绑定到“Products”表中的数据的控件。 它还会生成用于加载数据的代码。 有关生成的 XAML 和代码的详细信息，请参阅[控件添加到 Visual Studio 中的数据绑定 WPF](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)。
+     Visual Studio 生成 XAML，它定义了一组绑定到“Products”表中的数据的控件。 它还会生成用于加载数据的代码。 有关生成的 XAML 和代码的详细信息，请参阅[在 Visual Studio 中将 WPF 控件绑定到数据](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)。
 
 6. 在设计器中，单击“Product ID”标签旁边的文本框。
 
@@ -197,7 +197,7 @@ ms.locfileid: "62815626"
 
      Visual Studio 打开代码隐藏文件，并为 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件创建新的 `backButton_Click` 事件处理程序。
 
-2. 修改 `Window_Loaded` 事件处理程序，使 `ProductViewSource`、`AdventureWorksLTDataSet` 和 `AdventureWorksLTDataSetProductTableAdapter` 位于该方法的外部，并使它们在整个窗体中可访问。 声明仅这些测试是全局的窗体，并将其内分配`Window_Loaded`事件处理程序如下所示：
+2. 修改 `Window_Loaded` 事件处理程序，使 `ProductViewSource`、`AdventureWorksLTDataSet` 和 `AdventureWorksLTDataSetProductTableAdapter` 位于该方法的外部，并使它们在整个窗体中可访问。 仅将这些项声明为全局窗体，并将它们分配到 `Window_Loaded` 事件处理程序中，如下所示：
 
      [!code-csharp[Data_WPFDATASET#1](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_1.cs)]
      [!code-vb[Data_WPFDATASET#1](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_1.vb)]
@@ -214,7 +214,7 @@ ms.locfileid: "62815626"
      [!code-csharp[Data_WPFDATASET#3](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_3.cs)]
      [!code-vb[Data_WPFDATASET#3](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_3.vb)]
 
-## <a name="save-changes-to-product-records"></a>保存对产品记录的更改
+## <a name="save-changes-to-product-records"></a>保存对产品记录所做的更改
 
 添加代码，该代码可让用户通过使用“保存更改”按钮来保存对产品记录所做的更改。
 
@@ -228,13 +228,13 @@ ms.locfileid: "62815626"
      [!code-vb[Data_WPFDATASET#4](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_4.vb)]
 
     > [!NOTE]
-    > 此示例使用 `Save` 的 `TableAdapter` 方法来保存更改。 这对于本演练很合适，因为本演练中只会更改一个数据表。 如果你需要保存对多个数据表所做的更改，则还可以使用 Visual Studio 利用你的数据集生成的 `UpdateAll` 的 `TableAdapterManager` 方法。 有关详细信息，请参阅[Tableadapter](../data-tools/create-and-configure-tableadapters.md)。
+    > 此示例使用 `Save` 的 `TableAdapter` 方法来保存更改。 这对于本演练很合适，因为本演练中只会更改一个数据表。 如果你需要保存对多个数据表所做的更改，则还可以使用 Visual Studio 利用你的数据集生成的 `UpdateAll` 的 `TableAdapterManager` 方法。 有关详细信息，请参阅[tableadapter](../data-tools/create-and-configure-tableadapters.md)。
 
 ## <a name="test-the-application"></a>测试应用程序
 
 生成并运行应用程序。 验证你是否可以查看和更新产品记录。
 
-1. 按 F5 。
+1. 按 F5。
 
      这将生成并运行应用程序。 验证以下内容：
 
@@ -252,11 +252,11 @@ ms.locfileid: "62815626"
 
 ## <a name="next-steps"></a>后续步骤
 
-完成此演练后，您可以尝试以下相关的任务：
+完成本演练后，你可能会尝试以下相关任务：
 
-- 了解如何使用 Visual Studio 中的“数据源”窗口将 WPF 控件绑定到其他类型的数据源上。 有关详细信息，请参阅[绑定 WPF 控件添加到 WCF 数据服务](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)。
+- 了解如何使用 Visual Studio 中的“数据源”窗口将 WPF 控件绑定到其他类型的数据源上。 有关详细信息，请参阅[将 WPF 控件绑定到 WCF 数据服务](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)。
 
-- 了解如何使用 Visual Studio 中的“数据源”窗口在 WPF 控件中显示相关数据（即父-子关系中的数据）。 有关详细信息，请参见[演练：在 WPF 应用程序中显示相关的数据](../data-tools/display-related-data-in-wpf-applications.md)。
+- 了解如何使用 Visual Studio 中的“数据源”窗口在 WPF 控件中显示相关数据（即父-子关系中的数据）。 有关详细信息，请参阅[演练：在 WPF 应用中显示相关数据](../data-tools/display-related-data-in-wpf-applications.md)。
 
 ## <a name="see-also"></a>请参阅
 

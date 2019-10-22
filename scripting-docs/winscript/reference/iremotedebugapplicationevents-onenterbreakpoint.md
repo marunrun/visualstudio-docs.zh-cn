@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationEvents::OnEnterBreakPoint | Microsoft Docs
+title: IRemoteDebugApplicationEvents：： OnEnterBreakPoint |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 123476100076811534343763f0e9675a90fdea16
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ad7b0dc3e4b6cd7e8779208121d7464e83e7bb3f
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62934643"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571990"
 ---
 # <a name="iremotedebugapplicationeventsonenterbreakpoint"></a>IRemoteDebugApplicationEvents::OnEnterBreakPoint
 处理用于输入断点的事件。  
@@ -37,7 +37,7 @@ HRESULT OnEnterBreakPoint(
   
 #### <a name="parameters"></a>参数  
  `prdat`  
- [in]输入断点在应用程序线程。  
+ 中进入断点的应用程序线程。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -47,7 +47,7 @@ HRESULT OnEnterBreakPoint(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法处理用于输入断点的事件。  
+ 此方法可处理用于输入断点的事件。  
   
 ## <a name="see-also"></a>请参阅  
  [IRemoteDebugApplicationEvents 接口](../../winscript/reference/iremotedebugapplicationevents-interface.md)

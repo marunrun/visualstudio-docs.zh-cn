@@ -1,5 +1,5 @@
 ---
-title: IDebugSyncOperation::Execute | Microsoft Docs
+title: IDebugSyncOperation：： Execute |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a2bc204169ff94a240e363eb8caa35ec8c7de9be
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 25da02e6736cc2f8ac27c82f922bd515e791bef1
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63004873"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576699"
 ---
 # <a name="idebugsyncoperationexecute"></a>IDebugSyncOperation::Execute
-以同步方式执行该操作并返回。  
+同步执行操作，并返回。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT Execute(
   
 #### <a name="parameters"></a>参数  
  `ppunkResult`  
- [out]该操作返回的对象参数。  
+ 弄操作返回的对象参数。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -45,10 +45,10 @@ HRESULT Execute(
 |“值”|描述|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
-|`E_ABORT`|通过调用中止了此操作`IDebugSyncOperation::InProgressAbort`方法。|  
+|`E_ABORT`|操作已通过调用 `IDebugSyncOperation::InProgressAbort` 方法中止。|  
   
 ## <a name="remarks"></a>备注  
- 进程调试管理器中的目标线程调用`Execute`方法以同步方式。  
+ 目标线程中的进程调试管理器以同步方式调用 `Execute` 方法。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugSyncOperation 接口](../../winscript/reference/idebugsyncoperation-interface.md)

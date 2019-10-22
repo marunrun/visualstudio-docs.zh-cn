@@ -27,35 +27,35 @@ helpviewer_keywords:
 - XSL, style sheets
 - XMLDataDocument class
 ms.assetid: 1fd5de47-2d61-4180-9539-c2c4bf9ab768
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d7493d6c10c83b16ad7579299a49a7747e34c20b
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: c9412d89ee7d9ad1412f0eaf9fe9341e336a65e5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66746518"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72668712"
 ---
 # <a name="xml-tools-in-visual-studio"></a>Visual Studio 中的 XML 工具
 
-*可扩展标记语言 (XML)* 是一种标记语言，用于描述数据提供一种格式。 XML 将数据分割开来，并使用其表示关联的样式表等可扩展样式表语言 (XSL) 和级联样式表 (CSS)。 Visual Studio 提供了一些工具和功能，可以更加容易地使用 XML、XSLT 和 XML 架构。
+*可扩展标记语言（XML）* 是一种提供格式来描述数据的标记语言。 XML 使用关联的样式表（如可扩展样式表语言（XSL）和级联样式表（CSS））将数据和其演示分离。 Visual Studio 提供了一些工具和功能，可以更加容易地使用 XML、XSLT 和 XML 架构。
 
 ## <a name="xml-editor"></a>XML 编辑器
 
-[XML 编辑器](xml-editor.md)用于编辑 XML 文档。 它提供了完整 XML 语法检查、 键入时，颜色编码和 IntelliSense 时的架构验证。 如果提供了架构或文档类型定义，IntelliSense 将使用该架构或文档类型定义列出允许的元素和属性。
+" [Xml 编辑器](xml-editor.md)" 用于编辑 xml 文档。 它提供完整的 XML 语法检查、键入时架构验证、颜色编码和 IntelliSense。 如果提供了架构或文档类型定义，IntelliSense 将使用该架构或文档类型定义列出允许的元素和属性。
 
 其他功能包括：
 
 - XML 代码段支持，包括架构生成的代码段
 
-- 文档大纲，以便可以展开和折叠元素
+- 文档大纲显示可展开和折叠元素
 
-- 能够执行 XSLT 转换并以文本、 XML 或 HTML 的形式查看结果
+- 执行 XSLT 转换并以文本、XML 或 HTML 格式查看结果的功能
 
-- 从 XML 实例文档生成 XML 架构定义语言 (XSD) 架构的功能
+- 从 XML 实例文档生成 XML 架构定义语言（XSD）架构的功能
 
 - 支持编辑 XSLT 样式表，包括 IntelliSense 支持
 
@@ -63,14 +63,14 @@ ms.locfileid: "66746518"
 
 ## <a name="xml-schema-designer"></a>XML 架构设计器
 
-[XML 架构设计器](xml-schema-designer.md)集成使用 Visual Studio 和 XML 编辑器，以使你能够使用 XML 架构定义语言 (XSD) 架构。
+[Xml 架构设计器](xml-schema-designer.md)与 Visual STUDIO 和 xml 编辑器集成，使您能够使用 xml 架构定义语言（XSD）架构。
 
 ## <a name="xslt-debugging"></a>XSLT 调试
 
 Visual Studio 支持[调试 XSLT 样式表](../xml-tools/debugging-xslt.md)。 使用调试程序，可以在 XSLT 样式表中设置断点，从代码进入并逐行执行 XSLT 样式表，等等。
 
 > [!NOTE]
-> XSLT 调试程序是仅在 Visual Studio Enterprise edition 中可用。
+> XSLT 调试程序仅适用于 Visual Studio Enterprise edition。
 
 ## <a name="see-also"></a>请参阅
 

@@ -8,31 +8,31 @@ helpviewer_keywords:
 - database files, creating
 - table designer
 ms.assetid: 99c2b06f-47aa-414e-8057-a3453712fd23
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 365037d3eeeec5077d724ca72d43cce5dcbe0ebd
-ms.sourcegitcommit: 528178a304e66c0cb7ab98b493fe3c409f87493a
+ms.openlocfilehash: 14d30a366c7400b05a713f146e602ae9ccd7e766
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71273359"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72648666"
 ---
 # <a name="create-a-database-and-add-tables-in-visual-studio"></a>在 Visual Studio 中创建数据库并添加表
 
 可以使用 Visual Studio 来创建和更新 SQL Server Express LocalDB 中的本地数据库文件。 还可以通过在 Visual Studio 的 " **SQL Server 对象资源管理器**工具" 窗口中执行 transact-sql 语句来创建数据库。 在本主题中，我们将创建一个 *.mdf*文件并使用表设计器添加表和键。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>Prerequisites
 
-若要完成本演练，你需要安装在 Visual Studio 中的 **.net 桌面开发**和**数据存储和处理**工作负荷。 若要进行安装，请打开**Visual Studio 安装程序**，然后选择要修改的 Visual Studio 版本旁边的 "**修改**（或**更多** > **修改**）"。
+若要完成本演练，你需要安装在 Visual Studio 中的 **.net 桌面开发**和**数据存储和处理**工作负荷。 若要进行安装，请打开**Visual Studio 安装程序**，然后选择要修改的 Visual Studio 版本旁边的 "**修改**" （或**更多** >  "**修改**"）。
 
 ## <a name="create-a-project-and-a-local-database-file"></a>创建一个项目及本地数据库文件
 
 1. 创建新的**Windows 窗体应用**项目，并将其命名为**SampleDatabaseWalkthrough**。
 
-2. 在菜单栏上，选择 "**项目** > " "**添加新项**"。
+2. 在菜单栏上，选择 "**项目** > "**添加新项**"。
 
 3. 在项模板列表中，向下滚动并选择 "**基于服务的数据库**"。
 
@@ -42,7 +42,7 @@ ms.locfileid: "71273359"
 
 ### <a name="add-a-data-source"></a>添加数据源
 
-1. 如果 "**数据源**" 窗口未打开，请按**Shift**+**Alt**+**D**或选择 "在上**查看** > **其他 Windows** > **数据源**" 来打开它。菜单栏。
+1. 如果 "**数据源**" 窗口未打开，请在菜单栏上按**Shift** +**Alt** +**D**或选择 "**查看** > **其他窗口** > **数据源**" 来打开它。
 
 1. 在 "**数据源**" 窗口中，选择 "**添加新数据源**"。
 
@@ -64,9 +64,9 @@ ms.locfileid: "71273359"
 
 可以通过打开数据连接的属性窗口，查看*sampledatabase.mdf*文件的连接字符串：
 
-- 选择 "**查看** > **SQL Server 对象资源管理器**" 以打开 " **SQL Server 对象资源管理器**" 窗口。 展开 **（localdb） "\MSSQLLocalDB** > **数据库**"，然后右键单击 " *sampledatabase.mdf* "，然后选择 "**属性**"。
+- 选择 "**查看** > "**SQL Server 对象资源管理器**打开 " **SQL Server 对象资源管理器**" 窗口。 展开 **（localdb） \MSSQLLocalDB**  > **数据库**，然后右键单击*sampledatabase.mdf*并选择 "**属性**"。
 
-- 或者，如果该窗口尚未打开，还可以选择 "**查看** > **服务器资源管理器**"。 展开 "**数据连接**" 节点，右键单击 sampledatabase.mdf，然后选择 "**属性**"，以打开属性窗口 *。*
+- 或者，如果该窗口尚未打开，还可以选择 "**查看** > "**服务器资源管理器**。 展开 "**数据连接**" 节点，右键单击 sampledatabase.mdf，然后选择 "**属性**"，以打开属性窗口 *。*
 
   > [!TIP]
   > 如果无法展开 "数据连接" 节点，或未列出 Sampledatabase.mdf 连接，请在服务器资源管理器工具栏中选择 "**连接到数据库**" 按钮。 在 "**添加连接**" 对话框中，确保在 "**数据源**" 下选择 " **Microsoft SQL Server 数据库文件**"，然后浏览到并选择 sampledatabase.mdf 文件。 通过选择 **"确定"** 完成添加连接。
@@ -94,7 +94,7 @@ ms.locfileid: "71273359"
    |`ContactName`|`nvarchar (50)`|True（已选定）|
    |`Phone`|`nvarchar (24)`|True（已选定）|
 
-4. 右键单击该行，然后`CustomerID`选择 "**设置主键**"。
+4. 右键单击 "`CustomerID`" 行，然后选择 "**设置主键**"。
 
 5. 右键单击默认行（`Id`），然后选择 "**删除**"。
 
@@ -180,7 +180,7 @@ ms.locfileid: "71273359"
     > [!IMPORTANT]
     > 请确保所有订单 ID 和订单数量是整数，并且每个客户 ID 与 Customers 表中的“CustomerID”列中指定的值匹配。
 
-7. 在菜单栏上，选择 "**文件** > " "**全部保存**"。
+7. 在菜单栏上，选择 "**文件**"  >  "**全部保存**"。
 
 ## <a name="see-also"></a>请参阅
 

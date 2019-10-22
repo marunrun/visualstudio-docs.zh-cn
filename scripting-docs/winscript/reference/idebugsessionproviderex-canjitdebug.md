@@ -1,5 +1,5 @@
 ---
-title: IDebugSessionProviderEx:CanJITDebug | Microsoft Docs
+title: IDebugSessionProviderEx： CanJITDebug |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 295be698e02264c81522b70d0377c2030da6190e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d1ad9192d8faac9931cd3d14e688ee2f54e46687
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979004"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574926"
 ---
 # <a name="idebugsessionproviderexcanjitdebug"></a>IDebugSessionProviderEx:CanJITDebug
-确定指定的进程是否可调试实时调试。  
+确定是否可以使用实时调试来调试指定的进程。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,7 +35,7 @@ HRESULT CanJITDebug(
   
 #### <a name="parameters"></a>参数  
  `pid`  
- [in]要调试的进程的进程标识符。  
+ 中要调试的进程的进程标识符。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  

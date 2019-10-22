@@ -1,5 +1,5 @@
 ---
-title: IEnumJsStackFrames Interface | Microsoft Docs
+title: IEnumJsStackFrames 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -11,15 +11,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2e8302737fb4abf96c55d3ae70424cc03579b270
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b4a635a802ae84b8e839159f5e2f1c4c461e05ae
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62963320"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572025"
 ---
 # <a name="ienumjsstackframes-interface"></a>IEnumJsStackFrames 接口
-由调试器提供堆栈实现适用于 JavaScript 的 jscript9diag.dll 展开。  
+由调试器实现，以向 JavaScript 的 jscript9diag 提供堆栈展开。  
   
 ## <a name="syntax"></a>语法  
   
@@ -27,17 +27,17 @@ ms.locfileid: "62963320"
 IEnumJsStackFrames : public IUnknown;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|描述|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[IEnumJsStackFrames::Next 方法](../../winscript/reference/ienumjsstackframes-next-method.md)|获取指定的帧数。|  
 |[IEnumJsStackFrames::Reset Method](../../winscript/reference/ienumjsstackframes-reset-method.md)|将堆栈帧重置为第一个元素之前的位置。|  
   
 ## <a name="requirements"></a>要求  
- **标头：** jscript9diag.h  
+ **标头：** jscript9diag  
   
 ## <a name="see-also"></a>请参阅  
  [Windows 脚本接口参考](../../winscript/reference/windows-script-interfaces-reference.md)

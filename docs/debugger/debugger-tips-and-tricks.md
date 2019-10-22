@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 61c1efea7340425090adbdd1c9bc865c4a056d42
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 92d1c327c168bfd2881ad014b7f9ab87f771b95d
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "70987767"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72536074"
 ---
 # <a name="learn-productivity-tips-and-tricks-for-the-debugger-in-visual-studio"></a>了解 Visual Studio 调试器在工作效率方面的提示和技巧
 
@@ -74,7 +74,7 @@ ms.locfileid: "70987767"
 
 ## <a name="track-an-out-of-scope-object-c-visual-basic"></a>跟踪超出范围的对象（C#、Visual Basic）
 
-通过调试器窗口（如**监视**窗口）可以轻松查看变量。 但是，如果变量超出了**监视**窗口的范围，你可能会注意到它变成了灰色。在某些应用场景中，如果变量超出范围，变量的值甚至可能会发生变化，因此你可能需要密切关注它（例如，变量可能会被当做垃圾回收掉）。 你可以在**监视**窗口中为该变量创建一个对象 ID 来跟踪这个变量。
+使用调试器窗口（如 "**监视**" 窗口）可以方便地查看变量。 但是，在 "**监视**" 窗口中的某个变量超出范围时，您可能会注意到它灰显。在某些应用程序方案中，变量的值即使在变量超出范围时也可能发生变化，并且你可能需要密切观察它（例如，可能会对变量进行垃圾回收）。 可以通过在 "**监视**" 窗口中为该变量创建一个对象 ID 来对其进行跟踪。
 
 #### <a name="to-create-an-object-id"></a>创建对象 ID
 
@@ -82,7 +82,7 @@ ms.locfileid: "70987767"
 
 2. 启动调试器（**F5**），并在断点处停止。
 
-3. 在**局部变量**窗口（**调试 > 窗口 > 局部变量**）中找到该变量，右键单击该变量，然后选择**创建对象 ID**。
+3. 在 "**局部变量**" 窗口中找到该变量（**调试 > Windows > 局部变量**），右键单击该变量，然后选择 "**创建对象 ID**"。
 
     ![创建对象 ID](../debugger/media/dbg-tips-watch-create-object-id.png "CreateObjectID")
 
@@ -94,19 +94,19 @@ ms.locfileid: "70987767"
 
 ## <a name="view-return-values-for-functions"></a>查看函数的返回值
 
-要查看函数的返回值，请在逐步执行代码时，查看**自动窗口**中显示的函数。 要查看函数的返回值，请确保你关注的函数已执行完毕（如果函数的调用目前处于停止状态，请按一下 **F10** 键）。 如果该窗口已关闭，请通过**调试 > 窗口 > 自动窗口**打开**自动窗口**。
+若要查看函数的返回值，请在单步执行代码时查看**在 "自动" 窗口中**显示的函数。 若要查看函数的返回值，请确保已执行你感兴趣的函数（如果当前已停止函数调用，请按**F10**一次）。 如果窗口已关闭，请使用 "**调试" > Windows >** **"自动**" 打开 "自动" 窗口。
 
-![自动窗口](../debugger/media/dbg-tips-autos-window.png "自动窗口")
+![自动窗口](../debugger/media/dbg-tips-autos-window.png "AutosWindow")
 
-此外，还可以在**即时**窗口中输入函数来查看返回值。 (通过**调试 > 窗口 > 即时**打开该窗口。)
+此外，还可以在 "**即时**" 窗口中输入函数以查看返回值。 （使用 "**调试" > Windows > 即时**打开它。）
 
-![即时窗口](../debugger/media/dbg-tips-immediate-window.png "即时窗口")
+![即时窗口](../debugger/media/dbg-tips-immediate-window.png "ImmediateWindow")
 
 此外，还可以在**监视**和**即时**窗口中使用[伪变量](../debugger/pseudovariables.md)，如 `$ReturnValue`。
 
 ## <a name="string_visualizer"></a>检查可视化工具中的字符串
 
-在使用字符串时，如果能看到完整的、带格式的字符串会很有帮助。 要查看纯文本、XML、HTML 或 JSON 字符串，请将鼠标悬停在包含字符串值的变量上，然后单击放大镜图标![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "可视化工具图标")。
+在使用字符串时，如果能看到完整的、带格式的字符串会很有帮助。 若要查看纯文本、XML、HTML 或 JSON 字符串，请在将鼠标悬停在包含字符串值的变量上时，单击放大镜图标![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "可视化工具图标") 。
 
 ![打开字符串可视化工具](../debugger/media/dbg-tips-string-visualizers.png "OpenStringVisualizer")
 
@@ -118,7 +118,7 @@ ms.locfileid: "70987767"
 
 ## <a name="break-into-code-on-handled-exceptions"></a>在已处理的异常处中断代码
 
-调试器会在未经处理的异常处中断代码。 但是，已处理的异常（例如 `try/catch` 块内发生的异常）也可能会造成错误，可能需要进一步调查。 可以将调试器配置为在已处理的异常处中断代码，方法是配置**异常设置**对话框中的选项。 要打开这个对话框，请选择**调试 > 窗口 > 异常设置**。
+调试器在发生未经处理的异常时中断你的代码。 不过，处理的异常（如 `try/catch` 块内发生的异常）也可以是 bug 的源，并且你可能希望调查它们发生的时间。 您可以通过配置 "**异常设置**" 对话框中的选项，将调试器配置为中断已处理异常的代码。 通过选择 "**调试" > Windows > "异常设置**" 打开此对话框。
 
 通过**异常设置**对话框，你可以让调试器在特定异常处中断代码。 在下图中，调试器会在发生 `System.NullReferenceException` 时中断代码。 有关详细信息，请参阅[管理异常](../debugger/managing-exceptions-with-the-debugger.md)。
 
@@ -130,9 +130,9 @@ ms.locfileid: "70987767"
 
 #### <a name="to-show-threads-in-your-source-code"></a>在源代码中显示线程
 
-1. 调试时，请单击 "**在源中显示线程**" 按钮在 "**调试**" 工具栏中的 "在![源中显示线程](../debugger/media/dbg-multithreaded-show-threads.png "ThreadMarker") "。
+1. 调试时，单击 "**在源中显示线程**" 按钮在**调试**工具栏中![显示源](../debugger/media/dbg-multithreaded-show-threads.png "ThreadMarker")中的线程。
 
-2. 查看窗口左侧的滚动条。 在这一行，你可以看到*线程标记*图标![线程标记](../debugger/media/dbg-thread-marker.png "ThreadMarker") ，类似于两根细线。 线程标记指示线程在此位置停止。
+2. 查看窗口左侧的滚动条。 在此行上，可以看到一个*线程标记*图标![线程标记](../debugger/media/dbg-thread-marker.png "ThreadMarker")，该标记类似于两个抹布线程。 线程标记指示线程在此位置停止。
 
     注意，线程标记可能被断点不完全遮挡。
 
@@ -142,13 +142,13 @@ ms.locfileid: "70987767"
 
 ## <a name="examine-payloads-for-web-services-and-network-resources-uwp"></a>检查 web 服务和网络资源（UWP）的负载
 
-在 UWP 应用中，你可以分析使用 `Windows.Web.Http` API执行的网络操作。 可以使用此工具来帮助调试 web 服务和网络资源。 若要使用该工具，请选择**调试 > 性能探查器**。 选择**网络**，然后选择**启动**。 在应用中，浏览使用 `Windows.Web.Http` 的应用场景，然后选择 **停止收集** 生成报表。
+在 UWP 应用中，可以使用 `Windows.Web.Http` API 分析执行的网络操作。 您可以使用此工具来帮助调试 web 服务和网络资源。 若要使用该工具，请选择 "**调试" > 性能探查器**"。 选择 "**网络**"，然后选择 "**启动**"。 在应用中，浏览使用 `Windows.Web.Http` 的应用场景，然后选择“停止收集”生成报表。
 
 ![网络使用情况分析工具](../profiling/media/prof-tour-network-usage.png "NetworkUsageProfTool")
 
 在摘要视图中选择一个操作，查看更多详细信息。
 
-![网络使用情况工具中的详细信息](../profiling/media/prof-tour-network-usage-details.png "DetailedViewNetworkUsage")
+![网络使用工具中的详细信息](../profiling/media/prof-tour-network-usage-details.png "DetailedViewNetworkUsage")
 
 有关详细信息，请参阅[网络使用情况](../profiling/network-usage.md)。
 
@@ -156,7 +156,7 @@ ms.locfileid: "70987767"
 
 若要附加到正在运行的应用，调试器将加载为想要调试的应用的相同内部版本生成的符号 (.pdb) 文件。 在某些情况下，了解符号文件的一些知识非常有用。 你可在**模块**窗口中检查 Visual Studio 如何加载符号文件。
 
-在调试时，通过选择**调试 > 窗口 > 模块** 打开**模块**窗口。 **模块**窗口可以告诉你，调试器将哪些模块视为用户代码或[*我的代码*](../debugger/just-my-code.md)，以及符号加载模块的状态。 在大多数情况下，调试器会自动为用户代码查找符号文件，但如果你想要单步跟踪 （或调试）.NET framework 代码、系统代码或第三方库代码，必须执行其他步骤获取正确的符号文件。
+在调试过程中，通过选择 "**调试" > Windows > 模块**来打开 "**模块**" 窗口。 "**模块**" 窗口可告诉您调试器被视为用户代码、 [ *"我的代码*](../debugger/just-my-code.md)" 和模块的 "符号加载状态" 的模块。 在大多数情况下，调试器会自动查找用户代码的符号文件，但如果你想要单步执行（或调试） .NET 代码、系统代码或第三方库代码，则需要执行额外的步骤来获取正确的符号文件。
 
 ![在 "模块" 窗口中查看符号信息](../debugger/media/dbg-tips-modules-window.png "ViewSymbolInformation")
 
@@ -166,7 +166,7 @@ ms.locfileid: "70987767"
 
 了解如何调试器如何区分用户代码，请参阅[仅我的代码](../debugger/just-my-code.md)。 若要了解有关符号文件的详细信息，请参阅[在 Visual Studio 调试器中指定符号（.pdb）和源文件](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)。
 
-## <a name="learn-more"></a>了解详细信息
+## <a name="learn-more"></a>了解更多信息
 
 有关其他提示和技巧以及更详细的信息，请参阅以下博客文章：
 

@@ -15,22 +15,22 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 46e01a4e6bb989fad2da6f979c79b7aba13df63a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9ba76a2121dfb3853e38bacbdf49c985103c2a35
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63007309"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573811"
 ---
 # <a name="invalid-replacer-argument"></a>无效的替换器参数
-尝试调用`JSON.stringify`不是有效的参数。 `replacer`参数必须为一个函数或数组。  
+尝试使用无效的自变量调用 `JSON.stringify`。 @No__t_0 参数必须是函数或数组。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 更改`replacer`函数或数组参数。  
+- 将 `replacer` 参数更改为函数或数组。  
   
 ## <a name="example"></a>示例  
- 在此示例代码会导致运行时错误，因为`memberfilter`是而不是函数或数组的对象。  
+ 此示例中的代码导致运行时错误，因为 `memberfilter` 是对象而不是函数或数组。  
   
 ```JavaScript  
 var contact = new Object();  
@@ -46,5 +46,5 @@ var jsontext = JSON.stringify(contact, memberfilter, "\t");
   
 ## <a name="see-also"></a>请参阅  
  [JSON 对象](../../javascript/reference/json-object-javascript.md)   
- [JSON.parse 函数](../../javascript/reference/json-parse-function-javascript.md)   
+ [JSON. Parse 函数](../../javascript/reference/json-parse-function-javascript.md)   
  [JavaScript 运行时错误](../../javascript/reference/javascript-run-time-errors.md)

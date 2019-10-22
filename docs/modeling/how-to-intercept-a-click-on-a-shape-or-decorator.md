@@ -4,23 +4,23 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e3295476b9a9d35768963baa05829a560fc9291
-ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
+ms.openlocfilehash: f372d42869bf533b598f3e2aba9e60e34e47144d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381487"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72605279"
 ---
 # <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>如何：截获对形状或修饰器的单击
 下面的过程演示如何截获单击形状或图标修饰器的方法。 您可以截获单击、双击、拖动和其他笔势，并使元素响应。
 
 ## <a name="to-intercept-clicks-on-shapes"></a>若要截获单击形状
- 在 Dsl 项目中，在与生成的代码文件分离的代码文件中，为 shape 类编写分部类定义。 重写 `OnDoubleClick()` 或名称以 @no__t 开头的其他方法之一。 例如:
+ 在 Dsl 项目中，在与生成的代码文件分离的代码文件中，为 shape 类编写分部类定义。 重写 `OnDoubleClick()` 或名称以 `On...` 开头的其他方法之一。 例如:
 
 ```csharp
 public partial class MyShape // change
@@ -34,10 +34,10 @@ public partial class MyShape // change
 ```
 
 > [!NOTE]
-> 将 @no__t 设置为 `true`，除非你希望将事件传递给包含形状或关系图。
+> 将 `e.Handled` 设置为 `true`，除非你希望将事件传递给包含形状或关系图。
 
 ## <a name="to-intercept-clicks-on-decorators"></a>若要在修饰器上截获单击
- 图像修饰器在 ImageField 类的实例上传送，该类具有 OnDoubleClick 方法。 如果编写 ImageField 子类，可以截获单击。 这些字段是在 InitializeShapeFields 方法中设置的。 因此，你必须更改该方法以实例化子类，而不是常规 ImageField。 InitializeShapeFields 方法位于 shape 类的生成的代码中。 如下面的过程所述 @no__t，你可以重写 shape 类，如下面的过程所述。
+ 图像修饰器在 ImageField 类的实例上传送，该类具有 OnDoubleClick 方法。 如果编写 ImageField 子类，可以截获单击。 这些字段是在 InitializeShapeFields 方法中设置的。 因此，你必须更改该方法以实例化子类，而不是常规 ImageField。 InitializeShapeFields 方法位于 shape 类的生成的代码中。 如下面的过程所述 `Generates Double Derived`，你可以重写 shape 类，如下面的过程所述。
 
  尽管 InitializeShapeFields 是一个实例方法，但对于每个类只调用一次。 因此，每个类中的每个字段只存在一个 ClickableImageField 实例，关系图中的每个形状都不存在一个实例。 当用户双击某个实例时，必须确定命中了哪个实例，如示例中的代码所示。
 
@@ -129,11 +129,11 @@ public partial class MyShape // change
 
 4. 在此代码中调整域类和形状名称，以匹配你自己的 DSL。
 
-   总而言之，代码的工作原理如下。 在此示例中，@no__t 为隔离舱形状的名称。
+   总而言之，代码的工作原理如下。 在此示例中，`ClassShape` 为隔离舱形状的名称。
 
 - 创建每个隔离舱实例时会附加一组鼠标事件处理程序。
 
-- @No__t 0 事件存储当前项。
+- @No__t_0 事件存储当前项。
 
 - 当鼠标移出当前项时，将创建一个 MouseAction 实例，该实例将设置光标并捕获鼠标，直到它被释放。
 

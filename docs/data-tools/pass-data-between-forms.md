@@ -12,32 +12,32 @@ helpviewer_keywords:
 - forms, passing data between
 - Windows Forms, walkthroughs
 ms.assetid: 78bf038b-9296-4fbf-b0e8-d881d1aff0df
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: dc08b0667d4bcde4a2b0eaf95f966806b4a8931e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: eb4b1c0af617bfd8e1771e500b4f12699e3f0ec4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62566275"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72641435"
 ---
 # <a name="pass-data-between-forms"></a>在窗体间传递数据
 
-本演练提供了有关将数据从一个窗体传递到另一个窗体的分步说明。 使用的客户和订单来自 Northwind 的表，一个窗体，用户可以选择一个客户，并第二个窗体显示所选的客户的订单。 本演练演示如何从第一个窗体接收数据的第二个窗体上创建一种方法。
+本演练提供了有关将数据从一个窗体传递到另一个窗体的分步说明。 使用 Northwind 中的 customers 和 orders 表，一个窗体允许用户选择一个客户，另一个窗体显示所选客户的订单。 本演练演示如何在第二种窗体上创建从第一个窗体接收数据的方法。
 
 > [!NOTE]
-> 本演练仅演示在窗体之间传递数据的一种方法。 用于将数据传递到窗体，包括创建第二个构造函数来接收数据，其他选项，或创建一个公共属性可以用来设置数据从第一个窗体。
+> 本演练仅演示在窗体之间传递数据的一种方法。 还有其他用于将数据传递到窗体的选项，包括创建用于接收数据的第二个构造函数，或创建可使用第一个窗体中的数据设置的公共属性。
 
 本演练涉及以下任务：
 
-- 创建一个新**Windows 窗体应用程序**项目。
+- 创建新的**Windows 窗体应用程序**项目。
 
-- 创建和配置具有的数据集[数据源配置向导](../data-tools/media/data-source-configuration-wizard.png)。
+- 使用 "[数据源配置向导](../data-tools/media/data-source-configuration-wizard.png)" 创建和配置数据集。
 
-- 选择从“数据源”窗口拖动某些项时要在窗体上创建的控件。 有关详细信息，请参阅[设置从数据源窗口中拖动时创建的控件](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)。
+- 选择从“数据源”窗口拖动某些项时要在窗体上创建的控件。 有关详细信息，请参阅[设置在从 "数据源" 窗口中拖动时要创建的控件](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)。
 
 - 通过将某些项从“数据源”窗口拖到窗体上来创建数据绑定控件。
 
@@ -47,43 +47,43 @@ ms.locfileid: "62566275"
 
 - 在窗体间传递数据。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>Prerequisites
 
 本演练使用 SQL Server Express LocalDB 和 Northwind 示例数据库。
 
-1. 如果您没有 SQL Server Express LocalDB，安装它从[SQL Server Express 下载页](https://www.microsoft.com/sql-server/sql-server-editions-express)，或通过**Visual Studio 安装程序**。 在 Visual Studio 安装程序中，SQL Server Express LocalDB 可以安装的一部分**数据存储和处理**工作负荷，或作为单个组件。
+1. 如果没有 SQL Server Express 的 LocalDB，请从[SQL Server Express 下载 "页](https://www.microsoft.com/sql-server/sql-server-editions-express)或通过**Visual Studio 安装程序**安装它。 在 Visual Studio 安装程序中，SQL Server Express LocalDB 可以作为**数据存储和处理**工作负荷的一部分进行安装，也可以作为单个组件安装。
 
-2. 通过执行以下步骤安装 Northwind 示例数据库：
+2. 按照以下步骤安装 Northwind 示例数据库：
 
-    1. 在 Visual Studio 中打开**SQL Server 对象资源管理器**窗口。 (SQL Server 对象资源管理器安装的一部分**数据存储和处理**Visual Studio 安装程序中的工作负载。)展开**SQL Server**节点。 LocalDB 实例上右键单击并选择**新查询**。
+    1. 在 Visual Studio 中，打开 " **SQL Server 对象资源管理器**" 窗口。 （SQL Server 对象资源管理器作为 Visual Studio 安装程序中的**数据存储和处理**工作负荷的一部分安装。）展开 " **SQL Server** " 节点。 右键单击 LocalDB 实例，然后选择 "**新建查询**"。
 
-       查询编辑器窗口随即打开。
+       此时将打开查询编辑器窗口。
 
-    2. 复制[Northwind Transact SQL 脚本](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true)到剪贴板。 此 T-SQL 脚本从零开始创建 Northwind 数据库，并使用数据填充它。
+    2. 将[Northwind transact-sql 脚本](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true)复制到剪贴板。 此 T-sql 脚本从头开始创建 Northwind 数据库，并用数据填充它。
 
-    3. 将 T-SQL 脚本粘贴到查询编辑器，然后选择**Execute**按钮。
+    3. 将 T-sql 脚本粘贴到查询编辑器中，然后选择 "**执行**" 按钮。
 
-       后不久，查询完成运行并创建 Northwind 数据库。
+       一小段时间后，查询将完成运行，并创建 Northwind 数据库。
 
-## <a name="create-the-windows-forms-app-project"></a>创建 Windows 窗体应用程序项目
+## <a name="create-the-windows-forms-app-project"></a>创建 Windows 窗体应用项目
 
-1. 在 Visual Studio 中，在**文件**菜单中，选择**新建** > **项目**。
+1. 在 Visual Studio 的 "**文件**" 菜单上，选择 "**新建** > **项目**"。
 
-2. 展开**Visual C#** 或**Visual Basic**在左侧窗格中，然后选择**Windows 桌面**。
+2. 在左侧窗格中展开 "**视觉对象C#**  " 或 " **Visual Basic** "，然后选择 " **Windows 桌面**"。
 
-3. 在中间窗格中，选择**Windows 窗体应用**项目类型。
+3. 在中间窗格中，选择 " **Windows 窗体应用程序**" 项目类型。
 
-4. 将项目命名**PassingDataBetweenForms**，然后选择**确定**。
+4. 将项目命名为**PassingDataBetweenForms**，然后选择 **"确定"** 。
 
      创建“PassingDataBetweenForms”项目并添加到“解决方案资源管理器”中。
 
 ## <a name="create-the-data-source"></a>创建数据源
 
-1. 若要打开**数据源**窗口，然后在**数据**菜单中，单击**显示数据源**。
+1. 若要打开 "**数据源**" 窗口，请在 "**数据**" 菜单上单击 "**显示数据源**"。
 
 2. 在“数据源”窗口，选择“添加新数据源”以启动“数据源配置”向导。
 
-3. 在 **“选择数据源类型”** 页上选择 **“数据库”** ，然后单击 **“下一步”**。
+3. 在 **“选择数据源类型”** 页上选择 **“数据库”** ，然后单击 **“下一步”** 。
 
 4. 在“选择数据库模型”页面上，确认已指定“数据集”，然后单击“下一步”。
 
@@ -95,7 +95,7 @@ ms.locfileid: "62566275"
 
 6. 如果数据库需要密码并且已启用含有敏感数据的选项，请选择该选项，然后单击“下一步”。
 
-7. 上**将连接字符串保存到应用程序配置文件**页上，单击**下一步**。
+7. 在 "将**连接字符串保存到应用程序配置文件**" 页上，单击 "**下一步**"。
 
 8. 在“选择数据库对象”页上，展开“表”节点。
 
@@ -103,7 +103,7 @@ ms.locfileid: "62566275"
 
      将“NorthwindDataSet”添加到项目中，然后“数据源”窗口中将显示“Customers”和“Orders”表。
 
-## <a name="create-the-first-form-form1"></a>创建第一个窗体 (Form1)
+## <a name="create-the-first-form-form1"></a>创建第一个窗体（Form1）
 
 通过将“Customers”节点从“数据源”窗口拖到窗体上，可以创建数据绑定网格（<xref:System.Windows.Forms.DataGridView> 控件）。
 
@@ -115,7 +115,7 @@ ms.locfileid: "62566275"
 
 ## <a name="create-the-second-form"></a>创建第二个窗体
 
-创建要传入数据的第二个窗体。
+创建要将数据传递到的第二个窗体。
 
 1. 从“项目”菜单中，选择“添加 Windows 窗体”。
 
@@ -131,7 +131,7 @@ ms.locfileid: "62566275"
 
 ## <a name="add-a-tableadapter-query"></a>添加 TableAdapter 查询
 
-将 TableAdapter 查询添加到 Form2 加载 Form1 上所选客户的订单。
+向 Form2 添加一个 TableAdapter 查询，以便在 Form1 上为所选客户加载订单。
 
 1. 双击“解决方案资源管理器”中的“NorthwindDataSet.xsd”文件。
 
@@ -152,15 +152,15 @@ ms.locfileid: "62566275"
     > [!NOTE]
     > 验证数据库的参数语法是否正确。 例如，在 Microsoft Access 中，WHERE 子句应当如下：`WHERE CustomerID = ?`。
 
-6. 单击 **“下一步”**。
+6. 单击 **“下一步”** 。
 
-7. 有关**填充 DataTableMethod 名称**，类型`FillByCustomerID`。
+7. 对于 " **DataTableMethod 名称**"，请键入 `FillByCustomerID`。
 
 8. 清除“返回 DataTable”选项，然后单击“下一步”。
 
-9. 单击 **“完成”**。
+9. 单击 **“完成”** 。
 
-## <a name="create-a-method-on-form2-to-pass-data-to"></a>若要将数据传递到在 Form2 上创建一个方法
+## <a name="create-a-method-on-form2-to-pass-data-to"></a>在 Form2 上创建用于将数据传递到的方法
 
 1. 右键单击“Form2”，然后选择“查看代码”，在“代码编辑器”中打开“Form2”。
 
@@ -169,7 +169,7 @@ ms.locfileid: "62566275"
      [!code-vb[VbRaddataDisplaying#1](../data-tools/codesnippet/VisualBasic/pass-data-between-forms_1.vb)]
      [!code-csharp[VbRaddataDisplaying#1](../data-tools/codesnippet/CSharp/pass-data-between-forms_1.cs)]
 
-## <a name="create-a-method-on-form1-to-pass-data-and-display-form2"></a>在 Form1 传递数据并显示 Form2 上创建一个方法
+## <a name="create-a-method-on-form1-to-pass-data-and-display-form2"></a>在 Form1 上创建方法以传递数据并显示 Form2
 
 1. 在“Form1”中，右键单击“Customer”数据网格，然后单击“属性”。
 

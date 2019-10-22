@@ -1,5 +1,5 @@
 ---
-title: 'Idebugdocumenthelper:: Addunicodetext |Microsoft Docs'
+title: IDebugDocumentHelper：： AddUnicodeText |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 391095acc1d2f541a3c497abeac5ae7248baa4e8
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 5820c380c92f2c3cd95763b440d5f9755db3e717
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446627"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577056"
 ---
 # <a name="idebugdocumenthelperaddunicodetext"></a>IDebugDocumentHelper::AddUnicodeText
-本文档的末尾追加一个 Unicode 字符串。  
+在此文档的末尾追加一个 Unicode 字符串。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT AddUnicodeText(
   
 #### <a name="parameters"></a>参数  
  `pszText`  
- [in]指向以 null 结尾的字符串包含文本指针。  
+ 中指向以 null 结尾的字符串的指针，该字符串包含文本。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -45,15 +45,15 @@ HRESULT AddUnicodeText(
 |“值”|描述|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
-|`E_FAIL`|该方法不能添加字符。|  
+|`E_FAIL`|方法无法添加字符。|  
   
 ## <a name="remarks"></a>备注  
- 此方法将生成`IDebugDocumentTextEvents`通知。  
+ 此方法生成 `IDebugDocumentTextEvents` 通知。  
   
 > [!NOTE]
-> 如果此方法之后调用`AddDeferredText`已调用`E_FAIL`返回。  
+> 如果在调用 `AddDeferredText` 之后调用此方法，则返回 `E_FAIL`。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugDocumentHelper 接口](../../winscript/reference/idebugdocumenthelper-interface.md)   
- [IDebugDocumentHelper::AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)   
+ [IDebugDocumentHelper：： AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)    
  [IDebugDocumentTextEvents 接口](../../winscript/reference/idebugdocumenttextevents-interface.md)

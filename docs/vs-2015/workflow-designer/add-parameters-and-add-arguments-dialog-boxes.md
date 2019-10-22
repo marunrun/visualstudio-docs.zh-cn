@@ -1,5 +1,5 @@
 ---
-title: 添加参数，并添加自变量对话框 |Microsoft Docs
+title: "\"添加参数\" 和 \"添加参数\" 对话框 |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -9,29 +9,29 @@ f1_keywords:
 ms.assetid: a21fb4fe-134b-40b0-8497-86b842940ca1
 caps.latest.revision: 7
 author: steved0x
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 64698ba801254f05ce0d51502a1290952109a383
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5df32de7694ba72cc01e19f1ab42fa79c3c4ea3e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977147"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672045"
 ---
 # <a name="add-parameters-and-add-arguments-dialog-boxes"></a>“添加参数”对话框
-下表介绍的用户界面 (UI) 元素**添加参数**对话框中使用的<xref:System.Activities.Statements.InvokeMethod>设计器。  
-  
-|||  
-|-|-|  
-|**方向**|指定该参数是否表示数据流入方法、流出方法还是流入和流出方法。|  
-|**Type**|新参数的类型名称。|  
-|**值**|用于将一个默认值分配给新参数的 VB 表达式|  
-  
- 下表介绍的用户界面 (UI) 元素**添加自变量**对话框中使用的<xref:System.Activities.Statements.InvokeDelegate>设计器。  
-  
-|||  
-|-|-|  
-|**名称**|参数的名称。|  
-|**方向**|指定该参数是否表示数据流入委托、流出委托还是流入和流出委托。|  
-|**Type**|新自变量的类型名称。|  
-|**值**|要用于委托自变量的此实例的值。|
+下表描述了 <xref:System.Activities.Statements.InvokeMethod> 设计器使用的 "**添加参数**" 对话框的用户界面（UI）元素。
+
+|||
+|-|-|
+|**方向键**|指定该参数是否表示数据流入方法、流出方法还是流入和流出方法。|
+|**Type**|新参数的类型名称。|
+|**“值”**|用于将一个默认值分配给新参数的 VB 表达式|
+
+ 下表描述了 <xref:System.Activities.Statements.InvokeDelegate> 设计器使用的 "**添加参数**" 对话框的用户界面（UI）元素。
+
+|||
+|-|-|
+|**名称**|参数的名称。|
+|**方向键**|指定该参数是否表示数据流入委托、流出委托还是流入和流出委托。|
+|**Type**|新自变量的类型名称。|
+|**“值”**|要用于委托自变量的此实例的值。|

@@ -10,7 +10,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - project templates, debugging
-- Visual C++ projects, debugging
+- C++ projects, debugging
 - debug builds, project settings
 - debugging [C++]
 ms.assetid: 912b4ba2-7719-43d5-b087-db33e3f9329a
@@ -19,17 +19,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abc3a8339fffab762c2b6d7a649d3bae8efa76c8
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 9cf22bceedd026a641709640a6e29d1970000e3b
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925491"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72431409"
 ---
-# <a name="debugging-preparation-visual-c-project-types"></a>调试准备：Visual C++ 项目类型
+# <a name="debugging-preparation-c-project-types"></a>调试准备： C++项目类型
 本节描述如何调试用 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 项目模板创建的基本项目类型。
 
- 请注意, 将 Dll 创建为其输出的项目类型已分组为[调试 DLL 项目](../debugger/debugging-dll-projects.md), 原因是它们共享的常见功能。
+ 请注意，将 Dll 创建为其输出的项目类型已分组为[调试 DLL 项目](../debugger/debugging-dll-projects.md)，原因是它们共享的常见功能。
 
 ## <a name="BKMK_In_this_topic"></a> 在本主题中
  [建议的属性设置](#BKMK_Recommended_Property_Settings)
@@ -43,21 +43,21 @@ ms.locfileid: "68925491"
   [Windows 窗体应用程序 (.NET)](#BKMK_Windows_Forms_Applications___NET_)
 
 ## <a name="BKMK_Recommended_Property_Settings"></a>建议的属性设置
- 应以相同的方式设置所有非托管调试方案的某些属性。 以下各表显示了建议的属性设置。 未在此处列出的设置可能有各种不同的非托管项目类型。 有关详细信息, 请参阅[ C++调试配置的项目设置](../debugger/project-settings-for-a-cpp-debug-configuration.md)。
+ 应以相同的方式设置所有非托管调试方案的某些属性。 以下各表显示了建议的属性设置。 未在此处列出的设置可能有各种不同的非托管项目类型。 有关详细信息，请参阅[ C++调试配置的项目设置](../debugger/project-settings-for-a-cpp-debug-configuration.md)。
 
 ### <a name="configuration-properties-124-cc-124-optimization-node"></a>配置属性&#124; C/C++ &#124;优化节点
 
-|属性名称|设置|
+|属性名|设置|
 |-------------------|-------------|
 |**优化**|设置为“禁用(/0d)”。 优化代码更难调试，因为生成的指令与源代码并不直接对应。 如果发现程序具有只出现在优化代码中的 bug，则可以打开此设置，但应记住“反汇编”窗口中显示的代码是从可能与在源窗口中见到的内容不匹配的优化源生成的。 其他功能（如单步执行）可能不会像预期的那样执行。|
 
 ### <a name="configuration-properties-124-linker-124-debugging-node"></a>配置属性&#124;链接&#124;器调试节点
 
-|属性名称|设置|
+|属性名|设置|
 |-------------------|-------------|
 |**生成调试信息**|应始终将此选项设置为“是(/DEBUG)”以创建调试所需的调试符号和文件。 在应用程序进入成品阶段时，可以将其设置为关闭。|
 
- [在本主题中](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)
+ [主题内容](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)
 
 ## <a name="BKMK_Win32_Projects"></a>Win32 项目
  Win32 应用程序是用 C 或 C++ 编写的传统 Windows 程序。 在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中调试此类应用程序非常简单。
@@ -92,22 +92,22 @@ ms.locfileid: "68925491"
 
 6. 打开“链接器”节点，然后选择“调试”。 在第一个“常规”行的下拉列表中，选择“是(/DEBUG)”。 调试期间应始终这样设置。
 
-   有关详细信息, 请参阅[ C++调试配置的项目设置](../debugger/project-settings-for-a-cpp-debug-configuration.md)。
+   有关详细信息，请参阅[ C++调试配置的项目设置](../debugger/project-settings-for-a-cpp-debug-configuration.md)。
 
-   [在本主题中](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)
+   [主题内容](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)
 
 ## <a name="BKMK_Windows_Forms_Applications___NET_"></a>Windows 窗体应用程序 (.NET)
- “Windows 窗体应用程序 (.NET)”模板可创建 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]Windows 窗体应用程序。 有关详细信息，请参阅[如何：创建一个 Windows 应用程序项目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100))。
+ “Windows 窗体应用程序 (.NET)”模板可创建 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]Windows 窗体应用程序。 有关详细信息，请参阅 [How to: Create a Windows Application Project](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100))。
 
  在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中调试此类应用程序类似于在托管的 Windows 窗体应用程序中进行调试。
 
  用项目模板创建 Windows 窗体项目时，[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 将自动为调试和发布配置创建所需的设置。 如有必要，可在“\<项目名称> 属性页”对话框中更改这些设置。 有关详细信息，请参阅[调试和发布配置](../debugger/how-to-set-debug-and-release-configurations.md)。
 
- 有关详细信息, 请参阅[ C++调试配置的项目设置](../debugger/project-settings-for-a-cpp-debug-configuration.md)。
+ 有关详细信息，请参阅[ C++调试配置的项目设置](../debugger/project-settings-for-a-cpp-debug-configuration.md)。
 
  调试 Windows 窗体应用程序的另一种方法是从 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 外部启动应用程序并附加到它上面。 有关详细信息，请参阅[附加到正在运行的程序或多个程序](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)。
 
- [在本主题中](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)
+ [主题内容](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)
 
 ## <a name="see-also"></a>请参阅
 - [初探调试器](../debugger/debugger-feature-tour.md)

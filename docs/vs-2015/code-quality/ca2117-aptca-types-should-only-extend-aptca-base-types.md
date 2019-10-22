@@ -1,5 +1,5 @@
 ---
-title: CA2117:APTCA 类型应只扩展 APTCA 基类型 |Microsoft Docs
+title: CA2117： APTCA 类型应只扩展 APTCA 基类型 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - CA2117
 ms.assetid: c505b586-2f1e-47cb-98ee-a5afcbeda70f
 caps.latest.revision: 18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 078b7f5535dc80261917ef662b3a2f0069cb33a8
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 09fa055fbf1b11e06b1dde32df5a316a3ec39848
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65687304"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72658660"
 ---
-# <a name="ca2117-aptca-types-should-only-extend-aptca-base-types"></a>CA2117:APTCA 类型应只扩展 APTCA 基类型
+# <a name="ca2117-aptca-types-should-only-extend-aptca-base-types"></a>CA2117：APTCA 类型应只扩展 APTCA 基类型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -33,55 +33,55 @@ ms.locfileid: "65687304"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 公共或受保护的程序集中类型<xref:System.Security.AllowPartiallyTrustedCallersAttribute?displayProperty=fullName>属性继承自不具有属性的程序集中声明的类型。
+ 具有 <xref:System.Security.AllowPartiallyTrustedCallersAttribute?displayProperty=fullName> 特性的程序集中的公共或受保护类型从不具有属性的程序集中声明的类型继承。
 
 ## <a name="rule-description"></a>规则说明
- 默认情况下，使用强名称的程序集中的公共或受保护类型隐式受[继承需求](https://msdn.microsoft.com/28b9adbb-8f08-4f10-b856-dbf59eb932d9)的完全信任。 用强名称的程序集标记<xref:System.Security.AllowPartiallyTrustedCallersAttribute>(APTCA) 特性不具有这种保护。 该属性禁用继承要求。 这样，是在未获得完全信任的类型声明的程序集中的可继承的公开的类型。
+ 默认情况下，具有强名称的程序集中的公共或受保护类型由完全信任的[继承要求](https://msdn.microsoft.com/28b9adbb-8f08-4f10-b856-dbf59eb932d9)隐式保护。 用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> （APTCA）特性标记的具有强名称的程序集不具有此保护。 特性禁用继承要求。 这使得在程序集中声明的公开类型可由不具有完全信任的类型继承。
 
- APTCA 属性是完全受信任的程序集，并在程序集中的类型继承自的类型不允许部分受信任调用方，则可能会产生安全问题。 如果两个类型`T1`并`T2`满足以下条件，则恶意调用方可以使用类型`T1`绕过的隐式完全信任继承要求保护`T2`:
+ 当完全受信任的程序集上存在 APTCA 特性，并且程序集中的类型从不允许部分受信任调用方的类型继承时，可能会出现安全漏洞。 如果两种类型 `T1` 和 `T2` 满足以下条件，则恶意调用方可以使用类型 `T1` 来绕过保护 `T2` 的隐式完全信任继承要求：
 
-- `T1` 在完全受信任的程序集具有 APTCA 特性中声明的公共类型。
+- `T1` 是在具有 APTCA 特性的完全受信任的程序集中声明的公共类型。
 
-- `T1` 类型继承`T2`其程序集外部。
+- `T1` 继承自其程序集外部 `T2` 类型。
 
-- `T2`程序集不具有 APTCA 特性，并且，因此，不应由部分受信任的程序集中的类型继承。
+- `T2` 的程序集没有 APTCA 特性，因此不应由部分受信任的程序集中的类型继承。
 
-  部分受信任的类型`X`可以继承自`T1`，并向它授予访问权限的继承成员中声明`T2`。 因为`T2`不具有 APTCA 属性，其直接派生类型 (`T1`) 必须满足的完全信任; 继承要求`T1`具有完全信任权限，因此满足此检查。 安全风险是因为`X`不参与满足继承要求保护`T2`来自不受信任的子类化。 出于此原因，用 APTCA 特性的类型不能扩展没有该属性的类型。
+  部分受信任的类型 `X` 可继承自 `T1`，这使其可以访问 `T2` 中声明的继承成员。 由于 `T2` 没有 APTCA 特性，因此它的直接派生类型（`T1`）必须满足完全信任的继承要求; `T1` 具有完全信任，因此满足此检查。 安全风险是因为 `X` 不参与满足防止不受信任的子类中 `T2` 的继承要求。 出于此原因，具有 APTCA 特性的类型不能扩展没有特性的类型。
 
-  另一个安全问题和可能是一个更常见的活动，是派生的类型 (`T1`) 可以通过编程器错误公开受保护的成员需要完全信任的类型 (`T2`)。 此操作时，不受信任调用方访问应仅供完全受信任的类型的信息。
+  另一个安全问题（可能更常见）是派生类型（`T1`）可以通过程序员错误，从要求完全信任的类型（`T2`）公开受保护的成员。 发生这种情况时，不受信任的调用方可以访问只应提供给完全受信任的类型的信息。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 如果不需要 APTCA 特性的程序集中的冲突报告的类型，请将其删除。
+ 如果冲突报告的类型位于不需要 APTCA 属性的程序集中，请将其删除。
 
- 如果 APTCA 特性是必需的添加一个针对完全信任继承要求为类型。 这可避免由不受信任的类型继承。
+ 如果 APTCA 特性是必需的，则为该类型添加完全信任的继承要求。 这可以防止不受信任的类型继承。
 
- 就可以通过将 APTCA 特性添加到报告的冲突的基类型的程序集修复与冲突。 请执行此操作必须首先进行严格的安全审查的程序集中的所有代码和依赖程序集的所有代码。
+ 可以通过将 APTCA 特性添加到冲突报告的基类型的程序集来修复冲突。 如果没有先对程序集中的所有代码和依赖程序集的所有代码进行大量的安全检查，请不要执行此操作。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 若要安全地禁止显示此规则的警告，必须确保受保护的成员公开你的类型不直接或间接允许不受信任调用方访问敏感信息、 操作或可以以破坏方式使用的资源。
+ 若要安全地禁止显示此规则发出的警告，您必须确保您的类型公开的受保护成员不直接或间接允许不受信任的调用方访问可通过破坏性方式使用的敏感信息、操作或资源。
 
 ## <a name="example"></a>示例
- 以下示例使用两个程序集和测试应用程序来演示此规则检测到的安全漏洞。 第一个程序集不具有 APTCA 属性，不应由部分受信任的类型继承 (由`T2`前面讨论)。
+ 下面的示例使用两个程序集和一个测试应用程序来说明此规则检测到的安全漏洞。 第一个程序集没有 APTCA 特性，不应由部分受信任的类型继承（由前面讨论中的 `T2` 表示）。
 
  [!code-csharp[FxCop.Security.NoAptcaInherit#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.NoAptcaInherit/cs/FxCop.Security.NoAptcaInherit.cs#1)]
 
 ## <a name="example"></a>示例
- 第二个程序集，由表示`T1`前面讨论中是完全受信任，允许部分受信任调用方。
+ 第二个程序集（由上一讨论中的 `T1` 表示）是完全受信任的，允许部分受信任的调用方。
 
  [!code-csharp[FxCop.Security.YesAptcaInherit#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.YesAptcaInherit/cs/FxCop.Security.YesAptcaInherit.cs#1)]
 
 ## <a name="example"></a>示例
- 测试类型，由表示`X`在前面的讨论，是在部分受信任的程序集中。
+ 由前面讨论 `X` 表示的测试类型位于部分受信任的程序集中。
 
  [!code-csharp[FxCop.Security.TestAptcaInherit#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.TestAptcaInherit/cs/FxCop.Security.TestAptcaInherit.cs#1)]
 
  本示例生成以下输出。
 
- **满足偷偷 glen 在 2003 年 2 月 22 日上午 12:00:00 ！** 
-**从测试： 阳光明媚牧场**
-**满足在阳光明媚牧场 2003 年 2 月 22 日上午 12:00:00 ！**
-## <a name="related-rules"></a>相关的规则
- [CA2116:APTCA 方法应只调用 APTCA 方法](../code-quality/ca2116-aptca-methods-should-only-call-aptca-methods.md)
+ **在偷偷 glen 2/22/2003 12:00:00 AM！** 
+**测试： sunny meadow** 
+**在 SUNNY meadow 2/22/2003 12:00:00 AM！**
+## <a name="related-rules"></a>相关规则
+ [CA2116：APTCA 方法应只调用 APTCA 方法](../code-quality/ca2116-aptca-methods-should-only-call-aptca-methods.md)
 
 ## <a name="see-also"></a>请参阅
- [安全编码准则](https://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177) [.NET Framework 程序集可被调用的部分受信任代码](https://msdn.microsoft.com/a417fcd4-d3ca-4884-a308-3a1a080eac8d)[通过使用库部分受信任的代码](https://msdn.microsoft.com/library/dd66cd4c-b087-415f-9c3e-94e3a1835f74)[继承请求](https://msdn.microsoft.com/28b9adbb-8f08-4f10-b856-dbf59eb932d9)
+ [安全编码准则](https://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177) [.NET Framework 由部分受信任代码使用的程序集通过](https://msdn.microsoft.com/a417fcd4-d3ca-4884-a308-3a1a080eac8d)[部分受信任的代码](https://msdn.microsoft.com/library/dd66cd4c-b087-415f-9c3e-94e3a1835f74)[继承请求](https://msdn.microsoft.com/28b9adbb-8f08-4f10-b856-dbf59eb932d9)来调用的程序集

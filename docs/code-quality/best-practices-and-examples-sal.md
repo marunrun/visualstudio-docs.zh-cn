@@ -7,12 +7,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: cd5e07f1e9ce83f36e6ecfbae148c84d18f40ff1
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: ccb18a704c2e8a2c185d3751483736631b0bba68
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72015949"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448642"
 ---
 # <a name="best-practices-and-examples-sal"></a>最佳做法和示例 (SAL)
 下面是一些关于充分利用源代码批注语言 (SAL)，并避免一些常见问题的方法。
@@ -61,11 +61,11 @@ void Func2(_Out_ int *p1)
 }
 ```
 
-## <a name="_pre_defensive_-and-_post_defensive_"></a>\_Pre @ no__t-1defensive @ no__t-2 and \_Post @ no__t-4defensive @ no__t-5
+## <a name="_pre_defensive_-and-_post_defensive_"></a>\_Pre \_defensive \_ 和 \_Post \_defensive \_
 
 如果函数出现在信任边界上，则建议您使用 `_Pre_defensive_` 批注。  “防御性”修饰符可修改特定批注，用于指明在调用时应严格检查界面，但在实现体中，应假定可能会传递错误的参数。 这种情况下，在信任边界上将首选 `_In_ _Pre_defensive_`，以便指明尽管调用方在尝试传递 NULL 时会出现错误，但还是会分析函数体（就像参数可能是 NULL 一样），因此，任何取消指针引用而不首先检查其是否为 NULL 的尝试都会被标记。  还可使用 `_Post_defensive_` 批注，以便用于回调，其中假设受信任方为调用方，而不受信任的代码为调用的代码。
 
-## <a name="_out_writes_"></a>\_Out @ no__t-1writes @ no__t-2
+## <a name="_out_writes_"></a>\_Out \_writes \_
 
 下面的示例演示一种常见的 `_Out_writes_` 误用案例。
 
@@ -98,7 +98,7 @@ void Func3(_Out_writes_(size) PSTR pb,
 );
 ```
 
-## <a name="_out_-pstr"></a>\_Out @ no__t-1 PSTR
+## <a name="_out_-pstr"></a>\_Out \_ PSTR
 
 任何时候，使用 `_Out_ PSTR` 几乎都是错误的。 这可解释为具有指向字符缓冲区的输出参数，并且以 null 结尾。
 
@@ -113,7 +113,7 @@ void Func2(_Out_writes_(n) PSTR wszFileName, size_t n);
 
 诸如 `_In_ PCSTR` 等批注很常见和有用。 它指向具有 NULL 终止的输入字符串，因为 `_In_` 的前置条件允许识别以 null 结尾的字符串。
 
-## <a name="_in_-wchar-p"></a>\_In @ no__t-1 WCHAR * p
+## <a name="_in_-wchar-p"></a>\_In \_ WCHAR * p
 
 `_In_ WCHAR* p` 声明具有指向一个字符的输入指针 `p`。 但是，在大多数情况下，这可能不是预期的规范。 预期的可能是以 null 结尾的数组的规范；为此，请使用 `_In_ PWSTR`。
 
@@ -143,7 +143,7 @@ BOOL StrEquals2(_In_ PSTR p1, _In_ PSTR p2)
 }
 ```
 
-## <a name="_out_range_"></a>\_Out @ no__t-1range @ no__t-2
+## <a name="_out_range_"></a>\_Out \_range \_
 
 如果参数是一个指针，并且想要表示指针指向的元素值的范围，请使用 `_Deref_out_range_` 而不是 `_Out_range_`。 在下面的示例中，表示的是 *pcbFilled 的范围，而不是 pcbFilled 的范围。
 
@@ -166,7 +166,7 @@ void Func2(
 
 一些工具并不是严格需要 `_Deref_out_range_(0, cbSize)`，因为它可从 `_Out_writes_to_(cbSize,*pcbFilled)` 推断，但为了完整性而将其显示在此处。
 
-## <a name="wrong-context-in-_when_"></a>@No__t 中的上下文错误-0When @ no__t-1
+## <a name="wrong-context-in-_when_"></a>@No__t_0When 中的上下文错误 \_
 
 另一个常见错误是使用前置条件的状态后计算。 在下面的示例中，`_Requires_lock_held_` 是一个前置条件。
 
@@ -183,7 +183,7 @@ int Func2(_In_ MyData *p, int flag);
 
 表达式 `result` 是指不适用于状态前的状态后值。
 
-## <a name="true-in-_success_"></a>@No__t-0Success @ no__t-1 中为 TRUE
+## <a name="true-in-_success_"></a>@No__t_0Success 中为 TRUE \_
 
 如果函数成功（范围值为非零），请使用 `return != 0` 作为成功条件，而不使用 `return == TRUE`。 非零不一定表示等于编译器为 `TRUE` 提供的实际值。 `_Success_` 的参数是一个表达式，并且以下表达式的计算结果相等：`return != 0`、`return != false`、`return != FALSE` 和 `return`（无参数或比较）。
 
@@ -245,4 +245,4 @@ _Ret_maybenull_ void *MightReturnNullPtr2();
 [批注结构和类](../code-quality/annotating-structs-and-classes.md)  
 [对锁定行为进行批注](../code-quality/annotating-locking-behavior.md)  
 [指定何时以及在何处应用批注](../code-quality/specifying-when-and-where-an-annotation-applies.md)  
-[内部函数](../code-quality/intrinsic-functions.md)  
+[内部函数](../code-quality/intrinsic-functions.md)

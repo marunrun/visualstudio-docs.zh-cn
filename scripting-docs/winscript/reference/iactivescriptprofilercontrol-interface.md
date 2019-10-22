@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerControl Interface | Microsoft Docs
+title: IActiveScriptProfilerControl 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -11,23 +11,23 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 86f4fb8dea97930f717800a14a27740b76eb6c2e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ef127e3a4463d112b9ea424702fb2650c80cce7d
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993054"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571603"
 ---
 # <a name="iactivescriptprofilercontrol-interface"></a>IActiveScriptProfilerControl 接口
-由支持分析脚本引擎实现。 通常情况下，实现的对象`IActiveScriptProfilerControl`还实现[IActiveScript](../../winscript/reference/iactivescript.md)接口。 在这种情况下，可以获取的句柄`IActiveScriptProfilerControl`接口通过调用`IUnknown::QueryInterface`对象上的方法。 接口提供了用于停止和启动分析脚本引擎上必需的方法。  
+由支持分析的脚本引擎实现。 通常，实现 `IActiveScriptProfilerControl` 的对象还实现[IActiveScript](../../winscript/reference/iactivescript.md)接口。 在这种情况下，您可以通过对对象调用 `IUnknown::QueryInterface` 方法来获取 `IActiveScriptProfilerControl` 接口的句柄。 接口提供了在脚本引擎上停止和启动分析所需的方法。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[IActiveScriptProfilerControl::StartProfiling](../../winscript/reference/iactivescriptprofilercontrol-startprofiling.md)|启动脚本引擎的分析。|  
+|[IActiveScriptProfilerControl::StartProfiling](../../winscript/reference/iactivescriptprofilercontrol-startprofiling.md)|开始分析脚本引擎。|  
 |[IActiveScriptProfilerControl::SetProfilerEventMask](../../winscript/reference/iactivescriptprofilercontrol-setprofilereventmask.md)|设置脚本引擎中的探查器事件掩码。|  
-|[IActiveScriptProfilerControl::StopProfiling](../../winscript/reference/iactivescriptprofilercontrol-stopprofiling.md)|停止分析脚本引擎上。|  
+|[IActiveScriptProfilerControl::StopProfiling](../../winscript/reference/iactivescriptprofilercontrol-stopprofiling.md)|停止对脚本引擎的分析。|  
   
 ## <a name="see-also"></a>请参阅  
  [Active Script Profiler 接口](../../winscript/reference/active-script-profiler-interfaces.md)

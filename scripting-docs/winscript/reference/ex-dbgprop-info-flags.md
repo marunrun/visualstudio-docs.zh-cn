@@ -1,5 +1,5 @@
 ---
-title: EX_DBGPROP_INFO_FLAGS | Microsoft Docs
+title: EX_DBGPROP_INFO_FLAGS |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 086a2b7544a95a302219ddc62c15c5b31dd1d9b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0094d49a7e528d312dc8206b02599651f192c6fb
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955219"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575845"
 ---
-# <a name="exdbgpropinfoflags"></a>EX_DBGPROP_INFO_FLAGS
-用于指定`ExtendedDebugPropertyInfo`字段。  
+# <a name="ex_dbgprop_info_flags"></a>EX_DBGPROP_INFO_FLAGS
+用于指定 `ExtendedDebugPropertyInfo` 字段。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,21 +39,21 @@ enum {
 };  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
  EX_DBGPROP_INFO_ID  
- 初始化的属性标识符。  
+ 初始化属性的标识符。  
   
  EX_DBGPROP_INFO_NTYPE  
- 初始化类型的属性。  
+ 初始化属性的类型。  
   
  EX_DBGPROP_INFO_NVALUE  
  初始化属性的值。  
   
  EX_DBGPROP_INFO_LOCKBYTES  
- 初始化`plb`字段。  
+ 初始化 `plb` 字段。  
   
  EX_DBGPROP_INFO_DEBUGEXTPROP  
- 初始化`pDebugExtProp`字段包含`IDebugExtendedProperty`接口。  
+ 初始化包含 `IDebugExtendedProperty` 接口的 `pDebugExtProp` 字段。  
   
 ## <a name="see-also"></a>请参阅  
  [ExtendedDebugPropertyInfo 结构](../../winscript/reference/extendeddebugpropertyinfo-structure.md)   

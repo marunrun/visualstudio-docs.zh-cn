@@ -1,5 +1,5 @@
 ---
-title: IEnumRemoteDebugApplications::Clone | Microsoft Docs
+title: IEnumRemoteDebugApplications：： Clone |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 06b2eac008b0bccc3d0671e15658b5a189b5dcaa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0e8007505c6e7c4bc4c881b07c5247f0647824bc
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62963268"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572007"
 ---
 # <a name="ienumremotedebugapplicationsclone"></a>IEnumRemoteDebugApplications::Clone
-创建一个包含与当前枚举数相同的状态的枚举器。  
+创建与当前枚举数包含相同状态的枚举数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT Clone(
   
 #### <a name="parameters"></a>参数  
  `ppessd`  
- [out]枚举器的副本。  
+ 弄枚举器的克隆。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -47,7 +47,7 @@ HRESULT Clone(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法创建一个包含与当前枚举数相同的状态的枚举器。  
+ 此方法创建一个与当前枚举数包含相同状态的枚举数。  
   
 ## <a name="see-also"></a>请参阅  
  [IEnumRemoteDebugApplications 接口](../../winscript/reference/ienumremotedebugapplications-interface.md)

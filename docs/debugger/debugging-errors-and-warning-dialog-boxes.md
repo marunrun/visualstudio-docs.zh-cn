@@ -1,5 +1,5 @@
 ---
-title: 调试错误和警告对话框 |Microsoft Docs
+title: "\"调试错误和警告\" 对话框 |Microsoft Docs"
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e13d6d323264136c6cab4c753ba53d40acd5a628
-ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.openlocfilehash: f261eac1c3cbc73bb12323c089ae88f4ffc6b120
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67852226"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72431674"
 ---
 # <a name="debugging-errors-and-warning-dialog-boxes"></a>“调试错误和警告”对话框
 以下是在调试应用程序时可能遇到的错误和警告对话框。
@@ -38,7 +38,7 @@ ms.locfileid: "67852226"
 
  [调试器不能显示源代码或反汇编](../debugger/debugger-cannot-display-source-code-or-disassembly.md)
  
- [调试器运行内存不足的服务](../debugger/error-debugger-services-no-memory.md)
+ [调试器服务内存不足](../debugger/error-debugger-services-no-memory.md)
 
  [“调试会话的可执行文件”对话框](../debugger/executable-for-debugging-session-dialog-box.md)
 
@@ -56,10 +56,10 @@ ms.locfileid: "67852226"
 
  [无法连接到计算机](../debugger/error-unable-to-connect-to-the-machine-name-the-machine-cannot-be-found-on-the-network.md)
 
- [错误：无法进行调试，因为系统上已启用内核调试程序](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)
+ [错误：由于系统上启用了内核调试程序，因此不可能进行调试](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)
 
 ## <a name="related-sections"></a>相关章节
- [调试脚本和 Web:错误和疑难解答](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
+ [调试脚本和 Web：错误和疑难解答](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
 
  [远程调试错误](../debugger/remote-debugging-errors-and-troubleshooting.md)
 
@@ -67,6 +67,6 @@ ms.locfileid: "67852226"
 
  [SQL 调试安装程序疑难解答](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/s7ahaxtd(v=vs.100))
 
- [调试 Visual C++ 常见问题](../debugger/debugging-native-code-faqs.md)
+ [调试本机代码常见问题解答](../debugger/debugging-native-code-faqs.md)
 
  [调试器安全](../debugger/debugger-security.md)

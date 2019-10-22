@@ -7,17 +7,17 @@ helpviewer_keywords:
 - dependency diagrams
 - diagrams - modeling, layer
 - constraints, architectural
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d4a4d2c1600558e4c31c6dd12b85f931a83e7ba7
-ms.sourcegitcommit: 0f44ec8ba0263056ad04d2d0dc904ad4206ce8fc
+ms.openlocfilehash: 573d03761bc4d8ccddf666dbc39cb8301d7c9afa
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766230"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654136"
 ---
 # <a name="create-dependency-diagrams-from-your-code"></a>从代码创建依赖项关系图
 
@@ -70,7 +70,7 @@ ms.locfileid: "70766230"
 
 4. 使用 "**体系结构**" 菜单为解决方案创建新的依赖关系图
 
-5. 选择代码图_上的所有_节点（在单击、拖动和释放之前 _，请在_代码图上按下_Ctrl_ + ，或使用橡皮带选择。
+5. 选择代码图上的所有节点 _（在单击_、拖动和释放_之前，请_使用_Ctrl_  +  或使用橡皮带选择。
 
 6. 将所选元素拖放或复制和粘贴到新的依赖项验证关系图。
 
@@ -118,8 +118,8 @@ ms.locfileid: "70766230"
 |**若要**|**在层资源管理器中**|
 |-|-|
 |删除层与项目之间的链接|打开项目链接的快捷菜单，然后选择 "**删除**"。|
-|将链接从一个层移到另一个层|将项目链接拖到关系图上的一个现有层。<br /><br /> - 或 -<br /><br /> 1.打开项目链接的快捷菜单，然后选择 "**剪切**"。<br />2.在依赖项关系图上，打开层的快捷菜单，然后选择 "**粘贴**"。|
-|将链接从一个层复制到另一个层|1.打开项目链接的快捷菜单，然后选择 "**复制**"。<br />2.在依赖项关系图上，打开层的快捷菜单，然后选择 "**粘贴**"。|
+|将链接从一个层移到另一个层|将项目链接拖到关系图上的一个现有层。<br /><br /> - 或 -<br /><br /> 1. 打开项目链接的快捷菜单，然后选择 "**剪切**"。<br />2. 在依赖关系图上，打开层的快捷菜单，然后选择 "**粘贴**"。|
+|将链接从一个层复制到另一个层|1. 打开项目链接的快捷菜单，然后选择 "**复制**"。<br />2. 在依赖关系图上，打开层的快捷菜单，然后选择 "**粘贴**"。|
 |基于现有项目链接创建一个新层|将项目链接拖到关系图上的空白区域。|
 |验证链接的项目是否支持对依赖关系图进行验证。|查看项目链接的 "**支持验证**" 列。|
 

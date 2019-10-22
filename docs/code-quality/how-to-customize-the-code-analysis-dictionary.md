@@ -7,17 +7,17 @@ helpviewer_keywords:
 - custom dictionary, code analysis
 - dictionary, code analysis
 ms.assetid: 667e3b4e-beff-48be-b3d1-376e1716a895
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b4a6c94f5784d57a90dd31f21f8829b3141140d0
-ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
+ms.openlocfilehash: 26629ed099eea9a1d0c73a2eaa1105525d05dcf3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72349594"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649461"
 ---
 # <a name="how-to-customize-the-code-analysis-dictionary"></a>如何：自定义代码分析字典
 
@@ -95,17 +95,17 @@ ms.locfileid: "72349594"
 
 字典/字词/识别的节点中的字词适用于以下代码分析规则：
 
-- [CA1701：资源字符串复合词应采用正确的大小写](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
+- [CA1701：资源字符串复合词应采用正确的大小写](../code-quality/ca1701.md)
 
-- [CA1702：复合词应采用正确的大小写](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
+- [CA1702：复合词应采用正确的大小写](../code-quality/ca1702.md)
 
-- [CA1703：资源字符串应正确拼写](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
+- [CA1703：资源字符串应正确拼写](../code-quality/ca1703.md)
 
-- [CA1704：标识符应正确拼写](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)
+- [CA1704：标识符应正确拼写](../code-quality/ca1704.md)
 
-- [CA1709：标识符的大小写应当正确](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+- [CA1709：标识符的大小写应当正确](../code-quality/ca1709.md)
 
-- [CA1726：使用首选词条](../code-quality/ca1726-use-preferred-terms.md)
+- [CA1726：使用首选词条](../code-quality/ca1726.md)
 
 - [CA2204：应正确拼写文本](../code-quality/ca2204.md)
 
@@ -130,17 +130,17 @@ ms.locfileid: "72349594"
 
 字典/字词/无法识别的节点中的字词应用于以下代码分析规则：
 
-- [CA1701：资源字符串复合词应采用正确的大小写](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
+- [CA1701：资源字符串复合词应采用正确的大小写](../code-quality/ca1701.md)
 
-- [CA1702：复合词应采用正确的大小写](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
+- [CA1702：复合词应采用正确的大小写](../code-quality/ca1702.md)
 
-- [CA1703：资源字符串应正确拼写](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
+- [CA1703：资源字符串应正确拼写](../code-quality/ca1703.md)
 
-- [CA1704：标识符应正确拼写](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)
+- [CA1704：标识符应正确拼写](../code-quality/ca1704.md)
 
-- [CA1709：标识符的大小写应当正确](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+- [CA1709：标识符的大小写应当正确](../code-quality/ca1709.md)
 
-- [CA1726：使用首选词条](../code-quality/ca1726-use-preferred-terms.md)
+- [CA1726：使用首选词条](../code-quality/ca1726.md)
 
 - [CA2204：应正确拼写文本](../code-quality/ca2204.md)
 
@@ -171,15 +171,15 @@ ms.locfileid: "72349594"
 
 字典/字词/弃用节点中的词条适用于以下代码分析规则：
 
-- [CA1701：资源字符串复合词应采用正确的大小写](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
+- [CA1701：资源字符串复合词应采用正确的大小写](../code-quality/ca1701.md)
 
-- [CA1702：复合词应采用正确的大小写](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
+- [CA1702：复合词应采用正确的大小写](../code-quality/ca1702.md)
 
-- [CA1703：资源字符串应正确拼写](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
+- [CA1703：资源字符串应正确拼写](../code-quality/ca1703.md)
 
-- [CA1704：标识符应正确拼写](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)
+- [CA1704：标识符应正确拼写](../code-quality/ca1704.md)
 
-- [CA1726：使用首选词条](../code-quality/ca1726-use-preferred-terms.md)
+- [CA1726：使用首选词条](../code-quality/ca1726.md)
 
 ### <a name="BKMK_DictionaryWordsCompoundTermCompoundAlternate"></a>字典/字词/复合/字词 [@CompoundAlternate]
 
@@ -206,13 +206,13 @@ ms.locfileid: "72349594"
 
 字典/字词/复合节点中的词条适用于以下代码分析规则：
 
-- [CA1701：资源字符串复合词应采用正确的大小写](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
+- [CA1701：资源字符串复合词应采用正确的大小写](../code-quality/ca1701.md)
 
-- [CA1702：复合词应采用正确的大小写](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
+- [CA1702：复合词应采用正确的大小写](../code-quality/ca1702.md)
 
-- [CA1703：资源字符串应正确拼写](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
+- [CA1703：资源字符串应正确拼写](../code-quality/ca1703.md)
 
-- [CA1704：标识符应正确拼写](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)
+- [CA1704：标识符应正确拼写](../code-quality/ca1704.md)
 
 ### <a name="BKMK_DictionaryWordsDiscreteExceptionsTerm"></a>字典/字词/DiscreteExceptions/字词
 
@@ -235,9 +235,9 @@ ms.locfileid: "72349594"
 
 字典/字词/DiscreteExceptions 节点中的字词适用于以下代码分析规则：
 
-- [CA1701：资源字符串复合词应采用正确的大小写](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
+- [CA1701：资源字符串复合词应采用正确的大小写](../code-quality/ca1701.md)
 
-- [CA1702：复合词应采用正确的大小写](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
+- [CA1702：复合词应采用正确的大小写](../code-quality/ca1702.md)
 
 ### <a name="BKMK_DictionaryAcronymsCasingExceptionsAcronym"></a>字典/缩写词/CasingExceptions/缩写
 
@@ -260,7 +260,7 @@ ms.locfileid: "72349594"
 
 字典/首字母缩写/CasingExceptions 节点中的词条适用于以下代码分析规则：
 
-- [CA1709：标识符的大小写应当正确](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+- [CA1709：标识符的大小写应当正确](../code-quality/ca1709.md)
 
 ## <a name="BKMK_ToApplyACustomDictionaryToAProject"></a>向项目应用自定义字典
 

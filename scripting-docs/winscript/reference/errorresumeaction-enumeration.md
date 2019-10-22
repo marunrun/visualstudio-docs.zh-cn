@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d92b4b2e00b25a509d29511008876d781c8a577a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ad9b8598cb027c96f6fb6fad6f3d343e6058cfdb
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955167"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575862"
 ---
 # <a name="errorresumeaction-enumeration"></a>ERRORRESUMEACTION 枚举
 描述如何从运行时错误继续。  
@@ -37,13 +37,13 @@ typedef enum tagERRORRESUMEACTION {
 } ERRORRESUMEACTION;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|ERRORRESUMEACTION_ReexecuteErrorStatement|重新执行该语句生成错误。|  
-|ERRORRESUMEACTION_AbortCallAndReturnErrorToCaller|允许语言引擎处理该错误。|  
-|ERRORRESUMEACTION_SkipErrorStatement|恢复之后的语句生成错误的代码中执行。|  
+|ERRORRESUMEACTION_ReexecuteErrorStatement|重新执行生成错误的语句。|  
+|ERRORRESUMEACTION_AbortCallAndReturnErrorToCaller|允许语言引擎处理错误。|  
+|ERRORRESUMEACTION_SkipErrorStatement|在生成错误的语句后面的代码中继续执行。|  
   
 ## <a name="see-also"></a>请参阅  
  [活动脚本调试器常量、枚举和结构](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)

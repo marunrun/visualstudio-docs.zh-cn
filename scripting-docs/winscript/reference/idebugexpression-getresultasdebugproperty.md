@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression::GetResultAsDebugProperty |Microsoft Docs
+title: IDebugExpression：： GetResultAsDebugProperty |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 06d9b513d40450e20bb87f07c460bef7ce2678c1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 104c42f02d02be386711e687f02d333425834948
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62978491"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575927"
 ---
 # <a name="idebugexpressiongetresultasdebugproperty"></a>IDebugExpression::GetResultAsDebugProperty
-返回表达式计算作为一种调试属性和操作的返回值的结果。  
+将表达式计算的结果返回为调试属性和操作的返回值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,10 +38,10 @@ HRESULT GetResultAsDebugProperty(
   
 #### <a name="parameters"></a>参数  
  `phrResult`  
- [out]操作的返回值。  
+ 弄操作的返回值。  
   
  `ppdp`  
- [out]表达式调试属性。  
+ 弄表达式的调试属性。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -49,12 +49,12 @@ HRESULT GetResultAsDebugProperty(
 |“值”|描述|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
-|`E_PENDING`|该操作仍是挂起。|  
+|`E_PENDING`|操作仍处于挂起状态。|  
   
 ## <a name="remarks"></a>备注  
- 此方法返回作为表达式计算的结果`IDebugProperty`和操作的`HRESULT`。  
+ 此方法将表达式计算的结果返回为 `IDebugProperty`，操作的 `HRESULT`。  
   
- 此方法返回`S_OK`并`phrResult`返回`E_ABORT`如果`Abort`中止操作。  
+ 如果 `Abort` 中止操作，则此方法将返回 `S_OK` 和 `phrResult` 返回 `E_ABORT`。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugExpression 接口](../../winscript/reference/idebugexpression-interface.md)   

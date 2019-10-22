@@ -1,5 +1,5 @@
 ---
-title: IObjectIdentity::IsEqualObject |Microsoft Docs
+title: IObjectIdentity：： IsEqualObject |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c215a15a1239f07272079783366a1617c3a626e2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 636dfa07b1fc94dfec2273220aa4101f5cd085b1
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62944878"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571471"
 ---
 # <a name="iobjectidentityisequalobject"></a>IObjectIdentity::IsEqualObject
-确定对象是否等于当前对象。  
+确定对象是否等于当前的对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT IsEqualObject(
   
 #### <a name="parameters"></a>参数  
  `punk`  
- [in]要与当前对象进行比较的对象的地址。  
+ 中要与当前对象进行比较的对象的地址。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -48,7 +48,7 @@ HRESULT IsEqualObject(
 |`S_FALSE`|对象不相等。|  
   
 ## <a name="remarks"></a>备注  
- 实现`IsEqualObject`方法应返回`S_OK`仅当对象是否相同。  
+ 仅当对象相同时，才应 `S_OK` 返回 `IsEqualObject` 方法的实现。  
   
 ## <a name="see-also"></a>请参阅  
  [IObjectIdentity 接口](../../winscript/reference/iobjectidentity-interface.md)

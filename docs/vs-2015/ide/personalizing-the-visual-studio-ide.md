@@ -6,15 +6,15 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: c2fec4ce-3885-4c4c-ace2-14c197e11079
 caps.latest.revision: 8
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dbdeb2188580c9be67cbca992a8513c509d5514e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c01c034fb08315737c57ef8674230b837a9fa6de
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62540220"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670329"
 ---
 # <a name="personalizing-the-visual-studio-ide"></a>个性化 Visual Studio IDE
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "62540220"
  若要为你和你的团队创建自定义起始页，请参阅[自定义起始页](../ide/customizing-the-start-page-for-visual-studio.md)
 
 ### <a name="environment-color-themes"></a>环境颜色主题
- 若要在浅色、深色和蓝色之间更改颜色主题，请在“快速启动”中键入环境并选择“环境”&#124;“常规”。 若要更改编辑器中的颜色设置选项，请在“快速启动”中键入 `environment`，然后选择“环境”&#124;“字体和颜色”。 另请参阅[如何：更改字体和颜色](../ide/how-to-change-fonts-and-colors-in-visual-studio.md)。
+ 若要在浅色、深色和蓝色之间更改颜色主题，请在“快速启动”中键入环境并选择“环境”&#124;“常规”。   若要更改编辑器中的颜色设置选项，请在“快速启动”中键入 `environment`，然后选择“环境”&#124;“字体和颜色”。   另请参阅[如何：更改字体和颜色](../ide/how-to-change-fonts-and-colors-in-visual-studio.md)。
 
 ### <a name="menus-and-toolbars"></a>菜单和工具栏
  若要添加或删除菜单项或工具栏项，请参阅[如何：自定义菜单和工具栏](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)。
 
 ### <a name="main-menu-casing"></a>主菜单中的大小写
- 鉴于普遍的需求，可以通过在“快速启动”中键入 `environment` 并选择“环境”&#124;“常规”，从而在“首字母大写”和“全部大写”之间更改主菜单中的大小写。
+ 鉴于普遍的需求，可以通过在“快速启动”中键入 `environment` 并选择“环境”&#124;“常规”，从而在“首字母大写”和“全部大写”之间更改主菜单中的大小写。    
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [Visual Studio IDE](../ide/visual-studio-ide.md)

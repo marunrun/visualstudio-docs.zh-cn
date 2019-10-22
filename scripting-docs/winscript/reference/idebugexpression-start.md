@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression::Start | Microsoft Docs
+title: IDebugExpression：： Start |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e80f3fb8087d39c76f59cf5c6bc8719c1cbaf5e4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1c8c3666adfc83f3ad60b942cd3f7fe9eedfccba
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62978518"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576428"
 ---
 # <a name="idebugexpressionstart"></a>IDebugExpression::Start
-开始表达式的计算。  
+开始计算表达式。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT Start(
   
 #### <a name="parameters"></a>参数  
  `pdecb`  
- [in]指示表达式计算过程何时完成的回调。 如果此参数为`NULL`，不触发任何事件，并且客户端必须使用轮询表达式状态`QueryIsComplete`。  
+ 中用于指示表达式计算完成时间的回调。 如果 `NULL` 此参数，则不会触发任何事件，客户端必须使用 `QueryIsComplete` 轮询表达式状态。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -47,8 +47,8 @@ HRESULT Start(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法首先计算表达式。  
+ 此方法开始计算表达式。  
   
 ## <a name="see-also"></a>请参阅  
- [IDebugExpression::Abort](../../winscript/reference/idebugexpression-abort.md)   
+ [IDebugExpression：： Abort](../../winscript/reference/idebugexpression-abort.md)    
  [IDebugExpression 接口](../../winscript/reference/idebugexpression-interface.md)

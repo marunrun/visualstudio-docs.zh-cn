@@ -1,5 +1,5 @@
 ---
-title: 'Ijsdebugprocess:: Createstackwalker 方法 |Microsoft Docs'
+title: IJsDebugProcess：： CreateStackWalker 方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,15 +15,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cb084b665467ae023bb885ee0de221f0409a0160
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 70f5d4885abba3d891526723d3ca1f174549c348
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62557728"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573830"
 ---
 # <a name="ijsdebugprocesscreatestackwalker-method"></a>IJsDebugProcess::CreateStackWalker 方法
-堆栈查看器的工厂方法。  
+堆栈查看程序的工厂方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,18 +36,18 @@ HRESULT CreateStackWalker(
   
 #### <a name="parameters"></a>参数  
  `threadId`  
- [in]线程 id。  
+ 中线程 ID。  
   
  `ppStackWalker`  
- [out]新的堆栈查看器对象。  
+ 弄新的堆栈审核对象。  
   
 ## <a name="return-value"></a>返回值  
   
 ## <a name="remarks"></a>备注  
- 如果线程在其上没有 JavaScript，则返回 E_JsDEBUG_UNKNOWN_THREAD。 目标进程停止时，可能仅调用此方法。  
+ 如果线程上没有 JavaScript，则返回 E_JsDEBUG_UNKNOWN_THREAD。 仅当目标进程停止时，才可以调用此方法。  
   
 ## <a name="requirements"></a>要求  
- **标头：** jscript9diag.h  
+ **标头：** jscript9diag  
   
 ## <a name="see-also"></a>请参阅  
  [IJsDebugProcess 接口](../../winscript/reference/ijsdebugprocess-interface.md)

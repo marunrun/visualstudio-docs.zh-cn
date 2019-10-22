@@ -13,17 +13,17 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 31fb3f5bf88b0caf179a43d02358bb6a9f1a2831
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: HT
+ms.openlocfilehash: a8c06477b7cd9d069e416cfd7d86a8cd0cb7bfd5
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975794"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572268"
 ---
 # <a name="active-script-debugging-overview"></a>活动脚本调试概述
 活动脚本调试接口可以进行中性语言调试和中性主机调试，并支持各种开发环境。  
   
- ![脚本主机进程](../winscript/media/scp56activdbgarchgif.gif "Scp56ActivDbgArchgif")  
+ ![脚本宿主进程](../winscript/media/scp56activdbgarchgif.gif "Scp56ActivDbgArchgif")  
 图 1  
   
  中性语言调试环境可以支持任何编程语言或混合使用编程语言，无需具备这些语言的专业知识。 调试环境还支持跨语言单步执行和断点。 （本概述侧重介绍支持脚本语言，例如 VBScript 和 [!INCLUDE[javascript](../javascript/includes/javascript-md.md)]。）  

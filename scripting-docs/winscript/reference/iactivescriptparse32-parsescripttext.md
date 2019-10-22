@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptParse32::ParseScriptText | Microsoft Docs
+title: IActiveScriptParse32：:P arseScriptText |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -10,15 +10,15 @@ ms.assetid: f33e454c-69d8-4cab-9150-d1e7fd04786d
 caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: 782c1d7bd2dd4c0708418ffd3e69c339dd993fde
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ec4e9539900ee39e99927bb9055a8c107f864653
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62954851"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574893"
 ---
-# <a name="iactivescriptparse32parsescripttext"></a>IActiveScriptParse32::ParseScriptText
-分析给定的代码 scriptlet，添加声明到命名空间和评估与相应的代码。  
+# <a name="iactivescriptparse32parsescripttext"></a>IActiveScriptParse32：:P arseScriptText
+分析给定的代码 scriptlet，将声明添加到命名空间中，并根据需要对代码进行评估。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,24 +40,24 @@ HRESULT ParseScriptText(
   
 |||  
 |-|-|  
-|`pstrCode`|[in]要计算的 scriptlet 文本的地址。 此字符串的解释取决于脚本语言。|  
-|`pstrItemName`|[in]项名称，是用要计算 scriptlet 的上下文的地址。 如果此参数为 NULL，脚本引擎的全局上下文中计算代码。|  
-|`punkContext`|[in]上下文对象的地址。 此对象保留在调试环境，可能会由调试器来表示活动的运行时上下文中提供此类上下文中使用。 如果此参数为 NULL，则引擎使用`pstrItemName`来标识上下文。|  
-|`pstrDelimiter`|[in]结束 scriptlet 分隔符的地址。 当`pstrCode`进行分析的文本流，从主机通常使用分隔符，如两个单引号 （'），检测 scriptlet 的末尾。 此参数指定主机使用，允许脚本引擎来提供某些条件的原始预处理的分隔符 （例如，与使用用作分隔符的两个单引号替换单引号 [']）。 完全如何 （以及是否） 引擎建立使用此信息取决于脚本引擎的脚本。 将此参数设置为`NULL`如果主机不使用分隔符来标记 scriptlet 的末尾。|  
-|`dwSourceContextCookie`|[in]出于调试目的使用 cookie。|  
-|`ulStartingLineNumber`|[in]指定分析开始的行的从零开始值。|  
-|`dwFlags`|[in]与 scriptlet 相关联的标志。 可以是这些值的组合：|  
+|`pstrCode`|中要计算的 scriptlet 文本的地址。 此字符串的解释取决于脚本语言。|  
+|`pstrItemName`|中为在其中计算 scriptlet 的上下文提供的项名称的地址。 如果此参数为 NULL，则在脚本引擎的全局上下文中计算代码。|  
+|`punkContext`|中上下文对象的地址。 此对象保留供在调试环境中使用，调试器可能会提供此类上下文来表示活动的运行时上下文。 如果此参数为 NULL，则引擎将使用 `pstrItemName` 来标识上下文。|  
+|`pstrDelimiter`|中Scriptlet 分隔符的地址。 当从文本流分析 `pstrCode` 时，主机通常使用分隔符（如两个单引号（' '）来检测 scriptlet 的末尾。 此参数指定主机使用的分隔符，允许脚本引擎提供某些条件基元预处理（例如，用两个单引号替换单引号 ['] 以用作分隔符）。 脚本引擎使用此信息的确切方式取决于脚本引擎。 如果主机未使用分隔符来标记 scriptlet 的末尾，则将此参数设置为 `NULL`。|  
+|`dwSourceContextCookie`|中用于调试的 Cookie。|  
+|`ulStartingLineNumber`|中从零开始的值，指定分析将从哪个行开始。|  
+|`dwFlags`|中与 scriptlet 关联的标志。 可以是这些值的组合：|  
   
 |“值”|含义|  
 |-----------|-------------|  
-|SCRIPTTEXT_ISEXPRESSION|如果计算表达式和语句之间的差异非常重要，但在脚本语言的语法模糊，此标志指定 scriptlet 会被解释为表达式，而不是语句或语句的列表。 默认情况下，除非可以从 scriptlet 文本的语法确定正确的选择，否则要假定语句。|  
-|SCRIPTTEXT_ISPERSISTENT|指示是否保存脚本引擎应保存在此调用过程中添加的代码 (例如，通过调用`IPersist*::Save`)，或如果脚本引擎通过转换为初始化状态重置。|  
-|SCRIPTTEXT_ISVISIBLE|指示脚本文本应显示 (并因此可按名称调用) 作为脚本的名称空间中的全局方法。|  
+|SCRIPTTEXT_ISEXPRESSION|如果计算表达式和语句之间的差异很重要，但脚本语言中的语法不明确，则此标志指定 scriptlet 将解释为表达式，而不是声明为语句或语句列表。 默认情况下，将假定语句，除非可以通过 scriptlet 文本的语法来确定正确的选择。|  
+|SCRIPTTEXT_ISPERSISTENT|指示如果保存脚本引擎（例如，通过调用 `IPersist*::Save`）或者通过转换回已初始化状态重置脚本引擎，则应保存在此调用过程中添加的代码。|  
+|SCRIPTTEXT_ISVISIBLE|指示脚本文本应显示为脚本的命名空间中的全局方法（因此可按名称调用）。|  
   
 |||  
 |-|-|  
-|`pvarResult`|[out]接收 scriptlet 处理结果的缓冲区的地址或`NULL`如果调用方希望无结果 （即，不设置 SCRIPTTEXT_ISEXPRESSION 值）。|  
-|`pexcepinfo`|[out]接收异常信息结构的地址。 如果填充此结构`IActiveScriptParse::ParseScriptText`返回 DISP_E_EXCEPTION。|  
+|`pvarResult`|弄接收 scriptlet 处理结果的缓冲区的地址，如果调用方不需要任何结果，则为 `NULL` （也就是说，未设置 SCRIPTTEXT_ISEXPRESSION 值）。|  
+|`pexcepinfo`|弄接收异常信息的结构的地址。 如果 `IActiveScriptParse::ParseScriptText` 返回 DISP_E_EXCEPTION，则填充此结构。|  
   
 ## <a name="return-value"></a>返回值  
  返回以下值之一：  
@@ -65,21 +65,21 @@ HRESULT ParseScriptText(
 |返回值|含义|  
 |------------------|-------------|  
 |`S_OK`|成功。|  
-|`DISP_E_EXCEPTION`|在处理 scriptlet 中出现异常。 `pexcepinfo`参数包含有关异常的信息。|  
+|`DISP_E_EXCEPTION`|处理 scriptlet 时出现异常。 @No__t_0 参数包含有关异常的信息。|  
 |`E_INVALIDARG`|参数无效。|  
-|`E_POINTER`|指定了无效的指针。|  
-|`E_NOTIMPL`|不支持此方法。 脚本引擎不支持运行时计算的表达式或语句。|  
-|`E_UNEXPECTED`|不应在调用 （例如，脚本引擎处于未初始化或已关闭状态，或已设置 SCRIPTTEXT_ISEXPRESSION 标志和脚本引擎处于初始化状态）。|  
-|`OLESCRIPT_E_SYNTAX`|Scriptlet 中出现未指定的语法错误。|  
+|`E_POINTER`|指定的指针无效。|  
+|`E_NOTIMPL`|不支持此方法。 脚本引擎不支持表达式或语句的运行时计算。|  
+|`E_UNEXPECTED`|不应进行调用（例如，脚本引擎处于未初始化或已关闭状态，或设置了 SCRIPTTEXT_ISEXPRESSION 标志，并且脚本引擎处于已初始化状态）。|  
+|`OLESCRIPT_E_SYNTAX`|Scriptlet 中发生未指定的语法错误。|  
   
 ## <a name="remarks"></a>备注  
- 如果脚本引擎处于初始化状态时，没有代码将实际在期间计算此调用;相反，此类代码是排队和执行时脚本引擎转换到 （或通过） 已启动的状态。 在初始化状态中不允许执行，因为它是错误调用此方法中初始化状态时的 SCRIPTTEXT_ISEXPRESSION 标志。  
+ 如果脚本引擎处于已初始化状态，则在此调用期间将不会实际计算任何代码;相反，此类代码将排队并在脚本引擎转换为 "已启动" 状态时执行。 由于在初始化状态中不允许执行，因此当处于已初始化状态时，使用 SCRIPTTEXT_ISEXPRESSION 标志调用此方法是错误的。  
   
- Scriptlet 可以是表达式、 语句的列表，或允许的脚本语言的任何内容。 例如，在 HTML 的评估中使用此方法\<脚本 > 标记，它允许语句执行，因为正在构造的 HTML 页，而不是仅将其编译成脚本状态。  
+ Scriptlet 可以是表达式、语句列表或脚本语言允许的任何内容。 例如，此方法用于计算 HTML \<SCRIPT > 标记，这允许在构造 HTML 页时执行语句，而不只是将它们编译为脚本状态。  
   
- 传递给此方法的代码必须是有效的完整部分代码。 例如，在 VBScript 中是非法的调用与子进行一次此方法，然后使用第二次`End Sub`。 分析器必须等待完成子例程，第二次调用，但因为子例程声明已启动但尚未完成，而不是就必须生成分析错误。  
+ 传递给此方法的代码必须是有效的完整代码部分。 例如，在 VBScript 中，使用 Sub 函数（x）调用此方法一次，然后使用 `End Sub` 进行第二次调用是非法的。 分析器不得等待第二次调用来完成子例程，而应生成分析错误，因为子程序声明已启动但未完成。  
   
- 有关脚本状态的详细信息，请参阅脚本引擎状态章节[Windows 脚本引擎](../../winscript/windows-script-engines.md)。  
+ 有关脚本状态的详细信息，请参阅[Windows 脚本引擎](../../winscript/windows-script-engines.md)的脚本引擎状态部分。  
   
 ## <a name="see-also"></a>请参阅  
  [IActiveScriptParse32](../../winscript/reference/iactivescriptparse32.md)

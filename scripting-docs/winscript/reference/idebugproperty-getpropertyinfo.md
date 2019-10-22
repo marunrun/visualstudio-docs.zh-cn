@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty::GetPropertyInfo | Microsoft Docs
+title: IDebugProperty：： GetPropertyInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 51cf7fae597d95b0d9098d6b2dc6950c2d06bfa0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e0698e09cd9643322a237a81d971248577fd97e0
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979144"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72562323"
 ---
 # <a name="idebugpropertygetpropertyinfo"></a>IDebugProperty::GetPropertyInfo
-获取的值`IDebugProperty`描述一种方法或索引的属性。  
+获取描述方法或索引属性的 `IDebugProperty` 的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,18 +39,18 @@ HRESULT GetPropertyInfo (
   
 #### <a name="parameters"></a>参数  
  `dwFields`  
- [in]指定`DBGPROP_INFO_FLAGS`确定要在中填写的字段的常量`DebugPropertyInfo`结构。  
+ 中指定 `DBGPROP_INFO_FLAGS` 常数，这些常数确定要在 `DebugPropertyInfo` 结构中填充的字段。  
   
  `nRadix`  
- [in]用于格式化数值的任何信息的基数。  
+ 中用于设置任何数字信息格式的基数。  
   
  `pPropertyInfo`  
- [out]返回`DebugPropertyInfo`描述的属性的结构。  
+ 弄返回描述属性的 `DebugPropertyInfo` 结构。  
   
 ## <a name="return-value"></a>返回值  
- 返回一个有效`HRESULT`，通常`S_OK`。  
+ 返回一个有效 `HRESULT`，通常 `S_OK`。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugProperty 接口](../../winscript/reference/idebugproperty-interface.md)   
- [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)   
+ [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)    
  [DebugPropertyInfo 结构](../../winscript/reference/debugpropertyinfo-structure.md)

@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugExtendedPropertyInfo::Next |Microsoft Docs
+title: IEnumDebugExtendedPropertyInfo：： Next |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 65e734d1cf57fe9387407a80c9d3e76d7f53ada8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 23ebc3e3fd1f7802f4630be42a594d73f8657e43
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62963468"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574262"
 ---
 # <a name="ienumdebugextendedpropertyinfonext"></a>IEnumDebugExtendedPropertyInfo::Next
-检索指定的数目的`ExtendedDebugPropertyInfo`枚举序列中的结构。  
+检索枚举序列中指定数目的 `ExtendedDebugPropertyInfo` 结构。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,16 +39,16 @@ HRESULT Next (
   
 #### <a name="parameters"></a>参数  
  `celt`  
- [in]数`ExtendedDebugPropertyInfo`要检索的结构。  
+ 中要检索的 `ExtendedDebugPropertyInfo`structures 数。  
   
  `rgelt`  
- [out]一个数组`ExtendedDebugPropertyInfo`检索到的结构。  
+ 弄检索的 `ExtendedDebugPropertyInfo` 结构的数组。  
   
  `pceltFetched`  
- [out]数`ExtendedDebugPropertyInfo`实际检索的结构。  
+ 弄实际检索到 `ExtendedDebugPropertyInfo` 结构的数目。  
   
 ## <a name="return-value"></a>返回值  
- 返回一个有效`HRESULT`，通常`S_OK`。  
+ 返回一个有效 `HRESULT`，通常 `S_OK`。  
   
 ## <a name="see-also"></a>请参阅  
  [IEnumDebugExtendedPropertyInfo 接口](../../winscript/reference/ienumdebugextendedpropertyinfo-interface.md)   

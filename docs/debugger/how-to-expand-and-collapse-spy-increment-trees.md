@@ -10,33 +10,33 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fe706260bcb535f33a14eea2fd174ee37ea1c8aa
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 68ebfcc4b95b50988673e5ce229d27c5c12d0783
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63388380"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72450366"
 ---
 # <a name="how-to-expand-and-collapse-spy-trees"></a>如何：展开和折叠 Spy++ 树
-你可以展开和折叠 Windows、 进程和线程视图使用两种方法： 通过单击窗口中或通过使用的图标**树**菜单。 + 和-在视觉对象中充当在树中的图标C++项目窗口。
+您可以使用两种方法展开和折叠 Windows、进程和线程视图：单击窗口中的图标或使用**树**菜单。 树中的 + 和-图标与它们在 "项目" C++窗口中的作用相同。
 
  **树**菜单包含四个命令：
 
 |菜单命令|描述|
 |------------------|-----------------|
-|**展开一级**|到下一个级别展开当前所选的项。|
+|**展开一级**|将当前选定项扩展到下一级别。|
 |**展开分支**|完全展开当前选定的项。|
 |**全部展开**|完全展开窗口中的所有项。|
 |**折叠**|完全折叠当前选定的项。|
 
 > [!TIP]
-> 如果扩展过程中，您将看到该进程拥有的所有线程。 如果你展开一个线程，您会看到它拥有的所有窗口的列表。
+> 如果展开某个进程，则会看到该进程拥有的所有线程。 如果展开某个线程，则会看到其拥有的所有窗口的列表。
 
-### <a name="to-expand-or-collapse-spy-trees"></a>若要展开或折叠 Spy + + 树
+### <a name="to-expand-or-collapse-spy-trees"></a>展开或折叠 Spy + + 树
 
-1. 突出显示某一项在 Windows、 进程或线程视图中。
+1. 突出显示 "窗口"、"进程" 或 "线程" 视图中的一个项。
 
-2. 从**树**菜单中，选择某个展开或折叠命令。
+2. 在**树**菜单中，选择一个展开或折叠命令。
 
 ## <a name="see-also"></a>请参阅
 - [使用 Spy++](../debugger/using-spy-increment.md)

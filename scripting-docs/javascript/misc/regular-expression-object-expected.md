@@ -1,5 +1,5 @@
 ---
-title: 缺少正则表达式对象 |Microsoft Docs
+title: 应为正则表达式对象 |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,20 +14,20 @@ ms.assetid: e226096c-c58f-4bcb-a71e-fa32ce474b67
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a42cf4b76f4de6d4170f7ef85dafc00841964cfc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bf9e2e99c6a539f450afcfe9eef1f5588d5b84f6
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63006415"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573706"
 ---
 # <a name="regular-expression-object-expected"></a>应为正则表达式对象
-你尝试调用**RegExp.prototype.toString**或**RegExp.prototype.valueOf**方法以外的类型的对象上`RegExp`。 调用此类型的对象的类型必须是`RegExp`。  
+试图对 `RegExp` 以外的类型的对象调用**RegExp. toString**或**valueOf**方法的方法。 此类调用的对象必须是 `RegExp` 类型。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 仅调用**RegExp.prototype.toString**或**RegExp.prototype.valueOf**类型的对象上的方法`RegExp`。  
+- 在 `RegExp` 类型的对象上只调用**RegExp**或**valueOf**方法。  
   
 ## <a name="see-also"></a>请参阅  
  [正则表达式对象](../../javascript/reference/regular-expression-object-javascript.md)   
- [正则表达式语法 (JavaScript)](https://msdn.microsoft.com/library/1400241x)
+ [正则表达式语法（JavaScript）](https://msdn.microsoft.com/library/1400241x)

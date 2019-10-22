@@ -1,5 +1,5 @@
 ---
-title: 远程调试视觉对象C++项目 |Microsoft Docs
+title: 远程调试C++项目 |Microsoft Docs
 ms.custom: remotedebugging
 ms.date: 08/14/2018
 ms.topic: conceptual
@@ -17,14 +17,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81a5ebba2d14a0e091b3b0bcd78a066ef50ed759
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 2b9cd6f120d5699464c9e7311721898a727bf47e
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211110"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72450436"
 ---
-# <a name="remote-debugging-a-visual-c-project-in-visual-studio"></a>在 Visual Studio 中C++远程调试 visual Studio 中的项目
+# <a name="remote-debugging-a-c-project-in-visual-studio"></a>在 Visual Studio C++中远程调试项目
 若要在另一台计算机上调试 Visual Studio 应用程序，请在要部署应用程序的计算机上安装并运行远程工具，将项目配置为从 Visual Studio 连接到远程计算机，然后部署并运行应用。
 
 ![远程调试器组件](../debugger/media/remote-debugger-client-apps.png "Remote_debugger_components")
@@ -52,7 +52,7 @@ Windows 7 和更高版本（非电话）和 windows Server 版本（从 Windows 
 > [!NOTE]
 > 如果需要添加其他用户的权限、更改身份验证模式或远程调试器的端口号，请参阅[配置远程调试器](../debugger/remote-debugging.md#configure_msvsmon)。
 
-## <a name="remote_cplusplus"></a> 远程调试 Visual C++ 项目
+## <a name="remote_cplusplus"></a>远程调试C++项目
  在下面的过程中，项目的名称和路径为 C:\remotetemp\MyMfc，远程计算机的名称为**MJO**。
 
 1. 创建名为 mymfc 的 MFC 应用程序。
@@ -67,7 +67,7 @@ Windows 7 和更高版本（非电话）和 windows Server 版本（从 Windows 
 
 5. 对属性进行以下更改：
 
-   |设置|值|
+   |设置|“值”|
    |-|-|
    |远程命令|C:\remotetemp\mymfc.exe|
    |工作目录|C:\remotetemp|
@@ -91,7 +91,7 @@ Windows 7 和更高版本（非电话）和 windows Server 版本（从 Windows 
 
 10. 如果系统提示，请输入网络凭据以连接到远程计算机。
 
-     所需的凭据特定于你的网络安全配置。 例如，在域计算机上，您可以选择一个安全证书或输入您的域名和密码。 在非域计算机上，可以输入计算机名称和有效的用户帐户名，如<strong>MJO-DL\name@something.com</strong>，以及正确的密码。
+     所需的凭据特定于你的网络安全配置。 例如，在域计算机上，您可以选择一个安全证书或输入您的域名和密码。 在非域计算机上，可以输入计算机名称和有效的用户帐户名称（如<strong>MJO-DL\name@something.com</strong>）以及正确的密码。
 
 11. 在 Visual Studio 计算机上，你应看到在断点处已停止执行。
 

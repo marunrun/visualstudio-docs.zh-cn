@@ -1,5 +1,5 @@
 ---
-title: DBGPROP_INFO_FLAGS | Microsoft Docs
+title: DBGPROP_INFO_FLAGS |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -19,15 +19,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c63cf941bca1965fc4a2e3997f0c0b50ebc44035
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5b8131531292e0f88108942648073883050dd609
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955297"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572589"
 ---
-# <a name="dbgpropinfoflags"></a>DBGPROP_INFO_FLAGS
-用于指定`DebugPropertyInfo`字段  
+# <a name="dbgprop_info_flags"></a>DBGPROP_INFO_FLAGS
+用于指定 `DebugPropertyInfo` 字段  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,27 +43,27 @@ enum {
 };  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
  DBGPROP_INFO_NAME  
- 初始化`bstrName`字段。  
+ 初始化 `bstrName` 字段。  
   
  DBGPROP_INFO_TYPE  
- 初始化`bstrType`字段。  
+ 初始化 `bstrType` 字段。  
   
  DBGPROP_INFO_VALUE  
- 初始化`bstrValue`字段。  
+ 初始化 `bstrValue` 字段。  
   
  DBGPROP_INFO_FULLNAME  
- 初始化`bstrFullName`字段。  
+ 初始化 `bstrFullName` 字段。  
   
  DBGPROP_INFO_ATTRIBUTES  
- 初始化`dwAttrib`字段。  
+ 初始化 `dwAttrib` 字段。  
   
  DBGPROP_INFO_DEBUGPROP  
- 初始化`pDebugProp`字段包含`IDebugProperty`接口。  
+ 初始化包含 `IDebugProperty` 接口的 `pDebugProp` 字段。  
   
  DBGPROP_INFO_AUTOEXPAND  
- 指定的值字段应包含自动扩展值中，是否可用，此类型的对象。  
+ 指定值字段应包含此类型的对象的自动扩展值（如果可用）。  
   
 ## <a name="see-also"></a>请参阅  
  [DebugPropertyInfo 结构](../../winscript/reference/debugpropertyinfo-structure.md)   

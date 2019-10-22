@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Prerequisites dialog box
 ms.assetid: 53ac863c-77a0-409b-91e5-7a4bd8b8474e
 caps.latest.revision: 79
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 672c0ea4a4ec3c2d396da7b232ca085181d90b25
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 367af4965c1e5a744a7ba6c801d74bc194a70ebb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869870"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662186"
 ---
 # <a name="prerequisites-dialog-box"></a>“系统必备”对话框
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "68869870"
 |**Microsoft .NET Framework 4（x86 和 x64）**|此程序包会为 x86 和 x64 平台安装 .NET Framework 4。<br /><br /> 有关详细信息，请参阅 [Visual Studio 多目标概述](../../ide/visual-studio-multi-targeting-overview.md)、[再发行 .NET Framework](https://msdn.microsoft.com/a18d0456-fd89-493e-97f4-756505bfe287) 和[部署 64 位应用程序的必备组件](../../deployment/deploying-prerequisites-for-64-bit-applications.md)。<br /><br /> 默认情况下，此项处于选定状态。|
 |**Microsoft .NET Framework 4 Client Profile（x86 和 x64）**|.NET Framework 4 Client Profile 是完整版 .NET Framework 4 的子集，面向客户端应用程序。 它提供 Windows Presentation Foundation (WPF)、Windows 窗体、Windows Communication Foundation (WCF) 和 ClickOnce 功能的简化子集。 这样可以实现 WPF、Windows 窗体和面向 .NET Framework 4 Client Profile 的控制台应用程序的快速部署。 有关详细信息，请参阅 [.NET Framework Client Profile](https://msdn.microsoft.com/library/f0219919-1f02-4588-8704-327a62fd91f1)。|
 |**Microsoft Office 2007 Primary Interop Assemblies**|此程序包会为 2007 Microsoft Office 产品安装主互操作程序集。 主互操作程序集使托管代码可与 Microsoft Office 应用程序的 COM 对象模型进行交互。 有关详细信息，请参阅 [Office Primary Interop Assemblies](https://msdn.microsoft.com/library/aa29d12c-185f-4558-a7cd-3d85f924203d)。|
-|**Microsoft Visual Basic PowerPacks 版本 10.0**|Power Pack 是外接程序、控件、组件和工具，可帮助你开发 Visual Basic 应用程序。 此版本包含[PrintForm](/previous-versions/bb882742(v=vs.140))组件, 使用该组件可以打印 Windows 窗体的内容和打印机兼容性库, 这使得 Visual Basic 6.0 的打印机代码可在未修改的情况下运行。|
+|**Microsoft Visual Basic PowerPacks 版本 10.0**|Power Pack 是外接程序、控件、组件和工具，可帮助你开发 Visual Basic 应用程序。 此版本包含[PrintForm](/previous-versions/bb882742(v=vs.140))组件，使用该组件可以打印 Windows 窗体的内容和打印机兼容性库，这使得 Visual Basic 6.0 的打印机代码可在未修改的情况下运行。|
 |**面向 .NET 2.0 的 Microsoft Visual F# 运行时**|此程序包会为 x86 和 x64 操作系统安装 Visual F# 运行库，它们提供对函数编程以及传统的面向对象及命令性（过程）编程的支持。 如果应用程序或其组件在 Visual F# 和 .NET Framework 2.0、.NET Framework 3.0 或 .NET Framework 3.5 中编写，则必须安装此程序包。<br /><br /> 有关详细信息，请参阅 [F# Language Reference](https://msdn.microsoft.com/library/16b706f8-b5f2-4ff7-b2c1-64df33cd6adf)（F# 语言参考）。|
 |**面向 .NET 4.0 的 Microsoft Visual F# 运行时**|此程序包会为 x86 和 x64 操作系统安装 Visual F# 运行库，它们提供对函数编程以及传统的面向对象及命令性（过程）编程的支持。 如果应用程序或其组件在 Visual F# 和 .NET Framework 4 中编写，则必须安装此程序包。<br /><br /> 有关详细信息，请参阅 [F# Language Reference](https://msdn.microsoft.com/library/16b706f8-b5f2-4ff7-b2c1-64df33cd6adf)（F# 语言参考）。|
 |**Microsoft Visual Studio 2010 报表查看器**|此程序包安装报表查看器控件，你可以使用这些控件向 Windows 窗体和 ASP.NET 应用程序中添加复杂数据报表。|
@@ -66,4 +66,4 @@ ms.locfileid: "68869870"
 |**Windows Installer 4.5**|此程序包安装 Microsoft Windows Installer 可再发行版本 4.5，以便可以安装 Windows Installer 安装项目。|
 
 ## <a name="see-also"></a>另请参阅
- [发布页, 项目设计器](../../ide/reference/publish-page-project-designer.md)[应用程序部署先决条件](../../deployment/application-deployment-prerequisites.md)重新[分发 .NET Framework](https://msdn.microsoft.com/a18d0456-fd89-493e-97f4-756505bfe287)[为64位应用程序部署先决条件](../../deployment/deploying-prerequisites-for-64-bit-applications.md)[Visual Studio 多目标概述](../../ide/visual-studio-multi-targeting-overview.md)
+ [发布页，项目设计器](../../ide/reference/publish-page-project-designer.md)[应用程序部署先决条件](../../deployment/application-deployment-prerequisites.md)重新[分发 .NET Framework](https://msdn.microsoft.com/a18d0456-fd89-493e-97f4-756505bfe287) [部署64位应用程序的必备组件](../../deployment/deploying-prerequisites-for-64-bit-applications.md) [Visual Studio 多目标概述](../../ide/visual-studio-multi-targeting-overview.md)

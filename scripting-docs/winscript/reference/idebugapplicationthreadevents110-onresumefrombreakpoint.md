@@ -1,5 +1,5 @@
 ---
-title: IDebugApplicationThreadEvents110::OnResumeFromBreakPoint |Microsoft Docs
+title: IDebugApplicationThreadEvents110：： OnResumeFromBreakPoint |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 61cb434c5d3514c63446792029b54e2f1413e006
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: e710d259ae4985f6e37fc14ee70d0467578d2bd0
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440476"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573348"
 ---
 # <a name="idebugapplicationthreadevents110onresumefrombreakpoint"></a>IDebugApplicationThreadEvents110::OnResumeFromBreakPoint
-该线程从断点恢复，并将再一次处于活动状态。  
+线程正在从断点恢复，并将再次激活。  
   
 > [!IMPORTANT]
-> [IDebugApplicationThreadEvents110 接口](../../winscript/reference/idebugapplicationthreadevents110-interface.md)是实现由 PDM v11.0 和更高版本。 在 activdbg100.h 中发现。  
+> [IDebugApplicationThreadEvents110 接口](../../winscript/reference/idebugapplicationthreadevents110-interface.md)由 PDM 11.0 和更高版本实现。 在 activdbg100.h 中发现。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,7 +33,7 @@ HRESULT OnResumeFromBreakPoint( void );
 ```  
   
 #### <a name="parameters"></a>参数  
- 此方法没有任何参数。  
+ 此方法没有参数。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugApplicationThreadEvents110 接口](../../winscript/reference/idebugapplicationthreadevents110-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: IScriptScriptlet::GetEventName | Microsoft Docs
+title: IScriptScriptlet：： GetEventName |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 56566c85aed88faadf740392ad3ec06aa848431e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fc56514800ad8388badf6e13a7fa6761b816969d
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786752"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72561520"
 ---
 # <a name="iscriptscriptletgeteventname"></a>IScriptScriptlet::GetEventName
-返回与 scriptlet 相关联的事件的名称。  
+返回与 scriptlet 关联的事件的名称。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT GetEventName(
   
 #### <a name="parameters"></a>参数  
  `pbstr`  
- [out]包含与之关联的事件名称的缓冲区`IScriptScriptlet`对象。  
+ 弄一个缓冲区，其中包含与 `IScriptScriptlet` 对象关联的事件名称。  
   
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  

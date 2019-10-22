@@ -6,14 +6,14 @@ ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.assetid: 0fa335fd-e442-448f-913f-25a19df90a93
 caps.latest.revision: 8
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 93a62b6fe5493b78a3c18c1adb87761cdb894670
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: e8b3ea10b96a63bd18098030dc884ac3f3383353
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68871557"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72657184"
 ---
 # <a name="using-microsoftvisualstudiotesttoolsunittesting-members-in-unit-tests"></a>在单元测试中使用 Microsoft.VisualStudio.TestTools.UnitTesting 成员
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68871557"
 > `[TestClassAttribute()]`
 
 ### <a name="elements-used-for-data-driven-testing"></a>用于数据驱动的测试的元素
- 使用以下元素可设置数据驱动的单元测试。 有关详细信息, 请[参阅如何:创建数据驱动的单元测试](../test/how-to-create-a-data-driven-unit-test.md)和[演练:使用配置文件定义数据源](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)。
+ 使用以下元素可设置数据驱动的单元测试。 有关详细信息，请参阅[如何：创建数据驱动的单元测试](../test/how-to-create-a-data-driven-unit-test.md)和[演练：使用配置文件定义数据源](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)。
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataAccessMethod>
 
@@ -106,7 +106,7 @@ ms.locfileid: "68871557"
 
 ## <a name="test-configuration-classes"></a>测试配置类
 
-- [Objecttype](/previous-versions/visualstudio/visual-studio-2013/dd987428(v=vs.120))
+- [ObjectTypes](/previous-versions/visualstudio/visual-studio-2013/dd987428(v=vs.120))
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection>
 

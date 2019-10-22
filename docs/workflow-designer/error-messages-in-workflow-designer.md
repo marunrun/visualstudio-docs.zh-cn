@@ -7,17 +7,17 @@ f1_keywords:
 - System.Activities.Presentation.ErrorActivity.UI
 - System.Activities.Presentation.View.ErrorView.UI
 ms.assetid: 4d8bbc2e-34fc-477f-9140-4adfd70c34a0
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a3f2d4d86f80bc7c2966d5156267352154b1279f
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 1406802f85c755d4dab25e000843a995be252d0a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254797"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650497"
 ---
 # <a name="error-messages-in-workflow-designer"></a>工作流设计器中的错误消息
 
@@ -35,7 +35,7 @@ ms.locfileid: "71254797"
 
 4. XAML 文件中存在错误，导致工作流无法加载。
 
-无效的表达式和未满足的验证约束不会导致工作流无法生成。 生成工作流<xref:System.Activities.InvalidWorkflowException>会成功，但会在运行时引发。 如果 XAML 文件中存在错误，生成将失败。
+无效的表达式和未满足的验证约束不会导致工作流无法生成。 生成工作流成功，但在运行时将引发 <xref:System.Activities.InvalidWorkflowException>。 如果 XAML 文件中存在错误，生成将失败。
 
 在 Visual Studio 中，加载工作流时，它的错误将显示在**错误列表**中。 若要导航到作为错误源的活动，请在**错误列表**中双击错误。
 

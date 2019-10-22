@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Visual Studio, regular expressions
 ms.assetid: 718a617d-0e05-47e1-a218-9746971527f4
 caps.latest.revision: 56
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1e57b3f8db5330f7d0778ee53e552c38e8295c62
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 031129d729d3d7c619ac9c1b48c9ed4c51dd3eac
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65696407"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659624"
 ---
 # <a name="use-regular-expressions-in-visual-studio"></a>在 Visual Studio 中使用正则表达式
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,15 +36,15 @@ Visual Studio 使用 .NET Framework 正则表达式来查找和替换文本。 �
 > 在 Windows 操作系统中，大多数行以“\r\n”（回车符后跟新行）结束。 这些字符不可见，但在编辑器中存在并传递给 .NET 正则表达式服务。
 
 > [!TIP]
-> 有关在替换模式中使用的正则表达式的信息，请参阅[替换](https://msdn.microsoft.com/library/d1f52431-1c7d-4dc6-8792-6b988256892e)。 若要使用已编号的捕获组，语法是 `$1`用于指定编号组）和 `(x)`（指定相关组）。 例如，已分组的正则表达式`(\d)([a-z])`以下字符串中查找四个匹配项：1a 2b 3c 4d。 替换字符串 `z$1` 将该字符串转换为 **z1 z2 z3 z4**。
+> 有关在替换模式中使用的正则表达式的信息，请参阅[替换](https://msdn.microsoft.com/library/d1f52431-1c7d-4dc6-8792-6b988256892e)。 若要使用已编号的捕获组，语法是 `$1`用于指定编号组）和 `(x)`（指定相关组）。 例如，已分组的正则表达式 `(\d)([a-z])` 在以下字符串中查找四个匹配项：**1a 2b 3c 4d**。 替换字符串 `z$1` 将该字符串转换为 **z1 z2 z3 z4**。
 
 ## <a name="regular-expression-examples"></a>正则表达式示例
 
 下面是一些可能的恶意活动：
 
-|                                                                                                                       用途                                                                                                                       |                                                     表达式                                                     |                                                                          示例                                                                          |
+|                                                                                                                       目标                                                                                                                       |                                                     Expression                                                     |                                                                          示例                                                                          |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-|                                                                                                  与任何单个字符匹配（换行符除外）。                                                                                                   |                                                         .                                                          |                                     `a.o` 匹配“around”中的“aro”及“about”中的“abo”，但不匹配“across”中的“acro”。                                      |
+|                                                                                                  与任何单个字符匹配（换行符除外）                                                                                                   |                                                         方法。                                                          |                                     `a.o` 匹配“around”中的“aro”及“about”中的“abo”，但不匹配“across”中的“acro”。                                      |
 |                                                                          零次或多次匹配前面的表达式（匹配尽可能多的字符）                                                                          |                                                         \*                                                         |                                            `a*r` 匹配“rack”中的“r”，“ark”中的“ar”和“aardvark”中的“aar”                                            |
 |                                                                                                零次或多次匹配任何字符（通配符 \*）                                                                                                 |                                                        .\*                                                         |                                        c.\*e 匹配“racket”中的“cke”，“comment”中的“comme”和“code”中的“code”                                        |
 |                                                                          一次或多次匹配前面的表达式（匹配尽可能多的字符）                                                                           |                                                         +                                                          |                                                      `e.+e` 匹配“feeder”中的“eede”，而不是“ee”。                                                      |
@@ -61,7 +61,7 @@ Visual Studio 使用 .NET Framework 正则表达式来查找和替换文本。 �
 |                                                                                           匹配符号前或符号后的表达式。                                                                                           |                                                       &#124;                                                       |                                              `(sponge&#124;mud) bath` 匹配“sponge bath”和“mud bath”。                                               |
 |                                                                                                    对反斜杠后面的字符进行转义                                                                                                     |                                          \|`\^` 匹配字符 ^。                                           |                                                                                                                                                           |
 |                                                                                        指定前面的字符或组的出现次数                                                                                        |                                     {x}，其中 x 是出现次数                                      |                           `x(ab){2}x` 匹配“xababx”，`x(ab){2,3}x` 匹配“xababx”和“xabababx”，但不匹配“xababababx”。                           |
-| 匹配 Unicode 字符类中的文本，其中“X”是 Unicode 数字。 有关 Unicode 字符类的详细信息，请参阅 <br /><br /> [Unicode Standard 5.2 字符属性](http://www.unicode.org/versions/Unicode5.2.0/ch04.pdf)。 |                                                       \p{X}                                                        |                                                       `\p{Lu}` 匹配“Thomas Doe”中的“T”和“D”。                                                       |
+| 匹配 Unicode 字符类中的文本，其中“X”是 Unicode 数字。 有关 Unicode 字符类的详细信息，请参阅<br /><br /> [Unicode Standard 5.2 字符属性](http://www.unicode.org/versions/Unicode5.2.0/ch04.pdf)。 |                                                       \p{X}                                                        |                                                       `\p{Lu}` 匹配“Thomas Doe”中的“T”和“D”。                                                       |
 |                                                                                                                与字边界匹配                                                                                                                | `\b`（在字符类 \b 的外部指定字边界，而在字符类内部指定退格符）。 |                                                     `\bin` 匹配“inside”中的“in”，不匹配“pinto”。                                                      |
 |                                                                                          与换行符（即回车符后跟新行）相匹配。                                                                                          |                                                       \r?\n                                                        |         仅当“End”是一行的最后一个字符串，且“Begin”是下一行的第一个字符串时，`End\r?\nBegin` 才匹配“End”和“Begin”。          |
 |                                                                                                          匹配任意字母数字字符                                                                                                           |                                                         \w                                                         |                                                       `a\wd` 匹配“add”和“a1d”，不匹配“a d”。                                                       |

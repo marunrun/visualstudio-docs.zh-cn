@@ -2,21 +2,21 @@
 title: “本机建议规则”规则集
 ms.date: 11/04/2016
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5195d42783efc6e9aeb0230b29e801acaeef094a
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.openlocfilehash: dcc5112262dd36e431a34becd36729ea9a3c186f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69585236"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649170"
 ---
 # <a name="native-recommended-rules-rule-set"></a>“本机建议规则”规则集
 
-本机建议规则重点介绍本机代码中最关键的问题, 包括潜在的安全漏洞和应用程序崩溃。 此规则集包括 "[本机最低规则](native-minimum-rules-rule-set.md)" 规则集中的所有规则。
+本机建议规则重点介绍本机代码中最关键的问题，包括潜在的安全漏洞和应用程序崩溃。 此规则集包括 "[本机最低规则](native-minimum-rules-rule-set.md)" 规则集中的所有规则。
 
 在您为本机项目创建的任何自定义规则集中包含此规则集。
 
@@ -127,7 +127,7 @@ ms.locfileid: "69585236"
 |[C6518](../code-quality/c6518.md)|不可写的缓冲区的可写入大小|
 |[C6522](../code-quality/c6522.md)|无效大小的字符串类型|
 |[C6525](../code-quality/c6525.md)|无效大小字符串的不可访问的位置|
-|[C6527](../code-quality/c6527.md)|无效的批注:"NeedsRelease" 属性不能用于 void 类型的值|
+|[C6527](../code-quality/c6527.md)|无效的批注：“NeedsRelease”属性可能不可用于 void 类型的值|
 |[C6530](../code-quality/c6530.md)|无法识别的格式字符串样式|
 |[C6540](../code-quality/c6540.md)|对该函数使用属性批注将使其现有的所有 __declspec 批注无效|
 |[C6551](../code-quality/c6551.md)|大小规范无效：表达式不可分析|
@@ -154,37 +154,37 @@ ms.locfileid: "69585236"
 |[C28020](../code-quality/c28020.md)|此调用中的表达式不为 true|
 |[C28021](../code-quality/c28021.md)|批注的参数必须为指针型|
 |[C28022](../code-quality/c28022.md)|此函数上的函数类与用于定义此函数的 typedef 上的函数类不匹配。|
-|[C28023](../code-quality/c28023.md)|要分配或传递的函数应该至少有\_一个\_类\_的函数类批注|
-|[C28024](../code-quality/c28024.md)|向其分配的函数指针是用函数类 (不包含在函数类列表中) 进行批注的。|
+|[C28023](../code-quality/c28023.md)|分配或传递的函数应具有一个 \_Function \_class 至少一个类的 \_ 批注|
+|[C28024](../code-quality/c28024.md)|向其分配的函数指针是用函数类（不包含在函数类列表中）进行批注的。|
 |[C28039](../code-quality/c28039.md)|实参的类型应与类型完全匹配|
 |[C28112](../code-quality/c28112.md)|通过互锁函数访问的变量必须始终通过联锁函数访问。|
 |[C28113](../code-quality/c28113.md)|通过互锁函数访问本地变量|
 |[C28125](../code-quality/c28125.md)|必须从 try/except 块中调用函数|
-|[C28137](../code-quality/c28137.md)|变量参数应为 (文本) 常量|
+|[C28137](../code-quality/c28137.md)|变量参数应为（文本）常量|
 |[C28138](../code-quality/c28138.md)|常数参数应改为变量|
 |[C28159](../code-quality/c28159.md)|请考虑改用其他函数。|
 |[C28160](../code-quality/c28160.md)|错误批注|
 |[C28163](../code-quality/c28163.md)|绝不应从 try/except 块中调用函数|
-|[C28164](../code-quality/c28164.md)|正在将参数传递给需要指向对象的指针的函数 (而不是指向指针的指针)|
+|[C28164](../code-quality/c28164.md)|正在将参数传递给需要指向对象的指针的函数（而不是指向指针的指针）|
 |[C28182](../code-quality/c28182.md)|取消引用 NULL 指针。 该指针包含与另一指针相同的 NULL 值。|
-|[C28183](../code-quality/c28183.md)|参数可以是一个值, 并且是在指针中找到的值的副本|
+|[C28183](../code-quality/c28183.md)|参数可以是一个值，并且是在指针中找到的值的副本|
 |[C28193](../code-quality/c28193.md)|变量保存一个必须检查的值|
-|[C28196](../code-quality/c28196.md)|不满足要求。 (该表达式的计算结果不为 true。)|
+|[C28196](../code-quality/c28196.md)|不满足要求。 （该表达式的计算结果不为 true。）|
 |[C28202](../code-quality/c28202.md)|非法引用非静态成员|
 |[C28203](../code-quality/c28203.md)|对类成员的不明确的引用。|
-|[C28205](../code-quality/c28205.md)|\_在\_非法上下文\_中\_使用成功或\_失败|
+|[C28205](../code-quality/c28205.md)|\_Success 在非法上下文中使用 \_ 或 \_On \_failure \_|
 |[C28206](../code-quality/c28206.md)|若左操作数指向结构，则使用“->”|
 |[C28207](../code-quality/c28207.md)|若左操作数是一个结构，则使用“.”|
 |[C28209](../code-quality/c28209.md)|符号的声明具有冲突的声明|
 |[C28210](../code-quality/c28210.md)|__on_failure 上下文的批注不得位于显式的 pre 上下文中|
 |[C28211](../code-quality/c28211.md)|SAL_context 所需的静态上下文名称|
 |[C28212](../code-quality/c28212.md)|批注所需的指针表达式|
-|[C28213](../code-quality/c28213.md)|\_Use\_decl 批注批注\_必须用于引用之前的声明, 而无需修改。\_|
+|[C28213](../code-quality/c28213.md)|@No__t_0Use \_decl \_annotations \_ 批注必须用于引用，而无需修改以前的声明。|
 |[C28214](../code-quality/c28214.md)|特性参数的名称必须为 p1...p9|
 |[C28215](../code-quality/c28215.md)|不能将 typefix 应用于已包含 typefix 的参数|
 |[C28216](../code-quality/c28216.md)|checkReturn 批注仅应用于特定函数参数的后置条件。|
 |[C28217](../code-quality/c28217.md)|对于函数，批注的参数数目与在文件中找到的数目不匹配|
-|[C28218](../code-quality/c28218.md)|对于函数参数, 批注的参数与在文件中找到的参数不匹配|
+|[C28218](../code-quality/c28218.md)|对于函数参数，批注的参数与在文件中找到的参数不匹配|
 |[C28219](../code-quality/c28219.md)|批注中的批注参数所需的枚举成员|
 |[C28220](../code-quality/c28220.md)|批注中的批注参数所需的整数表达式|
 |[C28221](../code-quality/c28221.md)|批注中的参数所需的字符串表达式|
@@ -222,7 +222,7 @@ ms.locfileid: "69585236"
 |[C28267](../code-quality/c28267.md)|在函数中找到了批注的语法错误。|
 |[C28272](../code-quality/c28272.md)|在检查参数时，函数的批注与函数声明不一致|
 |[C28273](../code-quality/c28273.md)|对于函数，线索与函数声明不一致|
-|[C28275](../code-quality/c28275.md)|\_宏\_值的\_参数为 null|
+|[C28275](../code-quality/c28275.md)|@No__t_0Macro \_value \_ 的参数为 null|
 |[C28279](../code-quality/c28279.md)|对于符号，已找到“起始”符号，但没有匹配的“结束”符号|
 |[C28280](../code-quality/c28280.md)|对于符号，已找到“结束”符号，但没有匹配的“起始”符号|
 |[C28282](../code-quality/c28282.md)|格式字符串必须位于前置条件中|
@@ -230,7 +230,7 @@ ms.locfileid: "69585236"
 |[C28286](../code-quality/c28286.md)|对于函数，在其结尾附近出现语法错误|
 |[C28287](../code-quality/c28287.md)|对于函数，在 \_At\_() 批注中出现语法错误（无法识别的参数名）|
 |[C28288](../code-quality/c28288.md)|对于函数，在 \_At\_() 批注中出现语法错误（无效的参数名）|
-|[C28289](../code-quality/c28289.md)|对于函数:ReadableTo 或 WritableTo 没有用作参数的限制规范|
+|[C28289](../code-quality/c28289.md)|对于函数：ReadableTo 或 WritableTo 没有用作参数的限制规范|
 |[C28290](../code-quality/c28290.md)|函数的批注包含的外部对象数量多于实际的参数数量|
 |[C28291](../code-quality/c28291.md)|deref 级别 0 处的 post null/notnull 对于函数无意义。|
 |[C28300](../code-quality/c28300.md)|运算符的不可兼容类型的表达式操作数|

@@ -8,51 +8,51 @@ helpviewer_keywords:
 - full solution analysis
 ms.assetid: 04315147-5792-47f0-8b5f-9ac8413c6a57
 caps.latest.revision: 14
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: df06a17ecc093cf24a64e7c3aa11a096a61ee44f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 72b27bf9dcc1f0ee8a222ac701f2ffae4fc68614
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436840"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646283"
 ---
 # <a name="how-to-enable-and-disable-full-solution-analysis-for-managed-code"></a>如何：启用和禁用托管代码的完整解决方案分析
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 备注
-> 本主题仅适用于 Visual Studio 2015 Update 3 RC 和更高版本。  
-  
- *完整解决方案分析*是 Visual Studio 功能，使你可以选择是否查看仅在打开 Visual C# 或 Visual Basic 文件在你的解决方案，或在解决方案中的打开和关闭 Visual C# 或 Visual Basic 文件中的代码分析问题。  
-  
- 尽管能够看到所有文件中的所有问题很有用，它可以是分散注意力，甚至减慢 Visual Studio，如果你的解决方案非常大或具有大量文件。  若要限制显示的问题数并改进 Visual Studio 性能，可以禁用完整解决方案分析。 如果您希望，可以轻松地重新启用此功能。  
-  
-#### <a name="to-toggle-full-solution-analysis"></a>若要切换完整解决方案分析  
-  
-1. 在 Visual Studio 中主菜单上，选择**工具** &#124; **选项**查看**选项**对话框。  
-  
-2. 在中**选项**对话框框中，选择**文本编辑器** &#124; **C#** 或**基本** &#124; **高级**.  
-  
-3. 选择**启用完整解决方案分析**复选框以启用完整解决方案分析或清除相应的框以禁用它。 选择**确定**按钮完成后。  
-  
-     ![启用完整解决方案分析复选框。](../code-quality/media/fsa-toolsoptions.png "FSA_ToolsOptions")  
-  
-## <a name="results-of-enabling-and-disabling-full-solution-analysis"></a>启用和禁用完整解决方案分析的结果  
- 在以下屏幕截图中，您可以看到结果时启用完整解决方案分析。 所有错误和中的代码分析问题*所有*的解决方案中的文件显示，而不考虑文件是否都打开。  
-  
- ![启用完整解决方案分析。](../code-quality/media/fsa-enabled.png "FSA_Enabled")  
-  
- 禁用完整解决方案分析之后，下面的屏幕截图显示同一解决方案中的结果。 仅将错误和代码分析问题，在错误列表中打开的解决方案文件会显示。  
-  
- ![禁用完整解决方案分析。](../code-quality/media/fsa-disabled.png "FSA_Disabled")  
-  
-## <a name="automatically-disabling-full-solution-analysis"></a>自动禁用完整解决方案分析  
- 如果 Visual Studio 检测到的 200 MB 或更少的系统内存可供它，它会自动禁用完整解决方案分析 （以及其他一些功能） 如果已启用。 如果发生这种情况，会显示警报，通知你这些。 按钮可以重新启用完整解决方案分析，如果你想要执行此操作。  
-  
- ![警报文本中挂起完整解决方案分析](../code-quality/media/fsa-alert.png "FSA_Alert")  
-  
-## <a name="additional-details"></a>更多详细信息  
- 默认情况下，完整解决方案分析适用于 Visual Basic 启用和禁用对于 Visual C#。  
-  
- Visual Studio Update 3 RC 包括增强的代码分析工具诊断 v2 引擎，大大减少内存使用情况和减少 CPU 时间空闲，即使启用完整解决方案分析。
+> 本主题仅适用于 Visual Studio 2015 Update 3 RC 和更高版本。
+
+ *完整的解决方案分析*是一项 Visual Studio 功能，使你能够选择是仅在解决方案中打开的视觉C#对象或 Visual Basic 文件中看到代码分析问题，还是 Visual Basic 在C#你的解决方案.
+
+ 尽管能够查看所有文件中的所有问题都很有用，但如果您的解决方案非常大或有大量文件，则可能会对 Visual Studio 进行分散甚至缓慢的影响。  若要限制显示的问题数并改善 Visual Studio 性能，可以禁用完整解决方案分析。 如果需要，可以轻松地重新启用此功能。
+
+#### <a name="to-toggle-full-solution-analysis"></a>切换完整解决方案分析
+
+1. 在 Visual Studio 中的主菜单上，选择 "**工具** &#124; " "**选项**" 以查看 "**选项**" 对话框。
+
+2. 在 "**选项**" 对话框中，选择 "**文本编辑器** &#124; **C#** " 或 "**基本** &#124; **高级**"。
+
+3. 选中 "**启用完整解决方案分析**" 复选框以启用完整解决方案分析，或者清除该复选框以禁用它。 完成后，选择 **"确定"** 按钮。
+
+     ![启用完整解决方案分析复选框。](../code-quality/media/fsa-toolsoptions.png "FSA_ToolsOptions")
+
+## <a name="results-of-enabling-and-disabling-full-solution-analysis"></a>启用和禁用完整解决方案分析的结果
+ 在下面的屏幕截图中，可以看到启用了完整解决方案分析后的结果。 解决方案中的*所有*文件中的所有错误和代码分析问题都将出现，无论这些文件是否已打开。
+
+ ![已启用完整解决方案分析。](../code-quality/media/fsa-enabled.png "FSA_Enabled")
+
+ 下面的屏幕截图显示了禁用完整解决方案分析后相同解决方案的结果。 只有打开的解决方案文件中的错误和代码分析问题才会出现在错误列表中。
+
+ ![已禁用完整解决方案分析。](../code-quality/media/fsa-disabled.png "FSA_Disabled")
+
+## <a name="automatically-disabling-full-solution-analysis"></a>自动禁用完整解决方案分析
+ 如果 Visual Studio 检测到200MB 或更少的系统内存可用，则会自动禁用完整解决方案分析（以及其他一些功能）（如果已启用）。 如果出现这种情况，则会出现警报，告知你这一点。 如果要执行此操作，可以使用按钮重新启用完整解决方案分析。
+
+ ![暂停完整解决方案分析的警报文本](../code-quality/media/fsa-alert.png "FSA_Alert")
+
+## <a name="additional-details"></a>其他详细信息
+ 默认情况下，将对 Visual Basic 启用完整解决方案分析，并对C#视觉对象禁用完整解决方案分析。
+
+ Visual Studio Update 3 RC 包含增强的代码分析器诊断 v2 引擎，可显著减少内存使用量并缩短 CPU 空闲时间（即使启用了完整的解决方案分析）。

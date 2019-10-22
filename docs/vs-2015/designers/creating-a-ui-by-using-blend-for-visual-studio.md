@@ -8,15 +8,15 @@ f1_keywords:
 - Blend.Start.Dev12
 ms.assetid: efd12263-cc2d-4081-a2bb-9a2cc17c442c
 caps.latest.revision: 33
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7cd7f14158b7dee83767ee9295c8917cadd30fa5
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 36a0772730718047f2b9d6fc6bc36c30a211a2af
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65695936"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72657995"
 ---
 # <a name="creating-a-ui-by-using-blend-for-visual-studio"></a>使用 Blend for Visual Studio 创建 UI
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -54,7 +54,7 @@ Blend for Visual Studio 可帮助设计基于 XAML 的 Windows 桌面、Web、[W
 |![](../designers/media/b1-5.png "B1_5")|**资产工具** - 访问“资产”面板并显示库中最近用过的资产。|![标注 E](../designers/media/b5-label-e.png "b5_label_E")|**文本控件**|
 |||![标注 F](../designers/media/b5-label-f.png "b5_label_F")|**常见控件**|
 
- **观看短片：**![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [工具栏](https://www.youtube.com/watch?v=VkdUJcvoo54&list=PLBDF977B2F1DAB358&index=4)。
+ **观看短片：** ![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [工具栏](https://www.youtube.com/watch?v=VkdUJcvoo54&list=PLBDF977B2F1DAB358&index=4)。
 
 ## <a name="Assets"></a>“资产”面板概览
  可在“资产”面板中找到所有控件，它类似于 Visual Studio 中的“工具箱”。 除控件外，“资产”面板还包括所有可添加到美工板的内容，例如样式、媒体、行为和效果等。
@@ -72,7 +72,7 @@ Blend for Visual Studio 可帮助设计基于 XAML 的 Windows 桌面、Web、[W
 ## <a name="Objects"></a>“对象和时间线”面板概览
  使用此面板可在美工板上组织对象以及（如果需要）对它们进行动画处理。
 
- ![动画模式中的“对象和时间线”面板](../designers/media/b5-object-timeline-animation.png "b5_object_timeline_animation")
+ ![动画模式中的 "对象和时间线" 面板](../designers/media/b5-object-timeline-animation.png "b5_object_timeline_animation")
 
 |||
 |-|-|
@@ -91,14 +91,14 @@ Blend for Visual Studio 可帮助设计基于 XAML 的 Windows 桌面、Web、[W
 |![](../designers/media/b1-13.png "B1_13")|**时间线上设置的关键帧** - 更改特点时间点的属性值。|
 |![](../designers/media/d839d12c-07a1-4127-a830-4a8e7069f4fe.png "d839d12c-07a1-4127-a830-4a8e7069f4fe")|**更改对象顺序** - 设置对象的显示顺序。 单击此按钮可在结构视图中按 Z 顺序（从前到后）或按标记顺序（在“XAML”视图中出现的顺序）排列对象。|
 |![](../designers/media/b1-15.png "B1_15")|**时间线缩放** - 设置时间线的缩放分辨率。 通过放大，可以编辑动画的更多细节；而通过缩小，可更全面地显示在更长时间段内发生的情况。 如果进行放大，但无法在所需时间位置设置关键帧，请验证设置的对齐分辨率是否足够高。|
-|![标注 16](../designers/media/b5-label-16.png "b5_label_16")|**时间线构成区域** - 查看时间线，并通过拖动关键帧或通过其快捷菜单移动关键帧。|
+|![标注16](../designers/media/b5-label-16.png "b5_label_16")|**时间线构成区域** - 查看时间线，并通过拖动关键帧或通过其快捷菜单移动关键帧。|
 
 ## <a name="Properties"></a>“属性”面板概览
  使用此面板可查看和修改对象的属性。 还可以直接在美工板上设置它们。 若如此操作，则“属性”面板中将反映出属性更改。
 
  ![属性面板](../designers/media/blend5-properties-panel.png "Blend5_properties_panel")
 
- **类别** - 展开和折叠类别的属性。 单击“展开”![](../designers/media/6375953d-074c-421a-bbb3-6f5055b67b64.png "6375953d-074c-421a-bbb3-6f5055b67b64") 和“折叠”![折叠](../designers/media/b5-collapse-button.png "b5_collapse_button") 可显示或隐藏类别详细信息。
+ **类别** - 展开和折叠类别的属性。 单击 "**展开** ![](../designers/media/6375953d-074c-421a-bbb3-6f5055b67b64.png "6375953d-074c-421a-bbb3-6f5055b67b64") " 和 "**折叠** ![" 以显示](../designers/media/b5-collapse-button.png "b5_collapse_button")或隐藏类别详细信息。
 
 |                                                                                                         |                                                                                                                                                                                                                                  |
 |---------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -117,10 +117,10 @@ Blend for Visual Studio 可帮助设计基于 XAML 的 Windows 桌面、Web、[W
 |                                ![](../designers/media/b1-13.png "B1_13")                                |                                                                        **Alpha 通道** - 使用 **A** 旁边的数字编辑器修改 Alpha 值。                                                                        |
 | ![](../designers/media/d839d12c-07a1-4127-a830-4a8e7069f4fe.png "d839d12c-07a1-4127-a830-4a8e7069f4fe") |                                       **将颜色转换为资源** - 将所选颜色转换为颜色资源。 在单击“颜色资源”选项卡时，可以获得颜色资源。                                        |
 |                                ![](../designers/media/b1-15.png "B1_15")                                |                                                                                 **十六进制值** - 查看所显示颜色的十六进制值。                                                                                 |
-|                     ![标注 16](../designers/media/b5-label-16.png "b5_label_16")                     |                                                                                **渐变滑块** - 仅当选择渐变画笔时才显示。                                                                                 |
+|                     ![标注16](../designers/media/b5-label-16.png "b5_label_16")                     |                                                                                **渐变滑块** - 仅当选择渐变画笔时才显示。                                                                                 |
 | ![](../designers/media/d50027a1-6824-4ad8-8b4e-558b0756dcf8.png "d50027a1-6824-4ad8-8b4e-558b0756dcf8") |                                                                     **显示高级属性** - 查看不常用属性的类别。                                                                      |
 
- **观看短片：**![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [属性面板](https://www.youtube.com/watch?v=HCqQfiobdag&list=PLBDF977B2F1DAB358&index=7)。
+ **观看短片：** ![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [属性面板](https://www.youtube.com/watch?v=HCqQfiobdag&list=PLBDF977B2F1DAB358&index=7)。
 
 ## <a name="see-also"></a>请参阅
- [插入控件并修改其行为](../designers/insert-controls-and-modify-their-behavior-in-xaml-designer.md)[对象进行动画处理](../designers/animate-objects-in-xaml-designer.md)[绘制形状和路径](../designers/draw-shapes-and-paths.md) [Visual Studio 和 Blend for Visual Studio 中设计 XAML](../designers/designing-xaml-in-visual-studio.md)
+ [插入控件并修改其行为](../designers/insert-controls-and-modify-their-behavior-in-xaml-designer.md)[动画对象](../designers/animate-objects-in-xaml-designer.md)[绘制形状和路径](../designers/draw-shapes-and-paths.md)[在 Visual Studio 中设计 XAML 并 Blend for Visual Studio](../designers/designing-xaml-in-visual-studio.md)

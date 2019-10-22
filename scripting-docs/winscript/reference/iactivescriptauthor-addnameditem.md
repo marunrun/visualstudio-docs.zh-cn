@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptAuthor::AddNamedItem | Microsoft Docs
+title: IActiveScriptAuthor：： AddNamedItem |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 19
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 95bc529db8129c4e9af1ed9f9dc3d91de9686223
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: f0d2f08a49fdc768e87152bf486ce48687c79e68
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63411390"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577247"
 ---
 # <a name="iactivescriptauthoraddnameditem"></a>IActiveScriptAuthor::AddNamedItem
-将根级别项的名称添加到引擎的命名空间创作的脚本。 一个*根级别项*是包含属性和方法，并且，还可以包含事件源的对象。  
+将根级别项的名称添加到脚本创作引擎的命名空间中。 *根级别项*是一个对象，它可以包含属性和方法，还可以包含事件源。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,22 +39,22 @@ HRESULT AddNamedItem(
   
 #### <a name="parameters"></a>参数  
  `pszName`  
- [in]从脚本来查看的项的名称。 名称必须唯一且可持久化。  
+ 中从脚本中查看的项的名称。 该名称必须唯一且可持久。  
   
  `dwFlags`  
- [in]与命名项关联的标志。 可以是以下值的组合：  
+ 中与已命名项关联的标志。 可以是以下值的组合：  
   
 |返回的常量|“值”|描述|  
 |--------------|-----------|-----------------|  
-|SCRIPTITEM_ISVISIBLE|0x00000002|指示项的名称是脚本的命名空间中可用。 这允许访问项的属性、 方法和事件。<br /><br /> 按照约定，项的属性包括项的子成员。 因此，所有子对象属性和方法 （和自身的子成员，以递归方式） 进行访问。|  
-|SCRIPTITEM_ISSOURCE|0x00000004|指示该脚本可以具有脚本事件处理程序的项目源的事件。|  
-|SCRIPTITEM_GLOBALMEMBERS|0x00000008|指示该项全局属性和方法以与脚本关联的集合。 其成员被编写为全局变量和方法。|  
-|SCRIPTITEM_ISPERSISTENT|0x00000040|指示是否保存脚本创作引擎应保存该项。|  
-|SCRIPTITEM_CODEONLY|0x00000200|指示命名的项表示仅限代码的对象，并且它不具有成员来创作。|  
-|SCRIPTITEM_NOCODE|0x00000400|指示命名的项是要添加的名称，并且没有要创作。|  
+|SCRIPTITEM_ISVISIBLE|0x00000002|指示项的名称在脚本的命名空间中可用。 这允许访问项的属性、方法和事件。<br /><br /> 按照约定，项的属性包括项的子成员。 因此，所有子对象属性和方法（及其子成员递归）都是可访问的。|  
+|SCRIPTITEM_ISSOURCE|0x00000004|指示该脚本可以具有脚本事件处理程序的项源事件。|  
+|SCRIPTITEM_GLOBALMEMBERS|0x00000008|指示项是与脚本关联的全局属性和方法的集合。 它的成员作为全局变量和方法进行编写。|  
+|SCRIPTITEM_ISPERSISTENT|0x00000040|指示在保存脚本创作引擎时应保存项。|  
+|SCRIPTITEM_CODEONLY|0x00000200|指示已命名的项表示仅限代码的对象，并且它没有要创作的成员。|  
+|SCRIPTITEM_NOCODE|0x00000400|指示已命名项仅为正在添加的名称，并且没有任何要创作的项。|  
   
  `pdisp`  
- [in]`IDispatch`的`NamedItem`用于收集方法、 属性或事件源的对象。  
+ 中用于收集方法、属性或事件源的 `NamedItem` 对象的 `IDispatch`。  
   
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  

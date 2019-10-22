@@ -1,5 +1,5 @@
 ---
-title: CA1502:避免过度复杂 |Microsoft Docs
+title: CA1502：避免过多的复杂性 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,85 +12,85 @@ helpviewer_keywords:
 - AvoidExcessiveComplexity
 ms.assetid: d735454b-2f8f-47ce-907d-f7a5a5391221
 caps.latest.revision: 32
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: e1885a07f4c9edbbdea9be4f0e74aaf8e4d3a6f9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f7b830e9d3a045bb54394a91d94e036613af7d1f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68191258"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72607877"
 ---
-# <a name="ca1502-avoid-excessive-complexity"></a>CA1502:避免过度复杂
+# <a name="ca1502-avoid-excessive-complexity"></a>CA1502：避免过度复杂
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|AvoidExcessiveComplexity|
 |CheckId|CA1502|
-|类别|Microsoft.Maintainability|
-|是否重大更改|非换行|
+|类别|Microsoft 可维护性|
+|是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 一种方法具有过多的圈复杂度。
+ 方法具有过多的圈复杂度。
 
 ## <a name="rule-description"></a>规则说明
- *圈复杂度*测量线性独立的方法，由数量和复杂程度的条件分支路径的数量。 低圈复杂度通常指示很容易理解、 测试和维护的方法。 圈复杂度计算方法的控制流关系图中，按如下所示计算公式：
+ *圈复杂度*通过方法测量线性独立路径的数量，该方法由条件分支的数量和复杂程度决定。 低圈复杂度通常表示一种易于理解、测试和维护的方法。 圈复杂度是通过方法的控制流图形计算得出的，其提供方式如下：
 
- 圈复杂度 = 边缘的节点数 + 1 的数
+ 圈复杂度 = 边数-节点数 + 1
 
- 其中一个节点表示逻辑分支点，边缘表示节点之间的直线。
+ 其中，节点表示逻辑分支点，边缘表示节点之间的线条。
 
- 超过 25 种的圈复杂度时，规则将报告冲突。
+ 当圈复杂度大于25时，规则将报告冲突。
 
- 您可以了解有关代码的指标的详细信息[测量复杂性和托管代码可维护性](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)，
+ 可以在[测量托管代码的复杂性和可维护性](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)中了解有关代码度量值的详细信息，
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复此规则的冲突，请重构的方法，以减少其圈复杂度。
+ 若要修复与此规则的冲突，请重构方法以降低其圈复杂度。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 它可以安全地禁止显示此规则的警告，如果不能轻松地降低复杂程度，并且该方法很容易理解、 测试和维护。 具体而言，包含较大的方法`switch`(`Select`中[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) 语句可用于排除。 破坏代码库后期在开发周期或以前发布的代码中的运行时行为中发生意外变化可能会得不偿失可维护性的重构代码的风险。
+ 如果复杂性无法轻易降低，并且方法易于理解、测试和维护，则可以安全地禁止显示此规则发出的警告。 具体而言，包含大型 `switch` `Select` （[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]）语句的方法是排除的候选项。 在开发周期后期破坏代码的风险，或在以前发布的代码中引入运行时行为的意外更改可能超过重构代码的可维护性优势。
 
 ## <a name="how-cyclomatic-complexity-is-calculated"></a>如何计算圈复杂度
- 圈复杂度计算通过将 1 添加到以下：
+ 圈复杂度的计算方法为：
 
-- 分支数 (如`if`， `while`，和`do`)
+- 分支数量（如 `if`、`while` 和 `do`）
 
-- 数`case`中的语句 `switch`
+- @No__t_1 中的 `case` 语句的数目
 
-  以下示例显示圈复杂度不断变化的方法。
+  下面的示例演示具有不同圈复杂度的方法。
 
 ## <a name="example"></a>示例
- **为 1 的圈复杂度**
+ **圈复杂度为1**
 
  [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/cpp/FxCop.Maintainability.AvoidExcessiveComplexity.cpp#1)]
  [!code-csharp[FxCop.Maintainability.AvoidExcessiveComplexity#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/cs/FxCop.Maintainability.AvoidExcessiveComplexity.cs#1)]
  [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/vb/FxCop.Maintainability.AvoidExcessiveComplexity.vb#1)]
 
 ## <a name="example"></a>示例
- **圈复杂度为 2**
+ **2的圈复杂度**
 
  [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#2](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/cpp/FxCop.Maintainability.AvoidExcessiveComplexity.cpp#2)]
  [!code-csharp[FxCop.Maintainability.AvoidExcessiveComplexity#2](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/cs/FxCop.Maintainability.AvoidExcessiveComplexity.cs#2)]
  [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#2](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/vb/FxCop.Maintainability.AvoidExcessiveComplexity.vb#2)]
 
 ## <a name="example"></a>示例
- **圈复杂度为 3**
+ **圈复杂度为3**
 
  [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#3](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/cpp/FxCop.Maintainability.AvoidExcessiveComplexity.cpp#3)]
  [!code-csharp[FxCop.Maintainability.AvoidExcessiveComplexity#3](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/cs/FxCop.Maintainability.AvoidExcessiveComplexity.cs#3)]
  [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#3](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/vb/FxCop.Maintainability.AvoidExcessiveComplexity.vb#3)]
 
 ## <a name="example"></a>示例
- **圈复杂度为 8**
+ **圈复杂度为8**
 
  [!code-cpp[FxCop.Maintainability.AvoidExcessiveComplexity#4](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/cpp/FxCop.Maintainability.AvoidExcessiveComplexity.cpp#4)]
  [!code-csharp[FxCop.Maintainability.AvoidExcessiveComplexity#4](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/cs/FxCop.Maintainability.AvoidExcessiveComplexity.cs#4)]
  [!code-vb[FxCop.Maintainability.AvoidExcessiveComplexity#4](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Maintainability.AvoidExcessiveComplexity/vb/FxCop.Maintainability.AvoidExcessiveComplexity.vb#4)]
 
-## <a name="related-rules"></a>相关的规则
- [CA1501:避免过度继承](../code-quality/ca1501-avoid-excessive-inheritance.md)
+## <a name="related-rules"></a>相关规则
+ [CA1501：避免过度继承](../code-quality/ca1501-avoid-excessive-inheritance.md)
 
 ## <a name="see-also"></a>请参阅
  [测量托管代码的复杂性和可维护性](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)

@@ -11,6 +11,8 @@
           href: container-tools.md
         - name: 容器中的 React.js 单页应用
           href: container-tools-react.md
+        - name: 使用 Azure Dev Spaces 进行 Kubernetes 开发>>
+          href: /azure/dev-spaces/quickstart-netcore-visualstudio
     - name: 教程
       expanded: true
       items:
@@ -28,7 +30,7 @@
           href: deploy-app-service.md
         - name: 部署到 Docker Hub
           href: deploy-docker-hub.md
-        - name: 查看和诊断容器
+        - name: 查看和诊断容器与图像
           href: view-and-diagnose-containers.md
         - name: 配置容器工具
           href: container-tools-configure.md

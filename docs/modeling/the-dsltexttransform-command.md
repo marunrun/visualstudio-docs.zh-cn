@@ -4,26 +4,26 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, commands
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 89d83da450014ebf29e2882438d27f9284c9bbbb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a303fc3ddb880402e3f998b2360122f6f056b757
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63001423"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72605930"
 ---
 # <a name="the-dsltexttransform-command"></a>DslTextTransform 命令
-DslTextTransform.cmd 是一个脚本调用 TextTransform.exe 和运行使用常用的选项。 可以使用 DslTextTransformation.cmd 来自动执行的每夜生成您[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]项目。 有关详细信息，请参阅[使用 TextTransform 实用工具生成文件](../modeling/generating-files-with-the-texttransform-utility.md)。
+DslTextTransform 是一个脚本，它调用 TextTransform 并使用常用选项运行它。 你可以使用 DslTextTransformation 自动执行 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 项目的夜间生成。 有关详细信息，请参阅[用 TextTransform 实用工具生成文件](../modeling/generating-files-with-the-texttransform-utility.md)。
 
- DslTextTransform.cmd 位于以下目录中：
+ DslTextTransform 位于以下目录中：
 
  **\<Visual Studio SDK 安装路径 > \VisualStudioIntegration\Tools\Bin**
 
- 作为输入 DslTextTransform.cmd，可以指定以下参数：
+ 可以将以下参数指定为 DslTextTransform 的输入：
 
 - 域模型项目的输出目录。
 
@@ -31,4 +31,4 @@ DslTextTransform.cmd 是一个脚本调用 TextTransform.exe 和运行使用常�
 
 - 文本模板文件的位置。
 
-  DslTextTransform.cmd 处理指定的文本模板文件使用默认指令处理器和程序集。 如果创建自定义指令处理器，您可以创建自己调用 TextTransform.exe 的批处理文件。 在此批处理文件中，可以指定您的程序集和关联的自定义指令处理器。
+  DslTextTransform 使用默认指令处理器和程序集处理指定的文本模板文件。 如果创建自定义指令处理器，则可以创建自己的批处理文件来调用 TextTransform。 在此批处理文件中，可以指定程序集和关联的自定义指令处理器。

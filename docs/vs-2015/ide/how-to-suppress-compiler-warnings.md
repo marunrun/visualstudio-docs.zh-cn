@@ -1,32 +1,32 @@
 ---
-title: 如何：取消显示编译器警告 |Microsoft Docs
+title: 如何：取消显示编译器警告 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: 31827b17-f933-413d-b28a-b19f903b64ca
 caps.latest.revision: 7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 994b29fb4592d55a04389896ee9db8848dceda67
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: aeb404c479edec5dec89f28e80584d435f5c370a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65695383"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670646"
 ---
 # <a name="how-to-suppress-compiler-warnings"></a>如何：取消显示编译器警告
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-你可以清理生成日志，方法是指定一个或多个不希望包含的编译器警告类型。 例如，将生成日志的详细级别设置为一般、详细或诊断时，可以使用此方法查看自动生成的部分信息，而不是所有信息。 有关详细程度的详细信息，请参见[如何：查看、 保存和配置生成日志文件](../ide/how-to-view-save-and-configure-build-log-files.md)。
+你可以清理生成日志，方法是指定一个或多个不希望包含的编译器警告类型。 例如，将生成日志的详细级别设置为一般、详细或诊断时，可以使用此方法查看自动生成的部分信息，而不是所有信息。 有关详细级别的更多信息，请参阅[如何：查看、保存和配置生成日志文件](../ide/how-to-view-save-and-configure-build-log-files.md)。
 
-### <a name="to-suppress-specific-warnings-for-visual-c-or-f"></a>若要取消显示视觉对象的特定警告C#或 F\#
+### <a name="to-suppress-specific-warnings-for-visual-c-or-f"></a>抑制视觉对象C#或 F \# 的特定警告
 
 1. 在**解决方案资源管理器**中，选择想要取消显示警告的项目。
 
-2. 在菜单栏上，依次选择 **“查看”**、 **“属性页”**。
+2. 在菜单栏上，依次选择 **“查看”** 、 **“属性页”** 。
 
 3. 选择“生成”页。
 
@@ -36,7 +36,7 @@ ms.locfileid: "65695383"
 
 1. 在**解决方案资源管理器**中，选择想要取消显示警告的项目或源文件。
 
-2. 在菜单栏上，依次选择 **“查看”**、 **“属性页”**。
+2. 在菜单栏上，依次选择 **“查看”** 、 **“属性页”** 。
 
 3. 依次选择“配置属性”类别、“C/C++”类别和“高级”页。
 

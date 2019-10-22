@@ -20,12 +20,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bb0e8bdbb2bd62fa637b9cecce64adf98f71013
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: b77379d0bb9dbd80f01eadf5209353b3fd12eb1c
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72016046"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72446309"
 ---
 # <a name="annotating-function-behavior"></a>对函数行为进行批注
 除了注释[函数参数和返回值](../code-quality/annotating-function-parameters-and-return-values.md)，还可以批注整个函数的属性。
@@ -35,7 +35,7 @@ ms.locfileid: "72016046"
 
 |批注|描述|
 |----------------|-----------------|
-|`_Called_from_function_class_(name)`|不是为了单独存在；相反，它是一个旨在与 `_When_` 批注一起使用的谓词。 有关详细信息，请参阅[指定何时以及在何处应用批注](../code-quality/specifying-when-and-where-an-annotation-applies.md)。<br /><br /> @No__t 的参数是一个任意字符串，该字符串也会出现在某些函数声明中的 @no__t 1 批注中。  如果当前正在分析的函数使用的 @no__t 为 `name` 的值为-1，则 `_Called_from_function_class_` 返回非零值;否则，它返回零。|
+|`_Called_from_function_class_(name)`|不是为了单独存在；相反，它是一个旨在与 `_When_` 批注一起使用的谓词。 有关详细信息，请参阅[指定何时以及在何处应用批注](../code-quality/specifying-when-and-where-an-annotation-applies.md)。<br /><br /> @No__t_0 参数是一个任意字符串，该字符串也会出现在某些函数声明中的 `_Function_class_` 注释中。  如果当前正在分析的函数使用的 `_Function_class_` 具有相同的 `name` 值，`_Called_from_function_class_` 将返回非零值;否则，它返回零。|
 |`_Check_return_`|批注一个返回值，并声明调用方应检查此值。 如果在 void 上下文中调用函数，则检查器将报告错误。|
 |`_Function_class_(name)`|`name` 参数为由用户指定的任意字符串。  它存在于与其他命名空间不同的命名空间中。 函数、函数指针或（最有用）函数指针类型可指定为属于一个或多个函数类。|
 |`_Raises_SEH_exception_`|根据 `_When_` 和 `_On_failure_` 条件，批注始终引发结构化异常处理程序 (SEH) 异常的函数。 有关详细信息，请参阅[指定何时以及在何处应用批注](../code-quality/specifying-when-and-where-an-annotation-applies.md)。|

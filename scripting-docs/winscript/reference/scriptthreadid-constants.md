@@ -17,12 +17,12 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: dfbb39d10d552141a68d40a7be3f1715a80f8f57
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bf1b23b191bda29b00bf29f482332301897f9f37
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840195"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575669"
 ---
 # <a name="scriptthreadid-constants"></a>SCRIPTTHREADID 常量
 用于指定线程的类型。  
@@ -38,14 +38,14 @@ typedef DWORD SCRIPTTHREADID;
 |返回的常量|“值”|含义|  
 |--------------|-----------|-------------|  
 |SCRIPTTHREADID_CURRENT|0xFFFFFFFD|当前正在执行的线程。|  
-|SCRIPTTHREADID_BASE|0xFFFFFFFE|基础线程;也就是说，在其中的脚本引擎的线程已实例化。|  
+|SCRIPTTHREADID_BASE|0xFFFFFFFE|基本线程;这就是实例化脚本引擎的线程。|  
 |SCRIPTTHREADID_ALL|0xFFFFFFFF|所有线程。|  
   
 ## <a name="remarks"></a>备注  
- `SCRIPTTHREADID`类型由`IActiveScript::GetCurrentScriptThreadID`， `IActiveScript::GetScriptThreadID`， `IActiveScript::GetScriptThreadState`，并`IActiveScript::InterruptScriptThread`，但的仅可使用常量`IActiveScript::GetScriptThreadState`和`IActiveScript::InterruptScriptThread`。  
+ @No__t_0 类型由 `IActiveScript::GetCurrentScriptThreadID`、`IActiveScript::GetScriptThreadID`、`IActiveScript::GetScriptThreadState` 和 `IActiveScript::InterruptScriptThread` 使用，但常量只能由 `IActiveScript::GetScriptThreadState` 和 `IActiveScript::InterruptScriptThread` 使用。  
   
 ## <a name="see-also"></a>请参阅  
- [IActiveScript::GetCurrentScriptThreadID](../../winscript/reference/iactivescript-getcurrentscriptthreadid.md)   
- [IActiveScript::GetScriptThreadID](../../winscript/reference/iactivescript-getscriptthreadid.md)   
- [IActiveScript::GetScriptThreadState](../../winscript/reference/iactivescript-getscriptthreadstate.md)   
+ [IActiveScript：： GetCurrentScriptThreadID](../../winscript/reference/iactivescript-getcurrentscriptthreadid.md)    
+ [IActiveScript：： GetScriptThreadID](../../winscript/reference/iactivescript-getscriptthreadid.md)    
+ [IActiveScript：： GetScriptThreadState](../../winscript/reference/iactivescript-getscriptthreadstate.md)    
  [IActiveScript::InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md)

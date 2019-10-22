@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplication::QueryAlive | Microsoft Docs
+title: IRemoteDebugApplication：： QueryAlive |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: db17bd017b2fc1e1ca52ba8801eb1d197c4b3de7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3edc4fc007a2372c429b0bbece394cb1c30a2770
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62944199"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577477"
 ---
 # <a name="iremotedebugapplicationqueryalive"></a>IRemoteDebugApplication::QueryAlive
-指示该应用程序是否响应。  
+指示应用程序是否响应。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +34,7 @@ HRESULT QueryAlive();
 ```  
   
 #### <a name="parameters"></a>参数  
- 此方法需要任何参数。  
+ 此方法不采用任何参数。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -44,9 +44,9 @@ HRESULT QueryAlive();
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法指示该应用程序是否响应。 此方法的实现应始终返回`S_OK`。  
+ 此方法指示应用程序是否响应。 此方法的实现应始终返回 `S_OK`。  
   
- 如果应用程序进程意外终止，COM 从封送处理代理对此方法的调用将返回错误。  
+ 如果应用程序进程意外终止，COM 将从封送代理返回错误，以便调用此方法。  
   
 ## <a name="see-also"></a>请参阅  
  [IRemoteDebugApplication 接口](../../winscript/reference/iremotedebugapplication-interface.md)

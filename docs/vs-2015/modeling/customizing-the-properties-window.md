@@ -1,5 +1,5 @@
 ---
-title: 自定义属性窗口 |Microsoft Docs
+title: 自定义 "属性" 窗口 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -8,315 +8,315 @@ helpviewer_keywords:
 - Domain-Specific Language, Properties window
 ms.assetid: b6658de5-4e85-4628-93b2-5cc12f63d25b
 caps.latest.revision: 22
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3e391e21ac16bdbee9fc2881b264f964a4b28cc0
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: f628cdecbebbb10b7bb2709a2022297e1171a427
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433223"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654936"
 ---
 # <a name="customizing-the-properties-window"></a>自定义“属性”窗口
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-您可以自定义外观和行为的属性窗口中你的域特定语言 (DSL) 中[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。 在 DSL 定义中，每个域类上定义域属性。 默认情况下，选择关系图上或在模型资源管理器中的类的实例时每个域的属性已列出在属性窗口中。 这样可以查看和编辑域属性的值即使您有不到关系图上的形状字段映射它们。  
-  
-## <a name="names-descriptions-and-categories"></a>名称、 说明和类别  
- **名称和显示名称**。 在域属性的定义中，该属性的显示名称是在运行时在属性窗口中显示的名称。 与此相反，编写程序代码来更新属性时使用的名称。 名称必须是正确的 CLR 字母数字名称，但显示名称可以包含空格。  
-  
- 当在 DSL 定义中设置属性的名称时，其显示名称是自动设置为该名称的副本。 如果要编写一个采用 Pascal 大小写格式的名称，例如"FuelGauge"，显示名称将自动包含空格："汽油表"。 但是，可以为其他值显式设置显示名称。  
-  
- **说明**。 域属性的说明将显示在两个位置：  
-  
-- 底部的属性窗口时用户选择的属性。 可用于向用户说明该属性表示。  
-  
-- 在生成的程序代码中。 如果您使用的文档功能来提取 API 文档，它将显示为此属性在 API 中的说明。  
-  
-  **Category**。 类别是属性窗口中的标题。  
-  
-## <a name="exposing-style-features"></a>公开样式功能  
- 可以表示某些图形元素的动态功能或*公开*作为域的属性。 可以由用户更新已以这种方式公开的功能，可以详细轻松地更新程序代码。  
-  
- 右键单击 DSL 定义中的形状类、 指向**公开添加**，然后选择一项功能。  
-  
- 在形状上可以公开**FillColor**， **OutlineColor**， **TextColor**， **OutlineDashStyle**， **OutlineThickness**并**FillGradientMode**属性。 有关连接器可以公开**颜色**`,`**TextColor**， **DashStyle**，并且**粗细**属性。 在关系图上可以公开**FillColor**并**TextColor**属性。  
-  
-## <a name="forwarding-displaying-properties-of-related-elements"></a>转发：显示相关元素的属性  
- 时 DSL 的用户在模型中选择一个元素，该元素的属性将显示在属性窗口中。 但是，您还可以显示指定的相关元素的属性。 这是很有用，如果已定义一起工作的一组元素。 例如，可以定义主要元素和可选的插件元素。 如果主要元素映射到一个形状，另一个则不是很有用，若要查看其所有属性，就好像在上一个元素。  
-  
- 这种效果名为*属性转发*，并在几个情况下自动发生。 在其他情况下，可以通过定义的域类型描述符转发的属性来实现。  
-  
-### <a name="default-property-forwarding-cases"></a>默认属性转发情况  
- 当用户在资源管理器中选择一个形状或连接器或一个元素时，在属性窗口中显示以下属性：  
-  
-- 模型元素，包括那些在基类中定义的域类定义的域属性。 例外情况是为其设置域属性**是可浏览**到`False`。  
-  
-- 通过具有多重性 0..1 关系链接的元素的名称。 这提供一种简便的方法来根据需要查看链接的元素，即使您未定义此关系的连接符映射。  
-  
-- 以元素为目标的嵌入关系的域属性。 由于通常不显式显示嵌入关系，这能让用户可以查看其属性。  
-  
-- 在所选的形状或连接线定义的域属性。  
-  
-### <a name="adding-property-forwarding"></a>添加属性转发  
- 若要转发属性，您定义的域类型描述符。 如果您有两个域类之间的域关系，可以使用域类型描述符中的第二个域类的域属性的值的第一个类中设置域属性。 例如，如果有之间的关系**书籍**域类和一个**作者**域类，您可以使用的域类型说明符以使**名称**属性本书**作者**出现在属性窗口中，当用户选择一书。  
-  
+可以在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的域特定语言（DSL）中自定义 "属性" 窗口的外观和行为。 在 DSL 定义中，为每个域类定义域属性。 默认情况下，当您在关系图上或在模型资源管理器中选择类的实例时，每个域属性都将列在 "属性" 窗口中。 这使你可以查看和编辑域属性的值，即使尚未将它们映射到关系图上的形状字段。
+
+## <a name="names-descriptions-and-categories"></a>名称、说明和类别
+ **名称和显示名称**。 在定义域属性时，属性的显示名称是在运行时在 "属性" 窗口中显示的名称。 与此相反，当您编写程序代码以更新属性时，将使用该名称。 名称必须是正确的 CLR 字母数字名称，但显示名称可以包含空格。
+
+ 在 DSL 定义中设置某个属性的名称时，其显示名称将自动设置为该名称的副本。 如果编写 Pascal 大小写名称（如 "FuelGauge"），则显示名称将自动包含一个空格： "燃料仪表"。 但是，你可以将显示名称显式设置为另一个值。
+
+ **说明**。 域属性的说明出现在两个位置：
+
+- 当用户选择属性时，在 "属性" 窗口的底部。 可以使用它向用户说明属性表示的内容。
+
+- 在生成的程序代码中。 如果使用文档工具来提取 API 文档，它将在 API 中显示为此属性的说明。
+
+  **Category**。 类别是属性窗口中的标题。
+
+## <a name="exposing-style-features"></a>公开样式功能
+ 可以将图形元素的某些动态功能表示或*公开*为域属性。 以这种方式公开的功能可以由用户更新，并且可以更轻松地通过程序代码进行更新。
+
+ 右键单击 DSL 定义中的形状类，指向 "添加" "**添加**"，然后选择一项功能。
+
+ 在形状上，可以公开**FillColor**、 **OutlineColor**、 **TextColor**、 **OutlineDashStyle**、 **OutlineThickness**和**FillGradientMode**属性。 在连接器上，可以 `,`**TextColor**、 **DashStyle**和**宽窄**属性公开**颜色**。 在关系图上，可以公开**FillColor**和**TextColor**属性。
+
+## <a name="forwarding-displaying-properties-of-related-elements"></a>转发：显示相关元素的属性
+ 当 DSL 的用户选择模型中的元素时，该元素的属性将显示在 "属性" 窗口中。 但是，还可以显示指定相关元素的属性。 如果您定义了一组一起工作的元素，这会很有用。 例如，你可以定义一个主元素和一个可选的插件元素。 如果将主元素映射到某一形状，而另一个元素不是，则可以查看它们的所有属性，就好像它们位于一个元素上一样。
+
+ 这种效果命名为*属性转发*，并且在几种情况下会自动发生。 在其他情况下，可以通过定义域类型描述符来实现属性转发。
+
+### <a name="default-property-forwarding-cases"></a>默认属性转发事例
+ 当用户在资源管理器中选择形状或连接符或元素时，以下属性将显示在属性窗口中：
+
+- 在模型元素的域类上定义的域属性，包括基类中定义的属性。 例外情况是你为其设置**了可浏览**`False` 的域属性。
+
+- 通过具有重数为 0 ..1 的关系链接的元素的名称。 这提供了一种方便的方法来查看链接的元素，即使您没有为关系定义连接器映射也是如此。
+
+- 针对元素的嵌入关系的域属性。 由于嵌入关系通常不会显式显示，因此用户可以查看其属性。
+
+- 在选定的形状或连接线上定义的域属性。
+
+### <a name="adding-property-forwarding"></a>添加属性转发
+ 若要转发属性，请定义域类型描述符。 如果两个域类之间存在域关系，则可以使用域类型描述符将第一个类中的域属性设置为第二个域类中的域属性的值。 例如，如果您有一个**book**域类和一个**Author**域类之间的关系，则可以使用域类型描述符使该书**作者**的**Name**属性属性窗口在用户选择书籍。
+
 > [!NOTE]
-> 当用户编辑模型时，属性转发会影响仅属性窗口。 它不接收类上定义的域属性。 如果你想要访问已转发的域属性在 DSL 定义的其他部分或在程序代码中，你必须访问转发元素。  
-  
- 以下过程假设已创建 DSL。 第一个几个步骤总结了系统必备组件。  
-  
-##### <a name="to-forward-a-property-from-another-element"></a>若要从另一个元素转发属性  
-  
-1. 创建[!INCLUDE[dsl](../includes/dsl-md.md)]解决方案，其中包含至少两个类，它们在此示例中称为**书籍**并**作者**。 应该有任意一种类型之间的关系**书籍**并**作者**。  
-  
-     源角色的重数 (站点中的角色**书籍**端) 应为 0..1 或 1..1，因此每个**书籍**有一个**作者**。  
-  
-2. 在中**DSL 资源管理器**，右键单击**书籍**域类，然后单击**添加新 DomainTypeDescriptor**。  
-  
-     一个名为节点**自定义属性描述符的路径**下显示**自定义类型描述符**节点。  
-  
-3. 右键单击**自定义类型描述符**节点，并单击**添加新 PropertyPath**。  
-  
-     新的属性路径将显示下**自定义属性描述符的路径**节点。  
-  
-4. 选择新的属性路径，然后在**属性**窗口中，将**属性的路径**到适当的模型元素的路径。  
-  
-     通过单击该属性右侧的向下箭头，可以编辑树视图中的路径。 有关域路径的详细信息，请参阅[域路径语法](../modeling/domain-path-syntax.md)。 当你对其进行编辑时，路径应类似于**BookReferencesAuthor.Author/ ！作者**。  
-  
-5. 设置**属性**到**名称**域属性**作者**。  
-  
-6. 设置**显示名称**到**创作名称**。  
-  
-7. 转换所有模板、 生成并运行 DSL。  
-  
-8. 在模型图中，创建一本书，作者，并将它们使用引用关系链接。 选择的书元素，并在属性窗口中，您应看到作者姓名以及一书的属性。 更改链接作者的名称或链接到不同的作者，该书并观察一书的作者姓名发生更改。  
-  
-## <a name="custom-property-editors"></a>自定义属性编辑器  
- 属性窗口中提供了相应编辑体验的类型的每个域属性的默认值。 例如，对于枚举类型时，用户看到的下拉列表，并对于数值属性，用户可以输入数字。 这是仅适用于内置类型。 如果指定外部类型，用户将能够看到该属性的值，但无法编辑它。  
-  
- 但是，可以指定以下编辑器和类型：  
-  
-1. 与标准的类型一起使用的另一个编辑器。 例如，可以指定一个字符串属性的文件路径编辑器。  
-  
-2. 有关域属性，并为其编辑器外部类型。  
-  
-3. 诸如文件路径编辑器中，或您的.NET 编辑器可以创建你自己的自定义属性编辑器。  
-  
-    外部类型和字符串，具有一个默认编辑器，如类型之间转换。  
-  
-   在 DSL 中，*外部类型*是任何类型，不是简单类型 （例如布尔值或 Int32） 或字符串之一。  
-  
-#### <a name="to-define-a-domain-property-that-has-an-external-type"></a>若要定义一个具有外部类型的域属性  
-  
-1. 在中**解决方案资源管理器**，添加对程序集 (DLL) 中包含的外部类型的引用**Dsl**项目。  
-  
-    程序集可以是.NET 程序集或您提供的程序集。  
-  
-2. 添加到类型**域类型**列表中，除非你已这样做。  
-  
-   1. 打开 DslDefinition.dsl，然后在**DSL 资源管理器**，右键单击根节点，然后单击**添加新的外部类型**。  
-  
-        在下，将出现一个新项**域类型**节点。  
-  
+> 属性转发只会影响用户编辑模型时的属性窗口。 它不会在接收类中定义域属性。 如果要在 DSL 定义或程序代码的其他部分访问转发的域属性，则必须访问转发元素。
+
+ 以下过程假定已创建 DSL。 前几个步骤汇总了先决条件。
+
+##### <a name="to-forward-a-property-from-another-element"></a>从另一个元素转发属性
+
+1. 创建一个 [!INCLUDE[dsl](../includes/dsl-md.md)] 解决方案，该解决方案至少包含两个类，在此示例中称为**书籍**和**作者**。 **本书**和**Author**之间应有一种类型的关系。
+
+     源角色的重数（**本书**端角色）应为 0 ..1 或 1 ..1，以便每**本书**都有一个**作者**。
+
+2. 在 " **DSL 资源管理器**" 中，右键单击**Book**域类，然后单击 "**添加新 DomainTypeDescriptor**"。
+
+     自定义**类型描述符**节点下将显示名为**的自定义属性描述符的路径**。
+
+3. 右键单击 "**自定义类型描述符**" 节点，然后单击 "**添加新 PropertyPath**"。
+
+     新属性路径出现在 "**自定义属性描述符**" 节点的路径下。
+
+4. 选择新的属性路径，然后在 "**属性**" 窗口中，将 "**路径**" 设置为相应模型元素的路径。
+
+     通过单击此属性右侧的向下箭头，可以在树视图中编辑路径。 有关域路径的详细信息，请参阅[域路径语法](../modeling/domain-path-syntax.md)。 编辑后，路径应类似于**BookReferencesAuthor/！作者**。
+
+5. 将**属性**设置为**Author**的**Name**域属性。
+
+6. 将**显示名称**设置为**作者名称**。
+
+7. 转换所有模板，生成并运行 DSL。
+
+8. 在模型关系图中，创建一本书和一个作者，并使用引用关系进行链接。 选择 "书籍" 元素，然后在 "属性窗口除了书籍的属性之外，还应看到" 作者姓名 "。 更改链接的作者的名称，或将此书籍链接到其他作者，并观察该书籍的作者姓名是否更改。
+
+## <a name="custom-property-editors"></a>自定义属性编辑器
+ "属性" 窗口为每个域属性的类型提供了相应的默认编辑体验。 例如，对于枚举类型，用户将看到一个下拉列表，对于数值属性，用户可以输入数字。 这仅适用于内置类型。 如果指定外部类型，则用户将能够看到该属性的值，但不能对其进行编辑。
+
+ 不过，你可以指定以下编辑器和类型：
+
+1. 与标准类型一起使用的另一个编辑器。 例如，可以为字符串属性指定文件路径编辑器。
+
+2. 域属性的外部类型和其编辑器。
+
+3. .NET 编辑器（如文件路径编辑器），也可以创建自己的自定义属性编辑器。
+
+    外部类型与类型（如 String）之间的转换，该类型具有默认编辑器。
+
+   在 DSL 中，*外部类型*是任何不属于简单类型（如布尔值或 Int32）或字符串的类型。
+
+#### <a name="to-define-a-domain-property-that-has-an-external-type"></a>定义具有外部类型的域属性
+
+1. 在**解决方案资源管理器**中，在**Dsl**项目中添加对包含外部类型的程序集（DLL）的引用。
+
+    该程序集可以是 .NET 程序集，也可以是您提供的程序集。
+
+2. 将类型添加到 "**域类型**" 列表中，除非您已执行此操作。
+
+   1. 打开 Dsldefinition.dsl，并在**Dsl 资源管理器**中右键单击根节点，然后单击 "**添加新的外部类型**"。
+
+        新条目出现在 "**域类型**" 节点下。
+
        > [!WARNING]
-       > 菜单项不是在 DSL 的根节点，**域类型**节点。  
-  
-   2. 在属性窗口中设置的名称和新类型的命名空间。  
-  
-3. 将域属性添加到域类，以通常的方式。  
-  
-    在属性窗口中，从下拉列表中选择的外部类型**类型**字段。  
-  
-   在此阶段，用户可以查看的属性的值，但它们不能编辑它。 显示的值从获取`ToString()`函数。 您可以编写程序代码设置的值的属性，例如在命令窗口或规则。  
-  
-### <a name="setting-a-property-editor"></a>设置属性编辑器  
- 将 CLR 特性添加到域属性，采用以下形式：  
-  
-```  
-[System.ComponentModel.Editor (  
-   typeof(AnEditor),  
-   typeof(System.Drawing.Design.UITypeEditor))]  
-  
-```  
-  
- 可以通过使用在属性上设置属性**自定义特性**属性窗口中的条目。  
-  
- 类型`AnEditor`必须派生自第二个参数中指定的类型。 第二个参数应为<xref:System.Drawing.Design.UITypeEditor>或<xref:System.ComponentModel.ComponentEditor>。 有关详细信息，请参阅 <xref:System.ComponentModel.EditorAttribute>。  
-  
- 你可以指定自己的编辑器或编辑器中提供[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]，如<xref:System.Windows.Forms.Design.FileNameEditor>或<xref:System.Drawing.Design.ImageEditor>。 例如，使用以下过程以用户可在其中输入文件名称的属性。  
-  
-##### <a name="to-define-a-file-name-domain-property"></a>若要定义的文件名称的域属性  
-  
-1. 将域属性添加到 DSL 定义中的域类。  
-  
-2. 选择新的属性。 在中**自定义特性**字段属性窗口中，输入以下属性。 若要输入此属性，单击省略号 **[...]** 然后单独输入属性名称和参数：  
-  
-    ```  
-    [System.ComponentModel.Editor (  
-       typeof(System.Windows.Forms.Design.FileNameEditor)  
-       , typeof(System.Drawing.Design.UITypeEditor))]  
-  
-    ```  
-  
-3. 将保留为默认设置域属性的类型**字符串**。  
-  
-4. 若要测试编辑器中，验证用户可以打开要编辑域属性的文件名称编辑器。  
-  
-    1. 按 ctrl+f5 或 F5。 在调试解决方案中，打开一个测试文件。 创建域类的元素，并选择它。  
-  
-    2. 在属性窗口中，选择域属性。 值字段显示一个省略号 **[...]**.  
-  
-    3. 单击省略号。 文件对话框。 选择一个文件并关闭对话框。 文件路径现在是域属性的值。  
-  
-### <a name="defining-your-own-property-editor"></a>定义属性编辑器  
- 您可以定义自己的编辑器。 您可以实现此设置以允许用户编辑已定义的类型，或以特殊方式编辑标准类型。 例如，可以允许用户输入一个字符串，表示一个公式。  
-  
- 通过编写的类派生自定义编辑器<xref:System.Drawing.Design.UITypeEditor>。 您的类必须重写：  
-  
-- <xref:System.Drawing.Design.UITypeEditor.EditValue%2A>与用户交互和更新的属性值。  
-  
-- <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>指定是否在编辑器将打开一个对话框，或提供一个下拉列表菜单。  
-  
-  你还可以提供的图形表示形式将在属性网格中显示的属性的值。 若要执行此操作，重写`GetPaintValueSupported`，和`PaintValue`。  有关详细信息，请参阅 <xref:System.Drawing.Design.UITypeEditor>。  
-  
+       > 该菜单项在 DSL 根节点上，而不是 "**域类型**" 节点上。
+
+   2. 在属性窗口中设置新类型的名称和命名空间。
+
+3. 以常规方式向域类添加域属性。
+
+    在属性窗口的 "**类型**" 字段的下拉列表中，选择 "外部" 类型。
+
+   在此阶段，用户可以查看属性的值，但不能对其进行编辑。 将从 `ToString()` 函数获取显示的值。 您可以编写程序代码以设置属性的值，例如在命令或规则中。
+
+### <a name="setting-a-property-editor"></a>设置属性编辑器
+ 将 CLR 特性添加到域属性，格式如下：
+
+```
+[System.ComponentModel.Editor (
+   typeof(AnEditor),
+   typeof(System.Drawing.Design.UITypeEditor))]
+
+```
+
+ 您可以使用属性窗口中的**自定义特性**项设置属性的属性。
+
+ @No__t_0 的类型必须从第二个参数中指定的类型派生而来。 第二个参数应是 <xref:System.Drawing.Design.UITypeEditor> 或 <xref:System.ComponentModel.ComponentEditor>。 有关更多信息，请参见<xref:System.ComponentModel.EditorAttribute>。
+
+ 您可以指定您自己的编辑器或 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 中提供的编辑器，如 <xref:System.Windows.Forms.Design.FileNameEditor> 或 <xref:System.Drawing.Design.ImageEditor>。 例如，使用下面的过程可以拥有一个属性，用户可以在其中输入文件名。
+
+##### <a name="to-define-a-file-name-domain-property"></a>定义文件名域属性
+
+1. 向 DSL 定义中的域类添加域属性。
+
+2. 选择新属性。 在属性窗口的 "**自定义特性**" 字段中，输入以下属性。 若要输入此属性，请单击省略号 **[...]** ，并分别输入属性名称和参数：
+
+    ```
+    [System.ComponentModel.Editor (
+       typeof(System.Windows.Forms.Design.FileNameEditor)
+       , typeof(System.Drawing.Design.UITypeEditor))]
+
+    ```
+
+3. 保留域属性的类型，其默认设置为 "**字符串**"。
+
+4. 若要测试编辑器，请验证用户是否可以打开文件名编辑器来编辑域属性。
+
+    1. 按 CTRL + F5 或 F5。 在调试解决方案中，打开测试文件。 创建域类的元素并将其选中。
+
+    2. 在属性窗口中，选择 "域" 属性。 值字段显示省略号 **[...]** 。
+
+    3. 单击省略号。 此时将显示一个文件对话框。 选择一个文件并关闭对话框。 文件路径现在为域属性的值。
+
+### <a name="defining-your-own-property-editor"></a>定义自己的属性编辑器
+ 您可以定义自己的编辑器。 您可以通过此操作来允许用户编辑您定义的类型，或以特殊方式编辑标准类型。 例如，您可以允许用户输入表示公式的字符串。
+
+ 通过编写派生自 <xref:System.Drawing.Design.UITypeEditor> 的类来定义编辑器。 你的类必须重写：
+
+- <xref:System.Drawing.Design.UITypeEditor.EditValue%2A>，用于与用户交互并更新属性值。
+
+- <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>，指定编辑器是打开对话框还是提供下拉菜单。
+
+  还可以提供属性的值的图形表示形式，该属性的值将显示在属性网格中。 为此，请重写 `GetPaintValueSupported` 和 `PaintValue`。  有关更多信息，请参见<xref:System.Drawing.Design.UITypeEditor>。
+
 > [!NOTE]
-> 在单独的代码文件中添加代码**Dsl**项目。  
-  
- 例如：  
-  
-```  
-internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor  
-{  
-  protected override void InitializeDialog(System.Windows.Forms.OpenFileDialog openFileDialog)  
-  {  
-    base.InitializeDialog(openFileDialog);  
-    openFileDialog.Filter = "Text files(*.txt)|*.txt|All files (*.*)|*.*";  
-    openFileDialog.Title = "Select a text file";  
-  }  
-}  
-  
-```  
-  
- 若要使用此编辑器，将**自定义特性**到域属性：  
-  
-```  
-[System.ComponentModel.Editor (  
-   typeof(MyNamespace.TextFileNameEditor)  
-   , typeof(System.Drawing.Design.UITypeEditor))]  
-  
-```  
-  
- 有关详细信息，请参阅 <xref:System.Drawing.Design.UITypeEditor>。  
-  
-## <a name="providing-a-drop-down-list-of-values"></a>提供值下拉的列表  
- 可以提供一系列可供选择的用户的值。  
-  
+> 在**Dsl**项目的单独代码文件中添加代码。
+
+ 例如:
+
+```
+internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor
+{
+  protected override void InitializeDialog(System.Windows.Forms.OpenFileDialog openFileDialog)
+  {
+    base.InitializeDialog(openFileDialog);
+    openFileDialog.Filter = "Text files(*.txt)|*.txt|All files (*.*)|*.*";
+    openFileDialog.Title = "Select a text file";
+  }
+}
+
+```
+
+ 若要使用此编辑器，请将域属性的**自定义属性**设置为：
+
+```
+[System.ComponentModel.Editor (
+   typeof(MyNamespace.TextFileNameEditor)
+   , typeof(System.Drawing.Design.UITypeEditor))]
+
+```
+
+ 有关更多信息，请参见<xref:System.Drawing.Design.UITypeEditor>。
+
+## <a name="providing-a-drop-down-list-of-values"></a>提供值的下拉列表
+ 您可以为用户提供值列表以供选择。
+
 > [!NOTE]
-> 此方法提供了一系列可以在运行时更改的值。 如果你想要提供一个列表，其中不会更改，请考虑改为使用一个枚举的类型作为域属性的类型。  
-  
- 若要定义的标准值的列表，您将添加到域属性的 CLR 属性，具有以下形式：  
-  
-```  
-[System.ComponentModel.TypeConverter   
-(typeof(MyTypeConverter))]  
-  
-```  
-  
- 定义一个从 <xref:System.ComponentModel.TypeConverter> 派生的类。 在一个单独的文件中添加代码**Dsl**项目。 例如：  
-  
-```csharp  
-/// <summary>  
-/// Type converter that provides a list of values   
-/// to be displayed in the property grid.  
-/// </summary>  
-/// <remarks>This type converter returns a list   
-/// of the names of all "ExampleElements" in the   
-/// current store.</remarks>  
-public class MyTypeConverter : System.ComponentModel.TypeConverter  
-{  
-  /// <summary>  
-  /// Return true to indicate that we return a list of values to choose from  
-  /// </summary>  
-  /// <param name="context"></param>  
-  public override bool GetStandardValuesSupported  
-    (System.ComponentModel.ITypeDescriptorContext context)  
-  {  
-    return true;  
-  }  
-  
-  /// <summary>  
-  /// Returns true to indicate that the user has   
-  /// to select a value from the list  
-  /// </summary>  
-  /// <param name="context"></param>  
-  /// <returns>If we returned false, the user would   
-  /// be able to either select a value from   
-  /// the list or type in a value that is not in the list.</returns>  
-  public override bool GetStandardValuesExclusive  
-      (System.ComponentModel.ITypeDescriptorContext context)  
-  {  
-    return true;  
-  }  
-  
-  /// <summary>  
-  /// Return a list of the values to display in the grid  
-  /// </summary>  
-  /// <param name="context"></param>  
-  /// <returns>A list of values the user can choose from</returns>  
-  public override StandardValuesCollection GetStandardValues  
-      (System.ComponentModel.ITypeDescriptorContext context)  
-  {  
-    // Try to get a store from the current context  
-    // "context.Instance"  returns the element(s) that   
-    // are currently selected i.e. whose values are being  
-    // shown in the property grid.   
-    // Note that the user could have selected multiple objects,   
-    // in which case context.Instance will be an array.  
-    Store store = GetStore(context.Instance);  
-  
-    List<string> values = new List<string>();  
-  
-    if (store != null)  
-    {  
-      values.AddRange(store.ElementDirectory  
-        .FindElements<ExampleElement>()  
-        .Select<ExampleElement, string>(e =>   
-      {  
-        return e.Name;  
-      }));  
-    }  
-    return new StandardValuesCollection(values);  
-  }  
-  
-  /// <summary>  
-  /// Attempts to get to a store from the currently selected object(s)  
-  /// in the property grid.  
-  /// </summary>  
-  private Store GetStore(object gridSelection)  
-  {  
-    // We assume that "instance" will either be a single model element, or   
-    // an array of model elements (if multiple items are selected).  
-  
-    ModelElement currentElement = null;  
-  
-    object[] objects = gridSelection as object[];  
-    if (objects != null && objects.Length > 0)  
-    {  
-      currentElement = objects[0] as ModelElement;  
-    }  
-    else  
-    {  
-        currentElement = gridSelection as ModelElement;  
-    }  
-  
-    return (currentElement == null) ? null : currentElement.Store;  
-  }  
-  
-}  
-  
-```  
-  
-## <a name="see-also"></a>请参阅  
+> 此方法提供了在运行时可以更改的值的列表。 如果希望提供不会更改的列表，请考虑改用枚举类型作为域属性的类型。
+
+ 若要定义标准值的列表，请将一个具有以下格式的 CLR 特性添加到域属性：
+
+```
+[System.ComponentModel.TypeConverter
+(typeof(MyTypeConverter))]
+
+```
+
+ 定义一个从 <xref:System.ComponentModel.TypeConverter> 派生的类。 将代码添加到**Dsl**项目的单独文件中。 例如:
+
+```csharp
+/// <summary>
+/// Type converter that provides a list of values
+/// to be displayed in the property grid.
+/// </summary>
+/// <remarks>This type converter returns a list
+/// of the names of all "ExampleElements" in the
+/// current store.</remarks>
+public class MyTypeConverter : System.ComponentModel.TypeConverter
+{
+  /// <summary>
+  /// Return true to indicate that we return a list of values to choose from
+  /// </summary>
+  /// <param name="context"></param>
+  public override bool GetStandardValuesSupported
+    (System.ComponentModel.ITypeDescriptorContext context)
+  {
+    return true;
+  }
+
+  /// <summary>
+  /// Returns true to indicate that the user has
+  /// to select a value from the list
+  /// </summary>
+  /// <param name="context"></param>
+  /// <returns>If we returned false, the user would
+  /// be able to either select a value from
+  /// the list or type in a value that is not in the list.</returns>
+  public override bool GetStandardValuesExclusive
+      (System.ComponentModel.ITypeDescriptorContext context)
+  {
+    return true;
+  }
+
+  /// <summary>
+  /// Return a list of the values to display in the grid
+  /// </summary>
+  /// <param name="context"></param>
+  /// <returns>A list of values the user can choose from</returns>
+  public override StandardValuesCollection GetStandardValues
+      (System.ComponentModel.ITypeDescriptorContext context)
+  {
+    // Try to get a store from the current context
+    // "context.Instance"  returns the element(s) that
+    // are currently selected i.e. whose values are being
+    // shown in the property grid.
+    // Note that the user could have selected multiple objects,
+    // in which case context.Instance will be an array.
+    Store store = GetStore(context.Instance);
+
+    List<string> values = new List<string>();
+
+    if (store != null)
+    {
+      values.AddRange(store.ElementDirectory
+        .FindElements<ExampleElement>()
+        .Select<ExampleElement, string>(e =>
+      {
+        return e.Name;
+      }));
+    }
+    return new StandardValuesCollection(values);
+  }
+
+  /// <summary>
+  /// Attempts to get to a store from the currently selected object(s)
+  /// in the property grid.
+  /// </summary>
+  private Store GetStore(object gridSelection)
+  {
+    // We assume that "instance" will either be a single model element, or
+    // an array of model elements (if multiple items are selected).
+
+    ModelElement currentElement = null;
+
+    object[] objects = gridSelection as object[];
+    if (objects != null && objects.Length > 0)
+    {
+      currentElement = objects[0] as ModelElement;
+    }
+    else
+    {
+        currentElement = gridSelection as ModelElement;
+    }
+
+    return (currentElement == null) ? null : currentElement.Store;
+  }
+
+}
+
+```
+
+## <a name="see-also"></a>请参阅
  [在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)

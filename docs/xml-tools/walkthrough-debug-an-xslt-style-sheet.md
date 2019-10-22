@@ -3,104 +3,104 @@ title: 调试 XSLT 样式表
 ms.date: 03/05/2019
 ms.topic: conceptual
 ms.assetid: 3db9fa5a-f619-4cb6-86e7-64b364e58e5d
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e787ca3d2d29f04d6af27a5f36f1f84c9d0bc9f4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0c1f774757acc293091f19a783ed93f34647d494
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62808461"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72604614"
 ---
 # <a name="walkthrough-debug-an-xslt-style-sheet"></a>演练：调试 XSLT 样式表
 
-此演练中的步骤演示如何使用 XSLT 调试程序。 步骤包括查看变量、设置断点和逐行执行代码。 调试程序，可一次执行一行代码。
+此演练中的步骤演示如何使用 XSLT 调试程序。 步骤包括查看变量、设置断点和逐行执行代码。 调试器允许您一次执行一行代码。
 
-若要准备此演练，请首先将复制这两个[示例文件](#sample-files)到本地计算机。 一个样式表，其中一个是 XML 文件，我们将使用作为输入的样式表。 在此演练中，我们使用的样式表查找所有它的成本低于平均书价的书籍。
+若要为此演练做好准备，请先将两个[示例文件](#sample-files)复制到本地计算机。 其中一种是样式表，另一种是作为样式表的输入而使用的 XML 文件。 在本演练中，我们使用的样式表将查找成本低于平均帐面价格的所有书籍。
 
 > [!NOTE]
-> XSLT 调试程序是仅在 Visual Studio Enterprise edition 中可用。
+> XSLT 调试程序仅适用于 Visual Studio Enterprise edition。
 
 ## <a name="start-debugging"></a>“启动调试”
 
-1. 从**文件**菜单中，选择**打开** > **文件**。
+1. 从 "**文件**" 菜单中，选择 "**打开** > **文件**"。
 
-2. 找到*average.xsl 下面*文件，然后选择**打开**。
+2. 找到 " *below-average* " 文件，然后选择 "**打开**"。
 
-   在 XML 编辑器中打开样式表。
+   样式表在 XML 编辑器中打开。
 
-3. 单击浏览按钮 (**...**) 上**输入**字段的文档属性窗口。 (如果**属性**窗口不可见，右键单击编辑器中打开的文件的任意位置，然后选择**属性**。)
+3. 在文档属性窗口的 "**输入**" 字段上单击 "浏览" 按钮（ **...** ）。 （如果 "**属性**" 窗口不可见，则在编辑器中打开的文件的任何位置右键单击，然后选择 "**属性**"。）
 
-4. 找到*books.xml*文件，，然后选择**打开**。
+4. 找到*books.xml*文件，然后选择 "**打开**"。
 
-   此设置用于 XSLT 转换的源文档文件。
+   这会设置用于 XSLT 转换的源文档文件。
 
-5. 设置[断点](../debugger/using-breakpoints.md)在第 12 个行*如下 average.xsl*。 你可以通过多种方式之一：
+5. 在*below-average*的第12行设置一个[断点](../debugger/using-breakpoints.md)。 可以通过多种方式之一执行此操作：
 
-   - 在第 12 行编辑器边距中单击。
+   - 在第12行的编辑器边距中单击。
 
-   - 单击第 12 行上的任意位置，然后按**F9**。
+   - 单击第12行的任意位置，然后按**F9**。
 
-   - 右键单击`xsl:if`开始标记处，，然后选择**断点** > **插入断点**。
+   - 右键单击 `xsl:if` "开始" 标记，然后选择 "**断点**"  > **插入断点**"。
 
       ![在 Visual Studio 中的 XSL 文件中插入断点](media/insert-breakpoint.PNG)
 
-6. 在菜单栏上依次选择**XML** > **启动 XSLT 调试**(或按**Alt**+**F5**)。
+6. 在菜单栏上，选择 " **XML**  > "**开始 XSLT 调试**"（或按**Alt** +**F5**）。
 
-   在调试过程开始。
+   调试过程开始。
 
-   在编辑器中，调试器位于上`xsl:if`元素的样式表。 另一个名为的文件*average.xml 下面*编辑器; 中打开这是将填充为输入文件中的每个节点的输出文件*books.xml*进行处理。
+   在编辑器中，调试器定位在样式表的 `xsl:if` 元素上。 在编辑器中打开名为*below-average*的另一个文件;这是将在输入文件*books.xml*处理中的每个节点时进行填充的输出文件。
 
-   **自动**，**局部变量**，并**监视 1** windows 显示在 Visual Studio 窗口的底部。 **局部变量**窗口显示所有局部变量及其当前值。 其中包括样式表中定义的变量，也包括调试程序在跟踪上下文中的当前节点时使用的变量。
+   "自动 **"、"** **局部变量**" 和 "**监视 1** " 窗口将出现在 Visual Studio 窗口的底部。 "**局部变量**" 窗口显示所有局部变量及其当前值。 其中包括样式表中定义的变量，也包括调试程序在跟踪上下文中的当前节点时使用的变量。
 
 ## <a name="watch-window"></a>监视窗口
 
-我们将添加到两个变量**监视 1**窗口，使我们可以在处理输入的文件时检查它们的值。 (还可以使用**局部变量**窗口来检查值，如果您想要监视的变量已存在。)
+我们会将两个变量添加到 "**监视 1** " 窗口中，以便可以在处理输入文件时检查其值。 （如果您想要监视的变量已经存在，还可以使用 "**局部变量**" 窗口来检查值。）
 
-1. 从**调试**菜单中，选择**Windows** > **监视** > **监视 1**。
+1. 从 "**调试**" 菜单中选择 " **Windows**  > **watch**  > **watch 1**"。
 
-   **监视 1**窗口变得可见。
+   "**监视 1** " 窗口变为可见。
 
-2. 类型`$bookAverage`中**名称**字段中，，然后按**Enter**。
+2. 在 "**名称**" 字段中键入 `$bookAverage`，然后按**enter**。
 
-   值`$bookAverage`变量显示在**值**字段。
+   @No__t_0 变量的值将显示在 "**值**" 字段中。
 
-3. 在下一步的行中键入`self::node()`中**名称**字段中，，然后按**Enter**。
+3. 在下一行中，在 "**名称**" 字段中键入 `self::node()`，然后按**enter**。
 
    `self::node()` 是一个计算结果为当前上下文节点的 XPath 表达式。 `self::node()` XPath 表达式的值是第一个 book 节点。 此值随着转换的进度而更改。
 
-4. 展开`self::node()`节点，然后展开节点谁具有值为`price`。
+4. 展开 "`self::node()`" 节点，然后展开值为 "`price`" 的节点。
 
-   ![在 Visual Studio 中调试 XSLT 监视窗口](media/xslt-debugging-watch-window.png)
+   ![在 Visual Studio 中执行 XSLT 调试期间监视窗口](media/xslt-debugging-watch-window.png)
 
-   您可以查看当前 book 节点的书价的值并将对其进行比较`$bookAverage`值。 因为书价低于平均值，`xsl:if`条件应成立时继续调试过程。
+   您可以查看当前书本节点的书籍价格值并将其与 `$bookAverage` 值进行比较。 因为帐面价格低于平均值，所以当您继续调试过程时，`xsl:if` 条件应该会成功。
 
 ## <a name="step-through-the-code"></a>单步执行代码
 
-1. 按 F5 继续。
+1. 按 F5继续。
 
-   因为第一个 book 节点满足`xsl:if`条件，book 节点将添加到*如下 average.xml*输出文件。 调试器继续执行，直到它再次位于样式表中的 `xsl:if` 元素上。 调试器此时位于上的第二个 book 节点中*books.xml*文件。
+   由于第一个书节点满足 `xsl:if` 条件，因此会将 "书籍" 节点添加到*below-average*输出文件。 调试器继续执行，直到它再次位于样式表中的 `xsl:if` 元素上。 调试器现在位于*books.xml*文件中的第二个 book 节点上。
 
-   在中**监视 1**窗口中，`self::node()`值更改为第二个 book 节点。 通过检查 price 元素的值，可以确定价格高于平均值，所以，`xsl:if` 条件应失败。
+   在 "**监视 1** " 窗口中，`self::node()` 值将更改为第二个 book 节点。 通过检查 price 元素的值，可以确定价格高于平均值，所以，`xsl:if` 条件应失败。
 
-2. 按 F5 继续。
+2. 按 F5继续。
 
-   因为第二个 book 节点不满足`xsl:if`条件，不添加到 book 节点*如下 average.xml*输出文件。 调试器继续执行，直到它再次位于上`xsl:if`样式表中的元素。 调试器此时位于第三次`book`中的节点*books.xml*文件。
+   由于第二个 book 节点不满足 `xsl:if` 条件，因此不会将书籍节点添加到*below-average*输出文件中。 调试器将继续执行，直到它再次定位在样式表中的 `xsl:if` 元素上。 调试器现在位于*books.xml*文件中的第三个 `book` 节点上。
 
-   在中**监视 1**窗口中，`self::node()`值更改为第三个 book 节点。 通过检查的值`price`元素中，您可以确定价格低于平均值。 `xsl:if`条件应成立。
+   在 "**监视 1** " 窗口中，`self::node()` 值将更改为 "第三个书籍" 节点。 通过检查 `price` 元素的值，可以确定价格低于平均值。 @No__t_0 条件应该会成功。
 
-3. 按 F5 继续。
+3. 按 F5继续。
 
-   因为`xsl:if`满足条件时，第三个丛书将添加到*如下 average.xml*输出文件。 XML 文档中的所有 book 节点均已处理，调试程序停止。
+   由于满足了 `xsl:if` 条件，因此第三个书籍将添加到*below-average*输出文件中。 XML 文档中的所有 book 节点均已处理，调试程序停止。
 
 ## <a name="sample-files"></a>示例文件
 
 下列两个文件供该演练使用。
 
-### <a name="below-averagexsl"></a>below-average.xsl
+### <a name="below-averagexsl"></a>below-average
 
 ```xml
 <?xml version='1.0'?>

@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty::GetExtendedInfo | Microsoft Docs
+title: IDebugProperty：： GetExtendedInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 707474f786a8f88c0e08d887f2c2b09c8aaedc8e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 130d11c8ed6bb21210d129bb9aace779db3bd54b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979118"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72562387"
 ---
 # <a name="idebugpropertygetextendedinfo"></a>IDebugProperty::GetExtendedInfo
-获取扩展的属性信息。  
+获取属性的扩展信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,19 +39,19 @@ HRESULT GetExtendedInfo (
   
 #### <a name="parameters"></a>参数  
  `cInfos`  
- [in]扩展的信息对象的计数。  
+ 中扩展信息对象的计数。  
   
  `rgguidExtendedInfo`  
- [in]一个数组`GUID`s 传递，以便可以在同一时间检索多个项的扩展信息。  
+ 中传递 `GUID`s 的数组，以便可以同时检索多个扩展信息项。  
   
  `pExtendedInfo`  
- [out]返回一个数组`VARIANT`s 可用于检索的扩展的属性信息。  
+ 弄返回可用于检索扩展属性信息的 `VARIANT`s 的数组。  
   
 ## <a name="return-value"></a>返回值  
- 返回一个有效`HRESULT`，通常`S_OK`。  
+ 返回一个有效 `HRESULT`，通常 `S_OK`。  
   
 ## <a name="remarks"></a>备注  
- 此接口获取扩展此对象的信息。 API 存在唯一目的是检索不会将自身添加到通过使用要检索的信息为了`IDebugProperty::GetPropertyInfo`)。  
+ 此接口获取此对象的扩展信息。 API 存在的目的只是为了检索不能通过使用 `IDebugProperty::GetPropertyInfo` 来检索的信息。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugProperty 接口](../../winscript/reference/idebugproperty-interface.md)

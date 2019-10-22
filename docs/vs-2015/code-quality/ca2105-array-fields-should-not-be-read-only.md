@@ -1,5 +1,5 @@
 ---
-title: CA2105:不应仅读取数组字段 |Microsoft Docs
+title: CA2105：数组字段不应为只读 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - CA2105
 ms.assetid: 0bdc3421-3ceb-4182-b30c-a992fbfcc35d
 caps.latest.revision: 18
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 4741b30d1429a1a179328c8fb4b150fc4f920612
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7599359899ca4860913b5bc0dd601fd06d9b8b54
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68154388"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666014"
 ---
-# <a name="ca2105-array-fields-should-not-be-read-only"></a>CA2105:数组字段不应为只读
+# <a name="ca2105-array-fields-should-not-be-read-only"></a>CA2105：数组字段不应为只读
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
@@ -33,40 +33,40 @@ ms.locfileid: "68154388"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 保存数组的公共或受保护字段是只读的声明的。
+ 保存数组的公共或受保护字段声明为只读。
 
 ## <a name="rule-description"></a>规则说明
- 当应用`readonly`(`ReadOnly`中[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) 不能更改为包含一个数组，该字段的字段修饰符来指代不同的数组。 但是，可以更改在只读字段中存储的数组的元素。 制定决策或执行基于可以公开访问的只读数组的元素的操作的代码可能包含可利用的安全漏洞。
+ 向包含数组的字段应用 `readonly` （[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 中 `ReadOnly`）修饰符时，无法将该字段更改为引用其他数组。 但是，可以更改在只读字段中存储的数组的元素。 根据可公开访问的只读数组元素进行决策或执行操作的代码可能包含可利用的安全漏洞。
 
- 请注意，具有公共字段也违反了设计规则[CA1051:不要声明可见实例字段](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)。
+ 请注意，拥有公共字段也会违反设计规则[CA1051：不要声明可见实例字段](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要解决由该规则标识的安全漏洞，不要依赖于可公开访问的只读数组的内容。 强烈建议你使用以下过程之一：
+ 若要修复此规则标识的安全漏洞，请不要依赖于可公开访问的只读数组的内容。 强烈建议使用以下过程之一：
 
-- 将不能更改的强类型集合替换为数组。 有关详细信息，请参阅 <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName> 。
+- 将数组替换为无法更改的强类型集合。 有关更多信息，请参见<xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>。
 
-- 使用返回私有数组副本的方法替换公共字段。 你的代码不依赖于克隆，因为如果，则不存在风险修改元素。
+- 使用返回私有数组的克隆的方法替换公共字段。 由于你的代码不依赖于克隆，因此，如果修改了这些元素，则没有任何风险。
 
-  如果你选择第二种方法，请不该字段将替换为属性;属性返回数组造成负面影响性能。 有关详细信息，请参阅[CA1819:属性不应返回数组](../code-quality/ca1819-properties-should-not-return-arrays.md)。
+  如果选择第二种方法，请不要将该字段替换为属性;返回数组的属性会对性能产生负面影响。 有关详细信息，请参阅[CA1819：属性不应返回数组](../code-quality/ca1819-properties-should-not-return-arrays.md)。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 强烈建议不要使用此规则的警告中排除。 几乎在任何情况下发生其中只读字段的内容并不重要。 如果与你的方案的情况，请删除`readonly`修饰符而不是排除警告消息。
+ 强烈建议排除此规则发出的警告。 几乎不会出现只读字段内容不重要的情况。 如果是这种情况，请删除 `readonly` 修饰符，而不是排除消息。
 
 ## <a name="example"></a>示例
- 此示例演示了违反此规则的危险。 第一部分显示了一个示例库，它有一个类型， `MyClassWithReadOnlyArrayField`，，其中包含两个字段 (`grades`和`privateGrades`) 的不安全。 该字段`grades`是公共的而且因此容易受到任何调用方。 该字段`privateGrades`是私有的但是仍易受攻击，因为它将返回到调用方通过`GetPrivateGrades`方法。 `securePrivateGrades`以通过安全方式公开字段`GetSecurePrivateGrades`方法。 它声明为私有，应遵循良好的设计做法。 第二部分演示中存储的值更改的代码`grades`和`privateGrades`成员。
+ 此示例演示违反此规则的危险。 第一部分显示了一个示例库，其中的类型为 `MyClassWithReadOnlyArrayField`，该类型包含不安全的两个字段（`grades` 和 `privateGrades`）。 该字段 `grades` 是公共的，因此很容易受到任何调用方的攻击。 该字段 `privateGrades` 是私有的，但仍有漏洞，因为 `GetPrivateGrades` 方法将其返回给调用方。 @No__t_1 方法以安全的方式公开 `securePrivateGrades` 字段。 它被声明为私有，以遵循良好的设计做法。 第二个部分显示了代码，这些代码将更改存储在 `grades` 和 `privateGrades` 成员中的值。
 
- 示例类库显示在下面的示例。
+ 示例类库在下面的示例中显示。
 
  [!code-csharp[FxCop.Security.ArrayFieldsNotReadOnly#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.ArrayFieldsNotReadOnly/cs/FxCop.Security.ArrayFieldsNotReadOnly.cs#1)]
 
 ## <a name="example"></a>示例
- 以下代码使用示例类库演示只读数组安全问题。
+ 下面的代码使用示例类库来说明只读数组安全问题。
 
  [!code-csharp[FxCop.Security.TestArrayFieldsRead#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.TestArrayFieldsRead/cs/FxCop.Security.TestArrayFieldsRead.cs#1)]
 
- 此示例的输出是：
+ 此示例的输出为：
 
- **之前篡改：等级：90，90，90 专用年级：90，90，90 保护等级，90，90，90**
-**后篡改：等级：90、 555，90 专用年级：90、 555、 90 保护等级，90，90，90**
+ **在篡改之前：90、90、90 Private 成绩：90、90、90安全等级、90、90、90** 
+**篡改后：分数：90、555、90 Private 成绩：90、555、** 90、90、90、90、
 ## <a name="see-also"></a>请参阅
  <xref:System.Array?displayProperty=fullName> <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>

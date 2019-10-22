@@ -1,5 +1,5 @@
 ---
-title: 应为的常量 |Microsoft Docs
+title: 应为常量 |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,21 +14,21 @@ ms.assetid: 8da7485f-7050-4559-97c3-ccfa782cdff3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 10564f34683fec5c38ae069f2fb0c51fb0c8902a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7bb822b6b6224748c51da2220461a232cab6134b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935089"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573408"
 ---
 # <a name="expected-constant"></a>应为常量
-你尝试在条件编译测试语句中使用 （非条件编译） 变量。 测试条件编译语句的计算结果必须是常数。  
+您尝试在条件编译测试语句中使用（非条件编译）变量。 条件编译测试语句的计算结果必须为常量。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 将文本替换为该变量。  
+- 将变量替换为文本。  
   
-- 将条件编译变量替换为该变量。  
+- 将变量替换为条件编译变量。  
   
 ## <a name="see-also"></a>请参阅  
  [条件编译](../../javascript/advanced/conditional-compilation-javascript.md)   

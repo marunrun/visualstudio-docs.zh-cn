@@ -1,25 +1,25 @@
 ---
-title: 混合最少量规则规则集 |Microsoft Docs
+title: 混合最低规则规则集 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 ms.assetid: bc8df61c-19af-40ab-a871-315807e5f4bf
 caps.latest.revision: 6
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 7c690389b5abc3b6e37aed1629ae5a640a5d99a7
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 36681eaa7a9e384c10d92ab26b214c782d2378a6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65682208"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654860"
 ---
 # <a name="mixed-minimum-rules-rule-set"></a>“混合最少量规则”规则集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Microsoft 混合最少量规则专注于中的最关键问题在C++支持公共语言运行时，包括潜在安全漏洞和应用程序崩溃的项目。 应包含此规则集创建的任何自定义规则集中将C++支持公共语言运行时的项目。  
+Microsoft 混合的最小规则重点介绍支持公共语言运行时C++的项目中最关键的问题，包括潜在的安全漏洞和应用程序崩溃。 应在为支持公共语言运行时的C++项目创建的任何自定义规则集中包含此规则集。
 
 |                                            规则                                             |                                                  描述                                                  |
 |---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
@@ -75,7 +75,7 @@ Microsoft 混合最少量规则专注于中的最关键问题在C++支持公共�
 |        [C6523](https://msdn.microsoft.com/11397a31-b224-46b0-afb7-d49ca576a3bb)        |                                         无效大小的字符串参数                                         |
 |                              [C6525](../code-quality/c6525.md)                              |                                   无效大小字符串的不可访问的位置                                    |
 |        [C6526](https://msdn.microsoft.com/59c590c7-0098-4166-a1ac-87f324596002)        |                                        无效大小的字符串缓冲区类型                                        |
-|                              [C6527](../code-quality/c6527.md)                              |              无效的批注：NeedsRelease 属性不用于 void 类型的值               |
+|                              [C6527](../code-quality/c6527.md)                              |              无效的批注：“NeedsRelease”属性可能不可用于 void 类型的值               |
 |                              [C6530](../code-quality/c6530.md)                              |                                       无法识别的格式字符串样式                                        |
 |                              [C6540](../code-quality/c6540.md)                              | 对该函数使用属性批注将使其现有的所有 __declspec 批注无效  |
 |                              [C6551](../code-quality/c6551.md)                              |                              大小规范无效：表达式不可分析                              |
@@ -101,7 +101,7 @@ Microsoft 混合最少量规则专注于中的最关键问题在C++支持公共�
 |                             [C28215](../code-quality/c28215.md)                             |                    不能将 typefix 应用于已包含 typefix 的参数                    |
 |                             [C28216](../code-quality/c28216.md)                             |        checkReturn 批注仅应用于特定函数参数的后置条件。         |
 |                             [C28217](../code-quality/c28217.md)                             |            对于函数，批注的参数数目与在文件中找到的数目不匹配             |
-|                             [C28218](../code-quality/c28218.md)                             |             对于函数参数，批注的参数不匹配，在文件中找到              |
+|                             [C28218](../code-quality/c28218.md)                             |             对于函数参数，批注的参数与在文件中找到的参数不匹配              |
 |                             [C28219](../code-quality/c28219.md)                             |                 批注中的批注参数所需的枚举成员                 |
 |                             [C28220](../code-quality/c28220.md)                             |                  批注中的批注参数所需的整数表达式                   |
 |                             [C28221](../code-quality/c28221.md)                             |                        批注中的参数所需的字符串表达式                         |
@@ -146,7 +146,7 @@ Microsoft 混合最少量规则专注于中的最关键问题在C++支持公共�
 |                             [C28286](../code-quality/c28286.md)                             |                                    对于函数，在其结尾附近出现语法错误                                    |
 |                             [C28287](../code-quality/c28287.md)                             |                对于函数，在 \_At\_() 批注中出现语法错误（无法识别的参数名）                |
 |                             [C28288](../code-quality/c28288.md)                             |                  对于函数，在 \_At\_() 批注中出现语法错误（无效的参数名）                   |
-|                             [C28289](../code-quality/c28289.md)                             |                对于函数：ReadableTo 或 WritableTo 没有限制规范作为参数                |
+|                             [C28289](../code-quality/c28289.md)                             |                对于函数：ReadableTo 或 WritableTo 没有用作参数的限制规范                |
 |                             [C28290](../code-quality/c28290.md)                             |           函数的批注包含的外部对象数量多于实际的参数数量            |
 |                             [C28291](../code-quality/c28291.md)                             |                        deref 级别 0 处的 post null/notnull 对于函数无意义。                        |
 |                             [C28300](../code-quality/c28300.md)                             |                            运算符的不可兼容类型的表达式操作数                             |

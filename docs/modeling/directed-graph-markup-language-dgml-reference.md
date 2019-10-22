@@ -2,28 +2,28 @@
 title: 定向图形标记语言 (DGML) 引用
 ms.date: 11/04/2016
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b473dc706cd7183835c5d84091fb53e45337c013
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f6d29717c57d37daf200a859fb12f88c1108520b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834212"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653855"
 ---
 # <a name="directed-graph-markup-language-dgml-reference"></a>定向图形标记语言 (DGML) 引用
 
 定向图形标记语言 (DGML) 描述用于可视化和执行复杂分析的信息，并且是用于存留 Visual Studio 中的代码图的格式。 DGML 使用简单 XML 来描述循环和非循环的定向关系图。 定向关系图是一组由链接或边缘连接的节点。 可以使用节点和链接来表示网络结构，如软件项目中的元素。
 
-请注意，某些版本的 Visual Studio 支持仅部分 DGML 功能，请参阅[体系结构和建模工具的版本支持](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
+请注意，某些版本的 Visual Studio 仅支持 DGML 功能的一个子集，请参阅[体系结构和建模工具的版本支持](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
 > [!NOTE]
-> 在编辑 .dgml 文件时，IntelliSense 可帮助您标识对每个元素及其值可用的特性。 若要指定特性中的颜色，请使用常用颜色的名称，如“Blue”或 ARGB 十六进制值（如“#ffa0b1c3”）。 DGML 使用一小部分 Windows Presentation Foundation (WPF) 颜色定义格式。 有关详细信息，请参阅[颜色类](http://go.microsoft.com/fwlink/?LinkId=182345)。
+> 在编辑 .dgml 文件时，IntelliSense 可帮助您标识对每个元素及其值可用的特性。 若要指定特性中的颜色，请使用常用颜色的名称，如“Blue”或 ARGB 十六进制值（如“#ffa0b1c3”）。 DGML 使用一小部分 Windows Presentation Foundation (WPF) 颜色定义格式。 有关详细信息，请参阅[Colors 类](http://go.microsoft.com/fwlink/?LinkId=182345)。
 
-## <a name="DGML"></a> DGML 语法
+## <a name="DGML"></a>DGML 语法
 
 下表描述在 DGML 中使用的各种元素：
 
@@ -37,11 +37,11 @@ ms.locfileid: "62834212"
 
    `BackgroundImage` - 要用作代码图背景的图像文件的位置。
 
-   `GraphDirection` - 代码图设置为树布局 (`Sugiyama`) 时排列节点，使大多数链接都按指定的方向流动：`TopToBottom`、`BottomToTop`、`LeftToRight` 或 `RightToLeft`。 请参阅[更改代码图布局](../modeling/browse-and-rearrange-code-maps.md#Selecting)。
+   `GraphDirection` - 代码图设置为树布局 (`Sugiyama`) 时排列节点，使大多数链接都按指定的方向流动：`TopToBottom`、`BottomToTop`、`LeftToRight` 或 `RightToLeft`。 请参阅[更改地图布局](../modeling/browse-and-rearrange-code-maps.md#Selecting)。
 
-   `Layout` - 将代码图设置为下列布局：`None`、`Sugiyama`（树布局）、`ForceDirected`（快速群集）或 `DependencyMatrix`。 请参阅[更改代码图布局](../modeling/browse-and-rearrange-code-maps.md#Selecting)。
+   `Layout` - 将代码图设置为下列布局：`None`、`Sugiyama`（树布局）、`ForceDirected`（快速群集）或 `DependencyMatrix`。 请参阅[更改地图布局](../modeling/browse-and-rearrange-code-maps.md#Selecting)。
 
-   `NeighborhoodDistance` - 代码图设置为树布局或快速群集布局时，仅显示距所选节点指定链接数 (1-7) 的节点。 请参阅[更改代码图布局](../modeling/browse-and-rearrange-code-maps.md#Selecting)。
+   `NeighborhoodDistance` - 代码图设置为树布局或快速群集布局时，仅显示距所选节点指定链接数 (1-7) 的节点。 请参阅[更改地图布局](../modeling/browse-and-rearrange-code-maps.md#Selecting)。
 
    示例:
 
@@ -94,19 +94,19 @@ ms.locfileid: "62834212"
 
    下面的列表描述可包含的部分可选特性：
 
-   `Label` 的节点显示名称。
+   `Label`-节点的显示名称。
 
-   样式特性。 请参阅 [通过编辑 DGML 文件自定义代码图](../modeling/customize-code-maps-by-editing-the-dgml-files.md)。
+   样式特性。 请参阅 [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)。
 
    `Category` - 标识共享此特性的元素的类别的名称。 有关更多信息，请参见 `<Category/>` 元素。
 
    `Property` - 标识具有相同属性值的元素的属性的名称。 有关更多信息，请参见 `<Property/>` 元素。
 
-   `Group` - 如果节点包含其他节点，请将此特性设置为 `Expanded` 或 `Collapsed` 以显示或隐藏其内容。 必须有一个 `<Link/>` 元素，此元素包含 `Category="Contains"` 特性并将父节点指定为源节点，而将子节点指定为目标节点。 请参阅[代码元素分组](../modeling/customize-code-maps-by-editing-the-dgml-files.md#OrganizeNodes)。
+   `Group` - 如果节点包含其他节点，请将此特性设置为 `Expanded` 或 `Collapsed` 以显示或隐藏其内容。 必须有一个 `<Link/>` 元素，此元素包含 `Category="Contains"` 特性并将父节点指定为源节点，而将子节点指定为目标节点。 请参阅对[代码元素分组](../modeling/customize-code-maps-by-editing-the-dgml-files.md#OrganizeNodes)。
 
    `Visibility` - 将此特性设置为 `Visible`、`Hidden` 或 `Collapsed`。 使用 `System.Windows.Visibility`。 请参阅[隐藏或显示节点和链接](../modeling/browse-and-rearrange-code-maps.md#HidingShowing)。
 
-   `Reference` - 将此特性设置为链接到文档或 URL。 请参阅[文档或 Url 链接到代码元素和链接](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AddReferences)。
+   `Reference` - 将此特性设置为链接到文档或 URL。 请参阅[将文档或 Url 链接到代码元素和链接](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AddReferences)。
 
    示例:
 
@@ -161,7 +161,7 @@ ms.locfileid: "62834212"
 
    `Label` - 链接的显示名称
 
-   样式特性。 请参阅 [通过编辑 DGML 文件自定义代码图](../modeling/customize-code-maps-by-editing-the-dgml-files.md)。
+   样式特性。 请参阅 [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)。
 
    `Category` - 标识共享此特性的元素的类别的名称。 有关更多信息，请参见 `<Category/>` 元素。
 
@@ -216,9 +216,9 @@ ms.locfileid: "62834212"
 
    `BasedOn` - 当前元素的 `<Category/>` 继承自的父类别。
 
-   在此元素的示例中，`FailedTest` 类别从 `Stroke` 类别继承其 `PassedTest` 特性。 请参阅"创建分层类别"中的[通过编辑 DGML 文件自定义代码图](../modeling/customize-code-maps-by-editing-the-dgml-files.md)。
+   在此元素的示例中，`FailedTest` 类别从 `Stroke` 类别继承其 `PassedTest` 特性。 请参阅[通过编辑 DGML 文件自定义代码图](../modeling/customize-code-maps-by-editing-the-dgml-files.md)中的 "创建分层类别"。
 
-   类别还提供一些基本模板行为，这些行为用于控制节点和链接在代码图上显示的外观。 请参阅 [通过编辑 DGML 文件自定义代码图](../modeling/customize-code-maps-by-editing-the-dgml-files.md)。
+   类别还提供一些基本模板行为，这些行为用于控制节点和链接在代码图上显示的外观。 请参阅 [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)。
 
    示例:
 
@@ -269,9 +269,9 @@ ms.locfileid: "62834212"
 
   - `DataType` - 该属性存储的数据的类型
 
-    如果你想要在显示的属性**属性**窗口中，使用`Label`属性以指定该属性的显示名称。
+    如果要在 "**属性**" 窗口中显示该属性，请使用 `Label` 属性指定该属性的显示名称。
 
-    请参阅[向代码元素和链接分配类别](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AssignCategories)。
+    请参阅向[代码元素和链接分配类别](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AssignCategories)。
 
     示例:
 
@@ -300,7 +300,7 @@ ms.locfileid: "62834212"
   </DirectedGraph>
   ```
 
-### <a name="AddAlias"></a> 常用路径的别名
+### <a name="AddAlias"></a>常用路径的别名
 
 将常用路径替换为别名有助于减小 .dgml 文件的大小和加载或保存该文件所需的时间。 若要创建别名，请在 .dgml 文件的结尾处添加 `<Paths></Paths>` 部分。 在此部分添加 `<Path/>` 元素以定义路径的别名：
 
@@ -310,7 +310,7 @@ ms.locfileid: "62834212"
 </Paths>
 ```
 
-若要从.dgml 文件中的元素引用别名，请将`Id`的\<路径 / > 元素用美元符号 （$） 和括号 （（））：
+若要从 .dgml 文件中的某个元素引用别名，请用美元符号（$）和括号（（））将 \<Path/> 元素的 `Id` 括起来：
 
 ```xml
 <Nodes>

@@ -1,5 +1,5 @@
 ---
-title: IScriptNode::Alive |Microsoft Docs
+title: IScriptNode：： Alive |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: da0a55d26b5ab643670ba7ed51e576eeb89d8b98
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b7e0216824506ee942b42a42d5c3c4475f63f9e2
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787168"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573629"
 ---
 # <a name="iscriptnodealive"></a>IScriptNode::Alive
 指示对象是否仍处于活动状态。  
@@ -34,7 +34,7 @@ HRESULT Alive();
 ```  
   
 #### <a name="parameters"></a>参数  
- 该方法采用任何参数。  
+ 方法不采用任何参数。  
   
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -44,7 +44,7 @@ HRESULT Alive();
 |`S_OK`|脚本节点仍处于活动状态。|  
   
 ## <a name="remarks"></a>备注  
- 如果该对象不处于活动状态，组件对象模型 (COM) 从对此方法的调用封送处理代理返回错误。  
+ 如果对象不是活动的，则组件对象模型（COM）将从封送处理程序返回一个错误，以便调用此方法。  
   
 ## <a name="see-also"></a>请参阅  
  [IScriptNode 接口](../../winscript/reference/iscriptnode-interface.md)

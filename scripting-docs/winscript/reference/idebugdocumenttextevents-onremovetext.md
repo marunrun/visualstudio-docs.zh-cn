@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextEvents::onRemoveText | Microsoft Docs
+title: IDebugDocumentTextEvents：： onRemoveText |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 506d7c5349cf074ce4a4cbe60e33459a09a91b67
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c302a3b1850db42824f35a306e7e94eaa8a6aa41
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946708"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576265"
 ---
 # <a name="idebugdocumenttexteventsonremovetext"></a>IDebugDocumentTextEvents::onRemoveText
 指示已从文档中删除文本。  
@@ -38,10 +38,10 @@ HRESULT onRemoveText(
   
 #### <a name="parameters"></a>参数  
  `cCharacterPosition`  
- [in]删除第一个字符的字符位置。  
+ 中删除的第一个字符的字符位置。  
   
  `cNumToRemove`  
- [in]删除的字符数。  
+ 中删除的字符数。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  

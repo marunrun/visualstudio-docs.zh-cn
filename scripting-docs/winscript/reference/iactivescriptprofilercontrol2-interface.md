@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerControl2 Interface | Microsoft Docs
+title: IActiveScriptProfilerControl2 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,22 +13,22 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 11987054ed934f4004333f136ea35696ff6c394f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7059868ae65c5093b24f342bd303ec70172171c0
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62993016"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571530"
 ---
 # <a name="iactivescriptprofilercontrol2-interface"></a>IActiveScriptProfilerControl2 接口
-提供添加启动或停止分析运行脚本时的功能的方法。  
+提供一些方法，这些方法可在脚本运行时添加启动或停止分析的功能。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[IActiveScriptProfilerControl2::CompleteProfilerStart](../../winscript/reference/iactivescriptprofilercontrol2-completeprofilerstart.md)|通知探查器在所有适用的脚本引擎探查已经开始。 这使您若要获取完整的调用堆栈，则[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]时开始分析正在运行。|  
-|[IActiveScriptProfilerControl2::PrepareProfilerStop](../../winscript/reference/iactivescriptprofilercontrol2-prepareprofilerstop.md)|通知探查器要停止分析在所有适用的脚本引擎。 这使您若要获取完整的调用堆栈，则[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]时停止分析正在运行。|  
+|[IActiveScriptProfilerControl2::CompleteProfilerStart](../../winscript/reference/iactivescriptprofilercontrol2-completeprofilerstart.md)|通知探查器已开始分析所有适用的脚本引擎。 这使您可以在启动分析时，获取 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 正在运行的完整调用堆栈。|  
+|[IActiveScriptProfilerControl2::PrepareProfilerStop](../../winscript/reference/iactivescriptprofilercontrol2-prepareprofilerstop.md)|通知探查器你将停止分析所有适用的脚本引擎。 这使你可以获取完整的调用堆栈（如果在停止分析时 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 正在运行）。|  
   
 ## <a name="see-also"></a>请参阅  
  [IActiveScriptProfilerControl 接口](../../winscript/reference/iactivescriptprofilercontrol-interface.md)   

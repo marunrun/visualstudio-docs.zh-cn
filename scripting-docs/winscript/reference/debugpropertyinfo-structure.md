@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 99208626b41f2463178bccecf73c21a1d15fa765
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 793c83b467460f0744abffe3f161f7510f56257a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955258"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575070"
 ---
 # <a name="debugpropertyinfo-structure"></a>DebugPropertyInfo 结构
-描述一个对象具有名称、 类型和值的实际层次结构。 它用来描述本地变量、 参数、 监视变量和表达式的调试属性，并注册。  
+描述具有名称、类型和值的分层性质的对象。 它用于描述本地变量、参数、监视变量和表达式以及寄存器的调试属性。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,29 +41,29 @@ typedef struct DebugPropertyInfo{
 };  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
  dwValidFields  
- 枚举的数据类型，用于指定哪些字段进行初始化。  
+ 枚举数据类型，用于指定要初始化的字段。  
   
  bstrName  
- 在上下文中的属性名称。  
+ 上下文中的属性名称。  
   
  bstrType  
- 属性类型，为带格式的字符串。  
+ 格式化字符串形式的属性类型。  
   
  bstrValue  
- 属性值，作为带格式的字符串。  
+ 格式化字符串形式的属性值。  
   
  bstrFullName  
  属性的完整名称。  
   
  dwAttrib  
- 一个枚举，指定调试属性特性的标志。  
+ 指定 debug 属性特性的标志的枚举。  
   
  pDebugProp  
- `IDebugProperty`由在此信息描述`DebugPropertyInfo`结构。  
+ 此 `DebugPropertyInfo` 结构中的信息所描述的 `IDebugProperty`。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugProperty 接口](../../winscript/reference/idebugproperty-interface.md)   
- [DBGPROP_ATTRIB_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)   
+ [DBGPROP_ATTRIB_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)    
  [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)

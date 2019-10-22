@@ -1,5 +1,5 @@
 ---
-title: CA2212:不要将标记服务的组件使用 WebMethod |Microsoft Docs
+title: CA2212：不通过 WebMethod 标记服务组件 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,37 +12,37 @@ helpviewer_keywords:
 - DoNotMarkServicedComponentsWithWebMethod
 ms.assetid: 774bc55d-e588-48ee-8f38-c228580feca2
 caps.latest.revision: 15
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 6f2e89705e36407e39103296e3eee70482e3d03f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2ee166f8bbc14e66968cd4f7c265331854905ac9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68142486"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662950"
 ---
-# <a name="ca2212-do-not-mark-serviced-components-with-webmethod"></a>CA2212:不要使用 WebMethod 标记服务组件
+# <a name="ca2212-do-not-mark-serviced-components-with-webmethod"></a>CA2212：不要使用 WebMethod 标记服务组件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|DoNotMarkServicedComponentsWithWebMethod|
 |CheckId|CA2212|
-|类别|Microsoft.Usage|
+|类别|Microsoft. 使用情况|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 继承的类型中的方法<xref:System.EnterpriseServices.ServicedComponent?displayProperty=fullName>将标有<xref:System.Web.Services.WebMethodAttribute?displayProperty=fullName>。
+ 类型中继承自 <xref:System.EnterpriseServices.ServicedComponent?displayProperty=fullName> 的方法标记有 <xref:System.Web.Services.WebMethodAttribute?displayProperty=fullName>。
 
 ## <a name="rule-description"></a>规则说明
- <xref:System.Web.Services.WebMethodAttribute> 适用于使用 ASP.NET; 创建的 XML Web 服务中的方法它使该方法可调用从远程 Web 客户端。 方法和类必须是公共且在 ASP.NET Web 应用程序执行。 <xref:System.EnterpriseServices.ServicedComponent> 类型由 COM + 应用程序承载，可以使用 COM + 服务。 <xref:System.Web.Services.WebMethodAttribute> 不应用于<xref:System.EnterpriseServices.ServicedComponent>类型，因为它们不用相同的方案。 具体而言，将添加到属性<xref:System.EnterpriseServices.ServicedComponent>方法不会使该方法可调用从远程 Web 客户端。 因为<xref:System.Web.Services.WebMethodAttribute>和一个<xref:System.EnterpriseServices.ServicedComponent>方法具有冲突的行为和要求的上下文和事务流，该方法的行为会在某些情况下不正确。
+ <xref:System.Web.Services.WebMethodAttribute> 适用于使用 ASP.NET 创建的 XML Web service 中的方法;它使方法可从远程 Web 客户端调用。 方法和类必须是公共的并在 ASP.NET Web 应用程序中执行。 <xref:System.EnterpriseServices.ServicedComponent> 类型由 COM + 应用程序托管，可以使用 COM + 服务。 <xref:System.Web.Services.WebMethodAttribute> 不会应用于 <xref:System.EnterpriseServices.ServicedComponent> 类型，因为它们不用于相同的方案。 具体而言，将属性添加到 <xref:System.EnterpriseServices.ServicedComponent> 方法不会使方法可从远程 Web 客户端调用。 由于 <xref:System.Web.Services.WebMethodAttribute> 和 <xref:System.EnterpriseServices.ServicedComponent> 方法具有上下文和事务流的行为和要求冲突，因此该方法的行为在某些情况下将不正确。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复此规则的冲突，请删除中的特性<xref:System.EnterpriseServices.ServicedComponent>方法。
+ 若要修复与此规则的冲突，请从 <xref:System.EnterpriseServices.ServicedComponent> 方法中删除该属性。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 不禁止显示此规则发出的警告。 在任何的情况都其中组合这些元素正确。
+ 不禁止显示此规则发出的警告。 在这种情况下，组合这些元素是正确的。
 
 ## <a name="see-also"></a>请参阅
  <xref:System.EnterpriseServices.ServicedComponent?displayProperty=fullName> <xref:System.Web.Services.WebMethodAttribute?displayProperty=fullName>

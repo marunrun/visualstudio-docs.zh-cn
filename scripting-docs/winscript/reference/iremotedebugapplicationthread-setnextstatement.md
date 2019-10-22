@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplicationThread::SetNextStatement |Microsoft Docs
+title: IRemoteDebugApplicationThread：： SetNextStatement |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0c4b19322a15e92adcf2609c479af6b21e2078bd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 71e690d0e5b7567aabc88aabde907b67517f12aa
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62788135"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575510"
 ---
 # <a name="iremotedebugapplicationthreadsetnextstatement"></a>IRemoteDebugApplicationThread::SetNextStatement
-继续为给定的代码上下文，尽可能地接近给定帧的上下文中的强制执行。  
+强制执行在给定帧的上下文中尽可能接近给定的代码上下文。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,10 +38,10 @@ HRESULT SetNextStatement(
   
 #### <a name="parameters"></a>参数  
  `pStackFrame`  
- [in]堆栈帧对象。 此参数可以为 NULL，这意味着应使用当前堆栈帧。  
+ 中堆栈帧对象。 此参数可能为 NULL，这表示应使用当前堆栈帧。  
   
  `pCodeContext`  
- [in]代码上下文。 此参数可以为 NULL，这意味着应使用当前代码上下文。  
+ 中代码上下文。 此参数可能为 NULL，这表示应使用当前的代码上下文。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -51,7 +51,7 @@ HRESULT SetNextStatement(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法强制执行继续到指定的代码上下文尽可能地接近`pCodeContext`，指定的帧的上下文中`pStackFrame`。 这些参数可能是`NULL`，表示当前帧或上下文。  
+ 此方法强制执行在 `pStackFrame` 指定的帧上下文中尽可能接近 `pCodeContext` 指定的代码上下文。 这两个参数中的任何一个都可以 `NULL`，表示当前帧或上下文。  
   
 ## <a name="see-also"></a>请参阅  
  [IRemoteDebugApplicationThread 接口](../../winscript/reference/iremotedebugapplicationthread-interface.md)

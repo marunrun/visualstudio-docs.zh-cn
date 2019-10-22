@@ -2,31 +2,31 @@
 title: 控制颜色、线型和其他形状属性
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1783ecf3b30207838d93fdb9cda93e3ed7e232c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6bcc7e3a80650edff411506b9e651885b3852383
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62422920"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654161"
 ---
 # <a name="controlling-color-line-style-and-other-shape-properties"></a>控制颜色、线型和其他形状属性
 
-某些形状属性，如颜色可以公开。 也就是说，属性可以链接到形状的域属性。 其他人需要进行直接控制。
+某些形状属性（如颜色）可以 "公开"。 也就是说，属性可以链接到形状的域属性。 其他人必须直接控制。
 
 ## <a name="exposing-a-property"></a>公开属性
- 某些形状属性，如颜色可以链接到域属性的值。
+ 某些形状属性（如颜色）可以链接到域属性的值。
 
- 在 DSL 定义中，选择形状、 连接符或关系图类。 其右键单击菜单上，选择**公开添加**，然后选择所需的属性，如填充颜色。
+ 在 DSL 定义中，选择形状、连接符或关系图类。 在其右键单击菜单上，选择 "添加" "**公开**"，然后选择所需的属性，例如 "填充颜色"。
 
- 现在，该形状具有域设置的属性，您可以在程序代码中或以用户身份。
+ 该形状现在具有可在程序代码或用户中设置的域属性。
 
 ## <a name="dynamically-updating-an-exposed-property"></a>动态更新公开的属性
- 通常，你想要使依赖于另一个属性公开的属性。 例如，可能想要特定域属性时变为红色的形状小于零。 若要使此依赖项，创建[规则](../modeling/rules-propagate-changes-within-the-model.md)。 例如：
+ 通常，您需要使公开的属性依赖于另一个属性。 例如，如果特定域属性小于零，则您可能希望形状变成红色。 若要生成此依赖项，请创建一个[规则](../modeling/rules-propagate-changes-within-the-model.md)。 例如:
 
 ```csharp
 using System;

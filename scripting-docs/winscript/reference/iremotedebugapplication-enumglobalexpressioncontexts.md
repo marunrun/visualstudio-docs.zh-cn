@@ -1,5 +1,5 @@
 ---
-title: IRemoteDebugApplication::EnumGlobalExpressionContexts | Microsoft Docs
+title: IRemoteDebugApplication：： EnumGlobalExpressionContexts |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 92ab12dc9944c328e744c7f39252facb8e91a3f7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 594dc2c09a76cd6027a9abcb38b5951768cceef9
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62944272"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576825"
 ---
 # <a name="iremotedebugapplicationenumglobalexpressioncontexts"></a>IRemoteDebugApplication::EnumGlobalExpressionContexts
 枚举此应用程序中运行的所有语言的全局表达式上下文。  
@@ -37,7 +37,7 @@ HRESULT EnumGlobalExpressionContexts(
   
 #### <a name="parameters"></a>参数  
  `ppedec`  
- [out]列出了此应用程序中运行的所有语言的全局表达式上下文的枚举器。  
+ 弄为此应用程序中运行的所有语言列出全局表达式上下文的枚举器。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  

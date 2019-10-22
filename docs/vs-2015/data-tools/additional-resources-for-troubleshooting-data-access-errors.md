@@ -1,5 +1,5 @@
 ---
-title: 其他资源进行故障排除数据访问错误 |Microsoft Docs
+title: 数据访问错误疑难解答的其他资源 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -227,44 +227,37 @@ helpviewer_keywords:
 - datasets [Visual Basic], troubleshooting
 ms.assetid: 357c9f0a-9d59-4db4-9b7c-b96cad839961
 caps.latest.revision: 33
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 robots: noindex,nofollow
-ms.openlocfilehash: 851a1f87cce5f4030a9ba5a4701b6c0055859f10
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b304b31447c0a43e37a333516a3a79c71070bd4e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68143100"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72673019"
 ---
 # <a name="additional-resources-for-troubleshooting-data-access-errors"></a>数据访问错误疑难解答的其他资源
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在 Microsoft Developer Network (MSDN) 公共论坛中，可以找到有关对错误和警告进行疑难解答的帮助。 下表列出了数据与相关的论坛 MSDN 上提供。  
-  
- [Windows 窗体数据控制和数据绑定](http://go.microsoft.com/fwlink/?LinkId=160179)  
- 提供的有关的问题及常规讨论的 Windows 窗体中的数据访问的论坛。  
-  
- [ADO.NET 数据集论坛](http://go.microsoft.com/fwlink/?LinkId=160180)  
- 提供问题的数据集的有关及常规讨论的论坛。  
-  
- [ADO.NET 实体框架和 LINQ to Entities](http://go.microsoft.com/fwlink/?LinkId=191520)  
- 针对有关的问题及常规讨论的实体框架应用程序和 LINQ to 实体语言提供的论坛。  
-  
- [WCF 数据服务论坛](http://go.microsoft.com/fwlink/?LinkId=160181)  
- 针对有关的问题及常规讨论的数据服务提供的论坛。  
-  
- [SQL Server 数据访问论坛](http://go.microsoft.com/fwlink/?LinkID=160184)  
- 提供论坛供有关的问题及常规讨论的访问 Microsoft SQL Server 中的数据。  
-  
- [Linq to SQL 论坛](http://go.microsoft.com/fwlink/?LinkId=160183)  
- 提供的有关的问题及常规讨论的 Linq to SQL 的论坛。  
-  
- [ADO.NET 数据提供程序论坛](http://go.microsoft.com/fwlink/?LinkId=160182)  
- 提供问题的不同.NET Framework 数据提供程序的有关及常规讨论的论坛。  
-  
- 有关如何解决与 SQL Server 的连接信息，请参阅[如何解决连接到 SQL Server 数据库引擎](http://go.microsoft.com/fwlink/?LinkID=246151)。  
-  
-## <a name="see-also"></a>请参阅  
+在 Microsoft Developer Network (MSDN) 公共论坛中，可以找到有关对错误和警告进行疑难解答的帮助。 下表列出了 MSDN 上提供的数据相关论坛。
+
+ [Windows 窗体数据控件和数据绑定](http://go.microsoft.com/fwlink/?LinkId=160179)提供有关 Windows 窗体中的数据访问的相关问题的论坛。
+
+ [ADO.NET 数据集论坛](http://go.microsoft.com/fwlink/?LinkId=160180)提供有关数据集的相关问题的论坛。
+
+ [ADO.NET 实体框架和 LINQ to Entities](http://go.microsoft.com/fwlink/?LinkId=191520)提供有关实体框架应用程序和 LINQ to Entities 语言的相关问题的论坛。
+
+ [WCF 数据服务论坛](http://go.microsoft.com/fwlink/?LinkId=160181)提供有关数据服务的常见问题和常规讨论的论坛。
+
+ [SQL Server 数据访问论坛](http://go.microsoft.com/fwlink/?LinkID=160184)提供有关在 Microsoft SQL Server 中访问数据的相关问题的论坛。
+
+ [Linq TO SQL 论坛](http://go.microsoft.com/fwlink/?LinkId=160183)提供有关 Linq to SQL 常见问题和常规讨论的论坛。
+
+ [ADO.NET 数据提供者论坛](http://go.microsoft.com/fwlink/?LinkId=160182)提供有关不同 .NET Framework 数据提供程序的问题和常规讨论的论坛。
+
+ 有关如何解决与 SQL Server 的连接问题的信息，请参阅[如何排查连接到 SQL Server 数据库引擎的问题](http://go.microsoft.com/fwlink/?LinkID=246151)。
+
+## <a name="see-also"></a>请参阅
  [适用于 NET 的 Visual Studio Data Tools](../data-tools/visual-studio-data-tools-for-dotnet.md)

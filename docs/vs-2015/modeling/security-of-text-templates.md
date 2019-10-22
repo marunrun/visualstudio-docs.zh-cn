@@ -8,31 +8,31 @@ helpviewer_keywords:
 - text templates, security
 ms.assetid: 567a2383-7d43-4acc-af4a-cd70b7a0151e
 caps.latest.revision: 25
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f21bfadd540ce365c7f585a35991c27395558c6e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e24a90d4e7af351fc4ba5807d2af7830edede9cb
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68202689"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72671219"
 ---
 # <a name="security-of-text-templates"></a>文本模板的安全性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-文本模板具有以下安全问题：  
-  
-- 文本模板是任意代码插入到易受攻击。  
-  
-- 如果主机用来查找指令处理器的机制不是安全的可以运行恶意的指令处理器。  
-  
-## <a name="arbitrary-code"></a>任意代码  
- 在编写模板时，可以将之内的任何代码\<# # > 标记。 这允许在文本模板中执行任意代码。  
-  
- 请确保从受信任的来源获取模板。 请确保你的应用程序无法执行不是来自受信任源的模板的最终用户，则发出警告。  
-  
-## <a name="malicious-directive-processor"></a>恶意的指令处理器  
- 与转换主机和一个或多个指令处理器转换到的输出文件的模板文本，文本模板引擎进行交互。 有关详细信息，请参阅[文本模板转换过程](../modeling/the-text-template-transformation-process.md)。  
-  
- 如果主机用来查找指令处理器的机制不是安全的它运行的运行恶意的指令处理器的风险。 恶意的指令处理器可以提供在中运行的代码`FullTrust`模式时运行该模板。 如果创建自定义文本模板转换主机，您必须使用一种安全机制，如注册表中，要找到指令处理器的引擎。
+文本模板具有以下安全问题：
+
+- 文本模板容易出现任意代码插入。
+
+- 如果主机用于查找指令处理器的机制不安全，则可能会运行恶意指令处理器。
+
+## <a name="arbitrary-code"></a>任意代码
+ 编写模板时，可以在 \< # # > 标记中添加任何代码。 这允许从文本模板中执行任意代码。
+
+ 请确保从受信任的源获取模板。 请确保警告应用程序的最终用户不执行不来自受信任的源的模板。
+
+## <a name="malicious-directive-processor"></a>恶意指令处理器
+ 文本模板引擎与转换主机和一个或多个指令处理器进行交互，以将模板文本转换为输出文件。 有关详细信息，请参阅[文本模板转换过程](../modeling/the-text-template-transformation-process.md)。
+
+ 如果主机用于查找指令处理器的机制不安全，则会运行运行恶意指令处理器的风险。 在运行模板时，恶意指令处理器可能会提供在 `FullTrust` 模式下运行的代码。 如果创建自定义文本模板转换主机，则必须使用安全机制（如注册表）来查找指令处理器。

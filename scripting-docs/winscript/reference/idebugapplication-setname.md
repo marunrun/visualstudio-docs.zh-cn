@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::SetName | Microsoft Docs
+title: IDebugApplication：： SetName |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4ac0b253d5193fc507e2d74a2d9dbcdd893e9fdb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6a3e5115d4adc3fc3dfa93f10c90cb0d2b36f0e4
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62990768"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72571099"
 ---
 # <a name="idebugapplicationsetname"></a>IDebugApplication::SetName
 设置应用程序的名称。  
@@ -37,7 +37,7 @@ HRESULT SetName(
   
 #### <a name="parameters"></a>参数  
  `pstrName`  
- [in]应用程序的名称。  
+ 中应用程序的名称。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -47,9 +47,9 @@ HRESULT SetName(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 在后续调用返回提供给此方法的名称`IRemoteDebugApplication::GetName`方法。  
+ 在对 `IRemoteDebugApplication::GetName` 方法的后续调用中，将返回提供给此方法的名称。  
   
- 应在调用之前调用此方法`IProcessDebugManager::AddApplication`方法。  
+ 调用 `IProcessDebugManager::AddApplication` 方法之前应调用此方法。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugApplication 接口](../../winscript/reference/idebugapplication-interface.md)   

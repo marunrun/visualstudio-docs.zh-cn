@@ -1,5 +1,5 @@
 ---
-title: 'IDebugApplicationThreadEvents110:: OnBeginThreadRequest |Microsoft Docs'
+title: IDebugApplicationThreadEvents110：： OnBeginThreadRequest |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cd18e6db3e1dc050ffd4da6f2991889f28355192
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 8ee22f21b4e72f1018c4e11d23c355bfc682a8cb
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440485"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573360"
 ---
 # <a name="idebugapplicationthreadevents110-onbeginthreadrequest"></a>IDebugApplicationThreadEvents110 ::OnBeginThreadRequest
-调用到使用 PDM 的线程的线程切换已开始。  
+已开始使用 PDM 的线程切换调用线程。  
   
 > [!IMPORTANT]
-> [IDebugApplicationThreadEvents110 接口](../../winscript/reference/idebugapplicationthreadevents110-interface.md)是实现由 PDM v11.0 和更高版本。 在 activdbg100.h 中发现。  
+> [IDebugApplicationThreadEvents110 接口](../../winscript/reference/idebugapplicationthreadevents110-interface.md)由 PDM 11.0 和更高版本实现。 在 activdbg100.h 中发现。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,7 +33,7 @@ HRESULT OnBeginThreadRequest( void );
 ```  
   
 #### <a name="parameters"></a>参数  
- 此方法没有任何参数。  
+ 此方法没有参数。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugApplicationThreadEvents110 接口](../../winscript/reference/idebugapplicationthreadevents110-interface.md)

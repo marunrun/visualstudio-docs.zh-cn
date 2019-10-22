@@ -1,5 +1,5 @@
 ---
-title: CA2006:使用 SafeHandle 封装本机资源 |Microsoft Docs
+title: CA2006：使用 SafeHandle 封装本机资源 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -12,41 +12,41 @@ helpviewer_keywords:
 - CA2006
 ms.assetid: a71950bd-bcc1-463d-b1f2-5233bc451456
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: dcf385263eba5a6012097f43b49e7a75166bad42
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 394fafb0c9185a5e11ba759a5b873236956cf25b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68154414"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652211"
 ---
-# <a name="ca2006-use-safehandle-to-encapsulate-native-resources"></a>CA2006:使用 SafeHandle 封装本机资源
+# <a name="ca2006-use-safehandle-to-encapsulate-native-resources"></a>CA2006：使用 SafeHandle 封装本机资源
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 |||
 |-|-|
 |TypeName|UseSafeHandleToEncapsulateNativeResources|
 |CheckId|CA2006|
-|类别|Microsoft.Reliability|
-|是否重大更改|非换行|
+|类别|Microsoft 可靠性|
+|是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 托管代码使用<xref:System.IntPtr>访问本机资源。
+ 托管代码使用 <xref:System.IntPtr> 访问本机资源。
 
 ## <a name="rule-description"></a>规则说明
- 使用`IntPtr`在托管代码中可能表示潜在的安全性和可靠性问题。 使用的所有`IntPtr`必须检查以确定是否使用<xref:System.Runtime.InteropServices.SafeHandle>，或类似的技术，需要在其原位置。 如果不会发生问题`IntPtr`表示某些本机资源，例如内存、 文件句柄或套接字时，托管的代码被视为拥有。 如果托管的代码拥有的资源，它还必须释放与其关联的本机资源，因为无法执行此操作会导致资源泄漏。
+ 在托管代码中使用 `IntPtr` 可能表示存在潜在的安全性和可靠性问题。 必须查看 `IntPtr` 的所有使用情况，以确定是否需要使用 <xref:System.Runtime.InteropServices.SafeHandle> 或类似的技术。 如果 `IntPtr` 表示某些本机资源，如内存、文件句柄或套接字，托管代码被视为拥有，则会出现问题。 如果托管代码拥有资源，则它还必须释放与之关联的本机资源，因为这样做可能会导致资源泄露。
 
- 在这种情况下，安全性或可靠性问题还会存在如果允许多线程的访问`IntPtr`和释放资源所表示的一种方法`IntPtr`提供。 这些问题涉及的回收`IntPtr`在资源释放时同时使用的资源进行了另一个线程上的值。 这会导致争用条件，其中一个线程可以读取或写入错误的资源与相关联的数据。 例如，如果您的类型存储为某个操作系统句柄`IntPtr`，使用户可以同时调用**关闭**和任何其他方法使用该句柄，同时并不使用同步，你的代码存在句柄回收出现问题。
+ 在这种情况下，如果允许对 `IntPtr` 进行多线程访问，则还会存在安全或可靠性问题，并提供一种方法来释放由 `IntPtr` 所表示的资源。 这些问题涉及到在资源释放时回收 `IntPtr` 值，同时在另一个线程上使用资源。 这可能导致争用条件，其中一个线程可以读取或写入与错误资源关联的数据。 例如，如果你的类型将 OS 句柄存储为 `IntPtr`，并允许用户同时调用**Close**和使用该句柄的任何其他方法，而不需要进行某种同步，则你的代码将具有句柄回收问题。
 
- 此句柄回收问题可能导致数据损坏和通常情况下，安全漏洞。 `SafeHandle` 和其同级类<xref:System.Runtime.InteropServices.CriticalHandle>提供一种机制来封装本机资源的句柄，以便可以避免此类线程处理问题。 此外，还可以使用`SafeHandle`及其同级类`CriticalHandle`其他线程处理问题，例如，若要仔细控制对本机方法的调用包含的本机句柄的副本的托管对象的生存期。 在此情况下，通常可以消除对调用`GC.KeepAlive`。 使用时产生性能开销分行`SafeHandle`和一定程度上， `CriticalHandle`，通常可以通过仔细设计减少。
+ 此句柄回收问题可能会导致数据损坏，并经常导致安全漏洞。 `SafeHandle` 及其同级类 <xref:System.Runtime.InteropServices.CriticalHandle> 提供一种机制来封装资源的本机句柄，以便避免此类线程处理问题。 此外，还可以使用 `SafeHandle` 及其同级类 `CriticalHandle` 来解决其他线程问题，例如，通过调用本机方法来仔细控制包含本机句柄副本的托管对象的生存期。 在这种情况下，您通常可以删除对 `GC.KeepAlive` 的调用。 当你使用 `SafeHandle` 和时所产生的性能开销分行，如果 `CriticalHandle`，则通常可以通过仔细的设计来减少性能。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 将转换`IntPtr`使用情况与`SafeHandle`以便安全地管理对本机资源的访问。 请参阅<xref:System.Runtime.InteropServices.SafeHandle>示例的参考主题。
+ 将 `IntPtr` 用法转换为 `SafeHandle`，以安全地管理对本机资源的访问。 有关示例，请参阅 <xref:System.Runtime.InteropServices.SafeHandle> 参考主题。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 不应取消显示此警告。
+ 不应禁止显示此警告。
 
 ## <a name="see-also"></a>请参阅
  <xref:System.IDisposable>

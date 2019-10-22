@@ -155,7 +155,7 @@
         - name: 创建托管对象的自定义视图
           items:
             - name: 创建托管对象的自定义视图
-              href: create-custom-views-of-dot-managed-objects.md
+              href: create-custom-views-of-managed-objects.md
             - name: 使用 DebuggerTypeProxy 特性
               href: using-debuggertypeproxy-attribute.md
             - name: 使用 DebuggerDisplay 特性
@@ -682,9 +682,9 @@
                       href: how-to-enable-debugging-for-aspnet-applications.md
                     - name: 在用户帐户下运行工作进程
                       href: how-to-run-the-worker-process-under-a-user-account.md
-                - name: 远程调试 Web 应用程序的必备组件
+                - name: 远程调试 Web 应用程序的先决条件
                   items:
-                    - name: 远程调试 Web 应用程序的必备组件
+                    - name: 远程调试 Web 应用程序的先决条件
                       href: prerequistes-for-remote-debugging-web-applications.md
                     - name: 查找 ASP.NET 进程名称
                       href: how-to-find-the-name-of-the-aspnet-process.md

@@ -17,14 +17,14 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: faca5ef7bc89bc16d646f66fb897f1dc44eb831a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8c56a8b135a0aa9a4f8ddf91e146d4d64367bb2b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955355"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572633"
 ---
-# <a name="breakpointstate-enumeration"></a>BREAKPOINT_STATE 枚举
+# <a name="breakpoint_state-enumeration"></a>BREAKPOINT_STATE 枚举
 指示断点的状态。  
   
 ## <a name="syntax"></a>语法  
@@ -37,13 +37,13 @@ typedef enum tagBREAKPOINT_STATE {
 } BREAKPOINT_STATE;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|BREAKPOINT_DELETED|断点不再存在，但仍有对它的引用。|  
-|BREAKPOINT_DISABLED|断点存在但是已禁用。|  
-|BREAKPOINT_ENABLED|断点存在并且已启用。|  
+|BREAKPOINT_DELETED|断点已不存在，但仍存在对它的引用。|  
+|BREAKPOINT_DISABLED|断点存在但已禁用。|  
+|BREAKPOINT_ENABLED|断点存在并已启用。|  
   
 ## <a name="see-also"></a>请参阅  
  [活动脚本调试器常量、枚举和结构](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)

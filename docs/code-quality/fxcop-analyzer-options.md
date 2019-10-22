@@ -2,17 +2,17 @@
 title: FxCop 分析器配置选项
 ms.date: 09/23/2019
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7d9ca8c8bd46b4f8455c7aa750170d38f03321f6
-ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
+ms.openlocfilehash: 78967c93a990aaef0d5863446433c286bdcf46b7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72349682"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72649600"
 ---
 # <a name="rule-scope-options-for-fxcop-analyzers"></a>FxCop 分析器的规则作用域选项
 
@@ -21,9 +21,9 @@ ms.locfileid: "72349682"
 从[FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet 包的版本2.6.3 开始提供这些配置选项。
 
 > [!TIP]
-> 若要查看可用于给定版本的 FxCopAnalyzers 包的选项的完整列表，请查看包的*文档*文件夹中的*Analyzer Configuration.md*文件。 文件位于 *% USERPROFILE% \\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers @ no__t-2 @ no__t-3version @ no__t-4\documentation\Analyzer Configuration.md*。 此配置文档文件包含在包的每个版本中，从版本2.6.5 开始。 下面是一个示例，说明如何在*Analyzer Configuration.md*文件中记录一个选项：
+> 若要查看可用于给定版本的 FxCopAnalyzers 包的选项的完整列表，请查看包的*文档*文件夹中的*Analyzer Configuration.md*文件。 文件位于 *% USERPROFILE% \\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers \\ \<version \> \documentation\analyzer Configuration.md*。 此配置文档文件包含在包的每个版本中，从版本2.6.5 开始。 下面是一个示例，说明如何在*Analyzer Configuration.md*文件中记录一个选项：
 >
-> 选项名称： `sufficient_IterationCount_for_weak_KDF_algorithm` @ no__t-1
+> 选项名称： `sufficient_IterationCount_for_weak_KDF_algorithm` \
 > 选项值：整数值 \
 > 默认值：特定于每个可配置的规则（默认情况下，对于大多数规则为 "100000"） \
 > 示例：`dotnet_code_quality.CA5387.sufficient_IterationCount_for_weak_KDF_algorithm = 100000`
@@ -47,7 +47,7 @@ ms.locfileid: "72349682"
 
 | 描述 | 允许的值 | 默认值 | 可配置规则 |
 | - | - | - | - |
-| 是否从规则中排除单字符[类型参数](/dotnet/csharp/programming-guide/generics/generic-type-parameters)，例如，在 @no__t 中 `S` | `true`<br/>`false` | `false` | [CA1715](ca1715-identifiers-should-have-correct-prefix.md) |
+| 是否从规则中排除单字符[类型参数](/dotnet/csharp/programming-guide/generics/generic-type-parameters)，例如，在 `Collection<S>` 中 `S` | `true`<br/>`false` | `false` | [CA1715](ca1715-identifiers-should-have-correct-prefix.md) |
 
 > [!NOTE]
 > 在版本2.6.3 和更早版本的分析器包中，此选项名为 `allow_single_letter_type_parameters`。
@@ -56,4 +56,4 @@ ms.locfileid: "72349682"
 
 | 描述 | 允许的值 | 默认值 | 可配置规则 |
 | - | - | - | - |
-| 指定应分析生成此类程序集的项目中的代码 | @No__t-0 枚举的一个或多个字段<br/><br/>用逗号（，）分隔多个值 | 所有输出类型 | [CA2007](ca2007-do-not-directly-await-task.md) |
+| 指定应分析生成此类程序集的项目中的代码 | @No__t_0 枚举的一个或多个字段<br/><br/>用逗号（，）分隔多个值 | 所有输出类型 | [CA2007](ca2007-do-not-directly-await-task.md) |

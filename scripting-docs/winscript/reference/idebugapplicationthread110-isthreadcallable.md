@@ -1,5 +1,5 @@
 ---
-title: IDebugApplicationThread110::IsThreadCallable | Microsoft Docs
+title: IDebugApplicationThread110：： IsThreadCallable |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -13,18 +13,18 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 90f0010a513adef67af1285ac15bc35d4573df57
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 5ff81190247454a4471a4150843d3fb0aaed5999
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440510"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574471"
 ---
 # <a name="idebugapplicationthread110isthreadcallable"></a>IDebugApplicationThread110::IsThreadCallable
-确定此线程是否会处理使用切换机制，例如 SynchronousCallInThread PDM 的线程进行调用的状态。  
+确定此线程是否处于将使用 PDM 的线程切换机制（如 SynchronousCallInThread）处理调用的状态。  
   
 > [!IMPORTANT]
-> [IDebugApplicationThread110 接口](../../winscript/reference/idebugapplicationthread110-interface.md)是实现由 PDM v11.0 和更高版本。 在 activdbg100.h 中发现。  
+> [IDebugApplicationThread110 接口](../../winscript/reference/idebugapplicationthread110-interface.md)由 PDM 11.0 和更高版本实现。 在 activdbg100.h 中发现。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,7 +34,7 @@ HRESULT IsThreadCallable([out, annotation("_Out_")] BOOL * pfIsCallable);
   
 #### <a name="parameters"></a>参数  
  `pfIsCallable`  
- [out]`true`如果线程是可调用，否则`false`。  
+ [out] 如果线程可调用，则 `true`; 否则 `false`。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugApplicationThread110 接口](../../winscript/reference/idebugapplicationthread110-interface.md)

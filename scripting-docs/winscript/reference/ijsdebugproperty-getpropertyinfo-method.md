@@ -1,5 +1,5 @@
 ---
-title: 'Ijsdebugproperty:: Getpropertyinfo 方法 |Microsoft Docs'
+title: IJsDebugProperty：： GetPropertyInfo 方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0769bf137845655c3fe0bf87bf0a57c6c6cbc09e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cf56189c42ef5c696441426191a6850d03ade416
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977766"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577320"
 ---
 # <a name="ijsdebugpropertygetpropertyinfo-method"></a>IJsDebugProperty::GetPropertyInfo 方法
 获取此对象的信息。  
@@ -36,15 +36,15 @@ HRESULT GetPropertyInfo(
   
 #### <a name="parameters"></a>参数  
  `nRadix`  
- [in]若要使用的基数。  
+ 中要使用的基数。  
   
  `pPropertyInfo`  
- [out]有关对象的信息。  
+ 弄有关对象的信息。  
   
 ## <a name="return-value"></a>返回值  
   
 ## <a name="requirements"></a>要求  
- **标头：** jscript9diag.h  
+ **标头：** jscript9diag  
   
 ## <a name="see-also"></a>请参阅  
  [IJsDebugProperty 接口](../../winscript/reference/ijsdebugproperty-interface.md)

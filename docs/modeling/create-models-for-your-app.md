@@ -16,17 +16,17 @@ helpviewer_keywords:
 - diagrams - modeling, layer
 - software, designing
 - software, modeling
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 79d116cfb7c9b6514032aa12d916b21b38ae94b3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 996f0336742441e565d16b0fe491e846d0d24329
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62811682"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654116"
 ---
 # <a name="create-models-for-your-app"></a>为你的应用程序创建模型
 
@@ -44,9 +44,9 @@ ms.locfileid: "62811682"
 
 ## <a name="related-tasks"></a>相关任务
 
-|**Topic**|**Task**|
+|**标题**|**Task**|
 |-|-|
-|[代码可视化](../modeling/visualize-code.md)|创建代码映射和依赖项关系图以更好地了解不熟悉的代码。|
+|[代码可视化](../modeling/visualize-code.md)|创建代码图和依赖项关系图，以便更好地了解不熟悉的代码。|
 |[建立用户需求模型](../modeling/model-user-requirements.md)|使用模型来阐明和传达用户的需求。|
 |[应用体系结构建模](../modeling/model-your-app-s-architecture.md)|使用模型来描述系统的整体结构和行为，并确保它满足用户的需求。|
 |[在开发过程中验证系统](../modeling/validate-your-system-during-development.md)|确保软件与用户的需求和系统的整体体系结构保持一致。|
@@ -55,5 +55,5 @@ ms.locfileid: "62811682"
 
 ## <a name="resources"></a>资源
 
-- [Visual Studio 可视化和建模工具论坛](http://go.microsoft.com/fwlink/?LinkId=184720)
+- [Visual Studio 可视化 & 建模工具论坛](http://go.microsoft.com/fwlink/?LinkId=184720)
 - [Visual Studio 扩展性论坛](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vsx)

@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 939d9f36c9838f02e58bc433d1a7bb9bef43c28d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6f656bdf4e3bc85a014ff8d3011708799aa44bcd
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955403"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572619"
 ---
 # <a name="breakreason-enumeration"></a>BREAKREASON 枚举
 指示造成中断的原因。  
@@ -42,18 +42,18 @@ typedef enum tagBREAKREASON {
 } BREAKREASON;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |成员|描述|  
 |------------|-----------------|  
-|BREAKREASON_STEP|语言引擎是在单步执行模式下。|  
+|BREAKREASON_STEP|语言引擎处于单步执行模式。|  
 |BREAKREASON_BREAKPOINT|语言引擎遇到显式断点。|  
-|BREAKREASON_DEBUGGER_BLOCK|语言引擎遇到另一个线程上的调试程序块。|  
-|BREAKREASON_HOST_INITIATED|主机请求一个分行符。|  
-|BREAKREASON_LANGUAGE_INITIATED|语言引擎请求一个分行符。|  
-|BREAKREASON_DEBUGGER_HALT|调试器 IDE 请求一个分行符。|  
-|BREAKREASON_ERROR|执行错误造成中断的原因。|  
-|BREAKREASON_JIT|由 JIT 调试启动引起。|  
+|BREAKREASON_DEBUGGER_BLOCK|语言引擎在另一个线程上遇到了调试程序块。|  
+|BREAKREASON_HOST_INITIATED|宿主请求中断。|  
+|BREAKREASON_LANGUAGE_INITIATED|语言引擎请求了一个分行符。|  
+|BREAKREASON_DEBUGGER_HALT|调试器 IDE 请求中断。|  
+|BREAKREASON_ERROR|执行错误导致了中断。|  
+|BREAKREASON_JIT|由 JIT 调试启动引起的。|  
   
 ## <a name="see-also"></a>请参阅  
  [活动脚本调试器常量、枚举和结构](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)

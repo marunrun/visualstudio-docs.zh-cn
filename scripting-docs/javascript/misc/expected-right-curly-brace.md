@@ -1,5 +1,5 @@
 ---
-title: 预期} |Microsoft Docs
+title: 应输入 "}" |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,19 +14,19 @@ ms.assetid: dff04495-9a6e-4604-9231-e40433fec152
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 02d6772a6bfe8d71c65fb866f097d3f2da97f86a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d19d1cc24928e070ae3569858d6db83a1b59a36d
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935006"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72577546"
 ---
 # <a name="expected-"></a>应有“}”
-未包含标记的函数体、 循环、 代码块末尾的右大括号或对象初始值设定项。 此错误的示例将**为**仅标记的循环主体的左大括号的循环。  
+你未包含用于标记函数体、循环、代码块或对象初始值设定项末尾的右大括号。 此错误的一个示例是**for**循环，该循环只包含标记循环体的左大括号。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 添加标记的结束函数、 循环、 块或对象初始值设定项的右大括号。  
+- 添加标记函数、循环、块或对象初始值设定项结束的右大括号。  
   
 ## <a name="see-also"></a>请参阅  
  [函数对象](../../javascript/reference/function-object-javascript.md)   

@@ -1,5 +1,5 @@
 ---
-title: IDebugHelper::CreatePropertyBrowser |Microsoft Docs
+title: IDebugHelper：： CreatePropertyBrowser |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4fc1e4365deea4a3981d9cf457a2c0af37edcd43
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 99aa03470b49d02ee9f0ac1548bd1f8e27d0ab34
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979248"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72562496"
 ---
 # <a name="idebughelpercreatepropertybrowser"></a>IDebugHelper::CreatePropertyBrowser
-返回包装一个变体的属性浏览器。  
+返回包装变体的属性浏览器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,16 +40,16 @@ HRESULT CreatePropertyBrowser(
   
 #### <a name="parameters"></a>参数  
  `pvar`  
- [in]若要浏览的根变体。  
+ 中要浏览的根变体。  
   
  `bstrName`  
- [in]提供给根名称。  
+ 中要为根指定的名称。  
   
  `pdat`  
- [in]线程在其请求属性。 如果此参数为 NULL，则执行没有封送处理。  
+ 中要请求其属性的线程。 如果此参数为 NULL，则不执行任何封送处理。  
   
  `ppdob`  
- [out]属性浏览器。  
+ 弄属性浏览器。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -59,9 +59,9 @@ HRESULT CreatePropertyBrowser(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法返回包装一个变体的属性浏览器。  
+ 此方法返回包装变体的属性浏览器。  
   
 ## <a name="see-also"></a>请参阅  
- [IDebugHelper::CreatePropertyBrowserEx](../../winscript/reference/idebughelper-createpropertybrowserex.md)   
+ [IDebugHelper：： CreatePropertyBrowserEx](../../winscript/reference/idebughelper-createpropertybrowserex.md)    
  [IDebugHelper 接口](../../winscript/reference/idebughelper-interface.md)   
  [IDebugProperty 接口](../../winscript/reference/idebugproperty-interface.md)

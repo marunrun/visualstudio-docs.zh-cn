@@ -1,5 +1,5 @@
 ---
-title: IScriptEntry::GetText | Microsoft Docs
+title: IScriptEntry：： GetText |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 24b314443644558b9900fc7d702dcd1b96a7cea4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2b25c1667f1df7e0394dd2ebfb0fea452da1b47d
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62787706"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72575405"
 ---
 # <a name="iscriptentrygettext"></a>IScriptEntry::GetText
-返回对应的文本`IScriptEntry`脚本块中或包含在源代码`IScriptScriptlet`事件处理程序。  
+返回与 `IScriptEntry` 脚本块对应的文本，或包含在 `IScriptScriptlet` 事件处理程序中的源代码。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT GetText(
   
 #### <a name="parameters"></a>参数  
  `pbstr`  
- [out]中的文本`IScriptEntry`脚本块中或包含在源代码`IScriptScriptlet`事件处理程序。  
+ 弄@No__t_0 脚本块中的文本，或包含在 `IScriptScriptlet` 事件处理程序中的源代码。  
   
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  

@@ -1,5 +1,5 @@
 ---
-title: 预期的十六进制数字 |Microsoft Docs
+title: 应为十六进制数字 |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,15 +14,15 @@ ms.assetid: 67a86df7-49f9-43cb-99c6-99b1a427827a
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 82f020b5f3b82ab2ce3545102be83a5cd41c6069
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: f6672046e0f7bf5e39c334dc0ba30f22eaff6e9a
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446521"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72573384"
 ---
 # <a name="expected-hexadecimal-digit"></a>应为十六进制数字
-创建一个不正确的 Unicode 转义序列。 Unicode 转义序列开头 \u，跟 4 个十六进制数字 （没有更多且不小于）。 Unicode 十六进制数字可以包含数字 0-9、 大小写字母 A-F 和小写字母 a 到 f。 下面的示例演示一个格式正确的 Unicode 转义序列。  
+你创建了不正确的 Unicode 转义序列。 Unicode 转义序列以 \u 开头，后跟四个十六进制数字（无更多且不太少）。 Unicode 十六进制数字只能包含0-9、大写字母、小写字母和小写字母 a-f。 下面的示例演示一个格式正确的 Unicode 转义序列。  
   
 ```JavaScript  
 z = "\u1A5F";  
@@ -30,10 +30,10 @@ z = "\u1A5F";
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 确保你 Unicode 十六进制数字开头 \u，仅包含数字 0-9、 大小写字母 A 到 F，小写字母 a 到 f;分为一到四位数字。  
+- 请确保 Unicode 十六进制数字以 \u 开头，只包含数字0-9，大写字母 A-f，小写字母 a-f;和按四位数分组。  
   
     > [!NOTE]
-    > 如果你想要在字符串内，使用 \u 文本，然后使用两个反斜杠 (\\\u)-一个用于第一个反斜杠转义。  
+    > 如果要在字符串中使用文本 \u，则使用两个反斜杠（\\ \u）-一个用于对第一个反斜杠进行转义。  
   
 ## <a name="see-also"></a>请参阅  
  [数据类型](../../javascript/data-types-javascript.md)

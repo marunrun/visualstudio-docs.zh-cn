@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication::HandleBreakPoint | Microsoft Docs
+title: IDebugApplication：： HandleBreakPoint |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5e3444e6eedde9576216552e41abb0e97aafa2d7
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 30937817424e88f80cfa6afa8c874adfd2b2687b
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63412382"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72574963"
 ---
 # <a name="idebugapplicationhandlebreakpoint"></a>IDebugApplication::HandleBreakPoint
-导致当前线程被阻塞，并将断点的通知发送到调试器 IDE。  
+导致当前线程阻止断点通知并将其发送到调试器 IDE。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,10 +38,10 @@ HRESULT HandleBreakPoint(
   
 #### <a name="parameters"></a>参数  
  `br`  
- [in]为中断的原因。  
+ 中中断的原因。  
   
  `pbra`  
- [out]在调试器恢复应用程序时要执行的操作。  
+ 弄调试器恢复应用程序时要执行的操作。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -51,15 +51,15 @@ HRESULT HandleBreakPoint(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 语言引擎遇到断点的线程的上下文中调用此方法。 此方法阻止当前线程，并将断点通知发送到调试器 IDE。 当调试器继续应用程序，`pbra`参数指定要执行的操作。  
+ 语言引擎在命中断点的线程的上下文中调用此方法。 此方法阻止当前线程，并将断点通知发送到调试器 IDE。 调试器恢复应用程序时，`pbra` 参数指定要执行的操作。  
   
 > [!NOTE]
-> 语言引擎不调用由线程执行任务，例如枚举堆栈帧中，或者在该断点的表达式进行计算。  
+> 可通过线程调用语言引擎来执行诸如枚举堆栈帧或在断点期间计算表达式等任务。  
   
- 此方法将导致`IApplicationDebugger::onHandleBreakPoint`调用。  
+ 此方法导致调用 `IApplicationDebugger::onHandleBreakPoint`。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugApplication 接口](../../winscript/reference/idebugapplication-interface.md)   
- [IApplicationDebugger::onHandleBreakPoint](../../winscript/reference/iapplicationdebugger-onhandlebreakpoint.md)   
+ [IApplicationDebugger：： onHandleBreakPoint](../../winscript/reference/iapplicationdebugger-onhandlebreakpoint.md)    
  [BREAKREASON 枚举](../../winscript/reference/breakreason-enumeration.md)   
  [BREAKRESUMEACTION 枚举](../../winscript/reference/breakresumeaction-enumeration.md)

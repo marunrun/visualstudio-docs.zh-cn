@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText::GetPositionOfLine |Microsoft Docs
+title: IDebugDocumentText：： GetPositionOfLine |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4cfcfc771c49abbf837f4db898936e478cda2194
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: adf4add99ac41440e6f4daa491b72166e97b5ba5
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970843"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572100"
 ---
 # <a name="idebugdocumenttextgetpositionofline"></a>IDebugDocumentText::GetPositionOfLine
-返回对应于一行的第一个字符的字符位置。  
+返回与行的第一个字符相对应的字符位置。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,10 +38,10 @@ HRESULT GetPositionOfLine(
   
 #### <a name="parameters"></a>参数  
  `cLineNumber`  
- [in]行号。  
+ 中行号。  
   
  `pcCharacterPosition`  
- [out]在文档中的行的开头的字符位置`cLineNumber`。  
+ 弄行首 `cLineNumber` 的字符位置。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -51,7 +51,7 @@ HRESULT GetPositionOfLine(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 此方法返回对应于一行的第一个字符的字符位置。  
+ 此方法返回与行的第一个字符相对应的字符位置。  
   
 ## <a name="see-also"></a>请参阅  
  [IDebugDocumentText 接口](../../winscript/reference/idebugdocumenttext-interface.md)

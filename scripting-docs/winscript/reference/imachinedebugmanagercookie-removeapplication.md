@@ -1,5 +1,5 @@
 ---
-title: IMachineDebugManagerCookie::RemoveApplication | Microsoft Docs
+title: IMachineDebugManagerCookie：： RemoveApplication |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4d920bcc348266d4aa9f0c4a4e297506f008e859
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d829262245c8c14b83ce4016f103ecae68895bd9
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977753"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576779"
 ---
 # <a name="imachinedebugmanagercookieremoveapplication"></a>IMachineDebugManagerCookie::RemoveApplication
-删除应用程序从正在运行的应用程序列表。  
+从正在运行的应用程序列表中删除应用程序。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,10 +38,10 @@ HRESULT RemoveApplication(
   
 #### <a name="parameters"></a>参数  
  `dwDebugAppCookie`  
- [in]一个标识的调试应用程序的 cookie。  
+ 中标识调试应用程序的 cookie。  
   
  `dwAppCookie`  
- [in]应用程序已添加到应用程序列表时提供的 cookie。  
+ 中将应用程序添加到应用程序列表时提供的 cookie。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
@@ -51,9 +51,9 @@ HRESULT RemoveApplication(
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 进程调试管理器调用此方法时`IProcessDebugManager::RemoveApplication`调用。  
+ 只要调用 `IProcessDebugManager::RemoveApplication`，进程调试管理器就会调用此方法。  
   
 ## <a name="see-also"></a>请参阅  
- [IMachineDebugManagerCookie::AddApplication](../../winscript/reference/imachinedebugmanagercookie-addapplication.md)   
- [IMachineDebugManagerCookie Interface](../../winscript/reference/imachinedebugmanagercookie-interface.md)   
+ [IMachineDebugManagerCookie：： AddApplication](../../winscript/reference/imachinedebugmanagercookie-addapplication.md)    
+ [IMachineDebugManagerCookie 接口](../../winscript/reference/imachinedebugmanagercookie-interface.md)   
  [IProcessDebugManager::RemoveApplication](../../winscript/reference/iprocessdebugmanager-removeapplication.md)

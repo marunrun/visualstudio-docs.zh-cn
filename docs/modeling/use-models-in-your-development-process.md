@@ -4,37 +4,37 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - UML, using models
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aced2be4d584fb2ede58527a1d541f24089f220d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1c38cb246a1ec3e8a20793b37f0a231d2e118bd4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62907294"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72663765"
 ---
 # <a name="use-models-in-your-development-process"></a>在你的开发过程中使用模型
 
-在 Visual Studio 中，你可以使用模型帮助你理解和更改系统、应用程序或组件。 模型能帮助你可视化系统工作的环境、阐明用户需求、定义你系统的体系结构、分析代码并确保你的代码符合要求。 请参阅[第 9 频道视频：通过建模改善体系结构](http://go.microsoft.com/fwlink/?LinkID=252078)。
+在 Visual Studio 中，你可以使用模型帮助你理解和更改系统、应用程序或组件。 模型能帮助你可视化系统工作的环境、阐明用户需求、定义你系统的体系结构、分析代码并确保你的代码符合要求。 请参阅第[9 频道视频：通过建模改进体系结构](http://go.microsoft.com/fwlink/?LinkID=252078)。
 
 若要查看支持每种类型的模型的 Visual Studio 版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
 模型可以通过几种方式帮助你：
 
-- 绘制建模图可帮助明确需求、体系结构和高级设计中所涉及的概念。 有关详细信息，请参阅[建立用户需求模型](../modeling/model-user-requirements.md)。
+- 绘制建模图可帮助明确需求、体系结构和高级设计中所涉及的概念。 有关详细信息，请参阅[模型用户需求](../modeling/model-user-requirements.md)。
 
 - 使用模型可帮助你揭示需求中的不一致性。
 
-- 使用模型通信可帮助你沟通重要概念时比使用自然语言更明确。 有关详细信息，请参阅[应用程序的体系结构建模](../modeling/model-your-app-s-architecture.md)。
+- 使用模型通信可帮助你沟通重要概念时比使用自然语言更明确。 有关详细信息，请参阅为[应用程序的体系结构建模](../modeling/model-your-app-s-architecture.md)。
 
-- 有时可使用模型生成代码或其他项目（如数据库架构或文档）。 例如，从模型生成的 Visual Studio 建模组件。 有关详细信息，请参阅[生成和配置将应用程序模型从](../modeling/generate-and-configure-your-app-from-models.md)。
+- 有时可使用模型生成代码或其他项目（如数据库架构或文档）。 例如，Visual Studio 的建模组件是从模型生成的。 有关详细信息，请参阅[从模型生成和配置应用](../modeling/generate-and-configure-your-app-from-models.md)。
 
 你可以在从极端敏捷到崇礼的各种流程中使用模型。
 
-## <a name="use-models-to-reduce-ambiguity"></a>使用模型减少多义性
+## <a name="use-models-to-reduce-ambiguity"></a>使用模型来减少多义性
 
 建模语言比自然语言更明确，它用来表达软件开发期间通常需要的想法。
 
@@ -42,15 +42,15 @@ ms.locfileid: "62907294"
 
 如果你的项目很大，并且团队遍布全球各个位置，与使用纯文本相比，你可以使用模型来帮助更有效地沟通需求和体系结构。
 
-在这两种情况下，创建模型几乎总是会导致不一致和多义性的显著降低。 不同的利益干系人经常会对系统工作的业务领域有不同的理解，并且不同的开发人员经常会对系统的工作方式有不同的理解。 通常使用模型作为讨论的焦点来揭示这些不同之处。 有关如何使用模型减少不一致的详细信息，请参阅[建立用户需求模型](../modeling/model-user-requirements.md)。
+在这两种情况下，创建模型几乎总是会导致不一致和多义性的显著降低。 不同的利益干系人经常会对系统工作的业务领域有不同的理解，并且不同的开发人员经常会对系统的工作方式有不同的理解。 通常使用模型作为讨论的焦点来揭示这些不同之处。 有关如何使用模型来减少不一致的详细信息，请参阅[模型用户需求](../modeling/model-user-requirements.md)。
 
-## <a name="use-models-with-other-artifacts"></a>将模型与其他项目使用
+## <a name="use-models-with-other-artifacts"></a>将模型与其他项目一起使用
 
-一个模型本身并不是需求规范或体系结构。 它是一个工具，用于更清楚地表达的事物某些方面，但不是所有软件设计过程中所需的全部概念都可以表达出来。 因此应与通信，如 OneNote 页面或段落、 Microsoft Office 文档、 工作项，在 Team Foundation 或项目文件室墙上的粘滞便笺中的其他方式一起使用的模型。 除了最后一项，所有这些对象类型都可以链接到模型的元素部分。
+一个模型本身并不是需求规范或体系结构。 它是一个工具，用于更清楚地表达的事物某些方面，但不是所有软件设计过程中所需的全部概念都可以表达出来。 因此，这些模型应与其他通信方式结合使用，例如 OneNote 页面或段落、Microsoft Office 文档、Team Foundation 中的工作项或项目房间留言板上的便笺。 除了最后一项，所有这些对象类型都可以链接到模型的元素部分。
 
 通常与模型一起使用的其他方面的规范包括以下内容。 具体取决于项目的大小和样式，你可以使用这些方面中的几个，也可以根本不适用它们：
 
-- 用户情景。 用户情景是与用户和其他利益干系人一起讨论的系统行为方面的简短描述，该行为将在项目的迭代之一中出现。 典型的用户故事还得从"客户将能够..."用户情景可能会引入一组用例，也可以定义先前已开发的用例的扩展。 定义或扩展用例有助于使用户情景更清晰。
+- 用户情景。 用户情景是与用户和其他利益干系人一起讨论的系统行为方面的简短描述，该行为将在项目的迭代之一中出现。 典型用户情景开始 "客户将能够 ..."用户情景可能会引入一组用例，也可以定义以前开发的用例的扩展。 定义或扩展用例有助于使用户情景更清晰。
 
 - 更改请求。 更正式项目中的更改请求非常类似于敏捷项目中的用户情景。 敏捷方法会将所有需求视为对之前迭代中所开发内容进行的更改。
 
@@ -76,7 +76,7 @@ ms.locfileid: "62907294"
 
 你可能会发现以下建议可以帮助实现在迭代项目中建模的好处。
 
-### <a name="sharpen-focus-as-each-iteration-approaches"></a>随着每次迭代临近逐渐聚焦
+### <a name="sharpen-focus-as-each-iteration-approaches"></a>在每个迭代方法中锐化焦点
 
 随着每次迭代的临近，使用模型来帮助定义要在迭代末尾传递的内容。
 
@@ -86,7 +86,7 @@ ms.locfileid: "62907294"
 
 - 每次迭代接近结束时，举办一次需求研讨会，以详细定义将在下个迭代中开发的需求或用户情景。 邀请能够确定优先级的用户和业务利益干系人，以及开发人员和系统测试员。 允许用三个小时为一个 2 周的迭代定义需求。
 
-- 该研讨会的目标是使每个人就下个迭代结束时将完成的内容达成一致。 将模型用作一种工具来帮助阐明需求。 该研讨会的输出是一个迭代积压工作： 即，在 Team Foundation 和测试套件中的开发任务的列表[!INCLUDE[TCMext](../misc/includes/tcmext_md.md)]。
+- 该研讨会的目标是使每个人就下个迭代结束时将完成的内容达成一致。 将模型用作一种工具来帮助阐明需求。 该研讨会的输出是一个迭代积压工作（backlog），即 Team Foundation 中的开发任务列表和 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] 中的测试套件。
 
 - 在需求研讨会中，仅在你需要为开发任务确定估计值的范围内讨论设计。 否则，请保持讨论用户可以直接体验的系统行为。 保持需求模型与体系结构模型分开。
 
@@ -94,17 +94,17 @@ ms.locfileid: "62907294"
 
 ### <a name="link-model-to-work-items"></a>将模型链接到工作项
 
-需求研讨会结束后，请详细说明需求模型的的详细信息，并将模型链接到开发任务。 可以通过将 Team Foundation 中的工作项链接到模型中的元素来执行此操作。
+需求研讨会结束后，请详细说明需求模型的的详细信息，并将模型链接到开发任务。 可以通过将 Team Foundation 中的工作项链接到模型中的元素来实现此目的。
 
 你可以将任意元素链接到工作项，但最有用的元素如下所示：
 
-- 描述业务规则或服务质量要求的注释。 有关详细信息，请参阅[建立用户需求模型](../modeling/model-user-requirements.md)。
+- 描述业务规则或服务质量要求的注释。 有关详细信息，请参阅[模型用户需求](../modeling/model-user-requirements.md)。
 
-### <a name="link-model-to-tests"></a>模型链接到测试
+### <a name="link-model-to-tests"></a>将模型链接到测试
 
 使用需求模型来指导验收测试的设计。 在开发工作进行的同时创建这些测试。
 
-若要了解有关此技术的详细信息，请参阅[基于模型开发测试](../modeling/develop-tests-from-a-model.md)。
+若要了解有关此方法的详细信息，请参阅[从模型开发测试](../modeling/develop-tests-from-a-model.md)。
 
 ### <a name="estimate-remaining-work"></a>估计剩余工作
 
@@ -116,24 +116,24 @@ ms.locfileid: "62907294"
 
 模型具有与软件相关的一系列抽象。 最具体的模型直接表示程序代码，而最抽象的模型表示可能会或可能不会在代码中表示的业务概念。
 
-可以通过多种类型的关系图中查看模型。 有关模型和关系图的信息，请参阅[为您的应用程序创建模型](../modeling/create-models-for-your-app.md)。
+可以通过多种类型的关系图中查看模型。 有关模型和关系图的信息，请参阅为[应用程序创建模型](../modeling/create-models-for-your-app.md)。
 
 不同类型的关系图可用于描述不同抽象级别的设计。 许多关系图类型可用于多个级别。 此表显示可以如何使用每种类型的关系图。
 
 |设计级别|关系图类型|
 |-|-|
-|业务流程<br /><br /> 了解将在其中使用你的系统的上下文有助于你了解用户对系统的需求。|-概念类图描述了业务流程中使用的业务概念。|
-|用户需求<br /><br /> 用户对系统的需求的定义。|的可以在单独的文档中描述业务规则和服务质量要求。|
-|高级设计<br /><br /> 系统的整体结构：主要组件以及它们如何结合在一起。|-依赖项关系图介绍了如何将系统组织成相互依赖的部件。 您可以验证程序代码对依赖项关系图，以确保它符合体系结构。|
-|代码分析<br /><br /> 可以从代码生成关系图。|-依赖项关系图显示了类之间的依赖项。 可以根据依赖项关系图验证更新后的代码。<br />类关系图显示在代码中的类。|
+|业务流程<br /><br /> 了解将在其中使用你的系统的上下文有助于你了解用户对系统的需求。|-概念类图描述业务流程中使用的业务概念。|
+|用户需求<br /><br /> 用户对系统的需求的定义。|-可以在单独的文档中描述业务规则和服务质量要求。|
+|高级设计<br /><br /> 系统的整体结构：主要组件以及它们如何结合在一起。|-依赖关系图描述系统如何构建为相互依赖的部分。 可以对照依赖关系图验证程序代码，以确保其符合体系结构。|
+|代码分析<br /><br /> 可以从代码生成关系图。|-依赖关系图显示类之间的依赖关系。 可以对照依赖关系图验证更新后的代码。<br />-类关系图显示代码中的类。|
 
 ## <a name="external-resources"></a>外部资源
 
-|**类别**|**链接**|
+|**类别**|**Links**|
 |-|-|
-|**视频**|![链接到视频](../data-tools/media/playvideo.gif) [MSDN 如何实现视频：如何创建和使用 UML 模型和关系图 (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![链接到视频](../data-tools/media/playvideo.gif)[第 9 频道：Visual Studio 2010 中的 UML](http://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![链接到视频](../data-tools/media/playvideo.gif) [MSDN 如何实现系列：UML 工具和扩展性 (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkID=214467)|
+|**视频**|![link 视频 ](../data-tools/media/playvideo.gif) [MSDN 如何实现视频：如何创建和使用 UML 模型和关系图（Visual Studio 2010 旗舰版）](http://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![link 视频 ](../data-tools/media/playvideo.gif) 第[9 频道：通过 Visual Studio 2010 的 UML](http://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![link 视频 ](../data-tools/media/playvideo.gif) [MSDN 如何实现系列： UML 工具和扩展性（Visual Studio 2010 旗舰版）](http://go.microsoft.com/fwlink/?LinkID=214467)|
 |**论坛**|- [Visual Studio 可视化和建模工具](http://go.microsoft.com/fwlink/?LinkId=184720)<br />- [Visual Studio 可视化和建模 SDK（DSL 工具）](http://go.microsoft.com/fwlink/?LinkId=184721)|
-|**博客**|[Microsoft DevOps](https://devblogs.microsoft.com/devops/)|
+|**Blogs**|[Microsoft DevOps](https://devblogs.microsoft.com/devops/)|
 |**技术文章和日志**|[MSDN 体系结构中心](http://go.microsoft.com/fwlink/?LinkId=201343)<br /><br /> [Visual Studio 体系结构工具指南](../modeling/visual-studio-architecture-tooling-guidance.md)|
 
 ## <a name="see-also"></a>请参阅

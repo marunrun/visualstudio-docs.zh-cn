@@ -18,15 +18,15 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8a1c77a7db2a16b05c1b6b0eeb5e02abef4c9c3
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: 8ecae431f75e14443895b816a24000b6fe3fba52
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018459"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72445864"
 ---
 # <a name="code-analysis-for-cc-warnings"></a>C/C++ 代码分析警告
-本节列出了除C++ [ C++核心准则检查](code-analysis-for-cpp-corecheck.md)程序引发的警告外的 C/代码分析警告。 有关代码分析的信息，请参阅[/analyze （代码分析）](/cpp/build/reference/analyze-code-analysis)和 [Quick Start：C/C++@no__t 的代码分析。
+本节列出了除C++ [ C++核心准则检查](code-analysis-for-cpp-corecheck.md)程序引发的警告外的 C/代码分析警告。 有关代码分析的信息，请参阅[/analyze （代码分析）](/cpp/build/reference/analyze-code-analysis)和[快速入门： C/C++的代码分析](../code-quality/quick-start-code-analysis-for-c-cpp.md)。
 
 ## <a name="see-also"></a>请参阅
 

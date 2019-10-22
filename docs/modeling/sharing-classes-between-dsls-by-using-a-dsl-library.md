@@ -2,64 +2,64 @@
 title: 使用 DSL 库在 DSL 之间共享类
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 36c49d3447a5f1fafcf4601057c66ebedcb193ec
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5293473e35424ccc6ee357d63a9355cacf0d6725
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63003381"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72670748"
 ---
 # <a name="sharing-classes-between-dsls-by-using-a-dsl-library"></a>使用 DSL 库在 DSL 之间共享类
-在 Visual Studio 可视化和建模 SDK 中，可以创建可导入到另一个 DSL 的 DSL 定义不完整。 这允许您考虑通用部分类似的模型。
+在 Visual Studio 可视化和建模 SDK 中，可以创建可导入到另一个 DSL 的不完整 DSL 定义。 这使您可以对类似模型的常见部分进行因式分解。
 
 ## <a name="creating-and-using-dsl-libraries"></a>创建和使用 DSL 库
 
-#### <a name="to-create-a-dsl-library"></a>若要创建的 DSL 库
+#### <a name="to-create-a-dsl-library"></a>创建 DSL 库
 
-1. 创建一个新的 DSL 项目，并选择的 Dsl 解决方案模板。
+1. 创建新的 DSL 项目，并选择 "DSL 库" 解决方案模板。
 
-     使用空模型，将创建单个的 DSL 项目。
+     将使用空模型创建单个 DSL 项目。
 
-2. 您可以添加域类、 关系、 形状等。
+2. 您可以添加域类、关系、形状等。
 
-     库中的元素不需要形成单个嵌入树。
+     库中的元素不必构成单个嵌入树。
 
-     若要定义一种关系，可以使用导入程序，创建两个域类，并创建它们之间的关系。
+     若要定义导入程序可以使用的关系，请创建两个域类并创建它们之间的关系。
 
-     请考虑设置**继承修饰符**到的域类的`Abstract`。
+     请考虑将域类的**继承修饰符**设置为 `Abstract`。
 
-3. 您可以添加在 DSL 资源管理器，如连接生成器中定义的元素。
+3. 可以添加在 DSL 资源管理器中定义的元素，例如连接构建器。
 
-4. 您可以添加自定义项，需要额外的代码，例如验证约束。
+4. 您可以添加需要其他代码的自定义项，如验证约束。
 
-5. 单击**转换所有模板**。
+5. 单击 "**转换所有模板**"。
 
 6. 生成项目。
 
-7. 当你将分发的其他人使用 DSL 时，必须提供编译的程序集 (DLL) 和文件`DslDefinition.dsl`。 可以下的文件夹中找到的已编译的程序集 `Dsl\bin\*`
+7. 将 DSL 分发给其他人使用时，必须同时提供编译的程序集（DLL）和文件 `DslDefinition.dsl`。 可以在下的文件夹中查找已编译的程序集 `Dsl\bin\*`
 
-#### <a name="to-import-a-dsl-library"></a>将 DSL 库导入
+#### <a name="to-import-a-dsl-library"></a>导入 DSL 库
 
-1. 在另一个 DSL 定义中，在**DSL 资源管理器**，右键单击 DSL 的根类，然后单击**添加新的 DslLibrary 导入**。
+1. 在其他 DSL 定义中，在**Dsl 资源管理器**中右键单击 dsl 的根类，然后单击 "**添加新的 DslLibrary 导入**"。
 
-2. 在属性窗口中设置**文件路径**的库。 可以使用相对或绝对路径。
+2. 在属性窗口中，设置库的**文件路径**。 您可以使用相对路径或绝对路径。
 
-    导入的库在 DSL 资源管理器，显示在只读模式下。
+    导入的库在 DSL 资源管理器中显示为只读模式。
 
-3. 您可以使用导入的类作为基类。 在导入的 DSL 中，创建一个域类，在属性窗口中，设置**基类**到导入的类。
+3. 您可以使用导入的类作为基类。 在导入 DSL 中创建域类，并在属性窗口中，将 "**基类**" 设置为导入的类。
 
-4. 单击转换所有模板。
+4. 单击 "转换所有模板"。
 
-5. 将对由 DSL 库项目生成的程序集 (DLL) 的引用添加到 DSL 项目中。
+5. 添加到 DSL 项目引用 DSL 库项目生成的程序集（DLL）。
 
 6. 生成解决方案。
 
-   DSL 库在可以导入其他库。 当导入一个库时，其导入也会自动显示在 DSL 资源管理器。
+   DSL 库可以导入其他库。 导入库时，其导入还会自动显示在 DSL 资源管理器中。
 
 ## <a name="see-also"></a>请参阅
 
