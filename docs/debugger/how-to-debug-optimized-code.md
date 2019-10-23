@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b498bdb491e3a15dddf005d43435d84b837fcd0
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 590925a894f1bf9bfe70d9dd1bf6142fcb6a2e34
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63387743"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72430663"
 ---
 # <a name="how-to-debug-optimized-code"></a>如何：调试优化的代码
 
@@ -52,7 +52,7 @@ ms.locfileid: "63387743"
 
   全局和静态变量总是正确显示。 结构布局也是这样。 如果您有指向结构的指针而且指针的值是正确的，那么结构的每个成员变量都将显示正确值。
 
-  出于这些限制原因，只要有可能，就应使用程序的“未优化”版本进行调试。 默认情况下，优化在 Visual C++ 程序的“调试”配置中关闭，在“发布”配置中打开。
+  出于这些限制原因，只要有可能，就应使用程序的“未优化”版本进行调试。 默认情况下，在C++程序的 "调试" 配置中禁用优化，并在 "发布" 配置中启用。
 
   但是，bug 可能仅在程序的优化版本中出现。 在此情况下，必须调试优化的代码。
 
@@ -74,7 +74,7 @@ ms.locfileid: "63387743"
 
 8. 如果为“`Custom`”选择了“`Optimization`”选项，现在便可为属性列表中显示的其他任何属性设置选项。
 
-9. 选择配置属性 C /C++，命令行节点的项目属性页中，并添加`(` [/Zo](/cpp/build/reference/zo-enhance-optimized-debugging) `)`到**其他选项**文本框。
+9. 选择 "项目属性" 页的C++"配置属性"、"C/" 和 "命令行" 节点，并将 `(`[/Zo](/cpp/build/reference/zo-enhance-optimized-debugging) "`)` 添加到"**其他选项**"文本框中。
 
     > [!WARNING]
     > `/Zo` 需要 Visual Studio 2013 Update 3 或更高版本。
