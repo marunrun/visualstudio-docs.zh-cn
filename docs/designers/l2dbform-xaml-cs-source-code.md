@@ -3,29 +3,29 @@ title: L2DBForm.xaml.cs Source Code
 ms.date: 11/04/2016
 ms.topic: sample
 ms.assetid: 5a40dad3-6763-4576-b3ad-874df3f2c8d9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 12c9515cf6f4841dd1f5ebfb554e00a262b8a160
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5bd8c4dfc19a1c5b1c4956ca24698d82d7c2f6e6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62893133"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72635302"
 ---
 # <a name="l2dbformxamlcs-source-code"></a>L2DBForm.xaml.cs 源代码
 
-本主题包含文件 L2DBForm.xaml.cs 中 C# 源代码的内容和说明。 本文件中包含的 L2XDBForm 分部类可分为三个逻辑区域：数据成员、`OnRemove` 和 `OnAddBook` 按钮单击事件处理程序。
+本主题包含文件 L2DBForm.xaml.cs 中 C# 源代码的内容和说明  。 本文件中包含的 L2XDBForm 分部类可分为三个逻辑区域：数据成员、`OnRemove` 和 `OnAddBook` 按钮单击事件处理程序。
 
 ## <a name="data-members"></a>数据成员
 
-使用两个私有数据成员将此类与 L2DBForm.xaml 中使用的窗口资源相关联。
+使用两个私有数据成员将此类与 L2DBForm.xaml 中使用的窗口资源相关联  。
 
 - 命名空间变量 `myBooks` 初始化为 `"http://www.mybooks.com"`。
 
-- 用下面的行将构造函数中的成员 `bookList` 初始化为 L2DBForm.xaml 中的 CDATA 字符串：
+- 用下面的行将构造函数中的成员 `bookList` 初始化为 L2DBForm.xaml 中的 CDATA 字符串  ：
 
     ```csharp
     bookList = (XElement)((ObjectDataProvider)Resources["LoadedBooks"]).Data;
@@ -37,9 +37,9 @@ ms.locfileid: "62893133"
 
 - 第一个条件语句用于输入验证。
 
-- 第二个语句根据用户在“添加新书籍”用户界面 (UI) 区域中输入的字符串值新建 <xref:System.Xml.Linq.XElement>。
+- 第二个语句根据用户在“添加新书籍”  用户界面 (UI) 区域中输入的字符串值新建 <xref:System.Xml.Linq.XElement>。
 
-- 最后一个语句将此新书籍元素添加到 L2DBForm.xaml 中的数据提供程序。 因此，动态数据绑定将用此新项自动更新 UI；不需要用户提供额外的代码。
+- 最后一个语句将此新书籍元素添加到 L2DBForm.xaml 中的数据提供程序  。 因此，动态数据绑定将用此新项自动更新 UI；不需要用户提供额外的代码。
 
 ## <a name="onremove-event-handler"></a>OnRemove 事件处理程序
 

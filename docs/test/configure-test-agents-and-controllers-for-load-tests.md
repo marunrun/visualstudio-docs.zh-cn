@@ -4,15 +4,15 @@ ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - load tests, test agents and controllers
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f7a912ff25e2782490b711d909a64c5d9438ed8f
-ms.sourcegitcommit: 9a3972eb85de5443ac2bc03964c5a251c39b2921
+ms.openlocfilehash: 657037cdb3ef36c4ef81c72cb4fc43f6a94203a3
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71301709"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665175"
 ---
 # <a name="overview-of-test-agents-and-test-controllers-for-running-load-tests"></a>用于运行负载测试的测试代理和测试控制器的概述
 

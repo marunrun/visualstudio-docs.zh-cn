@@ -7,17 +7,17 @@ helpviewer_keywords:
 - /Command Devenv switch
 - Command Devenv switch
 ms.assetid: 13c20cd6-f09d-400a-8b7b-ecc266a32cef
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6daa21f9db7eef9a651577ad829d884dccf353dc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2ca9a6550fd5fd141a5f8051d1948ccd626e970b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62968618"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654596"
 ---
 # <a name="command-devenvexe"></a>/Command (devenv.exe)
 
@@ -31,7 +31,7 @@ devenv /Command CommandName
 
 ## <a name="arguments"></a>自变量
 
-CommandName
+CommandName 
 
 必需。 Visual Studio 命令或其别名的完整名称（放在双引号中）。 有关命令和别名语法的详细信息，请参阅 [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)。
 

@@ -7,21 +7,21 @@ ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: a2970c0086ec18789347eebdea752487be18ce7d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 79b396946666077dcdedb3ee2a5ab891c2bb4fb8
+ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62548385"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72777393"
 ---
 # <a name="view-recent-job-performance-and-details"></a>查看最近的作业性能和详细信息
 
 提交作业后，可以查看作业列表，以查看作业状态和持续时间等。
 
-1. 在“服务器资源管理器”中，展开特定计算上下文。
-2. 双击“作业”。
+1. 在“服务器资源管理器”中，展开特定计算上下文  。
+2. 双击“作业”  。
 3. 可看见提交到该计算上下文的作业列表。
-4. 在列表中选择一个特定的作业以查看详细信息。
+4. 在列表中选择一个特定的作业以查看详细信息  。
 
 ![监视作业](media/job-details/monitor-jobs.png)
 

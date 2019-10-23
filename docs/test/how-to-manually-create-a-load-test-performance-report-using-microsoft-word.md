@@ -6,15 +6,15 @@ helpviewer_keywords:
 - load tests, reporting
 - load tests, creating Word reports
 ms.assetid: 3b864c75-2699-48c1-a2b4-9651f108c267
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a82479fabda0cd64e977af01f87492563a02853f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 715086a2c0d9196680dd1f332ee9b5122e144e5b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62950067"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653483"
 ---
 # <a name="how-to-manually-create-a-load-test-performance-report-using-microsoft-word"></a>如何：使用 Microsoft Word 手动创建负载测试性能报告
 
@@ -30,11 +30,11 @@ ms.locfileid: "62950067"
 
 ## <a name="copy-summary-view-data"></a>复制摘要视图数据
 
-1. 在“负载测试结果”中，如果当前未显示摘要视图，请单击工具栏上的“摘要”。
+1. 在“负载测试结果”中，如果当前未显示摘要视图，请单击工具栏上的“摘要”   。
 
-2. 在摘要视图中，右键单击并选择“全选”。
+2. 在摘要视图中，右键单击并选择“全选”。 
 
-3. 在摘要视图中，右键单击并选择“复制”。 此操作会将摘要视图数据以 HTML 格式呈现到剪贴板。
+3. 在摘要视图中，右键单击并选择“复制”。  此操作会将摘要视图数据以 HTML 格式呈现到剪贴板。
 
 4. 在 Microsoft Word 中，将摘要视图数据粘贴到所需位置。
 
@@ -42,13 +42,13 @@ ms.locfileid: "62950067"
 
 ## <a name="copy-graph-view-data"></a>复制关系图视图数据
 
-1. 在“负载测试结果”中，如果当前未显示关系图视图，请选择工具栏上的“关系图”。
+1. 在“负载测试结果”中，如果当前未显示关系图视图，请选择工具栏上的“关系图”   。
 
 2. （可选）对要复制到 Microsoft Word 文档中的特定关系图进行放大，如下图所示。 有关详细信息，请参阅[如何：放大关系图的区域](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md)。
 
      ![图形视图缩放控件](../test/media/ltest_zoomcontrol.png)
 
-3. 在要复制到 Microsoft Word 文档中的关系图上，右键单击并选择“复制”。
+3. 在要复制到 Microsoft Word 文档中的关系图上，右键单击并选择“复制”。 
 
 4. 在 Microsoft Word 中的所需位置粘贴关系图以及关联的表数据。
 

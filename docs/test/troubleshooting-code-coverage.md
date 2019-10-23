@@ -2,17 +2,17 @@
 title: 代码覆盖率疑难解答
 ms.date: 11/04/2016
 ms.topic: troubleshooting
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 6416045f040e9825bab6eeb33dd4b75478166ee3
-ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
+author: jillre
+ms.openlocfilehash: 9a7e90310df3e9e2e73b653fdc651ba266e679ae
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71342474"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659879"
 ---
 # <a name="troubleshoot-code-coverage"></a>代码覆盖率疑难解答
 

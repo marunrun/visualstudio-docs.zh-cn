@@ -2,16 +2,16 @@
 ms.date: 03/19/2019
 ms.technology: vs-ide-general
 ms.custom: vs-get-started
-ms.author: gewarren
-author: gewarren
+ms.author: jillfra
+author: jillre
 manager: jillfra
 ms.topic: include
-ms.openlocfilehash: 27c9c453549f753f3dfdc1664fd76f7a65d0ded5
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 973af983d0f07b0aceeedfc865280deea115f179
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70197102"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72632452"
 ---
 Visual Studio 集成开发环境是一种创新启动板，可用于编辑、调试并生成代码，然后发布应用  。 集成开发环境 (IDE) 是一个功能丰富的程序，可用于软件开发的许多方面。 除了大多数 IDE 提供的标准编辑器和调试器之外，Visual Studio 还包括编译器、代码完成工具、图形设计器和许多其他功能，以简化软件开发过程。
 

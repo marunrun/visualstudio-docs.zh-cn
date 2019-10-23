@@ -2,17 +2,17 @@
 title: 如何：生成并运行 LinqToXmlDataBinding 示例
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d53f8d08222eb35660f7a4454164d6b821a976d9
-ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
+ms.openlocfilehash: 3b3999ae6fb602c9877bc3f997ab922bda08565b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66714833"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72636877"
 ---
 # <a name="how-to-build-and-run-the-linqtoxmldatabinding-example"></a>如何：生成并运行 LinqToXmlDataBinding 示例
 

@@ -11,34 +11,34 @@ helpviewer_keywords:
 - icons, IntelliSense
 - symbols, Object Browser icons
 - Object Browser, icons in Class View
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9814b03d0a8cd8733c9fd48b4e49c2cf306a8a44
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 589ec840b49d250591e2c477989d4422273cac31
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62976017"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647628"
 ---
 # <a name="class-view-and-object-browser-icons"></a>“类视图”和“对象浏览器”图标
 
-“类视图”和“对象浏览器”显示表示代码实体的图标，如命名空间、类、函数和变量。 下表展示和描述了图标。
+“类视图”和“对象浏览器”显示表示代码实体的图标，如命名空间、类、函数和变量   。 下表展示和描述了图标。
 
 |图标|说明|图标|说明|
 |----------|-----------------|----------|-----------------|
 |![命名空间符号](../ide/media/vxnamespace_icon.gif)|命名空间|![声明符号](../ide/media/vxmethod_icon.gif)|方法或函数|
 |![“类”图标](../ide/media/vxclass_icon.gif)|类|![运算符符号](../ide/media/vxoperator_icon.gif)|运算符|
-|![棒棒糖形状的接口符号](../ide/media/vxinterface_icon.gif)|接口|![属性符号](../ide/media/vxproperty_icon.gif)|Property|
+|![棒棒糖形状的接口符号](../ide/media/vxinterface_icon.gif)|接口|![属性符号](../ide/media/vxproperty_icon.gif)|属性|
 |![结构符号](../ide/media/vxstruct_icon.gif)|结构|![“字段”图标](../ide/media/vxfield_icon.gif)|字段或变量|
 |![联合符号](../ide/media/vxunion_icon.gif)|联合|![事件符号](../ide/media/vxevent_icon.gif)|事件|
 |![枚举符号](../ide/media/vxenum_icon.gif)|Enum|![“常量”图标](../ide/media/vxconstant_icon.gif)|返回的常量|
 |![类型定义符号](../ide/media/vxtypedef_icon.gif)|TypeDef|![枚举项符号](../ide/media/vxenumitem_icon.gif)|枚举项|
 |![Visual Studio 模块符号](../ide/media/vxmodule_icon.gif)|模块|![映射项符号](../ide/media/vxmapitem_icon.gif)|映射项|
 |![扩展方法符号](../ide/media/extensionmethod.gif)|扩展方法|![声明符号](../ide/media/vxmethod_icon.gif)|外部声明|
-|![委托符号](../ide/media/vxdelegate_icon.gif)|委托|![类视图和对象浏览器的“错误”图标](../ide/media/erroricon.gif)|Error|
+|![委托符号](../ide/media/vxdelegate_icon.gif)|委托|![类视图和对象浏览器的“错误”图标](../ide/media/erroricon.gif)|错误|
 |![异常符号](../ide/media/vxexception_icon.gif)|例外|![模板符号](../ide/media/vxtemplate_icon.gif)|模板|
 |![映射符号](../ide/media/vxmap_icon.gif)|映射|![错误感叹号符号](../ide/media/vxerror_icon.gif)|未知|
 |![“类型转发”符号](../ide/media/ob_type_forward.gif)|类型转发|||

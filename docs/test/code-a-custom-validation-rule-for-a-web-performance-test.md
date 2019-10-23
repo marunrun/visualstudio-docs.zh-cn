@@ -12,15 +12,15 @@ ms.assetid: 989124bc-1a86-41f7-b37d-8f9e54dd4f0b
 dev_langs:
 - CSharp
 - VB
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c39518c03d1a599dbe9eecac3d609343b7394313
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2c2987aa1aca4132b3d134a65dec94726ee0349e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62822596"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665278"
 ---
 # <a name="code-a-custom-validation-rule-for-a-web-performance-test"></a>为 Web 性能测试编码自定义验证规则
 
@@ -48,11 +48,11 @@ ms.locfileid: "62822596"
 
 6. （可选）在测试项目中添加一个对包含自定义验证规则的类库项目的引用。
 
-7. 在测试项目中的“Web 性能测试编辑器”中打开一个 Web 性能测试。
+7. 在测试项目中的“Web 性能测试编辑器”中打开一个 Web 性能测试。 
 
-8. 若要将自定义验证规则添加到 Web 性能测试请求中，请右键单击请求并选择“添加验证规则”。
+8. 若要将自定义验证规则添加到 Web 性能测试请求中，请右键单击请求并选择“添加验证规则”。 
 
-     出现“添加验证规则”对话框。 将在“选择规则”列表中看到自定义验证规则以及预定义的验证规则。 选择你的自定义验证规则，然后选择“确定”。
+     出现“添加验证规则”对话框。  将在“选择规则”列表中看到自定义验证规则以及预定义的验证规则。  选择你的自定义验证规则，然后选择“确定”。 
 
 9. 运行该 Web 性能测试。
 

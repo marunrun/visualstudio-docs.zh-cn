@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - class diagrams, exporting as images
 ms.assetid: c57055c5-1340-449f-b9d3-ca6f87e2f69a
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3fb8f735478da16989830a1a68c239b9a2a98496
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0bceb724784f70e3b1c527507eb7d837558c7d0f
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975198"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72631743"
 ---
 # <a name="how-to-export-class-diagrams-as-images"></a>如何：将类图作为图像导出
 
@@ -25,15 +25,15 @@ ms.locfileid: "62975198"
 
 ## <a name="export-a-diagram"></a>导出关系图
 
-1. 打开你的类图 (.cd) 文件。
+1. 打开你的类图 (.cd)  文件。
 
-2. 通过“类图”菜单或关系图面快捷菜单，选择“将关系图导出为图像”。
+2. 通过“类图”  菜单或关系图面快捷菜单，选择“将关系图导出为图像”  。
 
 3. 选择关系图。
 
 4. 选择所需格式。
 
-5. 选择“导出”来完成导出。
+5. 选择“导出”  来完成导出。
 
 若要自动更新从其他文档链接的导出图像，请在 Visual Studio 中再次导出该关系图。
 

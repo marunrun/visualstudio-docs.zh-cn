@@ -4,21 +4,21 @@ ms.date: 05/02/2017
 ms.topic: reference
 helpviewer_keywords:
 - IntelliTest, Exploration bounds
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: ffa6908fe759f33ad1e82f2fd44975d6731cdf16
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+author: jillre
+ms.openlocfilehash: f6b29b8bc2a9755f5f2e2ced237a5a1ce6acfd6e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62978544"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653227"
 ---
 # <a name="exploration-bounds"></a>浏览边界
 
-PexSettingsAttributeBase 是设置边界即特性的抽象基类。 请参阅[设置瀑布图](settings-waterfall.md)，大致了解 IntelliTest 中的设置。
+PexSettingsAttributeBase  是设置边界即特性的抽象基类。 请参阅[设置瀑布图](settings-waterfall.md)，大致了解 IntelliTest 中的设置。
 
 使用该设置的命名属性及其派生特性可修改设置：
 
@@ -48,7 +48,7 @@ public partial class FooTest {...}
 <a name="maxconstraintsolvertime"></a>
 ## <a name="maxconstraintsolvertime"></a>MaxConstraintSolverTime
 
-[约束求解器](input-generation.md#constraint-solver)必须计算将导致使用一个新的其他执行路径的输入所需的秒数。 这是 PexSettingsAttributeBase 及其派生类型的一个选项。
+[约束求解器](input-generation.md#constraint-solver)必须计算将导致使用一个新的其他执行路径的输入所需的秒数。 这是 PexSettingsAttributeBase  及其派生类型的一个选项。
 
 IntelliTest 浏览程序的执行路径越深，IntelliTest 从程序的控制流和数据流生成的约束系统就会变得越复杂。 根据时间限制，可通过设置此值，让 IntelliTest 花费更多或更少的时间来发现新的执行路径。
 
@@ -57,7 +57,7 @@ IntelliTest 浏览程序的执行路径越深，IntelliTest 从程序的控制�
 <a name="maxconstraintsolvermemory"></a>
 ## <a name="maxconstraintsolvermemory"></a>MaxConstraintSolverMemory
 
-[约束求解器](input-generation.md#constraint-solver)必须计算将导致使用一个新的其他执行路径的输入的大小 (MB)。 这是 PexSettingsAttributeBase* 及其派生类型的一个选项。
+[约束求解器](input-generation.md#constraint-solver)必须计算将导致使用一个新的其他执行路径的输入的大小 (MB)。 这是 PexSettingsAttributeBase  * 及其派生类型的一个选项。
 
 IntelliTest 浏览程序的执行路径越深，IntelliTest 从程序的控制流和数据流生成的约束系统就会变得越复杂。 根据计算机的可用内存，可通过设置此值，让 IntelliTest 处理更复杂的约束系统。
 
@@ -123,11 +123,11 @@ void ParameterizedTest(int n)
 
 此浏览边界背后的动机是包含循环或递归的任何代码可能具有无限数目的执行路径，因此需要在[输入生成](input-generation.md)期间限制 IntelliTest。
 
-MaxRuns 和 MaxRunsWithUniquePaths 这两个设置的关系如下所示：
+MaxRuns  和 MaxRunsWithUniquePaths  这两个设置的关系如下所示：
 
-* IntelliTest 将使用不同的测试输入调用参数化测试方法最多 MaxRuns 次。
+* IntelliTest 将使用不同的测试输入调用参数化测试方法最多 MaxRuns  次。
 * 如果执行代码是确定的，IntelliTest 每次将使用不同的执行路径。 但在某些情况下，执行代码可能会使用不同的输入沿用之前使用过的执行路径。
-* IntelliTest 计算找到的唯一执行路径数；此数目受 MaxRunsWithUniquePaths 选项限制。
+* IntelliTest 计算找到的唯一执行路径数；此数目受 MaxRunsWithUniquePaths  选项限制。
 
 <a name="maxrunswithoutnewtests"></a>
 ## <a name="maxrunswithoutnewtests"></a>MaxRunsWithoutNewTests
@@ -143,11 +143,11 @@ MaxRuns 和 MaxRunsWithUniquePaths 这两个设置的关系如下所示：
 
 此浏览边界背后的动机是包含循环或递归的任何代码可能具有无限数目的执行路径，因此必须在[输入生成](input-generation.md)期间限制 IntelliTest。
 
-MaxRuns 和 MaxRunsWithUniquePaths 这两个设置的关系如下所示：
+MaxRuns  和 MaxRunsWithUniquePaths  这两个设置的关系如下所示：
 
-* IntelliTest 将使用不同的测试输入调用参数化测试方法最多 MaxRuns 次。
+* IntelliTest 将使用不同的测试输入调用参数化测试方法最多 MaxRuns  次。
 * 如果执行代码是确定的，IntelliTest 每次将使用不同的执行路径。 但在某些情况下，执行代码可能会使用不同的输入沿用之前使用过的执行路径。
-* IntelliTest 计算找到的唯一执行路径数；此数目受 MaxRunsWithUniquePaths 选项限制。
+* IntelliTest 计算找到的唯一执行路径数；此数目受 MaxRunsWithUniquePaths  选项限制。
 
 <a name="maxexceptions"></a>
 ## <a name="maxexceptions"></a>MaxExceptions
@@ -168,21 +168,21 @@ MaxRuns 和 MaxRunsWithUniquePaths 这两个设置的关系如下所示：
 
 指示 IntelliTest 应发出的测试类型。 可能的值为：
 
-* 全部 - 对所有内容（包括假设冲突）发出测试。
-* FailuresAndIncreasedBranchHits（默认）- 对所有唯一故障发出测试，且每当测试用例按 [TestEmissionBranchHits](#testemissionbranchhits) 的控制，增加覆盖率时发出测试。
-* FailuresAndUniquePaths - 对 IntelliTest 找到的所有故障以及导致唯一执行路径的每个测试输入发出测试。
-* 故障 - 仅对故障发出测试。
+* 全部  - 对所有内容（包括假设冲突）发出测试。
+* FailuresAndIncreasedBranchHits  （默认）- 对所有唯一故障发出测试，且每当测试用例按 [TestEmissionBranchHits](#testemissionbranchhits) 的控制，增加覆盖率时发出测试。
+* FailuresAndUniquePaths  - 对 IntelliTest 找到的所有故障以及导致唯一执行路径的每个测试输入发出测试。
+* 故障  - 仅对故障发出测试。
 
 <a name="testemissionbranchhits"></a>
 ## <a name="testemissionbranchhits"></a>TestEmissionBranchHits
 
 根据当前 [TestEmissionFilter](#testemissionfilter) 设置，当 IntelliTest 涵盖之前程序中未涵盖的分支时发出新的测试用例。
 
-TestEmissionBranchHits 设置确定 IntelliTest 是否应考虑完全涵盖某个分支，是测试涵盖一次，即 (**TestEmissionBranchHits = 1**)，还是两次，即 (**TestEmissionBranchHits = 2**)，依次类推。
+TestEmissionBranchHits  设置确定 IntelliTest 是否应考虑完全涵盖某个分支，是测试涵盖一次，即 (**TestEmissionBranchHits = 1**)，还是两次，即 (**TestEmissionBranchHits = 2**)，依次类推。
 
-TestEmissionBranchHits = 1 将产生非常小的测试套件，套件将涵盖 IntelliTest 可访问的所有分支。 具体而言，此测试套件还将涵盖它访问的所有基本块和语句。
+TestEmissionBranchHits = 1  将产生非常小的测试套件，套件将涵盖 IntelliTest 可访问的所有分支。 具体而言，此测试套件还将涵盖它访问的所有基本块和语句。
 
-此选项的默认值是 TestEmissionBranchHits = 2，这将生成更具表达意义的测试套件，也更适合检测将来的回归错误。
+此选项的默认值是 TestEmissionBranchHits = 2  ，这将生成更具表达意义的测试套件，也更适合检测将来的回归错误。
 
 ## <a name="got-feedback"></a>是否获得反馈？
 

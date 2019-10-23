@@ -9,18 +9,18 @@ helpviewer_keywords:
 - searching IDE
 - IDE, searching
 ms.assetid: 4200f297-d065-4723-9a30-d91ff2e26c9d
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 1f5026a014b5adc96f0729d130c4398474d6d413
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: f0cc6bcb59bf98a7416221115dbeeef8f24a5e74
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68605906"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655667"
 ---
 # <a name="quick-launch-environment-options-dialog-box"></a>“选项”对话框 ->“环境”->“快速启动”
 

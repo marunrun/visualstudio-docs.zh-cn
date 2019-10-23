@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Load Test Viewer, summary
 - load tests, summary in Load Test Viewer
 ms.assetid: 326b6c3c-5378-452b-8ca3-ba5a06ab3d41
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 66789cdf50c06648b2d973d9c62a14c113aeaa0e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ba72bc9d4e63e1ccb1e6d8c05d20332880e19ea9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62785917"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652995"
 ---
 # <a name="load-test-results-summary-overview"></a>负载测试结果摘要概述
 
@@ -70,37 +70,37 @@ ms.locfileid: "62785917"
 
 ## <a name="key-statistic-top-5-slowest-pages"></a>关键统计信息：最慢的前 5 个页面
 
-“最慢的页面”一节包含负载测试中最慢的 5 个页面。 此节显示每个页面的 URL 和平均页面加载时间。 这些页面按降序列出。 可选择某个页面的 URL 以打开“页”表和查看该页面的更多详细信息。 有关详细信息，请参阅[如何：查看网页响应](../test/how-to-view-web-page-response-time-in-a-load-test.md)。
+“最慢的页面”一节包含负载测试中最慢的 5 个页面。 此节显示每个页面的 URL 和平均页面加载时间。 这些页面按降序列出。 可选择某个页面的 URL 以打开“页”表和查看该页面的更多详细信息  。 有关详细信息，请参阅[如何：查看网页响应](../test/how-to-view-web-page-response-time-in-a-load-test.md)。
 
-“95% 页面时间(秒)”的百分比值报告，95% 的页面在此时间内完成（以秒为单位）。
+“95% 页面时间(秒)”的百分比值报告，95% 的页面在此时间内完成（以秒为单位）  。
 
 ## <a name="key-statistic-top-5-slowest-tests"></a>关键统计信息：最慢的前 5 个测试
 
-“最慢的测试”一节包含负载测试中最慢的 5 个测试。 此节显示每个测试的测试名称和平均测试时间。 这些测试按降序列出。 可选择某个测试的名称以打开“测试”表和查看该测试的更多详细信息。 有关详细信息，请参阅[在表视图中分析负载测试结果和错误](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)。
+“最慢的测试”一节包含负载测试中最慢的 5 个测试。 此节显示每个测试的测试名称和平均测试时间。 这些测试按降序列出。 可选择某个测试的名称以打开“测试”表和查看该测试的更多详细信息  。 有关详细信息，请参阅[在表视图中分析负载测试结果和错误](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)。
 
-“95% 测试时间(秒)”的百分比值报告，95% 的测试在此时间内完成（以秒为单位）。
+“95% 测试时间(秒)”的百分比值报告，95% 的测试在此时间内完成（以秒为单位）  。
 
 ## <a name="key-statistic-top-5-slowest-sql-operations"></a>关键统计信息：最慢的前 5 个 SQL 操作
 
-如果在负载测试中启用了 SQL 跟踪，“最慢的查询”一节将包含负载测试中最慢的 5 个查询。 此节显示每个测试的操作名称和持续时间。 持续时间以微秒 (SQL Server 2005) 或毫秒（SQL Server 2000 和更低版本）显示。 这些测试按持续时间以降序列出。 可选择某个操作的名称以打开“SQL 跟踪”表，并查看该操作的更多详细信息。 有关详细信息，请参阅 [SQL 跟踪数据表](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#the-sql-trace-data-table)。
+如果在负载测试中启用了 SQL 跟踪，“最慢的查询”一节将包含负载测试中最慢的 5 个查询。 此节显示每个测试的操作名称和持续时间。 持续时间以微秒 (SQL Server 2005) 或毫秒（SQL Server 2000 和更低版本）显示。 这些测试按持续时间以降序列出。 可选择某个操作的名称以打开“SQL 跟踪”表，并查看该操作的更多详细信息  。 有关详细信息，请参阅 [SQL 跟踪数据表](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#the-sql-trace-data-table)。
 
 ## <a name="test-results"></a>测试结果
 
-“测试结果”一节包含负载测试中所有测试和方案的列表。 此节显示测试的名称、方案、运行的次数、失败的次数以及平均测试时间。 可选择某个测试的名称以打开“测试”表和查看该测试的更多详细信息。 有关详细信息，请参阅[在表视图中分析负载测试结果和错误](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)。
+“测试结果”一节包含负载测试中所有测试和方案的列表。 此节显示测试的名称、方案、运行的次数、失败的次数以及平均测试时间。 可选择某个测试的名称以打开“测试”表和查看该测试的更多详细信息  。 有关详细信息，请参阅[在表视图中分析负载测试结果和错误](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)。
 
 > [!NOTE]
 > 通过选择此节标题左侧的箭头，可以折叠和展开此节。
 
 ## <a name="page-results"></a>页结果
 
-“页结果”一节包含负载测试中所有网页的列表。 此节显示 URL、方案、测试的名称、平均页面时间以及计数。 可选择某个页面的 URL 以打开“页”表和查看该页面的更多详细信息。 有关详细信息，请参阅[如何：查看网页响应](../test/how-to-view-web-page-response-time-in-a-load-test.md)。
+“页结果”一节包含负载测试中所有网页的列表。 此节显示 URL、方案、测试的名称、平均页面时间以及计数。 可选择某个页面的 URL 以打开“页”表和查看该页面的更多详细信息  。 有关详细信息，请参阅[如何：查看网页响应](../test/how-to-view-web-page-response-time-in-a-load-test.md)。
 
 > [!NOTE]
 > 通过选择此节标题左侧的箭头，可以折叠和展开此节。
 
 ## <a name="transaction-results"></a>事务结果
 
-“事务结果”一节包含负载测试中所有事务的列表。 此节显示事务名称、方案、测试、响应时间、运行时间和计数。 可选择某个事务的名称以打开“事务”表，并查看该事务的更多详细信息。 有关详细信息，请参阅[在表视图中分析负载测试结果和错误](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)。
+“事务结果”一节包含负载测试中所有事务的列表。 此节显示事务名称、方案、测试、响应时间、运行时间和计数。 可选择某个事务的名称以打开“事务”表，并查看该事务的更多详细信息  。 有关详细信息，请参阅[在表视图中分析负载测试结果和错误](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)。
 
 > [!NOTE]
 > 通过选择此节标题左侧的箭头，可以折叠和展开此节。
@@ -113,28 +113,28 @@ ms.locfileid: "62785917"
 
 ## <a name="system-under-test-resources"></a>受测系统的资源
 
-“测试中系统的资源”一节包含一个计算机列表，这些计算机是为其生成负载的一组目标计算机。 除代理或控制器之外，这些计算机还包括您从中收集计数器集的任何计算机。 此节显示计算机名称、处理器时间百分比 (%) 和可用内存。 可以选择某个计算机名称以打开“测试中的系统”关系图，并查看不同时间的资源使用情况。 有关详细信息，请参阅[在关系图视图中分析负载测试结果](../test/analyze-load-test-results-in-the-graphs-view.md)。
+“测试中系统的资源”一节包含一个计算机列表，这些计算机是为其生成负载的一组目标计算机。 除代理或控制器之外，这些计算机还包括您从中收集计数器集的任何计算机。 此节显示计算机名称、处理器时间百分比 (%) 和可用内存。 可以选择某个计算机名称以打开“测试中的系统”关系图，并查看不同时间的资源使用情况  。 有关详细信息，请参阅[在关系图视图中分析负载测试结果](../test/analyze-load-test-results-in-the-graphs-view.md)。
 
 > [!NOTE]
 > 通过选择此节标题左侧的箭头，可以折叠和展开此节。
 
 ## <a name="controller-and-agent-resources"></a>控制器和代理资源
 
-“控制器和代理资源”一节包含用于运行测试的计算机列表。 此节显示计算机名称、处理器时间百分比 (%) 和可用内存。 可以选择某个计算机名称以打开“控制器和代理”关系图，并查看不同时间的资源使用情况。 有关详细信息，请参阅[在关系图视图中分析负载测试结果](../test/analyze-load-test-results-in-the-graphs-view.md)。
+“控制器和代理资源”一节包含用于运行测试的计算机列表。 此节显示计算机名称、处理器时间百分比 (%) 和可用内存。 可以选择某个计算机名称以打开“控制器和代理”关系图，并查看不同时间的资源使用情况  。 有关详细信息，请参阅[在关系图视图中分析负载测试结果](../test/analyze-load-test-results-in-the-graphs-view.md)。
 
 > [!NOTE]
 > 通过选择此节标题左侧的箭头，可以折叠和展开此节。
 
 ## <a name="errors"></a>错误
 
-“错误”一节包含负载测试期间发生的所有错误的列表。 此节显示错误类型和子类型、计数以及最后一条消息。 可以选择某个错误以打开“错误”表，并查看该错误的更多详细信息。 有关详细信息，请参阅[在表视图中分析负载测试结果和错误](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)。
+“错误”一节包含负载测试期间发生的所有错误的列表。 此节显示错误类型和子类型、计数以及最后一条消息。 可以选择某个错误以打开“错误”表，并查看该错误的更多详细信息  。 有关详细信息，请参阅[在表视图中分析负载测试结果和错误](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)。
 
 > [!NOTE]
 > 通过选择此节标题左侧的箭头，可以折叠和展开此节。
 
 ## <a name="print-a-summary"></a>打印摘要
 
-通过选择负载测试摘要上的快捷菜单中的“打印”，可以打印该负载测试摘要。 通过选择负载测试摘要上的快捷菜单中的“打印预览”，可以预览打印内容。 还可以直接从预览屏幕上进行打印。
+通过选择负载测试摘要上的快捷菜单中的“打印”，可以打印该负载测试摘要  。 通过选择负载测试摘要上的快捷菜单中的“打印预览”，可以预览打印内容  。 还可以直接从预览屏幕上进行打印。
 
 ## <a name="see-also"></a>请参阅
 

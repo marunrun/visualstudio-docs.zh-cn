@@ -2,17 +2,17 @@
 title: 单元测试面向 .NET Framework 的早期版本
 ms.date: 11/04/2016
 ms.topic: conceptual
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-author: gewarren
-ms.openlocfilehash: 0d77bd4fa5a1797b5e405c0b1af12cd1c24b18f7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+author: jillre
+ms.openlocfilehash: 32f34eb9af74f8db06cfc6910db83806383ae3be
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979355"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72643610"
 ---
 # <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>如何：配置单元测试以面向 .NET Framework 的早期版本
 
@@ -24,7 +24,7 @@ ms.locfileid: "62979355"
 
 - 可以在本地计算机上的 Visual Studio 中运行面向特定版本的 .NET Framework 的单元测试。
 
-- 可以使用 MSTest.exe 从命令提示符处运行面向特定版本的 .NET Framework 的单元测试。
+- 可以使用 MSTest.exe 从命令提示符处运行面向特定版本的 .NET Framework 的单元测试  。
 
 - 作为生成的一部分，可以在生成代理上运行单元测试。
 
@@ -48,44 +48,44 @@ ms.locfileid: "62979355"
 
 ## <a name="retargeting-for-visual-basic-unit-test-projects"></a>重定向 Visual Basic 单元测试项目
 
-1. 创建新的 Visual Basic“单元测试项目”项目。
+1. 创建新的 Visual Basic“单元测试项目”项目  。
 
-2. 在“解决方案资源管理器”中，从新的 Visual Basic 测试项目的右键单击菜单中选择“属性”。
+2. 在“解决方案资源管理器”中，从新的 Visual Basic 测试项目的右键单击菜单中选择“属性”   。
 
      随即显示 Visual Basic 测试项目的属性。
 
-3. 在“编译”选项卡上，选择“高级编译选项”，如下面的插图中所示。
+3. 在“编译”  选项卡上，选择“高级编译选项”  ，如下面的插图中所示。
 
      ![高级编译选项](../test/media/howtoconfigureunittest35frameworka.png)
 
-4. 使用“目标框架 (所有配置)”下拉列表，将目标框架更改为 **.NET Framework 3.5**或更高版本，如下图中的标注 B 所示。 不应指定客户端版本。
+4. 使用“目标框架 (所有配置)”  下拉列表，将目标框架更改为 **.NET Framework 3.5**或更高版本，如下图中的标注 B 所示。 不应指定客户端版本。
 
      ![目标框架下拉列表](../test/media/howtoconfigureunitest35frameworkstepb.png)
 
 ## <a name="retargeting-for-c-unit-test-projects"></a>重定向 C# 单元测试项目
 
-1. 创建新的 C#“单元测试项目”项目。
+1. 创建新的 C#“单元测试项目”项目  。
 
-2. 在“解决方案资源管理器”中，从新的 C# 测试项目的右键单击菜单中选择“属性”。
+2. 在“解决方案资源管理器”中，从新的 C# 测试项目的右键单击菜单中选择“属性”   。
 
    随即显示 C# 测试项目的属性。
 
-3. 在“应用程序”选项卡上，选择“目标框架”。 从下拉列表中，选择“.NET Framework 3.5”或更高版本，如下图中所示。 不应指定客户端版本。
+3. 在“应用程序”  选项卡上，选择“目标框架”  。 从下拉列表中，选择“.NET Framework 3.5”  或更高版本，如下图中所示。 不应指定客户端版本。
 
    ![目标框架下拉列表](../test/media/howtoconfigureunittest35frameworkcsharp.png)
 
 ## <a name="retargeting-for-ccli-unit-test-projects"></a>重定向 C++/CLI 单元测试项目
 
-1. 创建新的 C++“单元测试项目”项目。
+1. 创建新的 C++“单元测试项目”项目  。
 
    > [!WARNING]
    > 若要为以前版本的适用于 Visual C++ 的 .NET Framework 生成 C++/CLI 单元测试，则必须使用相应版本的 Visual Studio。
 
-2. 在“解决方案资源管理器”中，从新的 C++ 测试项目中选择“卸载项目”。
+2. 在“解决方案资源管理器”中，从新的 C++ 测试项目中选择“卸载项目”   。
 
-3. 在“解决方案资源管理器”中，选择已卸载的 C++ 测试项目，然后选择“编辑\<项目名称>.vcxproj”。
+3. 在“解决方案资源管理器”中，选择已卸载的 C++ 测试项目，然后选择“编辑\<项目名称>.vcxproj”   。
 
-   即可在编辑器中打开 .vcxproj 文件。
+   即可在编辑器中打开 .vcxproj 文件  。
 
 4. 在标记为`"Globals"`的 `PropertyGroup` 中将 `TargetFrameworkVersion` 设为版本 3.5 或更高版本。 不应指定客户端版本：
 
@@ -100,9 +100,9 @@ ms.locfileid: "62979355"
       </PropertyGroup>
     ```
 
-5. 保存并关闭 .vcxproj 文件。
+5. 保存并关闭 .vcxproj 文件  。
 
-6. 在“解决方案资源管理器”中，从新的 C++ 测试项目的右键单击菜单中选择“重载项目”。
+6. 在“解决方案资源管理器”中，从新的 C++ 测试项目的右键单击菜单中选择“重载项目”   。
 
 ## <a name="see-also"></a>请参阅
 

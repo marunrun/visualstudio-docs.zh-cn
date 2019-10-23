@@ -9,17 +9,17 @@ helpviewer_keywords:
 - install packages
 - managing extensions visual studio
 ms.assetid: 4ca92d93-31b9-47ef-8109-4a429d9e2ca3
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f86aa6cf99ae910c9b10bc6e93c408ca2c85265
-ms.sourcegitcommit: a2df993dc5e11c5131dbfcba686f0028a589068f
+ms.openlocfilehash: 92fe7d47a74112fb804770cca356084fa79fe1e4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71150106"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654217"
 ---
 # <a name="manage-extensions-for-visual-studio"></a>管理 Visual Studio 的扩展
 

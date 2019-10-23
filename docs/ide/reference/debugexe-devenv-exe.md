@@ -8,17 +8,17 @@ helpviewer_keywords:
 - /DebugExe [devenv.exe]
 - debugging executables
 ms.assetid: cd700006-1648-418f-924b-4b1e5c1412ab
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 05266a6f1b5ee0be22e2edc8df1c03b720844f4f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bb4eb1eb49cd6b29740fb6d365a98a51cc28387e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62968075"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661668"
 ---
 # <a name="debugexe-devenvexe"></a>/DebugExe (devenv.exe)
 
@@ -32,13 +32,13 @@ devenv /DebugExe ExecutableFile
 
 ## <a name="arguments"></a>自变量
 
-- ExecutableFile
+- ExecutableFile 
 
   必需。 `.exe` 文件的路径和文件名。 如果 `.exe` 文件找不到或不存在，Visual Studio 不会显示任何警告或错误，而是正常启动。
 
 ## <a name="remarks"></a>备注
 
-ExecutableFile 参数后跟的任何字符串都作为参数传递到相应文件。
+ExecutableFile  参数后跟的任何字符串都作为参数传递到相应文件。
 
 ## <a name="example"></a>示例
 

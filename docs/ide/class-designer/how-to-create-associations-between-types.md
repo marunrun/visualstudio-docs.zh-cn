@@ -11,30 +11,30 @@ helpviewer_keywords:
 - associations, types
 - association lines
 ms.assetid: adccb9c8-2f8a-4086-9fa9-f70f99fb6e00
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 723d1565dae55852829daf0038201d0c8685b3ce
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 74fdc2ce798380aace3a2bce714fd5627799b564
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975380"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72631794"
 ---
 # <a name="how-to-create-associations-between-types-in-class-designer"></a>如何：在类设计器中创建类型之间的关联
 
-类设计器中的关联连线显示了图中各类之间的相互关系。 关联连线表示项目中是另一个类的属性或字段类型的类。 关联连线一般用于阐释项目中各类之间最重要的关系。
+类设计器中的关联连线显示了图中各类之间的相互关系  。 关联连线表示项目中是另一个类的属性或字段类型的类。 关联连线一般用于阐释项目中各类之间最重要的关系。
 
 尽管可以将所有字段和属性显示为关联，但根据想要在关系图中强调的内容来将若干重要成员显示为关联更有意义。 （可将不太重要的成员显示为常规成员，或将其全部隐藏起来。）
 
 > [!NOTE]
-> 类设计器仅支持单向关联。
+> 类设计器仅支持单向关联  。
 
 ## <a name="to-define-an-association-line-in-the-class-diagram"></a>在类关系图中定义关联连线
 
-1. 在“工具箱”的“类设计器”下，选择“关联”。
+1. 在“工具箱”的“类设计器”下，选择“关联”   。
 
 2. 在希望以关联关系链接的两个形状之间绘制一条连线。
 
@@ -48,11 +48,11 @@ ms.locfileid: "62975380"
 
 1. 选择包含显示为关联的属性的形状。
 
-   该形状获得焦点，且其成员显示在“类详细信息”和“属性”窗口中。
+   该形状获得焦点，且其成员显示在“类详细信息”  和“属性”  窗口中。
 
-2. 在“类详细信息”或“属性”窗口中，编辑该属性的名称字段，并按“Enter”。
+2. 在“类详细信息”  或“属性”  窗口中，编辑该属性的名称字段，并按“Enter”  。
 
-   此名称在“类详细信息”窗口中、关联行上、“属性”窗口中和代码中同时得到更新。
+   此名称在“类详细信息”  窗口中、关联行上、“属性”  窗口中和代码中同时得到更新。
 
 ## <a name="see-also"></a>请参阅
 

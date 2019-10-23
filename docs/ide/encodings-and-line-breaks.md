@@ -12,17 +12,17 @@ helpviewer_keywords:
 - line break characters
 - Visual Studio, line break characters
 ms.assetid: 8f9b3ffc-7b8d-44f4-87cb-dc29105be12d
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 59ed38c28c6818fb618156450d47c05b4f35d63d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8fd37547d8107cf35991aab684313dbff37adda0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62978156"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72650898"
 ---
 # <a name="encodings-and-line-endings"></a>编码和行尾
 
@@ -44,14 +44,14 @@ ms.locfileid: "62978156"
 
 ## <a name="advanced-save-options"></a>高级保存选项
 
-可以使用“文件” > “高级保存选项”对话框来确定所需的换行符类型。 还可使用相同的设置更改文件的编码。
+可以使用“文件” > “高级保存选项”对话框来确定所需的换行符类型   。 还可使用相同的设置更改文件的编码。
 
 ![“高级保存选项”对话框](media/line_endings.png)
 
 > [!NOTE]
-> 如果在“文件”菜单上看不到“高级保存选项”，则可以添加它。 选择“工具”、“自定义”，然后选择“命令”选项卡。在“菜单栏”下拉列表中，选择“文件”，然后选择“添加命令”按钮。 在“添加命令”对话框中的“类别”，选择“文件”，然后在“命令”列表中，选择“高级保存选项”。 选择“确定”，然后选择“下移”按钮以将命令移动到菜单中的任何位置。 选择“关闭”以关闭“自定义”对话框。 有关详细信息，请参阅[自定义菜单和工具栏](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#customizing_menu)。
+> 如果在“文件”  菜单上看不到“高级保存选项”  ，则可以添加它。 选择“工具”、“自定义”，然后选择“命令”选项卡    。在“菜单栏”下拉列表中，选择“文件”，然后选择“添加命令”按钮    。 在“添加命令”对话框中的“类别”，选择“文件”，然后在“命令”列表中，选择“高级保存选项”      。 选择“确定”  ，然后选择“下移”  按钮以将命令移动到菜单中的任何位置。 选择“关闭”  以关闭“自定义”  对话框。 有关详细信息，请参阅[自定义菜单和工具栏](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#customizing_menu)。
 >
-> 或者，可以通过选择“文件” > “将 \<文件\> 另存为”，来访问“高级保存选项”对话框。 在“将文件另存为”对话框中，选择“保存”按钮旁的下拉三角形，然后选择“保存时使用编码”。
+> 或者，可以通过选择“文件” > “将 \<文件\> 另存为”，来访问“高级保存选项”对话框    。 在“将文件另存为”对话框中，选择“保存”按钮旁的下拉三角形，然后选择“保存时使用编码”    。
 
 ## <a name="see-also"></a>请参阅
 

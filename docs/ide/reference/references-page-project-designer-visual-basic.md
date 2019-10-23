@@ -10,17 +10,17 @@ helpviewer_keywords:
 - References page in Project Designer
 - Project Designer, References page
 ms.assetid: 5a47c595-e084-401c-86e1-74e0bf74fd86
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bbc53a1582a2a4f76de2ea402544137405f5d9f3
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 2ca3d54a7e2643baebe44e0f2756d6ae65eb228d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926136"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747797"
 ---
 # <a name="references-page-project-designer-visual-basic"></a>项目设计器 ->“引用”页 (Visual Basic)
 
@@ -88,7 +88,7 @@ ms.locfileid: "68926136"
 
 - XML 命名空间，例如 `<xmlns:xsl="http://www.w3.org/1999/XSL/Transform">`。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [管理项目中的引用](../../ide/managing-references-in-a-project.md)
 - [如何：添加或删除导入的命名空间 (Visual Basic)](../../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md)

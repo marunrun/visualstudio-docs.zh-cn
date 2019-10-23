@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Devenv, /Run switch
 - R Devenv switch (/R)
 ms.assetid: b1f22f9d-39a5-4918-8a2a-4b5c1e872665
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22c56e3dc4272fd927cc060f5a5a9972e5b8e6ca
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 051462339ea25dde9c2b55394e1854c60a71dc7e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62945511"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747763"
 ---
 # <a name="run-devenvexe"></a>/Run (devenv.exe)
 
@@ -42,7 +42,7 @@ devenv {/Run|/R} {SolutionName|ProjectName} [/Out OutputFilename]
 
   项目文件的完整路径和名称。
 
-- `/Out` OutputFilename
+- `/Out` OutputFilename 
 
   可选。 要将工具输出发送到的文件的文件名。 如果文件已有，工具将输出追加到文件末尾。
 
@@ -52,7 +52,7 @@ devenv {/Run|/R} {SolutionName|ProjectName} [/Out OutputFilename]
 
 - 用双引号将含有空格的字符串引起来。
 
-- “命令”窗口或使用 `/Out` 开关指定的任何日志文件中都可显示摘要信息（包括错误）。
+- “命令”窗口或使用 `/Out` 开关指定的任何日志文件中都可显示摘要信息（包括错误）  。
 
 ## <a name="example"></a>示例
 

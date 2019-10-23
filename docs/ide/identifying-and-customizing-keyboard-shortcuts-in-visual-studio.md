@@ -12,17 +12,17 @@ helpviewer_keywords:
 - custom shortcut keys [Visual Studio]
 - customizing keyboard shortcuts [Visual Studio]
 - exporting shortcut keys [Visual Studio]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 140a11e7d118b6ceae98dba4290eba89a500ac5e
-ms.sourcegitcommit: 9753c7544cec852ca5efd0834e0956d9e53a5734
+ms.openlocfilehash: 585c50818148235cebcdda3f18a9ed91f1a2aa1a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67043381"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656483"
 ---
 # <a name="identify-and-customize-keyboard-shortcuts-in-visual-studio"></a>在 Visual Studio 中识别并自定义键盘快捷方式
 

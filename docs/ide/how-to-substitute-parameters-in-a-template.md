@@ -6,21 +6,21 @@ helpviewer_keywords:
 - template parameters
 - template parameters, substituting
 - Visual Studio templates, using parameters
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: cf9a990be3f5e87180967a4f9f274ec79fbc357e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 09d86c52fcd9ddce3c986e0bfa6c9c96f746c663
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946872"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656566"
 ---
 # <a name="how-to-substitute-parameters-in-a-template"></a>如何：替换模板中的参数
 
 使用模板参数，可在从模板创建文件时替换标识符，例如类名称和命名空间。 可将模板参数添加到现有模板，或使用模板参数创建模板。
 
-模板参数是以 $参数$ 格式编写的。 有关模板参数的完整列表，请参阅[模板参数](../ide/template-parameters.md)。
+模板参数是以 $参数$ 格式编写的  。 有关模板参数的完整列表，请参阅[模板参数](../ide/template-parameters.md)。
 
 以下部分演示了如何修改模板，以将命名空间的名称替换为“安全项目名称”。
 

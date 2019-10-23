@@ -9,12 +9,12 @@ ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: a81c1869bf7587aa30dbc02f0e9aec4c97776e5f
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: fb296346d54b0774bdd9a738581ee28fe99b1de0
+ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68918045"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72777472"
 ---
 # <a name="installation"></a>安装
 
@@ -44,7 +44,7 @@ ms.locfileid: "68918045"
 
 ### <a name="nvidia-gpu-driver"></a>NVIDIA GPU 驱动程序
 
-深入学习框架利用 NVIDIA GPU 让机器按照针对真实人工智能的速度、准确性和规模进行学习。 如果计算机具有 NVIDIA GPU 卡，请参阅 [NVIDIA 驱动程序下载](http://www.nvidia.com/Download/index.aspx)或尝试更新操作系统以安装最新驱动程序。
+深入学习框架利用 NVIDIA GPU 让机器按照针对真实人工智能的速度、准确性和规模进行学习。 如果计算机具有 NVIDIA GPU 卡，请参阅 [NVIDIA 驱动程序下载](https://www.nvidia.com/Download/index.aspx)或尝试更新操作系统以安装最新驱动程序。
 
 ### <a name="cuda"></a>CUDA
 
@@ -194,7 +194,7 @@ pip3.5 install Theano==0.9.0
 
 ### <a name="pytorch"></a>PyTorch
 
-[PyTorch](http://pytorch.org/) 是一种 python 程序包，提供两个高级功能：
+[PyTorch](https://pytorch.org/) 是一种 python 程序包，提供两个高级功能：
 
 - 具有强 GPU 加速的 Tensor 计算（如 numpy）
 - 在基于磁带的自动梯度系统上构建的深层神经网络

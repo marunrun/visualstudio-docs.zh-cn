@@ -8,15 +8,15 @@ helpviewer_keywords:
 - debugging [Visual Studio ALM], difficult issues using IntelliTrace
 - Test Runner, InteliTrace
 ms.assetid: 02b6716f-569e-4961-938a-e790a0c74b5c
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ce5b03c7973a2b6dd9766f200528ae71cf6e4cfa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3c6670f9ff83a16eb793f7e7bd6fb5913a96093c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979310"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72664824"
 ---
 # <a name="how-to-collect-intellitrace-data-to-help-debug-difficult-issues"></a>如何：收集 IntelliTrace 数据以帮助调试难题
 
@@ -73,7 +73,7 @@ IntelliTrace 文件中收集的数据可减少重现和诊断代码中的错误�
 
 5. 选择“常规”选项卡  。选择“仅 IntelliTrace 事件”以记录测试时对性能影响最小的重要诊断事件  。
 
-     或
+     -或-
 
      选择“IntelliTrace 事件和调用信息”以记录诊断事件以及用于显示调用信息的方法级别跟踪  。 在运行测试时，此跟踪级别可能对性能有影响。
 
@@ -81,7 +81,7 @@ IntelliTrace 文件中收集的数据可减少重现和诊断代码中的错误�
 
 7. 选择“模块”选项卡  。选择“从以下模块以外的所有模块收集数据”并使用“添加”可添加到模块列表中，单击“移除”可移除模块    。 通过使用此选项，您可以包含除指定的模块之外的系统上运行的所有模块。
 
-     或
+     -或-
 
      选择“仅从以下模块中收集数据”并使用“添加”以添加到模块列表中，使用“移除”以移除模块    。 通过使用此选项，您可以确切地指定所需的模块。
 
@@ -90,7 +90,7 @@ IntelliTrace 文件中收集的数据可减少重现和诊断代码中的错误�
 
 8. 选择“进程”选项卡  。选择“从以下进程之外的所有进程收集数据”，然后使用“添加”以添加到进程列表中，使用“移除”以移除进程    。 通过使用此选项，您可以包含除指定的进程之外的系统上运行的所有进程。
 
-     或
+     -或-
 
      选择“仅从指定的进程收集数据”并使用“添加”以添加到进程列表中，使用“移除”以移除进程    。 通过使用此选项，您可以确切地指定所需的进程。
 

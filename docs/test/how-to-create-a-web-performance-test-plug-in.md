@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Web performance tests, creating plug-ins
 - plug-ins, creating in Web performance tests
 ms.assetid: a612f2d2-9806-477d-a126-12842f07da6e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c107e6dcba9be92b738bb4756806d584b9abdb50
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 318cc217bee235842ebc206b0461dcd7c9aeceaa
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949976"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653616"
 ---
 # <a name="how-to-create-a-web-performance-test-plug-in"></a>如何：创建 Web 性能测试插件
 
@@ -35,31 +35,31 @@ ms.locfileid: "62949976"
 
 1. 打开包含 Web 性能测试的 Web 性能和负载测试项目。
 
-2. 在解决方案资源管理器中，右键单击解决方案，选择“添加”，然后选择“新建项目”。
+2. 在解决方案资源管理器中，右键单击解决方案，选择“添加”，然后选择“新建项目”    。
 
-3. 创建新的“类库”项目。
+3. 创建新的“类库”项目  。
 
-   新的类库项目将添加到解决方案资源管理器中，并且新类会出现在代码编辑器中。
+   新的类库项目将添加到解决方案资源管理器中，并且新类会出现在代码编辑器中   。
 
-4. 在解决方案资源管理器中，右击新类库中的“引用”文件夹并选择“添加引用”。
+4. 在解决方案资源管理器中，右击新类库中的“引用”文件夹并选择“添加引用”    。
 
-   将显示“添加引用”对话框。
+   将显示“添加引用”对话框  。
 
-5. 选择“.NET”选项卡，向下滚动，然后选择“Microsoft.VisualStudio.QualityTools.WebTestFramework”
+5. 选择“.NET”选项卡，向下滚动，然后选择“Microsoft.VisualStudio.QualityTools.WebTestFramework”  
 
-6. 选择 **“确定”**。
+6. 选择 **“确定”** 。
 
-     对“Microsoft.VisualStudio.QualityTools.WebTestFramework”的引用将添加到解决方案资源管理器的“引用”文件夹中。
+     对“Microsoft.VisualStudio.QualityTools.WebTestFramework”的引用将添加到解决方案资源管理器的“引用”文件夹中    。
 
-7. 在解决方案资源管理器中，右键单击 Web 性能和负载测试项目（其中包含要添加 Web 性能测试插件的负载测试）的顶级节点，然后选择“添加引用”。
+7. 在解决方案资源管理器中，右键单击 Web 性能和负载测试项目（其中包含要添加 Web 性能测试插件的负载测试）的顶级节点，然后选择“添加引用”   。
 
-8. 将显示“添加引用”对话框。
+8. 将显示“添加引用”对话框  。
 
-9. 选择“项目”选项卡，然后选择“类库项目”。
+9. 选择“项目”选项卡，然后选择“类库项目”   。
 
-10. 选择 **“确定”**。
+10. 选择 **“确定”** 。
 
-11. 在代码编辑器中，编写插件的代码。 首先，创建一个从 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> 派生的新公共类。
+11. 在代码编辑器中，编写插件的代码  。 首先，创建一个从 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> 派生的新公共类。
 
 12. 实现一个或多个事件处理程序内的代码。 有关示例实现，请参见下面的“示例”部分。
 
@@ -83,27 +83,27 @@ ms.locfileid: "62949976"
 
 14. 打开 Web 性能测试。
 
-15. 若要添加 Web 性能测试插件，请在工具栏上选择“添加 Web 测试插件”。
+15. 若要添加 Web 性能测试插件，请在工具栏上选择“添加 Web 测试插件”  。
 
-     随即显示“添加 Web 测试插件”对话框。
+     随即显示“添加 Web 测试插件”对话框  。
 
-16. 在“选择插件”下，选择 Web 性能测试插件类。
+16. 在“选择插件”  下，选择 Web 性能测试插件类。
 
-17. 在“选定插件的属性”窗格中，设置要在运行时使用的插件的初始值。
+17. 在“选定插件的属性”窗格中，设置要在运行时使用的插件的初始值  。
 
     > [!NOTE]
     > 可根据需要从插件中公开任意多个属性；只需将其设置为公共、可设置并属于 Integer、Boolean 或 String 等基本类型。 以后还可以使用“属性”窗口更改 Web 性能测试插件属性。
 
-18. 选择 **“确定”**。
+18. 选择 **“确定”** 。
 
-     该插件将添加到“Web 测试插件”文件夹中。
+     该插件将添加到“Web 测试插件”文件夹中  。
 
     > [!WARNING]
     > 在运行使用插件的 Web 性能测试或负载测试时，可能会出现与下类似的错误：
     >
     > **请求失败：\<插件> 事件中的异常：无法加载文件或程序集 '\<"Plug-in name".dll file>, Version=\<n.n.n.n>, Culture=neutral, PublicKeyToken=null' 或其依赖项之一。系统找不到指定的文件。**
     >
-    > 如果对任何插件进行代码更改并创建新 DLL 版本 (Version=0.0.0.0)，则会引发这种情况，但插件仍会引用原来的插件版本。 若要更正此问题，请执行以下步骤：
+    > 如果对任何插件进行代码更改并创建新 DLL 版本 (Version=0.0.0.0)，则会引发这种情况，但插件仍会引用原来的插件版本  。 若要更正此问题，请执行以下步骤：
     >
     > 1. 在 Web 性能和负载测试项目中，将看到引用警告。 移除和重新添加对插件 DLL 的引用。
     > 2. 从测试或适当位置移除插件，然后再重新添加。
@@ -112,7 +112,7 @@ ms.locfileid: "62949976"
 
 下面的代码用于创建一个自定义的 Web 性能测试插件，该插件向表示测试迭代的 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestContext> 添加一项。
 
-运行 Web 性能测试后，可使用此插件在 Web 性能结果查看器的“上下文”选项卡中查看名为“TestIteratnionNumber”的已添加项。
+运行 Web 性能测试后，可使用此插件在 Web 性能结果查看器的“上下文”选项卡中查看名为“TestIteratnionNumber”的已添加项    。
 
 ```csharp
 using System;

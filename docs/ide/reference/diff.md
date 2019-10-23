@@ -7,17 +7,17 @@ helpviewer_keywords:
 - /Diff Devenv switch
 - Diff Devenv switch
 ms.assetid: 5377fedb-632a-4e86-a947-7c11c86451e7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2e69435a319a9730af846a912cb3f90a12d4ac8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 26d438e9cea35cbf178658d8def78e264804240c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62945778"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654511"
 ---
 # <a name="diff-devenvexe"></a>/Diff (devenv.exe)
 
@@ -31,19 +31,19 @@ devenv /Diff SourceFile TargetFile [SourceDisplayName [TargetDisplayName]]
 
 ## <a name="arguments"></a>自变量
 
-- SourceFile
+- SourceFile 
 
   必需。 要比较的第一个文件的完整路径和名称。
 
-- TargetFile
+- TargetFile 
 
   必需。 要比较的第二个文件的完整路径和文件名。
 
-- SourceDisplayName
+- SourceDisplayName 
 
   可选。 第一个文件的显示名称。
 
-- TargetDisplayName
+- TargetDisplayName 
 
   可选。 第二个文件的显示名称。
 

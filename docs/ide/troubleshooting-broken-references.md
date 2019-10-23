@@ -8,17 +8,17 @@ helpviewer_keywords:
 - troubleshooting references
 - referencing files from projects
 - referencing components, troubleshooting
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f9095e3b8c1f80b35b2d135c122c2d7230c1f8c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3c5efe0d5ba8d00f7bfc362dd702f45dfa627c20
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62575938"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647383"
 ---
 # <a name="troubleshoot-broken-references"></a>有关无效引用的疑难解答
 
@@ -41,24 +41,24 @@ ms.locfileid: "62575938"
 
 ## <a name="reference-path-is-incorrect"></a>引用路径不正确
 
-如果在不同计算机上共享项目，当组件位于每台计算机上的不同目录中时可能找不到某些引用。 引用存储时采用组件文件的名称（例如，MyComponent）。 向项目添加引用时，组件文件的文件夹位置（例如 C:\MyComponents）追加到 ReferencePath 项目属性。
+如果在不同计算机上共享项目，当组件位于每台计算机上的不同目录中时可能找不到某些引用。 引用存储时采用组件文件的名称（例如，MyComponent  ）。 向项目添加引用时，组件文件的文件夹位置（例如 C:\MyComponents  ）追加到 ReferencePath  项目属性。
 
-打开项目时，它会尝试通过查找引用路径上的目录找到这些引用的组件文件。 如果在组件存储于其他目录（例如 D:\MyComponents）的计算机上打开项目，则无法找到该引用，并且任务列表中会出现错误。
+打开项目时，它会尝试通过查找引用路径上的目录找到这些引用的组件文件。 如果在组件存储于其他目录（例如 D:\MyComponents  ）的计算机上打开项目，则无法找到该引用，并且任务列表  中会出现错误。
 
-若要解决此问题，可以删除损坏的引用，然后使用“添加引用”对话框替换引用。 另一种解决方案是使用项目的属性页中的“引用路径”项，并修改列表中的文件夹，以指向正确位置。 为每台计算机上的每位用户保留“引用路径”属性。 因此，修改引用路径不会影响项目中的其他用户。
+若要解决此问题，可以删除损坏的引用，然后使用“添加引用”  对话框替换引用。 另一种解决方案是使用项目的属性页中的“引用路径”  项，并修改列表中的文件夹，以指向正确位置。 为每台计算机上的每位用户保留“引用路径”  属性。 因此，修改引用路径不会影响项目中的其他用户。
 
 > [!TIP]
 > 项目到项目的引用不存在这些问题。 因此，如果可以，请使用项目到项目的引用，而不是文件引用。
 
 ### <a name="to-fix-a-broken-project-reference-by-correcting-the-reference-path"></a>通过纠正引用路径修复损坏的项目引用
 
-1. 在“解决方案资源管理器”中，右键单击项目节点，然后单击“属性”。
+1. 在“解决方案资源管理器”  中，右键单击项目节点，然后单击“属性”  。
 
-   随即显示“项目设计器”。
+   随即显示“项目设计器”  。
 
-1. 如果使用 Visual Basic，请选择“引用”页，并单击“引用路径”按钮。 在“引用路径”对话框中，键入包含要在“文件夹”字段中引用的项的文件夹路径，然后单击”添加文件夹”按钮。
+1. 如果使用 Visual Basic，请选择“引用”  页，并单击“引用路径”  按钮。 在“引用路径”  对话框中，键入包含要在“文件夹”  字段中引用的项的文件夹路径，然后单击”添加文件夹”  按钮。
 
-    如果使用 C#，请选择“引用路径”页。 在“文件夹”字段中，键入包含要引用项的文件夹路径，然后单击”添加文件夹”按钮。
+    如果使用 C#，请选择“引用路径”  页。 在“文件夹”  字段中，键入包含要引用项的文件夹路径，然后单击”添加文件夹”  按钮。
 
 ## <a name="referenced-file-has-been-deleted"></a>引用的文件已删除
 

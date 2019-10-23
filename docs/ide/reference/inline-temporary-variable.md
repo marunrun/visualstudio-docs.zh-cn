@@ -2,20 +2,20 @@
 title: 将临时变量替换为其值
 ms.date: 01/26/2018
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: a7c691efcc507212aa0649b6c4b4179fb8288f06
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8b758407dc5500630157050c10f881a6515e1216
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62423154"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661015"
 ---
 # <a name="inline-a-temporary-variable-refactoring"></a>“内联临时变量”重构
 
@@ -29,7 +29,7 @@ ms.locfileid: "62423154"
 
 **使用时机：** 使用临时变量会使代码难以理解时。
 
-操作原因：删除临时变量可使代码更易于理解。
+操作原因：  删除临时变量可使代码更易于理解。
 
 ## <a name="how-to"></a>操作说明
 
@@ -46,11 +46,11 @@ ms.locfileid: "62423154"
 2. 接下来，执行以下操作之一：
 
    - **键盘**
-      - 按“Ctrl”+**。** 触发“快速操作和重构”菜单。
+      - 按“Ctrl”  + **。** 触发“快速操作和重构”  菜单。
    - **鼠标**
-      - 右键单击代码，然后选择“快速操作和重构”菜单。
+      - 右键单击代码，然后选择“快速操作和重构”  菜单。
 
-3. 从“预览”弹出窗口选择“内联临时变量”。
+3. 从“预览”弹出窗口选择“内联临时变量”  。
 
    将删除此变量，且在使用它的位置改用变量的值。
 

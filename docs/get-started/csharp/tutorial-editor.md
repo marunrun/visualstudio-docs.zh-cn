@@ -5,19 +5,19 @@ ms.custom: seodec18, get-started
 ms.date: 11/20/2018
 ms.technology: vs-ide-general
 ms.topic: tutorial
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5bbca5e46ee83764a6a431ae13829a882b1d859f
-ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
+ms.openlocfilehash: f40111e59aa97180c98f0fc12d6b8eeb5d06ecec
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71975157"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647873"
 ---
 # <a name="learn-to-use-the-code-editor"></a>了解如何使用代码编辑器
 

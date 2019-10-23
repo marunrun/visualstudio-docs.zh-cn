@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Edit.FindInFiles command
 - find in files command
 ms.assetid: 2fc78bfe-b339-4599-97f9-4cafd8a194d9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2877057f32ba6553a2cdcefbbc1bb7a8bf2884da
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 25342f86c545752a263d295550222e14c2aa7866
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68919258"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748765"
 ---
 # <a name="find-in-files-command"></a>“在文件中查找”命令
 若要搜索文件，请使用“查找和替换”  窗口的“在文件中查找”  选项卡上的可用选项子集。
@@ -84,7 +84,7 @@ Edit.FindinFiles findwhat [/case] [/ext:extensions]
 >Edit.FindinFiles btnCancel /lookin:"c:/My Visual Studio Projects" /ext:*.cls /text2
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在文件中查找](../../ide/find-in-files.md)
 - [“命令”窗口](../../ide/reference/command-window.md)

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - load tests, run settings, context parameters
 - load tests, context parameters
 ms.assetid: a8a0b97e-8040-4711-85ab-36548b130ed2
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b979da03c0ea5378684ff12bc86d4fb59eef9180
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e630bfccb1741e3b194b6be4c6f8cdb065d8b942
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979441"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72664863"
 ---
 # <a name="how-to-add-context-parameters-to-a-load-test-run-setting"></a>如何：向负载测试运行设置中添加上下文参数
 
-在使用“新建负载测试向导”创建负载测试后，可以使用“负载测试编辑器”更改方案属性，以满足测试需求和目标。
+在使用“新建负载测试向导”创建负载测试后，可以使用“负载测试编辑器”更改方案属性，以满足测试需求和目标   。
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -54,21 +54,21 @@ ms.locfileid: "62979441"
 
 1. 打开一个负载测试。
 
-2. 在负载测试编辑器中，展开负载测试树中的“运行设置”文件夹。
+2. 在负载测试编辑器中，展开负载测试树中的“运行设置”文件夹  。
 
-3. 右键单击要在其中添加上下文参数的特定运行设置，然后选择“添加上下文参数”。
+3. 右键单击要在其中添加上下文参数的特定运行设置，然后选择“添加上下文参数”  。
 
-     一个新上下文参数将添加到负载测试树中“运行设置”文件夹的“上下文参数”文件夹。
+     一个新上下文参数将添加到负载测试树中“运行设置”文件夹的“上下文参数”文件夹   。
 
-     或
+     -或-
 
-     如果运行设置已经包含“上下文参数”文件夹，则可以右键单击该文件夹，然后选择“添加上下文参数”。
+     如果运行设置已经包含“上下文参数”文件夹，则可以右键单击该文件夹，然后选择“添加上下文参数”   。
 
-4. 在“属性”窗口中，根据需要更改“名称”的值（例如，WebServer1）。 在“属性”窗口中，将“值”更改为要使用的参数（例如 `http://CorporateStagingWebServer`）。
+4. 在“属性”窗口中，根据需要更改“名称”的值（例如，WebServer1）   。 在“属性”窗口中，将“值”更改为要使用的参数（例如 `http://CorporateStagingWebServer`）   。
 
-5. （可选）重复步骤 3 至 5，并对“值”属性使用其他字符串（例如 `http://CorporateProductionWebServer`）。
+5. （可选）重复步骤 3 至 5，并对“值”属性使用其他字符串（例如 `http://CorporateProductionWebServer`）  。
 
-6. 选择你希望哪些运行设置处于活动状态。 打开运行设置上的快捷菜单并选择“设置为活动的”。
+6. 选择你希望哪些运行设置处于活动状态。 打开运行设置上的快捷菜单并选择“设置为活动的”  。
 
 ## <a name="see-also"></a>请参阅
 

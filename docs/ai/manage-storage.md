@@ -7,12 +7,12 @@ ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 8990252f78a9e89b9bdaa825d5443e4d38d2ae89
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7d0f2522117f4c5a5b85e99e2779d10cffcb7f22
+ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62548205"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72777413"
 ---
 # <a name="browse-storage-to-upload-data-or-download-models-and-logs"></a>浏览存储以上传数据或下载模型和日志
 
@@ -20,9 +20,9 @@ ms.locfileid: "62548205"
 
 ## <a name="to-access-all-data-on-the-remote-machine-or-file-share"></a>访问远程计算器或文件共享上的所有数据
 
-1. 打开“服务器资源管理器”。
+1. 打开“服务器资源管理器”  。
 2. 展开远程计算机或 Batch AI 计算上下文。
-3. 右键单击“存储”；然后单击“浏览”。
+3. 右键单击“存储”；然后单击“浏览”   。
 
     ![storage](media/manage-storage/browse-storage.png)
 
@@ -30,6 +30,6 @@ ms.locfileid: "62548205"
 
 1. 打开 [“作业历史记录”](job-details.md)
 2. 选择作业。
-3. 单击“工作文件夹”，或单击 StdOut/Stderr 快速访问这些重要的日志文件。
+3. 单击“工作文件夹”，或单击 StdOut/Stderr 快速访问这些重要的日志文件   。
 
     ![storage](media/manage-storage/job-workingfolder.png)

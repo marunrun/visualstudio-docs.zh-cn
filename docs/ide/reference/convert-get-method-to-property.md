@@ -3,8 +3,8 @@ title: 将 Get 方法转换为属性；将属性转换为 Get 方法
 ms.date: 01/26/2018
 ms.topic: reference
 ms.devlang: csharp
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 f1_keywords:
 - vs.csharp.refactoring.convertmethodtoproperty
@@ -12,12 +12,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 87fc623f781c54267fa70da7c5d2a341823e35ae
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: ac33db013a8cea11b373e4104bf2d58a1b22cef4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263101"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654529"
 ---
 # <a name="convert-get-method-to-property--convert-property-to-get-method-refactorings"></a>将 Get 方法转换为属性或反向转换
 
@@ -38,15 +38,15 @@ ms.locfileid: "66263101"
 1. 接下来，执行以下操作之一：
 
    - **键盘**
-      - 按“Ctrl”+**。** 触发“快速操作和重构”菜单，然后从“预览”弹出窗口中选择“用属性替换方法”。
+      - 按“Ctrl”  + **。** 触发“快速操作和重构”菜单，然后从“预览”弹出窗口中选择“用属性替换方法”   。
    - **鼠标**
-      - 右键单击代码，选择“快速操作和重构”菜单，然后从“预览”弹出窗口中选择“用属性替换方法”。
+      - 右键单击代码，选择“快速操作和重构”菜单，然后从“预览”弹出窗口中选择“用属性替换方法”   。
 
-1. （可选）如果拥有 Set 方法，此时还可通过选择“用属性替换 Get 方法和 Set 方法”来转换 Set 方法。
+1. （可选）如果拥有 Set 方法，此时还可通过选择“用属性替换 Get 方法和 Set 方法”来转换 Set 方法  。
 
-1. 如果对代码预览中的更改感到满意，请按“Enter”或单击菜单中的“修复”，即可提交所做的更改。
+1. 如果对代码预览中的更改感到满意，请按“Enter”  或单击菜单中的“修复”，即可提交所做的更改。
 
-示例:
+示例：
 
 ```csharp
 private int MyValue;
@@ -79,11 +79,11 @@ public int MyValue
 1. 接下来，执行以下操作之一：
 
    - **键盘**
-      - 按“Ctrl”+**。** 触发“快速操作和重构”菜单，然后从“预览”弹出窗口中选择“用方法替换属性”。
+      - 按“Ctrl”  + **。** 触发“快速操作和重构”  菜单，然后从“预览”弹出窗口中选择“用方法替换属性”  。
    - **鼠标**
-      - 右键单击代码，选择“快速操作和重构”菜单，然后从“预览”弹出窗口中选择“用方法替换属性”。
+      - 右键单击代码，选择“快速操作和重构”  菜单，然后从“预览”弹出窗口中选择“用方法替换属性”  。
 
-1. 如果对代码预览中的更改感到满意，请按“Enter”或单击菜单中的“修复”，即可提交所做的更改。
+1. 如果对代码预览中的更改感到满意，请按“Enter”  或单击菜单中的“修复”，即可提交所做的更改。
 
 ## <a name="see-also"></a>请参阅
 

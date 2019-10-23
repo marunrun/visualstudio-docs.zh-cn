@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Devenv, /Project switch
 - projects [Visual Studio], cleaning
 ms.assetid: 8b07859c-3439-436d-9b9a-a8ee744eee30
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5fe7ec9fe8734d17868bee6a108d447729e4167f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0d9be8cd5107b109e084fcd75bc30ae0f32ab43a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62969093"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655743"
 ---
 # <a name="project-devenvexe"></a>/Project (devenv.exe)
 
@@ -45,17 +45,17 @@ devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project P
 
 - *SolnConfigName*
 
-  可选。 应用于 SolutionName 中命名的解决方案的解决方案配置的名称（如 `Debug` 或 `Release`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。 如果未指定此参数或字符串为空 (`""`)，工具便会使用解决方案的有效配置。
+  可选。 应用于 SolutionName  中命名的解决方案的解决方案配置的名称（如 `Debug` 或 `Release`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。 如果未指定此参数或字符串为空 (`""`)，工具便会使用解决方案的有效配置。
 
-- `/Project` ProjName
+- `/Project` ProjName 
 
-  可选。 解决方案中项目文件的路径和名称。 可以将项目在 SolutionName 文件夹中的显示名称或相对路径输入到项目文件中。 也可以输入项目文件的完整路径和名称。
+  可选。 解决方案中项目文件的路径和名称。 可以将项目在 SolutionName  文件夹中的显示名称或相对路径输入到项目文件中。 也可以输入项目文件的完整路径和名称。
 
-- `/ProjectConfig` ProjConfigName
+- `/ProjectConfig` ProjConfigName 
 
   可选。 要应用于已命名 `/Project` 的项目生成配置名称（如 `Debug` 或 `Release`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。
 
-- `/Out` OutputFilename
+- `/Out` OutputFilename 
 
   可选。 要将工具输出发送到的文件的文件名。 如果文件已有，工具将输出追加到文件末尾。
 
@@ -65,7 +65,7 @@ devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project P
 
 - 用双引号将含有空格的字符串引起来。
 
-- “命令”窗口或使用 `/Out` 开关指定的任何日志文件中都可显示生成的摘要信息（包括错误）。
+- “命令”  窗口或使用 `/Out` 开关指定的任何日志文件中都可显示生成的摘要信息（包括错误）。
 
 ## <a name="example"></a>示例
 

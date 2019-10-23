@@ -2,19 +2,19 @@
 title: 重构代码以将 var 替换为显式类型
 ms.date: 05/15/2018
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2708bca578b613fac77e9b8ce77b1b2aff8f0945
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 566d064ac0ac1b9c48ee8e75697cef39b2ec4ee1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62968142"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661691"
 ---
 # <a name="refactoring-to-replace-var-with-an-explicit-type"></a>重构以将 var 替换为显式类型
 
@@ -38,11 +38,11 @@ ms.locfileid: "62968142"
 
 1. 将插入点置于 `var` 关键字中。
 
-1. 按“Ctrl”+**。** 或单击代码文件边距中的螺丝刀![螺丝刀图标](../media/screwdriver-icon.png)图标。
+1. 按“Ctrl”  + **。** 或单击代码文件边距中的螺丝刀![螺丝刀图标](../media/screwdriver-icon.png)图标。
 
    ![使用显式类型快速操作菜单](media/use-explicit-type.png)
 
-1. 选择“使用显式类型”。 或者，选择“预览更改”以打开[“预览更改”](../../ide/preview-changes.md)对话框，然后选择“应用”。
+1. 选择“使用显式类型”  。 或者，选择“预览更改”  以打开[“预览更改”](../../ide/preview-changes.md)对话框，然后选择“应用”  。
 
 ## <a name="see-also"></a>请参阅
 

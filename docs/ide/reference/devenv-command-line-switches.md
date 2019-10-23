@@ -8,17 +8,17 @@ helpviewer_keywords:
 - command line [Visual Studio], switches
 - Devenv
 ms.assetid: e12bc6ed-74fd-4bea-8d7c-89b99c20bad8
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: db9aaeb48095b058abb0deefa342598eefeed1b9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cf7ebda1e661801995c17a81e658b4f638c2f8a1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970216"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72661649"
 ---
 # <a name="devenv-command-line-switches"></a>Devenv 命令行开关
 
@@ -66,7 +66,7 @@ ms.locfileid: "62970216"
 | - |-----------------|
 |[/Command](command-devenv-exe.md)|启动 IDE 并执行指定的命令。<br /><br /> `devenv /command "nav https://docs.microsoft.com/"`|
 |[/DebugExe](debugexe-devenv-exe.md)|在调试器的控制下加载 C++ 可执行文件。 此开关不适用于 Visual Basic 或 C# 可执行文件。 有关详细信息，请参阅[自动启动调试器中的进程](../../debugger/debug-multiple-processes.md#BKMK_Automatically_start_an_process_in_the_debugger)。<br /><br /> `devenv /debugexe mysln.exe`|
-|[/Diff](diff.md)|比较两个文件。 采用四个参数：SourceFile、TargetFile、SourceDisplayName（可选）和 TargetDisplayName（可选）。<br /><br /> `devenv /diff File1 File2 Alias1 Alias2`|
+|[/Diff](diff.md)|比较两个文件。 采用四个参数：SourceFile  、TargetFile  、SourceDisplayName  （可选）和 TargetDisplayName  （可选）。<br /><br /> `devenv /diff File1 File2 Alias1 Alias2`|
 |[/DoNotLoadProjects](donotloadprojects-devenv-exe.md)|打开指定的解决方案，而不加载任何项目。<br /><br /> `devenv /donotloadprojects mysln.sln`|
 |[/Edit](edit-devenv-exe.md)|在此应用程序的运行实例中打开指定的文件。 如果没有正在运行的实例，它启动具有简化的窗口布局的新实例。<br /><br /> `devenv /edit File1 File2`|
 |[/LCID 或 /L](lcid-devenv-exe.md)|为 IDE 设置默认语言。 如果 Visual Studio 安装中不包括指定语言，此设置遭忽略。<br /><br /> `devenv /l 1033`|
@@ -75,13 +75,13 @@ ms.locfileid: "62970216"
 |[/Run 或 /R](run-devenv-exe.md)|编译并运行指定的解决方案。<br /><br /> `devenv /run mysln.sln`|
 |[/RunExit](runexit-devenv-exe.md)|编译并运行指定的解决方案，在运行该解决方案时最小化 IDE，并在解决方案完成运行后关闭 IDE。<br /><br /> `devenv /runexit mysln.sln`|
 |[/SafeMode](safemode-devenv-exe.md)|在安全模式下启动 Visual Studio。 此开关仅加载默认环境、默认服务以及第三方包的发布版。<br /><br /> 此开关不带参数。|
-|[/UseEnv](useenv-devenv-exe.md)|让 IDE 使用 PATH、INCLUDE、LIBPATH 和 LIB 环境变量，以用于 C++ 编译。 此开关与使用 C++ 的桌面开发工作负载一起安装。 有关更多信息，请参阅 [为命令行生成设置路径和环境变量](/cpp/build/setting-the-path-and-environment-variables-for-command-line-builds)。|
+|[/UseEnv](useenv-devenv-exe.md)|让 IDE 使用 PATH、INCLUDE、LIBPATH 和 LIB 环境变量，以用于 C++ 编译。 此开关与使用 C++ 的桌面开发工作负载一起安装  。 有关更多信息，请参阅 [为命令行生成设置路径和环境变量](/cpp/build/setting-the-path-and-environment-variables-for-command-line-builds)。|
 
 下面各个命令行开关不显示 IDE。
 
 |命令行开关|说明|
 | - |-----------------|
-|[/?](q-devenv-exe.md)|在“命令提示符”窗口中显示 `devenv` 开关的相关帮助信息。<br /><br /> 此开关不带参数。|
+|[/?](q-devenv-exe.md)|在“命令提示符”  窗口中显示 `devenv` 开关的相关帮助信息。<br /><br /> 此开关不带参数。|
 |[build](build-devenv-exe.md)|根据指定解决方案的配置，生成指定的解决方案或项目。<br /><br /> `devenv mysln.sln /build`|
 |[/Clean](clean-devenv-exe.md)|删除由生成命令创建的任何文件，而不影响源文件。<br /><br /> `devenv mysln.sln /clean`|
 |[/Deploy](deploy-devenv-exe.md)|根据解决方案的配置，生成解决方案以及部署所需的文件。<br /><br /> `devenv mysln.sln /deploy`|

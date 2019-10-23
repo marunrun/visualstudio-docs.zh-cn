@@ -10,15 +10,15 @@ ms.assetid: 6bcc5712-6cc6-4f59-8933-6e8078318c45
 dev_langs:
 - CSharp
 - VB
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1111b659e1c88f219258b73045d0ce0d0f420ae7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9aeb80d348e31de0934d515754c59346fac3c2ea
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62822932"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665265"
 ---
 # <a name="code-a-custom-extraction-rule-for-a-web-performance-test"></a>为 Web 性能测试编码自定义提取规则
 
@@ -46,11 +46,11 @@ ms.locfileid: "62822932"
 
 6. （可选）在测试项目中添加一个对包含自定义提取规则的类库项目的引用。
 
-7. 在测试项目中的“Web 性能测试编辑器”中打开一个 Web 性能测试。
+7. 在测试项目中的“Web 性能测试编辑器”中打开一个 Web 性能测试  。
 
-8. 若要添加自定义提取规则，请右键单击某个 Web 性能测试请求并选择“添加提取规则”。
+8. 若要添加自定义提取规则，请右键单击某个 Web 性能测试请求并选择“添加提取规则”。 
 
-     出现“添加提取规则”对话框。 将在“选择规则”列表中看到自定义验证规则以及预定义的验证规则。 选择自定义提取规则，然后选择“确定”。
+     出现“添加提取规则”对话框。  将在“选择规则”列表中看到自定义验证规则以及预定义的验证规则。  选择自定义提取规则，然后选择“确定”。 
 
 9. 运行该 Web 性能测试。
 
