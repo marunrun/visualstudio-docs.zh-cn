@@ -12,15 +12,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 70413c2e446f8ed226a58eb8ddfe62ede4a1d61f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7ff7299868b96aedb7cc096b4e939a0f8015aeb8
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66338624"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72720779"
 ---
 # <a name="sccremove-function"></a>SccRemove 函数
-此函数从源代码管理系统中删除文件。
+此函数删除源代码管理系统中的文件。
 
 ## <a name="syntax"></a>语法
 
@@ -39,48 +39,48 @@ SCCRTN SccRemove(
 #### <a name="parameters"></a>参数
  pvContext
 
-[in]源控制插件上下文结构。
+中源代码管理插件上下文结构。
 
  hWnd
 
-[in]它提供了任何对话框，父级可以使用源代码管理插件，则 IDE 窗口的句柄。
+中IDE 窗口的句柄，源代码管理插件可将其用作它所提供的所有对话框的父级。
 
- nFiles
+ n
 
-[in]中指定的文件数`lpFileNames`数组。
+中@No__t_0 数组中指定的文件数。
 
  lpFileNames
 
-[in]要删除的文件的完全限定的本地路径名称的数组。
+中要删除的文件的完全限定的本地路径名称数组。
 
  lpComment
 
-[in]要应用于每个文件被删除的注释。
+中要应用于要删除的每个文件的注释。
 
- fOptions
+ 用于
 
-[in]命令标志 （未使用）。
+中命令标志（未使用）。
 
  pvOptions
 
-[in]源代码管理插件特定选项。
+中源代码管理插件特定的选项。
 
 ## <a name="return-value"></a>返回值
- 此函数的源控制插件实现应返回以下值之一：
+ 此函数的源代码管理插件实现应返回以下值之一：
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |SCC_OK|删除成功。|
-|SCC_E_FILENOTCONTROLLED|所选的文件不受源代码管理中。|
+|SCC_E_FILENOTCONTROLLED|所选文件不受源代码管理。|
 |SCC_E_OPNOTSUPPORTED|源代码管理系统不支持此操作。|
-|SCC_E_ISCHECKEDOUT|无法删除文件，因为用户当前已将其签。|
-|SCC_E_ACCESSFAILURE|访问源代码管理系统，很可能是由于网络或争用问题时出现问题时。|
+|SCC_E_ISCHECKEDOUT|由于用户当前已签出某个文件，因此无法将其删除。|
+|SCC_E_ACCESSFAILURE|访问源代码管理系统时出现问题，可能是由于网络或争用问题导致的。|
 |SCC_E_NOTAUTHORIZED|不允许用户执行此操作。|
-|SCC_E_NONSPECIFICERROR|非特定故障;不删除文件。|
-|SCC_I_OPERATIONCANCELED|在完成之前已取消操作。|
+|SCC_E_NONSPECIFICERROR|模糊失败;文件未删除。|
+|SCC_I_OPERATIONCANCELED|操作在完成前被取消。|
 
 ## <a name="remarks"></a>备注
- 此函数从源代码管理系统中删除文件，但不会从用户的本地硬盘删除它们。
+ 此函数会删除源代码管理系统中的文件，但不会将其从用户的本地硬盘上删除。
 
 ## <a name="see-also"></a>请参阅
 - [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)

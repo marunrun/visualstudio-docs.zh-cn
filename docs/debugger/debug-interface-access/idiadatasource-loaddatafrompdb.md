@@ -1,5 +1,5 @@
 ---
-title: 'Idiadatasource:: Loaddatafrompdb |Microsoft Docs'
+title: IDiaDataSource：： loadDataFromPdb |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fb34098f8d69d3c8618c406eff9666d52eace1f2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7526ba6e62c9df22a2338adc80f5d56578502cdb
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554139"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744941"
 ---
 # <a name="idiadatasourceloaddatafrompdb"></a>IDiaDataSource::loadDataFromPdb
-此时将打开并准备程序数据库 (.pdb) 文件用作调试数据源。
+打开并准备程序数据库（.pdb）文件作为调试数据源。
 
 ## <a name="syntax"></a>语法
 
@@ -33,26 +33,26 @@ HRESULT loadDataFromPdb (
 #### <a name="parameters"></a>参数
 pdbPath
 
-[in].Pdb 文件的路径。
+中.Pdb 文件的路径。
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回`S_OK`; 否则为返回错误代码。 下表显示了可能的此方法的返回值。
+如果成功，将返回 `S_OK`;否则，将返回错误代码。 下表显示了此方法的可能的返回值。
 
 |“值”|描述|
 |-----------|-----------------|
-|E_PDB_NOT_FOUND|无法打开该文件，或确定该文件具有无效的格式。|
-|E_PDB_FORMAT|尝试访问具有过时的格式的文件。|
+|E_PDB_NOT_FOUND|无法打开文件或已确定该文件的格式无效。|
+|E_PDB_FORMAT|尝试访问具有过时格式的文件。|
 |E_INVALIDARG|参数无效。|
-|E_UNEXPECTED|已准备好数据源。|
+|E_UNEXPECTED|数据源已准备就绪。|
 
 ## <a name="remarks"></a>备注
-此方法直接从.pdb 文件加载调试数据。
+此方法直接从 .pdb 文件加载调试数据。
 
-若要验证.pdb 文件是否符合特定条件，请使用[idiadatasource:: Loadandvalidatedatafrompdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md)方法。
+若要根据特定条件验证 .pdb 文件，请使用[IDiaDataSource：： loadAndValidateDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md)方法。
 
-若要访问的数据加载过程 （通过一种回调机制），请使用[idiadatasource:: Loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)方法。
+若要获取对数据加载过程（通过回调机制）的访问权限，请使用[IDiaDataSource：： loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)方法。
 
-若要直接从内存加载的.pdb 文件，请使用[idiadatasource:: Loaddatafromistream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md)方法。
+若要直接从内存加载 .pdb 文件，请使用[IDiaDataSource：： loadDataFromIStream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md)方法。
 
 ## <a name="example"></a>示例
 

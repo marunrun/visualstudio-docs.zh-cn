@@ -1,5 +1,5 @@
 ---
-title: 'Idiasession:: Findsymbolbyrvaex |Microsoft Docs'
+title: IDiaSession：： findSymbolByRVAEx |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c6c8e3523a49bd4fc22a86c9ec86b1e8cd2038e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8d9b27cee1c8df3eb26d64f4f860c33e0d4bf45f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839246"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742039"
 ---
 # <a name="idiasessionfindsymbolbyrvaex"></a>IDiaSession::findSymbolByRVAEx
-检索包含，或与指定的相对虚拟地址 (RVA) 和偏移量最接近的指定的符号类型。
+检索指定的符号类型，该类型包含或最接近于指定的相对虚拟地址（RVA）和偏移量。
 
 ## <a name="syntax"></a>语法
 
@@ -36,22 +36,22 @@ HRESULT findSymbolByRVAEx ( 
 #### <a name="parameters"></a>参数
  `rva`
 
-[in]指定 RVA。
+中指定 RVA。
 
  `symtag`
 
-[in]要查找的符号类型。 值取自[SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)枚举。
+中要查找的符号类型。 值取自[SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)枚举。
 
  `ppSymbol`
 
-[out]返回[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)检索表示该符号的对象。
+弄返回一个[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象，该对象表示检索到的符号。
 
  `displacement`
 
-[out]返回一个值，指定一个偏移量中指定的相对虚拟地址`rva`。
+弄返回一个值，该值指定 `rva` 中指定的相对虚拟地址的偏移量。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="example"></a>示例
 

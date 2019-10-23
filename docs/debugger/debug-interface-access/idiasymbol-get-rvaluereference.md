@@ -1,5 +1,5 @@
 ---
-title: 'Idiasymbol:: Get_rvaluereference |Microsoft Docs'
+title: IDiaSymbol：： get_RValueReference |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e9c14bc0fcce8a66c64b33b2ec8cbd943c80c8c
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 43ef604b55cd29d7acf86f38d307dff3958d0162
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64784239"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739410"
 ---
-# <a name="idiasymbolgetrvaluereference"></a>IDiaSymbol::get_RValueReference
-检索指定类型的指针是否为右值引用的标志。 何时使用[SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)设置为指针类型。
+# <a name="idiasymbolget_rvaluereference"></a>IDiaSymbol::get_RValueReference
+检索一个标志，该标志指定指针类型是否为 rvalue 引用。 当[SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)设置为指针类型时使用。
 
 ## <a name="syntax"></a>语法
 
@@ -33,22 +33,22 @@ HRESULT get_RValueReference (
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回`TRUE`指针时右值引用; 否则，返回`FALSE`。
+弄如果指针为右值引用，则返回 `TRUE`;否则，将返回 `FALSE`。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。
+> @No__t_0 的返回值意味着该属性对符号不可用。
 
 ## <a name="remarks"></a>备注
 
 ## <a name="requirements"></a>要求
- 标头：dia2.h
+ 标头： Dia2
 
- 库： diaguids.lib
+ 库： diaguids
 
- DLL: msdia100.dll
+ DLL： msdia100
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

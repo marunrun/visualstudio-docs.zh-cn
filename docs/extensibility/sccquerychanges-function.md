@@ -12,15 +12,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5e2b1e504bef3ec9507afcddf4f75bc5f697e843
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 617f07a11f92ab65f079c7d1b41773494e3d0c8b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353507"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72720856"
 ---
 # <a name="sccquerychanges-function"></a>SccQueryChanges 函数
-此函数枚举给定的列表的文件，对于每个文件通过回调函数提供有关名称更改的信息。
+此函数枚举给定的文件列表，并通过回调函数提供每个文件的名称更改的相关信息。
 
 ## <a name="syntax"></a>语法
 
@@ -37,36 +37,36 @@ SCCRTN SccQueryChanges(
 #### <a name="parameters"></a>参数
  pContext
 
-[in]源控件插件上下文指针。
+中源代码管理插件上下文指针。
 
- nFiles
+ n
 
-[in]中的文件数`lpFileNames`数组。
+中@No__t_0 数组中的文件数。
 
  lpFileNames
 
-[in]若要获取其相关信息的文件名称的数组。
+中要获取其相关信息的文件名数组。
 
  pfnCallback
 
-[in]要在列表中每个文件名称调用的回调函数 (请参阅[QUERYCHANGESFUNC](../extensibility/querychangesfunc.md)有关详细信息)。
+中为列表中的每个文件名调用的回调函数（有关详细信息，请参阅[QUERYCHANGESFUNC](../extensibility/querychangesfunc.md) ）。
 
  pvCallerData
 
-[in]值将传递给回调函数保持不变。
+中将以不更改的形式传递给回调函数的值。
 
 ## <a name="return-value"></a>返回值
- 此函数的源控制插件实现应返回以下值之一：
+ 此函数的源代码管理插件实现应返回以下值之一：
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |SCC_OK|查询过程已成功完成。|
-|SCC_E_PROJNOTOPEN|尚未在源代码管理中打开该项目。|
-|SCC_E_ACCESSFAILURE|访问源代码管理系统，很可能是由于网络或争用问题时出现问题时。|
-|SCC_E_NONSPECIFICERROR|未指定或常规时出错。|
+|SCC_E_PROJNOTOPEN|未在源代码管理中打开该项目。|
+|SCC_E_ACCESSFAILURE|访问源代码管理系统时出现问题，可能是由于网络或争用问题导致的。|
+|SCC_E_NONSPECIFICERROR|出现未指定的错误或常规错误。|
 
 ## <a name="remarks"></a>备注
- 对其进行查询的更改是对命名空间： 具体而言，重命名、 添加和删除文件。
+ 查询的更改是命名空间：具体而言，即重命名、添加和删除文件。
 
 ## <a name="see-also"></a>请参阅
 - [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)

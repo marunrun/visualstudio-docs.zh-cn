@@ -12,15 +12,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9a6508b8cfde2f08eb40201973fec899ee11956b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f13c674e6374e826dc45343e5cd1f7edcc1f8100
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353550"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72720900"
 ---
 # <a name="sccpopulatedirlist-function"></a>SccPopulateDirList 函数
-此函数将确定哪些目录和 （可选） 文件存储在源代码管理，提供要检查的目录的列表。
+此函数确定哪些目录和（可选）文件存储在源代码管理中，提供要检查的目录列表。
 
 ## <a name="syntax"></a>语法
 
@@ -38,38 +38,38 @@ SCCRTN SccPopulateDirList(
 #### <a name="parameters"></a>参数
  pContext
 
-[in]源控件插件上下文指针。
+中源代码管理插件上下文指针。
 
  nDirs
 
-[in]中的目录路径数量`lpDirPaths`数组。
+中@No__t_0 数组中目录路径的数目。
 
  lpDirPaths
 
-[in]若要检查的目录路径的数组。
+中要检查的目录路径的数组。
 
  pfnPopulate
 
-[in]要为每个目录路径和 （可选） 中的文件名调用的回调函数`lpDirPaths`(请参阅[POPDIRLISTFUNC](../extensibility/popdirlistfunc.md)有关详细信息)。
+中为 `lpDirPaths` 中的每个目录路径和（可选）文件名调用的回调函数（有关详细信息，请参阅[POPDIRLISTFUNC](../extensibility/popdirlistfunc.md) ）。
 
  pvCallerData
 
-[in]要传递的值保持不变的回调函数。
+中将以不更改的形式传递给回调函数的值。
 
- fOptions
+ 用于
 
-[in]控制处理目录的方式的值的组合 (请参阅的"PopulateDirList 标志"部分[位标志由特定命令](../extensibility/bitflags-used-by-specific-commands.md)有关可能的值)。
+中用于控制如何处理目录的值的组合（有关可能值，请参阅[特定命令使用的 Bitflags](../extensibility/bitflags-used-by-specific-commands.md)的 "PopulateDirList 标志" 部分）。
 
 ## <a name="return-value"></a>返回值
- 此函数的源控制插件实现应返回以下值之一：
+ 此函数的源代码管理插件实现应返回以下值之一：
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |SCC_OK|已成功完成操作。|
 |SCC_E_UNKNOWNERROR|出现了错误。|
 
 ## <a name="remarks"></a>备注
- 仅这些目录和 （可选） 实际上是在源控件存储库中的文件名称传递到回调函数。
+ 仅源控件存储库中实际的那些目录和（可选）文件名会传递到回调函数。
 
 ## <a name="see-also"></a>请参阅
 - [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)

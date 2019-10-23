@@ -10,31 +10,31 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 75b283a2013b67b28d90ba8a47dbee41cae1f848
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6f06f023a46fc9bc417e9630613a716f8dd448d2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322548"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72723449"
 ---
 # <a name="source-control-plug-in-architecture"></a>源代码管理插件体系结构
-您可以添加到源控件支持[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]实现并附加了源代码管理插件集成的开发环境 (IDE)。 IDE 连接到源代码管理插件通过定义完善的源控制插件 API。 IDE 公开源控制系统版本控制的功能通过提供工具栏和菜单命令组成的用户界面 (UI)。 源代码管理插件实现的源代码管理功能。
+通过实现和附加源代码管理插件，你可以向 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 集成开发环境（IDE）添加源代码管理支持。 IDE 通过定义完善的源代码管理插件 API 连接到源代码管理插件。 IDE 通过提供由工具栏和菜单命令组成的用户界面（UI），公开源代码管理系统的版本控制功能。 源代码管理插件实现源代码管理功能。
 
-## <a name="source-control-plug-in-resources"></a>源控制插件资源
- 源代码管理插件提供资源来帮助创建并连接到你的版本控制应用程序[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]IDE。 源代码管理插件包含 API 规范，以便它可以集成到源代码管理插件必须实现[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]IDE。 它还包含一个代码示例 (编写C++)，它实现的主干源控制插件演示实现基本功能与源控制插件 API 兼容。
+## <a name="source-control-plug-in-resources"></a>源代码管理插件资源
+ 源代码管理插件提供了一些资源，可帮助创建版本控制应用程序并将其连接到 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE。 源代码管理插件包含必须由源代码管理插件实现的 API 规范，以便可以将其集成到 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE 中。 它还包含一个代码示例（编写在C++中），该示例实现一个框架源代码管理插件，该插件演示实现符合源代码管理插件 API 的基本函数的实现。
 
- 源控件插件 API 规范可支持你将所选的任何源代码管理系统，如果使用所需的源控制插件 API 根据实现的函数集创建源控件 DLL。
+ 源代码管理插件 API 规范可让你利用所选的任何源代码管理系统，前提是使用根据源代码管理插件 API 实现的所需函数集创建源代码管理 DLL。
 
 ## <a name="components"></a>组件数
- 在关系图中的源控件适配器包是将转换为函数调用受源代码管理插件的源代码管理操作的用户的请求在 IDE 的组件。 这种情况发生，IDE 和源代码管理插件必须具有一个有效的对话框，它在 IDE 和插件之间来回传递信息。 有关此对话框中进行，它们都必须都使用相同语言。 在本文档中所述的源控制插件 API 是此交换的常见词汇。
+ 关系图中的源代码管理适配器包是 IDE 的组件，它将用户对源代码管理操作的请求转换为源代码管理插件支持的函数调用。 为此，IDE 和源代码管理插件必须有一个有效的对话框，该对话框在 IDE 和插件之间来回传递信息。 要使此对话框发生，它们必须使用相同的语言。 本文档中概述的源代码管理插件 API 是此交换的常见词汇。
 
- ![源代码控制体系结构关系图](../../extensibility/internals/media/vs_sccsdk_plug_in_arch.gif "vs_sccsdk_plug_in_arch")显示 VS 和源代码之间的交互插件体系结构图示
+ ![源代码管理体系结构关系图](../../extensibility/internals/media/vs_sccsdk_plug_in_arch.gif "vs_sccsdk_plug_in_arch")显示 VS 与源代码管理插件之间交互的体系结构关系图
 
- 体系结构关系图中所示[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]shell 中，为 VS shell 在图中，标记为托管用户的工作项目和相关的组件，例如编辑器和解决方案资源管理器。 源控件适配器包处理 IDE 和源代码管理插件之间的交互。 源控件适配器包提供了其自己的源控件 UI。 它是顶级用户启动和定义的源代码管理操作的作用域以便与交互的 UI。
+ 如体系结构关系图中所示，在关系图中标记为 VS shell 的 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] shell 承载用户的工作项目和关联的组件，如编辑器和解决方案资源管理器。 源代码管理适配器包处理 IDE 和源代码管理插件之间的交互。 源代码管理适配器包提供自己的源代码管理 UI。 它是用户与之交互的顶级 UI，以便启动和定义源代码管理操作的作用域。
 
- 源代码管理插件可以有自己的 UI，可能包含两个部分，如图所示。 标记为"供应商 UI"的框表示你，作为源控制插件创建者，提供的自定义用户界面元素。 当用户调用高级的源代码管理操作时直接通过源代码管理插件显示。 标有"帮助程序 UI"的框是一组源代码管理可以通过 IDE 间接调用的插件 UI 功能。 源代码管理插件将与 UI 相关的消息传递到通过特殊的回调函数与 IDE 提供的 IDE。 帮助器 UI 帮助与在 IDE 的更加无缝集成 (通常通过使用的**高级**按钮)，从而提供更统一的最终用户体验。
+ 源代码管理插件可以有自己的 UI，它可能由两个部分组成，如图中所示。 标记为 "供应商 UI" 的框表示作为源代码管理插件创建者提供的自定义用户界面元素。 当用户调用高级源代码管理操作时，这些控件将由源代码管理插件直接显示。 标记为 "帮助 UI" 的框是一组通过 IDE 间接调用的源代码管理插件 UI 功能。 源代码管理插件通过 IDE 提供的特殊回调函数将与 UI 相关的消息传递到 IDE。 帮助器 UI 使与 IDE 更无缝地集成（通常通过使用 "**高级**" 按钮），从而提供更统一的最终用户体验。
 
- 源代码管理插件不能进行更改到[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]shell，因此，源控件适配器包或源控件提供由 IDE 用户界面。 它必须使最充分地利用通过为最终用户提供的集成体验到的各种源控制插件 API 函数的实现所提供的灵活性。 源控件插件 API 文档的参考部分包含一些高级的源代码管理插件功能的信息。 若要利用这些功能，源代码管理插件必须声明其向 IDE 的高级的功能在初始化期间，，它必须实现特定的高级的函数，每个功能。
+ 源代码管理插件不能对 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] shell 进行更改，因此不能对 IDE 提供的源代码管理适配器包或源代码管理用户界面进行更改。 它必须充分利用为最终用户提供集成体验的各种源代码管理插件 API 函数实现提供的灵活性。 源代码管理插件 API 文档的 "参考" 部分包含一些高级源代码管理插件功能的信息。 若要利用这些功能，源代码管理插件必须在初始化期间向 IDE 声明其高级功能，并且必须为每个功能实现特定的高级功能。
 
 ## <a name="see-also"></a>请参阅
 - [源代码管理插件](../../extensibility/source-control-plug-ins.md)

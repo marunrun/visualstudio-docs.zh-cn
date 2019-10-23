@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fd7136367bfb883cfc5d962a1373fec738413fc6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aab86d42cd158ad64ebb16497b8d2d9f5a7002df
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62897659"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72734728"
 ---
 # <a name="walkthrough-capturing-graphics-information"></a>演练：捕获图形信息
 本演练演示了如何使用 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 图形诊断从 Direct3D 应用手动捕获图形信息。
@@ -25,27 +25,27 @@ ms.locfileid: "62897659"
 - 捕获图形信息
 
 ## <a name="capturing-graphics-information"></a>捕获图形信息
- 若要使用图形诊断工具，首先，你必须捕获它所依赖的图形信息。 若要启用捕获，请使用“启动诊断”  命令将图形诊断在启动时挂接到你的应用。
+ 若要使用图形诊断工具，首先，你必须捕获它所依赖的图形信息。 若要启用捕获，请使用“启动诊断” 命令将图形诊断在启动时挂接到你的应用。
 
 #### <a name="to-enable-the-capture-of-graphics-information-after-a-project-or-solution-is-loaded"></a>在加载项目或解决方案后启用图形信息捕获
 
 1. 在 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]中，为你希望从中捕获图形信息的应用加载项目或解决方案文件。
 
-2. 在“图形诊断”工具栏上，选择“启动诊断” 。
+2. 在“图形诊断”工具栏上，选择“启动诊断”。
 
 #### <a name="to-enable-the-capture-of-graphics-information-without-loading-a-project-or-solution"></a>不加载项目或解决方案而启用图形信息捕获
 
-1. 在菜单栏上，依次选择 **“文件”**、 **“打开”** 和 **“项目/解决方案”**。 此时将出现“打开项目”  对话框。
+1. 在菜单栏上，依次选择 **“文件”** 、 **“打开”** 和 **“项目/解决方案”** 。 此时将出现“打开项目” 对话框。
 
-2. 不为应用指定项目或解决方案文件，而是为其指定你希望从中捕获图形信息的可执行文件，然后选择“打开” 。
+2. 不为应用指定项目或解决方案文件，而是为其指定你希望从中捕获图形信息的可执行文件，然后选择“打开”。
 
-3. 在菜单栏上，依次选择 **“调试”**、 **“图形”**、 **“启动诊断”**。
+3. 在菜单栏上，依次选择 **“调试”** 、 **“图形”** 、 **“启动诊断”** 。
 
    在启动应用并且它呈现帧之后，您可捕获图形信息。
 
 #### <a name="to-capture-graphics-information"></a>捕获图形信息
 
-- 在“图形诊断”工具栏上，选择“捕获”  按钮。 ![图形捕获按钮图标](media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")
+- 在“图形诊断”工具栏上，选择“捕获” 按钮。 ![图形捕获按钮图标](media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")
 
    或
 

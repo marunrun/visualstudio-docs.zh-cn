@@ -1,5 +1,5 @@
 ---
-title: 错误：Kerberos 身份验证失败 |Microsoft Docs
+title: '错误: Kerberos 身份验证失败 | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 76a62a821a9b110be2ffd8e25cbdf6721f12bc08
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fbe13fd3d0dc7e29fc12d369ec0865bcbc97b1a4
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850723"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737672"
 ---
 # <a name="error-kerberos-authentication-failed"></a>错误：Kerberos 身份验证失败
 当尝试进行远程调试时，可能会收到以下错误消息：
@@ -44,9 +44,9 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
 
 ### <a name="to-verify-that-dns-on-the-target-computer-is-correctly-resolving-the-debugger-host-computer-name"></a>验证目标计算机上的 DNS 是否正确解析了调试器主机名称
 
-1. 在目标计算机上打开**开始**菜单，依次指向**附件**，然后单击**命令提示符**。
+1. 在目标计算机上，打开“开始”菜单，指向“附件”，再单击“命令提示符”。
 
-2. 在**命令提示符**窗口中，键入：
+2. 在命令提示符窗口中，键入以下内容：
 
     ```cmd
     ping <debugger_host_computer_name>
@@ -60,4 +60,4 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
 
 ## <a name="see-also"></a>请参阅
 - [远程调试错误和疑难解答](../debugger/remote-debugging-errors-and-troubleshooting.md)
-- [远程调试](../debugger/remote-debugging.md)
+- [Remote Debugging](../debugger/remote-debugging.md)

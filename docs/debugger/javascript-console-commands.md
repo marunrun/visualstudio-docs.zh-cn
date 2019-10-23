@@ -1,7 +1,7 @@
 ---
 title: JavaScript 控制台命令 |Microsoft Docs
 ms.custom: ''
-ms.date: 03/28/2019
+ms.date: 10/17/2019
 ms.topic: reference
 helpviewer_keywords:
 - JavaScript Console commands [UWP apps]
@@ -10,33 +10,30 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - uwp
 - cordova
-ms.openlocfilehash: 40e32250378d92ac63e4a057a59ee847de6af810
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b30b59b95b09cac8308474b2b2963f9b96d58146
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62905669"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72731701"
 ---
 # <a name="javascript-console-commands-in-visual-studio"></a>Visual Studio 中的 JavaScript 控制台命令
 
-::: moniker range=">=vs-2019"
-你可以在 Visual Studio 的“JavaScript 控制台”窗口中使用命令发送消息和执行其他任务。 本主题中的信息适用于使用 Visual Studio 中使用创建的 Node.js 应用**Node.js 开发**安装工作负载。
-::: moniker-end
-::: moniker range="vs-2017"
-你可以在 Visual Studio 的“JavaScript 控制台”窗口中使用命令发送消息和执行其他任务。 有关演示如何使用此窗口的示例，请参阅[快速入门：调试 JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017)。 本主题中的信息适用于 Node.js 应用，UWP 应用和使用 Visual Studio Tools for Apache Cordova 创建的应用。 有关 Cordova 应用中受支持控制台命令的信息，请参阅 [Debug Your App](https://taco.visualstudio.com/en-us/docs/debug-using-visual-studio/)。
-::: moniker-end
+你可以在 Visual Studio 的“JavaScript 控制台”窗口中使用命令发送消息和执行其他任务。 有关演示如何使用此窗口的示例，请参阅[快速入门：调试 JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017)。 本主题中的信息适用于 node.js 应用、UWP 应用和使用 Visual Studio Tools Apache Cordova 创建的应用。
 
-如果 JavaScript 控制台窗口已关闭，则可以打开它通过选择 Visual Studio 中调试时，**调试** > **Windows** > **JavaScript控制台**。
+如果 JavaScript 控制台窗口处于关闭状态，则在 Visual Studio 中进行调试时，可以通过选择 "**调试**"  > **Windows**  > **JavaScript 控制台**来打开它。
 
 > [!NOTE]
 > 如果该窗口在调试会话期间不可用，请确保在项目的“调试”属性中将调试器类型设置为 **“脚本”** 。
 
-在 Microsoft Edge 开发人员工具中使用控制台的信息，请参阅[本主题](/microsoft-edge/devtools-guide)。
+有关在 Microsoft Edge 开发人员工具中使用控制台的信息，请参阅[此主题](/microsoft-edge/devtools-guide)。
 
 ## <a name="console-object-commands"></a>控制台对象命令
+
 下表显示 `console` 对象命令的语法，这些命令可用在“JavaScript 控制台”窗口中或者可用于从代码中向控制台发送消息。 此对象提供多种形式，以使你可区分信息性消息和错误消息（如果要区分）。
 
 如果需要避免可能与由局部对象命名的控制台产生混淆，可使用较长的命令形式 `window.console.[command]` 。
@@ -58,9 +55,9 @@ ms.locfileid: "62905669"
 |`groupEnd()`|当前组结束。<br /><br /> 要求：<br /><br /> Visual Studio 2013|请参见 `group` 命令的示例。|
 |`info(message)`|向控制台窗口发送 `message` 。 消息以信息符号开头。|`console.info("info message");`<br /><br /> 有关更多示例，请参阅本主题后面部分的 [Formatting console.log output](#ConsoleLog) 。|
 |`log(message)`|向控制台窗口发送 `message` 。<br /><br /> 若传递某个对象，则该命令将该对象发送到控制台窗口并在对象可视化工具中显示它。 可使用该可视化工具在控制台窗口中检查属性。|`console.log("logging message");`|
-|`msIsIndependentlyComposed(element)`|在 Web 应用中使用。 不支持在使用 JavaScript 的 UWP 应用中。|不支持。|
-|`profile(reportName)`|在 Web 应用中使用。 不支持在使用 JavaScript 的 UWP 应用中。|不支持。|
-|`profileEnd()`|在 Web 应用中使用。 不支持在使用 JavaScript 的 UWP 应用中。|不支持。|
+|`msIsIndependentlyComposed(element)`|在 Web 应用中使用。 在使用 JavaScript 的 UWP 应用中不受支持。|不支持。|
+|`profile(reportName)`|在 Web 应用中使用。 在使用 JavaScript 的 UWP 应用中不受支持。|不支持。|
+|`profileEnd()`|在 Web 应用中使用。 在使用 JavaScript 的 UWP 应用中不受支持。|不支持。|
 |`select(element)`|在 `element` DOM 资源管理器 [中选择指定的 HTML](../debugger/quickstart-debug-html-and-css.md)。|console.select(element);|
 |`time (name)`|启动由可选的 `name` 参数标识的计时器。 配合 `console.timeEnd`使用时，计算 `time` 和 `timeEnd`之间经历的时间，并使用 `name` 字符串作为前缀将结果（以 ms 为测量单位）发送到控制台。 用于启用应用程序代码的检测以衡量性能。|`console.time("app start");  app.start();  console.timeEnd("app start");`|
 |`timeEnd(name)`|停止由可选的 `name` 参数标识的计时器。 请参见 `time` 控制台命令。|`console.time("app start"); app.start(); console.timeEnd("app start");`|
@@ -90,7 +87,7 @@ if (console && console.log) {
 ```
 
 ## <a name="examining-objects-in-the-javascript-console-window"></a>检查“JavaScript 控制台”窗口中的对象
-使用“JavaScript 控制台”窗口时，你可以与范围内的任何对象进行交互。 若要检查控制台窗口中超出范围的对象，请在代码中使用 `console.log` 、 `console.dir`或其他命令。 当对象在范围内时，你还可以在代码中设置断点（**“断点”** > **Insert “断点”**），从控制台窗口与对象进行交互。
+使用“JavaScript 控制台”窗口时，你可以与范围内的任何对象进行交互。 若要检查控制台窗口中超出范围的对象，请在代码中使用 `console.log` 、 `console.dir`或其他命令。 当对象在范围内时，你还可以在代码中设置断点（ **“断点”**  > **Insert “断点”** ），从控制台窗口与对象进行交互。
 
 ## <a name="ConsoleLog"></a>格式化 console.log 输出
 若将多个参数传递给 `console.log`，则控制台将这些参数视为数组并连接输出。

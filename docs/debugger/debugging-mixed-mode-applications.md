@@ -21,19 +21,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ac2a9817ceae660f42cbed0fdbfb364ddc79c45
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1c245b6c56b7480a9395394d707aa0f02fb22fc9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62852059"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738184"
 ---
 # <a name="debugging-mixed-mode-applications"></a>调试混合模式应用程序
 混合模式应用程序是任何组合了本机代码 (C++) 与托管代码（在公共语言运行时上运行的 Visual Basic、Visual C# 或 C++）的应用程序。 在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中调试混合模式应用程序基本上是透明的；它与调试单模式应用程序没有太大区别。 但有几个特殊的注意事项。
 
 ## <a name="enable-c-edit-and-continue-in-mixed-mode-debugging"></a>在混合模式调试下启用 C++“编辑并继续”
 
-若要启用编辑并继续C++，请参阅[如何启用和禁用编辑并继续](../debugger/how-to-enable-and-disable-edit-and-continue.md)。
+若要为启用C++"编辑并继续"，请参阅[如何启用和禁用 "编辑并继续](../debugger/how-to-enable-and-disable-edit-and-continue.md)"。
 
 > [!NOTE]
 > 若要使用 Visual Studio 2013 中的 C++“编辑并继续”功能，你必须还原为旧调试引擎。 请参阅“Microsoft 应用程序生命周期管理”博客上的 [Switching to Managed Compatibility Mode in Visual Studio 2013](https://devblogs.microsoft.com/devops/switching-to-managed-compatibility-mode-in-visual-studio-2013/)（切换为 Visual Studio 2013 中的托管兼容性模式）。
@@ -46,7 +46,7 @@ ms.locfileid: "62852059"
 
 ### <a name="to-turn-off-property-evaluation"></a>关闭属性求值
 
-1. 在 **“工具”** 菜单上，选择 **“选项”**。
+1. 在 **“工具”** 菜单上，选择 **“选项”** 。
 
 2. 在“选项”对话框中，打开“调试”文件夹并选择“常规”类别。
 

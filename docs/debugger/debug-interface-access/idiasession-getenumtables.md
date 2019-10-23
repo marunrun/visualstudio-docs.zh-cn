@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 759972fa02c7645ae457e0b715d835b2d717e26f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 41679304986f5de948119a2958524b8f269ceb42
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839168"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741920"
 ---
 # <a name="idiasessiongetenumtables"></a>IDiaSession::getEnumTables
-检索包含在符号存储区中的所有表的枚举器。
+检索符号存储区中包含的所有表的枚举器。
 
 ## <a name="syntax"></a>语法
 
@@ -33,13 +33,13 @@ HRESULT getEnumTables (
 #### <a name="parameters"></a>参数
 `ppEnumTables`
 
-[out]返回[IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)对象。 此接口用于枚举符号存储区中的表。
+弄返回[IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)对象。 使用此接口枚举符号存储区中的表。
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回`S_OK`; 否则为返回错误代码。
+如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="example"></a>示例
-此示例显示了使用的常规函数`getEnumTables`方法来获取特定的枚举器对象。 如果找到该枚举数，则该函数返回一个指向可强制转换所需的接口;否则，该函数返回`NULL`。
+此示例演示使用 `getEnumTables` 方法获取特定枚举器对象的常规函数。 如果找到枚举器，则函数返回可强制转换为所需接口的指针;否则，函数将返回 `NULL`。
 
 ```C++
 IUnknown *GetTable(IDiaSession *pSession, REFIID iid)

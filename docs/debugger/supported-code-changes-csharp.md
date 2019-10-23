@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c5f54a2b50447125b0abffd8cc62ba9c2a1d2b37
-ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
+ms.openlocfilehash: 44881035da14483c3ddf1f4c48cb3957a1ce8b50
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70887785"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72729091"
 ---
 # <a name="supported-code-changes-c-and-visual-basic"></a>支持的代码更改（C# 和 Visual Basic）
 “编辑并继续”处理方法体内的大多数类型的代码更改。 但是，方法体外的大多数更改以及方法体内的小部分更改在调试期间不能应用。 若要应用这些不受支持的更改，您必须停止调试，重新开始新版本的代码。
@@ -62,8 +62,8 @@ ms.locfileid: "70887785"
 |接口|修改|
 |类型|添加抽象成员或虚拟成员，添加替代（请参阅[详细信息](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)）|
 |类型|添加析构函数|
-|成员|修改引用嵌入互操作类型的成员|
-|成员|在已通过执行代码访问的情况后面修改静态成员|
+|Members|修改引用嵌入互操作类型的成员|
+|Members|在已通过执行代码访问的情况后面修改静态成员|
 |成员（Visual Basic）|使用 On Error 或 Resume 语句修改成员|
 |成员（Visual Basic）|修改包含 Aggregate、Group By、Simple Join 或 Group Join LINQ 查询子句的成员|
 |方法|修改签名|
@@ -79,7 +79,7 @@ ms.locfileid: "70887785"
 |Iterators|在目标 .NET Framework 4 和更低的项目中修改迭代器（请参阅[详细信息](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)）|
 
 ## <a name="unsafe-code"></a>不安全代码
- 对不安全代码的更改与对安全代码的更改有相同的限制，但它还包含一条附加限制："编辑并继续" 不支持对在包含该`stackalloc`运算符的方法中退出的不安全代码的更改。
+ 对不安全代码的更改具有与对安全代码的更改相同的限制，但它还包含一条附加限制：“编辑并继续”不支持对包含 `stackalloc` 运算符的方法内退出的不安全代码所作的更改。
 
 ## <a name="unsupported-app-scenarios"></a>不受支持的应用方案
 
@@ -95,7 +95,7 @@ ms.locfileid: "70887785"
 
 - SQL 调试。
 
-- 调试 Dr.Watson 转储。
+- 调试 Dr. Watson 转储。
 
 - 调试嵌入式运行时应用程序。
 

@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3490cab7c902dcdf1a7d0095eb69dd44de47a727
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 5f147acae956ad380c6e85984de29d5316394c0a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211126"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72730258"
 ---
 # <a name="remote-debugging-a-c-or-visual-basic-project-in-visual-studio"></a>在 Visual Studio C#中远程调试或 Visual Basic 项目
 若要调试已部署到其他计算机上的 Visual Studio 应用程序，请在部署了应用的计算机上安装并运行远程工具，将项目配置为从 Visual Studio 连接到远程计算机，然后运行应用。
@@ -102,7 +102,7 @@ Windows 7 和更高版本（非电话）和 windows Server 版本（从 Windows 
 
 13. 如果系统提示，请输入网络凭据以连接到远程计算机。
 
-     所需的凭据因你的网络安全配置而异。 例如，你可以在域计算机上输入你的域名和密码。 在非域计算机上，可以输入计算机名称和有效的用户帐户名，如<strong>MJO-DL\name@something.com</strong>，以及正确的密码。
+     所需的凭据因你的网络安全配置而异。 例如，你可以在域计算机上输入你的域名和密码。 在非域计算机上，可以输入计算机名称和有效的用户帐户名称（如<strong>MJO-DL\name@something.com</strong>）以及正确的密码。
 
      应看到远程计算机上打开了 WPF 应用程序的主窗口。
 

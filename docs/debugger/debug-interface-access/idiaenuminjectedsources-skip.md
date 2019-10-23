@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 807ed82a68089cb656f68c8cc1881dce683bb8a9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e2c7ca67581916ad0c68d7eb1b49fd1c15cf9eaf
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829714"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744457"
 ---
 # <a name="idiaenuminjectedsourcesskip"></a>IDiaEnumInjectedSources::Skip
-跳过枚举序列中的插入源的指定的数目。
+跳过枚举序列中指定数量的插入源。
 
 ## <a name="syntax"></a>语法
 
@@ -33,10 +33,10 @@ HRESULT Skip ( 
 #### <a name="parameters"></a>参数
  celt
 
-[in]若要跳过枚举序列中的插入源数。
+中要跳过的枚举序列中注入的源的数目。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`如果没有更多插入的源，以跳过。
+ 如果成功，将返回 `S_OK`;否则，如果没有要跳过的注入源，则返回 `S_FALSE`。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

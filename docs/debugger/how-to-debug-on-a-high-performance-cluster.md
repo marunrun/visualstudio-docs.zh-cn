@@ -1,5 +1,5 @@
 ---
-title: 如何：高性能群集上进行调试 |Microsoft Docs
+title: 如何：在高性能群集上进行调试 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,20 +16,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 550008a0bf77ee11feb047b953798ed6a8276396
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d95c6eeadfdf1bb90471997712299ae03a945be8
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894321"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72733669"
 ---
-# <a name="how-to-debug-on-a-high-performance-cluster-c-visual-basic-c"></a>如何：高性能群集上进行调试 (C#，Visual Basic 中， C++)
+# <a name="how-to-debug-on-a-high-performance-cluster-c-visual-basic-c"></a>如何：在高性能群集上进行调试（C#、Visual Basic） C++
 
-在高性能群集上调试多处理程序类似于在远程计算机上调试普通程序。 但是，还有一些其他注意事项。 有关常规远程设置要求，请参阅[远程调试](../debugger/remote-debugging.md)。
+在高性能群集上调试多处理程序类似于在远程计算机上调试普通程序。 但是，还有一些其他注意事项。 有关常规远程设置的要求，请参阅[远程调试](../debugger/remote-debugging.md)。
 
  当在高性能群集上进行调试时，可以使用所有可用于远程调试的 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 调试窗口和技术。 但是由于你正在进行远程调试，所以外部控制台窗口不可用。
 
- “线程”窗口和“进程”窗口对于调试并行应用程序特别有用。 有关如何使用这些窗口的提示，请参阅[如何：使用进程窗口](/previous-versions/visualstudio/visual-studio-2010/7h8h5sdw(v=vs.100))和[演练：使用线程窗口进行调试](../debugger/how-to-use-the-threads-window.md)。
+ “线程”窗口和“进程”窗口对于调试并行应用程序特别有用。 有关如何使用这些窗口的提示，请参阅[如何：使用进程窗口](/previous-versions/visualstudio/visual-studio-2010/7h8h5sdw(v=vs.100))和[演练：使用“线程”窗口进行调试](../debugger/how-to-use-the-threads-window.md)。
 
  下面的过程演示在高性能群集上调试时特别有用的一些技术。
 
@@ -53,7 +53,7 @@ ms.locfileid: "62894321"
 
      若要创建更复杂的筛选器，可以使用 `&`（“与”运算符）、`||`（“或”运算符）、`!`（“非”运算符）和括号组合子句。
 
-4. 单击 **“确定”**。
+4. 单击“确定”。
 
 ### <a name="to-set-a-breakpoint-on-a-specific-process"></a>在特定进程上设置断点
 
@@ -65,13 +65,13 @@ ms.locfileid: "62894321"
 
      `ProcessName =` 你的进程名
 
-     - 或 -
+     \- 或 -
 
      `ProcessID =` 你的进程 ID 号
 
      若要创建更复杂的筛选器，可以使用 `&`（“与”运算符）、`||`（“或”运算符）、`!`（“非”运算符）和括号组合子句。
 
-4. 单击 **“确定”**。
+4. 单击“确定”。
 
 ### <a name="to-set-a-breakpoint-on-a-specific-thread"></a>在特定线程上设置断点
 
@@ -83,13 +83,13 @@ ms.locfileid: "62894321"
 
      `ThreadName =` 你的线程名称
 
-     - 或 -
+     \- 或 -
 
      `ThreadID =` 你的线程 ID 号
 
      若要创建更复杂的筛选器，可以使用 `&`（“与”运算符）、`||`（“或”运算符）、`!`（“非”运算符）和括号组合子句。
 
-4. 单击 **“确定”**。
+4. 单击“确定”。
 
 ## <a name="example"></a>示例
  下面的示例演示如何在名为 `marvin` 的计算机上的、名为 `fourier1` 的线程上创建一个断点筛选器。
@@ -98,8 +98,8 @@ ms.locfileid: "62894321"
 
 ## <a name="see-also"></a>请参阅
 - [调试多线程应用程序](../debugger/debug-multithreaded-applications-in-visual-studio.md)
-- [远程调试](../debugger/remote-debugging.md)
-- [如何：使用进程窗口](/previous-versions/visualstudio/visual-studio-2010/7h8h5sdw(v=vs.100))
-- [开始调试多线程应用程序](../debugger/get-started-debugging-multithreaded-apps.md)
+- [Remote Debugging](../debugger/remote-debugging.md)
+- [如何：使用 "进程" 窗口](/previous-versions/visualstudio/visual-studio-2010/7h8h5sdw(v=vs.100))
+- [调试多线程应用程序入门](../debugger/get-started-debugging-multithreaded-apps.md)
 - [线程和进程](/previous-versions/visualstudio/visual-studio-2010/ms164740(v=vs.100))
 - [使用断点](../debugger/using-breakpoints.md)

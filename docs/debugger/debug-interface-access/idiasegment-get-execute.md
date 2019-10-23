@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7851d379793ee21562b2993c89442a7fb728ec00
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4a2673880b80f229b05f5efba5c5dfb708aec0f7
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839389"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742451"
 ---
-# <a name="idiasegmentgetexecute"></a>IDiaSegment::get_execute
-检索一个标志，指示段是可执行文件。
+# <a name="idiasegmentget_execute"></a>IDiaSegment::get_execute
+检索一个标志，该标志指示段是否可执行。
 
 ## <a name="syntax"></a>语法
 
@@ -33,10 +33,10 @@ HRESULT get_execute ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回`TRUE`如果段被标记为可执行文件; 否则为返回`FALSE`。
+弄如果段标记为可执行文件，则返回 `TRUE`;否则，将返回 `FALSE`。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。
+ 如果成功，则返回 `S_OK`。 如果此属性不受支持，则返回 `S_FALSE`。 否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

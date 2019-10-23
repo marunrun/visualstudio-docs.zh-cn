@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f9b0f0d06ae5303277c296fd56e36e60b9a6f022
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 34062b654cbaccec053c5ac50bfb041d37a0f4e6
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829636"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744193"
 ---
 # <a name="idiaenumsegmentsnext"></a>IDiaEnumSegments::Next
-检索指定的数目的枚举序列中的段。
+检索枚举序列中指定数量的段。
 
 ## <a name="syntax"></a>语法
 
@@ -35,18 +35,18 @@ HRESULT Next ( 
 #### <a name="parameters"></a>参数
  celt
 
-[in]要检索的枚举器中的段的数目。
+中要检索的枚举数中的段数。
 
  rgelt
 
-[out]数组，它是要填充与所需[IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)表示段的对象。
+弄要使用表示段的所需[IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)对象填充的数组。
 
  pceltFetched
 
-[out]返回在提取枚举器中的段数。
+弄返回提取的枚举数中的段数。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果没有更多的段。 否则，返回错误代码。
+ 如果成功，则返回 `S_OK`。 如果没有其他段，则返回 `S_FALSE`。 否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)

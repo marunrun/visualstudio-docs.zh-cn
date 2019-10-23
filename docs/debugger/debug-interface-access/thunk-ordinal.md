@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 776ee35e57b62463d47fc6f7fa26133f507f16f9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1de2d6c9700dcb7b1106c3693d855bb1d8ae2cfa
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62854435"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738499"
 ---
-# <a name="thunkordinal"></a>THUNK_ORDINAL
-指定转换 （thunk） 类型。
+# <a name="thunk_ordinal"></a>THUNK_ORDINAL
+指定 thunk 类型。
 
 ## <a name="syntax"></a>语法
 
@@ -39,25 +39,25 @@ typedef enum THUNK_ORDINAL {
 ```
 
 ## <a name="elements"></a>元素
-THUNK_ORDINAL_NOTYPE 标准转换 （thunk)。
+THUNK_ORDINAL_NOTYPE 标准 thunk。
 
-THUNK_ORDINAL_ADJUSTOR A`this`精算师转换 （thunk)。
+THUNK_ORDINAL_ADJUSTOR `this` ADJUSTOR thunk。
 
 THUNK_ORDINAL_VCALL 虚拟调用 thunk。
 
-THUNK_ORDINAL_PCODE P 代码转换 （thunk)。
+THUNK_ORDINAL_PCODE P-代码形式。
 
-THUNK_ORDINAL_LOAD 延迟加载转换 （thunk)。
+THUNK_ORDINAL_LOAD 延迟加载 thunk。
 
-THUNK_ORDINAL_TRAMP_INCREMENTAL 增量 trampoline 转换 （thunk) （trampoline 转换 （thunk） 用于从一个内存空间之间反弹调用）。
+THUNK_ORDINAL_TRAMP_INCREMENTAL 增量 trampoline thunk （trampoline thunk 用于弹跳从一个内存空间到另一个内存空间的调用）。
 
-THUNK_ORDINAL_TRAMP_BRANCHISLAND 分支点 trampoline 转换 （thunk)。
+THUNK_ORDINAL_TRAMP_BRANCHISLAND 分支点 trampoline thunk。
 
 ## <a name="remarks"></a>备注
-此枚举中的值返回到调用[idiasymbol:: Get_thunkordinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md)方法。
+此枚举中的值从对[IDiaSymbol：： get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md)方法的调用返回。
 
 ## <a name="requirements"></a>要求
-标头： cvconst.h
+标头： cvconst
 
 ## <a name="see-also"></a>请参阅
 - [枚举和结构](../../debugger/debug-interface-access/enumerations-and-structures.md)

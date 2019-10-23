@@ -1,5 +1,5 @@
 ---
-title: 正在保存标准文档 |Microsoft Docs
+title: 保存标准文档 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,49 +12,49 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4f46d63e9f1145711bd3a32f6fd24e7b61814922
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: df93813d339a45689845b82fe4f5a185301b6c74
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318681"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72724094"
 ---
 # <a name="saving-a-standard-document"></a>保存标准文档
-环境处理保存、 另存为，并保存所有命令。 如果用户选择**保存**，**另存为**，或**全部保存**从**文件**菜单或关闭解决方案，从而导致**保存所有**，发生以下过程。
+环境处理 "保存"、"另存为" 和 "保存所有" 命令。 当用户从 "**文件**" 菜单**中选择 "保存"** 、"**另存为**" 或 "全部保存" 或 "**全部保存**" 时，如果出现 "**全部保存**"，则会发生以下过程。
 
- ![标准编辑器](../../extensibility/internals/media/public.gif "公共")保存、 另存为，并保存所有的命令处理的标准编辑器
+ ![标准编辑器](../../extensibility/internals/media/public.gif "Public")保存、保存为标准编辑器并保存所有命令处理
 
- 此过程详述以下步骤：
+ 以下步骤详细说明了此过程：
 
-1. 当**保存**并**另存为**命令当选中时，在环境中使用<xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>服务以确定活动文档窗口，并应因此保存项。 活动文档窗口了解后，在环境中正在运行的 document 表的文档查找的层次结构的指针和项标识符 (itemID)。 有关详细信息，请参阅[运行文档表](../../extensibility/internals/running-document-table.md)。
+1. 选择 "**保存**" 和 "**另存为**" 命令时，环境将使用 <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> 服务来确定活动文档窗口，并因此应保存哪些项。 知道活动文档窗口后，环境将查找正在运行的文档表中文档的层次结构指针和项标识符（itemID）。 有关详细信息，请参阅[运行文档表](../../extensibility/internals/running-document-table.md)。
 
-    当**全部保存**选择命令时，环境使用正在运行的 document 表中的信息来编译所有要保存的项的列表。
+    如果选择了 "**全部保存**" 命令，环境将使用正在运行的文档表中的信息来编译要保存的所有项的列表。
 
-2. 当解决方案收到<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>调用时，它会循环访问选定项的集 (即，公开多个选择<xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>服务)。
+2. 当解决方案收到 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> 调用时，它将循环访问选定项的集合（即，由 <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> 服务公开的多个选定项）。
 
-3. 选定内容中的每个项，该解决方案使用层次结构指针来调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.IsItemDirty%2A>方法，以确定是否**保存**应启用菜单命令。 如果一个或多个项已更新，则**保存**启用命令。 如果在层次结构使用的标准编辑器，然后查询的层次结构委托脏状态设置为编辑器中通过调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.IsDocDataDirty%2A>方法。
+3. 对于选定内容中的每一项，解决方案都使用层次结构指针来调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.IsItemDirty%2A> 方法，以确定是否应启用 "**保存**" 菜单命令。 如果一个或多个项目已被更新，则启用**Save**命令。 如果层次结构使用标准编辑器，则层次结构会通过调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.IsDocDataDirty%2A> 方法，将查询的脏状态委托给编辑器。
 
-4. 已更新的每个选定项，该解决方案使用层次结构指针来调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.SaveItem%2A>适当的层次结构上的方法。
+4. 在每个未更新的选定项上，解决方案使用层次结构指针对适当的层次结构调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.SaveItem%2A> 方法。
 
-    它是常见的层次结构以使用标准编辑器来编辑该文档。 在这种情况下，文档数据对象的编辑器应支持<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2>接口。 在接收时<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.SaveItem%2A>方法调用中，项目应该通知保存文档时通过调用编辑器<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.SaveDocData%2A>文档数据对象上的方法。 编辑器可以允许环境来处理**另存为**对话框中的，通过调用`Query Service`为<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>接口。 这将返回一个指向<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell>接口。 然后，在编辑器必须调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SaveDocDataToFile%2A>方法，将指针传递到编辑器<xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>通过实现`pPersistFile`参数。 在环境，然后执行保存操作并提供**另存为**编辑器对话框。 在环境然后回拨到编辑器<xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>。
+    层次结构通常使用标准编辑器来编辑文档。 在这种情况下，该编辑器的文档数据对象应支持 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> 接口。 接收到 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.SaveItem%2A> 方法调用后，项目应通过对文档数据对象调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.SaveDocData%2A> 方法，通知编辑器正在保存文档。 编辑器可以通过调用 <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> 接口 `Query Service` 来允许环境处理 "**另存为**" 对话框。 这会返回指向 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> 接口的指针。 然后，编辑器必须调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SaveDocDataToFile%2A> 方法，并通过 `pPersistFile` 参数向编辑器的 <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> 实现传递指针。 然后，环境将执行保存操作，并提供编辑器的 "**另存为**" 对话框。 然后，环境会通过 <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> 回调到编辑器。
 
-5. 如果用户尝试保存一个无标题的文档 （即以前未保存的文档），则实际执行的另存为命令。
+5. 如果用户尝试保存无标题文档（即以前未保存的文档），则实际执行的是 "另存为" 命令。
 
-6. 对于另存为命令中，环境将显示另存为对话框，提示用户输入文件的名称。
+6. 对于 "另存为" 命令，环境会显示 "另存为" 对话框，提示用户输入文件名。
 
-    如果已更改的文件的名称，则在层次结构负责更新文档框架的缓存信息通过调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.SetProperty%2A>(VSFPROPID_MkDocument)。
+    如果该文件的名称已更改，则该层次结构负责通过调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.SetProperty%2A> （VSFPROPID_MkDocument）来更新文档框架的缓存信息。
 
-   如果**另存为**命令将该文档的位置和层次结构为敏感的文档位置，则在层次结构是负责将关闭打开的文档窗口的所有权传递给另一个层次结构。 例如，发生这种情况如果项目跟踪文件是与项目相关的内部或外部的文件 （杂项文件）。 使用以下过程来将文件的所有权更改为杂项文件项目。
+   如果 "**另存为**" 命令移动文档的位置，并且层次结构对文档位置敏感，则层次结构负责将打开的文档窗口的所有权移交给其他层次结构。 例如，如果项目跟踪文件是与项目相关的内部或外部文件（杂项文件），则会发生这种情况。 使用以下过程将文件的所有权更改为杂项文件项目。
 
 ## <a name="changing-file-ownership"></a>更改文件所有权
 
-#### <a name="to-change-file-ownership-to-the-miscellaneous-files-project"></a>若要将文件所有权更改为杂项文件项目
+#### <a name="to-change-file-ownership-to-the-miscellaneous-files-project"></a>将文件所有权更改为杂项文件项目
 
-1. 查询服务以获取<xref:Microsoft.VisualStudio.Shell.Interop.SVsExternalFilesManager>接口。
+1. @No__t_0 接口的查询服务。
 
-     一个指向<xref:Microsoft.VisualStudio.Shell.Interop.IVsExternalFilesManager2>返回。
+     返回指向 <xref:Microsoft.VisualStudio.Shell.Interop.IVsExternalFilesManager2> 的指针。
 
-2. 调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsExternalFilesManager2.TransferDocument%2A>(`pszMkDocumentNew`， `punkWindowFrame`) 方法，将文档传输到新层次结构。 层次结构执行另存为命令调用此方法。
+2. 调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsExternalFilesManager2.TransferDocument%2A> （`pszMkDocumentNew`，`punkWindowFrame`）方法将文档传输到新层次结构。 执行 "另存为" 命令的层次结构将调用此方法。
 
 ## <a name="see-also"></a>请参阅
 - <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>

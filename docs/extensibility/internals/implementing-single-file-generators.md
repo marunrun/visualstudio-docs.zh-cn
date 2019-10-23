@@ -1,5 +1,5 @@
 ---
-title: 实现单个文件生成器 |Microsoft Docs
+title: 实现单文件生成器 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,21 +12,21 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 44a7207bf7d846381ea0cbf678ca7afe3d3d177b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 69bde665e62d063b6bab8784634777eeea02e941
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66335095"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72727179"
 ---
 # <a name="implementing-single-file-generators"></a>实现单个文件生成器
-自定义工具，有时称为单文件生成器 — 可用于扩展[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]和[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]项目中的系统[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]。 自定义工具是实现的 COM 组件<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>接口。 使用此接口，自定义工具将单个输入的文件转换为单个输出文件。 转换的结果可能是源代码中，或任何其他输出这一点非常有用。 自定义工具生成的代码文件的两个示例是在响应中的可视化设计器和使用 Web 服务描述语言 (WSDL) 生成的文件的更改生成代码。
+自定义工具（有时称为单个文件生成器）可用于扩展 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 中的 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] 和 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 项目系统。 自定义工具是实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> 接口的 COM 组件。 使用此接口，自定义工具将单个输入文件转换为一个输出文件。 转换的结果可以是源代码，也可以是任何有用的输出。 自定义工具生成的代码文件的两个示例是生成的代码，以响应可视化设计器中的更改和使用 Web 服务描述语言（WSDL）生成的文件。
 
- 当加载自定义工具，或保存该输入的文件时，项目系统会调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.Generate%2A>方法，并将传递到引用<xref:Microsoft.VisualStudio.Shell.Interop.IVsGeneratorProgress>回调接口，凭此工具可以向用户报告其进度。
+ 加载自定义工具或保存输入文件时，项目系统会调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.Generate%2A> 方法，并传递对 <xref:Microsoft.VisualStudio.Shell.Interop.IVsGeneratorProgress> 回调接口的引用，由此工具可向用户报告其进度。
 
- 自定义工具生成的输出文件添加到输入文件的依赖项目。 项目系统会自动确定的基于自定义工具的实现返回的字符串的输出文件名称<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A>。
+ 自定义工具生成的输出文件将添加到项目中，并对输入文件产生依赖关系。 项目系统根据 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A> 的自定义工具的实现返回的字符串，自动确定输出文件的名称。
 
- 必须实现一个自定义工具<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>接口。 （可选） 自定义工具支持<xref:Microsoft.VisualStudio.OLE.Interop.IObjectWithSite>接口以从输入文件以外的源中检索信息。 在任何情况下，您可以使用自定义工具之前，必须注册它与系统中或在[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]本地注册表。 注册自定义工具的详细信息，请参阅[注册单个文件生成器](../../extensibility/internals/registering-single-file-generators.md)。
+ 自定义工具必须实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> 接口。 自定义工具还支持 <xref:Microsoft.VisualStudio.OLE.Interop.IObjectWithSite> 接口，以便从输入文件以外的源中检索信息。 在任何情况下，你都必须将其注册到系统或 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 本地注册表中，然后才能使用自定义工具。 有关注册自定义工具的详细信息，请参阅[注册单个文件生成器](../../extensibility/internals/registering-single-file-generators.md)。
 
 ## <a name="see-also"></a>请参阅
 - [向可视化设计器公开类型](../../extensibility/internals/exposing-types-to-visual-designers.md)
