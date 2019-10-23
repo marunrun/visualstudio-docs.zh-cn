@@ -11,29 +11,29 @@ helpviewer_keywords:
 - Immediate window
 - first-chance exception notifications
 ms.assetid: d33e7937-73f3-4c69-9df0-777a8713c6f2
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e3a8315b087e259e7e1e37dfa8ab30d476bea308
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fa5f804c22090fa79586549db00b13d824a54690
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62995248"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662526"
 ---
 # <a name="immediate-window"></a>即时窗口
 
-使用“即时”窗口调试和计算表达式、执行语句、输出变量值。 “即时”窗口通过生成和使用当前选定的项目来计算表达式。
+使用“即时”窗口调试和计算表达式、执行语句、输出变量值  。 “即时”窗口通过生成和使用当前选定的项目来计算表达式  。
 
-要显示“即时”窗口，请打开要编辑的项目，然后从“调试” > “窗口” > “即时”，或按 Ctrl+Alt+I。 还可以在“命令”窗口中输入“Debug.Immediate”。
+要显示“即时”窗口，请打开要编辑的项目，然后从“调试” > “窗口” > “即时”，或按 Ctrl+Alt+I        。 还可以在“命令”窗口中输入“Debug.Immediate”   。
 
-“即时”窗口支持 IntelliSense。
+“即时”窗口支持 IntelliSense  。
 
 ## <a name="display-the-values-of-variables"></a>显示变量的值
 
-在调试应用时，“即时”窗口特别有用。 例如，要检查变量 `varA` 的值，可使用 [Print 命令](../../ide/reference/print-command.md)：
+在调试应用时，“即时”窗口特别有用  。 例如，要检查变量 `varA` 的值，可使用 [Print 命令](../../ide/reference/print-command.md)：
 
 ```cmd
 >Debug.Print varA
@@ -48,7 +48,7 @@ ms.locfileid: "62995248"
 此命令的两个版本都返回变量 `varA` 的值。
 
 > [!TIP]
-> 要在“即时”窗口中发出 Visual Studio 命令，必须在命令的开头加上大于符号 (>)。 要输入多个命令，请切换到[命令窗口](command-window.md)。
+> 要在“即时”窗口中发出 Visual Studio 命令，必须在命令的开头加上大于符号 (>)  。 要输入多个命令，请切换到[命令窗口](command-window.md)。
 
 ## <a name="design-time-expression-evaluation"></a>设计时表达式计算
 
@@ -72,11 +72,11 @@ ms.locfileid: "62995248"
    End Module
    ```
 
-2. 在“调试”菜单上，选择“Windows” > “即时”。
+2. 在“调试”菜单上，选择“Windows” > “即时”    。
 
-3. 在“即时”窗口中键入 `?MyFunction(2)`，然后按 Enter。
+3. 在“即时”窗口中键入 `?MyFunction(2)`，然后按 Enter   。
 
-    “即时”窗口将运行 `MyFunction` 并显示 `4`。
+    “即时”窗口将运行 `MyFunction` 并显示 `4`  。
 
 如果函数或子例程包含断点，则 Visual Studio 会在适当断点处中断执行。 随后即可使用调试器窗口检查程序状态。 有关详细信息，请参见[演练：在设计时调试](../../debugger/walkthrough-debugging-at-design-time.md)。
 
@@ -88,7 +88,7 @@ ms.locfileid: "62995248"
 
 ## <a name="enter-commands"></a>输入命令
 
-在“即时”窗口中发出 Visual Studio 命令时，必须输入大于符号 (>)。 使用“向上键”和“向下键”可滚动显示以前用过的命令。
+在“即时”窗口中发出 Visual Studio 命令时，必须输入大于符号 (>)  。 使用“向上键”和“向下键”可滚动显示以前用过的命令   。
 
 |任务|解决方案|示例|
 |----------|--------------|-------------|
@@ -103,7 +103,7 @@ ms.locfileid: "62995248"
 
 ## <a name="examples"></a>示例
 
-以下示例在 Visual Basic 项目的“即时”窗口中显示了四个表达式及其结果。
+以下示例在 Visual Basic 项目的“即时”窗口中显示了四个表达式及其结果  。
 
 ```cmd
 j = 2
@@ -125,9 +125,9 @@ Expression has been evaluated and has no value
 
 ### <a name="toggle-first-chance-exception-notifications-in-the-immediate-window"></a>在“即时”窗口中切换及早异常通知
 
-1. 在“视图”菜单上单击“其他窗口”，然后单击“输出”。
+1. 在“视图”  菜单上单击“其他窗口”  ，然后单击“输出”  。
 
-2. 右键单击“输出”窗口的文本区域，然后选择或取消选择“异常消息”。
+2. 右键单击“输出”窗口的文本区域，然后选择或取消选择“异常消息”   。
 
 ## <a name="see-also"></a>请参阅
 

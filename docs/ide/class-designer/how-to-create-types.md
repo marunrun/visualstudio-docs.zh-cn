@@ -12,17 +12,17 @@ helpviewer_keywords:
 - types [Visual Studio], class diagrams
 - attributes [Visual Studio], applying custom
 ms.assetid: 94458c31-28bc-40e2-9737-85868788a0e5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: abee206f67aa019476fcd5085b4ff872338b4d1f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1db43fc16202234f24d8179bba656d71ac96d39a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975263"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72631755"
 ---
 # <a name="how-to-create-types-by-using-class-designer"></a>如何：使用类设计器创建类型
 
@@ -30,27 +30,27 @@ ms.locfileid: "62975263"
 
 ## <a name="CreateType"></a>创建新类型
 
-1. 在“工具箱”的“类设计器”下，将以下之一拖动到类图上：
+1. 在“工具箱”的“类设计器”下，将以下之一拖动到类图上   ：
 
-    - “类”或“抽象类”
+    - “类”或“抽象类”  
 
     - **Enum**
 
     - **Interface**
 
-    - “结构”(VB) 或“结构”(C#)
+    - “结构”(VB) 或“结构”(C#)  
 
     - **Delegate**
 
-    - “模块”（仅限 VB）
+    - “模块”（仅限 VB） 
 
 2. 为该类型命名。 然后选择其访问级别。
 
 3. 选择要在其中添加该类型的初始代码的文件：
 
-    - 若要创建新文件并将其添加到当前项目，请选择“创建新文件”，并为该文件命名。
+    - 若要创建新文件并将其添加到当前项目，请选择“创建新文件”，并为该文件命名  。
 
-    - 若要将代码添加到现有文件，请选择“添加到现有文件”。
+    - 若要将代码添加到现有文件，请选择“添加到现有文件”  。
 
          如果你的解决方案有共享跨多个应用的代码的项目，你可以将新类型添加到应用项目中的类图，但前提是相应的类文件在同一应用项目中或共享项目中。
 
@@ -71,7 +71,7 @@ ms.locfileid: "62975263"
 
 1. 在类图上单击类型的形状。
 
-2. 在“属性”中，单击类型的“自定义属性”属性旁边的省略号 (...) 按钮。
+2. 在“属性”中，单击类型的“自定义属性”属性旁边的省略号 (...) 按钮   。
 
 3. 添加一个或多个自定义特性，一行一个。 请不要将它们放在括号内。
 
@@ -81,7 +81,7 @@ ms.locfileid: "62975263"
 
 1. 在类图上类型的形状中单击成员的名称，或者在“类详细信息”窗口中单击成员所在的行。
 
-2. 在“属性”中，查找成员的“自定义属性”属性。
+2. 在“属性”中，查找成员的“自定义属性”属性   。
 
 3. 添加一个或多个自定义特性，一行一个。 请不要将它们放在括号内。
 

@@ -13,17 +13,17 @@ helpviewer_keywords:
 - builds [Visual Studio], errors
 - output files, build errors
 ms.assetid: 9002d8c2-36d4-451c-b489-8f01932f31f7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 039456c10993199ec2265042aabc0ed5c475ccd9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a073b4815a01696c546dc2a9dd1132e3605281e6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62969288"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655790"
 ---
 # <a name="out-devenvexe"></a>/Out (devenv.exe)
 
@@ -37,7 +37,7 @@ devenv /Out FileName
 
 ## <a name="arguments"></a>自变量
 
-- FileName
+- FileName 
 
   必需。 用于在生成可执行文件时接收输出的文件的路径和文件名。
 
@@ -45,7 +45,7 @@ devenv /Out FileName
 
 如果指定的文件名不存在，便会自动创建文件。 否则，如果已有文件，结果会追加到文件的现有内容中。
 
-命令行生成错误显示在“命令”窗口中，以及“输出”窗口的“解决方案生成器”视图中。 此开关可用于查看无人参与生成的结果。
+命令行生成错误显示在“命令”  窗口中，以及“输出”  窗口的“解决方案生成器”视图中。 此开关可用于查看无人参与生成的结果。
 
 ## <a name="example"></a>示例
 

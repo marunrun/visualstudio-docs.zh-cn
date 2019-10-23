@@ -11,17 +11,17 @@ helpviewer_keywords:
 - TextMate language grammar
 - language support
 ms.assetid: d78c43ee-4ef2-42e5-984e-d137de4e7e92
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ae0b2f606b4fe04ad390712f48ac1e06ff9bb86
-ms.sourcegitcommit: 283f2dbce044a18e9f6ac6398f6fc78e074ec1ed
+ms.openlocfilehash: 4e43325a6d749653c063c06f2c1c10c69f708da9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65805330"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647787"
 ---
 # <a name="add-visual-studio-editor-support-for-other-languages"></a>为其他语言添加 Visual Studio 编辑器支持
 
@@ -29,7 +29,7 @@ ms.locfileid: "65805330"
 
 ## <a name="syntax-colorization-statement-completion-and-navigate-to-support"></a>语法着色、语句完成和“导航到”支持
 
-Visual Studio 编辑器中的功能（如语法着色、语句完成（也称作 IntelliSense）和“导航到”等）可帮助你更轻松地写入、读取和编辑代码。 以下屏幕截图举例说明在 Visual Studio 中编辑 Perl 脚本。 语法自动着色。 例如，代码中的注解用绿色标记，代码、路径、语句分别用黑色、红色和蓝色标记。 Visual Studio 编辑器对支持的任何语言自动着色。 此外，当开始输入已知语言关键字或对象时，语句完成会显示可能的语句和对象列表。 语句完成有助于更快速、更轻松地写入代码。
+Visual Studio 编辑器中的功能（如语法着色、语句完成（也称作 IntelliSense）和“导航到”等）可帮助你更轻松地写入、读取和编辑代码  。 以下屏幕截图举例说明在 Visual Studio 中编辑 Perl 脚本。 语法自动着色。 例如，代码中的注解用绿色标记，代码、路径、语句分别用黑色、红色和蓝色标记。 Visual Studio 编辑器对支持的任何语言自动着色。 此外，当开始输入已知语言关键字或对象时，语句完成会显示可能的语句和对象列表。 语句完成有助于更快速、更轻松地写入代码。
 
 ![Perl 脚本中的语法着色](../ide/media/vside_perledit.png)
 
@@ -38,7 +38,7 @@ Visual Studio 编辑器中的功能（如语法着色、语句完成（也称作
 |||||||
 |-|-|-|-|-|-|
 |Bat|F#|Java|Markdown|Rust|Visual Basic|
-|Clojure|前往|JavaDoc|Objective-C|ShaderLab|C#|
+|Clojure|Go|JavaDoc|Objective-C|ShaderLab|C#|
 |CMake|Groovy|JSON|Perl|ShellScript|Visual C++|
 |CoffeeScript|HTML|LESS|Python|SQL|VBNet|
 |CSS|INI|LUA|R|Swift|XML|
@@ -56,7 +56,7 @@ Visual Studio 编辑器中的功能（如语法着色、语句完成（也称作
 
 - Visual Basic
 
-- 前往
+- Go
 
 - Java
 
@@ -77,10 +77,10 @@ Visual Studio 通过 [TextMate 语法](https://manual.macromates.com/en/language
 |文件夹名|说明|
 |-----------------|-----------------|
 |\\ *\<language name>*|语言文件夹。 用语言的名称替换 *\<language name>* 。 例如， *\Matlab*。|
-|*\Syntaxes*|语法文件夹。 包含语言的 .json 语法文件，如 Matlab.json。|
+|*\Syntaxes*|语法文件夹。 包含语言的 .json 语法文件，如 Matlab.json   。|
 |*\Snippets*|代码段文件夹。 包含语言的代码段。|
 
-在 Windows 中，%userprofile% 解析为路径 c:\Users\\\<user name>。 如果系统上不存在“Extensions”文件夹，则需要创建它。 如果该文件夹已存在，它将被隐藏。
+在 Windows 中，%userprofile% 解析为路径 c:\Users\\\<user name>   。 如果系统上不存在“Extensions”  文件夹，则需要创建它。 如果该文件夹已存在，它将被隐藏。
 
 > [!TIP]
 > 如果在编辑器中打开了任何文件，则需要在添加 TextMate 语法之后关闭并重新打开它们，以查看语法高亮显示。

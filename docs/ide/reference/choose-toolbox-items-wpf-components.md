@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - WPF Components tab, Choose Toolbox Items dialog box
 - Choose Toolbox Items dialog box, WPF Components tab
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ac9e9c7bbafcf54e7bd31bde20469310c2ad3f81
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 9c3de8e1d83a5d74f518eda2d5ab59bd9845b45a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869763"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72630868"
 ---
 # <a name="choose-toolbox-items-wpf-components"></a>“选择工具箱项”->“WPF 组件”
 
@@ -35,7 +35,7 @@ ms.locfileid: "68869763"
 
 “WPF 组件”  选项卡上的列包含下列信息：
 
-**名称**
+**Name**
 
 列出计算机注册表中条目的 WPF 控件的名称。
 

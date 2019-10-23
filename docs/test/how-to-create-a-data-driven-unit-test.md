@@ -9,17 +9,17 @@ helpviewer_keywords:
 - unit tests, running
 - unit tests, data-driven
 - data-driven unit tests
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 5960c84e2cb389580f2d7b0f476da2a456e62585
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+author: jillre
+ms.openlocfilehash: 0a3162dcbbd041a7d2f540a335bd95854afd87d0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66745860"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72643484"
 ---
 # <a name="how-to-create-a-data-driven-unit-test"></a>如何：创建数据驱动的单元测试
 
@@ -131,7 +131,7 @@ DataSource 属性具有三个构造函数。
 
 具有一个参数的构造函数使用解决方案的 app.config 文件中存储的连接信息  。 *DataSourceSettingsName* 是配置文件中的 Xml 元素的名称，它指定连接信息。
 
-使用 app.config 文件可更改数据源的位置，而无需对单元测试本身进行更改  。 有关如何创建和使用“app.config”文件的信息，请参阅[演练：使用配置文件定义数据源](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md) 
+使用 app.config 文件可更改数据源的位置，而无需对单元测试本身进行更改  。 有关如何创建和使用“app.config”文件的信息，请参阅[演练：使用配置文件定义数据源](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)
 
 ```csharp
 [DataSource(connectionString, tableName)]

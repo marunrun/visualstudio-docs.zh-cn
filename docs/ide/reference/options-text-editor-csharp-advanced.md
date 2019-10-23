@@ -5,21 +5,21 @@ ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Outlining
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Advanced
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 010f2a2e6dc163f24a29e8e352b21d8ef8d72b48
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d1d540f3a49eda22973b25a6b9a91691907efe93
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62811819"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666294"
 ---
 # <a name="options-text-editor-c-advanced"></a>选项，文本编辑器，C#，高级
 
-可使用“高级”选项页修改 C# 的编辑器格式设置、代码重构设置和 XML 文档注释设置。 要访问此选项页，请选择“工具” > “选项”，然后选择“文本编辑器” > “C#” > “高级”。
+可使用“高级”选项页修改 C# 的编辑器格式设置、代码重构设置和 XML 文档注释设置  。 要访问此选项页，请选择“工具” > “选项”，然后选择“文本编辑器” > “C#” > “高级”      。
 
 > [!NOTE]
 > 并非所有选项都会在此处列出。
@@ -34,7 +34,7 @@ ms.locfileid: "62811819"
 
 - 对 using 排序时将“System”指令排在第一位
 
-   当你选择右键单击菜单中的“删除和排序 Using”命令后，它会对 `using` 指令进行排序，并将“System”命名空间置于列表顶部。
+   当你选择右键单击菜单中的“删除和排序 Using”命令后，它会对 `using` 指令进行排序，并将“System”命名空间置于列表顶部  。
 
    排序前：
 
@@ -60,7 +60,7 @@ ms.locfileid: "62811819"
 
 - 单独的 using 指令组
 
-   当你选择右键单击菜单中的“删除和排序 Using”命令后，它会在具有相同根命名空间的指令组之间插入空行，以将 `using` 指令分隔开来。
+   当你选择右键单击菜单中的“删除和排序 Using”  命令后，它会在具有相同根命名空间的指令组之间插入空行，以将 `using` 指令分隔开来。
 
    排序前：
 
@@ -108,7 +108,7 @@ ms.locfileid: "62811819"
 
 - 显示过程行分隔符
 
-   文本编辑器指示过程的可视范围。 在项目的 .cs 源文件中，在下表列出的位置处绘制行：
+   文本编辑器指示过程的可视范围。 在项目的 .cs  源文件中，在下表列出的位置处绘制行：
 
    |.cs 源文件中的位置|行位置示例|
    |---------------------------------|------------------------------|
@@ -118,7 +118,7 @@ ms.locfileid: "62811819"
 
 ## <a name="block-structure-guides"></a>块结构指南
 
-如果选中这些复选框，可以在代码中的大括号 ({}) 之间显示虚竖线。 然后，就可以轻松查看声明级构造和代码级构造的各个代码块了。
+如果选中这些复选框，可以在代码中的大括号 ({}  ) 之间显示虚竖线。 然后，就可以轻松查看声明级构造和代码级构造的各个代码块了。
 
 ## <a name="editor-help"></a>编辑器帮助
 

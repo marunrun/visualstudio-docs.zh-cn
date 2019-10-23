@@ -7,25 +7,25 @@ helpviewer_keywords:
 - load tests, adding delays
 - load tests, changing think times
 ms.assetid: 8e03bee5-ab7b-4b40-9497-9dbe91ccb90e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e19e1cb4f9b49c40923d96b177ceb4d6c31b746f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 661a31411a561f15809a10fb15fd71a29e6a64fa
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62783314"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72672943"
 ---
 # <a name="edit-think-times-to-simulate-website-human-interaction-delays-in-load-tests-scenarios"></a>编辑思考时间以模拟负载测试方案中的网站人工交互延迟
 
-思考时间用于模拟人类与网站执行的各种交互之间存在等待时间这种行为。 Web 性能测试中的各个请求之间以及负载测试方案的各个测试迭代之间均会产生思考时间。 在负载测试中使用思考时间对于创建更为精确的负载模拟很有用。 您可以更改是在负载测试中使用思考时间还是忽略它。 可以在“负载测试编辑器”中更改是否在负载测试中使用思考时间。
+思考时间用于模拟人类与网站执行的各种交互之间存在等待时间这种行为。 Web 性能测试中的各个请求之间以及负载测试方案的各个测试迭代之间均会产生思考时间。 在负载测试中使用思考时间对于创建更为精确的负载模拟很有用。 您可以更改是在负载测试中使用思考时间还是忽略它。 可以在“负载测试编辑器”  中更改是否在负载测试中使用思考时间。
 
-“思考时间配置文件”是应用于负载测试中的某个方案的一种设置。 此设置决定是否在负载测试过程中使用在各个 Web 性能测试中保存的思考时间。 如果想在某些 Web 性能测试中使用思考时间，而在其他 Web 性能测试中不使用此时间，必须将这些测试放在不同的方案中。 有关方案的详细信息，请参阅[编辑负载测试方案](../test/edit-load-test-scenarios.md)。
+“思考时间配置文件”是应用于负载测试中的某个方案的一种设置  。 此设置决定是否在负载测试过程中使用在各个 Web 性能测试中保存的思考时间。 如果想在某些 Web 性能测试中使用思考时间，而在其他 Web 性能测试中不使用此时间，必须将这些测试放在不同的方案中。 有关方案的详细信息，请参阅[编辑负载测试方案](../test/edit-load-test-scenarios.md)。
 
-最初，在使用“新建负载测试向导”创建负载测试时，可设置是否在负载测试中使用思考时间。 有关详细信息，请参阅[编辑负载测试方案](../test/edit-load-test-scenarios.md)。
+最初，在使用“新建负载测试向导”  创建负载测试时，可设置是否在负载测试中使用思考时间。 有关详细信息，请参阅[编辑负载测试方案](../test/edit-load-test-scenarios.md)。
 
-下面的列表介绍了“思考时间配置文件”选项：
+下面的列表介绍了“思考时间配置文件”  选项：
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -50,11 +50,11 @@ ms.locfileid: "62783314"
 
 1. 从 Web 性能和负载测试项目中，打开负载测试。
 
-2. 在“负载测试编辑器”中，选择要在其中更改“思考时间配置文件”的方案节点。 “属性”窗口中将显示“思考时间配置文件”。 按 F4 以显示“属性”窗口。
+2. 在“负载测试编辑器”中，选择要在其中更改“思考时间配置文件”的方案节点   。 “属性”  窗口中将显示“思考时间配置文件”  。 按 F4  以显示“属性”  窗口。
 
-3. 在“属性”窗口中更改“思考时间配置文件”属性。
+3. 在“属性”  窗口中更改“思考时间配置文件”  属性。
 
-4. 更改完属性后，请选择“文件”菜单上的“保存”。 然后，就可以用新的思考时间配置文件运行负载测试了。
+4. 更改完属性后，请选择“文件”菜单上的“保存”   。 然后，就可以用新的思考时间配置文件运行负载测试了。
 
 ## <a name="see-also"></a>请参阅
 

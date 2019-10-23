@@ -9,12 +9,12 @@ ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 5694bfe49e88d0ea5911e72abba842e98f54e373
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3967b637d547ed99ed840761b3b843068afee1af
+ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62538015"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72777490"
 ---
 # <a name="create-an-ai-project-from-the-azure-machine-learning-gallery-in-visual-studio"></a>在 Visual Studio 中通过 Azure 机器学习库创建 AI 项目
 
@@ -25,27 +25,27 @@ Azure 机器学习与 Visual Studio Tools for AI 集成在一起。 可以使用
 > [!NOTE]
 > 必须安装 Azure 机器学习工作台。 要进行安装，请参阅 [Azure 机器学习安装快速入门](https://docs.microsoft.com/azure/machine-learning/preview/quickstart-installation)
 
-1. 启动 Visual Studio。 通过打开“AI 工具”菜单，然后选择“选择群集”，来打开“服务器资源管理器”
+1. 启动 Visual Studio。 通过打开“AI 工具”菜单，然后选择“选择群集”，来打开“服务器资源管理器”   
 
     ![群集选择器](media/create-project-gallery/select-cluster.png)
 
-2. 通过在服务器资源管理器中右键单击“Azure 机器学习”节点，然后选择“登录”并按照说明进行操作，来登录 Azure 机器学习订阅。
+2. 通过在服务器资源管理器中右键单击“Azure 机器学习”节点，然后选择“登录”并按照说明进行操作，来登录 Azure 机器学习订阅   。
 
     ![登录](media/create-project-gallery/azureml-login.png)
 
-3. 选择“AI 工具”>“Azure 机器学习示例库”。
+3. 选择“AI 工具”>“Azure 机器学习示例库”  。
 
     ![示例库](media/create-project-gallery/gallery.png)
 
-4. 对于本快速入门，选择“使用 TensorFlow 的 MNIST”示例，然后单击“安装”。 提供以下内容：
+4. 对于本快速入门，选择“使用 TensorFlow 的 MNIST”示例，然后单击“安装”   。 提供以下内容：
 
    - **资源组**：存储元数据的 Azure 资源组
    - **帐户**：Azure 机器学习试验帐户
    - **工作区**：Azure 机器学习工作区
-   - **项目类型**：机器学习框架。 在此例中选择“TensorFlow”
+   - **项目类型**：机器学习框架。 在此例中选择“TensorFlow” 
    - **添加到解决方案**：确定是添加到当前 Visual Studio 解决方案还是创建并打开新解决方案
    - **项目路径**：保存代码的位置
-   - **项目名称**：键入 TensorFlowMNIST
+   - **项目名称**：键入 TensorFlowMNIST 
 
    ![使用 Python 应用程序模板时生成的项目](media/create-project-gallery/new-AzureSampleProject.png)
 

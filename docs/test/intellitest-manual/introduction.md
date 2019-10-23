@@ -4,21 +4,21 @@ ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest, Visual Studio IntelliTest developer testing tool
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 5aa67bd32f6895e4e1dfc4e7c558bc3bc0d8001b
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+author: jillre
+ms.openlocfilehash: 94bd67ecb4646e3b8079d2d1aadda097c655af4c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65461493"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653174"
 ---
 # <a name="overview-of-microsoft-intellitest"></a>Microsoft IntelliTest 的概述
 
-IntelliTest 使你能够尽早发现 bug，降低测试维护成本。 IntelliTest 使用一种自动化透明的测试方法，为 .NET 代码生成备用的测试套件。 测试套件生成可由指定的“正确性属性”进行进一步引导。 IntelliTest 甚至会随受测代码的变化而自动完善测试套件。
+IntelliTest 使你能够尽早发现 bug，降低测试维护成本。 IntelliTest 使用一种自动化透明的测试方法，为 .NET 代码生成备用的测试套件。 测试套件生成可由指定的“正确性属性”  进行进一步引导。 IntelliTest 甚至会随受测代码的变化而自动完善测试套件。
 
 **表征测试** 通过 IntelliTest 可确定传统单元测试套件方面的代码行为。
 这类测试套件可用作回归套件，为处理重构旧代码或陌生代码相关的复杂问题奠定基础。
@@ -46,9 +46,9 @@ IntelliTest 使你能够尽早发现 bug，降低测试维护成本。 IntelliTe
 
 ## <a name="the-hello-world-of-intellitest"></a>IntelliTest 的 Hello World
 
-IntelliTest 查找与测试程序相关的输入，这意味着可使用它生成众所周知的“Hello World!” 字符串。 此处假设已创建了一个基于 C# MSTest 的测试项目并添加了对 Microsoft.Pex.Framework 的引用。 如果使用不同的测试框架，请创建一个 C# 类库并参阅有关如何设置项目的测试框架文档。
+IntelliTest 查找与测试程序相关的输入，这意味着可使用它生成众所周知的“Hello World!”  字符串。 此处假设已创建了一个基于 C# MSTest 的测试项目并添加了对 Microsoft.Pex.Framework  的引用。 如果使用不同的测试框架，请创建一个 C# 类库并参阅有关如何设置项目的测试框架文档。
 
-以下示例针对名为 value 的参数创建两个约束，以便 IntelliTest 生成所需的字符串：
+以下示例针对名为 value  的参数创建两个约束，以便 IntelliTest 生成所需的字符串：
 
 ```csharp
 using System;
@@ -117,9 +117,9 @@ IntelliTest 控制提供给[参数化单元测试](test-generation.md#parameteri
 
 出现这种情况时，有时并不明显。 请开考虑以下示例：
 
-* GetHashCode() 方法的结果由非托管代码提供，不可预测。
-* System.Random 类使用当前系统时间提供真正随机的值。
-* System.DateTime 类提供当前时间，该时间不受 IntelliTest 控制。
+* GetHashCode()  方法的结果由非托管代码提供，不可预测。
+* System.Random  类使用当前系统时间提供真正随机的值。
+* System.DateTime  类提供当前时间，该时间不受 IntelliTest 控制。
 
 ### <a name="concurrency"></a>并发
 
@@ -127,8 +127,8 @@ IntelliTest 不处理多线程的程序。
 
 ### <a name="native-code"></a>本机代码
 
-IntelliTest 不了解本机代码，如通过 P/Invoke 调用的 x86 指令。 它并不知道如何将此种调用转换为可传递到[约束求解器](input-generation.md#constraint-solver)的约束。
-即使对于 .NET 代码，它也只可分析它检测的代码。 IntelliTest 无法检测 mscorlib 的某些部分，包括反射库。 无法检测 DynamicMethod。
+IntelliTest 不了解本机代码，如通过 P/Invoke  调用的 x86 指令。 它并不知道如何将此种调用转换为可传递到[约束求解器](input-generation.md#constraint-solver)的约束。
+即使对于 .NET 代码，它也只可分析它检测的代码。 IntelliTest 无法检测 mscorlib  的某些部分，包括反射库。 无法检测 DynamicMethod  。
 
 建议的解决方法是当此类方法位于动态程序集的类型中时采用测试模式。 但是，即使某些方法未检测，IntelliTest 也会尝试尽可能多地覆盖已检测的代码。
 

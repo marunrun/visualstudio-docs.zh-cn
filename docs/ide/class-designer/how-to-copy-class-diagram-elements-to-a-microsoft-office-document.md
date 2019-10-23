@@ -6,39 +6,39 @@ helpviewer_keywords:
 - class diagrams, copying elements to Office documents
 - Office documents [Visual Studio]
 ms.assetid: c43061ad-d258-46b1-be66-f97a312e86d5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 19fbcc3db88cd020e1a4541f6cfb7f5f3acd18b3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 82228d924b2f475d9a9f7e607ccf902f2b4eaa0e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975489"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72631858"
 ---
 # <a name="how-to-copy-class-diagram-elements-to-a-microsoft-office-document"></a>如何：将类图元素复制到 Microsoft Office 文档
 
-可以将形状从 .NET 类图（.cd 文件）复制到其他文档中。 可以基于将要粘贴到的文档的类型获取形状或其底层代码的拷贝。 若要复制建模项目中的 UML 类图中的形状，请参阅[将关系图导出为图像](../../modeling/export-diagrams-as-images.md)。
+可以将形状从 .NET 类图（.cd  文件）复制到其他文档中。 可以基于将要粘贴到的文档的类型获取形状或其底层代码的拷贝。 若要复制建模项目中的 UML 类图中的形状，请参阅[将关系图导出为图像](../../modeling/export-diagrams-as-images.md)。
 
 ## <a name="copy-a-single-element"></a>复制单个元素
 
-右键单击该形状，然后选择“复制图像”。
+右键单击该形状，然后选择“复制图像”  。
 
 ## <a name="copy-several-elements"></a>复制多个元素
 
 1. 在关系图上选择要复制的形状。
 
-2. 右键单击选择内容，然后选择“复制图像”。
+2. 右键单击选择内容，然后选择“复制图像”  。
 
 ## <a name="copy-all-the-elements-in-a-class-diagram"></a>在类图中复制所有元素
 
-1. 右键单击关系图面，然后选择“全选”或按“Ctrl + A”。
+1. 右键单击关系图面，然后选择“全选”  或按“Ctrl + A”  。
 
-2. 在“编辑”菜单上，选择“复制图像”。
+2. 在“编辑”  菜单上，选择“复制图像”  。
 
-还可以选择“复制”而不是“复制图像”。 “复制”将图像复制为常规位图。 “复制图像”将图像复制为大多数 Office 应用程序的显示效果会更好的基于矢量的图像。
+还可以选择“复制”  而不是“复制图像”  。 “复制”  将图像复制为常规位图。 “复制图像”  将图像复制为大多数 Office 应用程序的显示效果会更好的基于矢量的图像。
 
 ## <a name="see-also"></a>请参阅
 

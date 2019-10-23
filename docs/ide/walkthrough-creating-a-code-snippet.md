@@ -10,19 +10,19 @@ helpviewer_keywords:
 - code snippets, references
 - code snippets, imports
 ms.assetid: 0dcaae11-39cf-4463-9c90-2494321251c2
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 130f4a5d39c756587dcf479abe4461f64e9461cb
-ms.sourcegitcommit: b468d71052a1b8a697f477ab23a3644de139f1e9
+ms.openlocfilehash: fb76fd61cb06b2877ebe0cd1714610b25845ebc0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67259809"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647136"
 ---
 # <a name="walkthrough-create-a-code-snippet"></a>演练：创建代码片段
 
@@ -76,9 +76,9 @@ ms.locfileid: "67259809"
        <![CDATA[Dim root = Math.Sqrt(16)]]>
    </Code>
    ```
-   
+
    > [!NOTE]
-   > 无法指定如何对代码片段 CDATA 部分中的代码行执行缩进或格式设置。  插入后，语言服务将自动设置所插入代码的格式。 
+   > 无法指定如何对代码片段 CDATA 部分中的代码行执行缩进或格式设置。  插入后，语言服务将自动设置所插入代码的格式。
 
 5. 将代码片段保存为 SquareRoot.snippet（可将其保存在任何位置）  。
 

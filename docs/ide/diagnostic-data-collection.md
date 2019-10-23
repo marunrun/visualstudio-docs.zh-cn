@@ -2,17 +2,17 @@
 title: 诊断数据和系统生成的日志
 ms.date: 05/24/2018
 ms.topic: conceptual
-author: gewarren
+author: jillre
 ms.author: michma
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f92e899ff8e56c68fcf1a4ab639d027c139afcf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9702439569fa9db1ff8687e914d5c9d20865e2b0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62557393"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652463"
 ---
 # <a name="system-generated-logs-collected-by-visual-studio"></a>由 Visual Studio 收集的系统生成的日志
 
@@ -24,7 +24,7 @@ Visual Studio 收集崩溃、挂起、UI 无响应以及很高的 CPU 或内存�
 
 - 对于很高的 CPU 使用率和无响应的情况，会收集相关 Visual Studio 线程的堆栈跟踪信息。
 
-- 如果部分线程的堆栈跟踪信息不足以确定问题的根本原因（例如崩溃、挂起或很高的内存使用率），我们会收集内存转储。 转储代表出现错误时的进程状态。
+- 如果部分线程的堆栈跟踪信息不足以确定问题的根本原因（例如崩溃、挂起或很高的内存使用率），我们会收集内存转储  。 转储代表出现错误时的进程状态。
 
 - 对于意外的错误情况，例如在尝试向文件或磁盘写入内容时出现的异常，我们会收集该异常的相关信息。 此信息包括异常的名称、出现异常的线程的堆栈跟踪、异常的相关消息以及此特定异常的其他相关信息。
 

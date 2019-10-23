@@ -2,17 +2,17 @@
 title: 使用编码的 UI 测试日志分析编码的 UI 测试
 ms.date: 11/04/2016
 ms.topic: conceptual
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 76aac39d50dc724916bca3d863c71bacf53407d9
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+author: jillre
+ms.openlocfilehash: 73916d309fa0e070bf4b05ba0d5a8fc02bef29f8
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67824487"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665322"
 ---
 # <a name="analyzing-coded-ui-tests-using-coded-ui-test-logs"></a>使用编码的 UI 测试日志分析编码的 UI 测试
 
@@ -27,11 +27,11 @@ ms.locfileid: "67824487"
 - 测试项目中不存在 App.config  文件：
 
    1. 确定运行测试时启动了哪个 QTAgent\*.exe  进程。 一种方法是查看 Windows“任务管理器”  中的“详细信息”  选项卡。
-   
+
    2. 从 %ProgramFiles(x86)%\Microsoft Visual Studio\\\<version>\\\<edition>\Common7\IDE  文件夹打开相应的 .config  文件。 例如，如果运行的进程是 QTAgent_40.exe  ，则打开 QTAgent_40.exe.config  。
 
    2. 将 EqtTraceLevel  的值修改为所需的日志级别。
-   
+
       ```xml
       <!-- You must use integral values for "value".
            Use 0 for off, 1 for error, 2 for warn, 3 for info, and 4 for verbose. -->

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Debug.SymbolPath command
 - SymbolPath command
 ms.assetid: b697ef2d-3f5d-40df-b113-7068a5bec0d4
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3792f3d6f86faf0b58e8cf8f1b76984ba3bd5d80
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: d7a2e4c789f4bd2637cd4da79d66071cc94d697f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926000"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748599"
 ---
 # <a name="symbol-path-command"></a>“符号路径”命令
 设置调试器的目录列表，以搜索符号。
@@ -52,7 +52,7 @@ Debug.SymbolPath C:\Symbol Path 1;C:\Symbol Path 2
 Debug.SymbolPath
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [“命令”窗口](../../ide/reference/command-window.md)
 - [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)

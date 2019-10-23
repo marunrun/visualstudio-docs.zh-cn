@@ -2,7 +2,7 @@
 title: 使用 C# 创建 ASP.NET Core Web 应用
 description: 了解如何在 Visual Studio 中使用 C# 和 ASP.NET Core 逐步创建简单的 Hello World Web 应用。
 ms.custom: mvc,seodec18
-ms.date: 06/06/2019
+ms.date: 10/15/2019
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: quickstart
@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 28994e7f3a4f31a9e3ee8c292a08df1132cf20df
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: e57a72262e9fdf3224b97d6d107e8547dc0a267e
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180386"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516892"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>快速入门：使用 Visual Studio 创建首个 ASP.NET Core Web 应用
 
@@ -110,9 +110,9 @@ ms.locfileid: "70180386"
 
    ![在“配置新项目”窗口中，将项目命名为“HelloWorld”](../get-started/csharp/media/vs-2019/csharp-name-your-aspnet-helloworld-project.png)
 
-1. 在“创建新的 ASP.NET Core Web 应用程序”  窗口中，验证“ASP.NET Core 2.1”  是否显示在顶部下拉菜单中。 然后，选择“Web 应用程序”，其中包括示例 Razor Pages  。 接下来，选择“创建”  。
+1. 在“创建新的 ASP.NET Core Web 应用程序”窗口中，验证“ASP.NET Core 3.0”是否显示在顶部下拉菜单中   。 然后，选择“Web 应用程序”，其中包括示例 Razor Pages  。 接下来，选择“创建”  。
 
-   ![“创建新的 ASP.NET Core Web 应用程序”窗口](../get-started/csharp/media/vs-2019/csharp-create-aspnet-core-razor-pages-app.png)
+   ![“创建新的 ASP.NET Core Web 应用程序”窗口](../get-started/csharp/media/vs-2019/csharp-create-aspnet-razor-pages-app.png)
 
    此时，Visual Studio 将打开新项目。
 

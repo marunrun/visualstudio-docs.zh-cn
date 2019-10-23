@@ -14,12 +14,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c5399411998f4a03468f2dedccfd660eaf8de11
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: cbdbadd93eec07c43aba99e40072cb6173e0e83d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461824"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747831"
 ---
 # <a name="options-text-editor-cc-advanced"></a>选项，文本编辑器，C/C++，高级
 
@@ -206,6 +206,6 @@ IntelliSense 更新将会延迟，直至发出 IntelliSense 的实际请求。 �
 
 如果启用，你可以用括号将所选文本括起来，方法是在文本编辑器中输入“(”。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [设置语言特定的编辑器选项](../../ide/reference/setting-language-specific-editor-options.md)

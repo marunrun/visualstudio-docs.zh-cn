@@ -7,12 +7,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c95990eb875c52a66cd0efa5579c9d39eab5469
-ms.sourcegitcommit: 3cda0d58c5cf1985122b8977b33a171c7359f324
+ms.openlocfilehash: b0a909c25af3de22019327bb890da9e26bcce1c8
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154904"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748584"
 ---
 # <a name="configure-a-c-project-for-intellisense"></a>配置用于 IntelliSense 的 C++ 项目
 
@@ -120,6 +120,6 @@ Visual Studio to investigate.
 
 若要详细了解 TRACEDESIGNTIME 环境变量，请参阅 [Roslyn](https://github.com/dotnet/roslyn/wiki/Diagnosing-Project-System-Build-Errors) 和[公共项目系统](https://github.com/dotnet/project-system/blob/master/docs/design-time-builds.md)。 这些文章中的信息适用于 C++ 项目。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual C++ IntelliSense](visual-cpp-intellisense.md)

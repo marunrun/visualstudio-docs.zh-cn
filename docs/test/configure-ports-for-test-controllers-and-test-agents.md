@@ -10,15 +10,15 @@ helpviewer_keywords:
 - agents, firewalls
 - controllers, firewalls
 ms.assetid: 211edbd7-9fe4-4251-ba85-8bec4363261b
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bd66bcb3615477abc2fc9a8122f2ec4675f37bbb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f29edf1582b709931e393faa0de5a1542a0ee662
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62965643"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72665190"
 ---
 # <a name="configure-ports-for-test-controllers-and-test-agents"></a>为测试控制器和测试代理配置端口
 
@@ -39,7 +39,7 @@ ms.locfileid: "62965643"
     测试控制器需要能够建立与测试代理和客户端的传出连接。
 
     > [!NOTE]
-    > 测试控制器需要打开传入“文件和打印机共享”连接。
+    > 测试控制器需要打开传入“文件和打印机共享”连接  。
 
 - **测试代理** 传入连接位于 TCP 端口 6910 上。 如果需要，您可以配置传入端口。 有关详细信息，请参阅[配置传入端口](#configure-the-incoming-ports)。
 
@@ -49,7 +49,7 @@ ms.locfileid: "62965643"
 
    当测试控制器首次尝试连接到客户端时，您可能会收到防火墙通知。
 
-   Windows Server 2008 默认禁用防火墙通知，必须为客户端程序（devenv.exe、mstest.exe、mlm.exe）手动添加防火墙例外，这样它才能接受传入连接。
+   Windows Server 2008 默认禁用防火墙通知，必须为客户端程序（devenv.exe  、mstest.exe  、mlm.exe  ）手动添加防火墙例外，这样它才能接受传入连接。
 
 ## <a name="outgoing-connections"></a>传出连接
 
@@ -65,7 +65,7 @@ ms.locfileid: "62965643"
 
 按照以下指示配置测试控制器和测试代理的端口。
 
-- **控制器服务**：通过编辑 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTCcontroller.exe.config 文件来修改端口值：
+- **控制器服务**：通过编辑 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTCcontroller.exe.config  文件来修改端口值：
 
     ```xml
     <appSettings>
@@ -73,7 +73,7 @@ ms.locfileid: "62965643"
     </appSettings>
     ```
 
-- **代理服务**：通过编辑 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTAgentService.exe.config 文件来修改端口：
+- **代理服务**：通过编辑 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTAgentService.exe.config  文件来修改端口：
 
     ```xml
     <appSettings>
@@ -81,7 +81,7 @@ ms.locfileid: "62965643"
     </appSettings>
     ```
 
-- **客户端**：使用注册表编辑器来添加以下注册表 (DWORD) 值。 客户端将使用指定范围内的某个端口来接收来自测试控制器的数据：
+- **客户端**：使用注册表编辑器来添加以下注册表 (DWORD  ) 值。 客户端将使用指定范围内的某个端口来接收来自测试控制器的数据：
 
      **HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\VisualStudio\12.0\EnterpriseTools\QualityTools\ListenPortRange\PortRangeStart**
 

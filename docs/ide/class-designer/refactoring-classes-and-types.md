@@ -14,17 +14,17 @@ helpviewer_keywords:
 - Class Designer [Visual Studio], refactoring classes
 - refactoring, classes
 ms.assetid: dcf07bb4-fa3b-4224-9dec-566fd924a8ce
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d99fc68f6b42b442a87ead02aba888063b1b42a1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9b82bebb8e7eedcf6bdff7b12048f8c98cabdeb5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975081"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72631175"
 ---
 # <a name="refactor-classes-and-types-in-class-designer"></a>在类设计器中重构类和类型
 
@@ -43,7 +43,7 @@ ms.locfileid: "62975081"
 
 ## <a name="rename-types-and-type-members"></a>重命名类型和类型成员
 
-在类设计器中，可以在类图上或在“属性”窗口中重命名类型或类型的成员。 在“类详细信息”窗口中，可以更改成员名称但不能更改类型名称。 类型或类型成员的重命名将传播到所有的窗口和旧名称出现的代码位置。
+在类设计器中，可以在类图上或在“属性”  窗口中重命名类型或类型的成员。 在“类详细信息”  窗口中，可以更改成员名称但不能更改类型名称。 类型或类型成员的重命名将传播到所有的窗口和旧名称出现的代码位置。
 
 ### <a name="rename-in-the-class-designer"></a>在类设计器中重命名
 
@@ -55,22 +55,22 @@ ms.locfileid: "62975081"
 
 ### <a name="rename-in-the-class-details-window"></a>在“类详细信息”窗口中重命名
 
-1. 如果要显示“类详细信息”窗口，右键单击类型或类型成员，然后选择“类详细信息”。
+1. 如果要显示“类详细信息”  窗口，右键单击类型或类型成员，然后选择“类详细信息”  。
 
-     这时将出现“类详细信息”窗口。
+     这时将出现“类详细信息”  窗口。
 
 2. 在“名称”  列中，更改类型成员名
 
-3. 如果要将焦点从单元格中移开，按 Enter 键或在单元格外单击即可。
+3. 如果要将焦点从单元格中移开，按 Enter  键或在单元格外单击即可。
 
     > [!NOTE]
-    > 在“类详细信息”窗口中，可以更改成员名称但不能更改类型名称。
+    > 在“类详细信息”  窗口中，可以更改成员名称但不能更改类型名称。
 
 ### <a name="rename-in-the-properties-window"></a>在“属性”窗口中重命名
 
-1. 在类图或“类详细信息”窗口上，右键单击类型或成员，然后选择“属性”。
+1. 在类图或“类详细信息”  窗口上，右键单击类型或成员，然后选择“属性”  。
 
-     这时会出现“属性”窗口，并显示该类型或类型成员的属性。
+     这时会出现“属性”  窗口，并显示该类型或类型成员的属性。
 
 2. 在“名称”  属性中，更改类型或类型成员的名称。
 
@@ -78,11 +78,11 @@ ms.locfileid: "62975081"
 
 ## <a name="move-type-members-from-one-type-to-another"></a>将类型成员从一个类型移到另一个类型
 
-使用“类设计器”可以将类型成员从一个类型移到另一个类型。 这两个类型必须均在当前类图中可见。
+使用“类设计器”  可以将类型成员从一个类型移到另一个类型。 这两个类型必须均在当前类图中可见。
 
-1. 在设计图面上可见的一个类型中，右键单击要移到另一个类型的成员，然后选择“剪切”。
+1. 在设计图面上可见的一个类型中，右键单击要移到另一个类型的成员，然后选择“剪切”  。
 
-2. 右键单击目标类型，然后选择“粘贴”。
+2. 右键单击目标类型，然后选择“粘贴”  。
 
      属性将从源类型中被移除，并出现在目标类型中。
 

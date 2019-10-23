@@ -7,22 +7,22 @@ helpviewer_keywords:
 - templates [Visual Studio], Web
 - Web templates [Visual Studio]
 - project templates [Visual Studio], Web
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9af528cf92d4909bbe5c7d4ac114aa830e96162c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7d121d9b970d8012aaf177c0a232cd21f6fe85d9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946890"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72645818"
 ---
 # <a name="how-to-manually-create-web-templates"></a>如何：手动创建 Web 模板
 
-创建 Web 模板与创建其他种类的模板不同。 由于 Web 项目模板出现在“添加新网站”对话框中，并且 Web 项目项由编程语言分类，vstemplate 文件必须将模板指定为 Web 模板，并识别该编程语言。
+创建 Web 模板与创建其他种类的模板不同。 由于 Web 项目模板出现在“添加新网站”  对话框中，并且 Web 项目项由编程语言分类，vstemplate  文件必须将模板指定为 Web 模板，并识别该编程语言。
 
 > [!NOTE]
-> Web 模板必须包含一个空的 .webproj 文件，并且必须在 `Project` 元素的 `File` 属性的 vstemplate 文件中引用它。 尽管 Web 项目不需要 .proj 项目文件，但有必要创建此存根文件以便 Web 模板正确运行。
+> Web 模板必须包含一个空的  .webproj 文件，并且必须在 `Project` 元素的 `File` 属性的 vstemplate 文件中引用它  。 尽管 Web 项目不需要 .proj  项目文件，但有必要创建此存根文件以便 Web 模板正确运行。
 
 ## <a name="to-manually-create-a-web-template"></a>手动创建 Web 模板
 
@@ -30,11 +30,11 @@ ms.locfileid: "62946890"
 
 2. 修改或删除项目中的文件，或将新文件添加到项目。
 
-3. 创建 XML 文件，并用 vstemplate 文件扩展名将其保存在与项目相同的目录中。 不要将其添加到 Visual Studio 的项目中。
+3. 创建 XML 文件，并用 vstemplate  文件扩展名将其保存在与项目相同的目录中。 不要将其添加到 Visual Studio 的项目中。
 
-4. 编辑 vstemplate XML 文件以提供项目模板元数据。 有关详细信息，请参阅[以下示例](#example)。
+4. 编辑 vstemplate  XML 文件以提供项目模板元数据。 有关详细信息，请参阅[以下示例](#example)。
 
-5. 查找 vstemplate 文件中的 `ProjectType` 元素，将文本值设置为 `Web`。
+5. 查找 vstemplate  文件中的 `ProjectType` 元素，将文本值设置为 `Web`。
 
 6. 在该 `ProjectType` 元素之后，添加 `ProjectSubType` 元素并将文本值设置为模板的编程语言。 编程语言可以是下列值之一：
 
@@ -52,13 +52,13 @@ ms.locfileid: "62946890"
      </TemplateData>
      ```
 
-7. 选择模板中的文件（包括 vstemplate 文件），右键单击所选文件，然后选择“发送至” > “压缩的文件夹”。 这些文件会压缩到一个 .zip 文件中。
+7. 选择模板中的文件（包括 vstemplate  文件），右键单击所选文件，然后选择“发送至”   > “压缩的文件夹”  。 这些文件会压缩到一个 .zip 文件中  。
 
-8. 将该 .zip 模板文件放入 Visual Studio 项目模板目录。 默认情况下，此目录为 %USERPROFILE%\Documents\Visual Studio \<Version\>\ProjectTemplates。
+8. 将该 .zip 模板文件放入 Visual Studio 项目模板目录  。 默认情况下，此目录为 %USERPROFILE%\Documents\Visual Studio \<Version\>\ProjectTemplates  。
 
 ## <a name="example"></a>示例
 
-以下示例显示 Web 项目模板的基本 vstemplate 文件：
+以下示例显示 Web 项目模板的基本 vstemplate  文件：
 
 ```xml
 <VSTemplate Version="2.0.0" Type="Project"

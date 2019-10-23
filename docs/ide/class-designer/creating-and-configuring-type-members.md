@@ -24,17 +24,17 @@ helpviewer_keywords:
 - Class Details window
 - Class Details window, member creation
 ms.assetid: 42af8738-3738-4ca7-82ff-edf573a68f96
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 811565d6e4189eb04b33ce07fe04718def905922
-ms.sourcegitcommit: f369ff7e84b0216f01570a486c7be80ca6d0e61a
+ms.openlocfilehash: 0a842ccb936c755a27ab28287f9da8d6355e92fc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68250641"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647756"
 ---
 # <a name="create-and-configure-type-members-in-class-designer"></a>在类设计器中创建和配置类型成员
 
@@ -47,7 +47,7 @@ ms.locfileid: "68250641"
 |接口|方法、属性和事件（对于 C# 和 Visual Basic）|
 |抽象类|方法、属性（对于 C# 和 Visual Basic）、字段、事件（对于 C# 和 Visual Basic）、构造函数（方法）、析构函数（方法）和常数|
 |结构（C# 中的结构）|方法、属性（对于 C# 和 Visual Basic）字段、事件（对于 C# 和 Visual Basic）、构造函数（方法）和常数|
-|委托|参数|
+|委托|参数 (parameter)|
 |模块（仅限 VB）|方法、属性、字段、事件、构造函数和常量|
 
 > [!NOTE]
@@ -186,7 +186,7 @@ ms.locfileid: "68250641"
 
 参数行包含以下项：
 
-- **名称**
+- **Name**
 
      参数行中的“名称”列显示参数的名称  。 此名称还显示在“属性”窗口的“名称”属性中  。 使用此单元格可更改任何具有读写权限的参数的名称。
 

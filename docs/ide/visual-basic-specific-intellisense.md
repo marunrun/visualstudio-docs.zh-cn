@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - IntelliSense [Visual Basic]
 - IntelliSense [Visual Studio], Visual Basic
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dc0897f3b2964996b18a40cc8dda16068ff772f2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fa21939375956024a0ca16cadd99160d142a1d5d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62582506"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647272"
 ---
 # <a name="intellisense-for-visual-basic-code-files"></a>Visual Basic 代码文件的 IntelliSense
 
@@ -37,9 +37,9 @@ Visual Basic 源代码编辑器提供以下 IntelliSense 功能：
 
     语句引用枚举成员时，IntelliSense 会显示 `Enum` 成员列表。 语句引用 `Boolean` 时，IntelliSense 会显示 true-false下拉菜单。
 
-可默认关闭完成，方法是在“Visual Basic”文件夹中，从“常规”属性页取消选择“自动列出成员”。
+可默认关闭完成，方法是在“Visual Basic”文件夹中，从“常规”属性页取消选择“自动列出成员”    。
 
-可通过调用列表成员、完成单词或 Alt+向右键，手动调用完成。 有关详细信息，请参阅[使用 IntelliSense](../ide/using-intellisense.md)。
+可通过调用列表成员、完成单词或 Alt  +向右键  ，手动调用完成。 有关详细信息，请参阅[使用 IntelliSense](../ide/using-intellisense.md)。
 
 ## <a name="intellisense-in-zone"></a>IntelliSense in Zone
 
@@ -53,7 +53,7 @@ IntelliSense in Zone 可在 Visual Basic 开发人员需要通过 [!INCLUDE[ndpt
 
 ## <a name="filtered-completion-lists"></a>经过筛选的完成列表
 
-在 Visual Basic 中，IntelliSense 完成列表在列表底部附近有两个选项卡控件。 “常规”选项卡：在默认情况下处于选中状态，显示了最常用的补全正在编写的语句的项。 “全部”选项卡：显示了可用来自动补全的所有项，其中包括“常规”选项卡中的项。
+在 Visual Basic 中，IntelliSense 完成列表在列表底部附近有两个选项卡控件。 “常规”选项卡：在默认情况下处于选中状态，显示了最常用的补全正在编写的语句的项  。 “全部”选项卡：显示了可用来自动补全的所有项，其中包括“常规”选项卡中的项   。
 
 ## <a name="see-also"></a>请参阅
 

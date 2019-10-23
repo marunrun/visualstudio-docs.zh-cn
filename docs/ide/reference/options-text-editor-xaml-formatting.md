@@ -24,21 +24,21 @@ helpviewer_keywords:
 - WPF Designer, XAML formatting
 - XAML view settings, attribute spacing
 ms.assetid: ad3820b1-0d94-4807-a74c-c3467ed973a2
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 3ed364d9c8995a93acb0de8002bafefd603c2d71
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ac7c3eebe9498f4ac596ed09ae063eefacf3b6b2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62969249"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666633"
 ---
 # <a name="options-text-editor-xaml-formatting"></a>选项，文本编辑器，XAML，格式
 
-使用“格式设置”属性页可指定如何在 XAML 文档中设置元素和特性的格式。 若要打开“选项”对话框，请单击“工具”菜单，然后单击“选项”。 要访问“格式设置”属性页，请展开“文本编辑器” > “XAML” > “格式设置”节点。
+使用“格式设置”  属性页可指定如何在 XAML 文档中设置元素和特性的格式。 若要打开“选项”  对话框，请单击“工具”  菜单，然后单击“选项”  。 要访问“格式设置”属性页，请展开“文本编辑器” > “XAML” > “格式设置”节点     。
 
 ## <a name="auto-formatting-events"></a>自动格式化事件
 
@@ -88,7 +88,7 @@ ms.locfileid: "62969249"
 
 **对超出指定长度的标记执行换行**
 
-指定是否在“长度”指定的行长度处换行。
+指定是否在“长度”  指定的行长度处换行。
 
 **长度**
 

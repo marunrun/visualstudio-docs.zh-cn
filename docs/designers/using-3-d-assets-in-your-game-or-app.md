@@ -10,17 +10,17 @@ f1_keywords:
 - VC.Project.ShaderGraphContentTask.ContentOutput
 - VC.Project.ImageContentTask.GenerateMips
 ms.assetid: ea587909-e434-46a8-abf8-9b3e95a58b4f
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c595f4c8f344cfb9e8678d8f9c425a564baa9e4b
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+ms.openlocfilehash: 400e69ddaf9ebd3596edf3b926484b623225d672
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65459117"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72634537"
 ---
 # <a name="how-to-use-3d-assets-in-your-game-or-app"></a>如何：在游戏或应用中使用三维资产
 
@@ -30,21 +30,21 @@ ms.locfileid: "65459117"
 
 ## <a name="configure-your-project"></a>配置项目
 
-在可将三维资产部署为生成的一部分之前，Visual Studio 必须了解所需部署的资产种类。 Visual Studio 已了解了很多常见的文件种类，但是因为仅某些种类的应用可使用三维资产，因此 Visual Studio 不会假设项目将生成这些种类的文件。 使用为每种资产类型提供的生成自定义（告知 Visual Studio 如何以有用的方式处理不同类型文件的文件），可告知 Visual Studio 应用使用这些种类的资产。 因为这些自定义可基于每个项目而进行应用，因此你只需向你的项目添加相应的自定义即可。
+在可将三维资产部署为生成的一部分之前，Visual Studio 必须了解所需部署的资产种类。 Visual Studio 已了解了很多常见的文件种类，但是因为仅某些种类的应用可使用三维资产，因此 Visual Studio 不会假设项目将生成这些种类的文件。 使用为每种资产类型提供的生成自定义（告知 Visual Studio 如何以有用的方式处理不同类型文件的文件），可告知 Visual Studio 应用使用这些种类的资产  。 因为这些自定义可基于每个项目而进行应用，因此你只需向你的项目添加相应的自定义即可。
 
 ### <a name="to-add-the-build-customizations-to-your-project"></a>将生成自定义添加到你的项目
 
-1. 在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择“生成依赖项” > “生成自定义”。
+1. 在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择“生成依赖项” > “生成自定义”    。
 
-   随即显示“Visual C++ 生成自定义文件”对话框。
+   随即显示“Visual C++ 生成自定义文件”对话框  。
 
-2. 在“可用的生成自定义文件”下，选中希望在项目中使用的资产类型对应的复选框，如下表中所述：
+2. 在“可用的生成自定义文件”下，选中希望在项目中使用的资产类型对应的复选框，如下表中所述  ：
 
     |资产类型|生成自定义名称|
     |----------------| - |
-    |纹理和图像|ImageContentTask（.targets、.props）|
-    |三维模型|MeshContentTask（.targets、.props）|
-    |着色器|ShaderGraphContentTask（.targets、.props）|
+    |纹理和图像|ImageContentTask（.targets、.props） |
+    |三维模型|MeshContentTask（.targets、.props） |
+    |着色器|ShaderGraphContentTask（.targets、.props） |
 
 3. 选择“确定”  按钮。
 
@@ -54,16 +54,16 @@ ms.locfileid: "65459117"
 
 ### <a name="to-add-an-asset-to-your-build"></a>将资产添加到生成
 
-1. 在“解决方案资源管理器”中，在项目中打开资产的快捷菜单，然后选择“属性”。
+1. 在“解决方案资源管理器”中，在项目中打开资产的快捷菜单，然后选择“属性”   。
 
-   随即显示资产的“属性页”对话框。
+   随即显示资产的“属性页”对话框  。
 
-2. 请确保将“配置”和“平台”属性设置为你希望更改应用的值。
+2. 请确保将“配置”和“平台”属性设置为你希望更改应用的值   。
 
-3. 在“配置属性”下，选择“常规”，然后在“常规”下的属性网格中，将“项目类型”属性设置为相应的内容管道项目类型。 例如，对于图像或纹理文件，请选择“图像内容管道”。
+3. 在“配置属性”下，选择“常规”，然后在“常规”下的属性网格中，将“项目类型”属性设置为相应的内容管道项目类型     。 例如，对于图像或纹理文件，请选择“图像内容管道”  。
 
     > [!IMPORTANT]
-    > 默认情况下，Visual Studio 假设应使用内置于 Visual Studio 中“图像”项目类型对很多种类的图像文件进行分类。 因此，必须更改你希望通过图像内容管道处理的每个图像的“项目类型”属性。 三维模型和视觉着色器图形的内容管道源文件的其他类型默认为正确的“项目类型”。
+    > 默认情况下，Visual Studio 假设应使用内置于 Visual Studio 中“图像”项目类型对很多种类的图像文件进行分类  。 因此，必须更改你希望通过图像内容管道处理的每个图像的“项目类型”属性  。 三维模型和视觉着色器图形的内容管道源文件的其他类型默认为正确的“项目类型”  。
 
 4. 选择“确定”  按钮。
 
@@ -71,9 +71,9 @@ ms.locfileid: "65459117"
 
 |项目类型|源文件类型|输出文件格式|
 |---------------| - | - |
-|图像内容管道|可移植网络图形 (.png)<br /><br /> JPEG（.jpg、.jpeg、.jpe、.jfif）<br /><br /> 直接绘画表面 (.dds)<br /><br /> 图形交换格式 (.gif)<br /><br /> 位图（.bmp、.dib）<br /><br /> 标记图像文件格式（.tif、.tiff）<br /><br /> Targa (.tga)|直接绘画表面 (.dds)|
-|网格内容管道|Autodesk FBX 交换文件 (.fbx)<br /><br /> Collada DAE 文件 (.dae)<br /><br /> Wavefront OBJ 文件 (.obj)|三维网格文件 (.cmo)|
-|着色器内容管道|视觉对象着色器图 (.dgsl)|编译着色器输出 (.cso)|
+|图像内容管道 |可移植网络图形 (.png) <br /><br /> JPEG（.jpg、.jpeg、.jpe、.jfif）    <br /><br /> 直接绘画表面 (.dds) <br /><br /> 图形交换格式 (.gif) <br /><br /> 位图（.bmp、.dib）  <br /><br /> 标记图像文件格式（.tif、.tiff）  <br /><br /> Targa (.tga) |直接绘画表面 (.dds) |
+|网格内容管道 |Autodesk FBX 交换文件 (.fbx) <br /><br /> Collada DAE 文件 (.dae) <br /><br /> Wavefront OBJ 文件 (.obj) |三维网格文件 (.cmo) |
+|着色器内容管道 |视觉对象着色器图 (.dgsl) |编译着色器输出 (.cso) |
 
 ## <a name="configure-asset-content-pipeline-properties"></a>配置资产内容管道属性
 
@@ -81,13 +81,13 @@ ms.locfileid: "65459117"
 
 ### <a name="to-configure-content-pipeline-properties"></a>配置内容管道属性
 
-1. 在“解决方案资源管理器”中，在你的项目中打开资产文件的快捷菜单，然后选择“属性”。
+1. 在“解决方案资源管理器”中，在你的项目中打开资产文件的快捷菜单，然后选择“属性”   。
 
-   随即显示资产的“属性页”对话框。
+   随即显示资产的“属性页”对话框  。
 
-2. 请确保将“配置”和“平台”属性设置为你希望更改应用到的值。
+2. 请确保将“配置”和“平台”属性设置为你希望更改应用到的值   。
 
-3. 在“配置属性”下，选择内容管道节点（例如，纹理和图像资产的“图像内容管道”），然后在属性网格中，将属性设置为相应的值。 例如，若要在生成时为纹理资产生成 mipmap，请将“生成 Mip”属性设置为“是”。
+3. 在“配置属性”下，选择内容管道节点（例如，纹理和图像资产的“图像内容管道”），然后在属性网格中，将属性设置为相应的值   。 例如，若要在生成时为纹理资产生成 mipmap，请将“生成 Mip”属性设置为“是”   。
 
 4. 选择“确定”  按钮。
 
@@ -95,28 +95,28 @@ ms.locfileid: "65459117"
 
 使用图像内容管道工具生成纹理资产时，你可以采用各种方式压缩纹理、指示生成时是否应该生成 MIP 级别，以及更改输出文件的名称。
 
-|Property|说明|
+|属性|说明|
 |--------------|-----------------|
-|压缩|指定用于输出文件的压缩类型。<br /><br /> 可用选项为：<br /><br /> -   不进行压缩<br />-   BC1_UNORM 压缩<br />-   BC1_UNORM_SRGB 压缩<br />-   BC2_UNORM 压缩<br />-   BC2_UNORM_SRGB 压缩<br />-   BC3_UNORM 压缩<br />-   BC3_UNORM_SRGB 压缩<br />-   BC4_UNORM 压缩<br />-   BC4_SNORM 压缩<br />-   BC5_UNORM 压缩<br />-   BC5_SNORM 压缩<br />-   BC6H_UF16 压缩<br />-   BC6H_SF16 压缩<br />-   BC7_UNORM 压缩<br />-   BC7_UNORM_SRGB 压缩<br /><br /> 有关不同版本的 DirectX 中支持哪些压缩格式的信息，请参阅 [DXGI 编程指南](http://go.microsoft.com/fwlink/p/?LinkId=246265)。|
-|转换为预乘 alpha 格式|若要将输出文件中的图像转换为预乘 alpha 格式，则为“是”；否则为“否”。 仅更改输出文件，源图像未发生更改。|
-|**生成 Mip**|若要在生成时生成完整的 MIP 链并将它包含在输出文件中，则为“是”；否则为“否”。 如果为“否”且源文件已经包含 mipmap 链，则输出文件将具有 MIP 链；否则，输出文件将没有 MIP 链。|
-|内容输出|指定输出文件的名称。 **重要提示：** 更改输出文件的文件扩展名不会影响其文件格式。|
+|压缩 |指定用于输出文件的压缩类型。<br /><br /> 可用选项为：<br /><br /> -   不进行压缩 <br />-   BC1_UNORM 压缩 <br />-   BC1_UNORM_SRGB 压缩 <br />-   BC2_UNORM 压缩 <br />-   BC2_UNORM_SRGB 压缩 <br />-   BC3_UNORM 压缩 <br />-   BC3_UNORM_SRGB 压缩 <br />-   BC4_UNORM 压缩 <br />-   BC4_SNORM 压缩 <br />-   BC5_UNORM 压缩 <br />-   BC5_SNORM 压缩 <br />-   BC6H_UF16 压缩 <br />-   BC6H_SF16 压缩 <br />-   BC7_UNORM 压缩 <br />-   BC7_UNORM_SRGB 压缩 <br /><br /> 有关不同版本的 DirectX 中支持哪些压缩格式的信息，请参阅 [DXGI 编程指南](http://go.microsoft.com/fwlink/p/?LinkId=246265)。|
+|转换为预乘 alpha 格式|若要将输出文件中的图像转换为预乘 alpha 格式，则为“是”；否则为“否”   。 仅更改输出文件，源图像未发生更改。|
+|**生成 Mip**|若要在生成时生成完整的 MIP 链并将它包含在输出文件中，则为“是”；否则为“否”   。 如果为“否”且源文件已经包含 mipmap 链，则输出文件将具有 MIP 链；否则，输出文件将没有 MIP 链  。|
+|内容输出 |指定输出文件的名称。 **重要提示：** 更改输出文件的文件扩展名不会影响其文件格式。|
 
 ### <a name="mesh-content-pipeline-configuration"></a>网格内容管道配置
 
 使用网格内容管道工具生成网格资产时，你可以更改输出文件的名称。
 
-|Property|说明|
+|属性|说明|
 |--------------|-----------------|
-|内容输出|指定输出文件的名称。 **重要提示：** 更改输出文件的文件扩展名不会影响其文件格式。|
+|内容输出 |指定输出文件的名称。 **重要提示：** 更改输出文件的文件扩展名不会影响其文件格式。|
 
 ### <a name="shader-content-pipeline-configuration"></a>着色器内容管道配置
 
 使用着色器内容管道工具生成着色器资产时，你可以更改输出文件的名称。
 
-|Property|说明|
+|属性|说明|
 |--------------|-----------------|
-|内容输出|指定输出文件的名称。 **重要提示：** 更改输出文件的文件扩展名不会影响其文件格式。|
+|内容输出 |指定输出文件的名称。 **重要提示：** 更改输出文件的文件扩展名不会影响其文件格式。|
 
 ## <a name="load-and-use-3d-assets-at-run-time"></a>在运行时加载和使用三维资产
 

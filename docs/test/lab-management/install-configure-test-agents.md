@@ -4,17 +4,17 @@ ms.date: 04/17/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - configure test agents, test lab
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c6597c47fd272beec2c82f7d4c2644291b168b5f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: edb10246437bff9bef0a6f76ffde95bc12855944
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62965409"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653084"
 ---
 # <a name="install-test-agents-and-test-controllers"></a>安装测试代理和测试控制器
 
@@ -34,7 +34,7 @@ ms.locfileid: "62965409"
 
 ## <a name="install-the-test-controller-and-test-agents"></a>安装测试控制器和测试代理
 
-可从 [visualstudio.microsoft.com](https://visualstudio.microsoft.com/downloads/?q=agents) 中下载 Visual Studio 的代理。 查找 Visual Studio 2019 的代理，选择“代理”或“控制器”，然后选择“下载”。 运行已下载的可执行文件，以安装测试代理或控制器。
+可从 [visualstudio.microsoft.com](https://visualstudio.microsoft.com/downloads/?q=agents) 中下载 Visual Studio 的代理。 查找 Visual Studio 2019 的代理，选择“代理”或“控制器”，然后选择“下载”     。 运行已下载的可执行文件，以安装测试代理或控制器。
 
 可以从[早期版本下载](https://visualstudio.microsoft.com/vs/older-downloads/)页中下载 Visual Studio 2017、Visual Studio 2015 和 Visual Studio 2013 的代理。
 
@@ -59,7 +59,7 @@ ms.locfileid: "62965409"
 
 ## <a name="upgrade-from-visual-studio-2013-test-agents"></a>从 Visual Studio 2013 测试代理升级
 
-建议在所有新的自动测试方案中都使用 Visual Studio 的代理。 可以在生成管道中使用“部署测试代理”任务在计算机上下载和安装测试代理。
+建议在所有新的自动测试方案中都使用 Visual Studio 的代理。 可以在生成管道中使用“部署测试代理”  任务在计算机上下载和安装测试代理。
 
 下表显示了 Agents for Visual Studio 2013 支持的方案，以及 Team Foundation Server (TFS) 2015 和 Azure Test Plans 的替代方案：
 

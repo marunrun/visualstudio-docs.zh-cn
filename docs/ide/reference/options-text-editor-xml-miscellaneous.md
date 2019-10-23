@@ -5,19 +5,19 @@ ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Miscellaneous
 ms.assetid: b6538cbe-badd-4313-a1fb-39e906736bbe
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d3421580251a6a871adba311fd609e881e088ebd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 58de904e1697a820a2f4bc6f88fbff5237cabc30
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62969210"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666593"
 ---
 # <a name="options-text-editor-xml-miscellaneous"></a>选项, 文本编辑器, XML, 杂项
 
-使用“杂项”选项页更改 XML 编辑器的自动完成和架构设置。 要访问杂项 XML 选项，请选择“工具” > “选项” > “文本编辑器” > “XML”，然后选择“杂项”。
+使用“杂项”选项页更改 XML 编辑器的自动完成和架构设置  。 要访问杂项 XML 选项，请选择“工具” > “选项” > “文本编辑器” > “XML”，然后选择“杂项”      。
 
 ## <a name="auto-insert"></a>自动插入
 
@@ -27,7 +27,7 @@ ms.locfileid: "62969210"
 
 **特性引号**
 
-在创作 XML 属性时，编辑器会插入 `="` 和 `"` 字符并将插入符号 (^) 置于引号之间。 默认情况下选中此复选框。
+在创作 XML 属性时，编辑器会插入 `="` 和 `"` 字符并将插入符号 (^  ) 置于引号之间。 默认情况下选中此复选框。
 
 **命名空间声明**
 
@@ -53,7 +53,7 @@ ms.locfileid: "62969210"
 
 **架构**
 
-指定架构缓存的位置。 “浏览”按钮在新窗口中打开当前架构的缓存位置。 默认位置为 %VsInstallDir%\xml\Schemas。
+指定架构缓存的位置。 “浏览”按钮在新窗口中打开当前架构的缓存位置  。 默认位置为 %VsInstallDir%\xml\Schemas  。
 
 ## <a name="see-also"></a>请参阅
 
