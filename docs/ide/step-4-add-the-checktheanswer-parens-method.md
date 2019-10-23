@@ -50,17 +50,17 @@ ms.locfileid: "72314077"
      [!code-vb[VbExpressTutorial3Step4#10](../ide/codesnippet/VisualBasic/step-4-add-the-checktheanswer-parens-method_2.vb)]
      [!code-csharp[VbExpressTutorial3Step4#10](../ide/codesnippet/CSharp/step-4-add-the-checktheanswer-parens-method_2.cs)]
 
-     如果答案正确，`CheckTheAnswer()` 将返回 `true`。 事件处理程序停止计时器，并显示祝贺消息，然后使“开始”按钮再次可用。  否则，继续进行测验。
+     如果答案正确，`CheckTheAnswer()` 将返回 `true`。 事件处理程序停止计时器，并显示祝贺消息，然后使“开始”按钮再次可用。 否则，继续进行测验。
 
 3. 保存并运行您的程序，开始测验，并提供加法题的正确答案。
 
     > [!NOTE]
     > 在输入答案时，您必须在开始输入答案前选择默认值或手动删除零。 您将在本教程的后面部分中纠正这一行为。
 
-     提供正确答案后，将打开一个消息框，“开始”按钮变得可用，同时计时器将停止。 
+     提供正确答案后，将打开一个消息框，“开始”按钮变得可用，同时计时器将停止。
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅[步骤 5：为 NumericUpDown 控件添加 Enter 事件处理程序](../ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md)** 。
+- 要转到下一个教程步骤，请参阅**[步骤 5：为 NumericUpDown 控件添加 Enter 事件处理程序](../ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md)**。
 
 - 要返回上一个教程步骤，请参阅[步骤 3：添加倒计时计时器](../ide/step-3-add-a-countdown-timer.md)。
