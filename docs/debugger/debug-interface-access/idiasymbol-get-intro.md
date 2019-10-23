@@ -1,5 +1,5 @@
 ---
-title: 'Idiasymbol:: Get_intro |Microsoft Docs'
+title: IDiaSymbol：： get_intro |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 153daa1f43ba4945a5eb32aea82c5d58ff57c5f6
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 4680af2d41ef3fa06a89784003c98982a09c2b63
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62836795"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740348"
 ---
-# <a name="idiasymbolgetintro"></a>IDiaSymbol::get_intro
-检索用于指定函数是否是引入的虚拟函数的标志。
+# <a name="idiasymbolget_intro"></a>IDiaSymbol::get_intro
+检索一个标志，该标志指定该函数是否为引入虚函数。
 
 ## <a name="syntax"></a>语法
 
@@ -33,13 +33,13 @@ HRESULT get_intro ( 
 #### <a name="parameters"></a>参数
 `pRetVal`
 
-[out]返回`TRUE`如果函数为简介虚拟; 否则，返回`FALSE`。
+弄如果函数是 "简介"，则返回 `TRUE`;否则，将返回 `FALSE`。
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。
+> @No__t_0 的返回值意味着该属性对符号不可用。
 
 ## <a name="example"></a>示例
 
@@ -52,13 +52,13 @@ class B : public A {
 }
 ```
 
-这两`A::f1`并`B::f1`是虚拟函数，但`A::f1`是虚拟的简介。
+@No__t_0 和 `B::f1` 均为虚函数，但 `A::f1` 是简介 virtual。
 
 ## <a name="requirements"></a>要求
 
 |需求|描述|
 |-----------------|-----------------|
-|标头：|dia2.h|
+|标头：|dia2|
 |版本：|DIA SDK v7.0|
 
 ## <a name="see-also"></a>请参阅

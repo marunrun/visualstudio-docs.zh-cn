@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 21630bea3022769d18748190c2a2d24c0e519a3c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 31be0615fd7d1da279ecf414260af21cb8239dc8
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554917"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745292"
 ---
 # <a name="datakind"></a>DataKind
-指示特定的数据值范围。
+指示数据值的特定范围。
 
 ## <a name="syntax"></a>语法
 
@@ -44,11 +44,11 @@ enum DataKind {
 
 DataIsLocal 数据项是一个本地变量。
 
-DataIsStaticLocal 数据项是一个静态本地变量。
+DataIsStaticLocal 数据项是一个静态局部变量。
 
-DataIsParam 数据项是正式的参数。
+DataIsParam 数据项是一个形参。
 
-DataIsObjectPtr 数据项是一个对象指针 (`this`)。
+DataIsObjectPtr 数据项是一个对象指针（`this`）。
 
 DataIsFileStatic 数据项是一个文件范围内的变量。
 
@@ -58,13 +58,13 @@ DataIsMember 数据项是一个对象成员变量。
 
 DataIsStaticMember 数据项是一个类静态变量。
 
-DataIsConstant 数据项是常量值。
+DataIsConstant 数据项是一个常数值。
 
 ## <a name="remarks"></a>备注
-返回此枚举中的值[idiasymbol:: Get_datakind](../../debugger/debug-interface-access/idiasymbol-get-datakind.md)方法。
+此枚举中的值由[IDiaSymbol：： get_dataKind](../../debugger/debug-interface-access/idiasymbol-get-datakind.md)方法返回。
 
 ## <a name="requirements"></a>要求
-标头： cvconst.h
+标头： cvconst
 
 ## <a name="see-also"></a>请参阅
 - [枚举和结构](../../debugger/debug-interface-access/enumerations-and-structures.md)

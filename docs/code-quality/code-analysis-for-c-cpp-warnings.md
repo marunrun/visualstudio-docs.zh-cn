@@ -18,12 +18,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ecae431f75e14443895b816a24000b6fe3fba52
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: efcb6c5aeb60062dea75906969b71e65ac4912bb
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445864"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745974"
 ---
 # <a name="code-analysis-for-cc-warnings"></a>C/C++ 代码分析警告
 本节列出了除C++ [ C++核心准则检查](code-analysis-for-cpp-corecheck.md)程序引发的警告外的 C/代码分析警告。 有关代码分析的信息，请参阅[/analyze （代码分析）](/cpp/build/reference/analyze-code-analysis)和[快速入门： C/C++的代码分析](../code-quality/quick-start-code-analysis-for-c-cpp.md)。

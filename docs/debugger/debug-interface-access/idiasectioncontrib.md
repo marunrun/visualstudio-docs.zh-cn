@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eada57433b37f759da51ecdb380e530f3fb77fdf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 807b9ada9b9424481a184e548e741131d66ab853
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839467"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742459"
 ---
 # <a name="idiasectioncontrib"></a>IDiaSectionContrib
-描述了部分内容中检索数据，也就是说，连续内存块归功于图像编译单位。
+检索描述节内容的数据，即由编译单位提供给图像的连续内存块。
 
 ## <a name="syntax"></a>语法
 
@@ -29,42 +29,42 @@ IDiaSectionContrib : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
-下表显示的方法`IDiaSectionContrib`。
+下表显示 `IDiaSectionContrib` 的方法。
 
 |方法|描述|
 |------------|-----------------|
-|[IDiaSectionContrib::get_compiland](../../debugger/debug-interface-access/idiasectioncontrib-get-compiland.md)|检索提供本部分的编译单位符号的引用。|
-|[IDiaSectionContrib::get_addressSection](../../debugger/debug-interface-access/idiasectioncontrib-get-addresssection.md)|检索的部分一部分发布内容的地址。|
-|[IDiaSectionContrib::get_addressOffset](../../debugger/debug-interface-access/idiasectioncontrib-get-addressoffset.md)|检索发布内容的地址的偏移量的部分。|
-|[IDiaSectionContrib::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiasectioncontrib-get-relativevirtualaddress.md)|检索的映像相对虚拟地址 (RVA) 所占比例。|
-|[IDiaSectionContrib::get_virtualAddress](../../debugger/debug-interface-access/idiasectioncontrib-get-virtualaddress.md)|检索所占比例的虚拟地址 (VA)。|
-|[IDiaSectionContrib::get_length](../../debugger/debug-interface-access/idiasectioncontrib-get-length.md)|检索一个部分中的字节数。|
-|[IDiaSectionContrib::get_notPaged](../../debugger/debug-interface-access/idiasectioncontrib-get-notpaged.md)|检索一个标志，指示是否在部分不能换出内存。|
-|[IDiaSectionContrib::get_nopad](../../debugger/debug-interface-access/idiasectioncontrib-get-nopad.md)|检索一个标志，指示是否在部分应不填充到下一个内存边界。|
-|[IDiaSectionContrib::get_code](../../debugger/debug-interface-access/idiasectioncontrib-get-code.md)|检索一个标志，指示的部分是否包含可执行代码。|
-|[IDiaSectionContrib::get_code16bit](../../debugger/debug-interface-access/idiasectioncontrib-get-code16bit.md)|检索一个标志，指示的部分是否包含 16 位代码。|
-|[IDiaSectionContrib::get_initializedData](../../debugger/debug-interface-access/idiasectioncontrib-get-initializeddata.md)|检索一个标志，指示的部分是否包含初始化的数据。|
-|[IDiaSectionContrib::get_uninitializedData](../../debugger/debug-interface-access/idiasectioncontrib-get-uninitializeddata.md)|检索一个标志，指示的部分是否包含未初始化的数据。|
-|[IDiaSectionContrib::get_informational](../../debugger/debug-interface-access/idiasectioncontrib-get-informational.md)|检索一个标志，指示一个部分包含注释或类似的信息。|
-|[IDiaSectionContrib::get_remove](../../debugger/debug-interface-access/idiasectioncontrib-get-remove.md)|检索一个标志，指示它进行内存中映像的一部分之前是否删除节。|
-|[IDiaSectionContrib::get_comdat](../../debugger/debug-interface-access/idiasectioncontrib-get-comdat.md)|检索一个标志，指示了 COMDAT 记录的部分。|
-|[IDiaSectionContrib::get_discardable](../../debugger/debug-interface-access/idiasectioncontrib-get-discardable.md)|检索一个标志，指示是否可以放弃部分。|
-|[IDiaSectionContrib::get_notCached](../../debugger/debug-interface-access/idiasectioncontrib-get-notcached.md)|检索一个标志，指示是否不能缓存部分。|
-|[IDiaSectionContrib::get_share](../../debugger/debug-interface-access/idiasectioncontrib-get-share.md)|检索一个标志，指示是否可以在内存中共享部分。|
-|[IDiaSectionContrib::get_execute](../../debugger/debug-interface-access/idiasectioncontrib-get-execute.md)|检索一个标志，指示是否可执行文件作为代码部分。|
-|[IDiaSectionContrib::get_read](../../debugger/debug-interface-access/idiasectioncontrib-get-read.md)|检索一个标志，指示是否可以读取部分。|
-|[IDiaSectionContrib::get_write](../../debugger/debug-interface-access/idiasectioncontrib-get-write.md)|检索一个标志，指示是否可以写入部分。|
-|[IDiaSectionContrib::get_dataCrc](../../debugger/debug-interface-access/idiasectioncontrib-get-datacrc.md)|检索的部分中的数据的循环冗余检查 (CRC)。|
-|[IDiaSectionContrib::get_relocationsCrc](../../debugger/debug-interface-access/idiasectioncontrib-get-relocationscrc.md)|检索部分中的重定位信息的 CRC。|
+|[IDiaSectionContrib::get_compiland](../../debugger/debug-interface-access/idiasectioncontrib-get-compiland.md)|检索对此部分提供的编译单位符号的引用。|
+|[IDiaSectionContrib::get_addressSection](../../debugger/debug-interface-access/idiasectioncontrib-get-addresssection.md)|检索发布地址的部分部分。|
+|[IDiaSectionContrib::get_addressOffset](../../debugger/debug-interface-access/idiasectioncontrib-get-addressoffset.md)|检索贡献的地址的偏移量部分。|
+|[IDiaSectionContrib::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiasectioncontrib-get-relativevirtualaddress.md)|检索贡献的映像相对虚拟地址（RVA）。|
+|[IDiaSectionContrib::get_virtualAddress](../../debugger/debug-interface-access/idiasectioncontrib-get-virtualaddress.md)|检索贡献的虚拟地址（VA）。|
+|[IDiaSectionContrib::get_length](../../debugger/debug-interface-access/idiasectioncontrib-get-length.md)|检索某节中的字节数。|
+|[IDiaSectionContrib::get_notPaged](../../debugger/debug-interface-access/idiasectioncontrib-get-notpaged.md)|检索一个标志，该标志指示部分是否无法分页出内存。|
+|[IDiaSectionContrib::get_nopad](../../debugger/debug-interface-access/idiasectioncontrib-get-nopad.md)|检索一个标志，该标志指示是否不应将节填充到下一个内存边界。|
+|[IDiaSectionContrib::get_code](../../debugger/debug-interface-access/idiasectioncontrib-get-code.md)|检索一个标志，该标志指示部分是否包含可执行代码。|
+|[IDiaSectionContrib::get_code16bit](../../debugger/debug-interface-access/idiasectioncontrib-get-code16bit.md)|检索一个标志，该标志指示部分是否包含16位代码。|
+|[IDiaSectionContrib::get_initializedData](../../debugger/debug-interface-access/idiasectioncontrib-get-initializeddata.md)|检索一个标志，该标志指示节是否包含初始化的数据。|
+|[IDiaSectionContrib::get_uninitializedData](../../debugger/debug-interface-access/idiasectioncontrib-get-uninitializeddata.md)|检索一个标志，该标志指示节是否包含未初始化的数据。|
+|[IDiaSectionContrib::get_informational](../../debugger/debug-interface-access/idiasectioncontrib-get-informational.md)|检索一个标志，该标志指示部分是否包含注释或类似的信息。|
+|[IDiaSectionContrib::get_remove](../../debugger/debug-interface-access/idiasectioncontrib-get-remove.md)|检索一个标志，该标志指示是否在部分成为内存中映像的一部分之前删除该部分。|
+|[IDiaSectionContrib::get_comdat](../../debugger/debug-interface-access/idiasectioncontrib-get-comdat.md)|检索一个标志，该标志指示节是否为 COMDAT 记录。|
+|[IDiaSectionContrib::get_discardable](../../debugger/debug-interface-access/idiasectioncontrib-get-discardable.md)|检索一个标志，该标志指示是否可以丢弃部分。|
+|[IDiaSectionContrib::get_notCached](../../debugger/debug-interface-access/idiasectioncontrib-get-notcached.md)|检索一个标志，该标志指示是否无法缓存节。|
+|[IDiaSectionContrib::get_share](../../debugger/debug-interface-access/idiasectioncontrib-get-share.md)|检索一个标志，该标志指示是否可以在内存中共享部分。|
+|[IDiaSectionContrib::get_execute](../../debugger/debug-interface-access/idiasectioncontrib-get-execute.md)|检索一个标志，该标志指示部分是否作为代码可执行。|
+|[IDiaSectionContrib::get_read](../../debugger/debug-interface-access/idiasectioncontrib-get-read.md)|检索一个标志，该标志指示是否可以读取部分。|
+|[IDiaSectionContrib::get_write](../../debugger/debug-interface-access/idiasectioncontrib-get-write.md)|检索一个标志，该标志指示是否可以写入节。|
+|[IDiaSectionContrib::get_dataCrc](../../debugger/debug-interface-access/idiasectioncontrib-get-datacrc.md)|检索部分中数据的循环冗余检查（CRC）。|
+|[IDiaSectionContrib::get_relocationsCrc](../../debugger/debug-interface-access/idiasectioncontrib-get-relocationscrc.md)|检索部分的重定位信息的 CRC。|
 |[IDiaLineNumber::get_compilandId](../../debugger/debug-interface-access/idialinenumber-get-compilandid.md)|检索部分的编译单位标识符。|
 
 ## <a name="remarks"></a>备注
 
-## <a name="notes-for-callers"></a>调用方的说明
-此接口通过调用[idiaenumsectioncontribs:: Item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md)并[idiaenumsectioncontribs:: Next](../../debugger/debug-interface-access/idiaenumsectioncontribs-next.md)方法。 请参阅[IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)接口以举例说明获取`IDiaSectionContrib`接口。
+## <a name="notes-for-callers"></a>调用方说明
+此接口是通过调用[IDiaEnumSectionContribs：： Item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md)和[IDiaEnumSectionContribs：： Next](../../debugger/debug-interface-access/idiaenumsectioncontribs-next.md)方法获取的。 有关获取 `IDiaSectionContrib` 接口的示例，请参阅[IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)接口。
 
 ## <a name="example"></a>示例
-此函数显示每个部分以及任何关联的符号的地址。 请参阅[IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)接口，以查看如何`IDiaSectionContrib`获取接口。
+此函数显示每个节的地址以及任何关联的符号。 若要查看如何获取 `IDiaSectionContrib` 接口，请参阅[IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)接口。
 
 ```C++
 void PrintSectionContrib(IDiaSectionContrib* pSecContrib, IDiaSession* pSession)
@@ -127,11 +127,11 @@ void PrintSectionContrib(IDiaSectionContrib* pSecContrib, IDiaSession* pSession)
 ```
 
 ## <a name="requirements"></a>要求
-标头：dia2.h
+标头： Dia2
 
-库： diaguids.lib
+库： diaguids
 
-DLL: msdia80.dll
+DLL： msdia80
 
 ## <a name="see-also"></a>请参阅
 - [接口（调试接口访问 SDK）](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

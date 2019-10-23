@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a9b480a497953eebeef1918657ed901de10845a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: feaf5d372279c6ab24053058a14aba4b3a71fd78
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829916"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744463"
 ---
 # <a name="idiaenuminjectedsources"></a>IDiaEnumInjectedSources
-枚举数据源中包含的各种插入的源。
+枚举数据源中包含的各种注入的源。
 
 ## <a name="syntax"></a>语法
 
@@ -29,25 +29,25 @@ IDiaEnumInjectedSources : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
-下表显示的方法`IDiaEnumInjectedSources`。
+下表显示 `IDiaEnumInjectedSources` 的方法。
 
 |方法|描述|
 |------------|-----------------|
-|[IDiaEnumInjectedSources::get__NewEnum](../../debugger/debug-interface-access/idiaenuminjectedsources-get-newenum.md)|检索[IEnumVARIANT 接口](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ienumvariant)此枚举器的版本。|
-|[IDiaEnumInjectedSources::get_Count](../../debugger/debug-interface-access/idiaenuminjectedsources-get-count.md)|检索多个插入源。|
-|[IDiaEnumInjectedSources::Item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md)|通过索引中检索的插入的源。|
-|[IDiaEnumInjectedSources::Next](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md)|检索指定的数目的枚举序列中的插入源。|
-|[IDiaEnumInjectedSources::Skip](../../debugger/debug-interface-access/idiaenuminjectedsources-skip.md)|跳过枚举序列中的插入源的指定的数目。|
-|[IDiaEnumInjectedSources::Reset](../../debugger/debug-interface-access/idiaenuminjectedsources-reset.md)|将枚举序列重置到开头。|
-|[IDiaEnumInjectedSources::Clone](../../debugger/debug-interface-access/idiaenuminjectedsources-clone.md)|创建一个包含当前枚举数形式的相同枚举状态的枚举器。|
+|[IDiaEnumInjectedSources::get__NewEnum](../../debugger/debug-interface-access/idiaenuminjectedsources-get-newenum.md)|检索此枚举器的[IEnumVARIANT 接口](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ienumvariant)版本。|
+|[IDiaEnumInjectedSources::get_Count](../../debugger/debug-interface-access/idiaenuminjectedsources-get-count.md)|检索注入的源的数目。|
+|[IDiaEnumInjectedSources::Item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md)|通过索引检索注入的源。|
+|[IDiaEnumInjectedSources::Next](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md)|检索枚举序列中指定数量的插入源。|
+|[IDiaEnumInjectedSources::Skip](../../debugger/debug-interface-access/idiaenuminjectedsources-skip.md)|跳过枚举序列中指定数量的插入源。|
+|[IDiaEnumInjectedSources::Reset](../../debugger/debug-interface-access/idiaenuminjectedsources-reset.md)|将枚举序列重置到开始处。|
+|[IDiaEnumInjectedSources::Clone](../../debugger/debug-interface-access/idiaenuminjectedsources-clone.md)|创建与当前枚举数包含相同枚举状态的枚举数。|
 
 ## <a name="remarks"></a>备注
 
-## <a name="notes-for-callers"></a>调用方的说明
-此接口通过调用[idiasession:: Findinjectedsource](../../debugger/debug-interface-access/idiasession-findinjectedsource.md)方法或通过调用特定的源文件的名称替换[idiasession:: Getenumtables](../../debugger/debug-interface-access/idiasession-getenumtables.md)方法使用的 GUID`IDiaEnumInjectedSources`接口。
+## <a name="notes-for-callers"></a>调用方说明
+通过将[IDiaSession：： findInjectedSource](../../debugger/debug-interface-access/idiasession-findinjectedsource.md)方法与特定源文件的名称一起调用，或通过使用 `IDiaEnumInjectedSources` 接口的 GUID 调用[IDiaSession：： getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md)方法获取此接口。
 
 ## <a name="example"></a>示例
-此示例演示如何获取 (`GetEnumInjectedSources`函数)，并使用 (`DumpAllInjectedSources`函数)`IDiaEnumInjectedSources`接口。 请参阅[IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)接口的实现`PrintPropertyStorage`函数。 备用输出，请参阅[IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)接口。
+此示例演示如何获取（`GetEnumInjectedSources` 函数）并使用（`DumpAllInjectedSources` 函数） `IDiaEnumInjectedSources` 接口。 有关 `PrintPropertyStorage` 函数的实现，请参阅[IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)接口。 有关备用输出，请参阅[IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)接口。
 
 ```C++
 
@@ -106,11 +106,11 @@ void DumpAllInjectedSources( IDiaSession* pSession)
 ```
 
 ## <a name="requirements"></a>要求
-标头：dia2.h
+标头： Dia2
 
-库： diaguids.lib
+库： diaguids
 
-DLL: msdia80.dll
+DLL： msdia80
 
 ## <a name="see-also"></a>请参阅
 - [接口（调试接口访问 SDK）](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

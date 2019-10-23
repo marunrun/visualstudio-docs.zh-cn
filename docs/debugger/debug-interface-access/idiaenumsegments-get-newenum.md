@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5c021e74c758b6409d42deae6a7e6831368367e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cca94c078bb2b2598ffbe8e8098ac635cb698288
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829805"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744211"
 ---
-# <a name="idiaenumsegmentsgetnewenum"></a>IDiaEnumSegments::get__NewEnum
-检索<xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT>此枚举器的版本。
+# <a name="idiaenumsegmentsget__newenum"></a>IDiaEnumSegments::get__NewEnum
+检索此枚举器的 <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> 版本。
 
 ## <a name="syntax"></a>语法
 
@@ -33,10 +33,10 @@ HRESULT get__NewEnum ( 
 #### <a name="parameters"></a>参数
  pRetVal
 
-[out]返回`IUnknown`接口，表示<xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT>此枚举器的版本。
+弄返回表示此枚举器的 <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> 版本的 `IUnknown` 接口。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)

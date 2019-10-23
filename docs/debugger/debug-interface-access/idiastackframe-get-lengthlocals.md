@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 742d4fe295ae21d6ba6df1feaabab5ab483e8d55
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e408f7a6341685394731ea65ceaa926351587a9e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838075"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741711"
 ---
-# <a name="idiastackframegetlengthlocals"></a>IDiaStackFrame::get_lengthLocals
-检索局部变量推送到堆栈上的字节的数。
+# <a name="idiastackframeget_lengthlocals"></a>IDiaStackFrame::get_lengthLocals
+检索推送到堆栈上的局部变量的字节数。
 
 ## <a name="syntax"></a>语法
 
@@ -33,10 +33,10 @@ HRESULT get_lengthLocals ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回局部变量的字节数。
+弄返回局部变量的字节数。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果不支持的属性。 否则，返回错误代码。
+ 如果成功，则返回 `S_OK`。 如果属性不受支持，则返回 `S_FALSE`。 否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

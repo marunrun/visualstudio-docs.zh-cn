@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: edbd1d8ae66e58611ab538cf0bfe695cb22b3412
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: aaddb8b71ba96511af3682b442c1e5c8e84a409c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64793031"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738838"
 ---
-# <a name="idiasymbolgetvirtualbasetabletype"></a>IDiaSymbol::get_virtualBaseTableType
-检索的虚拟表，基指针的类型。
+# <a name="idiasymbolget_virtualbasetabletype"></a>IDiaSymbol::get_virtualBaseTableType
+检索虚拟基表指针的类型。
 
 ## <a name="syntax"></a>语法
 
@@ -34,24 +34,24 @@ HRESULT get_virtualBaseTableType(
 
 |参数|描述|
 |---------------|-----------------|
-|`pRetVal`|[out]返回[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)指定基表的类型的对象。|
+|`pRetVal`|弄返回一个[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象，该对象指定基表的类型。|
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。
+> @No__t_0 的返回值意味着该属性对符号不可用。
 
 ## <a name="remarks"></a>备注
- 虚拟表，基指针 (`vbtptr`) 是中的隐藏的指针[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]vtable 处理从虚拟基类继承。 一个`vbtptr`可以具有不同的大小，具体取决于继承的类。
+ 虚拟基表指针（`vbtptr`）是用于处理从虚拟基类继承的 [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] vtable 中的隐藏指针。 @No__t_0 可以具有不同的大小，具体取决于继承的类。
 
- 此方法返回[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)可用于确定 vbtptr 大小的对象。
+ 此方法返回[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象，该对象可用于确定 vbtptr 的大小。
 
 ## <a name="requirements"></a>要求
 
 |需求|描述|
 |-----------------|-----------------|
-|标头：|dia2.h|
+|标头：|dia2|
 |版本：|DIA SDK v8.0|
 
 ## <a name="see-also"></a>请参阅

@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 77a1554e749e6f5186f7c99844cb793814b0129b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 726f5df7ff898675fc9253b47785c666d435a387
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839831"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743200"
 ---
-# <a name="idialinenumbergetlinenumber"></a>IDiaLineNumber::get_lineNumber
+# <a name="idialinenumberget_linenumber"></a>IDiaLineNumber::get_lineNumber
 检索源文件中的行号。
 
 ## <a name="syntax"></a>语法
@@ -33,10 +33,10 @@ HRESULT get_lineNumber ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]在源文件中返回的行号。
+弄返回源文件中的行号。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。
+ 如果成功，则返回 `S_OK`。 如果此属性不受支持，则返回 `S_FALSE`。 否则，返回错误代码。
 
 ## <a name="example"></a>示例
 

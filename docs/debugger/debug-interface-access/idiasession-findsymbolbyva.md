@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ecb0db40f1179722b5ca315853dc3953a105b45b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cf73c47234bb680ee107a2703e77b9259fb00040
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62827253"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742004"
 ---
 # <a name="idiasessionfindsymbolbyva"></a>IDiaSession::findSymbolByVA
-检索包含，或与指定的虚拟地址最接近的指定的符号类型。
+检索指定的符号类型，该类型包含指定的虚拟地址，或该类型最接近指定的虚拟地址。
 
 ## <a name="syntax"></a>语法
 
@@ -35,18 +35,18 @@ HRESULT findSymbolByVA ( 
 #### <a name="parameters"></a>参数
  `va`
 
-[in]指定的虚拟地址。
+中指定虚拟地址。
 
  `symtag`
 
-[in]要查找的符号类型。 值取自[SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)枚举。
+中要查找的符号类型。 值取自[SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)枚举。
 
  `ppSymbol`
 
-[out]返回[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)检索表示该符号的对象。
+弄返回一个[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象，该对象表示检索到的符号。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="example"></a>示例
 

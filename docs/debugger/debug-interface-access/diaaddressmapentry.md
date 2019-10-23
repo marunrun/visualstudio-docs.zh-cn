@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 311762f4eafc8dad63da5854870f2836ee68b3ee
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 54b326116b1e1b677a997b264cf0c168a93febb0
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554891"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745255"
 ---
 # <a name="diaaddressmapentry"></a>DiaAddressMapEntry
-描述在映射的地址中的项。
+描述地址映射中的条目。
 
 ## <a name="syntax"></a>语法
 
@@ -32,25 +32,25 @@ struct DiaAddressMapEntry {
 ```
 
 ## <a name="elements"></a>元素
-`rva` A.映像中的相对虚拟地址 (RVA)
+`rva` 映像 A 中的相对虚拟地址（RVA）。
 
-`rvaTo` 相对虚拟地址`rva`映像 B.中映射到
+`rvaTo` 相对虚拟地址 `rva` 映射到的图像为 B。
 
 ## <a name="remarks"></a>备注
-映射的地址提供了从一个图像布局 （A） 到另一个 （B） 的转换。 一个数组`DiaAddressMapEntry`结构按`rva`定义映射的地址。
+地址映射提供从一个图像布局（A）到另一个（B）的转换。 @No__t_0 结构的数组，该数组按 `rva` 定义地址映射。
 
-地址转换`addrA`，在图 A 中为地址， `addrB`，在图 B 中，执行以下步骤：
+若要将地址（`addrA`）转换为地址，请 `addrB`，在图像 B 中，执行以下步骤：
 
-1. 搜索的项映射`e`，，最大`rva`小于或等于`addrA`。
+1. 在地图中搜索条目 "`e`"，其最大 `rva` 小于或等于 "`addrA`"。
 
 2. 设置 `delta = addrA - e.rva`。
 
 3. 设置 `addrB = e.rvaTo + delta`。
 
-    一个数组`DiaAddressMapEntry`结构传递给[idiaaddressmap:: Set_addressmap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)方法。
+    @No__t_0 结构的数组将传递给[IDiaAddressMap：： set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)方法。
 
 ## <a name="requirements"></a>要求
-标头： dia2.h
+标头： dia2
 
 ## <a name="see-also"></a>请参阅
 - [枚举和结构](../../debugger/debug-interface-access/enumerations-and-structures.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Idiadatasource:: Get_lasterror |Microsoft Docs'
+title: IDiaDataSource：： get_lastError |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34954cd32b350a7c5f9c176deffd9943f8e05100
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 48595dda70560f555533a1857f73db4d7bd20a86
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554191"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744976"
 ---
-# <a name="idiadatasourcegetlasterror"></a>IDiaDataSource::get_lastError
-检索最后一个加载错误的文件名称。
+# <a name="idiadatasourceget_lasterror"></a>IDiaDataSource::get_lastError
+检索最后一个加载错误的文件名。
 
 ## <a name="syntax"></a>语法
 
@@ -33,10 +33,10 @@ HRESULT get_lastError (
 #### <a name="parameters"></a>参数
  pRetVal
 
-[out]返回一个字符串，包含与最后一个加载错误关联的.pdb 文件名称。
+弄返回一个字符串，该字符串包含与上一次加载错误关联的 .pdb 文件名。
 
 ## <a name="return-value"></a>返回值
- 返回引起的加载操作的最后一个错误代码。 返回`E_INVALIDARG`如果`pRetVal`参数是`NULL`。
+ 返回由加载操作引起的最后一个错误代码。 如果 `pRetVal` 参数 `NULL`，则返回 `E_INVALIDARG`。
 
 ## <a name="example"></a>示例
 

@@ -1,5 +1,5 @@
 ---
-title: 'Idiasymbol:: Get_lexicalparent |Microsoft Docs'
+title: IDiaSymbol：： get_lexicalParent |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e8927785ba6ca0dbe3daf6c402be776e8c9d8288
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 87d44f2c8dfb723f9f2653d6f9d89a2c1c71ef5f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64813732"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739972"
 ---
-# <a name="idiasymbolgetlexicalparent"></a>IDiaSymbol::get_lexicalParent
-检索到词法父级的符号的引用。
+# <a name="idiasymbolget_lexicalparent"></a>IDiaSymbol::get_lexicalParent
+检索对符号的词法父级的引用。
 
 ## <a name="syntax"></a>语法
 
@@ -33,18 +33,18 @@ HRESULT get_lexicalParent ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)表示符号的词法的父对象。
+弄返回一个[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象，该对象表示符号的词法父级。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。
+> @No__t_0 的返回值意味着该属性对符号不可用。
 
 ## <a name="remarks"></a>备注
- 符号的词法父级是封闭的函数或模块。 例如，函数参数或局部变量的词法父级是函数本身，而函数的词法父级是的模块中定义。
+ 符号的词法父代为封闭函数或模块。 例如，函数参数或本地变量的词法父对象是函数本身，而函数的词法父项是它在其中定义的模块。
 
- 如中所述词法父项是可以出现的可能符号[符号类型的词法层次结构](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)。
+ [符号类型的词法层次结构](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)中记录了可能显示为词法父项的符号。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 42cbc0ea5694e462faf6d3995bc68723a3f522e7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 391dff6540bcea26f63d8ea88f344455722b742a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605843"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748222"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>了解模型、类和关系
 域特定语言（DSL）由其 DSL 定义文件定义，以及你可能编写的任何自定义程序代码。 DSL 解决方案中的大多数程序代码都是通过此文件生成的。

@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0365c253626546d824459c580fdf2be1b87ed4ed
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9e73ed8ae4aacf739463b1c6ab1f8f30c51a7fb2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829084"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743495"
 ---
-# <a name="idiaframedatagetsystemexceptionhandling"></a>IDiaFrameData::get_systemExceptionHandling
-检索一个标志，指示系统异常处理是否生效。
+# <a name="idiaframedataget_systemexceptionhandling"></a>IDiaFrameData::get_systemExceptionHandling
+检索一个标志，该标志指示系统异常处理是否有效。
 
 ## <a name="syntax"></a>语法
 
@@ -33,15 +33,15 @@ HRESULT get_systemExceptionHandling ( 
 #### <a name="parameters"></a>参数
  pRetVal
 
-[out]返回`TRUE`如果系统异常处理是有效; 否则为返回`FALSE`。
+弄如果系统异常处理有效，则返回 `TRUE`;否则，将返回 `FALSE`。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。
+ 如果成功，则返回 `S_OK`。 如果此属性不受支持，则返回 `S_FALSE`。 否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 系统异常处理通常称为结构化的异常处理。
+ 系统异常处理更常见地称为结构化异常处理。
 
- 若要确定是否C++异常处理处于有效时，调用[idiaframedata:: Get_cplusplusexceptionhandling](../../debugger/debug-interface-access/idiaframedata-get-cplusplusexceptionhandling.md)方法。
+ 若要确定C++异常处理是否有效，请调用[IDiaFrameData：： get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-cplusplusexceptionhandling.md)方法。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

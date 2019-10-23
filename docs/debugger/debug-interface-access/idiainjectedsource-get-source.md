@@ -1,5 +1,5 @@
 ---
-title: 'Idiainjectedsource:: Get_source |Microsoft Docs'
+title: IDiaInjectedSource：： get_source |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 604160cdaf8c1ff28b306106afe34e047768f3c4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b389df8220766ffbdbf865a2b8e70877fe91b3f1
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828429"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743338"
 ---
-# <a name="idiainjectedsourcegetsource"></a>IDiaInjectedSource::get_source
+# <a name="idiainjectedsourceget_source"></a>IDiaInjectedSource::get_source
 检索源代码字节。
 
 ## <a name="syntax"></a>语法
@@ -35,18 +35,18 @@ HRESULT get_source ( 
 #### <a name="parameters"></a>参数
  `cbData`
 
-[in]表示大小的数据缓冲区的字节数。
+中表示数据缓冲区大小的字节数。
 
  `pcbData`
 
-[out]返回表示字节的字节数返回。 如果`data`是`NULL`，然后`pcbData`是可用的数据的字节总数。
+弄返回表示返回的字节数的字节数。 如果 `NULL` `data`，则 `pcbData` 为可用数据的总字节数。
 
  `data[]`
 
-[out]若要使用的源字节填充缓冲区。
+弄要使用源字节填充的缓冲区。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。
+ 如果成功，则返回 `S_OK`。 如果此属性不受支持，则返回 `S_FALSE`。 否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

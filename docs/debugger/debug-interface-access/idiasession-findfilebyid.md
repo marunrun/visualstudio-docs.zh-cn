@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e3454ff5ef087b67dda5d48849d4a6c4eceb7e52
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aafdd2270606ba6e56713e9166dbae2b8c635b41
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839350"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742265"
 ---
 # <a name="idiasessionfindfilebyid"></a>IDiaSession::findFileById
 按源文件标识符检索源文件。
@@ -34,17 +34,17 @@ HRESULT findFileById ( 
 #### <a name="parameters"></a>参数
  `uniqueId`
 
-[in]指定源文件标识符。
+中指定源文件标识符。
 
  `ppResult`
 
-[out]返回[IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)检索表示源文件的对象。
+弄返回一个[IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)对象，该对象表示检索到的源文件。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="remarks"></a>备注
- 源文件标识符是到 DIA SDK 在内部使用，以使所有源代码文件是唯一的唯一值。 DIA sdk，是通常在内部使用此方法。
+ 源文件标识符是 DIA SDK 内部使用的唯一值，用于使所有源文件唯一。 此方法通常在内部用于 DIA SDK。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

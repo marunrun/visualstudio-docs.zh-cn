@@ -1,5 +1,5 @@
 ---
-title: 'Idiaenumdebugstreamdata:: Skip |Microsoft Docs'
+title: IDiaEnumDebugStreamData：： Skip |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 61c33ab75ebac94ec69d772ae23476df28bdb31d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f2f331d7a91e9dbc6dbf0dea2e8a5b91f08de584
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838358"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744832"
 ---
 # <a name="idiaenumdebugstreamdataskip"></a>IDiaEnumDebugStreamData::Skip
-将跳过指定的数目的枚举序列中的记录。
+跳过枚举序列中指定数目的记录。
 
 ## <a name="syntax"></a>语法
 
@@ -33,10 +33,10 @@ HRESULT Skip ( 
 #### <a name="parameters"></a>参数
  celt
 
-[in]要跳过枚举序列中的记录数。
+中要在枚举序列中跳过的记录数。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`如果没有更多记录要跳过。
+ 如果成功，将返回 `S_OK`;否则，如果没有其他要跳过的记录，将返回 `S_FALSE`。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)

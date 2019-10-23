@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 511beae100529f0db555eca0a8ddb995d7a335d1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 45ed43bf65c38890ca7ebda1a6b1719532697eae
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62853512"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738443"
 ---
 # <a name="udtkind"></a>UdtKind
-介绍不同的用户定义类型 (UDT)。
+描述用户定义类型（UDT）的各种类型。
 
 ## <a name="syntax"></a>语法
 
@@ -43,10 +43,10 @@ UdtUnion UDT 是一个联合。
 UdtInterface UDT 是一个接口。
 
 ## <a name="remarks"></a>备注
-返回此枚举中的值[idiasymbol:: Get_udtkind](../../debugger/debug-interface-access/idiasymbol-get-udtkind.md)方法。
+此枚举中的值由[IDiaSymbol：： get_udtKind](../../debugger/debug-interface-access/idiasymbol-get-udtkind.md)方法返回。
 
 ## <a name="requirements"></a>要求
-标头： cvconst.h
+标头： cvconst
 
 ## <a name="see-also"></a>请参阅
 - [枚举和结构](../../debugger/debug-interface-access/enumerations-and-structures.md)

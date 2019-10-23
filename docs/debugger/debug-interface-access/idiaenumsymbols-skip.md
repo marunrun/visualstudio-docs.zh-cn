@@ -1,5 +1,5 @@
 ---
-title: 'Idiaenumsymbols:: Skip |Microsoft Docs'
+title: IDiaEnumSymbols：： Skip |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ea2b1ea99eb2801259d58a12c359e9fffd887a64
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9252826470decd3cddfabdcc2a00e22037d5de5c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62830431"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743912"
 ---
 # <a name="idiaenumsymbolsskip"></a>IDiaEnumSymbols::Skip
-将跳过指定的数目的枚举序列中的符号。
+跳过枚举序列中指定数目的符号。
 
 ## <a name="syntax"></a>语法
 
@@ -33,10 +33,10 @@ HRESULT Skip ( 
 #### <a name="parameters"></a>参数
  celt
 
-[in]若要跳过枚举序列中的符号数。
+中要跳过的枚举序列中的符号数。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`如果没有更多的符号以跳过。
+ 如果成功，将返回 `S_OK`;否则，如果没有其他要跳过的符号，将返回 `S_FALSE`。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

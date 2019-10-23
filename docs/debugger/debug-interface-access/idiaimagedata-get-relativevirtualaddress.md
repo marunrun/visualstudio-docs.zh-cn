@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c6a0ff03784df581fc2f6c57b51b896096d97bba
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bfc7a808da6bb11907fc239f4b320e4dd93a2d19
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62830209"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743428"
 ---
-# <a name="idiaimagedatagetrelativevirtualaddress"></a>IDiaImageData::get_relativeVirtualAddress
-检索虚拟内存中的位置相对于应用程序的模块。
+# <a name="idiaimagedataget_relativevirtualaddress"></a>IDiaImageData::get_relativeVirtualAddress
+检索模块相对于应用程序的虚拟内存中的位置。
 
 ## <a name="syntax"></a>语法
 
@@ -33,10 +33,10 @@ HRESULT get_relativeVirtualAddress ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回该模块的相对虚拟内存偏移量。
+弄返回模块的相对虚拟内存偏移量。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaImageData](../../debugger/debug-interface-access/idiaimagedata.md)

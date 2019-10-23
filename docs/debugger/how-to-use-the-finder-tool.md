@@ -10,44 +10,44 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5bf3fcf00486ebb8ec54f2d692d483a7f9cf18d7
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: f96fe87137c6b14e32fb2648e93c54a1c5b094a0
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63387657"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72732165"
 ---
 # <a name="how-to-use-the-finder-tool"></a>如何：使用查找程序工具
-可以使用中查找程序工具**查找窗口**对话框以显示窗口属性或消息。 查找程序工具还可以找到已禁用的子窗口，并识别哪个窗口以突出显示如果禁用子级窗口重叠。
+您可以使用 "**查找窗口**" 对话框中的 "查找程序" 工具显示窗口属性或消息。 查找器工具还可以查找已禁用的子窗口，并识别在禁用的子窗口重叠时要突出显示的窗口。
 
- ![Spy&#43; &#43;查找窗口对话框](../debugger/media/icon_spy--_find.png "Icon_Spy + + _Find")查找窗口对话框中查找程序工具
+ !["&#43; &#43;监视查找窗口" 对话框](../debugger/media/icon_spy--_find.png "Icon_Spy + + _Find")"查找窗口" 对话框中的查找器工具
 
- 在下面的步骤 3 后上, 图显示查找窗口对话框。
+ 上图显示了下面的步骤3后面的 "查找窗口" 对话框。
 
-### <a name="to-display-window-properties-or-messages"></a>若要显示窗口属性或消息
+### <a name="to-display-window-properties-or-messages"></a>显示窗口属性或消息
 
-1. 排列窗口，以便 Spy + + 和目标窗口中可见。
+1. 排列窗口，使 Spy + + 和目标窗口可见。
 
-2. 从**Spy**菜单中，选择**查找窗口**。
+2. 从**Spy**菜单中，选择 "**查找窗口**"。
 
-    [查找窗口对话框](../debugger/find-window-dialog-box.md)随即打开。
+    "[查找窗口" 对话框](../debugger/find-window-dialog-box.md)将打开。
 
-3. 拖动**查找程序工具**通过目标窗口。
+3. 将 "**查找程序工具**" 拖到目标窗口上。
 
-    拖动该工具中，**查找窗口**对话框显示有关所选的窗口的详细信息。
+    拖动工具时，"**查找窗口**" 对话框将显示所选窗口的详细信息。
 
    - 或 -
 
-     如果有你想要检查 （例如，复制从调试器） 窗口的句柄，则键入到**处理**文本框。
+     如果您有要检查的窗口的句柄（例如，从调试器复制），请在 "**句柄**" 文本框中键入。
 
    > [!TIP]
-   > 若要减少屏幕混乱，请选择**隐藏 Spy**选项。 此选项将隐藏主 Spy + + 窗口中，并仅留下**查找窗口**对话框显示在其他应用程序的前面。 Spy + + 主窗口将还原时，单击**确定**或**取消**，或如果清除**隐藏 Spy + +** 选项。
+   > 若要减少屏幕干扰，请选择 "**隐藏 Spy** " 选项。 此选项将隐藏 Spy + + 主窗口，使 "**查找窗口**" 对话框仅在其他应用程序上可见。 当你单击 **"确定" 或 "** **取消**" 时，或者在清除 "**隐藏 Spy + +** " 选项时，将还原 spy + + 主窗口。
 
-4. 下**显示**，选择**属性**或**消息**。
+4. 在 "**显示**" 下，选择 "**属性**" 或 "**消息**"。
 
 5. 按“确定”。
 
-    如果所选**属性**，则[窗口属性对话框](../debugger/window-properties-dialog-box.md)随即打开。 如果所选**消息**即[消息视图](../debugger/messages-view.md)窗口随即打开。
+    如果选择了 "**属性**"，则 "[窗口属性" 对话框](../debugger/window-properties-dialog-box.md)将打开。 如果选择了 "**消息**"，则将打开 "[消息视图](../debugger/messages-view.md)" 窗口。
 
 ## <a name="see-also"></a>请参阅
 - [Spy++ 视图](../debugger/spy-increment-views.md)

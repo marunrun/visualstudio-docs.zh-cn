@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 899fc041df3f7118de6be97309e8ce971235d178
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 82bccbd9558a5dad87e9fe13f9ed7136a5d77d8a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658321"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747525"
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>域特定语言工具的概述
 在 Visual Studio 中托管的特定于域的语言工具（DSL 工具）使你可以设计域特定语言，然后生成用户创建基于语言的模型时必须具有的所有内容。

@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a57c46bef62039241c7d0cc064753199440893e3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4b8602cfefbd414561ebfbaee979e6af5711b879
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839506"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742549"
 ---
-# <a name="idiasectioncontribgetrelocationscrc"></a>IDiaSectionContrib::get_relocationsCrc
-检索的部分的重定位信息的循环冗余检查 (CRC)。
+# <a name="idiasectioncontribget_relocationscrc"></a>IDiaSectionContrib::get_relocationsCrc
+检索部分的重定位信息的循环冗余检查（CRC）。
 
 ## <a name="syntax"></a>语法
 
@@ -33,10 +33,10 @@ HRESULT get_relocationsCrc ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回部分中的重定位信息的 CRC。
+弄返回部分的重定位信息的 CRC。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。
+ 如果成功，则返回 `S_OK`。 如果此属性不受支持，则返回 `S_FALSE`。 否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

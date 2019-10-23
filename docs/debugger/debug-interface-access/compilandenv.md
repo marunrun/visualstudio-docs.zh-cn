@@ -12,27 +12,27 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b935c9c79fd618c96f44b2660c274f657f81014e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2b7ef4750d22c70f59c3b7736fc26392d96eb702
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62555203"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745432"
 ---
 # <a name="compilandenv"></a>CompilandEnv
-编译器可能包括使用符号的其他环境变量。 还有一个`SymTagCompilandEnv`为每个这些变量的符号。
+编译器可能会包含带有符号的其他环境变量。 每个变量都有一个 `SymTagCompilandEnv` 符号。
 
 ## <a name="properties"></a>属性
- 下表显示适用于此符号类型的属性。
+ 下表显示了对此符号类型有效的属性。
 
-|属性|数据类型|描述|
+|Property|数据类型|描述|
 |--------------|---------------|-----------------|
-|[IDiaSymbol::get_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md)|`IDiaSymbol*`|父编译单位符号。|
+|[IDiaSymbol::get_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md)|`IDiaSymbol*`|父编译单位的符号。|
 |[IDiaSymbol::get_lexicalParentId](../../debugger/debug-interface-access/idiasymbol-get-lexicalparentid.md)|`DWORD`|词法父符号的 ID。|
 |[IDiaSymbol::get_name](../../debugger/debug-interface-access/idiasymbol-get-name.md)|`BSTR`|变量的名称。|
-|[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|索引 ID 的符号。|
-|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|返回`SymTagCompilandEnv`(之一[SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)值)。|
-|[IDiaSymbol::get_value](../../debugger/debug-interface-access/idiasymbol-get-value.md)|`VARIANT`|变量的字符串值的内容 (`VT_BSTR`)。|
+|[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|符号的索引 ID。|
+|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|返回 `SymTagCompilandEnv` （ [SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)值之一）。|
+|[IDiaSymbol::get_value](../../debugger/debug-interface-access/idiasymbol-get-value.md)|`VARIANT`|变量的字符串值内容（`VT_BSTR`）。|
 
 ## <a name="see-also"></a>请参阅
 - [编译单位](../../debugger/debug-interface-access/compiland.md)

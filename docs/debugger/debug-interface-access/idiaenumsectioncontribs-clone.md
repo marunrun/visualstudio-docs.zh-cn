@@ -1,5 +1,5 @@
 ---
-title: 'Idiaenumsectioncontribs:: Clone |Microsoft Docs'
+title: IDiaEnumSectionContribs：： Clone |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 46392d87b918a2359d7bf4d9eee14c61b4464006
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ad6a561308999092344fe4c20038ec2cb78a86f4
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554048"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744328"
 ---
 # <a name="idiaenumsectioncontribsclone"></a>IDiaEnumSectionContribs::Clone
-创建一个包含当前枚举数形式的相同枚举状态的枚举器。
+创建与当前枚举数包含相同枚举状态的枚举数。
 
 ## <a name="syntax"></a>语法
 
@@ -33,10 +33,10 @@ HRESULT Clone( 
 #### <a name="parameters"></a>参数
  ppenum
 
-[out]返回[IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)对象，其中包含重复的枚举器。 不是发布内容的部分复制，仅枚举器。
+弄返回一个[IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)对象，该对象包含枚举器的副本。 部分发布不是重复的，只是枚举器。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)

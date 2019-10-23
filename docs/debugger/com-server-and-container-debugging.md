@@ -1,5 +1,5 @@
 ---
-title: 调试 COM 服务器和容器 |Microsoft Docs
+title: COM 服务器和容器调试 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -21,17 +21,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 40edce29e8d40310f6eab37309c4c2ca7eb8a85a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ec5ed51c72ad7fd64bbdfd0135f53a13bb8c6e4b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62563990"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745681"
 ---
 # <a name="com-server-and-container-debugging"></a>调试 COM 服务器和容器
-COM 应用程序可执行许多不直接受程序员控制的任务。 DLL 间的通信、对象的使用计数和剪贴板操作只是可能遇到意外行为的少数几种情况。 发生这种情况时，首先应查明问题的根源。
+COM 应用程序执行程序员直接控制之外的许多任务。 DLL 之间的通信、对象的使用计数和剪贴板操作只是你可能会遇到意外行为的几个方面。 发生这种情况时，第一步是找到问题的根源。
 
- Visual Studio 调试器支持跨容器和服务器以及在容器和服务器中进行单步调试。 其中包括跨远程过程调用 (RPC) 进行单步调试的功能。
+ Visual Studio 调试器支持逐步跨越和单步执行容器和服务器。 这包括逐步跨越远程过程调用 (RPC) 的能力。
 
 ## <a name="BKMK_COMServerandContainerintheSameSolution"></a> 使用同一解决方案调试 COM 服务器和容器
  可以使用同一解决方案中的两个项目来调试 COM 服务器和容器。 在每个项目和调试中设置适当的断点。 当容器对服务器进行调用而遇到断点时，容器将一直等到服务器代码返回（即等到完成调试）。

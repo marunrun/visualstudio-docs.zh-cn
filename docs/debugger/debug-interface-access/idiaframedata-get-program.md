@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e6b893a40172bfd806130bef663da8676b513042
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 135f2b0a042dd74b573a0746831a48fb27e7c2a9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832833"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743516"
 ---
-# <a name="idiaframedatagetprogram"></a>IDiaFrameData::get_program
-检索用于计算的寄存器集之前调用当前函数的程序字符串。
+# <a name="idiaframedataget_program"></a>IDiaFrameData::get_program
+检索用于在调用当前函数之前计算注册集的程序字符串。
 
 ## <a name="syntax"></a>语法
 
@@ -33,23 +33,23 @@ HRESULT get_program ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回程序字符串。
+弄返回程序字符串。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。
+ 如果成功，则返回 `S_OK`。 如果此属性不受支持，则返回 `S_FALSE`。 否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 程序字符串是为了建立序言解释宏的序列。 例如，典型的堆栈帧可能使用的计划字符串`"$T0 $ebp = $eip $T0 4 + ^ = $ebp $T0 ^ = $esp $T0 8 + ="`。 格式为反向波兰语表示法，其中运算符遵循操作数。 `T0` 表示在堆栈上的临时变量。 此示例将执行以下步骤：
+ 程序字符串是一系列用于建立序言的宏。 例如，典型的堆栈帧可能使用程序字符串 `"$T0 $ebp = $eip $T0 4 + ^ = $ebp $T0 ^ = $esp $T0 8 + ="`。 格式为反转波兰表示法，其中运算符遵循操作数。 `T0` 表示堆栈上的临时变量。 此示例执行以下步骤：
 
-1. 将寄存器的内容移`ebp`到`T0`。
+1. 将 register `ebp` 的内容移动到 `T0` 中。
 
-2. 添加`4`中的值`T0`若要生成一个地址、 从该地址获取值并将值存储在寄存器中`eip`。
+2. 将 `4` 添加到 `T0` 中的值以生成地址，从该地址获取该值，并将该值存储在 register `eip` 中。
 
-3. 从存储中的地址获取该值`T0`并将该值存储在寄存器中`ebp`。
+3. 获取 `T0` 中存储的地址的值，并将该值存储在 register `ebp` 中。
 
-4. 添加`8`中的值`T0`并将该值存储在寄存器中`esp`。
+4. 将 `8` 添加到 `T0` 中的值，并将该值存储在 register `esp` 中。
 
-   请注意程序字符串是特定于 CPU 设置为表示由当前堆栈帧的函数的调用约定。
+   请注意，程序字符串特定于 CPU，并且针对当前堆栈帧所表示的函数设置的调用约定。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

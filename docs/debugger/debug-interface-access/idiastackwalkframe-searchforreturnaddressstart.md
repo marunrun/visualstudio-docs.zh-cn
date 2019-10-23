@@ -1,5 +1,5 @@
 ---
-title: 'Idiastackwalkframe:: Searchforreturnaddressstart |Microsoft Docs'
+title: IDiaStackWalkFrame：： searchForReturnAddressStart |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bf7de77016f5ccc15f2cea8bf3172321dd824096
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7ad1c42a39b9c35cc1436488e19481f2b286b6f5
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838049"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741449"
 ---
 # <a name="idiastackwalkframesearchforreturnaddressstart"></a>IDiaStackWalkFrame::searchForReturnAddressStart
-搜索指定的堆栈帧的寄信人地址处或附近指定的地址。
+在指定的堆栈帧中搜索指定地址处或附近的返回地址。
 
 ## <a name="syntax"></a>语法
 
@@ -35,18 +35,18 @@ HRESULT searchForReturnAddressStart ( 
 #### <a name="parameters"></a>参数
  `frame`
 
-[in][IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)对象，表示当前堆栈帧。
+中表示当前堆栈帧的[IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)对象。
 
  `startAddress`
 
-[in]从此处开始搜索的虚拟内存地址。
+中要从其开始搜索的虚拟内存地址。
 
  `returnAddress`
 
-[out]返回最接近的函数返回地址`startAddress`。
+弄将最近的函数返回地址返回到 `startAddress`。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)

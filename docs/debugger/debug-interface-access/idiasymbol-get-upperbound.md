@@ -1,5 +1,5 @@
 ---
-title: 'Idiasymbol:: Get_upperbound |Microsoft Docs'
+title: IDiaSymbol：： get_upperBound |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a25db69ac60fcc045637b797a4be3c45a4147cf
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 3528780e80e8afc5076446f16b1a64ef1700ee30
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64816479"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738956"
 ---
-# <a name="idiasymbolgetupperbound"></a>IDiaSymbol::get_upperBound
-检索表示 FORTRAN 数组维度的上限的符号。
+# <a name="idiasymbolget_upperbound"></a>IDiaSymbol::get_upperBound
+检索表示 FORTRAN 数组维度上限的符号。
 
 ## <a name="syntax"></a>语法
 
@@ -33,13 +33,13 @@ HRESULT get_upperBound ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象，它表示 FORTRAN 数组维度的上限。
+弄返回一个[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象，该对象表示 FORTRAN 数组维度的上限。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。
+> @No__t_0 的返回值意味着该属性对符号不可用。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
