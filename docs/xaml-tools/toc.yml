@@ -107,8 +107,8 @@
     - name: 调试 WPF 应用
       items:
         - name: 调试 WPF
-          href: ../debugger/debugging-wpf.md?toc=/visualstudio/xaml-tools/toc.json
+          href: ../debugger/debugging-wpf.md?toc=/visualstudio/xaml-tools/toc.json&bc=/visualstudio/xaml-tools/breadcrumb/toc.json
         - name: 使用 WPF 树可视化工具
-          href: ../debugger/how-to-use-the-wpf-tree-visualizer.md?toc=/visualstudio/xaml-tools/toc.json
+          href: ../debugger/how-to-use-the-wpf-tree-visualizer.md?toc=/visualstudio/xaml-tools/toc.json&bc=/visualstudio/xaml-tools/breadcrumb/toc.json
         - name: 显示 WPF 跟踪信息
-          href: ../debugger/how-to-display-wpf-trace-information.md?toc=/visualstudio/xaml-tools/toc.json
+          href: ../debugger/how-to-display-wpf-trace-information.md?toc=/visualstudio/xaml-tools/toc.json&bc=/visualstudio/xaml-tools/breadcrumb/toc.json
