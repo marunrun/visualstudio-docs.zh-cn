@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 963ee64b639780bae60a4c2655db8b666d87c702
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8414788af44d78943088b78b2d3e42a5a8d8c50b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554243"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745032"
 ---
-# <a name="idiaaddressmapsetaddressmap"></a>IDiaAddressMap::set_addressMap
-提供映射的地址以支持图像布局翻译。
+# <a name="idiaaddressmapset_addressmap"></a>IDiaAddressMap::set_addressMap
+提供用于支持图像布局翻译的地址映射。
 
 ## <a name="syntax"></a>语法
 
@@ -35,21 +35,21 @@ HRESULT set_addressMap ( 
 #### <a name="parameters"></a>参数
  `cbData`
 
-[in]中的元素数`data`参数。
+中@No__t_0 参数中的元素数目。
 
  `data[]`
 
-[in]一个数组[DiaAddressMapEntry 结构](../../debugger/debug-interface-access/diaaddressmapentry.md)用于定义转换映射的结构。
+中定义平移映射的[DiaAddressMapEntry 结构](../../debugger/debug-interface-access/diaaddressmapentry.md)结构的数组。
 
  `imagetoSymbols`
 
-[in]`TRUE`如果`data`参数定义新的图像布局从映射到原始布局 （如所述的调试符号）。 `FALSE` 如果`data`是映射到来自原始布局的新图像布局。
+[in] 如果 `data` 参数定义了从新图像布局到原始布局的映射（如调试符号所述），则 `TRUE`。 如果 `data` 是从原始布局获取的新图像布局的映射，则 `FALSE`。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="remarks"></a>备注
- 通常情况下，DIA 从程序数据库 (.pdb) 文件检索地址转换映射。 如果这些值缺失， [idiaaddressmap:: Set_imageheaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md)方法调用两次，一次用于`imagetoSymbols`参数设置为`TRUE`和一次与`imagetoSymbols`参数设置为`FALSE`。 不能使用启用了地址映射转换[idiaaddressmap:: Put_addressmapenabled](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md)方法除非提供了两个转换映射。
+ 通常，DIA 从程序数据库（.pdb）文件中检索地址转换映射。 如果缺少这些值，则会调用[IDiaAddressMap：： set_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md)方法两次，一次将 `imagetoSymbols` 参数设置为 `TRUE`，将 `imagetoSymbols` 参数设置为 `FALSE`。 除非同时提供两个翻译映射，否则无法使用[IDiaAddressMap：:P ut_addressmapenabled](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md)方法启用地址映射转换。
 
 ## <a name="see-also"></a>请参阅
 - [DiaAddressMapEntry 结构](../../debugger/debug-interface-access/diaaddressmapentry.md)

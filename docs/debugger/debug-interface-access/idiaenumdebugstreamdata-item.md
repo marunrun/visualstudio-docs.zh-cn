@@ -1,5 +1,5 @@
 ---
-title: 'Idiaenumdebugstreamdata:: Item |Microsoft Docs'
+title: IDiaEnumDebugStreamData：： Item |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f4a3e3f668789f98600cd649716413a57b13130
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e221516198d186dd08c353123ce4236f0be1383c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838501"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744824"
 ---
 # <a name="idiaenumdebugstreamdataitem"></a>IDiaEnumDebugStreamData::Item
 检索指定的记录。
@@ -36,22 +36,22 @@ HRESULT Item ( 
 #### <a name="parameters"></a>参数
  索引
 
-[in]要检索的记录的索引。 索引是 0 到范围内`count`-1，其中`count`返回的[idiaenumdebugstreamdata:: Get_count](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md)。
+中要检索的记录的索引。 索引的范围为0到 `count`-1，其中 `count` 由[IDiaEnumDebugStreamData：： get_Count](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md)返回。
 
  cbData
 
-[in]数据缓冲区，以字节为单位的大小。
+中数据缓冲区的大小（以字节为单位）。
 
  pcbData
 
-[out]返回返回的字节数。 如果`data`是`NULL`，然后`pcbData`包含指定的记录中的可用数据的字节总数。
+弄返回返回的字节数。 如果 `NULL` `data`，则 `pcbData` 包含指定记录中可用数据的总字节数。
 
  data[]
 
-[out]使用调试流记录数据填充缓冲区。
+弄用调试流记录数据填充的缓冲区。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。 返回`E_INVALIDARG`无效参数; 如果`index`参数的值超出界限。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。 返回无效参数 `E_INVALIDARG`，如果 `index` 参数超出界限，则返回。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)

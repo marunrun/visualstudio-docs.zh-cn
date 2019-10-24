@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d43863f44ec80dce283b1746be12f7a6f47cfe4f
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 3e174db264a7d8c3576054fcccf8da333d3e1e76
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62838979"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741169"
 ---
 # <a name="idiasymbolfindinlineframesbyrva"></a>IDiaSymbol::findInlineFramesByRVA
-检索一个枚举，允许客户端用于循环访问所有指定的相对虚拟地址 (RVA) 上的内联框架。
+检索允许客户端循环访问指定的相对虚拟地址（RVA）上所有内联帧的枚举。
 
 ## <a name="syntax"></a>语法
 
@@ -31,14 +31,14 @@ HRESULT findInlineFramesByRVA (    DWORD             rva,
 #### <a name="parameters"></a>参数
  `rva`
 
-[in]RVA 作为指定的地址。
+中指定作为 RVA 的地址。
 
  `ppResult`
 
-[out]保存`IDiaEnumSymbols`对象，其中包含检索到的框架的列表。
+弄保存一个 `IDiaEnumSymbols` 对象，该对象包含所检索到的帧的列表。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

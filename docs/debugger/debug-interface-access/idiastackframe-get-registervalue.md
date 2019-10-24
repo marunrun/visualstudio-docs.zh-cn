@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a819293863b658f6e12609b2c1cd83c37532e02d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d270b9b177367c9a15c2b64f6f8bc5607c5a459d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832100"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741623"
 ---
-# <a name="idiastackframegetregistervalue"></a>IDiaStackFrame::get_registerValue
-检索指定寄存器的值，如存储在堆栈帧。
+# <a name="idiastackframeget_registervalue"></a>IDiaStackFrame::get_registerValue
+检索存储在堆栈帧中的指定寄存器的值。
 
 ## <a name="syntax"></a>语法
 
@@ -34,14 +34,14 @@ HRESULT get_registerValue(
 #### <a name="parameters"></a>参数
  `registerIndex`
 
-[in]之一[CV_HREG_e 枚举](../../debugger/debug-interface-access/cv-hreg-e.md)枚举值。
+中[CV_HREG_e 枚举](../../debugger/debug-interface-access/cv-hreg-e.md)值之一。
 
  `pRetVal`
 
-[out]存储在寄存器的值。
+弄存储在寄存器中的值。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为将返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

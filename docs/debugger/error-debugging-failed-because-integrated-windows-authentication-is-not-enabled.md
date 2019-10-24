@@ -1,5 +1,5 @@
 ---
-title: 错误：调试失败，因为未启用集成的 Windows 身份验证 |Microsoft Docs
+title: 错误：调试失败，因为没有启用集成 Windows 身份验证 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2969e5c6e8e3a5fd5612fa843309e36f0dbc4c9b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ca4b4ee5bb254f952fb6eb02e255320a337f657c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850835"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737798"
 ---
 # <a name="error-debugging-failed-because-integrated-windows-authentication-is-not-enabled"></a>错误：调试失败，因为没有启用集成 Windows 身份验证
 由于身份验证错误，无法对请求调试的用户进行身份验证。 尝试单步执行 Web 应用程序或 XML Web service 时可能会出现此问题。 导致此错误的一种原因是未启用集成 Windows 身份验证。 若要启用该身份验证，请按照“启用集成 Windows 身份验证”中的步骤操作。
@@ -35,15 +35,15 @@ ms.locfileid: "62850835"
 
 2. 单击“开始”，然后单击“控制面板”。
 
-3. 在“控制面板”中，双击“管理工具”。
+3. 在“控制面板”中双击“管理工具”。
 
 4. 双击“Internet Information Services”。
 
 5. 单击 Web 服务器节点。
 
-     随即在服务器名称下方打开一个“网站”文件夹。
+     服务器名称下方将打开一个“网站”文件夹。
 
-6. 可为所有网站或个别网站配置身份验证。 若要为所有网站配置身份验证，请右键单击“网站”文件夹，然后单击“属性”。 若要为个别网站配置身份验证，请打开“网站”文件夹，右键单击该网站，然后单击“属性”。
+6. 你可以为所有网站或个别网站配置身份验证。 若要为所有网站配置身份验证，请右键单击“网站”文件夹，然后单击“属性”。 若要为单个网站配置身份验证，请打开“网站”文件夹，右键单击单个网站，然后单击“属性”。
 
      屏幕上会显示“属性”对话框。
 
@@ -53,7 +53,7 @@ ms.locfileid: "62850835"
 
      随即会显示“身份验证方法”对话框。
 
-9. 在“验证的访问”下，选择“集成 Windows 身份验证”。
+9. 在“用户访问需经过身份验证”下，选择“集成 Windows 身份验证”。
 
 10. 单击“确定”以关闭“身份验证方法”对话框。
 
@@ -67,21 +67,21 @@ ms.locfileid: "62850835"
 
 2. 按照下列步骤启用 Windows 身份验证和 II6 管理兼容性（如果尚未启用）：
 
-    1. 单击**启动**，单击**控制面板**，然后单击**程序**。
+    1. 单击 "**开始**"，再单击 **"控制面板**"，然后单击 "**程序**"。
 
     2. 在“程序和功能”下，单击“打开或关闭 Windows 功能”。
 
          将出现“用户帐户控制”对话框，并提示您是否允许继续。
 
-    3. 单击 **“继续”**。
+    3. 单击 **“继续”** 。
 
          将出现“Windows 功能”对话框。
 
     4. 在功能列表中，展开“Internet Information Services”节点。
 
-    5. 在“Internet Information Services”下，展开“World Wide Web 服务”节点。
+    5. 在“Internet Information Services”下，展开“万维网服务”节点。
 
-    6. 在“World Wide Web 服务”下，单击“安全”。
+    6. 在“万维网服务”下，单击“安全”。
 
     7. 单击“Windows 身份验证”。
 
@@ -99,7 +99,7 @@ ms.locfileid: "62850835"
 
 5. 在“名称”列中，双击“Internet Information Services (IIS) 管理器”。
 
-6. 在"连接"列中，展开服务器的节点。
+6. 在“连接”列中，展开服务器的节点。
 
      服务器名称下方将打开一个“网站”文件夹。
 
@@ -116,4 +116,4 @@ ms.locfileid: "62850835"
 ## <a name="see-also"></a>请参阅
 - [调试 Web 应用程序：错误和疑难解答](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
 - [Microsoft 摘要式身份验证](http://go.microsoft.com/fwlink/?LinkId=77938)
-- [运行使用 IIS 7.0 的 Windows Vista 上的 Web 应用程序和 Visual Studio](https://msdn.microsoft.com/Library/262a82ac-dd0e-4096-86c6-fb463e88be66)
+- [在 Windows Vista 上运行带有 IIS 7.0 和 Visual Studio 的 Web 应用程序](https://msdn.microsoft.com/Library/262a82ac-dd0e-4096-86c6-fb463e88be66)

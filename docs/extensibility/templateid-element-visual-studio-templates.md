@@ -1,5 +1,5 @@
 ---
-title: TemplateID 元素 （Visual Studio 模板） |Microsoft Docs
+title: TemplateID 元素（Visual Studio 模板） |Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,17 +14,17 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e8207b72d7bb818a5d153abdd56914fd6b2a3f08
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c0e404921d1ed74db2a1f23117242f49a07206c2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316537"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72718741"
 ---
 # <a name="templateid-element-visual-studio-templates"></a>TemplateID 元素（Visual Studio 模板）
-指定到项模板由一组分类的项模板的标识符[TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)元素。
+指定由[TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)元素分类到一组项模板的项模板的标识符。
 
- \<VSTemplate> \<TemplateData> \<TemplateID>
+ \<VSTemplate > \<TemplateData > \<TemplateID >
 
 ## <a name="syntax"></a>语法
 
@@ -48,14 +48,14 @@ ms.locfileid: "66316537"
 |[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需的元素。<br /><br /> 将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|
 
 ## <a name="text-value"></a>文本值
- 一个`string`，表示到项模板由一组分类的项模板的标识符`TemplateGroupID`元素。
+ 一个 `string`，它表示由 `TemplateGroupID` 元素分类到一组项模板的项模板的标识符。
 
 ## <a name="remarks"></a>备注
  `TemplateID` 是可选元素。
 
- 如果.vstemplate 文件中省略`TemplateID`元素，则[名称](../extensibility/name-element-visual-studio-templates.md)元素用作模板标识符。
+ 如果 .vstemplate 文件省略 `TemplateID` 元素，则[Name](../extensibility/name-element-visual-studio-templates.md)元素将用作模板的标识符。
 
- 值`TemplateID`元素使用与项目系统注册 (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\11.0\Projects\\) 中显示的筛选器模板**添加新项**对话框。
+ @No__t_0 元素的值将与项目系统注册（HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\11.0\Projects \\）一起使用，以筛选在 "**添加新项**" 对话框中显示的模板。
 
 ## <a name="see-also"></a>请参阅
 - [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)

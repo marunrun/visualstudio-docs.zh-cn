@@ -1,5 +1,5 @@
 ---
-title: IDiaStackWalkHelper::searchForReturnAddress |Microsoft Docs
+title: IDiaStackWalkHelper：： searchForReturnAddress |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 87518257d9cab91976f69dd03c9026b0800a0680
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 548475f45c9f7b0ec90e305e146b9c5f7b4fb20d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62837896"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741347"
 ---
 # <a name="idiastackwalkhelpersearchforreturnaddress"></a>IDiaStackWalkHelper::searchForReturnAddress
-搜索指定的堆栈帧的最接近的函数返回地址。
+在指定的堆栈帧中搜索最近的函数返回地址。
 
 ## <a name="syntax"></a>语法
 
@@ -34,14 +34,14 @@ HRESULT searchForReturnAddress( 
 #### <a name="parameters"></a>参数
  `frame`
 
-[in][IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)对象，表示当前堆栈帧。
+中表示当前堆栈帧的[IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)对象。
 
  `returnAddress`
 
-[out]返回最接近的函数返回地址。
+弄返回最近的函数返回地址。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 89642ac461de6157de7c75e91532191f85b167a9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5ccca5decf432169add7ebf6d70a33fe6b5c1c9e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832494"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742760"
 ---
-# <a name="idiasectioncontribgetaddresssection"></a>IDiaSectionContrib::get_addressSection
-检索的部分一部分发布内容的地址。
+# <a name="idiasectioncontribget_addresssection"></a>IDiaSectionContrib::get_addressSection
+检索发布地址的部分部分。
 
 ## <a name="syntax"></a>语法
 
@@ -33,10 +33,10 @@ HRESULT get_addressSection ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回的部分一部分发布内容的地址。
+弄返回贡献的地址部分。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。
+ 如果成功，则返回 `S_OK`。 如果此属性不受支持，则返回 `S_FALSE`。 否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

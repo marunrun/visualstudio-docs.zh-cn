@@ -1,5 +1,5 @@
 ---
-title: IDiaPropertyStorage::Enum |Microsoft Docs
+title: IDiaPropertyStorage：： Enum |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e39693f63ea706ecdfa30a9ce0202444f51d4f57
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 00bd1ea5e20d30fa1d2c32101b56f55d169f1ce2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839675"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742947"
 ---
 # <a name="idiapropertystorageenum"></a>IDiaPropertyStorage::Enum
-获取此集内的属性的枚举器。
+获取此集合中属性的枚举数。
 
 ## <a name="syntax"></a>语法
 
@@ -33,10 +33,10 @@ HRESULT Enum ( 
 #### <a name="parameters"></a>参数
  `ppenum`
 
-[out]返回`IEnumSTATPROPSTG`对象 （在 Microsoft.VisualStudio.OLE.Interop 命名空间） 表示的属性的枚举。
+弄返回表示属性枚举的 `IEnumSTATPROPSTG` 对象（在 VisualStudio 命名空间中）。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

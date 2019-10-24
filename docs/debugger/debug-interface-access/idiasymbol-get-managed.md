@@ -1,5 +1,5 @@
 ---
-title: 'Idiasymbol:: Get_managed |Microsoft Docs'
+title: IDiaSymbol：： get_managed |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1096487cc154e0c6addd87d3e051078bfbc84f16
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 515b8931eff37338aa53ac204c7ef61a27987aba
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64824883"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739817"
 ---
-# <a name="idiasymbolgetmanaged"></a>IDiaSymbol::get_managed
-检索一个标志，指定是否引用托管代码符号。
+# <a name="idiasymbolget_managed"></a>IDiaSymbol::get_managed
+检索一个标志，该标志指定符号是否引用托管代码。
 
 ## <a name="syntax"></a>语法
 
@@ -33,13 +33,13 @@ HRESULT get_managed ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回`TRUE`如果符号所引用的托管代码; 否则，返回`FALSE`。
+弄如果符号引用托管代码，则返回 `TRUE`;否则，将返回 `FALSE`。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。
+> @No__t_0 的返回值意味着该属性对符号不可用。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

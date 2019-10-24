@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7766f83eef6205ce445ed892ffaf5861a0dcabbb
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: a45791843abe3051bacb9655c773ac9dfc6b9045
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63387530"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72732915"
 ---
 # <a name="how-to-restore-hidden-debugger-commands"></a>如何：还原隐藏的调试器命令
 安装 Visual Studio 时，系统会要求您为主要的编程语言选择一组默认的 IDE 设置。 某些语言的默认 IDE 设置可能会隐藏某些调试器命令。
@@ -62,15 +62,15 @@ ms.locfileid: "63387530"
 
 4. 在“选择要导入的设置集合”页面上的“默认设置”文件夹下，选择一个包含要使用的命令的开发设置集合。 如果不知道应选择哪个集合，请尝试“常规开发设置”或“Visual C++ 开发设置”，这两个集合提供了大部分的调试器命令。
 
-5. 单击 **“下一步”**。
+5. 单击 **“下一步”** 。
 
 6. 在“选择要导入的设置”页面上的“选项”下，确保选中了“调试”。 清除其他复选框，除非还要导入这些复选框对应的设置。
 
-7. 单击 **“完成”**。
+7. 单击 **“完成”** 。
 
 8. 在“导入完成”页面上，检查“详细信息”部分，查看是否有任何与重置您的设置相关联的错误。
 
-9. 单击 **“关闭”**。
+9. 单击 **“关闭”** 。
 
 ## <a name="see-also"></a>请参阅
 - [调试器安全](../debugger/debugger-security.md)

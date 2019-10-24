@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e35db1186f2547b8d3c859d20e0e4ce2b1f68e9
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 28a78094d9779a0da35052808dfb8d5f42972894
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64803347"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741038"
 ---
-# <a name="idiasymbolgetage"></a>IDiaSymbol::get_age
-检索一个.pdb 文件的年龄值。
+# <a name="idiasymbolget_age"></a>IDiaSymbol::get_age
+检索 .pdb 文件的 age 值。
 
 ## <a name="syntax"></a>语法
 
@@ -33,22 +33,22 @@ HRESULT get_age ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回一个.pdb 文件的年龄值。
+弄返回 .pdb 文件的 age 值。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。
+> @No__t_0 的返回值意味着该属性对符号不可用。
 
 ## <a name="remarks"></a>备注
- 为任何已知的时间值; 不一定对应年龄它通常用于确定是否与相应的.exe 文件不同步的.pdb 文件。
+ 保留时间不一定对应于任何已知时间值;它通常用于确定 .pdb 文件是否与相应的 .exe 文件不同步。
 
 ## <a name="requirements"></a>要求
 
 |需求|描述|
 |-----------------|-----------------|
-|标头：|dia2.h|
+|标头：|dia2|
 |版本：|DIA SDK v7.0|
 
 ## <a name="see-also"></a>请参阅

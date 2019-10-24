@@ -1,5 +1,5 @@
 ---
-title: 针对 Visual Studio SDK 的支持 |Microsoft Docs
+title: 支持 Visual Studio SDK |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,56 +14,56 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8ffe939e2f8b8470b89ff1e8837e5a074dc321ec
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5487bd64e835f876141afb6657dd885c38223cc5
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66338367"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72719463"
 ---
 # <a name="support-for-the-visual-studio-sdk"></a>支持 Visual Studio SDK
-有关如何扩展 Visual Studio 集成的开发环境 (IDE) 的疑问的客户有多个支持选项。
+有关于如何扩展 Visual Studio 集成开发环境（IDE）的问题的客户可以使用几个支持选项。
 
 ## <a name="free-support"></a>免费支持
 
 ### <a name="msdn-development-center"></a>MSDN 开发中心
- [Visual Studio 扩展性开发人员中心](http://go.microsoft.com/fwlink/?LinkID=84381)MSDN 上包含资源，可帮助回答有关如何扩展 Visual Studio 的问题。 例如，有几个指向 VSIP 开发人员博客。
+ MSDN 上的[Visual Studio 扩展性开发人员中心](http://go.microsoft.com/fwlink/?LinkID=84381)包含的资源可帮助回答有关如何扩展 Visual Studio 的问题。 例如，有几个指向 VSIP 开发人员博客的链接。
 
 ### <a name="microsoft-newsgroups"></a>Microsoft 新闻组
- Visual Studio 开发团队和其他开发人员通常扩展 Visual Studio 的成员参与 microsoft.public.vstudio.extensibility 新闻组。 此新闻组是托管新闻组。 如果您是 MSDN 通用订阅服务器，请确保注册的防垃圾邮件别名，以使 Microsoft 能够做出响应。
+ Visual Studio 开发团队的成员和扩展 Visual Studio 的其他开发人员通常参与 vstudio 新闻组。 此新闻组是托管新闻组。 如果你是 MSDN 通用订阅者，请确保注册一个无垃圾邮件别名，使 Microsoft 能够做出响应。
 
 ### <a name="msdn-forums"></a>MSDN 论坛
- [MSDN 论坛](http://go.microsoft.com/fwlink/?LinkID=76632)提供另一种方法与对等方和专家聊天。 论坛图形用户界面 (UI) 设计以使其比新闻组易于使用。 [Visual Studio Extensibility Forum](http://go.microsoft.com/fwlink/?LinkID=121964)是开始搜索可扩展性问题的答案的好时机。 因为其他人已提出相同的问题可能会提出的问题之前，始终搜索。
+ [MSDN 论坛](http://go.microsoft.com/fwlink/?LinkID=76632)提供另一种与同行和专家聊天的方式。 论坛的图形用户界面（UI）旨在使其比新闻组更易于使用。 [Visual Studio 扩展性论坛](http://go.microsoft.com/fwlink/?LinkID=121964)是开始搜索扩展性问题答案的好地方。 在提出问题之前始终搜索，因为其他人可能已经请求了相同的问题。
 
 ### <a name="visual-studio-gallery"></a>Visual Studio 库
- [Visual Studio Marketplace](https://marketplace.visualstudio.com/)是扩展和示例代码的位置。 您可以找到工具提高工作效率和用户体验与 Visual Studio 中，示例应用程序展示如何使用 Vspackage 和 Managed Extensibility Framework (MEF) 和其他类型的示例。
+ [Visual Studio Marketplace](https://marketplace.visualstudio.com/)是扩展和代码示例的位置。 你可以使用 Visual Studio 查找提高工作效率和用户体验的工具、演示如何使用 Vspackage 的示例应用程序 Managed Extensibility Framework 和其他类型的示例。
 
 ### <a name="visual-studio-sdk-samples"></a>Visual Studio SDK 示例
 
-可以在 GitHub 上找到 VS SDK 扩展的开放源代码示例[Visual Studio 示例](https://github.com/Microsoft/VSSDK-Extensibility-Samples)。 此 GitHub 存储库包含示例，演示如何在 Visual Studio 中的各种可扩展功能。
+可在 GitHub 上的[Visual Studio 示例](https://github.com/Microsoft/VSSDK-Extensibility-Samples)中找到 VS SDK 扩展的开源示例。 此 GitHub 存储库包含说明 Visual Studio 中各种可扩展功能的示例。
 
-## <a name="included-support"></a>含的支持
+## <a name="included-support"></a>提供的支持
 
 ### <a name="visual-studio-product-support"></a>Visual Studio 产品支持
- 通过购买包含了一些支持[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]产品。 有关详细信息，请参阅[Visual Studio 支持](https://msdn.microsoft.com/vstudio/cc136615.aspx)。 Microsoft 将维护一个专门的支持团队来回答问题有关[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]可扩展性。
+ 采购 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 产品附带了一些支持。 有关详细信息，请参阅[Visual Studio 支持](https://msdn.microsoft.com/vstudio/cc136615.aspx)。 Microsoft 维护一个专用的支持团队来回答有关 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 扩展性的问题。
 
 ### <a name="msdn-subscription-support"></a>MSDN 订阅支持
- MSDN 订阅包可能还包括一些支持。 有关详细信息，请参阅[MSDN 订阅者支持](https://msdn.microsoft.com/subscriptions/aa718661.aspx)。
+ MSDN 订阅包还可能包括一些支持。 有关详细信息，请参阅[MSDN 订户支持](https://msdn.microsoft.com/subscriptions/aa718661.aspx)。
 
-## <a name="paid-support"></a>付费的支持
+## <a name="paid-support"></a>付费支持
 
 ### <a name="developer-tools-support"></a>开发人员工具支持
 
-此外可购买的支持。 在开发人员工具类别下提供各种支持产品/服务是[Microsoft 帮助和支持中心](https://support.microsoft.com/supportforbusiness/productselection?fltadd=sps-business-1&sapId=4fd4947b-15ea-ce01-080f-97f2ca3c76e8)。
+还可以购买支持。 [Microsoft 帮助和支持中心](https://support.microsoft.com/supportforbusiness/productselection?fltadd=sps-business-1&sapId=4fd4947b-15ea-ce01-080f-97f2ca3c76e8)的开发人员工具类别下提供各种支持服务。
 
-想要使用的客户[!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]开发复杂的包可以考虑购买具有 Microsoft 顶级支持协定。 有关详细信息，请参阅[Microsoft 高级支持](https://support.microsoft.com/premier)。 对于小公司来说，[面向合作伙伴的高级支持](https://partner.microsoft.com/support/advanced-cloud-support)可能是传统的顶级支持产品/服务的极具吸引力替代方法。
+如果客户想要使用 [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] 开发复杂的包，则可以考虑购买 Microsoft 的顶级支持合同。 有关详细信息，请参阅[Microsoft 顶级支持](https://support.microsoft.com/premier)。 对于小型公司，对[合作伙伴的高级支持](https://partner.microsoft.com/support/advanced-cloud-support)可能是传统顶级支持产品/服务的一种极具吸引力的替代方案。
 
 > [!NOTE]
-> 不能使用标准支持，为咨询做好或者获取建议。
+> 标准支持不能用于咨询或获取建议。
 
-VSIP 计划与结合使用的高级支持产品/服务有关的问题可以发送到[ vsipsvs@microsoft.com ](mailto:vsipsvs@microsoft.com)。 可以将新的合作伙伴利用程序有关的问题发送到[ advantg@microsoft.com ](mailto:advantg@microsoft.com)。
+与 VSIP 程序结合顶级支持产品/服务的问题可以发送给[vsipsvs@microsoft.com](mailto:vsipsvs@microsoft.com)。 有关新的合作伙伴优势计划的问题可以发送到[advantg@microsoft.com](mailto:advantg@microsoft.com)。
 
-有关各个支持请求的信息可从[各个支持请求](http://go.microsoft.com/fwlink/?LinkID=82385)。
+可在[单个支持请求](http://go.microsoft.com/fwlink/?LinkID=82385)中找到有关各个支持请求的信息。
 
 ## <a name="see-also"></a>请参阅
 

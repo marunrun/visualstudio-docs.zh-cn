@@ -12,41 +12,41 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6f853f71428086f6c144c352e18e51f3f55c4d00
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fcce3d8fdcc1c99c9b91bfebec572033ff3beb1a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322533"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72723464"
 ---
 # <a name="source-control-integration-essentials"></a>源代码管理集成基础知识
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 支持两种类型的源代码管理集成： 提供基本功能，并且使用源控制插件 API （前称 MSSCCI API） 和基于 VSPackage 的源代码控制集成解决方案生成了源代码管理插件的提供了更强大的功能。
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 支持两种类型的源代码管理集成：源代码管理插件，提供基本功能，并使用源代码管理插件 API （以前称为 MSSCCI API）和基于 VSPackage 的源代码管理集成解决方案生成。这提供了更强大的功能。
 
 ## <a name="source-control-plug-in"></a>源代码管理插件
- 源代码管理插件编写为 DLL 实现源控件插件 API。 通过 API 提供注册和源代码控制集成功能。 这种方法是更轻松地实现比源代码管理 VSPackage，并且它使用[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]大多数源代码管理操作的用户界面 (UI)。
+ 源代码管理插件作为实现源代码管理插件 API 的 DLL 编写。 注册和源代码管理集成功能是通过 API 提供的。 与源代码管理 VSPackage 相比，此方法更容易实现，并且它使用 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 用户界面（UI）来执行大多数源代码管理操作。
 
- 若要实现源代码管理插件使用源控制插件 API，请执行以下步骤：
+ 若要使用源代码管理插件 API 实现源代码管理插件，请执行以下步骤：
 
-1. 创建实现中所指定的函数的 DLL[源代码管理插件](../../extensibility/source-control-plug-ins.md)。
+1. 创建一个 DLL，该 DLL 实现[源代码管理插件](../../extensibility/source-control-plug-ins.md)中指定的函数。
 
-2. 相应的注册表项，从而注册该 DLL，如中所述[如何：安装源代码管理插件](../../extensibility/internals/how-to-install-a-source-control-plug-in.md)。
+2. 按照[如何：安装源代码管理插件](../../extensibility/internals/how-to-install-a-source-control-plug-in.md)中所述，通过创建适当的注册表项来注册 DLL。
 
-3. 创建帮助器 UI 并将其通过源控件适配器包出现提示时显示 ([!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]处理通过源代码管理插件的源代码管理功能的组件)。
+3. 创建帮助器 UI，并在源代码管理适配器包（通过源代码管理插件处理源代码管理功能的 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 组件）提示时显示该 UI。
 
    有关详细信息，请参阅[创建源代码管理插件](../../extensibility/internals/creating-a-source-control-plug-in.md)。
 
 ## <a name="source-control-vspackage"></a>源代码管理 VSPackage
- 源代码管理 VSPackage 实现可用于开发的自定义的替换[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]源代码管理 UI。 此方法提供了完全控制源代码管理集成，但它要求您提供了 UI 元素，否则将下都能提供的插件方法的源代码控制接口实现。
+ 源代码管理 VSPackage 实现允许您为 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 源代码管理 UI 开发自定义的替换。 此方法提供对源代码管理集成的完全控制，但它要求您提供 UI 元素并实现源代码管理接口，否则将在插件方法下提供此方法。
 
- 若要实现源代码管理 VSPackage，你必须：
+ 若要实现源代码管理 VSPackage，必须执行以下操作：
 
-1. 创建并注册您自己的源代码管理 VSPackage，如中所述[注册和选择](../../extensibility/internals/registration-and-selection-source-control-vspackage.md)。
+1. 按照[注册和选择](../../extensibility/internals/registration-and-selection-source-control-vspackage.md)中所述，创建并注册自己的源代码管理 VSPackage。
 
-2. 使用自定义 UI 替换默认的源代码管理 UI。 请参阅[自定义用户界面](../../extensibility/internals/custom-user-interface-source-control-vspackage.md)。
+2. 将默认源代码管理 UI 替换为自定义 UI。 请参阅[自定义用户界面](../../extensibility/internals/custom-user-interface-source-control-vspackage.md)。
 
-3. 指定字形来使用，并处理**解决方案资源管理器**标志符号的事件。 请参阅[字形控件](../../extensibility/internals/glyph-control-source-control-vspackage.md)。
+3. 指定要使用的标志符号，并处理**解决方案资源管理器**标志符号事件。 请参阅[标志符号控件](../../extensibility/internals/glyph-control-source-control-vspackage.md)。
 
-4. 处理查询编辑和保存查询的事件，如中所示[查询编辑查询保存](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md)。
+4. 处理查询编辑和查询保存事件，如[查询编辑查询保存](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md)中所示。
 
    有关详细信息，请参阅[创建源代码管理 VSPackage](../../extensibility/internals/creating-a-source-control-vspackage.md)。
 

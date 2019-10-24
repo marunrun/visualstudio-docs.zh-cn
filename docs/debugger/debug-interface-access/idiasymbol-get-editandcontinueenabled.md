@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5fa7521d569267d0ff070b54139fafe3befe0e96
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: c2dd1d3c7cefe76feec5c65176450d0e73a77a25
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64796608"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740698"
 ---
-# <a name="idiasymbolgeteditandcontinueenabled"></a>IDiaSymbol::get_editAndContinueEnabled
-检索一个标志，指示是否编译该模块[/Z7、 /Zi、 /ZI （调试信息格式）](/cpp/build/reference/z7-zi-zi-debug-information-format)编译器开关。
+# <a name="idiasymbolget_editandcontinueenabled"></a>IDiaSymbol::get_editAndContinueEnabled
+检索一个标志，该标志指示是否使用[/Z7、/zi、/zi （调试信息格式）](/cpp/build/reference/z7-zi-zi-debug-information-format)编译器开关编译该模块。
 
 ## <a name="syntax"></a>语法
 
@@ -33,19 +33,19 @@ HRESULT get_editAndContinueEnabled ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回`TRUE`编辑并继续已启用在编译; 否则，返回`FALSE`。
+弄如果在编译时启用了 "编辑并继续"，则返回 `TRUE`;否则，将返回 `FALSE`。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。
+> @No__t_0 的返回值意味着该属性对符号不可用。
 
 ## <a name="requirements"></a>要求
 
 |需求|描述|
 |-----------------|-----------------|
-|标头：|dia2.h|
+|标头：|dia2|
 |版本：|DIA SDK v7.0|
 
 ## <a name="see-also"></a>请参阅

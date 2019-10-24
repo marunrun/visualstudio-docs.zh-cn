@@ -8,12 +8,12 @@ author: frozenpandaman
 ms.author: efessler
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430d0e271f83332f7163c9c0c947f96756ca7a7d
-ms.sourcegitcommit: e95dd8cedcd180e0bce6a75c86cf861757918290
+ms.openlocfilehash: e226ac6c83839474b9d8ac6be7fb57e376de4a4f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72165139"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745983"
 ---
 # <a name="using-clang-tidy-in-visual-studio"></a>在 Visual Studio 中使用 Clang
 
@@ -28,23 +28,23 @@ Clang 是使用 LLVM/Clang-cl 工具集时的默认分析工具，可在 MSBuild
 
 ## <a name="msbuild"></a>MSBuild
 
-可以将 Clang 配置为作为代码分析的一部分运行，并在 "**代码分析**" 下构建  >  "项目属性窗口中的"**常规**"页。 用于配置工具的选项可在 "Clang" 子菜单中找到。
+可以将 Clang 配置为作为代码分析的一部分运行，并在项目属性窗口的 "**代码分析**"  >  "**常规**" 页下生成。 用于配置工具的选项可在 "Clang" 子菜单中找到。
 
-有关详细信息，请参阅[如何：为 C/C++项目设置代码分析属性 @ no__t。
+有关详细信息，请参阅[如何：设置 C/C++项目的代码分析属性](../code-quality/how-to-set-code-analysis-properties-for-c-cpp-projects.md)。
 
 ## <a name="cmake"></a>CMake
 
-在 CMake 项目中，可以在 `CMakeSettings.json` 中配置 Clang 检查。 打开后，在 "CMake 项目设置" 编辑器的右上角单击 "编辑 JSON"。 识别以下密钥：
+在 CMake 项目中，您可以在 `CMakeSettings.json` 中配置 Clang 检查。 打开后，在 "CMake 项目设置" 编辑器的右上角单击 "编辑 JSON"。 识别以下密钥：
 
 - `enableMicrosoftCodeAnalysis`：启用 Microsoft 代码分析
 - `enableClangTidyCodeAnalysis`：启用 Clang 分析
-- `clangTidyChecks`：Clang 的配置，指定为以逗号分隔的列表，即要启用或禁用的检查
+- `clangTidyChecks`： Clang 的配置，指定为以逗号分隔的列表，即要启用或禁用的检查
 
 如果未指定任何 "启用" 选项，则 Visual Studio 将选择与所使用的平台工具集匹配的分析工具。
 
 ## <a name="warning-display"></a>警告显示
 
-Clang 运行会导致错误列表中显示警告，并在代码相关部分下显示为编辑器内波形曲线。 使用错误列表中的 "Category" 列对 Clang 警告进行排序和组织。 可以通过在**Tools** > **选项**下切换 "禁用代码分析波形曲线" 设置来配置编辑器内警告。
+Clang 运行会导致错误列表中显示警告，并在代码相关部分下显示为编辑器内波形曲线。 使用错误列表中的 "Category" 列对 Clang 警告进行排序和组织。 可以通过在 "**工具**"  >  "**选项**" 下切换 "禁用代码分析波形曲线" 设置来配置编辑器内警告。
 
 ## <a name="clang-tidy-configuration"></a>Clang 配置
 

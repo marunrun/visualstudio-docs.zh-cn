@@ -17,14 +17,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ebe31267ee666250fbaeda73f1678051f1d4727
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: c2d92477e37b4918e0601bf163e07f5a8492136c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72435853"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737902"
 ---
-# <a name="edit-and-continue-c"></a>编辑并继续（C++）
+# <a name="edit-and-continue-c"></a>编辑并继续 (C++)
 可以在项目中使用 "编辑C++并继续"。 请参阅[支持的代码更改 (C++)](../debugger/supported-code-changes-cpp.md)，了解有关 Edit and Continue 的限制的信息。
 
 有关 Visual Studio 2015 Update 3 功能改进的详细信息，请参阅 [Visual Studio 2015 Update 3 中的 C++ Edit and Continue](https://devblogs.microsoft.com/cppblog/c-edit-and-continue-in-visual-studio-2015-update-3/)。

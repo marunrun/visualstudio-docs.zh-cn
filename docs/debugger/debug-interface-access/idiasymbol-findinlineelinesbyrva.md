@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::findInlineeLinesByRVA |Microsoft Docs
+title: IDiaSymbol：： findInlineeLinesByRVA |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bdcb85db51a3fcfca434af9d39bc88587a0e5cdc
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 737bc647cf3f5b64bdd8c48f7c827e8ef86a1386
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62831752"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741210"
 ---
 # <a name="idiasymbolfindinlineelinesbyrva"></a>IDiaSymbol::findInlineeLinesByRVA
-检索一个枚举，允许客户端进行循环访问，将内联，直接或间接地，此符号中指定的相对虚拟地址 (RVA) 中的所有函数的行号信息。
+检索一个枚举，该枚举允许客户端在指定的相对虚拟地址（RVA）中通过此符号直接或间接地循环访问所有函数的行号信息。
 
 ## <a name="syntax"></a>语法
 
@@ -31,18 +31,18 @@ HRESULT findInlineeLinesByRVA (    DWORD                 rva,   DWORD          
 #### <a name="parameters"></a>参数
  `rva`
 
-[in]RVA 作为指定的地址。
+中指定作为 RVA 的地址。
 
  `length`
 
-[in]中的字节数，以覆盖与此查询指定地址范围。
+中指定要用于此查询的地址范围（以字节数为单位）。
 
  `ppResult`
 
-[out]保存`IDiaEnumLineNumbers`对象，其中包含检索到的行号的列表。
+弄保存一个包含所检索的行号列表的 `IDiaEnumLineNumbers` 对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
