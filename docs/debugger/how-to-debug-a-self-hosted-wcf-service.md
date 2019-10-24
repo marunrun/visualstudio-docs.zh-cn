@@ -1,5 +1,5 @@
 ---
-title: 如何：调试自我托管的 WCF 服务 |Microsoft Docs
+title: 如何：调试自承载的 WCF 服务 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,41 +17,41 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8440c1bae9d9e405fd0bf0e1462467e7a51dad5e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 12654a6aa1abb34c9813e8d29c7608814021a3f0
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62848017"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72733970"
 ---
-# <a name="how-to-debug-a-self-hosted-wcf-service"></a>如何：调试自托管 WCF 服务
-“自承载服务”是指不在 IIS、WCF 服务主机或 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 开发服务器内部运行的 WCF 服务。 若要调试自托管的 WCF 的最简单方法是配置[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]以启动客户端和服务器选择时**启动调试**上**调试**菜单。
+# <a name="how-to-debug-a-self-hosted-wcf-service"></a>如何：调试自我托管的 WCF 服务
+“自承载服务”是指不在 IIS、WCF 服务主机或 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 开发服务器内部运行的 WCF 服务。 调试自承载 WCF 的最简单方法是将 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 配置为在 "**调试**" 菜单中选择 "**启动调试**" 时启动客户端和服务器。
 
- 如果内部，或者不能以这种方式，如 NT 服务启动进程自承载 WCF 服务不能使用此方法。 相反，可以执行以下操作：
+ 如果 WCF 服务是自承载的，或者无法以这种方式启动的进程（如 NT service），则不能使用此方法。 相反，您可以执行下列操作之一：
 
 - 手动将调试器附加到宿主进程。 有关详细信息，请参阅[附加到运行中的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)。
 
      — 或 —
 
-- 开始调试客户端，并随后单步执行对服务的调用。 这要求你启用调试在 app.config 文件中。 有关详细信息[WCF 调试的限制](../debugger/limitations-on-wcf-debugging.md)。
+- 开始调试客户端，然后单步执行对服务的调用。 这需要在 app.config 文件中启用调试。 有关详细信息，请了解[WCF 调试的限制](../debugger/limitations-on-wcf-debugging.md)。
 
-### <a name="to-start-both-client-and-host-from-visual-studio"></a>若要从 Visual Studio 启动客户端和主机
+### <a name="to-start-both-client-and-host-from-visual-studio"></a>从 Visual Studio 启动客户端和主机
 
-1. 创建[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]包含客户端和服务器项目的解决方案。
+1. 创建一个 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 解决方案，其中包含客户端项目和服务器项目。
 
-2. 将解决方案配置为在你选择时启动客户端和服务器进程**启动**上**调试**菜单。
+2. 在 "**调试**" 菜单中选择 "**启动**" 时，将解决方案配置为启动客户端和服务器进程。
 
-   1. 在中**解决方案资源管理器**，右键单击解决方案名称。
+   1. 在**解决方案资源管理器**中，右键单击解决方案名称。
 
-   2. 单击**设置启动项目**。
+   2. 单击 "**设置启动项目**"。
 
    3. 在“解决方案 \<名称> 属性”对话框中选择“多启动项目”。
 
-   4. 在中**多个启动项目**网格中的，对应于服务器项目中，在行上单击**操作**，然后选择**启动**。
+   4. 在 "**多启动项目**" 网格中，在与服务器项目对应的行上，单击 "**操作**"，然后选择 "**启动**"。
 
-   5. 在与客户端项目相对应的行中，单击**操作**，然后选择**启动**。
+   5. 在与客户端项目相对应的行上，单击 "**操作**"，然后选择 "**启动**"。
 
-   6. 单击 **“确定”**。
+   6. 单击“确定”。
 
 ## <a name="see-also"></a>请参阅
 - [调试 WCF 服务](../debugger/debugging-wcf-services.md)
