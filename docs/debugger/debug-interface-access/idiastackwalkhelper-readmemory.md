@@ -1,5 +1,5 @@
 ---
-title: IDiaStackWalkHelper::readMemory |Microsoft Docs
+title: IDiaStackWalkHelper：： readMemory |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 530b6c3f6873724f8a8ca06ea4228b017de281f9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 57afd033b2d969a4ed57dc713b2c4266e0ead632
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62831801"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741366"
 ---
 # <a name="idiastackwalkhelperreadmemory"></a>IDiaStackWalkHelper::readMemory
-从可执行文件的映像在内存中读取数据的块。
+从可执行文件的图像的内存中读取数据块。
 
 ## <a name="syntax"></a>语法
 
@@ -37,26 +37,26 @@ HRESULT readMemory( 
 #### <a name="parameters"></a>参数
  `type`
 
-[in]中的值[MemoryTypeEnum 枚举](../../debugger/debug-interface-access/memorytypeenum.md)枚举，它指定要读取的内存的类型。
+中[MemoryTypeEnum 枚举](../../debugger/debug-interface-access/memorytypeenum.md)枚举中的一个值，该值指定要读取的内存类型。
 
  va
 
-[in]从此处开始读取图像中的虚拟地址。
+中要从其开始读取的映像中的虚拟地址。
 
  `cbData`
 
-[in]以字节为单位的数据缓冲区的大小。
+中数据缓冲区的大小（以字节为单位）。
 
  `pcbData`
 
-[out]返回实际读取的字节数。 如果`pbData`是`NULL`，则表明这是可用的数据的字节总数。
+弄返回实际读取的字节数。 如果 `NULL` `pbData`，则这是可用数据的总字节数。
 
  `pbData`
 
-[in、 out]填充读取的内存缓冲区。
+[in，out]填充内存读取的缓冲区。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

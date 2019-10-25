@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 69792da25430c53405e477bf07aadc13dcaa36f2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 56bc5efdc7141b3364633fce07eff1ed251d6175
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838166"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744719"
 ---
 # <a name="idiaenumdebugstreamsreset"></a>IDiaEnumDebugStreams::Reset
-将枚举序列重置到开头。
+将枚举序列重置到开始处。
 
 ## <a name="syntax"></a>语法
 

@@ -1,5 +1,5 @@
 ---
-title: 'Idialinenumber:: Get_statement |Microsoft Docs'
+title: IDiaLineNumber：： get_statement |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 397873a65176024327f371e9727b15984cd7d03f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0a37052944f74e36b488541074a0033f5b8aca9e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828385"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743133"
 ---
-# <a name="idialinenumbergetstatement"></a>IDiaLineNumber::get_statement
-检索一个标志，指示此行信息描述了一条语句，而不是程序源中的表达式的开头。
+# <a name="idialinenumberget_statement"></a>IDiaLineNumber::get_statement
+检索一个标志，该标志指示此行信息描述了程序源中语句的开头，而不是表达式。
 
 ## <a name="syntax"></a>语法
 
@@ -33,13 +33,13 @@ HRESULT get_statement ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回`TRUE`如果此行信息描述程序源中的语句的开头。
+弄如果此行信息描述了程序源中语句的开头，则返回 `TRUE`。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。
+ 如果成功，则返回 `S_OK`。 如果此属性不受支持，则返回 `S_FALSE`。 否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 语句可以跨多个行。 此方法指示是否关联的行数表示的多行语句的开头。
+ 语句可以跨多行。 此方法指示关联的行号是否标记此类多行语句的开头。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

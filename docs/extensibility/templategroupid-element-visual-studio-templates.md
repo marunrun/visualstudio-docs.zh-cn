@@ -1,5 +1,5 @@
 ---
-title: TemplateGroupID 元素 （Visual Studio 模板） |Microsoft Docs
+title: TemplateGroupID 元素（Visual Studio 模板） |Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,17 +14,17 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4b4e0ccae38b79cf8efb4b7b426fb65ae909c5d5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7f710a73d8b9c4e31c8189d3322c518f20def5bb
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316594"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72718659"
 ---
 # <a name="templategroupid-element-visual-studio-templates"></a>TemplateGroupID 元素（Visual Studio 模板）
-指定项模板将显示在哪种项目类型中。 当此元素很重要[ShowByDefault （Visual Studio 模板）](../extensibility/showbydefault-visual-studio-templates.md)设置为`false`。 当[ShowByDefault （Visual Studio 模板）](../extensibility/showbydefault-visual-studio-templates.md)设置为`true`，则项模板是在所有项目类型中可用。
+指定项模板将显示在哪种项目类型中。 当[ShowByDefault （Visual Studio 模板）](../extensibility/showbydefault-visual-studio-templates.md)设置为 `false` 时，此元素很重要。 当[ShowByDefault （Visual Studio 模板）](../extensibility/showbydefault-visual-studio-templates.md)设置为 `true` 时，项模板可用于所有项目类型。
 
- \<VSTemplate> \<TemplateData> \<TemplateGroupID>
+ \<VSTemplate > \<TemplateData > \<TemplateGroupID >
 
 ## <a name="syntax"></a>语法
 
@@ -55,7 +55,7 @@ ms.locfileid: "66316594"
 ## <a name="remarks"></a>备注
  `TemplateGroupID` 是一个元素。
 
- 值`TemplateGroupID`元素使用与项目系统注册 (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ *\<版本号 >* \Projects\\)对显示在筛选器模板**添加新项**对话框。
+ @No__t_0 元素的值与项目系统注册一起使用（HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio \\ *\<version 号 >* \Projects \\）来筛选显示在 "**添加新项" 中的模板**对话框。
 
 |Visual C++ 值|含义|
 |------------------------|-------------|

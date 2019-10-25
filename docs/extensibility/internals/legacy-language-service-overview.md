@@ -10,24 +10,24 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dcc7fa218d5ee4ba92af5ad8316f95ceb268bdf6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8dfec9cc8b57dfb12b3977cc04e2e62ecc0dea96
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66344902"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72726868"
 ---
 # <a name="legacy-language-service-overview"></a>旧版语言服务概述
-语言服务都会提供使您可以实现特定的编辑器支持[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]功能。 托管包框架 (MPF) 语言服务类提供完全支持对常用功能和对其他功能的部分支持。
+语言服务提供编辑器支持，使你能够实现某些 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 功能。 托管包框架（MPF）语言服务类为常用功能提供完全支持，并为其他功能提供部分支持。
 
-## <a name="fully-supported-features-in-the-mpf"></a>MPF 中完全支持的功能
+## <a name="fully-supported-features-in-the-mpf"></a>MPF 中完全受支持的功能
  MPF 语言服务类支持以下功能：
 
 - 语法突出显示
 
 - 大纲显示
 
-- 注释的代码块
+- 注释代码块
 
 - 大括号匹配
 
@@ -41,21 +41,21 @@ ms.locfileid: "66344902"
 
 - IntelliSense 成员完成
 
-- IntelliSense 文字自动完成
+- IntelliSense word 完成
 
 ## <a name="partially-supported-features-in-the-mpf"></a>MPF 中部分支持的功能
- MPF 提供以下功能仅部分支持。 这意味着您必须实现的 MPF 调用的方法。
+ MPF 仅提供对以下功能的部分支持。 这意味着必须实现由 MPF 调用的方法。
 
-- 重新格式化代码。 提供用于实现重新格式化操作的代码。
+- 重新格式化代码。 提供实现重新格式化的代码。
 
-- 通过标识有效的代码来验证断点跨越。 提供的代码，用于标识代码范围。
+- 通过标识有效的代码范围来验证断点。 提供标识代码跨越的代码。
 
-- 支持调试器**自动**显示变量的窗口。 提供确定如何在窗口中显示的代码。
+- 支持**调试器的**"自动" 窗口用于显示变量。 提供用于确定要在窗口中显示的内容的代码。
 
-- 支持**导航栏**类型和成员之间快速导航。 实现并返回填充的列表中的帮助器类**导航栏**组合框。
+- 支持**导航栏**用于类型和成员之间的快速导航。 您可以实现并返回一个帮助器类，用于填充**导航栏**组合框中的列表。
 
 ## <a name="implementation"></a>实现
- 必须完成几个步骤来实现本身的语言服务和你想要为您的语言支持的语言服务功能。 以下主题中讨论了这些步骤：
+ 必须完成几个步骤才能实现语言服务本身，以及你想要为你的语言提供支持的语言服务功能。 以下主题介绍了这些步骤：
 
 - [实现旧版语言服务](../../extensibility/internals/implementing-a-legacy-language-service2.md)
 

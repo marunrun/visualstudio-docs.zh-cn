@@ -14,24 +14,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0c121e996972b47a91a018d910a5d3677cb4cffa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bf61dce9940279b490d9270420cc45baf0b82dc0
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62855197"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738659"
 ---
 # <a name="managedtype"></a>ManagedType
-托管的类型 （任何符号定义的元数据或本机内存和资源管理功能的 C# 等语言） 由`SymTagManagedType`符号。
+托管类型（元数据定义的任何符号，或者语言的本机到内存和资源管理功能C#）由 `SymTagManagedType` 符号标识。
 
 ## <a name="properties"></a>属性
- 下表显示此符号类型的其他有效属性。
+ 下表显示了此符号类型的其他有效属性。
 
-|属性|数据类型|描述|
+|Property|数据类型|描述|
 |--------------|---------------|-----------------|
 |[IDiaSymbol::get_name](../../debugger/debug-interface-access/idiasymbol-get-name.md)|`BSTR`|托管符号的名称。|
-|[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|索引 ID 的符号。|
-|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|返回`SymTagManagedType`(之一[SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)值)。|
+|[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|符号的索引 ID。|
+|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|返回 `SymTagManagedType` （ [SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)值之一）。|
 
 ## <a name="see-also"></a>请参阅
 - [符号类型的类层次结构](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md)

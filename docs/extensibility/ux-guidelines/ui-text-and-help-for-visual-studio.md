@@ -1,5 +1,5 @@
 ---
-title: UI 文本和 Visual Studio 的帮助 |Microsoft Docs
+title: Visual Studio 的 UI 文本和帮助 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e8747d07-6c90-46cc-b425-55b589f7e9e4
@@ -8,22 +8,22 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cb4066d9728dd633492b05e4cc872dbdd8a91b5c
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: c0477a0e1994e9c3b94df13ace4c1f3b4df51039
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67823593"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748966"
 ---
-# <a name="ui-text-and-help-for-visual-studio"></a>UI 文本和 Visual Studio 的帮助
-## <a name="BKMK_UITextAndTerminology"></a> UI 文本和术语
- 易于理解的文本对有效 UI 至关重要。 软件用户倾向于读取标签第一次，即那些最相关的完成手头的任务。 静态文本时读取更少的频率。 为用户启动他们的工作会话一次快速扫描的整个窗口中后, 跟此大致顺序 UI 的读取与制定计划：
+# <a name="ui-text-and-help-for-visual-studio"></a>Visual Studio 的 UI 文本和帮助
+## <a name="BKMK_UITextAndTerminology"></a>UI 文本和术语
+ 易于理解文本对于有效 UI 至关重要。 软件用户倾向于首先阅读标签，即与完成任务最相关的标签。 以较低的频率读取静态文本。 计划用户使用整个窗口的快速扫描来启动其工作会话，然后按照此近似顺序读取 UI：
 
-1. 在中心的交互控件
+1. 中心的交互式控件
 
 2. 提交按钮
 
-3. 在其他位置找到的交互控件
+3. 在其他位置找到的交互式控件
 
 4. 主要说明
 
@@ -31,295 +31,295 @@ ms.locfileid: "67823593"
 
 6. 窗口标题
 
-7. 在正文中其他静态文本
+7. 主体中的其他静态文本
 
 ### <a name="usage-patterns-for-ui-text"></a>UI 文本的使用模式
 
 #### <a name="title-bar-text"></a>标题栏文本
- 标题栏文本必须与匹配生成用户界面的命令。
+ 标题栏文本必须与产生 UI 的命令匹配。
 
-#### <a name="instructional-text-helper-text"></a>说明文本 （帮助程序文本）
- 在一些对话框中，最好提供重要的主要说明来说明要执行的操作在窗口中或在页中。 这有时称为"帮助程序文本"。
+#### <a name="instructional-text-helper-text"></a>说明文本（帮助器文本）
+ 在某些对话框中，提供重要的主要说明来说明要在窗口或页面中执行的操作非常有用。 这有时称为 "帮助器文本"。
 
-##### <a name="writing-style-rules-for-helper-text"></a>编写帮助程序文本的样式规则
+##### <a name="writing-style-rules-for-helper-text"></a>为帮助器文本编写样式规则
 
-- 不解释明显。 除非绝对有必要，否则不包括说明文本。
+- 不要清楚地说明这一点。 除非绝对需要，否则不要包含说明文本。
 
-- 说明文本始终放在对话框顶部，并应参考正在执行的任务。
+- 说明文本始终置于对话框顶部，并且应引用正在执行的任务。
 
-- 准确地向用户说明他们需要做什么。 避免过多的通信和冗余。
+- 向用户准确说明他们需要执行的操作。 避免过多的通信和冗余。
 
-- 查看每个窗口，并消除重复的单词和语句。
+- 查看每个窗口并消除重复的单词和语句。
 
-- 保持简短的说明文本。 如果需要为某些用户或方案的详细信息，然后提供详细的概念联机主题的链接。
+- 简短说明文本。 如果某些用户或方案需要更多的信息，请提供详细的概念联机主题的链接。
 
-- 编写您的文本，使每个词保存权重，并且是必要。
+- 编写文本，使每个单词都具有权重，并且是必需的。
 
-- 请按照现有的 Microsoft 指南[用户界面文本](/windows/desktop/uxguide/text-ui)并[风格和语调](/windows/desktop/uxguide/text-style-tone)。
+- 遵循适用于[用户界面文本](/windows/desktop/uxguide/text-ui)和[样式和音调](/windows/desktop/uxguide/text-style-tone)的现有 Microsoft 指导。
 
 #### <a name="supplemental-instructions"></a>补充说明
- 补充说明提供其他信息，以帮助用户了解控件或控制分组。 这可能包括了解何种格式应为输入的控件所需的提示文本。 尽量少使用补充说明。 对于用户完全不了解后果的正在进行的选择可能的情况中保留它们。
+ 补充说明提供有助于用户理解控件或控制分组的其他信息。 这还可能包括必要的提示文本，以了解输入控件所需的格式。 请慎用补充说明。 如果用户可能不会完全了解所做选择的后果，请保留它们。
 
- ![在 Visual Studio 中的补充文本](../../extensibility/ux-guidelines/media/0601-b_supplementaltext1.png "0601 b_SupplementalText1")
+ ![Visual Studio 中的补充文本](../../extensibility/ux-guidelines/media/0601-b_supplementaltext1.png "0601-b_SupplementalText1")
 
- **在 Visual Studio 中的补充文本**
+ **Visual Studio 中的补充文本**
 
- ![在 Visual Studio 中的补充文本](../../extensibility/ux-guidelines/media/0601-c_supplementaltext2.png "0601 c_SupplementalText2")
+ ![Visual Studio 中的补充文本](../../extensibility/ux-guidelines/media/0601-c_supplementaltext2.png "0601-c_SupplementalText2")
 
- **在 Visual Studio 中的补充文本**
+ **Visual Studio 中的补充文本**
 
-#### <a name="infotips"></a>InfoTips
- 通常情况下，说明文本可能太长，在 UI 中定位的就地或可能仅向新用户，还觉得自己象混乱有经验的用户很有用。 在这种情况下，应为工具提示信息提示下放置的教学/信息性文本。
+#### <a name="infotips"></a>信息提示
+ 通常，说明文本可能会太长，无法在用户界面中就地放置，或者仅对新用户很有用，觉得对于经验丰富的用户感觉很混乱。 在这种情况下，应将说明/信息性文本作为工具提示放置在信息提示下。
 
- 信息提示应放置的控件，它们与相关，并且应使用尚不显眼的特定信息提示图标附近明显。
+ 信息提示应放置在与其相关的控件附近，并应使用特定的信息提示图标，但这种情况并不明显。
 
- ![在 Visual Studio 中的信息提示](../../extensibility/ux-guidelines/media/0601-d_infotip.png "0601 d_InfoTip")
+ ![Visual Studio 中的信息提示](../../extensibility/ux-guidelines/media/0601-d_infotip.png "0601-d_InfoTip")
 
- **在 Visual Studio 中的信息提示的示例**
+ **Visual Studio 中的信息提示示例**
 
-##### <a name="writing-style-rules-for-infotips"></a>写入信息提示的样式规则
+##### <a name="writing-style-rules-for-infotips"></a>编写信息提示的样式规则
 
-- 作为完整句子编写信息提示。 它们需要特定谓词、 句子首字母大写和结束标点。
+- 编写信息提示作为完整句子。 它们需要特定的谓词、句子大小写和结束标点。
 
-- 使用信息提示来补充主要说明或信息。 如果只需要使用不同的词语提醒主要思路，则不需要的信息提示。
+- 使用信息提示来补充你的主要说明或信息。 如果只是使用不同的单词来重述，则不需要信息提示。
 
-- 信息提示保持简单明了。 使用小单词和无格式、 日常语言的支持并鼓励用户。
+- 让信息提示简短明了。 使用支持和鼓励用户的小词和普通、日常语言。
 
-- 请按照现有的 Microsoft 指南[用户界面文本](/windows/desktop/uxguide/text-ui)并[风格和语调](/windows/desktop/uxguide/text-style-tone)。
+- 遵循适用于[用户界面文本](/windows/desktop/uxguide/text-ui)和[样式和音调](/windows/desktop/uxguide/text-style-tone)的现有 Microsoft 指导。
 
 #### <a name="control-labels"></a>控件标签
- 控件标签应较短的简洁，并按照[控件的 Windows 桌面指南](/windows/desktop/uxguide/controls)。
+ 控件标签应简短、简洁，并遵循[Windows 桌面的控件指南](/windows/desktop/uxguide/controls)。
 
- 有关控件标签格式和用户界面内的位置的详细信息，请参阅[Visual Studio 的布局](../../extensibility/ux-guidelines/layout-for-visual-studio.md)。
+ 有关 UI 中控件标签格式和位置的详细信息，请参阅[Visual Studio 的布局](../../extensibility/ux-guidelines/layout-for-visual-studio.md)。
 
 #### <a name="help-links"></a>帮助链接
- 说明文本，文本或通过在 UI 的正文中，也可以放置帮助链接。 它们可以帮助的链接，或启动内部的对话框。
+ 可将帮助链接置于说明文本或 UI 正文中。 它们可以是帮助或启动内部对话框的链接。
 
 ##### <a name="visual-style-rules-for-help-links"></a>帮助链接的视觉样式规则
 
-- 使用正确的环境颜色的超链接。 正确应用了样式的超链接将不短暂地闪烁红色单击时。 如果看到此错误，则指示不使用环境颜色。
+- 为超链接使用正确的环境颜色。 当单击正确的带样式的超链接时，将不会短暂地闪烁红色。 如果出现这种情况，则表明环境颜色未被使用。
 
-- 仅应上悬停时或当链接嵌入在段落中使用下划线。
+- 下划线只应在悬停时使用或在段落中嵌入链接时使用。
 
-- 超链接的视觉和交互样式的更多详细信息，请参阅按钮和超链接。
+- 有关超链接的视觉和交互样式的详细信息，请参阅按钮和超链接。
 
-##### <a name="writing-style-rules-for-help-links"></a>编写帮助链接的样式规则
+##### <a name="writing-style-rules-for-help-links"></a>为帮助链接编写样式规则
 
-- 如果启动对话框，维护省略号的标准： 导航栏中，如果任务需要附加 UI 省略号没有省略号。
+- 启动对话框时，请保留省略号的标准：没有用于导航的省略号，如果任务需要其他 UI，则为省略号。
 
-     ![在 Visual Studio 中的帮助链接](../../extensibility/ux-guidelines/media/0601-e_helplink.png "0601 e_HelpLink")
+     ![Visual Studio 中的帮助链接](../../extensibility/ux-guidelines/media/0601-e_helplink.png "0601-e_HelpLink")
 
-     **帮助链接中的省略号 （...） 表示任务需要附加 UI。**
+     **"帮助" 链接中的省略号（"..."）指示任务将需要更多的 UI。**
 
-- 链接应与"了解"，启动，因为这不是用户的意图。 用户想要回答特定问题，不会收到常规教育。
+- 链接不应以 "学习" 开头，因为这不是用户的意图。 用户希望回答特定问题，而不是获得一般教育。
 
-- 短语帮助链接，以便他们提出问题主题将解答。
+- 短语帮助链接，让他们提出主题将回答的问题。
 
-     不正确：  "了解有关 Windows Azure 移动服务定价的详细信息"
+     错误： "了解有关 Microsoft Azure 移动服务定价的详细信息"
 
-     正确:  "哪些定价选项是适用于 Windows Azure 移动服务？"
+     正确： "适用于 Windows Azure 移动服务的哪些定价选项？"
 
-- 永远不会使用*单击...* 为链接文本。
+- 永远不要对链接文本使用 *"单击 ...* "。
 
-- 永远不会链接仅单词"此处"。 这是适用于某些屏幕阅读器，将语音仅超链接的 word 有问题。
+- 决不要链接 "此处" 一词。 这对于某些屏幕读取器是有问题的，它只会语音显示超链接字。
 
-     不正确：  "中找到有关 Windows Azure 移动服务**此处**"
+     错误： "在**此处**查找有关 Microsoft Azure 移动服务的信息"
 
-     正确:  "哪些定价选项是适用于 Windows Azure 移动服务？"
+     正确： "适用于 Windows Azure 移动服务的哪些定价选项？"
 
-- 正确编写样式的帮助链接的详细信息，请参阅[Windows 桌面指南以获取帮助](/windows/desktop/uxguide/winenv-help)。
+- 有关帮助链接的正确写入样式的详细信息，请参阅[Windows 桌面指南以获得帮助](/windows/desktop/uxguide/winenv-help)。
 
 #### <a name="hint-text"></a>提示文本
- 提示文本显示为水印在控件内或控件下方。 通过使用相应的 VSColors 令牌，将应用正确格式`Environment.GrayText`。
+ 提示文本作为水印显示在控件内或控件的下方。 将使用适当的 VSColors 令牌应用正确的格式设置，`Environment.GrayText`。
 
- 它可以出现在多种形式。
+ 它可以出现在多个窗体中。
 
 - 代替控件标签：
 
-     ![提示在 Visual Studio 中的文本](../../extensibility/ux-guidelines/media/0601-f_hinttext1.png "0601 f_HintText1")
+     ![Visual Studio 中的提示文本](../../extensibility/ux-guidelines/media/0601-f_hinttext1.png "0601-f_HintText1")
 
-- 与谓词，给出的说明：
+- 对于谓词，提供说明：
 
-     ![提示在 Visual Studio 中的文本](../../extensibility/ux-guidelines/media/0601-g_hinttext2.png "0601 g_HintText2")
+     ![Visual Studio 中的提示文本](../../extensibility/ux-guidelines/media/0601-g_hinttext2.png "0601-g_HintText2")
 
-- 使用文本，指示所需的条目：
+- 带有指示必需条目的文本：
 
-     ![提示在 Visual Studio 中的文本](../../extensibility/ux-guidelines/media/0601-h_hinttext3.png "0601 h_HintText3")
+     ![Visual Studio 中的提示文本](../../extensibility/ux-guidelines/media/0601-h_hinttext3.png "0601-h_HintText3")
 
 #### <a name="watermark-text"></a>水印文本
- 空设计图面上，文本应指示要执行操作，以及提供链接以打开其他相关的 windows，如果相应内容：
+ 在空设计图面上，文本应指示要执行的操作，并提供用于打开其他相关窗口的链接（如果适用）：
 
- ![Visual Studio 中的文本水印](../../extensibility/ux-guidelines/media/0601-i_watermarktext.png "0601 i_WatermarkText")
+ ![Visual Studio 中的水印文本](../../extensibility/ux-guidelines/media/0601-i_watermarktext.png "0601-i_WatermarkText")
 
- **在 Visual Studio 中的水印文本的示例**
+ **Visual Studio 中水印文本的示例**
 
 ### <a name="common-terminology"></a>常见术语
 
 |术语|说明|注释|
 |----------|-----------------|-------------|
-|登录/注销|使用同义词，使用 web 进行表示到 web 属性的身份验证的谓词。 在客户端，我们使用一次此作为顶级概念入和移出 IDE 用户连接，这表示提供了更高级别的功能，例如漫游和许可，不可用与所有其他连接的顶层标识签名。|IDE 用户是唯一的功能，应表示登录 / 注销谓词，因为它表示顶级 IDE 用户。|
-|连接/断开连接|使用在其中一项功能会保持与联机服务的单个连接的位置。|服务器资源管理器，其中只能有一次一个活动 Azure 连接，例如连接/断开。|
-|添加/删除|非破坏性。 添加或从列表中删除内容时使用。|TFS 连接管理器服务器列表对话框是添加/删除的一个示例。|
-|删除|破坏性。 仅当使用将永久被丢弃或从磁盘中删除所移除的元素。|如果结果从磁盘中删除文件，"删除"通常需要一条提示。|
+|登录/注销|谓词使用同义词将身份验证表示为 web 属性。 在客户端中，我们使用这一一次，作为用于登录和退出 IDE 用户连接的顶级概念，此类代表提供高级功能（如漫游和许可）的顶级标识，这些功能在所有其他连接中都不可用。|IDE 用户是唯一应该表示登录/注销谓词的功能，因为它表示顶级 IDE 用户。|
+|连接/断开连接|在功能维护与联机服务的单一连接的位置使用。|服务器资源管理器，一次只能有一个活动的 Azure 连接，这是一个连接/断开连接的示例。|
+|添加/删除|非破坏性。 添加或删除列表中的内容时使用。|"TFS 连接管理器服务器列表" 对话框是 "添加/删除" 的一个示例。|
+|删除|破坏. 仅当要删除的元素将被永久丢弃或从磁盘中删除时使用。|如果结果是从磁盘中删除文件，"删除" 通常需要提示。|
 
 ## <a name="error-messages"></a>错误消息
 
 ### <a name="overview"></a>概述
- 错误发生。 设置限制用户可以执行的操作是合理的第一步中阻止能够避免错误消息。 但是，当确实发生错误，编写良好的错误消息可转能够大大缓解此问题。 错误消息可以说是通知的最重要的用户会看到，因为它们是通知的同步的指示需要解决的问题类型之一。 编写不佳的错误消息使用户在其自己确定错误原因和任何可能的解决方案。
+ 出现错误。 在阻止能够避免错误消息的第一步是，设置对用户可以执行的操作的限制。 但是，当发生错误时，可能会出现一条写入错误消息，以解决问题。 错误消息可能是用户看到的最重要的通知类型之一，因为它们是同步的，指出需要解决的问题。 编写不当的错误消息会让用户自行决定错误和任何可能的解决方案的原因。
 
- 关注过度使用或混淆错误消息，因此将值添加到用户的写仅必要时邮件体验，用户可能会停止。 如果消息是只需一条通知，请使用可选表示形式。
+ 用户可能会停止关注过度滥用或混乱的错误消息，因此只需编写一些必要的消息，为用户体验带来价值。 如果消息只是一条通知，则使用替代的演示文稿。
 
-### <a name="rules-for-creating-an-error-message"></a>创建一条错误消息的规则
+### <a name="rules-for-creating-an-error-message"></a>用于创建错误消息的规则
 
-- 在构造时的错误消息，为受众选择相应的错误级别。 目标提供用户所能执行，一个操作，如果适用的简单摘要。 无状态的用户无需了解任何内容。
+- 构造错误消息时，为受众选择适当的错误级别。 旨在提供用户可执行的操作（如果适用）的简单摘要。 不要陈述用户不需要知道的任何内容。
 
-- 提供建设性协助。 它是更轻松地读取和处理包含指令的错误消息。
+- 提供建设性的帮助。 读取并处理包含指令的错误消息会更容易。
 
-- 不要使用双重否定。
+- 不要使用双精度型。
 
-- 执行这两个自动和手动的语法和拼写检查在你编写的任何错误消息。
+- 对你编写的任何错误消息同时执行自动和手动语法和拼写检查。
 
-- 对于复杂的错误消息，避免顺序通信。 永远不会使用 F1 挂钩的错误消息。 消息本身应该足够。
+- 对于复杂的错误消息，请避免顺序通信。 不要将 F1 挂钩用于错误消息。 消息本身应该已经足够。
 
 - 使用正确的图标。
 
-- 使问题更易于理解和使用按钮有明确的选择，例如"删除"和"取消。
+- 轻松理解并使用具有清晰选择的按钮，如 "删除" 和 "取消"。
 
-- 警告，能清楚了解继续操作的结果将是。 按钮应指示结果。
+- 对于警告，请清楚了解继续操作的结果。 按钮应指示结果。
 
-- 对于错误，描述了用户可以的操作来解决该问题。 按钮应是操作或说"关闭"。 不要使用"确定"按钮执行一条错误消息。
+- 有关错误，请描述用户可以执行哪些操作来解决问题。 按钮应为操作或指示 "关闭"。 不要对错误消息使用 "确定" 按钮。
 
-- 要问问自己构造一条错误消息时的一些问题：
+- 构造错误消息时需要询问自己的一些问题：
 
-  - 用户可以了解如何解决此错误仅出现的问题？
+  - 用户能否确定如何解决此错误的问题？
 
-  - 用户是否使用与此错误相同词汇？
+  - 用户使用的词汇与此错误是否相同？
 
-  - 是此错误不明确的或在多个的情况下共享？ 如果是这样，如何执行操作，引导用户到所需的解决方案？
+  - 在多种情况下不明确还是共享此错误？ 如果是这样，如何向用户指导他们所需的解决方案？
 
 #### <a name="build-errors"></a>生成错误
- 由于 Visual Studio 是一种软件开发工具，有许多及其组件的编译时，转换，或编码步骤将开发人员的工作转换为二进制格式。 当编译器无法处理未正确编写的文件时或未正确设置编译器选项时，这些转换可能导致错误。
+ 由于 Visual Studio 是一个软件开发工具，因此它的许多组件都有一个用于将开发人员的工作转换为二进制格式的编译、转换或编码步骤。 当编译器无法处理错误编写的文件或编译器选项设置不正确时，这些转换可能会导致错误。
 
- Visual Studio 用户可以花费大量的开发时间解决生成错误。 此解析时间会增加错误所需的依赖项或在错误消息不佳编写，这可以使它难以发现的错误的源。
+ Visual Studio 用户可以花费大量开发小时来解决生成错误。 当错误具有依赖项或错误消息编写不当时，这种解决时间会增加，这可能会导致难以发现错误源。
 
- 最佳的生成错误为那些不会出现在第一个位置，这就是为什么 Visual Studio 提供了自动完成和 IntelliSense 的波形曲线。 架构验证程序和类似的工具提供相同类型的反馈。 这些机制主动指导用户构造格式正确的代码中，降低生成错误的可能性。
+ 最佳生成错误是第一个位置不会出现的错误，这就是 Visual Studio 提供自动完成和 IntelliSense 波形曲线的原因。 架构验证程序和类似工具提供了相同类型的反馈。 这些机制主动指导用户构造格式正确的代码，减少生成错误的可能性。
 
- Visual Studio 提供了工具窗口，用户可以读取并浏览其文档窗口中出现的错误。 键盘快捷方式提供，以便用户可以快速导航大量的代码并直接转到问题的位置。 Visual Studio 还允许以绑定到特定的帮助关键字/上下文 ID，以便用户可以直接转到更加深入地介绍有关错误的帮助主题的每个生成错误。
+ Visual Studio 提供了一个工具窗口，用户可以在其中读取并浏览文档窗口中发生的错误。 提供键盘快捷方式，以便用户可以快速地浏览大量代码，并直接转到问题所在的位置。 Visual Studio 还允许将每个生成错误绑定到特定的帮助关键字/上下文 ID，以便用户可以直接前往帮助主题，该主题提供有关错误的详细信息。
 
- 编写清晰、 简洁的生成错误：
+ 编写清晰、简洁的生成错误：
 
-- **使用平实的语言**介绍很少或没有编译器术语中的问题。 生成错误的文本不应过于技术。
+- **使用无**需编译器术语说明问题的纯语言。 生成错误的文本不应太技术性。
 
-- **概述了可能的原因。** 例如，"缺少冒号之间的属性和值 （属性）: （值） 声明。"
+- **概述可能的原因。** 例如，"（属性）：（值）" 声明中的属性和值之间缺少冒号。 "
 
-- 提供有关可能的修补程序的详细信息。 如果没有足够的空间，更多详细信息可能会放入相应的帮助主题。
+- 详细介绍潜在的修补程序。 如果没有足够的空间，则可以将其他详细信息放入相应的帮助主题。
 
-### <a name="components-of-a-well-written-error-message"></a>编写良好的错误消息的组件
+### <a name="components-of-a-well-written-error-message"></a>编写良好的错误消息的组成部分
 
-#### <a name="use-the-shell-dialog-service-for-error-messages"></a>使用错误消息的外壳对话框服务。
- 使用 shell 对话框服务，您无需对各个元素的主要更改具体而言，控制消息，字体的外观。 使用**IErrorInfo**机制，并报告它们使用**IVsUIShell::SetErrorInfo/ReportErrorInfo**。
+#### <a name="use-the-shell-dialog-service-for-error-messages"></a>使用 shell 对话框服务获取错误消息。
+ 使用 shell 对话框服务，可以控制消息的外观、特定字体，而不会对单个元素进行重大更改。 使用**IErrorInfo**机制并使用**IVsUIShell：： SetErrorInfo/ReportErrorInfo**报告它们。
 
-#### <a name="choose-an-effective-and-appropriate-notification-presentation"></a>选择一个有效且适当的通知的演示文稿。
- 如果需要立即采取措施来避免丢失数据 （同步通知），请使用一个模式对话框具有严重警告。 在关闭而无需读取消息中可能会导致产生负面后果的情况下保留关键图标。 数据丢失并不需要的警报级别响应的关键情况。 严重图标的过度使用 desensitizes 用户到其重要性。 如果在本质上条信息性错误消息，请考虑一个模式对话框 （异步通知） 的替代方法。
+#### <a name="choose-an-effective-and-appropriate-notification-presentation"></a>选择有效的合适通知演示。
+ 如果需要立即采取措施来避免丢失数据（同步通知），请使用带有严重警告的模式对话框。 关键图标为关闭消息但不读取消息的情况保留，这可能会导致负面后果。 数据丢失是需要警报级别响应的一项关键情况。 过度利用关键图标 desensitizes 用户的重要性。 如果错误消息本质上是信息性的，请考虑模式对话框（异步通知）的替代项。
 
-#### <a name="provide-a-clean-succinct-explanation-of-why-the-problem-occurred-rather-than-a-technical-explanation"></a>提供而不是技术说明出现问题的原因的清晰、 简洁的说明。
- 负担过重的技术详细说明中的用户将使它们更容易忽略的错误消息。 好消息传送示例：
+#### <a name="provide-a-clean-succinct-explanation-of-why-the-problem-occurred-rather-than-a-technical-explanation"></a>简要说明发生此问题的原因，而不是技术说明。
+ 说明中的技术详细信息的负担用户将更有可能忽略错误消息。 好消息传递示例：
 
 - "无法打开请求的文件。"
 
-- "无法连接到 Internet。"
+- "无法连接到 Internet"。
 
 #### <a name="provide-information-about-how-to-fix-the-problem"></a>提供有关如何解决此问题的信息。
- 提供如何解决此问题的用户的建议。 坦白地讲与用户如果不有任何建议。 提供指向备用的联机源，如技术支持或社区支持的直接链接。 请尝试将用户引到特定的联机信息相关的问题。 错误 ID，请考虑将用户链接到该特定错误有关的讨论话题。 好消息传送示例：
+ 为用户提供有关如何解决此问题的建议。 如果没有任何建议，请与用户诚实。 提供指向其他在线源的直接链接，例如技术支持或社区支持。 尝试将用户指向与问题相关的特定联机信息。 对于错误 ID，请考虑将用户链接到有关该特定错误的讨论线索。 好消息传递示例：
 
-- "请确保你连接到 Internet，然后重试此操作。"
+- "请确保你已连接到 Internet，然后重试此操作。"
 
-- "请确保该文件存在并且您有权将其打开。"
+- "请确保该文件存在并且您有权打开该文件。"
 
-#### <a name="write-a-message-that-is-short-and-to-the-point"></a>编写较短且到点的消息。
- 一条错误消息可以通知，解释，并提供一个解决方案，但如果太过罗嗦仍被忽略。 一种解决方案是使用渐进式披露的详细信息按钮。 例如，为提供一个简短的说明/解决方案，然后将详细信息按钮下的更多详细信息。 如果用户选择读取错误的详细信息，用户可以这样做。
+#### <a name="write-a-message-that-is-short-and-to-the-point"></a>写入短于点的消息。
+ 错误消息可以通知、说明和提供解决方案，但如果它太罗嗦，仍会将其忽略。 一种解决方法是使用 "详细信息" 按钮的渐进式披露。 例如，提供简短的说明/解决方案，然后在 "详细信息" 按钮下添加更多详细信息。 如果用户选择阅读有关错误的详细信息，则可以执行此操作。
 
- 应在消息中的语言：
+ 消息中的语言应为：
 
-- **适当域。** 使用用户将了解的语言。 尽管我们的客户都是开发人员，他们通常无上下文和我们的术语。
+- **适用域。** 使用用户将了解的语言。 尽管我们的客户是开发人员，但他们通常并没有上下文和术语。
 
-- **特定。** 避免含糊不清的用词并为特定的名称和所涉及对象的位置。 例如，一条错误消息如"无效字符"不是很有用。 哪些字符？ "找不到文件"。 哪些文件？
+- **相关.** 避免含糊的措辞，并为所涉及的对象指定特定的名称和位置。 例如，错误消息（如 "字符无效"）不起作用。 哪个字符？ "找不到文件。" 哪个文件？
 
-- **短暂。** 不要责怪用户，或让他们感到愚笨。 避免恶意或攻击性语言 （终止、 执行和终止，致命的非法）。 避免大写的文本，该方法通常被视为地大喊大叫并不是为可读文本。 不要使用幽默。
+- **短暂地.** 不要让用户感到非常愚蠢。 避免恶意或冒犯性语言（kill、execute、terminate、致命、非法）。 避免大写文本，该文本通常被视为驯养，并不是可读的。 不要使用幽默。
 
-- **更正。** （甚至在 alpha) 中使用正确的拼写和语法。 拼写错误是不专业和令人难堪。
+- **恰当.** 使用正确的拼写和语法（即使是在 alphas 中）。 打字错误是 unprofessional 和尴尬。
 
-- **上下文相关。** 使用相应的按钮文本。 避免"确定"按钮并改为使用"继续"或"是/否。"
+- **根据上下文适用。** 使用适当的按钮文本。 避免使用 "确定" 按钮，而是使用 "继续" 或 "是/否"。
 
 ### <a name="error-message-examples"></a>错误消息示例
 
-|好|错误|
+|好|Dfx|
 |----------|---------|
-|"您拨打的号码不再在服务中。 请检查数以及重试或操作员拨打 0。"|-"错误 (: 449):非法的数字"<br />-"此未经处理的异常错误情况表示操作成功完成"。<br /><br /> ![在 Visual Studio 中的严重错误消息](../../extensibility/ux-guidelines/media/0602-a_errordialog.png "0602 a_ErrorDialog")|
+|"您拨打的号码不再处于服务中。 请检查号码并再次拨号，或者拨打操作员拨打0。|-"错误（449）：非法数字"<br />-"此未经处理的异常错误表示操作已成功完成。"<br /><br /> ![Visual Studio 中的错误消息](../../extensibility/ux-guidelines/media/0602-a_errordialog.png "0602-a_ErrorDialog ")|
 
 ## <a name="accessing-help"></a>访问帮助
 
 ### <a name="overview"></a>概述
- 除了 MSDN 中的文档，Visual Studio 用户具有多个访问点，以帮助用户在 UI 中。 若要确保这些访问点始终可用，功能团队需要充分利用由环境提供的帮助系统。 这些访问点是：
+ 除了 MSDN 中的文档外，Visual Studio 用户还具有多个访问点，可帮助用户在用户界面中使用。 为了确保这些访问点始终可用，功能团队需要利用环境提供的帮助系统。 这些访问点包括：
 
-- **在对话框中的说明和补充性文本。** 不提供方向或说明，在 UI 图面上或可在悬停在信息提示图标上的静态文本。
+- **对话框中的说明文本和补充文本。** 提供方向或说明的静态文本，可以在 UI 表面上，也可以在悬停图标上悬停时使用。
 
-- **F1 帮助**（仅编辑器）。 在 Visual Studio 编辑器中，用户可以相信，在任何时候，按 F1 会弹出一个特定于当前所选内容的帮助主题。 请确保主题与 F1 关联适当且信息丰富。
+- **F1 帮助**（仅编辑器）。 在 Visual Studio 编辑器中，用户可以随时相信，按 F1 将显示特定于当前所选内容的帮助主题。 确保与 F1 关联的主题正确并提供信息。
 
-- **指向帮助主题的超链接。** 对话框、 工具窗口中或启动主题来帮助用户深入了解技术、 功能或有关如何完成某项任务的信息的设计图面内的超链接。
+- **帮助主题的超链接。** 对话框、工具窗口或设计图面中的超链接，用于启动主题，以帮助用户了解有关技术、功能或如何完成任务的信息。
 
-- **帮助器 UI 机制，例如智能标记和构建对话。** 这些机制帮助用户了解 UI 元素，或简化一个任务，例如智能标记或生成器对话框。
+- **帮助器 UI 机制，如智能标记和生成对话框。** 这些机制有助于用户了解 UI 元素，或促进任务，如智能标记或生成器对话框。
 
-- **UI 帮助按钮**（不推荐使用）。 使访问相关的 F1 帮助主题的标题栏中可见的指示符。
+- **UI 帮助按钮**（已弃用）。 标题栏中的可见指示器，可用于访问相关的 F1 帮助主题。
 
 ### <a name="text"></a>Text
 
-#### <a name="instructional-and-supplemental-text-in-dialogs"></a>在对话框中的说明和补充文本
- 在支持复杂的任务的对话框，可能需要在顶部的对话框中或接近复杂的控件通常提供在 UI 中的说明文本。 请参阅[UI 文本和术语](../../extensibility/ux-guidelines/ui-text-and-help-for-visual-studio.md#BKMK_UITextAndTerminology)有关编写样式的详细信息。
+#### <a name="instructional-and-supplemental-text-in-dialogs"></a>对话框中的说明文本和补充文本
+ 在支持复杂任务的对话中，可能需要在 UI （通常是在对话框顶部或接近复杂控件）中提供说明性文本。 有关编写样式的详细信息，请参阅[UI 文本和术语](../../extensibility/ux-guidelines/ui-text-and-help-for-visual-studio.md#BKMK_UITextAndTerminology)。
 
-#### <a name="infotips"></a>InfoTips
- 通常情况下，说明文本可能耗时较长，若要在 UI 中的位置中的位置，或者可能仅向新用户，还觉得自己象混乱有经验的用户很有用。 在这种情况下，应为工具提示信息提示下放置的教学/信息性文本。
+#### <a name="infotips"></a>信息提示
+ 通常情况下，说明性文本可能太长，无法在用户界面中就地放置，或者仅对新用户很有用，觉得对经验丰富的用户感到杂乱。 在这种情况下，应将说明/信息性文本作为工具提示放置在信息提示下。
 
- 信息提示应放置的控件，它们与相关，并且应使用尚不显眼的特定信息提示图标附近明显。
+ 信息提示应放置在与其相关的控件附近，并应使用特定的信息提示图标，但这种情况并不明显。
 
- ![在 Visual Studio 中的信息提示](../../extensibility/ux-guidelines/media/0601-d_infotip.png "0601 d_InfoTip")
+ ![Visual Studio 中的信息提示](../../extensibility/ux-guidelines/media/0601-d_infotip.png "0601-d_InfoTip")
 
- **在 Visual Studio 中的信息提示的示例**
+ **Visual Studio 中的信息提示示例**
 
 ### <a name="interactive-help-mechanisms"></a>交互式帮助机制
 
 #### <a name="f1-help"></a>F1 帮助
- 是必需的 F1 帮助中的编辑器或设计图面上，但不是在其他位置在 Visual Studio 环境中。
+ 需要在编辑器或设计图面中提供 F1 帮助，但不能在 Visual Studio 环境中的其他位置使用。
 
-#### <a name="hyperlinks-to-help-topics"></a>指向帮助主题的超链接
- 超链接可用于执行的操作、 在 IDE 中导航或浏览器中启动的帮助。 请参阅[UI 文本和术语](../../extensibility/ux-guidelines/ui-text-and-help-for-visual-studio.md#BKMK_UITextAndTerminology)有关语言和 07.10.01 的详细信息按钮和视觉对象和布局指南的超链接。
+#### <a name="hyperlinks-to-help-topics"></a>帮助主题的超链接
+ 超链接可用于执行操作，在 IDE 中导航，或在浏览器中启动帮助。 请参阅[UI 文本和术语](../../extensibility/ux-guidelines/ui-text-and-help-for-visual-studio.md#BKMK_UITextAndTerminology)，详细了解语言和07.10.01 的按钮以及用于视觉对象和布局准则的超链接。
 
-#### <a name="help--buttons-in-dialog-title-bars-deprecated"></a>帮助 [？] （已弃用） 的对话框标题栏中的按钮
- 大多数情况下，不推荐使用的对话框的标题栏中的 [？] 帮助按钮。 UI 主题不再是模型的一部分我们的文档，并因此可能不会链接到相关的主题。 从根本上讲，标题栏按钮与 F1 帮助，相同的功能，不再需要的对话框中。 在某些情况下，这仍可为指示器没有概念或过程的详细信息可用，尽管在更高版本的用户界面中更常用于超链接。
+#### <a name="help--buttons-in-dialog-title-bars-deprecated"></a>Help [？] 对话框标题栏中的按钮（不推荐使用）
+ 大多数情况下，对话框的标题栏中的 "帮助 [？]" 按钮已被弃用。 UI 主题不再是我们的文档模型的一部分，因此可能没有链接到的相关主题。 实质上，标题栏按钮与 F1 帮助相同，并且对话框中不再需要该按钮。 在某些情况下，仍可将其用作指示提供更多概念或过程信息的指示符，尽管超链接更常用于较新的 UI。
 
-##### <a name="dialogs-created-through-the-environment"></a>通过在环境创建的对话框
- 通过创建的许多 shell 对话**VBDialogBoxParam**函数。 此共享的函数进行更新，以帮助移动**帮助**从到对话框按钮 **？** 按钮，同时保留体系结构，可向后兼容且可扩展。
+##### <a name="dialogs-created-through-the-environment"></a>通过环境创建的对话框
+ 许多 shell 对话框是通过**VBDialogBoxParam**函数创建的。 已更新此共享函数，以帮助你将 "**帮助**" 按钮从对话框移动到 **？** 按钮，同时保留向后兼容并可扩展的体系结构。
 
- 具体而言， **VBDialogBoxParam**函数检查其 ID 是一个按钮的对话框模板**IDHELP** (9) 或标签**帮助**或 **& 帮助**. 如果找到帮助按钮，则其处于隐藏状态和**WS_EX_CONTEXTHELP**样式添加到对话框中，放置 **？** 在对话框的标题栏中的按钮。
+ 具体来说， **VBDialogBoxParam**函数会查看 ID 为**IDHELP** （9）或标签为**help**或 **& 帮助**的按钮的对话框模板。 如果找到了 "帮助" 按钮，则将其隐藏并将**WS_EX_CONTEXTHELP**样式添加到对话框中，这会将 **？** 对话框的标题栏中的按钮。
 
- 创建对话框时，它将推送到堆栈上的对话框过程并使用名为预处理对话框过程调用对话框**DialogPreProc**。 当 **？** 单击按钮时，将发送**WM_SYSCOMMAND**的**SC_CONTEXTHELP**到了对话框。 **DialogPreProc**捕获此命令并将其对更改**WM_HELP**消息传递到原始对话框过程。
+ 创建对话框时，它会将对话进程推送到堆栈上，并使用名为**DialogPreProc**的预处理对话框过程调用该对话框。 当 **？** 按钮后，它会将**WM_SYSCOMMAND**的**SC_CONTEXTHELP**发送到该对话框。 **DialogPreProc**捕获此命令并将其更改为**WM_HELP**消息，并将其传递给原始对话进程。
 
- 大多数环境创建对话框必须在对话框的帮助按钮。 帮助按钮时显示对话框时，是自动隐藏，只有在 **？** 按钮起作用。 如果 **？** 按钮会删除或更改在 Windows 中，此解决方案，可快速将移回原始的帮助按钮。
+ 大多数环境创建的对话框在对话框中都有 "帮助" 按钮。 显示对话框时，"帮助" 按钮会自动隐藏并且只有 **？** 按钮正常工作。 如果 **？** 按钮在 Windows 中被删除或更改，则此解决方案使你可以快速返回到原始的 "帮助" 按钮。
 
- 此解决方案进行可能会导致 bug 的四个假设：
+ 此解决方案提出了可能导致 bug 的四个假设：
 
-- 在对话框的帮助按钮是**IDHELP** (9)。
+- 该对话框的 "帮助" 按钮为**IDHELP** （9）。
 
-- 隐藏帮助按钮时，对话框看起来正确。
+- "帮助" 按钮处于隐藏状态时，对话框看起来是正确的。
 
-- 该对话框不能将替换其 winproc。
+- 此对话框不会替换它的 winproc。
 
-- 对话框中未嵌入在另一个对话框。
+- 此对话框未嵌入到另一个对话框中。
 
-  如果您的对话框位于 msenv 内，但不使用**VBDialogBoxParam**，调查利用**VBDialogBoxParam**实现自己的处理程序之前。
+  如果对话框位于 msenv 中，并且不使用**VBDialogBoxParam**，请在实现自己的处理程序之前调查使用**VBDialogBoxParam** 。
 
 ##### <a name="dialogs-created-through-other-packages"></a>通过其他包创建的对话框
- 您可以实现你自己的解决方案位于外部 msenv 的对话框。 你的 VSPackage 中的共享的对话框类，请考虑移到标题栏按钮或在每个对话框实现一个处理程序。 下面的代码是实现以帮助您入门的骨架：
+ 您可以为驻留在 msenv 外部的对话框实现自己的解决方案。 对于 VSPackage 中的共享对话框类，请考虑将按钮移动到标题栏，或在每个对话框上实现处理程序。 下面的代码是实现的主干，旨在帮助你入门：
 
 ```
 struct DLGPROCITEM
@@ -375,8 +375,8 @@ INT_PTR CALLBACK DialogPreProc(HWND hwndDlg, UINT uMsg,
 }
 ```
 
-##### <a name="help-buttons-in-managed-code"></a>在托管代码中的帮助按钮
- 重写窗口标题栏帮助按钮的默认行为是在托管代码中轻松。 下面是演示此行为的完整的演示应用程序。 从本质上讲，您需要重写窗体的**WndProc**方法，然后触发关闭的 F1 帮助请求时**SC_CONTEXTHELP**截获的消息。
+##### <a name="help-buttons-in-managed-code"></a>托管代码中的帮助按钮
+ 在托管代码中，重写窗口标题栏 "帮助" 按钮的默认行为很简单。 下面是一个演示此行为的完整演示应用程序。 实质上，你需要替代窗体的**WndProc**方法，并在**SC_CONTEXTHELP**消息被截获时激发 F1 帮助请求。
 
 ```
 using System;

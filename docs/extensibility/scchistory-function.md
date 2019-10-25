@@ -12,15 +12,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bad55b0fce5f4bec27ec707a4f9578c627a07363
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 0ce0b38b8e602688875549edbac671e664809482
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353617"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72721247"
 ---
 # <a name="scchistory-function"></a>SccHistory 函数
-此函数可显示指定的文件的历史记录。
+此函数显示指定文件的历史记录。
 
 ## <a name="syntax"></a>语法
 
@@ -38,49 +38,49 @@ SCCRTN SccHistory(
 #### <a name="parameters"></a>参数
  `pvContext`
 
-[in]源控制插件上下文结构。
+中源代码管理插件上下文结构。
 
  `hWnd`
 
-[in]它提供了任何对话框，父级可以使用源代码管理插件，则 IDE 窗口的句柄。
+中IDE 窗口的句柄，源代码管理插件可将其用作它所提供的所有对话框的父级。
 
  `nFiles`
 
-[in]中指定的文件数`lpFileName`数组。
+中@No__t_0 数组中指定的文件数。
 
  `lpFileName`
 
-[in]文件的完全限定名称的数组。
+中文件的完全限定名的数组。
 
  `fOptions`
 
-[in]（目前未使用） 的命令标志。
+中命令标志（当前未使用）。
 
  `pvOptions`
 
-[in]源代码管理插件特定选项。
+中源代码管理插件特定的选项。
 
 ## <a name="return-value"></a>返回值
- 此函数的源控制插件实现应返回以下值之一：
+ 此函数的源代码管理插件实现应返回以下值之一：
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
-|SCC_OK|成功地获取版本历史记录。|
-|SCC_I_RELOADFILE|源代码管理系统实际上在情况下修改磁盘上的文件提取历史记录 （例如，通过获取的旧版本），因此 IDE 应重新加载此文件。|
-|SCC_E_FILENOTCONTROLLED|文件不是源代码管理下。|
+|SCC_OK|已成功获得版本历史记录。|
+|SCC_I_RELOADFILE|源代码管理系统在提取历史记录时实际上修改了磁盘上的文件（例如，通过获取其旧版本），因此 IDE 应重新加载此文件。|
+|SCC_E_FILENOTCONTROLLED|此文件不受源代码管理。|
 |SCC_E_OPNOTSUPPORTED|源代码管理系统不支持此操作。|
 |SCC_E_NOTAUTHORIZED|不允许用户执行此操作。|
-|SCC_E_ACCESSFAILURE|访问源代码管理系统，很可能是由于网络或争用问题时出现问题时。 建议重试。|
-|SCC_E_PROJNOTOPEN|项目未打开。|
-|SCC_E_NONSPECIFICERROR|非特定故障。 无法获取文件历史记录。|
+|SCC_E_ACCESSFAILURE|访问源代码管理系统时出现问题，可能是由于网络或争用问题导致的。 建议重试。|
+|SCC_E_PROJNOTOPEN|项目尚未打开。|
+|SCC_E_NONSPECIFICERROR|非特定故障。 未能获取文件历史记录。|
 
 ## <a name="remarks"></a>备注
- 源代码管理插件可以显示其自己的对话框来显示每个文件的历史记录使用`hWnd`作为父窗口。 或者，可选的文本输出回调函数提供给[SccOpenProject](../extensibility/sccopenproject-function.md)可以使用，如果它受支持。
+ 源代码管理插件可以显示自己的对话框以显示每个文件的历史记录，并使用 `hWnd` 作为父窗口。 此外，还可以使用提供给[SccOpenProject](../extensibility/sccopenproject-function.md)的可选文本输出回调函数（如果支持）。
 
- 请注意，在某些情况下，此调用的执行期间可能会更改要检查的文件。 例如， [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] history 命令使用户有机会以获取文件的旧版本。 在这种情况下，源代码管理插件返回`SCC_I_RELOAD`来警告 IDE，它需要重新加载该文件。
+ 请注意，在某些情况下，在执行此调用期间，检查的文件可能会发生更改。 例如，[!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] history 命令使用户有机会获取旧版本的文件。 在这种情况下，源代码管理插件会返回 `SCC_I_RELOAD` 以警告 IDE 需要重新加载文件。
 
 > [!NOTE]
-> 如果源代码管理插件不支持此函数的文件的数组，可以显示仅的第一个文件文件历史记录。
+> 如果源代码管理插件不支持文件数组的此函数，则只能显示第一个文件的文件历史记录。
 
 ## <a name="see-also"></a>请参阅
 - [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)

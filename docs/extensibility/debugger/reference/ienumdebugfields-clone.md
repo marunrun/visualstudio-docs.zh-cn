@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugFields::Clone |Microsoft Docs
+title: IEnumDebugFields：： Clone |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,15 +15,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2d614a1d98a1374ed0b04aef5b23ebf91c21610c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b5657e5db99bd062fa16aae9f9d8516bdbabc99f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350442"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72727695"
 ---
 # <a name="ienumdebugfieldsclone"></a>IEnumDebugFields::Clone
-此方法返回当前枚举作为一个单独的对象的副本。
+此方法将当前枚举的副本作为单独的对象返回。
 
 ## <a name="syntax"></a>语法
 
@@ -41,13 +41,13 @@ int Clone(
 
 ## <a name="parameters"></a>参数
 `ppEnum`\
-[out]返回此枚举作为一个单独的对象的副本。
+弄以单独的对象的形式返回此枚举的副本。
 
 ## <a name="property-valuereturn-value"></a>属性值/返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="remarks"></a>备注
- 枚举的副本在调用此方法时都具有与原始相同的状态。 但是，该副本的和原始的状态是独立的并且可以单独更改。
+ 调用此方法时，该枚举的副本具有与原始的相同的状态。 但是，副本的和原始状态是独立的，可以单独更改。
 
 ## <a name="see-also"></a>请参阅
 - [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

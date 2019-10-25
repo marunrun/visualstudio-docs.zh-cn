@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fa57b1f289f9cc5e8c57c08b6d51bb1677c3db4
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 60f9b9fd91535cc16b96da530db8ab43c4eaabf2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62835367"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739098"
 ---
-# <a name="idiasymbolgettype"></a>IDiaSymbol::get_type
+# <a name="idiasymbolget_type"></a>IDiaSymbol::get_type
 检索表示此符号的类型的符号。
 
 ## <a name="syntax"></a>语法
@@ -33,16 +33,16 @@ HRESULT get_type (
 #### <a name="parameters"></a>参数
 `pRetVal`
 
-[out]返回[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象，表示此符号的类型。
+弄返回一个[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象，该对象表示此符号的类型。
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。
+> @No__t_0 的返回值意味着该属性对符号不可用。
 
 ## <a name="remarks"></a>备注
-若要确定符号的类型，必须调用此方法，并检查生成[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象。 请注意，可能具有的类型的符号。 例如，结构的名称具有任何类型，但它可能具有子级的符号 (使用[idiasymbol:: Findchildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)方法来检查这些子级)。
+若要确定某个符号具有的类型，必须调用此方法并检查生成的[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象。 请注意，符号可能不具有类型。 例如，结构的名称没有类型，但它可能具有子符号（使用[IDiaSymbol：： findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)方法检查这些子级）。
 
 ## <a name="example"></a>示例
 

@@ -26,19 +26,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2cca09e917cddffd0d1d844db14ae8a4ca4f0088
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 83fdfa65f4efb6f0bc0b99eac27ae0e57c79e3cd
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211072"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72733694"
 ---
 # <a name="how-to-debug-com-clients-and-servers-using-rpc-debugging"></a>如何：使用 RPC 调试来调试 COM 客户端和服务器
 可以使用远程过程调用 (RPC) 调试来调试 COM 客户端/服务器应用程序。 必须启用 RPC 调试才能使用它。 启用 RPC 调试后，当单步执行来自客户端的服务器调用时，调试器会附加到服务器上，使你能调试其代码。 附加调试器后，就可以对客户端和服务器进程使用所有的调试器功能。
 
 ### <a name="to-enable-rpc-debugging"></a>启用 RPC 调试
 
-1. 在 **“工具”** 菜单上，单击 **“选项”**。
+1. 在 **“工具”** 菜单上，单击 **“选项”** 。
 
 2. 在“选项”对话框中，单击“调试”文件夹。
 

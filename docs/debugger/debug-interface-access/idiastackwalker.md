@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ad74f92765ee449eab1e3089511a063e70d96a0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2366c933bf072c295b29d06ff5610bd3735c0077
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62831928"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741512"
 ---
 # <a name="idiastackwalker"></a>IDiaStackWalker
-提供方法来执行堆栈遍历的.pdb 文件中使用的信息。
+提供使用 .pdb 文件中的信息执行堆栈审核的方法。
 
 ## <a name="syntax"></a>语法
 
@@ -29,21 +29,21 @@ IDiaStackWalker: IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
-下表显示的方法`IDiaStackWalker`。
+下表显示 `IDiaStackWalker` 的方法。
 
 |方法|描述|
 |------------|-----------------|
-|[IDiaStackWalker::getEnumFrames](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md)|检索 x86 堆栈帧枚举器的平台。|
+|[IDiaStackWalker::getEnumFrames](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md)|检索 x86 平台的堆栈帧枚举器。|
 |[IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md)|检索特定平台类型的堆栈帧枚举器。|
 
 ## <a name="remarks"></a>备注
-此接口用于获取已加载模块的堆栈帧的列表。 每个方法传递[IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md) （由客户端应用程序实现） 的对象，它提供所需的信息创建堆栈帧的列表。
+此接口用于获取已加载模块的堆栈帧的列表。 每个方法都传递一个[IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)对象（由客户端应用程序实现），该对象提供创建堆栈帧列表所需的信息。
 
-## <a name="notes-for-callers"></a>调用方的说明
-此接口通过调用`CoCreateInstance`方法的类标识符`CLSID_DiaStackWalker`而接口 ID 的`IID_IDiaStackWalker`。 该示例演示如何获取此接口。
+## <a name="notes-for-callers"></a>调用方说明
+此接口是通过以下方法获取的：调用具有类标识符 `CLSID_DiaStackWalker` 的 `CoCreateInstance` 方法和 `IID_IDiaStackWalker` 的接口 ID。 该示例演示如何获取此接口。
 
 ## <a name="example"></a>示例
-此示例演示如何获取`IDiaStackWalker`接口。
+此示例演示如何获取 `IDiaStackWalker` 接口。
 
 ```C++
 
@@ -60,11 +60,11 @@ if (FAILED(hr))
 ```
 
 ## <a name="requirements"></a>要求
-标头：dia2.h
+标头： Dia2
 
-库： diaguids.lib
+库： diaguids
 
-DLL: msdia80.dll
+DLL： msdia80
 
 ## <a name="see-also"></a>请参阅
 - [接口（调试接口访问 SDK）](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

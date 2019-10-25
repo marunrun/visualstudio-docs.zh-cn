@@ -1,5 +1,5 @@
 ﻿---
-title: 断言失败对话框 |Microsoft Docs
+title: "\"断言失败\" 对话框 |Microsoft Docs"
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 39362adf5837e3293782df04627af9acd06fdd88
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cb42067bb4c88777a6c25ace71f53b9d9b3aa36b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564614"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745764"
 ---
 # <a name="assertion-failed-dialog-box"></a>“断言失败”对话框
 断言语句指定了一个你预期程序中的某个特定点为 true 的条件。 如果该条件不为 true，则断言失败，程序的执行中断并出现此对话框。

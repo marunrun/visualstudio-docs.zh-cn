@@ -1,5 +1,5 @@
 ---
-title: 旧版语言服务模型 |Microsoft Docs
+title: 旧版语言服务的模型 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,42 +10,42 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6efe97e0a6ca5d2188aee9d44246f1d9fb347cda
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5b87106060d3fd66b3659f5d49159ebbb9be9ef6
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66326764"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72726379"
 ---
 # <a name="model-of-a-legacy-language-service"></a>旧版语言服务模型
-语言服务定义的元素和特定语言的功能，用于在编辑器提供特定于该语言的信息。 例如，在编辑器需要知道的元素和语言的关键字，才能支持语法突出显示。
+语言服务定义特定语言的元素和功能，并用于向编辑器提供特定于该语言的信息。 例如，编辑器需要了解语言的元素和关键字，以便支持语法着色。
 
- 语言服务由编辑器和包含编辑器中的视图的文本缓冲区与紧密合作。 Microsoft IntelliSense**快速信息**选项是通过语言服务提供一项功能的示例。
+ 语言服务与编辑器所管理的文本缓冲区和包含编辑器的视图紧密协作。 Microsoft IntelliSense **Quick Info**选项是语言服务提供的功能的一个示例。
 
 ## <a name="a-minimal-language-service"></a>最小语言服务
  最基本的语言服务包含以下两个对象：
 
-- *语言服务*实现<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>接口。 语言服务包含的语言，包括其名称、 文件扩展名，代码窗口管理器中和着色器有关的信息。
+- *语言服务*实现 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo> 接口。 语言服务包含有关该语言的信息，包括其名称、文件扩展名、代码窗口管理器和 colorizer。
 
-- *Colorizer*实现<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>接口。
+- *Colorizer*实现 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> 接口。
 
-  以下概念图显示了一个模型的基本语言服务。
+  以下概念绘图显示了基本语言服务的模型。
 
-  ![语言服务模型图](../../extensibility/media/vslanguageservicemodel.gif "vsLanguageServiceModel")基本语言服务模型
+  ![语言服务模型图形](../../extensibility/media/vslanguageservicemodel.gif "vsLanguageServiceModel")基本语言服务模型
 
-  文档窗口承载*文档视图*编辑器中，在此情况下的[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]核心编辑器。 文档视图和文本缓冲区拥有通过在编辑器中。 这些对象使用[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]通过专用的文档窗口称为*代码窗口*。 中包含代码窗口<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>对象是创建和控制的 IDE。
+  文档窗口承载编辑器的*文档视图*，在本例中为 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 核心编辑器。 文档视图和文本缓冲区由编辑器所有。 这些对象通过一个名为 "*代码窗口*" 的专用文档窗口处理 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]。 "代码" 窗口包含在由 IDE 创建和控制的 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> 对象中。
 
-  加载给定扩展名的文件时，编辑器查找与该扩展插件关联的语言服务并将传递给它的代码窗口通过调用<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetCodeWindowManager%2A>方法。 此语言服务将返回*代码窗口管理器*，它可以实现<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>接口。
+  加载具有给定扩展名的文件时，编辑器将查找与该扩展关联的语言服务，并通过调用 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetCodeWindowManager%2A> 方法将其传递到代码窗口。 语言服务将返回一个*代码窗口管理器，该管理器*实现 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> 接口。
 
-  下表概述了在模型中的对象。
+  下表概述了模型中的对象。
 
 | 组件 | 对象 | 函数 |
 |------------------| - | - |
-| 文本缓冲区 | <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> | Unicode 读取/写入文本流。 很可能要使用其他编码文本。 |
-| “代码”窗口 | <xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow> | 包含一个或多个文本视图的文档窗口。 当[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]是在多文档界面 (MDI) 模式下，代码窗口是 MDI 子窗体。 |
-| 文本视图 | <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> | 允许用户导航并通过使用键盘和鼠标来查看文本窗口。 文本视图作为一个编辑器，显示给用户。 您可以使用普通的编辑器窗口、 输出窗口和即时窗口中的文本视图。 此外，还可以配置代码窗口中的一个或多个文本视图。 |
-| 文本管理器 | 由管理<xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>服务，从其获取<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager>指针 | 维护由前面所述的所有组件共享的常见信息组件。 |
-| 语言服务 | 实现取决于;实现 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo> | 为编辑器提供了特定于语言的信息，如语法突出显示、 语句完成和大括号匹配的对象。 |
+| 文本缓冲区 | <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> | Unicode 读/写文本流。 文本可能会使用其他编码。 |
+| “代码”窗口 | <xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow> | 包含一个或多个文本视图的文档窗口。 在多文档界面（MDI）模式下 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 时，代码窗口是一个 MDI 子级。 |
+| 文本视图 | <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> | 允许用户使用键盘和鼠标导航并查看文本的窗口。 文本视图将作为编辑器显示给用户。 您可以在普通编辑器窗口、"输出" 窗口和 "即时" 窗口中使用文本视图。 此外，还可以在代码窗口中配置一个或多个文本视图。 |
+| 文本管理器 | 由你从中获取 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager> 指针的 <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager> 服务管理 | 维护前面介绍的所有组件共享的公共信息的组件。 |
+| 语言服务 | 依赖实现;实现 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo> | 一个对象，该对象为编辑器提供特定于语言的信息，如语法突出显示、语句完成和大括号匹配。 |
 
 ## <a name="see-also"></a>请参阅
 - [自定义编辑器中的文档数据和文档视图](../../extensibility/document-data-and-document-view-in-custom-editors.md)

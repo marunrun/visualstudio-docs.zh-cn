@@ -10,12 +10,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 808eecab2b4f468b730b6c58cce32d08ca523d0d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 74d64b4fe0c0aa5293e11daad13f632c4a487736
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660325"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747421"
 ---
 # <a name="rules-propagate-changes-within-the-model"></a>规则在模型内部传播更改
 你可以创建一个存储规则，以便在可视化和建模 SDK （VMSDK）中将更改从一个元素传播到另一个元素。 当存储区中的任何元素发生更改时，将计划执行规则，通常是在最外面的事务提交时执行。 不同类型的事件有不同类型的规则，例如添加元素或删除元素。 您可以将规则附加到特定类型的元素、形状或关系图。 许多内置功能都是由规则定义的：例如，规则确保在模型更改时更新关系图。 可以通过添加自己的规则来自定义域特定语言。

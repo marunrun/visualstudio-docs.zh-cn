@@ -11,32 +11,32 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 177b0bb3fddebab6518a851bf8ce4c4d34d43897
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e7c46473610c96779d0c54e06e82cf884216b13b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66324572"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72722011"
 ---
 # <a name="validating-breakpoints-in-a-legacy-language-service"></a>验证旧版语言服务中的断点
-断点指示它在调试器中运行时程序执行应停止的特定点。 用户可以在源文件中的任意行上放置一个断点，因为在编辑器并不知道什么构成了断点的有效位置。 启动调试器时，所有标记断点 （称为挂起断点） 将绑定到正在运行的程序中的相应位置。 在同一时间断点进行验证，以便确保它们将标记有效的代码位置。 例如上一条注释, 的断点无效，因为在源代码中该位置没有任何代码。 调试器将禁用无效的断点。
+断点指示当程序在调试器中运行时，程序执行应在某个特定时间点停止。 用户可以在源文件中的任意行上放置一个断点，因为该编辑器并不知道哪些内容构成了断点的有效位置。 启动调试器时，所有标记的断点（称为挂起断点）都将绑定到正在运行的程序中的适当位置。 同时对断点进行验证，以确保它们标记有效的代码位置。 例如，注释上的断点无效，因为源代码中的该位置没有代码。 调试器将禁用无效断点。
 
- 由于语言服务知道有关所显示的源代码，它可以验证断点，之后再启动调试器。 您可以重写<xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A>方法以返回指定断点的有效位置的跨度。 启动调试器，但无需等待调试器加载的无效的断点会通知用户时，仍被验证断点位置。
+ 由于语言服务知道要显示的源代码，因此它可以在启动调试器之前验证断点。 可以重写 <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> 方法，以返回指定断点的有效位置的跨度。 启动调试器时仍会验证断点位置，但不等待调试器加载时，用户将收到无效断点的通知。
 
-## <a name="implementing-support-for-validating-breakpoints"></a>实现支持用于验证断点
+## <a name="implementing-support-for-validating-breakpoints"></a>实现对验证断点的支持
 
-- <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A>方法给定的断点的位置。 您的实现必须确定位置有效，以及指示此通过返回标识的代码的文本跨距关联的行位置断点。
+- 为 <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> 方法指定断点的位置。 你的实现必须确定位置是否有效，并通过返回一个文本跨度来指示这一点，该文本跨度标识与断点的行位置关联的代码。
 
-- 返回<xref:Microsoft.VisualStudio.VSConstants.S_OK>位置是否有效，或<xref:Microsoft.VisualStudio.VSConstants.S_FALSE>如果不是有效。
+- 如果位置有效，则返回 <xref:Microsoft.VisualStudio.VSConstants.S_OK>; 如果该位置无效，则返回 <xref:Microsoft.VisualStudio.VSConstants.S_FALSE>。
 
-- 如果断点有效文本范围将突出显示以及断点。
+- 如果断点有效，文本跨距将与断点一起突出显示。
 
-- 如果断点无效，在状态栏中会显示一条错误消息。
+- 如果该断点无效，状态栏中将显示一条错误消息。
 
 ### <a name="example"></a>示例
- 此示例演示一种实现<xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A>方法，用于指定位置处调用分析器以获取代码的范围 （如果有）。
+ 此示例演示 <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> 方法的实现，该方法调用分析器以获取指定位置的代码范围（如果有）。
 
- 此示例假定您已添加`GetCodeSpan`方法<xref:Microsoft.VisualStudio.Package.AuthoringSink>类，用于验证在文本范围，并返回`true`如果它是有效的断点位置。
+ 此示例假设已将 `GetCodeSpan` 方法添加到验证文本跨距的 <xref:Microsoft.VisualStudio.Package.AuthoringSink> 类，并且如果它是有效的断点位置，则返回 `true`。
 
 ```csharp
 using Microsoft VisualStudio;

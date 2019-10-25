@@ -22,15 +22,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c92424275a1dff69863b81fbf8567fbc4b84499
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c2129db98293cef678527fb331992c6c5960d8f9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62905550"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72731387"
 ---
 # <a name="macros-for-reporting"></a>用于报告的宏
-对于调试，你可以使用 **_RPTn**并 **_RPTFn**在 CRTDBG 中定义的宏。H、 要替换的使用`printf`语句。 无需在 inclose **#ifdef**s，因为它们自动不会显示在你的发布生成时 **_DEBUG**并不定义。
+对于调试，你可以使用 CRTDBG.H 中定义的 **_RPTn**和 **_RPTFn**宏。H，用来替换 `printf` 语句的使用。 不需要在 **#ifdef**中 inclose 它们，因为在未定义 **_debug**时，它们会在发布版本中自动消失。
 
 |宏|描述|
 |-----------|-----------------|
@@ -54,7 +54,7 @@ ms.locfileid: "62905550"
 if (someVar > MAX_SOMEVAR) _RPTF2(_CRT_WARN, "In NameOfThisFunc( ), someVar= %d, otherVar= %d\n", someVar, otherVar );
 ```
 
-您可能会发现特定应用程序需要调试报告功能，它不提供用 C 运行库提供的宏。 对于这些情况下，可以编写专门为适合你自己的需求而设计的宏。 例如，可以在其中一个头文件中包含以下代码来定义名为 ALERT_IF2 的宏：
+你可能会发现，特定应用程序需要调试报告，而 C 运行库提供的宏不提供该报告。 对于这些情况，您可以编写专门设计的宏来满足您自己的要求。 例如，可以在其中一个头文件中包含以下代码来定义名为 ALERT_IF2 的宏：
 
 ```cpp
 #ifndef _DEBUG                  /* For RELEASE builds */
@@ -70,14 +70,14 @@ if (someVar > MAX_SOMEVAR) _RPTF2(_CRT_WARN, "In NameOfThisFunc( ), someVar= %d,
 #endif
 ```
 
- 调用一次**ALERT_IF2**可以执行的所有函数**printf**代码：
+ 调用**ALERT_IF2**时，可以执行**printf**代码的所有函数：
 
 ```cpp
 ALERT_IF2(someVar > MAX_SOMEVAR, "OVERFLOW! In NameOfThisFunc( ),
 someVar=%d, otherVar=%d.\n", someVar, otherVar );
 ```
 
- 您可以轻松更改自定义的宏来增加或减少报告到不同的目标的信息。 随着在调试需求的发展，这种方法是特别有用。
+ 您可以轻松地更改自定义宏，以便向不同目标报告更多或更少的信息。 当调试需求不断变化时，此方法特别有用。
 
 ## <a name="see-also"></a>请参阅
 - [CRT 调试方法](../debugger/crt-debugging-techniques.md)

@@ -1,5 +1,5 @@
 ---
-title: 入门 （调试接口访问 SDK） |Microsoft Docs
+title: 入门（调试接口访问 SDK） |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -13,27 +13,27 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 089d824a6f693d7a0661b2e099ded82e0b02f403
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2dd6a98f377ba295d6a866c9db95671de4ff16ea
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554401"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745107"
 ---
 # <a name="getting-started-debug-interface-access-sdk"></a>入门（调试接口访问 SDK）
-调试接口访问 (DIA) SDK 将向您提供指导文档和示例，说明了如何使用 DIA API。 在 DIA SDK 中使用接口和方法，可以开发自定义应用程序打开的文件.pdb 和.dbg 文件并搜索其内容的符号、 值、 属性、 地址和其他调试信息。 此 SDK 还提供了引用表中找到与符号关联的属性C++应用程序。
+调试接口访问（DIA） SDK 提供了说明文档和演示如何使用 DIA API 的示例。 使用 DIA SDK 中的接口和方法开发自定义应用程序，这些应用程序打开 .pdb 和 dbg 文件，然后在其内容中搜索符号、值、属性、地址和其他调试信息。 此 SDK 还提供与应用程序中C++的符号关联的属性的引用表。
 
- 若要充分利用 DIA SDK，应熟悉以下：
+ 为了最好地使用 DIA SDK，你应熟悉以下内容：
 
 - C++编程语言
 
 - COM 编程
 
-- 用于编译示例 visual Studio 集成的开发环境 (IDE)
+- 用于编译示例的 Visual Studio 集成开发环境（IDE）
 
-  使用 Visual Studio 通常安装 DIA SDK，其默认位置是 *[驱动器]* \Program Files\Microsoft Visual Studio 9.0\DIA SDK。 作为安装的一部分，msdia90.dll，实现 DIA SDK，将自动注册，因此，您需要执行的操作使用它，只需包括`dia2.h`程序和链接到`diaguids.lib`。
+  DIA SDK 通常随 Visual Studio 一起安装，其默认位置为 *[drive]* \Program Files\Microsoft Visual studio 9.0 \ DIA SDK。 作为安装的一部分，将自动注册实现 DIA SDK 的 msdia90，因此，你需要做的就是将 `dia2.h` 包含在程序中并链接到 `diaguids.lib`。
 
-  标头： include\dia2.h
+  标头： include\dia2。h
 
   库： lib\diaguids.lib
 
@@ -45,11 +45,11 @@ ms.locfileid: "62554401"
 
 [概述](../../debugger/debug-interface-access/overview-debug-interface-access-sdk.md)
 
-评审 dia 时的基本体系结构
+查看 DIA 的基本体系结构。
 
 [查询 .Pdb 文件](../../debugger/debug-interface-access/querying-the-dot-pdb-file.md)
 
-分步说明了如何使用 DIA API 来查询.pdb 文件。
+提供有关如何使用 DIA API 查询 .pdb 文件的分步说明。
 
 ## <a name="see-also"></a>请参阅
 

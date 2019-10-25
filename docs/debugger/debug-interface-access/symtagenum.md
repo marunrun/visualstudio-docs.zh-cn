@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dbc86bb43048b06bc1f7080bc6cb579771138c49
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 806fe878468baa06b52a15879ceaff1b376461e9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62854717"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738519"
 ---
 # <a name="symtagenum"></a>SymTagEnum
 指定符号的类型。
@@ -67,86 +67,86 @@ enum SymTagEnum {
 ```
 
 ## <a name="elements"></a>元素
-`SymTagNull` 指示符号具有任何类型。
+`SymTagNull` 指示该符号没有类型。
 
-`SymTagExe` 表示符号是.exe 文件。 只有一个`SymTagExe`每个符号存储区的符号。 它可作为全局作用域并没有词法父级。
+`SymTagExe` 指示该符号为 .exe 文件。 每个符号存储只有一个 `SymTagExe` 符号。 它充当全局范围，没有词法父项。
 
-`SymTagCompiland` 表示符号存储区的每个编译单位组件编译单位符号。 对于本机应用程序，`SymTagCompiland`符号对应于对象文件链接到该映像。 对于某些类型的 Microsoft 中间语言 (MSIL) 映像，还有一个编译单位，每个类。
+`SymTagCompiland` 指示符号存储区的每个编译单位组件的编译单位符号。 对于本机应用程序，`SymTagCompiland` 符号对应于链接到图像的对象文件。 对于某些类型的 Microsoft 中间语言（MSIL）映像，每个类都有一个编译单位。
 
-`SymTagCompilandDetails` 指示该符号包含扩展的属性的编译单位。 检索这些属性可能需要加载编译单位符号。
+`SymTagCompilandDetails` 指示该符号包含编译单位的扩展属性。 检索这些属性可能需要加载编译单位符号。
 
-`SymTagCompilandEnv` 表示符号是可编译单位为定义的环境字符串。
+`SymTagCompilandEnv` 指示该符号是为编译单位定义的环境字符串。
 
 `SymTagFunction` 指示该符号是一个函数。
 
-`SymTagBlock` 表示符号是嵌套的块。
+`SymTagBlock` 指示该符号是嵌套块。
 
-`SymTagData` 指示符号数据。
+`SymTagData` 指示符号为 data。
 
-`SymTagAnnotation` 指示符号的代码注释。 此符号的子级是连续的数据的字符串 (`SymTagData`， `LocIsConstant`， `DataIsConstant`)。 大多数客户端忽略此符号。
+`SymTagAnnotation` 指示符号适用于代码批注。 此符号的子级是常量数据字符串（`SymTagData`、`LocIsConstant` `DataIsConstant`）。 大多数客户端会忽略此符号。
 
-`SymTagLabel` 表示符号是一个标签。
+`SymTagLabel` 指示该符号是一个标签。
 
-`SymTagPublicSymbol` 表示符号是公共符号。 对于本机应用程序，该符号是链接映像时遇到的 COFF 外部符号。
+`SymTagPublicSymbol` 指示符号为公共符号。 对于本机应用程序，此符号是链接图像时遇到的 COFF 外部符号。
 
-`SymTagUDT` 表示符号是用户定义类型 （结构、 类或联合）。
+`SymTagUDT` 指示该符号是用户定义的类型（结构、类或联合）。
 
-`SymTagEnum` 指示该符号是一个枚举。
+`SymTagEnum` 指示符号为枚举。
 
-`SymTagFunctionType` 表示符号是函数签名类型。
+`SymTagFunctionType` 指示该符号是函数签名类型。
 
-`SymTagPointerType` 表示符号是指针类型。
+`SymTagPointerType` 指示符号是指针类型。
 
-`SymTagArrayType` 表示符号是数组类型。
+`SymTagArrayType` 指示符号为数组类型。
 
-`SymTagBaseType` 表示符号是基类型。
+`SymTagBaseType` 指示符号为基类型。
 
-`SymTagTypedef` 表示符号是`typedef`，另一种类型的别名。
+`SymTagTypedef` 指示符号是一个 `typedef`，即另一个类型的别名。
 
-`SymTagBaseClass` 表示符号是用户定义类型的基类。
+`SymTagBaseClass` 指示该符号是用户定义类型的基类。
 
-`SymTagFriend` 表示符号是用户定义类型的友元。
+`SymTagFriend` 指示该符号是用户定义类型的友元。
 
-`SymTagFunctionArgType` 指示该符号是函数的参数。
+`SymTagFunctionArgType` 指示该符号是函数自变量。
 
-`SymTagFuncDebugStart` 表示符号是函数的序言代码的结束位置。
+`SymTagFuncDebugStart` 指示该符号是函数的序言代码的结束位置。
 
-`SymTagFuncDebugEnd` 表示符号是函数的尾声代码的开始位置。
+`SymTagFuncDebugEnd` 指示该符号是函数的尾声代码的起始位置。
 
-`SymTagUsingNamespace` 表示符号是当前作用域中处于活动状态的命名空间名称。
+`SymTagUsingNamespace` 指示符号是在当前范围内处于活动状态的命名空间名称。
 
-`SymTagVTableShape` 表示符号是虚拟表说明。
+`SymTagVTableShape` 指示符号为虚拟表说明。
 
-`SymTagVTable` 表示符号是一个虚拟表指针。
+`SymTagVTable` 指示符号为虚拟表指针。
 
-`SymTagCustom` 指示该符号是一个自定义的符号和 dia 时不会解释
+`SymTagCustom` 指示该符号是一个自定义符号，不由 DIA 进行解释。
 
-`SymTagThunk` 表示符号是可用于 16 和 32 位代码之间共享数据的转换 （thunk）。
+`SymTagThunk` 指示符号是用于在16到32位代码之间共享数据的 thunk。
 
-`SymTagCustomType` 表示符号是可自定义编译器符号。
+`SymTagCustomType` 指示该符号是自定义编译器符号。
 
-`SymTagManagedType` 表示符号是在元数据中。
+`SymTagManagedType` 指示符号在元数据中。
 
-`SymTagDimension` 表示符号是 FORTRAN 多维数组。
+`SymTagDimension` 指示该符号为 FORTRAN 多维数组。
 
-`SymTagCallSite` 指示该符号表示调用站点。
+`SymTagCallSite` 指示符号表示调用站点。
 
-`SymTagInlineSite` 指示该符号表示内联站点。
+`SymTagInlineSite` 指示符号表示内联站点。
 
-`SymTagBaseInterface` 表示符号是基接口。
+`SymTagBaseInterface` 指示该符号是基接口。
 
-`SymTagVectorType` 表示符号是矢量类型。
+`SymTagVectorType` 指示符号为矢量类型。
 
-`SymTagMatrixType` 表示符号是矩阵类型。
+`SymTagMatrixType` 指示符号为矩阵类型。
 
-`SymTagHLSLType` 表示符号是高级别着色器语言类型。
+`SymTagHLSLType` 指示该符号是高级着色器语言类型。
 
 ## <a name="remarks"></a>备注
-调试文件中的所有符号都有一个标识标记的指定符号的类型。
+调试文件中的所有符号都具有指定符号类型的标识标记。
 
-此枚举中的值返回通过调用[idiasymbol:: Get_symtag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)方法。
+此枚举中的值由对[IDiaSymbol：： get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)方法的调用返回。
 
-此枚举中的值传递到以下方法来限制对特定符号类型的搜索作用域：
+此枚举中的值将传递给以下方法，以将搜索范围限制为特定的符号类型：
 
 - [IDiaSession::findSymbolByAddr](../../debugger/debug-interface-access/idiasession-findsymbolbyaddr.md)
 
@@ -165,7 +165,7 @@ enum SymTagEnum {
 - [IDiaSymbol::findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)
 
 ## <a name="requirements"></a>要求
-标头： cvconst.h
+标头： cvconst
 
 ## <a name="see-also"></a>请参阅
 - [枚举和结构](../../debugger/debug-interface-access/enumerations-and-structures.md)

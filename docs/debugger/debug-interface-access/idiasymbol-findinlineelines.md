@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::findInlineeLines |Microsoft Docs
+title: IDiaSymbol：： findInlineeLines |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2f5f38205770b7b7574a37b700b3c9b23b4fe90
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 4876c3fe5d44ae35a26da2b68765eacc01ccfba9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62832432"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741231"
 ---
 # <a name="idiasymbolfindinlineelines"></a>IDiaSymbol::findInlineeLines
-检索一个枚举，允许客户端来循环访问的所有函数的内联，直接或间接地，此符号中的行号信息。
+检索一个枚举，该枚举允许客户端循环访问此符号中直接或间接内联的所有函数的行号信息。
 
 ## <a name="syntax"></a>语法
 
@@ -31,10 +31,10 @@ HRESULT findInlineeLines ( 
 #### <a name="parameters"></a>参数
  `ppResult`
 
-[out]保存`IDiaEnumLineNumbers`对象，其中包含检索到的行号的列表。
+弄保存一个包含所检索的行号列表的 `IDiaEnumLineNumbers` 对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

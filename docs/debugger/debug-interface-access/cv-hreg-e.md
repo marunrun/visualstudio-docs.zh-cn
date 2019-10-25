@@ -12,18 +12,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 37786442124eafea719454ac94c704984f1703f3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aac055930e9d1b016bbdc4949cbbdbee798cfaa2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554969"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745306"
 ---
-# <a name="cvhrege"></a>CV_HREG_e
-指定目标注册。
+# <a name="cv_hreg_e"></a>CV_HREG_e
+指定目标寄存器。
 
 > [!NOTE]
-> 因为`CV_HREG_e`枚举太大，无法复制无法全部展示，作为参考提供的简化的版本。 在斜体标记缺失的条目。 完整的枚举是 cvconst.h 标头文件中。
+> 由于 `CV_HREG_e` 枚举太大而无法在此处完整复制，因此提供了一个缩写形式作为参考。 缺失项以斜体形式存在。 Cvconst 头文件中提供了完整的枚举。
 
 ## <a name="syntax"></a>语法
 
@@ -409,32 +409,32 @@ enum CV_HREG_e {
 ```
 
 ## <a name="elements"></a>元素
-CV_REG_ * 注册 Intel 80x86 和 ix86 处理器和 p 代码使用。
+CV_REG_ * 寄存器，由 Intel 80x86 和 ix86 处理器以及 p 代码使用。
 
-CV_R68_ * 注册 68 K 处理器使用。
+68K 处理器使用的 CV_R68_ * 寄存器。
 
-CV_M4_ * 注册由 MIPS 4000 系列处理器。
+MIPS 4000 系列处理器使用的 CV_M4_ * 寄存器。
 
-CV_ALPHA_ * 注册使用的数字设备 Corporation Alpha AXP 系列处理器。
+CV_ALPHA_ * 注册由数字设备 Corporation Alpha AXP 系列处理器使用。
 
-CV_PPC_ * 注册/IBM Motorola PowerPC 处理器使用。
+Motorola/IBM PowerPC processor 使用的 CV_PPC_ * 寄存器。
 
-CV_SH3_ * 和 CV_SH_\*由人： Hitachi SH3 和 Hitachi SH 系列处理器的寄存器。
+Hitachi SH3 和 Hitachi SH 系列处理器使用的 CV_SH3_ * 和 CV_SH_ \* 寄存器。
 
-CV_ARM_ * 注册高级 RISC 计算机 (ARM) 处理器使用。
+CV_ARM_ * 寄存器由高级 RISC 计算机（ARM）处理器使用。
 
-CV_IA64_ * 注册由 Intel IA64 系列处理器。
+CV_IA64_ * 寄存器。
 
-CV_TRI_ * 注册 Infineon 技术 TriCore 处理器使用。
+Infineon 技术 TriCore 处理器使用的 CV_TRI_ * 寄存器。
 
-CV_AM33_ * 注册 Matsushita/Panasonic AM33 和使用相关的处理器。
+Matsushita/Panasonic AM33 和相关处理器使用的 CV_AM33_ * 寄存器。
 
-CV_M32R_ * 注册 Mitsubishi M32R 处理器使用。
+Mitsubishi M32R 处理器使用的 CV_M32R_ * 寄存器。
 
 ## <a name="remarks"></a>备注
-每个处理器类型使用其自己独特的寄存器。
+每个处理器类型都使用其自己的唯一寄存器集。
 
-此枚举中的值将传递到以下方法：
+此枚举中的值将传递给以下方法：
 
 - [IDiaStackWalkFrame::get_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-get-registervalue.md)
 
@@ -447,7 +447,7 @@ CV_M32R_ * 注册 Mitsubishi M32R 处理器使用。
 - [IDiaStackFrame::get_registerValue](../../debugger/debug-interface-access/idiastackframe-get-registervalue.md)
 
 ## <a name="requirements"></a>要求：
-标头： cvconst.h
+标头： cvconst
 
 ## <a name="see-also"></a>请参阅
 - [枚举和结构](../../debugger/debug-interface-access/enumerations-and-structures.md)

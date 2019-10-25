@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d5999febf6e926ef8e9beb365728a3b150e1a38
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f5d64e9484b9450f5211e271df3b154ebab0fa75
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839262"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742106"
 ---
 # <a name="idiasessionfindlinesbylinenum"></a>IDiaSession::findLinesByLinenum
-确定将编译单位在源文件中指定的行号位于内或附近的行号。
+确定源文件中指定行号位于或接近的编译单位的行号。
 
 ## <a name="syntax"></a>语法
 
@@ -37,32 +37,32 @@ HRESULT findLinesByLinenum ( 
 #### <a name="parameters"></a>参数
 `compiland`
 
-[in][IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象，表示要在其中搜索的行号编译单位。 此参数不能为 `NULL`。
+中表示要在其中搜索行号的编译单位的[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象。 此参数不能为 `NULL`。
 
 `file`
 
-[in][IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)对象，表示要在中搜索的源文件。 此参数不能为 `NULL`。
+中一个[IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)对象，表示要在其中进行搜索的源文件。 此参数不能为 `NULL`。
 
 `linenum`
 
-[in]指定基于 1 的行号。
+中指定一个从1开始的行号。
 
 > [!NOTE]
-> 您不能使用零指定所有行 (使用[idiasession:: Findlines](../../debugger/debug-interface-access/idiasession-findlines.md)方法来查找所有行)。
+> 不能使用零来指定所有行（使用[IDiaSession：： findLines](../../debugger/debug-interface-access/idiasession-findlines.md)方法查找所有行）。
 
 `column`
 
-[in]指定的列号。 使用零来指定所有列。 列是行的字节的偏移量。
+中指定列号。 使用零来指定所有列。 列是行中的字节偏移量。
 
 `ppResult`
 
-[out]返回[IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) objta 包含的行号列表的检索。
+弄返回包含检索的行号列表的[IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) objta。
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回`S_OK`; 否则为返回错误代码。
+如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="example"></a>示例
-下面的示例演示如何打开的源文件、 枚举提供此文件中，编译单位和每个编译单位的开始位置的源文件中找到的行号。
+下面的示例演示如何打开源文件，枚举此文件所提供的 compiland，并在每个编译单位的起始位置查找源文件中的行号。
 
 ```C++
 void ShowLinesInCompilands(IDiaSession *pSession, LPCOLESTR filename)

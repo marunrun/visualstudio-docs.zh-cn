@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 81d1a256b4300510ed31c163d92cea89df884aac
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2de57f0d3bd44e4d46f19ee74484380bf0e6f2ae
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832727"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742845"
 ---
 # <a name="idiapropertystorage"></a>IDiaPropertyStorage
-允许你读取 DIA 属性集的持久性属性。
+允许读取 DIA 属性集的持久性属性。
 
 ## <a name="syntax"></a>语法
 
@@ -29,24 +29,24 @@ IDiaPropertyStorage : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
-下表显示的方法`IDiaPropertyStorage`。
+下表显示 `IDiaPropertyStorage` 的方法。
 
 |方法|描述|
 |------------|-----------------|
-|[IDiaPropertyStorage::Enum](../../debugger/debug-interface-access/idiapropertystorage-enum.md)|获取一个指向枚举数的这组内的属性。|
-|[IDiaPropertyStorage::ReadBOOL](../../debugger/debug-interface-access/idiapropertystorage-readbool.md)|读取`BOOL`属性组中的值。|
-|[IDiaPropertyStorage::ReadBSTR](../../debugger/debug-interface-access/idiapropertystorage-readbstr.md)|读取`BSTR`属性组中的值。|
-|[IDiaPropertyStorage::ReadDWORD](../../debugger/debug-interface-access/idiapropertystorage-readdword.md)|读取`DWORD`属性组中的值。|
-|[IDiaPropertyStorage::ReadLONG](../../debugger/debug-interface-access/idiapropertystorage-readlong.md)|读取`LONG`属性组中的值。|
+|[IDiaPropertyStorage::Enum](../../debugger/debug-interface-access/idiapropertystorage-enum.md)|获取一个指针，该指针指向此集中的属性的枚举数。|
+|[IDiaPropertyStorage::ReadBOOL](../../debugger/debug-interface-access/idiapropertystorage-readbool.md)|读取属性集中 `BOOL` 值。|
+|[IDiaPropertyStorage::ReadBSTR](../../debugger/debug-interface-access/idiapropertystorage-readbstr.md)|读取属性集中 `BSTR` 值。|
+|[IDiaPropertyStorage::ReadDWORD](../../debugger/debug-interface-access/idiapropertystorage-readdword.md)|读取属性集中 `DWORD` 值。|
+|[IDiaPropertyStorage::ReadLONG](../../debugger/debug-interface-access/idiapropertystorage-readlong.md)|读取属性集中 `LONG` 值。|
 |[IDiaPropertyStorage::ReadMultiple](../../debugger/debug-interface-access/idiapropertystorage-readmultiple.md)|读取属性集中的属性值。|
-|[IDiaPropertyStorage::ReadPropertyNames](../../debugger/debug-interface-access/idiapropertystorage-readpropertynames.md)|获取相对应的字符串名称给定属性标识符。|
-|[IDiaPropertyStorage::ReadULONGLONG](../../debugger/debug-interface-access/idiapropertystorage-readulonglong.md)|读取`ULONGLONG`属性组中的值。|
+|[IDiaPropertyStorage::ReadPropertyNames](../../debugger/debug-interface-access/idiapropertystorage-readpropertynames.md)|获取给定属性标识符对应的字符串名称。|
+|[IDiaPropertyStorage::ReadULONGLONG](../../debugger/debug-interface-access/idiapropertystorage-readulonglong.md)|读取属性集中 `ULONGLONG` 值。|
 
 ## <a name="remarks"></a>备注
-属性集内的每个属性由属性标识符 (ID)，4 字节`ULONG`该集的唯一值。 通过公开的属性`IDiaPropertyStorage`接口对应的父接口中的可用属性。 例如的属性[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)可以通过名称访问接口`IDiaPropertyStorage`接口 (但，请注意，即使该属性可能是可访问，它并不意味着该属性是有效的特定`IDiaSymbol`对象)。
+属性集内的每个属性都由属性标识符（ID）标识，这是一个由四个字节构成的唯一的 `ULONG` 值。 通过 `IDiaPropertyStorage` 接口公开的属性对应于父界面中提供的属性。 例如，可以通过 `IDiaPropertyStorage` 接口按名称访问[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)接口的属性（请注意，尽管属性可能可访问，但并不意味着属性对于特定 `IDiaSymbol` 对象有效）。
 
-## <a name="notes-for-callers"></a>调用方的说明
-通过调用来获取此接口`QueryInterface`另一个接口上的方法。 以下接口可用于查询`IDiaPropertyStorage`接口：
+## <a name="notes-for-callers"></a>调用方说明
+通过在另一个接口上调用 `QueryInterface` 方法来获取此接口。 可以为 `IDiaPropertyStorage` 接口查询以下接口：
 
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)
 
@@ -63,7 +63,7 @@ IDiaPropertyStorage : IUnknown
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)
 
 ## <a name="example"></a>示例
-此示例中演示的功能可显示所有属性公开的`IDiaPropertyStorage`对象。 请参阅[IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)接口以举例说明如何`IDiaPropertyStorage`接口的均来自[IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)接口。
+此示例演示一个函数，该函数显示 `IDiaPropertyStorage` 对象公开的所有属性。 有关如何从[IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)接口获取 `IDiaPropertyStorage` 接口的示例，请参阅[IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)接口。
 
 ```C++
 void PrintPropertyStorage(IDiaPropertyStorage* pPropertyStorage)
@@ -120,11 +120,11 @@ void PrintPropertyStorage(IDiaPropertyStorage* pPropertyStorage)
 ```
 
 ## <a name="requirements"></a>要求
-标头：dia2.h
+标头： Dia2
 
-库： diaguids.lib
+库： diaguids
 
-DLL: msdia80.dll
+DLL： msdia80
 
 ## <a name="see-also"></a>请参阅
 - [接口（调试接口访问 SDK）](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

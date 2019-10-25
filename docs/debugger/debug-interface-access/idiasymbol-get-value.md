@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f7eee2acc1c131e146f115d75130eabbb5fd1a8
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: ea0a0a2df1687d965437a8977eea649f77ea1ce4
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62834540"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738933"
 ---
-# <a name="idiasymbolgetvalue"></a>IDiaSymbol::get_value
-检索一个常量值。
+# <a name="idiasymbolget_value"></a>IDiaSymbol::get_value
+检索常量的值。
 
 ## <a name="syntax"></a>语法
 
@@ -33,16 +33,16 @@ HRESULT get_value (
 #### <a name="parameters"></a>参数
 `pRetVal`
 
-[in、 out]一个`VARIANT`使用的常量的值填充的对象。
+[in，out]使用常量的值填充的 `VARIANT` 对象。
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。
+> @No__t_0 的返回值意味着该属性对符号不可用。
 
 ## <a name="remarks"></a>备注
-传递给此方法之前，必须初始化的提供的变体。 有关详细信息，请参阅示例。
+必须先初始化提供的变量，然后才能将其传递到此方法。 有关详细信息，请参阅示例。
 
 ## <a name="example"></a>示例
 

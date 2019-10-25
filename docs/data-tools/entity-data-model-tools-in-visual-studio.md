@@ -8,12 +8,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 53b87ce39f0eb5b1455f0a38b2aea7cc6b604342
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6efcd0ca4e8274df7667b5a5b2b75020def8c358
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648531"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807027"
 ---
 # <a name="entity-framework-tools-in-visual-studio"></a>Visual Studio 中的 Entity Framework Tools
 
@@ -41,7 +41,7 @@ Entity Framework Tools 旨在帮助您生成实体框架（EF）应用程序。 
   > [!NOTE]
   > 从 Visual Studio 2010 开始，实体框架工具不支持 [!INCLUDE[ss2k](../data-tools/includes/ss2k_md.md)]。
 
-这些工具可生成或修改 *.edmx*文件。 此 *.edmx*文件包含描述概念模型、存储模型和这些模型之间的映射的信息。 有关详细信息，请参阅[EDMX](https://docs.microsoft.com/ef/ef6/)。
+这些工具可生成或修改 *.edmx*文件。 此 *.edmx*文件包含描述概念模型、存储模型和这些模型之间的映射的信息。 有关详细信息，请参阅[EDMX](/ef/ef6/)。
 
 [实体框架 Power Tools](https://marketplace.visualstudio.com/items?itemName=EntityFrameworkTeam.EntityFrameworkPowerToolsBeta4)可帮助生成使用实体数据模型的应用程序。 Power tools 可以生成概念模型、验证现有模型、生成包含基于概念模型的对象类的源代码文件，并生成包含模型生成的视图的源代码文件。 有关详细信息，请参阅[预生成的映射视图](https://docs.microsoft.com/ef/ef6/fundamentals/performance/pre-generated-views)。
 
@@ -50,8 +50,8 @@ Entity Framework Tools 旨在帮助您生成实体框架（EF）应用程序。 
 | Title | 描述 |
 | - | - |
 | [ADO.NET 实体框架](/dotnet/framework/data/adonet/ef/index) | 描述如何使用 [!INCLUDE[adonet_ef](../data-tools/includes/adonet_ef_md.md)] 提供的 [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] 工具来创建应用程序。 |
-| [实体数据模型](/dotnet/framework/data/adonet/entity-data-model) | 提供有关使用 [!INCLUDE[adonet_ef](../data-tools/includes/adonet_ef_md.md)] 上构建的应用程序所使用的数据的链接和信息。 |
-| [实体框架（EF）文档）](https://docs.microsoft.com/ef/ef6/get-started) | 提供视频、教程和高级文档的索引，以帮助您充分利用实体框架。 |
+| [实体数据模型](/dotnet/framework/data/adonet/entity-data-model) | 提供有关使用 [!INCLUDE[adonet_ef](../data-tools/includes/adonet_ef_md.md)]上构建的应用程序所使用的数据的链接和信息。 |
+| [实体框架（EF）文档）](/ef/ef6/get-started) | 提供视频、教程和高级文档的索引，以帮助您充分利用实体框架。 |
 | [ASP.NET 5 应用程序到新数据库](https://docs.efproject.net/en/latest/platforms/aspnetcore/new-db.html) | 介绍如何使用实体框架7创建新的 ASP.NET 5 应用程序。 |
 
 ## <a name="see-also"></a>请参阅

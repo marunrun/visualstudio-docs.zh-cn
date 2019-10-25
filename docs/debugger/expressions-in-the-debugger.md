@@ -19,20 +19,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1134ac538487487834b754407a3cc1a90175c56b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6040988961e918c66ed08e7620607d100b2e07fe
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62849947"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72736206"
 ---
 # <a name="expressions-in-the-visual-studio-debugger"></a>Visual Studio 调试器中的表达式
 Visual Studio 调试器包括表达式计算器，当您在 **“快速监视”** 对话框、 **“监视”** 窗口或 **“即时”** 窗口中输入表达式时，这些计算器可以对其进行计算。 这些表达式计算器还可以在 **“断点”** 窗口和调试器中的许多其他位置使用。
 
-以下各节介绍了 Visual Studio 支持的语言表达式计算的限制。
+以下各节介绍 Visual Studio 支持的语言的表达式计算限制。
 
 ## <a name="f-expressions-are-not-supported"></a>不支持 F# 表达式。
-无法识别 F# 表达式。 如果正在调试 F# 代码，你需要在向调试器窗口或对话框中输入表达式之前，将表达式转换为 C# 语法。 当把表达式从 F # 转换到 C# 时，请务必记住 C# 使用 `==` 运算符来测试相等性，而 F # 使用单个 `=`。
+无法识别 F# 表达式。 如果正在调试 F# 代码，你需要在向调试器窗口或对话框中输入表达式之前，将表达式转换为 C# 语法。 当把表达式从 F# 转换到 C# 时，请务必记住 C# 使用 `==` 运算符来测试相等性，而 F# 使用单个 `=`。
 
 ## <a name="c-expressions"></a>C++ 表达式
 有关将上下文运算符用于 C++ 中的表达式的信息，请参阅 [上下文运算符 (C++)](../debugger/context-operator-cpp.md)。
@@ -121,7 +121,7 @@ int main()
 ## <a name="c---unsupported-expressions"></a>C# - 不支持的表达式
 
 ### <a name="dynamic-objects"></a>动态对象
-你可以使用静态类型化为动态的调试器表达式中的变量。 当对象实现<xref:System.Dynamic.IDynamicMetaObjectProvider>中监视窗口中，节点会添加一个动态视图计算。 该动态视图节点显示对象成员，但不允许编辑成员的值。
+你可以使用静态类型化为动态的调试器表达式中的变量。 当在监视窗口中计算实现 <xref:System.Dynamic.IDynamicMetaObjectProvider> 的对象时，将添加一个动态视图节点。 该动态视图节点显示对象成员，但不允许编辑成员的值。
 
 不支持动态对象的下列功能：
 
@@ -170,7 +170,7 @@ int main()
 不支持导入别名。
 
 ### <a name="variable-declarations"></a>变量声明
-不能在调试器窗口中声明显式的新变量。 但是，可以在“即时”  窗口中分配一个新的隐式变量。 这些隐式变量的范围限于调试会话并且无法在调试器外对其进行访问。 例如，语句 `o = 5` 隐式创建一个新变量 `o` ，并向其赋予值 5。 这样的隐式变量为 **对象** 类型，除非调试器可以推断该类型。
+不能在调试器窗口中声明显式的新变量。 但是，可以在“即时” 窗口中分配一个新的隐式变量。 这些隐式变量的范围限于调试会话并且无法在调试器外对其进行访问。 例如，语句 `o = 5` 隐式创建一个新变量 `o` ，并向其赋予值 5。 这样的隐式变量为 **对象** 类型，除非调试器可以推断该类型。
 
 ### <a name="unsupported-keywords"></a>不受支持的关键字
 

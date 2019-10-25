@@ -1,5 +1,5 @@
 ---
-title: 'Idiasymbol:: Get_frontendminor |Microsoft Docs'
+title: IDiaSymbol：： get_frontEndMinor |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 87a23d3aeade62865f768f54eb8face462affee8
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 2b329cd69d010cba4e3667bde0d7b976389037bb
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64832762"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740649"
 ---
-# <a name="idiasymbolgetfrontendminor"></a>IDiaSymbol::get_frontEndMinor
-检索前端的次版本号。
+# <a name="idiasymbolget_frontendminor"></a>IDiaSymbol::get_frontEndMinor
+检索前端次版本号。
 
 ## <a name="syntax"></a>语法
 
@@ -33,24 +33,24 @@ HRESULT get_frontEndMinor ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回 front.end 次版本号。
+弄返回前次版本号。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。
+> @No__t_0 的返回值意味着该属性对符号不可用。
 
 ## <a name="remarks"></a>备注
- 编译器通常组成两个主要元素： 前端 （分析器），这将其处理为中间格式分析的源代码和一个后端 （代码生成器），后者将中间格式转换到程序集。 不常见的前端具有后端的版本不同。
+ 编译器通常包含两个主要元素：前端（分析器），用于处理将源代码分析成中间窗体，并将中间窗体转换为程序集。 前端的版本不同于后端，这种情况并不常见。
 
- 前端或后端的版本号三个部分组成：\<主要 >。\<次要 >。\<生成 >，其中\<主要 > 是主版本号，\<次要 > 是的次版本号和\<生成 > 是生成号。 例如，13.10.3077。
+ 前端或后端版本号由三个部分组成： \<major >。\<minor >。\<build >，其中 \<major > 是主版本号，\<minor > 是次版本号，\<build > 是生成号。 例如，13.10.3077。
 
 ## <a name="requirements"></a>要求
 
 |需求|描述|
 |-----------------|-----------------|
-|标头：|dia2.h|
+|标头：|dia2|
 |版本：|DIA SDK v7.0|
 
 ## <a name="see-also"></a>请参阅

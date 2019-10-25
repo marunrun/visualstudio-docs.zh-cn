@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a40cc8afdb60ad8ad76a0d6ee8e502a6a0b720b7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 496f6b569b3ac02c625ddf18406b78fdb1687be2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832534"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742231"
 ---
 # <a name="idiasessionfindinlineelinesbyaddr"></a>IDiaSession::findInlineeLinesByAddr
-检索一个枚举，它允许客户端可以循环访问的所有函数的内联，直接或间接地，由指定的父符号的行号信息且包含在指定的地址范围。
+检索一个枚举，该枚举允许客户端通过指定的父符号直接或间接地循环访问所有函数的行号信息，并将其包含在指定的地址范围内。
 
 ## <a name="syntax"></a>语法
 
@@ -32,26 +32,26 @@ HRESULT findInlineeLinesByAddr ( 
 #### <a name="parameters"></a>参数
  `parent`
 
-[in]`IDiaSymbol`表示父对象。
+中表示父级的 `IDiaSymbol` 对象。
 
  `isect`
 
-[in]指定地址的部分组件。
+中指定地址的部分组件。
 
  `offset`
 
-[in]指定地址的偏移量的部分。
+中指定地址的偏移量部分。
 
  `length`
 
-[in]中的字节数，以覆盖与此查询指定地址范围。
+中指定要用于此查询的地址范围（以字节数为单位）。
 
  `ppResult`
 
-[out]保存`IDiaEnumLineNumbers`对象，其中包含检索到的行号的列表。
+弄保存一个包含所检索的行号列表的 `IDiaEnumLineNumbers` 对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

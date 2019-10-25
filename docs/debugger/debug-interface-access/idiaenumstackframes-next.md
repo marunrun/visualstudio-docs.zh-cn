@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f9cf220c65cf11836e64a7e1f4c0142c89669f4b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ffde40e221823d9656c4b6414b14067ac9d0537a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62833294"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744044"
 ---
 # <a name="idiaenumstackframesnext"></a>IDiaEnumStackFrames::Next
-枚举序列中检索指定的数量的堆栈帧元素。
+检索枚举序列中指定数目的堆栈帧元素。
 
 ## <a name="syntax"></a>语法
 
@@ -35,18 +35,18 @@ HRESULT Next( 
 #### <a name="parameters"></a>参数
  celt
 
-[in]要检索的枚举器中的堆栈帧元素数目。
+中要检索的枚举器中的堆栈帧元素的数目。
 
  rgelt
 
-[out]数组，它是与请求填写[IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)对象。
+弄要使用请求的[IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)对象填充的数组。
 
  pceltFetched
 
-[out]在提取枚举器返回堆栈数 frame 元素。
+弄返回提取的枚举器中的堆栈帧元素数。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`是否存在的堆栈帧。 否则，返回错误代码。
+ 如果成功，则返回 `S_OK`。 如果没有更多堆栈帧，则返回 `S_FALSE`。 否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md)

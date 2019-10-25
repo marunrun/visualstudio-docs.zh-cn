@@ -19,14 +19,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b6c4b9d780caf7589eecdc709cbede577dd7a6fd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ce99cd360d75472df6326cfaf6a3f4ddb198b6d2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62852699"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738353"
 ---
-# <a name="debugbreak-and-debugbreak"></a>DebugBreak 和 __debugbreak
+# <a name="debugbreak-and-__debugbreak"></a>DebugBreak 和 __debugbreak
 可以在代码中的任意点调用 DebugBreak Win32 函数或 [__debugbreak](/cpp/intrinsics/debugbreak) 内部函数。 `DebugBreak` 和 `__debugbreak` 具有与在该位置设置断点相同的效果。
 
  由于 `DebugBreak` 是对系统函数的调用，因此必须安装系统调试符号，以确保中断后显示正确的调用堆栈信息。 否则，调试器可能在显示一条调用堆栈信息后就停止显示。 如果使用 `__debugbreak`，则不需要符号。

@@ -11,21 +11,21 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5b0c3bf7c8260506eabf56113992c985e1cc8669
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e9026da08272d69bac246f98ae741a47527d627f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351010"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72724564"
 ---
 # <a name="registering-single-file-generators"></a>注册单个文件生成器
-若要使自定义工具中可用[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]，因此必须注册该[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]可以实例化并将其关联与特定项目类型。
+若要在 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 中使用自定义工具，您必须注册该工具，以便 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 可以实例化它并将其与特定的项目类型关联。
 
-### <a name="to-register-a-custom-tool"></a>若要注册的自定义工具
+### <a name="to-register-a-custom-tool"></a>注册自定义工具
 
-1. 或者注册自定义工具 DLL 中[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]本地注册表或在系统注册表中，在 HKEY_CLASSES_ROOT 下。
+1. 在 "[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 本地注册表" 中或在 HKEY_CLASSES_ROOT 下的系统注册表中注册自定义工具 DLL。
 
-    例如，下面是托管的 MSDataSetGenerator 自定义工具，它附带的注册信息[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]:
+    例如，下面是 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 提供的托管 MSDataSetGenerator 自定义工具的注册信息：
 
    ```
    [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0\CLSID\{E76D53CC-3D4F-40A2-BD4D-4F3419755476}]
@@ -36,24 +36,24 @@ ms.locfileid: "66351010"
    "Assembly"="Microsoft.VSDesigner, Version=14.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a"
    ```
 
-2. 创建注册表项中的所需[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]hive 下生成器\\*GUID*其中*GUID*由特定语言的项目系统或服务定义 GUID。 密钥的名称将成为您的自定义工具的编程名称。 自定义工具密钥具有以下值：
+2. 在生成器 \\*guid*下的所需 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 配置单元中创建注册表项，其中*guid*是特定语言的项目系统或服务定义的 guid。 密钥名称将成为自定义工具的编程名称。 自定义工具键具有以下值：
 
    - (默认)
 
-        可选。 提供自定义工具的用户友好说明。 此参数是可选的但建议这样做。
+        可选。 提供自定义工具的用户友好说明。 此参数是可选的，但建议使用。
 
    - CLSID
 
-        必需。 指定实现的 COM 组件的类库的标识符<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>。
+        必须的。 指定实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> 的 COM 组件的类库的标识符。
 
    - GeneratesDesignTimeSource
 
-        必需。 指示是否通过此自定义工具生成的文件中的类型将提供给可视化设计器。 此参数的值必须是类型向可视化设计器不可用 （零） 0 或类型可用于可视化设计器 （一个） 1。
+        必须的。 指示此自定义工具所生成的文件中的类型是否可供可视化设计器使用。 对于可视化设计器不可用的类型，此参数的值需要为（零） 0; 对于可用于可视化设计器的类型，则为（1）1。
 
    > [!NOTE]
-   > 必须注册为其所需的自定义工具，可用于每种语言单独的自定义工具。
+   > 您必须为您要为其提供自定义工具的每种语言分别注册自定义工具。
 
-    例如，MSDataSetGenerator 自行注册一次为每种语言：
+    例如，MSDataSetGenerator 为每种语言注册一次自身：
 
    ```
    [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0\Generators\{164b10b9-b200-11d0-8c61-00a0c91e29d5}\MSDataSetGenerator]
@@ -71,4 +71,4 @@ ms.locfileid: "66351010"
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>
 - [实现单个文件生成器](../../extensibility/internals/implementing-single-file-generators.md)
 - [向可视化设计器公开类型](../../extensibility/internals/exposing-types-to-visual-designers.md)
-- [BuildManager 对象介绍](https://msdn.microsoft.com/library/50080ec2-c1c9-412c-98ef-18d7f895e7fa)
+- [BuildManager 对象简介](https://msdn.microsoft.com/library/50080ec2-c1c9-412c-98ef-18d7f895e7fa)

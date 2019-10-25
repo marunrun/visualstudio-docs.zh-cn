@@ -1,5 +1,5 @@
 ---
-title: ShowByDefault 元素 （Visual Studio 模板）
+title: ShowByDefault 元素（Visual Studio 模板）
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,17 +14,17 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c211f45423ce0f2166bbf8aa189d35ab386a7fee
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2405e46a7f1ed8d2e4ae33b1b58ec44e06aa7d3b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66331985"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72720106"
 ---
-# <a name="showbydefault-element-visual-studio-templates"></a>ShowByDefault 元素 （Visual Studio 模板）
-如果`false`，指定将仅显示该模板在指定[TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)。
+# <a name="showbydefault-element-visual-studio-templates"></a>ShowByDefault 元素（Visual Studio 模板）
+如果 `false`，则指定该模板将只显示在指定的[TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)下。
 
- \<VSTemplate> \<TemplateData> \<ShowByDefault>
+ \<VSTemplate > \<TemplateData > \<ShowByDefault >
 
 ## <a name="syntax"></a>语法
 

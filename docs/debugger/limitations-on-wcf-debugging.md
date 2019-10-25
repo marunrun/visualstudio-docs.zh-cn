@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34b69ac69c580fbd40278b5b7a0c9be26d672fa3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c70195cdc0a6a03395744c63f556ce8c2970aa30
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62905953"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72731511"
 ---
 # <a name="limitations-on-wcf-debugging"></a>WCF 调试的限制
 有三种开始 WCF 服务调试的方式：
@@ -74,11 +74,11 @@ ms.locfileid: "62905953"
   ```
 
 ## <a name="self-hosting"></a>自我托管
- “自承载服务”是指不在 IIS、WCF 服务主机或 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 开发服务器内部运行的 WCF 服务。 有关如何调试自承载的服务的信息，请参阅[如何：调试自我托管的 WCF 服务](../debugger/how-to-debug-a-self-hosted-wcf-service.md)。
+ “自承载服务”是指不在 IIS、WCF 服务主机或 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 开发服务器内部运行的 WCF 服务。 有关如何调试自承载服务的信息，请参阅[如何：调试自承载的 WCF 服务](../debugger/how-to-debug-a-self-hosted-wcf-service.md)。
 
 ## <a name="self-hosting"></a>自我托管
- 若要启用 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 或 3.5 应用程序的调试，则必须在安装 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] 之前安装 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 或 3.5。 如果在安装 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 或 3.5 之前安装了 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]，则在尝试调试 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 或 3.5 应用程序时会出错。 错误消息为：无法自动单步执行服务器。 若要解决此问题，请使用 Windows **Control Panel** > **程序和功能**修复你[!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]安装。
+ 若要启用 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 或 3.5 应用程序的调试，则必须在安装 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] 之前安装 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 或 3.5。 如果在安装 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 或 3.5 之前安装了 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]，则在尝试调试 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 或 3.5 应用程序时会出错。 错误消息为：无法自动单步执行服务器。 若要解决此问题，请使用 Windows "**控制面板**"  >  "**程序和功能**" 来修复 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] 安装。
 
 ## <a name="see-also"></a>请参阅
 - [调试 WCF 服务](../debugger/debugging-wcf-services.md)
-- [如何：调试自托管 WCF 服务](../debugger/how-to-debug-a-self-hosted-wcf-service.md)
+- [如何：调试自托管的 WCF 服务](../debugger/how-to-debug-a-self-hosted-wcf-service.md)

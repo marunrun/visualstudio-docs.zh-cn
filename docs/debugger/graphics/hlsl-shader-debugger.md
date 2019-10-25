@@ -10,19 +10,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 30211d773036bbe12c0e807e3be18f13793360b7
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 164c404f3bce6b8216092635e3489843039fb1eb
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63388636"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72735306"
 ---
 # <a name="hlsl-shader-debugger"></a>HLSL 着色器调试器
 Visual Studio 图形分析器中的 HLSL 调试器可帮助了解 HLSL 着色器代码在应用的实际条件下如何运行。
 
  这是 HLSL 调试器：
 
- ![调试 HLSL 使用监视和调用堆栈窗口。](media/gfx_diag_demo_hlsl_debugger_orientation.png "gfx_diag_demo_hlsl_debugger_orientation")
+ ![使用 "监视" 和 "调用堆栈" 窗口调试 HLSL。](media/gfx_diag_demo_hlsl_debugger_orientation.png "gfx_diag_demo_hlsl_debugger_orientation")
 
 ## <a name="understanding-the-hlsl-debugger"></a>了解 HLSL 调试器
  HLSL 调试器可以帮助你了解着色器代码中产生的问题。 在 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 中调试 HLSL 代码类似于调试以其他语言（例如 C++、C# 或 Visual Basic）编写的代码。 你可以检查变量内容、设置断点、逐句通过代码和遍历调用堆栈，就像你调试其他语言时一样。
@@ -70,7 +70,7 @@ Visual Studio 图形分析器中的 HLSL 调试器可帮助了解 HLSL 着色器
    > [!NOTE]
    > HLSL 调试器中的此入口点调试与你选择的绘图调用、基元和像素对应的像素着色器线程，或调试与通过你选择的绘图调用、基元和像素来插入结果的顶点着色器线程对应的像素着色器线程。 对于顶点着色器，可通过展开顶点着色器详细信息，将入口点进一步细化到特定顶点。
 
-   有关如何使用 HLSL 调试器来调试着色器错误的示例，请参阅[示例](graphics-diagnostics-examples.md)或在另请参见部分的演练链接。
+   有关如何使用 HLSL 调试器来调试着色器错误的示例，请参阅 "另请参见" 部分中的链接到的[示例](graphics-diagnostics-examples.md)或演练。
 
 ## <a name="see-also"></a>请参阅
 - [演练：因顶点着色而缺少对象](walkthrough-missing-objects-due-to-vertex-shading.md)

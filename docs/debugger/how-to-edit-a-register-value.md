@@ -19,14 +19,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 58094d505cf2fd3621b801040f0f71904796d86b
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: b3ccaa124b64ad462f633e760695f931afaae531
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63388421"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72733421"
 ---
-# <a name="how-to-edit-a-register-value-c-c-visual-basic-f"></a>如何：编辑寄存器值 (C#， C++，Visual Basic 中， F#)
+# <a name="how-to-edit-a-register-value-c-c-visual-basic-f"></a>如何：编辑寄存器值（C#、 C++、Visual Basic、） F#
 
 只有在“选项”对话框中的“调试”节点下启用了地址级调试后，“寄存器”窗口才可用。
 

@@ -1,5 +1,5 @@
 ---
-title: 选择断点对话框 |Microsoft Docs
+title: "\"选择断点\" 对话框 |Microsoft Docs"
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,21 +21,21 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 50547507bf37eb22346bcbf3f48585c9cb0b26b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fdec8c8d1b53f87e14700f5c14099cf0d2e6e392
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564777"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745732"
 ---
 # <a name="choose-breakpoints-dialog-box"></a>“选择断点”对话框
-**选择断点**对话框将打开 when you try to 二义性输入中设置断点**新断点**对话框。 不明确的一个常见示例是输入的重载的函数名称。
+当您尝试在 "**新建断点**" 对话框中设置不明确的输入时，将打开 "**选择断点**" 对话框。 不明确输入的一个常见示例是重载函数名称。
 
- **断点**列出可能可以基于设置二义性输入的断点。 可以选择一个或多个要设置的断点。
+ **断点**列出可基于不明确的输入进行设置的可能的断点。 您可以选择一个或多个要设置的断点。
 
- **所有**选择中列出的所有断点**断点**框。
+ **全部**选择 "**断点**" 框中列出的所有断点。
 
- **无**清除中列出的所有断点**断点**框。
+ **无**清除 "**断点**" 框中列出的所有断点。
 
 ## <a name="see-also"></a>请参阅
 

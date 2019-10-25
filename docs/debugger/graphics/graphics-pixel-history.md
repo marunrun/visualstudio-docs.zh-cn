@@ -10,19 +10,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 23ada46a28d692daf238147ea07f34d440a99869
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 8cb1b7a869915eebc561e1baf47082dd5dbc00df
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63388590"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72735485"
 ---
 # <a name="graphics-pixel-history"></a>图形像素历史记录
 Visual Studio 中的“图形像素历史记录”窗口可以帮助你了解，在游戏或应用的某个帧期间，Direct3D 事件如何对某一特定像素产生影响。
 
  下面是“像素历史记录”窗口：
 
- ![包含在其历史记录中的三个 Direct3D 事件像素。](media/gfx_diag_demo_pixel_history_orientation.png "gfx_diag_demo_pixel_history_orientation")
+ ![其历史记录中包含三个 Direct3D 事件的像素。](media/gfx_diag_demo_pixel_history_orientation.png "gfx_diag_demo_pixel_history_orientation")
 
 ## <a name="understanding-the-pixel-history-window"></a>了解“像素历史记录”窗口
  通过使用“像素历史纪录”，你可以分析在某个帧期间，Direct3D 事件如何对呈现器目标的某一特定像素产生影响。 你可以将呈现问题准确定位到特定的 Direct3D 事件，即使后续事件 - 或同一个事件的后续基元 - 继续更改像素的最终颜色值。 例如，一个像素可能被错误呈现，然后被另一个半透明的像素遮盖，这样它们的颜色就会在帧缓冲区中相融合。 如果可用于指导你的只有呈现器目标的最终内容，这种问题将会很难诊断。
@@ -40,9 +40,9 @@ Visual Studio 中的“图形像素历史记录”窗口可以帮助你了解，
 
 |图标|排除原因|
 |----------|--------------------------|
-|![深度测试失败图标。](media/vsg_hist_icon_failed_depth.png "vsg_hist_icon_failed_depth")|由于没有通过深度测试，像素被排除。|
-|![剪式测试失败图标。](media/vsg_hist_icon_failed_scissor.png "vsg_hist_icon_failed_scissor")|由于未通过剪式测试，像素被排除。|
-|![模具测试失败图标。](media/vsg_hist_icon_failed_stencil.png "vsg_hist_icon_failed_stencil")|由于未通过模具测试，像素被排除。|
+|!["深度测试失败" 图标。](media/vsg_hist_icon_failed_depth.png "vsg_hist_icon_failed_depth")|由于没有通过深度测试，像素被排除。|
+|!["剪测试失败" 图标。](media/vsg_hist_icon_failed_scissor.png "vsg_hist_icon_failed_scissor")|由于未通过剪式测试，像素被排除。|
+|!["模具测试失败" 图标。](media/vsg_hist_icon_failed_stencil.png "vsg_hist_icon_failed_stencil")|由于未通过模具测试，像素被排除。|
 
 ### <a name="draw-call-exclusion"></a>绘图调用排除
  如果绘图调用中的所有基元因未通过测试而不再影响呈现目标，则绘图调用将无法进行扩展，并且对应于排除原因的图标将显示在它的旁边。 绘图调用排除的原因与基元排除的原因类似，并且它们的图标也相似。

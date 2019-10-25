@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d4e9c190108cdbf1eb7be2d21927a95fe56fca75
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 94fcc9ae93a515890025bb74a810733f213c869a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832465"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742737"
 ---
-# <a name="idiasectioncontribgetcode16bit"></a>IDiaSectionContrib::get_code16bit
-检索一个标志，指示的部分是否包含 16 位代码。
+# <a name="idiasectioncontribget_code16bit"></a>IDiaSectionContrib::get_code16bit
+检索一个标志，该标志指示部分是否包含16位代码。
 
 ## <a name="syntax"></a>语法
 
@@ -33,13 +33,13 @@ HRESULT get_code16bit(
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回`TRUE`部分中的代码是 16 位; 否则为如果返回`FALSE`。
+弄如果部分中的代码为16位，则返回 `TRUE`;否则，将返回 `FALSE`。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="remarks"></a>备注
- 此方法仅指示代码是否 16 位。 如果代码是不是 16 位，它可以是任何其他名字，例如 32 位或 64 位代码。
+ 此方法仅指示代码是否为16位。 如果代码不是16位的，则可能是其他任何内容，例如32位或64位代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

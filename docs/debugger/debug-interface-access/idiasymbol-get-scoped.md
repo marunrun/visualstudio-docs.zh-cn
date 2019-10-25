@@ -1,5 +1,5 @@
 ---
-title: 'Idiasymbol:: Get_scoped |Microsoft Docs'
+title: IDiaSymbol：： get_scoped |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c9c4864f09c4e66bada76f9d9b058c7d3660c96
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 862fa147b5f157760a93631d0e2c8addbd3bd1f2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64790284"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739376"
 ---
-# <a name="idiasymbolgetscoped"></a>IDiaSymbol::get_scoped
-检索指定用户定义数据类型是否显示在非全局的词法范围内的标志。
+# <a name="idiasymbolget_scoped"></a>IDiaSymbol::get_scoped
+检索一个标志，该标志指定是否在非全局词法范围中显示用户定义数据类型。
 
 ## <a name="syntax"></a>语法
 
@@ -33,13 +33,13 @@ HRESULT get_scoped ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回`TRUE`如果用户定义数据类型将显示在非全局的词法范围内; 否则，返回`FALSE`。
+弄如果用户定义数据类型出现在非全局词法范围内，则返回 `TRUE`;否则，将返回 `FALSE`。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。
+> @No__t_0 的返回值意味着该属性对符号不可用。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio Shell | Microsoft Docs
+title: Visual Studio Shell |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,66 +11,66 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8a147abd4655c923604dd9ca6696e97aac4944ec
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 60aa48da701857508f9b6fd7fc3d9d0c0603046e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66332877"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72722056"
 ---
 # <a name="visual-studio-shell"></a>Visual Studio Shell
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Shell 是中的集成主代理[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]。 在 shell 提供了必要的功能，以允许 Vspackage 共享通用的服务。 由于体系结构的目标[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]背心在 Vspackage 中的主要功能是 shell 是一个框架，可提供基本功能并支持跨-在 Vspackage 及其组件之间进行通信。
+@No__t_0 shell 是 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 中集成的主代理。 Shell 提供使 Vspackage 共享公共服务所需的功能。 由于 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 的体系结构目标是在 Vspackage 中背心主要功能，因此外壳是一个框架，用于提供基本功能，并支持其组件 Vspackage 间的跨通信。
 
-## <a name="shell-responsibilities"></a>Shell 职责
- 在 shell 具有以下主要职责：
+## <a name="shell-responsibilities"></a>Shell 责任
+ Shell 具有以下关键职责：
 
-- 支持 （通过 COM 接口） 的用户界面 (UI) 的基本元素。 其中包括默认菜单和工具栏、 文档窗口框架或多文档界面 (MDI) 子窗口和工具窗口框架和停靠支持。
+- 支持（通过 COM 接口）用户界面（UI）的基本元素。 其中包括默认菜单和工具栏、文档窗口框架或多文档界面（MDI）子窗口和工具窗口框架，以及停靠支持。
 
-- 维护运行文档表 (RDT) 中的所有当前打开的文档的运行列表来协调文档的持久性，并保证多个方面，或以不兼容的方式，无法打开该文档。
+- 在正在运行的文档表（RDT）中维护所有当前打开的文档的运行列表，以便协调文档的持久性，并确保一个文档不能以多种方式打开或以不兼容的方式打开。
 
-- 支持的命令路由和命令处理的接口， `IOleCommandTarget`。
+- @No__t_0 支持命令路由和命令处理接口。
 
-- 在适当的时候加载 Vspackage。 需要改进的外壳性能延迟加载 VSPackage。
+- 在适当的时间加载 Vspackage。 延迟加载 VSPackage 是改进 shell 性能的必需项。
 
-- 管理某些共享服务，如<xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>，它提供基本外壳程序功能和<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>，其中提供了基本窗口化功能。
+- 管理某些共享服务，如 <xref:Microsoft.VisualStudio.Shell.Interop.SVsShell> （提供基本 shell 功能）和 <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> （提供基本的窗口化功能）。
 
-- 管理解决方案 (.sln) 文件。 解决方案包含的相关项目，类似于视觉对象中的工作区 (.dsw) 文件组C++6.0。
+- 管理解决方案（.sln）文件。 解决方案包含一组相关项目，类似于 Visual C++ 6.0 中的工作区（. dsw）文件。
 
-- 跟踪命令行程序范围内所选内容、 上下文和货币。 Shell 跟踪以下类型的项：
+- 跟踪 shell 范围选择、上下文和货币。 Shell 跟踪以下类型的项：
 
   - 当前项目
 
-  - 当前项目项的 ItemID 当前 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>
+  - 当前项目项或 ItemID 当前的 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>
 
-  - 有关当前所选内容**属性**窗口或 `SelectionContainer`
+  - "**属性**" 窗口或 `SelectionContainer` 的当前选定内容
 
-  - UI 上下文 Id 或 CmdUIGuids 控制命令、 菜单和工具栏的可见性
+  - 控制命令、菜单和工具栏的可见性的 UI 上下文 Id 或 CmdUIGuids
 
-  - 活动窗口、 文档和撤消管理器当前处于活动状态元素
+  - 当前处于活动状态的元素，例如活动窗口、文档和撤消管理器
 
-  - 驱动器动态帮助用户上下文属性
+  - 驱动动态帮助的用户上下文属性
 
-  在 shell 还负责调解安装的 Vspackage 和当前服务之间的通信。 它支持 shell 的核心功能，并使所有的 Vspackage 中集成[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]。 这些核心功能包括以下各项：
+  Shell 还会在已安装的 Vspackage 与当前服务之间进行通信。 它支持 shell 的核心功能，并使它们可用于 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 中集成的所有 Vspackage。 这些核心功能包括以下各项：
 
-- **有关**对话框框和初始屏幕
+- "**关于**" 对话框和初始屏幕
 
-- **添加新功能和添加现有项**对话框
+- "**添加新项" 和 "添加现有项**" 对话框
 
 - **类视图**窗口和**对象浏览器**
 
-- **引用**对话框
+- "**引用**" 对话框
 
-- **文档大纲**窗口
+- "**文档大纲**" 窗口
 
 - **动态帮助**窗口
 
 - **查找**和**替换**
 
-- **打开项目**并**打开的文件**上的对话框**新建**菜单
+- **打开**"**新建**" 菜单上的 "项目" 和 "**打开文件**" 对话框
 
-- **选项**对话框上的**工具**菜单
+- "**工具**" 菜单上的 "**选项**" 对话框
 
-- “属性”  窗口
+- “属性”窗口
 
 - **解决方案资源管理器**
 

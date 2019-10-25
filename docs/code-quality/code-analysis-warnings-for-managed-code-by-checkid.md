@@ -263,12 +263,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 621615879f4e9ee61a2830fd93c53a2baf64b898
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d8700d058c694afbea551e5b117a0e4a0461f2e8
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72622448"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72806166"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>托管代码的代码分析警告（按 CheckId）
 
@@ -339,7 +339,7 @@ ms.locfileid: "72622448"
 | CA1064 | [CA1064：异常应该是公共的](../code-quality/ca1064.md) | 内部异常仅在其自己的内部范围内可见。 当异常超出内部范围后，只能使用基异常来捕获该异常。 如果从 <xref:System.Exception>、<xref:System.SystemException> 或 <xref:System.ApplicationException> 继承内部异常，则外部代码将不会有足够的信息来了解如何处理该异常。 |
 | CA1065 | [CA1065：不要在意外的位置引发异常](../code-quality/ca1065.md) | 不应引发异常的方法引发了异常。 |
 | CA1068 | [CA1068： CancellationToken 参数必须位于最后](../code-quality/ca1068.md) | 方法具有一个不是最后一个参数的 CancellationToken 参数。 |
-| CA1200 | [CA1200：避免使用带有前缀的 cref 标记](../code-quality/ca1200.md) | XML 文档标记中的[cref](https://docs.microsoft.com/dotnet/csharp/programming-guide/xmldoc/cref-attribute)特性表示 "代码引用"。 它指定标记的内部文本是一个代码元素，例如类型、方法或属性。 避免使用带有前缀的 `cref` 标记，因为这会阻止编译器验证引用。 它还可防止 Visual Studio 集成开发环境（IDE）在重构期间查找和更新这些符号引用。 |
+| CA1200 | [CA1200：避免使用带有前缀的 cref 标记](../code-quality/ca1200.md) | XML 文档标记中的[cref](/dotnet/csharp/programming-guide/xmldoc/cref-attribute)特性表示 "代码引用"。 它指定标记的内部文本是一个代码元素，例如类型、方法或属性。 避免使用带有前缀的 `cref` 标记，因为这会阻止编译器验证引用。 它还可防止 Visual Studio 集成开发环境（IDE）在重构期间查找和更新这些符号引用。 |
 | CA1300 | [CA1300：指定 MessageBoxOptions](../code-quality/ca1300.md) | 为了让使用从右到左阅读顺序的文化区域正确显示消息框，必须将 MessageBoxOptions 枚举的 RightAlign 和 RtlReading 成员传递给 Show 方法。 |
 | CA1301 | [CA1301：避免快捷键重复](../code-quality/ca1301.md) | 访问键也称为快捷键，它通过使用 Alt 键来实现对控件的键盘访问。 如果多个控件具有重复的访问键，则访问键的行为定义不正确。 |
 | CA1302 | [CA1302：请不要对区域设置特定的字符串进行硬编码](../code-quality/ca1302.md) | System.Environment.SpecialFolder 枚举包含表示特殊系统文件夹的成员。 对于不同的操作系统，这些文件夹的位置可能具有不同的值；用户也可能会更改某些位置；或者这些位置已经进行了本地化。 Environment.GetFolderPath 方法返回与 Environment.SpecialFolder 枚举关联、经过本地化且与当前正在运行的计算机相应的位置。 |
@@ -399,7 +399,7 @@ ms.locfileid: "72622448"
 | CA1726 | [CA1726：使用首选词条](../code-quality/ca1726.md) | 在外部可见的标识符的名称中，包括一个存在首选备用词条的词条。 或者，名称中包含“Flag”或“Flags”一词。 |
 | CA1800 | [CA1800：避免进行不必要的强制转换](../code-quality/ca1800.md) | 重复强制转换会降低性能，特别是在精简的迭代语句中执行强制转换时。 |
 | CA1801 | [CA1801：检查未使用的参数](../code-quality/ca1801.md) | 方法签名包含一个没有在方法体中使用的参数。 |
-| CA1802 |[CA1802：在合适的位置使用文本](../code-quality/ca1802.md) |某个字段被声明为 static 和 read-only（在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中为 Shared 和 ReadOnly），并使用可在编译时计算的值初始化。 由于分配给目标字段的值是在编译时可的，因此请将声明更改为 const （[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中的 Const）字段，以便在编译时（而不是在运行时）计算此值。 |
+| CA1802 |[CA1802：在合适的位置使用文本](../code-quality/ca1802.md) |某个字段被声明为 static 和 read-only（在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中为 Shared 和 ReadOnly），并使用可在编译时计算的值初始化。 由于分配给目标字段的值是在编译时可的，因此请将声明更改为 const （[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]中的 Const）字段，以便在编译时（而不是在运行时）计算此值。 |
 | CA1804 | [CA1804：移除未使用的局部变量](../code-quality/ca1804.md) | 未使用的局部变量和不必要的赋值会增加程序集的大小并降低性能。 |
 | CA1806 | [CA1806：不要忽略方法结果](../code-quality/ca1806.md) | 创建一个新对象，但从不使用该对象；或者调用会创建并返回一个新字符串的方法，但从不使用这个新字符串；或者 COM 或 P/Invoke 方法返回一个从不使用的 HRESULT 或错误代码。 |
 | CA1809 |[CA1809：避免过多的局部变量](../code-quality/ca1809.md) | 优化性能的常见方法是将值存储于处理器寄存器，而不是内存中，这称为“注册值”。 为了增加所有局部变量的 enregistered，将局部变量的数目限制为64。 |
@@ -416,7 +416,7 @@ ms.locfileid: "72622448"
 | CA1822 |[CA1822：将成员标记为 static](../code-quality/ca1822.md) | 可以将不访问实例数据或不调用实例方法的成员标记为 static（在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中为 Shared）。 在将这些方法标记为 static 之后，编译器将向这些成员发出非虚拟调用站点。 这会使性能敏感的代码的性能得到显著提高。 |
 | CA1823 | [CA1823：避免未使用的私有字段](../code-quality/ca1823.md) | 检测到程序集内有似乎未访问过的私有字段。 |
 | CA1824 |[CA1824：用 NeutralResourcesLanguageAttribute 标记程序集](../code-quality/ca1824.md) | NeutralResourcesLanguage 属性通知资源管理器，该语言用于显示程序集的非特定区域性的资源。 这将改进所加载的第一个资源的查找性能，并缩小工作集。 |
-| CA1825 |[CA1825：避免长度为零的数组分配](../code-quality/ca1825.md) | 初始化长度为零的数组将导致不必要的内存分配。 相反，请通过调用 <xref:System.Array.Empty%2A?displayProperty=nameWithType> 来使用静态分配的空数组实例。 内存分配在此方法的所有调用之间共享。 |
+| CA1825 |[CA1825：避免长度为零的数组分配](../code-quality/ca1825.md) | 初始化长度为零的数组将导致不必要的内存分配。 相反，请通过调用 <xref:System.Array.Empty%2A?displayProperty=nameWithType>来使用静态分配的空数组实例。 内存分配在此方法的所有调用之间共享。 |
 | CA1900 | [CA1900：值类型字段应为可移植字段](../code-quality/ca1900.md) | 此规则对以下项进行检查：当用显式布局声明的结构封送到 64 位操作系统上的非托管代码时，是否正确对齐。 |
 | CA1901 | [CA1901：P/Invoke 声明应为可移植声明](../code-quality/ca1901.md) | 此规则计算 P/Invoke 的每个参数和返回值的大小，还验证它们在封送到 32 位和 64 位操作系统上的非托管代码时参数的大小是否正确。 |
 | CA1903 | [CA1903：仅使用目标框架中的 API](../code-quality/ca1903.md) | 一个成员或类型使用了某个 Service Pack 中引入的成员或类型，该 Service Pack 没有与项目的目标框架一起包括。 |

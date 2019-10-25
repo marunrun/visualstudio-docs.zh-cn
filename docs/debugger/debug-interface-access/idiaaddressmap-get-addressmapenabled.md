@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7391010e409cc25a3151bb2abb806289c81288a1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b518cf3728279ea8db267d01867fa66ceae35b21
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554400"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745180"
 ---
-# <a name="idiaaddressmapgetaddressmapenabled"></a>IDiaAddressMap::get_addressMapEnabled
-指示是否已为特定会话建立映射的地址。
+# <a name="idiaaddressmapget_addressmapenabled"></a>IDiaAddressMap::get_addressMapEnabled
+指示是否已为特定会话建立地址映射。
 
 ## <a name="syntax"></a>语法
 
@@ -33,15 +33,15 @@ HRESULT get_addressMapEnabled ( 
 #### <a name="parameters"></a>参数
  pRetVal
 
-[out]返回`TRUE`如果启用了该地址的映射。
+弄如果启用地址映射，则返回 `TRUE`。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="remarks"></a>备注
- 可执行文件后处理器有时会更新可执行文件。 DIA 包含一种机制，以支持新布局的符号的转换。
+ 可执行的后处理器有时会更新可执行文件。 DIA 包含一种机制，用于支持将符号转换为新的布局。
 
- 客户端应用程序可以设置地址映射为特定会话通过获取[IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)从接口[IDiaSession](../../debugger/debug-interface-access/idiasession.md)接口并调用[IDiaAddressMap::set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)方法后调用[idiaaddressmap:: Put_addressmapenabled](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md)方法。 `get_addressMapEnabled`方法返回调用的结果`put_addressMapEnabled`方法。
+ 客户端应用程序可以通过从[IDiaSession](../../debugger/debug-interface-access/idiasession.md)接口获取[IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)接口并调用[IDiaAddressMap：： set_addressMap 方法并调用：：](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)方法[来设置特定会话的地址映射，然后调用IDiaAddressMap：:p ut_addressMapEnabled](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md)方法。 @No__t_0 方法返回调用 `put_addressMapEnabled` 方法的结果。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)

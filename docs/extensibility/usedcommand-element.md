@@ -11,15 +11,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 36dbfa484b69832c67c7a1dd28f217706e1a91a6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 44ea8f27cafb166968f66c53dc68398526e0aa5d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316308"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72718777"
 ---
 # <a name="usedcommand-element"></a>UsedCommand 元素
-允许 VSPackage 访问在另一个.vsct 文件中定义的命令。 例如，如果你的 VSPackage 使用标准**副本**命令，通过定义[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]shell 中，您可以将命令添加到菜单或工具栏无需重新执行它。
+允许 VSPackage 访问在 .vsct 文件中定义的命令。 例如，如果你的 VSPackage 使用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] shell 定义的标准**复制**命令，则可以将命令添加到菜单或工具栏，而无需重新实现它。
 
 ## <a name="syntax"></a>语法
 
@@ -34,9 +34,9 @@ ms.locfileid: "66316308"
 
 |特性|描述|
 |---------------|-----------------|
-|guid|必需。 标识的命令的 GUID ID 对中的 GUID。|
-|id|必需。 GUID ID 对，用于标识该命令的 ID。|
-|条件|可选。 请参阅[条件属性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|
+|guid|必须的。 标识命令的 GUID ID 对的 GUID。|
+|id|必须的。 标识命令的 GUID ID 对的 ID。|
+|条件|可选。 请参阅[条件特性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|
 
 ### <a name="child-elements"></a>子元素
 
@@ -48,10 +48,10 @@ ms.locfileid: "66316308"
 
 |元素|描述|
 |-------------|-----------------|
-|[UsedCommands 元素](../extensibility/usedcommands-element.md)|UsedCommand 元素进行分组和其他 UsedCommands 分组。|
+|[UsedCommands 元素](../extensibility/usedcommands-element.md)|将 UsedCommand 元素和其他 UsedCommands 分组分组。|
 
 ## <a name="remarks"></a>备注
- 通过添加到命令`<UsedCommands>`元素中，VSPackage 通知[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]VSPackage，需要该命令的环境。 应添加`<UsedCommand>`为包所需的任何命令的元素可能不包括在所有版本和配置 Visual Studio。 例如，如果您的包调用特定于视觉对象的命令C++，该命令可供 Visual Web Developer 中的用户才会包括`<UsedCommand>`命令的元素。
+ 通过将命令添加到 `<UsedCommands>` 元素，VSPackage 向 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 环境通知 VSPackage 需要该命令。 应为包所需的任何命令添加一个 `<UsedCommand>` 元素，Visual Studio 的所有版本和配置中可能不包含此元素。 例如，如果你的包调用特定于视觉对象C++的命令，则 Visual Web Developer 的用户将不能使用该命令，除非你为该命令包含 `<UsedCommand>` 元素。
 
 ## <a name="example"></a>示例
 

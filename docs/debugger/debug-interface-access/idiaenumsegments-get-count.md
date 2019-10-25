@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eac1b6d88917ca94db82a3e4e8c20c4be3060560
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 16287d83c19ef01f5ba59127ce49bec4b7312b4b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62833192"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744223"
 ---
-# <a name="idiaenumsegmentsgetcount"></a>IDiaEnumSegments::get_Count
-检索的段数。
+# <a name="idiaenumsegmentsget_count"></a>IDiaEnumSegments::get_Count
+检索段数。
 
 ## <a name="syntax"></a>语法
 
@@ -32,10 +32,10 @@ HRESULT get_Count ( 
 
 #### <a name="parameters"></a>参数
  pRetVal
-- [out，retval]返回的段数。
+- [out，retval]返回段数。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)

@@ -10,22 +10,22 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: be7d265db26c31bbec3527ad2bb60e127b1dc9c0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 243af2549862f1d29c44ba5bfc3060d87d5c6f85
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322638"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72723834"
 ---
 # <a name="solution-configuration"></a>解决方案配置
-解决方案配置存储解决方案级别的属性。 它们指示的行为**启动**(f5) 和**生成**命令。 默认情况下，这些命令生成并启动调试配置。 在解决方案配置的上下文中执行这两个命令。 这意味着用户可以启动和任何活动解决方案配置通过设置生成预期 F5。 在环境旨在构建和运行时优化解决方案而不是项目。
+解决方案配置存储解决方案级属性。 它们指示**启动**（F5）键和**生成**命令的行为。 默认情况下，这些命令生成并启动调试配置。 这两个命令都在解决方案配置的上下文中执行。 这意味着，用户可能希望按 F5 启动并生成通过设置配置的任何活动解决方案。 环境旨在针对解决方案而不是在生成和运行时进行优化。
 
- 标准 Visual Studio 工具栏中包含开始按钮和一个解决方案配置下拉列表右侧的开始按钮。 此列表，用户可以选择按下 F5 时要启动的配置、 创建其自己的解决方案配置，或编辑现有配置。
+ 标准 Visual Studio 工具栏包含开始按钮右侧的 "开始" 按钮和 "解决方案配置" 下拉按钮。 此列表允许用户选择按下 F5 时要启动的配置，创建自己的解决方案配置，或编辑现有配置。
 
 > [!NOTE]
-> 没有可扩展性接口来创建或编辑解决方案配置。 必须使用`DTE.SolutionBuilder`。 但是，有用于管理解决方案生成的可扩展 Api。 有关详细信息，请参阅 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager2>。
+> 没有可扩展性接口，无法创建或编辑解决方案配置。 必须使用 `DTE.SolutionBuilder`。 但是，有一些可扩展性 Api 用于管理解决方案生成。 有关更多信息，请参见<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager2>。
 
- 下面是如何实现您的项目类型支持的解决方案配置：
+ 下面介绍如何实现项目类型支持的解决方案配置：
 
 - 项目
 
@@ -33,27 +33,27 @@ ms.locfileid: "66322638"
 
 - 配置
 
-   若要提供的配置项目类型支持的列表，显示在属性页中，实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2>。
+   若要提供项目类型支持的配置列表并显示在属性页中，请实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2>。
 
-   配置列显示的要在此解决方案配置中，生成的项目配置名称，并单击箭头按钮时列出的所有项目配置。 环境调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgNames%2A>方法来填充此列表。 如果<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgProviderProperty%2A>方法指示项目支持编辑配置，新建或编辑的选择也会显示在配置标题下。 这些选择的每个启动调用的方法的对话框`IVsCfgProvider2`接口来编辑项目的配置。
+   "配置" 列显示要在此解决方案配置中生成的项目配置的名称，并在单击箭头按钮时列出所有项目配置。 环境调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgNames%2A> 方法来填充此列表。 如果 <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgProviderProperty%2A> 方法指示项目支持配置编辑，则 "配置" 标题下也会显示 "新建" 或 "编辑" 选项。 其中每个选项都会启动对话框，这些对话框调用 `IVsCfgProvider2` 接口的方法来编辑项目的配置。
 
-   如果项目不支持的配置，配置列显示无且被禁用。
+   如果项目不支持配置，则 "配置" 列将显示 "无" 且被禁用。
 
-- 平台
+- Platform
 
-   显示选定的项目配置生成，并单击箭头按钮时列出所有可用的平台的项目的平台。 环境调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetPlatformNames%2A>方法来填充此列表。 如果<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgProviderProperty%2A>方法指示项目支持编辑平台，新建或编辑的选择也会显示在平台标题下。 这些选择的每个启动调用的对话框`IVsCfgProvider2`方法来编辑项目的可用平台。
+   显示所选项目配置的生成平台，并在单击箭头按钮时列出项目的所有可用平台。 环境调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetPlatformNames%2A> 方法来填充此列表。 如果 <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgProviderProperty%2A> 方法指示项目支持平台编辑，则 "平台" 标题下也会显示 "新建" 或 "编辑" 选项。 其中的每个选项都会启动对话框，它们调用 `IVsCfgProvider2` 方法来编辑项目的可用平台。
 
-   如果项目不支持的平台，该项目的平台列显示无且被禁用。
+   如果项目不支持平台，则该项目的 "平台" 列将显示 "无" 且被禁用。
 
-- Build
+- 生成
 
-   指定由当前的解决方案配置生成项目。 尽管它们所包含任何项目依赖项调用解决方案级生成命令时不生成未选定的项目。 未选定要生成的项目仍包含在调试、 运行、 打包和部署解决方案中。
+   指定项目是否由当前解决方案配置生成。 如果未选择的项目包含任何项目依赖项，则将不生成这些项目。 在调试、运行、打包和部署解决方案时，仍未选择要生成的项目。
 
 - 部署
 
-   指定的开始或部署命令使用具有所选的解决方案生成配置时将部署项目。 此字段的复选框将提供如果项目支持部署通过实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>接口及其<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2>对象。
+   指定在将启动或部署命令用于选定的解决方案生成配置时是否部署项目。 如果项目支持通过在其 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> 对象上实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> 接口部署，则此字段的复选框将可用。
 
-  后添加新的解决方案配置，用户可以选择从标准工具栏以生成和/或启动该配置的解决方案配置下拉列表框。
+  添加新的解决方案配置后，用户可以从 "标准" 工具栏上的 "解决方案配置" 下拉列表框中选择它以生成和/或启动该配置。
 
 ## <a name="see-also"></a>请参阅
 - [管理配置选项](../../extensibility/internals/managing-configuration-options.md)

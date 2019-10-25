@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::findSymbolsForAcceleratorPointerTag |Microsoft Docs
+title: IDiaSymbol：： findSymbolsForAcceleratorPointerTag |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bf55f372b9beb0a4cb0feda0dc5869ee9eb7c5f
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 1544471bd4ff9166d4c8f4c10f48840db6f576f3
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62827740"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741120"
 ---
 # <a name="idiasymbolfindsymbolsforacceleratorpointertag"></a>IDiaSymbol::findSymbolsForAcceleratorPointerTag
-返回 accelerator 指针中的标记数C++AMP 存根 （stub） 函数。
+返回C++ AMP 存根函数中的快捷键指针标记数。
 
 ## <a name="syntax"></a>语法
 
@@ -31,14 +31,14 @@ HRESULT findSymbolsForAccleratorPointerTag (
 #### <a name="parameters"></a>参数
  `tagValue`
 
-[in]为其找到 pointee 符号记录指针标记值。
+中为其查找 pointee 符号记录的指针标记值。
 
  `ppResult`
 
-[out]一个指向`IDiaEnumSymbols`使用结果初始化接口指针。
+弄指向使用结果初始化的 `IDiaEnumSymbols` 接口指针的指针。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

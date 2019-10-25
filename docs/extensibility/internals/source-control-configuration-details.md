@@ -1,5 +1,5 @@
 ---
-title: 源控件配置详细信息 |Microsoft Docs
+title: 源代码管理配置详细信息 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,45 +10,45 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 917354534ee3dbb2b615ec031f0a41c31bd88235
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 0a6c51dfe4ad9378af04da61dbd7e9011c4678f1
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322579"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72723797"
 ---
 # <a name="source-control-configuration-details"></a>源代码管理配置详细信息
-为了实现源代码管理，需要正确配置你的项目系统或编辑器执行以下操作：
+若要实现源代码管理，需要将项目系统或编辑器正确配置为执行以下操作：
 
 - 请求转换为已更改状态的权限
 
 - 请求保存文件的权限
 
-- 请求中添加、 删除或重命名项目中的文件的权限
+- 请求在项目中添加、删除或重命名文件的权限
 
 ## <a name="request-permission-to-transition-to-changed-state"></a>请求转换为已更改状态的权限
- 项目或编辑器必须通过调用请求转换为已更改 （更新） 状态的权限<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>。 实现每个编辑器<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData.IsDocDataDirty%2A>必须调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A>和接收的批准才能返回之前从环境中更改文档`True`为<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData.IsDocDataDirty%2A>。 项目是实质上是用于项目文件的编辑器中，结果是，具有相同负责实现项目文件的更改状态跟踪，文本编辑器一样为它的文件。 环境处理已更改的状态的解决方案，但必须处理任何对象，该解决方案引用，但不会存储，如项目文件或其项的已更改的状态。 一般情况下，如果你的项目或编辑器不负责管理持久性的项，然后它负责实现已更改状态跟踪。
+ 项目或编辑器必须通过调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> 来请求转换到已更改（已更新）状态的权限。 实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData.IsDocDataDirty%2A> 的每个编辑器都必须调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> 并收到批准，以便在为 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData.IsDocDataDirty%2A> 返回 `True` 之前从环境更改文档。 项目本质上是项目文件的编辑器，因此，对项目文件的实现的更改状态跟踪具有相同的责任，因为文本编辑器会对文件进行更改。 环境处理解决方案的已更改状态，但必须处理解决方案引用但不存储的任何对象（如项目文件或其项）的已更改状态。 通常，如果项目或编辑器负责管理项的持久性，则负责实现更改状态跟踪。
 
- 在响应`IVsQueryEditQuerySave2::QueryEditFiles`调用，该环境可以执行以下操作：
+ 为了响应 `IVsQueryEditQuerySave2::QueryEditFiles` 调用，环境可以执行以下操作：
 
-- 拒绝对更改的调用，在这种情况下的编辑器或项目必须保持不变 （清理） 状态。
+- 拒绝对更改的调用，在这种情况下，编辑器或项目必须保持不变（清除）状态。
 
-- 指示应重新加载文档数据。 对于项目，环境将重新加载项目的数据。 编辑器必须从通过磁盘将数据重新加载其<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.ReloadDocData%2A>实现。 在任一情况下，重新加载数据时，可以更改项目或编辑器中的上下文。
+- 指示应重新加载文档数据。 对于项目，环境将为项目重新加载数据。 编辑器必须通过其 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.ReloadDocData%2A> 实现从磁盘重新加载数据。 在任一情况下，当重新加载数据时，项目或编辑器中的上下文都可以更改。
 
-  它是一种复杂且难以实现的任务，需改进相应`IVsQueryEditQuerySave2::QueryEditFiles`到现有基本代码的调用。 因此，应在项目或编辑器的创建过程集成这些调用。
+  这是一种复杂且困难的任务，可将适当的 `IVsQueryEditQuerySave2::QueryEditFiles` 调用改进到现有的基本代码。 因此，应在创建项目或编辑器期间集成这些调用。
 
 ## <a name="request-permission-to-save-a-file"></a>请求保存文件的权限
- 项目或编辑器在保存文件之前，必须调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFile%2A>或<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFiles%2A>。 对于项目文件，这些调用会自动完成的解决方案，它知道何时将项目文件保存。 编辑器的负责进行这些调用，除非的编辑器实现`IVsPersistDocData2`使用 helper 函数<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SaveDocDataToFile%2A>。 如果你的编辑器实现`IVsPersistDocData2`在这种方式，然后调用`IVsQueryEditQuerySave2::QuerySaveFile`或`IVsQueryEditQuerySave2::QuerySaveFiles`做。
+ 在项目或编辑器保存文件之前，它必须调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFile%2A> 或 <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFiles%2A>。 对于项目文件，这些调用由解决方案自动完成，该解决方案知道何时保存项目文件。 除非 `IVsPersistDocData2` 的编辑器实现使用 helper 函数 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SaveDocDataToFile%2A>，否则编辑器负责进行这些调用。 如果编辑器以这种方式实现 `IVsPersistDocData2`，则会为您调用 `IVsQueryEditQuerySave2::QuerySaveFile` 或 `IVsQueryEditQuerySave2::QuerySaveFiles`。
 
 > [!NOTE]
-> 始终提前进行这些调用 — 即，当你的编辑器是能够接收取消一次。
+> 始终将这些调用提前，即，当编辑器能够接收到取消时。
 
-## <a name="request-permission-to-add-remove-or-rename-files-in-the-project"></a>请求中添加、 删除或重命名项目中的文件的权限
- 一个项目可以添加、 重命名或删除文件或目录之前，必须调用适当`IVsTrackProjectDocuments2::OnQuery*`请求权限环境中的方法。 如果授予权限，则项目必须完成此操作，然后调用相应`IVsTrackProjectDocuments2::OnAfter*`方法以通知环境的操作已完成。 项目必须调用的方法<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>界面，用于所有文件 （例如，特殊文件） 和不只是父文件。 文件调用是必需的但目录调用都是可选的。 如果你的项目目录的信息，则应调用相应<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>方法，但如果它没有此信息，则环境将推断目录信息。
+## <a name="request-permission-to-add-remove-or-rename-files-in-the-project"></a>请求在项目中添加、删除或重命名文件的权限
+ 在项目可以添加、重命名或删除文件或目录之前，它必须调用适当的 `IVsTrackProjectDocuments2::OnQuery*` 方法以从环境请求权限。 如果授予了权限，则项目必须完成该操作，然后调用适当的 `IVsTrackProjectDocuments2::OnAfter*` 方法，通知环境操作已完成。 项目必须为所有文件（例如，特殊文件）调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> 接口的方法，而不是只调用父文件的方法。 文件调用是必需的，但目录调用是可选的。 如果你的项目包含目录信息，则它应调用适当的 <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> 方法，但如果没有此信息，则环境将推断目录信息。
 
- 项目不应调用的方法`IVsTrackProjectDocuments2`在项目打开或关闭。 希望将此信息在启动时的侦听器可以等待<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenSolution%2A>事件，并循环访问解决方案，以查找所需的信息。 关闭时，不需要此信息。 `IVsTrackProjectDocuments2` 提供从<xref:Microsoft.VisualStudio.Shell.Interop.SVsTrackProjectDocuments>。
+ 项目在项目打开或关闭时不应调用 `IVsTrackProjectDocuments2` 的方法。 在启动时需要此信息的侦听器可以等待 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenSolution%2A> 事件，并循环访问解决方案来查找所需的信息。 关机时，不需要此信息。 从 <xref:Microsoft.VisualStudio.Shell.Interop.SVsTrackProjectDocuments> 提供 `IVsTrackProjectDocuments2`。
 
- 对于每个添加、 重命名和删除操作，没有`OnQuery*`方法和一个`OnAfter*`方法。 调用`OnQuery*`方法来请求权限添加、 重命名或删除文件或目录。 调用`OnAfter*`方法后的文件或目录已添加、 重命名或删除的项目状态将反映新状态。
+ 对于每个添加、重命名和删除操作，都有一个 `OnQuery*` 方法和一个 `OnAfter*` 方法。 调用 `OnQuery*` 方法，请求添加、重命名或删除文件或目录的权限。 添加、重命名或删除文件或目录后，请调用 `OnAfter*` 方法，并将项目状态反映为新状态。
 
 ## <a name="see-also"></a>请参阅
 

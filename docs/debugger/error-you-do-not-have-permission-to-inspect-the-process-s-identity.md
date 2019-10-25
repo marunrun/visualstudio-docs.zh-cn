@@ -1,5 +1,5 @@
 ---
-title: 错误：您没有检查进程的权限&#39;s 标识 |Microsoft Docs
+title: 错误：您没有检查进程&#39;的标识的权限 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 dev_langs:
@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 437693b289723c44986f61cc65d644742cd8e77c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cad229f80676c3d1f7a7d23ad7a29729c834929b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62849938"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72736223"
 ---
-# <a name="error-you-do-not-have-permission-to-inspect-the-process39s-identity"></a>错误：您没有检查进程的权限&#39;s 标识
+# <a name="error-you-do-not-have-permission-to-inspect-the-process39s-identity"></a>错误：您没有检查进程&#39;的标识的权限
 您没有检查进程标识的权限。 这可能是您系统的配置造成的。
 
  调试器无法检查进程标识，而进程标识是调试的必备信息。 最有可能的原因是“终端服务”被禁用了。 默认情况下，“终端服务”服务是处于启用状态的。 您可按照以下步骤重新启用该服务。
@@ -28,7 +28,7 @@ ms.locfileid: "62849938"
 
 1. 单击**开始**，然后选择**控制面板**。
 
-2. 在控制面板中，选择**切换到经典视图**（如有必要），然后双击**管理工具**。 
+2. 在控制面板中，选择**切换到经典视图**（如有必要），然后双击**管理工具**。
 
 3. 在“管理工具”窗口中双击“计算机管理”。
 
@@ -40,9 +40,9 @@ ms.locfileid: "62849938"
 
 6. 在“服务”列表中，右键单击“终端服务”，然后选择“属性”。
 
-7. 在**Terminal Services 的属性**窗口，请转到**常规**选项卡并设置**启动类型**为**手动**。 
+7. 在**Terminal Services 的属性**窗口，请转到**常规**选项卡并设置**启动类型**为**手动**。
 
-8. 单击 **“确定”**。
+8. 单击“确定”。
 
 9. 重新启动计算机。
 
@@ -50,9 +50,9 @@ ms.locfileid: "62849938"
 
 ### <a name="to-enable-remote-desktop"></a>启用远程桌面
 
-1. 单击**开始**，然后右键单击**我的电脑**。 
+1. 单击**开始**，然后右键单击**我的电脑**。
 
-2. 选择**属性**。 
+2. 选择**属性**。
 
      随即出现“系统属性”窗口。
 
@@ -60,7 +60,7 @@ ms.locfileid: "62849938"
 
 4. 在“远程桌面”下，选择“允许用户远程连接到此计算机”。
 
-5. 单击 **“确定”**。
+5. 单击“确定”。
 
 ## <a name="see-also"></a>请参阅
 - [远程调试错误和疑难解答](../debugger/remote-debugging-errors-and-troubleshooting.md)

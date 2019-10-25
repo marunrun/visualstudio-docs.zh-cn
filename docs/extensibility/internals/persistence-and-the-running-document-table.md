@@ -1,5 +1,5 @@
 ---
-title: 持久性和正在运行文档表 |Microsoft Docs
+title: 持久性和正在运行的文档表 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,20 +13,20 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d80932ab926b7ef26eaef10991e4f5782e81c4b5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f03836e1faaac03fbd89c0b93f37a698cbdcd56a
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66328522"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72726084"
 ---
 # <a name="persistence-and-the-running-document-table"></a>持久性和正在运行的文档表
-在中[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]IDE 中，项目是完全负责管理其项目项，它们为使用该服务，持久性<xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable>。 文档是在 Visual Studio 环境中的暂留的基本单位。 项目协调在打开、 保存和重命名的文档运行文档表 (RDT) 跟踪所有打开的文档的状态的资源。
+在 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE 中，项目完全负责管理其项目项的持久性，它们使用服务 <xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable> 完成。 文档是 Visual Studio 环境中持久性的基本单元。 项目使用正在运行的文档表（RDT）协调文档的打开、保存和重命名，该资源用于跟踪所有打开文档的状态。
 
 ## <a name="managing-persistence"></a>管理持久性
- 项目通过实现控制环境的持久性服务<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem>接口。 虽然环境永远不会直接询问要保持自身的文档，它会要求所属项目 （或层次结构） 来保存文档。 这使项目及其项目项数据保存到本地文件、 远程文件、 数据库、 一个存储库或其他媒体。
+ 项目通过实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem> 接口控制环境的持久性服务。 虽然环境不会直接要求文档自行保存，但它会要求所属项目（或层次结构）保存文档。 这样，项目就可以将其项目项数据保存到本地文件、远程文件、数据库、存储库或其他介质中。
 
- 全局环境负责维护 RDT。 环境负责维护所有打开的窗口的条目和 RDT，这样就可以为它们到中的文档接收特殊的通知，例如，解决方案已关闭时。 此外，RDT 使得要跟踪其对应的节点中的环境**解决方案资源管理器**。 RDT 维护每个打开、 持久对象，其中包括项目文件和项目项的文档的一条记录。
+ 全局环境会保留 RDT。 环境维护 RDT 中所有打开的窗口和文档的条目，这使得它们可以接收特殊通知，如解决方案关闭时。 此外，RDT 使环境可以在**解决方案资源管理器**中跟踪其相应节点。 RDT 针对每个打开的持久对象维护一条记录，其中包括项目文件和项目项文档。
 
 ## <a name="see-also"></a>请参阅
 - [运行文档表](../../extensibility/internals/running-document-table.md)

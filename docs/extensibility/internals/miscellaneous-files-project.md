@@ -13,27 +13,27 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dd3cf792b10905d0f124266601e791dc91259ce2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c46126507ef9bb293bd0fa6771f53343ad6206f7
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349278"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72726681"
 ---
 # <a name="miscellaneous-files-project"></a>杂项文件项目
-当用户打开项目项时，IDE 将分配给杂项文件项目不是解决方案中的任何项目的成员的任何项目。
+当用户打开项目项时，IDE 会将所有不属于解决方案中项目的成员的项分配给杂项文件项目。
 
- 项目扮演重要角色确定当用户打开项目项时，将使用的编辑器。 可以设计一个项目以使用特定于项目的编辑器或标准编辑器打开某些文件。
+ 项目在确定用户打开项目项时所使用的编辑器方面扮演着重要的角色。 项目可设计为使用特定于项目的编辑器或标准编辑器打开某些文件。
 
- 特定于项目的编辑器通常要求用户具有特殊知识，或者使用从项目的特殊接口。 有关详细信息，请参阅[如何：打开项目特定的编辑器](../../extensibility/how-to-open-project-specific-editors.md)。
+ 特定于项目的编辑器通常要求用户具有特定的知识或使用项目中的特殊接口。 有关详细信息，请参阅[如何：打开项目特定的编辑器](../../extensibility/how-to-open-project-specific-editors.md)。
 
- 标准编辑器可以打开任何项目中的特定扩展的任何文件。 用户可以自定义某些标准编辑器中，如[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]文本编辑器中的，对于项目，但仍保留了其公共的字符。 通过使用创建标准编辑器<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>方法。
+ 标准编辑器可在任何项目中打开特定扩展的任何文件。 用户可以为项目自定义一些标准编辑器（如 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 文本编辑器），但仍保留其公共字符。 标准编辑器是使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> 方法创建的。
 
- 如果解决方案中的没有项目响应，它可以打开项目项，则 IDE 提供了一个名为杂项文件项目打开任何文件的特殊项目。
+ 如果解决方案中没有项目响应它可以打开项目项，则 IDE 将提供一个名为 "杂项文件" 项目的特殊项目，该项目将打开任何文件。
 
- 此特殊项目提供了用于打开项目的上下文之外的文件。 处理过程中的<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A>杂项文件项目的方法，始终响应以非常低的优先级。 因此，杂项文件项目始终依赖任何优先级较高的项目都可以打开文件。
+ 此特殊项目用于打开项目上下文之外的文件。 在处理 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A> 方法的过程中，杂项文件项目始终以非常低的优先级进行响应。 因此，杂项文件项目始终会生成任何可打开文件的更高优先级的项目。
 
- 杂项文件项目不需要用户显式创建其与**新的项目**对话框。 此外，杂项文件项目不永久管理项目成员的列表。 它使用一项可选功能来记录每个用户最近使用的文件的列表。
+ "杂项文件" 项目不要求用户在 "**新建项目**" 对话框中显式创建它。 此外，杂项文件项目不会永久管理项目成员的列表。 它使用可选功能来记录每个用户最近使用过的文件的列表。
 
 ## <a name="see-also"></a>请参阅
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>

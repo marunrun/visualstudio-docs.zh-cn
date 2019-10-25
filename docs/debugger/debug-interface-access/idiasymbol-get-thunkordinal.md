@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6dadfff62502af59652e9113553e13b4942c540f
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 3bc8c523886d694ea413dedcf9a28e53e361882b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64822630"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739140"
 ---
-# <a name="idiasymbolgetthunkordinal"></a>IDiaSymbol::get_thunkOrdinal
-检索一个函数的转换 （thunk） 类型。
+# <a name="idiasymbolget_thunkordinal"></a>IDiaSymbol::get_thunkOrdinal
+检索函数的 thunk 类型。
 
 ## <a name="syntax"></a>语法
 
@@ -33,18 +33,18 @@ HRESULT get_thunkOrdinal ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回一个值从[THUNK_ORDINAL 枚举](../../debugger/debug-interface-access/thunk-ordinal.md)枚举，用于指定函数的转换 （thunk） 类型。
+弄返回[THUNK_ORDINAL 枚举](../../debugger/debug-interface-access/thunk-ordinal.md)枚举中的一个值，该值指定函数的 THUNK 类型。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。
+> @No__t_0 的返回值意味着该属性对符号不可用。
 
 ## <a name="remarks"></a>备注
- 此属性才有效才形式的符号[SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)的值`SymTagThunk`。
+ 仅当符号为 `SymTagThunk` 的[SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)值时，此属性才有效。
 
- "转换 （thunk）"是代码的一种 32 位内存地址空间 （也称为平面地址空间） 和一个 16 位地址空间 （称为分段的地址空间） 之间进行转换。
+ "Thunk" 是一段代码，用于在32位内存地址空间（也称为平面地址空间）和16位地址空间（称为分段地址空间）之间进行转换。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

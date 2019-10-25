@@ -20,18 +20,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 078551111223f11b38f3192075caa9ddfabaf18c
-ms.sourcegitcommit: 9753c7544cec852ca5efd0834e0956d9e53a5734
+ms.openlocfilehash: f41292c22de1d9c76007ca44cb7accbf82359b3b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67043343"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72730017"
 ---
 # <a name="remote-debugging-errors-and-troubleshooting"></a>远程调试错误和疑难解答
 
-尝试进行远程调试时，可能会遇到以下错误。
+尝试远程调试时，可能会遇到以下错误。
 
-- [错误：无法自动单步执行服务器](../debugger/error-unable-to-automatically-step-into-the-server.md)
+- [Error: Unable to Automatically Step Into the Server](../debugger/error-unable-to-automatically-step-into-the-server.md)
 
 - [错误：Microsoft Visual Studio 远程调试监视器 (MSVSMON.EXE) 似乎没有在远程计算机上运行。](/visualstudio/debugger/error-remote-debugging-monitor-msvsmon-exe-does-not-appear-to-be-running)
 
@@ -41,37 +41,37 @@ ms.locfileid: "67043343"
 
 ## <a name="run-the-remote-debugger-as-an-administrator"></a>以管理员身份运行远程调试器
 
-如果您不以管理员身份运行远程调试器，可能会遇到问题。 例如，可能会看到以下错误："Visual Studio 远程调试器 (MSVSMON。EXE) 有权限不足，无法调试此进程"。 如果为应用程序 （而不是服务） 正在运行远程调试器，您可能会看到[其他用户帐户](error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-is-running-as-a-different-user.md)错误。
+如果没有以管理员身份运行远程调试器，则可能会遇到问题。 例如，你可能会看到以下错误： "Visual Studio 远程调试器（MSVSMON。EXE）没有足够的特权，无法调试此进程。 " 如果将远程调试器作为应用程序（而不是服务）运行，你可能会看到[不同的用户帐户](error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-is-running-as-a-different-user.md)错误。
 
-### <a name="when-running-the-remote-debugger-as-a-service"></a>远程调试器作为服务运行时
+### <a name="when-running-the-remote-debugger-as-a-service"></a>作为服务运行远程调试器时
 
-当远程调试器作为 s 服务运行，我们建议以管理员身份运行有几个原因：
+在将远程调试器作为服务运行时，出于以下几个原因，我们建议以管理员身份运行它：
 
-- 远程调试器服务仅允许从连接管理员，因此没有**没有**引入通过以管理员身份运行的新安全风险。
+- 远程调试器服务只允许来自管理员的连接，因此以管理员身份运行它**不**会引入新的安全风险。
 
-- 它可能会阻止在 Visual Studio 用户有更多权利，若要调试的进程与远程调试器本身时的结果执行的错误。
+- 当 Visual Studio 用户拥有调试进程的权限超过远程调试器本身的权限时，它可以防止出现错误。
 
-- 若要简化的安装和配置远程调试器。
+- 简化远程调试器的设置和配置。
 
-虽然可能无需以管理员身份运行远程调试器进行调试，但有几个要求，以便正确正常工作并且通常需要更高级的服务的配置步骤。
+尽管可以在不以管理员身份运行远程调试器的情况下进行调试，但有几个要求可以使此工作正确并经常需要更高级的服务配置步骤。
 
-- 在远程计算机使用的帐户必须具有**作为服务登录**特权。 请参阅中的"添加登录即服务"下的步骤[无法重新连接](error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer.md)错误文章。
+- 您在远程计算机上使用的帐户必须具有 "**作为服务登录**" 特权。 请参阅[无法连接回](error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer.md)错误一文中的 "添加作为服务登录" 下的步骤。
 
-- 该帐户必须有权调试目标进程。 若要获取这些权限，必须以要进行调试的进程运行在同一帐户下的远程调试器。 （更轻松的替代方法是以管理员身份运行服务。） 
+- 此帐户必须具有调试目标进程的权限。 若要获取这些权限，你必须在要调试的进程所用的帐户下运行远程调试器。 （更简单的方法是以管理员身份运行服务。） 
 
-- 该帐户必须能够连接回 （即，使用进行身份验证） 的 Visual Studio 计算机在网络上。 在域中，它是可以轻松地将内置 Local System 或 Network Service 帐户或域帐户下运行远程调试器时。 内置帐户具有提升的可能会造成安全风险的安全特权。
+- 此帐户必须能够通过网络重新连接到 Visual Studio 计算机（即通过网络进行身份验证）。 在域中，如果远程调试器正在内置本地系统或网络服务帐户或域帐户下运行，则更容易连接回。 内置帐户的安全权限可能会带来安全风险。
 
-### <a name="when-running-the-remote-debugger-as-an-application-normal-mode"></a>作为应用程序 （普通模式） 运行远程调试器
+### <a name="when-running-the-remote-debugger-as-an-application-normal-mode"></a>作为应用程序运行远程调试器时（正常模式）
 
-如果想要将附加到你自己的非提升进程 （如普通应用程序），它并不重要如果以管理员身份运行远程调试器。
+如果你尝试附加到你自己的非提升进程（例如普通应用程序），则如果你以管理员身份运行远程调试器，这并不重要。
 
-你想要以管理员身份在多种方案中运行远程调试器：
+需要在多个方案中以管理员身份运行远程调试器：
 
-- 你想要将附加到以其他用户身份运行的进程 (例如调试 IIS)，或
+- 要附加到作为另一个用户运行的进程（例如调试 IIS 时），或
 
-- 尝试启动另一个进程，并且你想要启动的过程是的管理员。
+- 你正在尝试启动另一个进程，而你要启动的进程是管理员。
 
-执行操作**不**想要以管理员身份运行，如果想要启动进程，并且你想要启动的过程应**不**是管理员。
+如果你想要启动进程，并且你想要启动的进程**不**应是管理员，则**不**希望以管理员身份运行。
 
 ## <a name="see-also"></a>请参阅
-- [远程调试](../debugger/remote-debugging.md)
+- [Remote Debugging](../debugger/remote-debugging.md)

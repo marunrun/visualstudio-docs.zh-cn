@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 91f75ab56c8c34e2c58e0f0560422021299c9540
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: de05b30147e91ed9d82dce03f7a72d34250598de
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64793694"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739115"
 ---
-# <a name="idiasymbolgettimestamp"></a>IDiaSymbol::get_timeStamp
+# <a name="idiasymbolget_timestamp"></a>IDiaSymbol::get_timeStamp
 检索基础可执行文件的时间戳。
 
 ## <a name="syntax"></a>语法
@@ -33,13 +33,13 @@ HRESULT get_timeStamp ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回基础可执行文件的时间戳。
+弄返回基础可执行文件的时间戳。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。
+> @No__t_0 的返回值意味着该属性对符号不可用。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Idiaenumdebugstreams:: Clone |Microsoft Docs'
+title: IDiaEnumDebugStreams：： Clone |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 11a7f8e051350b066c745c47530ab4ed818f8b1b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 105a84b7c4a1b0a43f8f8008cffbebe7b6e23af5
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838384"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744781"
 ---
 # <a name="idiaenumdebugstreamsclone"></a>IDiaEnumDebugStreams::Clone
-创建一个包含当前枚举数形式的相同枚举状态的枚举器。
+创建与当前枚举数包含相同枚举状态的枚举数。
 
 ## <a name="syntax"></a>语法
 
@@ -33,10 +33,10 @@ HRESULT Clone ( 
 #### <a name="parameters"></a>参数
  `ppenum`
 
-[out]返回[IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)对象，其中包含重复的枚举器。 流不会重复，仅枚举器。
+弄返回一个[IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)对象，该对象包含枚举器的副本。 流不重复，只是枚举器。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)

@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 78440c703ece2aa54e54594d57156dbb17848915
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 88c9af8293dfc6a35e5f0e42d9596494d74b10aa
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832646"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743688"
 ---
 # <a name="idiaframedataexecute"></a>IDiaFrameData::execute
-执行堆栈展开并在堆栈遍历帧界面中返回结果。
+执行堆栈展开并返回堆栈审核帧接口中的结果。
 
 ## <a name="syntax"></a>语法
 
@@ -33,20 +33,20 @@ HRESULT execute ( 
 #### <a name="parameters"></a>参数
  `frame`
 
-[in][IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)保留帧寄存器状态的对象。
+中保存框架寄存器状态的[IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。 下表显示了可能的此方法的返回值。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。 下表显示了此方法的可能的返回值。
 
 |“值”|描述|
 |-----------|-----------------|
-|E_DIA_INPROLOG|无法执行序言代码中的堆栈帧。|
-|E_DIA_SYNTAX|分析帧程序中遇到错误。|
+|E_DIA_INPROLOG|无法在序言代码中执行堆栈帧。|
+|E_DIA_SYNTAX|帧程序中出现分析错误。|
 |E_DIA_FRAME_ACCESS|无法访问寄存器或内存。|
-|E_DIA_VALUE|计算某个值 （例如，被零除） 时出错。|
+|E_DIA_VALUE|计算值时出错（例如，被零除）。|
 
 ## <a name="remarks"></a>备注
- 若要展开堆栈在调试期间调用此方法。 [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)对象由客户端应用程序接收到寄存器的更新，并为使用的方法实现`execute`方法。
+ 在调试过程中调用此方法展开堆栈。 [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)对象由客户端应用程序实现，以接收对寄存器的更新，并提供 `execute` 方法使用的方法。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

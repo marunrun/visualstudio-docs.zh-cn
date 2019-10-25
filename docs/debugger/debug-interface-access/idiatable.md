@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 604c68ef82f66358238f94b43f000fae24a076f1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bc7a573eb92d7c51079b0a7e97067abd155ae4fa
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834147"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738711"
 ---
 # <a name="idiatable"></a>IDiaTable
 枚举 DIA 数据源表。
@@ -29,24 +29,24 @@ IDiaTable : IEnumUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
-下表显示的方法`IDiaTable`。
+下表显示 `IDiaTable` 的方法。
 
 |方法|描述|
 |------------|-----------------|
-|[IDiaTable::get__NewEnum](../../debugger/debug-interface-access/idiatable-get-newenum.md)|检索[IEnumVARIANT 接口](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ienumvariant)此枚举器的版本。|
+|[IDiaTable::get__NewEnum](../../debugger/debug-interface-access/idiatable-get-newenum.md)|检索此枚举器的[IEnumVARIANT 接口](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ienumvariant)版本。|
 |[IDiaTable::get_name](../../debugger/debug-interface-access/idiatable-get-name.md)|检索表的名称。|
-|[IDiaTable::get_Count](../../debugger/debug-interface-access/idiatable-get-count.md)|检索表中的项的数目。|
-|[IDiaTable::Item](../../debugger/debug-interface-access/idiatable-item.md)|检索特定项索引的引用。|
+|[IDiaTable::get_Count](../../debugger/debug-interface-access/idiatable-get-count.md)|检索表中的项数。|
+|[IDiaTable::Item](../../debugger/debug-interface-access/idiatable-item.md)|检索对特定项索引的引用。|
 
 ## <a name="remarks"></a>备注
-此接口实现`IEnumUnknown`Microsoft.VisualStudio.OLE.Interop 命名空间中的枚举方法。 `IEnumUnknown`枚举接口是用于循环访问表的内容相比要高效得多[idiatable:: Get_count](../../debugger/debug-interface-access/idiatable-get-count.md)并[idiatable:: Item](../../debugger/debug-interface-access/idiatable-item.md)方法。
+此接口实现 VisualStudio 命名空间中的 `IEnumUnknown` 枚举方法。 与[IDiaTable：： get_Count](../../debugger/debug-interface-access/idiatable-get-count.md)和[IDiaTable：： Item](../../debugger/debug-interface-access/idiatable-item.md)方法相比，要循环访问表内容，`IEnumUnknown` 枚举接口要高效得多。
 
-解释`IUnknown`接口返回眖`IDiaTable::Item`方法或`Next`（位于 Microsoft.VisualStudio.OLE.Interop 命名空间） 的方法是依赖于表的类型。 例如，如果`IDiaTable`接口表示的插入源列表`IUnknown`应为查询接口[IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)接口。
+从 `IDiaTable::Item` 方法或 `Next` 方法（VisualStudio 命名空间）中返回的 `IUnknown` 接口的解释依赖于表的类型的解释。 例如，如果 `IDiaTable` 接口表示注入的源的列表，则应为[IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)接口查询 `IUnknown` 接口。
 
-## <a name="notes-for-callers"></a>调用方的说明
-通过调用来获取此接口[idiaenumtables:: Item](../../debugger/debug-interface-access/idiaenumtables-item.md)或[idiaenumtables:: Next](../../debugger/debug-interface-access/idiaenumtables-next.md)方法。
+## <a name="notes-for-callers"></a>调用方说明
+通过调用[IDiaEnumTables：： Item](../../debugger/debug-interface-access/idiaenumtables-item.md)或[IDiaEnumTables：： Next](../../debugger/debug-interface-access/idiaenumtables-next.md)方法获取此接口。
 
-在实现以下接口`IDiaTable`接口 (即，您可以查询`IDiaTable`界面为以下接口之一):
+下面的接口是通过 `IDiaTable` 接口实现的（也就是说，你可以查询以下接口之一的 `IDiaTable` 接口）：
 
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)
 
@@ -63,10 +63,10 @@ IDiaTable : IEnumUnknown
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)
 
 ## <a name="example"></a>示例
-第一个函数， `ShowTableNames`，在会话中显示的所有表的名称。 第二个函数， `GetTable`，搜索所有实现指定的接口的表的表。 第三个函数， `UseTable`，演示如何使用`GetTable`函数。
+第一个函数 `ShowTableNames` 显示会话中所有表的名称。 @No__t_0 的第二个函数在表中搜索实现指定接口的所有表。 @No__t_0 的第三个函数演示如何使用 `GetTable` 函数。
 
 > [!NOTE]
-> `CDiaBSTR` 是一个类，包装`BSTR`和实例化超出范围时释放该字符串将自动处理。
+> `CDiaBSTR` 是一个包装 `BSTR` 并在实例化超出范围时自动处理释放该字符串的类。
 
 ```C++
 void ShowTableNames(IDiaSession *pSession)
@@ -131,11 +131,11 @@ void UseTable(IDiaSession *pSession)
 ```
 
 ## <a name="requirements"></a>要求
-标头：dia2.h
+标头： Dia2
 
-库： diaguids.lib
+库： diaguids
 
-DLL: msdia80.dll
+DLL： msdia80
 
 ## <a name="see-also"></a>请参阅
 - [接口（调试接口访问 SDK）](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

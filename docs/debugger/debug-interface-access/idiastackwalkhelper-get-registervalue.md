@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 275941aaf3a1eb2cab6554b18c6d9aa66605121a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bfb3e219012effe47a2352f7c22c6cf51b4617f9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62831827"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741407"
 ---
-# <a name="idiastackwalkhelpergetregistervalue"></a>IDiaStackWalkHelper::get_registerValue
+# <a name="idiastackwalkhelperget_registervalue"></a>IDiaStackWalkHelper::get_registerValue
 检索寄存器的值。
 
 ## <a name="syntax"></a>语法
@@ -34,17 +34,17 @@ HRESULT get_registerValue ( 
 #### <a name="parameters"></a>参数
  `index`
 
-[in]中的值[CV_HREG_e 枚举](../../debugger/debug-interface-access/cv-hreg-e.md)枚举，它指定其注册以获取的值。
+中[CV_HREG_e 枚举](../../debugger/debug-interface-access/cv-hreg-e.md)枚举中的一个值，该值指定要从哪个寄存器获取值。
 
  `pRetVal`
 
-[out]返回注册的当前值。
+弄返回寄存器的当前值。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="remarks"></a>备注
- 虽然的大，但`pRetVal`参数，实现应存储仅注册通常存放。 例如，一个 8 位寄存器保存仅中的最小 8 位的给定值。 此 8 位值扩展到 64 位时此方法返回。
+ 尽管 `pRetVal` 参数的大小，实现应只存储寄存器通常保存的内容。 例如，8位寄存器只包含给定值的最低8位。 从此方法返回时，此8位值将扩展为64位。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

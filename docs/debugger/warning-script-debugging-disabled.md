@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 50fe457e2b66a4c1ddafc9fc24658f58f6f753d2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 91875a370f6d072cf2dd69807f516b8f1a808461
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62901018"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72728203"
 ---
 # <a name="warning-script-debugging-disabled"></a>警告：脚本调试已禁用
 脚本调试当前在 Internet Explorer 中禁用
@@ -31,13 +31,13 @@ ms.locfileid: "62901018"
 
 1. 在 Internet Explorer 的“工具”菜单上选择“Internet 选项”。
 
-2. 在“Internet 选项”  对话框中，单击“高级”  选项卡。
+2. 在“Internet 选项” 对话框中，单击“高级” 选项卡。
 
 3. 在“高级”选项卡上，在“设置”框中查找“浏览”类别。
 
 4. 清除“禁用脚本调试(Internet Explorer)”。
 
-5. 单击 **“确定”**。
+5. 单击“确定”。
 
 6. 退出并重新启动 Internet Explorer。
 

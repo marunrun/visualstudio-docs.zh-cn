@@ -1,5 +1,5 @@
 ---
-title: IDiaSession::findSymbolsForAcceleratorPointerTag |Microsoft Docs
+title: IDiaSession：： findSymbolsForAcceleratorPointerTag |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 72510e9e82c1ec6983075880d4335dee8c0ad23c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: da795770ad0f6f57697bc17a4ee8cf936cfc1183
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839233"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741975"
 ---
 # <a name="idiasessionfindsymbolsforacceleratorpointertag"></a>IDiaSession::findSymbolsForAcceleratorPointerTag
-在父 Accelerator 存根 （stub） 函数中返回指定的标记值对应于该变量的符号的枚举。
+对于指定的标记值对应于父加速器存根函数中的变量，返回其符号的枚举。
 
 ## <a name="syntax"></a>语法
 
@@ -33,18 +33,18 @@ HRESULT findSymbolsForAcceleratorPointerTag ( 
 #### <a name="parameters"></a>参数
  `parent`
 
-[in]对应于要搜索的加速器存根 （stub） 函数 IDiaSymbol。
+中与要搜索的快捷键存根函数相对应的 IDiaSymbol。
 
  `tagValue`
 
-[in]指针标记值。
+中指针标记值。
 
  `ppResult`
 
-[out]一个指向`IDiaEnumSymbols`使用结果初始化的接口指针。
+弄指向使用结果初始化的 `IDiaEnumSymbols` 接口指针的指针。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

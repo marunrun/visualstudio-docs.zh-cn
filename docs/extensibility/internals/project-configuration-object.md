@@ -11,41 +11,41 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9460a30e63a7d2c282bf537517016dfa5f790a1e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e3321b70b51d194c67f1deee8ed33e240762b16b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66328433"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72725836"
 ---
 # <a name="project-configuration-object"></a>项目配置对象
-项目配置对象管理到 UI 的配置信息的显示。
+项目配置对象管理向 UI 显示配置信息。
 
  ![Visual Studio 项目配置](../../extensibility/internals/media/vsprojectcfg.gif "vsProjectCfg")项目配置属性页
 
- 项目配置提供程序管理的项目配置。 在环境和其他包，才能访问和检索有关项目的配置的信息，请调用附加到项目的配置提供程序对象的接口。
+ 项目配置提供程序管理项目配置。 环境和其他包若要获取和检索有关项目配置的信息，请调用附加到项目配置提供程序对象的接口。
 
 > [!NOTE]
-> 无法创建或以编程方式编辑解决方案配置文件。 必须使用`DTE.SolutionBuilder`。 请参阅[解决方案配置](../../extensibility/internals/solution-configuration.md)有关详细信息。
+> 不能以编程方式创建或编辑解决方案配置文件。 必须使用 `DTE.SolutionBuilder`。 有关详细信息，请参阅[解决方案配置](../../extensibility/internals/solution-configuration.md)。
 
- 若要发布的配置 UI 中使用的显示名称，你的项目应实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg.get_DisplayName%2A>。 环境调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgs%2A>，这会返回一系列`IVsCfg`可用于获取要在环境的用户界面中列出的配置和平台信息的显示名称的指针。 由存储在活动解决方案配置的项目的配置确定的活动配置和平台。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager.FindActiveProjectCfg%2A>方法可以用于检索活动项目配置。
+ 若要发布要在配置 UI 中使用的显示名称，你的项目应实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg.get_DisplayName%2A>。 环境调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgs%2A>，这将返回一个 `IVsCfg` 指针列表，你可以使用这些指针获取要在环境的 UI 中列出的配置和平台信息的显示名称。 活动配置和平台由存储在活动解决方案配置中的项目配置决定。 @No__t_0 方法可用于检索活动项目配置。
 
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider>对象可以选择在上实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2>对象<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProviderEventsHelper>对象，以允许您检索`IVsProjectCfg2`对象基于规范的项目配置名称。
+ 可以选择在具有 <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProviderEventsHelper> 对象的 <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2> 对象上实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider> 对象，以允许基于规范项目配置名称检索 `IVsProjectCfg2` 对象。
 
- 另一种方法提供对项目配置访问权限的环境和其他项目的项目提供的一个实现，为`IVsCfgProvider2::GetCfgs`方法以返回一个或多个配置对象。 项目还可能会实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2>，后者又继承`IVsProjectCfg`，从而从`IVsCfg`，以提供特定于配置的信息。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2> 添加、 删除和重命名项目配置为支持平台和功能。
+ 向环境和其他项目提供对项目配置的访问的另一种方法是，项目提供 `IVsCfgProvider2::GetCfgs` 方法的实现以返回一个或多个配置对象。 项目还可能实现从 `IVsProjectCfg` 继承的 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2>，`IVsCfg` 从而提供特定于配置的信息。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2> 支持平台和功能，以便添加、删除和重命名项目配置。
 
 > [!NOTE]
-> 由于 Visual Studio 不再限制为两种配置类型、 处理配置的代码编写，不应使用的假设有关多个配置，也不应它编写时会假定，只有一个项目调试或零售，一定是配置。 这样，使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg.get_IsReleaseOnly%2A>和<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg.get_IsDebugOnly%2A>已过时。
+> 由于 Visual Studio 不再限制为两个配置类型，因此不应在处理配置的情况下编写用于处理配置的代码，也不应假设只有一个项目配置必须是 "调试" 或 "零售"。 这使得 <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg.get_IsReleaseOnly%2A> 和 <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg.get_IsDebugOnly%2A> 过时。
 
- 调用`QueryInterface`从返回的对象上`IVsGetCfgProvider::GetCfgProvider`检索`IVsCfgProvider2`。 如果`IVsGetCfgProvider`通过调用找不到`QueryInterface`上`IVsProject3`项目对象，可以通过调用访问的配置提供程序对象`QueryInterface`为返回的对象的层次结构根浏览器对象上`IVsHierarchy::GetProperty(VSITEM_ROOT, VSHPROPID_BrowseObject)`，或通过指向返回的配置提供程序的`IVsHierarchy::GetProperty(VSITEM_ROOT, VSHPROPID_ConfigurationProvider)`。
+ 对从 `IVsGetCfgProvider::GetCfgProvider` 返回的对象调用 `QueryInterface` 会检索 `IVsCfgProvider2`。 如果通过在 `IVsProject3` 项目对象上调用 `QueryInterface` 找不到 `IVsGetCfgProvider`，则可以通过在层次结构根浏览器对象上对为 `IVsHierarchy::GetProperty(VSITEM_ROOT, VSHPROPID_BrowseObject)` 返回的对象调用 `QueryInterface`，或通过指向配置的指针来访问配置提供程序对象。为 `IVsHierarchy::GetProperty(VSITEM_ROOT, VSHPROPID_ConfigurationProvider)` 返回的提供程序。
 
- `IVsProjectCfg2` 主要提供访问来生成、 调试和部署管理对象，并允许到组的输出可以自由的项目。 方法`IVsProjectCfg`并`IVsProjectCfg2`可用于实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg>来管理生成过程中，和<xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputGroup>配置的输出组的指针。
+ `IVsProjectCfg2` 主要提供对生成、调试和部署管理对象的访问，并允许项目自由地对输出进行分组。 @No__t_0 和 `IVsProjectCfg2` 的方法可用于实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> 来管理生成过程，并为配置的输出组 <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputGroup> 指针。
 
- 项目必须返回相同数量的它支持即使的组中包含的输出数可能会有所不同 configuration 配置每个配置的组。 组还必须具有相同的标识符信息 （规范名称、 显示名称和组信息） 配置配置项目中。 有关详细信息，请参阅[输出的项目配置](../../extensibility/internals/project-configuration-for-output.md)。
+ 项目必须为其支持的每个配置返回相同数量的组，即使组中包含的输出数可能因配置而异。 组还必须具有与项目中的配置相同的标识符信息（规范名称、显示名称和组信息）。 有关详细信息，请参阅[输出的项目配置](../../extensibility/internals/project-configuration-for-output.md)。
 
- 若要启用调试，你的配置应实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg>。 `IVsDebuggableProjectCfg` 是实现以允许调试器以启动配置项目的可选接口，并且在配置对象上实现`IVsCfg`和`IVsProjectCfg`。 环境在用户选择通过按 F5 启动调试器时调用它。
+ 若要启用调试，你的配置应实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg>。 `IVsDebuggableProjectCfg` 是由项目实现的可选接口，该接口允许调试器启动配置，并在具有 `IVsCfg` 和 `IVsProjectCfg` 的配置对象上实现。 当用户按 F5 启动调试器时，环境将调用它。
 
- `ISpecifyPropertyPages` 和`IDispatch`用属性页结合使用来检索并向用户显示依赖于配置的信息。 有关详细信息，请参阅[属性页](../../extensibility/internals/property-pages.md)。
+ `ISpecifyPropertyPages` 和 `IDispatch` 与属性页结合使用，以便为用户检索和显示与配置相关的信息。 有关详细信息，请参阅[属性页](../../extensibility/internals/property-pages.md)。
 
 ## <a name="see-also"></a>请参阅
 - [管理配置选项](../../extensibility/internals/managing-configuration-options.md)

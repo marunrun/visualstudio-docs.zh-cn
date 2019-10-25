@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fb3caa5574605864a0dd16b59b6f451530b8e631
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 007477d3f0de3767b0c5ef0af977f969505884ed
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62827785"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742313"
 ---
 # <a name="idiasessionfindacceleratorinlineesbyname"></a>IDiaSession::findAcceleratorInlineesByName
-返回与指定为内联函数名称相对应的内嵌帧的符号的枚举。
+返回与指定内联函数名称对应的内联帧的符号的枚举。
 
 ## <a name="syntax"></a>语法
 
@@ -33,21 +33,21 @@ HRESULT findAcceleratorInlineeLinesByName ( 
 #### <a name="parameters"></a>参数
  `name`
 
-[in]要搜索的被内联方函数名称。
+中要搜索的被内联方函数名称。
 
  `option`
 
-[in]内联搜索帧的时要使用的名称搜索选项对应于`name`。 有关详细信息，请参阅[NameSearchOptions 枚举](../../debugger/debug-interface-access/namesearchoptions.md)。
+中搜索与 `name` 相对应的内联框架时要使用的名称搜索选项。 有关详细信息，请参阅[NameSearchOptions 枚举](../../debugger/debug-interface-access/namesearchoptions.md)。
 
  `ppResult`
 
-[out]一个指向`IDiaEnumSymbols`使用结果初始化的接口指针。
+弄指向使用结果初始化的 `IDiaEnumSymbols` 接口指针的指针。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="remarks"></a>备注
- 此函数将搜索仅在加速器存根 （stub） 函数中的内联函数。 它会忽略本机C++过程的记录。
+ 此函数仅在快捷键存根函数内搜索内联函数。 它将忽略C++本机过程记录。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

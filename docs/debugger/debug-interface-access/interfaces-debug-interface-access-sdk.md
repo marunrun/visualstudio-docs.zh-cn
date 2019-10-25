@@ -1,5 +1,5 @@
 ---
-title: 接口 （调试接口访问 SDK） |Microsoft Docs
+title: 接口（调试接口访问 SDK） |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -13,29 +13,29 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f60f4b9018f5b2fff9a5426c28dba40177d9ae9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a0aa48ae0d3c3b6b05ea469baea1a1e1aa106667
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840686"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738699"
 ---
 # <a name="interfaces-debug-interface-access-sdk"></a>接口（调试接口访问 SDK）
-下的内容和 Vtable 顺序中的接口上的表中每个接口，方法是按字母顺序列出。
+方法在目录中的每个接口下按字母顺序列出，在 "接口" 页上按 Vtable 顺序列出。
 
 ## <a name="in-this-section"></a>本节内容
 
 [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)
 
-提供了控制 DIA SDK 如何计算的调试对象的虚拟和相对虚拟地址。
+提供对 DIA SDK 如何计算调试对象的虚拟和相对虚拟地址的控制。
 
 [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)
 
-启动的调试符号的源的访问。
+启动对调试符号源的访问。
 
 [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)
 
-提供了对调试数据流中记录的访问。
+提供对调试数据流中的记录的访问。
 
 [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)
 
@@ -43,23 +43,23 @@ ms.locfileid: "62840686"
 
 [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)
 
-枚举数据源中包含的各种框架的数据元素。
+枚举数据源中包含的各种帧数据元素。
 
 [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)
 
-枚举数据源中包含的各种插入的源。
+枚举数据源中包含的各种注入的源。
 
 [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)
 
-枚举数据源中包含的各种行号。
+枚举数据源中包含的各个行号。
 
 [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)
 
-枚举数据源中包含的各个部分贡献。
+枚举数据源中包含的各种节发布。
 
 [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)
 
-枚举数据源中包含的各个部分。
+枚举数据源中包含的各个段。
 
 [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)
 
@@ -75,7 +75,7 @@ ms.locfileid: "62840686"
 
 [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)
 
-通过地址来枚举数据源中包含的各种符号。
+枚举数据源中包含的各种符号，按地址进行枚举。
 
 [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)
 
@@ -83,47 +83,47 @@ ms.locfileid: "62840686"
 
 [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
 
-公开一个堆栈帧的详细信息。
+公开堆栈帧的详细信息。
 
 [IDiaImageData](../../debugger/debug-interface-access/idiaimagedata.md)
 
-公开的模块或映像的基的位置和内存偏移量的详细信息。
+公开模块或图像的基位置和内存偏移量的详细信息。
 
 [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)
 
-访问程序源代码存储在 DIA 数据源。
+访问存储在 DIA 数据源中的程序源代码。
 
 [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)
 
-介绍从图像的文字字节块映射到源文件行号的过程的访问信息。
+访问描述从图像的字节块到源文件行号的映射过程的信息。
 
 [IDiaLoadCallback](../../debugger/debug-interface-access/idialoadcallback.md)
 
-从 DIA 符号查找过程，从而使一个用户界面来报告进度的位置尝试接收回调。
+接收来自 DIA 符号定位过程的回调，从而使用户界面能够报告位置尝试的进度。
 
 [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)
 
-接收来自 DIA 符号查找过程，从而限制强加于查找过程的回调。
+接收来自 DIA 符号定位过程的回调，以允许对查找过程施加限制。
 
 [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)
 
-允许你读取 DIA 属性集的持久性属性。
+允许读取 DIA 属性集的持久性属性。
 
 [IDiaReadExeAtRVACallback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md)
 
-允许客户端应用程序提供的按文件位置指定的可执行文件的字节数。
+使客户端应用程序能够提供文件位置指定的可执行文件的字节数。
 
 [IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)
 
-允许客户端应用程序提供的可执行文件的相对虚拟地址由指定的字节数。
+使客户端应用程序能够提供相对虚拟地址指定的可执行文件的字节数。
 
 [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)
 
-描述了部分内容中检索数据，也就是说，连续内存块归功于图像编译单位。
+检索描述节内容的数据，即由编译单位提供给图像的连续内存块。
 
 [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)
 
-将数据从节号线段的地址空间的映射。
+将数据从节号映射到地址空间的段。
 
 [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 
@@ -131,27 +131,27 @@ ms.locfileid: "62840686"
 
 [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)
 
-表示一个源代码文件。
+表示一个源文件。
 
 [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)
 
-显示堆栈帧的属性。
+公开堆栈帧的属性。
 
 [IDiaStackWalker](../../debugger/debug-interface-access/idiastackwalker.md)
 
-提供方法来执行堆栈遍历使用 PDB 文件。
+提供用 PDB 文件执行堆栈审核的方法。
 
 [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)
 
-维护之间的调用堆栈上下文[idiaframedata:: Execute](../../debugger/debug-interface-access/idiaframedata-execute.md)方法。
+在调用[IDiaFrameData：： execute](../../debugger/debug-interface-access/idiaframedata-execute.md)方法之间维护堆栈上下文。
 
 [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)
 
-便于遍历堆栈使用程序调试数据库 (PDB) 文件。
+使用程序调试数据库（PDB）文件，有助于遍历堆栈。
 
 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 
-描述符号实例的属性。
+介绍符号实例的属性。
 
 [IDiaTable](../../debugger/debug-interface-access/idiatable.md)
 
@@ -160,11 +160,11 @@ ms.locfileid: "62840686"
 ## <a name="related-sections"></a>相关章节
 [枚举和结构](../../debugger/debug-interface-access/enumerations-and-structures.md)
 
-介绍枚举和结构由 DIA SDK 的各种接口。
+描述 DIA SDK 的各种接口使用的枚举和结构。
 
 [常量（调试接口访问 SDK）](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)
 
-介绍在 DIA SDK 中提供的常量。
+介绍 DIA SDK 中可用的常量。
 
 ## <a name="see-also"></a>请参阅
 
