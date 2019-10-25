@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: be0fffc1c52c6e15e4ac564cb3e53c60a3670c22
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 54b460fc96d71048b192313d03956e3b2cbe321f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839805"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743142"
 ---
-# <a name="idialinenumbergetsourcefileid"></a>IDiaLineNumber::get_sourceFileId
-检索唯一的源文件标识符提供此行的源文件。
+# <a name="idialinenumberget_sourcefileid"></a>IDiaLineNumber::get_sourceFileId
+检索提供此行的源文件的唯一源文件标识符。
 
 ## <a name="syntax"></a>语法
 
@@ -33,10 +33,10 @@ HRESULT get_sourceFileId ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回唯一的源文件标识符提供此行的源文件。
+弄返回提供此行的源文件的唯一源文件标识符。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。
+ 如果成功，则返回 `S_OK`。 如果此属性不受支持，则返回 `S_FALSE`。 否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

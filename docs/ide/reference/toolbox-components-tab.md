@@ -8,17 +8,17 @@ f1_keywords:
 - VS.CHOOSEITEMS.UniversalWindowsComponents
 helpviewer_keywords:
 - Toolbox, Components tab
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 17f040b9bb64c2192bc6b376f5d0397ee5438071
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: bd9c6bf4d24a681c426a20f490dba2cc1d5080fc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66747755"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72644593"
 ---
 # <a name="toolbox-components-tab"></a>工具箱，“组件”选项卡
 
@@ -26,7 +26,7 @@ ms.locfileid: "66747755"
 
 要显示此选项卡，请打开 Windows 窗体设计器。 选择“视图” > 工具箱”   。 在“工具箱”中，选择“组件”选项卡   。
 
-## <a name="components"></a>组件数
+## <a name="components"></a>组件
 
 **BackgroundWorker**
 

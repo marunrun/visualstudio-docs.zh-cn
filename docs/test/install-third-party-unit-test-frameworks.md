@@ -2,17 +2,17 @@
 title: 安装第三方单元测试框架
 ms.date: 04/01/2019
 ms.topic: conceptual
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 9f61b52f72474a8ecd8fac4c30265dcd7cf36a5e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+author: jillre
+ms.openlocfilehash: fef59c757476b46936389ca48ca2bdaf32aec729
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62978640"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653251"
 ---
 # <a name="install-unit-test-frameworks"></a>安装单元测试框架
 
@@ -24,11 +24,11 @@ Visual Studio 解决方案可以包含使用不同框架和面向不同语言的
 
 ## <a name="acquire-frameworks"></a>获取框架
 
-使用“NuGet 包管理器”安装第三方单元测试框架。
+使用“NuGet 包管理器”安装第三方单元测试框架  。
 
-1. 右键单击将包含测试代码的项目，然后选择“管理 NuGet 包”。
+1. 右键单击将包含测试代码的项目，然后选择“管理 NuGet 包”  。
 
-2. 在“NuGet 包管理器”中，搜索要安装的测试框架，然后单击“安装”。
+2. 在“NuGet 包管理器”中，搜索要安装的测试框架，然后单击“安装”   。
 
    ![Visual Studio 中的 NuGet 包管理器](media/vs-2019/nuget-package-manager.png)
 
@@ -38,13 +38,13 @@ Visual Studio 解决方案可以包含使用不同框架和面向不同语言的
 
 ### <a name="to-update-to-the-latest-stable-test-adapter-version"></a>更新到最新版本的稳定测试适配器
 
-1. 导航到“工具” > “NuGet 包管理器” > “管理解决方案的 NuGet 包”，打开解决方案的 Nuget 包管理器。
+1. 导航到“工具” > “NuGet 包管理器” > “管理解决方案的 NuGet 包”，打开解决方案的 Nuget 包管理器    。
 
-2. 单击“更新”选项卡，并搜索已安装的 MSTest、NUnit 或 xUnit 测试适配器。
+2. 单击“更新”选项卡，并搜索已安装的 MSTest、NUnit 或 xUnit 测试适配器  。
 
 3. 选择每个测试适配器，然后选择下拉菜单中的最新稳定版本。
 
-4. 选择“安装”按钮。
+4. 选择“安装”  按钮。
 
    ![升级测试适配器](media/install-adapter-upgrade.png)
 

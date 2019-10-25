@@ -11,29 +11,29 @@ helpviewer_keywords:
 - wavy underlines
 - Text Editor Options dialog box, IntelliSense
 ms.assetid: 3466dedb-e5f4-424c-8dd8-e4941b2f4fc2
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d7e7e76e025c2c426a83f00c1cf2af830eb1c26a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2d1e330788b72ff0b4395d1e5d531d1d233f59e7
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778679"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666232"
 ---
 # <a name="options-text-editor-c-intellisense"></a>选项，文本编辑器，C#，IntelliSense
 
-使用“IntelliSense”选项页可修改影响 IntelliSense for C# 行为的设置。 要访问此选项页，请选择“工具” > “选项”，然后选择“文本编辑器” > “C#” > “IntelliSense”。
+使用“IntelliSense”选项页可修改影响 IntelliSense for C# 行为的设置  。 要访问此选项页，请选择“工具” > “选项”，然后选择“文本编辑器” > “C#” > “IntelliSense”      。
 
-“IntelliSense”选项页面包含以下选项：
+“IntelliSense”选项页面包含以下选项  ：
 
 ## <a name="completion-lists"></a>完成列表
 
 - 键入字符后显示完成列表*
 
-   选择此选项后，IntelliSense 在你开始键入时会自动显示完成列表。 即使未选中此选项，仍可通过“IntelliSense”菜单或通过按 Ctrl+空格使用 IntelliSense 完成功能。
+   选择此选项后，IntelliSense 在你开始键入时会自动显示完成列表。 即使未选中此选项，仍可通过“IntelliSense”菜单或通过按 Ctrl+空格使用 IntelliSense 完成功能    。
 
 - 删除字符后显示完成列表
 
@@ -53,31 +53,31 @@ ms.locfileid: "62778679"
 
 - 在标识符后键入 ?-Tab 时包含片段
 
-   选择此选项后，IntelliSense 会在标识符后按 ?+Tab 时，将 C# 代码片段的别名添加到完成列表中
+   选择此选项后，IntelliSense 会在标识符后按 ?+Tab 时，将 C# 代码片段的别名添加到完成列表中  
 
 ## <a name="enter-key-behavior"></a>输入关键行为
 
 - 按下 Enter 时不添加新行
 
-   指定在完成列表中选择项目以及按下 Enter 之后不自动添加新行。
+   指定在完成列表中选择项目以及按下 Enter 之后不自动添加新行  。
 
 - 只有在完整键入的单词结尾后按下回车键时才添加新行
 
-   指定如果键入完成列表中某条目的所有字符后按 Enter，则自动添加新行并且光标移动到新行。
+   指定如果键入完成列表中某条目的所有字符后按 Enter，则自动添加新行并且光标移动到新行  。
 
-   例如，如果键入 `else` 后按 Enter，则编辑器中显示以下内容：
+   例如，如果键入 `else` 后按 Enter，则编辑器中显示以下内容  ：
 
    `else`
 
    `|`（光标位置）
 
-   但是，如果仅键入 `el`，然后按 Enter，则编辑器中显示以下内容：
+   但是，如果仅键入 `el`，然后按 Enter，则编辑器中显示以下内容  ：
 
    `else|`（光标位置）
 
 - 按下 Enter 时始终添加新行
 
-   指定如果键入完成列表中某条目的任意字符后按 Enter，则自动添加新行并且光标移动到新行。
+   指定如果键入完成列表中某条目的任意字符后按 Enter，则自动添加新行并且光标移动到新行   。
 
 ## <a name="show-name-suggestions"></a>显示名称建议
 

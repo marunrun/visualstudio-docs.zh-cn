@@ -1,5 +1,5 @@
 ---
-title: 错误：仅在使用 Microsoft.NET Framework 2.0 或更高版本支持混合的模式调试 |Microsoft Docs
+title: 错误：仅当使用 Microsoft .NET Framework 2.0 或更高版本时才支持混合模式调试 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -14,19 +14,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0fd30fb1b181224b61b96670553ef5aa6ff0f721
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: c85dac85146c59d8aeba9f9cf85351b5bc17a81c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66745284"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72737614"
 ---
 # <a name="error-mixed-mode-debugging-is-supported-only-when-using-microsoft-net-framework-20-or-greater"></a>错误：仅当使用 Microsoft .NET Framework 2.0 或更高版本时，才支持混合模式调试
-若要调试混合本机和托管代码，必须具有.NET Framework 版本 2.0，3.0。 3.5 或 4 版。 不支持混合模式调试与早期版本的.NET Framework。
+若要调试混合的本机代码和托管代码，则必须具有 .NET Framework 版本2.0、3.0。 3.5 或 4 版。 不支持 .NET Framework 的早期版本进行混合模式调试。
 
 ### <a name="to-correct-this-error"></a>更正此错误
 
-- 升级到版本 2.0、 3.0、 3.5 或 4.0.NET Framework。
+- 将 .NET Framework 升级到版本2.0、3.0、3.5 或4.0。
 
 ## <a name="see-also"></a>请参阅
-- [远程调试](../debugger/remote-debugging.md)
+- [Remote Debugging](../debugger/remote-debugging.md)

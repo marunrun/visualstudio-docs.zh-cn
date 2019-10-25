@@ -1,5 +1,5 @@
 ---
-title: 调试配置的 VB 项目设置 |Microsoft Docs
+title: VB 调试配置的项目设置 |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: reference
@@ -23,18 +23,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f6d948595dcf34bba32708f04e4bdf2f16ba1166
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: bcac88c2faf1af7378ce25597789700df61648a9
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63408669"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72730603"
 ---
 # <a name="project-settings-for-a-visual-basic-debug-configuration"></a>Project Settings for a Visual Basic Debug Configuration
 可以在“属性页”窗口中更改 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 调试配置的项目设置，这在[调试和发布配置](../debugger/how-to-set-debug-and-release-configurations.md)中进行了探讨。 下表显示“属性页”窗口中与调试器有关的设置的位置。
 
 > [!WARNING]
-> 本主题不适用于 UWP 应用。 请参阅[启动调试会话 (VB、 C#，C++和 XAML)](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)
+> 本主题不适用于 UWP 应用。 请参阅[启动调试会话（VB、 C# C++和 XAML）](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)
 
 ### <a name="debug-tab"></a>“调试”选项卡
 
@@ -44,7 +44,7 @@ ms.locfileid: "63408669"
 | **启动操作** | 这组控件指定在从“调试”菜单中选择“启动”时将发生的操作。<br /><br /> -   “启动项目”是默认值，用于启动启动项目以供调试。 <br />-   “启动外部程序”用于启动和附加到不属于 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 项目的程序。 有关详细信息，请参阅[附加到运行中的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)。<br />-   “使用 URL 启动浏览器”可用于调试 Web 应用程序。 |
 | **命令行参数** | 指定要调试的程序的命令行参数。 该命令名是在“启动外部程序”中指定的程序名。 如果“启动操作”设置为“启动 URL”，则忽略命令行自变量。 |
 | **工作目录** | 指定被调试的程序的工作目录。 在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中，工作目录就是启动应用程序所在的目录。 默认工作目录是 \bin\Debug 或 \bin\Release，具体取决于当前配置。 |
-| **使用远程计算机** | 选中此复选框后，将启用远程调试。 在文本框中，可以键入出于调试目的运行应用程序的远程计算机的名称或 [Msvsmon 服务器名称](../debugger/remote-debugging.md)。 该 EXE 在远程计算机上的位置是由“生成”选项卡中的“输出路径”属性指定的。此位置必须是远程计算机上的共享目录。 |
+| **使用远程计算机** | 选中此复选框后，将启用远程调试。 在文本框中，可以键入出于调试目的运行应用程序的远程计算机的名称或 [Msvsmon 服务器名称](../debugger/remote-debugging.md)。 远程计算机上的 EXE 位置由 "生成" 选项卡中的 "输出路径" 属性指定。该位置必须是远程计算机上的可共享目录。 |
 | **非托管代码调试** | 使你能够从托管应用程序中调试对本机（非托管）Win32 代码的调用。 这与在 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 项目中为“调试器类型”选择“混合”的效果相同。 |
 | **SQL Server 调试** | 允许对 SQL Server 数据库对象进行调试。 |
 

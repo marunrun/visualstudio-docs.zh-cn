@@ -8,15 +8,15 @@ helpviewer_keywords:
 - agents, network adapter
 - controllers, configuring
 ms.assetid: 7eb9290a-f9f6-4e41-9caa-796fcfaf0610
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dfcbac0bb9188826804ba13884f0f57962dddeab
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b0dc70169deb8d09fed45bcb921c783765e87c0e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979323"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72643785"
 ---
 # <a name="how-to-bind-a-test-controller-or-test-agent-to-a-network-adapter"></a>如何：将测试控制器或测试代理绑定到网络适配器
 
@@ -35,27 +35,27 @@ ms.locfileid: "62979323"
 
 ### <a name="to-obtain-the-ip-addresses-of-the-network-adapters"></a>获取网络适配器的 IP 地址
 
-1. 在 Microsoft Windows 中，选择“开始”，在“开始搜索”框中选择，键入 cmd，然后选择“输入”。
+1. 在 Microsoft Windows 中，选择“开始”，在“开始搜索”框中选择，键入 cmd，然后选择“输入”。    
 
-2. 键入 ipconfig /all。
+2. 键入 ipconfig /all。 
 
      将显示网络适配器的 IP 地址。 记录要将控制器绑定到的网络适配器的 IP 地址。
 
 ### <a name="to-bind-a-network-adapter-to-a-test-controller"></a>将网络适配器绑定到测试控制器
 
-1. 在 Microsoft Windows 中，选择“开始”，在“开始搜索”框中选择，键入 services.msc，然后选择“输入”。
+1. 在 Microsoft Windows 中，选择“开始”，在“开始搜索”框中选择，键入 services.msc，然后选择“输入”。    
 
-     将显示“服务”对话框。
+     将显示“服务”对话框。 
 
-2. 在结果窗格中的“名称”列中，右键单击“Visual Studio Test Controller”服务，然后选择“停止”。
+2. 在结果窗格中的“名称”列中，右键单击“Visual Studio Test Controller”服务，然后选择“停止”。   
 
-     或
+     -或-
 
      使用提升的权限打开命令提示符，并在命令行执行以下命令：
 
      `net stop vsttcontroller`
 
-3. 打开位于 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\\\<edition>\Common7\IDE 中的 QTCcontroller.exe.config XML 配置文件。
+3. 打开位于 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\\\<edition>\Common7\IDE 中的 QTCcontroller.exe.config XML 配置文件   。
 
 4. 找到 `<appSettings>` 标记。
 
@@ -89,19 +89,19 @@ ms.locfileid: "62979323"
 
 ### <a name="to-bind-a-network-interface-card-to-a-test-agent"></a>将网络接口卡绑定到测试代理
 
-1. 在 Microsoft Windows 中，选择“开始”，在“开始搜索”框中选择，键入 services.msc，然后选择“输入”。
+1. 在 Microsoft Windows 中，选择“开始”，在“开始搜索”框中选择，键入 services.msc，然后选择“输入”。    
 
-    将显示“服务”对话框。
+    将显示“服务”对话框。 
 
-2. 在结果窗格中的“名称”列中，右键单击“Visual Studio Test Agent”服务，然后选择“停止”。
+2. 在结果窗格中的“名称”列中，右键单击“Visual Studio Test Agent”服务，然后选择“停止”。   
 
-     或
+     -或-
 
      使用提升的权限打开命令提示符，并在命令行执行以下命令：
 
-     net stop vsttagent
+     net stop vsttagent 
 
-3. 打开位于 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\\\<edition>\Common7\IDE 中的 QTAgentService.exe.config XML 配置文件。
+3. 打开位于 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\\\<edition>\Common7\IDE 中的 QTAgentService.exe.config XML 配置文件   。
 
 4. 找到 `<appSettings>` 标记。
 

@@ -7,12 +7,12 @@ ms.author: mblome
 manager: markl
 dev_langs:
 - CPP
-ms.openlocfilehash: fee4478f52cd107d2173919617aca8acd07234eb
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 762ba639c1443bb737087233d04c9e3753f2f455
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445651"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807083"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>使用 C++ Core Guidelines 检查器
 
@@ -80,17 +80,17 @@ C++核心准则可帮助您编写更好和更安全的代码。 但是，如果�
 大多数规则的参考主题位于[Visual Studio C++ Core 检查参考](code-analysis-for-cpp-corecheck.md)中。
 
 在 Visual Studio 2017 版本15.3 中，支持的规则集包括：
-- **所有者指针规则**强制执行与[从核心准则 > 所有者 \<T 相关的C++资源管理检查](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)。
+- **所有者指针规则**强制执行与[从核心准则 > 所有者 \<T 相关的C++资源管理检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)。
 
-- **Const 规则**强制实施[来自C++核心准则的 const 相关检查](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability)。
+- **Const 规则**强制实施[来自C++核心准则的 const 相关检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability)。
 
-- **原始指针规则**强制执行[与核心准则中的C++原始指针相关的资源管理检查](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)。
+- **原始指针规则**强制执行[与核心准则中的C++原始指针相关的资源管理检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)。
 
-- **唯一的指针规则**强制执行与[ C++核心准则中具有唯一指针语义的类型相关的资源管理检查](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)。
+- **唯一的指针规则**强制执行与[ C++核心准则中具有唯一指针语义的类型相关的资源管理检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)。
 
-- **边界规则**强制实施[ C++核心准则的边界配置文件](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile)。
+- **边界规则**强制实施[ C++核心准则的边界配置文件](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile)。
 
-- **类型规则**强制实施[ C++核心准则的类型配置文件](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prosafety-type-safety-profile)。
+- **类型规则**强制实施[ C++核心准则的类型配置文件](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prosafety-type-safety-profile)。
 
 **Visual Studio 2017 版本 15.5**：
 
@@ -131,7 +131,7 @@ CPPCORECHECK_BOUNDS_WARNINGS
 
 ## <a name="attributes"></a>特性
 
-Microsoft Visual C++编译器对于 GSL 禁止显示特性提供了有限的支持。 它可用于禁止在函数内的 expression 和 block 语句上出现警告。
+Microsoft C++编译器对 GSL 禁止显示属性的支持有限。 它可用于禁止在函数内的 expression 和 block 语句上出现警告。
 
 ```cpp
 // Suppress only warnings from the 'r.11' rule in expression.
@@ -231,13 +231,13 @@ msbuild /p:EnableCppCoreCheck=true /p:RunCodeAnalysis=true /p:CodeAnalysisRuleSe
    - `/analyze:plugin EspXEngine.dll` 此选项将代码分析扩展引擎加载到 PREfast 中。 此引擎反过来会加载C++核心准则检查器。
 
 ## <a name="use-the-guideline-support-library"></a>使用准则支持库
-准则支持库旨在帮助你遵循核心准则。 GSL 包括一些定义，使你可以用更安全的替代方法替换容易出错的构造。 例如，您可以使用 `span<T>` 类型替换 `T*, length` 参数对。 [@No__t_1](http://www.nuget.org/packages/Microsoft.Gsl)提供了 GSL。 库是开源的，因此可以查看源、进行注释或做出贡献。 可在[https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL)中找到该项目。
+准则支持库旨在帮助你遵循核心准则。 GSL 包括一些定义，使你可以用更安全的替代方法替换容易出错的构造。 例如，您可以使用 `span<T>` 类型替换 `T*, length` 参数对。 [http://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl)提供了 GSL。 库是开源的，因此可以查看源、进行注释或做出贡献。 可在[https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL)中找到该项目。
 
 ## <a name="vs2015_corecheck"></a>使用 Visual C++ Studio 2015 项目中的核心检查指南
 
-如果使用 Visual Studio 2015，则C++默认情况下不会安装核心检查代码分析规则集。 必须执行一些附加步骤，然后才能在 Visual Studio C++ 2015 中启用核心检查代码分析工具。 Microsoft 通过使用 Nuget 包为 Visual Studio 2015 项目提供支持。 此包的名称为 CppCoreCheck，可[http://www.nuget.org/packages/Microsoft.CppCoreCheck](http://www.nuget.org/packages/Microsoft.CppCoreCheck)。 此程序包需要至少安装了 Visual Studio 2015 Update 1。
+如果使用 Visual Studio 2015，则C++默认情况下不会安装核心检查代码分析规则集。 必须执行一些附加步骤，然后才能在 Visual Studio C++ 2015 中启用核心检查代码分析工具。 Microsoft 通过使用 Nuget 包为 Visual Studio 2015 项目提供支持。 此包的名称为 CppCoreCheck，可[http://www.nuget.org/packages/Microsoft.CppCoreCheck](https://www.nuget.org/packages/Microsoft.CppCoreCheck)。 此程序包需要至少安装了 Visual Studio 2015 Update 1。
 
-该包还会安装另一个包作为依赖项，即仅标头的准则支持库（GSL）。 [@No__t_1](https://github.com/Microsoft/GSL)上还提供了 GitHub 上的 GSL。
+该包还会安装另一个包作为依赖项，即仅标头的准则支持库（GSL）。 [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL)上还提供了 GitHub 上的 GSL。
 
 由于代码分析规则的加载方式，你必须将 CppCoreCheck NuGet 包安装到要在 Visual Studio 2015 中C++检查的每个项目。
 

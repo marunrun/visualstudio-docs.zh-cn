@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_uavSlot |Microsoft Docs
+title: IDiaSymbol：： get_uavSlot |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,14 +10,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b139bd9abdb8266acce9bab4d82a8c59b60623a
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 077a0a7895e93714bfe7b64b658c59f4d38ead4e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62835321"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739051"
 ---
-# <a name="idiasymbolgetuavslot"></a>IDiaSymbol::get_uavSlot
+# <a name="idiasymbolget_uavslot"></a>IDiaSymbol::get_uavSlot
 检索 uav 槽。
 
 ## <a name="syntax"></a>语法
@@ -30,10 +30,10 @@ HRESULT get_uavSlot(
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]一个指向`DWORD`保存 uav 槽。
+弄指向保存 uav 槽的 `DWORD` 的指针。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

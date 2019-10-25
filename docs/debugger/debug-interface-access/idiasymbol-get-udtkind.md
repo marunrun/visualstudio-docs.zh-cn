@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34faf217f77bd30ba707f5ae17886b05dac8ab4f
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: b1bd7e4963796858e7055667c1ae6a9557c77205
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64796637"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739032"
 ---
-# <a name="idiasymbolgetudtkind"></a>IDiaSymbol::get_udtKind
-检索用户定义类型 (UDT) 的多样性。
+# <a name="idiasymbolget_udtkind"></a>IDiaSymbol::get_udtKind
+检索用户定义类型（UDT）的各种类型。
 
 ## <a name="syntax"></a>语法
 
@@ -33,13 +33,13 @@ HRESULT get_udtKind ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回一个值从[UdtKind 枚举](../../debugger/debug-interface-access/udtkind.md)指定 UDT 类型的枚举： 结构、 类或联合。
+弄返回[UdtKind 枚举](../../debugger/debug-interface-access/udtkind.md)枚举中的一个值，该值指定 UDT 的类型：结构、类或联合。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。
+> @No__t_0 的返回值意味着该属性对符号不可用。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

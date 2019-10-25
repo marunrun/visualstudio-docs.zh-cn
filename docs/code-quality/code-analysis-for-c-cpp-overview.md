@@ -21,16 +21,16 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a20637b7c7c3afcf594d1498b6030c685e4be72
-ms.sourcegitcommit: e95dd8cedcd180e0bce6a75c86cf861757918290
+ms.openlocfilehash: 515b9b7eb1b1a4d2dbee6329be782386b8370338
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163052"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72806308"
 ---
 # <a name="code-analysis-for-cc-overview"></a>C/C++ 代码分析概述
 
-C/C++ Code 分析工具提供有关您的 C/C++源代码中可能存在的缺陷的信息。 工具报告的常见编码错误包括缓冲区溢出、内存未初始化、null 指针取消引用以及内存和资源泄漏。 该工具还可以针对[ C++核心准则](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)运行检查。
+C/C++ Code 分析工具提供有关您的 C/C++源代码中可能存在的缺陷的信息。 工具报告的常见编码错误包括缓冲区溢出、内存未初始化、null 指针取消引用以及内存和资源泄漏。 该工具还可以针对[ C++核心准则](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)运行检查。
 
 ## <a name="ide-integrated-development-environment-integration"></a>IDE （集成开发环境）集成
 
@@ -46,11 +46,11 @@ C/C++ Code 分析工具提供有关您的 C/C++源代码中可能存在的缺陷
 C:\>cl /analyze Sample.cpp
 ```
 
-**Visual Studio 2017 版本 15.7 及更高版本：** 你可以从命令行运行该工具，其中包含任何生成系统，包括 CMake。
+**Visual Studio 2017 版本15.7 及更高版本：** 你可以从命令行运行该工具，其中包含任何生成系统，包括 CMake。
 
 ## <a name="pragma-support"></a>#pragma 支持
 
-您可以使用 `#pragma` 指令将警告视为错误;启用或禁用警告，并禁止显示单个代码行的警告。 有关详细信息，请参阅 [Pragma 指令和 __Pragma 关键字](https://docs.microsoft.com/cpp/preprocessor/pragma-directives-and-the-pragma-keyword)。
+您可以使用 `#pragma` 指令将警告视为错误;启用或禁用警告，并禁止显示单个代码行的警告。 有关详细信息，请参阅 [Pragma 指令和 __Pragma 关键字](/cpp/preprocessor/pragma-directives-and-the-pragma-keyword)。
 
 ## <a name="annotation-support"></a>批注支持
 
@@ -62,12 +62,12 @@ C:\>cl /analyze Sample.cpp
 
 ## <a name="team-build-integration"></a>Team Build 集成
 
-你可以使用生成系统的集成功能在 [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] 生成过程中运行代码分析工具。 有关详细信息，请参阅 [Azure 管道](/azure/devops/pipelines/index?view=vsts)。
+你可以使用生成系统的集成功能在 [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] 生成过程中运行代码分析工具。 有关详细信息，请参阅 [Azure Pipelines](/azure/devops/pipelines/index?view=vsts)。
 
 ## <a name="see-also"></a>请参阅
 
-- [快速入门：C/C++@no__t 的代码分析-1
-- [演练：分析 C/C++ Code 是否有缺陷 @ no__t-1
+- [快速入门： C/的代码分析C++](quick-start-code-analysis-for-c-cpp.md)
+- [演练：分析 C/C++代码的缺陷](walkthrough-analyzing-c-cpp-code-for-defects.md)
 - [C/C++ 代码分析警告](code-analysis-for-c-cpp-warnings.md)
 - [使用 C++ Core Guidelines 检查器](using-the-cpp-core-guidelines-checkers.md)
 - [C++核心准则检查器参考](code-analysis-for-cpp-corecheck.md)

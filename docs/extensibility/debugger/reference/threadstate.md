@@ -1,5 +1,5 @@
 ---
-title: THREADSTATE | Microsoft Docs
+title: THREADSTATE |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 50f487b3d44fc1b871b00348ec28693b36c49685
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d86baeeab046a7e605979d3af2d6329998f796ba
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316143"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72727499"
 ---
 # <a name="threadstate"></a>THREADSTATE
 指定线程的状态。
@@ -50,29 +50,29 @@ public enum enum_THREADSTATE { 
 
 ## <a name="fields"></a>字段
  `THREADSTATE_RUNNING`\
- 指示该线程正在运行。
+ 指示线程正在运行。
 
  `THREADSTATE_STOPPED`\
- 指示该线程已因断点而停止。
+ 指示由于断点而停止线程。
 
  `THREADSTATE_FRESH`\
  指示线程已创建但尚未运行代码。
 
  `THREADSTATE_DEAD`\
- 指示线程出现故障。
+ 指示线程已死。
 
  `THREADSTATE_FROZEN`\
- 指示该线程已冻结 （可以执行任何执行）。
+ 指示线程已冻结（无法执行任何执行）。
 
 ## <a name="remarks"></a>备注
- 用于`dwThreadState`字段[THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md)结构。
+ 用于[THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md)结构的 `dwThreadState` 字段。
 
 ## <a name="requirements"></a>要求
- 标头： msdbg.h
+ 标头： msdbg
 
- 命名空间:Microsoft.VisualStudio.Debugger.Interop
+ 命名空间： VisualStudio
 
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集： VisualStudio。
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

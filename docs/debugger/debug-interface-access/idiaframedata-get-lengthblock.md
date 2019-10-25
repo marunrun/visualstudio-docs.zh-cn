@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 468e3bee84c7312def06c32cb411c00526ba3b1d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: da5b175c7e51e5ee8aaab29788f71219091d26f0
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832856"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743578"
 ---
-# <a name="idiaframedatagetlengthblock"></a>IDiaFrameData::get_lengthBlock
-检索的长度，以字节为单位的所述的帧的代码块。
+# <a name="idiaframedataget_lengthblock"></a>IDiaFrameData::get_lengthBlock
+检索框架所描述的代码块的长度（以字节为单位）。
 
 ## <a name="syntax"></a>语法
 
@@ -33,13 +33,13 @@ HRESULT get_lengthBlock ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]在帧中返回的代码的字节数。
+弄返回框架中代码的字节数。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。
+ 如果成功，则返回 `S_OK`。 如果此属性不受支持，则返回 `S_FALSE`。 否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 中的计划字符串解释通常使用此方法返回的值 (请参阅[idiaframedata:: Get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md)程序字符串的定义的方法)。
+ 此方法返回的值通常用于程序字符串的解释（有关程序字符串的定义，请参见[IDiaFrameData：： get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md)方法）。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

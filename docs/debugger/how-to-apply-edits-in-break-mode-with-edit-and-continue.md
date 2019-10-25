@@ -23,14 +23,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d6c821c63354ec1b7cc83e302a3c2682982696e2
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 05340b4922262eb134aca8fef4bf215342e5a997
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63387680"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72734023"
 ---
-# <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue-visual-basic"></a>如何：应用编辑在中断模式下使用编辑并继续 (Visual Basic)
+# <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue-visual-basic"></a>如何：使用“编辑并继续”在中断模式下应用编辑 (Visual Basic)
 可以在中断模式下使用“编辑并继续”编辑代码，然后不必停止和重新启动执行即可继续。
 
 有关在调试时使用“编辑并继续”的限制，请参阅[受支持的代码更改（C# 和 Visual Basic）](../debugger/supported-code-changes-csharp.md)。
@@ -47,9 +47,9 @@ ms.locfileid: "63387680"
 
          或
 
-    - 异常发生时，选择**启用编辑**上**异常助手**。
+    - 发生异常时，请在 "**异常助手**" 中选择 "**启用编辑**"。
 
-2. 进行任何所需和受支持的代码更改。
+2. 进行任何所需的和支持的代码更改。
 
      有关详细信息，请参阅[受支持的代码更改（C# 和 Visual Basic）](../debugger/supported-code-changes-csharp.md)。
 

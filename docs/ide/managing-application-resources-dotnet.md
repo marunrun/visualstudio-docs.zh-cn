@@ -12,17 +12,17 @@ helpviewer_keywords:
 - resources [Visual Studio]
 - Resources page in Project Designer
 - application resources [Visual Studio]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1681484500c382b296a03e78661b808825768a5b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 29e4fbbd8d50001807f3d90a82d18e40a3674d01
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62538104"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654248"
 ---
 # <a name="manage-application-resources-net"></a>管理应用程序资源 (.NET)
 
@@ -37,11 +37,11 @@ ms.locfileid: "62538104"
 
 在托管代码项目中，打开项目属性窗口。 可通过以下任一方法来打开属性窗口：
 
-- 右键单击“解决方案资源管理器”中的项目节点，并选择“属性”
-- 在 Ctrl+Q 搜索框中键入项目属性
-- 在解决方案资源管理器窗口中，同时按 Alt+Enter
+- 右键单击“解决方案资源管理器”  中的项目节点，并选择“属性” 
+- 在 Ctrl  +Q  搜索框中键入项目属性 
+- 在解决方案资源管理器窗口中，同时按 Alt+Enter   
 
-选择“资源”  选项卡。如果你的项目尚未包含 .resx 文件，你可以添加一个，添加和删除不同类型的资源，并修改现有资源。
+选择“资源”  选项卡。如果你的项目尚未包含 .resx 文件，你可以添加一个，添加和删除不同类型的资源，并修改现有资源  。
 
 ## <a name="resources-in-other-project-types"></a>其他项目类型中的资源
 

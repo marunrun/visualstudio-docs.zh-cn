@@ -22,14 +22,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dcc63eef048dd1e4ae205214ac62f8aa04d8a824
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: b2213da69561e8868c158a3b2cbcaa8efc6adfaf
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71252520"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72728601"
 ---
-# <a name="walkthrough-debugging-a-parallel-application-in-visual-studio-c-visual-basic-c"></a>演练：在 Visual Studio 中调试并行应用程序C#（、Visual Basic C++）
+# <a name="walkthrough-debugging-a-parallel-application-in-visual-studio-c-visual-basic-c"></a>演练：在 Visual Studio 中调试并行应用程序C#（、Visual Basic C++、）
 
 本演练演示如何使用“并行任务”和“并行堆栈”窗口调试并行应用程序。 这些窗口可帮助你了解和验证使用[任务并行库（TPL）](/dotnet/standard/parallel-programming/task-parallel-library-tpl)或[并发运行时](/cpp/parallel/concrt/concurrency-runtime)的代码的运行时行为。 本演练提供了具有内置断点的代码示例。 本演练演示如何在代码中断后使用“并行任务”和“并行堆栈”窗口检查代码。
 
@@ -45,7 +45,7 @@ ms.locfileid: "71252520"
 
 - 窗口如何通过分组、缩放和其他相关功能来处理缩放。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>Prerequisites
  本演练假定已启用**仅我的代码**（默认情况下，它在 Visual Studio 的较新版本中启用）。 在“工具”菜单上，单击“选项”，展开“调试”节点，选择“常规”，然后选择“启用仅我的代码(仅限托管)”。 如果未设置此功能，您仍可以使用本演练，但结果可能会与以下各图不同。
 
 ## <a name="c-sample"></a>C# 示例
@@ -98,7 +98,7 @@ ms.locfileid: "71252520"
 
     请注意，有四个对 `Debugger.Break`（在 C++ 示例中为 `DebugBreak`）的调用。因此，您无需插入断点；您只需运行应用程序即可使其四次中断调试器。
 
-## <a name="using-the-parallel-stacks-window-threads-view"></a>使用“并行堆栈”窗口：线程视图
+## <a name="using-the-parallel-stacks-window-threads-view"></a>使用“并行堆栈”窗口：“线程”视图
  在“调试”菜单上，单击“启动调试”。 等待命中第一个断点。
 
 #### <a name="to-view-the-call-stack-of-a-single-thread"></a>查看一个线程的调用堆栈
@@ -119,7 +119,7 @@ ms.locfileid: "71252520"
 
      主线程的调用堆栈显示在一个框中，其他四个线程的调用堆栈则划分到另一个框中。 将这四个线程划分在一起是因为其堆栈帧共享相同的方法上下文；也就是说，它们处于相同的方法中：`A`、`B` 和 `C`。 若要查看共享同一框的线程的 Id 和名称，请将鼠标悬停在带有标题的框上（**4 个线程**）。 当前线程以粗体显示。
 
-     ![显示线程 id 和名称的工具提示](../debugger/media/pdb_walkthrough_1a.png "PDB_Walkthrough_1A")
+     ![显示线程 Id 和名称的工具提示](../debugger/media/pdb_walkthrough_1a.png "PDB_Walkthrough_1A")
 
      黄色箭头指示当前线程的活动堆栈帧。
 
@@ -149,7 +149,7 @@ ms.locfileid: "71252520"
 
      右键单击 S.C，指向“切换到帧”。 其中一个带有选中标记的命令指示当前线程的堆栈帧。 您可以切换到相同线程的上述帧（将仅移动绿色箭头），也可以切换到其他线程（将同时移动蓝色突出显示）。 下图所示为子菜单。
 
-     ![在 C 上具有2个选项的堆栈菜单，而 J 是最新]的(../debugger/media/pdb_walkthrough_3.png "PDB_Walkthrough_3")
+     ![在 C 上具有2个选项的堆栈菜单，而 J 是最新的](../debugger/media/pdb_walkthrough_3.png "PDB_Walkthrough_3")
 
      当方法上下文只与一个堆栈帧关联时，框标题显示“1 个线程”，双击它即可切换到该线程。 如果双击关联有一个以上的帧的方法上下文，则会自动弹出该菜单。 将鼠标指针悬停在方法上下文上时，请注意右侧的黑色三角形。 单击该三角形也可以显示该快捷菜单。
 
@@ -244,7 +244,7 @@ ms.locfileid: "71252520"
 
      !["任务" 窗口中的两个等待任务](../debugger/media/pdb_walkthrough_7.png "PDB_Walkthrough_7")
 
-     任务 4 又在等待分配给任务 2 的线程所拥有的监视器。 （右键单击标题行，然后选择 "**列** > " "**线程分配**" 查看任务2的线程分配值）。
+     任务 4 又在等待分配给任务 2 的线程所拥有的监视器。 （右键单击标题行，然后选择 "**列**"  > **线程分配**查看任务2的线程分配值 "）。
 
      !["任务" 窗口中的等待任务和工具提示](../debugger/media/pdb_walkthrough_7a.png "PDB_Walkthrough_7A")
 

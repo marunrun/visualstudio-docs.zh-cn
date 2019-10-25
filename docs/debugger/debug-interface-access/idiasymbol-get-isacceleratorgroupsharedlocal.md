@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ac6a7582c6fa59665390cfdb6b613fff6e36709
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 1d6cf755121f851e652cce251ace2105e6773822
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62836831"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740335"
 ---
-# <a name="idiasymbolgetisacceleratorgroupsharedlocal"></a>IDiaSymbol::get_isAcceleratorGroupSharedLocal
-检索一个标志，指示符号是否与组共享本地变量在编译的代码相对应C++AMP 快捷键。
+# <a name="idiasymbolget_isacceleratorgroupsharedlocal"></a>IDiaSymbol::get_isAcceleratorGroupSharedLocal
+检索一个标志，该标志指示符号是否与为C++ AMP 加速器编译的代码中的组共享本地变量相对应。
 
 ## <a name="syntax"></a>语法
 
@@ -30,10 +30,10 @@ HRESULT get_isAcceleratorGroupSharedLocal(
 #### <a name="parameters"></a>参数
  `pFlag`
 
-[out]一个指向`BOOL`，该值指示符号是否与组共享本地变量在编译的代码相对应C++AMP 快捷键。 如果`TRUE`，则`get_baseDataSlot`和`get_baseDataOffset`方法可用于获取变量的存储位置信息。
+弄一个指向 `BOOL` 的指针，该指针指示符号是否与为C++ AMP 加速器编译的代码中的组共享本地变量相对应。 如果 `TRUE`，则可以使用 `get_baseDataSlot` 和 `get_baseDataOffset` 方法来获取变量的存储位置信息。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

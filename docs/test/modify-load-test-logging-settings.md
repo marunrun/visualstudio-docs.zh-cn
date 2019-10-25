@@ -5,15 +5,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - load tests, logging, modifying
 ms.assetid: 9649226a-857d-41ef-8ec7-047b6e498033
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9751ce3b08a0ac963cccdf091ccb99001c6f2c9f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 64e65a08910757d564e1fca0d3280770a1a60af9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62785768"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646653"
 ---
 # <a name="modify-load-test-logging-settings"></a>修改负载测试日志记录设置
 
@@ -21,12 +21,12 @@ ms.locfileid: "62785768"
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-测试控制器会在测试运行期间将收集的所有负载测试样本数据后台处理到一个数据库日志中。 其他数据（如计时详细信息和错误详细信息）会在测试完成时加载到该数据库中。
+测试控制器会在测试运行期间将收集的所有负载测试样本数据后台处理到一个数据库日志中  。 其他数据（如计时详细信息和错误详细信息）会在测试完成时加载到该数据库中。
 
 |任务|关联主题|
 |-|-----------------------|
 |**在负载测试失败时保存日志：** 可以指定是否每当负载测试未通过就保存测试日志。|-   [如何：指定是否将测试失败保存到测试日志中](../test/how-to-specify-if-test-failures-are-saved-to-test-logs.md)|
-|**为日志文件指定最大文件大小：** 可以编辑与测试控制器服务关联的 XML 配置文件，以指定要用于日志文件的最大文件大小。|修改 QTCcontroller.exe.config XML 配置文件中的 `<add key="LogSizeLimitInMegs" value="20"/>`。|
+|**为日志文件指定最大文件大小：** 可以编辑与测试控制器服务关联的 XML 配置文件，以指定要用于日志文件的最大文件大小。|修改 QTCcontroller.exe.config XML 配置文件中的 `<add key="LogSizeLimitInMegs" value="20"/>`  。|
 
 ## <a name="see-also"></a>请参阅
 

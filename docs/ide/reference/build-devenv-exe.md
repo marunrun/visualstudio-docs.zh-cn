@@ -9,17 +9,17 @@ helpviewer_keywords:
 - build Devenv switch
 - command-line builds
 ms.assetid: ced21627-7653-455b-8821-3e31c6a448cf
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 67aba8d93514618fc09abe933cfd28023136a4d6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9aef4dcdc9069c1bbfe71a90bbaba214ebcd18ed
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62790910"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72667886"
 ---
 # <a name="build-devenvexe"></a>/Build (devenv.exe)
 
@@ -39,23 +39,23 @@ devenv SolutionName /Build [SolnConfigName [/Project ProjName [/ProjectConfig Pr
 
 - *SolnConfigName*
 
-  可选。 要用于生成 SolutionName 中命名的解决方案的解决方案配置的名称（如 `Debug` 或 `Release`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。 如果未指定此参数或字符串为空 (`""`)，工具便会使用解决方案的有效配置。
+  可选。 要用于生成 SolutionName  中命名的解决方案的解决方案配置的名称（如 `Debug` 或 `Release`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。 如果未指定此参数或字符串为空 (`""`)，工具便会使用解决方案的有效配置。
 
-- `/Project` ProjName
+- `/Project` ProjName 
 
-  可选。 解决方案中项目文件的路径和名称。 可以输入从 SolutionName 文件夹到项目文件的相对路径、项目的显示名称或项目文件的完整路径和名称。
+  可选。 解决方案中项目文件的路径和名称。 可以输入从 SolutionName 文件夹到项目文件的相对路径、项目的显示名称或项目文件的完整路径和名称  。
 
-- `/ProjectConfig` ProjConfigName
+- `/ProjectConfig` ProjConfigName 
 
-  可选。 要在生成已命名项目时使用的项目生成配置的名称（如 `Debug` 或 `Release`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。 如果此开关已指定，它会替代 SolnConfigName 参数。
+  可选。 要在生成已命名项目时使用的项目生成配置的名称（如 `Debug` 或 `Release`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。 如果此开关已指定，它会替代 SolnConfigName  参数。
 
-- `/Out` OutputFilename
+- `/Out` OutputFilename 
 
   可选。 要将工具输出发送到的文件的文件名。 如果文件已有，工具将输出追加到文件末尾。
 
 ## <a name="remarks"></a>备注
 
-- 在集成开发环境 (IDE) 中，`/Build` 开关执行与“生成解决方案”菜单命令相同的功能。
+- 在集成开发环境 (IDE) 中，`/Build` 开关执行与“生成解决方案”  菜单命令相同的功能。
 
 - 用双引号将含有空格的字符串引起来。
 
@@ -63,7 +63,7 @@ devenv SolutionName /Build [SolnConfigName [/Project ProjName [/ProjectConfig Pr
 
 - `/Build` 开关仅生成自上次生成后发生变化的项目。 若要生成解决方案中的所有项目，请改用 [/rebuild](../../ide/reference/rebuild-devenv-exe.md)。
 
-- 如果看到错误消息“项目配置无效”，请确保已指定解决方案平台或项目平台（例如，`Debug|Win32`）。
+- 如果看到错误消息“项目配置无效”  ，请确保已指定解决方案平台或项目平台（例如，`Debug|Win32`）。
 
 ## <a name="example"></a>示例
 

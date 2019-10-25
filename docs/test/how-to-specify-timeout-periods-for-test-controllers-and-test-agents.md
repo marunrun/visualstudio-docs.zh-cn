@@ -8,15 +8,15 @@ helpviewer_keywords:
 - controllers, configuring
 - controllers, timeouts
 ms.assetid: 777d0db5-0073-458a-a2a3-58b1c1f24c60
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5e703ca3e1770d92a2dc01402acaaba0b4988e92
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2f4e82261b9b36ced471dfa3e93be085e22c4d64
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970625"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653326"
 ---
 # <a name="how-to-specify-timeout-periods-for-test-controllers-and-test-agents"></a>如何：为测试控制器和测试代理指定超时周期
 
@@ -46,7 +46,7 @@ ms.locfileid: "62970625"
 
 ## <a name="to-specify-agent-timeout-options-for-a-test-controller"></a>指定测试控制器的代理超时选项
 
-1. 打开位于 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE 中的 QTCcontroller.exe.config XML 配置文件。
+1. 打开位于 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE 中的 QTCcontroller.exe.config XML 配置文件   。
 
 2. 找到 `<appSettings>` 标记。
 
@@ -68,7 +68,7 @@ ms.locfileid: "62970625"
     <add key="AgentConnectionTimeoutInSeconds" value="180"/>
     ```
 
-    或
+    -或-
 
     添加其他键并指定超时值。 例如，可以在 `AgentInitializeTimeout` 节中添加 `<appSettings>` 键并指定五分钟的值：
 
@@ -80,7 +80,7 @@ ms.locfileid: "62970625"
 
 ## <a name="to-specify-agent-timeout-options-for-a-test-agent"></a>指定测试控代理的代理超时选项
 
-1. 打开位于 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE 中的 QTAgentService.exe.config XML 配置文件。
+1. 打开位于 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE 中的 QTAgentService.exe.config XML 配置文件   。
 
 2. 找到 `<appSettings>` 标记。
 
@@ -102,7 +102,7 @@ ms.locfileid: "62970625"
     <add key="ControllerConnectionPeriodInSeconds" value="60"/>
     ```
 
-    或
+    -或-
 
     添加其他键并指定超时值。 例如，可以在 `RemotingTimeoutSeconds` 节中添加 `<appSettings>` 键并指定十五分钟的值：
 

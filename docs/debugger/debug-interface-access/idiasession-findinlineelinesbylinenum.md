@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 493e1a2f6df57019183f36daf246ef69e8f1a4d6
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: fe238f3bc66d6a7c5978c5d7cbebcd185fcd43d2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63402615"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742215"
 ---
 # <a name="idiasessionfindinlineelinesbylinenum"></a>IDiaSession::findInlineeLinesByLinenum
-检索一个枚举，允许客户端进行循环访问，将内联，直接或间接指定的源文件和行号中的所有函数的行号信息。
+检索一个枚举，该枚举允许客户端循环访问指定源文件和行号内直接或间接内联的所有函数的行号信息。
 
 ## <a name="syntax"></a>语法
 
@@ -35,29 +35,29 @@ HRESULT findInlineeLinesByVA ( 
 #### <a name="parameters"></a>参数
  `compiland`
 
-[in][IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象，表示要在其中搜索的行号编译单位。 此参数不能为 `NULL`。
+中表示要在其中搜索行号的编译单位的[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象。 此参数不能为 `NULL`。
 
  `file`
 
-[in][IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)对象，表示要在其中搜索源文件。 此参数不能为 `NULL`。
+中一个[IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)对象，该对象表示要在其中进行搜索的源文件。 此参数不能为 `NULL`。
 
  `linenum`
 
-[in]指定基于 1 的行号。
+中指定一个从1开始的行号。
 
 > [!NOTE]
-> 您不能使用零指定所有行 (使用[idiasession:: Findlines](../../debugger/debug-interface-access/idiasession-findlines.md)方法来查找所有行)。
+> 不能使用零来指定所有行（使用[IDiaSession：： findLines](../../debugger/debug-interface-access/idiasession-findlines.md)方法查找所有行）。
 
  `column`
 
-[in]指定的列号。 使用零来指定所有列。 列是行的字节的偏移量。
+中指定列号。 使用零来指定所有列。 列是行中的字节偏移量。
 
  `ppResult`
 
-[out]返回[IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)对象，其中包含检索到的行号的列表。
+弄返回一个[IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)对象，该对象包含检索到的行号的列表。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

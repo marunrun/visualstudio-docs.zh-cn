@@ -1,5 +1,5 @@
 ---
-title: IDiaSession::findSymbolsByRVAForAcceleratorPointerTag |Microsoft Docs
+title: IDiaSession：： findSymbolsByRVAForAcceleratorPointerTag |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5bcf399dcf80cb574b6018dde5ffa44e72a4c988
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: eb1b24d24de35de30b24937a6cfbf59d12f69482
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839207"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741991"
 ---
 # <a name="idiasessionfindsymbolsbyrvaforacceleratorpointertag"></a>IDiaSession::findSymbolsByRVAForAcceleratorPointerTag
-提供相应的标记值，则此方法将返回在指定的父 Accelerator 存根 （stub） 函数在指定的相对虚拟地址中包含的符号的枚举。
+给定相应的标记值后，此方法将返回一个符号枚举，其中包含在指定的相对虚拟地址处的指定父加速器存根函数中。
 
 ## <a name="syntax"></a>语法
 
@@ -34,25 +34,25 @@ HRESULT findSymbolsByRVAForAcceleratorPointerTag ( 
 #### <a name="parameters"></a>参数
  `parent`
 
-[in]`IDiaSymbol` ，对应于要搜索的加速器存根 （stub） 函数。
+中与要搜索的快捷键存根函数相对应的 `IDiaSymbol`。
 
  `tagValue`
 
-[in]指针标记值。
+中指针标记值。
 
  `rva`
 
-[in]相对虚拟地址。
+中相对虚拟地址。
 
  `ppResult`
 
-[out]一个指向`IDiaEnumSymbols`使用结果初始化的接口指针。
+弄指向使用结果初始化的 `IDiaEnumSymbols` 接口指针的指针。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="remarks"></a>备注
- 调用此方法仅对`IDiaSymbol`对应于加速器存根 （stub） 函数的接口。
+ 仅在对应于快捷键存根函数的 `IDiaSymbol` 接口上调用此方法。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

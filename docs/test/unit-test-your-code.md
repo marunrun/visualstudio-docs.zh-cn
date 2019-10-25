@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Visual Studio, unit tests
 - unit tests, verifying code with
 - testing code, automated tests
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 5682d752ba2c1430d8ab708e3dadda754a1ba757
-ms.sourcegitcommit: 50f0c3f2763a05de8482b3579026d9c76c0e226c
+author: jillre
+ms.openlocfilehash: fd6d6dca2680dcfcaa42912333b080c428ba78d2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65461386"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659852"
 ---
 # <a name="unit-test-your-code"></a>对代码进行单元测试
 
@@ -24,11 +24,11 @@ ms.locfileid: "65461386"
 
 单元测试工具包括：
 
-* 测试资源管理器 &mdash; 可在“测试资源管理器”中运行单元测试并查看其结果。 可以使用任何单元测试框架，包括具有资源管理器的适配器的第三方框架。
+* 测试资源管理器 &mdash; 可在“测试资源管理器”中运行单元测试并查看其结果   。 可以使用任何单元测试框架，包括具有资源管理器的适配器的第三方框架。 
 
 * **托管代码的 Microsoft 单元测试框架** &mdash; 托管代码的 Microsoft 单元测试框架随 Visual Studio 安装，并提供测试 .NET 代码的框架。
 
-* **适用于 C++ 的 Microsoft 单元测试框架** &mdash; 适用于 C++ 的 Microsoft 单元测试框架作为“使用 C++ 的桌面开发”工作负载的一部分安装。 它提供一个框架，用于测试本机代码。 还随附有 Google Test、Boost.Test 和 CTest 框架，并且提供了第三方适配器用于其他测试框架。 有关详细信息，请参阅[编写适用于 C/C++ 的单元测试](../test/writing-unit-tests-for-c-cpp.md)。
+* **适用于 C++ 的 Microsoft 单元测试框架** &mdash; 适用于 C++ 的 Microsoft 单元测试框架作为“使用 C++ 的桌面开发”工作负载的一部分安装。  它提供一个框架，用于测试本机代码。 还随附有 Google Test、Boost.Test 和 CTest 框架，并且提供了第三方适配器用于其他测试框架。 有关详细信息，请参阅[编写适用于 C/C++ 的单元测试](../test/writing-unit-tests-for-c-cpp.md)。
 
 * **代码覆盖工具** &mdash; 可以确定单元测试从“测试资源管理器”中的一个命令执行的产品代码数量。
 

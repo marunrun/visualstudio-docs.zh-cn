@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Log switch [devenv.exe]
 - /Log Devenv switch
 ms.assetid: ae23c4ae-2376-4fe3-b8d2-81d34e61c8ba
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b2e11cb36176aec94528019cdd19bb5fa86c92b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bc37f4cd7441fc7945ca1762d16300c18d9ecbfe
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62946799"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72610369"
 ---
 # <a name="log-devenvexe"></a>/Log (devenv.exe)
 
 将所有活动记录到日志文件以用于疑难解答。 此文件在你至少调用一次 `devenv /log` 后显示。 默认情况下，日志文件位于以下路径：
 
-%APPDATA%\\Microsoft\\VisualStudio\\\<Version\>\\ActivityLog.xml
+%APPDATA%\\Microsoft\\VisualStudio\\  \<Version\>\\ActivityLog.xml 
 
 其中，“版本”是 Visual Studio 的版本\<\>。 但是，可以指定一个不同的路径和文件名。
 
@@ -35,7 +35,7 @@ devenv /Log NameOfLogFile
 
 ## <a name="arguments"></a>自变量
 
-- NameOfLogFile
+- NameOfLogFile 
 
   必需。 要保存到的日志文件的完整路径和文件名。
 

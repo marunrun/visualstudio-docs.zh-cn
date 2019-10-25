@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c185e2ece30a29801506347a393e138e49fd138b
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 4a4741c4f3a13b77dd871cefdb7a9d6430250b98
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64796607"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740273"
 ---
-# <a name="idiasymbolgetiscvtcil"></a>IDiaSymbol::get_isCVTCIL
-检索一个标志，指示该模块从公共中间语言 (CIL) 模块的本机模块到转换。
+# <a name="idiasymbolget_iscvtcil"></a>IDiaSymbol::get_isCVTCIL
+检索一个标志，该标志指示是否已将模块从公共中间语言（CIL）模块转换为本机模块。
 
 ## <a name="syntax"></a>语法
 
@@ -33,22 +33,22 @@ HRESULT get_isCVTCIL(
 #### <a name="parameters"></a>参数
  `pFlag`
 
-[out]返回`TRUE`如果该模块从 CIL 转换为本机代码; 否则，返回`FALSE`。
+弄如果模块已从 CIL 转换为本机代码，则返回 `TRUE`;否则，将返回 `FALSE`。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。
+> @No__t_0 的返回值意味着该属性对符号不可用。
 
 ## <a name="remarks"></a>备注
- 此属性是可从`SymTagCompilandDetails`符号类型 (请参阅[CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md)。
+ 此属性可从 `SymTagCompilandDetails` 符号类型（请参阅[CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md)。
 
 ## <a name="requirements"></a>要求
 
 |需求|描述|
 |-----------------|-----------------|
-|标头：|dia2.h|
+|标头：|dia2|
 |版本：|DIA SDK v8.0|
 
 ## <a name="see-also"></a>请参阅

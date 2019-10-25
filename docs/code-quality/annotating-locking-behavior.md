@@ -32,12 +32,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 2460ca1c76eb43bdff89c87c880f405cdce12b48
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 26c788319331d0da4024844b50b4c495ed2c3a37
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72446323"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72806771"
 ---
 # <a name="annotating-locking-behavior"></a>对锁定行为进行批注
 若要避免多线程程序中的并发 Bug，请遵循适当的锁定规则并使用 SAL 批注。
@@ -112,10 +112,10 @@ SAL 支持许多不同类型的锁定基元，例如临界区、互斥锁、自�
 |----------------|-----------------|
 |`_Analysis_assume_smart_lock_acquired_`|通知分析器假设已获取智能锁定。 此批注需要引用锁类型作为其参数。|
 |`_Analysis_assume_smart_lock_released_`|通知分析器假设已释放智能锁定。 此批注需要引用锁类型作为其参数。|
-|`_Moves_lock_(target, source)`|介绍 `move constructor` 操作，该操作将锁定状态从 `source` 对象传输到 `target`。 @No__t_0 被视为新构造的对象，因此，它之前的任何状态都将丢失并替换为 `source` 状态。 @No__t_0 也会重置为无锁计数或别名目标的干净状态，但指向它的别名仍保持不变。|
-|`_Replaces_lock_(target, source)`|介绍 `move assignment operator` 的语义，其中在从源传输状态之前释放目标锁。 这可以被视为 `_Releases_lock_(target)` `_Moves_lock_(target, source)` 的组合。|
+|`_Moves_lock_(target, source)`|介绍 `move constructor` 操作，该操作将锁定状态从 `source` 对象传输到 `target`。 `target` 被视为新构造的对象，因此，它之前的任何状态都将丢失并替换为 `source` 状态。 `source` 也会重置为无锁计数或别名目标的干净状态，但指向它的别名仍保持不变。|
+|`_Replaces_lock_(target, source)`|介绍 `move assignment operator` 的语义，其中在从源传输状态之前释放目标锁。 这可以被视为 `_Releases_lock_(target)``_Moves_lock_(target, source)` 的组合。|
 |`_Swaps_locks_(left, right)`|描述标准 `swap` 行为，该行为假设对象 `left` 并 `right` 交换它们的状态。 交换状态包括 "锁计数" 和 "别名目标" （如果存在）。 指向 `left` 和 `right` 对象的别名保持不变。|
-|`_Detaches_lock_(detached, lock)`|描述锁定包装类型允许取消关联遭拒与其包含的资源的方案。 这类似于 `std::unique_ptr` 如何与其内部指针一起使用：它允许程序员提取指针并使其智能指针容器处于干净状态。 @No__t_0 支持类似的逻辑，可以在自定义锁包装器中实现。 分离的锁将保留其状态（如果有），而包装将重置为包含零个锁计数，而不会保留其自己的别名。 锁定计数没有操作（释放和获取）。 此批注的行为与 `_Moves_lock_` 完全相同，只不过分离的参数应 `return` 而不是 `this`。|
+|`_Detaches_lock_(detached, lock)`|描述锁定包装类型允许取消关联遭拒与其包含的资源的方案。 这类似于 `std::unique_ptr` 如何与其内部指针一起使用：它允许程序员提取指针并使其智能指针容器处于干净状态。 `std::unique_lock` 支持类似的逻辑，可以在自定义锁包装器中实现。 分离的锁将保留其状态（如果有），而包装将重置为包含零个锁计数，而不会保留其自己的别名。 锁定计数没有操作（释放和获取）。 此批注的行为与 `_Moves_lock_` 完全相同，只不过分离的参数应 `return` 而不是 `this`。|
 
 ## <a name="see-also"></a>请参阅
 
@@ -127,4 +127,4 @@ SAL 支持许多不同类型的锁定基元，例如临界区、互斥锁、自�
 - [指定何时以及在何处应用批注](../code-quality/specifying-when-and-where-an-annotation-applies.md)
 - [内部函数](../code-quality/intrinsic-functions.md)
 - [最佳做法和示例](../code-quality/best-practices-and-examples-sal.md)
-- [代码分析团队博客](http://go.microsoft.com/fwlink/p/?LinkId=251197)
+- [代码分析团队博客](https://blogs.msdn.microsoft.com/codeanalysis/)

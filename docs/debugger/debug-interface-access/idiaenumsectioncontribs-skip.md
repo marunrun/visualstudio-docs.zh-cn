@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c90c2148fc5a563fef8946bd39acf4603d7d09f6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cb371d841c10b64895400f66bf73159f27d68ec1
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62833228"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744255"
 ---
 # <a name="idiaenumsectioncontribsskip"></a>IDiaEnumSectionContribs::Skip
-跳过枚举序列中的部分发布内容的指定的数目。
+跳过枚举序列中指定数量的节发布。
 
 ## <a name="syntax"></a>语法
 
@@ -33,10 +33,10 @@ HRESULT Skip( 
 #### <a name="parameters"></a>参数
  `celt`
 
-[in]若要跳过枚举序列中的部分发布内容的数。
+中要跳过的枚举序列中的节发布数。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`如果没有更多的部分发布内容，以跳过。
+ 如果成功，将返回 `S_OK`;否则，如果没有更多要跳过的节内容，将返回 `S_FALSE`。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)

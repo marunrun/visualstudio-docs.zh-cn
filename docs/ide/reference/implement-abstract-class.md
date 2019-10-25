@@ -2,17 +2,17 @@
 title: 实现抽象类
 ms.date: 01/26/2018
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e5e1d05e0142a0185909ff590ff507fb53c7dc0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3f8d61e6e2632d62d7244ec0918e56816c3a028e
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62823147"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72662482"
 ---
 # <a name="implement-an-abstract-class-in-visual-studio"></a>在 Visual Studio 中实现抽象类
 
@@ -26,7 +26,7 @@ ms.locfileid: "62823147"
 
 **使用时机：** 想要继承抽象类时。
 
-操作原因：可以手动逐一实现各个抽象类，但此功能可自动生成所有方法签名。
+操作原因：  可以手动逐一实现各个抽象类，但此功能可自动生成所有方法签名。
 
 ## <a name="how-to"></a>操作说明
 
@@ -43,19 +43,19 @@ ms.locfileid: "62823147"
 2. 接下来，执行以下操作之一：
 
    - **键盘**
-      - 按“Ctrl”+**。** 触发“快速操作和重构”菜单。
+      - 按“Ctrl”  + **。** 触发“快速操作和重构”  菜单。
    - **鼠标**
-      - 右键单击并选择“快速操作和重构”菜单。
+      - 右键单击并选择“快速操作和重构”菜单  。
       - 将鼠标悬停在红色波形曲线上，然后单击出现的 ![错误灯泡](media/error-bulb.png) 图标。
       - 单击 ![错误灯泡](media/error-bulb.png) 图标（如果文本光标已在具有红色波形曲线的行上，它会出现在左边缘）。
 
    ![实现类预览](media/abstract-preview-cs.png)
 
-3. 从下拉菜单中选择“实现抽象类”。
+3. 从下拉菜单中选择“实现抽象类”  。
 
    > [!TIP]
-   > - 进行选择前，使用预览窗口底部的“预览更改”链接[查看将发生的所有更改](../../ide/preview-changes.md)。
-   > - 通过预览窗口底部的“文档”、“项目”和“解决方案”链接，跨继承自此抽象类的多个类创建适当的方法签名。
+   > - 进行选择前，使用预览窗口底部的“预览更改”链接[查看将发生的所有更改](../../ide/preview-changes.md)  。
+   > - 通过预览窗口底部的“文档”、“项目”和“解决方案”链接，跨继承自此抽象类的多个类创建适当的方法签名    。
 
    将创建抽象方法签名以供实现。
 

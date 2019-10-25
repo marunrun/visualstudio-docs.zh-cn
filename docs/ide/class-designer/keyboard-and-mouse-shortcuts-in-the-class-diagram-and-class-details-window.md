@@ -8,17 +8,17 @@ helpviewer_keywords:
 - class diagrams, keyboard shortcuts
 - class diagrams, mouse shortcuts
 ms.assetid: c12d8dac-9902-4fde-b721-2a8116da53b7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 37c56a14e5ac4358be53baa41094c23253608bbb
-ms.sourcegitcommit: 9753c7544cec852ca5efd0834e0956d9e53a5734
+ms.openlocfilehash: 7fa62baf020751a175b24f47a93b3e7280fb76fc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67043035"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647653"
 ---
 # <a name="keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window"></a>类图和“类详细信息”窗口中的键盘快捷方式和鼠标快捷方式
 
@@ -61,8 +61,8 @@ ms.locfileid: "67043035"
 |**箭头键**|在类型形状内|对形状内容的树式导航（支持环绕形状）。 如果当前项可展开，则左键和右键会展开/折叠此项；如果当前项不可展开，则导航到其父级（请参阅视图导航以了解详细行为）。|
 |**箭头键**|顶级形状|定义关系图上的形状。|
 |**Shift**+**箭头键**|在类型形状内|构建包含形状元素（如成员、嵌套类型或隔离舱）的连续选择。 这些快捷方式不支持环绕。|
-|**主文件夹**|在类型形状内|导航至顶级形状标题。|
-|**主文件夹**|顶级形状|导航至关系图上的第一个形状。|
+|**Home**|在类型形状内|导航至顶级形状标题。|
+|**Home**|顶级形状|导航至关系图上的第一个形状。|
 |**End**|在类型形状内|导航至形状内最后一个可见元素。|
 |**End**|顶级形状|导航至关系图上的最后一个形状。|
 |**Shift**+**Home**|在类型形状内|选择形状内部以当前项开始，且以同一形状上最顶端的项结束的元素。|

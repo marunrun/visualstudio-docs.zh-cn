@@ -10,26 +10,26 @@ helpviewer_keywords:
 - load tests, counter sets
 - load tests, threshold rules
 ms.assetid: 9e14d955-f3a4-4717-bbfe-7f08cdda5678
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 79140e61844ce450db86ba3bd0b0d6577dec3531
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 493295bdbcd1b4906aedf6dca54e264e8ae5e8c6
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62431314"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72659952"
 ---
 # <a name="specify-counter-sets-and-threshold-rules-for-computers-in-a-load-test"></a>为负载测试中的计算机指定计数器集和阈值规则
 
-负载测试提供了命名计数器集，这些计数器集在分析性能计数器数据时十分有用。 这些计数器集按不同的技术组织在一起，包括“应用程序”、“ASP.NET”、“.NET 应用程序”、“IIS”和“SQL”。 在使用“新建负载测试向导”创建负载测试时，需添加一个初始计数器集。 这些计数器为你提供了一组重要的、用于负载测试的预定义计数器。 在“负载测试编辑器”中管理计数器。
+负载测试提供了命名计数器集，这些计数器集在分析性能计数器数据时十分有用。 这些计数器集按不同的技术组织在一起，包括“应用程序”、“ASP.NET”、“.NET 应用程序”、“IIS”和“SQL”。 在使用“新建负载测试向导”创建负载测试时，需添加一个初始计数器集  。 这些计数器为你提供了一组重要的、用于负载测试的预定义计数器。 在“负载测试编辑器”中管理计数器。 
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 > [!NOTE]
 > 如果负载测试分布在多台远程计算机之间，则会将控制器和代理计数器映射到控制器和代理计数器集中。 有关如何在负载测试中使用远程计算机的详细信息，请参阅[测试控制器和测试代理](configure-test-agents-and-controllers-for-load-tests.md)。
 
-在指定的计算机上收集计数器集。 计数器集与负载测试期间使用的计算机之间的关联就是计数器集映射。 例如，所测试的 Web 服务器可能会具有 ASP.NET、IIS 和 .NET 应用程序计数器集映射。
+在指定的计算机上收集计数器集。 计数器集与负载测试期间使用的计算机之间的关联就是计数器集映射  。 例如，所测试的 Web 服务器可能会具有 ASP.NET、IIS 和 .NET 应用程序计数器集映射。
 
 默认情况下，在控制器和代理上收集性能计数器。 有关详细信息，请参阅[测试控制器和测试代理](configure-test-agents-and-controllers-for-load-tests.md)。
 
@@ -40,13 +40,13 @@ ms.locfileid: "62431314"
 |任务|相关主题|
 |-|-----------------------|
 |**管理负载测试的计数器集：** 创建负载测试后，可以在负载测试编辑器中编辑计数器集。 管理计数器集包括选择要从中收集性能数据的计算机集，并指定用于从各个计算机收集数据的计数器集。 可在负载测试编辑器中管理计数器。|-   [如何：管理计数器集](../test/how-to-manage-counter-sets-using-the-load-test-editor.md)|
-|**向负载测试添加计数器集：** 使用“新建负载测试向导”创建负载测试时，需添加一个初始计数器集。 该计数器集为您的负载测试提供了一组预定义计数器集。 创建负载测试后，可以使用负载测试编辑器向现有计数器集添加新的计数器。|-   [如何：向计数器集中添加计数器](../test/how-to-add-counters-to-counter-sets-using-the-load-test-editor.md)<br />-   [如何：添加自定义计数器集](../test/how-to-add-custom-counter-sets-using-the-load-test-editor.md)|
-|**指定对负载测试应用计数器的相关阈值规则：**“阈值规则”即对单个性能计数器进行设置以在负载测试过程中监视系统资源使用情况的规则。 计数器集定义中包含有许多关键性能计数器的预定义阈值规则。 负载测试中的阈值规则将一个性能计数器值与一个常数值或另一个性能计数器值进行比较。|-   [如何：添加阈值规则](../test/how-to-add-a-threshold-rule-using-the-load-test-editor.md)|
-|**将友好名称分配给计数器集映射到的计算机：** 可添加计算机标记，以便为计算机应用易于识别的名称。 在负载测试编辑器中，这些标记显示在树的“计数器集映射”节点中。 更重要的是，这些标记将显示在 Excel 报表中，可以帮助利益干系人标识计算机在负载测试中的角色，例如“Web Server1 in lab2”或“SQL Server2 in Phoenix office”。<br /><br /> 有关详细信息，请参阅[报告负载测试结果以比较测试或进行趋势分析](../test/compare-load-test-results.md)。||
+|**向负载测试添加计数器集：** 使用“新建负载测试向导”创建负载测试时，需添加一个初始计数器集。  该计数器集为您的负载测试提供了一组预定义计数器集。 创建负载测试后，可以使用负载测试编辑器向现有计数器集添加新的计数器。|-   [如何：向计数器集中添加计数器](../test/how-to-add-counters-to-counter-sets-using-the-load-test-editor.md)<br />-   [如何：添加自定义计数器集](../test/how-to-add-custom-counter-sets-using-the-load-test-editor.md)|
+|**指定对负载测试应用计数器的相关阈值规则：** “阈值规则”即对单个性能计数器进行设置以在负载测试过程中监视系统资源使用情况的规则。 计数器集定义中包含有许多关键性能计数器的预定义阈值规则。 负载测试中的阈值规则将一个性能计数器值与一个常数值或另一个性能计数器值进行比较。|-   [如何：添加阈值规则](../test/how-to-add-a-threshold-rule-using-the-load-test-editor.md)|
+|**将友好名称分配给计数器集映射到的计算机：** 可添加计算机标记，以便为计算机应用易于识别的名称。 在负载测试编辑器中，这些标记显示在树的“计数器集映射”节点中  。 更重要的是，这些标记将显示在 Excel 报表中，可以帮助利益干系人标识计算机在负载测试中的角色，例如“Web Server1 in lab2”或“SQL Server2 in Phoenix office”。<br /><br /> 有关详细信息，请参阅[报告负载测试结果以比较测试或进行趋势分析](../test/compare-load-test-results.md)。||
 
 ## <a name="use-counter-sets"></a>使用计数器集
 
-负载测试工具会不断地使用计数器收集性能数据并绘制相应的图形。 在负载测试运行期间，将按用户指定的时间间隔收集计数器数据。 有关详细信息，请参阅[如何：指定采样率](../test/how-to-specify-the-sample-rate-for-a-load-test.md)。 使用负载测试分析器，可以在运行时查看计数器，或者在负载测试运行完成后查看计数器。
+负载测试工具会不断地使用计数器收集性能数据并绘制相应的图形。 在负载测试运行期间，将按用户指定的时间间隔收集计数器数据。 有关详细信息，请参阅[如何：指定采样率](../test/how-to-specify-the-sample-rate-for-a-load-test.md)。 使用负载测试分析器，可以在运行时查看计数器，或者在负载测试运行完成后查看计数器  。
 
 将在服务器和任何运行测试的计算机上收集计数器数据。 如果设置了一组代理计算机来运行测试，则还将收集这些计算机上的计数器。
 
@@ -62,7 +62,7 @@ ms.locfileid: "62431314"
 
 ### <a name="performance-counter-sampling-interval-considerations"></a>性能计数器采样间隔注意事项
 
-根据负载测试的长度，可在负载测试运行设置中为“采样速率”属性选择适当的值。 较小的采样速率（如 5 秒默认值）需要占用负载测试结果数据库中的更多空间。 对于较长的负载测试，增加采样速率会减少收集的数据量。 有关详细信息，请参阅[如何：指定采样率](../test/how-to-specify-the-sample-rate-for-a-load-test.md)。
+根据负载测试的长度，可在负载测试运行设置中为“采样速率”属性选择适当的值  。 较小的采样速率（如 5 秒默认值）需要占用负载测试结果数据库中的更多空间。 对于较长的负载测试，增加采样速率会减少收集的数据量。 有关详细信息，请参阅[如何：指定采样率](../test/how-to-specify-the-sample-rate-for-a-load-test.md)。
 
 下面是有关采样速率的一些准则。
 
@@ -75,11 +75,11 @@ ms.locfileid: "62431314"
 
 ## <a name="store-performance-data"></a>存储性能数据
 
-在负载测试运行期间，将收集性能计数器数据并将其存储在负载测试结果存储库中。 有关详细信息，请参阅[管理负载测试结果存储库中的负载测试结果](../test/manage-load-test-results-in-the-load-test-results-repository.md)。
+在负载测试运行期间，将收集性能计数器数据并将其存储在负载测试结果存储库中  。 有关详细信息，请参阅[管理负载测试结果存储库中的负载测试结果](../test/manage-load-test-results-in-the-load-test-results-repository.md)。
 
 ## <a name="about-threshold-rules"></a>关于阈值规则
 
-“阈值规则”即对单个性能计数器进行设置以在负载测试过程中监视系统资源使用情况的规则。 计数器集定义中包含有许多关键性能计数器的预定义阈值规则。 有关详细信息，请参阅[使用计数器集帮助分析负载测试中的性能计数器数据](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)。
+“阈值规则”即对单个性能计数器进行设置以在负载测试过程中监视系统资源使用情况的规则  。 计数器集定义中包含有许多关键性能计数器的预定义阈值规则。 有关详细信息，请参阅[使用计数器集帮助分析负载测试中的性能计数器数据](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)。
 
 ## <a name="threshold-rules-and-levels"></a>阈值规则和级别
 
@@ -93,9 +93,9 @@ ms.locfileid: "62431314"
 
 ## <a name="the-alert-if-over-property"></a>“如果超过则发出警报”属性
 
-将“如果超过则发出警报”属性设置为“True”，可指示超出阈值将出现问题。 例如，如果对“% Processor Time”（处理器时间百分比(%)）设置阈值规则，并且希望值大于 90 时收到警报，请使用“比较常数”规则类型，将“临界阈值”设置为 90，并将“如果超过则发出警报”设置为“True”。
+将“如果超过则发出警报”属性设置为“True”，可指示超出阈值将出现问题   。 例如，如果对“% Processor Time”（处理器时间百分比(%)）设置阈值规则，并且希望值大于 90 时收到警报，请使用“比较常数”规则类型，将“临界阈值”设置为 90，并将“如果超过则发出警报”设置为“True”      。
 
-将“如果超过则发出警报”属性设置为“False”，可指示低于阈值将出现问题。 例如，如果对“Requests/Sec”（请求数/秒）设置阈值规则，并且希望值低于 50 时收到警报，请使用“比较常数”规则类型，将“临界阈值”设置为 50，并将“如果超过则发出警报”设置为“False”。
+将“如果超过则发出警报”属性设置为“False”，可指示低于阈值将出现问题   。 例如，如果对“Requests/Sec”（请求数/秒）设置阈值规则，并且希望值低于 50 时收到警报，请使用“比较常数”规则类型，将“临界阈值”设置为 50，并将“如果超过则发出警报”设置为“False”      。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,5 +1,5 @@
 ---
-title: 图形帧验证 |Microsoft Docs
+title: 图形框架验证 |Microsoft Docs
 ms.date: 03/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -10,28 +10,28 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ce283e5cbab30b612a02ec447113ad11e206a7f3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 49248c6209f9e56e51551f6cd3d4af66ecac8b56
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62895865"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72735499"
 ---
 # <a name="graphics-frame-validation"></a>图形帧验证
 <!-- VERSIONLESS -->
-Visual Studio 2017 和更好的支持**帧验证**工具。  帧验证窗口中显示错误和警告事件列表与相关联。  若要查看此窗口，请选择**视图 > 帧验证**菜单。
+Visual Studio 2017 和更高版本支持 "**帧验证**" 工具。  "帧验证" 窗口显示与事件列表相关的错误和警告。  若要查看此窗口，请选择 " **> 帧验证**" 菜单中的 "查看"。
 
 ![帧验证](media/gfx_diag_frame_validation.png)
 
-单击**运行验证**按钮，位于左上角启动分析。  可能需要几分钟才能完成，具体取决于帧的复杂性。  将显示下面是组合来自两个源的数据： 消息的 D3D 本身发出时[SDK 层](/windows/desktop/direct3d11/overviews-direct3d-11-devices-layers)已启用，并从工具的内部状态跟踪收集的数据。 完成后，你将看到多个列的数据：
+单击左上角的 "**运行验证**" 按钮以开始分析。  可能需要几分钟才能完成，具体取决于帧的复杂性。  此处显示的数据是两个源的组合：当启用了[SDK 层](/windows/desktop/direct3d11/overviews-direct3d-11-devices-layers)时，D3D 本身发出的消息，以及从该工具自己的内部状态跟踪收集的数据。 完成后，你将看到几列数据：
 
-| **列** | **说明** |
+| **列** | **描述** |
 |------------| - |
-| 事件 ID | ID 映射到中的条目[事件列表](graphics-event-list.md)窗口。 |
-| 严重性 | 损坏、 错误、 警告、 信息或消息。 |
-| 类别 | 已定义的其他应用程序、 初始化、 清理、 编译、 状态创建、 状态设置、 状态获取、 执行、 资源操作、 着色器，冗余的并且未使用。 |
+| 事件 ID | 映射到 "[事件列表](graphics-event-list.md)" 窗口中的条目的 ID。 |
+| Severity | 损坏、错误、警告、信息或消息。 |
+| 类别 | 应用程序定义、其他、初始化、清理、编译、状态创建、状态设置、状态获取、执行、资源操作、着色器、冗余和未使用。 |
 | 消息 | 与事件关联的消息。 |
-| Event | 与错误或警告关联的事件。 |
+| Event — 事件 | 与错误或警告关联的事件。 |
 
 ## <a name="see-also"></a>请参阅
 [图形诊断（调试 DirectX 图形）](visual-studio-graphics-diagnostics.md)

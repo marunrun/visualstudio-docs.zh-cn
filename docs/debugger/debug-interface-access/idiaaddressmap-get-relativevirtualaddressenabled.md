@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 18a242a47978fbd6acb2b6161ada2199ced8c434
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 72ea881470eb3cfbb1c544324218b122a4470efc
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554288"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745190"
 ---
-# <a name="idiaaddressmapgetrelativevirtualaddressenabled"></a>IDiaAddressMap::get_relativeVirtualAddressEnabled
-指示是否启用的计算和使用的相对虚拟地址 (RVA)。
+# <a name="idiaaddressmapget_relativevirtualaddressenabled"></a>IDiaAddressMap::get_relativeVirtualAddressEnabled
+指示是否启用了相对虚拟地址（RVA）的计算和使用。
 
 ## <a name="syntax"></a>语法
 
@@ -33,15 +33,15 @@ HRESULT get_relativeVirtualAddressEnabled ( 
 #### <a name="parameters"></a>参数
  pRetVal
 
-[out]返回`TRUE`如果启用的 Rva 计算。
+弄如果启用了 Rva 计算，则返回 `TRUE`。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="remarks"></a>备注
- 如果段最初加载从 PDB 文件，则启用 Rva。 可以通过调用暂时禁用使用的 Rva [idiaaddressmap:: Put_relativevirtualaddressenabled](../../debugger/debug-interface-access/idiaaddressmap-put-relativevirtualaddressenabled.md)方法。
+ 如果已从 PDB 文件中最初加载段，则启用 Rva。 可以通过调用[IDiaAddressMap：:P ut_relativevirtualaddressenabled](../../debugger/debug-interface-access/idiaaddressmap-put-relativevirtualaddressenabled.md)方法来暂时禁用 rva 的使用。
 
- 此外，新映像标头可以通过调用来建立[idiaaddressmap:: Set_imageheaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md)方法后调用`put_relativeVirtualAddressEnabled`方法可用来启用的 rva 也使用新映像标头。
+ 此外，还可以通过调用[IDiaAddressMap：： set_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md)方法，然后调用 `put_relativeVirtualAddressEnabled` 方法来建立新的图像标头，以便能够使用新的图像标头来使用 rva。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)

@@ -2,17 +2,17 @@
 title: 测试驱动开发演练
 ms.date: 07/24/2019
 ms.topic: conceptual
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 17ee82630e75e0b0ea8b4a069249c2dccad9010e
-ms.sourcegitcommit: 9fc8b144d4ed1c46aba87c0b7e1d24454e0eea9d
+author: jillre
+ms.openlocfilehash: d62989ffe5444f94cf3b062cde16399c08322b16
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68493165"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72646671"
 ---
 # <a name="walkthrough-test-driven-development-using-test-explorer"></a>演练：通过测试资源管理器进行测试驱动开发
 

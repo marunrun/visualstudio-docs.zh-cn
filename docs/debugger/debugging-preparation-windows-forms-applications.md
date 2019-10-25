@@ -1,5 +1,5 @@
 ---
-title: 准备调试 Windows 窗体应用程序 |Microsoft Docs
+title: 准备调试 Windows 窗体应用 |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -20,17 +20,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5cc06e33b3549bda9bdc9fe04073ca4cf0d9e9a5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5ff927e5b917834341e442afa00e4acad4af2d2f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851780"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738100"
 ---
 # <a name="debugging-preparation-windows-forms-applications"></a>调试准备：Windows 窗体应用程序
-Windows 窗体项目模板创建 Windows 窗体应用程序。 在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中调试此类应用程序非常简单。 有关详细信息，请参阅[创建一个 Windows 应用程序项目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100))。
+Windows 窗体项目模板创建 Windows 窗体应用程序。 在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中调试此类应用程序非常简单。 有关详细信息，请参阅[创建 Windows 应用程序项目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100))。
 
- 用项目模板创建 Windows 窗体项目时，[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 将自动为调试和发布配置创建所需的设置。 必要时，可更改这些设置。 可以在”\<项目名称> 属性页”对话框（在 Visual Basic “我的项目” 中）中更改这些设置。 
+ 用项目模板创建 Windows 窗体项目时，[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 将自动为调试和发布配置创建所需的设置。 必要时，可更改这些设置。 可以在”\<项目名称> 属性页”对话框（在 Visual Basic “我的项目” 中）中更改这些设置 **\<** 。
 
  有关详细信息，请参阅[建议的属性设置](../debugger/managed-debugging-recommended-property-settings.md)。
 
@@ -42,7 +42,7 @@ Windows 窗体项目模板创建 Windows 窗体应用程序。 在 [!INCLUDE[vsp
 |-----------------------|-----------------|
 |**启动操作**|-大多数时候设置为”启动项目”。 如果你要在开始调试时启动另一个可执行文件，设置为”启动外部程序”（通常用于调试 Dll）。|
 
- 可以从 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 内部或者通过附加到已经运行的应用程序来调试 Windows 窗体应用程序。 有关附加的详细信息，请参阅[将附加到正在运行的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)。
+ 可以从 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 内部或者通过附加到已经运行的应用程序来调试 Windows 窗体应用程序。 有关附加的详细信息，请参阅[附加到正在运行的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)。
 
 ### <a name="to-debug-a-c-f-or-visual-basic-windows-forms-application"></a>调试 C#、F# 或 Visual Basic Windows 窗体应用程序
 
@@ -62,7 +62,7 @@ Windows 窗体项目模板创建 Windows 窗体应用程序。 在 [!INCLUDE[vsp
 
 3. 在“调试”菜单上，单击“启动”。
 
-4. 使用 [初步了解调试器](../debugger/debugger-feature-tour.md) 中讨论的技术进行调试。 
+4. 使用 [初步了解调试器](../debugger/debugger-feature-tour.md) 中讨论的技术进行调试。
 
 ## <a name="see-also"></a>请参阅
 - [调试托管代码](../debugger/debugging-managed-code.md)

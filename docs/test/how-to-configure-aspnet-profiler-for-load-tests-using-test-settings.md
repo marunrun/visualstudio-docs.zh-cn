@@ -5,15 +5,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - test settings, ASP.NET
 ms.assetid: 6832fe39-04d5-4d94-8a18-3e2730bad423
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: fc0e9c9a8983d58b7b672be6c1cafb7360e25d28
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1de7e890c60374730e297296116cb56828fa256b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979297"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72643755"
 ---
 # <a name="how-to-configure-aspnet-profiler-for-load-tests-using-test-settings-in-visual-studio"></a>如何：在 Visual Studio 中使用测试设置为负载测试配置 ASP.NET 探查器
 
@@ -33,22 +33,22 @@ ms.locfileid: "62979297"
 
 ## <a name="configure-the-aspnet-profiler-for-your-test-settings"></a>为测试设置配置 ASP.NET 探查器
 
-在执行本过程中的步骤之前，必须从 Visual Studio 中打开测试设置，然后选择“数据和诊断”页。
+在执行本过程中的步骤之前，必须从 Visual Studio 中打开测试设置，然后选择“数据和诊断”页  。
 
 1. 选择用于收集 ASP.NET 探查器数据的角色。
 
     > [!WARNING]
     > 此角色必须为 Web 服务器。
 
-2. 选择“ASP.NET 探查器”以启用收集 ASP.NET 分析数据，然后选择“配置”。
+2. 选择“ASP.NET 探查器”以启用收集 ASP.NET 分析数据，然后选择“配置”   。
 
      此时将显示配置 ASP.NET 分析数据收集的对话框。
 
-3. 在“探查器采样间隔”中键入一个值，该值指示在获取 ASP.NET 分析样本之间要等待的非暂停 CPU 时钟周期数。
+3. 在“探查器采样间隔”中键入一个值，该值指示在获取 ASP.NET 分析样本之间要等待的非暂停 CPU 时钟周期数  。
 
-4. 若要启用层交互分析，请选择“启用层交互分析”。
+4. 若要启用层交互分析，请选择“启用层交互分析”  。
 
-     层交互分析对发送给每个项目（例如 MyPage.aspx 或 CompanyLogo.gif）的 Web 服务器的请求数以及处理每个请求所需的时间进行计数。 此外，层交互分析还将收集在页请求期间使用了哪些 ADO.NET 连接，以及在处理该请求期间执行了多少查询和存储过程调用。
+     层交互分析对发送给每个项目（例如 MyPage.aspx 或 CompanyLogo.gif）的 Web 服务器的请求数以及处理每个请求所需的时间进行计数   。 此外，层交互分析还将收集在页请求期间使用了哪些 ADO.NET 连接，以及在处理该请求期间执行了多少查询和存储过程调用。
 
      将收集两个不同的计时信息集：
 

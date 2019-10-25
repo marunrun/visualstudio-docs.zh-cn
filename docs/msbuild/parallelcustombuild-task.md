@@ -11,18 +11,18 @@ dev_langs:
 - jsharp
 - C++
 helpviewer_keywords:
-- MSBuild (Visual C++), ParallelCustomBuild task
-- ParallelCustomBuild task (MSBuild (Visual C++))
+- MSBuild (C++), ParallelCustomBuild task
+- ParallelCustomBuild task (MSBuild (C++))
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - multiple
-ms.openlocfilehash: 54623ab1c58d85de55c5b8a24384bf0be46f1a61
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c6ea14e61eb2d62f3fc9ccdac3a17010ccc9194f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62963749"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747224"
 ---
 # <a name="parallelcustombuild-task"></a>ParallelCustomBuild 任务
 
@@ -30,11 +30,11 @@ ms.locfileid: "62963749"
 
 ## <a name="parameters"></a>参数
 
-下表介绍了 ParallelCustomBuild 任务的参数。
+下表介绍了 ParallelCustomBuild  任务的参数。
 
 |参数|说明|
 |---------------|-----------------|
-|**BreakOnFirstFailure**|可选的 bool 参数。|
+|**BreakOnFirstFailure**|可选的 bool  参数。|
 |**MaxItemsInBatch**|可选 **int** 参数。|
 |**MaxProcesses**|可选 **int** 参数。|
 |**Sources**|必需的 **ITaskItem[]** 参数。|

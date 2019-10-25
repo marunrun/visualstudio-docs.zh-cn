@@ -1,5 +1,5 @@
 ---
-title: 'Idiasymbol:: Get_isaggregated |Microsoft Docs'
+title: IDiaSymbol：： get_isAggregated |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: db6c2e47d9f316f758b854e5ce40dfc19acb592b
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: ee36d1901f7acb5bc7e41ac72b8dc03b15bc45c8
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64830550"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740300"
 ---
-# <a name="idiasymbolgetisaggregated"></a>IDiaSymbol::get_isAggregated
-检索一个标志，指定数据符号是否为聚合或集合的符号; 的一部分编译器会将聚合的符号视为单独的实体，但它们实际上是单个更大符号的一部分。
+# <a name="idiasymbolget_isaggregated"></a>IDiaSymbol::get_isAggregated
+检索一个标志，该标志指定该数据符号是否为聚合或符号集合的一部分;编译器会将聚合符号视为单独的实体，但它们实际上是一个大符号的组成部分。
 
 ## <a name="syntax"></a>语法
 
@@ -33,22 +33,22 @@ HRESULT get_isAggregated(
 #### <a name="parameters"></a>参数
  `pFlag`
 
-[out]返回`TRUE`如果数据是从父符号; 拆分的符号的聚合的一部分，否则将返回`FALSE`。
+弄如果数据是从父符号拆分的符号聚合的一部分，则返回 `TRUE`;否则，将返回 `FALSE`。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。
+> @No__t_0 的返回值意味着该属性对符号不可用。
 
 ## <a name="remarks"></a>备注
- [Idiasymbol:: Get_issplitted](../../debugger/debug-interface-access/idiasymbol-get-issplitted.md)方法是`TRUE`符号是父级的聚合的符号。
+ 对于作为聚合符号父级的符号， [IDiaSymbol：： get_isSplitted](../../debugger/debug-interface-access/idiasymbol-get-issplitted.md)方法是 `TRUE` 的。
 
 ## <a name="requirements"></a>要求
 
 |需求|描述|
 |-----------------|-----------------|
-|标头：|dia2.h|
+|标头：|dia2|
 |版本：|DIA SDK v8.0|
 
 ## <a name="see-also"></a>请参阅

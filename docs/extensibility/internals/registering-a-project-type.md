@@ -12,22 +12,22 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b950ea6dde73ecb7f20ef45e945106e8711aefb0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c71756259574827924babc16d6933e642b8299ef
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353354"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72724728"
 ---
 # <a name="registering-a-project-type"></a>注册项目类型
-在创建新项目类型时，必须创建注册表项，使[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]来识别和处理您的项目类型。 您通常使用注册表脚本 (.rgs) 文件创建这些注册表项。
+创建新的项目类型时，必须创建注册表项，以便 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 识别和使用您的项目类型。 通常使用注册表脚本（.rgs）文件创建这些注册表项。
 
- 在下面的示例中，从注册表语句提供默认路径和数据 （如果适用） 后, 跟的表包含每个语句的注册表脚本中的条目。 表提供了脚本条目和语句的附加信息。
+ 在下面的示例中，注册表中的语句提供默认路径和数据（如果适用），后跟一个表，其中包含来自每个语句的注册表脚本的条目。 这些表提供了这些语句的脚本项和其他信息。
 
 > [!NOTE]
-> 下面的注册表信息用于类型的示例和您将编写注册您的项目类型的注册表脚本中的条目的目的。 实际的条目和它们的用途可能因您的项目类型的特定要求。 您应查看可用于找到相似的项目进行开发，类型的一个示例，然后查看该示例注册表脚本。
+> 下面的注册表信息旨在作为要为注册项目类型而编写的注册表脚本中的项的类型和用途的示例。 你的实际条目及其使用情况可能因你的项目类型的特定要求而异。 应查看可用的示例，查找与要开发的项目类型非常相似的示例，然后查看该示例的注册表脚本。
 
- 下面的示例是从 HKEY_CLASSES_ROOT。
+ 以下示例来自 HKEY_CLASSES_ROOT。
 
 ## <a name="example"></a>示例
 
@@ -47,16 +47,16 @@ ms.locfileid: "66353354"
    @="devenv.exe \"%1\""
 ```
 
-|名称|类型|数据|描述|
+|“属性”|键入|数据|描述|
 |----------|----------|----------|-----------------|
-|`@`|REG_SZ|`FigPrjFile`|具有扩展.figp 的文件类型名称和项目的说明。|
-|`Content Type`|REG_SZ|`Text/plain`|项目文件的的内容类型。|
+|`@`|REG_SZ|`FigPrjFile`|扩展名为 figp 的项目类型文件的名称和说明。|
+|`Content Type`|REG_SZ|`Text/plain`|项目文件的内容类型。|
 |`NullFile`|REG_SZ|`Null`||
-|`@`|REG_SZ|`%MODULE%,-206`|用于此类型的项目的默认图标。 %模块 %语句完成到 DLL 的项目类型的默认位置在注册表中。|
+|`@`|REG_SZ|`%MODULE%,-206`|用于此类型的项目的默认图标。 在注册表中完成% MODULE% 语句到项目类型 DLL 的默认位置。|
 |`@`|REG_SZ|`&Open in Visual Studio`|将在其中打开此项目类型的默认应用程序。|
-|`@`|REG_SZ|`devenv.exe "%1"`|打开此类型的项目时将运行的默认命令。|
+|`@`|REG_SZ|`devenv.exe "%1"`|将在打开此类型的项目时运行的默认命令。|
 
- 下面的示例取自 HKEY_LOCAL_MACHINE 且位于注册表项 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\99.0Exp\Packages] 下。
+ 以下示例来自 HKEY_LOCAL_MACHINE，位于注册表项 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\99.0Exp\Packages] 下。
 
 ## <a name="example"></a>示例
 
@@ -79,21 +79,21 @@ ms.locfileid: "66353354"
    "FigProjectItemsEvents"="Returns the FigProjectItemsEvents Object"
 ```
 
-|名称|类型|数据|描述|
+|“属性”|键入|数据|描述|
 |----------|----------|----------|-----------------|
-|`@` （默认值）|REG_SZ|`FigPrj Project VSPackage`|这可本地化的名称注册 VSPackage （项目类型）。|
-|`InprocServer32`|REG_SZ|`%MODULE%`|DLL 的项目类型的路径。 IDE 加载此 DLL，并将传递到 VSPackage CLSID`DllGetClassObject`若要获取<xref:Microsoft.VisualStudio.OLE.Interop.IClassFactory>构造<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>对象。|
+|`@` （默认值）|REG_SZ|`FigPrj Project VSPackage`|此注册的 VSPackage （项目类型）的可本地化名称。|
+|`InprocServer32`|REG_SZ|`%MODULE%`|项目类型 DLL 的路径。 IDE 将加载此 DLL，并将 VSPackage CLSID 传递到 `DllGetClassObject` 以获取 <xref:Microsoft.VisualStudio.OLE.Interop.IClassFactory> 来构造 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> 对象。|
 |`CompanyName`|REG_SZ|`Microsoft`|开发项目类型的公司的名称。|
-|`ProductName`|REG_SZ|`Figure Project Sample`|对于项目类型的名称。|
-|`ProductVersion`|REG_SZ|`9.0`|发布的项目类型的版本号。|
-|`MinEdition`|REG_SZ|`professional`|正在注册 VSPackage 的版本。|
-|`ID`|REG_DWORD|`%IDS_PACKAGE_LOAD_KEY%`|包加载 VSPackage 项目的密钥。 环境已启动后加载项目时，该密钥进行验证。|
-|`DllName`|REG_SZ|`%RESOURCE_DLL%`|附属 DLL，其中包含对于项目类型的本地化的资源文件名称。|
+|`ProductName`|REG_SZ|`Figure Project Sample`|项目类型的名称。|
+|`ProductVersion`|REG_SZ|`9.0`|项目类型版本的版本号。|
+|`MinEdition`|REG_SZ|`professional`|要注册的 VSPackage 的版本。|
+|`ID`|REG_DWORD|`%IDS_PACKAGE_LOAD_KEY%`|项目的包加载键 VSPackage。 在环境启动后加载项目时，会对该密钥进行验证。|
+|`DllName`|REG_SZ|`%RESOURCE_DLL%`|包含项目类型的本地化资源的附属 DLL 的文件名。|
 |`Path`|REG_SZ|`%RESOURCE_PATH%`|附属 DLL 的路径。|
-|`FigProjectsEvents`|REG_SZ|请参阅值的语句。|确定此自动化事件返回的文本字符串。|
-|`FigProjectItemsEvents`|REG_SZ|请参阅值的语句。|确定此自动化事件返回的文本字符串。|
+|`FigProjectsEvents`|REG_SZ|请参阅语句获取值。|确定为此自动化事件返回的文本字符串。|
+|`FigProjectItemsEvents`|REG_SZ|请参阅语句获取值。|确定为此自动化事件返回的文本字符串。|
 
- 下面的所有示例都位于注册表项 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] 下。
+ 以下所有示例均位于注册表项 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] 下。
 
 ## <a name="example"></a>示例
 
@@ -130,34 +130,34 @@ ms.locfileid: "66353354"
    "SortPriority"=dword:00000064
 ```
 
-|名称|类型|数据|描述|
+|“属性”|键入|数据|描述|
 |----------|----------|----------|-----------------|
-|`@`|REG_SZ|`FigPrj Project`|此类型的项目的默认名称。|
-|`DisplayName`|REG_SZ|`#%IDS_PROJECT_TYPE%`|包下注册的名称的资源 ID 来检索从附属 DLL。|
-|`Package`|REG_SZ|`%CLSID_Package%`|包下注册的 vspackage 的类 ID。|
-|`ProjectTemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|默认项目模板文件的路径。 这些是所显示的新项目模板的文件。|
-|`ItemTemplatesDir`|REG_SZ|`%TEMPLATE_PATH% \FigPrjProjectItems`|项目项模板文件的默认路径。 这些是添加新项模板显示的文件。|
-|`DisplayProjectFileExtensions`|REG_SZ|`#%IDS_DISPLAY_PROJ_FILE_EXT%`|使 IDE 来实现**打开**对话框。|
-|`PossibleProjectExtensions`|REG_SZ|`figp`|由 IDE 来确定是否正在打开的项目处理此项目类型 （项目工厂）。 多个条目的格式是以分号分隔列表。 例如"vdproj; vdp"。|
-|`DefaultProjectExtension`|REG_SZ|`.figp`|由 IDE 用作默认文件扩展名为另存为操作。|
-|`Filter Settings`|REG_DWORD|各种，请参阅语句和提出的意见下表。|这些设置用于设置各种筛选器，用于显示 UI 对话框中的文件。|
+|`@`|REG_SZ|`FigPrj Project`|此类型项目的默认名称。|
+|`DisplayName`|REG_SZ|`#%IDS_PROJECT_TYPE%`|要从在包下注册的附属 DLL 检索的名称的资源 ID。|
+|`Package`|REG_SZ|`%CLSID_Package%`|在包下注册的 VSPackage 的类 ID。|
+|`ProjectTemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|项目模板文件的默认路径。 这是由 "新建项目" 模板显示的文件。|
+|`ItemTemplatesDir`|REG_SZ|`%TEMPLATE_PATH% \FigPrjProjectItems`|项目项模板文件的默认路径。 这些是 "添加新项" 模板显示的文件。|
+|`DisplayProjectFileExtensions`|REG_SZ|`#%IDS_DISPLAY_PROJ_FILE_EXT%`|启用 IDE 以实现 "**打开**" 对话框。|
+|`PossibleProjectExtensions`|REG_SZ|`figp`|由 IDE 用于确定所打开的项目是否由此项目类型（项目工厂）处理。 多个项的格式是以分号分隔的列表。 例如 ".vdproj; vdp"。|
+|`DefaultProjectExtension`|REG_SZ|`.figp`|由 IDE 用于 "另存为" 操作的默认文件扩展名。|
+|`Filter Settings`|REG_DWORD|请参阅下表中的语句和注释。|这些设置用于设置在 UI 对话框中显示文件的各种筛选器。|
 |`@`|REG_SZ|`#%IDS_ADDITEM_TEMPLATES_ENTRY%`|添加项模板的资源 ID。|
-|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjectItems`|在对话框中显示的项目项的路径**添加新项**模板。|
-|`SortPriority`|REG_DWORD|`100 (vcprx64)`|确定文件中显示的树节点中的排序顺序**添加新项**对话框。|
+|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjectItems`|显示在 "**添加新项**" 模板的对话框中的项目项的路径。|
+|`SortPriority`|REG_DWORD|`100 (vcprx64)`|确定在 "**添加新项**" 对话框中显示的文件的树节点中的排序顺序。|
 
- 下表显示了前面的代码段中可用的筛选器选项。
+ 下表显示了上一个代码段中可用的筛选器选项。
 
 |筛选器选项|描述|
 |-------------------|-----------------|
-|`CommonFindFilesFilter`|指示筛选器是中的常见筛选器之一**在文件中查找**对话框。 前面未标记为常见的筛选器的筛选器列表中列出了常用筛选器。|
-|`CommonOpenFilesFilter`|指示筛选器是中的常见筛选器之一**打开的文件**对话框。 前面未标记为常见的筛选器的筛选器列表中列出了常用筛选器。|
-|`FindInFilesFilter`|指示筛选器会在筛选器之一**在文件中查找**对话框框和常用筛选器后，会列出。|
-|`NotOpenFileFilter`|表示筛选器将不在中使用**打开的文件**对话框。|
-|`NotAddExistingItemFilter`|指示筛选器不会使用在添加**现有项**对话框。|
+|`CommonFindFilesFilter`|指示筛选器是 "在**文件中查找**" 对话框中的一个常见筛选器。 常见筛选器将在筛选器列表中列出，然后筛选器才会标记为公用筛选器。|
+|`CommonOpenFilesFilter`|指示筛选器是 "**打开文件**" 对话框中的一个常见筛选器。 常见筛选器将在筛选器列表中列出，然后筛选器才会标记为公用筛选器。|
+|`FindInFilesFilter`|指示筛选器将是 "在**文件中查找**" 对话框中的筛选器之一，并将在常见筛选器后列出。|
+|`NotOpenFileFilter`|指示将不在 "**打开文件**" 对话框中使用筛选器。|
+|`NotAddExistingItemFilter`|指示将不在 "添加**现有项**" 对话框中使用筛选器。|
 
- 默认情况下，如果筛选器不具有一个或多个标记集，使用筛选器中**添加现有项**对话框和**打开的文件**后列出了常用筛选器对话框的。 在未使用筛选器**在文件中查找**对话框。
+ 默认情况下，如果某个筛选器没有这些标志集中的一个或多个，则在列出常见筛选器后，将在 "**添加现有项**" 对话框和 "**打开文件**" 对话框中使用筛选器。 此筛选器不在 "在**文件中查找**" 对话框中使用。
 
- 下面的所有示例都位于注册表项 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] 下。
+ 以下所有示例均位于注册表项 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] 下。
 
 ## <a name="example"></a>示例
 
@@ -170,14 +170,14 @@ ms.locfileid: "66353354"
    "NewProjectDialogOnly"=dword:00000000
 ```
 
-|名称|类型|数据|描述|
+|“属性”|键入|数据|描述|
 |----------|----------|----------|-----------------|
 |`@`|REG_SZ|`#%IDS_NEWPROJ_ TEMPLATES_ENTRY%`|新项目模板的资源 ID。|
-|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|默认为已注册的项目类型的项目的路径。|
-|`SortPriority`|REG_DWORD|`41 (x29)`|集的排序顺序中新项目向导对话框中显示的项目。|
-|`NewProjectDialogOnly`|REG_DWORD|`0`|0 指示仅在新建项目对话框中显示此类型的项目。|
+|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|已注册项目类型的项目的默认路径。|
+|`SortPriority`|REG_DWORD|`41 (x29)`|设置在 "新建项目" 向导对话框中显示的项目的排序顺序。|
+|`NewProjectDialogOnly`|REG_DWORD|`0`|0指示仅在 "新建项目" 对话框中显示此类型的项目。|
 
- 下面的所有示例都位于注册表项 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] 下。
+ 以下所有示例均位于注册表项 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] 下。
 
 ## <a name="example"></a>示例
 
@@ -191,14 +191,14 @@ ms.locfileid: "66353354"
    "SortPriority"=dword:00000064
 ```
 
-|名称|类型|数据|描述|
+|“属性”|键入|数据|描述|
 |----------|----------|----------|-----------------|
-|`@`|REG_SZ|None|默认值，该值指示以下条目，是用于杂项文件项目项。|
-|`@`|REG_SZ|`#%IDS_ADDITEM_TEMPLATES_ENTRY%`|添加新项模板文件的资源 ID 值。|
-|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjectItems`|将显示在项的默认路径**添加新项**对话框。|
-|`SortPriority`|REG_DWORD|`100 (vcprx64)`|建立的树节点中显示的排序顺序**添加新项**对话框。|
+|`@`|REG_SZ|None|默认值，该值指示以下项适用于杂项文件项目项。|
+|`@`|REG_SZ|`#%IDS_ADDITEM_TEMPLATES_ENTRY%`|"添加新项" 模板文件的资源 ID 值。|
+|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjectItems`|将在 "**添加新项**" 对话框中显示的项的默认路径。|
+|`SortPriority`|REG_DWORD|`100 (vcprx64)`|建立在 "**添加新项**" 对话框的树节点中显示的排序顺序。|
 
- 下面的示例位于注册表项 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Menus] 下。
+ 以下示例位于注册表项 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Menus] 下。
 
 ## <a name="example"></a>示例
 
@@ -206,25 +206,25 @@ ms.locfileid: "66353354"
 "{ACEF4EB2-57CF-11D2-96F4-000000000000}"=",1000,1"
 ```
 
- 菜单项指向用于检索菜单信息的资源的 IDE。 当此数据已合并到菜单数据库时，将注册表 MenusMerged 部分中添加相同的密钥。 VSPackage 应直接修改 MenusMerged 部分下的任何内容信息。 在下表中的数据字段中，有三个以逗号分隔的字段。 第一个字段用于标识菜单资源文件的完整路径：
+ 菜单项将 IDE 指向用于检索菜单信息的资源。 将此数据合并到 menu 数据库后，将在注册表的 MenusMerged 节中添加相同的键。 VSPackage 不应直接修改 MenusMerged 部分下的任何内容。 在下表的数据字段中，有三个逗号分隔的字段。 第一个字段标识菜单资源文件的完整路径：
 
-- 如果省略第一个字段，则该菜单资源从附属 DLL VSPackage GUID 标识加载。
+- 如果省略第一个字段，则从 VSPackage GUID 标识的附属 DLL 加载菜单资源。
 
-  第二个字段用于标识菜单资源 ID 为 CTMENU 类型：
+  第二个字段标识 CTMENU 类型的菜单资源 ID：
 
-- 如果指定的资源 ID，并且第一个参数提供的文件路径，从完整文件路径加载菜单资源。
+- 如果指定了资源 ID 且文件路径由第一个参数提供，则将从完整文件路径加载菜单资源。
 
-- 如果提供的资源 ID，但不是文件路径，该菜单资源从附属 DLL 中加载。
+- 如果提供了资源 ID，但文件路径不是，则会从附属 DLL 加载菜单资源。
 
-- 如果提供的完整文件路径和省略资源 ID，要加载的文件应是首席技术官文件。
+- 如果提供了完整的文件路径并且省略了资源 ID，则要加载的文件应为 CTO 文件。
 
-  最后一个字段标识 CTMENU 资源的版本号。 你可以通过更改版本号再次合并菜单。
+  最后一个字段标识 CTMENU 资源的版本号。 可以通过更改版本号再次合并该菜单。
 
-|名称|类型|数据|描述|
+|“属性”|键入|数据|描述|
 |----------|----------|----------|-----------------|
-|%CLSID_Package%|REG_SZ|`,1000,1`|要检索的菜单信息的资源。|
+|%CLSID_Package%|REG_SZ|`,1000,1`|要检索菜单信息的资源。|
 
- 下面的所有示例都位于注册表项 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\NewProjectTemplates] 下。
+ 以下所有示例均位于注册表项 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\NewProjectTemplates] 下。
 
 ```
 \TemplateDirs\{ACEF4EB2-57CF-11D2-96F4-000000000000}\1                (CLSID for Figures Project projects)
@@ -234,14 +234,14 @@ ms.locfileid: "66353354"
    "NewProjectDialogOnly"=dword:00000000
 ```
 
-|名称|类型|数据|描述|
+|“属性”|键入|数据|描述|
 |----------|----------|----------|-----------------|
-|`@`|REG_SZ|`#%IDS_NEWPROJ_TEMPLATES_ENTRY%`|图项目新项目模板的资源 ID 值。|
-|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|新的项目目录的默认路径。 此目录中的项将显示在**新建项目向导**对话框。|
-|`SortPriority`|REG_DWORD|`41 (x29)`|建立项目将显示在树节点的顺序**新的项目**对话框。|
-|`NewProjectDialogOnly`|REG_DWORD|`0`|0 指示仅在显示此类型的项目**新的项目**对话框。|
+|`@`|REG_SZ|`#%IDS_NEWPROJ_TEMPLATES_ENTRY%`|图表项目的资源 ID 值新项目模板。|
+|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|新的项目目录的默认路径。 此目录中的项将显示在 "**新建项目" 向导**对话框中。|
+|`SortPriority`|REG_DWORD|`41 (x29)`|确定项目将在 "**新建项目**" 对话框的树节点中的显示顺序。|
+|`NewProjectDialogOnly`|REG_DWORD|`0`|0指示仅在 "**新建项目**" 对话框中显示此类型的项目。|
 
- 下面的示例位于注册表项 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\InstalledProducts] 下。
+ 以下示例位于注册表项 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\InstalledProducts] 下。
 
 ```
 \FiguresProductSample
@@ -249,22 +249,22 @@ ms.locfileid: "66353354"
    "UseInterface"=dword:00000001
 ```
 
-|名称|类型|数据|描述|
+|“属性”|键入|数据|描述|
 |----------|----------|----------|-----------------|
-|`Package`|REG_SZ|`%CLSID_Package%`|类 ID 的已注册 VSPackage。|
-|`UseInterface`|REG_DWORD|`1`|1 表示 UI 将用于与此项目进行交互。 0 表示没有 UI 界面。|
+|`Package`|REG_SZ|`%CLSID_Package%`|已注册 VSPackage 的类 ID。|
+|`UseInterface`|REG_DWORD|`1`|1指示 UI 将用于与此项目进行交互。 0指示没有 UI 接口。|
 
- 频繁地控制新的项目类型的 The.vsz 文件包含 RELATIVE_PATH 条目。 此路径是相对于项目类型中的以下安装程序密钥的 \ProductDir 条目下指定路径：
+ 控制新项目类型的 .vsz 文件经常包含 RELATIVE_PATH 条目。 此路径相对于在以下安装键中的项目类型 \ProductDir 项下指定的路径：
 
  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\7.0Exp\Setup
 
- 例如，企业版框架项目模板将添加以下注册表项：
+ 例如，企业框架项目模板会添加以下注册表项：
 
  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\7.0Exp\Setup\EF\ProductDir = C:\Program Files\Microsoft Visual Studio\EnterpriseFrameworks\
 
- 这意味着如果包括 PROJECT_TYPE = EF 在.vsz 文件中，环境会找到您.vsz 文件以前指定的 ProductDir 目录中的条目。
+ 这意味着，如果在 .vsz 文件中包含 PROJECT_TYPE = EF 条目，环境将在前面指定的 ProductDir 目录中查找 .vsz 文件。
 
 ## <a name="see-also"></a>请参阅
-- [清单：创建新的项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)
+- [清单：新建项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)
 - [项目模型的元素](../../extensibility/internals/elements-of-a-project-model.md)
 - [使用项目工厂创建项目实例](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)

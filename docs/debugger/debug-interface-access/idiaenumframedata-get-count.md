@@ -1,5 +1,5 @@
 ---
-title: 'Idiaenumframedata:: Get_count |Microsoft Docs'
+title: IDiaEnumFrameData：： get_Count |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 16b5be9ee787a2d4397d7384116cc9d7ac751d53
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ec182918cccb42cf4d1c3cfdb3ae816aeef97a73
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838228"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744630"
 ---
-# <a name="idiaenumframedatagetcount"></a>IDiaEnumFrameData::get_Count
-检索帧数据元素数。
+# <a name="idiaenumframedataget_count"></a>IDiaEnumFrameData::get_Count
+检索帧数据元素的数目。
 
 ## <a name="syntax"></a>语法
 
@@ -33,10 +33,10 @@ HRESULT get_Count ( 
 #### <a name="parameters"></a>参数
  pRetVal
 
-[out]返回帧数据元素的数。
+弄返回帧数据元素的数目。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)

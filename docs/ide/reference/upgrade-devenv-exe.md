@@ -7,17 +7,17 @@ helpviewer_keywords:
 - Devenv, /upgrade switch
 - upgrade Devenv switch
 ms.assetid: 3468045c-5cc9-4157-9a9d-622452145d27
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fa2e2eaa583f7da0437907fdaa3e7af2fe4a0e2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c9894056babdd8615e4ae052eb73e91e9b108acc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62789298"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72622421"
 ---
 # <a name="upgrade-devenvexe"></a>/Upgrade (devenv.exe)
 
@@ -31,15 +31,15 @@ devenv {SolutionFile|ProjectFile} /Upgrade [/Out OutputFilename]
 
 ## <a name="arguments"></a>自变量
 
-- SolutionFile
+- SolutionFile 
 
   若要升级整个解决方案及其项目，此为必需参数。 解决方案文件的路径和名称。 可以只输入解决方案文件的名称，也可以输入解决方案文件的完整路径和名称。 如果已命名的文件夹或文件尚不存在，便会进行创建。
 
-- ProjectFile
+- ProjectFile 
 
   若要升级一个项目，此为必需参数。 解决方案中项目文件的路径和名称。 可以只输入项目文件的名称，也可以输入项目文件的完整路径和名称。 如果已命名的文件夹或文件尚不存在，便会进行创建。
 
-- `/Out` OutputFilename
+- `/Out` OutputFilename 
 
   可选。 要将工具输出发送到的文件的文件名。 如果文件已有，工具将输出追加到文件末尾。
 

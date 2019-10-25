@@ -1,5 +1,5 @@
 ---
-title: 建议调试器属性设置为C#，VB |Microsoft Docs
+title: 的C#建议调试器属性设置，VB |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 711a8c1e8353f6e57f7101549a3b5421a33e0ae4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 07c63a70de9d633ccd73d1d0d3bd23196d421543
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62846281"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72731374"
 ---
 # <a name="managed-debugging-recommended-property-settings"></a>托管调试：推荐的属性设置
 某些属性应该在所有托管调试方案中采用相同的设置。
@@ -35,9 +35,9 @@ ms.locfileid: "62846281"
 
 |**属性名称**|**设置**|
 |-----------------------|-----------------|
-|“定义 DEBUG 常量”|C#和F#:设置检查复选框。 这使您的应用程序能够使用 Debug 类。|
-|“定义 TRACE 常量”|C#和F#:设置检查复选框。 这使您的应用程序能够使用 Trace 类。|
-|**优化代码**|C#F#，和 Visual Basic:设置为 false。 优化代码更难调试，因为生成的指令与源代码并不直接对应。 如果发现程序具有只出现在优化代码中的 bug，则可以打开此设置，但应记住“反汇编”窗口中显示的代码是从与代码编辑器中的内容可能不匹配的优化源生成的。 若要调试优化代码，必须关闭“仅我的代码”。 （请参阅[将单步执行限制为“仅我的代码”](../debugger/navigating-through-code-with-the-debugger.md#BKMK_Restrict_stepping_to_Just_My_Code)）。<br /><br /> 有关详细信息，请参阅[C# 调试配置的项目设置](../debugger/project-settings-for-csharp-debug-configurations.md)或[Visual Basic 调试配置的项目设置](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)。|
+|“定义 DEBUG 常量”|C# 和 F#：将复选框设置为已选中。 这使您的应用程序能够使用 Debug 类。|
+|“定义 TRACE 常量”|C# 和 F#：将复选框设置为已选中。 这使您的应用程序能够使用 Trace 类。|
+|**优化代码**|C#、F# 和 Visual Basic：设置为 false。 优化代码更难调试，因为生成的指令与源代码并不直接对应。 如果发现程序具有只出现在优化代码中的 bug，则可以打开此设置，但应记住“反汇编”窗口中显示的代码是从与代码编辑器中的内容可能不匹配的优化源生成的。 若要调试优化代码，必须关闭“仅我的代码”。 （请参阅[将单步执行限制为“仅我的代码”](../debugger/navigating-through-code-with-the-debugger.md#BKMK_Restrict_stepping_to_Just_My_Code)）。<br /><br /> 有关详细信息，请参阅[ C#调试配置的项目设置](../debugger/project-settings-for-csharp-debug-configurations.md)或[Visual Basic 调试配置的项目设置](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)。|
 |“输出路径”|设置为 bin\Debug\\。|
 |**高级编译选项**|仅 Visual Basic。 单击“高级”，设置下表中介绍的高级属性。|
 
@@ -45,7 +45,7 @@ ms.locfileid: "62846281"
 
 |**属性名称**|**设置**|
 |-----------------------|-----------------|
-|**启用优化**|在指定的原因设置为 false**优化代码**上表中的选项。|
+|**启用优化**|对于上表中的 "**优化代码**" 选项中指定的原因，将设置为 false。|
 |**生成调试信息**|选择此复选框可在编译时设置 /DEBUG 标志，该标志能够生成可用于调试的信息。|
 |“定义 DEBUG 常量”|选择此复选框可定义 `DEBUG` 常数，该常数使应用程序可以使用 <xref:System.Diagnostics.Debug> 类。|
 |“定义 TRACE 常量”|选择此复选框可定义 `TRACE` 常数，该常数使应用程序可以使用 <xref:System.Diagnostics.Trace> 类。|

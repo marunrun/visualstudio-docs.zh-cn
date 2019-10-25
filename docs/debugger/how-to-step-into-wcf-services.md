@@ -16,17 +16,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fe025ed3050f25ec53175c543adfaf7cb48c506
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c405b4fcca91f8deddce4d65c8a4155b90af49e0
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62906463"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72732602"
 ---
 # <a name="how-to-step-into-wcf-services"></a>如何：单步执行 WCF 服务
 在 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] 中，可以单步执行 WCF 服务。 如果 WCF 服务与客户端位于同一 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 解决方案中，则可以命中 WCF 服务内部的断点。
 
- 若要使单步执行正常运行，必须在 app.config 或 Web.config 文件中启用调试。 有关如何启用调试并单步执行 WCF 服务的限制，请参阅[WCF 调试的限制](../debugger/limitations-on-wcf-debugging.md)。
+ 若要使单步执行正常运行，必须在 app.config 或 Web.config 文件中启用调试。 有关如何启用调试的信息以及有关单步执行 WCF 服务的限制，请参阅[Wcf 调试的限制](../debugger/limitations-on-wcf-debugging.md)。
 
 ### <a name="to-step-into-a-wcf-service"></a>单步执行 WCF 服务
 
@@ -43,4 +43,4 @@ ms.locfileid: "62906463"
 ## <a name="see-also"></a>请参阅
 - [调试 WCF 服务](../debugger/debugging-wcf-services.md)
 - [WCF 调试的限制](../debugger/limitations-on-wcf-debugging.md)
-- [如何：调试自托管 WCF 服务](../debugger/how-to-debug-a-self-hosted-wcf-service.md)
+- [如何：调试自托管的 WCF 服务](../debugger/how-to-debug-a-self-hosted-wcf-service.md)

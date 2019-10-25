@@ -12,15 +12,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 25a4b9b7d07b74047890c4ba56583cc09a394368
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5807eb6b695e140350696436a8bba351687f4a24
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353516"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72720833"
 ---
 # <a name="sccqueryinfo-function"></a>SccQueryInfo 函数
-此函数可获取所选文件受源代码管理的一组的状态信息。
+此函数获取源代码管理下所选文件集的状态信息。
 
 ## <a name="syntax"></a>语法
 
@@ -36,44 +36,44 @@ SCCRTN SccQueryInfo(
 #### <a name="parameters"></a>参数
  pvContext
 
-[in]源控制插件上下文结构。
+中源代码管理插件上下文结构。
 
- nFiles
+ n
 
-[in]中指定的文件数`lpFileNames`数组和长度的`lpStatus`数组。
+中在 `lpFileNames` 数组中指定的文件数和 `lpStatus` 数组的长度。
 
  lpFileNames
 
-[in]要查询的文件的名称的数组。
+中要查询的文件的名称数组。
 
  lpStatus
 
-[in、 out]数组中的源代码管理插件返回的每个文件的状态标志。 有关详细信息，请参阅[文件状态代码](../extensibility/file-status-code-enumerator.md)。
+[in，out]一个数组，其中的源代码管理插件为每个文件返回状态标志。 有关详细信息，请参阅[文件状态代码](../extensibility/file-status-code-enumerator.md)。
 
 ## <a name="return-value"></a>返回值
- 此函数的源控制插件实现应返回以下值之一：
+ 此函数的源代码管理插件实现应返回以下值之一：
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
-|SCC_OK|查询已成功完成。|
-|SCC_E_ACCESSFAILURE|出现与访问源代码管理系统、 网络或争用问题可能导致问题。 建议重试。|
-|SCC_E_PROJNOTOPEN|不受源代码管理打开项目时。|
+|SCC_OK|查询成功。|
+|SCC_E_ACCESSFAILURE|访问源代码管理系统时出现问题，可能是由网络或争用问题引起的。 建议重试。|
+|SCC_E_PROJNOTOPEN|未在源代码管理下打开该项目。|
 |SCC_E_NONSPECIFICERROR|非特定故障。|
 
 ## <a name="remarks"></a>备注
- 如果`lpFileName`是空字符串，目前没有要更新的状态信息。 否则，它是文件的为其状态信息可能已更改的完整路径名称。
+ 如果 `lpFileName` 为空字符串，则当前没有要更新的状态信息。 否则，它是其状态信息可能已更改的文件的完整路径名称。
 
- 返回数组可以是一个位掩码的`SCC_STATUS_xxxx`位。 有关详细信息，请参阅[文件状态代码](../extensibility/file-status-code-enumerator.md)。 源代码管理系统可能不支持所有位类型。 例如，如果`SCC_STATUS_OUTOFDATE`未提供，则只需不设置了位。
+ 返回数组可以是 `SCC_STATUS_xxxx` 位位掩码。 有关详细信息，请参阅[文件状态代码](../extensibility/file-status-code-enumerator.md)。 源代码管理系统可能不支持所有位类型。 例如，如果未提供 `SCC_STATUS_OUTOFDATE`，则仅设置位。
 
- 使用此函数时签出文件，请注意以下`MSSCCI`状态要求：
+ 使用此函数签出文件时，请注意以下 `MSSCCI` 状态要求：
 
-- `SCC_STATUS_OUTBYUSER` 当前用户已签出文件时设置。
+- 当当前用户签出文件时，将设置 `SCC_STATUS_OUTBYUSER`。
 
-- `SCC_STATUS_CHECKEDOUT` 不能设置，除非`SCC_STATUS_OUTBYUSER`设置。
+- 除非设置 `SCC_STATUS_OUTBYUSER`，否则不能设置 `SCC_STATUS_CHECKEDOUT`。
 
-- `SCC_STATUS_CHECKEDOUT` 仅当该文件已签出到指定的工作目录设置。
+- 仅当文件签出到指定的工作目录时才设置 `SCC_STATUS_CHECKEDOUT`。
 
-- 如果该文件已签出由当前用户以外的工作目录的目录`SCC_STATUS_OUTBYUSER`设置，但`SCC_STATUS_CHECKEDOUT`不是。
+- 如果当前用户将该文件签出到工作目录以外的目录中，则 `SCC_STATUS_OUTBYUSER` 设置但 `SCC_STATUS_CHECKEDOUT` 不是。
 
 ## <a name="see-also"></a>请参阅
 - [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)

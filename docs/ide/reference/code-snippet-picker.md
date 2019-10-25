@@ -8,47 +8,47 @@ helpviewer_keywords:
 - Code Snippet Picker
 - IntelliSense code snippets, Code Snippet Picker
 - code snippets, Code Snippet Picker
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 84a93ed9cac1c3f352b3e658f28da4b492612338
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b8be7783d7c68867b181bafa7ec0874fbb231519
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62953200"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654616"
 ---
 # <a name="code-snippet-picker"></a>代码段选择器
 
-Visual Studio 代码编辑器提供一种代码片段选择器，让你单击几下鼠标即可将现成的代码块插入到活动文档中。
+Visual Studio 代码编辑器提供一种代码片段选择器，让你单击几下鼠标即可将现成的代码块插入到活动文档中  。
 
-显示“代码片段选择器”的过程根据用户所使用的语言会有所不同。
+显示“代码片段选择器”  的过程根据用户所使用的语言会有所不同。
 
-- Visual Basic - 在代码编辑器中右键单击所需位置，显示快捷菜单，然后选择“插入代码段”。
+- Visual Basic - 在代码编辑器中右键单击所需位置，显示快捷菜单，然后选择“插入代码段”  。
 
-- C# - 在代码编辑器中右键单击所需位置，显示快捷菜单，然后单击“插入代码段”或“外侧代码”。
+- C# - 在代码编辑器中右键单击所需位置，显示快捷菜单，然后单击“插入代码段”或“外侧代码”   。
 
-- C++ - 代码片段选择器不可用。
+- C++ - 代码片段选择器不可用  。
 
-- F# - 代码片段选择器不可用。
+- F# - 代码片段选择器不可用  。
 
-- JavaScript - 在代码编辑器中右键单击所需位置，显示快捷菜单，然后单击“插入代码段”或“外侧代码”。
+- JavaScript - 在代码编辑器中右键单击所需位置，显示快捷菜单，然后单击“插入代码段”或“外侧代码”   。
 
-- XML：在代码编辑器中所需的位置处右击，以显示快捷菜单，然后单击“插入片段”或“外侧代码”。
+- XML：在代码编辑器中所需的位置处右击，以显示快捷菜单，然后单击“插入片段”  或“外侧代码”  。
 
-- HTML：在代码编辑器中所需的位置处右击，以显示快捷菜单，然后单击“插入片段”或“外侧代码”。
+- HTML：在代码编辑器中所需的位置处右击，以显示快捷菜单，然后单击“插入片段”  或“外侧代码”  。
 
-- SQL：在代码编辑器中所需的位置处右击，以显示快捷菜单，然后单击“插入片段”。
+- SQL：在代码编辑器中所需的位置处右击，以显示快捷菜单，然后单击“插入片段”  。
 
-在大多数 Visual Studio 开发语言中，可使用“代码片段管理器”将文件夹添加到文件夹列表，代码片段选择器会在该列表中扫描 XML 片段文件。 也可以创建自己的片段添加到该列表。 有关详细信息，请参见[演练：创建代码片段](../../ide/walkthrough-creating-a-code-snippet.md)。
+在大多数 Visual Studio 开发语言中，可使用“代码片段管理器”将文件夹添加到文件夹列表，代码片段选择器会在该列表中扫描 XML 片段文件   。 也可以创建自己的片段添加到该列表。 有关详细信息，请参见[演练：创建代码片段](../../ide/walkthrough-creating-a-code-snippet.md)。
 
 ## <a name="uielement-list"></a>UIElement 列表
 
 项名称
 
-可编辑文本字段，显示在“项列表”中选定的项的名称。 若要执行渐进式搜索以查找所需的项，请首先在此字段中键入其名称。 继续添加字母，直到在“项列表”中选定所需的项。
+可编辑文本字段，显示在“项列表”  中选定的项的名称。 若要执行渐进式搜索以查找所需的项，请首先在此字段中键入其名称。 继续添加字母，直到在“项列表”  中选定所需的项。
 
 项列表
 

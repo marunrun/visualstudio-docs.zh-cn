@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c7b32ab5b1965ea7a641cfac470addd2aae0ede0
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 4db7c1d7e3ed19268d94b28a7f0500788f7d21f5
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64791762"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739075"
 ---
-# <a name="idiasymbolgettypeids"></a>IDiaSymbol::get_typeIds
-检索此符号的特定于编译器的类型标识符值的数组。
+# <a name="idiasymbolget_typeids"></a>IDiaSymbol::get_typeIds
+检索此符号的编译器特定类型标识符值的数组。
 
 ## <a name="syntax"></a>语法
 
@@ -35,21 +35,21 @@ HRESULT get_typeIds ( 
 #### <a name="parameters"></a>参数
  `cTypeIds`
 
-[in]若要保存的数据缓冲区的大小。
+中用于保存数据的缓冲区大小。
 
  `pcTypeIds`
 
-[out]返回的数`typeIds`编写的或者，如果`typeIds`是`NULL`，然后提供的类型标识符的总数。
+弄返回写入 `typeIds` 的数量; 如果 `typeIds` 为 `NULL`，则返回可用的类型标识符的总数。
 
  `typeIds[]`
 
-[out]若要使用的类型标识符填充数组。
+弄要使用类型标识符填充的数组。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。
+> @No__t_0 的返回值意味着该属性对符号不可用。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

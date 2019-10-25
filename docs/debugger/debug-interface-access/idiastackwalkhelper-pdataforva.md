@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6315032a36369eff7a5d43241ae4968a64ad42cc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8d51736a80021847881db164c9e176a010124638
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62831890"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741401"
 ---
 # <a name="idiastackwalkhelperpdataforva"></a>IDiaStackWalkHelper::pdataForVA
 返回与虚拟地址相关联的 PDATA 数据块。
@@ -36,27 +36,27 @@ HRESULT pdataForVA( 
 #### <a name="parameters"></a>参数
  `va`
 
-[in]指定要获取的数据的虚拟地址。
+中指定要获取的数据的虚拟地址。
 
  `cbData`
 
-[in]以字节为单位来获取数据的大小。
+中要获取的数据的大小（以字节为单位）。
 
  `pcbData`
 
-[out]返回以字节为单位获取数据的实际大小。
+弄返回获取的数据的实际大小（以字节为单位）。
 
  `pbData`
 
-[in、 out]使用所请求的数据填充缓冲区。 不能为 `NULL`。
+[in，out]使用请求的数据填充的缓冲区。 不能为 `NULL`。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`是否存在指定的地址不 PDATA。 否则，返回错误代码。
+ 如果成功，则返回 `S_OK`。 如果指定地址没有 PDATA，则返回 `S_FALSE`。 否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- PDATA （名为".pdata"一节） 的编译单位包含有关异常处理函数的信息。
+ 编译单位的 PDATA （名为 "PDATA" 的部分）包含有关函数的异常处理的信息。
 
- 调用方知道了要使调用方具有要求数据量对于提供了无需返回的数据量。 因此，它是可接受的返回错误，如果此方法的实现`pbData`参数是`NULL`。
+ 调用方知道要返回多少数据，以便调用方无需询问可用数据量。 因此，如果 `pbData` 参数 `NULL`，此方法的实现就可以返回错误。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

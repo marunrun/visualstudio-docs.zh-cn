@@ -3,21 +3,21 @@ title: L2DBForm.xaml 源代码
 ms.date: 11/04/2016
 ms.topic: sample
 ms.assetid: 624e96d4-6d27-4195-8ac2-2f3835f6c57e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b650c65eb81fb087b7783b41065445e1bbea20a0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 41796664d5456876edff81662cbab44edf7a82f2
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844250"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72635287"
 ---
 # <a name="l2dbformxaml-source-code"></a>L2DBForm.xaml 源代码
 
-本主题包含并说明[使用 LINQ to XML 的 WPF 数据绑定示例](../designers/wpf-data-binding-using-linq-to-xml-example.md)的 XAML 源文件 L2DBForm.xaml。
+本主题包含并说明[使用 LINQ to XML 的 WPF 数据绑定示例](../designers/wpf-data-binding-using-linq-to-xml-example.md)的 XAML 源文件 L2DBForm.xaml  。
 
 ## <a name="overall-ui-structure"></a>总体 UI 结构
 
@@ -33,7 +33,7 @@ ms.locfileid: "62844250"
 
 `<ObjectDataProvider>` 标记跨越第 11 至第 25 行，声明一个名为 <xref:System.Windows.Data.ObjectDataProvider>的 `LoadedBooks`，它使用 <xref:System.Xml.Linq.XElement> 作为源。 此 <xref:System.Xml.Linq.XElement> 是通过分析嵌入的 XML 文档（一个 `CDATA` 元素）来初始化的。 请注意，在声明嵌入的 XML 文档以及分析该文档时将保留空格。 之所以保留空格是因为用于显示原始 XML 的 <xref:System.Windows.Controls.TextBlock> 控件没有专门的 XML 格式化功能。
 
-最后，第 28 行至第 34 行定义一个名为 <xref:System.Windows.DataTemplate> 的 `BookTemplate` 。 此模板将用于显示“Book List”（书籍列表）UI 区域中的条目。 它使用数据绑定和 LINQ to XML 动态属性通过下面的赋值来检索书籍 ID 和书名：
+最后，第 28 行至第 34 行定义一个名为 <xref:System.Windows.DataTemplate> 的 `BookTemplate` 。 此模板将用于显示“Book List”（书籍列表）  UI 区域中的条目。 它使用数据绑定和 LINQ to XML 动态属性通过下面的赋值来检索书籍 ID 和书名：
 
 ```xaml
 Text="{Binding Path=Attribute[id].Value}"Text="{Binding Path=Value}"
@@ -81,7 +81,7 @@ DataContext="{Binding ElementName=lbBooks, Path=SelectedItem}"
 Text="{Binding Path=Attribute[id].Value}"...Text="{Binding Path=Value}"
 ```
 
-最后一个 UI 区域“Add New Book”（新增书籍）不在其 XAML 代码中使用数据绑定。 数据绑定在 L2DBForm.xaml.cs 文件的事件处理代码中。
+最后一个 UI 区域“Add New Book”（新增书籍）不在其 XAML 代码中使用数据绑定  。 数据绑定在 L2DBForm.xaml.cs 文件的事件处理代码中  。
 
 ## <a name="example"></a>示例
 

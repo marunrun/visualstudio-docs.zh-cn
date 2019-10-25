@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 91c230f641612c099495c54db67da9c7e755cbdc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 12766fe52f7f515b7ca411b17d58117e4e56cc9f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829440"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743951"
 ---
 # <a name="idiaenumsymbolsitem"></a>IDiaEnumSymbols::Item
-通过索引中检索一个符号。
+通过索引检索符号。
 
 ## <a name="syntax"></a>语法
 
@@ -34,14 +34,14 @@ HRESULT Item ( 
 #### <a name="parameters"></a>参数
  索引
 
-[in]索引[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)要检索对象。 索引是 0 到范围内`count`-1，其中`count`返回的[idiaenumsymbols:: Get_count](../../debugger/debug-interface-access/idiaenumsymbols-get-count.md)方法。
+中要检索的[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象的索引。 索引的范围为0到 `count`-1，其中 `count` 由[IDiaEnumSymbols：： get_Count](../../debugger/debug-interface-access/idiaenumsymbols-get-count.md)方法返回。
 
  symbol
 
-[out]返回[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象，表示所需的符号。
+弄返回一个[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象，该对象表示所需的符号。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

@@ -15,12 +15,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: b9236a5135d1339f46aeb6f2dd1a11658adf01c2
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 4824cba4de67ad199974f5844c7f220a6fd6accc
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445704"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745915"
 ---
 # <a name="intrinsic-functions"></a>内部函数
 SAL 中的表达式可以是 C/C++表达式，前提是它是一个不具有副作用的表达式，例如 + +、--, 和函数调用都在此上下文中有副作用。  但是，SAL 提供一些类似函数的对象和一些可用于 SAL 表达式的保留符号。 这些*函数称为内部函数*。

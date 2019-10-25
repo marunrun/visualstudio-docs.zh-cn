@@ -12,15 +12,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4d50b321f96b6759d95a6d923222e5e0a92b2ee3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e35d7287d8fc12100da9ba3b8383d8e92cee73d4
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66338463"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72720534"
 ---
 # <a name="sccuncheckout-function"></a>SccUncheckout 函数
-此函数撤消以前的签出操作，从而将所选的文件或文件的内容还原到之前签出状态。 签出后对文件所做的所有更改都都将丢失。
+此函数将撤消以前的签出操作，从而将所选文件的内容还原到结帐之前的状态。 自签出后对文件进行的所有更改都将丢失。
 
 ## <a name="syntax"></a>语法
 
@@ -38,44 +38,44 @@ SCCRTN SccUncheckout (
 #### <a name="parameters"></a>参数
  pvContext
 
-[in]源控制插件上下文结构。
+中源代码管理插件上下文结构。
 
  hWnd
 
-[in]它提供了任何对话框，父级可以使用源代码管理插件，则 IDE 窗口的句柄。
+中IDE 窗口的句柄，源代码管理插件可将其用作它所提供的所有对话框的父级。
 
- nFiles
+ n
 
-[in]中指定的文件数`lpFileNames`数组。
+中@No__t_0 数组中指定的文件数。
 
  lpFileNames
 
-[in]要撤消签出文件的完全限定的本地路径名称的数组。
+中要撤消签出的文件的完全限定的本地路径名称数组。
 
- fOptions
+ 用于
 
-[in]（未使用） 的命令标志。
+中命令标志（未使用）。
 
  pvOptions
 
-[in]源代码管理插件特定选项。
+中源代码管理插件特定的选项。
 
 ## <a name="return-value"></a>返回值
- 此函数的源控制插件实现应返回以下值之一：
+ 此函数的源代码管理插件实现应返回以下值之一：
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |SCC_OK|撤消签出成功。|
-|SCC_E_FILENOTCONTROLLED|所选的文件不是源代码管理下。|
-|SCC_E_ACCESSFAILURE|访问源代码管理系统，很可能是由于网络或争用问题时出现问题时。 建议重试。|
+|SCC_E_FILENOTCONTROLLED|所选文件不在源代码管理下。|
+|SCC_E_ACCESSFAILURE|访问源代码管理系统时出现问题，可能是由于网络或争用问题导致的。 建议重试。|
 |SCC_E_NONSPECIFICERROR|非特定故障。 撤消签出失败。|
-|SCC_E_NOTCHECKEDOUT|用户不具有签出文件。|
+|SCC_E_NOTCHECKEDOUT|用户未签出文件。|
 |SCC_E_NOTAUTHORIZED|不允许用户执行此操作。|
-|SCC_E_PROJNOTOPEN|未从源代码管理打开项目。|
-|SCC_I_OPERATIONCANCELED|在完成之前已取消操作。|
+|SCC_E_PROJNOTOPEN|尚未从源代码管理中打开该项目。|
+|SCC_I_OPERATIONCANCELED|操作在完成前被取消。|
 
 ## <a name="remarks"></a>备注
- 执行此操作后`SCC_STATUS_CHECKEDOUT`和`SCC_STATUS_MODIFIED`标志会同时为清除对其执行撤消签出的文件。
+ 完成此操作后，将为执行撤消签出的文件清除 `SCC_STATUS_CHECKEDOUT` 和 `SCC_STATUS_MODIFIED` 标志。
 
 ## <a name="see-also"></a>请参阅
 - [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)

@@ -11,65 +11,65 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 47d7164df48011907f8bea408c0acf08250d0657
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c00e70ed28a8086a87851b978eb7ee6d6077c009
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66331304"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72722978"
 ---
 # <a name="syntax-coloring-in-a-legacy-language-service"></a>在旧版语言服务中进行语法着色
 
-Visual Studio 使用着色服务识别的语言的元素并将其用在编辑器中指定的颜色显示。
+Visual Studio 使用着色服务来识别语言的元素，并在编辑器中用指定的颜色显示它们。
 
-## <a name="colorizer-model"></a>着色器模型
- 语言服务实现<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>接口，然后由编辑器。 此实现是语言服务中，从一个单独的对象，如下图中所示：
+## <a name="colorizer-model"></a>Colorizer 模型
+ 语言服务实现 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> 接口，该接口随后由编辑器使用。 此实现是语言服务的单独对象，如下图所示：
 
  ![SVC 着色程序图](../../extensibility/internals/media/figlgsvccolorizer.gif)
 
 > [!NOTE]
-> 语法突出显示服务是独立于用于对文本着色的常规 Visual Studio 机制。 有关常规详细信息[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]机制支持着色，请参阅[使用的字体和颜色](../../extensibility/using-fonts-and-colors.md)。
+> 语法着色服务独立于着色文本的通用 Visual Studio 机制。 有关支持着色的常规 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 机制的详细信息，请参阅[使用字体和颜色](../../extensibility/using-fonts-and-colors.md)。
 
- 除了着色器，语言服务可以提供由编辑器中，通过它提供自定义可着色项的广告的自定义可着色项。 您可以执行此操作通过实现<xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems>接口上实现的相同对象<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>接口。 当在编辑器调用时，它返回自定义可着色项的数目<xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetItemCount%2A>方法，并返回单个自定义可着色项，当在编辑器调用<xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetColorableItem%2A>方法。
+ 除 colorizer 外，语言服务还可以提供由编辑器使用的自定义可着色项，方法是公布它提供自定义可着色项。 为此，可以在实现 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo> 接口的同一对象上实现 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> 接口。 当编辑器调用 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetItemCount%2A> 方法时，它将返回自定义可着色项的数目，当编辑器调用 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetColorableItem%2A> 方法时，它将返回单个自定义可着色项。
 
- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetColorableItem%2A>方法返回一个对象，实现<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem>接口。 如果语言服务支持 24 位或高颜色值，它必须实现<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem>上与相同的对象的接口<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem>接口。
+ @No__t_0 方法返回实现 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem> 接口的对象。 如果语言服务支持24位或高颜色值，则它必须在与 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem> 接口相同的对象上实现 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem> 接口。
 
-## <a name="how-a-vspackage-uses-a-language-service-colorizer"></a>VSPackage 如何使用语言服务着色器
+## <a name="how-a-vspackage-uses-a-language-service-colorizer"></a>VSPackage 如何使用语言服务 Colorizer
 
-1. VSPackage 必须获取相应的语言服务，后者需要语言服务 VSPackage 以执行以下操作：
+1. VSPackage 必须获取适当的语言服务，这需要 language service VSPackage 来执行以下操作：
 
-    1. 使用一个对象，实现<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>接口，用于获取要进行着色的文本。
+    1. 使用实现 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> 接口的对象获取要着色的文本。
 
-         通常使用实现的对象显示文本<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>接口。
+         通常使用实现 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> 接口的对象来显示文本。
 
-    2. 通过查询语言服务 GUID 的 vspackage 的服务提供程序获取语言服务。 语言服务由文件扩展名标识注册表中。
+    2. 通过查询 VSPackage 的服务提供程序来获取语言服务 GUID。 语言服务在注册表中按文件扩展名进行标识。
 
-    3. 将使用的语言服务相关联<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>通过调用其<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer.SetLanguageServiceID%2A>方法。
+    3. 通过调用其 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer.SetLanguageServiceID%2A> 方法将语言服务与 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> 相关联。
 
-2. VSPackage 现在可以获取并使用着色器对象，如下所示：
+2. VSPackage 现在可以获取并使用 colorizer 对象，如下所示：
 
     > [!NOTE]
-    > 使用核心编辑器的 Vspackage 无需显式获取一种语言服务的着色器对象。 只要核心编辑器的实例获取适当的语言服务，它将执行如下所示的所有颜色设置任务。
+    > 使用核心编辑器的 Vspackage 不必显式获取语言服务的 colorizer 对象。 当核心编辑器的实例获取适当的语言服务后，它就会执行此处显示的所有着色任务。
 
-    1. 获取语言服务的着色器对象，用于实现<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>，并<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer2>接口，通过调用<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetColorizer%2A>语言服务上的方法<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>对象。
+    1. 通过对语言服务的 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo> 对象调用 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetColorizer%2A> 方法，获取语言服务的 colorizer 对象，该对象实现 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> 和 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer2> 接口。
 
-    2. 调用<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A>方法来获取特定范围的文本的着色器信息。
+    2. 调用 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> 方法可获取特定范围文本的 colorizer 信息。
 
-         <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> 返回一个值，一个用于着色文本跨距中的每个字符数组。 值是由核心编辑器维护的默认可着色项列表或维护语言服务本身的自定义可着色项列表的可着色项列表的索引。
+         <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> 返回值的数组，其中每个字符都着色文本跨距。 这些值是可着色项列表的索引，它是由核心编辑器维护的默认可着色项列表或由语言服务本身维护的自定义可着色项列表。
 
-    3. 使用返回的着色信息<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A>方法来显示所选的文本。
+    3. 使用 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> 方法返回的着色信息显示选定的文本。
 
 > [!NOTE]
-> 除了使用的语言服务 colorizer，VSPackage 还可以使用常规用途的 Visual Studio 文本着色机制。 有关此机制的详细信息，请参阅[使用字体和颜色](../../extensibility/using-fonts-and-colors.md)。
+> 除了使用 language service colorizer 外，VSPackage 还可以使用一般用途的 Visual Studio 文本着色机制。 有关此机制的详细信息，请参阅[使用字体和颜色](../../extensibility/using-fonts-and-colors.md)。
 
 ## <a name="in-this-section"></a>本节内容
 - [实现语法着色](../../extensibility/internals/implementing-syntax-coloring.md)
 
- 讨论如何编辑器访问语言服务的语法颜色设置和语言服务必须实现此方法可以支持语法着色。
+ 讨论编辑器如何访问语言服务的语法着色，以及语言服务必须实现哪些功能才能支持语法着色。
 
 - [如何：使用内置的可着色项](../../extensibility/internals/how-to-use-built-in-colorable-items.md)
 
- 演示如何使用内置的可着色项从语言服务。
+ 演示如何在语言服务中使用内置的可着色项。
 
 - [自定义可着色项](../../extensibility/internals/custom-colorable-items.md)
 

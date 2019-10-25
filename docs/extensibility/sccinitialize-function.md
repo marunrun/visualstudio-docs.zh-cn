@@ -12,15 +12,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a855ecbc65211234b29808fc9e4cf256cd6b25f7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 552ec06a4eabf55872358fc8e5d731e47c1eb6ca
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353589"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72721188"
 ---
 # <a name="sccinitialize-function"></a>SccInitialize 函数
-此函数初始化源代码管理插件，并提供了功能和对集成的开发环境 (IDE) 的限制。
+此函数初始化源代码管理插件，并向集成开发环境（IDE）提供功能和限制。
 
 ## <a name="syntax"></a>语法
 
@@ -40,56 +40,56 @@ SCCRTN SccInitialize (
 #### <a name="parameters"></a>参数
  `ppvContext`
 
-[in]源代码管理插件可以放置其上下文结构的指针。
+中源代码管理插件可在此处放置指向其上下文结构的指针。
 
  `hWnd`
 
-[in]它提供了任何对话框，父级可以使用源代码管理插件，则 IDE 窗口的句柄。
+中IDE 窗口的句柄，源代码管理插件可将其用作它所提供的所有对话框的父级。
 
  `lpCallerName`
 
-[in]调用源代码管理插件的程序的名称。
+中调用源代码管理插件的程序的名称。
 
  `lpSccName`
 
-[in、 out]源代码管理插件其中放入其自己的名称的缓冲区 (不能超过`SCC_NAME_LEN`)。
+[in，out]源代码管理插件用其自己的名称（而不是超过 `SCC_NAME_LEN`）的缓冲区。
 
  `lpSccCaps`
 
-[out]返回源代码管理插件的功能标志。
+弄返回源代码管理插件的功能标志。
 
  `lpAuxPathLabel`
 
-[in、 out]源代码管理插件将一个字符串，描述其中的缓冲区`lpAuxProjPath`返回参数[SccOpenProject](../extensibility/sccopenproject-function.md)并且[SccGetProjPath](../extensibility/sccgetprojpath-function.md) (不能超过`SCC_AUXLABEL_LEN`)。
+[in，out]一个缓冲区，其中的源代码管理插件将描述[SccOpenProject](../extensibility/sccopenproject-function.md)和[SccGetProjPath](../extensibility/sccgetprojpath-function.md)返回的 `lpAuxProjPath` 参数的字符串（不超过 `SCC_AUXLABEL_LEN`）。
 
  `pnCheckoutCommentLen`
 
-[out]返回签出注释的最大允许长度。
+弄返回签出注释允许的最大长度。
 
  `pnCommentLen`
 
-[out]返回其他注释的最大允许长度。
+弄返回其他注释允许的最大长度。
 
 ## <a name="return-value"></a>返回值
- 此函数的源控制插件实现应返回以下值之一：
+ 此函数的源代码管理插件实现应返回以下值之一：
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
-|SCC_OK|源控件初始化成功。|
-|SCC_E_INITIALIZEFAILED|无法初始化系统。|
-|SCC_E_NOTAUTHORIZED|不允许用户以执行指定的操作。|
-|SCC_E_NONSPECFICERROR|非特定故障;未初始化源代码管理系统。|
+|SCC_OK|源代码管理初始化成功。|
+|SCC_E_INITIALIZEFAILED|系统无法初始化。|
+|SCC_E_NOTAUTHORIZED|不允许用户执行指定的操作。|
+|SCC_E_NONSPECFICERROR|模糊失败;源代码管理系统未初始化。|
 
 ## <a name="remarks"></a>备注
- 它首次加载源代码管理插件时，IDE 将调用此函数。 这样，IDE 将某些信息，例如调用方名称、 的插件。 IDE 还获取返回某些信息如注释和插件的功能的最大允许长度。
+ IDE 首次加载源代码管理插件时将调用此函数。 它使 IDE 能够将某些信息（例如调用方名称）传递到插件。 IDE 还会返回某些信息，如注释的最大允许长度和插件的功能。
 
- `ppvContext`指向`NULL`指针。 源代码管理插件可以分配供自己使用的结构和存储指向该结构中的`ppvContext`。 IDE 会将此指针传递到每个其他 VSSCI API 函数时，允许插件而不必求助于全局存储中有可用的上下文信息和支持的插件的多个实例。 此结构应为时已取消分配[SccUninitialize](../extensibility/sccuninitialize-function.md)调用。
+ @No__t_0 指向 `NULL` 指针。 源代码管理插件可以为自己的使用分配结构并在 `ppvContext` 中存储指向该结构的指针。 IDE 将向每个其他 VSSCI API 函数传递此指针，使插件可以在不使用全局存储的情况下提供上下文信息，并支持插件的多个实例。 调用[SccUninitialize](../extensibility/sccuninitialize-function.md)时应释放此结构。
 
- `lpCallerName`和`lpSccName`参数，在 IDE 和源代码管理插件来交换名称。 这些名称只可用于区分多个实例，或者它们可能会实际出现在菜单或对话框。
+ @No__t_0 和 `lpSccName` 参数使 IDE 和源代码管理插件能够交换名称。 这些名称可以简单地用于区分多个实例，也可以实际出现在菜单或对话框中。
 
- `lpAuxPathLabel`参数是为一个注释用于标识存储在解决方案文件，并传递到源代码管理插件的调用中的辅助项目路径的字符串[SccOpenProject](../extensibility/sccopenproject-function.md)。 [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] 使用字符串"SourceSafe 项目:";其他源代码管理插件应避免在使用此特定字符串。
+ @No__t_0 参数是一个字符串，用作注释以标识存储在解决方案文件中的辅助项目路径，并将其传递给[SccOpenProject](../extensibility/sccopenproject-function.md)的调用中的源代码管理插件。 [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] 使用字符串 "SourceSafe 项目：";其他源代码管理插件应避免使用此特定字符串。
 
- `lpSccCaps`参数提供了源代码管理插件一个位置来存储位标志，指示即插即用的项的功能。 (有关功能位标志的完整列表，请参阅[功能标志](../extensibility/capability-flags.md))。 例如，如果将结果写到调用方提供的回调函数，该插件将设置功能的插件计划位 SCC_CAP_TEXTOUT。 这会发出信号 IDE 来创建一个用于版本控制结果的窗口。
+ @No__t_0 参数为源代码管理插件提供了一个用于存储 bitflags 的位置，用于指示插件的功能。 （有关功能 bitflags 的完整列表，请参阅[功能标志](../extensibility/capability-flags.md)）。 例如，如果插件计划将结果写入调用方提供的回调函数，则该插件将设置功能位 SCC_CAP_TEXTOUT。 这会通知 IDE 创建版本控制结果的窗口。
 
 ## <a name="see-also"></a>请参阅
 - [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)

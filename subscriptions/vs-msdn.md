@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/30/2019
 ms.topic: conceptual
 description: MSDN 杂志即将停用
-ms.openlocfilehash: 8addfcf6c32b8c7d01223ff1ae6bb4cc4b32562c
-ms.sourcegitcommit: 673b9364fc9a96b027662dcb4cf5d61cab60ef11
+ms.openlocfilehash: de9d81369d1a616b2511ec553d41a077b2edb359
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69891260"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516846"
 ---
 # <a name="the-msdn-magazine-benefit-in-visual-studio-subscriptions-has-been-discontinued"></a>Visual Studio 订阅中的 MSDN 杂志权益已停用
 
@@ -38,6 +38,7 @@ MSDN 杂志最近宣布将于 2019 年 11 月出版最后一期。  这一更改
 
 ## <a name="next-steps"></a>后续步骤
 请查看订阅中的更多专业开发机会：
+- [MSDN 杂志](vs-code-magazine.md)
 - [Pluralsight](vs-pluralsight.md)
 - [LinkedIn 学习](vs-linkedin-learning.md)
 - [DataCamp](vs-datacamp.md)

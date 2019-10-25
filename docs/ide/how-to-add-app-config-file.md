@@ -6,38 +6,38 @@ dev_langs:
 - CSharp
 helpviewer_keywords:
 - app.config files, adding to C# projects
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d7e760d952d03a31fdb633ae57c0fb670b50fcc2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 48e6516b48b524c3da4d80bc5171608ac1aea03d
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62547905"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72654266"
 ---
 # <a name="how-to-add-an-application-configuration-file-to-a-c-project"></a>如何：向 C# 项目添加应用程序配置文件
 
-通过将应用程序配置文件（app.config 文件）添加到 C# 项目中，可自定义公共语言运行时定位和加载程序集文件的方式。 有关应用程序配置文件的详细信息，请参阅[运行时如何定位程序集 (.NET Framework)](/dotnet/framework/deployment/how-the-runtime-locates-assemblies)。
+通过将应用程序配置文件（app.config 文件）添加到 C# 项目中，可自定义公共语言运行时定位和加载程序集文件的方式  。 有关应用程序配置文件的详细信息，请参阅[运行时如何定位程序集 (.NET Framework)](/dotnet/framework/deployment/how-the-runtime-locates-assemblies)。
 
 > [!NOTE]
-> UWP 应用不包含 app.config 文件。
+> UWP 应用不包含 app.config 文件  。
 
-生成项目时，开发环境会自动复制 app.config 文件，更改副本的文件名以匹配可执行文件，然后将副本移动到“bin”目录。
+生成项目时，开发环境会自动复制 app.config 文件，更改副本的文件名以匹配可执行文件，然后将副本移动到“bin”目录   。
 
 ## <a name="to-add-an-application-configuration-file-to-a-c-project"></a>若要向 C# 项目添加应用程序配置文件
 
-1. 在菜单栏上，依次选择“项目” > “添加新项”。
+1. 在菜单栏上，依次选择“项目”   > “添加新项”  。
 
-     “添加新项”对话框随即出现。
+     “添加新项”  对话框随即出现。
 
-1. 展开“已安装” > “Visual C# 项”，然后选择“应用程序配置文件”模板。
+1. 展开“已安装”   > “Visual C# 项”  ，然后选择“应用程序配置文件”模板  。
 
-1. 在“名称”文本框中输入名称，然后选择“添加”按钮。
+1. 在“名称”文本框中输入名称，然后选择“添加”按钮   。
 
-     项目中将添加名为 app.config 的文件。
+     项目中将添加名为 app.config 的文件  。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,5 +1,5 @@
 ---
-title: 'Idiatable:: Item |Microsoft Docs'
+title: IDiaTable：： Item |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d8070acfa254ae26e017a0070a21884309bc4d7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d402f5ad54d5c0f487cebb3a8c53f68d17828ed4
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840634"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738718"
 ---
 # <a name="idiatableitem"></a>IDiaTable::Item
-检索表中指定的项的引用。
+检索对表中指定项的引用。
 
 ## <a name="syntax"></a>语法
 
@@ -34,19 +34,19 @@ HRESULT Item ( 
 #### <a name="parameters"></a>参数
  `index`
 
-[in]在 0 到范围内的表项的索引`count`-1，其中`count`返回的[idiatable:: Get_count](../../debugger/debug-interface-access/idiatable-get-count.md)方法。
+中范围0到 `count`-1 的表项的索引，其中 `count` 由[IDiaTable：： get_Count](../../debugger/debug-interface-access/idiatable-get-count.md)方法返回。
 
  `element`
 
-[out]返回`IUnknown`对象，表示指定的表条目。
+弄返回一个 `IUnknown` 对象，该对象表示指定的表项。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="remarks"></a>备注
- 表表示的对象的集合。 根据这些对象，可以将元素参数转换为相应的接口。 例如，如果表包含[IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)对象，然后元素参数可强制转换为`IDiaSegment`接口。
+ 表表示对象的集合。 元素参数可以强制转换为相应的接口，具体取决于这些对象。 例如，如果表包含[IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)对象，则可以将元素参数强制转换为 `IDiaSegment` 接口。
 
- 它是一种更常见的方法来调用`QueryInterface`中的方法[IDiaTable](../../debugger/debug-interface-access/idiatable.md)接口的相应枚举器接口，并使用枚举器的特定方法来访问表的内容。 请参阅[IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)有关示例的接口。
+ 在[IDiaTable](../../debugger/debug-interface-access/idiatable.md)接口中调用相应枚举器接口的 `QueryInterface` 方法，并使用枚举器的特定方法访问表内容，这种方法更常见。 有关示例，请参阅[IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)接口。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaTable](../../debugger/debug-interface-access/idiatable.md)

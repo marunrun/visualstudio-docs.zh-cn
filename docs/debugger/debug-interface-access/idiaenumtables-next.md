@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 15a9ebbd3a3993568e4b6496e04661a63290399e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 688652fe3915e1974d5d0e1d04fb1ac075863d8c
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832722"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743745"
 ---
 # <a name="idiaenumtablesnext"></a>IDiaEnumTables::Next
-检索指定的数目的枚举序列中的表。
+检索枚举序列中指定数量的表。
 
 ## <a name="syntax"></a>语法
 
@@ -35,18 +35,18 @@ HRESULT Next ( 
 #### <a name="parameters"></a>参数
  `celt`
 
-[in]要检索的枚举器中的表数。
+中要检索的枚举器中的表数。
 
  `rgelt`
 
-[out]数组，它是在用来填充[IDiaTable](../../debugger/debug-interface-access/idiatable.md)表示所需的表的对象。
+弄要使用表示所需表的[IDiaTable](../../debugger/debug-interface-access/idiatable.md)对象填充的数组。
 
  `pceltFetched`
 
-[out]在提取枚举器返回的表的数量。
+弄返回提取的枚举器中的表数。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果没有更多的表。 否则，返回错误代码。
+ 如果成功，则返回 `S_OK`。 如果没有更多表，则返回 `S_FALSE`。 否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)

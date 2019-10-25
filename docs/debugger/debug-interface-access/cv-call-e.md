@@ -12,18 +12,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ec5fea99994b891250dad85cfc43320848df98f9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5deb59d4bbee06e505ba10bf1d4f08b1b06aa62d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62555099"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745355"
 ---
-# <a name="cvcalle"></a>CV_call_e
-指定的函数的调用约定。
+# <a name="cv_call_e"></a>CV_call_e
+指定函数的调用约定。
 
 > [!NOTE]
-> 此处介绍了仅是最常见的枚举值。 完整的枚举是 cvconst.h 标头文件中。
+> 此处仅介绍最常见的枚举值。 Cvconst 头文件中提供了完整的枚举。
 
 ## <a name="syntax"></a>语法
 
@@ -39,23 +39,23 @@ typedef enum CV_call_e {
 ```
 
 ## <a name="elements"></a>元素
-CV_CALL_NEAR_C 指定使用近右到左推送的函数调用约定。 调用函数清除堆栈。
+CV_CALL_NEAR_C 使用接近的右到左推送指定函数调用约定。 调用函数清除堆栈。
 
-CV_CALL_NEAR_FAST 指定函数调用约定使用几乎从左到右请求与注册。 被调用的函数使用参数的字节数之和来清除堆栈。
+CV_CALL_NEAR_FAST 指定函数调用约定，使用接近于寄存器的近乎左到右推送。 被调用的函数使用参数字节的和来清除堆栈。
 
-CV_CALL_NEAR_STD 指定使用近乎标准调用 （从右到左推送） 的函数调用约定。
+CV_CALL_NEAR_STD 使用接近标准调用（从右到左推送）指定函数调用约定。
 
-CV_CALL_NEAR_SYS 指定调用使用接近系统函数调用约定。
+CV_CALL_NEAR_SYS 使用近系统调用指定函数调用约定。
 
-函数调用约定使用指定 CV_CALL_THISCALL`this`调用 (`this`在寄存器中传递的指针)。
+CV_CALL_THISCALL 使用 `this` 调用（传入 register `this` 指针）指定函数调用约定。
 
-CV_CALL_CLRCALL 指定使用由公共语言运行时 (CLR) （也称为托管代码调用约定） 的函数调用约定。
+CV_CALL_CLRCALL 指定公共语言运行时（CLR）使用的函数调用约定（也称为托管代码调用约定）。
 
 ## <a name="remarks"></a>备注
-此枚举中的值返回通过调用[idiasymbol:: Get_callingconvention](../../debugger/debug-interface-access/idiasymbol-get-callingconvention.md)方法。
+此枚举中的值由对[IDiaSymbol：： get_callingConvention](../../debugger/debug-interface-access/idiasymbol-get-callingconvention.md)方法的调用返回。
 
 ## <a name="requirements"></a>要求
-标头： cvconst.h
+标头： cvconst
 
 ## <a name="see-also"></a>请参阅
 - [枚举和结构](../../debugger/debug-interface-access/enumerations-and-structures.md)

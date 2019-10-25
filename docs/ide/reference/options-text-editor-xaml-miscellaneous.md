@@ -23,21 +23,21 @@ helpviewer_keywords:
 - WPF Designer, XAML formatting
 - XAML view settings, attribute spacing
 ms.assetid: 2a420e58-a408-4e8d-9220-44eeb4f67801
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 9b124b86b98f86c775165d8fe33164a352d8e20a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 242daf82d405af4b3a1e529633fb82651aa6bdc9
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62969236"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666622"
 ---
 # <a name="options-text-editor-xaml-miscellaneous"></a>选项, 文本编辑器, XAML, 杂项
 
-使用“杂项”属性页以指定如何在 XAML 文档中设置元素和特性的格式。 若要打开“选项”对话框，请单击“工具”菜单，然后单击“选项”。 要访问“杂项”属性页，请展开“文本编辑器” > “XAML” > “杂项节点”。
+使用“杂项”属性页以指定如何在 XAML 文档中设置元素和特性的格式  。 若要打开“选项”  对话框，请单击“工具”  菜单，然后单击“选项”  。 要访问“杂项”属性页，请展开“文本编辑器” > “XAML” > “杂项节点”     。
 
 ## <a name="auto-insert"></a>自动插入
 
@@ -47,7 +47,7 @@ ms.locfileid: "62969236"
 |-|-|
 |**结束标记**|指定使用大于号字符 (>) 关闭开始标记时，是否自动生成元素的结束标记。|
 |**特性引号**|指定从语句完成下拉列表中选择特性值时，是否生成封闭引号。|
-|**MarkupExtensions 的右大括号**|指定键入左括号字符 (}) 时，是否自动生成标记扩展的右括号 ({)。|
+|**MarkupExtensions 的右大括号**|指定键入左括号字符 (}  ) 时，是否自动生成标记扩展的右括号 ({  )。|
 |**用于分隔 MarkupExtension 参数的逗号**|指定在标记扩展中键入多个参数时是否生成逗号。|
 
 ## <a name="errors-and-warnings"></a>错误和警告

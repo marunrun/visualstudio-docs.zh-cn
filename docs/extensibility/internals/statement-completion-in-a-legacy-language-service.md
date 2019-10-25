@@ -11,30 +11,30 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5c6e157505b146b9c1ca37f508311c9e80958be6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d4c813052892c21a6a3e04560452b503205df117
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322433"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72723223"
 ---
 # <a name="statement-completion-in-a-legacy-language-service"></a>旧版语言服务中的语句完成
-语句完成是依据语言服务可帮助用户完成语言关键字或他们已启动核心编辑器中键入的元素的过程。 本主题讨论语句完成的工作原理以及如何在你的语言服务中实现它。
+语句完成是语言服务帮助用户完成在核心编辑器中键入的语言关键字或元素的过程。 本主题讨论语句完成的工作原理以及如何在语言服务中实现它。
 
- 旧版语言服务实现 VSPackage 的一部分，但实现语言服务功能的较新方法是使用 MEF 扩展。 若要了解有关实现的语句结束的新方法的详细信息，请参阅[演练：显示语句完成](../../extensibility/walkthrough-displaying-statement-completion.md)。
+ 旧版语言服务是作为 VSPackage 的一部分实现的，但实现语言服务功能的更新方法是使用 MEF 扩展。 若要了解有关实现语句结束的新方法的详细信息，请参阅[演练：显示语句完成](../../extensibility/walkthrough-displaying-statement-completion.md)。
 
 > [!NOTE]
-> 我们建议在开始尽可能快地使用新编辑器 API。 这将提高您的语言服务的性能，让您充分利用新的编辑器功能。
+> 建议你尽快开始使用新的编辑器 API。 这将提高语言服务的性能，并使你能够利用新的编辑器功能。
 
-## <a name="implementing-statement-completion"></a>实现的语句结束
- 在核心编辑器中，语句完成后会激活一个特殊的用户界面，以交互方式可以帮助你更轻松和快速编写代码。 语句完成有助于通过显示相关对象或类在需要时可避免您无需记住特定元素，也无需查找帮助参考主题中。
+## <a name="implementing-statement-completion"></a>实现语句完成
+ 在核心编辑器中，语句结束会激活一个特殊的 UI，该 UI 以交互方式帮助您更轻松、更快速地编写代码。 语句完成有助于在需要相关对象或类时显示这些对象或类，这样就不必记住特定元素，也不必在帮助参考主题中查找它们。
 
- 若要实现的语句结束，您的语言必须具有语句完成触发器，可以分析它。 例如，[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]使用点 （.） 运算符，而[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]使用一个箭头 (->) 运算符。 语言服务可以使用多个触发器来启动语句完成。 在命令筛选器中对这些触发器进行编程。
+ 若要实现语句完成，您的语言必须具有语句完成触发器，该触发器可以进行分析。 例如，[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] 使用点（.）运算符，而 [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] 使用箭头（->）运算符。 语言服务可以使用多个触发器来启动语句完成。 这些触发器在命令筛选器中进行编程。
 
 ## <a name="command-filters-and-triggers"></a>命令筛选器和触发器
- 命令筛选器拦截触发器或触发器的匹配项。 若要将命令筛选器添加到视图，实现<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>接口，并将其附加到该视图通过调用<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A>方法。 可以使用的相同命令筛选器 (<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>) 的所有服务方面的语言，例如语句完成、 错误标记和方法的提示。 有关详细信息，请参阅[截获旧版语言服务命令](../../extensibility/internals/intercepting-legacy-language-service-commands.md)。
+ 命令筛选器会截获触发器或触发器的发生次数。 若要向视图添加命令筛选器，请实现 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 接口，并通过调用 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A> 方法将其附加到视图。 你可以为语言服务的所有方面使用相同的命令筛选器（<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>），如语句完成、错误标记和方法提示。 有关详细信息，请参阅[截获旧版语言服务命令](../../extensibility/internals/intercepting-legacy-language-service-commands.md)。
 
- 当在编辑器中输入触发器时 — 具体来说，文本缓冲区 — 语言服务然后调用<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A>方法。 这将导致编辑器以将该 ui，以便用户可以选择从语句完成候选项。 此方法要求您实现<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet>和<xref:Microsoft.VisualStudio.TextManager.Interop.UpdateCompletionFlags>作为参数的标志。 中滚动列表框中显示完成项的列表。 用户继续键入，在列表框内的选择会更新以反映最新字符与最接近类型化。 核心编辑器实现用于语句完成 UI，但语言服务必须实现<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet>接口可定义一组语句的候选完成项。
+ 当在编辑器中输入触发器（具体而言，是文本缓冲区）后，语言服务将调用 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> 方法。 这将导致编辑器打开 UI，以便用户可以从语句完成候选项中进行选择。 此方法要求将 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet> 和 <xref:Microsoft.VisualStudio.TextManager.Interop.UpdateCompletionFlags> 标志作为参数实现。 完成项列表将显示在滚动列表框中。 用户继续键入内容时，会更新列表框中的选定内容，以反映最接近键入的最新字符的匹配项。 核心编辑器为语句完成实现 UI，但语言服务必须实现 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet> 接口，才能定义语句的候选完成项集。
 
 ## <a name="see-also"></a>请参阅
 - [截获旧版语言服务命令](../../extensibility/internals/intercepting-legacy-language-service-commands.md)

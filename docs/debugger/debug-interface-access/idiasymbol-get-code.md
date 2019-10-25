@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4616751a6d0e78a1d27afb1e3553109cd82d3ec7
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 6ec15cd164c1d7e3741d79d359bcef66cf6119a3
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64793932"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72740846"
 ---
-# <a name="idiasymbolgetcode"></a>IDiaSymbol::get_code
-检索一个标志，指定是否符号是指代码地址。
+# <a name="idiasymbolget_code"></a>IDiaSymbol::get_code
+检索一个标志，该标志指定符号是否引用代码地址。
 
 ## <a name="syntax"></a>语法
 
@@ -33,19 +33,19 @@ HRESULT get_code ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回`TRUE`如果符号所引用的代码地址，否则，返回`FALSE`。
+弄如果符号引用代码地址，则返回 `TRUE`; 否则，将返回 `FALSE`。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。
+> @No__t_0 的返回值意味着该属性对符号不可用。
 
 ## <a name="requirements"></a>要求
 
 |需求|描述|
 |-----------------|-----------------|
-|标头：|dia2.h|
+|标头：|dia2|
 |版本：|DIA SDK v7.0|
 
 ## <a name="see-also"></a>请参阅

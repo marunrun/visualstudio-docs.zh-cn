@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 12a2f23c42de99e0ea9a9d6c50e2d9aabed589d4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6d08168a83b9bb635fd6a0e22dc22f91a454001f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839454"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742324"
 ---
 # <a name="idiasessionfindacceleratorinlineesbylinenum"></a>IDiaSession::findAcceleratorInlineesByLinenum
-返回指定的源位置相对应的内嵌帧的符号的枚举。
+返回与指定源位置对应的内联帧的符号枚举。
 
 ## <a name="syntax"></a>语法
 
@@ -35,26 +35,26 @@ HRESULT findAcceleratorInlineeLinesByName ( 
 #### <a name="parameters"></a>参数
  `parent`
 
-[in]`IDiaSymbol` ，对应于需要搜索的加速器存根 （stub） 函数。
+中与需要搜索的快捷键存根函数相对应的 `IDiaSymbol`。
 
  `file`
 
-[in]`IDiaSourceFile`的源位置。
+中源位置的 `IDiaSourceFile`。
 
  `linenum`
 
-[in]源位置的行数。
+中源位置的行号。
 
  `colnum`
 
-[in]源位置的列数。
+中源位置的列号。
 
  `ppResult`
 
-[out]一个指向`IDiaEnumLineNumbers`使用结果初始化的接口指针。
+弄指向使用结果初始化的 `IDiaEnumLineNumbers` 接口指针的指针。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 440c7d19382b813b3f34451d7c177c6e8b57f16f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 24bcafcc373e3c03bd1e656f26ee9a8aa443d320
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62831842"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741496"
 ---
-# <a name="idiastackwalkframeputregistervalue"></a>IDiaStackWalkFrame::put_registerValue
+# <a name="idiastackwalkframeput_registervalue"></a>IDiaStackWalkFrame::put_registerValue
 设置寄存器的值。
 
 ## <a name="syntax"></a>语法
@@ -34,14 +34,14 @@ HRESULT put_registerValue ( 
 #### <a name="parameters"></a>参数
  `index`
 
-[in]中的值[CV_HREG_e 枚举](../../debugger/debug-interface-access/cv-hreg-e.md)枚举，它指定要写入到的寄存器。
+中[CV_HREG_e 枚举](../../debugger/debug-interface-access/cv-hreg-e.md)枚举中的一个值，该值指定要写入的寄存器。
 
  `NewVal`
 
-[in]新的注册值。
+中新寄存器值。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)

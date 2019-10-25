@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e5cc51a166c5ac70c2db5358b893e52e2242d53
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e2a03072d2987275144d0e89b678e5282b077f0e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829393"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743777"
 ---
-# <a name="idiaenumtablesgetcount"></a>IDiaEnumTables::get_Count
+# <a name="idiaenumtablesget_count"></a>IDiaEnumTables::get_Count
 检索表的数目。
 
 ## <a name="syntax"></a>语法
@@ -33,10 +33,10 @@ HRESULT get_Count (    LONG* pRetVal
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回的表的数量。
+弄返回表的数目。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)

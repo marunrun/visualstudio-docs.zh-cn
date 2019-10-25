@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aea793f33eb78ee1637d7f22eb46ba34514e0e8f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 84dd3e1d107b8e55d5e94979627d1c1586534127
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62554028"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72744492"
 ---
 # <a name="idiaenuminjectedsourcesnext"></a>IDiaEnumInjectedSources::Next
-检索指定的数目的枚举序列中的插入源。
+检索枚举序列中指定数量的插入源。
 
 ## <a name="syntax"></a>语法
 
@@ -35,18 +35,18 @@ HRESULT Next ( 
 #### <a name="parameters"></a>参数
  celt
 
-[in]要检索的枚举器中的插入源数。
+中要检索的枚举器中注入的源的数目。
 
  rgelt
 
-[out]返回的数组[IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)对象，表示所需的插入的源。
+弄返回表示所需注入源的[IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)对象的数组。
 
  pceltFetched
 
-[out]返回多个插入的源中提取枚举器。
+弄返回提取的枚举器中注入的源的数目。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果没有更多插入的源。 否则，返回错误代码。
+ 如果成功，则返回 `S_OK`。 如果没有更多注入的源，则返回 `S_FALSE`。 否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

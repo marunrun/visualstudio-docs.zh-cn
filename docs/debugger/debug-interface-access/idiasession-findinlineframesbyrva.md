@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 98b441e52d3d24a5ccd738fe1ac65b268a30a2bc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 329bf9f4fa94171347eeea8fc9f2744b7ce4269f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839311"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742159"
 ---
 # <a name="idiasessionfindinlineframesbyrva"></a>IDiaSession::findInlineFramesByRVA
-检索一个枚举，允许客户端用于循环访问所有指定的相对虚拟地址 (RVA) 上的内联框架。
+检索允许客户端循环访问指定的相对虚拟地址（RVA）上所有内联帧的枚举。
 
 ## <a name="syntax"></a>语法
 
@@ -32,18 +32,18 @@ HRESULT findInlineFramesByRVA ( 
 #### <a name="parameters"></a>参数
  `parent`
 
-[in]`IDiaSymbol`表示父对象。
+中表示父级的 `IDiaSymbol` 对象。
 
  `rva`
 
-[in]RVA 作为指定的地址。
+中指定作为 RVA 的地址。
 
  `ppResult`
 
-[out]保存`IDiaEnumSymbols`对象，其中包含检索到的框架的列表。
+弄保存一个 `IDiaEnumSymbols` 对象，该对象包含所检索到的帧的列表。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

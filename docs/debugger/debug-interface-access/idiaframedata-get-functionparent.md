@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 20f9dac750f9ff9723e4f3669f9e9a124d728a9a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 809de8589302ddc35a14e2ea0663248a163176e6
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62830339"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743625"
 ---
-# <a name="idiaframedatagetfunctionparent"></a>IDiaFrameData::get_functionParent
-检索将封闭函数的帧数据接口。
+# <a name="idiaframedataget_functionparent"></a>IDiaFrameData::get_functionParent
+检索封闭函数的帧数据接口。
 
 ## <a name="syntax"></a>语法
 
@@ -33,10 +33,10 @@ HRESULT get_functionParent ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回[IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)封闭函数的对象。
+弄返回封闭函数的[IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

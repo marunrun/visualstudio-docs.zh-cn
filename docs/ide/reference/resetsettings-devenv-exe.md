@@ -8,17 +8,17 @@ helpviewer_keywords:
 - /ResetSettings Devenv switch
 - settings [Visual Studio], resetting
 ms.assetid: 1d41021c-6f58-4bd5-b122-d1c995812192
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ebc0e3faf26351a31c2f6b75669d50f1e3c2f14
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3549801001ba8df60634884dc58137a8fa77d905
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62945524"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655567"
 ---
 # <a name="resetsettings-devenvexe"></a>/ResetSettings (devenv.exe)
 
@@ -41,7 +41,7 @@ devenv /ResetSettings [SettingsFile|DefaultCollectionSpecifier]
 
   可选。 应用于 Visual Studio 的设置文件的完整路径和文件名。
 
-- DefaultCollectionSpecifier
+- DefaultCollectionSpecifier 
 
   可选。 表示要还原的默认设置集合的说明符。 从表中列出的默认集合说明符中选择一个。
 
@@ -57,7 +57,7 @@ devenv /ResetSettings [SettingsFile|DefaultCollectionSpecifier]
 
 ## <a name="remarks"></a>备注
 
-如果没有指定 SettingsFile，IDE 使用现有设置打开。
+如果没有指定 SettingsFile  ，IDE 使用现有设置打开。
 
 ## <a name="example"></a>示例
 

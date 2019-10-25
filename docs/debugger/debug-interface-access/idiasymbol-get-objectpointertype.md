@@ -1,5 +1,5 @@
 ---
-title: 'Idiasymbol:: Get_objectpointertype |Microsoft Docs'
+title: IDiaSymbol：： get_objectPointerType |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 69dac79a040a8eff68c36c82b9a85935d969b5ec
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: e4254a121ce29578438f4ee7264345aa30bafd7e
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64808902"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72739621"
 ---
-# <a name="idiasymbolgetobjectpointertype"></a>IDiaSymbol::get_objectPointerType
+# <a name="idiasymbolget_objectpointertype"></a>IDiaSymbol::get_objectPointerType
 检索类方法的对象指针的类型。
 
 ## <a name="syntax"></a>语法
@@ -33,16 +33,16 @@ HRESULT get_objectPointerType ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象，表示类方法的对象指针。
+弄返回一个[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象，该对象表示类方法的对象指针。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。
+> @No__t_0 的返回值意味着该属性对符号不可用。
 
 ## <a name="remarks"></a>备注
- 此属性仅适用于包含符号[SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)类型的`SymTagFunctionType`。
+ 此属性仅适用于[SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)类型为 `SymTagFunctionType` 的符号。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

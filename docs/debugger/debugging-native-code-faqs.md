@@ -1,5 +1,5 @@
 ---
-title: 调试本机代码常见问题 |Microsoft Docs
+title: 调试本机代码常见问题解答 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28942594abb6291a7b0103b8abf1736ca68346e4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 15a94d20ade7bfe3e5aaac2c90bb3ba452ef4330
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851664"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72738171"
 ---
 # <a name="debugging-native-code-faqs"></a>调试本机代码常见问题
 下面的主题包含一些常见问题的答案：

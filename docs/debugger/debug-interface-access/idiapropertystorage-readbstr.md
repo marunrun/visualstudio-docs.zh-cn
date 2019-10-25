@@ -1,5 +1,5 @@
 ---
-title: IDiaPropertyStorage::ReadBSTR |Microsoft Docs
+title: IDiaPropertyStorage：： ReadBSTR |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f0bff81499fe8ea66ce5d4f50616adfec44d3002
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ef0b5bac11a1bf3da7e8081f7ae24b6a7a6f1a71
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839623"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742916"
 ---
 # <a name="idiapropertystoragereadbstr"></a>IDiaPropertyStorage::ReadBSTR
-读取`BSTR`属性组中的值。
+读取属性集中 `BSTR` 值。
 
 ## <a name="syntax"></a>语法
 
@@ -34,17 +34,17 @@ HRESULT ReadBSTR ( 
 #### <a name="parameters"></a>参数
  `id`
 
-[in]要读取的属性的标识符 (`PROPID`定义为 WTypes.h 中`ULONG`)。
+中要读取的属性的标识符（`PROPID` 在 WTypes 中定义为 `ULONG`）。
 
  `pValue`
 
-[out]返回属性值。
+弄返回属性值。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则返回错误代码。 返回`E_INVALIDARG`如果该属性的类型不是`BSTR`。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。 如果属性不是类型 `BSTR`，则返回 `E_INVALIDARG`。
 
 ## <a name="remarks"></a>备注
- 一个`BSTR`由 Windows 为零终止宽字符字符串定义。
+ @No__t_0 由 Windows 定义为以零结尾的宽字符字符串。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

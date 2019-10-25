@@ -4,17 +4,17 @@ ms.date: 07/26/2019
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Projects.Locations
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 60e375c558500c4daeefe3f5d24d46a17139252f
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: e20c584a5acecc06a9d04e79a7c70c088eacc15b
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68610625"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655707"
 ---
 # <a name="options-dialog-box-projects-and-solutions--locations"></a>“选项”对话框：“项目和解决方案”\>“位置”
 

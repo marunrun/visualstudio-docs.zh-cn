@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e52567eddcbb6c4f372256e66b7b723bc7aa7394
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 424924f3fab62cf862420d58c947bba16343141d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62833436"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743886"
 ---
 # <a name="idiaenumsymbolsbyaddrnext"></a>IDiaEnumSymbolsByAddr::Next
-检索地址按顺序的下一个符号。
+按地址检索下一个符号。
 
 ## <a name="syntax"></a>语法
 
@@ -35,21 +35,21 @@ HRESULT Next ( 
 #### <a name="parameters"></a>参数
  celt
 
-[in]要检索的枚举器中的符号数。
+中要检索的枚举器中的符号数。
 
  rgelt
 
-[out]数组，它是在用来填充[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象，表示所需的符号。
+弄要使用表示所需符号的[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象填充的数组。
 
  pceltFetched
 
-[out]在提取枚举器返回的符号的数量。
+弄返回提取的枚举器中的符号数。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果没有更多的符号。 否则，返回错误代码。
+ 如果成功，则返回 `S_OK`。 如果没有更多符号，则返回 `S_FALSE`。 否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 此方法更新枚举器位置提取的元素数。
+ 此方法按提取的元素数更新枚举器的位置。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)

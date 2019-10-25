@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 730793d2b9f2e02d7e5665777f8df4d245b0ddf6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 328589df0e662ca27db634017005344d44491275
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62827694"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72742108"
 ---
 # <a name="idiasessionfindlinesbyaddr"></a>IDiaSession::findLinesByAddr
-检索包含指定的地址的行中指定的编译单位。
+检索指定编译单位中包含指定地址的行。
 
 ## <a name="syntax"></a>语法
 
@@ -36,25 +36,25 @@ HRESULT findLinesByAddr (
 #### <a name="parameters"></a>参数
 `seg`
 
-[in]指定的特定地址的部分组件。
+中指定特定地址的部分组件。
 
 `offset`
 
-[in]指定的特定地址的偏移量的部分。
+中指定特定地址的偏移量部分。
 
 `length`
 
-[in]指定要与此查询包含的地址范围的字节数。
+中指定包含此查询的地址范围的字节数。
 
 `ppResult`
 
-[out]返回[IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)对象，其中包含一系列的行号，包括指定的地址范围。
+弄返回一个[IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)对象，该对象包含涵盖指定地址范围的所有行号的列表。
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回`S_OK`; 否则为返回错误代码。
+如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="example"></a>示例
-此示例演示一个函数，获取使用该函数的地址和长度函数中包含的所有行号。
+此示例演示一个函数，该函数使用函数的地址和长度获取函数中包含的所有行号。
 
 ```C++
 IDiaEnumLineNumbers* GetLineNumbersByAddr(IDiaSymbol *pFunc,

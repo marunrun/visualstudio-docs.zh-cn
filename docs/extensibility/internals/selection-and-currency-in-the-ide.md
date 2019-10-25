@@ -1,5 +1,5 @@
 ---
-title: 所选内容和 IDE 中的货币 |Microsoft Docs
+title: IDE 中的选择和货币 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,54 +13,54 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 23ce55a85fd6f1408c623a49fc16b8766c535dfc
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: edff400420ca5f0c93e1df85fb9118eee6302d02
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318699"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72723969"
 ---
 # <a name="selection-and-currency-in-the-ide"></a>IDE 中的选择和货币
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]集成的开发环境 (IDE) 维护有关用户的信息当前所选对象，通过使用所选内容*上下文*。 使用选定内容上下文的 Vspackage 可以参与货币跟踪两种方式：
+@No__t_0 集成开发环境（IDE）使用选择*上下文*维护用户当前选择的对象的相关信息。 使用选择上下文，Vspackage 可以通过两种方式参与货币跟踪：
 
-- 通过将传播到 IDE Vspackage 的货币信息。
+- 将有关 Vspackage 的货币信息传播到 IDE。
 
-- 通过监视用户的当前处于活动状态的选择在 IDE 中。
+- 监视用户当前在 IDE 内处于活动状态的选定内容。
 
-## <a name="selection-context"></a>选定内容上下文
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE 全局跟踪的 IDE 在其自己的全局选择上下文对象中的货币。 下表显示了选定内容上下文构成元素。
+## <a name="selection-context"></a>选择上下文
+ @No__t_0 IDE 全局地在其自己的全局选择上下文对象中跟踪 IDE 货币。 下表显示组成选择上下文的元素。
 
 |元素|描述|
 |-------------|-----------------|
-|当前层次结构|通常在当前项目;NULL 当前层次结构指示作为一个整体解决方案是最新。|
-|当前 ItemID|当前层次结构; 内的选定的项如果有多个项目窗口中的选择，可以有多个当前项。|
-|当前 `SelectionContainer`|包含一个或多个对象为其属性窗口应显示属性。|
+|当前层次结构|通常为当前项目;空的当前层次结构表示整个解决方案是最新的。|
+|当前 ItemID|当前层次结构中的选定项;如果项目窗口中有多个选择，则可以有多个当前项。|
+|当前 `SelectionContainer`|保存一个或多个属性窗口应显示其属性的对象。|
 
- 此外，环境负责维护两个全局列表：
+ 此外，环境维护两个全局列表：
 
-- Active UI 命令标识符的列表
+- 活动 UI 命令标识符的列表
 
 - 当前处于活动状态的元素类型的列表。
 
-### <a name="window-types-and-selection"></a>窗口类型和所选内容
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE 将 windows 组织到两种常规类型：
+### <a name="window-types-and-selection"></a>窗口类型和选定内容
+ @No__t_0 IDE 将窗口分为两种常规类型：
 
-- 层次结构类型 windows
+- 层次结构-类型窗口
 
-- 框架窗口，如工具和文档窗口
+- 框架窗口，如工具窗口和文档窗口
 
-  IDE 以不同的方式跟踪的每个窗口类型的货币。
+  IDE 会以不同的方式跟踪每个窗口类型的货币。
 
-  最常见的项目类型窗口是解决方案资源管理器，它控制 IDE。 项目类型窗口跟踪的全局层次结构和 ItemID 的全局选择上下文，并在窗口依赖于用户的选择来确定当前层次结构。 对于项目类型 windows 环境提供了全局服务<xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>，通过的 Vspackage 可以监视打开的元素的当前值。 在环境中浏览的属性取决于此全局服务。
+  最常见的项目类型窗口是 IDE 控制的解决方案资源管理器。 项目类型窗口跟踪全局选择上下文的全局层次结构和 ItemID，窗口依赖于用户的选择来确定当前层次结构。 对于项目类型窗口，环境提供全局服务 <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>，Vspackage 可通过该服务监视开放元素的当前值。 环境中的属性浏览由这一全局服务驱动。
 
-  框架窗口，但是，使用该文档框架窗口内推送 SelectionContext 值 （层次结构/ItemID/SelectionContainer 三个）。 . 框架窗口使用服务<xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>实现此目的。 该文档可以推送仅为所选内容容器的值保留本地值的层次结构和 ItemID 不变，因为是典型的 MDI 子文档。
+  另一方面，框架窗口使用框架窗口中的 DocObject 来推送 SelectionContext 值（层次结构/ItemID/SelectionContainer 三个）。 方法。 框架窗口使用服务 <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> 来实现此目的。 DocObject 可以仅推送选择容器的值，而将层次结构和 ItemID 的本地值保持不变，这对于 MDI 子文档而言是典型值。
 
 ### <a name="events-and-currency"></a>事件和货币
- 两种类型的事件可能会发生，会影响环境的这一概念的货币：
+ 可能会发生两种类型的事件，这些事件会影响环境的货币概念：
 
-- 传播到全局级别和更改窗口框架选定内容上下文的事件。 此类事件的示例包括全局工具窗口处于打开或正在打开的项目类型工具窗口处于打开的 MDI 子窗口。
+- 传播到全局级别并更改窗口框架选择上下文的事件。 此类事件的示例包括正在打开的 MDI 子窗口、打开的全局工具窗口或正在打开的项目类型工具窗口。
 
-- 更改跟踪的窗口框架选择上下文中的元素的事件。 示例包括更改所选内容内 DocObject 或更改项目类型窗口中的选择。
+- 更改窗口框架选择上下文中所跟踪元素的事件。 示例包括更改 DocObject 中的选定内容或更改项目类型窗口中的选定内容。
 
 ## <a name="see-also"></a>请参阅
 - [选择上下文对象](../../extensibility/internals/selection-context-objects.md)

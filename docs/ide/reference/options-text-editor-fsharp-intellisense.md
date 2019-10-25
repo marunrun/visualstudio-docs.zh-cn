@@ -4,27 +4,27 @@ ms.date: 01/16/2019
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.FSharp.IntelliSense
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7227fa83e829fff7bac28fa7bb2b50969768e934
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d293d2c649329f5de8444ea75fd05ddc34738ab4
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778451"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666217"
 ---
 # <a name="options-text-editor-f-intellisense"></a>“选项”>“文本编辑器”>“F#”>“IntelliSense”
 
-使用“IntelliSense”选项页，可以修改一些与 F# 相关的文本编辑器设置。 若要访问此选项页，请先依次选择“工具” > “选项”，再依次选择“文本编辑器” > “F#” > “IntelliSense”。
+使用“IntelliSense”  选项页，可以修改一些与 F# 相关的文本编辑器设置。 若要访问此选项页，请先依次选择“工具”   > “选项”  ，再依次选择“文本编辑器”   > “F#”   > “IntelliSense”  。
 
 ## <a name="completion-lists"></a>完成列表
 
 - **键入字符后显示完成列表**
 
-   选择此选项后，IntelliSense 在你开始键入时会自动显示完成列表。 如果取消选中此选项，仍可通过“IntelliSense”菜单或按 Ctrl + 空格键使用 IntelliSense 完成功能。
+   选择此选项后，IntelliSense 在你开始键入时会自动显示完成列表。 如果取消选中此选项，仍可通过“IntelliSense”菜单或按 Ctrl   + 空格键  使用 IntelliSense 完成功能。
 
 - **删除字符后显示完成列表**
 

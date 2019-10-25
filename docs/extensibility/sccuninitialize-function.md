@@ -12,15 +12,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f71e34352150143c7db207ed31ea6e879f97ca18
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 321f50173e3c1517cc6a431ff74933e1a02ef1d0
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66338493"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72720133"
 ---
 # <a name="sccuninitialize-function"></a>SccUninitialize 函数
-此函数将清除任何分配或由以前调用创建的打开连接[SccInitialize](../extensibility/sccinitialize-function.md)以准备关闭源代码管理插件。
+此函数将清除之前对[SccInitialize](../extensibility/sccinitialize-function.md)的调用创建的任何分配或打开的连接，以便准备关闭源代码管理插件。
 
 ## <a name="syntax"></a>语法
 
@@ -33,17 +33,17 @@ SCCRTN SccUninitialize (
 #### <a name="parameters"></a>参数
  pvContext
 
-[in]在中创建指向源控制插件上下文结构的指针[SccInitialize](../extensibility/sccinitialize-function.md)。
+中指向在[SccInitialize](../extensibility/sccinitialize-function.md)中创建的源代码管理插件上下文结构的指针。
 
 ## <a name="return-value"></a>返回值
- 此函数的源控制插件实现应返回以下值之一：
+ 此函数的源代码管理插件实现应返回以下值之一：
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
-|SCC_OK|清理已成功完成。|
+|SCC_OK|清除已成功完成。|
 
 ## <a name="remarks"></a>备注
- 源代码管理插件负责准备关闭并释放该插件为上下文结构已分配的内存。 为每个插件的给定实例一次调用的函数。 调用[SccInitialize](../extensibility/sccinitialize-function.md)位于此调用。 没有项目仍可以在调用时打开`SccUninitialize`。
+ 源代码管理插件负责准备关闭并释放该插件已为上下文结构分配的内存的内存。 对于插件的每个给定实例，都将调用该函数一次。 在此调用之前调用[SccInitialize](../extensibility/sccinitialize-function.md) 。 调用 `SccUninitialize` 时，仍不能打开任何项目。
 
 ## <a name="see-also"></a>请参阅
 - [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)

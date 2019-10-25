@@ -5,25 +5,25 @@ ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.HTML.Format
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 69a8d3f1b84bd59cec9e13bf50eb8eaa46795cdf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3d1e5f07a2b68d86051452a16ac0f42fc9b9acf0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62779014"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666195"
 ---
 # <a name="options-text-editor-html-web-forms-formatting"></a>“选项”>“文本编辑器”>“HTML (Web 窗体)”>“格式化”
 
-使用“格式化”选项页，可以设置用于在代码编辑器中格式化代码的 HTML 项目选项。 若要访问此页，请先依次选择菜单栏中的“工具” > “选项”，再依次展开“文本编辑器” > “HTML (Web 窗体)” > “格式化”。
+使用“格式化”  选项页，可以设置用于在代码编辑器中格式化代码的 HTML 项目选项。 若要访问此页，请先依次选择菜单栏中的“工具”   > “选项”  ，再依次展开“文本编辑器”   > “HTML (Web 窗体)”   > “格式化”  。
 
 ## <a name="capitalization"></a>大写
 
-选中这些选项后，“源”视图和 XML 编辑器将会在首次创建元素时和自动设置格式期间，对元素和特性名称应用默认的大小写格式。 “应用自动格式化”设置用于确定何时执行自动重格式化。
+选中这些选项后，“源”视图和 XML 编辑器将会在首次创建元素时和自动设置格式期间，对元素和特性名称应用默认的大小写格式。 “应用自动格式化”  设置用于确定何时执行自动重格式化。
 
 > [!WARNING]
 > XML 区分大小写。 设置默认大小写会影响 XML 分析器。
@@ -76,7 +76,7 @@ ms.locfileid: "62779014"
 
 - **自动插入结束标记**
 
-   如果你选中此选项，编辑器就会在你结束开始标记时，自动创建结束标记（例如，\</b>）。
+   如果你选中此选项，编辑器就会在你结束开始标记时，自动创建结束标记（例如，\</b>  ）。
 
 ## <a name="tag-wrapping"></a>标记换行
 
@@ -86,18 +86,18 @@ ms.locfileid: "62779014"
 
 - **在超出指定长度时进行标记换行**
 
-   如果你选中此选项，编辑器就会在标记超出你在“长度”文本框中指定的长度时将标记断开为多行。 此操作只会在格式化标记时发生，而不会在键入新标记时发生。
+   如果你选中此选项，编辑器就会在标记超出你在“长度”  文本框中指定的长度时将标记断开为多行。 此操作只会在格式化标记时发生，而不会在键入新标记时发生。
 
    > [!NOTE]
    > 您指定的值用作最小值。 编辑器不会断开单个特性。
 
 - **长度**
 
-   指定换行之前在一行中显示的字符数。 除非你选中“在超出指定长度时进行标记换行”框，否则此输入框遭禁用。
+   指定换行之前在一行中显示的字符数。 除非你选中“在超出指定长度时进行标记换行”  框，否则此输入框遭禁用。
 
 - **标记专用选项**
 
-   显示“标记专用选项”对话框，用于为各个标记或标记组设置格式化选项。
+   显示“标记专用选项”  对话框，用于为各个标记或标记组设置格式化选项。
 
 ## <a name="see-also"></a>请参阅
 

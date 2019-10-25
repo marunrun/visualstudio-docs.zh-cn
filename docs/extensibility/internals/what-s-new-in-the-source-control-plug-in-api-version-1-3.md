@@ -1,5 +1,5 @@
 ---
-title: 什么&#39;中的源控制插件 API 版本 1.3 |Microsoft Docs
+title: 源代码&#39;管理插件 API 版本1.3 中的新增功能 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,27 +11,27 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: df93626066441226e7f41963e60e3417e8cc12da
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2f45eeb3c57d5339b1e9fd66951dcbb60970e108
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323108"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72721586"
 ---
-# <a name="what39s-new-in-the-source-control-plug-in-api-version-13"></a>什么&#39;中的源控制插件 API 版本 1.3
-源控件插件 API 版本 1.3 引入了以下新函数，以提供更高级的控制。
+# <a name="what39s-new-in-the-source-control-plug-in-api-version-13"></a>源代码&#39;管理插件 API 版本1.3 中的新增功能
+源代码管理插件 API 版本1.3 引入了以下新函数来提供更高级的控件。
 
 ## <a name="changes"></a>Changes
- 以下函数不熟悉源控制插件 API 版本 1.3:
+ 以下函数是源代码管理插件 API 版本1.3 中的新增功能：
 
 |函数|概述|
 |--------------|--------------|
-|[SccGetExtendedCapabilities](../../extensibility/sccgetextendedcapabilities-function.md)|允许其他功能位报告|
-|[SccEnumChangedFiles](../../extensibility/sccenumchangedfiles-function.md)|允许对文件中的本地磁盘上的版本控制数据库比具有较新版本的检查|
-|[SccQueryChanges](../../extensibility/sccquerychanges-function.md)|指定的文件，以允许对的名称更改 （重命名、 添加和删除操作） 的状态检查|
-|[SccPopulateDirList](../../extensibility/sccpopulatedirlist-function.md)|允许对目录和文件的版本控制数据库中的检查|
-|[SccAddFilesFromSCC](../../extensibility/sccaddfilesfromscc-function.md)|将指定的文件列表从版本控制数据库添加到当前项目|
-|[SccBackgroundGet](../../extensibility/sccbackgroundget-function.md)|执行无提示"获取"指定的文件 （没有用户界面显示）|
+|[SccGetExtendedCapabilities](../../extensibility/sccgetextendedcapabilities-function.md)|允许报告其他功能位|
+|[SccEnumChangedFiles](../../extensibility/sccenumchangedfiles-function.md)|允许检查版本控制数据库中具有比本地磁盘更高的版本的文件|
+|[SccQueryChanges](../../extensibility/sccquerychanges-function.md)|允许检查指定文件的名称更改状态（重命名、添加和删除）|
+|[SccPopulateDirList](../../extensibility/sccpopulatedirlist-function.md)|允许检查版本控制数据库中的目录和文件|
+|[SccAddFilesFromSCC](../../extensibility/sccaddfilesfromscc-function.md)|将版本控制数据库中指定的文件列表添加到当前项目|
+|[SccBackgroundGet](../../extensibility/sccbackgroundget-function.md)|执行指定文件的无提示 "Get" （不显示用户界面）|
 |[SccGetUserOption](../../extensibility/sccgetuseroption-function.md)|允许访问特定于用户的选项|
 
 ## <a name="see-also"></a>请参阅

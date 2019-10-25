@@ -6,39 +6,39 @@ f1_keywords:
 - AppPackage.Properties.Application
 helpviewer_keywords:
 - Application page [UWP project]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 416661a39f54429f24cca66a0ec1be7b6c87629d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 01edb1871388cdc31f6c92ff25d10c876dfebc64
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62791042"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72651945"
 ---
 # <a name="application-property-page-uwp-projects"></a>应用程序属性页（UWP 项目）
 
-使用“应用程序”属性页来指定通用 Windows 平台 (UWP) 项目的程序集和包信息，以及 Windows 10 目标版本。
+使用“应用程序”  属性页来指定通用 Windows 平台 (UWP) 项目的程序集和包信息，以及 Windows 10 目标版本。
 
 ![应用程序属性页](media/application-page-uwp.png)
 
-若要访问“应用程序”页，请在“解决方案资源管理器”中选择项目节点。 然后在菜单栏上依次选择“项目” > “属性”。 “属性页”随即在“应用程序”选项卡上打开。
+若要访问“应用程序”  页，请在“解决方案资源管理器”  中选择项目节点。 然后在菜单栏上依次选择“项目”   > “属性”  。 “属性页”随即在“应用程序”  选项卡上打开。
 
 ## <a name="general-section"></a>“常规”部分
 
-程序集名称 &mdash; 指定将保存程序集清单的输出文件的名称。
+ 程序集名称 &mdash; 指定将保存程序集清单的输出文件的名称。
 
 若要以编程方式访问此属性，请参阅 <xref:VSLangProj.ProjectProperties.AssemblyName%2A>。
 
-默认命名空间 &mdash; 为添加到项目中的文件指定基命名空间。 有关命名空间的详细信息，请参阅[命名空间（C# 编程指南）](/dotnet/csharp/programming-guide/namespaces/)、[命名空间 (Visual Basic)](/dotnet/visual-basic/programming-guide/program-structure/namespaces)，或[命名空间 (C ++)](/cpp/cpp/namespaces-cpp)。
+ 默认命名空间 &mdash; 为添加到项目中的文件指定基命名空间。 有关命名空间的详细信息，请参阅[命名空间（C# 编程指南）](/dotnet/csharp/programming-guide/namespaces/)、[命名空间 (Visual Basic)](/dotnet/visual-basic/programming-guide/program-structure/namespaces)，或[命名空间 (C ++)](/cpp/cpp/namespaces-cpp)。
 
 若要以编程方式访问此属性，请参阅 <xref:VSLangProj.ProjectProperties.RootNamespace%2A>。
 
-程序集信息 &mdash; 选择此按钮将显示[“程序集信息”对话框](../../ide/reference/assembly-information-dialog-box.md)。
+ 程序集信息 &mdash; 选择此按钮将显示[“程序集信息”对话框](../../ide/reference/assembly-information-dialog-box.md)。
 
-包清单 &mdash; 选择此按钮将打开清单设计器。 此外，还可以通过选择“解决方案资源管理器”中的 Package.appxmanifest 文件来访问清单设计器。 有关详细信息，请参阅[使用清单设计器配置包](/windows/uwp/packaging/packaging-uwp-apps#configure-an-app-package)。
+ 包清单 &mdash; 选择此按钮将打开清单设计器。 此外，还可以通过选择“解决方案资源管理器”  中的 Package.appxmanifest  文件来访问清单设计器。 有关详细信息，请参阅[使用清单设计器配置包](/windows/uwp/packaging/packaging-uwp-apps#configure-an-app-package)。
 
 ## <a name="targeting-section"></a>“设定目标”部分
 

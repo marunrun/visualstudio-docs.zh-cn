@@ -11,21 +11,21 @@ helpviewer_keywords:
 - classes [Visual Studio], viewing
 - class designer
 ms.assetid: 40ed2c9d-0ce0-4b95-ad78-5dec2065ccea
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ee4910471693a2941ec9548773a2f50e443a639b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 31b28da2206d23c6112d7e7e154d7e907f63b163
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975560"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72631890"
 ---
 # <a name="design-and-view-classes-and-types-with-class-designer"></a>使用类设计器设计和查看类和类型
 
-使用 Visual Studio 中的类设计器设计、直观显示和重构代码中的类和其他类型。 使用类图来创建和编辑 C#、Visual Basic 或 C++ 项目中的类。 也可以使用类图深入了解项目结构或重新组织代码。
+使用 Visual Studio 中的类设计器设计、直观显示和重构代码中的类和其他类型  。 使用类图来创建和编辑 C#、Visual Basic 或 C++ 项目中的类。 也可以使用类图深入了解项目结构或重新组织代码。
 
 ## <a name="what-you-can-do-with-class-diagrams"></a>如何使用类图
 
@@ -53,7 +53,7 @@ ms.locfileid: "62975560"
 在对一个或多个类图进行微调之后，你可以将它们复制到 Microsoft Office 文档中并打印出来，或是将它们作为图像文件导出。 有关详细信息，请参阅[如何：将类图元素复制到 Microsoft Office 文档](how-to-copy-class-diagram-elements-to-a-microsoft-office-document.md)、[如何：打印类图](how-to-print-class-diagrams.md)以及[如何：将类图作为图像导出](how-to-export-class-diagrams-as-images.md)。
 
 > [!NOTE]
-> 类设计器不会跟踪源文件的位置，因此更改项目结构或移动项目中的源文件就可能导致类设计器无法继续对类型进行跟踪，尤其是 typedef 的源类型、基类或关联类型。 可能会收到错误，如“类设计器无法显示此类型”。 如果收到错误，要将修改过的或被重新定位的源代码再次拖到类图中以重新显示。
+> 类设计器不会跟踪源文件的位置，因此更改项目结构或移动项目中的源文件就可能导致类设计器无法继续对类型进行跟踪，尤其是 typedef 的源类型、基类或关联类型。 可能会收到错误，如“类设计器无法显示此类型”  。 如果收到错误，要将修改过的或被重新定位的源代码再次拖到类图中以重新显示。
 
 ## <a name="see-also"></a>请参阅
 

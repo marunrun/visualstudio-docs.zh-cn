@@ -44,7 +44,7 @@ ms.locfileid: "72314179"
 
 ## <a name="next-steps"></a>后续步骤
 
-* 要转到下一个教程步骤，请参阅[步骤 11：运行应用并尝试其他功能](../ide/step-11-run-your-program-and-try-other-features.md)** 。
+* 要转到下一个教程步骤，请参阅 **[步骤 11：运行应用并尝试其他功能](../ide/step-11-run-your-program-and-try-other-features.md)** 。
 
 * 要返回上一个教程步骤，请参阅[步骤 9：检查代码、为代码添加注释和测试代码](../ide/step-9-review-comment-and-test-your-code.md)。
 

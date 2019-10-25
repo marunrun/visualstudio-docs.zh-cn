@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f11b14dd116ea95bda2cc7fad7ac8df634435c9
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 29723f5e253a2ff6d4f6c35e8ad8d3e09e2393f1
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926098"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748659"
 ---
 # <a name="security-page-project-designer"></a>”项目设计器“ ->“安全”页
 
@@ -72,7 +72,7 @@ ms.locfileid: "68926098"
 
 打开[“高级安全设置”对话框](../../ide/reference/advanced-security-settings-dialog-box.md)，该对话框用于为调试应用程序的设置配置受限权限。 在调试过程中会检查这些设置，权限异常表示应用程序需要的权限可能超过了区域中定义的权限。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Security.Permissions.WebBrowserPermission>
 - <xref:System.Security.Permissions.MediaPermission>

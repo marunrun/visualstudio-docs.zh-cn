@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0de567f0417714e1246e11ba074c9b0134e92ce8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 87d590af5162d3efd2ef2c9702a3fe9f45250993
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839766"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72743024"
 ---
 # <a name="idialoadcallbackrestrictsymbolserveraccess"></a>IDiaLoadCallback::RestrictSymbolServerAccess
-确定是否允许访问到符号服务器来解析符号。
+确定是否允许访问符号服务器来解析符号。
 
 ## <a name="syntax"></a>语法
 
@@ -29,10 +29,10 @@ HRESULT RestrictSymbolServerAccess();
 ```
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="remarks"></a>备注
- 以外的任何返回代码`S_OK`避免使用符号服务器来解析符号。
+ 除 `S_OK` 以外的任何返回代码均可防止使用符号服务器解析符号。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 936cd1f057258bdeda455c67e69e3cd7a9272cc7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3a06e96091a32f1425495a941f418a292f4155d2
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62839044"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741675"
 ---
-# <a name="idiastackframegetlengthsavedregisters"></a>IDiaStackFrame::get_lengthSavedRegisters
-检索已保存的寄存器推送到堆栈上的字节数。
+# <a name="idiastackframeget_lengthsavedregisters"></a>IDiaStackFrame::get_lengthSavedRegisters
+检索推送到堆栈上的已保存寄存器的字节数。
 
 ## <a name="syntax"></a>语法
 
@@ -33,10 +33,10 @@ HRESULT get_lengthSavedRegisters ( 
 #### <a name="parameters"></a>参数
  `pRetVal`
 
-[out]返回已保存的寄存器的字节的数。
+弄返回已保存寄存器的字节数。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果不支持的属性。 否则，返回错误代码。
+ 如果成功，则返回 `S_OK`。 如果属性不受支持，则返回 `S_FALSE`。 否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

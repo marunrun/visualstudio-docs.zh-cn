@@ -13,20 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - Basic Text Editor Options dialog box
 ms.assetid: 5a8cafca-f7b4-4a2d-92ce-6894a7673d00
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aa331fea595c2143dd3ab47aa562fbd61277f81f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a07645597846bd85f3152da866a253b079bc3963
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62817783"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72666341"
 ---
 # <a name="options-text-editor-basic-visual-basic-advanced"></a>“选项”>“文本编辑器”>“基本(Visual Basic)”>“高级”
-在“选项”（“工具”菜单）对话框中“文本编辑器”文件夹的“基本”文件夹内，“VB 专用”属性页包含以下属性：
+在“选项”  （“工具”  菜单）对话框中“文本编辑器”  文件夹的“基本”  文件夹内，“VB 专用”  属性页包含以下属性：
 
 ## <a name="analysis"></a>分析
 
@@ -38,11 +38,11 @@ ms.locfileid: "62817783"
 
 - 对 using 排序时将“System”指令排在第一位
 
-   当你选择右键单击菜单中的“删除和排序 Using”命令后，它会对 `using` 指令进行排序，并将“System”命名空间置于列表顶部。
+   当你选择右键单击菜单中的“删除和排序 Using”命令后，它会对 `using` 指令进行排序，并将“System”命名空间置于列表顶部  。
 
 - 单独的 using 指令组
 
-   当你选择右键单击菜单中的“删除和排序 Using”命令后，它会在具有相同根命名空间的指令组之间插入空行，以将 `using` 指令分隔开来。
+   当你选择右键单击菜单中的“删除和排序 Using”  命令后，它会在具有相同根命名空间的指令组之间插入空行，以将 `using` 指令分隔开来。
 
 - 建议对引用程序集中的类型使用 using
 - 建议对 NuGet 包中的类型使用 using
@@ -55,7 +55,7 @@ ms.locfileid: "62817783"
 
  **启用突出显示引用和关键字**
 
-文本编辑器可以突出显示所有符号实例或子句中的所有关键字，如 `If..Then`、`While...End While` 或 `Try...Catch...Finally`。 可以在突出显示的引用或关键字之间进行导航，具体方法为按 Ctrl + Shift + 向下箭头，或按 Ctrl + Shift + 向上箭头。
+文本编辑器可以突出显示所有符号实例或子句中的所有关键字，如 `If..Then`、`While...End While` 或 `Try...Catch...Finally`。 可以在突出显示的引用或关键字之间进行导航，具体方法为按 Ctrl   + Shift   + 向下箭头  ，或按 Ctrl   + Shift   + 向上箭头  。
 
 ## <a name="outlining"></a>大纲显示
 
@@ -65,7 +65,7 @@ ms.locfileid: "62817783"
 
 **显示过程行分隔符**
 
-文本编辑器指示过程的可视范围。 在项目的 .vb 源文件中，在下表列出的位置处绘制行：
+文本编辑器指示过程的可视范围。 在项目的 .vb  源文件中，在下表列出的位置处绘制行：
 
 |.vb 源文件中的位置|行位置示例|
 |---------------------------------|------------------------------|
@@ -97,7 +97,7 @@ ms.locfileid: "62817783"
 
 **自动插入最终构造**
 
-例如，如果你键入过程声明的第一行 `Sub Main` 并按 Enter，文本编辑器就会添加匹配的 `End Sub` 行。 同样，如果添加一个 [For](/dotnet/visual-basic/language-reference/statements/for-next-statement) 循环，文本编辑器会添加一个匹配的 `Next` 语句。 选定此选项后，代码编辑器会自动添加最终构造。
+例如，如果你键入过程声明的第一行 `Sub Main` 并按 Enter  ，文本编辑器就会添加匹配的 `End Sub` 行。 同样，如果添加一个 [For](/dotnet/visual-basic/language-reference/statements/for-next-statement) 循环，文本编辑器会添加一个匹配的 `Next` 语句。 选定此选项后，代码编辑器会自动添加最终构造。
 
 **自动插入 Interface 和 MustOverride 成员**
 

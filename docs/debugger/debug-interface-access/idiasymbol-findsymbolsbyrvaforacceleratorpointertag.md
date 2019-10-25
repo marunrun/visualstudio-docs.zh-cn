@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::findSymbolsByRVAForAcceleratorPointerTag |Microsoft Docs
+title: IDiaSymbol：： findSymbolsByRVAForAcceleratorPointerTag |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 673ca8137244fed933df0be3fa0221115951a9c1
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: f0d05946db816e6bd209e364e11d5091163941a4
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "62838992"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72741152"
 ---
 # <a name="idiasymbolfindsymbolsbyrvaforacceleratorpointertag"></a>IDiaSymbol::findSymbolsByRVAForAcceleratorPointerTag
-提供相应的标记值，此方法返回在指定的相对虚拟地址此存根 （stub） 函数中包含的符号的枚举。
+给定相应的标记值后，此方法将在指定的相对虚拟地址返回此存根函数中包含的符号的枚举。
 
 ## <a name="syntax"></a>语法
 
@@ -32,21 +32,21 @@ HRESULT findSymbolsByRVAForAcceleratorPointerTag (
 #### <a name="parameters"></a>参数
  `tagValue`
 
-[in]为其找到 pointee 符号记录指针标记值。
+中为其查找 pointee 符号记录的指针标记值。
 
  `rva`
 
-[in]用于筛选的符号与 pointee 变量和指定的标记值相对应的 rva。
+中用于筛选与带有指定标记值的 pointee 变量对应的符号的 rva。
 
  `ppResult`
 
-[out]一个指向`IDiaEnumSymbols`使用结果初始化接口指针。
+弄指向使用结果初始化的 `IDiaEnumSymbols` 接口指针的指针。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回 `S_FALSE` 或错误代码。
 
 ## <a name="remarks"></a>备注
- 调用此方法仅对`IDiaSymbol`对应于加速器存根 （stub） 函数的接口。
+ 仅在对应于快捷键存根函数的 `IDiaSymbol` 接口上调用此方法。
 
 ## <a name="see-also"></a>请参阅
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

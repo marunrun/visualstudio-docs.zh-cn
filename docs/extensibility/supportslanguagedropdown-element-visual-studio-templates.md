@@ -1,5 +1,5 @@
 ---
-title: SupportsLanguageDropDown 元素 （Visual Studio 模板） |Microsoft Docs
+title: SupportsLanguageDropDown 元素（Visual Studio 模板） |Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,15 +14,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b6dbc2c5cae40078f033fa0fb85c6fda032e8ec4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d9b5727bd9aa09b05fc95d8f9f9b7913a6046b81
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316804"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72719419"
 ---
 # <a name="supportslanguagedropdown-element-visual-studio-templates"></a>SupportsLanguageDropDown 元素（Visual Studio 模板）
-指定 Web 项目模板是完全相同的多个语言，以及是否**语言**上启用选项**添加新项**对话框。
+指定对于多种语言，Web 项模板是否相同，以及是否在 "**添加新项**" 对话框中启用了**Language**选项。
 
  \<VSTemplate > \<TemplateData > \<SupportsLanguageDropDown >
 
@@ -50,17 +50,17 @@ ms.locfileid: "66316804"
 ## <a name="text-value"></a>文本值
  需要一个文本值。
 
- 文本必须是`true`或`false`，以指示是否**语言**选项才可用**添加新项**对话框。
+ 文本必须是 `true` 或 `false`，指示是否可从 "**添加新项**" 对话框中使用 "**语言**" 选项。
 
 ## <a name="remarks"></a>备注
  `SupportsLanguageDropDown` 是可选元素。 默认值为 `false`。
 
- `SupportsLanguageDropDown`元素功能仅适用于 Web 项目模板。
+ @No__t_0 元素仅适用于 Web 项模板。
 
- 如果此元素的值设置为`true`，则项模板是完全相同的所有编程语言和**语言**中启用选项**添加新项**对话框。 此选项，可选择你想要从模板创建的新项的编程语言。
+ 如果此元素的值设置为 "`true`"，则对于所有编程语言，项模板都是相同的，并且 "**添加新项**" 对话框中的 "**语言**" 选项处于启用状态。 利用此选项，您可以选择要从模板创建的新项的编程语言。
 
 ## <a name="example"></a>示例
- 下面的示例指定要显示**语言**下拉列表选项。
+ 下面的示例指定显示 "**语言**" 下拉选项。
 
 ```
 <VSTemplate Version="3.0.0" Type="Project"
