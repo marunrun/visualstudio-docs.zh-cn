@@ -25,7 +25,7 @@
 ### [联系订阅管理员](contact-my-admin.md)
 ### 优点
 #### 工具
-##### [Azure 额度](vs-azure.md)
+##### [Azure 开发测试个人额度](vs-azure.md)
 ##### [Azure DevOps](vs-azure-devops.md)
 ##### [Azure 即用即付](vs-azure-payg.md)
 ##### [CAST 突出显示](vs-cast.md)
