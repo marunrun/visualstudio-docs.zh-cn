@@ -35,12 +35,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3c83e6b85e8657487254f1f4fb275a6280c786ff
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8654e42db8ec2a285c9104c6f43bc34beb22ad22
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72638947"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72806966"
 ---
 # <a name="windows-communication-foundation-services-and-wcf-data-services-in-visual-studio"></a>Visual Studio 中的 Windows Communication Foundation 服务和 WCF 数据服务
 
@@ -52,7 +52,7 @@ Windows Communication Foundation （WCF）是一个统一的框架，用于创�
 
 ### <a name="what-are-wcf-data-services"></a>WCF 数据服务
 
-WCF 数据服务是开放数据（OData）协议标准的实现。  WCF 数据服务允许你以一组 REST Api 的形式公开表格数据，从而使你能够使用标准 HTTP 谓词（如 GET、POST、PUT 或 DELETE）返回数据。 在服务器端，WCF 数据服务被[ASP.NET Web API](http://www.asp.net/web-api)用于创建新的 OData 服务。 在 Visual Studio 中使用 .NET 应用程序中的 OData 服务时，WCF 数据服务客户端库仍是一个不错的选择（**项目** > **添加服务引用**）。 有关详细信息，请参阅 [WCF Data Services 4.5](http://go.microsoft.com/fwlink/?LinkID=119952)。
+WCF 数据服务是开放数据（OData）协议标准的实现。  WCF 数据服务允许你以一组 REST Api 的形式公开表格数据，从而使你能够使用标准 HTTP 谓词（如 GET、POST、PUT 或 DELETE）返回数据。 在服务器端，WCF 数据服务被[ASP.NET Web API](https://dotnet.microsoft.com/apps/aspnet/apis)用于创建新的 OData 服务。 在 Visual Studio 中使用 .NET 应用程序中的 OData 服务时，WCF 数据服务客户端库仍是一个不错的选择（**项目** > **添加服务引用**）。 有关详细信息，请参阅 [WCF Data Services 4.5](http://go.microsoft.com/fwlink/?LinkID=119952)。
 
 ### <a name="wcf-programming-model"></a>WCF 编程模型
 

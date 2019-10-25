@@ -14,12 +14,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: f2a33a0090be980c221ebfbe7f3116cdfef7b23b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 07c7c9db37a951b689e28e87a02c7f41a667685b
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648989"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807046"
 ---
 # <a name="access-data-in-visual-studio"></a>在 Visual Studio 中访问数据
 
@@ -94,7 +94,7 @@ ms.locfileid: "72648989"
 
 ### <a name="data-providers"></a>数据提供程序
 
-对于在 ADO.NET 中使用的数据库，该数据库必须具有自定义*ADO.NET 数据访问*接口，否则必须公开 ODBC 或 OLE DB 接口。 Microsoft 提供 SQL Server 产品以及 ODBC 和 OLE DB 提供程序的[ADO.NET 数据提供程序列表](https://docs.microsoft.com/dotnet/framework/data/adonet/ado-net-overview)。
+对于在 ADO.NET 中使用的数据库，该数据库必须具有自定义*ADO.NET 数据访问*接口，否则必须公开 ODBC 或 OLE DB 接口。 Microsoft 提供 SQL Server 产品以及 ODBC 和 OLE DB 提供程序的[ADO.NET 数据提供程序列表](/dotnet/framework/data/adonet/ado-net-overview)。
 
 ### <a name="data-modeling"></a>数据建模
 
@@ -144,9 +144,9 @@ C++与 Microsoft Azure 存储一起使用的程序可以使用[Microsoft Azure �
 
 [ADO.NET](/dotnet/framework/data/adonet/index) &mdash;Describes ADO.NET 体系结构，以及如何使用 ADO.NET 类管理应用程序数据以及与数据源和 XML 进行交互。
 
-[ADO.NET 实体框架](https://docs.microsoft.com/ef/ef6/)&mdash;Describes 如何创建数据应用程序，使开发人员可以针对概念模型而不是直接针对关系数据库进行编程。
+[ADO.NET 实体框架](/ef/ef6/)&mdash;Describes 如何创建数据应用程序，使开发人员可以针对概念模型而不是直接针对关系数据库进行编程。
 
-[WCF 数据服务 4.5](/dotnet/framework/data/wcf/index) &mdash;Describes 如何使用 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] 在实现[Open Data Protocol （OData）](https://www.odata.org/)的 web 或 intranet 上部署数据服务。
+[WCF 数据服务 4.5](/dotnet/framework/data/wcf/index)&mdash;介绍了如何使用 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] 在实现[Open Data Protocol （OData）](https://www.odata.org/)的 web 或 intranet 上部署数据服务。
 
 [Office 解决方案中的数据](../vsto/data-in-office-solutions.md)&mdash;Contains 链接到说明如何在 Office 解决方案中工作的主题的链接。 这包括有关面向架构的编程、数据缓存和服务器端数据访问的信息。
 

@@ -128,12 +128,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: ca1e66defbce50a9119e817155bcc2a98d01af9d
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 8437a18bf2b732ee3f12774b04baedf12003d554
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72442406"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72806803"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>对函数参数和返回值进行批注
 本文介绍了简单函数参数（标量）的批注的典型用法，以及大多数类型的缓冲区。  本文还介绍了批注的常见用法模式。 有关与函数相关的其他注释，请参阅[注释函数行为](../code-quality/annotating-function-behavior.md)。
@@ -169,7 +169,7 @@ ms.locfileid: "72442406"
 
      指向数组的指针，该数组由函数读取。  数组的大小 `s` 元素，它们都必须有效。
 
-     @No__t_0 变体以字节为单位（而不是元素）提供大小。 仅在无法将大小表示为元素时使用此值。  例如，仅当使用 `wchar_t` 的类似函数时，`char` 字符串才能使用 `_bytes_` 变体。
+     `_bytes_` 变体以字节为单位（而不是元素）提供大小。 仅在无法将大小表示为元素时使用此值。  例如，仅当使用 `wchar_t` 的类似函数时，`char` 字符串才能使用 `_bytes_` 变体。
 
 - `_In_reads_z_(s)`
 
@@ -189,7 +189,7 @@ ms.locfileid: "72442406"
 
      在此示例中，调用方提供 `p1` `size` 元素的缓冲区。  `MyStringCopy` 使其中一些元素有效。 更重要的是，`PWSTR` 上的 `_Null_terminated_` 注释意味着 `p1` 在 post 状态下以 null 结尾。  通过这种方式，有效元素的数目仍是明确定义的，但不需要特定元素计数。
 
-     @No__t_0 变体以字节为单位（而不是元素）提供大小。 仅在无法将大小表示为元素时使用此值。  例如，仅当使用 `wchar_t` 的类似函数时，`char` 字符串才能使用 `_bytes_` 变体。
+     `_bytes_` 变体以字节为单位（而不是元素）提供大小。 仅在无法将大小表示为元素时使用此值。  例如，仅当使用 `wchar_t` 的类似函数时，`char` 字符串才能使用 `_bytes_` 变体。
 
 - `_Out_writes_z_(s)`
 
@@ -201,7 +201,7 @@ ms.locfileid: "72442406"
 
      指向数组的指针，该数组在函数中进行读取和写入。  它的大小 `s` 元素，在前置状态和 post 状态下有效。
 
-     @No__t_0 变体以字节为单位（而不是元素）提供大小。 仅在无法将大小表示为元素时使用此值。  例如，仅当使用 `wchar_t` 的类似函数时，`char` 字符串才能使用 `_bytes_` 变体。
+     `_bytes_` 变体以字节为单位（而不是元素）提供大小。 仅在无法将大小表示为元素时使用此值。  例如，仅当使用 `wchar_t` 的类似函数时，`char` 字符串才能使用 `_bytes_` 变体。
 
 - `_Inout_updates_z_(s)`
 
@@ -229,7 +229,7 @@ ms.locfileid: "72442406"
 
      指向数组的指针，该数组由函数读取和写入。  它的大小 `s` 元素中，所有元素都必须在前置状态中有效，并且 `c` 元素在 post 状态中必须有效。
 
-     @No__t_0 变体以字节为单位（而不是元素）提供大小。 仅在无法将大小表示为元素时使用此值。  例如，仅当使用 `wchar_t` 的类似函数时，`char` 字符串才能使用 `_bytes_` 变体。
+     `_bytes_` 变体以字节为单位（而不是元素）提供大小。 仅在无法将大小表示为元素时使用此值。  例如，仅当使用 `wchar_t` 的类似函数时，`char` 字符串才能使用 `_bytes_` 变体。
 
 - `_Inout_updates_all_(s)`
 
@@ -241,27 +241,27 @@ ms.locfileid: "72442406"
 
      换而言之，缓冲区中的每个要在预状态中 `s` 的元素都在前置状态和 post 状态下有效。
 
-     @No__t_0 变体以字节为单位（而不是元素）提供大小。 仅在无法将大小表示为元素时使用此值。  例如，仅当使用 `wchar_t` 的类似函数时，`char` 字符串才能使用 `_bytes_` 变体。
+     `_bytes_` 变体以字节为单位（而不是元素）提供大小。 仅在无法将大小表示为元素时使用此值。  例如，仅当使用 `wchar_t` 的类似函数时，`char` 字符串才能使用 `_bytes_` 变体。
 
 - `_In_reads_to_ptr_(p)`
 
-     指向数组的指针，该数组的表达式 `p`  -  `_Curr_` （即 `p` 减 `_Curr_`）由相应的语言标准定义。  @No__t_0 之前的元素必须在预状态中有效。
+     指向数组的指针，该数组的表达式 `p` - `_Curr_` （即 `p` 减 `_Curr_`）由相应的语言标准定义。  `p` 之前的元素必须在预状态中有效。
 
 - `_In_reads_to_ptr_z_(p)`
 
-     指向以 null 结尾的数组的指针，该数组的表达式 `p`  -  `_Curr_` （即 `p` 减 `_Curr_`）由相应的语言标准定义。  @No__t_0 之前的元素必须在预状态中有效。
+     指向以 null 结尾的数组的指针，该数组的表达式 `p` - `_Curr_` （即 `p` 减 `_Curr_`）由相应的语言标准定义。  `p` 之前的元素必须在预状态中有效。
 
 - `_Out_writes_to_ptr_(p)`
 
-     指向数组的指针，该数组的表达式 `p`  -  `_Curr_` （即 `p` 减 `_Curr_`）由相应的语言标准定义。  @No__t_0 之前的元素不必处于预处理状态，并且在 post 状态中必须有效。
+     指向数组的指针，该数组的表达式 `p` - `_Curr_` （即 `p` 减 `_Curr_`）由相应的语言标准定义。  `p` 之前的元素不必处于预处理状态，并且在 post 状态中必须有效。
 
 - `_Out_writes_to_ptr_z_(p)`
 
-     指向以 null 结尾的数组的指针，该数组的表达式 `p`  -  `_Curr_` （即 `p` 减 `_Curr_`）由相应的语言标准定义。  @No__t_0 之前的元素不必处于预处理状态，并且在 post 状态中必须有效。
+     指向以 null 结尾的数组的指针，该数组的表达式 `p` - `_Curr_` （即 `p` 减 `_Curr_`）由相应的语言标准定义。  `p` 之前的元素不必处于预处理状态，并且在 post 状态中必须有效。
 
 ## <a name="optional-pointer-parameters"></a>可选指针参数
 
-当指针参数批注包含 `_opt_` 时，它指示参数可以为 null。 否则，批注的执行与不包含 `_opt_` 的版本相同。 下面列出了指针参数批注的 `_opt_` 变体：
+当指针参数批注包含 `_opt_`时，它指示参数可以为 null。 否则，批注的执行与不包含 `_opt_`的版本相同。 下面列出了指针参数批注的 `_opt_` 变体：
 
 ||||
 |-|-|-|
@@ -288,7 +288,7 @@ ms.locfileid: "72442406"
 
    参数可以为 null，并且在后置位置，指向位置可以为 null。
 
-  在下表中，将在注释名称中插入附加子字符串，以便进一步限定批注的含义。  各种子字符串分别为 `_z`、`_COM_`、`_buffer_`、`_bytebuffer_` 和 `_to_`。
+  在下表中，将在注释名称中插入附加子字符串，以便进一步限定批注的含义。  各种子字符串分别为 `_z`、`_COM_`、`_buffer_`、`_bytebuffer_`和 `_to_`。
 
 > [!IMPORTANT]
 > 如果要批注的接口是 COM，请使用这些批注的 COM 形式。 不要将 COM 批注用于任何其他类型接口。
@@ -517,7 +517,7 @@ ms.locfileid: "72442406"
 
 ## <a name="related-resources"></a>相关资源
 
-[代码分析团队博客](http://go.microsoft.com/fwlink/?LinkId=251197)
+[代码分析团队博客](https://blogs.msdn.microsoft.com/codeanalysis/)
 
 ## <a name="see-also"></a>请参阅
 

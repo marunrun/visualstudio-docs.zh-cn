@@ -1,6 +1,6 @@
 ---
 title: C++核心准则警告
-ms.date: 08/10/2017
+ms.date: 10/16/2019
 ms.topic: conceptual
 ms.assetid: 7c83814a-f21d-4323-ad5f-13bac40d3e38
 author: mblome
@@ -8,12 +8,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e616b380c223118b42d9cb345f17cb06db78779b
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: 69adb52b4fa7649bd99ecb5d4e29aa69390f6076
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018476"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807122"
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>使用 C++ 核心准则检查程序
 
@@ -60,11 +60,11 @@ int main()
 
 此示例演示C++核心检查规则可以发现的几个警告：
 
-- C26494 的类型为5：始终初始化对象。
+- C26494 是规则类型。5：始终初始化对象。
 
-- C26485 是规则界限。3：无数组到指针的衰减。
+- C26485 是规则界限。3：没有数组到指针的衰减。
 
-- C26481 是规则界限。1：请勿使用指针算法。 请改用 `span`。
+- C26481 是规则界限。1：不要使用指针算法。 请改用 `span` 。
 
 如果编译C++此代码时安装并启用了核心检查代码分析规则集，则会输出前两个警告，但会禁止显示第三个警告。 下面是示例代码的生成输出：
 
@@ -78,23 +78,23 @@ c:\users\username\documents\visual studio 2015\projects\corecheckexample\coreche
 ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
 ```
 
-C++核心准则可帮助您编写更好和更安全的代码。 但是，如果你有一个不应应用规则或配置文件的实例，则可以轻松地直接在代码中将其取消。 你可以使用 `gsl::suppress` 属性来防止C++核心检查在以下代码块中检测和报告规则冲突。 您可以标记各个语句以禁止显示特定规则。 甚至可以通过在不包含特定规则号的情况下写入 `[[gsl::suppress(bounds)]]` 来禁止整个边界配置文件。
+C++核心准则可帮助您编写更好和更安全的代码。 但是，如果你有一个不应应用规则或配置文件的实例，则可以轻松地直接在代码中将其取消。 你可以使用 `gsl::suppress` 特性来防止C++核心检查检测和报告以下代码块中的任何规则冲突。 您可以标记各个语句以禁止显示特定规则。 甚至可以通过编写 `[[gsl::suppress(bounds)]]` 来禁止整个边界配置文件，而无需包含特定的规则号。
 
 ## <a name="supported-rule-sets"></a>支持的规则集
 
 将新规则添加到C++核心准则检查器时，为预先存在的代码生成的警告数可能会增加。 您可以使用预定义的规则集来筛选要启用的规则类型。 在 Visual Studio 2017 版本15.3 中，支持的规则集包括：
 
-- **所有者指针规则**强制执行与[ C++来自核心准则中的 Owner @ no__t-2T > 相关的资源管理检查](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)。
+- **所有者指针规则**强制执行与[从核心准则 > 所有者 \<T 相关的C++资源管理检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)。
 
-- **Const 规则**强制实施[来自C++核心准则的 const 相关检查](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability)。
+- **Const 规则**强制实施[来自C++核心准则的 const 相关检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability)。
 
-- **原始指针规则**强制执行[与核心准则中的C++原始指针相关的资源管理检查](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)。
+- **原始指针规则**强制执行[与核心准则中的C++原始指针相关的资源管理检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)。
 
-- **唯一的指针规则**强制执行与[ C++核心准则中具有唯一指针语义的类型相关的资源管理检查](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)。
+- **唯一的指针规则**强制执行与[ C++核心准则中具有唯一指针语义的类型相关的资源管理检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)。
 
-- **边界规则**强制实施[ C++核心准则的边界配置文件](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile)。
+- **边界规则**强制实施[ C++核心准则的边界配置文件](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile)。
 
-- **类型规则**强制实施[ C++核心准则的类型配置文件](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prosafety-type-safety-profile)。
+- **类型规则**强制实施[ C++核心准则的类型配置文件](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prosafety-type-safety-profile)。
 
 可以选择将警告仅限制为一个或多个组。 除了其他 PREfast 检查，**本机的最小**和**本机建议**规则集还包括C++核心检查规则。 若要查看可用的规则集，请打开 "项目属性" 对话框，选择 "**代码 Analysis\General**"，打开 "**规则集**" 组合框中的下拉列表，然后**选择 "选择多个规则集**"。 有关在 Visual Studio 中使用规则集的详细信息，请参阅[使用规则集对代码分析规则进行分组](using-rule-sets-to-group-code-analysis-rules.md)。
 
@@ -122,7 +122,7 @@ CPPCORECHECK_BOUNDS_WARNINGS
 
 ## <a name="attributes"></a>特性
 
-Microsoft Visual C++编译器对于 GSL 禁止显示特性提供了有限的支持。 它可用于禁止在函数内的 expression 和 block 语句上出现警告。
+Microsoft C++编译器对 GSL 禁止显示属性的支持有限。 它可用于禁止在函数内的 expression 和 block 语句上出现警告。
 
 ```cpp
 // Suppress only warnings from the 'r.11' rule in expression.
@@ -154,13 +154,13 @@ Microsoft Visual C++编译器对于 GSL 禁止显示特性提供了有限的支�
 
 3. 在 "**其他选项**" 窗口中，添加 `/wd26400`。
 
-您可以使用命令行选项，通过指定 `/analyze-` 来暂时禁用文件的所有代码分析。 这将生成*D9025 使用 "/analyze-" 替代 "/analyze*" 的警告，这将提醒你稍后重新启用代码分析。
+通过指定 `/analyze-`，可以使用命令行选项来暂时禁用文件的所有代码分析。 这将生成*D9025 使用 "/analyze-" 替代 "/analyze*" 的警告，这将提醒你稍后重新启用代码分析。
 
 ## <a name="corecheck_per_file"></a>启用特定C++项目文件的核心准则检查器
 
 有时，执行焦点代码分析并仍利用 Visual Studio IDE 可能会很有用。 下面是一个示例方案，可用于大项目以节省生成时间，并使其更易于筛选结果。
 
-1. 在命令外壳中，设置 `esp.extension` 和 @no__t 环境变量。
+1. 在命令外壳中，设置 `esp.extension` 和 `esp.annotationbuildlevel` 环境变量。
 2. 从命令行界面打开 Visual Studio 以继承这些变量。
 3. 加载项目并打开其属性。
 4. 启用代码分析，选取适当的规则集，但不要启用代码分析扩展。
@@ -213,22 +213,22 @@ msbuild /p:EnableCppCoreCheck=true /p:RunCodeAnalysis=true /p:CodeAnalysisRuleSe
 你将需要设置几个环境变量并为编译器使用适当的命令行选项。 最好在 "本机工具命令提示" 环境下工作，这样您就不必搜索编译器的特定路径、包括目录等。
 
 1. **环境变量**
-   - `set esp.extensions=cppcorecheck.dll` 此项通知引擎加载C++核心准则模块。
-   - `set esp.annotationbuildlevel=ignore` 将禁用处理 SAL 批注的逻辑。 批注不会影响C++核心准则检查器中的代码分析，但其处理过程会耗费时间（有时很长时间）。 此设置是可选的，但强烈建议使用此设置。
-   - `set caexcludepath=%include%` 我们强烈建议你禁用在标准标头上触发的警告。 你可以在此处添加更多路径，例如项目中的公共标头的路径。
+   - `set esp.extensions=cppcorecheck.dll` 这将告知引擎加载C++核心准则模块。
+   - `set esp.annotationbuildlevel=ignore` 这将禁用处理 SAL 批注的逻辑。 批注不会影响C++核心准则检查器中的代码分析，但其处理过程会耗费时间（有时很长时间）。 此设置是可选的，但强烈建议使用此设置。
+   - `set caexcludepath=%include%` 强烈建议您禁用在标准标头上触发的警告。 你可以在此处添加更多路径，例如项目中的公共标头的路径。
 2. **命令行选项**
-   - @no__t 启用代码分析（还应考虑使用/analyze： only 和/analyze： quiet）。
+   - `/analyze` 启用代码分析（还应考虑使用/analyze： only 和/analyze： quiet）。
    - `/analyze:plugin EspXEngine.dll` 此选项将代码分析扩展引擎加载到 PREfast 中。 此引擎反过来会加载C++核心准则检查器。
 
 ## <a name="use-the-guideline-support-library"></a>使用准则支持库
 
-准则支持库旨在帮助你遵循核心准则。 GSL 包括一些定义，使你可以用更安全的替代方法替换容易出错的构造。 例如，你可以将 @no__t 0 对参数替换为 @no__t 类型。 [@No__t](http://www.nuget.org/packages/Microsoft.Gsl)中提供了 GSL。 库是开源的，因此可以查看源、进行注释或做出贡献。 可在[https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL)中找到该项目。
+准则支持库旨在帮助你遵循核心准则。 GSL 包括一些定义，使你可以用更安全的替代方法替换容易出错的构造。 例如，您可以使用 `span<T>` 类型替换 `T*, length` 参数对。 [http://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl)提供了 GSL。 库是开源的，因此可以查看源、进行注释或做出贡献。 可在[https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL)中找到该项目。
 
 ## <a name="vs2015_corecheck"></a>使用 Visual C++ Studio 2015 项目中的核心检查指南
 
-如果使用 Visual Studio 2015，则C++默认情况下不会安装核心检查代码分析规则集。 必须执行一些附加步骤，然后才能在 Visual Studio C++ 2015 中启用核心检查代码分析工具。 Microsoft 通过使用 Nuget 包为 Visual Studio 2015 项目提供支持。 此包的名称为 CppCoreCheck，可在[http://www.nuget.org/packages/Microsoft.CppCoreCheck](http://www.nuget.org/packages/Microsoft.CppCoreCheck)中获取。 此程序包需要至少安装了 Visual Studio 2015 Update 1。
+如果使用 Visual Studio 2015，则C++默认情况下不会安装核心检查代码分析规则集。 必须执行一些附加步骤，然后才能在 Visual Studio C++ 2015 中启用核心检查代码分析工具。 Microsoft 通过使用 Nuget 包为 Visual Studio 2015 项目提供支持。 此包的名称为 CppCoreCheck，可[http://www.nuget.org/packages/Microsoft.CppCoreCheck](https://www.nuget.org/packages/Microsoft.CppCoreCheck)。 此程序包需要至少安装了 Visual Studio 2015 Update 1。
 
-该包还会安装另一个包作为依赖项，即仅标头的准则支持库（GSL）。 GSL [@no__t](https://github.com/Microsoft/GSL)上也提供了。
+该包还会安装另一个包作为依赖项，即仅标头的准则支持库（GSL）。 [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL)上还提供了 GitHub 上的 GSL。
 
 由于代码分析规则的加载方式，你必须将 CppCoreCheck NuGet 包安装到要在 Visual Studio 2015 中C++检查的每个项目。
 
