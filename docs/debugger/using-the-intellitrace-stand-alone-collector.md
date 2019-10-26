@@ -12,18 +12,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5fe671b10a701bb355a476ff9bc577bb4cdca71b
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: a5349c08497bc52c32a4ffed30b74f2d3bd71e4e
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71252535"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911313"
 ---
 # <a name="using-the-intellitrace-stand-alone-collector-c-visual-basic"></a>使用 IntelliTrace 独立收集器（C#、Visual Basic）
 
 **IntelliTrace 独立收集器** 可让你收集生产服务器或其他环境中应用的 IntelliTrace 诊断数据，而无需在目标计算机上安装 Visual Studio 或更改目标系统环境。 IntelliTrace 独立收集器可用于 Web、SharePoint、WPF 和 Windows 窗体应用中。 数据收集完毕后，只需删除收集器以进行卸载。
 
- 观看运行中的 IntelliTrace：[收集和分析生产中的 IntelliTrace 数据以便进行调试（第9频道视频）](http://go.microsoft.com/fwlink/?LinkID=251851)
+ 在操作中观察 IntelliTrace： [收集并分析生成的 IntelliTrace 数据以便进行调试（第 9 频道视频）](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Collecting-and-analyzing-data-in-production)
 
 > [!NOTE]
 > 通过在 **跟踪** 模式下使用 **Microsoft 监视代理** ，你还可以收集远程计算机上运行的 Web 及 SharePoint 应用的相同 IntelliTrace 数据。
@@ -31,7 +31,7 @@ ms.locfileid: "71252535"
 > 可通过在 **监视** 模式下运行代理来收集 IntelliTrace 数据中与性能相关的事件。 与**跟踪** 模式或 **IntelliTrace 独立收集器** 相比， **IntelliIntelliTrace 独立收集器 stand-alone collector**模式对性能的影响更小。 安装时，Microsoft 监视代理确实会改变目标系统的环境。 请参阅[使用 Microsoft Monitoring Agent](../debugger/using-the-microsoft-monitoring-agent.md)。
 > IntelliTrace 独立收集器不支持处理快照。
 
- **要求**
+ **惠?**
 
 - .NET Framework 3.5 或更高版本
 
@@ -70,7 +70,7 @@ ms.locfileid: "71252535"
 
 5. [从 Web 应用程序或 SharePoint 应用程序中收集数据](#BKMK_Collect_Data_from_IIS_Application_Pools)
 
-     -或-
+     或
 
      [收集托管应用中的数据](#BKMK_Collect_Data_from_Executables)
 
@@ -78,15 +78,15 @@ ms.locfileid: "71252535"
 
 ## <a name="BKMK_Install_the_IntelliTrace_Stand_Alone_Collector"></a> 安装收集器
 
-1. 在应用服务器上创建收集器目录，例如：**C:\IntelliTraceCollector**
+1. 在应用服务器上创建收集器目录，如： C:\IntelliTraceCollector
 
-2. 从[Microsoft 下载中心](https://visualstudio.microsoft.com/downloads/#intellitrace-standalone-collector-for-visual-studio-2019)、 [My.visualstudio.com](https://my.visualstudio.com/Downloads?q=intellitrace%20standalone%20collector%20visual%20studio%202017)或 Visual Studio 2013 Update 3 安装文件夹中获取收集器。 [IntelliTrace Collector for Visual Studio 2013 Update 4](https://www.microsoft.com/en-us/download/details.aspx?id=44909)：
+2. 从[Microsoft 下载中心](https://visualstudio.microsoft.com/downloads/#intellitrace-standalone-collector-for-visual-studio-2019)、 [My.visualstudio.com](https://my.visualstudio.com/Downloads?q=intellitrace%20standalone%20collector%20visual%20studio%202017)或 Visual Studio 2013 Update 3 安装文件夹中获取收集器。 [IntelliTrace Collector for Visual Studio 2013 Update 4](https://www.microsoft.com/download/details.aspx?id=44909)：
 
    - **Microsoft 下载中心**或**my.visualstudio.com**：
 
      1. 选择 **IntelliTraceCollector.exe**旁的“下载”。
 
-     2. 将 IntelliTraceCollector.exe 保存到收集器目录，如：**C:\IntelliTraceCollector**
+     2. 将 IntelliTraceCollector.exe 保存到收集器目录，如： **C:\IntelliTraceCollector**
 
      3. 运行 IntelliTraceCollector.exe。 此程序会提取 IntelliTraceCollection.cab 文件。
 
@@ -102,13 +102,13 @@ ms.locfileid: "71252535"
 
           **..\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\IntelliTrace\12.0.0**
 
-     2. 将 IntelliTraceCollection.cab 放在收集器目录中，如：**C:\IntelliTraceCollector**
+     2. 将 IntelliTraceCollection.cab 放在收集器目录中，如： **C:\IntelliTraceCollector**
 
 3. 扩展 IntelliTraceCollection.cab：
 
    1. 以管理员身份打开应用服务器上的命令提示符窗口。
 
-   2. 浏览到收集器目录，如：**C:\IntelliTraceCollector**
+   2. 浏览到收集器目录，如： **C:\IntelliTraceCollector**
 
    3. 使用 **expand** 命令来扩展 IntelliTraceCollection.cab，加上最后的句点（“.”）：
 
@@ -171,7 +171,7 @@ ms.locfileid: "71252535"
 
 ## <a name="BKMK_Create_and_Configure_a_Log_File_Directory"></a> 设置 .iTrace 文件目录的权限
 
-1. 在应用服务器上创建 .iTrace 文件目录，例如：**C:\IntelliTraceLogFiles**
+1. 在应用服务器上创建 .iTrace 文件目录，如：C:\IntelliTraceLogFiles
 
    > [!NOTE]
    > - 为避免应用速度变慢，请选择本地高速磁盘上不常用的位置。
@@ -195,7 +195,7 @@ ms.locfileid: "71252535"
 
         `icacls "C:\IntelliTraceLogFiles" /grant "IIS APPPOOL\SharePoint - 80":F`
 
-       -或-
+       或
 
    - 要设置 Windows 资源管理器（或文件资源管理器）的权限，请：
 
@@ -229,8 +229,8 @@ ms.locfileid: "71252535"
     |||
     |-|-|
     |*应用程序池*|应用程序运行的应用程序池名|
-    |*收集计划路径*|收集计划路径，配置收集器设置的 .xml 文件。<br /><br /> 你可指定收集器附带的一个计划。 以下计划适合 Web 应用和 SharePoint 应用程序：<br /><br /> -   collection_plan.ASP.NET.default.xml<br />     仅收集 IntelliTrace 事件和 SharePoint 事件，包括异常、数据库调用及 Web 服务器请求。<br />-   collection_plan.ASP.NET.trace.xml<br />     收集 collection_plan.ASP.NET.default.xml 中的函数调用及所有数据。 该计划非常适合进行详细分析，但其可能导致你的应用速度比 collection_plan.ASP.NET.default.xml 更慢。<br /><br /> 为避免应用速度变慢，自定义这些计划或创建自己的计划。 为安全起见，将所有自定义计划放在收集器文件所在的同一安全位置。 请参阅 [创建并自定义 IntelliTrace 收集计划](http://go.microsoft.com/fwlink/?LinkId=227871) 和 [如何在应用速度不减的前提下获取最多的数据？](#Minimizing) **注意：** 默认情况下，.iTrace 文件最大不得超过 100 MB。 .iTrace 文件大小达到该上限时，收集器会删除文件中最早的项以便为更新的项让出空间。 要更改该上限，请修改此收集计划的 `MaximumLogFileSize` 属性。 <br /><br /> *从何处可找到这些收集计划的本地版本？*<br /><br /> 可在收集器子文件夹中找到本地计划。|
-    |*跟踪文件目录的完整路径*|跟踪 .iTrace 文件目录的完整路径。 **安全说明：** 请提供完整路径，而非相对路径。|
+    |*收集计划路径*|收集计划路径，配置收集器设置的 .xml 文件。<br /><br /> 你可指定收集器附带的一个计划。 以下计划适合 Web 应用和 SharePoint 应用程序：<br /><br /> -   collection_plan.ASP.NET.default.xml<br />     仅收集 IntelliTrace 事件和 SharePoint 事件，包括异常、数据库调用及 Web 服务器请求。<br />-   collection_plan.ASP.NET.trace.xml<br />     收集 collection_plan.ASP.NET.default.xml 中的函数调用及所有数据。 该计划非常适合进行详细分析，但其可能导致你的应用速度比 collection_plan.ASP.NET.default.xml 更慢。<br /><br /> 为避免应用速度变慢，自定义这些计划或创建自己的计划。 为安全起见，将所有自定义计划放在收集器文件所在的同一安全位置。 请参阅 [创建并自定义 IntelliTrace 收集计划](https://devblogs.microsoft.com/devops/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector/) 和 [如何在应用速度不减的前提下获取最多的数据？](#Minimizing) **注意：** 默认情况下，.Itrace 文件的最大大小为 100 MB。 .iTrace 文件大小达到该上限时，收集器会删除文件中最早的项以便为更新的项让出空间。 要更改该上限，请修改此收集计划的 `MaximumLogFileSize` 属性。 <br /><br /> *从何处可找到这些收集计划的本地版本？*<br /><br /> 可在收集器子文件夹中找到本地计划。|
+    |*跟踪文件目录的完整路径*|跟踪 .iTrace 文件目录的完整路径。 **安全说明：** 提供完整路径，而不是相对路径。|
 
      收集器连接到应用程序池并开始收集数据。
 
@@ -268,8 +268,8 @@ ms.locfileid: "71252535"
     |||
     |-|-|
     |*IntelliTrace 收集器可执行文件完整路径*|收集器可执行文件的完整路径，IntelliTraceSC.exe|
-    |*收集计划路径*|收集计划路径，配置收集器设置的 .xml 文件。<br /><br /> 你可指定收集器附带的一个计划。 以下计划适合托管应用：<br /><br /> -   collection_plan.ASP.NET.default.xml<br />     仅收集 IntelliTrace 事件，包括异常、数据库调用及 Web 服务器请求。<br />-   collection_plan.ASP.NET.trace.xml<br />     收集 collection_plan.ASP.NET.default.xml 中的函数调用及所有数据。 该计划非常适合进行详细分析，但其可能导致你的应用速度比 collection_plan.ASP.NET.default.xml 更慢。<br /><br /> 为避免应用速度变慢，自定义这些计划或创建自己的计划。 为安全起见，将所有自定义计划放在收集器文件所在的同一安全位置。 请参阅 [创建并自定义 IntelliTrace 收集计划](http://go.microsoft.com/fwlink/?LinkId=227871) 和 [如何在应用速度不减的前提下获取最多的数据？](#Minimizing) **注意：** 默认情况下，.iTrace 文件最大不得超过 100 MB。 .iTrace 文件大小达到该上限时，收集器会删除文件中最早的项以便为更新的项让出空间。 要更改该上限，请修改此收集计划的 `MaximumLogFileSize` 属性。 <br /><br /> *从何处可找到这些收集计划的本地版本？*<br /><br /> 可在收集器子文件夹中找到本地计划。|
-    |*.iTrace文件目录及文件名完整路径*|.iTrace 文件目录及包含 **.itrace** 扩展名的 .iTrace 文件名的完整路径。 **安全说明：** 请提供完整路径，而非相对路径。|
+    |*收集计划路径*|收集计划路径，配置收集器设置的 .xml 文件。<br /><br /> 你可指定收集器附带的一个计划。 以下计划适合托管应用：<br /><br /> -   collection_plan.ASP.NET.default.xml<br />     仅收集 IntelliTrace 事件，包括异常、数据库调用及 Web 服务器请求。<br />-   collection_plan.ASP.NET.trace.xml<br />     收集 collection_plan.ASP.NET.default.xml 中的函数调用及所有数据。 该计划非常适合进行详细分析，但其可能导致你的应用速度比 collection_plan.ASP.NET.default.xml 更慢。<br /><br /> 为避免应用速度变慢，自定义这些计划或创建自己的计划。 为安全起见，将所有自定义计划放在收集器文件所在的同一安全位置。 请参阅 [创建并自定义 IntelliTrace 收集计划](https://devblogs.microsoft.com/devops/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector/) 和 [如何在应用速度不减的前提下获取最多的数据？](#Minimizing) **注意：** 默认情况下，.Itrace 文件的最大大小为 100 MB。 .iTrace 文件大小达到该上限时，收集器会删除文件中最早的项以便为更新的项让出空间。 要更改该上限，请修改此收集计划的 `MaximumLogFileSize` 属性。 <br /><br /> *从何处可找到这些收集计划的本地版本？*<br /><br /> 可在收集器子文件夹中找到本地计划。|
+    |*.iTrace文件目录及文件名完整路径*|.iTrace 文件目录及包含 **.itrace** 扩展名的 .iTrace 文件名的完整路径。 **安全说明：** 提供完整路径，而不是相对路径。|
     |*应用可执行文件及文件名路径*|托管应用的路径及文件名|
 
 2. 通过退出应用来停止数据收集。
@@ -291,7 +291,7 @@ ms.locfileid: "71252535"
     > 要调试 IntelliTrace 并单步调试代码，你的开发计算机上必须有相匹配的源文件和符号文件。 请参阅[部署后诊断问题](../debugger/diagnose-problems-after-deployment.md)。
 
 ## <a name="Minimizing"></a> 如何在应用速度不减的前提下获取最多的数据？
- IntelliTrace 可收集大量数据，因此对应用性能的影响取决于 IntelliTrace 收集的数据及其分析的代码类型。 请参阅 [优化生产服务器上的 IntelliTrace 收集](http://go.microsoft.com/fwlink/?LinkId=255233)。
+ IntelliTrace 可收集大量数据，因此对应用性能的影响取决于 IntelliTrace 收集的数据及其分析的代码类型。 请参阅 [优化生产服务器上的 IntelliTrace 收集](https://devblogs.microsoft.com/devops/optimizing-intellitrace-collection-on-production-server/)。
 
  以下是在应用速度不减的前提下获取最多的数据的一些方法：
 
@@ -389,16 +389,16 @@ ms.locfileid: "71252535"
  [IntelliTrace](../debugger/intellitrace.md)
 
 ### <a name="blogs"></a>博客
- [远程使用 IntelliTrace 独立收集器](http://go.microsoft.com/fwlink/?LinkId=262277)
+ [远程使用 IntelliTrace 独立收集器](https://devblogs.microsoft.com/devops/using-the-intellitrace-standalone-collector-remotely/)
 
- [创建并自定义 IntelliTrace 收集计划](http://go.microsoft.com/fwlink/?LinkId=227871)
+ [创建并自定义 IntelliTrace 收集计划](https://devblogs.microsoft.com/devops/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector/)
 
- [优化生产服务器上的 IntelliTrace 收集](http://go.microsoft.com/fwlink/?LinkId=255233)
+ [优化生产服务器上的 IntelliTrace 收集](https://devblogs.microsoft.com/devops/optimizing-intellitrace-collection-on-production-server/)
 
  [Microsoft DevOps](https://devblogs.microsoft.com/devops/)
 
 ### <a name="forums"></a>论坛
- [Visual Studio 调试器](http://go.microsoft.com/fwlink/?LinkId=262263)
+ [Visual Studio 调试器](https://social.msdn.microsoft.com/Forums/en-US/home)
 
 ### <a name="videos"></a>视频
- [第 9 频道视频：收集和分析 IntelliTrace 数据](http://go.microsoft.com/fwlink/?LinkID=251851)
+ [第 9 频道：收集和分析 IntelliTrace 数据](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Collecting-and-analyzing-data-in-production)

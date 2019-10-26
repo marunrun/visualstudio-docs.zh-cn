@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: db053317b3678cfaa7ee0ed6061074b156359d2f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: cec341df3cfe81f339322f5e7c584151d9030490
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738213"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911572"
 ---
 # <a name="debugging-gpu-code"></a>调试 GPU 代码
 可以调试在图形处理单元 (GPU) 上运行的 C++ 代码。 Visual Studio 中的 GPU 调试支持包括争用检测、启动进程并附加到进程以及与调试窗口集成。
@@ -77,9 +77,9 @@ ms.locfileid: "72738213"
  如果在远程 PC 上进行调试，则会发生此错误。 调试器无法确定远程 PC 上是否安装了驱动程序，直到运行时。 可从图形卡的制造商处获得驱动程序。
 
 ### <a name="error-timeout-detection-and-recovery-tdr-must-be-disabled-at-the-remote-site"></a>错误：必须在远程站点上禁用超时检测和恢复 (TDR)。
- C++ AMP 计算可能会超过由 Windows 超时检测和恢复进程 (TDR) 设置的默认时间间隔。 在这种情况下，计算将被取消，并且数据将丢失。 有关详细信息，请参阅[在 C++ AMP 中处理 TDR](http://go.microsoft.com/fwlink/p/?LinkId=249154)。
+ C++ AMP 计算可能会超过由 Windows 超时检测和恢复进程 (TDR) 设置的默认时间间隔。 在这种情况下，计算将被取消，并且数据将丢失。 有关详细信息，请参阅[在 C++ AMP 中处理 TDR](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/06/handling-tdrs-in-c-amp/)。
 
 ## <a name="see-also"></a>请参阅
 - [演练：调试 C++ AMP 应用程序](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)
 - [C++ 调试配置的项目设置](../debugger/project-settings-for-a-cpp-debug-configuration.md)
-- [在 Visual Studio 中开始 GPU 调试](http://go.microsoft.com/fwlink/p/?LinkId=255381)
+- [在 Visual Studio 中开始 GPU 调试](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/17/start-gpu-debugging-in-visual-studio-2012/)

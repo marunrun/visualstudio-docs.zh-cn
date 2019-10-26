@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: mikejo
-ms.openlocfilehash: fd436a6b7e38c8f76de5d113c326e194e4011155
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: HT
+ms.openlocfilehash: 04e3ee89498447f7743fc1b5119e129f046b4fcc
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62427388"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911777"
 ---
 # <a name="testing-the-performance-of-a-cloud-service"></a>测试云服务的性能
 ## <a name="overview"></a>概述
 可以通过以下方式测试云服务的性能：
 
-* 使用 Azure 诊断，可以收集有关请求和连接的信息，可以查看站点统计信息，其中显示了客户角度的服务执行情况。 若要快速入门，请参阅[为 Azure 云服务和虚拟机配置诊断](http://go.microsoft.com/fwlink/p/?LinkId=623009)。
-* 通过使用 Visual Studio 探查器，可以获取该服务在计算方面运行情况的深入分析。 如本主题所述，当服务在 Azure 中运行时，可以使用探查器来测量性能。 有关当服务在计算模拟器中本地运行时如何使用探查器来测量其性能的信息，请参阅[使用 Visual Studio 探查器来测试在计算模拟器中本地运行的 Azure 云服务的性能](http://go.microsoft.com/fwlink/p/?LinkId=262845)。
+* 使用 Azure 诊断，可以收集有关请求和连接的信息，可以查看站点统计信息，其中显示了客户角度的服务执行情况。 若要快速入门，请参阅[为 Azure 云服务和虚拟机配置诊断](vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md)。
+* 通过使用 Visual Studio 探查器，可以获取该服务在计算方面运行情况的深入分析。 如本主题所述，当服务在 Azure 中运行时，可以使用探查器来测量性能。 有关当服务在计算模拟器中本地运行时如何使用探查器来测量其性能的信息，请参阅[使用 Visual Studio 探查器来测试在计算模拟器中本地运行的 Azure 云服务的性能](/azure/cloud-services/cloud-services-performance-testing-visual-studio-profiler)。
 
 ## <a name="choosing-a-performance-testing-method"></a>选择性能测试方法
 ### <a name="use-azure-diagnostics-to-collect"></a>使用 Azure 诊断进行收集：
@@ -67,7 +67,7 @@ ms.locfileid: "62427388"
 * **CPU 采样** - 此方法为 CPU 利用率问题的初始分析收集有用的应用程序统计信息。 CPU 采样是建议的方法，用于启动大多数性能调查。 收集 CPU 采样数据时，这不会对要分析的应用程序产生很大影响。
 * **检测信息** - 此方法收集用于重点分析和分析输入/输出性能问题有用的详细计时数据。 在分析运行过程中，检测方法将记录每个进入、退出以及对模块中的函数执行的函数调用。 此方法适用于收集有关代码中某个部分的详细计时信息，以及了解输入和输出操作对应用程序性能的影响。 此方法禁用计算机运行 32 位操作系统。 仅当云服务在 Azure 中运行，而非以本地方式在计算模拟器中运行时，此选项才可用。
 * **.NET 内存分配** - 此方法通过使用采样分析方法收集 .NET Framework 内存分配数据。 所收集的数据包括数量和分配的对象的大小。
-* **并发性** - 此方法收集资源争用数据和线程执行数据，这些数据可用于分析多线程应用程序和多进程应用程序。 并发性方法收集阻止执行代码的每个事件的数据，例如，当线程等待对应用程序资源的锁定访问权限得到释放时。 此方法可用于分析多线程应用程序。
+* **并发性** - 此方法收集资源争用数据和线程执行数据，这些数据可用于分析多线程应用程序和多进程应用程序。 并发方法收集阻止代码执行（如线程等待释放对应用程序资源的锁定访问时）的每个事件的数据。 此方法对分析多线程应用程序很有用。
 * 还可以启用**层交互分析**，这种方法提供了有关在可与一个或多个数据库通信的多层应用程序函数中同步 ADO.NET 调用的执行时间的更多信息。 可以使用任意分析方法收集层交互数据。 有关层交互分析的详细信息，请参阅[层交互视图](https://msdn.microsoft.com/library/azure/dd557764.aspx)。
 
 ## <a name="configuring-profiling-settings"></a>配置分析设置
@@ -81,7 +81,7 @@ ms.locfileid: "62427388"
 >
 
 ### <a name="to-configure-profiling-settings"></a>配置分析设置
-1. 在“解决方案资源管理器”中，打开“Azure 项目”的快捷菜单，并选择“发布”。 有关如何发布云服务的详细步骤，请参阅[使用 Azure Tools 发布云服务](http://go.microsoft.com/fwlink/p?LinkId=623012)。
+1. 在“解决方案资源管理器”中，打开“Azure 项目”的快捷菜单，并选择“发布”。 有关如何发布云服务的详细步骤，请参阅[使用 Azure Tools 发布云服务](vs-azure-tools-publishing-a-cloud-service.md)。
 2. 在“发布 Azure 应用程序”对话框中，选择“高级设置”选项卡。
 3. 若要启用分析，请选中“启用分析”复选框。
 4. 若要配置分析设置，请选择“设置”超链接。 此时会显示“分析设置”对话框。

@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eebbdfd7774018ecf49801c6b01b5867b7bd3408
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f0235cc00a740069a77afd492cd585788ea666d2
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72734542"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911461"
 ---
 # <a name="how-can-i-debug-a-c-access-violation"></a>如何调试C++访问冲突？
 
@@ -77,7 +77,7 @@ int main() {
 
 ![AccessViolationCPlus](../debugger/media/accessviolationcplus.png "AccessViolationCPlus")
 
-如果无法确定该指针为何导致访问冲突，请对代码进行跟踪，以确保导致该问题的指针被正确处理。  如果它作为参数传递，请确保正确传递且未意外创建[浅表副本](http://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy)。 然后为有问题的指针创建一个数据断点，以确保它没有在程序的其他地方被修改，从而验证这些值没有在程序的某个地方被无意地更改。 有关数据断点的详细信息，请参阅 [使用断点](../debugger/using-breakpoints.md)中的数据断点部分。
+如果无法确定该指针为何导致访问冲突，请对代码进行跟踪，以确保导致该问题的指针被正确处理。  如果它作为参数传递，请确保正确传递且未意外创建[浅表副本](https://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy)。 然后为有问题的指针创建一个数据断点，以确保它没有在程序的其他地方被修改，从而验证这些值没有在程序的某个地方被无意地更改。 有关数据断点的详细信息，请参阅 [使用断点](../debugger/using-breakpoints.md)中的数据断点部分。
 
 ## <a name="see-also"></a>请参阅
 - [调试本机代码常见问题解答](../debugger/debugging-native-code-faqs.md)

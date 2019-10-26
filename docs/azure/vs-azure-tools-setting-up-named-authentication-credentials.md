@@ -9,25 +9,25 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: 319f9327cb83f3d05d26512f448b029b57d23b0c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: HT
+ms.openlocfilehash: 57841baaf147c2aae02ac89a8401c46d3bd64ca3
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62572192"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911669"
 ---
 # <a name="set-up-named-authentication-credentials"></a>设置命名的身份验证凭据
 
 若要将应用程序发布到 Azure 或监视现有云服务，Visual Studio 需要凭据以对向 Azure 发出的请求进行身份验证，即你的 Azure 订阅 ID 和带至少 2048 位密钥的有效 X.509 v3 证书。 可通过以下某个方法提供这些凭据：
 
-- 在 Visual Studio 中，选择“视图 > 服务器资源管理器”，右键单击 Azure 节点，选择“连接到 Microsoft Azure 订阅”，然后登录。
+- 在 Visual Studio 中，选择“视图 > 服务器资源管理器”，右键单击 Azure节点，选择“连接到 Microsoft Azure 订阅”，然后登录。
 - 创建一个订阅文件 (`.publishsettings`)，其中包含证书公钥。 如本文所述，该订阅文件可以包含多个订阅的凭据。
 
 注意：这些凭据与用于对 Azure 存储服务的请求进行身份验证的凭据不同。
 
 ## <a name="create-a-subscription-file"></a>创建订阅文件
 
-在“服务器资源管理器”中，右键单击 Azure 节点，并选择“管理和筛选订阅”。 然后选择“证书”选项卡，然后执行以下任一操作：
+在“服务器资源管理器”中，右键单击 Azure节点，并选择“管理和筛选订阅”。 然后选择“证书”选项卡，然后执行以下任一操作：
 
 - 选择“导入”，打开“导入 Microsoft Azure 订阅”对话框。 选择“下载订阅文件”链接，然后在浏览器中将下载的文件保存到临时位置。 返回对话框，浏览到下载位置，然后将其导入，以便在身份验证中使用。
 - 选择一个有效订阅，并选择“编辑”，随即打开一个对话框，可在其中编辑在身份验证中使用的现有订阅。
@@ -37,7 +37,7 @@ ms.locfileid: "62572192"
 
 ## <a name="next-steps"></a>后续步骤
 
-- [Web 应用一般概述](https://docs.microsoft.com/azure/app-service/)
-- [将应用部署到 Azure 应用服务](https://docs.microsoft.com/azure/app-service/app-service-deploy-local-git)
-- [使用 Visual Studio 部署 WebJobs](https://docs.microsoft.com/azure/app-service/websites-dotnet-deploy-webjobs)
-- [创建和部署云服务](https://docs.microsoft.com/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
+- [Web 应用一般概述](/azure/app-service/)
+- [将应用部署到 Azure 应用服务](/azure/app-service/app-service-deploy-local-git)
+- [使用 Visual Studio 部署 WebJobs](/azure/app-service/websites-dotnet-deploy-webjobs)
+- [创建和部署云服务](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)

@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b908e4fe9ed0087abaf5f1390bb8faf5cc12bdaa
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 27e551132e66ef0cb380b56441d19b1436d19df2
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737562"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911538"
 ---
 # <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-msvsmonexe-does-not-appear-to-be-running-on-the-remote-computer"></a>错误:“Microsoft Visual Studio 远程调试监视器”(MSVSMON.EXE) 似乎没有在远程计算机上运行。
 此错误消息表示 Visual Studio 未能在远程计算机上找到 Visual Studio 远程调试监视器的正确实例。 必须安装 Visual Studio 远程调试监视器以便进行远程调试。 有关下载和设置远程调试器的信息，请参阅[远程调试](../debugger/remote-debugging.md)。
@@ -41,7 +41,7 @@ ms.locfileid: "72737562"
  尝试 [ping](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee624059(v=ws.10)) 远程计算机。 如果它不响应 ping 操作，则远程工具也将无法连接。 请尝试重新启动远程计算机，或者确保它在网络上正确配置。
 
 ## <a name="the-version-of-the-remote-debugger-doesnt-match-the-version-of-visual-studio"></a>远程调试器的版本不匹配 Visual Studio 的版本
- 在本地运行的 Visual Studio 的版本必须与远程计算机上运行的远程调试监视器的版本匹配。 若要解决此问题，请下载并安装匹配的远程调试监视器版本。 转到 [下载中心](http://www.microsoft.com/en-us/download) 以查找正确版本的远程调试器。
+ 在本地运行的 Visual Studio 的版本必须与远程计算机上运行的远程调试监视器的版本匹配。 若要解决此问题，请下载并安装匹配的远程调试监视器版本。 转到 [下载中心](https://www.microsoft.com/download) 以查找正确版本的远程调试器。
 
 ## <a name="the-local-and-remote-machines-have-different-authentication-modes"></a>本地和远程计算机具有不同的身份验证模式
  本地和远程计算机需要使用相同的身份验证模式。 若要解决此问题，请确保这两台计算机使用相同的身份验证模式。 有关身份验证模式的详细信息，请参阅 [Windows 身份验证概述](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831472(v=ws.11))。
@@ -72,7 +72,7 @@ ms.locfileid: "72737562"
 ## <a name="more-help"></a>更多帮助
  若要获取更多远程调试器的帮助（包括命令行开关），请在远程调试器窗口中单击 "**帮助" > 用法**"。 如果尚未打开，可以通过将以下行复制到 "**文件资源管理器**" 窗口来查看网页。 （需要将 \<Visual Studio 安装目录 > 替换为 Visual Studio 安装的位置。）
 
- res:// *\<Visual Studio 安装目录 >* \ COMMON7 \ IDE \ 远程 %2 0 调试器 \ x64 \ msvsmon \ msvsmon/help
+ res:// *\<Visual Studio 安装目录 >* \ COMMON7 \ IDE \ 远程 %2 0 调试器 \ x64 \ msvsmon .exe/help .htm
 
 ## <a name="see-also"></a>请参阅
 - [远程调试错误和疑难解答](../debugger/remote-debugging-errors-and-troubleshooting.md)
