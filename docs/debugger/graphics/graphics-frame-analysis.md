@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6df598717685d3f198b61e4a750c3133e50f5a2d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 943436a64f50523905a03ed2a87e91508d1b7471
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63388714"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911486"
 ---
 # <a name="graphics-frame-analysis"></a>图形帧分析
 使用 Visual Studio 图形分析器中的图形帧分析可分析并优化你的 Direct3D 游戏或应用的呈现性能。
@@ -32,12 +32,12 @@ ms.locfileid: "63388714"
 
   虽然帧分析主要用于帮助你获得更快的呈现性能，但是它同样可以帮助你使给定的性能目标获得更好的视觉质量，或者减少 GPU 耗电量。
 
-  若要查看演示，帧分析可以为你的应用执行的操作，可以观看[Visual Studio 图形帧分析](https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool)第 9 频道上的视频。
+  若要查看帧分析可对应用执行的操作的演示，可以观看第9频道上的[Visual Studio 图形帧分析](https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool)视频。
 
 ## <a name="using-frame-analysis"></a>使用帧分析
  在可以使用帧分析之前，你必须在应用运行时从应用中捕获图形信息，正如你在使用任何其他图形分析器工具时进行的操作。 然后，在图形日志文档 (.vsglog) 窗口中，选择“帧分析”选项卡。
 
- ![选择帧分析选项卡](media/pix_frame_analysis_select_tab.png "pix_frame_analysis_select_tab")
+ ![选择 "帧分析" 选项卡。](media/pix_frame_analysis_select_tab.png "pix_frame_analysis_select_tab")
 
  在分析完成之后，将显示结果。 帧分析选项卡顶部将显示时间线和摘要表。 选项卡底部将显示详细信息表。 如果在播放期间产生错误或警告，则将在时间线上对它们进行汇总；你可以遵循此处的链接以了解错误和警告的详细信息。
 
@@ -77,7 +77,7 @@ ms.locfileid: "63388714"
 #### <a name="table"></a>表
  时间线下的数字表显示了与应用的默认呈现有关的每个绘图调用的每个呈现变体的相对性能。 每一列都显示一个不同的呈现变体，每一行都表示一个在最左边的列中标识的不同的绘图调用；你可以从此处遵循指向“图形事件列表”窗口中的事件的链接。
 
- ![摘要表显示了不同变体。](media/pix_frame_analysis_summary.png "pix_frame_analysis_summary")
+ ![摘要表显示了不同的变体。](media/pix_frame_analysis_summary.png "pix_frame_analysis_summary")
 
  摘要表左起第二列显示应用的基线呈现时间，即应用用以完成绘图调用所需的默认呈现时长。 其余各列将每个呈现变体的相对性能显示为基线的百分比，以便更容易看出性能是否有所提升。 大于 100% 的百分比花费的时间比基线长（即降低了性能），小于 100% 的百分比花费的时间比基线短（即提升了性能）。
 
@@ -91,9 +91,9 @@ ms.locfileid: "63388714"
 #### <a name="statistical-significance"></a>统计意义
  为了引起对具有最高相关性的呈现变体的注意，帧分析将确定每个呈现变体的统计意义，并将有意义的变体显示为黑体字。 它将提升性能的变体显示为绿色，将降低性能的变体显示为红色。 它还将不具有统计学意义的结果显示为正常字体。
 
- ![绘图调用变量的统计相关性](media/pix_frame_analysis_summary_stats.png "pix_frame_analysis_summary_stats")
+ ![绘图调用变型的统计相关性](media/pix_frame_analysis_summary_stats.png "pix_frame_analysis_summary_stats")
 
- 若要确定统计相关性，帧分析，请使用[学生的 t-检验](http://www.wikipedia.org/wiki/Student%27s_t-test)。
+ 若要确定统计相关性，帧分析将使用[学生的 t 检验](https://en.wikipedia.org/wiki/Student's_t-test)。
 
 ### <a name="details-table"></a>详细信息表
  “摘要”表下面是默认为折叠状态的“详细信息”表。 “详细信息”表的内容取决于播放计算机的硬件平台。 有关支持的硬件平台的信息，请参阅[硬件支持](#HardwareSupport)。
@@ -106,7 +106,7 @@ ms.locfileid: "63388714"
 #### <a name="platforms-that-support-hardware-counters"></a>支持硬件计数器的平台
  对于支持硬件 GPU 计数器的平台（例如，nVidia T40 SOC 和所有 Qualcomm SOC），将显示几张“详细信息”表，每张表对应一个变体。 为每个呈现变体收集每个可用的硬件计数器，它们显示在其本身的“详细信息”表中。
 
- ![支持时，将显示硬件计数器。](media/pix_frame.png "pix_frame")
+ ![支持时显示硬件计数器。](media/pix_frame.png "pix_frame")
 
  硬件计数器信息为每个绘图调用都提供了一个特定硬件平台行为的非常详细的视图，可帮助你非常准确地标识出现性能瓶颈的原因。
 
@@ -143,7 +143,7 @@ ms.locfileid: "63388714"
 ### <a name="gpu-counters"></a>GPU 计数器
  对 GPU 硬件计数器的支持与硬件相关。
 
- 因为当前由 Intel、AMD 或 nVidia 提供的计算机 GPU 都无法可靠地支持 GPU 硬件计数器，所以帧分析不会从中收集计数器。 但是，帧分析 does 从可靠地支持它们的以下 GPU 中收集硬件计数器：
+ 因为当前由 Intel、AMD 或 nVidia 提供的计算机 GPU 都无法可靠地支持 GPU 硬件计数器，所以帧分析不会从中收集计数器。 但是，帧分析确实会从以下 GPU 收集硬件计数器，这些计数器可可靠地支持这些计数器：
 
 - nVidia T40 (Tegra4)
 
@@ -159,7 +159,7 @@ ms.locfileid: "63388714"
  在图形分析器中，当你播放使用比播放计算机支持的功能级别更高的图形日志文件时，它将自动回退到 WARP。 在帧分析中，它显然不会回退到 WARP，而且它会生成一个错误，因为 WARP 对于检查 Direct3D 应用的正确性（而非其性能）很有用。
 
 > [!NOTE]
-> 虽然记住功能级别的问题很重要，但是你可以在不同的硬件配置和设备上捕获并播放图形日志文件。 只要日志文件不包含 Api 或使用在播放计算机不受支持的功能级别可以播放图形日志。
+> 虽然记住功能级别的问题很重要，但是你可以在不同的硬件配置和设备上捕获并播放图形日志文件。 只要日志文件不包含 Api 或使用播放计算机不支持的功能级别，就可以播放图形日志。
 
 ### <a name="direct3d-10-and-lower"></a>Direct3D 10 及更低版本
  如果你的应用调用 Direct3D 10 API，则即使图形分析器工具已识别并使用它们，帧分析也不会识别或配置它们。
@@ -168,7 +168,7 @@ ms.locfileid: "63388714"
 > 这仅适用于你正在使用的 Direct3D API 调用，不适用于功能级别。
 
 ### <a name="warp"></a>WARP
- 帧分析旨在用于配置和提升真实硬件上的呈现性能。 不阻止在 WARP 设备上运行帧分析，但它通常不是做因为在高端 CPU 上运行的 WARP 的慢甚至功能最少的现代 Gpu 中，并且 WARP 的性能可能大不相同具体取决于特定的 CPU上运行。
+ 帧分析旨在用于配置和提升真实硬件上的呈现性能。 不会阻止在弯曲设备上运行帧分析，但这种方法通常并不值得，因为在高端 CPU 上运行的弯曲比即使是最不支持的新式 Gpu 更慢，而且根据特定的 CPU，变形性能可能会有很大的差异它在上运行。
 
 ## <a name="Variants"></a> 变量
  播放期间，帧分析对呈现帧的方式所做出的每个更改称为“变体”。 帧分析检查的变体对应于你为了提升应用的呈现性能或视觉质量可能做出的相对容易的常见更改，例如，减小纹理大小、使用纹理压缩或启用不同种类的抗锯齿。 这些变体将重写应用的常用呈现上下文和参数。 摘要如下：
@@ -179,14 +179,14 @@ ms.locfileid: "63388714"
 |**0x MSAA**|在所有呈现器目标上禁用多重采样抗锯齿 (MSAA)。<br /><br /> 有关详细信息，请参阅 [0x/2x/4x MSAA 变体](0x-2x-4x-msaa-variants.md)|
 |**2x MSAA**|在所有呈现器目标上启用 2x 多重采样抗锯齿 (MSAA)。<br /><br /> 有关详细信息，请参阅 [0x/2x/4x MSAA 变体](0x-2x-4x-msaa-variants.md)|
 |**4x MSAA**|在所有呈现器目标上启用 4x 多重采样抗锯齿 (MSAA)。<br /><br /> 有关详细信息，请参阅 [0x/2x/4x MSAA 变体](0x-2x-4x-msaa-variants.md)|
-|**点纹理筛选**|针对所有相应的纹理采样，将筛选模式设置为 `DXD11_FILTER_MIN_MAG_MIP_POINT`（点纹理筛选）。<br /><br /> 有关详细信息，请参阅[Point、 Bilinear、 Trilinear 和 Anisotropic 纹理过滤变体](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)。|
-|**双线性纹理筛选**|针对所有相应的纹理采样，将筛选模式设置为 `DXD11_FILTER_MIN_MAG_LINEAR_MIP_POINT`（双线性纹理筛选）。<br /><br /> 有关详细信息，请参阅[Point、 Bilinear、 Trilinear 和 Anisotropic 纹理过滤变体](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)。|
-|**三双线性纹理筛选**|针对所有相应的纹理采样，将筛选模式设置为 `DXD11_FILTER_MIN_MAG_MIP_LINEAR`（三线性纹理筛选）。<br /><br /> 有关详细信息，请参阅[Point、 Bilinear、 Trilinear 和 Anisotropic 纹理过滤变体](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)。|
-|**各向异性纹理筛选**|针对所有相应的纹理采用，将筛选模式设置为 `DXD11_FILTER_ANISOTROPIC`，并将 `MaxAnisotropy` 设置为 `16`（16x 各向异性纹理筛选）。<br /><br /> 有关详细信息，请参阅[Point、 Bilinear、 Trilinear 和 Anisotropic 纹理过滤变体](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)。|
+|**点纹理筛选**|针对所有相应的纹理采样，将筛选模式设置为 `DXD11_FILTER_MIN_MAG_MIP_POINT`（点纹理筛选）。<br /><br /> 有关详细信息，请参阅[Point、双线性、Trilinear 和各向异性纹理筛选变体](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)。|
+|**双线性纹理筛选**|针对所有相应的纹理采样，将筛选模式设置为 `DXD11_FILTER_MIN_MAG_LINEAR_MIP_POINT`（双线性纹理筛选）。<br /><br /> 有关详细信息，请参阅[Point、双线性、Trilinear 和各向异性纹理筛选变体](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)。|
+|**三双线性纹理筛选**|针对所有相应的纹理采样，将筛选模式设置为 `DXD11_FILTER_MIN_MAG_MIP_LINEAR`（三线性纹理筛选）。<br /><br /> 有关详细信息，请参阅[Point、双线性、Trilinear 和各向异性纹理筛选变体](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)。|
+|**各向异性纹理筛选**|针对所有相应的纹理采用，将筛选模式设置为 `DXD11_FILTER_ANISOTROPIC`，并将 `MaxAnisotropy` 设置为 `16`（16x 各向异性纹理筛选）。<br /><br /> 有关详细信息，请参阅[Point、双线性、Trilinear 和各向异性纹理筛选变体](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)。|
 |**16bpp 呈现器目标格式**|针对所有呈现器目标和后台缓冲区，将像素格式设置为 `DXGI_FORMAT_B5G6R5_UNORM`（16bpp，565 格式）。<br /><br /> 有关详细信息，请参阅 [16bpp 呈现目标格式变体](16bpp-render-target-format-variant.md)|
 |**Mip 贴图生成**|对非呈现器目标的所有纹理启用 Mip 贴图。<br /><br /> 有关详细信息，请参阅 [Mip 贴图生成变体](mip-map-generation-variant.md)。|
 |**一半纹理尺寸**|将非呈现器目标的所有纹理上的纹理尺寸减小为其每种尺寸的原始大小的一半。 例如，256x128 纹理将减小为 128x64 纹素。<br /><br /> 有关详细信息，请参阅 [Half/Quarter 纹理维度变体](half-quarter-texture-dimensions-variant.md)。|
 |**四分之一纹理尺寸**|将非呈现器目标的所有纹理上的纹理尺寸减小为其每种尺寸的原始大小的四分之一。 例如，256x128 纹理将减小为 64x32 纹素。<br /><br /> 有关详细信息，请参阅 [Half/Quarter 纹理维度变体](half-quarter-texture-dimensions-variant.md)。|
 |**BC 纹理压缩**|对所有包含 B8G8R8X8、B8G8R8A8 或 R8G8B8A8 像素格式变体的纹理启用块压缩。 通过使用 BC1 压缩 B8G8R8X8 格式变体；通过使用 BC3 压缩 B8G8R8A8 和 R8G8B8A8 格式变体。<br /><br /> 有关详细信息，请参阅 [BC 纹理压缩变体](bc-texture-compression-variant.md)。|
 
- 大多数变体的结果是强制性规定："减少了一半纹理大小是速度更快 25%"或者"启用 2x MSAA 速度仅慢 2%"。 其他变体可能会需要更多解释，例如，如果将视口尺寸更改为 1x1 的变体显示较大的性能提升，则可能指示呈现遇到低填充率瓶颈；或者，如果性能未出现显著变化，则可能指示呈现遇到顶点处理瓶颈。
+ 大多数变体的结果是强制性规定：“将纹理大小减小一半速度会快 25%”或“启用 2x MSAA 速度仅慢 2%”。 其他变体可能会需要更多解释，例如，如果将视口尺寸更改为 1x1 的变体显示较大的性能提升，则可能指示呈现遇到低填充率瓶颈；或者，如果性能未出现显著变化，则可能指示呈现遇到顶点处理瓶颈。

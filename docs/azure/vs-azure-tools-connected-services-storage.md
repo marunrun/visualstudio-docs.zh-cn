@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/26/2017
 ms.author: ghogen
-ms.openlocfilehash: 649f99911726e562f9602fe6697591ec6cfb96eb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: HT
+ms.openlocfilehash: ca65086ce7ce09a1ca288c2f5cd04c31e00f8e95
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62560977"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911895"
 ---
 # <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>使用 Visual Studio 连接服务添加 Azure 存储
 
@@ -67,14 +67,14 @@ ms.locfileid: "62560977"
 
 完成该对话框后，Visual Studio 将添加引用并修改特定配置文件。 具体更改情况取决于项目类型：
 
-- ASP.NET 项目 - [完成的操作 – ASP.NET 项目](http://go.microsoft.com/fwlink/p/?LinkId=513126)
-- ASP.NET Core 项目 - [完成的操作 – ASP.NET 5 项目](http://go.microsoft.com/fwlink/p/?LinkId=513124)
-- 云服务项目（Web 角色和辅助角色）- [完成的操作 – 云服务项目](http://go.microsoft.com/fwlink/p/?LinkId=516965)
+- ASP.NET 项目 - [完成的操作 – ASP.NET 项目](/azure/visual-studio/vs-storage-aspnet-getting-started-blobs)
+- ASP.NET Core 项目 - [完成的操作 – ASP.NET 5 项目](/azure/visual-studio/vs-storage-aspnet5-getting-started-blobs)
+- 云服务项目（Web 角色和辅助角色）- [完成的操作 – 云服务项目](/azure/visual-studio/vs-storage-cloud-services-getting-started-blobs)
 - WebJob 项目 - [完成的操作 – WebJob 项目](/azure/visual-studio/vs-storage-webjobs-what-happened)
 
 ## <a name="see-also"></a>请参阅
 
-- [MSDN 论坛：Azure 存储](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
-- [Microsoft Azure 存储团队博客](http://blogs.msdn.com/b/windowsazurestorage/)
-- [Azure 存储文档](https://docs.microsoft.com/azure/storage/)
+- [MSDN 论坛： Azure 存储](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
+- [Microsoft Azure 存储团队博客](https://blogs.msdn.microsoft.com/windowsazurestorage/)
+- [Azure 存储文档](/azure/storage/)
 - [连接服务 (Visual Studio for Mac)](/visualstudio/mac/connected-services)

@@ -28,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e2e6d69e4c621d6be81a00a61482b71199bc0fc
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f7ac27b46252582b3982082a2a9a90a09223574f
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745756"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911605"
 ---
 # <a name="cc-assertions"></a>C/C++ 断言
 断言语句指定你预期程序中的某个点为 true 的条件。 如果该条件不为 true，则断言失败，程序执行中断并显示[“断言失败”对话框](../debugger/assertion-failed-dialog-box.md)。
@@ -109,10 +109,10 @@ CRTDBG.H。H 头文件定义用于断言检查的[_ASSERT 和 _ASSERTE 宏](/cpp
 
 | 宏 | 结果 |
 |------------| - |
-| `_ASSERT` | 如果指定的表达式的计算结果为 FALSE，则为 `_ASSERT` 的文件名和行号。 |
-| `_ASSERTE` | 与 `_ASSERT` 相同，再加上已断言的表达式的字符串表示形式。 |
+| `_ASSERT` | 如果指定的表达式的计算结果为 FALSE，则为 `_ASSERT`的文件名和行号。 |
+| `_ASSERTE` | 与 `_ASSERT`相同，再加上已断言的表达式的字符串表示形式。 |
 
-`_ASSERTE` 更为强大，因为它会报告声明为 FALSE 的断言表达式。 这可能足以识别问题，而无需引用源代码。 但是，应用程序的调试版本将包含使用 `_ASSERTE` 断言的每个表达式的字符串常量。 如果使用多个 `_ASSERTE` 宏，则这些字符串表达式占用大量内存。 如果这证明有问题，请使用 `_ASSERT` 来节省内存。
+`_ASSERTE` 更为强大，因为它会报告声明为 FALSE 的断言表达式。 这可能足以识别问题，而无需引用源代码。 但是，应用程序的调试版本将包含使用 `_ASSERTE`断言的每个表达式的字符串常量。 如果使用多个 `_ASSERTE` 宏，则这些字符串表达式占用大量内存。 如果这证明有问题，请使用 `_ASSERT` 来节省内存。
 
 定义 `_DEBUG` 时，`_ASSERTE` 宏的定义如下：
 
@@ -125,7 +125,7 @@ CRTDBG.H。H 头文件定义用于断言检查的[_ASSERT 和 _ASSERTE 宏](/cpp
     } while (0)
 ```
 
-如果断言的表达式的计算结果为 FALSE，则会调用[_CrtDbgReport](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw)来报告断言失败（默认情况下使用消息对话框）。 如果在 "消息" 对话框中选择 "**重试**"，`_CrtDbgReport` 将返回1，`_CrtDbgBreak` 通过 `DebugBreak` 调用调试器。
+如果断言的表达式的计算结果为 FALSE，则会调用[_CrtDbgReport](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw)来报告断言失败（默认情况下使用消息对话框）。 如果在 "消息" 对话框中选择 "**重试**"，`_CrtDbgReport` 将返回1，`_CrtDbgBreak` 通过 `DebugBreak`调用调试器。
 
 ### <a name="checking-for-heap-corruption"></a>检查堆损坏
 下面的示例使用[_CrtCheckMemory](/cpp/c-runtime-library/reference/crtcheckmemory)检查堆是否损坏：
@@ -157,7 +157,7 @@ _ASSERTE(_CrtIsMemoryBlock (myData, size, &requestNumber, &filename, &linenumber
 [主题内容](#BKMK_In_this_topic)
 
 ## <a name="BKMK_MFC_assertions"></a>MFC 断言
-MFC 定义断言[宏用于断言检查](https://msdn.microsoft.com/Library/1e70902d-d58c-4e7b-9f69-2aeb6cbe476c)。 它还定义了用于检查 `CObject` 派生对象的内部状态的 `MFC ASSERT_VALID` 和 `CObject::AssertValid` 方法。
+MFC 定义断言[宏用于断言检查](https://msdn.microsoft.com/Library/1e70902d-d58c-4e7b-9f69-2aeb6cbe476c)。 它还定义了用于检查 `CObject`派生对象的内部状态的 `MFC ASSERT_VALID` 和 `CObject::AssertValid` 方法。
 
 如果 MFC `ASSERT` 宏的参数的计算结果为零或 false，宏将暂停程序执行并向用户发出警报。否则，继续执行。
 
@@ -170,7 +170,7 @@ int x = SomeFunc(y);
 ASSERT(x >= 0);   //  Assertion fails if x is negative
 ```
 
-可以通过[IsKindOf](https://docs.microsoft.com/cpp/mfc/reference/cobject-class#iskindof)函数使用 ASSERT 来提供函数参数的类型检查：
+可以通过[IsKindOf](/cpp/mfc/reference/cobject-class#iskindof)函数使用 ASSERT 来提供函数参数的类型检查：
 
 ```cpp
 ASSERT( pObject1->IsKindOf( RUNTIME_CLASS( CPerson ) ) );
@@ -179,7 +179,7 @@ ASSERT( pObject1->IsKindOf( RUNTIME_CLASS( CPerson ) ) );
 在发布版本中，`ASSERT` 宏不生成任何代码。 如果需要在发布版本中计算表达式，请使用[VERIFY](https://msdn.microsoft.com/library/s8c29sw2.aspx#verify)宏而不是 ASSERT。
 
 ### <a name="BKMK_MFC_ASSERT_VALID_and_CObject__AssertValid"></a>MFC ASSERT_VALID 和 CObject：： AssertValid
-[CObject：： AssertValid](https://docs.microsoft.com/cpp/mfc/reference/cobject-class#assertvalid)方法提供对对象的内部状态的运行时检查。 尽管从 `CObject` 派生类时不需要重写 `AssertValid`，但你可以通过执行此操作使类更可靠。 `AssertValid` 应对对象的所有成员变量执行断言，以验证它们是否包含有效的值。 例如，它应检查指针成员变量是否不为 NULL。
+[CObject：： AssertValid](/cpp/mfc/reference/cobject-class#assertvalid)方法提供对对象的内部状态的运行时检查。 尽管从 `CObject` 派生类时不需要重写 `AssertValid`，但你可以通过执行此操作使类更可靠。 `AssertValid` 应对对象的所有成员变量执行断言，以验证它们是否包含有效的值。 例如，它应检查指针成员变量是否不为 NULL。
 
 下面的示例演示如何声明一个 `AssertValid` 函数：
 
@@ -218,7 +218,7 @@ void CPerson::AssertValid() const
 
 如果任何成员变量存储对象，则可以使用 `ASSERT_VALID` 宏来测试其内部有效性（如果它们的类重写 `AssertValid`）。
 
-例如，假设某个类 `CMyData`，它将[CObList](/cpp/mfc/reference/coblist-class)存储在它的一个成员变量中。 @No__t_0 变量 `m_DataList` 存储 `CPerson` 对象的集合。 @No__t_0 的缩写声明如下所示：
+例如，假设某个类 `CMyData`，它将[CObList](/cpp/mfc/reference/coblist-class)存储在它的一个成员变量中。 `CObList` 变量 `m_DataList`存储 `CPerson` 对象的集合。 `CMyData` 的缩写声明如下所示：
 
 ```cpp
 class CMyData : public CObject
@@ -236,7 +236,7 @@ class CMyData : public CObject
 };
 ```
 
-@No__t_1 中的 `AssertValid` 重写如下所示：
+`CMyData` 中的 `AssertValid` 重写如下所示：
 
 ```cpp
 #ifdef _DEBUG
@@ -304,7 +304,7 @@ ASSERT(iMols<=numMols); // MFC version
 _ASSERT(iMols<=numMols); // CRT version
 ```
 
-@No__t_0 计数的分子数目必须始终小于或等于分子的总数 `numMols`。 循环的可视化检查并不表明这将是这样的，因此在循环后使用断言语句来测试该条件。
+`iMols` 计数的分子数目必须始终小于或等于分子的总数 `numMols`。 循环的可视化检查并不表明这将是这样的，因此在循环后使用断言语句来测试该条件。
 
 [主题内容](#BKMK_In_this_topic)
 

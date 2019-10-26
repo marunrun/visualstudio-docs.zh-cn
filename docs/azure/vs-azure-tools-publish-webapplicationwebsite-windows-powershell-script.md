@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: e1085d13612cefee370aeac5fe67c7ddd2af8bae
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
-ms.translationtype: HT
+ms.openlocfilehash: c5eff35247c85783659f66b13d03c3a5f781df07
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68919792"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911760"
 ---
 # <a name="publish-webapplicationwebsite-windows-powershell-script"></a>Publish-WebApplicationWebSite（Windows PowerShell 脚本）
 ## <a name="syntax"></a>语法
@@ -30,14 +30,14 @@ Publish-WebApplicationWebSite
 -Verbose
 ```
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>配置
 描述部署详细信息的 JSON 配置文件的路径。
 
 | 参数 | 默认值 |
 | --- | --- |
 | 别名 |无 |
 | 是否必需？ |true |
-| 位置 |指定 |
+| 位置 |命名的 |
 | 默认值 |无 |
 | 接受管道输入？ |False |
 | 接受通配符？ |False |
@@ -49,22 +49,22 @@ Publish-WebApplicationWebSite
 | --- | --- |
 | 别名 |无 |
 | 是否必需？ |False |
-| 位置 |指定 |
+| 位置 |命名的 |
 | 默认值 |无 |
 | 接受管道输入？ |False |
 | 接受通配符？ |False |
 
 ## <a name="webdeploypackage"></a>WebDeployPackage
-要发布到网站的 Web 部署包的路径。 可以在 Visual Studio 中使用“发布 Web”向导来创建此包。 有关详细信息，请参阅 [Azure 云服务和 ASP.NET 入门](http://go.microsoft.com/fwlink/p/?LinkID=623089)。
+要发布到网站的 Web 部署包的路径。 可以在 Visual Studio 中使用“发布 Web”向导来创建此包。 有关详细信息，请参阅 [Azure 云服务和 ASP.NET 入门](vs-azure-tools-publish-webapplicationwebsite-windows-powershell-script.md)。
 
 | 参数 | 默认值 |
 | --- | --- |
 | 别名 |无 |
 | 是否必需？ |False |
-| 位置 |指定 |
+| 位置 |命名的 |
 | 默认值 |无 |
 | 接受管道输入？ |False |
-| 接受通配符？ |否 |
+| 接受通配符？ |False |
 
 ## <a name="databaseserverpassword"></a>DatabaseServerPassword
 Azure 中的 SQL 数据库的用户名和密码。
@@ -73,7 +73,7 @@ Azure 中的 SQL 数据库的用户名和密码。
 | --- | --- |
 | 别名 |无 |
 | 是否必需？ |False |
-| 位置 |指定 |
+| 位置 |命名的 |
 | 默认值 |无 |
 | 接受管道输入？ |False |
 | 接受通配符？ |False |
@@ -85,7 +85,7 @@ Azure 中的 SQL 数据库的用户名和密码。
 | --- | --- |
 | 别名 |无 |
 | 是否必需？ |False |
-| 位置 |指定 |
+| 位置 |命名的 |
 | 默认值 |False |
 | 接受管道输入？ |False |
 | 接受通配符？ |False |

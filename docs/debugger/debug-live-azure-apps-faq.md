@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ceda2dd4e85c8db5b66ef753a748977204b8caab
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 5e0d8839daac2d470f4275257bfcfbc83fc7a62f
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211212"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911398"
 ---
 # <a name="frequently-asked-questions-for-snapshot-debugging-in-visual-studio"></a>在 Visual Studio 中进行快照调试的常见问答解答
 
@@ -31,7 +31,7 @@ ms.locfileid: "71211212"
 
 #### <a name="how-does-the-snapshot-debugger-load-symbols"></a>Snapshot Debugger 如何加载符号？
 
-若要使用 Snapshot Debugger，本地应用程序或部署到 Azure 应用服务的应用程序必须具有匹配的符号。 （目前不支持嵌入的 PDB。）Snapshot Debugger 将自动从 Azure 应用服务下载符号。 自 Visual Studio 2017 版本 15.2 起，部署到 Azure 应用服务时，也会同时部署应用的符号。
+若要使用 Snapshot Debugger，本地应用程序或部署到 Azure 应用服务的应用程序必须具有匹配的符号。 （目前不支持嵌入式 Pdb。）Snapshot Debugger 会自动从 Azure App Service 下载符号。 自 Visual Studio 2017 版本 15.2 起，部署到 Azure 应用服务时，也会同时部署应用的符号。
 
 #### <a name="does-the-snapshot-debugger-work-against-release-builds-of-my-application"></a>Snapshot Debugger 是否适用于我的应用程序的发布版本？
 
@@ -125,7 +125,7 @@ Snapshot Debugger 必须打开一组端口才能调试在 Azure 中获取的快�
 
    - 服务器证书
       - 相应的服务器证书指纹作为机密部署到 Azure KeyVault。 VS 将尝试在对应于虚拟机或虚拟机规模集资源的区域中查找或创建前缀为 MSVSAZ * 的 KeyVault。 所有虚拟机或虚拟机规模集部署到该区域的资源将共享同一 KeyVault。
-      - 若要删除服务器证书指纹密码，请跳到 Azure 门户，并在承载资源的同一区域中查找 MSVSAZ * KeyVault。 删除应该标记的机密`remotedebugcert<<ResourceName>>`
+      - 若要删除服务器证书指纹密码，请跳到 Azure 门户，并在承载资源的同一区域中查找 MSVSAZ * KeyVault。 删除应该标记的机密 `remotedebugcert<<ResourceName>>`
       - 还需要通过 PowerShell 从资源中删除服务器机密。
 
       对于虚拟机：
@@ -181,7 +181,7 @@ Snapshot Debugger 必须打开一组端口才能调试在 Azure 中获取的快�
 
 - Azure 门户 > 虚拟机/虚拟机规模集资源边栏选项卡 > 扩展 > 卸载 VMDiagnosticsSettings 扩展
 
-- [Az powershell](https://docs.microsoft.com/powershell/azure/overview)中的 powershell cmdlet
+- [Az powershell](/powershell/azure/overview)中的 powershell cmdlet
 
    虚拟机：
 
