@@ -16,17 +16,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0adcca4acd5fc72d301d707ccdd831c86ef3e48f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: bbc705a20f8d878d85dc6aba14c64178c76041ac
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72731926"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888404"
 ---
 # <a name="how-to-use-the-wpf-tree-visualizer"></a>如何：使用 WPF 树可视化工具
 可以使用 WPF 树可视化工具浏览 WPF 对象的可视化树，并查看该树中所含对象的 WPF 依赖项属性。 有关可视化树的详细信息，请参阅[WPF 中的树](/dotnet/framework/wpf/advanced/trees-in-wpf)。 有关依赖项属性的详细信息，请参阅[依赖属性概述](/dotnet/framework/wpf/advanced/dependency-properties-overview)。
 
  打开 WPF 树可视化工具时，你将看到两个窗格：左侧显示**可视化树**，右侧显示 " _名称_ **：** _类型_" 窗格的 "属性"。 在 "**可视化树**" 窗格中选择任何对象，"_名称_ **：** _类型_" 窗格的**属性**将自动更新以显示该对象的属性。
+
+ > [!NOTE]
+ > 还可以使用 "[实时可视化树" 和 "实时属性资源管理器](../xaml-tools/inspect-xaml-properties-while-debugging.md)" 来检查 WPF 对象的可视化树。 WPF 树可视化工具是一项旧功能，不在活动开发中。
 
 ### <a name="to-open-the-wpf-tree-visualizer"></a>打开 WPF 树可视化工具
 
