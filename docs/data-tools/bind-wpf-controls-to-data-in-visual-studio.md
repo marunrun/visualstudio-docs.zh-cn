@@ -16,18 +16,18 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: fc954fe372ccd571151ab6ea09e9c1e3db96206a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ee858c7c17798f327d323f632d4cb9e8a77b6712
+ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648771"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72924526"
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>在 Visual Studio 中将 WPF 控件绑定到数据
 
 通过将数据绑定到 [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] 控件，可以向应用程序的用户显示数据。 若要创建这些数据绑定控件，可以将项从 "**数据源**" 窗口拖动到 Visual Studio 中的 [!INCLUDE[wpfdesigner_current_short](../data-tools/includes/wpfdesigner_current_short_md.md)]。 本主题将介绍一些您可用于创建数据绑定 [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] 应用程序的最常见的任务、工具和类。
 
-有关如何在 Visual Studio 中创建数据绑定控件的一般信息，请参阅[在 Visual studio 中将控件绑定到数据](../data-tools/bind-controls-to-data-in-visual-studio.md)。 有关 [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] 数据绑定的详细信息，请参阅[数据绑定概述](/dotnet/framework/wpf/data/data-binding-overview)。
+有关如何在 Visual Studio 中创建数据绑定控件的一般信息，请参阅[在 Visual studio 中将控件绑定到数据](../data-tools/bind-controls-to-data-in-visual-studio.md)。 有关 [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] 数据绑定的详细信息，请参阅[数据绑定概述](/dotnet/desktop-wpf/data/data-binding-overview)。
 
 ## <a name="tasks-involved-in-binding-wpf-controls-to-data"></a>将 WPF 控件绑定到数据所涉及的任务
 
@@ -46,7 +46,7 @@ ms.locfileid: "72648771"
 
 ## <a name="generated-xaml-and-code"></a>生成的 XAML 和代码
 
-将项从 "**数据源**" 窗口拖动到 [!INCLUDE[wpfdesigner_current_short](../data-tools/includes/wpfdesigner_current_short_md.md)] 时，Visual Studio 将生成定义新的数据绑定控件的 [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] （或将现有控件绑定到数据源）。 对于某些数据源，Visual Studio 还会在代码隐藏文件中生成用数据填充数据源的代码。
+将项从 "**数据源**" 窗口拖动到 [!INCLUDE[wpfdesigner_current_short](../data-tools/includes/wpfdesigner_current_short_md.md)]时，Visual Studio 将生成定义新的数据绑定控件的 [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] （或将现有控件绑定到数据源）。 对于某些数据源，Visual Studio 还会在代码隐藏文件中生成用数据填充数据源的代码。
 
 下表列出了 Visual Studio 为 "**数据源**" 窗口中的每种类型的数据源生成的 [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] 和代码。
 
