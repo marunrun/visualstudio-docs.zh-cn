@@ -1,7 +1,7 @@
 ---
-title: 在 Android 和 iOS 上生成 OpenGL ES 应用程序 | Microsoft Docs
+title: 在 Android 和 iOS 上生成 OpenGL ES 应用程序
 ms.custom: ''
-ms.date: 09/17/2019
+ms.date: 10/09/2019
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +12,12 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 259092668c336a90758a669efdc4b154b2097cab
-ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
+ms.openlocfilehash: a15902278e9a73488b315729a2db6e8fb5d53935
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71079272"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72588921"
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>在 Android 和 iOS 上生成 OpenGL ES 应用程序
 
@@ -25,13 +25,13 @@ ms.locfileid: "71079272"
 
 ## <a name="requirements"></a>要求
 
-在可以创建用于 iOS 和 Android 的 OpenGL ES 应用之前，确保你已满足所有系统要求。 如果尚未满足要求，请在 Visual Studio 安装程序中安装使用 C++ 的移动开发工作负载。 若要针对 iOS 进行生成，请包括可选的 C++ iOS 开发工具。 若要针对 Android 进行生成，请安装 C++ Android 开发工具和所需的第三方工具：Android NDK、Apache Ant 和 Google Android Emulator。 为了提高 Intel 平台上的模拟器性能，建议同时安装 Intel 硬件加速执行管理器 (HAXM)。 接下来，配置 Intel HAXM 和 Android 仿真器以在系统上运行。 有关详细信息和详细说明，请参阅[安装用于跨平台移动开发的 Visual C++](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md)。
+在可以创建用于 iOS 和 Android 的 OpenGL ES 应用之前，确保你已满足所有系统要求。 如果尚未满足要求，请在 Visual Studio 安装程序中安装使用 C++ 的移动开发工作负载。 若要获取 OpenGL ES 模板并针对 iOS 进行生成，请包括可选的 C++ iOS 开发工具。 若要针对 Android 进行生成，请安装 C++ Android 开发工具和所需的第三方工具：Android NDK、Apache Ant 和 Google Android Emulator。 为了提高 Intel 平台上的模拟器性能，建议同时安装 Intel 硬件加速执行管理器 (HAXM)。 接下来，配置 Intel HAXM 和 Android 仿真器以在系统上运行。 有关详细信息和详细说明，请参阅[使用 C++ 安装跨平台移动开发](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md)。
 
 若要生成和测试 iOS 应用，将需要一台 Mac 计算机，并根据安装说明进行设置安装。 有关如何为 iOS 开发进行设置的详细信息，请参阅[安装并配置使用 iOS 进行生成的工具](../cross-platform/install-and-configure-tools-to-build-using-ios.md)。
 
 ## <a name="create-a-new-opengles-application-project"></a>创建新的 OpenGLES 应用程序项目
 
-本教程中首先会创建一个新的 OpenGL ES 应用程序项目， 然后在适用于 Android 的 Visual Studio 模拟器中生成并运行默认应用。 接下来生成适用于 iOS 的应用并在 iOS 设备上运行该应用。
+本教程中首先会创建一个新的 OpenGL ES 应用程序项目， 然后在 Android 仿真器中生成并运行默认应用。 接下来生成适用于 iOS 的应用并在 iOS 设备上运行该应用。
 
 ::: moniker range="vs-2017"
 
@@ -75,7 +75,7 @@ ms.locfileid: "71079272"
 
 - `MyOpenGLESApp.Android.Packaging` 创建 .apk 文件，用于 Android 设备或仿真程序上的开发。  此文件包括在此设置清单属性的资源和 AndroidManifest.xml 文件。 它还包括控制 Ant 生成过程的 build.xml 文件。  默认情况下，它被设置为启动项目，因此可从 Visual Studio 直接部署和运行它。
 
-- MyOpenGLESApp.iOS.Application 包含资源和 Objective-C 粘附代码，以用于创建链接到 `MyOpenGLESApp.iOS.StaticLibrary` 中 C++ 静态库代码的 iOS 应用。  此项目创建一个生成包，该包通过 Visual Studio 和远程代理传输到你的 Mac。 当创建此项目时，Visual Studio 将发送文件和命令以在 Mac 上生成并部署应用。
+- `MyOpenGLESApp.iOS.Application` 包含资源和 Objective-C 粘附代码，以用于创建链接到 `MyOpenGLESApp.iOS.StaticLibrary` 中 C++ 静态库代码的 iOS 应用。 此项目创建一个生成包，该包通过 Visual Studio 和远程代理传输到你的 Mac。 当创建此项目时，Visual Studio 将发送文件和命令以在 Mac 上生成并部署应用。
 
 ## <a name="build-and-run-the-android-app"></a>生成并运行 Android 应用
 
@@ -91,7 +91,7 @@ ms.locfileid: "71079272"
 
 1. 在“解决方案资源管理器”中，打开 `MyOpenGLESApp.Android.Packaging` 项目的快捷菜单，然后选择“生成”。  
 
-   ![生成 Android 打包项目](../cross-platform/media/cppmdd_opengles_andbuild.png "CPPMDD_OpenGLES_AndBuild")
+   ![构建 Android 打包项目](../cross-platform/media/cppmdd_opengles_andbuild.png "CPPMDD_OpenGLES_AndBuild")
 
    “输出”窗口显示 Android 共享库和 Android 应用的生成过程的输出。
 
@@ -103,11 +103,11 @@ ms.locfileid: "71079272"
 
    如果你已安装了其他仿真程序或连接了一个 Android 设备，则可在部署目标下拉列表中选择它们。 若要运行该应用，生成的解决方案平台必须与目标设备的平台匹配。
 
-1. 按下 F5 启动调试，或按下 Shift+F5 来在不进行调试的情况下启动。
+1. 按“F5”  开始调试，或按“Shift”  +“F5”  在不调试的情况下启动。
 
    Visual Studio 启动仿真程序，需要几秒钟时间来加载和部署代码。 下面介绍了此应用如何显示在仿真器中：
 
-   ![在 Android 仿真器中运行的应用](../cross-platform/media/cppmdd_opengles_andemulator.png "CPPMDD_OpenGLES_AndEmulator")
+   ![运行在 Android 仿真器中的应用](../cross-platform/media/cppmdd_opengles_andemulator.png "CPPMDD_OpenGLES_AndEmulator")
 
    一旦你的应用启动，你可以设置断点，并使用调试器逐步调试代码，检查局部变量并监视值。
 
@@ -127,7 +127,7 @@ iOS 应用项目在 Visual Studio 中创建和编辑，但由于授权限制，�
 
 ### <a name="to-set-up-automatic-signing-on-xcode"></a>在 Xcode 上设置自动签名
 
-1. 如果尚未设置，请在 Mac 上安装 [Xcode](https://developer.apple.com/xcode/downloads/) 版本 10.2.1 或更高版本。
+1. 如果尚未设置，请在 Mac 上安装 [Xcode](https://developer.apple.com/xcode/)。
 
 1. 在 Mac 上打开 Xcode 应用。
 
@@ -149,7 +149,7 @@ iOS 应用项目在 Visual Studio 中创建和编辑，但由于授权限制，�
 
 ### <a name="to-build-and-run-the-ios-app-on-an-ios-device"></a>在 iOS 设备上生成并运行 iOS 应用
 
-1. 在 Mac 上运行远程代理，并验证 Visual Studio 是否与远程代理配对。 若要启动远程代理，请打开终端应用窗口并输入 `vcremote`。 有关详细信息，请参阅[在 Visual Studio 中配置远程代理](../cross-platform/install-and-configure-tools-to-build-using-ios.md#ConfigureVS)。
+1. 在 Mac 上运行远程代理，并验证 Visual Studio 是否与远程代理配对。 若要启动远程代理，请打开终端应用窗口并输入 `vcremote`。 有关详细信息，请参阅 [在 Visual Studio 中配置远程代理](../cross-platform/install-and-configure-tools-to-build-using-ios.md#ConfigureVS)。
 
    ![运行 vcremote 的 Mac 终端窗口](../cross-platform/media/cppmdd_common_vcremote.png "CPPMDD_common_vcremote")
 

@@ -8,12 +8,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 764c488b659418dd409a5d83b1efcaac502f1e5e
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: aec3dfb45471a3349e14419671ef1fb3b5e05db5
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68415786"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747950"
 ---
 # <a name="how-to-suppress-compiler-warnings"></a>如何：取消编译器警告
 
@@ -33,7 +33,7 @@ ms.locfileid: "68415786"
 
 1. 重新生成解决方案。
 
-## <a name="suppress-specific-warnings-for-visual-c"></a>取消显示特定的 Visual C++ 警告
+## <a name="suppress-specific-warnings-for-c"></a>取消显示特定的 C++ 警告
 
 使用“配置属性”  属性页可取消显示特定的 C++ 项目警告。
 

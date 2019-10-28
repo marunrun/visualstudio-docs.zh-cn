@@ -1,25 +1,25 @@
 ---
-title: 类设计器中的 Visual C++ 结构
+title: 类设计器中的 C++ 结构
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Class Designer [Visual Studio], structures
 ms.assetid: bad18ab6-d956-47a6-a413-811cc26db5f5
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9b8e81ee25e081a324a8520317fa57a1314ccd0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 65fb4738b3124daf48b501c6db416d3803da32ec
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975029"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748909"
 ---
-# <a name="visual-c-structures-in-class-designer"></a>类设计器中的 Visual C++ 结构
+# <a name="c-structures-in-class-designer"></a>类设计器中的 C++ 结构
 
-类设计器支持使用关键字 `struct` 声明的 C++ 结构。 下面是一个示例：
+类设计器支持使用关键字 `struct` 声明的 C++ 结构  。 下面是一个示例：
 
 ```cpp
 struct MyStructure
@@ -40,6 +40,6 @@ struct MyStructure
 
 ## <a name="see-also"></a>请参阅
 
-- [使用 Visual C++ 代码](working-with-visual-cpp-code.md)
+- [使用 C++ 代码](working-with-visual-cpp-code.md)
 - [类和结构](/cpp/cpp/classes-and-structs-cpp)
 - [struct](/cpp/cpp/struct-cpp)

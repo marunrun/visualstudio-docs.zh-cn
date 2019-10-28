@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 460eb832b94a1826d2d8f990b76a2afe90f992c8
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
+ms.openlocfilehash: bb6f0600d8bdfe8c736305ffd31788edb9d817a6
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314096"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72576290"
 ---
 # <a name="step-2-create-a-random-addition-problem"></a>步骤 2：创建随机加法问题
 
@@ -73,7 +73,7 @@ ms.locfileid: "72314096"
      在对象后输入点时，IntelliSense 将显示对象成员的列表，如属性、方法和事件。
 
     > [!NOTE]
-    > 当您对 `Next()` 对象使用 `Random` 方法时（例如，当您调用 `randomizer.Next(50)` 时），您将获得一个小于 50 的随机数（0 到 49）。 在此示例中，您调用了 `randomizer.Next(51)`。 您使用了 51 而不是 50，以便两个随机数相加所得的答案介于 0 到 100 之间。 如果将 50 传递给 `Next()` 方法，则此方法会选择一个介于 0 到 49 之间的数字，因此可能得到的最大答案是 98，而不是 100。 在执行此方法中的前两个语句后，这两个整型变量（addend1  和 addend2  ）都将保留一个 0 到 50 之间的随机数。 此屏幕快照显示了 Visual C# 代码，但是，IntelliSense 对于 Visual Basic 将采用相同的工作方式。
+    > 当您对 `Next()` 对象使用 `Random` 方法时（例如，当您调用 `randomizer.Next(50)` 时），您将获得一个小于 50 的随机数（0 到 49）。 在此示例中，您调用了 `randomizer.Next(51)`。 您使用了 51 而不是 50，以便两个随机数相加所得的答案介于 0 到 100 之间。 如果将 50 传递给 `Next()` 方法，则此方法会选择一个介于 0 到 49 之间的数字，因此可能得到的最大答案是 98，而不是 100。 在执行此方法中的前两个语句后，这两个整型变量（addend1  和 addend2  ）都将保留一个 0 到 50 之间的随机数。 此屏幕快照显示了 C# 代码，但是，IntelliSense 对于 Visual Basic 将采用相同的工作方式。
 
      详细了解这些语句。
 

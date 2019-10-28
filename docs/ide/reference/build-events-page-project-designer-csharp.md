@@ -1,6 +1,6 @@
 ---
 title: “项目设计器”->“生成事件”页 (C#)
-ms.date: 11/04/2016
+ms.date: 10/17/2019
 ms.technology: vs-ide-compile
 ms.topic: reference
 f1_keywords:
@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ba429c116d44a5d79d935fe3a1ad07b6d5f36f79
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: cca0ec0491d7a2c513f8bc52acaadf7c80d7fd22
+ms.sourcegitcommit: 58000baf528da220fdf7a999d8c407a4e86c1278
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461841"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72789826"
 ---
 # <a name="build-events-page-project-designer-c"></a>“项目设计器”->“生成事件”页 (C#)
 
@@ -60,6 +60,33 @@ ms.locfileid: "68461841"
 |始终 |无论生成是否成功，均运行生成后事件。|
 |成功生成时 |如果生成成功，则运行生成后事件。 因此，即使项目已为最新状态，但只要生成成功，就会运行该事件。|
 |生成更新项目输出时 |生成后事件仅在编译器的输出文件 (.exe or .dll) 不同于之前的编译器输出文件时才运行。 因此，如果项目为最新状态，则不会运行生成后事件。|
+
+## <a name="in-the-project-file"></a>在项目文件中
+
+在早期版本的 Visual Studio 中，当你更改 IDE 中的 PreBuildEvent 或 PostBuildEvent 设置时，Visual Studio 会将 `PreBuildEvent` 或 `PostBuildEvent` 属性添加到项目文件   。 例如，如果 IDE 中的 PreBuildEvent 命令行设置如下  ：
+
+```input
+"$(ProjectDir)PreBuildEvent.bat" "$(ProjectDir)..\" "$(ProjectDir)" "$(TargetDir)"
+```
+
+则项目文件设置为：
+
+```xml
+<PropertyGroup>
+    <PreBuildEvent>"$(ProjectDir)PreBuildEvent.bat" "$(ProjectDir)..\" "$(ProjectDir)" "$(TargetDir)" />
+</PropertyGroup>
+```
+
+Visual Studio 2019（以及较新更新中的 Visual Studio 2017）为 PreBuildEvent 和 PostBuildEvent 设置添加名为 `PreBuild` 或 `PostBuild` 的 MSBuild 目标   。 例如，对于前面的示例，Visual Studio 现在生成以下代码：
+
+```xml
+<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="&quot;$(ProjectDir)PreBuildEvent.bat&quot; &quot;$(ProjectDir)..\&quot; &quot;$(ProjectDir)&quot; &quot;$(TargetDir)&quot;" />
+</Target>
+```
+
+> [!NOTE]
+> 对这些项目文件进行了更改以支持 SDK 样式的项目。 如果要将项目文件从旧格式手动迁移到 SDK 样式的格式，则应删除 `PreBuildEvent` 和 `PostBuildEvent` 属性，并将其替换为 `PreBuild` 和 `PostBuild` 目标，如前面的代码所示。 若要了解如何判断你的项目是否为 SDK 样式的项目，请参阅[检查项目格式](/nuget/resources/check-project-format)。
 
 ## <a name="see-also"></a>请参阅
 

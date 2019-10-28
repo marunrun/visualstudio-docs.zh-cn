@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9484d6977c6896253197215ce185579518448da8
-ms.sourcegitcommit: 0f5f7955076238742f2071d286ad8e896f3a6cad
+ms.openlocfilehash: a28f491ea5af53546f66e066bf8f78575708bc57
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68483711"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72656589"
 ---
 # <a name="how-to-specify-build-events-c"></a>如何：指定生成事件 (C#)
 
@@ -72,7 +72,7 @@ ms.locfileid: "68483711"
 
 1. 为命令创建新的“控制台应用”项目  。 将项目命名为 ChangeOSVersionCS  。
 
-2. 在 Program.cs 中，将以下行添加到文件顶部的其他 `using` 语句  ：
+2. 在 Program.cs  中，将以下行添加到文件顶部的其他 `using` 指令：
 
    ```csharp
    using System.Xml;

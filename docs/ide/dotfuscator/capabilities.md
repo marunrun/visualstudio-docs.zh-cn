@@ -15,18 +15,18 @@ helpviewer_keywords:
 description: 了解 Visual Studio 中包含的免费 Dotfuscator Community 副本的功能。
 ms.assetid: 0ee89c58-c900-48fc-a6a2-65ace00e8bab
 author: Joe-Sewell-PreEmptive
-ms.author: gewarren
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 87d093a540e3c6fae6a80761a5b945c572bd890d
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 249c039070246f27669f3a808cf607a649db1e59
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744786"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747944"
 ---
 # <a name="capabilities-of-dotfuscator"></a>Dotfuscator 的功能
 
-本页重点介绍 Dotfuscator Community 的功能，并提供了可通过[升级][upgrades]获取的对高级选项的引用。
+本页重点介绍 Dotfuscator Community 的功能，并提供了可通过[升级][upgrades]获取的对高级选项的部分引用。
 
 Dotfuscator Community 是 .NET 应用程序的后期生成  系统。
 使用它，Visual Studio 用户可[模糊处理程序集][obfuscation]，还可将[主动防御措施][checks]注入应用程序 - 全部都无需 Dotfuscator 访问原始源代码。

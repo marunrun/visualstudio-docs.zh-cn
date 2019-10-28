@@ -1,6 +1,6 @@
 ---
 title: 教程 1：创建图片查看器
-ms.date: 08/30/2019
+ms.date: 10/16/2019
 ms.assetid: 3071d6df-2b2f-4e95-ab68-bef727323136
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -10,19 +10,19 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d9a525ef9da6583a37d5e4d26bfec7d0558cde4
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: 9c751f6b55bc50a064473468d95c07a54aba76ae
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118661"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516630"
 ---
 # <a name="tutorial-1-create-a-picture-viewer"></a>教程 1：创建图片查看器
 
 在本教程中，你将生成一个从文件加载图片并将其显示在窗口中的应用。 你将学习如何使用“Windows 窗体设计器”拖动控件（如窗体上的按钮和图片框）、设置控件属性，以及如何使用容器来轻松地调整窗体的大小  。 您还将开始编写代码。
 
 > [!NOTE]
-> 本教程中同时涉及 Visual C# 和 Visual Basic，因此请关注特定于您所用编程语言的信息。
+> 本教程中同时涉及 C# 和 Visual Basic，因此请关注特定于你所用编程语言的信息。
 
 本教程将指导你完成以下任务：
 
@@ -60,9 +60,11 @@ ms.locfileid: "71118661"
 |[步骤 10：为其他按钮和复选框编写代码](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md)|使用 IntelliSense 编写代码以使其他按钮和复选框工作。|
 |[步骤 11：运行应用并尝试其他功能](../ide/step-11-run-your-program-and-try-other-features.md)|运行应用并设置背景色。 尝试其他功能，例如更改颜色、字体和边框。|
 
+那里还有很好的免费视频学习资源供你使用。 要了解有关 C# 编程的详细信息，请参阅 [C# 基础知识：零基础开发](https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners)。 要了解有关 Visual Basic 编程的详细信息，请参阅 [Visual Basic 基础知识：零基础开发](https://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners)。
+
 ## <a name="next-steps"></a>后续步骤
 
-要开始学习本教程，请从[步骤 1：创建 Windows 窗体应用程序项目](../ide/step-1-create-a-windows-forms-application-project.md)** 开始。
+要开始学习本教程，请从[步骤 1：创建 Windows 窗体应用程序项目](../ide/step-1-create-a-windows-forms-application-project.md)  开始。
 
 ## <a name="see-also"></a>请参阅
 

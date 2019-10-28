@@ -1,17 +1,17 @@
 ---
-title: 带有 ASP.NET Core 的 Visual Studio 容器工具
+title: 带有 ASP.NET Core 和 React.js 的 Visual Studio 容器工具
 author: ghogen
 description: 了解如何使用 Visual Studio 容器工具和用于 Windows 的 Docker
 ms.author: ghogen
-ms.date: 06/06/2019
+ms.date: 10/16/2019
 ms.technology: vs-azure
 ms.topic: quickstart
-ms.openlocfilehash: bcc30ec13096b37d7540c187d11c846d6c575093
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 8083d2d6446c872791501f76cb0167a92a9ef660
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70179881"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516439"
 ---
 # <a name="quickstart-use-docker-with-a-react-single-page-app-in-visual-studio"></a>快速入门：将 Docker 与 Visual Studio 中的 React 单页面应用结合使用
 
@@ -23,12 +23,16 @@ ms.locfileid: "70179881"
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * 安装了“Web 开发”、“Azure 工具”工作负载和/或“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)   
 * 若要发布到 Azure 容器注册表，需要 Azure 订阅。 [注册免费试用版](https://azure.microsoft.com/offers/ms-azr-0044p/)。
+* [Node.js](https://nodejs.org/en/download/)
+* 对于 Windows 容器、Windows 10 版本 1903 或更高版本，使用本文中引用的 Docker 映像。
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * 安装了“Web 开发”、“Azure 工具”工作负载和/或“.NET Core 跨平台开发”工作负载的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)   
 * 用于使用 .NET Core 2.2 进行开发的 [.NET Core 2.2 开发工具](https://dotnet.microsoft.com/download/dotnet-core/2.2)
 * 若要发布到 Azure 容器注册表，需要 Azure 订阅。 [注册免费试用版](https://azure.microsoft.com/offers/ms-azr-0044p/)。
+* [Node.js](https://nodejs.org/en/download/)
+* 对于 Windows 容器、Windows 10 版本 1903 或更高版本，使用本文中引用的 Docker 映像。
 ::: moniker-end
 
 ## <a name="installation-and-setup"></a>安装和设置
@@ -47,7 +51,7 @@ ms.locfileid: "70179881"
 
    ![添加 Docker 支持](media/container-tools-react/vs2017/add-docker-support.png)
 
-1. 选择 Linux 容器类型，然后单击“确定”  。
+1. 选择容器类型，然后单击“确定”  。
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 1. 使用“ASP.NET Core Web 应用程序”  模板创建新项目。
@@ -59,10 +63,12 @@ ms.locfileid: "70179881"
 
    ![添加 Docker 支持](media/container-tools-react/vs2017/add-docker-support.png)
 
-1. 选择 Linux 作为容器类型。
+1. 选择容器类型。
 ::: moniker-end
 
-## <a name="dockerfile-overview"></a>Dockerfile 概述
+根据你使用的是 Linux 容器还是 Windows 容器，下一步会有所不同。
+
+## <a name="modify-the-dockerfile-linux-containers"></a>修改 Dockerfile（Linux 容器）
 
 Dockerfile，用于创建最终 Docker 映像的方案，已在项目中创建  。 请参阅 [Dockerfile 引用](https://docs.docker.com/engine/reference/builder/)，了解其中的命令。
 
@@ -104,9 +110,74 @@ ENTRYPOINT ["dotnet", "WebApplication37.dll"]
 
 如果选中了新建项目对话框的“为 HTTPS 配置”复选框，则 Dockerfile 公开两个端口   。 一个端口用于 HTTP 流量；另一个端口用于 HTTPS。 如果未选中该复选框，则为 HTTP 流量公开单个端口 (80)。
 
+## <a name="modify-the-dockerfile-windows-containers"></a>修改 Dockerfile（Windows 容器）
+
+通过双击项目节点来打开项目文件，然后通过将以下属性添加为 `<PropertyGroup>` 元素的子元素来更新项目文件 (*.csproj)：
+
+   ```xml
+    <DockerfileFastModeStage>base</DockerfileFastModeStage>
+   ```
+
+通过添加以下行来更新 Dockerfile。 这样会将节点和 npm 复制到容器。
+
+   1. 将 ``# escape=` `` 添加到 Dockerfile 的第一行
+   1. 在 `FROM … base` 之前添加以下行
+
+      ```
+      FROM mcr.microsoft.com/powershell:nanoserver-1903 AS downloadnodejs
+      SHELL ["pwsh", "-Command", "$ErrorActionPreference = 'Stop';$ProgressPreference='silentlyContinue';"]
+      RUN Invoke-WebRequest -OutFile nodejs.zip -UseBasicParsing "https://nodejs.org/dist/v10.16.3/node-v10.16.3-win-x64.zip"; `
+      Expand-Archive nodejs.zip -DestinationPath C:\; `
+      Rename-Item "C:\node-v10.16.3-win-x64" c:\nodejs
+      ```
+
+   1. 在 `FROM … build` 之前和之后添加以下行
+
+      ```
+      COPY --from=downloadnodejs C:\nodejs\ C:\Windows\system32\
+      ```
+
+   1. 完整的 Dockerfile 现在看起来如下所示：
+
+      ```
+      # escape=`
+      #Depending on the operating system of the host machines(s) that will build or run the containers, the image specified in the FROM statement may need to be changed.
+      #For more information, please see https://aka.ms/containercompat
+      FROM mcr.microsoft.com/powershell:nanoserver-1903 AS downloadnodejs
+      SHELL ["pwsh", "-Command", "$ErrorActionPreference = 'Stop';$ProgressPreference='silentlyContinue';"]
+      RUN Invoke-WebRequest -OutFile nodejs.zip -UseBasicParsing "https://nodejs.org/dist/v10.16.3/node-v10.16.3-win-x64.zip"; `
+      RUN Expand-Archive nodejs.zip -DestinationPath C:\; `
+      RUN Rename-Item "C:\node-v10.16.3-win-x64" c:\nodejs
+
+      FROM mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1903 AS base
+      WORKDIR /app
+      EXPOSE 80
+      EXPOSE 443
+      COPY --from=downloadnodejs C:\nodejs\ C:\Windows\system32\
+
+      FROM mcr.microsoft.com/dotnet/core/sdk:2.2-nanoserver-1903 AS build
+      COPY --from=downloadnodejs C:\nodejs\ C:\Windows\system32\
+      WORKDIR /src
+      COPY ["WebApplication7/WebApplication37.csproj", "WebApplication37/"]
+      RUN dotnet restore "WebApplication7/WebApplication7.csproj"
+      COPY . .
+      WORKDIR "/src/WebApplication37"
+      RUN dotnet build "WebApplication37.csproj" -c Release -o /app/build
+
+      FROM build AS publish
+      RUN dotnet publish "WebApplication37.csproj" -c Release -o /app/publish
+
+      FROM base AS final
+      WORKDIR /app
+      COPY --from=publish /app/publish .
+      ENTRYPOINT ["dotnet", "WebApplication37.dll"]
+      ```
+
+1. 通过删除 `**/bin`来更新 .dockerignore 文件。
+
 ## <a name="debug"></a>调试
 
-在工具栏的调试下拉列表中选择“Docker”  ，然后开始调试应用。 你可能会看到提示信任证书的消息；选择信任证书以继续。
+在工具栏的调试下拉列表中选择“Docker”  ，然后开始调试应用。 你可能会看到提示信任证书的消息；选择信任证书以继续。  第一次生成时，docker 会下载基础映像，因此可能需要更长的时间。
 
 “输出”  窗口中的“容器工具”  选项显示正在进行的操作。 你将看到与 npm.exe  关联的安装步骤。
 
