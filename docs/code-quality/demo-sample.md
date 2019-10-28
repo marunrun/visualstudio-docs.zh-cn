@@ -11,12 +11,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 648d00cd59d056e0874c91338a39667088d93e2e
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: 071c16267486e1dda1e183cad3c488345974a3cc
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018441"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72745926"
 ---
 # <a name="sample-c-project-for-code-analysis"></a>用于代码分析的示例 C++ 项目
 
@@ -34,7 +34,7 @@ ms.locfileid: "72018441"
 
 1. 单击“文件”菜单，指向“新建”，然后单击“新建项目”    。
 
-2. 在“项目类型”树列表中，如果 Visual C++ 不是 VS 中的默认语言，则展开“其他语言”   。
+2. 在“项目类型”树列表中，如果 C++ 不是 VS 中的默认语言，则展开“其他语言”   。
 
 3. 展开“Visual C++”，然后单击“常规”   。
 

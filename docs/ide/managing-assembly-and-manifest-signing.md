@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3add6e3e4f38b5ba73cd5154720d7b283189526e
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: 8cf721e9880ce7f0b7c3191f73f16366637f0704
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461491"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72748875"
 ---
 # <a name="manage-assembly-and-manifest-signing"></a>管理程序集和清单签名
 
@@ -29,7 +29,7 @@ ms.locfileid: "68461491"
 
 有关 Visual Basic 和 C# 项目中签名程序集的信息，请参阅[创建和使用具有强名称的程序集](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)。
 
-有关 Visual C++ 项目中签名程序集的信息，请参阅[强名称程序集 (C++/CLI)](/cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli)。
+有关 C++ 项目中签名程序集的信息，请参阅[强名称程序集 (C++/CLI)](/cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli)。
 
 > [!NOTE]
 > 强名称签名不能保护程序集免受反向工程的威胁。 若要防止反向工程，请参阅 [Dotfuscator Community](dotfuscator/index.md)。

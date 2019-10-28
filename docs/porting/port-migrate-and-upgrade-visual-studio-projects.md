@@ -1,7 +1,7 @@
 ---
 title: 移植、迁移和升级项目
-description: 有关 Visual Studio 2017 中对 Visual Studio 早期版本中创建的项目的支持，以及 Visual Studio 确定何时需要迁移项目方式的参考。
-ms.date: 04/16/2019
+description: Visual Studio 的当前版本和早期版本中创建的项目的支持的参考。
+ms.date: 10/17/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.topic: conceptual
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - conversion, projects
 - asset compatibility
 - projects, conversion
-ms.openlocfilehash: 97eaada072a4ff0038ae7b57810b0d3318df1035
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
+ms.openlocfilehash: 139eb491304e1c83c579919781a6cd24bdf6e1eb
+ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314175"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72777819"
 ---
 # <a name="project-migration-and-upgrade-reference-for-visual-studio"></a>Visual Studio 的项目迁移和升级参考
 
 ::: moniker range="vs-2017"
 
-Visual Studio 的每个版本通常都支持大部分以前的项目、文件和其他资产类型。 可以[照常](../ide/solutions-and-projects-in-visual-studio.md)使用这些类型。如果不依赖新功能，Visual Studio 通常会尝试保留与旧版本（如 Visual Studio 2015、Visual Studio 2013 和 Visual Studio 2012）的向后兼容性。 （若要了解哪些功能特定于哪个版本，请参阅[发行说明](/visualstudio/releasenotes/vs2017-relnotes/)。）
+Visual Studio 的每个版本通常都支持大部分以前的项目、文件和其他资产类型。 可以[照常](../ide/solutions-and-projects-in-visual-studio.md)使用这些类型。如果不依赖新功能，Visual Studio 会尝试保留与旧版本（如 Visual Studio 2015、Visual Studio 2013 和 Visual Studio 2012）的向后兼容性。 （若要了解哪些功能特定于哪个版本，请参阅[发行说明](/visualstudio/releasenotes/vs2017-relnotes/)。）
 
 对某些项目类型的支持也会随着时间的推移而更改。 较新版本的 Visual Studio 可能不再支持某些项目，或者需要更新项目，使其不再向后兼容。 有关迁移问题的当前状态，请参阅 [Visual Studio 开发人员社区站点](https://developercommunity.visualstudio.com)。
 
@@ -47,7 +47,7 @@ Visual Studio 的每个版本通常都支持大部分以前的项目、文件和
 
 | 项目类型 | 支持 |
 | --- | --- |
-| .NET Core 项目 (xproj) | 使用 Visual Studio 2015 旧预览工具创建的项目，其中包括 xproj 项目文件。<br/><br/>Visual Studio 2017：不支持 xproj 格式，除非迁移到 csproj 格式。 当你打开 xproj 文件时，系统将提示你将文件迁移到 SDK 样式的 .csproj 格式。 （创建 xproj 文件的备份。）Visual Studio 2015 及更早版本不支持使用 SDK 样式的 .csproj 项目。 <br/><br/>Visual Studio 2019：在版本 16.3 和更高版本中，无法加载或迁移 xproj 项目。 有关详细信息，请参阅[将 .NET Core 项目迁移到 csproj 格式](/dotnet/core/migration/#visual-studio)。|
+| .NET Core 项目 (xproj) | 使用 Visual Studio 2015 旧预览工具创建的项目，其中包括 xproj 项目文件。 在 Visual Studio 2017 中，不支持 xproj 格式，除非迁移到 csproj 格式。 当你打开 xproj 文件时，系统将提示你将文件迁移到 SDK 样式的 .csproj 格式。 （创建 xproj 文件的备份。）Visual Studio 2015 及更早版本不支持使用 SDK 样式的 .csproj 项目。 有关详细信息，请参阅[将 .NET Core 项目迁移到 csproj 格式](/dotnet/core/migration/#visual-studio)。|
 | ASP.NET Web 应用程序和启用了 Application Insights 的 ASP.NET Core Web 应用程序 | 对于每个 Visual Studio 用户，资源信息存储在每个用户实例的注册表中。 用户在不打开项目，但想要搜索 Azure Application Insights 数据的情况下，可使用此信息。 Visual Studio 2015 使用与 Visual Studio 2017 不同的注册表位置，且未发生冲突。<br/><br/>用户创建 ASP.NET Web 应用程序或 ASP.NET Core Web 应用程序后，资源存储在 .suo 文件中。 用户可在 Visual Studio 2015 或 2017 中打开项目，只要 Visual Studio 支持这两个版本中使用的项目和解决方案，资源信息就可用于这两个版本。 用户需要在每个产品上进行一次身份验证。 例如，如果使用 Visual Studio 2015 创建项目，然后在 Visual Studio 2017 中打开，则用户需要在 Visual Studio 2017 上进行身份验证。 |
 | C#/Visual Basic Web 窗体或 Windows 窗体 | 可以在 Visual Studio 2017 和 Visual Studio 2015 中打开项目。 |
 | 数据库单元测试项目（csproj、.vbproj） | 较旧的数据单元测试项目在 Visual Studio 2017 中加载，但将使用 GAC 版本的依赖关系。 若要升级单元测试项目以使用最新的依赖关系，请在“解决方案资源管理器”中右键单击该项目，然后选择“转换为 SQL Server 单元测试项目...”  。 |
@@ -72,7 +72,7 @@ Visual Studio 的每个版本通常都支持大部分以前的项目、文件和
 | Visual Studio Tools for Apache Cordova | 可以在 Visual Studio 2017 中打开项目，但此项目不具有向后兼容性。 从 Visual Studio 2015 中打开某个项目时，系统将提示允许修改项目。 此修改会将项目升级为使用工具集而非 `taco.json` 文件来管理 Cordova 库、该库的平台、插件和节点/npm 依赖关系的版本控制。 有关详细信息，请参阅[迁移指南](https://docs.microsoft.com/visualstudio/cross-platform/tools-for-cordova/first-steps/migrate-from-visual-studio-2015)。 |
 | Web 部署 (wdproj) | Visual Studio 2012 中已删除对 Web 部署项目的支持，而添加了发布配置文件支持。 在 Visual Studio 2017 中没有相应的功能，因此，此类项目没有自动迁移路径。 而是，在文本编辑器中打开 wdproj 文件，并将任何自定义项复制粘贴到 pubxml（发布配置文件）文件中，如 [StackOverflow](https://stackoverflow.com/a/12061065/1203388) 中所述。 |
 | Windows Communication Foundation, Windows Workflow Foundation | 可以在 Visual Studio 2017、Visual Studio 2015、Visual Studio 2013 和 Visual Studio 2012 中打开此项目 |
-| Windows Presentation Foundation | 可以在 Visual Studio 2013、Visual Studio 2012 和 Visual Studio 2010 SP1 中打开此项目。 |
+| Windows Presentation Foundation | 可以在 Visual Studio 2017、Visual Studio 2013、Visual Studio 2012 和 Visual Studio 2010 SP1 中打开此项目。 |
 | Windows 应用商店/手机应用 | Visual Studio 2017 不支持 Windows Store 8.1 和 8.0 的项目，也不支持 Windows Phone 8.1 和 8.0 的项目。 若要继续使用这些应用，请继续使用 Visual Studio 2015。 要继续使用 Windows Phone 7.x 项目，请使用 Visual Studio 2012。 |
 
 ## <a name="how-visual-studio-decides-when-to-migrate-a-project"></a>Visual Studio 如何决定迁移项目的时间
@@ -112,11 +112,11 @@ Visual Studio 的每个版本通常都支持大部分以前的项目、文件和
 
 ::: moniker range="vs-2019"
 
-Visual Studio 的每个版本通常都支持大部分以前的项目、文件和其他资产类型。 可以[照常](../ide/solutions-and-projects-in-visual-studio.md)使用这些类型。如果不依赖新功能，Visual Studio 通常会尝试保留与旧版本（如 Visual Studio 2017、Visual Studio 2015、Visual Studio 2013 和 Visual Studio 2012）的向后兼容性。 （若要了解哪些功能特定于哪个版本，请参阅[发行说明](/visualstudio/releases/2019/release-notes/)。）
+Visual Studio 的每个版本通常都支持大部分以前的项目、文件和其他资产类型。 可以[照常](../ide/solutions-and-projects-in-visual-studio.md)使用这些类型。如果不依赖新功能，Visual Studio 会尝试保留与旧版本（如 Visual Studio 2017、Visual Studio 2015、Visual Studio 2013 和 Visual Studio 2012）的向后兼容性。 （若要了解哪些功能特定于哪个版本，请参阅[发行说明](/visualstudio/releases/2019/release-notes/)。）
 
-对某些项目类型的支持也会随着时间的推移而更改。 较新版本的 Visual Studio 可能不再支持某些项目，或者可能需要更新项目，使其不再向后兼容。 有关迁移问题的当前状态，请参阅 [Visual Studio 开发人员社区](https://developercommunity.visualstudio.com)。
+对某些项目类型的支持会随着时间的推移而更改。 较新版本的 Visual Studio 可能不再支持某些项目，或者可能需要更新项目，使其不再向后兼容。 有关迁移问题的当前状态，请参阅 [Visual Studio 开发人员社区](https://developercommunity.visualstudio.com)。
 
-本文详细介绍 Visual Studio 2019 可迁移的项目类型。 它还提供 Visual Studio 2019 弃用的或者即将弃用的项目类型的详细信息。 本文不包括 Visual Studio 2019 中不再支持且因此无法迁移的项目类型。 本文也不包括没有迁移问题的受支持项目类型；此列表位于[平台目标以及兼容性](/visualstudio/releases/2019/compatibility)中。
+本文详细介绍 Visual Studio 2019 可迁移的项目类型。 它还包括 Visual Studio 2019 弃用的或者即将弃用的项目类型的信息。 本文不包括 Visual Studio 2019 中不再支持且因此无法迁移的项目类型。 本文也不包括没有迁移问题的受支持项目类型；此列表位于[平台目标以及兼容性](/visualstudio/releases/2019/compatibility)中。
 
 > [!IMPORTANT]
 > 某些项目类型需要通过 Visual Studio 安装程序安装特定的工作负荷。 如果尚未安装工作负荷，Visual Studio 将报告未知的或不兼容的项目类型。 在这种情况下，请检查安装选项，然后重试。 有关 Visual Studio 2019 中项目支持的详细信息，请参阅[平台目标以及兼容性](/visualstudio/releases/2019/compatibility)。
@@ -125,11 +125,11 @@ Visual Studio 的每个版本通常都支持大部分以前的项目、文件和
 
 以下列表描述了 Visual Studio 2019 中对在之前版本中创建的项目的支持。
 
-如果未看到本应在此列出的项目或文件类型，请查阅[本文的 Visual Studio 2017 版本](port-migrate-and-upgrade-visual-studio-projects.md)，然后使用此页底部的“发送以下项的反馈” > “本页”按钮来提供有关项目的详细信息   。 （如果使用匿名“此页是否有帮助？” 控件，则我们无法对你的反馈作出响应。）
+如果在此处未看到任何项目或文件类型（此处本应出现这些内容），请参阅[本文的 Visual Studio 2017 版本](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects?view=vs-2017)。 还可以使用本页底部的“发送有关以下内容的反馈”   > “本页”  按钮来提供项目的详细信息。 （如果使用匿名“此页是否有帮助？” 控件，则我们无法对你的反馈作出响应。）
 
 | 项目类型 | 支持 |
 | --- | --- |
-| .NET Core 项目 (xproj) | 使用 Visual Studio 2015 旧预览工具创建的项目，其中包括 xproj 项目文件。 使用 Visual Studio 2019 打开 xproj 文件时，系统会提示将该文件迁移到 csproj 格式（执行 xproj 文件的备份）。 Visual Studio 2015 及早期版本中不支持 .NET Core 项目的这种 csproj 格式。  Visual Studio 2017 及更高版本不支持 xproj 格式，除非迁移到 csproj 格式。 有关详细信息，请参阅[将 .NET Core 项目迁移到 csproj 格式](/dotnet/core/migration/#visual-studio)。|
+| .NET Core 项目 (xproj) | 使用 Visual Studio 2015 旧预览工具创建的项目，其中包括 xproj 项目文件。<br/><br/>Visual Studio 2017：不支持 xproj 格式，除非迁移到 csproj 格式。 当你打开 xproj 文件时，系统将提示你将文件迁移到 SDK 样式的 .csproj 格式。 （创建 xproj 文件的备份。）Visual Studio 2015 及更早版本不支持使用 SDK 样式的 .csproj 项目。 <br/><br/>Visual Studio 2019：在版本 16.3 和更高版本中，无法加载或迁移 xproj 项目。 有关详细信息，请参阅[将 .NET Core 项目迁移到 csproj 格式](/dotnet/core/migration/#visual-studio)。|
 | ASP.NET Web 应用程序和启用了 Application Insights 的 ASP.NET Core Web 应用程序 | 对于每个 Visual Studio 用户，资源信息存储在每个用户实例的注册表中。 用户在不打开项目，但想要搜索 Azure Application Insights 数据的情况下，可使用此信息。 Visual Studio 2015 使用与 Visual Studio 2017 和 Visual Studio 2019 不同的注册表位置，且未发生冲突。<br/><br/>用户创建 ASP.NET Web 应用程序或 ASP.NET Core Web 应用程序后，资源存储在 .suo 文件中。 用户可在 Visual Studio 2015、Visual Studio 2017 或者 Visual Studio 2019 中打开项目，只要 Visual Studio 支持每个版本中使用的项目和解决方案，资源信息就可用于这些版本。 用户需要在每个产品上进行一次身份验证。 例如，如果使用 Visual Studio 2017 创建项目，然后在 Visual Studio 2019 中打开，则用户需要在 Visual Studio 2019 上进行身份验证。 |
 | C#/Visual Basic Web 窗体或 Windows 窗体 | 可以在 Visual Studio 2019、Visual Studio 2017 和 Visual Studio 2015 中打开项目。 |
 | 编码的 UI 测试 | 在 Visual Studio 2019 中，已弃用自动 UI 驱动功能测试的编码的 UI 测试。 <br/><br/>Visual Studio 2019 将是编码的 UI 测试的最后一个版本。 建议使用 Selenium 来测试 Web 应用，使用 Appium 和 WinAppDriver 来测试桌面和 UWP 应用。 |
@@ -162,7 +162,7 @@ Visual Studio 的每个版本通常都支持大部分以前的项目、文件和
 | Visual Studio Tools for Apache Cordova | 在 Visual Studio 2019 中删除了对 Apache Cordova 的支持。 在 Visual Studio 2019 中没有相应的功能，因此，此类项目没有自动迁移路径。<br/><br/>可以将 Cordova 工具用于 Visual Studio Code 扩展（其为最新版本的 Cordova 提供支持），也可以继续使用 Visual Studio 2017。 |
 | Web 部署 (wdproj) | Visual Studio 2012 中已删除对 Web 部署项目的支持，而添加了发布配置文件支持。 在 Visual Studio 2019 中没有相应的功能，因此，此类项目没有自动迁移路径。 而是，在文本编辑器中打开 wdproj 文件，并将任何自定义项复制粘贴到 pubxml（发布配置文件）文件中，如 [StackOverflow](https://stackoverflow.com/a/12061065/1203388) 中所述。 |
 | Windows Communication Foundation, Windows Workflow Foundation | 可以在 Visual Studio 2019、Visual Studio 2017、Visual Studio 2015、Visual Studio 2013 和 Visual Studio 2012 中打开此项目。 |
-| Windows Presentation Foundation | 可以在 Visual Studio 2017、Visual Studio 2013、Visual Studio 2012 和 Visual Studio 2010 SP1 中打开此项目。 |
+| Windows Presentation Foundation | 可以在 Visual Studio 2019、Visual Studio 2017、Visual Studio 2013、Visual Studio 2012 和 Visual Studio 2010 SP1 中打开此项目。 |
 | Windows Phone 应用 | Visual Studio 2019 不支持 Windows Phone 项目。 <br/><br/>要继续使用 Windows Phone 8.x 应用，请使用 Visual Studio 2015。 要继续使用 Windows Phone 7.x 项目，请使用 Visual Studio 2012。 |
 | Windows 应用商店应用程序 | Visual Studio 2019 不支持 JavaScript Universal Windows 项目。 要继续使用这些项目，请使用 Visual Studio 2017。 <br/><br/>Windows 10 Fall Creators Update（内部版本 16299）之前的 Windows 10 SDK 已从 Visual Studio 2019 安装程序中删除。 可以手动下载旧版 SDK，也可以重定向项目以使用较新的 SDK。<br/><br/>不支持使用 project.json 的通用 Windows 项目。 建议升级这些项目以使用包引用。 或者，在 project.json 文件中添加对 Microsoft.NET.Test.Sdk 版本 16.0.0.0 的引用。<br/><br/>Visual Studio 2019 不支持 Windows Store 8.1 和 8.0 的项目。 要继续使用这些应用，请继续使用 Visual Studio 2015。 |
 | Xamarin | 已删除适用于 Visual Studio 和 Visual Studio for Mac 的 Xamarin Live Player 扩展。 这会删除配对屏幕和任何集成。 改用内置的 Xamarin.Forms 预览器。<br/><br/>适用于 Android 的 Visual Studio 仿真程序已从 Visual Studio 安装程序中删除。 改用 Google Android 仿真程序中的新的 Hyper-V 支持。 |

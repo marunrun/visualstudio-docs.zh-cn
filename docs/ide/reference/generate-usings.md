@@ -11,12 +11,12 @@ ms.workload:
 - dotnet
 helpviewer_keywords:
 - add missing usings
-ms.openlocfilehash: d971bcdaca4efdf587c7e441f1b0b28d21388dee
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 78786e6e6e7a8e5d8a8766138cb1a54a49416f9a
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416475"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72610890"
 ---
 # <a name="add-missing-usings-in-visual-studio"></a>在 Visual Studio 中添加缺少的 usings
 
@@ -24,15 +24,15 @@ ms.locfileid: "68416475"
 
 - C#
 
-**功能：** 可以立即添加复制和粘贴代码的必要导入或 [using 语句](/dotnet/csharp/language-reference/keywords/using-statement)。
+**功能：** 可以立即添加复制和粘贴代码的必要导入或 [using 指令](/dotnet/csharp/language-reference/keywords/using-directive)。
 
-**使用时机：** 通常的做法是从项目或其他源中的不同位置复制代码并将其粘贴到新代码中。 此快速操作找到复制和粘贴代码的缺少导入语句，然后提示添加它们。
+**使用时机：** 通常的做法是从项目或其他源中的不同位置复制代码并将其粘贴到新代码中。 此快速操作找到复制和粘贴代码的缺少导入指令，然后提示添加它们。
 
 操作原因：  由于此快速操作自动添加必要导入，因此不必手动复制代码所需的 `using` 语句。
 
 ## <a name="add-missing-usings-refactoring"></a>添加缺少的 usings 重构
 
-1. 复制来自文件的代码并将其粘贴到新代码中，无需包括必要的 `using` 语句。 生成的错误会伴随一个代码修补程序出现，该修补程序可添加缺少的 `using` 语句。
+1. 复制来自文件的代码并将其粘贴到新代码中，无需包括必要的 `using` 指令。 生成的错误会伴随一个代码修补程序出现，该修补程序可添加缺少的 `using` 指令。
 
     > [!NOTE]
     > 需要在“工具”>“选项”>“文本编辑器”>“C#”>“高级”>“使用指令”  中启用此建议。

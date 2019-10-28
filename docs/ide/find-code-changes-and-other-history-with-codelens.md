@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.CodeLens
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 62ea3402a053ed57280ddbc946d79d27ab35f944
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: da45af92a11cfe61d5027d0710304e57ad657e48
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62980354"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653853"
 ---
 # <a name="find-code-changes-and-other-history-with-codelens"></a>使用 CodeLens 查找代码更改和其他历史记录
 
@@ -23,7 +23,7 @@ ms.locfileid: "62980354"
 ::: moniker range=">=vs-2019"
 
 > [!NOTE]
-> 源代码管理 CodeLens 指示器在 Visual Studio Community 版本中不可用。
+> CodeLens 在源代码 Visual Studio Community 版本中可用，而源代码管理  指示器在此版本中不可用。
 
 ::: moniker-end
 
@@ -42,18 +42,18 @@ ms.locfileid: "62980354"
 
 ![CodeLens - 联系你的团队](../ide/media/codelens-contact-info.png)
 
-若要选择想要查看的指示器或要关闭和打开 CodeLens，请依次转到“工具” > “选项” > “文本编辑器” > “所有语言” > “CodeLens”。
+若要选择想要查看的指示器或要关闭和打开 CodeLens，请依次转到“工具” > “选项” > “文本编辑器” > “所有语言” > “CodeLens”      。
 
 ## <a name="find-references-to-your-code"></a>查找对代码的引用
 
 可以在 C# 或 Visual Basic 代码中查找引用。
 
-1. 选择“引用”指示器或按 Alt+2。
+1. 选择“引用”  指示器或按 Alt  +2  。
 
    ![CodeLens 引用](../ide/media/codelens-view-references.png)
 
    > [!NOTE]
-   > 如果指示器显示 0 个引用，则没有来自 C# 或 Visual Basic 代码的引用。 但可能存在其他项（如 .xaml 和 .aspx 文件）中的引用。
+   > 如果指示器显示 0 个引用  ，则没有来自 C# 或 Visual Basic 代码的引用。 但可能存在其他项（如 .xaml 和 .aspx 文件）中的引用   。
 
 2. 若要查看引用代码，将鼠标悬停在列表中的引用上方。
 
@@ -63,7 +63,7 @@ ms.locfileid: "62980354"
 
 ### <a name="code-maps"></a>代码图
 
-若要查看该代码与其引用之间的关系，[创建代码图](../modeling/map-dependencies-across-your-solutions.md)。 在代码图快捷菜单中，选择“显示所有引用”。
+若要查看该代码与其引用之间的关系，[创建代码图](../modeling/map-dependencies-across-your-solutions.md)。 在代码图快捷菜单中，选择“显示所有引用”  。
 
 ![CodeLens - 代码映射上的引用](../ide/media/codelensmappedreferences.png)
 
@@ -79,11 +79,11 @@ ms.locfileid: "62980354"
 
 - [Skype for Business](/skypeforbusiness/)，可从代码编辑器联系团队
 
-对于随 Team Foundation 版本控制 (TFVC) 或 Git 一起存储的 C# 或 Visual Basic 代码，可以获取类和方法级别上的 CodeLens 详细信息（码位元素级别指示器）。 如果你的 Git 存储库托管在 TfGit 中，则还可以获取指向 TFS 工作项的链接。
+对于随 Team Foundation 版本控制 (TFVC) 或 Git 一起存储的 C# 或 Visual Basic 代码，可以获取类和方法级别上的 CodeLens 详细信息（码位元素级别  指示器）。 如果你的 Git 存储库托管在 TfGit 中，则还可以获取指向 TFS 工作项的链接。
 
 ![代码元素级别指示器](../ide/media/codelens-element-level-indicators.png)
 
-对于除 .cs 或 .vb 以外的文件类型，在窗口底部的某个位置获取整个文件的 CodeLens 详细信息（文件级指示器）。
+对于除 .cs  或 .vb  以外的文件类型，在窗口底部的某个位置获取整个文件的 CodeLens 详细信息（文件级  指示器）。
 
 ![文件级别 CodeLens 指示器](../ide/media/almcodelensfilelevelindicators.png)
 
@@ -97,11 +97,11 @@ ms.locfileid: "62980354"
 
 默认时间段为最近 12 个月。 如果代码存储在 Team Foundation Server 中，可以通过运行具有 [CodeIndex 命令](/tfs/server/ref/command-line/tfsconfig-cmd)和 [/indexHistoryPeriod](../ide/codeindex-command.md) 标志的 **TFSConfig 命令**对时间段进行更改。
 
-若要查看所有更改（包括一年前的更改）的详细历史记录，选择“显示所有文件更改”：
+若要查看所有更改（包括一年前的更改）的详细历史记录，选择“显示所有文件更改”  ：
 
 ![显示所有代码更改](../ide/media/codelens-show-all-file-changes.png)
 
-此时将打开“历史记录”窗口：
+此时将打开“历史记录”  窗口：
 
 ![所有代码更改的历史记录窗口](../ide/media/codelenscodechangeshistory.png)
 
@@ -118,7 +118,7 @@ ms.locfileid: "62980354"
 > [!NOTE]
 > 文件级别指示器不可用于 C# 和 Visual Basic 文件。
 
-若要获得有关更改的详细信息，请右键单击该项。 根据使用的是 TFVC 还是 Git，可使用一些选项来比较文件的版本、查看详细信息和跟踪变更集、获取文件的所选版本并向进行该更改的作者发送电子邮件。 某些详细信息会在“团队资源管理器”中显示。
+若要获得有关更改的详细信息，请右键单击该项。 根据使用的是 TFVC 还是 Git，可使用一些选项来比较文件的版本、查看详细信息和跟踪变更集、获取文件的所选版本并向进行该更改的作者发送电子邮件。 某些详细信息会在“团队资源管理器”  中显示。
 
 还可以查看在某段时间内更改代码的人员。 这可以帮助发现团队更改中的模式并评估它们的影响。
 
@@ -130,13 +130,13 @@ ms.locfileid: "62980354"
 
 ![CodeLens：查找何时对你的代码进行了分支](../ide/media/codelensfirstbranchconceptual.png)
 
-按 Alt+6 可了解在主要分支中更改代码的人数和所做更改数：
+按 Alt  +6  可了解在主要分支中更改代码的人数和所做更改数：
 
 ![CodeLens：查找分支中有多少处更改](../ide/media/codelens-branch-changes.png)
 
 ### <a name="find-when-your-code-was-branched"></a>查找何时对你的代码进行了分支
 
-若要了解何时对代码进行了分支，导航到子分支中的代码。 然后，选择“更改”指示器或按 Alt+6：
+若要了解何时对代码进行了分支，导航到子分支中的代码。 然后，选择“更改”指示器或按 Alt+6    ：
 
 ![CodeLens：查找何时对你的代码进行了分支](../ide/media/codelens-first-branch.png)
 
@@ -164,13 +164,13 @@ ms.locfileid: "62980354"
 
 ### <a name="compare-an-incoming-change-with-your-local-version"></a>将传入更改与本地版本进行比较
 
-按 Shift+F10 或双击变更集，将传入更改与本地版本进行比较。
+按 Shift  +F10  或双击变更集，将传入更改与本地版本进行比较。
 
 ![CodeLens：将传入的更改与本地更改进行比较](../ide/media/codelens-branch-incoming-change-menu.png)
 
 ### <a name="branch-icons"></a>分支图标
 
-通过“分支”列中的图标，可了解该分支与你正在使用的分支之间的关系。
+通过“分支”  列中的图标，可了解该分支与你正在使用的分支之间的关系。
 
 |**图标**|**更改来源：**|
 |--------------| - |
@@ -185,25 +185,25 @@ ms.locfileid: "62980354"
 
 ## <a name="linked-work-items"></a>链接的工作项
 
-选择“工作项”指示器或按 Alt+8，查找关联的工作项。
+选择“工作项”  指示器或按 Alt  +8  ，查找关联的工作项。
 
 ![CodeLens - 查找特定代码的工作项](../ide/media/codelens-work-items.png)
 
 ## <a name="linked-code-reviews"></a>关联的代码评审
 
-选择“评审”指示器，查找关联的代码评审。 若要使用键盘，按住 Alt，然后按“向左键”或“向右键”来导航指示器选项。
+选择“评审”  指示器，查找关联的代码评审。 若要使用键盘，按住 Alt  ，然后按“向左键”  或“向右键”  来导航指示器选项。
 
 ![CodeLens - 查看代码审阅请求](../ide/media/codelens-code-reviews.png)
 
 ## <a name="linked-bugs"></a>关联的 bug
 
-选择“bug”指示器或按 Alt+7，查找关联的 bug。
+选择“bug”  指示器或按 Alt  +7  ，查找关联的 bug。
 
 ![CodeLens - 查找链接到变更集的 Bug](../ide/media/codelens-bugs-changesets.png)
 
 ## <a name="contact-the-owner-of-an-item"></a>联系项的所有者
 
-选择“作者”指示器或按 Alt+5，查找项的作者。
+选择“作者”  指示器或按 Alt  +5  ，查找项的作者。
 
 ![联系项的所有者](../ide/media/codelens-contact-item-owner.png)
 
@@ -213,13 +213,13 @@ ms.locfileid: "62980354"
 
 ## <a name="associated-unit-tests"></a>关联的单元测试
 
-无需打开“测试资源管理器”便可发现针对 C# 或 Visual Basic 代码存在的单元测试。
+无需打开“测试资源管理器”  便可发现针对 C# 或 Visual Basic 代码存在的单元测试。
 
 1. 转到具有关联的[单元测试代码](../test/unit-test-your-code.md)的应用程序代码。
 
 2. 如果还没有，请生成应用程序以加载 CodeLens 测试指示器。 确保已打开[各生成程序集的发现](../test/test-explorer-faq.md#assembly-based-discovery)。
 
-3. 按 Alt+3，查看代码的测试。
+3. 按 Alt  +3  ，查看代码的测试。
 
      ![CodeLens - 在代码编辑器中选择测试状态](../ide/media/codelens-choose-test-indicator.png)
 
@@ -231,7 +231,7 @@ ms.locfileid: "62980354"
 
      ![CodeLens - 转到单元测试定义](../ide/media/codelens-unit-test-definition.png)
 
-6. 若要查看测试结果，选择测试状态指示器（![测试失败图标](../ide/media/codelenstestfailedicon.png)或![测试通过图标](../ide/media/codelenstestpassedicon.png)）或按 Alt+1。
+6. 若要查看测试结果，选择测试状态指示器（![测试失败图标](../ide/media/codelenstestfailedicon.png)或![测试通过图标](../ide/media/codelenstestpassedicon.png)）或按 Alt  +1  。
 
      ![CodeLens - 查看单元测试结果](../ide/media/codelens-unit-test-result.png)
 
@@ -239,18 +239,18 @@ ms.locfileid: "62980354"
 
 ## <a name="keyboard-shortcuts"></a>键盘快捷键
 
-若要使用键盘来选择指示器，按住 Alt 可显示相关的数字键，然后按对应于要选择的指示器的数字。
+若要使用键盘来选择指示器，按住 Alt  可显示相关的数字键，然后按对应于要选择的指示器的数字。
 
 ![键盘访问数字](../ide/media/codelens-alt-keys.png)
 
 > [!NOTE]
-> 若要选择“评审”指示器，按住 Alt 的同时，使用向左键和向右键进行导航。
+> 若要选择“评审”  指示器，按住 Alt  的同时，使用向左键和向右键进行导航。
 
 ## <a name="q--a"></a>问题解答
 
 ### <a name="q-how-do-i-turn-codelens-off-or-on-or-choose-which-indicators-to-see"></a>问：如何关闭或打开 CodeLens 或选择要查看的指示器？
 
-**答：** 可以关闭或打开指示器，引用指示器除外。 转到“工具” > “选项” > “文本编辑器” > “所有语言” > “CodeLens”。
+**答：** 可以关闭或打开指示器，引用指示器除外。 转到“工具” > “选项” > “文本编辑器” > “所有语言” > “CodeLens”      。
 
 指示器打开后，你也可以从指示器上打开“CodeLens”选项。
 
@@ -264,18 +264,18 @@ ms.locfileid: "62980354"
 
 **答：** CodeLens 出现在方法、类、索引器和属性级别的 C# 和 Visual Basic 代码中。 对于所有其他文件类型，CodeLens 出现在文件级别。
 
-- 确保 CodeLens 开启。 转到“工具” > “选项” > “文本编辑器” > “所有语言” > “CodeLens”。
+- 确保 CodeLens 开启。 转到“工具” > “选项” > “文本编辑器” > “所有语言” > “CodeLens”      。
 
 - 如果代码存储在 TFS 中，请确保使用 [CodeIndex 命令](../ide/codeindex-command.md) 和 [TFS Config 命令](/tfs/server/ref/command-line/tfsconfig-cmd)打开代码索引。
 
 - 仅当工作项已链接到代码并且你有权打开链接的工作项时，才显示与 DevOps 相关的指示器。 确认具有[团队成员权限](/azure/devops/organizations/security/view-permissions?view=vsts)。
 
-- 当应用程序代码没有单元测试时，单元测试指示器不显示。 测试状态指示器自动显示在测试项目中。 如果知道应用程序代码具有单元测试，但测试指示器未显示，请尝试生成解决方案 (Ctrl+Shift+B)。
+- 当应用程序代码没有单元测试时，单元测试指示器不显示。 测试状态指示器自动显示在测试项目中。 如果知道应用程序代码具有单元测试，但测试指示器未显示，请尝试生成解决方案 (Ctrl  +Shift  +B  )。
 
 ::: moniker range=">=vs-2019"
 
 > [!TIP]
-> 源代码管理指示器在 Visual Studio Community 版本中不可用。
+> CodeLens 在源代码 Visual Studio Community 版本中可用，而源代码管理  指示器在此版本中不可用。
 
 ::: moniker-end
 
@@ -306,19 +306,19 @@ CodeLens 不支持安装不同版本的 Lync 或 Skype。 可能不会针对所�
 
 ### <a name="q-how-do-i-change-the-font-and-color-for-codelens"></a>问：如何更改 CodeLens 的字体和颜色？
 
-**答：** 转到“工具” > “选项” > “环境” > “字体和颜色”。
+**答：** 转到“工具” > “选项” > “环境” > “字体和颜色”     。
 
 ![CodeLens - 更改字体和颜色设置](../ide/media/codelensoptionsfontscolorssettings.png)
 
 使用键盘：
 
-1. 按 Alt+T+O 可打开“选项”对话框。
+1. 按 Alt  +T  +O  可打开“选项”  对话框。
 
 2. 按向上键  或向下键  转到 **“环境”** 节点，然后按向左键  展开该节点。
 
-3. 按向下键  转到 **“字体和颜色”**。
+3. 按向下键  转到 **“字体和颜色”** 。
 
-4. 按 Tab 转到“显示其设置”列表，然后按向下键选择“CodeLens”。
+4. 按 Tab 转到“显示其设置”列表，然后按向下键选择“CodeLens”     。
 
 ### <a name="q-can-i-move-the-codelens-heads-up-display"></a>问：我是否能移动 CodeLens 平视显示？
 
@@ -332,19 +332,19 @@ CodeLens 不支持安装不同版本的 Lync 或 Skype。 可能不会针对所�
 
 **答：** 这取决于指示器：
 
-- **引用**：代码更改时，此指示器会自动更新。 如果“引用”指示器作为单独的窗口停靠，请选择“刷新”来刷新该指示器：
+- **引用**：代码更改时，此指示器会自动更新。 如果“引用”  指示器作为单独的窗口停靠，请选择“刷新”  来刷新该指示器：
 
    ![CodeLens 引用中的“刷新”按钮](../ide/media/codelensviewreferencesdocked.png)
 
-- **团队**：从右键单击菜单中选择“刷新 CodeLens 团队指示器”，刷新这些指示器：
+- **团队**：从右键单击菜单中选择“刷新 CodeLens 团队指示器”，刷新这些指示器  ：
 
    ![“刷新 CodeLens 团队指示器”菜单项](../ide/media/codelensrefreshindicatorsfromcode.png)
 
-- **测试**：[查找代码的单元测试](#associated-unit-tests)，刷新“测试”指示器。
+- **测试**：[查找代码的单元测试](#associated-unit-tests)，刷新“测试”指示器  。
 
 ### <a name="q-whats-local-version"></a>问：什么是“本地版本”？
 
-**答：**“本地版本”箭头指向文件的本地版本中的最新变更集。 当服务器具有最新的变更集时，它们显示在 **“本地版本”** 箭头的上方或下方，具体取决于排列变更集的顺序。
+**答：** “本地版本”箭头指向文件的本地版本中的最新变更集  。 当服务器具有最新的变更集时，它们显示在 **“本地版本”** 箭头的上方或下方，具体取决于排列变更集的顺序。
 
 ### <a name="q-can-i-manage-how-codelens-processes-code-to-show-history-and-linked-items"></a>问：是否可以管理 CodeLens 如何处理代码以显示历史记录和链接的项？
 
@@ -353,7 +353,7 @@ CodeLens 不支持安装不同版本的 Lync 或 Skype。 可能不会针对所�
 ### <a name="q-my-codelens-test-indicators-no-longer-appear-in-my-file-when-i-first-open-my-solution-how-can-i-load-them"></a>问：首次打开解决方案时，文件中不再显示 CodeLens 测试指示器。 如何加载它们？
 
 **答：** 重新生成项目，获取要加载到文件中的 CodeLens 测试指示器。 确保已打开[各生成程序集的发现](../test/test-explorer-faq.md#assembly-based-discovery
-)。 为了提高性能，Visual Studio 在加载代码文件时不再提取测试指示器的源信息。 测试指示器在生成后或在导航到测试时（通过在“测试资源管理器”中双击该测试）加载。
+)。 为了提高性能，Visual Studio 在加载代码文件时不再提取测试指示器的源信息。 测试指示器在生成后或在导航到测试时（通过在“测试资源管理器”中双击该测试）加载  。
 
 ## <a name="see-also"></a>请参阅
 

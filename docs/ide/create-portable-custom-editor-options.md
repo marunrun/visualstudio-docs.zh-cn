@@ -4,15 +4,15 @@ ms.date: 08/01/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - editorconfig [Visual Studio]
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6b8602dfb37b1cdad046b012d62f888e77ca5343
-ms.sourcegitcommit: a2df993dc5e11c5131dbfcba686f0028a589068f
+ms.openlocfilehash: cab93bcf60c5a4fb5034bfdfd7601e4f846996d0
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71150178"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652631"
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>使用 EditorConfig 创建可移植的自定义编辑器设置
 
@@ -24,15 +24,15 @@ ms.locfileid: "71150178"
 
 在 Visual Studio 中向项目添加 EditorConfig 文件后，将按照 EditorConfig 设置对所有新代码行的格式进行设置。 除非运行以下命令之一，否则不会更改现有代码的格式：
 
- - [代码清除](../ide/code-styles-and-code-cleanup.md)（Ctrl+K、Ctrl+E），适用于任何空格设置（如缩进样式）和所选的代码样式设置（例如如何对 `using` 语句进行排序     ）。
+ - [代码清除](../ide/code-styles-and-code-cleanup.md)（Ctrl+K、Ctrl+E），适用于任何空格设置（如缩进样式）和所选的代码样式设置（例如如何对 `using` 指令进行排序     ）。
  - “编辑”>“高级”>“设置文档格式”（或在默认配置文件中按 Ctrl+K、Ctrl+D），仅应用空格设置，如缩进样式        。
- 
+
  ::: moniker-end
- 
+
 ::: moniker range="=vs-2017"
 
 在 Visual Studio 中向项目添加 EditorConfig 文件后，将按照 EditorConfig 设置对所有新代码行的格式进行设置。 现有代码的格式设置不会更改，除非设置文档格式（在默认配置文件中单击“编辑” > “高级” > “设置文档格式”或按 Ctrl+K、Ctrl+D）        。 文档格式设置只会影响空格设置（如缩进样式），除非已将“设置文档格式”配置为[执行其他代码清理](../ide/code-styles-and-code-cleanup.md#apply-code-styles)。
- 
+
  ::: moniker-end
 
 ::: moniker range="vs-2017"

@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: be7b9bd67ed88b9f59ed279211bf15c96ae59569
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: 897c4ba0bfa46e73115f8288770d088346498dee
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119008"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516697"
 ---
 # <a name="step-1-create-a-windows-forms-app-project"></a>步骤 1：创建 Windows 窗体应用项目
 
@@ -50,7 +50,7 @@ ms.locfileid: "71119008"
 
    应用“项目类型”筛选器之后，为 C# 或 Visual Basic 选择“Windows 窗体应用(.NET Framework)”模板，然后选择“下一步”    。
 
-   ![为 Windows 窗体应用 (.NET Framework) 选择 C# 模板](./media/create-new-project-search-winforms-filtered.png)
+   ![为“Windows 窗体应用 (.NET Framework)”选择 C# 或 Visual Basic 模板](./media/create-new-project-search-winforms-filtered.png)
 
    > [!NOTE]
    > 如果未看到“Windows 窗体应用(.NET Framework)”模板，则可以通过“创建新项目”窗口安装该模板   。 在“找不到所需内容?”消息中，选择“安装更多工具和功能”链接   。
@@ -111,7 +111,7 @@ Visual Studio 将为你的应用创建解决方案。 解决方案充当应用�
 
 ## <a name="next-steps"></a>后续步骤
 
-* 要转到下一个教程步骤，请参阅[步骤 2：运行应用](../ide/step-2-run-your-program.md)** 。
+* 要转到下一个教程步骤，请参阅[步骤 2：运行应用](../ide/step-2-run-your-program.md)  。
 
 * 要返回概述主题，请参阅[教程 1：创建图片查看器](../ide/tutorial-1-create-a-picture-viewer.md)。
 

@@ -13,26 +13,26 @@ dev_langs:
 - C++
 - jsharp
 helpviewer_keywords:
-- MSBuild (Visual C++), CL task
-- CL task (MSBuild (Visual C++))
+- MSBuild (C++), CL task
+- CL task (MSBuild (C++))
 ms.assetid: 651ba971-b755-4f03-a549-4816beb3cc0d
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9ec3be0adf6f262cafbebe2da714f4e74777329c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7f7704ebee49af51c5cbeff118d2eed8e08ace30
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62569688"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747355"
 ---
 # <a name="cl-task"></a>CL 任务
-包装 Visual C++ 编译器工具 cl.exe。 编译器生成可执行 (.exe) 文件、动态链接库 (.dll) 文件或者代码模块 (.netmodule) 文件。 有关详细信息，请参阅[编译器选项](/cpp/build/reference/compiler-options)。
+包装 Microsof C++ 编译器工具，cl.exe  。 编译器生成可执行 (.exe) 文件、动态链接库 (.dll) 文件或者代码模块 (.netmodule) 文件    。 有关详细信息，请参阅[编译器选项](/cpp/build/reference/compiler-options)。
 
 ## <a name="parameters"></a>参数
- 下表描述了 CL 任务的参数。 大多数任务参数和若干组参数都对应于命令行选项。
+ 下表描述了 CL 任务的参数  。 大多数任务参数和若干组参数都对应于命令行选项。
 
 - **AdditionalIncludeDirectories**
 
@@ -62,13 +62,13 @@ ms.locfileid: "62569688"
 
    可选 String 参数。
 
-   一个始终在命令行上发出的字符串。 其默认值为“**/c**”。
+   一个始终在命令行上发出的字符串。 其默认值为“ **/c**”。
 
 - **AssemblerListingLocation**
 
    创建包含程序集代码的列表文件。
 
-   有关详细信息，请参阅 [/FA、/Fa（列表文件）](/cpp/build/reference/fa-fa-listing-file)中的 /Fa 选项。
+   有关详细信息，请参阅 [/FA、/Fa（列表文件）](/cpp/build/reference/fa-fa-listing-file)中的 /Fa 选项  。
 
 - **AssemblerOutput**
 
@@ -78,17 +78,17 @@ ms.locfileid: "62569688"
 
    指定以下值之一，其中每个值对应于一个命令行选项。
 
-  - **NoListing** - *\<none>*
+  - **NoListing** -  *\<none>*
 
-  - **AssemblyCode** - **/FA**
+  - **AssemblyCode** -  **/FA**
 
-  - **AssemblyAndMachineCode** - **/FAc**
+  - **AssemblyAndMachineCode** -  **/FAc**
 
-  - **AssemblyAndSourceCode** - **/FAs**
+  - **AssemblyAndSourceCode** -  **/FAs**
 
-  - **All** - **/FAcs**
+  - **All** -  **/FAcs**
 
-    有关详细信息，请参阅 [/FA、/Fa（列表文件）](/cpp/build/reference/fa-fa-listing-file)中的 /FA、/FAc、/FAs 和 /FAcs 选项。
+    有关详细信息，请参阅 [/FA、/Fa（列表文件）](/cpp/build/reference/fa-fa-listing-file)中的 /FA、/FAc、/FAs 和 /FAcs 选项     。
 
 - **BasicRuntimeChecks**
 
@@ -98,13 +98,13 @@ ms.locfileid: "62569688"
 
    指定以下值之一，其中每个值对应于一个命令行选项。
 
-  - **Default** -                          *\<none>*
+  - **Default** -                           *\<none>*
 
-  - **StackFrameRuntimeCheck** - **/RTCs**
+  - **StackFrameRuntimeCheck** -  **/RTCs**
 
-  - **UninitializedLocalUsageCheck** - **/RTCu**
+  - **UninitializedLocalUsageCheck** -  **/RTCu**
 
-  - **EnableFastChecks** -                          **/RTC1**
+  - **EnableFastChecks** -                           **/RTC1**
 
     有关详细信息，请参阅 [/RTC（运行时错误检查）](/cpp/build/reference/rtc-run-time-error-checks)。
 
@@ -114,7 +114,7 @@ ms.locfileid: "62569688"
 
    如果为 `true`，则创建浏览信息文件。
 
-   有关详细信息，请参阅 [/FR、/Fr（创建 .Sbr 文件）](/cpp/build/reference/fr-fr-create-dot-sbr-file)中的 /FR 选项。
+   有关详细信息，请参阅 [/FR、/Fr（创建 .Sbr 文件）](/cpp/build/reference/fr-fr-create-dot-sbr-file)中的 /FR 选项  。
 
 - **BrowseInformationFile**
 
@@ -122,7 +122,7 @@ ms.locfileid: "62569688"
 
    指定浏览信息文件的文件名称。
 
-   有关详细信息，请参阅此表中的 BrowseInformation 参数，同时还请参阅 [/FR、/Fr （创建 .sbr 文件）](/cpp/build/reference/fr-fr-create-dot-sbr-file)。
+   有关详细信息，请参阅此表中的 BrowseInformation 参数，同时还请参阅 [/FR、/Fr （创建 .sbr 文件）](/cpp/build/reference/fr-fr-create-dot-sbr-file)  。
 
 - **BufferSecurityCheck**
 
@@ -146,11 +146,11 @@ ms.locfileid: "62569688"
 
    指定以下值之一，其中每个值对应于一个命令行选项。
 
-  - **Cdecl** - **/Gd**
+  - **Cdecl** -  **/Gd**
 
-  - **FastCall** -                          **/Gr**
+  - **FastCall** -                           **/Gr**
 
-  - **StdCall** -                          **/Gz**
+  - **StdCall** -                           **/Gz**
 
     有关详细信息，请参阅 [/Gd、/Gr、/Gv、/Gz（调用约定）](/cpp/build/reference/gd-gr-gv-gz-calling-convention)。
 
@@ -162,11 +162,11 @@ ms.locfileid: "62569688"
 
    指定以下值之一，其中每个值对应于一个命令行选项。
 
-  - **Default** - *\<none>*
+  - **Default** -  *\<none>*
 
-  - **CompileAsC** - **/TC**
+  - **CompileAsC** -  **/TC**
 
-  - **CompileAsCpp** - **/TP**
+  - **CompileAsCpp** -  **/TP**
 
     有关详细信息，请参阅 [/Tc、/Tp、/TC、/TP（指定源文件类型）](/cpp/build/reference/tc-tp-tc-tp-specify-source-file-type)。
 
@@ -178,15 +178,15 @@ ms.locfileid: "62569688"
 
    指定以下值之一，其中每个值对应于一个命令行选项。
 
-  - **false** - *\<none>*
+  - **false** -  *\<none>*
 
-  - **true** - **/clr**
+  - **true** -  **/clr**
 
-  - **Pure** - **/clr:pure**
+  - **Pure** -  **/clr:pure**
 
-  - **Safe** - **/clr:safe**
+  - **Safe** -  **/clr:safe**
 
-  - **OldSyntax** - **/clr:oldSyntax**
+  - **OldSyntax** -  **/clr:oldSyntax**
 
     有关详细信息，请参阅 [/clr（公共语言运行时编译）](/cpp/build/reference/clr-common-language-runtime-compilation)。
 
@@ -202,15 +202,15 @@ ms.locfileid: "62569688"
 
    可选 String 参数。
 
-   选择为程序创建的调试信息的类型，并选择是将此信息保存在对象 (.obj) 文件中，还是保存在程序数据库 (PDB) 中。
+   选择为程序创建的调试信息的类型，并选择是将此信息保存在对象 (.obj) 文件中，还是保存在程序数据库 (PDB) 中  。
 
    指定以下值之一，其中每个值对应于一个命令行选项。
 
-  - **OldStyle** - **/Z7**
+  - **OldStyle** -  **/Z7**
 
-  - **ProgramDatabase** - **/Zi**
+  - **ProgramDatabase** -  **/Zi**
 
-  - **EditAndContinue** - **/ZI**
+  - **EditAndContinue** -  **/ZI**
 
     有关详细信息，请参阅 [/Z7、/Zi、/ZI（调试信息格式）](/cpp/build/reference/z7-zi-zi-debug-information-format)。
 
@@ -220,7 +220,7 @@ ms.locfileid: "62569688"
 
    如果为 **true**，则告知编译器发出不与 ANSI C 或 ANSI C++ 兼容的语言构造错误。
 
-   有关详细信息，请参阅 [/Za、/Ze（禁用语言扩展）](/cpp/build/reference/za-ze-disable-language-extensions)的 /Za 选项。
+   有关详细信息，请参阅 [/Za、/Ze（禁用语言扩展）](/cpp/build/reference/za-ze-disable-language-extensions)的 /Za 选项  。
 
 - **DisableSpecificWarnings**
 
@@ -238,9 +238,9 @@ ms.locfileid: "62569688"
 
    指定以下值之一，其中每个值对应于一个命令行选项。
 
-  - **StreamingSIMDExtensions** - **/arch:SSE**
+  - **StreamingSIMDExtensions** -  **/arch:SSE**
 
-  - **StreamingSIMDExtensions2** - **/arch:SSE2**
+  - **StreamingSIMDExtensions2** -  **/arch:SSE2**
 
     有关详细信息，请参阅 [/arch (x86)](/cpp/build/reference/arch-x86)。
 
@@ -264,17 +264,17 @@ ms.locfileid: "62569688"
 
    可选 String 参数。
 
-   允许你直接向 Microsoft 提供内部编译器错误 (ICE) 信息。 默认情况下，IDE 生成中的设置是“提示”，命令行生成中的设置是“队列”。
+   允许你直接向 Microsoft 提供内部编译器错误 (ICE) 信息。 默认情况下，IDE 生成中的设置是“提示”  ，命令行生成中的设置是“队列”  。
 
    指定以下值之一，其中每个值对应于一个命令行选项。
 
-  - **None** - **/errorReport:none**
+  - **None** -  **/errorReport:none**
 
-  - **Prompt** - **/errorReport:prompt**
+  - **Prompt** -  **/errorReport:prompt**
 
-  - **Queue** - **/errorReport:queue**
+  - **Queue** -  **/errorReport:queue**
 
-  - **Send** - **/errorReport:send**
+  - **Send** -  **/errorReport:send**
 
     有关详细信息，请参阅 [/errorReport（报告内部编译器错误）](/cpp/build/reference/errorreport-report-internal-compiler-errors)。
 
@@ -286,13 +286,13 @@ ms.locfileid: "62569688"
 
    指定以下值之一，其中每个值对应于一个命令行选项。
 
-  - **false** - *\<none>*
+  - **false** -  *\<none>*
 
-  - **Async** - **/EHa**
+  - **Async** -  **/EHa**
 
-  - **Sync** - **/EHsc**
+  - **Sync** -  **/EHsc**
 
-  - **SyncCThrow** - **/EHs**
+  - **SyncCThrow** -  **/EHs**
 
     有关详细信息，请参阅 [/EH（异常处理模型）](/cpp/build/reference/eh-exception-handling-model)。
 
@@ -312,11 +312,11 @@ ms.locfileid: "62569688"
 
    指定以下值之一，其中每个值对应于一个命令行选项。
 
-  - **Neither** - *\<none>*
+  - **Neither** -  *\<none>*
 
-  - **Size** - **/Os**
+  - **Size** -  **/Os**
 
-  - **Speed** - **/Ot**
+  - **Speed** -  **/Ot**
 
     有关详细信息，请参阅 [/Os、/Ot（代码大小优先、代码速度优先）](/cpp/build/reference/os-ot-favor-small-code-favor-fast-code)。
 
@@ -326,7 +326,7 @@ ms.locfileid: "62569688"
 
    如果为 `true`，则启用可靠的浮点异常模型。 异常将在触发后立即引发。
 
-   有关详细信息，请参阅 [/fp（指定浮点行为）](/cpp/build/reference/fp-specify-floating-point-behavior)中的 /fp:except 选项。
+   有关详细信息，请参阅 [/fp（指定浮点行为）](/cpp/build/reference/fp-specify-floating-point-behavior)中的 /fp:except 选项  。
 
 - **FloatingPointModel**
 
@@ -336,11 +336,11 @@ ms.locfileid: "62569688"
 
    指定以下值之一，其中每个值对应于一个命令行选项。
 
-  - **Precise** - **/fp:precise**
+  - **Precise** -  **/fp:precise**
 
-  - **Strict** - **/fp:strict**
+  - **Strict** -  **/fp:strict**
 
-  - **Fast** - **/fp:fast**
+  - **Fast** -  **/fp:fast**
 
     有关详细信息，请参阅 [/fp（指定浮点行为）](/cpp/build/reference/fp-specify-floating-point-behavior)。
 
@@ -380,7 +380,7 @@ ms.locfileid: "62569688"
 
    可选 `Boolean` 参数。
 
-   如果为 `true`，则促使编译器处理源代码文件中的文档注释，并为每个包含文档注释的源代码文件创建 .xdc 文件。
+   如果为 `true`，则促使编译器处理源代码文件中的文档注释，并为每个包含文档注释的源代码文件创建 .xdc 文件  。
 
    有关详细信息，请参阅 [/doc（处理文档注释）(C/C++)](/cpp/build/reference/doc-process-documentation-comments-c-cpp)。 另请参阅此表中的 **XMLDocumentationFileName** 参数。
 
@@ -400,13 +400,13 @@ ms.locfileid: "62569688"
 
    指定以下值之一，其中每个值对应于一个命令行选项。
 
-  - **Default** - *\<none>*
+  - **Default** -  *\<none>*
 
-  - **Disabled** - **/Ob0**
+  - **Disabled** -  **/Ob0**
 
-  - **OnlyExplicitInline** - **/Ob1**
+  - **OnlyExplicitInline** -  **/Ob1**
 
-  - **AnySuitable** - **/Ob2**
+  - **AnySuitable** -  **/Ob2**
 
     有关详细信息，请参阅 [/Ob（内联函数扩展）](/cpp/build/reference/ob-inline-function-expansion)。
 
@@ -452,7 +452,7 @@ ms.locfileid: "62569688"
 
    可选 `Boolean` 参数。
 
-   如果为 `true`，则省略对象 (.obj) 文件中的默认 C 运行时库名称。 默认情况下，编译器将库的名称放入 .obj 文件中以将链接器定向到正确的库。
+   如果为 `true`，则省略对象 (.obj) 文件中的默认 C 运行时库名称  。 默认情况下，编译器将库的名称放入 .obj 文件中以将链接器定向到正确的库  。
 
    有关详细信息，请参阅 [/Zl（省略默认库名）](/cpp/build/reference/zl-omit-default-library-name)。
 
@@ -480,13 +480,13 @@ ms.locfileid: "62569688"
 
    指定以下值之一，其中每个值对应于一个命令行选项。
 
-  - **Disabled** - **/Od**
+  - **Disabled** -  **/Od**
 
-  - **MinSpace** - **/O1**
+  - **MinSpace** -  **/O1**
 
-  - **MaxSpeed** - **/O2**
+  - **MaxSpeed** -  **/O2**
 
-  - **Full** - **/Ox**
+  - **Full** -  **/Ox**
 
     有关详细信息，请参阅 [/O 选项（优化代码）](/cpp/build/reference/o-options-optimize-code)。
 
@@ -494,15 +494,15 @@ ms.locfileid: "62569688"
 
    可选 **String** 参数。
 
-   在生成期间创建或使用预编译标头 (.pch) 文件。
+   在生成期间创建或使用预编译标头 (.pch) 文件  。
 
    指定以下值之一，其中每个值对应于一个命令行选项。
 
-  - **NotUsing** - *\<none>*
+  - **NotUsing** -  *\<none>*
 
-  - **Create** - **/Yc**
+  - **Create** -  **/Yc**
 
-  - **Use** - **/Yu**
+  - **Use** -  **/Yu**
 
     有关详细信息，请参阅 [/Yc （创建预编译头文件）](/cpp/build/reference/yc-create-precompiled-header-file)和 [/Yu（使用预编译头文件）](/cpp/build/reference/yu-use-precompiled-header-file)。 另外，请参阅此表中的 **PrecompiledHeaderFile** 和 **PrecompiledHeaderOutputFile** 参数。
 
@@ -590,13 +590,13 @@ ms.locfileid: "62569688"
 
    指定以下值之一，其中每个值对应于一个命令行选项。
 
-  - **MultiThreaded** - **/MT**
+  - **MultiThreaded** -  **/MT**
 
-  - **MultiThreadedDebug** - **/MTd**
+  - **MultiThreadedDebug** -  **/MTd**
 
-  - **MultiThreadedDLL** - **/MD**
+  - **MultiThreadedDLL** -  **/MD**
 
-  - **MultiThreadedDebugDLL** - **/MDd**
+  - **MultiThreadedDebugDLL** -  **/MDd**
 
     有关详细信息，请参阅 [/MD、/MT、/LD（使用运行时库）](/cpp/build/reference/md-mt-ld-use-run-time-library)。
 
@@ -622,7 +622,7 @@ ms.locfileid: "62569688"
 
    如果为 `true`，则在某个值分配给较小的数据类型且导致数据丢失时，报告运行时错误。
 
-   有关详细信息，请参阅 [/RTC（运行时错误检查）](/cpp/build/reference/rtc-run-time-error-checks)中的 /RTCc 选项。
+   有关详细信息，请参阅 [/RTC（运行时错误检查）](/cpp/build/reference/rtc-run-time-error-checks)中的 /RTCc 选项  。
 
 - **Sources**
 
@@ -646,17 +646,17 @@ ms.locfileid: "62569688"
 
    指定以下值之一，其中每个值对应于一个命令行选项。
 
-  - **Default** - **/Zp1**
+  - **Default** -  **/Zp1**
 
-  - **1Byte** - **/Zp1**
+  - **1Byte** -  **/Zp1**
 
-  - **2Bytes** - **/Zp2**
+  - **2Bytes** -  **/Zp2**
 
-  - **4Bytes** - **/Zp4**
+  - **4Bytes** -  **/Zp4**
 
-  - **8Bytes** - **/Zp8**
+  - **8Bytes** -  **/Zp8**
 
-  - **16Bytes** - **/Zp16**
+  - **16Bytes** -  **/Zp16**
 
     有关详细信息，请参阅 [/Zp（结构成员对齐）](/cpp/build/reference/zp-struct-member-alignment)。
 
@@ -682,7 +682,7 @@ ms.locfileid: "62569688"
 
    将编译器警告的指定列表视为错误。
 
-   有关详细信息，请参阅 [/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX（警告等级）](/cpp/build/reference/compiler-option-warning-level)中的 /we`n` 选项。
+   有关详细信息，请参阅 [/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX（警告等级）](/cpp/build/reference/compiler-option-warning-level)中的 /we`n` 选项  。
 
 - **TreatWarningAsError**
 
@@ -690,7 +690,7 @@ ms.locfileid: "62569688"
 
    如果为 `true`，则将所有编译器警告视为错误。
 
-   有关详细信息，请参阅 [/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX（警告等级）](/cpp/build/reference/compiler-option-warning-level)中的 /WX 选项。
+   有关详细信息，请参阅 [/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX（警告等级）](/cpp/build/reference/compiler-option-warning-level)中的 /WX 选项  。
 
 - **TreatWChar_tAsBuiltInType**
 
@@ -706,7 +706,7 @@ ms.locfileid: "62569688"
 
    如果为 `true`，则取消定义编译器定义的特定于 Microsoft 的符号。
 
-   有关详细信息，请参阅 [/U、/u（未定义符号）](/cpp/build/reference/u-u-undefine-symbols)中的 /u 选项。
+   有关详细信息，请参阅 [/U、/u（未定义符号）](/cpp/build/reference/u-u-undefine-symbols)中的 /u 选项  。
 
 - **UndefinePreprocessorDefinitions**
 
@@ -714,7 +714,7 @@ ms.locfileid: "62569688"
 
    指定一个或多个要取消定义的预处理器符号的列表。
 
-   有关详细信息，请参阅 [/U、/u（未定义符号）](/cpp/build/reference/u-u-undefine-symbols)中的 /U 选项。
+   有关详细信息，请参阅 [/U、/u（未定义符号）](/cpp/build/reference/u-u-undefine-symbols)中的 /U 选项  。
 
 - **UseFullPaths**
 
@@ -730,7 +730,7 @@ ms.locfileid: "62569688"
 
    如果为 `true`，则指示使用 UTF-8 格式创建输出文件。
 
-   有关详细信息，请参阅 [/FA、/Fa（列表文件）](/cpp/build/reference/fa-fa-listing-file)中的 /FAu 选项。
+   有关详细信息，请参阅 [/FA、/Fa（列表文件）](/cpp/build/reference/fa-fa-listing-file)中的 /FAu 选项  。
 
 - **WarningLevel**
 
@@ -740,19 +740,19 @@ ms.locfileid: "62569688"
 
    指定以下值之一，其中每个值对应于一个命令行选项。
 
-  - **TurnOffAllWarnings** - **/W0**
+  - **TurnOffAllWarnings** -  **/W0**
 
-  - **Level1** - **/W1**
+  - **Level1** -  **/W1**
 
-  - **Level2** - **/W2**
+  - **Level2** -  **/W2**
 
-  - **Level3** - **/W3**
+  - **Level3** -  **/W3**
 
-  - **Level4** - **/W4**
+  - **Level4** -  **/W4**
 
-  - **EnableAllWarnings** - **/Wall**
+  - **EnableAllWarnings** -  **/Wall**
 
-    有关详细信息，请参阅 [/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX（警告等级）](/cpp/build/reference/compiler-option-warning-level)中的 /Wn 选项。
+    有关详细信息，请参阅 [/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX（警告等级）](/cpp/build/reference/compiler-option-warning-level)中的 /Wn 选项   。
 
 - **WholeProgramOptimization**
 
@@ -782,7 +782,7 @@ ms.locfileid: "62569688"
 
    指定表示*读取文件跟踪日志*的项的数组。
 
-   读取文件跟踪日志 (.tlog) 包含由任务读取的输入文件的名称，并由项目生成系统来使用以支持增量生成。 有关详细信息，请参阅此表中的 **TrackerLogDirectory** 和 **TrackFileAccess** 参数。
+   读取文件跟踪日志 (.tlog) 包含由任务读取的输入文件的名称，并由项目生成系统来使用以支持增量生成  。 有关详细信息，请参阅此表中的 **TrackerLogDirectory** 和 **TrackFileAccess** 参数。
 
 - **TLogWriteFiles**
 
@@ -790,7 +790,7 @@ ms.locfileid: "62569688"
 
    指定表示*写入文件跟踪日志*的项的数组。
 
-   写入文件跟踪日志 (.tlog) 包含由任务写入的输出文件的名称，并由项目生成系统来使用以支持增量生成。 有关详细信息，请参阅此表中的 **TrackerLogDirectory** 和 **TrackFileAccess** 参数。
+   写入文件跟踪日志 (.tlog) 包含由任务写入的输出文件的名称，并由项目生成系统来使用以支持增量生成  。 有关详细信息，请参阅此表中的 **TrackerLogDirectory** 和 **TrackFileAccess** 参数。
 
 - **TrackFileAccess**
 

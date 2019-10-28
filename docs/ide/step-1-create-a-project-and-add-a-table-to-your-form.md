@@ -1,6 +1,6 @@
 ---
 title: 步骤 1：创建项目并向窗体添加表
-ms.date: 05/31/2019
+ms.date: 10/15/2019
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0562588fe81780b7bb5787c4ec0b9861fd4c9408
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: b63a0b1801b0a3b559281959975a1faaa5bb99a5
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119067"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516781"
 ---
 # <a name="step-1-create-a-project-and-add-a-table-to-your-form"></a>步骤 1：创建项目并向窗体添加表
 
@@ -44,11 +44,11 @@ ms.locfileid: "71119067"
 
    ![查看“创建新项目”窗口](../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
-1. 在“创建新项目”  窗口的搜索框中输入或键入“Windows 窗体”  。
+1. 在“创建新项目”  窗口的搜索框中输入或键入“Windows 窗体”  。 接下来，从“项目类型”列表中选择“桌面”   。
 
-1. 选择“Windows 窗体应用(.NET Framework)”  模板，然后选择“下一步”  。
+   应用“项目类型”筛选器之后，为 C# 或 Visual Basic 选择“Windows 窗体应用(.NET Framework)”模板，然后选择“下一步”    。
 
-   ![为“Windows 窗体应用(.NET Framework)”选择 Visual Basic 模板](../get-started/visual-basic/media/vs-2019/vb-create-new-project-search-winforms-filtered.png)
+   ![为“Windows 窗体应用 (.NET Framework)”选择 C# 或 Visual Basic 模板](./media/create-new-project-search-winforms-filtered.png)
 
    > [!NOTE]
    > 如果未看到“Windows 窗体应用(.NET Framework)”  模板，则可以通过“创建新项目”  窗口安装该模板。 在“找不到所需内容?”消息中，选择“安装更多工具和功能”链接   。

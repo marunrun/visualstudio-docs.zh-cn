@@ -11,29 +11,29 @@ dev_langs:
 - jsharp
 - C++
 helpviewer_keywords:
-- VCMessage task (MSBuild (Visual C++))
-- MSBuild (Visual C++), VCMessage task
+- VCMessage task (MSBuild (C++))
+- MSBuild (C++), VCMessage task
 ms.assetid: 956675fd-05dc-40b4-856f-616145103498
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d025fd1f71b67acbcd532232b36b55fd35e1f530
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: be4f963a5944882f14118be54e498fd4712c2e46
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970752"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747187"
 ---
 # <a name="vcmessage-task"></a>VCMessage 任务
 记录生成期间的警告消息和错误消息。
 
 ## <a name="remarks"></a>备注
- 此任务可帮助实现 Visual C++ 的 MSBuild，不能由用户调用。 有关更多信息，请参见<xref:Microsoft.Build.Utilities.TaskLoggingHelper>。
+ 此任务可帮助实现 C++ 的 MSBuild 项目，不能由用户调用。 有关详细信息，请参阅 <xref:Microsoft.Build.Utilities.TaskLoggingHelper>。
 
 ## <a name="parameters"></a>参数
- 下表描述了 VCMessage 任务的参数。
+ 下表描述了 VCMessage 任务的参数  。
 
 |参数|说明|
 |---------------|-----------------|

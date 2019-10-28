@@ -8,12 +8,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8964fc81b8323b6720d7c6d960449c7a9134658b
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 0f94cc62cdadb2df3806f5b188278f49e4041235
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416898"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647172"
 ---
 # <a name="walkthrough-build-an-application"></a>演练：构建应用程序
 
@@ -65,7 +65,7 @@ ms.locfileid: "68416898"
 
 ### <a name="build-the-solution"></a>生成解决方案
 
-- 在菜单栏上，依次选择“生成” > “生成解决方案”   。
+- 在菜单栏上，依次选择“生成” > “生成解决方案”，或按 Ctrl+Shift+B      。
 
     “输出”  窗口将显示生成的结果。 成功生成。
 

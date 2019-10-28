@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 322c8d4b766619a6404a315fb83298bf5416fba4
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: cbeba8418b3364d4e3762643a78465158f80e6fc
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445321"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72655445"
 ---
 # <a name="walkthrough-create-an-inline-task"></a>演练：创建内联任务
 通常，MSBuild 任务通过编译实现 <xref:Microsoft.Build.Framework.ITask> 接口的类进行创建。 从 .NET Framework 版本 4 开始，可以在项目文件中创建内联任务。 无需创建单独的程序集来承载该任务。 有关详细信息，请参阅[内联任务](../msbuild/msbuild-inline-tasks.md)。
@@ -44,15 +44,15 @@ ms.locfileid: "63445321"
 
 #### <a name="to-create-and-modify-a-project-file"></a>创建和修改项目文件
 
-1. 在 Visual Studio 中的“文件”菜单上，单击“新建”，然后单击“项目”。
+1. 在 Visual Studio 中的“文件”  菜单上，单击“新建”  ，然后单击“项目”  。
 
-2. 在“新建项目”对话框中，选择“Visual C#”项目类型，然后选择“Windows 窗体应用程序”模板。 在“名称”框中键入 `InlineTasks`。 键入解决方案的“位置”，例如 D:\\。 请确保选择“创建解决方案目录”和清除“添加到源代码管理”，并确保“解决方案名称”为 InlineTasks。
+2. 在“新建项目”  对话框中，选择“Visual C#”  项目类型，然后选择“Windows 窗体应用程序”  模板。 在“名称”  框中键入 `InlineTasks`。 键入解决方案的“位置”  ，例如 D:\\。  请确保选择“创建解决方案目录”  和清除“添加到源代码管理”  ，并确保“解决方案名称”  为 InlineTasks。 
 
-3. 单击“确定”创建项目文件。
+3. 单击“确定”  创建项目文件。
 
-3. 在“解决方案资源管理器”中，右键单击 InlineTasks 项目节点，然后单击“卸载项目”。
+3. 在“解决方案资源管理器”  中，右键单击 InlineTasks 项目节点，然后单击“卸载项目”  。 
 
-4. 再次右键单击项目节点，然后单击“编辑 InlineTasks.csproj”。
+4. 再次右键单击项目节点，然后单击“编辑 InlineTasks.csproj”  。
 
      该项目文件出现在代码编辑器中。
 
@@ -85,27 +85,27 @@ ms.locfileid: "63445321"
 
 3. 保存项目文件。
 
-   此代码会创建一个名为 Hello 的内联任务，且不具有任何参数、引用或 `Using` 语句。 此 Hello 任务仅包含一行代码，这行代码会在默认日志记录设备上（通常在控制台窗口）显示一则问候消息。
+   此代码会创建一个名为 Hello 的内联任务，且不具有任何参数、引用或 `Using` 指令。 此 Hello 任务仅包含一行代码，这行代码会在默认日志记录设备上（通常在控制台窗口）显示一则问候消息。
 
 ### <a name="run-the-hello-task"></a>运行 Hello 任务
- 使用“命令提示符窗口”运行 MSBuild，以构造 Hello 任务并处理调用该任务的 TestBuild 目标。
+ 使用“命令提示符窗口”  运行 MSBuild，以构造 Hello 任务并处理调用该任务的 TestBuild 目标。
 
 ##### <a name="to-run-the-hello-task"></a>运行 Hello 任务
 
-1. 单击“开始”，然后单击“所有程序”，找到“Visual Studio Tools”文件夹并单击“Visual Studio 命令提示符”。
+1. 单击“开始”  ，然后单击“所有程序”  ，找到“Visual Studio Tools”  文件夹并单击“Visual Studio 命令提示符”  。
 
-2. 在“命令提示符窗口”中找到包含项目文件的文件夹（本例中为 D:\InlineTasks\InlineTasks\\）。
+2. 在“命令提示符窗口”  中找到包含项目文件的文件夹（本例中为 D:\InlineTasks\InlineTasks\\）。 
 
-3. 无需命令开关，键入“msbuild”，然后按 Enter。 默认情况下，这会生成 InlineTasks.csproj 文件并处理将调用 Hello 任务的默认目标 TestBuild。
+3. 无需命令开关，键入“msbuild”  ，然后按 Enter。  默认情况下，这会生成 InlineTasks.csproj 文件并处理将调用 Hello 任务的默认目标 TestBuild。 
 
-4. 在“命令提示符窗口”中检查输出。 应看到此行：
+4. 在“命令提示符窗口”中  检查输出。 应看到此行：
 
     `Hello, world!`
 
    > [!NOTE]
    > 如果未显示问候消息，请尝试再次保存项目文件，然后运行 Hello 任务。
 
-   通过在代码编辑器和“命令提示符窗口”之间进行交替，可更改项目文件并快速查看结果。
+   通过在代码编辑器和“命令提示符窗口”  之间进行交替，可更改项目文件并快速查看结果。
 
 ## <a name="define-the-echo-task"></a>定义 Echo 任务
  创建一个会接受字符串参数并在默认日志记录设备上显示字符串的内联任务。
@@ -130,9 +130,9 @@ ms.locfileid: "63445321"
    </Target>
    ```
 
-2. 在“命令提示符窗口”中，无需命令开关，键入“msbuild”，然后按 Enter。 默认情况下，这会处理调用 Echo 任务的默认目标 TestBuild。
+2. 在“命令提示符窗口”  中，无需命令开关，键入“msbuild”  ，然后按 Enter。  默认情况下，这会处理调用 Echo 任务的默认目标 TestBuild。
 
-3. 在“命令提示符窗口”中检查输出。 应看到此行：
+3. 在“命令提示符窗口”中  检查输出。 应看到此行：
 
     `Greetings!`
 
@@ -166,9 +166,9 @@ ms.locfileid: "63445321"
    </Target>
    ```
 
-2. 在“命令提示符窗口”中，无需命令开关，键入“msbuild”，然后按 Enter。 默认情况下，这会处理调用 Echo 任务的默认目标 TestBuild。
+2. 在“命令提示符窗口”  中，无需命令开关，键入“msbuild”  ，然后按 Enter。  默认情况下，这会处理调用 Echo 任务的默认目标 TestBuild。
 
-3. 在“命令提示符窗口”中检查输出。 应看到此行：
+3. 在“命令提示符窗口”中  检查输出。 应看到此行：
 
     `The sum is 9`
 
@@ -221,9 +221,9 @@ ms.locfileid: "63445321"
    </Target>
    ```
 
-2. 在“命令提示符窗口”中，无需命令开关，键入“msbuild”，然后按 Enter。 默认情况下，这会处理调用 RegX 任务的默认目标 TestBuild。
+2. 在“命令提示符窗口”  中，无需命令开关，键入“msbuild”  ，然后按 Enter。  默认情况下，这会处理调用 RegX 任务的默认目标 TestBuild。
 
-3. 在“命令提示符窗口”中检查输出。 应看到这些行：
+3. 在“命令提示符窗口”中  检查输出。 应看到这些行：
 
    ```
    Input files: Form1.cs;Form1.Designer.cs;Program.cs;Properties\AssemblyInfo.cs;Properties\Resources.Designer.cs;Properties\Settings.Designer.cs

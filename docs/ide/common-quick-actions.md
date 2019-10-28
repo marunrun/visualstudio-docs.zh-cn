@@ -3,20 +3,20 @@ title: 常见快速操作
 description: C# 和 Visual Basic 最常用的快速操作包括修复拼错的关键字或符号、解决合并冲突、删除必要的导入、生成类型、引入局部变量等。
 ms.date: 03/28/2018
 ms.topic: reference
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 600fb1b4abea2103c28e3a5067d640228d68b755
-ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
+ms.openlocfilehash: bad97ac5574afd65103263b2ce51a4dfba02741c
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72000140"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72652250"
 ---
 # <a name="common-quick-actions"></a>常见快速操作
 
@@ -96,7 +96,7 @@ private void MyMethod()
 
 ### <a name="remove-unnecessary-usingsimports"></a>删除不必要的 using/Import
 
-“删除不必要的 using/Import”  快速操作将删除当前文件中任何未使用的 `using` 和 `Import` 语句。 选择此项后，将删除未使用的命名空间导入。
+“删除不必要的 Using/Import”  快速操作将删除当前文件中任何未使用的 `using` 和 `Import` 指令。 选择此项后，将删除未使用的命名空间导入。
 
 | 适用的语言 | 支持的版本 |
 | - | - |
@@ -184,7 +184,7 @@ void DoWork(CancellationToken cancellationToken = default) { ... }
 - 建议对引用程序集中的类型使用 using/import
 - 建议对 NuGet 包中的类型使用 using/import
 
-启用后，如果使用当前未导入但引用程序集或 NuGet 包中存在的命名空间中的类型，则会创建 using/import 语句。
+启用后，如果使用当前未导入但引用程序集或 NuGet 包中存在的命名空间中的类型，则会创建 using 或 import 指令。
 
 ```csharp
 // Before
@@ -204,7 +204,7 @@ Debug.WriteLine("Hello")
 
 ' Imports System.Diagnostics
 
-// After
+' After
 Imports System.Diagnostics
 
 Debug.WriteLine("Hello")
