@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f02827ebd5617485f180f4a16652b1cc841c41f4
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
+ms.openlocfilehash: 64edeb6d6180907e6b1aa07fd5d443e8523c10b1
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314230"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647474"
 ---
 # <a name="step-7-add-multiplication-and-division-problems"></a>步骤 7：添加乘法和除法问题
 
@@ -48,7 +48,7 @@ ms.locfileid: "72314230"
      [!code-vb[VbExpressTutorial3Step7#17](../ide/codesnippet/VisualBasic/step-7-add-multiplication-and-division-problems_3.vb)]
      [!code-csharp[VbExpressTutorial3Step7#17](../ide/codesnippet/CSharp/step-7-add-multiplication-and-division-problems_3.cs)]
 
-     由于使用键盘无法方便地输入乘号 (×) 和除号 (÷)，因此 Visual C# 和 Visual Basic 接受用星号 (*) 代替乘号，用斜线 (/) 代替除号。
+     由于使用键盘无法方便地输入乘号 (×) 和除号 (÷)，因此 C# 和 Visual Basic 接受用星号 (*) 代替乘号，用斜线 (/) 代替除号。
 
 4. 更改计时器 <xref:System.Windows.Forms.Timer.Tick> 事件处理程序的最后部分，使其在时间用完时填入正确答案。
 
@@ -64,6 +64,6 @@ ms.locfileid: "72314230"
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅[步骤 8：自定义测验](../ide/step-8-customize-the-quiz.md)** 。
+- 要转到下一个教程步骤，请参阅[步骤 8：自定义测验](../ide/step-8-customize-the-quiz.md)  。
 
 - 要返回上一个教程步骤，请参阅[步骤 6：添加减法问题](../ide/step-6-add-a-subtraction-problem.md)。

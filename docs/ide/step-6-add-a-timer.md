@@ -13,22 +13,22 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e2f58e969f96d05828a4b3a5e640ede364abca10
-ms.sourcegitcommit: a5a54b147e772dc39e519da74ec41a0c25d99628
+ms.openlocfilehash: 4aeb28fe7fbfbaa6e2d120fe58fdc39f188367b5
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289633"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72647507"
 ---
 # <a name="step-6-add-a-timer"></a>步骤 6：添加计时器
 接下来，要向匹配游戏中添加 <xref:System.Windows.Forms.Timer> 控件。 计时器等待指定的毫秒数后，触发一个称为“Tick”  的事件。 这对于启动操作或定时重复操作很有用。 在本例中，你将使用一个计时器，让玩家开始选择两个图标，而如果图标不匹配，则在短暂时间后再次隐藏这两个图标。
 
 ## <a name="to-add-a-timer"></a>添加计时器
 
-1. 在“Windows 窗体设计器”  的“工具箱”中，选择“Timer”  （位于“组件”  类别中），然后按 Enter  键，或双击该计时器，向窗体中添加一个计时器控件。 该计时器的图标名为 **Timer1**，应显示在窗体下的空间中，如下图所示。
+1. 在“Windows 窗体设计器”  的“工具箱”中，选择“Timer”  （位于“组件”  类别中），然后按 Enter  键，或双击该计时器，向窗体中添加一个计时器控件。 该计时器的图标名为 Timer1  ，应显示在窗体下的空间中，如下图所示。
 
      ![计时器](../ide/media/express_timer.png)<br/>
-**计时器**
+***计时器***
 
     > [!NOTE]
     > 如果工具箱是空的，请确保在打开工具箱前选择窗体设计器，而不是窗体的后台代码。
@@ -43,7 +43,7 @@ ms.locfileid: "72289633"
       > [!IMPORTANT]
       > 使用此页右上角的编程语言控件查看 C# 代码片段或 Visual Basic 代码片段。<br><br>![Docs.Microsoft.com 的编程语言控件](../ide/media/docs-programming-language-control.png)
 
-     Tick 事件处理程序将执行三项操作：首先，通过调用 <xref:System.Windows.Forms.Timer.Stop> 方法确保计时器没有运行。 然后，它使用两个引用变量 `firstClicked` 和 `secondClicked`，使得玩家选择的两个标签的图标再次不可见。 最后，它将 `firstClicked` 和 `secondClicked` 引用变量重置为 `null`（Visual C# 中）或 `Nothing`（Visual Basic 中）。 这一步很重要，因为程序本身就是这样重置的。 现在，它不跟踪任何 <xref:System.Windows.Forms.Label> 控件，并已准备好让玩家再次选择标签。
+     Tick 事件处理程序将执行三项操作：首先，通过调用 <xref:System.Windows.Forms.Timer.Stop> 方法确保计时器没有运行。 然后，它使用两个引用变量 `firstClicked` 和 `secondClicked`，使得玩家选择的两个标签的图标再次不可见。 最后，它将 `firstClicked` 和 `secondClicked` 引用变量重置为 `null`（C# 中）或 `Nothing`（Visual Basic 中）。 这一步很重要，因为程序本身就是这样重置的。 现在，它不跟踪任何 <xref:System.Windows.Forms.Label> 控件，并已准备好让玩家再次选择标签。
 
     > [!NOTE]
     > Timer 对象具有 `Start()` 方法和 `Stop()` 方法，分别用以启动和停止计时器。 如果你在“属性”  窗口中将计时器的“Enabled”  属性设置为“True”  ，则只要程序开始运行，计时器就会开始计时。 但是，如果将该属性保留设置为“False”  ，则在调用计时器的 `Start()` 方法之前，计时器不会开始计时。 通常，计时器会使用 **Interval** 属性确定在计时周期之间等待的毫秒数，从而反复触发其 Tick 事件。 您可能已经注意到在 Tick 事件中调用计时器的 `Stop()` 方法的方式。 这会将计时器置于“单触发模式”  ，意味着调用 `Start()` 方法时，计时器会等待指定的间隔时间，触发单个 Tick 事件，然后停止。
@@ -63,6 +63,6 @@ ms.locfileid: "72289633"
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅[步骤 7：保持对可见](../ide/step-7-keep-pairs-visible.md)。
+- 要转到下一个教程步骤，请参阅[步骤 7：保持对可见](../ide/step-7-keep-pairs-visible.md)  。
 
 - 要返回上一个教程步骤，请参阅[步骤 5：添加标签引用](../ide/step-5-add-label-references.md)。
