@@ -10,12 +10,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6650edfc3c953d54578b800e213ee27092045e56
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9d24a2ea1b614cb0ca82bdcf1c4954aba9a9174c
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666937"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984409"
 ---
 # <a name="walkthrough-generate-code-by-using-text-templates"></a>演练：使用文本模板生成代码
 
@@ -28,7 +28,7 @@ System.Xml 命名空间提供用于加载 XML 文档的综合工具，然后将�
 在此示例项目中，模板读取示例 XML 文件，并生成对应于每种节点类型的类。 在手动编写的代码中，可以使用这些类来导航 XML 文件。 此外，还可以在使用相同节点类型的任何其他文件上运行应用程序。 示例 XML 文件的目的是提供想要应用程序处理的所有节点类型的示例。
 
 > [!NOTE]
-> Visual Studio 附带的应用程序[xsd.exe](http://go.microsoft.com/fwlink/?LinkId=178765)可以从 XML 文件生成强类型的类。 此处显示的模板作为示例提供。
+> Visual Studio 附带的应用程序[xsd.exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe)可以从 XML 文件生成强类型的类。 此处显示的模板作为示例提供。
 
 下面是示例文件：
 
@@ -408,7 +408,7 @@ namespace MyProject
 
 若要在示例 XML 文件更改时重新生成类，请单击 "**解决方案资源管理器**" 工具栏中的 "**转换所有模板**"。
 
-## <a name="conclusion"></a>结论
+## <a name="conclusion"></a>结束语
 
 本演练演示了代码生成的几种方法及其优势：
 
