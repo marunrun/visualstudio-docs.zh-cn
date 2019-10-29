@@ -12,16 +12,16 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3e43c2b38d1da055a1a0a4533acc61cb3b8e6760
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ea408640b47b04041e99b9a4bff2605b6231a92f
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348298"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72981223"
 ---
 # <a name="visual-studio-debugging-samples"></a>Visual Studio 调试示例
-两个示例展示了如何扩展 Visual Studio 调试器使用[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]。
+下面两个示例演示如何使用 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]扩展 Visual Studio 调试器。
 
-- 调试器表达式计算器示例中，对于托管语言，包含在[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]。 在中[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]窗口中，单击**示例**选项卡上，单击**所有**或**C#** 的语言，并单击列表中**调试器**。
+- 托管语言的调试器表达式计算器示例包含在 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]中。 在 "[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]" 窗口中，单击 "**示例**" 选项卡**C#** ，单击 "**全部**" 或在语言列表中，然后单击 "**调试器**"。
 
-- Visual Studio 调试引擎示例中，对于本机语言，可用于的 MSDN 代码库。 有关详细信息，请参阅[Visual Studio 调试引擎示例](http://go.microsoft.com/fwlink/?LinkId=150236)Microsoft Web 站点上。
+- MSDN 代码库中提供了适用于本机语言的 Visual Studio 调试引擎示例。 有关详细信息，请参阅 Microsoft 网站上的[Visual Studio 调试引擎示例](https://code.msdn.microsoft.com/Visual-Studio-Debug-Engine-c2e21c0e)。

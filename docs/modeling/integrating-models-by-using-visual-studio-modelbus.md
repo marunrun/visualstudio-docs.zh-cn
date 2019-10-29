@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b27abf8470527e4e5de5c05ca3438a8471b7c80e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9b5a0ad18c7b1472e8c08ccc2902cade7714f2b9
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667782"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985270"
 ---
 # <a name="integrate-models-by-using-visual-studio-modelbus"></a>使用 Visual Studio Modelbus 集成模型
 
@@ -36,15 +36,13 @@ ModelBus 允许你创建对模型或模型中特定元素的唯一引用。 此�
 
 ### <a name="expose"></a>向模型总线公开 DSL 定义
 
-1. 除非已安装 Visual Studio 模型总线扩展，否则请下载并安装它。 有关详细信息，请参阅[可视化和建模 SDK](http://go.microsoft.com/fwlink/?LinkID=185579)。
+1. 打开 DSL 定义文件。 右键单击设计图面，然后单击 "**启用 Modelbus**"。
 
-2. 打开 DSL 定义文件。 右键单击设计图面，然后单击 "**启用 Modelbus**"。
+2. 在对话框中，选择 **"我想要向 ModelBus 公开此 DSL"** 。 如果希望此 DSL 同时公开其模型并使用对其他 DSL 的引用，则可选择这两个选项。
 
-3. 在对话框中，选择 **"我想要向 ModelBus 公开此 DSL"** 。 如果希望此 DSL 同时公开其模型并使用对其他 DSL 的引用，则可选择这两个选项。
+3. 单击“确定”。 新项目“ModelBusAdapter”随即添加到 DSL 解决方案中。
 
-4. 单击“确定”。 新项目“ModelBusAdapter”随即添加到 DSL 解决方案中。
-
-5. 如果要从文本模板访问 DSL，则必须修改新项目中的 AdapterManager.tt。 如果要从其他代码（例如命令和事件处理程序）访问 DSL，则忽略此步骤。 有关详细信息，请参阅[在文本模板中使用 Visual Studio ModelBus](../modeling/using-visual-studio-modelbus-in-a-text-template.md)。
+4. 如果要从文本模板访问 DSL，则必须修改新项目中的 AdapterManager.tt。 如果要从其他代码（例如命令和事件处理程序）访问 DSL，则忽略此步骤。 有关详细信息，请参阅[在文本模板中使用 Visual Studio ModelBus](../modeling/using-visual-studio-modelbus-in-a-text-template.md)。
 
    1. 将 AdapterManagerBase 的基类更改为[VsTextTemplatingModelingAdapterManager](/previous-versions/ee844317(v=vs.140))。
 
@@ -56,9 +54,9 @@ ModelBus 允许你创建对模型或模型中特定元素的唯一引用。 此�
 
       如果要同时从文本模板和其他代码访问 DSL，则需要两个适配器：一个已经过修改，另一个未经过修改。
 
-6. 单击 "**转换所有模板**"。
+5. 单击 "**转换所有模板**"。
 
-7. 重新生成解决方案。
+6. 重新生成解决方案。
 
    现在 ModelBus 可以打开此 DSL 的实例。
 
@@ -76,9 +74,9 @@ ModelBus 允许你创建对模型或模型中特定元素的唯一引用。 此�
 
 3. 对于想要为其创建模型总线引用的每个类：
 
-    单击 "类" 节点，然后在 "属性窗口中，确保**序列化 Id**设置为 `true`。
+    单击 "类" 节点，然后在 "属性窗口中，确保**序列化 ID**设置为 `true`。
 
-   或者，如果要使用元素名称来标识元素而不是 GUID，则可重写生成的适配器的各个部分。 在适配器类中重写以下方法：
+   或者，如果要使用元素名称来标识元素而不是 Guid，则可以重写生成的适配器的各个部分。 在适配器类中重写以下方法：
 
 - 重写 `GetElementId` 以返回要使用的标识符。 在创建引用时将调用此方法。
 
@@ -124,7 +122,7 @@ ModelBus 允许你创建对模型或模型中特定元素的唯一引用。 此�
 
 2. 选择适当**的 ModelBusReference 类型**：对模型或模型中的元素。
 
-3. 在文件对话框筛选器字符串中，输入字符串（如 `Family Tree files |*.ftree`）。 替换公开的 DSL 的文件扩展名。
+3. 在文件对话框筛选器字符串中，输入字符串（如 `Family Tree files |*.ftree`）。 替换公开 DSL 的文件扩展名。
 
 4. 如果选择引用模型中的元素，则可添加用户可选择的类型（例如 Company.FamilyTree.Person）的列表。
 

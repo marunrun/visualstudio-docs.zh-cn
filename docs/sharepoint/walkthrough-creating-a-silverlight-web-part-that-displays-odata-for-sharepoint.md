@@ -12,15 +12,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 859944c51be0abf2e6a326a06a5e4432a69ee4ee
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bd2e42f48a6881b533a2f098e47ac92511b85aa3
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655925"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984824"
 ---
 # <a name="walkthrough-create-a-silverlight-web-part-that-displays-odata-for-sharepoint"></a>演练：创建显示 OData for SharePoint 的 Silverlight web 部件
-  SharePoint 2010 通过 OData 公开其列表数据。 在 SharePoint 中，OData 服务由 RESTful 服务 ListData 实现。 本演练演示如何创建承载 Silverlight 应用程序的 SharePoint web 部件。 Silverlight 应用程序使用 ListData 显示 SharePoint 公告列表信息。 有关详细信息，请参阅[SharePoint FOUNDATION REST 接口](http://go.microsoft.com/fwlink/?LinkId=225999)和[Open Data Protocol](http://go.microsoft.com/fwlink/?LinkId=226000)。
+  SharePoint 2010 通过 OData 公开其列表数据。 在 SharePoint 中，OData 服务由 RESTful 服务 ListData 实现。 本演练演示如何创建承载 Silverlight 应用程序的 SharePoint web 部件。 Silverlight 应用程序使用 ListData 显示 SharePoint 公告列表信息。 有关详细信息，请参阅[SharePoint FOUNDATION REST 接口](/previous-versions/office/developer/sharepoint-2010/ff521587(v=office.14))和[Open Data Protocol](https://www.odata.org/)。
 
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -228,7 +228,7 @@ ms.locfileid: "72655925"
      Silverlight web 部件现在应显示来自 SharePoint 站点的公告数据。 默认情况下，该页存储在 SharePoint 的 "网站页面" 列表中。
 
     > [!NOTE]
-    > 跨域访问 Silverlight 中的数据时，Silverlight 会防止可用于利用 web 应用程序的安全漏洞。 如果在访问 Silverlight 中的远程数据时遇到问题，请参阅[使服务跨域边界可用](http://go.microsoft.com/fwlink/?LinkId=223276)。
+    > 跨域访问 Silverlight 中的数据时，Silverlight 会防止可用于利用 web 应用程序的安全漏洞。 如果在访问 Silverlight 中的远程数据时遇到问题，请参阅[使服务跨域边界可用](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc197955(v=vs.95))。
 
 ## <a name="see-also"></a>请参阅
 - [为 SharePoint 创建 web 部件](../sharepoint/creating-web-parts-for-sharepoint.md)

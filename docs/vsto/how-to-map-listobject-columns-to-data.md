@@ -13,19 +13,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6e0056687e8ca28af4dbc9032d7bbee0cf976378
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: cffd9f009d193f5ed687560b4f13940273fd82ad
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253671"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985896"
 ---
 # <a name="how-to-map-listobject-columns-to-data"></a>如何：将 ListObject 列映射到数据
   将 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件绑定到 <xref:System.Data.DataTable>时，可能不希望显示列表中的所有列，或可能具有未绑定到数据的特定列。 调用 <xref:Microsoft.Office.Tools.Excel.ListObject> 方法时，可以映射希望出现在 <xref:Microsoft.Office.Tools.Excel.ListObject.SetDataBinding%2A> 中的列。
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
-
- ![视频链接](../vsto/media/playvideo.gif "视频链接")有关相关的视频演示，请[参阅如何实现：在 Excel 中创建连接到 SharePoint 列表的列表？](http://go.microsoft.com/fwlink/?LinkID=130263).
 
 ## <a name="map-columns"></a>地图列
 
@@ -36,12 +34,12 @@ ms.locfileid: "71253671"
      [!code-csharp[Trin_VstcoreHostControlsExcel#16](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet3.cs#16)]
      [!code-vb[Trin_VstcoreHostControlsExcel#16](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet3.vb#16)]
 
-2. 在`Sheet1`类（文档级项目中`Startup` ）或`ThisAddIn`类（VSTO 外接程序项目中）的事件处理程序中添加示例列和数据。
+2. 在 `Sheet1` 类（文档级项目）或 `ThisAddIn` 类（在 VSTO 外接程序项目中）的 `Startup` 事件处理程序中添加示例列和数据。
 
      [!code-csharp[Trin_VstcoreHostControlsExcel#17](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet3.cs#17)]
      [!code-vb[Trin_VstcoreHostControlsExcel#17](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet3.vb#17)]
 
-3. 调用 <xref:Microsoft.Office.Tools.Excel.ListObject.SetDataBinding%2A> 方法并以列名应显示的顺序传入列表。 List 对象将绑定到新创建<xref:System.Data.DataTable>的，但列表对象中列的顺序将与它们<xref:System.Data.DataTable>在中出现的顺序不同。
+3. 调用 <xref:Microsoft.Office.Tools.Excel.ListObject.SetDataBinding%2A> 方法并以列名应显示的顺序传入列表。 List 对象将绑定到新创建的 <xref:System.Data.DataTable>，但列表对象中列的顺序将与它们在 <xref:System.Data.DataTable>中出现的顺序不同。
 
      [!code-csharp[Trin_VstcoreHostControlsExcel#18](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet3.cs#18)]
      [!code-vb[Trin_VstcoreHostControlsExcel#18](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet3.vb#18)]

@@ -9,16 +9,16 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c38cb246a1ec3e8a20793b37f0a231d2e118bd4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d30efd450f18832caadcc9a0008facc4388cd70a
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663765"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986281"
 ---
 # <a name="use-models-in-your-development-process"></a>在你的开发过程中使用模型
 
-在 Visual Studio 中，你可以使用模型帮助你理解和更改系统、应用程序或组件。 模型能帮助你可视化系统工作的环境、阐明用户需求、定义你系统的体系结构、分析代码并确保你的代码符合要求。 请参阅第[9 频道视频：通过建模改进体系结构](http://go.microsoft.com/fwlink/?LinkID=252078)。
+在 Visual Studio 中，你可以使用模型帮助你理解和更改系统、应用程序或组件。 模型能帮助你可视化系统工作的环境、阐明用户需求、定义你系统的体系结构、分析代码并确保你的代码符合要求。 请参阅第[9 频道视频：通过建模改进体系结构](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Improving-architecture-through-modeling)。
 
 若要查看支持每种类型的模型的 Visual Studio 版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
@@ -86,7 +86,7 @@ ms.locfileid: "72663765"
 
 - 每次迭代接近结束时，举办一次需求研讨会，以详细定义将在下个迭代中开发的需求或用户情景。 邀请能够确定优先级的用户和业务利益干系人，以及开发人员和系统测试员。 允许用三个小时为一个 2 周的迭代定义需求。
 
-- 该研讨会的目标是使每个人就下个迭代结束时将完成的内容达成一致。 将模型用作一种工具来帮助阐明需求。 该研讨会的输出是一个迭代积压工作（backlog），即 Team Foundation 中的开发任务列表和 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] 中的测试套件。
+- 该研讨会的目标是使每个人就下个迭代结束时将完成的内容达成一致。 将模型用作一种工具来帮助阐明需求。 该研讨会的输出是一个迭代积压工作（backlog），即 Team Foundation 中的开发任务列表和 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)]中的测试套件。
 
 - 在需求研讨会中，仅在你需要为开发任务确定估计值的范围内讨论设计。 否则，请保持讨论用户可以直接体验的系统行为。 保持需求模型与体系结构模型分开。
 
@@ -131,10 +131,10 @@ ms.locfileid: "72663765"
 
 |**类别**|**Links**|
 |-|-|
-|**视频**|![link 视频 ](../data-tools/media/playvideo.gif) [MSDN 如何实现视频：如何创建和使用 UML 模型和关系图（Visual Studio 2010 旗舰版）](http://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![link 视频 ](../data-tools/media/playvideo.gif) 第[9 频道：通过 Visual Studio 2010 的 UML](http://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![link 视频 ](../data-tools/media/playvideo.gif) [MSDN 如何实现系列： UML 工具和扩展性（Visual Studio 2010 旗舰版）](http://go.microsoft.com/fwlink/?LinkID=214467)|
-|**论坛**|- [Visual Studio 可视化和建模工具](http://go.microsoft.com/fwlink/?LinkId=184720)<br />- [Visual Studio 可视化和建模 SDK（DSL 工具）](http://go.microsoft.com/fwlink/?LinkId=184721)|
+|**视频**|![链接到视频](../data-tools/media/playvideo.gif) [MSDN 如何实现视频：如何创建和使用 UML 模型和关系图（Visual Studio 2010 旗舰版）](/previous-versions/visualstudio/visual-studio-2010/dd831853(v=vs.100))<br /><br /> ![链接到视频](../data-tools/media/playvideo.gif) 第[9 频道：通过 Visual Studio 2010 的 UML](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-1-brainstorming-a-project)<br /><br /> ![链接到视频](../data-tools/media/playvideo.gif) [MSDN 如何实现系列： UML 工具和扩展性（Visual Studio 2010 旗舰版）](/previous-versions/visualstudio/visual-studio-2010/dd831853(v=vs.100))|
+|**论坛**|- [Visual Studio 可视化和建模工具](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />- [Visual Studio 可视化和建模 SDK（DSL 工具）](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
 |**Blogs**|[Microsoft DevOps](https://devblogs.microsoft.com/devops/)|
-|**技术文章和日志**|[MSDN 体系结构中心](http://go.microsoft.com/fwlink/?LinkId=201343)<br /><br /> [Visual Studio 体系结构工具指南](../modeling/visual-studio-architecture-tooling-guidance.md)|
+|**技术文章和日志**|[MSDN 体系结构中心](/previous-versions/dn630665(v=msdn.10))<br /><br /> [Visual Studio 体系结构工具指南](../modeling/visual-studio-architecture-tooling-guidance.md)|
 
 ## <a name="see-also"></a>请参阅
 

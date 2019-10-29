@@ -11,12 +11,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: dfdbe972034920869908c1bac1cb349c98d96d3f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2efea8f23e42b9f4839c8a1ae0d74248738b9cf4
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650712"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985354"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>“浏览并选择 .NET 类型”对话框
 
@@ -31,7 +31,7 @@ ms.locfileid: "72650712"
 - 在 <xref:System.Activities.Statements.TryCatch> 活动上添加一个 catch 时。
 
 > [!NOTE]
-> 类型浏览器可以显示 Visual Basic 交错数组类型，但不显示多维数组类型。 有关详细信息，请参阅[交错数组](http://go.microsoft.com/fwlink/?LinkId=195226)和[多维数组](http://go.microsoft.com/fwlink/?LinkId=195227)。
+> 类型浏览器可以显示 Visual Basic 交错数组类型，但不显示多维数组类型。 有关详细信息，请参阅[交错数组](/previous-versions/visualstudio/visual-studio-2008/hkhhsz9t(v=vs.90))和[多维数组](/previous-versions/visualstudio/visual-studio-2008/d2de1t93(v=vs.90))。
 
 ## <a name="selecting-a-value-or-reference-type-from-the-type-browser"></a>从类型浏览器中选择值或引用类型
 

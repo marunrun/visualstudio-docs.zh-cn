@@ -14,40 +14,38 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 67c12843d00bf8d5af51fa7af3175077527afa58
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0a1e01f5c9fc1372cda4d7d31f8ba56b90e166e7
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967756"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985858"
 ---
 # <a name="how-to-populate-worksheets-with-data-from-a-database"></a>如何：用数据库中的数据填充工作表
 
-可以对文档级 Office 项目中的数据访问与访问 Windows 窗体项目中的数据的方式相同。 使用相同的工具和代码将数据引入解决方案，然后即可使用 Windows 窗体控件来显示该数据。 此外，您可以利用控件称为主机控件，是指在 Microsoft Office Excel 中借助事件和数据绑定容量进行增强的本地对象。 有关详细信息，请参阅[主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)。
+可以访问文档级 Office 项目中的数据，其方式与访问 Windows 窗体项目中的数据的方式相同。 使用相同的工具和代码将数据引入解决方案，然后即可使用 Windows 窗体控件来显示该数据。 此外，可以利用称为 "宿主控件" 的控件，这些控件是 Microsoft Office Excel 中的本机对象，这些对象已使用事件和数据绑定功能进行增强。 有关详细信息，请参阅[主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)。
 
 [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
-下列示例演示了如何使用设计器在文档级项目中添加数据绑定控件。 有关如何在运行时在应用程序级项目中添加数据绑定控件的示例，请参阅[演练：VSTO 外接程序项目中的复杂数据绑定](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md)。
-
-![视频链接](../vsto/media/playvideo.gif "链接至视频")相关的视频演示，请参阅[如何实现：将数据传输到 Excel 工作表？](http://go.microsoft.com/fwlink/?LinkID=130277)，和[如何实现：使用在 Excel 中的数据库数据？](http://go.microsoft.com/fwlink/?LinkID=130287).
+下列示例演示了如何使用设计器在文档级项目中添加数据绑定控件。 有关如何在运行时在应用程序级项目中添加数据绑定控件的示例，请参阅[演练： VSTO 外接程序项目中的复杂数据绑定](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md)。
 
 ## <a name="add-a-data-bound-control-to-a-worksheet-at-design-time"></a>在设计时将数据绑定控件添加到工作表
 
-### <a name="to-populate-a-worksheet-with-data-from-a-database"></a>若要填充数据库中的数据工作表
+### <a name="to-populate-a-worksheet-with-data-from-a-database"></a>用数据库中的数据填充工作表
 
-1. 使用在设计器中打开该工作表，在 Visual Studio 中，打开一个 Excel 文档级项目。
+1. 在 Visual Studio 中打开 Excel 文档级项目，并在设计器中打开工作表。
 
-2. 打开“数据源”  窗口并为项目创建数据源。 有关详细信息，请参阅[添加新连接](../data-tools/add-new-connections.md)。
+2. 打开“数据源” 窗口并为项目创建数据源。 有关详细信息，请参阅[添加新连接](../data-tools/add-new-connections.md)。
 
-3. 将字段或想要从表拖**数据源**到工作表窗口。
+3. 将所需的字段或表从 "**数据源**" 窗口拖到工作表中。
 
-在工作表上将创建以下控件之一：
+在工作表上创建以下控件之一：
 
-- 如果您拖动字段<xref:Microsoft.Office.Tools.Excel.NamedRange>工作表上创建控件。 有关详细信息，请参阅[NamedRange 控件](../vsto/namedrange-control.md)。
+- 如果拖动某个字段，则会在工作表上创建一个 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件。 有关详细信息，请参阅[NamedRange 控件](../vsto/namedrange-control.md)。
 
-- 如果拖动一个表，<xref:Microsoft.Office.Tools.Excel.ListObject>工作表上创建控件。 有关详细信息，请参阅[ListObject 控件](../vsto/listobject-control.md)。
+- 如果拖动某个表，则会在工作表上创建一个 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件。 有关详细信息，请参阅[ListObject 控件](../vsto/listobject-control.md)。
 
-可以选择表中添加一个不同的控件或中的字段**数据源**窗口，然后从下拉列表中选择一个不同的控件。
+您可以通过在 "**数据源**" 窗口中选择表或字段，然后从下拉列表中选择其他控件来添加不同的控件。
 
 ## <a name="objects-in-the-project"></a>项目中的对象
 
@@ -57,9 +55,9 @@ ms.locfileid: "62967756"
 
 - 一个 <xref:System.Windows.Forms.BindingSource>，它将控件连接到类型化数据集。 有关详细信息，请参阅[BindingSource 组件概述](/dotnet/framework/winforms/controls/bindingsource-component-overview)。
 
-- 连接到数据库的类型化数据集的 TableAdapter。 有关详细信息，请参阅[TableAdapter 概述](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview)。
+- 将类型化的数据集连接到数据库的 TableAdapter。 有关详细信息，请参阅[TableAdapter 概述](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview)。
 
-- TableAdapterManager，用于协调数据集中的表适配器来启用分层更新。 有关详细信息，请参阅[分层更新](../data-tools/hierarchical-update.md)并[TableAdapterManager 引用](../data-tools/fill-datasets-by-using-tableadapters.md#tableadaptermanager-reference)。
+- TableAdapterManager，用于在数据集中协调表适配器以启用分层更新。 有关详细信息，请参阅[分层更新](../data-tools/hierarchical-update.md)和[TableAdapterManager 参考](../data-tools/fill-datasets-by-using-tableadapters.md#tableadaptermanager-reference)。
 
 运行项目时，该控件将显示数据源中的第一条记录。 可以借助 <xref:System.Windows.Forms.BindingSource> 来使用户能滚动显示各个记录。
 
@@ -78,5 +76,3 @@ ms.locfileid: "62967756"
 - [如何：用数据库中的数据填充文档](../vsto/how-to-populate-documents-with-data-from-a-database.md)
 - [如何：用服务中的数据填充文档](../vsto/how-to-populate-documents-with-data-from-services.md)
 - [如何：使用主机控件中的数据更新数据源](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
-- [如何实现:将数据传输到 Excel 工作表](http://go.microsoft.com/fwlink/?LinkID=130277)
-- [如何实现:使用在 Excel 中的数据库数据？](http://go.microsoft.com/fwlink/?LinkID=130287)

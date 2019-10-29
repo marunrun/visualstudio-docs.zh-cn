@@ -1,5 +1,5 @@
 ---
-title: 为 SharePoint 创建站点栏、 内容类型和列表 |Microsoft Docs
+title: 创建 SharePoint 的网站栏、内容类型和列表 |Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -18,20 +18,20 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8cecb3e78cea90b927dc6b67b5b4a2cb50bfa87c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 538d82794fcecb91e4f13ab6d7718d0bf407b86f
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62581091"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984515"
 ---
-# <a name="create-site-columns-content-types-and-lists-for-sharepoint"></a>为 SharePoint 创建站点栏、 内容类型和列表
-  Visual Studio 为许多不同基本 SharePoint 项，包括提供项目项模板*列出了*并*内容类型*，这两种可结合网站栏 (或*字段*)。 用于内容类型和列表的新设计器可更简单地创建这些项。
+# <a name="create-site-columns-content-types-and-lists-for-sharepoint"></a>创建 SharePoint 的网站栏、内容类型和列表
+  Visual Studio 为许多不同的基本 SharePoint 项（包括*列表*和*内容类型*）提供项目项模板，这两者都可以包含网站列（或*字段*）。 用于内容类型和列表的新设计器可更简单地创建这些项。
 
 ## <a name="site-columns"></a>网站栏
  网站栏是您可以向 SharePoint 项目添加的一种最基本元素。 网站栏表示数据的类型，例如联系人列表中某一联系人的电话号码、注释或者所在城市的名称。
 
- 新网站栏项目项模板使创建网站栏比使用 Visual Studio 的早期版本更容易。 创建一个新的站点列之后, 您可以修改网站栏中的 XML *Elements.xml*文件以包含所需信息，例如其显示名称、 其数据类型和想要站点列中显示的组SharePoint。 有关站点列的详细信息，请参阅[简介列](http://go.microsoft.com/fwlink/?LinkId=224996)。
+ 新网站栏项目项模板使创建网站栏比使用 Visual Studio 的早期版本更容易。 创建新的网站列后，您可以修改网站列的 "*元素 .xml* " 文件中的 xml，以包含所需的信息，例如其显示名称、数据类型以及您希望网站列出现在 SharePoint 中的组。 有关站点列的详细信息，请参阅[列简介](/previous-versions/office/developer/sharepoint-2010/ms450825(v=office.14))。
 
 ## <a name="content-types-and-lists"></a>内容类型和列表
  内容类型和列表是 SharePoint 中常用的元素。
@@ -40,13 +40,13 @@ ms.locfileid: "62581091"
 
  列表是 SharePoint 中可与其他人共享的信息的集合。 列表由多行包含数据的栏组成。 列表的一些示例包括：任务列表、联系人列表和公告列表。
 
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 中的新内容类型和列表设计器使创建站点内容类型和列表比使用 Visual Studio 的早期版本更容易、更直观。 UI 允许您以熟悉的方式可视化构造内容类型和列表，并能够排序和分组列表中的数据以及使用组标题。 有关内容类型的详细信息，请参阅[内容类型](http://go.microsoft.com/fwlink/?LinkId=224997)。 有关列表的详细信息，请参阅[的列表窗体](http://go.microsoft.com/fwlink/?LinkId=224998)并[列表视图](http://go.microsoft.com/fwlink/?LinkId=224999)。
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 中的新内容类型和列表设计器使创建站点内容类型和列表比使用 Visual Studio 的早期版本更容易、更直观。 UI 允许您以熟悉的方式可视化构造内容类型和列表，并能够排序和分组列表中的数据以及使用组标题。 有关内容类型的详细信息，请参阅[内容类型](/previous-versions/office/developer/sharepoint-2010/ms479905(v=office.14))。 有关列表的详细信息，请参阅[列出窗体](/previous-versions/office/developer/sharepoint-2010/aa543232(v=office.14))和[列表视图](/previous-versions/office/developer/sharepoint-2010/ff604021(v=office.14))。
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|描述|
+|Title|描述|
 |-----------|-----------------|
-|[演练：创建 SharePoint 网站栏、 内容类型和列表](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)|演示如何创建网站栏以用于自定义内容类型。 此内容类型随后将用于自定义列表。|
+|[演练：为 SharePoint 创建网站栏、内容类型和列表](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)|演示如何创建网站栏以用于自定义内容类型。 此内容类型随后将用于自定义列表。|
 
 ## <a name="see-also"></a>请参阅
-- [SharePoint 2010 开发入门](http://go.microsoft.com/fwlink/?LinkId=225000)
+- [在 SharePoint 2010 上开始开发](/sharepoint/dev/)

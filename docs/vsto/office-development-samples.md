@@ -12,17 +12,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5cc00d56b0abf02f99c7ab320ab0353d1b4b2317
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: b9e20f0d14b2940fdbe8096442848f38183b1db7
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63447130"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985727"
 ---
 # <a name="office-development-samples"></a>Office 开发示例
   Visual Studio 包含示例应用程序，这些应用程序演示如何使用 Microsoft Office 开发人员工具来创建 Office 解决方案。 这些示例中的代码阐释了用于生成 Office 解决方案的语法、结构和技术。
 
- 有关最新的示例，请参阅[MSDN 开发人员示例：通过代码学习](http://go.microsoft.com/fwlink/?LinkID=248199)Microsoft 网站上。
+ 有关最新示例，请参阅[MSDN 开发人员示例：通过](https://code.msdn.microsoft.com/site/search?query=vsto&f%5B1%5D.Value=vsto&f%5B1%5D.Type=SearchText&f%5B0%5D.Value=11.0&f%5B0%5D.Type=VisualStudioVersion&f%5B0%5D.Text=Visual%20Studio%2011&ac=8)Microsoft 网站上的代码学习。
 
  [!INCLUDE[note_security_multiplesample](../vsto/includes/note-security-multiplesample-md.md)]
 

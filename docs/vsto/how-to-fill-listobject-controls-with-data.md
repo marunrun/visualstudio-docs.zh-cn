@@ -17,19 +17,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a0916ca11d4df5f6b69376d7223143afbb407f6e
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 48af9145ce069b426b86f05bf0aadfc5386a6271
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71255883"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985921"
 ---
 # <a name="how-to-fill-listobject-controls-with-data"></a>如何：用数据填充 ListObject 控件
   可以使用数据绑定快速地将数据添加到文档中。 将数据绑定到列表对象后，可以断开列表对象的连接，以便它能显示数据且不再与数据源绑定。
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
-
- ![视频链接](../vsto/media/playvideo.gif "视频链接")有关相关的视频演示，请[参阅如何实现：在 Excel 中创建连接到 SharePoint 列表的列表？](http://go.microsoft.com/fwlink/?LinkID=130263).
 
 ### <a name="to-bind-data-to-a-listobject-control"></a>将数据绑定到 ListObject 控件
 
@@ -66,5 +64,5 @@ ms.locfileid: "71255883"
 - [使用扩展对象实现 Excel 自动化](../vsto/automating-excel-by-using-extended-objects.md)
 - [ListObject 控件](../vsto/listobject-control.md)
 - [将数据绑定到 Office 解决方案中的控件](../vsto/binding-data-to-controls-in-office-solutions.md)
-- [如何：使用数据库中的数据填充工作表](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)
+- [如何：用数据库中的数据填充工作表](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)
 - [如何：用服务中的数据填充文档](../vsto/how-to-populate-documents-with-data-from-services.md)

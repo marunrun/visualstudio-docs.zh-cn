@@ -28,12 +28,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c294ce3c6dcf3a880cf5f57ca825064366e08e2b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 736b203feb5b1a640d7865b92a6d3ad191397d26
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668235"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985033"
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>在 Visual Studio 中调试时映射调用堆栈上的方法
 
@@ -59,7 +59,7 @@ ms.locfileid: "72668235"
 
   请参阅：
 
-- [视频：利用代码图调试器集成进行可视化调试（第9频道）](http://go.microsoft.com/fwlink/?LinkId=293418)
+- [视频：利用代码图调试器集成进行可视化调试（第9频道）](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012Debug-visually-with-Code-Map-debugger-integration)
 
 - [映射调用堆栈](#MapStack)
 
@@ -178,7 +178,7 @@ ms.locfileid: "72668235"
 
 - **如何实现阻止地图自动添加新的调用堆栈？**
 
-   选择 " &#45;在代码图上自动显示调用堆栈" ](../debugger/media/debuggermap_automaticupdateicon.gif) 在地图工具栏上 ![Button。 若要手动将当前调用堆栈添加到地图中，请按**Ctrl**  + **Shift**  +  **`** "。
+   选择 "在&#45;代码图上自动显示调用堆栈" ![在地图工具栏上](../debugger/media/debuggermap_automaticupdateicon.gif)。 若要手动将当前调用堆栈添加到地图中，请按**Ctrl**  + **Shift**  +  **`** "。
 
    调试时，映射将继续突出显示地图上的现有调用堆栈。
 

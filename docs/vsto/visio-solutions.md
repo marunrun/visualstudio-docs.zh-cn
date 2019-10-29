@@ -17,19 +17,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 69d795fe9e4243bbce51e1e137bb6704492bae32
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: a79b3c9964a24daf0a12ab90f47fb5903d89cdd0
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551273"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985507"
 ---
 # <a name="visio-solutions"></a>Visio 解决方案
   Visual Studio 提供可用于创建 Microsoft Office Visio 的 VSTO 外接程序的项目模板。 VSTO 外接程序可用于自动运行 Visio、扩展 Visio 功能或自定义 Visio 用户界面 (UI)。
 
- 有关 VSTO 外接程序的详细信息, 请参阅 VSTO 外接[程序编程](../vsto/getting-started-programming-vsto-add-ins.md)和[vsto 外接程序的体系结构](../vsto/architecture-of-vsto-add-ins.md)。如果不熟悉如何与 Microsoft Office 进行编程, 请参阅[Visual &#40;Studio&#41;中的入门 Office 开发](../vsto/getting-started-office-development-in-visual-studio.md)。
+ 有关 VSTO 外接程序的详细信息，请参阅 VSTO 外接[程序编程](../vsto/getting-started-programming-vsto-add-ins.md)和[vsto 外接程序的体系结构](../vsto/architecture-of-vsto-add-ins.md)。如果不熟悉如何与 Microsoft Office 进行编程，请参阅[Visual &#40;Studio&#41;中的入门 Office 开发](../vsto/getting-started-office-development-in-visual-studio.md)。
 
- **适用于:** 本主题中的信息适用于 Visio 2010 的 VSTO 外接程序项目。 有关详细信息，请参阅[按 Office 应用程序和项目类型提供的功能](../vsto/features-available-by-office-application-and-project-type.md)。
+ **适用于：** 本主题中的信息适用于 Visio 2010 的 VSTO 外接程序项目。 有关详细信息，请参阅[按 Office 应用程序和项目类型提供的功能](../vsto/features-available-by-office-application-and-project-type.md)。
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
@@ -46,14 +46,14 @@ ms.locfileid: "69551273"
 
 - 将外部数据导入 Visio，将其链接到形状并在页面上以图形方式显示。
 
-  您可以查看有关使用 Visio 对象模型处理文档和形状的分步过程和代码示例, 以便处理[visio 文档](../vsto/working-with-visio-documents.md)和使用[visio 形状](../vsto/working-with-visio-shapes.md)。
+  您可以查看有关使用 Visio 对象模型处理文档和形状的分步过程和代码示例，以便处理[visio 文档](../vsto/working-with-visio-documents.md)和使用[visio 形状](../vsto/working-with-visio-shapes.md)。
 
-  若要从 VSTO 外接程序访问 Visio 对象模型，请使用项目中 `Application` 类的 `ThisAddIn` 字段。 `Application` 字段返回 `Microsoft.Office.Interop.Visio.Application` 对象，该对象表示 Visio 的当前实例。 有关详细信息, 请参阅[PROGRAM VSTO 外接程序](../vsto/programming-vsto-add-ins.md)。
+  若要从 VSTO 外接程序访问 Visio 对象模型，请使用项目中 `Application` 类的 `ThisAddIn` 字段。 `Application` 字段返回 `Microsoft.Office.Interop.Visio.Application` 对象，该对象表示 Visio 的当前实例。 有关详细信息，请参阅[PROGRAM VSTO 外接程序](../vsto/programming-vsto-add-ins.md)。
 
-  调入 Visio 对象模型时，将使用 Visio 的主互操作程序集 (PIA) 中提供的类型。 该 PIA 用作 VSTO 外接程序中的托管代码和 Visio 中的 COM 对象模型之间的桥梁。 Visio PIA 中的所有类型都在 `Microsoft.Office.Interop.Visio` 命名空间中进行定义。 有关主互操作程序集的详细信息, 请参阅[Office &#40;解决方案&#41;开发概述 VSTO](../vsto/office-solutions-development-overview-vsto.md)和[office 主互操作程序集](../vsto/office-primary-interop-assemblies.md)。
+  调入 Visio 对象模型时，将使用 Visio 的主互操作程序集 (PIA) 中提供的类型。 该 PIA 用作 VSTO 外接程序中的托管代码和 Visio 中的 COM 对象模型之间的桥梁。 Visio PIA 中的所有类型都在 `Microsoft.Office.Interop.Visio` 命名空间中进行定义。 有关主互操作程序集的详细信息，请参阅[Office &#40;解决方案&#41;开发概述 VSTO](../vsto/office-solutions-development-overview-vsto.md)和[office 主互操作程序集](../vsto/office-primary-interop-assemblies.md)。
 
 ## <a name="visio-object-model-overview"></a>Visio 对象模型概述
- 有关 visio 对象模型的概述, 请参阅 visio 对象[模型概述](../vsto/visio-object-model-overview.md), 其中包括指向 Visio 对象模型参考和 sdk 的链接。
+ 有关 visio 对象模型的概述，请参阅 visio 对象[模型概述](../vsto/visio-object-model-overview.md)，其中包括指向 Visio 对象模型参考和 sdk 的链接。
 
 ## <a name="customize-the-user-interface-of-visio"></a>自定义 Visio 的用户界面
  该 Visio UI 还拥有以下自定义选项。
@@ -74,4 +74,4 @@ ms.locfileid: "69551273"
 - [Office 主互操作程序集](../vsto/office-primary-interop-assemblies.md)
 - [Office UI 自定义](../vsto/office-ui-customization.md)
 - [Visio 对象模型概述](../vsto/visio-object-model-overview.md)
-- [Office 开发中的 Visio 2010](http://go.microsoft.com/fwlink/?LinkId=199017)
+- [Office 开发中的 Visio 2010](/previous-versions/office/developer/office-2010/ff604964(v=office.14))

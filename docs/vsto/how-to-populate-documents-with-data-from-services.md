@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6239bc351872dc7a945c3fbff8ad1ed13817c3ef
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4f53000f7d6aa8bdd8261bbe5658607918b6b449
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967779"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985874"
 ---
 # <a name="how-to-populate-documents-with-data-from-services"></a>如何：用服务中的数据填充文档
 
@@ -27,27 +27,25 @@ ms.locfileid: "62967779"
 
 [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
-下列示例演示了如何在设计时向文档中添加数据绑定控件。 有关如何在运行时在 VSTO 外接程序中添加数据绑定控件的示例，请参阅[演练：将绑定到数据服务中的 VSTO 外接程序项目的](../vsto/walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project.md)。
+下列示例演示了如何在设计时向文档中添加数据绑定控件。 有关如何在运行时在 VSTO 外接程序中添加数据绑定控件的示例，请参阅[演练：在 Vsto 外接程序项目中绑定到服务中的数据](../vsto/walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project.md)。
 
-![视频链接](../vsto/media/playvideo.gif "链接至视频")相关的视频演示，请参阅[如何实现：与 Microsoft Excel 中的 web 服务进行交互？](http://go.microsoft.com/fwlink/?LinkID=130284).
+## <a name="to-populate-a-document-level-project-with-data-from-a-web-service"></a>使用 web 服务中的数据填充文档级项目
 
-## <a name="to-populate-a-document-level-project-with-data-from-a-web-service"></a>填充文档级项目中的 web 服务的数据
+1. 打开“数据源” 窗口并为项目创建服务数据源。 有关详细信息，请参阅[添加新数据源](../data-tools/add-new-data-sources.md)。
 
-1. 打开“数据源”  窗口并为项目创建服务数据源。 有关详细信息，请参阅[添加新数据源](../data-tools/add-new-data-sources.md)。
-
-2. 将所需的表或字段从“数据源”  窗口拖动到你的文档。
+2. 将所需的表或字段从“数据源” 窗口拖动到你的文档。
 
      在文档中创建控件，创建绑定到项目中的对象类的 <xref:System.Windows.Forms.BindingSource> ，并为该服务生成类。
 
-3. 在代码中，创建连接到在步骤 1 中的 web 服务类的实例。
+3. 在代码中，创建一个在步骤1中连接的 web 服务类的实例。
 
-4. 如果没有与 web 服务的通信所需的属性，创建这些属性的实例。
+4. 如果存在与 web 服务进行通信所需的属性，则创建这些属性的实例。
 
 5. 使用 Web 服务公开的方法和第 4 步中创建的任何属性实例创建并发送数据请求。
 
-     您使用的方法取决于 web 服务提供。
+     使用的方法取决于 web 服务提供的功能。
 
-6. 从 web 服务的目标分配数据响应<xref:System.Windows.Forms.BindingSource.DataSource%2A>属性的<xref:System.Windows.Forms.BindingSource>。
+6. 将 web 服务的数据响应分配给 <xref:System.Windows.Forms.BindingSource>的 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 属性。
 
 运行项目时，控件显示数据源中的第一条记录。 可以通过使用 <xref:System.Windows.Forms.BindingSource>中的对象处理货币事件，从而滚动记录。
 

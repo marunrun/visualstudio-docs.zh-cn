@@ -1,5 +1,5 @@
 ---
-title: 托管参考 (Visual Studio 中的 Office 开发)
+title: 托管参考（Visual Studio 中的 Office 开发）
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -13,15 +13,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: da10833f8340d5308321038bb0500ca8408b40bb
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 137031202075d1c646cc7415042dd8d6eab72b78
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551764"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985771"
 ---
-# <a name="managed-reference-office-development-in-visual-studio"></a>托管参考 (Visual Studio 中的 Office 开发)
-  本部分包含在针对 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]的 Office 项目中使用的命名空间和类型的 API 参考文档。 有关面向 .NET Framework 3.5 的 Office 项目中使用的命名空间和类型的 API 参考文档, 请参阅 Visual Studio 文档中的以下参考部分: [http://go.microsoft.com/fwlink/?LinkId=160658](http://go.microsoft.com/fwlink/?LinkId=160658)。
+# <a name="managed-reference-office-development-in-visual-studio"></a>托管参考（Visual Studio 中的 Office 开发）
+  本部分包含在针对 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](includes/net-v45-md.md)]的 Office 项目中使用的命名空间和类型的 API 参考文档。 有关面向 .NET Framework 3.5 的 Office 项目中使用的命名空间和类型的 API 参考文档，请参阅 Visual Studio 文档中的以下参考部分：[托管参考（Visual studio 中的 Office 开发)](managed-reference-office-development-in-visual-studio.md).
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
@@ -64,14 +64,14 @@ ms.locfileid: "69551764"
 
  <xref:Microsoft.VisualStudio.Tools.Applications.Runtime>
 
- 包含可以由 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]引发的大多数异常、可以用于在文档级自定义项中缓存数据的多个类以及其他属于 Visual Studio 基础结构一部分的 API。
+ 包含可以由 [!INCLUDE[vsto_runtime](includes/vsto-runtime-md.md)]引发的大多数异常、可以用于在文档级自定义项中缓存数据的多个类以及其他属于 Visual Studio 基础结构一部分的 API。
 
  <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks>
 
  包含用于生成 Office 项目的 MSBuild 任务类。
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio tools for Office runtime 概述](../vsto/visual-studio-tools-for-office-runtime-overview.md)
-- [Visual Studio &#40;中的 Office 开发入门&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
-- [Office 开发示例和演练](../vsto/office-development-samples-and-walkthroughs.md)
-- [设计和创建 Office 解决方案](../vsto/designing-and-creating-office-solutions.md)
+- [Visual Studio tools for Office runtime 概述](visual-studio-tools-for-office-runtime-overview.md)
+- [Visual Studio &#40;中的 Office 开发入门&#41;](getting-started-office-development-in-visual-studio.md)
+- [Office 开发示例和演练](office-development-samples-and-walkthroughs.md)
+- [设计和创建 Office 解决方案](designing-and-creating-office-solutions.md)

@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4932a20fbcaee4d5aef6aac03252ee6062fbd035
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 410bc879ff4822f19436794d3cb99732be9d413e
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72606207"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72983708"
 ---
 # <a name="t4-template-directive"></a>T4 模板指令
 
@@ -132,7 +132,7 @@ Content of myFile is:
 
 `VB`
 
-@No__t_0 特性指定用于语句和表达式块中的源代码的语言（[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 或 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]）。 从中生成输出的中间代码文件将使用此语言。 此语言与您的模板生成的语言无关，它可以是任何类型的文本。
+`language` 特性指定用于语句和表达式块中的源代码的语言（[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 或 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]）。 从中生成输出的中间代码文件将使用此语言。 此语言与您的模板生成的语言无关，它可以是任何类型的文本。
 
 例如:
 
@@ -235,7 +235,7 @@ This is the common footer.
 
 对于设计时文本模板来说，可以指定从 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName> 派生的任何基类。 使用 `<#@assembly#>` 指令来加载包含基类的程序集或项目。
 
-有关详细信息，请参阅[Gareth 的 "博客中的" 文本模板中的继承 "](http://go.microsoft.com/fwlink/?LinkId=208373)。
+有关详细信息，请参阅[Gareth 的 "博客中的" 文本模板中的继承 "](https://blogs.msdn.microsoft.com/garethj/2011/01/03/vs2010-sp1-t4-template-inheritance-part-i-sample-metadata/)。
 
 ## <a name="linepragmas-attribute"></a>linePragmas 特性
 
