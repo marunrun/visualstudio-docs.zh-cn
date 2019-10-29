@@ -10,12 +10,12 @@ ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: mikejo
 ms.technology: vs-ide-debug
-ms.openlocfilehash: 18d2364794eef2177c4cfc607ecc6da38143ba54
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: a353ac12f7477bf40393f83de5fe41ede4d9aa95
+ms.sourcegitcommit: bb5425b9c6d8fd7135d9584c2963831754071347
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911874"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024589"
 ---
 # <a name="debugging-an-azure-cloud-service-or-virtual-machine-in-visual-studio"></a>在 Visual Studio 中调试云服务或虚拟机
 
@@ -49,7 +49,7 @@ Visual Studio 提供了不同的选项来调试 Azure 云服务和虚拟机。
 为云服务启用远程调试不会导致性能下降或费用增加。 请勿在生产服务上使用远程调试，因为使用该服务的客户端可能会受到不利影响。
 
 > [!NOTE]
-> 当从 Visual Studio 中发布云服务时，可以为该服务中所有以 .NET Framework 4 或 .NET Framework 4.5 为目标的角色启用 **IntelliTrace**。 使用 **IntelliTrace** 可以检查过去发生在某个角色实例中的事件，并重现当时的上下文。 请参阅[使用 IntelliTrace 和 Visual Studio 调试已发布的云服务](vs-azure-tools-IntelliTrace-debug-published-cloud-services.md)和[使用 IntelliTrace 进行调试](/debugger/intellitrace)。
+> 当从 Visual Studio 中发布云服务时，可以为该服务中所有以 .NET Framework 4 或 .NET Framework 4.5 为目标的角色启用 **IntelliTrace**。 使用 **IntelliTrace** 可以检查过去发生在某个角色实例中的事件，并重现当时的上下文。 请参阅[使用 IntelliTrace 和 Visual Studio 调试已发布的云服务](vs-azure-tools-IntelliTrace-debug-published-cloud-services.md)和[使用 IntelliTrace 进行调试](../debugger/intellitrace.md)。
 
 ### <a name="to-enable-remote-debugging-for-a-cloud-service"></a>为云服务启用远程调试
 

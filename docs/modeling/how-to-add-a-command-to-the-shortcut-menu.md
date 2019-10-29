@@ -10,12 +10,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f7d873a3401e37a18b938cb5785f33eb0bc9b8fb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e476f1db1e30a04e67e6b53f593f55ee3867fae2
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666718"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985134"
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>如何：向快捷菜单中添加命令
 
@@ -28,8 +28,6 @@ ms.locfileid: "72666718"
 2. [更新 Package.tt 中的包版本号](#version)。 只要更改 Commands.vsct，就必须执行此操作
 
 3. [在 CommandSet 类中编写方法](#CommandSet)，使命令可见，并定义要执行的命令。
-
-   有关示例，请参阅[可视化和建模 SDK 网站](http://go.microsoft.com/fwlink/?LinkID=185579)。
 
 > [!NOTE]
 > 通过在 CommandSet.cs 中重写方法，还可以修改某些现有命令（例如剪切、粘贴、全选和打印）的行为。 有关详细信息，请参阅[如何：修改标准菜单命令](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)。
@@ -102,7 +100,7 @@ ms.locfileid: "72666718"
     </VisibilityConstraints>
     ```
 
-4. 定义用于 GUID 和 ID 的名称。 为此，请在 `Symbols` 元素后的 `CommandTable` 元素中添加 `Commands` 元素。
+4. 定义用于 Guid 和 Id 的名称。 为此，请在 `Symbols` 元素后的 `CommandTable` 元素中添加 `Commands` 元素。
 
     ```xml
     <Symbols>
@@ -362,7 +360,7 @@ protected override IList<MenuCommand> GetMenuCommands()
 ## <a name="see-also"></a>请参阅
 
 - [编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)
-- [如何：修改标准的菜单命令](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)
+- [如何：修改标准菜单命令](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)
 - [部署域特定语言解决方案](msi-and-vsix-deployment-of-a-dsl.md)
 - [示例代码：线路图](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
 

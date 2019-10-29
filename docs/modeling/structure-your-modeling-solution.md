@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 73a1c6458bf6afc5d6fce34208dd8c2c3ddda37f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: fecf0d146c1116e6ec6376ffd9ad929cc9179d1c
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748206"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985221"
 ---
 # <a name="structure-your-modeling-solution"></a>安排你的建模解决方案
 
@@ -30,7 +30,7 @@ ms.locfileid: "72748206"
 
 ### <a name="to-divide-an-application-into-layers"></a>将应用程序划分为多层
 
-1. 将解决方案的结构建立在应用程序（例如，Web 应用程序、服务应用程序或桌面应用程序）的结构之上。 [Microsoft 应用程序体系结构指南的应用程序原型中](http://go.microsoft.com/fwlink/?LinkId=196681)讨论了各种常见的体系结构。
+1. 将解决方案的结构建立在应用程序（例如，Web 应用程序、服务应用程序或桌面应用程序）的结构之上。 [Microsoft 应用程序体系结构指南的应用程序原型中](/previous-versions/msp-n-p/ee658107(v=pandp.10))讨论了各种常见的体系结构。
 
 2. 创建 Visual Studio 解决方案，我们将对其进行介绍。 此解决方案将用于创建系统的整体设计。 它将包含模型但不包括代码。
 
@@ -92,7 +92,7 @@ ms.locfileid: "72748206"
 
 ### <a name="to-create-a-solution-template"></a>创建解决方案模板
 
-1. [下载并安装 "导出模板向导"](http://go.microsoft.com/fwlink/?LinkId=196686)。
+1. [下载并安装 "导出模板向导"](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.ExportTemplateWizard)。
 
 2. 创建你想要用作将来项目的起始点的解决方案结构。
 
