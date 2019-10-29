@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b60f9bb1fffb9fb36311ad3fda504c1ff2260ce
-ms.sourcegitcommit: a5a54b147e772dc39e519da74ec41a0c25d99628
+ms.openlocfilehash: 0699faebfd210390eea11f8ad11b48d4c4bbd980
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289686"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72621426"
 ---
 # <a name="step-4-add-a-click-event-handler-to-each-label"></a>步骤 4：向每个标签添加一个 Click 事件处理程序
 
@@ -38,7 +38,7 @@ ms.locfileid: "72289686"
 
 2. 选择第一个标签控件以选中它。 然后，按住 Ctrl  键选择其他每个标签，将它们选中。 确保选中每个标签。
 
-3. 选择“属性”  窗口工具栏上的“事件”  按钮，在“属性”  窗口中查看“事件”  页面。 向下滚动到“Click”  事件，在框中输入“label_Click”  ，如下图所示。
+3. 选择“属性”  窗口工具栏上的“事件”  按钮，在“属性”  窗口中查看“事件”  页面。 向下滚动到“Click”  事件，在框中输入“label_Click”  ，如以下屏幕截图所示。
 
      ![显示 Click 事件的“属性”窗口](../ide/media/express_labelclick.png)
 
@@ -64,6 +64,6 @@ ms.locfileid: "72289686"
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅[步骤 5：添加标签引用](../ide/step-5-add-label-references.md)。
+- 要转到下一个教程步骤，请参阅[步骤 5：添加标签引用](../ide/step-5-add-label-references.md)  。
 
 - 要返回上一个教程步骤，请参阅[步骤 3：向每个标签分配一个随机图标](../ide/step-3-assign-a-random-icon-to-each-label.md)。
