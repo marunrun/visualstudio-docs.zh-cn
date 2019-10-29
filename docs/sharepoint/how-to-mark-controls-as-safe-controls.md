@@ -14,104 +14,104 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 30bb597288c19328bb71ce7b5212200991d7181e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 232fef4908a6168d550d510a0d753fe8e39db02b
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443072"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72982728"
 ---
 # <a name="how-to-mark-controls-as-safe-controls"></a>如何：将控件标记为安全控件
-  为了安全，SharePoint 区分防止脚本注入的 Web 控件和 Web 控件不是。 受保护的控件，或*安全控件*，可以由不受信任的用户访问。 您可以将标记为安全控件项属性的 SharePoint 项目项中或在中安全控件**包设计器**时向包中添加程序集。 有关详细信息，请参见
+  为安全，SharePoint 在保护的 Web 控件和不是的脚本注入和 Web 控件之间区分开来。 不受信任的用户可以访问受保护的控件或*安全控件*。 将程序集添加到包中时，可以在 SharePoint 项目项的 "安全控件项" 属性或**包设计器**中将控件标记为安全。 有关详细信息，请参阅
 
-- [web.config 文件设置更改](http://go.microsoft.com/fwlink/?LinkId=178965)并[Web 部件程序集注册为安全控件](http://go.microsoft.com/fwlink/?LinkId=171013)。
+- web.config[文件设置更改并将](/previous-versions/office/developer/sharepoint-2007/bb802890(v=office.12)) [Web 部件程序集注册为安全控件](/previous-versions/office/developer/sharepoint2003/dd587360(v=office.11))。
 
 > [!IMPORTANT]
-> 这些过程是用于说明目的。 仅当你确信它们是安全的安全控件标记。
+> 这些过程用于说明目的。 仅在确定控件安全时才将其标记为安全。
 
-## <a name="marking-safe-controls-in-the-safe-control-entries-property"></a>将标记为安全控件条目属性中的安全控件
+## <a name="marking-safe-controls-in-the-safe-control-entries-property"></a>在 "安全控件项" 属性中标记安全控件
 
-#### <a name="to-mark-controls-as-safe-or-unsafe-in-the-safe-control-entries-property"></a>若要将控件标记为安全或不安全的安全控件项属性
+#### <a name="to-mark-controls-as-safe-or-unsafe-in-the-safe-control-entries-property"></a>将控件标记为安全控件项属性中的安全或不安全
 
-1. 使用 Visual Web 部件项目中创建 SharePoint 解决方案。
+1. 使用可视 Web 部件项目创建 SharePoint 解决方案。
 
-2. 将两个控件添加到 Web 部件： 一个文本框和一个按钮。 分别将 TextBox1 和 Button1，其默认值保留的名称。
+2. 将两个控件添加到 Web 部件：文本框和按钮。 将名称分别保留为默认值 TextBox1 和 Button1。
 
-3. 将两个条目添加到 Web 部件**安全控件项**属性。 若要执行此操作，请选择省略号 (![ASP.NET 移动设计器椭圆](../sharepoint/media/mwellipsis.gif "ASP.NET 移动设计器椭圆")) 按钮旁边**安全控件项**中的属性**属性**窗口。
+3. 将两个项添加到 Web 部件的 "**安全控件项**" 属性中。 为此，请在 "**属性**" 窗口中选择 "**安全控件项**" 属性旁边的省略号（![ASP.NET Mobile 设计器椭圆](../sharepoint/media/mwellipsis.gif "ASP.NET 移动设计器中的省略号")）按钮。
 
-     **安全控件项**对话框随即出现。
+     此时将显示 "**安全控制条目**" 对话框。
 
-4. 在**安全控件项**对话框框中，选择**添加**按钮两次以添加两个安全控件条目**成员**窗格： 一个用于按钮和一个用于文本框。
+4. 在 "**安全控件项**" 对话框中，选择 "**添加**" 按钮两次，将两个安全控件项添加到 "**成员**" 窗格中：一个用于按钮，一个用于文本框。
 
-5. 选择第一个安全控件项，然后更改的值及其**安全**属性设置为**False**，将其**类型名称**属性设置为**Button1**，并将其**安全应对脚本**属性设置为**False**。
+5. 选择第一个 "安全控制" 项，然后将其 "**安全**" 属性的值更改为 " **false**"，将其 "**类型名称**" 属性更改为 " **Button1**"，并将其 "**安全**" 设置为 " **false**"
 
-     此步骤中标识为不安全的控件的按钮控件。
+     此步骤将按钮控件标识为不安全控件。
 
-6. 选择列表中的第二个安全控件项。 保留的值及其**安全**属性作为**True**并设置其**类型名称**属性设置为**TextBox1**并将其**安全对脚本**属性设置为**True**。
+6. 选择列表中的第二个安全控件项。 将其**Safe**属性的值保留为**true** ，并将其 "**类型名称**" 属性设置为 " **TextBox1** "，并将其 "**安全应对脚本**" 属性设置为**true**。
 
-     文本框控件现在标记为可安全应对脚本注入的控件。
+     文本框控件现在被标记为可安全应对脚本注入的控件。
 
-7. 选择“确定”  按钮关闭对话框。
+7. 选择“确定”按钮关闭对话框。
 
-## <a name="marking-safe-controls-in-the-package-designer"></a>标记在包设计器中的安全控件
+## <a name="marking-safe-controls-in-the-package-designer"></a>在包设计器中标记安全控件
 
-#### <a name="to-mark-controls-as-safe-or-unsafe-in-the-package-designer"></a>将控件标记为安全或不安全的包设计器
+#### <a name="to-mark-controls-as-safe-or-unsafe-in-the-package-designer"></a>在包设计器中将控件标记为安全或不安全
 
-1. 使用 Visual Web 部件项目中创建 SharePoint 解决方案。
+1. 使用可视 Web 部件项目创建 SharePoint 解决方案。
 
-2. 将两个控件添加到 Web 部件： 一个文本框和一个按钮。 分别将 TextBox1 和 Button1，其默认值保留的名称。
+2. 将两个控件添加到 Web 部件：文本框和按钮。 将名称分别保留为默认值 TextBox1 和 Button1。
 
-     记控件的命名空间，因为它使用更高版本。
+     记下控件的命名空间，因为稍后将用到它。
 
-3. 在菜单栏上依次选择**构建** > **生成解决方案**以生成项目。
+3. 在菜单栏上，选择 "**生成** > **生成解决方案**" 以生成项目。
 
 4. 创建另一个 SharePoint 解决方案。
 
-5. 在中**解决方案资源管理器**，打开快捷菜单*Package.Package*文件，，然后选择**打开**以打开**包设计器**.
+5. 在**解决方案资源管理器**中，打开*包*文件的快捷菜单，然后选择 "**打开**" 以打开**包设计器**。
 
-6. 在中**包设计器**，选择**高级**选项卡。
+6. 在**包设计器**中，选择 "**高级**" 选项卡。
 
-7. 下**其他程序集**，选择**添加**按钮，，然后选择**添加现有程序集**从列表中。
+7. 在 "**其他程序集**" 下，选择 "**添加**" 按钮，然后从列表中选择 "**添加现有程序集**"。
 
-8. 在中**添加现有程序集**对话框框中，选择省略号 (![ASP.NET 移动设计器椭圆](../sharepoint/media/mwellipsis.gif "ASP.NET 移动设计器椭圆")) 按钮旁边**源路径**。
+8. 在 "**添加现有程序集**" 对话框中，选择 "**源路径**" 旁边的省略号（![ASP.NET Mobile 设计器椭圆](../sharepoint/media/mwellipsis.gif "ASP.NET 移动设计器中的省略号")）按钮。
 
-9. 从你在步骤 1 中创建 SharePoint 解决方案中选择程序集，然后选择**打开**按钮。
+9. 从你在步骤1中创建的 SharePoint 解决方案中选择程序集，然后选择 "**打开**" 按钮。
 
-10. 此示例中，将保留**部署目标**GlobalAssemblyCache 选项。
+10. 对于本示例，请将 "**部署目标**" 选项保留为 "GlobalAssemblyCache"。
 
-     此步骤会导致程序集部署到系统全局程序集缓存 (GAC)。 如果你想要将部署到 Web 应用程序 (Bin) 文件夹的程序集，请改为选择该选项。 有关详细信息，请参阅[在 SharePoint Foundation 中部署 Web 部件](http://go.microsoft.com/fwlink/?LinkId=177509)。
+     此步骤将导致程序集部署到系统全局程序集缓存（GAC）。 如果希望程序集部署到 Web 应用程序（Bin）文件夹，请改为选择该选项。 有关详细信息，请参阅[在 SharePoint Foundation 中部署 Web 部件](/previous-versions/office/developer/sharepoint-2010/cc768621(v=office.14))。
 
-11. 在中**安全控件**框中，选择**单击此处可添加新项**按钮。
+11. 在 "**安全控件**" 框中，选择 "**单击此处添加新项**" 按钮。
 
-12. 下表中所输入的属性的值。
+12. 输入下表中属性的值。
 
     |属性名|“值”|
     |-------------------|-----------|
-    |命名空间|完全限定命名空间进行控制，如**BdcModelProject1.VisualWebPart1**。|
+    |Namespace|控件的完全限定命名空间，例如**BdcModelProject1. VisualWebPart1**。|
     |类型名称|Button1|
-    |程序集名称|强的程序集名称，例如：Microsoft.Office.SharePoint.ClientExtensions，Version = 14.0.0.0，区域性 = 中性，PublicKeyToken = 71e9bce111e9429c。|
-    |安全|清除**安全**复选框。|
-    |安全应对脚本|将保留**安全应对脚本**复选框为空。|
+    |程序集名称|强程序集名称，例如： ClientExtensions、Version = 14.0.0.0、Culture = 中立、PublicKeyToken = 71e9bce111e9429c。|
+    |防|清除 "**安全**" 复选框。|
+    |安全应对脚本|清除 "**安全应对脚本**" 复选框。|
 
     > [!NOTE]
-    > **程序集名称**通过添加的程序集的值**高级**选项卡**包设计器**不能将一个令牌，它必须是强名称程序集。 有关详细信息，请参阅[创建和使用具有强名称的程序集](http://go.microsoft.com/fwlink/?LinkId=177513)。
+    > 通过**包设计器**的 "**高级**" 选项卡添加的程序**集的程序集名称**值不能是标记，它必须是具有强名称的程序集。 有关详细信息，请参阅[创建和使用具有强名称的程序集](/previous-versions/dotnet/netframework-4.0/xwb8f617(v=vs.100))。
 
-13. 选择**选项卡**密钥，以创建另一个安全控件项。
+13. 选择**Tab**键以创建另一个安全控件项。
 
-14. 选择**单击此处可添加新项**按钮再次。
+14. 再次选择 "**单击此处添加新项"** 按钮。
 
-15. 下表中所输入的属性的值。
+15. 输入下表中属性的值。
 
     |属性名|“值”|
     |-------------------|-----------|
-    |命名空间|完全限定命名空间进行控制，如**BdcModelProject1.VisualWebPart1**。|
+    |Namespace|控件的完全限定命名空间，例如**BdcModelProject1. VisualWebPart1**。|
     |类型名称|TextBox1|
-    |程序集名称|强的程序集名称，例如：Microsoft.Office.SharePoint.ClientExtensions，Version = 14.0.0.0，区域性 = 中性，PublicKeyToken = 71e9bce111e9429c。|
-    |安全|选择**安全**复选框。|
-    |安全应对脚本|选择**安全应对脚本**复选框。|
+    |程序集名称|强程序集名称，例如： ClientExtensions、Version = 14.0.0.0、Culture = 中立、PublicKeyToken = 71e9bce111e9429c。|
+    |防|选中 "**安全**" 复选框。|
+    |安全应对脚本|选中 "**安全应对脚本**" 复选框。|
 
-16. 选择**选项卡**键，，然后选择**确定**按钮以关闭对话框。
+16. 选择**Tab**键，然后选择 "**确定"** 按钮关闭对话框。
 
 ## <a name="see-also"></a>请参阅
-- [提供在项目项中的打包和部署信息](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)
-- [包和部署 SharePoint 解决方案](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
+- [在项目项中提供打包和部署信息](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)
+- [打包和部署 SharePoint 解决方案](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

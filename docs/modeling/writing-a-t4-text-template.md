@@ -11,12 +11,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 860f322724618ddb99bd9ab39eeefa488d9a71c5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: df653dbd449429b6995c987328a401866751fd5e
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666896"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72981253"
 ---
 # <a name="writing-a-t4-text-template"></a>编写 T4 文本模板
 文本模板包含将从其生成的文本。 例如，用于创建网页的模板将包含 "\<html > ..."以及 HTML 页的所有其他标准部分。 插入到模板中的是*控制块*，它们是程序代码的片段。 控制块提供变化值，允许文本部件是条件和重复的。
@@ -236,7 +236,7 @@ private void WriteSquareLine(int i)
 <# string fileContent = File.ReadAllText(@"C:\myData.txt"); ...
 ```
 
- **将文件作为可导航模型加载**。 更有效的方法是将数据作为模型读取，文本模板代码可以导航该模型。 例如，可以加载 XML 文件，然后使用 XPath 表达式对其导航。 你还可以使用[xsd.exe](http://go.microsoft.com/fwlink/?LinkId=178765)创建一组可用于读取 XML 数据的类。
+ **将文件作为可导航模型加载**。 更有效的方法是将数据作为模型读取，文本模板代码可以导航该模型。 例如，可以加载 XML 文件，然后使用 XPath 表达式对其导航。 你还可以使用[xsd.exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe)创建一组可用于读取 XML 数据的类。
 
  **在关系图或窗体中编辑模型文件。** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 提供了一种工具，使您可以将模型作为关系图或 Windows 窗体进行编辑。 这样便于与生成的应用程序的用户讨论模型。 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 还创建一组反映模型结构的强类型类。 有关详细信息，请参阅[从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)。
 

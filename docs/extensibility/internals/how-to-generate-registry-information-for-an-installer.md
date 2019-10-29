@@ -1,5 +1,5 @@
 ---
-title: 如何：生成安装程序的注册表信息 |Microsoft Docs
+title: 如何：为安装程序生成注册表信息 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,35 +12,35 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 931950c399d853fc6296bf56e9fce0619c0e7e41
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d4395732cd8d3fbc71ac902801c71270ff446470
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66328841"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72981972"
 ---
-# <a name="how-to-generate-registry-information-for-an-installer"></a>如何：生成安装程序的注册表信息
+# <a name="how-to-generate-registry-information-for-an-installer"></a>如何：为安装程序生成注册表信息
 
-*RegPkg.exe*实用工具可以用于生成托管的 VSPackage 注册清单。 清单可以合并到一个 Windows 安装程序安装程序包。 RegPkg 还可以生成可以在基于安装程序源文件中包含的文件[Windows Installer XML 工具集](http://go.microsoft.com/fwlink/?LinkId=62238)。
+*RegPkg*实用程序可用于为托管的 VSPackage 生成注册清单。 清单可以合并到 Windows Installer 安装包中。 RegPkg 还可以生成一个文件，该文件可以包含在基于[WINDOWS INSTALLER XML 工具集](https://wixtoolset.org/)的安装程序源文件中。
 
 > [!IMPORTANT]
-> RegPkg 生成特定于你开发的系统的路径名称，以便每次使用 RegPkg，必须编辑输出以供使用适当的 Windows 安装程序格式属性。 例如，`InprocServer32`值应 *\<SystemFolder\>mscoree.dll*路径应使用 *\<#filekey\>* 和 *\<$componentkey\>* 。 调整以这种方式输出支持使用 Windows 安装在不同的驱动器上或在不同的目录、 本地化的目录名称和路径可供用户选择的计算机。 有关详细信息，请参阅[格式化](http://go.microsoft.com/fwlink/?LinkId=71120)Windows 安装程序 SDK 中。 为您开发的系统路径遵循 RegPkg 约定 — 例如，文件 Id 的窗体*File_\<文件名\>* — 需要进行更少的更改。
+> RegPkg 生成特定于您的开发系统的路径名称，因此，每次使用 RegPkg 时，必须编辑输出，以使用适当的 Windows Installer 格式属性。 例如，`InprocServer32` 值应 *\<SystemFolder\>mscoree.dll* ，路径应使用 *\<#filekey*\>\< *$componentkey\>。* 以这种方式调整输出支持将 Windows 安装在其他驱动器或不同的目录中的计算机，以及用户可以选择的、本地化的目录名称和路径。 有关详细信息，请参阅 Windows Installer SDK 中的[格式设置](https://msdn.microsoft.com/library?url=/library/msi/setup/formatted.asp)。 如果你遵循开发系统路径的 RegPkg 约定（例如 File_ 格式的文件 Id *\<filename\>* ），则需要进行更少的更改。
 
-## <a name="to-create-a-registration-manifest"></a>若要创建注册清单
+## <a name="to-create-a-registration-manifest"></a>创建注册清单
 
-- 运行与 RegPkg **/regfile**切换。 提供任何其他开关、 输出文件的名称和 VSPackage 的路径。
+- 在 **/regfile**开关上运行 RegPkg。 提供任何其他开关、输出文件的名称和 VSPackage 的路径。
 
-     例如，在命令提示符下，需要键入以下内容：
+     例如，在命令提示符下，键入如下所示的内容：
 
     ```
     <Visual Studio SDK installation path>\VisualStudioIntegration\Tools\Bin\RegPkg /regfile:MyRegFile.reg MyPackage.dll
     ```
 
-## <a name="to-view-a-registration-manifest"></a>若要查看注册清单
+## <a name="to-view-a-registration-manifest"></a>查看注册清单
 
 - 在任何文本编辑器中打开注册清单。
 
-     下面的示例是 RegPkg 创建 IronPython 语言服务的注册清单：
+     以下示例是 RegPkg 为 IronPython 语言服务创建的注册清单：
 
     ```
     REGEDIT4
@@ -97,21 +97,21 @@ ms.locfileid: "66328841"
 
     ```
 
-## <a name="to-create-a-windows-installer-xml-toolset-include-file"></a>若要创建 Windows Installer XML 工具集包括文件
+## <a name="to-create-a-windows-installer-xml-toolset-include-file"></a>创建 Windows Installer XML 工具集包含文件
 
-- 运行与 RegPkg **/wixfile**切换。 提供任何其他开关、 输出文件的名称和 VSPackage 的路径。
+- 在 **/wixfile**开关上运行 RegPkg。 提供任何其他开关、输出文件的名称和 VSPackage 的路径。
 
-     例如，在命令提示符下，需要键入以下内容：
+     例如，在命令提示符下，键入如下所示的内容：
 
     ```
     <Visual Studio SDK installation path>\VisualStudioIntegration\Tools\Bin\RegPkg /codebase /wixfile:IronPython.LanguageService.wxi ..\bin\Release\IronPython.LanguageService.dll
     ```
 
-## <a name="to-view-a-windows-installer-xml-toolset-include-file"></a>若要查看 Windows Installer XML 工具集包括文件
+## <a name="to-view-a-windows-installer-xml-toolset-include-file"></a>查看 Windows Installer 的 XML 工具集包含文件
 
-- 打开 Windows Installer XML 工具集文件中包含任何文本编辑器。
+- 在任意文本编辑器中打开 Windows Installer XML 工具集包含文件。
 
-     下面的示例是 IronPython 语言服务 RegPkg 创建的包含文件：
+     以下示例是 RegPkg 为 IronPython 语言服务创建的包含文件：
 
     ```xml
     <Include>

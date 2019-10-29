@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f1b8ae7c56cf6f7cb20dd237c9106498a752e267
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 71e66d6cda802b2b1243911e1927af751e2cdbe9
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254969"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985394"
 ---
 # <a name="word-object-model-overview"></a>Word 对象模型概述
   在 Visual Studio 中开发 Word 解决方案时，会与 Word 对象模型进行交互。 此对象模型包含 Word 的主互操作程序集中所提供的类和接口，并在 <xref:Microsoft.Office.Interop.Word> 命名空间中进行定义。
@@ -44,7 +44,7 @@ ms.locfileid: "71254969"
 
  下图显示了 Word 对象模型层次结构中这些对象的一个视图。
 
- ![Word 对象模型图](../vsto/media/wrwordobjectmodel.gif "Word 对象模型图")
+ ![Word 对象模型图](../vsto/media/wrwordobjectmodel.gif "图：Word 对象模型")
 
  初看起来，对象似乎重叠在一起。 例如， <xref:Microsoft.Office.Interop.Word.Document> 和 <xref:Microsoft.Office.Interop.Word.Selection> 对象都是 <xref:Microsoft.Office.Interop.Word.Application> 对象的成员，但 <xref:Microsoft.Office.Interop.Word.Document> 对象也是 <xref:Microsoft.Office.Interop.Word.Selection> 对象的成员。 <xref:Microsoft.Office.Interop.Word.Document> 和 <xref:Microsoft.Office.Interop.Word.Selection> 对象都包含 <xref:Microsoft.Office.Interop.Word.Bookmark> 和 <xref:Microsoft.Office.Interop.Word.Range> 对象。 因为有多种方法可以访问相同类型的对象，所以存在重叠。 例如，你将格式设置应用于 <xref:Microsoft.Office.Interop.Word.Range> 对象；但你可能想要访问当前选定内容、某一特定段落，某一节或整个文档的范围。
 
@@ -119,14 +119,14 @@ ms.locfileid: "71254969"
  有关 Word 对象模型的完整信息，可以参考 Word 主互操作程序集 (PIA) 引用和 Visual Basic for Applications (VBA) 对象模型引用。
 
 ### <a name="primary-interop-assembly-reference"></a>主互操作程序集引用
- Word PIA 参考文档介绍了 Word 的主互操作程序集中的类型。 此文档可从以下位置获得：[Word 2010 主互操作程序集引用](http://go.microsoft.com/fwlink/?LinkId=189588)。
+ Word PIA 参考文档介绍了 Word 的主互操作程序集中的类型。 此文档可从以下位置获取： [Word 2010 主互操作程序集引用](../vsto/office-primary-interop-assemblies.md)。
 
- 有关 Word PIA 设计的详细信息（例如 PIA 中类和接口之间的差异以及如何实现 PIA 中的事件），请参阅[Office 主互操作程序集中的类和接口的概述](http://go.microsoft.com/fwlink/?LinkId=189592)。
+ 有关 Word PIA 设计的详细信息（例如 PIA 中类和接口之间的差异以及如何实现 PIA 中的事件），请参阅[Office 主互操作程序集中的类和接口的概述](/previous-versions/office/office-12/ms247299(v=office.12))。
 
 ### <a name="vba-object-model-reference"></a>VBA 对象模型引用
- VBA 对象模型引用在将 Word 对象模型公开到 VBA 代码时对该对象进行了记录。 有关详细信息，请参阅[Word 2010 对象模型引用](http://go.microsoft.com/fwlink/?LinkId=199772)。
+ VBA 对象模型引用在将 Word 对象模型公开到 VBA 代码时对该对象进行了记录。 有关详细信息，请参阅[Word 2010 对象模型引用](/office/vba/api/overview/Word/object-model)。
 
- VBA 对象模型引用中的所有对象和成员都与 Word PIA 中的类型和成员相对应。 例如，VBA 对象模型引用中的文档对象对应于 Word PIA 中<xref:Microsoft.Office.Interop.Word.Document>的对象。 虽然 VBA 对象模型引用提供了大多数属性、方法和事件的代码示例，但如果要在用 Visual Studio 创建的 Word 项目中使用本引用中的 VBA 代码，必须将其转换为 Visual Basic 或 Visual C# 代码。
+ VBA 对象模型引用中的所有对象和成员都与 Word PIA 中的类型和成员相对应。 例如，VBA 对象模型引用中的文档对象对应于 Word PIA 中的 <xref:Microsoft.Office.Interop.Word.Document> 对象。 虽然 VBA 对象模型引用提供了大多数属性、方法和事件的代码示例，但如果要在用 Visual Studio 创建的 Word 项目中使用本引用中的 VBA 代码，必须将其转换为 Visual Basic 或 Visual C# 代码。
 
 ## <a name="see-also"></a>请参阅
 - [Office 主互操作程序集](../vsto/office-primary-interop-assemblies.md)

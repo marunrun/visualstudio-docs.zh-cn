@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: aca6c91724e26059011c1044c9a2d501c7995bc5
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 93e2d5abb9c8fda9d4a1300a9bb0958ac9266499
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71255835"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986174"
 ---
 # <a name="bind-data-to-controls-in-office-solutions"></a>将数据绑定到 Office 解决方案中的控件
   可以将 Microsoft Office Word 文档或 Microsoft Office Excel 工作表中的 Windows 窗体控件和 *宿主控件* 绑定到某个数据源，以便这些控件自动显示数据。 可以将数据绑定到应用程序级项目和文档级项目中的控件。
@@ -33,8 +33,6 @@ ms.locfileid: "71255835"
  宿主控件扩展 Word 和 Excel 对象模型中的对象，例如 Word 中的内容控件和 Excel 中的命名范围。 有关详细信息，请参阅[主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)。
 
  Windows 窗体和宿主控件使用Windows 窗体数据绑定模型，该模型支持到数据源（例如数据集和数据表）的 *简单数据绑定* 和 *复杂数据绑定* 。 有关 Windows 窗体中的数据绑定模型的完整信息，请参阅[数据绑定和 Windows 窗体](/dotnet/framework/winforms/data-binding-and-windows-forms)。
-
- ![视频链接](../vsto/media/playvideo.gif "视频链接")有关相关的视频演示，请[参阅如何实现：在 Excel 中使用数据库数据？](http://go.microsoft.com/fwlink/?LinkID=130287).
 
 ## <a name="simple-data-binding"></a>简单数据绑定
  当控件属性绑定到单个数据元素（例如数据表中的值）时，即存在简单数据绑定。 例如， <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件中便有一个可以绑定到数据集中一个字段的 <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> 属性。 当数据集中的字段发生更改时，命名范围中的值也会发生更改。 除 <xref:Microsoft.Office.Tools.Word.XMLNodes> 控件外，所有宿主控件都支持简单数据绑定。 <xref:Microsoft.Office.Tools.Word.XMLNodes> 控件是一个集合，因此不支持数据绑定。
@@ -46,7 +44,7 @@ ms.locfileid: "71255835"
  [!code-vb[Trin_BindableComponent#4](../vsto/codesnippet/VisualBasic/Trin_BindableComponent/Sheet1.vb#4)]
  [!code-csharp[Trin_BindableComponent#4](../vsto/codesnippet/CSharp/Trin_BindableComponent/Sheet1.cs#4)]
 
- 有关演示简单数据绑定的演练，请[参阅演练：文档级项目和](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md) [演练的文档级项目中的简单数据绑定：Vsto 外接程序项目的 vsto 外接](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md)程序项目中的简单数据绑定。
+ 有关演示简单数据绑定的演练，请参阅演练：文档级项目的[文档级项目中的简单数据绑定](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)和演练： vsto 外接程序项目的[vsto 外接程序项目中的简单数据绑定](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md)。
 
 ## <a name="complex-data-binding"></a>复杂数据绑定
  当控件属性绑定到多个数据元素（例如数据表中的多个列）时，即存在复杂数据绑定。 Excel 的 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件是唯一支持复杂数据绑定的宿主控件。 此外，还有很多支持复杂数据绑定的 Windows 窗体控件，例如 <xref:System.Windows.Forms.DataGridView> 控件。
@@ -58,22 +56,22 @@ ms.locfileid: "71255835"
  [!code-csharp[Trin_ExcelListObject#18](../vsto/codesnippet/CSharp/Trin_ExcelListObject/Trin_ExcelListObject.cs#18)]
  [!code-vb[Trin_ExcelListObject#18](../vsto/codesnippet/VisualBasic/Trin_ExcelListObject/Sheet1.vb#18)]
 
- 有关演示复杂数据绑定的演练，请[参阅演练：文档级项目和](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md) [演练的文档级项目中的复杂数据绑定：Vsto 外接程序项目的 vsto 外接](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md)程序项目中的复杂数据绑定。
+ 有关演示复杂数据绑定的演练，请参阅演练：文档级项目的[文档级项目中的复杂数据绑定](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)和演练： vsto 外接程序项目的[vsto 外接程序项目中的复杂数据绑定](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md)。
 
 ## <a name="display-data-in-documents-and-workbooks"></a>在文档和工作簿中显示数据
- 在文档级项目中，可通过与用于 Windows 窗体相同的方法，使用“数据源” 窗口轻松地将数据绑定控件添加到文档或工作簿中。 有关使用 "**数据源**" 窗口的详细信息，请参阅[在 Visual Studio 中将 Windows 窗体控件绑定到数据](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)和[添加新数据源](../data-tools/add-new-data-sources.md)。
+ 在文档级项目中，可通过与用于 Windows 窗体相同的方法，使用“数据源”  窗口轻松地将数据绑定控件添加到文档或工作簿中。 有关使用 "**数据源**" 窗口的详细信息，请参阅[在 Visual Studio 中将 Windows 窗体控件绑定到数据](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)和[添加新数据源](../data-tools/add-new-data-sources.md)。
 
 ### <a name="drag-controls-from-the-data-sources-window"></a>从 "数据源" 窗口拖动控件
- 从“数据源” 窗口中将一个对象拖到文档中时，会在此文档中创建一个控件。 所创建的控件的类型取决于绑定的是单列数据还是多列数据。
+ 从“数据源”  窗口中将一个对象拖到文档中时，会在此文档中创建一个控件。 所创建的控件的类型取决于绑定的是单列数据还是多列数据。
 
- 对于 Excel，会在工作表上为每个单独的字段创建一个 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件，并且会为每个包括多个行和列的数据范围创建一个 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件。 通过在“数据源” 窗口中选择表或字段，然后从下拉列表中选择其他控件，可以更改此默认设置。
+ 对于 Excel，会在工作表上为每个单独的字段创建一个 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件，并且会为每个包括多个行和列的数据范围创建一个 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件。 通过在“数据源”  窗口中选择表或字段，然后从下拉列表中选择其他控件，可以更改此默认设置。
 
  <xref:Microsoft.Office.Tools.Word.ContentControl> 控件即会添加到文档中。 内容控件的类型取决于所选字段的数据类型。
 
 ### <a name="bind-data-in-document-level-projects-at-design-time"></a>在设计时在文档级项目中绑定数据
  下面的主题介绍在设计时绑定数据的示例：
 
-- [如何：使用数据库中的数据填充工作表](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)
+- [如何：用数据库中的数据填充工作表](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)
 
 - [如何：用数据库中的数据填充文档](../vsto/how-to-populate-documents-with-data-from-a-database.md)
 
@@ -86,9 +84,9 @@ ms.locfileid: "71255835"
 ### <a name="bind-data-in-vsto-add-in-projects"></a>在 VSTO 外接程序项目中绑定数据
  在 VSTO 外接程序项目中，仅可在运行时添加控件。 下面的主题介绍在运行时绑定数据的示例：
 
-- [演练：VSTO 外接程序项目中的简单数据绑定](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md)
+- [演练： VSTO 外接程序项目中的简单数据绑定](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md)
 
-- [演练：VSTO 外接程序项目中的复杂数据绑定](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md)
+- [演练： VSTO 外接程序项目中的复杂数据绑定](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md)
 
 ## <a name="update-data-that-is-bound-to-host-controls"></a>更新绑定到宿主控件的数据
  在数据源和宿主控件之间进行数据绑定会涉及到双向数据更新。 在简单数据绑定中，数据源中所做的更改会在宿主控件中自动反映，但宿主控件中所做的更改则需要通过显式调用才能更新数据源。 原因是，在某些情况下，如果只更改一个数据绑定字段而没有相应地更改另一个数据绑定字段，则不会接受对该数据绑定字段所做的更改。 例如，假定有两个字段，一个是年龄字段，另一个是工作经验字段。 工作经验值不可能比年龄值大。 用户不能将年龄字段从 50 更新为 25，然后再将工作经验字段从 30 更新为 10，而只能同时对这两个字段做相应更改。 若要解决此问题，只有通过代码来显式发送更新，才能对简单数据绑定字段进行更新。
@@ -97,7 +95,7 @@ ms.locfileid: "71255835"
 
  如果使用 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件执行复杂数据绑定，则无需显式更新内存中数据源。 在这种情况下，无需其他代码，更改即会自动发送到内存中数据源。
 
- 有关详细信息，请参阅[如何：使用宿主控件](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)中的数据更新数据源。
+ 有关详细信息，请参阅[如何：使用主机控件中的数据更新数据源](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)。
 
 ## <a name="see-also"></a>请参阅
 - [数据绑定和 Windows 窗体](/dotnet/framework/winforms/data-binding-and-windows-forms)

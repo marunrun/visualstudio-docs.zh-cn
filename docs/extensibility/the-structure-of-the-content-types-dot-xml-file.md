@@ -13,18 +13,18 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5cc42a5346498c04f759956b2ca00094ac1df119
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: aac250053f90d99e7db27a9862d2dc1b33fadbfb
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72718726"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72983044"
 ---
 # <a name="the-structure-of-the-content_typesxml-file"></a>[Content_types].xml 文件的结构
 包含有关 VSIX 包中的内容种类的信息。 Visual Studio 使用 [Content_Types] .xml 文件来安装包，但不会安装文件本身。
 
 > [!NOTE]
-> 尽管本主题仅适用于 VSIX 包中使用的 [Content_Type] .xml 文件，但 [Content_Types] .xml 文件类型是*开放打包约定（OPC）* 标准的一部分。 有关详细信息，请参阅 MSDN 网站上的[OPC：用于打包数据的新标准](http://go.microsoft.com/fwlink/?LinkID=148207)。
+> 尽管本主题仅适用于 VSIX 包中使用的 [Content_Type] .xml 文件，但 [Content_Types] .xml 文件类型是*开放打包约定（OPC）* 标准的一部分。 有关详细信息，请参阅 MSDN 网站上的[OPC：用于打包数据的新标准](https://msdn.microsoft.com/magazine/cc163372.aspx)。
 
 ## <a name="attributes-and-elements"></a>特性和元素
  以下各节描述了 root 元素及其属性和子元素。
@@ -48,7 +48,7 @@ ms.locfileid: "72718726"
 | http://schemas.openformats.org/package/2006/content-types | 内容类型架构的位置。 |
 
 ### <a name="child-elements"></a>子元素
- @No__t_0 元素可以包含任意数量的 `Default` 元素。
+ `Types` 元素可以包含任意数量的 `Default` 元素。
 
 |元素|描述|
 |-------------|-----------------|
@@ -102,4 +102,4 @@ ms.locfileid: "72718726"
 ## <a name="see-also"></a>请参阅
 - [VSIX 包的剖析](../extensibility/anatomy-of-a-vsix-package.md)
 - [VSIX 扩展架构1.0 引用](https://msdn.microsoft.com/library/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)
-- [OPC：用于打包数据的新标准](http://go.microsoft.com/fwlink/?LinkID=148207)
+- [OPC：用于打包数据的新标准](https://msdn.microsoft.com/magazine/cc163372.aspx)

@@ -19,12 +19,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a2b972c3c275f3e43819220532ac0a3c4a597e3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9fc852b4d5003cf809248c72ca3ac42ad3a6bf23
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662938"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72981133"
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>使用依赖项关系图验证代码
 
@@ -52,7 +52,7 @@ ms.locfileid: "72662938"
 
 若要查看支持此功能的 Visual Studio 版本，请参阅[体系结构和建模工具的版本支持](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
-你可以在 Visual Studio 中打开的依赖项关系图中或从命令提示符手动验证代码。 你还可以在运行本地生成或 Azure Pipelines 生成时自动验证代码。 请参阅第[9 频道视频：使用依赖关系图设计和验证体系结构](http://go.microsoft.com/fwlink/?LinkID=252073)。
+你可以在 Visual Studio 中打开的依赖项关系图中或从命令提示符手动验证代码。 你还可以在运行本地生成或 Azure Pipelines 生成时自动验证代码。 请参阅第[9 频道视频：使用依赖关系图设计和验证体系结构](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Using-layer-diagrams-to-design-and-validate-your-architecture)。
 
 > [!IMPORTANT]
 > 如果要使用 Team Foundation Server （TFS）运行层验证，则还必须在生成服务器上安装相同版本的 Visual Studio。

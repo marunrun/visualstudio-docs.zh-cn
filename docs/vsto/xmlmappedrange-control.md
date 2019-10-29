@@ -14,32 +14,30 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cde5489d970de02afbce28ab9c60c677ab199c84
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 01417d9c08491edc882f7f758bb36e6184500e52
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62810744"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985363"
 ---
 # <a name="xmlmappedrange-control"></a>XmlMappedRange 控件
-  <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件是仅在非重复架构元素映射到 Microsoft Office Excel 中的单元格上时创建一个范围。 例如，当`maxOccurs`架构元素的特性等于 1。 Visual Studio 将创建 XML 映射范围后，你可以针对它编程直接而无需遍历 Excel 对象模型。 您只能删除<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>中移除的元素映射时，在 Excel 内的控件。
+  "<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>" 控件是仅当非重复架构元素映射到 Microsoft Office Excel 中的单元格时创建的范围。 例如，架构元素的 `maxOccurs` 属性等于1时。 在 Visual Studio 创建 XML 映射范围之后，可以直接对其进行编程，而无需遍历 Excel 对象模型。 删除元素映射后，只能在 Excel 中删除 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 控件。
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
- ![视频链接](../vsto/media/playvideo.gif "链接至视频")相关的视频演示，请参阅[如何实现：在 Excel 中使用 XML 的映射？](http://go.microsoft.com/fwlink/?LinkID=130288).
-
 ## <a name="bind-data-to-the-control"></a>将数据绑定到控件
- <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件支持绑定到单个数据字段 （简单数据绑定）。 <xref:Microsoft.Office.Tools.Excel.ListObject>控件可支持复杂数据绑定和重复架构元素映射到单元格上时自动创建。 有关详细信息，请参阅[ListObject 控件](../vsto/listobject-control.md)。
+ <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 控件支持绑定到单个数据字段（简单数据绑定）。 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件可以支持复杂的数据绑定，并且在将重复架构元素映射到单元格时，会自动创建。 有关详细信息，请参阅[ListObject 控件](../vsto/listobject-control.md)。
 
- <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件绑定到数据源使用<xref:System.Windows.Forms.Control.DataBindings%2A>属性。 当<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>Visual Studio 自动生成数据集从数据中映射的单元格，并将控件绑定到该数据集添加到工作表单元格。 默认数据绑定属性<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>是<xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Value2%2A>。
+ 使用 <xref:System.Windows.Forms.Control.DataBindings%2A> 属性将 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 控件绑定到数据源。 将 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 添加到工作表单元格后，Visual Studio 会自动从映射单元中的数据生成数据集，并将该控件绑定到该数据集。 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.Value2%2A><xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 的默认数据绑定属性。
 
- 如果绑定数据集中的数据通过任何机制进行了更新<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件会反映出所做的更改。
+ 如果绑定数据集中的数据通过任何机制进行了更新，则 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 控件将反映这些更改。
 
 ## <a name="formatting"></a>格式化
- 您可以应用相同的格式<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控件，可以将应用于<xref:Microsoft.Office.Interop.Excel.Range>。 这包括边框、字体、数字格式和样式。
+ 可以将相同的格式应用于可应用于 <xref:Microsoft.Office.Interop.Excel.Range>的 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 控件。 这包括边框、字体、数字格式和样式。
 
 ## <a name="events"></a>事件
- 可用于事件<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>控制是：
+ 可用于 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 控件的事件包括：
 
 - <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.BeforeDoubleClick>
 
@@ -58,8 +56,8 @@ ms.locfileid: "62810744"
 - <xref:Microsoft.Office.Tools.Excel.XmlMappedRange.SelectionChange>
 
 ## <a name="see-also"></a>请参阅
-- [通过使用扩展的对象自动化 Excel](../vsto/automating-excel-by-using-extended-objects.md)
+- [使用扩展对象实现 Excel 自动化](../vsto/automating-excel-by-using-extended-objects.md)
 - [如何：向工作表添加 XMLMappedRange 控件](../vsto/how-to-add-xmlmappedrange-controls-to-worksheets.md)
 - [将数据绑定到 Office 解决方案中的控件](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [如何：将架构映射到 Visual Studio 内部的工作表](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)
-- [主机项和主机控件的编程限制](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [宿主项和宿主控件的编程限制](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)

@@ -16,17 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 646192baa6caaa33410b1dd8d17d1983f7d27e30
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 2865bd89da3b59a24208e07739e8c56254959c88
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71255555"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986106"
 ---
 # <a name="customize-a-ribbon-for-outlook"></a>自定义 Outlook 功能区
   在 Microsoft Office Outlook 中自定义功能区时，必须考虑自定义功能区在应用程序中出现的位置。 在主应用程序用户界面 (UI) 和用户执行某些任务（例如创建电子邮件消息）时打开的窗口中，Outlook 会显示功能区。 这些应用程序窗口被命名为检查器。
-
- ![视频链接](../vsto/media/playvideo.gif "视频链接")有关相关的视频演示，请[参阅如何实现：使用功能区设计器在 Outlook 中自定义功能区？](http://go.microsoft.com/fwlink/?LinkID=130312).
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -41,11 +39,11 @@ ms.locfileid: "71255555"
  可以向项目添加多个功能区。 如果多个功能区共享一个功能区 ID，请重写项目的 `ThisAddin` 类中的 `CreateRibbonExtensibilityObject` 方法，以指定要在运行时显示的功能区。 有关详细信息，请参阅[功能区概述](../vsto/ribbon-overview.md)。 有关每个功能区类型的详细信息，请参阅技术文章[自定义 Outlook 2007 中的功能区](/previous-versions/office/developer/office-2007/bb226712(v=office.12))。
 
 ## <a name="specify-the-ribbon-type-by-using-ribbon-xml"></a>使用功能区 XML 指定功能区类型
- 如果使用的是 "**功能区（XML）** " 项，请检查<xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A>方法中的*ribbonID*参数的值，并返回相应的功能区。
+ 如果使用的是 "**功能区（XML）** " 项，请检查 <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> 方法中的*ribbonID*参数的值，并返回相应的功能区。
 
  <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> 方法由 Visual Studio 在功能区代码文件中自动生成。 *RibbonID*参数是一个字符串，用于标识资源管理器或特定类型的检查器。 有关*ribbonID*参数的可能值的完整列表，请参阅技术文章[自定义 Outlook 2007 中的功能区](/previous-versions/office/developer/office-2007/bb226712(v=office.12))。
 
- 以下代码示例演示如何仅在 `Microsoft.Outlook.Mail.Compose` 检查器中显示自定义功能区。 这是用户创建新的电子邮件时将打开的检查器。 要显示的功能区在`GetResourceText()`方法中指定，该方法在**功能区**类中生成。 有关**功能区**类的详细信息，请参阅[功能区 XML](../vsto/ribbon-xml.md)。
+ 以下代码示例演示如何仅在 `Microsoft.Outlook.Mail.Compose` 检查器中显示自定义功能区。 这是用户创建新的电子邮件时将打开的检查器。 要显示的功能区在 `GetResourceText()` 方法中指定，该方法在**功能区**类中生成。 有关**功能区**类的详细信息，请参阅[功能区 XML](../vsto/ribbon-xml.md)。
 
  [!code-csharp[Trin_RibbonOutlookBasic#1](../vsto/codesnippet/CSharp/Trin_RibbonOutlookBasic/Ribbon1.cs#1)]
  [!code-vb[Trin_RibbonOutlookBasic#1](../vsto/codesnippet/VisualBasic/Trin_RibbonOutlookBasic/Ribbon1.vb#1)]

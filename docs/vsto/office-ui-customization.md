@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e5fd0253c6ca560c58724c8a83e343164b678923
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 15c7061030bec6aebca9cdc63d0cd0e0c79cc9aa
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254144"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985704"
 ---
 # <a name="office-ui-customization"></a>Office UI 自定义
   可以使用 Visual Studio 中的 Office 开发人员工具自定义 Microsoft Office 应用程序的用户界面 (UI)。 本主题介绍自定义的 UI 功能，分为以下几个部分：
@@ -48,7 +48,7 @@ ms.locfileid: "71254144"
 |操作窗格|文档级自定义项|Excel<br /><br /> 字|
 |自定义任务窗格|VSTO 外接程序|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> 字<br /><br /> Excel|
 |自定义功能区 UI|文档级自定义项<br /><br /> VSTO 外接程序|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> 项目<br /><br /> 字<br /><br /> Visio|
-|Backstage 视图|文档级自定义项<br /><br /> VSTO 外接程序|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]。<br /><br /> [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> 项目<br /><br /> 字<br /><br /> Visio|
+|Backstage 视图|文档级自定义项<br /><br /> VSTO 外接程序|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> 项目<br /><br /> 字<br /><br /> Visio|
 |Outlook 窗体区域|VSTO 外接程序|Outlook|
 |文档中的控件|文档级自定义项<br /><br /> VSTO 外接程序|Excel<br /><br /> 字|
 |快捷菜单|文档级自定义项<br /><br /> VSTO 外接程序|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> 项目<br /><br /> 字<br /><br /> Visio<br /><br /> Excel|
@@ -76,7 +76,7 @@ ms.locfileid: "71254144"
 
  Visual Studio 不提供用于自定义 Backstage 视图的设计器或 API。 但是，如果向 Office 项目添加 "**功能区（XML）** " 项，则可以向功能区 xml 文件添加 XML 以自定义 Backstage 视图。 有关**功能区（XML）** 项的详细信息，请参阅[功能区 XML](../vsto/ribbon-xml.md)。
 
- 有关自定义 Backstage 视图的详细信息，请参阅面向[开发人员的 office 2010 backstage 视图的简介](http://go.microsoft.com/fwlink/?LinkId=182189)和[为开发人员自定义 office 2010 backstage 视图](http://go.microsoft.com/fwlink/?LinkId=182188)。
+ 有关自定义 Backstage 视图的详细信息，请参阅面向[开发人员的 office 2010 backstage 视图的简介](/previous-versions/office/developer/office-2010/ee691833(v=office.14))和[为开发人员自定义 office 2010 backstage 视图](/previous-versions/office/developer/office-2010/ee815851(v=office.14))。
 
 ## <a name="FormRegion"></a>Outlook 窗体区域
  使用窗体区域可向标准 Microsoft Office Outlook 窗体添加自定义功能。 你可以使用额外字段或控件创建可扩展任何现有窗体的窗体区域。 如果使用 Visual Studio 中的 Office 开发工具创建新窗体区域，则在窗体区域上仅可使用 Windows 窗体控件。 如果导入在 Outlook 中设计的窗体区域，则仅可使用本机 Outlook 控件。
@@ -93,7 +93,7 @@ ms.locfileid: "71254144"
  有关详细信息，请参阅[主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)和[Office 文档上的 Windows 窗体控件概述](../vsto/windows-forms-controls-on-office-documents-overview.md)。
 
 ## <a name="Shortcut"></a>快捷菜单
- 在文档或应用程序窗口中右键单击时，将出现一个快捷菜单。 可以设置在发生某事件后显示快捷菜单，例如，当用户右键单击文档、工作簿或主机控件时。 可以向快捷菜单添加大量不同的菜单命令或控件。 使用 XML 创建快捷菜单。 如果向 Office 项目添加 "**功能区（XML）** " 项，则可以向功能区 xml 文件添加 xml 以创建快捷菜单。 有关使用 XML 创建快捷菜单的详细信息，请参阅[如何：将命令添加到快捷](../vsto/how-to-add-commands-to-shortcut-menus.md)菜单。
+ 在文档或应用程序窗口中右键单击时，将出现一个快捷菜单。 可以设置在发生某事件后显示快捷菜单，例如，当用户右键单击文档、工作簿或主机控件时。 可以向快捷菜单添加大量不同的菜单命令或控件。 使用 XML 创建快捷菜单。 如果向 Office 项目添加 "**功能区（XML）** " 项，则可以向功能区 xml 文件添加 xml 以创建快捷菜单。 有关使用 XML 创建快捷菜单的详细信息，请参阅[如何：将命令添加到快捷菜单](../vsto/how-to-add-commands-to-shortcut-menus.md)。
 
 ## <a name="see-also"></a>请参阅
 - [功能区概述](../vsto/ribbon-overview.md)

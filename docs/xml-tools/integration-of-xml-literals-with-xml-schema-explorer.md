@@ -8,16 +8,16 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c81f5db0477713ff99e9b7894bcbe86b3cf33018
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cf073145b0deb21a2ec29ac1fff16be08fb24593
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72601768"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986305"
 ---
 # <a name="integration-of-xml-literals-with-xml-schema-explorer"></a>XML 文本与 XML 架构资源管理器的集成
 
-Visual Basic 支持 XML 文本，这意味着您可以将 XML 片段直接合并到您的 Visual Basic 代码中。 有关详细信息，请参阅[XML 文本概述](http://go.microsoft.com/fwlink/?LinkId=140325)。
+Visual Basic 支持 XML 文本，这意味着您可以将 XML 片段直接合并到您的 Visual Basic 代码中。 有关详细信息，请参阅[XML 文本概述](/dotnet/visual-basic/programming-guide/language-features/xml/xml-literals-overview)。
 
 ## <a name="how-to"></a>如何
 

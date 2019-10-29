@@ -12,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b0a7293672bb0b4e74515b71d2e0c4f961440b8c
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: f37ddcbbd3145fc96cd8081d7a1df524ef7ea8ec
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71255977"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986046"
 ---
 # <a name="globalization-and-localization-of-excel-solutions"></a>Excel 解决方案的全球化和本地化
   本节包含有关 Microsoft Office Excel 解决方案的特殊注意事项的信息，这些解决方案将在具有 Windows 非英语设置的计算机上运行。 全球化和本地化 Microsoft Office 解决方案过程中所遇到的大多数问题与使用 Visual Studio 创建其他各种解决方案时遇到的问题相同。 有关一般信息，请参阅[全球化和本地化应用程序](../ide/globalizing-and-localizing-applications.md)。
@@ -36,7 +36,7 @@ ms.locfileid: "71255977"
 
  即使你对由托管代码传递或操作的数据使用英语（美国）格式，Excel 仍然会根据最终用户的区域设置来正确解释并显示数据。 Excel 可以正确设置数据格式，因为托管代码将区域设置 ID 1033 与数据一起传递，这表示数据为英语（美国）格式，因此必须重新设置格式，使其与用户的区域设置相匹配。
 
- 例如，如果最终用户将其区域选项设置为德语（德国）区域设置，则他们期望以这种方式设置日期2005年6月29日的格式：29.06.2005. 但是，如果您的解决方案将日期作为字符串传递到 Excel，则必须根据英语（美国）格式设置日期格式：6/29/2005。 如果将单元格格式化为日期单元格，则 Excel 将采用德语（德国）格式显示日期。
+ 例如，如果最终用户将其区域选项设置为德语（德国）区域设置，则他们期望采用以下方式设置日期 2005 年 6 月 29 日的格式：29.06.2005。 但是，如果解决方案以字符串形式将该日期传递到 Excel，则必须依据英语（美国）格式 6/29/2005 设置该日期的格式。 如果将单元格格式化为日期单元格，则 Excel 将采用德语（德国）格式显示日期。
 
 ### <a name="pass-other-locale-ids-to-the-excel-object-model"></a>将其他区域设置 Id 传递到 Excel 对象模型
  公共语言运行时 (CLR) 会自动将区域设置 ID 1033 传递到接受区分区域设置的数据的 Excel 对象模型中的所有方法和属性。 无法为调入对象模型的所有调用自动更改此行为。 但是，通过使用 <xref:System.Type.InvokeMember%2A> 来调用方法以及将区域设置 ID 传递到方法的 *culture* 参数，可以将不同的区域设置 ID 传递到特定的方法。
@@ -47,7 +47,7 @@ ms.locfileid: "71255977"
  还必须确保与文档文本交互的任何代码部分都与文本的语言保持匹配，并确保书签、命名范围以及其他显示字段能够适应 Office 文档的重新格式化，针对不同语法和文本长度进行调整时需要该 Office 文档。 对于包含相对较少文本的文档模板，可以考虑在资源文件中存储文本，然后在运行时加载该文本。
 
 ### <a name="text-direction"></a>文本方向
- 在 Excel 中，可以将工作表的属性设置为从右向左呈现文本。 放置在设计器上的宿主控件或`RightToLeft`任何具有属性的控件将在运行时自动匹配这些设置。 Word 没有针对双向文本的文档设置（您只是更改文本的对齐方式），因此这些控件不能映射到此设置。 相反，必须为每个控件设置文本对齐方式。 可以编写代码来遍历所有控件，并强制这些控件从右向左呈现文本。
+ 在 Excel 中，可以将工作表的属性设置为从右向左呈现文本。 放置在设计器上的宿主控件或任何具有 `RightToLeft` 属性的控件将在运行时自动匹配这些设置。 Word 没有针对双向文本的文档设置（您只是更改文本的对齐方式），因此这些控件不能映射到此设置。 相反，必须为每个控件设置文本对齐方式。 可以编写代码来遍历所有控件，并强制这些控件从右向左呈现文本。
 
 ### <a name="change-culture"></a>更改区域性
  文档级自定义项代码通常将共享 Excel 的主 UI 线程，因此，对线程区域性的任何更改都将影响在该线程上运行的所有其他内容；更改不会限制为针对自定义项。
@@ -55,9 +55,9 @@ ms.locfileid: "71255977"
  Windows 窗体控件在主机应用程序启动应用程序级 VSTO 外接程序之前进行初始化。 在这些情况下，应在设置 UI 控件之前更改区域性。
 
 ## <a name="install-the-language-packs"></a>安装语言包
- 如果 Windows 具有非英语设置，则可安装 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 来以 Windows 使用的语言查看 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 消息。 如果最终用户使用 Windows 的非英语设置来运行你的解决方案，则他们必须具有相应的语言包来以 Windows 使用的语言查看运行时消息。 可从[Microsoft 下载中心](http://www.microsoft.com/downloads)获得语言包。[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]
+ 如果 Windows 具有非英语设置，则可安装 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 来以 Windows 使用的语言查看 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 消息。 如果最终用户使用 Windows 的非英语设置来运行你的解决方案，则他们必须具有相应的语言包来以 Windows 使用的语言查看运行时消息。 可从[Microsoft 下载中心](https://www.microsoft.com/download)获取 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 语言包。
 
- 此外，可再发行的.NET Framework 语言包是 ClickOnce 消息所必需的。 可从[Microsoft 下载中心](http://www.microsoft.com/downloads)获取 .NET Framework 语言包。
+ 此外，可再发行的.NET Framework 语言包是 ClickOnce 消息所必需的。 可从[Microsoft 下载中心](https://www.microsoft.com/download)获取 .NET Framework 语言包。
 
 ## <a name="regional-settings-and-excel-com-calls"></a>区域设置和 Excel COM 调用
  每当托管客户端对 COM 对象调用一个方法并且需要传入特定于区域性的信息时，它都使用与当前线程区域设置匹配的 <xref:System.Globalization.CultureInfo.CurrentCulture%2A> （区域设置）来执行这些操作。 默认情况下，当前线程区域设置是从用户的区域设置继承而来的。 但是，当你从使用 Visual Studio 中的 Office 开发工具创建的 Excel 解决方案中调用 Excel 对象模型时，会自动将英语（美国）数据格式（区域设置 ID 1033）传递到 Excel 对象模型。 在将数据传递到 Microsoft Office Excel 或从项目代码中读取数据之前，必须使用英语（美国）数据格式对具有区分区域设置格式的所有数据（如日期和货币）进行格式设置。

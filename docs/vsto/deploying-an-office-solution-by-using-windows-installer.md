@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 20df85952b4e76e60d6e93067c1f1e7838b692cd
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: a44781c6fea0ecf75dcdb8a5ab2e2b3bed8e52e9
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "69551715"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986138"
 ---
 # <a name="deploy-an-office-solution-by-using-windows-installer"></a>使用 Windows Installer 部署 Office 解决方案
 
@@ -59,15 +59,15 @@ ms.locfileid: "69551715"
 
 有关如何使用 ClickOnce 部署 Office 解决方案的详细信息，请参阅[使用 Clickonce 部署 office 解决方案](../vsto/deploying-an-office-solution-by-using-clickonce.md)。
 
-有关如何使用 [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)] 创建 Windows Installer 文件的信息，请参阅[使用 Windows Installer 部署 Visual Studio 2010 Tools For Office 解决方案](http://go.microsoft.com/fwlink/?LinkId=201807)。
+有关如何使用 [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)]创建 Windows Installer 文件的信息，请参阅[使用 Windows Installer 部署 Visual Studio 2010 Tools For Office 解决方案](/previous-versions/visualstudio/visual-studio-2010/ff937654(v=msdn.10))。
 
 ## <a name="Download"></a>下载示例
 本主题参考以下可下载示例。
 
 |示例<br /><br />|描述<br /><br />|
 |----------|---------------|
-|[ExcelAddIn](http://go.microsoft.com/fwlink/?LinkID=275492)<br /><br />|可在运行 32 位或 64 位版本 Office 的计算机上安装的 Excel VSTO 外接程序。<br /><br />|
-|[ExcelWorkbook](http://go.microsoft.com/fwlink/?LinkID=275493)<br /><br />|可以在运行 32 位或 64 位版本 Office 的计算机上安装的 Excel 文档级自定义项。<br /><br />|
+|[ExcelAddIn](https://code.msdn.microsoft.com/VSTO-Deploy-an-Office-fbcc09ad)<br /><br />|可在运行 32 位或 64 位版本 Office 的计算机上安装的 Excel VSTO 外接程序。<br /><br />|
+|[ExcelWorkbook](https://code.msdn.microsoft.com/VSTO-Deploy-a-Customization-f70fae33)<br /><br />|可以在运行 32 位或 64 位版本 Office 的计算机上安装的 Excel 文档级自定义项。<br /><br />|
 
 ## <a name="ApplySecurity"></a>决定如何向解决方案授予信任
 要让解决方案在用户计算机上运行，你必须以如下方式之一授予信任，或者用户必须在安装解决方案时响应信任提示。
@@ -89,9 +89,9 @@ ms.locfileid: "69551715"
 
    **“新建项目”** 对话框随即打开。
 
-2. 在模板窗格中，展开 **“其他项目类”** ，然后选择 **“安装和部署”** 模板。
+2. 在模板窗格中，展开 **“其他项目类”**，然后选择 **“安装和部署”** 模板。
 
-3. 在 **“安装和部署”** 的属性列表中，选择 **“启用 InstallShield Limited Edition”** ，然后选择 **“确定”** 按钮。
+3. 在 **“安装和部署”** 的属性列表中，选择 **“启用 InstallShield Limited Edition”**，然后选择 **“确定”** 按钮。
 
    此时将显示有关如何获取 InstallShield limited Edition 的信息页面。
 
@@ -111,9 +111,9 @@ ms.locfileid: "69551715"
 
    此时会打开 **“添加新项目”** 对话框。
 
-3. 在模板窗格中，展开 **“其他项目类”** ，然后选择 **“安装和部署”** 模板。
+3. 在模板窗格中，展开 **“其他项目类”**，然后选择 **“安装和部署”** 模板。
 
-4. 在 **“安装和部署”** 的属性列表中，选择 **“InstallShield Limited Edition 项目”** ，为项目命名，然后选择 **“确定”** 按钮。
+4. 在 **“安装和部署”** 的属性列表中，选择 **“InstallShield Limited Edition 项目”**，为项目命名，然后选择 **“确定”** 按钮。
 
    你创建的 InstallShield 安装项目将显示在你的解决方案中。
 
@@ -203,7 +203,7 @@ ms.locfileid: "69551715"
    </SetupPrereq>
    ```
 
-2. 在 Visual Studio 中生成 GUID。 在 **“工具”** 菜单上，选择 **“创建 GUID”** 。
+2. 在 Visual Studio 中生成 GUID。 在 **“工具”** 菜单上，选择 **“创建 GUID”**。
 
 3. 在 **“GUID 生成器”** 程序中，选择 **“注册表格式”** 选项按钮，再选择 **“复制”** 按钮，然后选择 **“退出”** 按钮。
 
@@ -220,7 +220,7 @@ ms.locfileid: "69551715"
 
 6. 在 **“另存为”** 对话框中，浏览到 **“桌面”** 文件夹。
 
-7. 在 "**保存类型**" 列表中，选择 "**所有&#42;文件&#42;（.）** "。
+7. 在 "**保存类型**" 列表中，选择 "**所有&#42;文件&#42;（.）**"。
 
 8. 在 **“文件名”** 框中，输入 **Visual Studio 2010 Tools for Office Runtime.prq**，然后选择 **“保存”** 按钮。
 
@@ -231,9 +231,9 @@ ms.locfileid: "69551715"
 
 10. 从 "**桌面**" 文件夹中，将*Visual Studio 2010 Tools for Office runtime.prq*文件复制到计算机上的以下目录之一。
 
-   对于32位操作系统： *%ProgramFiles%\InstallShield\2013LE\SetupPrerequisites \\*
+   对于32位操作系统： *%ProgramFiles%\InstallShield\2013LE\SetupPrerequisites\\*
 
-   对于64位操作系统： *% ProgramFiles （x86）% \ 2013LE \ SetupPrerequisites \\*
+   对于64位操作系统： *% ProgramFiles （x86）% \ 2013LE \ SetupPrerequisites\\*
 
 11. 在 InstallShield 项目的 **“可再发行组件”** 页上，选择 **“刷新”** 按钮刷新可再发行组件列表，如下图所示。
 
@@ -279,7 +279,7 @@ ms.locfileid: "69551715"
 
 3. 在 **“AllUSERS”** 属性列表中，指定要为计算机的所有用户安装此解决方案，还是仅为某位用户安装此解决方案。
 
-   若要为当前用户安装 VSTO 外接程序，请选择**ALLUSERS = "" （基于用户安装）** 。 若要为计算机的所有用户安装 VSTO 外接程序，请选择 **ALLUSERS=1**（基于计算机安装）。
+   若要为当前用户安装 VSTO 外接程序，请选择**ALLUSERS = "" （基于用户安装）**。 若要为计算机的所有用户安装 VSTO 外接程序，请选择 **ALLUSERS=1**（基于计算机安装）。
 
    在下一个过程中，你将创建注册表项，以使 Office 应用程序能够发现和加载 VSTO 外接程序。 请参阅[VSTO 外接程序的注册表项](../vsto/registry-entries-for-vsto-add-ins.md)。
 
@@ -339,37 +339,37 @@ ms.locfileid: "69551715"
 |DWORD 值<br /><br />|**LoadBehavior**<br /><br />|
 |“字符串值”<br /><br />|**清单**<br /><br />|
 
-8. 打开 **“Description”** 值的快捷菜单，然后选择 **“修改”** 。
+8. 打开 **“Description”** 值的快捷菜单，然后选择 **“修改”**。
 
    出现 **“编辑数据”** 对话框。
 
-9. 在“值数据” 文本框中，输入 **Excel Demo Add-In**，然后选择“确定” 按钮。
+9. 在“值数据”  文本框中，输入 **Excel Demo Add-In**，然后选择“确定”  按钮。
 
-   当用户依次打开 Office 应用程序、“选项” 对话框，然后在“外接程序” 窗格中选择 VSTO 外接程序时，将会显示此说明。
+   当用户依次打开 Office 应用程序、“选项”  对话框，然后在“外接程序”  窗格中选择 VSTO 外接程序时，将会显示此说明。
 
-10. 打开 **“FriendlyName”** 值的快捷菜单，然后选择 **“修改”** 。
+10. 打开 **“FriendlyName”** 值的快捷菜单，然后选择 **“修改”**。
 
    出现 **“编辑数据”** 对话框。
 
-11. 在“值数据” 文本框中，输入 **Excel Demo Add-In**，然后选择“确定” 按钮。
+11. 在“值数据”  文本框中，输入 **Excel Demo Add-In**，然后选择“确定”  按钮。
 
    此字符串会显示在 Office 应用程序的 **“COM 外接程序”** 对话框中。 默认情况下，该字符串的值为 VSTO 外接程序 ID。
 
-12. 打开 **“LoadBehavior”** 值的快捷菜单，然后选择 **“修改”** 。
+12. 打开 **“LoadBehavior”** 值的快捷菜单，然后选择 **“修改”**。
 
    出现 **“编辑数据”** 对话框。
 
-13. 在“值数据” 文本框中，输入 **3**，然后选择“确定” 按钮。
+13. 在“值数据”  文本框中，输入 **3**，然后选择“确定”  按钮。
 
    应用程序启动时，值 3 会加载该 VSTO 外接程序。 有关 LoadBehavior 值的详细信息，请参阅[VSTO 外接程序的注册表项](../vsto/registry-entries-for-vsto-add-ins.md)。
 
-14. 打开 **“Manifest”** 值的快捷菜单，然后选择 **“修改”** 。
+14. 打开 **“Manifest”** 值的快捷菜单，然后选择 **“修改”**。
 
    出现 **“编辑数据”** 对话框。
 
-15. 在“值数据” 文本框中，输入 **file:///[INSTALLDIR]ExcelAddIn.vsto|vstolocal**，然后选择“确定” 按钮。
+15. 在“值数据”  文本框中，输入 **file:///[INSTALLDIR]ExcelAddIn.vsto|vstolocal**，然后选择“确定”  按钮。
 
-   Visual Studio 2010 Tools for Office Runtime 会使用此路径查找部署清单。 此路径的 **[INSTALLDIR]** 部分是映射到 InstallShield 安装项目“常规信息” 属性页中的 **INSTALLDIR** 属性的宏。 此属性指定 VSTO 外接程序在目标计算机上的安装位置。 **|vstolocal** 后缀可确保从安装文件夹，而非 ClickOnce 缓存加载你的解决方案。
+   Visual Studio 2010 Tools for Office Runtime 会使用此路径查找部署清单。 此路径的 **[INSTALLDIR]** 部分是映射到 InstallShield 安装项目“常规信息”  属性页中的 **INSTALLDIR** 属性的宏。 此属性指定 VSTO 外接程序在目标计算机上的安装位置。 **|vstolocal** 后缀可确保从安装文件夹，而非 ClickOnce 缓存加载你的解决方案。
 
 > [!IMPORTANT]
 > 如果在 Outlook 的 VSTO 外接程序中创建自定义窗体区域，则必须创建更多注册表项以在 Outlook 中注册该区域。 有关详细信息，请参阅[Outlook 窗体区域的注册表项](../vsto/registry-entries-for-vsto-add-ins.md#OutlookEntries)。
@@ -392,9 +392,9 @@ ms.locfileid: "69551715"
 
 3. 在面向 **“Windows”** 的项目类型列表中，选择 **“控制台应用程序”** 模板。
 
-4. 将项目命名为 **SetExcelDocumentProperties**，并选择“确定” 按钮。
+4. 将项目命名为 **SetExcelDocumentProperties**，并选择“确定”  按钮。
 
-5. 在 **“解决方案资源管理器”** 中，选择 **“显示所有文件”** 按钮，打开 **“SetExcelDocumentProperties”** 项目节点的快捷菜单，然后选择 **“添加引用”** 。
+5. 在 **“解决方案资源管理器”** 中，选择 **“显示所有文件”** 按钮，打开 **“SetExcelDocumentProperties”** 项目节点的快捷菜单，然后选择 **“添加引用”**。
 
 6. 在 **“引用管理器”** 对话框中，选择 **“扩展”** 选项卡，选中以下程序集旁的复选框，然后选择 **“确定”** 按钮。
 
@@ -440,14 +440,14 @@ ms.locfileid: "69551715"
    > [!NOTE]
    > 此列表中只有少数事件可用于 InstallShield Limited Edition。 在此过程中，你将使用 "**安装程序成功完成" 对话框**事件来运行程序。
 
-8. 在事件列表中的 **“安装过程中的自定义操作”** 下，打开 **“‘安装程序成功完成之后’对话框”** 事件的快捷菜单，然后选择 **“新建 EXE”** 。
+8. 在事件列表中的 **“安装过程中的自定义操作”** 下，打开 **“‘安装程序成功完成之后’对话框”** 事件的快捷菜单，然后选择 **“新建 EXE”**。
 
    名为 **“NewCustomAction1”** 的自定义操作显示在 **“‘安装程序成功完成之后’对话框”** 事件下。 自定义操作的属性集会出现在事件旁边的窗格中。
 
    > [!IMPORTANT]
    > 事件列表中会出现两个 **“‘安装程序成功完成之后’对话框”** 事件。 确保选择显示在 **“安装过程中的自定义操作”** 节点之下的 **“‘安装程序成功完成之后’对话框”** 事件实例。
 
-9. 在 **“源位置”** 属性列表中，选择 **“随产品安装”** 。
+9. 在 **“源位置”** 属性列表中，选择 **“随产品安装”**。
 
 10. 选择 **“文件名”** 属性旁边的 **“浏览”** 按钮。
 
@@ -463,7 +463,7 @@ ms.locfileid: "69551715"
 
 13. 在记事本中打开解决方案的项目文件。 对于 Visual Basic 项目，该文件的名称为 *.vbproj*。 对于C#项目，该文件的名称为*ExcelWorkbook*。
 
-14. 在项目文件中，搜索 **&lt;SolutionID &gt;** 元素，将其值复制到剪贴板，然后关闭记事本。
+14. 在项目文件中，搜索**&lt;SolutionID &gt;** 元素，将其值复制到剪贴板，然后关闭记事本。
 
     可以将该值作为参数传递到控制台应用程序。
 
@@ -490,17 +490,17 @@ ms.locfileid: "69551715"
 
 4. 在 **“生成”** 资源管理器旁边的窗格中，选择 **“Setup.exe”** 选项卡。
 
-5. 在 **“Setup.exe”** 属性页中，从 **“InstallShield 系统必备组件位置”** 列表中，选择 **“从 Web 下载”** 。
+5. 在 **“Setup.exe”** 属性页中，从 **“InstallShield 系统必备组件位置”** 列表中，选择 **“从 Web 下载”**。
 
 6. 在菜单栏上，依次选择“生成” > “Configuration Manager”。
 
-7. 在 **“活动解决方案配置”** 列表中，选择 **“SingleImage”** 。
+7. 在 **“活动解决方案配置”** 列表中，选择 **“SingleImage”**。
 
-8. 在 **“项目上下文”** 表中，从 **“OfficeAddInSetup”** 项目的 **“配置”** 列中选择 **“SingleImage”** ，然后选择 **“关闭”** 按钮。
+8. 在 **“项目上下文”** 表中，从 **“OfficeAddInSetup”** 项目的 **“配置”** 列中选择 **“SingleImage”**，然后选择 **“关闭”** 按钮。
 
-9. 在菜单栏上，选择 "**生成** > **生成 officeaddinsetup"** "。
+9. 在菜单栏上，选择 "**生成** > **生成 officeaddinsetup"**"。
 
-   生成完成后，可以在以下位置找到**officeaddinsetup "** *项目的 Setup.exe 文件：* <em>OfficeAddInSetupProjectRoot</em> **\OfficeAddInSetup\Express\SingleImage\DiskImages\DISK1 \\**
+   生成完成后，可以在以下位置找到**officeaddinsetup "** *项目的 Setup.exe 文件：* <em>OfficeAddInSetupProjectRoot</em>**\OfficeAddInSetup\Express\SingleImage\DiskImages\DISK1 \\**
 
 ## <a name="see-also"></a>请参阅
 
@@ -510,4 +510,4 @@ ms.locfileid: "69551715"
 - [自定义文档属性概述](../vsto/custom-document-properties-overview.md)
 - [向 Office 解决方案授予信任](../vsto/granting-trust-to-office-solutions.md)
 - [向文档授予信任](../vsto/granting-trust-to-documents.md)
-- [使用 Windows Installer 部署 Visual Studio 2010 Tools for Office 解决方案](http://go.microsoft.com/fwlink/?LinkId=201807)
+- [使用 Windows Installer 部署 Visual Studio 2010 Tools for Office 解决方案](/previous-versions/visualstudio/visual-studio-2010/ff937654(v=msdn.10))
