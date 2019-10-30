@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53483979600093133c2b059d9ea921cdb8a08ab1
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: c38ff2fcc762ccc202e2a02ecd36e942db75ad3d
+ms.sourcegitcommit: ab18c9d850192fc9ccec10961f1126e8b0cba8da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911617"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73061082"
 ---
 # <a name="create-custom-views-of-c-objects-in-the-debugger-using-the-natvis-framework"></a>使用 Natvis 框架在C++调试器中创建对象的自定义视图
 
@@ -319,6 +319,10 @@ Natvis 的可视化功能使用 C++ 表达式来指定要显示的数据项。 �
   </Expand>
 </Type>
 ```
+
+不需要 `Min` 和 `Max`。 它们是可选属性。 不支持通配符。
+
+`Name` 特性的格式为*filename. ext*，如*hello*或*some*。 不允许使用路径名。
 
 ### <a name="BKMK_DisplayString"></a>DisplayString 元素
 `DisplayString` 元素用于指定要显示为变量值的字符串。 它接受混合了表达式的任意字符串。 大括号内的所有内容都将被解释为表达式。 例如，以下 `DisplayString` 条目：
