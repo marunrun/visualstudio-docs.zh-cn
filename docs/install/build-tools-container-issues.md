@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 07eff5daf319f854b5393d80ed4d41a0b0262b96
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
+ms.openlocfilehash: 2433f18f9980657ced5f5ddb274f5aa2a7671a60
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313909"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888603"
 ---
 # <a name="known-issues-for-containers"></a>容器的已知问题
 
@@ -53,7 +53,7 @@ ms.locfileid: "72313909"
 使用生成工具容器时可能会出现以下已知问题。 要查看问题是否已修复，或者是否有其他已知问题，请访问 [https://developercommunity.visualstudio.com](https://developercommunity.visualstudio.com )。
 
 * 在[某些情况](https://github.com/Microsoft/vstest/issues/940)下，IntelliTrace 在容器内可能无法正常工作。
-* 在用于 Windows 的 Docker 的较旧版本上，默认容器映像大小仅为 20 GB，因此不适用于生成工具。 按照[说明将映像大小更改为](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/container-storage#storage-limits) 127 GB 或更多。
+* 在用于 Windows 的 Docker 的较旧版本上，默认容器映像大小仅为 20 GB，因此不适用于生成工具。 按照[说明将映像大小更改为](/virtualization/windowscontainers/manage-containers/container-storage#storage-limits) 127 GB 或更多。
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

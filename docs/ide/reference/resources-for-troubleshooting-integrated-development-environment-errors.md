@@ -93,12 +93,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2741e86bdc8e59434472242210cd6de2ffa8cee9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c71b281a89d0465ac80f04de868b16cc5468429a
+ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655545"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919065"
 ---
 # <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>用于排除集成开发环境错误的资源
 
@@ -119,7 +119,7 @@ ms.locfileid: "72655545"
 
 ## <a name="product-support"></a>产品支持
 
-如果借助其他资源仍不能解决问题，则可以访问 [Microsoft 支持](http://go.microsoft.com/fwlink/?linkid=1782)网站，与 Microsoft 支持服务联系。 若要了解所在区域中可用的产品支持，请参阅 [Visual Studio 反馈选项](../../ide/feedback-options.md)页面。
+如果借助其他资源仍不能解决问题，则可以访问 [Microsoft 支持](https://support.microsoft.com/en-us)网站，与 Microsoft 支持服务联系。 若要了解所在区域中可用的产品支持，请参阅 [Visual Studio 反馈选项](../../ide/feedback-options.md)页面。
 
 ## <a name="see-also"></a>请参阅
 

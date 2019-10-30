@@ -6,18 +6,18 @@ ms.author: sayedha
 ms.date: 05/03/2018
 ms.technology: vs-ide-general
 ms.assetid: 61432695-5B12-4257-B250-48D37EED106D
-ms.openlocfilehash: 7ffe24d26af91d7d6733ec1540c2f2d810425e1e
-ms.sourcegitcommit: 9a227faafdd0bad6f017ace607dc61eb56b32d72
+ms.openlocfilehash: d2ce3b3cdbf1a4cf1f19956a7327d73c0bb34b62
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2019
-ms.locfileid: "71175418"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807148"
 ---
 # <a name="javascript-and-typescript-support"></a>JavaScript 和 TypeScript 支持
 
 Visual Studio for Mac 通过语法突出显示、代码格式设置和 IntelliSense 提供对 JavaScript 和 TypeScript 的支持。
 
-![typescript 编辑器支持](/media/tsjseditor-2019.gif)
+![typescript 编辑器支持](media/tsjseditor-2019.gif)
 
 有关编写 JavaScript 的详细信息，请参阅[编写 JavaScript 代码](/scripting/javascript/writing-javascript-code)指南。
 

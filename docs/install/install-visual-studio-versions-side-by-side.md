@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 123f01b2e4545545a380f5a37adcdaf883bc9e91
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b7fb1e057ffd9f3824fa1fe49e353fd54694da91
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62974717"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888688"
 ---
 # <a name="install-visual-studio-versions-side-by-side"></a>并排安装 Visual Studio 版本
 
@@ -44,11 +44,11 @@ ms.locfileid: "62974717"
 
 * 如果在已安装多个版本的计算机上卸载 Visual Studio 的一个版本，则将为所有版本移除 Visual Studio 的文件关联。
 
-* 因为并非所有扩展都兼容，所以 Visual Studio 不会自动升级扩展。 必须从 [Visual Studio Marketplace](http://go.microsoft.com/fwlink/?LinkId=178891) 或软件发行者处重新安装扩展。
+* 因为并非所有扩展都兼容，所以 Visual Studio 不会自动升级扩展。 必须从 [Visual Studio Marketplace](https://marketplace.visualstudio.com/) 或软件发行者处重新安装扩展。
 
 ## <a name="net-framework-versions-and-side-by-side-installations"></a>.NET Framework 版本和并行安装
 
-Visual Basic、Visual C# 和 Visual F# 项目使用“项目设计器”中的“目标框架”选项来指定项目使用的 .NET Framework 版本。 对于 C++ 项目，您可以通过修改 .vcxproj 文件手动更改目标框架。 有关详细信息，请参阅 [.NET Framework 的版本兼容性](/dotnet/framework/migration-guide/version-compatibility)页。
+Visual Basic、Visual C# 和 Visual F# 项目使用“项目设计器”中的“目标框架”选项来指定项目使用的 .NET Framework 版本   。 对于 C++ 项目，您可以通过修改 .vcxproj 文件手动更改目标框架。 有关详细信息，请参阅 [.NET Framework 的版本兼容性](/dotnet/framework/migration-guide/version-compatibility)页。
 
 创建项目时，可以在 **“新建项目”** 对话框中的 **“.NET Framework”** 列表中指定项目针对的 .NET Framework 版本。
 

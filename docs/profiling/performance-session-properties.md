@@ -11,20 +11,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 77da53856e0562d036fade431dd0deba0376fe9f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2c8a5058d52684ec08e13641953c789c244f2fa9
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62798374"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72910151"
 ---
 # <a name="performance-session-properties"></a>性能会话属性
 
 通过**性能会话**可以配置用于确定如何分析应用程序的设置。 它还存储为分析会话生成的报告。
 
-可通过运行**性能向导**或通过手动创建会话来创建**性能会话**。 **性能会话**创建之后，**性能会话**会显示在“性能资源管理器”中。
+可通过运行**性能向导**或通过手动创建会话来创建**性能会话**。 **性能会话**创建之后，**性能会话**会显示在“性能资源管理器”  中。
 
-若要查看**性能会话**属性，请在“性能资源管理器”中选择会话名，右键单击它，然后选择“属性”。
+若要查看**性能会话**属性，请在“性能资源管理器”  中选择会话名，右键单击它，然后选择“属性”  。
 
 性能会话具有以下属性页：
 
@@ -59,7 +59,7 @@ ms.locfileid: "62798374"
 有关详细信息，请参阅[如何：选择采样事件](../profiling/how-to-choose-sampling-events.md)
 
 ## <a name="binary"></a>二进制
-通过这些设置可以指定是否要将检测的二进制文件重新定位到另一个位置。 例如，如果在分析 My.DLL 并且未选择重新定位检测的二进制文件，则会创建名为 My.Orig.DLL 的 My.DLL 备份副本。 随后，会通过插入探测以收集数据来修改 My.DLL。 如果决定重新定位检测的二进制文件，则原始二进制文件不会重命名，并且检测的二进制文件会复制到指定位置以供在检测过程中使用。
+通过这些设置可以指定是否要将检测的二进制文件重新定位到另一个位置。 例如，如果在分析 My.DLL 并且未选择重新定位检测的二进制文件，则会创建名为 My.Orig.DLL 的 My.DLL 备份副本    。 随后，会通过插入探测以收集数据来修改 My.DLL  。 如果决定重新定位检测的二进制文件，则原始二进制文件不会重命名，并且检测的二进制文件会复制到指定位置以供在检测过程中使用。
 
 有关详细信息，请参阅[如何：指定要启动的二进制文件](../profiling/how-to-specify-the-binary-to-start.md)
 
@@ -85,7 +85,7 @@ ms.locfileid: "62798374"
 
 ## <a name="windows-events"></a>Windows 事件
 
-在分析过程中，可以从事件跟踪提供程序收集数据。 可以使用 VSPerfReport.exe 命令行工具 `/calltrace` 选项查看数据。 有关 Windows 事件跟踪 (ETW) 的详细信息，请参阅[关于事件跟踪](http://go.microsoft.com/fwlink/?linkid=90752)。
+在分析过程中，可以从事件跟踪提供程序收集数据。 可以使用 VSPerfReport.exe 命令行工具 `/calltrace` 选项查看数据  。 有关 Windows 事件跟踪 (ETW) 的详细信息，请参阅[关于事件跟踪](/windows/win32/etw/about-event-tracing)。
 
 有关详细信息，请参见:
 
@@ -95,7 +95,7 @@ ms.locfileid: "62798374"
 
 ## <a name="windows-counters"></a>Windows 计数器
 
-通过此选项可以从 Windows 性能监视器计数器收集数据。 若要收集此数据，请选中标记为“收集 Windows 性能计数器”的复选框。 收集间隔可以在“收集间隔”框中设置。 还可以使用“计数器类别”和“实例”。 提供了一些默认 Windows 性能监视器计数器。
+通过此选项可以从 Windows 性能监视器计数器收集数据。 若要收集此数据，请选中标记为“收集 Windows 性能计数器”  的复选框。 收集间隔可以在“收集间隔”  框中设置。 还可以使用“计数器类别”  和“实例”  。 提供了一些默认 Windows 性能监视器计数器。
 
  有关详细信息，请参阅[如何：收集 Windows 计数器数据](../profiling/how-to-collect-windows-counter-data.md)。
 

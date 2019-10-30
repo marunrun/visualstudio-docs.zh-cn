@@ -18,12 +18,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e59ee1305c0c482686505959aac7187902906086
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 75faa3e4d38f961c38b23a95765d6466e008714f
+ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748901"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919050"
 ---
 # <a name="work-with-c-code-in-class-designer"></a>在类设计器中使用 C++ 代码
 
@@ -84,7 +84,7 @@ ms.locfileid: "72748901"
 
 ### <a name="troubleshoot-other-error-messages"></a>其他错误消息的疑难解答
 
-在 Microsoft Developer Network (MSDN) 公共论坛中，可以找到有关对错误和警告进行疑难解答的帮助。 请参阅 [Visual Studio 类设计器论坛](http://go.microsoft.com/fwlink/?linkid=160754)。
+在 Microsoft Developer Network (MSDN) 公共论坛中，可以找到有关对错误和警告进行疑难解答的帮助。 请参阅 [Visual Studio 类设计器论坛](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsclassdesigner)。
 
 ## <a name="limitations-for-c-code-elements"></a>C++ 代码元素的限制
 

@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9de3c3aed6b40ace1b841d2dac5c175963b1fecb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b9f3889cf1d9088f39b4efc4e4d01197ffaaaa77
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62842254"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72912071"
 ---
 # <a name="msbuild-reference"></a>MSBuild 参考
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 是 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 的生成系统。 可通过以下链接查看包含 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 参考信息的主题。
@@ -60,7 +60,7 @@ ms.locfileid: "62842254"
 
 - [.Targets 文件](../msbuild/msbuild-dot-targets-files.md)
 
- 描述包含在 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 中的 .Target 文件。
+ 描述包含在 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 中的 .Target 文件  。
 
 - [常见项元数据](../msbuild/msbuild-well-known-item-metadata.md)
 
@@ -68,7 +68,7 @@ ms.locfileid: "62842254"
 
 - [响应文件](../msbuild/msbuild-response-files.md)
 
- 介绍包含命令行开关的 .rsp 文件。
+ 介绍包含命令行开关的 .rsp 文件  。
 
 - [其他资源](https://social.msdn.microsoft.com/forums/vstudio/home?forum=msbuild) 提供指向 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 网站和新闻组的链接。
 
@@ -83,9 +83,9 @@ ms.locfileid: "62842254"
 ## <a name="see-also"></a>请参阅
 
 - [MSBuild 概述](../msbuild/msbuild.md)
-- [Microsoft.Build.Evaluation](https://docs.microsoft.com/dotnet/api/microsoft.build.evaluation)
-- [Microsoft.Build.Execution](https://docs.microsoft.com/dotnet/api/microsoft.build.execution)
-- [Microsoft.Build.Framework](https://docs.microsoft.com/dotnet/api/microsoft.build.framework)
-- [Microsoft.Build.Logging](https://docs.microsoft.com/dotnet/api/microsoft.build.logging)
-- [Microsoft.Build.Tasks](https://docs.microsoft.com/dotnet/api/microsoft.build.tasks)
-- [Microsoft.Build.Utilities](https://docs.microsoft.com/dotnet/api/microsoft.build.utilities)
+- [Microsoft.Build.Evaluation](/dotnet/api/microsoft.build.evaluation)
+- [Microsoft.Build.Execution](/dotnet/api/microsoft.build.execution)
+- [Microsoft.Build.Framework](/dotnet/api/microsoft.build.framework)
+- [Microsoft.Build.Logging](/dotnet/api/microsoft.build.logging)
+- [Microsoft.Build.Tasks](/dotnet/api/microsoft.build.tasks)
+- [Microsoft.Build.Utilities](/dotnet/api/microsoft.build.utilities)

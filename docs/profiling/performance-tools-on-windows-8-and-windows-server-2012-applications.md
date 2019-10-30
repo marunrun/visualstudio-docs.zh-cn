@@ -7,12 +7,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 69b817af15b782ebd1e281d51855d62b11e8f470
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 8a42651792848ffd4de9eccb40c2949d113b10b4
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66262955"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911889"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Windows 8 和 Windows Server 2012 应用程序上的性能工具
 
@@ -72,7 +72,7 @@ Windows 8 和 Windows Server 2012 中新增的增强安全功能需要对 Visual
 
 若要分析未安装 Visual Studio 的设备上的应用程序，请执行以下操作之一：
 
-- 从 [MSDN 网站](http://go.microsoft.com/fwlink/?LinkID=219549)上下载这些工具作为 Visual Studio 远程工具的一部分。
+- 从 [MSDN 网站](https://visualstudio.microsoft.com/#downloads+d-additional-software)上下载这些工具作为 Visual Studio 远程工具的一部分。
 
 - 从你的 Visual Studio 计算机复制并运行独立探查器工具安装程序。 若要获取分析工具的路径，请参阅[指定命令行工具的路径](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)。 为远程计算机的操作系统 (x86/x64) 选择安装程序。
 
@@ -109,7 +109,7 @@ Windows 8 和 Windows Server 2012 中新增的增强安全功能需要对 Visual
 
 **在远程计算机上收集 TIP 数据**
 
-若要在远程计算机上收集层交互数据，必须从 Visual Studio 计算机的 %VSInstallDir%\Team Tools\Performance Tools\Setups 文件夹中将 vs\_profiler\_\<Platform>\_\<Language>.exe 文件复制到远程计算机上并进行安装。 不能使用[远程调试](../debugger/remote-debugging.md)下载包中的分析工具。
+若要在远程计算机上收集层交互数据，必须从 Visual Studio 计算机的 %VSInstallDir%\Team Tools\Performance Tools\Setups 文件夹中将 vs\_profiler\_\<Platform>\_\<Language>.exe 文件复制到远程计算机上并进行安装       。 不能使用[远程调试](../debugger/remote-debugging.md)下载包中的分析工具。
 
 可以使用 [VSPerfCmd](../profiling/vsperfcmd.md) 或 [VSPerfASPNetCmd](../profiling/vsperfaspnetcmd.md) 收集分析数据。
 

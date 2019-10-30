@@ -14,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b91cc92abca856e3a23e7b1154e378c99923fcf
-ms.sourcegitcommit: 8a699df154464387f327691dce507d7c3d0e2aab
+ms.openlocfilehash: dbca6429c1cc1669345cda465ec9ecfe3af0ed06
+ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70060381"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919191"
 ---
 # <a name="accessibility-features-of-visual-studio"></a>Visual Studio 的辅助功能
 
@@ -51,7 +51,7 @@ ms.locfileid: "70060381"
 - [如何：更改字体和颜色](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)
 
 > [!IMPORTANT]
-> 本页的信息可能仅适用于美国境内获得 Microsoft 产品许可证的用户。 如果你在美国之外获得本产品，请访问 [Microsoft 辅助功能](http://go.microsoft.com/fwlink/?LinkId=8431)网站，以获取 Microsoft 支持服务电话号码和地址的列表。 你可以与当地的分公司联系，了解你所在的地区是否供应本页所描述的产品和服务类型。 有关辅助功能的信息还有其他语言版本。
+> 本页的信息可能仅适用于美国境内获得 Microsoft 产品许可证的用户。 如果你在美国之外获得本产品，请访问 [Microsoft 辅助功能](https://www.microsoft.com/accessibility/)网站，以获取 Microsoft 支持服务电话号码和地址的列表。 你可以与当地的分公司联系，了解你所在的地区是否供应本页所描述的产品和服务类型。 有关辅助功能的信息还有其他语言版本。
 
 ::: moniker range="vs-2017"
 
