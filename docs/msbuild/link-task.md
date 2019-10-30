@@ -30,12 +30,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f2241daa50a35a9714fd66b10966298279bc37fe
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 98bf3e143a3fcb6613752362acf83f5c2441b98b
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747289"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911260"
 ---
 # <a name="link-task"></a>Link 任务
 包装 Microsoft C++ 链接器工具，link.exe  。 链接器工具将通用对象文件格式 (COFF) 对象文件和库链接起来，以创建可执行 (.exe) 文件或动态链接库 (DLL)  。 有关详细信息，请参阅[链接器选项](/cpp/build/reference/linker-options)。
@@ -65,7 +65,7 @@ ms.locfileid: "72747289"
 
   指定将放入清单文件的 `dependency` 节的属性。
 
-  有关详细信息，请参阅 [/MANIFESTDEPENDENCY（指定清单依赖项）](/cpp/build/reference/manifestdependency-specify-manifest-dependencies)。 另请参阅 [Publisher configuration files（发布服务器配置文件）](https://docs.microsoft.com/windows/desktop/SbsCs/publisher-configuration-files)。
+  有关详细信息，请参阅 [/MANIFESTDEPENDENCY（指定清单依赖项）](/cpp/build/reference/manifestdependency-specify-manifest-dependencies)。 另请参阅 [Publisher configuration files（发布服务器配置文件）](/windows/desktop/SbsCs/publisher-configuration-files)。
 
 - **AdditionalOptions**
 

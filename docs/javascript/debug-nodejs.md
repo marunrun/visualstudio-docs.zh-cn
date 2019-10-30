@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 47f709ae086a32c0680fca060744898251a76afd
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: ec2b93d212f9a9485f6e817d00b06cccfec47a93
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589135"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888704"
 ---
 # <a name="debug-a-javascript-or-typescript-app-in-visual-studio"></a>在 Visual Studio 中调试 JavaScript 或 TypeScript 应用
 
@@ -64,7 +64,7 @@ Visual Studio 仅为 Chrome 和 Internet 资源管理器提供调试支持。 �
     ::: moniker range=">=vs-2019"
 
     > [!NOTE]
-    > 还可以在浏览器启动时设置 `--remote-debugging-port` 标志，方法是从“调试”工具栏选择“浏览方式...”，然后选择“添加”，并在“参数”字段中设置标志     。 为浏览器使用其他易记名称，如“带有调试功能的 Chrome”  。 有关详细信息，请参阅[发行说明](https://docs.microsoft.com/visualstudio/releases/2019/release-notes-preview)。
+    > 还可以在浏览器启动时设置 `--remote-debugging-port` 标志，方法是从“调试”工具栏选择“浏览方式...”，然后选择“添加”，并在“参数”字段中设置标志     。 为浏览器使用其他易记名称，如“带有调试功能的 Chrome”  。 有关详细信息，请参阅[发行说明](/visualstudio/releases/2019/release-notes-preview)。
 
     ::: moniker-end
 

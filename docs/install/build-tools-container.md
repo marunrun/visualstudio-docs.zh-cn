@@ -13,12 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 24e27c8ca2c75e2345bea4f4393fcb00bba1a0d8
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 0a16f9501b9ce1e7c69eaa8f2460a50affd6d579
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67821714"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888714"
 ---
 # <a name="install-build-tools-into-a-container"></a>将生成工具安装到容器
 
@@ -30,9 +30,9 @@ ms.locfileid: "67821714"
 
 ## <a name="before-you-begin"></a>在开始之前
 
-下面假定你对 [Docker](https://www.docker.com/what-docker) 比较熟悉。 如果你尚不熟悉在 Windows 上运行 Docker，请了解如何[在 Windows 上安装和配置 Docker 引擎](https://docs.microsoft.com/virtualization/windowscontainers/manage-docker/configure-docker-daemon)。
+下面假定你对 [Docker](https://www.docker.com/what-docker) 比较熟悉。 如果你尚不熟悉在 Windows 上运行 Docker，请了解如何[在 Windows 上安装和配置 Docker 引擎](/virtualization/windowscontainers/manage-docker/configure-docker-daemon)。
 
-下面的基础映像是一个示例，可能不适用于你的系统。 请阅读 [Windows 容器版本兼容性](https://docs.microsoft.com/virtualization/windowscontainers/deploy-containers/version-compatibility)，以确定应将哪个基础映像用于你的环境。
+下面的基础映像是一个示例，可能不适用于你的系统。 请阅读 [Windows 容器版本兼容性](/virtualization/windowscontainers/deploy-containers/version-compatibility)，以确定应将哪个基础映像用于你的环境。
 
 ## <a name="create-and-build-the-dockerfile"></a>创建和生成 Dockerfile
 
@@ -93,7 +93,7 @@ ms.locfileid: "67821714"
    >
    > Visual Studio 2017 版本 15.8 或更高版本（任何产品）无法在 mcr.microsoft.com/windows/servercore:1809 或更高版本上正常安装。 不显示任何错误信息。
    >
-   > 请参阅 [Windows 容器版本兼容性](https://docs.microsoft.com/virtualization/windowscontainers/deploy-containers/version-compatibility)，以了解哪些主机操作系统版本支持哪些容器操作系统版本，并请参阅[容器的已知问题](build-tools-container-issues.md)了解已知问题。
+   > 请参阅 [Windows 容器版本兼容性](/virtualization/windowscontainers/deploy-containers/version-compatibility)，以了解哪些主机操作系统版本支持哪些容器操作系统版本，并请参阅[容器的已知问题](build-tools-container-issues.md)了解已知问题。
 
    ::: moniker-end
 
@@ -131,7 +131,7 @@ ms.locfileid: "67821714"
    > [!WARNING]
    > 如果映像直接基于 microsoft/windowsservercore，可能无法正确安装 .NET Framework，且不会指示任何安装错误。 安装完成后，可能无法运行托管代码。 相反，可使映像以 [microsoft/dotnet-framework:4.8](https://hub.docker.com/r/microsoft/dotnet-framework) 或更高版本为基础。 另请注意，标记为 4.8 或更高版本的映像可能使用 PowerShell 作为默认 `SHELL`，这将导致 `RUN` 和 `ENTRYPOINT` 指令失败。
    >
-   > 请参阅 [Windows 容器版本兼容性](https://docs.microsoft.com/virtualization/windowscontainers/deploy-containers/version-compatibility)，以了解哪些主机操作系统版本支持哪些容器操作系统版本，并请参阅[容器的已知问题](build-tools-container-issues.md)了解已知问题。
+   > 请参阅 [Windows 容器版本兼容性](/virtualization/windowscontainers/deploy-containers/version-compatibility)，以了解哪些主机操作系统版本支持哪些容器操作系统版本，并请参阅[容器的已知问题](build-tools-container-issues.md)了解已知问题。
 
    ::: moniker-end
 

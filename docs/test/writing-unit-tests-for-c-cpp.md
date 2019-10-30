@@ -8,12 +8,12 @@ manager: markl
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: 75244cc728b238a04569875ac01f1c2a3f27d336
-ms.sourcegitcommit: 16175e0cea6af528e9ec76f0b94690faaf1bed30
+ms.openlocfilehash: 9d69c91af316c755b2dcf4f339d8f47d49096b6a
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71481920"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72982915"
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>在 Visual Studio 中编写 C/C++ 单元测试
 
@@ -79,7 +79,7 @@ C++ 单元测试项目支持 [CodeLens](../ide/find-code-changes-and-other-histo
 
 ### <a name="link-to-object-or-library-files"></a>将测试与对象或库文件相关联
 
-如果测试代码没有导出要测试的函数，可以将输出的 .obj 或 .lib 文件添加到测试项目的依赖项中。 请参阅[将测试与对象或库文件相关联](https://docs.microsoft.com/visualstudio/test/unit-testing-existing-cpp-applications-with-test-explorer?view=vs-2015#objectRef)。
+如果测试代码没有导出要测试的函数，可以将输出的 .obj 或 .lib 文件添加到测试项目的依赖项中。 请参阅[将测试与对象或库文件相关联](unit-testing-existing-cpp-applications-with-test-explorer.md)。
 
 ### <a name="add-include-directives-for-header-files"></a>为头文件添加 #include 指令
 
@@ -92,7 +92,7 @@ C++ 单元测试项目支持 [CodeLens](../ide/find-code-changes-and-other-histo
 ### <a name="write-test-methods"></a>编写测试方法
 
 > [!NOTE]
-> 此部分演示适用于 C/C++ 的 Microsoft 单元测试框架的语法。 记录在此处：[Microsoft.VisualStudio.TestTools.CppUnitTestFramework API reference](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)。 有关 Google Test 文档，请参阅 [Google Test 入门](https://github.com/google/googletest/blob/master/googletest/docs/primer.md)。 有关 Boost.Test，请参阅 [Boost Test 库：单元测试框架](http://www.boost.org/doc/libs/1_46_0/libs/test/doc/html/utf.html)。
+> 此部分演示适用于 C/C++ 的 Microsoft 单元测试框架的语法。 记录在此处：[Microsoft.VisualStudio.TestTools.CppUnitTestFramework API reference](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)。 有关 Google Test 文档，请参阅 [Google Test 入门](https://github.com/google/googletest/blob/master/googletest/docs/primer.md)。 有关 Boost.Test，请参阅 [Boost Test 库：单元测试框架](https://www.boost.org/doc/libs/1_46_0/libs/test/doc/html/utf.html)。
 
 测试项目中的 .cpp 文件有一个为你定义的存根类和方法，用作有关如何编写测试代码的示例  。 请注意，签名使用 TEST_CLASS 和 TEST_METHOD 宏，它们使方法可在测试资源管理器窗口中被发现  。
 

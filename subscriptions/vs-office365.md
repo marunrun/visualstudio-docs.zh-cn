@@ -6,12 +6,12 @@ manager: lank
 ms.date: 08/02/2019
 ms.topic: conceptual
 description: 了解一些 Visual Studio 订阅中随附的 Office 365 权益。
-ms.openlocfilehash: ae28df2f66ff976fffd44f42c3063f790db9feb3
-ms.sourcegitcommit: a124076dfd6b4e5aecda4d01984fee7b0c034745
+ms.openlocfilehash: 65a071cbfcdc31ca2ef8a36ac5a779fc99467c17
+ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787931"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816458"
 ---
 # <a name="office-365-proplus-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Office 365 专业增强版
 
@@ -75,4 +75,4 @@ ms.locfileid: "68787931"
 请务必激活这些重要权益以充分利用 Visual Studio 订阅：
 - [Visual Studio](vs-ide-benefit.md)
 - [Azure DevOps](vs-azure-devops.md)
-- [Azure 信用额度](vs-azure.md)
+- [Azure 开发测试个人额度](vs-azure.md)

@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: da437b974eff9beb671f5fe889bec427f9f85f4c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cadf5f605b78dd82ddf205ecfb5b0beded92a59f
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62989752"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72910518"
 ---
 # <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018：运行的 32 位应用程序达到了进程托管内存限制
 
@@ -46,7 +46,7 @@ ms.locfileid: "62989752"
  托管堆总大小接近默认限制时，内存管理开销常会增加到一定程度，此时应用程序的响应情况和可伸缩性会开始受到影响。
 
 ## <a name="how-to-investigate-a-warning"></a>如何调查警告
- 双击“错误列表”窗口中的消息，导航到[标记](../profiling/marks-view.md)视图。 查找 **.NET CLR Memory\\# Bytes in all Heaps** 和 **# Total committed bytes** 列。 确定是否存在特定阶段的程序执行，其中托管内存分配高于其他阶段。 比较 **# Bytes in all Heaps** 列的值与 **.NET CLR Memory\\# of Gen 0 Collections**、**.NET CLR Memory\\# of Gen 1 Collections** 和 **.NET CLR Memory\\# of Gen 2 Collections** 列中报告的垃圾回收率，确定托管内存分配模式是否会影响垃圾回收率。
+ 双击“错误列表”窗口中的消息，导航到[标记](../profiling/marks-view.md)视图。 查找 **.NET CLR Memory\\# Bytes in all Heaps** 和 **# Total committed bytes** 列。 确定是否存在特定阶段的程序执行，其中托管内存分配高于其他阶段。 比较 **# Bytes in all Heaps** 列的值与 **.NET CLR Memory\\# of Gen 0 Collections**、 **.NET CLR Memory\\# of Gen 1 Collections** 和 **.NET CLR Memory\\# of Gen 2 Collections** 列中报告的垃圾回收率，确定托管内存分配模式是否会影响垃圾回收率。
 
  在 .NET Framework 应用程序中，公共语言运行时会限制托管堆的总大小，使其略低于进程地址空间专用区域部分总大小的一半。 对于在 32 位计算机上运行的 32 位进程，进程地址空间专用部分的上限为 2 GB。 托管堆总大小开始接近其默认限制时，管理内存的开销可能会增加，应用程序的性能会降低。
 
@@ -54,7 +54,7 @@ ms.locfileid: "62989752"
 
 - 优化应用程序对托管内存资源的使用情况
 
-   或
+   -或-
 
 - 采取措施以解除对 32 位进程虚拟内存最大大小的体系结构约束
 
@@ -64,7 +64,7 @@ ms.locfileid: "62989752"
 
   使用[分配视图](../profiling/dotnet-memory-allocations-view.md)确定这些分配的执行路径。
 
-  有关如何提高垃圾回收性能的详细信息，请参阅 MSDN 站点上的 .NET Framework 技术文章：[Garbage Collector Basics and Performance Hints](http://go.microsoft.com/fwlink/?LinkId=177946)（垃圾回收器基础知识和性能提示）。
+  有关如何提高垃圾回收性能的详细信息，请参阅 MSDN 站点上的 .NET Framework 技术文章：[Garbage Collector Basics and Performance Hints](/previous-versions/dotnet/articles/ms973837(v=msdn.10))（垃圾回收器基础知识和性能提示）。
 
   若要解除对进程地址空间的专用部分大小的虚拟内存体系结构约束，请尝试在 64 位计算机上运行此 32 位进程。  64 位计算机上的 32 位进程最多可获得 4 GB 的专用虚拟内存。
 

@@ -11,12 +11,12 @@ dev_langs:
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 690ffff0aa31b90cea58997c982406a900299550
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 3b01d088618c07f1a3ff24aff2386584ebfad060
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826166"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72983683"
 ---
 # <a name="welcome-to-the-visual-studio-ide--python"></a>欢迎使用 Visual Studio IDE | Python
 
@@ -94,7 +94,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
     自 Visual Studio 2019 起，可以打开包含 Python 代码的文件夹，以使用 IntelliSense 和调试等功能，而无需为代码创建 Visual Studio 项目。
 ::: moniker-end
 
-- [使用 Visual Studio 进行协作](https://docs.microsoft.com/visualstudio/liveshare/use/vs)
+- [使用 Visual Studio 进行协作](/visualstudio/liveshare/use/vs)
   
     使用 Visual Studio Live Share，无论使用什么编程语言或要生成哪种类型的应用，均可以与他人实时协作进行编辑和调试。 
 

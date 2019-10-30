@@ -6,12 +6,12 @@ ms.author: sayedha
 ms.date: 04/02/2019
 ms.technology: vs-ide-install
 ms.assetid: 25CD47A4-5B32-4734-8EF3-E24A02AABF29
-ms.openlocfilehash: ef59a45bd3dd5b3ab2f3e5219d6674c8e7b095e2
-ms.sourcegitcommit: cf8c0fef2b9690595e99ce3802586cdd55fd37c2
+ms.openlocfilehash: 493e03ecd2a10d7cd9e81467d5886f863cd7229b
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108079"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888600"
 ---
 # <a name="introduction-to-azure-functions"></a>Azure Functions 简介
 
@@ -158,4 +158,4 @@ Visual Studio for Mac 使用包含的默认函数创建 .NET Standard 项目。 
 
 - **图像大小调整工具** - 此函数在每次向容器添加 blob 时都会创建已调整大小的图像。 该模板针对触发器、小图像输出和中等图像输出使用路径和连接字符串。
 
-- **SAS 令牌** - 此函数为给定 Azure 存储容器和 blob 名称生成 SAS 令牌。 除了函数名称，此模板还采用路径和连接属性。 路径属性是触发器将监视的存储帐户中的路径。 连接帐户是包含存储帐户连接字符串的应用设置的名称。 还需设置“访问权限”  。 授权级别控制函数是否需要 API 密钥以及要使用的密钥；函数使用功能键；管理员使用主密钥。 有关详细信息，请参阅[用于生成 SAS 令牌 的 C# Azure Function](https://azure.microsoft.com/resources/samples/functions-dotnet-sas-token/) 示例。
+- **SAS 令牌** - 此函数为给定 Azure 存储容器和 blob 名称生成 SAS 令牌。 除了函数名称，此模板还采用路径和连接属性。 路径属性是触发器将监视的存储帐户中的路径。 连接帐户是包含存储帐户连接字符串的应用设置的名称。 还需设置“访问权限”  。 授权级别控制函数是否需要 API 密钥以及要使用的密钥；函数使用功能键；管理员使用主密钥。 有关详细信息，请参阅[用于生成 SAS 令牌 的 C# Azure Function](https://github.com/Azure-Samples/functions-dotnet-sas-token/) 示例。

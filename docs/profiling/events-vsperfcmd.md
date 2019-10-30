@@ -8,17 +8,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 62d4e2431ab2dbc2ca74944ac1717fe6c3169287
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 4dad42d9bd4919e90f3ef3bd84ee156cd510e311
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440099"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72910235"
 ---
 # <a name="events-vsperfcmd"></a>Events (VSPerfCmd)
-VSPerfCmd.exe“Events”选项控制 Windows 事件跟踪 (ETW) 日志记录。 会将 ETW 数据保存到独立于探查器数据文件的 .etl 文件中。 可以使用 [VSPerfReport](../profiling/vsperfreport.md) /summary:etw 命令在报告中查看这些数据。
+VSPerfCmd.exe“Events”选项控制 Windows 事件跟踪 (ETW) 日志记录   。 会将 ETW 数据保存到独立于探查器数据文件的 .etl 文件中。 可以使用 [VSPerfReport](../profiling/vsperfreport.md) /summary:etw 命令在报告中查看这些数据。
 
- 在调用 VSPerfCmd Shutdown 命令停止分析之前，可以随时调用“Events”选项。
+ 在调用 VSPerfCmd Shutdown  命令停止分析之前，可以随时调用“Events”  选项。
 
 ## <a name="syntax"></a>语法
 
@@ -37,7 +37,7 @@ VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]
 
  `Level` 指定收集的数据量。 `Level` 由事件提供程序定义。
 
- “Events”选项将以下内核关键字识别为提供程序名称：
+  “Events”选项将以下内核关键字识别为提供程序名称：
 
  **Process** 进程事件
 
@@ -69,7 +69,7 @@ C:\<path>VSPerfCmd -events on, \".NET Common Language Runtime\", 0x7fffffff, 5
 ```
 
 > [!IMPORTANT]
-> 如果不排除启动事件，则由于这些事件未在托管对象格式 (MOF) 文件中列出，它们将在报告中显示为 GUID。 有关详细信息，请参阅 Microsoft 网站上的此页面：[托管对象格式 (MOF) 文件示例](http://go.microsoft.com/fwlink/?linkid=37118)。
+> 如果不排除启动事件，则由于这些事件未在托管对象格式 (MOF) 文件中列出，它们将在报告中显示为 GUID。 有关详细信息，请参阅 Microsoft 网站上的此页面：[托管对象格式 (MOF) 文件示例](https://msdn.microsoft.com/library/default.aspx)。
 
 ## <a name="see-also"></a>请参阅
 - [VSPerfCmd](../profiling/vsperfcmd.md)

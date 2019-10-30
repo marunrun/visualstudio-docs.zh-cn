@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: jillre
-ms.openlocfilehash: b68793e512cdb367375cc9f27d61ae5a85e4f078
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e57feede5963b9efc04f98f4c7ba3adfb1eb49b1
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653271"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984647"
 ---
 # <a name="testing-tools-in-visual-studio"></a>Visual Studio 中的测试工具
 
@@ -68,7 +68,7 @@ IntelliTest 会自动为托管代码生成单元测试和测试数据。 Intelli
 代码覆盖率是使用测试资源管理器运行测试方法时的一个选项。 结果表将显示在各个程序集、类和方法中运行的代码的百分比。 此外，源代码编辑器会显示已测试的代码。
 
 * [使用代码覆盖率确定正在测试的代码量](using-code-coverage-to-determine-how-much-code-is-being-tested.md)
-* [使用 Visual Studio（实验室）进行单元测试、代码覆盖率分析和代码克隆分析](http://download.microsoft.com/download/6/2/B/62B60ECE-B9DC-4E8A-A97C-EA261BFB935E/Docs/Unit%20Testing,%20Code%20Coverage%20and%20Code%20Clone%20Analysis%20with%20Visual%20Studio%202015.docx)
+* [使用 Visual Studio（实验室）进行单元测试、代码覆盖率分析和代码克隆分析](https://www.boost.org/doc/libs/1_71_0/libs/test/doc/html/index.html)
 * [自定义代码覆盖率分析](customizing-code-coverage-analysis.md)
 
 ## <a name="microsoft-fakes"></a>Microsoft Fakes
@@ -86,7 +86,7 @@ IntelliTest 会自动为托管代码生成单元测试和测试数据。 Intelli
 * [使用 UI 自动化来测试代码](use-ui-automation-to-test-your-code.md)
 * [创建、编辑和维护编码的 UI 测试入门](walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
 * [使用编码的 UI 测试来测试 UWP 应用](test-uwp-app-with-coded-ui-test.md)
-* [使用 Visual Studio Enterprise（实验室）进行编码的 UI 测试简介](http://download.microsoft.com/download/6/2/B/62B60ECE-B9DC-4E8A-A97C-EA261BFB935E/Docs/Introduction%20to%20Coded%20UI%20Tests%20with%20Visual%20Studio%20Enterprise%202015.docx)
+* [使用 Visual Studio Enterprise（实验室）进行编码的 UI 测试简介](https://www.boost.org/doc/libs/1_71_0/libs/test/doc/html/index.html)
 
 ## <a name="load-testing"></a>负载测试
 

@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e2453b73d7dae0a6a53130156cdb1ce35d38d43
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4f2f349c4ca2172ac2be6c22f3fe999ca0a3cff0
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935983"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72910209"
 ---
 # <a name="da0503-average-working-set-in-bytes-for-the-process-being-profiled"></a>DA0503：所分析进程的平均工作集（字节）
 
@@ -40,7 +40,7 @@ ms.locfileid: "62935983"
 
  进程工作集的大小反映进程当前使用的虚拟内存量。 它还受可用于运行应用程序的物理内存量（或 RAM）和其他运行的进程对该物理内存的争用量的影响。 如果物理内存受到约束，则进程工作集往往存在较大差别，因为操作系统将尝试从进程工作集通过定期修整活动程度相当低的进程，以平衡整个活动进程中的内存使用情况。
 
- 有关进程工作集的详细信息，请参阅 MSDN 上 Windows 内存管理文档中的 [Working Set](http://go.microsoft.com/fwlink/?LinkId=177830)（工作集）。
+ 有关进程工作集的详细信息，请参阅 MSDN 上 Windows 内存管理文档中的 [Working Set](/windows/win32/memory/working-set)（工作集）。
 
 ## <a name="how-to-use-rule-data"></a>如何使用规则数据
  若要了解不同分析方案中应用程序的性能，可使用规则值比较不同版本程序的性能。

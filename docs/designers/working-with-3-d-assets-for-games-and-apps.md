@@ -10,12 +10,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 55986a703bd53318f8c0f74b8cf661412a82b716
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4269a6f17c83e7fe6f111c4e564ace0e40cfa7e6
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72634000"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888476"
 ---
 # <a name="work-with-3d-assets-for-games-and-apps"></a>处理游戏和应用的 3D 资产
 
@@ -46,11 +46,11 @@ DirectX 应用通常将编程逻辑、DirectX API、高级别着色语言 (HLSL)
 可以使用 Visual Studio 着色器设计器，它是一个基于图形的着色器设计工具，用户可以在不懂 HLSL 编程的情况下创建自定义可视化效果。
 
 > [!NOTE]
-> 有关如何开始 DirectX 编程的详细信息，请参阅 [DirectX](http://go.microsoft.com/fwlink/p/?LinkId=224633)。 有关如何调试基于 DirectX 的应用的详细信息，请参阅[图形诊断（调试 DirectX 图形）](../debugger/graphics/visual-studio-graphics-diagnostics.md)。
+> 有关如何开始 DirectX 编程的详细信息，请参阅 [DirectX](/windows/win32/directx)。 有关如何调试基于 DirectX 的应用的详细信息，请参阅[图形诊断（调试 DirectX 图形）](../debugger/graphics/visual-studio-graphics-diagnostics.md)。
 
 ## <a name="directx-version-compatibility"></a>DirectX 版本兼容性
 
-Visual Studio 使用 DirectX 呈现二维和三维资产。 可以选择 DirectX 11 呈现器或 Windows 高级光栅化平台 (WARP) 软件呈现器。 DirectX 11 呈现器在 DirectX 11 和 DirectX 10 GPU 上提供高性能、硬件加速呈现。 WARP 呈现器有助于确保资产适用于一系列计算机，其中包括没有新式图形硬件的计算机和具有集成图形硬件的计算机。 有关 WARP 的详细信息，请参阅 [Windows 高级光栅化平台 (WARP) 指南](http://go.microsoft.com/fwlink/p/?LinkId=224634)。
+Visual Studio 使用 DirectX 呈现二维和三维资产。 可以选择 DirectX 11 呈现器或 Windows 高级光栅化平台 (WARP) 软件呈现器。 DirectX 11 呈现器在 DirectX 11 和 DirectX 10 GPU 上提供高性能、硬件加速呈现。 WARP 呈现器有助于确保资产适用于一系列计算机，其中包括没有新式图形硬件的计算机和具有集成图形硬件的计算机。 有关 WARP 的详细信息，请参阅 [Windows 高级光栅化平台 (WARP) 指南](/windows/win32/direct3darticles/directx-warp)。
 
 ## <a name="related-topics"></a>相关主题
 

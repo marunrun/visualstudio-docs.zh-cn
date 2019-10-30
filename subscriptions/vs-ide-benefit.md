@@ -6,12 +6,12 @@ manager: lank
 ms.date: 08/01/2019
 ms.topic: conceptual
 description: 了解如何下载并安装包含在 Visual Studio 订阅中的 Visual Studio IDE。
-ms.openlocfilehash: 62992b2c9dc21063d78c135894368c93f07f76a8
-ms.sourcegitcommit: a124076dfd6b4e5aecda4d01984fee7b0c034745
+ms.openlocfilehash: 5a5acda814739f907aaa36e9b3408527b5ece732
+ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787859"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816518"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>Visual Studio 2019 权益
 
@@ -66,7 +66,7 @@ ms.locfileid: "68787859"
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 可用                                             |  是         |
 | MSDN 平台（标准）                                          | VL、零售                                              | 不可用                                              |  不可用          |
 
-<sup>1</sup>  *包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 合作伙伴网络 (MPN)、FTE、MCT 软件和服务开发人员、BizSpark、Imagine、最有价值专家 (MVP)、区域总监 (RD)。不包括：MCT 软件和服务  。
+<sup>1</sup>  *包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 合作伙伴网络 (MPN)、FTE、MCT 软件和服务开发人员、BizSpark、Imagine、最有价值专家 (MVP)、区域总监 (RD)。不包括：MCT 软件和服务*。
 
 > [!NOTE]
 > Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 我们鼓励新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) 以浏览购买 Visual Studio 的不同选项。
@@ -82,5 +82,5 @@ ms.locfileid: "68787859"
 ## <a name="next-steps"></a>后续步骤
 安装 Visual Studio 后，请不要忘记激活以下其他重要权益：
 - [Azure DevOps](vs-azure-devops.md)
-- [Azure 信用额度](vs-azure.md)
+- [Azure 开发测试个人额度](vs-azure.md)
 - [Windows 开发人员帐户](vs-windows-dev.md)

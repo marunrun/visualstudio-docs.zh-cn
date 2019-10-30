@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cd3ae6b45d910723f04cf8b828cbce62f8fdc1a7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0a94ddcc7c6c3ee176b6c873a40af834d0f264ef
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62935901"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911923"
 ---
 # <a name="da0506-maximum-private-bytes-allocated-for-the-process-being-profiled"></a>DA0506：为所分析进程分配的最大专用字节数
 
@@ -34,15 +34,15 @@ ms.locfileid: "62935901"
 ## <a name="rule-description"></a>规则说明
  此消息用于报告进程当前已分配的虚拟内存的最大字节数（专用字节）。 专用字节表示由进程分配的虚拟内存位置，只能通过进程内部运行的线程访问此进程。
 
- 对于在 32 位计算机上运行的 32 位进程，进程地址空间专用部分的上限为 2 GB。 使用 [/3GB](http://go.microsoft.com/fwlink/?LinkId=177831) Boot.ini 开关，32 位进程最多可以获得 3 GB 的虚拟内存。 在 64 位计算机上运行的 32 位进程最多可以获得 4 GB 的专用虚拟内存。
+ 对于在 32 位计算机上运行的 32 位进程，进程地址空间专用部分的上限为 2 GB。 使用 [/3GB](https://support.microsoft.com/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) Boot.ini 开关，32 位进程最多可以获得 3 GB 的虚拟内存。 在 64 位计算机上运行的 32 位进程最多可以获得 4 GB 的专用虚拟内存。
 
  在 64 位计算机上运行的 64 位进程最多可以获得 8 TB 的专用虚拟内存。
 
  报告的值是所分析的进程在其中处于活动状态的所有测量间隔的最大值。
 
- 有关进程地址空间的详细信息，请参阅 Windows 内存管理文档中的 [Virtual Address Space](http://go.microsoft.com/fwlink/?LinkId=177832)（虚拟地址空间）。
+ 有关进程地址空间的详细信息，请参阅 Windows 内存管理文档中的 [Virtual Address Space](/windows/win32/memory/virtual-address-space)（虚拟地址空间）。
 
 ## <a name="how-to-use-rule-data"></a>如何使用规则数据
  若要了解不同分析方案中应用程序的性能，可使用报告的值比较不同版本程序的性能。
 
- 如果进程专用字节的最大值即将达到进程地址空间可以增长到的体系结构大小限制，则可能导致内存不足的异常。 有关详细信息，请参阅 MSDN 杂志期刊中的[调查内存问题](http://go.microsoft.com/fwlink/?LinkID=177833)。
+ 如果进程专用字节的最大值即将达到进程地址空间可以增长到的体系结构大小限制，则可能导致内存不足的异常。 有关详细信息，请参阅 MSDN 杂志期刊中的[调查内存问题](https://msdn.microsoft.com/magazine/cc163528.aspx)。

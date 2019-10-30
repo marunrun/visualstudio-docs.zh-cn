@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e5af132efde0c1a49e5404fa602363aab0554e6f
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 07c0a3e24ac089bf29501dfd4e101baef73318fb
+ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72572464"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919138"
 ---
 # <a name="step-9-try-other-features"></a>步骤 9：尝试其他功能
 若要了解详细信息，请尝试更改图标和颜色、添加游戏计时器和声音。 若要使游戏更具挑战性，请尝试将图板变大并调整计时器。
@@ -37,7 +37,7 @@ ms.locfileid: "72572464"
 - 当玩家找到匹配的图标时会添加一种声音，当玩家发现两个不匹配的图标时会添加另一种声音，当程序再次隐藏图标时会添加第三种声音。
 
     > [!TIP]
-    > 若要播放声音，可以使用 <xref:System.Media> 命名空间。 有关详细信息，请参阅[在 Windows 窗体应用中播放声音 (C#)](http://youtu.be/qOh4ooHg1UU) 或[如何在 Visual Basic 中播放音频](http://youtu.be/-4oPDeQrtMs)。
+    > 若要播放声音，可以使用 <xref:System.Media> 命名空间。 有关详细信息，请参阅[在 Windows 窗体应用中播放声音 (C#)](https://www.youtube.com/watch?v=qOh4ooHg1UU&feature=youtu.be) 或[如何在 Visual Basic 中播放音频](https://www.youtube.com/watch?v=-4oPDeQrtMs&feature=youtu.be)。
 
 - 通过将图板变大，增加游戏的难度。
 

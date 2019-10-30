@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d1826981f29ebfc29e7e5d28aa32fbff8c74ea5a
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.openlocfilehash: a709c4b76f23529e0ffee7027bd1b6257ba00d84
+ms.sourcegitcommit: bb5425b9c6d8fd7135d9584c2963831754071347
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69585389"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024711"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>如何在 Visual Studio 中创建和管理 Python 环境
 
@@ -76,7 +76,7 @@ Visual Studio 使用注册表查找已安装的全局环境（遵循 [PEP 514 ](
 
 选择环境不会改变其与任何项目的关系。 Visual Studio 可将列表中以粗体显示的默认环境用于任意新项目。 要在新项目中使用不同的环境，请使用“将此作为新项目的默认环境”命令  。 在项目的上下文中，可以始终选择特定环境。 有关详细信息，请参阅[选择项目环境](selecting-a-python-environment-for-a-project.md)。
 
-列出的每个环境右侧的控件可为此环境打开“交互”窗口  。 （在 Visual Studio 2017 15.5 及更早版本中，可能还会显示另一个控件，用于刷新此环境的 IntelliSense 数据库。 有关数据库的详细信息，请参阅[“环境”窗口选项卡引用](python-environments-window-tab-reference.md#intellisense-tab)。）
+列出的每个环境右侧的控件可为此环境打开“交互”窗口  。 （在 Visual Studio 2017 15.5 及更早版本中，可能还会显示另一个控件，用于刷新此环境的 IntelliSense 数据库。 有关数据库的详细信息，请参阅[“环境”窗口选项卡引用](python-environments-window-tab-reference.md)。）
 
 ::: moniker range="vs-2017"
 > [!Tip]
@@ -124,7 +124,7 @@ Visual Studio 可使用全局、虚拟和 conda 环境。
 
 Visual Studio 为创建项目的虚拟环境提供直接支持。 例如，如果打开包含 requirements.txt 的项目，或者通过包含该文件的模板创建项目，Visual Studio 会提示你自动创建虚拟环境并安装这些依赖项  。
 
-在打开的项目中，可随时创建新的虚拟环境。 在“解决方案资源管理器”中，展开项目节点，右键单击“Python 环境”并选择“添加虚拟环境”   。 有关详细信息，请参阅[创建虚拟环境](selecting-a-python-environment-for-a-project.md#create-a-virtual-environment)。
+在打开的项目中，可随时创建新的虚拟环境。 在“解决方案资源管理器”中，展开项目节点，右键单击“Python 环境”并选择“添加虚拟环境”   。 有关详细信息，请参阅[创建虚拟环境](selecting-a-python-environment-for-a-project.md#create-a-virtual-environment-1)。
 
 Visual Studio 还提供可从虚拟环境生成 requirements.txt 文件的命令，简化了在其他计算机上重新创建环境的过程  。 有关详细信息，请参阅[使用虚拟环境](selecting-a-python-environment-for-a-project.md#use-virtual-environments)。
 
