@@ -18,12 +18,12 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 4fd3bde36b81dde254f3447d46bd05ffc41c6cde
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 354d984ef8df7bd7c493a04eb0e27b439d82b0d1
+ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925907"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919148"
 ---
 # <a name="whats-new-in-visual-studio-2017"></a>Visual Studio 2017 中的新增功能
 
@@ -196,7 +196,7 @@ Visual Studio 可以移动自身的扩展（以及第三方扩展），从而根
 
 Visual Studio 中的若干改进包括：使用 Visual Studio 分发 C++ 核心准则、通过添加对 C++11 和 C++ 功能的增强支持更新编译器以及添加和更新 C++ 库中的功能等。 我们还改进了 C++ IDE 的性能和安装工作负载等。
 
-我们还修复了编译器和工具中的 250 多个 bug 和已报告问题，其中很多是客户通过 [C++ 开发人员社区](https://developercommunity.visualstudio.com/spaces/62/index.html "Developer Community for C++") 提交的。
+我们还修复了编译器和工具中的超过 250 个 bug 和已报告问题，其中很多是客户通过 [C++ 开发人员社区](https://developercommunity.visualstudio.com/spaces/62/index.html "C++ 开发人员社区")提交的。
 
 有关完整的详细信息，请参阅 [Visual 2017 中 Visual C++ 的新增功能](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)页。
 
@@ -222,7 +222,7 @@ Visual Studio 中的若干改进包括：使用 Visual Studio 分发 C++ 核心�
 
 可以通过使用“调试”工具栏中的“后退”和前进”按钮浏览和查看快照    。 这些按钮用于浏览“诊断工具”窗口中“事件”选项卡上显示的事件。   后退或前进到某个事件会自动激活所选事件的历史调试。
 
-![Visual Studio 中新的“异常帮助程序”对话框](../debugger/media/intellitrace-step-back-icons-description.png  "“后退”和“前进”按钮")
+![Visual Studio 中“新异常帮助程序”对话框](../debugger/media/intellitrace-step-back-icons-description.png  "“后退”和“前进”按钮")
 
 有关详细信息，请参阅[使用 IntelliTrace 后退查看快照](../debugger/view-historical-application-state.md)页。
 
@@ -243,7 +243,7 @@ Visual Studio 中的若干改进包括：使用 Visual Studio 分发 C++ 核心�
 
 作为“Azure 开发”工作负载的一部分，通过使用预编译的 C# 类库，我们加入了有助于开发 Azure 函数的工具。 现在，可以在自己的本地开发计算机上进行生成、运行和调试操作，并将其直接从 Visual Studio 发布至 Azure。
 
-有关详细信息，请参阅[用于 Visual Studio 的 Azure Functions 工具](https://docs.microsoft.com/azure/azure-functions/functions-develop-vs)页。
+有关详细信息，请参阅[用于 Visual Studio 的 Azure Functions 工具](/azure/azure-functions/functions-develop-vs)页。
 
 ### <a name="debug-live-aspnet-apps-using-snappoints-and-logpoints-in-live-azure-applications"></a>在实时 Azure 应用程序中使用 snappoints 和 logpoints 调试实时 ASP.NET 应用
 
@@ -269,7 +269,7 @@ Visual Studio 中的若干改进包括：使用 Visual Studio 分发 C++ 核心�
 **15.5 中的新增功能**：Visual Studio 2017 版本 15.5 提供对 Windows 10 Fall Creators Update SDK (10.0.16299.0) 的最佳支持。 Windows 10 Fall Creators Update 也为 UWP 开发人员推出了许多改进内容。 以下是其中最重大的一些改进： 
 
 * **支持 .NET Standard 2.0**<br/>除了简化的应用部署，Windows 10 Fall Creators Update 还是 Windows 10 第一个提供 .NET Standard 2.0 支持的版本。 实际上，[.NET Standard](https://devblogs.microsoft.com/dotnet/introducing-net-standard/) 是对任何 .NET 平台均可实现的基类库的引用实现。 .NET Standard 的设计目的是让 .NET 开发人员能够尽可能轻松地在其选择使用的任何 .NET 平台上共享代码。
-* **最佳 UWP 和 Win32**<br/>已通过 [Desktop Bridge](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-root) 改善 Windows 10 平台，以便 Windows 10 能为 .NET 开发人员提供更好的使用体验，无论他们当前关注的对象是 UWP、WPF、Windows Forms 还是 Xamarin。 使用 Visual Studio 2017 版本 15.5 中新的应用打包项目类型，可为 WPF 或 Windows 窗体项目创建 Windows 应用包，正如为 UWP 项目创建那样。 打包应用程序后，便获得所有 Windows 10 应用部署权益，并可选择通过 Microsoft Store（消费者应用）或商业版和教育版 Microsoft Store 进行分发。 由于打包的应用可在桌面上访问完整的 UWP API 界面和 Win32 API，因此现在可以使用 UWP API 和 Windows 10 功能逐渐实现 WPF 和 Windows 窗体应用程序的现代化。 此外，可将 Win32 组件包括在 UWP 应用程序中，凭借各种 Win32 功能，它们将在桌面上大放光彩。
+* **最佳 UWP 和 Win32**<br/>已通过 [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root) 改善 Windows 10 平台，以便 Windows 10 能为 .NET 开发人员提供更好的使用体验，无论他们当前关注的对象是 UWP、WPF、Windows Forms 还是 Xamarin。 使用 Visual Studio 2017 版本 15.5 中新的应用打包项目类型，可为 WPF 或 Windows 窗体项目创建 Windows 应用包，正如为 UWP 项目创建那样。 打包应用程序后，便获得所有 Windows 10 应用部署权益，并可选择通过 Microsoft Store（消费者应用）或商业版和教育版 Microsoft Store 进行分发。 由于打包的应用可在桌面上访问完整的 UWP API 界面和 Win32 API，因此现在可以使用 UWP API 和 Windows 10 功能逐渐实现 WPF 和 Windows 窗体应用程序的现代化。 此外，可将 Win32 组件包括在 UWP 应用程序中，凭借各种 Win32 功能，它们将在桌面上大放光彩。
 
 有关 UWP 的详细信息，请参阅[开发用于通用 Windows 平台 (UWP) 的应用](../cross-platform/develop-apps-for-the-universal-windows-platform-uwp.md)页。
 
@@ -323,12 +323,12 @@ Visual Studio 中的若干改进包括：使用 Visual Studio 分发 C++ 核心�
 
 Visual Studio 2017 Enterprise 随附：
 
-* [Redgate ReadyRoll Core](http://www.red-gate.com/products/sql-development/readyroll/entrypage/microsoft-and-readyroll?utm_source=microsoft&utm_medium=link&utm_campaign=readyroll&utm_term=docs-newinvs) 有助于开发迁移脚本、使用源代码管理功能来管理数据库更改，并安全地自动部署 SQL Server 数据库更改和应用更改。
-* [Redgate SQL Prompt Core](http://www.red-gate.com/products/sql-development/sql-prompt/entrypage/microsoft-and-sql-prompt?utm_source=microsoft&utm_medium=link&utm_campaign=sqlprompt&utm_term=docs-newinvs) 提供智能代码填写帮助，有助于更快更准确地编写 SQL。 SQL Prompt 可自动完成数据库、系统对象和关键字，并在你键入时提供列建议。 这样一来，代码不仅更简洁，而且错误也更少，因为无需记住每个列名称或别名。
+* [Redgate ReadyRoll Core](https://www.red-gate.com/products/sql-development/sql-change-automation/?utm_source=microsoft&utm_medium=link&utm_campaign=readyroll&utm_term=docs-newinvs) 有助于开发迁移脚本、使用源代码管理功能来管理数据库更改，并安全地自动部署 SQL Server 数据库更改和应用更改。
+* [Redgate SQL Prompt Core](https://www.red-gate.com/products/sql-development/sql-prompt/?utm_source=microsoft&utm_medium=link&utm_campaign=sqlprompt&utm_term=docs-newinvs) 提供智能代码填写帮助，有助于更快更准确地编写 SQL。 SQL Prompt 可自动完成数据库、系统对象和关键字，并在你键入时提供列建议。 这样一来，代码不仅更简洁，而且错误也更少，因为无需记住每个列名称或别名。
 
 Visual Studio 2017 所有版本随附：
 
-* [Redgate SQL Search](http://www.red-gate.com/products/sql-development/sql-search/?utm_source=microsoft&utm_medium=link&utm_campaign=sqlsearch&utm_term=docs-newinvs) 有助于跨多个数据库快速查找 SQL 片段和对象，从而提高工作效率。
+* [Redgate SQL Search](https://www.red-gate.com/products/sql-development/sql-search/?utm_source=microsoft&utm_medium=link&utm_campaign=sqlsearch&utm_term=docs-newinvs) 有助于跨多个数据库快速查找 SQL 片段和对象，从而提高工作效率。
 
 若要了解详细信息，请参阅 [Visual Studio 2017 中的 Redgate Data Tools](https://devblogs.microsoft.com/visualstudio/redgate-data-tools-in-visual-studio-2017/) 博客文章。
 
