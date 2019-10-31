@@ -5,16 +5,16 @@ ms.author: lank
 manager: lank
 ms.date: 07/29/2019
 ms.topic: conceptual
-description: 了解如何激活 Visual Studio 订阅中包含的 Azure 权益。
-ms.openlocfilehash: 923573b1079ddbfaa77837e57df1baa618db6e21
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+description: 了解如何激活 Visual Studio 订阅中包含的 Azure 开发测试个人额度权益。
+ms.openlocfilehash: 7bd6313a0e6d52f9e461383fb04c9039f3b974ac
+ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68681680"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816446"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>在 Visual Studio 订阅中使用 Microsoft Azure
-Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  由于[每月 Azure 信用额度](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)，Azure 就是可供开发/测试使用的个人沙盒。  你可以预配虚拟机、云服务和其他 Azure 资源。  信用额度因订阅级别而异。
+Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过[每月 Azure 开发测试个人额度](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)，可将 Azure 用作开发/测试的个人沙盒。  你可以预配虚拟机、云服务和其他 Azure 资源。  信用额度因订阅级别而异。
 
 ## <a name="activation-steps"></a>激活步骤
 1. 登录到 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)。
@@ -78,9 +78,9 @@ Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  由于
 
 **建议操作：**
 
-要继续使用 Visual Studio Azure 额度和折扣，请执行以下步骤之一：
+要继续使用 Visual Studio Azure 开发测试个人额度和折扣，请执行以下步骤之一：
 
-如果团队和组织中的某人代表你购买了订阅，请联系组织的 Visual Studio 管理员并请求一个 Visual Studio 订阅以获取所需的 Azure 月额度。   请求管理员将新订阅分配到以前订阅分配到的同一个用户 ID，以免担心传输 Azure 订阅的问题。
+如果团队和组织中的某人代表你购买了订阅，请联系组织的 Visual Studio 管理员并请求一个 Visual Studio 订阅以获取所需的 Azure 开发测试个人额度。   请求管理员将新订阅分配到以前订阅分配到的同一个用户 ID，以免担心传输 Azure 订阅的问题。
 
 如果直接购买了订阅，请执行以下任一操作：
 1. 通过 Visual Studio Marketplace 购买年度 Visual Studio [Enterprise](https://marketplace.visualstudio.com/items?itemName=ms.vs-enterprise-annual) 或 [Professional](https://marketplace.visualstudio.com/items?itemName=ms.vs-professional-annual) 云订阅。

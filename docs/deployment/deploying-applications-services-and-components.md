@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 02e8beae03dc2828d81b80813325300fe31b3cea
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.openlocfilehash: 006ecdffd7b109c32f7063fee5f454e43c6c4597
+ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71128161"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72806924"
 ---
 # <a name="first-look-at-deployment-in-visual-studio"></a>先查看 Visual Studio 中的部署
 
@@ -50,7 +50,7 @@ ms.locfileid: "71128161"
 
 - **ASP.NET**、**ASP.NET Core**、**Python** 和 **Node.js**：使用以下任一方法发布到 Azure 应用服务或 Azure 应用服务 Linux（使用容器）。
 
-  - 对于应用的连续（或自动）部署，请将 Azure DevOps 与 [Azure 管道](https://docs.microsoft.com/azure/devops/pipelines/get-started-yaml?view=azdevops)结合使用。
+  - 对于应用的连续（或自动）部署，请将 Azure DevOps 与 [Azure 管道](/azure/devops/pipelines/get-started-yaml?view=azdevops)结合使用。
 
   - 对于应用的一次性（或手动）部署，请使用 Visual Studio 中的“发布”工具  。
 
@@ -58,7 +58,7 @@ ms.locfileid: "71128161"
 
   要使用“发布”工具，请右键单击“解决方案资源管理器”中的项目，然后选择“发布”   。 （如果之前已配置任何发布配置文件，必须单击“新建配置文件”  。）在发布对话框中，选择“应用服务”或“Azure虚拟机”，然后按照配置步骤操作   。
 
-  ![选择 Azure 应用服务](../deployment/media/quickstart-publish-azure.png "Choose Azure App Service")
+  ![选择 Azure 应用服务](../deployment/media/quickstart-publish-azure.png "选择 Azure 应用服务")
 
   自 Visual Studio 2017 版本 15.7 开始，可将 ASP.NET Core 应用部署到适用于 Linux 的应用服务  。
 
@@ -81,7 +81,7 @@ ms.locfileid: "71128161"
 
     有关在 Visual Studio 中导入发布配置文件的信息，请参阅[导入发布设置并部署到 IIS](../deployment/tutorial-import-publish-settings-iis.md)。
 
-    也可以采用多种不同的方式部署 ASP.NET 应用程序和服务。 有关详细信息，请参阅[部署 ASP.NET Web 应用程序和服务](http://www.asp.net/aspnet/overview/deployment)。
+    也可以采用多种不同的方式部署 ASP.NET 应用程序和服务。 有关详细信息，请参阅[部署 ASP.NET Web 应用程序和服务](/aspnet/mvc/overview/deployment/)。
 
 - **Windows 桌面** 可以使用 ClickOnce 部署将 Windows 桌面应用程序发布到 Web 服务器或网络文件共享。 用户随后只需一次单击即可安装应用程序。 有关详细信息，请参阅[使用 ClickOnce 部署桌面应用](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)（C# 和 Visual Basic）。 对于 C++/CLI，请参阅[使用 ClickOnce 部署本机应用](/cpp/windows/clickonce-deployment-for-visual-cpp-applications)；对于 C/C++，请参阅[使用安装项目部署本机应用](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project)。
 
@@ -118,7 +118,7 @@ ms.locfileid: "71128161"
    对于 Visual Studio 2019，请参阅 [WiX Toolset Visual Studio 2019 Extension](https://marketplace.visualstudio.com/items?itemName=WixToolset.WixToolsetVisualStudio2019Extension)（WiX 工具集 Visual Studio 2019 扩展）。
    ::: moniker-end
 
-- 可以使用 Flexera Software 中的 [InstallShield](https://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer/tab/requirements) 创建 MSI 或 EXE 安装程序包。 InstallShield 可与 Visual Studio 2017 及更高版本（不支持 Community Edition）一起使用。 请注意，InstallShield Limited Edition 不再包含在 Visual Studio 中，且不受 Visual Studio 2017 及更高版本支持；请查看 [Flexera Software](http://learn.flexerasoftware.com/content/IS-EVAL-InstallShield-Limited-Edition-Visual-Studio)，了解其未来的可用性。
+- 可以使用 Flexera Software 中的 [InstallShield](https://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer/tab/requirements) 创建 MSI 或 EXE 安装程序包。 InstallShield 可与 Visual Studio 2017 及更高版本（不支持 Community Edition）一起使用。 请注意，InstallShield Limited Edition 不再包含在 Visual Studio 中，且不受 Visual Studio 2017 及更高版本支持；请查看 [Flexera Software](https://info.flexerasoftware.com/IS-EVAL-InstallShield-Limited-Edition-Visual-Studio)，了解其未来的可用性。
 
 - 可以使用安装项目 (vdproj) 创建 MSI 或 EXE 安装程序包。 若要使用此选项，请安装 [Visual Studio 安装程序项目扩展](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.MicrosoftVisualStudio2017InstallerProjects#overview)。
 

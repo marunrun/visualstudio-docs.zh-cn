@@ -8,12 +8,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f921ce292e34147d54af977567373634610becfd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8b7794b4dd300cf66ea894227f9346e80ee68085
+ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72637294"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72924498"
 ---
 # <a name="get-started-with-wpf"></a>WPF 入门
 
@@ -27,12 +27,13 @@ Windows Presentation Foundation (WPF) 是一个可创建桌面客户端应用程
 |-|-|
 |我希望直接开始使用...|[演练：我的第一个 WPF 桌面应用程序](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application)|
 |我想比较 XAML 设计工具...|[在 Visual Studio 和 Blend for Visual Studio 中设计 XAML](../designers/designing-xaml-in-visual-studio.md)|
-|是否是初次使用 .NET？|[.NET 概述](/dotnet/framework/get-started/overview)<br /><br /> [应用程序要点](/dotnet/standard/application-essentials)<br /><br /> [Visual C# 和 Visual Basic 入门](../ide/quickstart-visual-basic-console.md)|
-|有关 WPF 的详细信息...|[WPF 概述](../designers/introduction-to-wpf.md)<br /><br /> [XAML 概述 (WPF)](/dotnet/framework/wpf/advanced/xaml-overview-wpf)<br /><br /> [控件](/dotnet/framework/wpf/controls/)<br /><br /> [数据绑定概述](/dotnet/framework/wpf/data/data-binding-overview)<br /><br /> [使用 LINQ to XML 进行 WPF 数据绑定](../designers/wpf-data-binding-with-linq-to-xml-overview.md)|
-|是否是 Windows 窗体开发人员？|[Windows 窗体控件和等效的 WPF 控件](/dotnet/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls)<br /><br /> [WPF 和 Windows 窗体互操作中受支持的方案](/dotnet/framework/wpf/advanced/wpf-and-windows-forms-interoperation)|
+|是否是初次使用 .NET？|[.NET 指南](/dotnet/standard/)<br /><br />[应用程序要点](/dotnet/standard/application-essentials)<br /><br />[Visual C# 入门](../ide/quickstart-csharp-console.md)|
+|有关 WPF 的详细信息...|[WPF 概述](/dotnet/framework/wpf/introduction-to-wpf)<br /><br />[XAML 概述 (WPF)](/dotnet/framework/wpf/advanced/xaml-overview-wpf)<br /><br />[控件](/dotnet/framework/wpf/controls/)<br /><br />[数据绑定概述](/dotnet/desktop-wpf/data/data-binding-overview)<br /><br />[使用 LINQ to XML 进行 WPF 数据绑定](/dotnet/framework/wpf/data/wpf-data-binding-with-linq-to-xml-overview)|
+|是否是 Windows 窗体开发人员？|[Windows 窗体控件和等效的 WPF 控件](/dotnet/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls)<br /><br />[WPF 和 Windows 窗体互操作中受支持的方案](/dotnet/framework/wpf/advanced/wpf-and-windows-forms-interoperation)|
 
 ## <a name="see-also"></a>请参阅
 
+- [WPF 桌面指南](/dotnet/desktop-wpf/overview/index)
 - [类库 (WPF)](/dotnet/framework/wpf/class-library-wpf)
 - [WPF 社区资源](/dotnet/framework/wpf/getting-started/community-feedback)
 - [应用开发概述](/dotnet/framework/wpf/app-development/index)

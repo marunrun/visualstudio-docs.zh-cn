@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/29/2019
 ms.topic: conceptual
 description: 了解如何激活 Visual Studio 订阅中包含的技术支持权益。
-ms.openlocfilehash: 6474cf3322b878055053eaaf1f1943ebc546b206
-ms.sourcegitcommit: 02acadb912faced7eaffe27c2c19104bf0428bcd
+ms.openlocfilehash: 6d76fa3bdff63a31598fb9a977f6ed024d214af1
+ms.sourcegitcommit: ab18c9d850192fc9ccec10961f1126e8b0cba8da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70936908"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73061148"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>激活并使用 Visual Studio 订阅中的技术支持权益
 Visual Studio 订阅中的技术支持权益用于解决仍处于[支持生命周期](https://support.microsoft.com/lifecycle/search)的主流支持阶段产品的“非生产环境”中的中断修复问题  。 Visual Studio Enterprise 标准版和年度云订阅接收四个事件，但 Visual Studio Professional 标准版和年度云订阅接收两个事件，从权益激活开始最多一年。 权益激活必须在订阅为最新状态时进行。
@@ -29,7 +29,7 @@ Visual Studio 订阅中的技术支持权益用于解决仍处于[支持生命�
 
 从 Visual Studio 订阅下载的非开发人员产品（例如 SQL、Windows 和 SharePoint）仅可获取主流支持。 这些产品的许可范围仅为在开发环境中设计、开发、测试或演示应用程序。 这些产品不具有用于生产环境的许可。
 
-产品级别说明 -  如果支持计划不可用于指定产品的支持 (Code:8)，请展开“不可用的支持计划”。 你的支持合同不适用于你所选的产品版本。
+产品级别说明：展开“不可用支持计划”  。 如果看到“支持计划不能用于对指定产品的支持(代码:  8)”，则表示你的支持合同不适用于你所选的产品版本。
 
 ## <a name="how-to-activate-the-benefit"></a>如何激活权益
 1. 请转到 https://my.visualstudio.com/Benefits ，向下滚动到“支持”部分，在“技术支持”磁贴上单击“聊天激活”  。

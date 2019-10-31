@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 24bbfd276b30444742b329f30c346ac1857c2cc9
-ms.sourcegitcommit: 3cda0d58c5cf1985122b8977b33a171c7359f324
+ms.openlocfilehash: 5f86c3b146bb74a38910b151a80c3c2d439ef023
+ms.sourcegitcommit: ab18c9d850192fc9ccec10961f1126e8b0cba8da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154957"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73061156"
 ---
 # <a name="work-with-python-in-visual-studio-on-windows"></a>在 Windows 上的 Visual Studio 中使用 Python
 
@@ -40,7 +40,7 @@ Python 目前不支持在 Visual Studio for Mac 中使用，但可通过 Visual 
 
 ::: moniker range=">=vs-2019"
 > [!Note]
-> Visual Studio 支持 Python 版本 2.7 以及版本 3.5 和更高版本。 可以使用 Visual Studio 编辑在 Python 其他版本中编写的代码时，这些版本不受官方支持，IntelliSense 和调试等功能可能无法正常工作。
+> Visual Studio 支持 Python 版本 2.7 以及版本 3.5 到 3.7。 可以使用 Visual Studio 编辑在 Python 其他版本中编写的代码时，这些版本不受官方支持，IntelliSense 和调试等功能可能无法正常工作。 对 Python 版本 3.8 的支持仍在开发中，可在 [GitHub 上的这一跟踪问题](https://github.com/microsoft/PTVS/issues/5822)页面查看有关支持的特定详细信息。
 ::: moniker-end
 
 ## <a name="support-for-multiple-interpreters"></a>对多个解释器的支持

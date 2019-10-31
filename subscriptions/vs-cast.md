@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/30/2019
 ms.topic: conceptual
 description: 了解有关所选 Visual Studio 订阅中包含的可用 CAST Highlight 权益
-ms.openlocfilehash: 50d892c5da4d39ebd2b379a2b16b8c9ca69d061d
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: c55891b9aacb81c5169a9082f7e1fd1d922eda92
+ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68681211"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816440"
 ---
 # <a name="the-cast-highlight-benefit-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 CAST Highlight 权益
 迁移到云时，开发者需要对其软件具有深入的了解。 借助 CAST Highlight，Visual Studio Enterprise 订阅者可以快速扫描其应用程序源代码，以确定其应用程序的云就绪状态，以便迁移到 Azure 并在迁移期间和迁移后监控其应用的进度。
@@ -57,7 +57,7 @@ Visual Studio Enterprise 订阅者可获得一个月免费的具有完整功能�
    >
    > *请单击电子邮件中提供的激活链接并完成激活过程。*
    >
-   > *激活后，你将有 30 天的时间访问 CAST Highlight 平台，并且最多可以载入 5 个应用程序。请注意，这是仅适用于 Microsoft Visual Studio Enterprise 客户的独家优惠。*
+   > *激活后，你将有 30 天的时间访问 CAST Highlight 平台，并且最多可以载入 5 个应用程序。请注意，这是仅适用于 Microsoft Visual Studio Enterprise 客户的独家优惠。 
    >
    > 我将与你保持联系，以确保一切顺利。  与此同时，这里有一些内容有助于入门：
    >
@@ -82,7 +82,7 @@ Visual Studio Enterprise 订阅者可获得一个月免费的具有完整功能�
 | Visual Studio Enterprise（标准）  | NFR<sup>1</sup> |不可用  | 不可用 |
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure | 不可用 | 不可用 |
 
-<sup>1</sup>  *包括：不得转售 (NFR)、FTE、最有价值专家 (MVP)、区域总监 (RD)、Microsoft 合作伙伴网络 (MPN)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 认证培训师、BizSpark、Imagine*
+<sup>1</sup>  包括：  不得转售 (NFR)、FTE、最有价值专家 (MVP)、区域总监 (RD)、Microsoft 合作伙伴网络 (MPN)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 认证培训师、BizSpark、Imagine
 
 > [!NOTE]
 > Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 我们鼓励新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) 以浏览购买 Visual Studio 的不同选项。
@@ -98,6 +98,6 @@ Visual Studio Enterprise 订阅者可获得一个月免费的具有完整功能�
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
 
 ## <a name="next-steps"></a>后续步骤
-如果尚未激活订阅附带的 Azure 权益，请访问 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) 并单击“工具”类别中的 Azure 磁贴以设置 Azure 订阅并兑换 Azure 额度。
+如果尚未激活订阅附带的 Azure 权益，请访问 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) 并单击“工具”类别中的 Azure 磁贴以设置 Azure 订阅并兑换 Azure 开发测试个人额度。
 
 不要忘记查看 Greg 电子邮件中提到的演示、用户指南和视频教程。

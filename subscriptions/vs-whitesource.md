@@ -6,12 +6,12 @@ manager: lank
 ms.date: 08/01/2019
 ms.topic: conceptual
 description: 了解如何激活 Visual Studio 订阅中包含的 WhiteSource Bolt 订阅。
-ms.openlocfilehash: 4119e188a265660b805c1ce404cb909f600fb30a
-ms.sourcegitcommit: a124076dfd6b4e5aecda4d01984fee7b0c034745
+ms.openlocfilehash: 54248c0291fe54c2cb7db9155233d08e96991581
+ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787852"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816409"
 ---
 # <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 WhiteSource Bolt
 
@@ -46,4 +46,4 @@ ms.locfileid: "68787852"
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
 
 ## <a name="next-steps"></a>后续步骤
-Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  由于[每月 Azure 信用额度](vs-azure.md)，Azure 就是可供开发/测试使用的个人沙盒。  你可以预配虚拟机、云服务和其他 Azure 资源。  信用额度因订阅级别而异。
+Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过[每月 Azure 开发测试个人额度](vs-azure.md)，可将 Azure 用作开发/测试的个人沙盒。  你可以预配虚拟机、云服务和其他 Azure 资源。  信用额度因订阅级别而异。
