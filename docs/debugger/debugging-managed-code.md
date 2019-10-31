@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f6dd305b55e1ff7dd11b46f023906a8422b5504f
-ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.openlocfilehash: 76b841d94aee93a1bc88f6d01161239828dee166
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72536044"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188411"
 ---
 # <a name="debug-managed-code-c-visual-basic-f-ccli"></a>调试托管代码（C#，Visual Basic， F#， C++/cli）
 
@@ -76,7 +76,7 @@ ms.locfileid: "72536044"
 [调试和分析](/dotnet/framework/debug-trace-profile/index)\
 讨论调试 .NET 应用程序和配置要求。
 
-[调试脚本和 Web 应用程序](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)\
+[调试脚本和 Web 应用程序](how-to-enable-debugging-for-aspnet-applications.md)\
 描述在调试脚本和 Web 应用程序时可能会遇到的常见调试问题和技术。
 
 ## <a name="see-also"></a>请参阅

@@ -1,6 +1,6 @@
 ---
-title: 在调试器中使用跟踪点 |Microsoft Docs
-ms.date: 9/17/2019
+title: 用跟踪点记录信息 |Microsoft Docs
+ms.date: 10/28/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - tracepoints, about tracepoints
@@ -9,16 +9,16 @@ ms.author: sashe
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: 263657213f1720eaca7a0462bb31585adaacf9bb
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: fcc9f01315d3783af1a1f124785cd74fafb215bf
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72516390"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187311"
 ---
-# <a name="use-tracepoints-in-the-visual-studio-debugger"></a>在 Visual Studio 调试器中使用跟踪点
+# <a name="log-info-to-the-output-window-using-tracepoints-in-visual-studio"></a>在 Visual Studio 中使用跟踪点将信息记录到输出窗口
 
-跟踪点允许您在可配置条件下将信息记录到 "输出" 窗口中，而无需修改或停止您的代码。 托管代码和本机代码都支持此功能，同时还支持多种语言（例如 JavaScript 和C#）。
+跟踪点允许您在可配置条件下将信息记录到 "输出" 窗口中，而无需修改或停止您的代码。 托管语言（C#、Visual Basic、 F#）和本机代码以及 JavaScript 和 Python 等语言都支持此功能。
 
 ## <a name="let39s-take-an-example"></a>让&#39;我们举个例子
 
@@ -129,7 +129,7 @@ ms.locfileid: "72516390"
 
 尽管跟踪点旨在使调试更加简洁、更流畅，但在使用时应注意一些注意事项。
 
-有时，当您检查对象的属性或属性时，它的值可能会更改。 这不是由跟踪点功能引起的 bug，但值得一提的是，使用跟踪点来检查对象并不能避免这些意外修改。
+有时，当您检查对象的属性或属性时，它的值可能会更改。 如果值在检查过程中发生更改，则不是由跟踪点功能本身引起的 bug。 但是，使用跟踪点来检查对象并不能避免这些意外修改。
 
 在 "**操作**消息" 框中计算表达式的方式可能不同于当前用于开发的语言。 例如，若要输出字符串，你无需将消息包装在引号中，即使你通常在使用 `Debug.WriteLine()` 或 `console.log()` 时也是如此。 此外，大括号语法（`{ }`）到输出表达式也可能不同于在开发语言中输出值的约定。 （但是，大括号（`{ }`）中的内容仍应使用开发语言的语法来编写）。
 

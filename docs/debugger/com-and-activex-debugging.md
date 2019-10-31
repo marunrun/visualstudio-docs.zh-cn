@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f6dc69a18aa09536e5735431aa451bc2dd3933ee
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 0a818cfde2996b26bd9d5f31b128e41f2a9fe2e1
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745683"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188680"
 ---
 # <a name="com-and-activex-debugging"></a>调试 COM 和 ActiveX
 本节提供有关调试 COM 应用程序和 ActiveX 控件的提示。
@@ -46,4 +46,4 @@ ms.locfileid: "72745683"
 - [调试器安全](../debugger/debugger-security.md)
 - [COM 简介](/cpp/atl/introduction-to-com)
 - [ActiveX 控件](/cpp/mfc/activex-controls)
-- [SDI 服务器应用程序](../debugger/sdi-server-applications.md)
+- [SDI 服务器应用程序](com-server-and-container-debugging.md)

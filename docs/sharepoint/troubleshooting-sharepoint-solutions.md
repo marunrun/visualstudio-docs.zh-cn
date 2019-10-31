@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4e8ccaaf877c04b3d58fc6d54bb658c2cef77b6f
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 046f3bbca7b66d14e9b6a3eae96b613492292be0
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985314"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189197"
 ---
 # <a name="troubleshoot-sharepoint-solutions"></a>SharePoint 解决方案疑难解答
   使用 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 调试器调试 SharePoint 解决方案时，可能会出现以下问题或警报。 有关详细信息，请参阅[调试 SharePoint 2007 工作流解决方案](https://msdn.microsoft.com/3a5392f3-66f3-48be-956e-02de23fa6247)。
@@ -281,4 +281,4 @@ ms.locfileid: "72985314"
 
 - [SharePoint 打包和部署疑难解答](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md)
 - [生成和调试 SharePoint 解决方案](../sharepoint/building-and-debugging-sharepoint-solutions.md)
-- [在 Visual Studio 中进行调试](../debugger/debugging-in-visual-studio.md)
+- [在 Visual Studio 中进行调试](../debugger/debugger-feature-tour.md)

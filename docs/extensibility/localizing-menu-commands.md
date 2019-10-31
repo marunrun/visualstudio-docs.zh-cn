@@ -15,12 +15,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b2b42143c2971bcbb172958b8da42a1e887e4699
-ms.sourcegitcommit: 3e94d9fb6dc56fa8b23fbacd5d11cf8d6e7e18f1
+ms.openlocfilehash: 94f71014440c55da0151d0ebd817aac9f5d2c7ed
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252642"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73186275"
 ---
 # <a name="localize-menu-commands"></a>"本地化" 菜单命令
 
@@ -48,7 +48,7 @@ ms.locfileid: "72252642"
 
       下面的示例演示命令的英语和西班牙语按钮文本，用于打开系列树资源管理器工具窗口。
 
-      [*FamilyTree.en-US.vsct*]
+      [*FamilyTree. .vsct*]
 
    ```xml
    <Button guid="guidLocalizedPackageCmdSet" id="cmdidFamilyTree" priority="0x0100" type="Button">
@@ -61,7 +61,7 @@ ms.locfileid: "72252642"
    </Button>
    ```
 
-    [*FamilyTree.es-ES.vsct*]
+    [*FamilyTree.es*]
 
    ```xml
    <Button guid="guidLocalizedPackageCmdSet" id="cmdidFamilyTree" priority="0x0100" type="Button">
@@ -92,7 +92,7 @@ ms.locfileid: "72252642"
 
 5. 打开每个 *.resx*文件以根据特定语言和区域性修改字符串值。 下面的示例演示工具窗口标题栏的本地化资源定义。
 
-     [*Resources.en-US.resx*]
+     [*资源. en-us*]
 
     ```xml
     <data name="ToolWindowTitle" xml:space="preserve">
@@ -100,7 +100,7 @@ ms.locfileid: "72252642"
     </data>
     ```
 
-     [*Resources.es-ES.resx*]
+     [*Resources.es*]
 
     ```xml
     <data name="ToolWindowTitle" xml:space="preserve">
@@ -126,7 +126,7 @@ ms.locfileid: "72252642"
 
 4. 在编辑器中打开项目文件。
 
-5. 在根 `Project` 元素中，添加一个具有与您的默认语言相匹配的 `UICulture` 元素的 @no__t 元素。
+5. 在根 `Project` 元素中，添加一个具有与您的默认语言相匹配的 `UICulture` 元素的 `PropertyGroup` 元素。
 
     ```xml
     <PropertyGroup>
@@ -136,9 +136,9 @@ ms.locfileid: "72252642"
 
      这会将美国英语设置为 Windows Presentation Foundation （WPF）控件的默认 UI 区域性。
 
-6. 找到包含 @no__t 元素的 @no__t 0 元素。
+6. 找到包含 `EmbeddedResource` 元素的 `ItemGroup` 元素。
 
-7. 在调用*VSPackage*的 @no__t 0 元素中，将 `ManifestResourceName` 元素替换为设置为 `VSPackage.en-US.Resources` 的 @no__t 元素，如下所示：
+7. 在调用*VSPackage*的 `EmbeddedResource` 元素中，将 `ManifestResourceName` 元素替换为设置为 `VSPackage.en-US.Resources`的 `LogicalName` 元素，如下所示：
 
     ```xml
     <EmbeddedResource Include="VSPackage.en-US.resx">
@@ -147,9 +147,9 @@ ms.locfileid: "72252642"
     </EmbeddedResource>
     ```
 
-8. 对于每种本地化语言，请复制 @no__t 的 @no__t 0 元素，并将副本的**Include**属性和**LogicalName**元素设置为目标区域设置。
+8. 对于每种本地化语言，复制 `VsPackage.en-US`的 `EmbeddedResource` 元素，并将副本的**Include**属性和**LogicalName**元素设置为目标区域设置。
 
-9. 对于每个本地化 @no__t 0 元素，添加一个指向 `Menus.ctmenu` 的 @no__t 元素，如下面的示例中所示：
+9. 对于每个本地化 `VSCTCompile` 元素，添加指向 `Menus.ctmenu`的 `ResourceName` 元素，如下面的示例中所示：
 
     ```xml
     <ItemGroup>
@@ -166,6 +166,6 @@ ms.locfileid: "72252642"
      这会为每种语言创建主程序集和资源程序集。 有关本地化部署过程的信息，请参阅[本地化 VSIX 包](../extensibility/localizing-vsix-packages.md)
 
 ## <a name="see-also"></a>请参阅
+
 - [扩展菜单和命令](../extensibility/extending-menus-and-commands.md)
-- [MenuCommands 与OleMenuCommands](../extensibility/menucommands-vs-olemenucommands.md)
 - [全球化和本地化应用程序](../ide/globalizing-and-localizing-applications.md)

@@ -1,5 +1,5 @@
 ---
-title: 记录 Windows |Microsoft Docs
+title: 文档窗口 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,36 +10,36 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 844176b2db6074a33ac2e612c47d3779031836df
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5d29d64090320a8f62491209773145c024564efa
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345477"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73186621"
 ---
 # <a name="document-windows"></a>文档窗口
-在 Visual Studio 中，*文档窗口*是带边框的子窗口的多文档界面 (MDI) 窗口与相关联。 文档窗口通常用于显示和修改源代码或文本，但它们还可以托管其他功能的类型。 文档窗口：
+在 Visual Studio 中，*文档窗口*是一个与多文档界面（MDI）窗口关联的带边框的子窗口。 文档窗口通常用于显示和修改源代码或文本，但它们也可以承载其他功能类型。 文档窗口：
 
-- 可以将组织中的父代 MDI 中单独的水平或垂直选项卡组中，以便可以同时查看多个文件。
+- 可以在父 MDI 的单独的水平或垂直选项卡组中进行组织，以便可以同时查看多个文件。
 
-- 可以按任意顺序在 MDI 父停靠。
+- 可按任何顺序停靠在父 MDI 中。
 
 - 可以自由浮动。
 
-- 链接到其他 MDI 窗口的选项卡顺序。
+- 按 tab 键顺序链接到其他 MDI 窗口。
 
-  用于分组的命令，在文档窗口选项卡的快捷菜单上可以找到停靠和浮动。
+  可在文档窗口选项卡的快捷菜单上找到用于分组、停靠和浮动的命令。
 
-  有关在 Visual Studio 中的窗口行为的详细信息，请参阅[自定义窗口布局](../../ide/customizing-window-layouts-in-visual-studio.md)。
+  有关 Visual Studio 中窗口行为的详细信息，请参阅[自定义窗口布局](../../ide/customizing-window-layouts-in-visual-studio.md)。
 
 ## <a name="document-window-implementation"></a>文档窗口实现
- 通过实现编辑器创建文档窗口。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>接口用于创建实例化一个编辑器的一部分的文档窗口。 有关详细信息，请参阅[旧接口在编辑器中](../../extensibility/legacy-interfaces-in-the-editor.md)。
+ 文档窗口是通过实现编辑器创建的。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> 接口在实例化编辑器时创建文档窗口。 有关详细信息，请参阅[编辑器中的旧接口](/visualstudio/extensibility/legacy-interfaces-in-the-editor?view=vs-2015)。
 
 > [!NOTE]
-> 若要提供向后和向前导航点在窗口中的，实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsBackForwardNavigation>接口。 在文本编辑器使用文本标记来标识文档中的导航点。
+> 若要在窗口中提供向后和向前导航点，请实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBackForwardNavigation> 接口。 文本编辑器使用文本标记来标识文档中的导航点。
 
-## <a name="the-running-document-table"></a>运行文档表
- IDE 使用运行文档表 (RDT) 来跟踪每个文档窗口的状态。 RDT 是哪个文档通过 windows 通知的事件，如解决方案已关闭时或编辑文件的机制。 有关详细信息，请参阅[运行文档表](../../extensibility/internals/running-document-table.md)。
+## <a name="the-running-document-table"></a>正在运行的文档表
+ IDE 使用正在运行的文档表（RDT）来跟踪每个文档窗口的状态。 RDT 是一种机制，通过该机制可以通知文档窗口事件，例如关闭解决方案或编辑文件时。 有关详细信息，请参阅[运行文档表](../../extensibility/internals/running-document-table.md)。
 
 ## <a name="see-also"></a>请参阅
-- [文档加载延迟](../../extensibility/internals/delayed-document-loading.md)
+- [延迟的文档加载](../../extensibility/internals/delayed-document-loading.md)

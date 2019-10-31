@@ -9,12 +9,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 017c28af68efa98507286e8acdc2b4d694353aa1
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 44f66ed25ab43db2d08db3cb93263bd61ac3a907
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747393"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189459"
 ---
 # <a name="understanding-the-dsl-code"></a>了解 DSL 代码
 
@@ -39,7 +39,7 @@ ms.locfileid: "72747393"
 
  建议你检查生成的代码以帮助你了解 DSL。 若要查看生成的文件，请在“解决方案资源管理器”中展开 *.tt 文件。
 
- @No__t_0 文件包含非常少的生成代码。 相反，它们使用 `<#include>` 指令来包括共享的模板文件。 共享文件可在 **\Program Files\Microsoft Visual Studio 10.0 \ COMMON7\IDE\EXTENSIONS\MICROSOFT\DSL SDK\DSL Designer\11.0\TextTemplates**中找到。
+ \*文件包含非常少的生成代码。 相反，它们使用 `<#include>` 指令来包括共享的模板文件。 共享文件可在 **\Program Files\Microsoft Visual Studio 10.0 \ COMMON7\IDE\EXTENSIONS\MICROSOFT\DSL SDK\DSL Designer\11.0\TextTemplates**中找到。
 
  在将你自己的程序代码添加到 DSL 解决方案时，请将它添加在“生成的代码”文件夹之外的单独文件中。 你可能需要创建一个**自定义代码**文件夹。 （在向自定义文件夹添加新代码文件时，请记住在初始代码主干中更正命名空间。）
 
@@ -192,7 +192,7 @@ ms.locfileid: "72747393"
 
  `CommandSet.cs`
 
- 显示在关系图上的右键菜单命令。 可以改写此集或向其添加项。 此文件包含命令的代码。 菜单上的命令的位置由 Commands.vsct 文件确定。 有关详细信息，请参阅[编写用户命令和操作](../modeling/writing-user-commands-and-actions.md)。
+ 显示在关系图上的右键菜单命令。 可以改写此集或向其添加项。 此文件包含命令的代码。 菜单上的命令的位置由 Commands.vsct 文件确定。 有关详细信息，请参阅[编写用户命令和操作](how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)。
 
  `Constants.cs`
 
@@ -282,7 +282,7 @@ namespace Company.EmbedInForm
 
  `GeneratedVSCT.vsct`
 
- 查找菜单上的标准菜单命令，如关系图右键单击（上下文）菜单和 "**编辑**" 菜单等。 命令的代码是 CommandSet.cs。 可以重定位或修改标准命令，并可以添加自己的命令。 有关详细信息，请参阅[编写用户命令和操作](../modeling/writing-user-commands-and-actions.md)。
+ 查找菜单上的标准菜单命令，如关系图右键单击（上下文）菜单和 "**编辑**" 菜单等。 命令的代码是 CommandSet.cs。 可以重定位或修改标准命令，并可以添加自己的命令。 有关详细信息，请参阅[编写用户命令和操作](how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)。
 
  `ModelExplorer.cs`
 

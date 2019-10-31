@@ -14,53 +14,53 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 89274600d05b787182ac447902555f7d703851c2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f7670eacc875bf7c5437d9bb92cc1932753093bd
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66329189"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73186639"
 ---
-# <a name="guids-and-ids-of-visual-studio-commands"></a>Guid 和 Id 的 Visual Studio 命令
-Visual Studio SDK 的一部分安装的.vsct 文件中定义的 Visual Studio 集成的开发环境 (IDE) 中包含的命令的 GUID 和 ID 值。 有关详细信息，请参阅[IDE 定义的命令、 菜单和组](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)。
+# <a name="guids-and-ids-of-visual-studio-commands"></a>Visual Studio 命令的 Guid 和 Id
+Visual Studio 集成开发环境（IDE）中包含的命令的 GUID 和 ID 值是在作为 Visual Studio SDK 的一部分安装的 .vsct 文件中定义的。 有关详细信息，请参阅[IDE 定义的命令、菜单和组](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)。
 
- 有关如何使用 IDE 对象中定义的详细信息 *.vsct*文件，请参阅[扩展菜单和命令](../../extensibility/extending-menus-and-commands.md)。
+ 有关如何使用 *.vsct*文件中定义的 IDE 对象的详细信息，请参阅[扩展菜单和命令](../../extensibility/extending-menus-and-commands.md)。
 
 ## <a name="find-a-command-definition"></a>查找命令定义
- 由于 Visual Studio 定义 1000 多个命令，是不切合实际它们全部列出。 相反，请执行以下步骤来查找命令的定义。
+ 由于 Visual Studio 定义的命令超过1000，因此在此处列出它们都不切实际。 相反，请按照以下步骤查找命令的定义。
 
-### <a name="to-locate-a-command-definition"></a>若要查找命令定义
+### <a name="to-locate-a-command-definition"></a>查找命令定义
 
-1. 在 Visual Studio 中打开以下文件中的 *< Visual Studio SDK 安装路径\>\VisualStudioIntegration\Common\Inc\\* 文件夹：*SharedCmdDef.vsct*， *ShellCmdDef.vsct*， *VsDbgCmdUsed.vsct*， *Venusmenu.vsct*。
+1. 在 Visual Studio 中，打开 *< Visual STUDIO SDK 安装路径\>\VisualStudioIntegration\Common\Inc\\* 文件夹中的以下文件： *.vsct*、 *ShellCmdDef*、.vsct *、VsDbgCmdUsed、* *Venusmenu. .vsct*。
 
-    Visual Studio 的大多数命令中定义*SharedCmdDef.vsct*并*ShellCmdDef.vsct*。 *VsDbgCmdUsed.vsct*定义与调试器相关的命令和*Venusmenu.vsct*定义特定于 Web 开发的命令。
+    大多数 Visual Studio 命令是在*SharedCmdDef. .vsct*和*ShellCmdDef*中定义的。 *VsDbgCmdUsed*定义了与调试器相关的命令，而*Venusmenu*定义了特定于 Web 开发的命令。
 
-2. 如果该命令的菜单项，记下的菜单项的确切文本。 如果该命令是按钮在工具栏上的，请注意将显示在其上悬停时的工具提示文本。
+2. 如果命令为菜单项，请注意菜单项的确切文本。 如果命令是工具栏上的按钮，请注意在它上暂停时显示的工具提示文本。
 
-3. 按**Ctrl**+**F**以打开**查找**对话框。
+3. 按**Ctrl**+**F**打开 "**查找**" 对话框。
 
-4. 在中**查找内容**框中，键入在步骤 2 中记下的文本。
+4. 在 "**查找内容**" 框中，键入你在步骤2中记下的文本。
 
-5. 确认**所有打开的文档**中显示**查找**框。
+5. 验证**所有打开的文档**是否都显示在 "**查找范围**" 框中。
 
-6. 单击**查找下一步**按钮，直至在中选择文本`<Strings>`一部分[Button 元素](../../extensibility/button-element.md)。
+6. 单击 "**查找下一个**" 按钮，直到在[button 元素](../../extensibility/button-element.md)的 "`<Strings>`" 部分中选择了文本。
 
-    `<Button>`命令也显示在的元素是命令定义。
+    命令出现在其中的 `<Button>` 元素是命令定义。
 
-   在您找到命令定义，您可以将副本放命令的另一个菜单或工具栏上通过创建[CommandPlacement 元素](../../extensibility/commandplacement-element.md)具有相同`guid`和`id`与命令的值。 有关详细信息，请参阅[创建可重用的按钮组](../../extensibility/creating-reusable-groups-of-buttons.md)。
+   找到命令定义后，可以通过创建与命令具有相同 `guid` 和 `id` 值的[CommandPlacement 元素](../../extensibility/commandplacement-element.md)，将命令的副本放在另一个菜单或工具栏上。 有关详细信息，请参阅[创建可重用的按钮组](../../extensibility/creating-reusable-groups-of-buttons.md)。
 
 ### <a name="special-cases"></a>特殊情况
- 在以下情况下，菜单文本或工具提示文本可能不完全匹配中的命令定义。
+ 在以下情况下，菜单文本或工具提示文本可能与命令定义中的内容不完全匹配。
 
-- 包括带下划线的字符，如下所述的菜单项**打印**命令**文件**菜单中的，在其中*P*带下划线。
+- 包含带下划线字符的菜单项，如 "**文件**" 菜单上的 "**打印**" 命令，其中*P*带有下划线。
 
-     与符号前面的字符 (&) 菜单项名称中的字符将显示为带下划线。 但是， *.vsct*文件写入在 XML 中，它使用与号 (&) 字符以指示特殊字符，并要求必须在作为拼写与号以显示 *&amp;a m p;* 。 因此，在 *.vsct*文件中，**打印**命令将显示为 *&amp;a m p;打印*。
+     菜单项名称中前面带有 "and" 符（&）字符的字符以下划线显示。 但是， *.vsct*文件以 XML 编写，后者使用 "and" 符（&）字符指示特殊字符，并要求要显示的 "符号" 必须以 *&amp;amp*形式出现。 因此，在 *.vsct*文件中， **Print**命令显示为 *&amp;amp;打印*。
 
-- 命令，具有动态文本，如 **保存** \<当前文件名\>，动态生成菜单项，例如各项 **最近使用的文件** 列表。
+- 具有动态文本的命令（如**Save** \<当前文件名\>和动态生成的菜单项，如 "**最近的文件**" 列表中的项）。
 
-     没有可靠的方法来搜索动态文本。 相反，查找所需的命令在承载的咨询的组[Guid 和 Id 的 Visual Studio 菜单](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)或[Guid 和 Id 的 Visual Studio 工具栏](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)，并搜索该组的 ID。 如果命令定义不具备组作为其[父元素](../../extensibility/parent-element.md)，搜索*SharedCmdPlace.vsct*并*ShellCmdPlace.vsct* (或*VsDbgCmdPlace.vsct*调试器命令) 为`<CommandPlacement>`设置命令的父级的元素。 *SharedCmdPlace.vsct*， *ShellCmdPlace.vsct*，和*VsDbgCmdPlace.vsct*位于 *\<Visual Studio SDK 安装路径\>\VisualStudioIntegration\Common\Inc\\* 文件夹。
+     没有可靠的方法可对动态文本进行搜索。 相反，请通过咨询[Visual studio 菜单的 guid 和 id](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)和[visual Studio 工具栏的 guid 和](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)id，并搜索该组的 id 来查找托管所需命令的组。 如果命令定义没有组作为其[父元素](../../extensibility/parent-element.md)，则在设置父级的 `<CommandPlacement>` 元素的 *.vsct*和 *.vsct* *（或 VsDbgCmdPlace for 调试程序命令*）中搜索command. *.Vsct*、 *ShellCmdPlace* *\<Visual Studio SDK 安装路径\>VsDbgCmdPlace\\* "文件夹*中。*
 
 ## <a name="see-also"></a>请参阅
-- [MenuCommands 与OleMenuCommands](../../extensibility/menucommands-vs-olemenucommands.md)
-- [Visual Studio 命令表格 (.vsct) 文件](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
-- [VSCT XML 架构参考](../../extensibility/vsct-xml-schema-reference.md)
+
+- [Visual Studio 命令表（.vsct）文件](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [.VSCT XML 架构引用](../../extensibility/vsct-xml-schema-reference.md)

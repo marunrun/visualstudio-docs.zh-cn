@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fc337b1ac753c214ad2484c26c9149e9a1a6ca04
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 72739cd1063298a2dafc71976fd45360bc2d6ec2
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981203"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189206"
 ---
 # <a name="profile-the-performance-of-sharepoint-applications"></a>分析 SharePoint 应用程序的性能
 
@@ -55,7 +55,7 @@ Web 性能测试模拟最终用户可能与 SharePoint 应用程序交互的方�
 
 ## <a name="test-user-interfaces"></a>测试用户界面
 
-编码的 UI 测试通过其用户界面（UI）自动驱动您的 SharePoint 应用程序。 这些测试涵盖了 UI 控件（如按钮和菜单）来验证它们是否正常工作。 如果在 UI 中执行验证或其他逻辑（例如在网页中），则这种测试特别有用。 你还可以使用编码的 UI 测试来自动执行手动测试。 为 SharePoint 应用程序创建编码的 UI 测试的方式与为其他类型的应用程序创建测试的方式相同。 有关详细信息，请参阅[通过编码的 UI 测试来测试 SharePoint 2010 应用程序](../test/testing-sharepoint-2010-applications-with-coded-ui-tests.md)。
+编码的 UI 测试通过其用户界面（UI）自动驱动您的 SharePoint 应用程序。 这些测试涵盖了 UI 控件（如按钮和菜单）来验证它们是否正常工作。 如果在 UI 中执行验证或其他逻辑（例如在网页中），则这种测试特别有用。 你还可以使用编码的 UI 测试来自动执行手动测试。 为 SharePoint 应用程序创建编码的 UI 测试的方式与为其他类型的应用程序创建测试的方式相同。 有关详细信息，请参阅[通过编码的 UI 测试来测试 SharePoint 2010 应用程序](/visualstudio/test/testing-sharepoint-2010-applications-with-coded-ui-tests?view=vs-2015)。
 
 ## <a name="related-topics"></a>相关主题
 
@@ -64,7 +64,7 @@ Web 性能测试模拟最终用户可能与 SharePoint 应用程序交互的方�
 |[演练：分析 SharePoint 应用程序](../sharepoint/walkthrough-profiling-a-sharepoint-application.md)|演示如何对 SharePoint 应用程序执行采样分析分析。|
 |[发布前对应用进行性能测试](/azure/devops/test/load-test/run-performance-tests-app-before-release?view=vsts)|介绍如何创建负载测试，从而帮助你对 SharePoint 应用程序进行压力测试。|
 |[单元测试代码](../test/unit-test-your-code.md)|介绍如何使用单元测试在代码中查找逻辑错误。|
-|[使用编码的 UI 测试来测试 SharePoint 2010 应用程序](../test/testing-sharepoint-2010-applications-with-coded-ui-tests.md)|介绍如何测试您的 SharePoint 应用程序的用户界面。|
+|[使用编码的 UI 测试来测试 SharePoint 2010 应用程序](/visualstudio/test/testing-sharepoint-2010-applications-with-coded-ui-tests?view=vs-2015)|介绍如何测试您的 SharePoint 应用程序的用户界面。|
 
 ## <a name="see-also"></a>请参阅
 

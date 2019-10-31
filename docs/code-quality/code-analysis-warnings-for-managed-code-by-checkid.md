@@ -263,12 +263,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d8700d058c694afbea551e5b117a0e4a0461f2e8
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: 2811c905650f215272b650bff955b7264f56d4b5
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72806166"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188836"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>托管代码的代码分析警告（按 CheckId）
 
@@ -276,10 +276,10 @@ ms.locfileid: "72806166"
 
 | CheckId | 警告 | 描述 |
 |---------| - | - |
-| CA2007 | [CA2007：不直接等待任务](ca2007-do-not-directly-await-task.md) | 异步方法会直接[等待](/dotnet/csharp/language-reference/keywords/await)<xref:System.Threading.Tasks.Task>。 当异步方法直接等待 <xref:System.Threading.Tasks.Task> 时，延续将在创建任务的同一线程中发生。 此行为在性能方面可能会很大，并且可能会在 UI 线程上导致死锁。 请考虑调用 <xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType> 以通知你的继续符。 |
+| CA2007 | [CA2007：不直接等待任务](ca2007.md) | 异步方法会直接[等待](/dotnet/csharp/language-reference/keywords/await)<xref:System.Threading.Tasks.Task>。 当异步方法直接等待 <xref:System.Threading.Tasks.Task> 时，延续将在创建任务的同一线程中发生。 此行为在性能方面可能会很大，并且可能会在 UI 线程上导致死锁。 请考虑调用 <xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType> 以通知你的继续符。 |
 | CA1000 | [CA1000：不要在泛型类型中声明静态成员](../code-quality/ca1000.md) | 调用泛型类型的静态成员时，必须指定该类型的类型参数。 当调用不支持推理的泛型实例成员时，必须指定该成员的类型参数。 在上述两种情况下，用于指定类型自变量的语法不同，但很容易混淆。 |
 | CA1001 | [CA1001：具有可释放字段的类型应该是可释放的](../code-quality/ca1001.md) | 一个类声明并实现 System.IDisposable 类型的实例字段，但该类不实现 IDisposable。 声明 IDisposable 字段的类间接拥有非托管资源，并且应该实现 IDisposable 接口。 |
-| CA1002 | [CA1002：不要公开泛型列表](../code-quality/ca1002.md) | < （@No__t_0 （T >） >）的泛型集合是设计为性能的泛型集合，而不是继承。 因此，List 不包含任何虚拟成员。 应改为公开针对继承设计的泛型集合。 |
+| CA1002 | [CA1002：不要公开泛型列表](../code-quality/ca1002.md) | < （\<（T >） >）的泛型集合是设计为性能的泛型集合，而不是继承。 因此，List 不包含任何虚拟成员。 应改为公开针对继承设计的泛型集合。 |
 | CA1003 | [CA1003：使用泛型事件处理程序实例](../code-quality/ca1003.md) |类型包含一个返回 void 的委托，该委托的签名包含两个参数（第一个对象，第二个参数是可分配给 EventArgs 的类型），而包含程序集则以 Microsoft .NET Framework 2.0 为目标。 |
 | CA1004 | [CA1004：泛型方法应提供类型形参](../code-quality/ca1004.md) | 推理是指由传递给泛型方法的自变量类型来确定该方法的类型参数，而不是显式指定类型参数。 若要启用推理，泛型方法的参数签名必须包含与该方法的类型参数属于相同类型的参数。 在这种情况下，不必指定类型参数。 如果对所有类型参数都使用推理，则调用泛型实例方法和非泛型实例方法的语法完全相同；这简化了泛型方法的可用性。 |
 | CA1005 | [CA1005：避免泛型类型的参数过多](../code-quality/ca1005.md) | 泛型类型包含的类型参数越多，越难以知道并记住每个类型参数各代表什么。 通常情况下，使用一个类型形参（如 List \<T >），并且在具有两个类型形参的某些情况下（如字典 \<TKey、TValue > 中）。 但是，如果存在两个以上的类型参数，则大多数用户都会感到过于困难。 |

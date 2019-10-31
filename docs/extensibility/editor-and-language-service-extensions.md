@@ -10,26 +10,26 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1df6f65db70425650fc2860bf5ddf6e2d2e203c6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4b6a64d92e26ff1714a77adbef88e02fca966f1f
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353374"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73186701"
 ---
 # <a name="editor-and-language-service-extensions"></a>编辑器和语言服务扩展
-您可以扩展 Visual Studio 代码编辑器中的大多数功能。 编辑器基于 Windows Presentation Foundation (WPF) 上，并以托管代码编写。 尽管这种设计不同于早期版本的 Visual Studio 中设计，它提供的大多数相同功能。 若要扩展编辑器，使用 Managed Extensibility Framework (MEF)。
+可以扩展 Visual Studio 代码编辑器的大多数功能。 编辑器基于 Windows Presentation Foundation （WPF），并用托管代码编写。 尽管此设计与 Visual Studio 早期版本中的设计不同，但它提供了大多数相同的功能。 若要扩展编辑器，请使用 Managed Extensibility Framework （MEF）。
 
- Visual Studio SDK 提供了名为适配器*填充程序*以支持为早期版本编写的 Vspackage。 不过，如果有现有的 VSPackage，我们建议对新技术，从而获得更好的性能和可靠性更新它。
+ Visual Studio SDK 提供了称为*填充*程序的适配器，以支持为早期版本编写的 vspackage。 尽管如此，如果你有现有的 VSPackage，我们建议你将其更新为新技术，以获得更好的性能和可靠性。
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|描述|
+|Title|描述|
 |-----------|-----------------|
-|[使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)|介绍如何使用编辑器项模板。|
-|[将编辑器和语言服务扩展](../extensibility/extending-the-editor-and-language-services.md)|引入的设计和功能的核心编辑器并演示如何对其进行扩展的文档的链接。|
-|[在编辑器中的旧接口](../extensibility/legacy-interfaces-in-the-editor.md)|说明如何从现有代码访问核心编辑器文档的链接。|
+|[使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)|使用编辑器项模板的简介。|
+|[扩展编辑器和语言服务](../extensibility/extending-the-editor-and-language-services.md)|指向介绍核心编辑器设计和功能的文档的链接，并演示如何对其进行扩展。|
+|[编辑器中的旧接口](/visualstudio/extensibility/legacy-interfaces-in-the-editor?view=vs-2015)|说明如何从现有代码访问核心编辑器的文档链接。|
 |[创建自定义编辑器和设计器](../extensibility/creating-custom-editors-and-designers.md)|说明如何创建自定义编辑器的文档的链接。|
-|[旧版语言服务扩展性](../extensibility/internals/legacy-language-service-extensibility.md)|介绍如何集成到 Visual Studio 编程语言的文档的链接。|
-|[Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)|引入了 Managed 的 Extensibility Framework (MEF)。|
-|[Windows Presentation Foundation](/dotnet/framework/wpf/index)|引入了 Windows Presentation Foundation (WPF)。|
+|[旧版语言服务扩展性](../extensibility/internals/legacy-language-service-extensibility.md)|介绍如何将编程语言集成到 Visual Studio 的文档的链接。|
+|[Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)|介绍 Managed Extensibility Framework （MEF）。|
+|[Windows Presentation Foundation](/dotnet/framework/wpf/index)|介绍 Windows Presentation Foundation （WPF）。|

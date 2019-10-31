@@ -1,5 +1,5 @@
 ---
-title: VSCodeWindow Object | Microsoft Docs
+title: VSCodeWindow 对象 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,26 +13,26 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 165855fc6f8e63c6c7ad84cb8432419258b7ba4e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 36b7e0e6806f88efe373dffa3f21ba79baefb281
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322376"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189049"
 ---
 # <a name="vscodewindow-object"></a>VSCodeWindow 对象
-代码窗口是可以包含一个或多个文本视图，通常一个专用的文档窗口<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>对象。
+代码窗口是一个专用的文档窗口，它可以包含一个或多个文本视图，通常是 <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> 对象。
 
- 体系结构方面，代码窗口是窗口框架中是一个文档窗口。 就功能而言，代码窗口是只需具有其他功能的文档窗口。 在多文档界面 (MDI) 模式下，代码窗口是 MDI 子框架。 有关详细信息，请参阅[通过使用传统的 API 自定义代码窗口](../extensibility/customizing-code-windows-by-using-the-legacy-api.md)。
+ 在体系结构上，代码窗口是窗口框架内的文档窗口。 在功能上，代码窗口只是包含附加功能的文档窗口。 在多文档界面（MDI）模式下，代码窗口是 MDI 子框架。 有关详细信息，请参阅[使用旧版 API 自定义代码窗口](/visualstudio/extensibility/customizing-code-windows-by-using-the-legacy-api?view=vs-2015)。
 
- 下表包含中的接口<xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow>对象。
+ 下表包括 <xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow> 对象中的接口。
 
 |方法|描述|
 |------------|-----------------|
-|<xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>|提供的通用访问机制来查找全局唯一标识符 (GUID) 标识的服务。|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>|表示多文档界面 (MDI) 子包含一个或多个代码视图。|
+|<xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>|提供用于查找全局唯一标识符（GUID）标识的服务的通用访问机制。|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>|表示包含一个或多个代码视图的多文档界面（MDI）子对象。|
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|填充窗口框架。|
 
 ## <a name="see-also"></a>请参阅
 - <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>
-- [图编辑](https://www.microsoft.com/download/details.aspx?id=55984)
+- [编辑图形](https://www.microsoft.com/download/details.aspx?id=55984)

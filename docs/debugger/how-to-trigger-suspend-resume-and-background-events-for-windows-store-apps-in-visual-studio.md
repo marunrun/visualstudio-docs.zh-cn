@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: d12c9848409f57b16c733b587edff193311bcfdd
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: da634246bfa9f800779c761458028f55b9317f6f
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72732275"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187629"
 ---
 # <a name="how-to-trigger-suspend-resume-and-background-events-while-debugging-uwp-apps-in-visual-studio"></a>如何在 Visual Studio 中调试 UWP 应用时触发挂起、继续和后台事件
 
@@ -110,7 +110,7 @@ ms.locfileid: "72732275"
 4. 选择 **“诊断”** 日志。
 
 ## <a name="see-also"></a>请参阅
-- [使用 Visual Studio 测试 UWP 应用](../test/testing-store-apps-with-visual-studio.md)
-- [在 Visual Studio 中调试应用](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)
+- [使用 Visual Studio 测试 UWP 应用](/visualstudio/test/create-and-run-unit-tests-for-a-store-app-in-visual-studio)
+- [在 Visual Studio 中调试应用](debugging-windows-store-and-windows-universal-apps.md)
 - [应用程序生命周期](/windows/uwp/launch-resume/app-lifecycle)
 - [Launching, resuming, and multitasking](/windows/uwp/launch-resume/index)

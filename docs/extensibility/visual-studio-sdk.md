@@ -14,12 +14,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4803fbb0887deaf140836263ca82d772b29112f7
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 662b64f69b278c4cc815a742c5cba26592e000bd
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981702"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189086"
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
 Visual Studio SDK 可帮助你扩展 Visual Studio 的功能，或将新功能集成到 Visual Studio 中。 可以将扩展分发给其他用户以及 Visual Studio Marketplace。 以下是一些扩展 Visual Studio 的方式：
@@ -74,6 +74,7 @@ Visual Studio SDK 可帮助你扩展 Visual Studio 的功能，或将新功能�
 - [扩展 Visual Studio](https://blog.slaks.net/2013-10-18/extending-visual-studio-part-1-getting-started/)
 
 ## <a name="see-also"></a>请参阅
+
 - [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)
 - [如何：将扩展性项目迁移到 Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)
 - [常见问题解答：将外接程序转换为 VSPackage 扩展](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md)
@@ -93,5 +94,4 @@ Visual Studio SDK 可帮助你扩展 Visual Studio 的功能，或将新功能�
 - [提供 Visual Studio 扩展](../extensibility/shipping-visual-studio-extensions.md)
 - [Visual Studio SDK 内](../extensibility/internals/inside-the-visual-studio-sdk.md)
 - [支持 Visual Studio SDK](../extensibility/support-for-the-visual-studio-sdk.md)
-- [存档](../extensibility/archive.md)
 - [Visual Studio SDK 参考](../extensibility/visual-studio-sdk-reference.md)

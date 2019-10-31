@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: efcba8397ce766409715f24e184b3c77aad53eea
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d8479343634ca8afc647edde61eb8b1106954c83
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72728642"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187209"
 ---
 # <a name="visualizer-api-reference"></a>可视化工具 API 参考
 
@@ -43,5 +43,5 @@ ms.locfileid: "72728642"
 ## <a name="see-also"></a>请参阅
 
 - [演练：用 C# 编写可视化工具](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)
-- [如何：编写可视化工具](/visualstudio/debugger/create-custom-visualizers-of-data)
+- [如何：编写可视化工具](create-custom-visualizers-of-data.md)
 - [创建自定义可视化工具](../debugger/create-custom-visualizers-of-data.md)

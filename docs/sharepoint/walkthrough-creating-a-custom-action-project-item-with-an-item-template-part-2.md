@@ -11,12 +11,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a873d00e1befc9126f4fe89b05a66a8331853ac2
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: ae9c686e46bf6a956d58ac22b823dcc36c2aacce
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984974"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189156"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-2"></a>演练：使用项模板创建自定义操作项目项（第2部分）
   在定义自定义类型的 SharePoint 项目项并将其与 Visual Studio 中的项模板关联后，你可能还需要为模板提供向导。 当用户使用模板向项目添加项目项的新实例时，可以使用该向导收集用户的信息。 你收集的信息可用于初始化项目项。
@@ -79,7 +79,7 @@ ms.locfileid: "72984974"
 
 2. 在 "**项目设计器**" 中，确保 "目标框架" 设置为 .NET Framework 4.5。
 
-     对于 Visual C#项目，可以在 "**应用程序**" 选项卡上设置此值。对于 Visual Basic 项目，可以在 "**编译**" 选项卡上设置此值。有关详细信息，请参阅[如何：面向 .NET Framework 版本](../ide/how-to-target-a-version-of-the-dotnet-framework.md)。
+     对于 Visual C#项目，可以在 "**应用程序**" 选项卡上设置此值。对于 Visual Basic 项目，可以在 "**编译**" 选项卡上设置此值。有关详细信息，请参阅[如何：面向 .NET Framework 版本](../ide/visual-studio-multi-targeting-overview.md)。
 
 3. 在**ItemTemplateWizard**项目中，向项目添加一个**窗口（WPF）** 项，然后将该项命名为**WizardWindow**。
 
@@ -130,7 +130,7 @@ ms.locfileid: "72984974"
      [!code-xml[SPExtensibility.ProjectItem.CustomAction#9](../sharepoint/codesnippet/Xaml/customactionprojectitem/itemtemplatewizard/wizardwindow.xaml#9)]
 
     > [!NOTE]
-    > 此 XAML 中创建的窗口派生自 <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> 的基类。 向 Visual Studio 添加自定义 WPF 对话框时，建议从此类派生对话框，以便与 Visual Studio 中的其他对话框保持一致的样式，并避免出现模式对话框时可能出现的问题。 有关详细信息，请参阅[创建和管理模式对话框](/visualstudio/extensibility/creating-and-managing-modal-dialog-boxes)。
+    > 此 XAML 中创建的窗口派生自 <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> 的基类。 向 Visual Studio 添加自定义 WPF 对话框时，建议从此类派生对话框，以便与 Visual Studio 中的其他对话框保持一致的样式，并避免出现模式对话框时可能出现的问题。 有关详细信息，请参阅[创建和管理模式对话框](../extensibility/creating-and-managing-modal-dialog-boxes.md)。
 
 3. 如果要开发 Visual Basic 项目，请从 `Window` 元素的 `x:Class` 特性中的 `WizardWindow` 类名称中删除 `ItemTemplateWizard` 命名空间。 此元素位于 XAML 的第一行。 完成后，第一行应类似于以下代码：
 
@@ -206,7 +206,7 @@ ms.locfileid: "72984974"
     </WizardExtension>
     ```
 
-     有关 `WizardExtension` 元素的详细信息，请参阅[WizardExtension element &#40;Visual Studio Templates&#41;](/visualstudio/extensibility/wizardextension-element-visual-studio-templates)。
+     有关 `WizardExtension` 元素的详细信息，请参阅[WizardExtension element &#40;Visual Studio Templates&#41;](../extensibility/wizardextension-element-visual-studio-templates.md)。
 
 3. 保存并关闭文件。
 
@@ -345,6 +345,6 @@ ms.locfileid: "72984974"
 - [演练：使用项模板创建自定义操作项目项（第1部分）](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)
 - [定义自定义 SharePoint 项目项类型](../sharepoint/defining-custom-sharepoint-project-item-types.md)
 - [为 SharePoint 项目项创建项模板和项目模板](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)
-- [Visual Studio 模板架构参考](/visualstudio/extensibility/visual-studio-template-schema-reference)
+- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [如何：使用向导来处理项目模板](../extensibility/how-to-use-wizards-with-project-templates.md)
 - [默认自定义操作位置和 Id](/previous-versions/office/developer/sharepoint-2010/bb802730(v=office.14))

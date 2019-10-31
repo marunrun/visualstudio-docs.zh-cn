@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 92d1c327c168bfd2881ad014b7f9ab87f771b95d
-ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.openlocfilehash: bf8d6df020694bb10fe4f3f051551056549d5673
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72536074"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188615"
 ---
 # <a name="learn-productivity-tips-and-tricks-for-the-debugger-in-visual-studio"></a>了解 Visual Studio 调试器在工作效率方面的提示和技巧
 
@@ -41,7 +41,7 @@ ms.locfileid: "72536074"
 
 ## <a name="edit-xaml-code-and-continue-debugging"></a>编辑 XAML 代码并继续调试
 
-若要在调试会话期间修改 XAML 代码，请参阅[使用 XAML 热重载编写和调试正在运行的 XAML 代码](xaml-hot-reload.md)。
+若要在调试会话期间修改 XAML 代码，请参阅[使用 XAML 热重载编写和调试正在运行的 XAML 代码](../xaml-tools/xaml-hot-reload.md)。
 
 ## <a name="debug-issues-that-are-hard-to-reproduce"></a>调试难以重现的问题
 
@@ -96,7 +96,7 @@ ms.locfileid: "72536074"
 
 若要查看函数的返回值，请在单步执行代码时查看**在 "自动" 窗口中**显示的函数。 若要查看函数的返回值，请确保已执行你感兴趣的函数（如果当前已停止函数调用，请按**F10**一次）。 如果窗口已关闭，请使用 "**调试" > Windows >** **"自动**" 打开 "自动" 窗口。
 
-![自动窗口](../debugger/media/dbg-tips-autos-window.png "AutosWindow")
+![“自动”窗口](../debugger/media/dbg-tips-autos-window.png "AutosWindow")
 
 此外，还可以在 "**即时**" 窗口中输入函数以查看返回值。 （使用 "**调试" > Windows > 即时**打开它。）
 
@@ -140,6 +140,7 @@ ms.locfileid: "72536074"
 
     您还可以在 "[并行堆栈" 窗口](../debugger/get-started-debugging-multithreaded-apps.md)中查看线程的位置。
 
+::: moniker range="vs-2017"
 ## <a name="examine-payloads-for-web-services-and-network-resources-uwp"></a>检查 web 服务和网络资源（UWP）的负载
 
 在 UWP 应用中，可以使用 `Windows.Web.Http` API 分析执行的网络操作。 您可以使用此工具来帮助调试 web 服务和网络资源。 若要使用该工具，请选择 "**调试" > 性能探查器**"。 选择 "**网络**"，然后选择 "**启动**"。 在应用中，浏览使用 `Windows.Web.Http` 的应用场景，然后选择“停止收集”生成报表。
@@ -151,6 +152,7 @@ ms.locfileid: "72536074"
 ![网络使用工具中的详细信息](../profiling/media/prof-tour-network-usage-details.png "DetailedViewNetworkUsage")
 
 有关详细信息，请参阅[网络使用情况](../profiling/network-usage.md)。
+::: moniker-end
 
 ## <a name="modules_window"></a>更熟悉调试器如何附加到您的应用程序（C#、 C++、Visual Basic） F#
 

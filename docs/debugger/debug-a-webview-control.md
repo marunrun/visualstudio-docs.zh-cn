@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: 2ce889f83c4d21a8b2464cab108fa165e1144791
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 15c9a2b489aeb091224536bfb87398197f6e4f62
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745572"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188658"
 ---
 # <a name="debug-a-webview-control-in-a-uwp-app"></a>调试 UWP 应用中的 WebView 控件
 
@@ -60,7 +60,7 @@ ms.locfileid: "72745572"
 
      与 `WebView` 关联的 DOM 资源管理器将在 Visual Studio 中显示为新选项卡。
 
-5. 查看和修改实时 DOM 元素和 CSS 样式，如[使用 DOM 资源管理器调试 CSS 样式](/visualstudio/debugger/quickstart-debug-html-and-css)中所述。
+5. 查看和修改实时 DOM 元素和 CSS 样式，如[使用 DOM 资源管理器调试 CSS 样式](quickstart-debug-html-and-css.md)中所述。
 
 ### <a name="use-the-javascript-console-window-to-inspect-and-debug-a-webview-control"></a>使用 JavaScript 控制台窗口以检查并调试 WebView 控件
 

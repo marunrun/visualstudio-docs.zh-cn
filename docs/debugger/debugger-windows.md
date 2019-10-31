@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 91df84c92761ae75ce9f26bddefad57c6dc8bc2c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3c27d2b4436fc5defedcda44c4f7840760018ade
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738299"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188539"
 ---
 # <a name="inspect-data-using-debugger-windows-in-visual-studio"></a>在 Visual Studio 中使用调试器窗口检查数据
 
@@ -39,7 +39,7 @@ ms.locfileid: "72738299"
 |任务|CTR:+SHIFT+D、K|[使用“任务”窗口](../debugger/using-the-tasks-window.md)|
 |Python 交互式调试|SHIFT+ALT+I|[Python 交互式 REPL](../python/python-interactive-repl-in-visual-studio.md)|
 |JavaScript 控制台|CTRL+ALT+V、C|[快速入门：调试 JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md)|
-|DOM 资源管理器|CTRL+ALT+V、D|[使用 DOM 资源管理器调试布局](/visualstudio/debugger/quickstart-debug-html-and-css)|
+|DOM 资源管理器|CTRL+ALT+V、D|[使用 DOM 资源管理器调试布局](quickstart-debug-html-and-css.md)|
 |实时可视化树|-|[在调试时检查 XAML 属性](../xaml-tools/inspect-xaml-properties-while-debugging.md)|
 |实时属性资源管理器|-|[在调试时检查 XAML 属性](../xaml-tools/inspect-xaml-properties-while-debugging.md)|
 |进程|CTRL+ALT+Z|[调试线程和进程](../debugger/debug-threads-and-processes.md)|

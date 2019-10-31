@@ -11,12 +11,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c4cc5b43880df06752cbce79d58ec71921817a4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 37f208421079f77cadaf85556e00a8f8548c6182
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649413"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188808"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>如何：生成代码度量数据
 
@@ -33,7 +33,7 @@ ms.locfileid: "72649413"
 [FxCopAnalyzers NuGet 包](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers)包含多个代码度量[分析器](roslyn-analyzers-overview.md)规则：
 
 - [CA1501](ca1501-avoid-excessive-inheritance.md)
-- [CA1502](ca1502-avoid-excessive-complexity.md)
+- [CA1502](ca1502.md)
 - [CA1505](ca1505-avoid-unmaintainable-code.md)
 - [CA1506](ca1506-avoid-excessive-class-coupling.md)
 
@@ -60,7 +60,7 @@ ms.locfileid: "72649413"
    CA1502: 10
    ```
 
-   在此示例中，规则[CA1502](ca1502-avoid-excessive-complexity.md)配置为在方法的圈复杂度大于10时激发。
+   在此示例中，规则[CA1502](ca1502.md)配置为在方法的圈复杂度大于10时激发。
 
 3. 在 Visual Studio 的 "**属性**" 窗口中，或者在项目文件中，将配置文件的生成操作标记为 " [**AdditionalFiles**](../ide/build-actions.md#build-action-values)"。 例如:
 
@@ -134,7 +134,7 @@ Build succeeded.
     0 Error(s)
 ```
 
-您可以通过指定 `/p:MetricsOutputFile=<filename>` 来覆盖输出文件的名称。 还可以通过指定 `/p:LEGACY_CODE_METRICS_MODE=true` 获取[旧样式](#previous-versions)的代码度量数据。 例如:
+您可以通过指定 `/p:MetricsOutputFile=<filename>` 来覆盖输出文件的名称。 还可以通过指定 `/p:LEGACY_CODE_METRICS_MODE=true`获取[旧样式](#previous-versions)的代码度量数据。 例如:
 
 ```shell
 C:\source\repos\ClassLibrary3\ClassLibrary3>msbuild /t:Metrics /p:LEGACY_CODE_METRICS_MODE=true /p:MetricsOutputFile="Legacy.xml"
