@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d001edcd281a0c21d244704f0a068850804b8762
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 4d3afc8ff48355c74544edf123689495bfde1302
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981155"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189133"
 ---
 # <a name="walkthrough-profile-a-sharepoint-application"></a>演练：分析 SharePoint 应用程序
   本演练演示在 Visual Studio 中如何使用分析工具优化 SharePoint 应用程序的性能。 此示例应用程序是 SharePoint 功能事件接收器，其中包含降低功能事件接收器性能的空闲循环。 Visual Studio 探查器使你能够查找并消除最昂贵（执行速度最慢）的项目部分，也称为*热路径*。
@@ -197,7 +197,7 @@ ms.locfileid: "72981155"
 
 2. 在 "**性能向导**" 的第一页上，将 "分析方法" 保留为 " **CPU 采样**"，然后选择 "**下一步**" 按钮。
 
-     其他分析方法可用于更高级的分析情形。 有关详细信息，请参阅[了解性能收集方法](/visualstudio/profiling/understanding-performance-collection-methods)。
+     其他分析方法可用于更高级的分析情形。 有关详细信息，请参阅[了解性能收集方法](../profiling/understanding-performance-collection-methods.md)。
 
 3. 在 "**性能向导**" 的第二页上，将配置文件目标保留为 " **ProfileTest** " 并选择 "**下一步**" 按钮。
 
@@ -273,7 +273,7 @@ ms.locfileid: "72981155"
      现在已消除对空闲循环的调用，功能应更快激活。 示例分析报告应反映此情况。
 
 ## <a name="see-also"></a>请参阅
-- [性能资源管理器](/visualstudio/profiling/performance-explorer)
-- [性能会话概述](/visualstudio/profiling/performance-session-overview)
-- [性能分析初学者指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)
+- [性能资源管理器](../profiling/performance-explorer.md)
+- [性能会话概述](../profiling/performance-session-overview.md)
+- [性能分析初学者指南](../profiling/beginners-guide-to-performance-profiling.md)
 - [通过 Visual Studio 探查器查找应用程序瓶颈](https://msdn.microsoft.com/magazine/cc337887.aspx)

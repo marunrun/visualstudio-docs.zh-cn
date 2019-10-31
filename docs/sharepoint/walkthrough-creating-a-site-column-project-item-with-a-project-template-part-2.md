@@ -11,12 +11,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9e53cc877a4e462a458f3bfd455ed222c3b2e17b
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: c3b2fc34807be6ae03fe5aacab64439c918a0f5e
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984675"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189135"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-2"></a>演练：使用项目模板创建网站栏项目项（第2部分）
   在定义自定义类型的 SharePoint 项目项并将其与 Visual Studio 中的项目模板关联后，你可能还需要为模板提供向导。 当用户使用模板创建包含项目项的新项目时，可以使用该向导收集用户的信息。 你收集的信息可用于初始化项目项。
@@ -116,7 +116,7 @@ ms.locfileid: "72984675"
 
 3. 确保将目标框架设置为 .NET Framework 4.5，而不是 .NET Framework 4.5 客户端配置文件。
 
-     有关详细信息，请参阅[如何：面向 .NET Framework 的某个版本](../ide/how-to-target-a-version-of-the-dotnet-framework.md)。
+     有关详细信息，请参阅[如何：面向 .NET Framework 的某个版本](../ide/visual-studio-multi-targeting-overview.md)。
 
 4. 打开**ProjectTemplateWizard**项目的快捷菜单，选择 "**添加**"，然后选择 "**新建项**"。
 
@@ -233,7 +233,7 @@ ms.locfileid: "72984675"
      [!code-xml[SPExtensibility.ProjectItem.SiteColumn#10](../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml#10)]
 
     > [!NOTE]
-    > 此 XAML 中创建的窗口派生自 <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> 的基类。 将自定义 WPF 对话框添加到 Visual Studio 时，建议从此类派生对话框，以便与其他 Visual Studio 对话框保持一致的样式，并避免出现可能出现的模式对话框问题。 有关详细信息，请参阅[创建和管理模式对话框](/visualstudio/extensibility/creating-and-managing-modal-dialog-boxes)。
+    > 此 XAML 中创建的窗口派生自 <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> 的基类。 将自定义 WPF 对话框添加到 Visual Studio 时，建议从此类派生对话框，以便与其他 Visual Studio 对话框保持一致的样式，并避免出现可能出现的模式对话框问题。 有关详细信息，请参阅[创建和管理模式对话框](../extensibility/creating-and-managing-modal-dialog-boxes.md)。
 
 3. 如果要开发 Visual Basic 项目，请从 `Window` 元素的 `x:Class` 特性中的 `WizardWindow` 类名称中删除 `ProjectTemplateWizard` 命名空间。 此元素位于 XAML 的第一行。 完成后，第一行应如下例所示。
 
@@ -368,7 +368,7 @@ ms.locfileid: "72984675"
 
 2. 在 "**签名**" 选项卡上，选中 "为**程序集签名**" 复选框。
 
-3. 在 "**选择强名称密钥文件**" 列表中，选择 " **\<新建 ...">**。
+3. 在 "**选择强名称密钥文件**" 列表中，选择 " **\<新建 ...">** 。
 
 4. 在 "**创建强名称密钥**" 对话框中，输入新密钥文件的名称，清除 "**使用密码保护密钥文件**" 复选框，然后选择 "**确定"** 按钮。
 
@@ -403,7 +403,7 @@ ms.locfileid: "72984675"
     </WizardExtension>
     ```
 
-     有关 `WizardExtension` 元素的详细信息，请参阅[WizardExtension element &#40;Visual Studio Templates&#41;](/visualstudio/extensibility/wizardextension-element-visual-studio-templates)。
+     有关 `WizardExtension` 元素的详细信息，请参阅[WizardExtension element &#40;Visual Studio Templates&#41;](../extensibility/wizardextension-element-visual-studio-templates.md)。
 
 3. 保存并关闭文件。
 
@@ -474,7 +474,7 @@ ms.locfileid: "72984675"
 
 3. 在菜单栏上，选择 "**调试**" > **异常**。
 
-4. 在 "**异常**" 对话框中，确保清除了 "**公共语言运行时异常****引发**的和**用户未处理**的" 复选框，然后选择 **"确定"** 按钮。
+4. 在 "**异常**" 对话框中，确保清除了 "**公共语言运行时异常** **引发**的和**用户未处理**的" 复选框，然后选择 **"确定"** 按钮。
 
 5. 选择**F5**键，或在菜单栏上选择 "**调试**" > "**开始调试**"，开始调试。
 
@@ -536,11 +536,11 @@ ms.locfileid: "72984675"
 
 4. 关闭 Visual Studio 的实验实例和在其中打开 CustomActionProjectItem 解决方案的实例。
 
-     有关如何部署 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 扩展的信息，请参阅[发布 Visual Studio 扩展](/visualstudio/extensibility/shipping-visual-studio-extensions)。
+     有关如何部署 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 扩展的信息，请参阅[发布 Visual Studio 扩展](../extensibility/shipping-visual-studio-extensions.md)。
 
 ## <a name="see-also"></a>请参阅
 - [演练：使用项目模板创建网站栏项目项（第1部分）](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)
 - [定义自定义 SharePoint 项目项类型](../sharepoint/defining-custom-sharepoint-project-item-types.md)
 - [为 SharePoint 项目项创建项模板和项目模板](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)
-- [Visual Studio 模板架构参考](/visualstudio/extensibility/visual-studio-template-schema-reference)
+- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [如何：使用向导来处理项目模板](../extensibility/how-to-use-wizards-with-project-templates.md)

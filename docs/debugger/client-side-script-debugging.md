@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f9f66d757f5f46530619be1424eb0810ce546ff5
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9f0ac06712810e39432f1d19c250c3e7976f4a01
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745699"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188694"
 ---
 # <a name="client-side-script-debugging"></a>客户端脚本调试
 Visual Studio 调试器提供了一个全面的调试环境，以便查找和更正 ASP.NET 页上客户端脚本中的错误。
@@ -61,7 +61,7 @@ Visual Studio 调试器提供了一个全面的调试环境，以便查找和更
 
 ## <a name="see-also"></a>请参阅
 
-- [调试 ASP.NET 和 AJAX 应用程序](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)
+- [调试 ASP.NET 和 AJAX 应用程序](how-to-enable-debugging-for-aspnet-applications.md)
 - [脚本调试的限制](../debugger/limitations-on-script-debugging.md)
 - [变量窗口](../debugger/debugger-windows.md)
 - [即时窗口](../ide/reference/immediate-window.md)

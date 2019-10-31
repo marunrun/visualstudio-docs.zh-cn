@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f6a4e3fde3d98b83f8b92ffe039e3bff5c8eae4f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 77f5ca5dcc1b886ec56b7177dd0d6aa62a8ce4f0
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738332"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188630"
 ---
 # <a name="debugger-project-settings"></a>调试器项目设置
 某些项目设置也对调试产生影响。 这些设置决定诸如调试器查看的目录、用于启动程序的命令和命令参数以及为程序创建的调试信息的类型等内容。 可以在 **“属性页”** 对话框中更改这些设置。
@@ -44,7 +44,7 @@ ms.locfileid: "72738332"
 ## <a name="related-sections"></a>相关章节
  [指定符号（.pdb）和源文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)描述调试器如何使用符号文件和源文件来显示用于调试的信息。
 
- [在 Visual Studio 中调试应用](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)介绍如何调试 UWP 应用。 （Windows 开发人员中心）
+ [在 Visual Studio 中调试应用](debugging-windows-store-and-windows-universal-apps.md)介绍如何调试 UWP 应用。 （Windows 开发人员中心）
 
  [调试器设置和准备](../debugger/debugger-settings-and-preparation.md)描述与调试器相关的属性设置，以及用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 调试器调试程序所需的准备工作。
 

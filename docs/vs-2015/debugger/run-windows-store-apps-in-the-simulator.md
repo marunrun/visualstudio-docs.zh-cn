@@ -1,5 +1,5 @@
 ---
-title: 在模拟器中的运行 Windows 应用商店应用 |Microsoft Docs
+title: 在模拟器中运行 Windows 应用商店应用 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ caps.latest.revision: 45
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 77de4fea82e05f539c89a75178d93f985e5a0fb3
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 96224b522b17ff9da520386d56d4fae7a04bd981
+ms.sourcegitcommit: bdccab4c2dbd50ea8adaaf88c69c9ca32db88099
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67823845"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73144774"
 ---
 # <a name="run-windows-store-apps-in-the-simulator"></a>在模拟器中运行 Windows 应用商店应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,18 +43,18 @@ Visual Studio 的 Windows 应用商店应用程序模拟器是一个桌面应用
 ## <a name="BKMK_Choose_an_interaction_mode"></a> 选择交互模式  
  可以选择下列交互模式  
   
-- ![鼠标模式按钮](../debugger/media/simulator-mousemodebtn.png "SIMULATOR_MouseModeBtn")鼠标模式： 将交互模式设置为鼠标手势。 鼠手势包括单击、双击和拖动。  
+- ![鼠标模式按钮](../debugger/media/simulator-mousemodebtn.png "SIMULATOR_MouseModeBtn")鼠标模式：将交互模式设置为鼠标手势。 鼠手势包括单击、双击和拖动。  
   
-- ![开始触摸仿真按钮](../debugger/media/simulator-starttouchemulationbtn.png "SIMULATOR_StartTouchEmulationBtn")开始触摸仿真： 将交互模式的单指触摸手势设置。 单指事件包括点击、拖动和轻扫。  
+- "![启动触摸仿真" 按钮](../debugger/media/simulator-starttouchemulationbtn.png "SIMULATOR_StartTouchEmulationBtn")启动触摸仿真：将交互模式设置为单指的触摸手势。 单指事件包括点击、拖动和轻扫。  
   
-     ![模拟器一个手指目标](../debugger/media/simulator-onefinger.png "SIMULATOR_OneFinger")单目标图标指示事件在模拟器中的位置。 使用鼠标为指针定位。  
+     ![模拟器一个 finger 目标](../debugger/media/simulator-onefinger.png "SIMULATOR_OneFinger")单个目标图标指示事件在模拟器中的位置。 使用鼠标为指针定位。  
   
-     ![一个手指触摸目标](../debugger/media/simulator-onefingerengaged.png "SIMULATOR_OneFingerEngaged")按鼠标左键以激活触摸模式。 例如，单击按钮以模拟点击，或按住该按钮以模拟拖动或轻扫。  
+     ![单指触控目标](../debugger/media/simulator-onefingerengaged.png "SIMULATOR_OneFingerEngaged")按鼠标左键以激活触摸模式。 例如，单击按钮以模拟点击，或按住该按钮以模拟拖动或轻扫。  
   
 ## <a name="pinch-and-zoom"></a>捏合与缩放  
  将交互模式设置为双指的捏合与缩放手势。  
   
-- ![模拟器两个手指目标](../debugger/media/simulator-twofinger.png "SIMULATOR_TwoFinger")  
+- ![模拟器双指目标](../debugger/media/simulator-twofinger.png "SIMULATOR_TwoFinger")  
 
   - 双目标图标指示双指在设备屏幕上的位置。  
 
@@ -62,15 +62,14 @@ Visual Studio 的 Windows 应用商店应用程序模拟器是一个桌面应用
 
   - 在捏合或缩放之前，向前或向后滚动鼠标滚轮以更改双指的模拟距离。  
 
-- ![捏放、 缩放和旋转目标](../debugger/media/simulator-twofingerengaged.png "SIMULATOR_TwoFingerEngaged")  
+- ![缩小、缩放和旋转目标](../debugger/media/simulator-twofingerengaged.png "SIMULATOR_TwoFingerEngaged")  
 
   - 按左键并向后旋转滚轮（朝向你）以缩小（捏合）。  
 
   - 按左键并向前旋转鼠标滚轮（远离你）以放大（缩放）。  
   
 ## <a name="object-rotation"></a>对象旋转  
-           **
-          ** “触摸仿真旋转”按钮将交互模式设置为使用双指的旋转手势。  
+ “触摸仿真旋转”按钮将交互模式设置为使用双指的旋转手势。  
   
 - 移动鼠标以将图标放置在设备屏幕上的对象上。  
   
@@ -81,19 +80,19 @@ Visual Studio 的 Windows 应用商店应用程序模拟器是一个桌面应用
   - 按左键并向前旋转鼠标滚轮（远离你）以顺时针旋转对象。  
 
 ## <a name="BKMK_Enable_or_disable_Always_on_top_mode"></a> 启用或禁用“总在最前面”模式  
- 可将模拟器窗口设置为始终位于其他窗口之上。  “切换最顶端窗口”按钮启用或禁用模拟器窗口的“总在最前面”  模式。  
+ 可将模拟器窗口设置为始终位于其他窗口之上。 “切换最顶端窗口”按钮启用或禁用模拟器窗口的“总在最前面” 模式。  
   
 ## <a name="BKMK_Change_the_device_orientation"></a> 更改设备方向  
  可通过以任意方向将模拟器旋转 90 度，在纵向与横向之间切换设备方向。  
   
 > [!NOTE]
-> 模拟器不遵从项目的 [DisplayProperties.AutoRotationPreferences](http://go.microsoft.com/fwlink/?LinkId=249460) 属性。 例如，如果项目将方向设置为 `Landscape`，然后将模拟器的方向旋转至纵向，则模拟器显示的图像仍将经过旋转和调整大小。 请在真实设备上测试这些设置。  
+> 模拟器不遵从项目的 [DisplayProperties.AutoRotationPreferences](https://go.microsoft.com/fwlink/?LinkId=249460) 属性。 例如，如果项目将方向设置为 `Landscape`，然后将模拟器的方向旋转至纵向，则模拟器显示的图像仍将经过旋转和调整大小。 请在真实设备上测试这些设置。  
   
 > [!NOTE]
 > 如果旋转模拟器，并因此使模拟器的一个边大于显示模拟器的屏幕，则自动调整模拟器大小以适合屏幕。 如果再次旋转模拟器，也不会将大小调整回其原始大小。  
   
 ## <a name="BKMK_Change_the_simulated_screen_size_and_resolution"></a> 更改模拟屏幕的大小和分辨率  
- 若要更改模拟屏幕的大小和分辨率，请选择调色板上的  “更改分辨率”按钮，然后从列表中选择新的大小和分辨率。  
+ 若要更改模拟屏幕的大小和分辨率，请选择调色板上的 “更改分辨率”按钮，然后从列表中选择新的大小和分辨率。  
   
  屏幕的大小和分辨率以 *屏幕宽度（以英寸为单位）、像素宽度 X 像素高度*形式列出。 注意，同时模拟屏幕大小和分辨率。 模拟器上的位置坐标将转换为所选设备大小和分辨率的坐标。  
   
@@ -108,41 +107,41 @@ Visual Studio 的 Windows 应用商店应用程序模拟器是一个桌面应用
   
 - 若要从模拟器创建应用程序的屏幕快照，请选择 **“将屏幕快照捕获到剪贴板”** 按钮。  
   
-- 若要设置屏幕快照所在的位置，请选择  “屏幕快照设置”按钮，然后从快捷菜单中选择该位置。  
+- 若要设置屏幕快照所在的位置，请选择 “屏幕快照设置”按钮，然后从快捷菜单中选择该位置。  
   
-     ![屏幕快照设置上下文菜单](../debugger/media/simulator-screenshotsettingscntxmnu.png "SIMULATOR_ScreenShotSettingsCntxMnu")  
+     ![屏幕截图设置上下文菜单](../debugger/media/simulator-screenshotsettingscntxmnu.png "SIMULATOR_ScreenShotSettingsCntxMnu")  
   
 ## <a name="BKMK_Simulate_network_connection_properties"></a> 模拟网络连接属性  
- 你可以通过维护感知网络连接成本或数据计划状态更改的能力并允许你的应用程序使用此信息避免产生额外的漫游成本或超出指定的数据传输限制，来帮助你的应用程序用户管理所测量网络连接的成本。 利用 [Windows.Networking.Connectivity](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.aspx) API 能够对签名的 [NetworkStatusChanged](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.networkinformation.networkstatuschanged.aspx) 和 [TriggerType](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemtrigger.triggertype.aspx) 事件作出响应。 请参阅[快速入门：管理按流量计费的网络成本约束](https://msdn.microsoft.com/library/windows/apps/Hh750310.aspx)。  
+ 你可以通过维护感知网络连接成本或数据计划状态更改的能力并允许你的应用程序使用此信息避免产生额外的漫游成本或超出指定的数据传输限制，来帮助你的应用程序用户管理所测量网络连接的成本。 利用 [Windows.Networking.Connectivity](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.aspx) API 能够对签名的 [NetworkStatusChanged](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.networkinformation.networkstatuschanged.aspx) 和 [TriggerType](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemtrigger.triggertype.aspx) 事件作出响应。 请参见 [快速入门：管理按流量计费的网络成本约束](https://msdn.microsoft.com/library/windows/apps/Hh750310.aspx)。  
   
  若要调试或测试网络成本感知代码，可使用模拟器模拟通过 [GetInternetConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx) 返回的 [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.networkinformation.getinternetconnectionprofile.aspx)对象公开的网络的属性。  
   
  若要模拟网络属性，请执行以下操作：  
   
-1. 在模拟器工具栏上，选择  “更改网络属性”按钮。  
+1. 在模拟器工具栏上，选择 “更改网络属性”按钮。  
   
-2. 在  “设置网络属性”对话框中，选择“使用模拟网络属性”  。  
+2. 在 “设置网络属性”对话框中，选择“使用模拟网络属性”。  
   
     清除复选框以移除模拟并返回到当前连接的接口的网络属性。  
   
 3. 输入模拟网络的 **“配置文件名”** 。 建议使用可以用于标识 [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.profilename.aspx) 对象的 [ProfileName](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx) 属性中的模拟的唯一名称。  
   
-4. 选择 [“网络成本类型”](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.networkcosttype.aspx) 列表中的配置文件的 **NetworkCostType** 值。  
+4. 选择 [NetworkCostType](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.networkcosttype.aspx) 列表中的配置文件的 **NetworkCostType** 值。  
   
-5. 从  “数据限制状态标志”列表中，你可以将 [ApproachingDataLimit](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectioncost.approachingdatalimit.aspx) 属性或 [OverDataLimit](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectioncost.overdatalimit.aspx)属性设为 true，也可以选择  “在数据限制内”将这两个值均设为 false。  
+5. 从 “数据限制状态标志”列表中，你可以将 [ApproachingDataLimit](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectioncost.approachingdatalimit.aspx) 属性或 [OverDataLimit](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectioncost.overdatalimit.aspx)属性设为 true，也可以选择 “在数据限制内”将这两个值均设为 false。  
   
-6. 从  “漫游状态”列表中，设置 [Roaming](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectioncost.roaming.aspx) 属性。  
+6. 从 “漫游状态”列表中，设置 [Roaming](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectioncost.roaming.aspx) 属性。  
   
-7. 选择“设置属性”  ，通过触发前台 [NetworkStatusChanged](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.networkinformation.networkstatuschanged.aspx) 事件和 [NetworkStateChange](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemtrigger.aspx) 类型的后台 **SystemTrigger**来模拟网络属性。  
+7. 选择“设置属性” ，通过触发前台 [NetworkStatusChanged](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.networkinformation.networkstatuschanged.aspx) 事件和 [NetworkStateChange](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemtrigger.aspx) 类型的后台 **SystemTrigger**来模拟网络属性。  
   
    **有关管理网络连接的详细信息**  
   
    [快速入门：管理按流量计费的网络成本约束](https://msdn.microsoft.com/library/windows/apps/Hh750310.aspx)  
   
-   [网络信息示例](http://code.msdn.microsoft.com/windowsapps/Network-Information-Sample-63aaa201)  
+   [网络信息示例](https://code.msdn.microsoft.com/windowsapps/Network-Information-Sample-63aaa201)  
   
    [分析能量使用情况](../profiling/analyze-energy-use-in-store-apps.md)  
-  
+    
    [Windows.Networking.Connectivity](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.aspx)  
   
    [如何通过后台任务响应系统事件](https://msdn.microsoft.com/f7c86e86-a7ae-4abb-a923-76b03337a80a)  

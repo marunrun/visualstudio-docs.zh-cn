@@ -1,5 +1,5 @@
 ---
-title: 将命令添加到解决方案资源管理器中工具栏 |Microsoft Docs
+title: 将命令添加到解决方案资源管理器工具栏 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,39 +12,39 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2cb5c0a8aac049b7d5ff0e79843724b87e4999e4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 99a21a4dd4c39a4cefdf6be30171c503fc2ce005
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66313531"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187107"
 ---
 # <a name="add-a-command-to-the-solution-explorer-toolbar"></a>将命令添加到解决方案资源管理器工具栏
-本演练演示如何将添加到按钮**解决方案资源管理器**工具栏。
+本演练演示如何将按钮添加到**解决方案资源管理器**工具栏中。
 
- 在 Visual Studio 中，工具栏或菜单上的任何命令称为一个按钮。 当单击按钮时，将执行命令处理程序中的代码。 通常情况下，相关的命令组合在一起以形成一个组。 菜单或工具栏作为容器的组。 优先级确定菜单中或在工具栏上的组中的单个命令的显示的顺序。 您可以防止一个按钮工具栏或菜单上显示通过控制其可见性。 中列出的命令`<VisibilityConstraints>`一部分 *.vsct*文件仅在关联的上下文中出现。 可见性不能应用于组。
+ 工具栏或菜单上的任何命令均称为 Visual Studio 中的按钮。 单击该按钮时，将执行命令处理程序中的代码。 通常，相关命令组合在一起形成一个组。 菜单或工具栏充当组的容器。 优先级确定组中的单个命令在菜单或工具栏上出现的顺序。 您可以通过控制按钮的可见性来阻止工具栏或菜单上的按钮显示。 在 *.vsct*文件的 `<VisibilityConstraints>` 节中列出的命令仅显示在关联的上下文中。 可见性不能应用于组。
 
- 有关菜单、 工具栏命令的详细信息和 *.vsct*文件，请参阅[命令、 菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)。
+ 有关菜单、工具栏命令和 *.vsct*文件的详细信息，请参阅[命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)。
 
 > [!NOTE]
-> 使用 XML 命令表 ( *.vsct*) 而不是命令表配置文件 ( *.ctc*) 文件以定义菜单和命令在你的 Vspackage 中的显示方式。 有关详细信息，请参阅[Visual Studio 命令表 (。Vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)。
+> 使用 XML 命令表（ *. .vsct*）文件而不是命令表配置（ *.ctc*）文件来定义菜单和命令在你的 vspackage 中的显示方式。 有关详细信息，请参阅[Visual Studio 命令表（.Vsct）文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)。
 
-## <a name="prerequisites"></a>系统必备
- 从 Visual Studio 2015 开始，您并不安装 Visual Studio SDK 从下载中心获得。 它是作为 Visual Studio 安装程序中的可选功能包含在内。 此外可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+## <a name="prerequisites"></a>Prerequisites
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-an-extension-with-a-menu-command"></a>使用菜单命令创建扩展
- 创建一个名为的 VSIX 项目`SolutionToolbar`。 添加一个名为的菜单命令项模板**工具栏按钮**。 有关如何执行此操作的信息，请参阅[与菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
+ 创建一个名为 `SolutionToolbar`的 VSIX 项目。 添加一个名为**ToolbarButton**的菜单命令项模板。 有关如何执行此操作的信息，请参阅[使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
 
 ## <a name="add-a-button-to-the-solution-explorer-toolbar"></a>将按钮添加到解决方案资源管理器工具栏
- 本演练的本部分演示如何将添加到按钮**解决方案资源管理器**工具栏。 单击按钮时，运行中的回调方法的代码。
+ 本演练的此部分演示如何将按钮添加到**解决方案资源管理器**工具栏中。 单击该按钮时，将运行回调方法中的代码。
 
-1. 在中*ToolbarButtonPackage.vsct*文件中，转到`<Symbols>`部分。 `<GuidSymbol>`节点包含的菜单组和由包模板生成的命令。 添加`<IDSymbol>`到此节点，以声明将保存您的命令组的元素。
+1. 在*ToolbarButtonPackage. .vsct*文件中，请参阅 `<Symbols>` 部分。 "`<GuidSymbol>`" 节点包含由包模板生成的菜单组和命令。 将 `<IDSymbol>` 元素添加到此节点，以声明将保存命令的组。
 
     ```xml
     <IDSymbol name="SolutionToolbarGroup" value="0x0190"/>
     ```
 
-2. 在`<Groups>`部分中，现有组项之后, 您声明的新组中定义在上一步。
+2. 在 "`<Groups>`" 部分中，在 "现有组" 条目之后定义你在上一步中声明的新组。
 
     ```xml
     <Group guid="guidToolbarButtonPackageCmdSet"
@@ -53,9 +53,9 @@ ms.locfileid: "66313531"
           </Group>
     ```
 
-     Guid: id 对的父级设置为`guidSHLMainMenu`并`IDM_VS_TOOL_PROJWIN`放入此组**解决方案资源管理器**工具栏中，并在设置高优先级值将其放在其他命令组的后面。
+     将父 GUID： ID 对设置为 `guidSHLMainMenu` 和 `IDM_VS_TOOL_PROJWIN` 会将此组放在**解决方案资源管理器**工具栏上，设置高优先级值后，会将其放在其他命令组之后。
 
-3. 在中`<Buttons>`部分中，更改所生成的父 ID`<Button>`条目以反映您在上一步中定义的组。 已修改`<Button>`元素应如下所示：
+3. 在 `<Buttons>` 部分中，更改生成的 `<Button>` 条目的父 ID，以反映你在上一步中定义的组。 修改后的 `<Button>` 元素应如下所示：
 
     ```xml
     <Button guid="guidToolbarButtonPackageCmdSet" id="ToolbarButtonId" priority="0x0100" type="Button">
@@ -67,29 +67,29 @@ ms.locfileid: "66313531"
     </Button>
     ```
 
-4. 生成项目并启动调试。 将显示在实验实例。
+4. 生成项目并启动调试。 将显示实验实例。
 
-     **解决方案资源管理器**工具栏应显示现有按钮右侧的新建命令按钮。 该按钮的图标带删除线。
+     **解决方案资源管理器**工具栏应在现有按钮右侧显示 "新建命令" 按钮。 按钮图标是删除线。
 
-5. 单击新建按钮。
+5. 单击 "新建" 按钮。
 
-     包含消息的对话框**ToolbarButtonPackage 内 SolutionToolbar.ToolbarButton.MenuItemCallback()** 应显示。
+     应显示一个对话框，其中包含在**SolutionToolbar 中 ToolbarButtonPackage**的消息 "ToolbarButton"。
 
 ## <a name="control-the-visibility-of-a-button"></a>控制按钮的可见性
- 本演练的本部分演示如何控制工具栏上的按钮的可见性。 通过将上下文设置为中的一个或多个项目`<VisibilityConstraints>`一部分*SolutionToolbar.vsct*文件中，你可以限制按钮以显示仅当一个项目都打开。
+ 本演练的此部分演示如何控制工具栏上的按钮的可见性。 通过在*SolutionToolbar*文件的 `<VisibilityConstraints>` 部分中将上下文设置为一个或多个项目，您可以将一个按钮限制为仅在项目打开时才显示。
 
-### <a name="to-display-a-button-when-one-or-more-projects-are-open"></a>当一个或多个项目打开时显示的按钮
+### <a name="to-display-a-button-when-one-or-more-projects-are-open"></a>打开一个或多个项目时显示按钮
 
-1. 在中`<Buttons>`一部分*ToolbarButtonPackage.vsct*，将两个命令标志添加到现有`<Button>`元素之间`<Strings>`和`<Icons>`标记。
+1. 在*ToolbarButtonPackage*的 "`<Buttons>`" 部分中，将两个命令标志添加到现有 `<Button>` 元素中的 `<Strings>` 和 `<Icons>` 标记之间。
 
    ```xml
    <CommandFlag>DefaultInvisible</CommandFlag>
    <CommandFlag>DynamicVisibility</CommandFlag>
    ```
 
-    `DefaultInvisible`并`DynamicVisibility`标志必须设置操作中的该条目`<VisibilityConstraints>`部分才会生效。
+    必须设置 `DefaultInvisible` 和 `DynamicVisibility` 标志，以便 `<VisibilityConstraints>` 节中的项可以生效。
 
-2. 创建`<VisibilityConstraints>`节，其中包含两个`<VisibilityItem>`条目。 恰好在关闭后将新的部分`</Commands>`标记。
+2. 创建具有两个 `<VisibilityItem>` 条目的 `<VisibilityConstraints>` 部分。 将新部分置于结束标记 `</Commands>` 之后。
 
    ```xml
    <VisibilityConstraints>
@@ -102,19 +102,19 @@ ms.locfileid: "66313531"
    </VisibilityConstraints>
    ```
 
-    可见性的每个项表示指定的按钮显示在其下的条件。 若要应用多个条件，必须创建多个条目为相同的按钮。
+    每个可见性项表示在其下显示指定按钮的条件。 若要应用多个条件，必须为同一按钮创建多个条目。
 
-3. 生成项目并启动调试。 将显示在实验实例。
+3. 生成项目并启动调试。 将显示实验实例。
 
     **解决方案资源管理器**工具栏不包含删除线按钮。
 
 4. 打开包含项目的任何解决方案。
 
-    删除线按钮在现有按钮右侧的工具栏上显示。
+    删除线按钮显示在工具栏上的 "现有" 按钮右侧。
 
-5. 上**文件**菜单上，单击**关闭解决方案**。 从工具栏中，按钮就会消失。
+5. 在 "**文件**" 菜单上，单击 "**关闭解决方案**"。 该按钮将从工具栏中消失。
 
-   由控制按钮的可见性[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]直到加载 VSPackage。 VSPackage 加载后，由 VSPackage 控制按钮的可见性。  有关详细信息，请参阅[MenuCommands 与。OleMenuCommands](../extensibility/menucommands-vs-olemenucommands.md)。
+   在加载 VSPackage 之前，按钮的可见性由 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 控制。 加载 VSPackage 后，该按钮的可见性由 VSPackage 控制。  有关详细信息，请参阅[menucommand 与 OleMenuCommands](/visualstudio/extensibility/menucommands-vs-olemenucommands?view=vs-2015)。
 
 ## <a name="see-also"></a>请参阅
-- [命令、 菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)
+- [命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)

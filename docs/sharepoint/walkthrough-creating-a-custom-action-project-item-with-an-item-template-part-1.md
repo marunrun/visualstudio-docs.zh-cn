@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2a9370fbbd5c806bd3978e3c642da8a6dbd79fd1
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 4a114345363deb9c5ddd0f5a4141cd7d99f0ac1c
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984990"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189176"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-1"></a>演练：使用项模板创建自定义操作项目项（第1部分）
   你可以通过创建自己的项目项类型，在 Visual Studio 中扩展 SharePoint 项目系统。 在本演练中，您将创建一个可以添加到 SharePoint 项目中以在 SharePoint 站点上创建自定义操作的项目项。 自定义操作将菜单项添加到 SharePoint 网站的 "**网站操作**" 菜单。
@@ -218,7 +218,7 @@ ms.locfileid: "72984990"
     </VSTemplate>
     ```
 
-     此文件定义项模板的内容和行为。 有关此文件的内容的详细信息，请参阅[Visual Studio 模板架构参考](/visualstudio/extensibility/visual-studio-template-schema-reference)。
+     此文件定义项模板的内容和行为。 有关此文件的内容的详细信息，请参阅[Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)。
 
 4. 在**解决方案资源管理器**中，打开**ItemTemplate**项目的快捷菜单，选择 "**添加**"，然后选择 "**新建项**"。
 
@@ -455,6 +455,6 @@ ms.locfileid: "72984990"
 - [定义自定义 SharePoint 项目项类型](../sharepoint/defining-custom-sharepoint-project-item-types.md)
 - [为 SharePoint 项目项创建项模板和项目模板](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)
 - [使用 SharePoint 项目服务](../sharepoint/using-the-sharepoint-project-service.md)
-- [Visual Studio 模板架构参考](/visualstudio/extensibility/visual-studio-template-schema-reference)
+- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [图标的图像编辑器](/cpp/windows/image-editor-for-icons)
 - [为图标创建图标或其他&#40;图像图像编辑器&#41;](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)

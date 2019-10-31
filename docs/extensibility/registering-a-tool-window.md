@@ -11,15 +11,15 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2ae53481b773cfdad5d4ac70f90202fcfd9d1ad4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 34fddd6513aad612398c700b935c6d1d3ee72b59
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66334320"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73186262"
 ---
 # <a name="register-a-tool-window"></a>注册工具窗口
-您可以注册你使用的工具窗口<xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute>和<xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute>。
+您可以使用 <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> 和 <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute>注册您的工具窗口。
 
 ## <a name="example"></a>示例
 
@@ -35,4 +35,4 @@ public class PackageToolWindow : Package
 {
 ```
 
- 在上面的代码，<xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute>注册`PersistedWindowPane`和`DynamicWindowPane`工具与 Visual Studio 窗口。 保留的工具窗口停靠，并使用选项卡式**解决方案资源管理器**，并且动态窗口中将提供默认值的起始位置和大小。 由暂时的指示在启动时不创建动态窗口中。 它将写入`DontForceCreate`中的值`ToolWindows`关键系统注册表中。 有关详细信息，请参阅[工具窗口中显示配置](../extensibility/tool-window-display-configuration.md)。
+ 在上面的代码中，<xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> 向 Visual Studio 注册 `PersistedWindowPane` 和 `DynamicWindowPane` 工具窗口。 保留的工具窗口与**解决方案资源管理器**停靠在一起，并为动态窗口提供了一个默认起始位置和大小。 动态窗口被设为暂时性窗口，这表示它不是在启动时创建的。 这会在系统注册表的 `ToolWindows` 项中写入 `DontForceCreate` 值。 有关详细信息，请参阅[工具窗口显示配置](/visualstudio/extensibility/tool-window-display-configuration?view=vs-2015)。

@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d53df0bc83e2068488c8a7c919f8b76258ad827
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c1c18ec84a6a62da6cd564c69ef4b83ea76bcfd6
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72728387"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187145"
 ---
 # <a name="visualizer-security-considerations"></a>可视化工具安全注意事项
 编写可视化工具伴有可能的安全威胁。 目前尚未发现利用这些潜在威胁的攻击，但是开发人员应该密切关注此类攻击并采取此处所描述的相应安全预防措施，以防止在将来受到攻击。
@@ -39,6 +39,6 @@ ms.locfileid: "72728387"
 
 ## <a name="see-also"></a>请参阅
 - [可视化工具体系结构](../debugger/visualizer-architecture.md)
-- [如何：编写可视化工具](/visualstudio/debugger/create-custom-visualizers-of-data)
+- [如何：编写可视化工具](create-custom-visualizers-of-data.md)
 - [创建自定义可视化工具](../debugger/create-custom-visualizers-of-data.md)
 - [查看调试器中的数据](../debugger/viewing-data-in-the-debugger.md)

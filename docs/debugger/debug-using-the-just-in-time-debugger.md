@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 32a3ebd6e9047271a21425ac5b7eaaf715955b61
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: b842fa4ce7c75e061a58d980cefe5648094c2ef7
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911394"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188666"
 ---
 # <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>在 Visual Studio 中使用实时调试器进行调试
 
@@ -104,7 +104,7 @@ ms.locfileid: "72911394"
 
 本示例会在 Visual Studio 中创建 C# 控制台应用，该应用可引发 [NullReferenceException](/dotnet/api/system.nullreferenceexception)。
 
-1. 在 visual Studio 中，创建C#名为*ThrowsNullException*的控制台应用（**文件** > **新建** > **项目** > **Visual C#**  > **控制台应用程序**）。 有关在 Visual Studio 中创建项目的详细信息，请参阅[演练：创建简单的应用程序](/visualstudio/get-started/csharp/tutorial-wpf)。
+1. 在 visual Studio 中，创建C#名为*ThrowsNullException*的控制台应用（**文件** > **新建** > **项目** > **Visual C#**  > **控制台应用程序**）。 有关在 Visual Studio 中创建项目的详细信息，请参阅[演练：创建简单的应用程序](../get-started/csharp/tutorial-wpf.md)。
 
 1. 在 Visual Studio 中打开项目时，请打开 *Program.cs* 文件。 将 Main() 方法替换为以下代码，该代码会在控制台中打印一行，然后引发 NullReferenceException：
 

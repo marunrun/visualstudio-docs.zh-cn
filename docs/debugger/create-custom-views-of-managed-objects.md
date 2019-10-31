@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 196ba13b95245b8c42e6d946572665792f71346d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f5247a56667f5715d9f155c662eb333967878d71
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745638"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188649"
 ---
 # <a name="create-custom-views-of-managed-objects-c-visual-basic-f-ccli"></a>创建托管对象的自定义视图C#（、Visual Basic F#、 C++、/cli）
 可以在调试器变量窗口中自定义 Visual Studio 显示数据类型的方式。
@@ -41,10 +41,10 @@ ms.locfileid: "72745638"
 
 ## <a name="visualizers"></a>可视化工具
 
-可以编写可视化工具来显示任何托管数据类型。 有关详细信息，请参阅[如何：编写可视化工具](/visualstudio/debugger/create-custom-visualizers-of-data)。
+可以编写可视化工具来显示任何托管数据类型。 有关详细信息，请参阅[如何：编写可视化工具](create-custom-visualizers-of-data.md)。
 
 > [!NOTE]
-> 对于C++代码，可以使用 Natvis 框架添加自定义数据类型扩展，如在[调试器中创建对象的C++自定义视图](/visualstudio/debugger/create-custom-views-of-native-objects)中所述。
+> 对于C++代码，可以使用 Natvis 框架添加自定义数据类型扩展，如在[调试器中创建对象的C++自定义视图](create-custom-views-of-native-objects.md)中所述。
 
 ## <a name="see-also"></a>请参阅
 

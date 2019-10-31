@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a4667fc630d86691d95e9dc9cd205b29f7b0f525
-ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
+ms.openlocfilehash: 8467463b5a97c5bf7de1c3864ee6a5e5fc4681d1
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72349709"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188094"
 ---
 # <a name="find-your-debugging-task-in-visual-studio"></a>在 Visual Studio 中查找调试任务
 
@@ -43,11 +43,15 @@ ms.locfileid: "72349709"
 
 ### <a name="pause-code-inside-a-loop-at-a-certain-iteration"></a>在某个迭代内暂停循环内的代码
 
-将 "**命中次数**" 设置为 "条件"。 有关详细信息，请参阅[命中次数](using-breakpoints.md#hit-count)。
+将 "**命中次数**" 设置为 "条件"。 有关详细信息，请参阅[命中次数](using-breakpoints.md#set-a-hit-count-condition)。
 
 ### <a name="pause-code-at-the-start-of-a-function-when-you-know-the-function-name-but-not-its-location"></a>知道函数名称而不是其位置时，在函数开头暂停代码
 
 您可以使用函数断点执行此操作。 有关详细信息，请参阅[设置函数断点](using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file)。
+
+### <a name="pause-code-at-the-start-of-multiple-functions-with-the-same-name"></a>在具有相同名称的多个函数开始时暂停代码
+
+如果有多个具有相同名称的函数（在不同项目中重载函数或函数），则可以使用[函数断点](using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file)。
 
 ### <a name="manage-and-keep-track-of-your-breakpoints"></a>管理和跟踪断点
 
@@ -101,11 +105,15 @@ ms.locfileid: "72349709"
 
 ### <a name="edit-code-during-a-debugging-session"></a>在调试会话期间编辑代码
 
-使用 "[编辑并继续](edit-and-continue.md)"。 对于 XAML，请使用[Xaml 热重载](xaml-hot-reload.md)。
+使用 "[编辑并继续](edit-and-continue.md)"。 对于 XAML，请使用[Xaml 热重载](../xaml-tools/xaml-hot-reload.md)。
 
 ### <a name="send-messages-to-the-output-window-without-modifying-code"></a>将消息发送到 "输出" 窗口而不修改代码
 
 设置跟踪点。 有关详细信息，请参阅[使用跟踪点](using-tracepoints.md)。
+
+## <a name="view-the-order-in-which-functions-are-called"></a>查看调用函数的顺序
+
+请参阅[如何查看调用堆栈](how-to-use-the-call-stack-window.md)。
 
 ### <a name="debug-on-remote-machines"></a>在远程计算机上调试
 

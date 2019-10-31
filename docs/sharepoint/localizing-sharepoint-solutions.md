@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e6444f559902841c13a56265569a0bdc13a9ed26
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 7bcd11d7860e1d191479d4a2ea5f9fac78dcdfe2
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981717"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189218"
 ---
 # <a name="localize-sharepoint-solutions"></a>本地化 SharePoint 解决方案
 
@@ -42,7 +42,7 @@ ms.locfileid: "72981717"
 |非特定语言|一种资源文件，其中包含针对某种语言（而不是特定区域性）本地化的字符串。 例如，"fr" 表示法语。|
 |特定语言|一种资源文件，其中包含针对某种语言和区域性本地化的字符串。 例如，加拿大法语的 "fr-CA"。|
 
- 有关详细信息，请参阅[用于本地化的资源的分层组织](../ide/hierarchical-organization-of-resources-for-localization.md)。
+ 有关详细信息，请参阅[用于本地化的资源的分层组织](../ide/globalizing-and-localizing-applications.md)。
 
  若要在 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]中指定的 SharePoint 项目中指定默认资源文件，请在添加资源文件时在 "**添加资源**" 对话框的 "区域性" 列表中选择 "**固定语言（固定国家/地区）** "。
 

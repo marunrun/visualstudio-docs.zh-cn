@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 875c2578d5f8cc1aa68cc624adc0a6e2a1713472
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: e69d88bb5764836d82232cec26606009eaf694d7
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911366"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187744"
 ---
 # <a name="visual-studio-graphics-diagnostics"></a>Visual Studio 图形诊断
 Visual Studio*图形诊断*是一组用于记录和分析 Direct3D 应用中的呈现和性能问题的工具。 可对在 Windows PC 上、在 Windows 设备模拟器中或在远程 PC 或设备上本地运行的应用使用图形诊断。
@@ -38,7 +38,7 @@ Visual Studio*图形诊断*是一组用于记录和分析 Direct3D 应用中的�
 
  [捕获图形信息](capturing-graphics-information.md)若要使用图形诊断来检查应用中的呈现问题，请先记录有关应用如何使用 DirectX 的信息。 在录制会话期间，由于应用正常运行，可以“捕获”（即选择）感兴趣的帧。 包含有关如何呈现帧的详细信息的捕获。 你可以将捕获的信息另存为图形日志文档，以在稍后进行检查或与团队中的其他成员进行共享。
 
- [GPU 使用情况](gpu-usage.md)若要使用图形诊断来分析你的应用，请使用 GPU 使用情况工具。 GPU 使用情况可配合其他分析工具使用，例如 CPU 使用情况，以关联可能会在你的应用中造成问题的 CPU 和 GPU 活动。
+ [GPU 使用情况](../../profiling/gpu-usage.md)若要使用图形诊断来分析你的应用，请使用 GPU 使用情况工具。 GPU 使用情况可配合其他分析工具使用，例如 CPU 使用情况，以关联可能会在你的应用中造成问题的 CPU 和 GPU 活动。
 
  [图形日志文档](graphics-log-document.md)若要开始检查记录的图形日志，您可以使用 "图形日志文档" 窗口来选择捕获的帧（甚至是特定像素），以便您可以详细检查影响它的*事件*（即 DirectX API 调用）。
 
@@ -66,5 +66,5 @@ Visual Studio*图形诊断*是一组用于记录和分析 Direct3D 应用中的�
 
 | Title | 描述 |
 | - | - |
-| [调试器功能简介](/visualstudio/debugger/debugger-feature-tour) | 介绍 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 中的调试功能。 |
+| [调试器功能简介](../debugger-feature-tour.md) | 介绍 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 中的调试功能。 |
 | [DirectX 图形和游戏](/windows/win32/directx) | 提供讨论 DirectX 图形技术的文章。 |
