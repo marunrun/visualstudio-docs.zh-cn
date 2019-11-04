@@ -8,12 +8,12 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 385d58834aa96a3ad9e2002020dd1ce4fda3c87f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1132a7a0363e2d508d6eff1026192aad3407fca4
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63000010"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189250"
 ---
 # <a name="work-with-r-in-visual-studio"></a>在 Visual Studio 中使用 R
 
@@ -41,18 +41,18 @@ R 是用于统计计算和图形的高度可扩展语言和环境。 它是使�
 | [交互窗口](interactive-repl-for-r-in-visual-studio.md) | 提供 R 的完整 REPL 体验，以便可以在交互窗口内轻松运行源文件中的代码。 | n/a |
 | [可视化数据](visualizing-data-with-r-in-visual-studio.md) | 绘图是 R 体验不可或缺的一部分，RTVS 支持使用多个独立绘图窗口（每个窗口均有各自的历史记录）和跨窗口移动绘图功能。 可以将绘图保存为位图和 PDF 文件，也可以将绘图以位图或元文件的形式复制到剪贴板中。  | n/a |
 | [变量资源管理器](variable-explorer.md) | 在全局或包特定范围中检查变量，同时还允许查看可排序的表，并将其导出为 CSV 格式。 | n/a |
-| [功能完备的调试](debugging-r-in-visual-studio.md) | 包括与交互窗口的集成。 | [在 Visual Studio 中进行调试](/visualstudio/debugger/debugger-feature-tour) |
+| [功能完备的调试](debugging-r-in-visual-studio.md) | 包括与交互窗口的集成。 | [在 Visual Studio 中进行调试](../debugger/debugger-feature-tour.md) |
 
 另请参阅[常见问题](faq.md)。
 
 |   |   |
 |---|---|
-| ![视频的摄像机图标](../install/media/video-icon.png "观看视频") | [观看视频 (youtube.com)](https://www.youtube.com/watch?v=dll3IS1bfWQ)，获取有关用于 Visual Studio 的 R 工具的概述（12 分 36 秒）。 另请参阅[更多 R 工具视频](https://www.youtube.com/results?search_query=R+Tools+for+visual+studio)。 |
+| ![视频摄影机图标](../install/media/video-icon.png "观看视频") | [观看视频 (youtube.com)](https://www.youtube.com/watch?v=dll3IS1bfWQ)，获取有关用于 Visual Studio 的 R 工具的概述（12 分 36 秒）。 另请参阅[更多 R 工具视频](https://www.youtube.com/results?search_query=R+Tools+for+visual+studio)。 |
 
 ## <a name="send-us-your-feedback"></a>向我们发送反馈！
 
-1. **GitHub 问题**：联系 RTVS 团队的最佳方式是[在 GitHub 中上报问题](https://github.com/Microsoft/RTVS/issues)或使用“R 工具” > “反馈”菜单。
+1. **GitHub 问题**：联系 RTVS 团队的最佳方式是[在 GitHub 中上报问题](https://github.com/Microsoft/RTVS/issues)或使用“R 工具”   > “反馈”  菜单。
 
-1. **发送一个笑脸/哭脸图标**：使用“R 工具” > “反馈”菜单，可以快速发送反馈，并附加 RTVS 日志文件，以帮助我们诊断所遇到的问题。 （如果要单独发送，请将日志写入 %temp%/RTVSlogs.zip。）如果已使用“帮助” > “反馈” > “设置”菜单命令或在安装期间选择禁用了 Visual Studio 遥测，日志记录也会被禁用。
+1. **发送一个笑脸/哭脸图标**：使用“R 工具” > “反馈”菜单，可以快速发送反馈，并附加 RTVS 日志文件，以帮助我们诊断所遇到的问题   。 （如果要单独发送，请将日志写入 %temp%/RTVSlogs.zip。  ）如果已使用“帮助” > “反馈” > “设置”菜单命令或在安装期间选择禁用了 Visual Studio 遥测，日志记录也会被禁用    。
 
 1. **电子邮件**：可以直接向团队发送反馈，地址是 *rtvsuserfeedback (at) microsoft.com*。
