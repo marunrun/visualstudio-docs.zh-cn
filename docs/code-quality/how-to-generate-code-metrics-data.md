@@ -11,12 +11,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 37f208421079f77cadaf85556e00a8f8548c6182
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 55f9904c95be45c7f293355340c814faafb5de2b
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188808"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568839"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>如何：生成代码度量数据
 
@@ -35,7 +35,7 @@ ms.locfileid: "73188808"
 - [CA1501](ca1501-avoid-excessive-inheritance.md)
 - [CA1502](ca1502.md)
 - [CA1505](ca1505-avoid-unmaintainable-code.md)
-- [CA1506](ca1506-avoid-excessive-class-coupling.md)
+- [CA1506](ca1506.md)
 
 默认情况下，这些规则是禁用的，但你可以从[**解决方案资源管理器**](use-roslyn-analyzers.md#set-rule-severity-from-solution-explorer)或[规则集](using-rule-sets-to-group-code-analysis-rules.md)文件中启用它们。 例如，若要启用规则 CA1502 作为警告，你的文件将包含以下条目：
 

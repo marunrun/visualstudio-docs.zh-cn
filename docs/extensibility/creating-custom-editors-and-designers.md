@@ -11,12 +11,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 08d9ee33d49985fed8e8c0180fa652aed39b25d9
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 7a6cb0d70566eaabb2ba37cb209041e03684c958
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73186817"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568886"
 ---
 # <a name="create-custom-editors-and-designers"></a>创建自定义编辑器和设计器
 
@@ -59,7 +59,7 @@ Visual Studio 集成开发环境（IDE）可以托管不同类型的编辑器：
 
 - 您的编辑器是否需要承载 ActiveX 控件？
 
-   如果编辑器承载 ActiveX 控件，则按[就地激活](../extensibility/in-place-activation.md)中所述，实现就地激活编辑器。 如果它没有承载 ActiveX 控件，则使用简化的嵌入编辑器，或自定义 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 默认编辑器。
+   如果编辑器承载 ActiveX 控件，则按[就地激活](/visualstudio/misc/in-place-activation?view=vs-2015)中所述，实现就地激活编辑器。 如果它没有承载 ActiveX 控件，则使用简化的嵌入编辑器，或自定义 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 默认编辑器。
 
 - 编辑器是否支持多个视图？ 如果希望编辑器的视图与默认编辑器同时可见，则必须支持多个视图。
 

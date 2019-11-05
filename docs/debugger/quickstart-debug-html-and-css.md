@@ -17,12 +17,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: 12f66658cd8069f58355a96b2c3b3031a4cb6808
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 75bdfe55d516deb34872007a9461a286b4d742e0
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73187568"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568917"
 ---
 # <a name="debug-html-and-css-in-uwp-apps-in-visual-studio"></a>在 Visual Studio 中调试 UWP 应用中的 HTML 和 CSS
 
@@ -182,7 +182,7 @@ DOM 资源管理器展示所呈现的页面的视图，还可使用 DOM 资源�
 14. 在主窗口中，双击 "`width: 100px;height: 100px;`"，按**Delete**键，然后按**enter**。 按 Enter 后，新值会立即反映在应用中，但你尚未停止调试会话。
 
     > [!IMPORTANT]
-    > 你不但可以在“DOM 资源管理器”窗口中更新特性，还可更新 **“样式”** 、 **“已计算”** 和 **“布局”** 选项卡上显示的值。 有关详细信息，请参阅[使用 Dom 资源管理器调试 CSS 样式](../debugger/debug-css-styles-using-dom-explorer.md)和[使用 Dom 资源管理器调试布局](quickstart-debug-html-and-css.md)。
+    > 你不但可以在“DOM 资源管理器”窗口中更新特性，还可更新 **“样式”** 、 **“已计算”** 和 **“布局”** 选项卡上显示的值。
 
 15. 通过选择该应用程序或通过使用 Alt + Tab 切换到该应用程序。
 
@@ -255,6 +255,7 @@ DOM 资源管理器展示所呈现的页面的视图，还可使用 DOM 资源�
 > 指针悬停在元素上方时突出显示的元素在 Windows Phone 模拟器中仅部分受支持。
 
 ## <a name="see-also"></a>请参阅
+
 - [在 Visual Studio 中调试应用](debugging-windows-store-and-windows-universal-apps.md)
 - [刷新应用 (JavaScript)](../debugger/refresh-an-app-javascript.md)
 - [调试 WebView 控件](../debugger/debug-a-webview-control.md)

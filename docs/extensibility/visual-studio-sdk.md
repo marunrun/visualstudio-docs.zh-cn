@@ -14,12 +14,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 662b64f69b278c4cc815a742c5cba26592e000bd
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 73c14c61702ec978d8ffec896b13204c238762a2
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189086"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568827"
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
 Visual Studio SDK 可帮助你扩展 Visual Studio 的功能，或将新功能集成到 Visual Studio 中。 可以将扩展分发给其他用户以及 Visual Studio Marketplace。 以下是一些扩展 Visual Studio 的方式：
@@ -77,7 +77,7 @@ Visual Studio SDK 可帮助你扩展 Visual Studio 的功能，或将新功能�
 
 - [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)
 - [如何：将扩展性项目迁移到 Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)
-- [常见问题解答：将外接程序转换为 VSPackage 扩展](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md)
+- [常见问题解答：将外接程序转换为 VSPackage 扩展](/visualstudio/extensibility/faq-converting-add-ins-to-vspackage-extensions?view=vs-2015)
 - [在托管代码中管理多个线程](../extensibility/managing-multiple-threads-in-managed-code.md)
 - [扩展菜单和命令](../extensibility/extending-menus-and-commands.md)
 - [将命令添加到工具栏](../extensibility/adding-commands-to-toolbars.md)

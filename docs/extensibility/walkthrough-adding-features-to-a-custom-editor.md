@@ -10,12 +10,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c5ea1c1bfa34399f4a2428aec2f51f97c9884216
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 5fa926b21171c3e09b5a0f4d74e9415da090bf2f
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189058"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73569080"
 ---
 # <a name="walkthrough-add-features-to-a-custom-editor"></a>演练：向自定义编辑器添加功能
 创建自定义编辑器后，可以向其添加更多功能。
@@ -38,7 +38,7 @@ ms.locfileid: "73189058"
 
 4. 决定您是否希望编辑器使用就地激活或简化嵌入来管理文档视图对象窗口。
 
-     简化的嵌入编辑器窗口承载标准文档视图，而就地激活编辑器窗口承载 ActiveX 控件或其他活动对象作为其文档视图。 有关详细信息，请参阅[简化的嵌入](../extensibility/simplified-embedding.md)和[就地激活](../extensibility/in-place-activation.md)。
+     简化的嵌入编辑器窗口承载标准文档视图，而就地激活编辑器窗口承载 ActiveX 控件或其他活动对象作为其文档视图。 有关详细信息，请参阅[简化的嵌入](../extensibility/simplified-embedding.md)和[就地激活](/visualstudio/misc/in-place-activation?view=vs-2015)。
 
 5. 实现用于处理命令的 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 接口。
 
