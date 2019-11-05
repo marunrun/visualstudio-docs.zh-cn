@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ac04f7ef5d7ad445bec470b3d019418a3bec1f7b
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 4ceea00a3fa77a9c1106f24f28ac1d5890437b41
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188893"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568969"
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>Visual Studio 的颜色和样式
 
@@ -340,7 +340,7 @@ Windows 使用多个高对比度系统级主题，这些主题提高了文本、
 
 VSPackage 可以通过自定义类别和 "字体和颜色" 属性页上的 "显示项目" 来控制字体和颜色。 使用此机制时，Vspackage 必须实现[IVsFontAndColorDefaultsProvider](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider)接口及其关联接口。
 
-原则上，此机制可用于修改所有现有显示项以及包含它们的类别。 但是，它不应用于修改 "文本编辑器" 类别或其显示项。 有关 "文本编辑器" 类别的详细信息，请参阅 "[字体和颜色概述](../font-and-color-overview.md)"。
+原则上，此机制可用于修改所有现有显示项以及包含它们的类别。 但是，它不应用于修改 "文本编辑器" 类别或其显示项。 有关 "文本编辑器" 类别的详细信息，请参阅 "[字体和颜色概述](/visualstudio/extensibility/font-and-color-overview?view=vs-2015)"。
 
 若要实现自定义类别或显示项，VSPackage 必须：
 
