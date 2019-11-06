@@ -28,12 +28,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 242daf82d405af4b3a1e529633fb82651aa6bdc9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 693e0d206455c2c430f8d723f131868fdf21eefc
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666622"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189552"
 ---
 # <a name="options-text-editor-xaml-miscellaneous"></a>选项, 文本编辑器, XAML, 杂项
 
@@ -52,7 +52,7 @@ ms.locfileid: "72666622"
 
 ## <a name="errors-and-warnings"></a>错误和警告
 
-使用此设置控制何时自动生成错误和警告。 有关详细信息，请参阅 [XAML 错误和警告](../../designers/xaml-errors-warnings.md)。
+使用此设置控制何时自动生成错误和警告。 有关详细信息，请参阅 [XAML 错误和警告](../../xaml-tools/xaml-errors-warnings.md)。
 
 ## <a name="see-also"></a>请参阅
 

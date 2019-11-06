@@ -14,21 +14,21 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b03b1350b4125262bedfd7fa5284c13d6d38a2e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 259b4089e4a54dbde4cc8b30a3da2899ad37a85a
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62822897"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189295"
 ---
 # <a name="vsinstr-warnings"></a>VSInstr 警告
-下表列出了由 VSInstr.exe 工具发出的警告。 可使用 NOWARN 选项及警告编号来禁止显示警告。
+下表列出了由 VSInstr.exe 工具发出的警告  。 可使用 NOWARN 选项及警告编号来禁止显示警告。
 
 |警告编号|说明|
 |--------------------|-----------------|
-|**VSP1026**|不引用 MSCorLib 的库不支持覆盖率。 这通常是可移植库会遇到的情况。<br /><br />.NET Core 需要 [/EnableCodeCoverage](/visualstudio/test/vstest-console-options) 命令行选项。|
+|**VSP1026**|不引用 MSCorLib 的库不支持覆盖率。 这通常是可移植库会遇到的情况。<br /><br />.NET Core 需要 [/EnableCodeCoverage](../test/vstest-console-options.md) 命令行选项。|
 |**VSP2000**|内部错误。 无法获取此可执行文件的模块文件名。|
-|**VSP2001**|\<程序集名称> 是强名称程序集。 必须先对其重新签名，然后才能执行它。<br /><br /> 当检测到签名程序集时，将发出此警告。 可使用 sn.exe 工具重新签名二进制，或暂时关闭强名称要求。 有关详细信息，请参阅 [Sn.exe （强名称工具）](/dotnet/framework/tools/sn-exe-strong-name-tool)。|
+|**VSP2001**|\<程序集名称> 是强名称程序集。 必须先对其重新签名，然后才能执行它。<br /><br /> 当检测到签名程序集时，将发出此警告。 可使用 sn.exe 工具重新签名二进制，或暂时关闭强名称要求  。 有关详细信息，请参阅 [Sn.exe （强名称工具）](/dotnet/framework/tools/sn-exe-strong-name-tool)。|
 |**VSP2002**|未能在文件 \<文件名> 中找到函数 \<函数名><br /><br /> 如果无法在指定文件中找到某个函数，将出现此警告。|
 |**VSP2003**|未能在文件 \<文件名> 中找到任何指向函数 \<函数名> 的交叉跳转。<br /><br /> 如果 VSInstr 无法置空交叉跳转，将出现此警告。 交叉跳转用于代码优化。|
 |**VSP2004**|已通过 EXCLUDE 命令行开关排除了函数 \<函数名>，但因为该函数包含交叉跳转，所以仍需要它。<br /><br /> 如果使用 EXCLUDE 选项排除了函数，但在检测过程中仍需要该函数，则将出现此警告。 探查器会自动包括所需的函数。|

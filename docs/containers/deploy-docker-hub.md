@@ -8,12 +8,12 @@ ms.devlang: dotnet
 ms.topic: article
 ms.date: 07/23/2019
 ms.author: ghogen
-ms.openlocfilehash: 267e0c1ed1ac3911aad2161f186bf4a482f069b6
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: b033825bbe8facbeae3dcdee6a5b563461921522
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "71126021"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188744"
 ---
 # <a name="deploy-to-docker-hub"></a>部署到 Docker Hub
 
@@ -45,7 +45,7 @@ Docker Hub 为映像存储库提供了一种便利的托管服务。 可以轻�
 
 ## <a name="next-steps"></a>后续步骤
 
-请按照[部署到 Azure 容器注册表](vs-azure-tools-docker-hosting-web-apps-in-docker.md)中的步骤发布到 [Azure 容器注册表](/azure/container-registry/)。
+请按照[部署到 Azure 容器注册表](hosting-web-apps-in-docker.md)中的步骤发布到 [Azure 容器注册表](/azure/container-registry/)。
 
 使用 [Azure Pipelines](/azure/devops/pipelines/?view=azure-devops) 设置持续集成和持续交付 (CI/CD)。
 

@@ -8,12 +8,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b7794b4dd300cf66ea894227f9346e80ee68085
-ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
+ms.openlocfilehash: b8cc1ea22c5cdbe85bf1d24d1641709c5fe5da7a
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72924498"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187130"
 ---
 # <a name="get-started-with-wpf"></a>WPF 入门
 
@@ -26,7 +26,7 @@ Windows Presentation Foundation (WPF) 是一个可创建桌面客户端应用程
 |Subject|文章|
 |-|-|
 |我希望直接开始使用...|[演练：我的第一个 WPF 桌面应用程序](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application)|
-|我想比较 XAML 设计工具...|[在 Visual Studio 和 Blend for Visual Studio 中设计 XAML](../designers/designing-xaml-in-visual-studio.md)|
+|我想比较 XAML 设计工具...|[在 Visual Studio 和 Blend for Visual Studio 中设计 XAML](../xaml-tools/designing-xaml-in-visual-studio.md)|
 |是否是初次使用 .NET？|[.NET 指南](/dotnet/standard/)<br /><br />[应用程序要点](/dotnet/standard/application-essentials)<br /><br />[Visual C# 入门](../ide/quickstart-csharp-console.md)|
 |有关 WPF 的详细信息...|[WPF 概述](/dotnet/framework/wpf/introduction-to-wpf)<br /><br />[XAML 概述 (WPF)](/dotnet/framework/wpf/advanced/xaml-overview-wpf)<br /><br />[控件](/dotnet/framework/wpf/controls/)<br /><br />[数据绑定概述](/dotnet/desktop-wpf/data/data-binding-overview)<br /><br />[使用 LINQ to XML 进行 WPF 数据绑定](/dotnet/framework/wpf/data/wpf-data-binding-with-linq-to-xml-overview)|
 |是否是 Windows 窗体开发人员？|[Windows 窗体控件和等效的 WPF 控件](/dotnet/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls)<br /><br />[WPF 和 Windows 窗体互操作中受支持的方案](/dotnet/framework/wpf/advanced/wpf-and-windows-forms-interoperation)|

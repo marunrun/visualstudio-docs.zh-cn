@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.topic: overview
 ms.date: 03/20/2019
 ms.technology: vs-azure
-ms.openlocfilehash: badb06b8c3eea5158054ba4c32f72e51dae0d60d
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: b60e5df4d94c290ca8aa7bf56471b5fed6c1879a
+ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816355"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568897"
 ---
 # <a name="container-tools-in-visual-studio"></a>Visual Studio 中的容器工具
 
@@ -148,6 +148,6 @@ Visual Studio 与 Azure Pipelines 轻松集成，以便自动完成服务代码�
 
 有关服务实现以及将 Visual Studio 工具用于容器的更多详细信息，请阅读以下文章：
 
-[Debugging apps in a local Docker container](vs-azure-tools-docker-edit-and-refresh.md)（在本地 Docker 容器中调试应用）
+[Debugging apps in a local Docker container](edit-and-refresh.md)（在本地 Docker 容器中调试应用）
 
-[使用 Visual Studio 将 ASP.NET 容器部署到容器注册表](vs-azure-tools-docker-hosting-web-apps-in-docker.md)
+[使用 Visual Studio 将 ASP.NET 容器部署到容器注册表](hosting-web-apps-in-docker.md)

@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c76fd1d18b41073bf92ed18dadeeeb3a90c9209
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 20804e6ada568828ea1850ae249d9bf0d24855e0
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433614"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189279"
 ---
 # <a name="walkthrough-command-line-profiling-using-sampling"></a>演练：使用采样进行命令行分析
 
@@ -33,7 +33,7 @@ ms.locfileid: "63433614"
 
 - [!INCLUDE[csharp_current_short](../misc/includes/csharp_current_short_md.md)] 中级理解
 - 使用命令行工具的中级理解
-- [PeopleTrax 示例](/visualstudio/profiling/performance-explorer)的副本
+- [PeopleTrax 示例](performance-explorer.md)的副本
 - 若要使用分析提供的信息，最好有可用的调试符号信息。
 
 ## <a name="command-line-profiling-using-the-sampling-method"></a>使用采样方法进行命令行分析
@@ -57,19 +57,19 @@ ms.locfileid: "63433614"
     VSPerfCLREnv /sampleon
     ```
 
-5. 通过运行 VSPerfCmd.exe 开始进行分析，此工具是控制探查器的命令行工具。 以下命令在采样模式下启动应用程序和探查器：
+5. 通过运行 VSPerfCmd.exe 开始进行分析，此工具是控制探查器的命令行工具  。 以下命令在采样模式下启动应用程序和探查器：
 
     ```cmd
     VsPerfCmd /start:sample /output:PeopleTraxReport.vsp /launch:PeopleTrax.exe
     ```
 
-     探查器进程启动，并附加到 PeopleTrax.exe 进程。 探查器进程开始将收集的分析数据写入报表文件。
+     探查器进程启动，并附加到 PeopleTrax.exe 进程  。 探查器进程开始将收集的分析数据写入报表文件。
 
-6. 单击“获取人员”。
+6. 单击“获取人员”  。
 
-7. 单击“导出数据”。
+7. 单击“导出数据”  。
 
-     记事本随即打开并显示其中包含从“PeopleTrax”导出的数据的新文件。
+     记事本随即打开并显示其中包含从“PeopleTrax”  导出的数据的新文件。
 
 8. 关闭记事本，然后关闭 **PeopleTrax** 应用程序。
 
@@ -85,13 +85,13 @@ ms.locfileid: "63433614"
     VSPerfCLREnv /sampleoff
     ```
 
-11. 分析数据存储在 .vsp 文件中。使用以下任一种方法分析结果：
+11. 分析数据存储在 .vsp 文件中。使用以下任一种方法分析结果  ：
 
-    - 在 Visual Studio IDE 中打开 .vsp 文件。
+    - 在 Visual Studio IDE 中打开 .vsp 文件  。
 
          — 或 —
 
-    - 通过使用命令行工具 VSPerfReport.exe 生成逗号分隔值 (.csv) 文件。 若要生成在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]IDE 外部使用的报表，请使用以下命令：
+    - 通过使用命令行工具 VSPerfReport.exe 生成逗号分隔值 (.csv) 文件   。 若要生成在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]IDE 外部使用的报表，请使用以下命令：
 
         ```cmd
         VSPerfReport <dir> PeopleTraxReport.vsp /output:<dir> /summary:all

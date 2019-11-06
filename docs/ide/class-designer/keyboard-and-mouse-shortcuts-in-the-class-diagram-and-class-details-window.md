@@ -13,12 +13,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7fa62baf020751a175b24f47a93b3e7280fb76fc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a755de4df0cd7402debbc964d2f3f9c54802eb85
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647653"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188968"
 ---
 # <a name="keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window"></a>类图和“类详细信息”窗口中的键盘快捷方式和鼠标快捷方式
 
@@ -105,4 +105,4 @@ ms.locfileid: "72647653"
 - [创建和配置类型成员](creating-and-configuring-type-members.md)
 - [如何以独占方式使用键盘](../reference/how-to-use-the-keyboard-exclusively.md)
 - [Visual Studio 中的默认键盘快捷方式](../default-keyboard-shortcuts-in-visual-studio.md)
-- [Blend 中的键盘快捷键](../../designers/keyboard-shortcuts-in-blend.md)
+- [Blend 中的键盘快捷键](../../xaml-tools/keyboard-shortcuts-in-blend.md)
