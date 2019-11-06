@@ -11,12 +11,12 @@ dev_langs:
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3b01d088618c07f1a3ff24aff2386584ebfad060
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 91f80d648450447a6ba0e80f10e5c39764445cef
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72983683"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189304"
 ---
 # <a name="welcome-to-the-visual-studio-ide--python"></a>欢迎使用 Visual Studio IDE | Python
 
@@ -26,7 +26,7 @@ Visual Studio“集成开发环境”是面向 Python （和其他语言）的�
 
 此图像显示 Visual Studio 中含有一个打开的 Python 项目和若干重要的工具窗口：
 
-- 可通过[解决方案资源管理器](../ide/solutions-and-projects-in-visual-studio.md)（右上方）查看、导航和管理代码文件  。 解决方案资源管理器可将代码文件分组为[解决方案和项目](/visualstudio/get-started/tutorial-projects-solutions)，从而帮助整理代码  。
+- 可通过[解决方案资源管理器](../ide/solutions-and-projects-in-visual-studio.md)（右上方）查看、导航和管理代码文件  。 解决方案资源管理器可将代码文件分组为[解决方案和项目](../get-started/tutorial-projects-solutions.md)，从而帮助整理代码  。
   - 除“解决方案资源管理器”外，还有[“Python 环境”](managing-python-environments-in-visual-studio.md)，可在其中管理计算机上安装的不同 Python 解释器   。
 
   ::: moniker range=">=vs-2019"

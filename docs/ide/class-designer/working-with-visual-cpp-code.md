@@ -18,12 +18,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75faa3e4d38f961c38b23a95765d6466e008714f
-ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
+ms.openlocfilehash: 228785c218b1c55a1af817761821acbe11a51c8d
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919050"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188960"
 ---
 # <a name="work-with-c-code-in-class-designer"></a>在类设计器中使用 C++ 代码
 
@@ -46,7 +46,7 @@ ms.locfileid: "72919050"
 - Typedef
 
 > [!NOTE]
-> 与 UML 类图不同的时你可以在建模项目中创建。 有关详细信息，请参阅 [UML 类图：参考](../../modeling/create-uml-modeling-projects-and-diagrams.md)。
+> 与 UML 类图不同的时你可以在建模项目中创建。 有关详细信息，请参阅 [UML 类图：参考](../../modeling/what-s-new-for-design-in-visual-studio.md)。
 
 ## <a name="troubleshoot-type-resolution-and-display-issues"></a>类型解析和显示问题的疑难解答
 

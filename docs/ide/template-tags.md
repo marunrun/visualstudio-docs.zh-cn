@@ -13,12 +13,12 @@ helpviewer_keywords:
 - updating templates [Visual Studio]
 - template tagging, updating
 - template tags, updating
-ms.openlocfilehash: 417b171a731224302e6dd2efa55b45d84455ca4b
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.openlocfilehash: 37fa5449847eb4c093475df11a07decb31168f1f
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67891140"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189541"
 ---
 # <a name="add-tags-to-project-templates"></a>向项目模板添加标签
 
@@ -40,9 +40,9 @@ ms.locfileid: "67891140"
 
 执行以下任意操作时，可能需要在项目模板的 .vstemplate  XML 中添加或编辑标签：
 
-* 使用“导出模板”向导[创建新的项目模板](/visualstudio/ide/how-to-create-project-templates)。
-* [更新现有项目模板](/visualstudio/ide/how-to-update-existing-templates)。
-* [创建新的 VSIX 项目模板](/visualstudio/extensibility/getting-started-with-the-vsix-project-template)。
+* 使用“导出模板”向导[创建新的项目模板](how-to-create-project-templates.md)。
+* [更新现有项目模板](how-to-update-existing-templates.md)。
+* [创建新的 VSIX 项目模板](../extensibility/getting-started-with-the-vsix-project-template.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -147,7 +147,7 @@ Visual Studio 提供了一系列内置标签。 添加内置标签时，标签�
 
 ## <a name="see-also"></a>请参阅
 
-- [Visual Studio 模板架构参考](/visualstudio/extensibility/visual-studio-template-schema-reference)
-- [创建项目和项模板](/visualstudio/ide/creating-project-and-item-templates)
-- [自定义项目和项模板](/visualstudio/ide/customizing-project-and-item-templates)
-- [VSIX 项目模板入门](/visualstudio/extensibility/getting-started-with-the-vsix-project-template)
+- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [创建项目和项模板](creating-project-and-item-templates.md)
+- [自定义项目和项模板](customizing-project-and-item-templates.md)
+- [VSIX 项目模板入门](../extensibility/getting-started-with-the-vsix-project-template.md)

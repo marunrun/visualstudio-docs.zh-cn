@@ -8,12 +8,12 @@ manager: jillfra
 ms.technology: vs-azure
 ms.workload:
 - azure
-ms.openlocfilehash: 45397ddf21f1ea1d735c2753864e5954850a4d98
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 8b6aef437519a4fe92f11a3b21546b3dda9981bb
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "71126111"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188768"
 ---
 # <a name="get-started-with-visual-studio-kubernetes-tools"></a>Visual Studio Kubernetes 工具入门
 
@@ -137,7 +137,7 @@ Visual Studio Kubernetes 工具有助于简化面向 Kubernetes 的容器化应�
 
    ![“发布”菜单项的屏幕截图](media/tutorial-kubernetes-tools/k8s-tools-publish-project.png)
 
-2. 在“发布”屏幕中，对于发布目标，选择“容器注册表”，然后按照提示选择容器注册表   。 如果还没有容器注册表，请选择“新建 Azure 容器注册表”，从 Visual Studio 创建容器注册表  。 有关详细信息，请参阅[将容器发布到 Azure 容器注册表](vs-azure-tools-docker-hosting-web-apps-in-docker.md)。
+2. 在“发布”屏幕中，对于发布目标，选择“容器注册表”，然后按照提示选择容器注册表   。 如果还没有容器注册表，请选择“新建 Azure 容器注册表”，从 Visual Studio 创建容器注册表  。 有关详细信息，请参阅[将容器发布到 Azure 容器注册表](hosting-web-apps-in-docker.md)。
 
    ![“选取发布目标”屏幕的屏幕截图](media/tutorial-kubernetes-tools/k8s-tools-publish-to-acr.png)
 

@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.topic: conceptual
 ms.date: 03/20/2019
 ms.technology: vs-azure
-ms.openlocfilehash: f05eb5d92c0cdaa1242f0d98c3d877eebae27bb1
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 0ae81ed19a7fa8a967a3f9c3fe83c9f0d9e3ae51
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253150"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188772"
 ---
 # <a name="how-to-configure-visual-studio-container-tools"></a>如何配置 Visual Studio 容器工具
 
@@ -71,4 +71,4 @@ ms.locfileid: "71253150"
 
 ## <a name="next-steps"></a>后续步骤
 
-通过此[概述](visual-studio-tools-for-docker.md)详细了解如何使用 Visual Studio 中的容器。
+通过此[概述](overview.md)详细了解如何使用 Visual Studio 中的容器。
