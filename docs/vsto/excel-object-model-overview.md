@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 29ede9dd29952e87e7f1dd76875905973bada6a6
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: cf81dea230c2cfc33eb19ca001d8c9ed06b0489c
+ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986091"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73661849"
 ---
 # <a name="excel-object-model-overview"></a>Excel 对象模型概述
   若要开发使用 Microsoft Office Excel 的解决方案，可与由 Excel 对象模型提供的对象进行交互。 本主题介绍最重要的对象：
@@ -103,7 +103,7 @@ ms.locfileid: "72986091"
  有关 Excel 对象模型的完整信息，可以参考 Excel 主互操作程序集 (PIA) 引用和 VBA 对象模型引用。
 
 ### <a name="primary-interop-assembly-reference"></a>主互操作程序集引用
- Excel PIA 参考文档介绍 Excel 的主互操作程序集中的类型。 此文档可从以下位置获取： [Excel 2010 主互操作程序集引用](/visualstudio/vsto/office-primary-interop-assemblies&view=vs-2019)。
+ Excel PIA 参考文档介绍 Excel 的主互操作程序集中的类型。 此文档可从以下位置获取： [Excel 2010 主互操作程序集引用](/visualstudio/vsto/office-primary-interop-assemblies)。
 
  有关 Excel PIA 设计的详细信息（例如 PIA 中类和接口之间的差异以及如何实现 PIA 中的事件），请参阅[Office 主互操作程序集中的类和接口的概述](/previous-versions/office/office-12/ms247299(v=office.12))。
 

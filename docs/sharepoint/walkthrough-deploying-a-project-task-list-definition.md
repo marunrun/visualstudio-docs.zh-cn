@@ -12,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 854037d096ceac01969bcb0ec2e074f4cd24a2f3
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: c0b7f1b0668af8218017c5cc96712384ed5f275c
+ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72983852"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73661871"
 ---
 # <a name="walkthrough-deploy-a-project-task-list-definition"></a>演练：部署项目任务列表定义
 
@@ -138,7 +138,7 @@ ms.locfileid: "72983852"
 
 在 Visual Studio 菜单栏上，选择 "**生成** > **部署解决方案**"。
 
-Visual Studio 将回收 IIS 应用程序池，收回解决方案的任何现有版本，将解决方案包（*.wsp*）文件复制到 SharePoint，然后激活其功能。 你现在可以在 SharePoint 中使用该解决方案。 有关部署配置步骤的详细信息，请参阅[如何：编辑 SharePoint 部署配置](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md)。
+Visual Studio 将回收 IIS 应用程序池，收回解决方案的任何现有版本，将解决方案包（ *.wsp*）文件复制到 SharePoint，然后激活其功能。 你现在可以在 SharePoint 中使用该解决方案。 有关部署配置步骤的详细信息，请参阅[如何：编辑 SharePoint 部署配置](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md)。
 
 ### <a name="to-deploy-the-project-task-list-to-a-remote-system"></a>将项目任务列表部署到远程系统
 
@@ -172,7 +172,7 @@ Visual Studio 将回收 IIS 应用程序池，收回解决方案的任何现有�
 
 - [如何：创建事件接收器](../sharepoint/how-to-create-an-event-receiver.md)
 
-- [Windows PowerShell for SharePoint Server 2010](/powershell/module/sharepoint-server/&view=sharepoint-ps)
+- [Windows PowerShell for SharePoint Server 2010](/powershell/module/sharepoint-server)
 
 ## <a name="see-also"></a>请参阅
 [打包和部署 SharePoint 解决方案](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
