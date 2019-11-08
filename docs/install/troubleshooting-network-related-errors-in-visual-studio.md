@@ -1,7 +1,7 @@
 ---
 title: 网络或代理错误的疑难解答
 description: 为在防火墙或代理服务器后安装或使用 Visual Studio 时可能会遇到的网络或代理相关错误查找解决方案。
-ms.date: 05/22/2019
+ms.date: 10/29/2019
 ms.topic: troubleshooting
 helpviewer_keywords:
 - network installation, Visual Studio
@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 7879efca149c31fbe3114b0ddfcba2f2a347f5e6
-ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
+ms.openlocfilehash: fbdacb265d39c9aff96fed37c69c684aa3f8503b
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062791"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189463"
 ---
 # <a name="troubleshoot-network-related-errors-when-you-install-or-use-visual-studio"></a>安装或使用 Visual Studio 时与网络相关错误的疑难解答
 
@@ -132,6 +132,19 @@ Visual Studio 使用传输层安全性 (TLS) 1.2 协议连接到网络资源。 
 
   > [!NOTE]
   > 此列表可能未包含私人拥有的 NuGet 服务器 URL。 你可以检查在 %APPData%\Nuget\NuGet.Config 中使用的 NuGet 服务器。
+
+## <a name="error-failed-to-parse-id-from-parent-process"></a>错误：“无法从父进程分析 ID”
+
+在网络驱动器上使用 Visual Studio 引导程序和 response.json 文件时，可能会遇到此错误消息。 错误的来源是 Windows 中的用户帐户控制 (UAC)。
+
+下面是可能出现此错误的原因：映射的网络驱动器或 [UNC](/dotnet/standard/io/file-patch-formats#unc-paths) 共享已链接到用户的访问令牌。 启用 UAC 后，将创建两个用户[访问令牌](/windows/win32/secauthz/access-tokens)：一个具有管理员访问权限，另一个不具有管理员访问权限   。 创建网络驱动器或共享后，用户的当前访问令牌会链接到该网络驱动器或共享。 因为必须以管理员身份运行引导程序，所以如果驱动器或共享未链接到具有管理员访问权限的用户访问令牌，则无法访问网络驱动器或共享。
+
+### <a name="to-fix-this-error"></a>修复此错误的方法
+
+可以使用 `net use` 命令，也可以更改 UAC 组策略设置。 有关这些解决方法以及如何实现它们的详细信息，请参阅以下 Microsoft 支持文章：
+
+* [在 Windows 中将 UAC 配置为“提示输入凭据”时，在权限提升的提示符下无法获取映射的驱动器](https://support.microsoft.com/help/3035277/mapped-drives-are-not-available-from-an-elevated-prompt-when-uac-is-co)
+* [在 Windows 操作系统中打开用户帐户控制后，程序可能无法访问某些网络位置](https://support.microsoft.com/en-us/help/937624/programs-may-be-unable-to-access-some-network-locations-after-you-turn)
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

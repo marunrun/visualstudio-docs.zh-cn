@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: ac150e20b505a5ef4446e77761790a6111fb6c10
-ms.sourcegitcommit: 9c07ae6fb18204ea080c8248994a683fa12e5c82
+ms.openlocfilehash: 12b8f29f80f80a4322dc6a4cf43061696db6f370
+ms.sourcegitcommit: 4b911e768601992ad42dd5911dc6a01e1fe48588
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293512"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73413566"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>在防火墙或代理服务器后面安装和使用 Visual Studio 和 Azure 服务
 
@@ -51,6 +51,7 @@ ms.locfileid: "70293512"
 | download.microsoft.com | 安装包下载位置 |
 | download.visualstudio.com | 安装包下载位置 |
 | dl.xamarin.com | 安装包下载位置 |
+| xamarin-downloads.azureedge.net | Android SDK 包下载列表位置 |
 | marketplace.visualstudio.com | Visual Studio 扩展下载位置 |
 | visualstudio.microsoft.com | 文档位置 |
 | docs.microsoft.com | 文档位置 |

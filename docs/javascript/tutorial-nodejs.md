@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: bfb5f28763e4f95a2713e67543fca35398536fa9
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: ecc14e4dc98caa17ac3849e9231ab17491f2acc8
+ms.sourcegitcommit: 2f64b3b231900018fceafb72b5a1c65140213a18
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180302"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73428781"
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>教程：在 Visual Studio 中创建 Node.js 和 Express 应用
 
@@ -183,6 +183,8 @@ IntelliSense 是一款可帮助编写代码的 Visual Studio 工具。
 1. 将光标置于 `data` 字符串后，键入 `: get`，IntelliSense 将显示之前在代码中定义的 `getData` 函数。 选择 `getData`。
 
     ![使用 IntelliSense](../javascript/media/tutorial-nodejs-intellisense.png)
+
+1. 添加括号，使其成为函数调用 `getData()`。
 
 1. 删除 `"data"` 前的逗号 (`,`)，将看到针对该表达式的绿色语法突出显示。 将鼠标悬停在语法突出显示上。
 

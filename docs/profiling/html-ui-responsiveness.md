@@ -17,12 +17,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: 8dac5c929289b9a891f7dc5cb1bf803e1abd5b3a
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: a483d1382ea1f67c14aa4674016331bfe0f76e7d
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826116"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189369"
 ---
 # <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>分析中通用 Windows 应用中的 HTML UI 响应能力
 本主题介绍如何使用 UI 响应能力探查器（一种可用于 Windows 通用应用的性能工具）隔离应用中的性能问题。
@@ -69,7 +69,7 @@ ms.locfileid: "67826116"
 6. 若要停止分析探查器收集的应用程序和视图数据，请选择 **“停止收集”** 。
 
 ## <a name="isolate-an-issue"></a>隔离问题
- 下一节会提供帮助你隔离性能问题的建议。 有关如何通过使用样本性能测试应用来标识和修复性能问题的分步说明，请参阅[演练：改进 UI 响应能力 (HTML)](/visualstudio/profiling/html-ui-responsiveness)。
+ 下一节会提供帮助你隔离性能问题的建议。 有关如何通过使用样本性能测试应用来标识和修复性能问题的分步说明，请参阅[演练：改进 UI 响应能力 (HTML)](html-ui-responsiveness.md)。
 
 ### <a name="Workflow"></a> 隔离 UI 响应能力问题
  以下是建议的工作流步骤，可帮助你更有效地使用 UI 响应能力探查器：
@@ -167,7 +167,7 @@ if (performance.mark && performance.measure) {
 
  持续时间度量在时间线详细信息视图中显示为 **“用户测量”** 事件，并且在选中时显示详细信息。
 
- ![时间线详细视图中的用户评估事件](../profiling/media/js_htmlvizprofiler_user_measure.png "JS_HTMLVizProfiler_User_Measure")
+ ![时间线详细视图中的用户测量事件](../profiling/media/js_htmlvizprofiler_user_measure.png "JS_HTMLVizProfiler_User_Measure")
 
 ## <a name="analyze-data"></a>分析数据
  以下各节提供了有助于解释在探查器中显示的数据的信息。
@@ -274,7 +274,7 @@ if (performance.mark && performance.measure) {
 ### <a name="FilterTimelineDetails"></a> 筛选时间线详细信息
  通过从指定事件的上下文菜单中选择 **“筛选到事件”** ，可以在时间线详细信息中将视图筛选到特定事件。 当选择此选项时，时间线和网格视图的范围限于所选事件。 “CPU 使用率”图中选定内容的范围也限于特定事件。
 
- ![从时间线筛选事件](../profiling/media/js_htmlvizprofiler_filtertoevent.png "JS_HTMLVizProfiler_FilterToEvent")
+ ![筛选事件的时间线](../profiling/media/js_htmlvizprofiler_filtertoevent.png "JS_HTMLVizProfiler_FilterToEvent")
 
 ### <a name="FilterEvents"></a> 筛选事件
  可以从“时间线详细信息”图中筛选出一些事件以对数据降噪，或为性能方案去除不相关的数据。 你可以按事件名称或事件持续时间或者此处所述的特定筛选器来进行筛选。

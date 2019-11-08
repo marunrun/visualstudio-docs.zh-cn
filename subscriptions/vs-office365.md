@@ -6,16 +6,19 @@ manager: lank
 ms.date: 08/02/2019
 ms.topic: conceptual
 description: 了解一些 Visual Studio 订阅中随附的 Office 365 权益。
-ms.openlocfilehash: 65a071cbfcdc31ca2ef8a36ac5a779fc99467c17
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: 58bfed3de99e3a3fa0a46e084ea566ae0451c47f
+ms.sourcegitcommit: bdccab4c2dbd50ea8adaaf88c69c9ca32db88099
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816458"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73144715"
 ---
 # <a name="office-365-proplus-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Office 365 专业增强版
 
 出色地完成工作。 使用不断更新的应用随时随地工作。 Office 365 专业增强版订阅随附以下高级应用：Word、Excel、PowerPoint、OneNote、Outlook、Publisher 和 Access（Publisher 和 Access 仅适用于电脑）。 这些应用可安装在多台设备上，包括 PC、Mac、iPad、iPhone、Android 平板电脑和 Android 手机。 借助订阅，可获取最新版应用，并自动接收已发布的更新。
+
+> [!NOTE]
+> Visual Studio 订阅允许将 Office 365 用于生产用途。  
 
 ## <a name="getting-started-with-office-365-proplus"></a>开始使用 Office 365 专业增强版
 
@@ -42,10 +45,6 @@ ms.locfileid: "72816458"
    > ![Office 365：输入产品密钥](_img/vs-office365/vs-office365-enter-key.png)
 0. 再次单击“下一步”  。
 0. 单击“安装”  ，以安装 Office 应用。
-
-## <a name="next-steps"></a>后续步骤
-
-如果你打算开发 Office 应用，建议激活 [Office 开发人员订阅](vs-office-dev.md)
 
 ## <a name="eligibility"></a>资格
 
@@ -75,4 +74,4 @@ ms.locfileid: "72816458"
 请务必激活这些重要权益以充分利用 Visual Studio 订阅：
 - [Visual Studio](vs-ide-benefit.md)
 - [Azure DevOps](vs-azure-devops.md)
-- [Azure 开发测试个人额度](vs-azure.md)
+- [Azure 开发测试个人额度](vs-azure.md) 如果你打算开发 Office 应用，建议激活 [Office 开发人员订阅](vs-office-dev.md)
