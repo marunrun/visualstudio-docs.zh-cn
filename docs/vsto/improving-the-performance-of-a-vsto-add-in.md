@@ -10,12 +10,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 564672e01eeffbdcb53bf1af08f329d2f6bf218f
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: dd7b8f7b88040c7b80dcc6c40dc168a51890d8d2
+ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985774"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73661839"
 ---
 # <a name="improve-the-performance-of-a-vsto-add-in"></a>提高 VSTO 外接程序的性能
   可以通过优化为 Office 应用程序创建的 VSTO 外接程序为用户提供更好的体验，以便他们快速启动、关闭和打开项，以及执行其他任务。 如果你的 VSTO 外接程序是用于 Outlook 的，则还可以降低由于性能不佳而禁用 VSTO 外接程序的风险。 可以通过实现以下策略来提高 VSTO 外接程序的性能：
@@ -28,7 +28,7 @@ ms.locfileid: "72985774"
 
 - [在单独的执行线程中执行成本高昂的操作](#Perform)。
 
-  有关如何优化 Outlook VSTO 外接程序的详细信息，请参阅[使 VSTO 外接程序保持启用状态的性能标准](/previous-versions/office/jj228679(v=office.15)#ol15WhatsNew_AddinDisabling)。
+  有关如何优化 Outlook VSTO 外接程序的详细信息，请参阅[使 VSTO 外接程序保持启用状态的性能标准](/previous-versions/office/jj228679(v=office.15)#performance-criteria-for-keeping-add-ins-enabled)。
 
 ## <a name="Load"></a> 按需加载 VSTO 外接程序
  可以将 VSTO 外接程序配置为仅在下列情况下加载：

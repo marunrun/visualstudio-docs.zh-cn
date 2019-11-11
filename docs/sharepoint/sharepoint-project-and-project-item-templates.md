@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 825e985820ac7a4d72bf321133491e312adb0a0e
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 762fce80ad1e97f700af0768cdb68251a3ee8017
+ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981952"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73661864"
 ---
 # <a name="sharepoint-project-and-project-item-templates"></a>SharePoint 项目和项目项模板
   以下各节描述了可用的 SharePoint 项目和项目项模板以及如何使用它们。
@@ -71,7 +71,7 @@ ms.locfileid: "72981952"
  若要查看 SharePoint 项目项模板，请在**解决方案资源管理器**中打开 sharepoint 项目的快捷菜单，然后选择 "**添加**"、"**新建项**"。 展开 "**视觉对象C#**  " 或 " **Visual Basic**" 下的 " **SharePoint** " 节点，然后选择 " **2010**"。
 
 ### <a name="application-page-farm-solution-only"></a>应用程序页（仅场解决方案）
- **应用程序页（仅场解决方案）** 项可用于设计 SharePoint 站点的 [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] 网页。 应用程序页只能在场解决方案中使用。 只能将此项目项添加到场解决方案。 有关详细信息，请参阅[如何：](../sharepoint/how-to-create-an-application-page.md) 和[应用程序 _Layouts 页面类型](/previous-versions/office/aa979604(v=office.14))创建应用程序页。
+ **应用程序页（仅场解决方案）** 项可用于设计 SharePoint 站点的 [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] 网页。 应用程序页只能在场解决方案中使用。 只能将此项目项添加到场解决方案。 有关详细信息，请参阅[如何：](../sharepoint/how-to-create-an-application-page.md) 和[应用程序 _Layouts 页类型](/previous-versions/office/aa979604(v=office.14))创建应用程序页。
 
 ### <a name="business-data-connectivity-model-farm-solution-only"></a>业务数据连接模型（仅场解决方案）
  "**业务数据连接模型（仅场解决方案）** " 项可用于将业务数据集成到 SharePoint 中。 业务数据可以来自后端服务器应用程序，如 [!INCLUDE[ssNoVersion](../sharepoint/includes/ssnoversion-md.md)]、Siebel 和服务广告协议（SAP）。 业务数据连接模型只能用于场解决方案。 只能将此项目项添加到场解决方案。 有关详细信息，请参阅[如何：](../sharepoint/how-to-create-a-bdc-model.md)创建 BDC 模型，[如何：使用资源文件指定本地化名称、属性和权限](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md)，并 [新增内容：Business Connectivity Services](/previous-versions/office/developer/sharepoint-2010/ee534979(v=office.14))。
@@ -132,7 +132,7 @@ ms.locfileid: "72981952"
  *状态机工作流*是一组业务逻辑状态、转换和操作。 不按顺序执行状态机工作流中的步骤;相反，它们由操作和状态触发。 与顺序工作流一样，状态机工作流与 SharePoint 项（如列表和文档）相关联。 同样，您可以创建站点级（全局）工作流或列表级别（本地）工作流。 你还可以选择工作流是自动启动还是手动启动。 此项目项只能用于场解决方案。 只能将此项目项添加到场解决方案。 有关详细信息，请参阅[创建 sharepoint 工作流解决方案](../sharepoint/creating-sharepoint-workflow-solutions.md)、 [sharepoint Server 2010 中的工作流](/previous-versions/office/developer/sharepoint-2010/ms549489(v=office.14))和 [新增功能：工作流改进](/previous-versions/office/developer/sharepoint-2010/ee537015(v=office.14))。
 
 ### <a name="user-control-farm-solution-only"></a>用户控件（仅场解决方案）
- *用户控件*是一个自定义的可重用控件，可以将其他 ASP.NET 控件和 SharePoint 控件添加到该控件。 用户控件可以添加到在 SharePoint 中运行的应用程序页和 web 部件。 此项目项只能用于场解决方案。 只能将此项目项添加到场解决方案。 有关详细信息，请参阅为[Web 部件或应用程序页创建可重用控件](/visualstudio/sharepoint/creating-reusable-controls-for-web-parts-or-application-pages&view=vs-2019)。
+ *用户控件*是一个自定义的可重用控件，可以将其他 ASP.NET 控件和 SharePoint 控件添加到该控件。 用户控件可以添加到在 SharePoint 中运行的应用程序页和 web 部件。 此项目项只能用于场解决方案。 只能将此项目项添加到场解决方案。 有关详细信息，请参阅为[Web 部件或应用程序页创建可重用控件](/visualstudio/sharepoint/creating-reusable-controls-for-web-parts-or-application-pages)。
 
 ### <a name="visual-web-part"></a>可视 web 部件
  *可视 web 部件*项目项包括*元素 .xml*定义文件、 **Web 部件**项和**用户控件**项。 您可以通过将控件从 Visual Studio "工具箱" 拖放到用户控件的表面上来设计可视 web 部件的外观。 有关详细信息，请参阅[如何：使用设计器创建 SharePoint web 部件](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md) 和 [构建基块：Web 部件](/previous-versions/office/developer/sharepoint-2010/ee535520(v=office.14))。

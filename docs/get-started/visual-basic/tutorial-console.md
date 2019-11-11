@@ -14,12 +14,12 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: eb0bbc0cdf7aff548053c813cdf1b29ed1fed080
-ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
+ms.openlocfilehash: 9606b02cb26e8e0ad37f490e330e7d81f3089e27
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913305"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188995"
 ---
 # <a name="tutorial-get-started-with-visual-basic-in-visual-studio"></a>教程：Visual Studio 中的 Visual Basic 入门
 
@@ -148,7 +148,7 @@ ms.locfileid: "70913305"
      Console.WriteLine(vbCrLf + "What is your name? ")
      Dim name = Console.ReadLine()
      Dim currentDate = DateTime.Now
-     Console.WriteLine($"{vbCrLf}Hello, {name}, on {currentDate:d} at {currentDate:t}")
+     Console.WriteLine($"{vbCrLf}Hello, {name}, on {currentDate:d} at {currentDate:t}!")
      Console.Write(vbCrLf + "Press any key to exit... ")
      Console.ReadKey(True)
     ```
@@ -208,7 +208,7 @@ ms.locfileid: "70913305"
 
 1. 应用语言和平台筛选器之后，选择“控制台应用(.NET Core)”模板，然后选择“下一步”   。
 
-   然后在“配置新项目”窗口中，在“项目名称”框中键入或输入“WhatIsYourName”    。 接下来，选择“创建”  。
+   然后，在“配置新项目”窗口中，在“项目名称”框中键入或输入“CalculateThis”    。 接下来，选择“创建”  。
 
 1. 在 `Module Program` 行和 `End Module` 行之间输入以下代码：
 

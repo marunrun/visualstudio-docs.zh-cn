@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: eb822a275f55b8c0f833f0c284aba2fd663a27fd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d26211f566bb8f683f3b38deade4f13defe9cb01
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62974444"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189502"
 ---
 # <a name="how-to-define-settings-in-a-response-file"></a>如何在响应文件中定义设置
 
@@ -159,3 +159,4 @@ vs_enterprise.exe --in customInstall.json
 ## <a name="see-also"></a>请参阅
 
 * [Visual Studio 工作负荷和组件 ID](workload-and-component-ids.md)
+* [安装或使用 Visual Studio 时与网络相关错误的疑难解答](troubleshooting-network-related-errors-in-visual-studio.md)

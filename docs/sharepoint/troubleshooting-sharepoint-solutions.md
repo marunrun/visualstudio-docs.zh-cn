@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 046f3bbca7b66d14e9b6a3eae96b613492292be0
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: fcb30056021a865d0b0e605de462ff72ced5a383
+ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189197"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73661887"
 ---
 # <a name="troubleshoot-sharepoint-solutions"></a>SharePoint 解决方案疑难解答
   使用 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 调试器调试 SharePoint 解决方案时，可能会出现以下问题或警报。 有关详细信息，请参阅[调试 SharePoint 2007 工作流解决方案](https://msdn.microsoft.com/3a5392f3-66f3-48be-956e-02de23fa6247)。
@@ -172,9 +172,9 @@ ms.locfileid: "73189197"
 ### <a name="resolution"></a>解决方法
  若要解决此问题，请手动删除该模型，然后重新部署该解决方案。  您可以使用下列任一工具删除该模型：
 
-- SharePoint 2010 管理中心。 有关详细信息，请参阅 Microsoft TechNet 网站上的[BDC 模型管理](/previous-versions/office/sharepoint-server-2010/ee524073(v=office.14)#deleteamodel)。
+- SharePoint 2010 管理中心。 有关详细信息，请参阅 Microsoft TechNet 网站上的[BDC 模型管理](/previous-versions/office/sharepoint-server-2010/ee524073(v=office.14)#delete-a-bdc-model)。
 
-- Windows PowerShell。 您可以通过在命令提示符下键入以下命令来删除该模型： **SPBusinessDataCatalogModel**。 有关详细信息，请参阅 Microsoft TechNet 网站上的[常规 cmdlet （SharePoint Server 2010）](/powershell/module/sharepoint-server/&view=sharepoint-ps) 。
+- Windows PowerShell。 您可以通过在命令提示符下键入以下命令来删除该模型： **SPBusinessDataCatalogModel**。 有关详细信息，请参阅 Microsoft TechNet 网站上的[常规 cmdlet （SharePoint Server 2010）](/powershell/module/sharepoint-server) 。
 
 ## <a name="an-error-appears-when-you-try-to-view-a-visual-web-part-in-sharepoint"></a>尝试在 SharePoint 中查看可视 web 部件时出现错误
  如果用户控件的**Path**属性不以字符串 "CONTROLTEMPLATES\\" 开头，则会出现此问题。

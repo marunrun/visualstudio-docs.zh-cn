@@ -13,12 +13,13 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 1259f92b89fc6d83bb0b7296cc07844bf25df705
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+monikerRange: vs-2017
+ms.openlocfilehash: 0fc78a84d0c2f86e8db6c4703cc7404a32508d72
+ms.sourcegitcommit: bdccab4c2dbd50ea8adaaf88c69c9ca32db88099
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71128325"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73144736"
 ---
 # <a name="analyze-energy-use-in-uwp-apps"></a>分析 UWP 应用中的能量使用
 
@@ -90,7 +91,7 @@ if (performance && performance.mark) {
 
 1. 在“调试”  菜单中，选择  “启动诊断（不调试）”。
 
-     ![在诊断中心中选择“能量消耗”](../profiling/media/energyprof_diagnosticshub.png "ENERGYPROF_DiagnosticsHub")
+     ![在诊断中心选择“能量消耗”](../profiling/media/energyprof_diagnosticshub.png "ENERGYPROF_DiagnosticsHub")
 
 2. 选择 **“能耗”** ，然后选择 **“启动”** 。
 
@@ -125,12 +126,12 @@ if (performance && performance.mark) {
 
 |||
 |-|-|
-|![第 1 步](../profiling/media/procguid_1.png "ProcGuid_1")|报告文件名为 Report*YYYYMMDD-HHMM*.diagsession。 如果你决定保存此报告，可以更改此名称。|
-|![第 2 步](../profiling/media/procguid_2.png "ProcGuid_2")|时间线显示分析会话的长度、应用程序生命周期激活事件以及用户标记。|
-|![第 3 步](../profiling/media/procguid_3.png "ProcGuid_3")|你可以通过拖动蓝色条选择时间线的一个区域，将报告限制到这一部分时间线内。|
-|![第 4 步](../profiling/media/procguid_4.png "ProcGuid_4")|**“电源使用”** 图是一个多线图，显示分析会话期间由设备资源导致的功率输出的变化。 “能量消耗”探查器可跟踪 CPU、网络活动和屏幕显示所使用的功率。|
-|![第 5 步](../profiling/media/procguid_6.png "ProcGuid_6")|**“资源(打开/关闭)”**  图提供网络能量成本的详细信息。 **“网络”** 条表示网络连接的打开时间。 **“数据传输”** 子条为应用程序通过网络接收或发送数据的时间。|
-|![第 6 步](../profiling/media/procguid_6a.png "ProcGuid_6a")|**“能量使用率摘要”** 按比例显示选定时间线内 CPU、网络活动和屏幕显示使用的总能量。|
+|![步骤 1](../profiling/media/procguid_1.png "ProcGuid_1")|报告文件名为 Report*YYYYMMDD-HHMM*.diagsession。 如果你决定保存此报告，可以更改此名称。|
+|![步骤 2](../profiling/media/procguid_2.png "ProcGuid_2")|时间线显示分析会话的长度、应用程序生命周期激活事件以及用户标记。|
+|![步骤 3](../profiling/media/procguid_3.png "ProcGuid_3")|你可以通过拖动蓝色条选择时间线的一个区域，将报告限制到这一部分时间线内。|
+|![步骤 4](../profiling/media/procguid_4.png "ProcGuid_4")|**“电源使用”** 图是一个多线图，显示分析会话期间由设备资源导致的功率输出的变化。 “能量消耗”探查器可跟踪 CPU、网络活动和屏幕显示所使用的功率。|
+|![步骤 5](../profiling/media/procguid_6.png "ProcGuid_6")|**“资源(打开/关闭)”**  图提供网络能量成本的详细信息。 **“网络”** 条表示网络连接的打开时间。 **“数据传输”** 子条为应用程序通过网络接收或发送数据的时间。|
+|![步骤 6](../profiling/media/procguid_6a.png "ProcGuid_6a")|**“能量使用率摘要”** 按比例显示选定时间线内 CPU、网络活动和屏幕显示使用的总能量。|
 
  **分析能量分布曲线数据**
 

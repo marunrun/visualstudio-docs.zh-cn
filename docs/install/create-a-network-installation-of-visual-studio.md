@@ -1,7 +1,7 @@
 ---
 title: 创建基于网络的安装
 description: 了解如何创建用于在企业中部署 Visual Studio 的网络安装点。
-ms.date: 10/11/2019
+ms.date: 10/29/2019
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: fcc4a3d3d99deab62971c40b26c9a4252367438f
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: ca393af528abc7f685ceca83ac4c59ebb75dedfe
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516324"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189489"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>创建 Visual Studio 的网络安装
 
@@ -88,8 +88,9 @@ ms.locfileid: "72516324"
 
 ## <a name="modify-the-responsejson-file"></a>修改 response.json 文件
 
-可以通过修改 response.json 来设置用户在运行安装程序时使用的默认值。  例如，可以通过配置 `response.json` 文件来选择一组自动选定的特定工作负载。
-有关详细信息，请参阅[通过响应文件自动执行 Visual Studio 安装](automated-installation-with-response-file.md)。
+可以通过修改 response.json 来设置用户在运行安装程序时使用的默认值。  例如，可以通过配置 `response.json` 文件来选择一组自动选定的特定工作负载。 有关详细信息，请参阅[通过响应文件自动执行 Visual Studio 安装](automated-installation-with-response-file.md)。
+
+而且，如果在将 Visual Studio 引导程序与 response.json 文件配对时遇到错误，请参阅[安装或使用 Visual Studio 时与网络相关错误的疑难解答](troubleshooting-network-related-errors-in-visual-studio.md#error-failed-to-parse-id-from-parent-process)页面的“无法从父进程分析 ID”部分，以获取有关解决方法的详细信息。
 
 ## <a name="copy-the-layout-to-a-network-share"></a>将布局复制到网络共享
 
@@ -219,7 +220,7 @@ vs_enterprise.exe --layout c:\VSLayout --all
 
 > [!IMPORTANT]
 > 为了防止错误出现，请确保完整布局路径的长度小于 80 个字符。
->
+
 > [!TIP]
 > 如果作为批处理文件的一部分执行，`--wait` 选项可确保 `vs_enterprise.exe` 进程先等待安装完成，再返回退出代码。
 >
@@ -287,6 +288,7 @@ vs_enterprise.exe --layout c:\VSLayout --all
 
 - [Visual Studio 管理员指南](visual-studio-administrator-guide.md)
 - [更新基于网络的 Visual Studio 安装](update-a-network-installation-of-visual-studio.md)
+- [安装或使用 Visual Studio 时与网络相关错误的疑难解答](troubleshooting-network-related-errors-in-visual-studio.md)
 - [控制对基于网络的 Visual Studio 部署的更新](controlling-updates-to-visual-studio-deployments.md)
 - [Visual Studio 产品生命周期和维护](/visualstudio/releases/2019/servicing/)
 - [在维修基线上更新 Visual Studio](update-servicing-baseline.md)
