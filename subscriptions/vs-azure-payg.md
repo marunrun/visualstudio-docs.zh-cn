@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/30/2019
 ms.topic: conceptual
 description: 了解如何设置 Azure 即用即付帐户。
-ms.openlocfilehash: 6a2d4eab9ecc0adb6a89d87ceccb45b1472142b9
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: 851ebd4a3218cada7af5ac139a7297094abde0c6
+ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68681148"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816405"
 ---
 # <a name="azure-devtest-pay-as-you-go-subscriptions"></a>Azure 开发/测试即用即付订阅
 与团队在云中协作。  创建多个开发和测试即用即付订阅，这样可与其他订阅者进行协作，并将团队与环境隔离。  可享受针对开发/测试的专享优惠小时费率，还可获得 Azure 上订阅软件的云使用权限。
@@ -21,7 +21,7 @@ ms.locfileid: "68681148"
    > [!div class="mx-imgBorder"]
    > ![Azure PAYG 磁贴](_img/vs-azure-payg/vs-azure-payg-tile.png)
 
-2. 如果已经激活 Azure 帐户享受订阅权益（例如，如果已具有企业订阅并且已经激活每月 150 美元的 Azure 信用额度），请跳到步骤 5。
+2. 如果已经激活 Azure 帐户享受订阅权益（例如，如果已具有企业订阅并且已经激活每月 150 美元的 Azure 开发测试个人额度），请跳到步骤 5。
 
 3. 在 Microsoft Azure 注册页上，可以选择设置即用即付开发/测试服务 (PAYG)，也可升级到 Visual Studio Enterprise 服务。  如果不希望升级，请单击“继续使用当前服务(即用即付开发/测试)”  。
 
@@ -44,7 +44,7 @@ ms.locfileid: "68681148"
 4. 现在，你将具有管理或取消订阅、重命名订阅、更改目录或转让帐单所有权的选项。
 
 ## <a name="next-steps"></a>后续步骤
-许多订阅包含其他 Azure 相关权益，例如 Azure DevOps 和 Azure 信用额度等。  有关这些权益的详细信息，请参阅：
+许多订阅包含其他 Azure 相关权益，例如 Azure DevOps 和 Azure 开发测试个人额度等。  有关这些权益的详细信息，请参阅：
 - [Azure DevOps](vs-azure-devops.md)
-- [Azure 信用额度](vs-azure.md)
+- [Azure 开发测试个人额度](vs-azure.md)
 

@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1271752a32a2f42eca93ae3f6861a923a6055cd2
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: 0493e7d16a7c7ecb7a9cf7d414e3bd13cb9ad9a7
+ms.sourcegitcommit: f9f389e72787de30eb869a55ef7725a10a4011f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68681281"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73636577"
 ---
 # <a name="common-msbuild-project-items"></a>常用的 MSBuild 项目项
 在 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 中，项是对一个或多个文件的命名引用。 项包含元数据（如文件名、路径和版本号）。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中的所有项目类型具有几个通用项。 在文件 Microsoft.Build.CommonTypes.xsd 中定义了这些项  。
@@ -131,6 +131,16 @@ ms.locfileid: "68681281"
 | 可见 | 可选的布尔值。 指示是否要在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中的“解决方案资源管理器”  中显示文件。 |
 | CopyToOutputDirectory | 可选的字符串。 确定是否将文件复制到输出目录。 值为：<br /><br /> 1.Never<br />2.Always<br />3.PreserveNewest |
 
+### <a name="assemblymetadata"></a>AssemblyMetadata
+ 表示要生成为 `[AssemblyMetadata(key, value)]` 的程序集特性。
+
+| 项元数据名称 | 说明 |
+|-----------------------| - |
+| 包括 | 成为 `AssemblyMetadataAttribute` 特性构造函数中的第一个参数（键）。 |
+| 值 | 必选字符串。 成为 `AssemblyMetadataAttribute` 特性构造函数中的第二个参数（值）。 |
+
+> [!NOTE]
+> 这仅适用于使用 .NET Core SDK 的项目。
 ### <a name="baseapplicationmanifest"></a>BaseApplicationManifest
  表示用于生成的基本应用程序清单，包含 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署安全信息。
 

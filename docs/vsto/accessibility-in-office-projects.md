@@ -15,16 +15,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e7b80db6f8f54c897a370d53db56773ad8296f6e
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 8bd74f4d61c74a4dc348f7a615e103b283a15fc0
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71255783"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189622"
 ---
 # <a name="accessibility-in-office-projects"></a>Office 项目中的辅助功能
 
-Microsoft Visual Studio 和 Microsoft Office 包括许多辅助功能，使你能够构建满足标准辅助功能要求的自定义解决方案。 Microsoft 公布了 Web 上的辅助功能指导原则。 有关详细信息，请参阅[辅助功能网站](http://go.microsoft.com/fwlink/?LinkID=37113)。
+Microsoft Visual Studio 和 Microsoft Office 包括许多辅助功能，使你能够构建满足标准辅助功能要求的自定义解决方案。 Microsoft 公布了 Web 上的辅助功能指导原则。 有关详细信息，请参阅[辅助功能网站](https://www.microsoft.com/accessibility/)。
 
 在大多数情况下，Visual Studio 中的 Office 项目都符合辅助功能标准或公开可设置为使解决方案可访问的属性。 但有些功能的可访问性有限。
 
@@ -48,7 +48,7 @@ Microsoft Visual Studio 和 Microsoft Office 包括许多辅助功能，使你�
 
      此时将显示一条消息，指出必须重新启动 Visual Studio 才能使更改生效。
 
-4. 单击 **“确定”** 。
+4. 单击“确定”。
 
 5. 重新启动 Visual Studio，然后重新打开项目。
 
@@ -65,7 +65,7 @@ Microsoft Visual Studio 和 Microsoft Office 包括许多辅助功能，使你�
 
 - 不能从一个控件向另一个控件进行 tab。
 
-- 将文档的缩放设置更改为 100% 之外的任何内容时，将禁用文档上的控件。
+- 将文档的缩放设置更改为100% 之外的任何内容时，将禁用文档上的控件。
 
   有关文档上 Windows 窗体控件的限制的信息，请参阅[Office 文档中 Windows 窗体控件的限制](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)。
 
@@ -78,7 +78,7 @@ Microsoft Visual Studio 和 Microsoft Office 包括许多辅助功能，使你�
 
 Visual Studio 具有以下与显示模式相关的限制：
 
-- 将文档的缩放设置更改为 100% 之外的任何内容时，将禁用 Word 文档或 Excel 工作表上的控件。
+- 将文档的缩放设置更改为100% 之外的任何内容时，将禁用 Word 文档或 Excel 工作表上的控件。
 
 - 如果用户将计算机的辅助功能选项更改为**使用高对比度**，则 "**新建项目**" 对话框不会正确显示控件。
 
@@ -88,5 +88,5 @@ Visual Studio 具有以下与显示模式相关的限制：
 
 - [开发 Office 解决方案](../vsto/developing-office-solutions.md)
 - [Office 文档上的控件](../vsto/controls-on-office-documents.md)
-- [为残障人士提供的辅助功能](../ide/reference/accessibility-for-people-with-disabilities.md)
+- [为残障人士提供的辅助功能](../ide/reference/accessibility-features-of-visual-studio.md)
 - [Visual Studio 的辅助功能](../ide/reference/accessibility-features-of-visual-studio.md)

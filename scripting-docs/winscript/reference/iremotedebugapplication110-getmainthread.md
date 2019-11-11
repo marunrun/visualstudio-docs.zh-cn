@@ -13,15 +13,15 @@ caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ff99c43f633da8454eb5fa32463886877e06ed72
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: a8e4ae024429702f3268a01c1e2e1fb4b40294d8
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72574124"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985290"
 ---
 # <a name="iremotedebugapplication110getmainthread"></a>IRemoteDebugApplication110::GetMainThread
-返回调用[SetSite](http://go.microsoft.com/fwlink/?LinkId=232439)的主机的主线程，否则返回 E_FAIL。  
+返回调用[SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite)的主机的主线程，否则返回 E_FAIL。  
   
 > [!IMPORTANT]
 > [IRemoteDebugApplication 接口](../../winscript/reference/iremotedebugapplication-interface.md)由 PDM 11.0 和更高版本实现。 在 activdbg100.h 中发现。  

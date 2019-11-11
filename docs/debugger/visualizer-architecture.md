@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c92723a1b6abb371b44f1793f9ea5b1f8ad3bca
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a6dfbc8c57ff2e78bf0c6ebbd4e9899c372d7084
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72728474"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187157"
 ---
 # <a name="visualizer-architecture"></a>可视化工具体系结构
 调试器可视化工具的结构由两部分组成：
@@ -86,7 +86,7 @@ ms.locfileid: "72728474"
 |<xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.TransferData%2A><br /><br /> \- 或 -<br /><br /> <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.TransferObject%2A>|<xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.TransferData%2A>|
 
 ## <a name="see-also"></a>请参阅
-- [如何：编写可视化工具](/visualstudio/debugger/create-custom-visualizers-of-data)
+- [如何：编写可视化工具](create-custom-visualizers-of-data.md)
 - [演练：用 C# 编写可视化工具](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)
 - [演练：用 Visual Basic 编写可视化工具](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)
 - [演练：用 Visual Basic 编写可视化工具](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)

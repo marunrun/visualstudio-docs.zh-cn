@@ -15,16 +15,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ed0f396613cea4ec2b6d9869e3ef1b121cac236b
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 00af44212dd142dd94629f886a50b9646488af3b
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66747375"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747271"
 ---
 # <a name="msbuild-task-reference"></a>MSBuild 任务参考
 
-任务提供在生成过程中运行的代码。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 提供以下列表中的任务。 安装 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 时，可使用其他任务来生成 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 项目。 有关详细信息，请参阅 [Visual C++ 任务](../msbuild/msbuild-tasks-specific-to-visual-cpp.md)。
+任务提供在生成过程中运行的代码。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 提供以下列表中的任务。 安装 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 时，可使用其他任务来生成 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 项目。 有关详细信息，请参阅 [C++ 任务](../msbuild/msbuild-tasks-specific-to-visual-cpp.md)。
 
 除了此部分各主题中列出的参数外，每项任务还有下列参数：
 

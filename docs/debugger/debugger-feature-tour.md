@@ -1,9 +1,9 @@
 ---
 title: 初探调试器
 description: 开始使用 Visual Studio 调试器调试应用程序
-ms.custom: seoapril2019
+ms.custom: ''
 ms.date: 04/08/2019
-ms.topic: quickstart
+ms.topic: tutorial
 helpviewer_keywords:
 - debugger
 ms.assetid: c763d706-3213-494f-b4d2-990b6e1ec456
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 06665aa6a30d67e27f654e92029dcbd3d2aea2ef
-ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
+ms.openlocfilehash: 89debcfdeec2c9d363c6935bd2cfdd1ebf403f76
+ms.sourcegitcommit: d55438841123aad56a524a65332a86ad67af386b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72349759"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73599303"
 ---
 # <a name="first-look-at-the-visual-studio-debugger"></a>初步了解 Visual Studio 调试器
 
@@ -31,9 +31,9 @@ ms.locfileid: "72349759"
 
 若代码编辑器中打开了文件，则可通过单击代码行左侧的边缘来设置断点。
 
-![设置断点](../debugger/media/dbg-tour-set-a-breakpoint.gif "Set a breakpoint")
+![设置断点](../debugger/media/dbg-tour-set-a-breakpoint.gif "设置断点")
 
-按 F5（“调试”>“开始调试”）或调试工具栏中的“开始调试”按钮 ![开始调试](../debugger/media/dbg-tour-start-debugging.png "Start Debugging")，调试器将运行至它遇到的第一个断点    。 如果应用尚未运行，则按 F5 会启动调试器并在第一个断点处停止。
+按 F5（“调试”>“开始调试”）或调试工具栏中的“开始调试”按钮 ![开始调试](../debugger/media/dbg-tour-start-debugging.png "开始调试")，调试器将运行至它遇到的第一个断点    。 如果应用尚未运行，则按 F5 会启动调试器并在第一个断点处停止。
 
 当你知道要详细检查的代码行或代码段时，断点功能非常有用。
 
@@ -43,7 +43,7 @@ ms.locfileid: "72349759"
 
 要在附加了调试器的情况下启动应用，请按 F11（“调试”>“单步执行”）   。 F11 是“单步执行”命令，每按一次，应用就执行下一个语句  。 使用 F11 启动应用时，调试器会在执行的第一个语句上中断。
 
-![F11 单步执行](../debugger/media/dbg-tour-f11.png "F11 Step Into")
+![F11 单步执行](../debugger/media/dbg-tour-f11.png "F11 单步执行")
 
 黄色箭头表示调试器暂停处的语句，它还在同一点上暂停应用执行（此语句尚未执行）。
 
@@ -64,17 +64,17 @@ F11 是一种以最详尽方式检查执行流的好方法。 （为了更快地
 
 右键单击属性或字段，选择“单步执行特定内容”，然后选择一个可用选项  。
 
-![单步执行特定内容](../debugger/media/dbg-tour-step-into-specific.png "Step Into Specific")
+![单步执行特定内容](../debugger/media/dbg-tour-step-into-specific.png "单步执行特定内容")
 
 在此示例中，通过“单步执行特定内容”将转到 `Path.set` 的代码  。
 
-![单步执行特定内容](../debugger/media/dbg-tour-step-into-specific-2.png "Step Into Specific")
+![单步执行特定内容](../debugger/media/dbg-tour-step-into-specific-2.png "单步执行特定内容")
 
 ## <a name="run-to-a-point-in-your-code-quickly-using-the-mouse"></a>使用鼠标快速运行到代码中的某个点
 
-在调试器中，将鼠标悬停在代码行上，直到“运行到单击处”（将执行运行到此处）按钮![运行到单击处](../debugger/media/dbg-tour-run-to-click.png "RunToClick")出现在左侧  。
+在调试器中，将鼠标悬停在代码行上，直到“运行到单击处”（将执行运行到此处）按钮![运行到单击处](../debugger/media/dbg-tour-run-to-click.png "运行时单击")出现在左侧  。
 
-![运行到单击处](../debugger/media/dbg-tour-run-to-click-2.png "Run to Click")
+![运行到单击处](../debugger/media/dbg-tour-run-to-click-2.png "运行时单击")
 
 > [!NOTE]
 > 自 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] 起，可用使用“运行到单击位置”（将执行运行到此处）按钮  。
@@ -93,11 +93,11 @@ F11 是一种以最详尽方式检查执行流的好方法。 （为了更快地
 
 ## <a name="run-to-cursor"></a>运行到光标处
 
-按“停止调试”红色按钮![停止调试](../debugger/media/dbg-tour-stop-debugging.png "Stop Debugging")或 Shift + F5 来停止调试器    。
+按“停止调试”  红色按钮![停止调试](../debugger/media/dbg-tour-stop-debugging.png "停止调试")或 **Shift** + **F5** 来停止调试器。
 
 右键单击应用中的代码行，然后选择“运行到光标处”  。 此命令将启动调试并在当前代码行上设置临时断点。
 
-![运行到光标处](../debugger/media/dbg-tour-run-to-cursor.png "Run to Cursor")
+![运行到光标处](../debugger/media/dbg-tour-run-to-cursor.png "运行到光标处")
 
 如果设置了断点，则调试器会在其命中的第一个断点处暂停。
 
@@ -110,11 +110,11 @@ F11 是一种以最详尽方式检查执行流的好方法。 （为了更快地
 
 ## <a name="restart-your-app-quickly"></a>快速重启应用
 
-单击调试工具栏中的“重启”按钮![重启应用](../debugger/media/dbg-tour-restart.png "Restart App") (Ctrl+Shift+F5)   。
+单击调试工具栏中的“重启”  按钮![重启应用](../debugger/media/dbg-tour-restart.png "重启应用") (Ctrl+Shift+F5)  。
 
 当你按下“重启”时，与停止应用并重启调试器相比，它节省了时间  。 调试器在执行代码命中的第一个断点处暂停。
 
-若确实要停止调试器并返回到代码编辑器，可以按红色停止![停止调试](../debugger/media/dbg-tour-stop-debugging.png "Stop Debugging")按钮而不是“重启”  。
+若确实要停止调试器并返回到代码编辑器，可以按红色停止![停止调试](../debugger/media/dbg-tour-stop-debugging.png "停止调试")按钮而不是“重启”  。
 
 ## <a name="edit-your-code-and-continue-debugging-c-vb-c-xaml"></a>编辑代码并继续调试（C#、VB、C++、XAML）
 
@@ -124,7 +124,7 @@ F11 是一种以最详尽方式检查执行流的好方法。 （为了更快地
 
 有关功能使用和功能限制的详细信息，请参阅[编辑并继续](../debugger/edit-and-continue.md)。
 
-若要在调试会话期间修改 XAML 代码，请参阅[使用 XAML 热重载编写和调试正在运行的 XAML 代码](xaml-hot-reload.md)。
+若要在调试会话期间修改 XAML 代码，请参阅[使用 XAML 热重载编写和调试正在运行的 XAML 代码](../xaml-tools/xaml-hot-reload.md)。
 
 ## <a name="inspect-variables-with-data-tips"></a>使用数据提示检查变量
 
@@ -132,7 +132,7 @@ F11 是一种以最详尽方式检查执行流的好方法。 （为了更快地
 
 在调试器中暂停时，将鼠标悬停在对象上并看到其默认属性值（在此示例中，文件名 `market 031.jpg` 是默认属性值）。
 
-![查看数据提示](../debugger/media/dbg-tour-data-tips.gif "View a data tip")
+![查看数据提示](../debugger/media/dbg-tour-data-tips.gif "查看数据提示")
 
 展开对象以查看其所有属性（例如本示例中的 `FullPath` 属性）。
 
@@ -145,7 +145,7 @@ F11 是一种以最详尽方式检查执行流的好方法。 （为了更快地
 
 调试时，查看代码编辑器底部的“自动”窗口  。
 
-![“自动”窗口](../debugger/media/dbg-tour-autos-window.png "Autos window")
+![“自动”窗口](../debugger/media/dbg-tour-autos-window.png "“自动”窗口")
 
 在“自动”窗口中，可看到变量及其当前值和类型  。 “自动”窗口显示当前行或前一行使用的所有变量（在 C++ 中，该窗口显示前三个代码行中的变量  。 查看文档以了解特定于语言的行为）。
 
@@ -154,7 +154,7 @@ F11 是一种以最详尽方式检查执行流的好方法。 （为了更快地
 
 接下来，查看“局部变量”窗口  。 “局部变量”窗口显示当前范围中的变量  。
 
-![“局部变量”窗口](../debugger/media/dbg-tour-locals-window.png "Locals window")
+![“局部变量”窗口](../debugger/media/dbg-tour-locals-window.png "局部变量窗口")
 
 在此示例中，`this` 对象和 `f` 对象处于范围内。 有关详细信息，请参阅[在“自动”窗口和“局部变量”窗口中检查变量](../debugger/autos-and-locals-windows.md)。
 
@@ -164,7 +164,7 @@ F11 是一种以最详尽方式检查执行流的好方法。 （为了更快地
 
 在调试时，右键单击对象并选择“添加监视”  。
 
-![“监视”窗口](../debugger/media/dbg-tour-watch-window.png "Watch window")
+![“监视”窗口](../debugger/media/dbg-tour-watch-window.png "监视窗口")
 
 在本示例中，你在 `f` 对象上设置了监视，当在调试器中移动时，可看到其值发生了变化。 与其他变量窗口不同，“监视”窗口始终显示正在监视的变量（当超出范围时，它们会变灰）  。
 
@@ -174,7 +174,7 @@ F11 是一种以最详尽方式检查执行流的好方法。 （为了更快地
 
 调试时单击“调用堆栈”窗口，默认情况下，该窗口在右下方窗格中打开  。
 
-![检查调用堆栈](../debugger/media/dbg-tour-call-stack.png "Examine the call stack")
+![检查调用堆栈](../debugger/media/dbg-tour-call-stack.png "检查调用堆栈")
 
 “调用堆栈”窗口显示方法和函数被调用的顺序  。 最上面一行显示当前函数（此示例中的 `Update` 方法）。 第二行显示 `Update` 是从 `Path.set` 属性调用的，依此类推。 调用堆栈是检查和理解应用执行流的好方法。
 
@@ -189,7 +189,7 @@ F11 是一种以最详尽方式检查执行流的好方法。 （为了更快地
 
 应用引发异常时，调试器会将你转至引发异常的代码行。
 
-![异常帮助程序](../debugger/media/dbg-tour-exception-helper.png "Exception Helper")
+![异常帮助程序](../debugger/media/dbg-tour-exception-helper.png "异常帮助程序")
 
 在此示例中，异常帮助程序向你显示 `System.Argument` 异常以及一条错误消息，指出该路径不是合法形式  。 因此，我们知道方法或函数参数发生了错误。
 
@@ -214,7 +214,7 @@ F11 是一种以最详尽方式检查执行流的好方法。 （为了更快地
 
 当执行感兴趣的代码时，Snapshot Debugger 会为生产中的应用拍摄快照  。 若要指示该调试器拍摄快照，可以在代码中设置快照点和记录点。 通过该调试器，可精确查看出错的内容，而不会影响生产应用程序的流量。 Snapshot Debugger 有助于大幅减少解决生产环境中出现的问题所需的时间。
 
-![启动快照调试程序](../debugger/media/snapshot-launch.png "Launch the snapshot debugger")
+![启动 Snapshot Debugger](../debugger/media/snapshot-launch.png "启动 Snapshot Debugger")
 
 快照集合适用于在 Azure 应用服务中运行的 ASP.NET 应用程序。 ASP.NET 应用程序必须在 .NET Framework 4.6.1 或更高版本上运行，并且 ASP.NET Core 应用程序必须在 Windows 上的 .NET Core 2.0 或更高版本上运行。
 
@@ -226,7 +226,7 @@ IntelliTrace 后退会在每个断点处及调试器步骤事件发生时自动�
 
 可以通过使用调试工具栏中的“后退”和前进”按钮浏览和查看快照。   这些按钮用于浏览“诊断工具”窗口中“事件”选项卡上显示的事件。  
 
-![“后退”和“前进”按钮](../debugger/media/intellitrace-step-back-icons-description.png  "Step Backward and Forward buttons")
+![“后退”和“前进”按钮](../debugger/media/intellitrace-step-back-icons-description.png  "“后退”和“前进”按钮")
 
 有关详细信息，请参阅[使用 IntelliTrace 检查上一应用状态](../debugger/view-historical-application-state.md)页。
 

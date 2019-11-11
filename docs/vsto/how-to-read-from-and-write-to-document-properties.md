@@ -1,5 +1,5 @@
 ---
-title: 如何：读取和写入到文档属性
+title: 如何：读取和写入文档属性
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,17 +15,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ac0d81c9e42a5c3aa22a09d59f346e6127b1284f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 71a4b1a84c4544f4dc2b359e391f3c9f768e8eee
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62961561"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985799"
 ---
-# <a name="how-to-read-from-and-write-to-document-properties"></a>如何：读取和写入到文档属性
+# <a name="how-to-read-from-and-write-to-document-properties"></a>如何：读取和写入文档属性
   可以存储文档以及文档属性。 Office 应用程序提供了许多内置的属性，例如作者、标题和主题。 本主题演示如何在 Microsoft Office Excel 和 Microsoft Office Word 中设置文档属性。
-
- ![视频链接](../vsto/media/playvideo.gif "链接至视频")相关的视频演示，请参阅[如何实现：访问和处理 Microsoft Word 中的自定义文档属性？](http://go.microsoft.com/fwlink/?LinkId=136772).
 
  [!INCLUDE[appliesto_docprops](../vsto/includes/appliesto-docprops-md.md)]
 
@@ -81,6 +79,6 @@ ms.locfileid: "62961561"
  虽然你可以使用 Word 和 Excel 及其对象，但 Microsoft Office 仍然提供了可用的内置文档属性的列表。 尝试访问未定义的属性会引发异常。
 
 ## <a name="see-also"></a>请参阅
-- [VSTO 外接程序](../vsto/programming-vsto-add-ins.md)
-- [文档级自定义项进行编程](../vsto/programming-document-level-customizations.md)
+- [程序 VSTO 外接程序](../vsto/programming-vsto-add-ins.md)
+- [程序文档级自定义项](../vsto/programming-document-level-customizations.md)
 - [如何：创建和修改自定义文档属性](../vsto/how-to-create-and-modify-custom-document-properties.md)

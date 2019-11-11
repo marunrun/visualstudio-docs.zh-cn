@@ -1,7 +1,7 @@
 ---
 title: 创建脱机安装
 description: 了解如何在 Internet 连接不可靠或带宽较低时脱机安装 Visual Studio。
-ms.date: 10/11/2019
+ms.date: 10/22/2019
 ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 2268d71f9119cc36bdb18161a62fbe930a37b2ff
-ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
+ms.openlocfilehash: c8b59ce38657bab157b966a25e0cd27109510215
+ms.sourcegitcommit: 58000baf528da220fdf7a999d8c407a4e86c1278
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381095"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72789990"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>创建 Visual Studio 的脱机安装
 
@@ -164,9 +164,9 @@ Visual Studio 2019 经过精心设计，可在各种网络和计算机配置中�
 > 当你从本地安装缓存运行时，安装程序会使用其中每个文件的本地版本。 不过，如果在安装过程中选择的组件不在缓存中，安装程序会尝试从 Internet 下载它们。
 
 ::: moniker range="vs-2019"
-
-> 对于 16.1 及更高版本的安装和更新，如果在脱机系统上收到“找不到与以下参数匹配的产品”错误，请将 --noweb 开关用于 16.3.5 或更高版本。
-
+> [!IMPORTANT]
+> 对于脱机安装，如果收到一条错误消息，指出“找不到与以下参数匹配的项目”，请确保将 `--noweb` 开关用于版本 16.3.5 或更高版本。
+>
 ::: moniker-end
 
 若要确保仅安装先前下载的文件，请使用在创建布局缓存时所用的相同命令行选项。 例如，如果使用以下命令创建了布局缓存：
@@ -180,6 +180,8 @@ vs_community.exe --layout c:\vslayout --add Microsoft.VisualStudio.Workload.Mana
 ```cmd
 c:\vslayout\vs_community.exe --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional
 ```
+
+有关如何使用[命令行参数](use-command-line-parameters-to-install-visual-studio.md)的更多示例，请参阅 [Visual Studio 安装的命令行参数示例](command-line-parameter-examples.md)页面。 
 
 > [!NOTE]
 > 如果你遇到签名无效的错误，则必须安装更新的证书。 在脱机缓存中打开证书文件夹。 双击每个证书文件，然后单击完成证书管理器向导。 如果要求输入密码，请将密码留空。

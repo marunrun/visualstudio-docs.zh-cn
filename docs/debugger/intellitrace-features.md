@@ -20,18 +20,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 852070c74a7e7171525a5feaa6cc7617fe83c00d
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: bcdb1b2b6dc4b64d180eb03fc76b26b4ef16e9d0
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925362"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911418"
 ---
-# <a name="intellitrace-features-c-visual-basic-c"></a>IntelliTrace 功能 (C#、Visual Basic、 C++)
+# <a name="intellitrace-features-c-visual-basic-c"></a>IntelliTrace 功能（C#、Visual Basic、 C++）
 
-可以使用 IntelliTrace 记录事件和调用应用程序的方法，它让你能够在执行中的不同位置检查其状态（调用堆栈和局部变量值）。 正常启动调试即可，默认启用 IntelliTrace，并且可以在“事件”选项卡下的新“诊断工具”窗口中看到 IntelliTrace 正在记录的信息。选择一个事件，然后单击“激活历史调试”以查看为此事件记录的调用堆栈和局部变量。
+可以使用 IntelliTrace 记录事件和调用应用程序的方法，它让你能够在执行中的不同位置检查其状态（调用堆栈和局部变量值）。 只需启动 "照常调试"-默认情况下，IntelliTrace 处于打开状态，您可以在 "**事件**" 选项卡下的 "新建**诊断工具**" 窗口中看到信息 Intellitrace 正在记录。选择一个事件，然后单击 "**激活历史调试"** 查看为此事件记录的调用堆栈和局部变量。
 
-有关分步说明, 请参阅[演练:使用 IntelliTrace](../debugger/walkthrough-using-intellitrace.md)。
+有关分步说明，请参阅[演练：使用 IntelliTrace](../debugger/walkthrough-using-intellitrace.md)。
 
 Visual Studio Enterprise 版中提供 IntelliTrace，但 Visual Studio Professional 或 Community 版中不提供。
 
@@ -40,21 +40,21 @@ Visual Studio Enterprise 版中提供 IntelliTrace，但 Visual Studio Professio
 > [!NOTE]
 > “IntelliTrace”选项页上的所有设置都针对 Visual Studio 这个整体，而不针对单个项目或解决方案。 这些设置中的更改适用于 Visual Studio 的所有实例、所有调试会话和所有项目或解决方案。
 
-## <a name="ChooseEvents"></a>选择 IntelliTrace 记录的事件 (C#、Visual Basic)
+## <a name="ChooseEvents"></a>选择 IntelliTrace 记录的事件（C#、Visual Basic）
 
 可以启用或禁用针对特定 IntelliTrace 事件的记录。
 
 如果在进行调试，请停止调试。 **> Intellitrace 事件 > intellitrace**中转到 "工具" > 选项。 选择想要 IntelliTrace 记录的事件。
 
-## <a name="Snapshots"></a>收集快照 (C#、Visual Basic、 C++)
+## <a name="Snapshots"></a>收集快照（C#、Visual Basic、 C++）
 
-默认情况下不启用此功能, 但 IntelliTrace 可以在每个断点和调试器步骤事件中捕获应用程序的快照, 并且可以在历史调试会话中查看这些快照。 快照提供完整应用程序状态的视图。 若要启用快照捕获, 请跳到 "**工具" > 选项 "> IntelliTrace" > "常规**", 然后选择 " **intellitrace 快照 (托管和本机)** "。 有关详细信息，请参阅[使用 IntelliTrace 检查上一应用状态](../debugger/view-historical-application-state.md)。
+默认情况下不启用此功能，但 IntelliTrace 可以在每个断点和调试器步骤事件中捕获应用程序的快照，并且可以在历史调试会话中查看这些快照。 快照提供完整应用程序状态的视图。 若要启用快照捕获，请跳到 "**工具" > 选项 "> IntelliTrace" > "常规**"，然后选择 " **intellitrace 快照（托管和本机）** "。 有关详细信息，请参阅[使用 IntelliTrace 检查上一应用状态](../debugger/view-historical-application-state.md)。
 
-快照在 Visual Studio Enterprise 2017 版15.5 及更高版本中可用, 并且需要 Windows 10 周年更新或更高版本。  对于 .NET Core 和 ASP.NET Core 应用程序, Visual Studio Enterprise 2017 15.7 版。 对于面向 Windows 的本机应用, 需要 Visual Studio Enterprise 2017 15.9 Preview 2 版。
+快照在 Visual Studio Enterprise 2017 版15.5 及更高版本中可用，并且需要 Windows 10 周年更新或更高版本。  对于 .NET Core 和 ASP.NET Core 应用程序，Visual Studio Enterprise 2017 15.7 版。 对于面向 Windows 的本机应用，需要 Visual Studio Enterprise 2017 15.9 Preview 2 版。
 
-## <a name="GoingFurther"></a>收集 IntelliTrace 事件和调用信息 (C#Visual Basic)
+## <a name="GoingFurther"></a>收集 IntelliTrace 事件和调用信息（C#Visual Basic）
 
-默认情况下不启用此选项，但 IntelliTrace 可以随事件一起记录方法调用。 若要启用方法调用的集合, 请跳到 "**工具" > 选项 "> intellitrace >" 常规**", 然后选择" **intellitrace 事件和调用信息 "(仅限托管)** 。
+默认情况下不启用此选项，但 IntelliTrace 可以随事件一起记录方法调用。 若要启用方法调用的集合，请跳到 "**工具" > 选项 "> intellitrace >" 常规**"，然后选择" **intellitrace 事件和调用信息 "（仅限托管）** 。
 
 调用信息当前不可用于 .NET Core 和 ASP.NET Core 应用。
 
@@ -92,7 +92,7 @@ Visual Studio Enterprise 版中提供 IntelliTrace，但 Visual Studio Professio
 
 尝试将模块数保持为最小值。 因为要收集的数据变少，所以可以获得更好的性能。 UI 中的噪音也会减少，因为要浏览的数据变少。
 
-## <a name="SaveSession"></a>将 IntelliTrace 数据保存到文件C#(、Visual Basic C++)
+## <a name="SaveSession"></a>将 IntelliTrace 数据保存到文件C#（、Visual Basic C++）
 
 正在进行调试且应用程序处于中断状态时，通过转到“调试”>“IntelliTrace”>“保存 IntelliTrace 会话”，可以保存 IntelliTrace 收集的数据。 如果应用程序仍在运行或如果你已经停止调试，则菜单项会被禁用，且你将无法保存 IntelliTrace 收集的数据。
 
@@ -107,11 +107,11 @@ Visual Studio Enterprise 版中提供 IntelliTrace，但 Visual Studio Professio
 
 [Visual Studio Enterprise 2015 中的 IntelliTrace](https://devblogs.microsoft.com/devops/intellitrace-in-visual-studio-ultimate-2015/)
 
-[在 Visual Studio 2015 中使用 IntelliTrace 进行实时调试的演练 (文本编辑器)](https://devblogs.microsoft.com/devops/walkthrough-of-live-debugging-using-intellitrace-in-visual-studio-2015-text-editor/)
+[在 Visual Studio 2015 中使用 IntelliTrace 进行实时调试的演练（文本编辑器）](https://devblogs.microsoft.com/devops/walkthrough-of-live-debugging-using-intellitrace-in-visual-studio-2015-text-editor/)
 
-[在 Visual Studio 2015 中使用 IntelliTrace 进行实时调试的演练 (社交俱乐部)](https://devblogs.microsoft.com/devops/walkthrough-of-live-debugging-using-intellitrace-in-visual-studio-2015-social-club/)
+[在 Visual Studio 2015 中使用 IntelliTrace 进行实时调试的演练（社交俱乐部）](https://devblogs.microsoft.com/devops/walkthrough-of-live-debugging-using-intellitrace-in-visual-studio-2015-social-club/)
 
-[Visual Studio Enterprise 2015 中的 IntelliTrace 现在支持附加!](https://devblogs.microsoft.com/devops/intellitrace-in-visual-studio-enterprise-2015-now-supports-attach/)
+[Visual Studio Enterprise 2015 中的 IntelliTrace 现在支持附加！](https://devblogs.microsoft.com/devops/intellitrace-in-visual-studio-enterprise-2015-now-supports-attach/)
 
 [使用 IntelliTrace 独立收集器从 windows 服务收集数据](https://devblogs.microsoft.com/devops/collect-data-from-a-windows-service-using-the-intellitrace-standalone-collector/)
 
@@ -123,7 +123,7 @@ Visual Studio Enterprise 版中提供 IntelliTrace，但 Visual Studio Professio
 
 ## <a name="forums"></a>论坛
 
-[Visual Studio 调试器](http://go.microsoft.com/fwlink/?LinkId=262263)
+[Visual Studio 调试器](https://social.msdn.microsoft.com/Forums/en-US/home)
 
 ## <a name="videos"></a>视频
 

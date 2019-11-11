@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bcbe7a132f7e2f6f7d72cfd2ba210e5edba21b57
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e33ab59660263a5053642c95ec62ab36663f8e7b
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654095"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984307"
 ---
 # <a name="customizing-copy-behavior"></a>自定义复制行为
 在使用 Visual Studio 可视化和建模 SDK 创建的域特定语言（DSL）中，可以更改用户复制和粘贴元素时所发生的情况。
@@ -86,7 +86,7 @@ partial class MyDslClipboardCommandSet
 在 DslPackage 项目中重写*MyDsl* `ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()`。
 
  **通过复制和粘贴保留形状布局。**
-当用户复制多个形状时，可以在粘贴它们时保留其相对位置。 此方法由[VMSDK：线路图示例](http://go.microsoft.com/fwlink/?LinkId=213879)中的示例演示。
+当用户复制多个形状时，可以在粘贴它们时保留其相对位置。 此方法由[VMSDK：线路图示例](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)中的示例演示。
 
  若要获得此效果，请将形状和连接符添加到复制的 ElementGroupPrototype。 重写的最简便方法是 ElementOperations.CreateElementGroupPrototype()。 为此，请将以下代码添加到 DSL 项目：
 
@@ -142,7 +142,7 @@ partial class MyDslDiagram // EDIT NAME
 ```
 
  **在所选位置（例如当前光标位置）粘贴形状。**
-当用户复制多个形状时，可以在粘贴它们时保留其相对位置。 此方法由[VMSDK：线路图示例](http://go.microsoft.com/fwlink/?LinkId=213879)中的示例演示。
+当用户复制多个形状时，可以在粘贴它们时保留其相对位置。 此方法由[VMSDK：线路图示例](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)中的示例演示。
 
  为实现此效果，请重写 `ClipboardCommandSet.ProcessOnMenuPasteCommand()`，以使用特定于位置的版本的 `ElementOperations.Merge()`。 为此，请在 DslPackage 项目中添加以下代码：
 
@@ -556,6 +556,6 @@ namespace Company.MyDsl
 
 - [自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)
 - [如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)
-- [示例： VMSDK 线路图示例](http://go.microsoft.com/fwlink/?LinkId=213879)
+- [示例： VMSDK 线路图示例](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

@@ -70,7 +70,7 @@
 ## [发布到 Azure 应用服务](publish-app-svc.md)
 ## [发布到文件夹](publish-folder.md)
 
-# 工作负荷
+# 工作负载
 ## [可用工作负载](workloads.md)
 ## ASP.NET Core
 ### [.NET Core 支持](net-core-support.md)
@@ -90,7 +90,7 @@
 
 ## Unity 游戏开发
 ### [Unity 游戏开发](unity-tools.md)
-### [设置](setup-vsmac-tools-unity.md)
+### [安装](setup-vsmac-tools-unity.md)
 ### [Unity 入门](unity-walkthrough.md)
 ### [使用 Unity 工具](using-vsmac-tools-unity.md)
 ### [在 Unity 中使用 .NET 4.x](/visualstudio/cross-platform/unity-scripting-upgrade/?context=visualstudio/mac/context)
@@ -115,17 +115,17 @@
 ## [日志和异常](troubleshooting.md)
 ## [Visual Studio 客户体验改善计划](visual-studio-experience-improvement-program.md)
 ## [报告问题](report-a-problem.md)
-## [故障排除：Visual Studio for Mac 是否支持 Team Foundation 版本控制？](tf-version-control.md)
-## [故障排除：为什么看不到所有模板？](troubleshooting-no-templates.md)
-## [故障排除：更新程序在检索信息时发生错误](updater-troubleshooting.md)
+## [排除故障：Visual Studio for Mac 是否支持 Team Foundation 版本控制？](tf-version-control.md)
+## [排除故障：为什么看不到所有模板？](troubleshooting-no-templates.md)
+## [排除故障：更新程序在检索信息时发生错误](updater-troubleshooting.md)
 
-# [发行说明](https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-relnotes)
-# [预览发行说明](https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-preview-relnotes)
+# [发行说明](/visualstudio/releasenotes/vs2019-mac-relnotes)
+# [预览发行说明](/visualstudio/releasenotes/vs2019-mac-preview-relnotes)
 # 示例
 ## [特色示例](samples/index.yml)
-## [所有 ASP.NET Core 示例](https://docs.microsoft.com/samples/browse/?products=aspnet-core)
-## [所有 .NET Core 示例](https://docs.microsoft.com/samples/browse/?products=dotnet-core)
-## [所有 Xamarin.Forms 示例](https://docs.microsoft.com/xamarin/xamarin-forms/samples/)
-## [所有 Xamarin.iOS 示例](https://docs.microsoft.com/xamarin/ios/samples/)
-## [所有 Xamarin.Android 示例](https://docs.microsoft.com/xamarin/android/samples/)
-## [所有 Xamarin.Mac 示例](https://docs.microsoft.com/xamarin/mac/samples/)
+## [所有 ASP.NET Core 示例](/samples/browse/?products=aspnet-core)
+## [所有 .NET Core 示例](/samples/browse/?products=dotnet-core)
+## [所有 Xamarin.Forms 示例](/xamarin/xamarin-forms/samples/)
+## [所有 Xamarin.iOS 示例](/xamarin/ios/samples/)
+## [所有 Xamarin.Android 示例](/xamarin/android/samples/)
+## [所有 Xamarin.Mac 示例](/xamarin/mac/samples/)

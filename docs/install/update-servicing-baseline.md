@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: ca8aaf0af2ad7374137752783b242a40e94f706c
-ms.sourcegitcommit: 2bbcba305fd0f8800fd3d9aa16f7647ee27f3a4b
+ms.openlocfilehash: 4e84704d4ca37dd9e36da3838b5b1b23f068568c
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68300547"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888580"
 ---
 # <a name="update-visual-studio-while-on-a-servicing-baseline"></a>在维修基线上更新 Visual Studio
 
@@ -28,7 +28,7 @@ ms.locfileid: "68300547"
 
 企业管理员可以选择将其客户端保管在维护基线上。 在发布下一个维护基线后的一年内将使用维护更新支持该维护基线。
 
-维护基线选项使开发人员和管理员可以更灵活地采用新功能、bug 修补程序或新次要更新包含的组件。 首个维护基线为 16.0.x。 有关详细信息，请参阅[企业版和专业版客户的支持选项](https://docs.microsoft.com/visualstudio/releases/2019/servicing#support-options-for-enterprise-and-professional-customers)。
+维护基线选项使开发人员和管理员可以更灵活地采用新功能、bug 修补程序或新次要更新包含的组件。 首个维护基线为 16.0.x。 有关详细信息，请参阅[企业版和专业版客户的支持选项](/visualstudio/releases/2019/servicing#support-options-for-enterprise-and-professional-customers)。
 
 ## <a name="how-to-get-onto-a-servicing-baseline"></a>如何访问维护基线
 

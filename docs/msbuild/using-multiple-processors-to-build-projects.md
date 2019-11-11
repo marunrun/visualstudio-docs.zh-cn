@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4af67aa3961b92b55abfdcf7a811daef284ca523
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 065b11b689189f5ad833ce642cfcfc94da06f83d
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970830"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747193"
 ---
 # <a name="use-multiple-processors-to-build-projects"></a>使用多个处理器生成项目
 MSBuild 可以利用具有多个处理器或多核处理器的系统。 为每个可用处理器创建单独的生成进程。 例如，如果系统具有四个处理器，则创建四个生成进程。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 可以同时处理这些生成，从而缩短总体生产时间。 但是，并行生成会在生成方式上引入了一些更改。 本主题将讨论这些更改。
@@ -30,8 +30,8 @@ MSBuild 可以利用具有多个处理器或多核处理器的系统。 为每�
 ## <a name="errors-and-exceptions-during-parallel-builds"></a>并行生成期间的错误和异常
  在并行生成期间，错误和异常出现的时间可以与非并行生成期间的时间不同，并且如果一个项目未生成，将继续其他项目生成。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 不会因一个项目失败而停止并行生成的任何项目生成。 其他项目将继续生成，直到最后成功或者失败。 但是，如果已启用 <xref:Microsoft.Build.Framework.IBuildEngine.ContinueOnError%2A>，则即使发生错误，也不会停止生成。
 
-## <a name="visual-c-project-vcproj-and-solution-sln-files"></a>Visual C++ 项目 (.vcproj) 和解决方案 (.sln) 文件
- 可将 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 项目 (.vcproj) 和解决方案 (.sln) 文件传递给 [MSBuild 任务](../msbuild/msbuild-task.md)。 对于 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 项目，已调用 VCWrapperProject，然后创建了内部 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目。 对于 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 解决方案，已创建 SolutionWrapperProject，然后创建了内部 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目。 在这两种情况下，将生成的项目与任何其他 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目视为相同。
+## <a name="c-project-vcxproj-and-solution-sln-files"></a>C++ 项目 (.vcproj) 和解决方案 (.sln) 文件
+ 可将 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 项目 (.vcxproj) 和解决方案 (.sln) 文件传递给 [MSBuild 任务](../msbuild/msbuild-task.md)。   对于 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 项目，已调用 VCWrapperProject，然后创建了内部 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目。 对于 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 解决方案，已创建 SolutionWrapperProject，然后创建了内部 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目。 在这两种情况下，将生成的项目与任何其他 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目视为相同。
 
 ## <a name="multi-process-execution"></a>多进程执行
  几乎所有与生成相关的活动都要求当前目录在生成过程中保持不变，防止出现与路径相关的错误。 因此，项目无法在 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 中的不同线程上运行，因为它们可能会导致创建多个目录。

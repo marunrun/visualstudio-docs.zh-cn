@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6d7371880c739e242bcdd70fb2bb9ac0cd92677b
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: cf81dea230c2cfc33eb19ca001d8c9ed06b0489c
+ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551585"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73661849"
 ---
 # <a name="excel-object-model-overview"></a>Excel 对象模型概述
   若要开发使用 Microsoft Office Excel 的解决方案，可与由 Excel 对象模型提供的对象进行交互。 本主题介绍最重要的对象：
@@ -43,14 +43,12 @@ ms.locfileid: "69551585"
 
   对象模型紧跟用户界面。 <xref:Microsoft.Office.Interop.Excel.Application> 对象表示整个应用程序，并且每个 <xref:Microsoft.Office.Interop.Excel.Workbook> 对象都包含 `Worksheet` 对象的集合。 在这里，表示单元格的主要抽象是 <xref:Microsoft.Office.Interop.Excel.Range> 对象，它使你能够使用单独的单元格或单元格组。
 
-  除了 Excel 对象模型以外, Visual Studio 中的 Office 项目还提供在 Excel 对象模型中扩展某些对象的*宿主项*和*宿主控件*。 主机项和主机控件的行为类似于它们扩展的 Excel 对象，但它们还具有其他功能（如数据绑定功能）和其他事件。 有关详细信息, 请参阅[使用扩展对象实现 Excel 自动化](../vsto/automating-excel-by-using-extended-objects.md)和[主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)。
+  除了 Excel 对象模型以外，Visual Studio 中的 Office 项目还提供在 Excel 对象模型中扩展某些对象的*宿主项*和*宿主控件*。 主机项和主机控件的行为类似于它们扩展的 Excel 对象，但它们还具有其他功能（如数据绑定功能）和其他事件。 有关详细信息，请参阅[使用扩展对象实现 Excel 自动化](../vsto/automating-excel-by-using-extended-objects.md)和[主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)。
 
-  本主题概要介绍 Excel 对象模型。 有关可了解整个 Excel 对象模型的详细信息的资源, 请参阅[使用 excel 对象模型文档](#ExcelOMDocumentation)。
-
-  ![视频链接](../vsto/media/playvideo.gif "视频链接")有关相关的视频演示, 请[参阅如何实现:使用 Excel 2007 外接程序中的事件处理程序？](http://go.microsoft.com/fwlink/?LinkID=130291)和[如何实现:使用形状在 Excel 中创建气泡图？](http://go.microsoft.com/fwlink/?LinkID=130313).
+  本主题概要介绍 Excel 对象模型。 有关可了解整个 Excel 对象模型的详细信息的资源，请参阅[使用 excel 对象模型文档](#ExcelOMDocumentation)。
 
 ## <a name="access-objects-in-an-excel-project"></a>访问 Excel 项目中的对象
- 为 Excel 创建新的 VSTO 外接程序项目时, Visual Studio 将自动创建*ThisAddIn*或*ThisAddIn.cs*代码文件。 可以通过使用 `Me.Application` 或 `this.Application` 访问应用程序对象。
+ 为 Excel 创建新的 VSTO 外接程序项目时，Visual Studio 将自动创建*ThisAddIn*或*ThisAddIn.cs*代码文件。 可以通过使用 `Me.Application` 或 `this.Application` 访问应用程序对象。
 
  为 Excel 创建新的文档级项目时，可选择创建新的 Excel 工作簿或 Excel 模板项目。 Visual Studio 在新的 Excel 项目中为工作簿和模板项目自动创建以下代码文件。
 
@@ -61,12 +59,12 @@ ms.locfileid: "69551585"
 |Sheet2.vb|Sheet2.cs|
 |Sheet3.vb|Sheet3.cs|
 
- 可以在项目中使用 `Globals` 类来从各个类的外部访问 `ThisWorkbook`、`Sheet1`、`Sheet2` 或 `Sheet3`。 有关详细信息, 请参阅[对 Office 项目中对象的全局访问](../vsto/global-access-to-objects-in-office-projects.md)。 下面的示例调用<xref:Microsoft.Office.Interop.Excel._Worksheet.PrintPreview%2A>的`Sheet1`方法, 而不考虑是否将代码`Sheet`放入*n*类或`ThisWorkbook`类中的一个。
+ 可以在项目中使用 `Globals` 类来从各个类的外部访问 `ThisWorkbook`、`Sheet1`、`Sheet2` 或 `Sheet3`。 有关详细信息，请参阅[对 Office 项目中对象的全局访问](../vsto/global-access-to-objects-in-office-projects.md)。 下面的示例调用 `Sheet1` 的 <xref:Microsoft.Office.Interop.Excel._Worksheet.PrintPreview%2A> 方法，而不考虑是否将代码放置在 `Sheet`*n*类或 `ThisWorkbook` 类之一中。
 
  [!code-csharp[Trin_VstcoreExcelAutomation#82](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#82)]
  [!code-vb[Trin_VstcoreExcelAutomation#82](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#82)]
 
- 由于 Excel 文档中的数据已高度结构化，因此该对象模型是分层模型且非常简单。 Excel 提供了数百个可与之交互的对象, 但您可以通过将精力集中在可用对象的一小部分来了解对象模型的良好开端。 这些对象包括以下四种：
+ 由于 Excel 文档中的数据已高度结构化，因此该对象模型是分层模型且非常简单。 Excel 提供了数百个可与之交互的对象，但您可以通过将精力集中在可用对象的一小部分来了解对象模型的良好开端。 这些对象包括以下四种：
 
 - 应用程序
 
@@ -87,36 +85,36 @@ ms.locfileid: "69551585"
 ### <a name="workbook-object"></a>工作簿对象
  <xref:Microsoft.Office.Interop.Excel.Workbook> 对象表示 Excel 应用程序中的单个工作簿。
 
- Visual Studio 中的 Office 开发工具通过提供 <xref:Microsoft.Office.Interop.Excel.Workbook> 类型来扩展 <xref:Microsoft.Office.Tools.Excel.Workbook> 对象。 此类型使你可以访问 <xref:Microsoft.Office.Interop.Excel.Workbook> 对象的所有功能。 有关详细信息, 请参阅[工作簿主机项](../vsto/workbook-host-item.md)。
+ Visual Studio 中的 Office 开发工具通过提供 <xref:Microsoft.Office.Interop.Excel.Workbook> 类型来扩展 <xref:Microsoft.Office.Tools.Excel.Workbook> 对象。 此类型使你可以访问 <xref:Microsoft.Office.Interop.Excel.Workbook> 对象的所有功能。 有关详细信息，请参阅[工作簿主机项](../vsto/workbook-host-item.md)。
 
 ### <a name="worksheet-object"></a>Worksheet 对象
  <xref:Microsoft.Office.Interop.Excel.Worksheet> 对象是 <xref:Microsoft.Office.Interop.Excel.Worksheets> 集合的成员。 <xref:Microsoft.Office.Interop.Excel.Worksheet> 的许多属性、方法和事件与由 <xref:Microsoft.Office.Interop.Excel.Application> 或 <xref:Microsoft.Office.Interop.Excel.Workbook> 对象提供的成员相同或类似。
 
  Excel 提供一个 <xref:Microsoft.Office.Interop.Excel.Sheets> 集合作为 <xref:Microsoft.Office.Interop.Excel.Workbook> 对象的属性。 <xref:Microsoft.Office.Interop.Excel.Sheets> 集合的每个成员都是 <xref:Microsoft.Office.Interop.Excel.Worksheet> 或 <xref:Microsoft.Office.Interop.Excel.Chart> 对象。
 
- Visual Studio 中的 Office 开发工具通过提供 <xref:Microsoft.Office.Interop.Excel.Worksheet> 类型来扩展 <xref:Microsoft.Office.Tools.Excel.Worksheet> 对象。 此类型使你可以访问 <xref:Microsoft.Office.Interop.Excel.Worksheet> 对象的所有功能以及承载托管控件和处理新事件等新功能。 有关详细信息, 请参阅[工作表主机项](../vsto/worksheet-host-item.md)。
+ Visual Studio 中的 Office 开发工具通过提供 <xref:Microsoft.Office.Interop.Excel.Worksheet> 类型来扩展 <xref:Microsoft.Office.Tools.Excel.Worksheet> 对象。 此类型使你可以访问 <xref:Microsoft.Office.Interop.Excel.Worksheet> 对象的所有功能以及承载托管控件和处理新事件等新功能。 有关详细信息，请参阅[工作表主机项](../vsto/worksheet-host-item.md)。
 
 ### <a name="range-object"></a>Range 对象
  <xref:Microsoft.Office.Interop.Excel.Range> 对象是你将在 Excel 应用程序中使用最多的对象。 在可以操作 Excel 内的任何区域之前，必须将其表达为 <xref:Microsoft.Office.Interop.Excel.Range> 对象，并使用该范围的方法和属性。 一个 <xref:Microsoft.Office.Interop.Excel.Range> 对象，表示一个单元格、行、列、包含一个或多个单元格块的单元格选定区域（选定区域可能是连续的，也可能不是连续的）或甚至多个工作表上的一组单元格）。
 
- Visual Studio 通过提供 <xref:Microsoft.Office.Tools.Excel.NamedRange> 和 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 类型来扩展 <xref:Microsoft.Office.Interop.Excel.Range> 对象。 这些类型具有与 <xref:Microsoft.Office.Interop.Excel.Range> 对象相同的大部分功能以及数据绑定功能等新功能和新事件。 有关详细信息, 请参阅[NamedRange control](../vsto/namedrange-control.md) and [XmlMappedRange control](../vsto/xmlmappedrange-control.md)。
+ Visual Studio 通过提供 <xref:Microsoft.Office.Tools.Excel.NamedRange> 和 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 类型来扩展 <xref:Microsoft.Office.Interop.Excel.Range> 对象。 这些类型具有与 <xref:Microsoft.Office.Interop.Excel.Range> 对象相同的大部分功能以及数据绑定功能等新功能和新事件。 有关详细信息，请参阅[NamedRange control](../vsto/namedrange-control.md) and [XmlMappedRange control](../vsto/xmlmappedrange-control.md)。
 
 ## <a name="ExcelOMDocumentation"></a>使用 Excel 对象模型文档
  有关 Excel 对象模型的完整信息，可以参考 Excel 主互操作程序集 (PIA) 引用和 VBA 对象模型引用。
 
 ### <a name="primary-interop-assembly-reference"></a>主互操作程序集引用
- Excel PIA 参考文档介绍 Excel 的主互操作程序集中的类型。 此文档可从以下位置获得:[Excel 2010 主互操作程序集引用](http://go.microsoft.com/fwlink/?LinkId=189585)。
+ Excel PIA 参考文档介绍 Excel 的主互操作程序集中的类型。 此文档可从以下位置获取： [Excel 2010 主互操作程序集引用](/visualstudio/vsto/office-primary-interop-assemblies)。
 
- 有关 Excel PIA 设计的详细信息 (例如 PIA 中类和接口之间的差异以及如何实现 PIA 中的事件), 请参阅[Office 主互操作程序集中的类和接口的概述](http://go.microsoft.com/fwlink/?LinkId=189592)。
+ 有关 Excel PIA 设计的详细信息（例如 PIA 中类和接口之间的差异以及如何实现 PIA 中的事件），请参阅[Office 主互操作程序集中的类和接口的概述](/previous-versions/office/office-12/ms247299(v=office.12))。
 
 ### <a name="vba-object-model-reference"></a>VBA 对象模型引用
- VBA 对象模型引用在 Excel 对象模型被公开到 Visual Basic for Applications (VBA) 代码时记录该对象模型。 有关详细信息, 请参阅[Excel 2010 对象模型引用](http://go.microsoft.com/fwlink/?LinkId=199768)。
+ VBA 对象模型引用在 Excel 对象模型被公开到 Visual Basic for Applications (VBA) 代码时记录该对象模型。 有关详细信息，请参阅[Excel 2010 对象模型引用](/office/vba/api/overview/Excel/object-model)。
 
- VBA 对象模型引用中的所有对象和成员都对应于 Excel PIA 中的类型和成员。 例如, VBA 对象模型引用中的工作表对象对应于 Excel PIA <xref:Microsoft.Office.Interop.Excel.Worksheet>中的对象。 虽然 VBA 对象模型引用提供大多数属性、方法和事件的代码示例，但如果要在使用 Visual Studio 创建的 Excel 项目中使用本引用中的 VBA 代码，则必须将其转换为 Visual Basic 或 Visual C# 代码。
+ VBA 对象模型引用中的所有对象和成员都对应于 Excel PIA 中的类型和成员。 例如，VBA 对象模型引用中的工作表对象对应于 Excel PIA 中的 <xref:Microsoft.Office.Interop.Excel.Worksheet> 对象。 虽然 VBA 对象模型引用提供大多数属性、方法和事件的代码示例，但如果要在使用 Visual Studio 创建的 Excel 项目中使用本引用中的 VBA 代码，则必须将其转换为 Visual Basic 或 Visual C# 代码。
 
 ### <a name="related-topics"></a>相关主题
 
-|标题|描述|
+|Title|描述|
 |-----------|-----------------|
 |[Excel 解决方案](../vsto/excel-solutions.md)|说明可以如何创建 Microsoft Office excel 的文档级自定义项和 VSTO 外接程序。|
 |[使用范围](../vsto/working-with-ranges.md)|提供演示如何使用范围执行常见任务的示例。|

@@ -15,12 +15,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 56c49f0d3cef6dbb054c8d7d97b4e875b83cb518
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 68ffb040e7d642fc2bf285f0510850edc343a5ce
+ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648822"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72924544"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>将 WPF 控件绑定到数据集
 
@@ -50,7 +50,7 @@ ms.locfileid: "72648822"
 
 - 数据集和 TableAdapter。 有关详细信息，请参阅[Visual Studio 中的数据集工具](../data-tools/dataset-tools-in-visual-studio.md)和[tableadapter](../data-tools/create-and-configure-tableadapters.md)。
 
-- WPF 数据绑定。 有关详细信息，请参阅 [数据绑定概述](/dotnet/framework/wpf/data/data-binding-overview)。
+- WPF 数据绑定。 有关详细信息，请参阅 [数据绑定概述](/dotnet/desktop-wpf/data/data-binding-overview)。
 
 ## <a name="create-the-project"></a>创建项目
 
@@ -110,7 +110,7 @@ ms.locfileid: "72648822"
 
 8. 单击 **“完成”** 。
 
-   Visual Studio 会向项目中添加一个新的 `AdventureWorksLTDataSet.xsd` 文件，并将相应的**adventureworksltdataset.xsd**项添加到 "**数据源**" 窗口中。 @No__t_0 文件定义名为 `AdventureWorksLTDataSet` 的类型化数据集和名为 `ProductTableAdapter` 的 TableAdapter。 在本演练后面的部分中，你将使用 `ProductTableAdapter` 向数据集填充数据，并将更改保存回数据库中。
+   Visual Studio 会向项目中添加一个新的 `AdventureWorksLTDataSet.xsd` 文件，并将相应的**adventureworksltdataset.xsd**项添加到 "**数据源**" 窗口中。 `AdventureWorksLTDataSet.xsd` 文件定义名为 `AdventureWorksLTDataSet` 的类型化数据集和名为 `ProductTableAdapter`的 TableAdapter。 在本演练后面的部分中，你将使用 `ProductTableAdapter` 向数据集填充数据，并将更改保存回数据库中。
 
 9. 生成项目。
 
@@ -262,4 +262,4 @@ ms.locfileid: "72648822"
 
 - [在 Visual Studio 中将 WPF 控件绑定到数据](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)
 - [Visual Studio 中的数据集工具](../data-tools/dataset-tools-in-visual-studio.md)
-- [数据绑定概述](/dotnet/framework/wpf/data/data-binding-overview)
+- [数据绑定概述](/dotnet/desktop-wpf/data/data-binding-overview)

@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a4d11875a7ab2ca3f21f364308580a732b7516e6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 5d54673ee46c594bd1a4bea2990d3b9bbe90ce1f
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737930"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188194"
 ---
 # <a name="edit-and-continue-visual-c"></a>编辑并继续 (Visual C#)
  使用 C# 的“编辑并继续”，可以一边进行调试一边在中断模式下更改代码。 不必停止并重新启动调试会话即可应用更改。 在运行模式下，源编辑器是只读的。
@@ -41,4 +41,4 @@ ms.locfileid: "72737930"
 ## <a name="see-also"></a>请参阅
 - [如何：使用“编辑并继续”(C#)](../debugger/how-to-use-edit-and-continue-csharp.md)
 - [支持的代码更改（C# 和 Visual Basic）](../debugger/supported-code-changes-csharp.md)
-- [在 Visual Studio 中通过 XAML 热重载编写和调试正在运行的 XAML 代码](../debugger/xaml-hot-reload.md)
+- [在 Visual Studio 中通过 XAML 热重载编写和调试正在运行的 XAML 代码](../xaml-tools/xaml-hot-reload.md)

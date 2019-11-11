@@ -13,12 +13,12 @@ author: bowdenk7
 ms.author: wilkelly
 manager: jillfra
 monikerRange: vs-2017
-ms.openlocfilehash: c86dd5090d2cee6c49bd97f0895bba397e10c1ae
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 653b2576b0076d02f2e18cedc6f9f9890fd98fe5
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263034"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888664"
 ---
 # <a name="javascript-in-visual-studio-2017"></a>Visual Studio 2017 中的 JavaScript
 
@@ -34,7 +34,7 @@ Visual Studio 现在支持 ECMAScript 语言更新（例如 ECMAScript 2015/2016
 ### <a name="what-is-ecmascript-2015"></a>什么是 ECMAScript 2015？
 
 JavaScript 作为一种编程语言仍在不断更新，而 [TC39](https://www.ecma-international.org/memento/tc39-m.htm) 是负责进行更新的委员会。
-ECMAScript 2015 是对 JavaScript 语言的更新，提供了有帮助的新语法和功能。 要深入了解 ES6 的功能，请查看[此](http://es6-features.org)引用站点。
+ECMAScript 2015 是对 JavaScript 语言的更新，提供了有帮助的新语法和功能。 要深入了解 ES6 的功能，请查看[此](http://es6-features.org/#Constants)引用站点。
 
 除了支持 ECMAScript 2015，Visual Studio 还支持 ECMAScript 2016，并会在发布 ECMAScript 的将来版本后提供对这些版本的支持。 要与 TC39 和 ECMAScript 中的最新更改保持同步，请关注它们在 [github](https://github.com/tc39) 上的文章。
 
@@ -147,7 +147,7 @@ var x = React.createElement(comps_1.RepoDisplay, {description: "test"});
 
 - `package.json` 和 `bower.json` 列出了项目所使用的依赖项，并且这些项默认包含在自动类型获取 (ATA) 中
 - 顶层 `node_modules` 文件夹包含库源代码，并且其内容默认不包括在项目上下文中
-- 所有其他 `.js`、`.jsx`、`.ts` 和 `.tsx` 文件都可能是你自己的源文件之一，并且必须包含在项目上下文中
+- 所有其他 `.js`、`.jsx`、`.ts` 和 `.tsx` 文件都可能是你自己的  源文件之一，并且必须包含在项目上下文中
 
 在大多数情况下，使用默认项目配置就能打开项目并获得极佳的体验。 但是，在较大项目或具有不同文件夹结构的项目中，可能需要进一步配置语言服务，才能更好地仅专注于你自己的源文件。
 
@@ -238,7 +238,7 @@ var x = React.createElement(comps_1.RepoDisplay, {description: "test"});
 由于 [!include[vs_dev15](../../docs/misc/includes/vs_dev15_md.md)] 中拥有全新的语言服务，因此，有几个与之前的体验不同或之前的体验中没有的行为。
 最显著的更改是将 VSDoc 替换为 JSDoc、删除自定义 `.intellisense.js` 扩展和特定代码模式的有限 IntelliSense。
 
-### <a name="no-more-references-or-referencesjs"></a>不再具有 `///<references/>` 或 `_references.js`
+### <a name="no-more-references-or-_referencesjs"></a>不再具有 `///<references/>` 或 `_references.js`
 
 以前，在任何时候要了解 IntelliSense 作用域中有哪些文件的过程相当复杂。 有时，需要所有文件都位于作用域，其他情况下则不需要，但这会导致涉及手动引用管理的复杂配置。 今后，无需再考虑引用管理，因此也无需对引用、注释或`_references.js` 文件添加三斜杠。
 

@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d31d3a4f2e42981df646f9c38e13ee9b5f21122
-ms.sourcegitcommit: 9e5e8b6e9a3b6614723e71cc23bb434fe4218c9c
+ms.openlocfilehash: 15799ff8b181ddcfff97f7fb7338897c6f23fee2
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69634925"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188949"
 ---
 # <a name="how-to-configure-projects-to-target-platforms"></a>如何：将项目配置为面向平台
 
@@ -68,7 +68,7 @@ ms.locfileid: "69634925"
 
 有时，需要手动编辑项目文件以进行某些自定义配置。 例如，当你有无法在 IDE 中指定的条件（例如对两个不同平台而言不同的引用）时，如以下示例所示。
 
-### <a name="example-referencing-x86-and-x64-assemblies-and-dlls"></a>示例:引用 x86 和 x64 程序集和 DLL
+### <a name="example-referencing-x86-and-x64-assemblies-and-dlls"></a>示例：引用 x86 和 x64 程序集和 DLL
 
 你可能拥有同时具有 x86 和 x64 版本的 .NET 程序集或 DLL。 若要将项目设置为使用这些引用，请先添加引用，然后打开项目文件并对其进行编辑，以添加具有同时引用配置和目标平台的条件的 `ItemGroup`。  例如，假设引用的二进制文件是 ClassLibrary1，并且调试和发布配置以及 x86 和 x64 版本有不同路径。  然后，使用四个包含所有设置组合的 `ItemGroup` 元素，如下所示：
 
@@ -112,7 +112,7 @@ ms.locfileid: "69634925"
 > 在 Visual Studio 2017 中，需要先卸载项目，然后才能编辑项目文件。 若要卸载项目，请右键单击项目节点，然后选择“卸载项目”  。 完成编辑后，请右键单击项目节点并选择“重新加载项目”，以保存所做的更改并重新加载项目  。
 ::: moniker-end
 
-有关项目文件的详细信息，请参阅 [MSBuild 项目文件架构引用](/visualstudio/msbuild/msbuild-project-file-schema-reference)。
+有关项目文件的详细信息，请参阅 [MSBuild 项目文件架构引用](../msbuild/msbuild-project-file-schema-reference.md)。
 
 ## <a name="see-also"></a>请参阅
 

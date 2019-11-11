@@ -5,19 +5,19 @@ description: Visual Studio 已发布的版本和生成号列表，按日期排�
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.date: 10/15/2019
+ms.date: 11/06/2019
 ms.topic: reference
 ms.custom: seodec18
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 9f845c3b743c5f0ea9ccfc5f57026b7ff46268e1
-ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
+ms.openlocfilehash: e6201bde76cd33659a002154d55b84d1f5813d7c
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72380982"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713972"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Visual Studio 内部版本号和发布日期
 
@@ -29,6 +29,11 @@ ms.locfileid: "72380982"
 
 | **Version**| **频道** | **发布日期** | **内部版本** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 16.4.0 | 预览版 4 | 2019 年 11 月 6 日 | 16.4.29505.145 |
+| 16.3.8 | Release | 2019 年 11 月 5 日 | 16.3.29503.13 |
+| 16.4.0 | 预览版 3 | 2019 年 11 月 4 日 | 16.4.29430.225 |
+| 16.3.7 | Release | 2019 年 10 月 29 日 | 16.3.29424.173 |
+| 16.3.6 | Release | 2019 年 10 月 22 日 | 16.3.29418.71 |
 | 16.3.5 | Release | 2019 年 10 月 15 日 | 16.3.29411.108 |
 | 16.4.0 | 预览版 2 | 2019 年 10 月 15 日 | 16.4.29411.138 |
 | 16.0.9 | Release | 2019 年 10 月 15 日 | 16.0.28803.598 |

@@ -12,12 +12,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: d24fc2fa1ee34567e0c32859eeccf6af62813a20
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 65fa8b823a49644110dc773eb614da6022f4e8f5
+ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648720"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72924517"
 ---
 # <a name="connect-to-data-in-an-access-database"></a>连接到 Access 数据库中的数据
 
@@ -109,7 +109,7 @@ ms.locfileid: "72648720"
 
 您刚刚创建的数据集将出现在 "**数据源**" 窗口中。 现在可以执行以下任何任务：
 
-- 在 "**数据源**" 窗口中选择项，然后将其拖到窗体或设计图面上（请参见将[Windows 窗体控件绑定到 Visual Studio 中的数据](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)或[WPF 数据绑定概述](/dotnet/framework/wpf/data/data-binding-overview)）。
+- 在 "**数据源**" 窗口中选择项，然后将其拖到窗体或设计图面上（请参见将[Windows 窗体控件绑定到 Visual Studio 中的数据](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)或[WPF 数据绑定概述](/dotnet/desktop-wpf/data/data-binding-overview)）。
 
 - 在数据集设计器中打开数据源，以便添加或编辑组成数据集的对象。
 

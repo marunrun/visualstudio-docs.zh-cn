@@ -7,12 +7,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cfdd1e1eb040960032cc04f8c47f3f28e929b678
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c86383ddc833a6b76affa451f21180ed4941ad14
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667301"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985054"
 ---
 # <a name="get-started-with-domain-specific-languages"></a>域特定语言入门
 
@@ -21,7 +21,7 @@ ms.locfileid: "72667301"
 > [!NOTE]
 > 当你安装 Visual Studio 的特定功能时，文本模板转换 SDK 和 Visual Studio 建模 SDK 将自动安装。 有关更多详细信息，请参阅[此博客文章](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)。
 
-如果你不熟悉 Dsl，我们建议你通过**DSL 工具实验室**，你可以在此网站中找到：[可视化和建模 SDK](http://go.microsoft.com/fwlink/?LinkID=186128)
+如果你不熟悉 Dsl，我们建议你通过**DSL 工具实验室**，你可以在此网站中找到：[可视化和建模 SDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)
 
 ## <a name="what-can-you-do-with-a-domain-specific-language"></a>使用域特定语言可以执行什么操作？
 
@@ -43,8 +43,8 @@ Dsl 的一个主体应用程序是生成程序代码、配置文件和其他项�
 
 | | |
 |-|-|
-| Visual Studio | [http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579) |
-| [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [http://go.microsoft.com/fwlink/?LinkId=185580](http://go.microsoft.com/fwlink/?LinkId=185580) |
+| Visual Studio | [http://go.microsoft.com/fwlink/?LinkId=185579](https://visualstudio.microsoft.com/) |
+| [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [http://go.microsoft.com/fwlink/?LinkId=185580](/azure/devops/integrate/index) |
 | Visual Studio 的建模 SDK | |
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
@@ -153,7 +153,7 @@ DSL 定义可以指定模型在关系图上的显示方式。 可以从各种形
 
 DSL 生成一个 API，该 API 允许你读取和更新作为 DSL 实例的模型。 API 的一个应用是从模型生成文本文件。 有关详细信息，请参阅[使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)。
 
-在调试解决方案中，打开扩展名为 "tt" 的模板文件。 这些示例演示如何从模型生成文本，并允许你测试 DSL 的 API。 其中一个示例以 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 编写，另一个示例 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]。
+在调试解决方案中，打开扩展名为 "tt" 的模板文件。 这些示例演示如何从模型生成文本，并允许你测试 DSL 的 API。 其中一个示例以 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]编写，另一个示例 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]。
 
 在每个模板文件下，都是它生成的文件。 展开解决方案资源管理器中的模板文件，然后打开生成的文件。
 

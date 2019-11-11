@@ -10,12 +10,12 @@ author: jillre
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: cbb47e07bbe3697f905a28d9771cf55fe6fcc74c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6c980ab2d920a80e49450f6ffe4a9433f490b412
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659739"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72982848"
 ---
 # <a name="use-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>使用存根隔离应用程序的各个部分以进行单元测试
 
@@ -35,7 +35,7 @@ ms.locfileid: "72659739"
 
 ### <a name="design-for-dependency-injection"></a>依赖项注入的设计
 
-若要使用存根，则必须将应用程序设计为使不同的组件不相互依赖，而只依赖接口定义。 各个组件在运行时连接在一起，而不是在编译时进行耦合。 这种模式可帮助制作可靠且易于更新的软件，因为更改往往不会跨组件边界传播。 即使未使用存根，也建议采用此模式。 若要编写新代码，采用[依赖项注入](http://en.wikipedia.org/wiki/Dependency_injection)模式会很容易。 如果要为现有软件编写测试，你可能必须重构它。 如果这样做可行，则可以考虑改用填充码。
+若要使用存根，则必须将应用程序设计为使不同的组件不相互依赖，而只依赖接口定义。 各个组件在运行时连接在一起，而不是在编译时进行耦合。 这种模式可帮助制作可靠且易于更新的软件，因为更改往往不会跨组件边界传播。 即使未使用存根，也建议采用此模式。 若要编写新代码，采用[依赖项注入](https://en.wikipedia.org/wiki/Dependency_injection)模式会很容易。 如果要为现有软件编写测试，你可能必须重构它。 如果这样做可行，则可以考虑改用填充码。
 
 让我们通过一个有趣的示例（关系图中的示例）开始此讨论。 类 StockAnalyzer 读取股票价格并生成一些有趣的结果。 它具有一些公共方法，我们要测试这些方法。 为简单起见，我们只讨论其中的一个方法，即，一个非常简单的、用于报告特定股票的当前价格的方法。 我们希望编写该方法的单元测试。 下面是测试的初稿：
 

@@ -18,17 +18,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5067a52fb9d6a0b6d8991b68a2fce8cdbae987c9
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 668517705caa7ba6baef0b85305bf4470bc3b26b
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71255943"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985615"
 ---
 # <a name="ribbon-overview"></a>功能区概述
   功能区是一种组织相关命令的方式，以便更易于查找。 命令显示为功能区上的控件。 控件在应用程序窗口的上边缘沿水平条带化到各个*组*。 在选项卡上，相关组进行了整理。
 
- 现在可以使用功能区访问在 Microsoft Office 系统早期版本中使用菜单和工具栏访问的大多数功能。 有关详细信息，请参阅技术文章[2007 Microsoft Office 系统用户界面的开发人员概述](http://go.microsoft.com/fwlink/?LinkID=70860)。
+ 现在可以使用功能区访问在 Microsoft Office 系统早期版本中使用菜单和工具栏访问的大多数功能。 有关详细信息，请参阅技术文章[2007 Microsoft Office 系统用户界面的开发人员概述](/previous-versions/office/developer/office-2007/aa338198(v=office.12))。
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
@@ -81,7 +81,7 @@ ms.locfileid: "71255943"
 
  此外，任何未更改的默认属性值都不会出现在生成的功能区 XML 文件中。
 
- 有关如何将功能区导出到 XML 的详细信息，请[参阅如何：将功能区从功能区设计器导出到](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)功能区 XML。
+ 有关如何将功能区导出到 XML 的详细信息，请参阅[如何：将功能区从功能区设计器导出到功能区 XML](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)。
 
 ### <a name="update-the-code"></a>更新代码
  新的功能区代码文件将添加到**解决方案资源管理器**。 此文件包含功能区 XML 类。 必须在此类的 `Ribbon Callbacks` 区域中创建回调方法，以处理用户操作（例如单击某个按钮）。 将你的代码从事件处理程序移动到这些回调方法，并修改此代码以使用功能区扩展性 (RibbonX) 编程模型。 有关更多信息，请参见 [Ribbon XML](../vsto/ribbon-xml.md)。
@@ -103,7 +103,7 @@ ms.locfileid: "71255943"
 ### <a name="select-which-ribbons-to-display-at-run-time"></a>选择要在运行时显示的功能区
  由于一个项目可以包含多个功能区，因此你可以选择要在运行时显示的功能区。
 
- 若要选择要在运行时显示的功能区， `CreateRibbonExtensibilityObject`请重写`ThisAddin`项目`ThisWorkbook`的、 `ThisDocument`或类中的方法，并返回要显示的功能区。 下面的示例检查名为`myCondition`的字段的值，并返回相应的功能区。
+ 若要选择要在运行时显示的功能区，请重写项目的 `ThisAddin`、`ThisWorkbook`或 `ThisDocument` 类中的 `CreateRibbonExtensibilityObject` 方法，并返回要显示的功能区。 下面的示例检查名为 `myCondition` 的字段的值，并返回相应的功能区。
 
 > [!NOTE]
 > 本示例中使用的语法返回使用 "**功能区（可视化设计器）** " 项创建的功能区。 返回使用**功能区（XML）** 项创建的功能区的语法略有不同。 有关返回**功能区（XML）** 项的详细信息，请参阅[功能区 XML](../vsto/ribbon-xml.md)。
@@ -115,9 +115,9 @@ ms.locfileid: "71255943"
 
 ### <a name="related-topics"></a>相关主题
 
-|标题|说明|
+|Title|描述|
 |-----------|-----------------|
-|[如何：自定义功能区入门](../vsto/how-to-get-started-customizing-the-ribbon.md)|演示如何自定义 Microsoft Office 应用程序的功能区、向 Office 项目添加**功能区（可视化设计器）** 或**功能区（XML）** 项。|
+|[如何：开始自定义功能区](../vsto/how-to-get-started-customizing-the-ribbon.md)|演示如何自定义 Microsoft Office 应用程序的功能区、向 Office 项目添加**功能区（可视化设计器）** 或**功能区（XML）** 项。|
 |[功能区设计器](../vsto/ribbon-designer.md)|介绍如何使用功能区设计器将自定义选项卡、组和控件添加到 Microsoft Office 应用程序的功能区。|
 |[演练：使用功能区设计器创建自定义选项卡](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)|显示如何通过使用功能区设计器创建自定义功能区选项卡。 可使用功能区设计器将控件添加和放置到自定义选项卡上。|
 |[功能区对象模型概述](../vsto/ribbon-object-model-overview.md)|提供了强类型对象模型的概述，该模型可用于在运行时获取和设置功能区控件的属性。|

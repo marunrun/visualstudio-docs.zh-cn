@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 740d6336ab4258d3111dd6708de859108e22365e
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
+ms.openlocfilehash: 21959c4a0cc2b961eca43ab9724369c7aea8444b
+ms.sourcegitcommit: ab18c9d850192fc9ccec10961f1126e8b0cba8da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402073"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73061135"
 ---
 # <a name="step-2-create-your-first-aspnet-core-web-app"></a>步骤 2：创建首个 ASP.NET Core Web 应用
 
@@ -33,9 +33,12 @@ ms.locfileid: "66402073"
 
 ## <a name="start-visual-studio-2019-and-create-a-new-project"></a>启动 Visual Studio 2019 并创建一个新项目
 
-启动 Visual Studio 2019，然后单击“创建新项目”  。 选择“ASP.NET Core Web 应用程序”  。 选择“Web 应用程序”模板，并保留默认项目名和位置  。 单击 **“创建”** 。 有关更多详细说明，请参阅[本系列教程的上一个视频](tutorial-aspnet-core-ef-step-01.md)。
+启动 Visual Studio 2019，然后单击“创建新项目”  。 选择“ASP.NET Core Web 应用程序”  。 选择“Web 应用程序”模板，并保留默认项目名和位置  。 在 ASP.NET Core 版本的下拉列表中，选择“ASP.NET Core 2.1”或“ASP.NET Core 2.2”。   单击 **“创建”** 。 有关更多详细说明，请参阅[本系列教程的上一个视频](tutorial-aspnet-core-ef-step-01.md)。
 
 ![Visual Studio 2019 选择 ASP.NET Core 项目选项](media/vs-2019/vs2019-choose-aspnetcore-project.png)
+
+> [!WARNING]
+> 请确保选择 ASP .NET Core 2.1 或 ASP.NET Core 2.2。 本教程与 ASP.NET Core 3.x 不兼容。
 
 ## <a name="explore-the-new-project"></a>浏览新项目
 

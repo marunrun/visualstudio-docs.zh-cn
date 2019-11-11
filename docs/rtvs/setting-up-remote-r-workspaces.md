@@ -8,12 +8,12 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 0263afa4eeb9094802fe6272380b6b53106da4a2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e8cd1868e61b0691be7ea639d8b5d826c608915d
+ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62810134"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72888537"
 ---
 # <a name="set-up-remote-workspaces"></a>设置远程工作区
 
@@ -42,7 +42,7 @@ RTVS 要求通过 HTTP 实现所有与远程服务器的通信，这就要求服
 
 ### <a name="obtain-a-self-signed-certificate-windows"></a>获取自签名证书 (Windows)
 
-如有可信证书，则跳过此部分。 和来自受信任证书颁发机构的证书相比，自签名证书更像是为自己创建一张身份证。 当然，比起使用受信任的颁发机构，此过程要简便许多，但是同样缺少强身份验证。这意味着攻击者可将自己的证书替换为未签名的证书，捕获客户端和服务器之间的所有流量。 因此，仅可在测试方案和受信任的网络中使用自签名证书，而不应在生产中使用它。
+如有可信证书，则跳过此部分。 和来自受信任证书颁发机构的证书相比，自签名证书更像是为自己创建一张身份证。 当然，比起使用受信任的颁发机构，此过程要简便许多，但是同样缺少强身份验证。这意味着攻击者可将自己的证书替换为未签名的证书，捕获客户端和服务器之间的所有流量。 因此，仅可在测试方案和受信任的网络中使用自签名证书，而不应在生产中使用它  。
 
 为此，在使用自签名证书连接服务器时，RTVS 总会发出下列警告：
 
@@ -67,7 +67,7 @@ RTVS 要求通过 HTTP 实现所有与远程服务器的通信，这就要求服
 
 ### <a name="install-the-certificate"></a>安装证书
 
-要在远程计算机上安装证书，请从自命令提示符运行 certlm.msc（证书管理器）。 右键单击“个人”文件夹，选择“所有任务” > “导入”命令：
+要在远程计算机上安装证书，请从自命令提示符运行 certlm.msc（证书管理器）  。 右键单击“个人”文件夹，选择“所有任务” > “导入”命令    ：
 
 ![导入证书命令](media/workspaces-remote-certificate-import.png)
 
@@ -75,14 +75,14 @@ RTVS 要求通过 HTTP 实现所有与远程服务器的通信，这就要求服
 
 导入证书后，即授予 `NETWORK SERVICE` 帐户读取私钥的权限，如下面的说明所述。 `NETWORK_SERVICE` 是用于运行 R 服务代理的帐户，也是终止服务器计算机的入站 SSL 连接的服务。
 
-1. 从管理员命令提示符运行 certlm.msc（证书管理器）。
-1. 展开“个人” > “证书”，右键单击证书，然后选择“所有任务” > “管理私钥”。
-1. 邮件单击证书，在“所有任务”下选择“管理私钥”命令。
-1. 在出现的对话框中选择“添加”，然后输入 `NETWORK SERVICE` 作为帐户名：
+1. 从管理员命令提示符运行 certlm.msc（证书管理器）  。
+1. 展开“个人” > “证书”，右键单击证书，然后选择“所有任务” > “管理私钥”     。
+1. 邮件单击证书，在“所有任务”下选择“管理私钥”命令   。
+1. 在出现的对话框中选择“添加”  ，然后输入 `NETWORK SERVICE` 作为帐户名：
 
     ![管理私钥对话框，添加 NETWORK_SERVICE](media/workspaces-remote-manage-private-key-dialog.png)
 
-1. 连续选择“确定”两次以消除对话框，并提交更改。
+1. 连续选择“确定”  两次以消除对话框，并提交更改。
 
 ## <a name="install-an-ssl-certificate-on-ubuntu"></a>在 Ubuntu 上安装 SSL 证书
 
@@ -115,7 +115,7 @@ RTVS 要求通过 HTTP 实现所有与远程服务器的通信，这就要求服
 
 ### <a name="configure-rtvs-daemon"></a>配置 RTVS 守护程序
 
-必须在 /etc/rtvs/rtvsd.config.json 中设置 SSL 证书文件路径（PFX 路径）。 分别使用文件路径和密码更新 `X509CertificateFile` 和 `X509CertificatePassword`。
+必须在 /etc/rtvs/rtvsd.config.json 中设置 SSL 证书文件路径（PFX 路径）  。 分别使用文件路径和密码更新 `X509CertificateFile` 和 `X509CertificatePassword`。
 
 ```json
 {
@@ -145,17 +145,17 @@ RTVS 要求通过 HTTP 实现所有与远程服务器的通信，这就要求服
 
 2. 运行 [R 服务安装程序](https://aka.ms/rtvs-services)并根据提示重启。 安装程序执行如下操作：
 
-    - 在 %PROGRAMFILES%\R Tools for Visual Studio\1.0\\ 中创建文件夹并复制所有所需二进制文件。
+    - 在 %PROGRAMFILES%\R Tools for Visual Studio\1.0\\ 中创建文件夹并复制所有所需二进制文件  。
     - 安装 `RHostBrokerService` 和 `RUserProfileService` 并配置为自动启动。
     - 将 `seclogon` 服务配置为自动启动。
-    - 将 Microsoft.R.Host.exe 和 Microsoft.R.Host.Broker.exe 添加到默认端口 5444 上的防火墙入站规则。
+    - 将 Microsoft.R.Host.exe 和 Microsoft.R.Host.Broker.exe 添加到默认端口 5444 上的防火墙入站规则   。
 
 重启计算机时，R 服务会自动启动：
 
-- R 主机代理服务处理 Visual Studio 和计算机上 R 代码运行的进程之间的所有 HTTPS 流量。
-- R 用户配置文件服务是处理 Windows 用户配置文件创建的特权组件。 新用户首次登陆 R 服务器计算机时调用该服务。
+- R 主机代理服务处理 Visual Studio 和计算机上 R 代码运行的进程之间的所有 HTTPS 流量  。
+- R 用户配置文件服务  是处理 Windows 用户配置文件创建的特权组件。 新用户首次登陆 R 服务器计算机时调用该服务。
 
-在服务管理控制台 (compmgmt.msc) 中可以看到这些服务。
+在服务管理控制台 (compmgmt.msc) 中可以看到这些服务  。
 
 ## <a name="install-r-services-on-linux"></a>在 Linux 上安装 R 服务
 
@@ -178,13 +178,13 @@ RTVS 要求通过 HTTP 实现所有与远程服务器的通信，这就要求服
 
 1. 防火墙规则：默认情况下，`R Host Broker` 侦听 TCP 端口 5444。 因此，请确保已同时为入站和出站流量启用 Windows 防火墙规则（对于安装包和类似的方案，出站是必需的）。  R 服务安装程序为内置的 Windows 防火墙自动设置这些规则。 但是，如果正在使用第三方防火墙，则需手动为 `R Host Broker` 开启端口 5444。
 
-1. Azure 配置：如果远程计算机是 Azure 上的虚拟机，则也会为 Azure 网络内的入站流量开启端口 5444，使其不受 Windows 防火墙影响。 有关详细信息，请参阅 Azure 文档中的[使用网络安全组筛选网络流量](https://docs.microsoft.com/azure/virtual-network/virtual-networks-nsg)。
+1. Azure 配置：如果远程计算机是 Azure 上的虚拟机，则也会为 Azure 网络内的入站流量开启端口 5444，使其不受 Windows 防火墙影响。 有关详细信息，请参阅 Azure 文档中的[使用网络安全组筛选网络流量](/azure/virtual-network/virtual-networks-nsg)。
 
 1. 告知 R 主机代理要加载的 SSL 证书：如果要在 Intranet 服务器上安装证书，则服务器的完全限定域名可能与其 NETBIOS 名称相同。 在这种情况下，无需进行任何操作，因为加载的是默认证书。
 
     但是，如果正在面向 Internet 的服务器（如 Azure VM）上安装证书，请使用服务器的完全限定域名 (FQDN)，这是因为面向 Internet 的服务器的 FQDN 不可能与其 NETBIOS 名称相同。
 
-    若要使用 FQDN，请导航到安装了 R Services 的位置（默认为 %PROGRAM FILES%\R Remote Service for Visual Studio\1.0），在文本编辑器中打开 Microsoft.R.Host.Broker.Config.json 文件，然后将其内容替换为以下内容，将 CN 分配到服务器的 FQDN，例如 `foo.westus.cloudapp.azure.com`：
+    若要使用 FQDN，请导航到安装了 R Services 的位置（默认为 %PROGRAM FILES%\R Remote Service for Visual Studio\1.0），在文本编辑器中打开 Microsoft.R.Host.Broker.Config.json 文件，然后将其内容替换为以下内容，将 CN 分配到服务器的 FQDN，例如 `foo.westus.cloudapp.azure.com`   ：
 
     ```json
     {
@@ -211,14 +211,14 @@ RTVS 要求通过 HTTP 实现所有与远程服务器的通信，这就要求服
 - 未同时为端口 5444 上的入站和出站连接启用 `Microsoft.R.Host.Broker` 和 `Microsoft.R.Host` 的防火墙规则。
 - 未安装具有 `CN=<remote-machine-name>` 的 SSL 证书。
 
-执行上述更改后，重启计算机。 然后，确保 `RHostBrokerService` 和 `RUserProfileService` 通过任务管理器（服务选项卡）或 services.msc 运行。
+执行上述更改后，重启计算机。 然后，确保 `RHostBrokerService` 和 `RUserProfileService` 通过任务管理器（服务选项卡）或 services.msc 运行  。
 
 **问：为什么连接到 R 服务器后，R 交互窗口显示“401 拒绝访问”？**
 
 可能有两种原因：
 
 - 一种很有可能的情况是 `NETWORK SERVICE` 帐户不具有对 SSL 证书私钥的访问权限。 请根据前面的指南，授予 `NETWORK SERVICE` 对私钥的访问权限。
-- 请确保 `seclogon` 服务正在运行。 使用 services.msc 配置 `seclogon` 以自动开始。
+- 请确保 `seclogon` 服务正在运行。 使用 services.msc 配置 `seclogon` 以自动开始  。
 
 **问：为什么连接到 R 服务器后，R 交互窗口显示“404 未找到”？**
 
@@ -230,4 +230,4 @@ RTVS 要求通过 HTTP 实现所有与远程服务器的通信，这就要求服
 
 **问：我已尝试上述解决方案，但仍不起作用。现在该怎么办？**
 
-在 C:\Windows\ServiceProfiles\NetworkService\AppData\Local\Temp 中查找日志文件。对于运行的 R 代理服务的每个实例，此文件夹都有一个单独的日志文件。 每当服务重启时，都会创建新的日志文件。 检查最新的日志文件，查找有关可能发生哪些错误的线索。
+在 C:\Windows\ServiceProfiles\NetworkService\AppData\Local\Temp 中查找日志文件  。对于运行的 R 代理服务的每个实例，此文件夹都有一个单独的日志文件。 每当服务重启时，都会创建新的日志文件。 检查最新的日志文件，查找有关可能发生哪些错误的线索。

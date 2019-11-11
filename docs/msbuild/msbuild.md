@@ -11,19 +11,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ac7cd1ea69bb6b96066da876ab2ce88aabb8a08
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: bf80e9df7910b0b581ae956978fb2020542ae96f
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67823501"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747268"
 ---
 # <a name="msbuild"></a>MSBuild
 [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] 是一个用于生成应用程序的平台。 此引擎（也称为 MSBuild）为项目文件提供了一个 XML 架构，用于控制生成平台处理和生成软件的方式。 Visual Studio 会使用 MSBuild，但它不依赖于 Visual Studio。 通过在项目或解决方案文件中调用 msbuild.exe  ，可以在未安装 Visual Studio 的环境中安排和生成产品。
 
  Visual Studio 使用 MSBuild 来加载和生成托管项目。 Visual Studio 中的项目文件（.csproj  、.vbproj  、vcxproj  等）包含 MSBuild XML 代码，当你使用 IDE 来生成项目时，此代码就会运行。 Visual Studio 项目会导入所有必要的设置和生成过程来执行典型的开发工作，但你可以从 Visual Studio 内或通过使用 XML 编辑器对其进行扩展或修改。
 
- 有关适用于 C++ 的 MSBuild 的信息，请参阅 [MSBuild (Visual C++)](/cpp/build/msbuild-visual-cpp)。
+ 有关适用于 C++ 的 MSBuild 的信息，请参阅 [MSBuild (C++)](/cpp/build/msbuild-visual-cpp)。
 
  下面的示例介绍了什么情况下可使用 MSBuild 命令行而不是 Visual Studio IDE 来运行生成。
 

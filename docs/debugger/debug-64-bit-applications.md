@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 849862f98fb90cdd742e1794ecb57c35a9aaca73
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3a805942e85540b776ceacd972a09a71bb80cbb4
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745580"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911583"
 ---
 # <a name="debug-64-bit-applications"></a>调试 64 位应用程序
 您可以调试运行于本地计算机或远程计算机上的 64 位应用程序。
@@ -54,7 +54,7 @@ ms.locfileid: "72745580"
 
 ## <a name="see-also"></a>请参阅
 
-- [64 位应用程序](https://docs.microsoft.com/dotnet/framework/64-bit-apps)
+- [64 位应用程序](/dotnet/framework/64-bit-apps)
 - [配置 64 位的程序](/cpp/build/configuring-programs-for-64-bit-visual-cpp)
 - [Visual Studio IDE 64 位支持](../ide/visual-studio-ide-64-bit-support.md)
 - [使用转储文件](../debugger/using-dump-files.md)

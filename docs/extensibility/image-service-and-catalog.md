@@ -1,5 +1,5 @@
 ---
-title: 图像服务和目录 |Microsoft Docs
+title: 映像服务和目录 |Microsoft Docs
 ms.date: 04/01/2019
 ms.topic: conceptual
 ms.assetid: 34990c37-ae98-4140-9b1e-a91c192220d9
@@ -8,69 +8,69 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f50da4e8367b6649f4224da93f079ab4868b6ae2
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: d2647c09718f17235a3024f5787a0b85a7633ee1
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826012"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72982247"
 ---
 # <a name="image-service-and-catalog"></a>映像服务和目录
-此指南包含指导和采用 Visual Studio 映像服务和 Visual Studio 2015 中引入的映像目录的最佳实践。
+本指南包含的指南和最佳实践适用于 Visual studio 2015 中引入的 Visual Studio 映像服务和映像目录。
 
- 获取为设备和用户的所选的主题显示图像，其中包括有关所显示的上下文的正确主题的最佳映像的开发人员可以在 Visual Studio 2015 中引入的映像服务。 采用图像服务有助于消除与资产维护、 HDPI 扩展和主题相关的主要难题。
+ Visual Studio 2015 中引入的映像服务使开发人员能够获取设备的最佳图像，并为用户所选的主题提供显示图像的最佳图像，包括显示这些图像的上下文的正确主题。 采用映像服务有助于消除与资产维护、HDPI 缩放和主题相关的主要难点。
 
 |||
 |-|-|
-|**现在的问题**|**解决方案**|
-|背景颜色值混合处理|内置 alpha 值混合处理|
-|主题 （有些） 映像|主题的元数据|
+|**今天的问题**|**解决方案**|
+|背景色混合|内置 alpha 混合|
+|主题（某些）图像|主题元数据|
 |高对比度模式|备用高对比度资源|
-|需要将多个资源用于不同的 DPI 模式|基于矢量的退而求其次可选择资源|
-|重复的图像|每个图像概念的一个标识符|
+|不同 DPI 模式需要多个资源|基于矢量的回退的可选择资源|
+|复制图像|每个映像概念一个标识符|
 
- 为何采用映像服务？
+ 为什么采用映像服务？
 
-- 始终从 Visual Studio 中获取最新的"完全适合像素的"映像
+- 始终从 Visual Studio 获取最新的 "象素-完美" 图像
 
-- 可以提交，并使用你自己的映像
+- 你可以提交和使用自己的映像
 
-- 无需测试出 Windows 添加新 DPI 缩放映像
+- 当 Windows 添加新的 DPI 缩放时，无需测试图像
 
-- 解决您的实现中的旧体系结构障碍
+- 解决实现中的旧体系结构障碍
 
-  Visual Studio shell 工具栏之前和之后使用映像服务：
+  使用映像服务之前和之后的 Visual Studio shell 工具栏：
 
-  ![图像服务前后](../extensibility/media/image-service-before-and-after.png "图像服务前后对照")
+  ![图像服务前后](../extensibility/media/image-service-before-and-after.png "图像服务前后对比")
 
-## <a name="how-it-works"></a>其工作原理
- 图像服务可以提供适用于任何受支持的 UI 框架的位图化映像：
+## <a name="how-it-works"></a>工作原理
+ 图像服务可以提供适用于任何受支持的 UI 框架的位图图像：
 
-- WPF:BitmapSource
+- WPF： BitmapSource
 
-- WinForms:System.Drawing.Bitmap
+- WinForms：
 
-- Win32:HBITMAP
+- Win32： HBITMAP
 
-  图像服务流关系图
+  映像服务流程图
 
-  ![图像服务流关系图](../extensibility/media/image-service-flow-diagram.png "图像服务流关系图")
+  ![映像服务流程图](../extensibility/media/image-service-flow-diagram.png "图像服务流关系图")
 
   **图像名字对象**
 
-  图像名字对象 （或简称名字对象） 是唯一标识图像资产或映像库中的图像列表资产的 GUID/ID 对。
+  映像名字对象（或 short 的名字对象）是一个 GUID/ID 对，用于在映像库中唯一标识图像资产或图像列表资产。
 
-  **已知的名字对象**
+  **已知名字对象**
 
-  在 Visual Studio 映像编录和公开可使用包含的任何 Visual Studio 组件或扩展图像名字对象的组。
+  Visual Studio 图像目录中包含的映像名字对象的集合，并可由任何 Visual Studio 组件或扩展公开使用。
 
-  **图像清单文件**
+  **映像清单文件**
 
-  图像清单 ( *.imagemanifest*) 文件是定义一组图像资产，表示这些资产和实际的图像或图像，表示每个资产的名字对象的 XML 文件。 图像的清单可以定义独立图像或图像列表的旧 UI 支持。 此外，还有设置的属性可以在资产或隐藏每个资产的各个图像上更改何时以及如何显示这些资产。
+  图像清单（*imagemanifest*）文件是 XML 文件，用于定义一组图像资产、表示这些资产的名字对象以及表示每个资产的真实图像或图像。 图像清单可以为旧版 UI 支持定义单独的图像或图像列表。 此外，还可以在资产上或每个资产后面的单个图像上设置属性，更改这些资产的显示时间和方式。
 
-  **图像清单架构**
+  **映像清单架构**
 
-  完成映像清单如下所示：
+  完整的映像清单如下所示：
 
 ```xml
 <ImageManifest>
@@ -91,7 +91,7 @@ ms.locfileid: "67826012"
 
  **符号**
 
- 可读性和维护的帮助，因为图像清单可以使用属性值的符号。 此类定义了符号：
+ 作为可读性和维护帮助，图像清单可以使用符号作为属性值。 符号定义如下：
 
 ```xml
 <Symbols>
@@ -105,12 +105,12 @@ ms.locfileid: "67826012"
 |||
 |-|-|
 |**子元素**|**定义**|
-|导入|导入当前清单中使用的给定清单文件的符号|
-|Guid|该符号表示一个 GUID，并且必须匹配 GUID 的格式设置|
-|Id|该符号表示一个 ID，必须为非负整数|
-|String|该符号表示任意字符串值|
+|导入|导入给定清单文件的符号，以便在当前清单中使用|
+|GUID|符号表示 GUID 并且必须与 GUID 格式匹配|
+|Id|符号表示 ID，必须为非负整数|
+|字符串|符号表示任意字符串值|
 
- 符号是区分大小写，并引用使用 $(symbol-name) 语法：
+ 符号区分大小写，并使用 $ （符号名）语法进行引用：
 
 ```xml
 <Image Guid="$(ShellCommandGuid)" ID="$(cmdidSaveAll)" >
@@ -118,24 +118,24 @@ ms.locfileid: "67826012"
 </Image>
 ```
 
- 某些符号预定义的所有清单。 这些可在 Uri 特性\<源 > 或\<导入 > 到本地计算机上的引用路径的元素。
+ 某些符号是为所有清单预定义的。 可以在 \<源 > 的 Uri 特性中使用这些属性，也可以 \<导入 > 元素，以引用本地计算机上的路径。
 
 |||
 |-|-|
-|**符号**|**说明**|
-|CommonProgramFiles|%Commonprogramfiles%环境变量的值|
-|LocalAppData|%Localappdata%环境变量的值|
-|ManifestFolder|包含清单的文件的文件夹|
-|MyDocuments|当前用户的我的文档文件夹的完整路径|
-|ProgramFiles|%Programfiles%环境变量的值|
-|系统|*Windows\System32*文件夹|
-|WinDir|%Windir%环境变量的值|
+|**代号**|**描述**|
+|CommonProgramFiles|% CommonProgramFiles% 环境变量的值|
+|LocalAppData|% LocalAppData% 环境变量的值|
+|ManifestFolder|包含清单文件的文件夹|
+|MyDocuments|当前用户的 "我的文档" 文件夹的完整路径|
+|ProgramFiles|% ProgramFiles% 环境变量的值|
+|System|*Windows\System32*文件夹|
+|WinDir|% WinDir% 环境变量的值|
 
  **Image**
 
- \<图像 > 元素定义可由一个名字对象引用的图像。 GUID 和 ID 合起来构成图像名字对象。 跨整个图像库的图像名字对象必须是唯一的。 如果多个映像具有给定名字对象，生成库时遇到的第一个是保留的。
+ \<图像 > 元素定义可由名字对象引用的图像。 同时占用图像名字对象的 GUID 和 ID。 映像的名字对象在整个图像库中必须是唯一的。 如果有多个映像具有给定名字对象，则在生成库时遇到的第一个映像是保留的映像。
 
- 它必须包含至少一个源。 非特定大小的源将跨范围广泛的大小，提供最佳的结果，但这些内容并非必需。 如果服务要求中未定义的大小的图像\<图像 > 元素和没有非特定大小的源，则服务将选择最佳的大小特定于源并将其缩放到所请求的大小。
+ 它必须至少包含一个源。 大小中立的源将在各种大小范围内提供最佳结果，但不是必需的。 如果要求服务提供 \<映像 > 元素中未定义大小的映像，并且没有大小中立的源，则该服务将选择最佳的大小特定源，并将其缩放为请求的大小。
 
 ```xml
 <Image Guid="guid" ID="int" AllowColorInversion="true/false">
@@ -147,13 +147,13 @@ ms.locfileid: "67826012"
 |||
 |-|-|
 |**特性**|**定义**|
-|Guid|[必需]图像名字对象的 GUID 部分|
-|Id|[必需]图像名字对象 ID 部分|
-|AllowColorInversion|[可选，默认为 true]指示图像是否可以具有它以编程方式反转深色背景上使用时的颜色。|
+|GUID|请求图像名字对象的 GUID 部分|
+|Id|请求图像名字对象的 ID 部分|
+|AllowColorInversion|[可选，默认值为 true]指示在深色背景上使用时，图像是否可以通过编程方式进行反转。|
 
- **源**
+ **Source**
 
- \<源 > 元素定义单一映像源资产 （XAML 和 PNG）。
+ \<源 > 元素定义单个图像源资产（XAML 和 PNG）。
 
 ```xml
 <Source Uri="uri" Background="background">
@@ -164,20 +164,20 @@ ms.locfileid: "67826012"
 |||
 |-|-|
 |**特性**|**定义**|
-|URI|[必需]一个 URI，定义可从中加载图像。 它可以是以下值之一：<br /><br /> -A [Pack URI](/dotnet/framework/wpf/app-development/pack-uris-in-wpf)使用应用程序: / / 颁发机构<br />-一个绝对组件资源引用<br />的包含本机资源的文件路径|
-|背景|[可选]指示什么类型的源应使用的背景。<br /><br /> 它可以是以下值之一：<br /><br /> *光：* 源可以使用浅色背景上。<br /><br /> *深色：* 可以在深色背景上使用源。<br /><br /> *HighContrast:* 可以在高对比度模式中的任何背景上使用源。<br /><br /> *HighContrastLight:* 可以在高对比度模式下浅色背景上使用源。<br /><br /> *HighContrastDark:* 可以在高对比度模式中的深色背景上使用源。<br /><br /> 如果省略背景特性，则可以在任何的背景上使用源。<br /><br /> 如果后台*Light*，*深色*， *HighContrastLight*，或*HighContrastDark*，永远不会反转的源的颜色。 如果省略或设为背景*对比度*，由图像的控制的源的颜色反转**AllowColorInversion**属性。|
+|URI|请求一个 URI，用于定义图像的加载位置。 它可以是下列其中一项：<br /><br /> -使用 application:///机构的[PACK URI](/dotnet/framework/wpf/app-development/pack-uris-in-wpf)<br />-绝对组件资源引用<br />-指向包含本机资源的文件的路径|
+|背景|可有可无指示源要使用的背景类型。<br /><br /> 它可以是下列其中一项：<br /><br /> *浅：* 源可以在浅色背景上使用。<br /><br /> *深色：* 可以在深色背景上使用源。<br /><br /> *System.windows.forms.systeminformation.highcontrast：* 源可在高对比度模式下的任何背景上使用。<br /><br /> *HighContrastLight：* 在高对比度模式下，可以在浅色背景上使用源。<br /><br /> *HighContrastDark：* 在高对比度模式下，可以在深色背景上使用源。<br /><br /> 如果省略背景属性，则可以在任何背景上使用源。<br /><br /> 如果背景为*浅*、*暗*、 *HighContrastLight*或*HighContrastDark*，则源的颜色永远不会反转。 如果省略背景或将背景设置为*system.windows.forms.systeminformation.highcontrast*，则源颜色的反转由图像的**AllowColorInversion**属性控制。|
 
-一个\<源 > 元素可以具有以下可选子元素之一：
+\<源 > 元素可以具有以下一个可选子元素：
 
 ||||
 |-|-|-|
-|**元素**|**属性 （全部所需）**|**定义**|
-|\<Size>|值|源将用于指定大小 （以设备为单位） 的映像。 图将方形。|
-|\<SizeRange>|MinSize, MaxSize|将映像从 MinSize 到最大大小 （以设备为单位） （含限值） 使用源。 图将方形。|
-|\<维度 >|宽度、 高度|源将用于给定的宽度和高度 （以设备为单位） 的映像。|
-|\<DimensionRange>|MinWidth，MinHeight，<br /><br /> MaxWidth MaxHeight|源将用于从最小宽度/高度 （以设备为单位） 的最大宽度/高度的图像 （含）。|
+|**元素**|**属性（所有必需的）**|**定义**|
+|\<大小 >|“值”|源将用于给定大小的图像（以设备单位）。 图像将为方形。|
+|\<SizeRange >|MinSize，MaxSize|源将用于从 MinSize 到 MaxSize （在设备单位中）的图像。 图像将为方形。|
+|\<尺寸 >|宽度、高度|源将用于给定的宽度和高度的图像（在设备单位中）。|
+|\<DimensionRange >|MinWidth、MinHeight、<br /><br /> System.windows.frameworkelement.maxwidth、System.windows.frameworkelement.maxheight|源将用于从最小宽度/高度到最大宽度/高度（以设备单位）表示的图像。|
 
- 一个\<源 > 元素还具有一个可选\<NativeResource > 子元素，定义\<源 > 从本机程序集而不是托管程序集加载的。
+ \<源 > 元素也可以具有可选的 \<NativeResource > 子元素，该元素定义从本机程序集而不是托管程序集加载的 \<源 >。
 
 ```xml
 <NativeResource Type="type" ID="int" />
@@ -186,12 +186,12 @@ ms.locfileid: "67826012"
 |||
 |-|-|
 |**特性**|**定义**|
-|类型|[必需]类型的本机资源，XAML 或 PNG|
-|Id|[必需]本机资源的整数 ID 部分|
+|键入|请求本机资源的类型（XAML 或 PNG）|
+|Id|请求本机资源的整数 ID 部分|
 
  **ImageList**
 
- \<ImageList > 元素定义的映像可以在单个条形中返回的集合。 根据需要将按需、 构建在条带。
+ \<ImageList > 元素定义可在单个条带中返回的图像集合。 根据需要，可按需生成条带。
 
 ```xml
 <ImageList>
@@ -203,99 +203,99 @@ ms.locfileid: "67826012"
 |||
 |-|-|
 |**特性**|**定义**|
-|Guid|[必需]图像名字对象的 GUID 部分|
-|Id|[必需]图像名字对象 ID 部分|
+|GUID|请求图像名字对象的 GUID 部分|
+|Id|请求图像名字对象的 ID 部分|
 |外部|[可选，默认值为 false]指示图像名字对象是否引用当前清单中的图像。|
 
- 包含图像的名字对象没有引用当前清单中定义的图像。 如果在映像库中找不到包含的图像，将在其原位置使用空白的占位符图像。
+ 包含的图像的名字对象不必引用在当前清单中定义的映像。 如果在图像库中找不到包含的图像，则会在其位置使用空白占位符图像。
 
 ## <a name="using-the-image-service"></a>使用映像服务
 
-### <a name="first-steps-managed"></a>第一个步骤 （托管）
- 若要使用映像服务，需要将对部分或全部以下程序集的引用添加到你的项目：
+### <a name="first-steps-managed"></a>第一步（托管）
+ 若要使用映像服务，需要在项目中添加对以下程序集的引用：
 
-- *Microsoft.VisualStudio.ImageCatalog.dll*
+- *VisualStudio. ImageCatalog .dll*
 
-  - 如果在使用内置映像目录需要**KnownMonikers**。
+  - 如果使用内置图像目录**KnownMonikers**，则是必需的。
 
-- *Microsoft.VisualStudio.Imaging.dll*
+- *VisualStudio .dll*
 
-  - 如果在使用需要**CrispImage**并**ImageThemingUtilities** WPF 用户界面中。
+  - 如果在 WPF UI 中使用**CrispImage**和**ImageThemingUtilities** ，则是必需的。
 
-- *Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll*
+- *VisualStudio. DesignTime .dll 的操作*
 
-  - 如果在使用需要**ImageMoniker**并**ImageAttributes**类型。
-
-  - **EmbedInteropTypes**应设置为 true。
-
-- *Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime*
-
-  - 如果在使用需要**IVsImageService2**类型。
+  - 如果使用**ImageMoniker**和**ImageAttributes**类型，则是必需的。
 
   - **EmbedInteropTypes**应设置为 true。
 
-- *Microsoft.VisualStudio.Utilities.dll*
+- *VisualStudio. DesignTime 的操作*
 
-  - 如果在使用需要**BrushToColorConverter**有关**ImageThemingUtilities.ImageBackgroundColor** WPF 用户界面中。
+  - 如果使用**IVsImageService2**类型，则为必需。
 
-- *Microsoft.VisualStudio.Shell.\<VSVersion>.0*
+  - **EmbedInteropTypes**应设置为 true。
 
-  - 如果在使用需要**IVsUIObject**类型。
+- *VisualStudio .dll*
 
-- *Microsoft.VisualStudio.Shell.Interop.10.0.dll*
+  - 如果在 WPF UI 中使用**ImageThemingUtilities**的**BrushToColorConverter** ，则是必需的。
 
-  - 如果使用 WinForms 相关的 UI，帮助程序被必需。
+- *VisualStudio >\<的 VSVersion*
+
+  - 如果使用**IVsUIObject**类型，则为必需。
+
+- *VisualStudio （& a）*
+
+  - 如果使用与 WinForms 相关的 UI 帮助程序，则是必需的。
 
   - **EmbedInteropTypes**应设置为 true
 
-### <a name="first-steps-native"></a>第一个步骤 （本机）
- 若要使用映像服务，需要包括部分或全部以下标头到您的项目：
+### <a name="first-steps-native"></a>第一步（本机）
+ 若要使用映像服务，需要在项目中包含以下部分或全部标头：
 
-- **KnownImageIds.h**
+- **KnownImageIds**
 
-  - 如果在使用内置映像目录需要**KnownMonikers**，但不能使用**ImageMoniker**类型，例如在返回值从**IVsHierarchy GetGuidProperty**或**GetProperty**调用。
+  - 如果使用内置的映像目录**KnownMonikers**，但不能使用**ImageMoniker**类型，例如从**IVsHierarchy GetGuidProperty**或**GetProperty**调用返回值时，则需要此项。
 
-- **KnownMonikers.h**
+- **KnownMonikers**
 
-  - 如果在使用内置映像目录需要**KnownMonikers**。
+  - 如果使用内置图像目录**KnownMonikers**，则是必需的。
 
-- **ImageParameters140.h**
+- **ImageParameters140**
 
-  - 如果在使用需要**ImageMoniker**并**ImageAttributes**类型。
+  - 如果使用**ImageMoniker**和**ImageAttributes**类型，则是必需的。
 
-- **VSShell140.h**
+- **VSShell140**
 
-  - 如果在使用需要**IVsImageService2**类型。
+  - 如果使用**IVsImageService2**类型，则为必需。
 
-- **ImageThemingUtilities.h**
+- **ImageThemingUtilities**
 
-  - 需要您不能让图像服务为你处理主题。
+  - 如果无法让映像服务为你处理主题，则是必需的。
 
-  - 如果映像服务可以处理图像主题设置，则不使用此标头。
+  - 如果图像服务可处理你的映像主题，请不要使用此标头。
 
 ::: moniker range="vs-2017"
-- **VSUIDPIHelper.h**
+- **VSUIDPIHelper**
 
-  - 如果使用的 DPI 帮助器以获取当前 DPI 必需。
+  - 如果使用 DPI 帮助器获取当前 DPI，则是必需的。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
-- **VsDpiAwareness.h**
+- **VsDpiAwareness**
 
-  - 如果使用的 DPI 感知帮助器以获取当前 DPI 必需。
+  - 如果使用 DPI 感知帮助程序获取当前 DPI，则是必需的。
 
 ::: moniker-end
 
-## <a name="how-do-i-write-new-wpf-ui"></a>如何编写新的 WPF 用户界面？
+## <a name="how-do-i-write-new-wpf-ui"></a>如何实现编写新的 WPF UI？
 
-1. 通过添加在上面所需的程序集引用的开始部分首先步骤到你的项目。 您不必将它们全部添加，因此添加所需的引用。 (注意： 如果使用的或有权访问**颜色**而不是**画笔**，则可以跳过对引用**实用程序**，因为不需要转换器。)
+1. 首先将上述第一个步骤部分所需的程序集引用添加到你的项目中。 无需添加所有这些文件，只需添加所需的引用即可。 （注意：如果您使用的是或有权访问**颜色**而不是**画笔**，则可以跳过对**实用工具**的引用，因为您不需要转换器。）
 
-2. 选择所需的映像，并获取其名字对象。 使用**KnownMoniker**，或使用您自己有自己的自定义映像和名字对象。
+2. 选择所需的映像，并获取其名字对象。 如果你有自己的自定义映像和名字对象，请使用**KnownMoniker**，或使用自己的映像。
 
-3. 添加**CrispImages**到你的 XAML。 （请参阅下面的示例）。
+3. 将**CrispImages**添加到 XAML。 （请参阅下面的示例。）
 
-4. 设置**ImageThemingUtilities.ImageBackgroundColor** UI 层次结构中的属性。 (此值应设置其中的背景色已知的不一定是在位置**CrispImage**。)（请参阅下面的示例）。
+4. 在 UI 层次结构中设置**ImageThemingUtilities. ImageBackgroundColor**属性。 （应将其设置为已知背景色的位置，而不一定在**CrispImage**上。）（请参阅下面的示例。）
 
 ```xaml
 <Window
@@ -317,26 +317,26 @@ ms.locfileid: "67826012"
 </Window>
 ```
 
- **如何更新现有 WPF UI？**
+ **如何实现更新现有 WPF UI？**
 
- 更新现有 WPF UI 是一个相对简单的过程，包括三个基本步骤：
+ 更新现有 WPF UI 是一个相对简单的过程，它包含三个基本步骤：
 
-1. 将替换所有\<图像 > 元素中使用 UI \<CrispImage > 元素。
+1. 将 UI 中的所有 \<图像 > 元素替换为 \<CrispImage > 元素。
 
-2. 对名字对象属性更改源的所有属性。
+2. 将所有源属性更改为名字对象特性。
 
-    - 如果映像永远不会更改，并且使用**KnownMonikers**，然后将该属性设置为静态绑定**KnownMoniker**。 （请参阅上面的示例。）
+    - 如果图像永远不会发生更改，并且使用的是**KnownMonikers**，请将该属性静态绑定到**KnownMoniker**。 （请参阅上面的示例。）
 
-    - 如果映像永远不会更改，并且使用你自己的自定义映像，然后以静态方式绑定到您自己的名字对象。
+    - 如果图像永远不会更改，并且你使用的是自己的自定义映像，则静态绑定到你自己的名字对象。
 
-    - 如果可以更改图像，则将名字对象属性绑定到属性更改通知的代码属性。
+    - 如果图像可更改，请将名字对象特性绑定到在属性更改时发出通知的代码属性。
 
-3. 某个位置中的 UI 层次结构中，设置**ImageThemingUtilities.ImageBackgroundColor**以便确保颜色反转正常工作。
+3. 在 UI 层次结构中的某个位置，将**ImageThemingUtilities**设置为确保颜色反转正确工作。
 
     - 这可能需要使用**BrushToColorConverter**类。 （请参阅上面的示例。）
 
-## <a name="how-do-i-update-win32-ui"></a>如何更新 Win32 UI？
- 将以下代码添加到你的代码在适当的替换原始加载映像。 切换返回而不是与 HIMAGELIST HICONs HBITMAPs，根据需要的值。
+## <a name="how-do-i-update-win32-ui"></a>如何实现更新 Win32 UI？
+ 将以下代码添加到代码中的任意位置，以替换映像的原始加载。 根据需要切换值以返回 HBITMAPs 与 HICONs 与 HIMAGELIST。
 
  **获取映像服务**
 
@@ -395,10 +395,10 @@ spImgSvc->GetImage(KnownMonikers::Blank, attributes, &spImg);
 
 ::: moniker-end
 
-## <a name="how-do-i-update-winforms-ui"></a>如何更新 WinForms UI？
- 将以下代码添加到你的代码在适当的替换原始加载映像。 切换为根据需要返回与图标位图的值。
+## <a name="how-do-i-update-winforms-ui"></a>如何实现更新 WinForms UI？
+ 将以下代码添加到代码中的任意位置，以替换映像的原始加载。 根据需要切换返回位图和图标的值。
 
- **使用语句给出帮助信息**
+ **有用的 using 语句**
 
 ```csharp
 using GelUtilities = Microsoft.Internal.VisualStudio.PlatformUI.Utilities;
@@ -468,23 +468,23 @@ Bitmap bitmap = (Bitmap)GelUtilities.GetObjectData(uiObj); // Use this if you ne
 
 ::: moniker-end
 
-## <a name="how-do-i-use-image-monikers-in-a-new-tool-window"></a>如何在新的工具窗口中使用图像名字对象？
- VSIX 包项目模板已更新用于 Visual Studio 2015。 若要创建的新工具窗口，右键单击 VSIX 项目并选择**外** > **新项**(**Ctrl**+**Shift**+ **A**)。 在项目语言扩展性节点下选择**自定义工具窗口**，为工具窗口中提供的名称，然后按**添加**按钮。
+## <a name="how-do-i-use-image-monikers-in-a-new-tool-window"></a>如何实现在新的工具窗口中使用图像名字对象？
+ 已为 Visual Studio 2015 更新了 VSIX 包项目模板。 若要创建新的工具窗口，请右键单击 VSIX 项目，然后选择 "**添加** > **新项**" （**Ctrl**+**Shift**+**a**）。 在项目语言的 "扩展性" 节点下，选择 "**自定义工具窗口**"，为工具窗口提供一个名称，然后按 "**添加**" 按钮。
 
- 这些是要在工具窗口中使用名字对象的键位置。 请按照说明为每个操作：
+ 这些是在工具窗口中使用名字对象的关键位置。 按照以下各项的说明操作：
 
-1. 工具窗口选项卡时在选项卡获取足够小 (也用于**Ctrl**+**选项卡**窗口切换器)。
+1. 当选项卡足够小（也用在**Ctrl**+**选项卡**窗口切换器中）时，工具窗口选项卡。
 
-    将此行添加到派生类的构造函数**ToolWindowPane**类型：
+    将以下行添加到从**ToolWindowPane**类型派生的类的构造函数：
 
    ```csharp
    // Replace this KnownMoniker with your desired ImageMoniker
    this.BitmapImageMoniker = KnownMonikers.Blank;
    ```
 
-2. 要打开工具窗口的命令。
+2. 用于打开工具窗口的命令。
 
-    在中 *.vsct*包文件中，编辑工具窗口的命令按钮：
+    在包的 *.vsct*文件中，编辑工具窗口的命令按钮：
 
    ```xml
    <Button guid="guidPackageCmdSet" id="CommandId" priority="0x0100" type="Button">
@@ -499,29 +499,29 @@ Bitmap bitmap = (Bitmap)GelUtilities.GetObjectData(uiObj); // Use this if you ne
    </Button>
    ```
 
-   **如何在现有的工具窗口中使用图像名字对象？**
+   **如何实现在现有工具窗口中使用图像名字对象？**
 
-   更新现有的工具窗口，若要使用图像名字对象是类似于创建的新工具窗口的步骤。
+   更新现有工具窗口以使用映像名字对象类似于创建新工具窗口的步骤。
 
-   这些是要在工具窗口中使用名字对象的键位置。 请按照说明为每个操作：
+   这些是在工具窗口中使用名字对象的关键位置。 按照以下各项的说明操作：
 
-3. 工具窗口选项卡时在选项卡获取足够小 (也用于**Ctrl**+**选项卡**窗口切换器)。
+3. 当选项卡足够小（也用在**Ctrl**+**选项卡**窗口切换器中）时，工具窗口选项卡。
 
-   1. 在派生类的构造函数中 （如果存在） 删除这些行**ToolWindowPane**类型：
+   1. 在从**ToolWindowPane**类型派生的类的构造函数中删除这些行（如果存在）：
 
        ```csharp
        this.BitmapResourceID = <Value>;
        this.BitmapIndex = <Value>;
        ```
 
-   2. 请参阅步骤 #1 的"如何使用图像名字对象的新工具窗口中？" 上面的部分。
+   2. 请参阅 "如何实现在新工具窗口中使用图像名字对象" 的步骤 #1。 部分。
 
-4. 要打开工具窗口的命令。
+4. 用于打开工具窗口的命令。
 
-   - 请参阅步骤 #2 的"如何使用图像名字对象的新工具窗口中？" 上面的部分。
+   - 请参阅 "如何实现在新工具窗口中使用图像名字对象" 的步骤 #2。 部分。
 
-## <a name="how-do-i-use-image-monikers-in-a-vsct-file"></a>如何在.vsct 文件中使用图像名字对象？
- 更新你 *.vsct*文件注释行下面所示：
+## <a name="how-do-i-use-image-monikers-in-a-vsct-file"></a>如何实现使用 .vsct 文件中的图像名字对象？
+ 按照下面的注释行所示更新 *.vsct*文件：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -561,9 +561,9 @@ Bitmap bitmap = (Bitmap)GelUtilities.GetObjectData(uiObj); // Use this if you ne
 </CommandTable>
 ```
 
- **如果我的.vsct 文件还需要读取的较旧版本的 Visual Studio？**
+ **如果旧版本的 Visual Studio 还需要读取 .vsct 文件怎么办？**
 
- 较旧版本的 Visual Studio 不能识别**IconIsMoniker**命令标志。 在支持它，但继续在旧版本的 Visual Studio 中使用旧式映像的版本的 Visual Studio，可以使用映像服务中的映像。 若要执行此操作，则会将 *.vsct*文件保持不变 （并因此与较旧版本的 Visual Studio 兼容），并从文件创建 CSV （逗号分隔值） 映射中定义的 GUID/ID 对 *.vsct*文件的\<位图 > 到图像名字对象 GUID/ID 对的元素。
+ 较早版本的 Visual Studio 不能识别**IconIsMoniker**命令标志。 你可以在支持 Visual Studio 版本的 Visual Studio 版本中使用映像服务中的映像，但会继续在较早版本的 Visual Studio 上使用旧样式的映像。 若要执行此操作，请将 *.vsct*文件保持不变（因此与较旧版本的 Visual Studio 兼容），并创建一个 CSV （逗号分隔值）文件，该文件从 *.vsct*文件的 \<位图中定义的 GUID/ID 对中映射 >元素到映像名字对象 GUID/ID 对。
 
  映射 CSV 文件的格式为：
 
@@ -573,49 +573,49 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,1,fda30684-682d-421c-8be4-650a2967058e,100
 b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 ```
 
- 与包部署的 CSV 文件并通过指定其位置**IconMappingFilename**的属性**ProvideMenuResource**包属性：
+ CSV 文件随包一起部署，其位置由**ProvideMenuResource**包特性的**IconMappingFilename**属性指定：
 
 ```csharp
 [ProvideMenuResource("MyPackage.ctmenu", 1, IconMappingFilename="IconMappings.csv")]
 ```
 
- **IconMappingFilename**一个相对路径隐式根节点的 $PackageFolder$ （如上面的示例），或由环境变量，如定义一个目录以显式根的绝对路径 *@"%UserProfile%\dir1\dir2\MyMappingFile.csv"* 。
+ **IconMappingFilename**是以隐式方式以 $PackageFolder $ 为根的相对路径（如上面的示例所示），或显式地以环境变量（如 *@ "%UserProfile%\dir1\dir2\MyMappingFile "* 。
 
-## <a name="how-do-i-port-a-project-system"></a>如何移植的项目系统？
+## <a name="how-do-i-port-a-project-system"></a>如何实现移植项目系统？
  **如何为项目提供 ImageMonikers**
 
-1. 实现**VSHPROPID_SupportsIconMonikers**项目的**IVsHierarchy**，并返回 true。
+1. 对项目的**IVsHierarchy**实现**VSHPROPID_SupportsIconMonikers** ，并返回 true。
 
-2. 实现**VSHPROPID_IconMonikerImageList** (如果使用的原始项目**VSHPROPID_IconImgList**) 或**VSHPROPID_IconMonikerGuid**， **VSHPROPID_IconMonikerId**， **VSHPROPID_OpenFolderIconMonikerGuid**， **VSHPROPID_OpenFolderIconMonikerId** (如果使用的原始项目**VSHPROPID_IconHandle**并**VSHPROPID_OpenFolderIconHandle**)。
+2. 实现**VSHPROPID_IconMonikerImageList** （如果原始项目使用的是**VSHPROPID_IconImgList**）或**VSHPROPID_IconMonikerGuid**、 **VSHPROPID_IconMonikerId**、 **VSHPROPID_OpenFolderIconMonikerGuid** **VSHPROPID_OpenFolderIconMonikerId** （如果原始项目使用的是**VSHPROPID_IconHandle**和**VSHPROPID_OpenFolderIconHandle**）。
 
-3. 更改图标原始 VSHPROPIDs，以创建图标的"传统"版本，如果扩展点请求它们的实现。 **IVsImageService2**提供了这些图标所需的功能
+3. 更改原始 VSHPROPIDs 的图标的实现，以便在扩展点请求时创建图标的 "旧" 版本。 **IVsImageService2**提供了获取这些图标所需的功能
 
-   **额外要求 VB / C# 项目风格**
+   **VB/C#项目风格的额外要求**
 
-   仅实现**VSHPROPID_SupportsIconMonikers**如果检测到你的项目是**最外面的风格**。 否则为实际的最外层风格可能不支持图像名字对象在现实中，并且你基风格可能有效地"隐藏"的自定义的映像。
+   如果检测到你的项目是**最外面的风格**，只需要实现**VSHPROPID_SupportsIconMonikers** 。 否则，实际最外面的风格可能不支持图像名字对象，因此，你的基础风格可能会有效地 "隐藏" 自定义图像。
 
-   **如何在 CPS 中使用图像名字对象？**
+   **如何实现使用 CPS 中的映像名字对象？**
 
-   在 CPS （公共项目系统） 中设置自定义映像可进行手动或通过项目系统可扩展性 SDK 随附的项模板。
+   可以手动或通过项目系统扩展性 SDK 随附的项模板来设置 CPS （通用项目系统）中的自定义映像。
 
-   **使用项目系统可扩展性 SDK**
+   **使用项目系统扩展性 SDK**
 
-   按照的说明[提供项目类型/项类型的自定义图标](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/scenario/provide_custom_icons_for_the_project_or_item_type.md)自定义 CPS 映像。 CPS 有关的详细信息可从[Visual Studio 项目系统可扩展性文档](https://github.com/Microsoft/VSProjectSystem)
+   按照为[项目类型/项类型提供自定义图标](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/scenario/provide_custom_icons_for_the_project_or_item_type.md)中的说明自定义 CPS 映像。 有关 CPS 的详细信息，请参阅[Visual Studio 项目系统扩展性文档](https://github.com/Microsoft/VSProjectSystem)
 
    **手动使用 ImageMonikers**
 
-4. 实现和导出**IProjectTreeModifier**项目系统中的接口。
+4. 实现和导出项目系统中的**IProjectTreeModifier**接口。
 
-5. 确定哪个**KnownMoniker**或你想要使用的自定义图像名字对象。
+5. 确定要使用的**KnownMoniker**或自定义映像名字对象。
 
-6. 在**ApplyModifications**方法中，执行以下操作中返回新树中，类似于之前的方法的某个位置下面的示例：
+6. 在**ApplyModifications**方法中，在方法中的某处执行以下操作，然后返回新树，类似于下面的示例：
 
    ```csharp
    // Replace this KnownMoniker with your desired ImageMoniker
    tree = tree.SetIcon(KnownMonikers.Blank.ToProjectSystemType());
    ```
 
-7. 如果要创建新的树，则可以设置自定义映像通过所需的名字对象传入到 NewTree 方法类似于下面的示例：
+7. 如果要创建新树，可以通过将所需的名字对象传入 NewTree 方法来设置自定义映像，类似于以下示例：
 
    ```csharp
    // Replace this KnownMoniker with your desired ImageMoniker
@@ -629,38 +629,38 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
                                                 expandedIcon);
    ```
 
-## <a name="how-do-i-convert-from-a-real-image-strip-to-a-moniker-based-image-strip"></a>如何转换从实际的图像条带到基于名字对象的图像条？
+## <a name="how-do-i-convert-from-a-real-image-strip-to-a-moniker-based-image-strip"></a>如何实现从真实图像条转换为基于名字对象的图像条？
  **我需要支持 HIMAGELISTs**
 
- 如果你想要更新为使用映像服务，但受需要传递图像列表 Api 的代码的现有图像条，您仍可以获取映像服务的优势。 若要创建基于名字对象的图像条，请执行以下步骤来创建从现有的名字对象的清单。
+ 如果你要更新的代码有一个现有的图像条以使用映像服务，但你受需要通过图像列表传递的 Api 的约束，则仍可获得映像服务的优势。 若要创建基于名字对象的图像条，请按照以下步骤从现有名字对象创建清单。
 
-1. 运行**ManifestFromResources**工具，并向其传递图像条。 这将生成在条带的清单。
+1. 运行**ManifestFromResources**工具，并向其传递图像条。 这将为条带生成清单。
 
-   - 建议： 提供清单以满足其使用情况的非默认名称。
+   - 建议：提供清单的非默认名称，以适合其使用情况。
 
-2. 如果仅使用**KnownMonikers**，然后执行以下操作：
+2. 如果仅使用**KnownMonikers**，请执行以下操作：
 
-   - 替换\<图像 > 与清单的部分\<映像 / >。
+   - 将清单 > 部分 \<图像替换为 \<Images/>。
 
-   - 删除所有 subimage Id (with \<imagestrip 名称 > _ # #)。
+   - 删除所有 subimage Id （\<imagestrip 名称的任何内容 > _ # #）。
 
-   - 建议： 重命名的 AssetsGuid 符号和图像条带符号，以满足其使用情况。
+   - 建议：重命名 AssetsGuid 符号和图像条符号以适应其用法。
 
-   - 将为每个**ContainedImage**的 GUID 与 $(ImageCatalogGuid) 替换每个**ContainedImage**的 ID 为 $(\<名字对象 >)，并将外部 ="true"属性添加到每个**ContainedImage**
+   - 将每个**ContainedImage**的 GUID 替换为 $ （ImageCatalogGuid），将每个**ContainedImage**的 ID 替换为 $ （\<名字对象 >），并向每个**ContainedImage**添加 External = "true" 属性。
 
-       - \<名字对象 > 应替换为**KnownMoniker**相匹配的图像，但与"KnownMonikers"。 从名称中删除。
+       - \<的名字对象 > 应替换为与图像匹配但带有 "KnownMonikers" 的**KnownMoniker** 。 从名称中删除。
 
-   - 添加 < 导入 Manifest="$(ManifestFolder)\\< 相对安装到的目录路径 *\>\Microsoft.VisualStudio.ImageCatalog.imagemanifest"/\*> 的页首\<符号 > 部分。
+   - 将 < Import Manifest = "$ （ManifestFolder）\\< 的相对安装目录路径添加到\>\*符号顶部 > \<> 的符号。
 
-       - 由安装程序创作清单中定义的部署位置确定的相对路径。
+       - 相对路径是由在清单的安装创作中定义的部署位置确定的。
 
-3. 运行**ManifestToCode**工具生成的包装，以便现有的代码有一个名字对象，它可用于查询图像带映像服务。
+3. 运行**ManifestToCode**工具以生成包装器，使现有代码具有可用于查询图像条的映像服务的名字对象。
 
-   - 建议： 提供包装器和命名空间以满足其使用情况的非默认名称。
+   - 建议：为包装和命名空间提供非默认名称，以适合其使用情况。
 
-4. 执行所有操作将添加时，安装程序创作/部署和其他代码更改来处理映像服务和新文件。
+4. 执行所有添加、安装程序创作/部署以及其他代码更改，以便使用映像服务和新文件。
 
-   示例包括内部和外部的映像，以查看它应类似于什么清单：
+   示例清单，包括内部和外部图像，以查看其外观：
 
 ```xml
 <?xml version="1.0"?>
@@ -713,120 +713,120 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
  **我不需要支持 HIMAGELISTs**
 
-1. 确定的一套**KnownMonikers**的匹配你的图像条中的映像或在图像条中创建你自己的图像的名字对象。
+1. 确定与图像条中的图像匹配的一组**KnownMonikers** ，或在映像条中为图像创建自己的名字对象。
 
-2. 更新用于获取图像中的图像条，以改为使用名字对象所需的索引处的任何映射。
+2. 更新在图像条的所需索引处获取图像所使用的任何映射，以改用名字对象。
 
-3. 更新代码以使用图像服务请求通过所更新映射的名字对象。 (这可能意味着需要更新到**CrispImages**对于托管代码中，或从映像服务请求 HBITMAPs 或 HICONs 和对于本机代码中传递它们。)
+3. 更新你的代码，以便使用映像服务通过已更新的映射来请求名字对象。 （这可能意味着更新托管代码的**CrispImages** ，或从映像服务请求 HBITMAPs 或 HICONs，并将其传递给本机代码。）
 
-## <a name="testing-your-images"></a>测试你的映像
- 图像库查看器工具可用于测试映像清单，以确保所有内容编写正确。 您可以发现中的工具[Visual Studio 2015 SDK](visual-studio-sdk.md)。 有关此工具和其他文档，请参阅[此处](https://aka.ms/VSImageThemeTools)。
+## <a name="testing-your-images"></a>测试映像
+ 您可以使用 "图像库查看器" 工具来测试图像清单，以确保正确编写所有内容。 可在[Visual Studio 2015 SDK](visual-studio-sdk.md)中找到该工具。 可在[此处](https://aka.ms/VSImageThemeTools)找到有关此工具和其他工具的文档。
 
 ## <a name="additional-resources"></a>其他资源
 
 ### <a name="samples"></a>示例
- GitHub 上的 Visual Studio 示例的几个已更新，以演示如何使用映像服务一部分的各种 Visual Studio 扩展点。
+ GitHub 上的几个 Visual Studio 示例已更新，以说明如何在各种 Visual Studio 扩展点中使用映像服务。
 
- 检查[ http://github.com/Microsoft/VSSDK-Extensibility-Samples ](http://github.com/Microsoft/VSSDK-Extensibility-Samples)有关最新示例。
+ 检查最新示例的[http://github.com/Microsoft/VSSDK-Extensibility-Samples](https://github.com/Microsoft/VSSDK-Extensibility-Samples) 。
 
 ### <a name="tooling"></a>工具
- 创建的映像服务的支持工具集来帮助创建/更新与映像服务配合使用的 UI。 有关每个工具的详细信息，检查附带的工具的文档。 工具是作为的一部分[Visual Studio 2015 SDK](visual-studio-sdk.md)。
+ 创建了一组用于映像服务的支持工具，以帮助创建/更新可与映像服务一起使用的 UI。 有关每个工具的详细信息，请查看工具随附的文档。 这些工具作为[Visual Studio 2015 SDK](visual-studio-sdk.md)的一部分提供。
 
  **ManifestFromResources**
 
- 从资源工具清单使用的图像资源 （PNG 或 XAML） 的列表，并生成图像清单文件中使用这些映像的映像服务。
+ Manifest from Resources 工具获取图像资源（PNG 或 XAML）的列表，并生成一个图像清单文件，用于将这些映像与映像服务一起使用。
 
  **ManifestToCode**
 
- 代码工具清单获取映像清单文件，并生成用于引用在代码中的清单值的包装器文件 (C++， C#，或 VB) 或 *.vsct*文件。
+ Manifest to Code 工具采用图像清单文件，并生成一个包装文件用于引用代码（C++、 C#或 VB）或 *.vsct*文件中的清单值。
 
  **ImageLibraryViewer**
 
- 图像库查看器工具可以加载图像的清单，并且允许用户用来与 Visual Studio 将以确保正确编写了清单相同的方式处理它们。 用户可以更改背景、 大小、 DPI 设置、 高对比度，以及其他设置。 它还显示正在加载信息在清单中查找错误并在清单中显示的每个映像的源信息。
+ 图像库查看器工具可以加载图像清单，并允许用户以相同的方式对其进行操作，以确保正确编写清单。 用户可以更改背景、大小、DPI 设置、高对比度和其他设置。 它还显示加载信息以查找清单中的错误，并显示清单中每个图像的源信息。
 
 ## <a name="faq"></a>FAQ
 
-- 是否有任何依赖项加载时必须包括\<引用 Include="Microsoft.VisualStudio.*。Interop.14.0.DesignTime"/ >？
+- 在加载 \<引用时，是否存在必须包括的依赖项 = "VisualStudio. *"。DesignTime "/>？
 
-  - 设置 EmbedInteropTypes ="true"上的所有互操作的 Dll。
+  - 在所有互操作 Dll 上设置 EmbedInteropTypes = "true"。
 
-- 如何使用 my 扩展部署图像清单？
+- 使用 my extension 如何实现部署映像清单？
 
-  - 添加 *.imagemanifest*到你的项目文件。
+  - 将*imagemanifest*文件添加到项目。
 
-  - 设置为 True 的"包括在 VSIX 中"。
+  - 将 "Include in VSIX" 设置为 True。
 
-- 我正在更新我的 CPS 项目系统。 发生了什么情况**ImageName**并**StockIconService**？
+- 我正在更新 CPS 项目系统。 **ImageName**和**StockIconService**发生了什么情况？
 
-  - 这些已删除时 CPS 已更新为使用名字对象。 不再需要调用**StockIconService**，只需传递所需**KnownMoniker**对方法或属性使用**ToProjectSystemType()** 中的扩展方法CPS 实用程序。 您可以找到从映射**ImageName**到**KnownMonikers**如下：
+  - 当 CPS 被更新为使用名字对象时，已将其删除。 不再需要调用**StockIconService**，只需使用 CPS 实用工具中的**ToProjectSystemType （）** 扩展方法将所需的**KnownMoniker**传递给方法或属性。 可以在下面找到**ImageName**到**KnownMonikers**的映射：
 
     |||
     |-|-|
     |**ImageName**|**KnownMoniker**|
-    |ImageName.OfflineWebApp|KnownImageIds.Web|
-    |ImageName.WebReferencesFolder|KnownImageIds.Web|
-    |ImageName.OpenReferenceFolder|KnownImageIds.FolderOpened|
-    |ImageName.ReferenceFolder|KnownImageIds.Reference|
-    |ImageName.Reference|KnownImageIds.Reference|
-    |ImageName.SdlWebReference|KnownImageIds.WebReferenceFolder|
-    |ImageName.DiscoWebReference|KnownImageIds.DynamicDiscoveryDocument|
-    |ImageName.Folder|KnownImageIds.FolderClosed|
-    |ImageName.OpenFolder|KnownImageIds.FolderOpened|
-    |ImageName.ExcludedFolder|KnownImageIds.HiddenFolderClosed|
-    |ImageName.OpenExcludedFolder|KnownImageIds.HiddenFolderOpened|
-    |ImageName.ExcludedFile|KnownImageIds.HiddenFile|
-    |ImageName.DependentFile|KnownImageIds.GenerateFile|
-    |ImageName.MissingFile|KnownImageIds.DocumentWarning|
-    |ImageName.WindowsForm|KnownImageIds.WindowsForm|
-    |ImageName.WindowsUserControl|KnownImageIds.UserControl|
-    |ImageName.WindowsComponent|KnownImageIds.ComponentFile|
-    |ImageName.XmlSchema|KnownImageIds.XMLSchema|
-    |ImageName.XmlFile|KnownImageIds.XMLFile|
-    |ImageName.WebForm|KnownImageIds.Web|
-    |ImageName.WebService|KnownImageIds.WebService|
-    |ImageName.WebUserControl|KnownImageIds.WebUserControl|
-    |ImageName.WebCustomUserControl|KnownImageIds.WebCustomControl|
-    |ImageName.AspPage|KnownImageIds.ASPFile|
-    |ImageName.GlobalApplicationClass|KnownImageIds.SettingsFile|
-    |ImageName.WebConfig|KnownImageIds.ConfigurationFile|
-    |ImageName.HtmlPage|KnownImageIds.HTMLFile|
-    |ImageName.StyleSheet|KnownImageIds.StyleSheet|
-    |ImageName.ScriptFile|KnownImageIds.JSScript|
-    |ImageName.TextFile|KnownImageIds.Document|
-    |ImageName.SettingsFile|KnownImageIds.Settings|
-    |ImageName.Resources|KnownImageIds.DocumentGroup|
-    |ImageName.Bitmap|KnownImageIds.Image|
-    |ImageName.Icon|KnownImageIds.IconFile|
-    |ImageName.Image|KnownImageIds.Image|
-    |ImageName.ImageMap|KnownImageIds.ImageMapFile|
-    |ImageName.XWorld|KnownImageIds.XWorldFile|
-    |ImageName.Audio|KnownImageIds.Sound|
-    |ImageName.Video|KnownImageIds.Media|
-    |ImageName.Cab|KnownImageIds.CABProject|
-    |ImageName.Jar|KnownImageIds.JARFile|
-    |ImageName.DataEnvironment|KnownImageIds.DataTable|
-    |ImageName.PreviewFile|KnownImageIds.Report|
-    |ImageName.DanglingReference|KnownImageIds.ReferenceWarning|
-    |ImageName.XsltFile|KnownImageIds.XSLTransform|
-    |ImageName.Cursor|KnownImageIds.CursorFile|
-    |ImageName.AppDesignerFolder|KnownImageIds.Property|
-    |ImageName.Data|KnownImageIds.Database|
-    |ImageName.Application|KnownImageIds.Application|
-    |ImageName.DataSet|KnownImageIds.DatabaseGroup|
-    |ImageName.Pfx|KnownImageIds.Certificate|
-    |ImageName.Snk|KnownImageIds.Rule|
-    |ImageName.VisualBasicProject|KnownImageIds.VBProjectNode|
-    |ImageName.CSharpProject|KnownImageIds.CSProjectNode|
-    |ImageName.Empty|KnownImageIds.Blank|
-    |ImageName.MissingFolder|KnownImageIds.FolderOffline|
-    |ImageName.SharedImportReference|KnownImageIds.SharedProject|
-    |ImageName.SharedProjectCs|KnownImageIds.CSSharedProject|
-    |ImageName.SharedProjectVc|KnownImageIds.CPPSharedProject|
-    |ImageName.SharedProjectJs|KnownImageIds.JSSharedProject|
-    |ImageName.CSharpCodeFile|KnownImageIds.CSFileNode|
-    |ImageName.VisualBasicCodeFile|KnownImageIds.VBFileNode|
+    |ImageName. OfflineWebApp|KnownImageIds|
+    |ImageName. WebReferencesFolder|KnownImageIds|
+    |ImageName. OpenReferenceFolder|KnownImageIds.FolderOpened|
+    |ImageName. ReferenceFolder|KnownImageIds 引用|
+    |ImageName 引用|KnownImageIds 引用|
+    |ImageName. SdlWebReference|KnownImageIds.WebReferenceFolder|
+    |ImageName. DiscoWebReference|KnownImageIds.DynamicDiscoveryDocument|
+    |ImageName|KnownImageIds.FolderClosed|
+    |ImageName. OpenFolder|KnownImageIds.FolderOpened|
+    |ImageName. ExcludedFolder|KnownImageIds.HiddenFolderClosed|
+    |ImageName. OpenExcludedFolder|KnownImageIds.HiddenFolderOpened|
+    |ImageName. ExcludedFile|KnownImageIds.HiddenFile|
+    |ImageName. DependentFile|KnownImageIds.GenerateFile|
+    |ImageName. MissingFile|KnownImageIds.DocumentWarning|
+    |ImageName. WindowsForm|KnownImageIds.WindowsForm|
+    |ImageName. WindowsUserControl|KnownImageIds|
+    |ImageName. WindowsComponent|KnownImageIds.ComponentFile|
+    |ImageName. XmlSchema|KnownImageIds. XMLSchema|
+    |ImageName. XmlFile|KnownImageIds. XMLFile|
+    |ImageName. WebForm|KnownImageIds|
+    |ImageName|KnownImageIds|
+    |ImageName. WebUserControl|KnownImageIds.WebUserControl|
+    |ImageName. WebCustomUserControl|KnownImageIds.WebCustomControl|
+    |ImageName. AspPage|KnownImageIds.ASPFile|
+    |ImageName. GlobalApplicationClass|KnownImageIds.SettingsFile|
+    |ImageName. WebConfig|KnownImageIds. Configurationfile.ini|
+    |ImageName. Html 页|KnownImageIds. HTMLFile|
+    |ImageName|KnownImageIds|
+    |ImageName. ScriptFile|KnownImageIds.JSScript|
+    |ImageName. TextFile|KnownImageIds|
+    |ImageName. SettingsFile|KnownImageIds|
+    |ImageName|KnownImageIds.DocumentGroup|
+    |ImageName 位图|KnownImageIds|
+    |ImageName|KnownImageIds.IconFile|
+    |ImageName|KnownImageIds|
+    |ImageName. ImageMap|KnownImageIds.ImageMapFile|
+    |ImageName. XWorld|KnownImageIds.XWorldFile|
+    |ImageName|KnownImageIds|
+    |ImageName|KnownImageIds|
+    |ImageName|KnownImageIds.CABProject|
+    |ImageName|KnownImageIds. JARFile|
+    |ImageName|KnownImageIds|
+    |ImageName. PreviewFile|KnownImageIds|
+    |ImageName. DanglingReference|KnownImageIds.ReferenceWarning|
+    |ImageName. XsltFile|KnownImageIds. XSLTransform|
+    |ImageName|KnownImageIds.CursorFile|
+    |ImageName. AppDesignerFolder|KnownImageIds 属性|
+    |ImageName|KnownImageIds|
+    |ImageName|KnownImageIds|
+    |ImageName|KnownImageIds.DatabaseGroup|
+    |ImageName .Pfx|KnownImageIds|
+    |ImageName|KnownImageIds|
+    |ImageName. VisualBasicProject|KnownImageIds.VBProjectNode|
+    |ImageName. CSharpProject|KnownImageIds.CSProjectNode|
+    |ImageName|KnownImageIds 空白|
+    |ImageName. MissingFolder|KnownImageIds.FolderOffline|
+    |ImageName. SharedImportReference|KnownImageIds.SharedProject|
+    |ImageName. SharedProjectCs|KnownImageIds.CSSharedProject|
+    |ImageName. SharedProjectVc|KnownImageIds.CPPSharedProject|
+    |ImageName. SharedProjectJs|KnownImageIds.JSSharedProject|
+    |ImageName. CSharpCodeFile|KnownImageIds.CSFileNode|
+    |ImageName. VisualBasicCodeFile|KnownImageIds.VBFileNode|
 
-  - 我正在更新我的完成列表提供程序。 什么**KnownMonikers**匹配到旧**StandardGlyphGroup**并**StandardGlyph**值？
+  - 我正在更新完成列表提供程序。 哪些**KnownMonikers**与旧的**StandardGlyphGroup**和**StandardGlyph**值匹配？
 
     ||||
     |-|-|-|
@@ -1023,17 +1023,17 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
     |GlyphVBProject||VBProjectNode|
     |GlyphCoolProject||CSProjectNode|
     |GlyphCppProject||CPPProjectNode|
-    |GlyphDialogId||对话框|
+    |GlyphDialogId||"对话框|
     |GlyphOpenFolder||FolderOpened|
     |GlyphClosedFolder||FolderClosed|
     |GlyphArrow||GoToNext|
     |GlyphCSharpFile||CSFileNode|
-    |GlyphCSharpExpansion||代码片段|
+    |GlyphCSharpExpansion||片段|
     |GlyphKeyword||IntellisenseKeyword|
     |GlyphInformation||StatusInformation|
     |GlyphReference||ClassMethodReference|
     |GlyphRecursion||递归|
-    |GlyphXmlItem||标记|
+    |GlyphXmlItem||Tag|
     |GlyphJSharpProject||DocumentCollection|
     |GlyphJSharpDocument||Document|
     |GlyphForwardType||GoToNext|

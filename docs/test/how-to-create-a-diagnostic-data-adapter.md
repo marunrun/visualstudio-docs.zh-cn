@@ -5,19 +5,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Diagnostic Data Adapter, creating
 ms.assetid: bd7ad36c-54cb-4d2a-9aea-9d10ad98d7ba
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 517d4e0558aeca1518316520191ae6c662b41a9e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a1940cda15d1ac5515e25b1e1e997f13a32d6e53
+ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62950716"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72653686"
 ---
 # <a name="how-to-create-a-diagnostic-data-adapter"></a>如何：创建诊断数据适配器
 
-若要创建诊断数据适配器，请使用 Visual Studio 创建一个类库，然后将 Visual Studio Enterprise 提供的诊断数据适配器 API 添加到该类库中。 处理测试运行期间引发的事件时，以流或文件的形式将所需的任何信息发送到框架提供的 <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink>。 测试完成时，发送到 <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink> 的流或文件将以附件形式存储到测试结果中。 如果根据这些测试结果创建 Bug，或者在使用[!INCLUDE[mtrlong](../test/includes/mtrlong_md.md)] 时，这些文件也会链接到 Bug。
+若要创建诊断数据适配器，请使用 Visual Studio 创建一个类库，然后将 Visual Studio Enterprise 提供的诊断数据适配器 API 添加到该类库中  。 处理测试运行期间引发的事件时，以流或文件的形式将所需的任何信息发送到框架提供的 <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink>。 测试完成时，发送到 <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink> 的流或文件将以附件形式存储到测试结果中。 如果根据这些测试结果创建 Bug，或者在使用[!INCLUDE[mtrlong](../test/includes/mtrlong_md.md)] 时，这些文件也会链接到 Bug。
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -50,25 +50,25 @@ ms.locfileid: "62950716"
 
 ## <a name="create-and-install-a-diagnostic-data-adapter"></a>创建并安装诊断数据适配器
 
-1. 创建新的“类库”项目。
+1. 创建新的“类库”项目  。
 
-2. 添加程序集“Microsoft.VisualStudio.QualityTools.ExecutionCommon”。
+2. 添加程序集“Microsoft.VisualStudio.QualityTools.ExecutionCommon”  。
 
-   1. 在解决方案资源管理器中，右键单击“引用”，然后选择“添加引用”命令。
+   1. 在解决方案资源管理器中，右键单击“引用”，然后选择“添加引用”命令    。
 
-   2. 选择“.NET”并查找“Microsoft.VisualStudio.QualityTools.ExecutionCommon.dll”。
+   2. 选择“.NET”  并查找“Microsoft.VisualStudio.QualityTools.ExecutionCommon.dll”  。
 
-   3. 选择 **“确定”**。
+   3. 选择 **“确定”** 。
 
-3. 添加程序集“Microsoft.VisualStudio.QualityTools.Common”。
+3. 添加程序集“Microsoft.VisualStudio.QualityTools.Common”  。
 
-   1. 在解决方案资源管理器中右键单击“引用”，然后选择“添加引用”命令。
+   1. 在解决方案资源管理器中右键单击“引用”，然后选择“添加引用”命令    。
 
-   2. 选择“/.NET”并查找“Microsoft.VisualStudio.QualityTools.Common.dll”。
+   2. 选择“/.NET”  并查找“Microsoft.VisualStudio.QualityTools.Common.dll”  。
 
-   3. 选择 **“确定”**。
+   3. 选择 **“确定”** 。
 
-4. 将以下 `using` 语句添加到您的类文件中：
+4. 将以下 `using` 指令添加到你的类文件中：
 
    ```csharp
    using Microsoft.VisualStudio.TestTools.Common;
@@ -79,7 +79,7 @@ ms.locfileid: "62950716"
    using System;
    ```
 
-5. 将 <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorTypeUriAttribute> 添加到诊断数据适配器的类中以将它标识为诊断数据适配器，用诊断数据适配器的相应信息来替换“公司”、“产品”和“版本”：
+5. 将 <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorTypeUriAttribute> 添加到诊断数据适配器的类中以将它标识为诊断数据适配器，用诊断数据适配器的相应信息来替换“公司”、“产品”和“版本”    ：
 
    ```csharp
    [DataCollectorTypeUri("datacollector://Company/Product/Version")]
@@ -113,7 +113,7 @@ ms.locfileid: "62950716"
    private XmlElement configurationSettings;
    ```
 
-9. 添加 <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollector.Initialize*> 方法和“Dispose”方法。 在 `Initialize` 方法中，可按如下所示初始化数据接收器、测试设置中的任何配置数据，以及注册要使用的事件处理程序：
+9. 添加 <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollector.Initialize*> 方法和“Dispose”方法  。 在 `Initialize` 方法中，可按如下所示初始化数据接收器、测试设置中的任何配置数据，以及注册要使用的事件处理程序：
 
     ```csharp
     public override void Initialize(
@@ -212,7 +212,7 @@ ms.locfileid: "62950716"
 
      如果您要使用自己的编辑器来收集要在测试设置中使用的数据，请参见[如何：为诊断数据适配器创建自定义数据编辑器](../test/quickstart-create-a-load-test-project.md)。
 
-11. 要在测试完成时根据用户在测试设置中所做配置收集日志文件，则必须创建一个 App.config 文件并将其添加至解决方案。 此文件具有以下格式，并且必须包含供诊断数据适配器进行识别的 URI。 将“Company/ProductName/Version”替换为实际值。
+11. 要在测试完成时根据用户在测试设置中所做配置收集日志文件，则必须创建一个 App.config 文件并将其添加至解决方案  。 此文件具有以下格式，并且必须包含供诊断数据适配器进行识别的 URI。 将“Company/ProductName/Version”替换为实际值。
 
     > [!NOTE]
     > 如果不需要为诊断数据适配器配置任何信息，则无需创建配置文件。
@@ -255,7 +255,7 @@ ms.locfileid: "62950716"
 
 14. 有关如何在运行测试时配置测试设置以使用环境的详细信息，请参阅[在手动测试中收集诊断数据 (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)。
 
-15. 若要选择诊断数据适配器，必须先选择现有的测试设置，或从 Microsoft 测试管理器或 Visual Studio 中创建一个新测试设置。 该适配器将显示在测试设置的“数据和诊断”选项卡上，并具有你指派给该类的友好名称。
+15. 若要选择诊断数据适配器，必须先选择现有的测试设置，或从 Microsoft 测试管理器或 Visual Studio 中创建一个新测试设置。 该适配器将显示在测试设置的“数据和诊断”选项卡上，并具有你指派给该类的友好名称  。
 
 16. 将这些测试设置设置为活动状态。 有关测试设置的详细信息，请参阅[使用测试设置收集诊断信息](../test/collect-diagnostic-information-using-test-settings.md)。
 

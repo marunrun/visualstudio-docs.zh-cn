@@ -16,12 +16,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a92daf09f033da020fe54369a20483686c72f81
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ad037a0e71bc2156fe1c604d183a5e02ae914688
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72730423"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187549"
 ---
 # <a name="debug-javascript-using-the-console-in-visual-studio"></a>在 Visual Studio 中使用控制台调试 JavaScript
 
@@ -44,7 +44,7 @@ ms.locfileid: "72730423"
 > [!TIP]
 > 如果 JavaScript 控制台窗口处于关闭状态，请依次选择“调试”>  >  以重新打开它。 该窗口仅在脚本调试会话期间出现。
 
-使用“JavaScript 控制台”窗口，你可以在无需停止和重新启动调试器的情况下与应用交互。 有关详细信息，请参阅[刷新应用（JavaScript）](../debugger/refresh-an-app-javascript.md)。 有关其他 JavaScript 调试功能（如使用 DOM 资源管理器和设置断点）的信息，请参阅快速入门：[在 Visual Studio 中](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)[调试 HTML、CSS](../debugger/quickstart-debug-html-and-css.md)和调试应用。
+使用“JavaScript 控制台”窗口，你可以在无需停止和重新启动调试器的情况下与应用交互。 有关详细信息，请参阅[刷新应用（JavaScript）](../debugger/refresh-an-app-javascript.md)。 有关其他 JavaScript 调试功能（如使用 DOM 资源管理器和设置断点）的信息，请参阅快速入门：[在 Visual Studio 中](debugging-windows-store-and-windows-universal-apps.md)[调试 HTML、CSS](../debugger/quickstart-debug-html-and-css.md)和调试应用。
 
 ## <a name="InteractiveConsole"></a> 使用“JavaScript 控制台”窗口进行调试
 以下步骤会创建一个 `FlipView` 应用并演示如何以交互方式调试 JavaScript 编码错误。
@@ -250,7 +250,7 @@ JavaScript 控制台窗口允许一次与单个执行上下文（表示 Web 平�
 你也可以使用 `cd` 命令切换执行上下文，但是你必须知道其他执行上下文的名称并且你使用的引用必须在范围内。 **“目标”** 列表提供更好的方式来访问其他执行上下文。
 
 ## <a name="see-also"></a>请参阅
-- [在 Visual Studio 中调试应用](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)
+- [在 Visual Studio 中调试应用](debugging-windows-store-and-windows-universal-apps.md)
 - [JavaScript Console commands](../debugger/javascript-console-commands.md?view=vs-2017)
 - [刷新应用 (JavaScript)](../debugger/refresh-an-app-javascript.md)
 - [键盘快捷键](../debugger/keyboard-shortcuts-html-and-javascript.md?view=vs-2017)

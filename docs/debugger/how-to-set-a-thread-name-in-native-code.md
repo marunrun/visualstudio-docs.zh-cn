@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f9df52bee88722006c21c28e88a2e32113942e4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1e719563c831c50cc325d70d0de431f4be1bf514
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72732749"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911426"
 ---
 # <a name="how-to-set-a-thread-name-in-native-code"></a>如何：在本机代码中设置线程名称
 在 Visual Studio 的任何版本中都可以使用线程命名功能。 当调试正在运行的进程时，线程命名有助于标识 "**线程**" 窗口中感兴趣的线程。 在通过故障转储检查并使用各种工具分析性能捕获时，具有 recognizably 命名的线程也会有所帮助。
@@ -37,7 +37,7 @@ ms.locfileid: "72732749"
 优点：
 * 在 Visual Studio 中进行调试时，线程名称是可见的，无论调试程序是否已在调用 SetThreadDescription 时附加到进程。
 * 在 Visual Studio 中加载故障转储后，线程名称将在执行事后调试时可见。
-* 使用其他工具（如[WinDbg](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-tools)调试器和[Windows 性能分析器](https://docs.microsoft.com/windows-hardware/test/wpt/windows-performance-analyzer)性能分析器）时，也会显示线程名称。
+* 使用其他工具（如[WinDbg](/windows-hardware/drivers/debugger/debugger-download-tools)调试器和[Windows 性能分析器](/windows-hardware/test/wpt/windows-performance-analyzer)性能分析器）时，也会显示线程名称。
 
 注意：
 * 线程名称只在 Visual Studio 2017 版本15.6 及更高版本中可见。

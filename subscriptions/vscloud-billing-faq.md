@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/28/2019
 ms.topic: conceptual
 description: 云订阅的计费问题。
-ms.openlocfilehash: 7241a63d51ecba2dd47995f39e98f8676e949f60
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: 961cd646ecf0ed9c34c734292491c5f3a8e67480
+ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606048"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816392"
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Visual Studio 云订阅计费常见问题解答
 请确保[比较云订阅权益和定价](https://visualstudio.microsoft.com/vs/pricing/)，了解每种 Visual Studio 订阅的权益，云订阅与标准 Visual Studio 订阅之间的不同之处，以及订阅者权益的相关详细信息等。
@@ -76,12 +76,12 @@ ms.locfileid: "68606048"
 > Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。
 
 ## <a name="other-questions"></a>其他问题
-### <a name="q-can-i-use-the-monthly-azure-credits-as-a-visual-studio-subscriber-to-buy-more-visual-studio-cloud-subscriptions"></a>问：我是否可以将每月 Azure 额度用作 Visual Studio 订阅者来购买更多 Visual Studio 云订阅？
-答：不可以，作为 Visual Studio 订阅者，不能将[每月 Azure 额度](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/)用于支付 Visual Studio Marketplace 购买费用。 任何 Visual Studio 云订阅购买都会对信用卡计费。
+### <a name="q-can-i-use-the-monthly-azure-devtest-individual-credit-as-a-visual-studio-subscriber-to-buy-more-visual-studio-cloud-subscriptions"></a>问：我可否以 Visual Studio 订阅者的身份，使用每月 Azure 开发测试个人额度购买更多 Visual Studio 云订阅？
+答：不可以，不能以 Visual Studio 订阅者的身份使用[每月 Azure 开发测试额度](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/)在 Visual Studio Marketplace 中购买产品。 任何 Visual Studio 云订阅购买都会对信用卡计费。
 购买之前，需要先[移除支出限制](https://azure.microsoft.com/pricing/spending-limits/)。
 
 ### <a name="q-whats-the-difference-between-annual-and-monthly-cloud-subscriptions"></a>问：年度和月度云订阅有何区别？
-答：月度云订阅包括 Visual Studio 以及 Azure DevOps Services 和 TFS 的使用权。 年度云订阅除具备上述权益外，还提供订阅者权益，其中包括使用 Windows 和其他 Microsoft 软件安装和运行以进行开发和测试、每月 Azure 额度用于试用 Azure 服务以及在云中进行开发和测试、培训和支持等等。
+答：月度云订阅包括 Visual Studio 以及 Azure DevOps Services 和 TFS 的使用权。 年度云订阅除具备上述权益外，还提供订阅者权益，其中包括使用 Windows 和其他 Microsoft 软件安装和运行以进行开发和测试、将每月 Azure 开发测试个人额度用于试用 Azure 服务以及在云中进行开发和测试、培训和支持等等。
 [比较云订阅权益和定价](https://visualstudio.microsoft.com/vs/pricing/)
 
 ### <a name="q-do-i-get-new-versions-of-visual-studio-if-i-buy-a-visual-studio-cloud-subscription"></a>问：如果我购买 Visual Studio 云订阅，是否会获得 Visual Studio 的新版本？

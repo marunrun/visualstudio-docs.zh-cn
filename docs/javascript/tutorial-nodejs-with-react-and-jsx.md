@@ -2,7 +2,7 @@
 title: 创建 Node.js 和 React 应用
 description: 在本教程中，使用 Visual Studio 的 Node.js 工具创建应用
 ms.custom: mvc
-ms.date: 11/01/2018
+ms.date: 11/01/2019
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 5ec01bdc1f27d2ca7c8b2d20c901a224cbdbf19d
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: 2f14a5f2255f7ba1b077ead60147a6df407970fc
+ms.sourcegitcommit: f9f389e72787de30eb869a55ef7725a10a4011f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589155"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73636557"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>教程：在 Visual Studio 中创建 Node.js 和 React 应用
 
@@ -146,7 +146,9 @@ webpack 绑定 JavaScript 文件，使其可以在浏览器中运行。 它还�
     }
     ```
 
-    如果空白模板版本中已存在 `dependencies` 部分，请将其替换为前面的 JSON 代码。 有关此文件用法的详细信息，请参阅 [package.json 配置](../javascript/configure-packages-with-package-json.md)
+    如果空白模板版本中已存在 `dependencies` 部分，请将其替换为前面的 JSON 代码。 有关此文件用法的详细信息，请参阅 [package.json 配置](../javascript/configure-packages-with-package-json.md)。
+
+1. 保存更改。
 
 1. 右键单击项目中的“npm”节点，然后选择“更新 npm 包”   。
 
@@ -172,7 +174,7 @@ webpack 绑定 JavaScript 文件，使其可以在浏览器中运行。 它还�
 
 1. 在解决方案资源管理器中，右键单击项目“NodejsWebAppBlank”并选择“添加” > “新项”    。
 
-1. 在“添加新项”对话框中，选择“TypeScript JSX 文件”，键入名称“app.tsx”，然后选择“确定”     。
+1. 在“添加新项”对话框中，选择“TypeScript JSX 文件”，键入名称“app.tsx”，然后选择“添加”或“确定”      。
 
 1. 重复上述步骤，添加 webpack-config.js  。 请选择“JavaScript 文件”  ，而非 TypeScript JSX 文件。
 
@@ -334,7 +336,7 @@ webpack 绑定 JavaScript 文件，使其可以在浏览器中运行。 它还�
 
 ## <a name="run-the-app"></a>运行应用
 
-1. 选择 Chrome 作为当前调试目标。
+1. 选择 Microsoft Edge 或 Chrome 作为当前调试目标。
 
     ::: moniker range=">=vs-2019"
     ![选择 Chrome 作为调试目标](../javascript/media/vs-2019/tutorial-nodejs-react-debug-target.png)
@@ -343,7 +345,12 @@ webpack 绑定 JavaScript 文件，使其可以在浏览器中运行。 它还�
     ![选择 Chrome 作为调试目标](../javascript/media/tutorial-nodejs-react-debug-target.png)
     ::: moniker-end
 
-    如果计算机上有 Chrome，但未显示为选项，请从调试目标下拉列表中选择“Web 浏览器 (browsername)” > “Google Chrome”，然后选择 Chrome 作为默认浏览器目标   。
+    ::: moniker range=">=vs-2019"
+    如果计算机上有 Chrome，但未显示为选项，请从调试目标下拉列表中选择“Web 浏览器 (browsername)”>“选择 Web 浏览器”，然后选择 Chrome 作为默认浏览器目标    。
+    ::: moniker-end
+    ::: moniker range="vs-2017"
+    如果计算机上有 Chrome，但未显示为选项，请从调试目标下拉列表中选择“Web 浏览器 (browsername)”>“Google Chrome”，然后选择 Chrome 作为默认浏览器目标    。
+    ::: moniker-end
 
 1. 若要运行应用，请按 F5（“调试” > “开始调试”）或者绿色箭头按钮    。
 
@@ -371,7 +378,7 @@ webpack 绑定 JavaScript 文件，使其可以在浏览器中运行。 它还�
 
 1. 按 F5 继续  。
 
-1. 如果想要使用 Chrome 开发人员工具，请按 F12  。 可使用这些工具检查 DOM 并与使用 JavaScript 控制台的应用进行交互。
+1. 如果想要使用 Chrome 开发人员工具或 Microsoft Edge 的 F12 工具，请按“F12”  。 可使用这些工具检查 DOM 并与使用 JavaScript 控制台的应用进行交互。
 
 1. 关闭 Web 浏览器和控制台。
 
@@ -379,60 +386,137 @@ webpack 绑定 JavaScript 文件，使其可以在浏览器中运行。 它还�
 
 在前面的部分中，已将调试器附加到服务器端 Node.js 代码。 若要从 Visual Studio 附加调试器并在客户端 React 代码中命中断点，调试器需协助标识正确的进程。 以下是实现此目的的一种方法。
 
-1. 关闭所有 Chrome 窗口。
+### <a name="prepare-the-browser-for-debugging"></a>准备浏览器以进行调试
 
-2. 从 Windows“启动”按钮打开“运行”命令（右键单击并选择“运行”），然后输入以下命令    ：
+::: moniker range=">=vs-2019"
+对于此方案，请使用 Microsoft Edge (Chromium)（当前在 IDE 中命名为 Microsoft Edge Beta）或 Chrome  。
+::: moniker-end
+::: moniker range="vs-2017"
+对于此方案，请选择 Chrome。
+::: moniker-end
 
-    `chrome.exe --remote-debugging-port=9222`
+1. 关闭目标浏览器的所有窗口。
 
-    这样在启动 Chrome 时会同时启用调试。
+   其他浏览器实例可能会阻止打开浏览器并阻止调试。 （浏览器扩展可能正在运行并阻止完整的调试模式，因此你可能需要打开任务管理器才能找到意外的 Chrome 实例。）
+
+   ::: moniker range=">=vs-2019"
+   对于 Microsoft Edge (Chromium)，还需要关闭所有 Chrome 实例。 由于两个浏览器都使用 chromium 基本代码，因此可获得最佳结果。
+   ::: moniker-end
+
+2. 启动浏览器并启用调试。
 
     ::: moniker range=">=vs-2019"
+    从 Visual Studio 2019 开始，可以在浏览器启动时设置 `--remote-debugging-port=9222` 标志，方法是从“调试”工具栏选择“浏览方式...”，然后选择“添加”，并在“参数”字段中设置标志     。 为浏览器使用其他易记名称，如“带有调试功能的 Edge”或“带有调试功能的 Chrome”   。 有关详细信息，请参阅[发行说明](/visualstudio/releases/2019/release-notes-v16.2)。
 
-    > [!NOTE]
-    > 还可以在浏览器启动时设置 `--remote-debugging-port` 标志，方法是从“调试”  工具栏选择“浏览方式...”  ，然后选择“添加”  ，并在“参数”  字段中设置标志。 为浏览器使用其他易记名称，如“带有调试功能的 Chrome”  。 有关详细信息，请参阅[发行说明](https://docs.microsoft.com/visualstudio/releases/2019/release-notes-preview)。
+    ![将浏览器设置为打开并启用调试](../javascript/media/tutorial-nodejs-react-edge-with-debugging.png)
 
+    或者，从 Windows“启动”按钮打开“运行”命令（右键单击并选择“运行”），然后输入以下命令    ：
+
+    `msedge --remote-debugging-port=9222`
+
+    或者，
+
+    `chrome.exe --remote-debugging-port=9222`
     ::: moniker-end
 
-3. 如下图所示，切换到 Visual Studio 并在 `render()` 函数的 app-bundle.js 代码中设置断点  ：
+    ::: moniker range="vs-2017"
+    从 Windows“启动”按钮打开“运行”命令（右键单击并选择“运行”），然后输入以下命令    ：
+
+    `chrome.exe --remote-debugging-port=9222`
+    ::: moniker-end
+
+    这样在启动浏览器时会同时启用调试。
+
+    应用程序尚未运行，因此浏览器页面为空。
+
+### <a name="attach-the-debugger-to-client-side-script"></a>将调试器附加到客户端脚本
+
+1. 切换到 Visual Studio，然后在源代码（app-bundle.js 或 app.tsx）中设置断点   。
+
+    对于 app-bundle.js，如下图所示，在 `render()` 函数中设置断点  ：
 
     ![设置断点](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
 
-    若要查找 app-bundle.js  中的 `render()` 函数，请使用  Ctrl+F  （“编辑”   > “查找和替换”   > “快速查找”  ）。
+    若要查找转译的 app-bundle.js  文件中的 `render()` 函数，请使用  Ctrl+F  （“编辑”   > “查找和替换”   > “快速查找”  ）。
 
-4. 在选择 Chrome 作为 Visual Studio 中调试目标的情况下，按 Ctrl+F5（“调试” > “启动时不调试”）在浏览器中运行应用     。
+    对于 app.tsx  ，在 `return` 语句上的 `render()` 函数中设置断点。
+
+    ![设置断点](../javascript/media/tutorial-nodejs-react-set-breakpoint-in-tsx-file.png)
+
+2. 如果要在 .tsx  文件（而不是 app-bundle.js  ）中设置断点，则需要更新 webpack-config.js  。 将以下代码：
+
+    ```javascript
+    output: {
+        filename: "./app-bundle.js",
+    },
+    ```
+
+    替换为此代码：
+
+    ```javascript
+    output: {
+        filename: "./app-bundle.js",
+        devtoolModuleFilenameTemplate: '[resource-path]'  // removes the webpack:/// prefix
+    },
+    ```
+
+    此设置仅用于开发，可在 Visual Studio 中启用调试。 通过此设置可以在生成应用时覆盖源映射文件 app-bundle.js.map 中生成的引用  。 默认情况下，源映射文件中的 webpack 引用包括 webpack:/// 前缀，该前缀会阻止 Visual Studio 查找源文件 app.tsx   。 具体而言，当你进行此更改时，对源文件 app.tsx 的引用将从 webpack:///./app.tsx 更改为 ./app.tsx，这将启用调试    。
+
+3. 选择目标浏览器作为 Visual Studio 中调试目标，然后按 Ctrl+F5（“调试” > “启动时不调试”）在浏览器中运行应用     。
+
+    ::: moniker range=">=vs-2019"
+    如果创建了具有易记名称的浏览器配置，请选择该配置作为调试目标。
+    ::: moniker-end
 
     应用随即在新的浏览器选项卡中打开。
 
-5. 选择“调试” > “附加到进程”   。
+4. 选择“调试” > “附加到进程”   。
 
-6. 在“附加到进程”对话框中，选择“附加到”字段中的“Webkit 代码”，在筛选框中键入“chrome”     以筛选搜索结果。
+    > [!TIP]
+    > 从 Visual Studio 2017 开始，首次通过这些步骤附加到进程后，可选择“调试” > “重新附加到进程”，快速重新附加到同一进程   。
 
-7. 使用正确的主机端口（此例中为 1337）选择 Chrome 进程，然后选择“附加”  。
+5. 在“附加到进程”  对话框中，获取可附加到的浏览器实例的筛选列表。
 
+    ::: moniker range=">=vs-2019"
+    在 Visual Studio 2019 中，为“附加到”字段中的目标浏览器 JavaScript (Chrome) 或 JavaScript (Microsoft Edge - Chromium) 选择正确的调试器，在筛选器框中键入“chrome”或“edge”以筛选搜索结果      。
+    ::: moniker-end
+    ::: moniker range="vs-2017"
+    在 Visual Studio 2017 中，选择“附加到”字段中的“WebKit 代码”，在筛选器框中键入“chrome”以筛选搜索结果    。
+    ::: moniker-end
+
+6. 使用正确的主机端口（此例中为 localhost）选择浏览器进程，然后选择“附加”  。
+
+    端口 (1337) 也可能出现在“标题”  字段中，以帮助你选择正确的浏览器实例。
+
+    ::: moniker range=">=vs-2019"
+    以下示例演示如何查找 Microsoft Edge (Chromium) 浏览器。
+
+    ![附加到进程](../javascript/media/tutorial-nodejs-react-attach-to-process-edge.png)
+    ::: moniker-end
+    ::: moniker range="vs-2017"
     ![附加到进程](../javascript/media/tutorial-nodejs-react-attach-to-process.png)
 
-    ::: moniker range="vs-2017"
     当 DOM 资源管理器和 JavaScript 控制台在 Visual Studio 中打开，表明已正确附加调试程序。 这些调试工具类似于 Chrome 开发人员工具和 Microsoft Edge 的 F12 工具。
     ::: moniker-end
 
-    > [!NOTE]
-    > 如果未附加调试程序，则会看到消息“无法附加到进程。 操作在当前状态中是非法的。在调试模式中启用 Chrome 前，先使用任务管理器关闭所有 Chrome 实例。 Chrome 扩展可能正在运行并阻止完整的调试模式。
+    > [!TIP]
+    > 如果未附加调试程序，则会看到消息“无法附加到进程。 操作在当前状态中是非法的。”，则在调试模式中启用浏览器前，先使用任务管理器关闭所有目标浏览器实例。 浏览器扩展可能正在运行并阻止完整的调试模式。
 
-8. 由于已执行有断点的代码，因此要刷新浏览器页面以命中断点。
+7. 由于已执行有断点的代码，因此要刷新浏览器页面以命中断点。
 
-    在调试器中暂停时，可以通过在变量上悬停光标并使用调试器窗口，检查应用状态。 逐句通过代码（F5、F10 和 F11），推进调试器进度    。
+    在调试器中暂停时，可以通过在变量上悬停光标并使用调试器窗口，检查应用状态。 逐句通过代码（F5、F10 和 F11），推进调试器进度    。 有关基本调试功能的详细信息，请参阅[初探调试器](../debugger/debugger-feature-tour.md)。
 
-    可能会在 app-bundle.js 中或在 app.tsx 中断点的映射位置处命中断点，具体取决于环境和浏览器状态   。 无论在哪里命中，均可单步执行代码并检查变量。
+    可能会在 app-bundle.js 中或在 app.tsx 中断点的映射位置处命中断点，具体取决于之前执行的步骤以及环境和浏览器状态   。 无论在哪里命中，均可单步执行代码并检查变量。
 
-   * 如果需要中断 app.tsx 中的代码但又无法执行此操作，请按照之前所述的步骤，使用“附加到进程”来附加调试程序   。 然后通过打开“脚本文档” > “app.tsx”，从解决方案资源管理器打开动态生成“app.tsx”文件，设置断点并刷新浏览器中的页面（在允许断点的代码行中设置断点，如 `return` 语句或 `var` 声明）    。
+   * 如果需要中断 app.tsx 中的代码但又无法执行此操作，请按照之前所述的步骤，使用“附加到进程”来附加调试程序   。 请确保已正确设置环境：
 
-       或者，如果需要中断 app.tsx 中的代码但又无法执行此操作，可尝试使用 app.tsx 中的 `debugger;` 语句或改为在 Chrome 开发人员工具中设置断点   。
+      * 关闭了所有浏览器实例，包括 Chrome 扩展（使用任务管理器），以便你可以在调试模式下运行浏览器。 请确保在调试模式下启动浏览器。
+
+      * 请确保源映射文件包括对 ./app.tsx 的引用（而不包括 webpack:///./app.tsx），该引用会阻止 Visual Studio 调试器查找 app.tsx    。
+
+       或者，如果需要中断 app.tsx 中的代码但又无法执行此操作，可尝试使用 app.tsx 中的 `debugger;` 语句或改为在 Chrome 开发人员工具（或 Microsoft Edge 的 F12 工具）中设置断点   。
 
    * 如果需要中断 app-bundle.js 中的代码但又无法执行此操作，请删除 sourcemap 文件 app-bundle.js.map   。
-
-     > [!TIP]
-     > 首次通过这些步骤附加到进程后，可选择“调试” > “重新附加到进程”，快速重新附加到 Visual Studio 2017 中的同一进程   。
 
 ## <a name="next-steps"></a>后续步骤
 

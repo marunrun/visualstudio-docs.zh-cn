@@ -20,12 +20,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7711d0b0f369f43cc7becf92cbdcfc986cd3a6a8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 07cba8f8ae813ae223ef3da110a046f65c81b091
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661486"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984074"
 ---
 # <a name="dependency-diagrams-reference"></a>依赖项关系图：参考
 
@@ -48,7 +48,7 @@ ms.locfileid: "72661486"
 
 - 在开发和维护你的代码过程中，通过包括对签入的验证来强化预期体系结构并生成操作。
 
-本主题介绍可在依赖项关系图上使用的元素。 有关如何创建和绘制依赖项关系图的详细信息，请参阅[依赖项关系图：准则](../modeling/layer-diagrams-guidelines.md)。 有关分层模式的详细信息，请参阅[模式 & 实践](http://go.microsoft.com/fwlink/?LinkId=145794)。
+本主题介绍可在依赖项关系图上使用的元素。 有关如何创建和绘制依赖项关系图的详细信息，请参阅[依赖项关系图：准则](../modeling/layer-diagrams-guidelines.md)。 有关分层模式的详细信息，请参阅[模式 & 实践](https://archive.codeplex.com/?p=apparch)。
 
 ## <a name="reading-dependency-diagrams"></a>读取依赖项关系图
 

@@ -7,12 +7,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cf2b8669fe9b516f3150829612d6999895cc69f8
-ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
+ms.openlocfilehash: a891f6d18657bad65a1cf087da975849642b7aec
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72306247"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72912039"
 ---
 # <a name="update-an-existing-application-for-msbuild-15"></a>将现有的应用程序更新到 MSBuild 15
 
@@ -38,7 +38,7 @@ ms.locfileid: "72306247"
 
 #### <a name="use-nuget-packages-preferred"></a>使用 NuGet 包（首选）
 
-这些说明假定用户使用 [PackageReference 样式 NuGet 引用](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files)。
+这些说明假定用户使用 [PackageReference 样式 NuGet 引用](/nuget/consume-packages/package-references-in-project-files)。
 
 将项目文件更改为从 NuGet 包中引用 MSBuild 程序集。 指定 `ExcludeAssets=runtime` 以告知 NuGet 仅在生成期间需要程序集，不应将其复制到输出目录。
 

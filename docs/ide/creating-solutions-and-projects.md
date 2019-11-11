@@ -9,17 +9,17 @@ f1_keywords:
 helpviewer_keywords:
 - solutions [Visual Studio], creating
 - projects [Visual Studio], creating
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 74694528f6380896d47b9665d9e617098ef28620
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: abe2cbd18e87c7045d44e597e3a5bb93a64a1c35
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66746869"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747968"
 ---
 # <a name="create-solutions-and-projects"></a>创建解决方案和项目
 
@@ -53,7 +53,7 @@ ms.locfileid: "66746869"
 1. 在向导中，浏览到文件位置，然后在“名称”  框中输入新项目的名称。 完成后，选择“完成”  按钮。
 
 > [!NOTE]
-> 此选项最适合相对简单的文件集合。 目前仅支持 Visual C++、Apache Cordova、Visual Basic 和 C# 项目类型。
+> 此选项最适合相对简单的文件集合。 目前仅支持 C++、Apache Cordova、Visual Basic 和 C# 项目类型。
 
 ## <a name="add-files-to-a-solution"></a>将文件添加到解决方案
 

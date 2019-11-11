@@ -11,12 +11,12 @@ dev_langs:
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 690ffff0aa31b90cea58997c982406a900299550
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 91f80d648450447a6ba0e80f10e5c39764445cef
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826166"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189304"
 ---
 # <a name="welcome-to-the-visual-studio-ide--python"></a>欢迎使用 Visual Studio IDE | Python
 
@@ -26,7 +26,7 @@ Visual Studio“集成开发环境”是面向 Python （和其他语言）的�
 
 此图像显示 Visual Studio 中含有一个打开的 Python 项目和若干重要的工具窗口：
 
-- 可通过[解决方案资源管理器](../ide/solutions-and-projects-in-visual-studio.md)（右上方）查看、导航和管理代码文件  。 解决方案资源管理器可将代码文件分组为[解决方案和项目](/visualstudio/get-started/tutorial-projects-solutions)，从而帮助整理代码  。
+- 可通过[解决方案资源管理器](../ide/solutions-and-projects-in-visual-studio.md)（右上方）查看、导航和管理代码文件  。 解决方案资源管理器可将代码文件分组为[解决方案和项目](../get-started/tutorial-projects-solutions.md)，从而帮助整理代码  。
   - 除“解决方案资源管理器”外，还有[“Python 环境”](managing-python-environments-in-visual-studio.md)，可在其中管理计算机上安装的不同 Python 解释器   。
 
   ::: moniker range=">=vs-2019"
@@ -94,7 +94,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
     自 Visual Studio 2019 起，可以打开包含 Python 代码的文件夹，以使用 IntelliSense 和调试等功能，而无需为代码创建 Visual Studio 项目。
 ::: moniker-end
 
-- [使用 Visual Studio 进行协作](https://docs.microsoft.com/visualstudio/liveshare/use/vs)
+- [使用 Visual Studio 进行协作](/visualstudio/liveshare/use/vs)
   
     使用 Visual Studio Live Share，无论使用什么编程语言或要生成哪种类型的应用，均可以与他人实时协作进行编辑和调试。 
 

@@ -11,12 +11,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e406fb5ba9f221fa22faadfecaa8f0baaefebf75
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1c8be1cff099a713413957cfa5f8b3f383ca4bae
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72727347"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73186333"
 ---
 # <a name="ide-defined-commands-for-extending-project-systems"></a>用于扩展项目系统的 IDE 定义的命令
 要扩展项目系统时，可以使用 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE 提供的命令和命令组。
@@ -70,6 +70,6 @@ ms.locfileid: "72727347"
 |IDG_VS_CTXT_PROJECT_PROPERTIES|提供对 "**项目属性**" 对话框的访问的命令。|
 
 ## <a name="see-also"></a>请参阅
+
 - [VSPackage 如何添加用户界面元素](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
-- [Menucommand 与 OleMenuCommands](../../extensibility/menucommands-vs-olemenucommands.md)
 - [创建可重复使用的按钮组](../../extensibility/creating-reusable-groups-of-buttons.md)

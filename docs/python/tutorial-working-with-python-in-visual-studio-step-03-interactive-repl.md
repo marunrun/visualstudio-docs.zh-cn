@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 15e0b45fd77096ba2227391736aad5c895014d1c
-ms.sourcegitcommit: 0554b59a2a251661e56824fb9cd6e9b1f326cef1
+ms.openlocfilehash: 51723d22cd72de8333fca9b83c1643117a7413e5
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71831875"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986216"
 ---
 # <a name="step-3-use-the-interactive-repl-window"></a>步骤 3：使用交互式 REPL 窗口
 
@@ -25,7 +25,7 @@ ms.locfileid: "71831875"
 适用于 Python 的 Visual Studio 交互窗口  提供丰富的“读取–求值–打印-循环”(REPL) 体验，极大地缩短了常用的“编辑-生成-调试”周期。 该交互  窗口提供 Python 命令行 REPL 体验的所有功能。 通过该窗口还可以非常轻松地与 Visual Studio 编辑器中的源文件交换代码，免去了使用命令行时的繁琐操作。
 
 > [!NOTE]
-> 对于 REPL 问题，请确保已安装 `ipython` 和 `ipykernel` 包，为了帮助安装包，请参阅 [Python 环境包选项卡](https://docs.microsoft.com/en-us/visualstudio/python/python-environments-window-tab-reference#packages-tab)。
+> 对于 REPL 问题，请确保已安装 `ipython` 和 `ipykernel` 包，为了帮助安装包，请参阅 [Python 环境包选项卡](/en-us/visualstudio/python/python-environments-window-tab-reference#packages-tab)。
 
 1. 通过以下方式打开交互  窗口：在“解决方案资源管理器”  中右键单击项目的 Python 环境（比如先前图片中显示的“Python 3.6（32 位）”  ），选择“打开交互窗口”  。 也可以从 Visual Studio 主菜单选择“视图”   > “其他窗口”   > “Python 交互窗口”  。
 
@@ -54,7 +54,7 @@ ms.locfileid: "71831875"
         return ' ' * int(20 * cos(radians(x)) + 20) + 'o'
     ```
 
-1. 选择 .py 文件中的 `import`、`from` 和 `make_dot_string` 函数语句，单击鼠标右键，选择“发送到交互窗口”（或按 Ctrl+Enter）     。 代码片段会立即粘贴至交互  窗口并运行。 现在选择 `make_dot_string` 函数，重复相同的命令，即再次运行该代码片段。 由于代码定义了一个函数，因此可通过数次调用它来快速测试该函数：
+1. 选择 .py 文件中的 `import`、`from` 和 `make_dot_string` 函数语句，单击鼠标右键，选择“发送到交互窗口”（或按 Ctrl+Enter）     。 代码片段会立即粘贴至交互  窗口并运行。 由于代码定义了一个函数，因此可通过数次调用它来快速测试该函数：
 
     ![将代码发送到交互窗口并测试它](media/vs-getting-started-python-14-interactive4.png)
 

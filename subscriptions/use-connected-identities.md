@@ -7,12 +7,12 @@ ms.date: 09/27/2019
 ms.topic: conceptual
 robots: noindex, nofollow
 description: 了解如何使用已连接的 Microsoft 帐户和 Azure Active Directory 标识
-ms.openlocfilehash: d0d30092f34a3cb17b41455612cd336af3e58d30
-ms.sourcegitcommit: 13decf878b33fc0c5d665a88067170c2861b261b
+ms.openlocfilehash: 1a862caa1f984f5d22f041a6f0cbff6534d8cc1c
+ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686265"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816579"
 ---
 # <a name="how-to-use-connected-identities-in-visual-studio-subscriptions"></a>如何在 Visual Studio 订阅中使用连接的标识
 如果你通过工作或学校收到 Visual Studio 订阅，并使用你的 Microsoft 帐户 (MSA) 登录，则你的订阅管理员可能会将你的 MSA 连接到组织的 Azure Active Directory (Azure AD) 中的标识。  这会改变你访问订阅中包含的一些权益的方式。 
@@ -26,7 +26,7 @@ ms.locfileid: "71686265"
 管理员将你的 MSA 连接到 Azure AD 标识后，你需要使用 Azure AD 标识登录到订阅者门户 https://my.visualstudio.com ，以访问基于 Azure AD 的权益。  这些方法包括：
 - Visual Studio IDE
 - Azure DevOps
-- Azure 额度
+- Azure 开发测试个人额度
 
 ## <a name="how-to-access-benefits-using-your-msa"></a>如何使用 MSA 访问权益
 若要获取 Visual Studio 订阅中提供的许多权益（如 Pluralsight、LinkedIn 和 CloudPilot 等），你实际上会在合作伙伴的网站上创建用户帐户。  对于这些帐户，你应继续使用创建帐户时所用的标识。  例如，如果使用 MSA 激活了 Pluralsight 权益，无论用于登录到订阅者门户的标识如何，都应在进行 Pluralsight 培训时继续使用 MSA。  
@@ -39,4 +39,4 @@ ms.locfileid: "71686265"
 答：有关联系管理员的信息，请参阅[联系订阅管理员](contact-my-admin.md)文章。  
 
 ## <a name="next-steps"></a>后续步骤
-管理员连接 Azure AD 和 MSA 帐户后，我们建议验证你是否可以登录到[订阅门户](https://my.visualstudio.com?wt.mc_id=o~msft~docs)并访问 Azure DevOps、Visual Studio 和 Azure 额度等权益。 
+管理员连接 Azure AD 和 MSA 帐户后，我们建议验证你是否可以登录到[订阅门户](https://my.visualstudio.com?wt.mc_id=o~msft~docs)并访问 Azure DevOps、Visual Studio 和 Azure 开发测试个人额度等权益。 

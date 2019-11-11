@@ -1,5 +1,5 @@
 ---
-title: 入门 (Visual Studio 中的 Office 开发)
+title: 入门（Visual Studio 中的 Office 开发）
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 08/14/2019
@@ -14,14 +14,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7a8a49f2b72745dac18a46fe8567578bca090834
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 1439bef59c621523b74f0e0634cd809deea1f3ee
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551492"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986059"
 ---
-# <a name="get-started-office-development-in-visual-studio"></a>入门 (Visual Studio 中的 Office 开发)
+# <a name="get-started-office-development-in-visual-studio"></a>入门（Visual Studio 中的 Office 开发）
   本部分包含可帮助你开始在 Visual Studio 中使用 Microsoft Office 开发人员工具的主题。
 
 [!include[Add-ins note](includes/addinsnote.md)]
@@ -88,4 +88,4 @@ ms.locfileid: "69551492"
 
  提供有关如何让用户能够使用 Office 解决方案的信息，并介绍在选择部署方法和设置安全性时要考虑的主要问题。
 
-- [Visual Studio Tools for Office 技术文章和直观操作方法](http://go.microsoft.com/fwlink/?LinkID=106640)包含指向有关使用 Visual Studio 创建的 Office 解决方案的视频和技术文章的链接。
+- [Visual Studio Tools for Office 技术文章和直观操作方法](/previous-versions/office/developer/office-2007/bb871648(v=office.12))包含指向有关使用 Visual Studio 创建的 Office 解决方案的视频和技术文章的链接。

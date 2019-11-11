@@ -11,23 +11,23 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9f8a1c2148f25a1e97cfd1369770e056d1cb907d
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 58bfec6fa09f6450afb8170d60acad39edacd590
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72568968"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72982455"
 ---
 # <a name="visual-studio-debugger-extensibility"></a>Visual Studio 调试器扩展性
-Visual Studio 包括一个完全交互式的源代码调试器，它提供了功能强大且易于使用的工具，用于跟踪程序中的 bug。 调试器对 Visual Basic、 C#、C/C++和 JavaScript 提供完全支持。 但是，通过[Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkId=214453)提供的 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]，可以在具有相同功能的调试器中支持其他编程语言。
+Visual Studio 包括一个完全交互式的源代码调试器，它提供了功能强大且易于使用的工具，用于跟踪程序中的 bug。 调试器对 Visual Basic、 C#、C/C++和 JavaScript 提供完全支持。 但是，通过[Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=21835)提供的 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]，可以在具有相同功能的调试器中支持其他编程语言。
 
- @No__t_0 调试程序是调试组件的公共前端（即用户界面），后者又特定于正在调试的语言。 对于新语言，[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 调试程序所需的全部工作就是创建必要的后端组件，例如调试引擎（DE）。 这就是 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 进入的地方。
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 调试程序是调试组件的公共前端（即用户界面），后者又特定于正在调试的语言。 对于新语言，[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 调试程序所需的全部工作就是创建必要的后端组件，例如调试引擎（DE）。 这就是 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 进入的地方。
 
- @No__t_0 包括对创建新 DE 所需的所有 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 元素的完整引用。 此外，还有一些示例和教程可帮助您入门。
+ [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 包括对创建新 DE 所需的所有 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 元素的完整引用。 此外，还有一些示例和教程可帮助您入门。
 
  有关支持调试的语言项目系统的完整示例，请参阅[IronPython 示例](https://www.microsoft.com/download/details.aspx?id=55984)。
 
- 以下各节介绍如何使用 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 扩展调试器。
+ 以下各节介绍如何使用 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]扩展调试器。
 
 ## <a name="in-this-section"></a>本节内容
  [入门](../../extensibility/debugger/getting-started-with-debugger-extensibility.md)介绍 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 调试的功能以及如何安装 SDK。

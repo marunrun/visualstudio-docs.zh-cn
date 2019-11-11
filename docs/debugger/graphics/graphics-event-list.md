@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fe890d5a2c88ea9d4d35a6bd01f6012d97e6ce0
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d5c4e8f39ff77779985536e53d98ddc2785b109b
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72735551"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911492"
 ---
 # <a name="graphics-event-list"></a>图形事件列表
 使用 Visual Studio 图形分析器中的图形事件列表来浏览在呈现游戏或应用的帧时所记录的 Direct3D 事件。
@@ -88,7 +88,7 @@ ms.locfileid: "72735551"
 ### <a name="user-defined-events-in-direct3d-11-and-earlier"></a>Direct3D 11 及更早版本中的用户定义的事件
  若要在 Direct3D 11 或更早版本中创建组和标记，请使用此节中所述的 API。 下表总结了可用于 Direct3D 11 的不同版本和 Direct3D 的早期版本的 API。
 
-|API 说明|[ID3D11DeviceContext2](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2) (Direct3D 11.2)|[ID3DUserDefinedAnnotation](http://go.microsoft.com/fwlink/p/?LinkID=250967) (Direct3D 11.1)|D3DPerf_ API 系列（Direct3D 11.0 和更早版本）|
+|API 说明|[ID3D11DeviceContext2](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2) (Direct3D 11.2)|[ID3DUserDefinedAnnotation](/windows/win32/api/d3d11_1/nn-d3d11_1-id3duserdefinedannotation) (Direct3D 11.1)|D3DPerf_ API 系列（Direct3D 11.0 和更早版本）|
 |---------------------| - | - | - |
 |开始事件组|`BeginEventInt`|`BeginEvent`|`D3DPerf_BeginEvent`|
 |结束事件组|`EndEventInt`|`EndEvent`|`D3DPerf_EndEvent`|
@@ -99,7 +99,7 @@ ms.locfileid: "72735551"
 <!-- VERSIONLESS -->
 <a name="resource-history"></a>
 ## <a name="resource-history"></a>资源历史记录
-Visual Studio 2017 和更高版本包含 "**资源历史记录**" 窗口。  选择 "**事件列表**" 窗口中某个条目旁边的 "监视" 图标 ![watch 图标 ](media/gfx_watch.png)，将显示如下所示的 "**资源历史记录**" 窗口：
+Visual Studio 2017 和更高版本包含 "**资源历史记录**" 窗口。  选中 "**事件列表**" 窗口中某个条目旁边的 "监视" 图标 ![监视 "图标](media/gfx_watch.png)，将显示如下所示的"**资源历史记录**"窗口：
 
 ![资源历史记录](media/gfx_diag_resource_history.png)
 
@@ -109,7 +109,7 @@ Visual Studio 2017 和更高版本包含 "**资源历史记录**" 窗口。  选
 |-----------| - |
 | **Type** | 显示条目的类型，通常为 "*创建*"、"*读取*" 和 "*写入*"。 |
 | **视图** | 显示当时某个资源的缩略图。  双击缩略图，以在该时间打开资源的详细信息视图。 |
-| **Event** | 显示生成事件的方法调用。  可以通过在相应的行上选择 "监视" 图标 ![watch 图标 ](media/gfx_watch.png) 来查看单个项的任何其他历史记录。  此外，还可以选择在蓝色文本中绘制的任何项，如上面的屏幕截图中 `m_commandList`。 |
+| **Event** | 显示生成事件的方法调用。  可以通过在相应的行中选择 "监视" 图标 ![手表 "图标](media/gfx_watch.png) 来查看单个项的任何其他历史记录。  此外，还可以选择在蓝色文本中绘制的任何项，如上面的屏幕截图中 `m_commandList`。 |
 
 <!-- /VERSIONLESS -->
 

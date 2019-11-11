@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 38cde5c1500168dcb36021c530799d1d8d1effb9
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 867350c1a786971a25256bbe8f60ac2bfca14a19
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66745320"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72910329"
 ---
 # <a name="profile-on-hpc-high-performance-computing-clusters"></a>对 HPC（高性能计算）群集进行分析
 
@@ -34,7 +34,7 @@ ms.locfileid: "66745320"
 
 若要对 HPC 计算节点进行分析，必须执行以下操作：
 
-- 在与 Visual Studio 相同的计算机上安装 Microsoft HPC Pack 2008。 计算机不必是 HPC 群集的一部分。 可以在 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=177414)安装 HPC 包。
+- 在与 Visual Studio 相同的计算机上安装 Microsoft HPC Pack 2008。 计算机不必是 HPC 群集的一部分。 可以在 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=4812)安装 HPC 包。
 
 - 在 HPC 计算节点上安装 .NET Framework 4 以及分析工具的独立版本。 .NET Framework 和独立探查器的安装程序都位于 Visual Studio 安装介质上。 注意：安装 .NET Framework 后，必须重启计算机，然后才能安装分析工具  。
 
@@ -124,7 +124,7 @@ ms.locfileid: "66745320"
 
 ### <a name="hpc-launch-properties"></a>HPC 启动属性
 
-|Property|说明|
+|属性|说明|
 |--------------|-----------------|
 |**头节点**|指定在分析运行中充当 HPC 头节点的计算机。|
 |**进程数**|指定要在分析的应用程序中运行的应用程序实例数。|
@@ -135,7 +135,7 @@ ms.locfileid: "66745320"
 
 ### <a name="advanced-properties"></a>高级属性
 
-| Property | 说明 |
+| 属性 | 说明 |
 |---------------------------------------| - |
 | **项目名称** | 当前 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 项目或解决方案的名称。 |
 | **探查器停止时进行清理** | 为 true 时，删除已部署到执行目录的二进制文件。 在此步骤中不会删除用户程序创建的文件和目录。 如果执行目录和部署目录是由 IDE 创建的，则 IDE 会尝试删除它们，但是如果它们包含不是由 IDE 部署的文件，则 IDE 不会执行此操作。 |

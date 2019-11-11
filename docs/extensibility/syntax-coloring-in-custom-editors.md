@@ -10,12 +10,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f4302f463d93776d17be0251e6194375c15adc19
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a62fd7a8ab0673d6a6020fb7d73f04488ff23485
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72718759"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73188853"
 ---
 # <a name="syntax-coloring-in-custom-editors"></a>自定义编辑器中的语法着色
 Visual Studio 环境 SDK 编辑器（包括核心编辑器）使用语言服务来识别特定的语法项，并为给定的文档视图以指定的颜色显示它们。
@@ -27,7 +27,7 @@ Visual Studio 环境 SDK 编辑器（包括核心编辑器）使用语言服务�
 
 2. 通过使用语言服务的标识 GUID 查询 VSPackage 的服务提供程序，获取特定语言服务的接口。
 
-3. 调用实现 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> 的对象的 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer.SetLanguageServiceID%2A> 方法。 此方法将语言服务与 VSPackage 用于管理要着色的文本的 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> 实现相关联。
+3. 调用实现 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>的对象的 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer.SetLanguageServiceID%2A> 方法。 此方法将语言服务与 VSPackage 用于管理要着色的文本的 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> 实现相关联。
 
 ## <a name="core-editor-usage-of-a-language-services-colorizer"></a>语言服务的 Colorizer 的核心编辑器用法
  当使用 colorizer 的语言服务由核心编辑器的实例获取时，会自动分析和呈现语言服务的 colorizer 的文本，而无需任何进一步的干预。
@@ -47,12 +47,12 @@ Visual Studio 环境 SDK 编辑器（包括核心编辑器）使用语言服务�
 
 2. 调用 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> 方法，请求着色特定范围的文本。
 
-     @No__t_0 方法返回值的数组，其中每个字母都是着色的文本范围。 它还将文本跨距标识为特定类型的可着色项，例如注释、关键字或数据类型。
+     <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> 方法返回值的数组，其中每个字母都是着色的文本范围。 它还将文本跨距标识为特定类型的可着色项，例如注释、关键字或数据类型。
 
 3. 使用 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> 返回的着色信息重绘并显示其文本。
 
 > [!NOTE]
-> 除了使用语言服务的 colorizer 外，VSPackage 还可以选择使用通用 Visual Studio 环境 SDK 文本着色机制。 有关此机制的详细信息，请参阅[使用字体和颜色](../extensibility/using-fonts-and-colors.md)。
+> 除了使用语言服务的 colorizer 外，VSPackage 还可以选择使用通用 Visual Studio 环境 SDK 文本着色机制。 有关此机制的详细信息，请参阅[使用字体和颜色](/visualstudio/extensibility/using-fonts-and-colors?view=vs-2015)。
 
 ## <a name="see-also"></a>请参阅
 

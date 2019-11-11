@@ -15,73 +15,73 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 31bcd41dc1a6fd7f314c7d701f52c3728dd2ee8c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 16fb3e4a0e1aed14e4a3f1b3178dc753f5dc10b4
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63009776"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984185"
 ---
 # <a name="security-for-sharepoint-solutions"></a>SharePoint 解决方案的安全性
-  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 包含以下功能，可帮助增强 SharePoint 应用程序的安全性。
+  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 包含以下功能，以帮助增强 SharePoint 应用程序的安全性。
 
 ## <a name="safe-control-entries"></a>安全控件项
- 每个 SharePoint 项目项中创建[!include[vsprvs](../sharepoint/includes/vsprvs-md.md)]已**安全控件项**属性表示一个安全控件集合。 其**安全**子属性，可指定您考虑安全的控件。 有关详细信息，请参阅[提供在项目项中的包和部署信息](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)并[指定安全的 Web 部件](http://go.microsoft.com/fwlink/?LinkId=177521)。
+ 在 [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] 中创建的每个 SharePoint 项目项都具有一个**安全控件项**属性，该属性表示一个安全的控件集合。 通过其 "**安全**" 子属性，您可以指定您认为安全的控件。 有关详细信息，请参阅[在项目项中提供包和部署信息](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)和[指定安全 Web 部件](/previous-versions/office/developer/sharepoint2003/dd583154(v=office.11)#sharepoint_northwindwebparts_topic19)。
 
-## <a name="allowpartiallytrustedcallers-attribute"></a>AllowPartiallyTrustedCallers 属性
- 默认情况下，只有完全信任的运行时代码访问安全性 (CAS) 系统的应用程序可以访问共享的托管的代码程序集。 标记具有 AllowPartiallyTrustedCallers 属性的完全受信任程序集允许部分受信任的程序集，若要对其进行访问。
+## <a name="allowpartiallytrustedcallers-attribute"></a>AllowPartiallyTrustedCallers 特性
+ 默认情况下，只有运行时代码访问安全性（CAS）系统完全信任的应用程序才能访问共享的托管代码程序集。 使用 AllowPartiallyTrustedCallers 特性标记完全受信任的程序集允许部分受信任的程序集访问它。
 
- AllowPartiallyTrustedCallers 属性添加到任何 SharePoint 解决方案，不部署到系统全局程序集缓存 ( [!INCLUDE[TLA2#tla_gac](../sharepoint/includes/tla2sharptla-gac-md.md)])。 这包括沙盒解决方案或解决方案部署到 SharePoint 应用程序 Bin 目录。 有关详细信息，请参阅[用于 Microsoft.NET Framework 版本 1 的安全性更改](http://go.microsoft.com/fwlink/?LinkId=177515)并[SharePoint Foundation 中部署 Web 部件](http://go.microsoft.com/fwlink/?LinkId=177509)。
+ AllowPartiallyTrustedCallers 属性将添加到任何未部署到系统全局程序集缓存（[!INCLUDE[TLA2#tla_gac](../sharepoint/includes/tla2sharptla-gac-md.md)]）的 SharePoint 解决方案中。 这包括已部署到 SharePoint 应用程序 Bin 目录的沙盒解决方案或解决方案。 有关详细信息，请参阅[Microsoft .NET 框架的版本1安全更改](/previous-versions/msp-n-p/ff921345(v=pandp.10))和[在 SharePoint Foundation 中部署 Web 部件](/previous-versions/office/developer/sharepoint-2010/cc768621(v=office.14))。
 
-## <a name="safe-against-script-property"></a>安全应对脚本属性
- *脚本注入*是潜在的恶意代码插入到控件或网页。 为了帮助保护对脚本注入的 SharePoint 2010 站点，参与者无法查看或编辑默认的 Web 部件或其属性。 通过调用 SafeAgainstScript SafeControl 属性控制此行为。 在中[!include[vsprvs](../sharepoint/includes/vsprvs-md.md)]，将此属性设置中的项目项**安全控件项**子属性**安全应对脚本**。 有关详细信息，请参阅[提供在项目项中的包和部署信息](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)和[如何：将控件标记为安全控件](../sharepoint/how-to-mark-controls-as-safe-controls.md)。
+## <a name="safe-against-script-property"></a>Safe for script 属性
+ *脚本注入*是指在控件或网页中插入潜在的恶意代码。 为了帮助保护 SharePoint 2010 站点免受脚本注入，参与者默认情况下无法查看或编辑 Web 部件或其属性。 此行为由名为 SafeAgainstScript 的 SafeControl 属性控制。 在 [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)]中，在项目项**安全控件项**的 "安全控件项" 子属性中设置此特性，以**安全应对脚本**。 有关详细信息，请参阅[在项目项中提供包和部署信息](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)和[如何：将控件标记为安全控件](../sharepoint/how-to-mark-controls-as-safe-controls.md)。
 
 ## <a name="vista-and-windows-7-user-account-control"></a>Vista 和 Windows 7 用户帐户控制
- [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] 和[!INCLUDE[win7](../sharepoint/includes/win7-md.md)]包含一个名为用户帐户控制 (UAC) 的安全功能。 开发 SharePoint 解决方案中的[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]上[!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)]并[!INCLUDE[win7](../sharepoint/includes/win7-md.md)]系统中，UAC 要求运行[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]作为系统管理员。 从**启动**菜单中，打开快捷菜单[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]，然后选择**以管理员身份运行**。
+ [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] 和 [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] 包含一个称为用户帐户控制（UAC）的安全功能。 若要在 [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] 和 [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] 系统 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 上开发 SharePoint 解决方案，UAC 要求以系统管理员身份运行 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]。 从 "**开始**" 菜单中，打开 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]的快捷菜单，然后选择 "以**管理员身份运行**"。
 
- 若要配置[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]快捷方式，以便始终以管理员身份运行，打开其快捷菜单，选择**属性**，选择**高级**按钮**属性**对话框中，并选择**以管理员身份运行**复选框。
+ 若要将 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 快捷方式配置为始终以管理员身份运行，请打开其快捷菜单，选择 "**属性**"，选择 "**属性**" 对话框中的 "**高级**" 按钮，然后选择 "**以管理员身份运行**" 复选框。
 
- 有关详细信息，请参阅[理解和 Windows Vista 中配置用户帐户控制](http://go.microsoft.com/fwlink/?LinkID=156476)。 并[Windows 7 用户帐户控制](http://go.microsoft.com/fwlink/?LinkId=177523)。
+ 有关详细信息，请参阅[了解和配置 Windows Vista 中的用户帐户控制](/previous-versions/windows/it-pro/windows-vista/cc709628(v=ws.10))。 和[Windows 7 用户帐户控制](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731416(v=ws.10))。
 
 ## <a name="sharepoint-permissions-considerations"></a>SharePoint 权限注意事项
- 若要开发 SharePoint 解决方案，必须具有足够的权限来运行和调试 SharePoint 解决方案。 你可以测试 SharePoint 解决方案之前，请执行以下步骤以确保拥有所需的权限：
+ 若要开发 SharePoint 解决方案，您必须拥有足够的权限来运行和调试 SharePoint 解决方案。 在可以测试 SharePoint 解决方案之前，请执行以下步骤以确保具有必要的权限：
 
-1. 将你的用户帐户添加为系统上的管理员。
+1. 将用户帐户添加为系统上的管理员。
 
-2. 将你的用户帐户添加为 SharePoint 服务器场管理员。
+2. 添加用户帐户作为 SharePoint 服务器的场管理员。
 
-    1. 在 SharePoint 2010 管理中心，选择**管理服务器场管理员组**链接。
+    1. 在 SharePoint 2010 管理中心，选择 "**管理场管理员组**" 链接。
 
-    2. 上**服务器场管理员**页上，选择**新建**菜单选项
+    2. 在 "**场管理员**" 页上，选择 "**新建**" 菜单选项
 
-3. 添加到你的用户帐户向 WSS_ADMIN_WPG 组。
+3. 将用户帐户添加到 WSS_ADMIN_WPG 组。
 
 ## <a name="additional-security-resources"></a>其他安全资源
- 有关安全问题的详细信息，请参阅。
+ 有关安全问题的详细信息，请参阅以下内容。
 
 ### <a name="visual-studio-security"></a>Visual Studio 安全
 
-- [安全性和用户权限](http://go.microsoft.com/fwlink/?LinkId=177503)
+- [安全性和用户权限](/previous-versions/visualstudio/visual-studio-2010/ms165099(v=vs.100))
 
-- [本机代码和.NET Framework 代码中的安全性](http://go.microsoft.com/fwlink/?LinkId=177504)
+- [本机代码和 .NET Framework 代码中的安全性](/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 
-- [.NET Framework 中的安全性](http://go.microsoft.com/fwlink/?LinkId=177502)
+- [.NET Framework 中的安全性](/previous-versions/dotnet/netframework-4.0/fkytk30f(v=vs.100))
 
 ### <a name="sharepoint-security"></a>SharePoint 安全性
 
-- [SharePoint Foundation 管理和安全性](http://go.microsoft.com/fwlink/?LinkId=177501)
+- [SharePoint Foundation 管理和安全](/previous-versions/office/developer/sharepoint-2010/ee537811(v=office.14))
 
-- [SharePoint 安全资源中心](http://go.microsoft.com/fwlink/?LinkId=177498)
+- [SharePoint 安全资源中心](/sharepoint/dev/)
 
-- [保护 SharePoint Foundation 中的 Web 部件](http://go.microsoft.com/fwlink/?LinkId=177511)
+- [保护 SharePoint Foundation 中的 Web 部件](/previous-versions/office/developer/sharepoint-2010/cc768613(v=office.14))
 
-- [提高 Web 应用程序安全性：威胁和对策](http://go.microsoft.com/fwlink/?LinkID=140080)
+- [提高 Web 应用程序安全性：威胁和对策](/previous-versions/msp-n-p/ff649874(v=pandp.10))
 
-### <a name="general-security"></a>常规安全
+### <a name="general-security"></a>一般安全性
 
-- [MSDN 安全开发生命周期](http://go.microsoft.com/fwlink/?LinkID=147149)
+- [MSDN 安全开发生命周期](https://www.microsoft.com/msrc?rtc=1)
 
-- [构建安全的 ASP.NET 应用程序：身份验证、 授权和安全通信](http://go.microsoft.com/fwlink/?LinkId=177494)
+- [构建安全的 ASP.NET 应用程序：身份验证、授权和安全通信](/previous-versions/msp-n-p/ff649100(v=pandp.10))
 
 ## <a name="see-also"></a>请参阅
 

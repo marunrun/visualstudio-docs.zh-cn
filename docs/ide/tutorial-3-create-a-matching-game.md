@@ -1,6 +1,6 @@
 ---
 title: 教程 3：创建匹配游戏
-ms.date: 11/04/2016
+ms.date: 10/16/2019
 ms.assetid: 525815c8-2845-45e8-be96-100d1f144725
 ms.topic: tutorial
 ms.technology: vs-ide-general
@@ -9,20 +9,25 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8fafd46561b6a3628989b675b14c493b60da6fe
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: 5161f81aaf3edf654a5979f6226449bc52604167
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118703"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516579"
 ---
 # <a name="tutorial-3-create-a-matching-game"></a>教程 3：创建匹配游戏
 
-在本教程中，将生成一个匹配游戏，在该游戏中，玩家必须匹配隐藏的图标对。 您将学习如何：
+在本教程中，将生成一个匹配游戏，在该游戏中，玩家必须匹配隐藏的图标对。
+
+> [!NOTE]
+> 本教程中同时涉及 C# 和 Visual Basic，因此请关注特定于你所用编程语言的信息。
+
+本教程将指导你完成以下任务：
 
 - 在 <xref:System.Collections.Generic.List%601> 对象中存储对象，例如图标。
 
-- 使用 `foreach` 循环（Visual C# 中）或 `For Each` 循环（Visual Basic 中）循环访问列表中的各项。
+- 使用 `foreach` 循环（C# 中）或 `For Each` 循环（Visual Basic 中）循环访问列表中的各项。
 
 - 使用引用变量跟踪窗体的状态。
 
@@ -30,20 +35,11 @@ ms.locfileid: "71118703"
 
 - 创建一个计时器，进行倒计时，然后在启动后立即准确触发事件。
 
-当你完成本教程时，程序将类似下图所示：
+完成时，应用应如下图所示：
 
 ![在本教程中创建的游戏](../ide/media/express_finishedgame.png)
 
 ## <a name="tutorial-links"></a>教程链接
-
-若要下载示例的完整版本，请参阅[完整匹配游戏教程示例](https://code.msdn.microsoft.com/Complete-Matching-Game-4cffddba)。
-
-> [!NOTE]
-> 在本教程中，同时涉及 Visual C# 和 Visual Basic，因此请关注特定于您使用的编程语言的信息。
-
-如果你遇到困难或在编程方面有疑问，请尝试在一个 MSDN 论坛上发布你的问题。 请参阅 [Visual Basic 论坛](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)和 [Visual C# 论坛](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)。 另外，那里有很好的免费视频学习资源供你使用。 要了解有关 Visual Basic 编程的详细信息，请参阅 [Visual Basic 基础知识：零基础开发](https://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners)。 要了解有关 Visual C# 编程的详细信息，请参阅 [C# 基础知识：零基础开发](https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners)。
-
-## <a name="related-topics"></a>相关主题
 
 |Title|说明|
 |-----------|-----------------|
@@ -56,3 +52,15 @@ ms.locfileid: "71118703"
 |[步骤 7：保持对可见](../ide/step-7-keep-pairs-visible.md)|保持图标对可见（如果选择了匹配的对）。|
 |[步骤 8：添加验证玩家是否获胜的方法](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md)|添加 `CheckForWinner()` 方法以验证玩家是否获胜。|
 |[步骤 9：尝试其他功能](../ide/step-9-try-other-features.md)|尝试其他功能，例如更改图标和颜色、添加网格以及添加声音。 尝试使图板变大并调整计时器。|
+
+那里还有很好的免费视频学习资源供你使用。 要了解有关 C# 编程的详细信息，请参阅 [C# 基础知识：零基础开发](https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners)。 要了解有关 Visual Basic 编程的详细信息，请参阅 [Visual Basic 基础知识：零基础开发](https://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners)。
+
+## <a name="next-steps"></a>后续步骤
+
+要开始学习本教程，请从[步骤 1：创建项目并向窗体添加表](../ide/step-1-create-a-project-and-add-a-table-to-your-form.md)  。
+
+## <a name="see-also"></a>请参阅
+
+* [更多 C# 教程](/visualstudio/get-started/csharp/)
+* [Visual Basic 教程](/visualstudio/get-started/visual-basic/)
+* [C++ 教程](/cpp/get-started/tutorial-console-cpp)

@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 33617b71c8ba13c459df8bcf29fb8a51cf948299
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6257ce96e139e173fca804221b495f7467fc6b20
+ms.sourcegitcommit: bb5425b9c6d8fd7135d9584c2963831754071347
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62936452"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024649"
 ---
 # <a name="da0012-significant-amount-of-reflection"></a>DA0012：大量反射
 
@@ -36,7 +36,7 @@ ms.locfileid: "62936452"
 ## <a name="rule-description"></a>规则说明
  反射是 .NET framework 的一项灵活功能，可用于将应用程序后期绑定到依赖的运行时程序集，或在运行时期间创建并动态执行新类型。 但是，频繁使用或紧凑循环地调用这些技术则可导致性能降低。
 
- 有关详细信息，请参阅 MSDN 上 Microsoft 模式和做法库“提高 .NET 应用程序性能和可扩展性”卷中“第 5 章 - 提高托管代码性能”的 [Reflection and Late Binding](http://go.microsoft.com/fwlink/?LinkId=177826)（反射和后期绑定）部分。
+ 有关详细信息，请参阅 MSDN 上 Microsoft 模式和做法库“提高 .NET 应用程序性能和可扩展性”卷中“第 5 章 - 提高托管代码性能”的 [Reflection and Late Binding](/previous-versions/msp-n-p/ff647790(v=pandp.10)#reflection-and-late-binding)（反射和后期绑定）部分。
 
 ## <a name="how-to-investigate-a-warning"></a>如何调查警告
  双击“错误列表”窗口中的消息，导航到分析数据的[函数详细信息视图](../profiling/function-details-view.md)。 检查 System.Type 或 System.Reflection 方法的调用函数，以查找程序中使用 .NET Reflection API 最频繁的部分。 避免使用返回元数据的方法。 当应用程序的性能十分重要时，可能需要避免在运行时使用后期绑定或动态创建类型。

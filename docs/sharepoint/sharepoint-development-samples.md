@@ -12,19 +12,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f1719656c475dc6ee78de27f068baaf77c8b2a85
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2a52dbb77145d1389995813d89384966fea35cec
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62971403"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984161"
 ---
 # <a name="sharepoint-development-samples"></a>SharePoint 开发示例
-  Visual Studio 可用于下载和安装的 SharePoint 应用程序从[MSDN 代码库](http://go.microsoft.com/fwlink/?LinkId=254185)。
+  你可以使用 Visual Studio 从[MSDN 代码库](https://code.msdn.microsoft.com/)下载和安装 SharePoint 应用程序的示例。
 
- 您可以单独下载每个示例。 此外可以下载示例包，其中具有相关共享技术或文章的示例。 在为下载的任何示例发布源代码更改时，您将收到通知。
+ 您可以单独下载每个示例。 你还可以下载包含共享技术或文章的相关示例的示例包。 在为下载的任何示例发布源代码更改时，您将收到通知。
 
 ## <a name="see-also"></a>请参阅
 - [创建 SharePoint 解决方案](../sharepoint/create-sharepoint-solutions.md)
-- [Visual Studio 示例](http://go.microsoft.com/fwlink/?LinkId=150928)
+- [Visual Studio 示例](https://code.msdn.microsoft.com/vstudio)
 - [Office 编程中的常规任务](../vsto/common-tasks-in-office-programming.md)

@@ -12,16 +12,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0540ac17ca64f24ead19b8b3655175d12fa42e41
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 717e24315d1f6e57eda224ef17cc4ea5b5d550c9
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253981"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73189748"
 ---
 # <a name="use-wpf-controls-in-office-solutions"></a>在 Office 解决方案中使用 WPF 控件
 
-虽然使用 Visual Studio 中的 Office 开发工具创建的解决方案旨在直接使用 Windows 窗体控件，但你也可以在解决方案中使用 WPF 控件。 Windows Presentation Foundation (WPF) 就设计用户界面这方面而言可替代 Windows 窗体。 WPF 使用一种称为可扩展应用程序标记语言 (XAML) 的标记语言提供用于整合 UI、媒体和文档的新技术。 有关详细信息，请参阅[WPF 概述](../designers/introduction-to-wpf.md)。
+虽然使用 Visual Studio 中的 Office 开发工具创建的解决方案旨在直接使用 Windows 窗体控件，但你也可以在解决方案中使用 WPF 控件。 Windows Presentation Foundation (WPF) 就设计用户界面这方面而言可替代 Windows 窗体。 WPF 使用一种称为可扩展应用程序标记语言 (XAML) 的标记语言提供用于整合 UI、媒体和文档的新技术。 有关详细信息，请参阅[WPF 概述](/dotnet/framework/wpf/introduction-to-wpf)。
 
 [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
@@ -53,11 +53,11 @@ ms.locfileid: "71253981"
 
 5. 将操作窗格、窗体区域或自定义任务窗格添加到你的项目：
 
-    - 对于窗体区域，将 " **Outlook 窗体区域**" 项添加到项目。 有关详细信息，请参阅[如何：向 Outlook 外接程序项目](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)添加窗体区域。
+    - 对于窗体区域，将 " **Outlook 窗体区域**" 项添加到项目。 有关详细信息，请参阅[如何：向 Outlook 外接程序项目中添加窗体区域](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)。
 
-    - 对于操作窗格，将**操作窗格控件**或**用户控件**项添加到项目。 有关详细信息，请参阅[如何：向 Word 文档或 Excel 工作簿](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)添加操作窗格。
+    - 对于操作窗格，将**操作窗格控件**或**用户控件**项添加到项目。 有关详细信息，请参阅[如何：将操作窗格添加到 Word 文档或 Excel 工作簿](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)。
 
-    - 对于自定义任务窗格，请将**用户控件**项添加到项目。 有关详细信息，请参阅[如何：向应用程序](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)添加自定义任务窗格。
+    - 对于自定义任务窗格，请将**用户控件**项添加到项目。 有关详细信息，请参阅[如何：向应用程序添加自定义任务窗格](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)。
 
 6. 从 "**工具箱**" 的 "*项目名称*" **wpf "用户控件**" 选项卡中，将 WPF 用户控件拖动到操作窗格、窗体区域或自定义任务窗格的设计器。
 
@@ -110,9 +110,9 @@ WPF 控件使用 <xref:System.Windows.Forms.Integration.ElementHost> 类，作�
 
 有关在设计时将 WPF 控件添加到 Visual Studio 中 Windows 窗体控件和窗体的详细信息，请参阅以下主题：
 
-- [演练：在设计时 Windows 窗体创建新的 WPF 内容](/dotnet/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time)
+- [演练：在设计时在 Windows 窗体上创建新的 WPF 内容](/dotnet/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time)
 
-- [演练：在设计时排列 Windows 窗体上的 WPF 内容](/dotnet/framework/winforms/advanced/walkthrough-arranging-wpf-content-on-windows-forms-at-design-time)
+- [演练：在设计时在 Windows 窗体上排列 WPF 内容](/dotnet/framework/winforms/advanced/walkthrough-arranging-wpf-content-on-windows-forms-at-design-time)
 
 - [演练：样式 WPF 内容](/dotnet/framework/winforms/advanced/walkthrough-styling-wpf-content)
 

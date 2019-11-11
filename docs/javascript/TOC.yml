@@ -44,5 +44,5 @@
   items:
     - name: package.json 配置
       href: configure-packages-with-package-json.md
-    - name: JavaScript 和 TypeScript 的 Wiki 文档
-      href: 'https://github.com/Microsoft/nodejstools/wiki'
+    - name: JavaScript 和 TypeScript 文档存储库
+      href: 'https://github.com/Microsoft/JSTSdocs'

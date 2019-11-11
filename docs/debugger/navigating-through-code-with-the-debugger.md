@@ -15,44 +15,43 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e07e2612e01453115cf4cd6120d92bfd5b0168bd
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: 6dfffdf0c12ea2a8f14769f26bb40a3943579248
+ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "70222650"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73187590"
 ---
 # <a name="navigate-through-code-with-the-visual-studio-debugger"></a>使用 Visual Studio 调试器在代码中导航
 
 Visual Studio 调试器可帮助您在代码中导航，以检查应用程序的状态并显示其执行流。 你可以使用键盘快捷方式、调试命令、断点和其他功能快速访问你要检查的代码。 熟悉调试器导航命令和快捷方式可以更快、更轻松地查找和解决应用程序问题。  如果这是您第一次尝试调试代码，则在完成本文之前，您可能需要阅读[调试绝对](../debugger/debugging-absolute-beginners.md)和[调试技术和工具](../debugger/write-better-code-with-visual-studio.md)。
 
-## <a name="basic-debugging"></a>基础调试
+## <a name="get-into-break-mode"></a>进入 "中断模式"
 
-若要在附加调试器的情况下启动应用程序，请按**F5**，选择 "**调试**"  >  "**开始调试**"，或选择 Visual Studio 工具栏中的绿色箭头。
+在*中断模式*下，当函数、变量和对象保留在内存中时，将挂起应用程序执行。 调试器进入中断模式后，可以在代码中导航。 快速进入中断模式的最常见方法是：
 
- ![DBG&#95;基础&#95;知识&#95;开始调试](../debugger/media/dbg_basics_start_debugging.png "DBG_Basics_Start_Debugging")
+- 按**F10**或**F11**开始代码单步执行。 这使你可以快速找到应用程序的入口点，然后你可以继续按步骤命令来导航代码。
 
-进行调试时，黄色突出显示将显示下一步将执行的代码行。
+- [运行到特定位置或函数](#BKMK_Break_into_code_by_using_breakpoints_or_Break_All)，例如，[设置断点](using-breakpoints.md)并启动应用。
 
- ![DBG&#95;基础&#95;知识&#95;中断模式](../debugger/media/dbg_basics_break_mode.png "中断模式")
+   例如，在 Visual Studio 中的代码编辑器中，你可以使用 "**运行到光标处**" 命令启动应用程序、附加调试器并进入中断模式，然后按**F11**来导航代码。
 
-大多数调试器窗口（如 "**模块**" 和 "**监视**" 窗口）仅在调试器运行时才可用。 某些调试器功能（如在 "**局部变量**" 窗口中查看变量值或在 "**监视**" 窗口中计算表达式）仅在调试器在断点处暂停时才可用，也称为*中断模式*。
+   ![运行到光标处并单步执行代码](../debugger/media/navigate-code-code-stepping.gif "运行到光标处并单步执行代码")
 
-在中断模式下，当函数、变量和对象保留在内存中时，将挂起应用程序执行。 您可以检查元素的位置和状态以查找冲突或 bug。 对于某些项目类型，还可以在中断模式下对应用进行调整。 有关显示这些功能的视频，请参阅[使用调试器入门](https://www.youtube.com/watch?v=FtGCi5j30YU&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=6)。
+进入中断模式后，可以使用各种命令在代码中导航。 处于中断模式时，可以检查变量的值以查找冲突或 bug。 对于某些项目类型，还可以在中断模式下对应用进行调整。
 
-如果在未加载源或符号（ *.pdb*）文件的代码中中断，调试器将显示 "**未找到源文件**" 或 "**未找到符号**" 页，这些页可帮助你查找和加载文件。 请参阅[指定符号 (.pdb) 和源文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)。 如果无法加载符号或源文件，你仍可以在 "**反汇编**" 窗口中调试程序集指令。
+大多数调试器窗口（如 "**模块**" 和 "**监视**" 窗口）仅在调试器附加到应用时可用。 某些调试器功能（如在 "**局部变量**" 窗口中查看变量值或在 "**监视**" 窗口中计算表达式）仅在调试器暂停时才可用（即在中断模式下）。
 
-在开始时，不一定要开始调试。 还可以按**F11** [单步执行代码](#BKMK_Step_into__over__or_out_of_the_code)，按**F10**以[逐过程执行代码](#BKMK_Step_over_Step_out)，或[运行到特定位置或函数](#BKMK_Break_into_code_by_using_breakpoints_or_Break_All)。
+> [!NOTE]
+> 如果你中断了未加载源或符号（ *.pdb*）文件的代码，调试器将显示 "**未找到源文件**" 或 "**未找到符号**" 页，这些页可帮助你查找和加载文件。 请参阅[指定符号 (.pdb) 和源文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)。 如果无法加载符号或源文件，你仍可以在 "**反汇编**" 窗口中调试程序集指令。
 
 ## <a name="step-through-code"></a>逐行执行代码
 
 调试器步骤命令可帮助你检查应用状态，或了解有关其执行流程的详细信息。
 
-如果需要在应用中查找入口点，请从**F10**或**F11**开始。
-
 ### <a name="BKMK_Step_into__over__or_out_of_the_code"></a>逐行单步执行代码
 
-若要在调试时在每行代码或语句上停止，请使用**Debug**  > **单步**执行，或按**F11**。
+若要在调试时在每个语句上停止，请使用**Debug** > **单步**执行，或按**F11**。
 
 调试器逐句通过代码语句，而不是物理行。 例如，`if` 子句可以写在一行内：
 
@@ -73,11 +72,11 @@ Visual Studio 调试器可帮助您在代码中导航，以检查应用程序的
 在嵌套函数调用上， **“逐语句”** 将进入并单步执行嵌套最深的函数。 例如，如果在 `Func1(Func2())` 上使用 "**单步**执行"，则调试器将单步执行函数 `Func2`。
 
 >[!TIP]
->执行每行代码时，可以将鼠标悬停在变量上以查看其值，或者使用 "[局部变量](autos-and-locals-windows.md)" 和 "[监视](watch-and-quickwatch-windows.md)" 窗口来监视值的变化。 在单步执行函数时，还可以直观地跟踪调用堆栈。 请参阅[在调试时映射调用堆栈上的方法](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)。
+>执行每行代码时，可以将鼠标悬停在变量上以查看其值，或者使用 "[局部变量](autos-and-locals-windows.md)" 和 "[监视](watch-and-quickwatch-windows.md)" 窗口来监视值的变化。 在单步执行函数时，还可以直观地跟踪[调用堆栈](how-to-use-the-call-stack-window.md)。 （仅适用于 Visual Studio Enterprise，请参阅[在调试时映射调用堆栈上的方法](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)）。
 
 ### <a name="BKMK_Step_over_Step_out"></a>单步执行代码，并跳过一些函数
 
-您可能不关心调试时的函数，或者您知道它的工作原理，如测试良好的库代码。 您可以使用以下命令跳过代码。 函数仍会执行，但调试器会跳过它们。
+您可能不关心调试时的函数，或者您知道它的工作原理，如测试良好的库代码。 在代码单步执行时，可以使用以下命令跳过代码。 函数仍会执行，但调试器会跳过它们。
 
 |键盘命令|调试菜单命令|描述|
 |----------------------|------------------|-----------------|
@@ -130,10 +129,10 @@ Visual Studio 中的断点提供了一组丰富的附加功能，例如条件断
 
 在调试器中暂停时，可以将鼠标悬停在源代码或 "**反汇编**" 窗口中的语句上，并选择 "在**此处运行执行到此处**" 绿色箭头图标。 使用 **"运行" 单击**此无需设置临时断点。
 
-![运行以单击](../debugger/media/dbg-run-to-click.png "运行时单击")
+![运行到单击处](../debugger/media/dbg-run-to-click.png "运行时单击")
 
 > [!NOTE]
-> 从 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] 开始**运行到单击**。
+> 从 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]开始**运行到单击**。
 
 ### <a name="manually-break-into-code"></a>手动中断代码
 

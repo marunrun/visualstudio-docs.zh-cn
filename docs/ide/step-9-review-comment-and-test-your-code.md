@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 31a66556e9476631fa0372b14e73eb8c6241fc63
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
+ms.openlocfilehash: 39be6feffb70dd43823af2af0fce719daafc6f78
+ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314197"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72572481"
 ---
 # <a name="step-9-review-comment-and-test-your-code"></a>步骤 9：检查代码、为代码添加注释和测试代码
 
@@ -65,7 +65,7 @@ ms.locfileid: "72314197"
     > [!TIP]
     > IDE 可让你轻松地编写代码，而代码片段  是 IDE 为此采取的方式之一。 代码片段是一类快捷方式，它可展开到一个小的代码块。
     >
-    >  您可看到所有可用的代码片段。 在菜单栏上，选择“工具”   > “代码片段管理器”  。 对于 C#，`if` 片段位于“Visual C#”中  。 对于 Visual Basic，`if` 片段位于“条件语句和循环”   > “代码模式”  中。 可使用此管理器来浏览现有代码片段或添加自己的代码片段。
+    >  您可看到所有可用的代码片段。 在菜单栏上，选择“工具”   > “代码片段管理器”  。 对于 C#，`if` 片段位于“Visual C#”中  。 对于 Visual Basic，`if` 片段位于“代码模式”   > “条件和循环”中  。 可使用此管理器来浏览现有代码片段或添加自己的代码片段。
     >
     >  若要在键入代码时激活一个代码片段，请键入该代码片段并选择 Tab  键。 多个片段会出现在“IntelliSense”  窗口中，这就是要选择 Tab  键两次的原因：第一次是从“IntelliSense”  窗口中选择该片段，第二次是告知 IDE 使用该片段。 （IntelliSense 支持 `if` 代码片段，但不支持 `ifelse` 代码片段。）
 
@@ -95,7 +95,7 @@ ms.locfileid: "72314197"
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅[步骤 10：为其他按钮和复选框编写代码](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md)** 。
+- 要转到下一个教程步骤，请参阅[步骤 10：为其他按钮和复选框编写代码](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md)  。
 
 - 要返回上一个教程步骤，请参阅[步骤 8：为“显示图片”按钮事件处理程序编写代码](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md)。
 

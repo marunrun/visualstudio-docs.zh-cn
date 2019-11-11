@@ -1,6 +1,6 @@
 ---
 title: 教程 2：创建计时数学测验
-ms.date: 11/04/2016
+ms.date: 10/16/2019
 ms.assetid: d7165d08-ace3-457d-b57d-fb8f80760a6f
 ms.topic: tutorial
 ms.technology: vs-ide-general
@@ -9,16 +9,21 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 39550eb3e2d5fe78e50257b51b52642740781600
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: e092e11474aa872903977e1b07c699b160bef8a2
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118855"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516598"
 ---
 # <a name="tutorial-2-create-a-timed-math-quiz"></a>教程 2：创建计时数学测验
 
-在本教程中，您将构建一个测验，在该测验中，测验对象必须在指定时间内回答四道随机算术题。 您将学习如何：
+在本教程中，您将构建一个测验，在该测验中，测验对象必须在指定时间内回答四道随机算术题。
+
+> [!NOTE]
+> 本教程中同时涉及 C# 和 Visual Basic，因此请关注特定于你所用编程语言的信息。
+
+本教程将指导你完成以下任务：
 
 - 使用 <xref:System.Random> 类生成随机数。
 
@@ -34,13 +39,6 @@ ms.locfileid: "71118855"
 
 ## <a name="tutorial-links"></a>教程链接
 
-若要下载测验的完整版本，请参阅[数学测验教程的完整示例](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c)。
-
-> [!NOTE]
-> 本教程中同时涉及 C# 和 Visual Basic，因此请关注特定于你所用编程语言的信息。
-
-## <a name="related-topics"></a>相关主题
-
 |Title|说明|
 |-----------|-----------------|
 |[步骤 1：创建项目并向窗体添加标签](../ide/step-1-create-a-project-and-add-labels-to-your-form.md)|首先创建项目，更改属性并添加 `Label` 控件。|
@@ -51,3 +49,15 @@ ms.locfileid: "71118855"
 |[步骤 6：添加减法问题](../ide/step-6-add-a-subtraction-problem.md)|添加一道可生成随机数的减法题，使用计时器并检查答案是否正确。|
 |[步骤 7：添加乘法和除法问题](../ide/step-7-add-multiplication-and-division-problems.md)|添加可生成随机数的乘法和除法题，使用计时器并检查答案是否正确。|
 |[步骤 8：自定义测验](../ide/step-8-customize-the-quiz.md)|尝试其他功能，例如更改颜色和添加提示。|
+
+那里还有很好的免费视频学习资源供你使用。 要了解有关 C# 编程的详细信息，请参阅 [C# 基础知识：零基础开发](https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners)。 要了解有关 Visual Basic 编程的详细信息，请参阅 [Visual Basic 基础知识：零基础开发](https://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners)。
+
+## <a name="next-steps"></a>后续步骤
+
+要开始学习本教程，请从[步骤 1：创建项目并向窗体添加标签](../ide/step-1-create-a-project-and-add-labels-to-your-form.md)  。
+
+## <a name="see-also"></a>请参阅
+
+* [更多 C# 教程](/visualstudio/get-started/csharp/)
+* [Visual Basic 教程](/visualstudio/get-started/visual-basic/)
+* [C++ 教程](/cpp/get-started/tutorial-console-cpp)

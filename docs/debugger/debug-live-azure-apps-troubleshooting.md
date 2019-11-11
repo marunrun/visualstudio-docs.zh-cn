@@ -11,18 +11,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 27df4c097d829a4d28a77b9b1ad96eb389f4096c
-ms.sourcegitcommit: dc12a7cb66124596089f01d3e939027ae562ede9
+ms.openlocfilehash: dc0d5ce27c3241b89a1baaf540cab4f1f56d24b5
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71962933"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911602"
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>Visual Studio 中的快照调试疑难解答和已知问题
 
-如果本文中所述的步骤不能解决问题，请在[开发人员社区](https://developercommunity.visualstudio.com/spaces/8/index.html)中搜索问题，或通过选择 "**帮助**"  > **发送反馈**@no__t**来报告新**问题。
+如果本文中所述的步骤不能解决您的问题，请在[开发人员社区](https://developercommunity.visualstudio.com/spaces/8/index.html)中搜索问题，或通过选择 "**帮助** > **发送反馈** > 在 Visual Studio 中**报告问题**来报告新问题。
 
-## <a name="issue-attach-snapshot-debugger-encounters-an-http-status-code-error"></a>问题："附加 Snapshot Debugger" 遇到 HTTP 状态代码错误
+## <a name="issue-attach-snapshot-debugger-encounters-an-http-status-code-error"></a>问题： "附加 Snapshot Debugger" 遇到 HTTP 状态代码错误
 
 如果尝试附加期间在 "**输出**" 窗口中看到以下错误，则可能是下面列出的已知问题。 尝试建议的解决方案，如果此问题仍然存在，请联系上一个别名。
 
@@ -34,7 +34,7 @@ ms.locfileid: "71962933"
 
 执行以下步骤：
 
-* 确保你的 Visual Studio 个性化帐户有权访问你要附加到的 Azure 订阅和资源。 若要确定这一点，一种方法是检查资源是否在 "**调试** > **附加 Snapshot Debugger** " 对话框中可用。@no__t 的**Azure 资源** > **选择现有**，或在 Cloud Explorer 中。
+* 确保你的 Visual Studio 个性化帐户有权访问你要附加到的 Azure 订阅和资源。 若要确定这一点，一种方法是检查该资源是否可从 "**调试**" > **附加 Snapshot Debugger ...**  > **Azure 资源** > **选择 "现有**" 或在 Cloud Explorer 中。
 * 如果此错误仍然存在，请使用本文开头所述的反馈通道之一。
 
 ### <a name="403-forbidden"></a>（403）禁止访问
@@ -43,7 +43,7 @@ ms.locfileid: "71962933"
 
 执行以下步骤：
 
-* 验证你的 Visual Studio 帐户是否具有有效的 Azure 订阅，以及该资源所需的基于角色的访问控制（RBAC）权限。 对于 AppService，请检查你是否有权[查询](https://docs.microsoft.com/rest/api/appservice/appserviceplans/get)托管应用的应用服务计划。
+* 验证你的 Visual Studio 帐户是否具有有效的 Azure 订阅，以及该资源所需的基于角色的访问控制（RBAC）权限。 对于 AppService，请检查你是否有权[查询](/rest/api/appservice/appserviceplans/get)托管应用的应用服务计划。
 * 验证客户端计算机的时间戳是否正确并处于最新状态。 时间戳超过15分钟的请求时间戳的服务器通常会产生此错误。
 * 如果此错误仍然存在，请使用本文开头所述的反馈通道之一。
 
@@ -54,8 +54,8 @@ ms.locfileid: "71962933"
 执行以下步骤：
 
 * 验证是否已在要附加到的应用服务资源上部署并运行网站。
-* 验证站点是否在 https://\<resource\>.azurewebsites.net 上可用。
-* 当在 https://\<resource\>.azurewebsites.net 中访问时，验证正确运行的自定义 web 应用程序未返回状态代码404
+* 验证站点在 https://上是否可用\<资源\>。 azurewebsites.net
+* 当在 https://\<资源\>时，验证正确运行的自定义 web 应用程序未返回状态代码404。 azurewebsites.net
 * 如果此错误仍然存在，请使用本文开头所述的反馈通道之一。
 
 ### <a name="406-not-acceptable"></a>（406）不可接受
@@ -64,7 +64,7 @@ ms.locfileid: "71962933"
 
 执行以下步骤：
 
-* 验证你的站点在 https://\<resource\>.azurewebsites.net 可用。
+* 验证你的站点在 https://\<资源\>上是否可用。 azurewebsites.net
 * 验证你的站点是否尚未迁移到新实例。 Snapshot Debugger 使用 ARRAffinity 的概念将请求路由到特定实例，这可能会导致此错误。
 * 如果此错误仍然存在，请使用本文开头所述的反馈通道之一。
 
@@ -88,7 +88,7 @@ ms.locfileid: "71962933"
 
 ### <a name="500-internal-server-error"></a>（500）内部服务器错误
 
-此错误表示站点完全关闭，或者服务器无法处理该请求。 仅 Snapshot Debugger 运行的应用程序的功能。 [Application Insights Snapshot Debugger](https://docs.microsoft.com/azure/azure-monitor/app/snapshot-debugger)提供有关异常的快照，可能是满足你的需求的最佳工具。
+此错误表示站点完全关闭，或者服务器无法处理该请求。 仅 Snapshot Debugger 运行的应用程序的功能。 [Application Insights Snapshot Debugger](/azure/azure-monitor/app/snapshot-debugger)提供有关异常的快照，可能是满足你的需求的最佳工具。
 
 ### <a name="502-bad-gateway"></a>（502）错误的网关
 
@@ -99,11 +99,11 @@ ms.locfileid: "71962933"
 * 请尝试等待几分钟，然后再次附加 Snapshot Debugger。
 * 如果此错误仍然存在，请使用本文开头所述的反馈通道之一。
 
-## <a name="issue-snappoint-does-not-turn-on"></a>问题：吸附点未启用
+## <a name="issue-snappoint-does-not-turn-on"></a>问题：快照点未启用
 
-如果你的快照点带有警告图标 ![快照点警告图标](../debugger/media/snapshot-troubleshooting-snappoint-warning-icon.png "快照点警告图标")，而不是常规快照点图标，则表示快照点未启用。
+如果在吸附点中看到警告图标![吸附点警告图标](../debugger/media/snapshot-troubleshooting-snappoint-warning-icon.png "吸附点警告图标")，而不是常规的吸附点图标，则吸附点未打开。
 
-![快照点未启用](../debugger/media/snapshot-troubleshooting-dont-turn-on.png "快照点未开启")
+![吸附点未启用](../debugger/media/snapshot-troubleshooting-dont-turn-on.png "吸附点未启用")
 
 执行以下步骤：
 
@@ -113,7 +113,7 @@ ms.locfileid: "71962933"
 
 如果你看到以下窗口，则表示符号未加载。
 
-![未加载符号](../debugger/media/snapshot-troubleshooting-symbols-wont-load.png "未加载符号")
+![符号未加载](../debugger/media/snapshot-troubleshooting-symbols-wont-load.png "符号未加载")
 
 执行以下步骤：
 
@@ -125,7 +125,7 @@ ms.locfileid: "71962933"
 
 - 或者，如果你的组织使用符号服务器或将符号置于不同的路径，请使用符号设置为你的部署加载正确的符号。
 
-## <a name="issue-i-cannot-see-the-attach-snapshot-debugger-option-in-the-cloud-explorer"></a>问题：我看不到 Cloud Explorer 中的 "附加 Snapshot Debugger" 选项
+## <a name="issue-i-cannot-see-the-attach-snapshot-debugger-option-in-the-cloud-explorer"></a>问题：我无法在 Cloud Explorer 中看到“附加 Snapshot Debugger”选项
 
 执行以下步骤：
 
@@ -144,24 +144,24 @@ ms.locfileid: "71962933"
   - Azure Kubernetes 服务 - 在 Ubuntu 18.04 中的 .Net Core 2.2 或更高版本上运行的 ASP.NET Core 应用程序。
 ::: moniker-end
 
-## <a name="issue-i-only-see-throttled-snapshots-in-the-diagnostic-tools"></a>问题：仅在诊断工具中看到限制的快照
+## <a name="issue-i-only-see-throttled-snapshots-in-the-diagnostic-tools"></a>问题：我在诊断工具中只能看到已阻止的快照
 
-![已阻止的快照点](../debugger/media/snapshot-troubleshooting-throttled-snapshots.png "已阻止的快照点")
+![限制的吸附点](../debugger/media/snapshot-troubleshooting-throttled-snapshots.png "限制的吸附点")
 
 执行以下步骤：
 
 - 快照占用很少的内存，但确实存在内存使用。 如果 Snapshot Debugger 检测到服务器的内存负载过大，则不会创建快照。 可以通过停止 Snapshot Debugger 会话来删除已捕获的快照，然后重试。
 
 ::: moniker range=">= vs-2019"
-## <a name="issue-snapshot-debugging-with-multiple-versions-of-the-visual-studio-gives-me-errors"></a>问题：具有多个版本的 Visual Studio 的快照调试给出了错误
+## <a name="issue-snapshot-debugging-with-multiple-versions-of-the-visual-studio-gives-me-errors"></a>问题：使用多个版本的 Visual Studio 进行快照调试时出错
 
 Visual Studio 2019 需要 Azure App Service 上的 Snapshot Debugger 站点扩展的较新版本。  此版本与 Visual Studio 2017 使用的 Snapshot Debugger 站点扩展的旧版本不兼容。  如果尝试将 Visual Studio 2019 中的 Snapshot Debugger 附加到之前已由 Visual Studio 2017 中的 Snapshot Debugger 调试的 Azure App Service，则将收到以下错误：
 
-![不兼容 Snapshot Debugger 站点扩展 Visual studio 2019](../debugger/media/snapshot-troubleshooting-incompatible-vs2019.png "不兼容 Snapshot Debugger 站点扩展 visual studio 2019")
+![不兼容 Snapshot Debugger 站点扩展 Visual Studio 2019](../debugger/media/snapshot-troubleshooting-incompatible-vs2019.png "不兼容 Snapshot Debugger 站点扩展 Visual Studio 2019")
 
 相反，如果使用 Visual Studio 2017 将 Snapshot Debugger 附加到之前已由 Visual Studio 2019 中的 Snapshot Debugger 调试的 Azure App Service，则将收到以下错误：
 
-![不兼容 Snapshot Debugger 站点扩展 Visual studio 2017](../debugger/media/snapshot-troubleshooting-incompatible-vs2017.png "不兼容 Snapshot Debugger 站点扩展 visual studio 2017")
+![不兼容 Snapshot Debugger 站点扩展 Visual Studio 2017](../debugger/media/snapshot-troubleshooting-incompatible-vs2017.png "不兼容 Snapshot Debugger 站点扩展 Visual Studio 2017")
 
 若要解决此问题，请在 Azure 门户中删除以下应用设置，并再次附加 Snapshot Debugger：
 
@@ -169,7 +169,7 @@ Visual Studio 2019 需要 Azure App Service 上的 Snapshot Debugger 站点扩�
 - SNAPSHOTDEBUGGER_EXTENSION_VERSION
 ::: moniker-end
 
-## <a name="issue-i-am-having-problems-snapshot-debugging-and-i-need-to-enable-more-logging"></a>问题：快照调试出现问题，需要启用更多日志记录
+## <a name="issue-i-am-having-problems-snapshot-debugging-and-i-need-to-enable-more-logging"></a>问题：快照调试出现问题，我需要启用更多日志记录
 
 ### <a name="enable-agent-logs"></a>启用代理日志
 
@@ -181,7 +181,7 @@ Visual Studio 2019 需要 Azure App Service 上的 Snapshot Debugger 站点扩�
   - 导航到应用服务的 Kudu 站点（即，yourappservice.scm.azurewebsites.net）并导航到调试控制台。
   - 代理日志存储在以下目录中：D:\home\LogFiles\SiteExtensions\DiagnosticsAgentLogs\
 - VM/VMSS：
-  - 登录到 VM，代理日志按如下方式存储：C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Diagnostics.IaaSDiagnostics\<Version>\SnapshotDebuggerAgent_*.txt
+  - 登录到 VM，代理日志存储在以下路径：C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Diagnostics.IaaSDiagnostics\<Version>\SnapshotDebuggerAgent_*.txt
 - AKS
   - 导航到以下目录：/tmp/diag/AgentLogs/*
 
@@ -190,10 +190,10 @@ Visual Studio 2019 需要 Azure App Service 上的 Snapshot Debugger 站点扩�
 可以在以下位置找到检测日志：
 
 - 应用服务：
-  - 错误日志记录自动发送到 D:\Home\LogFiles\eventlog.xml，事件标有 @no__t 0 或 "生产断点"。
+  - 错误日志记录自动发送到 D:\Home\LogFiles\eventlog.xml，事件标有 `<Provider Name="Instrumentation Engine" />` 或 "生产断点"
 - VM/VMSS：
   - 登录到 VM 并打开事件查看器。
-  - 打开以下视图：*Windows 日志 > 应用程序*。
+  - 打开以下视图：“Windows 日志”>“应用程序”。
   - 使用生产断点或检测引擎按事件源筛选当前日志。
 - AKS
   - 检测引擎日志记录路径如下：/tmp/diag/log.txt（在 DockerFile 中设置 MicrosoftInstrumentationEngine_FileLogPath）
@@ -202,7 +202,7 @@ Visual Studio 2019 需要 Azure App Service 上的 Snapshot Debugger 站点扩�
 ## <a name="known-issues"></a>已知问题
 
 - 当前不支持使用多个 Visual Studio 客户端对同一个应用服务进行快照调试。
-- ASP.NET Core 项目不完全支持 Roslyn IL 优化。 对于某些 ASP.NET Core 项目，你可能无法看到某些变量或条件语句中使用某些变量。
+- ASP.NET Core 项目不完全支持 Roslyn IL 优化。 对于部分 ASP.NET Core 项目，你可能无法看到某些变量，或者无法在条件语句中使用某些变量。
 - 无法在 ASP.NET Core 项目的条件语句或记录点中计算特殊变量（如 $FUNCTION 或 $CALLER）。
 - 快照调试不适用于已启用[本地缓存](/azure/app-service/app-service-local-cache)的应用服务。
 - 目前不支持快照调试 API 应用。

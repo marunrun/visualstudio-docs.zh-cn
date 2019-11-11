@@ -1,7 +1,7 @@
 ---
 title: 安装并配置使用 iOS 进行构建的工具 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/13/2019
+ms.date: 10/17/2019
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
 dev_langs:
@@ -12,21 +12,21 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 411ab7f097a82fa850e3850c662d378f51ffd548
-ms.sourcegitcommit: 32144a09ed46e7223ef7dcab647a9f73afa2dd55
+ms.openlocfilehash: 33adad7117678ccc5550db86baada43a1c487916
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586822"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72588862"
 ---
 # <a name="install-and-configure-tools-to-build-using-ios"></a>安装并配置使用 iOS 进行构建的工具
 
-可以使用用于跨平台移动开发的 Visual C++ 来编辑、调试 iOS 代码，并将其部署到 iOS 仿真程序或 iOS 设备，但由于许可限制，该代码必须在 Mac 上远程生成和运行。 若要使用 Visual Studio 生成和运行 iOS 应用，需要在 Mac 上安装并配置远程代理 [vcremote](https://go.microsoft.com/fwlink/p/?LinkId=534988)。 该远程代理会处理来自 Visual Studio 的生成请求，并在连接到 Mac 的 iOS 设备上或 Mac 上的 iOS 仿真程序中运行应用。
+可以将 Visual Studio 与使用 C++ 进行跨平台移动开发的工具一起使用，以编辑、调试 iOS 代码，并将其部署到 iOS 模拟器或 iOS 设备  。 但由于许可限制，必须在 Mac 上远程生成和运行代码。 若要使用 Visual Studio 生成和运行 iOS 应用，需要在 Mac 上安装并配置远程代理 [vcremote](https://go.microsoft.com/fwlink/p/?LinkId=534988)。 该远程代理会处理来自 Visual Studio 的生成请求，并在连接到 Mac 的 iOS 设备上或 Mac 上的 iOS 仿真程序中运行应用。
 
 > [!NOTE]
-> 有关使用云托管的 Mac 服务而不是 Mac 的信息，请参阅[配置 Visual Studio 以连接到云托管的 Mac](/visualstudio/cross-platform/tools-for-cordova/tips-workarounds/host-a-mac-in-the-cloud?view=toolsforcordova-2017#configure-visual-studio-to-connect-to-your-cloud-hosted-mac)。 此说明适用于使用 Visual Studio Tools for Apache Cordova 进行生成。 要通过 C++ 使用指令进行生成，请将 vcremote 替换为 remotebuild。
+> 有关使用云托管的 Mac 服务而不是 Mac 的信息，请参阅[配置 Visual Studio 以连接到云托管的 Mac](/visualstudio/cross-platform/tools-for-cordova/tips-workarounds/host-a-mac-in-the-cloud?view=toolsforcordova-2017#configure-visual-studio-to-connect-to-your-cloud-hosted-mac)。 此说明适用于使用 Visual Studio Tools for Apache Cordova 进行生成。 要通过 C++ 使用指令进行生成，请将 `vcremote` 替换为 `remotebuild`。
 
-使用 iOS 进行生成的工具安装完成后，请参阅本主题，了解如何快速配置和更新远程代理以便在 Visual Studio 中和 Mac 上进行 iOS 开发。
+使用 iOS 进行生成的工具安装完成后，请参阅本文，了解如何快速配置和更新远程代理以便在 Visual Studio 中和 Mac 上进行 iOS 开发。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -64,13 +64,13 @@ ms.locfileid: "67586822"
 
 - [Node.js](https://nodejs.org/) 8.11.3 版和 npm 5.6.0 版
 
-   在 Mac 上安装 Node.js 8.11.3 版。 如果安装 Node.js 包，该包应随附 npm 5.6.0 版。 请注意，其他版本的 Node.js 和 npm 可能不支持远程代理 vcremote 中使用的一些模块，这可能导致 vcremote 安装失败。
+   在 Mac 上安装 Node.js 8.11.3 版。 如果安装 Node.js 包，该包应随附 npm 5.6.0 版。 其他版本的 Node.js 和 npm 可能不支持远程代理 `vcremote` 中使用的一些模块，这可能导致 `vcremote` 安装失败。
 
 ## <a name="Install"></a> 安装适用于 iOS 的远程代理
 
-当安装用于跨平台移动开发的 Visual C++ 时，Visual Studio 可以与 [vcremote](https://go.microsoft.com/fwlink/p/?LinkId=534988)进行通信，这是一个在 Mac 上运行的远程代理，用于传输文件、生成和运行 iOS 应用，以及发送调试命令。
+当使用 C++ 工作负载安装移动开发时，Visual Studio 可以与 [vcremote](https://go.microsoft.com/fwlink/p/?LinkId=534988) 进行通信，这是一个在 Mac 上运行的远程代理，用于传输文件、生成和运行 iOS 应用，以及发送调试命令。
 
-安装远程代理之前，请确保已经满足[先决条件](#prerequisites)并安装了[用于跨平台移动开发的 Visual C++](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md#install-the-tools)。
+安装远程代理之前，请确保已经满足[先决条件](#prerequisites)并完成了[使用 C++ 安装跨平台移动开发](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md#install-the-tools)中的安装步骤。
 
 ### <a name="DownloadInstall"></a> 下载和安装远程代理
 
@@ -80,10 +80,10 @@ ms.locfileid: "67586822"
 
    全局安装 ( **-g**) 开关是推荐使用而不是必须使用的。
 
-   在安装期间，vcremote 将被安装在你的 Mac 上，同时将激活开发人员模式。 同时还会安装[Homebrew](https://brew.sh/) 以及 vcremote lib 和 vcremote-utils 这两个 npm 包。 安装完成后，可以忽略有关跳过可选依赖项的警告。
+   在安装期间，`vcremote` 将被安装在你的 Mac 上，同时将激活开发人员模式。 还会安装 [Homebrew](https://brew.sh/) 和两个 npm 包，`vcremote-lib` 和 `vcremote-utils`。 安装完成后，可以忽略有关跳过可选依赖项的警告。
 
    > [!NOTE]
-   > 若要安装 Homebrew，你必须具有 sudo（管理员）访问权限。 如果你不想以 sudo 份安装 vcremote，你可以在 usr/local 位置手动安装 Homebrew 并将其 bin 文件夹添加到你的路径。 有关详细信息，请参阅 [Homebrew 文档](https://github.com/Homebrew/homebrew/wiki/Installation)。 若要手动启用开发人员模式，请在 Terminal 应用中输入以下命令： `DevToolsSecurity -enable`
+   > 若要安装 Homebrew，你必须具有 sudo（管理员）访问权限。 如果需要在不使用 sudo 的情况下安装 `vcremote`，你可以在 usr/local 位置手动安装 Homebrew 并将其 bin 文件夹添加到你的路径。 有关详细信息，请参阅 [Homebrew 文档](https://github.com/Homebrew/homebrew/wiki/Installation)。 若要手动启用开发人员模式，请在 Terminal 应用中输入以下命令： `DevToolsSecurity -enable`
 
 如果更新到新版本的 Visual Studio，那么必须将远程代理也更新到最新版本。 若要更新远程代理，请重复下载并安装远程代理的步骤。
 
@@ -97,11 +97,11 @@ ms.locfileid: "67586822"
 
    `vcremote`
 
-   这将启动默认生成目录为 ~/vcremote 的远程代理。 有关其他配置选项，请参阅 [Configure the remote agent on the Mac](#ConfigureMac)。
+   此命令将启动默认生成目录为 `~/vcremote` 的远程代理。 有关其他配置选项，请参阅 [Configure the remote agent on the Mac](#ConfigureMac)。
 
 第一次启动代理和每次创建新客户端证书时，将向你提供在 Visual Studio 中配置代理所需的信息，包括主机名、端口和 PIN。
 
-![使用 vcremote 生成安全 PIN](../cross-platform/media/cppmdd_vcremote_generateclientcert.png "CPPMDD_vcremote_generateClientCert")
+![使用 vcremote 生成一个安全的 PIN](../cross-platform/media/cppmdd_vcremote_generateclientcert.png "CPPMDD_vcremote_generateClientCert")
 
 如果打算在 Visual Studio 中使用主机名配置远程代理，请使用该主机名从 Windows 对 Mac 进行 ping 操作，以确认它是可连接的。 否则，你可能需要使用 IP 地址。
 
@@ -111,7 +111,7 @@ ms.locfileid: "67586822"
 
 #### <a name="to-disable-secured-connection-mode"></a>禁用安全连接模式
 
-- 若要禁用 vcremote 中的安全连接模式，请在 Mac 上的 Terminal 应用中输入以下命令：
+- 若要禁用 `vcremote` 中的安全连接模式，请在 Mac 上的 Terminal 应用中输入以下命令：
 
    `vcremote --secure false`
 
@@ -125,7 +125,7 @@ ms.locfileid: "67586822"
 
 #### <a name="to-stop-the-remote-agent"></a>停用远程代理
 
-- 在正在运行 vcremote 的终端窗口中，输入 Control+C   。
+- 在正在运行 `vcremote` 的终端窗口中，输入 Control+C   。
 
 ## <a name="ConfigureVS"></a> 在 Visual Studio 中配置远程代理
 
@@ -133,7 +133,7 @@ ms.locfileid: "67586822"
 
 ### <a name="to-configure-the-remote-agent-from-visual-studio"></a>从 Visual Studio 配置远程代理
 
-1. 如果代理尚未在 Mac 上运行，请遵循 [启动远程代理](#Start)中的步骤。 你的 Mac 必须正在运行 vcremote，Visual Studio 才能顺利配对、连接和生成项目。
+1. 如果代理尚未在 Mac 上运行，请遵循 [启动远程代理](#Start)中的步骤。 你的 Mac 必须正在运行 `vcremote`，Visual Studio 才能顺利配对、连接和生成项目。
 
 1. 在你的 Mac 上，获取 Mac 的主机名或 IP 地址。
 
@@ -158,7 +158,7 @@ ms.locfileid: "67586822"
 
    如果配对失败，请按照 [Start the remote agent](#Start)中的步骤验证远程代理是否正在运行。 如果生成远程代理 PIN 后已经过了很久，请在 Mac 上执行 [Generate a new security PIN](#GeneratePIN) 中的步骤，然后重试。 如果你使用的是 Mac 的主机名，请转而尝试在“主机名”  字段中使用 IP 地址。
 
-1. 更新“远程根目录”字段中的文件夹名称，以在 Mac 上的主 (~) 目录中指定远程代理所用的文件夹   。 默认情况下，远程代理会使用 /Users/`username`/vcremote 作为远程根目录。
+1. 更新“远程根目录”字段中的文件夹名称，以在 Mac 上的主 (~) 目录中指定远程代理所用的文件夹   。 默认情况下，远程代理会使用 `/Users/<username>/vcremote` 作为远程根目录。
 
 1. 选择“确定”  以保存远程配对连接设置。
 
@@ -184,7 +184,7 @@ ms.locfileid: "67586822"
 
 ### <a name="to-generate-a-new-server-certificate"></a>生成新的服务器证书
 
-1. 停用 vcremote 代理。
+1. 停止 `vcremote` 代理。
 
 1. 在 Terminal 应用中输入此命令：
 
@@ -196,7 +196,7 @@ ms.locfileid: "67586822"
 
    `vcremote generateClientCert`
 
-   将生成一个新的临时 PIN。
+   此命令将生成一个新的临时 PIN。
 
 1. 若要使用新的 PIN 配对 Visual Studio，请重复 [在 Visual Studio 中配置远程代理](#ConfigureVS)中的步骤。
 
@@ -210,7 +210,7 @@ ms.locfileid: "67586822"
 
    `vcremote --help`
 
-- 要禁用安全模式并启用简单的基于 HTTP 的连接，请输入：
+- 若要禁用安全模式并启用简单的基于 HTTP 的连接，请输入：
 
    `vcremote --secure false`
 
@@ -220,7 +220,7 @@ ms.locfileid: "67586822"
 
    `vcremote --serverDir directory_path`
 
-   其中， *directory_path* 是 Mac 上放置日志文件、生成项和服务器证书的位置。 默认情况下，此位置为 /Users/\<username>/vcremote  。 生成项会在此位置按照生成号进行整理。
+   其中， *directory_path* 是 Mac 上放置日志文件、生成项和服务器证书的位置。 默认情况下，此位置是 `/Users/<username>/vcremote`。 生成项会在此位置按照生成号进行整理。
 
 - 若要使用后台进程以将 `stdout` 和 `stderr` 捕获至名为 server.log 的文件，请输入：
 
@@ -238,21 +238,21 @@ ms.locfileid: "67586822"
 
 ### <a name="debugging-on-an-ios-device"></a>在设备 iOS 上进行调试
 
-如果在 iOS 设备上进行调试不起作用，则用于与 iOS 设备通信的工具 [ideviceinstaller](https://github.com/libimobiledevice/ideviceinstaller) 可能存在故障。 此工具通常在安装 vcremote 时从 Homebrew 安装。 请按照以下步骤解决该问题。
+如果在 iOS 设备上进行调试不起作用，则用于与 iOS 设备通信的工具 [ideviceinstaller](https://github.com/libimobiledevice/ideviceinstaller) 可能存在故障。 此工具通常在安装 `vcremote` 时从 Homebrew 安装。 请按照以下步骤解决该问题。
 
-打开终端应用并按顺序运行以下步骤来更新 ideviceinstaller 及其依赖项：
+打开终端应用并按顺序运行以下命令来更新 `ideviceinstaller` 及其依赖项：
 
 1. 确保 Homebrew 已更新
 
    `brew update`
 
-1. 卸载 libimobiledevice 和 usbmuxd
+1. 卸载 `libimobiledevice` 和 `usbmuxd`
 
    `brew uninstall --ignore-dependencies libimobiledevice`
 
    `brew uninstall --ignore-dependencies usbmuxd`
 
-1. 安装最新版本的 libimobiledevice 和 usbmuxd
+1. 安装最新版本的 `libimobiledevice` 和 `usbmuxd`
 
    `brew install --HEAD usbmuxd`
 
@@ -262,22 +262,22 @@ ms.locfileid: "67586822"
 
    `brew install --HEAD libimobiledevice`
 
-1. 卸载并重新安装 ideviceinstaller
+1. 卸载和重新安装 `ideviceinstaller`
 
    `brew uninstall ideviceinstaller`
 
    `brew install ideviceinstaller`
 
-尝试列出设备上安装的应用，以验证 ideviceinstaller 是否可以与设备通信：
+尝试列出设备上安装的应用，以验证 `ideviceinstaller` 是否可以与设备通信：
 
 `ideviceinstaller -l`
 
-如果 ideviceinstaller 出现故障导致无法访问文件夹 `/var/db/lockdown`，请通过以下方式来更改文件夹的权限：
+如果 `ideviceinstaller` 出现故障导致无法访问文件夹 `/var/db/lockdown`，请通过以下方式来更改文件夹的权限：
 
 `sudo chmod 777 /var/db/lockdown`
     
-然后，再次验证 ideviceinstaller 是否可以与设备通信。
+然后，再次验证 `ideviceinstaller` 是否可以与设备通信。
 
 ## <a name="see-also"></a>请参阅
 
-- [安装用于跨平台移动开发的 Visual C++](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md)
+- [使用 C++ 安装跨平台移动开发](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md)

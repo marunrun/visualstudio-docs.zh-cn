@@ -654,18 +654,8 @@
               href: javascript-console-commands.md
             - name: 键盘快捷键（HTML 和 JavaScript）
               href: keyboard-shortcuts-html-and-javascript.md
-            - name: 客户端脚本
-              items:
-                - name: 客户端脚本调试
-                  href: client-side-script-debugging.md
-                - name: 脚本调试的限制
-                  href: limitations-on-script-debugging.md
-                - name: 附加（脚本）
-                  items:
-                    - name: 附加到脚本
-                      href: how-to-attach-to-script.md
-                    - name: 警告：脚本调试被禁用
-                      href: warning-script-debugging-disabled.md
+            - name: 警告：脚本调试被禁用
+              href: warning-script-debugging-disabled.md
         - name: WCF 服务
           items:
             - name: 调试 WCF 服务

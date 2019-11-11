@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ca4b4ee5bb254f952fb6eb02e255320a337f657c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c508951a3b54a7f84f142c5029b5305c8ef579ea
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737798"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911547"
 ---
 # <a name="error-debugging-failed-because-integrated-windows-authentication-is-not-enabled"></a>错误：调试失败，因为没有启用集成 Windows 身份验证
 由于身份验证错误，无法对请求调试的用户进行身份验证。 尝试单步执行 Web 应用程序或 XML Web service 时可能会出现此问题。 导致此错误的一种原因是未启用集成 Windows 身份验证。 若要启用该身份验证，请按照“启用集成 Windows 身份验证”中的步骤操作。
@@ -115,5 +115,5 @@ ms.locfileid: "72737798"
 
 ## <a name="see-also"></a>请参阅
 - [调试 Web 应用程序：错误和疑难解答](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
-- [Microsoft 摘要式身份验证](http://go.microsoft.com/fwlink/?LinkId=77938)
+- [Microsoft 摘要式身份验证](/windows/win32/secauthn/microsoft-digest-authentication)
 - [在 Windows Vista 上运行带有 IIS 7.0 和 Visual Studio 的 Web 应用程序](https://msdn.microsoft.com/Library/262a82ac-dd0e-4096-86c6-fb463e88be66)

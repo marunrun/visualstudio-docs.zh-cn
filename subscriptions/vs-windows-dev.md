@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/31/2019
 ms.topic: conceptual
 description: 了解有关 Visual Studio 订阅中包含的 Windows 开发者帐户。
-ms.openlocfilehash: 506edeb75a2dba2831c57698a4259a09834633de
-ms.sourcegitcommit: a124076dfd6b4e5aecda4d01984fee7b0c034745
+ms.openlocfilehash: e7dc24fef7328dee38f9aca92f3676573b0143ef
+ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787791"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816428"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Windows 开发者帐户
 通过所选 Visual Studio 订阅包含的 Windows 开发者帐户，可以将免费和付费的 Windows 应用提交到 Windows 应用商店。
@@ -63,4 +63,4 @@ ms.locfileid: "68787791"
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
 
 ## <a name="next-steps"></a>后续步骤
-Azure 是你的个人专享开发/测试用沙盒。  你可以预配虚拟机、云服务和其他 Azure 资源。 请务必激活你的 [Azure 权益](vs-azure.md)，然后才能开始使用每月 Azure 信用额度。
+Azure 是你的个人专享开发/测试用沙盒。  你可以预配虚拟机、云服务和其他 Azure 资源。 请务必激活你的 [Azure 权益](vs-azure.md)，然后才能开始使用 Azure 开发测试个人额度。

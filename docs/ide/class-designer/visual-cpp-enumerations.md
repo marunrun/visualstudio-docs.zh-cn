@@ -1,25 +1,25 @@
 ---
-title: 类设计器中的 Visual C++ 枚举
+title: 类设计器中的 C++ 枚举
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Class Designer [Visual Studio], enumerations
 ms.assetid: 11e90ba1-18cd-44f8-9e26-e3746a7a19d1
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f31f153183d0cdd809bd9dde9187ade32b20ddd2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a514d5eb4b7f79e2fd193c79de670b6dd9c14cb5
+ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62975016"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72747991"
 ---
-# <a name="visual-c-enumerations-in-class-designer"></a>类设计器中的 Visual C++ 枚举
+# <a name="c-enumerations-in-class-designer"></a>类设计器中的 C++ 枚举
 
-类设计器支持 C++ `enum` 和域化的 `enum class` 类型。 下面是一个示例：
+类设计器支持 C++ `enum` 和域化的 `enum class` 类型  。 下面是一个示例：
 
 ```cpp
 enum CardSuit {
@@ -44,5 +44,5 @@ enum class CardSuit {
 
 ## <a name="see-also"></a>请参阅
 
-- [使用 Visual C++ 代码](working-with-visual-cpp-code.md)
+- [使用 C++ 代码](working-with-visual-cpp-code.md)
 - [枚举](/cpp/cpp/enumerations-cpp)

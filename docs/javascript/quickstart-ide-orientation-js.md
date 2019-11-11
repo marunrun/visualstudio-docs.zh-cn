@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 677dddbde5e90117dc19acfaf54a941c304ae7f1
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 713e7319618b42e2cdc4b8c0951bd79c225ac1b6
+ms.sourcegitcommit: f9f389e72787de30eb869a55ef7725a10a4011f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180054"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73636584"
 ---
 # <a name="first-look-at-the-visual-studio-ide"></a>初步了解 Visual Studio IDE
 
@@ -90,7 +90,7 @@ ms.locfileid: "70180054"
 1. 在显示的“新建项目”对话框中，接受默认的项目名称并选择“确定”   。
 ::: moniker-end
 
-   创建项目，并在“编辑器”窗口中打开名为 server.cs 的文件   。 编辑器可显示文件的内容，是你在 Visual Studio 中完成大部分编码工作的地方  。
+   创建项目，并在“编辑器”窗口中打开名为 server.js 的文件   。 编辑器可显示文件的内容，是你在 Visual Studio 中完成大部分编码工作的地方  。
 
    ![Visual Studio 中的编辑器](media/editor.png)
 

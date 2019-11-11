@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cb4e57d1186b42ac1ed4807faf150d1af9090c69
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 23d058e7bdbbe3f12ef4521318236e939e1b22f2
+ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71255581"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72985442"
 ---
 # <a name="walkthrough-import-a-form-region-that-is-designed-in-outlook"></a>演练：导入在 Outlook 中设计的窗体区域
   此演练演示如何在 Microsoft Office Outlook 中设计窗体区域，然后通过使用“新建窗体区域” 向导将窗体区域导入 Outlook VSTO 外接程序项目。 通过在 Outlook 中设计窗体区域，可以将本机 Outlook 控件添加到绑定到 Outlook 数据的窗体区域。 导入窗体区域后，可以处理每个控件的事件。
@@ -35,7 +35,7 @@ ms.locfileid: "71255581"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>Prerequisites
  你需要以下组件来完成本演练：
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -45,7 +45,6 @@ ms.locfileid: "71255581"
 > [!NOTE]
 > 以下说明中的某些 Visual Studio 用户界面元素在计算机上出现的名称或位置可能会不同。 这些元素取决于你所使用的 Visual Studio 版本和你所使用的设置。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md)。
 
- ![视频链接](../vsto/media/playvideo.gif "视频链接")有关相关的视频演示，请[参阅如何实现：使用 Visual Studio 2008 创建 Outlook 窗体区域？](http://go.microsoft.com/fwlink/?LinkID=130305).
 ## <a name="design-a-form-region-by-using-the-form-region-designer-in-outlook"></a>使用 Outlook 中的窗体区域设计器设计窗体区域
  在此步骤中，将在 Outlook 中设计一个窗体区域。 然后将该窗体区域保存到一个易于查找的位置，以便将其导入 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]。
 
@@ -55,7 +54,7 @@ ms.locfileid: "71255581"
 
 1. 启动 Microsoft Office Outlook。
 
-2. 在 Outlook 中，在“开发人员” 选项卡中，单击“设计窗体”。 有关详细信息，请参阅[如何：在功能区](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)上显示 "开发人员" 选项卡。
+2. 在 Outlook 中，在“开发人员” 选项卡中，单击“设计窗体”。 有关详细信息，请参阅[如何：在功能区上显示 "开发人员" 选项卡](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)。
 
 3. 在“设计窗体” 框中，单击“任务”，然后单击“打开”。
 
@@ -124,7 +123,7 @@ ms.locfileid: "71255581"
 
 3. 将项目保存到默认项目目录中。
 
-     有关详细信息，请参阅[如何：在 Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)中创建 Office 项目。
+     有关详细信息，请参阅[如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
 ## <a name="import-the-form-region"></a>导入窗体区域
  可使用“新建 Outlook 窗体区域” 向导将 Outlook 中设计的窗体区域导入 Outlook VSTO 外接程序项目。
@@ -187,7 +186,7 @@ ms.locfileid: "71255581"
 
    - 刷新窗体区域的列表框中每项依赖任务的当前完成状态。
 
-   - 分析隐藏的文本字段，以获取每项依赖任务的主题。 然后通过调用`FindTaskBySubjectName`帮助`Microsoft.Office.Interop.Outlook.TaskItem`器方法并传递每个任务的主题，在*Tasks*文件夹中查找每个。
+   - 分析隐藏的文本字段，以获取每项依赖任务的主题。 然后，它通过调用 `FindTaskBySubjectName` 帮助器方法并传递每个任务的主题来查找*Tasks*文件夹中的每个 `Microsoft.Office.Interop.Outlook.TaskItem`。
 
    - 将 `Microsoft.Office.Interop.Outlook.TaskItem.Subject` 和 `Microsoft.Office.Interop.Outlook.TaskItem.PercentComplete` 值添加到依赖任务列表框。
 
@@ -245,7 +244,7 @@ ms.locfileid: "71255581"
 ## <a name="next-steps"></a>后续步骤
  可从以下主题了解有关如何自定义 Outlook 应用程序 UI 的详细信息：
 
-- 若要详细了解如何通过将托管控件拖到可视化设计器来设计窗体区域的外观，请[参阅演练：设计 Outlook 窗体区域](../vsto/walkthrough-designing-an-outlook-form-region.md)。
+- 若要详细了解如何通过将托管控件拖到可视化设计器上来设计窗体区域的外观，请参阅[演练：设计 Outlook 窗体区域](../vsto/walkthrough-designing-an-outlook-form-region.md)。
 
 - 若要了解如何自定义 Outlook 项的功能区，请参阅[自定义 outlook 功能区](../vsto/customizing-a-ribbon-for-outlook.md)。
 
@@ -259,4 +258,4 @@ ms.locfileid: "71255581"
 - [如何：向 Outlook 外接程序项目添加窗体区域](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)
 - [将窗体区域与 Outlook 邮件类关联](../vsto/associating-a-form-region-with-an-outlook-message-class.md)
 - [Outlook 窗体区域中的自定义操作](../vsto/custom-actions-in-outlook-form-regions.md)
-- [如何：阻止 Outlook 显示窗体区域](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md)
+- [如何：防止 Outlook 显示窗体区域](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md)

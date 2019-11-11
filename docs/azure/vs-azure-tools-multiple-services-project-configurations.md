@@ -9,14 +9,14 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: 5314e92065cb29691aca75d424a331d10284a558
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 7b9df8c5609c92a6b6631d1ed9fdda8d65e9b605
+ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253432"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72911805"
 ---
-# <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>使用多种服务配置来配置 Visual Studio 中的 Azure 项目
+# <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>在 Visual Studio 中配置 Azure 项目以使用多个服务配置
 
 Visual Studio 中的 Azure 云服务项目包括三个配置文件：`ServiceDefinition.csdef`、`ServiceConfiguration.Local.cscfg` 和 `ServiceConfiguration.Cloud.cscfg`。
 
@@ -35,7 +35,7 @@ Visual Studio 中的 Azure 云服务项目包括三个配置文件：`ServiceDef
 
 选择受更改影响的 `ServiceConfiguration.*.cscfg` 文件。 默认情况下有本地和云变体，并且可以使用“管理...”命令来复制、重命名和删除配置文件。 这些文件会被添加到你的云服务项目，并显示在“解决方案资源管理器”中。 但是，只能从该控件中完成重命名或删除配置操作。
 
-### <a name="instances"></a>实例数
+### <a name="instances"></a>实例
 
 将“实例计数”属性设置为服务应为此角色运行的实例的数目。
 
@@ -55,7 +55,7 @@ Visual Studio 中的 Azure 云服务项目包括三个配置文件：`ServiceDef
 
 ## <a name="settings-page"></a>“设置”页
 
-在“设置”页上，可以将设置以名称/值对形式添加到配置中。 在角色中运行的代码可以使用[Azure 托管库](http://go.microsoft.com/fwlink?LinkID=171026)提供的类（特别是[GetConfigurationSettingValue](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleenvironment.getconfigurationsettingvalue.aspx)方法）在运行时读取配置设置的值。
+在“设置”页上，可以将设置以名称/值对形式添加到配置中。 在角色中运行的代码可以使用[Azure 托管库](/previous-versions/azure/dn602775(v=azure.11))提供的类（特别是[GetConfigurationSettingValue](/previous-versions/azure/reference/ee772857(v=azure.100))方法）在运行时读取配置设置的值。
 
 ### <a name="configuring-a-connection-string-for-a-storage-account"></a>为存储帐户配置连接字符串
 
@@ -95,7 +95,7 @@ Web 角色通常在端口 80 上具有单个 HTTP 终结点。 另一方面，�
 
 ## <a name="certificates-page"></a>“证书”页
 
-“证书”属性页会将有关证书的信息添加到服务配置。 请注意，证书不会与服务一起打包；必须通过 [Azure 门户](http://portal.azure.com)将证书单独上传到 Azure。
+“证书”属性页会将有关证书的信息添加到服务配置。 请注意，证书不会与服务一起打包；必须通过 [Azure 门户](https://portal.azure.com)将证书单独上传到 Azure。
 
 在此添加证书会将有关证书的信息添加到服务配置。 证书不会随服务一起打包；必须通过 Azure 门户单独上传证书。
 
