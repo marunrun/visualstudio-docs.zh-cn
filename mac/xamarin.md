@@ -5,12 +5,12 @@ author: therealjohn
 ms.author: johmil
 ms.date: 06/18/2019
 ms.assetid: 339F6051-5F90-48DC-8237-EBBC8A03A32B
-ms.openlocfilehash: c8b6bddac92a9ec6b40ba08ebcdc3fe3577b0bc8
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 31fb7fa4c2a87820285809d24b98fe8e59a6be01
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211469"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73714478"
 ---
 # <a name="xamarin-mobile-app-development"></a>Xamarin 移动应用开发
 
@@ -22,7 +22,7 @@ ms.locfileid: "71211469"
 
 若要启用 XAML 热重载，请在“Visual Studio”>“首选项”>“项目”>“Xamarin 热重载”中选中“启用 Xamarin 热重载”复选框   。
 
-若要详细了解热重载，请参阅文档中的[适用于 Xamarin.Forms 的 XAML 热重载指南](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/xaml/hot-reload)。
+若要详细了解热重载，请参阅文档中的[适用于 Xamarin.Forms 的 XAML 热重载指南](/xamarin/xamarin-forms/xaml/hot-reload)。
 
 ## <a name="android"></a>Android
 
@@ -40,7 +40,7 @@ IOS 设计器与 Visual Studio for Mac 完全集成，可进行 .xib 的可视�
 
 ![iOS Storyboard 设计器](media/intro-image30.png)
 
-有关使用 iOS Designer 的详细信息，请参阅[设计器](https://docs.microsoft.com/xamarin/ios/user-interface/designer/?tabs=macos)指南。
+有关使用 iOS Designer 的详细信息，请参阅[设计器](/xamarin/ios/user-interface/designer/?tabs=macos)指南。
 
 ### <a name="mac"></a>Mac
 

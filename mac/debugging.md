@@ -6,22 +6,22 @@ ms.author: jomatthi
 ms.date: 05/06/2018
 ms.technology: vs-ide-debug
 ms.assetid: BB7A084D-9AC2-48B5-8076-6C8518796BBA
-ms.openlocfilehash: 3578e3e903470f857192643a3da47d62e87da934
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: 58844d54000dbeb86548863510ecac63bfb2ade9
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67691726"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73716974"
 ---
 # <a name="debugging-with-xamarin"></a>使用 Xamarin 进行调试
 
 Visual Studio for Mac 具有本机调试器，支持 Xamarin.iOS、Xamarin.Mac 和 Xamarin.Android 应用程序的调试。
 
-Visual Studio for Mac 使用 [Mono 软调试器](http://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/)，该调试器在 Mono 运行时中实施，以便 Visual Studio for Mac 跨所有平台调试托管代码  。
+Visual Studio for Mac 使用 [Mono 软调试器](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/)，该调试器在 Mono 运行时中实施，以便 Visual Studio for Mac 跨所有平台调试托管代码  。
 
 ## <a name="the-debugger"></a>调试器
 
-Visual Studio for Mac 使用 Mono 软调试器来调试所有 Xamarin 应用程序中的托管（C# 或 F#）代码。 Mono 软调试器不同于常规调试器，因为它是内置于 Mono 运行时的协作式调试器；生成的代码和 Mono 运行时与 IDE 协作提供调试体验。 Mono 运行时通过网络协议公开调试功能，可以阅读 [Mono 文档](http://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger-wire-format/)，了解详细信息。
+Visual Studio for Mac 使用 Mono 软调试器来调试所有 Xamarin 应用程序中的托管（C# 或 F#）代码。 Mono 软调试器不同于常规调试器，因为它是内置于 Mono 运行时的协作式调试器；生成的代码和 Mono 运行时与 IDE 协作提供调试体验。 Mono 运行时通过网络协议公开调试功能，可以阅读 [Mono 文档](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger-wire-format/)，了解详细信息。
 
 硬调试器（如 [LLDB]( http://lldb.llvm.org/index.html) 或 [GDB]( https://www.gnu.org/software/gdb/)）在不了解受调试的程序或不与其协作的情况下控制程序，但如果需要调试本机 iOS 或 Android 代码，则该调试器对于调试 Xamarin 应用程序仍十分有用。
 
