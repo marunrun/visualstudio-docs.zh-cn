@@ -202,8 +202,6 @@
               href: how-to-open-standard-editors.md
             - name: 打开开放文档的编辑器
               href: how-to-open-editors-for-open-documents.md
-        - name: XAML 设计器扩展性迁移指南
-          href: xaml-designer-extensibility-migration.md
 - name: 扩展项目
   items:
     - name: 扩展项目

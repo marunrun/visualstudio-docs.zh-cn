@@ -6,12 +6,12 @@ author: therealjohn
 ms.author: johmil
 ms.date: 06/18/2019
 ms.assetid: DDC39599-8C5D-4CB9-8DA5-229E085384CA
-ms.openlocfilehash: 676193bc84b680c3c78f3b5ddff546a64e4767af
-ms.sourcegitcommit: cf8c0fef2b9690595e99ce3802586cdd55fd37c2
+ms.openlocfilehash: b4c5b460670a438b1aeaeb11cd8ae540b39cf9b7
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108183"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73714417"
 ---
 # <a name="visual-studio-for-mac-workloads"></a>Visual Studio for Mac 工作负载
 
@@ -31,7 +31,7 @@ Visual Studio for Mac 预安装有用于开发以下类型应用的工作负荷�
 
 ## <a name="mac-desktop-applications"></a>Mac 桌面应用程序
 
-可以使用 Cocoa 用户界面框架在 [Xamarin.Mac](https://docs.microsoft.com/xamarin/mac/) 中生成 Mac 应用，在 Mac 上使用 [Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/platform/other/mac) 生成与其他平台共享代码和 UI 的应用。
+可以使用 Cocoa 用户界面框架在 [Xamarin.Mac](/xamarin/mac/) 中生成 Mac 应用，在 Mac 上使用 [Xamarin.Forms](/xamarin/xamarin-forms/platform/other/mac) 生成与其他平台共享代码和 UI 的应用。
 
 ## <a name="net-core-applications"></a>.NET Core 应用程序
 

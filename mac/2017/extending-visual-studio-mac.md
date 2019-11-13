@@ -6,12 +6,12 @@ ms.author: crdun
 ms.date: 04/14/2017
 ms.technology: vs-ide-sdk
 ms.assetid: D5245AB0-8404-426B-B538-F49125E672B2
-ms.openlocfilehash: 26290a5e70a9f4b0f6eeb8df5727ef4f04662136
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.openlocfilehash: 87a4fae1bd5430037b34297f803a6d955a052f68
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67890641"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73716936"
 ---
 # <a name="extending-visual-studio-for-mac"></a>扩展 Visual Studio for Mac
 
@@ -135,7 +135,7 @@ public enum DateInserterCommands
 
 <!--The extension package detailed in the [Walkthrough](~/extending-visual-studio-mac-walkthrough.md) deals with the Text Editor in Visual Studio for Mac, but this is only one of many possible areas for customization. -->
 
-若要了解有关可用于开发的区域范围，请参阅 [Extension Tree Reference](http://monodevelop.com/Developers/Articles/Extension_Tree_Reference)（扩展树引用）和 [API Overview](http://monodevelop.com/Developers/Articles/API_Overview)（API 概述）。 生成高级扩展包时，另请参阅[开发者文章](http://monodevelop.com/Developers/Articles)。 以下是自定义区域的部分列表：
+若要了解有关可用于开发的区域范围，请参阅 [Extension Tree Reference](https://www.monodevelop.com/developers/articles/extension-tree-reference/)（扩展树引用）和 [API Overview](https://www.monodevelop.com/developers/articles/api-overview/)（API 概述）。 生成高级扩展包时，另请参阅[开发者文章](https://www.monodevelop.com/developers/articles/)。 以下是自定义区域的部分列表：
 
 * 面板
 * 键绑定方案

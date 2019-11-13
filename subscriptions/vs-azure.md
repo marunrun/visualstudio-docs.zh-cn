@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/29/2019
 ms.topic: conceptual
 description: 了解如何激活 Visual Studio 订阅中包含的 Azure 开发测试个人额度权益。
-ms.openlocfilehash: 7bd6313a0e6d52f9e461383fb04c9039f3b974ac
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: 25bb97675c65244258c217901a010ab2211554d0
+ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816446"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983765"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>在 Visual Studio 订阅中使用 Microsoft Azure
 Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过[每月 Azure 开发测试个人额度](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)，可将 Azure 用作开发/测试的个人沙盒。  你可以预配虚拟机、云服务和其他 Azure 资源。  信用额度因订阅级别而异。
@@ -41,9 +41,11 @@ Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过
 ## <a name="eligibility"></a>资格
 |                 订阅级别/计划                 |           好处           |                         是否续订？                          |
 |--------------------------------------------------------------|-----------------------------|-------------------------------------------------------------|
-|              Visual Studio Enterprise Standard               |     150 美元月信用额度     |                             是                             ||
+|              Visual Studio Enterprise Standard               |     150 美元月信用额度     |                             是                             |
+|              带有 GitHub Enterprise 的 Visual Studio Enterprise               |     150 美元月信用额度     |                             是                             |
 |               Visual Studio Enterprise 月度               |        不可用        |                                                             |
 |             Visual Studio Professional Standard              |     50 美元月信用额度      |                             是
+|              带有 GitHub Enterprise 的 Visual Studio Professional              |     150 美元月信用额度     |                             是                             |
 |              Visual Studio Professional 月度              |        不可用        |                                                             |
 |                    Visual Studio Test Pro                    |     50 美元月信用额度      |                             是                             |
 |                        MSDN 平台                        |     100 美元月信用额度     |                             是                             |
