@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0e62226147fc160c6d967115fbd3aaa52dd69995
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: e51f346501b680b8183f8552aad48ffff84a71dd
+ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985068"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983732"
 ---
 # <a name="walkthrough-create-and-debug-a-sharepoint-workflow-solution"></a>演练：创建和调试 SharePoint 工作流解决方案
   本演练演示如何创建基本的顺序工作流模板。 工作流检查共享文档库的属性，以确定是否已查看文档。 如果文档已评审，则工作流将完成。
@@ -39,7 +39,7 @@ ms.locfileid: "72985068"
 >
 > 此外，在以下说明中，计算机可能会为某些 Visual Studio 用户界面元素显示不同的名称或位置。 这些元素取决于你所使用的 Visual Studio 版本和你所使用的设置。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md)。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>Prerequisites
  你需要以下组件来完成本演练：
 
 - 支持的 Microsoft Windows 和 SharePoint 版本。
@@ -122,7 +122,7 @@ ms.locfileid: "72985068"
      此页面使你可以指定工作流的启动时间。 默认情况下，当用户在 SharePoint 中手动启动工作流或创建工作流关联的项时，工作流将启动。
 
 ## <a name="create-workflow-activities"></a>创建工作流活动
- 工作流包含一个或多个表示要执行的操作的*活动*。 使用工作流设计器可以安排工作流的活动。 在此过程中，我们会将两个活动添加到工作流中：HandleExternalEventActivity 和 OnWorkFlowItemChanged。 这些活动用于监视 "**共享文档**" 列表中文档的检查状态
+ 工作流包含一个或多个表示要执行的操作的*活动*。 使用工作流设计器可以安排工作流的活动。 在此过程中，我们将向工作流添加两个活动： HandleExternalEventActivity 和 OnWorkFlowItemChanged。 这些活动用于监视 "**共享文档**" 列表中文档的检查状态
 
 #### <a name="to-create-workflow-activities"></a>创建工作流活动
 
@@ -162,7 +162,7 @@ ms.locfileid: "72985068"
 
 12. 在 "**属性**" 窗口中，设置下表中所示的属性。
 
-    |属性|值|
+    |Property|“值”|
     |--------------|-----------|
     |**CorrelationToken**|**workflowToken**|
     |**被**|**onWorkflowItemChanged**|
@@ -285,7 +285,7 @@ ms.locfileid: "72985068"
 
 - 若要了解有关 SharePoint 工作流活动的详细信息，请参阅[Sharepoint Foundation 的工作流活动](/previous-versions/office/developer/sharepoint-2010/ms446847(v=office.14))。
 
-- 若要详细了解 Windows Workflow Foundation 活动，请参阅[System.object 命名空间](/dotnet/api/system.workflow.activities&view=netframework-4.8)。
+- 若要详细了解 Windows Workflow Foundation 活动，请参阅[System.object 命名空间](/dotnet/api/system.windows.media.color)。
 
 ## <a name="see-also"></a>请参阅
 - [创建 SharePoint 工作流解决方案](../sharepoint/creating-sharepoint-workflow-solutions.md)
