@@ -5,18 +5,18 @@ author: sayedihashimi
 ms.author: sayedha
 ms.date: 09/18/2019
 ms.assetid: a556f9d7-86a8-408e-aa54-392584845889
-ms.openlocfilehash: 7135dd05c687e3caed3ee64618ff71c093f4cd63
-ms.sourcegitcommit: 4d2620bee4688fb881e09a07ea4a264b99f0743e
+ms.openlocfilehash: d35bfed901dca960ae21b4e2cf2fa75067c1b3ee
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71322582"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73715935"
 ---
 # <a name="launchsettingsjson"></a>launchSettings.json
 
 开发 ASP.NET Core 项目时，可以通过自定义 launchSettings.json 文件的内容来配置在开发场景中启动项目的方式。 在 Visual Studio for Mac 中，可以通过使用“项目选项”UI 或直接编辑来更新此文件。 此配置文件同样可在 Windows 上运行 Visual Studio 时使用，或在使用 `dotnet` 的命令行中使用。 此文件存储在 Properties 文件夹下的项目中。
 
-有关更多详细信息，请参阅[在 ASP.NET Core 中使用多种环境](https://docs.microsoft.com/aspnet/core/fundamentals/environments)。 本文将介绍在 Visual Studio for Mac 中更新此文件的方法。
+有关更多详细信息，请参阅[在 ASP.NET Core 中使用多种环境](/aspnet/core/fundamentals/environments)。 本文将介绍在 Visual Studio for Mac 中更新此文件的方法。
 
 ## <a name="update-the-start-configuration-by-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 更新启动配置
 
@@ -35,7 +35,7 @@ ms.locfileid: "71322582"
 
 ## <a name="configure-environment-variables"></a>配置环境变量
 
-可以使用网格指定环境变量的值。 在 Visual Studio for Mac 中启动应用程序时，将设置这些环境变量。 开发 ASP.NET Core 应用程序时，应注意特殊的环境变量 `ASPNETCORE_ENVIRONMENT`。 若要了解详细信息，请参阅[在 ASP.NET Core 中使用多个环境](https://docs.microsoft.com/aspnet/core/fundamentals/environments)。
+可以使用网格指定环境变量的值。 在 Visual Studio for Mac 中启动应用程序时，将设置这些环境变量。 开发 ASP.NET Core 应用程序时，应注意特殊的环境变量 `ASPNETCORE_ENVIRONMENT`。 若要了解详细信息，请参阅[在 ASP.NET Core 中使用多个环境](/aspnet/core/fundamentals/environments)。
 
 
 ## <a name="configure-the-start-url"></a>配置启动 URL
