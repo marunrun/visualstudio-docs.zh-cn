@@ -21,22 +21,22 @@ caps.latest.revision: 27
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: e14ce5ac1e0596947e69d20e14a3dc1e7ff4f1e5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: eeb5375d636ef16fde658b88dbf662cdd9f1e27d
+ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62421037"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983810"
 ---
 # <a name="profiling-on-hpc-high-performance-computing-clusters"></a>针对 HPC（高性能计算）群集进行分析
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-可以使用 [!INCLUDE[vsPreExt](../includes/vspreext-md.md)] 或 [!INCLUDE[vsUltExt](../includes/vsultext-md.md)] 分析工具的采样方法对 Microsoft Windows HPC 群集的计算节点进行分析。 有关 HPC 的详细信息请参阅[大型计算：HPC 和批处理](https://azure.microsoft.com/solutions/big-compute/)Microsoft Web 站点上。  
+可以使用 [!INCLUDE[vsPreExt](../includes/vspreext-md.md)] 或 [!INCLUDE[vsUltExt](../includes/vsultext-md.md)] 分析工具的采样方法对 Microsoft Windows HPC 群集的计算节点进行分析。 有关 HPC 的详细信息，请参阅[大型计算： HPC &](https://azure.microsoft.com/solutions/big-compute/) Microsoft 网站上的 Batch。  
   
-## <a name="prerequisites"></a>系统必备  
+## <a name="prerequisites"></a>Prerequisites  
  若要对 HPC 计算节点进行分析，必须执行以下操作：  
   
-- 在与 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] 相同的计算机上安装 Microsoft HPC Pack 2008。 计算机不必是 HPC 群集的一部分。 可以在 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=177414)安装 HPC 包。  
+- 在与 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] 相同的计算机上安装 Microsoft HPC Pack 2008。 计算机不必是 HPC 群集的一部分。 可以在 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=2800)安装 HPC 包。  
   
 - 在 HPC 计算节点上安装 [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] 以及分析工具的独立版本。 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 和独立探查器的安装程序都位于 [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] 安装媒体上。 **注意** 安装 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 后，必须重新启动计算机，然后才能安装分析工具。  
   
@@ -55,15 +55,15 @@ ms.locfileid: "62421037"
 |||  
 |-|-|  
 |*%HeadNode%*|群集的头节点的名称。|  
-|*%FxPath%*|[!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] 安装程序的路径。 在[!INCLUDE[vsPreShort](../includes/vspreshort-md.md)]安装介质的路径是：WCU\dotNetFramework\dotNetFx40_Full_x86_x64.exe|  
-|*%ProfilerPath%*|分析工具安装程序的独立版本的路径。 在[!INCLUDE[vsPreShort](../includes/vspreshort-md.md)]安装介质的路径是：Standalone Profiler\x64\vs_profiler.exe|  
+|*%FxPath%*|[!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] 安装程序的路径。 在 [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] 安装媒体上，路径是：WCU\dotNetFramework\dotNetFx40_Full_x86_x64.exe|  
+|*%ProfilerPath%*|分析工具安装程序的独立版本的路径。 在 [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] 安装媒体上，路径是：Standalone Profiler\x64\vs_profiler.exe|  
   
 ## <a name="profiling-on-an-hpc-compute-node"></a>对 HPC 计算节点进行分析  
  可通过使用 HPC 性能向导指定 HPC 群集和目标信息，来配置分析会话。 可以在性能会话属性页中设置其他选项。 分析工具会自动部署所需目标二进制文件并启动探查器和 HPC 应用程序。  
   
 #### <a name="to-profile-on-an-hpc-compute-node"></a>对 HPC 计算节点进行分析  
   
-1. 在“分析”  菜单上，单击“启动 HPC 性能向导” 。 如果该命令不可用，请确保具有上面列出的先决条件。  
+1. 在“分析” 菜单上，单击“启动 HPC 性能向导”。 如果该命令不可用，请确保具有上面列出的先决条件。  
   
 2. 在向导的第一页上单击“下一步”。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62421037"
   
     - 若要分析不在打开的项目中的二进制文件，请选择“可执行文件(.EXE 文件)”选项。  
   
-4. 单击 **“下一步”**。  
+4. 单击 **“下一步”** 。  
   
 5. 在向导的第三页上：  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62421037"
   
     - 在“部署位置”中，指定 HPC 服务器用于为部署暂存映像的目录的路径。  
   
-6. 单击 **“下一步”**。  
+6. 单击 **“下一步”** 。  
   
 7. 在向导的第四页上：  
   
@@ -99,13 +99,13 @@ ms.locfileid: "62421037"
   
          若要分析在 HPC 群集中的特定节点上运行的进程，请选择“针对节点分析”选项，然后从下拉列表中选择节点。  
   
-8. 单击 **“下一步”**。  
+8. 单击 **“下一步”** 。  
   
 9. 在向导的第五页上，可以选择立即启动探查器和分析进程，或以后使用性能资源管理器启动分析。  
   
     - 选择“在向导完成后启动分析”立即启动分析，或清除该复选框手动启动分析。  
   
-10. 单击 **“完成”**。  
+10. 单击 **“完成”** 。  
   
 ## <a name="setting-hpc-profiling-properties-by-using-performance-session-property-pages"></a>使用性能会话属性页设置 HPC 分析属性  
  可以在性能会话属性页的“HPC 启动属性”页上更改在 HPC 分析向导中设置的性能会话属性。 可在“HPC 高级属性”页上设置其他选项。  
@@ -126,7 +126,7 @@ ms.locfileid: "62421037"
   
 ### <a name="hpc-launch-properties"></a>HPC 启动属性  
   
-|属性|描述|  
+|Property|描述|  
 |--------------|-----------------|  
 |**头节点**|指定在分析运行中充当 HPC 头节点的计算机。|  
 |**进程数**|指定要在分析的应用程序中运行的应用程序实例数。|  
@@ -137,11 +137,11 @@ ms.locfileid: "62421037"
   
 ### <a name="advanced-properties"></a>高级属性  
   
-|属性|描述|  
+|Property|描述|  
 |--------------|-----------------|  
 |**项目名称**|当前 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 项目或解决方案的名称。|  
 |**探查器停止时进行清理**|为 true 时，删除已部署到执行目录的二进制文件。 在此步骤中不会删除用户程序创建的文件和目录。 如果执行目录和部署目录是由 IDE 创建的，则 IDE 会尝试删除它们，但是如果它们包含不是由 IDE 部署的文件，则 IDE 不会执行此操作。|  
-|**其他要部署的文件**|指定要在计算节点上部署的任何其他文件的分号分隔列表。 可以单击省略号按钮 (**...**) 以使用对话框选择多个文件。|  
+|**其他要部署的文件**|指定要在计算节点上部署的任何其他文件的分号分隔列表。 可以单击省略号按钮 ( **...** ) 以使用对话框选择多个文件。|  
 |**Mpiexec 命令**|指定启动 MPI 应用程序的应用程序。 默认值为 **mpiexec.exe**|  
 |**Mpiexec 参数**|指定要传递到 mpiexec.exe 命令的参数。|  
 |**该群集中的所请求的节点**|指定群集中要在其上运行应用程序的节点数。|  

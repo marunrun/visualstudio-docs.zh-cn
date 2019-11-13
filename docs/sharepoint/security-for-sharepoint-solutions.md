@@ -15,18 +15,18 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 16fb3e4a0e1aed14e4a3f1b3178dc753f5dc10b4
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 6dc1449a40528670274ea5b275cca3f0a8d2f277
+ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984185"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983778"
 ---
 # <a name="security-for-sharepoint-solutions"></a>SharePoint 解决方案的安全性
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 包含以下功能，以帮助增强 SharePoint 应用程序的安全性。
 
 ## <a name="safe-control-entries"></a>安全控件项
- 在 [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] 中创建的每个 SharePoint 项目项都具有一个**安全控件项**属性，该属性表示一个安全的控件集合。 通过其 "**安全**" 子属性，您可以指定您认为安全的控件。 有关详细信息，请参阅[在项目项中提供包和部署信息](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)和[指定安全 Web 部件](/previous-versions/office/developer/sharepoint2003/dd583154(v=office.11)#sharepoint_northwindwebparts_topic19)。
+ 在 [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] 中创建的每个 SharePoint 项目项都具有一个**安全控件项**属性，该属性表示一个安全的控件集合。 通过其 "**安全**" 子属性，您可以指定您认为安全的控件。 有关详细信息，请参阅[在项目项中提供包和部署信息](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)和[指定安全 Web 部件](/previous-versions/office/developer/sharepoint2003/dd583154(v=office.11)#specifying-safe-web-parts)。
 
 ## <a name="allowpartiallytrustedcallers-attribute"></a>AllowPartiallyTrustedCallers 特性
  默认情况下，只有运行时代码访问安全性（CAS）系统完全信任的应用程序才能访问共享的托管代码程序集。 使用 AllowPartiallyTrustedCallers 特性标记完全受信任的程序集允许部分受信任的程序集访问它。
