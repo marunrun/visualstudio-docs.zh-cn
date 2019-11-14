@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/30/2019
 ms.topic: conceptual
 description: 了解如何以 Visual Studio 订阅者身份使用 Azure DevOps。
-ms.openlocfilehash: 227ba1652c592a6fdf3f20bdb5052d9330f142a1
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
+ms.openlocfilehash: 9b4c616c870f0834b6974d59540035687b32fc12
+ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314155"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983694"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Visual Studio 订阅者的 Azure DevOps 权益
 作为权益，有效 Visual Studio 订阅者可使用订阅随附的一系列 Azure DevOps 功能。 可以在所属的每个 Azure DevOps 组织中使用这些相同的功能，无论你是创建了组织，还是被其他人添加到组织中。
@@ -25,7 +25,9 @@ ms.locfileid: "72314155"
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准、月度云）   | VL、Azure、零售、所选 NFR<sup>1</sup>  | Azure Boards 和 Azure Repos（基础版）、Azure Test Plans、Azure Pipelines（自承载）       |  是          |
-| Visual Studio Professional（标准、月度云） | VL、Azure、零售、                                        | Azure Boards 和 Azure Repos（基础版）                                                            |  是          |
+| 带有 GitHub Enterprise 的 Visual Studio Enterprise   | VL| Azure Boards 和 Azure Repos（基础版）、Azure Test Plans、Azure Pipelines（自承载）       |  是          |
+| Visual Studio Professional（标准、月度云） | VL、Azure、零售                                        | Azure Boards 和 Azure Repos（基础版）                                                            |  是          |
+| 带有 GitHub Enterprise 的 Visual Studio Professional | VL| Azure Boards 和 Azure Repos（基础版）                                                            |  是          |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | Azure Boards 和 Azure Repos（基础版）、Azure Test Plans                                              |  是          |
 | MSDN 平台（标准）                                          | VL、零售                                              | Azure Boards 和 Azure Repos（基础版）、Azure Test Plans                                              |  是          |
 ||
@@ -49,3 +51,5 @@ ms.locfileid: "72314155"
 - [Azure Boards 和 Azure Repos（基础版）](https://azure.microsoft.com/services/devops/compare-features/)
 - [Azure Test Plans](https://marketplace.visualstudio.com/items?itemName=ms.vss-testmanager-web)
 - [Azure Artifacts](https://marketplace.visualstudio.com/items?itemName=ms.feed)
+
+了解如何激活 [Azure 开发测试个人额度](vs-azure.md)。

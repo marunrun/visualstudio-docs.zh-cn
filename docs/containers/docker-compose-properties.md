@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 08/12/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 2178881c6ea0e597aef5e25074e3648162d3f6e9
-ms.sourcegitcommit: 6ae0a289f1654dec63b412bfa22035511a2ef5ad
+ms.openlocfilehash: 4ea1a936de215340cc13971e7a70a8d795d36cbb
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71950641"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713927"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose 生成属性
 
@@ -35,6 +35,8 @@ ms.locfileid: "71950641"
 
 | 属性名称 | 位置 | 说明 | 默认值  |
 |---------------|----------|-------------|----------------|
+|AdditionalComposeFiles|dcproj|以分号分隔的列表指定要发送给 docker-compose.exe 供所有命令使用的其他撰写文件。 允许使用来自 docker-compose 项目文件 (dcproj) 的相对路径。|-|
+|DockerComposeBaseFilePath|dcproj|执行 docker-compose 文件的文件名的第一部分，不带 .yml 扩展名  。 例如: <br>1.DockerComposeBaseFilePath = null/未定义：使用基本文件路径 docker-compose，文件将命名为 docker-compose.yml 和 docker-compose.override.yml   <br>2. DockerComposeBaseFilePath = mydockercom：文件将命名为 mydockercompose.yml 和 mydockercompose.override.yml   <br> 3.DockerComposeBaseFilePath = ..\mydockercompose：文件将向上提升一级  。 |docker-compose|
 |DockerComposeBuildArguments|dcproj|指定要传递给 `docker-compose build` 命令的额外参数。 例如，`--parallel --pull` |
 |DockerComposeDownArguments|dcproj|指定要传递给 `docker-compose down` 命令的额外参数。 例如，`--timeout 500`|-|  
 |DockerComposeProjectPath|csproj 或 vbproj|Docker-compose 项目 (.dcproj) 文件的相对路径。 发布服务项目时设置此属性，以查找存储在 docker-compose.yml 文件中的关联映像生成设置。|-|

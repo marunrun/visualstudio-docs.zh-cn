@@ -9,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 54e65c411afe9815696112dfbcc99bcb9433c4db
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: e72b072ad2cabab643d64f149a31b1b8dbb2a054
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416864"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713941"
 ---
 # <a name="how-to-exclude-projects-from-a-build"></a>如何：从生成中排除项目
 
@@ -53,6 +53,19 @@ ms.locfileid: "68416864"
 6. 在“标准”工具栏上，确保“解决方案配置”框中的新解决方案配置是活动配置   。
 
 7. 在菜单栏上，依次选择“生成”   > “重新生成解决方案”  。
+
+## <a name="skipped-projects"></a>跳过的项目
+
+可在生成期间因项目并非最新或已将其从配置中排除而跳过这些项目。 Visual Studio 会使用 MSBuild 生成项目。 如果输出早于输入，则 MSBuild 仅生成目标，其中时间由文件时间戳决定。 要强制重新生成，请使用命令“生成” > “重新生成解决方案”   。
+
+在“输出”窗口的“生成”窗格中，Visual Studio 会报告处于最新状态的项目数量、成功构建的数量、失败的数量和跳过的数量   。 跳过计数不包括因是最新状态而未生成的项目。 如果从活动配置中排除项目，则会在生成期间跳过这些项目。 在生成输出中，会看到一条消息显示已跳过此项目：
+
+```output
+2>------ Skipped Build: Project: ConsoleApp2, Configuration: Debug x86 ------
+2>Project not selected to build for this solution configuration
+```
+
+要查看为何跳过了某项目，请记下活动配置（在上例中为 `Debug x86`），然后选择“生成” > “Configuration Manager”   。 如本文中所述，可查看或更改每个配置会跳过的具体项目。
 
 ## <a name="see-also"></a>请参阅
 

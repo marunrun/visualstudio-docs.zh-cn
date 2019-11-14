@@ -1,5 +1,5 @@
 ---
-title: MSBuild .Targets 文件 | Microsoft Docs
+title: MSBuild .targets 文件 | Microsoft Docs
 ms.date: 02/24/2017
 ms.topic: reference
 dev_langs:
@@ -8,20 +8,20 @@ dev_langs:
 - C++
 - jsharp
 helpviewer_keywords:
-- .Targets files
-- MSBuild, .Targets files
+- .targets files
+- MSBuild, .targets files
 ms.assetid: f6d98eb4-d2fa-49b7-8e3c-bae1ca3cf596
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bacc58184d0ea78a5e54d7cc7b0b93df107b3300
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: 5dc3964524536b1d0452462512e5847311e8bfeb
+ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68681410"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983822"
 ---
 # <a name="msbuild-targets-files"></a>MSBuild .targets 文件
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 包括多个 .targets 文件，文件内容包含常见方案的项、属性、目标和任务  。 这些文件将自动导入到大多数 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 项目文件中，以便简化维护，增强可读性。

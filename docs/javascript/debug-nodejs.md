@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 386a489faf859038cd0f529da74a0fbac07b7250
-ms.sourcegitcommit: f9f389e72787de30eb869a55ef7725a10a4011f0
+ms.openlocfilehash: 0405488f6f456f22711498e81789881ffc5a0a8a
+ms.sourcegitcommit: 308a2bdbea81df78bffc3a01afce4ab13131fabc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73636544"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73912996"
 ---
 # <a name="debug-a-javascript-or-typescript-app-in-visual-studio"></a>在 Visual Studio 中调试 JavaScript 或 TypeScript 应用
 
@@ -105,13 +105,13 @@ Visual Studio 仅为 Chrome 和 Internet 资源管理器提供客户端调试支
 
 若要从 Visual Studio 附加调试器并在客户端代码中命中断点，调试器需协助标识正确的进程。 以下是实现此目的的一种方法。
 
-1. 切换到 Visual Studio，然后在源代码中设置断点，该断点可能是 JavaScript 文件、TypeScript 文件、  .vue 文件或 JSX 文件。 （在允许断点的代码行中设置断点，例如 return 语句或 var 声明。）
+1. 切换到 Visual Studio，然后在源代码中设置断点，该断点可能是 JavaScript 文件、TypeScript 文件或 JSX 文件。 （在允许断点的代码行中设置断点，例如 return 语句或 var 声明。）
 
     ![设置断点](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
 
     若要在转译的文件中查找特定代码，请使用 Ctrl+F（“编辑” > “查找和替换” > “快速查找”）。     
 
-    对于客户端代码，若要在 TypeScript 文件中命中断点，.vue 或 JSX 文件通常需要使用[源映射](#generate_source_maps)  。 必须正确配置源映射，才支持在 Visual Studio 中进行调试。
+    对于客户端代码，为了在 TypeScript 文件或 JSX 文件中命中断点，通常需要使用[源映射](#generate_source_maps)。 必须正确配置源映射，才支持在 Visual Studio 中进行调试。
 
 2. 选择目标浏览器作为 Visual Studio 中调试目标，然后按 Ctrl+F5（“调试” > “启动时不调试”）在浏览器中运行应用     。
 
@@ -157,21 +157,21 @@ Visual Studio 仅为 Chrome 和 Internet 资源管理器提供客户端调试支
 
     在调试器中暂停时，可以通过在变量上悬停光标并使用调试器窗口，检查应用状态。 逐句通过代码（F5、F10 和 F11），推进调试器进度    。 有关基本调试功能的详细信息，请参阅[初探调试器](../debugger/debugger-feature-tour.md)。
 
-    你可能会在转译的 .js 文件或源文件中命中断点，具体取决于之前执行的步骤以及环境和浏览器状态  。 无论在哪里命中，均可单步执行代码并检查变量。
+    你可能会在转译的 .js 文件或源文件中命中断点，具体取决于你之前按其步骤操作的应用类型以及浏览器状态等其他因素  。 无论在哪里命中，均可单步执行代码并检查变量。
 
-   * 如果需要中断 TypeScript、JSX 或 .vue 源文件中的代码，但又无法执行此操作，请确保已正确设置环境，如[故障排除](#troubleshooting_source_maps)部分中所述  。
+   * 如果需要中断 TypeScript、JSX 或 .vue 源文件中的代码，但又无法执行此操作，请确保已正确设置环境，如[疑难解答故障排除](#troubleshooting_source_maps)部分所述  。
 
    * 如果需要中断转译的 JavaScript 文件中的代码（例如，“app-bundle.js”），但又无法执行此操作，请删除源映射文件“filename.js.map”   。
 
 ### <a name="troubleshooting_source_maps"></a> 断点和源映射故障排除
 
-如果需要中断 TypeScript、JSX 或 .vue 文件中的代码，但又无法执行此操作，请按照之前所述的步骤，使用“附加到进程”来附加调试器   。 请确保已正确设置环境：
+如果需要中断 TypeScript 或 JSX 源文件中的代码，但又无法执行此操作，请按照之前步骤中所述使用“附加到进程”来附加调试器  。 请确保已正确设置环境：
 
 * 关闭了所有浏览器实例，包括 Chrome 扩展（使用任务管理器），以便你可以在调试模式下运行浏览器。
       
 * 请确保[在调试模式下启动浏览器](#prepare_the_browser_for_debugging)。
 
-* 请确保源映射文件包括对源文件的正确引用，并且确保该文件不包括不受支持的前缀（例如 webpack:///），这些前缀会阻止 Visual Studio 调试器查找源文件  。 例如，webpack:///.app.tsx 之类的引用可能会更正为 ./app.tsx   。 可以在源映射文件中或通过自定义生成配置手动执行此操作。 有关详细信息，请参阅[生成用于调试的源映射](#generate_source_maps)。
+* 请确保源映射文件包括指向源文件的正确相对路径，并确保该文件中没有不受支持的前缀（例如 webpack:///），这会阻止 Visual Studio 调试器查找源文件  。 例如，webpack:///.app.tsx 之类的引用可能会更正为 ./app.tsx   。 可在源映射文件（对测试很有用）中或通过自定义生成配置手动执行此操作。 有关详细信息，请参阅[生成用于调试的源映射](#generate_source_maps)。
 
 或者，如果需要中断源文件中的代码（例如 app.tsx  ），但又无法执行此操作，可尝试使用源文件中的 `debugger;` 语句或改为在 Chrome 开发人员工具中设置断点（或 Microsoft Edge 的 F12 工具）。
 
