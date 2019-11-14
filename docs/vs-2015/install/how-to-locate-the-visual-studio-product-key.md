@@ -12,12 +12,12 @@ caps.latest.revision: 24
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 0210f66bcfeaad8143ac4eee78b7b086c36eb164
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 11e739fc1b0516c2b6e34421ecee7a329830de14
+ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67823207"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983796"
 ---
 # <a name="how-to-locate-the-visual-studio-product-key"></a>How to: Locate the Visual Studio Product Key
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,4 +35,6 @@ ms.locfileid: "67823207"
   - 向你出售软件的供应商提供的文档或其他通信。
 
 ## <a name="see-also"></a>另请参阅
- [如何：从 Visual Studio 的试用版升级](../install/how-to-upgrade-from-a-trial-edition-of-visual-studio.md) [安装 Visual Studio](../install/install-visual-studio-2015.md) [Visual Studio 和 MSDN 许可白皮书](http://go.microsoft.com/fwlink/?LinkId=191417)
+ * [如何：从 Visual Studio 的试用版升级](../install/how-to-upgrade-from-a-trial-edition-of-visual-studio.md)
+ * [安装 Visual Studio](../install/install-visual-studio-2015.md)
+ * [Visual Studio 授权白皮书](https://www.microsoft.com/download/details.aspx?id=13350)
