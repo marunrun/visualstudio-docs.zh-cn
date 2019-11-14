@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: fbdacb265d39c9aff96fed37c69c684aa3f8503b
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: f1b928d04ae581b0df04ab74f3a756d359abc06f
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189463"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713952"
 ---
 # <a name="troubleshoot-network-related-errors-when-you-install-or-use-visual-studio"></a>安装或使用 Visual Studio 时与网络相关错误的疑难解答
 
@@ -137,7 +137,7 @@ Visual Studio 使用传输层安全性 (TLS) 1.2 协议连接到网络资源。 
 
 在网络驱动器上使用 Visual Studio 引导程序和 response.json 文件时，可能会遇到此错误消息。 错误的来源是 Windows 中的用户帐户控制 (UAC)。
 
-下面是可能出现此错误的原因：映射的网络驱动器或 [UNC](/dotnet/standard/io/file-patch-formats#unc-paths) 共享已链接到用户的访问令牌。 启用 UAC 后，将创建两个用户[访问令牌](/windows/win32/secauthz/access-tokens)：一个具有管理员访问权限，另一个不具有管理员访问权限   。 创建网络驱动器或共享后，用户的当前访问令牌会链接到该网络驱动器或共享。 因为必须以管理员身份运行引导程序，所以如果驱动器或共享未链接到具有管理员访问权限的用户访问令牌，则无法访问网络驱动器或共享。
+下面是可能出现此错误的原因：映射的网络驱动器或 [UNC](/dotnet/standard/io/file-path-formats#unc-paths) 共享已链接到用户的访问令牌。 启用 UAC 后，将创建两个用户[访问令牌](/windows/win32/secauthz/access-tokens)：一个具有管理员访问权限，另一个不具有管理员访问权限   。 创建网络驱动器或共享后，用户的当前访问令牌会链接到它们。 因为必须以管理员身份运行引导程序，所以如果驱动器或共享未链接到具有管理员访问权限的用户访问令牌，则无法访问网络驱动器或共享。
 
 ### <a name="to-fix-this-error"></a>修复此错误的方法
 
