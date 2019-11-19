@@ -1,210 +1,75 @@
 ### YamlMime:Hub
-title: Visual Studio 文档
-summary: 了解如何使用 Visual Studio 并以选定语言来开发适用于你的平台和设备的应用程序、服务和工具。
+title: Visual Studio 产品系列文档
+summary: 浏览 Visual Studio 产品系列的文档。
 brand: visual-studio
 metadata:
-  title: Visual Studio 文档| Microsoft Docs
-  titleSuffix: ''
-  description: 了解如何使用 Visual Studio 并以喜欢的语言来开发适用于任何平台或设备的应用程序、服务和工具。
+  title: Visual Studio 产品系列文档
+  description: 浏览 Visual Studio 产品系列的文档。
   ms.topic: hub-page
+  ms.date: 11/13/2019
+  searchScope: []
+  titleSuffix: ''
+  ms.author: ghogen
+  author: ghogen
+  ms.manager: jillfra
   monikerRange: '>=vs-2017'
-  f1_keywords:
-  - MSDNSTART
-  ms.openlocfilehash: 16566f855e2e7504616da3d4196440facf145e6b
-  ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
+  hide_bc: true
+  ms.openlocfilehash: b36b1835f38a4ce6fe46d72935dc8cfc144561c3
+  ms.sourcegitcommit: 890ae10c8ea3bff8306ed25b06256578dee08397
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 10/16/2019
-  ms.locfileid: "72380957"
-highlightedContent:
+  ms.lasthandoff: 11/15/2019
+  ms.locfileid: "74118921"
+productDirectory:
   items:
-  - title: 设置和安装
-    itemType: download
-    url: /visualstudio/install/install-visual-studio
-  - title: 欢迎使用 Visual Studio IDE
-    itemType: overview
-    url: /visualstudio/ide/visual-studio-ide
-  - title: Visual Studio 2019 中的新增功能
-    itemType: get-started
-    url: /visualstudio/ide/whats-new-visual-studio-2019
-  - title: 提高开发技能
-    itemType: learn
-    url: /learn/
-conceptualContent:
-  title: 入门
-  items:
-  - title: 了解如何使用 Visual Studio
+  - title: Visual Studio
+    imageSrc: ./media/vs-ide-2019.svg
     links:
-    - text: 启动引导式教程
-      url: ide/visual-studio-ide.md
-      itemType: overview
-    - text: 从存储库打开代码
-      url: get-started/tutorial-open-project-from-repo.md
-      itemType: tutorial
-    - text: 编写和编辑代码
-      url: ide/index-writing-code.yml
-      itemType: tutorial
-    - text: 生成代码
-      url: ide/compiling-and-building-in-visual-studio.md
-      itemType: tutorial
-    - text: 调试代码
-      itemType: tutorial
-      url: debugger/debugger-feature-tour.md
-    - text: 测试代码
-      itemType: tutorial
-      url: test/getting-started-with-unit-testing.md
-    - text: 在本地或云中访问数据
-      itemType: tutorial
-      url: data-tools/create-a-sql-database-by-using-a-designer.md
-  - title: 学习教程
+    - url: /visualstudio/windows?view=vs-2019
+      text: Visual Studio 2019（当前版本）
+    - url: /visualstudio/windows?view=vs-2017
+      text: Visual Studio 2017
+    - url: https://docs.microsoft.com/previous-versions/visualstudio/
+      text: 以前的版本
+    - url: https://docs.microsoft.com/visualstudio/releases/2019/release-notes
+      text: 发行说明
+    - url: https://visualstudio.microsoft.com/
+      text: 产品页
+  - title: Visual Studio for Mac
+    imageSrc: ./media/vs-mac-2019.svg
     links:
-    - text: C#
-      url: /visualstudio/get-started/csharp
-      itemType: get-started
-    - text: F#
-      url: /visualstudio/ide/quickstart-fsharp
-      itemType: get-started
-    - text: Visual Basic
-      url: /visualstudio/get-started/visual-basic/
-      itemType: get-started
-    - text: C++
-      url: /cpp/get-started/tutorial-console-cpp
-      itemType: get-started
-    - text: Python
-      url: /visualstudio/python
-      itemType: get-started
-    - text: JavaScript
-      url: /visualstudio/javascript
-      itemType: get-started
-  - title: 创建应用
+    - url: https://docs.microsoft.com/visualstudio/mac
+      text: Visual Studio 2019 for Mac（当前版本）
+    - url: https://docs.microsoft.com/visualstudio/mac/?view=vsmac-2017
+      text: Visual Studio 2017 for Mac
+    - url: https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-relnotes
+      text: 发行说明
+    - url: https://visualstudio.microsoft.com/vs/mac/
+      text: 产品页
+  - title: Visual Studio Code
+    imageSrc: ./media/vs-code-logo.svg
     links:
-    - text: Windows 桌面应用
-      itemType: tutorial
-      url: /visualstudio/ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic
-    - text: 通用 Windows 应用
-      itemType: tutorial
-      url: /visualstudio/get-started/csharp/tutorial-uwp
-    - text: 移动应用
-      itemType: overview
-      url: /visualstudio/cross-platform/cross-platform-mobile-development-in-visual-studio
-    - text: Unity 游戏
-      itemType: tutorial
-      url: /visualstudio/cross-platform/getting-started-with-visual-studio-tools-for-unity
-    - text: 使用 ASP.NET Core 生成的 Web 应用
-      itemType: quickstart
-      url: /aspnet/core/tutorials/razor-pages/razor-pages-start
-tools:
-  title: 语言
-  items:
-  - title: C++
-    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
-    url: /cpp/
-  - title: C#
-    imageSrc: https://docs.microsoft.com/media/logos/logo_Csharp.svg
-    url: /dotnet/csharp
-  - title: F#
-    imageSrc: https://docs.microsoft.com/media/logos/logo_Fsharp.svg
-    url: /dotnet/fsharp
-  - title: Visual Basic
-    imageSrc: https://docs.microsoft.com/media/logos/logo_VB.svg
-    url: /dotnet/visual-basic
-  - title: Python
-    imageSrc: https://docs.microsoft.com/media/logos/logo_python.svg
-    url: /visualstudio/python
-  - title: JavaScript
-    imageSrc: https://docs.microsoft.com/media/logos/logo_js.svg
-    url: /visualstudio/javascript
-  - title: TypeScript
-    imageSrc: https://docs.microsoft.com/media/logos/logo_TS.svg
-    url: http://www.typescriptlang.org/docs/tutorial.html
-  - title: R
-    imageSrc: https://docs.microsoft.com/media/logos/logo_R.svg
-    url: /visualstudio/rtvs/?view=vs-2017
-additionalContent:
-  sections:
-  - title: 任务
-    items:
-    - title: 开发
-      summary: 使用代码编辑器编写和管理代码。
-      url: ide/index-writing-code.yml
-    - title: 生成
-      summary: 编译和生成源代码。
-      url: ide/compiling-and-building-in-visual-studio.md
-    - title: 调试
-      summary: 调查并修复代码中的 bug。
-      url: debugger/index.yml
-    - title: 测试
-      summary: 对项目运行测试。
-      url: test/improve-code-quality.md
-    - title: 部署
-      summary: 使用 Web 部署、InstallShield、NuGet 和持续集成等共享应用和代码。
-      url: deployment/index.yml
-    - title: 版本控制
-      summary: 使用 Git、TFVC 等版本控制技术共享代码。
-      url: /azure/devops/repos/index
-    - title: DevOps
-      summary: 在云中持续生成和发布应用，并通过 Azure DevOps Services 实现敏捷做法。
-      url: /azure/devops
-    - title: 测量性能
-      summary: 通过使用诊断工具来标识瓶颈，并优化代码性能。
-      url: profiling/index.yml
-    - title: 扩展
-      summary: 将自己的功能添加到 Visual Studio IDE，从而改进开发体验。
-      url: extensibility/index.md
-    - title: 数据
-      summary: 创建连接到任意数据库或服务及任意位置（本地或云）的数据应用。
-      url: data-tools/accessing-data-in-visual-studio.md
-    - title: 协作
-      summary: 在协作实时环境中共享、编辑和调试代码。
-      url: /visualstudio/liveshare/
-    - title: 使用容器进行开发
-      summary: 使用容器来隔离模块化组件并提高可伸缩性。
-      url: containers/index.yml
-  - title: 工作负载
-    items:
-    - title: Web 和云
-      links:
-      - text: Web 开发
-        url: /aspnet/
-      - text: Azure 开发和管理
-        url: /visualstudio/azure
-      - text: Python
-        url: /visualstudio/python
-      - text: Node.js
-        url: /visualstudio/javascript
-      - text: 数据存储和处理
-        url: data-tools/index.md
-      - text: 数据科学
-        url: python/data-science-and-analytical-applications-workload.md
-      - text: Office/Sharepoint 开发
-        url: https://developer.microsoft.com/office/docs
-    - title: Windows
-      links:
-      - text: .NET 桌面开发
-        url: /dotnet/framework/develop-client-apps
-      - text: 通用 Windows 平台开发
-        url: cross-platform/develop-apps-for-the-universal-windows-platform-uwp.md
-      - text: 使用 C++ 的 Windows 开发
-        url: /cpp/windows/desktop-applications-visual-cpp
-    - title: 移动应用和游戏
-      links:
-      - text: 使用 .NET (Xamarin) 的移动开发
-        url: /xamarin/
-      - text: 使用 Unity 的游戏开发
-        url: cross-platform/visual-studio-tools-for-unity.md
-      - text: 使用 JavaScript 的移动开发
-        url: /visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017
-        note: （仅限 Visual Studio 2017 和 Visual Studio 2015）
-      - text: 使用 C++ 的移动开发
-        url: /visualstudio/cross-platform/
-      - text: 使用 C++ 的游戏开发
-        url: /windows/uwp/gaming/e2e
-    - title: 其他工具集
-      links:
-      - text: Visual Studio 扩展开发
-        url: extensibility/index.md
-      - text: 使用 C++ 的 Linux 开发
-        url: /cpp/linux/
-      - text: .NET Core 跨平台开发
-        url: /dotnet/core/
-  footer: '[博客](https://devblogs.microsoft.com/visualstudio/) - [Twitter](https://twitter.com/VisualStudio) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio) - [问题报告](ide/talk-to-us.md) -  [开发人员社区](https://developercommunity.visualstudio.com/spaces/8/index.html)'
+    - url: https://code.visualstudio.com/docs
+      text: 文档
+    - url: https://code.visualstudio.com/updates
+      text: 发行说明
+    - url: https://code.visualstudio.com
+      text: 产品页
+  - title: Visual Studio App Center
+    imageSrc: ./media/vs-mobile-center.svg
+    links:
+    - url: https://docs.microsoft.com/appcenter
+      text: 文档
+    - url: https://visualstudio.microsoft.com/app-center/
+      text: 门户
+  - title: Visual Studio 订阅
+    imageSrc: ./media/vs-subscription-temp.svg
+    links:
+    - url: https://docs.microsoft.com/visualstudio/subscriptions
+      text: 文档
+    - url: https://visualstudio.microsoft.com/subscriptions
+      text: visualstudio.com 上的信息
+    - url: https://my.visualstudio.com
+      text: 门户
+    - url: https://manage.visualstudio.com
+      text: 管理
