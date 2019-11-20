@@ -35,7 +35,6 @@
 ##### [Office 365 订阅](vs-office365.md)
 ##### [Parasoft](vs-parasoft.md)
 ##### [Power BI Pro](vs-pbi.md)
-##### [RStudio](vs-rstudio.md)
 ##### [Visual Studio App Center](vs-visual-studio-app-center.md)
 ##### [Visual Studio IDE](vs-ide-benefit.md)
 ##### [WhiteSource Bolt](vs-whitesource.md)
@@ -44,7 +43,6 @@
 ##### [MSDN 杂志](vs-code-magazine.md)
 ##### [DataCamp](vs-datacamp.md)
 ##### [LinkedIn 学习](vs-linkedin-learning.md)
-##### [MSDN Magazine 订阅](vs-msdn.md)
 ##### [Pluralsight](vs-pluralsight.md)
 #### 支持 
 ##### [Azure 社区](vs-azure-community.md)
