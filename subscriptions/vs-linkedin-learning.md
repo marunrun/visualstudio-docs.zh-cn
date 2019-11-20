@@ -6,12 +6,12 @@ manager: lank
 ms.date: 08/02/2019
 ms.topic: conceptual
 description: 了解有关所选 Visual Studio 订阅中包含的作为 LinkedIn Premium 订阅一部分的 LinkedIn Learning 权益。
-ms.openlocfilehash: 9715c2fb5dd8219e05a6728c7d242aef24e86081
-ms.sourcegitcommit: a124076dfd6b4e5aecda4d01984fee7b0c034745
+ms.openlocfilehash: b91db8c5b8ec27e947e2c73ac59ab3b07502f9d2
+ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787762"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74099648"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 LinkedIn Learning 权益
 
@@ -71,7 +71,9 @@ ms.locfileid: "68787762"
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准）   | VL、Azure、零售、所选 NFR<sup>1</sup> | 6 个月       |  不是。  仅对新订阅者可用          |
+| 带有 GitHub Enterprise 的 Visual Studio Enterprise   | VL | 6 个月       |  不是。  仅对新订阅者可用          |
 | Visual Studio Professional（标准） | VL、Azure、零售                                       | 3 个月                                                            |不是。  仅对新订阅者可用         |
+| 带有 GitHub Enterprise 的 Visual Studio Professional | VL | 3 个月      | 不是。  仅对新订阅者可用         |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 3 个月                                             |  不是。  仅对新订阅者可用         |
 | MSDN 平台（标准）                                          | VL、零售                                              | 3 个月                                              | 不是。  仅对新订阅者可用         |
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure                                       | 不可用                                                           |NA|
@@ -93,3 +95,8 @@ ms.locfileid: "68787762"
   - 帮助解答有关 [LinkedIn](https://www.linkedin.com/help/linkedin) 的常规问题，例如创建帐户和个人资料，以及维护网络。
 - 有关 Visual Studio 订阅的销售、订阅、帐户和账单的帮助，请与 Visual Studio [订阅支持](https://visualstudio.microsoft.com/subscriptions/support/)联系。
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
+
+## <a name="next-steps"></a>后续步骤
+查看订阅中包含的其他权益。 请访问 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)。
+
+如果尚未激活订阅附带的 Azure 开发测试个人额度权限，请访问 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)，再并单击“工具”类别中的 Azure 磁贴，以设置 Azure 订阅并兑换 Azure 开发测试个人额度。

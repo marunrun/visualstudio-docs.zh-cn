@@ -3,15 +3,15 @@ title: 技术支持权益
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/29/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 description: 了解如何激活 Visual Studio 订阅中包含的技术支持权益。
-ms.openlocfilehash: 6d76fa3bdff63a31598fb9a977f6ed024d214af1
-ms.sourcegitcommit: ab18c9d850192fc9ccec10961f1126e8b0cba8da
+ms.openlocfilehash: f88cf221f47f2b8aa89a733a4794e424ac938261
+ms.sourcegitcommit: 5c9ca18eadc7ed0ed095cc5a3e1df40bbc13e70c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73061148"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74161968"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>激活并使用 Visual Studio 订阅中的技术支持权益
 Visual Studio 订阅中的技术支持权益用于解决仍处于[支持生命周期](https://support.microsoft.com/lifecycle/search)的主流支持阶段产品的“非生产环境”中的中断修复问题  。 Visual Studio Enterprise 标准版和年度云订阅接收四个事件，但 Visual Studio Professional 标准版和年度云订阅接收两个事件，从权益激活开始最多一年。 权益激活必须在订阅为最新状态时进行。
@@ -112,7 +112,9 @@ Visual Studio 订阅中的技术支持权益用于解决仍处于[支持生命�
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准）   | VL、Azure、零售、所选 NFR<sup>1</sup> | 4 个事件       |  是|
+| 带有 GitHub Enterprise 的 Visual Studio Enterprise | VL | 4 个事件       |  是|
 | Visual Studio Professional（标准） | VL、Azure、零售、所选 NFR<sup>2</sup>                                        | 2 个事件                                                          |是         |
+| 带有 GitHub Enterprise 的 Visual Studio Professional | VL                                     | 2 个事件                                                          |是         |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 2 个事件                                             |  是         |
 | MSDN 平台（标准）                                          | VL、零售                                              | 2 个事件                                               | 是         |
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure                                       | 不可用                                                           |NA|
@@ -123,3 +125,9 @@ Visual Studio 订阅中的技术支持权益用于解决仍处于[支持生命�
 <sup>2</sup>  包括：  Imagine 标准版。
 
 无法确定正在使用哪些订阅？  连接到 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)，查看分配给电子邮件地址的所有订阅。 如果没有看到所有订阅，则可能是有一个或多个订阅分配给了不同的电子邮件地址。  你需要使用其他电子邮件地址登录来查看那些订阅。
+
+## <a name="next-steps"></a>后续步骤
+请务必激活这些重要权益以充分利用 Visual Studio 订阅：
+- [Visual Studio](vs-ide-benefit.md)
+- [Azure DevOps](vs-azure-devops.md)
+- [Azure 开发测试个人额度](vs-azure.md)

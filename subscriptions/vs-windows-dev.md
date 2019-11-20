@@ -3,15 +3,15 @@ title: Visual Studio 订阅中的 Windows 开发者帐户权益 | Microsoft 文�
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/31/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 description: 了解有关 Visual Studio 订阅中包含的 Windows 开发者帐户。
-ms.openlocfilehash: e7dc24fef7328dee38f9aca92f3676573b0143ef
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: 662dc6d911903a4c0d2c0a77382647639bb25d07
+ms.sourcegitcommit: 5c9ca18eadc7ed0ed095cc5a3e1df40bbc13e70c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816428"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74174118"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Windows 开发者帐户
 通过所选 Visual Studio 订阅包含的 Windows 开发者帐户，可以将免费和付费的 Windows 应用提交到 Windows 应用商店。
@@ -43,7 +43,9 @@ ms.locfileid: "72816428"
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准）   | VL、Azure、零售、所选 NFR<sup>1</sup> | Included       |  是|
+| 带有 GitHub Enterprise 的 Visual Studio Enterprise   | VL  | Included       |  是|
 | Visual Studio Professional（标准） | VL、Azure、零售                                       | Included                                                            |是|
+| 带有 GitHub Enterprise 的 Visual Studio Professional | VL                                        | Included                                                            |是|
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 不可用                                            |  NA|
 | MSDN 平台（标准）                                          | VL、零售                                              |  不可用                                            |  NA|
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure                                       | 不可用                                                           |NA|
@@ -63,4 +65,7 @@ ms.locfileid: "72816428"
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
 
 ## <a name="next-steps"></a>后续步骤
-Azure 是你的个人专享开发/测试用沙盒。  你可以预配虚拟机、云服务和其他 Azure 资源。 请务必激活你的 [Azure 权益](vs-azure.md)，然后才能开始使用 Azure 开发测试个人额度。
+请务必激活这些重要权益以充分利用 Visual Studio 订阅：
+- [Visual Studio](vs-ide-benefit.md)
+- [Azure DevOps](vs-azure-devops.md)
+- [Azure 开发测试个人额度](vs-azure.md)

@@ -9,16 +9,16 @@ ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 3967b637d547ed99ed840761b3b843068afee1af
-ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
+ms.openlocfilehash: 6f84051e4450926136064b9af7f3c09e2e91a2f9
+ms.sourcegitcommit: 8530d15aa72fe058ee3a3b4714c36b8638f8b494
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72777490"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188573"
 ---
 # <a name="create-an-ai-project-from-the-azure-machine-learning-gallery-in-visual-studio"></a>在 Visual Studio 中通过 Azure 机器学习库创建 AI 项目
 
-Azure 机器学习与 Visual Studio Tools for AI 集成在一起。 可以使用它将机器学习作业提交到远程计算目标，如 Azure 虚拟机、Spark 群集等。 详细了解 [Azure 机器学习试验](https://docs.microsoft.com/azure/machine-learning/preview/experimentation-service-configuration)
+Azure 机器学习与 Visual Studio Tools for AI 集成在一起。 可以使用它将机器学习作业提交到远程计算目标，如 Azure 虚拟机、Spark 群集等。 
 
 [安装 Visual Studio Tools for AI](installation.md) 之后，可以使用 Azure 机器学习示例库中的预制方案轻松地创建新 Python 项目。
 

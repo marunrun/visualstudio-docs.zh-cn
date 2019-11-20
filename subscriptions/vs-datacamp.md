@@ -3,15 +3,15 @@ title: 使用选定的 Visual Studio 订阅中的 DataCamp 权益，立即增强
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/30/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 description: 了解有关所选 Visual Studio 订阅中随附的 DataCamp 培训订阅。
-ms.openlocfilehash: 64176f5a58641bf51434c99eee914a8ac176da56
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: ea889814373fa7c970e905bb4a845d5ca67c92e7
+ms.sourcegitcommit: 6f25855de9db455e6d38bc105057d2ed1e7454b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68681642"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74199883"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 DataCamp 培训权益
 符合条件的 Visual Studio 订阅包括 DataCamp 订阅。  借助 DataCamp，可以通过浏览器舒适地学习需要的所有数据科学技能。 可以选择学习的时间和内容。 无需安装任何软件并且没有任何特殊硬件要求，学习数据科学比以往更加简单。
@@ -59,7 +59,9 @@ ms.locfileid: "68681642"
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准）   | VL、Azure、零售、 | 3 个月       |  不是。  仅对新订阅者可用          |
+| 带有 GitHub Enterprise 的 Visual Studio Enterprise   | VL | 3 个月       |  不是。  仅对新订阅者可用          |
 | Visual Studio Professional（标准） | VL、Azure、零售                                       | 3 个月                                                            |  不是。  仅对新订阅者可用           |
+| 带有 GitHub Enterprise 的 Visual Studio Professional| VL | 3 个月                                                            |  不是。  仅对新订阅者可用           |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 3 个月                                             |  不是。  仅对新订阅者可用           |
 | MSDN 平台（标准）                                          | VL、零售                                              | 3 个月                                              |  不是。  仅对新订阅者可用           |
 | Visual Studio Enterprise（标准）  | NFR<sup>1</sup> |不可用  | 不可用 |
@@ -84,4 +86,6 @@ ms.locfileid: "68681642"
 请查看订阅中的更多专业开发机会：
 - [Pluralsight](vs-pluralsight.md)
 - [LinkedIn 学习](vs-linkedin-learning.md)
-- [MSDN 杂志](vs-msdn.md)
+
+
+如果尚未激活订阅附带的 Azure 开发测试个人额度权限，请访问 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)，再并单击“工具”类别中的 Azure 磁贴，以设置 Azure 订阅并兑换 Azure 开发测试个人额度。
