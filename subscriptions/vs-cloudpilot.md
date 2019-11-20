@@ -3,15 +3,15 @@ title: Visual Studio 订阅中的 CloudPilot 权益 | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/30/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 description: 了解有关所选 Visual Studio 订阅中包含的可用 CloudPilot 权益
-ms.openlocfilehash: 5f8592b15f61dff454b6fe29d4d207dd609ab461
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: 253a1b1c3b6996a200a236661d621c43975cb1ed
+ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816504"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74099618"
 ---
 # <a name="the-cloudpilot-benefit-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 CloudPilot 权益
 将应用移至 Microsoft Azure 只需几个简单的步骤。 在几分钟内即可标识所有必需的代码更改（细至代码行），以便成功迁移到：容器、VM、应用服务、SQL Azure 和/或 SQL MI。 然后，通过使用 ASR、DMA 和 DMS 的向导将应用迁移到 Azure。
@@ -59,7 +59,9 @@ ms.locfileid: "72816504"
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准）   | VL、Azure、零售、 | 2 个许可证、90 天、无限制扫描       |  不是。  仅对新订阅者可用          |
+| 带有 GitHub Enterprise 的 Visual Studio Enterprise   | VL | 2 个许可证、90 天、无限制扫描       |  不是。  仅对新订阅者可用          |
 | Visual Studio Professional（标准） | VL、Azure、零售                                       | 1 个许可证、30 天、一次扫描                                                            |  不是。  仅对新订阅者可用           |
+| 带有 GitHub Enterprise 的 Visual Studio Professional | VL | 1 个许可证、30 天、一次扫描                                                            |  不是。  仅对新订阅者可用           |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 不可用                                             |  不可用           |
 | MSDN 平台（标准）                                          | VL、零售                                              | 不可用                                              |  不可用          |
 | Visual Studio Enterprise（标准）  | NFR<sup>1</sup> |不可用  | 不可用 |
@@ -83,4 +85,4 @@ ms.locfileid: "72816504"
 
 ## <a name="next-steps"></a>后续步骤
 
-如果尚未激活订阅附带的 Azure 权益，请访问 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) 并单击“工具”类别中的 Azure 磁贴以设置 Azure 订阅并兑换 Azure 开发测试个人额度。
+如果尚未激活订阅附带的 Azure 开发测试个人额度权限，请访问 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)，再并单击“工具”类别中的 Azure 磁贴，以设置 Azure 订阅并兑换 Azure 开发测试个人额度。

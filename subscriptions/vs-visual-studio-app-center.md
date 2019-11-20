@@ -3,15 +3,15 @@ title: Visual Studio 订阅中的 Visual Studio App Center 权益 | Microsoft �
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/31/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 description: 了解有关 Visual Studio 订阅中包含的 Visual Studio App Center 权益。
-ms.openlocfilehash: 1feb4660e52335f838c1e7c80428575aaf7a04cc
-ms.sourcegitcommit: a124076dfd6b4e5aecda4d01984fee7b0c034745
+ms.openlocfilehash: 243d277a5f6e143f472398538d025c18180d088d
+ms.sourcegitcommit: 5c9ca18eadc7ed0ed095cc5a3e1df40bbc13e70c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787833"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74161917"
 ---
 # <a name="visual-studio-app-center-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Visual Studio App Center
 
@@ -42,7 +42,9 @@ Visual Studio App Center 入门十分简单。
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准、月度云）   | VL、Azure、零售、NFR<sup>1</sup> | Included       |  是          |
+| 带有 GitHub Enterprise 的 Visual Studio Enterprise  | VL | Included       |  是          |
 | Visual Studio Professional（标准、月度云） | VL、Azure、零售                                       | Included                                                            |是 |
+| 带有 GitHub Enterprise 的 Visual Studio Professional | VL                                      | Included                                                            |是 |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | Included                                                            |是 |
 | MSDN 平台（标准）                                          | VL、零售                                              | Included                                                            |是 |
 ||
@@ -72,4 +74,7 @@ Visual Studio App Center 入门十分简单。
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
 
 ## <a name="next-steps"></a>后续步骤
-Azure 是你的个人专享开发/测试用沙盒。  你可以预配虚拟机、云服务和其他 Azure 资源。 如果尚未激活你的 [Azure 权益](vs-azure.md)，请进行激活。 
+请务必激活这些重要权益以充分利用 Visual Studio 订阅：
+- [Visual Studio](vs-ide-benefit.md)
+- [Azure DevOps](vs-azure-devops.md)
+- [Azure 开发测试个人额度](vs-azure.md)

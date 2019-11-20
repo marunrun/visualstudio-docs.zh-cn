@@ -3,15 +3,15 @@ title: Visual Studio 订阅中的接待聊天室权益 | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/29/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 description: 了解有关 Visual Studio 订阅中包含的接待聊天室权益。
-ms.openlocfilehash: 543fee937437141aa38d53707cb6e5bf84031e94
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: 83fdb9a21528e00db1ef8652846c6b852c5c6067
+ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68681185"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74099577"
 ---
 # <a name="concierge-chat-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的接待聊天室
 接待聊天室服务可帮助你查找产品信息和技术文档，以及帮你使用 Visual Studio 订阅权益。
@@ -38,7 +38,9 @@ ms.locfileid: "68681185"
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准）   | VL、Azure、零售、所选 NFR<sup>1</sup> | 可用       |  是          |
+| 带有 GitHub Enterprise 的 Visual Studio Enterprise | VL| 可用       |  是          |
 | Visual Studio Professional（标准） | VL、Azure、零售                                       | 可用                                                            |  是          |
+| 带有 GitHub Enterprise 的 Visual Studio Professional | VL | 可用                                                            |  是          |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 可用                                             |  是          |
 | MSDN 平台（标准）                                          | VL、零售                                              | 可用                                              |  是          |
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure | 不可用 | 不可用 |
@@ -63,3 +65,5 @@ ms.locfileid: "68681185"
 - [Azure](/azure/)
 - [Azure DevOps](/azure/devops/)
 - [Visual Studio IDE](/visualstudio/)
+
+如果尚未激活订阅附带的 Azure 开发测试个人额度权限，请访问 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)，再并单击“工具”类别中的 Azure 磁贴，以设置 Azure 订阅并兑换 Azure 开发测试个人额度。
