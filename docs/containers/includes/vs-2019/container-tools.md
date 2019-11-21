@@ -7,12 +7,12 @@ ms.date: 02/01/2019
 ms.prod: visual-studio-dev16
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 124f60a4a632115625524b4e30ab28f795d41660
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 7eae92f7c65208dfeda9cd19e14eaa627e12a22a
+ms.sourcegitcommit: bbff780cda82bb64862d77fe8f407f1803beb876
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "71126117"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74142182"
 ---
 使用 Visual Studio，可以轻松地生成、调试和运行容器化的 ASP.NET Core 应用程序并将其发布到 Azure 容器注册表 (ACR)、Docker Hub、Azure 应用服务或你自己的容器注册表。 在本文中，我们将发布到 ACR。
 
@@ -92,6 +92,18 @@ microsoft/dotnet  2.2-aspnetcore-runtime  fcc3887985bb  6 days ago      255MB
 CONTAINER ID        IMAGE                  COMMAND               CREATED             STATUS              PORTS                                           NAMES
 cf5d2ef5f19a        hellodockertools:dev   "tail -f /dev/null"   2 minutes ago       Up 2 minutes        0.0.0.0:52036->80/tcp, 0.0.0.0:44342->443/tcp   priceless_cartwright
 ```
+
+## <a name="containers-window"></a>容器窗口
+
+如果拥有 Visual Studio 2019 版本 16.4 或更高版本，则可使用“容器”窗口来查看正在计算机上运行的容器，还可查看你可用的映像  。
+
+在 IDE 中使用搜索框打开“容器”窗口（按 Ctrl+Q 可进行使用），键入 `container`然后从列表中选择“容器”窗口     。
+
+可将“容器”窗口四处移动并沿着窗口放置参考线操作，将此窗口装载到便利的位置，例如在编辑器下方  。
+
+在窗口中，找到你的容器并逐个浏览每个选项卡，以查看环境变量、端口映射、日志和文件系统。
+
+有关详细信息，请参阅[在 Visual Studio 中查看和诊断容器及映像](../../view-and-diagnose-containers.md)。
 
 ## <a name="publish-docker-images"></a>发布 Docker 映像
 

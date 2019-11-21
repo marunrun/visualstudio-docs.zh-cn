@@ -3,15 +3,15 @@ title: 在项目中包括 NuGet 包
 description: 本文档介绍如何使用 Visual Studio for Mac 在项目中包含 NuGet 包。 文档将介绍如何查找和下载包，同时介绍 IDE 集成功能。
 author: jmatthiesen
 ms.author: jomatthi
-ms.date: 09/18/2019
+ms.date: 11/01/2019
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
 ms.custom: conceptual
-ms.openlocfilehash: 55b4691a7adb03d4ee8fd5e05e7bd9d7daa28f13
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 4200f466c079247d3efa036f4f7cca2fd2d6b5d2
+ms.sourcegitcommit: bbff780cda82bb64862d77fe8f407f1803beb876
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71213684"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127250"
 ---
 # <a name="install-and-manage-nuget-packages-in-visual-studio-for-mac"></a>在 Visual Studio for Mac 中安装和管理 NuGet 包
 
@@ -27,7 +27,7 @@ ms.locfileid: "71213684"
 
     ![添加新的 NuGet 包上下文操作](media/nuget-walkthrough-packages-menu.png)
 
-2. 此时会启动“管理 NuGet 包”窗口  。 确保对话框左上角的“源”下拉框设置为 `nuget.org`。
+2. 此时会启动“管理 NuGet 包”窗口  。 确保对话框左上角的“源”下拉列表已设置为 `nuget.org`，以便可搜索中央 NuGet 包存储库。
 
     ![列出 NuGet 包](media/nuget-walkthrough-add-packages1.png)
 
@@ -71,6 +71,7 @@ using Newtonsoft.Json;
 
 现在也提供解决方案级别的“更新”和“还原”选项，这些选项可影响该解决方案中的所有项目。
 
+### <a name="locating-outdated-packages"></a>查找过时的包
 在 Solution Pad 中，可以查看当前已安装包的版本，可右键单击包进行更新。
 
 ![包含“更新”、“删除”和“刷新”选项的包菜单](media/nuget-walkthrough-PackageMenu.png)
@@ -83,6 +84,32 @@ using Newtonsoft.Json;
 
 * 更新  - 检查源服务器并下载更新版本（如果存在）。
 * 删除  - 从此项目中删除包，并从项目引用中删除相关的程序集。
+
+## <a name="manage-packages-for-the-solution"></a>管理解决方案的包
+
+管理解决方案的包是同时处理多个项目的便捷方式。
+
+1. 右键单击解决方案，并选择“管理 NuGet 包…”  ：
+
+    ![管理解决方案的 NuGet 包](media/nuget-walkthrough-manage-packages-solution.png)
+
+1. 管理解决方案的包时，UI 让你可以选择受操作影响的项目：
+
+    ![管理解决方案的包时的项目选择器](media/nuget-walkthrough-add-to-projects.png)
+
+### <a name="consolidate-tab"></a>“合并”选项卡
+
+在具有多个项目的解决方案中操作时，最佳做法是确保无论在每个项目的何处使用同一 NuGet 包，都要使用该包的同一版本号。 在选择管理某解决方案的包时，Visual Studio for Mac 会在包管理器 UI 中提供“合并”选项卡，为你简化这一操作  。 借助此选项卡，你可轻松查看解决方案中的不同项目在哪些位置使用具有不同版本号的包：
+
+![包管理器 UI“合并”选项卡](media/nuget-walkthrough-consolidate-tab.png)
+
+在本例中，NuGetDemo 项目使用的是 Microsoft.EntityFrameworkCore 2.20，而 NuGetDemo.Shared 使用的是 Microsoft.EntityFrameworkCore 2.2.6。 若要合并包版本，请执行以下操作：
+
+- 在项目列表中选择要更新的项目。
+- 在“新版本”列表中选择要在上述所有项目中使用的版本，例如 Microsoft.EntityFrameworkCore 3.0.0  。
+- 选择“合并包”按钮  。
+
+包管理器将选定的包版本安装到所有选定的项目中，之后包不再显示在“合并”选项卡上  。
 
 ## <a name="adding-package-sources"></a>添加包源
 

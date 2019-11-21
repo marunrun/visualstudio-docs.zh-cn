@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.topic: overview
 ms.date: 03/20/2019
 ms.technology: vs-azure
-ms.openlocfilehash: b60e5df4d94c290ca8aa7bf56471b5fed6c1879a
-ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
+ms.openlocfilehash: 312c827c3b748e10951b243070f43cce559e3a60
+ms.sourcegitcommit: bbff780cda82bb64862d77fe8f407f1803beb876
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73568897"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127188"
 ---
 # <a name="container-tools-in-visual-studio"></a>Visual Studio 中的容器工具
 
@@ -53,11 +53,13 @@ Docker 支持适用于 ASP.NET 项目、ASP.NET Core 项目，以及 .NET Core �
 
 Visual Studio 中的 Docker 支持因版本而异，以响应客户需求。 可以向项目添加两个级别的 Docker 支持，并且受支持的选项因项目类型和 Visual Studio 版本而异。 借助某些受支持的项目类型，如果只想将容器用于单个项目，而不使用业务流程，则可以通过添加 Docker 支持来完成。  下一级别是容器业务流程支持，该支持可为所选的特定业务流程协调程序添加相应的支持文件。  
 
-
 借助 Visual Studio 2019，可以将 Docker Compose、Kubernetes 和 Service Fabric 用作容器业务流程服务。
 
 > [!NOTE]
 > 如果使用的是完整的 .NET Framework 控制台项目模板，则在添加 Docker 支持时，会自动添加使用 Docker Compose 的业务流程支持。
+
+在 Visual Studio 2019 版本 16.4 及更高版本中，提供了“容器”窗口，你可用它来查看正在运行的容器，浏览可用的映像，查看环境变量、日志和端口映射，检查文件系统，附加调试器，或者在容器环境中打开终端窗口  。 请[ Visual Studio 中查看和诊断容器和映像](view-and-diagnose-containers.md)。
+
 ::: moniker-end
 
 ### <a name="adding-docker-support"></a>添加 Docker 支持
