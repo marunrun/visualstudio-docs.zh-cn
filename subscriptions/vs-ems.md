@@ -3,22 +3,25 @@ title: EMS 权益 |Microsoft 文档
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 08/05/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 description: 了解有关 Visual Studio 订阅中包含的企业移动性 + 安全性权益。
-ms.openlocfilehash: 93b613d06c6cd8ebcb3b28437677339084a9b720
-ms.sourcegitcommit: a124076dfd6b4e5aecda4d01984fee7b0c034745
+ms.openlocfilehash: a8ea7cba0c23129e9dd7669c474f54675a12e619
+ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787767"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74099544"
 ---
 # <a name="enterprise-mobility--security-ems-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的企业移动性 + 安全性 (EMS)
 
 Visual Studio Enterprise 年度云订阅和标准订阅包含企业移动性 + 安全性 (EMS)。  使用 EMS - Azure Active Directory、Microsoft Intune、Azure 信息保护、Microsoft Advanced Threat Analytics 和 Microsoft Cloud App Security 保护和管理标识、设备、应用程序和数据。 
 
-> [!IMPORTANT]
-> “企业移动性 + 安全性 (EMS)”权益当前不适用于新激活，尽管我们对此权益进行了重大更改。  如果已激活该权益，则可以继续正常使用它。  
+## <a name="who-should-install-ems"></a>谁应安装 EMS？
+如果你已经有 Office 365 开发人员 (E3) 租户，则应安装 EMS。  否则，应安装 [Microsoft 365](vs-m365.md)，它同时包括 EMS 和 Office 365 开发人员 (E5)：
+- Power BI 的高级分析
+- Office 365 高级威胁防护
+- Azure Active Directory，用于构建高级标识和访问管理解决方案
 
 ## <a name="eligibility"></a>资格
 
@@ -44,3 +47,8 @@ Visual Studio Enterprise 年度云订阅和标准订阅包含企业移动性 + �
 - 有关 EMS 任何组件的技术支持，请访问 [EMS 支持常见问题解答](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-support-faq)，以便为你的问题找到合适的支持。
 - 有关 Visual Studio 订阅的销售、订阅、帐户和账单的帮助，请与 Visual Studio [订阅支持](https://visualstudio.microsoft.com/subscriptions/support/)联系。
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
+
+## <a name="next-steps"></a>后续步骤
+如果尚未激活订阅附带的 Azure 开发测试个人额度权限，请访问 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)，再并单击“工具”类别中的 Azure 磁贴，以设置 Azure 订阅并兑换 Azure 开发测试个人额度。
+
+查看订阅中包含的其他权益。 请访问 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)。

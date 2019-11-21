@@ -3,15 +3,15 @@ title: Visual Studio 订阅中的 CODE 杂志权益 | Microsoft 文档
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 09/17/2019
+ms.date: 10/13/2019
 ms.topic: conceptual
 description: 了解有关 Visual Studio 订阅中包含的 CODE 杂志权益。
-ms.openlocfilehash: 80efa2c78b8780f319ab5e532d74b689d5998cef
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 6f120bae88a7d613873a9d350e411842904e700e
+ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71256629"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74099589"
 ---
 # <a name="code-magazine-included-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 CODE 杂志权益
 
@@ -23,25 +23,25 @@ CODE 杂志是领先的独立软件开发人员杂志，涵盖所有平台中的
 1. 访问 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
 2. 在门户的“专业开发”或“教育”部分中找到“CODE 杂志”磁贴，然后单击“获取 Code”  。
    > [!div class="mx-imgBorder"]
-   > ![CODE 杂志磁贴](_img/vs-code-magazine/vs-code-magazine-tile.png "CODE 杂志磁贴")
+   > ![CODE Magazine 磁贴](_img/vs-code-magazine/vs-code-magazine-tile.png "CODE Magazine 磁贴")
 3. 你会看到一条消息，提示已检索到你的代码。  单击“激活”，然后继续  。  （如果你还没有准备好激活，没关系。  你可以随时返回到该磁贴进行激活。  检索到你的代码后，“获取 Code”链接将显示“激活”。）
    > [!div class="mx-imgBorder"]
-   > ![已检索到 CODE 杂志代码](_img/vs-code-magazine/vs-code-magazine-success.png "已成功检索到代码")
+   > ![已检索 CODE Magazine 代码](_img/vs-code-magazine/vs-code-magazine-success.png "代码检索成功")
 4. 你将重定向到 CODE 杂志登陆页面。 选择国家/地区以及获取杂志的方式。 
-> [!NOTE]
-> Visual Studio Dev Essentials 成员只能访问数字订阅。 
+   > [!NOTE]
+   > Visual Studio Dev Essentials 成员只能访问数字订阅。 
 5. 根据所做的选择，你会看到一条说明，其中显示了订阅的价格以及已应用的优惠券金额。
-> [!NOTE]
-> 对于印刷版订阅：
-> - 美国以外的订阅者可能需要支付运费。 
-> - 第一本印刷版的寄送可能需要几周的时间。
-   > [!div class="mx-imgBorder"]
-   > ![CODE 杂志订阅详细信息](_img/vs-code-magazine/vs-code-magazine-details.png "订阅详细信息和价格")
+   > [!NOTE]
+   > 对于印刷版订阅：
+   > - 美国以外的订阅者可能需要支付运费。 
+   > - 第一本印刷版的寄送可能需要几周的时间。
+      > [!div class="mx-imgBorder"]
+      > ![CODE Magazine 订阅详细信息](_img/vs-code-magazine/vs-code-magazine-details.png "订阅详细信息和价格")
 6. 接下来，需要提供订阅者信息和配送地址。  （即使对于数字订阅，配送地址也是必需的，因为它可支持订单执行、产品/服务选择和数字访问过程。）
 7. 如果你的居住地不在美国且选择订阅印刷版杂志，则可能会要求你提供账单地址和付款信息以支付运费。 
 8. 可以通过单击复选框来选择加入 CODE HTML Newletter。
    > [!div class="mx-imgBorder"]
-   > ![CODE 杂志订阅者信息](_img/vs-code-magazine/vs-code-magazine-subscriber-info.png "订阅者信息和配送地址")
+   > ![CODE Magazine 订阅者信息](_img/vs-code-magazine/vs-code-magazine-subscriber-info.png "订阅者详细和传送地址")
 9. 单击“下订单”  ，完成订阅。  
 完成订阅订单后，系统会显示一个确认页，其中包含可用于查看已收到的问题的链接： https://codemag.com/my/fulfillment 。 
 
@@ -49,7 +49,9 @@ CODE 杂志是领先的独立软件开发人员杂志，涵盖所有平台中的
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准）   | VL、Azure、零售、所选 NFR<sup>1</sup> | 可用       |  No          |
-| Visual Studio Professional（标准 <sup>2</sup>） | VL、Azure、零售                                       | 可用                                                            |  No          |
+| 带有 GitHub Enterprise 的 Visual Studio Enterprise   | VL| 可用       |  No          |
+| Visual Studio Professional（标准） | VL、Azure、零售                                       | 可用                                                            |  No          |
+| 带有 GitHub Enterprise 的 Visual Studio Professional | VL                                      | 可用                                                            |  No          |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 可用                                             |  No          |
 | MSDN 平台（标准）                                          | VL、零售                                              | 可用                                              |  No          |
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure | 不可用 | 不可用 |
@@ -76,3 +78,4 @@ CODE 杂志是领先的独立软件开发人员杂志，涵盖所有平台中的
 ## <a name="next-steps"></a>后续步骤
 查看订阅中包含的其他权益。 请访问 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)。
 
+如果尚未激活订阅附带的 Azure 开发测试个人额度权限，请访问 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)，再并单击“工具”类别中的 Azure 磁贴，以设置 Azure 订阅并兑换 Azure 开发测试个人额度。
