@@ -1,5 +1,5 @@
 ---
-title: DA0503：所分析的进程的平均工作集（字节）| Microsoft Docs
+title: DA0503：所分析的进程的平均工作集（以字节为单位）| Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -13,21 +13,21 @@ caps.latest.revision: 13
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b45725c59cb18f965ba7d1fa134de739d9c4144d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 898208530eb1ba71a5a1443fcb97ac1f1a1081e1
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68205923"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300049"
 ---
-# <a name="da0503-average-working-set-in-bytes-for-the-process-being-profiled"></a>DA0503：所分析的进程的平均工作集（字节）
+# <a name="da0503-average-working-set-in-bytes-for-the-process-being-profiled"></a>DA0503：所分析的进程的平均工作集(以字节为单位)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-规则 Id |DA0503 |  
-|类别 |资源监视 |  
-|分析方法 |所有 |  
-|消息 |此信息仅作为信息收集。 进程工作集计数器测量由正在分析的进程使用的物理内存的使用情况。 报告的值是针对所有测量时间间隔所计算的平均值。|  
-|规则类型 |信息 |  
+Rule Id|DA0503|  
+|Category|Resource Monitoring|  
+|Profiling method|All|  
+|Message|This information was gathered for information only. 进程工作集计数器测量由正在分析的进程使用的物理内存的使用情况。 报告的值是针对所有测量时间间隔所计算的平均值。|  
+|Rule type|Information|  
   
  使用采样法、.NET 内存或资源争用方法进行分析时，必须收集至少 10 个样本才能触发此规则。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68205923"
   
  进程工作集的大小反映进程当前使用的虚拟内存量。 它还受可用于运行应用程序的物理内存量（或 RAM）和其他运行的进程对该物理内存的争用量的影响。 如果物理内存受到约束，则进程工作集往往存在较大差别，因为操作系统将尝试从进程工作集通过定期修整活动程度相当低的进程，以平衡整个活动进程中的内存使用情况。  
   
- 有关进程工作集的详细信息，请参阅 MSDN 上 Windows 内存管理文档中的 [Working Set](http://go.microsoft.com/fwlink/?LinkId=177830)（工作集）。  
+ 有关进程工作集的详细信息，请参阅 MSDN 上 Windows 内存管理文档中的 [Working Set](https://go.microsoft.com/fwlink/?LinkId=177830)（工作集）。  
   
 ## <a name="how-to-use-rule-data"></a>如何使用规则数据  
  若要了解不同分析方案中应用程序的性能，可使用规则值比较不同版本程序的性能。  

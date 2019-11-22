@@ -1,5 +1,5 @@
 ---
-title: T4 模板指令 |Microsoft Docs
+title: T4 Template Directive | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -9,19 +9,19 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d4c6176caee5551b860029ac98b19d52fcb7b51f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d3a17275730cd093f8f9fa433aa28c7f9ca86e80
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658557"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298142"
 ---
 # <a name="t4-template-directive"></a>T4 模板指令
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] T4 文本模板通常以 `template` 指令开头，该指令指定应如何处理模板。 文本模板及其包括的任何文件中不应有多个 template 指令。
 
- 有关编写文本模板的一般概述，请参阅[编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
+ For a general overview of writing text templates, see [Writing a T4 Text Template](../modeling/writing-a-t4-text-template.md).
 
 ## <a name="using-the-template-directive"></a>使用 Template 指令
 
@@ -34,7 +34,7 @@ ms.locfileid: "72658557"
 ## <a name="compileroptions-attribute"></a>compilerOptions 特性
  示例：`compilerOptions="optimize+"`
 
- 有效值：任何有效的编译器选项。 有关详细信息，请参阅[ C#按类别列出的编译器选项](https://msdn.microsoft.com/library/96437ecc-6502-4cd3-b070-e9386a298e83)和[按类别列出的 Visual Basic 编译器选项](https://msdn.microsoft.com/library/fbe36f7a-7cfa-4f77-a8d4-2be5958568e3)。
+ Valid values: Any valid compiler options. For more information, see [C# Compiler Options Listed by Category](https://msdn.microsoft.com/library/96437ecc-6502-4cd3-b070-e9386a298e83) and [Visual Basic Compiler Options Listed by Category](https://msdn.microsoft.com/library/fbe36f7a-7cfa-4f77-a8d4-2be5958568e3).
 
  对运行时（预处理过的）模板忽略。
 
@@ -43,7 +43,7 @@ ms.locfileid: "72658557"
 ## <a name="culture-attribute"></a>culture 特性
  示例：`culture="de-CH"`
 
- 有效值： ""，固定区域性，这是默认值。
+ Valid values: "", the invariant culture, which is the default.
 
  表示为 xx-XX 形式字符串的区域性。 例如：en-US、ja-JP、de-CH、de-DE。 有关更多信息，请参见<xref:System.Globalization.CultureInfo?displayProperty=fullName>。
 
@@ -56,13 +56,13 @@ ms.locfileid: "72658557"
 debug="true"
 ```
 
- 有效值： `true, false`。 默认值是 False。
+ Valid values: `true, false`. 默认值是 False。
 
  如果 `debug` 特性为 `true`，则中间代码文件将包含使调试器能够更精确地识别模板中出现中断或异常的位置的信息。
 
- 对于设计时模板，中间代码文件将写入你的 **% TEMP%** 目录。
+ For design-time templates the intermediate code file will be written to your **%TEMP%** directory.
 
- 若要在调试器中运行设计时模板，请保存文本模板，然后在解决方案资源管理器中打开文本模板的快捷菜单，然后选择 "**调试 T4 模板**"。
+ To run a design-time template in the debugger, save the text template, then open the shortcut menu of the text template in Solution Explorer, and choose **Debug T4 Template**.
 
 ## <a name="hostspecific-attribute"></a>hostspecific 特性
  示例:
@@ -71,11 +71,11 @@ debug="true"
 hostspecific="true"
 ```
 
- 有效值： `true, false, trueFromBase`。 默认值是 False。
+ Valid values: `true, false, trueFromBase`. 默认值是 False。
 
- 如果将此特性的值设置为 `true`，则会将名为 `Host` 的属性添加到由文本模板生成的类中。 该属性是对转换引擎的主机的引用，并声明为[ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))。 如果已经定义了自定义宿主，则可以将其转换为自定义宿主类型。
+ 如果将此特性的值设置为 `true`，则会将名为 `Host` 的属性添加到由文本模板生成的类中。 The property is a reference to the host of the transformation engine, and is declared as [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)). 如果已经定义了自定义宿主，则可以将其转换为自定义宿主类型。
 
- 因为此属性的类型取决于宿主的类型，所以仅当编写只适用于特定宿主的文本模板时才有用。 它适用于[设计时模板](../modeling/design-time-code-generation-by-using-t4-text-templates.md)，但不适用于[运行时模板](../modeling/run-time-text-generation-with-t4-text-templates.md)。
+ 因为此属性的类型取决于宿主的类型，所以仅当编写只适用于特定宿主的文本模板时才有用。 It’s applicable to [design-time templates](../modeling/design-time-code-generation-by-using-t4-text-templates.md), but not [run-time templates](../modeling/run-time-text-generation-with-t4-text-templates.md).
 
  当 `hostspecific` 为 `true`，而且正在使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 时，可以将 `this.Host` 强制转换为 IServiceProvider，以访问 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 功能。 还可以使用 `Host.ResolvePath(filename)` 来获得项目中文件的绝对路径。 例如:
 
@@ -104,11 +104,11 @@ Content of myFile is:
 ## <a name="language-attribute"></a>language 特性
  示例：`language="VB"`
 
- 有效值： `C#` （默认值）
+ Valid values: `C#` (default)
 
  `VB`
 
- Language 特性指定要用于语句和表达式块中的源代码的语言（[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 或 [!INCLUDE[csprcs](../includes/csprcs-md.md)]）。 从中生成输出的中间代码文件将使用此语言。 此语言与您的模板生成的语言无关，它可以是任何类型的文本。
+ The language attribute specifies the language ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../includes/csprcs-md.md)]) to use for the source code in statement and expression blocks. 从中生成输出的中间代码文件将使用此语言。 此语言与您的模板生成的语言无关，它可以是任何类型的文本。
 
  例如:
 
@@ -131,7 +131,7 @@ Squares of numbers:
  可以指定模板的程序代码可以继承自另一个类，这个类也可以从文本模板生成。
 
 ### <a name="inheritance-in-a-run-time-preprocessed-text-template"></a>运行时（预处理过的）文本模板中的继承
- 可以在运行时文本模板之间使用继承，来创建具有多个派生变量的基本模板。 运行时模板是将 "**自定义工具**" 属性设置为 " **TextTemplatingFilePreprocessor**" 的模板。 运行时模板生成你可以在应用程序中调用的代码，以便创建模板中定义的文本。 有关详细信息，请参阅[带有 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。
+ 可以在运行时文本模板之间使用继承，来创建具有多个派生变量的基本模板。 Run-time templates are those that have the **Custom Tool** property set to **TextTemplatingFilePreprocessor**. 运行时模板生成你可以在应用程序中调用的代码，以便创建模板中定义的文本。 For more information, see [Run-Time Text Generation with T4 Text Templates](../modeling/run-time-text-generation-with-t4-text-templates.md).
 
  如果不指定 `inherits` 特性，则会从您的文本模板生成基类和派生类。 指定 `inherits` 特性时，仅生成派生类。 您可以手动编写基类，但是它必须提供派生类所使用的方法。
 
@@ -207,16 +207,16 @@ This is the common footer.
 > 如果同时使用 `inherits` 和 `hostspecific` 特性，则请在派生类和基类中分别指定 hostspecific="trueFromBase" 和 host="true"。 这样可避免双重定义生成代码中的 `Host` 属性。
 
 ### <a name="inheritance-in-a-design-time-text-template"></a>设计时文本模板中的继承
- 设计时文本模板是**自定义工具**设置为**TextTemplatingFileGenerator**的文件。 该模板会生成代码或文本的输出文件，此文件将组成 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目的一部分。 若要生成输出文件，首先要将模板转换为中间程序代码文件，你通常不会看到该文件。 `inherits` 特性为此中间代码指定基类。
+ A design-time text template is a file for which **Custom Tool** is set to **TextTemplatingFileGenerator**. 该模板会生成代码或文本的输出文件，此文件将组成 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目的一部分。 若要生成输出文件，首先要将模板转换为中间程序代码文件，你通常不会看到该文件。 `inherits` 特性为此中间代码指定基类。
 
  对于设计时文本模板来说，可以指定从 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName> 派生的任何基类。 使用 `<#@assembly#>` 指令来加载包含基类的程序集或项目。
 
- 有关详细信息，请参阅[Gareth 的 "博客中的" 文本模板中的继承 "](http://go.microsoft.com/fwlink/?LinkId=208373)。
+ For more information, see ["Inheritance in Text Templates" in Gareth Jones’ Blog](https://go.microsoft.com/fwlink/?LinkId=208373).
 
 ## <a name="linepragmas-attribute"></a>LinePragmas 特性
  示例：`linePragmas="false"`
 
- 有效值： `true` （默认值）
+ Valid values: `true` (default)
 
  `false`
 
@@ -227,7 +227,7 @@ This is the common footer.
 ## <a name="visibility-attribute"></a>可见性特性
  示例：`visibility="internal"`
 
- 有效值： `public` （默认值）
+ Valid values: `public` (default)
 
  `internal`
 

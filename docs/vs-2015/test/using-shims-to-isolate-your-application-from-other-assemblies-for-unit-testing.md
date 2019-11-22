@@ -8,12 +8,12 @@ ms.assetid: d2a34de2-6527-4c21-8b93-2f268ee894b7
 caps.latest.revision: 14
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8672d04bd2311c5bda5e2bb1bc9dc1455764f96a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 07e42c6b1e3e3537801c3d7420d2cad8dd119fa7
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657163"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301423"
 ---
 # <a name="using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing"></a>使用填充码针对单元测试将应用程序与程序集隔离
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "72657163"
 
 - Visual Studio Enterprise
 
-  请观看[视频（1 小时 16 分钟）：在 Visual Studio 2012 中使用 Fakes 测试不可测试代码](http://go.microsoft.com/fwlink/?LinkId=261837)
+  请观看[视频（1 小时 16 分钟）：在 Visual Studio 2012 中使用 Fakes 测试不可测试代码](https://go.microsoft.com/fwlink/?LinkId=261837)
 
 ## <a name="BKMK_Example__The_Y2K_bug"></a>示例：千年虫问题
  我们来考虑一种会在 2000 年 1 月 1 日引发异常的方法：
@@ -504,7 +504,7 @@ ShimFile.WriteAllTextStringString = shim;
 ## <a name="external-resources"></a>外部资源
 
 ### <a name="guidance"></a>指导
- [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](http://go.microsoft.com/fwlink/?LinkID=255188)
+ [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](https://go.microsoft.com/fwlink/?LinkID=255188)
 
 ## <a name="see-also"></a>请参阅
- 将[测试中的代码与 Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md) [Peter Provost 的博客隔离： Visual studio 2012 填充](http://www.peterprovost.org/blog/2012/04/25/visual-studio-11-fakes-part-2)码[视频（1H16）：在 Visual Studio 2012 中用 Fakes 测试未测试的代码](http://go.microsoft.com/fwlink/?LinkId=261837)
+ [Isolating Code Under Test with Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md) [Peter Provost’s blog: Visual Studio 2012 Shims](http://www.peterprovost.org/blog/2012/04/25/visual-studio-11-fakes-part-2) [Video (1h16): Testing Un-testable Code with Fakes in Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkId=261837)

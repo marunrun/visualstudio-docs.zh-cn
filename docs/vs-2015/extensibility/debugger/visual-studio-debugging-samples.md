@@ -1,5 +1,5 @@
 ---
-title: Visual Studio 调试示例 |Microsoft Docs
+title: Visual Studio Debugging Samples | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ ms.assetid: fbcc42a7-7851-487f-b981-8c4ae7ec7347
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 19144365a428fdde8915f481ce8d12841bddc003
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9f1dab6be397028917976c9827e48a6748ba78bd
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68185271"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295992"
 ---
 # <a name="visual-studio-debugging-samples"></a>Visual Studio 调试示例
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-两个示例展示了如何扩展 Visual Studio 调试器使用[!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]。  
+Two samples show how to extend the Visual Studio debugger using [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)].  
   
-- 调试器表达式计算器示例中，对于托管语言，包含在[!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]。 在中[!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]窗口中，单击**示例**选项卡上，单击**所有**或**C#** 的语言，并单击列表中**调试器**。  
+- The Debugger Expression Evaluator Sample, for managed languages, is included in the [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]. In the [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)] window, click the **Samples** tab, click **All** or **C#** in the list of languages, and then click **Debugger**.  
   
-- Visual Studio 调试引擎示例中，对于本机语言，可用于的 MSDN 代码库。 有关详细信息，请参阅 Microsoft 网站上的此页面：[Visual Studio 调试引擎示例](http://go.microsoft.com/fwlink/?LinkId=150236)。
+- The Visual Studio Debug Engine Sample, for native languages, is available on MSDN Code Gallery. For more information, see this page on the Microsoft Web site: [Visual Studio Debug Engine Sample](https://go.microsoft.com/fwlink/?LinkId=150236).

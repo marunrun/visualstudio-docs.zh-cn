@@ -1,5 +1,5 @@
 ---
-title: 定义锁定策略以创建只读段 |Microsoft Docs
+title: Defining a Locking Policy to Create Read-Only Segments | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -9,100 +9,100 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 53542ec2a5270aec6836864fa3108d5f84da2df9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5acbb4d2966e89f7913fa1479b882fad5c9650f7
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669881"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295816"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>定义锁定策略以创建只读段
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-@No__t_0 可视化和建模 SDK 的永久性 API 允许程序锁定部分或全部域特定语言（DSL）模型，以便可以读取但不能更改它。 例如，可以使用此只读选项，以便用户可以要求同事批注和查看 DSL 模型，但可以禁止它们更改原始模型。
+The Immutability API of the [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Visualization and Modeling SDK allows a program to lock part or all of a domain-specific language (DSL) model so that it can be read but not changed. This read-only option could be used, for example, so that a user can ask colleagues to annotate and review a DSL model but can disallow them from changing the original.
 
- 此外，作为 DSL 的作者，你可以定义*锁定策略。* 锁定策略定义允许、不允许或强制的锁定。 例如，当你发布 DSL 时，可以鼓励第三方开发人员使用新命令来扩展它。 但您也可以使用锁定策略来防止其更改模型指定部分的只读状态。
+ In addition, as author of a DSL, you can define a *locking policy.* A locking policy defines which locks are permitted, not permitted, or mandatory. For example, when you publish a DSL, you can encourage third-party developers to extend it with new commands. But you could also use a locking policy to prevent them from altering the read-only status of specified parts of the model.
 
 > [!NOTE]
-> 可以使用反射来规避锁定策略。 它为第三方开发人员提供清晰的边界，但不提供强大的安全性。
+> A locking policy can be circumvented by using reflection. It provides a clear boundary for third-party developers, but does not provide strong security.
 
- @No__t_0[可视化和建模 SDK](http://go.microsoft.com/fwlink/?LinkId=186128)网站上提供了更多详细信息和示例。
+ More information and samples are available at the [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [Visualization and Modeling SDK](https://go.microsoft.com/fwlink/?LinkId=186128) Web site.
 
-## <a name="setting-and-getting-locks"></a>设置和获取锁
- 可以在存储、分区或单个元素上设置锁。 例如，此语句将阻止删除模型元素，并且还会阻止其属性被更改：
+## <a name="setting-and-getting-locks"></a>Setting and Getting Locks
+ You can set locks on the store, on a partition, or on an individual element. For example, this statement will prevent a model element from being deleted, and will also prevent its properties from being changed:
 
 ```
 using Microsoft.VisualStudio.Modeling.Immutability; ...
 element.SetLocks(Locks.Delete | Locks.Property);
 ```
 
- 其他锁值可用于防止在角色中更改关系、创建元素、在分区之间移动和重新排序链接。
+ Other lock values can be used to prevent changes in relationships, element creation, movement between partitions, and re-ordering links in a role.
 
- 锁定适用于用户操作和程序代码。 如果程序代码尝试进行更改，则会引发 `InvalidOperationException`。 撤消或重做操作中会忽略锁。
+ The locks apply both to user actions and to program code. If program code attempts to make a change, an `InvalidOperationException` will be thrown. Locks are ignored in an Undo or Redo operation.
 
- 您可以通过使用 `IsLocked(Locks)` 来发现某个元素是否具有给定集内的任何锁，并且您可以通过使用 `GetLocks()` 获取元素的当前锁集。
+ You can discover whether an element has a any lock in a given set by using `IsLocked(Locks)` and you can obtain the current set of locks on an element by using `GetLocks()`.
 
- 无需使用事务即可设置锁。 锁定数据库不属于存储区。 如果设置锁定来响应存储区中某个值的更改（例如，在 OnValueChanged 中），则应允许包含撤消操作的更改。
+ You can set a lock without using a transaction. The lock database is not part of the store. If you set a lock in response to a change of a value in the store, for example in OnValueChanged, you should allow changes that are part of an Undo operation.
 
- 这些方法是在 <xref:Microsoft.VisualStudio.Modeling.Immutability> 命名空间中定义的扩展方法。
+ These methods are extension methods that are defined in the <xref:Microsoft.VisualStudio.Modeling.Immutability> namespace.
 
-### <a name="locks-on-partitions-and-stores"></a>分区和存储的锁定
- 也可以将锁应用于分区和存储区。 分区上设置的锁适用于该分区中的所有元素。 例如，下面的语句将阻止删除分区中的所有元素，而不考虑它们自己的锁的状态。 尽管如此，其他锁（如 `Locks.Property`）仍可以在单个元素上进行设置：
+### <a name="locks-on-partitions-and-stores"></a>Locks on partitions and stores
+ Locks can also be applied to partitions and the store. A lock that is set on a partition applies to all the elements in the partition. Therefore, for example, the following statement will prevent all the elements in a partition from being deleted, irrespective of the states of their own locks. Nevertheless, other locks such as `Locks.Property` could still be set on individual elements:
 
 ```
 partition.SetLocks(Locks.Delete);
 ```
 
- 在存储区上设置的锁适用于其所有元素，而不考虑该锁在分区和元素上的设置。
+ A lock that is set on the Store applies to all its elements, irrespective of the settings of that lock on the partitions and the elements.
 
-### <a name="using-locks"></a>使用锁
- 可以使用锁定来实现方案，如以下示例：
+### <a name="using-locks"></a>Using Locks
+ You could use locks to implement schemes such as the following examples:
 
-- 禁止对除表示注释的元素和关系以外的所有元素和关系进行更改。 这样，用户便可以在不更改模型的情况下对其进行批注。
+- Disallow changes to all elements and relationships except those that represent comments. This allows users to annotate a model without changing it.
 
-- 禁止更改默认分区，但允许更改关系图分区。 用户可以重新排列关系图，但不能更改基础模型。
+- Disallow changes in the default partition, but allow changes in the diagram partition. The user can rearrange the diagram, but cannot alter the underlying model.
 
-- 禁止对应用程序进行更改，但在单独的数据库中注册的一组用户除外。 对于其他用户，关系图和模型为只读。
+- Disallow changes to the Store except for a group of users who are registered in a separate database. For other users, the diagram and model are read-only.
 
-- 如果关系图的布尔属性设置为 true，则不允许对模型进行更改。 提供菜单命令以更改该属性。 这有助于确保用户不会无意中进行更改。
+- Disallow changes to the model if a Boolean property of the diagram is set to true. Provide a menu command to change that property. This helps ensure users that they do not make changes accidentally.
 
-- 禁止添加和删除特定类的元素和关系，但允许属性更改。 这为用户提供了一个固定窗体，用户可以在其中填充属性。
+- Disallow addition and deletion of elements and relationships of particular classes, but allow property changes. This provides users with a fixed form in which they can fill the properties.
 
-## <a name="lock-values"></a>锁定值
- 可以对存储、分区或单个 ModelElement 设置锁定。 锁是 `Flags` 枚举：可以使用 "&#124;" 组合其值。
+## <a name="lock-values"></a>Lock values
+ Locks can be set on a Store, Partition, or individual ModelElement. Locks is a `Flags` enumeration: you can combine its values using '&#124;'.
 
-- ModelElement 的锁始终包含其分区的锁。
+- Locks of a ModelElement always include the Locks of its Partition.
 
-- 分区的锁始终包含存储区锁定。
+- Locks of a Partition always include the Locks of the Store.
 
-  不能对分区或存储设置锁，同时禁用对单个元素的锁定。
+  You cannot set a lock on a partition or store and at the same time disable the lock on an individual element.
 
-|“值”|如果 `IsLocked(Value)` 为 true，则表示|
+|“值”|Meaning if `IsLocked(Value)` is true|
 |-----------|------------------------------------------|
-|None|无限制。|
-|Property|无法更改元素的域属性。 这不适用于由关系中的域类的角色生成的属性。|
-|添加|无法在分区或存储区中创建新的元素和链接。<br /><br /> 不适用于 `ModelElement`。|
-|移动|如果 `element.IsLocked(Move)` 为 true，则不能在分区之间移动元素; 如果 `targetPartition.IsLocked(Move)` 为 true，则为。|
-|删除|如果此锁是在元素本身上设置的，或者是在删除操作将传播到的任何元素（如嵌入元素和形状）上，则不能删除元素。<br /><br /> 您可以使用 `element.CanDelete()` 来发现是否可以删除某个元素。|
-|安排|不能更改 roleplayer 中的链接排序。|
-|RolePlayer|无法更改来源于此元素的链接集。 例如，不能在此元素下嵌入新元素。 这不会影响此元素作为其目标的链接。<br /><br /> 如果此元素是链接，则其源和目标不受影响。|
-|全部|其他值的按位 "或"。|
+|None|No restriction.|
+|Property|Domain properties of elements cannot be changed. This does not apply to properties that are generated by the role of a domain class in a relationship.|
+|添加|New elements and links cannot be created in a partition or store.<br /><br /> Not applicable to `ModelElement`.|
+|移动|Element cannot be moved between partitions if `element.IsLocked(Move)` is true, or if `targetPartition.IsLocked(Move)` is true.|
+|删除|An element cannot be deleted if this lock is set on the element itself, or on any of the elements to which deletion would propagate, such as embedded elements and shapes.<br /><br /> You can use `element.CanDelete()` to discover whether an element can be deleted.|
+|Reorder|The ordering of links at a roleplayer cannot be changed.|
+|RolePlayer|The set of links that are sourced at this element cannot be changed. For example, new elements cannot be embedded under this element. This does not affect links for which this element is the target.<br /><br /> If this element is a link, its source and target are not affected.|
+|全部|Bitwise OR of the other values.|
 
-## <a name="locking-policies"></a>锁定策略
- 作为 DSL 的作者，你可以定义*锁定策略*。 锁定策略 moderates 了 SetLocks （）的操作，因此你可以防止设置特定锁或强制必须设置特定锁。 通常，你会使用锁定策略来防止用户或开发人员意外 contravening 地使用了 DSL，这与声明变量 `private` 的方式相同。
+## <a name="locking-policies"></a>Locking Policies
+ As the author of a DSL, you can define a *locking policy*. A locking policy moderates the operation of SetLocks(), so that you can prevent specific locks from being set or mandate that specific locks must be set. Typically, you would use a locking policy to discourage users or developers from accidentally contravening the intended use of a DSL, in the same manner that you can declare a variable `private`.
 
- 你还可以使用锁定策略在依赖于该元素类型的所有元素上设置锁。 这是因为首次从文件创建或反序列化某个元素时，始终会调用 `SetLocks(Locks.None)`。
+ You can also use a locking policy to set locks on all elements dependent on the element's type. This is because `SetLocks(Locks.None)` is always called when an element is first created or deserialized from file.
 
- 但是，不能使用策略在某个元素的生存期内改变其锁定。 若要实现这种效果，应使用对的调用 `SetLocks()`。
+ However, you cannot use a policy to vary the locks on an element during its life. To achieve that effect, you should use calls to `SetLocks()`.
 
- 若要定义锁定策略，必须执行以下操作：
+ To define a locking policy, you have to:
 
 - 创建用于实现 <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy> 的类。
 
-- 将此类添加到通过 DSL 的 DocData 提供的服务。
+- Add this class to the services that are available through the DocData of your DSL.
 
-### <a name="to-define-a-locking-policy"></a>定义锁定策略
- <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy> 具有以下定义：
+### <a name="to-define-a-locking-policy"></a>To define a locking policy
+ <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy> has the following definition:
 
 ```
 public interface ILockingPolicy
@@ -113,7 +113,7 @@ public interface ILockingPolicy
 }
 ```
 
- 当对存储区、分区或 ModelElement 调用 `SetLocks()` 时，将调用这些方法。 每种方法都提供一组建议的锁。 可以返回建议的集，也可以添加和减去锁。
+ These methods are called when a call is made to `SetLocks()` on a Store, Partition, or ModelElement. In each method, you are provided with a proposed set of locks. You can return the proposed set, or you can add and subtract locks.
 
  例如:
 
@@ -145,16 +145,16 @@ namespace Company.YourDsl.DslPackage // Change
 
 ```
 
- 若要确保用户始终可以删除元素，即使其他代码调用 `SetLocks(Lock.Delete):`
+ To make sure that users can always delete elements, even if other code calls `SetLocks(Lock.Delete):`
 
  `return proposedLocks & (Locks.All ^ Locks.Delete);`
 
- 禁止更改 MyClass 的每个元素的所有属性：
+ To disallow change in all the properties of every element of MyClass:
 
  `return element is MyClass ? (proposedLocks | Locks.Property) : proposedLocks;`
 
-### <a name="to-make-your-policy-available-as-a-service"></a>将策略作为服务提供
- 在 `DslPackage` 项目中，添加一个新文件，其中包含类似于以下示例的代码：
+### <a name="to-make-your-policy-available-as-a-service"></a>To make your policy available as a service
+ In your `DslPackage` project, add a new file that contains code that resembles the following example:
 
 ```
 using Microsoft.VisualStudio.Modeling;

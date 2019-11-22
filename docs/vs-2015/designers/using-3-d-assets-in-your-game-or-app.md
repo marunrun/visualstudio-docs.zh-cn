@@ -16,12 +16,12 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4b61a187f4e07c73e5c53db382a6ee5e5cb8cb70
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6d838b7519b40d47b644a53befb91391fa30a664
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72664074"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74293133"
 ---
 # <a name="using-3-d-assets-in-your-game-or-app"></a>在游戏或应用程序中使用三维资产
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "72664074"
 
 |Property|描述|
 |--------------|-----------------|
-|压缩|指定用于输出文件的压缩类型。<br /><br /> 可用选项为：<br /><br /> -   不进行压缩<br />-   BC1_UNORM 压缩<br />-   BC1_UNORM_SRGB 压缩<br />-   BC2_UNORM 压缩<br />-   BC2_UNORM_SRGB 压缩<br />-   BC3_UNORM 压缩<br />-   BC3_UNORM_SRGB 压缩<br />-   BC4_UNORM 压缩<br />-   BC4_SNORM 压缩<br />-   BC5_UNORM 压缩<br />-   BC5_SNORM 压缩<br />-   BC6H_UF16 压缩<br />-   BC6H_SF16 压缩<br />-   BC7_UNORM 压缩<br />-   BC7_UNORM_SRGB 压缩<br /><br /> 有关不同版本的 DirectX 中支持哪些压缩格式的信息，请参阅 [DXGI 编程指南](http://go.microsoft.com/fwlink/p/?LinkId=246265)。|
+|压缩|指定用于输出文件的压缩类型。<br /><br /> 可用选项为：<br /><br /> -   不进行压缩<br />-   BC1_UNORM 压缩<br />-   BC1_UNORM_SRGB 压缩<br />-   BC2_UNORM 压缩<br />-   BC2_UNORM_SRGB 压缩<br />-   BC3_UNORM 压缩<br />-   BC3_UNORM_SRGB 压缩<br />-   BC4_UNORM 压缩<br />-   BC4_SNORM 压缩<br />-   BC5_UNORM 压缩<br />-   BC5_SNORM 压缩<br />-   BC6H_UF16 压缩<br />-   BC6H_SF16 压缩<br />-   BC7_UNORM 压缩<br />-   BC7_UNORM_SRGB 压缩<br /><br /> 有关不同版本的 DirectX 中支持哪些压缩格式的信息，请参阅 [DXGI 编程指南](https://go.microsoft.com/fwlink/p/?LinkId=246265)。|
 |转换为预乘 alpha 格式|若要将输出文件中的图像转换为预乘 alpha 格式，则为“是”；否则为“否”。 仅更改输出文件，源图像未发生更改。|
 |**生成 Mip**|若要在生成时生成完整的 MIP 链并将它包含在输出文件中，则为“是”；否则为“否”。 如果为“否”且源文件已经包含 mipmap 链，则输出文件将具有 MIP 链；否则，输出文件将没有 MIP 链。|
 |内容输出|指定输出文件的名称。 重要说明：更改输出文件的文件扩展名不会影响其文件格式。|
@@ -111,13 +111,13 @@ ms.locfileid: "72664074"
 ## <a name="loading-and-using-3-d-assets-at-run-time"></a>在运行时加载和使用三维资产
 
 ### <a name="using-textures-and-images"></a>使用纹理和图像
- Direct3D 提供了用于创建纹理资源的功能。 在 Direct3D 11 中，D3DX11 实用工具库提供了用于直接从图像文件创建纹理资源和资源视图的其他功能。 有关如何在 Direct3D 11 中创建纹理资源的详细信息，请参阅[纹理](http://go.microsoft.com/fwlink/p/?LinkID=246267)。 有关如何使用 D3DX11 库从图像文件创建纹理资源或资源视图的详细信息，请参阅[如何：从文件初始化纹理](http://go.microsoft.com/fwlink/p/?LinkId=246268)。
+ Direct3D 提供了用于创建纹理资源的功能。 在 Direct3D 11 中，D3DX11 实用工具库提供了用于直接从图像文件创建纹理资源和资源视图的其他功能。 有关如何在 Direct3D 11 中创建纹理资源的详细信息，请参阅[纹理](https://go.microsoft.com/fwlink/p/?LinkID=246267)。 有关如何使用 D3DX11 库从图像文件创建纹理资源或资源视图的详细信息，请参阅[如何：从文件初始化纹理](https://go.microsoft.com/fwlink/p/?LinkId=246268)。
 
 ### <a name="using-3-d-models"></a>使用三维模型
  Direct3D 11 不提供用于从三维模型创建资源的功能。 相反，你必须编写代码，该代码可读取三维模型文件并创建表示三维模型和该模型所需的任何资源（例如，纹理或着色器）的顶点和索引缓冲区。
 
 ### <a name="using-shaders"></a>使用着色器
- Direct3D 提供了用于创建着色器资源并将其绑定到可编程的图形管道的功能。 有关如何在 Direct3D 中创建着色器资源并将其绑定到管道的详细信息，请参阅 [HLSL 编程指南](http://go.microsoft.com/fwlink/p/?LinkID=261521)。
+ Direct3D 提供了用于创建着色器资源并将其绑定到可编程的图形管道的功能。 有关如何在 Direct3D 中创建着色器资源并将其绑定到管道的详细信息，请参阅 [HLSL 编程指南](https://go.microsoft.com/fwlink/p/?LinkID=261521)。
 
  在可编程的图形管道中，每个管道阶段都必须为下一个管道阶段提供一个以它可理解的方式进行格式化的结果。 因为着色器设计器仅可创建像素着色器，所以这意味着你的应用应确保它接收的数据将采用所预期的格式。 以下几个可编程的着色器阶段可在像素着色器之前出现并执行几何变换：顶点着色器、外壳着色器、域着色器和几何着色器。 不可编程的分割阶段也可在像素着色器之前出现。 无论那些阶段直接出现在像素着色器之前，它都必须采用以下格式提供其结果：
 

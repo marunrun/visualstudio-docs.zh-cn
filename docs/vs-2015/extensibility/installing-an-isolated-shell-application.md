@@ -1,5 +1,5 @@
 ---
-title: 安装独立的 Shell 应用程序 |Microsoft Docs
+title: Installing an Isolated Shell Application | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,57 +11,57 @@ ms.assetid: 33416226-9083-41b5-b153-10d2bf35c012
 caps.latest.revision: 41
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 60862d631d93788f10c372310da9eb3d181943ef
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: a077173a0d095ee10cc1fa16da3db1f3744dafa8
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63414546"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301158"
 ---
-# <a name="installing-an-isolated-shell-application"></a>安装独立的 Shell 应用程序
+# <a name="installing-an-isolated-shell-application"></a>安装独立 Shell 应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-若要安装的 Shell 应用程序必须执行以下步骤。  
+To install a Shell app you must perform the following steps.  
   
-- 准备你的解决方案。  
+- Prepare your solution.  
   
-- 创建你的应用程序的 Windows Installer (MSI) 包。  
+- Create a Windows Installer (MSI) package for your application.  
   
-- 创建安装程序引导程序。  
+- Create a Setup bootstrapper.  
   
-  本文档中的示例代码的所有来自[Shell 部署示例](http://go.microsoft.com/fwlink/?LinkId=262245)，可以从 MSDN 网站上的代码库下载。 此示例演示执行每个步骤的结果。  
+  All of the example code in this document comes from the [Shell Deployment Sample](https://go.microsoft.com/fwlink/?LinkId=262245), which you can download from the Code Gallery on the MSDN website. The sample shows the results of performing each of these steps.  
   
-## <a name="prerequisites"></a>系统必备  
- 若要执行本主题介绍的过程，必须在计算机上安装以下工具。  
+## <a name="prerequisites"></a>Prerequisites  
+ To perform the procedures that this topic describes, the following tools must be installed on your computer.  
   
-- Visual Studio SDK  
+- The Visual Studio SDK  
   
-- [Windows Installer XML 工具集](http://go.microsoft.com/fwlink/?LinkId=82720)版本 3.6  
+- The [Windows Installer XML Toolset](https://go.microsoft.com/fwlink/?LinkId=82720) version 3.6  
   
-  此示例还要求 Microsoft 可视化和建模 SDK，这不是所有外壳都需要。  
+  The sample also requires the Microsoft Visualization and Modeling SDK, which not all shells require.  
   
-## <a name="preparing-your-solution"></a>准备你的解决方案  
- 默认情况下，Shell 模板构建到 VSIX 包，但此行为旨在主要用于调试目的。 外壳应用程序部署时，必须使用 MSI 包以在安装过程中允许进行注册表访问和重新启动的。 若要准备 MSI 部署应用程序，请执行以下步骤。  
+## <a name="preparing-your-solution"></a>Preparing Your Solution  
+ By default, Shell templates build to VSIX packages, but this behavior is intended primarily for debugging purposes. When you deploy a Shell application, you must use MSI packages to allow for registry access and for restarts during installation. To prepare your application for MSI deployment, perform the following steps.  
   
-#### <a name="to-prepare-a-shell-application-for-msi-deployment"></a>若要准备 MSI 部署一个外壳应用程序  
+#### <a name="to-prepare-a-shell-application-for-msi-deployment"></a>To prepare a Shell application for MSI deployment  
   
-1. 编辑你的解决方案中每个的.vsixmanifest 文件。  
+1. Edit each .vsixmanifest file in your solution.  
   
-     在中`Identifier`元素中，添加`InstalledByMSI`元素和一个`SystemComponent`元素，然后将其值设置为`true`。  
+     In the `Identifier` element, add an `InstalledByMSI` element and a `SystemComponent` element, and then set their values to `true`.  
   
-     这些元素可防止 VSIX 安装程序尝试从使用卸载安装您的组件和用户**扩展和更新**对话框。  
+     These elements prevent the VSIX installer from trying to install your components and the user from uninstalling them by using the **Extensions and Updates** dialog box.  
   
-2. 有关每个项目包含 VSIX 清单，请编辑生成任务输出内容将在其中安装 MSI 的位置。 包括在 VSIX 清单中生成输出，但不生成.vsix 文件。  
+2. For each project that contains a VSIX manifest, edit the build tasks to output the content to the location from which your MSI will install. Include the VSIX manifest in the build output, but don't build a .vsix file.  
   
-## <a name="creating-an-msi-for-your-shell"></a>为你的 Shell 中创建 MSI  
- 若要生成 MSI 包，我们建议你使用[Windows Installer XML 工具集](http://go.microsoft.com/fwlink/?LinkId=82720)因为它提供更大的灵活性比标准安装程序项目。  
+## <a name="creating-an-msi-for-your-shell"></a>Creating an MSI for Your Shell  
+ To build your MSI package, we recommend that you use the [Windows Installer XML Toolset](https://go.microsoft.com/fwlink/?LinkId=82720) because it gives greater flexibility than a standard Setup project.  
   
- 在 Product.wxs 文件中，设置检测块和外壳程序组件的布局。  
+ In your Product.wxs file, set detection blocks and the layout of Shell components.  
   
- 在你的解决方案的.reg 文件和 ApplicationRegistry.wxs 中，然后创建注册表项。  
+ Then create Registry entries, both in the .reg file for your solution and in ApplicationRegistry.wxs.  
   
-### <a name="detection-blocks"></a>检测块  
- 检测块组成`Property`元素，用于指定进行检测的先决条件和`Condition`元素，它指定要返回到系统必备组件未存在于计算机上的消息。 例如，外壳应用程序将需要可再发行组件，在 Microsoft Visual Studio Shell，检测块将类似于下面的标记。  
+### <a name="detection-blocks"></a>Detection Blocks  
+ A detection block consists of a `Property` element that specifies a prerequisite to detect and a `Condition` element that specifies a message to return if the prerequisite isn't present on the computer. For example, your Shell application will require the Microsoft Visual Studio Shell redistributable, and the detection block will resemble the following markup.  
   
 ```xml  
 <Property Id="ISOSHELLSFX">  
@@ -80,12 +80,12 @@ ms.locfileid: "63414546"
   
 ```  
   
-### <a name="layout-of-shell-components"></a>外壳程序组件的布局  
- 您必须添加元素来标识目标目录结构和要安装的组件。  
+### <a name="layout-of-shell-components"></a>Layout of Shell Components  
+ You must add elements to identify the target directory structure and the components to install.  
   
-##### <a name="to-set-the-layout-of-shell-components"></a>若要设置布局的外壳程序组件  
+##### <a name="to-set-the-layout-of-shell-components"></a>To set the layout of Shell components  
   
-1. 创建层次结构的`Directory`元素来表示所有要在目标计算机上，在文件系统上创建如下例所示的目录。  
+1. Create a hierarchy of `Directory` elements to represent all of the directories to create on the file system on the target computer, as the following example shows.  
   
     ```xml  
     <Directory Id="TARGETDIR" Name="SourceDir">  
@@ -103,12 +103,12 @@ ms.locfileid: "63414546"
     </Directory>  
     ```  
   
-     这些目录到引用的`Id`时指定必须安装的文件。  
+     These directories are referred to by `Id` when files that must be installed are specified.  
   
-2. 标识外壳和外壳应用程序需要，如以下示例所示的组件。  
+2. Identify the components that the Shell and your Shell application require, as the following example shows.  
   
     > [!NOTE]
-    > 某些元素可以引用其他.wxs 文件中定义。  
+    > Some elements may refer to definitions in other .wxs files.  
   
     ```xml  
     <Feature Id="ProductFeature" Title="$(var.ShortProductName)Shell" Level="1">  
@@ -123,7 +123,7 @@ ms.locfileid: "63414546"
     </Feature>  
     ```  
   
-    1. `ComponentRef`元素引用另一个标识当前组件所需文件的.wxs 文件。 例如，GeneralProfile HelpAbout.wxs 中具有以下定义。  
+    1. The `ComponentRef` element refers to another .wxs file that identifies files that the current component requires. For example, GeneralProfile has the following definition in HelpAbout.wxs.  
   
         ```xml  
         <Fragment Id="FragmentProfiles">  
@@ -137,9 +137,9 @@ ms.locfileid: "63414546"
         </Fragment>  
         ```  
   
-         `DirectoryRef`元素指定在用户的计算机上转这些文件。 `Directory`元素指定，则将安装到子目录，而每台`File`元素表示的文件生成或，作为解决方案的一部分存在，并且标识该文件可以找到创建的 MSI 文件时。  
+         The `DirectoryRef` element specifies where these files go on the user's computer. The `Directory` element specifies that it will be installed into a sub-directory, and each `File` element represents a file that's built or that exists as part of the solution and identifies where that file can be found when the MSI file is created.  
   
-    2. `ComponentGroupRef`元素表示一组的其他组件 （或组件以及组件组）。 例如， `ComponentGroupRef` ApplicationGroup 下定义，如下所示 Application.wxs 中。  
+    2. The `ComponentGroupRef` element refers to a group of other components (or components and component groups). For instance, `ComponentGroupRef` under ApplicationGroup is defined as follows in Application.wxs.  
   
         ```xml  
         <ComponentGroup Id="ApplicationGroup">  
@@ -159,120 +159,120 @@ ms.locfileid: "63414546"
         ```  
   
     > [!NOTE]
-    > Shell （独立） 应用程序必需的依赖项是：DebuggerProxy，MasterPkgDef，资源 （尤其是.winprf 文件），应用程序和 PkgDefs。  
+    > Required dependencies for Shell (Isolated) applications are: DebuggerProxy, MasterPkgDef, Resources (especially the .winprf file), Application, and PkgDefs.  
   
 ### <a name="registry-entries"></a>注册表项  
- Shell （独立） 项目模板包括*ProjectName*合并安装上的注册表项的.reg 文件。 这些注册表项必须是安装和清理目的的 MSI 的一部分。 此外必须在 ApplicationRegistry.wxs 中创建匹配的注册表基块。  
+ The Shell (Isolated) project template includes a *ProjectName*.reg file for registry keys to merge on installation. These registry entries must be part of the MSI for both installation and cleanup purposes. You must also create matching registry blocks in ApplicationRegistry.wxs.  
   
-##### <a name="to-integrate-registry-entries-into-the-msi"></a>若要将集成到 MSI 的注册表项  
+##### <a name="to-integrate-registry-entries-into-the-msi"></a>To integrate registry entries into the MSI  
   
-1. 在中**外壳自定义设置**文件夹中，打开*ProjectName*。 地区  
+1. In the **Shell Customization** folder, open *ProjectName*.reg.  
   
-2. $RootFolder$ 令牌的所有实例都替换为目标安装目录的路径。  
+2. Replace all instances of the $RootFolder$ token with the path of the target installation directory.  
   
-3. 添加应用程序所需的任何其他注册表项。  
+3. Add any other registry entries that your application requires.  
   
-4. 打开 ApplicationRegistry.wxs。  
+4. Open ApplicationRegistry.wxs.  
   
-5. 为在每个注册表条目*ProjectName*.reg，添加相应的注册表块，如以下示例所示。  
+5. For each registry entry in *ProjectName*.reg, add a corresponding registry block, as the following examples show.  
   
     |*ProjectName*.reg|ApplicationRegisty.wxs|  
     |-----------------------|----------------------------|  
     |[HKEY_CLASSES_ROOT\CLSID\\{bb431796-a179-4df7-b65d-c0df6bda7cc6}]<br /><br /> @="PhotoStudio DTE Object"|\<RegistryKey Id='DteClsidRegKey' Root='HKCR' Key='$(var.DteClsidRegKey)' Action='createAndRemoveOnUninstall'><br /><br /> \<RegistryValue Type='string' Name='@' Value='$(var.ShortProductName) DTE Object' /><br /><br /> \</RegistryKey>|  
     |[HKEY_CLASSES_ROOT\CLSID\\{bb431796-a179-4df7-b65d-c0df6bda7cc6}\LocalServer32]<br /><br /> @="$RootFolder$\PhotoStudio.exe"|\<RegistryKey Id='DteLocSrv32RegKey' Root='HKCR' Key='$(var.DteClsidRegKey)\LocalServer32' Action='createAndRemoveOnUninstall'><br /><br /> \<RegistryValue Type='string' Name='@' Value='[INSTALLDIR]$(var.ShortProductName).exe' /><br /><br /> \</RegistryKey>|  
   
-     在此示例中，Var.DteClsidRegKey 解析为最上面一行中的注册表项。 Var.ShortProductName 解析为`PhotoStudio`。  
+     In this example, Var.DteClsidRegKey resolves to the registry key in the top row. Var.ShortProductName resolves to `PhotoStudio`.  
   
-## <a name="creating-a-setup-bootstrapper"></a>创建安装程序引导程序  
- 仅当首次安装所有必备组件，将安装已完成的 MSI。 若要简化最终用户体验，创建收集并安装你的应用程序之前安装所有必备组件的安装程序。 若要确保成功安装，请执行以下操作：  
+## <a name="creating-a-setup-bootstrapper"></a>Creating a Setup Bootstrapper  
+ Your completed MSI will install only if all the prerequisites are installed first. To ease the end user experience, create a Setup program that gathers and installs all prerequisites before it installs your application. To ensure a successful installation, perform these actions:  
   
-- 强制执行由管理员安装。  
+- Enforce installation by Administrator.  
   
-- 检测是否安装了 Visual Studio Shell （独立）。  
+- Detect whether the Visual Studio Shell (Isolated) is installed.  
   
-- 按顺序运行一个或两个命令行程序安装程序。  
+- Run one or both Shell installers in order.  
   
-- 处理重新启动请求。  
+- Handle restart requests.  
   
-- 运行 MSI。  
+- Run your MSI.  
   
-### <a name="enforcing-installation-by-administrator"></a>强制执行由管理员安装  
- 此过程需启用安装程序来访问所需的目录，如 \Program Files\\。  
+### <a name="enforcing-installation-by-administrator"></a>Enforcing Installation by Administrator  
+ This procedure is required to enable the Setup program to access required directories such as \Program Files\\.  
   
-##### <a name="to-enforce-installation-by-administrator"></a>若要强制执行由管理员安装  
+##### <a name="to-enforce-installation-by-administrator"></a>To enforce installation by Administrator  
   
-1. 打开安装项目的快捷菜单，然后选择**属性**。  
+1. Open the shortcut menu for the Setup project, and then choose **Properties**.  
   
-2. 下**配置属性 / 链接器 / 清单文件**，请设置**UAC 执行级别**到**requireAdministrator**。  
+2. Under **Configuration Properties/Linker/Manifest File**, set **UAC Execution Level** to **requireAdministrator**.  
   
-     此属性将放到嵌入的清单文件，以管理员身份运行该程序所需的属性。  
+     This property puts the attribute that requires the program to be run as Administrator into the embedded manifest file.  
   
-### <a name="detecting-shell-installations"></a>检测 Shell 安装  
- 若要确定是否必须安装 Visual Studio Shell （独立），请首先确定是否已安装通过检查 HKLM\Software\Microsoft\DevDiv\vs\Servicing\ShellVersion\isoshell\LCID\Install 的注册表值。  
+### <a name="detecting-shell-installations"></a>Detecting Shell Installations  
+ To determine whether the Visual Studio Shell (Isolated) must be installed, first determine whether it's already installed by checking the registry value of HKLM\Software\Microsoft\DevDiv\vs\Servicing\ShellVersion\isoshell\LCID\Install.  
   
 > [!NOTE]
-> 由 Shell 检测块中 Product.wxs 还读取这些值。  
+> These values are also read by the Shell detection block in Product.wxs.  
   
- HKLM\Software\Microsoft\AppEnv\14.0\ShellFolder 指定的位置的已安装 Visual Studio Shell，并可以检查那里文件。  
+ HKLM\Software\Microsoft\AppEnv\14.0\ShellFolder specifies the location where the Visual Studio Shell was installed, and you can check for files there.  
   
- 有关如何检测 Shell 安装的示例，请参阅`GetProductDirFromReg`Utilities.cpp Shell 部署示例中的函数。  
+ For an example of how to detect a Shell installation, see the `GetProductDirFromReg` function of Utilities.cpp in the Shell Deployment Sample.  
   
- 如果一个或两个为包所需的 Visual Studio Shell 的计算机上未安装，必须将它们添加到要安装的组件列表。 有关示例，请参阅`ComponentsPage::OnInitDialog`ComponentsPage.cpp Shell 部署示例中的函数。  
+ If one or both of the Visual Studio Shells that your package requires isn't installed on the computer, you must add them to your list of components to install. For an example, see the `ComponentsPage::OnInitDialog` function of ComponentsPage.cpp in the Shell Deployment Sample.  
   
-### <a name="running-the-shell-installers"></a>运行命令行程序安装程序  
- 若要运行的命令行程序安装程序，请使用正确的命令行自变量调用 Visual Studio Shell 可再发行组件。 至少，必须使用命令行参数 **/norestart /q**并留意其中的返回代码，以确定应如何处理下一步。 下面的示例运行 Shell （独立） 可再发行组件。  
+### <a name="running-the-shell-installers"></a>Running the Shell Installers  
+ To run the Shell installers, call the Visual Studio Shell redistributables by using the correct command-line arguments. At a minimum, you must use the command-line arguments **/norestart /q** and watch for the return code to determine what should be done next. The following example runs the Shell (Isolated) redistributable.  
   
 ```  
 dwResult = ExecCmd("Vs_IsoShell.exe /norestart /q", TRUE);  
 ```  
   
-### <a name="running-the-shell-language-pack-installers"></a>运行 Shell 语言包安装程序  
- 如果您改为查找已安装的命令行程序或 shell，只需要一种语言包，则可以如以下示例所示安装语言包。  
+### <a name="running-the-shell-language-pack-installers"></a>Running the Shell Language Pack Installers  
+ If you instead find that the shell or shells have been installed and just need a language pack, you can install the language packs as the following example shows.  
   
 ```  
 dwResult = ExecCmd("Vs_IsoShellLP.exe /norestart /q", TRUE);  
   
 ```  
   
-### <a name="deciphering-return-values"></a>解密的返回值  
- 在某些操作系统上的 Visual Studio Shell （独立） 安装需要重新启动。 此条件可通过对调用的返回代码确定`ExecCmd`。  
+### <a name="deciphering-return-values"></a>Deciphering Return Values  
+ On some operating systems, the Visual Studio Shell (Isolated) installation will require a restart. This condition can be determined by the return code of the call to `ExecCmd`.  
   
 |返回值|描述|  
 |------------------|-----------------|  
-|ERROR_SUCCESS|安装已完成。 现在可以安装你的应用程序。|  
-|ERROR_SUCCESS_REBOOT_REQUIRED|安装已完成。 重新启动计算机后，你可以安装你的应用程序。|  
-|3015|安装正在进行中。 重新启动计算机才能继续安装。|  
+|ERROR_SUCCESS|Installation completed. You can now install your application.|  
+|ERROR_SUCCESS_REBOOT_REQUIRED|Installation completed. You can install your application after the computer has been restarted.|  
+|3015|Installation is in progress. A computer restart is required to continue the installation.|  
   
-### <a name="handling-restarts"></a>处理重新启动  
- 通过使用运行程序安装程序时 **/norestart**参数，指定它不会重新启动计算机，或者要求重新启动计算机。 但是，可能需要重新启动，并且必须确保您的安装程序将继续后重新启动计算机。  
+### <a name="handling-restarts"></a>Handling Restarts  
+ When you ran the Shell installer by using the **/norestart** argument, you specified that it wouldn't restart the computer or ask for the computer to be restarted. However, a restart might be required, and you must ensure that your installer continues after the computer is restarted.  
   
- 若要正确地处理重新启动，请确保安装程序的只有一个是组恢复和恢复进程会得到正确处理。  
+ To handle restarts correctly, make sure that only one Setup program is set to resume and that the resume process will be handled correctly.  
   
- 如果返回 ERROR_SUCCESS_REBOOT_REQUIRED 或 3015 时，你的代码在安装继续前应重新启动计算机。  
+ If either ERROR_SUCCESS_REBOOT_REQUIRED or 3015 is returned, your code should restart the computer before the installation continues.  
   
- 若要处理的重启，请执行以下操作：  
+ To handle restarts, perform these actions:  
   
-- 设置注册表以继续安装，Windows 启动时。  
+- Set the registry to resume installation when Windows starts.  
   
-- 执行双引导程序重新启动。  
+- Perform a double restart of the bootstrapper.  
   
-- 删除命令行程序安装程序 ResumeData 密钥。  
+- Delete the Shell installer ResumeData key.  
   
-- 重启 Windows。  
+- Restart Windows.  
   
-- 重置的 MSI 开始路径。  
+- Reset the start path of the MSI.  
   
-### <a name="setting-the-registry-to-resume-setup-when-windows-starts"></a>当 Windows 启动时恢复安装程序将注册表设置  
- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce\ 注册表项在使用管理权限的系统启动时执行，然后清除。 HKEY_CURRENT_USER 包含类似的密钥，但它以普通用户身份运行，并不适用于安装。 可以通过将一个字符串值放入 RunOnce 项调用您的安装程序继续安装。 但是，我们建议使用调用安装程序**重启**或类似的参数，以通知它正在恢复而不启动该应用程序。 此外可以包含参数来指示安装过程中，这可能需要多次重新启动的安装中特别有用的。  
+### <a name="setting-the-registry-to-resume-setup-when-windows-starts"></a>Setting the Registry to Resume Setup When Windows Starts  
+ The HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce\ registry key executes at system startup with administrative permissions and then is erased. HKEY_CURRENT_USER contains a similar key, but it runs as a normal user and isn't appropriate for installations. You can resume installation by putting a string value in the RunOnce key that calls your installer. However, we recommend that you call the installer by using a **/restart** or similar parameter to notify the application that it's resuming instead of starting. You can also include parameters to indicate where you are in the installation process, which is especially useful in installations that may require multiple restarts.  
   
- 下面的示例显示了用于恢复安装 RunOnce 注册表项值。  
+ The following example shows a RunOnce registry key value for resuming an installation.  
   
  `"c:\MyAppInstaller.exe /restart /SomeOtherDataFlag"`  
   
-### <a name="installing-double-restart-of-bootstrapper"></a>安装双引导程序重新启动  
- 如果直接从 RunOnce 使用安装程序，则在桌面上不能完全加载。 若要使完整的用户界面，必须创建另一个执行安装程序并结束 RunOnce 实例。  
+### <a name="installing-double-restart-of-bootstrapper"></a>Installing Double Restart of Bootstrapper  
+ If Setup is used directly from RunOnce, the desktop won't be able to load completely. To make the full user interface available, you must create another execution of Setup and end the RunOnce instance.  
   
- 必须重新执行安装程序，以便获取正确的权限，并必须为其提供足够的信息来了解您停止的位置之前重新启动，如以下示例所示。  
+ You must re-execute the Setup program so that it obtains the correct permissions, and you must give it enough information to know where you stopped before the restart, as the following example shows.  
   
 ```  
 if (_cmdLineInfo.IsRestart())  
@@ -284,16 +284,16 @@ if (_cmdLineInfo.IsRestart())
   
 ```  
   
-### <a name="deleting-the-shell-installer-resumedata-key"></a>正在删除命令行程序安装程序 ResumeData 密钥  
- 程序安装程序设置 HKLM\Software\Microsoft\VisualStudio\14.0\Setup\ResumeData 注册表项与要重启后继续运行安装程序数据。 由于应用程序时，不程序安装程序，正在继续，删除该注册表项，如以下示例所示。  
+### <a name="deleting-the-shell-installer-resumedata-key"></a>Deleting the Shell Installer ResumeData Key  
+ The Shell installer sets the HKLM\Software\Microsoft\VisualStudio\14.0\Setup\ResumeData registry key with data to resume Setup after restart. Because your application, not the Shell installer, is resuming, delete that registry key, as the following example shows.  
   
 ```  
 CString resumeSetupPath(MAKEINTRESOURCE("SOFTWARE\\Microsoft\\VisualStudio\\14.0\\Setup\\ResumeData"));  
 RegDeleteKey(HKEY_LOCAL_MACHINE, resumeSetupPath);  
 ```  
   
-### <a name="restarting-windows"></a>正在重启 Windows  
- 设置必需的注册表项后，可以重新启动 Windows。 下面的示例调用不同的 Windows 操作系统的重新启动命令。  
+### <a name="restarting-windows"></a>Restarting Windows  
+ After you set the required registry keys, you can restart Windows. The following example invokes the restart commands for different Windows operating systems.  
   
 ```  
 OSVERSIONINFO ov;  
@@ -330,8 +330,8 @@ catch(...)
   
 ```  
   
-### <a name="resetting-the-start-path-of-msi"></a>重置 MSI 起始的路径  
- 重新启动之前, 的当前目录是你的安装程序的位置，但是，重启后，位置将成为 system32 目录。 如以下示例所示，安装程序应重置之前每个 MSI 调用时，在当前目录。  
+### <a name="resetting-the-start-path-of-msi"></a>Resetting the Start Path of MSI  
+ Before restart, the current directory is the location of your Setup program but, after restart, the location becomes the system32 directory. Your Setup program should reset the current directory before each MSI call, as the following example shows.  
   
 ```  
 CString GetSetupPath()  
@@ -350,8 +350,8 @@ CString GetSetupPath()
   
 ```  
   
-### <a name="running-the-application-msi"></a>运行应用程序 MSI  
- Visual Studio Shell 安装程序将返回 ERROR_SUCCESS 后，你可以为应用程序运行 MSI。 因为您的安装程序会向用户界面，在静默模式下启动 MSI (**/q**) 和使用日志记录 (**/L**)，如下面的示例所示。  
+### <a name="running-the-application-msi"></a>Running the Application MSI  
+ After the Visual Studio Shell installer returns ERROR_SUCCESS, you can run the MSI for your application. Because your Setup program is providing the user interface, start your MSI in quiet mode ( **/q**) and with logging ( **/L**), as the following example shows.  
   
 ```cpp#  
 TCHAR temp[MAX_PATH];  

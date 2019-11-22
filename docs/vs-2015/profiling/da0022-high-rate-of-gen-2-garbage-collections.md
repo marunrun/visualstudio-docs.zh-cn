@@ -13,21 +13,21 @@ caps.latest.revision: 13
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 820d74a9dced29dc237c4bf182419abcb7d503b3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 067544e6b97e2709ed217ae0232771e833800e52
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68194928"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300126"
 ---
-# <a name="da0022-high-rate-of-gen-2-garbage-collections"></a>DA0022：第 2 代垃圾回收率高
+# <a name="da0022-high-rate-of-gen-2-garbage-collections"></a>DA0022: 第 2 代垃圾回收的速率很高
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-规则 Id |DA0022 |  
-|类别 |。NET Framework 使用情况 |  
-|分析方法 |所有 |  
-|消息 |没有第 2 代垃圾回收的发生率非常高。 按设计来说，如果分配了大部分程序的数据结构且其保留时间较长，那么这通常并不是问题。 但是，如果此行为不在计划内，则表示应用程序可能锁定了对象。 如果不确定，可以收集 .NET 内存分配数据和对象生存期信息，便于了解应用程序使用的内存分配模式。|  
-|规则类型 |警告 |  
+Rule Id|DA0022|  
+|Category|.NET Framework Usage|  
+|Profiling method|All|  
+|Message|There is a fairly high rate of Gen 2 garbage collections occurring. 按设计来说，如果分配了大部分程序的数据结构且其保留时间较长，那么这通常并不是问题。 但是，如果此行为不在计划内，则表示应用程序可能锁定了对象。 如果不确定，可以收集 .NET 内存分配数据和对象生存期信息，便于了解应用程序使用的内存分配模式。|  
+|Rule type|Warning|  
   
  使用采样法、.NET 内存或资源争用方法进行分析时，必须收集至少 10 个样本才能触发此规则。  
   
@@ -50,4 +50,4 @@ ms.locfileid: "68194928"
   
  若要了解应用程序的托管内存使用模式，请运行 .NET 内存分配分析再次进行分析，并选择对象生存期分析选项。  
   
- 有关如何提高垃圾回收性能的信息，请参阅 Microsoft 网站上的 [Garbage Collector Basics and Performance Hints](http://go.microsoft.com/fwlink/?LinkId=148226)（垃圾回收器基础知识和性能提示）。 有关自动垃圾回收的开销的信息，请参阅[大型对象堆揭密](http://go.microsoft.com/fwlink/?LinkId=177836)。
+ 有关如何提高垃圾回收性能的信息，请参阅 Microsoft 网站上的 [Garbage Collector Basics and Performance Hints](https://go.microsoft.com/fwlink/?LinkId=148226)（垃圾回收器基础知识和性能提示）。 有关自动垃圾回收的开销的信息，请参阅[大型对象堆揭密](https://go.microsoft.com/fwlink/?LinkId=177836)。

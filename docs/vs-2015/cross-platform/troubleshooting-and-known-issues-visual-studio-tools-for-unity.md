@@ -9,12 +9,12 @@ caps.latest.revision: 7
 author: conceptdev
 ms.author: crdun
 manager: jillfra
-ms.openlocfilehash: 6e1b34cbc2497bd70f65021c83db4f59480519f1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ad085cc6c41714a551fbb344274e6d0f164ab67e
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62573201"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297663"
 ---
 # <a name="troubleshooting-and-known-issues-visual-studio-tools-for-unity"></a>疑难解答和已知问题 (Visual Studio Tools for Unity)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "62573201"
   
 2. 将 Visual Studio Tools for Unity 包导入 Unity 项目中。 有关如何导入 VSTU 包的信息，请参阅 [入门](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md) 页面上的“配置 Visual Studio Tools for Unity”。  
   
-3. 生成新的解决方案和项目文件。 如果想要立即生成它们，则在 Unity 编辑器中的主菜单上，选择“Visual Studio Tools” 、“生成项目文件” 。 或者如果愿意，可以跳过此步骤；当选择“Visual Studio Tools” 、“在 Visual Studio 中打开” 时，Visual Studio Tools for Unity 会自动生成新的文件。  
+3. 生成新的解决方案和项目文件。 如果想要立即生成它们，则在 Unity 编辑器中的主菜单上，选择“Visual Studio Tools”、“生成项目文件”。 或者如果愿意，可以跳过此步骤；当选择“Visual Studio Tools”、“在 Visual Studio 中打开”时，Visual Studio Tools for Unity 会自动生成新的文件。  
   
 ### <a name="visual-studio-wont-load-the-solution-that-visual-studio-tools-for-unity-created"></a>Visual Studio 不会加载 Visual Studio Tools for Unity 创建的解决方案  
- 有关详细信息，请参阅 [此 stackoverflow 问题的答案](http://stackoverflow.com/a/24035907/36702)。  
+ 有关详细信息，请参阅 [此 stackoverflow 问题的答案](https://stackoverflow.com/questions/20086755/unityvs-visual-studio-can-not-open/24035907#24035907)。  
   
 ### <a name="on-windows-8-visual-studio-asks-to-download-the-unity-target-framework"></a>在 Windows 8 上，Visual Studio 会要求下载 Unity 目标框架  
  UnityVS 要求安装默认情况下 Windows 8 上未安装的 .net framework 3.5。 若要解决此问题，请按照说明下载并安装 .net framework 3.5。  
@@ -60,18 +60,18 @@ ms.locfileid: "62573201"
   
 1. 打开 Visual Studio 的新实例。  
   
-2. 打开“附加到进程”对话框。 在 Visual Studio 的新实例中的主菜单上，选择“调试” 、“附加到进程” 。  
+2. 打开“附加到进程”对话框。 在 Visual Studio 的新实例中的主菜单上，选择“调试”、“附加到进程”。  
   
-3. 将调试器附加到 Visual Studio 的已冻结的实例。 在“附加到进程”  对话框中，从“可用进程”  表中选择 Visual Studio 的已冻结实例，然后选择“附加”  按钮。  
+3. 将调试器附加到 Visual Studio 的已冻结的实例。 在“附加到进程” 对话框中，从“可用进程” 表中选择 Visual Studio 的已冻结实例，然后选择“附加” 按钮。  
   
-4. 暂停调试器。 在 Visual Studio 的新实例中的主菜单上，选择“调试” 、“全部中断”  或仅按 **“Ctrl + Alt + Break”**。  
+4. 暂停调试器。 在 Visual Studio 的新实例中的主菜单上，选择“调试”、“全部中断” 或仅按 **“Ctrl + Alt + Break”** 。  
   
-5. 创建线程转储。 在命令窗口中，输入以下命令并按“Enter” 。  
+5. 创建线程转储。 在命令窗口中，输入以下命令并按“Enter”。  
   
    ```powershell  
    Debug.ListCallStack /AllThreads /ShowExternalCode  
    ```  
   
-    你可能首先需要使“命令”  窗口可见。 在 Visual Studio 中的主菜单上，选择“视图” 、“其他窗口” 、“命令窗口” 。  
+    你可能首先需要使“命令” 窗口可见。 在 Visual Studio 中的主菜单上，选择“视图”、“其他窗口”、“命令窗口”。  
   
 6. 最后，将线程转储以及 Visual Studio 冻结时你正在执行的操作的说明一起发送到 [vstusp@microsoft.com](mailto:vstusp@microsoft.com)。

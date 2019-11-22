@@ -1,5 +1,5 @@
 ---
-title: 向 UML 模型元素添加构造型 |Microsoft Docs
+title: Add stereotypes to UML model elements | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -11,12 +11,12 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 838f2d4d01372cf99d898c4e0d6584bb838c4f9b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 67d489b1446e7205d72b53e160a8c7ca87f216d7
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655280"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74292338"
 ---
 # <a name="add-stereotypes-to-uml-model-elements"></a>向 UML 模型元素添加构造型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,35 +29,35 @@ ms.locfileid: "72655280"
 
 ### <a name="to-link-a-profile-to-a-model-or-a-package"></a>将配置文件链接到模型或包
 
-1. 打开 " **UML 模型资源管理器**"。 在 "**体系结构**" 菜单上，指向 "**窗口**"，再单击 " **UML 模型资源管理器**"。
+1. Open **UML Model Explorer**. On the **Architecture** menu, point to **Windows**, and then click **UML Model Explorer**.
 
 2. 找到包含要将配置文件中的构造型应用到的所有元素的包或模型。
 
-3. 右键单击包或模型，然后单击 "**属性**"。
+3. Right-click the package or the model and then click **Properties**.
 
-4. 在 "**属性**" 窗口中，将 "**配置文件**" 属性设置为包含要使用的构造型的配置文件。
+4. In the **Properties** window, set the **Profiles** property to the profiles that contain the stereotypes you want to use.
 
      配置文件的构造型会立即在该模型或包中的所有元素上可用。 如果包中包含其他包，构造型还会在这些包内的元素上可用。
 
 ### <a name="to-add-stereotypes-to-model-elements-or-relationships"></a>向模型元素或关系添加构造型
 
-1. 在关系图或**UML 模型资源管理器**中右键单击模型元素或关系，然后单击 "**属性**"。
+1. Right-click the model element or relationship, either on a diagram or in **UML Model Explorer**, and then click **Properties**.
 
     > [!NOTE]
     > 要向多个元素添加相同构造型，可以选择多个元素，然后右键单击其中之一。
 
-2. 单击 "**构造型**" 属性，并选择要应用的构造型。
+2. Click the **Stereotypes** property and select the stereotypes that you want to apply.
 
      对于大多数类型的元素和关系，所选择的构造型在模型元素的 «尖括号» 内显示。
 
     > [!NOTE]
-    > 如果看不到 "**构造型**" 属性，或者如果所需的构造型没有出现，请验证模型元素是否在已链接适当配置文件的包或模型中。
+    > If you cannot see the **Stereotypes** property, or if the stereotype you want does not appear, verify that the model element is inside a package or a model to which the appropriate profile has been linked.
 
-3. 某些构造型允许你设置模型元素的其他属性的值。 若要查看这些属性，请展开 "**构造型**" 属性。
+3. 某些构造型允许你设置模型元素的其他属性的值。 To see these properties, expand the **Stereotypes** property.
 
 ### <a name="to-create-model-elements-within-a-package"></a>在包中创建模型元素
 
-1. 在 UML 类图或**Uml 模型资源管理器**中创建包。
+1. Create a package either in a UML Class Diagram, or in **UML Model Explorer**.
 
 2. 使用以下方式之一向包中添加模型元素：
 
@@ -65,7 +65,7 @@ ms.locfileid: "72655280"
 
          \- 或 -
 
-    - 在 "UML 模型资源管理器" 中，右键单击包，指向 "**添加**"，然后单击元素类型。
+    - In UML Model Explorer, right-click the package, point to **Add**, and then click an element type.
 
          \- 或 -
 
@@ -75,11 +75,12 @@ ms.locfileid: "72655280"
 
     - 将关系图链接到包，然后在关系图中创建元素。
 
-         为此，请右键单击关系图的空白部分，然后单击 "**属性**"。 在 "**属性**" 窗口中，将 "**链接的包**" 设置为所需的包。
+         To do this, right-click a blank part of the diagram and then click **Properties**. In the **Properties** window, set **Linked Package** to the package you want.
 
          在关系图中创建的所有新元素都将在该包中定义。
 
          只能对某些类型的关系图执行此操作。
 
 ## <a name="see-also"></a>请参阅
- [定义用于扩展 UML 的配置文件](../modeling/define-a-profile-to-extend-uml.md)[使用配置文件和构造型自定义模型](../modeling/customize-your-model-with-profiles-and-stereotypes.md)通过构造型[定义包和命名空间](../modeling/define-packages-and-namespaces.md) [Color UML 类](http://code.msdn.microsoft.com/UML-Color-Classes-by-07de2b70)
+ [Define a profile to extend UML](../modeling/define-a-profile-to-extend-uml.md) [Customize your model with profiles and stereotypes](../modeling/customize-your-model-with-profiles-and-stereotypes.md) [Define packages and namespaces](../modeling/define-packages-and-namespaces.md)
+

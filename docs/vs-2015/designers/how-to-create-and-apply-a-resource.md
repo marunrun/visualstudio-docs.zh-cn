@@ -12,17 +12,17 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0570dcc4b3cc79f2c882d5ddd4f10dc79a21332b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ab048fe69ca89086e9811e5277dccb86aeee6194
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72664530"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300864"
 ---
 # <a name="how-to-create-and-apply-a-resource"></a>如何创建和应用资源
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-XAML 设计器中元素的样式和模板存储在称作资源的可重用实体中。 样式可设置元素属性并重用这些设置以便多个元素实现一致的外观。 [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.controltemplate.aspx) 定义控件的外观，并且可作为资源应用。 有关详细信息，请参阅[快速入门：设置控件的样式](http://go.microsoft.com/fwlink/?LinkID=248239)和[快速入门：控件模板](http://go.microsoft.com/fwlink/?LinkID=247982)。
+XAML 设计器中元素的样式和模板存储在称作资源的可重用实体中。 样式可设置元素属性并重用这些设置以便多个元素实现一致的外观。 [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.controltemplate.aspx) 定义控件的外观，并且可作为资源应用。 有关详细信息，请参阅[快速入门：设置控件的样式](https://go.microsoft.com/fwlink/?LinkID=248239)和[快速入门：控件模板](https://go.microsoft.com/fwlink/?LinkID=247982)。
 
  每当从现有属性、[样式](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.aspx)或 `ControlTemplate` 创建新资源时，可在“创建资源”对话框中将资源定义为应用程序级别、文档级别或元素级别。 这些级别决定了可使用资源的位置。 例如，如果定义元素级别的资源，则该资源只能应用于在其上创建资源的元素。 还可以选择将资源存储在资源字典中，资源字典是可在另一个项目中再次使用的单独文件。
 
@@ -34,7 +34,7 @@ XAML 设计器中元素的样式和模板存储在称作资源的可重用实体
 
      将出现用于创建资源的相应对话框。 当从画笔创建资源时，就会出现此对话框：
 
-     !["创建资源" 对话框](../designers/media/xaml-create-resource.png "xaml_create_resource")
+     ![Create Resource Dialog Box](../designers/media/xaml-create-resource.png "xaml_create_resource")
 
 3. 在“名称(关键字)”框中，输入关键字名称。 这是当希望其他元素可以引用该资源时，可以使用的名称。
 

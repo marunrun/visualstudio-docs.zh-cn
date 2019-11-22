@@ -9,12 +9,12 @@ caps.latest.revision: 26
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: aaa522efe5cb69dd9334a2cc3db7fc2846b1af7a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c2c1b09d88de938ee4bc93b69b50d53c0d39006f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646900"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299998"
 ---
 # <a name="step-8-write-code-for-the-show-a-picture-button-event-handler"></a>步骤 8：为“显示图片”按钮事件处理程序编写代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,17 +27,17 @@ ms.locfileid: "72646900"
 
   IDE 提供一种名为 IntelliSense 的强大工具，可帮助您编写代码。 当您输入代码时，IDE 会打开一个框，其中显示与您所输入的部分单词对应的完整建议内容。 它尝试确定您接下来要做的事情，并自动跳到您从列表中选择的最后一项。 您可以使用向上键或向下键在列表中进行移动，也可以继续键入字母以缩小选择范围。 当您看到所需的选项时，请选择 Tab 键以将其选中。 或者，也可以忽略不需要的建议。
 
-  ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[教程1：在 Visual Basic 中创建图片查看器-视频 4](http://go.microsoft.com/fwlink/?LinkId=205215)或[教程1：在视频4中C#创建图片查看器](http://go.microsoft.com/fwlink/?LinkId=205203)。 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
+  ![link to video](../data-tools/media/playvideo.gif "PlayVideo")For a video version of this topic, see [Tutorial 1: Create a Picture Viewer in Visual Basic - Video 4](https://go.microsoft.com/fwlink/?LinkId=205215) or [Tutorial 1: Create a Picture Viewer in C# - Video 4](https://go.microsoft.com/fwlink/?LinkId=205203). 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
 
 ### <a name="to-write-code-for-the-show-a-picture-button-event-handler"></a>为“显示图片”按钮事件处理程序编写代码
 
 1. 转到“Windows 窗体设计器”，并双击“显示图片”按钮。 IDE 将立即转到代码设计器，并将光标移动到您之前添加的 `showButton_Click()` 方法内。
 
-2. 在两个大括号 { } 之间的空行上键入一个 `i`。 （在 Visual Basic 中，在 "私有 Sub ..." 和 End Sub。）此时将打开一个**IntelliSense**窗口，如下图所示。
+2. 在两个大括号 { } 之间的空行上键入一个 `i`。 (In Visual Basic, type on the empty line between Private Sub… and End Sub.) An **IntelliSense** window opens, as shown in the following picture.
 
-     ![带有 visual&#35; C 代码的 Intellisense](../ide/media/express-ifintellisense.png "Express_IfIntellisense")和 visual code C#
+     ![IntelliSense with Visual C&#35; code](../ide/media/express-ifintellisense.png "Express_IfIntellisense") IntelliSense with Visual C# code
 
-3. “IntelliSense”窗口应该会突出显示“if”一词。 （如果没有，请输入小写 `f`，它将为。）请注意 " **IntelliSense** " 窗口旁的小*工具提示*框如何显示，其中包含说明 " **if 语句的代码片段**"。 （在 Visual Basic 中，工具提示还指明这是一个代码段，但使用的措辞略有不同。）您希望使用该代码片段，因此请选择 TAB 键以将**其插入到**您的代码中。 然后再次选择 Tab 键即可使用“if”代码片段。 （如果选择其他位置后“IntelliSense”窗口消失，那么请按 Backspace 删除“i”并重新键入它，此时“IntelliSense”窗口将再次打开。）
+3. “IntelliSense”窗口应该会突出显示“if”一词。 (If not, enter a lowercase `f`, and it will.) Notice how a little *tooltip* box next to the **IntelliSense** window appears with the description, **Code snippet for if statement**. (In Visual Basic, the tooltip also states that this is a snippet, but with slightly different wording.) You want to use that snippet, so choose the TAB key to insert **if** into your code. 然后再次选择 Tab 键即可使用“if”代码片段。 （如果选择其他位置后“IntelliSense”窗口消失，那么请按 Backspace 删除“i”并重新键入它，此时“IntelliSense”窗口将再次打开。）
 
      ![Visual C# 代码](../ide/media/express-highlighttrue.png "Express_HighlightTrue") Visual C# 代码
 
@@ -49,16 +49,16 @@ ms.locfileid: "72646900"
 
          若要了解有关 `OpenFileDialog` 的详细信息，请参阅 [OpenFileDialog](https://msdn.microsoft.com/library/system.windows.forms.openfiledialog.aspx)。
 
-    3. 键入一个句点（`.`）（许多编程人员将这一点称为点。）由于你在**openFileDialog1**后键入了一个点，因此将打开一个**IntelliSense**窗口，其中填充了**OpenFileDialog**组件的所有属性和方法。 在 Windows 窗体设计器中选择该组件时，“属性”窗口中将显示相同的属性。 您还可选择将告知组件要执行的操作（例如打开对话框）的方法。
+    3. Type a period (`.`) (Many programmers call this a dot.) Because you typed a dot right after **openFileDialog1**, an **IntelliSense** window opens, filled in with all of the **OpenFileDialog** component's properties and methods. 在 Windows 窗体设计器中选择该组件时，“属性”窗口中将显示相同的属性。 您还可选择将告知组件要执行的操作（例如打开对话框）的方法。
 
         > [!NOTE]
         > “IntelliSense”窗口可以同时显示属性和方法。 若要确定所显示的内容，请查看“IntelliSense”窗口中每一项左侧的图标。 您将看到每种方法旁都有一个块型图片，每个属性旁都有一个扳手图片。 每个事件旁边还会有一个闪电形图标。 这些图片如下所示。
 
-         ![方法图标](../ide/media/express-iconmethod.png "Express_IconMethod")方法图标
+         ![Method icon](../ide/media/express-iconmethod.png "Express_IconMethod") Method icon
 
-         ![属性图标](../ide/media/express-iconproperty.png "Express_IconProperty")属性图标
+         ![Property icon](../ide/media/express-iconproperty.png "Express_IconProperty") Property icon
 
-         ![事件图标](../ide/media/express-iconevent.png "Express_IconEvent")事件图标
+         ![Event icon](../ide/media/express-iconevent.png "Express_IconEvent") Event icon
 
     4. 开始键入 `ShowDialog`（是否大写对 IntelliSense 来说不重要）。 `ShowDialog()` 方法将显示“打开文件”对话框。 在窗口突出显示“ShowDialog”之后，请选择 Tab 键。 也可突出显示“ShowDialog”并选择 F1 键来获取有关它的帮助。
 

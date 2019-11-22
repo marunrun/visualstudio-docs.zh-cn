@@ -8,12 +8,12 @@ ms.assetid: 6b0f72a4-70ca-4e55-b236-2ea1034fd8a7
 caps.latest.revision: 32
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a48c01203d2e951e917482de3c0d9c2bec29ae01
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4e8e167f42a2f00553f1462db058e1b4e6d81b0f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660569"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302558"
 ---
 # <a name="extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel"></a>扩展编码的 UI 测试和操作录制以支持 Microsoft Excel
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "72660569"
 
   本节提供编码的 UI 测试扩展，该扩展可以录制和播放 Excel 工作表的测试。 本节和针对开发人员（该开发人员只想创建一个这样的扩展）的代码注释中对扩展的每个部分进行了介绍。
 
-  ![UI 测试体系结构](../test/media/ui-testarch.png "UI_TestArch")体系结构概述
+  ![UI Test Architecture](../test/media/ui-testarch.png "UI_TestArch") Architecture Overview
 
 ## <a name="download-the-sample"></a>下载示例
  该示例由 `CodedUIExtensibilitySample.sln` 解决方案中的四个项目组成：
@@ -39,7 +39,7 @@ ms.locfileid: "72660569"
 
 - SampleTestProject
 
-  从此[博客文章](http://go.microsoft.com/fwlink/?LinkID=185592)获取示例。
+  从此[博客文章](https://go.microsoft.com/fwlink/?LinkID=185592)获取示例。
 
 > [!NOTE]
 > 该示例旨在与 Microsoft Excel 2010 配合使用。 该示例可以与其他版本的 Microsoft Excel 一起使用，但目前不支持如此。

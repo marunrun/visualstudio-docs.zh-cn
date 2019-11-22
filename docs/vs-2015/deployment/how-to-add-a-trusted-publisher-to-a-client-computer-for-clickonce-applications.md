@@ -1,5 +1,5 @@
 ---
-title: 如何：为 ClickOnce 应用程序添加到客户端计算机的受信任的发行者 |Microsoft Docs
+title: 'How to: Add a Trusted Publisher to a Client Computer for ClickOnce Applications | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -16,14 +16,14 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 7129d8de5e37b24304b7f1cbf862e4cd299cdf72
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 9b535737860b846aadecb6b73b4bd26659db37b1
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63442208"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74289711"
 ---
-# <a name="how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications"></a>如何：为 ClickOnce 应用程序添加到客户端计算机的受信任的发行者
+# <a name="how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications"></a>如何：为 ClickOnce 应用程序向客户端计算机添加一个受信任的发行者
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 借助受信任的应用程序部署，可以配置客户端计算机，以便 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序在不提示用户的情况下以更高信任级别运行。 下面的过程演示如何使用命令行工具 CertMgr.exe 将发布者的证书添加到客户端计算机上的“受信任的发布者”存储。  
@@ -41,7 +41,7 @@ ms.locfileid: "63442208"
   
 1. 从 CA 获取数字证书。  
   
-2. 将该证书导出为 Base64 X.509 (.cer) 格式。 有关证书格式的详细信息，请参阅 [导出证书](http://go.microsoft.com/fwlink/?LinkId=164793)。  
+2. 将该证书导出为 Base64 X.509 (.cer) 格式。 有关证书格式的详细信息，请参阅 [导出证书](https://go.microsoft.com/fwlink/?LinkId=164793)。  
   
 3. 从客户端计算机上的命令提示符处，运行以下命令：  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63442208"
   
 1. 从 CA 获取数字证书。  
   
-2. 将该证书导出为 Base64 X.509 (.cer) 格式。 有关证书格式的详细信息，请参阅 [导出证书](http://go.microsoft.com/fwlink/?LinkId=164793)。  
+2. 将该证书导出为 Base64 X.509 (.cer) 格式。 有关证书格式的详细信息，请参阅 [导出证书](https://go.microsoft.com/fwlink/?LinkId=164793)。  
   
 3. 从客户端计算机上的命令提示符处，运行以下命令：  
   
@@ -68,7 +68,7 @@ ms.locfileid: "63442208"
  [如何：启用 ClickOnce 安全设置](../deployment/how-to-enable-clickonce-security-settings.md)   
  [如何：为 ClickOnce 应用程序设置安全区域](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)   
  [如何：设置 ClickOnce 应用程序的自定义权限](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
- [如何：调试具有受限权限的 ClickOnce 应用程序](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
- [如何：为 ClickOnce 应用程序添加到客户端计算机的受信任的发行者](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)   
- [如何：应用程序和部署清单重新签名](../deployment/how-to-re-sign-application-and-deployment-manifests.md)   
+ [如何：使用受限权限对 ClickOnce 应用程序进行调试](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
+ [如何：为 ClickOnce 应用程序向客户端计算机添加一个受信任的发行者](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)   
+ [How to: Re-sign Application and Deployment Manifests](../deployment/how-to-re-sign-application-and-deployment-manifests.md)   
  [如何：配置 ClickOnce 信任提示行为](../deployment/how-to-configure-the-clickonce-trust-prompt-behavior.md)

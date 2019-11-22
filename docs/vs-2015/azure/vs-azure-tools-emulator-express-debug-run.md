@@ -10,14 +10,14 @@ ms.date: 03/06/2017
 ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
-ms.openlocfilehash: b7e1d5e63a93f8fe1f67de920a1ccf7966d97ed6
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: d89762511e88e296a51c781c6a403c2dd227ed4f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263773"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74293256"
 ---
-# <a name="using-emulator-express-to-run-and-debug-an-azure-cloud-service-on-a-local-machine"></a>使用 Emulator Express 在本地计算机上运行和调试 Azure 云服务
+# <a name="using-emulator-express-to-run-and-debug-an-azure-cloud-service-on-a-local-machine"></a>使用快速仿真器在本地计算机上运行和调试 Azure 云服务
 通过使用 Emulator Express，可以测试和调试云服务，而不需要以管理员身份运行 Visual Studio。 可以将项目设置指定为根据云服务的要求使用 Emulator Express 或完整版模拟器。 有关完整模拟器的详细信息，请参阅 [Run an Azure Application in the Compute Emulator](/azure/storage/common/storage-use-emulator)（在计算模拟器中运行 Azure 应用程序）。
 
 ## <a name="using-emulator-express-in-visual-studio"></a>在 Visual Studio 中使用 Emulator Express
@@ -25,15 +25,15 @@ ms.locfileid: "66263773"
 
 1. 在 Visual Studio 中创建或打开 Azure 云服务项目。
 
-1. 在“解决方案资源管理器”中右键单击项目，并从上下文菜单中选择“属性”。  
+1. 在“解决方案资源管理器”中右键单击项目，并从上下文菜单中选择“属性”。
 
-1. 在项目属性页中，选择“Web”  选项卡。
+1. 在项目属性页中，选择“Web”选项卡。
 
     ![Azure 云服务项目的的属性](./media/vs-azure-tools-emulator-express-debug-run/web-properties.png)
 
-1. 在“本地开发服务器”下，选择“使用 IIS Express”选项。  
+1. 在“本地开发服务器”下，选择“使用 IIS Express”选项。
 
-1. 在“模拟器”  下，选择“使用 Emulator Express”  。
+1. 在“模拟器”下，选择“使用 Emulator Express”。
    
 1. 若要启动 Emulator Express，请在命令提示符处运行以下命令： 
 
@@ -47,7 +47,7 @@ ms.locfileid: "66263773"
 - Emulator Express 与 IIS Web 服务器不兼容。
 - 云服务可以包含多个角色，但每个角色只能有一个实例。
 - 无法访问 1000 以下的端口号。 如果所用的某个身份验证提供程序通常使用低于 1000 的端口，则可能需要将此值更改为 1000 以上的端口号。
-- 适用于 Azure 计算模拟器的任何限制也适用于 Emulator Express。 例如，每个部署的角色实例数不能超过 50 个。 有关 Azure 计算模拟器的详细信息，请参阅[在计算模拟器中运行 Azure 应用程序](http://go.microsoft.com/fwlink/p/?LinkId=623050)。
+- 适用于 Azure 计算模拟器的任何限制也适用于 Emulator Express。 例如，每个部署的角色实例数不能超过 50 个。 有关 Azure 计算模拟器的详细信息，请参阅[在计算模拟器中运行 Azure 应用程序](https://go.microsoft.com/fwlink/p/?LinkId=623050)。
 
 ## <a name="next-steps"></a>后续步骤
 [调试 Azure 云服务](vs-azure-tools-debugging-cloud-services-overview.md)

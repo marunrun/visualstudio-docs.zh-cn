@@ -1,5 +1,5 @@
 ---
-title: 演练：在 WPF 应用程序中显示相关数据 |Microsoft Docs
+title: 'Walkthrough: Displaying Related Data in a WPF Application | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -19,25 +19,25 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 robots: noindex,nofollow
-ms.openlocfilehash: c44b949daabf587dbca5d8a5d1d932afca2c1f9c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 787be52eeb546d2ab184a172464862d10cb43288
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72602470"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299584"
 ---
 # <a name="walkthrough-displaying-related-data-in-a-wpf-application"></a>演练：在 WPF 应用程序中显示相关数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在本演练中，您将创建一个 WPF 应用程序，用于显示具有父/子关系的数据库表中的数据。 数据封装在实体数据模型中的实体内。 父实体包含一组订单的概述信息。 此实体的每个属性都绑定到应用程序中的另一个控件。 子实体包含每个订单的详细信息。 此数据集绑定到 <xref:System.Windows.Controls.DataGrid> 控件。
+In this walkthrough, you will create a WPF application that displays data from database tables that have a parent/child relationship. The data is encapsulated in entities in an Entity Data Model. The parent entity contains overview information for a set of orders. Each property of this entity is bound to a different control in the application. The child entity contains details for each order. This set of data is bound to a <xref:System.Windows.Controls.DataGrid> control.
 
  本演练阐释了以下任务：
 
-- 创建从 AdventureWorksLT 示例数据库中的数据生成的 WPF 应用程序和实体数据模型。
+- Creating a WPF application and an Entity Data Model that is generated from data in the AdventureWorksLT sample database.
 
-- 创建一组数据绑定控件，这些控件显示一组订单的概述信息。 通过将父实体从 "**数据源**" 窗口拖到**WPF 设计器**来创建控件。
+- Creating a set of data-bound controls that display overview information for a set of orders. You create the controls by dragging a parent entity from the **Data Sources** window to **the WPF Designer**.
 
-- 创建一个 <xref:System.Windows.Controls.DataGrid> 控件，该控件显示每个所选订单的相关详细信息。 您可以通过将子实体从 "**数据源**" 窗口拖到**WPF 设计器**中的窗口来创建控件。
+- Creating a <xref:System.Windows.Controls.DataGrid> control that displays related details for each selected order. You create the controls by dragging a child entity from the **Data Sources** window to a window in **the WPF designer**.
 
    [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
@@ -46,28 +46,28 @@ ms.locfileid: "72602470"
 
 - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
 
-- 对附加了 AdventureWorksLT 示例数据库的 SQL Server 或 SQL Server Express 的正在运行的实例的访问权限。 可以从[CodePlex](http://go.microsoft.com/fwlink/?linkid=87843)网站下载 AdventureWorksLT 数据库。
+- 对附加了 AdventureWorksLT 示例数据库的 SQL Server 或 SQL Server Express 的正在运行的实例的访问权限。 You can download the AdventureWorksLT database from the [CodePlex Web site](https://go.microsoft.com/fwlink/?linkid=87843).
 
   事先了解以下概念也很有用，但对于完成本演练并不是必需的：
 
-- 实体数据模型和 ADO.NET 实体框架。 有关详细信息，请参阅[实体框架概述](https://msdn.microsoft.com/library/a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0)。
+- 实体数据模型和 ADO.NET 实体框架。 For more information, see [Entity Framework Overview](https://msdn.microsoft.com/library/a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0).
 
-- 使用 WPF 设计器。 有关详细信息，请参阅[WPF 和 Silverlight 设计器概述](https://msdn.microsoft.com/570b7a5c-0c86-4326-a371-c9b63378fc62)。
+- 使用 WPF 设计器。 For more information, see [WPF and Silverlight Designer Overview](https://msdn.microsoft.com/570b7a5c-0c86-4326-a371-c9b63378fc62).
 
 - WPF 数据绑定。 有关详细信息，请参阅 [数据绑定概述](https://msdn.microsoft.com/library/c707c95f-7811-401d-956e-2fffd019a211)。
 
 ## <a name="creating-the-project"></a>创建项目
- 创建新的 WPF 项目以显示订单记录。
+ Create a new WPF project to display the order records.
 
-#### <a name="to-create-a-new-wpf-project"></a>创建新的 WPF 项目
+#### <a name="to-create-a-new-wpf-project"></a>To create a new WPF project
 
 1. 启动 Visual Studio。
 
 2. 在 **“文件”** 菜单上，指向 **“新建”** ，然后单击 **“项目”** 。
 
-3. 展开 **" C#视觉对象**" 或 " **Visual Basic**"，然后选择 " **Windows**"。
+3. Expand **Visual C#** or **Visual Basic**, and then select **Windows**.
 
-4. 请确保在对话框顶部的组合框中选择了 " **.NET Framework 4** "。 本演练中使用的 <xref:System.Windows.Controls.DataGrid> 控件仅在 .NET Framework 4 中可用。
+4. Make sure that **.NET Framework 4** is selected in the combo box at the top of the dialog box. The <xref:System.Windows.Controls.DataGrid> control that you use in this walkthrough is available only in the .NET Framework 4.
 
 5. 选择“WPF 应用程序”项目模板。
 
@@ -75,32 +75,32 @@ ms.locfileid: "72602470"
 
 7. 单击“确定”。
 
-     Visual Studio 将创建 `AdventureWorksOrdersViewer` 项目。
+     Visual Studio creates the `AdventureWorksOrdersViewer` project.
 
-## <a name="creating-an-entity-data-model-for-the-application"></a>为应用程序创建实体数据模型
- 必须先为应用程序定义数据模型并将此模型添加到“数据源”窗口中，然后才能创建数据绑定控件。 在本演练中，数据模型是实体数据模型。
+## <a name="creating-an-entity-data-model-for-the-application"></a>Creating an Entity Data Model for the Application
+ 必须先为应用程序定义数据模型并将此模型添加到“数据源”窗口中，然后才能创建数据绑定控件。 In this walkthrough, the data model is an Entity Data Model.
 
 #### <a name="to-create-an-entity-data-model"></a>创建实体数据模型
 
-1. 在 "**数据**" 菜单上，单击 "**添加新数据源**" 以打开 "**数据源配置向导**"。
+1. On the **Data** menu, click **Add New Data Source** to open the **Data Source Configuration Wizard**.
 
-2. 在 "**选择数据源类型**" 页上，单击 "**数据库**"，然后单击 "**下一步**"。
+2. On the **Choose a Data Source Type** page, click **Database**, and then click **Next**.
 
-3. 在 "**选择数据库模型**" 页上，单击 "**实体数据模型**"，然后单击 "**下一步**"。
+3. On the **Choose a Database Model** page, click **Entity Data Model**, and then click **Next**.
 
-4. 在 "**选择模型内容**" 页上，单击 "**从数据库生成**"，然后单击 "**下一步**"。
+4. On the **Choose Model Contents** page, click **Generate from database**, and then click **Next**.
 
-5. 在 "**选择你的数据连接**" 页上，执行下列操作之一：
+5. On the **Choose Your Data Connection** page, do one of the following:
 
    - 如果下拉列表中包含到 AdventureWorksLT 示例数据库的数据连接，请选择该连接。
 
       或
 
-   - 单击 "**新建连接**"，并创建与 AdventureWorksLT 数据库的连接。
+   - Click **New Connection** and create a connection to the AdventureWorksLT database.
 
-     确保选中 "将 app.config**中的实体连接设置另存为**" 选项，然后单击 "**下一步**"。
+     Make sure that the **Save entity connection settings in App.Config as** option is selected, and then click **Next**.
 
-6. 在 "**选择数据库对象**" 页上，展开 "**表**"，然后选择以下表：
+6. On the **Choose Your Database Objects** page, expand **Tables**, and then select the following tables:
 
    - **SalesOrderDetail**
 
@@ -110,24 +110,24 @@ ms.locfileid: "72602470"
 
 8. 生成项目。
 
-## <a name="creating-data-bound-controls-that-display-the-orders"></a>创建显示订单的数据绑定控件
- 通过将 `SalesOrderHeaders` 实体从 "**数据源**" 窗口拖到 WPF 设计器来创建显示订单记录的控件。
+## <a name="creating-data-bound-controls-that-display-the-orders"></a>Creating Data-Bound Controls that Display the Orders
+ Create controls that display order records by dragging the `SalesOrderHeaders` entity from the **Data Sources** window to the WPF designer.
 
-#### <a name="to-create-data-bound-controls-that-display-the-order-records"></a>创建显示订单记录的数据绑定控件
+#### <a name="to-create-data-bound-controls-that-display-the-order-records"></a>To create data-bound controls that display the order records
 
-1. 在**解决方案资源管理器**中，双击 "mainwindow.xaml"。
+1. In **Solution Explorer**, double-click MainWindow.xaml.
 
     将在 WPF 设计器中打开相应的窗口。
 
-2. 编辑 XAML，使 "**高度**" 和 "**宽度**" 属性设置为800
+2. Edit the XAML so the **Height** and **Width** properties are set to 800
 
-3. 在 "**数据源**" 窗口中，单击 " **SalesOrderHeaders** " 节点的下拉菜单，然后选择 "**详细信息**"。
+3. In the **Data Sources** window, click the drop-down menu for the **SalesOrderHeaders** node and select **Details**.
 
 4. 展开“SalesOrderHeaders”节点。
 
-5. 单击 " **SalesOrderID** " 旁边的下拉菜单，然后选择 " **ComboBox**"。
+5. Click the drop-down menu next to **SalesOrderID** and select **ComboBox**.
 
-6. 对于**SalesOrderHeaders**节点的以下每个子节点，单击节点旁边的下拉菜单，并选择 "**无**"：
+6. For each of the following child nodes of the **SalesOrderHeaders** node, click the drop-down menu next the node and select **None**:
 
    - **RevisionNumber**
 
@@ -139,11 +139,11 @@ ms.locfileid: "72602470"
 
    - **CreditCardApprovalCode**
 
-   - **进行**
+   - **SubTotal**
 
    - **TaxAmt**
 
-   - **代理**
+   - **Freight**
 
    - **rowguid**
 
@@ -151,27 +151,27 @@ ms.locfileid: "72602470"
 
      此操作将阻止 Visual Studio 在下一步中为这些节点创建数据绑定控件。 对于本演练，假定最终用户不需要查看此数据。
 
-7. 从 "**数据源**" 窗口中，将 " **SalesOrderHeaders** " 节点拖至**WPF 设计器**中的窗口。
+7. From the **Data Sources** window, drag the **SalesOrderHeaders** node to the window in **the WPF Designer**.
 
-    Visual Studio 将生成用于创建一组控件的 XAML，这些控件绑定到**SalesOrderHeaders**实体中的数据以及用于加载数据的代码。 有关生成的 XAML 和代码的详细信息，请参阅[在 Visual Studio 中将 WPF 控件绑定到数据](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)。
+    Visual Studio generates XAML that creates a set of controls that are bound to data in the **SalesOrderHeaders** entity, and code that loads the data. For more information about the generated XAML and code, see [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
 
-8. 在设计器中，单击 "**销售订单 ID** " 标签旁边的组合框。
+8. In the designer, click the combo box next to the **Sales Order ID** label.
 
 9. 在“属性”窗口，选中“IsReadOnly”属性旁边的复选框。
 
-## <a name="creating-a-datagrid-that-displays-the-order-details"></a>创建显示订单详细信息的 DataGrid
- 通过将 `SalesOrderDetails` 实体从 "**数据源**" 窗口拖到 WPF 设计器来创建显示订单详细信息的 <xref:System.Windows.Controls.DataGrid> 控件。
+## <a name="creating-a-datagrid-that-displays-the-order-details"></a>Creating a DataGrid that Displays the Order Details
+ Create a <xref:System.Windows.Controls.DataGrid> control that displays order details by dragging the `SalesOrderDetails` entity from the **Data Sources** window to the WPF designer.
 
-#### <a name="to-create-a-datagrid-that-displays-the-order-details"></a>创建显示订单详细信息的 DataGrid
+#### <a name="to-create-a-datagrid-that-displays-the-order-details"></a>To create a DataGrid that displays the order details
 
-1. 在 "**数据源**" 窗口中，找到作为 " **SalesOrderHeaders** " 节点的子节点的 " **SalesOrderDetails** " 节点。
+1. In the **Data Sources** window, locate the **SalesOrderDetails** node that is a child of the **SalesOrderHeaders** node.
 
    > [!NOTE]
-   > 还有一个**SalesOrderDetails**节点，它是**SalesOrderHeaders**节点的对等节点。 请确保选择 " **SalesOrderHeaders** " 节点的子节点。
+   > There is also a **SalesOrderDetails** node that is a peer of the **SalesOrderHeaders** node. Make sure that you select the child node of the **SalesOrderHeaders** node.
 
-2. 展开 "子**SalesOrderDetails** " 节点。
+2. Expand the child **SalesOrderDetails** node.
 
-3. 对于**SalesOrderDetails**节点的以下每个子节点，单击节点旁边的下拉菜单，并选择 "**无**"：
+3. For each of the following child nodes of the **SalesOrderDetails** node, click the drop-down menu next the node and select **None**:
 
    - **SalesOrderID**
 
@@ -181,14 +181,14 @@ ms.locfileid: "72602470"
 
    - **ModifiedDate**
 
-     此操作可防止 Visual Studio 将此数据包含在下一步中创建的 <xref:System.Windows.Controls.DataGrid> 控件中。 对于本演练，假定最终用户不需要查看此数据。
+     This action prevents Visual Studio from including this data in the <xref:System.Windows.Controls.DataGrid> control you create in the next step. 对于本演练，假定最终用户不需要查看此数据。
 
-4. 从 "**数据源**" 窗口中，将子**SalesOrderDetails**节点拖至**WPF 设计器**中的窗口。
+4. From the **Data Sources** window, drag the child **SalesOrderDetails** node to the window in **the WPF Designer**.
 
-    Visual Studio 将生成 XAML 来定义新的数据绑定 <xref:System.Windows.Controls.DataGrid> 控件，并在设计器中显示该控件。 Visual Studio 还会更新代码隐藏文件中生成的 `GetSalesOrderHeadersQuery` 方法，以便在**SalesOrderDetails**实体中包含数据。
+    Visual Studio generates XAML to define a new data-bound <xref:System.Windows.Controls.DataGrid> control, and the control appears in the designer. Visual Studio also updates the generated `GetSalesOrderHeadersQuery` method in the code-behind file to include the data in the **SalesOrderDetails** entity.
 
 ## <a name="testing-the-application"></a>测试应用程序
- 生成并运行应用程序以验证其是否显示订单记录。
+ Build and run the application to verify that it displays the order records.
 
 #### <a name="to-test-the-application"></a>测试应用程序
 
@@ -196,14 +196,14 @@ ms.locfileid: "72602470"
 
      这将生成并运行应用程序。 验证以下内容：
 
-    - "**销售订单 ID** " 组合框显示**71774**。 这是实体中的第一个订单 ID。
+    - The **Sales Order ID** combo box displays **71774**. This is the first order ID in the entity.
 
-    - 对于在 "**销售订单 ID** " 组合框中选择的每个订单，详细订单信息将显示在 "<xref:System.Windows.Controls.DataGrid> 中。
+    - For each order you select in the **Sales Order ID** combo box, detailed order information is displayed in the <xref:System.Windows.Controls.DataGrid>.
 
 2. 关闭该应用程序。
 
 ## <a name="next-steps"></a>后续步骤
- 完成本演练后，了解如何使用 Visual Studio 中的 "**数据源**" 窗口将 WPF 控件绑定到其他类型的数据源。 有关详细信息，请参阅[将 wpf 控件绑定到 WCF 数据服务](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)和将[wpf 控件绑定到数据集](../data-tools/bind-wpf-controls-to-a-dataset.md)。
+ After completing this walkthrough, learn how to use the **Data Sources** window in Visual Studio to bind WPF controls to other types of data sources. For more information, see [Bind WPF controls to a WCF data service](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md) and [Bind WPF controls to a dataset](../data-tools/bind-wpf-controls-to-a-dataset.md).
 
 ## <a name="see-also"></a>请参阅
- [在 Visual Studio 中将 wpf 控件绑定到数据在](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md) [wpf 应用程序中显示相关数据](../data-tools/display-related-data-in-wpf-applications.md)
+ [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md) [Display related data in WPF applications](../data-tools/display-related-data-in-wpf-applications.md)

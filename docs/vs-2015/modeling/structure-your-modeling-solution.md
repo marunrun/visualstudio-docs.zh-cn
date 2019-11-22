@@ -1,5 +1,5 @@
 ---
-title: 构造建模解决方案 |Microsoft Docs
+title: Structure your modeling solution | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -9,12 +9,12 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: edf9eaee512eda7439d1beea7303cd0e74b27178
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 83606b56e6509f1db77b590ec44d991ef97cf82e
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661042"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298171"
 ---
 # <a name="structure-your-modeling-solution"></a>安排你的建模解决方案
 
@@ -26,7 +26,7 @@ ms.locfileid: "72661042"
 
 本主题假定你正在处理一个大项目，这个项目大到需要多名团队成员，还可能有多个团队。 项目的代码和模型存储在源代码管理系统，例如 [!INCLUDE[esprtfs](../includes/esprtfs-md.md)]。 至少某些团队成员使用 Visual Studio 来开发模型，其他团队成员可以通过使用其他版本的 Visual Studio 来查看模型。
 
-若要查看支持每个工具和建模功能的 Visual Studio 版本，请参阅[体系结构和建模工具的版本支持](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
+To see which versions of Visual Studio support each tool and modeling feature, see [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 ## <a name="solution-structure"></a>解决方案结构
 
@@ -34,13 +34,13 @@ ms.locfileid: "72661042"
 
 #### <a name="to-divide-an-application-into-layers"></a>将应用程序划分为多层
 
-1. 将解决方案的结构建立在应用程序（例如，Web 应用程序、服务应用程序或桌面应用程序）的结构之上。 [Microsoft 应用程序体系结构指南的应用程序原型中](http://go.microsoft.com/fwlink/?LinkId=196681)讨论了各种常见的体系结构。
+1. 将解决方案的结构建立在应用程序（例如，Web 应用程序、服务应用程序或桌面应用程序）的结构之上。 A variety of common architectures is discussed in [Application Archetypes in the Microsoft Application Architecture Guide](https://go.microsoft.com/fwlink/?LinkId=196681).
 
 2. 创建我们称之为体系结构解决方案的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 解决方案。 此解决方案将用于创建系统的整体设计。 它将包含模型但不包括代码。
 
     向此解决方案中添加层关系图。 在层关系图上绘制你为应用程序所选择的体系结构。 例如，关系图可能显示以下层及相互之间的依赖关系：演示、业务逻辑和数据。
 
-    使用 "**体系结构**" 菜单上的 "**新建 UML 或层关系图**" 命令，可以同时创建层关系图和新的 Visual Studio 解决方案。
+    You can create the layer diagram and a new Visual Studio solution at the same time by using the **New UML or Layer Diagram** command on the **Architecture** menu.
 
 3. 添加到体系结构模型 UML 关系图，这些关系图表示引用到所有层设计中的重要业务概念和用例。
 
@@ -60,7 +60,7 @@ ms.locfileid: "72661042"
 
     现在，每个层都有一个模型，还有一个用于应用程序体系结构的模型。 每个解决方案都包含各自的模型。 这样使团队成员能够同时在各个层上工作。
 
-2. 对于体系结构解决方案中，将添加每个层解决方案的建模项目。 为此，请打开体系结构解决方案。 在解决方案资源管理器中，右键单击解决方案节点，指向 "添加"，然后单击 "**现有项目**"。 在一个层解决方案中导航到建模项目 (.modelproj)。
+2. 对于体系结构解决方案中，将添加每个层解决方案的建模项目。 为此，请打开体系结构解决方案。 In Solution Explorer, right-click the solution node, point to Add, and then click **Existing Project**. 在一个层解决方案中导航到建模项目 (.modelproj)。
 
     现在，每个模型都在这两个解决方案中可见：其“主”解决方案和体系结构解决方案。
 
@@ -80,9 +80,9 @@ ms.locfileid: "72661042"
 
 ###### <a name="to-use-a-separate-package-for-each-layer"></a>为每一层使用单独的包
 
-1. 在每层的解决方案中，添加体系结构建模项目。 在解决方案资源管理器中，右键单击解决方案节点，指向 "**添加**"，然后单击 "**现有项目**"。 现在从每个解决方案都可以访问这个单一建模项目：体系结构项目以及每层的开发项目。
+1. 在每层的解决方案中，添加体系结构建模项目。 In Solution Explorer, right-click the solution node, point to **Add**, and then click **Existing Project**. 现在从每个解决方案都可以访问这个单一建模项目：体系结构项目以及每层的开发项目。
 
-2. 在共享的 UML 模型中，为每层创建一个包：在“解决方案资源管理器”中，选择建模项目。 在 "UML 模型资源管理器" 中，右键单击 "模型" 根节点，指向 "**添加**"，然后单击 "**包**"。
+2. 在共享的 UML 模型中，为每层创建一个包：在“解决方案资源管理器”中，选择建模项目。 In UML Model Explorer, right-click the model root node, point to **Add**, and then click **Package**.
 
     每个包将包含描述对应层的要求和设计的 UML 关系图。
 
@@ -90,7 +90,7 @@ ms.locfileid: "72661042"
 
     此方法允许每层的设计元素直接引用其依赖的各个层和公共体系结构的设计元素。
 
-    尽管对不同包的并发操作会导致一些冲突，但这些冲突非常易于管理，因为包存储在单独的文件中。 主要困难是由删除依赖包所引用的元素导致的。 有关详细信息，请参阅[管理版本控制下的模型和关系图](../modeling/manage-models-and-diagrams-under-version-control.md)。
+    尽管对不同包的并发操作会导致一些冲突，但这些冲突非常易于管理，因为包存储在单独的文件中。 主要困难是由删除依赖包所引用的元素导致的。 For more information, see [Manage models and diagrams under version control](../modeling/manage-models-and-diagrams-under-version-control.md).
 
 ## <a name="creating-architecture-templates"></a>创建体系结构模板
 
@@ -100,24 +100,24 @@ ms.locfileid: "72661042"
 
 #### <a name="to-create-a-solution-template"></a>创建解决方案模板
 
-1. 如果尚未执行此操作，请[下载并安装 "导出模板向导](http://go.microsoft.com/fwlink/?LinkId=196686)"。
+1. [Download and install the Export Template Wizard](https://go.microsoft.com/fwlink/?LinkId=196686), if you have not already done this.
 
 2. 创建你想要用作将来项目的起始点的解决方案结构。
 
-3. 在“文件” 菜单上，单击“将模板导出为 VSIX”。 将打开 "将**模板导出为 VSIX" 向导**。
+3. 在“文件” 菜单上，单击“将模板导出为 VSIX”。 The **Export Template as VSIX Wizard** opens.
 
 4. 按照该向导中的说明，选择你想要包括在模板中的项目，提供模板的名称和说明，并指定输出位置。
 
 > [!NOTE]
-> 本主题中的材料取自 Visual Studio ALM Rangers 编写的“Visual Studio 体系结构工具指南”并有所改动，该指南是由最有价值的专家 (MVP)、Microsoft 服务以及 Visual Studio 产品团队和编写者合著的。 [单击此处下载完整的指导包。](http://go.microsoft.com/fwlink/?LinkID=191984)
+> 本主题中的材料取自 Visual Studio ALM Rangers 编写的“Visual Studio 体系结构工具指南”并有所改动，该指南是由最有价值的专家 (MVP)、Microsoft 服务以及 Visual Studio 产品团队和编写者合著的。 [Click here to download the complete Guidance package.](https://go.microsoft.com/fwlink/?LinkID=191984)
 
 ## <a name="related-materials"></a>相关材料
 
-[组织和管理模型](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-9-Organizing-and-Managing-Your-Models/)-视频（按 Clint Edmondson）。
+[Organizing and Managing Your Models](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-9-organizing-and-managing-your-models) - video by Clint Edmondson.
 
-[Visual Studio 体系结构工具指南](../modeling/visual-studio-architecture-tooling-guidance.md)–有关管理团队中的模型的进一步指南
+[Visual Studio Architecture Tooling Guidance](../modeling/visual-studio-architecture-tooling-guidance.md) – Further guidance on managing models in a team
 
 ## <a name="see-also"></a>请参阅
 
-[管理版本控制下的模型和关系图](../modeling/manage-models-and-diagrams-under-version-control.md)
- 在[你的开发过程中使用模型](../modeling/use-models-in-your-development-process.md)
+[Manage models and diagrams under version control](../modeling/manage-models-and-diagrams-under-version-control.md)
+[Use models in your development process](../modeling/use-models-in-your-development-process.md)

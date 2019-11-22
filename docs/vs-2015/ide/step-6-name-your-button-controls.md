@@ -9,12 +9,12 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: be633da5e8af6b987178d7c7360096db57fff1a0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ebe3813ad01566e2994b0a16b4a3fdc735de8c8c
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647001"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295704"
 ---
 # <a name="step-6-name-your-button-controls"></a>步骤 6：命名按钮控件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,13 +26,13 @@ ms.locfileid: "72647001"
 
  窗体上包含四个按钮，IDE 将它们分别命名为“button1”、“button2”、“button3”和“button4”。 只看这些按钮的当前名称，你并不知道哪个按钮是“关闭” 按钮，哪个按钮是“显示图片” 按钮。 这就是为按钮控件提供包含更多信息的名字会很有帮助的原因。
 
- ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[教程1：在 Visual Basic 中创建图片查看器-视频 3](http://go.microsoft.com/fwlink/?LinkId=205213)或[教程1：在视频3中C#创建图片查看器](http://go.microsoft.com/fwlink/?LinkId=205202)。 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
+ ![link to video](../data-tools/media/playvideo.gif "PlayVideo")For a video version of this topic, see [Tutorial 1: Create a Picture Viewer in Visual Basic - Video 3](https://go.microsoft.com/fwlink/?LinkId=205213) or [Tutorial 1: Create a Picture Viewer in C# - Video 3](https://go.microsoft.com/fwlink/?LinkId=205202). 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
 
 ### <a name="to-name-your-button-controls"></a>要命名按钮控件
 
-1. 在窗体上，选择“关闭” 按钮。 （如果您仍选择了所有按钮，请选择 ESC 键取消选择。）在 "**属性**" 窗口中滚动，直到看到 " **（Name）** " 属性。 （当属性按字母顺序排列时，" **（Name）** " 属性位于顶部附近。）将名称更改为**closeButton**，如下图所示。
+1. 在窗体上，选择“关闭” 按钮。 (If you still have all the buttons selected, choose the ESC key to cancel the selection.) Scroll in the **Properties** window until you see the **(Name)** property. (The **(Name)** property is near the top when the properties are alphabetical.) Change the name to **closeButton**, as shown in the following picture.
 
-     ![具有 closeButton 名称的属性窗口](../ide/media/express-setnameproperty.png "Express_SetNameProperty")具有 closeButton 名称的属性窗口
+     ![Properties window with closeButton name](../ide/media/express-setnameproperty.png "Express_SetNameProperty") Properties window with closeButton name
 
     > [!NOTE]
     > 如果尝试将按钮的名称更改为（在单词“close”和“Button”之间有一个空格），则 IDE 将显示错误消息“属性值无效”。 控件名称中不允许使用空格和一些其他字符。
@@ -41,7 +41,7 @@ ms.locfileid: "72647001"
 
 3. 双击窗体上的“显示图片” 按钮。 或者，选择窗体上的“显示图片” 按钮，然后选择 Enter 键。 此时，IDE 将在名为“Form1.cs” （如果使用的是 Visual Basic，则名为“Form1.vb” ）的主窗口中打开一个附加选项卡。 此选项卡将显示窗体后面的代码文件，如下图所示。
 
-     ![带有 visual&#35; C code](../ide/media/express-showbuttoncode.png "Express_ShowButtonCode") Form1.cs 选项卡和 visual C# code 的 Form1.cs 选项卡
+     ![Form1.cs tab with Visual C&#35; code](../ide/media/express-showbuttoncode.png "Express_ShowButtonCode") Form1.cs tab with Visual C# code
 
 4. 重点考虑这一部分的代码。 （如果你要使用 Visual Basic 查看代码的 Visual Basic 版本，请选择下面的 “VB”选项卡。）
 
@@ -71,7 +71,7 @@ ms.locfileid: "72647001"
 
      在为控件添加事件处理程序后，通过双击控件或在菜单栏上选择“视图”、“代码”，你可以随时从 Windows 窗体设计器返回到控件。
 
-     生成程序时名称很重要，并且方法（包括事件处理程序）可以具有任何所需的名称。 使用 IDE 添加事件处理程序时，IDE 将基于控件的名称和正在处理的事件创建一个名称。 例如，名为 “showButton”的按钮的 Click 事件称为 `showButton_Click()` 事件处理程序方法。 此外，通常会在方法名称后面添加一对括号 ()，以表明正在讨论的对象是方法。 如果你决定要更改代码的变量名，请右键单击代码中的变量，然后选择“重构”、“重命名”。 将重命名代码中变量的所有实例。 有关详细信息，请参阅[重命名重构（C#）](../csharp-ide/rename-refactoring-csharp.md)或[重构和重命名对话框](https://msdn.microsoft.com/library/001d2d81-9bb6-4e8e-ae3a-20c0daaa3959)。
+     生成程序时名称很重要，并且方法（包括事件处理程序）可以具有任何所需的名称。 使用 IDE 添加事件处理程序时，IDE 将基于控件的名称和正在处理的事件创建一个名称。 例如，名为 “showButton”的按钮的 Click 事件称为 `showButton_Click()` 事件处理程序方法。 此外，通常会在方法名称后面添加一对括号 ()，以表明正在讨论的对象是方法。 如果你决定要更改代码的变量名，请右键单击代码中的变量，然后选择“重构”、“重命名”。 将重命名代码中变量的所有实例。 See [Rename Refactoring (C#)](../csharp-ide/rename-refactoring-csharp.md) or [Refactoring and Rename Dialog Box](https://msdn.microsoft.com/library/001d2d81-9bb6-4e8e-ae3a-20c0daaa3959) for more information.
 
 ### <a name="to-continue-or-review"></a>继续或查看
 

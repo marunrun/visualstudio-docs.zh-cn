@@ -1,5 +1,5 @@
 ---
-title: 开始开发 |Microsoft Docs
+title: Get Started Developing | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -11,29 +11,29 @@ caps.latest.revision: 67
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e0dbc2c4a4402cc60febaaf158a7a4578bc78115
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f7ad3ebd395c813877c444b5531255f56690c98b
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655893"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74292057"
 ---
 # <a name="get-started-developing-with-visual-studio"></a>Get Started Developing with Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-欢迎使用 Visual Studio！ [已下载](http://www.visualstudio.com/community) 该产品后，这些页面将有助于开始编码。
+欢迎使用 Visual Studio！ [已下载](https://visualstudio.microsoft.com/vs/community/) 该产品后，这些页面将有助于开始编码。
 
 - **[制作 Web 应用程序](https://www.visualstudio.com/features/modern-web-tooling-vs)：** 创建和部署现代 Web 应用程序的工具。
 
-     [学习教程](https://docs.asp.net/en/latest/tutorials/your-first-aspnet-application.html) |                              [浏览文档](https://docs.asp.net/) |                                  [观看视频](http://www.asp.net/vnext)
+     [学习教程](https://docs.asp.net/en/latest/tutorials/your-first-aspnet-application.html) |                              [浏览文档](https://docs.asp.net/) |                                  [观看视频](https://docs.microsoft.com/aspnet/core/?view=aspnetcore-3.0)
 
-- **[在 HTML/Javascript (Apache Cordova) 中创建跨平台的移动应用程序](http://taco.visualstudio.com/docs/get-started-first-mobile-app/)** ：             Apache Cordova 是基于 HTML/CSS/Javascript 的一个开源跨平台环境。  Javascript 代码在面向特定平台的包装器中进行执行，并启用对设备所有硬件功能的访问。 开发适用于 Apple 应用商店、Android 应用商店和 Windows 应用商店的应用程序。
+- **[在 HTML/Javascript (Apache Cordova) 中创建跨平台的移动应用程序](https://docs.microsoft.com/visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017)** ：             Apache Cordova 是基于 HTML/CSS/Javascript 的一个开源跨平台环境。  Javascript 代码在面向特定平台的包装器中进行执行，并启用对设备所有硬件功能的访问。 开发适用于 Apple 应用商店、Android 应用商店和 Windows 应用商店的应用程序。
 
-     [加载示例](https://github.com/Microsoft/cordova-samples/tree/master/todo-angularjs) | [学习教程](http://taco.visualstudio.com/docs/get-started-first-mobile-app/) |                              [浏览文档](http://taco.visualstudio.com/docs/get-started-vs-tools-apache-cordova/) |                               [观看视频](https://channel9.msdn.com/Blogs/Seth-Juarez/Getting-Started-with-Apache-Cordova-in-Visual-Studio)
+     [加载示例](https://github.com/Microsoft/cordova-samples/tree/master/todo-angularjs) | [学习教程](https://docs.microsoft.com/visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017) |                              [浏览文档](https://docs.microsoft.com/visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017) |                               [观看视频](https://channel9.msdn.com/Blogs/Seth-Juarez/Getting-Started-with-Apache-Cordova-in-Visual-Studio)
 
 - **[在 C# 或 Visual Basic (Xamarin) 中制作跨平台的移动应用程序](../cross-platform/visual-studio-and-xamarin.md)** ：开始使用 Visual Studio 和适用于 Xamarin 的工具从共享代码库创建在 Android、iOS 和通用 Windows 平台上运行的移动应用程序。
 
-     加载示例： [TaskyPortable](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable) （本机 UI）或[Xamarin Forms Todo 示例](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo)（Xamarin. Forms 共享 UI） &#124;[执行教程](https://msdn.microsoft.com/library/dn879698\(v=vs.140\).aspx) &#124;[浏览](https://msdn.microsoft.com/library/mt299001.aspx) &#124;[观看视频](https://channel9.msdn.com/Series/Cross-Platform-Development-with-Xamarin--Visual-Studio/01)的文档
+     Load a sample: [TaskyPortable](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable) (native UI) or  [Xamarin Forms Todo sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo) (Xamarin.Forms shared UI) &#124;   [Do a tutorial](https://msdn.microsoft.com/library/dn879698\(v=vs.140\).aspx) &#124;                             [Browse the docs](https://msdn.microsoft.com/library/mt299001.aspx) &#124;                                  [Watch a video](https://channel9.msdn.com/Series/Cross-Platform-Development-with-Xamarin--Visual-Studio/01)
 
 - **[在 C++ 中创建本机跨平台应用程序和库](https://www.visualstudio.com/explore/cplusplus-mdd-vs.aspx)** 转到此处以开始创建在 Android、iOS 和通用 Windows 平台上运行的 C++ 应用程序和库。
 
@@ -45,7 +45,7 @@ ms.locfileid: "72655893"
 
 - **[使用 Unity 制作游戏](../cross-platform/visual-studio-tools-for-unity.md)** ：开始使用 Unity 框架创建跨平台游戏。
 
-     [加载示例](http://unity3d.com/learn/resources/downloads) |                    [学习教程](http://unity3d.com/learn/tutorials/projects/roll-ball-tutorial) |                              [浏览文档](https://msdn.microsoft.com/library/dn940019\(v=vs.140\).aspx) |    [观看视频](https://www.youtube.com/playlist?list=PLReL099Y5nRfseAg0k1SJOlpqdcsDs8Em)
+     [加载示例](http://unity3d.com/learn/resources/downloads) |                    [学习教程](https://learn.unity.com/projects) |                              [浏览文档](https://msdn.microsoft.com/library/dn940019\(v=vs.140\).aspx) |    [观看视频](https://www.youtube.com/playlist?list=PLReL099Y5nRfseAg0k1SJOlpqdcsDs8Em)
 
 - **[制作通用 Windows 平台应用程序](https://dev.windows.com/windows-apps)** ：开始创建在通用 Windows 平台（XBox、PC、平板电脑、Windows Phone、Surface Hub 和物联网）上运行的应用程序。
 
@@ -55,9 +55,9 @@ ms.locfileid: "72655893"
 
      [加载示例](https://github.com/microsoft/windows-classic-samples) |                    [学习教程](https://msdn.microsoft.com/library/dd492171.aspx)  |                              [浏览文档](https://dev.windows.com/desktop)
 
-- **[制作 office 应用程序](https://msdn.microsoft.com/library/fp161347.aspx)** ：开始创建 office 应用程序，以便通过 office 365 服务扩展和自定义 Word、Excel、Outlook 和 PowerPoint。
+- **[Make Office applications](https://msdn.microsoft.com/library/fp161347.aspx)** : Get started creating Office applications that extend and customize Word, Excel, Outlook and PowerPoint with Office 365 services.
 
-     [加载示例](https://code.msdn.microsoft.com/office365/) |                      [学习教程](http://dev.office.com/getting-started/office365apis) |                             [浏览文档](https://msdn.microsoft.com/office/aa905340.aspx) |                                  [观看视频](http://dev.office.com/videos)
+     [加载示例](https://code.msdn.microsoft.com/office365/) |                      [学习教程](https://developer.microsoft.com/graph) |                             [浏览文档](https://msdn.microsoft.com/office/aa905340.aspx) |                                  [观看视频](https://developer.microsoft.com/office/gallery/?filterBy=Videos)
 
 - **[浏览 Visual Studio Team Services 和 Team Foundation Server 教程](https://www.visualstudio.com/products/visual-studio-team-services-vs)**  详细了解 Visual Studio Team Services 和 Team Foundation Server。
 

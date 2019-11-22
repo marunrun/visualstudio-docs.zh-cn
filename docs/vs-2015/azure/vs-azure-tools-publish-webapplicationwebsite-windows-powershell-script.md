@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: dba4e9143c02a76763372a12153b2e22f612959c
-ms.sourcegitcommit: 3cc73e74921a9ceb622542e0e263abeebc455c00
+ms.openlocfilehash: 6c9c2e281ace3b483d1f37552fba0cc6f490978a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67624442"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298132"
 ---
 # <a name="publish-webapplicationwebsite-windows-powershell-script"></a>Publish-WebApplicationWebSite（Windows PowerShell 脚本）
 ## <a name="syntax"></a>语法
@@ -32,14 +32,14 @@ Publish-WebApplicationWebSite
 -Verbose
 ```
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>配置
 描述部署详细信息的 JSON 配置文件的路径。
 
 | 参数 | 默认值 |
 | --- | --- |
 | 别名 |无 |
 | 是否必需？ |true |
-| 位置 |指定 |
+| 位置 |命名的 |
 | 默认值 |无 |
 | 接受管道输入？ |False |
 | 接受通配符？ |False |
@@ -51,22 +51,22 @@ Publish-WebApplicationWebSite
 | --- | --- |
 | 别名 |无 |
 | 是否必需？ |False |
-| 位置 |指定 |
+| 位置 |命名的 |
 | 默认值 |无 |
 | 接受管道输入？ |False |
 | 接受通配符？ |False |
 
 ## <a name="webdeploypackage"></a>WebDeployPackage
-要发布到网站的 Web 部署包的路径。 可以在 Visual Studio 中使用“发布 Web”向导来创建此包。 有关详细信息，请参阅 [Azure 云服务和 ASP.NET 入门](http://go.microsoft.com/fwlink/p/?LinkID=623089)。
+要发布到网站的 Web 部署包的路径。 可以在 Visual Studio 中使用“发布 Web”向导来创建此包。 有关详细信息，请参阅 [Azure 云服务和 ASP.NET 入门](https://go.microsoft.com/fwlink/p/?LinkID=623089)。
 
 | 参数 | 默认值 |
 | --- | --- |
 | 别名 |无 |
 | 是否必需？ |False |
-| 位置 |指定 |
+| 位置 |命名的 |
 | 默认值 |无 |
 | 接受管道输入？ |False |
-| 接受通配符？ |否 |
+| 接受通配符？ |False |
 
 ## <a name="databaseserverpassword"></a>DatabaseServerPassword
 Azure 中的 SQL 数据库的用户名和密码。
@@ -75,7 +75,7 @@ Azure 中的 SQL 数据库的用户名和密码。
 | --- | --- |
 | 别名 |无 |
 | 是否必需？ |False |
-| 位置 |指定 |
+| 位置 |命名的 |
 | 默认值 |无 |
 | 接受管道输入？ |False |
 | 接受通配符？ |False |
@@ -87,7 +87,7 @@ Azure 中的 SQL 数据库的用户名和密码。
 | --- | --- |
 | 别名 |无 |
 | 是否必需？ |False |
-| 位置 |指定 |
+| 位置 |命名的 |
 | 默认值 |False |
 | 接受管道输入？ |False |
 | 接受通配符？ |False |

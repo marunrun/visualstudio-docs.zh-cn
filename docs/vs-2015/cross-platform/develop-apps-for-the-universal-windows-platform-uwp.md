@@ -9,12 +9,12 @@ caps.latest.revision: 50
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: ed601f6b3bfeba4d7aebed5955b340fb28908c74
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ac6ce00002e40c6d8bd1d5db65b8c7bb5e6bc7cd
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660204"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299833"
 ---
 # <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>开发通用 Windows 平台 (UWP) 的应用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "72660204"
 
  下面是所需软件的列表：
 
-- [Windows 10](http://windows.microsoft.com/windows/downloads)
+- [Windows 10](https://windows.microsoft.com/windows/downloads)
 
-- [Visual Studio 2015](http://go.microsoft.com/fwlink/p/?LinkId=526725)。 请确保可选功能列表中，通用 Windows 应用开发工具处于选中状态。 没有这些工具，你将无法创建通用应用。
+- [Visual Studio 2015](https://go.microsoft.com/fwlink/p/?LinkId=526725)。 请确保可选功能列表中，通用 Windows 应用开发工具处于选中状态。 没有这些工具，你将无法创建通用应用。
 
   在安装此软件之后，你需要 [启用 Windows 10 设备](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx) 以进行开发。 （不再需要每个 Windows 10 设备的开发人员许可证。）
 
@@ -55,7 +55,7 @@ ms.locfileid: "72660204"
   如果开发平台是 Windows 10，只能使用 XAML 设计器。
 
 ## <a name="universal-windows-apps"></a>通用 Windows 应用
- 从 C#、Visual Basic、C++ 或 JavaScript 中选择首选的开发语言以 [为 Windows 10 设备创建通用 Windows 应用](https://msdn.microsoft.com/library/windows/apps/xaml/dn609832.aspx#target_win10)。 或者，监视 [此入门视频](http://channel9.msdn.com/Series/ConnectOn-Demand/229)。
+ 从 C#、Visual Basic、C++ 或 JavaScript 中选择首选的开发语言以 [为 Windows 10 设备创建通用 Windows 应用](https://msdn.microsoft.com/library/windows/apps/xaml/dn609832.aspx#target_win10)。 或者，监视 [此入门视频](https://channel9.msdn.com/Series/ConnectOn-Demand/229)。
 
  如果你有现有的 Windows 应用商店 8.1 应用、Windows Phone 8.1 应用或使用 Visual Studio 2015 RC 创建的通用 Windows 应用，则 [移植这些现有的应用](https://msdn.microsoft.com/library/windows/apps/xaml/mt238321.aspx) 以使用最新的通用 Windows 平台。
 

@@ -13,21 +13,21 @@ caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 6418a39d7e53a3edaa48b3cd003d35d95cba386e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 67589a04b8f3c39e442b596a7a41981825bd5aa5
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68194948"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301113"
 ---
-# <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018：运行的 32 位应用程序达到了进程托管内存限制
+# <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018：运行的 32 位应用程序达到了进程托管内存的限制
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-规则 Id |DA0018 |  
-|类别 |分析工具使用情况 |  
-|分析方法 |采样 |  
-|消息 |托管内存分配接近 32 位进程的默认限制。 应用程序可能会受内存限制。|  
-|规则类型 |警告 |  
+Rule Id|DA0018|  
+|Category|Profiling Tools Usage|  
+|Profiling method|Sampling|  
+|Message|Managed memory allocations approaching the default limit for a 32-bit process. 应用程序可能会受内存限制。|  
+|Rule type|Warning|  
   
  使用采样法、.NET 内存或资源争用方法进行分析时，必须收集至少 10 个样本才能触发此规则。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68194948"
   
   使用[分配视图](../profiling/dotnet-memory-allocations-view.md)确定这些分配的执行路径。  
   
-  有关如何提高垃圾回收性能的详细信息，请参阅 MSDN 站点上的 .NET Framework 技术文章：[Garbage Collector Basics and Performance Hints](http://go.microsoft.com/fwlink/?LinkId=177946)（垃圾回收器基础知识和性能提示）。  
+  有关如何提高垃圾回收性能的详细信息，请参阅 MSDN 站点上的 .NET Framework 技术文章：[Garbage Collector Basics and Performance Hints](https://go.microsoft.com/fwlink/?LinkId=177946)（垃圾回收器基础知识和性能提示）。  
   
   若要解除对进程地址空间的专用部分大小的虚拟内存体系结构约束，请尝试在 64 位计算机上运行此 32 位进程。  64 位计算机上的 32 位进程最多可获得 4 GB 的专用虚拟内存。  
   

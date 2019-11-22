@@ -1,5 +1,5 @@
 ---
-title: '&lt;签名&gt;元素 （ClickOnce 部署） |Microsoft Docs'
+title: '&lt;Signature&gt; Element (ClickOnce Deployment) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -15,14 +15,14 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: df18b63ff306525cba74ef0932c97edd64eee797
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: db696546fdd64199753054b38fa2ac554f6a774f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68198122"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295077"
 ---
-# <a name="ltsignaturegt-element-clickonce-deployment"></a>&lt;签名&gt;元素 （ClickOnce 部署）
+# <a name="ltsignaturegt-element-clickonce-deployment"></a>&lt;Signature&gt; Element (ClickOnce Deployment)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 包含对此部署清单进行数字签名所需的信息。  
@@ -37,12 +37,12 @@ ms.locfileid: "68198122"
 ```  
   
 ## <a name="remarks"></a>备注  
- 使用封装签名的部署清单签名是可选的但建议。 有关签名 XML 文件，请参阅 World Wide Web 联合会建议"Xml-signature Syntax and Processing，"中所述[ http://www.w3.org/TR/xmldsig-core/ ](http://www.w3.org/TR/xmldsig-core/)。  
+ Signing a deployment manifest using an envelope signature is optional, but recommended. For more information about signing XML files see the World Wide Web Consortium Recommendation, "XML-Signature Syntax and Processing," described at [http://www.w3.org/TR/xmldsig-core/](https://www.w3.org/TR/xmldsig-core/).  
   
- 如果你想要对清单签名，哈希必须提供的所有文件。 具有不哈希处理的文件的清单不能进行签名，因为用户不能验证未经哈希的文件的内容。  
+ If you want to sign your manifest, hashes must be provided for all files. A manifest with files that are not hashed cannot be signed, because users cannot verify the contents of unhashed files.  
   
 ## <a name="example"></a>示例  
- 下面的代码示例演示`Signature`元素中使用的部署清单中[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]部署。  
+ The following code example illustrates a `Signature` element in a deployment manifest used in a [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] deployment.  
   
 ```  
 <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">  

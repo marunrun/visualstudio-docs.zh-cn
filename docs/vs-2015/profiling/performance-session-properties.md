@@ -13,25 +13,25 @@ caps.latest.revision: 21
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b8769cbb23b2c192fd3db07eca9519661b3e214c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: af214f6a29e12dcdf2fe8bd2de75e05283894922
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68190361"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74290115"
 ---
 # <a name="performance-session-properties"></a>性能会话属性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 通过**性能会话**可以配置用于确定如何分析应用程序的设置。 它还存储为分析会话生成的报告。  
   
- **要求**  
+ **惠?**  
   
-- [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
+- [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]中， [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]中， [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
-  可通过运行**性能向导**或通过手动创建会话来创建**性能会话**。 **性能会话**创建之后，**性能会话**会显示在“性能资源管理器”  中。  
+  可通过运行**性能向导**或通过手动创建会话来创建**性能会话**。 **性能会话**创建之后，**性能会话**会显示在“性能资源管理器”中。  
   
-  若要查看**性能会话**属性，请在“性能资源管理器”  中选择会话名，右键单击它，然后选择“属性”  。  
+  若要查看**性能会话**属性，请在“性能资源管理器”中选择会话名，右键单击它，然后选择“属性”。  
   
   性能会话具有以下属性页：  
   
@@ -89,7 +89,7 @@ ms.locfileid: "68190361"
  有关详细信息，请参阅[如何：收集 CPU 计数器数据](../profiling/how-to-collect-cpu-counter-data.md)  
   
 ## <a name="windows-events"></a>Windows 事件  
- 在分析过程中，可以从事件跟踪提供程序收集数据。 可以使用 VSPerfReport.exe 命令行工具 `/calltrace` 选项查看数据。 有关 Windows 事件跟踪 (ETW) 的详细信息，请参阅[关于事件跟踪](http://go.microsoft.com/fwlink/?linkid=90752)。  
+ 在分析过程中，可以从事件跟踪提供程序收集数据。 可以使用 VSPerfReport.exe 命令行工具 `/calltrace` 选项查看数据。 有关 Windows 事件跟踪 (ETW) 的详细信息，请参阅[关于事件跟踪](https://go.microsoft.com/fwlink/?linkid=90752)。  
   
  有关详细信息，请参见:  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68190361"
  [VSPerfReport](../profiling/vsperfreport.md)。  
   
 ## <a name="windows-counters"></a>Windows 计数器  
- 通过此选项可以从 Windows 性能监视器计数器收集数据。 若要收集此数据，请选中标记为“收集 Windows 性能计数器”  的复选框。 收集间隔可以在“收集间隔”  框中设置。 还可以使用“计数器类别”  和“实例”  。 提供了一些默认 Windows 性能监视器计数器。  
+ 通过此选项可以从 Windows 性能监视器计数器收集数据。 若要收集此数据，请选中标记为“收集 Windows 性能计数器”的复选框。 收集间隔可以在“收集间隔”框中设置。 还可以使用“计数器类别”和“实例”。 提供了一些默认 Windows 性能监视器计数器。  
   
  有关详细信息，请参阅[如何：收集 Windows 计数器数据](../profiling/how-to-collect-windows-counter-data.md)。  
   

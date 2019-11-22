@@ -1,5 +1,5 @@
 ---
-title: Vspackage 和托管的包框架 |Microsoft Docs
+title: VSPackages and the Managed Package Framework | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -11,33 +11,33 @@ helpviewer_keywords:
 ms.assetid: e8d80e0f-6b5b-4baf-a7df-59fd808c60cd
 caps.latest.revision: 16
 manager: jillfra
-ms.openlocfilehash: 5b72b2c3bd6b03d1d3f3e50135c2ddf4758a4bd9
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 84fb41bfc80415535ca41d6b1a8c9dcf47124c7a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65683049"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298234"
 ---
 # <a name="vspackages-and-the-managed-package-framework"></a>VSPackage 和托管包框架
-通过创建 VSPackage 使用托管包框架 (MPF) 类而不是通过使用 COM 互操作类，可以减少开发时间。  
+You can reduce development time by creating a VSPackage with the managed package framework (MPF) classes instead of by using COM interop classes.  
   
- 有两种方法来创建托管的 VSPackage:  
+ There are two ways to create a managed VSPackage:  
   
-- 使用[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]包项目模板  
+- Use the [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Package project template  
   
-     有关详细信息，请参见[演练：使用 Visual Studio 包模板创建菜单命令](https://msdn.microsoft.com/library/1985fa7d-aad4-4866-b356-a125b6a246de)。  
+     For more information, see [Walkthrough: Creating a Menu Command By Using the Visual Studio Package Template](https://msdn.microsoft.com/library/1985fa7d-aad4-4866-b356-a125b6a246de).  
   
-- 生成你的 VSPackage 而无需[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]包项目模板  
+- Build your VSPackage without the [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Package project template  
   
-     例如，可以复制示例 VSPackage，并更改 Guid 和名称。 你可以找到的 VSX 部分中的示例[代码库](http://code.msdn.microsoft.com/vsx/)。  
+     For example, you can copy a sample VSPackage and change the GUIDs and the names. 
   
 ## <a name="in-this-section"></a>本节内容  
  [托管包框架类](../misc/managed-package-framework-classes.md)  
- 描述并列出 MPF 类命名空间和 DLL 文件。  
+ Describes and lists the MPF class namespaces and DLL files.  
   
 ## <a name="related-sections"></a>相关章节  
- [演练：使用 Visual Studio 包模板创建菜单命令](https://msdn.microsoft.com/library/1985fa7d-aad4-4866-b356-a125b6a246de)  
- 介绍如何创建托管的 VSPackage。  
+ [Walkthrough: Creating a Menu Command By Using the Visual Studio Package Template](https://msdn.microsoft.com/library/1985fa7d-aad4-4866-b356-a125b6a246de)  
+ Explains how to create a managed VSPackage.  
   
  [托管的 VSPackage](../misc/managed-vspackages.md)  
- 引入了适用于托管代码的 Vspackage 的方面。
+ Introduces aspects of VSPackages that apply to managed code.

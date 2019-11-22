@@ -1,5 +1,5 @@
 ---
-title: 如何：调用工作流调试器 |Microsoft Docs
+title: 'How to: Invoke the Workflow Debugger | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -9,36 +9,36 @@ caps.latest.revision: 9
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 34c5cdae4b8730c9058a87061456d5ab6d186c53
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 13fd54eeebf0323fcb9b8cad6a8cd8b75ae11fb3
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72603670"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74292896"
 ---
 # <a name="how-to-invoke-the-workflow-debugger"></a>如何：调用工作流调试器
 通常，您可以像调试用其他 Visual Studio 编程语言编写的程序那样调试工作流。 可通过以下方法启动工作流调试器：
 
-- 选择 "**调试**" 菜单上的 "**附加到进程**"，为工作流实例选择正在运行的主机进程。 此过程与附加到以托管代码编写的托管进程的过程相同。
+- Select **Attach to Process** on the **Debug** menu to select the running host process for your workflow instance. 此过程与附加到以托管代码编写的托管进程的过程相同。
 
-- 按**F5**开始运行工作流实例，或者在命中断点后继续运行。
+- Press **F5** to start running an instance of the workflow, or to continue to run after a breakpoint has been hit.
 
-- 使用远程调试。 有关使用远程调试的信息，请参阅[如何：启用远程调试](http://go.microsoft.com/fwlink/?LinkId=196257)。
+- 使用远程调试。 For information on using remote debugging, see [How to: Enable Remote Debugging](https://go.microsoft.com/fwlink/?LinkId=196257).
 
     > [!NOTE]
-    > 如果工作流应用程序针对 x86 体系结构并托管在运行64位操作系统的计算机上，则远程调试将无法工作，除非在远程计算机上安装了 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 或者工作流应用程序的目标更改为**任何 CPU**。
+    > If the workflow application targets the x86 architecture and is hosted on a machine running a 64 bit operating system, then remote debugging will not work unless [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] is installed on the remote machine or the target for the workflow application is changed to **Any CPU**.
 
 ### <a name="stepping-through-code"></a>逐句通过代码
 
-- **单步**执行：可以使用**F11**单步执行活动。 此调试器可以单步执行任何定义的处理程序。 如果未定义处理程序，则可以逐过程执行该活动，或者对于包含其他活动的复合活动，您可以单步执行第一个要执行的活动。
+- **Step In**: You can step into an activity using **F11**. 此调试器可以单步执行任何定义的处理程序。 如果未定义处理程序，则可以逐过程执行该活动，或者对于包含其他活动的复合活动，您可以单步执行第一个要执行的活动。
 
-- **跳出：** 你可以使用**Shift-F11**跳出某个活动。 如果跳出某个活动，则会运行当前活动及其所有同级活动，直到这些活动完成为止。 然后调试器将在当前活动的父项处中断。 从代码处理程序中跳出时，调试器将在与此处理程序关联的活动处中断。
+- **Step Out:** You can step out of an activity using **Shift-F11**. 如果跳出某个活动，则会运行当前活动及其所有同级活动，直到这些活动完成为止。 然后调试器将在当前活动的父项处中断。 从代码处理程序中跳出时，调试器将在与此处理程序关联的活动处中断。
 
-- **逐过程**：可以使用**F10**逐过程执行活动。 逐过程执行复合活动时，调试器将在此复合活动的第一个可执行的子活动处中断。 逐过程执行非复合活动（例如 <xref:System.Activities.Statements.Assign> 活动）时，调试器将执行此活动及其关联的处理程序并在下一个活动处中断。 如果执行的活动是复合活动中的最后一个子活动，则在执行之后，调试器将在父活动处中断。
+- **Step Over**: You can step over an activity using **F10**. 逐过程执行复合活动时，调试器将在此复合活动的第一个可执行的子活动处中断。 逐过程执行非复合活动（例如 <xref:System.Activities.Statements.Assign> 活动）时，调试器将执行此活动及其关联的处理程序并在下一个活动处中断。 如果执行的活动是复合活动中的最后一个子活动，则在执行之后，调试器将在父活动处中断。
 
 ### <a name="debugging-with-f5"></a>用 F5 调试
 
-- 如果要生成工作流控制台应用程序项目，只需按**F5**即可开始调试应用程序和工作流。 如果要生成活动库自身，您必须有可执行的宿主应用程序作为启动项目。 若要在**解决方案资源管理器**中设置启动项目，请右键单击主机的项目名称，然后选择 "**设为启动项目**"。
+- If you are building a Workflow Console Application project, simply press **F5** to begin debugging into your application and workflow. 如果要生成活动库自身，您必须有可执行的宿主应用程序作为启动项目。 To set a startup project in **Solution Explorer**, right-click the project name of the host and select **Set as StartUp Project**.
 
 ## <a name="see-also"></a>请参阅
- [如何：在工作流中设置断点](../workflow-designer/how-to-set-breakpoints-in-workflows.md)[调试工作流工作流设计器](../workflow-designer/debugging-workflows-with-the-workflow-designer.md)
+ [How to: Set Breakpoints in Workflows](../workflow-designer/how-to-set-breakpoints-in-workflows.md) [Debugging Workflows with the Workflow Designer](../workflow-designer/debugging-workflows-with-the-workflow-designer.md)

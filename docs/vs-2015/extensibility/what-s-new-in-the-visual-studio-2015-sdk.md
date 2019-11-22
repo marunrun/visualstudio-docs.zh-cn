@@ -1,5 +1,5 @@
 ---
-title: 什么是 Visual Studio 2015 SDK 中的新增功能 |Microsoft Docs
+title: What's New in the Visual Studio 2015 SDK | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -8,39 +8,39 @@ ms.assetid: c64aac80-a411-463f-b7bd-8b7607a52ece
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 1d51474f2e242f764a84edaa9f2712418c859460
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 6735f929f52387f4cb40406d6918894e72bb40d3
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63408698"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299685"
 ---
-# <a name="what39s-new-in-the-visual-studio-2015-sdk"></a>什么&#39;s Visual Studio 2015 SDK 中的新增功能
+# <a name="what39s-new-in-the-visual-studio-2015-sdk"></a>What&#39;s New in the Visual Studio 2015 SDK
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio SDK 的 Visual Studio 2015 中，更新，Visual Studio 2015 和 Visual Studio 2017 具有以下新的和更新功能。
+The Visual Studio SDK has the following new and updated features for Visual Studio 2015, Visual Studio 2015 updated, and Visual Studio 2017.
 
 ## <a name="visual-studio-2017"></a>Visual Studio 2017
 
-从 Visual Studio 2017 中，扫描自定义项目和项模板将无法再执行。 相反，该扩展插件必须提供模板清单文件描述这些模板的安装位置。 Visual Studio 2017 可用于更新您的 VSIX 扩展。 如果部署使用 MSI 扩展，则必须手动生成模板清单文件。 有关详细信息，请参阅[升级自定义项目和项模板的 Visual Studio 2017](/visualstudio/extensibility/upgrading-custom-project-and-item-templates-for-visual-studio-2017?view=vs-2015)。 模板清单架构记录在[Visual Studio 模板清单架构参考](/visualstudio/extensibility/visual-studio-template-manifest-schema-reference)。
+Starting in Visual Studio 2017, scanning for custom project and item templates will no longer be performed. Instead, the extension must provide template manifest files that describe the install location of these templates. You can use Visual Studio 2017 to update your VSIX extensions. If you deploy your extension using an MSI, you must generate the template manifest files by hand. For more information, see [Upgrading Custom Project and Item Templates for Visual Studio 2017](/visualstudio/extensibility/upgrading-custom-project-and-item-templates-for-visual-studio-2017?view=vs-2015). The template manifest schema is documented in [Visual Studio Template Manifest Schema Reference](/visualstudio/extensibility/visual-studio-template-manifest-schema-reference).
 
-## <a name="vs-2015-sdk-update-1"></a>VS 2015 SDK 更新 1
- Update 1 包括可帮助您很好地配合颜色主题和 Visual Studio 映像服务的扩展工具。
+## <a name="vs-2015-sdk-update-1"></a>VS 2015 SDK Update 1
+ Update 1 includes tools to help your extension work well with color themes and the Visual Studio image service.
 
- 这些主题正在[VSSDK 实用工具](../extensibility/internals/vssdk-utilities.md)部分：
+ These topics are under the [VSSDK Utilities](../extensibility/internals/vssdk-utilities.md) section:
 
-- [颜色主题工具](../extensibility/internals/color-theming-tools.md)有助于创建和编辑 Visual Studio 的自定义颜色。
+- The [Color Theming Tools](../extensibility/internals/color-theming-tools.md) help you create and edit custom colors for Visual Studio.
 
-- [图像服务工具](../extensibility/internals/image-service-tools.md)，您可以与 Visual Studio 映像清单文件。
+- The [Image Service Tools](../extensibility/internals/image-service-tools.md) let you work with Visual Studio image manifest files.
 
-## <a name="new-way-to-add-the-visual-studio-sdk-to-visual-studio"></a>新方法，可以将 Visual Studio SDK 添加到 Visual Studio
- 从 Visual Studio 2015 开始，不需要单独下载 Visual Studio SDK。 相反，可以将其作为正常安装过程的一部分安装，或者可以选择要将其安装更高版本上。 当打开或创建 VSIX 解决方案时，Visual Studio 会要求你安装 Visual Studio 扩展性工具。 有关详细信息，请参阅[安装 Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+## <a name="new-way-to-add-the-visual-studio-sdk-to-visual-studio"></a>New Way to Add the Visual Studio SDK to Visual Studio
+ Starting in Visual Studio 2015, you don't need to download the Visual Studio SDK separately. Instead, you can install it as part of the normal installation process, or you can choose to install it later on. When you open or create  a VSIX solution, Visual Studio will ask you to install the Visual Studio Extensibility Tools. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
-## <a name="new-ways-of-creating-extensions"></a>创建扩展的新方法
- 从 Visual Studio 2015 SDK，必须创建的扩展，具体取决于哪种编程语言使用的不同选项。
+## <a name="new-ways-of-creating-extensions"></a>New Ways of Creating Extensions
+ Starting in the Visual Studio 2015 SDK, you have different options for creating extensions, depending on which programming language you’re using.
 
 ### <a name="visual-c-and-visual-basic"></a>Visual C# 和 Visual Basic
- 对于 C# 和 Visual Basic 中，没有一系列完整的项目项模板，可用于创建 Vspackage、 菜单命令、 工具窗口、 编辑器分类器、 编辑器修饰和编辑器边距扩展。 可以添加任何或所有这些标准的 VSIX 项目。 有关详细信息，请参见:
+ For C# and Visual Basic, there is a full range of project item templates that allow you to create VSPackages, menu commands, tool windows, editor classifiers, editor adornments, and editor margin extensions. You can add any or all of these to the standard VSIX project. 有关详细信息，请参见:
 
 - [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)
 
@@ -50,27 +50,27 @@ Visual Studio SDK 的 Visual Studio 2015 中，更新，Visual Studio 2015 和 V
 
 - [使用 VSPackage 建扩展](../extensibility/creating-an-extension-with-a-vspackage.md)
 
-     VSPackage 向导不再创建 C# 或 Visual Basic 中的扩展。
+     The VSPackage Wizard no longer creates extensions in C# or Visual Basic.
 
 ### <a name="c"></a>C++
- 有关C++，VSPackage 向导支持菜单命令、 工具窗口和自定义编辑器。 中查找它**新的项目**对话框中的**Visual C++ / 可扩展性**。
+ For C++, the VSPackage Wizard support menu commands, tool windows, and custom editors. Look for it in the **New Project** dialog in **Visual C++ / Extensibility**.
 
-## <a name="vs-sdk-reference-assemblies-via-nuget"></a>通过 NuGet VS SDK 引用程序集
- 对于更高的可移植性和扩展性项目的共享，可以使用 VS SDK 引用程序集的 NuGet 版本。  这些是可在上找到[nuget.org](http://www.nuget.org)由发布[VisualStudioExtensibility](http://www.nuget.org/profiles/VisualStudioExtensibility) ，可以轻松地添加到你的项目或通过 Visual Studio 的解决方案**引用 / 管理 NuGet包**对话框。 可以单独将引用添加到特定的可扩展性的程序集，也可以添加所有 VS SDK 都引用程序集使用 VS SDK 一次[元包](http://www.nuget.org/packages/VSSDK_Reference_Assemblies)。 若要了解有关 NuGet 的详细信息，请参阅[NuGet 概述](http://docs.nuget.org/)并[使用对话框管理 NuGet 程序包](http://docs.nuget.org/Consume/Package-Manager-Dialog)。
+## <a name="vs-sdk-reference-assemblies-via-nuget"></a>VS SDK Reference Assemblies via NuGet
+ For increased portability and sharing of extensibility projects, you can use the NuGet versions of the VS SDK reference assemblies.  These are available on [nuget.org](https://www.nuget.org/) published by [VisualStudioExtensibility](https://www.nuget.org/profiles/VisualStudioExtensibility) and can be easily added to your project or solution through the Visual Studio **References / Manage NuGet Packages** dialog. You can add individual references to specific extensibility assemblies or add all the VS SDK references assemblies at once using the VS SDK [Meta package](https://www.nuget.org/packages/VSSDK_Reference_Assemblies). To learn more about NuGet, see [NuGet Overview](https://docs.microsoft.com/nuget/) and [Manage NuGet Packages Using the Dialog](https://docs.microsoft.com/nuget/consume-packages/install-use-packages-visual-studio).
 
- 当你使用 VS SDK 引用程序集的 NuGet 版本时，另一个用户不需要安装 VS SDK 以打开并生成你的项目。  NuGet 引用程序集和 VS SDK 生成工具自动将该项目的其计算机上安装。
+ When you use the NuGet versions of the VS SDK reference assemblies, another user doesn’t need to install the VS SDK to open and build your project.  The NuGet reference assemblies and VS SDK build tools will automatically be installed on their computer for that project.
 
- VS SDK 项模板其引用时使用 NuGet 和生成工具，以便获取默认情况下 NuGet 的优点。
+ The VS SDK item templates use NuGet for their references and build tools so you get the benefits of NuGet by default.
 
 > [!NOTE]
-> 可以继续使用你的项目使用的安装 VS SDK 引用程序集 (位于下\<Visual Studio 安装位置 > \ VSSDK\VisualStudioIntegration\Common\Assemblies) 和可扩展性的现有项目不需要为升级为使用 NuGet 包。  项目**引用 / 添加引用**对话框仍会继续使用已安装 VS SDK 引用程序集。
+> You can continue to use the VS SDK installed reference assemblies with your projects (located under \<Visual Studio Install Location>\ VSSDK\VisualStudioIntegration\Common\Assemblies) and existing extensibility projects do not need to be upgraded to use NuGet packages.  The project **References / Add Reference** dialog continues to use the VS SDK installed reference assemblies.
 >
-> 如果你想要修改现有项目以使用 NuGet，请参阅[如何：将 VSPackages 迁移到 Visual Studio 2015](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2015.md)具有一节介绍了可扩展性项目更新对 NuGet 包。
+> If you’d like to modify your existing projects to use NuGet, see [How to: Migrate VSPackages to Visual Studio 2015](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2015.md) which has a section on updating extensibility projects to NuGet packages.
 
-## <a name="light-bulbs"></a>灯泡
- Roslyn 项目提供一个编写扩展代码的最令人兴奋的新方法。 有关详细信息，请参阅[Roslyn](https://github.com/dotnet/Roslyn)。
+## <a name="light-bulbs"></a>Light Bulbs
+ One of the most exciting new ways of writing extension code is provided by the Roslyn project. For more information, see [Roslyn](https://github.com/dotnet/Roslyn).
 
- 电灯泡是附带 VSSDK 的新功能。 它们是使用 Visual Studio 编辑器中，展开此项可显示的代码重构操作或内置代码分析器所发现的问题的修补程序的一组的图标。 有关详细信息，请参见[演练：显示灯泡建议](../extensibility/walkthrough-displaying-light-bulb-suggestions.md)。
+ Light bulbs are a new feature that ships with the VSSDK. They are icons used in the Visual Studio editor that expand to display a set of code refactoring actions or fixes for problems identified by the built-in code analyzers. For more information, see [Walkthrough: Displaying Light Bulb Suggestions](../extensibility/walkthrough-displaying-light-bulb-suggestions.md).
 
-## <a name="updated-user-experience-guidelines"></a>已更新的用户体验指南
- 用于 Visual Studio 中设计新的扩展或功能？ 请查看更新和扩展[Visual Studio 用户体验指南](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)。  您会发现[颜色令牌](../extensibility/ux-guidelines/shared-colors-for-visual-studio.md)，[字号](../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md)，[对话框布局规范](../extensibility/ux-guidelines/layout-for-visual-studio.md)，和你需要将新 UI 与 Visual Studio 无缝集成其他指南。
+## <a name="updated-user-experience-guidelines"></a>Updated User Experience Guidelines
+ Designing new extensions or features for Visual Studio? Check out the updated and expanded [Visual Studio User Experience Guidelines](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md).  You’ll find the [color tokens](../extensibility/ux-guidelines/shared-colors-for-visual-studio.md), [font sizes](../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md), [dialog layout specifications](../extensibility/ux-guidelines/layout-for-visual-studio.md), and other guidance you need to seamlessly integrate your new UI with Visual Studio.

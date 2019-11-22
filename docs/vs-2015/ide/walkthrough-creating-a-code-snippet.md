@@ -16,12 +16,12 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f3cf8d0cfd3119113247dedf7723e02fca9634a3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 278858eb28e0db7edd2694397cc7b24f1cfec301
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662653"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296834"
 ---
 # <a name="walkthrough-creating-a-code-snippet"></a>演练：创建代码段
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "72662653"
 只需几步操作即可创建代码片段。 你需要做的就是创建一个 XML 文件，填写适当的元素，并向其中添加代码。 此外还可以向代码中添加引用和替换参数。 使用代码片段管理器（工具/代码片段管理器）上的“导入”按钮，即可向自己的 Visual Studio 安装添加代码片段。
 
 > [!TIP]
-> 有关如何更轻松地编写代码片段的信息，请在 CodePlex 网站中搜索 "代码片段[编辑器](http://go.microsoft.com/fwlink/?LinkId=251033)" 之类的社区工具。
+> For information about how to write code snippets more easily, search the CodePlex website for community tools such as [Snippet Editor](https://go.microsoft.com/fwlink/?LinkId=251033).
 
 ## <a name="snippet-template"></a>代码片段模板
  以下是基本代码片段模板：
@@ -56,7 +56,7 @@ ms.locfileid: "72662653"
 
 1. 在 Visual Studio 中创建新的 XML 文件，然后添加如上所示的模板。
 
-2. 在 Title 元素中填写代码片段的标题，例如 "Hello World VB"。
+2. Fill in the title of the snippet, e.g. "Hello World VB", in the Title element.
 
 3. 在 Code 元素的“语言”特性中填写代码片段的语言。 对于本示例，请使用“VB”。
 
@@ -85,13 +85,13 @@ ms.locfileid: "72662653"
 
      `%USERPROFILE%\Documents\Visual Studio 2013\Code Snippets\Visual Basic\My Code Snippets`
 
-6. 通过打开 Visual Basic 项目并打开代码文件，测试代码片段。 在文件中，单击上下文菜单上的 "**插入代码**片段"，然后单击 "**我的代码片段**"。 应看到一个名为“我的 Visual Basic 代码片段”的代码片段。 双击该选项。
+6. 通过打开 Visual Basic 项目并打开代码文件，测试代码片段。 In the file click **Insert Snippet** on the context menu, then **My Code Snippets**. 应看到一个名为“我的 Visual Basic 代码片段”的代码片段。 双击该选项。
 
-7. 应会看到在代码中插入 `Console.WriteLine("Hello, World!")`。
+7. You should see `Console.WriteLine("Hello, World!")` inserted in the code.
 
 ### <a name="adding-description-and-shortcut-fields"></a>添加“说明”和“快捷方式”字段
 
-1. 在“代码片段管理器”中查看“说明”字段时，可以获得有关代码片段的详细信息。 快捷方式是用户为插入代码片段而键入的标记。 通过打开文件 `%USERPROFILE%\Documents\Visual Studio 2013\Code Snippets\Visual Basic\My Code Snippet\VBCodeSnippet.snippet` 来编辑添加的代码片段。
+1. 在“代码片段管理器”中查看“说明”字段时，可以获得有关代码片段的详细信息。 快捷方式是用户为插入代码片段而键入的标记。 Edit the snippet you have added by opening the file `%USERPROFILE%\Documents\Visual Studio 2013\Code Snippets\Visual Basic\My Code Snippet\VBCodeSnippet.snippet`.
 
 2. 将 Author 和 Description 元素添加到 Header 元素，并填写。
 
@@ -122,11 +122,11 @@ ms.locfileid: "72662653"
 
 6. 再次保存代码片段文件。
 
-7. 要测试该快捷方式，请打开 Visual Basic 项目，并打开代码文件。 在文件中键入 `hello`，然后按 TAB。 应插入代码片段。
+7. 要测试该快捷方式，请打开 Visual Basic 项目，并打开代码文件。 Type `hello` in the file and press TAB. The snippet code should be inserted.
 
 ### <a name="to-add-references-and-imports"></a>添加引用和导入
 
-1. 使用 Visual Basic 代码段，你可以通过使用 reference 元素添加对项目的引用，并使用 Imports 元素添加导入声明。 （其他语言的代码段没有此功能。）例如，如果将代码示例中的 `Console.WriteLine` 更改为 `MessageBox.Show`，则可能需要将 System.web 程序集添加到项目。
+1. With Visual Basic snippets you can add a reference to a project by using the References element, and add an Imports declaration by using the Imports element. (Snippets in other languages do not have this feature.) For example, if you change `Console.WriteLine` in the code example to `MessageBox.Show`, you may need to add the System.Windows.Forms.dll assembly to the project.
 
 2. 打开代码片段。
 
@@ -248,7 +248,7 @@ ms.locfileid: "72662653"
 
 8. 打开 Visual Basic 项目并添加代码片段。
 
-9. 代码应如下所示，其中 `SQL connection string` 和 `dcConnection` 替换内容以浅橙色突出显示。 按 TAB 从一个导航到另一个。
+9. 代码应如下所示，其中 `SQL connection string` 和 `dcConnection` 替换内容以浅橙色突出显示。 Press TAB to navigate from one to the other.
 
     ```
     Dim daCustomers As SqlDataAdapter

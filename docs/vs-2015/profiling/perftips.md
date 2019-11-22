@@ -9,22 +9,22 @@ caps.latest.revision: 11
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: aac7068fae27e2f0ba699f404374859ef7b91d1a
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: fa56b6731e359db486a111194a710069d41a2f1b
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65675320"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295869"
 ---
 # <a name="perftips"></a>性能提示
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio 调试器 *性能提示* 和调试器集成的 **“诊断工具”** 可帮助在调试时监视和分析应用的性能。  
   
- 虽然调试器集成的诊断工具是在开发时注意性能问题的极佳方式，但是调试器可能会显著影响应用的性能。 若要收集更准确的性能数据，请考虑使用也在调试器外部作为性能调查的其他部分运行的 Visual Studio 诊断工具。 请参阅[运行而不进行调试的分析工具](https://msdn.microsoft.com/library/e97ce1a4-62d6-4b8e-a2f7-61576437ff01)。  
+ 虽然调试器集成的诊断工具是在开发时注意性能问题的极佳方式，但是调试器可能会显著影响应用的性能。 若要收集更准确的性能数据，请考虑使用也在调试器外部作为性能调查的其他部分运行的 Visual Studio 诊断工具。 See [Run profiling tools without debugging](https://msdn.microsoft.com/library/e97ce1a4-62d6-4b8e-a2f7-61576437ff01).  
   
 ## <a name="perftips"></a>性能提示  
- 调试器在断点或单步执行操作中停止执行时，中断与上一个断点之间经过的时间会显示为在编辑器窗口中的提示。 有关详细信息，请参阅 [PerfTips：使用 Visual Studio 调试时快速查看性能信息](http://blogs.msdn.com/b/visualstudioalm/archive/2014/08/18/perftips-performance-information-at-a-glance-while-debugging-with-visual-studio.aspx)。  
+ 调试器在断点或单步执行操作中停止执行时，中断与上一个断点之间经过的时间会显示为在编辑器窗口中的提示。 有关详细信息，请参阅 [“性能提示：使用 Visual Studio 进行调试时的性能信息一览”](https://devblogs.microsoft.com/devops/perftips-performance-information-at-a-glance-while-debugging-with-visual-studio/)。  
   
  ![PerfTip](../profiling/media/dbgdiag-perf-perftip.png "DBGDIAG_PERF_PerfTip")  
   
@@ -46,13 +46,13 @@ Visual Studio 调试器 *性能提示* 和调试器集成的 **“诊断工具�
 ## <a name="turn-perftips-on-or-off"></a>打开或关闭性能提示  
  启用或禁用性能提示：  
   
-1. 在 **“调试”** 菜单上，选择 **“选项”**。  
+1. 在 **“调试”** 菜单上，选择 **“选项”** 。  
   
-2. 选中或清除 **“在调试过程中显示占用时间性能提示”**。  
+2. 选中或清除 **“在调试过程中显示占用时间性能提示”** 。  
   
 ## <a name="turn-the-diagnostic-tools-window-on-or-off"></a>打开或关闭“诊断工具”窗口  
  启用或禁用“诊断工具”窗口：  
   
-1. 在 **“调试”** 菜单上，选择 **“选项”**。  
+1. 在 **“调试”** 菜单上，选择 **“选项”** 。  
   
-2. 选中或清除 **“在调试过程中启用诊断工具”**。
+2. 选中或清除 **“在调试过程中启用诊断工具”** 。

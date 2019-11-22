@@ -23,12 +23,12 @@ caps.latest.revision: 48
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 04b6573b6cd04b5a061a40025a9872d9972e35cb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1ed9a341e1b0f7247175e62aceafc6051f83e8f9
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645487"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300157"
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>如何：使用引用管理器添加或删除引用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "72645487"
 - “浏览”组，包含“最近”子组。
 
 ## <a name="assemblies-tab"></a>“程序集”选项卡
- “程序集”选项卡列出可供引用的所有 .NET Framework 程序集。 “程序集”选项卡不会列出全局程序集缓存 (GAC) 中的任何程序集，这是因为 GAC 中的程序集是运行时环境的一部分。 如果某个应用程序包含对在 GAC 中注册的程序集的引用，则在部署或复制该应用程序时，无论“复制本地”设置为何，所引用的程序集都不会与该应用程序一起部署或复制。 有关详细信息，请参阅[项目引用](http://go.microsoft.com/fwlink/?LinkId=238512)。
+ “程序集”选项卡列出可供引用的所有 .NET Framework 程序集。 “程序集”选项卡不会列出全局程序集缓存 (GAC) 中的任何程序集，这是因为 GAC 中的程序集是运行时环境的一部分。 如果某个应用程序包含对在 GAC 中注册的程序集的引用，则在部署或复制该应用程序时，无论“复制本地”设置为何，所引用的程序集都不会与该应用程序一起部署或复制。 有关详细信息，请参阅[项目引用](https://go.microsoft.com/fwlink/?LinkId=238512)。
 
  在添加对任何 EnvDTE 命名空间（EnvDTE、EnvDTE80、EnvDTE90、EnvDTE90a 或 EnvDTE100）的引用时，请在“属性”窗口中将引用的“嵌入互操作类型”属性设置为“False”。 将此属性设置为“True”可能会导致生成问题，因为某些 EnvDTE 属性是不能嵌入的。
 
@@ -131,7 +131,7 @@ ms.locfileid: "72645487"
 
     通过在 HKEY_LOCAL_MACHINE 节点下创建注册表项，所有用户都可以在“添加引用”对话框中的指定位置看到这些程序集。 如果在 HKEY_CURRENT_USER 节点下创建注册表项，则只会影响当前用户的设置。
 
-    再次打开“添加引用”对话框。 程序集应出现在 " **.net** " 选项卡上。如果不是这样，请确保这些程序集位于指定的*AssemblyLocation*目录中，重新启动 Visual Studio，然后重试。
+    再次打开“添加引用”对话框。 The assemblies should appear on the **.NET** tab. If they do not, make sure that the assemblies are located in the specified *AssemblyLocation* directory, restart Visual Studio, and try again.
 
 ## <a name="com-tab"></a>“COM”选项卡
  “COM”选项卡列出可供引用的所有 COM 组件。 如果要添加对包含内部清单的已注册 COM DLL 的引用，请先注销该 DLL。 否则，Visual Studio 会将程序集引用作为 ActiveX 控件而不是本机 DLL 添加。
@@ -216,4 +216,4 @@ ms.locfileid: "72645487"
  “引用管理器”对话框中的搜索栏在处于焦点的选项卡上运行。 例如，在“解决方案”选项卡处于焦点时，如果用户在搜索栏中键入“System”，则除非解决方案具有包含“System”的项目名称，否则搜索不会返回任何结果。
 
 ## <a name="see-also"></a>请参阅
- [笔尖如何：使用 "添加引用" 对话框添加或删除引用](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)[在项目中管理引用](../ide/managing-references-in-a-project.md)
+ [NIB How to: Add or Remove References By Using the Add Reference Dialog Box](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9) [Managing references in a project](../ide/managing-references-in-a-project.md)

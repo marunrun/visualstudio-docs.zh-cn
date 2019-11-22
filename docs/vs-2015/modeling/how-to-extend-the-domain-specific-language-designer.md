@@ -1,5 +1,5 @@
 ---
-title: 如何：扩展特定于域的语言设计器 |Microsoft Docs
+title: 'How to: Extend the Domain-Specific Language Designer | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -9,52 +9,52 @@ caps.latest.revision: 10
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c2c131032a97231dce0394065d78505e936e3e91
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 33a7f5a0f183030f9de021df328f8c5e50f5fd5a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72656021"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300898"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>如何：扩展域特定语言设计器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-你可以对用于编辑 DSL 定义的设计器进行扩展。 可以进行的扩展类型包括添加菜单命令、添加拖放和双击笔势的处理程序，以及在特定类型的值或关系发生更改时触发的规则。 可以将扩展打包为 Visual Studio 集成扩展（VSIX），并将其分发给其他用户。
+You can make extensions to the designer that you use to edit DSL Definitions. Types of extension that you can make include adding menu commands, adding handlers for drag and double-click gestures, and rules that are triggered when particular types of values or relationships change. The extensions can be packaged as a Visual Studio Integration Extension (VSIX) and distributed to other users.
 
- 有关此功能的示例代码和详细信息，请参阅 Visual Studio[可视化和建模 SDK （VMSDK）](http://go.microsoft.com/fwlink/?LinkID=186128)网站。
+ For sample code and more information about this feature, see the Visual Studio [Visualization and Modeling SDK (VMSDK) Web site](https://go.microsoft.com/fwlink/?LinkID=186128).
 
-## <a name="setting-up-the-solution"></a>设置解决方案
- 设置包含扩展代码的项目，以及一个导出项目的 VSIX 项目。 你的解决方案可以包含合并到同一 VSIX 中的其他项目。
+## <a name="setting-up-the-solution"></a>Setting up the Solution
+ Set up a project that contains the code of your extension, and a VSIX project that exports the project. Your solution can contain other projects that are incorporated into the same VSIX.
 
-#### <a name="to-create-a-dsl-designer-extension-solution"></a>创建 DSL 设计器扩展解决方案
+#### <a name="to-create-a-dsl-designer-extension-solution"></a>To create a DSL Designer Extension Solution
 
-1. 使用类库项目模板创建一个新项目。 在 "**新建项目**" 对话框中，单击 "**视觉对象C#**  "，然后在中间窗口中单击 **"类库"。**
+1. Create a new project using the Class Library project template. In the **New Project** dialog box, click **Visual C#** and then in the middle window click **Class Library**.
 
-     此项目将包含你的扩展的代码。
+     This project will contain the code of your extensions.
 
-2. 使用 VSIX 项目模板创建一个新项目。 在 "**新建项目**" 对话框中，依次展开 "**视觉对象C#** "、"**扩展性**"，然后在中间窗口中选择 " **VSIX 项目**"。
+2. Create a new project using the VSIX project template. In the **New Project** dialog box, expand **Visual C#** , click **Extensibility**, and then in the middle window select **VSIX Project**.
 
-     选择 "**添加到解决方案**"。
+     Select **Add to Solution**.
 
-     Source.extension.vsixmanifest 在 VSIX 清单编辑器中打开。
+     Source.extension.vsixmanifest opens in the VSIX manifest editor.
 
-3. 在 "内容" 字段上方，单击 "**添加内容**"。
+3. Above the Content field, click **Add Content**.
 
-4. 在 "**添加内容**" 对话框中，将 "**选择内容类型**" 设置为 " **MEF 组件**"，并将 "**项目**" 设置为类库项目。
+4. In the **Add Content** dialog box, set **Select a Content Type** to **MEF Component**, and set **Project** to your class library project.
 
-5. 单击 "**选择版本**" 并确保选中**Visual Studio Enterprise** 。
+5. Click **Select Editions** and make sure that **Visual Studio Enterprise** is checked.
 
-6. 请确保 VSIX 项目是解决方案的启动项目。
+6. Make sure that the VSIX project is the Startup project of the solution.
 
-7. 在类库项目中，添加对以下程序集的引用：
+7. In the class library project, add references to the following assemblies:
 
-     VisualStudio. CoreUtility
+     Microsoft.VisualStudio.CoreUtility
 
-     VisualStudio （web.config）
+     Microsoft.VisualStudio.Modeling.Sdk.11.0
 
-     VisualStudio. 11.0. 11。0
+     Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0
 
-     VisualStudio. Dsldefinition.dsl. 11。0
+     Microsoft.VisualStudio.Modeling.Sdk.DslDefinition.11.0
 
      Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0
 
@@ -67,26 +67,26 @@ ms.locfileid: "72656021"
      System.Windows.Forms
 
 ## <a name="testing-and-deployment"></a>测试和部署
- 若要测试本主题中的任何扩展，请生成并运行解决方案。 将打开 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例。 在此实例中，打开 DSL 解决方案。 编辑 Dsldefinition.dsl 关系图。 可以查看扩展行为。
+ To test any of the extensions in this topic, build and run the solution. 将打开 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例。 In this instance, open a DSL solution. Edit the DslDefinition diagram. The extension behavior can be seen.
 
- 若要将扩展部署到主 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 和其他计算机上，请执行以下步骤：
+ To deploy the extensions to the main [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], and to other computers, follow these steps:
 
-1. 在 bin 中的 VSIX 项目中查找 VSIX 安装文件 \\ * \\ \* .vsix
+1. Find the VSIX installation file, in your VSIX project in bin\\*\\\*.vsix
 
-2. 将此文件复制到目标计算机，然后在 Windows 资源管理器（或文件资源管理器）中双击它。
+2. Copy this file to the target computer, and then in Windows Explorer (or File Explorer), double-click it.
 
-    此时将打开 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展管理器以确认已安装了该扩展。
+    The [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Extension Manager opens to confirm that the extension has been installed.
 
-   若要卸载扩展，请执行以下步骤：
+   To uninstall the extension, follow these steps:
 
-3. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中，单击 "**工具**" 菜单上的 "**扩展管理器**"。
+3. in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], on the **Tools** menu, click **Extension Manager**.
 
-4. 选择扩展并将其删除。
+4. Select the extension and delete it.
 
-## <a name="adding-a-shortcut-menu-command"></a>添加快捷菜单命令
- 若要在 DSL 设计器图面上或在 DSL 资源管理器窗口中显示快捷菜单命令，请编写一个类似于下面的类。
+## <a name="adding-a-shortcut-menu-command"></a>Adding a Shortcut Menu Command
+ To make a shortcut menu command appear on the DSL Designer surface or in the DSL Explorer window, write a class resembling the following.
 
- 类必须实现 `ICommandExtension` 并且必须具有属性 `DslDefinitionModelCommandExtension`。
+ The class must implement `ICommandExtension` and must have the attribute `DslDefinitionModelCommandExtension`.
 
 ```
 using System.Collections.Generic;
@@ -148,8 +148,8 @@ namespace Fabrikam.SimpleDslDesignerExtension
 }
 ```
 
-## <a name="handling-mouse-gestures"></a>处理鼠标手势
- 此代码类似于菜单命令的代码。
+## <a name="handling-mouse-gestures"></a>Handling Mouse Gestures
+ The code is similar to the code of the menu command.
 
 ```
 [DslDefinitionModelGestureExtension]
@@ -209,8 +209,8 @@ namespace Fabrikam.SimpleDslDesignerExtension
  }
 ```
 
-## <a name="responding-to-value-changes"></a>响应值更改
- 此处理程序需要域模型才能正常工作。 我们提供一个简单的域模型。
+## <a name="responding-to-value-changes"></a>Responding to Value Changes
+ This handler needs a domain model to work correctly. We provide a simple domain model.
 
 ```
 using System.Diagnostics;
@@ -250,7 +250,7 @@ namespace Fabrikam.SimpleDslDesignerExtension
 } }  }  );
 ```
 
- 下面的代码实现了一个简单的模型。 创建新的 GUID 以替换占位符。
+ The following code implements a simple model. Create a new GUID to replace the placeholder.
 
 ```
 using System;

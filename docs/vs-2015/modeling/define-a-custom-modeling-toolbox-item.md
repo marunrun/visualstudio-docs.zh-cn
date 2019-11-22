@@ -1,5 +1,5 @@
 ---
-title: 定义自定义建模工具箱项 |Microsoft Docs
+title: Define a custom modeling toolbox item | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -11,12 +11,12 @@ caps.latest.revision: 33
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 27692c31c2c0f1c52ab026fb2d55e5d240839ff3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ac299f18e544ef4f3215707abbdc3d9e8d266de6
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654904"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299289"
 ---
 # <a name="define-a-custom-modeling-toolbox-item"></a>定义自定义建模工具箱项
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "72654904"
 > [!NOTE]
 > 你可以使用此方法来创建元素工具。 也就是说，你可以创建将从工具箱拖到关系图上的工具。 你不能创建连接器工具。
 
-## <a name="DefineTool"></a>定义自定义建模工具
+## <a name="DefineTool"></a> Defining a Custom Modeling Tool
 
 #### <a name="to-define-a-custom-modeling-tool"></a>定义自定义建模工具
 
@@ -42,21 +42,21 @@ ms.locfileid: "72654904"
 
     - 这些元素之间可以具有关系，也可以具有端口、特性、操作或插针等附属元素。
 
-2. 命名新工具并以此来保存关系图。 在 "**文件**" 菜单上，使用 "**保存 ..."As**。
+2. 命名新工具并以此来保存关系图。 On the **File** menu, use **Save…As**.
 
 3. 使用 Windows 资源管理器，将两个关系图文件复制到以下文件夹或任何子文件夹中：
 
-     *YourDocuments* **\Visual Studio\Architecture Tools\Custom 工具箱项**
+     *YourDocuments* **\Visual Studio\Architecture Tools\Custom Toolbox Items**
 
-    - 如果不存在此文件夹，请进行创建。 您可能必须创建**体系结构工具**和**自定义工具箱项**。
+    - 如果不存在此文件夹，请进行创建。 You might have to create both **Architecture Tools** and **Custom Toolbox Items**.
 
-    - 复制两个关系图文件，其中一个名称以 "..." 结尾**关系图**"和另一个名称以" 。**关系图。布局**"
+    - Copy both diagram files, one with a name that ends "…**diagram**" and the other with a name that ends "…**diagram.layout**"
 
     - 你可以随意创建任意多个自定义工具。 为每个工具使用一个关系图。
 
-4. 可有可无按照[如何定义自定义工具的属性](#tbxinfo)中所述创建 **.tbxinfo**文件，并将其添加到同一个目录中。 这样，便可以定义工具箱图标、工具提示等。
+4. (Optional) Create a **.tbxinfo** file as described in [How to Define the Properties of Custom Tools](#tbxinfo), and add it to the same directory. 这样，便可以定义工具箱图标、工具提示等。
 
-    - 可以使用单个 **.tbxinfo**文件来定义多个工具。 该文件可以引用子文件夹中的关系图文件。
+    - A single **.tbxinfo** file can be used to define several tools. 该文件可以引用子文件夹中的关系图文件。
 
 5. 重新启动 Visual Studio。 其他工具会显示在相应类型关系图的工具箱中。
 
@@ -83,8 +83,8 @@ ms.locfileid: "72654904"
 
 - 连接器路由。 如果手动传送连接器，则在使用你的工具时不会保留该路由。 一些嵌套形状（如端口）的位置不会相对于其所有者而保留。
 
-## <a name="tbxinfo"></a>如何定义自定义工具的属性
- 工具箱信息（ **. .tbxinfo**）文件允许您为一个或多个自定义工具指定工具箱名称、图标、工具提示、选项卡和帮助关键字。 为其指定名称，例如**MyTools. .tbxinfo**。
+## <a name="tbxinfo"></a> How to Define the Properties of Custom Tools
+ A toolbox information ( **.tbxinfo**) file allows you to specify a toolbox name, icon, tooltip, tab, and help keyword for one or more custom tools. Give it any name, such as **MyTools.tbxinfo**.
 
  该文件的一般形式如下所示：
 
@@ -123,31 +123,31 @@ ms.locfileid: "72654904"
 
   为想要定义的每个工具箱添加一个 `<customToolboxItem>` 节点。
 
-  **.Tbxinfo**文件中的节点如下所示。 每个节点都有一个默认值。
+  The nodes in the **.tbxinfo** file are as follows. 每个节点都有一个默认值。
 
 |节点名称|定义|
 |---------------|-------------|
 |displayName|工具箱项的名称。|
 |tabName|应在其中显示该项的工具箱选项卡。 可以指定此类型关系图的常规选项卡名称，或者指定一个单独的名称。|
-|图像|位图（ **.bmp**）文件的位置，其高度和宽度均为16，颜色深度为24位。|
+|图像|The location of the bitmap ( **.bmp**) file, which must have height and width of 16, and a color depth of 24 bits.|
 |f1Keyword|用于定位帮助主题的关键字。|
 |工具提示|此工具的工具提示。|
 
  可以在 Visual Studio 中编辑位图文件，并在“属性”窗口中将其高度和宽度设置为 16。
 
 > [!NOTE]
-> 如果在单独试用关系图文件后开始使用 .tbxinfo 文件，则可能会发现工具箱同时包含新旧版本的工具箱项。 如果在 .tbxinfo 文件中键入了错误的关系图文件名称，也会发生此问题。 如果出现这种情况，请在 "工具箱" 的快捷菜单上选择 "**重置工具箱"** 。 将不会显示自定义工具箱项。 重新启动 Visual Studio，此时将显示正确的自定义项。
+> 如果在单独试用关系图文件后开始使用 .tbxinfo 文件，则可能会发现工具箱同时包含新旧版本的工具箱项。 如果在 .tbxinfo 文件中键入了错误的关系图文件名称，也会发生此问题。 If this occurs, on the shortcut menu of the toolbox choose **Reset Toolbox**. 将不会显示自定义工具箱项。 重新启动 Visual Studio，此时将显示正确的自定义项。
 
-## <a name="Extension"></a>如何在 Visual Studio 扩展中分发工具箱项
- 可以通过将工具箱项打包到 Visual Studio 扩展（VSIX）中，将其分发给其他 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 用户。 可以将命令、配置文件和其他扩展打包到同一个 VSIX 文件。 有关详细信息，请参阅[部署 Visual Studio 扩展](http://go.microsoft.com/fwlink/?LinkId=160780)。
+## <a name="Extension"></a> How to Distribute Toolbox Items in a Visual Studio Extension
+ You can distribute toolbox items to other [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] users by packaging them into a Visual Studio Extension (VSIX). 可以将命令、配置文件和其他扩展打包到同一个 VSIX 文件。 For more information, see [Deploying Visual Studio Extensions](https://go.microsoft.com/fwlink/?LinkId=160780).
 
  通常使用 VSIX 项目模板来构建 Visual Studio 扩展。 若要执行此操作，必须已安装 [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]。
 
 #### <a name="to-add-a-toolbox-item-to-a-visual-studio-extension"></a>向 Visual Studio 扩展添加工具箱项
 
-1. [创建和测试一个或多个自定义工具](#DefineTool)。
+1. [Create and test one or more custom tools](#DefineTool).
 
-2. [创建一个](#tbxinfo)引用工具的 .tbxinfo 文件。
+2. [Create a .tbxinfo file](#tbxinfo) that references the tools.
 
 3. 打开现有 Visual Studio 扩展项目。
 
@@ -157,55 +157,55 @@ ms.locfileid: "72654904"
 
     1. 在“文件” 菜单上，选择“新建”、“项目”。
 
-    2. 在 "**新建项目**" 对话框中的 "**已安装的模板**" 下，选择 "**视觉对象C#** 、**扩展性**、 **VSIX 项目**"。
+    2. In the **New Project** dialog box, under **Installed Templates**, choose **Visual C#** , **Extensibility**, **VSIX project**.
 
-4. 将工具箱定义添加到项目。 包括 **.tbxinfo**文件、关系图文件、位图文件和任何资源文件，并确保它们包含在 VSIX 中。
+4. 将工具箱定义添加到项目。 Include the **.tbxinfo** file, the diagram files, bitmap files, and any resource files, and make sure that they are included in the VSIX.
 
-    - 在解决方案资源管理器中，在 VSIX 项目的快捷菜单上，选择 "**添加**"、"**现有项**"。 在对话框中，设置 "**所有文件" 类型的对象**。 找到并选择这些文件，然后选择 "**添加**"。
+    - In Solution Explorer, on the shortcut menu of the VSIX project, choose **Add**, **Existing Item**. In the dialog box, set **Objects of Type: All Files**. Locate the files, select them all, and then choose **Add**.
 
         > [!NOTE]
         > 在此项目中，你不能在模型编辑器中打开关系图文件。
 
 5. 设置刚添加的所有文件的以下属性。 通过在解决方案资源管理器中选择所有文件，可以同时设置这些属性。 请注意不要更改项目中其他文件的属性。
 
-     **复制到输出目录** = **始终复制**
+     **Copy to Output Directory** = **Copy Always**
 
-     @No__t_1**内容** **生成操作**
+     **Build Action** = **Content**
 
-     **在 VSIX 中包括** = **true**
+     **Include in VSIX** = **true**
 
 6. 打开 **source.extension.vsixmanifest**。 它将在扩展清单编辑器中打开。
 
-7. 在 "**元数据**" 下，为自定义工具添加描述。
+7. Under **Metadata**, add a description for the custom tools.
 
-     在 "**资产**" 下，选择 "**新建**"，然后在对话框中设置字段，如下所示：
+     Under **Assets**, choose **New** and then set the fields in the dialog as follows:
 
-    - **类型** = **自定义扩展类型**
+    - **Type** = **Custom Extension Type**
 
     - “类型”= `Microsoft.VisualStudio.ArchitectureTools.CustomToolboxItems`
 
         > [!NOTE]
         > 这并不是下拉列表中的选项。 你必须使用键盘进行输入。
 
-    - 文件**系统上的** **源** =  文件。
+    - **Source** = **File on filesystem**.
 
-    - **路径**= 你的 **.tbxinfo**文件，例如**MyTools. .tbxinfo**
+    - **Path** = your **.tbxinfo** file, for example **MyTools.tbxinfo**
 
 8. 生成项目。
 
-9. **若要验证扩展是否正常运行**，请按 F5。 启动 Visual Studio 的实验实例。
+9. **To verify that the extension works**, press F5. 启动 Visual Studio 的实验实例。
 
      在实验实例中，创建或打开相关类型的 UML 关系图。 验证新工具是否显示在工具箱中以及能否正确创建元素。
 
-10. **获取用于部署的 VSIX 文件：** 在 Windows 资源管理器中，打开文件夹 **.\bin\Debug**或 **.\bin\Release**以查找 **.vsix**文件。 此文件是 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 扩展文件。 可将其安装在自己的计算机上，也可以发送给其他 Visual Studio 用户。
+10. **To obtain a VSIX file for deployment:** In Windows Explorer, open the folder **.\bin\Debug** or **.\bin\Release** to find the **.vsix** file. 此文件是 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 扩展文件。 可将其安装在自己的计算机上，也可以发送给其他 Visual Studio 用户。
 
 #### <a name="to-install-custom-tools-from-a-visual-studio-extension"></a>从 Visual Studio 扩展安装自定义工具
 
 1. 在 Windows 资源管理器或 Visual Studio 中，打开 `.vsix` 文件。
 
-2. 在出现的对话框中选择 "**安装**"。
+2. Choose **Install** in the dialog box that appears.
 
-3. 若要卸载或临时禁用该扩展，请从 "**工具**" 菜单打开 "**扩展和更新**"。
+3. To uninstall or temporarily disable the extension, open **Extensions and Updates** from the **Tools** menu.
 
 ## <a name="localization"></a>本地化
  构建一个扩展，使其在安装到另一台计算机中时，以目标计算机语言显示工具名称和工具提示。
@@ -214,13 +214,13 @@ ms.locfileid: "72654904"
 
 1. 创建包含一个或多个自定义工具的 Visual Studio 扩展项目。
 
-    在 **.tbxinfo**文件中，使用资源文件方法来定义工具的 `displayName`、工具箱 `tabName` 和工具提示。 创建在其中定义了这些字符串的资源文件，将该文件编译到一个程序集中，并从 tbxinfo 文件中对其进行引用。
+    In the **.tbxinfo** file, use the resource file method to define the tool's `displayName`, toolbox `tabName`, and the tooltip. 创建在其中定义了这些字符串的资源文件，将该文件编译到一个程序集中，并从 tbxinfo 文件中对其进行引用。
 
 2. 创建包含具有其他语言字符串的资源文件的附加程序集。
 
-3. 将每个附加程序集放在名称为对应语言区域性代码的文件夹中。 例如，将法语版本的程序集放在名为**fr**的文件夹中。
+3. 将每个附加程序集放在名称为对应语言区域性代码的文件夹中。 For example, place a French version of the assembly inside a folder that is named **fr**.
 
-4. 应使用非特定区域性代码（通常为两个字母），而不应使用特定区域性代码（例如 `fr-CA`）。 有关区域性代码的详细信息，请参阅[cultureinfo.getcultures 方法](http://go.microsoft.com/fwlink/?LinkId=160782)，它提供了区域性代码的完整列表。
+4. 应使用非特定区域性代码（通常为两个字母），而不应使用特定区域性代码（例如 `fr-CA`）。 For more information about culture codes, see [CultureInfo.GetCultures method](https://go.microsoft.com/fwlink/?LinkId=160782), which provides a complete list of culture codes.
 
 5. 生成 Visual Studio 扩展并发布。
 
@@ -231,7 +231,7 @@ ms.locfileid: "72654904"
 ## <a name="other-toolbox-operations"></a>其他工具箱操作
  通常，在 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 中，可以通过重命名工具、将工具移到不同的工具箱选项卡以及删除工具来个性化工具箱。 但这些更改不会如本主题中描述的创建步骤一样可以保存自定义建模工具。 重新启动 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 时，会重新显示自定义工具及其定义的名称和工具箱位置。
 
- 此外，如果您执行 "**重置工具箱**" 命令，您的自定义工具将会消失。 但是，当重新启动 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 时，它们将重新显示。
+ Furthermore, your custom tools will disappear if you perform the **Reset Toolbox** command. 但是，当重新启动 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 时，它们将重新显示。
 
 ## <a name="see-also"></a>请参阅
- [扩展 uml 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)[定义用于扩展 uml 的配置文件](../modeling/define-a-profile-to-extend-uml.md)[在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)[为 UML 模型定义验证约束](../modeling/define-validation-constraints-for-uml-models.md)
+ [Extend UML models and diagrams](../modeling/extend-uml-models-and-diagrams.md) [Define a profile to extend UML](../modeling/define-a-profile-to-extend-uml.md) [Define a menu command on a modeling diagram](../modeling/define-a-menu-command-on-a-modeling-diagram.md) [Define validation constraints for UML models](../modeling/define-validation-constraints-for-uml-models.md)

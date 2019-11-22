@@ -10,12 +10,12 @@ ms.assetid: cd9ff940-e948-4d28-a72c-b291ef5c1e90
 caps.latest.revision: 35
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c7b3d6a3cdb6eefd27f391dbe68a45ec3824b7de
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f03490fc7ea3513a006254e3931cc1113f3bc159
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660561"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302584"
 ---
 # <a name="generate-unit-tests-for-your-code-with-intellitest"></a>使用 IntelliTest 为你的代码生成单元测试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,15 +36,15 @@ IntelliTest 浏览你的 .NET 代码，以生成测试数据和单元测试套�
 
 2. 在代码中右键单击一种方法并选择“运行 IntelliTest” ，为方法中的代码生成单元测试。
 
-     ![在&#45;方法中右键单击以生成单元测试](../test/media/runpex.png "RunPEX")
+     ![Right&#45;click in your method to generate unit tests](../test/media/runpex.png "RunPEX")
 
      IntelliTest 使用不同的输入多次运行你的代码。 每次运行都会在表中表示出来，显示输入测试数据以及产生的输出或异常。
 
-     !["浏览结果" 窗口随测试一起显示](../test/media/pexexplorationresults.png "PEXExplorationResults")
+     ![Exploration Results window is displayed with tests](../test/media/pexexplorationresults.png "PEXExplorationResults")
 
      要为一个类中的所有公共方法生成单元测试，只需右键单击类而不是特定的方法。 然后选择“运行 IntelliTest”。 使用“浏览结果”窗口中的下拉列表，显示类中每个方法的单元测试和输入数据。
 
-     ![从列表中选择要查看的测试结果](../test/media/selectpextest.png "SelectPEXTest")
+     ![Select the test results to view from the list](../test/media/selectpextest.png "SelectPEXTest")
 
      对于通过的测试，检查结果列中报告的结果是否与你对代码的预期要求匹配。 对于失败的测试，根据需要修复你的代码。 然后重新运行 IntelliTest 来验证修复。
 
@@ -52,11 +52,11 @@ IntelliTest 浏览你的 .NET 代码，以生成测试数据和单元测试套�
 
 1. 选择你要与参数化单元测试一同保存到测试项目中的数据行。
 
-     ![选择测试;右键&#45;单击并选择 "保存"](../test/media/savepextests.png "SavePEXTests")
+     ![Select tests; right&#45;click and choose Save](../test/media/savepextests.png "SavePEXTests")
 
      你可以查看已创建的测试项目和参数化单元测试，单个单元测试（对应于每个行）保存在测试项目的 .g.cs 文件中，参数化单元测试保存在其对应的 .cs 文件中。 可以从测试资源管理器运行这些单元测试并查看结果，正如手动创建的任何单元测试一样。
 
-     ![在测试方法中打开类文件以查看单元测试](../test/media/testmethodpex.png "TestMethodPEX")
+     ![Open class file in test method to view unit test](../test/media/testmethodpex.png "TestMethodPEX")
 
      此外，还向测试项目添加了必要的引用。
 
@@ -68,11 +68,11 @@ IntelliTest 浏览你的 .NET 代码，以生成测试数据和单元测试套�
 
      查看警告，确定后续操作。
 
-     ![查看警告](../test/media/pexviewwarning.png "PEXViewWarning")
+     ![View warnings](../test/media/pexviewwarning.png "PEXViewWarning")
 
 2. 调查代码并了解要测试的内容后，可修复警告，以选择要用于测试该接口的类。
 
-     ![右键&#45;单击该警告，然后选择 "修复"](../test/media/pexfixwarning.png "PEXFixWarning")
+     ![Right&#45;click the warning and choose Fix](../test/media/pexfixwarning.png "PEXFixWarning")
 
      此选择会添加到 PexAssemblyInfo.cs 文件中。
 
@@ -80,7 +80,7 @@ IntelliTest 浏览你的 .NET 代码，以生成测试数据和单元测试套�
 
 3. 现在，你可重新运行 IntelliTest，以生成参数化单元测试并使用已修复的类测试数据。
 
-     ![重新运行 IntelliTest 以生成测试数据](../test/media/pexwarningsfixed.png "PEXWarningsFixed")
+     ![Rerun IntelliTest to generate the test data](../test/media/pexwarningsfixed.png "PEXWarningsFixed")
 
 ### <a name="specify-use-intellitest-to-validate-correctness-properties-that-you-specify-in-code"></a>指定：使用 IntelliTest 来验证在代码中指定的正确性属性
  指定需要生成的单元测试来验证的输入和输出之间的常规关系。 此规范封装在一个方法中，该方法看似为测试方法，但已被全称量词化。 这就是参数化单元测试方法，并且你所做的任何断言都必须保留 IntelliTest 可以生成的所有可能输入值。
@@ -120,18 +120,18 @@ IntelliTest 浏览你的 .NET 代码，以生成测试数据和单元测试套�
 ### <a name="NoRun"></a> 问：是否可以无需首先运行 IntelliTest 便生成参数化单元测试？
  **答：** 可以，在类或方法中单击右键，然后选择 **创建 IntelliTest**。
 
- ![右键&#45;单击编辑器，选择 "创建 IntelliTest"](../test/media/pexcreateintellitest.png "PEXCreateIntelliTest")
+ ![Right&#45;click editor, choose Create IntelliTest](../test/media/pexcreateintellitest.png "PEXCreateIntelliTest")
 
  接受默认格式以生成测试，或更改项目和测试的命名方式。 你可以创建新的测试项目或将你的测试保存到现有项目。
 
- ![用 MSTest 默认值创建 IntelliTest](../test/media/pexcreateintellitestmstest.png "PEXCreateIntelliTestMSTest")
+ ![Create IntelliTest with MSTest default](../test/media/pexcreateintellitestmstest.png "PEXCreateIntelliTestMSTest")
 
 ### <a name="q-can-i-use-other-unit-test-frameworks-with-intellitest"></a>问：是否可以将其他单元测试框架用于 IntelliTest？
  **答：** 可以，请按照下列步骤 [查找和安装其他框架](../test/install-third-party-unit-test-frameworks.md)。 重新启动 Visual Studio 并重新打开你的解决方案后，在类或方法中单击右键，然后选择 **创建 IntelliTest**。 请在此处选择已安装的框架：
 
- ![为 IntelliTest 选择其他单元测试框架](../test/media/pexcreateintellitestextensions.png "PEXCreateIntelliTestExtensions")
+ ![Select other unit test framework for IntelliTest](../test/media/pexcreateintellitestextensions.png "PEXCreateIntelliTestExtensions")
 
  然后，运行 IntelliTest 以在其相应的 .g.cs 文件中生成单个单元测试。
 
 ### <a name="q-can-i-learn-more-about-how-the-tests-are-generated"></a>问：是否可以了解有关如何生成测试的详细信息？
- **答：** 可以，要获取高级概述，请阅读此 [博客文章](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/05/intellitest-one-test-to-rule-them-all.aspx)。
+ **答：** 可以，要获取高级概述，请阅读此 [博客文章](https://devblogs.microsoft.com/devops/intellitest-one-test-to-rule-them-all/)。

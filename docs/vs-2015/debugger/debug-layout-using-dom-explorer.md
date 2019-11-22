@@ -1,5 +1,5 @@
 ---
-title: 使用 DOM 资源管理器调试布局 |Microsoft Docs
+title: Debug layout using DOM Explorer | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,27 +18,27 @@ caps.latest.revision: 36
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 8b9d0d2a3250785e5ff60d65a6bf1264892c6f98
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 5dd40381b8f5ba4807e95cfcf5e5b7d54afd77e2
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63434120"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298385"
 ---
 # <a name="debug-layout-using-dom-explorer"></a>使用 DOM 资源管理器调试布局
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-适用于 Windows 和 Windows Phone] (../Image/windows_and_phone_content.png"windows_and_phone_content")  
+Applies to Windows and Windows Phone](../Image/windows_and_phone_content.png "windows_and_phone_content")  
   
- DOM 资源管理器的“布局”  选项卡显示适用于 [应用、Windows Phone 应用商店应用或使用 Visual Studio Tools for Apache Cordova 创建的应用中的所选元素的](http://go.microsoft.com/fwlink/?LinkID=238778) CSS 方框模型 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 。 可使用此方框模型的可视表示形式来标识和修改影响元素外观的布局相关值。  
+ DOM 资源管理器的“布局” 选项卡显示适用于 [应用、Windows Phone 应用商店应用或使用 Visual Studio Tools for Apache Cordova 创建的应用中的所选元素的](https://go.microsoft.com/fwlink/?LinkID=238778) CSS 方框模型 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 。 可使用此方框模型的可视表示形式来标识和修改影响元素外观的布局相关值。  
   
 > [!TIP]
-> 你在“布局”  选项卡中所作的更改不是永久性的。 你可以永久更改源代码，然后使用“调试”工具栏上的“刷新 Windows 应用”  （仅限 Windows 应用商店和 Windows Phone 应用商店）按钮刷新应用。 这样一来，便可避免重新启动调试器。  
+> 你在“布局” 选项卡中所作的更改不是永久性的。 你可以永久更改源代码，然后使用“调试”工具栏上的“刷新 Windows 应用” （仅限 Windows 应用商店和 Windows Phone 应用商店）按钮刷新应用。 这样一来，便可避免重新启动调试器。  
   
- 若要使用 DOM 资源管理器修改不会显示在方框模型中的布局的各个方面，请参阅[快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md)并[使用 DOM 资源管理器调试 CSS 样式](../debugger/debug-css-styles-using-dom-explorer.md)。  
+ To use DOM Explorer to modify aspects of layout that aren’t shown in the box model, see [Quickstart: Debug HTML and CSS](../debugger/quickstart-debug-html-and-css.md) and [Debug CSS styles using DOM Explorer](../debugger/debug-css-styles-using-dom-explorer.md).  
   
 ## <a name="example-of-fixing-a-layout-issue"></a>修复布局问题的示例  
- 此示例演示了如何选择“中心/枢轴”模板中的一个列表元素、解释了  “布局”选项卡上的方框模型值，然后更改某个属性值来修复布局问题。  
+ 此示例演示了如何选择“中心/枢轴”模板中的一个列表元素、解释了 “布局”选项卡上的方框模型值，然后更改某个属性值来修复布局问题。  
   
 #### <a name="to-fix-the-layout-issue"></a>修复布局问题  
   
@@ -65,11 +65,11 @@ ms.locfileid: "63434120"
     }  
     ```  
   
-4. 在解决方案资源管理器中选择 appName.WindowsPhone 项目或 appName.Windows 项目，然后从项目的快捷菜单中选择“设为启动项目”  。  
+4. 在解决方案资源管理器中选择 appName.WindowsPhone 项目或 appName.Windows 项目，然后从项目的快捷菜单中选择“设为启动项目” 。  
   
-5. 根据你的启动项目，在“调试”工具栏上的下拉列表中选择  “仿真程序 8.1 WVGA 4 英寸 512MB”或  “模拟器”（ “本地计算机”是默认值）。  
+5. 根据你的启动项目，在“调试”工具栏上的下拉列表中选择 “仿真程序 8.1 WVGA 4 英寸 512MB”或 “模拟器”（ “本地计算机”是默认值）。  
   
-     ![选择调试目标](../debugger/media/js-dom-debug-target-emu.png "JS_DOM_Debug_Target_Emu")  
+     ![Selecting a debug target](../debugger/media/js-dom-debug-target-emu.png "JS_DOM_Debug_Target_Emu")  
   
 6. 按 F5 以在调试模式下运行应用程序。  
   
@@ -80,14 +80,14 @@ ms.locfileid: "63434120"
   
      加载第 4 部分时，你会发现下方的图像看起来不合适。 每个项图像显示一半（缺失左边的一半）。  
   
-8. 切换到 Visual Studio，然后在 DOM 资源管理器中选择“选择元素”  （或按 Ctrl+B）。 这将更改选择模式以使你可通过单击某项来选择该项，然后将应用程序置于前台。 单击后模式即恢复原样。  
+8. 切换到 Visual Studio，然后在 DOM 资源管理器中选择“选择元素” （或按 Ctrl+B）。 这将更改选择模式以使你可通过单击某项来选择该项，然后将应用程序置于前台。 单击后模式即恢复原样。  
   
     > [!TIP]
-    > 你也可以使用箭头键或其他方法直接在 DOM 资源管理器中选择 HTML 元素。 有关选择元素的详细信息，请参阅[快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md)。  
+    > 你也可以使用箭头键或其他方法直接在 DOM 资源管理器中选择 HTML 元素。 For more info on selecting elements, see [Quickstart: Debug HTML and CSS](../debugger/quickstart-debug-html-and-css.md).  
   
 9. 在 Phone 仿真程序或模拟器中，在已分为两半的图像中选择右半边的灰色图像。 选定元素的周围将突出显示，如下面的 Windows Phone 仿真程序中所示：  
   
-     ![选择 DOM 元素](../debugger/media/js-css-layout-select.png "JS_CSS_Layout_Select")  
+     ![Selecting a DOM element](../debugger/media/js-css-layout-select.png "JS_CSS_Layout_Select")  
   
     > [!TIP]
     > 在你选择元素之前，模拟器支持悬停在元素上以在 DOM 元素周围突出显示框。 Windows Phone 仿真程序不支持此内容。  
@@ -99,34 +99,34 @@ ms.locfileid: "63434120"
     </img>  
     ```  
   
-10. 单击“布局”  选项卡。随后此选项卡将显示选定元素的方框模型，如下面的 Windows Phone 仿真程序中所示。  
+10. Click the **Layout** tab. This tab shows the box model of the selected element, as shown here in the Windows Phone Emulator.  
   
-     ![DOM 资源管理器的布局选项卡](../debugger/media/js-css-layout.png "JS_CSS_Layout")  
+     ![Layout tab of DOM Explorer](../debugger/media/js-css-layout.png "JS_CSS_Layout")  
   
      此视图提供有关元素的一些有用信息：  
   
-    - 颜色与将鼠标指针悬停在元素上方时模拟器中显示的方框突出显示对应。 蓝色表示\<i m g > 元素的尺寸。 棕褐色表示边距值。  
+    - 颜色与将鼠标指针悬停在元素上方时模拟器中显示的方框突出显示对应。 The blue color represents the \<img> element dimensions. 棕褐色表示边距值。  
   
     - 设置左边距 (margin-left)，它可指示问题的原因，因为它与症状匹配（图像左侧显示为黑色）。  
   
     - 显示 0 像素的值的方框（例如，“边框”和“填充”）表示可能未设置相应的 CSS 属性。  
   
-11. 若要查看 margin-left 规则的应用方式，请选择“已计算”  选项卡并查看 margin-left 规则下方显示的内容。 你可以看到此规则设置为 5em 值，但是计算的值可以是 66.66px 或 146.66px，具体取决于你的目标设备。  
+11. 若要查看 margin-left 规则的应用方式，请选择“已计算” 选项卡并查看 margin-left 规则下方显示的内容。 你可以看到此规则设置为 5em 值，但是计算的值可以是 66.66px 或 146.66px，具体取决于你的目标设备。  
   
     > [!TIP]
-    > **计算**选项卡显示 margin-left 规则设置`..hubpage .hub. section4 .sub-image-row img`CSS 选择器，在 hub.css 中找到。 在本演示应用程序中，这是你需要执行修复的位置。  
+    > The **Computed** tab shows that the margin-left rule is set in the `..hubpage .hub. section4 .sub-image-row img` CSS selector, found in hub.css. 在本演示应用程序中，这是你需要执行修复的位置。  
   
      还可使用 **“布局”** 选项卡测试对布局值所做的修改。  
   
-12. 在“布局”  选项卡中，选择显示在“边距”  框中左侧的“66.66” 或  “146.66”。  
+12. 在“布局” 选项卡中，选择显示在“边距” 框中左侧的“66.66”或 “146.66”。  
   
 13. 键入 `0` ，然后按 Enter。 （也可使用向上键和向下键来更改此值。）  
   
-14. 选择其他\<i m g > 元素在 DOM 资源管理器和更改它们的 margin-left 值为 0。  
+14. Select the other \<img> elements in DOM Explorer and change their margin-left values to 0.  
   
-15. 切换至 Phone 仿真程序或模拟器。 更新后的 margin-left 值已应用到第 4 部分的图像。 这些值还会在 margin-left 规则下的“已计算”  选项卡中更新。  
+15. 切换至 Phone 仿真程序或模拟器。 更新后的 margin-left 值已应用到第 4 部分的图像。 这些值还会在 margin-left 规则下的“已计算” 选项卡中更新。  
   
 ## <a name="see-also"></a>请参阅  
- [快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md)   
- [使用 DOM 资源管理器调试 CSS 样式](../debugger/debug-css-styles-using-dom-explorer.md)   
+ [Quickstart: Debug HTML and CSS](../debugger/quickstart-debug-html-and-css.md)   
+ [Debug CSS styles using DOM Explorer](../debugger/debug-css-styles-using-dom-explorer.md)   
  [查看 DOM 事件侦听器](../debugger/view-dom-event-listeners.md)
