@@ -8,12 +8,12 @@ ms.assetid: a859595f-6517-43f2-9d61-c706cb55a388
 caps.latest.revision: 25
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 31ca0fdbecf7ea3742fef60f99f2a0a25220f9cf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d9c86125d934c5165e3e8111fdd06631844ad1a6
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657218"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297963"
 ---
 # <a name="using-different-web-browsers-with-coded-ui-tests"></a>对编码的 UI 测试使用不同的 Web 浏览器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,19 +38,19 @@ ms.locfileid: "72657218"
 
   - Windows Internet Explorer 10
 
-  - 有关 Mozilla Firefox 和 Google Chrome 的受支持版本，请转到[此处](http://visualstudiogallery.msdn.microsoft.com/11cfc881-f8c9-4f96-b303-a2780156628d/)
+  - 有关 Mozilla Firefox 和 Google Chrome 的受支持版本，请转到[此处](https://marketplace.visualstudio.com/items?itemName=AtinBansal.SeleniumcomponentsforCodedUICrossBrowserTesting)
 
-- 安装[用于编码的 UI 跨浏览器测试的 Selenium 组件](http://visualstudiogallery.msdn.microsoft.com/11cfc881-f8c9-4f96-b303-a2780156628d/)。
+- 安装[用于编码的 UI 跨浏览器测试的 Selenium 组件](https://marketplace.visualstudio.com/items?itemName=AtinBansal.SeleniumcomponentsforCodedUICrossBrowserTesting)。
 
   **哪些是所有 Web 浏览器都支持的功能？**
 
-- [添加用于控制功能（如属性、搜索和播放等待应用）的自定义代码](http://blogs.msdn.com/b/visualstudioalm/archive/2012/12/10/coded-ui-test-configuring-search-properties-while-recording-on-internet-explorer.aspx)。
+- [添加用于控制功能（如属性、搜索和播放等待应用）的自定义代码](https://devblogs.microsoft.com/devops/coded-ui-test-configuring-search-properties-while-recording-on-internet-explorer/)。
 
 - 弹出窗口和对话框
 
-- [执行不含返回类型的基本 JavaScript](http://blogs.msdn.com/b/visualstudioalm/archive/2013/01/18/introducing-jscript-execution-on-internetexplorer-and-crossbrowser-in-coded-ui-test.aspx)
+- [执行不含返回类型的基本 JavaScript](https://devblogs.microsoft.com/devops/introducing-javascript-execution-on-internetexplorer-and-crossbrowser-in-coded-ui-test/)
 
-- 搜索恢复能力（使用智能匹配）和[性能提升](http://blogs.msdn.com/b/visualstudioalm/archive/2012/02/01/guidelines-on-improving-performance-of-coded-ui-test-playback.aspx)
+- 搜索恢复能力（使用智能匹配）和[性能提升](https://devblogs.microsoft.com/devops/guidelines-on-improving-performance-of-coded-ui-test-playback/)
 
 ## <a name="why-should-i-use-coded-ui-tests-across-multiple-web-browser-types"></a>为什么应在多个 Web 浏览器类型中使用编码的 UI 测试?
  通过使用各种 Web 浏览器类型测试你的 Web 应用程序，你可以更好地模拟可能运行不同浏览器的用户的 UI 体验。 例如，你的应用程序可能包含 Internet Explorer 中与其他 Web 浏览器不兼容的控件或代码。 通过在其他浏览器中运行编码的 UI 测试，你可以在任何问题对客户产生影响前发现并更正它。
@@ -76,7 +76,7 @@ ms.locfileid: "72657218"
 3. 依次选择扩展和“下载”。
 
    > [!TIP]
-   > 还可以从[此处](http://visualstudiogallery.msdn.microsoft.com/11cfc881-f8c9-4f96-b303-a2780156628d/)下载用于编码的 UI 跨浏览器测试的 Selenium 组件。
+   > 还可以从[此处](https://marketplace.visualstudio.com/items?itemName=AtinBansal.SeleniumcomponentsforCodedUICrossBrowserTesting)下载用于编码的 UI 跨浏览器测试的 Selenium 组件。
 
    若要详细了解如何创建和使用编码的 UI 测试，请参阅[创建编码的 UI 测试](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)。
 
@@ -101,17 +101,17 @@ ms.locfileid: "72657218"
  *我还应该知道什么？*
  **注意**
 
-- ![先决条件](../test/media/prereq.png "Prereq")不支持 Apple Safari web 浏览器。
+- ![Prerequsite](../test/media/prereq.png "Prereq") Apple Safari web browser is not supported.
 
-- ![先决条件](../test/media/prereq.png "Prereq")启动 web 浏览器的操作必须是编码的 UI 测试的一部分。
+- ![Prerequsite](../test/media/prereq.png "Prereq") The action of starting the web browser must be part of the coded UI test.
 
    如果你已打开 Web 浏览器并想在其中运行步骤，则播放将失败，除非你使用 Internet Explorer。 因此，最佳做法是将 Web 浏览器的启动操作作为编码的 UI 测试的一部分。
 
-- ![先决条件](../test/media/prereq.png "Prereq")不支持基于浏览器的 UI 操作（如最大化、最小化和还原）。
+- ![Prerequsite](../test/media/prereq.png "Prereq") Automating browser specific based UI actions such as maximize, minimize and restore is not supported.
 
   **提示**
 
-- ![提示](../test/media/tip.png "提示")你可以将输出配置为在编码的 UI 日志中包含屏幕截图。 为此，你需要在 QTAgent32.exe.config 文件中设置某些配置设置。 默认情况下，该文件安装在以下位置：
+- ![Tip](../test/media/tip.png "提示") You can configure the output to include screenshots in the coded UI logs. 为此，你需要在 QTAgent32.exe.config 文件中设置某些配置设置。 默认情况下，该文件安装在以下位置：
 
    **C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE**
 
@@ -139,17 +139,17 @@ ms.locfileid: "72657218"
  [跨浏览器测试问题排查](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!182&authkey=!AEpS48i295B49FI)
 
 ### <a name="guidance"></a>指导
- [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](http://go.microsoft.com/fwlink/?LinkID=255188)
+ [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](https://go.microsoft.com/fwlink/?LinkID=255188)
 
- [使用 Visual Studio 2012 测试持续交付 - 第 5 章：实现系统测试的自动化](http://go.microsoft.com/fwlink/?LinkID=255196)
+ [使用 Visual Studio 2012 测试持续交付 - 第 5 章：实现系统测试的自动化](https://go.microsoft.com/fwlink/?LinkID=255196)
 
 ### <a name="faq"></a>FAQ
- [编码的 UI 测试常见问题 - 1](http://go.microsoft.com/fwlink/?LinkID=230576)
+ [编码的 UI 测试常见问题 - 1](https://go.microsoft.com/fwlink/?LinkID=230576)
 
- [编码的 UI 测试常见问题 - 2](http://go.microsoft.com/fwlink/?LinkID=230578)
+ [编码的 UI 测试常见问题 - 2](https://go.microsoft.com/fwlink/?LinkID=230578)
 
 ### <a name="forum"></a>论坛
- [Visual Studio UI 自动测试（包括编码的 UI）](http://go.microsoft.com/fwlink/?LinkID=224497)
+ [Visual Studio UI 自动测试（包括编码的 UI）](https://go.microsoft.com/fwlink/?LinkID=224497)
 
 ## <a name="see-also"></a>请参阅
- [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)[支持的配置和平台编码的 Ui 测试和操作录制](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)[使用编码的 ui 测试日志分析编码的 ui 测试](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md)
+ [Use UI Automation To Test Your Code](../test/use-ui-automation-to-test-your-code.md) [Supported Configurations and Platforms for Coded UI Tests and Action Recordings](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md) [Analyzing Coded UI Tests Using Coded UI Test Logs](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md)

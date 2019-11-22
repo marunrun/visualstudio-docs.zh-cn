@@ -10,12 +10,12 @@ ms.assetid: 800fc739-acd2-4242-84cb-1d83b4d82cf9
 caps.latest.revision: 38
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ee281e2cabcbce4f950188465163769caae7b2bc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8c7ec729c81f11096a55e87cea528764e500b535
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657241"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297978"
 ---
 # <a name="using-code-coverage-to-determine-how-much-code-is-being-tested"></a>使用代码覆盖率确定所测试的代码量
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "72657241"
 
  代码覆盖率是使用测试资源管理器运行测试方法时的一个选项。 结果表将显示在各个程序集、类和方法中运行的代码的百分比。 此外，源代码编辑器会显示已测试的代码。
 
- ![带着色的代码覆盖率结果](../test/media/codecoverage1.png "CodeCoverage1")
+ ![Code coverage results with coloring](../test/media/codecoverage1.png "CodeCoverage1")
 
  **惠?**
 
@@ -36,7 +36,7 @@ ms.locfileid: "72657241"
 
 1. 在“测试”菜单上，选择“分析代码覆盖率”。
 
-2. 若要查看已运行的行，请选择 "![显示代码覆盖率着色" 图标](../test/media/codecoverage-showcoloringicon.png "CodeCoverage-ShowColoringIcon")"**显示代码覆盖率着色**"。
+2. To see which lines have been run, choose ![Show Code Coverage Coloring Icon](../test/media/codecoverage-showcoloringicon.png "CodeCoverage-ShowColoringIcon")**Show Code Coverage Coloring**.
 
      若要更改颜色或使用加粗，请依次选择“工具”、“选项”、“环境”、“字体和颜色”和“显示其设置：文本编辑器”。 在“显示项”下，调整覆盖率项。
 
@@ -81,7 +81,7 @@ ms.locfileid: "72657241"
 
  例如，假设你在运行某个测试（输入为“2”）时发现某个特定函数已被覆盖了 50%。 当你第二次运行该测试（输入为“-2”）时，你在覆盖着色视图中发现该函数的另外 50% 也被覆盖。 现在，你合并来自这两个测试运行的结果，报告和覆盖率着色视图显示该函数已经 100% 被覆盖。
 
- !["代码覆盖率" 窗口中的 "合并" 按钮的图标：](../test/media/codecoverage-mergeicon.png "CodeCoverage-MergeIcon")**合并代码覆盖率结果**。 你可以选择最近的运行或导入的结果的任意组合。 如果要组合导出的结果，则必须先将其导入。
+ Use ![Icon for Merge button in Code Coverage window](../test/media/codecoverage-mergeicon.png "CodeCoverage-MergeIcon")**Merge Code Coverage Results** to do this. 你可以选择最近的运行或导入的结果的任意组合。 如果要组合导出的结果，则必须先将其导入。
 
  使用“导出代码覆盖率结果”可保存合并操作的结果。
 
@@ -248,7 +248,7 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
  你可以通过编写 .runsettings 文件来加强控制为代码覆盖率分析选择哪些程序集和元素。 例如，你可以排除特定类型的程序集，而不必向它们的类添加特性。 有关详细信息，请参阅[自定义代码覆盖率分析](../test/customizing-code-coverage-analysis.md)。
 
 ## <a name="analyzing-code-coverage-in-the-build-service"></a>分析生成服务中的代码覆盖率
- 签入代码时，你的测试以及其他团队成员的所有其他测试将在生成服务器中运行。 （如果尚未设置此项，请参阅[在生成过程中运行测试](https://msdn.microsoft.com/library/d05743a1-c5cf-447e-bed9-bed3cb595e38)。）分析生成服务中的代码覆盖率很有用，因为这样可以提供整个项目中最新的覆盖面。 它还包含你不常在开发计算机上运行的自动系统测试和其他编码的测试。
+ 签入代码时，你的测试以及其他团队成员的所有其他测试将在生成服务器中运行。 (If you haven’t already set this up, see [Run tests in your build process](https://msdn.microsoft.com/library/d05743a1-c5cf-447e-bed9-bed3cb595e38).) It’s useful to analyze code coverage on the build service, because that gives the most up-to-date and comprehensive picture of coverage in the whole project. 它还包含你不常在开发计算机上运行的自动系统测试和其他编码的测试。
 
 1. 在“团队资源管理器”中，打开“生成”，然后添加或编辑生成定义。
 
@@ -260,7 +260,7 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
       在“自动测试”下，选择“测试程序集”，然后选择行尾的省略号按钮“[...]”。 在“添加/编辑测试运行”对话框的“测试运行程序”下，选择“Visual Studio 测试运行程序”。
 
-   ![设置代码覆盖率的生成定义](../test/media/codecoverage-plaincc.png "CodeCoverage-plainCC")
+   ![Setting the build definition for code coverage](../test/media/codecoverage-plaincc.png "CodeCoverage-plainCC")
 
    生成运行后，代码覆盖率结果将附加到测试运行并显示在生成摘要中。
 
@@ -281,7 +281,7 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 ## <a name="external-resources"></a>外部资源
 
 ### <a name="guidance"></a>指导
- [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](http://go.microsoft.com/fwlink/?LinkID=255188)
+ [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](https://go.microsoft.com/fwlink/?LinkID=255188)
 
 ## <a name="see-also"></a>请参阅
- [自定义代码覆盖率分析](../test/customizing-code-coverage-analysis.md)[故障排除代码覆盖率](../test/troubleshooting-code-coverage.md)[单元测试代码](../test/unit-test-your-code.md)
+ [Customizing Code Coverage Analysis](../test/customizing-code-coverage-analysis.md) [Troubleshooting Code Coverage](../test/troubleshooting-code-coverage.md) [Unit Test Your Code](../test/unit-test-your-code.md)

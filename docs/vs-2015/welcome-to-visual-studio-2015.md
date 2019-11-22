@@ -13,12 +13,12 @@ ms.assetid: ba237712-f8c4-4d13-854b-ab4a16afa309
 caps.latest.revision: 128
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 90cc4849567d744c5380076bf8c1773254cda618
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7eeb6b0ac3322090cf85e26ac6388aac76890d44
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657051"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297580"
 ---
 # <a name="welcome-to-visual-studio-2015"></a>欢迎使用 Visual Studio 2015
 [!INCLUDE[vs2017banner](includes/vs2017banner.md)]
@@ -30,13 +30,13 @@ ms.locfileid: "72657051"
 >
 > 单击此处，了解 [Visual Studio 2017](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes) 的发行说明。
 
- 免费下载 [Visual Studio 社区](http://go.microsoft.com/fwlink/?LinkId=517106) 以立即开始编码。 如果要进行跨平台开发，请确保安装可选包。 （可以通过 [其他 Visual Studio 版本](http://www.visualstudio.com/products/compare-visual-studio-products-vs)获得更多功能。）
+ 免费下载 [Visual Studio 社区](https://go.microsoft.com/fwlink/?LinkId=517106) 以立即开始编码。 如果要进行跨平台开发，请确保安装可选包。 （可以通过 [其他 Visual Studio 版本](https://visualstudio.microsoft.com/vs/compare/)获得更多功能。）
 
  立即投入，创建新项目，然后开始编写代码。 选择要创建的应用类型。 或者，可以 [浏览](./ide/visual-studio-ide.md) Visual Studio IDE 以熟悉工具。
 
  同时，别忘了浏览我们的 [代码库](https://code.msdn.microsoft.com/) ，以找到可帮助你更快编写应用的示例！
 
- 可以通过从 [Visual Studio 下载](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)页面下载安装 Visual Studio 2015。 若要了解有关安装过程的详细信息，请参阅[安装 Visual Studio 2015](./install/install-visual-studio-2015.md)。
+ 可以通过从 [Visual Studio 下载](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)页面下载安装 Visual Studio 2015。 To learn more about the installation process, see [Install Visual Studio 2015](./install/install-visual-studio-2015.md).
 
 ## <a name="extend-visual-studio"></a>扩展 Visual Studio
  添加自己的 Visual Studio 扩展以包含在编码时经常使用的工具或脚本。 可以创建自定义菜单项和工具窗口，以将自己的工具集成到 Visual Studio IDE 中。 可以扩展 Visual Studio 编辑器以分析和修复代码，或添加新项目类型以恰好包含所需内容。
@@ -74,7 +74,7 @@ ms.locfileid: "72657051"
 - 将 Office 365 REST API 集成到你自己的应用中以连接到云中存储的数据。 有关详细信息，请参阅 [这些示例](https://github.com/OfficeDev/?utf8=%E2%9C%93&query=o365)。
 
 ## <a name="write-great-web-apps-with-aspnet"></a>使用 ASP.NET 编写优秀的 Web 应用
- [ASP.NET 5](http://www.asp.net/vnext/overview/aspnet-vnext/aspnet-5-overview) 是 MVC、WebAPI 和 SignalR 的一个重大更新，并且在 Windows、Mac 和 Linux 上运行。  ASP.NET 5 旨在完全为你提供可组合的精益 .NET 堆栈以便生成基于云的现代应用 Web 程序和服务。
+ [ASP.NET 5](https://docs.microsoft.com/aspnet/core/?view=aspnetcore-3.0) 是 MVC、WebAPI 和 SignalR 的一个重大更新，并且在 Windows、Mac 和 Linux 上运行。  ASP.NET 5 旨在完全为你提供可组合的精益 .NET 堆栈以便生成基于云的现代应用 Web 程序和服务。
 
 ## <a name="build-test-and-manage-your-code"></a>生成、测试和管理你的代码
 

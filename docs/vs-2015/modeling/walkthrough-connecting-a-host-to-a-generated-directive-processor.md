@@ -1,5 +1,5 @@
 ---
-title: 演练：将主机连接到生成的指令处理器 |Microsoft Docs
+title: 'Walkthrough: Connecting a Host to a Generated Directive Processor | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -12,102 +12,102 @@ caps.latest.revision: 49
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 41023f49f1897f3e3d26d7fc57807ea98fa35f24
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 10c9c6cfa1d8553c79b710239a99f8ea9e2438e5
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659295"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301278"
 ---
 # <a name="walkthrough-connecting-a-host-to-a-generated-directive-processor"></a>演练：将主机连接至生成的指令处理器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-您可以编写自己的宿主来处理文本模板。 [演练：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)中演示了一个基本的自定义主机。 您可以扩展该主机以添加功能，如生成多个输出文件。
+You can write your own host that processes text templates. A basic custom host is demonstrated in [Walkthrough: Creating a Custom Text Template Host](../modeling/walkthrough-creating-a-custom-text-template-host.md). You could extend that host to add functions such as generating multiple output files.
 
- 在本演练中，将展开自定义主机，使其支持调用指令处理器的文本模板。 定义域特定语言时，它将为域模型生成*指令处理器*。 指令处理器使用户能够更轻松地编写访问该模型的模板，从而减少了在模板中编写程序集和导入指令的需求。
+ In this walkthrough, you expand your custom host so that it supports text templates that call directive processors. When you define a domain-specific language, it generates a *directive processor* for the domain model. The directive processor makes it easier for users to write templates that access the model, reducing the need to write assembly and import directives in the templates.
 
 > [!WARNING]
-> 本演练基于[演练：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)。 首先执行该演练。
+> This walkthrough builds on [Walkthrough: Creating a Custom Text Template Host](../modeling/walkthrough-creating-a-custom-text-template-host.md). Perform that walkthrough first.
 
  本演练包含以下任务：
 
-- 使用 [!INCLUDE[dsl](../includes/dsl-md.md)] 生成基于域模型的指令处理器。
+- Using [!INCLUDE[dsl](../includes/dsl-md.md)] to generate a directive processor that is based on a domain model.
 
-- 将自定义文本模板宿主连接到生成的指令处理器。
+- Connecting a custom text template host to the generated directive processor.
 
-- 用生成的指令处理器测试自定义主机。
+- Testing the custom host with the generated directive processor.
 
 ## <a name="prerequisites"></a>Prerequisites
  若要定义 DSL，必须安装以下组件：
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](http://go.microsoft.com/fwlink/?LinkId=185580)|
-|Visual Studio 可视化和建模 SDK|[http://go.microsoft.com/fwlink/?LinkID=186128](http://go.microsoft.com/fwlink/?LinkID=186128)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://go.microsoft.com/fwlink/?LinkId=185579)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://go.microsoft.com/fwlink/?LinkId=185580)|
+|Visual Studio 可视化和建模 SDK|[http://go.microsoft.com/fwlink/?LinkID=186128](https://go.microsoft.com/fwlink/?LinkID=186128)|
 
- 此外，还必须在[演练：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)中创建自定义文本模板转换。
+ In addition, you must have the custom text template transformation created in [Walkthrough: Creating a Custom Text Template Host](../modeling/walkthrough-creating-a-custom-text-template-host.md).
 
-## <a name="using-domain-specific-language-tools-to-generate-a-directive-processor"></a>使用特定于域的语言工具生成指令处理器
- 在本演练中，将使用特定于域的语言设计器向导为解决方案 DSLMinimalTest 创建域特定语言。
+## <a name="using-domain-specific-language-tools-to-generate-a-directive-processor"></a>Using Domain-Specific Language Tools to Generate a Directive Processor
+ In this walkthrough, you use the Domain-Specific Language Designer Wizard to create a domain-specific language for the solution DSLMinimalTest.
 
-#### <a name="to-use-domain-specific-language-tools-to-generate-a-directive-processor-that-is-based-on-a-domain-model"></a>使用特定于域的语言工具生成基于域模型的指令处理器
+#### <a name="to-use-domain-specific-language-tools-to-generate-a-directive-processor-that-is-based-on-a-domain-model"></a>To use Domain-Specific Language Tools to generate a directive processor that is based on a domain model
 
-1. 创建具有以下特征的域特定语言解决方案：
+1. Create a domain-specific language solution that has the following characteristics:
 
-   - 名称： DSLMinimalTest
+   - Name: DSLMinimalTest
 
-   - 解决方案模板：最小语言
+   - Solution template: Minimal Language
 
-   - 文件扩展名：最小值
+   - File extension: min
 
-   - 公司名称： Fabrikam
+   - Company name: Fabrikam
 
-     有关创建域特定语言解决方案的详细信息，请参阅[如何：创建特定于域的语言解决方案](../modeling/how-to-create-a-domain-specific-language-solution.md)。
+     For more information about creating a domain-specific language solution, see [How to: Create a Domain-Specific Language Solution](../modeling/how-to-create-a-domain-specific-language-solution.md).
 
 2. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
 
    > [!IMPORTANT]
-   > 此步骤将生成指令处理器，并在注册表中为其添加密钥。
+   > This step generates the directive processor and adds the key for it in the registry.
 
 3. 在“调试”菜单上，单击“启动调试”。
 
-    @No__t_0 的第二个实例打开。
+    A second instance of [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] opens.
 
-4. 在实验生成的**解决方案资源管理器**中，双击文件**示例。**
+4. In the experimental build, in **Solution Explorer**, double-click the file **sample.min**.
 
-    文件将在设计器中打开。 请注意，该模型包含两个元素（ExampleElement1 和 ExampleElement2）以及它们之间的链接。
+    The file opens in the designer. Notice that the model has two elements, ExampleElement1 and ExampleElement2, and a link between them.
 
-5. 关闭 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的第二个实例。
+5. Close the second instance of [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
 
-6. 保存解决方案，然后关闭特定于域的语言设计器。
+6. Save the solution, and then close the Domain-Specific Language Designer.
 
-## <a name="connecting-a-custom-text-template-host-to-a-directive-processor"></a>将自定义文本模板宿主连接到指令处理器
- 生成指令处理器后，将连接在[演练：创建自定义文本模板主机](../modeling/walkthrough-creating-a-custom-text-template-host.md)中创建的指令处理器和自定义文本模板主机。
+## <a name="connecting-a-custom-text-template-host-to-a-directive-processor"></a>Connecting a Custom Text Template Host to a Directive Processor
+ After you generate the directive processor, you connect the directive processor and the custom text template host that you created in [Walkthrough: Creating a Custom Text Template Host](../modeling/walkthrough-creating-a-custom-text-template-host.md).
 
-#### <a name="to-connect-a-custom-text-template-host-to-the-generated-directive-processor"></a>将自定义文本模板宿主连接到生成的指令处理器
+#### <a name="to-connect-a-custom-text-template-host-to-the-generated-directive-processor"></a>To connect a custom text template host to the generated directive processor
 
-1. 打开 CustomHost 解决方案。
+1. Open the CustomHost solution.
 
 2. 在“项目”菜单上，单击“添加引用”。
 
-     此时将打开 "**添加引用**" 对话框，其中显示了 " **.net** " 选项卡。
+     The **Add Reference** dialog box opens with the **.NET** tab displayed.
 
-3. 添加以下引用：
+3. Add the following references:
 
-    - VisualStudio （web.config）
+    - Microsoft.VisualStudio.Modeling.Sdk.11.0
 
-    - VisualStudio. 11.0. 11。0
+    - Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0
 
-    - VisualStudio. TextTemplating
+    - Microsoft.VisualStudio.TextTemplating.11.0
 
-    - VisualStudio. TextTemplating。
+    - Microsoft.VisualStudio.TextTemplating.Interfaces.11.0
 
-    - VisualStudio （TextTemplating）
+    - Microsoft.VisualStudio.TextTemplating.Modeling.11.0
 
-    - VisualStudio. TextTemplating. Vshost.exe
+    - Microsoft.VisualStudio.TextTemplating.VSHost.11.0
 
-4. 在 Program.cs 或 Module1 的顶部，添加以下代码行：
+4. At the top of Program.cs or Module1.vb, add the following line of code:
 
     ```csharp
     using Microsoft.Win32;
@@ -117,10 +117,10 @@ ms.locfileid: "72659295"
     Imports Microsoft.Win32
     ```
 
-5. 找到 `StandardAssemblyReferences` 属性的代码，并将其替换为以下代码：
+5. Locate the code for the property `StandardAssemblyReferences`, and replace it with the following code:
 
     > [!NOTE]
-    > 在此步骤中，你将添加对你的主机将支持的生成的指令处理器所需的程序集的引用。
+    > In this step, you add references to the assemblies that are required by the generated directive processor that your host will support.
 
     ```csharp
     //the host can provide standard assembly references
@@ -153,10 +153,10 @@ ms.locfileid: "72659295"
     }
     ```
 
-6. 找到函数 `ResolveDirectiveProcessor` 的代码，并将其替换为以下代码：
+6. Locate the code for the function `ResolveDirectiveProcessor`, and replace it with the following code:
 
     > [!IMPORTANT]
-    > 此代码包含对要连接到的所生成指令处理器名称的硬编码引用。 您可以轻松地使此方法更常规，在这种情况下，它会查找注册表中列出的所有指令处理器，并尝试找到匹配项。 在这种情况下，主机将适用于任何生成的指令处理器。
+    > This code contains hard-coded references to the name of the generated directive processor to which you want to connect. You could easily make this more general, in which case it looks for all directive processors listed in the registry and tries to find a match. In that case, the host would work with any generated directive processor.
 
     ```csharp
     //the engine calls this method based on the directives the user has
@@ -231,17 +231,17 @@ ms.locfileid: "72659295"
 
 8. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
 
-## <a name="testing-the-custom-host-with-the-directive-processor"></a>用指令处理器测试自定义主机
- 若要测试自定义文本模板宿主，首先必须编写一个调用生成的指令处理器的文本模板。 然后，运行自定义主机，向其传递文本模板的名称，并验证是否已正确处理指令。
+## <a name="testing-the-custom-host-with-the-directive-processor"></a>Testing the Custom Host with the Directive Processor
+ To test the custom text template host, first you must write a text template that calls the generated directive processor. Then you run the custom host, pass to it the name of the text template, and verify that the directive is processed correctly.
 
 #### <a name="to-create-a-text-template-to-test-the-custom-host"></a>创建文本模板测试自定义主机
 
-1. 创建一个文本文件，并将其命名为 `TestTemplateWithDP.tt`。 您可以使用任何文本编辑器（例如记事本）来创建该文件。
+1. Create a text file, and name it `TestTemplateWithDP.tt`. You can use any text editor, such as Notepad, to create the file.
 
 2. 向文本文件中添加以下内容：
 
     > [!NOTE]
-    > 文本模板的编程语言不需要与自定义宿主的编程语言匹配。
+    > The programming language of the text template does not need to match that of the custom host.
 
     ```csharp
     Text Template Host Test
@@ -310,7 +310,7 @@ ms.locfileid: "72659295"
     #>
     ```
 
-3. 在代码中，将 \<YOUR 路径 > 替换为在第一个过程中创建的特定于设计语言的示例文件的路径。
+3. In the code, replace \<YOUR PATH> with the path of the Sample.min file from the design-specific language you created in the first procedure.
 
 4. 保存并关闭文件。
 
@@ -325,7 +325,7 @@ ms.locfileid: "72659295"
      `<YOUR PATH>CustomHost\bin\Debug\CustomHost.exe`
 
     > [!NOTE]
-    > 您可以在**Windows 资源管理器**中浏览到文件 CustomHost，然后将该文件拖入命令提示符窗口，而不是键入地址。
+    > Instead of typing the address, you can browse to the file CustomHost.exe in **Windows Explorer**, and then drag the file into the Command Prompt window.
 
 3. 键入一个空格。
 
@@ -336,17 +336,17 @@ ms.locfileid: "72659295"
      `<YOUR PATH>TestTemplateWithDP.txt`
 
     > [!NOTE]
-    > 您可以在**Windows 资源管理器**中浏览到文件 TestTemplateWithDP，然后将该文件拖入命令提示符窗口，而不是键入地址。
+    > Instead of typing the address, you can browse to the file TestTemplateWithDP.txt in **Windows Explorer**, and then drag the file into the Command Prompt window.
 
-     自定义主机应用程序将运行并启动文本模板转换过程。
+     The custom host application runs and starts the text template transformation process.
 
-5. 在**Windows 资源管理器**中，浏览到包含文件 TestTemplateWithDP 的文件夹。
+5. In **Windows Explorer**, browse to the folder that contains the file TestTemplateWithDP.txt.
 
-     该文件夹还包含文件 TestTemplateWithDP1。
+     The folder also contains the file TestTemplateWithDP1.txt.
 
 6. 打开此文件可以查看文本模板转换的结果。
 
-     此时将显示生成的文本输出的结果，如下所示：
+     The results of the generated text output appears and should look like this:
 
     ```
     Text Template Host Test

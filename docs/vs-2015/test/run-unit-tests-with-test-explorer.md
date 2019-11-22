@@ -10,12 +10,12 @@ ms.assetid: 91b167a3-280a-498b-8fc2-f67859a2c64e
 caps.latest.revision: 29
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9a860ad5408038cced1f5aa2ac20420e35a1240a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 56f2d4cb0b02cc661177a4f781a5c40db924ee2c
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672221"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302105"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>使用测试资源管理器运行单元测试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "72672221"
 
  测试资源管理器可从解决方案的多个测试项目以及从作为生产代码项目的一部分的测试类中运行测试。 测试项目可以使用不同的单元测试框架。 如果待测试的代码是为 .NET Framework 编写的，则可以面向 .NET Framework 的任何语言编写测试项目，而不考虑目标代码的语言。 本机 C/C++ 代码项目必须使用 C++ 单元测试框架进行测试。
 
- ![返回到顶部](../debugger/media/pcs-backtotop.png "PCS_BackToTop")[内容](#BKMK_Contents)
+ ![Back to top](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)
 
 ## <a name="BKMK_Run_tests_in_Test_Explorer"></a> 在测试资源管理器中运行测试
  [运行测试](#BKMK_Run_tests) **&#124;** [每次生成后运行测试](#BKMK_Run_tests_after_every_build)
@@ -55,9 +55,9 @@ ms.locfileid: "72672221"
 
  你可以从测试资源管理器的工具栏执行查找、组织和运行测试等大部分工作。
 
- ![从测试资源管理器工具栏运行测试](../test/media/ute-toolbar.png "UTE_ToolBar")
+ ![Run tests from the Test Explorer toolbar](../test/media/ute-toolbar.png "UTE_ToolBar")
 
- ![返回到顶部](../debugger/media/pcs-backtotop.png "PCS_BackToTop")[内容](#BKMK_Contents)
+ ![Back to top](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)
 
 ### <a name="BKMK_Run_tests"></a> 运行测试
  你可以运行解决方案中的所有测试、组中的所有测试或你选择的一组测试。 执行以下操作之一：
@@ -68,11 +68,11 @@ ms.locfileid: "72672221"
 
 - 选择你希望运行的各个测试，打开选定测试的上下文菜单，然后选择 **“运行选定的测试”** 。
 
-- 如果各个测试没有防止其以任何顺序运行的依赖项，则可使用工具栏上的 ![UTE_parallelicon - 小](../test/media/ute-parallelicon-small.png "UTE_parallelicon-小型")切换按钮来打开并行测试执行。 这可以显著降低运行所有测试所需的时间。
+- 如果各个测试没有防止其以任何顺序运行的依赖项，则可使用工具栏上的 ![UTE_parallelicon - 小](../test/media/ute-parallelicon-small.png "UTE_parallelicon-small")切换按钮来打开并行测试执行。 这可以显著降低运行所有测试所需的时间。
 
   测试运行时，测试资源管理器窗口顶部的“通过/失败”条动态显示。 测试运行结束时，如果所有测试均通过，则“通过/失败”条将变为绿色；如果有测试失败，则变为红色。
 
-  ![返回到顶部](../debugger/media/pcs-backtotop.png "PCS_BackToTop")[内容](#BKMK_Contents)
+  ![Back to top](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)
 
 ### <a name="BKMK_Run_tests_after_every_build"></a> 每次生成后运行测试
 
@@ -81,9 +81,9 @@ ms.locfileid: "72672221"
 
 |||
 |-|-|
-|![在生成后运行](../test/media/ute-runafterbuild-btn.png "UTE_RunAfterBuild_btn")|若要在每个本地生成后运行你的单元测试，请在标准菜单上选择 **“测试”** ，然后在测试资源管理器工具栏上选择 **“生成后运行测试”** 。|
+|![Run after build](../test/media/ute-runafterbuild-btn.png "UTE_RunAfterBuild_btn")|若要在每个本地生成后运行你的单元测试，请在标准菜单上选择 **“测试”** ，然后在测试资源管理器工具栏上选择 **“生成后运行测试”** 。|
 
- ![返回到顶部](../debugger/media/pcs-backtotop.png "PCS_BackToTop")[内容](#BKMK_Contents)
+ ![Back to top](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)
 
 ## <a name="BKMK_View_test_results"></a> 查看测试结果
  [查看测试详细信息](#BKMK_View_test_details) **&#124;** [查看测试方法的源代码](#BKMK_View_the_source_code_of_a_test_method)
@@ -93,7 +93,7 @@ ms.locfileid: "72672221"
 ### <a name="BKMK_View_test_details"></a> 查看测试详细信息
  若要查看单个测试的详细信息，请选择该测试。
 
- ![测试执行详细信息](../test/media/ute-testdetails.png "UTE_TestDetails")
+ ![Test execution details](../test/media/ute-testdetails.png "UTE_TestDetails")
 
  测试细节窗格中显示以下信息：
 
@@ -109,12 +109,12 @@ ms.locfileid: "72672221"
 
 - 测试失败时的堆栈跟踪。
 
-  ![返回到顶部](../debugger/media/pcs-backtotop.png "PCS_BackToTop")[内容](#BKMK_Contents)
+  ![Back to top](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)
 
 ### <a name="BKMK_View_the_source_code_of_a_test_method"></a> 查看测试方法的源代码
  若要在 Visual Studio 编辑器中显示测试方法的源代码，请选择该测试，然后在上下文菜单中选择 **“打开测试”** （键盘：按 F12）。
 
- ![返回到顶部](../debugger/media/pcs-backtotop.png "PCS_BackToTop")[内容](#BKMK_Contents)
+ ![Back to top](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)
 
 ## <a name="BKMK_Group_and_filter_the_test_list"></a> 分组和筛选测试列表
  [分组测试列表](#BKMK_Grouping_the_test_list) **&#124;** [按特征分组](#BKMK_Group_by_traits) **&#124;** [搜索和筛选测试列表](#BKMK_Search_and_filter_the_test_list)
@@ -124,7 +124,7 @@ ms.locfileid: "72672221"
 ### <a name="BKMK_Grouping_the_test_list"></a> 分组测试列表
  若要更改测试的组织方式，请依次选择“分组依据”按钮 ![测试资源管理器的分组按钮](../test/media/ute-groupby-btn.png "UTE_GroupBy_btn") 旁边的向下箭头和新分组条件。
 
- ![测试资源管理器中按类别分组测试](../test/media/ute-groupbycategory.png "UTE_GroupByCategory")
+ ![Group tests by category in Test Explorer](../test/media/ute-groupbycategory.png "UTE_GroupByCategory")
 
 ### <a name="test-explorer-groups"></a>测试资源管理器组
 
@@ -135,7 +135,7 @@ ms.locfileid: "72672221"
 |**特征**|按你定义的类别/值对对测试进行分组。 用于指定特征类别和值的语法由单元测试框架定义。|
 |**项目**|按项目名称对测试进行分组。|
 
- ![返回到顶部](../debugger/media/pcs-backtotop.png "PCS_BackToTop")[内容](#BKMK_Contents)
+ ![Back to top](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)
 
 ### <a name="BKMK_Group_by_traits"></a> 按特征分组
  特征通常是类别名称/值对，但也可以是单个类别。 特性可以分配给由单元测试框架标识为测试方法的方法。 单元测试框架可以定义特征类别。 你可以向特征类别添加值，以便定义自己的类别名称/值对。 用于指定特征类别和值的语法由单元测试框架定义。
@@ -183,7 +183,7 @@ TEST_METHOD(Method1)
 |`TEST_OWNER(ownerAlias)`|使用预定义的“所有者”特征来指定测试方法的所有者。|
 |`TEST_PRIORITY(priority)`|使用预定义的“优先级”特征向测试方法分配相对优先级。|
 
- ![返回到顶部](../debugger/media/pcs-backtotop.png "PCS_BackToTop")[内容](#BKMK_Contents)
+ ![Back to top](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)
 
 ### <a name="BKMK_Search_and_filter_the_test_list"></a> 搜索和筛选测试列表
  你可以使用测试资源管理器筛选器来限制你所查看和运行项目中的测试方法。
@@ -198,7 +198,7 @@ TEST_METHOD(Method1)
 
 3. 在引号中输入筛选值。
 
-   ![测试资源管理器中的筛选器测试](../test/media/ute-filtertestlist.png "UTE_FilterTestList")
+   ![Filter tests in Test Explorer](../test/media/ute-filtertestlist.png "UTE_FilterTestList")
 
 > [!NOTE]
 > 搜索不区分大小，并将指定字符串与条件值的任何部分匹配。
@@ -227,12 +227,12 @@ FullName:"MyClass" - FullName:"PerfTest"
 
  返回名称中包含“MyClass”的所有测试，名称中包含“PerfTest”的测试除外。
 
- ![返回到顶部](../debugger/media/pcs-backtotop.png "PCS_BackToTop")[内容](#BKMK_Contents)
+ ![Back to top](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)
 
 ## <a name="BKMK_Create_custom_playlists"></a> 创建自定义播放列表
  你可以创建和保存想要作为组运行或查看的测试列表。 当你选择播放列表时，列表中的测试将显示在“测试资源管理器”中。 你可以将一个测试添加到多个播放列表，并且当你选择默认的 **“所有测试”** 播放列表时，项目中的所有测试都可用。
 
- ![选择播放列表](../test/media/ute-playlist.png "UTE_Playlist")
+ ![Choose a playlist](../test/media/ute-playlist.png "UTE_Playlist")
 
  **若要创建播放列表**，请在测试资源管理器中选择一个或多个测试。 在上下文菜单中，依次选择 **“添加到播放列表”** 、 **“新建播放列表”** 。 保存具有该名称的文件，并定位到你在 **“创建新的播放列表”** 对话框中指定的位置。
 
@@ -240,9 +240,9 @@ FullName:"MyClass" - FullName:"PerfTest"
 
  **若要打开播放列表**，请从 Visual Studio 菜单中选择“测试播放列表”，然后从“最近使用的播放列表”列表中选择，或选择“打开播放列表”以指定播放列表的名称和位置。
 
- 如果各个测试没有防止其以任何顺序运行的依赖项，则可使用工具栏上的 ![UTE_parallelicon - 小](../test/media/ute-parallelicon-small.png "UTE_parallelicon-小型")切换按钮来打开并行测试执行。 这可以显著降低运行所有测试所需的时间。
+ 如果各个测试没有防止其以任何顺序运行的依赖项，则可使用工具栏上的 ![UTE_parallelicon - 小](../test/media/ute-parallelicon-small.png "UTE_parallelicon-small")切换按钮来打开并行测试执行。 这可以显著降低运行所有测试所需的时间。
 
- ![返回到顶部](../debugger/media/pcs-backtotop.png "PCS_BackToTop")[内容](#BKMK_Contents)
+ ![Back to top](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)
 
 ## <a name="BKMK_Debug_and_analyze_unit_tests"></a> 调试并分析单元测试
  [调试单元测试](#BKMK_Debug_unit_tests) **&#124;** [诊断测试方法性能问题](#BKMK_Diagnose_test_method_performance_issues) **&#124;** [分析单元测试代码覆盖率](#BKMK_Analyzeunit_test_code_coverage)
@@ -259,7 +259,7 @@ FullName:"MyClass" - FullName:"PerfTest"
 
    有关该调试器的详细信息，请参阅 [Debugging in Visual Studio](../debugger/debugging-in-visual-studio.md)。
 
-   ![返回到顶部](../debugger/media/pcs-backtotop.png "PCS_BackToTop")[内容](#BKMK_Contents)
+   ![Back to top](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)
 
 ### <a name="BKMK_Diagnose_test_method_performance_issues"></a> 诊断测试方法性能问题
  若要诊断测试方法花费过多时间的原因，请在测试资源管理器中选择该方法，然后在上下文菜单中选择“配置文件”。 请参阅[性能资源管理器](../profiling/performance-explorer.md)。
@@ -285,12 +285,12 @@ FullName:"MyClass" - FullName:"PerfTest"
 
    有关详细信息，请参阅[使用代码覆盖率确定正在测试的代码数量](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)。
 
-   ![返回到顶部](../debugger/media/pcs-backtotop.png "PCS_BackToTop")[内容](#BKMK_Contents)
+   ![Back to top](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)
 
 ## <a name="BKMK_External_resources"></a>外部资源
 
 ### <a name="BKMK_Guidance"></a> 指导
- [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](http://go.microsoft.com/fwlink/?LinkID=255188)
+ [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](https://go.microsoft.com/fwlink/?LinkID=255188)
 
 ## <a name="see-also"></a>请参阅
- [单元测试你的代码](../test/unit-test-your-code.md)将[单元测试作为64位进程运行](../test/run-a-unit-test-as-a-64-bit-process.md)
+ [Unit Test Your Code](../test/unit-test-your-code.md) [Run a unit test as a 64-bit process](../test/run-a-unit-test-as-a-64-bit-process.md)

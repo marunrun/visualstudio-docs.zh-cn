@@ -9,19 +9,19 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 12bce61c7d860f56142c25dd15dea3ac8ad21f9c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ef28781252181dbf765db52dbe6fed1b286516b2
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671863"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295778"
 ---
 # <a name="step-2-run-your-program"></a>步骤 2：运行程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 一旦创建新的解决方案，实际上就生成了所运行的程序。 该程序并未执行其他操作，它只是显示了一个在标题栏中显示“Form1”的空窗口。 但该程序确实在运行，您即将查明这一点。
 
- ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[教程1：在 Visual Basic 中创建图片查看器-视频 1](http://go.microsoft.com/fwlink/?LinkId=205209)或[教程1：在视频1中C#创建图片查看器](http://go.microsoft.com/fwlink/?LinkId=205199)。 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
+ ![link to video](../data-tools/media/playvideo.gif "PlayVideo")For a video version of this topic, see [Tutorial 1: Create a Picture Viewer in Visual Basic - Video 1](https://go.microsoft.com/fwlink/?LinkId=205209) or [Tutorial 1: Create a Picture Viewer in C# - Video 1](https://go.microsoft.com/fwlink/?LinkId=205199). 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
 
 ### <a name="to-run-your-program"></a>运行程序
 
@@ -33,15 +33,15 @@ ms.locfileid: "72671863"
 
     - 在工具栏上，选择“开始调试”按钮，如下所示。
 
-         "![开始调试" 工具栏按钮](../ide/media/express-icondebug.png "Express_IconDebug")"开始调试" 工具栏按钮
+         ![Start Debugging toolbar button](../ide/media/express-icondebug.png "Express_IconDebug") Start Debugging toolbar button
 
 2. Visual Studio 将运行程序，并显示一个名为“Form1”的窗口。 下图显示了刚生成的程序。 该程序正在运行，您很快会向它添加内容。
 
-     ![Windows 窗体应用程序正在运行](../ide/media/express-firstrun.png "Express_FirstRun")Windows 窗体应用程序正在运行
+     ![Windows Form application program running](../ide/media/express-firstrun.png "Express_FirstRun") Windows Form Application program running
 
 3. 返回 Visual Studio 集成开发环境 (IDE)，并查看新的工具栏。 当您运行程序时，工具栏上将显示其他按钮。 利用这些按钮，您可执行停止和启动程序之类的操作，并帮助您跟踪到可能具有的任何错误 (Bug)。 在本示例中，我们仅用它来启动和停止程序。
 
-     ![调试工具栏](../ide/media/express-debugtoolbar.png "Express_DebugToolbar")调试工具栏
+     ![Debugging toolbar](../ide/media/express-debugtoolbar.png "Express_DebugToolbar") Debugging toolbar
 
 4. 使用下列方式之一停止程序。
 

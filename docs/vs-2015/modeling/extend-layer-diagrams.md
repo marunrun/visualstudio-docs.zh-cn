@@ -1,5 +1,5 @@
 ---
-title: 扩展层关系图 |Microsoft Docs
+title: Extend layer diagrams | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -12,12 +12,12 @@ caps.latest.revision: 41
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 48fdddd8711086ff185e64df6981cd6848ad1f51
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bfcec64f9401fdbf79e67bee5fe8430452632fbc
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669636"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301032"
 ---
 # <a name="extend-layer-diagrams"></a>Extend layer diagrams
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "72669636"
 
 - [Visual Studio SDK](../extensibility/visual-studio-sdk.md)
 
-- [Visual Studio 2015 的建模 SDK](http://www.microsoft.com/download/details.aspx?id=48148)
+- [Modeling SDK for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48148)
 
-  在想要运行层扩展的计算机上必须安装合适版本的 Visual Studio。 有关详细信息，请参阅[部署层模型扩展](../modeling/deploy-a-layer-model-extension.md)。
+  在想要运行层扩展的计算机上必须安装合适版本的 Visual Studio。 For more information, see [Deploy a layer model extension](../modeling/deploy-a-layer-model-extension.md).
 
   若要查看支持层关系图的 Visual Studio 的版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
@@ -61,4 +61,4 @@ ms.locfileid: "72669636"
  [层关系图扩展疑难解答](../modeling/troubleshoot-extensions-for-layer-diagrams.md)
 
 ## <a name="see-also"></a>请参阅
- [定义和安装建模扩展](../modeling/define-and-install-a-modeling-extension.md)[层关系图：参考](../modeling/layer-diagrams-reference.md)[层关系图：准则](../modeling/layer-diagrams-guidelines.md)通过[代码创建层关系图](../modeling/create-layer-diagrams-from-your-code.md)[验证代码使用层关系图](../modeling/validate-code-with-layer-diagrams.md)[从 UML 模型](../modeling/generate-files-from-a-uml-model.md)[生成文件使用 Visual Studio API 打开 UML 模型](../modeling/open-a-uml-model-by-using-the-visual-studio-api.md)
+ [Define and install a modeling extension](../modeling/define-and-install-a-modeling-extension.md) [Layer Diagrams: Reference](../modeling/layer-diagrams-reference.md) [Layer Diagrams: Guidelines](../modeling/layer-diagrams-guidelines.md) [Create layer diagrams from your code](../modeling/create-layer-diagrams-from-your-code.md) [Validate code with layer diagrams](../modeling/validate-code-with-layer-diagrams.md) [Generate files from a UML model](../modeling/generate-files-from-a-uml-model.md) [Open a UML model by using the Visual Studio API](../modeling/open-a-uml-model-by-using-the-visual-studio-api.md)

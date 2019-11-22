@@ -1,5 +1,5 @@
 ---
-title: 使用托管的包框架来实现一种项目类型 (C#) |Microsoft Docs
+title: Using the Managed Package Framework to Implement a Project Type (C#) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,26 +12,26 @@ ms.assetid: 926de536-eead-415b-9451-f1ddc8c44630
 caps.latest.revision: 21
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 86e250c5a5922df52acea7445c97862a00cdc826
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 066695c6d94603d0a0474243ed05dece4cc0bd1f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68143737"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300361"
 ---
 # <a name="using-the-managed-package-framework-to-implement-a-project-type-c"></a>使用托管包框架实现项目类型 (C#)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-托管包框架 (MPF) 提供了 C# 类可以使用，也可以继承来实现你自己的项目类型。 MPF 实现许多接口 Visual Studio 期望的项目类型提供，使您可以将精力实现特定的项目类型。  
+The Managed Package Framework (MPF) provides C# classes you can use or inherit from to implement your own project types. The MPF implements many of the interfaces Visual Studio expects a project type to provide, leaving you free to concentrate on implementing the particulars of your project type.  
   
-## <a name="using-the-mpf-project-source-code"></a>使用 MPF 项目源代码  
- 托管包框架中的项目 (MPFProj) 提供了用于创建和管理新的项目系统的帮助程序类。 与 MPF 中的其他类，不同的程序集随 Visual Studio 中不包括项目类。 相反，为在源代码提供了项目类[MPF 项目 2013](http://mpfproj12.codeplex.com)。  
+## <a name="using-the-mpf-project-source-code"></a>Using the MPF Project Source Code  
+ The Managed Package Framework for Projects (MPFProj) provides helper classes for creating and managing new project system. Unlike other classes in the MPF, the project classes are not included in the assemblies shipped with Visual Studio. Instead, the project classes are provided as source code at [MPF for Projects 2013](https://archive.codeplex.com/?p=mpfproj12).  
   
- 若要将此项目添加到你的 VSPackage 的解决方案，请执行以下操作：  
+ To add this project to your VSPackage solution, do the following:  
   
-1. 下载到 MPFProj 文件*MPFProjectDir*。  
+1. Download the MPFProj files to *MPFProjectDir*.  
   
-2. 在中*MPFProjectDir*\Dev10\Src\CSharp\ProjectBase.file，更改以下块：  
+2. In the *MPFProjectDir*\Dev10\Src\CSharp\ProjectBase.file, change the following block:  
   
 ```  
 <!-- Provide a default value for $(ProjectBasePath) -->  
@@ -40,11 +40,11 @@ ms.locfileid: "68143737"
   </PropertyGroup>  
 ```  
   
-1. 创建 VSPackage 项目。  
+1. Create a VSPackage project.  
   
-2. 卸载 VSPackage 项目。  
+2. Unload the VSPackage project.  
   
-3. VSPackage.csproj 文件编辑通过添加以下块之前另`<Import>`基块：  
+3. Edit the VSPackage .csproj file by adding the following block before the other `<Import>` blocks:  
   
 ```  
 <Import Project="MPFProjectDir\Dev10\Src\CSharp\ProjectBase.files" />  
@@ -58,18 +58,18 @@ ms.locfileid: "68143737"
   
 1. 保存项目。  
   
-2. 关闭并重新打开 VSPackage 解决方案。  
+2. Close and reopen the VSPackage solution.  
   
-3. 重新打开 VSPackage 项目。 应会看到一个名为 ProjectBase 的新目录。  
+3. Reopen the VSPackage project. You should see a new directory named ProjectBase.  
   
-4. 将添加到 VSPackage 项目的以下引用：  
+4. Add the following reference to the VSPackage project:  
   
      Microsoft.Build.Tasks.4.0  
   
 5. 生成项目。  
   
-## <a name="hierarchy-classes"></a>层次结构类  
- 下表汇总了支持项目层次结构中 MPFProj 的类。 有关详细信息，请参阅[层次结构和选择](../../extensibility/internals/hierarchies-and-selection.md)。  
+## <a name="hierarchy-classes"></a>Hierarchy Classes  
+ The following table summarizes the classes in the MPFProj that support project hierarchies. For more information, see [Hierarchies and Selection](../../extensibility/internals/hierarchies-and-selection.md).  
   
 |类名|  
 |----------------|  
@@ -85,16 +85,16 @@ ms.locfileid: "68143737"
 |`Microsoft.VisualStudio.Package.AssemblyReferenceNode`|  
 |`Microsoft.VisualStudio.Package.BuildDependency`|  
   
-## <a name="document-handling-classes"></a>文档处理类  
- 下表列出了支持文档处理中 MPF 的类。 有关详细信息，请参阅[打开和保存项目项](../../extensibility/internals/opening-and-saving-project-items.md)。  
+## <a name="document-handling-classes"></a>Document-Handling Classes  
+ The following table lists the classes in the MPF that support document handling. For more information, see [Opening and Saving Project Items](../../extensibility/internals/opening-and-saving-project-items.md).  
   
 |类名|  
 |----------------|  
 |`Microsoft.VisualStudio.Package.DocumentManager`|  
 |`Microsoft.VisualStudio.Package.FileDocumentManager`|  
   
-## <a name="configuration-and-output-classes"></a>配置和输出类  
- 下表列出了 MPF 允许项目类型支持多个配置，如调试和发布和的项目输出集合中的类。 有关详细信息，请参阅[管理配置选项](../../extensibility/internals/managing-configuration-options.md)。  
+## <a name="configuration-and-output-classes"></a>Configuration and Output Classes  
+ The following table lists the classes in the MPF that let project types support multiple configurations, such as debug and release, and collections of project output. For more information, see [Managing Configuration Options](../../extensibility/internals/managing-configuration-options.md).  
   
 |类名|  
 |----------------|  
@@ -104,8 +104,8 @@ ms.locfileid: "68143737"
 |`Microsoft.VisualStudio.Package.OutputGroup`|  
 |`Microsoft.VisualStudio.Package.ProjectElement`|  
   
-## <a name="automation-support-classes"></a>自动化支持类  
- 下表列出了支持自动化，以便您的项目类型的用户可以编写外接程序中 MPF 的类。  
+## <a name="automation-support-classes"></a>Automation-Support Classes  
+ The following table lists the classes in the MPF that support automation so that users of your project type can write add-ins.  
   
 |类名|  
 |----------------|  
@@ -115,8 +115,8 @@ ms.locfileid: "68143737"
 |`Microsoft.VisualStudio.Package.Automation.OAProjectItem`|  
 |`Microsoft.VisualStudio.Package.Automation.OANestedProjectItem`|  
   
-## <a name="properties-classes"></a>属性类  
- 下表列出了 MPF 允许项目类型中的类添加属性，用户可以浏览和修改属性浏览器中。  
+## <a name="properties-classes"></a>Properties Classes  
+ The following table lists the classes in the MPF that let project types add properties that users can browse and modify in a property browser.  
   
 |类名|  
 |----------------|  

@@ -1,5 +1,5 @@
 ---
-title: 对 UML 扩展运行单元测试 |Microsoft Docs
+title: Run unit tests on UML extensions | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -9,59 +9,57 @@ caps.latest.revision: 9
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3fdedf3fd9463b25e2c825a0a2d43b069049a2cb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f634f028dafea3260a69537893513f13cc0ebe83
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671234"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74292546"
 ---
 # <a name="run-unit-tests-on-uml-extensions"></a>对 UML 扩展运行单元测试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 为了使代码在连续更改中保持稳定，建议你编写单元测试并将这些测试作为常规生成过程的一部分执行。 有关更多信息，请参见 [Unit Test Your Code](../test/unit-test-your-code.md)。 若要设置用于 Visual Studio 建模扩展的测试，你需要一些关键信息。 摘要：
 
-- [设置用于 VSIX 扩展的单元测试](#Host)
+- [Setting up a Unit Test for VSIX Extensions](#Host)
 
    使用 VS IDE 主机适配器运行测试。 为每个测试方法添加 `[HostType("VS IDE")]`为前缀。 运行测试时，此主机适配器将启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。
 
-- [访问 DTE 和 ModelStore](#DTE)
+- [Accessing DTE and ModelStore](#DTE)
 
    通常，在测试初始化中，你必须打开模型及其关系图并访问 `IModelStore` 。
 
-- [打开模型图](#Opening)
+- [Opening a Model Diagram](#Opening)
 
    可以在 `EnvDTE.ProjectItem` 和 `IDiagramContext`之间来回转换。
 
-- [在 UI 线程中执行更改](#UiThread)
+- [Performing Changes in the UI Thread](#UiThread)
 
    必须在 UI 线程中执行用于更改模型存储的测试。 可以将 `Microsoft.VSSDK.Tools.VsIdeTesting.UIThreadInvoker` 用于此测试。
 
-- [测试命令、笔势和其他 MEF 组件](#MEF)
+- [Testing commands, gestures and other MEF components](#MEF)
 
    若要测试 MEF 组件，你必须将这些组件的导入属性显式连接到值。
 
   以下各节详述了这些内容。
-
-  可在 [UML – 使用文本快速输入](http://code.msdn.microsoft.com/UML-Rapid-Entry-using-Text-0813ad8a)上的代码示例库中找到经单元测试的 UML 扩展的示例。
 
 ## <a name="requirements"></a>要求
  请参阅 [要求](../modeling/extend-uml-models-and-diagrams.md#Requirements)。
 
  若要查看支持此功能的 Visual Studio 的版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
-## <a name="Host"></a>设置用于 VSIX 扩展的单元测试
+## <a name="Host"></a> Setting up a Unit Test for VSIX Extensions
  建模扩展中的方法通常会使用已打开的关系图。 这些方法使用 MEF 导入，例如， **IDiagramContext** 和 **ILinkedUndoContext**。 测试环境必须先设置此上下文，然后你才能运行测试。
 
 #### <a name="to-set-up-a-unit-test-that-executes-in-includevsprvsincludesvsprvs-mdmd"></a>设置在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中执行的单元测试
 
 1. 创建 UML 扩展项目和单元测试项目。
 
-    1. **UML 扩展项目。** 通常通过使用命令、笔势或验证项目模板创建此项目。 例如，请参阅[在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)。
+    1. **A UML extension project.** 通常通过使用命令、笔势或验证项目模板创建此项目。 For example, see [Define a menu command on a modeling diagram](../modeling/define-a-menu-command-on-a-modeling-diagram.md).
 
-    2. **单元测试项目。** 有关更多信息，请参见 [Unit Test Your Code](../test/unit-test-your-code.md)。
+    2. **A unit test project.** 有关更多信息，请参见 [Unit Test Your Code](../test/unit-test-your-code.md)。
 
-2. 创建包含 UML 建模项目的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 解决方案。 将使用此解决方案作为测试的初始状态。 应当将它与写入 UML 扩展及其单元测试的解决方案分开。 有关详细信息，请参阅[创建 UML 建模项目和关系图](../modeling/create-uml-modeling-projects-and-diagrams.md)。
+2. 创建包含 UML 建模项目的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 解决方案。 将使用此解决方案作为测试的初始状态。 应当将它与写入 UML 扩展及其单元测试的解决方案分开。 For more information, see [Create UML modeling projects and diagrams](../modeling/create-uml-modeling-projects-and-diagrams.md).
 
 3. **在 UML 扩展项目中**，将 .csproj 文件编辑为文本并确保以下行显示 `true`：
 
@@ -80,25 +78,25 @@ ms.locfileid: "72671234"
 
 5. **在单元测试项目中**，添加以下程序集引用：
 
-    - *你的 UML 扩展项目*
+    - *Your UML extension project*
 
-    - **EnvDTE**
+    - **EnvDTE.dll**
 
-    - **VisualStudio. Microsoft.visualstudio.architecturetools.layer.validator。**
+    - **Microsoft.VisualStudio.ArchitectureTools.Extensibility.dll**
 
-    - **VisualStudio. ComponentModelHost .dll**
+    - **Microsoft.VisualStudio.ComponentModelHost.dll**
 
-    - **VisualStudio. "Microsoft.visualstudio.qualitytools.webtestframework. Microsoft.visualstudio.qualitytools.unittestframework.dll**
+    - **Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll**
 
-    - **VisualStudio （& e）**
+    - **Microsoft.VisualStudio.Uml.Interfaces.dll**
 
-    - **VSSDK. TestHostFramework .dll**
+    - **Microsoft.VSSDK.TestHostFramework.dll**
 
 6. 将特性 `[HostType("VS IDE")]` 添加为每个测试方法（包括初始化方法）的前缀。
 
      这将确保测试将在 Visual Studio 的实验实例中运行。
 
-## <a name="DTE"></a>访问 DTE 和 ModelStore
+## <a name="DTE"></a> Accessing DTE and ModelStore
  编写一个方法以在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中打开建模项目。 通常，你只需在每个测试运行中打开一次解决方案。 若要仅运行此方法一次，请将 `[AssemblyInitialize]` 特性作为此方法的前缀。 不要忘记你还需要每个测试方法的 [HostType("VS IDE")] 特性。  例如:
 
 ```csharp
@@ -164,9 +162,9 @@ namespace UnitTests
 
 ```
 
- 如果 <xref:EnvDTE.Project?displayProperty=fullName> 的实例表示建模项目，则可以将其强制转换为[IModelingProject](/previous-versions/ee789474(v=vs.140))。
+ If an instance of <xref:EnvDTE.Project?displayProperty=fullName> represents a modeling project, then you can cast it to and from [IModelingProject](/previous-versions/ee789474(v=vs.140)).
 
-## <a name="Opening"></a>打开模型图
+## <a name="Opening"></a> Opening a Model Diagram
  对于每个测试或测试的类，你通常需要使用打开的关系图。 以下示例使用 `[ClassInitialize]` 特性，该特性在此测试类中先执行此方法，然后再执行其他方法。 同样，不要忘记你还需要每个测试方法的 [HostType("VS IDE")] 特性：
 
 ```csharp
@@ -211,7 +209,7 @@ public class MyTestClass
 
 ```
 
-## <a name="UiThread"></a>在 UI 线程中执行模型更改
+## <a name="UiThread"></a> Perform Model Changes in the UI Thread
  如果测试或所测试的方法更改了模型存储，则你必须在用户界面线程中执行它们。 如果你不执行此操作，则可能会出现 `AccessViolationException`。 将测试方法的代码包含在对 Invoke 的调用中：
 
 ```
@@ -231,7 +229,7 @@ using Microsoft.VSSDK.Tools.VsIdeTesting;
     }
 ```
 
-## <a name="MEF"></a>测试命令、笔势和其他 MEF 组件
+## <a name="MEF"></a> Testing command, gesture and other MEF components
  MEF 组件使用的属性声明具有 `[Import]` 属性，并且其值由主机设置。 通常，此类属性包括 IDiagramContext、SVsServiceProvider 和 ILinkedUndoContext。 在测试使用上述任一属性的方法时，必须先设置这些属性的值，然后再执行所测试的方法。 例如，如果你编写了类似于此代码的命令扩展：
 
 ```
@@ -326,7 +324,7 @@ using System.ComponentModel.Composition;
 ## <a name="access-from-tests-to-private-methods-and-variables"></a>从测试到私有方法和变量的访问
  有时，在执行所测试的方法之前和之后，你需要测试私有方法或验证私有字段的状态。 这会带来一些困难，因为测试与所测试的类在不同的程序集中。 可以考虑一些策略，其中包括以下方法：
 
- 仅使用公共项和内部项进行测试编写测试，使其仅使用公共（或内部）类和成员。 这是最佳方法。 即使你重构所测试的程序集的内部实现，你的测试也可继续工作。 通过在做出更改之前和之后应用相同的测试，可以确保你所做的更改没有改变程序集的行为。
+ Test only by using public and internal items Write your tests so that they use only public (or internal) classes and members. 这是最佳方法。 即使你重构所测试的程序集的内部实现，你的测试也可继续工作。 通过在做出更改之前和之后应用相同的测试，可以确保你所做的更改没有改变程序集的行为。
 
  若要做到这一点，你可能必须重构你的代码。 例如，你可能需要将一些方法归为另一个类。
 
@@ -338,7 +336,7 @@ using System.ComponentModel.Composition;
 [assembly:InternalsVisibleTo("MyUnitTests")] // Name of unit tests assembly.
 ```
 
- 定义测试接口定义一个接口，该接口包括要测试的类的公共成员，以及您希望测试能够使用的私有成员的其他属性和方法。 将此接口添加到要测试的项目中。 例如:
+ Define a test interface Define an interface that includes both the public members of a class to be tested, and additional properties and methods for the private members that you want the tests to be able to use. 将此接口添加到要测试的项目中。 例如:
 
 ```csharp
 internal interface MyClassTestInterface {
@@ -376,7 +374,7 @@ testInstance.PublicMethod1();
 Assert.AreEqual("hello", testInstance.privateField1_Accessor);
 ```
 
- 使用反射定义访问器这是我们建议的最小方法。 旧版本的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 提供了一个实用工具，可用于自动为每个私有方法创建一个访问器方法。 虽然此方法很方便，但我们的经验表明，此方法会生成与正在测试的应用程序的内部结构紧密耦合的单元测试。 当需求或体系结构发生更改时，这会产生额外的工作量，因为测试必须与实现一起更改。 此外，实现设计中的任何错误假设也会带入到测试中，使得测试无法发现错误。
+ Define accessors by using reflection This is the way that we recommend least. 旧版本的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 提供了一个实用工具，可用于自动为每个私有方法创建一个访问器方法。 虽然此方法很方便，但我们的经验表明，此方法会生成与正在测试的应用程序的内部结构紧密耦合的单元测试。 当需求或体系结构发生更改时，这会产生额外的工作量，因为测试必须与实现一起更改。 此外，实现设计中的任何错误假设也会带入到测试中，使得测试无法发现错误。
 
 ## <a name="see-also"></a>请参阅
- [单元测试剖析](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144)[在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md) [UML –使用文本快速输入](http://code.msdn.microsoft.com/UML-Rapid-Entry-using-Text-0813ad8a)
+ [Anatomy of a Unit Test](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144) [Define a menu command on a modeling diagram](../modeling/define-a-menu-command-on-a-modeling-diagram.md)

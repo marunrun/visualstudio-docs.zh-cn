@@ -9,12 +9,12 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7fc6f29246f90c47a4c59a5ae6bb1999ceac72bf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 744b5f3c62ac2c5636ed2499653986d3b669fce3
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646909"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299964"
 ---
 # <a name="step-9-review-comment-and-test-your-code"></a>步骤 9：检查代码、为代码添加注释和测试代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "72646909"
   pictureBox1.Load(openFileDialog1.FileName)
   ```
 
-   语句用于指示程序执行操作。 在 Visual C# 中，语句始终以分号结束。 在 Visual Basic 中，行的结尾即为语句的结尾。 （Visual Basic 中不需要分号。）前面的语句指示 `PictureBox` 控件加载用户在**OpenFileDialog**组件中选择的文件。
+   语句用于指示程序执行操作。 在 Visual C# 中，语句始终以分号结束。 在 Visual Basic 中，行的结尾即为语句的结尾。 (No semicolon is needed in Visual Basic.) The preceding statement tells your `PictureBox` control to load the file that the user selected with the **OpenFileDialog** component.
 
-  ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[教程1：在 Visual Basic 中创建图片查看器-视频 5](http://go.microsoft.com/fwlink/?LinkId=205216)或[教程1：在视频5中C#创建图片查看器](http://go.microsoft.com/fwlink/?LinkId=205206)。 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
+  ![link to video](../data-tools/media/playvideo.gif "PlayVideo")For a video version of this topic, see [Tutorial 1: Create a Picture Viewer in Visual Basic - Video 5](https://go.microsoft.com/fwlink/?LinkId=205216) or [Tutorial 1: Create a Picture Viewer in C# - Video 5](https://go.microsoft.com/fwlink/?LinkId=205206). 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
 
 ### <a name="to-add-comments"></a>添加注释
 
@@ -66,13 +66,13 @@ ms.locfileid: "72646909"
 
 2. 在运行程序之前，通过选择如下所示的“全部保存”工具栏按钮来保存程序。
 
-     "![全部保存" 工具栏按钮](../ide/media/express-iconsaveall.png "Express_IconSaveAll")全部保存按钮
+     ![Save All toolbar button](../ide/media/express-iconsaveall.png "Express_IconSaveAll") Save All button
 
      或者，若要保存程序，请在菜单栏上依次选择“文件”、“全部保存”。 最佳做法是尽早且经常保存。
 
      当程序运行时，其外观应与下图类似。
 
-     ![图片查看器](../ide/media/express-pictureviewerdonerun.png "Express_PictureViewerDoneRun")图片查看器
+     ![Picture Viewer](../ide/media/express-pictureviewerdonerun.png "Express_PictureViewerDoneRun") Picture Viewer
 
 ### <a name="to-test-your-program"></a>测试程序
 

@@ -1,5 +1,5 @@
 ---
-title: ClickOnce 部署中的特定错误的疑难解答 |Microsoft Docs
+title: Troubleshooting Specific Errors in ClickOnce Deployments | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -20,124 +20,124 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 348cb15ebc348d6c0ece5e7118e896cc6a21b23b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c66a25830e34571648727bd6ec71791e5e637ca8
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62420133"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74294729"
 ---
 # <a name="troubleshooting-specific-errors-in-clickonce-deployments"></a>ClickOnce 部署中的特定错误的疑难解答
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-本主题列出了在部署时可能发生的以下常见错误[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序，并提供了步骤来解决每个问题。  
+This topic lists the following common errors that can occur when you deploy a [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] application, and provides steps to resolve each problem.  
   
-## <a name="general-errors"></a>常规错误  
+## <a name="general-errors"></a>General Errors  
   
-#### <a name="when-you-try-to-locate-an-application-file-nothing-occurs-or-xml-renders-in-internet-explorer-or-you-receive-a-run-or-save-as-dialog-box"></a>当你尝试寻找.application 文件，没有出现任何问题，或 XML 呈现在 Internet Explorer 中，或收到一个运行或另存为对话框  
- 未在服务器或客户端上正确注册内容类型 （也称为 MIME 类型） 可能导致此错误。  
+#### <a name="when-you-try-to-locate-an-application-file-nothing-occurs-or-xml-renders-in-internet-explorer-or-you-receive-a-run-or-save-as-dialog-box"></a>When you try to locate an .application file, nothing occurs, or XML renders in Internet Explorer, or you receive a Run or Save As dialog box  
+ This error is likely caused by content types (also known as MIME types) not being registered correctly on the server or client.  
   
- 首先，请确保将服务器配置为将.application 扩展名与"应用程序/x 的 ms-应用程序"的内容类型相关联。  
+ First, make sure that the server is configured to associate the .application extension with content type "application/x-ms-application".  
   
- 如果将服务器配置正确，请确保[!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)]在计算机上安装。 如果[!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)]已安装，并且你仍看到此问题，请尝试卸载并重新安装[!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)]重新注册客户端上的内容类型。  
+ If the server is configured correctly, ensure that the [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] is installed on your computer. If the [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] is installed, and you are still seeing this problem, try uninstalling and reinstalling the [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] to re-register the content type on the client.  
   
-#### <a name="error-message-says-unable-to-retrieve-application-files-missing-in-deployment-or-application-download-has-been-interrupted-check-for-network-errors-and-try-again-later"></a>错误消息指出，"无法检索应用程序。 在部署中缺少的文件"或"应用程序下载已中断、 检查网络错误中并稍后重试"  
- 此消息表示所引用的一个或多个文件[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]无法下载的清单。 若要调试此错误的最简单方法是尝试下载该 URL 的[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]说不能下载。 下面是一些可能的原因：  
+#### <a name="error-message-says-unable-to-retrieve-application-files-missing-in-deployment-or-application-download-has-been-interrupted-check-for-network-errors-and-try-again-later"></a>Error message says, "Unable to retrieve application. Files missing in deployment" or "Application download has been interrupted, check for network errors and try again later"  
+ This message indicates that one or more files being referenced by the [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifests cannot be downloaded. The easiest way to debug this error is to try to download the URL that [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] says it cannot download. Here are some possible causes:  
   
-- 如果日志文件说"(403) 禁止访问"或"(404) 找不到，"验证配置 Web 服务器，以便它不会阻止下载此文件。 有关详细信息，请参阅 [ClickOnce 部署中的服务器和客户端配置问题](../deployment/server-and-client-configuration-issues-in-clickonce-deployments.md)。  
+- If the log file says "(403) Forbidden" or "(404) Not found," verify that the Web server is configured so that it does not block download of this file. 有关详细信息，请参阅 [ClickOnce 部署中的服务器和客户端配置问题](../deployment/server-and-client-configuration-issues-in-clickonce-deployments.md)。  
   
-- 如果在服务器被阻止的.config 文件，请参阅"下载错误，当您尝试安装[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]具有.config 文件的应用程序"本主题中更高版本。  
+- If the .config file is being blocked by the server, see the section "Download error when you try to install a [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] application that has a .config file" later in this topic.  
   
-- 确定是否发生这种情况`deploymentProvider`部署清单中的 URL 指向用于激活的 URL 不同的位置。  
+- Determine whether this occurred because the `deploymentProvider` URL in the deployment manifest is pointing to a different location than the URL used for activation.  
   
-- 确保所有文件都均存在于服务器;[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]日志应告诉您找不到的文件。  
+- Ensure that all files are present on the server; the [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] log should tell you which file was not found.  
   
-- 查看是否存在网络连接问题;如果客户端计算机在下载期间脱机，会收到此消息。  
+- See whether there are network connectivity issues; you can receive this message if your client computer went offline during the download.  
   
-#### <a name="download-error-when-you-try-to-install-a-clickonce-application-that-has-a-config-file"></a>当您尝试安装的 ClickOnce 应用程序.config 文件下载错误  
- 默认情况下，Visual Basic Windows 基于应用程序包括一个 App.config 文件。 当用户尝试从使用 Windows Server 2003 的 Web 服务器安装，因为该操作系统会阻止出于安全原因的.config 文件的安装时将有问题。 若要启用要安装的.config 文件，请单击**使用".deploy"文件扩展名**中**发布选项**对话框。  
+#### <a name="download-error-when-you-try-to-install-a-clickonce-application-that-has-a-config-file"></a>Download error when you try to install a ClickOnce application that has a .config file  
+ By default, a Visual Basic Windows-based application includes an App.config file. There will be a problem when a user tries to install from a Web server that uses Windows Server 2003, because that operating system blocks the installation of .config files for security reasons. To enable the .config file to be installed, click **Use ".deploy" file extension** in the **Publish Options** dialog box.  
   
- 您还必须设置内容类型 （也称为 MIME 类型） 适当地为.application、.manifest 和.deploy 文件。 有关详细信息，请参阅您的 Web 服务器文档。  
+ You also must set the content types (also known as MIME types) appropriately for .application, .manifest, and .deploy files. For more information, see your Web server documentation.  
   
- 有关详细信息，请参阅"Windows Server 2003:锁定的内容类型"[服务器和 ClickOnce 部署中的客户端配置问题](../deployment/server-and-client-configuration-issues-in-clickonce-deployments.md)。  
+ For more information, see "Windows Server 2003: Locked-Down Content Types" in [Server and Client Configuration Issues in ClickOnce Deployments](../deployment/server-and-client-configuration-issues-in-clickonce-deployments.md).  
   
-#### <a name="error-message-application-is-improperly-formatted-log-file-contains-xml-signature-is-invalid"></a>错误消息："应用程序格式不正确";日志文件包含"XML 签名无效"  
- 请确保你已更新的清单文件且再次对它签名。 通过使用重新发布应用程序[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]或使用 Mage 应用程序再次进行签名。  
+#### <a name="error-message-application-is-improperly-formatted-log-file-contains-xml-signature-is-invalid"></a>Error message: "Application is improperly formatted;" Log file contains "XML signature is invalid"  
+ Ensure that you updated the manifest file and signed it again. Republish your application by using [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] or use Mage to sign the application again.  
   
-#### <a name="you-updated-your-application-on-the-server-but-the-client-does-not-download-the-update"></a>更新应用程序的服务器上，但客户端不会下载更新  
- 通过完成以下任务之一，可能会解决此问题：  
+#### <a name="you-updated-your-application-on-the-server-but-the-client-does-not-download-the-update"></a>You updated your application on the server, but the client does not download the update  
+ This problem might be solved by completing one of the following tasks:  
   
-- 检查`deploymentProvider`部署清单中的 URL。 确保要更新的同一位置中的位的`deploymentProvider`指向。  
+- Examine the `deploymentProvider` URL in the deployment manifest. Ensure that you are updating the bits in the same location that `deploymentProvider` points to.  
   
-- 验证部署清单中的更新间隔。 如果在此间隔设置为定期间隔，如每六个小时，一次[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]将不会扫描更新之前已超过此间隔。 您可以更改要扫描每次启动应用程序的更新的清单。 更改的更新间隔是在开发期间一个方便的选项来验证正在安装更新，但会降低应用程序激活。  
+- Verify the update interval in the deployment manifest. If this interval is set to a periodic interval, such as one time every six hours, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] will not scan for an update until this interval has passed. You can change the manifest to scan for an update every time that the application starts. Changing the update interval is a convenient option during development time to verify updates are being installed, but it slows down application activation.  
   
-- 请尝试重新启动该应用程序，在开始菜单上。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 可能已在后台，检测到更新，但将提示你在下一次激活上安装 bits。  
+- Try starting the application again on the Start menu. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] may have detected the update in the background, but will prompt you to install the bits on the next activation.  
   
-#### <a name="during-update-you-receive-an-error-that-has-the-following-log-entry-the-reference-in-the-deployment-does-not-match-the-identity-defined-in-the-application-manifest"></a>在更新期间你收到的错误的以下日志条目："部署中的引用与应用程序清单中定义的标识不匹配"  
- 因为您已手动编辑部署和应用程序清单，并导致一个清单，以变得不同步与其他程序集标识的说明，可能会发生此错误。 程序集标识由其名称、 版本、 区域性和公钥标记组成。 检查对清单中的标识描述并更正任何差异。  
+#### <a name="during-update-you-receive-an-error-that-has-the-following-log-entry-the-reference-in-the-deployment-does-not-match-the-identity-defined-in-the-application-manifest"></a>During update you receive an error that has the following log entry: "The reference in the deployment does not match the identity defined in the application manifest"  
+ This error may occur because you have manually edited the deployment and application manifests, and have caused the description of the identity of an assembly in one manifest to become out of sync with the other. The identity of an assembly consists of its name, version, culture, and public key token. Examine the identity descriptions in your manifests, and correct any differences.  
   
-#### <a name="first-time-activation-from-local-disk-or-cd-rom-succeeds-but-subsequent-activation-from-start-menu-does-not-succeed"></a>第一次从本地磁盘或 CD-ROM 激活成功，但从开始菜单的后续激活未成功  
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 使用部署提供程序 URL 来接收应用程序的更新。 验证该 URL 指向的位置正确。  
+#### <a name="first-time-activation-from-local-disk-or-cd-rom-succeeds-but-subsequent-activation-from-start-menu-does-not-succeed"></a>First time activation from local disk or CD-ROM succeeds, but subsequent activation from Start Menu does not succeed  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uses the Deployment Provider URL to receive updates for the application. Verify that the location that the URL is pointing to is correct.  
   
-#### <a name="error-cannot-start-the-application"></a>错误："无法启动该应用程序"  
- 此错误消息通常表示没有安装到此应用程序时出现问题[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]存储。 应用程序发生错误，或者在存储区已损坏。 日志文件可能会告诉您发生错误的位置。  
+#### <a name="error-cannot-start-the-application"></a>Error: "Cannot start the application"  
+ This error message usually indicates that there is a problem installing this application into the [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] store. Either the application has an error or the store is corrupted. The log file might tell you where the error occurred.  
   
- 您应执行以下操作：  
+ You should do the following:  
   
-- 验证所有唯一的部署清单的标识、 应用程序清单的标识和主应用程序 EXE 的标识。  
+- Verify that the identity of the deployment manifest, identity of application manifest, and identity of the main application EXE are all unique.  
   
-- 验证文件路径不超过 100 个字符。 如果你的应用程序包含文件路径太长，则可能会超过路径可以存储的最大限制。 请缩短路径并重新安装。  
+- Verify that your file paths are not longer than 100 characters. If your application contains file paths that are too long, you may exceed the limitations on the maximum path you can store. Try shortening the paths and reinstall.  
   
-#### <a name="privatepath-settings-in-application-config-file-are-not-honored"></a>不遵循应用程序配置文件中的 PrivatePath 设置  
- 若要使用 PrivatePath （合成探测路径），该应用程序必须请求完全信任权限。 请尝试更改应用程序清单来请求完全信任，然后重试。  
+#### <a name="privatepath-settings-in-application-config-file-are-not-honored"></a>PrivatePath settings in application config file are not honored  
+ To use PrivatePath (Fusion probing paths), the application must request full trust permission. Try changing the application manifest to request full trust, and then try again.  
   
-#### <a name="during-uninstall-a-message-appears-saying-failed-to-uninstall-application"></a>在卸载消息出现，"无法卸载应用程序"  
- 此消息通常指示已删除应用程序或存储已损坏。 单击后**确定**，则**添加/删除程序**项将被删除。  
+#### <a name="during-uninstall-a-message-appears-saying-failed-to-uninstall-application"></a>During uninstall a message appears saying, "Failed to uninstall application"  
+ This message usually indicates that the application has already been removed or the store is corrupted. After you click **OK**, the **Add/Remove Program** entry will be removed.  
   
-#### <a name="during-installation-a-message-appears-that-says-that-the-platform-dependencies-are-not-installed"></a>在安装期间，出现一条消息指出未安装平台依赖项  
- 缺少中 GAC （全局程序集缓存） 的应用程序运行所需的必备组件。  
+#### <a name="during-installation-a-message-appears-that-says-that-the-platform-dependencies-are-not-installed"></a>During installation, a message appears that says that the platform dependencies are not installed  
+ You are missing a prerequisite in the GAC (global assembly cache) that the application needs in order to run.  
   
-## <a name="publishing-with-visual-studio"></a>使用 Visual Studio 进行发布  
+## <a name="publishing-with-visual-studio"></a>Publishing with Visual Studio  
   
-#### <a name="publishing-in-visual-studio-fails"></a>在 Visual Studio 中的发布失败  
- 确保你有权发布到服务器所面向。 例如，如果登录到终端服务器的计算机作为普通用户，不作为管理员，则您可能没有要发布到本地 Web 服务器所需的权限。  
+#### <a name="publishing-in-visual-studio-fails"></a>Publishing in Visual Studio fails  
+ Ensure that you have the right to publish to the server that you are targeting. For example, if you are logged in to a terminal server computer as an ordinary user, not as an administrator, you probably will not have the rights required to publish to the local Web server.  
   
- 如果您要发布的 url，请确保目标计算机已启用 FrontPage 服务器扩展。  
+ If you are publishing with a URL, ensure that the destination computer has FrontPage Server Extensions enabled.  
   
-#### <a name="error-message-unable-to-create-the-web-site-site-the-components-for-communicating-with-frontpage-server-extensions-are-not-installed"></a>错误消息：无法创建网站\<站点 >。 未安装与 FrontPage 服务器扩展进行通信的组件。  
- 确保您有 Microsoft Visual Studio Web 创作组件从发布在计算机上安装。 对于 Express 用户，默认情况下未安装此组件。 有关详细信息，请参阅 [http://go.microsoft.com/fwlink/?LinkId=102310](http://go.microsoft.com/fwlink/?LinkId=102310)。  
+#### <a name="error-message-unable-to-create-the-web-site-site-the-components-for-communicating-with-frontpage-server-extensions-are-not-installed"></a>Error Message: Unable to create the Web site '\<site>'. The components for communicating with FrontPage Server Extensions are not installed.  
+ Ensure that you have the Microsoft Visual Studio Web Authoring Component installed on the machine that you are publishing from. For Express users, this component is not installed by default. 有关详细信息，请参阅 [http://go.microsoft.com/fwlink/?LinkId=102310](https://go.microsoft.com/fwlink/?LinkId=102310)。  
   
-#### <a name="error-message-could-not-find-file-microsoftwindowscommon-controls-version6000-culture-publickeytoken6595b64144ccf1df-processorarchitecture-typewin32"></a>错误消息：Could not find file 'Microsoft.Windows.Common-Controls, Version=6.0.0.0, Culture=*, PublicKeyToken=6595b64144ccf1df, ProcessorArchitecture=\*, Type=win32'  
- 当你尝试发布启用了视觉样式的 WPF 应用程序时，会出现此错误消息。 若要解决此问题，请参阅[如何：发布启用了视觉样式的 WPF 应用程序](../deployment/how-to-publish-a-wpf-application-with-visual-styles-enabled.md)。  
+#### <a name="error-message-could-not-find-file-microsoftwindowscommon-controls-version6000-culture-publickeytoken6595b64144ccf1df-processorarchitecture-typewin32"></a>Error Message: Could not find file 'Microsoft.Windows.Common-Controls, Version=6.0.0.0, Culture=*, PublicKeyToken=6595b64144ccf1df, ProcessorArchitecture=\*, Type=win32'  
+ This error message appears when you attempt to publish a WPF application with visual styles enabled. To resolve this issue, see [How to: Publish a WPF Application with Visual Styles Enabled](../deployment/how-to-publish-a-wpf-application-with-visual-styles-enabled.md).  
   
-## <a name="using-mage"></a>使用 Mage  
+## <a name="using-mage"></a>Using Mage  
   
-#### <a name="you-tried-to-sign-with-a-certificate-in-your-certificate-store-and-a-received-blank-message-box"></a>尝试登录时使用你的证书存储和接收到的空消息框中的证书  
- 在中**签名**对话框中，您必须：  
+#### <a name="you-tried-to-sign-with-a-certificate-in-your-certificate-store-and-a-received-blank-message-box"></a>You tried to sign with a certificate in your certificate store and a received blank message box  
+ In the **Signing** dialog box, you must:  
   
-- 选择**使用存储的证书签名**，和  
+- Select **Sign with a stored certificate**, and  
   
-- 从列表; 选择一个证书第一个证书不是默认选择。  
+- Select a certificate from the list; the first certificate is not the default selection.  
   
-#### <a name="clicking-the-dont-sign-button-causes-an-exception"></a>单击"不登录"按钮时导致异常  
- 此问题是一个已知的 bug。 所有[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]清单都需要进行签名。 只需选择一个签名的选项，然后依次**确定**。  
+#### <a name="clicking-the-dont-sign-button-causes-an-exception"></a>Clicking the "Don't Sign" button causes an exception  
+ This issue is a known bug. All [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifests are required to be signed. Just select one of the signing options, and then click **OK**.  
   
-## <a name="additional-errors"></a>其他错误  
- 下表显示了一些常见的错误消息，在用户安装时，可能会收到客户端计算机用户[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序。 每个错误消息的最可能原因的错误说明旁边列出。  
+## <a name="additional-errors"></a>Additional Errors  
+ The following table shows some common error messages that a client-computer user may receive when the user installs a [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] application. Each error message is listed next to a description of the most probable cause for the error.  
   
 |错误消息|描述|  
 |-------------------|-----------------|  
-|无法启动应用程序。 请联系应用程序发布者。<br /><br /> 无法启动该应用程序。 与应用程序供应商联系以获得帮助。|这些是无法启动该应用程序，并可在任何其他特定原因时出现一般错误消息。 通常，应用程序以某种方式损坏，这意味着或的[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]存储已损坏。|  
-|无法继续。 应用程序的格式不正确。 与应用程序发布者联系以获得帮助。<br /><br /> 应用程序验证未成功。 无法继续。<br /><br /> 无法检索应用程序文件。 部署中已损坏的文件。|在部署中的清单文件之一是语法上无效，或包含不能为与相应的文件进行对帐的哈希。 此错误也可能表示嵌入在程序集中的清单已损坏。 重新创建你的部署和重新编译应用程序，或查找并在清单中手动修复错误。|  
-|无法检索应用程序。 身份验证错误。<br /><br /> 应用程序安装未成功。 找不到服务器上的应用程序文件。 与应用程序发布者或管理员联系以获得帮助。|无法下载部署中的一个或多个文件，因为您没有权限访问它们。 原因可能是由 Web 服务器，在部署中的文件之一使 Web 服务器视为受保护的文件扩展名结尾，则可能发生返回 403 禁止访问错误。 此外，包含一个或多个应用程序的文件的目录可能需要用户名和密码才能访问。|  
-|无法下载该应用程序。 应用程序缺少所需的文件。 与应用程序供应商或系统管理员联系以获得帮助。|在服务器上找不到一个或多个应用程序清单中列出的文件。 验证你已上载将部署的所有依赖文件，然后重试。|  
-|应用程序下载失败。 检查网络连接，或联系你的系统管理员或网络服务提供商。|[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 无法建立到服务器的网络连接。 检查服务器的可用性和网络的状态。|  
-|URLDownloadToCacheFile 失败，HRESULT\<数 >。 尝试下载时出错\<文件 >。|如果用户已设置 Internet Explorer 高级安全选项"如果之间安全的更改，则发出警告和非安全模式"的部署目标计算机上，并且安装程序正在安装的 ClickOnce 应用程序的重定向 URL 从非安全到安全站点 （或反之亦然），则安装将失败，因为 Internet Explorer 警告会中断它。<br /><br /> 若要解决此问题，可以执行下列任一操作：<br /><br /> -清除安全选项。<br />-请确保安装程序 URL 不会重定向的方式来更改安全模式中。<br />-完全删除的重定向和指向实际的安装程序的 URL。|  
-|错误写入到硬盘。 可能有足够的空间可用磁盘上。 与应用程序供应商或系统管理员联系以获得帮助。|这可能表示没有足够的磁盘空间来存储应用程序，但它也可能表示更为通用的 I/O 错误，当你尝试将应用程序文件保存到驱动器。|  
-|无法启动该应用程序。 在磁盘上没有足够的可用空间。|硬盘已满。 清理空间，并尝试再次运行应用程序。|  
-|过多的已部署的激活尝试加载在一次。|[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 可以在同一时间开始的不同应用程序的数量限制。 这主要是为了帮助防止恶意发起拒绝服务攻击尝试针对本地[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]服务; 如果尝试在短期内重复，启动同一应用程序，仅将最终有的单个实例的用户应用程序。|  
-|不能通过网络激活快捷方式。|快捷方式[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]只能在本地硬盘上启动应用程序。 它们不能通过打开指向远程服务器上的快捷方式文件的 URL 来启动。|  
-|应用程序是太大而无法联机在部分信任环境中运行。 与应用程序供应商或系统管理员联系以获得帮助。|在部分信任环境中运行的应用程序不能大于联机应用程序，配额，它默认为 250 MB 大小的一半。|  
+|Application cannot be started. Contact the application publisher.<br /><br /> Cannot start the application. Contact the application vendor for assistance.|These are generic error messages that occur when the application cannot be started, and no other specific reason can be found. Frequently this means that the application is somehow corrupted, or that the [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] store is corrupted.|  
+|Cannot continue. The application is improperly formatted. Contact the application publisher for assistance.<br /><br /> Application validation did not succeed. Unable to continue.<br /><br /> Unable to retrieve application files. Files corrupt in deployment.|One of the manifest files in the deployment is syntactically not valid, or contains a hash that cannot be reconciled with the corresponding file. This error may also indicate that the manifest embedded inside an assembly is corrupted. Re-create your deployment and recompile your application, or find and fix the errors manually in your manifests.|  
+|Cannot retrieve application. 身份验证错误。<br /><br /> Application installation did not succeed. Cannot locate applications files on the server. Contact the application publisher or your administrator for assistance.|One or more files in the deployment cannot be downloaded because you do not have permission to access them. This can be caused by a 403 Forbidden error being returned by a Web server, which may occur if one of the files in your deployment ends with an extension that makes the Web server treat it as a protected file. Also, a directory that contains one or more of the application's files might require a username and password in order to access.|  
+|Cannot download the application. The application is missing required files. Contact the application vendor or your system administrator for assistance.|One or more of the files listed in the application manifest cannot be found on the server. Verify that you have uploaded all the deployment's dependent files, and try again.|  
+|Application download did not succeed. Check your network connection, or contact your system administrator or network service provider.|[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] cannot establish a network connection to the server. Examine the server's availability and the state of your network.|  
+|URLDownloadToCacheFile failed with HRESULT '\<number>'. An error occurred trying to download '\<file>'.|If a user has set Internet Explorer Advanced Security option "Warn if changing between secure and not secure mode" on the deployment target computer, and if the setup URL of the ClickOnce application being installed is redirected from a non-secure to a secure site (or vice-versa), the installation will fail because the Internet Explorer warning interrupts it.<br /><br /> To resolve this, you can do one of the following:<br /><br /> -   Clear the security option.<br />-   Make sure that the setup URL is not redirected in such a way that changes security modes.<br />-   Remove the redirection completely and point to the actual setup URL.|  
+|An error has occurred writing to the hard disk. There might be insufficient space available on the disk. Contact the application vendor or your system administrator for assistance.|This may indicate insufficient disk space for storing the application, but it may also indicate a more general I/O error when you are trying to save the application files to the drive.|  
+|Cannot start the application. There is not enough available space on the disk.|The hard disk is full. Clear off space and try to run the application again.|  
+|Too many deployed activations are attempting to load at once.|[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] limits the number of different applications that can start at the same time. This is largely to help protect against malicious attempts to instigate denial-of-service attacks against the local [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] service; users who try to start the same application repeatedly, in rapid succession, will only end up with a single instance of the application.|  
+|Shortcuts cannot be activated over the network.|Shortcuts to a [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] application can only be started on the local hard disk. They cannot be started by opening a URL that points to a shortcut file on a remote server.|  
+|The application is too large to run online in partial trust. Contact the application vendor or your system administrator for assistance.|An application that runs in partial trust cannot be larger than half of the size of the online application quota, which by default is 250 MB.|  
   
 ## <a name="see-also"></a>请参阅  
  [ClickOnce 安全和部署](../deployment/clickonce-security-and-deployment.md)   

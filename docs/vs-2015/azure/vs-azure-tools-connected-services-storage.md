@@ -1,5 +1,5 @@
 ---
-title: 使用连接服务添加 Azure 存储
+title: Add Azure Storage by using Connected Services
 description: 使用 Visual Studio 的“添加连接服务”对话框将 Azure 存储添加到应用
 author: ghogen
 manager: jillfra
@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/26/2017
 ms.author: ghogen
-ms.openlocfilehash: e68f7503ecc75c03e9f4beda2003415d3175ee7e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6d7bf7901ab33dc6dba50013ebdfa05c3188cd6c
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62963833"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300171"
 ---
 # <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>使用 Visual Studio 连接服务添加 Azure 存储
 在 Visual Studio 中，通过使用“添加连接服务”对话框可将以下任何服务连接到 Azure 存储：
@@ -63,12 +63,12 @@ ms.locfileid: "62963833"
 ## <a name="how-your-project-is-modified"></a>项目的修改情况
 完成该对话框后，Visual Studio 将添加引用并修改特定配置文件。 具体更改情况取决于项目类型：
 
-- ASP.NET 项目 - [完成的操作 – ASP.NET 项目](http://go.microsoft.com/fwlink/p/?LinkId=513126)
-- ASP.NET Core 项目 - [完成的操作 – ASP.NET 5 项目](http://go.microsoft.com/fwlink/p/?LinkId=513124)
-- 云服务项目（Web 角色和辅助角色）- [完成的操作 – 云服务项目](http://go.microsoft.com/fwlink/p/?LinkId=516965)
+- ASP.NET 项目 - [完成的操作 – ASP.NET 项目](https://go.microsoft.com/fwlink/p/?LinkId=513126)
+- ASP.NET Core 项目 - [完成的操作 – ASP.NET 5 项目](https://go.microsoft.com/fwlink/p/?LinkId=513124)
+- 云服务项目（Web 角色和辅助角色）- [完成的操作 – 云服务项目](https://go.microsoft.com/fwlink/p/?LinkId=516965)
 - WebJob 项目 - [完成的操作 – WebJob 项目](/azure/visual-studio/vs-storage-webjobs-what-happened)
 
 ## <a name="next-steps"></a>后续步骤
-- [MSDN 论坛：Azure 存储](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
-- [Microsoft Azure 存储团队博客](http://blogs.msdn.com/b/windowsazurestorage/)
+- [MSDN Forum: Azure Storage](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
+- [Microsoft Azure 存储团队博客](https://blogs.msdn.microsoft.com/windowsazurestorage/)
 - [Azure 存储文档](https://docs.microsoft.com/azure/storage/)

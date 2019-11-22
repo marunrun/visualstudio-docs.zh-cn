@@ -1,5 +1,5 @@
 ---
-title: 调试混合模式应用程序 |Microsoft Docs
+title: Debugging Mixed-Mode Applications | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -25,12 +25,12 @@ caps.latest.revision: 22
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9c8e9f36e7118b1681701f6c8ac60a5bc851308f
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: b462d5d0c449b8e47c936242908e5bbe6e433429
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65691362"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298305"
 ---
 # <a name="debugging-mixed-mode-applications"></a>调试混合模式应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,17 +39,17 @@ ms.locfileid: "65691362"
   
 ## <a name="enable-c-edit-and-continue-in-mixed-mode-debugging"></a>在混合模式调试下启用 C++“编辑并继续”  
   
-- 若要使用 Visual Studio 2013 中的 C++“编辑并继续”功能，你必须还原为旧调试引擎。 请参阅“Microsoft 应用程序生命周期管理”博客上的 [Switching to Managed Compatibility Mode in Visual Studio 2013](http://blogs.msdn.com/b/visualstudioalm/archive/2013/10/16/switching-to-managed-compatibility-mode-in-visual-studio-2013.aspx)（切换为 Visual Studio 2013 中的托管兼容性模式）。  
+- 若要使用 Visual Studio 2013 中的 C++“编辑并继续”功能，你必须还原为旧调试引擎。 请参阅“Microsoft 应用程序生命周期管理”博客上的 [Switching to Managed Compatibility Mode in Visual Studio 2013](https://devblogs.microsoft.com/devops/switching-to-managed-compatibility-mode-in-visual-studio-2013/)（切换为 Visual Studio 2013 中的托管兼容性模式）。  
   
 ## <a name="property-evaluation-in-mixed-mode-applications"></a>混合模式应用程序中的属性求值  
  在混合模式应用程序中，调试器执行的属性求值是一个资源消耗很大的操作。 因此，调试操作（如单步执行）可能会很慢。 有关详细信息，请参阅[单步执行](https://msdn.microsoft.com/8791dac9-64d1-4bb9-b59e-8d59af1833f9)。 如果混合模式调试的性能很低，你可能希望在调试器窗口中关闭属性求值。  
   
 > [!NOTE]
-> 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+> 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 #### <a name="to-turn-off-property-evaluation"></a>关闭属性求值  
   
-1. 在 **“工具”** 菜单上，选择 **“选项”**。  
+1. 在 **“工具”** 菜单上，选择 **“选项”** 。  
   
 2. 在“选项”对话框中，打开“调试”文件夹并选择“常规”类别。  
   

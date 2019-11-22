@@ -1,5 +1,5 @@
 ---
-title: 使用静态代码分析来分析应用商店应用的代码质量
+title: Analyze the code quality of Store apps using static code analysis
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-test
@@ -9,12 +9,12 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: fcaa8424e1b60375ec62bde31c5e22f3706641d0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4633b32c1d59a59c91848f72403571955263472f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660745"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297544"
 ---
 # <a name="analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis"></a>使用 Visual Studio 静态代码分析来分析应用商店应用的代码质量
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,5 +35,5 @@ Visual Studio 中的代码分析工具可检查代码中是否存在一组常见
 
 |||
 |-|-|
-|[MSDN 库中的代码分析](http://go.microsoft.com/fwlink/?LinkID=227580)|查找有关在 Visual Studio 旗舰版、Visual Studio 高级专业版和 Visual Studio 专业版中使用代码分析的详细信息。|
-|[MSDN 代码分析团队博客](http://go.microsoft.com/fwlink/?LinkId=227200)|查找详细信息，其中包括代码分析团队博客上的技术论文和示例。|
+|[MSDN 库中的代码分析](https://go.microsoft.com/fwlink/?LinkID=227580)|查找有关在 Visual Studio 旗舰版、Visual Studio 高级专业版和 Visual Studio 专业版中使用代码分析的详细信息。|
+|[MSDN 代码分析团队博客](https://go.microsoft.com/fwlink/?LinkId=227200)|查找详细信息，其中包括代码分析团队博客上的技术论文和示例。|

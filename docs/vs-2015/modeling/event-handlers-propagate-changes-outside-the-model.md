@@ -1,5 +1,5 @@
 ---
-title: 事件处理程序在模型外部传播更改 |Microsoft Docs
+title: Event Handlers Propagate Changes Outside the Model | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -12,39 +12,39 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5b22e120161a3fefb5688a71c8e4d7540b8bc66e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a23a8d28f336728789fe9cbbe38f965cc56763d7
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669690"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295516"
 ---
 # <a name="event-handlers-propagate-changes-outside-the-model"></a>事件处理程序在模型外部传播更改
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在可视化和建模 SDK 中，可以定义存储事件处理程序以将更改传播到存储区之外的资源，例如非存储变量、文件、其他存储中的模型或其他 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展。 存储事件处理程序在触发事件发生的事务结束后执行。 还会在撤消或重做操作中执行这些操作。 因此，与存储规则不同，存储事件对于更新存储区之外的值最为有用。 与 .NET 事件不同，存储事件处理程序已注册为侦听类：不必为每个实例注册单独的处理程序。 有关如何在不同方式之间进行选择以处理更改的详细信息，请参阅[响应和传播更改](../modeling/responding-to-and-propagating-changes.md)。
+In Visualization and Modeling SDK, you can define store event handlers to propagate changes to resources outside the store, such as non-store variables, files, models in other stores, or other [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] extensions. Store event handlers are executed after the end of the transaction in which the triggering event occurred. They are also executed in an Undo or Redo operation. Therefore, unlike store rules, store events are most useful for updating values that are outside the store. Unlike .NET events, store event handlers are registered to listen to a class: you do not have to register a separate handler for each instance. For more information about how to choose between different ways to handle changes, see [Responding to and Propagating Changes](../modeling/responding-to-and-propagating-changes.md).
 
- 图形表面和其他用户界面控件是可通过存储事件处理的外部资源的示例。
+ The graphical surface and other user interface controls are examples of external resources that can be handled by store events.
 
-### <a name="to-define-a-store-event"></a>定义存储事件
+### <a name="to-define-a-store-event"></a>To define a store event
 
-1. 选择要监视的事件类型。 有关完整列表，请查看 <xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory> 的属性。 每个属性都对应于一种事件类型。 最常使用的事件类型包括：
+1. Choose the type of event that you want to monitor. For a full list, look at the properties of <xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory>. Each property corresponds to a type of event. The most frequently used event types are:
 
-   - `ElementAdded` –当创建模型元素、关系链接、形状或连接符时触发。
+   - `ElementAdded` – triggered when a model element, relationship link, shape or connector is created.
 
-   - ElementPropertyChanged –在 `Normal` 域属性的值发生更改时触发。 仅当新值和旧值不相等时，才会触发事件。 事件不能应用于计算的存储属性和自定义存储属性。
+   - ElementPropertyChanged – triggered when the value of a `Normal` domain property is changed. The event is triggered only if the new and old values are not equal. The event cannot be applied to calculated and custom storage properties.
 
-        它不能应用于与关系链接对应的角色属性。 请改用 `ElementAdded` 来监视域关系。
+        It cannot be applied to the role properties that correspond to relationship links. Instead, use `ElementAdded` to monitor the domain relationship.
 
-   - `ElementDeleted` –在删除模型元素、关系、形状或连接符后触发。 你仍可访问元素的属性值，但它不与其他元素建立关系。
+   - `ElementDeleted` – triggered after a model element, relationship, shape or connector has been deleted. You can still access the property values of the element, but it will have no relationships to other elements.
 
-2. 将_yourdsl 可_**DocData**的分部类定义添加到**DslPackage**项目的单独代码文件中。
+2. Add a partial class definition for _YourDsl_**DocData** in a separate code file in the **DslPackage** project.
 
-3. 以方法的形式编写事件代码，如以下示例中所示。 它可以 `static`，除非你想要访问 `DocData`。
+3. Write the code of the event as a method, as in the following example. It can be `static`, unless you want to access `DocData`.
 
-4. 重写 `OnDocumentLoaded()` 以注册处理程序。 如果有多个处理程序，则可以将它们全部注册到同一位置。
+4. Override `OnDocumentLoaded()` to register the handler. If you have more than one handler, you can register them all in the same place.
 
-   注册代码的位置并不重要。 `DocView.LoadView()` 是一种替代位置。
+   The location of the registration code is not critical. `DocView.LoadView()` is an alternative location.
 
 ```
 using System;
@@ -93,12 +93,12 @@ namespace Company.MusicLib
 
 ```
 
-## <a name="using-events-to-make-undoable-adjustments-in-the-store"></a>使用事件在存储中进行可撤消的调整
- 存储事件通常不用于传播存储区中的更改，因为在提交事务后，事件处理程序会执行。 相反，应使用存储规则。 有关详细信息，请参阅[规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)。
+## <a name="using-events-to-make-undoable-adjustments-in-the-store"></a>Using Events to Make Undoable Adjustments in the Store
+ Store events are not normally used for propagating changes inside the store, because the event handler executes after the transaction is committed. Instead, you would use a store rule. For more information, see [Rules Propagate Changes Within the Model](../modeling/rules-propagate-changes-within-the-model.md).
 
- 但是，如果您希望用户能够从原始事件中单独撤消其他更新，则可以使用事件处理程序对存储区进行其他更新。 例如，假设小写字符是唱片集标题的常见约定。 您可以编写一个存储事件处理程序，用于在用户键入大写后将标题更正为小写。 但是，用户可以使用 "撤消" 命令取消您的更正，同时还原大写字符。 第二次撤消会删除用户的更改。
+ However, you could use an event handler to make additional updates to the store, if you want the user to be able to undo the additional updates separately from the original event. For example, suppose that lower case characters are the usual convention for album titles. You could write a store event handler that corrects the title to lower case after the user has typed it in upper case. But the user could use the Undo command to cancel your correction, restoring the upper case characters. A second Undo would remove the user’s change.
 
- 与此相反，如果你编写了一个用于执行相同操作的存储规则，则用户的更改和更正将在同一事务中，因此用户无法在不丢失原始更改的情况下撤消调整。
+ By contrast, if you wrote a store rule to do the same thing, the user’s change and your correction would be in the same transaction, so that the user could not undo the adjustment without losing the original change.
 
 ```
 
@@ -164,30 +164,30 @@ private static void AlbumTitleAdjuster(object sender,
 
 ```
 
- 如果编写更新存储的事件：
+ If you write an event that updates the store:
 
-- 使用 `store.InUndoRedoOrRollback` 避免在撤消中更改模型元素。 事务管理器会将存储中的所有内容设置回其原始状态。
+- Use `store.InUndoRedoOrRollback` to avoid making changes to model elements in Undo. The transaction manager will set everything in the store back to its original state.
 
-- 使用 `store.InSerializationTransaction` 可以避免在从文件中加载模型时进行更改。
+- Use `store.InSerializationTransaction` to avoid making changes while the model is being loaded from file.
 
-- 更改将导致触发更多事件。 请确保避免出现无限循环。
+- Your changes will cause further events to be triggered. Make sure that you avoid an infinite loop.
 
-## <a name="store-event-types"></a>存储事件类型
- 每个事件类型对应于 EventManagerDirectory 中的一个集合。 你可以随时添加或删除事件处理程序，但在加载文档时通常会添加它们。
+## <a name="store-event-types"></a>Store Event types
+ Each event type corresponds to a collection in Store.EventManagerDirectory. You can add or remove event handlers at any time, but it is usual to add them when the document is loaded.
 
-|`EventManagerDirectory` 属性名称|执行时间|
+|`EventManagerDirectory` Property name|Executed when|
 |-------------------------------------------|-------------------|
-|ElementAdded|将创建域类、域关系、形状、连接符或关系图的实例。|
-|ElementDeleted|模型元素已从存储的元素目录中移除，不再是任何关系的源或目标。 实际不会从内存中删除该元素，但会在将来撤消时保留。|
-|ElementEventsBegun|在外部事务结束时调用。|
-|ElementEventsEnded|在处理完所有其他事件后调用。|
-|ElementMoved|模型元素已从一个存储区分区移到另一个。<br /><br /> 这与关系图上形状的位置无关。|
-|ElementPropertyChanged|域属性的值已更改。 仅当旧值和新值不相等时，才执行此值。|
-|RolePlayerChanged|关系的两个角色（结束）之一引用新元素。|
-|RolePlayerOrderChanged|在多重性大于1的角色中，链接序列已更改。|
+|ElementAdded|An instance of a domain class, domain relationship, shape, connector or diagram is created.|
+|ElementDeleted|A model element has been removed from the store’s element directory and is no longer the source or target of any relationship. The element is not actually deleted from memory, but is retained in case of a future Undo.|
+|ElementEventsBegun|Invoked at the end of an outer transaction.|
+|ElementEventsEnded|Invoked when all other events have been processed.|
+|ElementMoved|A model element has been moved from one store partition to another.<br /><br /> This is not related to the location of a shape on the diagram.|
+|ElementPropertyChanged|The value of a domain property has changed. This is executed only if the old and new values are unequal.|
+|RolePlayerChanged|One of the two roles (ends) of a relationship references a new element.|
+|RolePlayerOrderChanged|In a role with multiplicity greater than 1, the sequence of links has changed.|
 |TransactionBeginning||
 |TransactionCommitted||
 |TransactionRolledBack||
 
 ## <a name="see-also"></a>请参阅
- [响应和传播更改](../modeling/responding-to-and-propagating-changes.md)[示例代码：线路图](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
+ [响应并传播更改](../modeling/responding-to-and-propagating-changes.md)

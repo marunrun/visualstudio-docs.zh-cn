@@ -1,5 +1,5 @@
 ---
-title: 如何：将扩展性项目迁移到 Visual Studio 2015 |Microsoft Docs
+title: 'How to: Migrate Extensibility Projects to Visual Studio 2015 | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -10,48 +10,48 @@ ms.assetid: 22491cdc-8f04-4e1c-8eb4-ff33798ec792
 caps.latest.revision: 26
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 41bf80c8ae00aa22666750de7b4b23df981c8465
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 46b48370847cbb2cf8b171342aff9baf38c40a22
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435924"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295553"
 ---
-# <a name="how-to-migrate-extensibility-projects-to-visual-studio-2015"></a>如何：将扩展性项目迁移到 Visual Studio 2015
+# <a name="how-to-migrate-extensibility-projects-to-visual-studio-2015"></a>How to: Migrate Extensibility Projects to Visual Studio 2015
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-下面介绍了如何升级您的扩展插件。  
+Here’s how to upgrade your extension.  
   
 > [!IMPORTANT]
-> 如果你想要维护针对早期版本的 Visual Studio 扩展解决方案的版本，请务必在升级之前创建一个副本。 它可能很难返回到其以前的状态的升级后的版本。  
+> If you intend to maintain a version of your extension solution for an earlier version of Visual Studio, be sure to make a copy before you upgrade it. It may be difficult to return the upgraded version to its previous state.  
   
-#### <a name="to-upgrade-an-extensibility-solution"></a>若要升级的可扩展性解决方案  
+#### <a name="to-upgrade-an-extensibility-solution"></a>To upgrade an extensibility solution  
   
-1. 你想要升级，请打开新的版本中使用的副本。 将建议升级是不可逆。  
+1. Using the copy you want to upgrade, open it in the new version. You will be advised that the upgrade is not reversible.  
   
-2. 在升级完成后，更改到新版本的 devenv.exe 的外部程序的路径。 右键单击项目节点中的**解决方案资源管理器**，然后选择**属性**。 在中**调试**选项卡上，找到由文本框**启动外部程序**和 devenv.exe 的路径更改为 Visual Studio 2015 路径应如下所示：  
+2. After the upgrade completes, change the path of the external program to the new version of devenv.exe. Right-click the project node in the **Solution Explorer**, then choose **Properties**. In the **Debug** tab, find the textbox by **Start external program** and change the path of devenv.exe to the Visual Studio 2015 path, which should look something like this:  
   
      **%ProgramFiles%\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe**  
   
-3. 添加对 Microsoft.VisualStudio.Shell.14.0.dll 的引用。 (右键单击项目节点中的**解决方案资源管理器**，然后选择**添加 / 引用**。 选择**扩展**选项卡，然后检查**microsoft.visualstudio.shell.14.0 的引用**。)  
+3. Add a reference to Microsoft.VisualStudio.Shell.14.0.dll. (Right-click the project node in the **Solution Explorer** and then choose **Add / Reference**. Select the **Extensions** tab and then check **Microsoft.VisualStudio.Shell.14.0**.)  
   
-4. 生成解决方案。 将生成的文件部署到：  
+4. 生成解决方案。 The built files are deployed to:  
   
-     **%LOCALAPPDATA%\Microsoft\VisualStudio.14.0Exp\Extensions\\< 创作名称\>\\< 项目名称\>\\< 项目版本\>\\**。  
+     **%LOCALAPPDATA%\Microsoft\VisualStudio.14.0Exp\Extensions\\<Author Name\>\\<Project Name\>\\<Project Version\>\\** .  
   
-#### <a name="to-update-an-extensibility-project-to-nuget-vs-sdk-reference-assemblies"></a>若要更新到 NuGet VS SDK 引用程序集的可扩展性项目  
+#### <a name="to-update-an-extensibility-project-to-nuget-vs-sdk-reference-assemblies"></a>To update an extensibility project to NuGet VS SDK reference assemblies  
   
-1. 确定你的项目需要的 VS SDK 引用程序集。  在中**解决方案资源管理器**，展开项目的**引用**节点和检查列表中的项目引用。  VS SDK 的引用程序集将具有前缀**Microsoft.VisualStudio**名称中 (例如：Microsoft.VisualStudio.Shell.14.0).  
+1. Determine the VS SDK reference assemblies your project needs.  In **Solution Explorer**, expand the project’s **References** node and review the list of project references.  VS SDK references assemblies will have the prefix **Microsoft.VisualStudio** in the name (for example: Microsoft.VisualStudio.Shell.14.0).  
   
-2. 通过选择从项目删除 VS SDK 引用程序集，请右键单击并**删除**。  
+2. Remove the VS SDK reference assemblies from the project by selecting them, right click and **Remove**.  
   
-3. 添加 VS SDK 引用程序集的 NuGet 的版本。  在仍处于**解决方案资源管理器引用**节点，打开**管理 NuGet 包...** 对话框。  如果你想要了解有关此对话框的详细信息，请参阅[使用对话框管理 NuGet 程序包](http://docs.nuget.org/Consume/Package-Manager-Dialog)。 VS SDK 引用程序集上发布[nuget.org](http://www.nuget.org)通过[VisualStudioExtensibility](http://www.nuget.org/profiles/VisualStudioExtensibility)。  
+3. Add the NuGet versions of the VS SDK reference assemblies.  While still in the **Solution Explorer References** node, open the **Manage NuGet Packages…** dialog.  If you want to learn more about this dialog, see [Manage NuGet Packages Using the Dialog](https://docs.microsoft.com/nuget/consume-packages/install-use-packages-visual-studio). The VS SDK reference assemblies are published on [nuget.org](https://www.nuget.org/) by [VisualStudioExtensibility](https://www.nuget.org/profiles/VisualStudioExtensibility).  
   
-4. 使用**nuget.org**作为你**包源**，搜索 NuGet 包名称相匹配的所需的引用程序集 (例如：Microsoft.visualstudio.shell.14.0 的引用） 并将其安装在项目中。  NuGet 可以添加多个引用程序集，以满足初始程序集的依赖项。  
+4. Using **nuget.org** as your **Package Source**, search for the NuGet package name which matches the desired reference assembly (for example: Microsoft.VisualStudio.Shell.14.0) and install it in your project.  NuGet may add multiple reference assemblies in order to satisfy the initial assembly’s dependencies.  
   
-     如果您愿意，您可以通过安装 VS SDK 一次性添加所有 VS SDK 引用程序集[元包](http://www.nuget.org/packages/VSSDK_Reference_Assemblies)。  
+     If you prefer, you can add all the VS SDK reference assemblies at once by installing the VS SDK [Meta package](https://www.nuget.org/packages/VSSDK_Reference_Assemblies).  
   
-5. 此外可以切换到使用 VS SDK 生成工具的 NuGet 版本。 此 NuGet 包[Microsoft.VSSDK.BuildTools](http://www.nuget.org/packages/Microsoft.VSSDK.BuildTools)和一次添加到你的项目将包含必要的工具和目标文件，以使您可以在计算机上构建扩展性项目，而无需安装 VS SDK。  
+5. You can also switch to using the NuGet version of the VS SDK build tools. This NuGet package is [Microsoft.VSSDK.BuildTools](https://www.nuget.org/packages/Microsoft.VSSDK.BuildTools) and once added to your project will include the necessary tools and target files to let you build your extensibility project on a computer without the VS SDK installed.  
   
 > [!NOTE]
-> 它不是所需更新现有扩展性项目以使用 NuGet 引用程序集和工具。  他们可以继续使用引用程序集和与 VS SDK 一起安装的工具进行生成。
+> It is not required that you update your existing extensibility projects to use NuGet reference assemblies and tools.  They can continue to build using reference assemblies and tools installed with the VS SDK.

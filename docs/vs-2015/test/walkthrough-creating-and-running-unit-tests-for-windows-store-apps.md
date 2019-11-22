@@ -13,12 +13,12 @@ ms.assetid: dd3e8a6a-b366-433e-a409-b9a9b89da89a
 caps.latest.revision: 23
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5999edf14692e5ad51f56cb7989ea07eb0f11f5c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 60e7ddd7c535d99abcb64d4adde97157b117f3ed
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657128"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301383"
 ---
 # <a name="walkthrough-creating-and-running-unit-tests-for-windows-store-apps"></a>演练：为 Windows 应用商店应用程序创建和运行单元测试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "72657128"
 Visual Studio 支持对托管的 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 应用进行单元测试，并包括 Visual C#、Visual Basic 和 Visual C++ 的单元测试库模板。
 
 > [!TIP]
-> 有关开发 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 应用的详细信息，请参阅 [Windows 应用商店应用入门](http://go.microsoft.com/fwlink/?LinkID=241410)。
+> 有关开发 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 应用的详细信息，请参阅 [Windows 应用商店应用入门](https://go.microsoft.com/fwlink/?LinkID=241410)。
 
  Visual Studio 提供以下单元测试功能：
 
@@ -64,11 +64,11 @@ Visual Studio 支持对托管的 [!INCLUDE[win8_appname_long](../includes/win8-a
 
 6. 保持选中 **“创建解决方案的目录”** 选项并选择 **“确定”** 按钮。
 
-     ![定制的单元测试库](../test/media/unit-test-win8-1.png "Unit_Test_Win8_1")
+     ![Tailored Unit Test Library](../test/media/unit-test-win8-1.png "Unit_Test_Win8_1")
 
      “解决方案资源管理器”中将填充新的 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)]单元测试项目，代码编辑器中显示标题为“UnitTest1”的默认单元测试。
 
-     ![新定制的单元测试项目](../test/media/unit-test-win8-unittestexplorer-newprojectcreated.png "Unit_Test_Win8_UnitTestExplorer_NewProjectCreated")
+     ![New tailored unit test project](../test/media/unit-test-win8-unittestexplorer-newprojectcreated.png "Unit_Test_Win8_UnitTestExplorer_NewProjectCreated")
 
 ## <a name="CreateAndRunUnitTestWin8Tailored_Manifest"></a>编辑单元测试项目清单
  可能需要编辑单元测试项目的清单以提供所需的功能，才能运行应用程序。
@@ -88,7 +88,7 @@ Visual Studio 支持对托管的 [!INCLUDE[win8_appname_long](../includes/win8-a
 
      有关详细信息，请参阅 [Configure a Windows 8.1 app package by using the manifest designer](https://msdn.microsoft.com/library/24c58b7f-9c6d-41c3-b385-c1e8497d5b2d)（使用清单设计器配置 Windows 8.1 应用包）。
 
-     ![单元测试清单](../test/media/unit-test-win8.png "Unit_Test_Win8_")
+     ![Unit Test Manifest](../test/media/unit-test-win8.png "Unit_Test_Win8_")
 
 ## <a name="CreateAndRunUnitTestWin8Tailored_Code"></a>单元测试编码
 
@@ -96,7 +96,7 @@ Visual Studio 支持对托管的 [!INCLUDE[win8_appname_long](../includes/win8-a
 
 1. 在“代码编辑器”中，编辑单元测试并添加测试所需的断言和逻辑。
 
-     有关详细信息，请参阅 MSDN Library 中的 [使用 Assert 类](http://go.microsoft.com/fwlink/?LinkID=224991) 。
+     有关详细信息，请参阅 MSDN Library 中的 [使用 Assert 类](https://go.microsoft.com/fwlink/?LinkID=224991) 。
 
 ## <a name="CreateAndRunUnitTestWin8Tailored_Run"></a> 运行单元测试
 
@@ -123,29 +123,29 @@ Visual Studio 支持对托管的 [!INCLUDE[win8_appname_long](../includes/win8-a
 
 4. 选择 **“全部运行”** 。
 
-     ![单元测试资源&#45;管理器运行单元测试](../test/media/unit-test-win8-unittestexplorer-contextmenurun.png "Unit_Test_Win8_UnitTestExplorer_ContextMenuRun")
+     ![Unit Test Explorer &#45; run unit test](../test/media/unit-test-win8-unittestexplorer-contextmenurun.png "Unit_Test_Win8_UnitTestExplorer_ContextMenuRun")
 
     > [!TIP]
     > 可以选择资源管理器中列出的一个或多个单元测试，然后右击并选择 **“运行选定测试”** 。
     >
     >  此外，你也可以选择 **“调试所选测试”** 、 **“打开测试”** ，并使用 **“属性”** 选项。
     >
-    >  ![单元测试资源&#45;管理器单向测试上下文菜单](../test/media/unit-test-win8-unittestexplorer-contextmenu.png "Unit_Test_Win8_UnitTestExplorer_ContextMenu")
+    >  ![Unit Test Explorer &#45; uni test context menu](../test/media/unit-test-win8-unittestexplorer-contextmenu.png "Unit_Test_Win8_UnitTestExplorer_ContextMenu")
 
      单元测试将运行。 完成后，“测试资源管理器”会显示测试状态、运行时间并提供指向源的链接。
 
-     ![单元测试资源&#45;管理器测试已完成](../test/media/unit-test-win8-unittestexplorer-done.png "Unit_Test_Win8_UnitTestExplorer_Done")
+     ![Unit Test Explorer &#45; test completed](../test/media/unit-test-win8-unittestexplorer-done.png "Unit_Test_Win8_UnitTestExplorer_Done")
 
 ## <a name="external-resources"></a>外部资源
 
 ### <a name="videos"></a>视频
- [第 9 频道：对使用 XAML 编写的 Windows 应用商店应用进行单元测试](http://go.microsoft.com/fwlink/?LinkId=226285)
+ [第 9 频道：对使用 XAML 编写的 Windows 应用商店应用进行单元测试](https://go.microsoft.com/fwlink/?LinkId=226285)
 
 ### <a name="forums"></a>论坛
- [Visual Studio 单元测试](http://go.microsoft.com/fwlink/?LinkId=224477)
+ [Visual Studio 单元测试](https://go.microsoft.com/fwlink/?LinkId=224477)
 
 ### <a name="msdn-library"></a>MSDN Library
- [MSDN Library - 为现有代码创建和运行单元测试 (Visual Studio 2010)](http://go.microsoft.com/fwlink/?LinkID=223683)
+ [MSDN Library - 为现有代码创建和运行单元测试 (Visual Studio 2010)](https://go.microsoft.com/fwlink/?LinkID=223683)
 
 ## <a name="see-also"></a>请参阅
- 使用[Visual Studio](../test/testing-store-apps-with-visual-studio.md) [生成和测试应用商店应用使用 Team Foundation build 生成和测试 Windows 应用商店应用](https://msdn.microsoft.com/library/d0ca17bb-deae-4f3d-a18d-1a99bebceaa9)
+ [Testing Store apps with Visual Studio](../test/testing-store-apps-with-visual-studio.md) [Build and test a Windows Store app using Team Foundation Build](https://msdn.microsoft.com/library/d0ca17bb-deae-4f3d-a18d-1a99bebceaa9)

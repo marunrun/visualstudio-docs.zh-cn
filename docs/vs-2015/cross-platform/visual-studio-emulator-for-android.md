@@ -8,12 +8,12 @@ ms.assetid: 80f0104f-a4db-44dd-bd55-37bb67776c62
 caps.latest.revision: 7
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: a33d7928e6e2555f0cfd484059b062ae801d8633
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: af3dd595b786c57983e44982fa2eb8b9afa2959a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63442091"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300772"
 ---
 # <a name="visual-studio-emulator-for-android"></a>适用于 Android 的 Visual Studio 仿真程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "63442091"
   
  你可以为每个 Android 平台、屏幕分辨率和适用于 Android 的 Visual Studio 仿真程序支持的其他硬件属性，在唯一设备配置文件上测试应用。  
   
- 本主题包含以下各节：  
+ 本主题包含以下各节。  
   
 - [安装和卸载](#Installing)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63442091"
 ## <a name="Requirements"></a> 系统需求和向后兼容性  
  有关硬件、软件和适用于 Android Visual Studio 仿真程序的配置需求的重要信息，请参阅以下主题。  
   
-- [System Requirements for the Visual Studio Emulator for Android](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md)  
+- [适用于 Android 的 Visual Studio 模拟器的系统要求](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md)  
   
   适用于 Android 的 Visual Studio 仿真程序需要 Visual Studio 2015；它不与 Visual Studio 的早期版本向后兼容。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "63442091"
  安装想要设为目标的配置文件集后，可按绿色“播放”按钮直接从管理器启用这些新的配置文件。 它们还将在任何 Visual Studio 跨平台移动项目类型中的调试目标下拉列表菜单中显示。  
   
 ## <a name="FeaturesTest"></a> 可在仿真程序中测试的功能  
- 有关可在仿真程序中测试的功能的详细信息，请参阅此[文档](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/12/introducing-visual-studio-s-emulator-for-android.aspx)。  
+ 有关可在仿真程序中测试的功能的详细信息，请参阅此[文档](https://devblogs.microsoft.com/devops/introducing-visual-studios-emulator-for-android/)。  
   
 ## <a name="FeaturesNonTest"></a> 无法在仿真器中测试的功能  
  下表描述无法在仿真程序中测试的 Android 平台的功能。 必须在物理设备上测试这些功能。  
@@ -106,10 +106,10 @@ ms.locfileid: "63442091"
 ## <a name="Support"></a> 支持资源  
  如果你的主机计算机满足系统要求，但你遇到本疑难解答指南中未涉及的问题：  
   
-- 使用 [Android 仿真程序](http://stackoverflow.com/questions/tagged/android-emulator) 和 Visual Studio 标记询问有关 StackOverflow 的问题。  
+- 使用 [Android 仿真程序](https://stackoverflow.com/questions/tagged/android-emulator) 和 Visual Studio 标记询问有关 StackOverflow 的问题。  
   
 - 在 Visual Studio 或在仿真程序管理器中使用“发送笑脸”工具来报告问题。  
   
 ## <a name="see-also"></a>请参阅  
  [适用于 Android 的 Visual Studio 模拟程序的系统要求](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md)   
- [Troubleshooting the Visual Studio Emulator for Android](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)
+ [适用于 Android 的 Visual Studio 模拟器疑难解答](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)

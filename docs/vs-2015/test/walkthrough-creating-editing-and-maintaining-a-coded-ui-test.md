@@ -8,12 +8,12 @@ ms.assetid: f7c25ba7-5c9c-455b-9242-701cda56f90c
 caps.latest.revision: 43
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2891a01590f2970fc2e68ea7bc2d57506b12d26b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4b4d3e7c597766c3b416a7cb637cf0e5e99f71d5
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657109"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302062"
 ---
 # <a name="walkthrough-creating-editing-and-maintaining-a-coded-ui-test"></a>演练：创建、编辑和维护编码的 UI 测试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "72657109"
 
 12. 选择 Checkbox 控件。 在“属性”窗口中，将“名称”属性的值从 \<无名称> 更改为 checkBox1，然后清除“IsEnabled”属性。
 
-     ![简单的 WPF 应用程序](../test/media/codedui-wpfapp.png "CodedUI_WPFApp")
+     ![Simple WPF Application](../test/media/codedui-wpfapp.png "CodedUI_WPFApp")
 
 13. 双击按钮控件，以添加单击事件处理程序。
 
@@ -147,11 +147,11 @@ ms.locfileid: "72657109"
 
 8. 在“UIMap - 编码的 UI 测试生成器”中选择“开始记录”。
 
-     ![开始记录](../test/media/cuit-builder-record.png "CUIT_Builder_Record")
+     ![Start recording](../test/media/cuit-builder-record.png "CUIT_Builder_Record")
 
      如果需要，你可以暂停记录（例如，如果你必须处理传入的邮件）。
 
-     ![暂停录制](../test/media/cuit.png "CUIT")
+     ![Pause the recording](../test/media/cuit.png "CUIT_")
 
     > [!WARNING]
     > 将录制在桌面上执行的所有操作。 如果你正在执行可能会导致敏感数据被包括在录制中的操作，则暂停录制。
@@ -369,22 +369,22 @@ ms.locfileid: "72657109"
 ## <a name="external-resources"></a>外部资源
 
 ### <a name="videos"></a>视频
- ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[编码的 UI 测试-DeepDive-第1集-GettingStarted](http://go.microsoft.com/fwlink/?LinkID=230573)
+ ![link to video](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode1-GettingStarted](https://go.microsoft.com/fwlink/?LinkID=230573)
 
- ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[编码的 UI 测试-DeepDive-第2集-维护和调试](http://go.microsoft.com/fwlink/?LinkID=230574)
+ ![link to video](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode2-MaintainenceAndDebugging](https://go.microsoft.com/fwlink/?LinkID=230574)
 
- ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[编码的 UI 测试-DeepDive-第-3](http://go.microsoft.com/fwlink/?LinkID=230575)
+ ![link to video](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode3-HandCoding](https://go.microsoft.com/fwlink/?LinkID=230575)
 
 ### <a name="hands-on-lab"></a>动手实验
- [MSDN 虚拟实验室：使用 Visual Studio 2010 创建编码的 UI 测试的简介](http://go.microsoft.com/fwlink/?LinkID=22508)
+ [MSDN 虚拟实验室：使用 Visual Studio 2010 创建编码的 UI 测试的简介](https://go.microsoft.com/fwlink/?LinkID=22508)
 
 ### <a name="faq"></a>FAQ
- [编码的 UI 测试常见问题 - 1](http://go.microsoft.com/fwlink/?LinkID=230576)
+ [编码的 UI 测试常见问题 - 1](https://go.microsoft.com/fwlink/?LinkID=230576)
 
- [编码的 UI 测试常见问题 - 2](http://go.microsoft.com/fwlink/?LinkID=230578)
+ [编码的 UI 测试常见问题 - 2](https://go.microsoft.com/fwlink/?LinkID=230578)
 
 ### <a name="forum"></a>论坛
- [Visual Studio UI 自动测试（包括 CodedUI）](http://go.microsoft.com/fwlink/?LinkID=224497)
+ [Visual Studio UI 自动测试（包括 CodedUI）](https://go.microsoft.com/fwlink/?LinkID=224497)
 
 ## <a name="see-also"></a>请参阅
- [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)[入门使用 WPF 设计器](https://msdn.microsoft.com/18e61d03-b96a-4058-a166-8ec6b3f6116b)[支持编码的 Ui 测试的配置和平台，以及](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)[使用编码的 Ui 测试编辑器编辑编码的 ui 测试](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)的操作录制
+ [Use UI Automation To Test Your Code](../test/use-ui-automation-to-test-your-code.md) [Getting Started with the WPF Designer](https://msdn.microsoft.com/18e61d03-b96a-4058-a166-8ec6b3f6116b) [Supported Configurations and Platforms for Coded UI Tests and Action Recordings](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md) [Editing Coded UI Tests Using the Coded UI Test Editor](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)

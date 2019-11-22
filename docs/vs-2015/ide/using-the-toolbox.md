@@ -27,12 +27,12 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 49f5d1d0cef7ec4d5a6f8ab61c785ea01f77d24b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ba8a37ac9e049455ffe19314dee0e228c3c14c97
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652658"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295605"
 ---
 # <a name="using-the-toolbox"></a>使用工具箱
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -67,4 +67,4 @@ ms.locfileid: "72652658"
 - 下移 - 将所选项下移。
 
 ## <a name="creating-and-distributing-custom-toolbox-controls"></a>创建和分布自定义工具箱控件
- 可在 Visual Basic 或 Visual C# 中创建自定义工具箱控件，可以从创建基于 [Windows Presentation Foundation](../extensibility/creating-a-wpf-toolbox-control.md) 或 [Windows 窗体](../misc/how-to-create-a-toolbox-control-that-uses-windows-forms.md)的项目模板开始。 然后，可使用[工具箱控件安装程序](http://download.microsoft.com/download/8/3/6/836657BD-9CCB-4ED4-B9D2-FB769473B284/TCI_whitepaper.docx)将控件分发给团队成员或将它发布到 Web 上。
+ 可在 Visual Basic 或 Visual C# 中创建自定义工具箱控件，可以从创建基于 [Windows Presentation Foundation](../extensibility/creating-a-wpf-toolbox-control.md) 或 [Windows 窗体](../misc/how-to-create-a-toolbox-control-that-uses-windows-forms.md)的项目模板开始。 然后，可使用[工具箱控件安装程序](http://www.unicode.org/versions/Unicode5.2.0/ch04.pdf)将控件分发给团队成员或将它发布到 Web 上。

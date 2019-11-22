@@ -9,12 +9,12 @@ caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: d85b71c2ed54a8ab8bc85c93ce61e3ed274d86e0
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: eed389a3847145a0f37eb3141526a38e4374d368
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65673823"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297910"
 ---
 # <a name="network-usage"></a>网络使用情况
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -24,14 +24,14 @@ Visual Studio“网络”诊断工具用于收集有关使用 [Windows.Web.Http 
  “网络”工具仅支持 Windows 通用平台应用。 目前不支持其他平台。  
   
 > [!NOTE]
-> 有关该网络工具的更完整说明，请参阅 [Visual Studio 的网络工具简介](http://blogs.msdn.com/b/visualstudio/archive/2015/05/04/introducing-visual-studio-s-network-tool.aspx)。  
+> 有关该网络工具的更完整说明，请参阅 [Visual Studio 的网络工具简介](https://devblogs.microsoft.com/visualstudio/?m=20155)。  
   
 ## <a name="collecting-network-tool-data"></a>收集网络工具数据  
  你应在 Visual Studio 计算机上打开的 Visual Studio 项目中运行“网络”工具。  
   
 1. 在 Visual Studio 中打开项目。  
   
-2. 在菜单上，单击“调试/性能探查器...”。选择“网络”，然后选择“启动”。  
+2. On the  menu, click **Debug / Performance Profiler...** . Choose **Network**, and then choose **Start**.  
   
 3. 网络工具将开始收集应用的 HTTP 流量。  
   
@@ -52,7 +52,7 @@ Visual Studio“网络”诊断工具用于收集有关使用 [Windows.Web.Http 
   
  “网络”详细信息视图显示了关于摘要视图中所选网络操作的详细信息。  
   
- ![网络工具详细信息窗格中](../profiling/media/network-detailsviewpane.png "NETWORK_DetailsViewPane")  
+ ![“网络工具详细信息”窗格](../profiling/media/network-detailsviewpane.png "NETWORK_DetailsViewPane")  
   
 |||  
 |-|-|  
@@ -74,6 +74,6 @@ Visual Studio“网络”诊断工具用于收集有关使用 [Windows.Web.Http 
 3. 响应整齐打印按钮（位于“正文”选项卡内）可通过提高内容的可读性帮助你分析 JSON、XML、HTML、CSS、JavaScript 和 TypeScript 响应负载。  
   
 ## <a name="see-also"></a>请参阅  
- [运行分析工具而不进行调试](https://msdn.microsoft.com/library/e97ce1a4-62d6-4b8e-a2f7-61576437ff01)   
- [Visual Studio 博客：引入了 Visual Studio 的网络检查器](http://go.microsoft.com/fwlink/?LinkId=535022)   
- [第 9 频道视频：VS 诊断工具 – 新网络 Profiler](http://channel9.msdn.com/Series/ConnectOn-Demand/206)
+ [Run profiling tools without debugging](https://msdn.microsoft.com/library/e97ce1a4-62d6-4b8e-a2f7-61576437ff01)   
+ [Visual Studio 博客：Visual Studio 网络检查器简介](https://go.microsoft.com/fwlink/?LinkId=535022)   
+ [第 9 频道视频：VS 诊断工具 – 新的网络探查器](https://channel9.msdn.com/Series/ConnectOn-Demand/206)

@@ -8,102 +8,102 @@ ms.assetid: 0e384ea1-4d9e-4307-8884-6e183900732c
 caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 257c5944ee1939849c4163fef518abf513183998
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0330ef80fc1127893590ef8d326cb5b8e0cf0160
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68176957"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74291607"
 ---
-# <a name="colors-and-styling-for-visual-studio"></a>Visual Studio 的颜色和样式
+# <a name="colors-and-styling-for-visual-studio"></a>Colors and Styling for Visual Studio
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-## <a name="using-color-in-visual-studio"></a>使用 Visual Studio 中的颜色
- 在 Visual Studio 中，颜色是主要用作通信工具，而不仅仅是作为修饰。 按最小方式使用颜色和保留的情况下，您希望对：
+## <a name="using-color-in-visual-studio"></a>Using color in Visual Studio
+ In Visual Studio, color is used primarily as a communication tool, not just as decoration. Use color minimally and reserve it for situations where you want to:
 
-- 通信含义或隶属关系 （例如，平台或语言修饰符）
+- Communicate meaning or affiliation (for example, platform or language modifiers)
 
-- 吸引注意力 （例如，指示状态更改）
+- Attract attention (for example, indicating a status change)
 
-- 提高可读性并提供用于导航 UI 的特征点
+- Improve readability and provide landmarks for navigating the UI
 
-- 提高性能
+- Increase desirability
 
-  将颜色分配到 Visual Studio 中的 UI 元素的存在多个选项。 有时可能很难进行图的选项，您就应该使用，或如何正确使用它。 本主题将帮助你：
+  Several options exist for assigning colors to UI elements in Visual Studio. Sometimes it can be difficult to figure out which option you’re supposed to use, or how to use it correctly. This topic will help you:
 
-1. 了解不同的服务和系统用于在 Visual Studio 中定义的颜色。
+1. Understand the different services and systems used to define colors in Visual Studio.
 
-2. 选择给定元素的正确选项。
+2. Select the correct option for a given element.
 
-3. 正确地使用你选择的选项。
+3. Correctly use the option you have chosen.
 
-   **重要：** 永远不会进行硬编码十六进制、 RGB 或到 UI 元素的系统颜色。 使用这些服务可以灵活地优化 hue。 此外，而无需服务，你将不能充分利用的主题切换功能[The VSColor Service](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_TheVSColorService)。
+   **IMPORTANT:** Never hardcode hex, RGB, or system colors to your UI elements. Using the services allows for flexibility in tuning hue. Additionally, without the service, you will not be able to take advantage of the theme-switching capabilities of the [The VSColor Service](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_TheVSColorService).
 
-### <a name="methods-for-assigning-color-to-visual-studio-interface-elements"></a>将颜色分配到 Visual Studio 界面元素的方法
- 选择最适合你的 UI 元素的方法。
+### <a name="methods-for-assigning-color-to-visual-studio-interface-elements"></a>Methods for assigning color to Visual Studio interface elements
+ Choose the method best suited to your UI elements.
 
-|你的 UI|方法|它们是什么？|
+|Your UI|方法|What are they?|
 |-------------|------------|--------------------|
-|有嵌入或独立的对话框。|**系统颜色**|允许的颜色和外观的 UI 元素，如定义公共对话框控件的操作系统的系统名称。|
-|具有你想要与整体的 VS 环境保持一致的自定义 UI 和具有匹配的类别和语义含义的共享标记的 UI 元素。|**公共共享的颜色**|现有的预定义的颜色标记名称的特定 UI 元素|
-|你有单个功能组并且没有类似的元素没有共享的颜色。|**自定义颜色**|特定于区域且不应与其他 UI，共享的颜色标记名称|
-|你想要允许最终用户将自定义 UI 或内容 （例如，文本编辑器或专门的设计器窗口）。|**最终用户自定义**<br /><br /> **(工具 > 选项对话框)**|定义的"字体和颜色"页中设置**工具 > 选项**对话框或特定于一个用户界面功能的专用的页面。|
+|You have embedded or standalone dialog boxes.|**System colors**|System names that allow the operating system to define the color and appearance of the UI elements, such as for common dialog controls.|
+|You have custom UI that you want to be consistent with the overall VS environment and you have UI elements that match the category and semantic meaning of the shared tokens.|**Common shared colors**|Existing predefined color token names for specific UI elements|
+|You have an individual feature or group of features and there is no shared color for similar elements.|**Custom colors**|Color token names that are specific to an area and not meant to be shared with other UI|
+|You want to allow the end user to customize UI or content (for example, for text editors or specialized designer windows).|**End-user customization**<br /><br /> **(Tools > Options dialog)**|Settings defined in the “Fonts and Colors” page of the **Tools > Options** dialog or a specialized page specific to one UI feature.|
 
-### <a name="visual-studio-themes"></a>Visual Studio 主题
- Visual Studio 提供三种不同的颜色主题： 浅色、 深色，和蓝色。 它还检测高对比度模式，这是系统范围内颜色主题用于可访问性。
+### <a name="visual-studio-themes"></a>Visual Studio themes
+ Visual Studio features three different color themes: light, dark, and blue . It also detects High Contrast mode, which is a system-wide color theme designed for accessibility.
 
- 用户会提示您选择在其首次使用 Visual Studio 的过程主题，可以通过转到更高版本切换主题**工具 > 选项 > 环境 > 常规**并从"颜色主题"下拉列表菜单中选择新的主题。
+ Users are prompted to select a theme during their first use of Visual Studio and are able to switch themes later by going to **Tools > Options > Environment > General** and choosing a new theme from the “color theme” dropdown menu.
 
- 用户还可以使用控制面板以其整个系统切换到多个高对比度主题之一。 如果用户选择高对比度主题，然后 Visual Studio 颜色主题选择器不会再影响颜色在 Visual Studio 中，虽然任何主题更改为在用户退出高对比度模式下时保存。 有关高对比度模式的详细信息，请参阅[选择高对比度颜色](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ChoosingHighContrastColors)。
+ Users can also use Control Panel to switch their entire systems into one of several High Contrast themes. If a user selects a High Contrast theme, then the Visual Studio color theme selector no longer affects colors in Visual Studio, although any theme changes are saved for when the user exits High Contrast mode. For more information about High Contrast mode, see [Choosing High Contrast colors](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ChoosingHighContrastColors).
 
-### <a name="the-vscolor-service"></a>VSColor service
- Visual Studio 提供了称为 VSColor 服务，可用于将 UI 元素的颜色值绑定到命名条目，其中包含每个 Visual Studio 主题的颜色值的环境颜色服务。 这可确保您的颜色将自动更改，以反映当前用户选择了主题或系统高对比度模式。 对服务的使用意味着在一个位置，处理所有与主题相关的颜色更改的实现，如果使用的从服务的公共共享的颜色，UI 将自动反映在 Visual Studio 的未来版本中的新主题。
+### <a name="the-vscolor-service"></a>The VSColor service
+ Visual Studio provides an environment color service, known as the VSColor service, which allows you to bind the color values of your UI elements to a named entry containing color values for each Visual Studio theme. This ensures that your colors will automatically change to reflect the current user-selected theme or system High Contrast mode. Use of the service means that the implementation of all theme-related color changes is handled in one place, and if you are using common shared colors from the service, your UI will automatically reflect new themes in future versions of Visual Studio.
 
 ### <a name="implementation"></a>实现
- Visual Studio 源代码包括多个包定义文件，包含的标记名称和每个主题的各自的颜色值的列表。 颜色服务读取 VSColors 这些包定义文件中定义。 这些颜色将 XAML 标记中或在代码中引用并通过然后加载**IVsUIShell5.GetThemedColor**方法或 DynamicResource 映射。
+ The Visual Studio source code includes several package definition files that contain lists of token names and the respective color values for each theme. The color service reads the VSColors defined in these package definition files. These colors are referenced in XAML markup or in code and then loaded through either the **IVsUIShell5.GetThemedColor** method or a DynamicResource mapping.
 
-### <a name="system-colors"></a>系统颜色
- 默认情况下，公共控件引用系统颜色。 如果您需要在用户界面使用系统颜色，例如当您创建一个嵌入的或独立的对话框，您不必执行任何操作。
+### <a name="system-colors"></a>System colors
+ Common controls reference the system colors by default. If you want your UI to use system colors, such as when you are creating an embedded or standalone dialog, you don’t need to do anything.
 
-### <a name="common-shared-colors-in-the-vscolor-service"></a>VSColor 服务中的公共共享的颜色
- 界面元素应反映整体的 Visual Studio 环境。 通过重复使用公共共享的颜色适用于您正在设计的 UI 组件，可确保你的接口与其他 Visual Studio 接口，一致，并且，当您的颜色主题是添加或更新时，将自动更新。
+### <a name="common-shared-colors-in-the-vscolor-service"></a>Common shared colors in the VSColor service
+ Your interface elements should reflect the overall Visual Studio environment. By reusing the common shared colors that are appropriate for the UI component you’re designing, you ensure that your interface is consistent with other Visual Studio interfaces, and that your colors will update automatically when themes are added or updated.
 
- 使用之前公共共享的颜色，请确保你了解如何正确使用它们。 公共共享颜色的使用不正确可能会导致不一致，令人沮丧，或令人困惑的体验，为你的用户。
+ Before using common shared colors, make sure that you understand how to use them correctly. Incorrect use of common shared colors might result in an inconsistent, frustrating, or confusing experience for your users.
 
-### <a name="user-customizable-colors"></a>用户可自定义颜色
- 请参阅：[为最终用户公开的颜色](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ExposingColorsForEndUsers)
+### <a name="user-customizable-colors"></a>User-customizable colors
+ See: [Exposing colors for end users](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ExposingColorsForEndUsers)
 
- 有时，您将想要允许最终用户将自定义 UI，如创建的代码编辑器或设计图面。 可自定义 UI 组件都位于**字体和颜色**一部分**工具 > 选项**对话框中，用户可以选择要更改的前景色、 背景色，或两者。
+ Sometimes, you will want to allow the end user to customize your UI, such as when you are creating a code editor or design surface. Customizable UI components are found in the **Fonts and Colors** section of the **Tools > Options** dialog, where users can choose to change the foreground color, background color, or both.
 
- ![工具&#62;Visual Studio 中的选项对话框](../../extensibility/ux-guidelines/media/0301-a-toolsoptionsdialog.png "0301 a_ToolsOptionsDialog")
+ ![Tools &#62; Options dialog in Visual Studio](../../extensibility/ux-guidelines/media/0301-a-toolsoptionsdialog.png "0301-a_ToolsOptionsDialog")
 
- **工具 > 选项对话框**
+ **Tools>Options dialog**
 
-## <a name="BKMK_TheVSColorService"></a> VSColor Service
- Visual Studio 提供的环境颜色服务，也称为 VSColor service 或外壳颜色服务。 此服务，可将 UI 元素的颜色值绑定到集，其中包含每个主题颜色的名称-值颜色。 VSColor 服务必须用于所有 UI 元素，以便颜色自动更改以反映当前用户选择了主题，并以使 UI 绑定到的环境颜色服务将集成新的主题在将来版本的 Visual Studio。
+## <a name="BKMK_TheVSColorService"></a> The VSColor Service
+ Visual Studio provides an environment color service, also called the VSColor service or the shell color service. This service allows you to bind the color values of your UI elements to a name-value color set containing colors for each theme. The VSColor service must be used for all UI elements, so that colors automatically change to reflect the current user-selected theme, and so that UI bound to the environment color service will integrate with new themes in future versions of Visual Studio.
 
-### <a name="how-the-service-works"></a>服务工作原理
- 环境颜色服务读取 VSColors UI 组件.pkgdef 中定义。 这些 VSColors 然后在 XAML 标记或代码中引用并将其通过加载**IVsUIShell5.GetThemedColor**或 DynamicResource 映射。
+### <a name="how-the-service-works"></a>How the service works
+ The environment color service reads VSColors defined in the .pkgdef for the UI component. These VSColors are then referenced in XAML markup or code and are loaded through either the **IVsUIShell5.GetThemedColor** or a DynamicResource mapping.
 
- ![环境颜色服务体系结构](../../extensibility/ux-guidelines/media/0302-a-environmentcolorservicearchitecture.png "0302 a_EnvironmentColorServiceArchitecture")
+ ![Environment color service architecture](../../extensibility/ux-guidelines/media/0302-a-environmentcolorservicearchitecture.png "0302-a_EnvironmentColorServiceArchitecture")
 
- **环境颜色服务体系结构**
+ **Environment color service architecture**
 
-### <a name="accessing-the-service"></a>访问服务
- 有几种不同方法访问使用 VSColor service，具体取决于哪种颜色标记您和您拥有哪种代码。
+### <a name="accessing-the-service"></a>Accessing the service
+ There are several different ways to access the VSColor service, depending on what kind of color tokens you are using and what kind of code you have.
 
-#### <a name="predefined-environment-colors"></a>预定义的环境颜色
+#### <a name="predefined-environment-colors"></a>Predefined environment colors
 
-##### <a name="from-native-code"></a>从本机代码
- 在 shell 提供的服务提供访问权限的颜色的 COLORREF。 服务/接口是：
+##### <a name="from-native-code"></a>From native code
+ The shell provides a service that gives access to the COLORREF of the colors. The service/interface is:
 
 ```
 IVsUIShell2::GetVSSysColorEx(VSSYSCOLOR dwSysColIndex, DWORD *pdwRGBval)
 ```
 
- 在文件 VSShell80.idl，枚举 **__VSSYSCOLOREX**具有 shell 颜色常量。 若要使用它，如索引值记录在 MSDN 枚举 __VSSYSCOLOREX 中的值之一，或将常规索引号 Windows 系统 API，传入**GetSysColor**，接受。 执行此操作获取返回应在第二个参数中使用的颜色的 RGB 值。
+ In the file VSShell80.idl, the enumeration **__VSSYSCOLOREX** has shell color constants. To use it, pass in as the index value either one of the values from the enum __VSSYSCOLOREX documented in MSDN or a regular index number that the Windows system API, **GetSysColor**, accepts. Doing this gets back the RGB value of the color that should be used in the second parameter.
 
- 如果存储的笔或使用一种新颜色的画笔，必须 AdviseBroadcastMessages （从 Visual Studio shell 中)，并侦听 WM_SYSCOLORCHANGE 和 WM_THEMECHANGED 消息。
+ If storing a pen or brush with a new color, you must AdviseBroadcastMessages (off of the Visual Studio shell) and listen for WM_SYSCOLORCHANGE and WM_THEMECHANGED messages.
 
 ```
 // To access the color service in native code, you'll make a call that resembles this:
@@ -111,10 +111,10 @@ pUIShell2->GetVSSysColorEx(VSCOLOR_COLOR_NAME, &rgbLOCAL_COLOR);
 
 ```
 
- **注意：** 返回的 COLORREF 值**GetVSSysColorEx()** 包含只是 R、 G、 B 组件的主题颜色。 如果主题项使用透明度，返回前丢弃的 alpha 通道值。 因此，如果感兴趣的环境颜色需要使用在透明度通道是重要的地方，您应而不是 IVsUIShell2::GetVSSysColorEx，使用 IVsUIShell5.GetThemedColor 本主题后面所述。
+ **NOTE:** The COLORREF values returned by **GetVSSysColorEx()** contain just R,G,B components of a theme color. If a theme entry uses transparency, the alpha-channel value is discarded before returning. Therefore, if the environment color of interest needs to be used in a place where transparency channel is important, you should use IVsUIShell5.GetThemedColor instead of IVsUIShell2::GetVSSysColorEx, as described later in this topic.
 
-##### <a name="from-managed-code"></a>从托管代码
- 通过本机代码访问 VSColor service 其实非常简单。 如果你正在通过托管代码，但是，确定如何使用该服务可能比较棘手。 这一点后，下面是 C# 代码片段演示此过程：
+##### <a name="from-managed-code"></a>From managed code
+ Accessing the VSColor service through native code is fairly straightforward. If you are working through managed code, however, determining how to use the service can be tricky. With that in mind, here is a C# code snippet demonstrating this process:
 
 ```
 private void VSColorPaint(object sender, System.Windows.Forms.PaintEventArgs e)
@@ -137,14 +137,14 @@ private void VSColorPaint(object sender, System.Windows.Forms.PaintEventArgs e)
 }
 ```
 
- 如果您正在 Visual Basic 中，使用：
+ If you are working in Visual Basic, use:
 
 ```
 Dim myColor As Color = ColorTranslator.FromWin32((Integer)win32Color)
 ```
 
-##### <a name="from-wpf-ui"></a>从 WPF UI
- 可以绑定到值导出到应用程序的 ResourceDictionary 通过 Visual Studio 颜色。 下面是使用颜色表中的资源，以及绑定到 XAML 中的环境字体数据的示例。
+##### <a name="from-wpf-ui"></a>From WPF UI
+ You can bind to Visual Studio colors through values exported into the Application's ResourceDictionary. Below is an example of using resources from the color table as well as binding to the environment font data in XAML.
 
 ```
 <Style TargetType="{x:Type Button}">
@@ -157,10 +157,10 @@ Dim myColor As Color = ColorTranslator.FromWin32((Integer)win32Color)
 </Style>
 ```
 
-#### <a name="helper-classes-and-methods-for-managed-code"></a>帮助器类和托管代码的方法
- 对于托管代码，shell 的托管包框架库 (Microsoft.VisualStudio.Shell.12.0.dll) 包含几个帮助程序类促进使用主题颜色。
+#### <a name="helper-classes-and-methods-for-managed-code"></a>Helper classes and methods for managed code
+ For managed code, the shell’s Managed Package Framework library (Microsoft.VisualStudio.Shell.12.0.dll) contains a couple of helper classes facilitating the use of themed colors.
 
- 中的帮助器方法**Microsoft.VisualStudio.Shell.VsColors** MPF 中的类包括**GetThemedGDIColor()** 并**GetThemedWPFColor()** 。 这些帮助器方法返回为 System.Drawing.Color 或 System.Windows.Media.Color，若要在 WinForms 或 WPF UI 中使用的主题项的颜色值。
+ The helper methods in the **Microsoft.VisualStudio.Shell.VsColors** class in MPF include **GetThemedGDIColor()** and **GetThemedWPFColor()** . Those helper methods return the color value of a theme entry as System.Drawing.Color or System.Windows.Media.Color, to be used in WinForms or WPF UI.
 
 ```
 IVsUIShell5 shell5;
@@ -210,14 +210,14 @@ public static System.Windows.Media.Color GetThemedWPFColor(this IVsUIShell5 vsUI
 
 ```
 
- 类还可用于获取给定 WPF 颜色资源键，VSCOLOR 标识符，反之亦然。
+ The class can also be used to obtain VSCOLOR identifiers for a given WPF color resource key, or vice versa.
 
 ```
 public static string GetColorBaseKey(int vsSysColor);
 public static bool TryGetColorIDFromBaseKey(string baseKey, out int vsSysColor);
 ```
 
- 方法**VsColors**类查询 VSColor 服务以返回每次调用它们的颜色值。 若要获取颜色值是**System.Drawing.Color**，从而提高了性能的替代方法是改为使用的方法**Microsoft.VisualStudio.PlatformUI.VSThemeColor**类的缓存获取从 VSColor service 的颜色值。 类在内部订阅 shell 广播的消息事件和主题更改事件发生时将放弃缓存的值。 此外，此类提供。要订阅主题更改的 NET 友好事件。 使用**ThemeChanged**事件添加一个新的处理程序，并使用**GetThemedColor()** 方法来获取颜色值**ThemeResourceKeys**感兴趣。 示例代码可能如下所示：
+ The methods of **VsColors** class query the VSColor service to return the color value each time they are invoked. To obtain a color value as **System.Drawing.Color**, an alternative with better performance is to instead use the methods of the **Microsoft.VisualStudio.PlatformUI.VSThemeColor** class, which caches the color values obtained from the VSColor service. The class subscribes internally to shell broadcast messages events, and discards the cached value when a theme changing event occurs. Also, the class provides a .NET-friendly event to subscribe to theme changes. Use the **ThemeChanged** event to add a new handler, and use the **GetThemedColor()** method to obtain color values for the **ThemeResourceKeys** of interest. A sample code could look like this:
 
 ```
 public MyWindowPanel()
@@ -256,164 +256,164 @@ protected override void Dispose(bool disposing)
 }
 ```
 
-## <a name="BKMK_ChoosingHighContrastColors"></a> 选择高对比度颜色
+## <a name="BKMK_ChoosingHighContrastColors"></a> Choosing High Contrast colors
 
 ### <a name="overview"></a>概述
- Windows 使用增加的文本、 背景和图像的色彩对比度的多个高对比度系统级主题使元素显示在屏幕上更为明显。 可访问性原因，务必在用户切换到高对比度主题时，Visual Studio 界面元素做出正确响应。
+ Windows uses several high-contrast system-level themes that increase the color contrast of text, backgrounds, and images, making elements appear more distinct on the screen. For accessibility reasons, it is important that Visual Studio interface elements respond correctly when users switch to a High Contrast theme.
 
- 只有几种系统颜色可用于高对比度主题。 在选择您的系统颜色名称时，请记住以下提示：
+ Only a handful of system colors can be used for High Contrast themes. When choosing your system color names, remember the following tips:
 
-1. **选择具有相同的语义含义的系统颜色**着色的元素。 例如，如果您所选择的时间段内的文本的高对比度颜色，使用 WindowText 和不 ControlText。
+1. **Choose system colors that have the same semantic meaning** as the element that you are coloring. For instance, if you are choosing a high-contrast color for text within a window, use WindowText and not ControlText.
 
-2. **选择前景/背景对**一起或不会相信您的颜色选择，将所有高对比度主题中正常工作。
+2. **Choose foreground/background pairs** together or you will not be confident that your color choice will work in all High Contrast themes.
 
-3. **确定你的 UI 中的哪些部分是最重要，并确保将脱颖而出的内容区域。** 因此强边框颜色的使用通常定义的内容区域，因为有不同的内容区域没有颜色变体，您将丢失详细信息，通常会区分颜色色调细微的差异，很的多。
+3. **Determine which parts of your UI are the most important and ensure that content areas will stand out.** You will lose a lot of detail that subtle differences in color hue would normally distinguish, so the use of strong border colors is common to define content areas, because there are no color variants for different content areas.
 
-### <a name="system-color-set"></a>系统颜色集
- 在表[WPF 团队博客：SystemColors 引用](http://blogs.msdn.com/b/wpf/archive/2010/11/30/systemcolors-reference.aspx)指示一整套的系统颜色的名称，并显示在每个主题对应色调。
+### <a name="system-color-set"></a>System color set
+ The table at [WPF Team Blog: SystemColors Reference](https://devblogs.microsoft.com/wpf/systemcolors-reference/) indicates the complete set of system color names, and the corresponding hues displayed in each theme.
 
- 如果应用此限制的一组到你的 UI，颜色*预期，将会丢失细节"正常"主题中存在的*。 下面是用户界面的示例，用于区分工具窗口中的区域的细微灰颜色。 如果使用在高对比度模式下显示的同一窗口搭配使用，可以看到，所有背景相同的色调，由边框单独指示这些区域的边框：
+ When applying this limited set of colors to your UI, *it is expected that you will lose subtle details that were present in the “normal” themes*. Here is an example of UI with subtle gray colors that are used to distinguish areas within a tool window. When paired with the same window displayed in High Contrast mode, you can see that all the backgrounds are the same hue and the borders of those areas are indicated by border alone:
 
- ![属性窗口](../../extensibility/ux-guidelines/media/030303-a-propertieswindow.png "030303 a_PropertiesWindow")
+ ![属性窗口](../../extensibility/ux-guidelines/media/030303-a-propertieswindow.png "030303-a_PropertiesWindow")
 
- **如何细微的详细信息的示例都将丢失在高对比度**
+ **Example of how subtle details are lost when in High Contrast**
 
-#### <a name="choosing-text-colors-in-an-editor"></a>在编辑器中选择文本颜色
- 在编辑器中或设计图面上使用以的文本，以指示含义，如允许的简单标识的相似项的组。 在高对比度主题，但是，您没有的功能来区分多个三种文本颜色。 WindowText、 GrayText 和 HotTrackText WindowBackground 图面上提供的唯一颜色。 由于不能使用三个以上的颜色，请仔细选择你想要在高对比度模式中显示的最重要差异。
+#### <a name="choosing-text-colors-in-an-editor"></a>Choosing text colors in an editor
+ Colorized text is used in an editor or on a design surface to indicate meaning, such as allowing for easy identification of groups of similar items. In a High Contrast theme, however, you do not have the ability to differentiate between more than three text colors. WindowText, GrayText and HotTrackText are the only colors available on WindowBackground surfaces. Since you cannot use more than three colors, carefully choose the most important differences that you want to display when in High Contrast mode.
 
- 在每个高对比度主题中的显示上一个编辑器图面中，允许的标记名称的每个色调：
+ Hues for each of the token names allowed on an editor surface, as they appear in each High Contrast theme:
 
- ![高对比度编辑器比较](../../extensibility/ux-guidelines/media/030303-b-hceditorcomparison.png "030303 b_HCEditorComparison")
+ ![High Contrast editor comparison](../../extensibility/ux-guidelines/media/030303-b-hceditorcomparison.png "030303-b_HCEditorComparison")
 
- **高对比度编辑器比较**
+ **High Contrast editor comparison**
 
- 编辑器表面蓝色主题中的示例：
+ Examples of the editor surface in the Blue theme:
 
- ![蓝色主题中的编辑器](../../extensibility/ux-guidelines/media/030303-c-editorblue.png "030303 c_EditorBlue")
+ ![Editor in Blue theme](../../extensibility/ux-guidelines/media/030303-c-editorblue.png "030303-c_EditorBlue")
 
- **蓝色主题中的编辑器**
+ **Editor in Blue theme**
 
- ![高对比度主题中的编辑器](../../extensibility/ux-guidelines/media/030303-d-editorhc1.png "030303 d_EditorHC1")
+ ![Editor in High Contrast theme](../../extensibility/ux-guidelines/media/030303-d-editorhc1.png "030303-d_EditorHC1")
 
- **高对比度 #1 主题中的编辑器**
+ **Editor in High Contrast #1 theme**
 
-### <a name="usage-patterns"></a>使用模式
- 许多常用的 UI 元素已定义的高对比度颜色。 以便你的 UI 元素与类似组件保持一致，可以选择自己的系统颜色名称时引用这些使用情况模式。
+### <a name="usage-patterns"></a>Usage patterns
+ Many common UI elements already have high-contrast colors defined. You can reference these usage patterns when choosing your own system color names, so that your UI elements are consistent with similar components.
 
-|系统颜色|用法|
+|System Color|用法|
 |------------------|-----------|
-|ActiveCaption|-Active IDE 和 rafted 的窗口按钮上悬停并按标志符号<br />-为 IDE 和 rafted 的 windows 标题栏背景<br />默认状态栏背景|
-|ActiveCaptionText|-Active IDE 和 rafted 的窗口标题栏前景 （文本和字形）<br />的背景和边框上悬停并按活动窗口按钮|
-|控件|-组合框、 下拉列表中和搜索控制默认和已禁用的背景信息，包括下拉按钮<br />-停靠目标按钮背景<br />命令栏背景<br />-工具窗口背景|
-|ControlDark|-IDE 背景<br />菜单和命令栏分隔符<br />命令栏边框<br />隐藏菜单<br />-工具窗口选项卡上的默认值并将鼠标悬停边框和分隔符<br />-还文档溢出按钮背景<br />-停靠目标标志符号边框|
-|ControlDarkDark|-失去焦点的选定文档选项卡窗口|
-|ControlLight|-自动隐藏选项卡边框<br />列表式组合框和下拉列表边框<br />-停靠目标背景和边框|
-|ControlLightLight|-已选定、 已设定焦点的临时窗口边框|
-|ControlText|列表式组合框和下拉列表标志符号<br />-工具窗口中取消选择选项卡文本|
-|GrayText|-组合框和下拉列表中禁用的列表边框、 下拉列表中的标志符号、 文本和菜单项文本<br />-已禁用的菜单文本<br />搜索控件搜索选项标头文本<br />搜索控制部分分隔符|
-|突出显示|-All 将鼠标悬停在且按下背景和边框，组合框下拉列表中除按钮背景和文档也溢出按钮边框<br />-选定项背景|
-|HighlightText|-所有悬停和按下的前景色 （文本和字形）<br />-已设定焦点的工具窗口和文档选项卡窗口控件的前景<br />-已设定焦点的工具窗口标题栏边框<br />的前景色集中的所选的临时选项卡<br />-还文档溢出按钮边框上悬停并按<br />-所选图标边框|
-|HotTrack|-滚动条滚动块背景和按下时的边框<br />的按下时滚动条箭头标志符号|
-|InactiveCaption|非活动状态的 IDE 和 rafted 的窗口按钮上悬停标志符号<br />-为 IDE 和 rafted 的 windows 标题栏背景<br />-已禁用的搜索控件背景|
-|InactiveCaptionText|非活动状态的 IDE 和 rafted 的 windows 标题栏前景 （文本和字形）<br />非活动窗口按钮背景和悬停时的边框<br />-失去焦点的工具窗口按钮背景和边框<br />-已禁用的搜索控件的前景|
-|菜单|-下拉列表菜单背景<br />-Checked 和已禁用的复选标记背景|
-|MenuText|-下拉列表菜单边框<br />-选中标记检查<br />菜单标志符号<br />-下拉列表菜单文本<br />-所选图标边框|
-|Scrollbar|-滚动条和滚动条箭头背景，所有状态|
-|窗口|-自动隐藏选项卡背景<br />菜单栏和命令架背景<br />-失去焦点或未选定的文档窗口选项卡背景和文档边框，用于打开和临时选项卡<br />-失去焦点的工具窗口标题栏背景<br />-工具窗口选项卡背景，同时选中和取消选择|
-|WindowFrame|-IDE 边框|
-|WindowText|-自动隐藏选项卡上的前景色<br />-所选工具窗口选项卡前景色<br />-失去焦点或未选定的临时选项卡前景色和失去焦点的文档窗口选项卡<br />-未选定标志符号通过树视图默认前景色和悬停<br />的所选工具窗口选项卡边框<br />-滚动条滚动块背景、 边框和标志符号|
+|ActiveCaption|-   Active IDE and rafted window button glyphs on hover and press<br />-   Title bar background for IDE and rafted windows<br />-   Default status bar background|
+|ActiveCaptionText|-   Active IDE and rafted windows for title bar foreground (text and glyphs)<br />-   Background and border of active window buttons on hover and press|
+|控件|-   Combo box, dropdown list, and search control default and disabled background, including dropdown button<br />-   Dock target button background<br />-   Command bar background<br />-   Tool window background|
+|ControlDark|-   IDE background<br />-   Menu and command bar separators<br />-   Command bar border<br />-   Menu shadows<br />-   Tool window tab default and hover border and separator<br />-   Document well overflow button background<br />-   Dock target glyph border|
+|ControlDarkDark|-   Unfocused, selected document tab window|
+|ControlLight|-   Auto-hide tab border<br />-   Combo box and drop-down list border<br />-   Dock target background and border|
+|ControlLightLight|-   Selected, focused provisional border|
+|ControlText|-   Combo box and drop-down list glyph<br />-   Tool window unselected tab text|
+|GrayText|-   Combo box and dropdown list disabled border, dropdown glyph, text, and menu item text<br />-   Disabled menu text<br />-   Search control 'search options' header text<br />-   Search control section separator|
+|突出显示|-   All hover and pressed backgrounds and borders, except combo box dropdown button background and document well overflow button border<br />-   Selected item backgrounds|
+|HighlightText|-   All hover and pressed foregrounds (text and glyphs)<br />-   Focused tool window and document tab window control foreground<br />-   Focused tool window title bar border<br />-   Focused, selected provisional tab foreground<br />-   Document well overflow button border on hover and press<br />-   Selected icon border|
+|HotTrack|-   Scrollbar thumb background and border on press<br />-   Scrollbar arrow glyph on press|
+|InactiveCaption|-   Inactive IDE and rafted window button glyphs on hover<br />-   Title bar background for IDE and rafted windows<br />-   Disabled search control background|
+|InactiveCaptionText|-   Inactive IDE and rafted windows title bar foreground (text and glyphs)<br />-   Inactive window buttons background and border on hover<br />-   Unfocused tool window button background and border<br />-   Disabled search control foreground|
+|菜单|-   Dropdown menu background<br />-   Checked and disabled checkmark background|
+|MenuText|-   Dropdown menu border<br />-   Checkmark check<br />-   Menu glyphs<br />-   Drop-down menu text<br />-   Selected icon border|
+|Scrollbar|-   Scrollbar and scrollbar arrow background, all states|
+|窗口|-   Auto-hide tab background<br />-   Menu bar and command shelf background<br />-   Unfocused or unselected document window tab background and document border, for both open and provisional tabs<br />-   Unfocused tool window title bar background<br />-   Tool window tab background, both selected and unselected|
+|WindowFrame|-   IDE border|
+|WindowText|-   Auto-hide tab foreground<br />-   Selected tool window tab foreground<br />-   Unfocused document window tab and unfocused or unselected provisional tab foreground<br />-   Tree view default foreground and hover over unselected glyph<br />-   Tool window selected tab border<br />-   Scrollbar thumb background, border, and glyph|
 
-## <a name="BKMK_ExposingColorsForEndUsers"></a> 为最终用户公开的颜色
+## <a name="BKMK_ExposingColorsForEndUsers"></a> Exposing colors for end users
 
 ### <a name="overview"></a>概述
- 有时想要允许最终用户将自定义 UI，如创建的代码编辑器或设计图面。 若要执行此操作的最常见方法是通过使用**工具 > 选项**对话框。 除非您拥有高度专业化需要特殊的控件的 UI，以提供自定义项的最简单方法是通过**字体和颜色**页内**环境**对话框部分。 对于公开自定义每个元素，用户可以选择更改的前景色、 背景色，或两者。
+ Sometimes you will want to allow the end user to customize your UI, such as when you are creating a code editor or design surface. The most common way to do this is by using the **Tools > Options** dialog. Unless you have highly specialized UI that requires special controls, the easiest way to present the customization is through the **Fonts and Colors** page within the **Environment** section of the dialog. For each element that you expose for customization, the user can choose to change the foreground color, background color, or both.
 
-### <a name="building-a-vspackage-for-your-customizable-colors"></a>构建您的可自定义颜色的 VSPackage
- VSPackage 可以控制字体和通过自定义类别的颜色和字体和颜色属性页上显示项。 在使用此机制，Vspackage 必须实现[IVsFontAndColorDefaultsProvider](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider.aspx)接口和其关联的接口。
+### <a name="building-a-vspackage-for-your-customizable-colors"></a>Building a VSPackage for your customizable colors
+ A VSPackage can control the fonts and colors through custom categories and display items on the Fonts and Colors property page. When using this mechanism, VSPackages must implement the [IVsFontAndColorDefaultsProvider](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider.aspx) interface and its associated interfaces.
 
- 从原理上讲，此机制可用于修改显示的所有现有项目和包含它们的类别。 但是，它不应修改文本编辑器类别或其显示项。 文本编辑器类别的详细信息，请参阅[字体和颜色概述](https://msdn.microsoft.com/library/bb165065.aspx)。
+ In principle, this mechanism can be used to modify all existing display items and the categories that contain them. However, it should not be used to modify the Text Editor category or its display items. For more information on the Text Editor category, see [Font and Color Overview](https://msdn.microsoft.com/library/bb165065.aspx).
 
- 若要实现自定义类别或显示的项，VSPackage 必须：
+ To implement custom categories or display Items, a VSPackage must:
 
-- **创建或标识注册表中的类别。** IDE 的实现**字体和颜色**属性页使用此信息来正确地查询支持给定的类别的服务。
+- **Create or identify categories in the registry.** The IDE's implementation of the **Fonts and Colors** property page uses this information to correctly query for the service supporting a given category.
 
-- **创建或标识 （可选） 在注册表中的组。** 它可能是很适合用于定义一个表示集合的两个或多个类别的组。 如果定义一个组，则 IDE 将自动合并子类别，并将分发在组中的显示项。
+- **Create or identify groups in the registry (optional).** It might be useful to define a group, which represents the union of two or more categories. If a group is defined, the IDE automatically merges subcategories and distributes display items within the group.
 
-- **实现 IDE 的支持。**
+- **Implement IDE support.**
 
-- **处理更改字体和颜色。**
+- **Handle font and color changes.**
 
-#### <a name="to-create-or-identify-categories"></a>若要创建或标识类别
- 构造一个特殊类型的类别下的注册表项 [HKLM\SOFTWARE\Microsoft \Visual Studio\\< Visual Studio 版本\>\FontAndColors\\< 类别\>]。 \<类别 > 是的非本地化的类别的名称。
+#### <a name="to-create-or-identify-categories"></a>To create or identify categories
+ Construct a special type of category registry entry under [HKLM\SOFTWARE\Microsoft \Visual Studio\\<Visual Studio version\>\FontAndColors\\<Category\>]. \<Category> is the non-localized name of the Category.
 
- 填充注册表具有两个值：
+ Populate the registry with two values:
 
-|名称|类型|数据|描述|
+|“属性”|键入|数据|描述|
 |----------|----------|----------|-----------------|
-|类别|REG_SZ|GUID|创建标识类别的 GUID|
-|package|REG_SZ|GUID|支持类别的 VSPackage 服务的 GUID|
+|类别|REG_SZ|GUID|A GUID created to identify the category|
+|Package|REG_SZ|GUID|The GUID of the VSPackage service that supports the category|
 
- 在注册表中指定的服务必须提供的实现[IVsFontAndColorDefaults](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx)相应类别。
+ The service specified in the registry must provide an implementation of [IVsFontAndColorDefaults](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx) for the corresponding category.
 
-#### <a name="to-create-or-identify-groups"></a>若要创建或标识组
- 构造一个特殊类型的类别下的注册表项 [HKLM\SOFTWARE\Microsoft \Visual Studio\\< Visual Studio 版本\>\FontAndColors\\< 组\>]。 \<组 > 组的非本地化名称。
+#### <a name="to-create-or-identify-groups"></a>To create or identify groups
+ Construct a special type of category registry entry under [HKLM\SOFTWARE\Microsoft \Visual Studio\\<Visual Studio version\>\FontAndColors\\<group\>]. \<group> is the non-localized name of the group.
 
- 填充注册表具有两个值：
+ Populate the registry with two values:
 
-|name|类型|数据|描述|
+|“属性”|键入|数据|描述|
 |----------|----------|----------|-----------------|
-|类别|REG_SZ|GUID|创建标识类别的 GUID|
-|package|REG_SZ|GUID|支持类别的 VSPackage 服务的 GUID|
+|类别|REG_SZ|GUID|A GUID created to identify the category|
+|Package|REG_SZ|GUID|The GUID of the VSPackage service that supports the category|
 
- 在注册表中指定的服务必须提供的实现**T:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup**为相应的组。
+ The service specified in the registry must provide an implementation of **T:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup** for the corresponding group.
 
  ![IVsFontAndColorGroup](../../extensibility/ux-guidelines/media/0304-a-fontandcolorgroup.png "0304-a_FontAndColorGroup")
 
-### <a name="to-implement-ide-support"></a>若要实现 IDE 支持
- 实现[GetObject](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider.getobject.aspx)，这会返回任一[IVsFontAndColorDefaults](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx)接口或**T:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup**为每个类别或组提供的 GUID IDE 接口。
+### <a name="to-implement-ide-support"></a>To implement IDE support
+ Implement [GetObject](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider.getobject.aspx), which returns either an [IVsFontAndColorDefaults](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx) interface or an **T:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup** interface to the IDE for each category or group GUID supplied.
 
- 它支持每个类别，VSPackage 实现的一个单独实例[IVsFontAndColorDefaults](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx)接口。
+ For every category it supports, a VSPackage implements a separate instance of the [IVsFontAndColorDefaults](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx) interface.
 
- 通过包实现的方法[IVsFontAndColorDefaults](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx)必须提供与 IDE:
+ The methods implemented through [IVsFontAndColorDefaults](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx) must provide the IDE with:
 
-- 类别中显示项的列表
+- Lists of display items in the category
 
-- 显示项的可本地化名称
+- Localizable names for display items
 
-- 显示类别的每个成员的信息
+- Display information for each member of the category
 
-  **注意：** 每个类别必须包含至少一个显示项。
+  **NOTE:** Every category must contain at least one display item.
 
-  IDE 使用**T:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup**接口可定义多个类别的联合。
+  The IDE uses the **T:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup** interface to define a union of several categories.
 
-  其实现提供了与 IDE:
+  Its implementation provides the IDE with:
 
-- 构成了一组给定的类别的列表
+- A list of the Categories that make up a given group
 
-- 对实例的访问[IVsFontAndColorDefaults](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx)支持组内的每个类别
+- Access to instances of [IVsFontAndColorDefaults](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx) supporting each Category within the group
 
-- 可本地化的组名称
+- Localizable group names
 
-#### <a name="updating-the-ide"></a>正在更新 IDE
- IDE 将缓存有关字体和颜色设置的信息。 因此，任何修改后的 IDE 字体和颜色配置，确保缓存最新的是一种最佳做法。
+#### <a name="updating-the-ide"></a>Updating the IDE
+ The IDE caches information about Font and Color settings. Therefore, after any modification of the IDE Font and Color configuration, ensuring that the cache is up to date is a best practice.
 
- 更新缓存是通过[IvsFontAndColorCacheManager](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager.aspx)接口，并可执行全局或仅在所选的项。
+ Updating the cache is done through the [IvsFontAndColorCacheManager](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager.aspx) interface and can be performed globally or just on selected items.
 
-### <a name="handling-font-and-color-changes"></a>处理字体和颜色更改
- 若要正确支持 VSPackage 显示的文本的颜色，支持 VSPackage 的着色服务必须响应通过的字体和颜色属性页所做的用户启动的更改。
+### <a name="handling-font-and-color-changes"></a>Handling font and color changes
+ To properly support the colorization of text that a VSPackage displays, the colorization service supporting the VSPackage must respond to the user-initiated changes made through the Fonts and Colors properties page.
 
- 若要执行此操作，VSPackage 必须：
+ To do this, a VSPackage must:
 
-- **处理 IDE 生成的事件**通过实现[IVsFontAndColorEvents](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorevents.aspx)接口。 IDE 调用后面的字体和颜色页的用户修改的相应方法。 例如，它调用[OnFontChanged](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorevents.onfontchanged.aspx)如果选择新字体的方法。
+- **handle IDE-generated events** by implementing the [IVsFontAndColorEvents](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorevents.aspx) interface. The IDE calls the appropriate method following user modifications of the Fonts and Colors page. For example, it calls the [OnFontChanged](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorevents.onfontchanged.aspx) method if a new font is selected.
 
   **或**
 
-- **轮询更改 IDE**。 这可以通过系统实现[IVsFontAndColorStorage](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.aspx)接口。 主要用于支持暂留，尽管[GetItem](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem.aspx)方法可以获取显示项的字体和颜色信息。 字体和颜色设置的详细信息，请参阅 MSDN 文章[访问存储的字体和颜色设置](https://msdn.microsoft.com/library/bb166382.aspx)。
+- **poll the IDE for changes**. This can be done through the system-implemented [IVsFontAndColorStorage](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.aspx) interface. Although primarily for support of persistence, the [GetItem](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem.aspx) method can obtain font and color information for Display Items. For more information on font and color settings, see the MSDN article [Accessing Stored Font and Color Settings](https://msdn.microsoft.com/library/bb166382.aspx).
 
-  **注意：** 若要确保轮询结果是否正确，请使用[IVsFontAndColorCacheManager](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager.aspx)接口，以确定是否刷新的缓存和 update 之前调用的检索方法所需[IVsFontAndColorStorage](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.aspx)接口。
+  **NOTE:** To ensure that polling results are correct, use the [IVsFontAndColorCacheManager](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager.aspx) interface to determine if a cache flush and update are needed prior to calling the retrieval methods of the [IVsFontAndColorStorage](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.aspx) interface.
 
-#### <a name="registering-custom-font-and-color-category-without-implementing-interfaces"></a>注册自定义字体和颜色类别，无需实现接口
- 下面的代码示例演示如何注册自定义字体和颜色而无需实现接口的类别：
+#### <a name="registering-custom-font-and-color-category-without-implementing-interfaces"></a>Registering custom font and color Category without implementing interfaces
+ The following code example demonstrates how to register the custom font and color Category without implementing interfaces:
 
 ```xml
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\FontAndColors\CSharp Tool Window]
@@ -426,14 +426,14 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\FontAndColors\CSharp T
 
  **注意：**
 
-- "NameID"= 在包中的本地化的类别名称的资源 ID
+- "NameID" = the resource ID of the localized category name in your package
 
-- "ToolWindowPackage"= 包 GUID
+- "ToolWindowPackage" = Package GUID
 
-- "类别"="{9FF46859-A47E-47bf-8AC5-EC3DBE69D1FE}"是只是一个示例，实际值可以是由实现者提供一个新的 GUID。
+- "Category"="{9FF46859-A47E-47bf-8AC5-EC3DBE69D1FE}" is just an example and the actual value can be a new GUID provided by the implementer.
 
-### <a name="set-the-font-and-color-property-category-guid"></a>设置字体和颜色的属性类别的 GUID
- 下面的代码示例演示如何设置类别的 Guid。
+### <a name="set-the-font-and-color-property-category-guid"></a>Set the Font and Color property category GUID
+ The code example below demonstrates setting Category GUIDs.
 
 ```cs
 // m_pView is your IVsTextView

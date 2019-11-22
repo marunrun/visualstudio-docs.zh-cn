@@ -1,5 +1,5 @@
 ---
-title: 服务器和 ClickOnce 部署中的客户端配置问题 |Microsoft Docs
+title: Server and Client Configuration Issues in ClickOnce Deployments | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -18,23 +18,23 @@ caps.latest.revision: 35
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 8b8f81f22ffe566524e45a62330bc95c8ce00016
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 5a78fab1986c7fae50bbb4c8149e8f2c89ec4873
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65686372"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295204"
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>ClickOnce 部署中的服务器和客户端配置问题
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-如果在 Windows Server 上使用 Internet 信息服务 (IIS) 和你的部署包含 Windows 无法识别的文件类型，如 Microsoft Word 文件，IIS 将拒绝传输该文件中，并且你的部署将不会成功。  
+If you use Internet Information Services (IIS) on Windows Server, and your deployment contains a file type that Windows does not recognize, such as a Microsoft Word file, IIS will refuse to transmit that file, and your deployment will not succeed.  
   
- 此外，某些 Web 服务器和 Web 应用程序软件，如[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]、 包含一组文件和文件类型不能下载。 例如，[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]可防止所有 Web.config 文件的下载。 这些文件可能包含敏感信息，如用户名和密码。  
+ Additionally, some Web servers and Web application software, such as [!INCLUDE[vstecasp](../includes/vstecasp-md.md)], contain a list of files and file types that you cannot download. For example, [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] prevents the download of all Web.config files. These files may contain sensitive information such as user names and passwords.  
   
- 尽管此限制应没有引起问题下载核心[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]文件，如清单和程序集，此限制可能会阻止你下载的一部分提供的数据文件在[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序。 在[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]，可以通过删除禁止下载 IIS 配置管理器中的此类文件的处理程序来解决此错误。 请参阅其他详细信息的 IIS 服务器文档。  
+ Although this restriction should cause no problems for downloading core [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] files such as manifests and assemblies, this restriction may prevent you from downloading data files included as part of your [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] application. In [!INCLUDE[vstecasp](../includes/vstecasp-md.md)], you can resolve this error by removing the handler that prohibits downloading of such files from the IIS configuration manager. See the IIS server documentation for additional details.  
   
- 某些 Web 服务器可能会阻止具有.dll、.config 中和.mdf 等扩展名的文件。 基于 Windows 的应用程序通常包括具有这些扩展名的一些文件。 如果用户尝试运行[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]访问 Web 服务器上被阻止的文件的应用程序，将导致错误。 而不是取消阻止所有文件扩展名，[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]默认情况下发布".deploy"文件扩展名为每个应用程序文件。 因此，管理员只需将 Web 服务器配置为允许以下三个文件扩展名：  
+ Some Web servers might block files with extensions such as .dll, .config, and .mdf. Windows-based applications typically include files with some of these extensions. If a user attempts to run a [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] application that accesses a blocked file on a Web server, an error will result. Rather than unblocking all file extensions, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] publishes every application file with a ".deploy" file extension by default. Therefore, the administrator only needs to configure the Web server to unblock the following three file extensions:  
   
 - .application  
   
@@ -42,46 +42,46 @@ ms.locfileid: "65686372"
   
 - .deploy  
   
-  但是，可以禁用此选项通过清除**使用".deploy"文件扩展名**选项卡上[Publish Options Dialog Box](https://msdn.microsoft.com/fd9baa1b-7311-4f9e-8ffb-ae50cf110592)，在这种情况下必须配置 Web 服务器以允许所有文件扩展名在应用程序中使用。  
+  However, you can disable this option by clearing the **Use ".deploy" file extension** option on the [Publish Options Dialog Box](https://msdn.microsoft.com/fd9baa1b-7311-4f9e-8ffb-ae50cf110592), in which case you must configure the Web server to unblock all file extensions used in the application.  
   
-  你将需要配置.manifest、.application 和.deploy，例如，如果使用不具有安装的 IIS [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]，或者如果正在使用另一台 Web 服务器 (例如 Apache)。  
+  You will have to configure .manifest, .application, and .deploy, for example, if you are using IIS where you have not installed the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)], or if you are using another Web server (for example, Apache).  
   
-## <a name="clickonce-and-secure-sockets-layer-ssl"></a>ClickOnce 和安全套接字层 (SSL)  
- 一个[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序可以正常工作通过 SSL，除 Internet Explorer 时引发的 SSL 证书相关提示。 错误的证书，如当站点名称不匹配或证书已过期时，可以引发提示。 若要使[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]工作通过 SSL 连接，请确保该证书是最新的并且证书数据与匹配的站点数据。  
+## <a name="clickonce-and-secure-sockets-layer-ssl"></a>ClickOnce and Secure Sockets Layer (SSL)  
+ A [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] application will work fine over SSL, except when Internet Explorer raises a prompt about the SSL certificate. The prompt can be raised when there is something wrong with the certificate, such as when the site names do not match or the certificate has expired. To make [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] work over an SSL connection, make sure that the certificate is up-to-date, and that the certificate data matches the site data.  
   
-## <a name="clickonce-and-proxy-authentication"></a>ClickOnce 和代理身份验证  
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 从.NET Framework 3.5 的 Windows 集成代理身份验证提供支持。 没有特定 machine.config 指令是必需的。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 不等基本或摘要式其他身份验证协议提供支持。  
+## <a name="clickonce-and-proxy-authentication"></a>ClickOnce and Proxy Authentication  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] provides support for Windows Integrated proxy authentication starting in .NET Framework 3.5. No specific machine.config directives are required. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] does not provide support for other authentication protocols such as Basic or Digest.  
   
- 此外可以应用于.NET Framework 2.0，若要启用此功能的修补程序。 有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=158730。  
+ You can also apply a hotfix to .NET Framework 2.0 to enable this feature. 有关更多信息，请参见 https://go.microsoft.com/fwlink/?LinkId=158730 。  
   
- 有关详细信息，请参阅[ \<defaultProxy > 元素 （网络设置）](https://msdn.microsoft.com/library/9d663c4b-07b4-4f6f-9b12-efbd3630354f)。  
+ For more information, see [\<defaultProxy> Element (Network Settings)](https://msdn.microsoft.com/library/9d663c4b-07b4-4f6f-9b12-efbd3630354f).  
   
-## <a name="clickonce-and-web-browser-compatibility"></a>ClickOnce 和 Web 浏览器兼容性问题  
- 目前，[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]仅当使用 Internet Explorer 打开部署清单的 URL，将启动安装。 仅当 Internet Explorer 设置为默认 Web 浏览器，从另一个应用程序，如 Microsoft Office Outlook 启动其 URL，则的部署将成功启动。  
+## <a name="clickonce-and-web-browser-compatibility"></a>ClickOnce and Web Browser Compatibility  
+ Currently, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] installations will launch only if the URL to the deployment manifest is opened using Internet Explorer. A deployment whose URL is launched from another application, such as Microsoft Office Outlook, will launch successfully only if Internet Explorer is set as the default Web browser.  
   
 > [!NOTE]
-> 如果部署提供程序不为空或已安装 Microsoft.NET Framework Assistant 扩展，则支持 Mozilla Firefox。 此扩展与.NET Framework 3.5 SP1 一起打包。 有关 XBAP 支持，在需要时激活插件 NPWPF。  
+> Mozilla Firefox is supported if the deployment provider is not blank or the Microsoft .NET Framework Assistant extension is installed. This extension is packaged with .NET Framework 3.5 SP1. For XBAP support, the NPWPF plug-in is activated when needed.  
   
-## <a name="activating-clickonce-applications-through-browser-scripting"></a>激活 ClickOnce 应用程序可以通过浏览器脚本  
- 如果您已开发一个自定义网页，将启动[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]使用活动脚本应用程序可能会发现在某些计算机上将不启动应用程序。 Internet Explorer 包含名为的设置**自动提示文件下载**，这会影响此行为。 此设置位于**安全**选项卡中其**选项**会影响此行为的菜单。 它称为**文件下载自动提示**，，下列出**下载**类别。 属性设置为**启用**默认情况下，为 intranet Web 页，并向**禁用**默认情况下，Internet Web pages。 如果此设置设置为**禁用**，任何尝试激活[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序以编程方式 (例如，通过将分配到其 URL`document.location`属性) 将被阻止。 在此情况下，用户可以启动应用程序只能通过用户启动的下载，例如，通过单击超链接设置为应用程序的 URL。  
+## <a name="activating-clickonce-applications-through-browser-scripting"></a>Activating ClickOnce Applications Through Browser Scripting  
+ If you have developed a custom Web page that launches a [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] application using Active Scripting, you may find that the application will not launch on some machines. Internet Explorer contains a setting called **Automatic prompting for file downloads**, which affects this behavior. This setting is available on the **Security** Tab in its **Options** menu that affects this behavior. It is called **Automatic prompting for file downloads**, and it is listed underneath the **Downloads** category. The property is set to **Enable** by default for intranet Web pages, and to **Disable** by default for Internet Web pages. When this setting is set to **Disable**, any attempt to activate a [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] application programmatically (for example, by assigning its URL to the `document.location` property) will be blocked. Under this circumstance, users can launch applications only through a user-initiated download, for example, by clicking a hyperlink set to the application's URL.  
   
-## <a name="additional-server-configuration-issues"></a>其他服务器配置问题  
+## <a name="additional-server-configuration-issues"></a>Additional Server Configuration Issues  
   
-##### <a name="administrator-permissions-required"></a>所需的管理员权限  
- 如果发布使用 HTTP，必须在目标服务器上具有管理员权限。 IIS 要求此权限级别。 如果您没有将发布使用 HTTP，只需要拥有写入权限的目标路径。  
+##### <a name="administrator-permissions-required"></a>Administrator Permissions Required  
+ You must have Administrator permissions on the target server if you are publishing with HTTP. IIS requires this permissions level. If you are not publishing using HTTP, you only need write permission on the target path.  
   
-##### <a name="server-authentication-issues"></a>服务器身份验证问题  
- 当发布具有"匿名访问"已关闭的远程服务器时，您将收到以下警告：  
+##### <a name="server-authentication-issues"></a>Server Authentication Issues  
+ When you publish to a remote server that has "Anonymous Access" turned off, you will receive the following warning:  
   
 ```  
 "The files could not be downloaded from http://<remoteserver>/<myapplication>/.  The remote server returned an error: (401) Unauthorized."  
 ```  
   
 > [!NOTE]
-> 可以让 NTLM （NT 质询-响应） 身份验证工作如果该站点会提示您提供默认凭据，之外的凭据，然后在安全对话框中，单击**确定**如果你想要保存所提供提示你时将来的会话的凭据。 但是，此解决方法将不适用于基本身份验证。  
+> You can make NTLM (NT challenge-response) authentication work if the site prompts for credentials other than your default credentials, and, in the security dialog box, you click **OK** when you are prompted if you want to save the supplied credentials for future sessions. However, this workaround will not work for basic authentication.  
   
-## <a name="using-third-party-web-servers"></a>使用第三方 Web 服务器  
- 如果要部署[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]从 Web 服务器 IIS 之外的应用程序，您可能会遇到问题如果服务器返回内容类型不正确的密钥[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]文件，如部署清单和应用程序清单。 若要解决此问题，请参阅有关如何将新内容类型添加到服务器，并确保所有文件名称扩展映射下, 表中都列出的文档位于适当位置的 Web 服务器的帮助。  
+## <a name="using-third-party-web-servers"></a>Using Third-Party Web Servers  
+ If you are deploying a [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] application from a Web server other than IIS, you may experience a problem if the server is returning the incorrect content type for key [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] files, such as the deployment manifest and application manifest. To resolve this problem, see your Web server's Help documentation about how to add new content types to the server, and make sure that all the file name extension mappings listed in the following table are in place.  
   
 |文件扩展名|内容类型|  
 |-------------------------|------------------|  
@@ -91,51 +91,51 @@ ms.locfileid: "65686372"
 |`.msu`|`application/octet-stream`|  
 |`.msp`|`application/octet-stream`|  
   
-## <a name="clickonce-and-mapped-drives"></a>ClickOnce 和映射的驱动器  
- 如果使用 Visual Studio 发布 ClickOnce 应用程序，则无法指定映射的驱动器作为安装位置。 但是，可以修改通过使用清单生成器和编辑器 （Mage.exe 和 MageUI.exe） 从映射的驱动器安装 ClickOnce 应用程序。 有关详细信息，请参阅[Mage.exe （清单生成和编辑工具）](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)并[MageUI.exe（图形化客户端中的清单生成和编辑工具）](https://msdn.microsoft.com/library/f9e130a6-8117-49c4-839c-c988f641dc14)。  
+## <a name="clickonce-and-mapped-drives"></a>ClickOnce and Mapped Drives  
+ If you use Visual Studio to publish a ClickOnce application, you cannot specify a mapped drive as the installation location. However, you can modify the ClickOnce application to install from a mapped drive by using the Manifest Generator and Editor (Mage.exe and MageUI.exe). 有关详细信息，请参阅[Mage.exe （清单生成和编辑工具）](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)并[MageUI.exe（图形化客户端中的清单生成和编辑工具）](https://msdn.microsoft.com/library/f9e130a6-8117-49c4-839c-c988f641dc14)。  
   
-## <a name="ftp-protocol-not-supported-for-installing-applications"></a>FTP 协议不支持用于安装应用程序  
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 支持从任何 HTTP 1.1 Web 服务器或文件服务器安装的应用程序。 FTP 文件传输协议不支持用于安装应用程序。 可以使用 FTP 发布应用程序。 下表总结了这些差异：  
+## <a name="ftp-protocol-not-supported-for-installing-applications"></a>FTP Protocol Not Supported for Installing Applications  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] supports installing applications from any HTTP 1.1 Web server or file server. FTP, the File Transfer Protocol, is not supported for installing applications. You can use FTP to publish applications only. The following table summarizes these differences:  
   
-|URL 类型|描述|  
+|URL Type|描述|  
 |--------------|-----------------|  
-|ftp://|您可以将发布[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序使用此协议。|  
-|http://|你可以安装[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序使用此协议。|  
-|https://|你可以安装[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序使用此协议。|  
-|file://|你可以安装[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序使用此协议。|  
+|ftp://|You can publish a [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] application by using this protocol.|  
+|http://|You can install a [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] application by using this protocol.|  
+|https://|You can install a [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] application by using this protocol.|  
+|file://|You can install a [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] application by using this protocol.|  
   
-## <a name="windows-xp-sp2-windows-firewall"></a>Windows XP SP2：Windows 防火墙  
- 默认情况下，Windows XP SP2 启用 Windows 防火墙。 如果正在开发应用程序在已安装的 Windows XP 的计算机上，您将仍可以发布和运行[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]从正在运行 IIS 的本地服务器的应用程序。 但是，不能访问该服务器正在运行的 IIS 从另一台计算机只有打开 Windows 防火墙。 有关管理 Windows 防火墙的说明，请参阅 Windows 帮助。  
+## <a name="windows-xp-sp2-windows-firewall"></a>Windows XP SP2: Windows Firewall  
+ By default, Windows XP SP2 enables the Windows Firewall. If you are developing your application on a computer that has Windows XP installed, you are still able to publish and run [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] applications from the local server that is running IIS. However, you cannot access that server that is running IIS from another computer unless you open the Windows Firewall. See Windows Help for instructions on managing the Windows Firewall.  
   
-## <a name="windows-server-enable-frontpage-server-extensions"></a>Windows Server：启用 FrontPage 服务器扩展  
- Microsoft FrontPage 服务器扩展是必需的应用程序发布到使用 HTTP 的 Windows Web 服务器。  
+## <a name="windows-server-enable-frontpage-server-extensions"></a>Windows Server: Enable FrontPage server extensions  
+ FrontPage Server Extensions from Microsoft is required for publishing applications to a Windows Web server that uses HTTP.  
   
- 默认情况下，Windows Server 没有安装的 FrontPage 服务器扩展。 如果你想要使用[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]若要发布到 HTTP 使用 FrontPage 服务器扩展的 Windows Server Web 服务器，必须先安装 FrontPage 服务器扩展。 可以通过使用 Windows Server 中管理您的服务器管理工具来执行安装。  
+ By default, Windows Server does not have FrontPage Server Extensions installed. If you want to use [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] to publish to a Windows Server Web server that uses HTTP with FrontPage Server Extensions, you must install FrontPage Server Extensions first. You can perform the installation by using the Manage Your Server administration tool in Windows Server.  
   
-## <a name="windows-server-locked-down-content-types"></a>Windows Server：锁定的内容类型  
- 上的 IIS[!INCLUDE[WinXPSvr](../includes/winxpsvr-md.md)]锁定除某些已知的内容类型 （例如，.htm、.html、.txt 等） 以外的所有文件类型。 若要启用的部署[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]使用此服务器应用程序，您需要更改 IIS 设置，以允许下载文件的类型.application、.manifest 和任何其他应用程序所使用的自定义文件类型。  
+## <a name="windows-server-locked-down-content-types"></a>Windows Server: Locked-Down Content Types  
+ IIS on [!INCLUDE[WinXPSvr](../includes/winxpsvr-md.md)] locks down all file types except for certain known content types (for example, .htm, .html, .txt, and so on). To enable deployment of [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] applications using this server, you need to change the IIS settings to allow downloading files of type .application, .manifest, and any other custom file types used by your application.  
   
- 如果部署使用 IIS 服务器，运行 inetmgr.exe 并添加新的默认 Web 页的文件类型：  
+ If you deploy using an IIS server, run inetmgr.exe and add new File Types for the default Web page:  
   
-- 有关.application 和.manifest 扩展中，MIME 类型应为"应用程序/x 的 ms-应用程序。" 对于其他文件类型，MIME 类型应为"应用程序/八进制流。"  
+- For the .application and .manifest extensions, the MIME type should be "application/x-ms-application." For other file types, the MIME type should be "application/octet-stream."  
   
-- 如果使用扩展创建 MIME 类型"*"和"应用程序/八进制流"的 MIME 类型，它将允许阻止的文件类型，要下载的文件。 （但是，阻止不能下载类型，例如.aspx 和.asmx 文件）。  
+- If you create a MIME type with extension "*" and the MIME type "application/octet-stream," it will allow files of unblocked file type to be downloaded. (However, blocked file types such as .aspx and .asmx cannot be downloaded.)  
   
-  Windows Server 上配置 MIME 类型的具体说明，请参阅 Microsoft 知识库文章 KB326965，"IIS 6.0 不提供未知 MIME 类型"网址[ http://support.microsoft.com/default.aspx?scid=kb; en-我们; 326965](http://support.microsoft.com/default.aspx?scid=kb;en-us;326965)。  
+  For specific instructions on configuring MIME types on Windows Server, refer to Microsoft Knowledge Base article KB326965, "IIS 6.0 Does Not Serve Unknown MIME Types" at [https://support.microsoft.com/default.aspx?scid=kb ;en-us;326965](https://support.microsoft.com/default.aspx?scid=kb;en-us;326965).  
   
-## <a name="content-type-mappings"></a>内容类型映射  
- .Application 文件的内容类型 （也称为 MIME 类型） 在通过 HTTP 发布时，应为"应用程序/x 的 ms-应用程序。" 如果您有[!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)]安装在服务器上，这会为你自动设置。 如果未安装，则您需要创建 MIME 类型关联的[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序虚拟根 （或整个服务器）。  
+## <a name="content-type-mappings"></a>Content Type Mappings  
+ When publishing over HTTP, the content type (also known as MIME type) for the .application file should be "application/x-ms-application." If you have [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] installed on the server, this will be set for you automatically. If this is not installed, then you need to create a MIME type association for the [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] application vroot (or entire server).  
   
- 如果部署使用 IIS 服务器，运行 inetmgr.exe 并添加新的"应用程序/x 的 ms-应用程序"为.application 扩展名的内容类型。  
+ If you deploy using an IIS server, run inetmgr.exe and add a new content type of "application/x-ms-application" for the .application extension.  
   
-## <a name="http-compression-issues"></a>HTTP 压缩问题  
- 使用[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]，可以执行使用 HTTP 压缩的下载、 使用 GZIP 算法压缩数据流前将流发送到客户端的 Web 服务器技术。 客户端 — 在这种情况下， [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]，然后才能读取这些文件解压缩流。  
+## <a name="http-compression-issues"></a>HTTP Compression Issues  
+ With [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)], you can perform downloads that use HTTP compression, a Web server technology that uses the GZIP algorithm to compress a data stream before sending the stream to the client. The client—in this case, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]—decompresses the stream before reading the files.  
   
- 如果使用 IIS，您可以轻松地启用 HTTP 压缩。 但是，当你启用 HTTP 压缩，仅启用某些文件类型，也就是说，HTML 和文本的文件。 若要启用程序集 (.dll) 的压缩，XML (.xml)、 部署清单 (.application) 和应用程序清单 (.manifest)，您必须向这些文件类型的 IIS 压缩类型的列表。 将文件类型添加到你的部署之前, 仅文本和 HTML 文件将被压缩。  
+ If you are using IIS, you can easily enable HTTP compression. However, when you enable HTTP compression, it is only enabled for certain file types—namely, HTML and text files. To enable compression for assemblies (.dll), XML (.xml), deployment manifests (.application), and application manifests (.manifest), you must add these file types to the list of types for IIS to compress. Until you add the file types to your deployment, only text and HTML files will be compressed.  
   
- 有关 IIS 的详细说明，请参阅[如何指定 HTTP 压缩的其他文档类型](http://go.microsoft.com/fwlink/?LinkId=178459)。  
+ For detailed instructions for IIS, see [How to specify additional document types for HTTP compression](https://go.microsoft.com/fwlink/?LinkId=178459).  
   
 ## <a name="see-also"></a>请参阅  
- [ClickOnce 部署疑难解答](../deployment/troubleshooting-clickonce-deployments.md)   
- [选择 ClickOnce 部署策略](../deployment/choosing-a-clickonce-deployment-strategy.md)   
+ [Troubleshooting ClickOnce Deployments](../deployment/troubleshooting-clickonce-deployments.md)   
+ [Choosing a ClickOnce Deployment Strategy](../deployment/choosing-a-clickonce-deployment-strategy.md)   
  [应用程序部署必备](../deployment/application-deployment-prerequisites.md)

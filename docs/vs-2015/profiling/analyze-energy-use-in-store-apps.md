@@ -14,19 +14,19 @@ caps.latest.revision: 39
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c2b25d0fa57659b3081b54c51b7493621423188f
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: a3147a6bafc550383f96134f5a76932413eb8a22
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65696994"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299371"
 ---
 # <a name="analyze-energy-use-in-store-apps"></a>分析应用商店应用中的能量使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio 的 **“能耗”** 探查器可以帮助你分析低功率平板设备上的 Windows 应用商店应用的功率和能耗情况，这些低功率平板设备在所有时间或部分时间内靠自有电池运行。 在电池供电的设备上，如果应用程序使用过多的能量，可能导致客户非常不满，最终客户甚至可能将其卸载。 能量利用的优化可使更多的客户选择并使用你的应用程序。  
   
-## <a name="BKMK_What_the_Energy_Consumption_tool_is__how_it_works__and_what_it_measures"></a> “能量消耗”探查器的定义、工作机制和测量内容  
+## <a name="BKMK_What_the_Energy_Consumption_tool_is__how_it_works__and_what_it_measures"></a>“能量消耗”探查器的定义、工作机制和测量内容  
  “能耗”探查器在分析会话期间捕获设备的显示器、CPU 和网络连接的活动。 然后生成这些活动所使用功率的估计值和分析会话使用的总能量。  
   
 > [!NOTE]
@@ -36,18 +36,18 @@ Visual Studio 的 **“能耗”** 探查器可以帮助你分析低功率平板
   
  “能量消耗”探查器使用下面 *功率* 和 *能量*的定义：  
   
-- 功率 用于衡量一段时间内做功而用力的速率。 在电力学中，功率的标准单位是瓦特 ，其定义为一安培电流流经一伏特的电位差时做功的速率。 在“电源使用”  关系图中，单位显示为毫瓦“mW”  ，这是一瓦的千分之一。  
+- 功率 用于衡量一段时间内做功而用力的速率。 在电力学中，功率的标准单位是瓦特，其定义为一安培电流流经一伏特的电位差时做功的速率。 在“电源使用” 关系图中，单位显示为毫瓦“mW” ，这是一瓦的千分之一。  
   
    请注意，由于功率是一种速率，它有方向（功可以在一段时间内增加或减少）和速度（功的增加量或减少量）。  
   
-- 能量 以电容或电势的形式衡量总功率数，如电池的功率容量或在一段时间内消耗的总功率。 能量单位为瓦时，即一瓦持续作用一小时所产生的功率数量。 在 **“能量摘要”** 中，单位显示为毫瓦时 **“mW-h”**。  
+- 能量 以电容或电势的形式衡量总功率数，如电池的功率容量或在一段时间内消耗的总功率。 能量单位为瓦时，即一瓦持续作用一小时所产生的功率数量。 在 **“能量摘要”** 中，单位显示为毫瓦时 **“mW-h”** 。  
   
-  ![能量容量、已用电量和已用总能量](../profiling/media/energyprof-capcitypowerused.png "ENERGYPROF_CapcityPowerUsed")  
+  ![Energy capacity, power used, total energy used](../profiling/media/energyprof-capcitypowerused.png "ENERGYPROF_CapcityPowerUsed")  
   
   例如，平板电脑中充满电的电池存储了一定数量的能量。 当能量用于执行网络通信、计算值或显示图像等任务时，电池的功率以不同的速率消耗。 对于任意一段时间，消耗的功率的总和还可按能量进行衡量。  
   
 ## <a name="BKMK_Identify_scenarios_with_user_marks"></a> 用用户标记标识方案  
- 可以向分析数据添加“用户标记”  以帮助标识时间线标尺中的区域。  
+ 可以向分析数据添加“用户标记” 以帮助标识时间线标尺中的区域。  
   
  ![时间线中的用户标记](../profiling/media/profilers-usermarktimeline.png "PROFILERS_UserMarkTimeline")  
   
@@ -63,8 +63,6 @@ Visual Studio 的 **“能耗”** 探查器可以帮助你分析低功率平板
 > - Windows.Foundation.Diagnostics LoggingChannel 实现 [Windows.Foundation.IClosable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iclosable.aspx) 接口（在 C# 和 VB 中表现为 [System.IDisposable](https://msdn.microsoft.com/library/System.IDisposable.aspx)）。若要避免操作系统资源泄露，请在完成日志记录通道时调用 [LoggingChannel.Close](https://msdn.microsoft.com/library/windows/apps/windows.foundation.diagnostics.loggingchannel.close.aspx)()（在 C# 和 VB 中为 Windows.Foundation.Diagnostics.LoggingChannel.Dispose()）。  
 >   - 每个打开的日志记录通道都必须有唯一的名称。 尝试创建与未释放的通道同名的新日志记录通道会导致出现异常。  
   
- 有关示例，请参阅 Windows SDK 示例 [LoggingSession 示例](http://code.msdn.microsoft.com/windowsapps/LoggingSession-Sample-ccd52336) 。  
-  
  **向 JavaScript 代码添加标记**  
   
  若要添加用户标记，请在代码中要标记的位置添加以下代码：  
@@ -77,7 +75,7 @@ if (performance && performance.mark) {
   
  *markDescription* 是包含要在用户标记工具提示中显示的消息的字符串。  
   
-## <a name="BKMK_Configure_your_environment_for_profiling"></a> 配置要分析的环境  
+## <a name="BKMK_Configure_your_environment_for_profiling"></a>配置环境进行分析  
  若要获取合理估计值，你需要分析由电池供电的低功率设备上的应用程序的能量使用情况。 由于 Visual Studio 不能在大多数的此类设备上运行，因此你需要使用 Visual Studio 远程工具将 Visual Studio 计算机连接到此类设备。 若要连接到远程设备，需要配置 Visual Studio 项目和此远程设备。 有关详细信息，请参阅[在远程计算机上运行 Windows 应用商店应用](../debugger/run-windows-store-apps-on-a-remote-machine.md)。  
   
 > [!TIP]
@@ -87,14 +85,14 @@ if (performance && performance.mark) {
   
 ## <a name="BKMK_Collect_energy_profile_data_for_your_app"></a> 收集应用的能量分布曲线数据  
   
-1. 在“调试”  菜单中，选择 “启动诊断（不调试）”。  
+1. 在“调试” 菜单中，选择“启动诊断（不调试）”。  
   
-     ![在诊断中心中选择“能量消耗”](../profiling/media/energyprof-diagnosticshub.png "ENERGYPROF_DiagnosticsHub")  
+     ![在诊断中心选择“能量消耗”](../profiling/media/energyprof-diagnosticshub.png "ENERGYPROF_DiagnosticsHub")  
   
-2. 选择 **“能耗”** ，然后选择 **“启动”**。  
+2. 选择 **“能耗”** ，然后选择 **“启动”** 。  
   
     > [!NOTE]
-    > 启动 **“能耗”** 探查器时，可能会看到 **“用户帐户控制”** 窗口，要求你提供运行 VsEtwCollector.exe 的权限。 选择 **“是”**。  
+    > 启动 **“能耗”** 探查器时，可能会看到 **“用户帐户控制”** 窗口，要求你提供运行 VsEtwCollector.exe 的权限。 选择 **“是”** 。  
   
 3. 执行你的应用程序以收集数据。  
   
@@ -105,9 +103,9 @@ if (performance && performance.mark) {
      Visual Studio 将分析收集的数据并显示结果。  
   
 ## <a name="BKMK_Collect_energy_profile_data_for_an_installed_app"></a> 收集已安装应用的能量分布曲线数据  
- 能耗工具只能在从 Visual Studio 解决方案启动或从 Windows 应用商店中安装的 Window Store 8.1 应用程序上运行。 在 Visual Studio 中打开解决方案时，默认目标为 **“启动项目”**。 面向已安装的应用程序：  
+ 能耗工具只能在从 Visual Studio 解决方案启动或从 Windows 应用商店中安装的 Window Store 8.1 应用程序上运行。 在 Visual Studio 中打开解决方案时，默认目标为 **“启动项目”** 。 面向已安装的应用程序：  
   
-1. 选择 **“更改目标”** ，然后选择 **“已安装的应用程序”**。  
+1. 选择 **“更改目标”** ，然后选择 **“已安装的应用程序”** 。  
   
 2. 从 **“选择已安装的应用程序包”** 列表中选择目标。  
   
@@ -124,12 +122,12 @@ if (performance && performance.mark) {
   
 |||  
 |-|-|  
-|![第 1 步](../profiling/media/procguid-1.png "ProcGuid_1")|报告文件名为 Report*YYYYMMDD-HHMM*.diagsession。 如果你决定保存此报告，可以更改此名称。|  
-|![第 2 步](../profiling/media/procguid-2.png "ProcGuid_2")|时间线显示分析会话的长度、应用程序生命周期激活事件以及用户标记。|  
-|![第 3 步](../profiling/media/procguid-3.png "ProcGuid_3")|你可以通过拖动蓝色条选择时间线的一个区域，将报告限制到这一部分时间线内。|  
-|![第 4 步](../profiling/media/procguid-4.png "ProcGuid_4")|**“电源使用”** 图是一个多线图，显示分析会话期间由设备资源导致的功率输出的变化。 “能量消耗”探查器可跟踪 CPU、网络活动和屏幕显示所使用的功率。|  
-|![第 5 步](../profiling/media/procguid-6.png "ProcGuid_6")|**“资源(打开/关闭)”**  图提供网络能量成本的详细信息。 **“网络”** 条表示网络连接的打开时间。 **“数据传输”** 子条为应用程序通过网络接收或发送数据的时间。|  
-|![第 6 步](../profiling/media/procguid-6a.png "ProcGuid_6a")|**“能量使用率摘要”** 按比例显示选定时间线内 CPU、网络活动和屏幕显示使用的总能量。|  
+|![步骤 1](../profiling/media/procguid-1.png "ProcGuid_1")|报告文件名为 Report*YYYYMMDD-HHMM*.diagsession。 如果你决定保存此报告，可以更改此名称。|  
+|![步骤 2](../profiling/media/procguid-2.png "ProcGuid_2")|时间线显示分析会话的长度、应用程序生命周期激活事件以及用户标记。|  
+|![步骤 3](../profiling/media/procguid-3.png "ProcGuid_3")|你可以通过拖动蓝色条选择时间线的一个区域，将报告限制到这一部分时间线内。|  
+|![步骤 4](../profiling/media/procguid-4.png "ProcGuid_4")|**“电源使用”** 图是一个多线图，显示分析会话期间由设备资源导致的功率输出的变化。 “能量消耗”探查器可跟踪 CPU、网络活动和屏幕显示所使用的功率。|  
+|![步骤 5](../profiling/media/procguid-6.png "ProcGuid_6")|**“资源(打开/关闭)”**  图提供网络能量成本的详细信息。 **“网络”** 条表示网络连接的打开时间。 **“数据传输”** 子条为应用程序通过网络接收或发送数据的时间。|  
+|![步骤 6](../profiling/media/procguid-6a.png "ProcGuid_6a")|**“能量使用率摘要”** 按比例显示选定时间线内 CPU、网络活动和屏幕显示使用的总能量。|  
   
  **分析能量分布曲线数据**  
   

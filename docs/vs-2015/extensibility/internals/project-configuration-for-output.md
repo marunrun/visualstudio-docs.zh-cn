@@ -1,5 +1,5 @@
 ---
-title: 项目配置为输出 |Microsoft Docs
+title: Project Configuration for Output | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -10,44 +10,44 @@ ms.assetid: a4517f73-45af-4745-9d7f-9fddf887b636
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: d14435917e982328220aa6b778d081a8837f0396
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: addd7e8630ce35c6bdbbbb4c063197f75a74c97d
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443879"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300678"
 ---
 # <a name="project-configuration-for-output"></a>用于输出的项目配置
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-每一种配置可以支持一组生成输出项，如可执行文件或资源文件的生成进程。 这些输出项专用于用户，并可以放入链接的输出，例如可执行文件 （.exe、.dll、.lib） 和源文件 （.idl、.h 文件） 的相关的类型的组。  
+Every configuration can support a set of build processes that produce output items such as executable or resource files. These output items are private to the user and can be placed in groups that link related types of output such as executable files (.exe, .dll, .lib) and source files (.idl, .h files).  
   
- 输出项便可通过提供<xref:Microsoft.VisualStudio.Shell.Interop.IVsOutput2>方法和枚举与<xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumOutputs>方法。 当你想向输出项进行分组时，你的项目还应实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputGroup>接口。  
+ Output items can be made available through the <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutput2> methods and enumerated with the <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumOutputs> methods. When you want to group output items, your project should also implement the <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputGroup> interface.  
   
- 通过实现开发构造`IVsOutputGroup`允许到组根据使用情况的输出的项目。 例如，一个 DLL 可能与其程序数据库 (PDB) 进行分组。  
+ The construct developed by implementing `IVsOutputGroup` allows projects to group outputs according to usage. For instance, a DLL might be grouped with its program database (PDB).  
   
 > [!NOTE]
-> PDB 文件包含调试信息并生成.dll 或.exe 时指定生成调试信息选项时创建它。 为仅调试项目配置通常生成.pdb 文件。  
+> A PDB file contains debugging information and it is created when 'Generate Debug Info' option is specified when building the .dll or .exe. The .pdb file is usually generated for Debug project configuration only.  
   
- 项目必须返回相同数量的支持，每个配置的组，即使的组中包含的输出数可能会配置配置有所不同。 例如，项目 Matt 的 DLL 可能会在调试配置中，包括 mattd.dll 和 mattd.pdb 但仅在零售配置中包括 matt.dll。  
+ The project must return the same number of groups for each configuration that it supports, even though the number of outputs contained within a group may vary from configuration to configuration. For example, the project Matt's DLL might include mattd.dll and mattd.pdb in Debug configuration, but only include matt.dll in Retail configuration.  
   
- 组之间还具有相同的标识符信息，如规范名称、 显示名称和组信息，请配置配置项目中。 这种一致性允许部署和打包以继续运行，即使配置更改。  
+ The groups also have the same identifier information, such as canonical name, display name, and group information, from configuration to configuration within a project. This consistency allows deployment and packaging to continue to operate even if configurations change.  
   
- 组还可以允许打包快捷方式以指向有意义的名称的一个主要输出。 任何组可能在给定配置中，为空，因此应有关组的大小不进行任何假设。 每个组中的任何配置的大小 （多个输出） 可以不同于在相同的配置中的另一个组的大小。 它还可以从另一种配置中的相同组的大小不同。  
+ Groups can also have a key output that allows packaging shortcuts to point to something meaningful. Any group might be empty in a given configuration, so no assumptions should be made about the size of a group. The size (number of outputs) of each group in any configuration can be different from the size of another group in the same configuration. It can also be different from the size of the same group in another configuration.  
   
- ![输出组图](../../extensibility/internals/media/vsoutputgroups.gif "vsOutputGroups")  
+ ![Output Groups graphic](../../extensibility/internals/media/vsoutputgroups.gif "vsOutputGroups")  
 输出组  
   
- 主要用途<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg>接口是为了提供访问以生成、 部署和调试管理对象并允许到组的输出可以自由的项目。 使用此接口的详细信息，请参阅[项目配置对象](../../extensibility/internals/project-configuration-object.md)。  
+ The primary use of the <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg> interface is to provide access to build, deploy and debug management objects and allow projects the freedom to group outputs. For more information on the use of this interface, see [Project Configuration Object](../../extensibility/internals/project-configuration-object.md).  
   
- 在上图中，组生成都有一个键，因此输出配置 （bD.exe 或 b.exe） 中用户可以创建内置的快捷方式和知道该快捷方式，将正常工作而不考虑部署的配置。 组源没有输出，一个密钥，因此用户不能创建它的快捷方式。 如果调试组生成有主要输出，但零售组生成没有的将是实现不正确。 下述，然后，如果任何配置有不包含任何输出，一个组，并没有密钥的文件，然后与该组包含输出的其他配置操作结果，不能具有密钥文件。 安装程序编辑器假定规范名称和显示名称的组，以及存在一个密钥文件，不要更改基于在配置中。  
+ In the previous diagram, Group Built has a key output across configurations (either bD.exe or b.exe) so the user can create a shortcut to Built and know that the shortcut will work regardless of the configuration deployed. Group Source does not have a key output, so the user cannot create a shortcut to it. If the Debug Group Built has a key output, but the Retail Group Built does not, that would be an incorrect implementation. It follows, then, that if any configuration has a group that contains no outputs, and, as a result, no key file, then other configurations with that group that do contain outputs cannot have key files. The installer editors assume that canonical names and display names of groups, plus the existence of a key file, do not change based in configurations.  
   
- 请注意，如果一个项目具有`IVsOutputGroup`，它不希望以打包或部署，就足以将该输出放在组中。 输出仍可枚举通常通过实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg.EnumOutputs%2A>返回所有配置的输出，而不考虑分组的方法。  
+ Note that if a project has an `IVsOutputGroup` that it does not want to package or deploy, it is sufficient to not put that output in a group. The output can still be enumerated normally by implementing the <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg.EnumOutputs%2A> method that returns all of a configuration's outputs regardless of grouping.  
   
- 有关详细信息，请参阅的实现`IVsOutputGroup`中的自定义项目示例[项目的 MPF](http://mpfproj12.codeplex.com)。  
+ For more information, see the implementation of `IVsOutputGroup` in the Custom Project sample at [MPF for Projects](https://archive.codeplex.com/?p=mpfproj12).  
   
 ## <a name="see-also"></a>请参阅  
- [管理配置选项](../../extensibility/internals/managing-configuration-options.md)   
- [用于构建的项目配置](../../extensibility/internals/project-configuration-for-building.md)   
- [项目配置对象](../../extensibility/internals/project-configuration-object.md)   
+ [Managing Configuration Options](../../extensibility/internals/managing-configuration-options.md)   
+ [Project Configuration for Building](../../extensibility/internals/project-configuration-for-building.md)   
+ [Project Configuration Object](../../extensibility/internals/project-configuration-object.md)   
  [解决方案配置](../../extensibility/internals/solution-configuration.md)

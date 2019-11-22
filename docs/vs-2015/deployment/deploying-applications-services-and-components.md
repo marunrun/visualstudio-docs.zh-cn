@@ -1,5 +1,5 @@
 ---
-title: 部署应用程序、 服务和组件 |Microsoft Docs
+title: Deploying Applications, Services, and Components | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 8ed493089ed215faaddc1009328ec6f8b906534f
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 5ca4d6a4097848021073bb77323fd0456f3dddc1
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66260687"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74289816"
 ---
 # <a name="deploying-applications-services-and-components"></a>部署应用程序、服务和组件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,18 +40,18 @@ ms.locfileid: "66260687"
   
 |部署方案|支持内容|  
 |-------------------------|------------------------|  
-|**发布到云：** 你可以使应用程序、 服务和数据可从任意位置使用 Visual Studio 将其部署到 Microsoft Azure。|[应用程序发布到 Microsoft Azure](/visualstudio/deployment/quickstart-deploy-to-azure)|  
-|**发布 Windows 应用商店应用程序：** 可以轻松地生成、 提交，和销售给世界各地的客户从 Windows 应用商店应用。|[打包、 部署和查询 Windows 应用商店应用](https://msdn.microsoft.com/library/hh446593\(v=vs.85\).aspx)|  
-|**发布 Windows Phone 应用：** 您可以提交新的应用程序或对现有应用程序进行认证，Windows Phone 开发人员中心上的更新。|[发布 Windows Phone 应用](http://dev.windowsphone.com/publish)|  
-|**部署 ASP.NET 应用程序或服务：** 可在多种不同方式部署 ASP.NET 应用程序和服务。|[部署 ASP.NET web 应用程序和服务](http://www.asp.net/aspnet/overview/deployment)|  
-|**部署 LightSwitch 应用程序或服务：** 使用 LightSwitch 创建应用程序和 OData 服务后，您可以将其部署到 web 服务器或 Microsoft Azure。|[部署 LightSwitch 应用程序](https://msdn.microsoft.com/library/4818d933-295c-4ecc-9148-7ad9ca28dcdb)|  
-|**发布 SharePoint 应用程序：** 可以将应用发布到 Office 应用商店或内部组织的应用程序目录的 sharepoint。|[通过使用 Visual Studio 发布 SharePoint 应用程序](https://msdn.microsoft.com/library/office/jj220044\(v=office.15\).aspx)|  
-|**发布 Office 应用程序：** 可以将应用发布到 Office 应用商店或内部组织的应用程序目录的 office。|[发布 office 应用程序](https://msdn.microsoft.com/library/office/fp123515.aspx)|  
-|**部署 WCF 服务：** 其他应用程序可以使用部署到 Web 服务器的 WCF RIA 服务。|[部署 WCF RIA Services 解决方案](https://msdn.microsoft.com/library/ff426912\(v=vs.91\).aspx)|  
-|**部署 OData 服务：** 其他应用程序可以使用部署到 web 服务器的 OData 服务。|[部署 OData 服务](https://msdn.microsoft.com/library/hh973447.aspx)|  
-|**部署桌面应用程序：** 通过使用 ClickOnce 部署，你可以发布到 web 服务器或网络文件共享的桌面应用程序。 用户随后只需一次单击即可安装应用程序。|[ClickOnce 安全和部署](../deployment/clickonce-security-and-deployment.md)|  
-|**创建安装程序：** 可以使用免费的 InstallShield Limited Edition 创建安装程序。|[InstallShield Limited Edition](../deployment/installshield-limited-edition.md)|  
-|**维护现有的安装程序：** 继续使用早期版本的 Visual Studio 中创建的安装 Visual Studio 安装程序项目扩展的安装程序。|[Visual Studio 安装程序项目扩展](http://blogs.msdn.com/b/visualstudio/archive/2014/04/17/visual-studio-installer-projects-extension.aspx)<br /><br /> 此处提供了安装程序项目的文档：[Visual Studio 安装程序部署](https://msdn.microsoft.com/library/2kt85ked\(v=vs.100\).aspx)|  
-|**部署一个视觉对象C++应用程序：** 你可以部署视觉对象C++通过使用集中部署、 本地部署或静态链接的应用程序的运行时。|[部署本机桌面应用程序 (Visual C++)](/cpp/windows/deploying-native-desktop-applications-visual-cpp)|  
-|**部署用于测试的应用程序：** 可以通过将应用程序部署到虚拟环境中来实现更复杂的开发和测试。|[测试实验室环境](https://msdn.microsoft.com/library/14ba54c8-a158-4a6e-b00a-b00ae960feb8)|  
-|**安装必备组件：** 可以通过配置通用安装程序（称为引导程序）来为桌面应用程序安装必备组件。|[应用程序部署必备](../deployment/application-deployment-prerequisites.md)|
+|**Publish to the cloud:** You can make applications, services, and data available from anywhere by using Visual Studio to deploy them to Microsoft Azure.|[Publishing Applications to Microsoft Azure](/visualstudio/deployment/quickstart-deploy-to-azure)|  
+|**Publish a Windows Store app:** You can easily build, submit, and sell your apps from the Windows Store to customers around the world.|[Packaging, deployment, and query of Windows Store apps](https://msdn.microsoft.com/library/hh446593\(v=vs.85\).aspx)|  
+|**Publish a Windows Phone app:** You can submit a new app or an update to an existing app for certification on the Windows Phone Dev Center.|[Publish a Windows Phone App](https://developer.microsoft.com/)|  
+|**Deploy an ASP.NET application or service:** You can deploy ASP.NET applications and services in a number of different ways.|[Deploying ASP.NET web applications and services](https://docs.microsoft.com/aspnet/mvc/overview/deployment/)|  
+|**Deploy a LightSwitch application or service:** After you create applications and OData services by using LightSwitch, you can deploy them to a web server or to Microsoft Azure.|[部署 LightSwitch 应用程序](https://msdn.microsoft.com/library/4818d933-295c-4ecc-9148-7ad9ca28dcdb)|  
+|**Publish an app for SharePoint:** You can publish an app for SharePoint to the Office Store or to an app catalog for an internal organization.|[Publish an app for SharePoint by using Visual Studio](https://msdn.microsoft.com/library/office/jj220044\(v=office.15\).aspx)|  
+|**Publish an app for Office:** You can publish an app for Office to the Office Store or to an app catalog for an internal organization.|[Publishing your app for Office](https://msdn.microsoft.com/library/office/fp123515.aspx)|  
+|**Deploy a WCF service:** Other applications can use WCF RIA services that you deploy to a web server.|[Deploying WCF RIA Services Solutions](https://msdn.microsoft.com/library/ff426912\(v=vs.91\).aspx)|  
+|**Deploy an OData service:** Other applications can use OData services that you deploy to a web server.|[Deploy an OData Service](https://msdn.microsoft.com/library/hh973447.aspx)|  
+|**Deploy a desktop application:** By using ClickOnce deployment, you can publish a desktop application to a web server or a network file share. 用户随后只需一次单击即可安装应用程序。|[ClickOnce 安全和部署](../deployment/clickonce-security-and-deployment.md)|  
+|**Create a setup program:** You can create a setup program by using InstallShield Limited Edition, which is free.|[InstallShield Limited Edition](../deployment/installshield-limited-edition.md)|  
+|**Maintain an existing setup program:** Continue using a setup program created in an earlier version of Visual Studio by installing the Visual Studio Installer Projects Extension.|[Visual Studio Installer Projects Extension](https://devblogs.microsoft.com/visualstudio/visual-studio-installer-projects-extension/)<br /><br /> Documentation for installer projects is available here: [Visual Studio Installer Deployment](https://msdn.microsoft.com/library/2kt85ked\(v=vs.100\).aspx)|  
+|**Deploy a Visual C++ application:** You can deploy the Visual C++ runtime with an application by using central deployment, local deployment, or static linking.|[部署本机桌面应用程序 (Visual C++)](/cpp/windows/deploying-native-desktop-applications-visual-cpp)|  
+|**Deploy an application for testing:** You can enable more sophisticated development and testing by deploying your applications into virtual environments.|[测试实验室环境](https://msdn.microsoft.com/library/14ba54c8-a158-4a6e-b00a-b00ae960feb8)|  
+|**Install prerequisites:** You can install prerequisite components for desktop applications by configuring a generic installer, which is known as a bootstrapper.|[应用程序部署必备](../deployment/application-deployment-prerequisites.md)|

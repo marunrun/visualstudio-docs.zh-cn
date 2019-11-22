@@ -1,5 +1,5 @@
 ---
-title: 演练：使用文本模板生成代码 |Microsoft Docs
+title: 'Walkthrough: Generating Code by using Text Templates | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -12,12 +12,12 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 29a455194e64ee30186941cb67b014170426cce0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c2a86689fd41b7c0233db0df544082ef22c4931a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659255"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295500"
 ---
 # <a name="walkthrough-generating-code-by-using-text-templates"></a>演练：使用文本模板生成代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "72659255"
  在此示例项目中，模板读取示例 XML 文件，并生成对应于每种节点类型的类。 在手动编写的代码中，可以使用这些类来导航 XML 文件。 此外，还可以在使用相同节点类型的任何其他文件上运行应用程序。 示例 XML 文件的目的是提供想要应用程序处理的所有节点类型的示例。
 
 > [!NOTE]
-> 包括在 [中的应用程序](http://go.microsoft.com/fwlink/?LinkId=178765)xsd.exe [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]可以从 XML 文件中生成强类型类。 此处显示的模板作为示例提供。
+> 包括在 [中的应用程序](https://go.microsoft.com/fwlink/?LinkId=178765)xsd.exe [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]可以从 XML 文件中生成强类型类。 此处显示的模板作为示例提供。
 
  下面是示例文件：
 
@@ -421,4 +421,4 @@ namespace MyProject
  若在“错误列表”中看到模板转换或编译错误，或者若未正确生成输出文件，可以借助[使用 TextTransform 实用工具生成文件](../modeling/generating-files-with-the-texttransform-utility.md)中所述的技术解决文本模板的问题。
 
 ## <a name="see-also"></a>请参阅
- [通过使用 T4 文本模板](../modeling/design-time-code-generation-by-using-t4-text-templates.md)[编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)生成设计时代码
+ [Design-Time Code Generation by using T4 Text Templates](../modeling/design-time-code-generation-by-using-t4-text-templates.md) [Writing a T4 Text Template](../modeling/writing-a-t4-text-template.md)

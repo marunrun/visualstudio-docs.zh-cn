@@ -1,5 +1,5 @@
 ---
-title: 为 UML 模型定义验证约束 |Microsoft Docs
+title: Define validation constraints for UML models | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -11,19 +11,19 @@ caps.latest.revision: 49
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2f279216d06972578f5173e57375c89542c71e3f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3dd76deb3b72d3b12d3b5892c2e5664273425c4c
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669886"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295844"
 ---
 # <a name="define-validation-constraints-for-uml-models"></a>为 UML 模型定义验证约束
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-你可以定义测试模型是否符合所指定条件的验证约束。 例如，你可以定义一个约束以确保用户不会创建具有继承关系的循环。 用户尝试打开或保存模型时将调用该约束，此外也可手动调用。 如果约束失效，错误窗口中将增加一条你定义的错误消息。 可以将这些约束打包到 Visual Studio 集成扩展 ([VSIX](http://go.microsoft.com/fwlink/?LinkId=160780)) 中，并将其分发到其他 Visual Studio 用户。
+你可以定义测试模型是否符合所指定条件的验证约束。 例如，你可以定义一个约束以确保用户不会创建具有继承关系的循环。 用户尝试打开或保存模型时将调用该约束，此外也可手动调用。 如果约束失效，错误窗口中将增加一条你定义的错误消息。 可以将这些约束打包到 Visual Studio 集成扩展 ([VSIX](https://go.microsoft.com/fwlink/?LinkId=160780)) 中，并将其分发到其他 Visual Studio 用户。
 
- 你还可以定义对照外部资源（如数据库）验证模型的约束。 如果要针对层关系图验证程序代码，请参阅[向层关系图添加自定义体系结构验证](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)。
+ 你还可以定义对照外部资源（如数据库）验证模型的约束。 If you want to validate program code against a layer diagram, see [Add custom architecture validation to layer diagrams](../modeling/add-custom-architecture-validation-to-layer-diagrams.md).
 
  若要查看支持 UML 模式的 Visual Studio 版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
@@ -37,14 +37,14 @@ ms.locfileid: "72669886"
 
  验证错误在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 错误窗口中报告，你可以双击错误以选择存在错误的模型元素。
 
- 有关应用验证的详细信息，请参阅[验证 UML 模型](../modeling/validate-your-uml-model.md)。
+ For more information about applying validation, see [Validate your UML model](../modeling/validate-your-uml-model.md).
 
 ## <a name="defining-a-validation-extension"></a>定义验证扩展
  若要为 UML 设计器创建验证扩展，必须创建一个用于定义验证约束的类，并将该类嵌入 Visual Studio 集成扩展 (VSIX) 中。 VSIX 用作可安装该约束的容器。 有两种替代方法可以定义验证扩展：
 
-- **使用项目模板在其自身 VSIX 中创建验证扩展。** 此方法更快。 如果不希望将验证约束与其他类型的扩展（如菜单命令、自定义工具箱项或笔势处理程序）组合在一起，可以采用此方法。 你可以在一个类中定义多个约束。
+- **Create a validation extension in its own VSIX using a project template.** 此方法更快。 如果不希望将验证约束与其他类型的扩展（如菜单命令、自定义工具箱项或笔势处理程序）组合在一起，可以采用此方法。 你可以在一个类中定义多个约束。
 
-- **创建单独的验证类和 VSIX 项目。** 如果希望将多种类型的扩展组合到同一个 VSIX 中，可以采用此方法。 例如，如果菜单命令要求模型遵守特定的约束，则可以将该菜单命令作为一种验证方法嵌入同一 VSIX 中。
+- **Create separate validation class and VSIX projects.** 如果希望将多种类型的扩展组合到同一个 VSIX 中，可以采用此方法。 例如，如果菜单命令要求模型遵守特定的约束，则可以将该菜单命令作为一种验证方法嵌入同一 VSIX 中。
 
 #### <a name="to-create-a-validation-extension-in-its-own-vsix"></a>若要在其自身 VSIX 中创建验证扩展
 
@@ -63,7 +63,7 @@ ms.locfileid: "72669886"
 
 4. 按 F5 以测试你的约束。 有关详细信息，请参阅 [执行验证约束](#Executing)。
 
-5. 在另一台计算机上安装菜单命令，方法是：将文件 bin 复制 \\ 由项目生成的 **\* \\ \*。** 有关详细信息，请参阅 [安装和卸载扩展](#Installing)。
+5. Install the menu command on another computer by copying the file **bin\\\*\\\*.vsix** that is built by your project. 有关详细信息，请参阅 [安装和卸载扩展](#Installing)。
 
    添加其他 **.cs** 文件时，通常将需要以下 `using` 语句：
 
@@ -178,7 +178,7 @@ using Microsoft.VisualStudio.Uml.Classes;
     }
     ```
 
-## <a name="Executing"></a>执行验证约束
+## <a name="Executing"></a> Executing a Validation Constraint
  出于测试目的，在调试模式下执行验证方法。
 
 #### <a name="to-test-the-validation-constraint"></a>若要测试验证约束
@@ -191,7 +191,7 @@ using Microsoft.VisualStudio.Uml.Classes;
 
     - 如果你有多个项目，请确保将 VSIX 项目设置为解决方案的启动项目。
 
-    - 在“解决方案资源管理器”中，在启动或唯一项目的快捷菜单上选择“属性”。 在项目属性编辑器中，选择 "**调试**" 选项卡。请确保 "**启动外部程序**" 字段中的字符串是 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的完整路径名，通常为：
+    - 在“解决方案资源管理器”中，在启动或唯一项目的快捷菜单上选择“属性”。 In the project properties editor, select the **Debug** tab. Make sure that the string in the **Start external program** field is the full pathname of [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], typically:
 
          `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
@@ -215,11 +215,11 @@ using Microsoft.VisualStudio.Uml.Classes;
 
     - 将正确的 `Export` 和 `ValidationMethod` 特性附加到验证方法。
 
-    - `ValidationCategories.Menu` 包含在 `ValidationMethod` 属性的自变量中，并且它由使用逻辑 OR （&#124;）的其他值构成。
+    - `ValidationCategories.Menu` is included in the argument for the `ValidationMethod` attribute, and it is composed with other values using Logical OR (&#124;).
 
     - 所有 `Import` 和 `Export` 特性的参数都有效。
 
-## <a name="Implementing"></a>计算约束
+## <a name="Implementing"></a> Evaluating the Constraint
  验证方法应确定你要应用的验证约束是 true 还是 false。 如果为 true，则不执行任何操作。 如果为 false，则应使用 `ValidationContext` 参数提供的方法报告错误。
 
 > [!NOTE]
@@ -259,7 +259,7 @@ public void ValidateSomething
 |||
 |-|-|
 |`[Export(typeof(System.Action <ValidationContext, object>))]`|使用 Managed Extensibility Framework (MEF) 将方法定义为验证约束。|
-|`[ValidationMethod (ValidationCategories.Menu)]`|指定将执行验证的时间。 如果要组合多&#124;个选项，请使用按位 "或" （）。<br /><br /> `Menu` = 由“验证”菜单调用。<br /><br /> `Save` = 在保存模型时调用。<br /><br /> `Open` = 在打开模型时调用。 `Load` = 在保存模型时调用，但如果违背规则，则警告用户此操作可能重新打开模型。 也可以在加载时（解析模型前）调用。|
+|`[ValidationMethod (ValidationCategories.Menu)]`|指定将执行验证的时间。 Use bitwise OR (&#124;) if you want to combine more than one option.<br /><br /> `Menu` = 由“验证”菜单调用。<br /><br /> `Save` = 在保存模型时调用。<br /><br /> `Open` = 在打开模型时调用。 `Load` = 在保存模型时调用，但如果违背规则，则警告用户此操作可能重新打开模型。 也可以在加载时（解析模型前）调用。|
 |`public void ValidateSomething`<br /><br /> `(ValidationContext context,`<br /><br /> `IElement element)`|将第二个参数 `IElement` 替换为你希望向其应用约束的元素类型。 这将对指定类型的所有元素调用该约束方法。<br /><br /> 方法的名称并不重要。|
 
  你可以使用第二个参数中的其他类型定义所需的尽可能多的验证方法。 调用验证时，将对符合该参数类型的每个模型元素调用每个验证方法。
@@ -275,14 +275,14 @@ public void ValidateSomething
 
 - `elementsWithError` 标识模型中的元素。 当用户双击错误报告时，将选择代表此元素的形状。
 
-  `LogError(),` `LogWarning()` 并 `LogMessage()` 将消息放入错误列表的不同部分。
+  `LogError(),` `LogWarning()` and `LogMessage()` place messages in different sections of the error list.
 
 ## <a name="how-validation-methods-are-applied"></a>如何应用验证方法
  验证应用于模型中的每个元素，其中包括关系和部分较大元素，例如类的特性和操作的参数。
 
  每个验证方法应用于符合其第二个参数中的类型的每个元素。 这意味着，如果你使用 `IUseCase` 的第二个参数定义一个验证方法，并使用该参数的超类型 `IElement`定义另一个验证方法，则这两种方法将应用于模型中的每个用例。
 
- 类型的层次结构在[UML 模型元素类型](../modeling/uml-model-element-types.md)中进行汇总。
+ The hierarchy of types is summarized in [UML model element types](../modeling/uml-model-element-types.md).
 
  你可以按以下关系访问这些元素。 例如，如果你打算在 `IClass`上定义一个验证方法，则可以遍历其拥有的属性：
 
@@ -349,7 +349,7 @@ IUseCase useCase = useCaseShape.Element;
 context.LogError(... , usecase);
 ```
 
-### <a name="ContextCache"></a>协调多个验证
+### <a name="ContextCache"></a> Coordinating Multiple Validations
  调用验证时，例如当用户从关系图菜单调用验证时，每个验证方法将应用于每个模型元素。 这意味着，在单次调用验证框架时，可以将同一方法多次应用于不同的元素。
 
  这为处理元素间关系的验证带来了问题。 例如，你可以编写一个验证，从（例如）用例开始，遍历 **include** 关系以验证是否没有循环关系。 但是，当方法应用于具有多个 **include** 链接的模型中的每个用例时，很有可能会重复处理该模型的同一区域。
@@ -363,7 +363,7 @@ context.LogError(... , usecase);
 |`context.GetValue<T>(name)`|获取值。|
 |`Context.GetValue<T>()`|获取指定类型的值。|
 
-## <a name="Installing"></a>安装和卸载扩展
+## <a name="Installing"></a> Installing and uninstalling an extension
  你可以在自己的计算机和其他计算机上安装 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 扩展。
 
 #### <a name="to-install-an-extension"></a>若要安装扩展
@@ -372,11 +372,11 @@ context.LogError(... , usecase);
 
     1. 在“解决方案资源管理器”中，在 VSIX 项目的快捷菜单上，选择“在 Windows 资源管理器中打开文件夹”。
 
-    2. **@No__t_2 \\** _项目_**中**查找文件 bin \\
+    2. Locate the file **bin\\\*\\** _YourProject_ **.vsix**
 
 2. 将 **.vsix** 文件复制到要安装该扩展的目标计算机。 该计算机可以是自己的计算机或其他计算机。
 
-    - 目标计算机必须具有你在**source.extension.vsixmanifest**中指定的 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 版本之一。
+    - The target computer must have one of the editions of [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] that you specified in **source.extension.vsixmanifest**.
 
 3. 在目标计算机上，打开 **.vsix** 文件。
 
@@ -392,9 +392,9 @@ context.LogError(... , usecase);
 
 3. 选择扩展，然后选择“卸载”。
 
-   在极少数情况下，有错误的扩展无法加载并在错误窗口中创建报告，但不显示在扩展管理器中。 在这种情况下，可以通过从以下位置删除文件来删除扩展，其中 *% LocalAppData%* 通常为*DriveName*： \Users \\*UserName*\AppData\Local：
+   在极少数情况下，有错误的扩展无法加载并在错误窗口中创建报告，但不显示在扩展管理器中。 In that case, you can remove the extension by deleting the file from the following location where *%LocalAppData%* is typically *DriveName*:\Users\\*UserName*\AppData\Local:
 
-   *% LocalAppData%* **\Microsoft\VisualStudio \\ [version] \Extensions**
+   *%LocalAppData%* **\Microsoft\VisualStudio\\[version]\Extensions**
 
 ## <a name="Example"></a> 示例
  本示例查找元素间依赖关系中的循环。
@@ -474,4 +474,4 @@ private bool NoDependencyLoops(ValidationContext context,
 ```
 
 ## <a name="see-also"></a>请参阅
- [使用 UML API](../modeling/programming-with-the-uml-api.md) [定义和安装建模扩展](../modeling/define-and-install-a-modeling-extension.md)编程
+ [Define and install a modeling extension](../modeling/define-and-install-a-modeling-extension.md) [Programming with the UML API](../modeling/programming-with-the-uml-api.md)

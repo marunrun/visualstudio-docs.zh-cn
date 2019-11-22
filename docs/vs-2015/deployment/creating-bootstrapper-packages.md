@@ -1,5 +1,5 @@
 ---
-title: 创建引导程序包 |Microsoft Docs
+title: Creating Bootstrapper Packages | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -21,12 +21,12 @@ caps.latest.revision: 47
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: ac304d695c13fde2b69aafbb903493ad9865bf87
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f90344c156ea6c012c6ac086ffa40bf30e78a682
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68187809"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300736"
 ---
 # <a name="creating-bootstrapper-packages"></a>创建引导程序包
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68187809"
  引导程序首先检测是否已安装所有系统必备组件。 如果未安装系统必备组件，引导程序将首先显示相关许可协议。 接着，在最终用户接受许可协议后，将开始安装相应的系统必备组件。 否则，如果检测到所有的系统必备组件，引导程序将直接启动应用程序的安装程序。  
   
 ## <a name="creating-custom-packages"></a>创建自定义程序包  
- 可以使用 Visual Studio 中的 XML 编辑器来生成清单。 有关详细信息，请参阅[如何：创建程序包清单](../deployment/how-to-create-a-package-manifest.md)和[如何：创建产品清单](../deployment/how-to-create-a-product-manifest.md)。 若要查看创建引导程序包的示例，请参阅[演练：创建自定义引导程序以显示隐私提示](../deployment/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt.md)。  
+ 可以使用 Visual Studio 中的 XML 编辑器来生成清单。 有关详细信息，请参阅 [How to: Create a Package Manifest](../deployment/how-to-create-a-package-manifest.md) 和 [How to: Create a Product Manifest](../deployment/how-to-create-a-product-manifest.md)。 若要查看创建引导程序包的示例，请参阅 [Walkthrough: Creating a Custom Bootstrapper to Show a Privacy Prompt](../deployment/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt.md)。  
   
  若要创建引导程序包，必须向引导程序清单生成器提供 EXE 或 MSI 文件形式的可再发行组件。 然后，引导程序清单生成器将会创建以下文件：  
   
@@ -70,7 +70,7 @@ ms.locfileid: "68187809"
   
   `package.xml`  
   
-  最后，将可再发行的文件复制到引导程序文件夹位置。 有关详细信息，请参阅[如何：创建本地化的引导程序包](../deployment/how-to-create-a-localized-bootstrapper-package.md)。  
+  最后，将可再发行的文件复制到引导程序文件夹位置。 有关详细信息，请参阅 [How to: Create a Localized Bootstrapper Package](../deployment/how-to-create-a-localized-bootstrapper-package.md)。  
   
 ```  
 \Program Files\Microsoft Visual Studio 14.0\SDK\Bootstrapper\Packages  
@@ -100,7 +100,7 @@ HKLM\Software\Wow6432Node\Microsoft\GenericBootstrapper\11.0
   
  下表显示由引导程序自动填充的属性。  
   
-|属性|描述|  
+|Property|描述|  
 |--------------|-----------------|  
 |ApplicationName|应用程序的名称。|  
 |ProcessorArchitecture|可执行文件的目标平台的处理器和每字位数。 包括以下值：<br /><br /> -   Intel<br />-   IA64<br />-   AMD64|  
@@ -115,7 +115,7 @@ HKLM\Software\Wow6432Node\Microsoft\GenericBootstrapper\11.0
   
  `%ProgramFiles%\Microsoft.NET\RedistList`  
   
- 可再发行组件列表是一个 XML 文件，您应使用以下格式命名：*公司名称*。*组件名称*。RedistList.xml。 举例来说，如果组件名为 Datawidgets 且由 Acme 开发，则使用 Acme.DataWidgets.RedistList.xml。 可再发行文件列表的内容的示例可能像下面这样：  
+ 可再发行文件列表是一个 XML 文件，你应采用下面的格式命名该文件： *公司名称*.*组件名称*.RedistList.xml。 举例来说，如果组件名为 Datawidgets 且由 Acme 开发，则使用 Acme.DataWidgets.RedistList.xml。 可再发行文件列表的内容的示例可能像下面这样：  
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  
@@ -125,7 +125,7 @@ HKLM\Software\Wow6432Node\Microsoft\GenericBootstrapper\11.0
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [如何：与 ClickOnce 应用程序一起安装的必备组件](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)   
+ [如何：与 ClickOnce 应用程序一起安装必备组件](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)   
  [“系统必备”对话框](../ide/reference/prerequisites-dialog-box.md)   
- [产品和包架构引用](../deployment/product-and-package-schema-reference.md)   
- [使用 Visual Studio 2005 引导程序来开始安装](http://go.microsoft.com/fwlink/?LinkId=107537)
+ [Product and Package Schema Reference](../deployment/product-and-package-schema-reference.md)   
+ [使用 Visual Studio 2005 引导程序来开始安装](https://go.microsoft.com/fwlink/?LinkId=107537)

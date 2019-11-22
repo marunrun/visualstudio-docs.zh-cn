@@ -1,5 +1,5 @@
 ---
-title: DA0504：所分析的进程的最大工作集（字节） | Microsoft Docs
+title: DA0504：所分析的进程的最大工作集（以字节为单位） | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -13,21 +13,21 @@ caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a990b428cfa03722ee5e02884344d96844825ee8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 29cc7317cab2c4984a4cb0485475ff0960315cdc
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68157165"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74291503"
 ---
-# <a name="da0504-maximum-working-set-in-bytes-for-the-process-being-profiled"></a>DA0504：所分析进程的最大工作集（字节）
+# <a name="da0504-maximum-working-set-in-bytes-for-the-process-being-profiled"></a>DA0504：所分析的进程的最大工作集(以字节为单位)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-规则 Id |DA0504 |  
-|类别 |资源管理 |  
-|分析方法 |所有 |  
-|消息 |此信息仅作为信息收集。 进程工作集计数器测量由正在分析的进程使用的物理内存的使用情况。 报告的值是在所有测量时间间隔内观察到的最大值。|  
-|规则类型 |信息 |  
+Rule Id|DA0504|  
+|Category|Resource Management|  
+|Profiling method|All|  
+|Message|This information was gathered for information only. 进程工作集计数器测量由正在分析的进程使用的物理内存的使用情况。 报告的值是在所有测量时间间隔内观察到的最大值。|  
+|Rule type|Information|  
   
  使用采样法、.NET 内存或资源争用方法进行分析时，必须收集至少 10 个样本才能触发此规则。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68157165"
   
  报告的值包括进程已引用的共享内存段中的驻留页面。 进程引用的共享 DLL 包含在计算的共享内存段中。 受共享内存段的影响，进程工作集的值可能高于进程已经分配的虚拟内存量。  
   
- 进程工作集的大小反映进程当前使用的虚拟内存量。 它还受可用于运行应用程序的物理内存量（或 RAM）和其他运行的进程对该物理内存的争用量的影响。 有关进程工作集的详细信息，请参阅 MSDN 上 Windows 内存管理文档中的 [Working Set](http://go.microsoft.com/fwlink/?LinkId=177830)（工作集）。  
+ 进程工作集的大小反映进程当前使用的虚拟内存量。 它还受可用于运行应用程序的物理内存量（或 RAM）和其他运行的进程对该物理内存的争用量的影响。 有关进程工作集的详细信息，请参阅 MSDN 上 Windows 内存管理文档中的 [Working Set](https://go.microsoft.com/fwlink/?LinkId=177830)（工作集）。  
   
 ## <a name="how-to-use-rule-data"></a>如何使用规则数据  
  该规则从 Windows 性能监视设备收集此测量数据，并进行报告用于信息用途。 若要了解不同测试方案中应用程序的性能，可使用此规则比较不同版本程序的性能。  
