@@ -10,12 +10,12 @@ caps.latest.revision: 7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 08e317555042bbc63707cc6eccd0177e78b6ddcc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: fe8b158fd870b83b39b9d316e68582f2726d89bb
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645670"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300192"
 ---
 # <a name="getting-started-with-debugging-in-visual-studio-2015"></a>在 Visual Studio 2015 中调试入门
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -170,7 +170,7 @@ Visual Studio 2015 提供一组强大的集成项目生成和调试工具。 本
 
  ![Visual Studio 2015 条件断点](../ide/media/vs-ide-gs-debug-breakpoint-conditional.PNG "|::ref23::|")
 
- 有关如何声明用于评估条件断点的表达式的详细信息，请观看第 9 频道视频 [Visual Studio 2015 中的断点配置体验](http://channel9.msdn.com/Events/Visual-Studio/Connect-event-2014/711)。
+ 有关如何声明用于评估条件断点的表达式的详细信息，请观看第 9 频道视频 [Visual Studio 2015 中的断点配置体验](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2014/711)。
 
 ### <a name="inspecting-your-code-at-run-time"></a>在运行时检查你的代码
  当运行代码达到断点并暂停时，你可以检查变量和调用堆栈以确定发生了什么情况。 这些值是否在你期望的范围内？ 调用是否正按正确的顺序进行？

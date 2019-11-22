@@ -9,12 +9,12 @@ caps.latest.revision: 5
 author: kraigb
 ms.author: kraigb
 manager: jillfra
-ms.openlocfilehash: 61f8748a3874f32db9c235d03b6b7464bc5cecf1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 288fb24c9c1c4ddee1cb59a968e717531e274af1
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62550995"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300584"
 ---
 # <a name="getting-started-with-ptvs-building-a-website-in-azure"></a>PTVS 入门：在 Azure 中构建网站
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "62550995"
   
  你可以在很短的 [youtube 视频](https://www.youtube.com/watch?v=FJx5mutt1uk&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=6)中观看这些说明。  
   
- 从“新建项目”对话框开始， 然后在 Python 项目下选择“Bottle Web 项目”。  此 [Bottle](http://bottlepy.org/docs/dev/index.html) 模板是一个基于 [Bootstrap 框架](http://getbootstrap.com/)的入门网站。  创建项目时，Visual Studio 会提示你将依赖项（本例中为 Bottle）安装到虚拟环境中。  因为要部署到 Azure 网站，所以需将依赖项添加到虚拟环境中以部署站点操作所需的位。  还需要将环境建立在32 位的 Python 2.7 或 3.4 的基础上。  创建项目后，请按 F5 开始在本地运行站点。  
+ 从“新建项目”对话框开始， 然后在 Python 项目下选择“Bottle Web 项目”。  此 [Bottle](http://bottlepy.org/docs/dev/index.html) 模板是一个基于 [Bootstrap 框架](https://getbootstrap.com/)的入门网站。  创建项目时，Visual Studio 会提示你将依赖项（本例中为 Bottle）安装到虚拟环境中。  因为要部署到 Azure 网站，所以需将依赖项添加到虚拟环境中以部署站点操作所需的位。  还需要将环境建立在32 位的 Python 2.7 或 3.4 的基础上。  创建项目后，请按 F5 开始在本地运行站点。  
   
  在 Azure 中尝试访问站点很容易。  如果没有 Azure 订阅，则可以使用 [try.azurewebsites.net](https://trywebsites.azurewebsites.net/)。  此站点提供了一个简单方法：通过社会化登录，一次课访问 Azure 网站一小时。  不需要信用卡。  在“更改语言”下拉列表中选择“空站点”模板并选择“创建”。  在“使用 Web 应用程序”下，选择“下载发布配置文件”，并保存文件以供 Visual Studio 使用。  还可以使用任何操作系统中的 git 进行部署。  
   
@@ -33,6 +33,6 @@ ms.locfileid: "62550995"
   
  你可以在很短的 [youtube 视频](https://www.youtube.com/watch?v=FJx5mutt1uk&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=6)中观看这些说明。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Wiki 文档](https://github.com/Microsoft/PTVS/wiki/Web-Project)   
  [PTVS 入门和深入了解视频](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)

@@ -12,12 +12,12 @@ caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
 manager: jillfra
-ms.openlocfilehash: c998433ca96c46f6a24b75aec5d3a2a95912b786
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: b33b1b47ad4c32aabe09aae5a66fe3f02aeb1487
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67823294"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300379"
 ---
 # <a name="how-to-upgrade-visual-c-projects-to-visual-studio-2015"></a>如何：将 Visual C++ 项目升级到 Visual Studio 2015
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "67823294"
 - 对于 [!INCLUDE[cppcli](../includes/cppcli-md.md)] 项目，请将 TargetFrameworkVersion 更改为 .NET Framework 4.5.2。
 
 ## <a name="continuing-to-work-with-a-custom-platformtoolset"></a>继续使用自定义 PlatformToolset
- 如果要继续在 [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)]中使用自定义的 PlatformToolset，则该工具集必须位于 x86 计算机的 %ProgramFiles%\MSBuild\Microsoft.Cpp\v4.0\Platforms\Win32\PlatformToolsets\ 下，或位于 x64 计算机的 %ProgramFiles (x86)%\MSBuild\Microsoft.Cpp\v4.0\Platforms\Win32\PlatformToolsets\ 下。 有关如何创建自定义 PlatformToolset 的信息，请参见 Visual C++ 团队博客上的 [C++ 本机多目标](http://go.microsoft.com/fwlink/?LinkId=248587) 。
+ 如果要继续在 [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)]中使用自定义的 PlatformToolset，则该工具集必须位于 x86 计算机的 %ProgramFiles%\MSBuild\Microsoft.Cpp\v4.0\Platforms\Win32\PlatformToolsets\ 下，或位于 x64 计算机的 %ProgramFiles (x86)%\MSBuild\Microsoft.Cpp\v4.0\Platforms\Win32\PlatformToolsets\ 下。 有关如何创建自定义 PlatformToolset 的信息，请参见 Visual C++ 团队博客上的 [C++ 本机多目标](https://go.microsoft.com/fwlink/?LinkId=248587) 。
 
 ## <a name="see-also"></a>另请参阅
  [Visual C++ 移植和升级指南](https://msdn.microsoft.com/library/f5fbcc3d-aa72-41a6-ad9a-a706af2166fb) [移植、迁移和升级 Visual Studio 项目](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)

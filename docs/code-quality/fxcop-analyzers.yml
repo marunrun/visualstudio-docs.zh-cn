@@ -1,50 +1,50 @@
 ### YamlMime:Landing
-title: 从旧分析（FxCop）迁移到源分析（FxCop 分析器）
-summary: 了解如何首次分析代码，或者如何从二进制分析（FxCop）迁移到使用源分析（FxCop 分析器）分析托管代码的新方式。
+title: Migrate from legacy analysis (FxCop) to source analysis (FxCop analyzers)
+summary: Learn how to analyze code for the first time or how to migrate from binary analysis (FxCop) to the new way of analyzing managed code using source analysis (FxCop analyzers).
 metadata:
-  title: FxCop 迁移文档
-  description: 了解如何在分析代码时将旧的二进制分析（FxCop）转换为源分析（FxCop 分析器）。
+  title: FxCop migration documentation
+  description: Learn how to move from legacy binary analysis (FxCop) to source analysis (FxCop analyzers) when you analyze code.
   ms.prod: visual-studio-dev16
   ms.technology: vs-ide-code-analysis
   ms.topic: landing-page
   f1_keywords:
   - vs.projectpropertypages.codeanalysis
-  author: gewarren
-  ms.author: gewarren
+  author: jillre
+  ms.author: jillfra
   manager: jillfra
   ms.date: 09/24/2019
-  ms.openlocfilehash: 0b86e42acaab7cf50443cc404eb81c257c9e352e
-  ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+  ms.openlocfilehash: 5ee1fc570d60dd5ff6a8aaabb4d2443cd878bbac
+  ms.sourcegitcommit: b04c603ce73b993d042ebdf7f3722cf4fe2ef7f4
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 10/17/2019
-  ms.locfileid: "72535877"
+  ms.lasthandoff: 11/22/2019
+  ms.locfileid: "74316394"
 landingContent:
-- title: 代码分析简介
+- title: Introduction to code analysis
   linkLists:
   - linkListType: overview
     links:
-    - text: 代码分析器概述
+    - text: Overview of code analyzers
       url: roslyn-analyzers-overview.md
   - linkListType: download
     links:
-    - text: 安装代码分析器
+    - text: Install code analyzers
       url: install-roslyn-analyzers.md
   - linkListType: how-to-guide
     links:
-    - text: 设置规则严重性并取消显示错误
+    - text: Set rule severity and suppress errors
       url: use-roslyn-analyzers.md
-    - text: 命令行用法
+    - text: Command-line usage
       url: use-roslyn-analyzers.md#command-line-usage
-- title: 迁移过时分析
+- title: Migrate off legacy analysis
   linkLists:
   - linkListType: overview
     links:
-    - text: 不同之处
+    - text: What's different
       url: roslyn-analyzers-overview.md#source-code-analysis-versus-legacy-analysis
   - linkListType: get-started
     links:
-    - text: FxCop 分析器常见问题
+    - text: FAQ about FxCop analyzers
       url: fxcop-analyzers-faq.md
   - linkListType: download
     links:
@@ -52,15 +52,15 @@ landingContent:
       url: install-fxcop-analyzers.md
   - linkListType: how-to-guide
     links:
-    - text: 配置 FxCop 分析器
+    - text: Configure FxCop analyzers
       url: configure-fxcop-analyzers.md
-    - text: 使用预定义的规则集
+    - text: Use predefined rule sets
       url: analyzer-rule-sets.md
   - linkListType: reference
     links:
-    - text: 移植和 unported 规则
+    - text: Ported and unported rules
       url: fxcop-rule-port-status.md
-- title: 其他类型的代码分析
+- title: Other types of code analysis
   linkLists:
   - linkListType: overview
     links:

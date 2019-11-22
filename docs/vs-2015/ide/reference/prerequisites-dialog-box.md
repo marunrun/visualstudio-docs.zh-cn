@@ -17,12 +17,12 @@ caps.latest.revision: 79
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 367af4965c1e5a744a7ba6c801d74bc194a70ebb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b8e5e004d2e337900d88f72d92bfd439103b87e0
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662186"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297848"
 ---
 # <a name="prerequisites-dialog-box"></a>“系统必备”对话框
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "72662186"
 |-------------|-----------------|
 |**创建用于安装系统必备组件的安装程序**|将应用程序的系统必备组件包含到安装程序 (Setup.exe) 中，以便在安装应用程序之前按照依赖顺序安装这些组件。 默认情况下，该选项是选中的。 如果没有选择此选项，则不会创建 Setup.exe。|
 |**选择要安装的系统必备组件**|指定是否安装组件，如 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]、Crystal Reports 等等。<br /><br /> 例如，通过选中“SQL Server 2005 Express Edition SP2”  旁边的复选框，可以指定安装程序验证目标计算机上是否安装有此组件，如果没有则进行安装。<br /><br /> 有关每个系统必备包的详细信息，请参见本主题后面部分的“系统必备信息”表。|
-|**检查 Microsoft 更新以获取更多可再发行组件**|单击此链接可进入[重新分发组件的引导程序包](http://go.microsoft.com/fwlink/?LinkId=208835)网站检查更新。|
+|**检查 Microsoft 更新以获取更多可再发行组件**|单击此链接可进入[重新分发组件的引导程序包](https://go.microsoft.com/fwlink/?LinkId=208835)网站检查更新。|
 |**从组件供应商的网站下载系统必备组件**|指定从供应商网站上安装系统必备组件。 这是默认选项。|
 |**从与我的应用程序相同的位置下载系统必备组件**|指定从与应用程序相同的位置安装系统必备组件。 这会将所有系统必备包复制到发布位置。 要让此选项正常工作，系统必备包必须位于开发计算机上。|
 |**从下列位置下载系统必备组件**|指定从选定的位置安装系统必备组件。 可使用“浏览”  按钮选择位置。|
@@ -58,7 +58,7 @@ ms.locfileid: "72662186"
 |**Microsoft Visual Studio 2010 报表查看器**|此程序包安装报表查看器控件，你可以使用这些控件向 Windows 窗体和 ASP.NET 应用程序中添加复杂数据报表。|
 |**Microsoft Visual Studio 2010 for Office 运行时（x86 和 x64）**|Visual Studio 中的 Office 开发人员工具提供了易于使用的集成工具，用来通过 Microsoft Office 创建自定义的业务解决方案。 你可以创建托管的智能客户端解决方案，这些解决方案使用 Office 应用程序作为用户界面。 使用这些工具，开发人员可以创建易于部署和维护的安全解决方案。<br /><br /> 有关详细信息，请参阅[如何：使用 ClickOnce 发布 Office 解决方案](https://msdn.microsoft.com/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)。|
 |**SQL Server 2005 Express Edition SP2 (x86)**|此程序包安装 Microsoft SQL Server 2005 Express Edition SP2，一个基于 [!INCLUDE[sqprsqext](../../includes/sqprsqext-md.md)] 的数据库应用程序。 SQL Server Express 是 Microsoft SQL Server 桌面引擎 (MSDE) 的替代产品。 SQL Server Express 是免费的并且可以再发行（按照协议），它既可以作为客户端数据库，也可以作为基本的服务器数据库。 除了下列不同外，SQL Server Express 在其他方面都与 SQL Server 2005 相同：<br /><br /> - 不支持企业功能。<br />- 仅限一个 CPU。<br />- 缓冲池的内存大小限制为 1 GB。<br />- 数据库最大大小为 4 GB。|
-|**SQL Server 2008 Express**|此软件包将安装 Microsoft SQL Server 2008 Express，这是免费版的 Microsoft SQL Server 2008，是适用于小型网络、服务器或桌面应用程序的理想数据库。 它可免费用于开发和生产。 必须先进行免费注册，然后才能随应用程序一起分发 SQL Server 2008 Express。<br /><br /> 引导程序行为如下：<br /><br /> - 如果计算机已有 SQL Server 2008 Express 或更高版本，则计算机保持在 SQL Server 2008 Express 或更高版本。<br />- 如果计算机没有任何版本的 SQL Server 2008 Express 或更高版本，则软件包安装最新版本的 SQL Server 2008 Express SP1。<br /><br /> 若要了解有关 SQL Server 2008 Express 的详细信息，请访问 [http://go.microsoft.com/fwlink/?LinkId=183586](http://go.microsoft.com/fwlink/?LinkId=183586)。|
+|**SQL Server 2008 Express**|此软件包将安装 Microsoft SQL Server 2008 Express，这是免费版的 Microsoft SQL Server 2008，是适用于小型网络、服务器或桌面应用程序的理想数据库。 它可免费用于开发和生产。 必须先进行免费注册，然后才能随应用程序一起分发 SQL Server 2008 Express。<br /><br /> 引导程序行为如下：<br /><br /> - 如果计算机已有 SQL Server 2008 Express 或更高版本，则计算机保持在 SQL Server 2008 Express 或更高版本。<br />- 如果计算机没有任何版本的 SQL Server 2008 Express 或更高版本，则软件包安装最新版本的 SQL Server 2008 Express SP1。<br /><br /> 若要了解有关 SQL Server 2008 Express 的详细信息，请访问 [http://go.microsoft.com/fwlink/?LinkId=183586](https://go.microsoft.com/fwlink/?LinkId=183586)。|
 |**Visual C++ 2010 运行库 (IA64)**|此程序包将为 Itanium 体系结构安装 Visual C++ 运行库，以便为 Microsoft Windows 操作系统编程提供例程。 这些例程可自动处理许多 C 和 C++ 语言没有提供的常见编程任务。<br /><br /> 有关详细信息，请参阅 [C 运行时库参考](https://msdn.microsoft.com/library/a503e11c-8dca-4846-84fb-025a826c32b8)。|
 |**Visual C++ 2010 运行库 (x64)**|此程序包将为 x64 操作系统安装 Visual C++ 运行库，以便为 Microsoft Windows 操作系统编程提供例程。 这些例程可自动处理许多 C 和 C++ 语言没有提供的常见编程任务。<br /><br /> 有关详细信息，请参阅 [C 运行时库参考](https://msdn.microsoft.com/library/a503e11c-8dca-4846-84fb-025a826c32b8)。|
 |**Visual C++ 2010 运行库 (x86)**|此程序包将为 x86 操作系统安装 Visual C++ 运行库，以便为 Microsoft Windows 操作系统编程提供例程。 这些例程可自动处理许多 C 和 C++ 语言没有提供的常见编程任务。<br /><br /> 有关详细信息，请参阅 [C 运行时库参考](https://msdn.microsoft.com/library/a503e11c-8dca-4846-84fb-025a826c32b8)。|

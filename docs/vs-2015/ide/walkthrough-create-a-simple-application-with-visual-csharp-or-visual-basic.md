@@ -9,12 +9,12 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bf06151265c1647de29725917624c5984577bf6a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d5e41dbf3422374add68e351da1e4b703772a3a4
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658606"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296853"
 ---
 # <a name="walkthrough-create-a-simple-application-with-visual-c-or-visual-basic"></a>演练：使用 Visual C# 或 Visual Basic 创建简单应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,10 +30,10 @@ ms.locfileid: "72658606"
  [调试并测试应用程序](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md#BKMK_DebugTest)
 
 > [!NOTE]
-> 此演练基于 Visual Studio Professional，你将使用其中提供的 WPF 应用程序模板生成用于此演练的项目。 Visual Studio Express for Windows Desktop 也提供此模板，但 Visual Studio Express for Windows 和 Visual Studio Express for Web 不提供。 有关如何使用 Visual Studio Express for Windows 的介绍性信息，请参阅 [Windows 应用商店应用开发人员中心](https://msdn.microsoft.com/windows/apps/br229519)。 有关如何使用 Visual Studio Express for Web 的介绍性信息，请参阅 [Get Started with ASP.NET](http://www.asp.net/get-started)（ASP.NET 入门）。 此外，你的 Visual Studio 版本和你使用的设置将决定某些用户界面元素的名称和位置。 请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。
+> 此演练基于 Visual Studio Professional，你将使用其中提供的 WPF 应用程序模板生成用于此演练的项目。 Visual Studio Express for Windows Desktop 也提供此模板，但 Visual Studio Express for Windows 和 Visual Studio Express for Web 不提供。 有关如何使用 Visual Studio Express for Windows 的介绍性信息，请参阅 [Windows 应用商店应用开发人员中心](https://msdn.microsoft.com/windows/apps/br229519)。 有关如何使用 Visual Studio Express for Web 的介绍性信息，请参阅 [Get Started with ASP.NET](https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/intro)（ASP.NET 入门）。 此外，你的 Visual Studio 版本和你使用的设置将决定某些用户界面元素的名称和位置。 请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。
 
 ## <a name="BKMK_ConfigureIDE"></a> 配置 IDE
- 第一次启动 Visual Studio 时，Visual Studio 会提示使用 Microsoft 服务帐户 (MSA)登录， [登录到 Visual Studio](http://blogs.msdn.com/b/visualstudio/archive/2013/06/28/welcome-sign-in-to-visual-studio.aspx)。 您不需要登录，而是可以稍后登录。
+ 第一次启动 Visual Studio 时，Visual Studio 会提示使用 Microsoft 服务帐户 (MSA)登录， [登录到 Visual Studio](https://devblogs.microsoft.com/visualstudio/welcome-sign-in-to-visual-studio/)。 您不需要登录，而是可以稍后登录。
 
  在您的 Visual Studio 启动时，您接下来必须选择适用于 IDE 的一组预定义的自定义项的设置组合。 每个设置组合旨在使你更轻松地开发应用程序。
 
