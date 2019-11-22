@@ -599,12 +599,12 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5bf30e3267939385a3cca3459390c4c7591909a6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 031ffa0daa899429454faf64819a6778022a5645
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68187096"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298221"
 ---
 # <a name="additional-msbuild-resources"></a>其他 MSBuild 资源
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -612,15 +612,15 @@ ms.locfileid: "68187096"
 尝试解决问题时，如果无法在文档中找到所需信息，可以参考其他资源，如知识库文章、开发人员社区或产品支持。  
   
 ## <a name="knowledge-base-articles"></a>知识库文章  
- 可以在联机知识库 (KB) 中搜索有关产品问题的文章。 并非所有问题都有相应的 KB 文章，但很多客户所遇到的错误通常会记录下来。 可以在[知识库（MSBuild 搜索结果）](http://search.microsoft.com/supportresults.aspx?q=knowledge+base+MSBuild&x=0&y=0)网站上访问 KB 文章。  
+ 可以在联机知识库 (KB) 中搜索有关产品问题的文章。 并非所有问题都有相应的 KB 文章，但很多客户所遇到的错误通常会记录下来。 可以在[知识库（MSBuild 搜索结果）](https://search.microsoft.com/supportresults.aspx?q=knowledge+base+MSBuild&x=0&y=0)网站上访问 KB 文章。  
   
 ## <a name="community-forums"></a>社区论坛  
- 可通过论坛与其他开发人员以及 Microsoft 员工进行互动。 如果遇到无法解决的问题，可在论坛中发布有关该问题的帖子。 还可搜索讨论组，查看其他人是否已发布有关该问题的帖子。 可通过 [MSDN 论坛](http://go.microsoft.com/fwlink/?LinkId=48931)网站访问 Visual Studio MSBuild 论坛。  
+ 可通过论坛与其他开发人员以及 Microsoft 员工进行互动。 如果遇到无法解决的问题，可在论坛中发布有关该问题的帖子。 还可搜索讨论组，查看其他人是否已发布有关该问题的帖子。 可通过 [MSDN 论坛](https://go.microsoft.com/fwlink/?LinkId=48931)网站访问 Visual Studio MSBuild 论坛。  
   
- 可通过[第 9 频道 MSBuild](http://channel9.msdn.com/) 网站访问 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 社区资源。  
+ 可通过[第 9 频道 MSBuild](https://channel9.msdn.com/) 网站访问 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 社区资源。  
   
 ## <a name="product-support"></a>产品支持  
- 如果借助其他资源仍不能解决问题，则可以访问 [Microsoft 帮助和支持](http://go.microsoft.com/fwlink/?linkid=1782)网站，与 Microsoft 支持服务联系。 若要了解所在区域中可用的产品支持，请参阅[与我们联系](../ide/talk-to-us.md)。  
+ 如果借助其他资源仍不能解决问题，则可以访问 [Microsoft 帮助和支持](https://go.microsoft.com/fwlink/?linkid=1782)网站，与 Microsoft 支持服务联系。 若要了解所在区域中可用的产品支持，请参阅[与我们联系](../ide/talk-to-us.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [.NET Framework 目标错误疑难解答](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md)

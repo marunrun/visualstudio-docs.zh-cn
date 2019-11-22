@@ -19,12 +19,12 @@ caps.latest.revision: 27
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5a543e7a1e2aca4590df320261aef2c653a55132
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cb2b5a55f778b8025ea9da25713eca903f9cbf74
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662610"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296219"
 ---
 # <a name="working-with-visual-c-code-class-designer"></a>使用 Visual C++ 代码（类设计器）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "72662610"
 - 确保该类型位于正确的范围，因此选件类设计器可以找到它。 确保代码未缺失 `using`、`imports` 或 `#include` 语句。 还请确保未将该类型（或相关类型）移出它原来所在的命名空间。
 
 ### <a name="troubleshooting-other-error-messages"></a>排除其他错误消息
- 在 Microsoft Developer Network (MSDN) 公共论坛中，可以找到有关对错误和警告进行疑难解答的帮助。 请参阅 [Visual Studio 类设计器论坛](http://go.microsoft.com/fwlink/?linkid=160754)。
+ 在 Microsoft Developer Network (MSDN) 公共论坛中，可以找到有关对错误和警告进行疑难解答的帮助。 请参阅 [Visual Studio 类设计器论坛](https://go.microsoft.com/fwlink/?linkid=160754)。
 
 ## <a name="limitations"></a>C++ 代码元素的限制
 
@@ -107,4 +107,4 @@ ms.locfileid: "72662610"
 - 类设计器无法显示 void 类型或从 void 类型派生的类型。
 
 ## <a name="see-also"></a>另请参阅
- [设计和查看类和类型](../ide/designing-and-viewing-classes-and-types.md)使用类[和其他类型（类设计器）](../ide/working-with-classes-and-other-types-class-designer.md)使用[类图（类设计器）](../ide/working-with-class-diagrams-class-designer.md) [设计类和类型（类设计器）](../ide/designing-classes-and-types-class-designer.md) [有关的其他信息类设计器中的错误](../ide/additional-information-about-class-designer-errors.md)[视觉C++对象类设计器 visual](../ide/visual-cpp-classes-in-class-designer.md) [ C++ ](../ide/visual-cpp-structures-in-class-designer.md)中的可视化类类设计器中类设计器[visual C++类设计器 typedef](../ide/visual-cpp-typedefs-in-class-designer.md)中的可视化[ C++枚举](../ide/visual-cpp-enumerations-in-class-designer.md)
+ [设计和查看类和类型](../ide/designing-and-viewing-classes-and-types.md)使用类图和[其他类型（类设计器）](../ide/working-with-classes-and-other-types-class-designer.md)使用[类图（类设计器）设计类图（）](../ide/working-with-class-diagrams-class-designer.md) [设计类和类型（类设计器）](../ide/designing-classes-and-types-class-designer.md)在类设计器中的视觉对象[ C++枚举](../ide/visual-cpp-enumerations-in-class-designer.md)中[类设计器视觉对象C++ ](../ide/visual-cpp-structures-in-class-designer.md)枚举[ C++ ](../ide/visual-cpp-typedefs-in-class-designer.md)中的可视化[ C++类](../ide/visual-cpp-classes-in-class-designer.md)[添加有关类设计器错误的其他信息](../ide/additional-information-about-class-designer-errors.md)类设计器

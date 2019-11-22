@@ -13,17 +13,17 @@ caps.latest.revision: 48
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: d040353aadbc448b6608cd11fc78a134872fdafa
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: a146872561c4be5fe48016c17eb64ad6f854106a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65693565"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298026"
 ---
 # <a name="install-visual-studio-versions-side-by-side"></a>并行安装 Visual Studio 版本
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-您可以在已安装早期版本的计算机上安装此版本的 Visual Studio。 如果遇到安装故障，则可以使用 [日志收集工具](http://go.microsoft.com/fwlink/?LinkId=262077) 收集有关故障的信息，以便可以自行调试问题。
+您可以在已安装早期版本的计算机上安装此版本的 Visual Studio。 如果遇到安装故障，则可以使用 [日志收集工具](https://go.microsoft.com/fwlink/?LinkId=262077) 收集有关故障的信息，以便可以自行调试问题。
 
 > [!NOTE]
 > 建议您按照发布顺序来安装不同版本的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。 例如，在安装 Visual Studio 2015 之前安装 Visual Studio 2013。
@@ -36,7 +36,7 @@ ms.locfileid: "65693565"
 
 - 如果在已安装多个版本的计算机上卸载 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的一个版本，则将为所有版本移除 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的文件关联。 通过使用 **“选项”** 对话框的 **“常规”** 页上的 **“环境”** 中的 [“还原文件关联”](../ide/reference/general-environment-options-dialog-box.md) 按钮，可以重新映射这些文件关联。
 
-- 因为并非所有扩展都兼容，所以 Visual Studio 不会自动升级扩展。 必须从 [Visual Studio Marketplace](http://go.microsoft.com/fwlink/?LinkId=178891) 或软件发行者处重新安装扩展。
+- 因为并非所有扩展都兼容，所以 Visual Studio 不会自动升级扩展。 必须从 [Visual Studio Marketplace](https://go.microsoft.com/fwlink/?LinkId=178891) 或软件发行者处重新安装扩展。
 
 ## <a name="net-framework-versions-and-side-by-side-installations"></a>.NET Framework 版本和并行安装
 
@@ -54,7 +54,7 @@ ms.locfileid: "65693565"
     |C++|[如何：修改目标框架和平台工具集](https://msdn.microsoft.com/library/031b1d54-e6e1-4da7-9868-3e75a87d9ffe)|
     |[!INCLUDE[jsprjscript](../includes/jsprjscript-md.md)]|[在公共语言运行时的上一版本上运行 JScript 应用程序](https://msdn.microsoft.com/bbea51b5-ac03-4e6c-b9a6-f487ef63eda5)|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安装 Visual Studio](../install/install-visual-studio-2015.md)
 - [移植、迁移和升级 Visual Studio 项目](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects?view=vs-2015)

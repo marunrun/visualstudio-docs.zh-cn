@@ -26,12 +26,12 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8243b2f735fb15f5c4e2fe841721696b87590997
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f394cca9a248b5304a165f68a60b966d8e3684b2
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72670435"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74291374"
 ---
 # <a name="introduction-to-international-applications-based-on-the-net-framework"></a>介绍基于 .NET Framework 的国际应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "72670435"
 
  [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 本地化模型由同时包含应用程序代码和回退资源的主要程序集组成 - 字符串、图像和用于最初开发应用程序时所使用的语言的其他对象。 每个本地化应用程序都会有附属程序集或仅包含经本地化的资源的程序集。 因为主程序集始终包含回退资源，如果在本地化附属程序集中找不到资源，<xref:System.Resources.ResourceManager> 将尝试以层级方式加载它，最终回退到主程序集的资源中。 [用于本地化的资源的分层组织](../ide/hierarchical-organization-of-resources-for-localization.md)中对资源回退系统有更详细的解释。
 
- 应考虑使用的一个本地化资源是一个用于所有 Microsoft 本地化产品的术语表。 此 CSV 文件包含超过 12,000 个英语术语，以及最多 59 种不同语言的术语翻译。 该术语表可从 [Microsoft Terminology Translations](http://go.microsoft.com/fwlink/?LinkId=128146)（Microsoft 术语翻译）网页下载。
+ 应考虑使用的一个本地化资源是一个用于所有 Microsoft 本地化产品的术语表。 此 CSV 文件包含超过 12,000 个英语术语，以及最多 59 种不同语言的术语翻译。 该术语表可从 [Microsoft Terminology Translations](https://go.microsoft.com/fwlink/?LinkId=128146)（Microsoft 术语翻译）网页下载。
 
  Windows 窗体应用程序的项目系统可同时为回退和每个所需的其他 UI 区域性生成资源文件。 将回退资源文件构建到主程序集中，然后将特定于区域性的资源文件构建到附属程序集中（每个 UI 区域性一个）。 构建项目时，资源文件将从 Visual Studio XML 格式 (.resx) 编译为中间二进制格式 (.resources)，然后嵌入到附属程序集中。
 

@@ -31,12 +31,12 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: efcdbb4f72d47a5044b287f1b40424f5611d6401
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 181c32017a84328037ea46d49698821fa3cb41ea
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65703436"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295876"
 ---
 # <a name="link-task"></a>Link 任务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -68,13 +68,13 @@ ms.locfileid: "65703436"
   
    指定将放入清单文件的 `dependency` 节的属性。  
   
-   有关详细信息，请参阅 [/MANIFESTDEPENDENCY（指定清单依赖项）](https://msdn.microsoft.com/library/e4b68313-33a2-4c3e-908e-ac2b9f7d6a73)。 另请参阅 [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) 网站上的“发布服务器配置文件”。  
+   有关详细信息，请参阅 [/MANIFESTDEPENDENCY（指定清单依赖项）](https://msdn.microsoft.com/library/e4b68313-33a2-4c3e-908e-ac2b9f7d6a73)。 另请参阅 [MSDN](https://go.microsoft.com/fwlink/?LinkId=737) 网站上的“发布服务器配置文件”。  
   
 - **AdditionalOptions**  
   
    可选 **String** 参数。  
   
-   在命令行上指定的链接器选项列表。 例如，**"**_/option1 /option2 /option#_"。 使用此参数可指定未由任何其他 **Link** 任务参数表示的链接器选项。  
+   在命令行上指定的链接器选项列表。 例如， **"** _/option1 /option2 /option#_ "。 使用此参数可指定未由任何其他 **Link** 任务参数表示的链接器选项。  
   
    有关详细信息，请参阅[链接器选项](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129)。  
   
@@ -140,13 +140,13 @@ ms.locfileid: "65703436"
   
    指定以下值之一，其中每个值对应于一个链接器选项。  
   
-  - **Default** - *\<none>*  
+  - **Default** -  *\<none>*  
   
-  - **ForceIJWImage** - **/CLRIMAGETYPE:IJW**  
+  - **ForceIJWImage** -  **/CLRIMAGETYPE:IJW**  
   
-  - **ForcePureILImage** - **/CLRIMAGETYPE:PURE**  
+  - **ForcePureILImage** -  **/CLRIMAGETYPE:PURE**  
   
-  - **ForceSafeILImage** - **/CLRIMAGETYPE:SAFE**  
+  - **ForceSafeILImage** -  **/CLRIMAGETYPE:SAFE**  
   
     有关详细信息，请参阅 [/CLRIMAGETYPE（指定 CLR 映像的类型）](https://msdn.microsoft.com/library/04c60ee6-9dd7-4391-bc03-6926ad0fa116)。  
   
@@ -158,11 +158,11 @@ ms.locfileid: "65703436"
   
    指定以下值之一，其中每个值对应于一个链接器选项。  
   
-  - **Enabled** - **/CLRSupportLastError**  
+  - **Enabled** -  **/CLRSupportLastError**  
   
-  - **Disabled** - **/CLRSupportLastError:NO**  
+  - **Disabled** -  **/CLRSupportLastError:NO**  
   
-  - **SystemDlls** - **/CLRSupportLastError:SYSTEMDLL**  
+  - **SystemDlls** -  **/CLRSupportLastError:SYSTEMDLL**  
   
     有关详细信息，请参阅 [/CLRSUPPORTLASTERROR（为 PInvoke 调用保留上次的错误代码）](https://msdn.microsoft.com/library/b7057990-4154-4b1d-9fc9-6236f7be7575)。  
   
@@ -174,11 +174,11 @@ ms.locfileid: "65703436"
   
    指定以下值之一，其中每个值对应于一个链接器选项。  
   
-  - **DefaultThreadingAttribute** - **/CLRTHREADATTRIBUTE:NONE**  
+  - **DefaultThreadingAttribute** -  **/CLRTHREADATTRIBUTE:NONE**  
   
-  - **MTAThreadingAttribute** - **/CLRTHREADATTRIBUTE:MTA**  
+  - **MTAThreadingAttribute** -  **/CLRTHREADATTRIBUTE:MTA**  
   
-  - **STAThreadingAttribute** - **/CLRTHREADATTRIBUTE:STA**  
+  - **STAThreadingAttribute** -  **/CLRTHREADATTRIBUTE:STA**  
   
     有关详细信息，请参阅 [/CLRTHREADATTRIBUTE（设置 CLR 线程特性）](https://msdn.microsoft.com/library/4907e9ef-5031-446c-aecf-0a0b32fae1e8)。  
   
@@ -198,13 +198,13 @@ ms.locfileid: "65703436"
   
    指定以下值之一，它对应于一个链接器选项。  
   
-  - **Enabled** - **/FUNCTIONPADMIN**  
+  - **Enabled** -  **/FUNCTIONPADMIN**  
   
-  - **X86Image** - **/FUNCTIONPADMIN:5**  
+  - **X86Image** -  **/FUNCTIONPADMIN:5**  
   
-  - **X64Image** - **/FUNCTIONPADMIN:6**  
+  - **X64Image** -  **/FUNCTIONPADMIN:6**  
   
-  - **ItaniumImage** - **/FUNCTIONPADMIN:16**  
+  - **ItaniumImage** -  **/FUNCTIONPADMIN:16**  
   
     有关详细信息，请参阅 [/FUNCTIONPADMIN（创建可热修补的映像）](https://msdn.microsoft.com/library/25b02c13-1add-4fbd-add9-fcb30eb2cae7)。  
   
@@ -240,13 +240,13 @@ ms.locfileid: "65703436"
   
    指定以下值之一，其中每个值对应于一个链接器选项。  
   
-  - **NotSet** - *\<none>*  
+  - **NotSet** -  *\<none>*  
   
-  - **Driver** - **/Driver**  
+  - **Driver** -  **/Driver**  
   
-  - **UpOnly** - **/DRIVER:UPONLY**  
+  - **UpOnly** -  **/DRIVER:UPONLY**  
   
-  - **WDM** - **/DRIVER:WDM**  
+  - **WDM** -  **/DRIVER:WDM**  
   
     有关详细信息，请参阅 [/DRIVER（Windows NT 内核模式驱动程序）](https://msdn.microsoft.com/library/aeee8e28-5d97-40f5-ba16-9f370fe8a1b8)。  
   
@@ -298,11 +298,11 @@ ms.locfileid: "65703436"
   
    指定以下值之一，其中每个值对应于一个命令行选项。  
   
-  - **Enabled** - **/FORCE**  
+  - **Enabled** -  **/FORCE**  
   
-  - **MultiplyDefinedSymbolOnly** - **/FORCE:MULTIPLE**  
+  - **MultiplyDefinedSymbolOnly** -  **/FORCE:MULTIPLE**  
   
-  - **UndefinedSymbolOnly** - **/FORCE:UNRESOLVED**  
+  - **UndefinedSymbolOnly** -  **/FORCE:UNRESOLVED**  
   
     有关详细信息，请参阅 [/FORCE（强制文件输出）](https://msdn.microsoft.com/library/b1e9a218-a5eb-4e60-a4a4-65b4be15e5da)。  
   
@@ -448,13 +448,13 @@ ms.locfileid: "65703436"
   
    指定以下值之一，其中每个值对应于一个命令行选项。  
   
-  - **NoErrorReport** - **/ERRORREPORT:NONE**  
+  - **NoErrorReport** -  **/ERRORREPORT:NONE**  
   
-  - **PromptImmediately** - **/ERRORREPORT:PROMPT**  
+  - **PromptImmediately** -  **/ERRORREPORT:PROMPT**  
   
-  - **QueueForNextLogin** - **/ERRORREPORT:QUEUE**  
+  - **QueueForNextLogin** -  **/ERRORREPORT:QUEUE**  
   
-  - **SendErrorReport** - **/ERRORREPORT:SEND**  
+  - **SendErrorReport** -  **/ERRORREPORT:SEND**  
   
     有关详细信息，请参阅 [/ERRORREPORT（报告内部链接器错误）](https://msdn.microsoft.com/library/f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28)。  
   
@@ -490,13 +490,13 @@ ms.locfileid: "65703436"
   
    指定以下值之一，其中每个值对应于一个命令行选项。  
   
-  - **Default** - *\<none>*  
+  - **Default** -  *\<none>*  
   
-  - **UseLinkTimeCodeGeneration** - **/LTCG**  
+  - **UseLinkTimeCodeGeneration** -  **/LTCG**  
   
-  - **PGInstrument** - **/LTCG:PGInstrument**  
+  - **PGInstrument** -  **/LTCG:PGInstrument**  
   
-  - **PGOptimization** - **/LTCG:PGOptimize**  
+  - **PGOptimization** -  **/LTCG:PGOptimize**  
   
   - **PGUpdate**  
   
@@ -626,7 +626,7 @@ ms.locfileid: "65703436"
   
    可选 **Boolean** 参数。  
   
-   如果为 `true`，则生成一个可与“性能工具”探查器结合使用的输出文件。  
+   如果为 `true`，则生成一个可与“性能工具”  探查器结合使用的输出文件。  
   
    有关详细信息，请参阅 [/PROFILE（性能工具探查器）](https://msdn.microsoft.com/library/e676baa1-5063-47a3-a357-ba0d1f0d1699)。  
   
@@ -684,19 +684,19 @@ ms.locfileid: "65703436"
   
    指定以下值之一，其中每个值对应于一个命令行选项。  
   
-  - **NotSet** - *\<none>*  
+  - **NotSet** -  *\<none>*  
   
-  - **LinkVerbose** - **/VERBOSE**  
+  - **LinkVerbose** -  **/VERBOSE**  
   
-  - **LinkVerboseLib** - **/VERBOSE:Lib**  
+  - **LinkVerboseLib** -  **/VERBOSE:Lib**  
   
-  - **LinkVerboseICF** - **/VERBOSE:ICF**  
+  - **LinkVerboseICF** -  **/VERBOSE:ICF**  
   
-  - **LinkVerboseREF** - **/VERBOSE:REF**  
+  - **LinkVerboseREF** -  **/VERBOSE:REF**  
   
-  - **LinkVerboseSAFESEH** - **/VERBOSE:SAFESEH**  
+  - **LinkVerboseSAFESEH** -  **/VERBOSE:SAFESEH**  
   
-  - **LinkVerboseCLR** - **/VERBOSE:CLR**  
+  - **LinkVerboseCLR** -  **/VERBOSE:CLR**  
   
     有关详细信息，请参阅 [/VERBOSE（打印进度消息）](https://msdn.microsoft.com/library/9c347d98-4c37-4724-a39e-0983934693ab)。  
   
@@ -746,25 +746,25 @@ ms.locfileid: "65703436"
   
    指定以下值之一，其中每个值对应于一个命令行选项。  
   
-  - **NotSet** - *\<none>*  
+  - **NotSet** -  *\<none>*  
   
-  - **Console** - **/SUBSYSTEM:CONSOLE**  
+  - **Console** -  **/SUBSYSTEM:CONSOLE**  
   
-  - **Windows** - **/SUBSYSTEM:WINDOWS**  
+  - **Windows** -  **/SUBSYSTEM:WINDOWS**  
   
-  - **Native** - **/SUBSYSTEM:NATIVE**  
+  - **Native** -  **/SUBSYSTEM:NATIVE**  
   
-  - **EFI Application** - **/SUBSYSTEM:EFI_APPLICATION**  
+  - **EFI Application** -  **/SUBSYSTEM:EFI_APPLICATION**  
   
-  - **EFI Boot Service Driver** - **/SUBSYSTEM:EFI_BOOT_SERVICE_DRIVER**  
+  - **EFI Boot Service Driver** -  **/SUBSYSTEM:EFI_BOOT_SERVICE_DRIVER**  
   
-  - **EFI ROM** - **/SUBSYSTEM:EFI_ROM**  
+  - **EFI ROM** -  **/SUBSYSTEM:EFI_ROM**  
   
-  - **EFI Runtime** - **/SUBSYSTEM:EFI_RUNTIME_DRIVER**  
+  - **EFI Runtime** -  **/SUBSYSTEM:EFI_RUNTIME_DRIVER**  
   
-  - **WindowsCE** - **/SUBSYSTEM:WINDOWSCE**  
+  - **WindowsCE** -  **/SUBSYSTEM:WINDOWSCE**  
   
-  - **POSIX** - **/SUBSYSTEM:POSIX**  
+  - **POSIX** -  **/SUBSYSTEM:POSIX**  
   
     有关详细信息，请参阅 [/SUBSYSTEM（指定子系统）](https://msdn.microsoft.com/library/d7b133cf-cf22-4da8-ab46-6552702c0b9b)。  
   
@@ -816,29 +816,29 @@ ms.locfileid: "65703436"
   
    指定以下值之一，其中每个值对应于一个命令行选项。  
   
-  - **NotSet** - *\<none>*  
+  - **NotSet** -  *\<none>*  
   
-  - **MachineARM** - **/MACHINE:ARM**  
+  - **MachineARM** -  **/MACHINE:ARM**  
   
-  - **MachineEBC** - **/MACHINE:EBC**  
+  - **MachineEBC** -  **/MACHINE:EBC**  
   
-  - **MachineIA64** - **/MACHINE:IA64**  
+  - **MachineIA64** -  **/MACHINE:IA64**  
   
-  - **MachineMIPS** - **/MACHINE:MIPS**  
+  - **MachineMIPS** -  **/MACHINE:MIPS**  
   
-  - **MachineMIPS16** - **/MACHINE:MIPS16**  
+  - **MachineMIPS16** -  **/MACHINE:MIPS16**  
   
-  - **MachineMIPSFPU** - **/MACHINE:MIPSFPU**  
+  - **MachineMIPSFPU** -  **/MACHINE:MIPSFPU**  
   
-  - **MachineMIPSFPU16** - **/MACHINE:MIPSFPU16**  
+  - **MachineMIPSFPU16** -  **/MACHINE:MIPSFPU16**  
   
-  - **MachineSH4** - **/MACHINE:SH4**  
+  - **MachineSH4** -  **/MACHINE:SH4**  
   
-  - **MachineTHUMB** - **/MACHINE:THUMB**  
+  - **MachineTHUMB** -  **/MACHINE:THUMB**  
   
-  - **MachineX64** - **/MACHINE:X64**  
+  - **MachineX64** -  **/MACHINE:X64**  
   
-  - **MachineX86** - **/MACHINE:X86**  
+  - **MachineX86** -  **/MACHINE:X86**  
   
     有关详细信息，请参阅 [/MACHINE（指定目标平台）](https://msdn.microsoft.com/library/8d41bf4b-7e53-4ab9-9085-d852b08d31c2)。  
   
@@ -926,5 +926,5 @@ ms.locfileid: "65703436"
   
    有关详细信息，请参阅 [/VERSION（版本信息）](https://msdn.microsoft.com/library/b86d0e86-dca6-4316-aee2-d863ccb9f223)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [任务参考](../msbuild/msbuild-task-reference.md)

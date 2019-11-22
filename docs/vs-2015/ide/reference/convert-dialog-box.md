@@ -15,17 +15,17 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 62f81e6a697089d7a352f652ad9f77d279faac0c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bc65e58aa5bdea786aba05236b6fa684780ccae2
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660809"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296093"
 ---
 # <a name="convert-dialog-box"></a>“转换”对话框
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-通过“转换”  对话框，可以选择转换工具以通过旧项目创建新项目，如通过 Visual Basic 6 项目创建 [!INCLUDE[vbprvblong](../../includes/vbprvblong-md.md)] 项目。 还可以使用 [Visual Studio 项目转换器](http://go.microsoft.com/fwlink/?LinkID=246465)（在 CodePlex 网站上提供）升级在 Visual Studio 的早期版本中创建的项目。
+通过“转换”  对话框，可以选择转换工具以通过旧项目创建新项目，如通过 Visual Basic 6 项目创建 [!INCLUDE[vbprvblong](../../includes/vbprvblong-md.md)] 项目。 还可以使用 [Visual Studio 项目转换器](https://go.microsoft.com/fwlink/?LinkID=246465)（在 CodePlex 网站上提供）升级在 Visual Studio 的早期版本中创建的项目。
 
  [!INCLUDE[note_settings_general](../../includes/note-settings-general-md.md)]
 

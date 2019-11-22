@@ -8,12 +8,12 @@ ms.assetid: 20221de4-2a9e-4787-b99a-b5855bb90872
 caps.latest.revision: 18
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: df937d43c196193593bcfb1244bcc9e59a3c634a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6ff1d953dc853beba8ef836b1eab03140ee0b1e0
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660677"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300398"
 ---
 # <a name="code-generation-compilation-and-naming-conventions-in-microsoft-fakes"></a>Microsoft Fakes 中的代码生成、编译和命名约定
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -285,7 +285,7 @@ attribute of the Assembly element in the .fakes:
 ## <a name="BKMK_External_resources"></a>外部资源
 
 ### <a name="BKMK_Guidance"></a> 指导
- [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](http://go.microsoft.com/fwlink/?LinkID=255188)
+ [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](https://go.microsoft.com/fwlink/?LinkID=255188)
 
 ## <a name="see-also"></a>另请参阅
  [用 Microsoft Fakes 隔离测试代码](../test/isolating-code-under-test-with-microsoft-fakes.md)

@@ -15,12 +15,12 @@ caps.latest.revision: 61
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 792034d913bc7e3ca897f4f8e12736d4d78797cf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: dcd9b9d5e336bfa0595ddd6d70032f7ba7fe780a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651708"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299397"
 ---
 # <a name="application-page-project-designer-c"></a>“项目设计器”->“应用程序”页 (C#)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "72651708"
 
  对于 Web 应用程序项目，必须指定“类库”  。
 
- 如果指定“WinMD 文件”  选项，可以将类型投影到任何 Windows 运行时编程语言中。 通过将项目输出打包为 WinMD 文件，可以用多种语言编写应用程序代码，并让代码进行互操作，就像代码全部是用同一种语言编写的一样。 可以为面向 Windows 运行时库的解决方案（包括 [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] 应用）指定此选项。 有关详细信息，请参阅[用 C# 和 Visual Basic 创建 Windows 运行时组件](http://go.microsoft.com/fwlink/?LinkId=231895)。
+ 如果指定“WinMD 文件”  选项，可以将类型投影到任何 Windows 运行时编程语言中。 通过将项目输出打包为 WinMD 文件，可以用多种语言编写应用程序代码，并让代码进行互操作，就像代码全部是用同一种语言编写的一样。 可以为面向 Windows 运行时库的解决方案（包括 [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] 应用）指定此选项。 有关详细信息，请参阅[用 C# 和 Visual Basic 创建 Windows 运行时组件](https://go.microsoft.com/fwlink/?LinkId=231895)。
 
 > [!NOTE]
 > Windows 运行时可以投影类型，使其在任何一种使用它们的语言中看起来都像本机对象一样。 例如，与 Windows 运行时交互的 JavaScript 应用程序将其用作一组 JavaScript 对象，而 C# 应用程序则将库用作一个 .NET 对象集合。 通过将项目输出打包为 WinMD 文件，可以充分利用 Windows 运行时所用的技术。

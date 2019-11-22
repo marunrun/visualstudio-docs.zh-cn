@@ -1,5 +1,5 @@
 ---
-title: 指定符号 (.pdb) 和源文件在调试器中 |Microsoft Docs
+title: Specify Symbol (.pdb) and Source Files in the Debugger | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -27,12 +27,12 @@ caps.latest.revision: 36
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 23c570e9d29c2288da32469b524c5e4d9125b097
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: d4d4b02d512480d96c501758f4cf0f1313158942
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65694917"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300545"
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger"></a>在 Visual Studio 调试器中指定符号 (.pdb) 和源文件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "65694917"
 
  在 Visual Studio IDE 中调试项目时，调试器知道查找代码的 .pdb 和源文件的默认位置。 如果要在项目源代码之外调试代码（如项目调用的 Windows 或第三方代码），则你必须指定 .pdb（也可以是外部代码的源文件）的位置，这些文件需要与可执行文件完全匹配。
 
- 在 Visual Studio 2012 之前，在远程设备上调试托管的代码时，需要将符号文件放置在远程计算机上。 现在，这已经不成问题了。 所有符号文件必须位于本地计算机上或“工具”/“选项”/“调试”/“符号”  页中指定的位置。
+ 在 Visual Studio 2012 之前，在远程设备上调试托管的代码时，需要将符号文件放置在远程计算机上。 这种情况不会再出现。 所有符号文件必须位于本地计算机上或“工具”/“选项”/“调试”/“符号” 页中指定的位置。
 
-## <a name="BKMK_Find_symbol___pdb__files"></a> 调试器搜索.pdb 文件
+## <a name="BKMK_Find_symbol___pdb__files"></a> Where the debugger searches for .pdb files
 
 1. 在 DLL 或可执行文件中指定的位置。
 
@@ -58,14 +58,14 @@ ms.locfileid: "65694917"
 ### <a name="BKMK_Why_do_symbol_files_need_to_exactly_match_the_executable_files_"></a> 为什么符号文件需要与可执行文件完全匹配？
  调试器只会为可执行文件加载与该可执行文件生成之时所创建的 .pdb 文件完全匹配的 .pdb 文件（即该 .pdb 文件必须是原始 .pdb 文件或其副本）。 由于除了创建正确且高效的代码的主要任务之外，编译器的编译速度也得到了优化，因此可执行文件的实际布局可更改，即使代码本身未更改也是如此。 有关详细信息，请参阅 [为什么 Visual Studio 要求调试器符号文件必须与同时生成的二进制文件完全匹配？](https://blogs.msdn.microsoft.com/jimgries/2007/07/06/why-does-visual-studio-require-debugger-symbol-files-to-exactly-match-the-binary-files-that-they-were-built-with/)。
 
-### <a name="BKMK_Specify_symbol_locations_and_loading_behavior"></a> 指定符号位置和加载行为
- 在 VS IDE 中调试项目时，调试器将自动加载位于项目目录中的符号文件。 可以在“工具”/“选项”/“调试”/“符号”  中为 Microsoft、Windows 或第三方组件指定备选搜索路径和符号服务器。还可以指定希望调试器自动为其加载符号的模板。 之后，你可以在主动进行调试时手动更改这些设置。
+### <a name="BKMK_Specify_symbol_locations_and_loading_behavior"></a> Specify symbol locations and loading behavior
+ 在 VS IDE 中调试项目时，调试器将自动加载位于项目目录中的符号文件。 可以在“工具”/“选项”/“调试”/“符号”中为 Microsoft、Windows 或第三方组件指定备选搜索路径和符号服务器。还可以指定希望调试器自动为其加载符号的模板。 之后，你可以在主动进行调试时手动更改这些设置。
 
-1. 在 Visual Studio 中，打开“工具”/“选项”/“调试”/“符号”  页。
+1. 在 Visual Studio 中，打开“工具”/“选项”/“调试”/“符号” 页。
 
-    ![工具&#45;选项&#45;调试&#45;符号页](../debugger/media/dbg-tools-options-symbols.png "DBG_Tools_Options_Symbols")
+    ![Tools &#45; Options &#45; Debugging &#45; Symbols page](../debugger/media/dbg-tools-options-symbols.png "DBG_Tools_Options_Symbols")
 
-2. 选择的文件夹![工具&#47;选项&#47;调试&#47;符号文件夹图标](../debugger/media/dbg-tools-options-foldersicon.png "DBG_Tools_Options_FoldersIcon")图标。 **“符号文件(.pdb)位置”** 框中将显示可编辑的文本。
+2. Choose the folder ![Tools&#47; Options&#47; Debugging&#47;Symbols  folder icon](../debugger/media/dbg-tools-options-foldersicon.png "DBG_Tools_Options_FoldersIcon") icon. **“符号文件(.pdb)位置”** 框中将显示可编辑的文本。
 
 3. 键入符号服务器或符号位置的 URL 或目录路径。 语句结束有助于找到正确的格式。
 
@@ -74,7 +74,7 @@ ms.locfileid: "65694917"
    > [!NOTE]
    > 不要将符号缓存放入受保护文件夹（例如，C:\Windows 文件夹或其子文件夹之一）。 而应使用可读写的文件夹。
 
-   **指定符号加载行为**
+   **Specify symbol loading behavior**
 
    你可指定开始调试时要从 **“符号文件(.pdb)位置”** 框位置自动加载的文件。 始终加载项目目录中的符号文件。
 
@@ -82,15 +82,15 @@ ms.locfileid: "65694917"
 
 6. 选择 **“仅指定的模块”** 选项，然后选择 **“指定模块”** 来列出要自动加载其符号文件的模块。 其他模块的符号文件被忽略。
 
-   **指定其他符号选项**
+   **Specify additional symbol options**
 
-   还可以在“工具”/“选项”/“调试”/“符号”  页设置以下选项：
+   还可以在“工具”/“选项”/“调试”/“符号” 页设置以下选项：
 
-   **启动时 （仅限本机） 的无符号则发出警告**
+   **Warn if no symbols on launch (native only)**
 
    选定后，如果尝试调试在调试器中没有对应符号信息的程序，系统将显示警告对话框。
 
-   **加载 DLL 导出**
+   **Load DLL exports**
 
    选定后，加载 DLL 导出表。 处理 Windows 消息、Windows 过程 (WindowProc)、COM 对象、封送或不具有其符号的任何 DLL 时，DLL 导出表中的符号信息将很有用。 读取 DLL 导出信息会占用一些系统开销。 因此，默认情况下此功能被禁用。
 
@@ -135,11 +135,11 @@ ms.locfileid: "65694917"
 
    出现上述事件之一时，调试器将显示 **“未加载任何符号”** 页来帮助你查找和加载必需的符号。
 
-   ![没有未加载符号页](../debugger/media/dbg-nosymbolsloaded.png "DBG_NoSymbolsLoaded")
+   ![No Symbols Loaded page](../debugger/media/dbg-nosymbolsloaded.png "DBG_NoSymbolsLoaded")
 
 - 若要更改搜索路径，请选择未选定的路径或选择 **“新建”** ，然后输入新路径。 选择 **“加载”** 以再次搜索路径，并在找到符号文件时加载符号文件。
 
-- 选择“浏览并查找  _executable-name_ **...** ”重写任何符号选项并重试搜索路径。 如果找到符号文件，或显示了文件资源管理器供你手动选择符号文件，则加载符号文件。
+- 选择“浏览并查找_executable-name_ **...** ”重写任何符号选项并重试搜索路径。 如果找到符号文件，或显示了文件资源管理器供你手动选择符号文件，则加载符号文件。
 
 - 选择 **“更改符号设置...”** 可显示 VS“选项”对话框的 **“选项”**  /  **“符号”** 页。
 
@@ -147,7 +147,7 @@ ms.locfileid: "65694917"
 
 - 若要在未找到源文件或符号文件的情况下始终显示反汇编，请选择 **“选项”** 对话框链接，然后选择 **“启用地址级调试”** 和 **“源代码不可用时显示反汇编”** 。
 
-   ![选项&#47;调试&#47;常规反汇编选项](../debugger/media/dbg-options-general-disassembly-checkbox.png "DBG_Options_General_disassembly_checkbox")
+   ![Options &#47; Debugging  &#47; General disassembly options](../debugger/media/dbg-options-general-disassembly-checkbox.png "DBG_Options_General_disassembly_checkbox")
 
   **从快捷菜单更改符号选项**
 
@@ -175,7 +175,7 @@ ms.locfileid: "65694917"
 
 - project.pdb   该文件存储 .exe 文件的所有调试信息。 对于 C/C++，它驻留在 \debug 子目录中。
 
-  每当创建 OBJ 文件时，C/C++ 编译器都会将调试信息合并到 VC*x*.pdb 中。 插入的信息包括类型信息，但不包括函数定义等符号信息。 因此，即使每个源文件包含公共头文件，如\<windows.h >，而不是每个 OBJ 文件中只有一次存储这些标头中的 typedef。
+  每当创建 OBJ 文件时，C/C++ 编译器都会将调试信息合并到 VC*x*.pdb 中。 插入的信息包括类型信息，但不包括函数定义等符号信息。 So even if every source file includes common header files such as \<windows.h>, the typedefs from those headers are stored only once, rather than being in every OBJ file.
 
   链接器将创建 project.pdb，它包含项目的 EXE 文件的调试信息。 project.pdb 文件包含完整的调试信息（包括函数原型），而不仅仅是在 VC*x*.pdb 中找到的类型信息。 这两个 .pdb 文件都允许增量更新。 链接器还在其创建的 .exe 或 .dll 文件中嵌入 .pdb 文件的路径。
 
@@ -200,7 +200,7 @@ ms.locfileid: "65694917"
 
 2. 在 Visual Studio 实例中打开的解决方案中的文件。
 
-3. 在解决方案的属性中的 **“公共属性”**  /  **“调试源文件”** 页中指定的目录。 （在“解决方案资源管理器”  中，选择该解决方案节点，右键单击，然后选择“属性”  。 )
+3. 在解决方案的属性中的 **“公共属性”**  /  **“调试源文件”** 页中指定的目录。 （在“解决方案资源管理器”中，选择该解决方案节点，右键单击，然后选择“属性”。 )
 
 4. 模块的 .pdb 的源信息。 这可能是生成模块时源文件的位置，也可能是源服务器的命令。
 
@@ -214,7 +214,7 @@ ms.locfileid: "65694917"
 
 2. 在 **“公共属性”** 节点下，选择 **“调试源文件”** 。
 
-3. 单击该文件夹![工具&#47;选项&#47;调试&#47;符号文件夹图标](../debugger/media/dbg-tools-options-foldersicon.png "DBG_Tools_Options_FoldersIcon")图标。 可编辑文本将显示在 **“包含源代码的目录”** 列表中。
+3. Click the folder ![Tools&#47; Options&#47; Debugging&#47;Symbols  folder icon](../debugger/media/dbg-tools-options-foldersicon.png "DBG_Tools_Options_FoldersIcon") icon. 可编辑文本将显示在 **“包含源代码的目录”** 列表中。
 
 4. 添加要搜索的路径。
 
@@ -224,7 +224,7 @@ ms.locfileid: "65694917"
  如果本地计算机上没有源代码，或者 .pdb 文件与源代码不匹配，则可使用源服务器来帮助调试应用程序。 源服务器接受文件请求并返回实际的文件。 源服务器通过名为 srcsrv.dll 的 DLL 文件运行。 源服务器读取应用程序的 .pdb 文件，该文件包含指向源代码存储库的指针，以及用于从该存储库检索源代码的命令。 你可以限制允许从应用程序的 .pdb 文件执行的命令，方法是在名为 srcsrv.ini 的文件内列出允许的命令，该文件必须与 srcsrv.dll 和 devenv.exe 位于同一个目录中。
 
 > [!IMPORTANT]
-> 任意命令都可嵌入应用程序的 .pdb 文件中，因此请确保在 srcsrv.ini 文件中仅放入要执行的命令。 任何尝试执行不在 srcsvr.ini 文件中的命令都将导致出现一个确认对话框。 有关详细信息，请参阅[安全警告：调试器必须执行不受信任的命令](../debugger/security-warning-debugger-must-execute-untrusted-command.md)。 未对命令参数执行任何验证，因此请慎用受信任的命令。 例如，如果你信任 cmd.exe，恶意用户则可能会指定使该命令变得危险的参数。
+> 任意命令都可嵌入应用程序的 .pdb 文件中，因此请确保在 srcsrv.ini 文件中仅放入要执行的命令。 任何尝试执行不在 srcsvr.ini 文件中的命令都将导致出现一个确认对话框。 有关更多信息，请参见 [Security Warning: Debugger Must Execute Untrusted Command](../debugger/security-warning-debugger-must-execute-untrusted-command.md)。 未对命令参数执行任何验证，因此请慎用受信任的命令。 例如，如果你信任 cmd.exe，恶意用户则可能会指定使该命令变得危险的参数。
 
  **启用源服务器的使用**
 
@@ -238,11 +238,11 @@ ms.locfileid: "65694917"
 
 4. 选择 **“启用源服务器支持”** 复选框。
 
-     ![启用源服务器选项](../debugger/media/dbg-options-general-enablesrcsrvr-checkbox.png "DBG_Options_General_EnableSrcSrvr_checkbox")
+     ![Enable source server options](../debugger/media/dbg-options-general-enablesrcsrvr-checkbox.png "DBG_Options_General_EnableSrcSrvr_checkbox")
 
 5. （可选）选择所需的子选项。
 
      请注意， **“允许源服务器中的部分信任程序集(仅限托管)”** 和 **“始终运行不受信任的源服务器命令并且不再提示”** 都会增大上述安全风险。
 
 ## <a name="see-also"></a>请参阅
- [Visual Studio 2012 和 2013 中的 .NET 远程符号加载更改](http://blogs.msdn.com/b/visualstudioalm/archive/2013/10/16/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013.aspx)
+ [Visual Studio 2012 和 2013 中的 .NET 远程符号加载更改](https://devblogs.microsoft.com/devops/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013/)
