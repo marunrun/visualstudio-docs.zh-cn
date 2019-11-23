@@ -22,7 +22,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72572897"
 ---
 # <a name="date-object-expected"></a>缺少日期对象
-您尝试对 `Date` 以外的类型的对象调用**valueOf** **方法，而不是调用**。 此类调用的对象必须是 `Date` 类型。 例如:  
+您尝试对 `Date`以外的类型的对象调用**valueOf** **方法，而不是调用**。 此类调用的对象必须是 `Date`类型。 例如：  
   
 ```JavaScript  
 var o = new Object;  
@@ -34,7 +34,7 @@ o.f();
   
 - 仅在 `Date`**类型的对象**上调用 valueOf 方法或方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Date 对象](../../javascript/reference/date-object-javascript.md)   
- [GetDate 方法（Date）](../../javascript/reference/getdate-method-date-javascript.md)    
+ [GetDate 方法（Date）](../../javascript/reference/getdate-method-date-javascript.md)   
  [内部对象](../../javascript/intrinsic-objects-javascript.md)
