@@ -50,16 +50,16 @@ HRESULT SetTextAttributes(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 在将文本添加到文档之前，对文本范围调用 `SetTextAttributes` 是错误的。 调用 `AddDBCSText`、`AddUnicodeText` 或 `AddDeferredText` 方法向文档中添加文本。  
+ 在将文本添加到文档之前，对文本范围调用 `SetTextAttributes` 是错误的。 调用 `AddDBCSText`、`AddUnicodeText`或 `AddDeferredText` 方法向文档中添加文本。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugDocumentHelper 接口](../../winscript/reference/idebugdocumenthelper-interface.md)   
- [IDebugDocumentHelper：： AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)    
- [IDebugDocumentHelper：： AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)    
- [IDebugDocumentHelper：： AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)    
+ [IDebugDocumentHelper::AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)   
+ [IDebugDocumentHelper::AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)   
+ [IDebugDocumentHelper::AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)   
  [SOURCE_TEXT_ATTR 枚举](../../winscript/reference/source-text-attr-enumeration.md)

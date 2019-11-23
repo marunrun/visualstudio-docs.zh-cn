@@ -38,15 +38,15 @@ typedef enum {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |PROFILER_SCRIPT_TYPE_USER|指定用户编写的脚本代码。|  
 |PROFILER_SCRIPT_TYPE_DYNAMIC|指定在执行过程中动态生成的脚本代码。|  
 |PROFILER_SCRIPT_TYPE_NATIVE|指定本机函数和脚本引擎定义的对象的脚本类型。|  
 |PROFILER_SCRIPT_TYPE_DOM|指定对 Internet Explorer 文档对象模型（DOM）的调用，例如调用 `document.getElementById` 方法。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [活动脚本探查器常量、枚举和结构](../../winscript/reference/active-script-profiler-constants-enumerations-and-structures.md)   
- [IActiveScriptProfilerCallback：： ScriptCompiled](../../winscript/reference/iactivescriptprofilercallback-scriptcompiled.md)    
- [IActiveScriptProfilerCallback2：： OnFunctionEnterByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionenterbyname.md)    
+ [IActiveScriptProfilerCallback::ScriptCompiled](../../winscript/reference/iactivescriptprofilercallback-scriptcompiled.md)   
+ [IActiveScriptProfilerCallback2::OnFunctionEnterByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionenterbyname.md)   
  [IActiveScriptProfilerCallback2::OnFunctionExitByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionexitbyname.md)

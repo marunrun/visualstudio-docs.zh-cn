@@ -32,7 +32,7 @@ ms.locfileid: "72650333"
 
 4. 在工作流设计器中，单击 "**参数**" 选项卡。
 
-5. 单击 "**创建自变量**"。 将新参数命名为**Items**。
+5. 单击 **“创建参数”** 。 将新参数命名为**Items**。
 
 6. 在 "**参数类型**" 列中，选择 " **[T] 的数组**"。
 
@@ -42,7 +42,7 @@ ms.locfileid: "72650333"
 
 9. 在 "参数类型" 列中，选择 "**浏览类型**"
 
-10. 在类型浏览器的 "**类型名称**" 字段中，输入**ActivityAction** 。 选择树视图中的 " **ActivityAction \<T >** 。 选择下拉列表中的 "**对象**"，将类型 " **ActivityAction \<Object >** 分配给参数。
+10. 在类型浏览器的 "**类型名称**" 字段中，输入**ActivityAction** 。 选择树视图中的 " **ActivityAction\<t" >** 。 选择下拉列表中的 "**对象**"，将类型**ActivityAction\<对象 >** 分配给参数。
 
 11. 将 "<xref:System.Activities.Statements.While>" 活动从 "工具箱" 的 "**控制流**" 部分拖到设计器图面。
 
@@ -70,7 +70,7 @@ ms.locfileid: "72650333"
 
 ## <a name="use-the-custom-activity-in-a-workflow"></a>使用工作流中的自定义活动
 
-1. 按**Ctrl** +**Shift** +**B**生成项目。
+1. 按**Ctrl**+**Shift**+**B**生成项目。
 
 2. 在**解决方案资源管理器**中，在设计器中打开**workflow1.xaml** 。
 
@@ -84,5 +84,5 @@ ms.locfileid: "72650333"
 
 当执行工作流时，控制台将显示以下输出：
 
-**1** 
+**1**
 **abc**

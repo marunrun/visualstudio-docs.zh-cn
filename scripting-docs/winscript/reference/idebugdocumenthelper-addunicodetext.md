@@ -42,7 +42,7 @@ HRESULT AddUnicodeText(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
 |`E_FAIL`|方法无法添加字符。|  
@@ -53,7 +53,7 @@ HRESULT AddUnicodeText(
 > [!NOTE]
 > 如果在调用 `AddDeferredText` 之后调用此方法，则返回 `E_FAIL`。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugDocumentHelper 接口](../../winscript/reference/idebugdocumenthelper-interface.md)   
- [IDebugDocumentHelper：： AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)    
+ [IDebugDocumentHelper::AddDeferredText](../../winscript/reference/idebugdocumenthelper-adddeferredtext.md)   
  [IDebugDocumentTextEvents 接口](../../winscript/reference/idebugdocumenttextevents-interface.md)

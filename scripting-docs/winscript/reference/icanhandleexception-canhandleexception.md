@@ -46,14 +46,14 @@ HRESULT CanHandleException(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|调用方可以处理异常|  
 |`E_FAIL`|调用方无法处理此异常。|  
   
 ## <a name="remarks"></a>备注  
- 如果调用 `IDispatchEx::InvokeEx` 或类似方法导致异常，则脚本引擎将在支持 `ICanHandleException` 接口的脚本调用方链中检查调用方，并指示它可以处理该异常。 如果调用方不能处理异常，则脚本引擎将暂停。  
+ 如果调用 `IDispatchEx::InvokeEx`或类似方法导致异常，则脚本引擎将在支持 `ICanHandleException` 接口的脚本调用方链中检查调用方，并指示它可以处理该异常。 如果调用方不能处理异常，则脚本引擎将暂停。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ICanHandleException 接口](../../winscript/reference/icanhandleexception-interface.md)   
  [IDispatchEx::InvokeEx](../../winscript/reference/idispatchex-invokeex.md)

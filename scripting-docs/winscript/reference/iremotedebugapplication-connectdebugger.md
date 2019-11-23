@@ -42,7 +42,7 @@ HRESULT ConnectDebugger(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
 |`E_FAIL`|调试器已经连接到此应用程序。|  
@@ -50,6 +50,6 @@ HRESULT ConnectDebugger(
 ## <a name="remarks"></a>备注  
  一个应用程序一次只能连接一个调试器。 如果调试器已连接，则此方法将失败。  
   
-## <a name="see-also"></a>请参阅  
- [IRemoteDebugApplication：： GetDebugger](../../winscript/reference/iremotedebugapplication-getdebugger.md)    
+## <a name="see-also"></a>另请参阅  
+ [IRemoteDebugApplication::GetDebugger](../../winscript/reference/iremotedebugapplication-getdebugger.md)   
  [IRemoteDebugApplication 接口](../../winscript/reference/iremotedebugapplication-interface.md)

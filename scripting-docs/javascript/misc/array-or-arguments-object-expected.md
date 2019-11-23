@@ -28,7 +28,7 @@ ms.locfileid: "72576026"
   
 - 将 `Array` 或**参数**对象指定为第二个参数。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用数组](../../javascript/advanced/using-arrays-javascript.md)   
- [Apply 方法（Function）](../../javascript/reference/apply-method-function-javascript.md)    
+ [Apply 方法（Function）](../../javascript/reference/apply-method-function-javascript.md)   
  [函数](../../javascript/functions-javascript.md)

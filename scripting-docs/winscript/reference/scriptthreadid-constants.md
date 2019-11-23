@@ -35,17 +35,17 @@ typedef DWORD SCRIPTTHREADID;
   
 ## <a name="constants"></a>常量  
   
-|返回的常量|“值”|含义|  
+|常量|值|含义|  
 |--------------|-----------|-------------|  
 |SCRIPTTHREADID_CURRENT|0xFFFFFFFD|当前正在执行的线程。|  
 |SCRIPTTHREADID_BASE|0xFFFFFFFE|基本线程;这就是实例化脚本引擎的线程。|  
 |SCRIPTTHREADID_ALL|0xFFFFFFFF|所有线程。|  
   
 ## <a name="remarks"></a>备注  
- @No__t_0 类型由 `IActiveScript::GetCurrentScriptThreadID`、`IActiveScript::GetScriptThreadID`、`IActiveScript::GetScriptThreadState` 和 `IActiveScript::InterruptScriptThread` 使用，但常量只能由 `IActiveScript::GetScriptThreadState` 和 `IActiveScript::InterruptScriptThread` 使用。  
+ `SCRIPTTHREADID` 类型由 `IActiveScript::GetCurrentScriptThreadID`、`IActiveScript::GetScriptThreadID`、`IActiveScript::GetScriptThreadState`和 `IActiveScript::InterruptScriptThread`使用，但常量只能由 `IActiveScript::GetScriptThreadState` 和 `IActiveScript::InterruptScriptThread`使用。  
   
-## <a name="see-also"></a>请参阅  
- [IActiveScript：： GetCurrentScriptThreadID](../../winscript/reference/iactivescript-getcurrentscriptthreadid.md)    
- [IActiveScript：： GetScriptThreadID](../../winscript/reference/iactivescript-getscriptthreadid.md)    
- [IActiveScript：： GetScriptThreadState](../../winscript/reference/iactivescript-getscriptthreadstate.md)    
+## <a name="see-also"></a>另请参阅  
+ [IActiveScript::GetCurrentScriptThreadID](../../winscript/reference/iactivescript-getcurrentscriptthreadid.md)   
+ [IActiveScript::GetScriptThreadID](../../winscript/reference/iactivescript-getscriptthreadid.md)   
+ [IActiveScript::GetScriptThreadState](../../winscript/reference/iactivescript-getscriptthreadstate.md)   
  [IActiveScript::InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md)

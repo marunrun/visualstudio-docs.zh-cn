@@ -42,7 +42,7 @@ typedef enum {
   
 ## <a name="members"></a>Members  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |PROFILER_EVENT_MASK_TRACE_SCRIPT_FUNCTION_CALL|用户编写的脚本和动态代码中定义的配置函数。|  
 |PROFILER_EVENT_MASK_TRACE_NATIVE_FUNCTION_CALL|分析脚本引擎定义的本机函数。|  
@@ -50,7 +50,7 @@ typedef enum {
 |PROFILER_EVENT_MASK_TRACE_DOM_FUNCTION_CALL|调入 DOM 的配置函数。|  
 |PROFILER_EVENT_MASK_TRACE_ALL_WITH_DOM|分析所有函数，包括调用 DOM。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [活动脚本探查器常量、枚举和结构](../../winscript/reference/active-script-profiler-constants-enumerations-and-structures.md)   
- [IActiveScriptProfilerControl：： SetProfilerEventMask](../../winscript/reference/iactivescriptprofilercontrol-setprofilereventmask.md)    
+ [IActiveScriptProfilerControl::SetProfilerEventMask](../../winscript/reference/iactivescriptprofilercontrol-setprofilereventmask.md)   
  [IActiveScriptProfilerControl::StartProfiling](../../winscript/reference/iactivescriptprofilercontrol-startprofiling.md)

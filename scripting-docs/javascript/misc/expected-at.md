@@ -26,13 +26,13 @@ ms.locfileid: "72576516"
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 直接在变量名称之前添加 " **@** " 符号。 例如:  
+- 直接在变量名称之前添加 " **@** " 符号。 例如：  
   
     ```JavaScript  
     @set @myvar = 1  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [@set 语句](../../javascript/reference/at-set-statement-javascript.md)   
  [条件编译](../../javascript/advanced/conditional-compilation-javascript.md)   
  [条件编译变量](../../javascript/advanced/conditional-compilation-variables-javascript.md)

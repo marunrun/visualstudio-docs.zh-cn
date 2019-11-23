@@ -1,5 +1,5 @@
 ---
-title: IMachineDebugManagerEvents：： onRemoveApplication |Microsoft Docs
+title: IMachineDebugManagerEvents::onRemoveApplication | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -46,13 +46,13 @@ HRESULT onRemoveApplication(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
  此方法指示已从正在运行的应用程序列表中删除应用程序。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IMachineDebugManagerEvents 接口](../../winscript/reference/imachinedebugmanagerevents-interface.md)   
  [IMachineDebugManagerEvents::onAddApplication](../../winscript/reference/imachinedebugmanagerevents-onaddapplication.md)

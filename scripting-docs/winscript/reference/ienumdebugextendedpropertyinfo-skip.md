@@ -42,6 +42,6 @@ HRESULT Skip(
 ## <a name="return-value"></a>返回值  
  返回一个有效 `HRESULT`，通常 `S_OK`。 如果 `celt` 大于枚举器中剩余的元素数，则返回 `S_FALSE`，并将当前元素指针设置为枚举的结尾。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IEnumDebugExtendedPropertyInfo 接口](../../winscript/reference/ienumdebugextendedpropertyinfo-interface.md)   
  [ExtendedDebugPropertyInfo 结构](../../winscript/reference/extendeddebugpropertyinfo-structure.md)

@@ -30,7 +30,7 @@ ms.locfileid: "72573786"
   
 - 确保对当前作用域中定义的标签进行所有标签引用（这包括前向定义）。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [标记语句](../../javascript/reference/labeled-statement-javascript.md)   
  [Switch 语句](../../javascript/reference/switch-statement-javascript.md)   
  [break 语句](../../javascript/reference/break-statement-javascript.md)   

@@ -41,23 +41,23 @@ HRESULT onDebuggerEvent(
  中对象的接口标识符。  
   
  `punk`  
- 中事件对象，它实现 `riid` 定义的接口。  
+ 中事件对象，它实现 `riid`定义的接口。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
 |`E_NOTIMPL`|当前未实现该方法。|  
   
 ## <a name="remarks"></a>备注  
- @No__t_0 的语义均定义了整个应用程序/调试器。  
+ `IUnknown` 的语义均定义了整个应用程序/调试器。  
   
  此方法允许调试器模型的自定义扩展;当前未实现。  
   
  调用 `IDebugApplication::FireDebuggerEvent` 时调用此方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IApplicationDebugger 接口](../../winscript/reference/iapplicationdebugger-interface.md)   
  [IDebugApplication::FireDebuggerEvent](../../winscript/reference/idebugapplication-firedebuggerevent.md)

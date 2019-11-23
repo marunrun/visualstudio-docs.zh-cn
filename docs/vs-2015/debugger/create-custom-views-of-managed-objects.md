@@ -36,7 +36,7 @@ ms.locfileid: "72578025"
 
 可以在调试器变量窗口中自定义 Visual Studio 显示数据类型的方式。  
   
-## <a name="attributes"></a>特性  
+## <a name="attributes"></a>Attributes  
  在 C# 和 Visual Basic 中，可以使用 <xref:System.Diagnostics.DebuggerTypeProxyAttribute>、<xref:System.Diagnostics.DebuggerDisplayAttribute> 和 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 来添加自定义数据的扩展。  
   
  在 [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] 代码中，Visual Basic 不支持 DebuggerBrowsable 特性。 此项限制在 .NET Framework 较高版本中已经删除。  

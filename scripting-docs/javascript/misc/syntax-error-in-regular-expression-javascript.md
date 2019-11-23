@@ -28,7 +28,7 @@ ms.locfileid: "72573667"
   
 - 确保正则表达式搜索字符串的结构符合 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 正则表达式语法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [正则表达式对象](../../javascript/reference/regular-expression-object-javascript.md)   
- [正则表达式语法（JavaScript）](https://msdn.microsoft.com/library/1400241x)    
+ [正则表达式语法（JavaScript）](https://msdn.microsoft.com/library/1400241x)   
  [compile 方法 (Regular Expression)](../../javascript/reference/compile-method-regular-expression-javascript.md)

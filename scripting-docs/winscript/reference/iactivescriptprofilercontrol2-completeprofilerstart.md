@@ -46,6 +46,6 @@ HRESULT CompleteProfilerStart();
 ## <a name="remarks"></a>备注  
  调用 `IActiveScriptProfilerControl2::CompleteProfilerStart` 确保发送已在调用堆栈中的函数事件。 在当前选项卡上的任何脚本引擎上启动分析后，必须调用此方法。可以为任何脚本引擎调用方法。  
   
-## <a name="see-also"></a>请参阅  
- [IActiveScriptProfilerControl2：:P repareprofilerstop](../../winscript/reference/iactivescriptprofilercontrol2-prepareprofilerstop.md)    
+## <a name="see-also"></a>另请参阅  
+ [IActiveScriptProfilerControl2::PrepareProfilerStop](../../winscript/reference/iactivescriptprofilercontrol2-prepareprofilerstop.md)   
  [IActiveScriptProfilerControl2 接口](../../winscript/reference/iactivescriptprofilercontrol2-interface.md)

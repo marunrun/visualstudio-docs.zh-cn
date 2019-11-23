@@ -35,11 +35,11 @@ enum enum_APPBREAKFLAGS{APPBREAKFLAG_DEBUGGER_BLOCK= 0x00000001,APPBREAKFLAG_DEB
   
 ## <a name="members"></a>Members  
   
-|成员|“值”|描述|  
+|成员|值|说明|  
 |------------|-----------|-----------------|  
-|APPBREAKFLAG_DEBUGGER_BLOCK|0x00000001|语言引擎应立即在所有线程上通过 BREAKREASON_DEBUGGER_BLOCK 中断。|  
-|APPBREAKFLAG_DEBUGGER_HALT|0x00000002|语言引擎应立即与 BREAKREASON_DEBUGGER_HALT 中断。|  
-|APPBREAKFLAG_STEP|0x00010000|语言引擎应立即在带有 BREAKREASON_STEP 的单步执行线程中中断。|  
+|APPBREAKFLAG_DEBUGGER_BLOCK|0x00000001|语言引擎应立即在具有 BREAKREASON_DEBUGGER_BLOCK 的所有线程上中断。|  
+|APPBREAKFLAG_DEBUGGER_HALT|0x00000002|语言引擎应立即中断 BREAKREASON_DEBUGGER_HALT。|  
+|APPBREAKFLAG_STEP|0x00010000|语言引擎应立即在单步执行的线程中中断 BREAKREASON_STEP。|  
 |APPBREAKFLAG_NESTED|0x00020000|应用程序在断点上的嵌套执行中。|  
 |APPBREAKFLAG_STEPTYPE_SOURCE|0x00000000|调试器在源级别单步执行。|  
 |APPBREAKFLAG_STEPTYPE_BYTECODE|0x00100000|调试器在字节代码级别单步执行。|  
@@ -50,6 +50,6 @@ enum enum_APPBREAKFLAGS{APPBREAKFLAG_DEBUGGER_BLOCK= 0x00000001,APPBREAKFLAG_DEB
 ## <a name="remarks"></a>备注  
  某些标志指定语言引擎应在下一个机会时中断，而其他标志则指定调试器的单步执行模式。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [活动脚本调试器常量、枚举和结构](../../winscript/reference/active-script-debugger-constants-enumerations-and-structures.md)   
  [BREAKREASON 枚举](../../winscript/reference/breakreason-enumeration.md)

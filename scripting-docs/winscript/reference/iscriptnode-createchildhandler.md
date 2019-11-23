@@ -25,7 +25,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72573605"
 ---
 # <a name="iscriptnodecreatechildhandler"></a>IScriptNode::CreateChildHandler
-添加 scriptlet 作为 `IScriptNode` 的子实例。  
+添加 scriptlet 作为 `IScriptNode`的子实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,7 +52,7 @@ HRESULT CreateChildHandler(
  [in，size_is （`cpszNames`）]主机上的完全限定名中的标识符列表。  
   
  `cpszNames`  
- 中@No__t_0 参数中的标识符数量。  
+ 中`prgpszNames` 参数中的标识符数量。  
   
  `pszEvent`  
  中标识与 scriptlet 关联的事件名称的缓冲区地址。  
@@ -68,7 +68,7 @@ HRESULT CreateChildHandler(
  中函数对象的类型信息。  
   
  `iMethodSignature`  
- 中@No__t_0 参数中函数的索引。  
+ 中`ITypeInfo``ptiSignature` 参数中函数的索引。  
   
  `isn`  
  中父中子级的索引。  
@@ -82,13 +82,13 @@ HRESULT CreateChildHandler(
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
  Scriptlet 指定事件处理程序。 此方法会创建一个 scriptlet，如果它由表示网页的 `IScriptNode` 对象调用。 如果其他接口调用此方法，则此方法不会成功。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IScriptNode 接口](../../winscript/reference/iscriptnode-interface.md)   
  [IScriptEntry 接口](../../winscript/reference/iscriptentry-interface.md)

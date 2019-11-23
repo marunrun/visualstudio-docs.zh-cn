@@ -22,12 +22,12 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72573790"
 ---
 # <a name="javascript-object-expected"></a>缺少 JavaScript 对象
-尝试将非 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 对象传递到需要 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 对象的内置函数。 各种内置函数需要在 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 中定义的对象（而不是由宿主定义的对象或控件等外部组件）。  
+尝试将非[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 对象传递到需要 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 对象的内置函数。 各种内置函数需要在 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 中定义的对象（而不是由宿主定义的对象或控件等外部组件）。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
 - 确保作为参数传入的对象类型正确。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [对象和数组](../../javascript/objects-and-arrays-javascript.md)   
  [使用数组](../../javascript/advanced/using-arrays-javascript.md)

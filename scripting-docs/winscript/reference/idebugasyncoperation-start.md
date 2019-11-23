@@ -42,16 +42,16 @@ HRESULT Start(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
 |`E_UNEXPECTED`|操作已挂起。|  
   
 ## <a name="remarks"></a>备注  
- 此方法导致在从 `IDebugSyncOperation::GetTargetThread` 获取的线程中以异步方式调用 `IDebugSyncOperation::Execute`。 只应从调试器线程内调用此方法;否则，在操作完成之前，不会返回。  
+ 此方法导致在从 `IDebugSyncOperation::GetTargetThread`获取的线程中以异步方式调用 `IDebugSyncOperation::Execute`。 只应从调试器线程内调用此方法;否则，在操作完成之前，不会返回。  
   
-## <a name="see-also"></a>请参阅  
- [IDebugAsyncOperation：： Abort](../../winscript/reference/idebugasyncoperation-abort.md)    
+## <a name="see-also"></a>另请参阅  
+ [IDebugAsyncOperation::Abort](../../winscript/reference/idebugasyncoperation-abort.md)   
  [IDebugAsyncOperation 接口](../../winscript/reference/idebugasyncoperation-interface.md)   
- [IDebugSyncOperation：： Execute](../../winscript/reference/idebugsyncoperation-execute.md)    
+ [IDebugSyncOperation::Execute](../../winscript/reference/idebugsyncoperation-execute.md)   
  [IDebugSyncOperation::GetTargetThread](../../winscript/reference/idebugsyncoperation-gettargetthread.md)

@@ -30,13 +30,13 @@ ms.locfileid: "72381316"
 
 - 在运行时将 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 控件添加到文档中。
 
-- 将 @no__t 0 控件绑定到 web 服务中的数据。
+- 将 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 控件绑定到 web 服务中的数据。
 
 - 响应 <xref:Microsoft.Office.Tools.Word.ContentControlBase.Entering> 控件的 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 事件。
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
  你需要以下组件来完成本演练：
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -114,5 +114,5 @@ ms.locfileid: "72381316"
 
      随即从 MTPS Content Service 下载信息并将信息显示在内容控件中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [将数据绑定到 Office 解决方案中的控件](../vsto/binding-data-to-controls-in-office-solutions.md)

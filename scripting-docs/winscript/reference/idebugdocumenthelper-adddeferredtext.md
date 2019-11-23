@@ -46,21 +46,21 @@ HRESULT AddDeferredText(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
 |`E_FAIL`|方法失败。|  
   
 ## <a name="remarks"></a>备注  
- 此方法允许宿主提供要在需要时添加的字符，同时允许帮助者生成准确的通知和大小信息。 @No__t_0 参数是由宿主定义的 cookie，它表示文本的起始位置。 对 `IDebugDocumentText::GetText` 的后续调用必须提供此 cookie。 例如，在表示 DBCS 中文本的主机中，cookie 可以是字节偏移量。  
+ 此方法允许宿主提供要在需要时添加的字符，同时允许帮助者生成准确的通知和大小信息。 `dwTextStartCookie` 参数是由宿主定义的 cookie，它表示文本的起始位置。 对 `IDebugDocumentText::GetText` 的后续调用必须提供此 cookie。 例如，在表示 DBCS 中文本的主机中，cookie 可以是字节偏移量。  
   
  假设单个调用 `IDebugDocumentText::GetText` 可以从多个调用中获取字符 `AddDeferredText`。 帮助程序类还可能会要求多次延迟字符。  
   
 > [!NOTE]
-> 不应将对 `AddDeferredText` 的调用与 `AddUnicodeText` 或 `AddDBCSText` 的调用混合。 如果出现这种情况，则返回 `E_FAIL`。  
+> 不应将对 `AddDeferredText` 的调用与 `AddUnicodeText` 或 `AddDBCSText`的调用混合。 如果出现这种情况，则返回 `E_FAIL`。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugDocumentHelper 接口](../../winscript/reference/idebugdocumenthelper-interface.md)   
- [IDebugDocumentHelper：： AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)    
- [IDebugDocumentHelper：： AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)    
+ [IDebugDocumentHelper::AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)   
+ [IDebugDocumentHelper::AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)   
  [IDebugDocumentText::GetText](../../winscript/reference/idebugdocumenttext-gettext.md)

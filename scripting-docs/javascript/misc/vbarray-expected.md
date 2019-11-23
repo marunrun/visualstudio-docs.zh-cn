@@ -34,6 +34,6 @@ new VBArray(safeArray);
   
 - 请确保仅将**VBArray**对象传递给**VBArray**构造函数。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [VBArray 对象](../../javascript/reference/vbarray-object-javascript.md)   
  [使用数组](../../javascript/advanced/using-arrays-javascript.md)

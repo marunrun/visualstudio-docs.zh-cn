@@ -52,10 +52,10 @@ HRESULT GetScriptletTextAttributes(
  `dwFlags`  
  中与 scriptlet 的文本特性相关联的标志。 可以是以下值的组合。  
   
-|返回的常量|“值”|描述|  
+|常量|值|说明|  
 |--------------|-----------|-----------------|  
-|GETATTRTYPE_DEPSCAN|0x0001|标识具有 SOURCETEXT_ATTR_IDENTIFIER 属性的标识符，并识别具有 SOURCETEXT_ATTR_MEMBERLOOKUP 属性的点运算符。|  
-|GETATTRFLAG_THIS|0x0100|标识具有 SOURCETEXT_ATTR_THIS 属性的当前对象。|  
+|GETATTRTYPE_DEPSCAN|0x0001|标识具有 SOURCETEXT_ATTR_IDENTIFIER 特性的标识符，并标识具有 SOURCETEXT_ATTR_MEMBERLOOKUP 属性的点运算符。|  
+|GETATTRFLAG_THIS|0x0100|标识具有 SOURCETEXT_ATTR_THIS 特性的当前对象。|  
 |GETATTRFLAG_HUMANTEXT|0x8000|标识具有 SOURCETEXT_ATTR_HUMANTEXT 属性的字符串内容和注释文本。|  
   
  `pattr`  
@@ -64,13 +64,13 @@ HRESULT GetScriptletTextAttributes(
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IActiveScriptAuthor 接口](../../winscript/reference/iactivescriptauthor-interface.md)   
- [IActiveScriptAuthor：： getscripttextattribute](../../winscript/reference/iactivescriptauthor-getscripttextattributes.md)    
+ [IActiveScriptAuthor::GetScriptTextAttributes](../../winscript/reference/iactivescriptauthor-getscripttextattributes.md)   
  [SOURCE_TEXT_ATTR 枚举](../../winscript/reference/source-text-attr-enumeration.md)

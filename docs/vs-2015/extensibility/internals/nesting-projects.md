@@ -23,11 +23,11 @@ ms.locfileid: "68180409"
 # <a name="nesting-projects"></a>嵌套项目
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-使用 VS 包的企业应用程序开发人员可以通过使用*项目嵌套*，在中[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]轻松地将相似类型的项目组合在一起。 例如，企业模板项目使用嵌套项目将项目分组到类别中。 业务外观项目、Web UI 项目等在一个类别中组合在一起。  
+使用 VS 包的企业应用程序开发人员可以使用*项目嵌套*在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中轻松地将相似类型的项目组合在一起。 例如，企业模板项目使用嵌套项目将项目分组到类别中。 业务外观项目、Web UI 项目等在一个类别中组合在一起。  
   
  在此方案中，开发人员可以在每个父项目下嵌套的项目数没有限制，尽管开发人员可以通过编程方式提供限制。 这种类型的分组也可以是递归的，在这种情况下，与子项目属于同一类型的项目可以嵌套在子项目下，以成为作为父项的子项目的子项目。  
   
- 项目嵌套不是的[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]内部部分。 您必须编写代码，以便在子项目中启用嵌套和子项目嵌套。 父项目是一种特殊的 VSPackage 或项目类型，使用其自己的 GUID 创建并注册，其中包含实现项目嵌套所需的代码。  
+ 项目嵌套不是 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]的固有部分。 您必须编写代码，以便在子项目中启用嵌套和子项目嵌套。 父项目是一种特殊的 VSPackage 或项目类型，使用其自己的 GUID 创建并注册，其中包含实现项目嵌套所需的代码。  
   
  可以在C#示例中找到嵌套项目的示例。嵌套项目示例。  
   
@@ -38,9 +38,9 @@ ms.locfileid: "68180409"
 ## <a name="see-also"></a>请参阅  
  [如何：实现嵌套项目](../../extensibility/internals/how-to-implement-nested-projects.md)   
  [卸载和重新加载嵌套项目的注意事项](../../extensibility/internals/considerations-for-unloading-and-reloading-nested-projects.md)   
- [嵌套项目的向导支持](../../extensibility/internals/wizard-support-for-nested-projects.md)   
+  [的嵌套项目的向导支持](../../extensibility/internals/wizard-support-for-nested-projects.md)  
  [注册项目和项模板](../../extensibility/internals/registering-project-and-item-templates.md)   
- [实现嵌套项目的命令处理](../../extensibility/internals/implementing-command-handling-for-nested-projects.md)   
+ [为嵌套项目实现命令处理](../../extensibility/internals/implementing-command-handling-for-nested-projects.md)   
  [筛选嵌套项目的 AddItem 对话框](../../extensibility/internals/filtering-the-additem-dialog-box-for-nested-projects.md)   
  [清单：创建新的项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)   
  [上下文参数](../../extensibility/internals/context-parameters.md)   

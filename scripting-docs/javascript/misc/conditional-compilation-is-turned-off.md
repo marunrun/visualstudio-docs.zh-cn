@@ -36,7 +36,7 @@ ms.locfileid: "72572942"
     /*@cc_on @*/  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [条件编译](../../javascript/advanced/conditional-compilation-javascript.md)   
  [条件编译变量](../../javascript/advanced/conditional-compilation-variables-javascript.md)   
  [@cc_on 语句](../../javascript/reference/at-cc-on-statement-javascript.md)   

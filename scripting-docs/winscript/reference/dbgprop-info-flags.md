@@ -1,5 +1,5 @@
 ---
-title: DBGPROP_INFO_FLAGS |Microsoft Docs
+title: DBGPROP_INFO_FLAGS | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -65,6 +65,6 @@ enum {
  DBGPROP_INFO_AUTOEXPAND  
  指定值字段应包含此类型的对象的自动扩展值（如果可用）。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [DebugPropertyInfo 结构](../../winscript/reference/debugpropertyinfo-structure.md)   
  [IDebugProperty 接口](../../winscript/reference/idebugproperty-interface.md)

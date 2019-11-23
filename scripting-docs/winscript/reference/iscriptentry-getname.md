@@ -37,19 +37,19 @@ HRESULT GetName(
   
 #### <a name="parameters"></a>参数  
  `pbstr`  
- 弄@No__t_0 脚本块所表示的对象的名称。 如果某个条目不表示单个对象，则返回 NULL。  
+ 弄`IScriptEntry` 脚本块所表示的对象的名称。 如果某个条目不表示单个对象，则返回 NULL。  
   
  子条目表示单个函数对象。  
   
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IScriptEntry 接口](../../winscript/reference/iscriptentry-interface.md)   
  [IScriptNode:: CreateChildEntry](../../winscript/reference/iscriptnode-createchildentry.md)

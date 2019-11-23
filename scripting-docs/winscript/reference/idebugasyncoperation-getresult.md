@@ -38,7 +38,7 @@ HRESULT GetResult(
   
 #### <a name="parameters"></a>参数  
  `phrResult`  
- 弄如果操作已完成，`phrResult` 为 `IDebugSyncOperation::Execute` 的返回值。  
+ 弄如果操作已完成，`phrResult` 为 `IDebugSyncOperation::Execute`的返回值。  
   
  `ppunkResult`  
  弄如果操作已完成，`ppunkResult` 是操作返回的对象参数。  
@@ -46,14 +46,14 @@ HRESULT GetResult(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
 |`E_PENDING`|操作未完成。|  
   
 ## <a name="remarks"></a>备注  
- 如果操作已完成，则此方法将从 `IDebugSyncOperation::Execute` 返回 `HRESULT` 和对象参数。  
+ 如果操作已完成，则此方法将从 `IDebugSyncOperation::Execute`返回 `HRESULT` 和对象参数。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugAsyncOperation 接口](../../winscript/reference/idebugasyncoperation-interface.md)   
  [IDebugSyncOperation::Execute](../../winscript/reference/idebugsyncoperation-execute.md)

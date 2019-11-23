@@ -29,10 +29,10 @@ interface IActiveScriptProfilerCallback3 : IActiveScriptProfilerCallback2
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |[IActiveScriptProfilerCallback3::SetWebWorkerId 方法](../../winscript/reference/iactivescriptprofilercallback3-setwebworkerid-method.md)|通知探查器要用于此分析会话的辅助 ID。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IActiveScriptProfilerCallback 接口](../../winscript/reference/iactivescriptprofilercallback-interface.md)   
  [IActiveScriptProfilerCallback2 接口](../../winscript/reference/iactivescriptprofilercallback2-interface.md)

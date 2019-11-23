@@ -28,6 +28,6 @@ ms.locfileid: "72575912"
   
 - 在右大括号后包含 `while` 测试语句。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [While 语句](../../javascript/reference/while-statement-javascript.md)   
  [控制程序流](../../javascript/controlling-program-flow-javascript.md)

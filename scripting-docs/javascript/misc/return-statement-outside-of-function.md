@@ -22,7 +22,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72573690"
 ---
 # <a name="return-statement-outside-of-function"></a>“return”语句在函数之外
-在代码的全局范围内使用了 `return` 语句。 @No__t_0 语句应仅出现在函数体中。  
+在代码的全局范围内使用了 `return` 语句。 `return` 语句应仅出现在函数体中。  
   
  使用 `()` 运算符调用函数是一个表达式。 所有表达式都具有值;`return` 语句用于指定函数返回的值。 一般形式为：  
   
@@ -41,7 +41,7 @@ return [ expression ];
   
 - 从代码的主体（全局范围）中删除 `return` 语句。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [return 语句](../../javascript/reference/return-statement-javascript.md)   
  [函数对象](../../javascript/reference/function-object-javascript.md)   
  [caller 属性 (Function)](../../javascript/reference/caller-property-function-javascript.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionCallBack：： onComplete |Microsoft Docs
+title: IDebugExpressionCallBack::onComplete | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -39,13 +39,13 @@ HRESULT onComplete();
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
  表达式计算完成后，将调用此方法。 可以在此事件处理程序中调用 `IDebugExpression::GetResultAsString` 方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugExpressionCallBack 接口](../../winscript/reference/idebugexpressioncallback-interface.md)   
  [IDebugExpression::GetResultAsString](../../winscript/reference/idebugexpression-getresultasstring.md)

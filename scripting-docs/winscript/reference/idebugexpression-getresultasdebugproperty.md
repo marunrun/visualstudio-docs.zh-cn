@@ -46,7 +46,7 @@ HRESULT GetResultAsDebugProperty(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
 |`E_PENDING`|操作仍处于挂起状态。|  
@@ -56,6 +56,6 @@ HRESULT GetResultAsDebugProperty(
   
  如果 `Abort` 中止操作，则此方法将返回 `S_OK` 和 `phrResult` 返回 `E_ABORT`。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugExpression 接口](../../winscript/reference/idebugexpression-interface.md)   
  [IDebugExpression::Abort](../../winscript/reference/idebugexpression-abort.md)

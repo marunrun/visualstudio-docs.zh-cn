@@ -22,7 +22,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72572758"
 ---
 # <a name="throw-must-be-followed-by-an-expression-on-the-same-source-line"></a>同一源行中 throw 之后必须有表达式
-你使用了 `throw` 关键字，但没有在同一源行中使用表达式。 @No__t_0 语句由两部分组成： `throw` 关键字，后跟要引发的表达式。 例如:  
+你使用了 `throw` 关键字，但没有在同一源行中使用表达式。 `throw` 语句由两部分组成： `throw` 关键字，后跟要引发的表达式。 例如：  
   
 ```JavaScript  
 if (denominator == 0) {  
@@ -36,7 +36,7 @@ if (denominator == 0) {
   
 - 请确保 `throw` 关键字和要引发的表达式出现在同一行上。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误对象](../../javascript/reference/error-object-javascript.md)   
  [Throw 语句](../../javascript/reference/throw-statement-javascript.md)   
  [try...catch...finally 语句](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)

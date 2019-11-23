@@ -52,11 +52,11 @@ HRESULT GetScriptTextAttributes(
  `dwFlags`  
  中与脚本块关联的标志。 可以是这些值的组合：  
   
-|返回的常量|“值”|描述|  
+|常量|值|说明|  
 |--------------|-----------|-----------------|  
 |GETATTRTYPE_DEPSCAN|0x0001|指示应分别用 SOURCETEXT_ATTR_IDENTIFIER 和 SOURCETEXT_ATTR_MEMBERLOOKUP 标志识别标识符和点运算符。|  
-|GETATTRFLAG_THIS|0x0100|指示应通过 SOURCETEXT_ATTR_THIS 标志标识当前对象的标识符。|  
-|GETATTRFLAG_HUMANTEXT|0x8000|指示应通过 SOURCETEXT_ATTR_HUMANTEXT 标志标识字符串内容和注释文本。|  
+|GETATTRFLAG_THIS|0x0100|指示应用 SOURCETEXT_ATTR_THIS 标志识别当前对象的标识符。|  
+|GETATTRFLAG_HUMANTEXT|0x8000|指示应用 SOURCETEXT_ATTR_HUMANTEXT 标志标识字符串内容和注释文本。|  
   
  `pattr`  
  [in，out]包含返回的属性的缓冲区。  
@@ -64,14 +64,14 @@ HRESULT GetScriptTextAttributes(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
 |`E_NOTIMPL`|该主机仅使用默认属性。|  
   
 ## <a name="remarks"></a>备注  
- 此方法返回任意文档文本块的文本特性。 主机可以 `E_NOTIMPL` 返回，在这种情况下，将使用默认属性。  
+ 此方法返回任意文档文本块的文本特性。 主机可以 `E_NOTIMPL`返回，在这种情况下，将使用默认属性。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugDocumentHost 接口](../../winscript/reference/idebugdocumenthost-interface.md)   
  [SOURCE_TEXT_ATTR 枚举](../../winscript/reference/source-text-attr-enumeration.md)

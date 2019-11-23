@@ -30,6 +30,6 @@ ms.locfileid: "72573426"
   
 - 尝试使用**finally**块，而不是**catch**块。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [尝试 .。。catch .。。finally 语句](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)   
- [Error 对象](../../javascript/reference/error-object-javascript.md)
+ [错误对象](../../javascript/reference/error-object-javascript.md)

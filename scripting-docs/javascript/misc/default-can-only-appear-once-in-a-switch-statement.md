@@ -28,7 +28,7 @@ ms.locfileid: "72572878"
   
 - 从 `switch` 语句中删除任何多余的**默认**事例语句（在 switch 语句中最多使用一个默认事例语句）。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Switch 语句](../../javascript/reference/switch-statement-javascript.md)   
  [控制程序流](../../javascript/controlling-program-flow-javascript.md)   
  [JavaScript 保留字](../../javascript/reference/javascript-reserved-words.md)

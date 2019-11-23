@@ -22,12 +22,12 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72573439"
 ---
 # <a name="expected-end"></a>应输入 "\@end"
-您尝试创建有条件编译的代码块，但未在结尾包含<strong>@end</strong>语句。 可以通过在<strong>@if/ @end</strong>块中包含语句来有条件地编译 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 语句。  
+您尝试创建有条件编译的代码块，但未在结尾包含<strong>@end</strong>语句。 可以通过在<strong>@if/@end</strong>块中包含语句来有条件地编译 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 语句。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
 - 添加相应的<strong>@end</strong>语句。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [条件编译](../../javascript/advanced/conditional-compilation-javascript.md)   
  [条件编译变量](../../javascript/advanced/conditional-compilation-variables-javascript.md)

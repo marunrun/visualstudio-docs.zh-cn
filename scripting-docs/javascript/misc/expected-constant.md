@@ -30,6 +30,6 @@ ms.locfileid: "72573408"
   
 - 将变量替换为条件编译变量。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [条件编译](../../javascript/advanced/conditional-compilation-javascript.md)   
  [条件编译变量](../../javascript/advanced/conditional-compilation-variables-javascript.md)

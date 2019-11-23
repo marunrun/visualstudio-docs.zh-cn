@@ -22,12 +22,12 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72573671"
 ---
 # <a name="string-expected"></a>缺少字符串
-试图对 `String` 之外的类型的对象调用**valueOf** **方法，而**不是调用方法。 此类调用的对象必须是 `String` 类型。  
+试图对 `String`之外的类型的对象调用**valueOf** **方法，而**不是调用方法。 此类调用的对象必须是 `String`类型。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
 - 仅对 `String`**类型的对象**调用 valueOf 或的方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [String 对象](../../javascript/reference/string-object-javascript.md)   
  [toString 方法 (Object)](../../javascript/reference/tostring-method-object-javascript.md)

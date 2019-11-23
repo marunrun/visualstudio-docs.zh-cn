@@ -17,27 +17,27 @@ ms.lasthandoff: 10/19/2019
 ms.locfileid: "72603858"
 ---
 # <a name="how-to-define-and-consume-activity-delegates-in-the-workflow-designer"></a>如何：在工作流设计器中定义和使用活动委托
-[!INCLUDE[net_v45](../includes/net-v45-md.md)] 包括用于 <xref:System.Activities.Statements.InvokeDelegate> 活动的新的现成可用的设计器。 此设计器可用于将委托分配给从 <xref:System.Activities.ActivityDelegate> 派生的活动，例如 <xref:System.Activities.ActivityAction> 或 <xref:System.Activities.ActivityFunc%601>。
+[!INCLUDE[net_v45](../includes/net-v45-md.md)] 包括 <xref:System.Activities.Statements.InvokeDelegate> 活动的新的现成设计器。 此设计器可用于将委托分配给从 <xref:System.Activities.ActivityDelegate> 派生的活动，例如 <xref:System.Activities.ActivityAction> 或 <xref:System.Activities.ActivityFunc%601>。
 
 ### <a name="define-an-activity-delegate"></a>定义活动委托
 
-1. 在 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 中，选择 "**文件**"、"**新建**"、"**项目**"。 选择左侧的 "**工作流**" 节点，并在右侧选择 "**工作流控制台应用程序**" 模板。 为项目命名（如果需要），然后单击 **"确定"** 。
+1. 在 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]中，选择 "**文件**"、"**新建**"、"**项目**"。 选择左侧的 "**工作流**" 节点，并在右侧选择 "**工作流控制台应用程序**" 模板。 为项目命名（如果需要），然后单击 **"确定"** 。
 
 2. 在**解决方案资源管理器**中右键单击该项目，然后选择 "**添加**"、"**新建项 ...** "。 选择左侧的 "**工作流**" 节点，并在右侧选择**活动**模板。 将新活动命名为**MyForEach** ，然后单击 **"确定"** 。 将在工作流设计器中打开活动。
 
 3. 在工作流设计器中，单击 "**参数**" 选项卡。
 
-4. 单击 "**创建自变量**"。 将新参数命名为**Items**。
+4. 单击 **“创建参数”** 。 将新参数命名为**Items**。
 
 5. 在 "**参数类型**" 列中，选择 " **[T] 的数组**"。
 
-6. 在类型浏览器中，选择 "**对象**"。 单击 **"确定"** 。
+6. 在类型浏览器中，选择 "**对象**"。 单击 **“确定”** 。
 
 7. 再次单击 "**创建参数**"。 命名新的参数**体**。 在新参数的 "**方向**" 列中，选择 "**属性**"。
 
 8. 在 "参数类型" 列中，选择 "**浏览类型 ...** "
 
-9. 在类型浏览器的 "**类型名称**" 字段中，输入**ActivityAction** 。 选择树视图中的 " **ActivityAction \<T >** 。 选择下拉列表中的 "**对象**"，将类型 " **ActivityAction \<Object >** 分配给参数。
+9. 在类型浏览器的 "**类型名称**" 字段中，输入**ActivityAction** 。 选择树视图中的 " **ActivityAction\<t" >** 。 选择下拉列表中的 "**对象**"，将类型**ActivityAction\<对象 >** 分配给参数。
 
 10. 将 "<xref:System.Activities.Statements.While>" 活动从 "工具箱" 的 "**控制流**" 部分拖到设计器图面。
 
@@ -79,5 +79,5 @@ ms.locfileid: "72603858"
 
    当执行工作流时，控制台将显示以下信息：
 
-   **1** 
+   **1**
    **abc**

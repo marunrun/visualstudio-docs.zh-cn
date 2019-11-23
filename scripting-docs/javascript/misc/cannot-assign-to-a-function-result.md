@@ -42,7 +42,7 @@ myFunction() = 42;  // Attempting to assign the value 42 to the result of the fu
     myFunction = new Function("return 42;");  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [函数对象](../../javascript/reference/function-object-javascript.md)   
  [编写 JavaScript 代码](../../javascript/writing-javascript-code.md)   
  [函数](../../javascript/functions-javascript.md)

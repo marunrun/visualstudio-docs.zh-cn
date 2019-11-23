@@ -40,7 +40,7 @@ HRESULT EnumCodeContextsOfPosition(
   
 #### <a name="parameters"></a>参数  
  `dwSourceContext`  
- 中为 `IActiveScriptParse::ParseScriptText` 或 `IActiveScriptParse::AddScriptlet` 提供的源上下文。  
+ 中为 `IActiveScriptParse::ParseScriptText` 或 `IActiveScriptParse::AddScriptlet`提供的源上下文。  
   
  `uCharacterOffset`  
  中相对于脚本文本开头的字符偏移量。  
@@ -54,13 +54,13 @@ HRESULT EnumCodeContextsOfPosition(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
  智能主机使用此方法委托 `IDebugDocumentContext::EnumCodeContexts` 方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IActiveScriptDebug 接口](../../winscript/reference/iactivescriptdebug-interface.md)   
  [IDebugDocumentContext::EnumCodeContexts](../../winscript/reference/idebugdocumentcontext-enumcodecontexts.md)

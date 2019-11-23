@@ -42,7 +42,7 @@ HRESULT SetItemName(
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
 |`E_FAIL`|方法未成功。|  
@@ -50,8 +50,8 @@ HRESULT SetItemName(
 ## <a name="remarks"></a>备注  
  对于 `IScriptEntry` 对象，此方法返回 `S_OK`。  
   
- 对于 `IScriptScriptlet` 对象（从 `IScriptEntry` 派生），此方法返回 `E_FAIL`。 对于 `IScriptScriptlet` 对象，项名称由[IActiveScriptAuthor：： AddScriptlet](../../winscript/reference/iactivescriptauthor-addscriptlet.md)设置，不能更改。  
+ 对于 `IScriptScriptlet` 对象（从 `IScriptEntry`派生），此方法返回 `E_FAIL`。 对于 `IScriptScriptlet` 对象，项名称由[IActiveScriptAuthor：： AddScriptlet](../../winscript/reference/iactivescriptauthor-addscriptlet.md)设置，不能更改。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IScriptEntry 接口](../../winscript/reference/iscriptentry-interface.md)   
  [IScriptEntry::GetItemName](../../winscript/reference/iscriptentry-getitemname.md)

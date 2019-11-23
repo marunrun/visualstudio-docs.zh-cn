@@ -1,5 +1,5 @@
 ---
-title: IDebugAsyncOperationCallBack：： onComplete |Microsoft Docs
+title: IDebugAsyncOperationCallBack::onComplete | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -39,13 +39,13 @@ HRESULT onComplete();
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
  此方法表明 `IDebugAsyncOperation` 对象中提供了结果。 事件在调试器线程中引发。  
   
-## <a name="see-also"></a>请参阅  
- [IDebugAsyncOperationCallBack 接口](../../winscript/reference/idebugasyncoperationcallback-interface.md)   
+## <a name="see-also"></a>另请参阅  
+ [IDebugAsyncOperationCallBack Interface](../../winscript/reference/idebugasyncoperationcallback-interface.md)   
  [IDebugAsyncOperation 接口](../../winscript/reference/idebugasyncoperation-interface.md)

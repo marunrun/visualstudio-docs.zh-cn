@@ -42,12 +42,12 @@ ms.locfileid: "72000175"
 
 创建应用：
 
-1. 打开 Visual Studio，然后选择 " **File** > **New** > "**项目**。 在 **" C#视觉对象**" 下，选择 " **Windows 桌面**" 或 " **.net Core**"，然后在中间窗格中选择一个**控制台应用**。
+1. 打开 Visual Studio，然后选择 "**文件**" > **新建** > **项目**"。 在 **" C#视觉对象**" 下，选择 " **Windows 桌面**" 或 " **.net Core**"，然后在中间窗格中选择一个**控制台应用**。
 
     > [!NOTE]
     > 如果没有看到“控制台应用程序”项目模板，请单击“新建项目”对话框左侧窗格中的“打开 Visual Studio 安装程序”链接。 Visual Studio 安装程序启动。 选择“.NET Core 桌面开发”或“.NET Core 跨平台开发”工作负载，然后选择“修改”。
 
-2. 在 "**名称**" 字段中，键入**Console_Parse_JSON** ，然后单击 **"确定"**。 Visual Studio 随即创建项目。
+2. 在 "**名称**" 字段中，键入**Console_Parse_JSON**然后单击 **"确定"** 。 Visual Studio 随即创建项目。
 
 3. 将项目的*Program.cs*文件中的默认代码替换为下面的示例代码。
 
@@ -184,15 +184,15 @@ namespace Console_Parse_JSON
 
 ## <a name="check-the-light-bulb"></a>检查灯泡！
 
-第一个红色波形曲线表示编译时错误。 将鼠标悬停在它上方，你会看到消息 ```The name `Encoding` does not exist in the current context```。
+第一个红色波形曲线表示编译时错误。 将鼠标悬停在它上，可以看到消息 ```The name `Encoding` does not exist in the current context```。
 
-请注意，此错误会向左下方显示一个灯泡图标。 除了螺丝钉图标 ![screwdriver icon @ no__t），灯泡图标 ![light 灯泡图标 @ no__t 表示可帮助你修复或重构代码内联的快速操作。 灯泡表示*应*修复的问题。 螺丝钉是为了解决问题，您可以选择解决这些问题。 使用第一个建议的修复方法，单击左侧的 "**使用 System. 文本**" 解决此错误。
+请注意，此错误会向左下方显示一个灯泡图标。 将螺丝刀图标 ![螺丝刀图标](../ide/media/screwdriver-icon.png)上，灯泡图标 ![灯泡图标](../ide/media/light-bulb-icon.png) 表示可帮助你修复或重构内联代码的快速操作。 灯泡表示*应*修复的问题。 螺丝钉是为了解决问题，您可以选择解决这些问题。 使用第一个建议的修复方法，单击左侧的 "**使用 System. 文本**" 解决此错误。
 
 ![使用灯泡修复代码](../debugger/media/write-better-code-missing-include.png)
 
 单击此项时，Visual Studio 会将 `using System.Text` 语句添加到*Program.cs*文件的顶部，红色波浪线将消失。 （如果不确定建议的解决方法，请在应用修补程序之前选择右侧的 "**预览更改**" 链接。）
 
-前面的错误是通常通过向代码添加新的 `using` 语句来修复的常见错误。 这种错误有几个常见的类似错误，如 ```The type or namespace `Name` cannot be found.``` 这类错误可能表示缺少程序集引用（右键单击项目，选择 "**添加** > **引用**"）、拼写错误的名称或缺少所需的库若要添加（ C#对于，右键单击项目并选择 "**管理 NuGet 包**"）。
+前面的错误是通常通过向代码添加新的 `using` 语句来修复的常见错误。 这种错误有几个常见的类似错误，如 ```The type or namespace `Name` cannot be found.``` 这种错误可能表示缺少程序集引用（右键单击该项目，选择 "**添加** > **引用**"）、拼写有误的名称或缺少需要添加的库（对于C#，右键单击该项目，然后选择 "**管理 NuGet 包**"）。
 
 ## <a name="fix-the-remaining-errors-and-warnings"></a>修复剩余错误和警告
 
@@ -200,9 +200,9 @@ namespace Console_Parse_JSON
 
 ![类型转换错误](../debugger/media/write-better-code-conversion-error.png)
 
-由于代码分析器不能猜到你的意图，因此没有任何轻型电灯泡来帮助你解决这一问题。 若要修复此错误，您需要了解代码的意图。 在此示例中，很难看到 `points` 应为数值（整数）值，因为您尝试将 @no__t 添加到 `totalpoints`。
+由于代码分析器不能猜到你的意图，因此没有任何轻型电灯泡来帮助你解决这一问题。 若要修复此错误，您需要了解代码的意图。 在此示例中，很难看到 `points` 应为数值（整数）值，因为您尝试将 `points` 添加到 `totalpoints`中。
 
-若要修复此错误，请将 @no__t 类的 @no__t 成员从此：
+若要修复此错误，请将 `User` 类的 `points` 成员从此：
 
 ```csharp
 [DataMember]
@@ -222,7 +222,7 @@ internal int points;
 
 ![未赋值变量的警告消息](../debugger/media/write-better-code-warning-message.png)
 
-通常，这表示需要修复的问题。 但是，在示例应用中，实际上是在反序列化过程中将数据存储在 `points` 变量中，然后将该值添加到 @no__t 数据成员中。 在此示例中，您知道代码的目的，可以安全地忽略该警告。 但是，如果想要消除此警告，可以替换以下代码：
+通常，这表示需要修复的问题。 但是，在示例应用中，实际上是在反序列化过程中将数据存储在 `points` 变量中，然后将该值添加到 `totalpoints` 数据成员。 在此示例中，您知道代码的目的，可以安全地忽略该警告。 但是，如果想要消除此警告，可以替换以下代码：
 
 ```csharp
 item.totalpoints = users[i].points;
@@ -241,13 +241,13 @@ item.totalpoints += users[i].points;
 
 如果已修复所有红色波形曲线并解决了此情况，或者至少调查了所有绿色波形曲线，则可以启动调试器并运行应用。
 
-按 F5（“调试”>“开始调试”）或调试工具栏中的“开始调试”按钮（![开始调试](../debugger/media/dbg-tour-start-debugging.png "Start Debugging")）。
+按 F5（“调试”>“开始调试”）或调试工具栏中的“开始调试”按钮（**开始调试** **Start Debugging**）![](../debugger/media/dbg-tour-start-debugging.png "")。
 
 此时，示例应用引发 `SerializationException` 异常（运行时错误）。 也就是说，应用会对尝试序列化的数据进行浅压浅。 由于已在调试模式下启动应用（附加调试器），因此调试器的异常帮助器会直接转到引发异常的代码，并提供有用的错误消息。
 
 ![发生 SerializationException](../debugger/media/write-better-code-serialization-exception.png)
 
-错误消息指示不能将值 `4o` 作为整数来分析。 因此，在此示例中，您知道数据是错误的： `4o` 应 `40`。 但是，如果您不是实际情况中的数据控制（假设您从 web 服务中获取了数据），您该怎么做呢？ 如何解决此问题？
+错误消息指示 `4o` 的值无法分析为整数。 因此，在此示例中，您知道数据是错误的：应 `40``4o`。 但是，如果您不是实际情况中的数据控制（假设您从 web 服务中获取了数据），您该怎么做呢？ 如何解决此问题？
 
 遇到异常时，您需要询问（并回答）几个问题：
 
@@ -255,7 +255,7 @@ item.totalpoints += users[i].points;
 
 * 您的用户可能会遇到这种异常情况吗？
 
-如果是前者，请修复该错误。 （在示例应用中，这意味着修复错误的数据。）如果是后者，则您可能需要使用 `try/catch` 块处理代码中的异常（我们在下一节中介绍其他可能的策略）。 在示例应用中，替换以下代码：
+如果是前者，请修复该错误。 （在示例应用中，这意味着修复错误的数据。）如果是后者，则您可能需要使用 `try/catch` 块处理代码中的异常（在下一节中查看其他可能的策略）。 在示例应用中，替换以下代码：
 
 ```csharp
 users = ser.ReadObject(ms) as User[];
@@ -275,13 +275,13 @@ catch (SerializationException)
 }
 ```
 
-@No__t-0 块具有一定的性能开销，因此你只需在你真正需要它们时使用它们，即，在应用的发布版本中可能出现的位置（a），并且该方法的文档指示你应检查是否存在异常（如suming 文档已完成！）。 在许多情况下，您可以适当地处理异常，用户永远不需要知道。
+`try/catch` 块具有一定的性能开销，因此你只需在你真正需要它们时使用它们，即，在应用的发行版中可能出现的位置（a），并且该方法的文档表明你应检查是否存在异常（假定文档已完成！）。 在许多情况下，您可以适当地处理异常，用户永远不需要知道。
 
 下面是有关异常处理的几个重要提示：
 
-* 避免使用空 catch 块（例如 `catch (Exception) {}`），该 catch 块不采取适当的措施来公开或处理错误。 空或不信息 catch 块可以隐藏异常，并使代码更难以调试，而不是更容易。
+* 避免使用空 catch 块（如 `catch (Exception) {}`），该 catch 块不采取适当操作来公开或处理错误。 空或不信息 catch 块可以隐藏异常，并使代码更难以调试，而不是更容易。
 
-* 在引发异常的特定函数周围使用 `try/catch` 块（在示例应用中 `ReadObject`）。 如果在更大的代码块中使用它，则会结束隐藏错误的位置。 例如，不要在对父 @no__t 函数的调用中使用 `try/catch` 块（如此处所示），也不会确切知道发生异常的位置。
+* 使用 `try/catch` 块围绕在示例应用中引发异常的特定函数（`ReadObject`）。 如果在更大的代码块中使用它，则会结束隐藏错误的位置。 例如，不要使用 `try/catch` 块调用父函数 `ReadToObject`（如下所示），也不会确切知道发生异常的位置。
 
     ```csharp
     // Don't do this
@@ -296,17 +296,17 @@ catch (SerializationException)
 
 * 对于包含在应用中的不熟悉的函数（特别是与外部数据的交互（如 web 请求），请查看文档以查看函数可能引发哪些异常。 这可能是正确的错误处理和调试应用程序的关键信息。
 
-对于示例应用，通过将 @no__t 更改为 `4o` 来修复 @no__t 方法中的 @no__t 0。
+对于示例应用，通过将 `4o` 更改为 `40`来修复 `GetJsonData` 方法中的 `SerializationException`。
 
 ## <a name="clarify-your-code-intent-by-using-assert"></a>使用 assert 阐明代码意向
 
-单击调试工具栏中的“重启”![重启应用](../debugger/media/dbg-tour-restart.png "RestartApp")按钮 (Ctrl + Shift + F5)。 这更少的步骤会重启应用。 控制台窗口中显示以下输出。
+单击调试工具栏中的“重启”（**重启应用**![RestartApp]）按钮（Ctrl(../debugger/media/dbg-tour-restart.png "Shift")F5） +  + 。 这更少的步骤会重启应用。 控制台窗口中显示以下输出。
 
 ![输出中的 Null 值](../debugger/media/write-better-code-using-assert-null-output.png)
 
 你可以在此输出中看到不是很正确的内容。 第三个记录的**名称**和**姓氏**为空白！
 
-这是一种很好的时机，就是一种很好的做法，那就是使用函数中的 `assert` 语句，这种做法通常是使用不足的。 通过添加以下代码，你可以包括运行时检查，以确保 `firstname` 和 @no__t 不 `null`。 替换 `UpdateRecords` 方法中的以下代码：
+这是一种很好的时机，那就是使用函数中的 `assert` 语句，这是一个很好的编码做法，通常是使用不足的。 通过添加以下代码，你可以包括运行时检查，以确保不 `null``firstname` 和 `lastname`。 替换 `UpdateRecords` 方法中的以下代码：
 
 ```csharp
 if (existingUser == false)
@@ -336,19 +336,19 @@ if (existingUser == false)
 
 通过以这种方式指定意向，可以强制实施要求。 这是一种简单便捷的方法，可用于在开发期间显示 bug。 （`assert` 语句也用作单元测试中的主要元素。）
 
-单击调试工具栏中的“重启”![重启应用](../debugger/media/dbg-tour-restart.png "RestartApp")按钮 (Ctrl + Shift + F5)。
+单击调试工具栏中的“重启”（**重启应用**![RestartApp]）按钮（Ctrl(../debugger/media/dbg-tour-restart.png "Shift")F5） +  + 。
 
 > [!NOTE]
-> @No__t-0 代码仅在调试版本中处于活动状态。
+> `assert` 代码仅在调试版本中处于活动状态。
 
 重新启动时，调试器会在 `assert` 语句上暂停，因为表达式 `users[i].firstname != null` 的计算结果为 `false` 而不是 `true`。
 
 ![断言解析为 false](../debugger/media/write-better-code-using-assert.png)
 
-@No__t-0 错误表明存在需要调查的问题。 `assert` 可以涵盖许多不一定会出现异常的情况。 在此示例中，用户将看不到异常，并将 `null` 值作为记录列表中 `firstname` 添加。 这可能会导致以后出现问题（例如，在控制台输出中看到），并且可能更难调试。
+`assert` 错误表明存在需要调查的问题。 `assert` 可以涵盖许多不一定会出现异常的情况。 在此示例中，用户将看不到异常，并将 `null` 值添加为记录列表中 `firstname`。 这可能会导致以后出现问题（例如，在控制台输出中看到），并且可能更难调试。
 
 > [!NOTE]
-> 在对 `null` 值调用方法的情况下，会生成 @no__t 结果。 通常，应避免将 `try/catch` 块用于一般例外，即不依赖于特定库函数的异常。 任何对象都可以引发 `NullReferenceException`。 如果不确定，请查看库函数的文档。
+> 在对 `null` 值调用方法的方案中，`NullReferenceException` 结果。 通常情况下，应避免将 `try/catch` 块用于一般异常，即未绑定到特定库函数的异常。 任何对象都可以引发 `NullReferenceException`。 如果不确定，请查看库函数的文档。
 
 在调试过程中，最好保留特定的 `assert` 语句，直到你知道需要将其替换为实际的代码修复。 假设你确定用户在应用的发布版本中可能会遇到异常。 在这种情况下，你必须重构代码，以确保你的应用不会引发异常或导致其他错误。 因此，若要修复此代码，请替换以下代码：
 
@@ -366,9 +366,9 @@ if (existingUser == false && users[i].firstname != null && users[i].lastname != 
     User user = new User();
 ```
 
-通过使用此代码，你可以满足你的代码要求，并确保不向数据中添加 @no__t 为0或 @no__t 为1的记录 `null`。
+通过使用此代码，你可以满足你的代码要求，并确保未将具有 `firstname` 或 `lastname` 值 `null` 的记录添加到数据。
 
-在此示例中，我们在一个循环中添加了两个 `assert` 语句。 通常，在使用 `assert` 时，最好在函数或方法的入口点（开始）添加 @no__t 1 语句。 你当前正在查看示例应用中的 @no__t 0 方法。 在此方法中，如果其中一个方法参数 @no__t 为-0，您就会遇到问题，因此，请在函数的入口点使用 @no__t 1 语句同时检查它们。
+在此示例中，我们在一个循环中添加了两个 `assert` 语句。 通常，在使用 `assert`时，最好在函数或方法的入口点（开始）添加 `assert` 语句。 你当前正在查看示例应用中的 `UpdateRecords` 方法。 在此方法中，如果其中一个方法参数 `null`，你就会遇到问题，因此，请使用函数入口点上的 `assert` 语句同时检查它们。
 
 ```csharp
 public static void UpdateRecords(List<User> db, User[] users)
@@ -379,7 +379,7 @@ public static void UpdateRecords(List<User> db, User[] users)
 
 对于上述语句，你的目的是在更新任何数据之前加载现有数据（`db`）并检索新数据（`users`）。
 
-可以将 `assert` 与可解析为 @no__t 或 @no__t 2 的任意类型的表达式一起使用。 例如，你可以添加类似于下面的 `assert` 语句。
+可以将 `assert` 与可解析为 `true` 或 `false`的任何类型的表达式一起使用。 例如，你可以添加类似于下面的 `assert` 语句。
 
 ```csharp
 Debug.Assert(users[0].points > 0);
