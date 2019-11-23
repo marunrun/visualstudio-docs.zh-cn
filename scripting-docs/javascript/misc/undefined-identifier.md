@@ -34,6 +34,6 @@ ms.locfileid: "72572552"
   
 - 用**var**语句（如 `var` x;）声明该变量。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [变量](../../javascript/variables-javascript.md)   
  [变量范围](../../javascript/advanced/variable-scope-javascript.md)

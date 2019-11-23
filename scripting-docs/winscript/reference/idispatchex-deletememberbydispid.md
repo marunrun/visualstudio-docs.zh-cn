@@ -48,7 +48,7 @@ HRESULT DeleteMemberByDispID(
 |`S_FALSE`|成员存在，但不能删除。|  
   
 ## <a name="remarks"></a>备注  
- 如果删除了成员，则 DISPID 需要对 `GetNextDispID` 仍有效。  
+ 如果删除了成员，则 DISPID 需要对 `GetNextDispID`仍有效。  
   
  如果删除具有给定名称的成员，然后重新创建同名的成员，则 DISPID 应相同。 （仅大小写不同的成员名称是否与对象相关。）  
   
@@ -64,7 +64,7 @@ if (SUCCEEDED(pdex->GetDispID(bstrName, fdexNameCaseSensitive, &dispid)))
     pdex->DeleteMemberByDispID(dispid);  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDispatchEx 接口](../../winscript/reference/idispatchex-interface.md)   
- [IDispatchEx：： GetDispID](../../winscript/reference/idispatchex-getdispid.md)    
+ [IDispatchEx::GetDispID](../../winscript/reference/idispatchex-getdispid.md)   
  [IDispatchEx::GetNextDispID](../../winscript/reference/idispatchex-getnextdispid.md)

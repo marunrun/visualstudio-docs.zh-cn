@@ -46,14 +46,14 @@ HRESULT CreateAsyncDebugOperation(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
  此方法允许语言引擎以异步方式计算表达式，而无需与调试器线程显式同步。 有关详细信息，请参阅[IDebugSyncOperation interface](../../winscript/reference/idebugsyncoperation-interface.md) And [IDebugAsyncOperation interface](../../winscript/reference/idebugasyncoperation-interface.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugApplication 接口](../../winscript/reference/idebugapplication-interface.md)   
  [IDebugSyncOperation 接口](../../winscript/reference/idebugsyncoperation-interface.md)   
  [IDebugAsyncOperation 接口](../../winscript/reference/idebugasyncoperation-interface.md)

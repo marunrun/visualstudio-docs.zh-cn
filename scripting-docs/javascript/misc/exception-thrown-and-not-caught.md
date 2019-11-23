@@ -32,7 +32,7 @@ ms.locfileid: "72572853"
   
 - 如果重新引发异常，请确保有另一个相应的 catch 语句。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误对象](../../javascript/reference/error-object-javascript.md)   
  [Throw 语句](../../javascript/reference/throw-statement-javascript.md)   
  [try...catch...finally 语句](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)

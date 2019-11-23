@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerControl2：:P repareProfilerStop |Microsoft Docs
+title: IActiveScriptProfilerControl2::PrepareProfilerStop | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -45,6 +45,6 @@ HRESULT PrepareProfilerStop();
 ## <a name="remarks"></a>备注  
  调用 `IActiveScriptProfilerControl2::PrepareProfilerStop` 确保发送调用堆栈中的函数事件。 在当前选项卡上的任何脚本引擎上停止分析之前，必须先调用此方法。可以为任何脚本引擎调用方法。  
   
-## <a name="see-also"></a>请参阅  
- [IActiveScriptProfilerControl2：： CompleteProfilerStart](../../winscript/reference/iactivescriptprofilercontrol2-completeprofilerstart.md)    
+## <a name="see-also"></a>另请参阅  
+ [IActiveScriptProfilerControl2::CompleteProfilerStart](../../winscript/reference/iactivescriptprofilercontrol2-completeprofilerstart.md)   
  [IActiveScriptProfilerControl2 接口](../../winscript/reference/iactivescriptprofilercontrol2-interface.md)

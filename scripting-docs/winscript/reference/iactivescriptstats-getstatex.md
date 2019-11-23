@@ -50,17 +50,17 @@ HRESULT GetStatEx(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
-|`E_NOTIMPL`|未实现该方法。|  
+|`E_NOTIMPL`|该方法未实现。|  
   
 ## <a name="remarks"></a>备注  
  此方法允许自定义脚本引擎返回对自定义主机有意义的统计信息。  
   
 > [!NOTE]
-> 当前未实现此方法。  
+> 目前未实现此方法。  
   
-## <a name="see-also"></a>请参阅  
- [IActiveScriptStats：： GetStat](../../winscript/reference/iactivescriptstats-getstat.md)    
+## <a name="see-also"></a>另请参阅  
+ [IActiveScriptStats::GetStat](../../winscript/reference/iactivescriptstats-getstat.md)   
  [IActiveScriptStats 接口](../../winscript/reference/iactivescriptstats-interface.md)

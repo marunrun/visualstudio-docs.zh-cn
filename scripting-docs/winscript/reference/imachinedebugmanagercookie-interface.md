@@ -27,16 +27,16 @@ ms.locfileid: "72573888"
   
  脚本调试器在进程调试管理器（PDM）上调用 `IDebugCookie::SetDebugCookie` 方法。 然后，PDM 将与任何请求一起发送此 cookie，以便使用 `IMachineDebugManagerCookie` 接口的方法向/从计算机调试管理器（MDM）添加或删除脚本应用程序。 然后，MDM 将通知每个更改，其中包含该 cookie 的每个调试器除外。  
   
- 除了从 `IUnknown` 继承的方法之外，`IMachineDebugManagerCookie` 接口还公开以下方法。  
+ 除了从 `IUnknown`继承的方法之外，`IMachineDebugManagerCookie` 接口还公开以下方法。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |[IMachineDebugManagerCookie::AddApplication](../../winscript/reference/imachinedebugmanagercookie-addapplication.md)|将应用程序添加到正在运行的应用程序列表中。|  
 |[IMachineDebugManagerCookie::EnumApplications](../../winscript/reference/imachinedebugmanagercookie-enumapplications.md)|返回当前正在运行的应用程序列表的枚举器。|  
 |[IMachineDebugManagerCookie::RemoveApplication](../../winscript/reference/imachinedebugmanagercookie-removeapplication.md)|从正在运行的应用程序列表中删除应用程序。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IMachineDebugManager 接口](../../winscript/reference/imachinedebugmanager-interface.md)   
  [IDebugCookie 接口](../../winscript/reference/idebugcookie-interface.md)

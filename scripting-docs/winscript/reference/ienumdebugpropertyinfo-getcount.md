@@ -42,6 +42,6 @@ HRESULT GetCount (
 ## <a name="return-value"></a>返回值  
  返回一个有效 `HRESULT`，通常 `S_OK`。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IEnumDebugPropertyInfo 接口](../../winscript/reference/ienumdebugpropertyinfo-interface.md)   
  [DebugPropertyInfo 结构](../../winscript/reference/debugpropertyinfo-structure.md)

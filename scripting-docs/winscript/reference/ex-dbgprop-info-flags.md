@@ -1,5 +1,5 @@
 ---
-title: EX_DBGPROP_INFO_FLAGS |Microsoft Docs
+title: EX_DBGPROP_INFO_FLAGS | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -55,6 +55,6 @@ enum {
  EX_DBGPROP_INFO_DEBUGEXTPROP  
  初始化包含 `IDebugExtendedProperty` 接口的 `pDebugExtProp` 字段。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ExtendedDebugPropertyInfo 结构](../../winscript/reference/extendeddebugpropertyinfo-structure.md)   
  [IDebugExtendedProperty 接口](../../winscript/reference/idebugextendedproperty-interface.md)

@@ -39,7 +39,7 @@ HRESULT Abort();
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |S_OK|方法成功。|  
 |E_NOTIMPL|无法取消操作。|  
@@ -47,7 +47,7 @@ HRESULT Abort();
 ## <a name="remarks"></a>备注  
  此方法通常从调试器线程中调用，以取消无响应的操作。 此方法导致调用 `IDebugSyncOperation` 对象的 `InProgressAbort` 方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugAsyncOperation 接口](../../winscript/reference/idebugasyncoperation-interface.md)   
- [IDebugAsyncOperation：： Start](../../winscript/reference/idebugasyncoperation-start.md)    
+ [IDebugAsyncOperation::Start](../../winscript/reference/idebugasyncoperation-start.md)   
  [IDebugSyncOperation::InProgressAbort](../../winscript/reference/idebugsyncoperation-inprogressabort.md)

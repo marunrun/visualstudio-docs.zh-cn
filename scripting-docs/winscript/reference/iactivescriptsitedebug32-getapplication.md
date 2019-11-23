@@ -35,14 +35,14 @@ HRESULT GetApplication(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
 |`E_NOTIMPL`|宿主不直接支持调试。|  
   
 ## <a name="remarks"></a>备注  
- @No__t_0 方法为智能主机提供了一种方法，用于定义每个脚本所属的应用程序对象。 脚本引擎应尝试调用此方法来获取其包含的应用程序，如果此操作失败，则调用 `IProcessDebugManager::GetDefaultApplication`。  
+ `GetApplication` 方法为智能主机提供了一种方法，用于定义每个脚本所属的应用程序对象。 脚本引擎应尝试调用此方法来获取其包含的应用程序，如果此操作失败，则调用 `IProcessDebugManager::GetDefaultApplication`。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IActiveScriptSiteDebug32 接口](../../winscript/reference/iactivescriptsitedebug32-interface.md)   
  [IProcessDebugManager::GetDefaultApplication](../../winscript/reference/iprocessdebugmanager-getdefaultapplication.md)

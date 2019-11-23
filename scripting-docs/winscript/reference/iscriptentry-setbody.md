@@ -41,17 +41,17 @@ HRESULT SetBody(
   
  对于 `IScriptEntry` 函数块，`psz` 是函数体。  
   
- 对于 `IScriptScriptlet` 对象（从 `IScriptEntry` 派生），`psz` 是 scriptlet 的脚本文本。  
+ 对于 `IScriptScriptlet` 对象（从 `IScriptEntry`派生），`psz` 是 scriptlet 的脚本文本。  
   
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IScriptEntry 接口](../../winscript/reference/iscriptentry-interface.md)   
  [IScriptEntry::GetBody](../../winscript/reference/iscriptentry-getbody.md)

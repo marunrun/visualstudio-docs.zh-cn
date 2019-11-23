@@ -28,6 +28,6 @@ ms.locfileid: "72577546"
   
 - 添加标记函数、循环、块或对象初始值设定项结束的右大括号。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [函数对象](../../javascript/reference/function-object-javascript.md)   
  [控制程序流](../../javascript/controlling-program-flow-javascript.md)

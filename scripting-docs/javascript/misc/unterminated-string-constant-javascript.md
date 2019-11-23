@@ -31,6 +31,6 @@ ms.locfileid: "72575881"
   
 - 将右引号添加到字符串的末尾。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [String 对象](../../javascript/reference/string-object-javascript.md)   
  [toString 方法 (Object)](../../javascript/reference/tostring-method-object-javascript.md)

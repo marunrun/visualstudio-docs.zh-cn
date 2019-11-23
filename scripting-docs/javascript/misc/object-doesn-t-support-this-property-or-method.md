@@ -32,6 +32,6 @@ ms.locfileid: "72573737"
   
 - 有关更多信息，请参见对象的文档。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [对象对象](../../javascript/reference/object-object-javascript.md)   
  [JavaScript 对象](../../javascript/reference/javascript-objects.md)

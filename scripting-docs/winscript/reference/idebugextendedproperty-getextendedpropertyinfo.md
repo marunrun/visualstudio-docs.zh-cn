@@ -25,7 +25,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72576380"
 ---
 # <a name="idebugextendedpropertygetextendedpropertyinfo"></a>IDebugExtendedProperty::GetExtendedPropertyInfo
-提取扩展属性的扩展信息，这比简单的 `IDebugProperty` 更多。  
+提取扩展属性的扩展信息，这比简单的 `IDebugProperty`更多。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +39,7 @@ HRESULT GetExtendedPropertyInfo(
   
 #### <a name="parameters"></a>参数  
  `dwFieldSpec`  
- 中指定 EX_DBGPROP_INFO_FLAGS 常量，确定要在 `ExtendedDebugPropertyInfo` 结构中填充的字段。  
+ 中指定 EX_DBGPROP_INFO_FLAGS 常数，这些常数确定要在 `ExtendedDebugPropertyInfo` 结构中填充的字段。  
   
  `nRadix`  
  中用于解释任何数值信息的基数。  
@@ -50,7 +50,7 @@ HRESULT GetExtendedPropertyInfo(
 ## <a name="return-value"></a>返回值  
  返回一个有效 `HRESULT`，通常 `S_OK`。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugExtendedProperty 接口](../../winscript/reference/idebugextendedproperty-interface.md)   
- [EX_DBGPROP_INFO_FLAGS](../../winscript/reference/ex-dbgprop-info-flags.md)    
+ [EX_DBGPROP_INFO_FLAGS](../../winscript/reference/ex-dbgprop-info-flags.md)   
  [ExtendedDebugPropertyInfo 结构](../../winscript/reference/extendeddebugpropertyinfo-structure.md)

@@ -29,8 +29,8 @@ ms.locfileid: "72577543"
 - 添加最右边的右括号。  
   
     > [!NOTE]
-    > 如果要匹配单个括号，请使用反斜杠 \\ （-，使其不会通过 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 解释为特殊字符。  
+    > 如果要匹配单个括号，请使用反斜杠 \\（-，使其不会通过 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]解释为特殊字符。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [正则表达式对象](../../javascript/reference/regular-expression-object-javascript.md)   
  [正则表达式语法（JavaScript）](https://msdn.microsoft.com/library/1400241x)

@@ -124,11 +124,11 @@ MEF (Managed Extensibility Framework) 允许定义可使用最小配置安装的
 
 若要发现拖动源信息可采用的格式，请在调试模式下运行代码，从而在 `OnDragOver()` 或 `CanDragDrop()` 入口设置断点。 检查 `DiagramDragEventArgs` 参数的值。 信息将采用以下两种方式提供：
 
-- <xref:System.Windows.Forms.IDataObject> @ no__t_1_-此属性具有源对象的序列化版本，通常采用多种格式。 其最有用的函数是：
+- <xref:System.Windows.Forms.IDataObject>`Data`-此属性具有源对象的序列化版本，通常采用多种格式。 其最有用的函数是：
 
   - diagramEventArgs. GetDataFormats （）-列出可用于解码拖动对象的格式。 例如，如果用户从桌面拖动文件，则可用的格式包括文件名（“`FileNameW`”）。
 
-  - `diagramEventArgs.Data.GetData(format)` 以指定格式对拖动的对象进行解码。 将该对象转换为相应的类型。 例如:
+  - `diagramEventArgs.Data.GetData(format)` 以指定格式对拖动的对象进行解码。 将该对象转换为相应的类型。 例如：
 
     `string fileName = diagramEventArgs.Data.GetData("FileNameW") as string;`
 
@@ -160,7 +160,7 @@ MEF (Managed Extensibility Framework) 允许定义可使用最小配置安装的
 
 使源 DSL 可供 Visual Studio 模型总线访问：
 
-1. 在 DSL 设计器中打开源 DSL 的 DSL 定义文件。 右键单击设计图面，然后单击 "**启用 Modelbus**"。 在该对话框中，选择一个或两个选项。  单击 **“确定”** 。 新项目“ModelBus”随即添加到 DSL 解决方案中。
+1. 在 DSL 设计器中打开源 DSL 的 DSL 定义文件。 右键单击设计图面，然后单击**启用 Modelbus**。 在该对话框中，选择一个或两个选项。  单击“确定”。 新项目“ModelBus”随即添加到 DSL 解决方案中。
 
 2. 单击 "**转换所有模板**"，然后重新生成解决方案。
 
@@ -569,7 +569,7 @@ namespace Company.CompartmentDrag  // EDIT.
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [自定义复制行为](../modeling/customizing-copy-behavior.md)
 - [部署域特定语言解决方案](msi-and-vsix-deployment-of-a-dsl.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication：： SynchronousCallInDebuggerThread |Microsoft Docs
+title: IDebugApplication::SynchronousCallInDebuggerThread | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -54,13 +54,13 @@ HRESULT SynchronousCallInDebuggerThread(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
  语言引擎和主机通常使用此方法在其单线程实现之上实现自由线程对象。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugApplication 接口](../../winscript/reference/idebugapplication-interface.md)   
  [IDebugThreadCall 接口](../../winscript/reference/idebugthreadcall-interface.md)

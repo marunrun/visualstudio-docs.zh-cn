@@ -44,7 +44,7 @@ HRESULT GetMemberProperties(
  `grfdexFetch`  
  确定要检索的属性。 这可以是 `pgrfdex` 和/或下列值组合下列出的值的组合：  
   
-|“值”|含义|  
+|值|含义|  
 |-----------|-------------|  
 |grfdexPropCanAll|结合了 fdexPropCanGet、fdexPropCanPut、fdexPropCanPutRef、fdexPropCanCall、fdexPropCanConstruct 和 fdexPropCanSourceEvents。|  
 |grfdexPropCannotAll|结合了 fdexPropCannotGet、fdexPropCannotPut、fdexPropCannotPutRef、fdexPropCannotCall、fdexPropCannotConstruct 和 fdexPropCannotSourceEvents。|  
@@ -54,14 +54,14 @@ HRESULT GetMemberProperties(
  `pgrfdex`  
  接收请求的属性的 `DWORD` 的地址。 这可以是以下值的组合：  
   
-|“值”|含义|  
+|值|含义|  
 |-----------|-------------|  
-|fdexPropCanGet|可以使用 DISPATCH_PROPERTYGET 获取成员。|  
+|fdexPropCanGet|可以使用 DISPATCH_PROPERTYGET 获取此成员。|  
 |fdexPropCannotGet|无法使用 DISPATCH_PROPERTYGET 获取此成员。|  
-|fdexPropCanPut|可以使用 DISPATCH_PROPERTYPUT 设置此成员。|  
-|fdexPropCannotPut|不能使用 DISPATCH_PROPERTYPUT 设置该成员。|  
-|fdexPropCanPutRef|可以使用 DISPATCH_PROPERTYPUTREF 设置此成员。|  
-|fdexPropCannotPutRef|不能使用 DISPATCH_PROPERTYPUTREF 设置该成员。|  
+|fdexPropCanPut|可以使用 DISPATCH_PROPERTYPUT 设置成员。|  
+|fdexPropCannotPut|该成员不能使用 DISPATCH_PROPERTYPUT 设置。|  
+|fdexPropCanPutRef|可以使用 DISPATCH_PROPERTYPUTREF 设置成员。|  
+|fdexPropCannotPutRef|该成员不能使用 DISPATCH_PROPERTYPUTREF 设置。|  
 |fdexPropNoSideEffects|该成员没有副作用。 例如，调试器可以安全地获取/设置/调用此成员，而无需更改正在调试的脚本的状态。|  
 |fdexPropDynamicType|该成员是动态的，并且可以在对象的生存期内更改。|  
 |fdexPropCanCall|成员可以使用 DISPATCH_METHOD 作为方法进行调用。|  
@@ -96,7 +96,7 @@ BSTR bstrName;
    }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDispatchEx 接口](../../winscript/reference/idispatchex-interface.md)   
- [IDispatchEx：： GetDispID](../../winscript/reference/idispatchex-getdispid.md)    
+ [IDispatchEx::GetDispID](../../winscript/reference/idispatchex-getdispid.md)   
  [IDispatchEx::GetNextDispID](../../winscript/reference/idispatchex-getnextdispid.md)

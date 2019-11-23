@@ -42,13 +42,13 @@ HRESULT SetDebugDocumentHost(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- @No__t_0 接口用于智能主机语法着色，获取延迟文本，并为新创建的文档上下文返回控制对象。  
+ `IDebugDocumentHost` 接口用于智能主机语法着色，获取延迟文本，并为新创建的文档上下文返回控制对象。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugDocumentHelper 接口](../../winscript/reference/idebugdocumenthelper-interface.md)   
  [IDebugDocumentHost 接口](../../winscript/reference/idebugdocumenthost-interface.md)

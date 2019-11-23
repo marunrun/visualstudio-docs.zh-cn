@@ -57,7 +57,7 @@ HRESULT GetInfoFromContext(
  `dwListTypesRequested`  
  中请求的列表类型。 可以是以下值的组合：  
   
-|返回的常量|“值”|描述|  
+|常量|值|说明|  
 |--------------|-----------|-----------------|  
 |SCRIPT_CMPL_NOLIST|0x0000|无列表。|  
 |SCRIPT_CMPL_MEMBERLIST|0x0001|成员列表。|  
@@ -65,7 +65,7 @@ HRESULT GetInfoFromContext(
 |SCRIPT_CMPL_PARAMLIST|0x0004|调用方法参数列表。|  
 |SCRIPT_CMPL_GLOBALLIST|0x0008|全局列表。|  
   
- SCRIPT_CMPL_GLOBALLIST 类型被视为默认完成项，可通过将 OR 运算符与其他完成项结合使用来进行组合。 脚本创作引擎首先尝试填充其他完成列表项的类型信息。 如果此操作失败，则引擎将为 SCRIPT_CMPL_GLOBALLIST 填充。  
+ SCRIPT_CMPL_GLOBALLIST 类型被视为默认完成项，可通过将 OR 运算符与其他完成项结合使用来进行组合。 脚本创作引擎首先尝试填充其他完成列表项的类型信息。 如果此操作失败，则引擎将填充 SCRIPT_CMPL_GLOBALLIST。  
   
  `pdwListTypesProvided`  
  弄提供的列表的类型。  
@@ -78,7 +78,7 @@ HRESULT GetInfoFromContext(
  `pichFuncAnchorPosition`  
  弄包含当前位置的函数调用的起始索引。 起始索引相对于块的开头。  
   
- 仅当包含当前位置的上下文是函数调用并且 `dwListTypesRequested` 包含 SCRIPT_CMPL_PARAMLIST 时，才填充此内容。 否则，结果为 undefined。  
+ 仅当包含当前位置的上下文是函数调用并且 `dwListTypesRequested` 包括 SCRIPT_CMPL_PARAMLIST 时，才填充此内容。 否则，结果为 undefined。  
   
  `pmemid`  
  弄函数的 MEMBERID，由 `IProvideMultipleClassInfo``ppunk` out 参数中的类型定义。  
@@ -96,12 +96,12 @@ HRESULT GetInfoFromContext(
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IProvideMultipleClassInfo 接口](/dotnet/api/microsoft.visualstudio.ole.interop.iprovidemultipleclassinfo)   
  [IActiveScriptAuthor 接口](../../winscript/reference/iactivescriptauthor-interface.md)

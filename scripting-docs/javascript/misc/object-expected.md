@@ -46,6 +46,6 @@ ms.locfileid: "72573724"
     }  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [对象对象](../../javascript/reference/object-object-javascript.md)   
  [对象和数组](../../javascript/objects-and-arrays-javascript.md)

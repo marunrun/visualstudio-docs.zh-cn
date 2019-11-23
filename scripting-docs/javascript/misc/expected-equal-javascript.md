@@ -26,12 +26,12 @@ ms.locfileid: "72573391"
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 添加等号。 例如:  
+- 添加等号。 例如：  
   
     ```JavaScript  
     @set @myvar1 = 1  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [条件编译](../../javascript/advanced/conditional-compilation-javascript.md)   
  [条件编译变量](../../javascript/advanced/conditional-compilation-variables-javascript.md)

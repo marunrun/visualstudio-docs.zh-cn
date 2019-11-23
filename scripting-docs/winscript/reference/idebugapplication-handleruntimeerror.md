@@ -58,7 +58,7 @@ HRESULT HandleRuntimeError(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
@@ -68,9 +68,9 @@ HRESULT HandleRuntimeError(
 > [!NOTE]
 > 在运行时错误时，可以通过线程调用语言引擎来执行枚举堆栈帧或计算表达式等任务。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugApplication 接口](../../winscript/reference/idebugapplication-interface.md)   
  [IActiveScriptErrorDebug 接口](../../winscript/reference/iactivescripterrordebug-interface.md)   
- [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)    
+ [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)   
  [BREAKRESUMEACTION 枚举](../../winscript/reference/breakresumeaction-enumeration.md)   
  [ERRORRESUMEACTION 枚举](../../winscript/reference/errorresumeaction-enumeration.md)
