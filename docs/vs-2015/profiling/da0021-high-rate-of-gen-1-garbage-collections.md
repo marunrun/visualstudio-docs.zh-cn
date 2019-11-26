@@ -23,11 +23,11 @@ ms.locfileid: "74300148"
 # <a name="da0021-high-rate-of-gen-1-garbage-collections"></a>DA0021: 第 1 代垃圾回收的速率很高
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Rule Id|DA0021|  
-|Category|.NET Framework Usage|  
-|Profiling methods|All|  
-|Message|There is a fairly high rate of Gen 1 garbage collections occurring. 按设计来说，如果分配了大部分程序的数据结构且其保留时间较长，那么这通常并不是问题。 但是，如果此行为不在计划内，则表示应用程序可能锁定了对象。 如果不确定，可以收集 .NET 内存分配数据和对象生存期信息，便于了解应用程序使用的内存分配模式。|  
-|Rule type|Information|  
+规则 Id |DA0021 |  
+|Category |。NET Framework 使用量 |  
+|分析方法 |All |  
+|消息 |发生第1代垃圾回收的速率相当高。 按设计来说，如果分配了大部分程序的数据结构且其保留时间较长，那么这通常并不是问题。 但是，如果此行为不在计划内，则表示应用程序可能锁定了对象。 如果不确定，可以收集 .NET 内存分配数据和对象生存期信息，便于了解应用程序使用的内存分配模式。|  
+|规则类型 |信息 |  
   
  使用采样法、.NET 内存或资源争用方法进行分析时，必须收集至少 10 个样本才能触发此规则。  
   

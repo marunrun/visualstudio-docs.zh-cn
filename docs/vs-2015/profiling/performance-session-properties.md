@@ -27,7 +27,7 @@ ms.locfileid: "74290115"
   
  **惠?**  
   
-- [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]中， [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]中， [!INCLUDE[vsPro](../includes/vspro-md.md)]  
+- [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
   可通过运行**性能向导**或通过手动创建会话来创建**性能会话**。 **性能会话**创建之后，**性能会话**会显示在“性能资源管理器”中。  
   

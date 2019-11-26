@@ -44,7 +44,7 @@ ms.locfileid: "74296855"
 
 3. 在搜索框中指定 `Introduction`，找到该示例。
 
-    ![Extensions and Updates dialog box](../ide/media/buildwalk-extensionsdialogsampledownload.png "BuildWalk_ExtensionsDialogSampleDownload")
+    !["扩展和更新" 对话框](../ide/media/buildwalk-extensionsdialogsampledownload.png "BuildWalk_ExtensionsDialogSampleDownload")
 
 4. 在结果列表中，选择“生成 WPF 应用程序 (Visual C#) 简介”或“生成 WPF 应用程序 (Visual Basic) 简介”。
 
@@ -62,15 +62,15 @@ ms.locfileid: "74296855"
 
 3. 为 Visual C# 的解决方案 `IntroWPFcsharp` 命名。
 
-     ![New Project dialog box, Installed Samples](../ide/media/buildwalk-newprojectdlgintrotowpfsample.png "BuildWalk_NewProjectdlgIntrotoWPFsample")
+     !["新建项目" 对话框，已安装示例](../ide/media/buildwalk-newprojectdlgintrotowpfsample.png "BuildWalk_NewProjectdlgIntrotoWPFsample")
 
      要么
 
      为 Visual Basic 的解决方案 `IntroWPFvb` 命名。
 
-     ![New Project dialog box, Visual Basic Sample](../ide/media/buildwalk-newprojectdlgintrotowpfsamplevb.png "BuildWalk_NewProjectdlgIntrotoWPFsampleVB")
+     !["新建项目" 对话框，Visual Basic 示例](../ide/media/buildwalk-newprojectdlgintrotowpfsamplevb.png "BuildWalk_NewProjectdlgIntrotoWPFsampleVB")
 
-4. 选择 **“确定”** 按钮。
+4. 选择“确定” 按钮。
 
 ## <a name="BKMK_CreateBuildConfig"></a> 创建自定义生成配置
 
@@ -82,29 +82,29 @@ ms.locfileid: "74296855"
 
 1. 打开“配置管理器”对话框。
 
-    ![Build menu, Configuration Manager command](../ide/media/buildwalk-configurationmanagerdialogbox.png "BuildWalk_ConfigurationManagerDialogBox")
+    !["生成" 菜单，Configuration Manager 命令](../ide/media/buildwalk-configurationmanagerdialogbox.png "BuildWalk_ConfigurationManagerDialogBox")
 
 2. 在“活动解决方案配置”列表中，选择“新建”。
 
 3. 在“新建解决方案配置”对话框中，命名新配置 `Test`，复制现有“调试”配置中的设置，然后选择“确定”按钮。
 
-    ![New Solution Configuration Dialog Box](../ide/media/buildwalk-newsolutionconfigdlgbox.png "BuildWalk_NewSolutionConfigDlgBox")
+    !["新建解决方案配置" 对话框](../ide/media/buildwalk-newsolutionconfigdlgbox.png "BuildWalk_NewSolutionConfigDlgBox")
 
 4. 在“活动解决方案平台”列表中，选择“新建”。
 
 5. 在“新建解决方案平台”对话框中，选择“x64”，不复制 x86 平台中的设置。
 
-    ![New Solution Platform Dialog Box](../ide/media/buildwalk-newsolutionplatform.png "BuildWalk_NewSolutionPlatform")
+    !["新建解决方案平台" 对话框](../ide/media/buildwalk-newsolutionplatform.png "BuildWalk_NewSolutionPlatform")
 
-6. 选择 **“确定”** 按钮。
+6. 选择“确定” 按钮。
 
    “活动解决方案配置”已更改为“测试”，且“活动解决方案平台”设置为“x64”。
 
-   ![Configuration Manager with Test configuration](../ide/media/buildwalk-configmanagertestconfig.png "BuildWalk_ConfigManagerTestconfig")
+   ![Configuration Manager 测试配置](../ide/media/buildwalk-configmanagertestconfig.png "BuildWalk_ConfigManagerTestconfig")
 
    使用“标准”工具栏上的“解决方案配置”列表，可快速验证或更改“活动解决方案配置”。
 
-   ![Solution Configuration option Standard Toolbar](../ide/media/buildwalk-standardtoolbarsolutioncongfig.png "BuildWalk_StandardToolbarSolutionCongfig")
+   ![解决方案配置选项标准工具栏](../ide/media/buildwalk-standardtoolbarsolutioncongfig.png "BuildWalk_StandardToolbarSolutionCongfig")
 
 ## <a name="BKMK_building"></a> 生成应用程序
 
@@ -118,11 +118,11 @@ ms.locfileid: "74296855"
 
   图 1：Visual Basic 警告
 
-  ![Output Window Visual Basic](../ide/media/buildwalk-vbbuildoutputwnd.png "BuildWalk_VBBuildOutputWnd")
+  ![输出窗口 Visual Basic](../ide/media/buildwalk-vbbuildoutputwnd.png "BuildWalk_VBBuildOutputWnd")
 
   图 2：Visual C# 警告
 
-  ![Output Window Visual C&#35;](../ide/media/buildwalk-csharpbuildoutputwnd.png "BuildWalk_CsharpBuildOutputWnd")
+  ![输出窗口 Visual C&#35;](../ide/media/buildwalk-csharpbuildoutputwnd.png "BuildWalk_CsharpBuildOutputWnd")
 
 ## <a name="BKMK_hidewarning"></a> 隐藏编译器警告
 
@@ -138,7 +138,7 @@ ms.locfileid: "74296855"
 
 3. 选择“生成”页，然后在“禁止显示警告”框中，指定警告编号 `1762`。
 
-     ![Build page, Project Designer](../ide/media/buildwalk-csharpsuppresswarnings.png "BuildWalk_CsharpSuppressWarnings")
+     !["生成" 页，项目设计器](../ide/media/buildwalk-csharpsuppresswarnings.png "BuildWalk_CsharpSuppressWarnings")
 
      有关详细信息，请参阅 [“项目设计器”->“生成”页 (C#)](../ide/reference/build-page-project-designer-csharp.md)。
 
@@ -146,7 +146,7 @@ ms.locfileid: "74296855"
 
      “输出”窗口仅显示生成的摘要信息。
 
-     ![Output Window, Visual C&#35; Build Warnings](../ide/media/buildwalk-visualcsharpbuildwarnings.png "BuildWalk_VisualCsharpBuildWarnings")
+     ![输出窗口，Visual C&#35;生成警告](../ide/media/buildwalk-visualcsharpbuildwarnings.png "BuildWalk_VisualCsharpBuildWarnings")
 
 #### <a name="to-suppress-all-visual-basic-build-warnings"></a>禁止显示所有 Visual Basic 生成警告
 
@@ -158,7 +158,7 @@ ms.locfileid: "74296855"
 
 3. 在“编译”页上，选择“禁用所有警告”复选框。
 
-    ![Compile page, Project Designer](../ide/media/buildwalk-vbsuppresswarnings.png "BuildWalk_VBSuppressWarnings")
+    !["编译" 页，项目设计器](../ide/media/buildwalk-vbsuppresswarnings.png "BuildWalk_VBSuppressWarnings")
 
     有关详细信息，请参阅[在 Visual Basic 中配置警告](../ide/configuring-warnings-in-visual-basic.md)。
 
@@ -166,7 +166,7 @@ ms.locfileid: "74296855"
 
    “输出”窗口仅显示生成的摘要信息。
 
-   ![Output Window, Visual Basic Build Warnings](../ide/media/buildwalk-visualbasicbuildwarnings.png "BuildWalk_VisualBasicBuildWarnings")
+   ![输出窗口，Visual Basic 生成警告](../ide/media/buildwalk-visualbasicbuildwarnings.png "BuildWalk_VisualBasicBuildWarnings")
 
    有关详细信息，请参阅[如何：禁止显示编译器警告](../ide/how-to-suppress-compiler-warnings.md)。
 
@@ -212,7 +212,7 @@ ms.locfileid: "74296855"
 
 1. 打开“项目设计器”。
 
-     ![View menu, Property Pages command](../ide/media/buildwalk-viewpropertypages.png "BuildWalk_ViewPropertyPages")
+     !["视图" 菜单，"属性页" 命令](../ide/media/buildwalk-viewpropertypages.png "BuildWalk_ViewPropertyPages")
 
 2. 选择“编译”页。
 
@@ -229,13 +229,13 @@ ms.locfileid: "74296855"
 
 6. 生成应用程序。
 
-     ![“生成”菜单上的“生成解决方案”命令](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")
+     ![“生成”菜单上的“生成解决方案”命令](../ide/media/exploreide-buildsolution.png "ExploreIDE-依次")
 
-#### <a name="to-specify-a-release-build-for-visual-c"></a>To specify a release build for Visual C\#
+#### <a name="to-specify-a-release-build-for-visual-c"></a>为 Visual C 指定发布版本\#
 
 1. 打开“项目设计器”。
 
-    ![View menu, Property Pages command](../ide/media/buildwalk-viewpropertypages.png "BuildWalk_ViewPropertyPages")
+    !["视图" 菜单，"属性页" 命令](../ide/media/buildwalk-viewpropertypages.png "BuildWalk_ViewPropertyPages")
 
 2. 选择“生成”页。
 
@@ -252,7 +252,7 @@ ms.locfileid: "74296855"
 
 6. 生成应用程序。
 
-    ![“生成”菜单上的“生成解决方案”命令](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")
+    ![“生成”菜单上的“生成解决方案”命令](../ide/media/exploreide-buildsolution.png "ExploreIDE-依次")
 
    可执行文件已复制到指定的网络路径。 其路径为 \\\myserver\builds\\*FileName*.exe。
 

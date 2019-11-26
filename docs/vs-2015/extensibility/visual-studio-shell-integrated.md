@@ -1,5 +1,5 @@
 ---
-title: Visual Studio Shell (Integrated) | Microsoft Docs
+title: Visual Studio Shell （集成） |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -21,52 +21,52 @@ ms.locfileid: "74299697"
 # <a name="visual-studio-shell-integrated"></a>Visual Studio Shell（集成）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-The Visual Studio integrated shell includes the integrated development environment (IDE), debugger, and source control integration. No programming language is included. However, the integrated shell does provide a framework that allows you to add programming languages.  
+Visual Studio 集成 shell 包括集成开发环境（IDE）、调试器和源代码管理集成。 不包含任何编程语言。 但是，集成 shell 提供了一个框架，可用于添加编程语言。  
   
- The Visual Studio integrated shell is actually a combination of the Visual Studio isolated shell plus an additional install which include integrated shell specific components.  Your integrated shell application should include both the isolated shell redistributable package from [Microsoft Visual Studio Shell (Isolated) Redistributable Package](https://go.microsoft.com/fwlink/?LinkId=616022) as well as the integrated shell redistributable package from [Microsoft Visual Studio Shell (Integrated) Redistributable Package](https://go.microsoft.com/fwlink/?LinkId=616021).  
+ Visual Studio 集成 shell 实际上是 Visual Studio 独立 shell 的组合，另外还有一个包含集成的 shell 特定组件的其他安装。  集成 shell 应用程序应同时包含[Microsoft Visual Studio Shell (独立) 可再发行组件包](https://go.microsoft.com/fwlink/?LinkId=616022)中的独立 shell 可再发行组件包，以及[Microsoft Visual Studio Shell (集成) 可再](https://go.microsoft.com/fwlink/?LinkId=616021)发行组件包中的集成 shell 可再发行组件包。  
   
 > [!NOTE]
-> Before you can access the isolated and integrated shell redistributable packages, you will be asked to fill out a brief customer survey.  After filling out the survey, you’ll be directed to a Visual Studio Connect page with redistributable package download links.  You can find the download links on subsequent visits to the Visual Studio Connect site under the **PROGRAMS &#124; VISUAL STUDIO 2015 INTEGRATED AND ISOLATED SHELL** tab.  
+> 你将需要填写一份简短的客户调查，然后才能访问隔离和集成的 shell 可再发行组件包。  填写调查后，你将转到具有可再发行组件包下载链接的 Visual Studio Connect 页面。  可以在后续访问 visual studio **2015 集成和隔离 SHELL &#124;** 选项卡下的 visual studio Connect 站点时找到下载链接。  
   
- If you install your integrated shell application on the same computer as a full version of Visual Studio, your application’s components will be integrated directly into Visual Studio.  
+ 如果在与 Visual Studio 完整版本相同的计算机上安装集成 shell 应用程序，则应用程序的组件将直接集成到 Visual Studio 中。  
   
-## <a name="features-in-the-integrated-shell"></a>Features in the Integrated Shell  
+## <a name="features-in-the-integrated-shell"></a>集成外壳中的功能  
   
 |||  
 |-|-|  
 |功能区域|功能|  
-|语言支持|-   None|  
-|IDE|<ul><li>设置<br /><br /> <ul><li>Create settings</li><li>Import and export settings</li><li>重置设置</li></ul></li><li>**Toolbox** integration</li><li>**Task List** integration</li><li>Help integration</li><li>**Options** dialog box</li><li>Fonts and colors management</li><li>**Output** window</li><li>**Command** window</li><li>窗口管理</li><li>Commands, menus, and key bindings</li><li>Domain-specific language (DSL) runtime</li></ul>|  
-|Project System and Project Types|-   Solutions and solution folders<br />-   Solution configuration manager<br />-   Item management<br />-   Single-project and multi-project solutions<br />-   Application Designer (simplified project properties)<br />-   Add Web Reference<br />-   Add Service Reference<br />-   Single-project<br />-   Web site project types<br />-   Web application projects|  
-|生成|-   Custom build steps in IDE<br />-   Pre-compilation for intellectual property (IP) protection<br />-   Code signing<br />     MSBuild|  
-|编辑器|-   Code browsing tools (unified find, source definition, inheritance)<br />-   Code navigation<br />-   IntelliSense<br />-   SmartTags<br />-   Refactoring<br />-   Pretty listing<br />-   IntelliSense filtering<br />-   **Code Definition** window|  
-|Designer|-   Windows Presentation Foundation Designer<br />-   Windows Forms Designer<br />-   Web Designer and HTML Editor|  
-|数据|-   **Server Explorer** (Simplified: data only). 请参阅备注 1。<br />-   **Data Sources** window<br />-   Full set of data controls<br />-   XML Editor<br />-   Data bind to local data source (.MDF or .MDB)<br />-   Data bind to object<br />-   Data bind to Web service<br />-   Data bind to local database server<br />-   Data bind to remote database server<br />-   DDL tools for remote data<br />-   **Server Explorer** extensibility ([!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] samples)|  
-|调试器|-   Local debugging. See Note 2.<br />-   Managed debugging<br />-   Local debugging<br />-   Attach to local process<br />-   Attach to remote process<br />-   Anonymous delegate<br />-   Application domains<br />-   ASPX Debugging<br />-   Attributes<br />-   Break during Func-eval<br />-   Breakpoints<br />-   Breakpoint constraints<br />-   Callstack<br />-   **Command** window<br />-   Cross-thread debugging<br />-   Data Tips<br />-   Data visualizer<br />-   Debugger support for managed debugging assistants (MDAs)<br />-   Debugger support for type forwarder<br />-   DTEEvents support for OTB<br />-   JMC Stepper<br />-   Debugger AppID test (DBGCLR)<br />-   Debugger profile<br />-   Debugger tools and options<br />-   Debugging iterator<br />-   Design-time expression evaluation<br />-   C# Expression Evaluator<br />-   Disassembly<br />-   Edit and Continue<br />-   Expression evaluator windows (Watch, Locals, Autos)<br />-   Exception Helper<br />-   Exceptions<br />-   Execution<br />-   泛型<br />-   Getting right source<br />-   HPC/Cluster debugging<br />-   Integrated multi-language debugging<br />-   InterOp debugging<br />-   Just-in-time debugging<br />-   Local debugging<br />-   Managed debugging<br />-   Manual control (Processes window)<br />-   Memory<br />-   MiniDump support<br />-   Modules<br />-   Multi-process debugging<br />-   Native debugging<br />-   New debug engine support<br />-   Optimized code debugging<br />-   Output windows filtering<br />-   Process hosting for managed debugging<br />-   Processes<br />-   Quickwatch<br />-   Registers<br />-   Registers in stack<br />-   Remote debugging<br />-   Return values<br />-   Script debugging<br />-   Source service support<br />-   Security<br />-   Side-by-side<br />-   SQL<br />-   Symbol server<br />-   Trace points<br />-   Thread<br />-   Visualizations<br />-   Extensible Stylesheet Language Transformations (XSLT) debugger|  
-|64-bit Support|-   64-bit debugging for both managed and native code, all languages<br />-   x64 native support|  
-|Source Code Control (SCC)|-   Basic SCC integration. 请参阅备注 3。<br />-   Tools and options verification|  
-|扩展性|-   Consume VSPackages and MEF components|  
+|语言支持|-无|  
+|IDE|<ul><li>设置<br /><br /> <ul><li>创建设置</li><li>导入和导出设置</li><li>重置设置</li></ul></li><li>**工具箱**集成</li><li>**任务列表**集成</li><li>帮助集成</li><li>"**选项**" 对话框</li><li>字体和颜色管理</li><li>**输出**窗口</li><li>**命令**窗口</li><li>窗口管理</li><li>命令、菜单和键绑定</li><li>域特定语言（DSL）运行时</li></ul>|  
+|项目系统和项目类型|-解决方案和解决方案文件夹<br />-解决方案配置管理器<br />-项管理<br />-单项目和多项目解决方案<br />-应用程序设计器（简化项目属性）<br />-添加 Web 引用<br />-添加服务引用<br />-单项目<br />-网站项目类型<br />-Web 应用程序项目|  
+|生成|-IDE 中的自定义生成步骤<br />-知识产权预编译（IP）保护<br />-代码签名<br />     MSBuild|  
+|编辑器|-代码浏览工具（统一查找、源定义、继承）<br />-代码导航<br />-IntelliSense<br />-   SmartTags<br />-重构<br />-整齐列表<br />-IntelliSense 筛选<br />-   **代码定义**"窗口|  
+|Designer|-Windows Presentation Foundation 设计器<br />-Windows 窗体设计器<br />-Web 设计器和 HTML 编辑器|  
+|数据|-   **服务器资源管理器**（简体：仅限数据）。 请参阅备注 1。<br />"-   **数据源**" 窗口<br />-完整的数据控件集<br />-XML 编辑器<br />-数据绑定到本地数据源（.MDF 或.MDB<br />-数据绑定到对象<br />-到 Web 服务的数据绑定<br />-数据绑定到本地数据库服务器<br />-数据绑定到远程数据库服务器<br />-用于远程数据的 DDL 工具<br />-   **服务器资源管理器**扩展性（[!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] 示例）|  
+|调试器|-本地调试。 请参阅注释2。<br />-托管调试<br />-本地调试<br />-附加到本地进程<br />-附加到远程进程<br />-匿名委托<br />-应用程序域<br />-ASPX 调试<br />-特性<br />在 Func-eval 期间中断<br />-断点<br />-断点约束<br />-调用堆栈<br />-   **命令**窗口<br />-跨线程调试<br />-数据提示<br />-数据可视化工具<br />-对托管调试助手（Mda）的调试器支持<br />-为类型转发器提供调试器支持<br />-DTEEvents 对 OTB 的支持<br />-JMC 分档器<br />-调试器 AppID 测试（DBGCLR）<br />-调试器配置文件<br />-调试器工具和选项<br />-调试迭代器<br />-设计时表达式计算<br />- C#表达式计算器<br />-反汇编<br />-编辑并继续<br />-表达式计算器窗口（监视、局部变量、自动）<br />-异常帮助程序<br />-异常<br />-执行<br />-   泛型<br />-获取正确的源<br />-HPC/群集调试<br />-集成多语言调试<br />-互操作调试<br />-实时调试<br />-本地调试<br />-托管调试<br />-手动控制（"进程" 窗口）<br />-内存<br />-小型转储支持<br />-模块<br />-多进程调试<br />-本机调试<br />-新的调试引擎支持<br />-优化代码调试<br />-输出 windows 筛选<br />-托管调试的进程托管<br />-进程<br />-快速监视<br />-寄存器<br />-在堆栈中注册<br />-远程调试<br />-返回值<br />-脚本调试<br />-源服务支持<br />-安全性<br />-并排<br />-   SQL<br />-符号服务器<br />-跟踪点<br />-Thread<br />-可视化<br />-可扩展样式表语言转换（XSLT）调试器|  
+|64位支持|-64 适用于托管和本机代码的位调试，所有语言<br />-x64 本机支持|  
+|源代码管理（SCC）|-基本 SCC 集成。 请参阅备注 3。<br />-工具和选项验证|  
+|可扩展性|-使用 Vspackage 和 MEF 组件|  
   
 ## <a name="notes"></a>注意  
   
-#### <a name="1-data-tools"></a>1. Data Tools  
- The integrated shell includes database development tools such as data extensibility support and the simplified **Solution Explorer**. However, SQL Server Express, SQL Reporting, and Crystal Reports are not included in the integrated shell.  
+#### <a name="1-data-tools"></a>1. 数据工具  
+ 集成外壳包含数据库开发工具，如数据扩展性支持和简化的**解决方案资源管理器**。 不过，不会将 SQL Server Express、SQL Reporting 和 Crystal 报表包含在集成 shell 中。  
   
-#### <a name="2-debugging-support"></a>2. Debugging Support  
- The integrated shell includes the same debugging engine that is included in the Community version of Visual Studio. The debugging engine includes the common debugger for managed code, and also related features, such as Run, Attach, Set Breakpoint, Edit and Continue, and others. However, the debugging engine does not support SQL Server database debugging.  
+#### <a name="2-debugging-support"></a>2. 调试支持  
+ 集成外壳包含在 Visual Studio 的社区版本中包含的相同调试引擎。 调试引擎包括适用于托管代码的常见调试器，还包括相关功能，如 "运行"、"附加"、"设置断点"、"编辑并继续" 等。 不过，调试引擎不支持 SQL Server 数据库调试。  
   
- Although support for native debugging is included in the basic debugger package, you cannot extend it to support additional languages.  
+ 尽管基本调试器包中包含对本机调试的支持，但无法对其进行扩展以支持其他语言。  
   
-#### <a name="3-source-code-control-integration"></a>3. Source Code Control Integration  
- The integrated shell provides APIs for implementing source-code control (SCC) and for providing the MSSCCI-based common source control integration components.  
+#### <a name="3-source-code-control-integration"></a>3. 源代码管理集成  
+ 集成 shell 提供用于实现源代码管理（SCC）的 Api，并提供基于 MSSCCI 的公共源代码管理集成组件。  
   
- Although SCC integration is not a regular feature of the Pro edition of Visual Studio, SCC integration is provided in the integrated shell.  
+ 尽管 SCC 集成并非 Visual Studio Pro 版本的常规功能，但集成外壳中提供了 SCC 集成。  
   
-#### <a name="4-build-support"></a>4. Build Support  
- The integrated shell provides build support. You can find information about builds in the [MSBuild Reference](../msbuild/msbuild-reference.md).  
+#### <a name="4-build-support"></a>4. 生成支持  
+ 集成 shell 提供生成支持。 可以在[MSBuild 引用](../msbuild/msbuild-reference.md)中找到有关生成的信息。  
   
-## <a name="features-not-included-in-the-integrated-shell"></a>Features Not Included in the Integrated Shell  
- The following is a list of features that are not included in the integrated shell:  
+## <a name="features-not-included-in-the-integrated-shell"></a>未包括在集成 Shell 中的功能  
+ 下面列出了未包含在集成 shell 中的功能：  
   
 - 类设计器  
   
@@ -76,7 +76,7 @@ The Visual Studio integrated shell includes the integrated development environme
   
 - VSHost  
   
-- No Visual Studio languages or their associated project templates or project item templates, are included in the integrated shell. No language-specific implementations of other features are included, for example Visual Basic code snippets.  
+- 集成外壳中不包含 Visual Studio 语言或其关联的项目模板或项目项模板。 不包含其他功能的特定于语言的实现，例如 Visual Basic 代码片段。  
   
 ## <a name="see-also"></a>请参阅  
- [Extending Visual Studio Overview](https://msdn.microsoft.com/library/3e9078d7-2763-4cc4-8e20-fac69d747f59)
+ [扩展 Visual Studio 概述](https://msdn.microsoft.com/library/3e9078d7-2763-4cc4-8e20-fac69d747f59)

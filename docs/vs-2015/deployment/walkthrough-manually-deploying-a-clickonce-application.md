@@ -1,5 +1,5 @@
 ---
-title: 'Walkthrough: Manually Deploying a ClickOnce Application | Microsoft Docs'
+title: 演练：手动部署 ClickOnce 应用程序 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -31,87 +31,87 @@ ms.locfileid: "74294678"
 # <a name="walkthrough-manually-deploying-a-clickonce-application"></a>演练：手动部署 ClickOnce 应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-If you cannot use Visual Studio to deploy your [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] application, or you need to use advanced deployment features, such as Trusted Application Deployment, you should use the Mage.exe command-line tool to create your [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifests. This walkthrough describes how to create a [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] deployment by using either the command-line version (Mage.exe) or the graphical version (MageUI.exe) of the Manifest Generation and Editing Tool.  
+如果无法使用 Visual Studio 来部署 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 的应用程序，或者需要使用高级部署功能（如受信任的应用程序部署），则应使用 Mage.exe 命令行工具创建 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 清单。 本演练介绍如何使用清单生成和编辑工具的命令行版本（Mage.exe）或图形版本（Mageui.exe）来创建 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 部署。  
   
-## <a name="prerequisites"></a>Prerequisites  
- This walkthrough has some prerequisites and options that you need to choose before building a deployment.  
+## <a name="prerequisites"></a>先决条件  
+ 在生成部署之前，此演练具有一些需要选择的先决条件和选项。  
   
-- Install Mage.exe and MageUI.exe.  
+- 安装 Mage.exe 和 Mageui.exe。  
   
-     Mage.exe and MageUI.exe are part of the [!INCLUDE[winsdklong](../includes/winsdklong-md.md)]. You must either have the [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)] installed or the version of the [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)] included with Visual Studio. For more information, see [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=158044) on MSDN.  
+     Mage.exe 和 Mageui.exe 是 [!INCLUDE[winsdklong](../includes/winsdklong-md.md)]的一部分。 您必须安装 [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)] 或 Visual Studio 随附 [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)] 的版本。 有关详细信息，请参阅 MSDN 上的[Windows SDK](https://go.microsoft.com/fwlink/?LinkId=158044) 。  
   
-- Provide an application to deploy.  
+- 提供要部署的应用程序。  
   
-     This walkthrough assumes that you have a Windows application that you are ready to deploy. This application will be referred to as AppToDeploy.  
+     本演练假定您已准备好部署 Windows 应用程序。 此应用程序将被称为 AppToDeploy。  
   
-- Determine how the deployment will be distributed.  
+- 确定将如何分发部署。  
   
-     The distribution options include: Web, file share, or CD. 有关详细信息，请参阅 [ClickOnce Security and Deployment](../deployment/clickonce-security-and-deployment.md)。  
+     分发选项包括： Web、文件共享或 CD。 有关详细信息，请参阅 [ClickOnce Security and Deployment](../deployment/clickonce-security-and-deployment.md)。  
   
-- Determine whether the application requires an elevated level of trust.  
+- 确定应用程序是否需要提升的信任级别。  
   
-     If your application requires Full Trust—for example, full access to the user's system—you can use the `-TrustLevel` option of Mage.exe to set this. If you want to define a custom permission set for your application, you can copy the Internet or intranet permission section from another manifest, modify it to suit your needs, and add it to the application manifest using either a text editor or MageUI.exe. 有关更多信息，请参见 [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)。  
+     如果你的应用程序需要完全信任（例如，对用户系统的完全访问权限），则可以使用 Mage.exe 的 `-TrustLevel` 选项来设置此项。 如果要为应用程序定义自定义权限集，可以从另一个清单复制 Internet 或 intranet 权限部分，对其进行修改以满足你的需求，并使用文本编辑器或 Mageui.exe 将其添加到应用程序清单。 有关详细信息，请参阅 [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)。  
   
-- Obtain an Authenticode certificate.  
+- 获取 Authenticode 证书。  
   
-     You should sign your deployment with an Authenticode certificate. You can generate a test certificate by using Visual Studio, MageUI.exe, or MakeCert.exe and Pvk2Pfx.exe tools, or you can obtain a certificate from a Certificate Authority (CA). If you choose to use Trusted Application Deployment, you must also perform a one-time installation of the certificate onto all client computers. 有关更多信息，请参见 [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)。  
-  
-    > [!NOTE]
-    > You can also sign your deployment with a CNG certificate that you can obtain from a Certificate Authority.  
-  
-- Make sure that the application does not have a manifest with UAC information.  
-  
-     You need to determine whether your application contains a manifest with User Account Control (UAC) information, such as an `<dependentAssembly>` element. To examine an application manifest, you can use the Windows Sysinternals [Sigcheck](https://go.microsoft.com/fwlink/?LinkId=158035) utility.  
-  
-     If your application contains a manifest with UAC details, you must re-build it without the UAC information. For a C# project in Visual Studio, open the project properties and select the Application tab. In the **Manifest** drop-down list, select **Create application without a manifest**. For a Visual Basic project in Visual Studio, open the project properties, select the Application tab, and click **View UAC Settings**. In the opened manifest file, remove all elements within the single `<asmv1:assembly>` element.  
-  
-- Determine whether the application requires prerequisites on the client computer.  
-  
-     [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] applications deployed from Visual Studio can include a prerequisite installation bootstrapper (setup.exe) with your deployment. This walkthrough creates the two manifests required for a [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] deployment. You can create a prerequisite bootstrapper by using the [GenerateBootstrapper Task](../msbuild/generatebootstrapper-task.md).  
-  
-### <a name="to-deploy-an-application-with-the-mageexe-command-line-tool"></a>To deploy an application with the Mage.exe command-line tool  
-  
-1. Create a directory where you will store your [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] deployment files.  
-  
-2. In the deployment directory you just created, create a version subdirectory. If this is the first time that you are deploying the application, name the version subdirectory **1.0.0.0**.  
+     应使用 Authenticode 证书对部署进行签名。 可以通过使用 Visual Studio、Mageui.exe 或 MakeCert 和 Pvk2Pfx 工具生成测试证书，也可以从证书颁发机构（CA）获取证书。 如果选择使用受信任的应用程序部署，还必须在所有客户端计算机上执行一次证书安装。 有关详细信息，请参阅 [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)。  
   
     > [!NOTE]
-    > The version of your deployment can be distinct from the version of your application.  
+    > 你还可以使用可从证书颁发机构获取的 CNG 证书对你的部署进行签名。  
   
-3. Copy all of your application files to the version subdirectory, including executable files, assemblies, resources, and data files. If necessary, you can create additional subdirectories that contain additional files.  
+- 请确保应用程序没有带有 UAC 信息的清单。  
   
-4. Open the [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)] or Visual Studio command prompt and change to the version subdirectory.  
+     你需要确定你的应用程序是否包含具有用户帐户控制（UAC）信息的清单，如 `<dependentAssembly>` 元素。 若要检查应用程序清单，可以使用 Windows Sysinternals [Sigcheck](https://go.microsoft.com/fwlink/?LinkId=158035)实用程序。  
   
-5. Create the application manifest with a call to Mage.exe. The following statement creates an application manifest for code compiled to run on the Intel x86 processor.  
+     如果你的应用程序包含具有 UAC 详细信息的清单，则必须在不使用 UAC 信息的情况下重新生成它。 对于 Visual C# Studio 中的项目，打开 "项目属性"，然后选择 "应用程序" 选项卡。在 "**清单**" 下拉列表中，选择 "**创建不带清单的应用程序**"。 对于 Visual Studio 中的 Visual Basic 项目，请打开项目属性，选择 "应用程序" 选项卡，然后单击 "**查看 UAC 设置**"。 在打开的清单文件中，删除单个 `<asmv1:assembly>` 元素中的所有元素。  
+  
+- 确定应用程序是否需要客户端计算机上的必备组件。  
+  
+     从 Visual Studio 部署的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序可以在部署中包含先决条件安装引导程序（setup.exe）。 本演练将创建 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 部署所需的两个清单。 可以使用[GenerateBootstrapper 任务](../msbuild/generatebootstrapper-task.md)创建必备组件引导程序。  
+  
+### <a name="to-deploy-an-application-with-the-mageexe-command-line-tool"></a>使用 Mage.exe 命令行工具部署应用程序  
+  
+1. 创建一个将在其中存储 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 部署文件的目录。  
+  
+2. 在刚创建的部署目录中，创建版本子目录。 如果这是你首次部署应用程序，请将版本命名为 "子目录**1.0.0.0**"。  
+  
+    > [!NOTE]
+    > 部署版本可能与应用程序的版本不同。  
+  
+3. 将所有应用程序文件复制到版本子目录，其中包括可执行文件、程序集、资源和数据文件。 如有必要，你可以创建包含其他文件的其他子目录。  
+  
+4. 打开 [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)] 或 Visual Studio 命令提示符，然后更改为版本子目录。  
+  
+5. 使用 Mage.exe 调用创建应用程序清单。 以下语句将为编译为在 Intel x86 处理器上运行的代码创建应用程序清单。  
   
     ```  
     mage -New Application -Processor x86 -ToFile AppToDeploy.exe.manifest -name "My App" -Version 1.0.0.0 -FromDirectory .   
     ```  
   
     > [!NOTE]
-    > Be sure to include the dot (.) after the `-FromDirectory` option, which indicates the current directory. If you do not include the dot, you must specify the path to your application files.  
+    > 请确保在 `-FromDirectory` 选项后包含点（.），该选项指示当前目录。 如果不包含句点，则必须指定应用程序文件的路径。  
   
-6. Sign the application manifest with your Authenticode certificate. Replace *mycert.pfx* with the path to your certificate file. Replace *passwd* with the password for your certificate file.  
+6. 用 Authenticode 证书对应用程序清单进行签名。 将*mycert.cer*替换为证书文件的路径。 将*密码替换为证书文件的密码*。  
   
     ```  
     mage -Sign AppToDeploy.exe.manifest -CertFile mycert.pfx -Password passwd  
     ```  
   
-     To sign  the application manifest with a CNG certificate, use the following. Replace *cngCert.pfx* with the path to your certificate file.  
+     若要使用 CNG 证书对应用程序清单进行签名，请使用以下。 将*cngCert*替换为证书文件的路径。  
   
     ```  
     mage -Sign AppToDeploy.exe.manifest -CertFile cngCert.pfx  
     ```  
   
-7. Change to the root of the deployment directory.  
+7. 更改为部署目录的根目录。  
   
-8. Generate the deployment manifest with a call to Mage.exe. By default, Mage.exe will mark your [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] deployment as an installed application, so that it can be run both online and offline. To make the application available only when the user is online, use the `-Install` option with a value of `false`. If you use the default, and users will install your application from a Web site or file share, make sure that the value of the `-ProviderUrl` option points to the location of the application manifest on the Web server or share.  
+8. 通过调用 Mage.exe 生成部署清单。 默认情况下，Mage.exe 会将 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 部署标记为已安装的应用程序，以便它可以联机和脱机运行。 若要使应用程序仅在用户处于联机状态时可用，请使用值为 `false`的 `-Install` 选项。 如果使用默认值，并且用户将从网站或文件共享安装应用程序，请确保 `-ProviderUrl` 选项的值指向 Web 服务器或共享上的应用程序清单的位置。  
   
     ```  
     mage -New Deployment -Processor x86 -Install true -Publisher "My Co." -ProviderUrl "\\myServer\myShare\AppToDeploy.application" -AppManifest 1.0.0.0\AppToDeploy.exe.manifest -ToFile AppToDeploy.application  
     ```  
   
-9. Sign the deployment manifest with your Authenticode  or CNG certificate.  
+9. 用 Authenticode 或 CNG 证书对部署清单进行签名。  
   
     ```  
     mage -Sign AppToDeploy.application -CertFile mycert.pfx -Password passwd  
@@ -123,91 +123,91 @@ If you cannot use Visual Studio to deploy your [!INCLUDE[ndptecclick](../include
     mage -Sign AppToDeploy.exe.manifest -CertFile cngCert.pfx  
     ```  
   
-10. Copy all of the files in the deployment directory to the deployment destination or media. This may be either a folder on a Web site or FTP site, a file share, or a CD-ROM.  
+10. 将部署目录中的所有文件复制到部署目标或媒体。 这可能是网站或 FTP 站点、文件共享或 cd-rom 上的文件夹。  
   
-11. Provide your users with the URL, UNC, or physical media required to install your application. If you provide a URL or a UNC, you must give your users the full path to the deployment manifest. For example, if AppToDeploy is deployed to http://webserver01/ in the AppToDeploy directory, the full URL path would be http://webserver01/AppToDeploy/AppToDeploy.application.  
+11. 为用户提供安装应用程序所需的 URL、UNC 或物理介质。 如果提供 URL 或 UNC，则必须为用户提供部署清单的完整路径。 例如，如果将 AppToDeploy 部署到 AppToDeploy 目录中 http://webserver01/，则将 http://webserver01/AppToDeploy/AppToDeploy.application完整的 URL 路径。  
   
-### <a name="to-deploy-an-application-with-the-mageuiexe-graphical-tool"></a>To deploy an application with the MageUI.exe graphical tool  
+### <a name="to-deploy-an-application-with-the-mageuiexe-graphical-tool"></a>使用 Mageui.exe 图形工具部署应用程序  
   
-1. Create a directory where you will store your [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] deployment files.  
+1. 创建一个将在其中存储 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 部署文件的目录。  
   
-2. In the deployment directory you just created, create a version subdirectory. If this is the first time that you are deploying the application, name the version subdirectory **1.0.0.0**.  
+2. 在刚创建的部署目录中，创建版本子目录。 如果这是你首次部署应用程序，请将版本命名为 "子目录**1.0.0.0**"。  
   
     > [!NOTE]
-    > The version of your deployment is probably distinct from the version of your application.  
+    > 部署的版本可能与应用程序的版本不同。  
   
-3. Copy all of your application files to the version subdirectory, including executable files, assemblies, resources, and data files. If necessary, you can create additional subdirectories that contain additional files.  
+3. 将所有应用程序文件复制到版本子目录，其中包括可执行文件、程序集、资源和数据文件。 如有必要，你可以创建包含其他文件的其他子目录。  
   
-4. Start the MageUI.exe graphical tool.  
+4. 启动 Mageui.exe 图形工具。  
   
     ```  
     MageUI.exe  
     ```  
   
-5. Create a new application manifest by selecting **File**, **New**, **Application Manifest** from the menu.  
+5. 通过从菜单中选择 "**文件**"、"**新建**"、"**应用程序清单**" 来创建新的应用程序清单。  
   
-6. On the default **Name** tab, type the name and version number of this deployment. Also specify the **Processor** that your application is built for, such as x86.  
+6. 在 "默认**名称**" 选项卡上，键入此部署的名称和版本号。 还要指定为其生成应用程序的**处理器**，如 x86。  
   
-7. Select the **Files** tab and click the ellipsis ( **...** ) button next to the **Application directory** text box. A Browse For Folder dialog box appears.  
+7. 选择 "**文件**" 选项卡，然后单击 "**应用程序目录**" 文本框旁边的省略号（ **...** ）按钮。 此时将显示 "浏览文件夹" 对话框。  
   
-8. Select the version subdirectory containing your application files, and then click **OK**.  
+8. 选择包含应用程序文件的版本子目录，然后单击 **"确定"** 。  
   
-9. If you will deploy from Internet Information Services (IIS), select the **When populating add the .deploy extension to any file that does not have it** check box.  
+9. 如果要从 Internet Information Services （IIS）进行部署，请选中 "**填充时将 .deploy 扩展添加到任何不具有它的文件**" 复选框。  
   
-10. Click the **Populate** button to add all your application files to the file list. If your application contains more than one executable file, mark the main executable file for this deployment as the startup application by selecting **Entry Point** from the **File Type** drop-down list. (If your application contains only one executable file, MageUI.exe will mark it for you.)  
+10. 单击 "**填充**" 按钮，将所有应用程序文件添加到文件列表。 如果你的应用程序包含多个可执行文件，则通过从 "**文件类型**" 下拉列表中选择 "**入口点**"，将此部署的主要可执行文件标记为启动应用程序。 （如果你的应用程序只包含一个可执行文件，则 Mageui.exe 会将其标记为你。）  
   
-11. Select the **Permissions Required** tab and select the level of trust that you need your application to assert. The default is **FullTrust**, which will be suitable for most applications.  
+11. 选择 "**所需权限**" 选项卡，然后选择你需要应用程序断言的信任级别。 默认值为**FullTrust**，适用于大多数应用程序。  
   
-12. Select **File**, **Save As** from the menu. A Signing Options dialog box appears prompting you to sign the application manifest.  
+12. 从菜单中选择 "**文件**"、"**另存为**"。 此时会显示 "签名选项" 对话框，提示您对应用程序清单进行签名。  
   
-13. If you have a certificate stored as a file on your file system, use the **Sign with certificate file** option, and select the certificate from the file system by using the ellipsis ( **...** ) button. Then type your certificate password.  
-  
-     或  
-  
-     If your certificate is kept in a certificate store accessible from your computer, select the **Sign with stored certificate** option, and select the certificate from the provided list.  
-  
-14. Click **OK** to sign your application manifest. The Save As dialog box appears.  
-  
-15. In the Save As dialog box, specify the version directory, and then click **Save**.  
-  
-16. Select **File**, **New**, **Deployment Manifest** from the menu to create your deployment manifest.  
-  
-17. On the **Name** tab, specify a name and version number for this deployment (**1.0.0.0** in this example). Also specify the **Processor** that your application is built for, such as x86.  
-  
-18. Select the **Description** tab, and specify values for **Publisher** and **Product**. (**Product** is the name given to your application on the Windows Start menu when your application installs on a client computer for offline use.)  
-  
-19. Select the **Deployment Options** tab, and in the **Start Location** text box, specify the location of the application manifest on the Web server or share. For example, \\\myServer\myShare\AppToDeploy.application.  
-  
-20. If you added the .deploy extension in a previous step, also select **Use .deploy file name extension** here.  
-  
-21. Select the **Update Options** tab, and specify how often you would like this application to update. If your application uses <xref:System.Deployment.Application.UpdateCheckInfo> to check for updates itself, clear the **This application should check for updates** check box.  
-  
-22. Select the **Application Reference** tab and then click the **Select Manifest** button. An open dialog box appears.  
-  
-23. Select the application manifest that you created earlier and then click **Open**.  
-  
-24. Select **File**, **Save As** from the menu. A Signing Options dialog box appears prompting you to sign the deployment manifest.  
-  
-25. If you have a certificate stored as a file on your file system, use the **Sign with certificate file** option, and select the certificate from the file system by using the ellipsis ( **...** ) button. Then type your certificate password.  
+13. 如果在文件系统上将证书存储为文件，请使用 "**使用证书签名**" 选项，并使用省略号（ **...** ）按钮从文件系统中选择证书。 然后键入证书密码。  
   
      或  
   
-     If your certificate is kept in a certificate store accessible from your computer, select the **Sign with stored certificate** option, and select the certificate from the provided list.  
+     如果证书保存在可从计算机访问的证书存储中，请选择 "**使用存储的证书签名**" 选项，然后从提供的列表中选择证书。  
   
-26. Click **OK** to sign your deployment manifest. The Save As dialog box appears.  
+14. 单击 **"确定"** 以对你的应用程序清单进行签名。 此时会显示“另存为”对话框。  
   
-27. In the **Save As** dialog box, move up one directory to the root of your deployment and then click **Save**.  
+15. 在 "另存为" 对话框中，指定版本目录，然后单击 "**保存**"。  
   
-28. Copy all of the files in the deployment directory to the deployment destination or media. This may be either a folder on a Web site or FTP site, a file share, or a CD-ROM.  
+16. 从菜单中选择 "**文件**"、"**新建**"、"**部署清单**" 以创建部署清单。  
   
-29. Provide your users with the URL, UNC, or physical media required to install your application. If you provide a URL or a UNC, you must give your users the full path the deployment manifest. For example, if AppToDeploy is deployed to http://webserver01/ in the AppToDeploy directory, the full URL path would be http://webserver01/AppToDeploy/AppToDeploy.application.  
+17. 在 "**名称**" 选项卡上，为此部署指定名称和版本号（在本示例中为**1.0.0.0** ）。 还要指定为其生成应用程序的**处理器**，如 x86。  
+  
+18. 选择 "**描述**" 选项卡，然后指定 "**发布者**" 和 "**产品**" 的值。 （**Product**是在客户端计算机上安装应用程序以供脱机使用时在 Windows "开始" 菜单上为应用程序指定的名称。）  
+  
+19. 选择 "**部署选项**" 选项卡，并在 "**启动位置**" 文本框中指定应用程序清单在 Web 服务器或共享上的位置。 例如，\\\myServer\myShare\AppToDeploy.application。  
+  
+20. 如果在上一步中添加了 .deploy 扩展，请在此处选择 "**使用文件扩展名**"。  
+  
+21. 选择 "**更新选项**" 选项卡，并指定要更新此应用程序的频率。 如果你的应用程序使用 <xref:System.Deployment.Application.UpdateCheckInfo> 来检查是否有更新，请清除 "**此应用程序应检查更新**" 复选框。  
+  
+22. 选择 "**应用程序引用**" 选项卡，然后单击 "**选择清单**" 按钮。 此时将显示 "打开" 对话框。  
+  
+23. 选择前面创建的应用程序清单，并单击 "**打开**"。  
+  
+24. 从菜单中选择 "**文件**"、"**另存为**"。 此时会显示 "签名选项" 对话框，提示您对部署清单进行签名。  
+  
+25. 如果在文件系统上将证书存储为文件，请使用 "**使用证书签名**" 选项，并使用省略号（ **...** ）按钮从文件系统中选择证书。 然后键入证书密码。  
+  
+     或  
+  
+     如果证书保存在可从计算机访问的证书存储中，请选择 "**使用存储的证书签名**" 选项，然后从提供的列表中选择证书。  
+  
+26. 单击 **"确定"** 以对你的部署清单进行签名。 此时会显示“另存为”对话框。  
+  
+27. 在 "**另存为**" 对话框中，将一个目录移到部署的根，然后单击 "**保存**"。  
+  
+28. 将部署目录中的所有文件复制到部署目标或媒体。 这可能是网站或 FTP 站点、文件共享或 cd-rom 上的文件夹。  
+  
+29. 为用户提供安装应用程序所需的 URL、UNC 或物理介质。 如果提供 URL 或 UNC，则必须为用户提供部署清单的完整路径。 例如，如果将 AppToDeploy 部署到 AppToDeploy 目录中 http://webserver01/，则将 http://webserver01/AppToDeploy/AppToDeploy.application完整的 URL 路径。  
   
 ## <a name="next-steps"></a>后续步骤  
- When you need to deploy a new version of the application, create a new directory named after the new version—for example, 1.0.0.1—and copy the new application files into the new directory. Next, you need to follow the previous steps to create and sign a new application manifest, and update and sign the deployment manifest. Be careful to specify the same higher version in both the Mage.exe `-New` and `–Update` calls, as [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] only updates higher versions, with the left-most integer most significant. If you used MageUI.exe, you can update the deployment manifest by opening it, selecting the **Application Reference** tab, clicking the **Select Manifest** button, and then selecting the updated application manifest.  
+ 当需要部署应用程序的新版本时，请创建一个名为的新目录（例如1.0.0.1），并将新的应用程序文件复制到新目录中。 接下来，需要按照前面的步骤创建新的应用程序清单并对其进行签名，并对部署清单进行更新和签名。 请注意，在 Mage.exe `-New` 和 `–Update` 调用中指定相同的更高版本，因为 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 仅更新较高版本，最左端的整数最重要。 如果使用了 Mageui.exe，则可以通过打开部署清单、选择 "**应用程序引用**" 选项卡、单击 "**选择清单**" 按钮，然后选择更新的应用程序清单来更新部署清单。  
   
 ## <a name="see-also"></a>请参阅  
  [Mage.exe（清单生成和编辑工具）](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)   
- [MageUI.exe（图形化客户端中的清单生成和编辑工具）](https://msdn.microsoft.com/library/f9e130a6-8117-49c4-839c-c988f641dc14)   
+ [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](https://msdn.microsoft.com/library/f9e130a6-8117-49c4-839c-c988f641dc14)   
  [发布 ClickOnce 应用程序](../deployment/publishing-clickonce-applications.md)   
- [ClickOnce Deployment Manifest](../deployment/clickonce-deployment-manifest.md)   
- [ClickOnce 应用程序清单](../deployment/clickonce-application-manifest.md)
+ [ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md)   
+ [ndptecclick](../deployment/clickonce-application-manifest.md)

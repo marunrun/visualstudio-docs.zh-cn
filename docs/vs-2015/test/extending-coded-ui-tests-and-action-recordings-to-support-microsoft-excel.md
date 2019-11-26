@@ -26,7 +26,7 @@ ms.locfileid: "74302558"
 
   本节提供编码的 UI 测试扩展，该扩展可以录制和播放 Excel 工作表的测试。 本节和针对开发人员（该开发人员只想创建一个这样的扩展）的代码注释中对扩展的每个部分进行了介绍。
 
-  ![UI Test Architecture](../test/media/ui-testarch.png "UI_TestArch") Architecture Overview
+  ![UI 测试体系结构](../test/media/ui-testarch.png "UI_TestArch")体系结构概述
 
 ## <a name="download-the-sample"></a>下载示例
  该示例由 `CodedUIExtensibilitySample.sln` 解决方案中的四个项目组成：
@@ -70,7 +70,7 @@ ms.locfileid: "74302558"
 ### <a name="testing-excel-with-the-sampletestproject"></a>使用 SampleTestProject 测试 Excel
  可以在提供的测试项目（使用你可能没有的特定 Excel 版本）中运行测试，或创建你自己的测试项目并记录你自己的测试。 有关详细信息，请参阅[创建编码的 UI 测试](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider>
 - <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement>

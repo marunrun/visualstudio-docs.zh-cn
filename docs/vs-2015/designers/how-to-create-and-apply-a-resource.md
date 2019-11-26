@@ -34,7 +34,7 @@ XAML 设计器中元素的样式和模板存储在称作资源的可重用实体
 
      将出现用于创建资源的相应对话框。 当从画笔创建资源时，就会出现此对话框：
 
-     ![Create Resource Dialog Box](../designers/media/xaml-create-resource.png "xaml_create_resource")
+     !["创建资源" 对话框](../designers/media/xaml-create-resource.png "xaml_create_resource")
 
 3. 在“名称(关键字)”框中，输入关键字名称。 这是当希望其他元素可以引用该资源时，可以使用的名称。
 
@@ -54,7 +54,7 @@ XAML 设计器中元素的样式和模板存储在称作资源的可重用实体
 
 1. 在“文档大纲”窗口中，选择想要向其应用资源的元素。
 
-2. 执行以下操作之一：
+2. 执行下列操作之一：
 
    - 将资源应用于属性。 在“属性”窗口中，选择属性值旁边的属性标记，再选择“本地资源”或“系统资源”，然后从显示的列表中选择可用的资源。
 
@@ -65,7 +65,7 @@ XAML 设计器中元素的样式和模板存储在称作资源的可重用实体
      > [!NOTE]
      > “编辑模板”用于应用控件模板。 “编辑其他模板”用于应用其他模板类型。
 
-     资源可应用于兼容的任何位置。 例如，画笔资源可应用于 <xref:Windows.UI.Xaml.Controls.TextBox> 控件的“前景”属性。
+     资源可应用于兼容的任何位置。 例如，画笔资源可应用于  **控件的“前景”** <xref:Windows.UI.Xaml.Controls.TextBox>属性。
 
 ### <a name="to-edit-a-resource"></a>编辑资源的步骤
 

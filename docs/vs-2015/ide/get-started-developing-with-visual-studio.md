@@ -1,5 +1,5 @@
 ---
-title: Get Started Developing | Microsoft Docs
+title: 开始开发 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -31,19 +31,19 @@ ms.locfileid: "74292057"
 
      [加载示例](https://github.com/Microsoft/cordova-samples/tree/master/todo-angularjs) | [学习教程](https://docs.microsoft.com/visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017) |                              [浏览文档](https://docs.microsoft.com/visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017) |                               [观看视频](https://channel9.msdn.com/Blogs/Seth-Juarez/Getting-Started-with-Apache-Cordova-in-Visual-Studio)
 
-- **[在 C# 或 Visual Basic (Xamarin) 中制作跨平台的移动应用程序](../cross-platform/visual-studio-and-xamarin.md)** ：开始使用 Visual Studio 和适用于 Xamarin 的工具从共享代码库创建在 Android、iOS 和通用 Windows 平台上运行的移动应用程序。
+- **[在 C# 或 Visual Basic (Xamarin) 中创建跨平台的移动应用程序](../cross-platform/visual-studio-and-xamarin.md)** ：开始使用 Visual Studio 和适用于 Xamarin 的工具从共享代码库创建在 Android、iOS 和通用 Windows 平台上运行的移动应用程序。
 
-     Load a sample: [TaskyPortable](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable) (native UI) or  [Xamarin Forms Todo sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo) (Xamarin.Forms shared UI) &#124;   [Do a tutorial](https://msdn.microsoft.com/library/dn879698\(v=vs.140\).aspx) &#124;                             [Browse the docs](https://msdn.microsoft.com/library/mt299001.aspx) &#124;                                  [Watch a video](https://channel9.msdn.com/Series/Cross-Platform-Development-with-Xamarin--Visual-Studio/01)
+     加载示例： [TaskyPortable](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable) （本机 UI）或[Xamarin Forms Todo 示例](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo)（Xamarin. Forms 共享 UI） &#124;[执行教程](https://msdn.microsoft.com/library/dn879698\(v=vs.140\).aspx) &#124;[浏览](https://msdn.microsoft.com/library/mt299001.aspx) &#124;[观看视频](https://channel9.msdn.com/Series/Cross-Platform-Development-with-Xamarin--Visual-Studio/01)的文档
 
 - **[在 C++ 中创建本机跨平台应用程序和库](https://www.visualstudio.com/explore/cplusplus-mdd-vs.aspx)** 转到此处以开始创建在 Android、iOS 和通用 Windows 平台上运行的 C++ 应用程序和库。
 
      [加载示例](https://code.msdn.microsoft.com/MoreTeaPots-Android-a9bd8549) | [学习教程](https://msdn.microsoft.com/library/dn707595.aspx) |                              [浏览文档](https://msdn.microsoft.com/library/dn707591.aspx) |                               [观看视频](https://channel9.msdn.com/Series/ConnectOn-Demand/239)
 
-- **[使用 DirectX 制作游戏](https://msdn.microsoft.com/library/windows/desktop/ee663274\(v=vs.85\).aspx)** ：开始使用 DirectX 创建通用 Windows 平台游戏。
+- **[使用 DirectX 创建游戏](https://msdn.microsoft.com/library/windows/desktop/ee663274\(v=vs.85\).aspx)** ：开始使用 DirectX 创建通用 Windows 平台游戏。
 
      [加载示例](https://msdn.microsoft.com/library/windows/desktop/bb153300\(v=vs.85\).aspx) |                   [学习教程](https://msdn.microsoft.com/library/windows/desktop/bb153264\(v=vs.85\).aspx) |                               [浏览文档](https://msdn.microsoft.com/library/windows/desktop/ee663274\(v=vs.85\).aspx) |                                  [观看视频](https://channel9.msdn.com/Series/Introduction-to-C-and-DirectX-Game-Development/01)
 
-- **[使用 Unity 制作游戏](../cross-platform/visual-studio-tools-for-unity.md)** ：开始使用 Unity 框架创建跨平台游戏。
+- **[使用 Unity 创建游戏](../cross-platform/visual-studio-tools-for-unity.md)** ：开始使用 Unity 框架创建跨平台游戏。
 
      [加载示例](http://unity3d.com/learn/resources/downloads) |                    [学习教程](https://learn.unity.com/projects) |                              [浏览文档](https://msdn.microsoft.com/library/dn940019\(v=vs.140\).aspx) |    [观看视频](https://www.youtube.com/playlist?list=PLReL099Y5nRfseAg0k1SJOlpqdcsDs8Em)
 
@@ -55,7 +55,7 @@ ms.locfileid: "74292057"
 
      [加载示例](https://github.com/microsoft/windows-classic-samples) |                    [学习教程](https://msdn.microsoft.com/library/dd492171.aspx)  |                              [浏览文档](https://dev.windows.com/desktop)
 
-- **[Make Office applications](https://msdn.microsoft.com/library/fp161347.aspx)** : Get started creating Office applications that extend and customize Word, Excel, Outlook and PowerPoint with Office 365 services.
+- **[制作 office 应用程序](https://msdn.microsoft.com/library/fp161347.aspx)** ：开始创建 office 应用程序，以便通过 office 365 服务扩展和自定义 Word、Excel、Outlook 和 PowerPoint。
 
      [加载示例](https://code.msdn.microsoft.com/office365/) |                      [学习教程](https://developer.microsoft.com/graph) |                             [浏览文档](https://msdn.microsoft.com/office/aa905340.aspx) |                                  [观看视频](https://developer.microsoft.com/office/gallery/?filterBy=Videos)
 

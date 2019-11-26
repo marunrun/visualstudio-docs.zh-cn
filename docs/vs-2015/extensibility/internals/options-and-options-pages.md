@@ -1,5 +1,5 @@
 ---
-title: Options and Options Pages | Microsoft Docs
+title: 选项和选项页 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -24,66 +24,66 @@ ms.locfileid: "74300696"
 # <a name="options-and-options-pages"></a>选项和选项页
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Clicking **Options** on the **Tools** menu opens the **Options** dialog box. The options in this dialog box are collectively referred to as options pages. The tree control in the navigation pane includes options categories, and every category has options pages. When you select a page, its options appear in the right pane. These pages let you change the values of the options that determine the state of a VSPackage.  
+单击 "**工具**" 菜单上的 "**选项**" 将打开 "**选项**" 对话框。 此对话框中的选项统称为 "选项页"。 导航窗格中的树控件包含选项类别，每个类别都包含 "选项" 页。 选择某个页面后，其选项将显示在右窗格中。 这些页面使你可以更改用于确定 VSPackage 状态的选项的值。  
   
-## <a name="support-for-options-pages"></a>Support for Options Pages  
- The <xref:Microsoft.VisualStudio.Shell.Package> class provides support for creating options pages and options categories. The <xref:Microsoft.VisualStudio.Shell.DialogPage> class implements an options page.  
+## <a name="support-for-options-pages"></a>支持选项页  
+ <xref:Microsoft.VisualStudio.Shell.Package> 类为创建选项页和选项类别提供支持。 <xref:Microsoft.VisualStudio.Shell.DialogPage> 类实现了选项页。  
   
- The default implementation of <xref:Microsoft.VisualStudio.Shell.DialogPage> offers its public properties to a user in a generic grid of properties. You can customize this behavior by overriding various methods on the page to create a custom options page that has its own user interface (UI). For more information, see [Creating an Options Page](../../extensibility/creating-an-options-page.md).  
+ <xref:Microsoft.VisualStudio.Shell.DialogPage> 的默认实现向用户提供其公共属性。 您可以通过重写页面上的各种方法来自定义此行为，以创建具有其自己的用户界面（UI）的自定义选项页。 有关详细信息，请参阅[创建选项页](../../extensibility/creating-an-options-page.md)。  
   
- The <xref:Microsoft.VisualStudio.Shell.DialogPage> class implements <xref:Microsoft.VisualStudio.Shell.IProfileManager>, which provides persistence for options pages and also for user settings. The default implementations of the <xref:Microsoft.VisualStudio.Shell.IProfileManager.LoadSettingsFromStorage%2A> and <xref:Microsoft.VisualStudio.Shell.IProfileManager.SaveSettingsToStorage%2A> methods persist property changes into a user section of the registry if the property can be converted to and from a string.  
+ <xref:Microsoft.VisualStudio.Shell.DialogPage> 类实现 <xref:Microsoft.VisualStudio.Shell.IProfileManager>，后者为选项页提供持久性，还用于用户设置。 <xref:Microsoft.VisualStudio.Shell.IProfileManager.LoadSettingsFromStorage%2A> 和 <xref:Microsoft.VisualStudio.Shell.IProfileManager.SaveSettingsToStorage%2A> 方法的默认实现将属性更改保存到注册表的用户部分（如果可以将属性转换为字符串或从字符串转换为）。  
   
-## <a name="options-page-registry-path"></a>Options Page Registry Path  
- By default, the registry path of the properties managed by an options page is determined by combining <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A>, the word DialogPage, and the type name of the options page class. For example, an options page class might be defined as follows.  
+## <a name="options-page-registry-path"></a>选项页注册表路径  
+ 默认情况下，由 "选项" 页管理的属性的注册表路径由 "选项" 页面类 <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A>、单词 Dialogpage 派生和类型名称的组合确定。 例如，可以按如下所示定义选项页类。  
   
  [!code-csharp[VSSDKSupportForOptionsPages#1](../../snippets/csharp/VS_Snippets_VSSDK/vssdksupportforoptionspages/cs/vssdksupportforoptionspagespackage.cs#1)]
  [!code-vb[VSSDKSupportForOptionsPages#1](../../snippets/visualbasic/VS_Snippets_VSSDK/vssdksupportforoptionspages/vb/vssdksupportforoptionspagespackage.vb#1)]  
   
- If the <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A> is HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0Exp, then the property name and value pairs are subkeys of HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0Exp\DialogPage\Company.OptionsPage.OptionsPageGeneral.  
+ 如果 <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A> HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\8.0Exp，则属性名称和值对是 HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\8.0Exp\DialogPage\Company.OptionsPage.OptionsPageGeneral. 的子项。  
   
- The registry path of the options page itself is determined by combining <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A>, the word, ToolsOptionsPages, and the options page category and name. For example, if the Custom options page has the category, My Option Pages, and the <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A> is HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp, then the options page has the registry key, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\ToolsOptionsPages\My Option Pages\Custom.  
+ "选项" 页本身的注册表路径是通过组合 <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A>、word、ToolsOptionsPages 和 "选项" 页类别和名称确定的。 例如，如果 "自定义选项" 页具有 "类别"、"我的选项" 页和 "<xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A> HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\8.0Exp"，则 "选项" 页将包含注册表项，HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\8.0Exp\ToolsOptionsPages\My 选项 Pages\Custom。  
   
-## <a name="toolsoptions-page-attributes-and-layout"></a>Tools/Options Page Attributes and Layout  
- The <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> attribute determines the grouping of custom options pages into categories in the navigation tree of the **Options** dialog box. The <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> attribute associates an options page with the VSPackage that provides the interface. 考虑以下代码片断：  
+## <a name="toolsoptions-page-attributes-and-layout"></a>"工具/选项" 页属性和布局  
+ <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> 特性确定将自定义选项页分组到 "**选项**" 对话框的导航树中的类别。 <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> 特性将选项页与提供接口的 VSPackage 相关联。 考虑以下代码片断：  
   
  [!code-csharp[VSSDKSupportForOptionsPages#2](../../snippets/csharp/VS_Snippets_VSSDK/vssdksupportforoptionspages/cs/vssdksupportforoptionspagespackage.cs#2)]
  [!code-vb[VSSDKSupportForOptionsPages#2](../../snippets/visualbasic/VS_Snippets_VSSDK/vssdksupportforoptionspages/vb/vssdksupportforoptionspagespackage.vb#2)]  
   
- This declares that MyPackage provides two options pages, OptionsPageGeneral and OptionsPageCustom. In the **Options** dialog box, both options pages appear in the **My Option Pages** category as **General** and **Custom**, respectively.  
+ 这声明 MyPackage 提供了两个选项页： OptionsPageGeneral 和 OptionsPageCustom。 在 "**选项**" 对话框中，这两个选项页在 "**我的选项页**" 类别中分别显示为 "**常规**" 和 "**自定义**"。  
   
-## <a name="option-attributes-and-layout"></a>Option Attributes and Layout  
- The user interface (UI) that the page provides determines the appearance of options in a custom options page. The layout, labeling, and description of options in a generic options page are determined by the following attributes:  
+## <a name="option-attributes-and-layout"></a>选项属性和布局  
+ 页面提供的用户界面（UI）确定自定义选项页中选项的外观。 "常规选项" 页中的选项布局、标签和说明由以下属性确定：  
   
-- <xref:System.ComponentModel.CategoryAttribute> determines the category of the option.  
+- <xref:System.ComponentModel.CategoryAttribute> 确定选项的类别。  
   
-- <xref:System.ComponentModel.DisplayNameAttribute> determines the display name of the option.  
+- <xref:System.ComponentModel.DisplayNameAttribute> 确定选项的显示名称。  
   
-- <xref:System.ComponentModel.DescriptionAttribute> determines the description of the option.  
+- <xref:System.ComponentModel.DescriptionAttribute> 确定选项的说明。  
   
   > [!NOTE]
-  > Equivalent attributes, SRCategory, LocDisplayName, and SRDescription, use string resources for localization and are defined in the [managed project sample](https://go.microsoft.com/fwlink/?LinkId=122774).  
+  > 等效属性、SRCategory、LocDisplayName 和 SRDescription，使用字符串资源进行本地化，并在[托管项目示例](https://go.microsoft.com/fwlink/?LinkId=122774)中定义。  
   
   考虑以下代码片断：  
   
   [!code-csharp[VSSDKSupportForOptionsPages#3](../../snippets/csharp/VS_Snippets_VSSDK/vssdksupportforoptionspages/cs/optionspagecustom.cs#3)]
   [!code-vb[VSSDKSupportForOptionsPages#3](../../snippets/visualbasic/VS_Snippets_VSSDK/vssdksupportforoptionspages/vb/optionspagegeneral.vb#3)]  
   
-  The OptionInteger option appears on the options page as **Integer Option** in the **My Options** category. If the option is selected, the description, **My integer option**, appears in the description box.  
+  "选项" 页上的 "OptionInteger" 选项显示为 "**我的选项**" 类别中的**整数选项**。 如果选择了该选项，则 "说明" 框中会显示 "**我的整数" 选项**。  
   
-## <a name="accessing-options-pages-from-another-vspackage"></a>Accessing Options Pages from Another VSPackage  
- A VSPackage that hosts and manages an options page can be programmatically accessed from another VSPackage by using the automation model. For example, in the following code a VSPackage is registered as hosting an option page.  
+## <a name="accessing-options-pages-from-another-vspackage"></a>访问其他 VSPackage 的选项页  
+ 承载和管理选项页的 VSPackage 可以通过使用自动化模型以编程方式从另一个 VSPackage 访问。 例如，在以下代码中，VSPackage 注册为承载选项页。  
   
  [!code-csharp[VSSDKSupportForOptionsPages#4](../../snippets/csharp/VS_Snippets_VSSDK/vssdksupportforoptionspages/cs/vssdksupportforoptionspagespackage.cs#4)]
  [!code-vb[VSSDKSupportForOptionsPages#4](../../snippets/visualbasic/VS_Snippets_VSSDK/vssdksupportforoptionspages/vb/vssdksupportforoptionspagespackage.vb#4)]  
   
- The following code fragment gets the value of OptionInteger from MyOptionPage:  
+ 以下代码片段从 MyOptionPage 中获取 OptionInteger 的值：  
   
  [!code-csharp[VSSDKSupportForOptionsPages#5](../../snippets/csharp/VS_Snippets_VSSDK/vssdksupportforoptionspages/cs/vssdksupportforoptionspagespackage.cs#5)]
  [!code-vb[VSSDKSupportForOptionsPages#5](../../snippets/visualbasic/VS_Snippets_VSSDK/vssdksupportforoptionspages/vb/vssdksupportforoptionspagespackage.vb#5)]  
   
- When the <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> attribute registers an options page, the page is registered under the AutomationProperties key if the `SupportsAutomation` argument of the attribute is `true`. Automation examines this registry entry to find the associated VSPackage, and automation then accesses the property through the hosted options page, in this case, My Grid Page.  
+ 当 <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> 属性注册选项页时，如果该特性的 `SupportsAutomation` 参数 `true`，则该页将在 Automationproperties.livesetting 项下进行注册。 自动检查此注册表项以查找关联的 VSPackage，然后通过 "托管选项" 页（在本例中为 "我的网格" 页）访问属性。  
   
- The registry path of the automation property is determined by combining <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A>, the word, AutomationProperties, and the options page category and name. For example, if the options page has the My Category category, the My Grid Page name, and the <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A>, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp, then the automation property has the registry key, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\AutomationProperties\My Category\My Grid Page.  
+ 自动化属性的注册表路径是通过组合 <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A>、word、Automationproperties.livesetting 和 options 页面类别和名称确定的。 例如，如果 "选项" 页具有 "我的类别" 类别、"我的网格" 页名称和 <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A>，HKEY_LOCAL_MACHINE "\SOFTWARE\Microsoft\VisualStudio\8.0Exp"，则自动化属性具有注册表项，HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\8.0Exp\AutomationProperties\My Category\My 网格页。  
   
 > [!NOTE]
-> The canonical name, My Category.My Grid Page, is the value of the Name subkey of this key.
+> 规范名称 "我的 Category.My" 网格页是此项的 Name 子项的值。

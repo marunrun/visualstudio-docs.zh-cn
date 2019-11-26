@@ -1,5 +1,5 @@
 ---
-title: Signing VSIX Packages | Microsoft Docs
+title: 为 VSIX 包签名 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -24,29 +24,29 @@ ms.locfileid: "74300333"
 # <a name="signing-vsix-packages"></a>对 VSIX 包进行签名
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Extension assemblies do not need to be signed before they can run in Visual Studio, but it is a good practice to do so.  
+不需要对扩展程序集进行签名，然后才能在 Visual Studio 中运行，但这是一种很好的做法。  
   
- If you want to secure your extension and make sure it hasn’t been tampered with, you can add a digital signature to a VSIX package. When a VSIX is signed, the VSIX installer will display a message indicating that it is signed, plus more information about the signature itself. If the contents of the VSIX have been modified, and the VSIX has not been signed again, the VSIX installer will show that the signature is not valid. The installation is not stopped, but the user is warned.  
+ 如果你想要保护你的扩展，并确保其未被篡改，你可以将数字签名添加到 VSIX 包。 当对 VSIX 进行签名时，VSIX 安装程序将显示一条消息，指示该消息已签名，还会显示有关签名本身的详细信息。 如果已修改 VSIX 的内容，并且 VSIX 未再次进行签名，则 VSIX 安装程序会显示签名无效。 安装未停止，但会警告用户。  
   
 > [!IMPORTANT]
-> Beginning in 2015, VSIX packages signed using anything other than SHA256 encryption will be identified as having an invalid signature. VSIX installation is not blocked but the user will be warned.  
+> 从2015开始，使用 SHA256 加密以外的任何内容签名的 VSIX 包都将标识为具有无效的签名。 VSIX 安装未被阻止，但会警告用户。  
   
-## <a name="signing-a-vsix-with-vsixsigntool"></a>Signing a VSIX with VSIXSignTool  
- There is a SHA256 encryption signing tool available from [VisualStudioExtensibility](https://www.nuget.org/profiles/VisualStudioExtensibility) on nuget.org at [VsixSignTool](https://www.nuget.org/packages/Microsoft.VSSDK.Vsixsigntool).  
+## <a name="signing-a-vsix-with-vsixsigntool"></a>使用 VSIXSignTool 为 VSIX 签名  
+ Nuget.org 上的[VisualStudioExtensibility](https://www.nuget.org/profiles/VisualStudioExtensibility)中提供了一个 SHA256 加密签名工具[VsixSignTool](https://www.nuget.org/packages/Microsoft.VSSDK.Vsixsigntool)。  
   
-#### <a name="to-use-the-vsixsigntool"></a>To use the VSIXSignTool  
+#### <a name="to-use-the-vsixsigntool"></a>使用 VSIXSignTool  
   
-1. Add your VSIX to a project.  
+1. 将 VSIX 添加到项目。  
   
-2. Right click on the project node in Solution Explorer, selecting **Add &#124; Manage NuGet Packages**.  For more information on NuGet and adding NuGet packages see [NuGet Overview](https://docs.microsoft.com/nuget/) and [Manage NuGet Packages Using the Dialog](https://docs.microsoft.com/nuget/consume-packages/install-use-packages-visual-studio).  
+2. 在解决方案资源管理器中右键单击项目节点，选择 "**添加&#124; " "管理 NuGet 包**"。  有关 NuGet 和添加 NuGet 包的详细信息，请参阅[Nuget 概述](https://docs.microsoft.com/nuget/)和[使用对话框管理 nuget 包](https://docs.microsoft.com/nuget/consume-packages/install-use-packages-visual-studio)。  
   
-3. Search for VSIXSignTool from VisualStudioExtensibility and install the NuGet package.  
+3. 从 VisualStudioExtensibility 搜索 VSIXSignTool 并安装 NuGet 包。  
   
-4. You can now run the VSIXSignTool from the project’s local packages location. Consult the tool’s command line help for your signing scenario (VSIXSignTool.exe /?).  
+4. 你现在可以从项目的本地包位置中运行 VSIXSignTool。 有关签名方案，请参阅工具的命令行帮助（VSIXSignTool/？）。  
   
-   For example to sign with a password protected certificate file:  
+   例如，使用受密码保护的证书文件进行签名：  
   
-   VSIXSignTool.exe sign /f \<certfile> /p \<password> \<VSIXfile>  
+   VSIXSignTool sign/f \<certfile >/p \<密码 > \<VSIXfile >  
   
 ## <a name="see-also"></a>请参阅  
  [传送 Visual Studio 扩展](../extensibility/shipping-visual-studio-extensions.md)

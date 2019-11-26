@@ -1,5 +1,5 @@
 ---
-title: 'CA3075: Insecure DTD Processing | Microsoft Docs'
+title: CA3075：不安全的 DTD 处理 |Microsoft Docs
 ms.date: 11/15/2016
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
@@ -35,31 +35,31 @@ ms.locfileid: "74300981"
 
 - 设置了 XML 中的 <xref:System.Xml.XmlNode.InnerXml%2A> 属性。
 
-- <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> property is set  to Parse    .
+- <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> 属性设置为 Parse。
 
 - 使用 <xref:System.Xml.XmlResolver> 而不是 <xref:System.Xml.XmlSecureResolver> 处理不受信任的输入。
 
-- The XmlReader.<xref:System.Xml.XmlReader.Create%2A> method is invoked with an insecure <xref:System.Xml.XmlReaderSettings> instance or no instance at all.
+- XmlReader。<xref:System.Xml.XmlReader.Create%2A> 使用不安全的 <xref:System.Xml.XmlReaderSettings> 实例或根本不使用任何实例调用方法。
 
-- <xref:System.Xml.XmlReader> is created with insecure default settings or values    .
+- 创建 <xref:System.Xml.XmlReader> 时，默认设置或值不安全。
 
   在这些情况下，结果均相同：来自文件系统或来自处理 XML 的计算机的网络共享的文件都将面临攻击，其随后可能会被用作 DoS 向量。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
 
-- Catch and process all XmlTextReader exceptions properly to avoid path information disclosure    .
+- 正确捕获并处理所有 XmlTextReader 异常，以避免路径信息泄漏。
 
-- Use the <xref:System.Xml.XmlSecureResolver> to restrict the resources      that the XmlTextReader can access.
+- 使用 <xref:System.Xml.XmlSecureResolver> 来限制 XmlTextReader 可以访问的资源。
 
-- Do not allow the <xref:System.Xml.XmlReader> to open any external resources by setting the <xref:System.Xml.XmlResolver> property to **null**.
+- 不要允许 <xref:System.Xml.XmlReader> 通过将 <xref:System.Xml.XmlResolver> 属性设置为 **null**来打开任何外部资源。
 
 - 确保从可信的源分配 <xref:System.Data.DataViewManager.DataViewSettingCollectionString%2A> 的 <xref:System.Data.DataViewManager> 属性。
 
   .NET 3.5 及更早版本
 
-- Disable DTD processing if you are dealing with untrusted sources by setting the <xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A> property to **true** .
+- 如果要处理不受信任的源，请将 <xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A> 属性设置为 **true** ，以禁用 DTD 处理。
 
-- XmlTextReader 类具有完全信任继承要求。 See [Inheritance Demands](https://msdn.microsoft.com/28b9adbb-8f08-4f10-b856-dbf59eb932d9) for more information    .
+- XmlTextReader 类具有完全信任继承要求。 有关详细信息，请参阅 [继承要求](https://msdn.microsoft.com/28b9adbb-8f08-4f10-b856-dbf59eb932d9)。
 
   .NET 4 及更高版本
 

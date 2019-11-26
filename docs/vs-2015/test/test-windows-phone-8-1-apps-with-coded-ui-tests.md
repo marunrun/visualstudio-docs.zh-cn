@@ -24,19 +24,19 @@ ms.locfileid: "74301834"
 
 1. 使用 Visual C# 或 Visual Basic 模板，为空白的 Windows Phone 应用创建新项目。
 
-     ![Create a new Windows Phone app](../test/media/cuit-phone-app-newproject.png "CUIT_Phone_App_NewProject")
+     ![创建新的 Windows Phone 应用](../test/media/cuit-phone-app-newproject.png "CUIT_Phone_App_NewProject")
 
 2. 在解决方案资源管理器中，打开 MainPage.xaml。 从工具箱中，将按钮控件和文本框控件拖动到设计图面。
 
-     ![Add contols to MainPage.xaml](../test/media/cuit-phone-app-addcontrols.png "CUIT_Phone_App_AddControls")
+     ![将 mainpage.xaml 添加到 MainPage](../test/media/cuit-phone-app-addcontrols.png "CUIT_Phone_App_AddControls")
 
 3. 在“属性”窗口中命名该按钮控件。
 
-     ![Name the button control](../test/media/cuit-phone-namebutton.png "CUIT_Phone_NameButton")
+     ![命名按钮控件](../test/media/cuit-phone-namebutton.png "CUIT_Phone_NameButton")
 
 4. 命名该文本框控件。
 
-     ![Name the textbox control](../test/media/cuit-phone-nametesxtbox.png "CUIT_Phone_NameTesxtBox")
+     ![命名 textbox 控件](../test/media/cuit-phone-nametesxtbox.png "CUIT_Phone_NameTesxtBox")
 
 5. 在设计图面上，双击该按钮控件并添加以下代码：
 
@@ -60,7 +60,7 @@ ms.locfileid: "74301834"
 
 6. 按 F5 以在模拟器中运行你的 Windows Phone 应用并且验证其是否工作。
 
-     ![Run the Windows Phone app](../test/media/cuit-phone-runapp.png "CUIt_Phone_RunApp")
+     ![运行 Windows Phone 应用](../test/media/cuit-phone-runapp.png "CUIt_Phone_RunApp")
 
 7. 退出模拟器。
 
@@ -68,11 +68,11 @@ ms.locfileid: "74301834"
 
 1. 在编码的 UI 测试可以映射应用的控件前，你必须先部署该应用。
 
-     ![Deploy the Windows Phone app](../test/media/cuit-phone-deploy.png "CUIT_Phone_Deploy")
+     ![部署 Windows Phone 应用](../test/media/cuit-phone-deploy.png "CUIT_Phone_Deploy")
 
      仿真程序将启动。 该应用现在可用于测试。
 
-     ![App deployed on emulator](../test/media/cuit-phone-deployed.png "CUIT_Phone_Deployed")
+     ![在模拟器上部署的应用](../test/media/cuit-phone-deployed.png "CUIT_Phone_Deployed")
 
      在你创建编码的 UI 测试时，请保持模拟器运行。
 
@@ -82,39 +82,39 @@ ms.locfileid: "74301834"
 
 1. 将新的编码 UI 测试项目添加到包含 Windows Phone 应用的解决方案。
 
-    ![Create new coded UI  test for Windows Phone](../test/media/cuit-phone-newproject.png "CUIT_Phone_NewProject")
+    ![为 Windows Phone 创建新的编码的 UI 测试](../test/media/cuit-phone-newproject.png "CUIT_Phone_NewProject")
 
 2. 选择使用十字线工具编辑 UI 映射。
 
-    ![Generate coded UI test using cross&#45;hair tool.](../test/media/cuit-phone-howgencodedialog.png "CUIT_Phone_HowGenCodeDialog")
+    ![使用十字&#45;线工具生成编码的 UI 测试。](../test/media/cuit-phone-howgencodedialog.png "CUIT_Phone_HowGenCodeDialog")
 
 3. 使用十字线工具来选择该应用，然后为应用的“AutomationId” 属性复制值，该值将在稍后用于启动测试中的应用。
 
-    ![Copy the app's AutomationId value](../test/media/cuit-phone-getautomationid.png "CUIT_Phone_GetAutomationId")
+    ![复制应用的 AutomationId 值](../test/media/cuit-phone-getautomationid.png "CUIT_Phone_GetAutomationId")
 
 4. 在模拟器中，启动该应用并使用十字线工具来选择按钮控件。 然后将按钮控件添加到 UI 控件图。
 
-    ![Use the cross&#45;hair tool to map controls](../test/media/cuit-phone-mapbuttoncontrol.png "CUIT_Phone_MapButtonControl")
+    ![使用十字&#45;线工具映射控件](../test/media/cuit-phone-mapbuttoncontrol.png "CUIT_Phone_MapButtonControl")
 
 5. 若要将文本框控件添加到 UI 控件图，请重复上一个步骤。
 
-    ![Use the cross&#45;hair tool and map textbox control](../test/media/cuit-phone-maptextboxcontrol.png "CUIT_Phone_MapTextBoxControl")
+    ![使用十字&#45;线工具和地图 textbox 控件](../test/media/cuit-phone-maptextboxcontrol.png "CUIT_Phone_MapTextBoxControl")
 
 6. 生成代码以创建用于 UI 控件映射的更改的代码。
 
-    ![Generate code from the builder](../test/media/cuit-phone-generatecode.png "CUIT_Phone_GenerateCode")
+    ![从生成器生成代码](../test/media/cuit-phone-generatecode.png "CUIT_Phone_GenerateCode")
 
 7. 使用十字线工具选择文本框控件，然后选择 **“文本”** 属性。
 
-    ![Select the Text property](../test/media/cuit-phone-textproperty.png "CUIT_Phone_TextProperty")
+    ![选择 "文本" 属性](../test/media/cuit-phone-textproperty.png "CUIT_Phone_TextProperty")
 
 8. 添加断言。 将在测试中使用它以验证该值是否正确。
 
-    ![Add assertion to the test](../test/media/cuit-phone-addassertion.png "CUIT_Phone_AddAssertion")
+    ![将断言添加到测试](../test/media/cuit-phone-addassertion.png "CUIT_Phone_AddAssertion")
 
 9. 为断言方法添加并生成代码。
 
-     ![Generate code for the assertion](../test/media/cuit-phone-generatecodeassertion.png "CUIT_Phone_GenerateCodeAssertion")
+     ![为断言生成代码](../test/media/cuit-phone-generatecodeassertion.png "CUIT_Phone_GenerateCodeAssertion")
 
 10. **Visual C#**
 
@@ -289,15 +289,15 @@ ms.locfileid: "74301834"
 
 1. 生成你的测试，然后使用测试资源管理器运行该测试。
 
-     ![Build and run the test using Test Explorer](../test/media/cuit-phone-runtestexplorer.png "CUIT_Phone_RunTestExplorer")
+     ![使用测试资源管理器生成并运行测试](../test/media/cuit-phone-runtestexplorer.png "CUIT_Phone_RunTestExplorer")
 
      Windows Phone 应用启动，点按按钮的操作完成，然后填充文本框的 Text 属性并且使用断言方法验证。
 
-     ![Running Winodws Phone test](../test/media/cuit-phone-runtestexplorerrunning.png "CUIT_Phone_RunTestExplorerRunning")
+     ![运行 Winodws Phone 测试](../test/media/cuit-phone-runtestexplorerrunning.png "CUIT_Phone_RunTestExplorerRunning")
 
      测试完成后，测试资源管理器确认该测试已通过。
 
-     ![Test Explorer results](../test/media/cuit-phone-runtestexplorerresults.png "CUIT_Phone_RunTestExplorerResults")
+     ![测试资源管理器结果](../test/media/cuit-phone-runtestexplorerresults.png "CUIT_Phone_RunTestExplorerResults")
 
 ## <a name="TestingPhoneAppsCodedUI_DataDriven"></a> 在 Windows Phone 应用上使用数据驱动的编码的 UI 测试
  若要测试不同的条件，编码的 UI 测试可以使用不同的数据集多次运行。
@@ -320,7 +320,7 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 ### <a name="TestingPhoneAppsCodedUI_EmulatorDevice"></a> 问：测试是否只能在模拟器上执行，或者我还可以使用物理设备？
  **答**：支持任一选项。 通过更改模拟器类型或选择设备工具栏中的设备，选择测试执行的目标。 如果选择设备，则 Phone Blue 设备需要连接到计算机的 USB 端口之一。
 
- ![Select the emulator version, or physcial device](../test/media/cuit-phone-testtarget.png "CUIT_Phone_TestTarget")
+ ![选择仿真程序版本或物理设备](../test/media/cuit-phone-testtarget.png "CUIT_Phone_TestTarget")
 
 ### <a name="q-why-dont-i-see-the-option-to-record-my-coded-ui-test-in-the-generate-code-for-a-coded-ui-test-dialog"></a>问：为什么在“生成编码的 UI 测试的代码”对话框中看不到用于记录我的编码的 UI 测试的选项？
  **答**：Windows Phone 应用不支持录制选项。
@@ -377,8 +377,8 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 |运行测试的目标|本地或远程计算机。 当你使用自动测试用例运行测试时，可以指定远程计算机。 请参阅 [在 Microsoft 测试管理器中实现测试用例自动化](https://msdn.microsoft.com/library/4e02568b-9cde-47cc-b41c-82726c177e42)。|模拟器或设备。 请参阅本主题中的 [问：是否测试只能在模拟器上执行，或者我还可以使用物理设备？](#TestingPhoneAppsCodedUI_EmulatorDevice) 。|
 |从命令行执行|指定目标无需设置文件。|指定目标需要 Runsettings 文件。|
 |针对 Shell 控件的专用类|[DirectUIControl](/previous-versions/dn248208(v=vs.140))|<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl>|
-|在 XAML 应用中的 WebView 控件|如果你使用 Html* 专用类与 HTML 元素进行交互则受支持。 请参阅<xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>.|不支持。|
-|从 MTM 执行自动测试|支持。|不支持。|
+|在 XAML 应用中的 WebView 控件|如果你使用 Html* 专用类与 HTML 元素进行交互则受支持。 请参阅 <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>。|不受支持。|
+|从 MTM 执行自动测试|支持。|不受支持。|
 |数据驱动的测试|有关使用外部数据源和使用测试方法中 DataSource 特性的信息，请参阅 [数据驱动的测试](../test/creating-a-data-driven-coded-ui-test.md) 。|使用测试方法中的 DataRow 特性将数据指定为内联。 请参阅本主题中的 [对 Windows Phone 应用使用数据驱动的编码 UI 测试](#TestingPhoneAppsCodedUI_DataDriven) 。|
 
 ## <a name="external-resources"></a>外部资源

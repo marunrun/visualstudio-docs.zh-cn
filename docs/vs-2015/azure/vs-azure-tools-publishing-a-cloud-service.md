@@ -33,9 +33,9 @@ Visual Studio 可以将应用程序直接发布到 Azure，同时支持云服务
 
 发布 Azure 应用程序时，可以执行以下任务之一：
 
-- Create a service package: You can use this package and the service configuration file to publish your application to a deployment environment from the [Azure portal](https://portal.azure.com).
+- 创建服务包：可以使用此包和服务配置文件将应用程序从[Azure 门户](https://portal.azure.com)发布到部署环境。
 
-- Publish your Azure project from Visual Studio: To publish your application directly to Azure, you use the Publish Wizard. 有关信息，请参阅 [Publish Azure Application Wizard](vs-azure-tools-publish-azure-application-wizard.md)（发布 Azure 应用程序向导）。
+- 从 Visual Studio 中发布 Azure 项目：若要将应用程序直接发布到 Azure，请使用发布向导。 有关信息，请参阅 [Publish Azure Application Wizard](vs-azure-tools-publish-azure-application-wizard.md)（发布 Azure 应用程序向导）。
 
 ### <a name="to-create-a-service-package-from-visual-studio"></a>从 Visual Studio 中创建服务包
 
@@ -69,13 +69,13 @@ Visual Studio 可以将应用程序直接发布到 Azure，同时支持云服务
 
 ### <a name="requirements-for-using-web-deploy"></a>使用 Web 部署的要求
 
-- **For development and testing purposes only**: The changes are made directly to the virtual machine where the web role is running. 如果必须回收此虚拟机，则将丢失此更改，因为发布的原始包已用于重建角色虚拟机。 重新发布应用程序才能获取 Web 角色的最新更改。
+- **仅用于开发和测试目的**：更改直接在运行 web 角色的虚拟机上进行。 如果必须回收此虚拟机，则将丢失此更改，因为发布的原始包已用于重建角色虚拟机。 重新发布应用程序才能获取 Web 角色的最新更改。
 
-- **Only web roles can be updated**: Worker roles can’t be updated. 此外，无法更新 `web role.cs` 中的 `RoleEntryPoint`。
+- **只能更新 web 角色**：无法更新辅助角色。 此外，无法更新 `RoleEntryPoint` 中的 `web role.cs`。
 
-- **Can only support a single instance of a web role**: You can’t have multiple instances of any web role in your deployment environment. 但是，支持仅含一个实例的多个 Web 角色。
+- **只能支持 web 角色的单个实例**：你的部署环境中不能有任何 web 角色的多个实例。 但是，支持仅含一个实例的多个 Web 角色。
 
-- **Enable remote desktop connections**: This requirement allows Web Deploy to use the user and password to connect to the virtual machine to deploy the changes to the server that’s running Internet Information Services (IIS). 此外，可能需要连接到虚拟机才能将可信证书添加到此虚拟机上的 IIS。 （此证书可以确保 Web 部署使用的 IIS 远程连接是安全的。）
+- **启用远程桌面连接**：此要求允许 Web 部署使用用户和密码来连接到虚拟机，以将更改部署到运行 INTERNET INFORMATION SERVICES （IIS）的服务器。 此外，可能需要连接到虚拟机才能将可信证书添加到此虚拟机上的 IIS。 （此证书可以确保 Web 部署使用的 IIS 远程连接是安全的。）
 
 以下过程假设你正在使用“发布 Azure 应用程序”向导。
 

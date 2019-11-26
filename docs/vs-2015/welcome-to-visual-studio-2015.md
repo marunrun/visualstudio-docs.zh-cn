@@ -15,7 +15,7 @@ ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7eeb6b0ac3322090cf85e26ac6388aac76890d44
 ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74297580"
@@ -30,13 +30,13 @@ ms.locfileid: "74297580"
 >
 > 单击此处，了解 [Visual Studio 2017](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes) 的发行说明。
 
- 免费下载 [Visual Studio 社区](https://go.microsoft.com/fwlink/?LinkId=517106) 以立即开始编码。 如果要进行跨平台开发，请确保安装可选包。 （可以通过 [其他 Visual Studio 版本](https://visualstudio.microsoft.com/vs/compare/)获得更多功能。）
+ 免费下载 [Visual Studio 社区](https://go.microsoft.com/fwlink/?LinkId=517106) 以立即开始编码。 如果要进行跨平台开发，请确保安装可选包。 （可以通过[其他 Visual Studio 版本](https://visualstudio.microsoft.com/vs/compare/)获得更多功能。）
 
  立即投入，创建新项目，然后开始编写代码。 选择要创建的应用类型。 或者，可以 [浏览](./ide/visual-studio-ide.md) Visual Studio IDE 以熟悉工具。
 
  同时，别忘了浏览我们的 [代码库](https://code.msdn.microsoft.com/) ，以找到可帮助你更快编写应用的示例！
 
- 可以通过从 [Visual Studio 下载](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)页面下载安装 Visual Studio 2015。 To learn more about the installation process, see [Install Visual Studio 2015](./install/install-visual-studio-2015.md).
+ 可以通过从 [Visual Studio 下载](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)页面下载安装 Visual Studio 2015。 若要了解有关安装过程的详细信息，请参阅[安装 Visual Studio 2015](./install/install-visual-studio-2015.md)。
 
 ## <a name="extend-visual-studio"></a>扩展 Visual Studio
  添加自己的 Visual Studio 扩展以包含在编码时经常使用的工具或脚本。 可以创建自定义菜单项和工具窗口，以将自己的工具集成到 Visual Studio IDE 中。 可以扩展 Visual Studio 编辑器以分析和修复代码，或添加新项目类型以恰好包含所需内容。
@@ -85,9 +85,9 @@ ms.locfileid: "74297580"
  你可以 [在本地生成应用](./ide/compiling-and-building-in-visual-studio.md) 并确保它正常运行。 然后使用 [调试工具](./debugger/debugging-in-visual-studio.md) 修复与应用有关的任何问题。 或者，可以在共享生成服务器上或在云中生成项目。 自动执行生成过程以生成团队中的开发人员签入到版本控制的代码。 例如，您可以在夜间或每次签入此代码时生成一个或多个项目。
 
 ### <a name="test-your-app"></a>测试应用程序
- [创建单元测试](./test/unit-test-your-code.md)以提高应用的质量。 这些测试可以在每次进行签入时以及作为生成的一部分运行。
+ [创建单元测试](./test/unit-test-your-code.md) 以提高应用的质量。 这些测试可以在每次进行签入时以及作为生成的一部分运行。
 
- 为应用计划、创建和运行手动和自动测试。 测试计划、套件、测试用例和测试结果存储在云中（使用 Visual Studio Team Services）或本地（使用 Team Foundation Server）。 了解有关[测试应用程序](https://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)的详细信息。
+ 为应用计划、创建和运行手动和自动测试。 测试计划、套件、测试用例和测试结果存储在云中（使用 Visual Studio Team Services）或本地（使用 Team Foundation Server）。 了解有关 [测试应用程序](https://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)的详细信息。
 
 ### <a name="deliver-your-teams-code-faster"></a>更快地交付团队代码
  消除团队成员之间的障碍并改进协作。 更进一步，自动向开发到生产中的每个阶段发布应用。 实时监视应用性能和可用性。 收集有关客户实际上如何使用应用的实时使用情况数据。 有关详细信息，请参阅 [DevOps 和应用程序生命周期管理](https://msdn.microsoft.com/library/74a1f71d-7f23-4c71-8fd7-89ede614fab6)。

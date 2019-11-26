@@ -23,11 +23,11 @@ ms.locfileid: "74291503"
 # <a name="da0504-maximum-working-set-in-bytes-for-the-process-being-profiled"></a>DA0504：所分析的进程的最大工作集(以字节为单位)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Rule Id|DA0504|  
-|Category|Resource Management|  
-|Profiling method|All|  
-|Message|This information was gathered for information only. 进程工作集计数器测量由正在分析的进程使用的物理内存的使用情况。 报告的值是在所有测量时间间隔内观察到的最大值。|  
-|Rule type|Information|  
+规则 Id |DA0504 |  
+|类别 |资源管理 |  
+|分析方法 |All |  
+|消息 |此信息仅收集在信息中。 进程工作集计数器测量由正在分析的进程使用的物理内存的使用情况。 报告的值是在所有测量时间间隔内观察到的最大值。|  
+|规则类型 |信息 |  
   
  使用采样法、.NET 内存或资源争用方法进行分析时，必须收集至少 10 个样本才能触发此规则。  
   

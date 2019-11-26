@@ -1,5 +1,5 @@
 ---
-title: Edit UML models and diagrams | Microsoft Docs
+title: 编辑 UML 模型和关系图 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -35,69 +35,69 @@ ms.locfileid: "74295534"
 
  若要查看支持此功能的 Visual Studio 的版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
- 本主题介绍了用于编辑在不同的关系图类型之中共有的模型的方法。 For more information that is specific to particular types of diagrams, see [Create models for your app](../modeling/create-models-for-your-app.md).
+ 本主题介绍了用于编辑在不同的关系图类型之中共有的模型的方法。 有关特定于特定类型的关系图的详细信息，请参阅为[应用程序创建模型](../modeling/create-models-for-your-app.md)。
 
 ## <a name="in-this-topic"></a>本主题内容
 
-- [UML Diagrams are Views of a UML Model](#Views)
+- [UML 关系图是 UML 模型的视图](#Views)
 
-- [Creating UML Modeling Diagrams](#Creating)
+- [创建 UML 建模图](#Creating)
 
-- [Drawing UML Modeling Diagrams](#Drawing)
+- [绘制 UML 建模图](#Drawing)
 
-- [Editing Shapes and Connectors](#Editing)
+- [编辑形状和连接线](#Editing)
 
-- [Undoing Changes to the Model](#Undo)
+- [撤消对模型所做的更改](#Undo)
 
-- [Sharing Elements between Diagrams](#Sharing)
+- [在关系图之间共享元素](#Sharing)
 
-- [Copying Elements and Groups of Related Elements](#Copying)
+- [复制元素和相关元素组](#Copying)
 
-- [Deleting a Model Element or its Views](#Deleting)
+- [删除模型元素或其视图](#Deleting)
 
-- [Searching text in a diagram](#Searching)
+- [在关系图中搜索文本](#Searching)
 
-- [Preparing a Diagram for Presentation](#presentation)
+- [准备演示的关系图](#presentation)
 
-- [Extending the UML Designers](#extensions)
+- [扩展 UML 设计器](#extensions)
 
-## <a name="Views"></a> UML Diagrams are Views of a UML Model
- 只能在建模项目中创建和使用 UML 关系图。 For more information about how to create diagrams and projects, see [Create UML modeling projects and diagrams](../modeling/create-uml-modeling-projects-and-diagrams.md).
+## <a name="Views"></a>UML 关系图是 UML 模型的视图
+ 只能在建模项目中创建和使用 UML 关系图。 有关如何创建关系图和项目的详细信息，请参阅[创建 UML 建模项目和关系图](../modeling/create-uml-modeling-projects-and-diagrams.md)。
 
 - 一个建模项目只包含一个 UML 模型。 项目中的每个 UML 关系图都是 UML 模型视图。
 
-- You can see the model in **UML Model Explorer**. On the **Architecture** menu, point to **Windows**, and then click **UML Model Explorer**.
+- 您可以在 " **UML 模型资源管理器**" 中看到该模型。 在 "**体系结构**" 菜单上，指向 "**窗口**"，再单击 " **UML 模型资源管理器**"。
 
 - 关系图上的每个形状都是模型中元素的视图。 当将新形状置于关系图上时，将在模型中创建一个新元素。
 
-- When you save any diagram, Visual Studio saves the whole model, all its diagrams, and the modeling project file.
+- 保存任何关系图时，Visual Studio 将保存整个模型、其所有关系图和建模项目文件。
 
-## <a name="Creating"></a> Creating UML Modeling Diagrams
+## <a name="Creating"></a>创建 UML 建模图
 
-1. On the **Architecture** menu in Visual Studio, click **New UML or Layer Diagram**.
+1. 在 Visual Studio 的 "**体系结构**" 菜单上，单击 "**新建 UML 或层关系图**"。
 
 2. 选择并命名关系图。
 
-3. In **Add to modeling project**, select an existing modeling project, or select **Create a new modeling project**.
+3. 在 "**添加到建模项目**" 中，选择一个现有建模项目，或者选择 "**创建新的建模项目**"。
 
    > [!NOTE]
    > 建模关系图必须存在于建模项目内。
 
-   还可以向解决方案资源管理器中的一个现有的建模项目添加关系图。 Right-click the modeling project, point to **Add**, and then click **New Item**.
+   还可以向解决方案资源管理器中的一个现有的建模项目添加关系图。 右键单击建模项目，指向 "**添加**"，然后单击 "**新建项**"。
 
 #### <a name="to-create-an-empty-uml-modeling-project"></a>若要创建空的 UML 建模项目
 
-- On the **File** menu, point to **New**, click **Project**, and in the **New Project** dialog box, double-click **Modeling Projects**.
+- 在 "**文件**" 菜单上，指向 "**新建**"，单击 "**项目**"，然后在 "**新建项目**" 对话框中，双击 "**建模项目**"。
 
-  For more information about how to manage modeling projects, see [Create UML modeling projects and diagrams](../modeling/create-uml-modeling-projects-and-diagrams.md).
+  有关如何管理建模项目的详细信息，请参阅[创建 UML 建模项目和关系图](../modeling/create-uml-modeling-projects-and-diagrams.md)。
 
-## <a name="Drawing"></a> Drawing UML Modeling Diagrams
+## <a name="Drawing"></a>绘制 UML 建模图
  建模图显示通过关系链接的模型元素集合。 每个元素显示为一个形状，每个关系显示为两个形状之间的连接线。
 
- 有两种类型的工具，一种用于元素，另一种用于关系。 For example, in the UML class diagram Toolbox, **Class** is an element tool, and **Association** is a relationship tool.
+ 有两种类型的工具，一种用于元素，另一种用于关系。 例如，在 "UML 类图" 工具箱中，**类**是 "元素" 工具，"**关联**" 是一种关系工具。
 
 > [!NOTE]
-> If you want information that is specific to particular diagram types, see [Create models for your app](../modeling/create-models-for-your-app.md).
+> 如果需要特定于特定关系图类型的信息，请参阅[为应用程序创建模型](../modeling/create-models-for-your-app.md)。
 
 #### <a name="to-create-elements-and-relationships-in-a-uml-modeling-diagram"></a>若要在 UML 建模关系图中创建元素和关系
 
@@ -106,43 +106,43 @@ ms.locfileid: "74295534"
     在某些情况下，可以将新元素放置在另一个元素内。 例如，在 UML 类关系图上，可以将类放置在包内。
 
    > [!NOTE]
-   > If you cannot see the toolbox, click **Toolbox** on the **View** menu.
+   > 如果看不到 "工具箱"，请单击 "**视图**" 菜单上的 **"工具箱**"。
 
 2. 若要创建关系，则单击关系工具，单击想要关系从其开始的元素，然后单击想要关系以其结束的元素。
 
     不同类型的关系可以在不同类型的元素上启动或结束。 例如，在 UML 类关系图中，关联关系不能在 Comment 元素上开始或结束。
 
    > [!NOTE]
-   > 若要多次使用同一个工具，请双击该工具。 When you have finished, click the **Pointer** tool.
+   > 若要多次使用同一个工具，请双击该工具。 完成后，请单击**指针**工具。
 
    在某些类型的关系图上，还可以绘制简单的形状。 这些形状不是模型的一部分，但你可以使用它们强调部分关系图或将其分成不同的区域。
 
-## <a name="Editing"></a> Editing Shapes and Connectors
+## <a name="Editing"></a>编辑形状和连接线
  当调整形状大小或给形状涂色，或者重新布局连接线时，对基础模型没有任何影响。 但是，当重命名关系图上或 UML 模型资源管理器中的形状时，将在 UML 模型资源管理器中和显示该元素的任何其他关系图中重命名相应的元素。
 
 > [!NOTE]
-> 有一种创建新工具箱项的简单方法，你可以在新工具箱项中使用自选属性创建元素组或元素。 For more information, see [Define a custom modeling toolbox item](../modeling/define-a-custom-modeling-toolbox-item.md).
+> 有一种创建新工具箱项的简单方法，你可以在新工具箱项中使用自选属性创建元素组或元素。 有关详细信息，请参阅[定义自定义建模工具箱项](../modeling/define-a-custom-modeling-toolbox-item.md)。
 
  下图显示了如何更改形状的大小或其名称。
 
- ![Adjusting a model element](../modeling/media/uml-drawadjust1.png "UML_DrawAdjust1")
+ ![调整模型元素](../modeling/media/uml-drawadjust1.png "UML_DrawAdjust1")
 
 > [!TIP]
-> 内置命令不包括用于准确对齐形状的命名。 However, you can easily create your own alignment command by copying the code in the example in [Display a UML model on diagrams](../modeling/display-a-uml-model-on-diagrams.md).
+> 内置命令不包括用于准确对齐形状的命名。 但是，您可以通过复制在[关系图上显示 UML 模型](../modeling/display-a-uml-model-on-diagrams.md)中的示例中的代码，轻松创建自己的对齐命令。
 
  下图显示了如何调整连接线及其标签的布局和位置。
 
- ![Adjusting a connector](../modeling/media/uml-drawadjust2.png "UML_DrawAdjust2")
+ ![调整连接器](../modeling/media/uml-drawadjust2.png "UML_DrawAdjust2")
 
 #### <a name="to-move-one-end-of-a-connector-to-another-shape"></a>若要将连接线的一端移动到另一个形状
 
-1. 执行以下操作之一：
+1. 执行下列操作之一：
 
-   - Press **CTRL** and move the end.
+   - 按**CTRL**并移动结尾。
 
      \- 或 -
 
-   - Right-click the connector and then click **Reconnect**.
+   - 右键单击该连接器，然后单击 "**重新连接**"。
 
 2. 单击想要移动的连接线的一端。
 
@@ -150,55 +150,55 @@ ms.locfileid: "74295534"
 
 #### <a name="to-change-color-or-other-properties-of-an-element-relationship-or-diagram"></a>若要更改元素、关系或关系图的颜色或其他属性
 
-- Click the element and set the fields in the **Properties** window.
+- 单击该元素，然后在 "**属性**" 窗口中设置字段。
 
-     If you cannot see the **Properties** window, right-click the element, and then click **Properties.**
+     如果看不到 "**属性**" 窗口，请右键单击元素，然后单击 "**属性"。**
 
 #### <a name="to-zoom-in-and-out-on-a-modeling-diagram"></a>若要在建模图上放大和缩小
 
-- Press and hold the **CTRL** key while you rotate the mouse wheel.
+- 按住**CTRL**键的同时旋转鼠标滚轮。
 
      \- 或 -
 
-- Press and hold **CTRL+SHIFT**, and then click the left or right mouse button.
+- 按住**CTRL + SHIFT**，然后单击鼠标左键或右键。
 
      \- 或 -
 
-- On the **Architecture Designers** toolbar, click the plus sign ( **+** ) or minus sign ( **-** ), or choose a zoom level.
+- 在**体系结构设计器**工具栏上，单击加号（ **+** ）或减号（ **-** ）或选择缩放级别。
 
-## <a name="Searching"></a> Searching in a Diagram
- “快速查找”功能将查找关系图上的项。 You must set **Look in:** to **Current Document**.
+## <a name="Searching"></a>在关系图中搜索
+ “快速查找”功能将查找关系图上的项。 必须将 **"查找范围："** 设置为 "**当前文档**"。
 
 #### <a name="to-search-for-text-in-a-modeling-diagram"></a>若要在建模图中搜索文本
 
-1. Press **CTRL+F**.
+1. 按**CTRL + F**。
 
      \- 或 -
 
-     On the **Edit** menu, point to **Find and Replace**, and then click **Quick Find**.
+     在 "**编辑**" 菜单上，指向 "**查找和替换**"，然后单击 "**快速查找**"。
 
     > [!NOTE]
-    > In the **Find and Replace** dialog box, you must leave the **Look in** field set to **Current Document**. 不支持其他选项。
+    > 在 "**查找和替换**" 对话框中，必须将 "**查找范围**" 字段设置为 "**当前文档**"。 不支持其他选项。
 
-2. Type the text that you want to find, and then click **Find Next**.
+2. 键入要查找的文本，然后单击 "**查找下一个**"。
 
     > [!NOTE]
-    > 如果想要查找的文本位于折叠形状内，则将突出显示该形状。 Expand the shape, and then click **Find Next** again.
+    > 如果想要查找的文本位于折叠形状内，则将突出显示该形状。 展开该形状，然后再次单击 "**查找下一个**"。
 
-## <a name="Undo"></a> Undoing Changes to the Model
- You can undo and redo changes that you have made to the model and diagrams by using the **Undo** and **Redo** commands on the **Edit** menu.
+## <a name="Undo"></a>撤消对模型所做的更改
+ 您可以使用 "**编辑**" 菜单上的 "**撤消**" 和 "**重做**" 命令来撤消和重做对模型和关系图所做的更改。
 
- **Each modeling project has a single stack of changes.** 对模型和关系图所做的所有更改都保留在此堆栈中。 此堆栈还包括焦点从一个关系图移动到另一个关系图的更改。 “撤消”命令可反转此堆栈上的更改。
+ **每个建模项目都有一个更改堆栈。** 对模型和关系图所做的所有更改都保留在此堆栈中。 此堆栈还包括焦点从一个关系图移动到另一个关系图的更改。 “撤消”命令可反转此堆栈上的更改。
 
  例如，假设你执行了这些操作：对关系图 1 进行了更改；将焦点更改到关系图 2；更改了关系图 2。 撤消更改时，第一个撤销将反转最后一个更改；第二个撤消会将焦点移回到关系图 1；第三个撤消将反转对关系图 1 所做的更改。
 
- **Closing a diagram truncates the stack of changes.** 如果关闭关系图，则不能撤消在该关系图中执行的更改，并且不能撤消对模型或其任意关系图所做的早期更改。
+ **关闭关系图会截断更改堆栈。** 如果关闭关系图，则不能撤消在该关系图中执行的更改，并且不能撤消对模型或其任意关系图所做的早期更改。
 
- **You cannot undo while you are editing a property.** 当正在“属性”窗口或关系图上的标签中编辑属性时，仅可以撤消在该属性中所做的更改。 通过按 ENTER 键完成在属性中的更改，或按 ESC 键取消。 然后，你便可以在模型和关系图中撤消更改。
+ **在编辑属性时，无法撤消。** 当正在“属性”窗口或关系图上的标签中编辑属性时，仅可以撤消在该属性中所做的更改。 通过按 ENTER 键完成在属性中的更改，或按 ESC 键取消。 然后，你便可以在模型和关系图中撤消更改。
 
- **Closing a diagram without saving might not have the effect you expect.** 如果进行一些更改，然后关闭但没有进行保存，则所做的更改仍会保留在模型中。 如果想要关闭但不对其进行保存，则建议关闭整个模型。
+ **关闭关系图而不保存可能不会产生预期的效果。** 如果进行一些更改，然后关闭但没有进行保存，则所做的更改仍会保留在模型中。 如果想要关闭但不对其进行保存，则建议关闭整个模型。
 
-## <a name="Sharing"></a> Sharing Elements between Diagrams
+## <a name="Sharing"></a>在关系图之间共享元素
  可以将关系图中出现不止一次的模型元素作为特定实例。 这适用于类、接口、组件、用例和参与者。
 
  如果想要在不同的关系图中显示不同组的关系，这很有用。 例如，在一个关系图中，可以显示“客户”和“地址”类之间的关联。 在另一个关系图中，可以再次显示“地址”类及其相关的邮政区域。
@@ -209,36 +209,36 @@ ms.locfileid: "74295534"
 
 #### <a name="to-add-a-new-view-of-a-model-element-by-using-uml-model-explorer"></a>若要通过使用 UML 模型资源管理器，添加模型元素的新视图
 
-1. To open **UML Model Explorer**, on the **Architecture** menu, point to **Windows**, and then click **UML Model Explorer**.
+1. 若要打开 " **UML 模型资源管理器**"，请在 "**体系结构**" 菜单上指向 "**窗口**"，再单击 " **UML 模型资源管理器**
 
-2. Drag the model element from **UML Model Explorer** to a compatible diagram in the same project.
+2. 将模型元素从 " **UML 模型资源管理器**" 拖动到同一个项目中的兼容关系图。
 
      将显示提供模型元素的视图的形状，这可能不包括其他关系图或同一个关系图上的视图。
 
     > [!NOTE]
-    > 将类或组件拖动到序列图上时，作用是不同的。 在这种情况下，将创建一个新的生命线，其类型为该类或组件。 For more information, see [UML Sequence Diagrams: Guidelines](../modeling/uml-sequence-diagrams-guidelines.md).
+    > 将类或组件拖动到序列图上时，作用是不同的。 在这种情况下，将创建一个新的生命线，其类型为该类或组件。 有关详细信息，请参阅[UML 序列图：准则](../modeling/uml-sequence-diagrams-guidelines.md)。
 
 #### <a name="to-add-a-new-view-of-a-model-element-by-using-paste-reference"></a>若要使用“粘贴引用”添加模型元素的新视图
 
-1. Right-click an existing element, and then click **Copy**.
+1. 右键单击现有元素，然后单击 "**复制**"。
 
-    - 可以同时复制多个元素。 Hold down the CTRL key while you click each element, right-click one of them, and then click **Copy**.
+    - 可以同时复制多个元素。 按住 CTRL 键的同时单击每个元素，右键单击其中一个元素，然后单击 "**复制**"。
 
-2. Right-click an empty part of a compatible diagram, and then click **Paste Reference**.
+2. 右键单击兼容关系图的空白部分，然后单击 "**粘贴引用**"。
 
      将显示同一元素的另一个视图。
 
     > [!NOTE]
-    > This differs from the **Paste** command, which creates a new element in the model. For more information, see [Copying Elements and Groups of Related Elements](#Copying).
+    > 这不同于 "**粘贴**" 命令，后者会在模型中创建一个新元素。 有关详细信息，请参阅[复制元素和相关元素组](#Copying)。
 
 > [!NOTE]
 > 如果添加到已通过关系连接的两个模型元素的关系图视图，则此关系的视图也会出现在关系图中。 只能通过从关系图删除其中一个元素或通过从模型中删除关系，来删除此视图。
 
-## <a name="Copying"></a> Copying Elements and Groups of Related Elements
+## <a name="Copying"></a>复制元素和相关元素组
  可以复制并粘贴模型元素，并且可以复制和粘贴元素组及其之间的关系。
 
 > [!NOTE]
-> The **Paste** and **Paste Reference** commands have different effects. **Paste** creates new elements whose properties are like those of the copied elements. **Paste Reference** creates new views of the same elements.
+> "**粘贴**" 和 "**粘贴" 引用**命令具有不同的效果。 **粘贴**会创建新元素，其属性与复制的元素的属性类似。 "**粘贴引用**" 创建相同元素的新视图。
 
 #### <a name="to-copy-elements-and-their-relationships"></a>若要复制的元素和它们之间的关系
 
@@ -247,11 +247,11 @@ ms.locfileid: "74295534"
     > [!NOTE]
     > 不能复制关系，除非作为组元素的一部分。
 
-2. On the **Edit** menu, click **Copy**.
+2. 在 "**编辑**" 菜单上，单击 "**复制**"。
 
 3. 如果想要将元素复制到另一个关系图，则创建新关系图，或打开现有的关系图。
 
-4. On the **Edit** menu, click **Paste**.
+4. 在 "**编辑**" 菜单上，单击 "**粘贴**"。
 
     - 将显示元素的副本，以及任何在它们之间进行链接的关系的副本。
 
@@ -270,29 +270,29 @@ ms.locfileid: "74295534"
 
    不能通过在解决方案资源管理器中复制和粘贴，来复制关系图。
 
-## <a name="Deleting"></a> Deleting a Model Element or its Views
- 可以从关系图中删除某些类型的元素（尤其是分类器），而无需从模型中进行删除。 分类器是在类图中、组件图中和用例图中显示的主要元素。 它们可以显示在多个关系图上。 For these types of elements, there are two separate commands: **Remove from Diagram** and **Delete from Model**.
+## <a name="Deleting"></a>删除模型元素或其视图
+ 可以从关系图中删除某些类型的元素（尤其是分类器），而无需从模型中进行删除。 分类器是在类图中、组件图中和用例图中显示的主要元素。 它们可以显示在多个关系图上。 对于这些类型的元素，有两个单独的命令： "**从关系图中删除**" 和 "**从模型中删除**"。
 
  与此相反，当从关系图中删除关系时，将始终从模型中删除。
 
 > [!NOTE]
-> UML 关系图上某些类型的元素具有标签。 通过在它们周围绘制矩形来选择此类元素时，可以选择标签，而不是拥有这些标签的元素。 不支持删除以这种方式选择的元素的子集。 To select a subset of these elements, press and hold the **CTRL** key while you click each element.
+> UML 关系图上某些类型的元素具有标签。 通过在它们周围绘制矩形来选择此类元素时，可以选择标签，而不是拥有这些标签的元素。 不支持删除以这种方式选择的元素的子集。 若要选择这些元素的子集，请按住**CTRL**键的同时单击每个元素。
 
 #### <a name="to-remove-a-classifiers-view-from-a-diagram"></a>若要从关系图删除分类器的视图
 
-- Right-click the element on the diagram, and then click **Remove from Diagram**.
+- 右键单击关系图上的元素，然后单击 "**从关系图中删除**"。
 
   \- 或 -
 
-- Click the element on the diagram and then press the **DELETE** key.
+- 单击关系图上的元素，然后按**DELETE**键。
 
-  - 元素的此视图将会消失。 However, the element remains in the model, and you can still find it in **UML Model Explorer**. 任何相同元素的其他视图也将保留。
+  - 元素的此视图将会消失。 但是，元素仍保留在模型中，你仍然可以在 " **UML 模型资源管理器**" 中找到它。 任何相同元素的其他视图也将保留。
 
-  - 终止于此形状的每个连接线将从关系图中删除，但其代表的关系将保留在模型中。 You can see the relationship in **UML Model Explorer** under **Relationships**, under each element that it connects.
+  - 终止于此形状的每个连接线将从关系图中删除，但其代表的关系将保留在模型中。 可以在**UML 模型资源管理器**中的 "**关系**" 下，在它所连接的每个元素下查看关系。
 
 #### <a name="to-delete-an-element-from-the-model"></a>若要从模型中删除元素
 
-- Right-click the element either in **UML Model Explorer** or on a diagram, and then click **Delete from Model**.
+- 在 " **UML 模型资源管理器**" 或关系图上右键单击元素，然后单击 "**从模型中删除**"。
 
   - 该元素将从显示它的每个关系图中删除。
 
@@ -300,31 +300,31 @@ ms.locfileid: "74295534"
 
 #### <a name="to-delete-a-relationship-from-the-model"></a>若要从模型中删除关系
 
-- Right-click the relationship on a diagram or in **UML Model Explorer**, and then click **Delete from Model**.
+- 右键单击关系图或 " **UML 模型资源管理器**" 中的关系，然后单击 "**从模型中删除**"。
 
     > [!CAUTION]
     > 在没有将关系从模型中删除的情况下，则不能从关系图中删除该关系。
 
      该关系将从模型中删除，并且将从显示它的每个关系图中删除。
 
-## <a name="presentation"></a> Preparing a Diagram for Presentation
+## <a name="presentation"></a>准备演示的关系图
  以下功能有助于强调关系图的特定部分、添加说明或将关系图划分为不同感兴趣的区域。
 
-- 可以将关系图的任何部分复制到 Word、PowerPoint 或其他文档中。 Select the shapes and connectors you want, right-click and then click **Copy**.
+- 可以将关系图的任何部分复制到 Word、PowerPoint 或其他文档中。 选择所需的形状和连接线，右键单击，然后单击 "**复制**"。
 
-- 可以更改任何形状或连接线的颜色。 Select one or more shapes and change the **Color** property. 如果看不到“属性”窗口，请按“F4”。
+- 可以更改任何形状或连接线的颜色。 选择一个或多个形状，并更改**颜色**属性。 如果看不到“属性”窗口，请按“F4”。
 
-- On diagrams of some kinds, you can draw lines, rectangles and ellipses from the **Simple Shapes** section of the Toolbox. 这些形状并不构成 UML 模型的一部分。
+- 在某些类型的关系图中，可以从工具箱的 "**简单形状**" 部分绘制线条、矩形和椭圆。 这些形状并不构成 UML 模型的一部分。
 
-- To label an area, you can drag a Comment from the Toolbox and then set its **Transparent** property to **True**. 就像“简单形状”一样，注释不构成 UML 模型的一部分，并且不会显示在 UML 模型资源管理器中。
+- 若要为区域添加标签，可以从 "工具箱" 中拖动注释，然后将其 "**透明**" 属性设置为 " **True**"。 就像“简单形状”一样，注释不构成 UML 模型的一部分，并且不会显示在 UML 模型资源管理器中。
 
 - 若要将备注和说明添加到模型元素，可以创建注释，然后将它们链接到元素。
 
 ### <a name="to-export-a-diagram-as-an-image"></a>若要将关系图导出为图像
- For more information, see [Export diagrams as images](../modeling/export-diagrams-as-images.md).
+ 有关详细信息，请参阅将[关系图导出为图像](../modeling/export-diagrams-as-images.md)。
 
-## <a name="extensions"></a> Extending the UML Designers
- 可以将新功能添加到 UML 工具并按照自己的需求调整关系图表示法。 For more information, see [Extend UML models and diagrams](../modeling/extend-uml-models-and-diagrams.md).
+## <a name="extensions"></a>扩展 UML 设计器
+ 可以将新功能添加到 UML 工具并按照自己的需求调整关系图表示法。 有关详细信息，请参阅[扩展 UML 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)。
 
 ## <a name="see-also"></a>请参阅
- [Create UML modeling projects and diagrams](../modeling/create-uml-modeling-projects-and-diagrams.md) [Analyzing and Modeling Architecture](../modeling/analyze-and-model-your-architecture.md) [Create models for your app](../modeling/create-models-for-your-app.md)
+ [创建 UML 建模项目和关系图](../modeling/create-uml-modeling-projects-and-diagrams.md)[分析和建模体系结构](../modeling/analyze-and-model-your-architecture.md)[为应用程序创建模型](../modeling/create-models-for-your-app.md)

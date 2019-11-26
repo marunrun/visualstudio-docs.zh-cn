@@ -1,5 +1,5 @@
 ---
-title: 'Walkthrough: Generating Code by using Text Templates | Microsoft Docs'
+title: 演练：使用文本模板生成代码 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -84,7 +84,7 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
 ### <a name="create-or-open-a-c-project"></a>创建或打开 C# 项目
  可以将此技术应用于任何代码项目。 本演练使用 C# 项目，出于测试目的，我们使用控制台应用程序。
 
-##### <a name="to-create-the-project"></a>要创建项目
+##### <a name="to-create-the-project"></a>创建项目
 
 1. 在“文件” 菜单上，单击“新建” ，然后单击“项目”。
 
@@ -157,7 +157,7 @@ namespace MyProject
    <#@ output extension=".cs" #>
    ```
 
-   方法。
+   中运行但不进行任何修改。
 
    请注意，.cs 文件在解决方案资源管理器中显示为模板文件的附属文件。 可单击模板文件名称旁边的 [+] 进行查看。 只要保存或将焦点从模板文件移开，就会从模板文件生成此文件。 所生成的文件将编译为项目的一部分。
 
@@ -421,4 +421,4 @@ namespace MyProject
  若在“错误列表”中看到模板转换或编译错误，或者若未正确生成输出文件，可以借助[使用 TextTransform 实用工具生成文件](../modeling/generating-files-with-the-texttransform-utility.md)中所述的技术解决文本模板的问题。
 
 ## <a name="see-also"></a>请参阅
- [Design-Time Code Generation by using T4 Text Templates](../modeling/design-time-code-generation-by-using-t4-text-templates.md) [Writing a T4 Text Template](../modeling/writing-a-t4-text-template.md)
+ [通过使用 T4 文本模板](../modeling/design-time-code-generation-by-using-t4-text-templates.md)[编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)生成设计时代码

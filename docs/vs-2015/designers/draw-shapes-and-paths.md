@@ -40,7 +40,7 @@ ms.locfileid: "74294321"
 ## <a name="Shape"></a> 绘制形状
  可以在“资产” 面板中查找形状。
 
- ![Shapes category on the Assets panel](../designers/media/b4-shapes-assetspanel.png "b4_Shapes_AssetsPanel")
+ !["资产" 面板上的 "形状" 类别](../designers/media/b4-shapes-assetspanel.png "b4_Shapes_AssetsPanel")
 
  将所需的任何形状拖到美工板上。 然后，可以使用形状的图柄缩放、旋转、移动或扭曲形状。
 
@@ -54,47 +54,47 @@ ms.locfileid: "74294321"
  ![](../designers/media/717956a8-b6a5-4e37-8af3-70bcfc78c82a.png "717956a8-b6a5-4e37-8af3-70bcfc78c82a") ![](../designers/media/8fbbbb21-be83-4cf6-903b-3a49f00c9860.png "8fbbbb21-be83-4cf6-903b-3a49f00c9860")
 
 ### <a name="draw-a-straight-line"></a>绘制直线
- Use the **Pen** tool ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54"), or the **Line** tool ![](../designers/media/eb618397-5283-48be-8396-3449be7b6fbf.png "eb618397-5283-48be-8396-3449be7b6fbf").
+ 使用 "**笔**" ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54")工具或 "**线条**" ![](../designers/media/eb618397-5283-48be-8396-3449be7b6fbf.png "eb618397-5283-48be-8396-3449be7b6fbf")工具。
 
- **Using the Pen tool** ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54")
+ **使用 "笔" 工具**![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54")
 
  在美工板上，单击一次以定义开始点，然后再次单击以定义线条末尾。
 
- **Using the Line tool** ![](../designers/media/eb618397-5283-48be-8396-3449be7b6fbf.png "eb618397-5283-48be-8396-3449be7b6fbf")
+ **使用 "线条" 工具**![](../designers/media/eb618397-5283-48be-8396-3449be7b6fbf.png "eb618397-5283-48be-8396-3449be7b6fbf")
 
  在美工板上，从所需线条起始位置处拖动，然后在所需线条结束位置处释放。
 
 ### <a name="draw-a-curve"></a>绘制曲线
- Use the **Pen** tool ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54").
+ 使用 "**笔**" ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54")工具。
 
  在美工板上，单击一次以定义线条的起点，然后单击并拖动指针以创建所需的曲线。
 
  如果要闭合路径，请单击线条上的第一个点。
 
 ### <a name="change-the-shape-of-a-curve"></a>更改曲线的形状
- Use the **Direct selection** tool ![](../designers/media/6dd6571f-c116-451d-8dd2-1f88b8406362.png "6dd6571f-c116-451d-8dd2-1f88b8406362").
+ 使用 "**路径选择**" ![](../designers/media/6dd6571f-c116-451d-8dd2-1f88b8406362.png "6dd6571f-c116-451d-8dd2-1f88b8406362")工具。
 
  单击形状，然后拖动形状上的任何点以更改曲线形状。
 
 ### <a name="draw-a-free-form-path"></a>绘制任意形状的路径
- Use the **Pencil** tool ![](../designers/media/509dc167-734f-46c9-b012-987ee63450cd.png "509dc167-734f-46c9-b012-987ee63450cd").
+ 使用 "**铅笔**" ![](../designers/media/509dc167-734f-46c9-b012-987ee63450cd.png "509dc167-734f-46c9-b012-987ee63450cd")工具。
 
  在美工板上，如同使用真正的铅笔一样绘制任意形状的路径。
 
 ### <a name="remove-part-of-a-path"></a>删除路径的一部分
- Use the **Direct selection** tool ![](../designers/media/6dd6571f-c116-451d-8dd2-1f88b8406362.png "6dd6571f-c116-451d-8dd2-1f88b8406362").
+ 使用 "**路径选择**" ![](../designers/media/6dd6571f-c116-451d-8dd2-1f88b8406362.png "6dd6571f-c116-451d-8dd2-1f88b8406362")工具。
 
  选择包含要删除的段的路径，然后单击“删除” 按钮。
 
 ### <a name="remove-a-point-in-a-path"></a>删除路径中的点
- Use the **Selection** tool  ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa"), and the **Pen** tool ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54").
+ 使用 "**选择**" ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa")工具和 "**笔**" ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54")工具。
 
- Use the **Selection** tool  ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa") to select the path. Then, use the **Pen** tool ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54") to click the point that you want to remove.
+ 使用 "**选择**" ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa")工具选择路径。 然后，使用 "**笔**" ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54")工具单击你要删除的点。
 
 ### <a name="add-a-point-to-a-path"></a>向路径添加点
- Use the **Selection** tool  ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa"), and the **Pen** tool ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54").
+ 使用 "**选择**" ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa")工具和 "**笔**" ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54")工具。
 
- Use the **Selection** tool  ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa") to select the path. Use the **Pen** tool ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54") to click anywhere on the path where you want to add the point.
+ 使用 "**选择**" ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa")工具选择路径。 使用 "**笔**" ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54")工具单击路径上要添加点的任何位置。
 
 ## <a name="Convert"></a> 将形状转换为路径
  若要采用与修改路径相同的方式来修改形状，请将形状转换为路径。
