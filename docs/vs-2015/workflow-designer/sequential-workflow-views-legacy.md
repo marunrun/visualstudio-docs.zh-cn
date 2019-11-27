@@ -1,5 +1,5 @@
 ---
-title: Sequential Workflow Views (Legacy) | Microsoft Docs
+title: 顺序工作流视图（旧版） |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -20,21 +20,21 @@ ms.lasthandoff: 11/21/2019
 ms.locfileid: "74292356"
 ---
 # <a name="sequential-workflow-views-legacy"></a>顺序工作流视图（旧版）
-[!INCLUDE[vs2010](../includes/vs2010-md.md)] 提供了一个旧 [!INCLUDE[wfd1](../includes/wfd1-md.md)]，可用于面向 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 或 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]。
+[!INCLUDE[vs2010](../includes/vs2010-md.md)] 提供了一个可用于面向 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 或 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]的旧 [!INCLUDE[wfd1](../includes/wfd1-md.md)]。
 
- [!INCLUDE[wfd2](../includes/wfd2-md.md)]提供了一种以图形方式创建 [!INCLUDE[wf](../includes/wf-md.md)] 应用程序的方法（使用熟悉的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 用户界面）。 [!INCLUDE[wf](../includes/wf-md.md)] 应用程序由名为活动的工作流过程步骤组成。 To create a workflow, compose activities on the design surface by dragging their respective activity designers from **Toolbox** onto the design surface.
+ [!INCLUDE[wfd2](../includes/wfd2-md.md)]提供了一种以图形方式创建 [!INCLUDE[wf](../includes/wf-md.md)] 应用程序的方法（使用熟悉的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 用户界面）。 [!INCLUDE[wf](../includes/wf-md.md)] 应用程序由名为活动的工作流过程步骤组成。 若要创建工作流，请通过将活动设计器从 **"工具箱**" 拖动到设计图面上，在设计图面上撰写活动。
 
- When you create a sequential workflow, which is a [SequentialWorkflowActivity](https://go.microsoft.com/fwlink?LinkID=65040), three views of the workflow are available. These views are accessible from the **Workflow** menu and from the context menu on the design surface.
+ 创建一个[SequentialWorkflowActivity](https://go.microsoft.com/fwlink?LinkID=65040)的顺序工作流时，可以使用工作流的三个视图。 可以从 "**工作流**" 菜单和设计图面上的上下文菜单中访问这些视图。
 
  下表列出了每个视图的名称和说明。
 
 |菜单/选项卡选项|描述|
 |----------------------|-----------------|
-|**View SequentialWorkflow**|Right-click the design surface and select the **View SequentialWorkflow** option from the context menu to display the **Sequential Workflow** view, which shows the activity-based graphical representation of the sequential workflow. Or select **View SequentialWorkflow** from the **Workflow** menu.|
-|**View Cancel Handler**|Right-click the design surface and select the **View Cancel Handler** option from the context menu to display the **Sequential Workflow** view, which shows the [CancellationHandlerActivity](https://go.microsoft.com/fwlink?LinkID=65050) activity associated with the workflow. Or select **View Cancel Handler** from the **Workflow** menu.|
-|**View Fault Handler**|Right-click the design surface and select the **View Fault Handler** option from the context menu to display the **Faults** view, which shows the [FaultHandlersActivity](https://go.microsoft.com/fwlink?LinkID=65055) activity associated with the workflow. Or select **View Fault Handler** from the **Workflow** menu.|
+|**查看 SequentialWorkflow**|右键单击设计图面并从上下文菜单中选择 "**查看 SequentialWorkflow** " 选项以显示**顺序工作流**视图，该视图显示顺序工作流的基于活动的图形化表示形式。 或从 "**工作流**" 菜单中选择 "**查看 SequentialWorkflow** "。|
+|**查看取消处理程序**|右键单击设计图面并从上下文菜单中选择 "**查看取消处理程序**" 选项以显示**顺序工作流**视图，该视图将显示与工作流关联的[CancellationHandlerActivity](https://go.microsoft.com/fwlink?LinkID=65050)活动。 或从 "**工作流**" 菜单中选择 "**查看取消处理程序**"。|
+|**查看错误处理程序**|右键单击设计图面并从上下文菜单中选择 "**查看错误处理程序**" 选项以显示**错误**视图，其中显示了与工作流关联的[FaultHandlersActivity](https://go.microsoft.com/fwlink?LinkID=65055)活动。 或从 "**工作流**" 菜单中选择 "**查看错误处理程序**"。|
 
- For more information about similar views, see [Activity Views (Legacy)](../workflow-designer/activity-views-legacy.md).
+ 有关类似视图的详细信息，请参阅[活动视图（旧版）](../workflow-designer/activity-views-legacy.md)。
 
 ## <a name="see-also"></a>请参阅
- [Activity Views (Legacy)](../workflow-designer/activity-views-legacy.md) [Creating Legacy Workflow Projects](../workflow-designer/creating-legacy-workflow-projects.md) [Workflow Authoring Modes](https://go.microsoft.com/fwlink?LinkID=65014)
+ [活动视图（旧版）](../workflow-designer/activity-views-legacy.md) [创建旧工作流项目](../workflow-designer/creating-legacy-workflow-projects.md)[工作流创作模式](https://go.microsoft.com/fwlink?LinkID=65014)

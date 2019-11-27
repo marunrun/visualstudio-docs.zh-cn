@@ -1,5 +1,5 @@
 ---
-title: Add Azure Storage by using Connected Services
+title: 使用连接的服务添加 Azure 存储
 description: 使用 Visual Studio 的“添加连接服务”对话框将 Azure 存储添加到应用
 author: ghogen
 manager: jillfra
@@ -18,7 +18,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74300171"
 ---
-# <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>使用 Visual Studio 连接服务添加 Azure 存储
+# <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>使用 Visual Studio 连接服务添加 Azure 存储空间
 在 Visual Studio 中，通过使用“添加连接服务”对话框可将以下任何服务连接到 Azure 存储：
 
 - C# 云服务
@@ -69,6 +69,6 @@ ms.locfileid: "74300171"
 - WebJob 项目 - [完成的操作 – WebJob 项目](/azure/visual-studio/vs-storage-webjobs-what-happened)
 
 ## <a name="next-steps"></a>后续步骤
-- [MSDN Forum: Azure Storage](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
+- [MSDN 论坛： Azure 存储](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
 - [Microsoft Azure 存储团队博客](https://blogs.msdn.microsoft.com/windowsazurestorage/)
 - [Azure 存储文档](https://docs.microsoft.com/azure/storage/)

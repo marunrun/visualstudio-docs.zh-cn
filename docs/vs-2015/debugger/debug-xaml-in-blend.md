@@ -1,5 +1,5 @@
 ---
-title: Debug XAML in Blend | Microsoft Docs
+title: 在 Blend 中调试 XAML |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -55,11 +55,11 @@ ms.locfileid: "74298324"
   
     在“新建项目”对话框中，左侧会显示项目类型列表。 单击项目类型时，右侧便会显示与该类型关联的项目模板。  
   
-2. In the list of project types, click **XAML (Windows Store)** .  
+2. 在项目类型列表中，单击 " **XAML （Windows 应用商店）** "。  
   
-3. In the list of project templates, click **Blank App**.  
+3. 在项目模板列表中，单击 "**空白应用**"。  
   
-4. 在“名称”文本框中，键入 `DebuggingSample`。  
+4. 在“名称”文本框中，键入`DebuggingSample`。  
   
 5. 在“位置”文字框中，验证项目的位置。  
   
@@ -117,14 +117,14 @@ ms.locfileid: "74298324"
   
 5. 双击“<https://schemas.microsoft.com/winfx/2006/xaml> 命名空间中不存在属性 'Mame'。” “Mame”中的“M”应为“N”。 将“M”替换为“N”。 现在可分析 XAML 了，应用程序将显示在设计图面上。  
   
-    ![Debugging XAML in Blend for Visual Studio](../debugger/media/blend-debugartboard-xaml.png "blend_debugArtboard_XAML")  
+    ![在 Blend for Visual Studio 中调试 XAML](../debugger/media/blend-debugartboard-xaml.png "blend_debugArtboard_XAML")  
   
     按 Ctrl+Shift+B 生成项目，并确认没有剩余错误。  
   
 ## <a name="debugging-in-visual-studio"></a>在 Visual Studio 中进行调试  
- 可以在 Visual Studio 中打开 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 项目，以便在应用中更轻松地调试代码。 若要在 Visual Studio 中打开[!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 项目，右键单击“项目”面板中的项目，然后单击“在 Visual Studio 中编辑”。 在 Visual Studio 中完成调试会话后，按 Ctrl+Shift+S 保存所有更改，然后切换回 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]。 系统会提示重新加载该项目。 单击“全选‘是’”以继续在 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 中工作。  
+ 可以在 Visual Studio 中打开 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 项目，以便在应用中更轻松地调试代码。 若要在 Visual Studio 中打开[!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 项目，右键单击“项目”面板中的项目，然后单击“在 Visual Studio 中编辑”。 在 Visual Studio 中完成调试会话后，按 Ctrl+Shift+S 保存所有更改，然后切换回 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]。 系统会提示重新加载该项目。 单击“全选‘是’”以继续在  **中工作**[!INCLUDE[blend_subs](../includes/blend-subs-md.md)]。  
   
- For more information about debugging your app, see [Debug Windows Store apps in Visual Studio](https://go.microsoft.com/fwlink/?LinkId=329944).  
+ 有关调试应用的详细信息，请参阅[在 Visual Studio 中调试 Windows 应用商店应用](https://go.microsoft.com/fwlink/?LinkId=329944)。  
   
 ## <a name="getting-help"></a>获取帮助  
- If you need more help debugging your [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] app, you can search the [Windows Store app community forums](https://go.microsoft.com/fwlink/?LinkId=280308) for posts related your issue or post a question.
+ 如果需要更多帮助调试 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 应用程序，可以在 Windows 应用[商店应用社区论坛](https://go.microsoft.com/fwlink/?LinkId=280308)中搜索与问题相关的帖子或发布问题。

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio SDK | Microsoft Docs
+title: Visual Studio SDK |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -24,77 +24,77 @@ ms.locfileid: "74299704"
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-The Visual Studio SDK helps you extend Visual Studio features or integrate new features into Visual Studio. You can distribute your extensions to other users, as well as to the Visual Studio Gallery. 以下是一些扩展 Visual Studio 的方式：  
+Visual Studio SDK 可帮助你扩展 Visual Studio 的功能，或将新功能集成到 Visual Studio 中。 可以将扩展分发给其他用户以及 Visual Studio 库。 以下是一些扩展 Visual Studio 的方式：  
   
-- Add commands, buttons, menus, and other UI elements to the IDE  
+- 向 IDE 添加命令、按钮、菜单和其他 UI 元素  
   
-- Add tool windows for new functionality  
+- 添加工具窗口以实现新功能  
   
-- Extend IntelliSense for a given language, or provide IntelliSense for new programming languages  
+- 扩展给定语言的 IntelliSense，或为新的编程语言提供 IntelliSense  
   
-- Use light bulbs to provide hints and suggestions that help developers write better code  
+- 使用轻型电灯泡提供帮助开发人员编写更好代码的提示和建议  
   
-- Enable support for a new language  
+- 启用新语言支持  
   
-- Add a custom project type  
+- 添加自定义项目类型  
   
-- Reach millions of developers via the Visual Studio Marketplace  
+- 通过 Visual Studio Marketplace 与数百万个开发人员联系  
   
-  If you’ve never written a Visual Studio extension before, you should find more information about these features and at [Starting to Develop Visual Studio Extensions](../extensibility/starting-to-develop-visual-studio-extensions.md).  
+  如果你之前从未编写过 Visual Studio 扩展，则应在[开始开发 Visual Studio 扩展](../extensibility/starting-to-develop-visual-studio-extensions.md)时找到有关这些功能的详细信息。  
   
 ## <a name="installing-the-visual-studio-sdk"></a>安装 Visual Studio SDK  
- Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。  
   
-## <a name="whats-new-in-the-visual-studio-2015-sdk"></a>What’s New in the Visual Studio 2015 SDK  
- The Visual Studio SDK has some new features, including light bulbs and new project items that allow you to create menu commands, tool windows, and editor extensions using a VSIX package. For more information, see [What's New in the Visual Studio 2015 SDK](../extensibility/what-s-new-in-the-visual-studio-2015-sdk.md).  
+## <a name="whats-new-in-the-visual-studio-2015-sdk"></a>Visual Studio 2015 SDK 的新增功能  
+ Visual Studio SDK 具有一些新功能，包括轻型电灯泡和新的项目项，它们允许你使用 VSIX 包创建菜单命令、工具窗口和编辑器扩展。 有关详细信息，请参阅[Visual Studio 2015 SDK 的新增功能](../extensibility/what-s-new-in-the-visual-studio-2015-sdk.md)。  
   
 ## <a name="visual-studio-user-experience-guidelines"></a>Visual Studio 用户体验指南  
- Get great tips for designing the UI for your extension in [Visual Studio User Experience Guidelines](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md).  
+ 获取有关在[Visual Studio 用户体验指南](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)中设计扩展 UI 的极佳技巧。  
   
- You can also learn how to make your extension look great on high DPI devices with our [Addressing DPI Issues](../extensibility/addressing-dpi-issues2.md) topic.  
+ 你还可以了解如何通过我们的[解决 DPI 问题](../extensibility/addressing-dpi-issues2.md)主题，使你的扩展在高 DPI 设备上看起来很好。  
   
- Take advantage of the [Image Service and Catalog](../extensibility/image-service-and-catalog.md) for great image management and support for high DPI and theming.  
+ 利用[映像服务和目录](../extensibility/image-service-and-catalog.md)获得极佳的图像管理，并提供高 DPI 和主题的支持。  
   
-## <a name="finding-and-installing-existing-visual-studio-extensions"></a>Finding and Installing Existing Visual Studio Extensions  
- You can find Visual Studio extensions in the **Extensions and Updates** dialog on the **Tools** menu. 有关详细信息，请参阅[查找和使用 Visual Studio 扩展](../ide/finding-and-using-visual-studio-extensions.md)。 You can also find extensions in the [Visual Studio Marketplace](https://marketplace.visualstudio.com/)  
+## <a name="finding-and-installing-existing-visual-studio-extensions"></a>查找和安装现有的 Visual Studio 扩展  
+ 可以在 "**工具**" 菜单上的 "**扩展和更新**" 对话框中找到 Visual Studio 扩展。 有关详细信息，请参阅[查找和使用 Visual Studio 扩展](../ide/finding-and-using-visual-studio-extensions.md)。 你还可以在[Visual Studio Marketplace](https://marketplace.visualstudio.com/)中找到扩展  
   
 ## <a name="visual-studio-sdk-reference"></a>Visual Studio SDK 引用  
- You can find the Visual Studio SDK API reference at [Visual Studio SDK Reference](../extensibility/visual-studio-sdk-reference.md).  
+ 可在[Visual STUDIO Sdk 参考](../extensibility/visual-studio-sdk-reference.md)中找到 VISUAL STUDIO sdk API 参考。  
   
-## <a name="visual-studio-sdk-samples"></a>Visual Studio SDK Samples  
- You can find open source examples of VS SDK extensions on GitHub at [Visual Studio Samples](https://aka.ms/vs2015sdksamples). This GitHub repo contains samples that illustrate various extensible features in Visual Studio.  
+## <a name="visual-studio-sdk-samples"></a>Visual Studio SDK 示例  
+ 可在 GitHub 上的[Visual Studio 示例](https://aka.ms/vs2015sdksamples)中找到 VS SDK 扩展的开源示例。 此 GitHub 存储库包含说明 Visual Studio 中各种可扩展功能的示例。  
   
-## <a name="other-visual-studio-sdk-resources"></a>Other Visual Studio SDK Resources  
- If you have questions about the VSSDK or want to share your experiences developing extensions, you can use the [Visual Studio Extensibility Forum](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vsx) or the [ExtendVS Group Chat](https://gitter.im/Microsoft/extendvs).  
+## <a name="other-visual-studio-sdk-resources"></a>其他 Visual Studio SDK 资源  
+ 如果对 VSSDK 有疑问或想要分享开发扩展的经验，可以使用[Visual Studio 扩展性论坛](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vsx)或[ExtendVS 组聊天](https://gitter.im/Microsoft/extendvs)。  
   
- You can find more information in the [VSX Arcana blog](https://blogs.msdn.microsoft.com/vsx/) and an number of blogs written by Microsoft MVPs:  
+ 可以在[VSX Arcana 博客](https://blogs.msdn.microsoft.com/vsx/)和 Microsoft mvp 编写的多个博客中找到详细信息：  
   
-- [Favorite Visual Studio Extensions](https://scottdorman.blog/2014/10/05/favorite-visual-studio-extensions/)  
+- [最喜爱的 Visual Studio 扩展](https://scottdorman.blog/2014/10/05/favorite-visual-studio-extensions/)  
   
-- [Visual Studio Extensibility](http://www.visualstudioextensibility.com/overview/vs/)  
+- [Visual Studio 扩展性](http://www.visualstudioextensibility.com/overview/vs/)  
   
-- [Extending Visual Studio](https://blog.slaks.net/2013-10-18/extending-visual-studio-part-1-getting-started/)  
+- [扩展 Visual Studio](https://blog.slaks.net/2013-10-18/extending-visual-studio-part-1-getting-started/)  
   
 ## <a name="see-also"></a>请参阅  
- [Creating an Extension with a Menu Command](../extensibility/creating-an-extension-with-a-menu-command.md)   
- [How to: Migrate Extensibility Projects to Visual Studio 2015](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2015.md)   
- [FAQ: Converting Add-ins to VSPackage Extensions](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md)   
- [Managing Multiple Threads in Managed Code](../extensibility/managing-multiple-threads-in-managed-code.md)   
- [Extending Menus and Commands](../extensibility/extending-menus-and-commands.md)   
- [Adding Commands to Toolbars](../extensibility/adding-commands-to-toolbars.md)   
- [Extending and Customizing Tool Windows](../extensibility/extending-and-customizing-tool-windows.md)   
- [Editor and Language Service Extensions](../extensibility/editor-and-language-service-extensions.md)   
- [Extending Projects](../extensibility/extending-projects.md)   
- [Extending User Settings and Options](../extensibility/extending-user-settings-and-options.md)   
- [Creating Custom Project and Item Templates](../extensibility/creating-custom-project-and-item-templates.md)   
- [Extending Properties and the Property Window](../extensibility/extending-properties-and-the-property-window.md)   
- [Extending Other Parts of Visual Studio](../extensibility/extending-other-parts-of-visual-studio.md)   
- [Using and Providing Services](../extensibility/using-and-providing-services.md)   
- [Extending Connected Services](../extensibility/extending-connected-services.md)   
- [Managing VSPackages](../extensibility/managing-vspackages.md)   
- [Visual Studio Isolated Shell](../extensibility/visual-studio-isolated-shell.md)   
- [Shipping Visual Studio Extensions](../extensibility/shipping-visual-studio-extensions.md)   
- [Inside the Visual Studio SDK](../extensibility/internals/inside-the-visual-studio-sdk.md)   
- [Support for the Visual Studio SDK](../extensibility/support-for-the-visual-studio-sdk.md)   
- [Archive](../extensibility/archive.md)   
+ [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)   
+ [如何：将扩展性项目迁移到 Visual Studio 2015](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2015.md)   
+ [常见问题解答：将外接程序转换为 VSPackage 扩展](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md)   
+ [在托管代码中管理多个线程](../extensibility/managing-multiple-threads-in-managed-code.md)   
+ [扩展菜单和命令](../extensibility/extending-menus-and-commands.md)   
+ [将命令添加到工具栏](../extensibility/adding-commands-to-toolbars.md)   
+ [扩展和自定义工具窗口](../extensibility/extending-and-customizing-tool-windows.md)   
+ [编辑器和语言服务扩展](../extensibility/editor-and-language-service-extensions.md)   
+ [扩展项目](../extensibility/extending-projects.md)   
+ [扩展用户设置和选项](../extensibility/extending-user-settings-and-options.md)   
+ [创建自定义项目和项模板](../extensibility/creating-custom-project-and-item-templates.md)   
+ [扩展属性和属性窗口](../extensibility/extending-properties-and-the-property-window.md)   
+ [扩展 Visual Studio 的其他部分](../extensibility/extending-other-parts-of-visual-studio.md)   
+ [使用和提供服务](../extensibility/using-and-providing-services.md)   
+ [扩展连接的服务](../extensibility/extending-connected-services.md)   
+ [管理 vspackage](../extensibility/managing-vspackages.md)   
+ [Visual Studio 独立 Shell](../extensibility/visual-studio-isolated-shell.md)   
+ [发布 Visual Studio 扩展](../extensibility/shipping-visual-studio-extensions.md)   
+ 在[Visual STUDIO SDK](../extensibility/internals/inside-the-visual-studio-sdk.md)   
+ [支持 Visual STUDIO SDK](../extensibility/support-for-the-visual-studio-sdk.md)   
+ [存档](../extensibility/archive.md)   
  [Visual Studio SDK 引用](../extensibility/visual-studio-sdk-reference.md)

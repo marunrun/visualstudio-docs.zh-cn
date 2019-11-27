@@ -1,5 +1,5 @@
 ---
-title: Navigate the UML model | Microsoft Docs
+title: 导航 UML 模型 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -24,15 +24,15 @@ ms.locfileid: "74289850"
 本主题介绍 UML 模型的主要类型。
 
 ## <a name="the-model-elements-model-and-model-store"></a>模型元素、模型和模型库
- The types defined in the assembly **Microsoft.VisualStudio.Uml.Interfaces.dll** correspond to the types defined in the [UML Specification, version 2.1.2](https://www.omg.org/spec/UML/2.1.2/Superstructure/PDF/).
+ 在程序集**VisualStudio**中定义的类型对应于[Uml 规范2.1.2 版本](https://www.omg.org/spec/UML/2.1.2/Superstructure/PDF/)中定义的类型。
 
- UML 规范中的类型在 Visual Studio 中作为接口实现。 字母“I”附加在每个类型的名称之前。 For example: [IElement](/previous-versions/dd516035(v=vs.140)), [IClass](/previous-versions/dd523539%28v%3dvs.140%29), [IOperation](/previous-versions/dd481186(v=vs.140)).
+ UML 规范中的类型在 Visual Studio 中作为接口实现。 字母“I”附加在每个类型的名称之前。 例如： [IElement](/previous-versions/dd516035(v=vs.140))、 [IClass](/previous-versions/dd523539%28v%3dvs.140%29)、 [IOperation](/previous-versions/dd481186(v=vs.140))。
 
  除 IElement 之外的所有类型都从一个或多个超类型继承属性。
 
-- For a summary of the model types, see [UML model element types](../modeling/uml-model-element-types.md).
+- 有关模型类型的摘要，请参阅[UML 模型元素类型](../modeling/uml-model-element-types.md)。
 
-- For full details of the API, see [API Reference for UML Modeling Extensibility](../modeling/api-reference-for-uml-modeling-extensibility.md).
+- 有关 API 的完整详细信息，请参阅[UML 建模扩展性的 Api 参考](../modeling/api-reference-for-uml-modeling-extensibility.md)。
 
 ### <a name="relationships"></a>关系
  UML 规范中定义的属性和关系将作为 .NET 属性实现。
@@ -45,18 +45,18 @@ ms.locfileid: "74289850"
 
  如果从模型中删除某个元素，则将自动删除该元素参与的任何关系，并将更新位于另一端的属性。
 
- 如果 UML 规范为某个属性分配多重性 0..1，则该属性的值可能为 `null`。 A multiplicity with maximum greater than 1 means that the .NET property has the type: `IEnumerable<`*Type*`>`.
+ 如果 UML 规范为某个属性分配多重性 0..1，则该属性的值可能为 `null`。 最大值大于1的重数表示 .NET 属性具有类型： `IEnumerable<`*类型*`>`。
 
- For more information about traversing relationships, see [Navigate relationships with the UML API](../modeling/navigate-relationships-with-the-uml-api.md).
+ 有关遍历关系的详细信息，请参阅[与 UML API 导航关系](../modeling/navigate-relationships-with-the-uml-api.md)。
 
 ### <a name="the-ownership-tree"></a>所有权树
- A model contains a tree of [IElement](/previous-versions/dd516035(v=vs.140)) objects. 每个元素都具有属性 `OwnedElements` 和 `Owner`。
+ 模型包含[IElement](/previous-versions/dd516035(v=vs.140))对象的树。 每个元素都具有属性 `OwnedElements` 和 `Owner`。
 
- 在大多数情况下，`Owner` 和 `OwnedElements` 属性的目标也由具有更具体的名称的其他属性引用。 例如，每个 UML 操作都由一个 UML 类所有。 Therefore [IOperation](/previous-versions/dd481186(v=vs.140)) has a property named [IOperation.Class](/previous-versions/dd473473%28v%3dvs.140%29), and in every [IOperation](/previous-versions/dd481186(v=vs.140)) object, `Class == Owner`.
+ 在大多数情况下，`Owner` 和 `OwnedElements` 属性的目标也由具有更具体的名称的其他属性引用。 例如，每个 UML 操作都由一个 UML 类所有。 因此， [IOperation](/previous-versions/dd481186(v=vs.140))有一个名为[IOperation](/previous-versions/dd473473%28v%3dvs.140%29)的属性，并且在每个[IOperation](/previous-versions/dd481186(v=vs.140))对象中都 `Class == Owner`。
 
- The topmost element of the tree, which has no Owner, is an `AuxiliaryConstructs.IModel`. The IModel is contained within a `IModelStore`, in which it is the [IModelStore.Root](/previous-versions/ee789368(v=vs.140)).
+ 没有所有者的树的最顶层元素是 `AuxiliaryConstructs.IModel`。 IModel 包含在 `IModelStore`中，这是[IModelStore](/previous-versions/ee789368(v=vs.140))。
 
- 创建的每个模型元素都有一个所有者。 For more information, see [Create elements and relationships in UML models](../modeling/create-elements-and-relationships-in-uml-models.md).
+ 创建的每个模型元素都有一个所有者。 有关详细信息，请参阅[在 UML 模型中创建元素和关系](../modeling/create-elements-and-relationships-in-uml-models.md)。
 
  ![类图：Model、Diagram、Shape 和 Element](../modeling/media/uml-mm1.png)
 
@@ -67,7 +67,7 @@ ms.locfileid: "74289850"
 
  形状在树中排列。 树的边缘由 ParentShape 和 ChildShapes 属性表示。 关系图是唯一没有父级的形状。 关系图图面上的形状由更小的部件组成。 例如，一个类形状具有特性和操作的隔离舱。
 
- For more information about shapes, see [Display a UML model on diagrams](../modeling/display-a-uml-model-on-diagrams.md).
+ 有关形状的详细信息，请参阅[在关系图上显示 UML 模型](../modeling/display-a-uml-model-on-diagrams.md)。
 
 ## <a name="access-to-the-model-in-extensions"></a>对扩展中的模型的访问
  在定义为 MEF 组件的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展中，可以声明用于从运行扩展的上下文中导入信息的属性。
@@ -122,13 +122,13 @@ foreach (IShape<IInterface> in
 ## <a name="accessing-another-model-or-diagrams"></a>访问另一个模型或关系图
  你可以：
 
-- 使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 模型总线在不同模型中的元素之间创建链接。 For more information, see [Integrate UML models with other models and tools](../modeling/integrate-uml-models-with-other-models-and-tools.md).
+- 使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 模型总线在不同模型中的元素之间创建链接。 有关详细信息，请参阅将[UML 模型与其他模型和工具集成](../modeling/integrate-uml-models-with-other-models-and-tools.md)。
 
-- 在只读模式下加载建模项目和关系图，而不使其在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 用户界面中可见。 For more information, see [Read a UML model in program code](../modeling/read-a-uml-model-in-program-code.md).
+- 在只读模式下加载建模项目和关系图，而不使其在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 用户界面中可见。 有关详细信息，请参阅[在程序代码中读取 UML 模型](../modeling/read-a-uml-model-in-program-code.md)。
 
-- 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中打开建模项目及其关系图，然后访问相应内容。 For more information, see [Open a UML model by using the Visual Studio API](../modeling/open-a-uml-model-by-using-the-visual-studio-api.md).
+- 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中打开建模项目及其关系图，然后访问相应内容。 有关详细信息，请参阅[使用 Visual STUDIO API 打开 UML 模型](../modeling/open-a-uml-model-by-using-the-visual-studio-api.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [扩展 UML 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)
 - [使用 UML API 编程](../modeling/programming-with-the-uml-api.md)

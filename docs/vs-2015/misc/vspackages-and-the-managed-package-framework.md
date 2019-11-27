@@ -1,5 +1,5 @@
 ---
-title: VSPackages and the Managed Package Framework | Microsoft Docs
+title: Vspackage 和托管包框架 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -19,25 +19,25 @@ ms.lasthandoff: 11/21/2019
 ms.locfileid: "74298234"
 ---
 # <a name="vspackages-and-the-managed-package-framework"></a>VSPackage 和托管包框架
-You can reduce development time by creating a VSPackage with the managed package framework (MPF) classes instead of by using COM interop classes.  
+通过使用托管包框架（MPF）类创建 VSPackage，而不是通过使用 COM 互操作类，可以缩短开发时间。  
   
- There are two ways to create a managed VSPackage:  
+ 可以通过两种方法创建托管 VSPackage：  
   
-- Use the [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Package project template  
+- 使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 包项目模板  
   
-     For more information, see [Walkthrough: Creating a Menu Command By Using the Visual Studio Package Template](https://msdn.microsoft.com/library/1985fa7d-aad4-4866-b356-a125b6a246de).  
+     有关详细信息，请参阅[演练：使用 Visual Studio 包模板创建菜单命令](https://msdn.microsoft.com/library/1985fa7d-aad4-4866-b356-a125b6a246de)。  
   
-- Build your VSPackage without the [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Package project template  
+- 在不 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 包项目模板的情况下生成你的 VSPackage  
   
-     For example, you can copy a sample VSPackage and change the GUIDs and the names. 
+     例如，可以复制示例 VSPackage 并更改 Guid 和名称。 
   
 ## <a name="in-this-section"></a>本节内容  
  [托管包框架类](../misc/managed-package-framework-classes.md)  
- Describes and lists the MPF class namespaces and DLL files.  
+ 描述和列出了 MPF 类命名空间和 DLL 文件。  
   
 ## <a name="related-sections"></a>相关章节  
- [Walkthrough: Creating a Menu Command By Using the Visual Studio Package Template](https://msdn.microsoft.com/library/1985fa7d-aad4-4866-b356-a125b6a246de)  
- Explains how to create a managed VSPackage.  
+ [演练：使用 Visual Studio 包模板创建菜单命令](https://msdn.microsoft.com/library/1985fa7d-aad4-4866-b356-a125b6a246de)  
+ 说明如何创建托管 VSPackage。  
   
  [托管的 VSPackage](../misc/managed-vspackages.md)  
- Introduces aspects of VSPackages that apply to managed code.
+ 介绍适用于托管代码的 Vspackage 的各个方面。

@@ -1,5 +1,5 @@
 ---
-title: Shell (Isolated or Integrated) | Microsoft Docs
+title: Shell （独立或集成） |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -24,38 +24,38 @@ ms.locfileid: "74300478"
 # <a name="shell-isolated-or-integrated"></a>Shell（独立或集成）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-You can create your own Visual Studio-based application in either integrated or isolated mode. In integrated mode, many Visual Studio features are available in addition to your application. In the isolated mode, you choose a subset of Visual Studio features that you wish to distribute along with your own extension.  
+可以在集成模式或隔离模式下创建自己的基于 Visual Studio 的应用程序。 在集成模式下，除应用程序外，还提供许多 Visual Studio 功能。 在隔离模式下，你可以选择想要随自己的扩展一起分发的 Visual Studio 功能的子集。  
   
-## <a name="integrated-mode"></a>Integrated Mode  
- Integrated mode enables your users to use standard Visual Studio features along with your custom tools. The integrated shell is intended primarily for hosting programming languages and software development tools.  
+## <a name="integrated-mode"></a>集成模式  
+ 集成模式使用户能够将标准 Visual Studio 功能与自定义工具一起使用。 集成外壳主要用于托管编程语言和软件开发工具。  
   
- Custom tools that are built on the integrated shell automatically merge with any other edition of Visual Studio that is installed on the same computer. You can provide a redistributable version of the Visual Studio integrated shell if Visual Studio is not already installed.  
+ 在集成 shell 上构建的自定义工具会自动与安装在同一台计算机上的任何其他 Visual Studio 版本合并。 如果尚未安装 Visual studio，可以提供 Visual Studio 集成 shell 的可再发行版本。  
   
- The redistributable version of the Visual Studio integrated shell does not include programming languages and the features that support their respective project systems.  
+ Visual Studio 集成 shell 的可再发行版本不包括编程语言和支持各自的项目系统的功能。  
   
 > [!NOTE]
-> The Visual Studio shell integrated mode can be installed together with all editions of Visual Studio except the Express editions.  
+> Visual Studio shell 集成模式可以与 Visual Studio 的所有版本（速成版除外）一起安装。  
   
- For more information, see [Visual Studio Shell (Integrated)](../extensibility/visual-studio-shell-integrated.md).  
+ 有关详细信息，请参阅[Visual Studio Shell （集成）](../extensibility/visual-studio-shell-integrated.md)。  
   
-## <a name="isolated-mode"></a>Isolated Mode  
- Isolated mode allows you to create custom tools that run side-by-side with other versions of Visual Studio. It is intended primarily for tools that can access Visual Studio services without depending on all the standard Visual Studio features. You can customize the appearance of applications built on the Visual Studio isolated shell. You can easily turn off the features and menu command groups that you do not wish to appear together with your application.  
+## <a name="isolated-mode"></a>隔离模式  
+ 独立模式允许创建与其他版本的 Visual Studio 并行运行的自定义工具。 它主要用于可访问 Visual Studio 服务的工具，而不取决于所有标准 Visual Studio 的功能。 你可以自定义在 Visual Studio 独立 shell 上构建的应用程序的外观。 可以轻松关闭不希望与应用程序一起显示的功能和菜单命令组。  
   
- For more information, see [Visual Studio Isolated Shell](../extensibility/visual-studio-isolated-shell.md).  
+ 有关详细信息，请参阅[Visual Studio 独立 Shell](../extensibility/visual-studio-isolated-shell.md)。  
   
-## <a name="distributing-your-integrated-or-isolated-shell-application"></a>Distributing your Integrated or Isolated Shell Application  
- In order to distribute your integrated or isolated shell application, you need to include your application, a special integrated or isolated shell redistributable, and an installation program. For more information about distribution and installation, see [Distributing Isolated Shell Applications](../extensibility/distributing-isolated-shell-applications.md).  
+## <a name="distributing-your-integrated-or-isolated-shell-application"></a>分发集成或独立 Shell 应用程序  
+ 若要分发集成或隔离 shell 应用程序，需要包含应用程序、特殊的集成或隔离 shell 可再发行组件和安装程序。 有关分发和安装的详细信息，请参阅[分发独立 Shell 应用程序](../extensibility/distributing-isolated-shell-applications.md)。  
   
 > [!IMPORTANT]
-> The [End User License Agreement (EULA)](https://www.visualstudio.com/support/legal/mt171552) for the Visual Studio integrated and isolated shells includes a section on data collection (**Section 3. Data**).  It describes the customer usage data that may be collected by Microsoft from users of either the integrated or isolated shell software that you build into your application. For more information, see [Microsoft Visual Studio Product Family Privacy Statement](https://www.visualstudio.com/dn948229).  
+> Visual Studio 集成和隔离 shell 的[最终用户许可协议（EULA）](https://www.visualstudio.com/support/legal/mt171552)包含有关数据收集的部分（第**3 部分）。数据**）。  它介绍了 Microsoft 可以从构建到应用程序的集成或隔离 shell 软件的用户收集的客户使用情况数据。 有关详细信息，请参阅[Microsoft Visual Studio 产品系列隐私声明](https://www.visualstudio.com/dn948229)。  
 > 
-> If you collect separate usage data from your customers through your application, you must provide appropriate notice to users of your application of what you collect.  When you distribute either the isolated or integrated shell software as part of your application, according to the Visual Studio Software Development Kit license, you must include one of the following:  
+> 如果你通过应用程序收集客户的不同使用情况数据，则你必须为你所收集的应用程序的用户提供相应的通知。  根据 Visual Studio 软件开发工具包许可证，当你将隔离或集成 shell 软件作为应用程序的一部分进行分发时，必须包括以下项之一：  
 > 
-> - the End User License Agreement as part of your application license  
-> - your own EULA that requires your customers to agree to terms that protect the Visual Studio integrated or isolated shell at least as much as the Microsoft End User License Terms for the shell software  
+> - 作为你的应用程序许可证的一部分的最终用户许可协议  
+> - 你自己的 EULA，要求你的客户同意保护 Visual Studio 集成或隔离 shell 的条款至少与 shell 软件的 Microsoft 最终用户许可条款相同  
   
 ## <a name="additional-resources"></a>其他资源  
- For more information about redistributable packages, see the [Visual Studio Extensibility Downloads](https://go.microsoft.com/fwlink/?LinkID=119298) Web site.  
+ 有关可再发行组件包的详细信息，请参阅[Visual Studio 扩展性下载](https://go.microsoft.com/fwlink/?LinkID=119298)网站。  
   
 ## <a name="see-also"></a>请参阅  
  [传送 Visual Studio 扩展](../extensibility/shipping-visual-studio-extensions.md)

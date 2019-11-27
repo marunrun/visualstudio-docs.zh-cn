@@ -1,5 +1,5 @@
 ---
-title: Nesting Shapes | Microsoft Docs
+title: 嵌套形状 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -19,4 +19,4 @@ ms.locfileid: "74296048"
 # <a name="nesting-shapes"></a>嵌套形状
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-See [Jean-Marc Prieur’s blog](https://blogs.msdn.microsoft.com/jmprieur/2008/09/03/dsl-tools-support-of-nested-shapes-in-visual-studio-2008-sp1/)
+请参阅[Jean-Marc Prieur 的博客](https://blogs.msdn.microsoft.com/jmprieur/2008/09/03/dsl-tools-support-of-nested-shapes-in-visual-studio-2008-sp1/)

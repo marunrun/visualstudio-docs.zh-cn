@@ -1,5 +1,5 @@
 ---
-title: Understanding SAL | Microsoft Docs
+title: 了解 SAL |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -19,15 +19,15 @@ ms.locfileid: "74291879"
 # <a name="understanding-sal"></a>了解 SAL
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-The Microsoft source-code annotation language (SAL) provides a set of annotations that you can use to describe how a function uses its parameters, the assumptions that it makes about them, and the guarantees that it makes when it finishes. The annotations are defined in the header file `<sal.h>`. Visual Studio code analysis for C++ uses SAL annotations to modify its analysis of functions. For more information about SAL 2.0 for Windows driver development, see [SAL 2.0 Annotations for Windows Drivers](https://go.microsoft.com/fwlink/?LinkId=250979).  
+Microsoft 源代码注释语言（SAL）提供了一组可用于描述函数如何使用其参数的注释、对它们做出的假设，以及在完成时的保证。 批注是在标头文件 `<sal.h>`中定义的。 适用于的C++ Visual Studio 代码分析使用 SAL 批注来修改其函数分析。 有关适用于 Windows 驱动程序开发的 SAL 2.0 的详细信息，请参阅[Windows 驱动程序的 sal 2.0 注释](https://go.microsoft.com/fwlink/?LinkId=250979)。  
   
- Natively, C and C++ provide only limited ways for developers to consistently express intent and invariance. By using SAL annotations, you can describe your functions in greater detail so that developers who are consuming them can better understand how to use them.  
+ 对于开发人员而言C++ ，在本机和 C 中仅提供有限的方式，以一致的方式来表达意图和不变性。 通过使用 SAL 批注，可以更详细地描述函数，以便使用它们的开发人员可以更好地了解如何使用它们。  
   
 ## <a name="what-is-sal-and-why-should-you-use-it"></a>什么是 SAL 以及您为何使用它?  
- Simply stated, SAL is an inexpensive way to let the compiler check your code for you.  
+ 简单地说，SAL 是一种成本较低的方法，使编译器能够为你检查代码。  
   
 ### <a name="sal-makes-code-more-valuable"></a>SAL 使代码更重要  
- SAL can help you make your code design more understandable, both for humans and for code analysis tools. Consider this example that shows the C runtime function `memcpy`:  
+ SAL 有助于使代码设计更易于理解，同时适用于用户和代码分析工具。 请考虑以下示例，其中显示了 C 运行时函数 `memcpy`：  
   
 ```cpp  
   
@@ -39,18 +39,18 @@ void * memcpy(
   
 ```  
   
- Can you tell what this function does? When a function is implemented or called, certain properties must be maintained to ensure program correctness. Just by looking at a declaration such as the one in the example, you don't know what they are. Without SAL annotations, you'd have to rely on documentation or code comments. Here’s what the MSDN documentation for `memcpy` says:  
+ 您能否知道此函数的作用？ 当实现或调用函数时，必须保持某些属性以确保程序的正确性。 只需查看示例中的声明，就不知道这些内容。 如果没有 SAL 批注，则必须依赖文档或代码注释。 下面是有关 `memcpy` 的 MSDN 文档的内容：  
   
-> "Copies count bytes of src to dest. If the source and destination overlap, the behavior of memcpy is undefined. Use memmove to handle overlapping regions.   
-> **Security Note:** Make sure that the destination buffer is the same size or larger than the source buffer. For more information, see Avoiding Buffer Overruns."  
+> "将计数字节的源复制到目标。 如果源和目标重叠，则 memcpy 的行为是不确定的。 使用 memmove 处理重叠区域。   
+> **安全说明：** 请确保目标缓冲区的大小等于或大于源缓冲区的大小。 有关详细信息，请参阅避免缓冲区溢出。  
   
- The documentation contains a couple of bits of information that suggest that your code has to maintain certain properties to ensure program correctness:  
+ 文档包含一些信息，这些信息表明你的代码必须维护某些属性以确保程序的正确性：  
   
-- `memcpy` copies the `count` of bytes from the source buffer to the destination buffer.  
+- `memcpy` 将字节的 `count` 从源缓冲区复制到目标缓冲区。  
   
-- The destination buffer must be at least as large as the source buffer.  
+- 目标缓冲区的大小必须至少与源缓冲区的大小相同。  
   
-  However, the compiler can't read the documentation or informal comments. It doesn't know that there is a relationship between the two buffers and `count`, and it also can't effectively guess about a relationship. SAL could provide more clarity about the properties and implementation of the function, as shown here:  
+  但编译器无法读取文档或非正式注释。 这并不知道两个缓冲区与 `count`之间存在关系，也不能有效地推测关系。 SAL 可以更清楚地了解函数的属性和实现，如下所示：  
   
 ```cpp  
   
@@ -61,7 +61,7 @@ void * memcpy(
 );  
 ```  
   
- Notice that these annotations resemble the information in the MSDN documentation, but they are more concise and they follow a semantic pattern. When you read this code, you can quickly understand the properties of this function and how to avoid buffer overrun security issues. Even better, the semantic patterns that SAL provides can improve the efficiency and effectiveness of automated code analysis tools in the early discovery of potential bugs. Imagine that someone writes this buggy implementation of `wmemcpy`:  
+ 请注意，这些批注与 MSDN 文档中的信息类似，但它们更简洁，它们遵循语义模式。 阅读此代码后，你可以快速了解此函数的属性，以及如何避免缓冲区溢出的安全问题。 更好的是，SAL 提供的语义模式可以在潜在 bug 的早期发现中提高自动化代码分析工具的效率和有效性。 假设有人将此错误实现 `wmemcpy`：  
   
 ```cpp  
   
@@ -79,60 +79,60 @@ wchar_t * wmemcpy(
   
 ```  
   
- This implementation contains a common off-by-one error. Fortunately, the code author included the SAL buffer size annotation—a code analysis tool could catch the bug by analyzing this function alone.  
+ 此实现包含一个公共的、不是一个的错误。 幸运的是，代码作者包含 SAL 缓冲区大小注释，代码分析工具可通过单独分析此函数来捕获 bug。  
   
 ### <a name="sal-basics"></a>SAL 基础  
- SAL defines four basic kinds of parameters, which are categorized by usage pattern.  
+ SAL 定义了四种基本类型的参数，这些参数按使用模式分类。  
   
-|类别|Parameter Annotation|描述|  
+|类别|参数批注|描述|  
 |--------------|--------------------------|-----------------|  
-|**Input to called function**|`_In_`|Data is passed to the called function, and is treated as read-only.|  
-|**Input to called function, and output to caller**|`_Inout_`|Usable data is passed into the function and potentially is modified.|  
-|**Output to caller**|`_Out_`|The caller only provides space for the called function to write to. The called function writes data into that space.|  
-|**Output of pointer to caller**|`_Outptr_`|Like **Output to caller**. The value that's returned by the called function is a pointer.|  
+|**被调用函数的输入**|`_In_`|数据将传递给被调用的函数，并被视为只读。|  
+|**对被调用函数的输入和到调用方的输出**|`_Inout_`|可用数据将传递到函数中，并可能被修改。|  
+|**向调用方输出**|`_Out_`|调用方只为所调用的函数提供空间来写入。 被调用的函数将数据写入该空间。|  
+|**指向调用方的指针的输出**|`_Outptr_`|类似于**输出到调用方**。 被调用函数返回的值是一个指针。|  
   
- These four basic annotations can be made more explicit in various ways. By default, annotated pointer parameters are assumed to be required—they must be non-NULL for the function to succeed. The most commonly used variation of the basic annotations indicates that a pointer parameter is optional—if it's NULL, the function can still succeed in doing its work.  
+ 这四个基本批注可以通过多种方式进行更明确的了解。 默认情况下，使用批注指针参数是必需的，它们必须为非 NULL，函数才能成功。 基本批注最常使用的变体指示指针参数是可选的，如果该参数为 NULL，则该函数仍可成功执行其工作。  
   
- This table shows how to distinguish between required and optional parameters:  
+ 此表显示了如何区分必需参数和可选参数：  
   
-||Parameters are required|Parameters are optional|  
+||参数是必需的|参数是可选的|  
 |-|-----------------------------|-----------------------------|  
-|**Input to called function**|`_In_`|`_In_opt_`|  
-|**Input to called function, and output to caller**|`_Inout_`|`_Inout_opt_`|  
-|**Output to caller**|`_Out_`|`_Out_opt_`|  
-|**Output of pointer to caller**|`_Outptr_`|`_Outptr_opt_`|  
+|**被调用函数的输入**|`_In_`|`_In_opt_`|  
+|**对被调用函数的输入和到调用方的输出**|`_Inout_`|`_Inout_opt_`|  
+|**向调用方输出**|`_Out_`|`_Out_opt_`|  
+|**指向调用方的指针的输出**|`_Outptr_`|`_Outptr_opt_`|  
   
- These annotations help identify possible uninitialized values and invalid null pointer uses in a formal and accurate manner. Passing NULL to a required parameter might cause a crash, or it might cause a "failed" error code to be returned. Either way, the function cannot succeed in doing its job.  
+ 这些批注有助于识别可能未初始化的值，无效的空指针将以正式准确的方式使用。 将 NULL 传递给必需的参数可能会导致崩溃，否则可能会导致返回 "failed" 错误代码。 无论采用哪种方式，函数都不能成功执行其作业。  
   
 ## <a name="sal-examples"></a>SAL 示例  
- This section shows code examples for the basic SAL annotations.  
+ 此部分显示基本 SAL 批注的代码示例。  
   
 ### <a name="using-the-visual-studio-code-analysis-tool-to-find-defects"></a>使用 Visual Studio 代码分析工具查找 Bug  
- In the examples, the Visual Studio Code Analysis tool is used together with SAL annotations to find code defects. Here's how to do that.  
+ 在示例中，Visual Studio Code 分析工具与 SAL 注释一起用于查找代码缺陷。 下面介绍了如何执行此操作。  
   
 ##### <a name="to-use-visual-studio-code-analysis-tools-and-sal"></a>使用 Visual Studio 代码分析工具和 SAL  
   
-1. In Visual Studio, open a C++ project that contains SAL annotations.  
+1. 在 Visual Studio 中，打开C++包含 SAL 批注的项目。  
   
-2. On the menu bar, choose **Build**, **Run Code Analysis on Solution**.  
+2. 在菜单栏上，选择 "**生成**"、 **"对解决方案运行代码分析**"。  
   
-    Consider the \_In\_ example in this section. If you run code analysis on it, this warning is displayed:  
+    请考虑本部分\_ 示例中的 \_。 如果对其运行代码分析，将显示以下警告：  
   
-   > **C6387 Invalid Parameter Value**   
-   > 'pInt' could be '0': this does not adhere to the specification for the function 'InCallee'.  
+   > **C6387 参数值无效**   
+   > "指向" 可能是 "0"：这不符合函数 "InCallee" 的规范。  
   
-### <a name="example-the-_in_-annotation"></a>Example: The \_In\_ Annotation  
- The `_In_` annotation indicates that:  
+### <a name="example-the-_in_-annotation"></a>示例：\_ 批注中的 \_  
+ `_In_` 批注指示：  
   
-- The parameter must be valid and will not be modified.  
+- 参数必须有效且不会被修改。  
   
-- The function will only read from the single-element buffer.  
+- 函数将只从单元素缓冲区中读取。  
   
-- The caller must provide the buffer and initialize it.  
+- 调用方必须提供缓冲区并对其进行初始化。  
   
-- `_In_` specifies "read-only". A common mistake is to apply `_In_` to a parameter that should have the `_Inout_` annotation instead.  
+- `_In_` 指定 "只读"。 常见的错误是将 `_In_` 应用于应改为 `_Inout_` 批注的参数。  
   
-- `_In_` is allowed but ignored by the analyzer on non-pointer scalars.  
+- 在非指针标量上，分析器允许使用 `_In_` 但不允许使用。  
   
 ```cpp  
 void InCallee(_In_ int *pInt)  
@@ -157,10 +157,10 @@ void BadInCaller()
   
 ```  
   
- If you use Visual Studio Code Analysis on this example, it validates that the callers pass a non-Null pointer to an initialized buffer for `pInt`. In this case, `pInt` pointer cannot be NULL.  
+ 如果在此示例中使用 Visual Studio Code 分析，它将验证调用方是否将非 Null 指针传递到 `pInt`的已初始化缓冲区。 在这种情况下，`pInt` 指针不能为 NULL。  
   
-### <a name="example-the-_in_opt_-annotation"></a>Example: The \_In_opt\_ Annotation  
- `_In_opt_` is the same as `_In_`, except that the input parameter is allowed to be NULL and, therefore, the function should check for this.  
+### <a name="example-the-_in_opt_-annotation"></a>示例： \_In_opt\_ 批注  
+ `_In_opt_` 与 `_In_`相同，不同之处在于允许输入参数为 NULL，因此函数应检查此值。  
   
 ```cpp  
   
@@ -185,10 +185,10 @@ void InOptCaller()
   
 ```  
   
- Visual Studio Code Analysis validates that the function checks for NULL before it accesses the buffer.  
+ Visual Studio Code 分析验证函数在访问缓冲区之前是否检查是否为 NULL。  
   
-### <a name="example-the-_out_-annotation"></a>Example: The \_Out\_ Annotation  
- `_Out_` supports a common scenario in which a non-NULL pointer that points to an element buffer is passed in and the function initializes the element. The caller doesn’t have to initialize the buffer before the call; the called function promises to initialize it before it returns.  
+### <a name="example-the-_out_-annotation"></a>示例： \_Out\_ 批注  
+ `_Out_` 支持一个常见情况，即在其中传递指向元素缓冲区的非 NULL 指针，并且该函数将初始化元素。 调用方无需在调用之前初始化缓冲区;被调用的函数承诺在返回之前对其进行初始化。  
   
 ```cpp  
   
@@ -212,10 +212,10 @@ void OutCaller()
   
 ```  
   
- Visual Studio Code Analysis Tool validates that the caller passes a non-NULL pointer to a buffer for `pInt` and that the buffer is initialized by the function before it returns.  
+ Visual Studio Code 分析工具将验证调用方是否将非 NULL 指针传递到 `pInt` 的缓冲区，并验证该缓冲区是否在返回之前由函数进行了初始化。  
   
-### <a name="example-the-_out_opt_-annotation"></a>Example: The \_Out_opt\_ Annotation  
- `_Out_opt_` is the same as `_Out_`, except that the parameter is allowed to be NULL and, therefore, the function should check for this.  
+### <a name="example-the-_out_opt_-annotation"></a>示例： \_Out_opt\_ 批注  
+ `_Out_opt_` 与 `_Out_`相同，不同之处在于允许参数为 NULL，因此该函数应检查此值。  
   
 ```cpp  
   
@@ -240,13 +240,13 @@ void OutOptCaller()
   
 ```  
   
- Visual Studio Code Analysis validates that this function checks for NULL before `pInt` is dereferenced, and if `pInt` is not NULL, that the buffer is initialized by the function before it returns.  
+ Visual Studio Code 分析验证此函数在取消引用 `pInt` 之前是否检查 NULL，如果 `pInt` 不为 NULL，则该函数将在返回前通过函数初始化缓冲区。  
   
-### <a name="example-the-_inout_-annotation"></a>Example: The \_Inout\_ Annotation  
- `_Inout_` is used to annotate a pointer parameter that may be changed by the function. The pointer must point to valid initialized data before the call, and even if it changes, it must still have a valid value on return. The annotation specifies that the function may freely read from and write to the one-element buffer. The caller must provide the buffer and initialize it.  
+### <a name="example-the-_inout_-annotation"></a>示例： \_Inout\_ 批注  
+ `_Inout_` 用于批注可能由函数更改的指针参数。 指针必须指向有效的已初始化数据，然后才能调用，即使它发生更改，返回的值也必须有效。 批注指定函数可以从单元素缓冲区自由读取和写入。 调用方必须提供缓冲区并对其进行初始化。  
   
 > [!NOTE]
-> Like `_Out_`, `_Inout_` must apply to a modifiable value.  
+> 与 `_Out_`一样，`_Inout_` 必须应用于可修改的值。  
   
 ```cpp  
   
@@ -272,10 +272,10 @@ void BadInOutCaller()
   
 ```  
   
- Visual Studio Code Analysis validates that callers pass a non-NULL pointer to an initialized buffer for `pInt`, and that, before return, `pInt` is still non-NULL and the buffer is initialized.  
+ Visual Studio Code 分析验证调用方将非 NULL 指针传递到 `pInt`的已初始化缓冲区，并且在返回之前，`pInt` 仍为非 NULL，并且已初始化缓冲区。  
   
-### <a name="example-the-_inout_opt_-annotation"></a>Example: The \_Inout_opt\_ Annotation  
- `_Inout_opt_` is the same as `_Inout_`, except that the input parameter is allowed to be NULL and, therefore, the function should check for this.  
+### <a name="example-the-_inout_opt_-annotation"></a>示例： \_Inout_opt\_ 批注  
+ `_Inout_opt_` 与 `_Inout_`相同，不同之处在于允许输入参数为 NULL，因此函数应检查此值。  
   
 ```cpp  
   
@@ -302,10 +302,10 @@ void InOutOptCaller()
   
 ```  
   
- Visual Studio Code Analysis validates that this function checks for NULL before it accesses the buffer, and if `pInt` is not NULL, that the buffer is initialized by the function before it returns.  
+ Visual Studio Code 分析验证此函数在访问缓冲区之前是否检查是否为 NULL，如果 `pInt` 不为 NULL，则该函数将在返回前通过函数初始化缓冲区。  
   
-### <a name="example-the-_outptr_-annotation"></a>Example: The \_Outptr\_ Annotation  
- `_Outptr_` is used to annotate a parameter that's intended to return a pointer.  The parameter itself should not be NULL, and the called function returns a non-NULL pointer in it and that pointer points to initialized data.  
+### <a name="example-the-_outptr_-annotation"></a>示例： \_Outptr\_ 批注  
+ `_Outptr_` 用于批注要返回指针的参数。  参数本身不应为 NULL，并且被调用的函数在其中返回非 NULL 指针，该指针指向已初始化的数据。  
   
 ```cpp  
   
@@ -333,10 +333,10 @@ void OutPtrCaller()
   
 ```  
   
- Visual Studio Code Analysis validates that the caller passes a non-NULL pointer for `*pInt`, and that the buffer is initialized by the function before it returns.  
+ Visual Studio Code 分析验证调用方传递 `*pInt`的非 NULL 指针，并验证该缓冲区是否在返回前由函数进行了初始化。  
   
-### <a name="example-the-_outptr_opt_-annotation"></a>Example: The \_Outptr_opt\_ Annotation  
- `_Outptr_opt_` is the same as `_Outptr_`, except that the parameter is optional—the caller can pass in a NULL pointer for the parameter.  
+### <a name="example-the-_outptr_opt_-annotation"></a>示例： \_Outptr_opt\_ 批注  
+ `_Outptr_opt_` 与 `_Outptr_`相同，不同之处在于参数是可选的，调用方可以传入参数的 NULL 指针。  
   
 ```cpp  
   
@@ -366,10 +366,10 @@ void OutPtrOptCaller()
   
 ```  
   
- Visual Studio Code Analysis validates that this function checks for NULL before `*pInt` is dereferenced, and that the buffer is initialized by the function before it returns.  
+ Visual Studio Code 分析验证此函数在取消引用 `*pInt` 之前是否检查 NULL，并验证该函数是否在返回之前由函数进行了初始化。  
   
-### <a name="example-the-_success_-annotation-in-combination-with-_out_"></a>Example: The \_Success\_ Annotation in Combination with \_Out\_  
- Annotations  can be applied to most objects.  In particular, you can annotate a whole function.  One of the most obvious characteristics of a function is that it can succeed or fail. But like the association between a buffer and its size, C/C++ cannot express function success or failure. By using the `_Success_` annotation, you can say what success for a function looks like.  The parameter to the `_Success_` annotation is just an expression that when it is true indicates that the function has succeeded. The expression can be anything that the annotation parser can handle. The effects of the annotations after the function returns are only applicable when the function succeeds. This example shows how `_Success_` interacts with `_Out_` to do the right thing. You can use the keyword `return` to represent the return value.  
+### <a name="example-the-_success_-annotation-in-combination-with-_out_"></a>示例： \_成功\_ 批注与 \_Out\_  
+ 批注可应用于大多数对象。  特别是，您可以批注整个函数。  函数最明显的特征之一是它可以成功或失败。 但就像缓冲区及其大小之间的关联，C/C++无法表示函数成功或失败。 通过使用 `_Success_` 注释，可以说出函数的成功情况。  `_Success_` 批注的参数只是一个表达式，表示函数已成功。 表达式可以是批注分析器可处理的任何内容。 当函数返回后，批注的效果仅适用于函数成功。 此示例演示 `_Success_` 如何与 `_Out_` 进行交互以执行正确的操作。 您可以使用关键字 `return` 来表示返回值。  
   
 ```cpp  
   
@@ -386,36 +386,36 @@ bool GetValue(_Out_ int *pInt, bool flag)
   
 ```  
   
- The `_Out_` annotation causes Visual Studio Code Analysis to validate that the caller passes a non-NULL pointer to a buffer for `pInt`, and that the buffer is initialized by the function before it returns.  
+ `_Out_` 批注将导致 Visual Studio Code 分析验证调用方将非 NULL 指针传递到用于 `pInt`的缓冲区，并且该缓冲区在返回前由函数进行初始化。  
   
 ## <a name="sal-best-practice"></a>SAL 最佳做法  
   
 ### <a name="adding-annotations-to-existing-code"></a>向现有代码中添加批注  
- SAL is a powerful technology that can help you improve the security and reliability of your code. After you learn SAL, you can apply the new skill to your daily work. In new code, you can use SAL-based specifications by design throughout; in older code, you can add annotations incrementally and thereby increase the benefits every time you update.  
+ SAL 是一项功能强大的技术，可帮助您提高代码的安全性和可靠性。 了解 SAL 后，您可以将新技能应用于您的日常工作。 在新代码中，可以在整个设计中使用基于 SAL 的规范;在较旧的代码中，你可以递增地添加批注，因此，每次更新时都会增加权益。  
   
- Microsoft public headers are already annotated. Therefore, we suggest that in your projects you first annotate leaf node functions and functions that call Win32 APIs to get the most benefit.  
+ Microsoft 公共标头已进行批注。 因此，我们建议在项目中首先批注叶节点函数和调用 Win32 Api 的函数以获得最大的好处。  
   
 ### <a name="when-do-i-annotate"></a>何时批注?  
- Here are some guidelines:  
+ 下面是一些指导原则：  
   
-- Annotate all pointer parameters.  
+- 批注所有指针参数。  
   
-- Annotate value-range annotations so that Code Analysis can ensure buffer and pointer safety.  
+- 为值范围批注添加批注，以便代码分析可以确保缓冲区和指针安全性。  
   
-- Annotate locking rules and locking side effects. For more information, see [Annotating Locking Behavior](../code-quality/annotating-locking-behavior.md).  
+- 批注锁定规则和锁定副作用。 有关详细信息，请参阅对[锁定行为进行批注](../code-quality/annotating-locking-behavior.md)。  
   
-- Annotate driver properties and other domain-specific properties.  
+- 批注驱动程序属性和其他特定于域的属性。  
   
-  Or you can annotate all parameters to make your intent clear throughout and to make it easy to check that annotations have been done.  
+  或者，您可以为所有参数添加注释以使您的意图清晰明了，并使您能够轻松地检查批注是否已完成。  
   
 ## <a name="related-resources"></a>相关资源  
- [Code Analysis Team Blog](https://go.microsoft.com/fwlink/p/?LinkId=251197)  
+ [代码分析团队博客](https://go.microsoft.com/fwlink/p/?LinkId=251197)  
   
 ## <a name="see-also"></a>请参阅  
- [Using SAL Annotations to Reduce C/C++ Code Defects](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
- [Annotating Function Parameters and Return Values](../code-quality/annotating-function-parameters-and-return-values.md)   
- [Annotating Function Behavior](../code-quality/annotating-function-behavior.md)   
- [Annotating Structs and Classes](../code-quality/annotating-structs-and-classes.md)   
- [Annotating Locking Behavior](../code-quality/annotating-locking-behavior.md)   
- [Specifying When and Where an Annotation Applies](../code-quality/specifying-when-and-where-an-annotation-applies.md)   
+ [使用 SAL 注释减少 C/C++代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
+ [批注函数参数和返回值](../code-quality/annotating-function-parameters-and-return-values.md)   
+ [批注函数行为](../code-quality/annotating-function-behavior.md)   
+ [批注结构和类](../code-quality/annotating-structs-and-classes.md)   
+ [批注锁定行为](../code-quality/annotating-locking-behavior.md)   
+ [指定何时以及在何处应用批注](../code-quality/specifying-when-and-where-an-annotation-applies.md)   
  [最佳做法和示例](../code-quality/best-practices-and-examples-sal.md)

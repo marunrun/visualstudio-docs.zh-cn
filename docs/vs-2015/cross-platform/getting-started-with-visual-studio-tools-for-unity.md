@@ -24,7 +24,7 @@ ms.locfileid: "74299827"
 > [!IMPORTANT]
 > Unity 5.2 增加了对 Visual Studio Tools for Unity 2.1 的内置支持，从而简化了项目设置。 若要利用这一支持，你需要在 Windows 上使用 Unity version 5.2.0 或更高版本以及 Visual Studio Tools for Unity 2.1 或更高版本。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先决条件  
  若要使用 Visual Studio Tools for Unity，你需要：  
   
 - 支持扩展的 **Visual Studio** 版本，例如，Visual Studio Community、Professional、Premium 或 Enterprise. 你可以免费下载 Visual Studio Community。  
@@ -68,7 +68,7 @@ ms.locfileid: "74299827"
   
  但如果你对 Unity 不熟悉，可从简单的基本教程开始。 访问“Unity 学习”页，找到可用以入门的相关示例项目教程和可以学习的课程，进而用 Unity 创建你自己的游戏。 “Unity 学习”页提供了针对好几种不同游戏的教程，内容通俗易懂。  
   
- [教程 –“Unity 学习”页](https://learn.unity.com/tutorials)  
+ [教程 -“Unity 学习”页](https://learn.unity.com/tutorials)  
   
 #### <a name="2---configure-unity-editor-to-use-visual-studio-tools-for-unity"></a>2 - 配置 Unity 编辑器以使用 Visual Studio Tools for Unity  
  若要启用你的项目以使用 Visual Studio Tools for Unity，只需将 Visual Studio 设置为其外部脚本编辑器。 在 Unity 编辑器中的主菜单上，选择“编辑，首选项”；然后，在“Unity 首选项” 对话框中，选择“外部工具”。 接下来，将“外部脚本编辑器” 属性设置为你想要使用的 Visual Studio 的版本（必须为此版本的 Visual Studio 安装 Visual Studio Tools for Unity），并确保已设置“编辑器连接” 属性。  
@@ -77,7 +77,7 @@ ms.locfileid: "74299827"
   
  最后，请确保已通过“生成设置” 页设置了生成目标并且已启用“脚本调试” 。  
   
- ![Configure the Unity build settings for debugging.](../cross-platform/media/vstu-debugging-build-settings.png "vstu_debugging_build_settings")  
+ ![为调试配置 Unity 生成设置。](../cross-platform/media/vstu-debugging-build-settings.png "vstu_debugging_build_settings")  
   
 #### <a name="3---launch-visual-studio-from-the-unity-editor"></a>3 - 从 Unity 编辑器启动 Visual Studio  
  从 Unity 5.2 开始，若要启动 Visual Studio 或配置 Visual Studio Tools for Unity，不再需要“Visual Studio Tools” 扩展菜单。 相反，一旦将 Visual Studio 设置为你的外部脚本编辑器，只需从 Unity 编辑器中选择脚本文件，你的代码便会在 Visual Studio 中打开。  
@@ -90,23 +90,23 @@ ms.locfileid: "74299827"
   
  但如果你对 Unity 不熟悉，可从简单的基本教程开始。 访问“Unity 学习”页，找到可用以入门的相关示例项目教程和可以学习的课程，进而用 Unity 创建你自己的游戏。 “Unity 学习”页提供了针对好几种不同游戏的教程，内容通俗易懂。  
   
- [教程 –“Unity 学习”页](https://learn.unity.com/tutorials)  
+ [教程 -“Unity 学习”页](https://learn.unity.com/tutorials)  
   
 #### <a name="2---configure-unity-editor-to-use-visual-studio-tools-for-unity"></a>2 - 配置 Unity 编辑器以使用 Visual Studio Tools for Unity  
  如果你是从现有的 Unity 项目开始或未在创建项目时导入 Visual Studio Tools Unity unitypackage，则需立即导入 unitypackage。 在 Unity 编辑器中的主菜单上，选择“资产、导入包、Visual Studio 2015 Tools” （应能看到适用于已安装的 Visual Studio 版本的一个选项）。  
   
- ![Import the VSTU package into your Unity project.](../cross-platform/media/vstu-configure-unity-import-vstu.png "vstu_configure_unity_import_vstu")  
+ ![将 VSTU 包导入 Unity 项目。](../cross-platform/media/vstu-configure-unity-import-vstu.png "vstu_configure_unity_import_vstu")  
   
  最后，请确保已通过“生成设置” 页设置了生成目标并且已启用“脚本调试” 。  
   
- ![Configure the Unity build settings for debugging.](../cross-platform/media/vstu-debugging-build-settings.png "vstu_debugging_build_settings")  
+ ![为调试配置 Unity 生成设置。](../cross-platform/media/vstu-debugging-build-settings.png "vstu_debugging_build_settings")  
   
 #### <a name="3---launch-visual-studio-from-unity-editor"></a>3 - 从 Unity 编辑器启动 Visual Studio  
  最后一步是从 Unity 启动 Visual Studio。 这将为你的项目创建一个 Visual Studio 解决方案，然后将在 Visual Studio 中打开。  
   
  在 Unity 编辑器的主菜单上，选择“Visual Studio 工具，在 Visual Studio 中打开”。  
   
- ![Open your unity project in Visual Studio.](../cross-platform/media/vstu-configure-open-in-visual-studio.png "vstu_configure_open_in_visual_studio")  
+ ![在 Visual Studio 中打开 unity 项目。](../cross-platform/media/vstu-configure-open-in-visual-studio.png "vstu_configure_open_in_visual_studio")  
   
 ## <a name="next-steps"></a>后续步骤  
  要学习如何在 Visual Studio 中使用和调试 Unity 项目，请参阅 [Using Visual Studio Tools for Unity](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md)。  

@@ -1,5 +1,5 @@
 ---
-title: Debugging Mixed-Mode Applications | Microsoft Docs
+title: 调试混合模式应用程序 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug

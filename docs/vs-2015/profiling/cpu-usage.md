@@ -25,13 +25,13 @@ ms.locfileid: "74300753"
   
  有关分析 Windows 应用商店应用性能的演练，请参阅 [分析应用商店应用中的 CPU 使用率](https://msdn.microsoft.com/library/windows/apps/dn641982.aspx)。  
   
- 性能和诊断中心提供了大量其他选项来运行和管理诊断会话。 例如，你可以在本地或远程计算机上或在模拟器或仿真程序中运行“CPU 使用率” 工具。 可以分析在 Visual Studio（附加在运行的应用上）中打开的项目的性能，或启动从 Windows 应用商店安装的应用。 For more information, see [Run profiling tools without debugging](https://msdn.microsoft.com/library/e97ce1a4-62d6-4b8e-a2f7-61576437ff01)  
+ 性能和诊断中心提供了大量其他选项来运行和管理诊断会话。 例如，你可以在本地或远程计算机上或在模拟器或仿真程序中运行“CPU 使用率” 工具。 可以分析在 Visual Studio（附加在运行的应用上）中打开的项目的性能，或启动从 Windows 应用商店安装的应用。 有关详细信息，请参阅在[不调试的情况下运行分析工具](https://msdn.microsoft.com/library/e97ce1a4-62d6-4b8e-a2f7-61576437ff01)  
   
-## <a name="BKMK_Collect_CPU_usage_data"></a> 收集 CPU 使用量数据  
+## <a name="BKMK_Collect_CPU_usage_data"></a>收集 CPU 使用率数据  
   
 1. 在 Visual Studio 中，将解决方案配置设置为“零售” ，然后选择部署目标。  
   
-    ![Select Release and Local Machine](../profiling/media/cpuuse-selectreleaselocalmachine.png "CPUUSE_SelectReleaseLocalMachine")  
+    ![选择发布和本地计算机](../profiling/media/cpuuse-selectreleaselocalmachine.png "CPUUSE_SelectReleaseLocalMachine")  
   
    - 在“发布” 模式下运行应用能更清晰地看到实际的应用性能。  
   
@@ -45,25 +45,25 @@ ms.locfileid: "74300753"
   
 3. 选择“CPU 使用率” ，然后选择“启动”。  
   
-    ![Choose CPU Usage](../profiling/media/cpuuse-lib-choosecpuusage.png "CPUUSE_LIB_ChooseCpuUsage")  
+    ![选择 CPU 使用情况](../profiling/media/cpuuse-lib-choosecpuusage.png "CPUUSE_LIB_ChooseCpuUsage")  
   
 4. 启动应用时，单击“获取最大数”。 显示输出后等待约 1 秒时间，然后选择“获取最大数，异步”。 在单击按钮之间进行停顿有助于更轻松地隔离诊断报告中的按钮单击例程。  
   
 5. 在第二个输出行显示之后，在性能和诊断中心中选择 **“停止收集”** 。  
   
-   ![Stop CpuUsage data collection](../profiling/media/cpu-use-wt-stopcollection.png "CPU_USE_WT_StopCollection")  
+   ![停止 CpuUsage 数据收集](../profiling/media/cpu-use-wt-stopcollection.png "CPU_USE_WT_StopCollection")  
   
    CPU 使用量工具可分析数据并显示报告。  
   
-   ![CpuUsage report](../profiling/media/cpu-use-wt-report.png "CPU_USE_WT_Report")  
+   ![CpuUsage 报表](../profiling/media/cpu-use-wt-report.png "CPU_USE_WT_Report")  
   
 ## <a name="analyze-the-cpu-usage-report"></a>分析 CPU 使用量报告  
   
-### <a name="BKMK_The_CPU_Usage_call_tree"></a>CPU 使用率调用关系树  
+### <a name="BKMK_The_CPU_Usage_call_tree"></a> CPU 使用率调用关系树  
  若要开始了解调用关系树的信息，重新选择 `GetMaxNumberButton_Click` 段，查看调用关系树的详细信息。  
   
-#### <a name="BKMK_Call_tree_structure"></a>调用关系树结构  
- ![GetMaxNumberButton&#95;Click call tree](../profiling/media/cpu-use-wt-getmaxnumbercalltree-annotated.png "CPU_USE_WT_GetMaxNumberCallTree_annotated")  
+#### <a name="BKMK_Call_tree_structure"></a> 调用关系树结构  
+ ![已&#95;单击调用树](../profiling/media/cpu-use-wt-getmaxnumbercalltree-annotated.png "CPU_USE_WT_GetMaxNumberCallTree_annotated")  
   
 |||  
 |-|-|  
@@ -72,27 +72,27 @@ ms.locfileid: "74300753"
 |![步骤 3](../profiling/media/procguid-3.png "ProcGuid_3")|二级节点的子级为用户代码方法和异步例程，它们由二级系统和框架代码进行调用或创建。|  
 |![步骤 4](../profiling/media/procguid-4.png "ProcGuid_4")|方法的子节点仅包含用于父方法调用的数据。 禁用“显示外部代码” 后，应用方法只能包含 **[外部代码]** 节点。|  
   
-#### <a name="BKMK_External_Code"></a>外部代码  
+#### <a name="BKMK_External_Code"></a> 外部代码  
  外部代码是你编写的代码执行的系统和框架组件中的函数。 外部代码包含函数，可启动和停止应用、绘制 UI、控制线程以及向应用提供其他低级别服务。 在大多数情况下，你不会对外部代码感兴趣，因此 CPU 使用率调用关系树可将用户方法的外部函数收集到一个 **[外部代码]** 节点中。  
   
  若要查看外部代码的调用路径，请从 **“筛选器视图”** 列表中选择 **“显示外部代码”** ，然后选择 **“应用”** 。  
   
- ![Choose Filter View, then Show External Code](../profiling/media/cpu-use-wt-filterview.png "CPU_USE_WT_FilterView")  
+ ![选择 "筛选器视图"，然后单击 "显示外部代码"](../profiling/media/cpu-use-wt-filterview.png "CPU_USE_WT_FilterView")  
   
  请注意，许多外部代码调用链已深度嵌套，因此函数名列的宽度可能超过所有计算机监视器（最大的计算机监视器除外）的显示宽度。 发生这种情况时，函数名将显示为 **[…]** ：  
   
- ![Nested external code in the call tree](../profiling/media/cpu-use-wt-showexternalcodetoowide.png "CPU_USE_WT_ShowExternalCodeTooWide")  
+ ![调用关系树中的嵌套外部代码](../profiling/media/cpu-use-wt-showexternalcodetoowide.png "CPU_USE_WT_ShowExternalCodeTooWide")  
   
  使用搜索框以找到你正在查找的节点，然后使用水平滚动条以使数据在视图中显示：  
   
- ![Search for nested external code](../profiling/media/cpu-use-wt-showexternalcodetoowide-found.png "CPU_USE_WT_ShowExternalCodeTooWide_Found")  
+ ![搜索嵌套的外部代码](../profiling/media/cpu-use-wt-showexternalcodetoowide-found.png "CPU_USE_WT_ShowExternalCodeTooWide_Found")  
   
-### <a name="BKMK_Call_tree_data_columns"></a>调用关系树数据列  
+### <a name="BKMK_Call_tree_data_columns"></a> 调用关系树数据列  
   
 |||  
 |-|-|  
 |**总 CPU (%)**|![总数据量 % 等式](../profiling/media/cpu-use-wt-totalpercentequation.png "CPU_USE_WT_TotalPercentEquation")<br /><br /> 所选时间范围内应用的 CPU 活动百分比（函数调用和函数调用的函数使用的）。 请注意，这不同于“CPU 利用率” 时间线图，后者是将时间范围内的应用总活动量与可用的 CPU 总容量相比较。|  
-|**自测 CPU (%)**|![自测 % 等式](../profiling/media/cpu-use-wt-selflpercentequation.png "CPU_USE_WT_SelflPercentEquation")<br /><br /> 所选时间范围内应用的 CPU 活动百分比（函数调用使用，不包括函数调用的函数活动）。|  
+|**自 CPU (%)**|![自测 % 等式](../profiling/media/cpu-use-wt-selflpercentequation.png "CPU_USE_WT_SelflPercentEquation")<br /><br /> 所选时间范围内应用的 CPU 活动百分比（函数调用使用，不包括函数调用的函数活动）。|  
 |**总 CPU(毫秒)**|所选时间范围内函数调用以及该函数调用函数所耗用的毫秒数。|  
 |**自 CPU(毫秒)**|所选时间范围内函数调用以及该函数调用函数所耗用的毫秒数。|  
 |**模块**|包含函数的模块的名称或包含 [外部代码] 节点中的函数的模块数。|  
@@ -102,14 +102,14 @@ ms.locfileid: "74300753"
   
  若要在我们的示例中查看该示例，请在时间线中重新选择 `GetMaxNumberAsyncButton_Click` 段。  
   
- ![GetMaxNumberAsyncButton&#95;Click report selection](../profiling/media/cpu-use-wt-getmaxnumberasync-selected.png "CPU_USE_WT_GetMaxNumberAsync_Selected")  
+ ![GetMaxNumberAsyncButton&#95;单击报表选择](../profiling/media/cpu-use-wt-getmaxnumberasync-selected.png "CPU_USE_WT_GetMaxNumberAsync_Selected")  
   
  **[外部代码]** 下方的前两个节点是状态机类的编译器生成的方法。 第三个节点是对原始方法的调用。 通过展开生成的方法，可显示当前进行的操作。  
   
- ![Expanded GetMaxNumberAsyncButton&#95;Click call tree](../profiling/media/cpu-use-wt-getmaxnumberasync-expandedcalltree.png "CPU_USE_WT_GetMaxNumberAsync_ExpandedCallTree")  
+ ![展开的&#95;GetMaxNumberAsyncButton 单击调用树](../profiling/media/cpu-use-wt-getmaxnumberasync-expandedcalltree.png "CPU_USE_WT_GetMaxNumberAsync_ExpandedCallTree")  
   
-- `MainPage::GetMaxNumberAsyncButton_Click` 执行的内容很少；主要管理任务值列表、计算结果最大值以及显示输出。  
+- `MainPage::GetMaxNumberAsyncButton_Click` 执行非常少的操作；它管理任务值列表、计算结果的最大值以及显示输出。  
   
 - `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext` 显示用于计划和启动 48 个任务所需的活动，这些任务将包装对 `GetNumberAsync`的调用。  
   
-- `MainPage::<GetNumberAsync>b__b` 显示调用 `GetNumber` 的任务的活动。
+- `MainPage::<GetNumberAsync>b__b` 显示调用 `GetNumber`的任务的活动。

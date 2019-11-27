@@ -1,5 +1,5 @@
 ---
-title: ClickOnce and Authenticode | Microsoft Docs
+title: ClickOnce 和 Authenticode |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -29,7 +29,7 @@ ms.locfileid: "74298273"
 # <a name="clickonce-and-authenticode"></a>ClickOnce 和 Authenticode
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Authenticode* is a Microsoft technology that uses industry-standard cryptography to sign application code with digital certificates that verify the authenticity of the application's publisher. 通过对应用程序部署使用验证码， [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 可以降低遭受特洛伊木马程序攻击的风险。 特洛伊木马程序是一种病毒或其他有害的程序，恶意的第三方将其伪装成来自已确认且可信任的源的合法程序。 用数字证书为 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 部署签名是用于验证程序集和文件是否经过篡改的可选步骤。  
+Authenticode * 是一种 Microsoft 技术，它使用行业标准加密来签署应用程序代码，并使用验证应用程序发行者真实性的数字证书。 通过对应用程序部署使用验证码， [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 可以降低遭受特洛伊木马程序攻击的风险。 特洛伊木马程序是一种病毒或其他有害的程序，恶意的第三方将其伪装成来自已确认且可信任的源的合法程序。 用数字证书为 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 部署签名是用于验证程序集和文件是否经过篡改的可选步骤。  
   
  以下各节描述了验证码中使用的不同类型的数字证书，如何使用证书颁发机构 (CA) 验证证书，时间戳在证书中的角色，以及可用于证书的存储方法。  
   
@@ -47,11 +47,11 @@ Authenticode* is a Microsoft technology that uses industry-standard cryptography
 - 使用 [!INCLUDE[winsdklong](../includes/winsdklong-md.md)]附带的 MakeCert.exe 生成自己的证书。  
   
 ### <a name="how-using-certificate-authorities-helps-users"></a>使用证书颁发机构对用户的好处  
- A certificate generated using the MakeCert.exe utility is commonly called a *self-cert* or a *test cert*. This kind of certificate works much the same way that a .snk file works in the .NET Framework. 它只包含公钥/私钥加密密钥对，不包含有关发行者的可验证信息。 可以使用自发证书在 Intranet 上部署具有高信任级别的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序。 但是，当这些应用程序在客户端计算机上运行时， [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 会将它们标识为来自未知发行者。 默认情况下，使用自发证书签名并在 Internet 上部署的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序不能使用受信任的应用程序部署。  
+ 使用 MakeCert 实用工具生成的证书通常称为 "*自证书*" 或 "*测试证书*"。这种证书的工作方式与 .NET Framework 中的 .snk 文件的工作方式大致相同。 它只包含公钥/私钥加密密钥对，不包含有关发行者的可验证信息。 可以使用自发证书在 Intranet 上部署具有高信任级别的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序。 但是，当这些应用程序在客户端计算机上运行时， [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 会将它们标识为来自未知发行者。 默认情况下，使用自发证书签名并在 Internet 上部署的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序不能使用受信任的应用程序部署。  
   
  相反，从 CA（如证书供应商或企业内部部门）收到的证书可以为你的用户提供更高的安全性。 该证书不仅会标识已签名软件的发行者，还会通过与签发该证书的 CA 进行核实来验证发行者的身份。 如果 CA 不是根证书颁发机构，验证码还会沿证书链回溯到根颁发机构来验证该 CA 是否有权颁发证书。 为了提高安全性，应尽量使用 CA 颁发的证书。  
   
- For more information about generating self-certs, see [Makecert.exe (Certificate Creation Tool)](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d).  
+ 有关生成自证书的详细信息，请参阅[Makecert （证书创建工具）](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)。  
   
 ### <a name="timestamps"></a>时间戳  
  用于对 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序签名的证书在特定时间长度（通常为 12 个月）后会过期。 为了避免不断使用新证书对应用程序重新签名， [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 支持时间戳。 使用时间戳对应用程序签名，只要时间戳有效，即使过期之后证书仍将被接受。 这将允许下载和运行证书已过期，但时间戳有效的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序。 还允许使用过期证书的已安装应用程序继续下载和安装更新。  
@@ -74,5 +74,5 @@ Authenticode* is a Microsoft technology that uses industry-standard cryptography
 ## <a name="see-also"></a>请参阅  
  [ClickOnce 安全和部署](../deployment/clickonce-security-and-deployment.md)   
  [保护 ClickOnce 应用程序](../deployment/securing-clickonce-applications.md)   
- [受信任的应用程序部署概述](../deployment/trusted-application-deployment-overview.md)   
+ [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)   
  [Mage.exe（清单生成和编辑工具）](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)

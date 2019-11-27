@@ -21,7 +21,7 @@ ms.locfileid: "74295751"
 
 接下来，使用“属性”窗口更改窗体的外观。
 
- ![link to video](../data-tools/media/playvideo.gif "PlayVideo")For a video version of this topic, see [Tutorial 1: Create a Picture Viewer in Visual Basic - Video 1](https://go.microsoft.com/fwlink/?LinkId=205209) or [Tutorial 1: Create a Picture Viewer in C# - Video 1](https://go.microsoft.com/fwlink/?LinkId=205199). 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
+ ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[教程1：在 Visual Basic 中创建图片查看器-视频 1](https://go.microsoft.com/fwlink/?LinkId=205209)或[教程1：在视频1中C#创建图片查看器](https://go.microsoft.com/fwlink/?LinkId=205199)。 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
 
 ### <a name="to-set-your-form-properties"></a>设置窗体属性
 
@@ -34,7 +34,7 @@ ms.locfileid: "74295751"
 
 3. 选中窗体后，在“属性”窗口中找到“Text”属性。 根据列表排序的方式，您可能需要向下滚动。 选择“Text”，键入“图片查看器”，然后按 Enter。  此时，窗体的标题栏中将显示文本“图片查看器”，并且“属性”窗口的外观应与下图类似。
 
-    ![Properties window](../ide/media/express-edittextproperty.png "Express_EditTextProperty") Properties window
+    ![属性窗口](../ide/media/express-edittextproperty.png "Express_EditTextProperty")属性窗口
 
    > [!NOTE]
    > 可以通过“按分类顺序”视图或“字母顺序”视图对属性进行排序。 可通过使用“属性”窗口上的按钮在这两类视图之间进行切换。 在本教程中，通过“字母顺序”视图查找属性会更加轻松。
@@ -55,7 +55,7 @@ ms.locfileid: "74295751"
 
    - 在工具栏上，选择“开始调试”按钮，如下所示。
 
-      ![Start Debugging toolbar button](../ide/media/express-icondebug.png "Express_IconDebug") Start Debugging toolbar button
+      "![开始调试" 工具栏按钮](../ide/media/express-icondebug.png "Express_IconDebug")"开始调试" 工具栏按钮
 
      与之前的操作一样，IDE 会生成并运行程序，并且将显示一个窗口。
 
