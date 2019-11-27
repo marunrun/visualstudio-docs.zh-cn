@@ -69,7 +69,7 @@ ms.locfileid: "74297963"
 
 #### <a name="installing-selenium-components"></a>安装 Selenium 组件
 
-1. 在“工具” 菜单上，选择“扩展和更新”。
+1. 在 **“工具”** 菜单上，选择 **“扩展和更新”** 。
 
 2. 在“扩展和更新”对话框中，搜索“`Selenium components for Cross Browser Testing`”。
 
@@ -98,20 +98,20 @@ ms.locfileid: "74297963"
 ## <a name="generate"></a>*在编码的 UI 测试中我看不到用于更改 BrowserWindow.CurrentBrowser 的选项。*
  你使用的 [!INCLUDE[vs2011_first](../includes/vs2011-first-md.md)] 版本可能不支持使用各种 Web 浏览器的编码的 UI 测试。 若要使用此类编码的 UI 测试，你必须使用 Visual Studio Enterprise。
 
- *我还应该知道什么？*
+ *我应该知道哪些其他内容？*
  **注意**
 
-- ![Prerequsite](../test/media/prereq.png "Prereq") Apple Safari web browser is not supported.
+- ![先决条件](../test/media/prereq.png "Prereq")不支持 Apple Safari web 浏览器。
 
-- ![Prerequsite](../test/media/prereq.png "Prereq") The action of starting the web browser must be part of the coded UI test.
+- ![先决条件](../test/media/prereq.png "Prereq")启动 web 浏览器的操作必须是编码的 UI 测试的一部分。
 
    如果你已打开 Web 浏览器并想在其中运行步骤，则播放将失败，除非你使用 Internet Explorer。 因此，最佳做法是将 Web 浏览器的启动操作作为编码的 UI 测试的一部分。
 
-- ![Prerequsite](../test/media/prereq.png "Prereq") Automating browser specific based UI actions such as maximize, minimize and restore is not supported.
+- ![先决条件](../test/media/prereq.png "Prereq")不支持基于浏览器的 UI 操作（如最大化、最小化和还原）。
 
   **提示**
 
-- ![Tip](../test/media/tip.png "提示") You can configure the output to include screenshots in the coded UI logs. 为此，你需要在 QTAgent32.exe.config 文件中设置某些配置设置。 默认情况下，该文件安装在以下位置：
+- ![提示](../test/media/tip.png "提示")你可以将输出配置为在编码的 UI 日志中包含屏幕截图。 为此，你需要在 QTAgent32.exe.config 文件中设置某些配置设置。 默认情况下，该文件安装在以下位置：
 
    **C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE**
 
@@ -152,4 +152,4 @@ ms.locfileid: "74297963"
  [Visual Studio UI 自动测试（包括编码的 UI）](https://go.microsoft.com/fwlink/?LinkID=224497)
 
 ## <a name="see-also"></a>请参阅
- [Use UI Automation To Test Your Code](../test/use-ui-automation-to-test-your-code.md) [Supported Configurations and Platforms for Coded UI Tests and Action Recordings](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md) [Analyzing Coded UI Tests Using Coded UI Test Logs](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md)
+ [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)[支持的配置和平台编码的 Ui 测试和操作录制](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)[使用编码的 ui 测试日志分析编码的 ui 测试](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md)

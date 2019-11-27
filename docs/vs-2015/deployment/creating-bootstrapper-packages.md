@@ -1,5 +1,5 @@
 ---
-title: Creating Bootstrapper Packages | Microsoft Docs
+title: 创建引导程序包 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -100,7 +100,7 @@ HKLM\Software\Wow6432Node\Microsoft\GenericBootstrapper\11.0
   
  下表显示由引导程序自动填充的属性。  
   
-|Property|描述|  
+|属性|描述|  
 |--------------|-----------------|  
 |ApplicationName|应用程序的名称。|  
 |ProcessorArchitecture|可执行文件的目标平台的处理器和每字位数。 包括以下值：<br /><br /> -   Intel<br />-   IA64<br />-   AMD64|  
@@ -127,5 +127,5 @@ HKLM\Software\Wow6432Node\Microsoft\GenericBootstrapper\11.0
 ## <a name="see-also"></a>请参阅  
  [如何：与 ClickOnce 应用程序一起安装必备组件](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)   
  [“系统必备”对话框](../ide/reference/prerequisites-dialog-box.md)   
- [Product and Package Schema Reference](../deployment/product-and-package-schema-reference.md)   
+ [产品和包架构引用](../deployment/product-and-package-schema-reference.md)   
  [使用 Visual Studio 2005 引导程序来开始安装](https://go.microsoft.com/fwlink/?LinkId=107537)

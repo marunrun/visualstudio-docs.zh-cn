@@ -30,7 +30,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74300157"
 ---
-# <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>如何：使用引用管理器添加或删除引用
+# <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>How to: Add or Remove References By Using the Reference Manager
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 可以使用“引用管理器”对话框添加和管理对你、Microsoft 或其他公司开发的组件的引用。 如果要开发通用 Windows 应用，你的项目将自动引用所有正确的 Windows SDK DLL。 如果要开发 .NET 应用程序，你的项目将自动引用 mscorlib.dll。 一些 .NET API 在必须手动添加的组件中进行公开。 对 COM 组件或自定义组件的引用必须手动添加。
@@ -131,7 +131,7 @@ ms.locfileid: "74300157"
 
     通过在 HKEY_LOCAL_MACHINE 节点下创建注册表项，所有用户都可以在“添加引用”对话框中的指定位置看到这些程序集。 如果在 HKEY_CURRENT_USER 节点下创建注册表项，则只会影响当前用户的设置。
 
-    再次打开“添加引用”对话框。 The assemblies should appear on the **.NET** tab. If they do not, make sure that the assemblies are located in the specified *AssemblyLocation* directory, restart Visual Studio, and try again.
+    再次打开“添加引用”对话框。 程序集应出现在 " **.net** " 选项卡上。如果不是这样，请确保这些程序集位于指定的*AssemblyLocation*目录中，重新启动 Visual Studio，然后重试。
 
 ## <a name="com-tab"></a>“COM”选项卡
  “COM”选项卡列出可供引用的所有 COM 组件。 如果要添加对包含内部清单的已注册 COM DLL 的引用，请先注销该 DLL。 否则，Visual Studio 会将程序集引用作为 ActiveX 控件而不是本机 DLL 添加。
@@ -216,4 +216,4 @@ ms.locfileid: "74300157"
  “引用管理器”对话框中的搜索栏在处于焦点的选项卡上运行。 例如，在“解决方案”选项卡处于焦点时，如果用户在搜索栏中键入“System”，则除非解决方案具有包含“System”的项目名称，否则搜索不会返回任何结果。
 
 ## <a name="see-also"></a>请参阅
- [NIB How to: Add or Remove References By Using the Add Reference Dialog Box](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9) [Managing references in a project](../ide/managing-references-in-a-project.md)
+ [笔尖如何：使用 "添加引用" 对话框添加或删除引用](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)[在项目中管理引用](../ide/managing-references-in-a-project.md)

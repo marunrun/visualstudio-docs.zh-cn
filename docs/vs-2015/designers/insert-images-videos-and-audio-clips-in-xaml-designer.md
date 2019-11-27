@@ -21,7 +21,7 @@ ms.locfileid: "74300838"
 
 图像、视频和音频剪辑可向应用添加视觉效果。
 
- ![Images sized to fit](../designers/media/b5-memory-images-sized.png "b5_memory_images_sized")
+ ![大小调整为合适大小的图像](../designers/media/b5-memory-images-sized.png "b5_memory_images_sized")
 
  若要使用图像、视频或音频剪辑，请将其添加到项目，然后将其从“资产” 面板拖到“美工板”。
 

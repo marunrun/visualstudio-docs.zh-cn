@@ -1,5 +1,5 @@
 ---
-title: Debugging a published an Azure cloud service with Visual Studio and IntelliTrace | Microsoft Docs
+title: 使用 Visual Studio 和 IntelliTrace 调试已发布的 Azure 云服务 |Microsoft Docs
 description: 了解如何使用 Visual Studio 和 IntelliTrace 调试云服务
 author: mikejo5000
 manager: jillfra

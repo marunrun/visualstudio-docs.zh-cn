@@ -24,11 +24,11 @@ ms.locfileid: "74300307"
 # <a name="da0012-significant-amount-of-reflection"></a>DA0012：大量反射
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Rule Id|DA0012|  
-|Category|.NET Framework Usage|  
-|Profiling methods|Sampling|  
-|Message|You may be using Reflection excessively. 这是成本较高的操作。|  
-|Rule type|Warning|  
+规则 Id |DA0012 |  
+|Category |。NET Framework 使用量 |  
+|分析方法 |采样 |  
+|消息 |可能会过度使用反射。 这是成本较高的操作。|  
+|规则类型 |警告 |  
   
 ## <a name="cause"></a>原因  
  对 System.Reflection 方法（如 InvokeMember 和 GetMember）或 Type 方法（如 MemberInvoke）的调用是分析数据的重要组成部分。 如果可能，请考虑用对依赖程序集方法的早期绑定来替代这些方法。  

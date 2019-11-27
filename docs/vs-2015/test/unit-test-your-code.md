@@ -63,10 +63,10 @@ ms.locfileid: "74301437"
 
  提供指向关于使用 Visual Studio 而不是使用 [!INCLUDE[TCMext](../includes/tcmext-md.md)]来运行自动测试的信息的链接。
 
-## <a name="reference"></a>参考
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting> Describes the UnitTesting namespace, which provides attributes, exceptions, asserts, and other classes that support unit testing.
+## <a name="reference"></a>引用
+ <xref:Microsoft.VisualStudio.TestTools.UnitTesting> 描述 UnitTesting 命名空间，该命名空间提供特性、异常、断言和其他支持单元测试的类。
 
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Web> Describes the UnitTesting.Web namespace, which extends the UnitTesting namespace by providing support for [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] and Web service unit tests.
+ <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Web> 描述 UnitTesting 命名空间，该命名空间通过提供对 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 和 Web 服务单元测试的支持扩展了 UnitTesting 命名空间。
 
 ## <a name="external-resources"></a>外部资源
 
@@ -79,8 +79,8 @@ ms.locfileid: "74301437"
 ### <a name="guidance"></a>指导
  [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](https://go.microsoft.com/fwlink/?LinkID=255188)
 
-### <a name="reference"></a>参考
+### <a name="reference"></a>引用
  [Content Index for Unit Tests](https://go.microsoft.com/fwlink/?LinkID=254719)（单元测试的内容索引）
 
 ## <a name="see-also"></a>请参阅
- [Improve Code Quality](https://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945) [Testing the application](https://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac)
+ [提高](https://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)[测试应用程序的](https://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac)代码质量

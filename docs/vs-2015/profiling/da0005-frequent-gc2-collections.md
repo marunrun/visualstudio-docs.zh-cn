@@ -24,11 +24,11 @@ ms.locfileid: "74301253"
 # <a name="da0005-frequent-gc2-collections"></a>DA0005：频繁进行 GC2 收集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-RuleId|DA0005|  
-|Category|.NET Framework Usage|  
-|Profiling method|.NET Memory|  
-|Message|Many of your objects are being collected in generation 2 garbage collection.|  
-|Message type|Warning|  
+RuleId |DA0005 |  
+|Category |。NET Framework 使用量 |  
+|分析方法 |。NET Memory |  
+|消息 |正在第2代垃圾回收中收集很多对象。 |  
+|消息类型 |警告 |  
   
 ## <a name="cause"></a>原因  
  第 2 代垃圾回收期间回收大量的 .NET 内存对象。  

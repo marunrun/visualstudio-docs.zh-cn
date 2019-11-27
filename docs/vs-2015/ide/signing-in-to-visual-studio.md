@@ -1,5 +1,5 @@
 ---
-title: Sign in to Visual Studio 2015 | Microsoft Docs
+title: 登录到 Visual Studio 2015 |Microsoft Docs
 titleSuffix: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
@@ -46,7 +46,7 @@ ms.locfileid: "74301223"
 
  提供设置后，Visual Studio 将启动，然后你就会进行登录并准备好开始操作。 若要验证你是否已登录，请在 Visual Studio 环境的右上角查找名称。
 
- ![Currentlly logged in user](../ide/media/vs2015-username.png "VS2015_UserName")
+ ![当前登录用户](../ide/media/vs2015-username.png "VS2015_UserName")
 
  除非你注销，否则当你启动 Visual Studio 时将自动登录，并自动应用于对同步设置所做的所有更改。 若要注销，请依次选择 Visual Studio 环境中的配置文件名称旁边的下箭头、 **“帐户设置”** 命令和 **“注销”** 链接。 若要再次登录，请选择 Visual Studio 环境的右上角中的 **“登录”** 命令。
 

@@ -22,27 +22,27 @@ ms.locfileid: "74297678"
 # <a name="using-msbuild"></a>使用 MSBuild
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-MSBuild supplies a well-defined, extensible XML format for creating project files that fully describe project items to be built, build tasks, and build configurations.  
+MSBuild 提供定义完善的可扩展 XML 格式，用于创建完全描述要生成的项目项、生成任务和生成配置的项目文件。  
   
- For an end-to-end sample of a language project system based on MSBuild, see the IronPython Sample Deep Dive in the[VSSDK Samples](../../misc/vssdk-samples.md).  
+ 有关基于 MSBuild 的语言项目系统的端到端示例，请参阅[VSSDK 示例](../../misc/vssdk-samples.md)中的 IronPython 示例深入探讨。  
   
-## <a name="general-msbuild-considerations"></a>General MSBuild Considerations  
- MSBuild project files, for example, [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .csproj and [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .vbproj files, contain data that is used at build time, but also can contain data that is used at design time. Build-time data is stored using MSBuild primitives, including [Item Element (MSBuild)](../../msbuild/item-element-msbuild.md) and [Property Element (MSBuild)](../../msbuild/property-element-msbuild.md). Design-time data, which is data specific to the project type and any related project subtypes, is stored in free-form XML reserved for it.  
+## <a name="general-msbuild-considerations"></a>一般 MSBuild 注意事项  
+ MSBuild 项目文件（例如 [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .csproj 和 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .vbproj 文件）包含生成时使用的数据，但也可以包含在设计时使用的数据。 生成时数据使用 MSBuild 基元进行存储，包括[Item 元素（msbuild）](../../msbuild/item-element-msbuild.md)和[Property 元素（msbuild）](../../msbuild/property-element-msbuild.md)。 设计时数据是特定于项目类型和任何相关项目子类型的数据，以其保留的任意格式存储。  
   
- MSBuild does not have native support for configuration objects, but does provide conditional attributes for specifying configuration-specific data. 例如:  
+ MSBuild 不具有配置对象的本机支持，但提供了用于指定特定于配置的数据的条件属性。 例如:  
   
 ```  
 <OutputDir Condition="'$(Configuration)'=="release'">Bin\MyReleaseConfig</OutputDir>  
 ```  
   
- For more information on conditional attributes, see [Conditional Constructs](../../msbuild/msbuild-conditional-constructs.md).  
+ 有关条件特性的详细信息，请参阅[条件构造](../../msbuild/msbuild-conditional-constructs.md)。  
   
-### <a name="extending-msbuild-for-your-project-type"></a>Extending MSBuild for Your Project Type  
- MSBuild interfaces and APIs are subject to change in future versions of [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Therefore, it is prudent to use the managed package framework (MPF) classes because they provide shielding from changes.  
+### <a name="extending-msbuild-for-your-project-type"></a>扩展项目类型的 MSBuild  
+ MSBuild 接口和 Api 在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]的将来版本中可能会有所更改。 因此，使用托管包框架（MPF）类是明智的，因为它们提供了更改的防护。  
   
- The Managed Package Framework for Projects (MPFProj) provides helper classes for creating and managing new project system. You can find the source code and compilation instructions at [MPF for Projects - Visual Studio 2013](https://archive.codeplex.com/?p=mpfproj12).  
+ 项目的托管包框架（MPFProj）提供用于创建和管理新项目系统的帮助程序类。 可以在适用于项目的 MPF 上查找源代码和编译说明[-Visual Studio 2013](https://archive.codeplex.com/?p=mpfproj12)。  
   
- The project-specific MPF classes are as follows:  
+ 特定于项目的 MPF 类如下所示：  
   
 |实例|实现|  
 |-----------|--------------------|  
@@ -52,10 +52,10 @@ MSBuild supplies a well-defined, extensible XML format for creating project file
 |`Microsoft.VisualStudio.Package.ProjectConfig`|<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg>|  
 |`Microsoft.VisualStudio.Package.SettingsPage`|<xref:Microsoft.VisualStudio.OLE.Interop.IPropertyPageSite>|  
   
- `Microsoft.VisualStudio.Package.ProjectElement` class is a wrapper for MSBuild items.  
+ `Microsoft.VisualStudio.Package.ProjectElement` 类是 MSBuild 项的包装。  
   
-#### <a name="single-file-generators-vs-msbuild-tasks"></a>Single File Generators vs. MSBuild Tasks  
- Single file generators are accessible at design-time only, but MSBuild tasks can be used at design-time and build-time. For maximum flexibility, therefore, use MSBuild tasks to transform and generate code. For more information, see [Custom Tools](../../extensibility/internals/custom-tools.md).  
+#### <a name="single-file-generators-vs-msbuild-tasks"></a>单个文件生成器与 MSBuild 任务  
+ 单个文件生成器只能在设计时进行访问，但 MSBuild 任务可在设计时和生成时使用。 因此，为了最大限度地提高灵活性，请使用 MSBuild 任务来转换和生成代码。 有关详细信息，请参阅[自定义工具](../../extensibility/internals/custom-tools.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [MSBuild 参考](../../msbuild/msbuild-reference.md)   

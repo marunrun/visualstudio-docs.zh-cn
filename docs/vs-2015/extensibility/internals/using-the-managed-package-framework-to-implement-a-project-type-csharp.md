@@ -1,5 +1,5 @@
 ---
-title: Using the Managed Package Framework to Implement a Project Type (C#) | Microsoft Docs
+title: 使用托管包框架实现项目类型（C#） |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -22,16 +22,16 @@ ms.locfileid: "74300361"
 # <a name="using-the-managed-package-framework-to-implement-a-project-type-c"></a>使用托管包框架实现项目类型 (C#)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-The Managed Package Framework (MPF) provides C# classes you can use or inherit from to implement your own project types. The MPF implements many of the interfaces Visual Studio expects a project type to provide, leaving you free to concentrate on implementing the particulars of your project type.  
+托管包框架（MPF）提供C#可用于实现自己的项目类型的类，也可以从继承。 MPF 实现了许多 Visual Studio 所需的接口，从而让你自由地集中精力实现项目类型的细节。  
   
-## <a name="using-the-mpf-project-source-code"></a>Using the MPF Project Source Code  
- The Managed Package Framework for Projects (MPFProj) provides helper classes for creating and managing new project system. Unlike other classes in the MPF, the project classes are not included in the assemblies shipped with Visual Studio. Instead, the project classes are provided as source code at [MPF for Projects 2013](https://archive.codeplex.com/?p=mpfproj12).  
+## <a name="using-the-mpf-project-source-code"></a>使用 MPF 项目源代码  
+ 项目的托管包框架（MPFProj）提供用于创建和管理新项目系统的帮助程序类。 与 MPF 中的其他类不同，项目类不包括在随 Visual Studio 一起提供的程序集中。 相反，项目类作为[2013](https://archive.codeplex.com/?p=mpfproj12)中项目的源代码提供。  
   
- To add this project to your VSPackage solution, do the following:  
+ 若要将此项目添加到 VSPackage 解决方案，请执行以下操作：  
   
-1. Download the MPFProj files to *MPFProjectDir*.  
+1. 将 MPFProj 文件下载到*MPFProjectDir*。  
   
-2. In the *MPFProjectDir*\Dev10\Src\CSharp\ProjectBase.file, change the following block:  
+2. 在*MPFProjectDir*\Dev10\Src\CSharp\ProjectBase.file 中，更改以下块：  
   
 ```  
 <!-- Provide a default value for $(ProjectBasePath) -->  
@@ -40,11 +40,11 @@ The Managed Package Framework (MPF) provides C# classes you can use or inherit f
   </PropertyGroup>  
 ```  
   
-1. Create a VSPackage project.  
+1. 创建 VSPackage 项目。  
   
-2. Unload the VSPackage project.  
+2. 卸载 VSPackage 项目。  
   
-3. Edit the VSPackage .csproj file by adding the following block before the other `<Import>` blocks:  
+3. 编辑 VSPackage 文件，方法是在其他 `<Import>` 块之前添加以下块：  
   
 ```  
 <Import Project="MPFProjectDir\Dev10\Src\CSharp\ProjectBase.files" />  
@@ -58,20 +58,20 @@ The Managed Package Framework (MPF) provides C# classes you can use or inherit f
   
 1. 保存项目。  
   
-2. Close and reopen the VSPackage solution.  
+2. 关闭并重新打开 VSPackage 解决方案。  
   
-3. Reopen the VSPackage project. You should see a new directory named ProjectBase.  
+3. 重新打开 VSPackage 项目。 应会看到名为 ProjectBase 的新目录。  
   
-4. Add the following reference to the VSPackage project:  
+4. 将以下引用添加到 VSPackage 项目：  
   
      Microsoft.Build.Tasks.4.0  
   
 5. 生成项目。  
   
-## <a name="hierarchy-classes"></a>Hierarchy Classes  
- The following table summarizes the classes in the MPFProj that support project hierarchies. For more information, see [Hierarchies and Selection](../../extensibility/internals/hierarchies-and-selection.md).  
+## <a name="hierarchy-classes"></a>层次结构类  
+ 下表汇总了支持项目层次结构的 MPFProj 中的类。 有关详细信息，请参阅[层次结构和选择](../../extensibility/internals/hierarchies-and-selection.md)。  
   
-|类名|  
+|类名称|  
 |----------------|  
 |`Microsoft.VisualStudio.Package.HierarchyNode`|  
 |`Microsoft.VisualStudio.Package.ProjectNode`|  
@@ -85,18 +85,18 @@ The Managed Package Framework (MPF) provides C# classes you can use or inherit f
 |`Microsoft.VisualStudio.Package.AssemblyReferenceNode`|  
 |`Microsoft.VisualStudio.Package.BuildDependency`|  
   
-## <a name="document-handling-classes"></a>Document-Handling Classes  
- The following table lists the classes in the MPF that support document handling. For more information, see [Opening and Saving Project Items](../../extensibility/internals/opening-and-saving-project-items.md).  
+## <a name="document-handling-classes"></a>文档处理类  
+ 下表列出了支持文档处理的 MPF 中的类。 有关详细信息，请参阅[打开和保存项目项](../../extensibility/internals/opening-and-saving-project-items.md)。  
   
-|类名|  
+|类名称|  
 |----------------|  
 |`Microsoft.VisualStudio.Package.DocumentManager`|  
 |`Microsoft.VisualStudio.Package.FileDocumentManager`|  
   
-## <a name="configuration-and-output-classes"></a>Configuration and Output Classes  
- The following table lists the classes in the MPF that let project types support multiple configurations, such as debug and release, and collections of project output. For more information, see [Managing Configuration Options](../../extensibility/internals/managing-configuration-options.md).  
+## <a name="configuration-and-output-classes"></a>配置和输出类  
+ 下表列出了 MPF 中的类，这些类允许项目类型支持多个配置，例如调试和发布以及项目输出的集合。 有关详细信息，请参阅[管理配置选项](../../extensibility/internals/managing-configuration-options.md)。  
   
-|类名|  
+|类名称|  
 |----------------|  
 |`Microsoft.VisualStudio.Package.ConfigProvider`|  
 |`Microsoft.VisualStudio.Package.ProjectConfig`|  
@@ -104,10 +104,10 @@ The Managed Package Framework (MPF) provides C# classes you can use or inherit f
 |`Microsoft.VisualStudio.Package.OutputGroup`|  
 |`Microsoft.VisualStudio.Package.ProjectElement`|  
   
-## <a name="automation-support-classes"></a>Automation-Support Classes  
- The following table lists the classes in the MPF that support automation so that users of your project type can write add-ins.  
+## <a name="automation-support-classes"></a>自动化-支持类  
+ 下表列出了支持自动化的 MPF 中的类，以便您的项目类型的用户可以编写外接程序。  
   
-|类名|  
+|类名称|  
 |----------------|  
 |`Microsoft.VisualStudio.Package.Automation.OAProject`|  
 |`Microsoft.VisualStudio.Package.Automation.OANavigableProjectItems`|  
@@ -115,10 +115,10 @@ The Managed Package Framework (MPF) provides C# classes you can use or inherit f
 |`Microsoft.VisualStudio.Package.Automation.OAProjectItem`|  
 |`Microsoft.VisualStudio.Package.Automation.OANestedProjectItem`|  
   
-## <a name="properties-classes"></a>Properties Classes  
- The following table lists the classes in the MPF that let project types add properties that users can browse and modify in a property browser.  
+## <a name="properties-classes"></a>Properties 类  
+ 下表列出了 MPF 中的类，这些类允许项目类型添加用户可以在属性浏览器中浏览和修改的属性。  
   
-|类名|  
+|类名称|  
 |----------------|  
 |`Microsoft.VisualStudio.Package.LocalizableProperties`|  
 |`Microsoft.VisualStudio.Package.NodeProperties`|  

@@ -1,5 +1,5 @@
 ---
-title: Using the IntelliTrace stand-alone collector | Microsoft Docs
+title: 使用 IntelliTrace 独立收集器 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -30,7 +30,7 @@ ms.locfileid: "74297122"
 > [!NOTE]
 > 通过在 **跟踪** 模式下使用 **Microsoft 监视代理** ，你还可以收集远程计算机上运行的 Web 及 SharePoint 应用的相同 IntelliTrace 数据。
 >
-> 可通过在 **监视** 模式下运行代理来收集 IntelliTrace 数据中与性能相关的事件。 与**跟踪** 模式或 **IntelliTrace 独立收集器** 相比， **IntelliIntelliTrace 独立收集器 stand-alone collector**模式对性能的影响更小。 安装时，Microsoft 监视代理确实会改变目标系统的环境。 See [Using the Microsoft Monitoring Agent](../debugger/using-the-microsoft-monitoring-agent.md).
+> 可通过在 **监视** 模式下运行代理来收集 IntelliTrace 数据中与性能相关的事件。 与**跟踪** 模式或 **IntelliTrace 独立收集器** 相比， **IntelliIntelliTrace 独立收集器 stand-alone collector**模式对性能的影响更小。 安装时，Microsoft 监视代理确实会改变目标系统的环境。 请参阅[使用 Microsoft Monitoring Agent](../debugger/using-the-microsoft-monitoring-agent.md)。
 
  **惠?**
 
@@ -39,9 +39,9 @@ ms.locfileid: "74297122"
 - 开发计算机或其他计算机上的 Visual Studio Enterprise（但不是 Professional 或 Community 版本），可用来打开 .iTrace 文件
 
   > [!NOTE]
-  > 务必保存符号 (.pdb) 文件。 要调试 IntelliTrace 并单步调试代码，你必须有相匹配的源文件和符号文件。 See [Diagnose problems after deployment](../debugger/diagnose-problems-after-deployment.md).
+  > 务必保存符号 (.pdb) 文件。 要调试 IntelliTrace 并单步调试代码，你必须有相匹配的源文件和符号文件。 请参阅[部署后诊断问题](../debugger/diagnose-problems-after-deployment.md)。
 
-  **常见问题解答**
+  **FAQ**
 
 - [哪些应用上可使用该收集器？](#WhatApps)
 
@@ -146,7 +146,7 @@ ms.locfileid: "74297122"
 
 1. 确保应用服务器上的 PowerShell 已启用。 可在大多数 Windows Server 版本上将此功能添加到“服务器管理器” 管理工具中。
 
-     ![Adding PowerShell by using Server Manager](../debugger/media/intellitrace-servermanager-addpowershell.png "INTELLITRACE_ServerManager_AddPowerShell")
+     ![使用服务器管理器添加 PowerShell](../debugger/media/intellitrace-servermanager-addpowershell.png "INTELLITRACE_ServerManager_AddPowerShell")
 
 2. 安装 IntelliTrace PowerShell cmdlet。
 
@@ -226,8 +226,8 @@ ms.locfileid: "74297122"
     |||
     |-|-|
     |*应用程序池*|应用程序运行的应用程序池名|
-    |*收集计划路径*|收集计划路径，配置收集器设置的 .xml 文件。<br /><br /> 你可指定收集器附带的一个计划。 以下计划适合 Web 应用和 SharePoint 应用程序：<br /><br /> -   collection_plan.ASP.NET.default.xml<br />     仅收集 IntelliTrace 事件和 SharePoint 事件，包括异常、数据库调用及 Web 服务器请求。<br />-   collection_plan.ASP.NET.trace.xml<br />     收集 collection_plan.ASP.NET.default.xml 中的函数调用及所有数据。 该计划非常适合进行详细分析，但其可能导致你的应用速度比 collection_plan.ASP.NET.default.xml 更慢。<br /><br /> 为避免应用速度变慢，自定义这些计划或创建自己的计划。 为安全起见，将所有自定义计划放在收集器文件所在的同一安全位置。 请参阅 [创建并自定义 IntelliTrace 收集计划](https://go.microsoft.com/fwlink/?LinkId=227871) 和 [如何在应用速度不减的前提下获取最多的数据？](#Minimizing) **Note:**  By default, the max size of the .iTrace file is 100 MB. .iTrace 文件大小达到该上限时，收集器会删除文件中最早的项以便为更新的项让出空间。 要更改该上限，请修改此收集计划的 `MaximumLogFileSize` 属性。 <br /><br /> *从何处可找到这些收集计划的本地版本？*<br /><br /> 可在收集器子文件夹中找到本地计划。|
-    |*跟踪文件目录的完整路径*|跟踪 .iTrace 文件目录的完整路径。 **Security Note:**  Provide the full path, not a relative path.|
+    |*收集计划路径*|收集计划路径，配置收集器设置的 .xml 文件。<br /><br /> 你可指定收集器附带的一个计划。 以下计划适合 Web 应用和 SharePoint 应用程序：<br /><br /> -   collection_plan.ASP.NET.default.xml<br />     仅收集 IntelliTrace 事件和 SharePoint 事件，包括异常、数据库调用及 Web 服务器请求。<br />-   collection_plan.ASP.NET.trace.xml<br />     收集 collection_plan.ASP.NET.default.xml 中的函数调用及所有数据。 该计划非常适合进行详细分析，但其可能导致你的应用速度比 collection_plan.ASP.NET.default.xml 更慢。<br /><br /> 为避免应用速度变慢，自定义这些计划或创建自己的计划。 为安全起见，将所有自定义计划放在收集器文件所在的同一安全位置。 请参阅 [创建并自定义 IntelliTrace 收集计划](https://go.microsoft.com/fwlink/?LinkId=227871) 和 [如何在应用速度不减的前提下获取最多的数据？](#Minimizing) **注意：** 默认情况下，.Itrace 文件的最大大小为 100 MB。 .iTrace 文件大小达到该上限时，收集器会删除文件中最早的项以便为更新的项让出空间。 要更改该上限，请修改此收集计划的 `MaximumLogFileSize` 属性。 <br /><br /> *从何处可找到这些收集计划的本地版本？*<br /><br /> 可在收集器子文件夹中找到本地计划。|
+    |*跟踪文件目录的完整路径*|跟踪 .iTrace 文件目录的完整路径。 **安全说明：** 提供完整路径，而不是相对路径。|
 
      收集器连接到应用程序池并开始收集数据。
 
@@ -265,8 +265,8 @@ ms.locfileid: "74297122"
     |||
     |-|-|
     |*IntelliTrace 收集器可执行文件完整路径*|收集器可执行文件的完整路径，IntelliTraceSC.exe|
-    |*收集计划路径*|收集计划路径，配置收集器设置的 .xml 文件。<br /><br /> 你可指定收集器附带的一个计划。 以下计划适合托管应用：<br /><br /> -   collection_plan.ASP.NET.default.xml<br />     仅收集 IntelliTrace 事件，包括异常、数据库调用及 Web 服务器请求。<br />-   collection_plan.ASP.NET.trace.xml<br />     收集 collection_plan.ASP.NET.default.xml 中的函数调用及所有数据。 该计划非常适合进行详细分析，但其可能导致你的应用速度比 collection_plan.ASP.NET.default.xml 更慢。<br /><br /> 为避免应用速度变慢，自定义这些计划或创建自己的计划。 为安全起见，将所有自定义计划放在收集器文件所在的同一安全位置。 请参阅 [创建并自定义 IntelliTrace 收集计划](https://go.microsoft.com/fwlink/?LinkId=227871) 和 [如何在应用速度不减的前提下获取最多的数据？](#Minimizing) **Note:**  By default, the max size of the .iTrace file is 100 MB. .iTrace 文件大小达到该上限时，收集器会删除文件中最早的项以便为更新的项让出空间。 要更改该上限，请修改此收集计划的 `MaximumLogFileSize` 属性。 <br /><br /> *从何处可找到这些收集计划的本地版本？*<br /><br /> 可在收集器子文件夹中找到本地计划。|
-    |*.iTrace文件目录及文件名完整路径*|.iTrace 文件目录及包含 **.itrace** 扩展名的 .iTrace 文件名的完整路径。 **Security Note:**  Provide the full path, not a relative path.|
+    |*收集计划路径*|收集计划路径，配置收集器设置的 .xml 文件。<br /><br /> 你可指定收集器附带的一个计划。 以下计划适合托管应用：<br /><br /> -   collection_plan.ASP.NET.default.xml<br />     仅收集 IntelliTrace 事件，包括异常、数据库调用及 Web 服务器请求。<br />-   collection_plan.ASP.NET.trace.xml<br />     收集 collection_plan.ASP.NET.default.xml 中的函数调用及所有数据。 该计划非常适合进行详细分析，但其可能导致你的应用速度比 collection_plan.ASP.NET.default.xml 更慢。<br /><br /> 为避免应用速度变慢，自定义这些计划或创建自己的计划。 为安全起见，将所有自定义计划放在收集器文件所在的同一安全位置。 请参阅 [创建并自定义 IntelliTrace 收集计划](https://go.microsoft.com/fwlink/?LinkId=227871) 和 [如何在应用速度不减的前提下获取最多的数据？](#Minimizing) **注意：** 默认情况下，.Itrace 文件的最大大小为 100 MB。 .iTrace 文件大小达到该上限时，收集器会删除文件中最早的项以便为更新的项让出空间。 要更改该上限，请修改此收集计划的 `MaximumLogFileSize` 属性。 <br /><br /> *从何处可找到这些收集计划的本地版本？*<br /><br /> 可在收集器子文件夹中找到本地计划。|
+    |*.iTrace文件目录及文件名完整路径*|.iTrace 文件目录及包含 **.itrace** 扩展名的 .iTrace 文件名的完整路径。 **安全说明：** 提供完整路径，而不是相对路径。|
     |*应用可执行文件及文件名路径*|托管应用的路径及文件名|
 
 2. 通过退出应用来停止数据收集。
@@ -276,16 +276,16 @@ ms.locfileid: "74297122"
 ## <a name="BKMK_View_IntelliTrace_Log_Files"></a> 在 Visual Studio Enterprise 中打开 .iTrace 文件
 
 > [!NOTE]
-> 要调试 IntelliTrace 并单步调试代码，你必须有相匹配的源文件和符号文件。 See [Diagnose problems after deployment](../debugger/diagnose-problems-after-deployment.md).
+> 要调试 IntelliTrace 并单步调试代码，你必须有相匹配的源文件和符号文件。 请参阅[部署后诊断问题](../debugger/diagnose-problems-after-deployment.md)。
 
 1. 将 .iTrace 文件移到或复制到装有 Visual Studio Enterprise（但不是 Professional 或 Community 版）的计算机中。
 
 2. 双击 Visual Studio 外的 .iTrace 文件或从 Visual Studio 内打开文件。
 
-     Visual Studio 显示“IntelliTrace 摘要” 页面。 你可以查看大多数部分中的事件或其他项，请选择一项并开始使用 IntelliTrace 调试事件发生地点及其时间点。 See [Using saved IntelliTrace data](../debugger/using-saved-intellitrace-data.md).
+     Visual Studio 显示“IntelliTrace 摘要” 页面。 你可以查看大多数部分中的事件或其他项，请选择一项并开始使用 IntelliTrace 调试事件发生地点及其时间点。 请参阅[使用保存的 IntelliTrace 数据](../debugger/using-saved-intellitrace-data.md)。
 
     > [!NOTE]
-    > 要调试 IntelliTrace 并单步调试代码，你的开发计算机上必须有相匹配的源文件和符号文件。 See [Diagnose problems after deployment](../debugger/diagnose-problems-after-deployment.md).
+    > 要调试 IntelliTrace 并单步调试代码，你的开发计算机上必须有相匹配的源文件和符号文件。 请参阅[部署后诊断问题](../debugger/diagnose-problems-after-deployment.md)。
 
 ## <a name="Minimizing"></a> 如何在应用速度不减的前提下获取最多的数据？
  IntelliTrace 可收集大量数据，因此对应用性能的影响取决于 IntelliTrace 收集的数据及其分析的代码类型。 请参阅 [优化生产服务器上的 IntelliTrace 收集](https://go.microsoft.com/fwlink/?LinkId=255233)。
@@ -375,13 +375,13 @@ ms.locfileid: "74297122"
 
    `Employee` 类型具有以下属性： `Id`、 `Name`和 `HomeAddress`。 `Employee` 和 `Address` 类型之间存在关联。
 
-   ![Relationship between Employee and Address](../debugger/media/employeeaddressrelationship.png "EmployeeAddressRelationship")
+   ![员工与地址之间的关系](../debugger/media/employeeaddressrelationship.png "EmployeeAddressRelationship")
 
    收集器记录 `id`方法返回的 `Employee.Id`、 `Employee.Name` 、 `Employee` 和 `AlterEmployee` 对象的值。 但是，除记录 `Address` 对象是否为空以外，收集器不会记录该对象的其他信息。 收集器也不会记录 `AlterEmployee` 方法中局部变量相关的数据，除非其他方法将这些局部变量用作参数，记录为方法参数。
 
 ## <a name="WhereElse"></a> 可从哪些其他渠道获取 IntelliTrace 数据？
 
-- From an IntelliTrace debugging session in Visual Studio Enterprise, see [IntelliTrace Features](../debugger/intellitrace-features.md).
+- 在 Visual Studio Enterprise 中的 IntelliTrace 调试会话中，请参阅[Intellitrace 功能](../debugger/intellitrace-features.md)。
 
 - 可通过 Microsoft 测试管理器中的测试会话获取，请参阅 [如何：收集 IntelliTrace 数据以帮助调试难题](/visualstudio/test/how-to-collect-intellitrace-data-to-help-debug-difficult-issues?view=vs-2015)。
 

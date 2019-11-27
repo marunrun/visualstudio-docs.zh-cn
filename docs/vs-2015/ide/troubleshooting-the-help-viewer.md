@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting the Help Viewer | Microsoft Docs
+title: 帮助查看器疑难解答 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-help-viewer
@@ -47,7 +47,7 @@ ms.locfileid: "74299895"
 
 - 若要提供反馈，请参阅 Microsoft 网站上的 [Microsoft Connect](https://go.microsoft.com/fwlink/?linkid=243983) 或发送电子邮件到 [hlpfdbk@microsoft.com](mailto:hlpfdbk@microsoft.com)。
 
-- For more information, see the [Developer Documentation and Help System](https://go.microsoft.com/fwlink/?LinkId=232741) forum and [The Help Guy](https://go.microsoft.com/fwlink/?LinkId=232743) blog.
+- 有关详细信息，请参阅[开发人员文档和帮助系统](https://go.microsoft.com/fwlink/?LinkId=232741)论坛和[帮助专家](https://go.microsoft.com/fwlink/?LinkId=232743)博客。
 
 ## <a name="see-also"></a>请参阅
  [Help Viewer 2.1 管理员指南](https://go.microsoft.com/fwlink/?LinkId=243985)

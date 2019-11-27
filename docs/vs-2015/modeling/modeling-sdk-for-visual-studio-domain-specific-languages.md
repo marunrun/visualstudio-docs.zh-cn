@@ -1,5 +1,5 @@
 ---
-title: Modeling SDK - Domain-Specific Languages | Microsoft Docs
+title: 建模 SDK-特定于域的语言 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -22,7 +22,7 @@ ms.locfileid: "74297686"
 # <a name="modeling-sdk-for-visual-studio---domain-specific-languages"></a>Visual Studio 的建模 SDK - 特定于域的语言
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-By using the Modeling SDK for [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (MSDK), you can create powerful model-based development tools that you can integrate into [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. 例如，使用 MSDK 创建 UML 工具。 同样，你可以创建一个或多个模型定义并将其集成到工具集中。
+通过使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] （MSDK）的建模 SDK，你可以创建可集成到 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的功能强大的基于模型的开发工具。 例如，使用 MSDK 创建 UML 工具。 同样，你可以创建一个或多个模型定义并将其集成到工具集中。
 
  MSDK 的核心是你创建的用于表示业务领域内概念的模型的定义。 你可以使用各种工具环绕模型，例如关系图视图、生成代码和其他项目的功能、用于转换模型的命令和在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中与代码和其他对象进行交互的能力。 在开发模型时，你可以将其与其他模型和工具结合以形成一个以开发为中心的功能强大的工具集。
 
@@ -41,11 +41,11 @@ By using the Modeling SDK for [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (MSDK
   你可以自定义和扩展所有这些功能。 你的扩展以某种方式集成，以使你仍能更新 DSL 定义并重新生成功能而不丢失扩展。
 
 ## <a name="samples-and-the-latest-information"></a>示例和最新信息
- [Download the Modeling SDK for Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48148)
+ [下载适用于 Visual Studio 2015 的建模 SDK](https://www.microsoft.com/download/details.aspx?id=48148)
 
- [Samples](https://go.microsoft.com/fwlink/?LinkId=186128) for the Modeling SDK for Visual Studio.
+ 适用于 Visual Studio 的建模 SDK 的[示例](https://go.microsoft.com/fwlink/?LinkId=186128)。
 
- For guidance on advanced techniques and troubleshooting, visit [Visual Studio DSL & Modeling Tools Extensibility forum](https://go.microsoft.com/fwlink/?LinkID=186074).
+ 有关高级技巧和故障排除的指导，请访问[Visual STUDIO DSL & 建模工具扩展性论坛](https://go.microsoft.com/fwlink/?LinkID=186074)。
 
 ## <a name="in-this-section"></a>本节内容
  [域特定语言入门](../modeling/getting-started-with-domain-specific-languages.md)

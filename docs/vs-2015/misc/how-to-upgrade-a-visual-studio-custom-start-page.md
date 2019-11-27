@@ -1,5 +1,5 @@
 ---
-title: 'How to: Upgrade a Custom Start Page | Microsoft Docs'
+title: 如何：升级自定义起始页 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp

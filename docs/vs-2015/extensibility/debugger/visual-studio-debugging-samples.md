@@ -1,5 +1,5 @@
 ---
-title: Visual Studio Debugging Samples | Microsoft Docs
+title: Visual Studio 调试示例 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -22,8 +22,8 @@ ms.locfileid: "74295992"
 # <a name="visual-studio-debugging-samples"></a>Visual Studio 调试示例
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Two samples show how to extend the Visual Studio debugger using [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)].  
+下面两个示例演示如何使用 [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]扩展 Visual Studio 调试器。  
   
-- The Debugger Expression Evaluator Sample, for managed languages, is included in the [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]. In the [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)] window, click the **Samples** tab, click **All** or **C#** in the list of languages, and then click **Debugger**.  
+- 托管语言的调试器表达式计算器示例包含在 [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]中。 在 "[!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]" 窗口中，单击 "**示例**" 选项卡**C#** ，单击 "**全部**" 或在语言列表中，然后单击 "**调试器**"。  
   
-- The Visual Studio Debug Engine Sample, for native languages, is available on MSDN Code Gallery. For more information, see this page on the Microsoft Web site: [Visual Studio Debug Engine Sample](https://go.microsoft.com/fwlink/?LinkId=150236).
+- MSDN 代码库中提供了适用于本机语言的 Visual Studio 调试引擎示例。 有关详细信息，请参阅 Microsoft 网站上的以下页面： [Visual Studio 调试引擎示例](https://go.microsoft.com/fwlink/?LinkId=150236)。

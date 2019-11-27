@@ -1,5 +1,5 @@
 ---
-title: 'How to: Modify a Standard Menu Command in a Domain-Specific Language | Microsoft Docs'
+title: 如何：在域特定语言中修改标准菜单命令 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -22,28 +22,28 @@ ms.locfileid: "74300876"
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>如何：使用域特定语言修改标准的菜单命令
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-可修改某些在 DSL 中自动定义的标准命令的行为。 For example, you could modify **Cut** so that it excludes sensitive information. 若要实现此目的，请重写命令集类中的方法。 这些类定义在 DslPackage 项目的 CommandSet.cs 文件中，并派生自 <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>。
+可修改某些在 DSL 中自动定义的标准命令的行为。 例如，可以修改**Cut** ，使其不包括敏感信息。 若要实现此目的，请重写命令集类中的方法。 这些类定义在 DslPackage 项目的 CommandSet.cs 文件中，并派生自 <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>。
 
  总之，若要修改命令，请执行以下操作：
 
-1. [Discover what commands you can modify](#what).
+1. [了解你可以修改哪些命令](#what)。
 
-2. [Create a partial declaration of the appropriate command set class](#extend).
+2. [创建适当命令集类的分部声明](#extend)。
 
-3. [Override the ProcessOnStatus and ProcessOnMenu methods](#override) for the command.
+3. [重写命令的 ProcessOnStatus 和 processonmenu ... 方法](#override)。
 
    本主题解释了此过程。
 
 > [!NOTE]
-> If you want to create your own menu commands, see [How to: Add a Command to the Shortcut Menu](../modeling/how-to-add-a-command-to-the-shortcut-menu.md).
+> 如果要创建自己的菜单命令，请参阅[如何：将命令添加到快捷菜单](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)。
 
-## <a name="what"></a> What commands can you modify?
+## <a name="what"></a>可以修改哪些命令？
 
 #### <a name="to-discover-what-commands-you-can-modify"></a>发现可以修改的命令
 
-1. In the `DslPackage` project, open `GeneratedCode\CommandSet.cs`. This C# file can be found in Solution Explorer as a subsidiary of `CommandSet.tt`.
+1. 在 `DslPackage` 项目中，打开 `GeneratedCode\CommandSet.cs`。 可以C#在 `CommandSet.tt`的子公司解决方案资源管理器中找到此文件。
 
-2. Find classes in this file whose names end with "`CommandSet`", for example `Language1CommandSet` and `Language1ClipboardCommandSet`.
+2. 查找此文件中名称以 "`CommandSet`" 结尾的类，例如 `Language1CommandSet` 和 `Language1ClipboardCommandSet`。
 
 3. 在每个命令集类中，键入“`override`”，后跟一个空格。 IntelliSense 将显示可重写方法的列表。 每个命令具有一对其名称以“`ProcessOnStatus`”和“`ProcessOnMenu`”开头的方法。
 
@@ -54,7 +54,7 @@ ms.locfileid: "74300876"
     > [!NOTE]
     > 通常，不应编辑已生成的文件。 任何编辑都将在下次生成文件时丢失。
 
-## <a name="extend"></a> Extend the appropriate command set class
+## <a name="extend"></a>扩展适当的命令集类
  创建包含命令集类的分部声明的新文件。
 
 #### <a name="to-extend-the-command-set-class"></a>扩展命令集类
@@ -65,7 +65,7 @@ ms.locfileid: "74300876"
 
      `{ ...  internal partial class Language1CommandSet : ...`
 
-2. In **DslPackage**, create a folder named **Custom Code**. In this folder, create a new class file named `CommandSet.cs`.
+2. 在**DslPackage**中，创建一个名为 "**自定义代码**" 的文件夹。 在此文件夹中，创建一个名为 `CommandSet.cs`的新类文件。
 
 3. 在该新文件中，编写具有与生成的分部类相同的命名空间和名称的分部声明。 例如:
 
@@ -77,13 +77,13 @@ ms.locfileid: "74300876"
     { internal partial class Language1CommandSet { ...
     ```
 
-     **Note** If you used the class file template to create the new file, you must correct both the namespace and the class name.
+     **注意**如果使用类文件模板创建新文件，则必须更正命名空间和类名。
 
-## <a name="override"></a> Override the command methods
- Most commands have two associated methods: The method with a name like `ProcessOnStatus`... determines whether the command should be visible and enabled. 它将在每当用户右键单击关系图时调用，并应快速执行且不做任何更改。 `ProcessOnMenu`... is called when the user clicks the command, and should perform the function of the command. 你可能想要重写其中一个方法，或两者都进行重写。
+## <a name="override"></a>重写命令方法
+ 大多数命令有两个关联的方法：名为的方法，如 `ProcessOnStatus`。确定命令是否应可见并处于启用状态。 它将在每当用户右键单击关系图时调用，并应快速执行且不做任何更改。 `ProcessOnMenu`。当用户单击该命令并应执行该命令的功能时，将调用。 你可能想要重写其中一个方法，或两者都进行重写。
 
 ### <a name="to-change-when-the-command-appears-on-a-menu"></a>更改命令何时显示在菜单上
- Override the ProcessOnStatus... method. 此方法应设置其参数 MenuCommand 的“可见”和“已启用”属性。 通常，命令查看 this.CurrentSelection 来确定命令是否应用到选定的元素，还可能查看其属性来确定命令是否可以应用到其当前状态中。
+ 重写 ProcessOnStatus付款方式. 此方法应设置其参数 MenuCommand 的“可见”和“已启用”属性。 通常，命令查看 this.CurrentSelection 来确定命令是否应用到选定的元素，还可能查看其属性来确定命令是否可以应用到其当前状态中。
 
  一般原则是，“可见”属性应由选定了哪些什么元素来确定。 “已启用”属性（确定命令在菜单上是显示为黑色还是灰色）应取决于选择的当前状态。
 
@@ -114,7 +114,7 @@ protected override void ProcessOnStatusDeleteCommand (MenuCommand command)
  ProcessOnStatus 方法不应在“存储”中创建、删除或更新元素。
 
 ### <a name="to-change-the-behavior-of-the-command"></a>更改命令的行为
- Override the ProcessOnMenu... method. 以下示例将阻止用户一次删除多个元素，即使使用 Delete 键也是如此。
+ 重写 Processonmenu 。付款方式. 以下示例将阻止用户一次删除多个元素，即使使用 Delete 键也是如此。
 
 ```
 /// <summary>
@@ -131,24 +131,24 @@ protected override void ProcessOnMenuDeleteCommand()
 }
 ```
 
- 如果你的代码将对“存储”进行更改（例如创建、删除或更新元素或链接），则必须在事务内进行这些更改。 For more information, see [How to Create and Update model elements](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
+ 如果你的代码将对“存储”进行更改（例如创建、删除或更新元素或链接），则必须在事务内进行这些更改。 有关详细信息，请参阅[如何创建和更新模型元素](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)。
 
 ### <a name="writing-the-code-of-the-methods"></a>编写方法的代码
  以下片段通常在这些方法内十分有用：
 
-- `this.CurrentSelection` 用户右键单击的形状始终包含在此形状和连接符列表中。 如果用户单击关系图的空白部分，则“关系图”是该列表中的唯一成员。
+- `this.CurrentSelection`。 用户右键单击的形状始终包含在此形状和连接符列表中。 如果用户单击关系图的空白部分，则“关系图”是该列表中的唯一成员。
 
-- `this.IsDiagramSelected()` - `true` if the user clicked a blank part of the diagram.
+- 如果用户单击了关系图的空白部分，则 `this.IsDiagramSelected()` - `true`。
 
 - `this.IsCurrentDiagramEmpty()`
 
-- `this.IsSingleSelection()` - 用户未选择多个形状
+- `this.IsSingleSelection()`-用户未选择多个形状
 
-- `this.SingleSelection` - 用户右键单击的形状或关系图
+- `this.SingleSelection`-用户右键单击的形状或关系图
 
-- `shape.ModelElement as MyLanguageElement` - 由形状表示的模型元素。
+- `shape.ModelElement as MyLanguageElement`-形状表示的模型元素。
 
-  For more information about how to navigate from element to element and about how to create objects and links, see [Navigating and Updating a Model in Program Code](../modeling/navigating-and-updating-a-model-in-program-code.md).
+  有关如何从元素导航到元素以及如何创建对象和链接的详细信息，请参阅[在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
 
 ## <a name="see-also"></a>请参阅
- <xref:System.ComponentModel.Design.MenuCommand> [Writing Code to Customise a Domain-Specific Language](../modeling/writing-code-to-customise-a-domain-specific-language.md) [How to: Add a Command to the Shortcut Menu](../modeling/how-to-add-a-command-to-the-shortcut-menu.md) [Walkthrough: Getting Information from a Selected Link](../misc/walkthrough-getting-information-from-a-selected-link.md) [How VSPackages Add User Interface Elements](../extensibility/internals/how-vspackages-add-user-interface-elements.md) [Visual Studio Command Table (.Vsct) Files](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md) [VSCT XML Schema Reference](../extensibility/vsct-xml-schema-reference.md)
+ [编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)<xref:System.ComponentModel.Design.MenuCommand>[如何：向快捷菜单中添加命令](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)[演练：从所选链接获取信息](../misc/walkthrough-getting-information-from-a-selected-link.md)[如何 Vspackage 添加用户界面元素](../extensibility/internals/how-vspackages-add-user-interface-elements.md) [Visual Studio 命令表（.Vsct） Files](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md) [.Vsct XML Schema Reference](../extensibility/vsct-xml-schema-reference.md)

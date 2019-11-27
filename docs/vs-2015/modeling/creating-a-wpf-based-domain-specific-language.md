@@ -1,5 +1,5 @@
 ---
-title: Creating a WPF-Based Domain-Specific Language | Microsoft Docs
+title: 创建基于 WPF 的域特定语言 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -19,9 +19,9 @@ ms.locfileid: "74295664"
 # <a name="creating-a-wpf-based-domain-specific-language"></a>创建基于 WPF 的域特定语言
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-You can create a domain-specific language that has a WPF designer instead of a graphical designer.
+可以创建具有 WPF 设计器而不是图形设计器的域特定语言。
 
- Information and samples about this feature can be found on the Visual Studio Visualization and Modeling Tools website at [http://go.microsoft.com/fwlink/?LinkId=186128](https://go.microsoft.com/fwlink/?LinkId=186128)
+ 有关此功能的信息和示例，请参阅 Visual Studio 可视化和建模工具网站上的[http://go.microsoft.com/fwlink/?LinkId=186128](https://go.microsoft.com/fwlink/?LinkId=186128)
 
 ## <a name="see-also"></a>请参阅
  [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)

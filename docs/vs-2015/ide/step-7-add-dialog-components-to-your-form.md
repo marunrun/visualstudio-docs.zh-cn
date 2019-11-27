@@ -23,7 +23,7 @@ ms.locfileid: "74295678"
 
  组件在某些方面与控件相似。 使用工具箱向窗体添加一个组件，然后使用“属性”窗口设置该组件的属性。 但与控件不同，向窗体添加组件不会添加用户可从窗体中查看的可见项。 相反，这将提供可使用代码触发的某些行为。 该组件可打开“打开文件”对话框。
 
- ![link to video](../data-tools/media/playvideo.gif "PlayVideo")For a video version of this topic, see [Tutorial 1: Create a Picture Viewer in Visual Basic - Video 3](https://go.microsoft.com/fwlink/?LinkId=205213) or [Tutorial 1: Create a Picture Viewer in C# - Video 3](https://go.microsoft.com/fwlink/?LinkId=205202). 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
+ ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[教程1：在 Visual Basic 中创建图片查看器-视频 3](https://go.microsoft.com/fwlink/?LinkId=205213)或[教程1：在视频3中C#创建图片查看器](https://go.microsoft.com/fwlink/?LinkId=205202)。 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
 
 ### <a name="to-add-dialog-components-to-your-form"></a>向窗体添加对话框组件
 
@@ -32,9 +32,9 @@ ms.locfileid: "74295678"
     > [!NOTE]
     > 工具箱中的“对话框”组具有可用于打开多个有用的对话框的组件，这些对话框可用于打开和保存文件、浏览文件夹以及选择字体和颜色。 在此项目中会使用以下两个对话框组件：“OpenFileDialog”和“ColorDialog”。
 
-2. 要向窗体添加一个名为“openFileDialog1”的组件，请双击“OpenFileDialog”。 要向窗体添加一个名为“colorDialog1”的组件，请双击工具箱中的“ColorDialog”。 (You use that one in the next tutorial step.) You should see an area at the bottom of Windows Forms Designer (beneath the Picture Viewer form) that has an icon for each of the two dialog components that you added, as shown in the following picture.
+2. 要向窗体添加一个名为“openFileDialog1”的组件，请双击“OpenFileDialog”。 要向窗体添加一个名为“colorDialog1”的组件，请双击工具箱中的“ColorDialog”。 （在下一个教程步骤中使用该程序。）你应在 Windows 窗体设计器的底部看到一个区域（位于图片查看器窗体下方），其中包含你添加的两个对话框组件的图标，如下图所示。
 
-     ![Dialog components](../ide/media/express-dialogsadded.png "Express_DialogsAdded") Dialog components
+     ![对话框组件](../ide/media/express-dialogsadded.png "Express_DialogsAdded")对话框组件
 
 3. 在 Windows 窗体设计器底部区域中选择“openFileDialog1”图标。 设置以下两个属性：
 

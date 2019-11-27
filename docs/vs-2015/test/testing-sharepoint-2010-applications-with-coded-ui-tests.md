@@ -29,14 +29,14 @@ ms.locfileid: "74298006"
 
  **注意**
 
-- ![Prerequsite](../test/media/prereq.png "Prereq") Coded UI tests for SharePoint applications are supported only with SharePoint 2010.
+- ![先决条件](../test/media/prereq.png "Prereq")只有 SharePoint 2010 支持对 SharePoint 应用程序进行编码的 UI 测试。
 
-- ![Prerequsite](../test/media/prereq.png "Prereq") Support for Visio and PowerPoint 2010 controls in your SharePoint application is not supported.
+- ![先决条件](../test/media/prereq.png "Prereq")不支持 SharePoint 应用程序中对 Visio 和 PowerPoint 2010 控件的支持。
 
 ## <a name="creating-a-coded-ui-test-for-your-sharepoint-app"></a>为您的 SharePoint 应用程序创建编码的 UI 测试
  为 SharePoint 2010 应用程序[创建编码的 UI 测试](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate) ，与为其他类型的应用程序创建测试相同。 支持对 Web 编辑界面上的所有控件进行录制和播放。 选择类别和 Web 部件的接口都是标准 Web 控件。
 
- ![SharePoint web parts](../test/media/cuit-sharepoint.png "CUIT_SharePoint")
+ ![SharePoint web 部件](../test/media/cuit-sharepoint.png "CUIT_SharePoint")
 
 > [!NOTE]
 > 如果要录制操作，请在生成代码前验证操作。 因为有多种行为与鼠标悬停操作相关联，所以它在默认情况下处于开启状态。 注意从编码的 UI 测试中移除冗余的悬停操作。 为此，您可以编辑测试的代码，或者使用 [编码的 UI 测试编辑器](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)。
@@ -144,4 +144,4 @@ uiGridKeyboardInputEdit.Text=value;
  [Visual Studio ALM + Team Foundation Server 博客](https://go.microsoft.com/fwlink/?LinkID=254496)
 
 ## <a name="see-also"></a>请参阅
- [Use UI Automation To Test Your Code](../test/use-ui-automation-to-test-your-code.md) [Web performance and load testing SharePoint 2010 and 2013 applications](https://msdn.microsoft.com/library/20c2e469-0e4e-4296-a739-c0e8fff36e54) [Create SharePoint Solutions](https://msdn.microsoft.com/library/4bfb1e59-97c9-4594-93f8-3068b4eb9631) [Verifying and Debugging SharePoint Code](https://msdn.microsoft.com/library/b5f3bce2-6a51-41b1-a292-9e384bae420c) [Building and Debugging SharePoint Solutions](https://msdn.microsoft.com/library/c9e7c9ab-4eb3-40cd-a9b9-6c2a896f70ae) [Profiling the Performance of SharePoint Applications](https://msdn.microsoft.com/library/61ae02e7-3f37-4230-bae1-54a498c2fae8)
+ [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md) [Web 性能和负载测试 SharePoint 2010 和2013应用程序](https://msdn.microsoft.com/library/20c2e469-0e4e-4296-a739-c0e8fff36e54)[创建 sharepoint 解决方案](https://msdn.microsoft.com/library/4bfb1e59-97c9-4594-93f8-3068b4eb9631)[验证和调试 sharepoint 代码](https://msdn.microsoft.com/library/b5f3bce2-6a51-41b1-a292-9e384bae420c)[生成和调试 sharepoint 解决方案](https://msdn.microsoft.com/library/c9e7c9ab-4eb3-40cd-a9b9-6c2a896f70ae)[分析 sharepoint 应用程序的性能](https://msdn.microsoft.com/library/61ae02e7-3f37-4230-bae1-54a498c2fae8)

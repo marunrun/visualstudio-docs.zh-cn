@@ -1,5 +1,5 @@
 ---
-title: Migrate apps to the Universal Windows Platform (UWP) | Microsoft Docs
+title: 将应用迁移到通用 Windows 平台（UWP） |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -31,13 +31,13 @@ ms.locfileid: "74299470"
 
   如果你不想进行所有这些更改，请了解如何 [移植现有应用](https://msdn.microsoft.com/library/windows/apps/xaml/mt238321.aspx) 到新的通用 Windows 项目。
 
-## <a name="MigrateCSharp"></a> Migrate your C#/VB Windows Store 8.1 or Windows Phone 8.1 apps to use the Universal Windows Platform
+## <a name="MigrateCSharp"></a>将C#/VB Windows 应用商店8.1 或 Windows Phone 8.1 应用迁移到使用通用 Windows 平台
 
 #### <a name="migrate-your-cvb-project-files"></a>迁移 C#/VB 项目文件
 
 1. 若要了解已安装的通用 Windows 平台，请打开此文件夹： **\Program Files (x86)\Windows Kits\10\Platforms\UAP**。 它包含每个已安装通用 Windows 平台的文件夹列表。 文件夹名称是已安装的通用 Windows 平台版本。 例如，此 Windows 10 设备安装了 10.0.10240.0 版的通用 Windows 平台。
 
-     ![Open the folder to view the versions installed](../misc/media/uap-uwpversions.png "UAP_UWPVersions")
+     ![打开文件夹以查看安装的版本](../misc/media/uap-uwpversions.png "UAP_UWPVersions")
 
      可以安装多个版本的通用 Windows 平台。 建议对你的应用使用最新版本。
 
@@ -82,19 +82,19 @@ ms.locfileid: "74299470"
 
 5. 在解决方案资源管理器中右键单击你应用的现有项目，然后选择 **“卸载项目”** 。 卸载项目后，再次右键单击项目文件，然后选择编辑 .csproj 或 .vbproj 文件。
 
-     ![Right click the project and choose Edit](../misc/media/uap-editproject.png "UAP_EditProject")
+     ![右键单击该项目，然后选择 "编辑"](../misc/media/uap-editproject.png "UAP_EditProject")
 
-6. Find the \<PropertyGroup> element that contains the \<TargetPlatformVersion> element with a value of 8.1. Do the following steps for this \<PropertyGroup> element:
+6. 查找包含值为8.1 的 \<TargetPlatformVersion > 元素的 \<PropertyGroup > 元素。 为此 \<PropertyGroup > 元素执行以下步骤：
 
-    1. Set the value of the \<Platform> element to: **x86**.
+    1. 将 \<Platform > 元素的值设置为： **x86**。
 
-    2. Add a \<TargetPlatformIdentifier> element and set its value to: **UAP**.
+    2. 添加一个 \<TargetPlatformIdentifier > 元素，并将其值设置为： **UAP**。
 
-    3. Change the existing value of the \<TargetPlatformVersion> element to be the value of the Universal Windows Platform version that you installed. Also add a \<TargetPlatformMinVersion> element and give it the same value.
+    3. 将 \<TargetPlatformVersion > 元素的现有值更改为你安装的通用 Windows 平台版本的值。 还要添加一个 \<TargetPlatformMinVersion > 元素，并为其指定相同的值。
 
-    4. Change the value of the \<MinimumVisualStudioVersion> element to: **14**.
+    4. 将 \<I o n > 元素的值更改为： **14**。
 
-    5. Replace the \<ProjectTypeGuids> element as shown below:
+    5. 替换 \<ProjectTypeGuids > 元素，如下所示：
 
          对于 C#：
 
@@ -108,11 +108,11 @@ ms.locfileid: "74299470"
         <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
         ```
 
-    6. Add an \<EnableDotNetNativeCompatibleProfile> element and set its value to: **true**.
+    6. 添加一个 \<I l e > 元素，并将其值设置为 " **true**"。
 
-    7. 通用 Windows 应用的默认资产规模为 200。 If your project includes assets not scaled at 200, you will need to add a \<UapDefaultAssetScale> element with the value of the scale of your assets to this PropertyGroup. 了解有关 [资产和规模](https://msdn.microsoft.com/library/jj679352.aspx)的详细信息。
+    7. 通用 Windows 应用的默认资产规模为 200。 如果你的项目包括未在200缩放的资产，则你需要添加一个 \<e > 元素，并将资产规模的值添加到此 PropertyGroup。 了解有关 [资产和规模](https://msdn.microsoft.com/library/jj679352.aspx)的详细信息。
 
-         Now your \<PropertyGroup> element should look similar to this example:
+         现在，\<PropertyGroup > 元素应类似于以下示例：
 
         ```xml
         <PropertyGroup>
@@ -140,7 +140,7 @@ ms.locfileid: "74299470"
         <VisualStudioVersion>14.0</VisualStudioVersion>
     ```
 
-8. Find \<PropertyGroup> elements that are configured for the AnyCPU platform as part of the Condition attribute. 删除这些元素及其所有子元素。 在 Visual Studio 2015 中，Windows 10 应用不支持 AnyCPU。 For example, you should remove \<PropertyGroup> elements like these ones:
+8. 查找 \<PropertyGroup 配置为将 AnyCPU 平台配置为 Condition 属性一部分的 > 元素。 删除这些元素及其所有子元素。 在 Visual Studio 2015 中，Windows 10 应用不支持 AnyCPU。 例如，应删除 \<PropertyGroup > 元素，如下所示：
 
     ```xml
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -164,7 +164,7 @@ ms.locfileid: "74299470"
       </PropertyGroup>
     ```
 
-9. For each remaining \<PropertyGroup> element, check if the element has a Condition attribute with a Release configuration. If it does, but it does not contain a \<UseDotNetNativeToolchain> element, then add one. Set the value for the \<UseDotNetNativeToolchain> element to true, like this:
+9. 对于剩余的每个 \<PropertyGroup > 元素，请检查元素是否具有具有发布配置的 Condition 特性。 如果是这样，则不包含 \<u > 元素，然后添加一个。 将 \<u > 元素的值设置为 true，如下所示：
 
     ```xml
     <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
@@ -181,7 +181,7 @@ ms.locfileid: "74299470"
       </PropertyGroup>
     ```
 
-10. For Windows Phone projects only, remove the \<PropertyGroup> element that contains a \<TargetPlatformIdentifier> element with a value of WindowsPhoneApp. 同时删除此元素的任何子级：
+10. 对于 Windows Phone 项目，请删除包含值为 WindowsPhoneApp 的 \<TargetPlatformIdentifier > 元素的 \<PropertyGroup > 元素。 同时删除此元素的任何子级：
 
     ```xml
     <PropertyGroup Condition=" '$(TargetPlatformIdentifier)' == '' ">
@@ -189,27 +189,27 @@ ms.locfileid: "74299470"
     </PropertyGroup>
     ```
 
-11. Find the \<ItemGroup> element that contains the \<AppxManifest> element. Add the following \<None> element as a child of the \<ItemGroup> element:
+11. 查找包含 \<Appxmanifest.xml > 元素的 \<ItemGroup > 元素。 将以下 \<None > 元素添加为 \<ItemGroup > 元素的子元素：
 
     ```xml
     <None Include="project.json" />
     ```
 
-12. Find the \<ItemGroup> element that contains other assets that are added to your project such as logo .png files (\<Content Include="Assets\Logo.scale-100.png" />). Add the following \<Content> child element to this \<ItemGroup> element:
+12. 查找 \<ItemGroup > 元素，其中包含添加到项目中的其他资产（如徽标 .png 文件（\<Content Include = "Assets\Logo.scale-100.png"/>）。 将以下 \<内容添加 > 子元素添加到此 \<ItemGroup > 元素：
 
-     **For C#:**
+     **对于C#：**
 
     ```xml
     <Content Include="Properties\default.rd.xml" />
     ```
 
-     **For VB:**
+     **对于 VB：**
 
     ```xml
     <Content Include="My Project\default.rd.xml" />
     ```
 
-13. Find the \<ItemGroup> element that includes \<Reference> children elements to NuGet packages. 记下你使用的 NuGet 包，因为在重新加载项目后你将需要使用 NuGet 包管理器下载它们。 Remove this \<ItemGroup> along with its children. 例如，UWP 项目可能具有以下需要删除的 NuGet 包：
+13. 查找包含 \<引用 NuGet 包 > 子元素的 \<ItemGroup > 元素。 记下你使用的 NuGet 包，因为在重新加载项目后你将需要使用 NuGet 包管理器下载它们。 删除此 \<ItemGroup > 及其子节点。 例如，UWP 项目可能具有以下需要删除的 NuGet 包：
 
     ```xml
     <ItemGroup>
@@ -246,13 +246,13 @@ ms.locfileid: "74299470"
 
      现在需要遵循相关步骤，为你的所有 Windows Store 8.1 或 Windows Phone 8.1 项目 [更新包清单文件](#PackageManifest) 。
 
-## <a name="MigrateCPlusPlus"></a> Migrate your C++ Windows Store 8.1 or Windows Phone 8.1 apps to use the Universal Windows Platform
+## <a name="MigrateCPlusPlus"></a>迁移C++ Windows 应用商店8.1 或 Windows Phone 8.1 应用以使用通用 Windows 平台
 
 #### <a name="migrate-your-c-project-files"></a>迁移 C++ 项目文件
 
 1. 若要了解已安装的通用 Windows 平台，请打开此文件夹： **\Program Files (x86)\Windows Kits\10\Platforms\UAP**。 它包含每个已安装通用 Windows 平台的文件夹列表。 文件夹名称是已安装的通用 Windows 平台版本。 例如，此 Windows 10 设备安装了 10.0.10240.0 版的通用 Windows 平台。
 
-     ![Open the folder to view the versions installed](../misc/media/uap-uwpversions.png "UAP_UWPVersions")
+     ![打开文件夹以查看安装的版本](../misc/media/uap-uwpversions.png "UAP_UWPVersions")
 
      可以安装多个版本的通用 Windows 平台。 建议对你的应用使用最新版本。
 
@@ -260,23 +260,23 @@ ms.locfileid: "74299470"
 
      在解决方案资源管理器中右键单击现有项目，然后选择“卸载项目”。 卸载项目后，再次右键单击项目文件，并选择编辑 .vcxproj 文件。
 
-     ![Right&#45;click project file and choose to edit](../misc/media/uap-editcplusproject.png "UAP_EditCPlusProject")
+     ![右键&#45;单击项目文件并选择 "编辑"](../misc/media/uap-editcplusproject.png "UAP_EditCPlusProject")
 
-3. Find the \<PropertyGroup> element that contains the \<ApplicationTypeRevision> element with a value of 8.1. Do the following steps for this \<PropertyGroup> element:
+3. 查找包含值为8.1 的 \<ApplicationTypeRevision > 元素的 \<PropertyGroup > 元素。 为此 \<PropertyGroup > 元素执行以下步骤：
 
-    1. Add a \<WindowsTargetPlatformVersion> element and a \<WindowsTargetPlatformMinVersion> element and give them the value of the Universal Windows Platform version that you installed.
+    1. 添加一个 \<WindowsTargetPlatformVersion > 元素和一个 \<WindowsTargetPlatformMinVersion > 元素，并为其指定所安装通用 Windows 平台版本的值。
 
     2. 将 ApplicationTypeRevision 元素的值从 8.1 更新为 10.0。
 
-    3. Change the value of the \<MinimumVisualStudioVersion> element to: 14.
+    3. 将 \<I o n > 元素的值更改为：14。
 
-    4. Add an \<EnableDotNetNativeCompatibleProfile> element and set its value to: true.
+    4. 添加一个 \<I l e > 元素，并将其值设置为 "true"。
 
-    5. 通用 Windows 应用的默认资产规模为 200。 If your project includes assets not scaled at 200, you will need to add a \<UapDefaultAssetScale> element with the value of the scale of your assets to this PropertyGroup. 了解有关 [资产和规模](https://msdn.microsoft.com/library/jj679352.aspx)的详细信息。
+    5. 通用 Windows 应用的默认资产规模为 200。 如果你的项目包括未在200缩放的资产，则你需要添加一个 \<e > 元素，并将资产规模的值添加到此 PropertyGroup。 了解有关 [资产和规模](https://msdn.microsoft.com/library/jj679352.aspx)的详细信息。
 
-    6. For Windows Phone projects only, change the value of \<ApplicationType> from Windows Phone to Windows Store.
+    6. 对于 Windows Phone 项目，请将 \<ApplicationType > 的值从 Windows Phone 更改为 Windows 应用商店。
 
-         Now your \<PropertyGroup> element should look similar to this example:
+         现在，\<PropertyGroup > 元素应类似于以下示例：
 
         ```xml
         <PropertyGroup>
@@ -292,7 +292,7 @@ ms.locfileid: "74299470"
         </PropertyGroup>
         ```
 
-4. Change all instances of the \<PlatformToolset> element to have the value v140. 例如:
+4. 将 \<PlatformToolset > 元素的所有实例更改为具有值 v140。 例如:
 
     ```xml
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -304,7 +304,7 @@ ms.locfileid: "74299470"
       </PropertyGroup>
     ```
 
-5. For each remaining \<PropertyGroup> element, check if the element has a Condition attribute with a Release configuration. If it does, but it does not contain a \<UseDotNetNativeToolchain> element, then add one. Set the value for the \<UseDotNetNativeToolchain> element to true, like this:
+5. 对于剩余的每个 \<PropertyGroup > 元素，请检查元素是否具有具有发布配置的 Condition 特性。 如果是这样，则不包含 \<u > 元素，然后添加一个。 将 \<u > 元素的值设置为 true，如下所示：
 
     ```xml
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|X64'" Label="Configuration">
@@ -323,16 +323,16 @@ ms.locfileid: "74299470"
 
      现在需要遵循相关步骤，为你的所有 Windows Store 8.1 或 Windows Phone 8.1 项目 [更新包清单文件](#PackageManifest) 。
 
-## <a name="PackageManifest"></a> Update your package manifest file for all your Windows Store 8.1 or Windows Phone 8.1 projects
+## <a name="PackageManifest"></a>更新所有 Windows 应用商店8.1 或 Windows Phone 8.1 项目的包清单文件
  必须更新解决方案中每个项目的包清单文件。
 
 #### <a name="update-your-package-manifest-file"></a>更新包清单文件
 
 1. 在项目中打开 package.appxmanifest 文件。 需要编辑每个 Windows 应用商店项目和 Windows Phone 项目的 Package.AppxManifest 文件。
 
-2. You need to update the \<Package> element with the new schemas based on your existing project type. 首先根据你使用的是 Windows 应用商店项目还是 Windows Phone 项目删除以下架构。
+2. 需要根据现有项目类型，将 \<包 > 元素更新为新架构。 首先根据你使用的是 Windows 应用商店项目还是 Windows Phone 项目删除以下架构。
 
-    **OLD for Windows Store project:** Your \<Package> element will look similar to this one.
+    **Windows 应用商店项目的旧版本：** \<包 > 元素将与此类似。
 
    ```xml
    <Package
@@ -341,7 +341,7 @@ ms.locfileid: "74299470"
 
    ```
 
-    **OLD for Windows Phone project:** Your \<Package> element will look similar to this one.
+    **Windows Phone 项目的旧版本：** \<包 > 元素将与此类似。
 
    ```xml
    <Package
@@ -351,7 +351,7 @@ ms.locfileid: "74299470"
    xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
    ```
 
-    **NEW for Universal Windows Platform:** Add the schemas below to your \<Package> element. 从刚才删除的架构的元素中删除任何关联的命名空间标识符前缀。 将 IgnorableNamespaces 属性更新为：uap mp。 Your new \<Package> element should look similar to this one.
+    **通用 Windows 平台的新内容：** 将下面的架构添加到 \<包 > 元素。 从刚才删除的架构的元素中删除任何关联的命名空间标识符前缀。 将 IgnorableNamespaces 属性更新为：uap mp。 新 \<包 > 元素应该与此类似。
 
    ```xml
    <Package
@@ -362,7 +362,7 @@ ms.locfileid: "74299470"
 
    ```
 
-3. Add a \<Dependencies> child element to the \<Package> element. Then add a \<TargetDeviceFamily> child element to this \<Dependencies> element with Name, MinVersion, and MaxVersionTested attributes. 为 Name 属性赋予值：Windows.Universal。 为 MinVersion 和 MaxVersionTested 赋予已安装通用 Windows 平台版本的值。 此元素应类似于：
+3. 将 \<依赖项 > 子元素添加到 \<包 > 元素。 然后，将 \<y > 子元素添加到此 \<依赖项 > 具有 Name、MinVersion 和 MaxVersionTested 属性的元素。 为 Name 属性赋予值：Windows.Universal。 为 MinVersion 和 MaxVersionTested 赋予已安装通用 Windows 平台版本的值。 此元素应类似于：
 
    ```xml
    <Dependencies>
@@ -370,16 +370,16 @@ ms.locfileid: "74299470"
    </Dependencies>
    ```
 
-4. **For Windows Store only:** You need to add a \<mp:PhoneIdentity> child element to the \<Package> element. 添加 PhoneProductId 属性和 PhonePublisherId 属性。 Set the PhoneProductId to have the same value as the Name attribute in the \<Identity> element. 将 PhonePublishedId 值设置为：00000000-0000-0000-0000-000000000000。 如：
+4. **仅适用于 Windows 应用商店：** 需要将 \<mp： PhoneIdentity > 子元素添加到 \<Package > 元素。 添加 PhoneProductId 属性和 PhonePublisherId 属性。 将 PhoneProductId 设置为具有与 \<Identity > 元素中的 Name 属性相同的值。 将 PhonePublishedId 值设置为：00000000-0000-0000-0000-000000000000。 如：
 
    ```xml
    <Identity Name="aa3815a1-2d97-4c71-8c99-578135b28cd8" Publisher="CN=xxxxxxxx" Version="1.0.0.0" />
    <mp:PhoneIdentity PhoneProductId="aa3815a1-2d97-4c71-8c99-578135b28cd8" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
    ```
 
-5. Find the \<Prerequisites> element and delete this element and any child elements that it has.
+5. 查找 \<必备组件 > 元素，并删除此元素及其具有的任何子元素。
 
-6. Add the **uap** namespace to the following \<Resource> elements: Scale, DXFeatureLevel. 例如:
+6. 将**uap**命名空间添加到以下 \<资源 > 元素： Scale、DXFeatureLevel。 例如:
 
    ```xml
    <Resources>
@@ -390,7 +390,7 @@ ms.locfileid: "74299470"
 
    ```
 
-7. Add the **uap** namespace to the following \<Capability> elements: documentsLibrary, picturesLibrary, videosLibrary, musicLibrary, enterpriseAuthentication, sharedUserCertificates, removableStorage, appointments, and contacts. 例如:
+7. 将**uap**命名空间添加到以下 \<功能 > 元素： DocumentsLibrary、PicturesLibrary、VideosLibrary、MusicLibrary、EnterpriseAuthentication、SharedUserCertificates、removableStorage、约会和联系人。 例如:
 
    ```xml
    <Capabilities>
@@ -400,7 +400,7 @@ ms.locfileid: "74299470"
 
    ```
 
-8. Add the **uap** namespace to the \<VisualElements> element and any of its child elements. 例如:
+8. 将**uap**命名空间添加到 \<visualelements> > 元素及其任何子元素。 例如:
 
    ```xml
    <uap:VisualElements
@@ -414,7 +414,7 @@ ms.locfileid: "74299470"
 
    ```
 
-    **仅适用于 Windows 应用商店：** 磁贴大小名称已更改。 Change the attributes in the \<VisualElements> element to reflect the new converged tile sizes. 70x70 变为 71x71，30x30 变为 44x44。
+    **仅适用于 Windows 应用商店：** 磁贴大小名称已更改。 更改 \<Visualelements> > 元素中的属性，以反映新的汇聚磁贴大小。 70x70 变为 71x71，30x30 变为 44x44。
 
     **旧：** 磁贴大小名称
 
@@ -444,7 +444,7 @@ ms.locfileid: "74299470"
 
    ```
 
-9. Add the **uap** namespace to the \<ApplicationContentUriRules> and all its child elements. 例如:
+9. 将**uap**命名空间添加到 \<s > 及其所有子元素。 例如:
 
     ```xml
     <uap:ApplicationContentUriRules>
@@ -454,7 +454,7 @@ ms.locfileid: "74299470"
 
     ```
 
-10. Add the **uap** namespace to the following \<Extension> elements and all of its child elements: windows.accountPictureProvide,  windows.alarm, windows.appointmentsProvider windows.autoPlayContent,  windows.autoPlayDevice, windows.cachedFileUpdate, windows.cameraSettings, windows.fileOpenPicker, windows.fileTypeAssociation, windows.fileSavePicke, windows.lockScreenCall, windows.printTaskSettings, windows.protocol, windows.search, windows.shareTarget. 例如:
+10. 将**uap**命名空间添加到以下 \<扩展 > 元素及其所有子元素： AccountPictureProvide、AppointmentsProvider、autoPlayContent、autoPlayDevice、cachedFileUpdate、cameraSettings、fileOpenPicker、fileTypeAssociation、fileSavePicke、lockScreenCall、printTaskSettings、shareTarget、、、、、、。 例如:
 
     ```xml
     <Extensions>
@@ -480,9 +480,9 @@ ms.locfileid: "74299470"
 
     ```
 
-12. 更改框架依赖项。 Add a Publisher name to all \<PackageDependency> elements, and specify a MinVersion if it’s not already specified.
+12. 更改框架依赖项。 将发布者名称添加到所有 \<C y > 元素，并指定 "MinVersion" （如果尚未指定）。
 
-     **OLD:** \<PackageDependency> element
+     **旧：** \<c y > 元素
 
     ```xml
     <Dependencies>
@@ -491,7 +491,7 @@ ms.locfileid: "74299470"
 
     ```
 
-     **NEW:** \<PackageDependency> element
+     **NEW：** \<c y > 元素
 
     ```xml
     <Dependencies>
@@ -507,7 +507,7 @@ ms.locfileid: "74299470"
 
 13. 将 gattCharacteristicNotification 和 rfcommConnection 后台类型任务替换为蓝牙类型任务。 例如:
 
-     **OLD:**
+     **原来**
 
     ```xml
     <Extension Category="windows.backgroundTasks" EntryPoint="Fabrikam.BackgroundTask" Executable="MyBackground.exe">
@@ -530,7 +530,7 @@ ms.locfileid: "74299470"
 
 14. 将蓝牙设备功能 bluetooth.rfcomm 和 bluetooth.genericAttributeProfile 替换为泛型蓝牙功能。 例如:
 
-     **OLD:**
+     **原来**
 
     ```xml
     <Capabilities>
@@ -558,13 +558,13 @@ ms.locfileid: "74299470"
 
 15. 删除任何已弃用的元素。
 
-    1. These attributes for \<VisualElements> are deprecated and should be removed:
+    1. 不推荐使用 \<Visualelements> > 的这些属性，因此应将其删除：
 
-       - The \<VisualElements> attributes: ForegroundText, ToastCapable
+       - \<Visualelements> > 属性： ForegroundText、ToastCapable
 
-       - The \<DefaultTile> attribute DefaultSize
+       - \<DefaultTile > 属性 DefaultSize
 
-       - The \<ApplicationView> element
+       - \<w > 元素
 
          例如:
 
@@ -585,7 +585,7 @@ ms.locfileid: "74299470"
 
 17. 需要删除某些隐藏文件，才能重新打开解决方案。
 
-    1. 打开文件资源管理器，单击工具栏中的“视图” ，然后选择“已隐藏项” 和“文件名扩展”。 Open this folder on your machine: \<path for the location of your solution>\\.vs\\{Project Name}\v14. 如果存在具有 .suo 文件扩展名的文件，请将其删除。
+    1. 打开文件资源管理器，单击工具栏中的“视图” ，然后选择“已隐藏项” 和“文件名扩展”。 在计算机上打开此文件夹： >\\的解决方案位置 \<路径。 vs\\{Project Name} \v14。 如果存在具有 .suo 文件扩展名的文件，请将其删除。
 
     2. 现在返回解决方案所在的文件夹。 打开解决方案中存在的项目的任何文件夹。 如果任何这些项目文件夹中的文件具有 .csproj.user 或 .vbproj.user 扩展名，请将其删除。
 
@@ -593,21 +593,21 @@ ms.locfileid: "74299470"
 
          了解如何 [调整代码](https://msdn.microsoft.com/library/windows/apps/dn954974.aspx) 以利用通用 Windows 平台的新增功能。
 
-## <a name="PreviousVersions"></a> Changes required for existing Universal Windows apps created with Visual Studio 2015 RC
+## <a name="PreviousVersions"></a>用 Visual Studio 2015 RC 创建的现有通用 Windows 应用所需的更改
  如果你使用 Visual Studio 2015 RC 创建了 Windows 10 通用应用，则需重定项目的目标，以使用随最新版 Visual Studio 2015 一起安装的通用 Windows 平台的版本。 不支持任何以前的版本。 所需更改因用于创建应用的语言而异：
 
-- [C#/VB apps](#RCUpdate10CSharp)
+- [C#/VB 应用](#RCUpdate10CSharp)
 
-- [C++ apps](#RCUpdate10CPlusPlus)
+- [C++应用](#RCUpdate10CPlusPlus)
 
-### <a name="RCUpdate10CSharp"></a> Update your C#/VB projects to use the latest Universal Windows Platform
+### <a name="RCUpdate10CSharp"></a>更新C#/VB 项目以使用最新通用 Windows 平台
  为现有应用打开解决方案时，你将看到你的应用需要更新：
 
- ![View your project in Solution Explorer](../misc/media/uwp-updaterequired.png "UWP_UpdateRequired")
+ ![查看解决方案资源管理器中的项目](../misc/media/uwp-updaterequired.png "UWP_UpdateRequired")
 
  如果选择从解决方案资源管理器重新加载此项目，你将看到此对话框：
 
- ![Retarget your app to use the correct SDK](../misc/media/missingsdkforuap.png "MissingSDKforUAP")
+ ![重定向你的应用以使用正确的 SDK](../misc/media/missingsdkforuap.png "MissingSDKforUAP")
 
  因为你项目的通用 Windows 平台 SDK 目前暂不受支持，因此无法进行安装。 请单击“确定”，然后执行以下操作。
 
@@ -615,7 +615,7 @@ ms.locfileid: "74299470"
 
 1. 若要了解已安装的通用 Windows 平台，请打开此文件夹： **\Program Files (x86)\Windows Kits\10\Platforms\UAP**。 它包含每个已安装通用 Windows 平台的文件夹列表。 文件夹名称是已安装的通用 Windows 平台版本。 例如，此 Windows 10 设备安装了 10.0.10240.0 版的通用 Windows 平台。
 
-    ![Open the folder to view the versions installed](../misc/media/uap-uwpversions.png "UAP_UWPVersions")
+    ![打开文件夹以查看安装的版本](../misc/media/uap-uwpversions.png "UAP_UWPVersions")
 
     可以安装多个版本的通用 Windows 平台。 建议对你的应用使用最新版本。
 
@@ -647,13 +647,13 @@ ms.locfileid: "74299470"
 
 3. 使用 Visual Studio 打开包含 C#/VB 通用 Windows 应用的解决方案。 你将看到项目文件（.csproj 或 .vbproj 文件）需要更新。 右键单击项目文件并选择编辑该文件。
 
-    ![Right click the project and choose Edit](../misc/media/uap-editproject.png "UAP_EditProject")
+    ![右键单击该项目，然后选择 "编辑"](../misc/media/uap-editproject.png "UAP_EditProject")
 
-4. Find the \<PropertyGroup> element that contains the \<TargetPlatformVersion> and \<TargetPlatformMinVersion> elements. Change the existing value of the \<TargetPlatformVersion> and \<TargetPlatformMinVersion> elements to be the same version of the Universal Windows Platform that you have installed.
+4. 查找包含 \<TargetPlatformVersion > 和 \<TargetPlatformMinVersion > 元素的 \<PropertyGroup > 元素。 将 \<TargetPlatformVersion > 和 \<TargetPlatformMinVersion > 元素的现有值更改为所安装的相同版本的通用 Windows 平台。
 
-    通用 Windows 应用的默认资产规模为 200。 Projects created with Visual Studio 2015 RC included assets scaled at 100, you will need to add a \<UapDefaultAssetScale> element with a value of 100 to this PropertyGroup. 了解有关 [资产和规模](https://msdn.microsoft.com/library/jj679352.aspx)的详细信息。
+    通用 Windows 应用的默认资产规模为 200。 使用 Visual Studio 2015 RC 创建的项目所包含的资产在100进行了缩放，你需要将值为100的 \<e > 元素添加到此 PropertyGroup。 了解有关 [资产和规模](https://msdn.microsoft.com/library/jj679352.aspx)的详细信息。
 
-5. 如果添加了对 UWP 扩展 SDK 的任意引用（例如 Windows Mobile SDK），你将需要更新该 SDK 版本。 For example this \<SDKReference> element:
+5. 如果添加了对 UWP 扩展 SDK 的任意引用（例如 Windows Mobile SDK），你将需要更新该 SDK 版本。 例如，此 \<SDKReference > 元素：
 
    ```xml
    <SDKReference Include="WindowsMobile, Version=10.0.0.1">
@@ -671,7 +671,7 @@ ms.locfileid: "74299470"
 
    ```
 
-6. Find the \<Target> element with a name attribute that has the value: EnsureNuGetPackageBuildImports. 删除此元素及其所有子级。
+6. 查找名称特性为 EnsureNuGetPackageBuildImports 的 \<目标 > 元素。 删除此元素及其所有子级。
 
    ```xml
    <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -683,7 +683,7 @@ ms.locfileid: "74299470"
    </Target>
    ```
 
-7. Find and delete the \<Import> elements with Project and Condition attributes that reference Microsoft.Diagnostics.Tracing.EventSource and Microsoft.ApplicationInsights, like this:
+7. 查找并删除 \<导入具有引用 applicationinsights.config 和的项目和条件特性 > 元素，如下所示：
 
    ```xml
    <Import Project="..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.16-beta\build\portable-net45+win8+wpa81\Microsoft.Diagnostics.Tracing.EventSource.Redist.targets" Condition="Exists('..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.16-beta\build\portable-net45+win8+wpa81\Microsoft.Diagnostics.Tracing.EventSource.Redist.targets')" />
@@ -691,9 +691,9 @@ ms.locfileid: "74299470"
 
    ```
 
-8. Find the \<ItemGroup> that has \<Reference> children elements to NuGet packages. 记下引用的 NuGet 包，因为在后续步骤中将需要此信息。 Visual Studio 2015 RC 与 Visual Studio 2015 RTM 在 Windows 10 项目格式上的其中一个显著区别是 RTM 格式使用 [NuGet](https://docs.microsoft.com/nuget/) 版本 3。
+8. 查找已 \<> 引用 NuGet 包的 \<ItemGroup >。 记下引用的 NuGet 包，因为在后续步骤中将需要此信息。 Visual Studio 2015 RC 与 Visual Studio 2015 RTM 在 Windows 10 项目格式上的其中一个显著区别是 RTM 格式使用 [NuGet](https://docs.microsoft.com/nuget/) 版本 3。
 
-    Remove the \<ItemGroup> and all its children. 例如，使用 Visual Studio RC 创建的 UWP 项目可能具有以下需要删除的 NuGet 包：
+    删除 \<ItemGroup > 及其所有子项。 例如，使用 Visual Studio RC 创建的 UWP 项目可能具有以下需要删除的 NuGet 包：
 
    ```xml
    <ItemGroup>
@@ -721,7 +721,7 @@ ms.locfileid: "74299470"
 
    ```
 
-9. Find the \<ItemGroup> element that contains an \<AppxManifest> element. If there is a \<None> element with an Include attribute set to: packages.config, delete it. Also, add a \<None> element with an Include attribute and set its value to: project.json.
+9. 查找包含 \<Appxmanifest.xml > 元素的 \<ItemGroup > 元素。 如果有 \<None > 元素，且 Include 特性设置为：包，请将其删除。 另外，添加一个 \<None > 元素和 Include 属性，并将其值设置为： "。
 
 10. 保存更改。 然后关闭项目文件。
 
@@ -731,7 +731,7 @@ ms.locfileid: "74299470"
 
 13. 在项目中打开 package.appxmanifest 文件。
 
-    1. Find the \<TargetDeviceFamily> element. 更改其 MinVersion 和 MaxVersionTested 特性，使其与已安装的通用 Windows 平台版本相对应。 如：
+    1. 查找 \<y > 元素。 更改其 MinVersion 和 MaxVersionTested 特性，使其与已安装的通用 Windows 平台版本相对应。 如：
 
         ```xml
         <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.10240.0" />
@@ -745,25 +745,25 @@ ms.locfileid: "74299470"
 
     如果你有针对通用 Windows 应用的单元测试项目，也必须遵循 [这些步骤](#MigrateUnitTest)。
 
-### <a name="RCUpdate10CPlusPlus"></a> Update your C++ projects to use the latest Universal Windows Platform
+### <a name="RCUpdate10CPlusPlus"></a>更新C++项目以使用最新通用 Windows 平台
 
 1. 若要了解已安装的通用 Windows 平台，请打开此文件夹： **\Program Files (x86)\Windows Kits\10\Platforms\UAP**。 它包含每个已安装通用 Windows 平台的文件夹列表。 文件夹名称是已安装的通用 Windows 平台版本。 例如，此 Windows 10 设备安装了 10.0.10240.0 版的通用 Windows 平台。
 
-     ![Open the folder to view the versions installed](../misc/media/uap-uwpversions.png "UAP_UWPVersions")
+     ![打开文件夹以查看安装的版本](../misc/media/uap-uwpversions.png "UAP_UWPVersions")
 
      可以安装多个版本的通用 Windows 平台。 建议对你的应用使用最新版本。
 
 2. 打开包含 C++ 通用 Windows 应用的解决方案。 右键单击项目 .vcxproj 文件，然后选择卸载项目文件。 卸载项目后，再次右键单击项目文件，并选择编辑它。
 
-     ![Unload the project, then edit the project file](../misc/media/uap-editearliercplus.png "UAP_EditEarlierCPlus")
+     ![卸载项目，然后编辑项目文件](../misc/media/uap-editearliercplus.png "UAP_EditEarlierCPlus")
 
-3. Find any \<PropertyGroup> elements that do not contain a Condition attribute but do contain an \<ApplicationTypeRevision> element. 将 ApplicationTypeRevision 值从 8.2 更新为 10.0。 Add a \<WindowsTargetPlatformVersion> and a \<WindowsTargetPlatformMinVersion> element and set their values to be the value of the Universal Windows Platform version that you installed.
+3. 查找任何 \<PropertyGroup > 元素，这些元素不包含 Condition 属性，但包含 \<ApplicationTypeRevision > 元素。 将 ApplicationTypeRevision 值从 8.2 更新为 10.0。 添加一个 \<WindowsTargetPlatformVersion > 和一个 \<WindowsTargetPlatformMinVersion > 元素，并将其值设置为所安装通用 Windows 平台版本的值。
 
-     Add an \<EnableDotNetNativeCompatibleProfile> element and set its value to true if the element does not already exist.
+     添加一个 \<I l e > 元素，并将其值设置为 true （如果该元素尚不存在）。
 
-     通用 Windows 应用的默认资产规模为 200。 Projects created with Visual Studio 2015 RC included assets scaled at 100, you will need to add a \<UapDefaultAssetScale> element with a value of 100 to this PropertyGroup. 了解有关 [资产和规模](https://msdn.microsoft.com/library/jj679352.aspx)的详细信息。
+     通用 Windows 应用的默认资产规模为 200。 使用 Visual Studio 2015 RC 创建的项目所包含的资产在100进行了缩放，你需要将值为100的 \<e > 元素添加到此 PropertyGroup。 了解有关 [资产和规模](https://msdn.microsoft.com/library/jj679352.aspx)的详细信息。
 
-     So this \<PropertyGroup> element will now be similar to this:
+     这 \<> 元素的现在如下所示：
 
     ```xml
     <PropertyGroup Label="Globals">
@@ -779,7 +779,7 @@ ms.locfileid: "74299470"
 
     ```
 
-4. For each remaining \<PropertyGroup> element, check if the element has a Condition attribute with a Release configuration. If it does, but it does not contain a \<UseDotNetNativeToolchain> element, then add one. Set the value for the \<UseDotNetNativeToolchain> element to true, like this:
+4. 对于剩余的每个 \<PropertyGroup > 元素，请检查元素是否具有具有发布配置的 Condition 特性。 如果是这样，则不包含 \<u > 元素，然后添加一个。 将 \<u > 元素的值设置为 true，如下所示：
 
     ```xml
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -792,7 +792,7 @@ ms.locfileid: "74299470"
 
     ```
 
-5. You need to update the \<EnableDotNetNativeCompatibleProfile> element and the \<UseDotNetNativeToolchain> element to enable .NET Native, but .NET Native is not enabled in the C++ templates.
+5. 需要更新 \<I l e > 元素和 \<u > 元素以启用 .NET Native，但C++模板中未启用 .NET Native。
 
      保存更改。 然后关闭项目文件。
 
@@ -800,7 +800,7 @@ ms.locfileid: "74299470"
 
 7. 在项目中打开 package.appxmanifest 文件。
 
-    1. Find the \<TargetDeviceFamily> element. 更改其 MinVersion 和 MaxVersionTested 特性，使其与已安装的通用 Windows 平台版本相对应。 如：
+    1. 查找 \<y > 元素。 更改其 MinVersion 和 MaxVersionTested 特性，使其与已安装的通用 Windows 平台版本相对应。 如：
 
         ```xml
         <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.10240.0" />
@@ -812,16 +812,16 @@ ms.locfileid: "74299470"
 
          如果你有针对通用 Windows 应用的单元测试项目，也必须遵循 [这些步骤](#MigrateUnitTest)。
 
-## <a name="MigrateUnitTest"></a> Changes required for existing unit test projects for Universal Windows apps created with Visual Studio 2015 RC
+## <a name="MigrateUnitTest"></a>用 Visual Studio 2015 RC 创建的通用 Windows 应用的现有单元测试项目所需的更改
  如果你使用 Visual Studio 2015 RC 创建了针对 Windows 10 通用应用的单元测试项目，则需要对你的项目文件进行这些额外更改，以将这些测试项目与最新版 Visual Studio 2015 一起使用。 所需更改因用于创建应用的语言而异：
 
-- [C#/VB apps](#UnitTestRCUpdate10CSharp)
+- [C#/VB 应用](#UnitTestRCUpdate10CSharp)
 
-- [C++ apps](#UnitTestRCUpdate10CPlusPlus)
+- [C++应用](#UnitTestRCUpdate10CPlusPlus)
 
-### <a name="UnitTestRCUpdate10CSharp"></a> Update your C#/VB unit test projects
+### <a name="UnitTestRCUpdate10CSharp"></a>更新你C#的/VB 单元测试项目
 
-1. 使用 Visual Studio，打开包含 C#/VB 单元测试项目的解决方案。 Change the value of the \<OuttputType> element to: AppContainerExe.
+1. 使用 Visual Studio，打开包含 C#/VB 单元测试项目的解决方案。 将 \<OuttputType > 元素的值更改为： AppContainerExe。
 
    ```xml
 
@@ -829,7 +829,7 @@ ms.locfileid: "74299470"
 
    ```
 
-2. Replace this element \<EnableCoreRuntime>false\</EnableCoreRuntime> with the following element:
+2. 将此元素 \<e > false\</EnableCoreRuntime > 替换为以下元素：
 
    ```xml
 
@@ -867,7 +867,7 @@ ms.locfileid: "74299470"
 
    ```
 
-4. Add this element \<UseDotNetNativeToolchain>true\</UseDotNetNativeToolchain> as a child element to these property groups:
+4. 将此元素添加 \<u > true\</UseDotNetNativeToolchain > 作为这些属性组的子元素：
 
    ```xml
 
@@ -877,7 +877,7 @@ ms.locfileid: "74299470"
 
    ```
 
-5. Delete the following \<ItemGroup> elements:
+5. 删除以下 \<ItemGroup > 元素：
 
    ```xml
 
@@ -992,7 +992,7 @@ ms.locfileid: "74299470"
 
    现在可以运行你的单元测试。
 
-### <a name="UnitTestRCUpdate10CPlusPlus"></a> Update your C++ projects to use the latest Universal Windows Platform
+### <a name="UnitTestRCUpdate10CPlusPlus"></a>更新C++项目以使用最新通用 Windows 平台
 
 1. 使用 Visual Studio，打开包含你 C++ 单元测试项目的解决方案。 删除下列元素：
 
@@ -1005,7 +1005,7 @@ ms.locfileid: "74299470"
 
     ```
 
-2. Add the following \<ProjectConfiguration> elements below this element \<ItemGroup Label="ProjectConfigurations"> if they are not already in this fille:
+2. 在此元素下添加以下 \<ProjectConfiguration > 元素 \<ItemGroup Label = "ProjectConfigurations" > （如果它们尚不在此填充中）：
 
     ```xml
 
@@ -1036,7 +1036,7 @@ ms.locfileid: "74299470"
 
     ```
 
-4. Add these \<PropertyGroup> elements if they are not already in the file:
+4. 如果文件中尚不存在这些 \<PropertyGroup > 元素，则添加这些元素：
 
     ```xml
 
@@ -1086,7 +1086,7 @@ ms.locfileid: "74299470"
 
     ```
 
-7. Add these \<ItemDefinitionGroup> elements in the section that already contains other \<ItemDefinitionGroup> elements:
+7. 将这些 \<ItemDefinitionGroup > 元素添加到已包含其他 \<ItemDefinitionGroup > 元素的部分中：
 
     ```xml
 
@@ -1113,7 +1113,7 @@ ms.locfileid: "74299470"
 
     ```
 
-8. Delete the following \< ItemGroup> element:
+8. 删除以下 \< ItemGroup > 元素：
 
     ```xml
 
@@ -1127,7 +1127,7 @@ ms.locfileid: "74299470"
 
     ```
 
-     Replace it with this \<ItemGroup> element:
+     将其替换为此 \<ItemGroup > 元素：
 
     ```xml
 
@@ -1143,7 +1143,7 @@ ms.locfileid: "74299470"
 
     ```
 
-9. Delete the following \< ItemGroup> element:
+9. 删除以下 \< ItemGroup > 元素：
 
     ```xml
 
@@ -1152,7 +1152,7 @@ ms.locfileid: "74299470"
     </ItemGroup>
     ```
 
-     Replace it with these \<ItemGroup> elements:
+     将其替换为这些 \<ItemGroup > 元素：
 
     ```xml
 
@@ -1176,7 +1176,7 @@ ms.locfileid: "74299470"
     <ClCompile Include="UnitTest.cpp"/>
     ```
 
-     Replace it with these \<CICompile> elements:
+     将其替换为这些 \<CICompile > 元素：
 
     ```xml
 

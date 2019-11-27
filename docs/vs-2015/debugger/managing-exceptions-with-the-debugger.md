@@ -1,5 +1,5 @@
 ---
-title: Managing Exceptions with the Debugger | Microsoft Docs
+title: 用调试器管理异常 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -69,7 +69,7 @@ ms.locfileid: "74301099"
   
  在 **“异常设置”** 窗口中，展开某个类别的异常的节点（例如，表示 .NET 异常的 **公共语言运行时异常**），并选中该类别内特定异常的复选框（例如， **System.AccessViolationException**）。 还可以选择整个类别的异常。  
   
- ![Checked AccessViolationException](../debugger/media/exceptionsettingscheckaccess.png "ExceptionSettingsCheckAccess")  
+ ![已检查 AccessViolationException](../debugger/media/exceptionsettingscheckaccess.png "ExceptionSettingsCheckAccess")  
   
  如果选中给定异常，则调试程序执行将在引发异常的任何位置中断，而不考虑它是否经过处理。 此时，该异常被称为第一次机会异常。 以下是几个应用场景示例：  
   
@@ -139,9 +139,9 @@ ms.locfileid: "74301099"
   
    如果想要将异常设置还原为默认值，则可以单击工具栏上的 **“还原”** 按钮：  
   
-   ![Restore defaults in Exception Settings](../debugger/media/restoredefaultexceptions.png "RestoreDefaultExceptions")  
+   ![还原异常设置中的默认值](../debugger/media/restoredefaultexceptions.png "RestoreDefaultExceptions")  
   
-### <a name="BKMK_UserUnhandled"></a> Setting the debugger to continue on user-unhandled exceptions  
+### <a name="BKMK_UserUnhandled"></a>将调试器设置为在用户未经处理的异常上继续  
  如果正在使用 [Just My Code](../debugger/just-my-code.md)调试 .NET 或 JavaScript 代码，则对于未在用户代码中进行处理但在其他地方进行了处理的异常，可以让调试程序不要执行中断操作。  
   
 1. 在 **“异常设置”** 窗口中，通过在窗口中右键单击打开上下文菜单，然后选择 **“显示列”** 。 （如果已禁用 **“仅我的代码”** ，则将看不到此命令。）  
@@ -152,7 +152,7 @@ ms.locfileid: "74301099"
   
    例如，ASP.NET Web 应用程序通过将异常转换为 HTTP 500 状态代码来处理异常（[ASP.NET API 中的异常处理](https://docs.microsoft.com/aspnet/web-api/overview/error-handling/exception-handling)），该方法可能无法帮助你确定异常的源。 在下面的示例中，用户代码对引发 `String.Format()` 的 <xref:System.FormatException>进行调用。 异常中断如下所示：  
   
-   ![breaks on user&#45;unhanlded exception](../debugger/media/exceptionunhandledbyuser.png "ExceptionUnhandledByUser")  
+   ![用户&#45;分隔符例外时中断](../debugger/media/exceptionunhandledbyuser.png "ExceptionUnhandledByUser")  
   
 ### <a name="adding-and-deleting-exceptions"></a>添加和删除异常  
  可以添加和删除异常。 通过选择异常并单击 **“异常设置”** 工具栏上的 **“删除”** 按钮，或右键单击异常并从上下文菜单选择 **“删除”** ，可以从任何类别删除任何类型的异常。 删除异常与取消选中异常的效果一样，即调试程序在该异常被引发时将不会执行中断操作。  
@@ -179,12 +179,12 @@ public class GenericException<T> : Exception
   
  则可以按照如下所示方式将异常添加到 **“异常设置”** 窗口中：  
   
- ![adding generic exception](../debugger/media/addgenericexception.png "AddGenericException")  
+ ![添加一般异常](../debugger/media/addgenericexception.png "AddGenericException")  
   
 ## <a name="see-also"></a>请参阅  
- [Continuing Execution After an Exception](../debugger/continuing-execution-after-an-exception.md)   
- [How to: Examine System Code After an Exception](../debugger/how-to-examine-system-code-after-an-exception.md)   
- [How to: Use Native Run-Time Checks](../debugger/how-to-use-native-run-time-checks.md)   
- [Using Run-Time Checks Without the C Run-Time Library](../debugger/using-run-time-checks-without-the-c-run-time-library.md)   
- [Exception Assistant](https://msdn.microsoft.com/library/992892ac-9d52-44cc-bf09-b44bfc5befeb)   
+ [在出现异常后继续执行](../debugger/continuing-execution-after-an-exception.md)   
+ [如何：在发生异常后检查系统代码](../debugger/how-to-examine-system-code-after-an-exception.md)   
+ [如何：使用本机运行时检查](../debugger/how-to-use-native-run-time-checks.md)   
+ [使用无 C 运行时库的运行时检查](../debugger/using-run-time-checks-without-the-c-run-time-library.md)   
+ [异常助手](https://msdn.microsoft.com/library/992892ac-9d52-44cc-bf09-b44bfc5befeb)   
  [调试器基础知识](../debugger/debugger-basics.md)

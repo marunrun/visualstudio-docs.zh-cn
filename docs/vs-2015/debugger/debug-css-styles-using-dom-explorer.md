@@ -1,5 +1,5 @@
 ---
-title: Debug CSS styles using DOM Explorer | Microsoft Docs
+title: 使用 DOM 资源管理器调试 CSS 样式 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -30,7 +30,7 @@ ms.locfileid: "74299496"
 # <a name="debug-css-styles-using-dom-explorer"></a>使用 DOM 资源管理器调试 CSS 样式
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Applies to Windows and Windows Phone](../Image/windows_and_phone_content.png "windows_and_phone_content")  
+适用于 Windows 和 Windows Phone] （.。。将 windows_and_phone_content .png "windows_and_phone_content"）  
   
  调试 Windows 应用商店应用、Windows Phone 应用商店应用以及使用 Visual Studio Tools for Apache Cordova 创建的应用程序时，可查看和更改选定 DOM 元素及其子元素的 CSS 规则。  
   
@@ -48,7 +48,7 @@ Applies to Windows and Windows Phone](../Image/windows_and_phone_content.png "wi
 - 使用“更改” 选项卡（仅限 Windows 应用商店和 Windows Phone 应用商店应用）可标识和跟踪在调试会话期间更改的 CSS 样式。  
   
 > [!TIP]
-> 在 **“样式”** 和 **“已计算”** 选项卡中作出的更改并不是永久性的。 停止调试后，这些更改将丢失。 To change source code and reload pages without stopping and restarting the debugger, refresh your app by using the  ![Refresh Windows app button](../debugger/media/js-refresh.png "JS_Refresh") button (**Refresh Windows app**) on the **Debug** toolbar (Windows Store and Windows Phone Store apps only). For more info, see [Refresh an app (JavaScript)](../debugger/refresh-an-app-javascript.md).  
+> 在 **“样式”** 和 **“已计算”** 选项卡中作出的更改并不是永久性的。 停止调试后，这些更改将丢失。 若要在不停止和重启调试器的情况下更改源代码并重新加载页面，请使用 "**调试**" 工具栏上的 "![刷新 windows 应用程序" 按钮](../debugger/media/js-refresh.png "JS_Refresh")（"**刷新 windows 应用**程序"）刷新应用程序（仅限 Windows 应用商店和 Windows Phone 应用商店应用）。 有关详细信息，请参阅[刷新应用（JavaScript）](../debugger/refresh-an-app-javascript.md)。  
   
 ## <a name="example-of-fixing-a-css-rule"></a>修复 CSS 规则的示例  
  此示例演示如何检查 CSS 规则和调试样式问题。 在此示例中，假设你要更改用于显示 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] “拆分应用”模板中的组标题的字体颜色。  
@@ -91,7 +91,7 @@ Applies to Windows and Windows Phone](../Image/windows_and_phone_content.png "wi
   
 4. 在 **“调试”** 工具栏的下拉列表中选择 **“模拟器”** （ **“本地计算机”** 是默认值）。  
   
-     ![Select debug target list](../debugger/media/js-select-target.png "JS_Select_Target")  
+     ![选择调试目标列表](../debugger/media/js-select-target.png "JS_Select_Target")  
   
 5. 按 F5 以在调试模式下运行应用程序。  
   
@@ -100,14 +100,14 @@ Applies to Windows and Windows Phone](../Image/windows_and_phone_content.png "wi
     > [!TIP]
     > 在模拟器中显示应用程序后，请将模拟器放置在 Visual Studio 窗口的旁边，以便你能够立即看到选择的结果以及对 CSS 样式所做的更改。  
   
-6. 切换到 Visual Studio，然后在 DOM 资源管理器中单击 **“选择元素”** （或按 Ctrl+B）。 这将更改选择模式以使你可通过单击某项来选择该项，然后将应用程序置于前台。 单击后模式即恢复原样。 下面是 **“选择元素”** 按钮。 ![Select Element Button in DOM Explorer](../debugger/media/js-dom-select-element-button.png "JS_DOM_Select_Element_Button")  
+6. 切换到 Visual Studio，然后在 DOM 资源管理器中单击 **“选择元素”** （或按 Ctrl+B）。 这将更改选择模式以使你可通过单击某项来选择该项，然后将应用程序置于前台。 单击后模式即恢复原样。 下面是 **“选择元素”** 按钮。 ![DOM 资源管理器中的 "选择元素" 按钮](../debugger/media/js-dom-select-element-button.png "JS_DOM_Select_Element_Button ")  
   
     > [!TIP]
-    > 也可直接在 DOM 资源管理器中选择 HTML 元素。 For more info on selecting elements, see [Quickstart: Debug HTML and CSS](../debugger/quickstart-debug-html-and-css.md).  
+    > 也可直接在 DOM 资源管理器中选择 HTML 元素。 有关选择元素的详细信息，请参阅[快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md)。  
   
 7. 在模拟器主页的左面板中，将鼠标悬停在列表中第一项的标题 **“Group Title: 1”** 上。 标题将会突出显示，如下所示：  
   
-     ![Using the Select Element button](../debugger/media/js-css-select-element.png "JS_CSS_Select_Element")  
+     ![使用 "选择元素" 按钮](../debugger/media/js-css-select-element.png "JS_CSS_Select_Element")  
   
     > [!NOTE]
     > Windows Phone 仿真程序仅支持部分通过悬停而突出显示的元素。  
@@ -120,7 +120,7 @@ Applies to Windows and Windows Phone](../Image/windows_and_phone_content.png "wi
   
      当你在 DOM 资源管理器中选择 H4 元素时，DOM 资源管理器的选项卡将立即显示与 H4 元素关联的规则。 **“已计算”** 选项卡如下所示，其中打开了 `color` 属性：  
   
-     ![Trace Styles tab in DOM Explorer](../debugger/media/js-css-styles.png "JS_CSS_Styles")  
+     ![DOM 资源管理器中的 "跟踪样式" 选项卡](../debugger/media/js-css-styles.png "JS_CSS_Styles")  
   
      此视图提供有关与 `color` 样式相关的规则的有用信息，如以下各项：  
   
@@ -136,13 +136,13 @@ Applies to Windows and Windows Phone](../Image/windows_and_phone_content.png "wi
   
 9. 清除 `color` 样式的第一个匹配项的复选框，该匹配项适用于 `.itemspage .itemslist .item .item-overlay .item-title` 选择器。 此时，在模拟器中，你会看到所有项标题的颜色都按要求变为橙色，并且将不再重写已在 CSS 中修改的选择器 `.itemspage .itemslist .item`（即，不再对该选择器应用带删除线的文本）。 这是清除复选框后的 **“已计算”** 选项卡。  
   
-     ![The Computed tab after updating the CSS style](../debugger/media/js-css-styles-fixed.png "JS_CSS_Styles_Fixed")  
+     ![更新 CSS 样式后的 "已计算" 选项卡](../debugger/media/js-css-styles-fixed.png "JS_CSS_Styles_Fixed")  
   
 10. 选择 **“更改”** 选项卡。  
   
      使用 **“更改”** 选项卡可标识和跟踪在调试会话期间所做的样式更改。 下图显示了 `.itemspage .itemslist .item .item-overlay .item-title` “更改” **选项卡中的** 选择器（现已覆盖）。  
   
-     ![Changes tab of the DOM Explorer](../debugger/media/js-css-styles-changes.png "JS_CSS_Styles_Changes")  
+     ![DOM 资源管理器的 "更改" 选项卡](../debugger/media/js-css-styles-changes.png "JS_CSS_Styles_Changes")  
   
 11. 你还可手动编辑 CSS 样式值并使用 **“样式”** 选项卡查看即时结果。  
   
@@ -154,10 +154,10 @@ Applies to Windows and Windows Phone](../Image/windows_and_phone_content.png "wi
   
 15. 使用键盘可修改此值。 将此值更改为 `rgb(255, 255, 0, 0.87)`，然后按 Enter。 随后，模拟器中项标题的颜色全部变为黄色。  
   
-16. To make changes to the source CSS file, click the **items.css** link on the **Styles** tab. This opens items.css, where you can change the value of the `color` style in your app code. To refresh the app without stopping and restarting the debugger, click the  ![Refresh Windows app button](../debugger/media/js-refresh.png "JS_Refresh") (**Refresh Windows app**) button on the **Debug** toolbar.  
+16. 若要更改源 CSS 文件，请单击 "**样式**" 选项卡上的 " **items** " 链接。这将打开 "items"，您可以在其中更改应用程序代码中 `color` 样式的值。 若要在不停止和重启调试器的情况下刷新应用程序，请单击 "**调试**" 工具栏上的 "![刷新 windows 应用程序" 按钮](../debugger/media/js-refresh.png "JS_Refresh")（"**刷新 windows 应用程序**"）。  
   
 ## <a name="see-also"></a>请参阅  
- [Quickstart: Debug HTML and CSS](../debugger/quickstart-debug-html-and-css.md)   
- [Debug layout using DOM Explorer](../debugger/debug-layout-using-dom-explorer.md)   
- [View DOM event listeners](../debugger/view-dom-event-listeners.md)   
+ [快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md)   
+ [使用 DOM 资源管理器调试布局](../debugger/debug-layout-using-dom-explorer.md)   
+ [查看 DOM 事件侦听器](../debugger/view-dom-event-listeners.md)   
  [产品支持和辅助功能](https://go.microsoft.com/fwlink/?LinkId=253502)

@@ -1,5 +1,5 @@
 ---
-title: Installing database systems, tools, and samples | Microsoft Docs
+title: 安装数据库系统、工具和示例 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -27,31 +27,31 @@ ms.locfileid: "74299608"
 # <a name="installing-database-systems-tools-and-samples"></a>安装数据库系统、工具和示例
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio itself does not include any database systems other than those it uses internally. To develop a data-connected application in Visual Studio, you typically install the database system on your local development machine, and then deploy the application and database to a production environment when they are ready. For the database system to be accessible from .NET applications and to be visible in Visual Studio data tools windows, it must have an ADO.NET data provider. A provider must specifically support Entity Framework if you plan to use Entity data models in your .NET application.     Many providers are offered through the NuGet Package Manager or through the Visual Studio Gallery.
+Visual Studio 本身不包括它在内部使用的任何数据库系统。 若要在 Visual Studio 中开发数据连接的应用程序，通常需要在本地开发计算机上安装数据库系统，然后将应用程序和数据库部署到生产环境中。 为了使数据库系统可从 .NET 应用程序访问，并在 Visual Studio 数据工具窗口中可见，它必须具有 ADO.NET 数据提供程序。 如果计划在 .NET 应用程序中使用实体数据模型，则提供程序必须专门支持实体框架。     许多提供程序是通过 NuGet 包管理器或 Visual Studio 库提供的。
 
- For SQL development, ensure that you have SQL Server Data Tools installed in Visual Studio. Click the **View** menu. If you don't see SQL Server Object Explorer, go to Control Panel and change Visual Studio. In the installer, select **Microsoft SQL Server Data Tools**.
+ 对于 SQL 开发，请确保已在 Visual Studio 中安装 SQL Server Data Tools。 单击 "**查看**" 菜单。 如果看不到 SQL Server 对象资源管理器，请转到 "控制面板"，然后更改 Visual Studio。 在安装程序中，选择 " **Microsoft SQL Server Data Tools**"。
 
- If you are using Azure Storage APIs,   install the Azure storage emulators on your local machine during development in order to avoid charges until you are ready to deploy to production. For more information, see [Use the Azure Storage Emulator for Development and Testing](https://azure.microsoft.com/documentation/articles/storage-use-emulator/).
+ 如果使用的是 Azure 存储 Api，请在开发过程中在本地计算机上安装 Azure 存储模拟器，以避免收费，直到准备好部署到生产环境。 有关详细信息，请参阅[使用 Azure 存储模拟器进行开发和测试](https://azure.microsoft.com/documentation/articles/storage-use-emulator/)。
 
- The following list includes some of the more popular database systems that can be used in Visual Studio projects. 表格并不详尽。 For a list of third-party vendors that offer ADO.NET data providers that enable deep integration with Visual Studio tooling, see [ADO.NET Data Providers](https://msdn.microsoft.com/library/dd363565.aspx).
+ 下面的列表包含一些可在 Visual Studio 项目中使用的更常用的数据库系统。 表格并不详尽。 有关提供 ADO.NET 数据提供程序的第三方供应商列表，这些提供程序可实现与 Visual Studio 工具的深度集成，请参阅[ADO.NET 数据提供程序](https://msdn.microsoft.com/library/dd363565.aspx)。
 
 ### <a name="microsoft-sql-server"></a>Microsoft SQL Server
- SQL Server is the Microsoft flagship database offering. SQL Server 2016 delivers breakthrough performance, advanced security, and rich, integrated reporting and analytics. It ships in various editions that are designed for different uses: from highly scalable, high-performance business analytics, to use on a single computer. SQL Server Express is a full-featured edition of SQL Server that is tailored for redistribution and embedding.  LocalDB is a simplified edition of SQL Server Express that requires no configuration and runs in your application's process. You can download either or both products from [the SQL Server Express download page](https://www.microsoft.com/sql-server/sql-server-editions-express). Many of the SQL examples in this section use SQL Server LocalDB. SQL Server Management Studio (SSMS) is a stand-alone database management application that has more functionality than what is provided in Visual Studio SQL Server Object Explorer. You can get SSMS from the previous link.
+ SQL Server 是 Microsoft 旗舰数据库产品/服务。 SQL Server 2016 提供突破性的性能、高级安全性以及丰富的、集成的报告和分析。 它随附在为不同用途设计的各种版本中：从高度可缩放的高性能业务分析，到一台计算机上使用。 SQL Server Express 是一种功能齐全的 SQL Server 版本，专为重新分发和嵌入进行定制。  LocalDB 是 SQL Server Express 简化版本，无需进行任何配置，就能在应用程序的进程中运行。 你可以从["SQL Server Express 下载" 页](https://www.microsoft.com/sql-server/sql-server-editions-express)下载其中一个或两个产品。 本节中的许多 SQL 示例使用 SQL Server LocalDB。 SQL Server Management Studio （SSMS）是一个独立的数据库管理应用程序，其功能比 Visual Studio 中提供的功能更多 SQL Server 对象资源管理器。 可以从上一个链接获取 SSMS。
 
 ### <a name="oracle"></a>Oracle
- You can download a paid or free edition of the Oracle database from the [Oracle Technology Network](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index-092322.html) page. For design-time support for Entity Framework and TableAdapters, you will need the [Oracle Developer Tools for Visual Studio](https://www.oracle.com/database/technologies/developer-tools/visual-studio/). Other official Oracle products, including the Oracle Instant Client, are available through the NuGet Package Manager.  You can download Oracle sample schemas by following the instructions in the [Oracle Online Documentation](https://docs.oracle.com/cd/E11882_01/server.112/e10831/toc.htm).
+ 你可以从 " [Oracle 技术网络](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index-092322.html)" 页下载 oracle 数据库的付费或免费版本。 对于实体框架和 Tableadapter 的设计时支持，将需要[Oracle 开发人员工具 For Visual Studio](https://www.oracle.com/database/technologies/developer-tools/visual-studio/)。 其他官方 Oracle 产品（包括 Oracle 即时客户端）可通过 NuGet 包管理器获得。  可以按照[Oracle 联机文档](https://docs.oracle.com/cd/E11882_01/server.112/e10831/toc.htm)中的说明下载 oracle 示例架构。
 
 ### <a name="mysql"></a>MySQL
- MySQL is a popular open-source database system that is widely used in enterprises and websites. Downloads for MySQL, MySQL for Visual Studio, and related products are at [MySQL on Windows](https://www.mysql.com/why-mysql/windows/).  Third parties offer various Visual Studio extensions and stand-alone management applications for MySQL. You can browse the offerings in the NuGet Package Manager (**Tools** > **NuGet Package Manager** > **Manage NuGet Packages for Solution**).
+ MySQL 是一种常用的开源数据库系统，广泛用于企业和网站。 Mysql、Visual Studio 和相关产品的下载在[Windows 上的 mysql](https://www.mysql.com/why-mysql/windows/)中。  第三方提供各种 Visual Studio 扩展和 MySQL 独立管理应用程序。 你可以在 NuGet 包管理器中浏览产品/**服务** > **Nuget 包管理器** > **管理解决方案的 NuGet 包**）。
 
-### <a name="postgresql"></a>postgresql
- PostgreSQL is a free, open-source object relational database system. To install it on Windows, you can download it from the [PostgreSQL download page](http://www.postgresql.org/download/windows/).  You can also build PostgreSQL from the source code.  The PostgreSQL core system includes a C language interface. Many third parties provide NuGet packages for using PostgreSQL from .NET applications.  You can browse the offerings in the NuGet Package Manager (**Tools** > **NuGet Package Manager** > **Manage NuGet Packages for Solution**). Perhaps the most popular package is provided by [npgsql.org](http://www.npgsql.org/).
+### <a name="postgresql"></a>PostgreSQL
+ PostgreSQL 是一个免费的开源对象关系数据库系统。 若要在 Windows 上安装，可以从[PostgreSQL 下载页](http://www.postgresql.org/download/windows/)下载。  还可以从源代码生成 PostgreSQL。  PostgreSQL 核心系统包含 C 语言接口。 许多第三方提供了用于从 .NET 应用程序使用 PostgreSQL 的 NuGet 包。  你可以在 NuGet 包管理器中浏览产品/**服务** > **Nuget 包管理器** > **管理解决方案的 NuGet 包**）。 最常见的包可能由[npgsql.org](http://www.npgsql.org/)提供。
 
 ### <a name="sqlite"></a>SQLite
- SQLite is an embedded SQL database engine that runs in the application's own process. You can download it from the [SQLite download page](http://www.sqlite.org/download.html). Many third-party NuGet packages for SQLite are also available. You can browse the offerings in the NuGet Package Manager (**Tools** > **NuGet Package Manager** > **Manage NuGet Packages for Solution**).
+ SQLite 是在应用程序自身的进程中运行的嵌入式 SQL 数据库引擎。 可以从[SQLite 下载页面](http://www.sqlite.org/download.html)下载。 还提供了许多用于 SQLite 的第三方 NuGet 包。 你可以在 NuGet 包管理器中浏览产品/**服务** > **Nuget 包管理器** > **管理解决方案的 NuGet 包**）。
 
 ### <a name="firebird"></a>Firebird
- Firebird is an open-source SQL database system. You can download it from the [Firebird download page](http://firebirdsql.org/en/downloads/). An ADO.NET data provider is available through the NuGet Package Manager.
+ Firebird 是一个开源 SQL 数据库系统。 可以从[Firebird 下载页](http://firebirdsql.org/en/downloads/)下载。 可以通过 NuGet 包管理器使用 ADO.NET 数据提供程序。
 
 ## <a name="see-also"></a>请参阅
  [如何确定 SQL Server 及其组件的版本](https://support.microsoft.com/help/321185/how-to-determine-the-version-edition-and-update-level-of-sql-server-an)

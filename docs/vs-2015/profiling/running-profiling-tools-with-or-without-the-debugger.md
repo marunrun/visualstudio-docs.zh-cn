@@ -74,11 +74,11 @@ Visual Studio 现提供一些性能工具的选择，其中一些（如“CPU �
   
 1. 在 Visual Studio 中打开项目。  
   
-2. On the **Debug** menu, choose **Performance Profiler...** (Shortcut key: Alt + F2).  
+2. 在 "**调试**" 菜单上，选择 "**性能探查器 ...** " （快捷键： Alt + F2）。  
   
 3. 在诊断启动页上，选择要在会话中运行的一个或多个工具。 将仅显示适用于项目类型、操作系统和编程语言的工具。 选择诊断工具时，将禁用对不能在同一诊断会话中运行的工具的选择。 对于 C# Windows 通用应用，你的选择可能如下所示：  
   
-    ![Select the diagnostic tools](../profiling/media/diag-selecttool.png "DIAG_SelectTool")  
+    ![选择诊断工具](../profiling/media/diag-selecttool.png "DIAG_SelectTool")  
   
 4. 若要启动诊断会话，请单击“开始”。  
   
@@ -86,7 +86,7 @@ Visual Studio 现提供一些性能工具的选择，其中一些（如“CPU �
   
     在运行会话时，一些工具将在诊断工具启动页上显示实时数据图。  
   
-    ![Collect data on the Performance and Diagnostic pag](../profiling/media/pdhub-collectdata.png "PDHUB_CollectData")  
+    ![收集性能和诊断 pag 的数据](../profiling/media/pdhub-collectdata.png "PDHUB_CollectData")  
   
 6. 若要结束诊断会话，请单击“停止收集”。  
   
@@ -94,10 +94,10 @@ Visual Studio 现提供一些性能工具的选择，其中一些（如“CPU �
   
    还可从诊断工具启动页上的最近打开列表打开已保存的 .diagnosis 会话文件。  
   
-   ![Open a saved diagnosis session file](../profiling/media/pdhub-openexistingdiagsession.png "PDHUB_OpenExistingDiagSession")  
+   ![打开保存的诊断会话文件](../profiling/media/pdhub-openexistingdiagsession.png "PDHUB_OpenExistingDiagSession")  
   
 ## <a name="the-profiling-report"></a>分析报告  
- ![Diagnostic tools report](../profiling/media/diag-report.png "DIAG_Report")  
+ ![诊断工具报告](../profiling/media/diag-report.png "DIAG_Report")  
   
 |||  
 |-|-|  
@@ -111,17 +111,17 @@ Visual Studio 现提供一些性能工具的选择，其中一些（如“CPU �
 ## <a name="setting-the-analysis-target-to-another-device"></a>将分析目标设置为其他设备  
  除了从 Visual Studio 项目启动应用以外，还可以在备用目标上运行诊断会话。 例如，你可能需要诊断有关从 Windows 应用商店安装的应用的版本的性能问题。  
   
- ![Choose diagnostic tools analysis target](../profiling/media/pdhub-chooseanalysistarget.png "PDHUB_ChooseAnalysisTarget")  
+ ![选择诊断工具分析目标](../profiling/media/pdhub-chooseanalysistarget.png "PDHUB_ChooseAnalysisTarget")  
   
  可以启动已安装在设备上的应用，也可以将诊断工具附加到已在运行的一些应用上。 选择“运行应用”或“安装应用”后，从发现指定部署目标上的应用的列表选择应用。  
   
- ![Choose a running or installed app for diagnosis](../profiling/media/pdhub-selectrunningapp.png "PDHUB_SelectRunningApp")  
+ ![选择正在运行的或已安装的应用程序进行诊断](../profiling/media/pdhub-selectrunningapp.png "PDHUB_SelectRunningApp")  
   
  如果你选择“Internet Explorer”，请指定 URL，并且你可以更改电话部署目标。  
   
- ![Specify the url to display in Internet Explorer](../profiling/media/pdhub-choosephoneanalysistarget.png "PDHUB_ChoosePhoneAnalysisTarget")  
+ ![指定要在 Internet Explorer 中显示的 url](../profiling/media/pdhub-choosephoneanalysistarget.png "PDHUB_ChoosePhoneAnalysisTarget")  
   
-## <a name="remote-debugging"></a>Remote Debugging  
+## <a name="remote-debugging"></a>远程调试  
  要在远程 PC 或平板电脑上运行诊断会话，需要在远程目标上安装和运行 Visual Studio 远程工具。 对于桌面应用，请参阅[远程调试](../debugger/remote-debugging.md)。  对于 Windows 通用应用，请参阅[在远程计算机上运行 Windows 应用商店应用](../debugger/run-windows-store-apps-on-a-remote-machine.md)。  
   
 ## <a name="blog-posts-and-msdn-articles-from-the-diagnostics-development-team"></a>诊断开发团队的博客文章和 MSDN 文章  

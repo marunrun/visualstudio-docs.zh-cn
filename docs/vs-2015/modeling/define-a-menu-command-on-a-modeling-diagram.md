@@ -1,5 +1,5 @@
 ---
-title: Define a menu command on a modeling diagram | Microsoft Docs
+title: 在建模图上定义菜单命令 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -31,9 +31,9 @@ ms.locfileid: "74299272"
 ## <a name="defining-the-menu-command"></a>定义菜单命令
  要为 UML 设计器创建菜单命令，必须创建一个用于定义命令行为的类，并将该类嵌入 Visual Studio 集成扩展 (VSIX) 中。 VSIX 用作可安装该命令的容器。 有两种替代方法可以定义菜单命令：
 
-- **Create a menu command in its own VSIX using a project template.** 此方法更快。 如果不希望将菜单命令与其他类型的扩展（如验证扩展、自定义工具箱项或笔势处理程序）组合在一起，可以采用此方法。
+- **使用项目模板在其自身 VSIX 中创建菜单命令。** 此方法更快。 如果不希望将菜单命令与其他类型的扩展（如验证扩展、自定义工具箱项或笔势处理程序）组合在一起，可以采用此方法。
 
-- **Create separate menu command and VSIX projects.** 如果希望将多种类型的扩展组合到同一个 VSIX 中，可以采用此方法。 例如，如果菜单命令要求模型遵守特定的约束，则可以将该菜单命令作为一种验证方法嵌入同一 VSIX 中。
+- **创建单独的菜单命令和 VSIX 项目。** 如果希望将多种类型的扩展组合到同一个 VSIX 中，可以采用此方法。 例如，如果菜单命令要求模型遵守特定的约束，则可以将该菜单命令作为一种验证方法嵌入同一 VSIX 中。
 
 #### <a name="to-create-a-menu-command-in-its-own-vsix"></a>若要在自己的 VSIX 中创建菜单命令
 
@@ -47,7 +47,7 @@ ms.locfileid: "74299272"
 
 4. 按 F5 测试菜单命令。 有关详细信息，请参阅 [执行菜单命令](#Executing)。
 
-5. Install the menu command on another computer by copying the file **bin\\\*\\\*.vsix** that is built by your project. 有关详细信息，请参阅 [安装和卸载扩展](#Installing)。
+5. 在另一台计算机上安装菜单命令，方法是：将文件 bin 复制\\由项目生成的 **\*\\\*。** 有关详细信息，请参阅 [安装和卸载扩展](#Installing)。
 
    下面是替代过程：
 
@@ -65,14 +65,14 @@ ms.locfileid: "74299272"
 
 2. 将下列引用添加到项目中。
 
-   |                                                                                                    参考                                                                                                    |                                                                                                  允许执行的操作                                                                                                  |
+   |                                                                                                    引用                                                                                                    |                                                                                                  允许执行的操作                                                                                                  |
    |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |                                                                                        System.ComponentModel.Composition                                                                                        |                                         通过使用 [Managed Extensibility Framework (MEF)](https://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde)定义组件。                                          |
    |                                                                                      Microsoft.VisualStudio.Uml.Interfaces                                                                                      |                                                                                        读取并更改模型元素的属性。                                                                                         |
    |                                                                             Microsoft.VisualStudio.ArchitectureTools.Extensibility                                                                              |                                                                                      在关系图上创建模型元素、修改形状。                                                                                       |
-   |                                                                                  Microsoft.VisualStudio.Modeling.Sdk.[版本号]                                                                                  | 定义模型事件处理程序。<br /><br /> 将一系列更改封装到模型中。 For more information, see [Link UML model updates by using transactions](../modeling/link-uml-model-updates-by-using-transactions.md). |
+   |                                                                                  Microsoft.VisualStudio.Modeling.Sdk.[版本号]                                                                                  | 定义模型事件处理程序。<br /><br /> 将一系列更改封装到模型中。 有关详细信息，请参阅[使用事务链接 UML 模型更新](../modeling/link-uml-model-updates-by-using-transactions.md)。 |
    |                                                            Microsoft.VisualStudio.Modeling.Sdk.Diagrams.[version]<br /><br /> （并不总是需要）                                                             |                                                                                   访问笔势处理程序的其他关系图元素。                                                                                   |
-   | Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer<br /><br /> 仅层关系图上的命令需要。 For more information, see [Extend layer diagrams](../modeling/extend-layer-diagrams.md). |                                                                                             在层关系图上定义命令。                                                                                              |
+   | Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer<br /><br /> 仅层关系图上的命令需要。 有关详细信息，请参阅[扩展层关系图](../modeling/extend-layer-diagrams.md)。 |                                                                                             在层关系图上定义命令。                                                                                              |
 
 3. 将类文件添加到项目中，并将其内容设置为下面的代码。
 
@@ -166,13 +166,13 @@ ms.locfileid: "74299272"
 
           = *你的类库项目*
 
-## <a name="Implementing"></a> Implementing the Menu Command
+## <a name="Implementing"></a>实现菜单命令
  该菜单命令类为 <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> 实现所需的方法。
 
 |||
 |-|-|
 |`string Text { get; }`|返回菜单项的标签。|
-|`void QueryStatus(IMenuCommand command);`|当用户在关系图中右击时调用。<br /><br /> 此方法不应更改模型。<br /><br /> 使用 `DiagramContext.CurrentDiagram.SelectedShapes` 确定是否显示并启用该命令。<br /><br /> 设置：<br /><br /> -   `command.Visible` to `true` if the command must appear in the menu when the user right-clicks in the diagram<br />-   `command.Enabled` to `true` if the user can click the command in the menu<br />-   `command.Text` to set the menu label dynamically|
+|`void QueryStatus(IMenuCommand command);`|当用户在关系图中右击时调用。<br /><br /> 此方法不应更改模型。<br /><br /> 使用 `DiagramContext.CurrentDiagram.SelectedShapes` 确定是否显示并启用该命令。<br /><br /> 设置：<br /><br /> 如果用户在关系图中右键单击时该命令必须出现在菜单中，-   `command.Visible` `true`<br />如果用户可以单击菜单中的命令，则 -   `command.Enabled` `true`<br />-   `command.Text` 动态设置菜单标签|
 |`void Execute (IMenuCommand command);`|当用户单击菜单项（如果它可见并已启用）时调用。|
 
 ### <a name="accessing-the-model-in-code"></a>访问代码中的模型
@@ -196,20 +196,20 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 ```
 
 ### <a name="navigating-and-updating-the-model"></a>导航和更新模型
- 可通过 API 获得 UML 模型的所有元素。 可以从当前选定内容或模型的根中访问所有其他元素。 For more information, see [Navigate the UML model](../modeling/navigate-the-uml-model.md) and [Programming with the UML API](../modeling/programming-with-the-uml-api.md).
+ 可通过 API 获得 UML 模型的所有元素。 可以从当前选定内容或模型的根中访问所有其他元素。 有关详细信息，请参阅[导航 uml 模型](../modeling/navigate-the-uml-model.md)和[用 uml API 编程](../modeling/programming-with-the-uml-api.md)。
 
- If you are dealing with a sequence diagram, see also [Edit UML sequence diagrams by using the UML API](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md).
+ 如果处理的是序列图，另请参阅[使用 UML API 编辑 uml 序列图](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md)。
 
  还可以利用 API 执行以下操作：更改元素的属性、删除元素和关系以及创建新的元素和关系。
 
- 默认情况下，将在单独的事务中执行你在 Execute 方法中所做的每项更改。 用户将能够单独撤消每项更改。 If you want to group the changes into a single transaction, use a <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ILinkedUndoTransaction> as described in [Link UML model updates by using transactions](../modeling/link-uml-model-updates-by-using-transactions.md).
+ 默认情况下，将在单独的事务中执行你在 Execute 方法中所做的每项更改。 用户将能够单独撤消每项更改。 如果要将更改分组到单个事务中，请使用 "[使用事务链接 UML 模型更新](../modeling/link-uml-model-updates-by-using-transactions.md)" 中所述的 <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ILinkedUndoTransaction>。
 
 ### <a name="use-the-ui-thread-for-updates"></a>使用 UI 线程进行更新
  在某些情况下，从后台线程对模型进行更新会很有用。 例如，如果你的命令从速度较慢的资源加载数据，则可以在后台线程中执行加载，以便用户能够查看正在进行的更改，并在必要时取消该操作。
 
- 但请注意，该模型库并不是线程安全的。 应始终使用用户界面 (UI) 线程进行更新，如果可能，应阻止用户在后台操作正在进行的过程中执行编辑。 For an example, see [Update a UML model from a background thread](../modeling/update-a-uml-model-from-a-background-thread.md).
+ 但请注意，该模型库并不是线程安全的。 应始终使用用户界面 (UI) 线程进行更新，如果可能，应阻止用户在后台操作正在进行的过程中执行编辑。 有关示例，请参阅[从后台线程更新 UML 模型](../modeling/update-a-uml-model-from-a-background-thread.md)。
 
-## <a name="Executing"></a> Executing the Menu Command
+## <a name="Executing"></a>执行菜单命令
  出于测试目的，在调试模式下执行命令。
 
 #### <a name="to-test-the-menu-command"></a>测试菜单命令
@@ -222,7 +222,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
     - 如果你有多个项目，请确保将 VSIX 项目设置为解决方案的启动项目。
 
-    - 在“解决方案资源管理器”中，在启动或唯一项目的快捷菜单上选择“属性”。 In the project properties editor, select the **Debug** tab. Make sure that the string in the **Start external program** field is the full pathname of [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], typically:
+    - 在“解决方案资源管理器”中，在启动或唯一项目的快捷菜单上选择“属性”。 在项目属性编辑器中，选择 "**调试**" 选项卡。请确保 "**启动外部程序**" 字段中的字符串是 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的完整路径名，通常为：
 
          `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
@@ -236,11 +236,11 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
     - `Import` 和 `Export` 特性的参数有效。
 
-    - The `QueryStatus` method is not setting the `command`.`Enabled` or `Visible` fields to `false`.
+    - `QueryStatus` 方法未设置 `command`。`Enabled` 或 `Visible` 要 `false`的字段。
 
     - 正在使用的模型关系图的类型（UML 类、序列等）作为菜单命令类特性（ `[ClassDesignerExtension]`、 `[SequenceDesignerExtension]` 等）之一列出。
 
-## <a name="Installing"></a> Installing and uninstalling an extension
+## <a name="Installing"></a>安装和卸载扩展
  你可以在自己的计算机和其他计算机上安装 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 扩展。
 
 #### <a name="to-install-an-extension"></a>若要安装扩展
@@ -249,11 +249,11 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
     1. 在“解决方案资源管理器”中，在 VSIX 项目的快捷菜单上，选择“在 Windows 资源管理器中打开文件夹”。
 
-    2. Locate the file **bin\\\*\\** _YourProject_ **.vsix**
+    2. **\*\\** _项目_**中**查找文件 bin\\
 
 2. 将 **.vsix** 文件复制到要安装该扩展的目标计算机。 该计算机可以是自己的计算机或其他计算机。
 
-     The target computer must have one of the editions of [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] that you specified in **source.extension.vsixmanifest**.
+     目标计算机必须具有你在**source.extension.vsixmanifest**中指定的 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 版本之一。
 
 3. 在目标计算机上，打开 **.vsix** 文件，例如双击打开。
 
@@ -263,7 +263,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
 #### <a name="to-uninstall-an-extension"></a>若要卸载扩展
 
-1. 在“工具” 菜单上，选择“扩展和更新”。
+1. 在 **“工具”** 菜单上，选择 **“扩展和更新”** 。
 
 2. 展开“已安装的扩展”。
 
@@ -271,7 +271,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
    在极少数情况下，有错误的扩展无法加载并在错误窗口中创建报告，但不显示在扩展管理器中。 在这种情况下，可以通过从以下位置删除文件来删除扩展：
 
-   *%LocalAppData%* **\Local\Microsoft\VisualStudio\\[version]\Extensions**
+   *% LocalAppData%* **\Local\Microsoft\VisualStudio\\[version] \Extensions**
 
 ## <a name="MenuExample"></a> 示例
  下面的示例演示一个菜单命令的代码，该命令用于交换类图中两个元素的名称。 此代码必须在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展项目中生成，并按前面几节所述进行安装。
@@ -363,4 +363,4 @@ namespace SwapClassNames
 ```
 
 ## <a name="see-also"></a>请参阅
- [Define and install a modeling extension](../modeling/define-and-install-a-modeling-extension.md) [Extend UML models and diagrams](../modeling/extend-uml-models-and-diagrams.md) [Define a gesture handler on a modeling diagram](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md) [Define a custom modeling toolbox item](../modeling/define-a-custom-modeling-toolbox-item.md) [Define validation constraints for UML models](../modeling/define-validation-constraints-for-uml-models.md) [Edit UML sequence diagrams by using the UML API](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md) [Programming with the UML API](../modeling/programming-with-the-uml-api.md) [Sample: Command to Align Shapes on a UML Diagram](https://go.microsoft.com/fwlink/?LinkID=213809)
+ [定义和安装建模扩展](../modeling/define-and-install-a-modeling-extension.md)[扩展 UML 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)[在建模图上定义笔势处理程序](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md)[定义自定义建模工具箱项](../modeling/define-a-custom-modeling-toolbox-item.md)定义[uml 模型的验证约束](../modeling/define-validation-constraints-for-uml-models.md)[编辑 uml 序列图通过使用 Uml Api](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md) [编程和 Uml api](../modeling/programming-with-the-uml-api.md) [示例：用于对齐 uml 关系图上的形状的命令](https://go.microsoft.com/fwlink/?LinkID=213809)

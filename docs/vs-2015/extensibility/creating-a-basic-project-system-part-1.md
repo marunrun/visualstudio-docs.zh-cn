@@ -1,5 +1,5 @@
 ---
-title: Creating a Basic Project System, Part 1 | Microsoft Docs
+title: 创建基本项目系统，第1部分 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -22,67 +22,67 @@ ms.locfileid: "74295490"
 # <a name="creating-a-basic-project-system-part-1"></a>创建基本项目系统，第 1 部分
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-In Visual Studio, projects are the containers that developers use to organize source code files and other assets. Projects appear as children of solutions in the **Solution Explorer**. Projects let you organize, build, debug, and deploy source code and create references to Web services, databases, and other resources.  
+在 Visual Studio 中，项目是开发人员用来组织源代码文件和其他资产的容器。 项目在**解决方案资源管理器**中显示为解决方案的子项目。 项目使你可以组织、构建、调试和部署源代码，并创建对 Web 服务、数据库和其他资源的引用。  
   
- Projects are defined in project files, for example a .csproj file for a Visual C# project. You can create your own project type that has your own project file name extension. For more information about project types, see [Project Types](../extensibility/internals/project-types.md).  
-  
-> [!NOTE]
-> If you need to extend Visual Studio with a custom project type, we strongly recommend leveraging the [Visual Studio Project System](https://github.com/Microsoft/VSProjectSystem) which has a number of advantages over building a project system from scratch:  
-> 
-> - Easier onboarding.  Even a basic project system requires tens of thousands of lines of code.  Leveraging CPS reduces the onboarding cost to a few clicks before you are ready to customize it to your needs.  
->   - Easier maintenance.  By leveraging CPS, you only need to maintain your own scenarios.  We handle the upkeep of all of the project system infrastructure.  
-> 
->   If you need to target versions of Visual Studio older than Visual Studio 2013, you will not be able to leverage CPS in a Visual Studio extension.  If that is the case, this walkthrough is a good place to get started.  
-  
- This walkthrough shows you how to create a project type that has the project file name extension .myproj. This walkthrough borrows from the existing Visual C# project system.  
+ 项目在项目文件中定义，例如，Visual C#项目的 .csproj 文件。 你可以创建自己的项目类型，它具有自己的项目文件扩展名。 有关项目类型的详细信息，请参阅[项目类型](../extensibility/internals/project-types.md)。  
   
 > [!NOTE]
-> For an end-to-end sample of a complete language project system, see the IronPython Sample Deep Dive in [VSSDK Samples](../misc/vssdk-samples.md).  
+> 如果需要使用自定义项目类型扩展 Visual Studio，我们强烈建议使用[Visual Studio 项目系统](https://github.com/Microsoft/VSProjectSystem)，该系统与从头开始生成项目系统相比，它具有许多优点：  
+> 
+> - 更轻松的载入。  即使是基本的项目系统也需要数十个代码行。  在准备好根据你的需求进行自定义之前，使用 CPS 会将载入成本降低几次单击。  
+>   - 更易于维护。  利用 CPS，只需维护自己的方案即可。  我们处理所有项目系统基础结构的保养。  
+> 
+>   如果需要将 Visual Studio 的版本定位到 Visual Studio 2013 以前的版本，则不能在 Visual Studio 扩展中利用 CPS。  如果是这种情况，则可以使用此演练。  
   
- This walkthrough teaches how to accomplish these tasks:  
+ 本演练演示如何创建项目文件扩展名为 myproj.csproj 的项目类型。 本演练将借用现有的视觉C#对象系统。  
   
-- Create a basic project type.  
+> [!NOTE]
+> 有关完整的语言项目系统的端到端示例，请参阅[VSSDK 示例](../misc/vssdk-samples.md)中的 IronPython 示例深入探讨。  
   
-- Create a basic project template.  
+ 本演练介绍了如何完成以下任务：  
   
-- Register the project template with Visual Studio.  
+- 创建基本项目类型。  
   
-- Create a project instance by opening the **New Project** dialog box and then using your template.  
+- 创建基本项目模板。  
   
-- Create a project factory for your project system.  
+- 向 Visual Studio 注册项目模板。  
   
-- Create a project node for your project system.  
+- 通过打开 "**新建项目**" 对话框，然后使用模板来创建项目实例。  
   
-- Add custom icons for the project system.  
+- 为项目系统创建项目工厂。  
   
-- Implement basic template parameter substitution.  
+- 为项目系统创建项目节点。  
   
-## <a name="prerequisites"></a>Prerequisites  
- Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+- 为项目系统添加自定义图标。  
   
- You must also download the source code for the [Managed Package Framework for Projects](https://archive.codeplex.com/?p=mpfproj12). Extract the file to a location that is accessible to the solution you are going to create.  
+- 实现基本模板参数替换。  
   
-## <a name="creating-a-basic-project-type"></a>Creating a Basic Project Type  
- Create a C# VSIX project named **SimpleProject**. (**File, New, Project** and then **C#, Extensibility, Visual Studio Package**). Add a Visual Studio Package project item template (on the Solution Explorer, right-click the project node and select **Add / New Item**, then go to **Extensibility / Visual Studio Package**). Name the file **SimpleProjectPackage**.  
+## <a name="prerequisites"></a>先决条件  
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。  
   
-## <a name="creating-a-basic-project-template"></a>Creating a Basic Project Template  
- Now, you can modify this basic VSPackage to implement the new .myproj project type. To create a project that is based on the .myproj project type, Visual Studio has to know which files, resources, and references to add to the new project. To provide this information, put project files in a project template folder. When a user uses the .myproj project to create a project, the files are copied to the new project.  
+ 还必须下载[项目的托管包框架](https://archive.codeplex.com/?p=mpfproj12)的源代码。 将文件提取到要创建的解决方案可访问的位置。  
   
-#### <a name="to-create-a-basic-project-template"></a>To create a basic project template  
+## <a name="creating-a-basic-project-type"></a>创建基本项目类型  
+ 创建名C#为**SimpleProject**的 VSIX 项目。 （"**文件"、"新建"、"项目"** 和 **C#"可扩展性"、"Visual Studio 包**"）。 添加 Visual Studio 包项目项模板（在解决方案资源管理器上，右键单击项目节点并选择 "添加" **/"新建项**"，然后单击 "**扩展"/"Visual Studio 包**"。 将该文件命名为**SimpleProjectPackage**。  
   
-1. Add three folders to the project, one under the other: **Templates\Projects\SimpleProject**. (In **Solution Explorer**, right-click the **SimpleProject** project node, point to **Add**, and then click **New Folder**. 将该文件夹命名为 `Templates`注册一个免费试用帐户。 In the **Templates** folder, add a folder named `Projects`. In the **Projects** folder, add a folder named `SimpleProject`.)  
+## <a name="creating-a-basic-project-template"></a>创建基本项目模板  
+ 现在，可以修改此基本 VSPackage 以实现 myproj.csproj 项目类型。 若要创建基于. myproj.csproj 项目类型的项目，Visual Studio 必须知道要添加到新项目中的文件、资源和引用。 若要提供此信息，请将项目文件放在项目模板文件夹中。 当用户使用 myproj.csproj 项目创建项目时，文件将复制到新项目。  
   
-2. In the **Projects\SimpleProject** folder add an icon file named `SimpleProject.ico`. When you click **Add**, the icon editor opens.  
+#### <a name="to-create-a-basic-project-template"></a>创建基本项目模板  
   
-3. Make the icon distinctive. This icon will appear in the **New Project** dialog box later in the walkthrough.  
+1. 向项目添加三个文件夹，一个文件夹位于另一个文件夹中： **Templates\Projects\SimpleProject**。 （在**解决方案资源管理器**中，右键单击**SimpleProject**项目节点，指向 "**添加**"，然后单击 "**新建文件夹**"。 将该文件夹命名为 `Templates`注册一个免费试用帐户。 在**Templates**文件夹中，添加一个名为 `Projects`的文件夹。 在 "**项目**" 文件夹中，添加一个名为 `SimpleProject`的文件夹。）  
   
-    ![Simple Project Icon](../extensibility/media/simpleprojicon.png "SimpleProjIcon")  
+2. 在**Projects\SimpleProject**文件夹中，添加名为 `SimpleProject.ico`的图标文件。 单击 "**添加**" 时，图标编辑器将打开。  
   
-4. Save the icon and close the icon editor.  
+3. 使图标与众不同。 此图标将显示在本演练后面的 "**新建项目**" 对话框中。  
   
-5. In the **Projects\SimpleProject** folder, add a **Class** item named `Program.cs`.  
+    ![简单项目图标](../extensibility/media/simpleprojicon.png "SimpleProjIcon")  
   
-6. Replace the existing code with the following lines.  
+4. 保存图标，并关闭图标编辑器。  
+  
+5. 在**Projects\SimpleProject**文件夹中，添加一个名为 `Program.cs`的**类**项。  
+  
+6. 将现有代码替换为以下行。  
   
    ```csharp  
    using System;  
@@ -103,18 +103,18 @@ In Visual Studio, projects are the containers that developers use to organize so
    ```  
   
    > [!IMPORTANT]
-   > This is not the final form of the Program.cs code; the replacement parameters will be dealt with in a later step. You may see compile errors, but as long as the file’s **BuildAction** is **Content**, you should be able to build and run the project as usual.  
+   > 这不是 Program.cs 代码的最终形式;稍后的步骤中将会处理替换参数。 你可能会看到编译错误，但是只要该文件的**BuildAction**是**内容**，你就可以像平常一样生成并运行该项目。  
   
 7. 保存该文件。  
   
-8. Copy the AssemblyInfo.cs file from the **Properties** folder to the **Projects\SimpleProject** folder.  
+8. 将 AssemblyInfo.cs 文件从**Properties**文件夹复制到**Projects\SimpleProject**文件夹。  
   
-9. In the **Projects\SimpleProject** folder add an XML file named `SimpleProject.myproj`.  
+9. 在**Projects\SimpleProject**文件夹中，添加名为 `SimpleProject.myproj`的 XML 文件。  
   
    > [!NOTE]
-   > The file name extension for all projects of this type is .myproj. If you want to change it, you must change it everywhere it is mentioned in the walkthrough.  
+   > 此类型的所有项目的文件扩展名为 myproj.csproj。 如果要对其进行更改，必须在本演练所述的任何位置对其进行更改。  
   
-10. Replace the existing content with the following lines.  
+10. 将现有内容替换为以下行。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -156,11 +156,11 @@ In Visual Studio, projects are the containers that developers use to organize so
   
 11. 保存该文件。  
   
-12. In the **Properties** window, set the **Build Action** of AssemblyInfo.cs, Program.cs, SimpleProject.ico, and SimpleProject.myproj to **Content**, and set their **Include in VSIX** properties to **True**.  
+12. 在 "**属性**" 窗口中，将 AssemblyInfo.cs、Program.cs、SimpleProject 和 SimpleProject 的**生成操作**设置为 "**内容**"，并将其 **"包含项**" 设置为 " **True**"。  
   
-    This project template describes a basic Visual C# project that has both a Debug configuration and a Release configuration. The project includes two source files, AssemblyInfo.cs and Program.cs, and several assembly references. When a project is created from the template, the ProjectGuid value is automatically replaced by a new GUID.  
+    此项目模板介绍了同时具有C# "调试" 配置和 "发布" 配置的基本视觉对象。 该项目包括两个源文件： AssemblyInfo.cs 和 Program.cs 以及多个程序集引用。 当从模板创建项目时，ProjectGuid 值会自动替换为新的 GUID。  
   
-    In **Solution Explorer**, the expanded **Templates** folder should appear as follows:  
+    在**解决方案资源管理器**中，展开的 "**模板**" 文件夹应如下所示：  
   
     模板  
   
@@ -176,14 +176,14 @@ In Visual Studio, projects are the containers that developers use to organize so
   
     SimpleProject.myproj  
   
-## <a name="creating-a-basic-project-factory"></a>Creating a Basic Project Factory  
- You must tell Visual Studio the location of your project template folder. To do this, add an attribute to the VSPackage class that implements the project factory so that the template location is written to the system registry when the VSPackage is built. Start by creating a basic project factory that is identified by a project factory GUID. Use the <xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute> attribute to connect the project factory to the SimpleProjectPackage class.  
+## <a name="creating-a-basic-project-factory"></a>创建基本项目工厂  
+ 必须告知 Visual Studio 你的项目模板文件夹的位置。 为此，请将特性添加到实现项目工厂的 VSPackage 类，以便在生成 VSPackage 时将模板位置写入系统注册表。 首先，创建一个由项目工厂 GUID 标识的基本项目工厂。 使用 <xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute> 特性将项目工厂连接到 SimpleProjectPackage 类。  
   
-#### <a name="to-create-a-basic-project-factory"></a>To create a basic project factory  
+#### <a name="to-create-a-basic-project-factory"></a>创建基本项目工厂  
   
-1. Open SimpleProjectPackageGuids.cs in the code editor.  
+1. 在代码编辑器中打开 SimpleProjectPackageGuids.cs。  
   
-2. Create GUIDs for your project factory (on the **Tools** menu, click **Create GUID**), or use the one in the following example. Add the GUIDs to the SimpleProjectPackageGuids class. The GUIDs must be in both GUID form and string form. The resulting code should resemble the following example.  
+2. 为项目工厂创建 Guid （在 "**工具**" 菜单上，单击 "**创建 GUID**"），或使用以下示例中的一个。 将 Guid 添加到 SimpleProjectPackageGuids 类。 Guid 必须采用 GUID 格式和字符串格式。 生成的代码应类似于以下示例。  
   
    ```  
    static class SimpleProjectPackageGuids  
@@ -202,16 +202,16 @@ In Visual Studio, projects are the containers that developers use to organize so
    }  
    ```  
   
-3. Add a class to the top **SimpleProject** folder named `SimpleProjectFactory.cs`.  
+3. 将一个类添加到名为 `SimpleProjectFactory.cs`的顶层**SimpleProject**文件夹中。  
   
-4. Add the following using statements:  
+4. 添加以下 using 语句：  
   
    ```  
    using System.Runtime.InteropServices;  
    using Microsoft.VisualStudio.Shell;  
    ```  
   
-5. Add a Guid attribute to the SimpleProjectFactory class. The value of the attribute is the new project factory GUID.  
+5. 将 Guid 特性添加到 SimpleProjectFactory 类。 该属性的值为新的项目工厂 GUID。  
   
    ```  
    [Guid(SimpleProjectGuids.guidSimpleProjectFactoryString)]  
@@ -220,11 +220,11 @@ In Visual Studio, projects are the containers that developers use to organize so
    }  
    ```  
   
-   Now you can register your project template.  
+   现在可以注册项目模板。  
   
-#### <a name="to-register-the-project-template"></a>To register the project template  
+#### <a name="to-register-the-project-template"></a>注册项目模板  
   
-1. In SimpleProjectPackage.cs, add a <xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute> attribute to the SimpleProjectPackage class, as follows.  
+1. 在 SimpleProjectPackage.cs 中，将 <xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute> 特性添加到 SimpleProjectPackage 类，如下所示。  
   
    ```  
    [ProvideProjectFactory(    typeof(SimpleProjectFactory),     "Simple Project",   
@@ -234,31 +234,31 @@ In Visual Studio, projects are the containers that developers use to organize so
    public sealed class SimpleProjectPackage : Package  
    ```  
   
-2. Rebuild the solution and verify that it builds without errors.  
+2. 重新生成解决方案并验证它是否生成但未发生错误。  
   
-    Rebuilding registers the project template.  
+    重新生成将注册项目模板。  
   
-   The parameters `defaultProjectExtension` and `possibleProjectExtensions` are set to the project file name extension (.myproj). The `projectTemplatesDirectory` parameter is set to the relative path of the Templates folder. During the build, this path will be converted to a full build and added to the registry to register the project system.  
+   `defaultProjectExtension` 和 `possibleProjectExtensions` 的参数设置为项目文件扩展名（. myproj.csproj）。 `projectTemplatesDirectory` 参数设置为 Templates 文件夹的相对路径。 在生成过程中，此路径将转换为完整生成并添加到注册表中，以注册项目系统。  
   
-## <a name="testing-the-template-registration"></a>Testing the Template Registration  
- Template registration tells Visual Studio the location of your project template folder so that Visual Studio can display the template name and icon in the **New Project** dialog box.  
+## <a name="testing-the-template-registration"></a>测试模板注册  
+ 模板注册会告诉 Visual Studio 你的项目模板文件夹的位置，以便 Visual Studio 可以在 "**新建项目**" 对话框中显示模板名称和图标。  
   
-#### <a name="to-test-the-template-registration"></a>To test the template registration  
+#### <a name="to-test-the-template-registration"></a>测试模板注册  
   
-1. Press F5 to start debugging an experimental instance of Visual Studio.  
+1. 按 F5 开始调试 Visual Studio 的实验实例。  
   
-2. In the experimental instance, create a new project of your newly-created project type. In the **New Project** dialog box, you should see **SimpleProject** under **Installed templates**.  
+2. 在实验实例中，创建新创建的项目类型的新项目。 在 "**新建项目**" 对话框中，在 "**已安装的模板**" 下应该会看到**SimpleProject** 。  
   
-   Now you have a project factory that is registered. However, it cannot yet create a project. The project package and project factory work together to create and initialize a project.  
+   现在，已注册了一个项目工厂。 但是，它还无法创建项目。 项目包和项目工厂一起工作以创建和初始化项目。  
   
-## <a name="add-the-managed-package-framework-code"></a>Add the Managed Package Framework code  
- Implement the connection between the project package and the project factory.  
+## <a name="add-the-managed-package-framework-code"></a>添加托管包框架代码  
+ 实现项目包和项目工厂之间的连接。  
   
-- Import the source-code files for the Managed Package Framework.  
+- 导入托管包框架的源代码文件。  
   
-    1. Unload the SimpleProject project (in **Solution Explorer**, select the project node and on the context menu click **Unload Project**.) and open the project file in the XML editor.  
+    1. 卸载 SimpleProject 项目（**解决方案资源管理器**中，选择 "项目" 节点，并在上下文菜单上单击 "**卸载项目**"，然后在 XML 编辑器中打开项目文件。  
   
-    2. Add the following blocks to the project file (just above the \<Import> blocks). Set ProjectBasePath to the location of the ProjectBase.files file in the Managed Package Framework code you just downloaded. You might have to add a backslash to the pathname. If you do not, the project might fail to find the Managed Package Framework code.  
+    2. 将以下块添加到项目文件中（\<导入 > 块之前）。 将 ProjectBasePath 设置为你刚下载的托管包框架代码中的 ProjectBase 文件的位置。 可能需要向路径名添加反斜杠。 否则，项目可能无法找到托管的包框架代码。  
   
         ```  
         <PropertyGroup>  
@@ -269,40 +269,40 @@ In Visual Studio, projects are the containers that developers use to organize so
         ```  
   
         > [!IMPORTANT]
-        > Don’t forget the backslash at the end of the path.  
+        > 不要忘记路径末尾的反斜杠。  
   
-    3. Reload the project.  
+    3. 重新加载项目。  
   
     4. 添加对下列程序集的引用：  
   
-        - Microsoft.VisualStudio.Designer.Interfaces (in \<VSSDK install>\VisualStudioIntegration\Common\Assemblies\v2.0)  
+        - VisualStudio （在 \<VSSDK 安装 > \VisualStudioIntegration\Common\Assemblies\v2.0）  
   
         - WindowsBase  
   
         - Microsoft.Build.Tasks.v4.0  
   
-#### <a name="to-initialize-the-project-factory"></a>To initialize the project factory  
+#### <a name="to-initialize-the-project-factory"></a>初始化项目工厂  
   
-1. In the SimpleProjectPackage.cs file, add the following `using` statement.  
+1. 在 SimpleProjectPackage.cs 文件中，添加以下 `using` 语句。  
   
     ```  
     using Microsoft.VisualStudio.Project;  
     ```  
   
-2. Derive the `SimpleProjectPackage` class from `Microsoft.VisualStudio.Package.ProjectPackage`.  
+2. 从 `Microsoft.VisualStudio.Package.ProjectPackage`派生 `SimpleProjectPackage` 类。  
   
     ```  
     public sealed class SimpleProjectPackage : ProjectPackage  
     ```  
   
-3. Register the project factory. Add the following line to the `SimpleProjectPackage.Initialize` method, just after `base.Initialize`.  
+3. 注册项目工厂。 将以下行添加到 `SimpleProjectPackage.Initialize` 方法，刚好在 `base.Initialize`之后。  
   
     ```  
     base.Initialize();  
     this.RegisterProjectFactory(new SimpleProjectFactory(this));  
     ```  
   
-4. Implement the abstract property `ProductUserContext`:  
+4. 实现抽象属性 `ProductUserContext`：  
   
     ```csharp  
     public override string ProductUserContext  
@@ -311,19 +311,19 @@ In Visual Studio, projects are the containers that developers use to organize so
     }  
     ```  
   
-5. In SimpleProjectFactory.cs, add the following `using` statement after the existing `using` statements.  
+5. 在 SimpleProjectFactory.cs 中，将以下 `using` 语句添加到现有 `using` 语句之后。  
   
     ```  
     using Microsoft.VisualStudio.Project;  
     ```  
   
-6. Derive the `SimpleProjectFactory` class from `ProjectFactory`.  
+6. 从 `ProjectFactory`派生 `SimpleProjectFactory` 类。  
   
     ```  
     class SimpleProjectFactory : ProjectFactory  
     ```  
   
-7. Add the following dummy method to the `SimpleProjectFactory` class. You will implement this method in a later section.  
+7. 将以下虚方法添加到 `SimpleProjectFactory` 类。 您将在后面的部分中实现此方法。  
   
     ```  
     protected override ProjectNode CreateProject()  
@@ -332,7 +332,7 @@ In Visual Studio, projects are the containers that developers use to organize so
     }  
     ```  
   
-8. Add the following field and constructor to the `SimpleProjectFactory` class. This `SimpleProjectPackage` reference is cached in a private field so that it can be used in setting a service provider site.  
+8. 将以下字段和构造函数添加到 `SimpleProjectFactory` 类。 此 `SimpleProjectPackage` 引用缓存在私有字段中，以便可以在设置服务提供程序站点时使用。  
   
     ```  
     private SimpleProjectPackage package;  
@@ -344,43 +344,43 @@ In Visual Studio, projects are the containers that developers use to organize so
     }  
     ```  
   
-9. Rebuild the solution and verify that it builds without errors.  
+9. 重新生成解决方案并验证它是否生成但未发生错误。  
   
-## <a name="testing-the-project-factory-implementation"></a>Testing the Project Factory Implementation  
- Test whether the constructor for your project factory implementation is called.  
+## <a name="testing-the-project-factory-implementation"></a>测试项目工厂实现  
+ 测试是否调用项目工厂实现的构造函数。  
   
-#### <a name="to-test-the-project-factory-implementation"></a>To test the project factory implementation  
+#### <a name="to-test-the-project-factory-implementation"></a>测试项目工厂实现  
   
-1. In the SimpleProjectFactory.cs file, set a breakpoint on the following line in the `SimpleProjectFactory` constructor.  
+1. 在 SimpleProjectFactory.cs 文件中，在 `SimpleProjectFactory` 构造函数中的以下行处设置断点。  
   
     ```  
     this.package = package;  
     ```  
   
-2. Press F5 to start an experimental instance of Visual Studio.  
+2. 按 F5 启动 Visual Studio 的实验实例。  
   
-3. In the experimental instance, start to create a new project.In the **New Project** dialog box, select the SimpleProject project type and then click **OK**. 执行在断点处停止。  
+3. 在实验实例中，开始创建一个新项目。在 "**新建项目**" 对话框中，选择 "SimpleProject" 项目类型，然后单击 **"确定"** 。 执行在断点处停止。  
   
-4. Clear the breakpoint and stop debugging. Since we have not created a project node yet, the project creation code still throws exceptions.  
+4. 清除断点，然后停止调试。 由于尚未创建项目节点，因此项目创建代码仍会引发异常。  
   
-## <a name="extending-the-project-node-class"></a>Extending the Project Node Class  
- Now you can implement the `SimpleProjectNode` class, which derives from the `ProjectNode` class. The `ProjectNode` base class handles the following tasks of project creation:  
+## <a name="extending-the-project-node-class"></a>扩展项目节点类  
+ 现在，你可以实现从 `ProjectNode` 类派生的 `SimpleProjectNode` 类。 `ProjectNode` 基类处理项目创建的以下任务：  
   
-- Copies the project template file, SimpleProject.myproj, to the new project folder. The copy is renamed according to the name that is entered in the **New Project** dialog box. The `ProjectGuid` property value is replaced by a new GUID.  
+- 将项目模板文件 SimpleProject 复制到新的项目文件夹。 该副本将根据在 "**新建项目**" 对话框中输入的名称进行重命名。 `ProjectGuid` 的属性值将替换为新的 GUID。  
   
-- Traverses the MSBuild elements of the project template file, SimpleProject.myproj, and looks for `Compile` elements. For each `Compile` target file, copies the file to the new project folder.  
+- 遍历项目模板文件的 MSBuild 元素 SimpleProject. myproj.csproj，并查找 `Compile` 元素。 对于每个 `Compile` 目标文件，将文件复制到新的项目文件夹。  
   
-  The derived `SimpleProjectNode` class handles these tasks:  
+  派生的 `SimpleProjectNode` 类处理以下任务：  
   
-- Enables icons for project and file nodes in **Solution Explorer** to be created or selected.  
+- 启用要在**解决方案资源管理器**中创建或选择的项目和文件节点的图标。  
   
-- Enables additional project template parameter substitutions to be specified.  
+- 启用要指定的其他项目模板参数替换。  
   
-#### <a name="to-extend-the-project-node-class"></a>To extend the project node class  
+#### <a name="to-extend-the-project-node-class"></a>扩展项目节点类  
   
 1. 
   
-2. Add a class named `SimpleProjectNode.cs`.  
+2. 添加一个名为 `SimpleProjectNode.cs`的类。  
   
 3. 用下面的代码替换现有代码。  
   
@@ -418,27 +418,27 @@ In Visual Studio, projects are the containers that developers use to organize so
    }  
    ```  
   
-   This `SimpleProjectNode` class implementation has these overridden methods:  
+   此 `SimpleProjectNode` 类实现具有以下重写方法：  
   
-- `ProjectGuid`, which returns the project factory GUID.  
+- `ProjectGuid`，它返回项目工厂 GUID。  
   
-- `ProjectType`, which returns the localized name of the project type.  
+- `ProjectType`，它返回项目类型的本地化名称。  
   
-- `AddFileFromTemplate`, which copies selected files from the template folder to the destination project. This method is further implemented in a later section.  
+- `AddFileFromTemplate`，它将从模板文件夹中选择的文件复制到目标项目中。 后面的部分将进一步实现此方法。  
   
-  The `SimpleProjectNode` constructor, like the `SimpleProjectFactory` constructor, caches a `SimpleProjectPackage` reference in a private field for later use.  
+  `SimpleProjectNode` 构造函数（如 `SimpleProjectFactory` 构造函数）将在私有字段中缓存 `SimpleProjectPackage` 引用以供以后使用。  
   
-  To connect the `SimpleProjectFactory` class to the `SimpleProjectNode` class, you must instantiate a new `SimpleProjectNode` in the `SimpleProjectFactory.CreateProject` method and cache it in a private field for later use.  
+  若要将 `SimpleProjectFactory` 类连接到 `SimpleProjectNode` 类，必须在 `SimpleProjectFactory.CreateProject` 方法中实例化新的 `SimpleProjectNode`，并将其缓存在私有字段中供以后使用。  
   
-#### <a name="to-connect-the-project-factory-class-and-the-node-class"></a>To connect the project factory class and the node class  
+#### <a name="to-connect-the-project-factory-class-and-the-node-class"></a>连接项目工厂类和 node 类  
   
-1. In the SimpleProjectFactory.cs file, add the following `using` statement:  
+1. 在 SimpleProjectFactory.cs 文件中，添加以下 `using` 语句：  
   
     ```  
     using IOleServiceProvider =    Microsoft.VisualStudio.OLE.Interop.IServiceProvider;  
     ```  
   
-2. Replace the `SimpleProjectFactory.CreateProject` method by using the following code.  
+2. 使用以下代码替换 `SimpleProjectFactory.CreateProject` 方法。  
   
     ```  
     protected override ProjectNode CreateProject()  
@@ -450,40 +450,40 @@ In Visual Studio, projects are the containers that developers use to organize so
     }  
     ```  
   
-3. Rebuild the solution and verify that it builds without errors.  
+3. 重新生成解决方案并验证它是否生成但未发生错误。  
   
-## <a name="testing-the-project-node-class"></a>Testing the Project Node Class  
- Test your project factory to see whether it creates a project hierarchy.  
+## <a name="testing-the-project-node-class"></a>测试项目节点类  
+ 测试项目工厂，以确定它是否创建了项目层次结构。  
   
-#### <a name="to-test-the-project-node-class"></a>To test the project node class  
+#### <a name="to-test-the-project-node-class"></a>测试项目节点类  
   
-1. 按 F5 开始调试。 In the experimental instance, create a new SimpleProject.  
+1. 按 F5 开始调试。 在实验实例中，创建一个新 SimpleProject。  
   
-2. Visual Studio should call your project factory to create a project.  
+2. Visual Studio 应调用你的项目工厂来创建项目。  
   
 3. 关闭 Visual Studio 的实验实例。  
   
-## <a name="adding-a-custom-project-node-icon"></a>Adding a Custom Project Node Icon  
- The project node icon in the earlier section is a default icon. You can change it to a custom icon.  
+## <a name="adding-a-custom-project-node-icon"></a>添加自定义项目节点图标  
+ 之前部分中的 "项目节点" 图标为默认图标。 可以将其更改为自定义图标。  
   
-#### <a name="to-add-a-custom-project-node-icon"></a>To add a custom project node icon  
+#### <a name="to-add-a-custom-project-node-icon"></a>添加自定义项目节点图标  
   
-1. In the **Resources** folder, add a bitmap file named SimpleProjectNode.bmp.  
+1. 在 "**资源**" 文件夹中，添加一个名为 SimpleProjectNode 的位图文件。  
   
-2. In the **Properties** windows, reduce the bitmap to 16 by 16 pixels. Make the bitmap distinctive.  
+2. 在 "**属性**" 窗口中，将位图缩小为 16 x 16 像素。 使位图与众不同。  
   
-    ![Simple Project Comm](../extensibility/media/simpleprojprojectcomm.png "SimpleProjProjectComm")  
+    ![简单项目通信](../extensibility/media/simpleprojprojectcomm.png "SimpleProjProjectComm")  
   
-3. In the **Properties** window, change the **Build action** of the bitmap to **Embedded Resource**.  
+3. 在 "**属性**" 窗口中，将位图的 "**生成操作**" 更改为 "**嵌入的资源**"。  
   
-4. In SimpleProjectNode.cs, add the following `using` statements:  
+4. 在 SimpleProjectNode.cs 中，添加以下 `using` 语句：  
   
    ```  
    using System.Drawing;  
    using System.Windows.Forms;  
    ```  
   
-5. Add the following static field and constructor to the `SimpleProjectNode` class.  
+5. 将以下静态字段和构造函数添加到 `SimpleProjectNode` 类。  
   
    ```  
    private static ImageList imageList;  
@@ -494,7 +494,7 @@ In Visual Studio, projects are the containers that developers use to organize so
    }  
    ```  
   
-6. Add the following property to the beginning of the `SimpleProjectNode` class.  
+6. 将以下属性添加到 `SimpleProjectNode` 类的开头。  
   
    ```  
    internal static int imageIndex;  
@@ -504,7 +504,7 @@ In Visual Studio, projects are the containers that developers use to organize so
       }  
    ```  
   
-7. Replace the instance constructor with the following code.  
+7. 将实例构造函数替换为以下代码。  
   
    ```  
    public SimpleProjectNode(SimpleProjectPackage package)  
@@ -520,7 +520,7 @@ In Visual Studio, projects are the containers that developers use to organize so
    }  
    ```  
   
-   During static construction, `SimpleProjectNode` retrieves the project node bitmap from the assembly manifest resources and caches it in a private field for later use. Notice the syntax of the <xref:System.Reflection.Assembly.GetManifestResourceStream%2A> image path. To see the names of the manifest resources embedded in an assembly, use the <xref:System.Reflection.Assembly.GetManifestResourceNames%2A> method. When this method is applied to the `SimpleProject` assembly, the results should be as follows:  
+   在静态构造过程中，`SimpleProjectNode` 从程序集清单资源中检索项目节点位图，并将其缓存在私有字段中供以后使用。 请注意 <xref:System.Reflection.Assembly.GetManifestResourceStream%2A> 映像路径的语法。 若要查看嵌入在程序集中的清单资源的名称，请使用 <xref:System.Reflection.Assembly.GetManifestResourceNames%2A> 方法。 将此方法应用于 `SimpleProject` 程序集时，结果应如下所示：  
   
 - SimpleProject.Resources.resources  
   
@@ -536,20 +536,20 @@ In Visual Studio, projects are the containers that developers use to organize so
   
 - SimpleProject.Resources.SimpleProjectNode.bmp  
   
-  During instance construction, the `ProjectNode` base class loads Resources.imagelis.bmp, in which are embedded commonly used 16 x 16 bitmaps from Resources\imagelis.bmp. This bitmap list is made available to `SimpleProjectNode` as ImageHandler.ImageList. `SimpleProjectNode` appends the project node bitmap to the list. The offset of the project node bitmap in the image list is cached for later use as the value of the public `ImageIndex` property. Visual Studio uses this property to determine which bitmap to display as the project node icon.  
+  在实例构造过程中，`ProjectNode` 的基类加载 imagelis，其中嵌入的常用 16 x 16 位图来自 Resources\imagelis.bmp。 此位图列表可用作 Charthttphandler.imagehandler 的 `SimpleProjectNode`。 `SimpleProjectNode` 将项目节点位图追加到列表。 将缓存 "图像" 列表中项目节点位图的偏移量，以便以后将其用作 public `ImageIndex` 属性的值。 Visual Studio 使用此属性来确定要显示为项目节点图标的位图。  
   
-## <a name="testing-the-custom-project-node-icon"></a>Testing the Custom Project Node Icon  
- Test your project factory to see whether it creates a project hierarchy that has your custom project node icon.  
+## <a name="testing-the-custom-project-node-icon"></a>测试 "自定义项目节点" 图标  
+ 测试项目工厂，以查看它是否创建了包含自定义项目节点图标的项目层次结构。  
   
-#### <a name="to-test-the-custom-project-node-icon"></a>To test the custom project node icon  
+#### <a name="to-test-the-custom-project-node-icon"></a>测试 "自定义项目节点" 图标  
   
-1. Start debugging, and in the experimental instance create a new SimpleProject.  
+1. 开始调试，并在实验实例中创建新的 SimpleProject。  
   
-2. In the newly-created project, notice that SimpleProjectNode.bmp is used as the project node icon.  
+2. 请注意，在新创建的项目中，将 SimpleProjectNode 用作项目节点图标。  
   
-     ![Simple Project New Project Node](../extensibility/media/simpleprojnewprojectnode.png "SimpleProjNewProjectNode")  
+     ![简单项目新项目节点](../extensibility/media/simpleprojnewprojectnode.png "SimpleProjNewProjectNode")  
   
-3. Open Program.cs in the code editor. You should see source code that resembles the following code.  
+3. 在代码编辑器中打开 Program.cs。 应会看到类似于以下代码的源代码。  
   
     ```  
     using System;  
@@ -569,22 +569,22 @@ In Visual Studio, projects are the containers that developers use to organize so
     }  
     ```  
   
-     Notice that the template parameters $nameSpace$ and $className$ do not have new values. You will learn how to implement template parameter substitution in the next section.  
+     请注意，$nameSpace $ 和 $className $ 的模板参数没有新值。 在下一部分中，你将学习如何实现模板参数替换。  
   
-## <a name="substituting-template-parameters"></a>Substituting Template Parameters  
- In an earlier section, you registered the project template with Visual Studio by using the `ProvideProjectFactory` attribute. Registering the path of a template folder in this manner lets you enable basic template parameter substitution by overriding and expanding the `ProjectNode.AddFileFromTemplate` class. For more information, see [New Project Generation: Under the Hood, Part Two](../extensibility/internals/new-project-generation-under-the-hood-part-two.md).  
+## <a name="substituting-template-parameters"></a>替换模板参数  
+ 在前面的部分中，已使用 `ProvideProjectFactory` 特性向 Visual Studio 注册了项目模板。 通过以这种方式注册模板文件夹的路径，可以通过重写和展开 `ProjectNode.AddFileFromTemplate` 类来启用基本模板参数替换。 有关详细信息，请参阅[新项目生成：在幕后，第二部分](../extensibility/internals/new-project-generation-under-the-hood-part-two.md)。  
   
- Now add replacement code to the `AddFileFromTemplate` class.  
+ 现在，将替换代码添加到 `AddFileFromTemplate` 类。  
   
-#### <a name="to-substitute-template-parameters"></a>To substitute template parameters  
+#### <a name="to-substitute-template-parameters"></a>替换模板参数  
   
-1. In the SimpleProjectNode.cs file, add the following `using` statement.  
+1. 在 SimpleProjectNode.cs 文件中，添加以下 `using` 语句。  
   
    ```  
    using System.IO;  
    ```  
   
-2. Replace the `AddFileFromTemplate` method by using the following code.  
+2. 使用以下代码替换 `AddFileFromTemplate` 方法。  
   
    ```  
    public override void AddFileFromTemplate(  
@@ -602,30 +602,30 @@ In Visual Studio, projects are the containers that developers use to organize so
    }  
    ```  
   
-3. Set a breakpoint in the method, just after the `className` assignment statement.  
+3. 在方法中设置断点，就在 `className` 赋值语句之后。  
   
-   The assignment statements determine reasonable values for a namespace and a new class name. The two `ProjectNode.FileTemplateProcessor.AddReplace` method calls replace the corresponding template parameter values by using these new values.  
+   赋值语句确定命名空间和新类名的合理值。 这两个 `ProjectNode.FileTemplateProcessor.AddReplace` 方法调用使用这些新值替换相应的模板参数值。  
   
-## <a name="testing-the-template-parameter-substitution"></a>Testing the Template Parameter Substitution  
- Now you can test template parameter substitution.  
+## <a name="testing-the-template-parameter-substitution"></a>测试模板参数替换  
+ 现在可以测试模板参数替换。  
   
-#### <a name="to-test-the-template-parameter-substitution"></a>To test the template parameter substitution  
+#### <a name="to-test-the-template-parameter-substitution"></a>测试模板参数替换  
   
-1. Start debugging, and in the experimental instance create a new SimpleProject.  
+1. 开始调试，并在实验实例中创建新的 SimpleProject。  
   
-2. Execution stops at the breakpoint in the `AddFileFromTemplate` method.  
+2. 执行在 `AddFileFromTemplate` 方法中的断点处停止。  
   
-3. Examine the values for the `nameSpace` and `className` parameters.  
+3. 检查 `nameSpace` 和 `className` 参数的值。  
   
-   - `nameSpace` is given the value of the \<RootNamespace> element in the \Templates\Projects\SimpleProject\SimpleProject.myproj project template file. In this case, the value is "MyRootNamespace".  
+   - `nameSpace` 提供 \Templates\Projects\SimpleProject\SimpleProject.myproj 项目模板文件中 \<RootNamespace > 元素的值。 在这种情况下，值为 "MyRootNamespace"。  
   
-   - `className` is given the value of the class source file name, without the file name extension. In this case, the first file to be copied to the destination folder is AssemblyInfo.cs; therefore, the value of className is "AssemblyInfo".  
+   - `className` 提供类源文件名的值，而不包含文件扩展名。 在这种情况下，要复制到目标文件夹的第一个文件为 AssemblyInfo.cs;因此，className 的值为 "AssemblyInfo"。  
   
-4. Remove the breakpoint and press F5 to continue execution.  
+4. 删除断点，然后按 F5 继续执行。  
   
-    Visual Studio should finish creating a project.  
+    Visual Studio 应完成创建项目。  
   
-5. Open Program.cs in the code editor. You should see source code that resembles the following code.  
+5. 在代码编辑器中打开 Program.cs。 应会看到类似于以下代码的源代码。  
   
    ```  
    using System;  
@@ -646,10 +646,10 @@ In Visual Studio, projects are the containers that developers use to organize so
    }  
    ```  
   
-    Notice that the namespace is now "MyRootNamespace" and the class name is now "Program".  
+    请注意，现在命名空间为 "MyRootNamespace"，类名称现在为 "Program"。  
   
-6. Start debugging the project. The new project should compile, run, and display "Hello VSX!!!" 显示文本字符串“Hello World!”。  
+6. 开始调试项目。 新项目应编译、运行和显示 "Hello VSX!!!" 显示文本字符串“Hello World!”。  
   
-    ![Simple Project Command](../extensibility/media/simpleprojcommand.png "SimpleProjCommand")  
+    ![简单项目命令](../extensibility/media/simpleprojcommand.png "SimpleProjCommand")  
   
-   祝贺你！ You have implemented a basic managed project system.
+   祝贺你！ 您已经实现了一个基本的托管项目系统。

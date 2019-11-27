@@ -1,5 +1,5 @@
 ---
-title: 'Walkthrough: Creating a Basic Isolated Shell Application | Microsoft Docs'
+title: 演练：创建基本的独立 Shell 应用程序 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -19,114 +19,114 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74291266"
 ---
-# <a name="walkthrough-creating-a-basic-isolated-shell-application"></a>Walkthrough: Creating a Basic Isolated Shell Application
+# <a name="walkthrough-creating-a-basic-isolated-shell-application"></a>演练：创建基本的独立 Shell 应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-This walkthrough shows how to create an isolated shell solution, customize the Help About tool window, and create a setup program that installs the isolated shell.  
+本演练演示如何创建独立的 shell 解决方案，自定义 "帮助" 窗口，并创建安装独立 shell 的安装程序。  
   
-## <a name="prerequisites"></a>Prerequisites  
- 要按照本演练的步骤操作，必须安装 Visual Studio SDK。 For more information, see [Visual Studio SDK](../extensibility/visual-studio-sdk.md). To deploy the isolated shell, you must also use the Visual Studio Shell (Isolated) Redistributable Package.  
+## <a name="prerequisites"></a>先决条件  
+ 要按照本演练的步骤操作，必须安装 Visual Studio SDK。 有关详细信息，请参阅[Visual STUDIO SDK](../extensibility/visual-studio-sdk.md)。 若要部署独立 shell，还必须使用 Visual Studio Shell （独立）可再发行组件包。  
   
-## <a name="creating-an-isolated-shell-solution"></a>Creating an Isolated Shell Solution  
- This section shows how to use the Visual Studio Shell Isolated project template to create an isolated shell solution. The solution contains the following projects:  
+## <a name="creating-an-isolated-shell-solution"></a>创建独立 Shell 解决方案  
+ 本部分演示如何使用 Visual Studio Shell 独立项目模板来创建独立的 shell 解决方案。 该解决方案包含以下项目：  
   
-- The *SolutionName*.AboutBoxPackage project, which allows you to customize the appearance of the Help/About box.  
+- *解决方案名称*。AboutBoxPackage 项目，可用于自定义 "帮助/关于" 框的外观。  
   
-- The ShellExtensionsVSIX project, which contains the source.extension.vsixmanifest file that defines the different components of the isolated shell application.  
+- ShellExtensionsVSIX 项目，其中包含定义独立 shell 应用程序的不同组件的 source.extension.vsixmanifest 文件。  
   
-- The *SolutionName* project, which produces the executable file that invokes the isolated shell application. This project contains the Shell Customization folder, which allows you to customiz the appearance and behavior of the isolated shell application.  
+- *解决方案名称*项目，该项目生成调用独立 shell 应用程序的可执行文件。 此项目包含 Shell 自定义文件夹，可用于 customiz 隔离 Shell 应用程序的外观和行为。  
   
-- The *SolutionName* UI project, which produces a satellite assembly that defines active menu commands and localizable strings.  
+- *解决方案名称*UI 项目，该项目生成定义活动菜单命令和可本地化字符串的附属程序集。  
   
-#### <a name="to-create-a-basic-isolated-shell-solution"></a>To create a basic isolated shell solution  
+#### <a name="to-create-a-basic-isolated-shell-solution"></a>创建基本的独立 shell 解决方案  
   
 1. 打开 Visual Studio 并创建一个新项目。  
   
-2. In the **New Project** window, expand **Other Project Types** and then **Extensibility**. Select the **Visual Studio Shell Isolated** project template.  
+2. 在 "**新建项目**" 窗口中，展开 "**其他项目类型**"，然后展开 "可**扩展性**"。 选择 " **Visual Studio Shell 独立**项目模板"。  
   
-3. Name the project `MyVSShellStub` and specify a location. Make sure that **Create directory for solution** is checked, and then click **OK**.  
+3. 将项目命名为 `MyVSShellStub` 并指定位置。 请确保已选中 "**创建解决方案的目录**"，然后单击 **"确定"** 。  
   
-     The new solution appears in **Solution Explorer**.  
+     新解决方案将显示在**解决方案资源管理器**中。  
   
-4. Build the solution and start debugging the isolated shell application.  
+4. 生成解决方案并开始调试独立 shell 应用程序。  
   
-     The Visual Studio isolated shell appears. The title bar reads **MyVSShellStub**. The title bar icon is generated from \MyVSShellStub\Resource Files\ApplicationIcon.ico.  
+     将显示 Visual Studio 独立 shell。 标题栏将读取**MyVSShellStub**。 标题栏图标是从 \MyVSShellStub\Resource Files\ApplicationIcon.ico. 生成的。  
   
-## <a name="customizing-the-application-name-and-icon"></a>Customizing the Application Name and Icon  
- You may want to brand your application by using the name of your company and its logo in the title bar. The following steps show how to change the name and icon that are displayed in the custom application title bar by changing the package definition file, MyVSShellStub.Application.pkgdef.  
+## <a name="customizing-the-application-name-and-icon"></a>自定义应用程序名称和图标  
+ 您可能想要使用您的公司名称及其在标题栏中的徽标来标记您的应用程序。 以下步骤演示如何通过更改包定义文件 MyVSShellStub 更改显示在自定义应用程序标题栏中的名称和图标。  
   
-#### <a name="to-customize-the-application-name-and-icon"></a>To customize the application name and icon  
+#### <a name="to-customize-the-application-name-and-icon"></a>自定义应用程序名称和图标  
   
-1. In the MyVSShellStub project, open \Shell Customization\MyVSShellStub.Application.pkgdef.  
+1. 在 MyVSShellStub 项目中，打开 \Shell Customization\MyVSShellStub.Application.pkgdef。  
   
-2. Change the `AppName` element value to **"AppName"="Fabrikam Music Editor"**  
+2. 将 `AppName` 元素值更改为 **"AppName" = "Fabrikam 音乐编辑器"**  
   
-3. To change the application icon, copy a different icon to the \MyVSShellStub\MyVSShellStub\MyVSShellStub\ directory. Rename the existing ApplicationIcon.ico file to ApplicationIcon1.ico. Rename the new file to ApplicationIcon.ico.  
+3. 若要更改应用程序图标，请将不同的图标复制到 \MyVSShellStub\MyVSShellStub\MyVSShellStub\ 目录中。 将现有的 ApplicationIcon 文件重命名为 ApplicationIcon1。 将新文件重命名为 ApplicationIcon。  
   
-4. 生成解决方案并启动调试。 The isolated shell IDE appears. The title bar has your new icon next to the words **Fabrikam Music Editor**.  
+4. 生成解决方案并启动调试。 随即出现隔离 shell IDE。 标题栏的 " **Fabrikam 音乐编辑器**" 的旁边有新图标。  
   
-## <a name="customizing-the-default-web-browser-home-page"></a>Customizing the Default Web Browser Home Page  
- This section shows how to change the default home page of the **Web Browser** window by changing the package definition file.  
+## <a name="customizing-the-default-web-browser-home-page"></a>自定义默认的 Web 浏览器主页  
+ 本部分演示如何通过更改包定义文件来更改**Web 浏览器**窗口的默认主页。  
   
-#### <a name="to-customize-the-default-web-browser-home-page"></a>To customize the default Web Browser home page  
+#### <a name="to-customize-the-default-web-browser-home-page"></a>自定义默认的 Web 浏览器主页  
   
-1. In the MyVSShellStub.Application.pkgdef file, change the `DefaultHomePage` element value to "<https://www.microsoft.com>".  
+1. 在 MyVSShellStub 文件中，将 `DefaultHomePage` 元素值更改为 "<https://www.microsoft.com>"。  
   
-2. Rebuild the MyVSShellStub project.  
+2. 重新生成 MyVSShellStub 项目。  
   
 3. 生成解决方案并启动调试。  
   
-4. In **View / Other Windows**, click **Web Browser**. The **Web Browser** window displays the Microsoft Corporation home page.  
+4. 在**视图/其他窗口**中，单击 " **Web 浏览器**"。 **Web 浏览器**窗口显示 Microsoft Corporation 主页。  
   
-## <a name="removing-the-print-command"></a>Removing the Print Command  
- The .vsct file in an isolated shell UI project consists of a set of declarations of the form `<Define name=No_`*Element*`>`, where *Element* is one of the standard Visual Studio menus and commands.  
+## <a name="removing-the-print-command"></a>删除打印命令  
+ 独立 shell UI 项目中的 .vsct 文件包含一组格式为 `<Define name=No_`*元素*`>`的声明，其中*Element*是标准 Visual Studio 菜单和命令之一。  
   
- If a declaration is uncommented, that menu or command is excluded from the isolated shell. Conversely, if a declaration is commented, the menu or command is included in the isolated shell.  
+ 如果声明为取消注释，则从独立 shell 中排除该菜单或命令。 相反，如果声明了声明，则菜单或命令将包含在独立 shell 中。  
   
- In the following steps, you uncomment print command in your .vsct file.  
+ 在下面的步骤中，将在 .vsct 文件中取消注释 "打印" 命令。  
   
-#### <a name="to-remove-the-print-command"></a>To remove the print command  
+#### <a name="to-remove-the-print-command"></a>删除 "打印" 命令  
   
-1. Verify that the **Print** command appears on the **File** menu in the isolated shell application.  
+1. 验证 "**打印**" 命令显示在独立 shell 应用程序的 "**文件**" 菜单上。  
   
-2. In the MyVSShellStubUI project, open \Resource Files\MyVSShellStubUI.vsct for editing.  
+2. 在 MyVSShellStubUI 项目中，打开 \Resource Files\MyVSShellStubUI.vsct 进行编辑。  
   
-3. Uncomment this line:  
+3. 取消注释此行：  
   
     ```  
     <!-- <Define name="No_PrintChildrenCommand"/> -->  
     ```  
   
-4. This removes the print command.  
+4. 这会删除 "打印" 命令。  
   
-5. Start debugging the isolated shell application. Verify that the **File / Print** command is gone.  
+5. 开始调试隔离 shell 应用程序。 验证 "**文件/打印**" 命令是否已消失。  
   
-## <a name="removing-features-from-the-isolated-shell"></a>Removing Features from the Isolated Shell  
- You can remove some of the packages that are loaded with Visual Studio by editing the .pkgundef file if you do not want those features in your custom isolated shell application. You specify the package in one of the subkeys of the $RootKey$\Packages registry key.  
+## <a name="removing-features-from-the-isolated-shell"></a>从独立 Shell 删除功能  
+ 如果你不想在自定义的独立 shell 应用程序中使用这些功能，则可以通过编辑 .pkgundef 文件来删除加载到 Visual Studio 中的某些包。 在 $RootKey $ \Packages 注册表项的一个子项中指定包。  
   
 > [!NOTE]
-> To find the GUIDs of Visual Studio features, see [Package GUIDs of Visual Studio Features](../extensibility/package-guids-of-visual-studio-features.md).  
+> 若要查找 Visual Studio 功能的 Guid，请参阅[Visual Studio 功能的包 guid](../extensibility/package-guids-of-visual-studio-features.md)。  
   
- The following procedure shows how to remove the XML editor from the isolated shell.  
+ 下面的过程演示如何从独立 shell 删除 XML 编辑器。  
   
-#### <a name="to-remove-the-xml-editor"></a>To remove the XML editor  
+#### <a name="to-remove-the-xml-editor"></a>删除 XML 编辑器  
   
-1. Open the MyVSShellStub.pkgundef file in the Shell Customization folder of the MyVSShellStub project.  
+1. 打开 MyVSShellStub 项目的 "Shell 自定义文件夹" 中的 MyVSShellStub 文件。  
   
-2. Uncomment the following line:  
+2. 取消注释以下行：  
   
-     [$RootKey$\Packages\\{87569308-4813-40a0-9cd0-d7a30838ca3f}]  
+     [$RootKey $ \Packages\\{87569308-4813-40a0-9cd0-d7a30838ca3f}]  
   
-3. Rebuild the solution and start debugging the isolated shell. Open an XML file,for example, \MyVSShellStub\MyVSShellStub\MyVSShellStubUI\MyVSShellStubUI.vsct. Verify that the XML keywords in the file are not colorized and that typing "<" on a line does not bring up XML tooltips.  
+3. 重新生成解决方案并开始调试独立 shell。 打开 XML 文件，例如，\MyVSShellStub\MyVSShellStub\MyVSShellStubUI\MyVSShellStubUI.vsct。 验证文件中的 XML 关键字不是着色，并且在行上键入 "<" 不会显示 XML 工具提示。  
   
-## <a name="customizing-the-helpabout-box"></a>Customizing the Help/About box  
- You can customize the Help/About box, which is created as part of the isolated shell project template.  
+## <a name="customizing-the-helpabout-box"></a>自定义 "帮助/关于" 框  
+ 您可以自定义 "帮助/关于" 框，它是作为独立 shell 项目模板的一部分创建的。  
   
-#### <a name="to-customize-the-company-name"></a>To customize the company name  
+#### <a name="to-customize-the-company-name"></a>自定义公司名称  
   
-1. The company name, copyright information, product version, and product description are found in the MyVSShellStub.AboutBoxPackage project, in the \Properties\AssemblyInfo.cs file. 打开此文件。  
+1. 公司名称、版权信息、产品版本和产品说明可在 \Properties\AssemblyInfo.cs 文件中的 MyVSShellStub AboutBoxPackage 项目中找到。 打开此文件。  
   
-2. Change the `AssemblyCompany` value to **Fabrikam**, the `AssemblyProduct` and `AssemblyTitle` values to **Fabrikam Music Editor**, and the `AssemblyCopyright` value to **Copyright © Fabrikam 2015**:  
+2. 将 `AssemblyCompany` 值更改为**fabrikam**，将 `AssemblyProduct` 和 `AssemblyTitle` 值更改为**fabrikam 音乐编辑器**，将 `AssemblyCopyright` 值更改为 "**版权所有© Fabrikam 2015**：  
   
     ```  
     [assembly: AssemblyTitle("Fabrikam Music Editor")]  
@@ -139,15 +139,15 @@ This walkthrough shows how to create an isolated shell solution, customize the H
     [assembly: AssemblyCopyright("Copyright © Fabrikam 2015”)]  
     ```  
   
-3. To add a description of the product, change the `AssemblyDescription` value to **The description of Fabrikam Music editor.** :  
+3. 若要添加产品说明，请将 `AssemblyDescription` 值更改为**Fabrikam 音乐编辑器的说明。** ：  
   
     ```  
     [assembly: AssemblyDescription("The description of Fabrikam Music editor.”)]  
     ```  
   
-4. Start debugging and in the isolated shell application, open the **Help / About** box. You should see the changed strings. The title of the Help/About box is the same as the `AssemblyTitle` value in AssemblyInfo.cs.  
+4. 开始调试，在独立 shell 应用程序中，打开 "**帮助/关于**" 框。 应会看到已更改的字符串。 "帮助/关于" 框的标题与 AssemblyInfo.cs 中的 `AssemblyTitle` 值相同。  
   
-5. The properties of the **Help/About** box itself are found in the MyVSShellStub.AboutBoxPackage\AboutBox.xaml file. To change the width of the Help/About box, go to the `AboutDialogStyle` block and set the `Width` property to 200:  
+5. "**帮助"/"关于**" 框本身的属性位于 MyVSShellStub. AboutBoxPackage\AboutBox.xaml 文件中。 若要更改 "帮助/关于" 框的宽度，请转到 `AboutDialogStyle` 块并将 `Width` 属性设置为200：  
   
     ```  
     <Style x:Key="AboutDialogStyle" TargetType="Window">  
@@ -160,47 +160,47 @@ This walkthrough shows how to create an isolated shell solution, customize the H
     </Style>  
     ```  
   
-6. Rebuild the solution and start debugging the isolated shell. The Help/About box should be approximately square.  
+6. 重新生成解决方案并开始调试独立 shell。 "帮助"/"关于" 框应该大致为正方形。  
   
-## <a name="before-you-deploy-the-isolated-shell-application"></a>Before You Deploy the Isolated Shell Application  
- Your isolated shell application can be installed on any computer that has the Visual Studio Shell (Isolated) Redistributable Package. For more information about the redistributable package, see the [Visual Studio Extensibility Downloads](https://go.microsoft.com/fwlink/?LinkID=119298) website.  
+## <a name="before-you-deploy-the-isolated-shell-application"></a>部署独立 Shell 应用程序之前  
+ 可以在具有 Visual Studio Shell （独立）可再发行组件包的任何计算机上安装独立 shell 应用程序。 有关可再发行组件包的详细信息，请参阅[Visual Studio 扩展性下载](https://go.microsoft.com/fwlink/?LinkID=119298)网站。  
   
-## <a name="deploying-the-isolated-shell-application"></a>Deploying the Isolated Shell Application  
- You deploy your isolated shell application to a target computer by creating a setup project. You must specify these things:  
+## <a name="deploying-the-isolated-shell-application"></a>部署独立 Shell 应用程序  
+ 通过创建安装项目，将独立 shell 应用程序部署到目标计算机。 你必须指定以下内容：  
   
-- The layout of the folders and files on the target computer.  
+- 目标计算机上的文件夹和文件的布局。  
   
-- The launch conditions that guarantee that the .NET Framework and the Visual Studio shell runtime are installed on the target computer.  
+- 保证 .NET Framework 和 Visual Studio shell 运行时安装在目标计算机上的启动条件。  
   
-  In the following procedure you will need to install InstallShield Limited Edition on your computer.  
+  在以下过程中，你将需要在你的计算机上安装 InstallShield 有限版。  
   
-#### <a name="to-create-the-setup-project"></a>To create the setup project  
+#### <a name="to-create-the-setup-project"></a>创建安装项目  
   
-1. In **Solution Explorer**, right-click the solution node and then click **Add New Project**.  
+1. 在**解决方案资源管理器**中，右键单击 "解决方案" 节点，然后单击 "**添加新项目**"。  
   
-2. In the **New Project** dialog box, expand **Other Project Types** and then select **Setup and Deployment**. Select the InstallShield template. Name the new project `MySetup` and then click **OK**.  
+2. 在 "**新建项目**" 对话框中，展开 "**其他项目类型**"，然后选择 "**安装和部署**"。 选择 InstallShield 模板。 将新项目命名为 "`MySetup`"，然后单击 **"确定"** 。  
   
-3. If InstallShield Limited Edition is already installed, continue to the next step.  
+3. 如果已安装 InstallShield 有限版，则继续下一步。  
   
-    If InstallShield Limited Edition is not already installed, the InstallShield download page appears. Follow the instructions to download and install the product, choosing the version of InstallShield that is compatible with your version of Visual Studio. You must decide whether to register your installation of InstallShield or use it as an evaluation. You must restart Visual Studio after you complete the installation.  
+    如果尚未安装 InstallShield 有限版，将显示 "InstallShield 下载" 页。 按照说明下载并安装产品，选择与你的 Visual Studio 版本兼容的 InstallShield 版本。 必须决定是注册 InstallShield 安装还是将其用作评估版。 完成安装后，必须重启 Visual Studio。  
   
    > [!IMPORTANT]
-   > You must start Visual Studio as an administrator before you create an InstallShield project. If you do not do so, you will get an error when you build the project.  
+   > 必须以管理员身份启动 Visual Studio，然后才能创建 InstallShield 项目。 如果不这样做，则在生成项目时将会收到错误。  
   
-   The next steps show how to configure the setup project.  
+   后续步骤演示了如何配置安装项目。  
   
 > [!IMPORTANT]
-> Make sure that you have built the release configuration of your isolated shell project at least once before you configure the setup project.  
+> 在配置安装项目之前，请确保已生成独立 shell 项目的 "发布" 配置。  
   
-#### <a name="to-configure-the-setup-project"></a>To configure the setup project  
+#### <a name="to-configure-the-setup-project"></a>配置安装程序项目  
   
-1. In the **Solution Explorer**, under the **MySetup** project, choose **Project Assistant**. On the bottom row of the **Project Assistant** window, choose **Application Information**. Enter **Fabrikam** as your company name and **Fabrikam Music Editor** as your application name. Choose the forward arrow at the bottom right of the **Project Assistant**.  
+1. 在**解决方案资源管理器**的 " **mysetup.bat** " 项目下，选择 "**项目助手**"。 在 "**项目助手**" 窗口的底部，选择 "**应用程序信息**"。 输入**fabrikam**作为公司名称，并输入**fabrikam 音乐编辑器**作为应用程序名称。 选择**项目助手**右下方的向前箭头。  
   
-2. Select **Yes** under **Does your application require any software to be installed on the machine?** and then select **Microsoft .NET Framework 4.5 Full Package**.  
+2. 如果**你的应用程序要求在计算机上安装任何软件**，请选择 **"是**"，然后选择 " **Microsoft .NET Framework 4.5 Full Package**"。  
   
-3. Choose the **Application Files** button at the bottom of the window, and make sure that the **Fabrikam Music Editor** folder is selected.  
+3. 选择窗口底部的 "**应用程序文件**" 按钮，并确保已选中 " **Fabrikam 音乐编辑器**" 文件夹。  
   
-4. Choose the **Add Files** button. In the **Add Files** dialog box, add the following files from the **MyVSShellStub\Release** folder:  
+4. 选择 "**添加文件**" 按钮。 在 "**添加文件**" 对话框中，添加**MyVSShellStub\Release**文件夹中的以下文件：  
   
     1. MyVSShellStub.exe.config  
   
@@ -214,49 +214,49 @@ This walkthrough shows how to create an isolated shell solution, customize the H
   
     6. MyVSShellStub.winprf  
   
-    7. Splash.bmp  
+    7. 闪现  
   
-5. Click the **Add Project Outputs** button and add **MyVSShellStub/Primary Output**. 单击“确定”。  
+5. 单击 "**添加项目输出**" 按钮，然后添加**MyVSShellStub/Primary Output**。 单击" **确定**"。  
   
-6. In the left pane, under **Destination Computer**, right-click the **Fabrikam Music Editor [INSTALLDIR]** node and add a **New Folder** named **Extensions**.  
+6. 在左窗格中的 "**目标计算机**" 下，右键单击 " **Fabrikam 音乐编辑器 [INSTALLDIR]** " 节点，并添加一个名为 "**扩展**" 的**新文件夹**。  
   
-7. Right-click the **Extensions** node in the left pane and add a new folder named **Application**.  
+7. 右键单击左窗格中的 "**扩展**" 节点，然后添加名为 "**应用程序**" 的新文件夹。  
   
-8. Select the **Application** folder and click the **Add Project Outputs** button, then select the primary output from the MyVSShellStub.AboutBoxPackage project.  
+8. 选择**应用程序**文件夹，然后单击 "**添加项目输出**" 按钮，然后从 MyVSShellStub AboutBoxPackage 项目选择主输出。  
   
-9. Click the **Add Files** button and from the \MyVSShellStub\Release\Extensions\Application\ folder add the following files:  
+9. 单击 "**添加文件**" 按钮，然后从 \MyVSShellStub\Release\Extensions\Application\ 文件夹中添加以下文件：  
   
     - MyVSShellStub.AboutBoxPackage.pkgdef  
   
     - MyVSShellStub.Application.pkgdef  
   
-10. Right-click the **Fabrikam Music Editor [INSTALLDIR]** node in the left pane and add a new folder named **1033**.  
+10. 右键单击左窗格中的 " **Fabrikam 音乐编辑器 [INSTALLDIR]** " 节点，然后添加名为**1033**的新文件夹。  
   
-11. Select the 1033 folder and then click the **Add Project Outputs** button, and select the primary output from the MyVSShellStubUI project.  
+11. 选择1033文件夹，然后单击 "**添加项目输出**" 按钮，然后选择 MyVSShellStubUI 项目的主输出。  
   
-12. Move to the **Application Shortcuts** window.  
+12. 转到 "**应用程序快捷方式**" 窗口。  
   
-13. Click **New** to create a shortcut and select **[ProgramFilesFolder]\Fabrikam\Fabrikam Music Editor\MyVSShellStub.Primary Output**.  
+13. 单击 "**新建**" 创建快捷方式，然后选择 " **[ProgramFilesFolder] \Fabrikam\Fabrikam 音乐 Editor\MyVSShellStub.Primary 输出**"。  
   
-14. Move to the **Installation Interview** pane.  
+14. 转到 "**安装访谈**" 窗格。  
   
-15. Set all items to **No**.  
+15. 将所有项目设置为 "**否**"。  
   
-16. In **Solution Explorer**, in the MySetup project, open **Define Setup Requirements and Actions \ Requirements**. The **Requirements** window opens.  
+16. 在**解决方案资源管理器**的 mysetup.bat 项目中，打开 "**定义安装要求和操作 \ 要求**"。 此时将打开 "**要求**" 窗口。  
   
-17. Right click **System Software Requirements** and select **Create New Launch Condition**. The **System Search Wizard** appears.  
+17. 右键单击 "**系统软件要求**" 并选择 "**创建新启动条件**"。 **系统搜索向导**随即出现。  
   
-18. In the **What do you want to find?** pane, choose **Registry Entry** in the drop-down list and click **Next**.  
+18. 在 "**你想要查找什么？** " 窗格中，选择下拉列表中的 "**注册表项**"，然后单击 "**下一步**"。  
   
-19. In the **How do you want to look for it?** pane, select **HKEY_LOCAL_MACHINE** as the registry root. Enter **SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** for 64-bit systems or **SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** for 32-bit systems, and enter **Install** as the registry value. 单击 **“下一步”** 。  
+19. 在 "**你希望如何查找它？** " 窗格中，选择 " **HKEY_LOCAL_MACHINE** " 作为注册表根目录。 为64位系统输入**SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** ，为32位系统输入**SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** ，并输入**Install**作为注册表值。 单击“下一步”。  
   
-20. In the **What do you want to do with the value?** pane, enter **This product requires the Visual Studio 2015 Isolated Shell Redistributable to be installed.** as the display text and click **Finish**.  
+20. 在 "**你希望如何处理值？"** 窗格中，输入**此产品需要安装 Visual Studio 2015 隔离 Shell 可再发行组件。** 作为显示文本，然后单击 "**完成**"。  
   
-21. Rebuild the isolated shell solution to create the setup project.  
+21. 重新生成独立 shell 解决方案以创建安装项目。  
   
-     You can find the setup.exe file in the following folder:  
+     可以在以下文件夹中找到 setup.exe 文件：  
   
      \MyVSShellStub\MySetup\MySetup\Express\SingleImage\DiskImages\DISK1  
   
-## <a name="testing-the-installation-program"></a>Testing the Installation Program  
- To test the setup, copy the setup.exe file to a different computer and run the Setup executable. You should be able to run the isolated shell application.
+## <a name="testing-the-installation-program"></a>测试安装程序  
+ 若要测试安装，请将 setup.exe 文件复制到另一台计算机，然后运行安装程序可执行文件。 你应该能够运行独立 shell 应用程序。

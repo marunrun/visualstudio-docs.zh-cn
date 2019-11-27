@@ -1,5 +1,5 @@
 ---
-title: Graphics Frame Analysis | Microsoft Docs
+title: 图形帧分析 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -39,12 +39,12 @@ ms.locfileid: "74300513"
   
   虽然帧分析主要用于帮助你获得更快的呈现性能，但是它同样可以帮助你使给定的性能目标获得更好的视觉质量，或者减少 GPU 耗电量。  
   
-  To see a demonstration of what Frame Analysis can do for your app, you can watch the [Visual Studio Graphics Frame Analysis](https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool) video on Channel 9.  
+  若要查看帧分析可对应用执行的操作的演示，可以观看第9频道上的[Visual Studio 图形帧分析](https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool)视频。  
   
 ## <a name="using-frame-analysis"></a>使用帧分析  
  在可以使用帧分析之前，你必须在应用运行时从应用中捕获图形信息，正如你在使用任何其他图形分析器工具时进行的操作。 然后，在图形日志文档 (.vsglog) 窗口中，选择“帧分析”选项卡。  
   
- ![Select the Frame Analysis tab.](../debugger/media/pix-frame-analysis-select-tab.png "pix_frame_analysis_select_tab")  
+ ![选择 "帧分析" 选项卡。](../debugger/media/pix-frame-analysis-select-tab.png "pix_frame_analysis_select_tab")  
   
  在分析完成之后，将显示结果。 帧分析选项卡顶部将显示时间线和摘要表。 选项卡底部将显示详细信息表。 如果在播放期间产生错误或警告，则将在时间线上对它们进行汇总；你可以遵循此处的链接以了解错误和警告的详细信息。  
   
@@ -77,14 +77,14 @@ ms.locfileid: "74300513"
 #### <a name="timeline"></a>时间线  
  时间线显示彼此相关的绘图调用计时的概述。 因为较大的直条对应于较长的绘图时间，所以你可以使用它快速地定位帧中能耗最高的绘图调用。 当捕获的帧包含大量绘图调用时，多个绘图调用将合并到一个直条中，其长度为这些绘图调用的总和。  
   
- ![The timeline shows draw&#45;call costs.](../debugger/media/pix-frame-analysis-timeline.png "pix_frame_analysis_timeline")  
+ ![时间线显示绘图&#45;调用成本。](../debugger/media/pix-frame-analysis-timeline.png "pix_frame_analysis_timeline")  
   
  你可以释放直条上的指针，以查看该直条对应于哪个绘图调用事件。 选择该直条会使事件列表同步到该事件。  
   
 #### <a name="table"></a>表  
  时间线下的数字表显示了与应用的默认呈现有关的每个绘图调用的每个呈现变体的相对性能。 每一列都显示一个不同的呈现变体，每一行都表示一个在最左边的列中标识的不同的绘图调用；你可以从此处遵循指向“图形事件列表”窗口中的事件的链接。  
   
- ![The summary table shows different varients.](../debugger/media/pix-frame-analysis-summary.png "pix_frame_analysis_summary")  
+ ![摘要表显示了不同的变量。](../debugger/media/pix-frame-analysis-summary.png "pix_frame_analysis_summary")  
   
  摘要表左起第二列显示应用的基线呈现时间，即应用用以完成绘图调用所需的默认呈现时长。 其余各列将每个呈现变体的相对性能显示为基线的百分比，以便更容易看出性能是否有所提升。 大于 100% 的百分比花费的时间比基线长（即降低了性能），小于 100% 的百分比花费的时间比基线短（即提升了性能）。  
   
@@ -93,14 +93,14 @@ ms.locfileid: "74300513"
 #### <a name="hot-draw-calls"></a>“热点”绘图调用  
  为了引起对消耗了较大部分的整体呈现时间或由于无法避免的原因而可能速度异常缓慢的绘图调用的注意，当其本身的基线计时大于一个标准偏差，长于帧中所有绘图调用的平均基线计时时，会将包含这些“热点”绘图调用的行着色为红色。  
   
- ![This DrawIndexed call has hot and cold varients.](../debugger/media/pix-frame-analysis-hot-calls.png "pix_frame_analysis_hot_calls")  
+ ![此 DrawIndexed 调用具有热和冷变量。](../debugger/media/pix-frame-analysis-hot-calls.png "pix_frame_analysis_hot_calls")  
   
 #### <a name="statistical-significance"></a>统计意义  
  为了引起对具有最高相关性的呈现变体的注意，帧分析将确定每个呈现变体的统计意义，并将有意义的变体显示为黑体字。 它将提升性能的变体显示为绿色，将降低性能的变体显示为红色。 它还将不具有统计学意义的结果显示为正常字体。  
   
- ![The statistical relevance of the draw call variant](../debugger/media/pix-frame-analysis-summary-stats.png "pix_frame_analysis_summary_stats")  
+ ![绘图调用变型的统计相关性](../debugger/media/pix-frame-analysis-summary-stats.png "pix_frame_analysis_summary_stats")  
   
- To determine statistical relevance, Frame Analysis uses the [Student's t-test](https://en.wikipedia.org/wiki/Student's_t-test).  
+ 若要确定统计相关性，帧分析将使用[学生的 t 检验](https://en.wikipedia.org/wiki/Student's_t-test)。  
   
 ### <a name="details-table"></a>详细信息表  
  “摘要”表下面是默认为折叠状态的“详细信息”表。 “详细信息”表的内容取决于播放计算机的硬件平台。 有关支持的硬件平台的信息，请参阅[硬件支持](#HardwareSupport)。  
@@ -108,12 +108,12 @@ ms.locfileid: "74300513"
 #### <a name="platforms-that-do-not-support-hardware-counters"></a>不支持硬件计数器的平台  
  大多数平台不完全支持硬件 GPU 计数器，其中包括当前由 Intel、AMD 和 nVidia 提供的所有 GPU。 当不存在要收集的硬件计数器时，将仅显示一张“详细信息”表，它包含所有变体的平均绝对计时。  
   
- ![The details table and some playback varients.](../debugger/media/pix-frame-analysis-details.png "pix_frame_analysis_details")  
+ ![详细信息表和某些播放变量。](../debugger/media/pix-frame-analysis-details.png "pix_frame_analysis_details")  
   
 #### <a name="platforms-that-support-hardware-counters"></a>支持硬件计数器的平台  
  对于支持硬件 GPU 计数器的平台（例如，nVidia T40 SOC 和所有 Qualcomm SOC），将显示几张“详细信息”表，每张表对应一个变体。 为每个呈现变体收集每个可用的硬件计数器，它们显示在其本身的“详细信息”表中。  
   
- ![Hardware counters are displayed when supported.](../debugger/media/pix-frame.png "pix_frame")  
+ ![支持时显示硬件计数器。](../debugger/media/pix-frame.png "pix_frame")  
   
  硬件计数器信息为每个绘图调用都提供了一个特定硬件平台行为的非常详细的视图，可帮助你非常准确地标识出现性能瓶颈的原因。  
   
@@ -191,10 +191,10 @@ ms.locfileid: "74300513"
 |**0x MSAA**|在所有呈现器目标上禁用多重采样抗锯齿 (MSAA)。<br /><br /> 有关详细信息，请参阅 [0x/2x/4x MSAA 变体](../debugger/0x-2x-4x-msaa-variants.md)|  
 |**2x MSAA**|在所有呈现器目标上启用 2x 多重采样抗锯齿 (MSAA)。<br /><br /> 有关详细信息，请参阅 [0x/2x/4x MSAA 变体](../debugger/0x-2x-4x-msaa-variants.md)|  
 |**4x MSAA**|在所有呈现器目标上启用 4x 多重采样抗锯齿 (MSAA)。<br /><br /> 有关详细信息，请参阅 [0x/2x/4x MSAA 变体](../debugger/0x-2x-4x-msaa-variants.md)|  
-|**点纹理筛选**|针对所有相应的纹理采样，将筛选模式设置为 `DXD11_FILTER_MIN_MAG_MIP_POINT`（点纹理筛选）。<br /><br /> For more information, see [Point, Bilinear, Trilinear, and Anisotropic Texture Filtering Variants](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  
-|**双线性纹理筛选**|针对所有相应的纹理采样，将筛选模式设置为 `DXD11_FILTER_MIN_MAG_LINEAR_MIP_POINT`（双线性纹理筛选）。<br /><br /> For more information, see [Point, Bilinear, Trilinear, and Anisotropic Texture Filtering Variants](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  
-|**三双线性纹理筛选**|针对所有相应的纹理采样，将筛选模式设置为 `DXD11_FILTER_MIN_MAG_MIP_LINEAR`（三线性纹理筛选）。<br /><br /> For more information, see [Point, Bilinear, Trilinear, and Anisotropic Texture Filtering Variants](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  
-|**各向异性纹理筛选**|针对所有相应的纹理采用，将筛选模式设置为 `DXD11_FILTER_ANISOTROPIC`，并将 `MaxAnisotropy` 设置为 `16`（16x 各向异性纹理筛选）。<br /><br /> For more information, see [Point, Bilinear, Trilinear, and Anisotropic Texture Filtering Variants](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  
+|**点纹理筛选**|针对所有相应的纹理采样，将筛选模式设置为 `DXD11_FILTER_MIN_MAG_MIP_POINT`（点纹理筛选）。<br /><br /> 有关详细信息，请参阅[Point、双线性、Trilinear 和各向异性纹理筛选变体](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)。|  
+|**双线性纹理筛选**|针对所有相应的纹理采样，将筛选模式设置为 `DXD11_FILTER_MIN_MAG_LINEAR_MIP_POINT`（双线性纹理筛选）。<br /><br /> 有关详细信息，请参阅[Point、双线性、Trilinear 和各向异性纹理筛选变体](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)。|  
+|**三双线性纹理筛选**|针对所有相应的纹理采样，将筛选模式设置为 `DXD11_FILTER_MIN_MAG_MIP_LINEAR`（三线性纹理筛选）。<br /><br /> 有关详细信息，请参阅[Point、双线性、Trilinear 和各向异性纹理筛选变体](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)。|  
+|**各向异性纹理筛选**|针对所有相应的纹理采用，将筛选模式设置为 `DXD11_FILTER_ANISOTROPIC`，并将 `MaxAnisotropy` 设置为 `16`（16x 各向异性纹理筛选）。<br /><br /> 有关详细信息，请参阅[Point、双线性、Trilinear 和各向异性纹理筛选变体](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)。|  
 |**16bpp 呈现器目标格式**|针对所有呈现器目标和后台缓冲区，将像素格式设置为 `DXGI_FORMAT_B5G6R5_UNORM`（16bpp，565 格式）。<br /><br /> 有关详细信息，请参阅 [16bpp 呈现目标格式变体](../debugger/16bpp-render-target-format-variant.md)|  
 |**Mip 贴图生成**|对非呈现器目标的所有纹理启用 Mip 贴图。<br /><br /> 有关详细信息，请参阅 [Mip 贴图生成变体](../debugger/mip-map-generation-variant.md)。|  
 |**一半纹理尺寸**|将非呈现器目标的所有纹理上的纹理尺寸减小为其每种尺寸的原始大小的一半。 例如，256x128 纹理将减小为 128x64 纹素。<br /><br /> 有关详细信息，请参阅 [Half/Quarter 纹理维度变体](../debugger/half-quarter-texture-dimensions-variant.md)。|  

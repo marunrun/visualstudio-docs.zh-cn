@@ -21,7 +21,7 @@ ms.locfileid: "74295760"
 
 您的程序已完成并已做好运行准备。 您可以运行程序并设置 PictureBox 的背景色。 若要了解更多信息，请尝试通过以下操作来改进程序：更改窗体的颜色、自定义按钮和复选框以及更改窗体的属性。
 
- ![link to video](../data-tools/media/playvideo.gif "PlayVideo")For a video version of this topic, see [Tutorial 1: Create a Picture Viewer in Visual Basic - Video 5](https://go.microsoft.com/fwlink/?LinkId=205216) or [Tutorial 1: Create a Picture Viewer in C# - Video 5](https://go.microsoft.com/fwlink/?LinkId=205206). 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
+ ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[教程1：在 Visual Basic 中创建图片查看器-视频 5](https://go.microsoft.com/fwlink/?LinkId=205216)或[教程1：在视频5中C#创建图片查看器](https://go.microsoft.com/fwlink/?LinkId=205206)。 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
 
 ### <a name="to-run-your-program-and-set-the-background-color"></a>运行程序并设置背景色
 
@@ -29,7 +29,7 @@ ms.locfileid: "74295760"
 
 2. 在打开图片之前，请选择“设置背景色”按钮。 随即打开“颜色”对话框。
 
-     ![Color dialog box](../ide/media/express-colordialog.png "Express_ColorDialog") Color dialog box
+     !["颜色" 对话框](../ide/media/express-colordialog.png "Express_ColorDialog")"颜色" 对话框
 
 3. 选择一种要设置为 PictureBox 背景色的颜色。 仔细查看 `backgroundButton_Click()` 方法以了解其工作原理。
 

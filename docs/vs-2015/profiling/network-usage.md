@@ -31,7 +31,7 @@ Visual Studio“网络”诊断工具用于收集有关使用 [Windows.Web.Http 
   
 1. 在 Visual Studio 中打开项目。  
   
-2. On the  menu, click **Debug / Performance Profiler...** . Choose **Network**, and then choose **Start**.  
+2. 在菜单上，单击 "**调试/性能探查器 ...** "。选择 "**网络**"，然后选择 "**启动**"。  
   
 3. 网络工具将开始收集应用的 HTTP 流量。  
   
@@ -74,6 +74,6 @@ Visual Studio“网络”诊断工具用于收集有关使用 [Windows.Web.Http 
 3. 响应整齐打印按钮（位于“正文”选项卡内）可通过提高内容的可读性帮助你分析 JSON、XML、HTML、CSS、JavaScript 和 TypeScript 响应负载。  
   
 ## <a name="see-also"></a>请参阅  
- [Run profiling tools without debugging](https://msdn.microsoft.com/library/e97ce1a4-62d6-4b8e-a2f7-61576437ff01)   
+ [运行分析工具而不调试](https://msdn.microsoft.com/library/e97ce1a4-62d6-4b8e-a2f7-61576437ff01)   
  [Visual Studio 博客：Visual Studio 网络检查器简介](https://go.microsoft.com/fwlink/?LinkId=535022)   
  [第 9 频道视频：VS 诊断工具 – 新的网络探查器](https://channel9.msdn.com/Series/ConnectOn-Demand/206)

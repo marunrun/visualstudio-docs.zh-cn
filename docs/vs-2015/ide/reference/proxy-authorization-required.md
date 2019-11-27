@@ -19,27 +19,27 @@ ms.locfileid: "74297810"
 # <a name="proxy-authorization-required"></a>所需的代理身份验证
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-The **Proxy authorization required** error generally occurs when users are connected to Visual Studio online resources through a proxy server, and the proxy server blocks the calls.
+通常，当用户通过代理服务器连接到 Visual Studio online 资源，而代理服务器阻止调用时，通常会发生**代理授权**错误。
 
-To correct this error, try one or more of the following steps:
+若要更正此错误，请尝试执行以下一个或多个步骤：
 
 - 重新启动 Visual Studio。 这时会出现一个代理身份验证对话框。 在对话框中输入你的凭据。
 
-- 如果上述步骤未能解决问题，这可能是由于你的代理服务器不提示需要提供 https://go.microsoft.com 地址的凭据，而是提示需要 *.visualStudio.com 地址的凭据。 For these servers, you need to add the following URLs to the allow list to unblock all sign-in scenarios in Visual Studio:
+- 如果上述步骤未能解决问题，这可能是由于你的代理服务器不提示需要提供 https://go.microsoft.com 地址的凭据，而是提示需要 *.visualStudio.com 地址的凭据。 对于这些服务器，需要将以下 Url 添加到允许列表以取消阻止 Visual Studio 中的所有登录方案：
 
   - *.windows.net
 
   - *.microsoftonline.com
 
-  - *.visualstudio.com
+  - *.visualStudio.com
 
   - *.microsoft.com
 
   - *.live.com
 
-- You can remove the https://go.microsoft.com address from the allow list so that the proxy authentication dialog shows up for both the https://go.microsoft.com address and the server endpoints when Visual Studio is restarted.
+- 可以从允许列表中删除 https://go.microsoft.com 地址，以便在重新启动 Visual Studio 时同时显示 https://go.microsoft.com 地址和服务器终结点的代理身份验证对话框。
 
-- If you want to use your default credentials with your proxy, do the following:
+- 如果要在代理中使用默认凭据，请执行以下操作：
 
    1. 查找 devenv.exe.config（devenv.exe 配置文件），查找位置为： **%ProgramFiles%\Microsoft Visual Studio 14.0\Common7\IDE** （或 **%ProgramFiles(x86)%\Microsoft Visual Studio 14.0\Common7\IDE**）。
 
@@ -51,6 +51,6 @@ To correct this error, try one or more of the following steps:
       </defaultProxy>
       ```
 
-      Insert the correct proxy address for your network in `proxyaddress="<http://<yourproxy:port#>`.
+      在 `proxyaddress="<http://<yourproxy:port#>`中为你的网络插入正确的代理地址。
 
-- Follow the instructions in [this blog post](https://blogs.msdn.microsoft.com/rido/2010/05/06/how-to-connect-to-tfs-through-authenticated-web-proxy/) to add code that allows you to use the proxy.
+- 按照[此博客文章](https://blogs.msdn.microsoft.com/rido/2010/05/06/how-to-connect-to-tfs-through-authenticated-web-proxy/)中的说明添加允许你使用代理的代码。

@@ -1,5 +1,5 @@
 ---
-title: Debug Store apps
+title: 调试应用商店应用
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -32,11 +32,11 @@ ms.locfileid: "74298341"
 |-|-|
 |[启动调试会话 (JavaScript)](../debugger/start-a-debugging-session-for-store-apps-in-visual-studio-javascript.md)|“如何启动调试会话”描述了用于针对 JavaScript 应用配置和启动调试会话的不同选项。|
 |[在调试会话中控制执行 (JavaScript)](../debugger/control-execution-of-a-store-app-in-a-visual-studio-debug-session-for-windows-store-apps-javascript.md)|调试器导航将通过简单的应用来演示如何启动和停止调试、如何在代码中导航以及如何查看程序状态。|
-|[快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md)|调试 HTML 和 CSS 演示了如何使用实时 DOM 检查工具以交互方式调试 JavaScript 应用，以查看和修改 HTML 和 CSS。|
-|[快速入门：调试 JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md)|Debug JavaScript using the console shows you how to interactively debug a JavaScript app using [JavaScript Console commands](../debugger/javascript-console-commands.md).|
+|[快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md)|“调试 HTML 和 CSS”演示了如何使用实时 DOM 检查工具以交互方式调试 JavaScript 应用，以查看和修改 HTML 和 CSS。|
+|[快速入门：调试 JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md)|使用控制台调试 JavaScript 演示了如何使用[Javascript 控制台命令](../debugger/javascript-console-commands.md)以交互方式调试 javascript 应用。|
 |[启动调试会话（VB、C#、C++ 和 XAML）](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)|“如何启动调试会话（Visual C++、Visual C# 和 Visual Basic）”描述了用于针对应用（使用 Visual C++、Visual C# 或 Visual Basic 编写而成）配置和启动调试会话的不同选项。|
 |[导航调试会话（Xaml 和 C#）](../debugger/navigate-a-debugging-session-in-visual-studio-xaml-and-csharp.md)|调试器导航将通过简单的应用来演示如何启动和停止调试、如何在代码中导航以及如何查看和更改程序状态。|
 |[触发 Windows 应用商店的挂起、继续和后台事件](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md)|调试器将禁用挂起、继续和终止应用的 Windows 进程生命期管理 (PLM) 事件。 你可以从调试器工具栏触发这些事件。<br /><br /> 通过后台任务，可执行某些重要操作，即便应用已挂起也是如此。 调试器使你能够启动并调试这些后台任务。|
 
 ## <a name="see-also"></a>请参阅
- [Debugging in Visual Studio (in the MSDN Library)](https://go.microsoft.com/fwlink/?LinkID=226896)
+ [在 Visual Studio 中调试（在 MSDN 库中）](https://go.microsoft.com/fwlink/?LinkID=226896)

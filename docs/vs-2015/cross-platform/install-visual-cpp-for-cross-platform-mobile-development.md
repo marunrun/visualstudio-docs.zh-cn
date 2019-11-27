@@ -18,7 +18,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74299804"
 ---
-# <a name="install-visual-c-for-cross-platform-mobile-development"></a>安装用于跨平台移动开发的 Visual C++
+# <a name="install-visual-c-for-cross-platform-mobile-development"></a>Install Visual C++ for Cross-Platform Mobile Development
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 适用于跨平台移动开发的 Visual C++(https://go.microsoft.com/fwlink/p/?LinkId=536383) 是 Visual Studio 2015 的可安装组件。 它包括跨平台 Visual Studio 模板，并安装了跨平台工具和 SDK 以快速启动，而无需自行查找、下载和配置它们。 你可以在 Visual Studio 中使用这些工具轻松创建、编辑、调试和测试跨平台项目。 本主题介绍了如何安装使用 Visual Studio 开发跨平台应用所需的工具和第三方软件。 有关组件的概述，请参阅 [Visual C++ 跨平台移动](https://go.microsoft.com/fwlink/p/?LinkId=536387)  
@@ -29,7 +29,7 @@ ms.locfileid: "74299804"
  [Install tools for iOS](#InstallForiOS)   
  [手动安装或更新依赖项](#ThirdParty)  
   
-## <a name="Requirements"></a> 要求  
+## <a name="Requirements"></a>要求  
   
 - 有关安装要求，请参阅 [Visual Studio 2015 系统要求](https://www.visualstudio.com/visual-studio-2015-system-requirements-vs)。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "74299804"
   
 2. 在“选择功能”中，展开“跨平台移动开发” ，然后勾选“Visual C++ 移动开发”。  
   
-     ![Select Visual C&#43;&#43; Mobile Development](../cross-platform/media/cppmdd-install-vcmdd.png "CPPMDD_Install_VCMDD")  
+     ![选择 Visual C&#43; &#43; Mobile 开发](../cross-platform/media/cppmdd-install-vcmdd.png "CPPMDD_Install_VCMDD")  
   
      默认情况下，在选择“Visual C++ 移动开发”时，“编程语言”选项将设置为安装 **Visual C++** ，且“常用的工具和软件开发工具包”选项将设置为安装所需的第三方组件。 必要时可选择其他组件。 **适用于 Android 的 Microsoft Visual Studio 模拟器**也默认处于选中状态。 已安装的组件在列表中显示为非活动状态。  
   

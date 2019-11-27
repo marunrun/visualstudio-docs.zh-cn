@@ -1,5 +1,5 @@
 ---
-title: Additional resources for troubleshooting data access errors | Microsoft Docs
+title: 数据访问错误疑难解答的其他资源 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -241,23 +241,23 @@ ms.locfileid: "74299452"
 # <a name="additional-resources-for-troubleshooting-data-access-errors"></a>数据访问错误疑难解答的其他资源
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在 Microsoft Developer Network (MSDN) 公共论坛中，可以找到有关对错误和警告进行疑难解答的帮助。 The following table lists the data related forums available on MSDN.
+在 Microsoft Developer Network (MSDN) 公共论坛中，可以找到有关对错误和警告进行疑难解答的帮助。 下表列出了 MSDN 上提供的数据相关论坛。
 
- [Windows Forms Data Controls and Databinding](https://go.microsoft.com/fwlink/?LinkId=160179) Provides a forum for questions about and general discussions of data access in Windows Forms.
+ [Windows 窗体数据控件和数据绑定](https://go.microsoft.com/fwlink/?LinkId=160179)提供有关 Windows 窗体中的数据访问的相关问题的论坛。
 
- [ADO.NET DataSet Forum](https://go.microsoft.com/fwlink/?LinkId=160180) Provides a forum for questions about and general discussions of Datasets.
+ [ADO.NET 数据集论坛](https://go.microsoft.com/fwlink/?LinkId=160180)提供有关数据集的相关问题的论坛。
 
- [ADO.NET Entity Framework and LINQ to Entities](https://go.microsoft.com/fwlink/?LinkId=191520) Provides a forum for questions about and general discussions of Entity Framework applications and the LINQ to Entities language.
+ [ADO.NET 实体框架和 LINQ to Entities](https://go.microsoft.com/fwlink/?LinkId=191520)提供有关实体框架应用程序和 LINQ to Entities 语言的相关问题的论坛。
 
- [WCF Data Services Forum](https://go.microsoft.com/fwlink/?LinkId=160181) Provides a forum for questions about and general discussions of data services.
+ [WCF 数据服务论坛](https://go.microsoft.com/fwlink/?LinkId=160181)提供有关数据服务的常见问题和常规讨论的论坛。
 
- [SQL Server Data Access Forum](https://go.microsoft.com/fwlink/?LinkID=160184) Provides a forum for questions about and general discussions of accessing data in Microsoft SQL Server.
+ [SQL Server 数据访问论坛](https://go.microsoft.com/fwlink/?LinkID=160184)提供有关在 Microsoft SQL Server 中访问数据的相关问题的论坛。
 
- [Linq to SQL Forum](https://go.microsoft.com/fwlink/?LinkId=160183) Provides a forum for questions about and general discussions of Linq to SQL.
+ [Linq TO SQL 论坛](https://go.microsoft.com/fwlink/?LinkId=160183)提供有关 Linq to SQL 常见问题和常规讨论的论坛。
 
- [ADO.NET Data Providers Forum](https://go.microsoft.com/fwlink/?LinkId=160182) Provides a forum for questions about and general discussions of the different .NET Framework Data Providers.
+ [ADO.NET 数据提供者论坛](https://go.microsoft.com/fwlink/?LinkId=160182)提供有关不同 .NET Framework 数据提供程序的问题和常规讨论的论坛。
 
- For information about how to troubleshoot connectivity to SQL Server, see [How to Troubleshoot Connecting to the SQL Server Database Engine](https://go.microsoft.com/fwlink/?LinkID=246151).
+ 有关如何解决与 SQL Server 的连接问题的信息，请参阅[如何排查连接到 SQL Server 数据库引擎的问题](https://go.microsoft.com/fwlink/?LinkID=246151)。
 
 ## <a name="see-also"></a>请参阅
  [适用于 NET 的 Visual Studio Data Tools](../data-tools/visual-studio-data-tools-for-dotnet.md)

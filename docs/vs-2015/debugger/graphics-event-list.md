@@ -1,5 +1,5 @@
 ---
-title: Graphics Event List | Microsoft Docs
+title: 图形事件列表 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -25,7 +25,7 @@ ms.locfileid: "74297334"
   
  事件列表如下：  
   
- ![A list of events that have "Index" in their name.](../debugger/media/gfx-diag-demo-event-list-orientation.png "gfx_diag_demo_event_list_orientation")  
+ ![名称中包含 "Index" 的事件的列表。](../debugger/media/gfx-diag-demo-event-list-orientation.png "gfx_diag_demo_event_list_orientation")  
   
 ## <a name="using-the-event-list"></a>使用事件列表  
  选择事件列表中的某个事件时，它会反映在由其他图形分析工具所显示的信息中；通过结合使用事件列表和其他此类工具，你可以仔细检查呈现问题以确定其原因。 若要了解有关如何通过结合使用事件列表和其他图形分析工具来解决呈现问题的详细信息，请参阅[示例](../debugger/graphics-diagnostics-examples.md)。  
@@ -39,7 +39,7 @@ ms.locfileid: "74297334"
 |-----------------------|-----------|  
 |呈现队列|绿色|  
 |计算队列|黄色|  
-|复制队列|橙色|  
+|复制队列|Orange|  
   
  Direct3D 11 不公开多个队列，这样，因此在你使用 Direct3D 11 应用的捕获时不会再事件列表中对事件进行着色。  
   
@@ -71,9 +71,9 @@ ms.locfileid: "74297334"
 |图标|事件说明|  
 |----------|-----------------------|  
 |（无图标）|常规事件<br /> 用户定义的事件、用户定义的事件组或绘图事件之外的任何事件。|  
-|![The draw event icon](../debugger/media/vsg-eventlist-icon-draw.png "vsg_eventlist_icon_draw")|绘图事件<br /> 标记在捕获的帧期间发生的绘图事件。|  
-|![The user&#45;defined event marker icon](../debugger/media/vsg-eventlist-icon-user.png "vsg_eventlist_icon_user")|用户定义的事件组<br /> 与组相关的事件，由应用定义。|  
-|![The user&#45;defined event marker icon](../debugger/media/vsg-eventlist-icon-user.png "vsg_eventlist_icon_user")|用户定义的事件标记<br /> 标记特定位置，由应用定义。|  
+|![绘制事件图标](../debugger/media/vsg-eventlist-icon-draw.png "vsg_eventlist_icon_draw")|绘图事件<br /> 标记在捕获的帧期间发生的绘图事件。|  
+|!["用户&#45;定义的事件标记" 图标](../debugger/media/vsg-eventlist-icon-user.png "vsg_eventlist_icon_user")|用户定义的事件组<br /> 与组相关的事件，由应用定义。|  
+|!["用户&#45;定义的事件标记" 图标](../debugger/media/vsg-eventlist-icon-user.png "vsg_eventlist_icon_user")|用户定义的事件标记<br /> 标记特定位置，由应用定义。|  
   
 ## <a name="marking-user-defined-events-in-your-app"></a>标记应用中用户定义的事件  
  用户定义的事件特定于你的应用。 你可以使用它们，将发生在应用中的重要事件和图形事件列表中的事件关联起来。 例如，你可以创建用户定义的事件组来将相关事件（例如，呈现用户界面的事件）组织到组或层次结构中，以便你可以更加轻松地浏览事件列表，或者，你可以在绘制某种对象时创建标记，以便你可以在事件列表中轻松查找其图形事件。  

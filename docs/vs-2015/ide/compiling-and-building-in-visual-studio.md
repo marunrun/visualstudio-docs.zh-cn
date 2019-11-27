@@ -29,7 +29,7 @@ ms.locfileid: "74300268"
 ## <a name="choosing-a-build-method"></a>选择一种生成方法
  您可以在命令提示符处使用 IDE 中的默认生成选项或使用 Team Foundation Build 来生成应用程序。 其中的每个选项都将 MSBuild 用作基础技术，并且每种方法都有特定的好处，如下表所示。
 
-|生成方法|优点|更多相关信息|
+|生成方法|优点|获取详细信息|
 |------------------|--------------|--------------------------|
 |使用 IDE|-   可以更轻松地创建并立即运行生成。<br />-   可以运行 C++ 和 C# 项目的多处理器生成。<br />-   可以自定义生成系统的某些方面。|[在 Visual Studio 中生成和清理项目和解决方案](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)|
 |运行 MSBuild 命令行|-   可以生成项目，而无需安装 Visual Studio。<br />-   可以运行所有项目类型的多处理器生成。<br />-   可以自定义生成系统的大多数区域。|[MSBuild](../msbuild/msbuild.md)|

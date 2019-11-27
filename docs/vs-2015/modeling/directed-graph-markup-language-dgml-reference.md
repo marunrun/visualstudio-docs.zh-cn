@@ -1,5 +1,5 @@
 ---
-title: Directed Graph Markup Language (DGML) reference | Microsoft Docs
+title: 定向关系图标记语言（DGML）引用 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -21,12 +21,12 @@ ms.locfileid: "74296039"
 
 定向图形标记语言 (DGML) 描述用于可视化和执行复杂分析的信息，并且是用于存留 Visual Studio 中的代码图的格式。 DGML 使用简单 XML 来描述循环和非循环的定向关系图。 定向关系图是一组由链接或边缘连接的节点。 可以使用节点和链接来表示网络结构，如软件项目中的元素。
 
- Note that some versions of Visual Studio support only a subset of DGML capabilities, see [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+ 请注意，某些版本的 Visual Studio 仅支持 DGML 功能的一个子集，请参阅[体系结构和建模工具的版本支持](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
 > [!NOTE]
-> 在编辑 .dgml 文件时，IntelliSense 可帮助您标识对每个元素及其值可用的特性。 若要指定特性中的颜色，请使用常用颜色的名称，如“Blue”或 ARGB 十六进制值（如“#ffa0b1c3”）。 DGML 使用一小部分 Windows Presentation Foundation (WPF) 颜色定义格式。 For more information, see [Colors Class](https://go.microsoft.com/fwlink/?LinkId=182345).
+> 在编辑 .dgml 文件时，IntelliSense 可帮助您标识对每个元素及其值可用的特性。 若要指定特性中的颜色，请使用常用颜色的名称，如“Blue”或 ARGB 十六进制值（如“#ffa0b1c3”）。 DGML 使用一小部分 Windows Presentation Foundation (WPF) 颜色定义格式。 有关详细信息，请参阅[Colors 类](https://go.microsoft.com/fwlink/?LinkId=182345)。
 
-## <a name="DGML"></a> DGML syntax
+## <a name="DGML"></a>DGML 语法
  下表描述在 DGML 中使用的各种元素：
 
 - `<DirectedGraph></DirectedGraph>`
@@ -35,17 +35,17 @@ ms.locfileid: "74296039"
 
    下面的列表描述可包含的可选特性：
 
-   `Background` - 代码图背景的颜色
+   `Background`-地图背景的颜色
 
-   `BackgroundImage` - 要用作代码图背景的图像文件的位置。
+   `BackgroundImage`-要用作地图背景的图像文件的位置。
 
-   `GraphDirection` - 代码图设置为树布局 (`Sugiyama`) 时排列节点，使大多数链接都按指定的方向流动：`TopToBottom`、`BottomToTop`、`LeftToRight` 或 `RightToLeft`。 See [Change the map layout](../modeling/browse-and-rearrange-code-maps.md#Selecting).
+   `GraphDirection`-当映射设置为树布局（`Sugiyama`）时，排列节点以便大多数链接按指定方向流动： `TopToBottom`、`BottomToTop`、`LeftToRight`或 `RightToLeft`。 请参阅[更改地图布局](../modeling/browse-and-rearrange-code-maps.md#Selecting)。
 
-   `Layout` - 将代码图设置为下列布局：`None`、`Sugiyama`（树布局）、`ForceDirected`（快速群集）或 `DependencyMatrix`。 See [Change the map layout](../modeling/browse-and-rearrange-code-maps.md#Selecting).
+   `Layout`-将 "映射" 设置为以下布局： "`None`"、"`Sugiyama`" （树布局）、"`ForceDirected`" （快速群集）或 "`DependencyMatrix`"。 请参阅[更改地图布局](../modeling/browse-and-rearrange-code-maps.md#Selecting)。
 
-   `NeighborhoodDistance` - 代码图设置为树布局或快速群集布局时，仅显示距所选节点指定链接数 (1-7) 的节点。 See [Change the map layout](../modeling/browse-and-rearrange-code-maps.md#Selecting).
+   `NeighborhoodDistance`-当映射设置为树布局或快速群集布局时，仅显示与所选节点相距指定数目（1-7）的链接。 请参阅[更改地图布局](../modeling/browse-and-rearrange-code-maps.md#Selecting)。
 
-   示例:
+   例如：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -72,7 +72,7 @@ ms.locfileid: "74296039"
   > [!NOTE]
   > 在 `<Link/>` 元素中引用未定义的节点时，代码图会自动创建 `<Node/>` 元素。
 
-   示例:
+   例如：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -92,25 +92,25 @@ ms.locfileid: "74296039"
 
    此元素必须包括以下特性：
 
-   `Id` - 节点的唯一名称和 `Label` 特性的默认值（如果未指定单独的 `Label` 特性）。 此名称必须与引用它的链接的 `Source` 或 `Target` 特性匹配。
+   `Id`-节点的唯一名称和 `Label` 特性的默认值（如果未指定单独的 `Label` 特性）。 此名称必须与引用它的链接的 `Source` 或 `Target` 特性匹配。
 
    下面的列表描述可包含的部分可选特性：
 
-   `Label` - The display name of the node.
+   `Label`-节点的显示名称。
 
    样式特性。 请参阅 [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)。
 
-   `Category` - 标识共享此特性的元素的类别的名称。 有关更多信息，请参见 `<Category/>` 元素。
+   `Category`-标识共享此特性的元素的类别的名称。 有关更多信息，请参见 `<Category/>` 元素。
 
-   `Property` - 标识具有相同属性值的元素的属性的名称。 有关更多信息，请参见 `<Property/>` 元素。
+   `Property`-属性的名称，该属性标识具有相同属性值的元素。 有关更多信息，请参见 `<Property/>` 元素。
 
-   `Group` - 如果节点包含其他节点，请将此特性设置为 `Expanded` 或 `Collapsed` 以显示或隐藏其内容。 必须有一个 `<Link/>` 元素，此元素包含 `Category="Contains"` 特性并将父节点指定为源节点，而将子节点指定为目标节点。 See [Group code elements](../modeling/customize-code-maps-by-editing-the-dgml-files.md#OrganizeNodes).
+   `Group` - 如果节点包含其他节点，请将此特性设置为 `Expanded` 或 `Collapsed` 以显示或隐藏其内容。 必须有一个 `<Link/>` 元素，此元素包含 `Category="Contains"` 特性并将父节点指定为源节点，而将子节点指定为目标节点。 请参阅对[代码元素分组](../modeling/customize-code-maps-by-editing-the-dgml-files.md#OrganizeNodes)。
 
-   `Visibility` - 将此特性设置为 `Visible`、`Hidden` 或 `Collapsed`。 使用 `System.Windows.Visibility`。 See [Hide or show nodes and links](../modeling/browse-and-rearrange-code-maps.md#HidingShowing).
+   `Visibility`-将此特性设置为 `Visible`、`Hidden`或 `Collapsed`。 使用 `System.Windows.Visibility`。 请参阅[隐藏或显示节点和链接](../modeling/browse-and-rearrange-code-maps.md#HidingShowing)。
 
-   `Reference` - 将此特性设置为链接到文档或 URL。 See [Link documents or URLs to code elements and links](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AddReferences).
+   `Reference` - 将此特性设置为链接到文档或 URL。 请参阅[将文档或 Url 链接到代码元素和链接](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AddReferences)。
 
-   示例:
+   例如：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -135,7 +135,7 @@ ms.locfileid: "74296039"
 
    此元素包含 `<Link>` 元素的列表，这些元素可定义两个节点之间的链接。 有关更多信息，请参见 `<Link/>` 元素。
 
-   示例:
+   例如：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -155,21 +155,21 @@ ms.locfileid: "74296039"
 
    此元素必须包括以下特性：
 
-   `Source` - 链接的源节点
+   `Source`-链接的源节点
 
    `Target` - 链接的目标节点
 
    下面的列表描述可包含的部分可选特性：
 
-   `Label` - 链接的显示名称
+   `Label`-链接的显示名称
 
    样式特性。 请参阅 [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)。
 
-   `Category` - 标识共享此特性的元素的类别的名称。 有关更多信息，请参见 `<Category/>` 元素。
+   `Category`-标识共享此特性的元素的类别的名称。 有关更多信息，请参见 `<Category/>` 元素。
 
-   `Property` - 标识具有相同属性值的元素的属性的名称。 有关更多信息，请参见 `<Property/>` 元素。
+   `Property`-属性的名称，该属性标识具有相同属性值的元素。 有关更多信息，请参见 `<Property/>` 元素。
 
-   示例:
+   例如：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -193,7 +193,7 @@ ms.locfileid: "74296039"
 
    此元素包含 `<Category/>` 元素的列表。 有关更多信息，请参见 `<Category/>` 元素。
 
-   示例:
+   例如：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -216,13 +216,13 @@ ms.locfileid: "74296039"
 
    `Label` - 类别的读者友好名称。
 
-   `BasedOn` - 当前元素的 `<Category/>` 继承自的父类别。
+   `BasedOn`-当前元素的 `<Category/>` 从中继承的父类别。
 
-   在此元素的示例中，`FailedTest` 类别从 `Stroke` 类别继承其 `PassedTest` 特性。 See "To create hierarchical categories" in [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   在此元素的示例中，`FailedTest` 类别从 `Stroke` 类别继承其 `PassedTest` 特性。 请参阅[通过编辑 DGML 文件自定义代码图](../modeling/customize-code-maps-by-editing-the-dgml-files.md)中的 "创建分层类别"。
 
    类别还提供一些基本模板行为，这些行为用于控制节点和链接在代码图上显示的外观。 请参阅 [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)。
 
-   示例:
+   例如：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -250,7 +250,7 @@ ms.locfileid: "74296039"
 
    此元素包含 `<Property/>` 元素的列表。 有关更多信息，请参见 `<Property/>` 元素。
 
-   示例:
+   例如：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -267,15 +267,15 @@ ms.locfileid: "74296039"
 
    此元素必须包括以下特性：
 
-  - `Id` - 该属性的唯一名称和 `Label` 特性的默认值（如果未指定单独的 `Label` 特性）。
+  - `Id`-属性的唯一名称和 `Label` 特性的默认值（如果未指定单独的 `Label` 特性）。
 
-  - `DataType` - 该属性存储的数据的类型
+  - `DataType`-属性存储的数据的类型
 
-    If you want the property to appear in the **Properties** window, use the `Label` property to specify the property's display name.
+    如果要在 "**属性**" 窗口中显示该属性，请使用 `Label` 属性指定该属性的显示名称。
 
-    See [Assign categories to code elements and links](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AssignCategories).
+    请参阅向[代码元素和链接分配类别](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AssignCategories)。
 
-    示例:
+    例如：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -302,7 +302,7 @@ ms.locfileid: "74296039"
   </DirectedGraph>
   ```
 
-### <a name="AddAlias"></a> Aliases for commonly-used paths
+### <a name="AddAlias"></a>常用路径的别名
  将常用路径替换为别名有助于减小 .dgml 文件的大小和加载或保存该文件所需的时间。 若要创建别名，请在 .dgml 文件的结尾处添加 `<Paths></Paths>` 部分。 在此部分添加 `<Path/>` 元素以定义路径的别名：
 
 ```xml
@@ -311,7 +311,7 @@ ms.locfileid: "74296039"
 </Paths>
 ```
 
- To reference the alias from an element in the .dgml file, enclose the `Id` of the \<Path/> element with a dollar sign ($) and parentheses (()):
+ 若要从 .dgml 文件中的某个元素引用别名，请用美元符号（$）和括号（（））将 \<Path/> 元素的 `Id` 括起来：
 
 ```xml
 <Nodes>
@@ -323,4 +323,4 @@ ms.locfileid: "74296039"
 ```
 
 ## <a name="see-also"></a>请参阅
- [Map dependencies across your solutions](../modeling/map-dependencies-across-your-solutions.md) [Use code maps to debug your applications](../modeling/use-code-maps-to-debug-your-applications.md) [Find potential problems using code map analyzers](../modeling/find-potential-problems-using-code-map-analyzers.md)
+ [映射解决方案中的依赖项](../modeling/map-dependencies-across-your-solutions.md)[使用代码图调试应用程序](../modeling/use-code-maps-to-debug-your-applications.md)[使用代码图分析器查找潜在问题](../modeling/find-potential-problems-using-code-map-analyzers.md)

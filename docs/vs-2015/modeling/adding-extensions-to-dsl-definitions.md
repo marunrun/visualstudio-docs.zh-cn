@@ -1,5 +1,5 @@
 ---
-title: Adding Extensions to DSL Definitions | Microsoft Docs
+title: 将扩展添加到 DSL 定义 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -19,23 +19,23 @@ ms.locfileid: "74292157"
 # <a name="adding-extensions-to-dsl-definitions"></a>向 DSL 定义中添加扩展
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-DSL Definition extension allows you to create a package of extensions to a domain-specific language (DSL). The DSL extension, which is contained in a Visual Studio Integration Extension (VSIX), can be installed on a user's computer in the same manner as a DSL. The additional features can be dynamically enabled and disabled at run time. DSLs do not have to be explicitly designed for extension, and extensions can be designed later or by third parties without altering the extended DSL.
+DSL 定义扩展允许你创建一包扩展到域特定语言（DSL）的扩展。 在 Visual Studio 集成扩展（VSIX）中包含的 DSL 扩展可以与 DSL 相同的方式安装在用户的计算机上。 在运行时可以动态启用和禁用其他功能。 Dsl 无需显式设计为扩展，并且可以在以后或第三方设计扩展，而无需更改扩展 DSL。
 
- The additional features can include the following:
+ 其他功能可能包括：
 
-- Properties for model and presentation elements
+- 模型和表示元素的属性
 
-- Decorators for shapes and connectors
+- 形状和连接线的修饰器
 
-- Classes, relationships, shapes and connectors
+- 类、关系、形状和连接线
 
-- Validation constraints
+- 验证约束
 
-- Toolbox items and tabs
+- 工具箱项和选项卡
 
-  A user of an extended DSL can create and save a model that contains instances of the additional features, and these can be read by other users who have installed the appropriate extension. Users who have not installed the extension cannot use the additional features, but they can update and save a model without losing the additional features.
+  扩展 DSL 的用户可以创建并保存包含其他功能的实例的模型，并且这些用户可以读取已安装适当扩展的其他用户。 尚未安装此扩展的用户不能使用其他功能，但可以更新和保存模型，而不会丢失其他功能。
 
-  For sample code and more information about this feature, see the [Visual Studio Visualization and Modeling SDK](https://go.microsoft.com/fwlink/?LinkID=186128) Web site.
+  有关此功能的示例代码和详细信息，请参阅[Visual Studio 可视化和建模 SDK](https://go.microsoft.com/fwlink/?LinkID=186128)网站。
 
 ## <a name="see-also"></a>请参阅
- [Visual Studio Visualization and Modeling SDK](https://go.microsoft.com/fwlink/?LinkID=186128)
+ [Visual Studio 可视化和建模 SDK](https://go.microsoft.com/fwlink/?LinkID=186128)

@@ -1,5 +1,5 @@
 ---
-title: Edit and Continue Errors and Warnings (C#) | Microsoft Docs
+title: "\"编辑并继续\" 错误和C#警告（） |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -75,7 +75,7 @@ ms.locfileid: "74299275"
   
  通常情况下，影响类的公共结构的声明性代码编辑是禁止的，但对类内部的方法、属性体或私有声明进行某些编辑是允许的。 “编辑并继续”会尽可能将不可编辑的代码标记为浅灰色并显示错误消息。  
   
- For more information about supported edits in Edit and Continue for [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)], see [Supported Code Changes (C#)](../debugger/supported-code-changes-csharp.md). 如果需要有关特定错误或警告的详细信息，可以在 MSDN [Visual C# IDE 论坛](https://go.microsoft.com/fwlink/?LinkId=214693)上搜索或发布。  
+ 有关 [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)]的 "编辑并继续" 中支持的编辑的详细信息，请参阅[支持的代码更改（C#）](../debugger/supported-code-changes-csharp.md)。 如果需要有关特定错误或警告的详细信息，可以在 MSDN [Visual C# IDE 论坛](https://go.microsoft.com/fwlink/?LinkId=214693)上搜索或发布。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   

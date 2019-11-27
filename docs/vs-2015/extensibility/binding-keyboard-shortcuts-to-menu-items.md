@@ -1,5 +1,5 @@
 ---
-title: Binding Keyboard Shortcuts to Menu Items | Microsoft Docs
+title: 将键盘快捷方式绑定到菜单项 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -24,46 +24,46 @@ ms.locfileid: "74295620"
 # <a name="binding-keyboard-shortcuts-to-menu-items"></a>将键盘快捷方式绑定到菜单项
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-To bind a keyboard shortcut to a custom menu command, just add an entry to the .vsct file for the package. This topic explains how to map a keyboard shortcut to a custom button, menu item, or toolbar command, and how to apply the keyboard mapping in the default editor or limit it to a custom editor.  
+若要将键盘快捷方式绑定到自定义菜单命令，只需将条目添加到包的 .vsct 文件。 本主题说明如何将键盘快捷方式映射到自定义按钮、菜单项或工具栏命令，以及如何在默认编辑器中应用键盘映射或将其限制为自定义编辑器。  
   
- To assign keyboard shortcuts to existing Visual Studio menu items, see [Identifying and Customizing Keyboard Shortcuts](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).  
+ 若要为现有的 Visual Studio 菜单项分配键盘快捷方式，请参阅[标识和自定义键盘快捷方式](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)。  
   
-## <a name="choosing-a-key-combination"></a>Choosing a Key Combination  
- Many keyboard shortcuts are already used in Visual Studio. You should not assign the same shortcut to more than one command because duplicate bindings are hard to detect and may also cause unpredictable results. Therefore, it is a good idea to verify the availability of a shortcut before you assign it.  
+## <a name="choosing-a-key-combination"></a>选择组合键  
+ 许多键盘快捷方式已在 Visual Studio 中使用。 不应为多个命令分配相同的快捷方式，因为重复的绑定很难检测，也可能导致不可预知的结果。 因此，最好在分配快捷方式之前验证快捷方式的可用性。  
   
-#### <a name="to-verify-the-availability-of-a-keyboard-shortcut"></a>To verify the availability of a keyboard shortcut  
+#### <a name="to-verify-the-availability-of-a-keyboard-shortcut"></a>验证键盘快捷方式的可用性  
   
-1. In the **Tools / Options / Environment** window, select **Keyboard**.  
+1. 在 "**工具/选项/环境**" 窗口中，选择 "**键盘**"。  
   
-2. Make sure that **Use new shortcut in** is set to **Global**.  
+2. 请确保将 **"使用新快捷方式"** 设置为 "**全局**"。  
   
-3. In the **Press shortcut keys** box, type the keyboard shortcut that you want to use.  
+3. 在 "**按快捷键**" 框中，键入要使用的键盘快捷方式。  
   
-    If the shortcut is already used in Visual Studio, the **Shortcut currently used by** box will show the command that the shortcut currently calls.  
+    如果已在 Visual Studio 中使用该快捷方式，则**当前使用的快捷方式**将显示快捷方式当前调用的命令。  
   
-4. Try different combinations of keys until you find one that is not mapped.  
+4. 尝试不同的键组合，直到找到一个未映射的键组合。  
   
    > [!NOTE]
-   > Keyboard shortcuts that use ALT may open a menu and not directly execute a command. Therefore, the **Shortcut currently used by** box may be blank when you type a shortcut that includes ALT. You can verify that the shortcut does not open a menu by closing the **Options** dialog box and then pressing the keys.  
+   > 使用 ALT 的键盘快捷方式可打开菜单而不直接执行命令。 因此，当您键入包含 ALT 的快捷方式时，"**当前使用者**" 框中的快捷方式可能为空。 可以通过关闭 "**选项**" 对话框，然后按下键来验证快捷方式是否未打开菜单。  
   
-   The following procedure assumes that you have an existing VSPackage with a menu command. If you need help doing that, take a look at [Creating an Extension with a Menu Command](../extensibility/creating-an-extension-with-a-menu-command.md).  
+   下面的过程假定您有一个具有菜单命令的现有 VSPackage。 如果在执行此操作时需要帮助，请参阅[使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。  
   
-#### <a name="to-assign-a-keyboard-shortcut-to-a-command"></a>To assign a keyboard shortcut to a command  
+#### <a name="to-assign-a-keyboard-shortcut-to-a-command"></a>为命令分配键盘快捷方式  
   
-1. Open the .vsct file for your package.  
+1. 打开包的 .vsct 文件。  
   
-2. Create an empty `<KeyBindings>` section after the `<Commands>` if it is not already present.  
+2. 在 `<Commands>` 之后创建一个空 `<KeyBindings>` 节（如果尚未存在）。  
   
    > [!WARNING]
-   > For more information about key bindings, see [Keybinding](../extensibility/keybinding-element.md).  
+   > 有关密钥绑定的详细信息，请参阅[键绑定](../extensibility/keybinding-element.md)。  
   
-    In the `<KeyBindings>` section, create a `<KeyBinding>` entry.  
+    在 `<KeyBindings>` 部分中，创建一个 `<KeyBinding>` 条目。  
   
-    Set the `guid`  and  `id` attributes to those of the command you want to invoke.  
+    将 `guid` 和 `id` 属性设置为要调用的命令的属性。  
   
-    Set the `mod1` attribute to **Control**, **Alt**, or **Shift**.  
+    将 `mod1` 特性设置为 "**控件**"、" **Alt**" 或 " **Shift**"。  
   
-    The KeyBindings section should look something like this:  
+    键绑定部分应如下所示：  
   
    ```xml  
    <KeyBindings>  
@@ -73,18 +73,18 @@ To bind a keyboard shortcut to a custom menu command, just add an entry to the .
   
    ```  
   
-   If your keyboard shortcut requires more than two keys, set the `mod2` and `key2` attributes.  
+   如果键盘快捷方式需要两个以上的键，请设置 "`mod2`" 和 "`key2`" 属性。  
   
-   In most situations, **Shift** should not be used without a second modifier because pressing it already causes most alphanumeric keys to type an uppercase letter or a symbol.  
+   在大多数情况下，不应在没有第二个修饰符的情况下使用**Shift** ，因为按下它已使大多数字母数字键都可键入一个大写字母或符号。  
   
-   Virtual-key codes let you access special keys that do not have a character associated with them, for example, function keys and the **BACKSPACE** key. For more information, see [Virtual-Key Codes](https://go.microsoft.com/fwlink/?LinkID=105932).  
+   利用虚拟键代码，你可以访问没有与其关联的字符的特殊键，例如，函数键和**BACKSPACE**键。 有关详细信息，请参阅[虚拟键代码](https://go.microsoft.com/fwlink/?LinkID=105932)。  
   
-   To make the command available in the Visual Studio editor, set the `editor` attribute to `guidVSStd97`.  
+   若要在 Visual Studio 编辑器中使用该命令，请将 `editor` 特性设置为 `guidVSStd97`。  
   
-   To make the command available only in a custom editor, set the `editor` attribute to the name of the custom editor that was generated by the [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Package Template when you created the VSPackage that includes the custom editor. To find the name value, look in the `<Symbols>` section for a `<GuidSymbol>` node whose `name` attribute ends in "`editorfactory`." This is the name of the custom editor.  
+   若要使命令仅在自定义编辑器中可用，请在创建包含自定义编辑器的 VSPackage 时，将 `editor` 特性设置为 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 包模板生成的自定义编辑器的名称。 若要查找名称值，请在 "`<Symbols>`" 部分中查找 `name` 属性以 "`editorfactory`" 结尾的 `<GuidSymbol>` 节点。这是自定义编辑器的名称。  
   
 ## <a name="example"></a>示例  
- This example binds the keyboard shortcut CTRL+ALT+C to a command named `cmdidMyCommand` in a package named `MyPackage`.  
+ 此示例将键盘快捷方式 CTRL + ALT + C 绑定到名为 `MyPackage`的包中名为 `cmdidMyCommand` 的命令。  
   
 ```  
 <CommandTable>  
@@ -101,7 +101,7 @@ To bind a keyboard shortcut to a custom menu command, just add an entry to the .
 ```  
   
 ## <a name="example"></a>示例  
- This example binds the keyboard shortcut CTL+B to a command named `cmdidBold` in a project named `TestEditor`. The command is available only in the custom editor and not in other editors.  
+ 此示例将键盘快捷方式 CTL + B 绑定到名为 `TestEditor`的项目中名为 `cmdidBold` 的命令。 命令仅在自定义编辑器中可用，在其他编辑器中不可用。  
   
 ```xml  
 <KeyBinding guid="guidVSStd97" id="cmdidBold" editor="guidTestEditorEditorFactory" key1="B" mod1="Control" />  

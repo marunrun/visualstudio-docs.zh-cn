@@ -31,9 +31,9 @@ ms.locfileid: "74302636"
 ## <a name="why-should-i-do-this"></a>为什么应这样做?
  使用编码的 UI 测试编辑器比使用代码编辑器在编码的 UI 测试方法中编辑代码速度更快，效率更高。 使用编码的 UI 测试编辑器，可以使用工具栏和快捷菜单快速查找和修改与 UI 操作和控件相关联的属性值。 例如，可以使用编码的 UI 测试编辑器的工具栏执行以下命令：
 
- ![UI Test Edito](../test/media/uitesteditor.png "UITestEditor")
+ ![UI 测试编辑器](../test/media/uitesteditor.png "UITestEditor")
 
-1. “[查找](../ide/finding-and-replacing-text.md)”有助于查找 UI 操作和控件。
+1. [查找](../ide/finding-and-replacing-text.md) 帮助查找 UI 操作和控件。
 
 2. [删除](#CodedUITestEditor_DeleteUIActions) 可删除不想要的 UI 操作。
 
@@ -57,7 +57,7 @@ ms.locfileid: "74302636"
 ## <a name="open-a-coded-ui-test"></a>打开编码的 UI 测试
  你可以使用编码的 UI 测试编辑器查看和编辑基于 Visual C# 和 Visual Basic 的编码的 UI 测试。
 
- ![Context menu Edit With Coded UI Test Builder](../test/media/editcodeduitest.png "EditCodedUITest")
+ ![通过编码的 UI 测试生成器进行上下文菜单编辑](../test/media/editcodeduitest.png "EditCodedUITest")
 
  在解决方案资源管理器中，打开 **“UIMap.uitest”** 的快捷菜单，然后选择 **“打开”** 。 编码的 UI 测试编辑器中将显示编码的 UI 测试。 现在，你可以查看和编辑编码的 UI 测试中记录的方法、操作和和相应的控件。
 
@@ -70,61 +70,61 @@ ms.locfileid: "74302636"
 ## <a name="CodedUITestEditor_EditActionAndControlProperties"></a>修改 UI 操作属性及其相应的控件属性
  使用编码的 UI 测试编辑器，你可以快速查找和查看测试方法中所有的 UI 操作。 当在编辑器中选择的 UI 操作时，将自动突出显示相应的控件。 同样，如果选择一个控件，将突出显示相关联的 UI 操作。 这样，当选择 UI 操作或控件时，就可以轻松通过“属性”窗口来修改与之相对应的属性。
 
- ![UI action properties](../test/media/codeduiedituiaction.png "CodedUIEditUIAction") Edit UI action properties
+ ![UI 操作属性](../test/media/codeduiedituiaction.png "CodedUIEditUIAction")编辑 UI 操作属性
 
  若要修改 UI 操作的属性，在 **“UI 操作”** 窗格中，展开包含你想要为其编辑属性的 UI 操作的测试方法，选择 UI 操作，然后通过“属性”窗口修改属性。
 
- 例如，如果服务器不可用，并且 UI 操作与指示“转到网页 <http://Contoso1/default.aspx’>”的 Web 浏览器关联，则可以将 URL 更改为 `‘ http://Contoso2/default.aspx’`。
+ 例如，如果服务器不可用，并且 UI 操作与指示“转到网页 **”的 Web 浏览器关联，则可以将 URL 更改为 <http://Contoso1/default.aspx’>** `‘ http://Contoso2/default.aspx’`。
 
- ![Control properties](../test/media/codeduitestcontrolprop.png "CodedUITestControlProp") Edit control properties
+ ![控件属性](../test/media/codeduitestcontrolprop.png "CodedUITestControlProp")编辑控件属性
 
  修改控件属性的方式与 UI 操作的方式相同。 在 “UI 控件图”窗格中，选择你项使用“属性”窗口编辑和修改器属性的控件。
 
  例如，开发人员可能已更改某个按钮控件上的 **(ID)** 属性，将其从“idSubmit”更改为“idLogin”，此按钮控件位于正在测试的应用程序源代码中。 应用程序中的“(ID)” **(ID)** 属性更改后，编码的 UI 测试将无法查找按钮控件且会失败。 在这种情况下，测试人员可以打开 **“搜索属性”** 集合，并更改 **“Id”** 属性以匹配开发人员在应用程序中使用的新值。 测试人员还可以更改 **“友好名称”** 属性值，使其从“提交”更改为“登录”。 通过进行此更改，编码的 UI 测试编辑器中关联的 UI 操作的“选择‘提交’按钮”已更改为“选择‘登录’按钮”。
 
- 修改完后，选择 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 工具栏上的“保存”，将所做更改保存到 UIMap.Designer 文件中。
+ 完成修改后，通过更改 **工具栏上的“保存”** [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，将所做更改保存到 UIMap.Designer 文件。
 
- *我还应该知道什么？*
+ *我应该知道哪些其他内容？*
  **提示**
 
-- ![Tip](../test/media/tip.png "提示") If the Properties window is not displayed, press and hold **Alt** while you press **Enter**, or alternatively press **F4**.
+- ![提示](../test/media/tip.png "提示")如果属性窗口未显示，请在按住**Alt**的同时按**enter**，或者按**F4**。
 
-- ![Tip](../test/media/tip.png "提示") To undo the property changes you made, select **Undo** from the **Edit** menu, or press Ctrl+Z.
+- ![提示](../test/media/tip.png "提示")若要撤消所做的属性更改，请从 "**编辑**" 菜单中选择 "**撤消**"，或按 Ctrl + Z。
 
-- ![Tip](../test/media/tip.png "提示") You can use the **Find** button in the Coded UI Test editor toolbar to open the Find and Replace tool in Visual Studio. 然后可以使用“查找”控件查找编码的 UI 测试编辑器中的 UI 操作。 例如，你可以尝试查找“单击‘登录’按钮”。 这在大型测试中十分有用。 请注意，不能使用编码的 UI 测试编辑器中“查找和替换”工具中的替换功能。 有关详细信息，请参阅[查找和替换文本](../ide/finding-and-replacing-text.md)中的“查找控件”。
+- ![提示](../test/media/tip.png "提示")您可以使用编码的 UI 测试编辑器工具栏中的 "**查找**" 按钮打开 Visual Studio 中的 "查找和替换" 工具。 然后可以使用“查找”控件查找编码的 UI 测试编辑器中的 UI 操作。 例如，你可以尝试查找“单击‘登录’按钮”。 这在大型测试中十分有用。 请注意，不能使用编码的 UI 测试编辑器中“查找和替换”工具中的替换功能。 有关详细信息，请参阅 [Finding and Replacing Text](../ide/finding-and-replacing-text.md)中的“查找控件”。
 
-- ![Tip](../test/media/tip.png "提示") Sometimes, it can be difficult to visualize where controls are located in the UI of the application under test. 编码的 UI 测试编辑器的功能之一是，你可以选择 UI 控件图中列出的控件和查看其在受测应用程序中的位置。 [!INCLUDE[crdefault](../includes/crdefault-md.md)]本主题后面的[在受测应用中查找 UI 控件](#CodedUITestEditor_LocateUIControl)。
+- ![提示](../test/media/tip.png "提示")有时，可能很难直观显示控件在受测应用程序 UI 中的位置。 编码的 UI 测试编辑器的功能之一是，你可以选择 UI 控件图中列出的控件和查看其在受测应用程序中的位置。 [!INCLUDE[crdefault](../includes/crdefault-md.md)]本主题后面的[在受测应用中查找 UI 控件](#CodedUITestEditor_LocateUIControl)。
 
-- ![Tip](../test/media/tip.png "提示") It might be necessary to expand the container control that contains the control that you want to edit. [!INCLUDE[crdefault](../includes/crdefault-md.md)]本主题后面的[查找控件及其后代](#CodedUITestEditor_LocateDecendants)。
+- ![提示](../test/media/tip.png "提示")可能需要展开包含要编辑的控件的容器控件。 [!INCLUDE[crdefault](../includes/crdefault-md.md)]本主题后面的[查找控件及其后代](#CodedUITestEditor_LocateDecendants)。
 
 ## <a name="CodedUITestEditor_DeleteUIActions"></a>删除不需要的 UI 操作
  在编码的 UI 测试中，可以轻松删除不需要的 UI 操作。
 
- ![Delete UI action](../test/media/codeduideleteuiaction.png "CodedUIDeleteUIAction")
+ ![删除 UI 操作](../test/media/codeduideleteuiaction.png "CodedUIDeleteUIAction")
 
  在“UI 操作” 窗格中，展开包含想要删除的 UI 操作的测试方法。 打开 UI 操作的快捷菜单，然后选择“删除”。
 
 ## <a name="CodedUITestEditor_SplitMethods"></a> 将测试方法拆分为两个不同方法
  你可以拆分测试方法，以优化或模块化 UI 操作。 例如，你的测试可能只有一个测试方法，而 UI 操作则位于两个容器控件中。 建议最好将 UI 操作在两个方法中进行模块化，与一个容器相符。
 
- ![Splt a test method](../test/media/codeduitestsplitmethod1.png "CodedUITestSplitMethod1")
+ ![拆分测试方法](../test/media/codeduitestsplitmethod1.png "CodedUITestSplitMethod1")
 
- ![Two test methods](../test/media/codeduitestsplitmethod2.png "CodedUITestSplitMethod2")
+ ![两个测试方法](../test/media/codeduitestsplitmethod2.png "CodedUITestSplitMethod2")
 
  在“UI 操作” 窗格中，展开你想要拆分为两个不同方法的测试方法，然后选择 UI 操作，在其中开始新的测试方法。 可以打开 UI 操作的快捷菜单，然后选择“拆分成新方法”，也可以选择编码的 UI 测试编辑器工具栏上的“拆分成新方法” 按钮。 新的测试方法将显示在“UI 操作”窗格中。 它包含 UI 操作，从指定拆分的操作开始进行。
 
  拆分方法完成后，通过选择 **工具栏上的“保存”** [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，可将所做更改保存到 UIMap.Designer 文件。
 
- *我还应该知道什么？*
+ *我应该知道哪些其他内容？*
  **重大问题**
 
-- ![Caution icon](../test/media/caution.gif "注意") **Warning:** If you split a method, you must modify any code that calls the existing method to also call the new method you are about to create if you still want those UI actions included. 拆分方法时，将显示一个 Microsoft Visual Studio 对话框。 它会警告你必须修改可调用现有方法的任何代码，使其还可以调用要创建的新方法。 选择 **“是”** 。
+- 警告![图标](../test/media/caution.gif "注意")**警告：** 如果你拆分方法，则必须修改调用现有方法的任何代码，以便还在你仍想要包括这些 UI 操作时调用要创建的新方法。 拆分方法时，将显示一个 Microsoft Visual Studio 对话框。 它会警告你必须修改可调用现有方法的任何代码，使其还可以调用要创建的新方法。 选择 **“是”** 。
 
   **提示**
 
-- ![Tip](../test/media/tip.png "提示") To undo the split, choose **Undo** from the **Edit** menu, or press Ctrl+Z.
+- ![提示](../test/media/tip.png "提示")若要撤消拆分，请从 "**编辑**" 菜单中选择 "**撤消**"，或按 Ctrl + Z。
 
-- ![Tip](../test/media/tip.png "提示") You can rename the new method. 在 UI 操作窗格中选择它，然后选择编码的 UI 测试编辑器工具栏中的“重命名” 按钮。
+- ![提示](../test/media/tip.png "提示")您可以重命名新方法。 在 UI 操作窗格中选择它，然后选择编码的 UI 测试编辑器工具栏中的“重命名” 按钮。
 
    或
 
@@ -139,66 +139,66 @@ ms.locfileid: "74302636"
 
  移动方法后，通过选择 **工具栏上的“保存”** [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，可将所做更改保存到 UIMap.Designer 文件。
 
- *我还应该知道什么？*
+ *我应该知道哪些其他内容？*
  **重大问题**
 
-- ![Caution icon](../test/media/caution.gif "注意") **Warning:** Once you have moved a method, you can no longer edit it using the Coded UI Test Editor. 你必须使用代码编辑器添加并维护你的自定义代码。 移动方法时，将显示一个 Microsoft Visual Studio 对话框。 该对话框将警告你，该方法将从 UIMap.uitest 文件移动到 UIMap.cs 或 UIMap.vb 文件，并且你将不能再使用编码的 UI 测试编辑器来编辑该方法。 选择 **“是”** 。
+- 警告![图标](../test/media/caution.gif "注意")**警告：** 一旦移动了方法，就不能再使用编码的 UI 测试编辑器对其进行编辑。 你必须使用代码编辑器添加并维护你的自定义代码。 移动方法时，将显示一个 Microsoft Visual Studio 对话框。 该对话框将警告你，该方法将从 UIMap.uitest 文件移动到 UIMap.cs 或 UIMap.vb 文件，并且你将不能再使用编码的 UI 测试编辑器来编辑该方法。 选择 **“是”** 。
 
   **提示**
 
-- ![Tip](../test/media/tip.png "提示") To undo the move, select **Undo** from the **Edit** menu, or press Ctrl+Z. 但是，随后必须手动从 UIMap.cs 或 UIMap.vb 文件删除该代码。
+- ![提示](../test/media/tip.png "提示")若要撤消移动，请从 "**编辑**" 菜单中选择 "**撤消**"，或按 Ctrl + Z。 但是，随后必须手动从 UIMap.cs 或 UIMap.vb 文件删除该代码。
 
 ## <a name="CodedUITestEditor_LocateUIControl"></a> 在受测应用程序中查找 UI 控件
  有时，可能很难直观显示控件在受测应用程序 UI 中的位置。 编码的 UI 测试编辑器的功能之一是，你可以选择 UI 控件图中列出的控件和查看其在受测应用程序中的位置。 受测应用程序中的“查找 UI 控件” 功能还可以用于验证你对控件所做的搜索属性修改。
 
- ![Locate UI control](../test/media/codeduilocatecontrol.png "CodedUILocateControl")
+ ![定位 UI 控件](../test/media/codeduilocatecontrol.png "CodedUILocateControl")
 
- ![Control located in application under test](../test/media/codeduilocatecontrol2.png "CodedUILocateControl2")
+ ![位于受测应用程序中的控件](../test/media/codeduilocatecontrol2.png "CodedUILocateControl2")
 
  在“UI 控件图” 窗格中，选择你想要在与测试关联的应用程序中查找的控件。 接下来，打开该控件的快捷菜单，然后选择“查找 UI 控件”。 在受测应用程序中，为该控件指定了一个蓝色边框。
 
- *我还应该知道什么？*
+ *我应该知道哪些其他内容？*
  **重大问题**
 
-- ![Caution icon](../test/media/caution.gif "注意") **Warning:** Before you locate a UI control, verify that the application associated with the test is running.
+- 警告![图标](../test/media/caution.gif "注意")**警告：** 查找 UI 控件之前，请验证与测试关联的应用程序是否正在运行。
 
   **提示**
 
-- ![Tip](../test/media/tip.png "提示") Alternatively, you can use the **Locate All** option to verify that all the controls under a container can be correctly located. 下一部分中对此选项进行了介绍。
+- ![提示](../test/media/tip.png "提示")或者，您可以使用 "**查找全部**" 选项验证容器下的所有控件是否可以正确定位。 下一部分中对此选项进行了介绍。
 
 ## <a name="CodedUITestEditor_LocateDecendants"></a> 查找控件及其后代
  你可以验证是否可以在受测应用程序的 UI 中准确查找容器中的所有控件。 这对于验证你对容器所做的搜索属性更改非常有帮助。 此外，如果对受测应用程序的 UI 进行了重大更改，你可以验证现有的控件搜索属性是否仍正确。
 
- ![Locate all descendant controls](../test/media/codeduilocateall.png "CodedUILocateAll")
+ ![查找所有后代控件](../test/media/codeduilocateall.png "CodedUILocateAll")
 
- ![All controls located](../test/media/codeduilocateall2.png "CodedUILocateAll2")
+ ![所有控件](../test/media/codeduilocateall2.png "CodedUILocateAll2")
 
  在“UI 控件图” 窗格中，选择你想要为其查找和查看所有后代的容器控件。 接下来，打开该控件的快捷菜单，然后选择“查找全部”。 容器控件及其所有后代控件在编码的 UI 测试编辑器标记为一个绿色复选标记或红色 X。 这些标记可让你知道是否可以在受测应用程序中成功查找这些控件。
 
- *我还应该知道什么？*
+ *我应该知道哪些其他内容？*
  **重大问题**
 
-- ![Caution icon](../test/media/caution.gif "注意") **Warning:** Prior to locating the UI controls, verify that the application associated with the test is running.
+- 警告![图标](../test/media/caution.gif "注意")**警告：** 在定位 UI 控件之前，请验证与测试关联的应用程序是否正在运行。
 
 ## <a name="CodedUITestEditor_InsertDelay"></a>在 UI 操作前插入延迟
  有时，可能需要让测试等待某些事件发生，如某个窗口出现、进度栏消失等。 使用编码的 UI 测试编辑器，你可以通过在 UI 操作之前插入延迟完成此操作。 你可以指定希望延迟的秒数。
 
- ![Insert delay before a UI action](../test/media/codeduidelay.png "CodedUIDelay")
+ ![在 UI 操作前插入延迟](../test/media/codeduidelay.png "CodedUIDelay")
 
- ![Delay added with 5 seconds](../test/media/codeduidealy2.png "CodedUIDealy2")
+ ![延迟添加5秒](../test/media/codeduidealy2.png "CodedUIDealy2")
 
  在“UI 操作” 窗格中，展开包含你想要在其前插入延迟的 UI 操作的测试方法。 选择 UI 操作。 接下来，打开 UI 操作的快捷菜单，然后选择“在前面插入延迟”。 在所选 UI 操作之前插入并突出显示具有以下文本的延迟：“为操作之间的用户延迟等待 1 秒”。 在“属性”窗口中，将“延迟” 属性的值更改为所需的毫秒数。
 
  插入延迟完成后，通过选择 **工具栏上的“保存”** [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，将所做更改保存到 UIMap.Designer 文件。
 
- *我还应该知道什么？*
+ *我应该知道哪些其他内容？*
  **注意**
 
-- ![Prerequsite](../test/media/prereq.png "Prereq") If you need to ensure that a specific control is available before a UI action, you should consider adding custom code to your test method using the appropriate UITestControl.WaitForControlXXX() method. [!INCLUDE[crdefault](../includes/crdefault-md.md)][播放期间让编码的 UI 测试等待特定事件](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md)。
+- ![先决条件](../test/media/prereq.png "Prereq")如果需要确保特定控件在 UI 操作之前可用，应考虑使用相应的的 uitestcontrol.waitforcontrolxxx Uitestcontrol.waitforcontrolxxx （）方法将自定义代码添加到测试方法。 [!INCLUDE[crdefault](../includes/crdefault-md.md)][播放期间让编码的 UI 测试等待特定事件](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md)。
 
   **提示**
 
-- ![Tip](../test/media/tip.png "提示") If the Properties window is not displayed, press and hold Alt while you press Enter, or alternatively, press F4.
+- ![提示](../test/media/tip.png "提示")如果属性窗口未显示，请在按住 Alt 的同时按 Enter，或者按 F4。
 
 ## <a name="external-resources"></a>外部资源
 
@@ -214,4 +214,4 @@ ms.locfileid: "74302636"
  [Visual Studio UI 自动测试（包括 CodedUI）](https://go.microsoft.com/fwlink/?LinkID=224497)
 
 ## <a name="see-also"></a>请参阅
- [Use UI Automation To Test Your Code](../test/use-ui-automation-to-test-your-code.md) [Creating Coded UI Tests](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate) [Creating a Data-Driven Coded UI Test](../test/creating-a-data-driven-coded-ui-test.md) [Generating a Coded UI Test from an Existing Action Recording](https://msdn.microsoft.com/library/56736963-9027-493b-b5c4-2d4e86d1d497) [Walkthrough: Creating, Editing and Maintaining a Coded UI Test](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
+ [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)[创建编码](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)[的](../test/creating-a-data-driven-coded-ui-test.md)ui 测试创建编码的 ui 测试[从现有操作录制生成编码的 ui](https://msdn.microsoft.com/library/56736963-9027-493b-b5c4-2d4e86d1d497)测试[演练：创建、编辑和维护编码的 ui 测试](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
