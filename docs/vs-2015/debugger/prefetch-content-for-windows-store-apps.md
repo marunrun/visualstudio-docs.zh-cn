@@ -1,5 +1,5 @@
 ---
-title: Prefetch content for Windows Store apps | Microsoft Docs
+title: 预提取 Windows 应用商店应用的内容 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -24,9 +24,9 @@ ms.locfileid: "74300517"
 # <a name="prefetch-content-for-windows-store-apps"></a>预提取 Windows 应用商店应用的内容
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Applies to Windows only](../Image/windows_only_content.png "windows_only_content")  
+仅适用于 Windows] （.。。将 windows_only_content .png "windows_only_content"）  
   
- To make your Windows Store app more responsive, you can request Windows to preload some web content, such as web pages or images, into the app's [WinINet](https://msdn.microsoft.com/0a06f2af-957a-4dff-a8cc-187370181b5c)[WinINet](https://msdn.microsoft.com/library/aa383630.aspx)cache. 此功能称为“预提取”。 它对于启动时使用的内容特别有效，但你也可以预提取其他常用内容。 利用 [Windows.Networking.BackgroundTransfer.ContentPrefetcher](https://msdn.microsoft.com/library/windows/apps/windows.networking.backgroundtransfer.contentprefetcher.aspx) 类的方法，可以指定要预加载的内容的 URI。  
+ 若要使 Windows 应用商店应用程序更快地响应，可以请求 Windows 将一些 web 内容（如网页或图像）预加载到应用的[wininet](https://msdn.microsoft.com/0a06f2af-957a-4dff-a8cc-187370181b5c)[wininet](https://msdn.microsoft.com/library/aa383630.aspx)缓存中。 此功能称为“预提取”。 它对于启动时使用的内容特别有效，但你也可以预提取其他常用内容。 利用 [Windows.Networking.BackgroundTransfer.ContentPrefetcher](https://msdn.microsoft.com/library/windows/apps/windows.networking.backgroundtransfer.contentprefetcher.aspx) 类的方法，可以指定要预加载的内容的 URI。  
   
  Windows 使用试探法来确定何时及是否应进行预提取，以及将下载哪些资源。 试探法将考虑系统网络和电源情况、用户应用使用情况历史记录和之前预提取尝试的结果。 在 Visual Studio 中，可以使用“触发 Microsoft Store 应用预提取”命令来强制 Windows 忽略 ContentPrefetcher 试探法并预加载所有指定的 Web 内容。 若要在已知状态（已加载或未加载）下使用要预提取的内容测试应用程序的行为或性能，这会很有用。  
   
@@ -45,4 +45,4 @@ Applies to Windows only](../Image/windows_only_content.png "windows_only_content
 > 当你添加或修改指定的 Web 内容时，请重复上述步骤。  
   
 ## <a name="see-also"></a>请参阅  
- [Blog post: Triggering Prefetch for Windows Store Apps in Visual Studio 2013 Update 2](https://devblogs.microsoft.com/devops/triggering-prefetch-for-windows-store-apps-in-visual-studio-2013-update-2/)
+ [博客文章：在 Visual Studio 2013 Update 2 中触发 Windows 应用商店应用的预提取](https://devblogs.microsoft.com/devops/triggering-prefetch-for-windows-store-apps-in-visual-studio-2013-update-2/)

@@ -31,7 +31,7 @@ ms.locfileid: "74297990"
 
  如下图所示，一种典型的开发体验可能是这样一种情况：最初，你只需建立自己的应用程序（F5），并通过单击 UI 控件来验证一切是否运行正常。 你可能会决定创建一个编码的测试，这样就不需要继续手动测试应用程序。 根据在应用程序中进行测试的特定功能，你可以针对任何一个功能测试或者针对可能会或可能不会包括 UI 级别测试的集成测试编写代码。 如果你只想直接访问某些业务逻辑，则可以编写单元测试代码。 然而，在特定情况下，在应用程序中包括各种 UI 控件的测试将是有益的。 编码的 UI 测试可以自动化初始 (F5) 方案，以便验证代码改动不会影响你的应用程序的功能。
 
- ![Testing during application development](../test/media/cuit-overview.png "CUIT_Overview")
+ ![在应用程序开发过程中进行测试](../test/media/cuit-overview.png "CUIT_Overview")
 
  创建编码的 UI 测试很容易。 当 CUIT 测试生成器在后台运行时，你只需手动执行该测试。 你还可以指定在特定字段中应显示哪些值。 CUIT 测试生成器录制操作并且从中生成代码。 在创建测试后，你可以在专用编辑器中对其进行编辑，该编辑器使你能够修改操作的序列。
 
@@ -79,15 +79,15 @@ ms.locfileid: "74297990"
 
     如果你刚创建了编码的 UI 项目，则自动添加第一个 CUIT 文件。 若要添加另一个测试文件，则打开编码的 UI 测试项目上的快捷菜单，指向“添加”，然后选择“编码的 UI 测试”。
 
-    ![Create a coded UI test](../test/media/codedui-create.png "CodedUI_Create")
+    ![创建编码的 UI 测试](../test/media/codedui-create.png "CodedUI_Create")
 
     在“为编码的 UI 测试生成代码”对话框中，选择“录制操作、编辑 UI 映射或添加断言”。
 
-    ![Select record actions](../test/media/codedui-codegendialogb.png "CodedUI_CodeGenDialogB")
+    ![选择记录操作](../test/media/codedui-codegendialogb.png "CodedUI_CodeGenDialogB")
 
     显示“编码的 UI 测试生成器”并且 Visual Studio 将最小化。
 
-    ![Coded UI Test Builder](../test/media/codedui-testbuilder.png "CodedUI_TestBuilder")
+    ![编码的 UI 测试生成器](../test/media/codedui-testbuilder.png "CodedUI_TestBuilder")
 
 3. **录制一系列操作**。
 
@@ -110,7 +110,7 @@ ms.locfileid: "74297990"
 
     关闭断言窗口并且选择“生成代码”。
 
-    ![Coded UI test targeting element](../test/media/codedui-1.png "CodedUI_1")
+    ![编码的 UI 测试目标元素](../test/media/codedui-1.png "CodedUI_1")
 
    > [!TIP]
    > 在录制操作和验证值之间交替。 在每个操作或验证序列的结尾生成代码。 如果你愿意，可以随后插入新的操作和验证。
@@ -150,35 +150,35 @@ ms.locfileid: "74297990"
 
 8. **运行测试**。
 
-    使用测试资源管理器，或打开测试方法中的快捷菜单，然后选择“运行测试”。 有关如何运行测试的详细信息，请参见本主题结尾处[后续步骤](#VerifyCodeUsingCUITWhatsNext)部分中的[用测试资源管理器运行单元测试](../test/run-unit-tests-with-test-explorer.md)和*运行编码的 UI 测试的其他选项*。
+    使用测试资源管理器，或打开测试方法中的快捷菜单，然后选择“运行测试”。 有关如何运行测试的详细信息，请参见本主题结尾处[后续步骤](../test/run-unit-tests-with-test-explorer.md)部分中的*用测试资源管理器运行单元测试*和[运行编码的 UI 测试的其他选项](#VerifyCodeUsingCUITWhatsNext)。
 
    本主题中的剩余部分提供了有关此过程中步骤的更多详细信息。
 
    如需更详尽的示例，请参阅[演练：创建、编辑和维护编码的 UI 测试](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)。 在该演练中，你将创建一个简单的 Windows Presentation Foundation (WPF) 应用程序来演示如何创建、编辑和维护编码的 UI 测试。 本演练为更正由各种计时问题和控件重构中断的测试提供了解决方案。
 
 ### <a name="starting"></a> 启动和停止受测应用程序
- *I don’t want to start and stop my application, browser, or database separately for each test. How do I avoid that?*
+ *我不想针对每个测试分别启动和停止应用程序、浏览器或数据库。如何实现避免出现这种情况？*
 
-- ![Prerequsite](../test/media/prereq.png "Prereq") If you do not want to record the actions to start your application under test, you must start your application before you choose the **Record** icon.
+- ![先决条件](../test/media/prereq.png "Prereq")如果你不希望录制启动受测应用程序的操作，则必须在选择 "**录制**" 图标之前启动应用程序。
 
-- ![Prerequsite](../test/media/prereq.png "Prereq")At the end of a test, the process in which the test runs is terminated. 如果你在测试中启动应用程序，该应用程序通常会关闭。  如果你不希望测试退出时关闭应用程序，则必须将一个 .runsettings 文件添加到你的解决方案并且使用 `KeepExecutorAliveAfterLegacyRun` 选项。 有关详细信息，请参阅[使用 .runsettings 文件配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)。
+- ![先决条件](../test/media/prereq.png "Prereq")在测试结束时，将终止测试运行的进程。 如果你在测试中启动应用程序，该应用程序通常会关闭。  如果你不希望测试退出时关闭应用程序，则必须将一个 .runsettings 文件添加到你的解决方案并且使用 `KeepExecutorAliveAfterLegacyRun` 选项。 有关详细信息，请参阅[使用 .runsettings 文件配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)。
 
-- ![Prerequsite](../test/media/prereq.png "Prereq") You can add a test initialize method, identified by a [TestInitialize] attribute, which runs code at the start of each test method. 例如，你可以从 TestInitialize 方法启动应用程序。
+- ![先决条件](../test/media/prereq.png "Prereq")您可以添加一个由 [TestInitialize] 属性标识的测试初始化方法，该方法在每个测试方法开始时运行代码。 例如，你可以从 TestInitialize 方法启动应用程序。
 
-- ![Prerequsite](../test/media/prereq.png "Prereq") You can add a test cleanup method, identified by a [TestCleanup] attribute, that runs code at the end of each test method. 例如，可以从 TestCleanup 方法调用用于关闭应用程序的方法。
+- ![先决条件](../test/media/prereq.png "Prereq")可以添加一个由 [TestCleanup] 属性标识的测试清理方法，该方法在每个测试方法结束时运行代码。 例如，可以从 TestCleanup 方法调用用于关闭应用程序的方法。
 
 ### <a name="VerifyingCodeUsingCUITGenerateAssertions"></a> 验证 UI 控件的属性
  使用“编码的 UI 测试生成器”，可以向测试的 [UIMap](/previous-versions/dd580454(v=vs.140)) 添加用户界面 (UI) 控件，也可为使用 UI 控件断言的验证方法生成代码。
 
  若要为 UI 控件生成断言，请选择编码的 UI 测试生成器中的“添加断言”工具，并且将其拖放到受测应用程序上的控件，因为你希望验证该应用程序是否正确。 在框确定控件的轮廓时，释放鼠标。 将立即在 `UIMap.Designer.cs` 文件中创建该控件类代码。
 
- ![Coded UI test targeting element](../test/media/codedui-1.png "CodedUI_1")
+ ![编码的 UI 测试目标元素](../test/media/codedui-1.png "CodedUI_1")
 
  此时，该控件的属性在“添加断言”对话框中列出。
 
  另一种导航到特定控件的方法是选择箭头“(<<)”以展开“UI 控件映射”的视图。 若要查找父控件、同级控件或子控件，可以在映射中的任何位置单击，然后使用箭头键在树中移动。
 
- ![Coded UI test properties](../test/media/codedui-2.png "CodedUI_2")
+ ![编码的 UI 测试属性](../test/media/codedui-2.png "CodedUI_2")
 
 - *当我在应用程序中选择控件时，我看不到任何属性，或者我看不到 UI 控件映射中的控件。*
 
@@ -186,7 +186,7 @@ ms.locfileid: "74297990"
 
   接下来，打开要验证的 UI 控件的属性上的快捷菜单，然后指向“添加断言”。 在“添加断言”对话框中，选择断言的“比较器”（例如，<xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A>），并且在“比较值”中键入断言的值。
 
-  ![Coded UI test assertions](../test/media/codedui-3.png "CodedUI_3")
+  ![编码的 UI 测试断言](../test/media/codedui-3.png "CodedUI_3")
 
   在你为测试添加了所有断言后，选择“确定”。
 
@@ -207,7 +207,7 @@ ms.locfileid: "74297990"
 
 - 将名为 `AssertForAddTwoNumbers` 的方法添加到你的 UI 映射 (UIMap.uitest)。 此文件在编码的 UI 测试编辑器中打开，其中你可以编辑断言。
 
-   ![Edit assert using Coded UI Test Editor](../test/media/cuit-editor-assert.png "CUIT_Editor_assert")
+   ![使用编码的 UI 测试编辑器编辑断言](../test/media/cuit-editor-assert.png "CUIT_Editor_assert")
 
    有关详细信息，请参阅[使用编码的 UI 测试编辑器编辑编码的 UI 测试](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)。
 
@@ -220,26 +220,26 @@ ms.locfileid: "74297990"
   }
   ```
 
-  *The control I want to select loses focus and disappears when I try to select the Add Assertions tool from the Coded UI Test Builder. How do I select the control?* 
-  **Selecting a hidden control using the keyboard**
+  *当我尝试从编码的 UI 测试生成器选择 "添加断言" 工具时，我想要选择的控件失去焦点并消失。如何实现选择控件吗？* 
+  **使用键盘选择隐藏控件**
 
   有时候，当[添加控件并验证它们的属性](#VerifyingCodeUsingCUITGenerateAssertions)时，你可能必须使用键盘。 例如，当你尝试录制使用上下文菜单控件的编码的 UI 测试时，如果你尝试从编码的 UI 测试生成器选择“添加断言”工具，则在该控件中的菜单项列表会失去焦点并消失。 下图说明了这一点，如果你尝试使用“添加断言”工具选择上下文菜单，其中 Internet Explorer 中的上下文菜单将会失去焦点并且消失。
 
-  ![CodedUITest&#95;SelectControlKeyboard](../test/media/codeduitest-selectcontrolkeyboard.png "CodedUITest_SelectControlKeyboard")
+  ![用于 codeduitest&#95;SelectControlKeyboard](../test/media/codeduitest-selectcontrolkeyboard.png "CodedUITest_SelectControlKeyboard")
 
   若要使用键盘选择 UI 控件，请使用鼠标悬停在该控件上。 然后，同时按住“Ctrl”键和“I”键。 释放这些键。 此控件由编码的 UT 测试生成器录制。
 
 > [!WARNING]
 > 如果你使用 Microsoft Lync，必须在启动编码的 UI 测试生成器前关闭 Lync。 Microsoft Lync 会影响“Ctrl+I”键盘快捷方式。
 
- *I can’t record a mouse hover on a control. Is there a way around this?*
+ *我无法录制控件上的鼠标悬停。是否有解决此问题的方法？*
  **手动录制鼠标悬停**
 
  某些情况下，在编码的 UI 测试中使用的特定控件可能需要你使用键盘来手动记录鼠标悬停事件。 例如，当你测试 Windows 窗体或 Windows Presentation Foundation (WPF) 应用程序时，可能是自定义代码。 或者，可能是针对悬停控件所定义的特殊行为，如当用户在树节点上悬停时，树节点会展开。 若要测试类似这样的情况，你必须通过按下预定义的键盘按键，手动通知编码的 UI 测试生成器你正在控件上悬停。
 
  当你执行编码的 UI 测试时，在该控件上悬停。 当你在键盘上按住 Shift 和 R 键时，同时按住 Ctrl 键。 释放这些键。 鼠标悬停事件由编码的 UT 测试生成器录制。
 
- ![CodedUI&#95;Hover](../test/media/codedui-hover.png "CodedUI_Hover")
+ ![CodedUI&#95;悬停](../test/media/codedui-hover.png "CodedUI_Hover")
 
  在你生成测试方法后，会将类似于以下示例的代码添加到 UIMap.Desinger.cs 文件：
 
@@ -249,7 +249,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
 ```
 
- *The key assignment for capturing mouse hover events is being used elsewhere in my environment. Can I change the default key assignment?*
+ *用于捕获鼠标悬停事件的键分配是在我的环境中的其他位置使用。我是否可以更改默认的键分配？*
  **配置鼠标悬停键盘分配**
 
  如有必要，用于在编码的 UI 测试中应用鼠标悬停事件的默认 Ctrl+Shift+R 键盘分配可以配置为使用不同的键。
@@ -271,7 +271,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
 ```
 
- *I’m having issues with recording mouse hovers on a website. Is there a fix for this, too?*
+ *我在将鼠标悬停在网站上时遇到问题。是否也对此进行了修复？*
  **为 Web 浏览器设置隐式鼠标悬停**
 
  在很多网站中，当你在一个特定的控件上悬停时，它就会展开以显示更多细节。 通常，它们看起来像桌面应用程序中的菜单。 因为这是通用模式，因此编码的 UI 测试支持 Web 浏览的隐式悬停。 例如，如果你在 Internet Explorer 中录制悬停，会触发一个事件。 这些事件可能导致冗余悬停的录制。 因此，隐式悬停采用在 UI 测试配制文件中设置为 `ContinueOnError` 的 `true` 录制。 这可允许在悬停事件失败时，播放继续进行。
@@ -303,7 +303,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
   - 在编码的 UI 测试播放中，你可以指示测试等待某些事件发生，如某个窗口出现、进度栏消失等。 为此，请添加相应的 UITestControl.WaitForControlXXX() 方法。 有关可用方法的完整列表，请参阅[播放期间让编码的 UI 测试等待特定事件](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md)。 有关等待使用 WaitForControlEnabled 方法启用某个控件的编码的 UI 测试示例，请参阅[演练：创建、编辑和维护编码的 UI 测试](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)。
 
-  - 编码的 UI 测试包括对某些包含在 Internet Explorer 9 和 Internet Explorer 10 中的 HTML5 控件的支持。 有关详细信息，请参阅[在编码的 UI 测试中使用 HTML5 控件](../test/using-html5-controls-in-coded-ui-tests.md)。
+  - 编码的 UI 测试包括对某些包含在 Internet Explorer 9 和 Internet Explorer 10 中的 HTML5 控件的支持。 有关详细信息，请参阅 [Using HTML5 Controls in Coded UI Tests](../test/using-html5-controls-in-coded-ui-tests.md)。
 
   - **编码的 UI 测试编码指导：**
 
@@ -425,7 +425,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
 - <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A> 返回相应的数据类型，但此返回值将被强制转换为 <xref:System.Object>。 必须再将返回的 <xref:System.Object> 强制转换为相应的类型。
 
-     示例:
+     例如：
 
      `int i = (int)GetProperty(myHtmlList.PropertyNames.ItemCount);`
 
@@ -435,7 +435,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
 - 若要指定要设置的控件属性，请使用来自 `PropertyNames` 类的相应字符串作为 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A> 的第一个参数，使用属性值作为第二个参数。
 
-     示例:
+     例如：
 
      `SetProperty(myWinCheckBox.PropertyNames.Checked, true);`
 
@@ -482,7 +482,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 ### <a name="forum"></a>论坛
 - [Visual Studio UI 自动测试（包括 CodedUI）](https://go.microsoft.com/fwlink/?LinkID=224497)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UIMap](/previous-versions/dd580454(v=vs.140))
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>

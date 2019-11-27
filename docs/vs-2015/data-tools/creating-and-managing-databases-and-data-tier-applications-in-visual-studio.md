@@ -1,5 +1,5 @@
 ---
-title: Creating and managing databases and data-tier applications
+title: 创建和管理数据库和数据层应用程序
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -25,19 +25,19 @@ ms.locfileid: "74299648"
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 重要提示
-> The database projects that were included in earlier versions of [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] are now provided in [!INCLUDE[sql_Denali_long](../includes/sql-denali-long-md.md)] tools. For more information, see [SQL Server Developer Tools](https://go.microsoft.com/fwlink/?LinkId=228126).
+> [!INCLUDE[sql_Denali_long](../includes/sql-denali-long-md.md)] 工具中现在提供了 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 早期版本中包含的数据库项目。 有关详细信息，请参阅[SQL Server Developer 工具](https://go.microsoft.com/fwlink/?LinkId=228126)。
 
- You can use database projects to create new databases, new data-tier applications (DACs), and to update existing databases and data-tier applications. Both database projects and DAC projects enable you to apply version control and project management techniques to your database development efforts in much the same way that you apply those techniques to managed or native code. You can help your development team manage changes to databases and database servers by creating a *DAC project*, *database project*, or a *server project* and putting it under version control. Members of your team can then check out files to make, build, and test changes in an *isolated development environment*, or sandbox, before sharing them with the team. To help ensure code quality, your team can finish and test all changes for a particular release of the database in a staging environment before you deploy the changes into production.
+ 您可以使用数据库项目创建新的数据库、新的数据层应用程序（Dac）以及更新现有的数据库和数据层应用程序。 使用数据库项目和 DAC 项目，您可以将版本控制和项目管理技术应用于您的数据库开发工作，就像将这些技术应用于托管代码或本机代码一样。 您可以通过创建*DAC 项目*、*数据库项目*或*服务器项目*并将其置于版本控制下，帮助您的开发团队管理对数据库和数据库服务器所做的更改。 然后，你的团队成员可以在将其与团队共享之前，先签出文件，以便在*隔离开发环境*或沙盒中生成和测试更改。 为了帮助确保代码质量，你的团队可以在将更改部署到生产环境之前，在过渡环境中完成并测试该数据库的特定版本的所有更改。
 
- For a list of the database features that are supported by Data-tier Applications, see [Features Supported in Data-tier Applications](https://go.microsoft.com/fwlink/?LinkId=164239) on the Microsoft web site. If you use features in your database that are not supported by Data-tier Applications, you should instead use a database project to manage changes to your database.
+ 有关数据层应用程序支持的数据库功能的列表，请参阅 Microsoft 网站上的[数据层应用程序中支持的功能](https://go.microsoft.com/fwlink/?LinkId=164239)。 如果你在数据库中使用数据层应用程序不支持的功能，则应改为使用数据库项目来管理对数据库的更改。
 
-## <a name="common-high-level-tasks"></a>Common High-Level Tasks
+## <a name="common-high-level-tasks"></a>常见的高级任务
 
-|High-Level Task|支持内容|
+|高级任务|支持内容|
 |----------------------|------------------------|
-|**Start development of a data-tier application:** A DAC is a new concept introduced with [!INCLUDE[sskatmai_r2](../includes/sskatmai-r2-md.md)] that contains the definition for a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database and the supporting instance objects that are used by a client-server or 3-tier application. A DAC includes database objects, such as tables and views, together with instance entities such as logins. You can use [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] to create a DAC project, build a DAC package file, and send that DAC package file to a database administrator for deployment onto an instance of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database engine.|-   [Creating and Managing Data-tier Applications](https://go.microsoft.com/fwlink/?LinkId=160741) (Microsoft web site)<br />-   [SQL Server Management Studio](https://go.microsoft.com/fwlink/?LinkId=227328)|
-|**Performing iterative database development:** If you are a developer or a tester, you check out parts of the project and then update them in an isolated development environment. By using this type of environment, you can test  your changes without affecting other members of the team. After the changes are complete, you check the files back into version control, where other team members can obtain your changes and build and deploy them to a test server.|-   [Query and Text Editors (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=227327) (Microsoft web site)<br />-   [Transact-SQL Debugger](https://go.microsoft.com/fwlink/?LinkId=227324) (Microsoft web site)|
-|**Prototyping, verifying test results, and modifying database scripts and objects:** You can use the [!INCLUDE[tsql](../includes/tsql-md.md)] editor to perform any one of these common tasks.|-   [Query and Text Editors (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=227327) (Microsoft web site)|
+|**开始开发数据层应用程序：** DAC 是 [!INCLUDE[sskatmai_r2](../includes/sskatmai-r2-md.md)] 引入的一种新概念，其中包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的定义和客户端-服务器或3层应用程序使用的支持实例对象。 DAC 包括数据库对象（如表和视图）以及实例实体（例如登录名）。 您可以使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 来创建一个 DAC 项目，生成一个 DAC 包文件，然后将该 DAC 包文件发送到数据库管理员，以便部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库引擎的实例上。|-   [创建和管理数据层应用程序](https://go.microsoft.com/fwlink/?LinkId=160741)（Microsoft 网站）<br />-   [SQL Server Management Studio](https://go.microsoft.com/fwlink/?LinkId=227328)|
+|**执行迭代数据库开发：** 如果你是开发人员或测试人员，请签出项目的各个部分，然后在隔离的开发环境中对其进行更新。 通过使用这种类型的环境，您可以测试您的更改，而不会影响团队的其他成员。 更改完成后，可将文件签回版本控制中，其他团队成员可在其中获取所做的更改并将其生成并部署到测试服务器。|-   [查询和文本编辑器（SQL Server Management Studio）](https://go.microsoft.com/fwlink/?LinkId=227327) （Microsoft 网站）<br />-   [Transact-sql 调试器](https://go.microsoft.com/fwlink/?LinkId=227324)（Microsoft 网站）|
+|**原型制作，验证测试结果，修改数据库脚本和对象：** 您可以使用 [!INCLUDE[tsql](../includes/tsql-md.md)] 编辑器执行其中的一项常见任务。|-   [查询和文本编辑器（SQL Server Management Studio）](https://go.microsoft.com/fwlink/?LinkId=227327) （Microsoft 网站）|
 
 ## <a name="see-also"></a>请参阅
  [适用于 NET 的 Visual Studio Data Tools](../data-tools/visual-studio-data-tools-for-dotnet.md)

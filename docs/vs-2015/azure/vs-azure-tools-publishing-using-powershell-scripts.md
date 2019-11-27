@@ -24,7 +24,7 @@ ms.locfileid: "74298103"
 
 使用这些脚本，可以设置站点的自定义版本（又称为开发与测试环境）供临时使用。 例如，可以在 Azure 虚拟机中或者 Azure 网站的过渡槽中设置网站的特定版本，以运行测试套件、再现 bug、测试 bug 修复程序、试验建议的更改，或者设置自定义环境用于演示或展示。 创建用于发布项目的脚本后，可以根据需要通过重新运行该脚本来重新创建相同的环境，或者结合自己的 Web 应用版本运行该脚本，以创建自定义环境用于测试。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 * Azure SDK 2.3 或更高版本。 请参阅 [Visual Studio 下载](https://go.microsoft.com/fwlink/?LinkID=624384)。 （无需使用 Azure SDK 就能为 Web 项目生成脚本。 此功能适用于 Web 项目，而不适用于云服务中的 Web 角色。）
 * Azure PowerShell 0.7.4 或更高版本。 请参阅 [如何安装和配置 Azure PowerShell](/powershell/azure/overview)。
@@ -156,7 +156,7 @@ JSON 文件是在 **Configurations** 文件夹中创建的，其中包含的配�
 
    ![创建 Web 部署包](./media/vs-azure-tools-publishing-using-powershell-scripts/IC767885.png)
 
-   For more information, see [How to: Create a Web Deployment Package in Visual Studio](https://msdn.microsoft.com/library/dd465323.aspx). 还可以自动创建 Web 部署包，如[自定义和扩展发布脚本](#customizing-and-extending-the-publish-scripts)中所述。
+   有关详细信息，请参阅[如何：在 Visual Studio 中创建 Web 部署包](https://msdn.microsoft.com/library/dd465323.aspx)。 还可以自动创建 Web 部署包，如[自定义和扩展发布脚本](#customizing-and-extending-the-publish-scripts)中所述。
 
 1. 在“解决方案资源管理器”中打开脚本的上下文菜单，并选择“使用 PowerShell ISE 打开”。
 1. 如果首次在此计算机上运行 Windows PowerShell 脚本，请使用管理员权限打开命令提示窗口并键入以下命令：
@@ -244,7 +244,7 @@ JSON 文件是在 **Configurations** 文件夹中创建的，其中包含的配�
     }
     ```
 
-1. 将 `New-WebDeployPackage` 替换为以下代码，并替换构造 `$msbuildCmd` 的行中的占位符。 This code is for Visual Studio 2015. If you're using Visual Studio 2017, change the **VisualStudioVersion** property to `15.0` (`12.0` for Visual Studio 2013).
+1. 将 `New-WebDeployPackage` 替换为以下代码，并替换构造 `$msbuildCmd` 的行中的占位符。 此代码适用于 Visual Studio 2015。 如果使用的是 Visual Studio 2017，请将**VisualStudioVersion**属性更改为 `15.0` （`12.0` Visual Studio 2013）。
 
     ```powershell
     function New-WebDeployPackage
@@ -324,7 +324,7 @@ return $WebDeployPackage
 | Find-AzureVM |获取指定的 Azure 虚拟机。 |
 | Format-DevTestMessageWithTime |在消息的前面添加日期和时间。 此函数适用于写入到错误流和详细流的消息。 |
 | Get-AzureSQLDatabaseConnectionString |汇编一个连接字符串以连接到 Azure SQL 数据库。 |
-| Get-AzureVMStorage |Returns the name of the first storage account with the name pattern "devtest *" (case insensitive) in the specified location or affinity group. If the "devtest*" storage account doesn't match the location or affinity group, the function ignores it. 指定一个位置或地缘组。 |
+| Get-AzureVMStorage |返回*指定的位置或地缘组中名称模式为 "开发测试" （不区分大小写）的第一个存储帐户的名称。如果 "开发测试*" 存储帐户与该位置或地缘组不匹配，该函数将忽略该帐户。 指定一个位置或地缘组。 |
 | Get-MSDeployCmd |返回一个用于运行 MsDeploy.exe 工具的命令。 |
 | New-AzureVMEnvironment |在订阅中查找或创建与 JSON 配置文件中的值匹配的虚拟机。 |
 | Publish-WebPackage |使用 MsDeploy.exe 和 Web 发布包 .Zip 文件将资源部署到网站。 此函数不生成任何输出。 如果调用 MSDeploy.exe 失败，该函数将引发异常。 若要获取更详细的输出，请使用 **-Verbose** 选项。 |

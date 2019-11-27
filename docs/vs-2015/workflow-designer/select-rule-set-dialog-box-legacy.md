@@ -1,5 +1,5 @@
 ---
-title: Select Rule Set Dialog Box (Legacy) | Microsoft Docs
+title: "\"选择规则集\" 对话框（旧版） |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -21,27 +21,27 @@ ms.lasthandoff: 11/21/2019
 ms.locfileid: "74301450"
 ---
 # <a name="select-rule-set-dialog-box-legacy"></a>“选择规则集”对话框（旧版）
-This topic describes how use the **Select Rule Set** dialog box in the legacy [!INCLUDE[wfd1](../includes/wfd1-md.md)]. 在需要面向 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 或 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 时，请使用旧 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]。
+本主题介绍如何使用旧 [!INCLUDE[wfd1](../includes/wfd1-md.md)]中的 "**选择规则集**" 对话框。 在需要面向 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 或 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 时，请使用旧 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]。
 
- The **Select Rule Set** dialog box is used to select a rule set that you can use with a [PolicyActivity](https://go.microsoft.com/fwlink?LinkID=65019) activity. For information about how to access the **Select Rule Set** dialog box, see [How to: Create a PolicyActivity Rule Set (Legacy)](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md).
+ "**选择规则集**" 对话框用于选择可与[PolicyActivity](https://go.microsoft.com/fwlink?LinkID=65019)活动一起使用的规则集。 有关如何访问 "**选择规则集**" 对话框的信息，请参阅[如何：创建 PolicyActivity 规则集（旧版）](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md)。
 
- The following table describes the user interface (UI) elements of the **Select Rule Set** dialog box.
+ 下表介绍 "**选择规则集**" 对话框的用户界面（UI）元素。
 
 |UI 元素|描述|
 |----------------|-----------------|
-|**New…**|Click to open the [Rule Set Editor Dialog Box (Legacy)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) to create a new rule condition.|
-|**Edit…**|Click to open the [Rule Set Editor Dialog Box (Legacy)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) to edit the selected rule condition.|
-|**Rename…**|单击可打开用于重命名选定的规则集的对话框。|
+|**新增功能。**|单击以打开 "[规则集编辑器" 对话框（旧版）](../workflow-designer/rule-set-editor-dialog-box-legacy.md)以创建新的规则条件。|
+|**编辑 。**|单击此选项可打开 "[规则集编辑器" 对话框（旧版）](../workflow-designer/rule-set-editor-dialog-box-legacy.md) ，以编辑选定的规则条件。|
+|**重命名 。**|单击可打开用于重命名选定的规则集的对话框。|
 |**删除**|单击可删除选定的规则集。|
-|**Rule Set Preview**|显示选定规则集中的规则。|
-|**OK**|Click to assign the selected rule set to the **PolicyActivity** activity.|
+|**规则集预览**|显示选定规则集中的规则。|
+|**还行**|单击此选项可将所选规则集分配给 " **PolicyActivity** " 活动。|
 
- For more information about how to create and edit rule sets, see [Rule Set Editor Dialog Box (Legacy)](../workflow-designer/rule-set-editor-dialog-box-legacy.md).
+ 有关如何创建和编辑规则集的详细信息，请参阅 "[规则集编辑器" 对话框（旧版）](../workflow-designer/rule-set-editor-dialog-box-legacy.md)。
 
 > [!WARNING]
 > 用于面向 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 或 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 的旧 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] 的规则编辑器不支持多目标。
 
- For more information about conditions, see [Using Conditions in Workflows](https://go.microsoft.com/fwlink?LinkID=65009).
+ 有关条件的详细信息，请参阅[在工作流中使用条件](https://go.microsoft.com/fwlink?LinkID=65009)。
 
 ## <a name="see-also"></a>请参阅
- [PolicyActivity](https://go.microsoft.com/fwlink?LinkID=65019) [Rule Set Editor Dialog Box (Legacy)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) [Using the PolicyActivity Activity](https://go.microsoft.com/fwlink?LinkID=65004) [Using Conditions in Workflows](https://go.microsoft.com/fwlink?LinkID=65009)
+ " [PolicyActivity](https://go.microsoft.com/fwlink?LinkID=65019) [规则集编辑器" 对话框（旧版）](../workflow-designer/rule-set-editor-dialog-box-legacy.md)使用[工作流中的条件](https://go.microsoft.com/fwlink?LinkID=65009)[的 PolicyActivity 活动](https://go.microsoft.com/fwlink?LinkID=65004)

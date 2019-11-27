@@ -21,13 +21,13 @@ ms.locfileid: "74295793"
 
 创建图片查看器时，第一步是创建 Windows 窗体应用程序项目。
 
- ![link to video](../data-tools/media/playvideo.gif "PlayVideo")For a video version of this topic, see [Tutorial 1: Create a Picture Viewer in Visual Basic - Video 1](https://go.microsoft.com/fwlink/?LinkId=205209) or [Tutorial 1: Create a Picture Viewer in C# - Video 1](https://go.microsoft.com/fwlink/?LinkId=205199). 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
+ ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[教程1：在 Visual Basic 中创建图片查看器-视频 1](https://go.microsoft.com/fwlink/?LinkId=205209)或[教程1：在视频1中C#创建图片查看器](https://go.microsoft.com/fwlink/?LinkId=205199)。 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
 
 ### <a name="to-create-a-windows-forms-application-project"></a>创建 Windows 窗体应用程序项目
 
-1. 在菜单栏上，依次选择 **“文件”** 、 **“新建”** 、 **“项目”** 。 对话框应如下所示。
+1. 在菜单栏上，依次选择“文件”、“新建”、“项目”。 对话框应如下所示。
 
-     ![New project dialog](../ide/media/newprojectdialogcallouts.png "NewProjectDialogCallouts") New project dialog box
+     "![新建项目" 对话框](../ide/media/newprojectdialogcallouts.png "NewProjectDialogCallouts")"新建项目" 对话框
 
 2. 在“已安装的模板”列表中选择“Visual C#”或“Visual Basic”。
 
@@ -40,7 +40,7 @@ ms.locfileid: "74295793"
     > [!NOTE]
     > 您的窗口布局可能与此图不完全相同。 确切的窗口布局取决于 Visual Studio 的版本、所使用的编程语言以及一些其他因素。 但是，您应验证是否显示了全部三个窗口。
 
-     ![IDE window](../ide/media/express-ideoverview-visio.png "Express_IDEOverview_Visio") IDE window
+     ![IDE 窗口](../ide/media/express-ideoverview-visio.png "Express_IDEOverview_Visio")IDE 窗口
 
      此界面包含三个窗口：主窗口、“解决方案资源管理器”和“属性”窗口。
 
@@ -61,7 +61,7 @@ ms.locfileid: "74295793"
 
      或者，在工具栏上选择“全部保存”按钮，如下图所示。
 
-     ![Save All toolbar button](../ide/media/express-iconsaveall.png "Express_IconSaveAll") Save All toolbar button
+     "![全部保存" 工具栏按钮](../ide/media/express-iconsaveall.png "Express_IconSaveAll")"全部保存" 工具栏按钮
 
      Visual Studio 将自动填充文件夹名称和项目名称，并将项目保存在项目文件夹中。
 

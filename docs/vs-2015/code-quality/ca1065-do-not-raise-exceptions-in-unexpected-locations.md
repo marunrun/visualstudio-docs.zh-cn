@@ -1,5 +1,5 @@
 ---
-title: 'CA1065: Do not raise exceptions in unexpected locations | Microsoft Docs'
+title: CA1065：不要在意外的位置引发异常 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -36,103 +36,103 @@ ms.locfileid: "74295942"
  不应引发异常的方法引发了异常。
 
 ## <a name="rule-description"></a>规则说明
- Methods that are not expected to throw exceptions can be categorized as follows:
+ 不应引发异常的方法可以按如下方式分类：
 
-- Property Get Methods
+- 属性获取方法
 
 - 事件访问器方法
 
-- Equals Methods
+- Equals 方法
 
-- GetHashCode Methods
+- GetHashCode 方法
 
-- ToString Methods
+- ToString 方法
 
 - 静态构造函数
 
 - 终结器
 
-- Dispose Methods
+- Dispose 方法
 
 - 相等运算符
 
-- Implicit Cast Operators
+- 隐式强制转换运算符
 
-  The following sections discuss these method types.
+  以下各节将讨论这些方法类型。
 
-### <a name="property-get-methods"></a>Property Get Methods
- Properties are basically smart fields. Therefore, they should behave like a field as much as possible. Fields do not throw exceptions and neither should properties. If you have a property that throws an exception, consider making it a method.
+### <a name="property-get-methods"></a>属性获取方法
+ 属性基本上是智能字段。 因此，它们的行为应尽可能像字段一样。 字段不会引发异常，也不应为属性。 如果有一个引发异常的属性，请考虑将其设为方法。
 
- The following exceptions are allowed to be thrown from a property get method:
+ 允许从属性 get 方法中引发以下异常：
 
-- <xref:System.InvalidOperationException?displayProperty=fullName> and all derivatives (including <xref:System.ObjectDisposedException?displayProperty=fullName>)
+- <xref:System.InvalidOperationException?displayProperty=fullName> 和所有派生（包括 <xref:System.ObjectDisposedException?displayProperty=fullName>）
 
-- <xref:System.NotSupportedException?displayProperty=fullName> and all derivatives
+- <xref:System.NotSupportedException?displayProperty=fullName> 和所有派生
 
-- <xref:System.ArgumentException?displayProperty=fullName> (only from indexed get)
+- <xref:System.ArgumentException?displayProperty=fullName> （仅从索引 get 获取）
 
-- <xref:System.Collections.Generic.KeyNotFoundException> (only from indexed get)
+- <xref:System.Collections.Generic.KeyNotFoundException> （仅从索引 get 获取）
 
 ### <a name="event-accessor-methods"></a>事件访问器方法
- Event accessors should be simple operations that do not throw exceptions. An event should not throw an exception when you try to add or remove an event handler.
+ 事件访问器应是不会引发异常的简单操作。 尝试添加或移除事件处理程序时，事件不应引发异常。
 
- The following exceptions are allowed to be thrown from an event accesor:
+ 允许从事件 accesor 引发以下异常：
 
-- <xref:System.InvalidOperationException?displayProperty=fullName> and all derivatives (including <xref:System.ObjectDisposedException?displayProperty=fullName>)
+- <xref:System.InvalidOperationException?displayProperty=fullName> 和所有派生（包括 <xref:System.ObjectDisposedException?displayProperty=fullName>）
 
-- <xref:System.NotSupportedException?displayProperty=fullName> and all derivatives
+- <xref:System.NotSupportedException?displayProperty=fullName> 和所有派生
 
-- <xref:System.ArgumentException> and derivatives
+- <xref:System.ArgumentException> 和派生
 
-### <a name="equals-methods"></a>Equals Methods
- The following **Equals** methods should not throw exceptions:
+### <a name="equals-methods"></a>Equals 方法
+ 以下**Equals**方法不应引发异常：
 
 - <xref:System.Object.Equals%2A?displayProperty=fullName>
 
 - [M:IEquatable.Equals](https://go.microsoft.com/fwlink/?LinkId=113472)
 
-  An **Equals** method should return `true` or `false` instead of throwing an exception. For example, if Equals is passed two mismatched types it should just return `false` instead of throwing an <xref:System.ArgumentException>.
+  **Equals**方法应返回 `true` 或 `false`，而不是引发异常。 例如，如果将 Equals 传递两个不匹配的类型，则它应只返回 `false` 而不是引发 <xref:System.ArgumentException>。
 
-### <a name="gethashcode-methods"></a>GetHashCode Methods
- The following **GetHashCode** methods should usually not throw exceptions:
+### <a name="gethashcode-methods"></a>GetHashCode 方法
+ 以下**GetHashCode**方法通常不应引发异常：
 
 - <xref:System.Object.GetHashCode%2A>
 
-- [M:IEqualityComparer.GetHashCode(T)](https://go.microsoft.com/fwlink/?LinkId=113477)
+- [M:IEqualityComparer.GetHashCode （T）](https://go.microsoft.com/fwlink/?LinkId=113477)
 
-  **GetHashCode** should always return a value. Otherwise, you can lose items in the hash table.
+  **GetHashCode**应始终返回值。 否则，可能会丢失哈希表中的项。
 
-  The versions of **GetHashCode** that take an argument can throw an <xref:System.ArgumentException>. However, **Object.GetHashCode** should never throw an exception.
+  采用参数的**GetHashCode**的版本可能会引发 <xref:System.ArgumentException>。 但是， **GetHashCode**不应引发异常。
 
-### <a name="tostring-methods"></a>ToString Methods
- The debugger uses <xref:System.Object.ToString%2A?displayProperty=fullName> to help display information about objects in string format. Therefore, **ToString** should not change the state of an object and it should not throw exceptions.
+### <a name="tostring-methods"></a>ToString 方法
+ 调试器使用 <xref:System.Object.ToString%2A?displayProperty=fullName> 来帮助以字符串格式显示有关对象的信息。 因此， **ToString**不应更改对象的状态，它不应引发异常。
 
 ### <a name="static-constructors"></a>静态构造函数
- Throwing exceptions from a static constructor causes the type to be unusable in the current application domain. You should have a very good reason (such as a security issue) for throwing an exception from a static constructor.
+ 从静态构造函数引发异常将导致该类型在当前应用程序域中不可用。 从静态构造函数引发异常时，应该有一个很好的理由（如安全问题）。
 
 ### <a name="finalizers"></a>终结器
- Throwing an exception from a finalizer causes the CLR to fail fast, which tears down the process. Therefore, throwing exceptions in a finalizer should always be avoided.
+ 从终结器引发异常将导致 CLR 快速失败，从而泪水进程。 因此，应始终避免在终结器中引发异常。
 
-### <a name="dispose-methods"></a>Dispose Methods
- A <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> method should not throw an exception. Dispose is often called as part of the clean up logic in a `finally` clause. Therefore, explicitly throwing an exception from Dispose forces the user to add exception handling inside the `finally` clause.
+### <a name="dispose-methods"></a>Dispose 方法
+ <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 方法不应引发异常。 Dispose 通常在 `finally` 子句中的清理逻辑中调用。 因此，从 Dispose 显式引发异常将强制用户在 `finally` 子句内添加异常处理。
 
- The **Dispose(false)** code path should never throw exceptions, because this is almost always called from a finalizer.
+ **Dispose （false）** 代码路径不应引发异常，因为这几乎始终是从终结器调用的。
 
-### <a name="equality-operators--"></a>Equality Operators (==, !=)
- Like Equals methods, equality operators should return either `true` or `false` and should not throw exceptions.
+### <a name="equality-operators--"></a>相等运算符（= =，！ =）
+ 类似于 Equals 方法，相等运算符应返回 `true` 或 `false` 并且不应引发异常。
 
-### <a name="implicit-cast-operators"></a>Implicit Cast Operators
- Because the user is often unaware that an implicit cast operator has been called, an exception thrown by the implicit cast operator is completely unexpected. Therefore, no exceptions should be thrown from implicit cast operators.
+### <a name="implicit-cast-operators"></a>隐式强制转换运算符
+ 由于用户通常不知道已经调用了隐式转换运算符，因此隐式强制转换运算符引发的异常是完全意外的。 因此，不应从隐式强制转换运算符引发异常。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- For property getters, either change the logic so that it no longer has to throw an exception, or change the property into a method.
+ 对于属性 getter，请更改逻辑，使其不再需要引发异常，或将属性更改为方法。
 
- For all other method types listed previously, change the logic so that it no longer must throw an exception.
+ 对于前面列出的所有其他方法类型，请更改逻辑，使其不再必须引发异常。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- It is safe to suppress a warning from this rule if the violation was caused by an exception declaration instead of a thrown exception.
+ 如果冲突是由异常声明引起的，而不是引发的异常，则可以安全地禁止显示此规则发出的警告。
 
-## <a name="related-rules"></a>Related Rules
+## <a name="related-rules"></a>相关规则
  [CA2219：在异常子句中不引发异常](../code-quality/ca2219-do-not-raise-exceptions-in-exception-clauses.md)
 
 ## <a name="see-also"></a>请参阅

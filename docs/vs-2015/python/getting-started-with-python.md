@@ -1,5 +1,5 @@
 ---
-title: Getting Started with Python | Microsoft Docs
+title: 通过 Python 入门 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-python
@@ -19,35 +19,35 @@ ms.locfileid: "74298188"
 # <a name="getting-started-with-python"></a>Python 入门
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-The Python Tools for Visual Studio (PTVS), is a free, [open-source](https://github.com/Microsoft/ptvs) plug-in for Visual Studio that a powerful Python development experience.  
+针对 Visual Studio 的 Python 工具（PTVS）是一个功能强大的 Python 开发体验，适用于 Visual Studio 的免费[开源](https://github.com/Microsoft/ptvs)插件。  
   
 ## <a name="python-the-language"></a>Python 语言
   
-Python is a popular programming language that is used by many universities, scientists, app scripters, casual developers, and professional developers, working on applications, web sites, and cloud services.
+Python 是一种常用的编程语言，由许多大学、科学家、应用程序脚本、随意开发人员和专业开发人员使用，可处理应用程序、网站和云服务。
 
-As a programming language, Python is:
+作为编程语言，Python 是：
   
 - 可靠。
-- Generally useful for scripting quick programs, app scripting, desktop apps, web servers, web services, and scientific computing.
+- 通常适用于编写快速程序、应用脚本、桌面应用、web 服务器、web 服务和科学计算。
 - 易于学习，设计良好，能帮助提高编码质量（许多大学都将它用于编程入门课程）。
-- Flexible, supporting imperative, functional, and object-oriented programming styles.
+- 灵活，支持强制性、功能和面向对象的编程样式。
 - 免费且开源。
-- Runs well on all major operating systems.  
-- Supported by many free, useful, and well-designed libraries.  
-- Supported by lots of documentation, samples, and a strong developer community.  
+- 在所有主要的操作系统上正常运行。  
+- 受许多免费、有用且设计良好的库支持。  
+- 由大量文档、示例和强大的开发人员社区支持。  
 
-To learn more about the language, start with [Python for Beginners](https://www.python.org/about/gettingstarted/) on python.org.
+若要了解有关该语言的详细信息，请从用于 python.org 的[初学者着手 Python](https://www.python.org/about/gettingstarted/) 。
 
-To install Python itself, visit [https://www.python.org/download/](https://www.python.org/download/).
+若要安装 Python，请访问[https://www.python.org/download/](https://www.python.org/download/)。
 
 ## <a name="python-tools-for-visual-studio"></a>Visual Studio 的 Python 工具
   
-The Python Tools for Visual Studio, which you can install from [visualstudio.com](https://www.visualstudio.com/explore/python-vs), provide the following features:  
+针对 Visual Studio 的 Python 工具（可从[visualstudio.com](https://www.visualstudio.com/explore/python-vs)安装）提供以下功能：  
   
 - 支持多种解释器：各种版本的 CPython、IronPython 以及 IPython  
 - 项目系统可隐式选取 Python 代码的文件夹结构，也允许显式控制，以便标识应用代码、测试代码、网页、JavaScript、生成脚本等等。  
 - 用于控制台、Web、Azure、数据科学和其他类型项目的项目模板。    
-- The Azure SDK for Python (see below)    
+- 用于 Python 的 Azure SDK （请参阅下文）    
 - 丰富的编辑和代码理解功能，包括语法着色、跨所有代码和库的自动完成功能、签名帮助、类视图、转到定义、查找所有引用、重构等等。    
 - 交互式 (REPL) 窗口
 - 使用数据可视化功能的 IPython。
@@ -60,14 +60,14 @@ The Python Tools for Visual Studio, which you can install from [visualstudio.com
 
 - [安装指南](https://github.com/Microsoft/PTVS/wiki/PTVS-Installation)    
 - [入门和深入了解短片](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)  
-- Installation and features demo (27 min)](https://www.youtube.com/watch?v=JNNAOypc6Ek)  
+- 安装和功能演示（27分钟）] （ https://www.youtube.com/watch?v=JNNAOypc6Ek)  
 - [文档](https://github.com/Microsoft/PTVS/wiki)  
 
-Note that Visual Studio does not at present provide the means to create a stand-alone executable using Python, which essentially means a program with an embedded Python interpreter. 但是，如 [StackOverflow](https://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency) 所述，Python 社区中有多种方法可以实现此功能。 如博客文章 [Using CPython's Embeddable Zip File](https://devblogs.microsoft.com/python/cpython-embeddable-zip-file/)（使用 CPython 可嵌入 zip 文件）中所述，CPython 还支持嵌入到本机应用程序中。
+请注意，Visual Studio 目前不提供使用 Python 创建独立可执行文件的方法，这实质上是指具有嵌入的 Python 解释器的程序。 但是，如 [StackOverflow](https://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency) 所述，Python 社区中有多种方法可以实现此功能。 如博客文章 [Using CPython's Embeddable Zip File](https://devblogs.microsoft.com/python/cpython-embeddable-zip-file/)（使用 CPython 可嵌入 zip 文件）中所述，CPython 还支持嵌入到本机应用程序中。
   
-## <a name="building-ui-with-python"></a>Building UI with Python  
+## <a name="building-ui-with-python"></a>通过 Python 生成 UI  
 
-The main offering for building a UI with Python is the [Qt Project](https://www.qt.io/qt-for-application-development/), with bindings for Python known as [PySide (the official binding)](https://wiki.qt.io/PySide) (also see [PySide downloads](https://download.qt.io/official_releases/pyside/.))and [PyQt](https://wiki.python.org/moin/PyQt). 目前，Visual Studio 中的 Python 支持不包括用于 UI 开发的任何特定工具。
+使用 Python 生成 UI 的主要产品是[Qt 项目](https://www.qt.io/qt-for-application-development/)，其中的 python 绑定称为[PySide （官方绑定）](https://wiki.qt.io/PySide) （另请参阅[PySide 下载](https://download.qt.io/official_releases/pyside/.)）和[PyQt](https://wiki.python.org/moin/PyQt)。 目前，Visual Studio 中的 Python 支持不包括用于 UI 开发的任何特定工具。
 
 ## <a name="azure-sdk-for-python"></a>Azure SDK for Python
   

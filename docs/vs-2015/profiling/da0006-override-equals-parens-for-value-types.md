@@ -24,11 +24,11 @@ ms.locfileid: "74300985"
 # <a name="da0006-override-equals-for-value-types"></a>DA0006：重写值类型的 Equals()
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Rule Id|DA0006|  
-|Category|.NET Framework Usage|  
-|Profiiling methods|Sampling|  
-|Message|Override Equals and equality operator on value types.|  
-|Messge type|Warning|  
+规则 Id |DA0006 |  
+|Category |。NET Framework 使用量 |  
+|分析方法 |采样 |  
+|消息 |重写值类型的 Equals 和相等运算符。 |  
+|消息类型 |警告 |  
   
 ## <a name="cause"></a>原因  
  对 Equals 方法或公共值类型的相等运算符的调用在分析数据中占很大比例。 请考虑实施更有效的方法。  

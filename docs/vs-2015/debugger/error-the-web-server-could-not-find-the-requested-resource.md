@@ -35,5 +35,5 @@ ms.locfileid: "74297429"
  有关 IIS 的疑难解答的详细信息，请参阅 [IIS 管理](https://go.microsoft.com/fwlink/?LinkId=255872)。  
   
 ## <a name="see-also"></a>请参阅  
- [UrlScan Security Tool](/iis/extensions/working-with-urlscan/urlscan-3-reference)   
+ [UrlScan 安全工具](/iis/extensions/working-with-urlscan/urlscan-3-reference)   
  [错误：Web 服务器已被锁定，并阻止 DEBUG 谓词](../debugger/error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb.md)

@@ -26,7 +26,7 @@ ms.locfileid: "74301399"
 
  在关系图中，StockAnalyzer 组件是我们要测试的组件。 它通常使用另一个组件，即 RealStockFeed 组件。 但是，每次调用 RealStockFeed 的方法时，RealStockFeed 都返回不同的结果，这使得很难测试 StockAnalyzer。  测试期间，我们将它替换为另一个类 - StubStockFeed。
 
- ![Real and Stub classes conform to one interface.](../test/media/fakesinterfaces.png "FakesInterfaces")
+ ![实类和存根类符合一个接口。](../test/media/fakesinterfaces.png "FakesInterfaces")
 
  由于存根依赖于你以这种方式构建代码的能力，因此你通常使用存根隔离应用程序的各个部分。 若要将它与不受你控制的其他程序集（如 System.dll）隔离开，你通常应使用填充码。 请参阅[使用垫片将应用与其他程序集相隔离以供单元测试使用](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)。
 

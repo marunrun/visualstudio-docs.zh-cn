@@ -1,5 +1,5 @@
 ---
-title: 'How to: Manually Package an Extension (VSIX Deployment) | Microsoft Docs'
+title: 如何：手动将扩展打包（VSIX 部署） |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -29,7 +29,7 @@ ms.locfileid: "74293622"
  若要手动对扩展打包，请向扩展项目中添加 extension.manifest 文件和 [Content_Types].xml 文件，将其与生成输出一起放在压缩文件中，并对压缩文件重命名，使其具有 .vsix 文件扩展名。 要打包的扩展必须是 [VSIX 架构](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)支持的类型。  
   
 > [!NOTE]
-> The names of files in VSIX packages must not include spaces, nor characters that are reserved in Uniform Resource Identifiers (URI), as defined under [\[RFC2396\]](https://go.microsoft.com/fwlink/?LinkId=90339).  
+> VSIX 包中的文件名称不能包含空格，也不能包含在统一资源标识符（URI）中保留的字符，如[\[RFC2396\]](https://go.microsoft.com/fwlink/?LinkId=90339)中定义。  
   
 #### <a name="to-manually-create-a-vsix-package"></a>手动创建 VSIX 包  
   
@@ -41,7 +41,7 @@ ms.locfileid: "74293622"
   
 4. 再创建一个 XML 文件，将其命名为 `[Content_Types].xml`。  
   
-5. Fill in the [Content_Types].xml file as specified in [The Structure of the Content_types\].xml File](../extensibility/the-structure-of-the-content-types-dot-xml-file.md).  
+5. 填写在[Content_types\]Xml 文件的结构](../extensibility/the-structure-of-the-content-types-dot-xml-file.md)中指定的 [Content_Types] .xml 文件。  
   
 6. 将这两个 XML 文件与要部署的扩展一起放在某个目录。  
   
@@ -54,6 +54,6 @@ ms.locfileid: "74293622"
 8. 将生成的 .zip 文件重命名为 *Filename*.vsix，其中 *Filename* 是用于安装包的可再发行文件的名称。  
   
 ## <a name="see-also"></a>请参阅  
- [Shipping Visual Studio Extensions](../extensibility/shipping-visual-studio-extensions.md)   
- [Anatomy of a VSIX Package](../extensibility/anatomy-of-a-vsix-package.md)   
- [PackageManifest Element (Root Element, VSX Schema)](https://msdn.microsoft.com/f8ae42ba-775a-4d2b-976a-f556e147f187)
+ [发布 Visual Studio 扩展](../extensibility/shipping-visual-studio-extensions.md)   
+ [VSIX 包的剖析](../extensibility/anatomy-of-a-vsix-package.md)   
+ [PackageManifest 元素（根元素，VSX 架构）](https://msdn.microsoft.com/f8ae42ba-775a-4d2b-976a-f556e147f187)

@@ -1,5 +1,5 @@
 ---
-title: Navigate relationships with the UML API | Microsoft Docs
+title: 与 UML API 导航关系 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -152,7 +152,7 @@ IEnumerable<IUseCase>GetIncludingCases(this IUseCase usecase);
 ```
 
 ## <a name="enumerating-relationships"></a>枚举关系
- All properties of the UML model that return multiple values conform to the IEnumerable<> interface. This means that you can use [Linq Query Expressions](https://go.microsoft.com/fwlink/?LinkId=168834) and the extension methods defined in the **System.Linq** namespace.
+ 返回多个值的 UML 模型的所有属性都符合 IEnumerable < > 接口。 这意味着你可以使用[Linq 查询表达式](https://go.microsoft.com/fwlink/?LinkId=168834)和在**system.web**命名空间中定义的扩展方法。
 
  例如:
 
@@ -164,4 +164,4 @@ select shape.Element
 ```
 
 ## <a name="see-also"></a>请参阅
- [Extend UML models and diagrams](../modeling/extend-uml-models-and-diagrams.md) [Navigate the UML model](../modeling/navigate-the-uml-model.md)
+ [扩展 uml 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)[导航 uml 模型](../modeling/navigate-the-uml-model.md)

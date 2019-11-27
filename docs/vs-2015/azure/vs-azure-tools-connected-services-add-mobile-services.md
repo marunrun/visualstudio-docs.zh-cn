@@ -1,6 +1,6 @@
 ---
-title: Adding Mobile Services by using Connected Services
-description: Add Mobile Services by using the Visual Studio Add Connected Services dialog box
+title: 使用连接的服务添加移动服务
+description: 使用 Visual Studio 的“添加连接服务”对话框添加移动服务
 documentationcenter: na
 author: ghogen
 manager: jillfra
@@ -19,58 +19,58 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74300189"
 ---
-# <a name="adding-mobile-services-by-using-visual-studio-connected-services"></a>Adding Mobile Services by using Visual Studio Connected Services
-With Visual Studio 2015, you can connect to Azure Mobile Services using the **Add Connected Service** dialog. You can connect from any C# client app, any JavaScript app, or cross-platform Cordova app. Once you connect, you can create and access data, create custom APIs and scheduled jobs, or add support for push notifications.  The connected services operation adds all appropriate references and connection code. You can also take advantage of built-in support for authentication with a variety of popular identity schemes, such as Azure AD, Facebook, Twitter, and Microsoft Accounts.
+# <a name="adding-mobile-services-by-using-visual-studio-connected-services"></a>使用 Visual Studio 连接服务添加移动服务
+使用 Visual Studio 2015，你可以使用 "**添加连接的服务**" 对话框连接到 Azure 移动服务。 您可以从任何 C# 客户端应用、任何 JavaScript 应用或跨平台 Cordova 应用进行连接。 连接后，您就可以创建并访问数据、创建自定义 API 和计划作业，或添加对推送通知的支持。  连接服务操作将添加所有适当的引用和连接代码。 您还可以利用内置支持，以便使用各种常用身份标识方案（例如，Azure AD、Facebook、Twitter 和 Microsoft 帐户）进行身份验证。
 
-## <a name="supported-project-types"></a>Supported Project Types
+## <a name="supported-project-types"></a>支持的项目类型
 > [!NOTE]
-> In Visual Studio 2015, adding Azure Mobile Services to a Windows Universal (Windows 10) projects by using the Add Connected Services dialog is not supported. You can add Azure Mobile Services by installing the appropriate packages using the NuGet Package Manager for your project.
+> 在 Visual Studio 2015 中，不支持使用“添加连接服务”对话框将 Azure 移动服务添加到 Windows 通用 (Windows 10) 项目。 您可以通过使用 NuGet 程序包管理器为您的项目安装适当的程序包来添加 Azure 移动服务。
 >
 >
 
-You can use the Connected Services dialog to connect to Azure Mobile Services in the following project types.
+您可以在以下项目类型中使用“连接服务”对话框连接到 Azure 移动服务。
 
-* .NET Windows 8.1 Store, Phone, and Universal App projects
-* JavaScript Windows 8.1 Store, Phone, and Universal App projects
-* Projects created using Visual Studio Tools for Apache Cordova
+* .NET Windows 8.1 应用商店、手机和跨平台应用项目
+* JavaScript Windows 8.1 应用商店、手机和跨平台应用项目
+* 使用 Visual Studio Tools for Apache Cordova 创建的项目
 
-## <a name="connect-to-azure-mobile-services-using-the-add-connected-services-dialog"></a>Connect to Azure Mobile Services using the Add Connected Services dialog
-1. Make sure you have an Azure account. If you don't have an Azure account, you can sign up for a [free trial](https://go.microsoft.com/fwlink/?LinkId=518146).
-2. Open the **Add Connected Services** dialog box.
+## <a name="connect-to-azure-mobile-services-using-the-add-connected-services-dialog"></a>使用“添加连接服务”对话框连接到 Azure 移动服务
+1. 确保您具有 Azure 帐户。 如果没有 Azure 帐户，可以注册[免费试用版](https://go.microsoft.com/fwlink/?LinkId=518146)。
+2. 打开 "**添加连接的服务**" 对话框。
 
-   * For .NET apps, open your project in Visual Studio, open the context menu for the **References** node in Solution Explorer, and then choose **Add Connected Service**
+   * 对于 .NET 应用，在 Visual Studio 中打开项目，打开解决方案资源管理器中 "**引用**" 节点的上下文菜单，然后选择 "**添加连接的服务**"
 
-        ![Connecting to Azure Mobile Service](./media/vs-azure-tools-connected-services-add-mobile-services/IC797635.png)
-   * For Apache Cordova app projects, open your project in Visual Studio, open the context menu for the project node in Solution Explorer, and then choose **Add Connected Service**.
-3. In the **Add Connected Service** dialog box, choose **Azure Mobile Services**, and then choose the **Configure** button. You may be prompted to log into Azure if you haven't already done so.
+        ![连接到 Azure 移动服务](./media/vs-azure-tools-connected-services-add-mobile-services/IC797635.png)
+   * 对于 Apache Cordova 应用项目，请在 Visual Studio 中打开项目，打开 "解决方案资源管理器中项目节点的上下文菜单，然后选择"**添加连接的服务**"。
+3. 在 **“添加连接的服务”** 对话框中，选择 **“Azure 移动服务”** ，然后选择 **“配置”** 按钮。 如果你尚未登录到 Azure，系统可能会提示你登录。
 
-    ![Adding an Azure Mobile Service](./media/vs-azure-tools-connected-services-add-mobile-services/IC797636.png)
-4. In the **Azure Mobile Services** dialog box, choose an existing mobile service if you have one. If you need to create a new Azure mobile service, follow the procedure below to do so. 否则，请跳到下一步。
+    ![添加 Azure 移动服务](./media/vs-azure-tools-connected-services-add-mobile-services/IC797636.png)
+4. 在 **“Azure 移动服务”** 对话框框中，选择一个现有的移动服务（如果有）。 如果需要创建新的 Azure 移动服务，请按照以下过程操作。 否则，请跳到下一步。
 
-    To create a new mobile service account:
+    若要创建新的移动服务帐户：
 
-   1. Choose the **Create Service** link at the bottom of the dialog box.
-       ![Add new mobile connected service](./media/vs-azure-tools-connected-services-add-mobile-services/IC797637.png)
-   2. On the **Create Mobile Service** dialog box, you can choose a JavaScript backend mobile service, or a .NET backend mobile service from the **Runtime** drop-down list.
+   1. 选择该对话框底部的 **“创建服务”** 链接。
+       ![添加新的移动连接服务](./media/vs-azure-tools-connected-services-add-mobile-services/IC797637.png)
+   2. 在 "**创建移动服务**" 对话框中，可以从 "**运行时**" 下拉列表中选择 JavaScript 后端移动服务或 .net 后端移动服务。
 
-       ![Creating a mobile service](./media/vs-azure-tools-connected-services-add-mobile-services/IC797638.png)
+       ![创建移动服务](./media/vs-azure-tools-connected-services-add-mobile-services/IC797638.png)
 
-       A JavaScript backend service is simple and powerful. If you create a JavaScript backend mobile service, the server-side JavaScript code is stored in the cloud, but you can edit server scripts by using Server Explorer, or the Azure management portal.
+       JavaScript 后端服务非常简单且功能强大。 如果你创建 JavaScript 后端移动服务，服务器端 JavaScript 代码将存储在云中，但你可以使用服务器资源管理器或 Azure 管理门户编辑服务器脚本。
 
-       A .NET backend mobile service gives you the full power and flexibility of Web API and Entity Framework. If you create a .NET backend mobile service, a project is created for you and added to your solution.
-   3. Choose the **Region** where you want the mobile service, and then enter a user name and password for the server.
-   4. After you've entered all the required information, choose the **Create** button to create the mobile service.
-   5. The new mobile service should appear in the service list on the **Azure Mobile Services** dialog box. Choose the new mobile service in the list and then choose the **Add** button to add the service to your project.
-5. Review the getting started page that appears and find out how your project was modified. A Getting Started page appears in your browser whenever you add a connected service. You can review the suggested next steps and code examples, or switch to the What Happened page to see what references were added to your project, and how your code and configuration files were modified.
-6. Using the code samples as a guide, start writing code to access your mobile service!
+       .NET 后端移动服务为您提供 Web API 和实体框架的完整功能和灵活性。 如果您创建 .NET 后端移动服务，会为您创建项目并将其添加到您的解决方案中。
+   3. 选择你想要移动服务的**区域**，然后输入服务器的用户名和密码。
+   4. 输入所需的所有信息后，选择 **“创建”** 按钮以创建移动服务。
+   5. 新移动服务应出现在 " **Azure 移动服务**" 对话框上的 "服务" 列表中。 在列表中选择新移动服务，然后选择 **“添加”** 按钮以将该服务添加到你的项目中。
+5. 查看显示的入门页，了解您的项目的修改情况。 每次您添加连接服务时，浏览器中都会显示“入门”页。 您可以查看建议的后续步骤和代码示例，或切换到“完成的操作”页以查看您的项目添加了哪些引用，以及代码和配置文件的修改情况。
+6. 使用代码示例作为指导，开始编写代码来访问您的移动服务！
 
 ## <a name="how-your-project-is-modified"></a>项目的修改情况
-How Visual Studio modifies your project depends on the project type. For C# client apps, see [What happend – C# projects](https://go.microsoft.com/fwlink/p/?LinkId=513119). For JavaScript client apps, see [What happened – JavaScript projects](https://go.microsoft.com/fwlink/p/?LinkId=513120). For Cordova apps, see [What happend – Cordova projects](https://go.microsoft.com/fwlink/p/?LinkId=513116).
+Visual Studio 如何修改您的项目取决于项目类型。 对于C#客户端应用，请参阅完成的操作[– C#项目](https://go.microsoft.com/fwlink/p/?LinkId=513119)。 对于 JavaScript 客户端应用，请参阅完成的操作[– JavaScript 项目](https://go.microsoft.com/fwlink/p/?LinkId=513120)。 对于 Cordova 应用，请参阅完成的操作[– Cordova 项目](https://go.microsoft.com/fwlink/p/?LinkId=513116)。
 
 ## <a name="next-steps"></a>后续步骤
-Ask questions and get help:
+提出问题并获得帮助：
 
-* [MSDN Forum: Azure Mobile Services](https://social.msdn.microsoft.com/forums/azure/home?forum=azuremobile)
-* [Azure Mobile Services at the Microsoft Azure Team Blog](https://azure.microsoft.com/blog/topics/mobile/)
-* [Azure Mobile Services at azure.microsoft.com](https://azure.microsoft.com/services/mobile-services/)
-* [Azure Mobile Services Documentation at azure.microsoft.com](https://azure.microsoft.com/documentation/services/mobile-services/)
+* [MSDN 论坛： Azure 移动服务](https://social.msdn.microsoft.com/forums/azure/home?forum=azuremobile)
+* [Microsoft Azure 团队博客上的 Azure 移动服务](https://azure.microsoft.com/blog/topics/mobile/)
+* [Azure.microsoft.com 上的 Azure 移动服务](https://azure.microsoft.com/services/mobile-services/)
+* [Azure.microsoft.com 上的 Azure 移动服务文档](https://azure.microsoft.com/documentation/services/mobile-services/)

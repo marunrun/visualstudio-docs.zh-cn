@@ -1,5 +1,5 @@
 ---
-title: 'Error: Debugging Failed Because Integrated Windows Authentication Is Not Enabled | Microsoft Docs'
+title: 错误：调试失败，因为没有启用集成 Windows 身份验证 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -71,13 +71,13 @@ ms.locfileid: "74299790"
   
 2. 按照下列步骤启用 Windows 身份验证和 II6 管理兼容性（如果尚未启用）：  
   
-    1. Click **Start**, click **Control Panel** and then click **Programs**.  
+    1. 单击 "**开始**"，再单击 **"控制面板**"，然后单击 "**程序**"。  
   
     2. 在“程序和功能”下，单击“打开或关闭 Windows 功能”。  
   
          将出现“用户帐户控制”对话框，并提示您是否允许继续。  
   
-    3. 单击 **“继续”** 。  
+    3. 单击“继续”。  
   
          将出现“Windows 功能”对话框。  
   
@@ -118,6 +118,6 @@ ms.locfileid: "74299790"
 10. 关闭“Internet Information Services (IIS) 管理器”窗口。  
   
 ## <a name="see-also"></a>请参阅  
- [Debugging Web Applications: Errors and Troubleshooting](../debugger/debugging-web-applications-errors-and-troubleshooting.md)   
+ [调试 Web 应用程序：错误和疑难解答](../debugger/debugging-web-applications-errors-and-troubleshooting.md)   
  [Microsoft 摘要式身份验证](https://go.microsoft.com/fwlink/?LinkId=77938)   
- [Running Web Applications on Windows Vista with IIS 7.0 and Visual Studio](https://msdn.microsoft.com/library/262a82ac-dd0e-4096-86c6-fb463e88be66)
+ [在 Windows Vista 上运行带有 IIS 7.0 和 Visual Studio 的 Web 应用程序](https://msdn.microsoft.com/library/262a82ac-dd0e-4096-86c6-fb463e88be66)

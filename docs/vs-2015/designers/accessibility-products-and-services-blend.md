@@ -75,5 +75,5 @@ Microsoft 致力于让每位用户可以更便捷地使用其产品和服务。 
 
  Microsoft 支持服务受使用服务时实施的价格、条款和条件约束。
 
-## <a name="for-more-information"></a>更多相关信息
+## <a name="for-more-information"></a>获取详细信息
  有关计算机辅助技术如何帮助残障人士改善生活的详细信息，请参阅 [Microsoft 辅助功能站点](https://go.microsoft.com/fwlink/?LinkID=75069)。

@@ -20,7 +20,7 @@ ms.locfileid: "74302062"
 
 在本演练中，你将创建一个简单的 Windows Presentation Foundation (WPF) 应用程序来演示如何创建、编辑和维护编码的 UI 测试。 本演练为更正由各种计时问题和控件重构中断的测试提供了解决方案。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
  本演练需要：
 
 - Visual Studio Enterprise
@@ -29,7 +29,7 @@ ms.locfileid: "74302062"
 
 1. 在“文件”菜单上，指向“新建”，然后选择“项目”。
 
-     此时将出现“新建项目”对话框。
+     此时将出现 **“新建项目”** 对话框。
 
 2. 在“已安装”窗格中，展开 **Visual C#** ，然后选择“Windows 桌面”。
 
@@ -55,7 +55,7 @@ ms.locfileid: "74302062"
 
 12. 选择 Checkbox 控件。 在“属性”窗口中，将“名称”属性的值从 \<无名称> 更改为 checkBox1，然后清除“IsEnabled”属性。
 
-     ![Simple WPF Application](../test/media/codedui-wpfapp.png "CodedUI_WPFApp")
+     ![简单的 WPF 应用程序](../test/media/codedui-wpfapp.png "CodedUI_WPFApp")
 
 13. 双击按钮控件，以添加单击事件处理程序。
 
@@ -147,11 +147,11 @@ ms.locfileid: "74302062"
 
 8. 在“UIMap - 编码的 UI 测试生成器”中选择“开始记录”。
 
-     ![Start recording](../test/media/cuit-builder-record.png "CUIT_Builder_Record")
+     ![开始记录](../test/media/cuit-builder-record.png "CUIT_Builder_Record")
 
      如果需要，你可以暂停记录（例如，如果你必须处理传入的邮件）。
 
-     ![Pause the recording](../test/media/cuit.png "CUIT_")
+     ![暂停录制](../test/media/cuit.png "CUIT_")
 
     > [!WARNING]
     > 将录制在桌面上执行的所有操作。 如果你正在执行可能会导致敏感数据被包括在录制中的操作，则暂停录制。
@@ -369,11 +369,11 @@ ms.locfileid: "74302062"
 ## <a name="external-resources"></a>外部资源
 
 ### <a name="videos"></a>视频
- ![link to video](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode1-GettingStarted](https://go.microsoft.com/fwlink/?LinkID=230573)
+ ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[编码的 UI 测试-DeepDive-第1集-GettingStarted](https://go.microsoft.com/fwlink/?LinkID=230573)
 
- ![link to video](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode2-MaintainenceAndDebugging](https://go.microsoft.com/fwlink/?LinkID=230574)
+ ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[编码的 UI 测试-DeepDive-第2集-维护和调试](https://go.microsoft.com/fwlink/?LinkID=230574)
 
- ![link to video](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode3-HandCoding](https://go.microsoft.com/fwlink/?LinkID=230575)
+ ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[编码的 UI 测试-DeepDive-第-3](https://go.microsoft.com/fwlink/?LinkID=230575)
 
 ### <a name="hands-on-lab"></a>动手实验
  [MSDN 虚拟实验室：使用 Visual Studio 2010 创建编码的 UI 测试的简介](https://go.microsoft.com/fwlink/?LinkID=22508)
@@ -387,4 +387,4 @@ ms.locfileid: "74302062"
  [Visual Studio UI 自动测试（包括 CodedUI）](https://go.microsoft.com/fwlink/?LinkID=224497)
 
 ## <a name="see-also"></a>请参阅
- [Use UI Automation To Test Your Code](../test/use-ui-automation-to-test-your-code.md) [Getting Started with the WPF Designer](https://msdn.microsoft.com/18e61d03-b96a-4058-a166-8ec6b3f6116b) [Supported Configurations and Platforms for Coded UI Tests and Action Recordings](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md) [Editing Coded UI Tests Using the Coded UI Test Editor](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)
+ [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)[入门使用 WPF 设计器](https://msdn.microsoft.com/18e61d03-b96a-4058-a166-8ec6b3f6116b)[支持编码的 Ui 测试的配置和平台，以及](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)[使用编码的 Ui 测试编辑器编辑编码的 ui 测试](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)的操作录制

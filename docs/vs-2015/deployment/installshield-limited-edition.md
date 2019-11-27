@@ -1,5 +1,5 @@
 ---
-title: InstallShield Limited Edition | Microsoft Docs
+title: InstallShield 有限版 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -26,7 +26,7 @@ ms.locfileid: "74295122"
   
 ### <a name="to-enable-installshield-limited-edition"></a>启用 InstallShield Limited Edition  
   
-1. 在菜单栏上，依次选择 **“文件”** 、 **“新建”** 、 **“项目”** 。  
+1. 在菜单栏上，依次选择“文件”、“新建”、“项目”。  
   
 2. 在“新建项目” 对话框中，展开“其他项目类型” 节点，然后选择“安装和部署” 节点。  
   

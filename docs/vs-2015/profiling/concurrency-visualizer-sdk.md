@@ -31,9 +31,9 @@ ms.locfileid: "74300645"
 
 ### <a name="c-and-visual-basic"></a>C# 和 Visual Basic
 
-通过调用 [Markers](/previous-versions/hh694099(v=vs.140)) 类中的方法，在 C#、Visual Basic 和其他托管代码中使用默认提供程序。 It exposes four methods for generating markers: [WriteFlag](/previous-versions/hh694185(v=vs.140)), [EnterSpan](/previous-versions/hh694205(v=vs.140)), [WriteMessage](/previous-versions/hh694161(v=vs.140)), and [WriteAlert](/previous-versions/hh694180(v=vs.140)). 有多个用于这些函数的重载，具体取决于是否想要使用这些属性的默认值。  最简单的重载仅采用指定事件说明的字符串参数。 该说明显示在并发可视化工具报表中。
+通过调用 [Markers](/previous-versions/hh694099(v=vs.140)) 类中的方法，在 C#、Visual Basic 和其他托管代码中使用默认提供程序。 它公开了四种用于生成标记的方法： [WriteFlag](/previous-versions/hh694185(v=vs.140))、 [EnterSpan](/previous-versions/hh694205(v=vs.140))、 [WriteMessage](/previous-versions/hh694161(v=vs.140))和[WriteAlert](/previous-versions/hh694180(v=vs.140))。 有多个用于这些函数的重载，具体取决于是否想要使用这些属性的默认值。  最简单的重载仅采用指定事件说明的字符串参数。 该说明显示在并发可视化工具报表中。
 
-#### <a name="add-sdk-support-to-a-c-or-visual-basic-project"></a>Add SDK support to a C# or Visual Basic project
+#### <a name="add-sdk-support-to-a-c-or-visual-basic-project"></a>向C#或 Visual Basic 项目添加 SDK 支持
 
 1. 在菜单栏上，选择“分析”、“并发可视化工具”和“将 SDK 添加到项目中”。
 
@@ -84,7 +84,7 @@ ms.locfileid: "74300645"
 
 #### <a name="to-use-a-new-marker-provider-in-a-c-or-c-project"></a>在 C++ 或 C 项目中使用新的标记提供程序
 
-1. 使用 `CvInitProvider` 函数初始化 PCV_PROVIDER。 The constructor takes a GUID* and PCV_PROVIDER\*.
+1. 使用 `CvInitProvider` 函数初始化 PCV_PROVIDER。 构造函数采用 GUID * 并 PCV_PROVIDER\*。
 
 2. 若要注册该提供程序，请打开[高级设置](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md)对话框。 选择“标记”选项卡，然后选择“添加新提供程序”按钮。 在此对话框中，输入用于创建该提供程序和该提供程序说明的 GUID。
 
@@ -123,7 +123,7 @@ ms.locfileid: "74300645"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|描述|
+|标题|描述|
 |-----------|-----------------|
 |[C++ 库参考](../profiling/cpp-library-reference.md)|介绍用于 C++ 的并发可视化工具 API。|
 |[C 库参考](../profiling/c-library-reference.md)|介绍用于 C 的并发可视化工具 API。|

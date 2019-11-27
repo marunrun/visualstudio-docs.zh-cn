@@ -89,4 +89,4 @@ ms.locfileid: "74299524"
  为了实现 WPF 动态绑定，需要与 <xref:System.Windows.Data> 命名空间提供的功能（特别是 <xref:System.Windows.Data.Binding> 类）一起使用动态属性。
 
 ## <a name="see-also"></a>请参阅
- [WPF Data Binding with LINQ to XML](../designers/wpf-data-binding-with-linq-to-xml.md) [LINQ to XML Dynamic Properties](../designers/linq-to-xml-dynamic-properties.md) [XAML in WPF](https://msdn.microsoft.com/library/5d858575-a83b-42df-ad3f-047ed2d6e3c8) [Data Binding (WPF)](https://msdn.microsoft.com/library/90f79b97-17e7-40d1-abf0-3ba600ad1d7e) [Using Workflow Markup](https://go.microsoft.com/fwlink/?LinkId=98685)
+ [使用工作流标记](https://go.microsoft.com/fwlink/?LinkId=98685)[在 wpf](https://msdn.microsoft.com/library/5d858575-a83b-42df-ad3f-047ed2d6e3c8) [数据绑定（WPF）](https://msdn.microsoft.com/library/90f79b97-17e7-40d1-abf0-3ba600ad1d7e)中使用 LINQ to XML [LINQ to XML 动态属性](../designers/linq-to-xml-dynamic-properties.md)XAML[的 WPF 数据绑定](../designers/wpf-data-binding-with-linq-to-xml.md)

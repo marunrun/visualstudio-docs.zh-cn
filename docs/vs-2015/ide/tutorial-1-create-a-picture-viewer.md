@@ -39,18 +39,18 @@ ms.locfileid: "74299904"
 
   ![本教程中创建的图片](../ide/media/express-pictureviewerdone.png "Express_PictureViewerDone")本教程中创建的图片
 
-  ![link to video](../data-tools/media/playvideo.gif "PlayVideo")For a video version of this topic, see [How Do I: Create a Picture Viewer in Visual Basic?](https://go.microsoft.com/fwlink/?LinkId=205207) or [How Do I: Create a Picture Viewer in C#?](https://go.microsoft.com/fwlink/?LinkId=205198).
+  ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[如何实现：在 Visual Basic 中创建图片查看器？](https://go.microsoft.com/fwlink/?LinkId=205207)或[如何实现：在中C#创建图片查看器？](https://go.microsoft.com/fwlink/?LinkId=205198)。
 
 > [!NOTE]
 > 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。 本教程中同时涉及 Visual C# 和 Visual Basic，因此请关注特定于您所用编程语言的信息。
 >
-> To see code for Visual Basic, choose the **VB** tab at the top of code blocks, and to see code for Visual C#, choose the **C#** tab. If you're interested in learning about Visual C++, see [Getting Started](../misc/getting-started-with-visual-cpp-in-visual-studio-2015.md) and [C++ Language Tutorial](http://www.cplusplus.com/doc/tutorial/).
+> 若要查看 Visual Basic 的代码，请在代码块顶部选择 " **VB** " 选项卡，然后查看 "Visual C#" 的代码**C#** ，选择选项卡。如果有兴趣了解视觉对象C++，请参阅[入门](../misc/getting-started-with-visual-cpp-in-visual-studio-2015.md)和[ C++语言教程](http://www.cplusplus.com/doc/tutorial/)。
 >
 > 如果有兴趣了解如何为 Windows 应用商店编写 Visual C# 或 Visual Basic 应用，请参阅[使用 C# 或 Visual Basic 创建你的第一个 Windows 应用商店应用](https://msdn.microsoft.com/library/windows/apps/hh974581.aspx)。 有关针对 Windows 应用商店创建 JavaScript 应用的信息，请参阅[使用 JavaScript 创建你的第一个 Windows 应用商店应用](https://msdn.microsoft.com/library/windows/apps/br211385.aspx)。
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|描述|
+|标题|描述|
 |-----------|-----------------|
 |[步骤 1：创建 Windows 窗体应用程序项目](../ide/step-1-create-a-windows-forms-application-project.md)|首先创建 Windows 窗体应用程序项目。|
 |[步骤 2：运行程序](../ide/step-2-run-your-program.md)|运行您在上一步中创建的 Windows 窗体应用程序。|

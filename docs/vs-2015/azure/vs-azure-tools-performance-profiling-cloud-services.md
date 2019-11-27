@@ -20,7 +20,7 @@ ms.locfileid: "74289767"
 ---
 # <a name="testing-the-performance-of-a-cloud-service"></a>测试云服务的性能
 ## <a name="overview"></a>概述
-可以通过以下方式测试云服务的性能：
+您可以通过以下方式测试云服务的性能：
 
 * 使用 Azure 诊断，可以收集有关请求和连接的信息，可以查看站点统计信息，其中显示了客户角度的服务执行情况。 若要快速入门，请参阅[为 Azure 云服务和虚拟机配置诊断](https://go.microsoft.com/fwlink/p/?LinkId=623009)。
 * 通过使用 Visual Studio 探查器，可以获取该服务在计算方面运行情况的深入分析。 如本主题所述，当服务在 Azure 中运行时，可以使用探查器来测量性能。 有关当服务在计算模拟器中本地运行时如何使用探查器来测量其性能的信息，请参阅[使用 Visual Studio 探查器来测试在计算模拟器中本地运行的 Azure 云服务的性能](https://go.microsoft.com/fwlink/p/?LinkId=262845)。
@@ -104,7 +104,7 @@ ms.locfileid: "74289767"
 2. 选择“Azure 计算”节点，并针对从 Visual Studio 发布时所选的要进行分析的云服务，选择相应 Azure 部署节点。
 3. 要查看实例的分析报告，请选择服务中的角色，打开特定实例的快捷菜单，并选择“查看分析报告”。
    
-    报告是一个 .vsp 文件，它现在已从 Azure 下载，且下载状态显示在 Azure 活动日志中。 下载完成后，分析报告会显示在名为 <Role name\><Instance Number\><identifier\>.vsp 的 Visual Studio 编辑器选项卡中。 随即会显示报告的汇总数据。
+    报告是一个 .vsp 文件，它现在已从 Azure 下载，且下载状态显示在 Azure 活动日志中。 下载完成后，分析报告会显示在名为 <Role name\><Instance Number *<identifier\>.vsp 的 Visual Studio 编辑器选项卡中*\>。 随即会显示报告的汇总数据。
 4. 若要显示报告的其他视图，请在“当前视图”列表中，选择所需视图类型。 有关详细信息，请参阅[分析工具报告视图](https://msdn.microsoft.com/library/azure/bb385755.aspx)。
 
 ## <a name="next-steps"></a>后续步骤

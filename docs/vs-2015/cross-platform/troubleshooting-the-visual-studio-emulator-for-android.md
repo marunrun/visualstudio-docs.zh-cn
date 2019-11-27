@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting the Emulator for Android | Microsoft Docs
+title: 适用于 Android 的仿真程序疑难解答 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: tgt-pltfrm-cross-plat
@@ -94,7 +94,7 @@ ms.locfileid: "74297648"
 ## <a name="ManualNetworkConfig"></a> 当需要手动配置网络设置时无法连接到网络目标
  若要从仿真程序连接到网络目标，网络必须满足以下要求：
 
-- DHCP。 仿真程序需要 DHCP，因为它将自身配置为网络上具有自己的 IP 地址的一个单独的设备
+- DHCP。 仿真程序需要 DHCP，因为它将自身配置为网络上具有自己的 IP 地址的一个单独的设备。
 
 - 自动配置的 DNS 和网关设置。 不可能为仿真程序手动配置 DNS 和网关设置。
 
@@ -103,7 +103,7 @@ ms.locfileid: "74297648"
 ## <a name="SlowStart"></a>模拟器启动缓慢，由于超时或应用部署失败而无法启动
  某些条件下，仿真程序需要几分钟才能启动，或由于超时而未能启动。 当仿真程序启动失败时，将出现以下消息：`App deployment failed. Please try again`。 以下条件可能导致此错误。
 
-- 从可启动的 VHD 运行适用于 Android 的 Visual Studio 仿真程序。 此配置不受支持。
+- 从可启动的 VHD 运行适用于 Android 的 Visual Studio 仿真程序。 不支持此配置。
 
 - 故障硬盘驱动器。 考虑运行 chkdsk 程序。
 
@@ -302,7 +302,7 @@ ms.locfileid: "74297648"
 ## <a name="Resolution"></a> 屏幕快照的分辨率不正确
  如果使用 **“其他工具”** 窗口中的“屏幕快照”选项卡来进行屏幕快照，而生成的图像的大小并非预期大小，则在选择 **“捕获”** 前可能需要调整屏幕的缩放级别。 仿真程序以主机计算机显示器上屏幕的分辨率进行屏幕快照。
 
-## <a name="OpenGL"></a> 仿真程序未能呈现 OpenGL 内容
+## <a name="OpenGL"></a>模拟器未能呈现 OpenGL 内容
  仿真程序使用主计算机的 GPU 呈现 OpenGL 内容，并使用 ANGLE 项目将这些调用和 DirectX 进行相互转换。 如果应用程序正确地呈现在设备上，但未正确呈现在仿真器上，则该设备很可能正在缓解不正确的 OpenGL 调用（例如，使用不匹配的着色器变量）。
 
 ## <a name="Multitouch"></a> 仿真程序不响应多点触控笔势

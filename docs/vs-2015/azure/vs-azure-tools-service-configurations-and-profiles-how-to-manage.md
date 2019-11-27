@@ -58,7 +58,7 @@ ms.locfileid: "74298032"
     此时该服务配置文件的名称会在解决方案资源管理器的 Azure 项目中更改。
 
 ### <a name="to-change-a-service-configuration"></a>更改服务配置
-* 如果要更改服务配置，请在 Azure 项目中打开要更改的特定角色的快捷菜单，并选择“属性”。 See [How to: Configure the Roles for an Azure Cloud Service with Visual Studio](vs-azure-tools-configure-roles-for-cloud-service.md) for more information.
+* 如果要更改服务配置，请在 Azure 项目中打开要更改的特定角色的快捷菜单，并选择“属性”。 有关详细信息，请参阅[如何：使用 Visual Studio 配置 Azure 云服务的角色](vs-azure-tools-configure-roles-for-cloud-service.md)。
 
 ## <a name="make-different-setting-combinations-by-using-profiles"></a>使用配置文件指定不同的设置组合
 使用配置文件，可以为不同用途使用不同的设置组合自动填写**发布向导**。 例如，可以将一个配置文件用于调试，将另一个配置文件用于发布版本。 在这种情况下，**调试**配置文件应启用 **IntelliTrace** 并选择“调试”配置，并且**发布**配置文件应禁用 **IntelliTrace** 并选择“发布”配置。 还可以使用不同配置文件通过不同存储帐户来部署服务。

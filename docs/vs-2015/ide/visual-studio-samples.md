@@ -1,5 +1,5 @@
 ---
-title: Samples | Microsoft Docs
+title: 示例 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general

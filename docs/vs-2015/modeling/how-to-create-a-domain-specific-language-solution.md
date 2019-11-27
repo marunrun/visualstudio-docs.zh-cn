@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create a Domain-Specific Language Solution | Microsoft Docs'
+title: 如何：创建域特定语言解决方案 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -25,10 +25,10 @@ ms.locfileid: "74301409"
 # <a name="how-to-create-a-domain-specific-language-solution"></a>如何：创建域特定语言解决方案
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-A domain-specific language (DSL) is created by using a specialized [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] solution.
+使用专用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 解决方案创建域特定语言（DSL）。
 
-## <a name="prerequisites"></a>Prerequisites
- Before you can start this procedure, you must first install these components:
+## <a name="prerequisites"></a>先决条件
+ 在开始此过程之前，必须先安装这些组件：
 
 |||
 |-|-|
@@ -36,98 +36,98 @@ A domain-specific language (DSL) is created by using a specialized [!INCLUDE[vsp
 |[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185580](https://go.microsoft.com/fwlink/?LinkID=185580)|
 |Visual Studio 可视化和建模 SDK|[http://go.microsoft.com/fwlink/?LinkID=185581](https://go.microsoft.com/fwlink/?LinkID=185581)|
 
-## <a name="creating-a-domain-specific-language-solution"></a>Creating a Domain-Specific Language Solution
+## <a name="creating-a-domain-specific-language-solution"></a>创建域特定语言解决方案
 
-#### <a name="to-create-a-domain-specific-language-solution"></a>To create a domain-specific language solution
+#### <a name="to-create-a-domain-specific-language-solution"></a>创建域特定语言解决方案
 
-1. Start the DSL Wizard.
+1. 启动 DSL 向导。
 
    1. 在 **“文件”** 菜单上，指向 **“新建”** ，然后单击 **“项目”** 。
 
-   2. 此时将出现“新建项目”对话框。
+   2. 此时将出现 **“新建项目”** 对话框。
 
-   3. Under **Project types**, expand the **Other Project Types** node, and click **Extensibility**.
+   3. 在 "**项目类型**" 下，展开 "**其他项目类型**" 节点，然后单击 "**扩展性**"。
 
-   4. Click **Domain-Specific Language Designer**.
+   4. 单击 "**特定于域的语言设计器**"。
 
-   5. In the **Name** box, type a name for the solution. 单击“确定”。
+   5. 在 "**名称**" 框中，键入解决方案的名称。 单击" **确定**"。
 
-       The **Domain-Specific Language Designer Wizard** appears.
+       此时将显示**特定于域的语言设计器向导**。
 
       > [!NOTE]
-      > Preferably, the name that you type should be a valid Visual C# identifier, because it might be used to generate code.
+      > 最好键入的名称应为有效的视觉C#标识符，因为它可能用于生成代码。
 
-      ![Create DSL dialog](../modeling/media/create-dsldialog.png "Create_DSLDialog")
+      ![创建 DSL 对话](../modeling/media/create-dsldialog.png "Create_DSLDialog")
 
-2. Choose a DSL template.
+2. 选择 DSL 模板。
 
-    On the **Select Domain-Specific Language Options** page, select one of the solution templates such as **Minimal Language**. Choose a template that is similar to the DSL that you want to create.
+    在 "**选择域特定语言选项**" 页面上，选择一个解决方案模板（例如**最小语言**）。 选择类似于要创建的 DSL 的模板。
 
-    For more information about solution templates, see [Choosing a Domain-Specific Language Solution Template](../modeling/choosing-a-domain-specific-language-solution-template.md).
+    有关解决方案模板的详细信息，请参阅[选择域特定语言解决方案模板](../modeling/choosing-a-domain-specific-language-solution-template.md)。
 
-3. Enter a filename extension on the **File Extension** page. It should be unique in your computer, and in any computers on which you want to install the DSL. You should see the message **No applications or Visual Studio editors use this extension**.
+3. 在 "**文件扩展名**" 页上输入文件扩展名。 它在您的计算机以及您想要安装 DSL 的任何计算机中都应该是唯一的。 应会看到消息 "**无应用程序或 Visual Studio 编辑器使用此扩展名**"。
 
-   - If you have used the file name extension in previous experimental DSLs that have not been fully installed, you can clear them out by using the **Reset the Experimental Instance** tool, which can be found in the [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] SDK menu.
+   - 如果在以前的实验性 Dsl 中使用了尚未完全安装的文件扩展名，则可以通过使用 "**重置实验实例**" 工具将其清除，可在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] SDK "菜单中找到该工具。
 
-   - If another [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Extension that uses this file extension has been fully installed on your computer, consider uninstalling it. On the **Tools** menu, click **Extension Manager**.
+   - 如果计算机上已完全安装了使用此文件扩展名的其他 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展，请考虑将其卸载。 在 "**工具**" 菜单上，单击 "**扩展管理器**"。
 
-4. Inspect, and if necessary adjust, the fields in the remaining pages of the wizard. When you are satisfied with the settings, click **Finish**. For more information about the settings, see [DSL Designer Wizard Pages](#settings).
+4. 检查并根据需要调整向导剩余页面中的字段。 如果对设置感到满意，请单击 "**完成**"。 有关设置的详细信息，请参阅[DSL 设计器向导页面](#settings)。
 
-    The wizard creates a solution that has two projects, which are named **Dsl** and **DslPackage**.
+    向导将创建一个包含两个项目的解决方案，分别名为**Dsl**和**DslPackage**。
 
    > [!NOTE]
-   > If you see a message that alerts you not to run text templates from untrusted sources, click **OK**. You can set this message not to appear again.
+   > 如果你看到一条消息，提示你不从不受信任的源运行文本模板，请单击 **"确定"** 。 您可以将此消息设置为不会再次显示。
 
-## <a name="settings"></a> The DSL Designer Wizard Pages
- You can leave several of the fields unchanged from their default values. However, make sure that you set the File Extension field.
+## <a name="settings"></a>DSL 设计器向导页
+ 您可以保留多个字段的默认值不变。 但是，请确保设置了 "文件扩展名" 字段。
 
-### <a name="solution-settings-page"></a>Solution Settings page
- **Which Template would you like to base your domain specific language on?**
-Choose a template that is similar to the DSL that you want to create. The different templates provide convenient starting points. When you select a solution template, the wizard displays a description. For more information about solution templates, see [Choosing a Domain-Specific Language Solution Template](../modeling/choosing-a-domain-specific-language-solution-template.md).
+### <a name="solution-settings-page"></a>"解决方案设置" 页
+ **你要将哪个模板基于域特定语言？**
+选择类似于要创建的 DSL 的模板。 不同的模板提供便利的起点。 选择解决方案模板时，向导会显示说明。 有关解决方案模板的详细信息，请参阅[选择域特定语言解决方案模板](../modeling/choosing-a-domain-specific-language-solution-template.md)。
 
- **What do you want to name your domain-specific language?**
-Defaults to the solution name. Code is generated from this value. It must be valid as a C# class name.
+ **要如何命名域特定语言？**
+默认为解决方案名称。 此值生成代码。 它必须是有效的C#类名。
 
-### <a name="file-extension-page"></a>File Extension page
- **What extension should model files use?**
-Type a new file extension.
+### <a name="file-extension-page"></a>文件扩展名页
+ **使用哪种扩展来建模文件？**
+键入新的文件扩展名。
 
- Verify that this file extension has not already been registered for use in this computer, as follows:
+ 验证此文件扩展名是否尚未注册以便在此计算机中使用，如下所示：
 
- Look under **Other tools and applications registered to handle this extension**. If you see the message **No applications or Visual Studio editors use this extension**, then you can use this file extension.
+ 查看**已注册的其他工具和应用程序以处理此扩展**。 如果你看到消息 "**无应用程序或 Visual Studio 编辑器使用此扩展**"，则可以使用此文件扩展名。
 
- If you see a list of tools or packages, you should do one of the following:
+ 如果看到工具或包的列表，应执行以下操作之一：
 
-- Type a different file extension.
-
-     \- 或 -
-
-- Reset the [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Experimental Instance. This will unregister all of the DSLs that you have previously built. On the **Start** menu, click **All Programs**, **Microsoft Visual Studio 2010 SDK**, **Tools**, and then **Reset the Microsoft Visual Studio 2010 Experimental instance**. You can rebuild any other DSLs that you want to use again.
+- 键入不同的文件扩展名。
 
      \- 或 -
 
-- If a [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Extension that uses this file extension has been fully installed on your computer, uninstall it. On the **Tools** menu, click **Extension Manager**.
+- 重置 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 实验实例。 这会取消注册以前生成的所有 Dsl。 在 "**开始**" 菜单上，依次单击 "**所有程序**"、 **Microsoft Visual Studio 2010 SDK**和**工具**"，然后**重置 Microsoft Visual Studio 2010 实验实例**。 你可以重新生成任何其他你想要使用的 Dsl。
 
-### <a name="product-settings-page"></a>Product Settings page
- **What is the name of the product that the new domain-specific language belongs to?**
-Defaults to the DSL name.
+     \- 或 -
 
- This value is used in Windows Explorer (or File Explorer) to describe files that have this file extension.
+- 如果计算机上已完全安装了使用此文件扩展名的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展，请将其卸载。 在 "**工具**" 菜单上，单击 "**扩展管理器**"。
 
- **What is the name of the company that the product belongs to?**
-Your company name.
+### <a name="product-settings-page"></a>"产品设置" 页
+ **新的特定于域的语言所属的产品的名称是什么？**
+默认为 DSL 名称。
 
- This value is incorporated into the AssemblyInfo properties of your DSL package.
+ 此值在 Windows 资源管理器（或文件资源管理器）中用于描述具有此文件扩展名的文件。
 
- **What is the root namespace for projects in this solution?**
-This defaults to a name composed from your company and product names.
+ **产品所属的公司的名称是什么？**
+公司名称。
 
-### <a name="signing-page"></a>Signing page
- **Create a strong name key file** The default option is to create a new key to sign your DSL assembly.
+ 此值将合并到 DSL 包的 AssemblyInfo 属性中。
 
- **Use existing strong name key** Use this option if you want to integrate your DSL with another assembly.
+ **此解决方案中项目的根命名空间是什么？**
+此名称默认为由公司和产品名称组成的名称。
 
- For more information about strong naming, see [Creating and Using Strong-Named Assemblies](https://go.microsoft.com/fwlink/?LinkId=186073).
+### <a name="signing-page"></a>签名页
+ **创建强名称密钥文件**默认选项是创建新密钥以对 DSL 程序集进行签名。
+
+ **使用现有的强名称密钥**如果要将 DSL 与其他程序集集成，请使用此选项。
+
+ 有关强命名的详细信息，请参阅[创建和使用具有强名称的程序集](https://go.microsoft.com/fwlink/?LinkId=186073)。
 
 ## <a name="see-also"></a>请参阅
- [How to Define a Domain-Specific Language](../modeling/how-to-define-a-domain-specific-language.md) [Domain-Specific Language Tools Glossary](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+ [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)[特定于域的语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

@@ -1,5 +1,5 @@
 ---
-title: Using saved IntelliTrace data | Microsoft Docs
+title: 使用保存的 IntelliTrace 数据 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -30,7 +30,7 @@ ms.locfileid: "74297135"
   
  确保你有：  
   
-- 应用程序代码的匹配源文件和符号 (.pdb) 文件。 如果没有，Visual Studio 无法解析源位置并显示消息“未找到符号”。 See [Specify Symbol (.pdb) and Source Files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) and [Diagnose problems after deployment](../debugger/diagnose-problems-after-deployment.md).  
+- 应用程序代码的匹配源文件和符号 (.pdb) 文件。 如果没有，Visual Studio 无法解析源位置并显示消息“未找到符号”。 请参阅[指定符号（.pdb）和源文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)并[在部署后诊断问题](../debugger/diagnose-problems-after-deployment.md)。  
   
 - 开发计算机或其他计算机上的 Visual Studio Enterprise（但不是 Professional 或 Community 版本），可用来打开 .iTrace 文件  
   
@@ -100,7 +100,7 @@ ms.locfileid: "74297135"
   
 1. 在“性能冲突”下，查看记录的性能事件、其总执行时间以及其他事件信息。 然后，深入查看在特定性能事件期间调用的方法。  
   
-     ![View performance event details](../debugger/media/ffr-itsummarypageperformance.png "FFR_ITSummaryPagePerformance")  
+     ![查看性能事件详细信息](../debugger/media/ffr-itsummarypageperformance.png "FFR_ITSummaryPagePerformance")  
   
      也可以直接双击事件。  
   
@@ -114,13 +114,13 @@ ms.locfileid: "74297135"
   
      从调用开始调试。  
   
-     ![Start debugging from method call](../debugger/media/ffr-itsummarypageperformancemethodscalled.png "FFR_ITSummaryPagePerformanceMethodsCalled")  
+     ![从方法调用开始调试](../debugger/media/ffr-itsummarypageperformancemethodscalled.png "FFR_ITSummaryPagePerformanceMethodsCalled")  
   
      也可以直接双击调用或按“Enter” 键。  
   
      如果方法在应用程序代码中，Visual Studio 将转到该方法。  
   
-     ![Go to application code from performance event](../debugger/media/ffr-itsummarypageperformancegotocode.png "FFR_ITSummaryPagePerformanceGoToCode")  
+     ![从性能事件中转到应用程序代码](../debugger/media/ffr-itsummarypageperformancegotocode.png "FFR_ITSummaryPagePerformanceGoToCode")  
   
      现在你可以查看其他记录的值和调用堆栈、单步执行代码，或者使用“IntelliTrace” 窗口在此性能事件期间调用的 [其他方法之间“及时”前后移动](../debugger/intellitrace.md) 。  
   
@@ -131,19 +131,19 @@ ms.locfileid: "74297135"
   
 1. 在“异常数据”下，查看记录的异常事件，它们的类型、消息以及异常发生的时间。 若要深入查看代码，请从异常组中的最近事件开始调试。  
   
-     ![Start debugging from exception event](../debugger/media/ffr-itsummarypageexception.png "FFR_ITSummaryPageException")  
+     ![从异常事件开始调试](../debugger/media/ffr-itsummarypageexception.png "FFR_ITSummaryPageException")  
   
      也可以直接双击事件。 如果未分组事件，请选择“调试此事件”。  
   
      如果应用程序代码发生异常，Visual Studio 将转到发生异常的位置。  
   
-     ![Go to application code from an exception event](../debugger/media/ffr-itsummarypageexceptiongotocode.png "FFR_ITSummaryPageExceptionGoToCode")  
+     ![从异常事件中转到应用程序代码](../debugger/media/ffr-itsummarypageexceptiongotocode.png "FFR_ITSummaryPageExceptionGoToCode")  
   
      现在你可以查看其他记录的值和调用堆栈，或者使用“IntelliTrace” 窗口 [在其他记录的事件、相关代码和在这些时间点记录的值之间“及时”前后移动](../debugger/intellitrace.md)。  
   
     |**列**|**显示**|  
     |----------------|-------------------|  
-    |**Type**|异常的 .NET 类型|  
+    |**类型**|异常的 .NET 类型|  
     |“最新消息” （对于分组异常）或“消息” （对于未分组异常）|异常提供的消息|  
     |“计数” （对于分组异常）|引发异常的次数|  
     |“线程 ID” （对于未分组异常）|引发异常的线程的 ID|  
@@ -163,11 +163,11 @@ ms.locfileid: "74297135"
   
     例如:  
   
-    ![IntelliTrace &#45; SharePoint error &#45; correlation ID](../debugger/media/sharepointerror-intellitrace.png "SharePointError_IntelliTrace")  
+    ![IntelliTrace &#45; SharePoint 错误&#45;相关性 ID](../debugger/media/sharepointerror-intellitrace.png "SharePointError_IntelliTrace")  
   
 2. 打开 .iTrace 文件，然后转到“分析” 并输入 SharePoint 相关 ID，以查看匹配的 Web 请求和记录的事件。  
   
-    ![IntelliTrace log &#45; Enter SharePoint correlation ID](../debugger/media/entersharepointcorrelationid.png "EnterSharePointCorrelationID")  
+    ![IntelliTrace 日志&#45;输入 SHAREPOINT 相关 ID](../debugger/media/entersharepointcorrelationid.png "EnterSharePointCorrelationID")  
   
 3. 在“请求事件”下，检查事件。 从顶部开始，事件按发生顺序显示。  
   
@@ -175,7 +175,7 @@ ms.locfileid: "74297135"
   
    2. 选择“启动调试” ，在事件发生点开始调试。  
   
-      ![IntelliTrace log file &#45; View web request &#43; events](../debugger/media/entersharepointcorrelationid2.png "EnterSharePointCorrelationID2")  
+      ![IntelliTrace 日志文件&#45;查看 web 请求&#43;事件](../debugger/media/entersharepointcorrelationid2.png "EnterSharePointCorrelationID2")  
   
    你可以同时查看以下类型的 SharePoint 事件和 IntelliTrace 事件：  
   
@@ -205,9 +205,9 @@ ms.locfileid: "74297135"
   
 3. 选择“调试异常” 以在异常发生的位置和时间点开始调试。  
   
-    ![IntelliTrace log &#45; SharePoint unhandled exceptions](../debugger/media/sharepointunhandledexceptions-intellitrace.png "SharePointUnhandledExceptions_IntelliTrace")  
+    ![IntelliTrace 日志&#45; SharePoint 未经处理的异常](../debugger/media/sharepointunhandledexceptions-intellitrace.png "SharePointUnhandledExceptions_IntelliTrace")  
   
-   For a walkthrough, see [Walkthrough: Debugging a SharePoint Application by Using IntelliTrace](https://msdn.microsoft.com/library/4bd80d2f-f680-4bf4-81c3-f14e8185f6a4). For the kinds of data that the agent records, see [IntelliTrace Features](../debugger/intellitrace-features.md).  
+   有关演练，请参阅[演练：使用 IntelliTrace 调试 SharePoint 应用程序](https://msdn.microsoft.com/library/4bd80d2f-f680-4bf4-81c3-f14e8185f6a4)。 有关代理记录的数据种类，请参阅[IntelliTrace 功能](../debugger/intellitrace-features.md)。  
   
 ### <a name="ThreadsList"></a> 线程列表  
  检查目标进程中运行的记录线程。 你可以从选定线程的第一个有效 IntelliTrace 事件开始调试。  
@@ -218,14 +218,14 @@ ms.locfileid: "74297135"
   
 2. 在“线程列表”的底部，选择“启动调试”。 也可以双击线程。  
   
-    从应用开始处开始调试，双击“主线程”。 See [IntelliTrace Features](../debugger/intellitrace-features.md).  
+    从应用开始处开始调试，双击“主线程”。 请参阅[IntelliTrace 功能](../debugger/intellitrace-features.md)。  
   
    用户创建的线程数据可能比服务器创建的线程更加有用，并且能管理 IIS 托管的 Web 应用。  
   
 |**列**|**显示**|  
 |----------------|-------------------|  
 |**ID**|线程 ID 号|  
-|**名称**|线程名。 未命名的线程显示为“\<No Name>”。|  
+|**Name**|线程名。 未命名的线程显示为“\<No Name>”。|  
 |**开始时间**|线程创建时间|  
 |**结束时间**|线程完成时间|  
   

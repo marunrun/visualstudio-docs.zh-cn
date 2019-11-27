@@ -1,5 +1,5 @@
 ---
-title: 'Walkthrough: Capturing Graphics Information Programmatically | Microsoft Docs'
+title: 演练：以编程方式捕获图形信息 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -58,13 +58,13 @@ ms.locfileid: "74296902"
     ```  
   
     > [!IMPORTANT]
-    > Do not include the header file vsgcapture.h—which supports programmatic capture on Windows 8.0 and earlier—to perform programmatic capture in your Windows 8.1 apps. 此标头无法与 DirectX 11.2 兼容。 If this file is included after the d3d11_2.h header is included, the compiler issues a warning. If vsgcapture.h is included before d3d11_2.h, the app will not start.  
+    > 请勿包括头文件 vsgcapture.h（支持 Windows 8.0 及更早版本上的编程捕获）来在你的 Windows 8.1 应用中执行编程捕获。 此标头无法与 DirectX 11.2 兼容。 如果在包含 d3d11_2 .h 标头之后包含此文件，则编译器会发出警告。 如果 d3d11_2 .h 之前包含 vsgcapture.h，则不会启动应用。  
   
     > [!NOTE]
     > 如果你的计算机上安装了 DirectX SDK（2010 年 6 月），并且你的项目的包括路径包含 `%DXSDK_DIR%includex86`，请将它移动到包括路径末尾。 针对你的库路径执行相同操作。  
   
 #### <a name="windows-phone-81"></a>Windows Phone 8.1  
- Because the Windows Phone 8.1 SDK doesn't include the DXProgrammableCapture.h header, you'll need to define the `IDXGraphicsAnalysis` interface yourself so that you can use the `BeginCapture()` and `EndCapture()` methods. 包括上一节中所述的其他标头。  
+ 由于 Windows Phone 8.1 SDK 不包括 DXProgrammableCapture 标头，因此你需要自行定义 `IDXGraphicsAnalysis` 接口，以便可以使用 `BeginCapture()` 和 `EndCapture()` 方法。 包括上一节中所述的其他标头。  
   
 ###### <a name="to-define-the-idxgraphicsanalysis-interface"></a>定义 IDXGraphicsAnalysis 接口  
   
@@ -85,7 +85,7 @@ ms.locfileid: "74296902"
  在可以从 DirectX 11.2 中捕获图形信息之前，你必须获取 DXGI 调试接口。  
   
 > [!IMPORTANT]
-> When using programmatic capture, you must still run your app under graphics diagnostics (Alt+F5 in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]) or under the [Command-Line Capture Tool](../debugger/command-line-capture-tool.md).  
+> 使用编程捕获时，仍必须在图形诊断下运行应用（[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中的 Alt + F5），或在[命令行捕获工具](../debugger/command-line-capture-tool.md)下运行。  
   
 ##### <a name="to-get-the-idxgraphicsanalysis-interface"></a>获取 IDXGraphicsAnalysis 接口  
   
@@ -182,7 +182,7 @@ ms.locfileid: "74296902"
   
    如果你不执行此步骤，则文件名为 default.vsglog。 如果你未定义 `DONT_SAVE_VSGLOG_TO_TEMP`，则该文件的位置相对于临时目录；否则，将相对于工作目录或位于其他位置（如果你指定了绝对文件名）。  
   
-  For [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] apps, the location of the temp directory is specific to each user and app, and is typically found in a location such as C:\users\\*username*\AppData\Local\Packages\\*package family name*\TempState\\. For desktop apps, the location of the temp directory is specific to each user and is typically found in a location such as C:\Users\\*username*\AppData\Local\Temp\\.  
+  对于 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 的应用，临时目录的位置特定于每个用户和应用，并且通常位于 C:\users\\*username*\AppData\Local\Packages\\*包系列名称*\TempState\\中的位置。 对于桌面应用，临时目录的位置特定于每个用户，并且通常位于 C:\Users\\*username*\AppData\Local\Temp\\的位置。  
   
 > [!NOTE]
 > 若要写入特定位置，你必须拥有写入到该位置的权限；否则，将发生错误。 请牢记，就可以写入数据的位置而言， [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 应用比桌面应用更受限制，而且可能需要进行额外配置才能写入某些位置。  
@@ -196,9 +196,9 @@ ms.locfileid: "74296902"
 ## <a name="next-steps"></a>后续步骤  
  本演练演示了如何采用编程方式捕获图形信息。 下一步，请考虑此选项：  
   
-- 了解如何使用图形诊断工具分析捕获的图形信息。 See [Overview](../debugger/overview-of-visual-studio-graphics-diagnostics.md).  
+- 了解如何使用图形诊断工具分析捕获的图形信息。 请参阅[概述](../debugger/overview-of-visual-studio-graphics-diagnostics.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [Walkthrough: Capturing Graphics Information](../debugger/walkthrough-capturing-graphics-information.md)   
+ [演练：捕获图形信息](../debugger/walkthrough-capturing-graphics-information.md)   
  [Capturing Graphics Information](../debugger/capturing-graphics-information.md)   
  [命令行捕获工具](../debugger/command-line-capture-tool.md)

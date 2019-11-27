@@ -24,9 +24,9 @@ ms.locfileid: "74298082"
 
 与 [Azure 门户](https://go.microsoft.com/fwlink/p/?LinkID=525040)一样，Cloud Explorer 基于 Azure 资源管理器堆栈。 因此，Cloud Explorer 可以识别 Azure 资源组等资源，以及逻辑应用和 API 应用等 Azure 服务，并支持[基于角色的访问控制](/azure/role-based-access-control/role-assignments-portal) (RBAC)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
-* Visual Studio 2015 with the [Microsoft Azure SDK for .NET 2.9](https://www.microsoft.com/download/details.aspx?id=51657).
+* 带有[用于 .NET 的 Microsoft Azure SDK 2.9](https://www.microsoft.com/download/details.aspx?id=51657)的 Visual Studio 2015。
 * Microsoft Azure 帐户 - 如果没有帐户，可以[注册免费试用帐户](https://go.microsoft.com/fwlink/?LinkId=623901)，或者[激活 Visual Studio 订户权益](https://go.microsoft.com/fwlink/?LinkId=623901)。
 
 > [!NOTE]

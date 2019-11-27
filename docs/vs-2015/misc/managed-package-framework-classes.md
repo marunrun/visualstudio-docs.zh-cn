@@ -1,5 +1,5 @@
 ---
-title: Managed Package Framework Classes | Microsoft Docs
+title: 托管包框架类 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -39,6 +39,6 @@ ms.locfileid: "74297693"
 |<xref:Microsoft.VisualStudio.Shell.Flavor>|支持项目子类型（也称为“风格”）。|  
   
 ## <a name="see-also"></a>请参阅  
- [VSPackages and the Managed Package Framework](../misc/vspackages-and-the-managed-package-framework.md)   
- [Using Visual Studio Interop Assemblies](../extensibility/internals/using-visual-studio-interop-assemblies.md)   
+ [Vspackage 和托管包框架](../misc/vspackages-and-the-managed-package-framework.md)   
+ [使用 Visual Studio 互操作程序集](../extensibility/internals/using-visual-studio-interop-assemblies.md)   
  [VSPackage 和托管包框架](../misc/vspackages-and-the-managed-package-framework.md)

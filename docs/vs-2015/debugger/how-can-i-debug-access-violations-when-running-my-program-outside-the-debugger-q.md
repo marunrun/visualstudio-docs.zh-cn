@@ -36,7 +36,7 @@ ms.locfileid: "74299248"
 ## <a name="solution"></a>解决方案  
  设置[实时调试](../debugger/just-in-time-debugging-in-visual-studio.md)选项并运行独立程序，直到发生访问冲突。 然后，在”访问冲突”对话框中，你可以单击”取消”以启动调试器。  
   
- 请参见知识库文章 Q133174“How to Locate Where a General Protection (GP) Fault Occurs”（如何定位通用性保护 (GP) 错误的发生位置）。 You can find Knowledge Base articles on the MSDN Library CD or by searching [http://support.microsoft.com/](https://support.microsoft.com/).  
+ 请参见知识库文章 Q133174“How to Locate Where a General Protection (GP) Fault Occurs”（如何定位通用性保护 (GP) 错误的发生位置）。 你可以在 MSDN Library CD 上找到知识库文章，也可以通过搜索[http://support.microsoft.com/](https://support.microsoft.com/)找到。  
   
 ## <a name="see-also"></a>请参阅  
  [调试本机代码常见问题解答](../debugger/debugging-native-code-faqs.md)   

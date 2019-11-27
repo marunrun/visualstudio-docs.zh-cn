@@ -16,14 +16,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74299996"
 ---
-# <a name="step-8-customize-the-quiz"></a>第 8 步：自定义测验
+# <a name="step-8-customize-the-quiz"></a>步骤 8：自定义测验
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 在本教程的最后一部分中，您将了解一些自定义测验和扩展所学内容的方式。 例如，可考虑程序如何创建一个答案永不为分数的随机除法问题。 若要了解详细信息，请将 `timeLabel` 控件更改为其他颜色，并为测验者提供提示。
 
 ### <a name="to-customize-the-quiz"></a>自定义测验
 
-- 通过设置“timeLabel”控件的“BackColor”属性 (`timeLabel.BackColor = Color.Red;`)，使其在测验只剩下 5 秒时变为红色。 当测验结束时重置颜色。
+- 通过设置“timeLabel”控件的“BackColor”属性 ( **)，使其在测验只剩下 5 秒时变为红色。** `timeLabel.BackColor = Color.Red;` 当测验结束时重置颜色。
 
 - 当测验参加者在 NumericUpDown 控件中输入正确答案时，通过播放声音来进行提示。 （您必须为每个控件的 `ValueChanged()` 事件编写事件处理程序，只要用户更改控件的值，就激发该事件。）
 

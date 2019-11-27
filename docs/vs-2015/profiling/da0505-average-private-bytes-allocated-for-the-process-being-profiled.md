@@ -23,11 +23,11 @@ ms.locfileid: "74300458"
 # <a name="da0505-average-private-bytes-allocated-for-the-process-being-profiled"></a>DA0505：为所分析进程分配的平均专用字节数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Rule Id|DA0505|  
-|Category|Resource Management|  
-|Profiling method|All|  
-|Message|This information was gathered for information only. 进程专用字节计数器测量由正在分析的进程分配的虚拟内存。 报告的值是针对所有测量时间间隔所计算的平均值。|  
-|Rule type|Information|  
+规则 Id |DA0505 |  
+|类别 |资源管理 |  
+|分析方法 |All |  
+|消息 |此信息仅收集在信息中。 进程专用字节计数器测量由正在分析的进程分配的虚拟内存。 报告的值是针对所有测量时间间隔所计算的平均值。|  
+|规则类型 |信息 |  
   
  使用采样法、.NET 内存或资源争用方法进行分析时，必须收集至少 10 个样本才能触发此规则。  
   

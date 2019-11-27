@@ -66,4 +66,4 @@ ms.locfileid: "74300137"
 5. 在“大小”列表中，选择文本大小，然后选择“确定”按钮。
 
 ## <a name="see-also"></a>请参阅
- [Accessibility Features of Visual Studio](../ide/reference/accessibility-features-of-visual-studio.md) [How to: Change Fonts and Colors in the Editor](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)
+ [Visual Studio 的辅助功能](../ide/reference/accessibility-features-of-visual-studio.md)[如何：更改编辑器中的字体和颜色](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)

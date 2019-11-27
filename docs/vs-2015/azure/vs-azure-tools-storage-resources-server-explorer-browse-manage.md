@@ -26,13 +26,13 @@ ms.locfileid: "74291222"
 
 如果已安装 Azure Tools for Microsoft Visual Studio，可以从 Azure 的存储帐户中查看 Blob、队列和表数据。 服务器资源管理器中的 Azure“存储”节点显示了位于本地存储模拟器帐户和其他 Azure 存储帐户中的数据。
 
-若要在 Visual Studio 中查看服务器资源管理器，请在菜单栏上选择“查看” > “服务器资源管理器”。 “存储”节点显示已连接的每个 Azure 订阅或证书下的所有存储帐户。 如果存储帐户未出现，可以遵循[本文稍后部分](#add-storage-accounts-by-using-server-explorer)的说明来添加帐户。
+若要在 Visual Studio 中查看服务器资源管理器，请在菜单栏上选择“查看” **“服务器资源管理器”**  > 。 “存储”节点显示已连接的每个 Azure 订阅或证书下的所有存储帐户。 如果存储帐户未出现，可以遵循[本文稍后部分](#add-storage-accounts-by-using-server-explorer)的说明来添加帐户。
 
 从 Azure SDK 2.7 开始，也可使用 Cloud Explorer 来查看和管理 Azure 资源。 有关详细信息，请参阅[使用 Cloud Explorer 管理 Azure 资源](vs-azure-tools-resources-managing-with-cloud-explorer.md)。
 
 ## <a name="view-and-manage-storage-resources-in-visual-studio"></a>在 Visual Studio 中查看和管理存储资源
 
-服务器资源管理器自动在存储模拟器帐户中显示 Blob、队列和表的列表。 存储模拟器帐户在服务器资源管理器中的“存储”节点下作为“开发”节点列出。
+服务器资源管理器自动显示存储模拟器帐户中 Blob、队列和表的列表。 存储模拟器帐户在服务器资源管理器中的“存储”节点下作为“开发”节点列出。
 
 若要查看存储模拟器帐户的资源，请展开“开发”节点。 展开“开发”节点时，如果尚未启动存储模拟器，它会自动启动。 此过程可能需要数秒钟的时间。 当存储模拟器启动时，可以继续在 Visual Studio 的其他区域中工作。
 
@@ -110,7 +110,7 @@ ms.locfileid: "74291222"
 * 选择 Blob 名称，并选择“打开”按钮。
 * 双击 Blob 名称。
 
-Blob 下载的进度会显示在“Azure 活动日志”窗口中。
+Blob 下载的进度显示在 **“Azure 活动日志”** 窗口中。
 
 在此文件类型的默认编辑器中打开该 Blob。 如果操作系统识别出文件类型，则在本地安装的应用程序中打开文件。 否则会提示选择适合该 Blob 文件类型的应用程序。 下载 Blob 时创建的本地文件将标记为只读。
 
@@ -185,7 +185,7 @@ Azure 表存储可存储大量结构化数据。 该服务是一个 NoSQL 数据
 
 在“表设计器”中，打开实体（单行）或属性（单个单元格）的快捷菜单，并选择“编辑”。
 
-![Add or edit a table entity](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC656238.png)
+![添加或编辑表实体](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC656238.png)
 
 单个表中不同实体不需要具有相同的属性集（列）。 在查看和编辑表数据时，请记住以下限制：
 
@@ -227,7 +227,7 @@ Azure 表存储可存储大量结构化数据。 该服务是一个 NoSQL 数据
 
 ## <a name="refresh-storage-data"></a>刷新存储数据
 
-当服务器资源管理器连接到存储帐户或从存储帐户获取数据时，可能需要长达一分钟的时间才能完成操作。 If Server Explorer can’t connect, the operation might time out. While data is retrieved, you can continue to work in other parts of Visual Studio. 如果花费了太长时间想要取消操作，请选择服务器资源管理器工具栏上的“停止刷新”按钮。
+当服务器资源管理器连接到存储帐户或从存储帐户获取数据时，可能需要长达一分钟的时间才能完成操作。 如果服务器资源管理器无法连接，则操作可能会超时。检索数据时，可以继续在 Visual Studio 的其他部分中工作。 如果花费了太长时间想要取消操作，请选择服务器资源管理器工具栏上的“停止刷新”按钮。
 
 ### <a name="to-refresh-blob-container-data"></a>刷新 Blob 容器数据
 
@@ -295,4 +295,4 @@ Azure 表存储可存储大量结构化数据。 该服务是一个 NoSQL 数据
 
 ## <a name="next-steps"></a>后续步骤
 
-To learn more about how to use Azure storage services, see [Introduction to Azure Storage](/azure/storage/common/storage-introduction).
+若要了解有关如何使用 Azure 存储服务的详细信息，请参阅[Azure 存储简介](/azure/storage/common/storage-introduction)。

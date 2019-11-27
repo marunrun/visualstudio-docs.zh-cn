@@ -16,7 +16,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74299850"
 ---
-# <a name="tutorial-3-create-a-matching-game"></a>Tutorial 3: Create a Matching Game
+# <a name="tutorial-3-create-a-matching-game"></a>教程 3：创建匹配游戏
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 在本教程中，将生成一个匹配游戏，在该游戏中，玩家必须匹配隐藏的图标对。 您将学习如何：
@@ -42,7 +42,7 @@ ms.locfileid: "74299850"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|描述|
+|标题|描述|
 |-----------|-----------------|
 |[步骤 1：创建项目并向窗体添加表](../ide/step-1-create-a-project-and-add-a-table-to-your-form.md)|首先创建项目并添加 `TableLayoutPanel` 控件，以保持控件正确对齐。|
 |[步骤 2：添加随机对象和图标列表](../ide/step-2-add-a-random-object-and-a-list-of-icons.md)|添加 `Random` 对象和 `List` 对象，以创建图标列表。|

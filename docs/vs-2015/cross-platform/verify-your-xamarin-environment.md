@@ -29,7 +29,7 @@ ms.locfileid: "74297589"
   
  在 Visual Studio 中使用“文件”>“新建项目”创建新的 Xamarin 解决方案，再在对话框中展开“模板”>“其他语言”>“Visual C#”>“跨平台”，选择“空白应用(本机可移植)”，最后单击“确定”。 这将创建一个具有共享可移植类库项目和适用于 Android、iOS 和 Windows 的单独项目的解决方案：  
   
- ![Results of creating a new project from the Blank App &#40;Native Portable&#41; template](../cross-platform/media/crossplat-xamarin-verify-1.png "CrossPlat Xamarin Verify 1")  
+ ![从空白应用&#40;本机可移植&#41;模板创建新项目的结果](../cross-platform/media/crossplat-xamarin-verify-1.png "CrossPlat Xamarin Verify 1")  
   
 > [!NOTE]
 > 如果模板不存在，请参阅本页底部的 [Are the Xamarin project templates missing? Try this](#missing) 。  
@@ -46,20 +46,20 @@ ms.locfileid: "74297589"
   
     - 右击“解决方案资源管理器”中的 Android 项目，并选择“设为启动项目”。  
   
-         ![Visual Studio Set as Startup project option](../cross-platform/media/crossplat-xamarin-verify-2.png "CrossPlat Xamarin Verify 2")  
+         ![Visual Studio 设置为启动项目选项](../cross-platform/media/crossplat-xamarin-verify-2.png "CrossPlat Xamarin Verify 2")  
   
     - 根据目标 Android 版本选择合适的模拟器；如果将 Android 开发设备附加到计算机，则其还会与模拟器一并在此处列出：  
   
-        - Windows 8+：在如下所示的 Visual Studio 调试下拉菜单中选择“VS 仿真程序” 目标，然后按“F5”启动调试器。 有关详细信息，请参阅 [介绍适用于 Android 的 Visual Studio 仿真程序](https://devblogs.microsoft.com/devops/introducing-visual-studios-emulator-for-android/) （Visual Studio ALM 博客）。 如果你在使用该仿真程序时遇到问题，请参阅 [Troubleshooting the Visual Studio Emulator for Android](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)。 还可选择“工具”>“适用于 Android 的 Visual Studio 模拟器”，创建适合模拟器的新设备配置文件。  
+        - Windows 8+：在如下所示的 Visual Studio 调试下拉菜单中选择“VS 仿真程序” 目标，然后按“F5”启动调试器。 有关详细信息，请参阅 [介绍适用于 Android 的 Visual Studio 仿真程序](https://devblogs.microsoft.com/devops/introducing-visual-studios-emulator-for-android/) （Visual Studio ALM 博客）。 如果在使用模拟器时遇到问题，请参阅[适用于 Android 的 Visual Studio 模拟器器疑难解答](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)。 还可选择“工具”>“适用于 Android 的 Visual Studio 模拟器”，创建适合模拟器的新设备配置文件。  
   
-             ![Selecting the Visual Studio Emulator for Android as a debug target](../cross-platform/media/crossplat-xamarin-verify-3.png "CrossPlat Xamarin Verify 3")  
+             ![选择适用于 Android 的 Visual Studio 模拟器作为调试目标](../cross-platform/media/crossplat-xamarin-verify-3.png "CrossPlat Xamarin Verify 3")  
   
              注意：如果未显示“工具”>“适用于 Android 的 Visual Studio 模拟器...”菜单选项，则可能没有安装模拟器。 转到“控制面板”>“程序和功能”，选择“Microsoft Visual Studio”，然后单击“更改”重新运行安装程序。 在安装程序中单击“修改”，勾选“跨平台移动开发”>“适用于 Android 的Microsoft Visual Studio 模拟器”框，然后单击“更新”。  
   
         - 对于 Windows 7 和更低操作系统版本：在下拉列表中改为选择“适用于 Android 的 Xamarin Player”并按 F5 运行。 有关 Xamarin 播放器、其设备管理器和故障排除技巧的详细信息，请参阅 [Xamarin Android 播放器](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) (xamarin.com)。  
   
 > [!NOTE]
-> 在 Visual Studio 中，你可能会看到工具栏中有一个 Android 模拟器管理器 (AVD) 按钮（如下所示），该按钮可打开专用于配置 Google Android 模拟器的设备管理器。  它对 Visual Studio Android 模拟器或 Xamarin 播放器均无影响，这二者均通过其自己的设备管理器来配置配置文件。  See [Introducing Visual Studio’s Emulator for Android](https://devblogs.microsoft.com/devops/introducing-visual-studios-emulator-for-android/) (Visual Studio ALM blog) and [Xamarin Android Player](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) (xamarin.com) for details.  
+> 在 Visual Studio 中，你可能会看到工具栏中有一个 Android 模拟器管理器 (AVD) 按钮（如下所示），该按钮可打开专用于配置 Google Android 模拟器的设备管理器。  它对 Visual Studio Android 模拟器或 Xamarin 播放器均无影响，这二者均通过其自己的设备管理器来配置配置文件。  有关详细信息，请参阅 [介绍适用于 Android 的 Visual Studio 仿真程序](https://devblogs.microsoft.com/devops/introducing-visual-studios-emulator-for-android/) （Visual Studio ALM 博客）和 [Xamarin Android 播放器](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) (xamarin.com)。  
 > ![CrossPlat Xamarin 验证 7](../cross-platform/media/crossplat-xamarin-verify-7.png "CrossPlat Xamarin 验证 7")  
   
 ## <a name="windows-phone"></a>Windows Phone  
@@ -72,7 +72,7 @@ ms.locfileid: "74297589"
   
     - 在 Visual Studio 调试下拉菜单（如下所示）中，选择“模拟器 8.1” 目标或附加设备，并按 F5 启动调试器。  
   
-         ![Selecting a Windows Phone emulator as a debug target](../cross-platform/media/crossplat-xamarin-verify-4.png "CrossPlat Xamarin Verify 4")  
+         ![选择 Windows Phone 模拟器作为调试目标](../cross-platform/media/crossplat-xamarin-verify-4.png "CrossPlat Xamarin 验证4")  
   
     - 如果在使用模拟器时遇到问题，请参阅 [Windows Phone 8 模拟器疑难解答](https://msdn.microsoft.com/library/windows/apps/jj681694.aspx)。  
   
@@ -88,11 +88,11 @@ ms.locfileid: "74297589"
   
     2. 从 Visual Studio 的生成下拉菜单（如下所示）中选择“iPhoneSimulator” 目标；如果你使用受限设备，请选择“iPhone” 。 如果未列出任何模拟器，请在 Mac 上启动 Xcode，选择“Xcode”->“参数设置”，然后单击“下载”。 在“组件” 下，应显示了可以下载的仿真程序版本。 在 Xamarin 的 [调试](https://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/debugging_in_xamarin_ios/#Debugging_on_the_Simulator) 页 (xamarin.com) 上可以找到关于调试的其他说明。  
   
-         ![Selecting the iPhoneSimulator build target](../cross-platform/media/crossplat-xamarin-verify-5.png "CrossPlat Xamarin Verify 5")  
+         ![选择 iPhoneSimulator 生成目标](../cross-platform/media/crossplat-xamarin-verify-5.png "CrossPlat Xamarin Verify 5")  
   
     3. 如下所示，从 Visual Studio 的调试下拉菜单中选择 iPhone 目标，并按 F5 启动调试器。 这将在 Mac 上启动仿真程序，在 Visual Studio 中进行调试时，你将在该仿真程序中与应用进行交互。 如果你的物理 iPhone 或 iPad 连接到 Mac，则它将显示在此处，并且你可以改选它。 如果没看到列出了任何设备或模拟器，可通过查看上述第 1 步中链接的主题，或转到“工具” >**iOS** >  
   
-         ![Selecting an iPhone debug target](../cross-platform/media/crossplat-xamarin-verify-6.png "CrossPlat Xamarin Verify 6")  
+         ![选择 iPhone 调试目标](../cross-platform/media/crossplat-xamarin-verify-6.png "CrossPlat Xamarin 验证6")  
   
     4. 如果在连接到 Mac 时遇到问题，请参阅 [连接疑难解答](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/connecting-to-mac/troubleshooting) (xamarin.com)。  
   
@@ -100,11 +100,11 @@ ms.locfileid: "74297589"
   
         - 检查是否按 [将帐户添加到 Xcode](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppStoreDistributionTutorial/AddingYourAccounttoXcode/AddingYourAccounttoXcode.html#//apple_ref/doc/uid/TP40013839-CH40-SW1) (apple.com) 中所述在 Mac 上的 Xcode 中添加了 Apple ID 帐户。  添加帐户后，请重启 Visual Studio 和 Xcode。  
   
-             ![CrossPlat Xamarin Verify 8](../cross-platform/media/crossplat-xamarin-verify-8.png "CrossPlat Xamarin 验证 8")  
+             ![CrossPlat Xamarin 验证8](../cross-platform/media/crossplat-xamarin-verify-8.png "CrossPlat Xamarin 验证 8")  
   
         - 在 iOS 捆绑签名选项卡的 iOS 项目属性中，验证活动调试配置的“自定义”授权字段是否为空。  注意：如果遇到以上错误消息，则应仅尝试删除此设置。  
   
-## <a name="missing"></a> 是否缺少 Xamarin 项目模板？ 尝试此操作  
+## <a name="missing"></a>是否缺少 Xamarin 项目模板？ 尝试此操作  
  如果从 Xamarin 网站直接安装 Xamarin，且并行安装了 Visual Studio 2013 和 Visual Studio 2015，则可能缺少模板。 但这很容易解决：启用 Xamarin 安装程序中的“Xamarin for Visual Studio 2015” 功能即可。  
   
 1. 在控制面板中，打开“程序和功能”，选择“Xamarin” 项，然后单击“更改”。  

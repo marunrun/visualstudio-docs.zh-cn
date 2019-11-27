@@ -39,7 +39,7 @@ ms.locfileid: "74299773"
   
   下面阐明了这些关系，你还可以在 [适用于 Visual Studio 的 Xamarin.iOS 简介](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio) (xamarin.com) 上阅读有关生成 iOS 应用的更多信息。  
   
-  ![The relationship between Windows and Mac dev computers in a Xamarin environment](../cross-platform/media/crossplat-xamarin-learn-1.png "CrossPlat Xamarin Learn 1")  
+  ![Xamarin 环境中 Windows 与 Mac 开发计算机之间的关系](../cross-platform/media/crossplat-xamarin-learn-1.png "CrossPlat Xamarin 了解1")  
   
 ## <a name="essentials-how-projects-are-structured"></a>基础知识：如何构造项目  
  *10-30 分钟*  
@@ -90,9 +90,9 @@ ms.locfileid: "74299773"
   
     - **Windows 7 或更低版本/在 Mac OS X 上运行的 Windows**：请使用 [Xamarin Android 播放器](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) (xamarin.com)。  
   
-2. **Apple 的 iOS 模拟器。** 若要了解详细信息，请参阅 [iOS 模拟器入门](https://developer.apple.com/library/prerelease/content/documentation/IDEs/Conceptual/iOS_Simulator_Guide/GettingStartedwithiOSSimulator/GettingStartedwithiOSSimulator.html#//apple_ref/doc/uid/TP40012848-CH5-SW1) (apple.com)。  
+2. **Apple 的 iOS 模拟器。** 有关详细信息，请参阅 [iOS 模拟器入门](https://developer.apple.com/library/prerelease/content/documentation/IDEs/Conceptual/iOS_Simulator_Guide/GettingStartedwithiOSSimulator/GettingStartedwithiOSSimulator.html#//apple_ref/doc/uid/TP40012848-CH5-SW1) (apple.com)。  
   
-3. **Microsoft 的 Windows Phone 仿真程序。** 若要了解详细信息，请参阅 [适用于 Windows Phone 8 的 Windows Phone 模拟器](https://msdn.microsoft.com/library/dn632391.aspx)。  
+3. **Microsoft 的 Windows Phone 仿真程序。** 有关详细信息，请参阅[适用于 Windows Phone 8 的 Windows Phone 仿真程序](https://msdn.microsoft.com/library/dn632391.aspx)。  
   
 ## <a name="components"></a> Deeper Dive: Xamarin Components  
  *10 分钟*  

@@ -26,7 +26,7 @@ ms.locfileid: "74295697"
 
 可以在不调试的情况下使用**内存使用率**执行以下操作  
   
-- 监视在制订方案时 Visual Studio 中应用的内存使用情况。  
+- 在制订方案时监视 Visual Studio 中应用的内存使用情况。  
   
 - 创建应用的内存状态的详细快照。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "74295697"
  时间线关系图显示了应用运行时其内存中的波动情况。 该关系图中的峰值通常表明一些代码正在收集或创建数据，然后在处理完成后放弃它。 较大的峰值表明能够进行优化的区域。 更需关注的是未返回的内存消耗中出现增加，因为这可能表明低效的内存使用情况或甚至表明出现内存泄露。  
   
 ### <a name="BKMK_Close_a_monitoring_session"></a>关闭监视会话  
- ![Stop collection](../profiling/media/memuse-stopcollection.png "MEMUSE__StopCollection")  
+ ![停止收集](../profiling/media/memuse-stopcollection.png "MEMUSE__StopCollection")  
   
  若要在不创建报告的情况下监视会话，只需关闭诊断窗口。 若要在拍摄内存快照后生成报告，请选择“停止”。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "74295697"
  托管堆树[托管堆树（快照详细信息）](../profiling/memory-usage-without-debugging2.md#BKMK_Managed_Heap_tree__Snapshot_details_)和[托管堆树（快照差异）](../profiling/memory-usage-without-debugging2.md#BKMK_Managed_Heap_tree__Snapshot_diff_)显示报告中的类型和实例。 通过选择类型或实例，可以显示选定项的**根路径**和**引用的对象**树。  
   
 #### <a name="BKMK_Paths_to_Root"></a>根路径  
- [根路径树（快照详细信息）](../profiling/memory-usage-without-debugging2.md#BKMK_Paths_to_Root_tree__Snapshot_details_)和[根路径树（快照差异）](../profiling/memory-usage-without-debugging2.md#BKMK_Paths_to_Root_tree__Snapshot_diff_)显示引用类型或实例的对象链。 .NET Framework 垃圾回收器仅在释放对某个对象的所有引用后清理该对象的内存。  
+ [根路径树（快照详细信息）](../profiling/memory-usage-without-debugging2.md#BKMK_Paths_to_Root_tree__Snapshot_details_)和[根路径树（快照差异）](../profiling/memory-usage-without-debugging2.md#BKMK_Paths_to_Root_tree__Snapshot_diff_)显示引用类型或实例的对象链。 .NET Framework 垃圾回收器仅在释放对某个对象的所有引用后才清理此对象的内存。  
   
 #### <a name="BKMK_Referenced_Objects"></a>引用的对象  
  [引用的对象树（快照详细信息）](../profiling/memory-usage-without-debugging2.md#BKMK_Referenced_Objects_tree__Snapshot_details_)和[引用的对象树（快照差异）](../profiling/memory-usage-without-debugging2.md#BKMK_Referenced_Objects_tree__Snapshot_diff_)显示所选类型或实例引用的对象。  
@@ -124,7 +124,7 @@ ms.locfileid: "74295697"
 ## <a name="BKMK_Snapshot_details_reports"></a>快照详细信息报告  
  可以使用快照详细信息报告专注于诊断会话中的某个快照。 若要打开详细信息报告，可在快照视图中选择一个链接，如下图所示。 这两个链接打开的都是相同的报告；唯一的差异是在报告中**托管堆**树的启动排序顺序不同。 在这两种情况下，你可以在报告打开后更改排序顺序。  
   
- ![Links to snapshot report in a snapshot view](../profiling/media/memuse-snapshotview-snapshotdetailslinks.png "MEMUSE_SnapshotView_SnapshotDetailsLinks")  
+ ![快照视图中快照报表的链接](../profiling/media/memuse-snapshotview-snapshotdetailslinks.png "MEMUSE_SnapshotView_SnapshotDetailsLinks")  
   
 - **MB** 链接按“非独占大小(字节)”列对报告进行排序。  
   
@@ -138,21 +138,21 @@ ms.locfileid: "74295697"
 |||  
 |-|-|  
 |“对象类型”|类型或对象实例的名称。|  
-|“计数”|类型的对象实例数。 对于实例，该数量始终为 1。|  
+|**计数**|类型的对象实例数。 对于实例，该数量始终为 1。|  
 |“大小(字节)”|对于类型，则为内存快照中所有类型实例的大小，排除实例中包含的对象的大小。<br /><br /> 对于实例、类型，则为对象的大小，排除实例中包含的对象大小。 实例。|  
 |“非独占大小(字节)”|类型实例的大小或单个实例的大小，其中包括所含对象的大小。|  
   
 ### <a name="BKMK_Paths_to_Root_tree__Snapshot_details_"></a>根路径树（快照详细信息）  
- **根路径树**显示引用类型或实例的对象链。 .NET Framework 垃圾回收器仅在释放对某个对象的所有引用后清理该对象的内存。  
+ **根路径树**显示引用类型或实例的对象链。 .NET Framework 垃圾回收器仅在释放对某个对象的所有引用后才清理此对象的内存。  
   
- ![Paths to Root tree for Types](../profiling/media/memuse-snapshotdetails-type-pathstoroottree.png "MEMUSE_SnapshotDetails_Type_PathsToRootTree")  
+ ![类型的根树的路径](../profiling/media/memuse-snapshotdetails-type-pathstoroottree.png "MEMUSE_SnapshotDetails_Type_PathsToRootTree")  
   
  当在**根路径**树中查看某个类型时，将在“引用计数”列中显示保留此类型引用的类型对象的数量。 当你分析实例时，该列不会显示。  
   
 ### <a name="BKMK_Referenced_Objects_tree__Snapshot_details_"></a>引用的对象树（快照详细信息）  
  **引用的对象**树显示已选类型的对象或实例引用的对象。  
   
- ![Referenced Objjects tree for instances](../profiling/media/memuse-snapshotdetails-referencedobjects-instance.png "MEMUSE_SnapshotDetails_ReferencedObjects_Instance")  
+ ![实例的引用对象树](../profiling/media/memuse-snapshotdetails-referencedobjects-instance.png "MEMUSE_SnapshotDetails_ReferencedObjects_Instance")  
   
 |||  
 |-|-|  
@@ -161,9 +161,9 @@ ms.locfileid: "74295697"
 |“非独占大小(字节)”|类型实例的总大小或实例的大小，其中包括所包含的对象的大小。|  
   
 ## <a name="BKMK_Snapshot_difference__diff__reports"></a>快照差异报告  
- 快照差异报告显示主要快照和紧接着在它之前拍摄的快照之间的更改。 若要打开差异报告，可在快照视图中选择一个链接，如下图所示。 这两个链接打开的都是相同的报告；唯一的差异是在报告中**托管堆**树的启动排序顺序不同。 你可以在报告打开后更改排序顺序。  
+ 快照差异报告显示主要快照和紧接着在它之前拍摄的快照之间的更改。 若要打开差异报告，可在快照视图中选择一个链接，如下图所示。 这两个链接打开的都是相同的报告；唯一的差异是在报告中**托管堆**树的启动排序顺序不同。 可以在报告打开后更改排序顺序。  
   
- ![Links to difference report in a snapshot view](../profiling/media/memuse-snapshotview-snapshotdifflinks.png "MEMUSE_SnapshotView_SnapshotDiffLinks")  
+ ![快照视图中差异报表的链接](../profiling/media/memuse-snapshotview-snapshotdifflinks.png "MEMUSE_SnapshotView_SnapshotDiffLinks")  
   
 - **MB** 链接按“非独占大小(字节)”列对报告进行排序。  
   
@@ -179,22 +179,22 @@ ms.locfileid: "74295697"
 |||  
 |-|-|  
 |“对象类型”|类型或对象实例的名称。|  
-|“计数”|主要快照中的类型实例的数量。 对于实例，“计数”始终为 1。|  
+|**计数**|主要快照中的类型实例的数量。 对于实例，“计数”始终为 1。|  
 |“计数差异”|对于类型，则为主要快照与上一个快照之间的类型实例数的差异。 对于实例，字段是空白的。|  
 |“大小(字节)”|主要快照中对象的大小，排除对象中包含的对象的大小。 对于类型，“大小(字节)”和“非独占大小(字节)”为类型实例的总大小。|  
 |“总大小差异(字节)”|对于类型，则为主要快照和上一个快照之间的类型实例总大小的差异，排除实例中包含的对象的大小。 对于实例，字段是空白的。|  
 |“非独占大小(字节)”|主要快照中对象的大小，其中包括对象中包含的对象的大小。|  
-|“非独占大小差异(字节)”|对于类型，则为主要快照和上一个快照之间的所有类型实例大小的差异，其中包括对象中包含的对象的大小。 对于实例，字段是空白的。|  
+|“非独占大小差异(字节)”|对于类型，则为主要快照和上一个快照之间的所有类型实例大小的差异，其中包括对象中所含对象的大小。 对于实例，字段是空白的。|  
   
 ### <a name="BKMK_Paths_to_Root_tree__Snapshot_diff_"></a>根路径树（快照差异）  
- **根路径树**显示引用类型或实例的对象链。 .NET Framework 垃圾回收器仅在释放对某个对象的所有引用后清理该对象的内存。  
+ **根路径树**显示引用类型或实例的对象链。 .NET Framework 垃圾回收器仅在释放对某个对象的所有引用后才清理此对象的内存。  
   
- ![Paths To Root tree for instances in a diff view](../profiling/media/memuse-snapshotdiff-pathstoroot-instance-all.png "MEMUSE_SnapshotDiff_PathsToRoot_Instance_All")  
+ ![差异视图中实例的根树路径](../profiling/media/memuse-snapshotdiff-pathstoroot-instance-all.png "MEMUSE_SnapshotDiff_PathsToRoot_Instance_All")  
   
 ### <a name="BKMK_Referenced_Objects_tree__Snapshot_diff_"></a>引用的对象树（快照差异）  
  **引用的对象**树显示主要类型的对象或实例引用的对象。  
   
- ![Referenced Objjects tree for instances](../profiling/media/memuse-snapshotdetails-referencedobjects-instance.png "MEMUSE_SnapshotDetails_ReferencedObjects_Instance")  
+ ![实例的引用对象树](../profiling/media/memuse-snapshotdetails-referencedobjects-instance.png "MEMUSE_SnapshotDetails_ReferencedObjects_Instance")  
   
 |||  
 |-|-|  

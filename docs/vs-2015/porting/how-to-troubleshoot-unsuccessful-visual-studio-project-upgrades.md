@@ -1,5 +1,5 @@
 ---
-title: 'How to: Troubleshoot Unsuccessful Project Upgrades | Microsoft Docs'
+title: 如何：排查项目升级失败问题 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -28,33 +28,33 @@ ms.locfileid: "74300358"
 # <a name="how-to-troubleshoot-unsuccessful-visual-studio-project-upgrades"></a>如何：升级 Visual Studio 项目失败疑难解答
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Sometimes Visual Studio cannot fully convert a project from an earlier version of [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. If the tips in the following sections do not resolve your specific problem, you might be able to find more information on the TechNet [Wiki: Development Portal](https://go.microsoft.com/fwlink/?LinkId=254808).
+有时，Visual Studio 不能从 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的早期版本中完全转换项目。 如果以下部分中的提示不能解决你的特定问题，则可以在 TechNet [Wiki：开发门户](https://go.microsoft.com/fwlink/?LinkId=254808)中找到详细信息。
 
-## <a name="the-project-does-not-run-because-files-are-not-found"></a>The Project Does Not Run Because Files Are Not Found
- A project file contains hard-coded file paths that [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uses to run the project when you press F5. These paths may include the location of devenv.exe and other required files. In an upgraded version of [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], the paths of these files may have been changed.
+## <a name="the-project-does-not-run-because-files-are-not-found"></a>由于找不到文件，项目不会运行
+ 项目文件包含硬编码文件路径，当您按 F5 时，[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 使用该路径来运行项目。 这些路径可能包含 devenv 和其他所需文件的位置。 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的升级版本中，这些文件的路径可能已更改。
 
-#### <a name="to-resolve-incorrect-file-paths"></a>To resolve incorrect file paths
+#### <a name="to-resolve-incorrect-file-paths"></a>解析错误的文件路径
 
-1. Open your project file in a text editor.
+1. 在文本编辑器中打开项目文件。
 
-2. Scan for file paths that may be incorrect, especially those that contain a [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] version number.
+2. 扫描可能不正确的文件路径，特别是包含 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 版本号的文件路径。
 
-3. Modify incorrect file paths so that they point to the new targets.
+3. 修改不正确的文件路径，使其指向新的目标。
 
-## <a name="the-project-does-not-build-because-references-are-not-valid"></a>The Project Does Not Build Because References Are Not Valid
- When you upgrade [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], you might also be upgrading the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] version. If your project contains references that are discontinued in the newer [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] version, they may not resolve correctly. This is especially likely for references that include version numbers, for example, `Microsoft.VisualStudio.Shell.Interop.8.0`.
+## <a name="the-project-does-not-build-because-references-are-not-valid"></a>该项目不会生成，因为引用无效
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]升级时，可能也会升级 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 版本。 如果你的项目包含较新 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 版本中不再使用的引用，则可能无法正确解析。 这对于包含版本号的引用特别有用，例如 `Microsoft.VisualStudio.Shell.Interop.8.0`。
 
- If your code has many invalid references, the easiest solution may be to use the multi-targeting feature of [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] to target an earlier version of the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].
+ 如果你的代码具有许多无效引用，最简单的解决方案是使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的多目标功能，以 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]的早期版本为目标。
 
-#### <a name="to-resolve-incorrect-references"></a>To resolve incorrect references
+#### <a name="to-resolve-incorrect-references"></a>解析错误引用
 
-1. Open your project file in a text editor.
+1. 在文本编辑器中打开项目文件。
 
-2. Open the project properties.
+2. 打开项目属性。
 
-3. Select the correct **Target Framework** value. Alternatively, you can modify the value of the `<TargetFrameworkVersion>` element directly in the project file.
+3. 选择正确的 "**目标框架**" 值。 另外，还可以在项目文件中直接修改 `<TargetFrameworkVersion>` 元素的值。
 
-   If you want your project to run in the upgraded [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] version, you must update the references for the project, and also update any `Imports` or `Using` statements that call the references. If your project loads in the IDE, you can update the references by using **Solution Explorer** or the **Reference Manager** dialog box.
+   如果希望项目在升级的 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 版本中运行，则必须更新项目的引用，并更新调用引用的任何 `Imports` 或 `Using` 语句。 如果你的项目在 IDE 中加载，则可以使用**解决方案资源管理器**或 "**引用管理器**" 对话框来更新这些引用。
 
 ## <a name="see-also"></a>请参阅
- [/Upgrade (devenv.exe)](../ide/reference/upgrade-devenv-exe.md) [Converting to ASP.NET 4](https://msdn.microsoft.com/library/790147c6-36c1-41b5-a52d-30b9ccd2bd10)
+ [/Upgrade （devenv）](../ide/reference/upgrade-devenv-exe.md) [转换为 ASP.NET 4](https://msdn.microsoft.com/library/790147c6-36c1-41b5-a52d-30b9ccd2bd10)

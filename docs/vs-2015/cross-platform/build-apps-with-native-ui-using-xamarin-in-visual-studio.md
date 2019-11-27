@@ -1,5 +1,5 @@
 ---
-title: Build apps with native UI using Xamarin
+title: 使用 Xamarin 生成具有本机 UI 的应用
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: tgt-pltfrm-cross-plat
@@ -20,7 +20,7 @@ ms.locfileid: "74297925"
 
 完成[设置和安装](../cross-platform/setup-and-install.md)以及[验证 Xamarin 环境](../cross-platform/verify-your-xamarin-environment.md)中的步骤后，此演示将介绍如何使用本机 UI 层生成基本 Xamarin 应用（如下所示）。 在本机 UI 中，共享代码驻留在可移植类库 (PCL) 中，并且单个平台项目都包含 UI 定义。
 
- ![Xamarin app on Android and Windows Phone](../cross-platform/media/cross-plat-xamarin-build-1.png "Cross-Plat Xamarin Build 1")
+ ![Android 和 Windows Phone 上的 Xamarin 应用](../cross-platform/media/cross-plat-xamarin-build-1.png "跨 X-plat Xamarin Build 1")
 
  你将执行以下操作来生成它：
 
@@ -59,7 +59,7 @@ ms.locfileid: "74297925"
 
 1. 在 Visual Studio 中，创建新的“空白应用(本机可移植)”解决方案，并将其命名为 **WeatherApp**。 通过在搜索字段中输入“本机可移植”可以非常方便地找到此模板。
 
-    如果没有，则你可能需要安装 Xamarin 或启用 Visual Studio 2015 功能，请参阅 [Setup and install](../cross-platform/setup-and-install.md)。
+    如果不存在，则可能需要安装 Xamarin 或启用 Visual Studio 2015 功能，请参阅[设置和安装](../cross-platform/setup-and-install.md)。
 
 2. 单击“确定”以创建解决方案后，将会得到多个单独项目：
 
@@ -87,13 +87,13 @@ ms.locfileid: "74297925"
 
    - 单击“安装”。
 
-   - ![Locating and installing the Newtonsoft.Json NuGet package](../cross-platform/media/crossplat-xamarin-formsguide-5.png "CrossPlat Xamarin FormsGuide 5")
+   - ![查找并安装 Newtonsoft.json NuGet 包](../cross-platform/media/crossplat-xamarin-formsguide-5.png "CrossPlat Xamarin FormsGuide 5")
 
 4. 重复步骤 3 查找和安装 **Microsoft.Net.Http** 包。
 
 5. 生成解决方案并验证没有生成错误。
 
-## <a name="dataservice"></a> 编写共享的数据服务代码
+## <a name="dataservice"></a>编写共享的数据服务代码
  **WeatherApp（可移植）** 项目是将在其中编写可移植类库 (PCL) 的代码的项目，该代码在所有平台之间共享。 PCL 自动包含在 iOS、Android 和 Windows Phone 项目生成的应用包中。
 
  然后，以下步骤会将代码添加到 PCL，以访问和存储天气服务的数据：
@@ -247,9 +247,9 @@ ms.locfileid: "74297925"
 
 7. 在“属性”窗口中，设置这些属性（注意：它有助于使用“属性”窗口工具栏中的排序按钮对列表进行按字母顺序排序）：
 
-    |Property|“值”|
+    |属性|“值”|
     |--------------|-----------|
-    |**文本**|**根据“邮政编码”进行搜索**|
+    |**text**|**根据“邮政编码”进行搜索**|
     |**id**|`@+id/ZipCodeSearchLabel`|
     |**layout_marginLeft**|`10dp`|
     |**textColor**|`@android:color/white`|
@@ -279,9 +279,9 @@ ms.locfileid: "74297925"
 
 9. 在 **“属性”** 窗口中，设置以下属性：
 
-    |Property|“值”|
+    |属性|“值”|
     |--------------|-----------|
-    |**文本**|**“邮政编码”**|
+    |**text**|**“邮政编码”**|
     |**id**|`@+id/ZipCodeLabel`|
     |**layout_marginLeft**|`10dp`|
     |**layout_marginTop**|`5dp`|
@@ -301,7 +301,7 @@ ms.locfileid: "74297925"
 
 10. 在“工具箱”中，将“数字”控件拖动到“RelativeLayout”上，然后将其放置在“邮政编码”标签下。 然后设置以下属性：
 
-    |Property|“值”|
+    |属性|“值”|
     |--------------|-----------|
     |**id**|`@+id/zipCodeEntry`|
     |**layout_marginLeft**|`10dp`|
@@ -324,10 +324,10 @@ ms.locfileid: "74297925"
 
 11. 在“工具箱”中，将“按钮”拖动到“RelativeLayout”控件上，然后将其放置在 zipCodeEntry 控件的右侧。 然后设置这些属性：
 
-    |Property|“值”|
+    |属性|“值”|
     |--------------|-----------|
     |**id**|`@+id/weatherBtn`|
-    |**文本**|**获取天气信息**|
+    |**text**|**获取天气信息**|
     |**layout_marginLeft**|`20dp`|
     |**layout_alignBottom**|`@id/zipCodeEntry`|
     |**width**|`165dp`|
@@ -343,7 +343,7 @@ ms.locfileid: "74297925"
         android:width="165dp" />
     ```
 
-12. 你通过使用 Android 设计器，已经具备生成基本 UI 的充足经验。 也可通过将标记直接添加到页面的 .asxml 文件来生成 UI。 若要以这种方式生成其余的 UI，请在设计器中切换到“源”视图，然后将以下标记粘贴到 `</RelativeLayout>` 标记下（是的，在标记下...这些元素不包含在 ReleativeLayout 中）。
+12. 你通过使用 Android 设计器，已经具备生成基本 UI 的充足经验。 也可通过将标记直接添加到页面的 .asxml 文件来生成 UI。 若要以这种方式生成其余的 UI，请在设计器中切换到“源”视图，然后将以下标记粘贴到  *标记下*`</RelativeLayout>`（是的，在标记下...这些元素不包含在 ReleativeLayout 中）。
 
     ```xml
     <TextView
@@ -450,7 +450,7 @@ ms.locfileid: "74297925"
 
 13. 保存该文件，然后切换到“设计”视图。 你的 UI 应如下显示：
 
-     ![UI for Android app](../cross-platform/media/xamarin-androidui.png "Xamarin_AndroidUI")
+     ![适用于 Android 应用的 UI](../cross-platform/media/xamarin-androidui.png "Xamarin_AndroidUI")
 
 14. 打开“MainActivity.cs”，然后在 OnCreate方法中删除行，这些行指先前已删除的默认按钮。 完成后，代码应如下所示：
 
@@ -520,7 +520,7 @@ ms.locfileid: "74297925"
 
 3. 在设备上或在仿真器中，将有效的美国邮政编码键入编辑框（例如：60601），然后按“获取天气信息”。 然后，控件中将显示此区域的天气数据。
 
-     ![Weather app for Android and Windows Phone](../cross-platform/media/xamarin-getstarted-results.png "Xamarin_GetStarted_Results")
+     ![适用于 Android 和 Windows Phone 的天气应用](../cross-platform/media/xamarin-getstarted-results.png "Xamarin_GetStarted_Results")
 
 > [!TIP]
 > 可在 [GitHub 上的 mobile-samples 存储库](https://github.com/xamarin/mobile-samples/tree/master/Weather)中找到此项目的完整源代码。
@@ -579,13 +579,13 @@ ms.locfileid: "74297925"
 
  在设计视图中，你的 UI 应如下显示：
 
- ![Windows Phone app UI](../cross-platform/media/xamarin-winphone-finalui.png "Xamarin_WinPhone_FinalUI")
+ ![Windows Phone 应用 UI](../cross-platform/media/xamarin-winphone-finalui.png "Xamarin_WinPhone_FinalUI")
 
 ### <a name="consume-your-shared-code"></a>使用你的共享代码
 
 1. 在设计器中，选择 **“获取天气信息”** 按钮。
 
-2. In the **Properties** window, choose the event handler button (![Visual Studio Event Handlers icon](../cross-platform/media/blend-vs-eventhandlers-icon.png "blend_VS_EventHandlers_icon")).
+2. 在 "**属性**" 窗口中，选择 "事件处理程序" 按钮（![Visual Studio 事件处理程序图标](../cross-platform/media/blend-vs-eventhandlers-icon.png "blend_VS_EventHandlers_icon")）。
 
      在 **“属性”** 窗口的顶部显示此图标。
 
@@ -626,7 +626,7 @@ ms.locfileid: "74297925"
 
 3. 在 Windows Phone 仿真器中，将有效的美国邮政编码键入编辑框（例如：60601），然后按“获取天气信息”。 然后，控件中将显示此区域的天气数据。
 
-     ![Windows version of the running app](../cross-platform/media/xamarin-getstarted-results-windows.png "Xamarin_GetStarted_Results_Windows")
+     ![正在运行的应用程序的 Windows 版本](../cross-platform/media/xamarin-getstarted-results-windows.png "Xamarin_GetStarted_Results_Windows")
 
 > [!TIP]
 > 可在 [GitHub 上的 mobile-samples 存储库](https://github.com/xamarin/mobile-samples/tree/master/Weather)中找到此项目的完整源代码。
@@ -643,4 +643,4 @@ ms.locfileid: "74297925"
  PCL 中的共享代码是特定于平台的，因为 PCL 只编译了一次，并且包括在每个特定于平台的应用包中。 若要编写使用条件编译的共享代码来分离特定于平台的代码，可使用共享项目。 有关详细信息，请参阅[代码共享选项](https://docs.microsoft.com/xamarin/cross-platform/app-fundamentals/code-sharing) (xamarin.com)。
 
 ## <a name="see-also"></a>请参阅
- [Xamarin Developer site](https://docs.microsoft.com/xamarin/) [Windows Dev Center](https://dev.windows.com/en-us) [Swift and C# Quick Reference Poster](https://aka.ms/scposter)
+ [Xamarin 开发人员网站](https://docs.microsoft.com/xamarin/) [Windows 开发人员中心](https://dev.windows.com/en-us) [Swift 和C#快速参考海报](https://aka.ms/scposter)

@@ -43,11 +43,11 @@ ms.locfileid: "74300611"
   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|描述|  
+|标题|描述|  
 |-----------|-----------------|  
 |[使用率视图](../profiling/utilization-view.md)|介绍如何在所有处理器中查看和分析系统活动。|  
-|[线程视图](../profiling/threads-view-parallel-performance.md)|介绍如何分析程序中线程之间的交互。|  
-|[内核视图](../profiling/cores-view.md)|介绍如何分析跨越核心的线程迁移。|  
+|[“线程”视图](../profiling/threads-view-parallel-performance.md)|介绍如何分析程序中线程之间的交互。|  
+|[“核心”视图](../profiling/cores-view.md)|介绍如何分析跨越核心的线程迁移。|  
 |[性能不佳的多线程应用程序的常见模式](../profiling/common-patterns-for-poorly-behaved-multithreaded-applications.md)|描述若干常见模式并展示其在并发可视化工具中的显示方式。|  
 |[Visual Studio 博客中的并行开发](https://go.microsoft.com/fwlink/?LinkId=235385)|提供关于并发可视化工具的提示和最佳做法。|  
 |[性能报告视图](../profiling/performance-report-views.md)|提供有关 Visual Studio 分析工具报告和视图的参考信息。|  

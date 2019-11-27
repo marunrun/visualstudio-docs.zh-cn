@@ -23,11 +23,11 @@ ms.locfileid: "74291181"
 # <a name="da0506-maximum-private-bytes-allocated-for-the-process-being-profiled"></a>DA0506：为所分析的进程分配的最大专用字节数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Rule Id|DA0506|  
-|Category|Resource Monitoring|  
-|Profiling method|All|  
-|Message|This information was gathered for information only. 进程专用字节计数器测量由正在分析的进程分配的虚拟内存。 报告的值是在所有测量时间间隔内观察到的最大值。|  
-|Rule type|Information|  
+规则 Id |DA0506 |  
+|类别 |资源监视 |  
+|分析方法 |All |  
+|消息 |此信息仅收集在信息中。 进程专用字节计数器测量由正在分析的进程分配的虚拟内存。 报告的值是在所有测量时间间隔内观察到的最大值。|  
+|规则类型 |信息 |  
   
  使用采样法、.NET 内存或资源争用方法进行分析时，必须收集至少 10 个样本才能触发此规则。  
   

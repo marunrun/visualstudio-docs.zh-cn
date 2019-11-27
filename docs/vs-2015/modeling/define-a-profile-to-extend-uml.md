@@ -1,5 +1,5 @@
 ---
-title: Define a profile to extend UML | Microsoft Docs
+title: 定义用于扩展 UML 的配置文件 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -26,9 +26,9 @@ ms.locfileid: "74295677"
 # <a name="define-a-profile-to-extend-uml"></a>定义用于扩展 UML 的配置文件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-You can define a *UML profile* to customize the standard model elements for specific purposes. A profile defines one or more *UML stereotypes*. 构造型可用于标记类型以表示一种特定对象。 构造型还可以扩展元素的属性列表。
+您可以定义*UML 配置文件*，以自定义用于特定目的的标准模型元素。 配置文件定义一个或多个*UML 构造型*。 构造型可用于标记类型以表示一种特定对象。 构造型还可以扩展元素的属性列表。
 
- 多个配置文件与受支持版本的 Visual Studio 一起安装。 若要查看支持此功能的 Visual Studio 的版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。 For more information about those profiles and about how to apply stereotypes, see [Customize your model with profiles and stereotypes](../modeling/customize-your-model-with-profiles-and-stereotypes.md).
+ 多个配置文件与受支持版本的 Visual Studio 一起安装。 若要查看支持此功能的 Visual Studio 的版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。 有关这些配置文件以及如何应用构造型的详细信息，请参阅[使用配置文件和构造型自定义模型](../modeling/customize-your-model-with-profiles-and-stereotypes.md)。
 
  你可以定义自己的配置文件，以采用 UML 并将其扩展到自己的业务范围或体系结构。 例如:
 
@@ -41,21 +41,21 @@ You can define a *UML profile* to customize the standard model elements for spec
 > [!NOTE]
 > 如果你在自己所编辑的模型中应用某个配置文件的构造型，然后与他人共享该模型，则他们应在其自己的计算机上安装同一配置文件。 否则，他们将无法看到你使用的构造型。
 
- A profile is often part of a larger [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] extension. 例如，你可以定义用于将模型的某些部件转换为代码的命令。 你可以定义用户必须应用到他们想要转换的包的配置文件。 您将在单个 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 扩展中分发您的新命令和该配置文件。
+ 配置文件通常是较大 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 扩展的一部分。 例如，你可以定义用于将模型的某些部件转换为代码的命令。 你可以定义用户必须应用到他们想要转换的包的配置文件。 您将在单个 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 扩展中分发您的新命令和该配置文件。
 
  你还可以定义配置文件的本地化变体。 加载你的扩展的用户可以看到适合他们自己的区域性的变体。
 
-## <a name="DefineProfile"></a> How to Define a Profile
+## <a name="DefineProfile"></a>如何定义配置文件
 
 #### <a name="to-define-a-uml-profile"></a>定义 UML 配置文件
 
 1. 创建具有文件扩展名 `.profile` 的新 XML 文件。
 
-2. Add stereotype definitions according to the guidelines described in [The Structure of a Profile](#Schema).
+2. 根据[配置文件结构](#Schema)中所述的准则添加构造型定义。
 
 3. 将配置文件添加到 Visual Studio 扩展中（`.vsix` 文件）。 你可以为配置文件创建新扩展，也可以将配置文件添加到现有扩展中。
 
-     See the next section, [How to Add a Profile to a Visual Studio Extension](#AddProfile).
+     请参阅下一部分，[如何将配置文件添加到 Visual Studio 扩展](#AddProfile)。
 
 4. 在你的计算机上安装扩展。
 
@@ -67,16 +67,16 @@ You can define a *UML profile* to customize the standard model elements for spec
 
     1. 在 UML 资源管理器中选择模型。
 
-    2. In the Properties window, click the **Profiles** property. 此时配置文件将在菜单中显示。 设置配置文件旁边的复选标记。
+    2. 在属性窗口中，单击 "**配置文件**" 属性。 此时配置文件将在菜单中显示。 设置配置文件旁边的复选标记。
 
-    3. 选择一个你的配置文件为其定义构造型的元素。 In the Properties window, click the **Stereotypes** property. 此时你的构造型将在列表中显示。 设置其中一个构造型的复选标记。
+    3. 选择一个你的配置文件为其定义构造型的元素。 在属性窗口中，单击 "**构造型**" 属性。 此时你的构造型将在列表中显示。 设置其中一个构造型的复选标记。
 
     4. 如果你的配置文件为此构造型定义了附加属性，则可以展开构造型属性进行查看。
 
 6. 将扩展文件发送给 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的其他用户，以将该文件安装到他们的计算机上。
 
-## <a name="AddProfile"></a> How to Add a Profile to a Visual Studio Extension
- 要安装某个配置文件并允许你将其发送给其他用户，必须将该配置文件添加到 Visual Studio 扩展中。 For more information, see [Deploying Visual Studio Extensions](https://go.microsoft.com/fwlink/?LinkId=160780).
+## <a name="AddProfile"></a>如何将配置文件添加到 Visual Studio 扩展
+ 要安装某个配置文件并允许你将其发送给其他用户，必须将该配置文件添加到 Visual Studio 扩展中。 有关详细信息，请参阅[部署 Visual Studio 扩展](https://go.microsoft.com/fwlink/?LinkId=160780)。
 
 #### <a name="to-define-a-profile-in-a-new-visual-studio-extension"></a>在新 Visual Studio 扩展中定义配置文件
 
@@ -87,41 +87,41 @@ You can define a *UML profile* to customize the standard model elements for spec
 
    1. 在 **“文件”** 菜单上，指向 **“新建”** ，然后单击 **“项目”** 。
 
-   2. In the **New Project** dialog box, under **Installed Templates**, expand **Visual C#** , click **Extensibility**, and then click **VSIX project**. Set the project name and click **OK**.
+   2. 在 "**新建项目**" 对话框的 "**已安装的模板**" 下，展开 "**视觉对象C#** "，单击 "**扩展性**"，然后单击 " **VSIX 项目**"。 设置项目名称，然后单击 **"确定"** 。
 
 2. 将你的配置文件添加到项目中。
 
-   - In Solution Explorer, right-click the project, point to **Add**, and then click **Existing Item**. 在对话框中找到你的配置文件。
+   - 在解决方案资源管理器中，右键单击项目，指向 "**添加**"，然后单击 "**现有项**"。 在对话框中找到你的配置文件。
 
-3. Set the profile file's **Copy to Output** property.
+3. 将配置文件的 "**复制到输出**" 属性设置为。
 
-   1. In Solution Explorer, right-click the profile file, and then click **Properties**.
+   1. 在解决方案资源管理器中，右键单击该配置文件，然后单击 "**属性**"。
 
-   2. In the Properties window, set the **Copy to Output Directory** property to **Copy Always**.
+   2. 在属性窗口中，将 "**复制到输出目录**" 属性设置为 "**始终复制**"。
 
 4. 在解决方案资源管理器中，打开 `source.extension.vsixmanifest`。
 
     文件将在扩展清单编辑器中打开。
 
-5. On the **Assets** page, add a row describing the profile:
+5. 在 "**资产**" 页上，添加描述该配置文件的行：
 
-   - 单击“新建”。 Set the fields in the **Add New Asset** dialog as follows.
+   - 单击 **“新建”** 。 按如下所示设置 "**添加新资产**" 对话框中的字段。
 
-   - Set **Type** to `Microsoft.VisualStudio.UmlProfile`
+   - 将**类型**设置为 `Microsoft.VisualStudio.UmlProfile`
 
         这不是一个下拉式选择。 使用键盘输入此名称。
 
-   - Click **File on filesystem** and select the name of your profile file, for example `MyProfile.profile`
+   - 单击 "**文件系统" 上**的 "文件" 并选择配置文件的名称，例如 `MyProfile.profile`
 
 6. 生成项目。
 
-7. **To debug the profile**, press F5.
+7. **若要调试该配置文件**，请按 F5。
 
     这将打开一个 Visual Studio 实验实例。 在此实例中，打开建模项目。 在 UML 资源管理器中，选择模型的根元素，并在“属性”窗口中选择配置文件。 然后选择模型中的元素，并设置已为其定义的构造型。
 
-8. **To extract the VSIX for deployment**
+8. **提取用于部署的 VSIX**
 
-   1. In Windows Explorer, open the folder **.\bin\Debug** or **.\bin\Release** to find the **.vsix** file. 此文件是 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 扩展文件。 可以在你的计算机上安装该文件，也可将其发送给其他 Visual Studio 用户。
+   1. 在 Windows 资源管理器中，打开文件夹 **.\bin\Debug**或 **.\bin\Release**以查找 **.vsix**文件。 此文件是 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 扩展文件。 可以在你的计算机上安装该文件，也可将其发送给其他 Visual Studio 用户。
 
    2. 安装扩展：
 
@@ -139,7 +139,7 @@ You can define a *UML profile* to customize the standard model elements for spec
 
     - `extension.vsixmanifest`
 
-    - `[Content_Types].xml` － 按照如下所示键入此名称，并将名称括在方括号中
+    - `[Content_Types].xml`-键入此名称（如下所示），并用方括号括起来
 
 2. 编辑 `[Content_Types].xml` 以包含下面的文本。 请注意，每个文件扩展名在该文件中都有对应项。
 
@@ -155,7 +155,7 @@ You can define a *UML profile* to customize the standard model elements for spec
 
     - 可以在以下目录中找到 `extension.vsixmanifest` 的示例：
 
-         *drive* **:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\Extensions\Microsoft\Architecture Tools\UmlProfiles**
+         *drive* **： \Program Files\Microsoft Visual Studio [version] \Common7\IDE\Extensions\Microsoft\Architecture Tools\UmlProfiles**
 
     - “内容”节点应如下所示：
 
@@ -168,7 +168,7 @@ You can define a *UML profile* to customize the standard model elements for spec
 
 4. 将这三个文件压缩到一个压缩文件中。
 
-     In Windows Explorer, select the three files, right-click, point to **Send To**, and then click **Compressed (zipped) folder**.
+     在 Windows 资源管理器中，选择三个文件，右键单击，指向 "**发送到**"，然后单击 "**压缩（zipped）文件夹**"。
 
 5. 重命名该压缩文件，并将其文件扩展名从 `.zip` 更改为 `.vsix`。
 
@@ -178,29 +178,29 @@ You can define a *UML profile* to customize the standard model elements for spec
 
 1. 在 Windows 资源管理器中双击 `.vsix` 文件，或在 Visual Studio 中打开该文件。
 
-2. Click **Install** in the dialog box that appears.
+2. 在出现的对话框中单击 "**安装**"。
 
-3. To uninstall or temporarily disable the extension, open **Extensions and Updates** from the **Tools** menu.
+3. 若要卸载或临时禁用该扩展，请从 "**工具**" 菜单打开 "**扩展和更新**"。
 
-## <a name="Localized"></a> How to Define Localized Profiles
+## <a name="Localized"></a>如何定义本地化的配置文件
  你可以为不同的区域性或语言定义不同的配置文件，并将所有配置文件打包到同一扩展中。 当用户加载你的扩展时，他们将会看到你为其区域性定义的配置文件。
 
  必须始终提供默认配置文件。 如果没有为用户的区域性定义配置文件，则他们将看到该默认配置文件。
 
 #### <a name="to-define-a-localized-profile"></a>定义本地化的配置文件
 
-1. Create a profile as described in the previous sections[How to Define a Profile](#DefineProfile) and [How to Add a Profile to a Visual Studio Extension](#AddProfile). 这是默认配置文件，将在你未提供本地化的配置文件的任何安装中用到该配置文件。
+1. 按照前面几节[如何定义配置文件](#DefineProfile)和[如何将配置文件添加到 Visual Studio 扩展](#AddProfile)中所述创建配置文件。 这是默认配置文件，将在你未提供本地化的配置文件的任何安装中用到该配置文件。
 
 2. 在默认配置文件所在目录中添加一个新目录。
 
     > [!NOTE]
     > 如果要使用 Visual Studio 扩展项目生成扩展，请使用解决方案资源管理器向该项目添加一个新文件夹。
 
-3. 将新目录的名称更改为本地化区域性所对应的 ISO 短代码，例如保加利亚语对应 `bg`，法语对应 `fr`。 应使用非特定区域性代码（通常为两个字母），而不应使用特定区域性代码（例如 `fr-CA`）。 For more information about culture codes, see [CultureInfo.GetCultures method](https://go.microsoft.com/fwlink/?LinkId=160782), which provides a complete list of culture codes.
+3. 将新目录的名称更改为本地化区域性所对应的 ISO 短代码，例如保加利亚语对应 `bg`，法语对应 `fr`。 应使用非特定区域性代码（通常为两个字母），而不应使用特定区域性代码（例如 `fr-CA`）。 有关区域性代码的详细信息，请参阅[cultureinfo.getcultures 方法](https://go.microsoft.com/fwlink/?LinkId=160782)，它提供了区域性代码的完整列表。
 
 4. 将默认配置文件的副本添加到新目录中。 请不要更改其文件名。
 
-     A sample [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] Extension folder, before it is built or compressed into a `.vsix` file, would contain the following folders and files:
+     示例 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 扩展文件夹在生成或压缩到 `.vsix` 文件之前，将包含以下文件夹和文件：
 
      `extension.vsixmanifest`
 
@@ -219,18 +219,18 @@ You can define a *UML profile* to customize the standard model elements for spec
 
 7. 通过生成扩展项目或压缩所有文件生成 Visual Studio 扩展，如前面的章节中所述。
 
-## <a name="Schema"></a> The Structure of a Profile
- The XSD file for UML profiles can be found in the following sample: [Setting Stereotypes and Profiles XSD](https://go.microsoft.com/fwlink/?LinkID=213811). 为帮助编辑配置文件，请在以下位置安装 `.xsd` 文件：
+## <a name="Schema"></a>配置文件的结构
+ UML 配置文件的 XSD 文件可在以下示例中找到：[设置构造型和配置文件 xsd](https://go.microsoft.com/fwlink/?LinkID=213811)。 为帮助编辑配置文件，请在以下位置安装 `.xsd` 文件：
 
- **%ProgramFiles%\Microsoft Visual Studio [version]\Xml\Schemas**
+ **%ProgramFiles%\Microsoft Visual Studio [version] \Xml\Schemas**
 
  本节使用 C# 配置文件作为示例。 完整的配置文件定义位于：
 
- *drive* **:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\Extensions\Microsoft\Architecture Tools\UmlProfiles\CSharp.profile**
+ *drive* **： \Program Files\Microsoft Visual Studio [version] \Common7\IDE\Extensions\Microsoft\Architecture Tools\UmlProfiles\CSharp.profile**
 
  此路径的开头部分在你的安装中可能有所不同。
 
- For more information about the .NET profile, see [Standard stereotypes for UML models](../modeling/standard-stereotypes-for-uml-models.md).
+ 有关 .NET 配置文件的详细信息，请参阅[UML 模型的标准构造型](../modeling/standard-stereotypes-for-uml-models.md)。
 
 ### <a name="main-sections-of-the-uml-profile-definition"></a>UML 配置文件定义的主要部分
  每个配置文件都包含以下内容：
@@ -251,14 +251,14 @@ You can define a *UML profile* to customize the standard model elements for spec
 
  每个配置文件都包含三个主要部分。 按照相反顺序，这三个部分如下所示：
 
-- `<propertyTypes>` － 用于构造型部分中定义的属性的类型列表。
+- `<propertyTypes>`-用于 "构造型" 部分中定义的属性的类型列表。
 
-- `<metaclasses>` － 此配置文件中的构造型应用到的模型元素类型列表，例如 IClass、IInterface、IOperation 和 IDependency。
+- `<metaclasses>`-此配置文件中的构造型所应用于的模型元素类型的列表，如 IClass、IInterface、IOperation、IDependency。
 
-- `<stereotypes>` － 构造型定义。 每个定义都包括添加到目标模型元素中的属性的名称和类型。
+- `<stereotypes>`-构造型定义。 每个定义都包括添加到目标模型元素中的属性的名称和类型。
 
 #### <a name="property-types"></a>属性类型
- The `<propertyTypes>` section declares a list of types that are used for properties in the `<stereotypes>` section. 属性类型有两种：外部和枚举。
+ `<propertyTypes>` 节声明用于 `<stereotypes>` 部分中属性的类型的列表。 属性类型有两种：外部和枚举。
 
  外部类型声明标准 .NET 类型的完全限定名：
 
@@ -289,7 +289,7 @@ You can define a *UML profile* to customize the standard model elements for spec
       name="Microsoft.VisualStudio.Uml.Components.IComponent" />
 ```
 
- For the full list of model element and relationship types that you can use as metaclasses, see [Model Element Types](#Elements).
+ 有关可用作元类的模型元素和关系类型的完整列表，请参阅[模型元素类型](#Elements)。
 
 #### <a name="stereotype-definition"></a>构造型定义
  `<stereotypes>` 部分包含一个或多个构造型定义：
@@ -312,7 +312,7 @@ You can define a *UML profile* to customize the standard model elements for spec
 > [!NOTE]
 > 名字对象的名称必须以 `/yourProfileName/` 开头，其中 `yourProfileName` 在配置文件（此示例中为“CSharpProfile”）的 `name` 特性中定义。 名字对象以元类部分中的某个项的名称结尾。
 
- 每个构造型都可以列出零个或多个属性，该构造型将这些属性添加到它所应用到的任何模型元素。 The `<propertyType>` contains a link to one of the types that are defined in the `<propertyTypes>` section. 该链接必须为用于引用 `<externalTypeMoniker>` 的 `<externalType>,`，或为用于引用 `<enumerationTypeMoniker>` 的 `<enumerationType>`。 再次强调，该链接以你的配置文件的名称开头。
+ 每个构造型都可以列出零个或多个属性，该构造型将这些属性添加到它所应用到的任何模型元素。 `<propertyType>` 包含指向在 `<propertyTypes>` 部分中定义的某个类型的链接。 该链接必须为用于引用 `<externalTypeMoniker>` 的 `<externalType>,`，或为用于引用 `<enumerationTypeMoniker>` 的 `<enumerationType>`。 再次强调，该链接以你的配置文件的名称开头。
 
 ```
   <properties>
@@ -335,19 +335,19 @@ You can define a *UML profile* to customize the standard model elements for spec
 </stereotype>
 ```
 
-## <a name="Elements"></a> Model Element Types
- The set of types for which you can define stereotypes is listed in [UML model element types](../modeling/uml-model-element-types.md).
+## <a name="Elements"></a>模型元素类型
+ 可以为其定义构造型的类型集在 " [UML 模型元素类型](../modeling/uml-model-element-types.md)" 中列出。
 
 ## <a name="troubleshooting"></a>疑难解答
  我的构造型不显示我的 UML 模型。
-必须在包或模型中选择配置文件。 然后，构造型将在包或模型内部的元素上显示。 For more information, see [Add stereotypes to UML model elements](../modeling/add-stereotypes-to-uml-model-elements.md).
+必须在包或模型中选择配置文件。 然后，构造型将在包或模型内部的元素上显示。 有关详细信息，请参阅[将构造型添加到 UML 模型元素](../modeling/add-stereotypes-to-uml-model-elements.md)。
 
- The following error appears when I open a UML model: **VS1707: The following profiles cannot be loaded because a serialization error occurred: MyProfile.profile**
+ 打开 UML 模型时出现以下错误： **VS1707：无法加载以下配置文件，因为出现了序列化错误： MyProfile**
 1. 验证 .profile 的基本 XML 语法是否正确。
 
 2. 确保每个名字对象名称的格式都为 /profileName/nodeName。 profileName 是根配置文件节点中的名称特性的值。 nodeName 是元类、externalType 或 enumerationType 的名称特性的值。
 
-3. Ensure the syntax is as described here, and as demonstrated in _drive_ **:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\Extensions\Microsoft\Architecture Tools\UmlProfiles\\** .
+3. 请确保语法与此处所述的语法相同，如_drive_ **： \Program Files\Microsoft Visual Studio [version] \Common7\IDE\Extensions\Microsoft\Architecture Tools\UmlProfiles\\** 中所示。
 
 4. 卸载有错误的扩展。 在 “工具”菜单上，单击“扩展和更新”。
 
@@ -355,14 +355,14 @@ You can define a *UML profile* to customize the standard model elements for spec
 
 5. 重新生成 VSIX 文件，然后在 Windows 资源管理器中打开该文件以将其重新安装。 重新启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。
 
-   The extension does not appear in Extension Manager, but when you try to re-install it, the following message appears: **The extension is already installed to all applicable products.**
-   1. Remove the extension file from a subfolder of *LocalAppData*\Microsoft\VisualStudio\\[version]\Extensions\
+   扩展管理器中未显示该扩展，但当你尝试重新安装它时，将显示以下消息：**扩展已安装到所有适用的产品。**
+   1. 从*LocalAppData*\Microsoft\VisualStudio 的子文件夹中删除扩展文件\\[版本] \Extensions\
 
-   - To see *LocalAppData*, you must set Show Hidden Files and Folders in the View tab of the Windows Explorer Folder Options.
+   - 若要查看*LocalAppData*，必须在 Windows 资源管理器文件夹选项的 "视图" 选项卡中设置 "显示隐藏的文件和文件夹"。
 
-   - *LocalAppData* is typically in C:\Users\\*userName*\AppData\Local\
+   - *LocalAppData*通常在 C:\Users\\*userName*\AppData\Local\
 
 6. 重新启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。
 
 ## <a name="see-also"></a>请参阅
- [Add stereotypes to UML model elements](../modeling/add-stereotypes-to-uml-model-elements.md) [Customize your model with profiles and stereotypes](../modeling/customize-your-model-with-profiles-and-stereotypes.md) [Standard stereotypes for UML models](../modeling/standard-stereotypes-for-uml-models.md) [Sample: Color UML Elements by Stereotype](https://go.microsoft.com/fwlink/?LinkID=213841) [Sample: Setting Stereotypes, Profiles XSD](https://go.microsoft.com/fwlink/?LinkID=213811)
+ [向 uml 模型元素添加构造型](../modeling/add-stereotypes-to-uml-model-elements.md)[使用配置文件和构造型构造模型](../modeling/customize-your-model-with-profiles-and-stereotypes.md)[标准构造型 uml 模型的标准构造型](../modeling/standard-stereotypes-for-uml-models.md)[示例：按构造型的 uml 元素](https://go.microsoft.com/fwlink/?LinkID=213841)示例：[设置构造型，配置文件 XSD](https://go.microsoft.com/fwlink/?LinkID=213811)

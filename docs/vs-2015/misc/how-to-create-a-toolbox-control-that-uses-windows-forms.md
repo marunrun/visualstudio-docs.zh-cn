@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create a Toolbox Control That Uses Windows Forms | Microsoft Docs'
+title: 如何：创建使用 Windows 窗体的工具箱控件 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -33,7 +33,7 @@ ms.locfileid: "74300423"
   
 2. 在“新建项目” 对话框的“已安装模板”下，单击首选编程语言的节点，然后单击“扩展性”。 在项目类型列表中，选择“Windows 窗体工具箱控件”。  
   
-3. 在“名称” 框中，键入想要用于项目的名称。 单击“确定”。  
+3. 在“名称” 框中，键入想要用于项目的名称。 单击" **确定**"。  
   
      Visual Studio 将创建一个解决方案，内含用户控件、将控件置于“工具箱”中的特性，以及用于部署的 VSIX 清单。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "74300423"
   
 2. 将 .vsix 文件上载到网络或网站。  
   
-     If you upload the file to the [Visual Studio Marketplace](https://marketplace.visualstudio.com/) Web site, other users can use **Extension Manager** in Visual Studio to find the control and install it.  
+     如果将文件上传到[Visual Studio Marketplace](https://marketplace.visualstudio.com/)网站，则其他用户可以使用 Visual Studio 中的**扩展管理器**查找并安装该控件。  
   
 ## <a name="see-also"></a>请参阅  
  [创建 WPF 工具箱控件](../extensibility/creating-a-wpf-toolbox-control.md)

@@ -24,7 +24,7 @@ ms.locfileid: "74295953"
 # <a name="da0001-use-stringbuilder-for-concatenations"></a>DA0001：使用 StringBuilder 进行串联
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-For the latest documentation on Visual Studio, see [DA0001: Use StringBuilder for concatenations](https://docs.microsoft.com/visualstudio/profiling/da0001-use-stringbuilder-for-concatenations).  
+有关 Visual Studio 的最新文档，请参阅[DA0001：使用 StringBuilder 进行串联](https://docs.microsoft.com/visualstudio/profiling/da0001-use-stringbuilder-for-concatenations)。  
   
 |||  
 |-|-|  
@@ -45,4 +45,4 @@ For the latest documentation on Visual Studio, see [DA0001: Use StringBuilder fo
 ## <a name="how-to-investigate-a-warning"></a>如何调查警告  
  双击“错误列表”窗口中的消息，导航到采样分析数据的[函数详细信息视图](../profiling/function-details-view.md)。 查找程序中使用字符串串联最频繁的部分。 请对复杂的字符串操作使用 StringBuilder 类，包括频繁使用的字符串串联操作。  
   
- 若要深入了解如何使用字符串，请参阅 Microsoft 模式和做法库中[第 5 章 - 提高托管代码性能](https://go.microsoft.com/fwlink/?LinkId=177817)的[字符串操作](https://go.microsoft.com/fwlink/?LinkId=177816)部分。
+ 若要深入了解如何使用字符串，请参阅 Microsoft 模式和做法库中[第 5 章 - 提高托管代码性能](https://go.microsoft.com/fwlink/?LinkId=177816)的[字符串操作](https://go.microsoft.com/fwlink/?LinkId=177817)部分。

@@ -1,5 +1,5 @@
 ---
-title: Select Condition Dialog Box (Legacy) | Microsoft Docs
+title: "\"选择条件\" 对话框（旧版） |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -21,9 +21,9 @@ ms.lasthandoff: 11/21/2019
 ms.locfileid: "74301457"
 ---
 # <a name="select-condition-dialog-box-legacy"></a>“选择条件”对话框（旧版）
-This topic describes how use the **Select Condition** dialog box in the legacy [!INCLUDE[wfd1](../includes/wfd1-md.md)]. 在需要面向 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 或 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 时，请使用旧 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]。
+本主题介绍如何使用旧 [!INCLUDE[wfd1](../includes/wfd1-md.md)]中的 "**选择条件**" 对话框。 在需要面向 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 或 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 时，请使用旧 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]。
 
- The **Select Condition** dialog box is used to select a declarative rule condition to be assigned to an activity's condition property. 这些规则条件作为以下 Windows Workflow Foundation 现成可用的活动属性被公开：
+ "**选择条件**" 对话框用于选择要分配给活动的 condition 属性的声明性规则条件。 这些规则条件作为以下 Windows Workflow Foundation 现成可用的活动属性被公开：
 
 - [ConditionedActivityGroup](https://go.microsoft.com/fwlink?LinkID=65017)
 
@@ -33,22 +33,22 @@ This topic describes how use the **Select Condition** dialog box in the legacy [
 
 - [WhileActivity](https://go.microsoft.com/fwlink?LinkID=65049)
 
-  For information about how to access the **Select Condition** dialog box, see [How to: Create a Declarative Rule Condition (Legacy)](../workflow-designer/how-to-create-a-declarative-rule-condition-legacy.md).
+  有关如何访问 "**选择条件**" 对话框的信息，请参阅[如何：创建声明性规则条件（旧版）](../workflow-designer/how-to-create-a-declarative-rule-condition-legacy.md)。
 
-  The following table describes the user interface (UI) elements of the **Select Condition** dialog box.
+  下表介绍 "**选择条件**" 对话框的用户界面（UI）元素。
 
 |UI 元素|描述|
 |----------------|-----------------|
-|**New…**|Click to open the [Rule Condition Editor Dialog Box (Legacy)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) to create a new rule condition.|
-|**Edit…**|Click to open the [Rule Condition Editor Dialog Box (Legacy)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) to edit the selected rule condition.|
-|**Rename…**|单击可打开用于重命名选定的规则条件的对话框。|
+|**新增功能。**|单击以打开 "[规则条件编辑器" 对话框（旧版）](../workflow-designer/rule-condition-editor-dialog-box-legacy.md)以创建新的规则条件。|
+|**编辑 。**|单击此选项可打开 "[规则条件编辑器" 对话框（旧版）](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) ，以编辑选定的规则条件。|
+|**重命名 。**|单击可打开用于重命名选定的规则条件的对话框。|
 |**删除**|单击可删除选定的规则条件。|
-|**Condition Preview**|显示选定的规则条件的条件表达式。|
-|**OK**|单击可将选定的规则条件分配给活动的条件。|
+|**条件预览**|显示选定的规则条件的条件表达式。|
+|**还行**|单击可将选定的规则条件分配给活动的条件。|
 
- For more information about creating and editing rule conditions, see [Rule Condition Editor Dialog Box (Legacy)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md).
+ 有关创建和编辑规则条件的详细信息，请参阅 "[规则条件编辑器" 对话框（旧版）](../workflow-designer/rule-condition-editor-dialog-box-legacy.md)。
 
- For more information about conditions, see [Using Conditions in Workflows](https://go.microsoft.com/fwlink?LinkID=65009).
+ 有关条件的详细信息，请参阅[在工作流中使用条件](https://go.microsoft.com/fwlink?LinkID=65009)。
 
 ## <a name="see-also"></a>请参阅
- [Rule Condition Editor Dialog Box (Legacy)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) [How to: Create a Declarative Rule Condition (Legacy)](../workflow-designer/how-to-create-a-declarative-rule-condition-legacy.md) [Using Conditions in Workflows](https://go.microsoft.com/fwlink?LinkID=65009) [Using the ConditionedActivityGroup Activity](https://go.microsoft.com/fwlink?LinkID=65066) [Using the IfElseBranchActivity Activity](https://go.microsoft.com/fwlink?LinkID=65075) [Using the ReplicatorActivity Activity](https://go.microsoft.com/fwlink?LinkID=65080) [Using the WhileActivity Activity](https://go.microsoft.com/fwlink?LinkID=65091) [Legacy Designer for Windows Workflow Foundation UI Help](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)
+ ["规则条件编辑器" 对话框（旧版）](../workflow-designer/rule-condition-editor-dialog-box-legacy.md)如何：在[工作流中使用条件](https://go.microsoft.com/fwlink?LinkID=65009)[使用 ConditionedActivityGroup 活动](https://go.microsoft.com/fwlink?LinkID=65066)[创建声明性规则条件（旧版）](../workflow-designer/how-to-create-a-declarative-rule-condition-legacy.md)使用[IfElseBranchActivity 活动](https://go.microsoft.com/fwlink?LinkID=65075)使用[ReplicatorActivity 活动](https://go.microsoft.com/fwlink?LinkID=65080)使用[WhileActivity 活动](https://go.microsoft.com/fwlink?LinkID=65091)[旧版设计器进行 Windows Workflow Foundation UI 帮助](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)

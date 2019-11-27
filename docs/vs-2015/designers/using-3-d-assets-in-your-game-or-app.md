@@ -31,7 +31,7 @@ ms.locfileid: "74293133"
  在使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的工具创建三维资产后，下一步是在应用中使用它们。 但是在使用它们之前，你的资产必须转换为 DirectX 可以解读的格式。 为了帮助你转换资产，[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 将为它可产生的每种资产提供生成自定义。 若要将资产包含在生成中，你只需将项目配置为使用生成自定义、将资产添加到你的项目，然后将资产配置为使用正确的生成自定即可。 此后，你可以将资产加载到应用中，然后通过创建并填充 DirectX 资源来使用它们，正如你在任何其他 DirectX 应用中一样。
 
 ## <a name="configuring-your-project"></a>配置项目
- 在可将三维资产部署为你的生成的一部分之前，[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 必须了解你希望部署的资产种类。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 已了解了很多常见的文件种类，但是因为仅某些种类的应用可使用三维资产，因此 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 不会假设项目将生成这些种类的文件。 使用为每种资产类型提供的生成自定义（告知 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 如何以有用的方式处理不同类型文件的文件），可告知 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 你的应用使用这些种类的资产。 因为这些自定义可基于每个项目而进行应用，因此你只需向你的项目添加相应的自定义即可。
+ 在可将三维资产部署为你的生成的一部分之前，[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 必须了解你希望部署的资产种类。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 已经了解了很多常见的文件类型，但由于只有某些类型的应用使用3-d 资产，[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 不会假设项目将生成这些种类的文件。 使用为每种资产类型提供的生成自定义（告知 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 如何以有用的方式处理不同类型文件的文件），可告知  *你的应用使用这些种类的资产*[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。 因为这些自定义可基于每个项目而进行应用，因此你只需向你的项目添加相应的自定义即可。
 
 #### <a name="to-add-the-build-customizations-to-your-project"></a>将生成自定义添加到你的项目
 
@@ -45,7 +45,7 @@ ms.locfileid: "74293133"
     |三维模型|MeshContentTask（.targets、.props）|
     |着色器|ShaderGraphContentTask（.targets、.props）|
 
-3. 选择 **“确定”** 按钮。
+3. 选择“确定” 按钮。
 
 ## <a name="including-assets-in-your-build"></a>将资产包含在生成中
  现在你的项目已了解你希望使用的不同种类的三维资产，下一步是告知它哪些文件是三维资产，以及它们的资产种类。
@@ -59,9 +59,9 @@ ms.locfileid: "74293133"
 3. 在“配置属性”下，选择“常规”，然后在“常规”下的属性网格中，将“项目类型”属性设置为相应的内容管道项目类型。 例如，对于图像或纹理文件，请选择“图像内容管道”。
 
    > [!IMPORTANT]
-   > 默认情况下，[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 假设应使用内置于 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中“图像”项目类型对很多种类的图像文件进行分类。 因此，必须更改你希望通过图像内容管道处理的每个图像的“项目类型”属性。 三维模型和视觉着色器图形的内容管道源文件的其他类型默认为正确的“项目类型”。
+   > 默认情况下，[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 假设应使用内置于  **中“图像”项目类型对很多种类的图像文件进行分类**[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。 因此，必须更改你希望通过图像内容管道处理的每个图像的“项目类型”属性。 三维模型和视觉着色器图形的内容管道源文件的其他类型默认为正确的“项目类型”。
 
-4. 选择 **“确定”** 按钮。
+4. 选择“确定” 按钮。
 
    下面是三种内容管道项目类型及其关联的源文件类型和输出文件类型。
 
@@ -82,12 +82,12 @@ ms.locfileid: "74293133"
 
 3. 在“配置属性”下，选择内容管道节点（例如，纹理和图像资产的“图像内容管道”），然后在属性网格中，将属性设置为相应的值。 例如，若要在生成时为纹理资产生成 mipmap，请将“生成 Mip”属性设置为“是”。
 
-4. 选择 **“确定”** 按钮。
+4. 选择“确定” 按钮。
 
 ### <a name="image-content-pipeline-configuration"></a>图像内容管道配置
  使用图像内容管道工具生成纹理资产时，你可以采用各种方式压缩纹理、指示生成时是否应该生成 MIP 级别，以及更改输出文件的名称。
 
-|Property|描述|
+|属性|描述|
 |--------------|-----------------|
 |压缩|指定用于输出文件的压缩类型。<br /><br /> 可用选项为：<br /><br /> -   不进行压缩<br />-   BC1_UNORM 压缩<br />-   BC1_UNORM_SRGB 压缩<br />-   BC2_UNORM 压缩<br />-   BC2_UNORM_SRGB 压缩<br />-   BC3_UNORM 压缩<br />-   BC3_UNORM_SRGB 压缩<br />-   BC4_UNORM 压缩<br />-   BC4_SNORM 压缩<br />-   BC5_UNORM 压缩<br />-   BC5_SNORM 压缩<br />-   BC6H_UF16 压缩<br />-   BC6H_SF16 压缩<br />-   BC7_UNORM 压缩<br />-   BC7_UNORM_SRGB 压缩<br /><br /> 有关不同版本的 DirectX 中支持哪些压缩格式的信息，请参阅 [DXGI 编程指南](https://go.microsoft.com/fwlink/p/?LinkId=246265)。|
 |转换为预乘 alpha 格式|若要将输出文件中的图像转换为预乘 alpha 格式，则为“是”；否则为“否”。 仅更改输出文件，源图像未发生更改。|
@@ -97,14 +97,14 @@ ms.locfileid: "74293133"
 ### <a name="mesh-content-pipeline-configuration"></a>网格内容管道配置
  使用网格内容管道工具生成网格资产时，你可以更改输出文件的名称。
 
-|Property|描述|
+|属性|描述|
 |--------------|-----------------|
 |内容输出|指定输出文件的名称。 重要说明：更改输出文件的文件扩展名不会影响其文件格式。|
 
 ### <a name="shader-content-pipeline-configuration"></a>着色器内容管道配置
  使用着色器内容管道工具生成着色器资产时，你可以更改输出文件的名称。
 
-|Property|描述|
+|属性|描述|
 |--------------|-----------------|
 |内容输出|指定输出文件的名称。 重要说明：更改输出文件的文件扩展名不会影响其文件格式。|
 
@@ -200,7 +200,7 @@ cbuffer MiscVars : register(b3)
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|描述|
+|标题|描述|
 |-----------|-----------------|
 |[如何：导出包含 Mipmap 的纹理](../designers/how-to-export-a-texture-that-contains-mipmaps.md)|描述如何使用“图像内容管道”导出包含预计算 mipmap 的纹理。|
 |[如何：导出包含自左乘的 Alpha 的纹理](../designers/how-to-export-a-texture-that-has-premultiplied-alpha.md)|描述如何使用“图像内容管道”导出包含预乘 alpha 值的纹理。|

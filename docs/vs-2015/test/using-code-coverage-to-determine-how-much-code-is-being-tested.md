@@ -24,9 +24,9 @@ ms.locfileid: "74297978"
 
  可将代码覆盖率分析应用于托管 (CLI) 和非托管（本机）代码。
 
- 代码覆盖率是使用测试资源管理器运行测试方法时的一个选项。 结果表将显示在各个程序集、类和方法中运行的代码的百分比。 此外，源代码编辑器会显示已测试的代码。
+ 代码覆盖率是使用测试资源管理器运行测试方法时的一个选项。 结果表将显示在各个程序集、类和方法中运行的代码的百分比。 此外，源编辑器将显示已测试的代码。
 
- ![Code coverage results with coloring](../test/media/codecoverage1.png "CodeCoverage1")
+ ![带着色的代码覆盖率结果](../test/media/codecoverage1.png "CodeCoverage1")
 
  **惠?**
 
@@ -36,7 +36,7 @@ ms.locfileid: "74297978"
 
 1. 在“测试”菜单上，选择“分析代码覆盖率”。
 
-2. To see which lines have been run, choose ![Show Code Coverage Coloring Icon](../test/media/codecoverage-showcoloringicon.png "CodeCoverage-ShowColoringIcon")**Show Code Coverage Coloring**.
+2. 若要查看已运行的行，请选择 "![显示代码覆盖率着色" 图标](../test/media/codecoverage-showcoloringicon.png "CodeCoverage-ShowColoringIcon")"**显示代码覆盖率着色**"。
 
      若要更改颜色或使用加粗，请依次选择“工具”、“选项”、“环境”、“字体和颜色”和“显示其设置：文本编辑器”。 在“显示项”下，调整覆盖率项。
 
@@ -50,7 +50,7 @@ ms.locfileid: "74297978"
 >   如果要处理非托管（本机）代码，请使用调试版本。
 >   - 确保为每个程序集生成 .pdb（符号）文件。
 >
->   如果没有获得预期的结果，请参阅[代码覆盖率疑难解答](../test/troubleshooting-code-coverage.md)。 方法。 不要忘记在更新代码后再次运行代码覆盖率。 在修改代码后或运行测试时，覆盖率结果和代码着色不会自动更新。
+>   如果没有获得预期的结果，请参阅[代码覆盖率疑难解答](../test/troubleshooting-code-coverage.md)。 中运行但不进行任何修改。 不要忘记在更新代码后再次运行代码覆盖率。 在修改代码后或运行测试时，覆盖率结果和代码着色不会自动更新。
 
 ## <a name="reporting-in-blocks-or-lines"></a>报告块或行
  代码覆盖率将以块为单位计数。 块是恰好有一个入口点和出口点的一段代码。  在测试运行期间，如果程序的控制流通过某个块，则将该块计为“已覆盖”。 块的使用次数对结果没有影响。
@@ -81,7 +81,7 @@ ms.locfileid: "74297978"
 
  例如，假设你在运行某个测试（输入为“2”）时发现某个特定函数已被覆盖了 50%。 当你第二次运行该测试（输入为“-2”）时，你在覆盖着色视图中发现该函数的另外 50% 也被覆盖。 现在，你合并来自这两个测试运行的结果，报告和覆盖率着色视图显示该函数已经 100% 被覆盖。
 
- Use ![Icon for Merge button in Code Coverage window](../test/media/codecoverage-mergeicon.png "CodeCoverage-MergeIcon")**Merge Code Coverage Results** to do this. 你可以选择最近的运行或导入的结果的任意组合。 如果要组合导出的结果，则必须先将其导入。
+ !["代码覆盖率" 窗口中的 "合并" 按钮的图标：](../test/media/codecoverage-mergeicon.png "CodeCoverage-MergeIcon")**合并代码覆盖率结果**。 你可以选择最近的运行或导入的结果的任意组合。 如果要组合导出的结果，则必须先将其导入。
 
  使用“导出代码覆盖率结果”可保存合并操作的结果。
 
@@ -248,7 +248,7 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
  你可以通过编写 .runsettings 文件来加强控制为代码覆盖率分析选择哪些程序集和元素。 例如，你可以排除特定类型的程序集，而不必向它们的类添加特性。 有关详细信息，请参阅[自定义代码覆盖率分析](../test/customizing-code-coverage-analysis.md)。
 
 ## <a name="analyzing-code-coverage-in-the-build-service"></a>分析生成服务中的代码覆盖率
- 签入代码时，你的测试以及其他团队成员的所有其他测试将在生成服务器中运行。 (If you haven’t already set this up, see [Run tests in your build process](https://msdn.microsoft.com/library/d05743a1-c5cf-447e-bed9-bed3cb595e38).) It’s useful to analyze code coverage on the build service, because that gives the most up-to-date and comprehensive picture of coverage in the whole project. 它还包含你不常在开发计算机上运行的自动系统测试和其他编码的测试。
+ 签入代码时，你的测试以及其他团队成员的所有其他测试将在生成服务器中运行。 （如果尚未设置此项，请参阅[在生成过程中运行测试](https://msdn.microsoft.com/library/d05743a1-c5cf-447e-bed9-bed3cb595e38)。）分析生成服务中的代码覆盖率很有用，因为这样可以提供整个项目中最新的覆盖面。 它还包含你不常在开发计算机上运行的自动系统测试和其他编码的测试。
 
 1. 在“团队资源管理器”中，打开“生成”，然后添加或编辑生成定义。
 
@@ -260,7 +260,7 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
       在“自动测试”下，选择“测试程序集”，然后选择行尾的省略号按钮“[...]”。 在“添加/编辑测试运行”对话框的“测试运行程序”下，选择“Visual Studio 测试运行程序”。
 
-   ![Setting the build definition for code coverage](../test/media/codecoverage-plaincc.png "CodeCoverage-plainCC")
+   ![设置代码覆盖率的生成定义](../test/media/codecoverage-plaincc.png "CodeCoverage-plainCC")
 
    生成运行后，代码覆盖率结果将附加到测试运行并显示在生成摘要中。
 
@@ -284,4 +284,4 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
  [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](https://go.microsoft.com/fwlink/?LinkID=255188)
 
 ## <a name="see-also"></a>请参阅
- [Customizing Code Coverage Analysis](../test/customizing-code-coverage-analysis.md) [Troubleshooting Code Coverage](../test/troubleshooting-code-coverage.md) [Unit Test Your Code](../test/unit-test-your-code.md)
+ [自定义代码覆盖率分析](../test/customizing-code-coverage-analysis.md)[故障排除代码覆盖率](../test/troubleshooting-code-coverage.md)[单元测试代码](../test/unit-test-your-code.md)

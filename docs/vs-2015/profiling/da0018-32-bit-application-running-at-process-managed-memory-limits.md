@@ -23,11 +23,11 @@ ms.locfileid: "74301113"
 # <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018：运行的 32 位应用程序达到了进程托管内存的限制
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Rule Id|DA0018|  
-|Category|Profiling Tools Usage|  
-|Profiling method|Sampling|  
-|Message|Managed memory allocations approaching the default limit for a 32-bit process. 应用程序可能会受内存限制。|  
-|Rule type|Warning|  
+规则 Id |DA0018 |  
+|类别 |分析工具使用情况 |  
+|分析方法 |采样 |  
+|消息 |托管内存分配接近32位进程的默认限制。 应用程序可能会受内存限制。|  
+|规则类型 |警告 |  
   
  使用采样法、.NET 内存或资源争用方法进行分析时，必须收集至少 10 个样本才能触发此规则。  
   

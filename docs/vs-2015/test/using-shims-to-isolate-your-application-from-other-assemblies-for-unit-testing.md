@@ -90,7 +90,7 @@ public void Y2kCheckerTest() {
 
  正确释放每个填充码上下文至关重要。 根据经验，请始终调用 `ShimsContext.Create` 语句内的 `using`，以便确保清除已注册的填充码。 例如，您可能为某一测试方法注册了填充码，而且该方法会将 `DateTime.Now` 方法替换为始终返回 2000 年 1 月 1 日的委托。 如果忘记清除测试方法中的已注册填充码，则剩余的测试将始终返回 2000 年 1 月 1 日作为 DateTime.Now 值。 这可能会让人感到惊讶和困惑。
 
-### <a name="WriteShims"></a>编写包含填充码的测试
+### <a name="WriteShims"></a>编写包含垫片的测试
  在测试代码中，为要虚设的方法插入 *绕道*。 例如:
 
 ```csharp
@@ -457,7 +457,7 @@ ShimMyClass.BehaveAsNotImplemented();
  填充码类型适用于 AppDomain 中的所有线程，并且不具备线程关联性。 如果您计划使用支持并发的测试运行程序，这一点非常重要：涉及填充码类型的测试无法并发运行。 此属性不由 Fakes 运行时来实施。
 
 ## <a name="BKMK_Calling_the_original_method_from_the_shim_method"></a>通过垫片方法调用原始方法
- 假设我们想要在验证文件名已传递给方法之后，再将文本写到文件系统。 这种情况下，我们需要调用填充码方法中的原始方法。
+ 假设我们想要在验证文件名已传递给方法之后，再将文本编写到文件系统。 这种情况下，我们需要调用填充码方法中的原始方法。
 
  要解决这一问题，第一种方法是使用委托和 `ShimsContext.ExecuteWithoutShims()` 来包装对原始方法的调用，如下面的代码中所示：
 
@@ -499,7 +499,7 @@ ShimFile.WriteAllTextStringString = shim;
 ```
 
 ## <a name="BKMK_Limitations"></a>限制
- 填充码无法用于 .NET 基类库 mscorlib 和 System 中的所有类型。
+ 垫片无法用于 .NET 基类库 **mscorlib** 和 **System** 中的所有类型。
 
 ## <a name="external-resources"></a>外部资源
 
@@ -507,4 +507,4 @@ ShimFile.WriteAllTextStringString = shim;
  [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](https://go.microsoft.com/fwlink/?LinkID=255188)
 
 ## <a name="see-also"></a>请参阅
- [Isolating Code Under Test with Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md) [Peter Provost’s blog: Visual Studio 2012 Shims](http://www.peterprovost.org/blog/2012/04/25/visual-studio-11-fakes-part-2) [Video (1h16): Testing Un-testable Code with Fakes in Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkId=261837)
+ 将[测试中的代码与 Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md) [Peter Provost 的博客隔离： Visual studio 2012 填充](http://www.peterprovost.org/blog/2012/04/25/visual-studio-11-fakes-part-2)码[视频（1H16）：在 Visual Studio 2012 中用 Fakes 测试未测试的代码](https://go.microsoft.com/fwlink/?LinkId=261837)

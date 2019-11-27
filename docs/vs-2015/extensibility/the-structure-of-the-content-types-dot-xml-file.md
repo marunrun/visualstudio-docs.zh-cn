@@ -1,5 +1,5 @@
 ---
-title: The Structure of the Content_types].xml File | Microsoft Docs
+title: Content_types] .xml 文件的结构 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -23,70 +23,70 @@ ms.locfileid: "74301238"
 # <a name="the-structure-of-the-content_typesxml-file"></a>[Content_types].xml 文件的结构
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Contains information about the kinds of content in a VSIX package. Visual Studio uses the [Content_Types].xml file to install the package, but it does not install the file itself.  
+包含有关 VSIX 包中的内容种类的信息。 Visual Studio 使用 [Content_Types] .xml 文件来安装包，但不会安装文件本身。  
   
 > [!NOTE]
-> Although this topic applies only to [Content_Type].xml files that are used in VSIX packages, the [Content_Types].xml file type is part of the *Open Packaging Conventions (OPC)* standard. For more information, see [OPC: A New Standard For Packaging Your Data](https://go.microsoft.com/fwlink/?LinkID=148207) on the MSDN Web site.  
+> 尽管本主题仅适用于 VSIX 包中使用的 [Content_Type] .xml 文件，但 [Content_Types] .xml 文件类型是*开放打包约定（OPC）* 标准的一部分。 有关详细信息，请参阅 MSDN 网站上的[OPC：用于打包数据的新标准](https://go.microsoft.com/fwlink/?LinkID=148207)。  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
- The following sections describe the root element and its attributes and child elements.  
+ 以下各节描述了 root 元素及其属性和子元素。  
   
 ### <a name="root-element"></a>根元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|`Types`|Contains child elements that enumerate the file types in the VSIX package.|  
+|`Types`|包含枚举 VSIX 包中的文件类型的子元素。|  
   
 ### <a name="attributes"></a>特性  
   
-|特性|描述|  
+|属性|描述|  
 |---------------|-----------------|  
-|`Xmlns`|(Required.) The location of the schema used for this [Content_Types].xml file.|  
+|`Xmlns`|（必需。）用于此 [Content_Types] .xml 文件的架构的位置。|  
   
-### <a name="attribute-name-attribute"></a>{Attribute name} Attribute  
+### <a name="attribute-name-attribute"></a>{Attribute name}Attribute  
   
 |                           “值”                           |                描述                |
 |-----------------------------------------------------------|-------------------------------------------|
-| http://schemas.openformats.org/package/2006/content-types | The location of the content types schema. |
+| http://schemas.openformats.org/package/2006/content-types | 内容类型架构的位置。 |
   
 ### <a name="child-elements"></a>子元素  
- The `Types` element can contain any number of `Default` elements.  
+ `Types` 元素可包含任意数量的 `Default` 元素。  
   
 |元素|描述|  
 |-------------|-----------------|  
-|`Default`|Describes a content type in the VSIX package. Every file type in the package must have its own `Default` element.|  
+|`Default`|描述 VSIX 包中的内容类型。 包中的每个文件类型都必须有自己的 `Default` 元素。|  
   
 ### <a name="attributes"></a>特性  
   
-|特性|描述|  
+|属性|描述|  
 |---------------|-----------------|  
-|`Extension`|The file name extension of a file in the VSIX package.|  
-|`ContentType`|Describes the kind of content that is associated with the file name extension.|  
+|`Extension`|VSIX 包中文件的文件扩展名。|  
+|`ContentType`|描述与文件扩展名关联的内容类型。|  
   
-### <a name="attribute-name-attribute"></a>{Attribute name} Attribute  
- Visual Studio recognizes the following `ContentType` values for the associated `Extension` types.  
+### <a name="attribute-name-attribute"></a>{Attribute name}Attribute  
+ Visual Studio 可识别关联 `Extension` 类型的以下 `ContentType` 值。  
   
 |扩展名|ContentType|  
 |---------------|-----------------|  
-|txt|text/plain|  
-|pkgdef|text/plain|  
+|文本文件|text/plain|  
+|.pkgdef|text/plain|  
 |xml|text/xml|  
 |vsixmanifest|text/xml|  
-|htm or html|text/html|  
+|htm 或 html|文本/html|  
 |rtf|application/rtf|  
 |pdf|application/pdf|  
 |gif|image/gif|  
-|jpg or jpeg|image/jpg|  
+|jpg 或 jpeg|image/jpg|  
 |tiff|image/tiff|  
-|vsix|application/zip|  
-|zip|application/zip|  
+|vsix|应用程序/zip|  
+|zip|应用程序/zip|  
 |dll|application/octet-stream|  
-|all other file types|application/octet-stream|  
+|所有其他文件类型|application/octet-stream|  
   
 ## <a name="example"></a>示例  
   
 ### <a name="description"></a>描述  
- The following [Content_Types].xml file describes a typical VSIX package.  
+ 下面的 [Content_Types] .xml 文件描述了一个典型的 VSIX 包。  
   
 ### <a name="code"></a>代码  
   
@@ -102,6 +102,6 @@ Contains information about the kinds of content in a VSIX package. Visual Studio
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [Anatomy of a VSIX Package](../extensibility/anatomy-of-a-vsix-package.md)   
- [VSIX Extension Schema 1.0 Reference](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)   
- [OPC: A New Standard For Packaging Your Data](https://go.microsoft.com/fwlink/?LinkID=148207)
+ [VSIX 包的剖析](../extensibility/anatomy-of-a-vsix-package.md)   
+ [VSIX 扩展架构1.0 引用](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)   
+ [OPC：用于打包数据的新标准](https://go.microsoft.com/fwlink/?LinkID=148207)
