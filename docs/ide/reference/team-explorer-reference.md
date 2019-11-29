@@ -5,28 +5,28 @@ ms.topic: reference
 ms.author: kaelli
 author: KathrynEE
 ms.manager: jillfra
-ms.openlocfilehash: 6a7c1e9d0f5e8b8ef48a033d58038818d2d620e5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b1a956579b527de9df9d24bd09dda6ae48eff961
+ms.sourcegitcommit: 08105865a9643fb20dce9b8b7580452cfbbe7ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62945065"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74538576"
 ---
 # <a name="team-explorer-reference"></a>团队资源管理器参考
 
-本文提供关于团队资源管理器中各种功能的 Azure DevOps 文章的链接。
+本文提供关于团队资源管理器中各种功能的 Azure DevOps 文章的链接  。
 
-使用“团队资源管理器”工具窗口与其他团队成员协调代码工作，以开发项目，并管理分配给你、你的团队或项目的工作。 团队资源管理器将 Visual Studio 连接到 Git 和 GitHub 存储库、Team Foundation 版本控制 (TFVC) 存储库以及 [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) 或本地 [Azure DevOps Server](/tfs/index)（以前称为 TFS）上托管的项目。 你可管理源代码、工作项和生成。
+使用“团队资源管理器”工具窗口与其他团队成员协调代码工作，以开发项目，并管理分配给你、你的团队或项目的工作  。 团队资源管理器将 Visual Studio 连接到 Git 和 GitHub 存储库、Team Foundation 版本控制 (TFVC) 存储库以及 [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) 或本地 [Azure DevOps Server](/azure/devops/index-all)（以前称为 TFS）上托管的项目  。 你可管理源代码、工作项和生成。
 
 ## <a name="home-page"></a>主页
 
-在团队资源管理器中[连接到项目](../connect-team-project.md)后，“项目”部分中提供以下链接：
+在团队资源管理器中[连接到项目](../connect-team-project.md)后，“项目”部分中提供以下链接   ：
 
 - [克隆存储库](/azure/devops/repos/git/clone)
 - [Web 门户](/azure/devops/project/navigation/index)
 - [任务板](/azure/devops/boards/sprints/task-board)
 
-根据用户是连接到 [Git](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio) 还是 [Team Foundation 版本控制 (TFVC)](/azure/devops/repos/tfvc/overview) 存储库，“开始”页具有不同功能。
+根据用户是连接到 [Git](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio) 还是 [Team Foundation 版本控制 (TFVC)](/azure/devops/repos/tfvc/overview) 存储库，“开始”页具有不同功能  。
 
 > [!TIP]
 > 要比较这两个版本控制系统，请参见[为项目 (Azure DevOps) 选择正确的版本控制](/azure/devops/repos/tfvc/comparison-git-tfvc)。
@@ -69,7 +69,7 @@ ms.locfileid: "62945065"
 
 ## <a name="work-items-page"></a>工作项页面
 
-通过“工作项”页，可以查看[工作项](/azure/devops/boards/work-items/about-work-items)查询。 请参阅：
+通过“工作项”页，可以查看[工作项](/azure/devops/boards/work-items/about-work-items)查询  。 请参阅：
 
 - [添加工作项](/azure/devops/boards/backlogs/add-work-items)
 - [使用查询编辑器来列出和管理查询](/azure/devops/boards/queries/using-queries)
@@ -88,7 +88,7 @@ ms.locfileid: "62945065"
 
 ## <a name="builds-page"></a>“生成”页
 
-通过“生成”页，可以查看项目的生成定义。
+通过“生成”页，可以查看项目的生成定义  。
 
 请参阅：
 
@@ -100,7 +100,7 @@ ms.locfileid: "62945065"
 
 ## <a name="settings-page"></a>“设置”页
 
-通过“设置”页，可以为项目或项目集合配置管理功能。 请参阅以下文章：
+通过“设置”页，可以为项目或项目集合配置管理功能  。 请参阅以下文章：
 
 | 项目 | 项目集合 | 其他 |
 | - | - | - |
