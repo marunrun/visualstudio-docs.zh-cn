@@ -6,12 +6,12 @@ ms.assetid: 22725520-59ba-4f6f-80e4-097b1287a34b
 caps.latest.revision: 14
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 14da8fab1b3190d77951298ac7d1a130c85f6135
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
-ms.translationtype: HT
+ms.openlocfilehash: 703ee752a9f16f0abc5e4813707890a6d17947af
+ms.sourcegitcommit: 08105865a9643fb20dce9b8b7580452cfbbe7ee7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297718"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74538944"
 ---
 # <a name="setup-install-and-verifications-for-mac-users"></a>Mac 用户的设置、安装和验证
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "74297718"
   
 - [Mac 设置（Apple ID、Xcode 和 Xamarin）](#mac)  
   
-- [Parallels 中的 Windows 设置（Visual Studio 和 Xamarin）](#windows)  
+- [Parallels 内的 Windows 设置（Visual Studio 和 Xamarin）](#windows)  
   
 - [验证环境](#verify)  
   
-## <a name="mac"></a> Mac 设置（Apple ID、Xcode 和 Xamarin）  
+## <a name="mac"></a>Mac 设置（Apple ID、Xcode 和 Xamarin）  
   
 1. 如果你尚无 Apple ID，请在 [我的 Apple ID](https://appleid.apple.com/) 处创建免费 Apple ID。 这是安装和登录 Xcode 所必需的。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "74297718"
   
 3. 按照 [安装和配置 Xamarin.iOS](https://docs.microsoft.com/xamarin/ios/get-started/installation/mac) (xamarin.com) 上的说明下载和安装 Xamarin。  
   
-4. 在 Windows 和 Mac 计算机上安装好 Xamarin 后，请按照[使用 XMA 连接到 Mac](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/?pivots=windows#Connecting_to_the_Mac_Using_XMA) (xamarin.com) 上的说明操作，以便可通过 Windows 计算机上的 Visual Studio 针对 iOS 和 Mac 进行开发。  
+4. 在 Windows 和 Mac 计算机上安装好 Xamarin 后，请按照[使用 XMA 连接到 Mac](/xamarin/ios/get-started/installation/windows/connecting-to-mac) (xamarin.com) 上的说明操作，以便可通过 Windows 计算机上的 Visual Studio 针对 iOS 和 Mac 进行开发。  
   
-## <a name="windows"></a>Parallels 中的 Windows 设置（Visual Studio 和 Xamarin）  
+## <a name="windows"></a> Parallels 内的 Windows 设置（Visual Studio 和 Xamarin）  
   
 1. 使用在 Parallels/VMWare 内配置的 Windows 桌面， [下载并启动 Visual Studio 2015 任何版本（Community、Professional 或 Enterprise）的安装程序](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) 。 Visual Studio 2015 Community 是免费版本；Professional 和Enterprise 可免费试用 30 天。  
   
@@ -75,9 +75,9 @@ ms.locfileid: "74297718"
     > [!NOTE]
     > 请确保将 Xamarin 更新到版本 4.0.3.214 或更高版本，避免早期 Xamarin 许可证的问题。  如果尝试检查更新但看到有关 Microsoft 生成工具的错误，请参阅 [Xamarin 论坛](https://forums.xamarin.com/discussion/69015/xamarin-update-on-vs-2013-says-i-need-the-build-tools-for-vs-2015)上的相关信息。
   
-6. 在 Windows 和 Mac 计算机上安装好 Xamarin 后，请按照 [使用 XMA 连接到 Mac](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/?pivots=windows#Connecting_to_the_Mac_Using_XMA) (xamarin.com) 上的说明操作，以便可通过 Visual Studio 针对 iOS 进行开发。  
+6. 在 Windows 和 Mac 计算机上安装好 Xamarin 后，请按照 [使用 XMA 连接到 Mac](/xamarin/ios/get-started/installation/windows/connecting-to-mac) (xamarin.com) 上的说明操作，以便可通过 Visual Studio 针对 iOS 进行开发。  
   
-## <a name="verify"></a>验证环境  
+## <a name="verify"></a> 验证环境  
  安装程序完成安装后，请花几分钟时间验证体验 Xamarin 开发所需的一切就绪。  
   
 ### <a name="xamarin-studio"></a>Xamarin Studio  
@@ -85,13 +85,13 @@ ms.locfileid: "74297718"
   
  ![选择 Xamarin Studio 查看 Xamarin.com 上的正确文档](../cross-platform/media/crossplat-xamarin-mac-1.png "CrossPlat Xamarin Mac 1")  
   
- **Android**  
+ **Outlook Web Access (OWA)**  
   
 1. 按照 [创建 Android 项目](https://github.com/xamarin/docs-archive/tree/master/Recipes/android/general/projects/create_an_android_project) (Xamarin.com) 上的说明验证创建 Android 项目。  
   
 2. 通过[“Android Player > 与 Xamarin Studio 集成”文档](https://developer.xamarin.com/guides/android/getting_started/installation/android-player/#Integration_with_Xamarin_Studio) (xamarin.com) 验证 Android Player 中的调试。  
   
-   **iOS**  
+   **Android**  
   
 3. 按照 [创建 iOS 项目](https://github.com/xamarin/docs-archive/tree/master/Recipes/ios/general/projects/create_an_ios_project) (Xamarin.com) 上的说明验证创建 iOS 项目。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "74297718"
   
  还可通过“工具”>”Xamarin帐户...”登录你的 Xamarin 帐户。  
   
- **Android**  
+ **Outlook Web Access (OWA)**  
   
 1. 按照 [创建 Android 项目](https://github.com/xamarin/docs-archive/tree/master/Recipes/android/general/projects/create_an_android_project) (Xamarin.com) 上的说明验证创建 Android 项目。  
   
@@ -114,9 +114,9 @@ ms.locfileid: "74297718"
   
 3. 验证你可以从 Visual Studio 连接到 Mac 上安装的仿真程序。  此操作的结果是，你将在 Visual Studio 中的可选择用于调试的仿真程序列表中看到 Xamarin Player。  要实现这一目的，请按照 [将 Visual Studio 连接到 Xamarin Android Player](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) (xamarin.com) 上的说明进行操作。  
   
-   **iOS**  
+   **Android**  
   
-4. 确保你的 Mac 在网络上可用且已与 Visual Studio 配，如 [使用 XMA 连接到 Mac](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/?pivots=windows#Connecting_to_the_Mac_Using_XMA) (xamarin.com) 上所述。  
+4. 确保你的 Mac 在网络上可用且已与 Visual Studio 配，如 [使用 XMA 连接到 Mac](/xamarin/ios/get-started/installation/windows/connecting-to-mac) (xamarin.com) 上所述。  
   
 5. 按照 [创建 iOS 项目](https://github.com/xamarin/docs-archive/tree/master/Recipes/ios/general/projects/create_an_ios_project) (Xamarin.com) 上的说明验证创建 iOS 项目。  
   
