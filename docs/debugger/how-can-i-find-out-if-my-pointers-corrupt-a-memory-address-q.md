@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8313bc8e0419e281dceefbafd6dcdcc2f368580f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 516b04bb625ad2546c4c8f3d3e7d7d4ba9419094
+ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72734244"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74705843"
 ---
 # <a name="how-can-i-find-out-if-my-pointers-corrupt-a-memory-address"></a>如何查明指针是否损坏了内存地址？
 ## <a name="problem-description"></a>问题描述
@@ -36,7 +36,7 @@ ms.locfileid: "72734244"
 
 #### <a name="check-for-heap-corruption"></a>检查堆损坏
 
-- 大多数内存损坏实际上是由堆损坏引起的。 尝试使用 Global Flags Utility (gflags.exe) 或 pageheap.exe。 请参阅[http://support.microsoft.com/default.aspx?scid=kb; en-us; 286470](http://support.microsoft.com/default.aspx?scid=kb;en-us;286470)。
+- 大多数内存损坏实际上是由堆损坏引起的。 尝试使用 Global Flags Utility (gflags.exe) 或 pageheap.exe。 请参阅 [https://docs.microsoft.com/windows-hardware/drivers/debugger/gflags-and-pageheap](/windows-hardware/drivers/debugger/gflags-and-pageheap)。
 
 #### <a name="to-find-where-the-memory-address-is-modified"></a>若要查找内存地址改变的位置
 
@@ -44,6 +44,6 @@ ms.locfileid: "72734244"
 
 2. 当命中断点时，使用“内存”窗口，以查看从 0x00408000 开始的内存内容。 有关详细信息，请参阅[内存窗口](../debugger/memory-windows.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [调试本机代码常见问题解答](../debugger/debugging-native-code-faqs.md)
 - [调试本机代码](../debugger/debugging-native-code.md)
