@@ -6,12 +6,12 @@ manager: lank
 ms.date: 11/18/2019
 ms.topic: conceptual
 description: 了解有关 Visual Studio 订阅中包含的 Windows 开发者帐户。
-ms.openlocfilehash: 662dc6d911903a4c0d2c0a77382647639bb25d07
-ms.sourcegitcommit: 5c9ca18eadc7ed0ed095cc5a3e1df40bbc13e70c
+ms.openlocfilehash: 7ba77979c47d61cd230351a352d85baa7c1eae9a
+ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74174118"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491280"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Windows 开发者帐户
 通过所选 Visual Studio 订阅包含的 Windows 开发者帐户，可以将免费和付费的 Windows 应用提交到 Windows 应用商店。
@@ -19,7 +19,7 @@ ms.locfileid: "74174118"
 ## <a name="activation-steps"></a>激活步骤
 若要使用 Windows 开发者帐户，需要设置一个帐户或使用现有帐户登录。
 
-我们建议为该进程创建“私密”浏览器窗口。  例如，在 Google Chrome 中，创建新的“incongnito”窗口。  在 Internet Explorer 中，创建新的“InPrivate”窗口。
+我们建议为该进程创建“私密”浏览器窗口。  例如，在 Google Chrome 中，请创建新的“incognito”窗口。  在 Internet Explorer 中，创建新的“InPrivate”窗口。
 
 1. 登录到 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)。
 2. 在“工具”部分中找到“Windows 开发人员帐户”磁贴，然后单击“权益”磁贴底部的“获取代码”  链接。  将代码复制到剪贴板，然后单击“激活”  。
