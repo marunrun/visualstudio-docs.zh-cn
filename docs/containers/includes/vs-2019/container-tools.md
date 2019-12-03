@@ -7,14 +7,14 @@ ms.date: 02/01/2019
 ms.prod: visual-studio-dev16
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 7eae92f7c65208dfeda9cd19e14eaa627e12a22a
-ms.sourcegitcommit: bbff780cda82bb64862d77fe8f407f1803beb876
+ms.openlocfilehash: 0232b37d08901bcc04c9d66facfe6850a9852e88
+ms.sourcegitcommit: e825d1223579b44ee2deb62baf4de0153f99242a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142182"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74485485"
 ---
-使用 Visual Studio，可以轻松地生成、调试和运行容器化的 ASP.NET Core 应用程序并将其发布到 Azure 容器注册表 (ACR)、Docker Hub、Azure 应用服务或你自己的容器注册表。 在本文中，我们将发布到 ACR。
+使用 Visual Studio，可以轻松地生成、调试和运行容器化的 .NET、ASP.NET 和 ASP.NET Core 应用并将其发布到 Azure 容器注册表 (ACR)、Docker Hub、Azure 应用服务或你自己的容器注册表。 本文介绍如何将 ASP.NET Core 应用发布到 ACR。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -73,26 +73,6 @@ ENTRYPOINT ["dotnet", "HelloDockerTools.dll"]
 
 “输出”  窗口中的“容器工具”  选项显示正在进行的操作。
 
-依次选择“工具”菜单 >“NuGet 包管理器”>“包管理器控制台”，打开包管理器控制台 (PMC)    。
-
-最终得到的应用的 Docker 映像标记为“开发”  。 该映像基于 microsoft/dotnet 基础映像的 2.2-aspnetcore-runtime 标记   。 在“包管理器控制台”(PMC) 窗口中运行 `docker images` 命令  。 显示了计算机上的映像：
-
-```console
-REPOSITORY        TAG                     IMAGE ID      CREATED         SIZE
-hellodockertools  dev                     d72ce0f1dfe7  30 seconds ago  255MB
-microsoft/dotnet  2.2-aspnetcore-runtime  fcc3887985bb  6 days ago      255MB
-```
-
-> [!NOTE]
-> “开发”映像不包含应用程序二进制文件和其他内容，因为“调试”配置使用卷装载提供迭代编辑和调试体验   。 若要创建包含所有内容的生产映像，请使用“版本”配置  。
-
-在 PMC 中运行 `docker ps` 命令。 请注意，应用使用容器运行：
-
-```console
-CONTAINER ID        IMAGE                  COMMAND               CREATED             STATUS              PORTS                                           NAMES
-cf5d2ef5f19a        hellodockertools:dev   "tail -f /dev/null"   2 minutes ago       Up 2 minutes        0.0.0.0:52036->80/tcp, 0.0.0.0:44342->443/tcp   priceless_cartwright
-```
-
 ## <a name="containers-window"></a>容器窗口
 
 如果拥有 Visual Studio 2019 版本 16.4 或更高版本，则可使用“容器”窗口来查看正在计算机上运行的容器，还可查看你可用的映像  。
@@ -102,6 +82,8 @@ cf5d2ef5f19a        hellodockertools:dev   "tail -f /dev/null"   2 minutes ago  
 可将“容器”窗口四处移动并沿着窗口放置参考线操作，将此窗口装载到便利的位置，例如在编辑器下方  。
 
 在窗口中，找到你的容器并逐个浏览每个选项卡，以查看环境变量、端口映射、日志和文件系统。
+
+![“容器”窗口的屏幕截图](../../media/overview/vs-2019/container-tools-window.png)
 
 有关详细信息，请参阅[在 Visual Studio 中查看和诊断容器及映像](../../view-and-diagnose-containers.md)。
 

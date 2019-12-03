@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/28/2019
 ms.topic: conceptual
 description: 有关在 MPN 中提供的订阅、应用的规则以及提供的订阅数的详细信息。
-ms.openlocfilehash: e32ae547327c4e51b7d49f6dffe9130afa843c49
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: 8847d320ec950b6601f99875e2c35ca80105e5b4
+ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816567"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491669"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>提供给 Microsoft 合作伙伴网络 (MPN) 中的合作伙伴的 Visual Studio 订阅
 
@@ -73,7 +73,7 @@ MPN 规则规定，作为计划权益提供的所有软件只能在内部使用�
 
 - [MPN 计划管理员指南](https://assets.microsoft.com/en-us/Program-Administrator-Guide-to-Software-and-Online-Services-Benefits_1.pdf) - 包含有关如何为 MPN 员工分配 Visual Studio 订阅的说明。
 - [为 MPN 员工分配 Visual Studio 订阅](manage-mpn-subscriptions.md)
-- [使用条款](http://www.microsoft.com/useterms/) - 通过 MPN 提供的 Visual Studio 订阅应遵循 Visual Studio 订阅不得转售 (NFR) EULA。
+- [使用条款](https://www.microsoft.com/useterms/) - 通过 MPN 提供的 Visual Studio 订阅应遵循 Visual Studio 订阅不得转售 (NFR) EULA。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -1,6 +1,6 @@
 ---
 title: 代码导航命令
-ms.date: 08/14/2018
+ms.date: 11/21/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - code editor, navigation
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - peek definition
 - go to line
 - go to
-author: jillre
-ms.author: jillfra
-manager: jillfra
+author: mikadumont
+ms.author: midumont
+manager: tglee
 ms.workload:
 - multiple
-ms.openlocfilehash: f1fcfd69e2de9a174c708da1c4f5eaedd397722e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f5348fc0c36435e5760f3967a7e6c9be2aecb1b7
+ms.sourcegitcommit: b04c603ce73b993d042ebdf7f3722cf4fe2ef7f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667016"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74316469"
 ---
 # <a name="navigate-code"></a>导航代码
 
@@ -124,6 +124,15 @@ Visual Studio 提供了许多用于在编辑器中导航代码的方法。 本�
 ------------ | ---
 **键盘** | 将文本游标放置在类型名称内部的某个位置，然后按 Ctrl+F12  
 **鼠标** | 右键单击类型名称，再选择“转到实现”  。
+
+## <a name="go-to-base"></a>转到基类
+
+使用“转到基类”，可以向上导航所选元素的继承链。 如果有多个结果，在“转到基类”窗口中可以看到它们  ：
+
+输入 | 函数
+------------ | ---
+**键盘** | 将文本游标放置在类型名称内部的某个位置，然后按 Alt+Home  
+**鼠标** | 右键单击类型名称，再选择“转到基类” 
 
 ## <a name="call-hierarchy"></a>调用层次结构
 

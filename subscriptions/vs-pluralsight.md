@@ -6,12 +6,12 @@ manager: lank
 ms.date: 11/18/2019
 ms.topic: conceptual
 description: 了解有关所选的 Visual Studio 订阅中随附的 Pluralsight 培训订阅。
-ms.openlocfilehash: 7db7858b95ca0b78ea54cebc394c3d57de53305a
-ms.sourcegitcommit: 5c9ca18eadc7ed0ed095cc5a3e1df40bbc13e70c
+ms.openlocfilehash: 26e9227fbd3852e4e9115e06e2882fe6358831a3
+ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74161955"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491288"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Pluralsight 培训权益
 
@@ -66,9 +66,9 @@ ms.locfileid: "74161955"
 |             Visual Studio Enterprise (NFR<sup>1</sup> )              |      计划      | 不可用 |       NA       |
 ||
 
-<sup>1</sup>  包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、BizSpark、MCT 软件和服务开发人员、MCT 软件和服务、最有价值专家 (MVP)、区域总监 (RD)、Microsoft 合作伙伴网络 (MPN)、FTE、Imagine。*
+<sup>1</sup>  包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、BizSpark、MCT 软件和服务开发人员、MCT 软件和服务、最有价值专家 (MVP)、区域总监 (RD)、Microsoft 合作伙伴网络 (MPN)、FTE、Imagine。 
 
-<sup>2</sup>  所选 Visual Studio 订阅中的 Pluralsight 权益随订阅一同续订。例如，如果你的年度订阅是每年续订一次，当你续订时也会获得每一年的权益。如果是多年订阅，你在订阅期间可获得 Pluralsight 权益。如果续订多年订阅，在续订后将再次获得该权益。*
+<sup>2</sup>  所选 Visual Studio 订阅中的 Pluralsight 权益随订阅一同续订。例如，如果你的年度订阅是每年续订一次，当你续订时也会获得每一年的权益。如果是多年订阅，你在订阅期间可获得 Pluralsight 权益。如果续订多年订阅，在续订后将再次获得该权益。 
 
 > [!NOTE]
 > Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 我们鼓励新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) 以浏览购买 Visual Studio 的不同选项。
@@ -78,7 +78,7 @@ ms.locfileid: "74161955"
 ## <a name="frequently-asked-questions"></a>常见问题
 
 ### <a name="q-i-have-a-visual-studio-enterprise-subscription-but-i-dont-see-the-pluralsight-tile-on-the-benefits-page-whats-wrong"></a>问：我拥有 Visual Studio Enterprise 订阅，但在“权益”页上看不到 Pluralsight 磁贴。 为什么会这样？
-答：并非所有 Visual Studio Enterprise 订阅都包含 Pluralsight 权益。  请检查[资格表](#eligibility)这一表格，以查看订阅是否符合条件。
+答：并非所有 Visual Studio Enterprise 订阅都包含 Pluralsight 权益。  请检查[资格表](#eligibility)，查看订阅是否符合条件。
 
 ### <a name="q-do-i-have-access-to-any-customized-learning--playlists-or-channels"></a>问：我是否有权访问任何自定义的学习播放列表或频道？
 答：有，你是 Visual Studio 订阅者，有权访问专家频道，这属于 Pluralsight 培训权益的一部分。 这些频道由 Microsoft 专家专门策划，旨在学习 .Net、Azure、DevOps 和移动性等领域的知识。 通过 Visual Studio 订阅门户[https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) 激活 Pluralsight 权益，获得在 Pluralsight 登录页上访问以下频道的权限 –
