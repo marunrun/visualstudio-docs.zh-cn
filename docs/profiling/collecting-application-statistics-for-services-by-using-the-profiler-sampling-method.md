@@ -6,14 +6,15 @@ ms.assetid: 07840ab2-3a92-4744-ac87-48b19e0ceecd
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f9b2de87e77abc701f14211cb49e82220c4c935d
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 17217a51c58e1d30b6e6854ee9dbb0c1fb662a3a
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263012"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779683"
 ---
 # <a name="collect-application-statistics-for-services-by-using-the-profiler-sampling-method"></a>使用探查器采样方法收集服务的应用程序统计信息
 本部分介绍从命令行使用采样方法收集 Windows 服务的性能统计信息的步骤和选项。

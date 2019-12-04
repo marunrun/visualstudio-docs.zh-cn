@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 0405488f6f456f22711498e81789881ffc5a0a8a
-ms.sourcegitcommit: 308a2bdbea81df78bffc3a01afce4ab13131fabc
+ms.openlocfilehash: 95693261cebf26bb740861795f7faf5c56503daf
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73912996"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777928"
 ---
 # <a name="debug-a-javascript-or-typescript-app-in-visual-studio"></a>在 Visual Studio 中调试 JavaScript 或 TypeScript 应用
 
@@ -111,7 +111,7 @@ Visual Studio 仅为 Chrome 和 Internet 资源管理器提供客户端调试支
 
     若要在转译的文件中查找特定代码，请使用 Ctrl+F（“编辑” > “查找和替换” > “快速查找”）。     
 
-    对于客户端代码，为了在 TypeScript 文件或 JSX 文件中命中断点，通常需要使用[源映射](#generate_source_maps)。 必须正确配置源映射，才支持在 Visual Studio 中进行调试。
+    对于客户端代码，若要在 TypeScript 文件中命中断点，.vue 或 JSX 文件通常需要使用[源映射](#generate_source_maps)  。 必须正确配置源映射，才支持在 Visual Studio 中进行调试。
 
 2. 选择目标浏览器作为 Visual Studio 中调试目标，然后按 Ctrl+F5（“调试” > “启动时不调试”）在浏览器中运行应用     。
 
@@ -127,7 +127,6 @@ Visual Studio 仅为 Chrome 和 Internet 资源管理器提供客户端调试支
     > 从 Visual Studio 2017 开始，首次通过这些步骤附加到进程后，可选择“调试” > “重新附加到进程”，快速重新附加到同一进程   。
 
 4. 在“附加到进程”  对话框中，获取可附加到的浏览器实例的筛选列表。
-
     ::: moniker range=">=vs-2019"
     在 Visual Studio 2019 中，为“附加到”字段中的目标浏览器 JavaScript (Chrome) 或 JavaScript (Microsoft Edge - Chromium) 选择正确的调试器，在筛选器框中键入“chrome”或“edge”以筛选搜索结果      。
     ::: moniker-end

@@ -8,14 +8,15 @@ ms.assetid: 895b9589-1987-4160-916f-53b898a69cf0
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: be1c3b972397246823512f67e6fe2a0e2ecabbd5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f6449ad30edf11d3d315532cc33db2a79c14f90b
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62830028"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778526"
 ---
 # <a name="modules-view---instrumentation-data"></a>“模块”视图 - 检测数据
 “模块”视图显示按分析数据中的模块分组的性能数据。 模块的各函数在模块节点下列出。
@@ -25,7 +26,7 @@ ms.locfileid: "62830028"
 
 |列|说明|
 |------------|-----------------|
-|**名称**|函数或模块的名称。|
+|**Name**|函数或模块的名称。|
 |**函数行号**|此函数在源文件中的起始行号。|
 |**调用数**|对此函数或模块进行的调用总数。|
 |**源文件**|此函数的定义所在的源文件。|

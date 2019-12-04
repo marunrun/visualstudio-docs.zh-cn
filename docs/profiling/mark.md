@@ -6,19 +6,20 @@ ms.assetid: 1d72cef3-bb09-4bbb-8864-6ea0ab623ff9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 440401f8c46a3920fce6c8e0d29f630a24103f65
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4bf89469c4137052247b5a1fdfee7f8dc694fbcc
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62999982"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74773989"
 ---
 # <a name="mark"></a>标记
-VSPerfCmd.exe 的“标记”选项可以在分析数据文件中插入指定的信息。 标记可能列在单独的 VSPerfReport 报表中或探查器 UI 的“标记报表”视图中。 标记可用于指定报表和视图筛选器中的起止点。
+VSPerfCmd.exe 的“标记”选项可以在分析数据文件中插入指定的信息   。 标记可能列在单独的 VSPerfReport 报表中或探查器 UI 的“标记报表”视图中。 标记可用于指定报表和视图筛选器中的起止点  。
 
- “标记”选项是命令行上可指定的唯一选项。
+ “标记”选项是命令行上可指定的唯一选项  。
 
 ## <a name="syntax"></a>语法
 

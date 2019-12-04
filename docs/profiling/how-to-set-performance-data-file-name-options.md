@@ -6,22 +6,23 @@ ms.assetid: d7a8d6b9-ab23-46fb-98ed-774781157860
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b83b0aa083ca115797c9dc1cd8345d397307177
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cc42b63524a867c0893aa255180c740d03d4b5fe
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62539264"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778760"
 ---
 # <a name="how-to-set-performance-data-file-name-options"></a>如何：设置性能数据文件名选项
 
-默认情况下，使用以下语法保存分析数据 (.vsp) 文件：
+默认情况下，使用以下语法保存分析数据 (.vsp) 文件  ：
 
 *Path\VSP-File\YYMMDD(N)* **.vsp**
 
-在性能会话属性对话框的“常规”页上，可以更改任意命名参数。
+在性能会话属性对话框的“常规”页上，可以更改任意命名参数  。
 
 |||
 |-|-|
@@ -32,11 +33,11 @@ ms.locfileid: "62539264"
 
 ## <a name="to-change-the-naming-syntax-of-the-profiling-data-files-of-a-performance-session"></a>更改性能会话分析数据文件的命名语法
 
-1. 在“性能资源管理器”中，右键单击性能会话的名称，然后单击“属性”。
+1. 在“性能资源管理器”  中，右键单击性能会话的名称，然后单击“属性”  。
 
-2. 单击“常规”。
+2. 单击“常规”  。
 
-3. 在“报告”下更改下列任意设置：
+3. 在“报告”下更改下列任意设置： 
 
     |||
     |-|-|

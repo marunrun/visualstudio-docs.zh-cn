@@ -14,14 +14,15 @@ ms.assetid: f501f423-bef9-4e08-bf96-c9ac9957e5a2
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 83ddc7462b703ef28a52b531aa379b46198516df
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d42469ac5236a41eda96af5d1fe896a5ed84a321
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62936465"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779398"
 ---
 # <a name="da0013-high-usage-of-stringsplit-or-stringsubstring"></a>DA0013：String.Split 或 String.Substring 的使用率高
 
@@ -42,4 +43,4 @@ ms.locfileid: "62936465"
  如果管理内存分配对于应用程序很重要，请考虑使用 String.Split 和 String.Substr 方法的替代方法。 例如，可以使用 IndexOf 或 IndexOfAny 方法查找 String 字符内的特定子字符串，而无需创建 String 类的新实例。
 
 ## <a name="how-to-investigate-a-warning"></a>如何调查警告
- 双击“错误列表”窗口中的消息，导航到采样分析数据的[函数详细信息视图](../profiling/function-details-view.md)。 检查调用函数，以查找程序中使用 System.String.Split 或 System.String.Substr 方法最频繁的部分。 如果可以，请使用 IndexOf 或 IndexOfAny 方法查找 String 字符内的特定子字符串，而无需创建 String 类的新实例。
+ 双击“错误列表”窗口中的消息，导航到采样分析数据的[函数详细信息视图](../profiling/function-details-view.md)  。 检查调用函数，以查找程序中使用 System.String.Split 或 System.String.Substr 方法最频繁的部分。 如果可以，请使用 IndexOf 或 IndexOfAny 方法查找 String 字符内的特定子字符串，而无需创建 String 类的新实例。

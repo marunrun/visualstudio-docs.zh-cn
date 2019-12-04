@@ -8,14 +8,15 @@ ms.assetid: 1a9aa122-2d8f-4a09-b503-92975aa6b648
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f9d3cf030ca0e996365963e5dad419b19ff67596
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2de844867e9c0a8d95abdaa13f860a6487254bfe
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62830057"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74780008"
 ---
 # <a name="modules-view---contention-data"></a>“模块”视图 - 争用数据
 争用数据的“模块”视图显示按分析数据中采样的模块分组的并发数据。 每个模块都是一个层次结构树的根。 模块节点下列出其中发生争用事件的模块的函数。
@@ -37,7 +38,7 @@ ms.locfileid: "62830057"
 |**函数行号**|此函数在源文件中的起始行号。|
 |**模块名**|包含函数、行或指令指针的模块的名称。|
 |**模块路径**|包含模块、函数、行或指令指针的模块的路径。|
-|**名称**|模块或函数的名称。|
+|**Name**|模块或函数的名称。|
 |**进程 ID**|分析运行的进程 ID (PID)。|
 |**进程名**|进程的名称。|
 |**源文件**|此函数的定义所在的源文件。|

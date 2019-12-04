@@ -10,14 +10,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 37025177c026d0b6578644ca5765a6878be984ea
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9accd3d0ab5ff1f7a3084d5973cace08e66396b9
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62552992"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779544"
 ---
 # <a name="cpu-and-windows-counters"></a>CPU 和 Windows 计数器
 
@@ -44,7 +45,7 @@ Visual Studio 探查器继续支持特定平台的特定事件。 例如，Penti
 
 可移植事件是一组非特定于某个特定处理器的 CPU 计数器。 所有其他的 CPU 计数器称为平台事件，并且在各种平台上可能不受支持。
 
- 可移植事件和平台事件的计数器在 .xml 文件中定义，其中提供了与计数器相关的特定值。 有多个适用于不同 CPU 的文件，因为适用于 Intel 和 AMD CPU 的数据不同。 [!INCLUDE[vs_orcas_long](../debugger/includes/vs_orcas_long_md.md)] 探查器使用此信息向用户展现用于性能测量的相应的计数器（可移植和平台）。
+ 可移植事件和平台事件的计数器在 .xml 文件中定义，其中提供了与计数器相关的特定值  。 有多个适用于不同 CPU 的文件，因为适用于 Intel 和 AMD CPU 的数据不同。 [!INCLUDE[vs_orcas_long](../debugger/includes/vs_orcas_long_md.md)] 探查器使用此信息向用户展现用于性能测量的相应的计数器（可移植和平台）。
 
 ### <a name="portable-events"></a>可移植事件
 
@@ -87,31 +88,31 @@ Visual Studio 探查器继续支持特定平台的特定事件。 例如，Penti
 
 #### <a name="to-view-a-list-of-a-list-of-all-cpu-counters-that-are-supported-on-the-current-platform"></a>查看当前平台上支持的所有 CPU 计数器列表的列表
 
-1. 在“性能资源管理器”中，右键单击性能会话，然后单击“属性”。
+1. 在“性能资源管理器”中，右键单击性能会话，然后单击“属性”  。
 
 2. 执行下列操作之一：
 
-   - 单击“采样”，然后从“采样”事件列表中选择“性能计数器”。 CPU 计数器列在“可用的性能计数器”中。
+   - 单击“采样”  ，然后从“采样”  事件列表中选择“性能计数器”  。 CPU 计数器列在“可用的性能计数器”  中。
 
-      **请注意**：单击“取消”可返回到上一个采样配置。
+      **请注意**：单击“取消”  可返回到上一个采样配置。
 
-     或
+     -或-
 
-   - 选择“CPU 计数器”，然后选择“收集 CPU 计数器”。 CPU 计数器列在“可用的计数器”中。
+   - 选择“CPU 计数器”  ，然后选择“收集 CPU 计数器”  。 CPU 计数器列在“可用的计数器”  中。
 
-      **请注意**：单击“取消”可返回到上一个计数器收集配置。
+      **请注意**：单击“取消”  可返回到上一个计数器收集配置。
 
 #### <a name="to-view-a-list-of-a-list-of-window-counters-that-are-supported-on-the-current-platform"></a>查看当前平台上支持的 Windows 计数器列表的列表
 
-1. 在“性能资源管理器”中，右键单击性能会话，然后单击“属性”。
+1. 在“性能资源管理器”中，右键单击性能会话，然后单击“属性”  。
 
-2. 单击“Windows 计数器”。
+2. 单击“Windows 计数器”  。
 
-3. 选择“收集 Windows 计数器”。
+3. 选择“收集 Windows 计数器”  。
 
-4. 从“计数器类别”列表中，选择一个计数器组。 该组的 Windows 计数器将显示在列表框中。
+4. 从“计数器类别”  列表中，选择一个计数器组。 该组的 Windows 计数器将显示在列表框中。
 
-     **注意：** 单击“取消”可返回到上一个计数器收集配置。
+     **注意：** 单击“取消”可返回到上一个计数器收集配置  。
 
 ### <a name="command-line"></a>命令行
 

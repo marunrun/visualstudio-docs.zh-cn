@@ -1,17 +1,17 @@
 ---
-title: 使用订阅者门户 - http://my.visualstudio.com | Microsoft Docs
+title: 使用订阅者门户 - https://my.visualstudio.com | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.date: 07/19/2019
 ms.topic: conceptual
 description: 了解 Visual Studio 订阅门户为你提供的所有权益
-ms.openlocfilehash: 5ca5d3a2dcdf04e54159c746b93368b7d56be0da
-ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
+ms.openlocfilehash: 7f1d3654aa49b53a1bb8543c28f6edb517c265bf
+ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095314"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74705831"
 ---
 # <a name="using-the-subscriber-portal---myvisualstudiocom"></a>使用订阅者门户 - my.visualstudio.com
 

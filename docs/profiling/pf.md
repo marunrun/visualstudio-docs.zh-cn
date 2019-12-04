@@ -6,17 +6,18 @@ ms.assetid: cdc0a094-a986-4629-bd1c-dd5fdca323dc
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: bf6bc8ae841ad8ba0d3fd376176bdff2332fb958
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 07ec6d636ec087386fdc9462ae09db55400957a9
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432002"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778409"
 ---
 # <a name="pf"></a>PF
-VSPerfCmd.exe PF 选项将采样的分析事件设置为页面错误，还可选择性地将采样间隔内的页面错误数从默认值 10 改为其他值。
+VSPerfCmd.exe PF 选项将采样的分析事件设置为页面错误，还可选择性地将采样间隔内的页面错误数从默认值 10 改为其他值   。
 
 > [!NOTE]
 > **PF** 不能用于 64 位系统。
@@ -39,20 +40,20 @@ VSPerfCmd.exe {/Launch:AppName|/Attach:PID} /PF[:Events] [Options]
 ## <a name="required-options"></a>必需选项
  只能在包含以下选项之一的命令行中指定 **PF**。
 
- **Launch:**`AppName` 启动探查器以及由 AppName 指定的应用程序。
+ **Launch:** `AppName` 启动探查器以及由 AppName 指定的应用程序。
 
- **Attach：**`PID` 将探查器附加到由 AppName 指定的进程。
+ **Attach：** `PID` 将探查器附加到由 AppName 指定的进程。
 
 ## <a name="invalid-options"></a>无效选项
  不能在 **PF** 所在的命令行中指定以下选项。
 
- **Timer**[**:**`Cycles`] 将采样事件设置为处理器时钟周期，还可以选择将采样间隔设置为 `Cycles`。 默认 Timer 间隔为 10,000,000。
+ **Timer**[ **:** `Cycles`] 将采样事件设置为处理器时钟周期，还可以选择将采样间隔设置为 `Cycles`。 默认 Timer 间隔为 10,000,000。
 
- **Sys**[**:**`Events`] 将采样事件设置为被分析的应用程序对操作系统内核的调用 (syscall)，还可以选择将采样间隔设置为 `Events`。 默认 Sys 间隔为 10。
+ **Sys**[ **:** `Events`] 将采样事件设置为被分析的应用程序对操作系统内核的调用 (syscall)，还可以选择将采样间隔设置为 `Events`。 默认 Sys 间隔为 10。
 
  **Counter:** `Name`[`,Reload`[`,FriendlyName`]] 将采样事件设置为 `Name` 指定的 CPU 性能计数器，并将采样间隔设置为 `Reload`。
 
- **GC**[**:**{**Allocation**&#124;**Lifetime**}] 收集 .NET 内存数据。 默认情况 (Allocation) 下，每次发生内存分配事件时都收集数据。 如果指定 Lifetime 参数，则每次发生垃圾回收事件时也收集数据。
+ **GC**[ **:** {**Allocation**&#124;**Lifetime**}] 收集 .NET 内存数据。 默认情况 (Allocation) 下，每次发生内存分配事件时都收集数据  。 如果指定 Lifetime 参数，则每次发生垃圾回收事件时也收集数据  。
 
 ## <a name="example"></a>示例
  本示例演示如何将分析样本事件设置为页面错误，以及如何将采样间隔设置为 20 个页面错误。

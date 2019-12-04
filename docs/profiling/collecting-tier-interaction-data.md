@@ -12,14 +12,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: fcdab1fcb776a729d00a143dfc318053b74c5cf5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e01259fdd23e60a1408addc10a6af3a12479c9f2
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62831497"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74772813"
 ---
 # <a name="collect-tier-interaction-data"></a>收集层交互数据
 
@@ -39,11 +40,11 @@ ms.locfileid: "62831497"
 
 ## <a name="to-add-tier-interaction-data-to-a-profiling-run-by-using-the-performance-session-property-pages"></a>使用性能会话属性页将层交互数据添加到分析运行中
 
-1. 在“性能资源管理器”中，从上下文菜单中选择“属性”。
+1. 在“性能资源管理器”中，从上下文菜单中选择“属性”  。
 
-2. 选择“层交互”页，然后选中“启用层交互分析”复选框。
+2. 选择“层交互”  页，然后选中“启用层交互分析”  复选框。
 
-3. 在“性能资源管理器”中，选择“目标”节点，然后指定要分析的项目、可执行文件或网站。
+3. 在“性能资源管理器”中，选择“目标”  节点，然后指定要分析的项目、可执行文件或网站。
 
 ## <a name="see-also"></a>请参阅
 

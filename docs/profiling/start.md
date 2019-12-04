@@ -6,17 +6,18 @@ ms.assetid: b85d0fe9-f67a-4b7c-8d48-7eecf3f2dfe9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e85c589866aba54e856afb066cec253c7057aaad
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: df3ccda9730be02bafb7f7d069a26193a4528d1e
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979674"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778266"
 ---
 # <a name="start"></a>Start
-Start 选项是一个 VSPerfCmd.exe 选项，可将探查器初始化为指定分析方法。
+Start 选项是一个 VSPerfCmd.exe 选项，可将探查器初始化为指定分析方法   。
 
 ## <a name="syntax"></a>语法
 
@@ -38,26 +39,26 @@ VSPerfCmd.exe /Start:Method /Output:FileName [Options]
 ## <a name="required-options"></a>必需选项
  在命令行上指定 **Start** 时，必须指定 **Output** 选项。
 
- **输出：**`filename` 指定输出文件名。
+ **输出：** `filename` 指定输出文件名。
 
 ## <a name="exclusive-options"></a>独占选项
  以下选项只能在命令行上与 **Start** 选项一起使用。
 
  **CrossSession**&#124;**CS** 启用跨进程分析。 同时支持选项名 **CrossSession** 和 **CS**。
 
- **User:**[`domain\`]`username` 使客户端可以用指定帐户访问监视器。
+ **User:** [`domain\`]`username` 使客户端可以用指定帐户访问监视器。
 
- **WinCounter:** `Path` [**Automark**:`n`] WinCounter 指定要作为标记包含在分析数据文件中的 Windows 性能计数器。 **AutoMark** 以毫秒为单位指定数据文件的收集之间的间隔。
+ **WinCounter:** `Path` [**Automark**:`n`] WinCounter 指定要作为标记包含在分析数据文件中的 Windows 性能计数器  。 **AutoMark** 以毫秒为单位指定数据文件的收集之间的间隔。
 
 ## <a name="invalid-options"></a>无效选项
  以下选项不能在命令行上与 **Start** 选项一起使用。
 
- **Status** Status 适用于用于被分析的进程。 它列出进程和线程及其当前分析状态 (On/Off)。 例如，如果某个进程已停止，则 **Status** 不会在报告中对此进行指示。 **Status** 会显示该进程是否进行分析。
+ **Status** Status 适用于用于被分析的进程  。 它列出进程和线程及其当前分析状态 (On/Off)。 例如，如果某个进程已停止，则 **Status** 不会在报告中对此进行指示。 **Status** 会显示该进程是否进行分析。
 
- **Shutdown**[**:**`Timeout`] 关闭探查器。
+ **Shutdown**[ **:** `Timeout`] 关闭探查器。
 
 ## <a name="example"></a>示例
- 以下示例演示如何使用 VSPerfCmd.exe Start 选项来初始化探查器。
+ 以下示例演示如何使用 VSPerfCmd.exe Start 选项来初始化探查器   。
 
 ```cmd
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp

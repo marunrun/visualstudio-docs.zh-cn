@@ -9,14 +9,15 @@ ms.assetid: 5c4e8ec3-d0d3-485a-93bd-9060df4eb739
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d0655c0faf57a72d6e99ba65f9f84db059e5fe0
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 558cef408ceca48a55563ae31f2399da0e951b8e
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63406019"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779748"
 ---
 # <a name="call-tree-view---sampling-data"></a>“调用树”视图 - 采样数据
 “调用关系树”视图显示在分析应用程序中遍历的函数执行路径。
@@ -29,12 +30,12 @@ ms.locfileid: "63406019"
  “调用关系树”视图中的值对应于调用树中父函数所调用的函数实例。 通过将函数实例值与分析运行中的样本总数进行对比得出百分比值。
 
 ## <a name="highlight-the-execution-hot-path"></a>突出显示执行热路径
- “调用关系树”视图可以展开并突出显示进程的执行路径或采样频率最高的函数。 若要显示最活跃的路径，请右键单击该进程或函数，然后单击“展开热路径”。
+ “调用关系树”视图可以展开并突出显示进程的执行路径或采样频率最高的函数。 若要显示最活跃的路径，请右键单击该进程或函数，然后单击“展开热路径”  。
 
 ## <a name="set-the-call-tree-root-node"></a>设置调用树根节点
- 分析运行中的每个进程均显示为根节点。 若要设置“调用关系树”视图的开始节点，请右键单击要设置为开始节点的节点，然后选择“设置根节点”。
+ 分析运行中的每个进程均显示为根节点。 若要设置“调用关系树”视图的开始节点，请右键单击要设置为开始节点的节点，然后选择“设置根节点”  。
 
- 设置根节点后，将从视图中排除所选节点的子树之外的所有其他条目。 若要将根节点重置回原始节点，请在“调用树视图”窗口中右键单击并选择“重置根节点”。
+ 设置根节点后，将从视图中排除所选节点的子树之外的所有其他条目。 若要将根节点重置回原始节点，请在“调用树视图”窗口中右键单击并选择“重置根节点”  。
 
 |列|说明|
 |------------|-----------------|

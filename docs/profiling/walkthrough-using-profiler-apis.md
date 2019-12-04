@@ -9,14 +9,15 @@ ms.assetid: c2ae0b3e-a0ca-4967-b4df-e319008f520e
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 203952f712fb3b28b93d570f99e6d36f56b5f2b5
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 81071a44b51b1441782b25741126873fc720ed7b
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68870281"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779878"
 ---
 # <a name="walkthrough-using-profiler-apis"></a>演练：使用探查器 API
 
@@ -30,9 +31,6 @@ ms.locfileid: "68870281"
 
  通过 Visual Studio 探查器，可以限制数据收集。 本演练提供一个示例，说明如何使用探查器 API 限制数据收集。 Visual Studio 探查器提供一个 API，用于从应用程序内部控制数据收集。
 
- ::: moniker range=">=vs-2019"
- 对于本机代码，Visual Studio 探查器 API 位于 VSPerf.dll 中  。 头文件 VSPerf.h 和导入库 VSPerf.lib 位于 Microsoft Visual Studio \2019\Team Tools\Performance Tools\PerfSDK 目录中    。  对于 64 位应用，文件夹为 Microsoft Visual Studio\2019\Team Tools\Performance Tools\x64\PerfSDK 
- ::: moniker-end
  ::: moniker range="vs-2017"
  对于本机代码，Visual Studio 探查器 API 位于 VSPerf.dll 中  。 头文件 VSPerf.h 和导入库 VSPerf.lib 位于 Microsoft Visual Studio \2017\Team Tools\Performance Tools\PerfSDK 目录    。  对于 64 位应用，文件夹为 Microsoft Visual Studio\2017\Team Tools\Performance Tools\x64\PerfSDK 
  ::: moniker-end

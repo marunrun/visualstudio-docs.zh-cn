@@ -8,14 +8,15 @@ ms.assetid: be75b03c-7af5-4abe-a54a-6ee5479ad877
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f9ae8f5cfeb3e5bcaf223e84f25007ebea646da2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a5492d2bbd33e6b250b564532c929234d748506c
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967841"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778227"
 ---
 # <a name="stopprofile"></a>StopProfile
 `StopProfile` 函数将指定分析级别的计数器设置为 0（关闭）。
@@ -31,7 +32,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI StopProfile(
 #### <a name="parameters"></a>参数
  `Level`
 
- 指示性能数据集合可应用到的分析级别。 以下 PROFILE_CONTROL_LEVEL 枚举器可用于指示性能数据集合可应用到的三个级别之一：
+ 指示性能数据集合可应用到的分析级别。 以下 PROFILE_CONTROL_LEVEL 枚举器可用于指示性能数据集合可应用到的三个级别之一  ：
 
 |枚举器|说明|
 |----------------|-----------------|

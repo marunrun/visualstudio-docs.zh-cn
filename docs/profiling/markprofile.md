@@ -8,17 +8,18 @@ ms.assetid: 54dac8c8-c8ee-4023-af27-b25466e3a6ec
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d7640b4f846dd4fa5a9f8b16ead7019ca3ba821
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: f53b51f9e78e2cb5d327abd3a79ebf2faa3a9204
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63430940"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778565"
 ---
 # <a name="markprofile"></a>MarkProfile
-`MarkProfile` 方法可在 .vsp 文件中插入配置文件标记。 包含 `MarkProfile` 函数的线程的分析必须处于开启状态，才能插入标记。
+`MarkProfile` 方法可在 .vsp 文件中插入配置文件标记  。 包含 `MarkProfile` 函数的线程的分析必须处于开启状态，才能插入标记。
 
 ## <a name="syntax"></a>语法
 
@@ -45,9 +46,9 @@ PROFILE_COMMAND_STATUS PROFILERAPI MarkProfile( long lMarker );
 |MARK_OK|返回 MARK_OK 以指示成功。|
 
 ## <a name="remarks"></a>备注
- 如果正在分析包含 MarkProfile 函数的线程，则每次运行代码时，都会向 .vsp 文件插入标记值。 可多次调用 MarkProfile。
+ 如果正在分析包含 MarkProfile 函数的线程，则每次运行代码时，都会向 .vsp 文件插入标记值  。 可多次调用 MarkProfile。
 
- 配置文件标记具有全局范围。 例如，在一个线程中插入的配置文件标记可用于标记 .vsp 文件中任何线程的数据段的开头或结尾。
+ 配置文件标记具有全局范围。 例如，在一个线程中插入的配置文件标记可用于标记 .vsp 文件中任何线程的数据段的开头或结尾  。
 
  当使用 Mark 命令或 API 函数（CommentMarkAtProfile、CommentMarkProfile 或 MarkProfile）插入标记和注释时，包含标记配置文件函数的线程的分析状态必须为“开”。
 
@@ -55,12 +56,12 @@ PROFILE_COMMAND_STATUS PROFILERAPI MarkProfile( long lMarker );
 > MarkProfile 方法仅能与检测分析一起使用。
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 等效项
- Microsoft.VisualStudio.Profiler.dll
+ Microsoft.VisualStudio.Profiler.dll 
 
 ## <a name="function-information"></a>函数信息
- 标头：在 VSPerf.h 中声明
+ 标头：在 VSPerf.h 中声明 
 
- 导入库：VSPerf.lib
+ 导入库：VSPerf.lib 
 
 ## <a name="example"></a>示例
  下面的代码阐释了 MarkProfile 函数。

@@ -11,17 +11,18 @@ ms.assetid: 1905b45d-c6b3-43c8-87b1-1aee734f37f9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 101512cb15bca022e5e3b473c84bd433a7269e15
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c6dc9d485f6f40eb345ade8f9680be9e0b948106
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62973898"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778994"
 ---
 # <a name="how-to-compare-performance-data-files"></a>如何：比较性能数据文件
-可以创建比较（“差异”）报表或视图来比较两个不同的探查器数据文件（.vsp 或 .vsps）的结果。 比较显示从一个分析会话到另一个分析会话所发生的差异、性能回归和改进。
+可以创建比较（“差异”）报表或视图来比较两个不同的探查器数据文件（.vsp 或 .vsps）的结果   。 比较显示从一个分析会话到另一个分析会话所发生的差异、性能回归和改进。
 
  “差异”报表呈现数据的表视图。 该表呈现增量，或基线中的更改。 这是通过确定新分析中的旧值、基线值和结果值之间的差异来计算的。
 
@@ -31,28 +32,28 @@ ms.locfileid: "62973898"
 
 ### <a name="to-create-comparison-file-view-for-a-project-in-performance-explorer"></a>在“性能资源管理器”中为项目创建比较文件视图
 
-1. 在性能资源管理器中的“报表”下，选择想要用作比较基线值的 .vsp 或 .vsps 报表文件。
+1. 在性能资源管理器中的“报表”下，选择想要用作比较基线值的 .vsp 或 .vsps 报表文件     。
 
-2. 选择要比较的 .vsp 或 .vsps 报表文件。
+2. 选择要比较的 .vsp 或 .vsps 报表文件   。
 
-3. 右键单击其中一个所选文件，然后单击“比较报告”。
+3. 右键单击其中一个所选文件，然后单击“比较报告”  。
 
 ### <a name="to-compare-values"></a>比较值
 
-1. 在“报表视图”窗口中选择“比较报告”。
+1. 在“报表视图”窗口中选择“比较报告”  。
 
-2. 在“表”下拉列表中，选择要比较的函数或模块。
+2. 在“表”  下拉列表中，选择要比较的函数或模块。
 
-3. 在“列”下拉列表中，选择要比较的值。
+3. 在“列”  下拉列表中，选择要比较的值。
 
-4. （可选）键入“阈值”的值。
+4. （可选）键入“阈值”  的值。
 
-5. 单击“应用”。
+5. 单击“应用”  。
 
 ### <a name="to-compare-report-files"></a>比较报表文件
 
-1. 在“分析”菜单上，选择“比较性能报告”。
+1. 在“分析”  菜单上，选择“比较性能报告”  。
 
-2. 在“选择要比较的分析文件”窗口中，浏览并选择基线文件分析文件（.vsp 或 .vsps）和比较文件（.vsp 或.vsps）。
+2. 在“选择要比较的分析文件”窗口中，浏览并选择基线文件分析文件（.vsp 或 .vsps）和比较文件（.vsp 或.vsps）        。
 
-3. 单击 **“确定”**。
+3. 单击 **“确定”** 。

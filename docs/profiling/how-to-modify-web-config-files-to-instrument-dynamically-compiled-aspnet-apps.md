@@ -6,14 +6,15 @@ ms.assetid: a92e5692-2183-4ae3-9431-b067c6a7aab4
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: e1e0f6377da52a0f1b26a6f50db44efc9a847f30
-ms.sourcegitcommit: 91c7f1b525e0c22d938bc4080ba4ceac2483474f
+ms.openlocfilehash: 6fb67a5b0da186bd87b9e5c39204e3acccc0529f
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67032946"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74775392"
 ---
 # <a name="how-to-modify-webconfig-files-to-instrument-and-profile-dynamically-compiled-aspnet-web-applications"></a>如何：修改 Web.Config 文件以检测和分析动态编译的 ASP.NET Web 应用程序
 使用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 分析工具检测方法，可以从动态编译的 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 应用程序收集详细计时数据、.NET 内存分配数据和 .NET 对象生存期数据。
@@ -139,7 +140,7 @@ ms.locfileid: "67032946"
    | 特性名 | 特性值 |
    |----------------| - |
    | **key** | **Microsoft.VisualStudio.Enterprise.AspNetHelper.VsInstrLocation** |
-   | **值** | `PerformanceToolsFolder` **\VSInstr.Exe** |
+   | **value** | `PerformanceToolsFolder` **\VSInstr.Exe** |
 
 4. 再添加一个 **add** 元素作为 **appSettings** 元素的子元素。
 
@@ -148,7 +149,7 @@ ms.locfileid: "67032946"
    |特性名|特性值|
    |--------------------|---------------------|
    |**key**|**Microsoft.VisualStudio.Enterprise.AspNetHelper.VsInstrTools**|
-   |**值**|`PerformanceToolsFolder`|
+   |**value**|`PerformanceToolsFolder`|
 
     `PerformanceToolsFolder` 是探查器可执行文件的路径。 若要获取分析工具的路径，请参阅[指定命令行工具的路径](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)。
 

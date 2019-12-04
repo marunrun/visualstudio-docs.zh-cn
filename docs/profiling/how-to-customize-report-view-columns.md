@@ -11,14 +11,15 @@ ms.assetid: cb6f6d30-52a5-4d92-ab07-1d5ddb67884c
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e5fd58603e287de31fab35375e9441f9113fb025
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6a297e6bfbed5023db97cabd370679b0de6caaab
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62973924"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778968"
 ---
 # <a name="how-to-customize-report-view-columns"></a>如何：自定义报表视图列
 Visual Studio Team System Development Edition 中的性能工具与集成开发环境 (IDE) 全面集成，旨在提供无缝的用户体验。 下表显示了可通过添加、删除和重新排列列自定义的视图：
@@ -47,12 +48,12 @@ Visual Studio Team System Development Edition 中的性能工具与集成开发�
 
 1. 打开报告视图。
 
-2. 右键单击报告视图图面，然后单击“添加/删除列”。
+2. 右键单击报告视图图面，然后单击“添加/删除列”  。
 
-     随即出现“添加/删除列”对话框。
+     随即出现“添加/删除列”对话框  。
 
 3. 选择要添加的列。
 
 4. 单击箭头按钮对列重新排序。
 
-5. 单击 **“确定”**。
+5. 单击 **“确定”** 。

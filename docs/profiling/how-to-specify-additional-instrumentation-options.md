@@ -11,14 +11,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c95add435824663e798d226e0be11ddbe06b8aba
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2d1f7e912ed5960c52e3f0bfa40fe9b87e91a2e6
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62539135"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778695"
 ---
 # <a name="how-to-specify-additional-instrumentation-options"></a>如何：指定其他检测选项
 
@@ -29,15 +30,15 @@ ms.locfileid: "62539135"
 
 ## <a name="to-specify-additional-instrumentation-option"></a>指定其他检测选项
 
-1. 在“性能资源管理器”中，选择“性能会话”，然后右键单击并选择“属性”。
+1. 在“性能资源管理器”中，选择“性能会话”，然后右键单击并选择“属性”    。
 
-2. 在“属性页”中，单击“高级”属性。
+2. 在“属性页”中   ，单击“高级”属性。
 
-3. 在“其他检测选项”框中键入选项。
+3. 在“其他检测选项”框中键入选项  。
 
      例如，使用 /CONTROL:THREAD 指定分析级别。 有关选项的完整列表，请参阅 [VSInstr](../profiling/vsinstr.md)。
 
-4. 单击 **“确定”**。
+4. 单击 **“确定”** 。
 
 ## <a name="see-also"></a>请参阅
 

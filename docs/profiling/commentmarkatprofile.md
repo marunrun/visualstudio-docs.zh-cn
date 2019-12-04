@@ -9,17 +9,18 @@ ms.assetid: 04294ca3-bf9c-4c76-86f1-898c2140de27
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e67f41bc4e30f0790e672a241dfe478a13ded9b7
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 51028dce1d60c0d01c83cee509a1ed7321855437
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63407565"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777837"
 ---
 # <a name="commentmarkatprofile"></a>CommentMarkAtProfile
-`CommentMarkAtProfile` 方法在 .vsp 文件中插入时间戳值、数值标记和注释字符串。 时间戳值可用于同步外部事件。 为了插入标记和注释，对包含 CommentMarkAtProfile 函数的线程进行的分析必须为 ON（启用状态）。
+`CommentMarkAtProfile` 方法在 .vsp 文件中插入时间戳值、数值标记和注释字符串  。 时间戳值可用于同步外部事件。 为了插入标记和注释，对包含 CommentMarkAtProfile 函数的线程进行的分析必须为 ON（启用状态）。
 
 ## <a name="syntax"></a>语法
 
@@ -63,14 +64,14 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (
 > CommentMarkAtProfile 方法仅能与检测一起使用。
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 等效项
- Microsoft.VisualStudio.Profiler.dll
+ Microsoft.VisualStudio.Profiler.dll 
 
 ## <a name="function-information"></a>函数信息
 
 |||
 |-|-|
-|**Header**|包括 VSPerf.h|
-|**Library**|使用 VSPerf.lib|
+|**Header**|包括 VSPerf.h |
+|**Library**|使用 VSPerf.lib |
 |**Unicode**|作为 CommentMarkAtProfileW (Unicode) 和 CommentMarkAtProfileA (ANSI) 实现。|
 
 ## <a name="example"></a>示例

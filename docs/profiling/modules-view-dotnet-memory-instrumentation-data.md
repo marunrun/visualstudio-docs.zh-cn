@@ -8,14 +8,15 @@ ms.assetid: 26516139-0981-41de-917d-ad5769391b8d
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: cb3117ff480e124aab6333eaed612c0438ed3911
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 521c884a0a25d7fa975a4039e6ec3e36ff4dc020
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62830041"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778539"
 ---
 # <a name="modules-view---net-memory-instrumentation-data"></a>“模块”视图 - .NET 内存检测数据
 使用检测方法收集的 .NET 内存分配数据的“模块”视图按分析运行期间执行的模块对内存和计时数据进行分组。 模块的各函数的分析数据在模块节点下列出。
@@ -24,7 +25,7 @@ ms.locfileid: "62830041"
 
 |列|说明|
 |------------|-----------------|
-|**名称**|函数或模块的名称。|
+|**Name**|函数或模块的名称。|
 |**函数行号**|此函数在源文件中的起始行号。|
 |**调用数**|对此函数或模块进行的调用总数。|
 |**源文件**|包含此函数的定义的源文件。|

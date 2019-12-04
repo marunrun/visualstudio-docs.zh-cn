@@ -9,14 +9,15 @@ ms.assetid: 029d5ebb-e551-46b0-b64e-2c553d9dbb8e
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: fe79d236750c5f165468c95f7ffa320f83f86f18
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 70fda712a29ff07ee34a4ac76a06198cb5ead8a5
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436436"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74780021"
 ---
 # <a name="functions-view---sampling-data"></a>“函数”视图 - 采样数据
 采样分析方法的“函数”报表视图列出分析运行期间采样的函数。

@@ -6,19 +6,20 @@ ms.assetid: ba656fa4-ef9d-4d8c-a3b6-739c3b5d23ae
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 25f452dcb473abf87d8992f36f5326973937e85e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bf5e0fdf478e067f61b1d0e259cb1624380e4f02
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967867"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778240"
 ---
 # <a name="status"></a>状态
-VSPerfCmd.exe Status 选项显示有关探查器状态以及当前正在分析的任何进程的信息。
+VSPerfCmd.exe Status 选项显示有关探查器状态以及当前正在分析的任何进程的信息   。
 
- **Status** 选项必须是命令行中指定的唯一选项。 必须先使用 VSPerfCmd.exe Start 选项初始化探查器，然后才能显示任何状态。
+ **Status** 选项必须是命令行中指定的唯一选项。 必须先使用 VSPerfCmd.exe Start 选项初始化探查器，然后才能显示任何状态   。
 
 ## <a name="syntax"></a>语法
 
@@ -27,7 +28,7 @@ VSPerfCmd.exe /Status
 ```
 
 #### <a name="parameters"></a>参数
- None
+ 无
 
 ## <a name="remarks"></a>备注
  **Status** 选项显示探查器的以下状态信息。
@@ -54,7 +55,7 @@ VSPerfCmd.exe /Status
 
  **启动/停止计数** 用于控制此进程的数据收集的主要内部探查器计数。 该计数必须等于一才能收集数据。 启动/停止计数可以通过探查器 API 以及 VSPerfCmd 选项 **GlobalOn**、**GlobalOff**、**ProcessOn**、**ProcessOff**、**ThreadOn** 和 **ThreadOff** 进行控制。
 
- **暂停/恢复计数** 用于控制此进程的数据收集的辅助内部探查器计数。 该计数必须小于或等于零才能收集数据。 “挂起/继续”计数只能通过探查器 API 进行控制。
+ **暂停/恢复计数** 用于控制此进程的数据收集的辅助内部探查器计数。 该计数必须小于或等于零才能收集数据。 “挂起/继续”  计数只能通过探查器 API 进行控制。
 
  **有监视器访问权限的用户** 列出有权访问探查器的用户名。 可以使用 VSPerfCmd.exe **Admin** 选项向其他用户授予访问权
 

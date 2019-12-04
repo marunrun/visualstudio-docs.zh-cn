@@ -6,14 +6,15 @@ ms.assetid: f37972b2-efe4-4a1c-a5d1-a246ccd76817
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f779a050c334e8f61d6d3711ed2be2a7b087e72
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f491ee766b2f17e14a8d13cc189018adea84903f
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62896681"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778552"
 ---
 # <a name="memory-and-paging-performance-rules"></a>内存和分页性能规则
 内存和分页类别中的性能规则确定在分析运行期间能影响应用程序性能和响应能力的分页活动。

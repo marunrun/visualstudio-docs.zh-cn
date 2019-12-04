@@ -6,14 +6,15 @@ ms.assetid: 9a1c934c-4798-4df9-a8ef-eb17ef06b6a2
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3878f22e37c281235e62e025c6b73779d3478f8b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5b7ef6975fe5d9d19ebd2cbb0ed10951ca6f3219
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62798362"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778435"
 ---
 # <a name="performance-rules-by-id"></a>按 ID 排序的性能规则
 

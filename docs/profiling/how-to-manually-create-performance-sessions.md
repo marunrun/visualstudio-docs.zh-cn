@@ -12,27 +12,28 @@ ms.assetid: ee2b3e0c-0990-46d9-8de6-c29fa386b15b
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ebdfdb1503570e08f38eed8efd278830756e50fa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 46c0f1bfeee785feebf1d643b0796c1308053403
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62817161"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778825"
 ---
 # <a name="how-to-manually-create-performance-sessions"></a>如何：手动创建性能会话
 可以手动创建性能会话。 不需要在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中打开项目，就可以执行该操作。 有关详细信息，请参阅[配置性能会话](../profiling/configuring-performance-sessions.md)。
 
 ### <a name="to-manually-create-a-performance-session"></a>手动创建性能会话
 
-1. 在“调试”菜单上，指向“探查器”>“性能资源管理器”，然后单击“新建性能会话”。
+1. 在“调试”  菜单上，指向“探查器”  >“性能资源管理器”  ，然后单击“新建性能会话”  。
 
-     随即将向“性能资源管理器”中添加一个空性能会话。
+     随即将向“性能资源管理器”中添加一个空性能会话  。
 
-2. 右键单击“目标”，然后单击“添加目标二进制文件”。
+2. 右键单击“目标”，然后单击“添加目标二进制文件”   。
 
-3. 在“添加目标二进制文件”对话框中，选择文件名，然后单击“打开”。
+3. 在“添加目标二进制文件”对话框中，选择文件名，然后单击“打开”   。
 
      将添加一个新的二进制文件。
 

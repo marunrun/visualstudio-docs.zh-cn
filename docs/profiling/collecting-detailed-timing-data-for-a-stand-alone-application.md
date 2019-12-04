@@ -9,14 +9,15 @@ ms.assetid: 4017d9d1-d609-4f41-8e4e-976abae746b3
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 13bc632d70b3d477b70f6e947e55d5c82c6ab064
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: a0c0fae312b5c193774d9acf8934a0688b2ed69e
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66262894"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779605"
 ---
 # <a name="collect-detailed-timing-data-for-a-stand-alone-application-by-using-the-profiler-command-line"></a>使用探查器命令行收集独立应用程序的详细计时数据
 本部分介绍从命令行使用检测方法收集客户端（独立）组件的详细性能数据的步骤和选项。

@@ -9,14 +9,15 @@ ms.assetid: 481f7579-f784-49ef-bb6c-2944e9d6ab42
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 0da4ea0080bfbfb3e4192902f63f50a640b14c8a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 18cc473f517e1f2eb03b657a365a33e4e37ff23f
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62995367"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74774158"
 ---
 # <a name="instrumentation-method-data-views"></a>检测方法数据视图
 本节包含有关使用检测方法生成的探查器数据文件的视图和报告的参考信息。

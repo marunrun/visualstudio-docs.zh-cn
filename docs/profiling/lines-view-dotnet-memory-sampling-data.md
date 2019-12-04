@@ -8,14 +8,15 @@ ms.assetid: 6631ab87-0e62-4c76-a063-4ea7222b07da
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: c654bbcc9db696d78e651414bfa89d6ad1e2f3e3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 503b3753f4f4fdc98f39804ec767277d7685d0d7
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63000068"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74774075"
 ---
 # <a name="lines-view---net-memory-sampling-data"></a>“行”视图 - .NET 内存采样数据
 使用采样方法的 .NET 内存分配分析数据的“行”视图列出分析运行期间分配内存的语句。 这些列还包括分配的大小和数量。
@@ -54,7 +55,7 @@ ms.locfileid: "63000068"
 |**源行结束**|源文件中发生分配的结束行号。|
 |**源字符开始**|发生分配的源文件行中起始字符的偏移量。|
 |**源字符结束**|发生分配的源文件行中结束字符的偏移量。|
-|**行名**|由探查器生成的行标识符，语法为：`Source File`**;[**`Line Number Start`**,**`Character Start`**]->;[**`Line Number Start,Character Start`**]**|
+|**行名**|由探查器生成的行标识符，语法为：`Source File` **;[** `Line Number Start` **,** `Character Start` **]->;[** `Line Number Start,Character Start` **]**|
 |**独占分配数**|此行中创建的对象总数。|
 |**独占分配数百分比**|在分析运行期间创建的，此行中分配的所有对象数的百分比。|
 |**独占字节数**|在分析运行期间分配的，此行中分配的所有内存字节数的百分比。|
