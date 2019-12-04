@@ -9,14 +9,15 @@ ms.assetid: 842112fc-b886-4801-8cd7-a25b314b0393
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 091961f3425714c0dc5ddabfac847c76339ab064
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2a74862d59fe402cbfd9e6bfa804d62ca4c8310b
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62994939"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778370"
 ---
 # <a name="profiling-and-windows-vista-security"></a>分析和 Windows Vista 安全性
 
@@ -32,9 +33,9 @@ ms.locfileid: "62994939"
 
 ## <a name="cross-session-profiling"></a>跨会话分析
 
-跨会话分析是分析在不同用户会话中运行的进程的能力。 例如，大多数服务在会话 0 中运行，而用户无法直接在会话 0 中运行。 使用性能资源管理器工具栏上的“附加到进程”按钮或 VSPerfCmd 命令行工具的 `/attach` 选项可以分析不同用户会话中的大多数进程。
+跨会话分析是分析在不同用户会话中运行的进程的能力  。 例如，大多数服务在会话 0 中运行，而用户无法直接在会话 0 中运行。 使用性能资源管理器工具栏上的“附加到进程”按钮或 VSPerfCmd 命令行工具的 `/attach` 选项可以分析不同用户会话中的大多数进程  。
 
-可以通过设置跨进程分析可见性选项来查看可用进程的列表。 在选择“附加到进程”时显示的“附加到进程”窗口中提供了这些选项：
+可以通过设置跨进程分析可见性选项来查看可用进程的列表。 在选择“附加到进程”时显示的“附加到进程”窗口中提供了这些选项   ：
 
 - **显示所有用户的进程**
 

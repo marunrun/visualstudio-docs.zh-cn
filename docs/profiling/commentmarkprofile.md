@@ -9,17 +9,18 @@ ms.assetid: 33ccff45-c33a-4672-b41f-5b317b848cd1
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 897ff07f78301553812f6855f3aa4bdb556a650e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: d45bab6b909fffa107158236d9050632f114c530
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440196"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74772777"
 ---
 # <a name="commentmarkprofile"></a>CommentMarkProfile
-`CommentMarkProfile` 函数在 .vsp 文件中插入数值标记和文本字符串。 为了插入标记和注释，对包含 `CommentMarkProfile` 函数的线程进行的分析必须为 ON。
+`CommentMarkProfile` 函数在 .vsp 文件中插入数值标记和文本字符串  。 为了插入标记和注释，对包含 `CommentMarkProfile` 函数的线程进行的分析必须为 ON。
 
 ## <a name="syntax"></a>语法
 
@@ -54,7 +55,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(
 ## <a name="remarks"></a>备注
  当使用 VSInstr Mark 命令或函数（CommentMarkAtProfile、CommentMarkProfile 或 MarkProfile）插入标记和注释时，包含标记配置文件函数的线程的分析状态必须为“开”。
 
- 配置文件标记具有全局范围。 例如，在一个线程中插入的配置文件标记可用于标记 .vsp 文件中任何线程的数据段的开头或结尾。
+ 配置文件标记具有全局范围。 例如，在一个线程中插入的配置文件标记可用于标记 .vsp 文件中任何线程的数据段的开头或结尾  。
 
 > [!IMPORTANT]
 > CommentMarkProfile 方法只能用于检测。

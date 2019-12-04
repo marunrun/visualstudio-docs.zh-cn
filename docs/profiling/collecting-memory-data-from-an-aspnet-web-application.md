@@ -9,28 +9,29 @@ ms.assetid: 57acf2b0-327a-4c0e-8078-ac2f6d99457d
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 03851869b2067efd014752ab854f30c2d4874711
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 9e8d9fde00a2390793ae8efe05b684e73caca321
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263545"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74773054"
 ---
 # <a name="collect-memory-data-from-an-aspnet-web-application-by-using-the-profiler-command-line"></a>使用探查器命令行收集 ASP.NET Web 应用程序的内存数据
-本部分介绍使用 VSPerfCmd 命令行工具收集 ASP.NET Web 应用程序的内存分配数据和对象生存期数据的过程和选项。
+本部分介绍使用 VSPerfCmd  命令行工具收集 ASP.NET Web 应用程序的内存分配数据和对象生存期数据的过程和选项。
 
 > [!NOTE]
-> 使用 VSPerfCmd 工具可完全访问分析工具功能，包括暂停和继续分析，以及从处理器和 Windows 性能计数器收集其他数据。 如果不需要此功能，也可以使用 VSPerfASPNETCmd 命令行工具。 与 [VSPerfCmd](../profiling/vsperfcmd.md) 命令行工具相比，无需设置任何环境变量，也不需要重启计算机。 有关详细信息，请参阅[使用 VSPerfASPNETCmd 进行快速网站分析](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md)。
+> 使用 VSPerfCmd  工具可完全访问分析工具功能，包括暂停和继续分析，以及从处理器和 Windows 性能计数器收集其他数据。 如果不需要此功能，也可以使用 VSPerfASPNETCmd  命令行工具。 与 [VSPerfCmd](../profiling/vsperfcmd.md) 命令行工具相比，无需设置任何环境变量，也不需要重启计算机。 有关详细信息，请参阅[使用 VSPerfASPNETCmd 进行快速网站分析](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md)。
 
 ## <a name="common-tasks"></a>常见任务
 
 |任务|相关内容|
 |----------|---------------------|
-|将探查器附加到正在运行的 ASP.NET 应用程序|-   [如何：将探查器附加到 ASP.NET Web 应用程序以收集内存数据](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-memory-data-by-using-the-command-line.md)|
-|检测静态编译的二进制文件|-   [如何：检测静态编译的 ASP.NET 应用程序并收集内存数据](../profiling/how-to-instrument-a-statically-compiled-aspnet-app-and-collect-memory-data.md)|
-|检测动态编译的二进制文件|-   [如何：检测动态编译的 ASP.NET 应用程序并收集内存数据](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data.md)|
+|将探查器附加到正在运行的 ASP.NET 应用程序 |-   [如何：将探查器附加到 ASP.NET Web 应用程序以收集内存数据](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-memory-data-by-using-the-command-line.md)|
+|检测静态编译的二进制文件 |-   [如何：检测静态编译的 ASP.NET 应用程序并收集内存数据](../profiling/how-to-instrument-a-statically-compiled-aspnet-app-and-collect-memory-data.md)|
+|检测动态编译的二进制文件 |-   [如何：检测动态编译的 ASP.NET 应用程序并收集内存数据](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data.md)|
 
 ## <a name="related-tasks"></a>相关任务
 
