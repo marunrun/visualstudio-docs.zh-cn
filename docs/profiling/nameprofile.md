@@ -9,14 +9,15 @@ ms.assetid: 1bb05441-c4ff-4323-9fef-f3924fba4430
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e0d4cdfd393961566a0aef0c649e6ff788fdc8ac
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: d9f0c9a3259186e1581a4673cdc18d1554e92b3c
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63403625"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778487"
 ---
 # <a name="nameprofile"></a>NameProfile
 `NameProfile` 函数会将字符串分配给指定的进程或线程。
@@ -47,7 +48,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
 
   `Level`
 
-  指示性能数据集合可应用到的分析级别。 以下 PROFILE_CONTROL_LEVEL 值可用于指示性能数据集合可应用到的三个级别之一：
+  指示性能数据集合可应用到的分析级别。 以下 PROFILE_CONTROL_LEVEL 值可用于指示性能数据集合可应用到的三个级别之一  ：
 
 |枚举器|说明|
 |----------------|-----------------|
@@ -84,14 +85,14 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
 > CreateProcess() 和 CreateThread() API 函数可以在初始化线程或进程前返回。
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 等效项
- Microsoft.VisualStudio.Profiler.dll
+ Microsoft.VisualStudio.Profiler.dll 
 
 ## <a name="function-information"></a>函数信息
 
 |||
 |-|-|
-|**Header**|包括 VSPerf.h|
-|**Library**|使用 VSPerf.lib|
+|**Header**|包括 VSPerf.h |
+|**Library**|使用 VSPerf.lib |
 |**Unicode**|作为 `NameProfileW` (Unicode) 和 `NameProfileA` (ANSI) 实现。|
 
 ## <a name="example"></a>示例

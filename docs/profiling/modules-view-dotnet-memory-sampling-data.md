@@ -8,14 +8,15 @@ ms.assetid: 9c05b51a-8382-44cf-a8f7-3fabdd2e8f1b
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0b4870a17988c4f926e04aca24e50419c4a27165
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9d0d9b7ab681a266115673b48f2c2604c5ff869c
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829952"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74772722"
 ---
 # <a name="modules-view---net-memory-sampling-data"></a>“模块”视图 - .NET 内存采样数据
 使用采样方法收集的 .NET 内存分配数据的“模块”视图按分析运行期间执行的模块对内存数据进行分组。 每个模块都是一个层次结构树的根。 模块的各函数在模块节点下列出。
@@ -24,7 +25,7 @@ ms.locfileid: "62829952"
 
 |列|说明|
 |------------|-----------------|
-|**名称**|模块、函数、行号或指令地址的名称。|
+|**Name**|模块、函数、行号或指令地址的名称。|
 |**进程 ID**|分析运行的进程 ID (PID)。|
 |**进程名**|进程的名称。|
 |**模块名**|函数所在模块的名称。|

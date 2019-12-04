@@ -6,14 +6,15 @@ ms.assetid: b877802d-c736-4047-821a-bd7733fff6de
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: dcce2a7a505c5ac5aa1db3232055f8b37b7e64ee
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d284ffc6b850a9746cf1442f35400a18045bbe18
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794381"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74772662"
 ---
 # <a name="overviews-performance-tools"></a>概述（性能工具）
 本节提供 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 分析工具的概念和术语概述，这些工具可以用于度量正在开发的应用程序的性能特征。

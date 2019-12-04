@@ -11,14 +11,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d9734c75f078380649009d10da13ed8c926e5e16
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2fa0547682351d1a7ba4efe4ce3b4350b906462c
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62973859"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779020"
 ---
 # <a name="how-to-collect-event-tracing-for-windows-etw-data"></a>如何：收集 Windows 事件跟踪 (ETW) 数据
 
@@ -29,11 +30,11 @@ Windows 事件跟踪 (ETW) 是有效的内核级别跟踪工具，该工具可�
 
 ## <a name="to-enable-event-trace-providers"></a>启用事件跟踪提供程序
 
-1. 在“性能资源管理器” 中，右键单击性能会话，然后单击“属性” 。
+1. 在“性能资源管理器”  中，右键单击性能会话，然后单击“属性”  。
 
-2. 在“属性页”中，单击“Windows 事件”属性。
+2. 在“属性页”  中，单击“Windows 事件”  属性。
 
-3. 在“选择从中收集数据的事件跟踪提供程序”列表中，选择要用来分析应用程序的事件提供程序。
+3. 在“选择从中收集数据的事件跟踪提供程序”  列表中，选择要用来分析应用程序的事件提供程序。
 
 ## <a name="see-also"></a>请参阅
 

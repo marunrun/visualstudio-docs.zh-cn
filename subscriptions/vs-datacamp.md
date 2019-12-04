@@ -6,12 +6,12 @@ manager: lank
 ms.date: 11/13/2019
 ms.topic: conceptual
 description: 了解有关所选 Visual Studio 订阅中随附的 DataCamp 培训订阅。
-ms.openlocfilehash: ea889814373fa7c970e905bb4a845d5ca67c92e7
-ms.sourcegitcommit: 6f25855de9db455e6d38bc105057d2ed1e7454b9
+ms.openlocfilehash: 4ddfe064539a2ff572a7c89b89d618dff84f63a0
+ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199883"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74706883"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 DataCamp 培训权益
 符合条件的 Visual Studio 订阅包括 DataCamp 订阅。  借助 DataCamp，可以通过浏览器舒适地学习需要的所有数据科学技能。 可以选择学习的时间和内容。 无需安装任何软件并且没有任何特殊硬件要求，学习数据科学比以往更加简单。
@@ -50,7 +50,7 @@ ms.locfileid: "74199883"
    > [!div class="mx-imgBorder"]
    > ![DataCamp 入门](_img/vs-datacamp/vs-datacamp-getting-started.png)
 
-可以随时停止，并在下一个会话中恢复培训。  只需访问 [http://www.datacamp.com](http://www.datacamp.com)，并登录。  你会看到仪表板，可以直接从暂停的位置继续培训。 只需单击“继续路线”  。
+可以随时停止，并在下一个会话中恢复培训。  只需访问 [https://www.datacamp.com](https://www.datacamp.com)，并登录。  你会看到仪表板，可以直接从暂停的位置继续培训。 只需单击“继续路线”  。
 
 > [!div class="mx-imgBorder"]
 > ![DataCamp 继续培训](_img/vs-datacamp/vs-datacamp-continue-training.png)

@@ -8,14 +8,15 @@ ms.assetid: 46497249-c797-42c5-a02c-3e4bb3b4ee60
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ed2c552baa07bf0f3d2a395cbdfbf1d5346178c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: ff4d851937111400002de531696b9b69aec20ba9
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435617"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778578"
 ---
 # <a name="lines-view---sampling-data"></a>“行”视图 - 采样数据
 采样数据的“行”视图列出分析运行期间收集样本时所执行语句的性能数据。
@@ -55,7 +56,7 @@ ms.locfileid: "63435617"
 |**源行结束**|源文件中收集此样本的的结束行号。|
 |**源字符开始**|源文件行中收集此样本的起始字符的偏移量。|
 |**源字符结束**|源文件行中收集此样本的结束字符的偏移量。|
-|**行名**|由探查器生成的行标识符，语法为：`Source File`**;[**`Line Number Start`**,**`Character Start`**]->;[**`Line Number End`**,**`Character End`**]**|
+|**行名**|由探查器生成的行标识符，语法为：`Source File` **;[** `Line Number Start` **,** `Character Start` **]->;[** `Line Number End` **,** `Character End` **]**|
 |**独占样本数**|执行函数行时收集的样本总数。|
 |**独占样本数百分比**|执行函数行时在分析运行期间收集的所有样本数的百分比。|
 

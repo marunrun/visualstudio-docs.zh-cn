@@ -8,18 +8,19 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 0bf78c94f8982af78d0f393c9cb5b878bef27d87
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 74137752900d082c545dd5e5271b7700ec81fa01
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62939503"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778292"
 ---
 # <a name="saving-symbol-information-with-performance-data-files"></a>使用性能数据文件保存符号信息
 
-如果使用 Visual Studio IDE 分析文件并且计划将 VSP 文件移动到其他计算机，则必须设置性能项目设置以在报告文件中保存或序列化符号。 这会增加报告文件的大小。 出于以下两个原因，需要序列化符号：
+如果使用 Visual Studio IDE 分析文件并且计划将 VSP 文件移动到其他计算机，则必须设置性能项目设置以在报告文件中保存或序列化  符号。 这会增加报告文件的大小。 出于以下两个原因，需要序列化符号：
 
 - 在目标程序集从它们在临时存储中的位置丢失之前，将代码符号嵌入到性能报告中。
 
@@ -27,7 +28,7 @@ ms.locfileid: "62939503"
 
 可以从 Visual Studio IDE 或是从命令行序列化符号：
 
-- 要在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE 中序列化符号，请指向菜单栏上的“工具”，然后单击“选项”。 在“选项”窗口中，选择“性能工具”，然后选中“自动序列化符号信息”复选框。
+- 要在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE 中序列化符号，请指向菜单栏上的“工具”  ，然后单击“选项”  。 在“选项”  窗口中，选择“性能工具”  ，然后选中“自动序列化符号信息”  复选框。
 
 - 保存报告文件时，PACKSYMBOLS 是等效命令行选项。 若要序列化符号，请输入 **vsperfreport /summary:all /packsymbols filename.vsp**。
 

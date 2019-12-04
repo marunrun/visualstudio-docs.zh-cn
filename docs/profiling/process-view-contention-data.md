@@ -8,14 +8,15 @@ ms.assetid: 8821d98c-0771-43b2-a38b-e9039a3abd75
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 79f9330733a0d32faeb9980813f170f52a6f7121
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 30c938088538bcecc71e3a7e37d5ae403dd476e1
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62965629"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778396"
 ---
 # <a name="process-view---contention-data"></a>“进程”视图 - 争用数据
 “进程”视图显示在分析运行期间执行的进程和线程的争用数据。
@@ -35,7 +36,7 @@ ms.locfileid: "62965629"
 |**ID**|进程或线程的系统生成的标识符。|
 |**生存时间**|从进程或线程启动到进程或线程结束或分析结束的毫秒数或处理器周期数。|
 |**类型**|行的类型（进程或线程）。<br /><br /> 仅在 **VSReport** 命令行报表中。 有关详细信息，请参阅 [VSPerfReport](../profiling/vsperfreport.md)。|
-|**名称**|进程或线程的名称。|
+|**Name**|进程或线程的名称。|
 |**唯一 ID**|探查器生成的标识符，对进程或线程是唯一的。|
 
 ## <a name="see-also"></a>请参阅

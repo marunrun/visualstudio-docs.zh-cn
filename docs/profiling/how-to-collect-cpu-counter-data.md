@@ -10,14 +10,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c607263c6b6f6472258aaeab1c3187efaf30a120
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 98291051a135a95ab72b4c3bfa09743d9620b94e
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62973976"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74776366"
 ---
 # <a name="how-to-collect-cpu-counter-data"></a>如何：收集 CPU 计数器数据
 
@@ -47,16 +48,16 @@ CPU 事件计数器用于收集特定于硬件的性能数据。 本文演示如
 
 ## <a name="to-collect-cpu-performance-counter-data-when-you-profile-by-instrumentation"></a>通过检测进行分析时收集 CPU 性能计数器数据
 
-1. 在性能会话“属性页”上，单击“CPU 计数器”。
+1. 在性能会话“属性页”  上，单击“CPU 计数器”  。
 
-2. 选择“收集 CPU 计数器”复选框。
+2. 选择“收集 CPU 计数器”  复选框。
 
-3. 展开“可用的性能计数器”树，然后查找想要收集的采样事件。
+3. 展开“可用的性能计数器”  树，然后查找想要收集的采样事件。
 
-4. 对于想要收集的每个事件，选择该事件，然后单击右箭头以将事件添加到“所选计数器”列表。
+4. 对于想要收集的每个事件，选择该事件，然后单击右箭头以将事件添加到“所选计数器”  列表。
 
     > [!NOTE]
-    > 仅在选择“收集 CPU 计数器”复选框时，“可用的性能计数器”才会启用。
+    > 仅在选择“收集 CPU 计数器”  复选框时，“可用的性能计数器”  才会启用。
 
 ## <a name="see-also"></a>请参阅
 

@@ -10,20 +10,21 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ad67acae549f67e16b34eb352cdebe5937c8de4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 89399d49909e1c9067723e75a1adbaa123865758
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794235"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778474"
 ---
 # <a name="performance-explorer"></a>性能资源管理器
 
 使用 Visual Studio 分析工具，开发人员可以衡量、评估并着力解决代码中与性能相关的问题。 这些工具已完全集成到 IDE 从而提供无缝且易于获取的用户体验。
 
-分析应用程序非常简单。 首先创建一个新的性能会话。 在 Visual Studio Team System Development Edition 中，可以使用性能会话向导创建新的性能会话。 性能会话结束后，分析期间收集的数据将保存到 .vsp 文件中。 可在 IDE 内部查看 .vsp 文件。 存在几个可用的报告视图，可帮助直观显示和检测收集的数据的性能问题。
+分析应用程序非常简单。 首先创建一个新的性能会话。 在 Visual Studio Team System Development Edition 中，可以使用性能会话向导创建新的性能会话。 性能会话结束后，分析期间收集的数据将保存到 .vsp 文件中  。 可在 IDE 内部查看 .vsp 文件  。 存在几个可用的报告视图，可帮助直观显示和检测收集的数据的性能问题。
 
 可从命令行使用分析工具。 这为用户提供了一种灵活性，即可从命令行运行这些工具或使用它们来自动执行使用脚本的任务。
 

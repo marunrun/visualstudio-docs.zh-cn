@@ -8,14 +8,15 @@ ms.assetid: 595d91c8-a42b-4644-85b8-39e8140a5dfe
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 34585e212acfd52186e12e8b38293178cc77c585
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 423b6d61af93c37e6fa83549ed3fa5d422128165
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62969688"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779215"
 ---
 # <a name="functions-view---instrumentation-data"></a>“函数”视图 - 检测数据
 函数报表视图按函数名称列出分析数据。

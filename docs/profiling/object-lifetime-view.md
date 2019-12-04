@@ -14,14 +14,15 @@ ms.assetid: d0501fdd-4b3a-4e74-b6ac-51d950a2e15b
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 6127ae8e76ff7233ff7ad4f7b336325555e57b28
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: d4ea486930d0ea9f266b4ee57b69a50f7c570651
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66747203"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74772619"
 ---
 # <a name="object-lifetime-view"></a>“对象生存期”视图
 在“性能会话”属性页上选中“还收集 .NET 对象的生存期数据”时，可以使用“对象生存期”视图   。

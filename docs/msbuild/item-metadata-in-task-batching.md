@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9167c56d976cd79e2e51cf9914213b766f647416
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c80749080e4abc41412ed6c5df8421976054e68e
+ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62996785"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74706866"
 ---
 # <a name="item-metadata-in-task-batching"></a>任务批处理中的项元数据
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 能够基于项元数据将项列表划分为不同类别或批，并对每个批一次运行一个任务。 要准确了解哪个批中正在传递什么项可能比较困难。 本主题介绍了以下涉及批处理的常见方案。
@@ -80,7 +80,7 @@ ms.locfileid: "62996785"
 `Number: 3 -- Items in ExampColl: Item3;Item6`
 
 ## <a name="divide-several-item-lists-into-batches"></a>将多个项列表划分为多个批
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 可基于相同元数据将多个项列表划分为多个批。 这样可以轻松地将不同项列表划分为多个批来生成多个程序集。 例如，可将 .cs 文件的项列表划分为一个应用程序批和一个程序集批，并将资源文件的项列表划分为一个应用程序批和程序集批。 然后，可以使用批处理将这些项列表传递到一个任务，并生成应用程序和程序集。
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 可基于相同元数据将多个项列表划分为多个批。 这样可以轻松地将不同项列表划分为多个批来生成多个程序集。 例如，可将 .cs 文件的项列表划分为一个应用程序批和一个程序集批，并将资源文件的项列表划分为一个应用程序批和程序集批  。 然后，可以使用批处理将这些项列表传递到一个任务，并生成应用程序和程序集。
 
 > [!NOTE]
 > 如果正被传递到任务的项列表不包含任何具有引用元数据的项，则该项列表中的每个项会被传递到每个批。
@@ -153,7 +153,7 @@ ms.locfileid: "62996785"
 
     <Target Name="ShowMessage">
         <Message
-            Text = "Identity: "%(Identity)" -- Items in ExampColl: @(ExampColl)"/>
+            Text = "Identity: '%(Identity)' -- Items in ExampColl: @(ExampColl)"/>
     </Target>
 
 </Project>
@@ -161,13 +161,13 @@ ms.locfileid: "62996785"
 
 [Message 任务](../msbuild/message-task.md)将显示以下信息：
 
-```
-Identity: "Item1" -- Items in ExampColl: Item1
-Identity: "Item2" -- Items in ExampColl: Item2
-Identity: "Item3" -- Items in ExampColl: Item3
-Identity: "Item4" -- Items in ExampColl: Item4
-Identity: "Item5" -- Items in ExampColl: Item5
-Identity: "Item6" -- Items in ExampColl: Item6
+```output
+Identity: 'Item1' -- Items in ExampColl: Item1
+Identity: 'Item2' -- Items in ExampColl: Item2
+Identity: 'Item3' -- Items in ExampColl: Item3
+Identity: 'Item4' -- Items in ExampColl: Item4
+Identity: 'Item5' -- Items in ExampColl: Item5
+Identity: 'Item6' -- Items in ExampColl: Item6
 ```
 
 ## <a name="filter-item-lists"></a>筛选器项目列表

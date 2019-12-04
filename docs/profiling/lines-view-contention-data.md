@@ -8,14 +8,15 @@ ms.assetid: 859b02d2-eddf-4ad3-95de-0df67ee2ab03
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 572400794af73ed70503ce39327d678c5ffa195a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1dfcdf67c897c0c1565e536a69cc940b9df83390
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63000614"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778591"
 ---
 # <a name="lines-view---contention-data"></a>“行”视图 - 争用数据
 争用数据的“行”视图列出分析运行期间收集样本时所执行语句的性能数据。 在源文件中，一个语句可分散在多行中，而一行也可包括多个语句。
@@ -50,7 +51,7 @@ ms.locfileid: "63000614"
 |**非独占阻塞的时间百分比**|语句的非独占阻塞时间占进程中所有阻塞时间的百分比。|
 |**非独占争用**|阻滞此语句及其中所调用函数执行的次数。|
 |**非独占争用数百分比**|此语句的非独占争用数占进程中所有争用事件数的百分比。|
-|**行名**|由探查器生成的行标识符。 标识符使用以下语法：`SourceFile`**;[**`LineNumberStart`**,**`CharacterStart`**]->;[**`LineNumberEnd`**,**`CharacterEnd`**]**|
+|**行名**|由探查器生成的行标识符。 标识符使用以下语法：`SourceFile` **;[** `LineNumberStart` **,** `CharacterStart` **]->;[** `LineNumberEnd` **,** `CharacterEnd` **]**|
 |**函数行号**|此函数在源文件中的起始行号。|
 |**模块名**|语句所在模块的名称。|
 |**模块路径**|语句所在模块的路径。|

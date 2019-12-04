@@ -6,14 +6,15 @@ ms.assetid: a34ba40e-01b1-4386-90b1-c8e628a8c527
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e5bdd0897d5b53a6949731a233909664d3fce7d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 65eabb7a95afa04542bc4f2202b71ccc5aa71648
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62809608"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74772748"
 ---
 # <a name="command-line-profiling-tools-reference"></a>命令行分析工具参考
 程序员通过命令行性能工具可在命令提示符处分析应用程序。 通过以下命令行分析工具可在命令提示符处分析代码。

@@ -8,14 +8,15 @@ ms.assetid: 1761311d-c9d5-48f5-b1f8-b3605829940a
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: be5f748f4baa102bda16752904347954f97fea27
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9ff4b4973bff395cea6b73219a2098543ee6819e
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62980195"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778253"
 ---
 # <a name="startprofile"></a>StartProfile
 `StartProfile` 函数将指定分析级别的计数器设置为 1（开启）。
@@ -31,7 +32,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI StartProfile(
 #### <a name="parameters"></a>参数
  `Level`
 
- 指示性能数据集合可应用到的分析级别。 以下 PROFILE_CONTROL_LEVEL 枚举器可用于指示性能数据集合可应用到的三个级别之一：
+ 指示性能数据集合可应用到的分析级别。 以下 PROFILE_CONTROL_LEVEL 枚举器可用于指示性能数据集合可应用到的三个级别之一  ：
 
 |枚举器|说明|
 |----------------|-----------------|
@@ -62,12 +63,12 @@ PROFILE_COMMAND_STATUS PROFILERAPI StartProfile(
  当启动/停止状态和挂起/继续状态都为 ON 时，该级别的分析状态为 ON。 对于要分析的线程，该线程的全局、进程和线程级别状态都必须为 ON。
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 等效项
- Microsoft.VisualStudio.Profiler.dll
+ Microsoft.VisualStudio.Profiler.dll 
 
 ## <a name="function-information"></a>函数信息
- 标头：在 VSPerf.h 中声明
+ 标头：在 VSPerf.h 中声明 
 
- 导入库：VSPerf.lib
+ 导入库：VSPerf.lib 
 
 ## <a name="example"></a>示例
  以下示例演示 StartProfile 函数调用。
