@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e78594a98066dec6cedff6da6f3f1de823bec796
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: cc6782e4a83f259eb17632addec36c7804b27858
+ms.sourcegitcommit: 174c992ecdc868ecbf7d3cee654bbc2855aeb67d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985007"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74879343"
 ---
 # <a name="walkthrough-create-a-site-column-content-type-and-list-for-sharepoint"></a>演练：为 SharePoint 创建网站栏、内容类型和列表
   下面的过程演示如何创建自定义 SharePoint 网站列（或*字段*）以及使用网站列的内容类型。 它还演示如何创建使用新内容类型的列表。
@@ -41,7 +41,7 @@ ms.locfileid: "72985007"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
  你需要以下组件来完成本演练：
 
 - 支持的 Windows 和 SharePoint 版本。
@@ -54,33 +54,48 @@ ms.locfileid: "72985007"
 #### <a name="to-create-the-project"></a>要创建项目
 
 1. 在 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**文件**"菜单上，选择"**新建** > **项目**"。
+::: moniker range="=vs-2017"
+2. 在 "**新建项目**" 对话框中的 "**视觉C#对象**" 或 " **Visual Basic**" 下，展开 " **Office/SharePoint** " 节点，然后选择 " **SharePoint 解决方案**"。
 
-2. 在 "**新建项目**" 对话框中的 "**视觉C#对象**" 或 " **Visual Basic**" 下，展开 " **SharePoint** " 节点，然后选择 " **2010**"。
+3. 在 "**模板**" 窗格中，为已安装的特定 sharepoint 版本选择**sharepoint 空项目**。 例如，如果您有 SharePoint 2016 安装，请选择**sharepoint 2016-空项目**模板。  
 
-3. 在 "**模板**" 窗格中，选择 " **SharePoint 2010 项目**"，将项目名称更改为 "**诊所**"，然后选择 **"确定"** 按钮。
+4. 将项目名称更改为 "**诊所**"，然后选择 **"确定"** 按钮。
 
-     SharePoint 2010 项目模板是一个空项目，在此示例中使用此项目来包含网站列以及稍后添加的其他项目项。
+5. 在 "**指定用于调试的站点和安全级别**" 对话框中，输入要向其添加新的自定义字段项的本地 SharePoint 站点的 URL，或者使用默认位置（`http://<`*SystemName*`>/)`。
 
-4. 在 "**指定用于调试的站点和安全级别**" 页上，输入要向其添加新的自定义字段项的本地 SharePoint 站点的 URL，或者使用默认位置（`http://<`*SystemName*`>/)`。
+6. 在 "**此 SharePoint 解决方案的信任级别是什么？** " 部分中，使用 "**部署为沙盒解决方案**的默认值"。
+
+     有关沙盒解决方案和场解决方案的详细信息，请参阅[沙盒解决方案注意事项](../sharepoint/sandboxed-solution-considerations.md)。
+
+7. 单击“完成”按钮。 项目现已在**解决方案资源管理器**中列出。
+::: moniker-end
+::: moniker range=">=vs-2019"
+2.  在 "**创建新项目**" 对话框中，为已安装的特定 sharepoint 版本选择**sharepoint 空项目**。 例如，如果您有 SharePoint 2016 安装，请选择**sharepoint 2016-空项目**模板。
+    [!INCLUDE[new-project-dialog-search](../sharepoint/includes/new-project-dialog-search-md.md)]
+
+3. 将项目名称更改为 "**诊所**"，然后选择 "**创建**" 按钮。
+
+4. 在 "**指定用于调试的站点和安全级别**" 对话框中，输入要向其添加新的自定义字段项的本地 SharePoint 站点的 URL，或者使用默认位置（`http://<`*SystemName*`>/)`。
 
 5. 在 "**此 SharePoint 解决方案的信任级别是什么？** " 部分中，使用 "**部署为沙盒解决方案**的默认值"。
 
      有关沙盒解决方案和场解决方案的详细信息，请参阅[沙盒解决方案注意事项](../sharepoint/sandboxed-solution-considerations.md)。
 
-6. 选择 "**完成**" 按钮。 项目现已在**解决方案资源管理器**中列出。
+6. 单击“完成”按钮。 项目现已在**解决方案资源管理器**中列出。
+::: moniker-end
 
 #### <a name="to-add-site-columns"></a>添加网站列
 
-1. 添加新的网站列。 为此，请在**解决方案资源管理器**中打开 "**诊所**" 的快捷菜单，然后选择 "**添加** > **新项**"。
+1. 添加新的网站列。 为此，请在**解决方案资源管理器**中右键单击 "**诊所**" 项目，然后选择 "**添加** > **新项**"。
 
-2. 在 "**添加新项**" 对话框中，选择 "**网站列**"，将 "名称" 更改为 "**患者名称**"，然后选择 "**添加**" 按钮。
+2. 在 "**添加新项**" 对话框中，选择 "**网站列**"，将 "名称" 更改为**PatientName**，然后选择 "**添加**" 按钮。
 
-3. 在站点列的 "*元素 .xml* " 文件中，将 "**类型**" 设置保留为 "**文本**"，并将 "**组**" 设置更改为 "**诊所站点列**"。 完成后，站点列的*元素 .xml*文件应类似于下面的示例。
+3. 在站点列的 "*元素 .xml* " 文件中，将 "**类型**" 设置保留为 "**文本**"，将 "**组**" 设置更改为 "**诊所站点列**"。 完成后，站点列的*元素 .xml*文件应类似于下面的示例。
 
     ```xml
     <Field
          ID="{f9ba60d1-5631-41fb-b016-a38cf48eef63}"
-         Name="Clinic - Patient Name"
+         Name="PatientName"
          DisplayName="Patient Name"
          Type="Text"
          Required="FALSE"
@@ -88,7 +103,11 @@ ms.locfileid: "72985007"
     </Field>
     ```
 
-4. 使用相同的过程，将两个以上的网站列添加到项目：**患者 ID** （类型 = "整数"）和**医生名称**（type = "Text"）。 将其组值设置为**诊所网站列**。
+    > [!TIP]
+    > 如果在网站列名称中使用 camel 大小写，则 Visual Studio 将在 DisplayName 中自动添加一个空格。
+    > 建议不要在站点列名称中使用空格，因为当你尝试将解决方案部署到 SharePoint 时，它可能会导致问题。
+
+4. 使用相同的过程，将两个以上的网站列添加到项目： **PatientID** （type = "Integer"）和**DoctorName** （type = "Text"）。 将其组值设置为**诊所网站列**。
 
 ## <a name="create-a-custom-content-type"></a>创建自定义内容类型
  接下来，根据联系人内容类型创建内容类型，其中包括你在上一过程中创建的网站列。 通过将内容类型基于现有内容类型，可以节省时间，因为基内容类型提供了多个可在新内容类型中使用的网站列。
@@ -133,11 +152,11 @@ ms.locfileid: "72985007"
 
 2. 在菜单栏上，依次选择“项目” > “添加新项”。
 
-3. 在 "**视觉C#对象**" 或 " **Visual Basic**" 下，展开 " **SharePoint** " 节点，然后选择 " **2010** " 节点。
+3. 在 "**视觉C#对象**" 或 " **Visual Basic**" 下，展开 " **SharePoint** " 节点。
 
 4. 在 "**模板**" 窗格中，选择**列表**模板，将 "名称" 更改为 "**患者**"，然后选择 "**添加**" 按钮。
 
-5. 保留 "基于**默认值（空白）** **自定义列表**"，然后选择 "**完成**" 按钮。
+5. 保留 "**基于默认设置自定义**列表" **（自定义列表）** ，然后选择 "**完成**" 按钮。
 
 6. 在列表设计器中，选择 "**内容类型**" 按钮以显示 "**内容类型设置**" 对话框。
 
@@ -151,13 +170,13 @@ ms.locfileid: "72985007"
 
     - 患者名称
 
-    - 家庭电话
+    - 住宅电话
 
     - 电子邮件
 
     - 医生名称
 
-    - 注释
+    - Comments
 
 9. 在 "**列显示名称**" 下，选择一个空行，添加自定义列表列，然后将其命名为 "**医院**"。 将其数据类型保留为**单行文本**。
 
@@ -170,7 +189,7 @@ ms.locfileid: "72985007"
 
 10. 在 "**患者 ID** " 和 "**患者名称**" 框旁边，选中 "**必需**" 复选框。
 
-11. 在 "**视图**" 选项卡上，选择一个空行来创建视图。 输入**患者详细信息**。
+11. 在 "**视图**" 选项卡上，选择一个空行来创建视图。 在 "**视图名称**" 列下的空白行中输入**患者详细信息**。
 
      在 "**视图**" 选项卡上，可以指定要在 SharePoint 列表中显示的列。
 
@@ -184,7 +203,7 @@ ms.locfileid: "72985007"
 
     - 患者名称
 
-    - 家庭电话
+    - 住宅电话
 
     - 电子邮件
 
@@ -192,7 +211,7 @@ ms.locfileid: "72985007"
 
     - 医院
 
-    - 注释
+    - Comments
 
 14. 在 "**属性**" 列表中，选择 "**排序和分组**" 属性，然后选择省略号按钮![省略号图标](../sharepoint/media/ellipsisicon.gif "“省略号”图标")以显示 "**排序和分组**" 对话框。
 
@@ -219,9 +238,9 @@ ms.locfileid: "72985007"
 
      新记录将显示在列表中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [创建 SharePoint 的网站栏、内容类型和列表](../sharepoint/creating-site-columns-content-types-and-lists-for-sharepoint.md)
 - [开发 SharePoint 解决方案](../sharepoint/developing-sharepoint-solutions.md)
 - [如何：创建自定义字段类型](/previous-versions/office/developer/sharepoint-2010/bb862248(v=office.14))
 - [内容类型](/previous-versions/office/developer/sharepoint-2010/ms479905(v=office.14))
-- [表列](/previous-versions/office/developer/sharepoint-2010/ms196085(v=office.14))
+- [“列”](/previous-versions/office/developer/sharepoint-2010/ms196085(v=office.14))

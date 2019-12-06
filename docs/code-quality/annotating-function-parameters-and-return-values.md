@@ -128,12 +128,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 8437a18bf2b732ee3f12774b04baedf12003d554
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: 16e7ffb30dc7ec4ae1b78647a0964b81932617ab
+ms.sourcegitcommit: 174c992ecdc868ecbf7d3cee654bbc2855aeb67d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72806803"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74879264"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>对函数参数和返回值进行批注
 本文介绍了简单函数参数（标量）的批注的典型用法，以及大多数类型的缓冲区。  本文还介绍了批注的常见用法模式。 有关与函数相关的其他注释，请参阅[注释函数行为](../code-quality/annotating-function-behavior.md)。
@@ -157,7 +157,7 @@ ms.locfileid: "72806803"
 
 - `_In_z_`
 
-     指向以 null 结尾的字符串的指针，该字符串用作输入。  该字符串必须在预状态中有效。  首选的 `PSTR` 的变体是已具有正确批注的。
+     指向以 null 结尾的字符串的指针，该字符串用作输入。  该字符串必须在预状态中有效。  首选的 `PSTR`的变体是已具有正确批注的。
 
 - `_Inout_z_`
 
@@ -185,9 +185,12 @@ ms.locfileid: "72806803"
 
      一个指针，指向将由函数写入 `s` 元素（resp）的数组。  数组元素不必在预处理中有效，并且在 post 状态中有效的元素数是未指定的。  如果参数类型上存在批注，则它们将在 post 状态下应用。 例如，考虑下面的代码。
 
-     `typedef _Null_terminated_ wchar_t *PWSTR; void MyStringCopy(_Out_writes_ (size) PWSTR p1,    _In_ size_t size,    _In_ PWSTR p2);`
+     ```cpp
+     typedef _Null_terminated_ wchar_t *PWSTR;
+     void MyStringCopy(_Out_writes_(size) PWSTR p1, _In_ size_t size, _In_ PWSTR p2);
+     ```
 
-     在此示例中，调用方提供 `p1` `size` 元素的缓冲区。  `MyStringCopy` 使其中一些元素有效。 更重要的是，`PWSTR` 上的 `_Null_terminated_` 注释意味着 `p1` 在 post 状态下以 null 结尾。  通过这种方式，有效元素的数目仍是明确定义的，但不需要特定元素计数。
+     在此示例中，调用方提供 `p1``size` 元素的缓冲区。  `MyStringCopy` 使其中一些元素有效。 更重要的是，`PWSTR` 上的 `_Null_terminated_` 注释意味着 `p1` 在 post 状态下以 null 结尾。  通过这种方式，有效元素的数目仍是明确定义的，但不需要特定元素计数。
 
      `_bytes_` 变体以字节为单位（而不是元素）提供大小。 仅在无法将大小表示为元素时使用此值。  例如，仅当使用 `wchar_t` 的类似函数时，`char` 字符串才能使用 `_bytes_` 变体。
 
@@ -215,13 +218,14 @@ ms.locfileid: "72806803"
 
      `_Out_writes_bytes_all_(s)`
 
-     指向 `s` 元素的数组的指针。  元素不必在预状态中有效。  在 post 状态下，元素到 `c` 第一个元素必须有效。  如果大小是已知的（以字节为单位），则按元素大小进行缩放 `s` 和 `c`，或使用 `_bytes_` 变量，该变量定义为：
+     指向 `s` 元素的数组的指针。  元素不必在预状态中有效。  在 post 状态下，元素到 `c`第一个元素必须有效。  如果大小是已知的，则可以使用 `_bytes_` 变量，而不是元素的数目。
+     
+     例如：
 
-     `_Out_writes_to_(_Old_(s), _Old_(s))    _Out_writes_bytes_to_(_Old_(s), _Old_(s))`
-
-     换而言之，缓冲区中的每个要在预状态 `s` 的元素在 post 状态中都有效。  例如:
-
-     `void *memcpy(_Out_writes_bytes_all_(s) char *p1,    _In_reads_bytes_(s) char *p2,    _In_ int s); void * wordcpy(_Out_writes_all_(s) DWORD *p1,     _In_reads_(s) DWORD *p2,    _In_ int s);`
+     ```cpp
+     void *memcpy(_Out_writes_bytes_all_(s) char *p1, _In_reads_bytes_(s) char *p2, _In_ int s); 
+     void *wordcpy(_Out_writes_all_(s) DWORD *p1, _In_reads_(s) DWORD *p2, _In_ int s);
+     ```
 
 - `_Inout_updates_to_(s,c)`
 
@@ -245,19 +249,24 @@ ms.locfileid: "72806803"
 
 - `_In_reads_to_ptr_(p)`
 
-     指向数组的指针，该数组的表达式 `p` - `_Curr_` （即 `p` 减 `_Curr_`）由相应的语言标准定义。  `p` 之前的元素必须在预状态中有效。
+     指向 `p - _Curr_` （即 `p` 减 `_Curr_`）的数组的指针是有效的表达式。  `p` 之前的元素必须在预状态中有效。
+
+    例如：
+    ```cpp
+    int ReadAllElements(_In_reads_to_ptr_(EndOfArray) const int *Array, const int *EndOfArray);
+    ```
 
 - `_In_reads_to_ptr_z_(p)`
 
-     指向以 null 结尾的数组的指针，该数组的表达式 `p` - `_Curr_` （即 `p` 减 `_Curr_`）由相应的语言标准定义。  `p` 之前的元素必须在预状态中有效。
+     指向以 null 结尾的数组的指针，该数组的表达式 `p - _Curr_` （即 `p` 减 `_Curr_`）是有效的表达式。  `p` 之前的元素必须在预状态中有效。
 
 - `_Out_writes_to_ptr_(p)`
 
-     指向数组的指针，该数组的表达式 `p` - `_Curr_` （即 `p` 减 `_Curr_`）由相应的语言标准定义。  `p` 之前的元素不必处于预处理状态，并且在 post 状态中必须有效。
+     指向 `p - _Curr_` （即 `p` 减 `_Curr_`）的数组的指针是有效的表达式。  `p` 之前的元素不必处于预处理状态，并且在 post 状态中必须有效。
 
 - `_Out_writes_to_ptr_z_(p)`
 
-     指向以 null 结尾的数组的指针，该数组的表达式 `p` - `_Curr_` （即 `p` 减 `_Curr_`）由相应的语言标准定义。  `p` 之前的元素不必处于预处理状态，并且在 post 状态中必须有效。
+     指向以 null 结尾的数组的指针，该数组的 `p - _Curr_` （即 `p` 减 `_Curr_`）是有效的表达式。  `p` 之前的元素不必处于预处理状态，并且在 post 状态中必须有效。
 
 ## <a name="optional-pointer-parameters"></a>可选指针参数
 
@@ -361,7 +370,7 @@ ms.locfileid: "72806803"
 
 ## <a name="output-reference-parameters"></a>输出引用参数
 
-引用参数的常见用途是用于输出参数。  对于简单的输出引用参数（例如 `int&`），`_Out_` 提供正确的语义。  但是，当输出值为指针（例如 `int *&`）时，等效的指针批注（如 `_Outptr_ int **`）不提供正确的语义。  若要简洁地表达指针类型的输出引用参数的语义，请使用这些复合批注：
+引用参数的常见用途是用于输出参数。  对于简单的输出引用参数（如 `int&`），`_Out_` 提供正确的语义。  但是，当输出值为指针（如 `int *&`）时，像 `_Outptr_ int **` 这样的等效指针批注不会提供正确的语义。  若要简洁地表达指针类型的输出引用参数的语义，请使用这些复合批注：
 
 **批注和说明**
 
@@ -507,7 +516,7 @@ ms.locfileid: "72806803"
 
 - `_Struct_size_bytes_(size)`
 
-     适用于结构或类声明。  指示该类型的有效对象可能大于声明的类型，以及 `size` 给定的字节数。  例如:
+     适用于结构或类声明。  指示该类型的有效对象可能大于声明的类型，以及 `size`给定的字节数。  例如：
 
      `typedef _Struct_size_bytes_(nSize) struct MyStruct {    size_t nSize;    ... };`
 
@@ -519,7 +528,7 @@ ms.locfileid: "72806803"
 
 [代码分析团队博客](https://blogs.msdn.microsoft.com/codeanalysis/)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 SAL 批注以减少 C/C++ 代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [了解 SAL](../code-quality/understanding-sal.md)
