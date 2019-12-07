@@ -11,20 +11,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0024716875dce7e81567d60a6e61069be64ec185
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: eb66615abbd7124fd6b781598bd8eb28ea34756d
+ms.sourcegitcommit: 0b90e1197173749c4efee15c2a75a3b206c85538
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911455"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74903860"
 ---
 # <a name="disable-the-just-in-time-debugger"></a>禁用实时调试器
 
 当正在运行的应用程序中出现错误时，可以打开 "实时调试器" 对话框，并阻止应用程序继续。
 
-实时调试器提供了启动 Visual Studio 以调试错误的选项。 必须安装[Visual Studio](https://visualstudio.microsoft.com/)或另一个选定的调试器，才能查看有关错误的详细信息或尝试对其进行调试。
+实时调试器提供了启动 Visual Studio 以调试错误的选项。 必须安装 Visual Studio 或另一个选定的调试器，才能查看有关错误的详细信息或尝试对其进行调试。
 
-如果你是 Visual Studio 用户，并且想要尝试调试错误，请参阅[使用实时调试器进行调试](../debugger/debug-using-the-just-in-time-debugger.md)。 如果无法修复此错误，或要使实时调试器无法打开，则可以[从 Visual Studio 中禁用实时调试](debug-using-the-just-in-time-debugger.md#BKMK_Enabling)。
+如果已是 Visual Studio 用户，并且想要尝试调试错误，请参阅[使用实时调试器进行调试](../debugger/debug-using-the-just-in-time-debugger.md)。 如果无法修复此错误，或要使实时调试器无法打开，则可以[从 Visual Studio 中禁用实时调试](debug-using-the-just-in-time-debugger.md#BKMK_Enabling)。
 
 如果已安装 Visual Studio，但不再执行此操作，则可能需要[从 Windows 注册表中禁用实时调试](debug-using-the-just-in-time-debugger.md#disable-just-in-time-debugging-from-the-windows-registry)。
 
