@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 502cc7d5f1124ef815455193f00c3f30e77c59a8
-ms.sourcegitcommit: 6196d0b7fdcb08ba6d28a8151ad36b8d1139f2cc
+ms.openlocfilehash: ee7a3c2530456a4c2b358fcea7507203feeb904b
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65225955"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777876"
 ---
 # <a name="target-build-order"></a>目标生成顺序
 
@@ -29,63 +29,63 @@ ms.locfileid: "65225955"
 
 - `BeforeTargets` 和 `AfterTargets`。 这些 `Target` 属性指定应在指定的目标运行前或后 (MSBuild 4.0) 运行此目标。
 
-  生成过程中一个目标绝不会运行两次，即使在生成中有后续目标依赖于该目标。 目标运行后，其在生成中的任务就已完成。
+生成过程中一个目标绝不会运行两次，即使在生成中有后续目标依赖于该目标。 目标运行后，其在生成中的任务就已完成。
 
-  目标可能有 `Condition` 属性。 如果指定的条件评估结果为 `false`，那么该目标不会执行且对生成没有影响。 有关条件的详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。
+目标可能有 `Condition` 属性。 如果指定的条件评估结果为 `false`，那么该目标不会执行且对生成没有影响。 有关条件的详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。
 
 ## <a name="initial-targets"></a>初始目标
 
- [Project`DefaultTargets` 元素的 `InitialTargets` 属性指定将首先运行的目标，即使在命令行或 ](../msbuild/project-element-msbuild.md) 属性中指定了目标。 初始目标常用于错误检查。
+[Project`DefaultTargets` 元素的 `InitialTargets` 属性指定将首先运行的目标，即使在命令行或 ](../msbuild/project-element-msbuild.md) 属性中指定了目标。 初始目标常用于错误检查。
 
- `InitialTargets` 属性的值可以是以分号分隔的、有序的目标列表。 以下示例指定运行的 `Warm` 目标，然后指定运行的 `Eject` 目标。
+`InitialTargets` 属性的值可以是以分号分隔的、有序的目标列表。 以下示例指定运行的 `Warm` 目标，然后指定运行的 `Eject` 目标。
 
 ```xml
 <Project InitialTargets="Warm;Eject" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 ```
 
- 导入的项目可能有自己的 `InitialTargets` 属性。 所有初始目标都聚集在一起并按顺序运行。
+导入的项目可能有自己的 `InitialTargets` 属性。 所有初始目标都聚集在一起并按顺序运行。
 
- 有关详细信息，请参阅[如何：指定首先生成的目标](../msbuild/how-to-specify-which-target-to-build-first.md)。
+有关详细信息，请参阅[如何：指定首先生成的目标](../msbuild/how-to-specify-which-target-to-build-first.md)。
 
 ## <a name="default-targets"></a>默认目标
 
- 如果未在命令行上显式指定某个目标，[Project](../msbuild/project-element-msbuild.md) 元素的 `DefaultTargets` 属性可指定将生成哪个或哪些目标。
+如果未在命令行上显式指定某个目标，[Project](../msbuild/project-element-msbuild.md) 元素的 `DefaultTargets` 属性可指定将生成哪个或哪些目标。
 
- `DefaultTargets` 属性的值可以是以分号分隔的、有序的默认目标列表。 以下示例指定运行的 `Clean` 目标，然后指定运行的 `Build` 目标。
+`DefaultTargets` 属性的值可以是以分号分隔的、有序的默认目标列表。 以下示例指定运行的 `Clean` 目标，然后指定运行的 `Build` 目标。
 
 ```xml
 <Project DefaultTargets="Clean;Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 ```
 
- 若要重写默认目标，可以在命令行中使用 -target 开关。 以下示例指定运行的 `Build` 目标，然后指定运行的 `Report` 目标。 以此方式指定目标时，将忽略所有默认目标。
+若要重写默认目标，可以在命令行中使用 -target  开关。 以下示例指定运行的 `Build` 目标，然后指定运行的 `Report` 目标。 以此方式指定目标时，将忽略所有默认目标。
 
  `msbuild -target:Build;Report`
 
- 如果指定了初始目标和默认目标，且未指定命令行的目标，那么 MSBuild 会先运行初始目标，然后运行默认目标。
+如果指定了初始目标和默认目标，且未指定命令行的目标，那么 MSBuild 会先运行初始目标，然后运行默认目标。
 
- 导入的项目可能有自己的 `DefaultTargets` 属性。 第一个出现的 `DefaultTargets` 属性将确定要运行的默认目标。
+导入的项目可能有自己的 `DefaultTargets` 属性。 第一个出现的 `DefaultTargets` 属性将确定要运行的默认目标。
 
- 有关详细信息，请参阅[如何：指定首先生成的目标](../msbuild/how-to-specify-which-target-to-build-first.md)。
+有关详细信息，请参阅[如何：指定首先生成的目标](../msbuild/how-to-specify-which-target-to-build-first.md)。
 
 ## <a name="first-target"></a>第一个目标
 
- 如果没有初始目标、默认目标或命令行目标，那么 MSBuild 会先运行项目文件中或任意导入的项目文件中出现的第一个目标。
+如果没有初始目标、默认目标或命令行目标，那么 MSBuild 会先运行项目文件中或任意导入的项目文件中出现的第一个目标。
 
 ## <a name="target-dependencies"></a>目标依赖项
 
- 目标可描述相互依赖关系。 `DependsOnTargets` 属性表示目标依赖于其他目标。 例如，应用于对象的
+目标可描述相互依赖关系。 `DependsOnTargets` 属性表示目标依赖于其他目标。 例如，应用于对象的
 
 ```xml
 <Target Name="Serve" DependsOnTargets="Chop;Cook" />
 ```
 
- 告知 MSBuild `Serve` 目标依赖于 `Chop` 目标和 `Cook` 目标。 MSBuild 将运行 `Chop` 目标，然后运行 `Cook` 目标，之后再运行 `Serve` 目标。
+告知 MSBuild `Serve` 目标依赖于 `Chop` 目标和 `Cook` 目标。 MSBuild 将运行 `Chop` 目标，然后运行 `Cook` 目标，之后再运行 `Serve` 目标。
 
 ## <a name="beforetargets-and-aftertargets"></a>在目标之前和在目标之后
 
- 在 MSBuild 4.0 中，可通过使用 `BeforeTargets` 和 `AfterTargets` 属性指定目标顺序。
+在 MSBuild 4.0 中，可通过使用 `BeforeTargets` 和 `AfterTargets` 属性指定目标顺序。
 
- 请考虑使用以下脚本。
+请考虑使用以下脚本。
 
 ```xml
 <Project DefaultTargets="Compile;Link" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -98,7 +98,7 @@ ms.locfileid: "65225955"
 </Project>
 ```
 
- 若要创建在 `Compile` 目标后，`Link` 目标前运行的直接目标 `Optimize`，请将以下目标添加到 `Project` 元素中的任意位置。
+若要创建在 `Compile` 目标后，`Link` 目标前运行的直接目标 `Optimize`，请将以下目标添加到 `Project` 元素中的任意位置。
 
 ```xml
 <Target Name="Optimize"
@@ -109,15 +109,15 @@ ms.locfileid: "65225955"
 
 ## <a name="determine-the-target-build-order"></a>确定目标生成顺序
 
- MSBuild 按以下方式确定目标生成顺序：
+MSBuild 按以下方式确定目标生成顺序：
 
 1. 运行 `InitialTargets` 目标。
 
-2. 运行的是在命令行中使用 -target 开关指定的目标。 如果未在命令行上指定目标，则运行 `DefaultTargets` 目标。 如果都不存在，则运行出现的第一个目标。
+2. 运行的是在命令行中使用 -target  开关指定的目标。 如果未在命令行上指定目标，则运行 `DefaultTargets` 目标。 如果都不存在，则运行出现的第一个目标。
 
 3. 评估目标的 `Condition` 属性。 如果出现 `Condition` 属性且评估结果为 `false`，那么不会运行该目标，且目标不会对生成造成进一步影响。
 
-    列出 `BeforeTargets` 或 `AfterTargets` 中的条件目标的其他目标仍按指定顺序执行。
+   列出 `BeforeTargets` 或 `AfterTargets` 中的条件目标的其他目标仍按指定顺序执行。
 
 4. 在执行或跳过目标之前，将运行其 `DependsOnTargets` 目标，除非将 `Condition` 属性应用于目标并且计算结果为 `false`。
 

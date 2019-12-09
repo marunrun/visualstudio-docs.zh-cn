@@ -9,14 +9,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 018c71be69efa7b68f08cb0d320633b82be9832d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ad451c6146593713b02901ac43423c76174d0684
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62821220"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778084"
 ---
 # <a name="understand-performance-collection-methods"></a>了解性能收集方法
 
@@ -121,7 +122,7 @@ Visual Studio 分析工具提供了五种可以用于收集性能数据的方法
 
 层交互分析将有关 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 页面或其他应用程序与 [!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)] 数据库之间的同步 [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] 调用的信息添加到分析数据文件。 这些数据包括调用的数量和时间，以及最大和最小次数。 层交互数据可以添加到使用采样、检测、.NET 内存或并发方法收集的分析数据。
 
-![层交互配置文件数据](../profiling/media/tierinteraction_profilingtools.png "TierInteraction_ProfilingTools")
+![层交互分析数据](../profiling/media/tierinteraction_profilingtools.png "TierInteraction_ProfilingTools")
 
 通过分析工具收集的层交互数据
 

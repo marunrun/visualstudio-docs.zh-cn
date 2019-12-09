@@ -1403,28 +1403,6 @@
           href: 'https://visualstudio.microsoft.com/license-terms/'
         - name: 支持生命周期和维护服务
           href: /visualstudio/productinfo/vs-servicing-vs/
-    - name: 问题报告
-      items:
-        - name: 如何报告 Visual Studio 的问题
-          href: ide/how-to-report-a-problem-with-visual-studio.md
-        - name: “报告问题”状态和常见问题解答
-          displayName: Developer Community
-          href: ide/report-a-problem.md
-        - name: 提高性能问题被解决的几率
-          href: ide/how-to-increase-chances-of-performance-issue-being-fixed.md
-        - name: 使用所有调用堆栈为 Visual Studio 进程创建小型转储
-          displayName: Create minidumps with call stacks
-          href: ide/report-a-problem-minidumps.md
-        - name: 为 MSBuild 问题创建日志
-          displayName: Create logs for MSBuild problems
-          href: ide/msbuild-logs.md
-        - name: 使用 PerfView 收集 ETL 跟踪
-          displayName: ETL trace with PerfView
-          href: ide/report-a-problem-perfview.md
-    - name: 建议 Visual Studio 功能
-      href: ide/suggest-a-feature.md
-    - name: 开发人员社区数据隐私
-      href: ide/developer-community-privacy.md
     - name: 客户体验改善计划
       items:
         - name: 概述
@@ -1434,6 +1412,25 @@
           href: ide/diagnostic-data-collection.md
     - name: 用于排除 IDE 错误的资源
       href: ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md
-    - name: 反馈
-      displayName: Feedback
+- name: 发送反馈
+  items:
+    - name: 概述
       href: ide/feedback-options.md
+    - name: 报告问题
+      items:
+        - name: 如何报告问题
+          href: ide/how-to-report-a-problem-with-visual-studio.md
+        - name: “报告问题”状态和常见问题解答
+          href: ide/report-a-problem.md
+        - name: 快速修复性能问题
+          href: ide/how-to-increase-chances-of-performance-issue-being-fixed.md
+        - name: 使用调用堆栈创建小型转储
+          href: ide/report-a-problem-minidumps.md
+        - name: 为 MSBuild 问题创建日志
+          href: ide/msbuild-logs.md
+        - name: 使用 PerfView 收集 ETL 跟踪
+          href: ide/report-a-problem-perfview.md
+    - name: 功能建议
+      href: ide/suggest-a-feature.md
+    - name: 开发人员社区数据隐私
+      href: ide/developer-community-privacy.md
