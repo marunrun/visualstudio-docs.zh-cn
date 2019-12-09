@@ -7,22 +7,23 @@ f1_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 0395f58d9e4cf700784ee632dc860823cd50e11f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 023681b263e6e70048ec7d82d2cee741672989ff
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979905"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74773937"
 ---
 # <a name="set-general-performance-session-options"></a>设置常规的性能会话选项
 
-可以在性能会话的属性对话框的“常规”页上设置 Visual Studio 分析工具性能会话的收集方法和分析数据命名约定。 若要从“性能资源管理器”中打开此对话框，请右键单击性能会话，然后单击“属性”。
+可以在性能会话的属性对话框的“常规”  页上设置 Visual Studio 分析工具性能会话的收集方法和分析数据命名约定。 若要从“性能资源管理器”  中打开此对话框，请右键单击性能会话，然后单击“属性”  。
 
 ## <a name="choosing-data-collection-methods"></a>选择数据收集方法
 
-通过选择“分析数据收集”下的某个选项来设置基本收集方法。 下表介绍了以下各个选项：
+通过选择“分析数据收集”  下的某个选项来设置基本收集方法。 下表介绍了以下各个选项：
 
 |||
 |-|-|
@@ -30,7 +31,7 @@ ms.locfileid: "62979905"
 |**检测**。 检测方法注入模块分析代码的副本中，这段代码记录分析运行期间模块中各个函数的每次进入、退出和函数调用。 此方法适用于收集有关代码中某个部分的详细计时信息，以及了解输入和输出操作对应用程序性能的影响。|- [使用检测收集详细计时数据](../profiling/collecting-detailed-timing-data-by-using-instrumentation.md)|
 |**并发**。 并发方法收集阻止代码执行（如线程等待释放对应用程序资源的锁定访问时）的每个事件的数据。 此方法可用于分析多线程应用程序。|- [收集线程和进程并发数据](../profiling/collecting-thread-and-process-concurrency-data.md)|
 
- 可以使用采样或检测方法收集 .NET 内存数据。 在“.NET 内存分析”下选择数据的类型。
+ 可以使用采样或检测方法收集 .NET 内存数据。 在“.NET 内存分析”  下选择数据的类型。
 
 |||
 |-|-|

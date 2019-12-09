@@ -54,13 +54,13 @@ HRESULT SynchronousCallIntoThread(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
  此方法为调用方提供一种机制，用于在调试器线程中运行代码。 语言引擎和主机通常使用此方法在其单线程实现之上实现自由线程对象。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugApplicationThread 接口](../../winscript/reference/idebugapplicationthread-interface.md)   
  [IDebugThreadCall 接口](../../winscript/reference/idebugthreadcall-interface.md)

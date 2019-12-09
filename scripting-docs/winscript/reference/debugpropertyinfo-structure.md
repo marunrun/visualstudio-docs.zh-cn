@@ -63,7 +63,7 @@ typedef struct DebugPropertyInfo{
  pDebugProp  
  此 `DebugPropertyInfo` 结构中的信息所描述的 `IDebugProperty`。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugProperty 接口](../../winscript/reference/idebugproperty-interface.md)   
- [DBGPROP_ATTRIB_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)    
+ [DBGPROP_ATTRIB_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)   
  [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)

@@ -1,5 +1,5 @@
 ---
-title: 调试在 Blend 中的 XAML |Microsoft Docs
+title: 在 Blend 中调试 XAML |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ caps.latest.revision: 8
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: beea8cd3ad6ac12bef284e0d5fda9e995a8613c5
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: d90e495ba64018479758e4fa38de0035601a8f0d
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63434095"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298324"
 ---
 # <a name="debug-xaml-in-blend"></a>在 Blend 中调试 XAML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "63434095"
   
 - XAML 元素出现在不允许使用的位置。  
   
-  有关常见 XAML 语法的详细信息，请参阅[基本 XAML 语法指南](http://go.microsoft.com/fwlink/?LinkId=329942)。  
+  有关常见 XAML 语法的详细信息，请参阅[基本 XAML 语法指南](https://go.microsoft.com/fwlink/?LinkId=329942)。  
   
   你还可以标识和解决 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 中的简单的代码隐藏语法错误、编译错误和运行时错误。 但是，在 Visual Studio 中标识和解决代码隐藏错误会更加轻松。  
   
@@ -53,19 +53,19 @@ ms.locfileid: "63434095"
   
 1. 在 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 中，打开“文件”菜单，然后单击“新建项目”。  
   
-    在“新建项目”对话框中，左侧会显示项目类型列表。 单击一种项目类型后，右侧将显示与该类型关联的项目模板。  
+    在“新建项目”对话框中，左侧会显示项目类型列表。 单击项目类型时，右侧便会显示与该类型关联的项目模板。  
   
-2. 在项目类型列表中，单击**XAML （Windows 应用商店）**。  
+2. 在项目类型列表中，单击 " **XAML （Windows 应用商店）** "。  
   
-3. 在项目模板列表中，单击**空白应用**。  
+3. 在项目模板列表中，单击 "**空白应用**"。  
   
-4. 在“名称”文本框中，键入 `DebuggingSample`。   
+4. 在“名称”文本框中，键入`DebuggingSample`。  
   
 5. 在“位置”文字框中，验证项目的位置。  
   
 6. 在“语言”中，单击“Visual C#”，然后单击“确定”创建项目。  
   
-7. 在设计图面上右键单击，然后单击“查看源”，切换到“拆分”视图。   
+7. 在设计图面上右键单击，然后单击“查看源”，切换到“拆分”视图。  
   
 8. 通过单击代码右上角的“复制”链接复制以下代码。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "63434095"
   
     将显示一条错误消息，表示无法生成该项目，并且应用的底部将显示列出了错误的“结果”面板。  
   
-    ![调试在 Blend for Visual Studio 中的 XAML](../debugger/media/blend-debugxaml-xaml.png "blend_debugXAML_XAML")  
+    ![在 Blend for Visual Studio 中调试 XAML](../debugger/media/blend-debugxaml-xaml.png "blend_debugXAML_XAML")  
   
 ### <a name="resolving-xaml-errors"></a>纠正 XAML 错误  
  检测到 XAML 错误后，设计图面会显示一条指示项目包含无效标记的警报。 纠正错误时，“结果”面板中的错误列表会进行更新。 纠正所有错误后，设计图面将启用，并且设计图面上将显示你的应用。  
@@ -115,16 +115,16 @@ ms.locfileid: "63434095"
   
 4. 双击“无法识别或访问成员‘content’”。 `c` 中的 `content` 应为大写。 将小写“c”替换为大写“c”。  
   
-5. 双击“<http://schemas.microsoft.com/winfx/2006/xaml> 命名空间中不存在属性 'Mame'。” “Mame”中的“M”应为“N”。 将“M”替换为“N”。 现在可分析 XAML 了，应用程序将显示在设计图面上。   
+5. 双击“<https://schemas.microsoft.com/winfx/2006/xaml> 命名空间中不存在属性 'Mame'。” “Mame”中的“M”应为“N”。 将“M”替换为“N”。 现在可分析 XAML 了，应用程序将显示在设计图面上。  
   
     ![在 Blend for Visual Studio 中调试 XAML](../debugger/media/blend-debugartboard-xaml.png "blend_debugArtboard_XAML")  
   
     按 Ctrl+Shift+B 生成项目，并确认没有剩余错误。  
   
 ## <a name="debugging-in-visual-studio"></a>在 Visual Studio 中进行调试  
- 可以在 Visual Studio 中打开 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 项目，以便在应用中更轻松地调试代码。 若要在 Visual Studio 中打开[!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 项目，右键单击“项目”面板中的项目，然后单击“在 Visual Studio 中编辑”。 在 Visual Studio 中完成调试会话后，按 Ctrl+Shift+S 保存所有更改，然后切换回 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]。 系统会提示重新加载该项目。 单击“全选‘是’”以继续在 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 中工作。   
+ 可以在 Visual Studio 中打开 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 项目，以便在应用中更轻松地调试代码。 若要在 Visual Studio 中打开[!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 项目，右键单击“项目”面板中的项目，然后单击“在 Visual Studio 中编辑”。 在 Visual Studio 中完成调试会话后，按 Ctrl+Shift+S 保存所有更改，然后切换回 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]。 系统会提示重新加载该项目。 单击“全选‘是’”以继续在  **中工作**[!INCLUDE[blend_subs](../includes/blend-subs-md.md)]。  
   
- 有关调试您的应用程序的详细信息，请参阅[Visual Studio 中的调试 Windows 应用商店应用](http://go.microsoft.com/fwlink/?LinkId=329944)。  
+ 有关调试应用的详细信息，请参阅[在 Visual Studio 中调试 Windows 应用商店应用](https://go.microsoft.com/fwlink/?LinkId=329944)。  
   
 ## <a name="getting-help"></a>获取帮助  
- 如果需要更多帮助调试你[!INCLUDE[blend_subs](../includes/blend-subs-md.md)]应用程序中，您可以搜索[Windows 应用商店应用社区论坛](http://go.microsoft.com/fwlink/?LinkId=280308)的帖子相关的问题或提出问题。
+ 如果需要更多帮助调试 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 应用程序，可以在 Windows 应用[商店应用社区论坛](https://go.microsoft.com/fwlink/?LinkId=280308)中搜索与问题相关的帖子或发布问题。

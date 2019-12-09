@@ -12,12 +12,12 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 29a455194e64ee30186941cb67b014170426cce0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c2a86689fd41b7c0233db0df544082ef22c4931a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659255"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295500"
 ---
 # <a name="walkthrough-generating-code-by-using-text-templates"></a>演练：使用文本模板生成代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "72659255"
  在此示例项目中，模板读取示例 XML 文件，并生成对应于每种节点类型的类。 在手动编写的代码中，可以使用这些类来导航 XML 文件。 此外，还可以在使用相同节点类型的任何其他文件上运行应用程序。 示例 XML 文件的目的是提供想要应用程序处理的所有节点类型的示例。
 
 > [!NOTE]
-> 包括在 [中的应用程序](http://go.microsoft.com/fwlink/?LinkId=178765)xsd.exe [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]可以从 XML 文件中生成强类型类。 此处显示的模板作为示例提供。
+> 包括在 [中的应用程序](https://go.microsoft.com/fwlink/?LinkId=178765)xsd.exe [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]可以从 XML 文件中生成强类型类。 此处显示的模板作为示例提供。
 
  下面是示例文件：
 
@@ -84,7 +84,7 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
 ### <a name="create-or-open-a-c-project"></a>创建或打开 C# 项目
  可以将此技术应用于任何代码项目。 本演练使用 C# 项目，出于测试目的，我们使用控制台应用程序。
 
-##### <a name="to-create-the-project"></a>要创建项目
+##### <a name="to-create-the-project"></a>创建项目
 
 1. 在“文件” 菜单上，单击“新建” ，然后单击“项目”。
 
@@ -157,7 +157,7 @@ namespace MyProject
    <#@ output extension=".cs" #>
    ```
 
-   方法。
+   中运行但不进行任何修改。
 
    请注意，.cs 文件在解决方案资源管理器中显示为模板文件的附属文件。 可单击模板文件名称旁边的 [+] 进行查看。 只要保存或将焦点从模板文件移开，就会从模板文件生成此文件。 所生成的文件将编译为项目的一部分。
 

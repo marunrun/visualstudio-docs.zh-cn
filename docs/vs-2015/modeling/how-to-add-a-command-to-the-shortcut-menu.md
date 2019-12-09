@@ -12,12 +12,12 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1d218f5f560a7ae2c95d7e7ae0e20002f922e257
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8d5373ae27797aa3bfe4627fb84ce393dce9e910
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72602075"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300890"
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>如何：向快捷菜单中添加命令
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "72602075"
 
 3. [在 CommandSet 类中编写方法](#CommandSet)，使命令可见，并定义要执行的命令。
 
-   有关示例，请参阅[可视化和建模 SDK 网站](http://go.microsoft.com/fwlink/?LinkID=185579)。
+   有关示例，请参阅[可视化和建模 SDK 网站](https://go.microsoft.com/fwlink/?LinkID=185579)。
 
 > [!NOTE]
 > 通过在 CommandSet.cs 中重写方法，还可以修改某些现有命令（例如剪切、粘贴、全选和打印）的行为。 有关详细信息，请参阅[如何：修改标准菜单命令](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)。
@@ -148,7 +148,7 @@ ms.locfileid: "72602075"
      `[VSShell::ProvideMenuResource("1000.ctmenu", version: 2 )]`
 
 ## <a name="CommandSet"></a>定义命令的行为
- DSL 已具有一些在 DslPackage\GeneratedCode\CommandSet.cs 中声明的分部类中实现的命令。 若要添加新命令，你必须通过创建包含同一个类的分部声明的新文件来扩展此类。 该类的名称通常 *\<YourDslName >* `CommandSet`。 这将有助于通过验证该类的名称以及检查其内容来开始操作。
+ DSL 已具有一些在 DslPackage\GeneratedCode\CommandSet.cs 中声明的分部类中实现的命令。 若要添加新命令，你必须通过创建包含同一个类的分部声明的新文件来扩展此类。 该类的名称通常是 *\<e >* `CommandSet`。 这将有助于通过验证该类的名称以及检查其内容来开始操作。
 
  命令集类派生自 <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>。
 
@@ -160,7 +160,7 @@ ms.locfileid: "72602075"
 
      `{ ...  internal partial class Language1CommandSet : ...`
 
-2. 在**DslPackage**中，创建一个名为 "**自定义代码**" 的文件夹。 在此文件夹中，创建一个名为 `CommandSet.cs` 的新类文件。
+2. 在**DslPackage**中，创建一个名为 "**自定义代码**" 的文件夹。 在此文件夹中，创建一个名为 `CommandSet.cs`的新类文件。
 
 3. 在该新文件中，编写具有与生成的分部类相同的命名空间和名称的分部声明。 例如:
 
@@ -196,7 +196,7 @@ namespace Company.Language1 /* Make sure this is correct */
  必须定义两个方法：一个用于确定命令何时在上下文菜单上可见，另一个用于执行该命令。 这些方法不是重写方法；相反，在命令的列表中注册这些方法。
 
 ### <a name="define-when-the-command-will-be-visible"></a>定义命令将何时可见
- 对于每个命令，定义一个 `OnStatus...` 方法，该方法确定命令是否将显示在菜单上，以及是启用还是灰显。设置 `MenuCommand` 的 `Visible` 和 `Enabled` 属性，如下面的示例中所示。 每次用户右键单击关系图时，都将调用此方法以构造快捷菜单，因此它必须尽快工作。
+ 对于每个命令，定义一个 `OnStatus...` 方法，该方法确定命令是否将显示在菜单上，以及是启用还是灰显。设置 `MenuCommand`的 `Visible` 和 `Enabled` 属性，如下面的示例中所示。 每次用户右键单击关系图时，都将调用此方法以构造快捷菜单，因此它必须尽快工作。
 
  在此示例中，该命令仅在用户已选择特定类型的形状时才可见，并且仅在至少一个选定元素处于特定状态时才启用该命令。 该示例基于类关系图 DSL 模板，并且 ClassShape 和 ModelClass 是在 DSL 中定义的类型：
 
@@ -223,17 +223,17 @@ private void OnStatusMyContextMenuCommand(object sender, EventArgs e)
 
  以下片段通常在 OnStatus 方法内十分有用：
 
-- `this.CurrentSelection` 用户右键单击的形状始终包含在此列表中。 如果用户单击关系图的空白部分，则“关系图”是该列表中的唯一成员。
+- `this.CurrentSelection`。 用户右键单击的形状始终包含在此列表中。 如果用户单击关系图的空白部分，则“关系图”是该列表中的唯一成员。
 
-- 如果用户单击了关系图的空白部分，则 `this.IsDiagramSelected()`  -  `true`。
+- 如果用户单击了关系图的空白部分，则 `this.IsDiagramSelected()` - `true`。
 
 - `this.IsCurrentDiagramEmpty()`
 
-- `this.IsSingleSelection()` - 用户未选择多个对象
+- `this.IsSingleSelection()`-用户未选择多个对象
 
-- `this.SingleSelection` - 用户右键单击的形状或关系图
+- `this.SingleSelection`-用户右键单击的形状或关系图
 
-- `shape.ModelElement as MyLanguageElement` - 由形状表示的模型元素。
+- `shape.ModelElement as MyLanguageElement`-形状表示的模型元素。
 
   一般原则是，使 `Visible` 属性依赖于所选定的内容，并使 `Enabled` 属性依赖于选定元素的状态。
 
@@ -300,7 +300,7 @@ private const int cmdidMyContextMenuCommand = 1;
 > [!NOTE]
 > 如果更改 VSCT 文件的“符号”部分，还必须更改这些要匹配的声明。 还应在 Package.tt 中递增版本号
 
- 将菜单命令注册为此命令集的一部分。 当初始化关系图时，将调用一次 `GetMenuCommands()`：
+ 将菜单命令注册为此命令集的一部分。 初始化关系图后，将调用 `GetMenuCommands()` 一次：
 
 ```
 protected override IList<MenuCommand> GetMenuCommands()
@@ -360,4 +360,4 @@ protected override IList<MenuCommand> GetMenuCommands()
 - 确保已卸载早期版本的程序包。
 
 ## <a name="see-also"></a>请参阅
- [编写代码以定制域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)[如何：修改标准菜单命令](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)[部署域特定语言解决方案](../modeling/deploying-domain-specific-language-solutions.md)的[示例代码：线路图](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
+ [编写代码以定制域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)[如何：修改标准菜单命令](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)[部署域特定语言解决方案](../modeling/deploying-domain-specific-language-solutions.md)

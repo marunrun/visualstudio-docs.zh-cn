@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/11/2017
 ms.author: ghogen
-ms.openlocfilehash: d1e21642f8ff707c81dcf2e493e0784c1c04b7ed
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bcc290bfd9d646355479c2a9fe83a48f43dfa432
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62576273"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298032"
 ---
 # <a name="how-to-manage-service-configurations-and-profiles"></a>如何管理服务配置和配置文件
 ## <a name="overview"></a>概述
@@ -58,7 +58,7 @@ ms.locfileid: "62576273"
     此时该服务配置文件的名称会在解决方案资源管理器的 Azure 项目中更改。
 
 ### <a name="to-change-a-service-configuration"></a>更改服务配置
-* 如果要更改服务配置，请在 Azure 项目中打开要更改的特定角色的快捷菜单，并选择“属性”。 请参阅[如何：使用 Visual Studio 配置 Azure 云服务的角色](vs-azure-tools-configure-roles-for-cloud-service.md)，了解详细信息。
+* 如果要更改服务配置，请在 Azure 项目中打开要更改的特定角色的快捷菜单，并选择“属性”。 有关详细信息，请参阅[如何：使用 Visual Studio 配置 Azure 云服务的角色](vs-azure-tools-configure-roles-for-cloud-service.md)。
 
 ## <a name="make-different-setting-combinations-by-using-profiles"></a>使用配置文件指定不同的设置组合
 使用配置文件，可以为不同用途使用不同的设置组合自动填写**发布向导**。 例如，可以将一个配置文件用于调试，将另一个配置文件用于发布版本。 在这种情况下，**调试**配置文件应启用 **IntelliTrace** 并选择“调试”配置，并且**发布**配置文件应禁用 **IntelliTrace** 并选择“发布”配置。 还可以使用不同配置文件通过不同存储帐户来部署服务。
@@ -80,7 +80,7 @@ ms.locfileid: "62576273"
    
     此时新的配置文件将出现在“目标配置文件”列表中。
 6. 在“目标配置文件”列表中，选择刚创建的配置文件。 将使用所选配置文件中的选项填充“发布向导”设置。
-7. 选择“上一页”和“下一页”按钮以显示发布向导的每一页，并自定义此配置文件的设置。 有关信息，请参阅 [Publish Azure Application Wizard](http://go.microsoft.com/fwlink/p/?LinkID=623085)（发布 Azure 应用程序向导）。
+7. 选择“上一页”和“下一页”按钮以显示发布向导的每一页，并自定义此配置文件的设置。 有关信息，请参阅 [Publish Azure Application Wizard](https://go.microsoft.com/fwlink/p/?LinkID=623085)（发布 Azure 应用程序向导）。
 8. 完成自定义设置后，选择“下一步”以返回到“设置”页。 当使用这些设置发布服务时或者选择配置文件列表旁边的“保存”时，将保存该配置文件。
 
 ### <a name="to-rename-or-delete-a-profile"></a>重命名或删除配置文件
@@ -93,9 +93,9 @@ ms.locfileid: "62576273"
 ### <a name="to-change-a-profile"></a>更改配置文件
 1. 打开 Azure 项目的快捷菜单，并选择“发布”。
 2. 在“目标配置文件”列表中，选择要更改的配置文件。
-3. 选择“上一页”和“下一页”按钮以显示发布向导的每一页，并更改所需的设置。 有关信息，请参阅 [Publish Azure Application Wizard](http://go.microsoft.com/fwlink/p/?LinkID=623085)（发布 Azure 应用程序向导）。
+3. 选择“上一页”和“下一页”按钮以显示发布向导的每一页，并更改所需的设置。 有关信息，请参阅 [Publish Azure Application Wizard](https://go.microsoft.com/fwlink/p/?LinkID=623085)（发布 Azure 应用程序向导）。
 4. 完成更改设置后，选择“下一步”以返回到“设置”。
 5. （可选）选择“发布”以使用新设置发布云服务。 如果现在不需要发布云服务，并且关闭发布向导，Visual Studio 会询问是否要保存对配置文件的更改。
 
 ## <a name="next-steps"></a>后续步骤
-若要了解如何在 Visual Studio 中配置 Azure 项目的其他部分，请参阅[配置 Azure 项目](http://go.microsoft.com/fwlink/p/?LinkID=623075)
+若要了解如何在 Visual Studio 中配置 Azure 项目的其他部分，请参阅[配置 Azure 项目](https://go.microsoft.com/fwlink/p/?LinkID=623075)

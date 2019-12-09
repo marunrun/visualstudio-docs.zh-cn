@@ -46,6 +46,6 @@ HRESULT OnFunctionExit(
 ## <a name="remarks"></a>备注  
  对于 DOM 调用，脚本引擎将调用[IActiveScriptProfilerCallback2：： OnFunctionExitByName](../../winscript/reference/iactivescriptprofilercallback2-onfunctionexitbyname.md)而不是 `IActiveScriptProfilerCallback::OnFunctionExit`。 这是因为 DOM 中存在大量的唯一方法和属性。  
   
-## <a name="see-also"></a>请参阅  
- [IActiveScriptProfilerCallback：： OnFunctionEnter](../../winscript/reference/iactivescriptprofilercallback-onfunctionenter.md)    
+## <a name="see-also"></a>另请参阅  
+ [IActiveScriptProfilerCallback::OnFunctionEnter](../../winscript/reference/iactivescriptprofilercallback-onfunctionenter.md)   
  [IActiveScriptProfilerCallback 接口](../../winscript/reference/iactivescriptprofilercallback-interface.md)

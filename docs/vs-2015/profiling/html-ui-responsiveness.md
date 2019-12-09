@@ -20,12 +20,12 @@ caps.latest.revision: 52
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: e8078ad03661e8430158106aa2d0d40f844eb6c3
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: af2b71dd2169500b1c4a75ed59292779959d31a0
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67824842"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299664"
 ---
 # <a name="html-ui-responsiveness"></a>HTML UI 响应能力
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -172,7 +172,7 @@ if (performance.mark && performance.measure) {
   
  持续时间度量在时间线详细信息视图中显示为 **“用户测量”** 事件，并且在选中时显示详细信息。  
   
- ![时间线详细视图中的用户评估事件](../profiling/media/js-htmlvizprofiler-user-measure.png "JS_HTMLVizProfiler_User_Measure")  
+ ![时间线详细视图中的用户测量事件](../profiling/media/js-htmlvizprofiler-user-measure.png "JS_HTMLVizProfiler_User_Measure")  
   
 ## <a name="AnalyzeData"></a> 分析数据  
  以下各节提供了有助于解释在探查器中显示的数据的信息。  
@@ -279,7 +279,7 @@ if (performance.mark && performance.measure) {
 ### <a name="FilterTimelineDetails"></a> 筛选时间线详细信息  
  通过从指定事件的上下文菜单中选择 **“筛选到事件”** ，可以在时间线详细信息中将视图筛选到特定事件。 当选择此选项时，时间线和网格视图的范围限于所选事件。 “CPU 使用率”图中选定内容的范围也限于特定事件。  
   
- ![从时间线筛选事件](../profiling/media/js-htmlvizprofiler-filtertoevent.png "JS_HTMLVizProfiler_FilterToEvent")  
+ ![筛选事件的时间线](../profiling/media/js-htmlvizprofiler-filtertoevent.png "JS_HTMLVizProfiler_FilterToEvent")  
   
 ### <a name="FilterEvents"></a> 筛选事件  
  可以从“时间线详细信息”图中筛选出一些事件以对数据降噪，或为性能方案去除不相关的数据。 你可以按事件名称或事件持续时间或者此处所述的特定筛选器来进行筛选。  
@@ -356,7 +356,7 @@ if (performance.mark && performance.measure) {
   
 ## <a name="Tips"></a> 其他信息  
   
-- 观看 [此视频](http://channel9.msdn.com/Events/Build/2013/3-316) （来自 Build 2013 大会，介绍了 UI 响应能力探查器）。  
+- 观看 [此视频](https://channel9.msdn.com/Events/Build/2013/3-316) （来自 Build 2013 大会，介绍了 UI 响应能力探查器）。  
   
 - 阅读关于使用 JavaScript 为 Windows 生成的 Windows 应用商店应用程序的性能提示。 有关更多信息，请参阅 [采用 JavaScript 的 Windows 应用商店应用的性能最佳做法](https://msdn.microsoft.com/library/windows/apps/hh465194.aspx)。  
   

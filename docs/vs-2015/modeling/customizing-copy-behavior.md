@@ -9,12 +9,12 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: fdd45a1de7e2882626d9b12db9be4b0c7a36eb38
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e17e29e36be5636662e6105a05446a9cbe0aa724
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655057"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301192"
 ---
 # <a name="customizing-copy-behavior"></a>自定义复制行为
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -85,13 +85,13 @@ partial class MyDslClipboardCommandSet
  重写 `ClipboardCommandSet.ProcessOnPasteCommand()` 以在调用基方法后创建附加链接。
 
  **自定义可将元素复制**到外部应用程序的格式-例如，将边框添加到位图窗体。
-在 DslPackage 项目中重写*MyDsl* `ClipboardCommandSet.ProcessOnMenuCopyCommand()`。
+在 DslPackage 项目中重写*MyDsl*`ClipboardCommandSet.ProcessOnMenuCopyCommand()`。
 
  **自定义通过复制命令（而不是在拖动操作中）将元素复制到剪贴板的方式。**
-在 DslPackage 项目中重写*MyDsl* `ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()`。
+在 DslPackage 项目中重写*MyDsl*`ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()`。
 
  **通过复制和粘贴保留形状布局。**
-当用户复制多个形状时，可以在粘贴它们时保留其相对位置。 此方法由[VMSDK：线路图示例](http://go.microsoft.com/fwlink/?LinkId=213879)中的示例演示。
+当用户复制多个形状时，可以在粘贴它们时保留其相对位置。 此方法由[VMSDK：线路图示例](https://go.microsoft.com/fwlink/?LinkId=213879)中的示例演示。
 
  若要获得此效果，请将形状和连接符添加到复制的 ElementGroupPrototype。 重写的最简便方法是 ElementOperations.CreateElementGroupPrototype()。 为此，请将以下代码添加到 DSL 项目：
 
@@ -148,7 +148,7 @@ partial class MyDslDiagram // EDIT NAME
 ```
 
  **在所选位置（例如当前光标位置）粘贴形状。**
-当用户复制多个形状时，可以在粘贴它们时保留其相对位置。 此方法由[VMSDK：线路图示例](http://go.microsoft.com/fwlink/?LinkId=213879)中的示例演示。
+当用户复制多个形状时，可以在粘贴它们时保留其相对位置。 此方法由[VMSDK：线路图示例](https://go.microsoft.com/fwlink/?LinkId=213879)中的示例演示。
 
  为实现此效果，请重写 `ClipboardCommandSet.ProcessOnMenuPasteCommand()`，以使用特定于位置的版本的 `ElementOperations.Merge()`。 为此，请在 DslPackage 项目中添加以下代码：
 
@@ -291,12 +291,12 @@ using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement;
 
  在 ElementOperations 类中定义两个方法：
 
-- `CanMerge(ModelElement targetElement, System.Windows.Forms.IDataObject data)`，用于确定是否可将源元素拖动到目标形状、连接符或关系图上。
+- `CanMerge(ModelElement targetElement, System.Windows.Forms.IDataObject data)` 确定源元素是否可拖动到目标形状、连接符或关系图上。
 
-- `MergeElementGroupPrototype(ModelElement targetElement, ElementGroupPrototype sourcePrototype)`，用于将源元素合并到目标中。
+- `MergeElementGroupPrototype(ModelElement targetElement, ElementGroupPrototype sourcePrototype)`，它将源元素与目标组合在一起。
 
 ### <a name="canmerge"></a>CanMerge()
- 调用 `CanMerge()`，以确定当鼠标在关系图上移动时应向用户提供的反馈。 该方法的参数是在其上鼠标悬停的元素，以及有关源的数据（拖动操作从该源执行）。 用户可以从屏幕上的任何位置进行拖动。 因此，源对象可以为多种不同类型，并且可以采用不同的格式进行序列化。 如果源是 DSL 或 UML 模型，则数据参数是 <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> 的序列化。 拖动、复制和工具箱操作使用 ElementGroupPrototypes 来表示模型的片段。
+ 当鼠标在关系图中移动时，将调用 `CanMerge()` 来确定应向用户提供的反馈。 该方法的参数是在其上鼠标悬停的元素，以及有关源的数据（拖动操作从该源执行）。 用户可以从屏幕上的任何位置进行拖动。 因此，源对象可以为多种不同类型，并且可以采用不同的格式进行序列化。 如果源是 DSL 或 UML 模型，则数据参数是 <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> 的序列化。 拖动、复制和工具箱操作使用 ElementGroupPrototypes 来表示模型的片段。
 
  元素组原型可以包含任意数目的元素和链接。 元素类型可由其 GUID 标识。 GUID 属于已拖动的形状，而不属于基础模型元素。 在以下示例中，如果将来自 UML 关系图的类形状拖动到此关系图上，则 `CanMerge()` 将返回 True。
 
@@ -377,7 +377,7 @@ private ElementGroupPrototype ConvertDraggedTypeToLocal (MyTargetShape snapshot,
 
  当用户按 CTRL+C 或使用“复制”菜单命令时，将调用方法 <xref:Microsoft.VisualStudio.Modeling.Shell.ClipboardCommandSet.ProcessOnMenuCopyCommand%2A>。 你可以在**DslPackage\Generated Code\CommandSet.cs**中了解这是如何设置的。 有关如何设置命令的详细信息，请参阅[如何：向快捷菜单中添加命令](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)。
 
- 可以通过在 DslPackage 项目中添加*MyDsl* `ClipboardCommandSet` 的分部类定义来替代 ProcessOnMenuCopyCommand。
+ 可以通过在 DslPackage 项目中添加*MyDsl*`ClipboardCommandSet` 的分部类定义来替代 ProcessOnMenuCopyCommand。
 
 ```csharp
 using System.Collections.Generic;
@@ -564,4 +564,4 @@ namespace Company.MyDsl
 ```
 
 ## <a name="see-also"></a>请参阅
- [自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)[如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)[自定义删除行为](../modeling/customizing-deletion-behavior.md)[示例： VMSDK 电路图示例](http://go.microsoft.com/fwlink/?LinkId=213879)
+ [自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)[如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)[自定义删除行为](../modeling/customizing-deletion-behavior.md)[示例： VMSDK 电路图示例](https://go.microsoft.com/fwlink/?LinkId=213879)

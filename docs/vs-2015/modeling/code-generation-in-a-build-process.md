@@ -12,12 +12,12 @@ caps.latest.revision: 30
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 81c4160ca6d03d55d631cd4dad8c3bce01fa9722
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ae28c59f9c5f19e87b833c90e7dbc6bf3b7497ea
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667868"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297929"
 ---
 # <a name="code-generation-in-a-build-process"></a>生成过程中的代码生成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -284,5 +284,5 @@ Visual Studio 宏（如 $(SolutionDir）在 MSBuild 中不起作用。 你可以
 在 T4 MSbuild 模板（位于 $(VSToolsPath)\TextTemplating\Microsoft.TextTemplating.targets）提供了有用的指南
 
 - [编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)
-- [Visual Studio 可视化和建模 SDK](http://go.microsoft.com/fwlink/?LinkID=185579)
+- [Visual Studio 可视化和建模 SDK](https://go.microsoft.com/fwlink/?LinkID=185579)
 - [Oleg Sych：了解 T4： MSBuild 集成](https://github.com/olegsych/T4Toolbox)

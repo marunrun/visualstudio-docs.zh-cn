@@ -16,12 +16,12 @@ caps.latest.revision: 44
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e621297b36d75a0e48baed4ab24d50abd5e61663
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bdb6620f8d73bf7fae7b7dbb1b92af38e71345b6
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668688"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295677"
 ---
 # <a name="define-a-profile-to-extend-uml"></a>定义用于扩展 UML 的配置文件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "72668688"
 6. 将扩展文件发送给 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的其他用户，以将该文件安装到他们的计算机上。
 
 ## <a name="AddProfile"></a>如何将配置文件添加到 Visual Studio 扩展
- 要安装某个配置文件并允许你将其发送给其他用户，必须将该配置文件添加到 Visual Studio 扩展中。 有关详细信息，请参阅[部署 Visual Studio 扩展](http://go.microsoft.com/fwlink/?LinkId=160780)。
+ 要安装某个配置文件并允许你将其发送给其他用户，必须将该配置文件添加到 Visual Studio 扩展中。 有关详细信息，请参阅[部署 Visual Studio 扩展](https://go.microsoft.com/fwlink/?LinkId=160780)。
 
 #### <a name="to-define-a-profile-in-a-new-visual-studio-extension"></a>在新 Visual Studio 扩展中定义配置文件
 
@@ -105,7 +105,7 @@ ms.locfileid: "72668688"
 
 5. 在 "**资产**" 页上，添加描述该配置文件的行：
 
-   - 单击“新建”。 按如下所示设置 "**添加新资产**" 对话框中的字段。
+   - 单击 **“新建”** 。 按如下所示设置 "**添加新资产**" 对话框中的字段。
 
    - 将**类型**设置为 `Microsoft.VisualStudio.UmlProfile`
 
@@ -139,7 +139,7 @@ ms.locfileid: "72668688"
 
     - `extension.vsixmanifest`
 
-    - `[Content_Types].xml` － 按照如下所示键入此名称，并将名称括在方括号中
+    - `[Content_Types].xml`-键入此名称（如下所示），并用方括号括起来
 
 2. 编辑 `[Content_Types].xml` 以包含下面的文本。 请注意，每个文件扩展名在该文件中都有对应项。
 
@@ -196,7 +196,7 @@ ms.locfileid: "72668688"
     > [!NOTE]
     > 如果要使用 Visual Studio 扩展项目生成扩展，请使用解决方案资源管理器向该项目添加一个新文件夹。
 
-3. 将新目录的名称更改为本地化区域性所对应的 ISO 短代码，例如保加利亚语对应 `bg`，法语对应 `fr`。 应使用非特定区域性代码（通常为两个字母），而不应使用特定区域性代码（例如 `fr-CA`）。 有关区域性代码的详细信息，请参阅[cultureinfo.getcultures 方法](http://go.microsoft.com/fwlink/?LinkId=160782)，它提供了区域性代码的完整列表。
+3. 将新目录的名称更改为本地化区域性所对应的 ISO 短代码，例如保加利亚语对应 `bg`，法语对应 `fr`。 应使用非特定区域性代码（通常为两个字母），而不应使用特定区域性代码（例如 `fr-CA`）。 有关区域性代码的详细信息，请参阅[cultureinfo.getcultures 方法](https://go.microsoft.com/fwlink/?LinkId=160782)，它提供了区域性代码的完整列表。
 
 4. 将默认配置文件的副本添加到新目录中。 请不要更改其文件名。
 
@@ -220,7 +220,7 @@ ms.locfileid: "72668688"
 7. 通过生成扩展项目或压缩所有文件生成 Visual Studio 扩展，如前面的章节中所述。
 
 ## <a name="Schema"></a>配置文件的结构
- UML 配置文件的 XSD 文件可在以下示例中找到：[设置构造型和配置文件 xsd](http://go.microsoft.com/fwlink/?LinkID=213811)。 为帮助编辑配置文件，请在以下位置安装 `.xsd` 文件：
+ UML 配置文件的 XSD 文件可在以下示例中找到：[设置构造型和配置文件 xsd](https://go.microsoft.com/fwlink/?LinkID=213811)。 为帮助编辑配置文件，请在以下位置安装 `.xsd` 文件：
 
  **%ProgramFiles%\Microsoft Visual Studio [version] \Xml\Schemas**
 
@@ -251,14 +251,14 @@ ms.locfileid: "72668688"
 
  每个配置文件都包含三个主要部分。 按照相反顺序，这三个部分如下所示：
 
-- `<propertyTypes>` － 用于构造型部分中定义的属性的类型列表。
+- `<propertyTypes>`-用于 "构造型" 部分中定义的属性的类型列表。
 
-- `<metaclasses>` － 此配置文件中的构造型应用到的模型元素类型列表，例如 IClass、IInterface、IOperation 和 IDependency。
+- `<metaclasses>`-此配置文件中的构造型所应用于的模型元素类型的列表，如 IClass、IInterface、IOperation、IDependency。
 
-- `<stereotypes>` － 构造型定义。 每个定义都包括添加到目标模型元素中的属性的名称和类型。
+- `<stereotypes>`-构造型定义。 每个定义都包括添加到目标模型元素中的属性的名称和类型。
 
 #### <a name="property-types"></a>属性类型
- @No__t_0 节声明用于 `<stereotypes>` 部分中属性的类型的列表。 属性类型有两种：外部和枚举。
+ `<propertyTypes>` 节声明用于 `<stereotypes>` 部分中属性的类型的列表。 属性类型有两种：外部和枚举。
 
  外部类型声明标准 .NET 类型的完全限定名：
 
@@ -312,7 +312,7 @@ ms.locfileid: "72668688"
 > [!NOTE]
 > 名字对象的名称必须以 `/yourProfileName/` 开头，其中 `yourProfileName` 在配置文件（此示例中为“CSharpProfile”）的 `name` 特性中定义。 名字对象以元类部分中的某个项的名称结尾。
 
- 每个构造型都可以列出零个或多个属性，该构造型将这些属性添加到它所应用到的任何模型元素。 @No__t_0 包含指向在 `<propertyTypes>` 部分中定义的某个类型的链接。 该链接必须为用于引用 `<externalTypeMoniker>` 的 `<externalType>,`，或为用于引用 `<enumerationTypeMoniker>` 的 `<enumerationType>`。 再次强调，该链接以你的配置文件的名称开头。
+ 每个构造型都可以列出零个或多个属性，该构造型将这些属性添加到它所应用到的任何模型元素。 `<propertyType>` 包含指向在 `<propertyTypes>` 部分中定义的某个类型的链接。 该链接必须为用于引用 `<externalTypeMoniker>` 的 `<externalType>,`，或为用于引用 `<enumerationTypeMoniker>` 的 `<enumerationType>`。 再次强调，该链接以你的配置文件的名称开头。
 
 ```
   <properties>
@@ -347,7 +347,7 @@ ms.locfileid: "72668688"
 
 2. 确保每个名字对象名称的格式都为 /profileName/nodeName。 profileName 是根配置文件节点中的名称特性的值。 nodeName 是元类、externalType 或 enumerationType 的名称特性的值。
 
-3. 请确保语法与此处所述的语法相同，如_drive_ **： \Program Files\Microsoft Visual Studio [version] \Common7\IDE\Extensions\Microsoft\Architecture Tools\UmlProfiles \\** 中所示。
+3. 请确保语法与此处所述的语法相同，如_drive_ **： \Program Files\Microsoft Visual Studio [version] \Common7\IDE\Extensions\Microsoft\Architecture Tools\UmlProfiles\\** 中所示。
 
 4. 卸载有错误的扩展。 在 “工具”菜单上，单击“扩展和更新”。
 
@@ -356,13 +356,13 @@ ms.locfileid: "72668688"
 5. 重新生成 VSIX 文件，然后在 Windows 资源管理器中打开该文件以将其重新安装。 重新启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。
 
    扩展管理器中未显示该扩展，但当你尝试重新安装它时，将显示以下消息：**扩展已安装到所有适用的产品。**
-   1. 从*LocalAppData*\Microsoft\VisualStudio 的子文件夹中删除扩展文件 \\ [版本] \Extensions\
+   1. 从*LocalAppData*\Microsoft\VisualStudio 的子文件夹中删除扩展文件\\[版本] \Extensions\
 
    - 若要查看*LocalAppData*，必须在 Windows 资源管理器文件夹选项的 "视图" 选项卡中设置 "显示隐藏的文件和文件夹"。
 
-   - *LocalAppData*通常在 C:\Users \\*userName*\AppData\Local\
+   - *LocalAppData*通常在 C:\Users\\*userName*\AppData\Local\
 
 6. 重新启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。
 
 ## <a name="see-also"></a>请参阅
- [向 uml 模型元素添加构造型](../modeling/add-stereotypes-to-uml-model-elements.md)[使用配置文件和构造型构造模型](../modeling/customize-your-model-with-profiles-and-stereotypes.md)[标准构造型 uml 模型的标准构造型](../modeling/standard-stereotypes-for-uml-models.md)[示例：按构造型的 uml 元素](http://go.microsoft.com/fwlink/?LinkID=213841)示例：[设置构造型，配置文件 XSD](http://go.microsoft.com/fwlink/?LinkID=213811)
+ [向 uml 模型元素添加构造型](../modeling/add-stereotypes-to-uml-model-elements.md)[使用配置文件和构造型构造模型](../modeling/customize-your-model-with-profiles-and-stereotypes.md)[标准构造型 uml 模型的标准构造型](../modeling/standard-stereotypes-for-uml-models.md)[示例：按构造型的 uml 元素](https://go.microsoft.com/fwlink/?LinkID=213841)示例：[设置构造型，配置文件 XSD](https://go.microsoft.com/fwlink/?LinkID=213811)

@@ -36,6 +36,6 @@ ms.locfileid: "72572266"
   
 - 确保仅尝试解码有效的 Uri。 不能解码正常 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 字符串，因为它们可能包含无效字符。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [DecodeURI 函数](../../javascript/reference/decodeuri-function-javascript.md)   
  [decodeURIComponent 函数](../../javascript/reference/decodeuricomponent-function-javascript.md)

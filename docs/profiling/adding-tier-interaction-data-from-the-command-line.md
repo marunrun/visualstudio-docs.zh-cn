@@ -8,14 +8,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b04b2d2c3c23b444d011d81002f7f22a12b1ebf0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 20b8438243382b28cccb510894d1674aa5872946
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62777854"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779865"
 ---
 # <a name="add-tier-interaction-data-from-the-command-line"></a>从命令行添加层交互数据
 
@@ -31,7 +32,7 @@ ms.locfileid: "62777854"
 
 **在远程计算机上收集 TIP 数据**
 
-若要在远程计算机上收集层交互数据，必须从 Visual Studio 计算机的 %VSInstallDir%\Team Tools\Performance Tools\Setups 文件夹中将 vs_profiler\_\<Platform>\_\<Language>.exe 文件复制到远程计算机上并进行安装。 不能使用[远程调试](../debugger/remote-debugging.md)下载包中的分析工具。
+若要在远程计算机上收集层交互数据，必须从 Visual Studio 计算机的 %VSInstallDir%\Team Tools\Performance Tools\Setups 文件夹中将 vs_profiler\_\<Platform>\_\<Language>.exe 文件复制到远程计算机上并进行安装        。 不能使用[远程调试](../debugger/remote-debugging.md)下载包中的分析工具。
 
 **TIP 报表**
 
@@ -49,7 +50,7 @@ ms.locfileid: "62777854"
 
 ### <a name="profile-a-windows-desktop-application-example"></a>分析 Windows 桌面应用程序示例
 
-1. 使用管理员特权打开命令提示符窗口。 单击“开始”，指向“所有程序”，再指向“附件”。 右键单击“命令提示符”，然后单击“以管理员身份运行”。
+1. 使用管理员特权打开命令提示符窗口。 单击“开始”  ，指向“所有程序”  ，再指向“附件”  。 右键单击“命令提示符”  ，然后单击“以管理员身份运行”  。
 
 2. 初始化 .NET 分析和 TIP 环境变量。 键入以下命令：
 
@@ -92,7 +93,7 @@ ms.locfileid: "62777854"
 
 1. 必要时请安装该服务。
 
-2. 使用管理员特权打开命令提示符窗口。 单击“开始”，指向“所有程序”，再指向“附件”。 右键单击“命令提示符”，然后单击“以管理员身份运行”。
+2. 使用管理员特权打开命令提示符窗口。 单击“开始”  ，指向“所有程序”  ，再指向“附件”  。 右键单击“命令提示符”  ，然后单击“以管理员身份运行”  。
 
 3. 初始化 .NET 分析环境变量。 键入以下命令：
 

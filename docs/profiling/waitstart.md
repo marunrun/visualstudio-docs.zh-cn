@@ -6,14 +6,15 @@ ms.assetid: 6c737177-2dfb-4150-963e-a49ac9aaa591
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: a409a4fe4ffe843df536e3c9e17a3a5a3b6560db
-ms.sourcegitcommit: 4d2620bee4688fb881e09a07ea4a264b99f0743e
+ms.openlocfilehash: 1cbabcf86afa9770f1616c7e4e508af1c9afa1ba
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71322495"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779852"
 ---
 # <a name="waitstart"></a>WaitStart
 仅当探查器已初始化，或已超过指定秒数时，WaitStart 选项才使 VSPerfCmd.exe Start 子命令返回  。 默认情况下，Start 命令将立即返回。 如果 Start 子命令在未初始化探查器的情况下就返回，则将返回一个错误。 如果未指定秒数，Start 命令将无限期等待。

@@ -9,14 +9,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a3bf4f5fd7ab18efb13e1c52847daf647e908b7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d188d6c3268c8ee9f066eba1b6a57e469f34a78e
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62968771"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778136"
 ---
 # <a name="tier-interactions-view"></a>“层交互”视图
 
@@ -32,13 +33,13 @@ ms.locfileid: "62968771"
 
 - 在主窗格中单击某个数据库调用节点时，该数据库调用的实例的数据会显示在详细信息窗格中。
 
-  时间显示为毫秒数或 CPU 时钟计时周期数。 若要更改显示的时间单位，请单击“工具”菜单，单击“选项”，然后选择“将时间值显示为”选项中的一个。
+  时间显示为毫秒数或 CPU 时钟计时周期数。 若要更改显示的时间单位，请单击“工具”  菜单，单击“选项”  ，然后选择“将时间值显示为”  选项中的一个。
 
 ## <a name="master-pane"></a>主窗格
 
 |列|说明|
 |------------|-----------------|
-|**名称**|- 对于顶层行，是分析的进程或网页的名称。<br />- 对于数据库连接行，是承载数据库的服务器的名称。|
+|**Name**|- 对于顶层行，是分析的进程或网页的名称。<br />- 对于数据库连接行，是承载数据库的服务器的名称。|
 |**数据库**|数据库的名称（仅限数据库连接行）。|
 |**计数**|进程、网页或数据库连接生成的请求的总数。|
 |**总运行时间**|执行来自进程、网页或数据库连接的任何一个请求所用的总时间。|

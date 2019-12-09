@@ -8,12 +8,12 @@ ms.assetid: 7b866776-f2d5-4823-8d15-919f889db26f
 caps.latest.revision: 31
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8e314b63490387b94c068e178f0d02db4822921f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1f2ac13b62dcc522626fde92b1b29cac9873edec
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672171"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301834"
 ---
 # <a name="test-windows-uwp-and-81-phone-apps-with-coded-ui-tests"></a>使用编码的 UI 测试来测试 Windows UWP 和 Phone 8.1 应用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -377,12 +377,12 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 |运行测试的目标|本地或远程计算机。 当你使用自动测试用例运行测试时，可以指定远程计算机。 请参阅 [在 Microsoft 测试管理器中实现测试用例自动化](https://msdn.microsoft.com/library/4e02568b-9cde-47cc-b41c-82726c177e42)。|模拟器或设备。 请参阅本主题中的 [问：是否测试只能在模拟器上执行，或者我还可以使用物理设备？](#TestingPhoneAppsCodedUI_EmulatorDevice) 。|
 |从命令行执行|指定目标无需设置文件。|指定目标需要 Runsettings 文件。|
 |针对 Shell 控件的专用类|[DirectUIControl](/previous-versions/dn248208(v=vs.140))|<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl>|
-|在 XAML 应用中的 WebView 控件|如果你使用 Html* 专用类与 HTML 元素进行交互则受支持。 请参阅<xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>.|不支持。|
-|从 MTM 执行自动测试|支持。|不支持。|
+|在 XAML 应用中的 WebView 控件|如果你使用 Html* 专用类与 HTML 元素进行交互则受支持。 请参阅 <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>。|不受支持。|
+|从 MTM 执行自动测试|支持。|不受支持。|
 |数据驱动的测试|有关使用外部数据源和使用测试方法中 DataSource 特性的信息，请参阅 [数据驱动的测试](../test/creating-a-data-driven-coded-ui-test.md) 。|使用测试方法中的 DataRow 特性将数据指定为内联。 请参阅本主题中的 [对 Windows Phone 应用使用数据驱动的编码 UI 测试](#TestingPhoneAppsCodedUI_DataDriven) 。|
 
 ## <a name="external-resources"></a>外部资源
- Microsoft Visual Studio Application Lifecycle Management 博客： [使用编码的 UI 测试基于 XAML 的 Windows Phone 应用](http://blogs.msdn.com/b/visualstudioalm/archive/2014/04/05/using-coded-ui-to-test-xaml-based-windows-phone-apps.aspx?PageIndex=2#comments)
+ Microsoft Visual Studio Application Lifecycle Management 博客： [使用编码的 UI 测试基于 XAML 的 Windows Phone 应用](https://devblogs.microsoft.com/devops/using-coded-ui-to-test-xaml-based-windows-phone-apps/#comments)
 
 ## <a name="see-also"></a>请参阅
  [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)

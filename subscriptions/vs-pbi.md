@@ -3,15 +3,15 @@ title: Visual Studio 订阅中的 Power BI Pro 权益 | Microsoft 文档
 author: evanwindom
 ms.author: jaunger
 manager: evelynp
-ms.date: 12/19/2018
+ms.date: 11/18/2019
 ms.topic: conceptual
 description: 了解有关所选 Visual Studio 订阅中随附的 Power BI Pro 订阅。
-ms.openlocfilehash: 499a4ee168aaab7dfee2527bdbf10cc3b10313b8
-ms.sourcegitcommit: a124076dfd6b4e5aecda4d01984fee7b0c034745
+ms.openlocfilehash: 8e7046d8fc16868e23978203cf2bc400c70b6b8d
+ms.sourcegitcommit: 5c9ca18eadc7ed0ed095cc5a3e1df40bbc13e70c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787962"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74161944"
 ---
 # <a name="power-bi-pro-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Power BI Pro
 
@@ -63,13 +63,15 @@ ms.locfileid: "68787962"
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准）   | VL、Azure、零售、所选 NFR<sup>1</sup> | 可用       |  是|
+| 带有 GitHub Enterprise 的 Visual Studio Enterprise  | VL | 可用       |  是|
 | Visual Studio Professional（标准、月度云） | VL、Azure、零售                                       | 不可用                                                            |NA         |
+| 带有 GitHub Enterprise 的 Visual Studio Professional | VL                                      | 不可用                                                            |NA         |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 不可用                                                            |NA         |
 | MSDN 平台（标准）                                          | VL、零售                                              | 可用       |  是|
 | Visual Studio Enterprise（月度云） | Azure                                       | 不可用                                  |NA|
 ||
 
-<sup>1</sup>  *包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、BizSpark、MCT 软件和服务开发人员、MCT 软件和服务、最有价值专家 (MVP)、区域总监 (RD)。不包括：Microsoft 合作伙伴网络 (MPN)、FTE、Imagine*。
+<sup>1</sup>  *包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、BizSpark、MCT 软件和服务开发人员、MCT 软件和服务、最有价值专家 (MVP)、区域总监 (RD)。不包括：Microsoft 合作伙伴网络 (MPN)、FTE、Imagine  。
 
 > [!NOTE]
 > Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 我们鼓励新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) 以浏览购买 Visual Studio 的不同选项。
@@ -111,4 +113,5 @@ ms.locfileid: "68787962"
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
 
 ## <a name="next-steps"></a>后续步骤
-若要激活 Power BI Pro 权益，请访问 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
+- 要激活 Power BI Pro 权益，请访问 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)。
+- 通过激活 [Azure 开发测试个人额度](vs-azure.md)来充分利用你自己的开发沙盒。 

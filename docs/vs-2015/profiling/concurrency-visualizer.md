@@ -16,12 +16,12 @@ caps.latest.revision: 36
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: e9735f6ab6a44041deabdae0d57782da6f8c98b7
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 8c407475f72684360551cd97852c1a1bfde5088f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63434339"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300611"
 ---
 # <a name="concurrency-visualizer"></a>并发可视化工具
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,26 +30,26 @@ ms.locfileid: "63434339"
 > 对于 Visual Studio，并发可视化工具是可选扩展。 从以下链接下载并发可视化工具和并发可视化工具收集工具：  
 > 
 > - 下载              [并发可视化工具](https://visualstudiogallery.msdn.microsoft.com/a6c24ce9-beec-4545-9261-293061436ee9) 扩展。  
->   - 下载              [Visual Studio 2015 的并发可视化工具收集工具](http://www.microsoft.com/download/details.aspx?id=49103)。  
+>   - 下载              [Visual Studio 2015 的并发可视化工具收集工具](https://www.microsoft.com/download/details.aspx?id=49103)。  
 > 
 >   [并发可视化工具命令行实用工具(CVCollectionCmd)](../profiling/concurrency-visualizer-command-line-utility-cvcollectioncmd.md) 使你能够从命令行收集跟踪，可以在 Visual Studio 2015 的并发可视化工具中查看该命令行。 该工具可以在未安装 Visual Studio 的计算机上使用。  
   
  使用并发可视化工具，可以检查多线程应用的执行方式。 并发可视化工具中的视图提供图形、表格和文本形式的数据，可表明程序中的线程与整个系统之间的时态关系。 可以使用并发可视化工具查找性能瓶颈、CPU 利用率不足、线程争用、跨内核线程迁移、同步延迟、DirectX 活动、I/O 重叠区域和其他信息。 这些视图通过将其图形输出与调用堆栈和源代码关联在一起，提供可操作数据。  
   
- 并发可视化工具依赖 [Windows 事件跟踪](http://go.microsoft.com/fwlink/?LinkId=234579) 功能。  
+ 并发可视化工具依赖 [Windows 事件跟踪](https://go.microsoft.com/fwlink/?LinkId=234579) 功能。  
   
 > [!NOTE]
 > 并发可视化工具不支持 Web 项目。  
   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|描述|  
+|标题|描述|  
 |-----------|-----------------|  
 |[使用率视图](../profiling/utilization-view.md)|介绍如何在所有处理器中查看和分析系统活动。|  
-|[线程视图](../profiling/threads-view-parallel-performance.md)|介绍如何分析程序中线程之间的交互。|  
-|[内核视图](../profiling/cores-view.md)|介绍如何分析跨越核心的线程迁移。|  
+|[“线程”视图](../profiling/threads-view-parallel-performance.md)|介绍如何分析程序中线程之间的交互。|  
+|[“核心”视图](../profiling/cores-view.md)|介绍如何分析跨越核心的线程迁移。|  
 |[性能不佳的多线程应用程序的常见模式](../profiling/common-patterns-for-poorly-behaved-multithreaded-applications.md)|描述若干常见模式并展示其在并发可视化工具中的显示方式。|  
-|[Visual Studio 博客中的并行开发](http://go.microsoft.com/fwlink/?LinkId=235385)|提供关于并发可视化工具的提示和最佳做法。|  
+|[Visual Studio 博客中的并行开发](https://go.microsoft.com/fwlink/?LinkId=235385)|提供关于并发可视化工具的提示和最佳做法。|  
 |[性能报告视图](../profiling/performance-report-views.md)|提供有关 Visual Studio 分析工具报告和视图的参考信息。|  
 |[并发可视化工具 SDK](../profiling/concurrency-visualizer-sdk.md)|描述如何检测你的源代码，以便在并发可视化工具中显示附加信息。|  
 |[并发可视化工具命令行实用工具 (CVCollectionCmd)](../profiling/concurrency-visualizer-command-line-utility-cvcollectioncmd.md)|描述如何使用并发可视化工具命令行实用程序 (CVCollectionCmd.exe) 在未安装 Visual Studio 的计算机上收集并处理跟踪信息。|  

@@ -14,20 +14,20 @@ caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5817943ebca51433e64ae3b549af76522992f018
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ce96be60126f5693bfb4ba504a756e0ce76b0b2d
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68158693"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301253"
 ---
 # <a name="da0005-frequent-gc2-collections"></a>DA0005：频繁进行 GC2 收集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 RuleId |DA0005 |  
-|类别 |。NET Framework 使用情况 |  
-|分析方法 |.NET 内存 |  
-|消息 |很多对象被收集在第 2 代垃圾回收。 |  
+|Category |。NET Framework 使用量 |  
+|分析方法 |。NET Memory |  
+|消息 |正在第2代垃圾回收中收集很多对象。 |  
 |消息类型 |警告 |  
   
 ## <a name="cause"></a>原因  
@@ -38,9 +38,9 @@ RuleId |DA0005 |
   
  收集 0 代中的对象时，通常频率和效率都较高。 收集 1 代中的对象时，通常频率和效率都较低。 最后，应以更低的频率收集 2 代中生存期较长的对象。 2 代回收是完整的垃圾回收运行，也是成本最高的操作。  
   
- 第 2 代垃圾回收比例过高时将触发此规则。 如果过多生存期相对较短的对象在第 1 代回收中未被回收，但在 2 代回收中被回收，那么内存管理的成本将很容易过高。 有关详细信息，请参阅 MSDN 网站上 Rico Mariani 关于性能问题的见解的 [Mid-life crisis](http://go.microsoft.com/fwlink/?LinkId=177835)（中年危机）一文。  
+ 第 2 代垃圾回收比例过高时将触发此规则。 如果过多生存期相对较短的对象在第 1 代回收中未被回收，但在 2 代回收中被回收，那么内存管理的成本将很容易过高。 有关详细信息，请参阅 MSDN 网站上 Rico Mariani 关于性能问题的见解的 [Mid-life crisis](https://go.microsoft.com/fwlink/?LinkId=177835)（中年危机）一文。  
   
 ## <a name="how-to-investigate-a-warning"></a>如何调查警告  
  查看 [.NET 内存数据视图](../profiling/dotnet-memory-data-views.md)报告，了解应用程序的内存分配模式。 使用[对象生存期视图](../profiling/object-lifetime-view.md)确定哪些程序的数据对象可生存至第 2 代，并在此被回收。 使用[分配视图](../profiling/dotnet-memory-allocations-view.md)确定这些分配的执行路径。  
   
- 有关如何提高垃圾回收性能的信息，请参阅 Microsoft 网站上的 [Garbage Collector Basics and Performance Hints](http://go.microsoft.com/fwlink/?LinkId=148226)（垃圾回收器基础知识和性能提示）。 有关自动垃圾回收的开销的信息，请参阅[大型对象堆揭密](http://go.microsoft.com/fwlink/?LinkId=177836)。
+ 有关如何提高垃圾回收性能的信息，请参阅 Microsoft 网站上的 [Garbage Collector Basics and Performance Hints](https://go.microsoft.com/fwlink/?LinkId=148226)（垃圾回收器基础知识和性能提示）。 有关自动垃圾回收的开销的信息，请参阅[大型对象堆揭密](https://go.microsoft.com/fwlink/?LinkId=177836)。

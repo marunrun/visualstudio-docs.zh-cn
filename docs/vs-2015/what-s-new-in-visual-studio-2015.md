@@ -14,12 +14,12 @@ caps.latest.revision: 364
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 469405515b7cc0ebe615dc821ebfa5ddb7258468
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ce064209ca96abda1f9e44825fa869c2ba250a32
+ms.sourcegitcommit: 08105865a9643fb20dce9b8b7580452cfbbe7ee7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672083"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74538983"
 ---
 # <a name="what39s-new-in-visual-studio-2015"></a>Visual Studio 2015 中的新增功能
 [!INCLUDE[vs2017banner](./includes/vs2017banner.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "72672083"
 
 此页面展示了自 Visual Studio 2013 RTM 以来的一些最重要的新功能，包括首先在 Visual Studio 2013 的一个更新中推出的功能。 有关 Visual Studio 2015 中新增功能的完整列表，请参见 [发行说明](https://www.visualstudio.com/news/vs2015-vs)。
 
-若要了解有关 Visual Studio ALM 中的许多改进和新增功能的详细信息，请参阅[TFS 2015 的新增](/tfs/server/whats-new?view=vsts#tfs-2015-rtm)功能。
+若要了解有关 Visual Studio ALM 中的许多改进和新增功能的详细信息，请参阅[TFS 2015 的新增](/azure/devops/server/whats-new#tfs-2015)功能。
 
 ## <a name="a-new-setup-experience"></a>新的安装体验
  [!INCLUDE[downloadvs](./includes/downloadvs-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "72672083"
  使用 C#、Visual Basic、C++ 或 JavaScript 创建这些 [通用 Windows 应用](https://msdn.microsoft.com/library/dn975273.aspx)。
 
 ### <a name="web"></a>Web
- ASP.NET 5 是 MVC、WebAPI 和 SignalR 的一个重大更新，在 Windows、Mac 和 Linux 上运行。  ASP.NET 5 旨在完全为你提供可组合的精益 .NET 堆栈以便生成基于云的现代应用程序。 Visual Studio 2015 工具与常用 Web 开发工具（例如 Bower 和 Grunt）更紧密地集成。 若要开始操作，请参阅  [NET Web 开发和工具博客](http://blogs.msdn.com/b/webdev/)上的多篇博客文章。
+ {2&gt;ASP.NET 5&lt;2} 是 MVC、WebAPI 和 SignalR 的一个重大更新，在 Windows、Mac 和 Linux 上运行。  ASP.NET 5 旨在完全为你提供可组合的精益 .NET 堆栈以便生成基于云的现代应用程序。 Visual Studio 2015 工具与常用 Web 开发工具（例如 Bower 和 Grunt）更紧密地集成。 若要开始操作，请参阅  [NET Web 开发和工具博客](https://devblogs.microsoft.com/aspnet/)上的多篇博客文章。
 
 ### <a name="classic-desktop-and-windows-store"></a>经典桌面和 Windows 应用商店
  Visual Studio 2015 继续支持经典桌面和 Windows 商店开发。 Visual Studio 将随着 Windows 的发展而发展。  在 Visual Studio 2015 中，适用于 .NET 和 C++ 的库和语言有了大幅改进，适用于 Windows 的所有版本。
@@ -87,12 +87,12 @@ ms.locfileid: "72672083"
 
  C# 和 Visual Basic 语言都在核心语言和 IDE 支持方面进行了很多小的改进。 这些改进一起作用，让你的 .NET 编码体验更直观、更方便、更有效。
 
- 有关详细信息，请参阅新增[功能](https://msdn.microsoft.com/library/1d971dd7-10fc-4692-8dac-30ca308fc0fa)和[.net 博客](http://blogs.msdn.com/b/dotnet/)。
+ 有关详细信息，请参阅新增[功能](https://msdn.microsoft.com/library/1d971dd7-10fc-4692-8dac-30ca308fc0fa)和[.net 博客](https://devblogs.microsoft.com/dotnet/)。
 
 #### <a name="c"></a>C++
  Visual C++ 在以下方面有大幅提升：C++11/14 语言一致性、对跨平台移动设备开发的支持、对可恢复函数和 await 的支持（目前计划在 C++17 中进行标准化）、C 运行时库 (CRT) 和 C++ 标准库 (STL) 实现中的改进和 Bug 修复、MFC 中可调整大小的对话框、新的编译器优化、更好的生成性能、代码编辑器中的新诊断功能和新效率工具。
 
- 有关详细信息，请参阅[视觉对象C++ ](https://msdn.microsoft.com/library/1cc09fad-85a2-43c2-b022-bb99f5fe0ad7)和[视觉对象C++博客](http://blogs.msdn.com/b/vcblog/)的新增功能。
+ 有关详细信息，请参阅[视觉对象C++ ](https://msdn.microsoft.com/library/1cc09fad-85a2-43c2-b022-bb99f5fe0ad7)和[视觉对象C++博客](https://devblogs.microsoft.com/cppblog/)的新增功能。
 
 ## <a name="device-preview-menu-bar"></a>设备预览菜单栏
  在通用 Windows 平台项目中，设备预览菜单栏使你可以查看基于 XAML 的 UI 在各种屏幕尺寸上的呈现方式。
@@ -121,7 +121,7 @@ ms.locfileid: "72672083"
  设计 XAML 用户界面的 Blend 体验获得了巨大提升。 Blend 已经过完全重新设计，以提供更直观的 UI、更强大的 XAML 编辑功能（包括 IntelliSense）并实现与 Visual Studio 更好的集成。 有关详细信息，请参阅[在 Visual Studio 和 Blend for Visual Studio 中设计 XAML](./designers/designing-xaml-in-visual-studio.md)。
 
 ## <a name="cross-platform-debugging-support"></a>跨平台调试支持
- 可以使用 Visual Studio 创建和调试在 Windows、iOS 和 Android 设备运行的本机移动应用。 使用 [Visual Studio Emulator for Android](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/12/introducing-visual-studio-s-emulator-for-android.aspx)，或连接设备并在 Visual Studio 中直接调试代码。
+ 可以使用 Visual Studio 创建和调试在 Windows、iOS 和 Android 设备运行的本机移动应用。 使用 [Visual Studio Emulator for Android](https://devblogs.microsoft.com/devops/introducing-visual-studios-emulator-for-android/)，或连接设备并在 Visual Studio 中直接调试代码。
 
 - **JavaScript/Cordova**。 使用 [Visual Studio Tools for Apache Cordova](https://msdn.microsoft.com/library/dn879821\(v=vs.140\).aspx) ，通过 JavaScript 生成适用于 Windows、iOS 和 Android 的本机应用。
 
@@ -129,7 +129,7 @@ ms.locfileid: "72672083"
 
 - **C#/Xamarin**。 通过 [Xamarin](https://msdn.microsoft.com/library/dn879698\(v=vs.140\).aspx) ，在 Visual Studio 中使用 C# 生成适用于 Windows、iOS 和 Android 的本机应用。
 
-     [Xamarin 开发人员指南](http://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/debugging_in_xamarin_ios/) 中的 [调试](http://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/debugging_with_xamarin_android/) (iOS) 和 [在设备上进行调试](http://developer.xamarin.com/guides) 介绍了调试体验。
+     [Xamarin 开发人员指南](https://docs.microsoft.com/xamarin/ios/deploy-test/debugging-in-xamarin-ios?tabs=windows) 中的 [调试](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-device?tabs=windows) (iOS) 和 [在设备上进行调试](https://docs.microsoft.com/xamarin/) 介绍了调试体验。
 
 - **C++/Android**。 配合使用 [用于跨平台移动开发的 Visual C++](cross-platform/visual-cpp-for-cross-platform-mobile-development.md) 模板和 [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html) 等第三方工具，创建适用于 Windows 和 Android 的本机应用。
 
@@ -140,13 +140,13 @@ ms.locfileid: "72672083"
 下面是对代码执行不同类型的诊断和分析的新功能和改进的工具：
 
 ### <a name="perftips"></a>性能提示
- 性能提示显示调试过程中方法的执行时间，可使你快速确认瓶颈，而无需调用探查器。 若要开始使用，请参阅 [性能提示：使用 Visual Studio 调试时的性能信息一览](http://blogs.msdn.com/b/visualstudioalm/archive/2014/08/18/perftips-performance-information-at-a-glance-while-debugging-with-visual-studio.aspx)
+ 性能提示显示调试过程中方法的执行时间，可使你快速确认瓶颈，而无需调用探查器。 若要开始使用，请参阅 [性能提示：使用 Visual Studio 调试时的性能信息一览](https://devblogs.microsoft.com/devops/perftips-performance-information-at-a-glance-while-debugging-with-visual-studio/)
 
 ### <a name="error-list"></a>错误列表
  错误列表现在支持任何列的筛选。 它还在你输入时显示整个 C# 或 Visual Basic 解决方案中错误、警告和代码分析的实时视图，即使代码更改生成上千个警告时也是如此。 新的“错误列表”重新兼容现有的用法。 有关更多信息，请参见 [Error List Window](./ide/reference/error-list-window.md)。
 
 ### <a name="gpu-usage-tool"></a>GPU 使用情况工具
- GPU 使用情况工具可帮助你收集和分析 DirectX 应用和游戏中的 GPU 使用数据，并就 CPU 或 GPU 中是否出现性能瓶颈进行故障排除。 若要开始使用该工具，请参阅 [Visual C++ 团队博客文章](http://blogs.msdn.com/b/vcblog/archive/2014/09/05/gpu-usage-tool-in-visual-studio-2013-update-4-ctp1.aspx)。
+ GPU 使用情况工具可帮助你收集和分析 DirectX 应用和游戏中的 GPU 使用数据，并就 CPU 或 GPU 中是否出现性能瓶颈进行故障排除。 若要开始使用该工具，请参阅 [Visual C++ 团队博客文章](https://devblogs.microsoft.com/cppblog/gpu-usage-tool-in-visual-studio-2013-update-4-ctp1/)。
 
 ## <a name="live-code-analysis-light-bulbs"></a>实时代码分析（灯泡）
  适用于 C# 和 Visual Basic 的新 Roslyn 编译器不仅提供更快的编译时间，也启用全新方案（如实时代码分析），这些方案在你输入时直接在代码编辑器内提供丰富的可自定义的反馈和建议。 在 Visual Studio 2015 中，灯泡在左边距中显示（使用键盘时）或显示工具提示（将鼠标悬停在错误上时）。 电灯泡实时提示编译器（可能使用自定义规则集）在你的代码中检测到问题，还提供有关如何解决该问题的建议。 当你看到电灯泡时，请单击它以获得可操作的建议。
@@ -252,7 +252,7 @@ ms.locfileid: "72672083"
 
  只需单击标题栏上的黄色笑脸，告诉我们你的偏好，然后单击“发送笑脸” 按钮。
 
- 就这么简单！ 我们将你的反馈路由到适当团队，在这里他们将振作精神，立即思考让你更高兴的方法。
+ 好了！ 我们将你的反馈路由到适当团队，在这里他们将振作精神，立即思考让你更高兴的方法。
 
 ### <a name="send-a-frown"></a>发送哭脸
  了解我们在产品中的改进之处有助于我们首先关注对客户最重要的事，从而管理我们的积压工作 (backlog)。 若有任何相关的疑难之事，请直接从 IDE 内使用“发送哭脸” 功能告诉我们。 我们也让这一流程异常简单：

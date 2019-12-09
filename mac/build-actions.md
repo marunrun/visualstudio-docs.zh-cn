@@ -5,12 +5,12 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/18/2019
 ms.assetid: 5399BCB1-E317-4C7B-87B1-C531E985DE6E
-ms.openlocfilehash: 5a0d7c6646fac83ef70fbe2aa7384dcee992d726
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.openlocfilehash: d089f38bd91eda2565f215e8d15a74cc119b8767
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71128436"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73714398"
 ---
 # <a name="build-actions"></a>生成操作
 
@@ -35,7 +35,7 @@ Visual Studio for Mac 项目中的所有文件都具有生成操作。 该生成
 |--|--|--|
 | **编译** | 任何 | 文件被传递到 C# 编译器作为源文件。|
 | **内容** | .NET、Xamarin | 对于 ASP.NET 项目，在部署站点时包含这些文件，作为站点的一部分。 对于 Xamarin.iOS 和 Xamarin.Mac 项目，它们会被包含在应用程序包中。|
-| **嵌入式资源** | .NET | 文件被传递到 C# 编译器作为嵌入程序集中的资源。 来自 `System.Reflection` 命名空间的 [Assembly.GetManifestResourceStream](https://docs.microsoft.com/dotnet/api/system.reflection.assembly.getmanifestresourcestream) 可用于从程序集中读取文件。|
+| **嵌入式资源** | .NET | 文件被传递到 C# 编译器作为嵌入程序集中的资源。 来自 `System.Reflection` 命名空间的 [Assembly.GetManifestResourceStream](/dotnet/api/system.reflection.assembly.getmanifestresourcestream) 可用于从程序集中读取文件。|
 | **无** | 任何 | 该文件不以任何形式包含在生成中，且它包括在项目中是为了便于从 IDE 轻松访问。 例如，此值可用于文档文件，例如“ReadMe”文件。|
 
 > [!NOTE]

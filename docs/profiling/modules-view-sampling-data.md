@@ -9,14 +9,15 @@ ms.assetid: 816f5633-65d7-41e5-aee1-033628d4e2df
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 359d36ed7eb74394e63af39cdbc9986b02385f8d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 7ead219ddf482af5917842118d386c6fefe67973
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63403605"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74772709"
 ---
 # <a name="modules-view---sampling-data"></a>“模块”视图 - 采样数据
 采样数据的“模块”视图显示按分析数据中采样的模块分组的性能数据。 每个模块都是一个层次结构树的根。 模块的采样函数在模块节点下列出。
@@ -28,7 +29,7 @@ ms.locfileid: "63403605"
 
 |列|说明|
 |------------|-----------------|
-|**名称**|模块、函数、行号或指令指针地址的名称。|
+|**Name**|模块、函数、行号或指令指针地址的名称。|
 |**进程 ID**|分析运行的进程 ID (PID)。|
 |**进程名**|进程的名称。|
 |**模块名**|包含函数、行或指令指针的模块的名称。|

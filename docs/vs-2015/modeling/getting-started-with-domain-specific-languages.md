@@ -9,24 +9,24 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 124fc1027e3b5eba537341c87ae2a80ce5c325bc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a2757201f482682b8fdf26275f510984629204f6
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666069"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300919"
 ---
 # <a name="getting-started-with-domain-specific-languages"></a>域特定语言入门
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本主题介绍如何定义和使用通过用于 Visual Studio 的建模 SDK 创建的域特定语言（DSL）的基本概念。
 
- 如果你不熟悉 Dsl，我们建议你完成**DSL 工具实验室**，你可以在此站点中找到此工具：[初学者和建模 SDK](http://go.microsoft.com/fwlink/?LinkID=186128)
+ 如果你不熟悉 Dsl，我们建议你完成**DSL 工具实验室**，你可以在此站点中找到此工具：[初学者和建模 SDK](https://go.microsoft.com/fwlink/?LinkID=186128)
 
 ## <a name="what-can-you-do-with-a-domain-specific-language"></a>使用域特定语言可以执行什么操作？
  域特定语言是一种通常为图形的表示法，用于特定目的。 与此相反，UML 等语言是通用的。 在 DSL 中，可以定义模型元素的类型及其关系，以及如何在屏幕上显示它们。
 
- 设计 DSL 后，可以将其作为 Visual Studio 集成扩展（VSIX）包的一部分进行分发。 用户使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的 DSL：
+ 设计 DSL 后，可以将其作为 Visual Studio 集成扩展（VSIX）包的一部分进行分发。 用户使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中的 DSL：
 
  ![系列树关系图、工具箱和资源管理器](../modeling/media/familyt-instance.png "FamilyT_Instance")
 
@@ -34,15 +34,15 @@ ms.locfileid: "72666069"
 
  Dsl 的一个主体应用程序是生成程序代码、配置文件和其他项目。 尤其是在大型项目和产品系列中，将在其中创建产品的多个变体，同时从 Dsl 生成许多可变方面可大大提高可靠性，并快速响应需求变化。
 
- 本概述的其余部分是一个演练，其中介绍了在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中创建和使用域特定语言的基本操作。
+ 本概述的其余部分是一个演练，其中介绍了在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中创建和使用域特定语言的基本操作。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
  若要定义 DSL，必须安装以下组件：
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](http://go.microsoft.com/fwlink/?LinkId=185580)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://go.microsoft.com/fwlink/?LinkId=185579)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://go.microsoft.com/fwlink/?LinkId=185580)|
 |Visual Studio 的建模 SDK|[下载 MSDK](https://www.microsoft.com/download/details.aspx?id=48148)|
 
 ## <a name="creating-a-dsl-solution"></a>创建 DSL 解决方案
@@ -58,7 +58,7 @@ ms.locfileid: "72666069"
 
     ![创建 DSL 对话](../modeling/media/create-dsldialog.png "Create_DSLDialog")
 
-4. 在 "**名称**" 框中，键入**FamilyTree**。 单击“确定”。
+4. 在 "**名称**" 框中，键入**FamilyTree**。 单击" **确定**"。
 
     "**域特定语言向导**" 将打开，并显示模板 DSL 解决方案列表。
 
@@ -94,7 +94,7 @@ ms.locfileid: "72666069"
 
 - **Dsl 项目**此项目包含定义域特定语言的代码。
 
-- **DslPackage 项目**此项目包含允许在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中打开和编辑 DSL 实例的代码。
+- **DslPackage 项目**此项目包含允许在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中打开和编辑 DSL 实例的代码。
 
 ## <a name="Debugging"></a>运行 DSL
  一旦创建 DSL 解决方案，就可以运行它。 稍后，你可以逐步修改 DSL 定义，并在每次更改后再次运行解决方案。
@@ -108,11 +108,11 @@ ms.locfileid: "72666069"
 
 2. 按 F5，或在 "**调试**" 菜单上单击 "**启动调试**"。
 
-    DSL 构建并安装在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例中。
+    DSL 构建并安装在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的实验实例中。
 
-    此时将启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例。 实验实例从注册表的单独子树获取其设置，其中 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展注册用于调试目的。 @No__t_0 的普通实例无法访问在此处注册的扩展。
+    此时将启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例。 实验实例从注册表的单独子树获取其设置，其中 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展注册用于调试目的。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的普通实例无法访问在此处注册的扩展。
 
-3. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例中，从**解决方案资源管理器**中打开名为**Test**的模型文件。
+3. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的实验实例中，从**解决方案资源管理器**中打开名为**Test**的模型文件。
 
     \- 或 -
 
@@ -141,12 +141,12 @@ ms.locfileid: "72666069"
 
  编辑模型时，可以在 "**资源管理器**" 视图中查看作为树的模型。 将形状添加到关系图中时，模型元素也会显示在资源管理器中。 即使没有关系图，也可以使用资源管理器。
 
- 如果在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的调试实例中看不到 "资源管理器"，请在 "**视图**" 菜单上，指向 "**其他窗口**"，再单击 " *\<Your 语言 >* **资源管理器**"。
+ 如果在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的调试实例中看不到 "资源管理器"，请在 "**视图**" 菜单上指向 "**其他窗口**"，然后单击 " *\<你的语言 >* **资源管理器**"。
 
 ### <a name="the-api-of-your-dsl"></a>DSL 的 API
  DSL 生成一个 API，该 API 允许你读取和更新作为 DSL 实例的模型。 API 的一个应用是从模型生成文本文件。 有关详细信息，请参阅[使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)。
 
- 在调试解决方案中，打开扩展名为 "tt" 的模板文件。 这些示例演示如何从模型生成文本，并允许你测试 DSL 的 API。 其中一个示例以 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 编写，另一个示例 [!INCLUDE[csprcs](../includes/csprcs-md.md)]。
+ 在调试解决方案中，打开扩展名为 "tt" 的模板文件。 这些示例演示如何从模型生成文本，并允许你测试 DSL 的 API。 其中一个示例以 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]编写，另一个示例 [!INCLUDE[csprcs](../includes/csprcs-md.md)]。
 
  在每个模板文件下，都是它生成的文件。 展开解决方案资源管理器中的模板文件，然后打开生成的文件。
 
@@ -158,7 +158,7 @@ ms.locfileid: "72666069"
 
 ##### <a name="to-regenerate-text-files-after-you-change-the-model-file"></a>更改模型文件之后重新生成文本文件
 
-1. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例中，保存模型文件。
+1. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的实验实例中，保存模型文件。
 
 2. 请确保每个 tt 文件中的文件名参数是指用于试验的模型文件。 保存 tt 文件。
 
@@ -200,7 +200,7 @@ ms.locfileid: "72666069"
 
     2. 打开属性窗口并将其放置在一起，以便你可以同时看到 DSL 资源管理器和属性。
 
-    3. 在 DSL 资源管理器中，依次展开 "**编辑器**"、 **"工具箱" 选项卡**、 *\<your DSL >* 和**工具**。
+    3. 在 DSL 资源管理器中，展开 "**编辑器**"、 **"工具箱" 选项卡**， *\<DSL >* ，然后按 "**工具**"。
 
     4. 单击 " **ExampleElement**"。 这是用于创建元素的工具箱项。
 
@@ -218,7 +218,7 @@ ms.locfileid: "72666069"
 
     3. 按 F5。 等待，直到出现 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例。
 
-4. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例的调试解决方案中，打开测试模型文件。 将元素从 "工具箱" 拖动到该元素上。 请注意，DSL 资源管理器中的工具标题和类型名称已更改。
+4. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的实验实例的调试解决方案中，打开测试模型文件。 将元素从 "工具箱" 拖动到该元素上。 请注意，DSL 资源管理器中的工具标题和类型名称已更改。
 
 5. 保存模型文件。
 
@@ -255,7 +255,7 @@ ms.locfileid: "72666069"
 
 3. 将修饰器映射到属性。
 
-   1. 打开 "DSL 详细信息" 窗口。 它通常位于 "输出" 窗口旁的选项卡中。 如果看不到该窗口，请在 "**视图**" 菜单上，指向 "**其他窗口**"，再单击 " **DSL 详细信息**"。
+   1. 打开“DSL 详细信息”窗口。 它通常位于 "输出" 窗口旁的选项卡中。 如果看不到该窗口，请在 "**视图**" 菜单上，指向 "**其他窗口**"，再单击 " **DSL 详细信息**"。
 
    2. 在 DSL 定义关系图上，单击将**Person**域类连接到 shape 类的行。
 
@@ -324,7 +324,7 @@ ms.locfileid: "72666069"
 
     1. 在**DSL 资源管理器**中，依次展开**编辑器**和**工具箱选项卡**。
 
-    2. 右键单击 *\<your DSL >* ，然后单击 "**添加新元素工具**"。
+    2. 右键单击*DSL >\<* ，然后单击 "**添加新元素工具**"。
 
     3. 设置新工具的 "**名称**" 属性，并将其 "**类**" 属性设置为 "城镇"。
 
@@ -332,7 +332,7 @@ ms.locfileid: "72666069"
 
 7. 创建用于在城镇与人员之间进行链接的连接器工具。
 
-    1. 右键单击 *\<your DSL >* ，然后单击 "**添加新的连接器工具**"。
+    1. 右键单击*DSL >\<* ，然后单击 "**添加新的连接器工具**"。
 
     2. 设置新工具的 "名称" 属性。
 
@@ -342,7 +342,7 @@ ms.locfileid: "72666069"
 
 8. 保存 DSL 定义，单击 "**转换所有模板**"，然后按**F5**。
 
-9. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例中，打开测试模型文件。 使用新工具来创建城镇和城镇和人员之间的链接。 请注意，只能在正确类型的元素之间创建链接。
+9. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的实验实例中，打开测试模型文件。 使用新工具来创建城镇和城镇和人员之间的链接。 请注意，只能在正确类型的元素之间创建链接。
 
 10. 创建列出每个人居住的城市的代码。 文本模板是可以运行此类代码的位置之一。 例如，可以修改调试解决方案中的现有 Sample.tt 文件，使其包含以下代码：
 
@@ -381,7 +381,7 @@ ms.locfileid: "72666069"
 
  找到解决方案的 bin 文件夹中的 .vsix 文件。 将其复制到要在其上安装它的计算机。 在该计算机上，双击该 VSIX 文件。 DSL 可用于该计算机上 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的所有实例中。
 
- 您可以使用相同的过程在自己的计算机上安装 DSL，这样就不必使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例。
+ 您可以使用相同的过程在自己的计算机上安装 DSL，这样就不必使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的实验实例。
 
  有关详细信息，请参阅[部署域特定语言解决方案](../modeling/deploying-domain-specific-language-solutions.md)。
 
@@ -399,4 +399,4 @@ ms.locfileid: "72666069"
 2. 重新生成仍想要使用的任何实验性 Dsl 或其他实验性 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展。
 
 ## <a name="see-also"></a>请参阅
- [了解模型、类和关系](../modeling/understanding-models-classes-and-relationships.md)[如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)[初学者和建模 SDK](http://go.microsoft.com/fwlink/?LinkID=186128)
+ [了解模型、类和关系](../modeling/understanding-models-classes-and-relationships.md)[如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)[初学者和建模 SDK](https://go.microsoft.com/fwlink/?LinkID=186128)

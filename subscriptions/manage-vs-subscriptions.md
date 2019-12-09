@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/17/2019
 ms.topic: conceptual
 description: 了解如何充分利用 Visual Studio 订阅
-ms.openlocfilehash: dcbcbc9c11dc5c695a1ca2ed523ad982ff18f5c5
-ms.sourcegitcommit: 9fc8b144d4ed1c46aba87c0b7e1d24454e0eea9d
+ms.openlocfilehash: a8a58cd3fca2443ca84db712cbd2a356351d4499
+ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68493357"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74706973"
 ---
 # <a name="managing-subscriptions"></a>管理订阅
 
@@ -43,7 +43,7 @@ Visual Studio 订阅门户将所有 Visual Studio 订阅和程序汇集到一个
 ## <a name="renewing-my-subscriptions"></a>续订我的订阅
 
 **标准订阅**
-- Microsoft Store：如果从 [Microsoft Store](http://www.microsoft.com/store) 购买订阅，则可以继续在这里续订。
+- Microsoft Store：如果从 [Microsoft Store](https://www.microsoft.com/store) 购买订阅，则可以继续在这里续订。
 - 批量许可证：如果公司通过批量许可证购买订阅，管理员应联系经销商续订你的订阅。
 
 **云订阅：** 云订阅无需续订。 只要订阅已付费，它就会仍然有效。

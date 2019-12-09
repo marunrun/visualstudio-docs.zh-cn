@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0df5b9c-0932-4e54-86f0-28530ad9d684
 caps.latest.revision: 22
 manager: jillfra
-ms.openlocfilehash: cc465ca5bc9474aaba51042d453a57ee7ec124ec
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: ceb78d3310f37a58850199b11fb2b2fed86f6799
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432305"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299314"
 ---
 # <a name="creating-your-own-start-page"></a>创建你自己的起始页
 你可以通过使用“起始页”项目模板或通过创建一个空白“起始页”来创建自定义“起始页”。  
@@ -28,20 +28,20 @@ ms.locfileid: "63432305"
   
 #### <a name="to-create-a-custom-start-page-by-using-the-start-page-project-template"></a>若要通过使用“起始页”项目模板来创建自定义“起始页”  
   
-1. 从 Visual Studio 库下载并安装 [起始页项目模板](http://go.microsoft.com/fwlink/?LinkId=186204) 。  
+1. 从 Visual Studio 库下载并安装 [起始页项目模板](https://go.microsoft.com/fwlink/?LinkId=186204) 。  
   
     > [!WARNING]
     > 此时 Visual Studio 2010 起始页项目模板尚未升级。 有关如何升级此模板的信息，请参阅[如何：升级 Visual Studio 自定义起始页](../misc/how-to-upgrade-a-visual-studio-custom-start-page.md)。  
   
 2. 安装模板后，使用它创建新的起始页项目。  
   
-3. 在“新建项目”对话框的左窗格中，在“已安装的模板” 下，展开“其他项目类型”  节点，单击“扩展性” 。  
+3. 在“新建项目”对话框的左窗格中，在“已安装的模板”下，展开“其他项目类型” 节点，单击“扩展性”。  
   
-4. 在中间窗格中，单击“自定义起始页” ，然后命名项目并单击“确定” 。  
+4. 在中间窗格中，单击“自定义起始页”，然后命名项目并单击“确定”。  
   
      Visual Studio 创建的“起始页”项目是 Visual Studio 起始页的完整副本。  
   
-5. 在“解决方案资源管理器” 中，打开 **StartPage.xaml**。  
+5. 在“解决方案资源管理器”中，打开 **StartPage.xaml**。  
   
 6. 编辑 StartPage.xaml。  
   
@@ -89,15 +89,15 @@ ms.locfileid: "63432305"
   
     新“起始页”已安装但未选中的情况下，会打开 Visual Studio 实验实例。  
   
-2. 在 Visual Studio 的实验实例中，在“工具”  菜单上，单击“选项” 。  
+2. 在 Visual Studio 的实验实例中，在“工具” 菜单上，单击“选项”。  
   
-3. 在“选项”  对话框中，在“环境” 下，选择“启动” 。 然后，在“自定义起始页”  列表中，选择 .xaml 文件，然后单击“确定” 。  
+3. 在“选项” 对话框中，在“环境”下，选择“启动”。 然后，在“自定义起始页” 列表中，选择 .xaml 文件，然后单击“确定”。  
   
-4. 在“视图”  菜单上，单击“起始页” 。  
+4. 在“视图” 菜单上，单击“起始页”。  
   
     将显示正在工作的“起始页”。 必须关闭实验实例，重新复制任何已更改的文件，然后再重新打开实验实例，以查看新的更改。  
   
-   可以通过上载.vsix 文件从 bin\debug 目录到共享你的自定义起始页[Visual Studio Marketplace](https://marketplace.visualstudio.com/)网站，或到另一个网站或 intranet 共享。 有关更多信息，请参见 [Deploying Custom Start Pages](../extensibility/deploying-custom-start-pages.md)。  
+   可以通过将 .vsix 文件从 bin\debug 目录上载到[Visual Studio Marketplace](https://marketplace.visualstudio.com/)网站，或上载到另一个网站或 intranet 共享，来共享自定义起始页。 有关更多信息，请参见 [Deploying Custom Start Pages](../extensibility/deploying-custom-start-pages.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [自定义起始页](../ide/customizing-the-start-page-for-visual-studio.md)   

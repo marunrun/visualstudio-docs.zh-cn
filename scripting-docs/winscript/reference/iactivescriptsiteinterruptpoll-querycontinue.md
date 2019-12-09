@@ -39,16 +39,16 @@ HRESULT QueryContinue();
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|调用成功，主机允许脚本继续运行。|  
 |`S_FALSE`|调用成功，并且宿主请求脚本终止。|  
   
 ## <a name="remarks"></a>备注  
- 托管脚本应终止，除非 `S_OK` `QueryContinue` 方法的返回值。 @No__t_0 的返回值指示宿主显式请求脚本终止。  
+ 托管脚本应终止，除非 `S_OK``QueryContinue` 方法的返回值。 `S_FALSE` 的返回值指示宿主显式请求脚本终止。  
   
  多线程主机可以使用 `IActiveScript::InterruptScriptThread` 方法来终止脚本。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IActiveScriptSiteInterruptPoll 接口](../../winscript/reference/iactivescriptsiteinterruptpoll-interface.md)   
  [IActiveScript::InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md)

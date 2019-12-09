@@ -1,5 +1,5 @@
 ---
-title: Roslyn 分析器和 immutablearrays 的代码识别库 |Microsoft Docs
+title: 用于 ImmutableArrays 的 Roslyn 分析器和代码识别库 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -8,31 +8,31 @@ ms.assetid: 0b0afa22-3fca-4d59-908e-352464c1d903
 caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 44cb171594a6d595652b3c013505927bd82f947e
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 9fbba44ef5ac0e531198b3569008a260118aefcf
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65685245"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298372"
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>Roslyn 分析器和 ImmutableArrays 的代码识别库
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[.NET 编译器平台](https://github.com/dotnet/roslyn)("Roslyn") 可帮助您生成可识别代码的库。 代码识别库提供了可以使用的功能和工具 （Roslyn 分析器），以帮助你使用库以最佳方式，或若要避免错误。 本主题说明如何构建真实世界 Roslyn 分析器来捕获常见的错误时使用[NIB:不可变集合](https://msdn.microsoft.com/library/33f4449d-7078-450a-8d60-d9229f66bbca)NuGet 包。 该示例还演示如何为分析器发现的代码问题提供代码修补程序。 用户看到在 Visual Studio 灯泡 UI 中的代码修补程序，并可以自动应用代码修复。
+[.NET Compiler Platform](https://github.com/dotnet/roslyn) （"Roslyn"）可帮助你构建代码感知库。 代码识别库提供了你可以使用的功能和工具（Roslyn 分析器）来帮助你以最佳方式使用库或避免错误。 本主题说明如何构建一个真实的 Roslyn 分析器，用于在使用 "[钢笔：不可变集合](https://msdn.microsoft.com/library/33f4449d-7078-450a-8d60-d9229f66bbca)" NuGet 包时捕获常见错误。 该示例还演示了如何为分析器发现的代码问题提供代码修补程序。 用户可以在 Visual Studio 灯泡 UI 中看到代码修复，并可以自动应用代码修补程序。
 
 ## <a name="getting-started"></a>入门
-需要以下内容以生成此示例中：
+若要生成此示例，需要以下各项：
 
-- Visual Studio 2015 (非 Express Edition) 或更高版本。 您可以使用免费[Visual Studio Community Edition](https://www.visualstudio.com/products/visual-studio-community-vs)
+- Visual Studio 2015 （非 Express Edition）或更高版本。 你可以使用免费的[Visual Studio 社区版](https://www.visualstudio.com/products/visual-studio-community-vs)
 
-- [Visual Studio SDK](../extensibility/visual-studio-sdk.md)。 您还可以在安装 Visual Studio 中，检查在常见的工具在同一时间安装 SDK 的 Visual Studio 扩展性工具。 如果已安装 Visual Studio，还可以通过转到主菜单中安装此 SDK**文件&#124;新建&#124;项目...**，在左侧的导航窗格中，选择 C#，然后选择可扩展性。 当你选择"**安装 Visual Studio 扩展性工具**"痕迹导航项目模板，它会提示你下载并安装 SDK。
+- [Visual Studio SDK](../extensibility/visual-studio-sdk.md)。 你还可以在安装 Visual Studio 时，查看 "常用工具" 下的 Visual Studio 扩展性工具同时安装 SDK。 如果你已经安装了 Visual Studio，则还可以通过转到主菜单**文件&#124; "新建&#124;项目 ...** "，在左侧导航窗格中C#选择，然后选择 "扩展性" 来安装此 SDK。 选择 "**安装 Visual Studio 扩展性工具**" 痕迹导航项目模板时，会提示您下载并安装 SDK。
 
-- [.NET 编译器平台 ("Roslyn") SDK](https://aka.ms/roslynsdktemplates)。 此外可以安装此 SDK，通过转到主菜单**文件&#124;新建&#124;项目...**，选择**C#** 中的左侧的导航窗格中，和然后选择**扩展性**。 当你选择"**下载.NET Compiler Platform SDK**"痕迹导航项目模板，它会提示你下载并安装 SDK。 此 SDK 包括[Roslyn 语法可视化工具](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer)。 找出哪些代码模型类型这非常有用的工具可以帮助您应查找在您的分析器。 对于特定的代码模型类型，因此你的代码仅在必要时执行，并可以专注于仅分析相关的代码在代码分析工具基础结构调用。
+- [.NET Compiler Platform （"Roslyn"） SDK](https://aka.ms/roslynsdktemplates)。 你还可以通过转到主菜单**文件&#124; "新建&#124;项目 ...** "，在左侧导航窗格中**C#** 选择，然后选择 "**扩展性**" 来安装此 SDK。 选择 "**下载 .NET COMPILER PLATFORM sdk**" 痕迹导航项目模板时，会提示您下载并安装 sdk。 此 SDK 包括[Roslyn Syntax Visualizer](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer)。 此非常有用的工具可帮助你确定应在分析器中查找的代码模型类型。 分析器基础结构针对特定代码模型类型调入您的代码，因此，您的代码仅在必要时才执行，并且只能重点分析相关的代码。
 
 ## <a name="whats-the-problem"></a>怎么了？
-假设一个库提供 ImmutableArray (例如， <xref:System.Collections.Immutable.ImmutableArray%601?displayProperty=fullName>) 支持。 C# 开发人员有很多的经验.NET 数组。 但是，由于在实现中使用 ImmutableArrays 和优化技术的特性，C# 开发人员 intuitions 会导致你的库的用户编写断开的代码，如下所述。 此外，用户不会看到其错误到运行时，这并不到 Visual Studio 中通过.NET 使用高质量体验。
+假设您提供了一个库，其中包含 ImmutableArray （例如 <xref:System.Collections.Immutable.ImmutableArray%601?displayProperty=fullName>）支持。 C#开发人员对 .NET 阵列有很多经验。 然而，由于实现中使用的 ImmutableArrays 和优化技术的性质， C#开发人员 intuitions 会导致库用户编写破坏的代码，如下所述。 此外，在运行时，用户不会看到其错误，这不是在 Visual Studio 中通过 .NET 使用的质量经验。
 
-用户熟悉编写如下代码：
+用户熟悉编写如下所示的代码：
 
 ```csharp
 var a1 = new int[0];
@@ -42,7 +42,7 @@ Console.WriteLine("a2.Length = { 0}", a2.Length);
 
 ```
 
-创建空的数组进行填充后续行代码和使用集合初始值设定项语法是 C# 开发人员非常熟悉。 但是，编写相同在运行时崩溃 ImmutableArray 的代码：
+C#开发人员非常熟悉如何使用后续代码行和集合初始值设定项语法来创建空数组以进行填充。 但是，在运行时为 ImmutableArray 崩溃编写相同的代码：
 
 ```csharp
 var b1 = new ImmutableArray<int>();
@@ -52,19 +52,19 @@ Console.WriteLine("b2.Length = { 0}", b2.Length);
 
 ```
 
-第一个错误是由于 ImmutableArray 实现使用结构来包装基础数据存储。 结构必须具有无参数构造函数，以便`default(T)`表达式可以返回所有的结构为零或 null 的成员。 代码访问时`b1.Length`，没有运行的时为 null 取消引用错误，因为没有基础的存储阵列没有 ImmutableArray 结构中。 若要创建空的 ImmutableArray 的正确方式是`ImmutableArray<int>.Empty`。
+第一个错误是 ImmutableArray 实现使用结构包装基础数据存储的原因。 结构必须具有无参数的构造函数，以便 `default(T)` 表达式可以返回所有零个或 null 成员的结构。 当代码访问 `b1.Length`时，会出现运行时 null 取消引用错误，因为 ImmutableArray 结构中没有基础存储数组。 `ImmutableArray<int>.Empty`创建空的 ImmutableArray 的正确方法。
 
- 集合初始值设定项的错误是因为 ImmutableArray.Add 方法将返回新的实例每次调用它。 因为永远不会更改 ImmutableArrays，添加新元素时，你获得新的 ImmutableArray 对象 （这可能会与先前存在的 ImmutableArray 共享存储，出于性能原因）。 因为`b2`指向第一个然后再调用 ImmutableArray`Add()`五次，`b2`是默认值 ImmutableArray。 长度上调用它还具有空的崩溃取消引用错误。 初始化 ImmutableArray 不用的情况下手动调用添加要使用的正确方法`ImmutableArray.CreateRange(new int[] {1, 2, 3, 4, 5})`。
+ 发生集合初始值设定项的错误发生的原因是 ImmutableArray 方法在每次调用该方法时都将返回新的实例。 由于 ImmutableArrays 从不会更改，因此当你添加新元素时，你会获得一个新的 ImmutableArray 对象（该对象可能会出于性能原因而共享存储，因为以前存在的 ImmutableArray）。 由于 `b2` 在调用 `Add()` 五次之前指向第一个 ImmutableArray，因此 `b2` 是默认的 ImmutableArray。 它上的调用长度也会因出现空取消引用错误而发生故障。 若要初始化 ImmutableArray 而不手动调用 Add，正确的方法是使用 `ImmutableArray.CreateRange(new int[] {1, 2, 3, 4, 5})`。
 
-## <a name="finding-relevant-syntax-node-types-to-trigger-your-analyzer"></a>查找相关的语法节点类型，以触发您的分析器
-若要开始生成分析器，首先找出您需要查找哪种类型的 SyntaxNode。   启动菜单中，语法可视化工具**视图&#124;其他 Windows &#124; Roslyn 语法可视化工具**。
+## <a name="finding-relevant-syntax-node-types-to-trigger-your-analyzer"></a>查找相关的语法节点类型以触发分析器
+若要开始生成分析器，请首先确定需要查找的 SyntaxNode 类型。   从菜单**查看&#124;其他&#124; Windows Roslyn Syntax Visualizer**启动 Syntax Visualizer。
 
-将编辑器插入点放在声明的行`b1`。 你将看到语法可视化工具显示在`LocalDeclarationStatement`语法树的节点。 此节点有`VariableDeclaration`，进而拥有`VariableDeclarator`，该子元素又具有`EqualsValueClause`，最后是`ObjectCreationExpression`。 单击在语法可视化工具树中的节点时，在编辑器窗口中的语法突出显示了以显示该节点表示的代码。 SyntaxNode 子类型的名称匹配的 C# 语法中使用的名称。
+将编辑器的插入符号放置在声明 `b1`的行上。 你将看到 Syntax Visualizer 显示你处于语法树的 `LocalDeclarationStatement` 节点中。 此节点具有一个 `VariableDeclaration`，后者又具有一个 `VariableDeclarator`，而后者又具有一个 `EqualsValueClause`，最后还有一个 `ObjectCreationExpression`。 单击节点的 Syntax Visualizer 树时，编辑器窗口中的语法将突出显示该节点所表示的代码。 SyntaxNode 子类型的名称与C#语法中使用的名称相匹配。
 
 ## <a name="creating-the-analyzer-project"></a>创建分析器项目
-从主菜单中选择**文件&#124;新建&#124;项目...**. 在中**新的项目**对话框下**C#** 项目在左侧的导航栏中，选择可扩展性，然后在右窗格中选择**分析器与代码修复**项目模板。 输入的名称和确认对话框。
+从主菜单中选择 **" &#124;文件&#124; " "新建项目 ...** "。 在 "**新建项目**" 对话框中**C#** ，在左侧导航栏中的 "项目" 下，选择 "扩展性"，然后在右窗格中选择 "**带有代码修复的分析器**项目" 模板。 输入名称并确认对话框。
 
-该模板打开 DiagnosticAnalyzer.cs 文件。 选择该编辑器缓冲区选项卡。此文件具有一个分析器类 (格式为项目指定的名称) 派生`DiagnosticAnalyzer`（Roslyn API 类型）。 你的新类`DiagnosticAnalyzerAttribute`声明您的分析器是与 C# 语言，以便编译器发现并加载您的分析器。
+该模板将打开 DiagnosticAnalyzer.cs 文件。 选择 "编辑器缓冲区" 选项卡。此文件具有派生自 `DiagnosticAnalyzer` （Roslyn API 类型）的 analyzer 类（格式为你为项目提供的名称）。 新类有一个 `DiagnosticAnalyzerAttribute` 声明 analyzer 与C#语言相关，以便编译器发现和加载分析器。
 
 ```csharp
 [DiagnosticAnalyzer(LanguageNames.CSharp)]
@@ -72,20 +72,20 @@ public class ImmutableArrayAnalyzerAnalyzer : DiagnosticAnalyzer
 {}
 ```
 
-您可以实现使用以 C# 代码中，为目标的 Visual Basic 的分析器，反之亦然。 它是 DiagnosticAnalyzerAttribute 选择您的分析器以目标和 / 或一种语言中，更重要。 更复杂的分析器，需要详细的建模语言的仅可具有一种语言。 如果您的分析器，例如，仅会检查类型名称或公共成员的名称，它可能可以使用 Roslyn，在 Visual Basic 和 C# 提供通用的语言模型。 例如，FxCop 会警告类将实现<xref:System.Runtime.Serialization.ISerializable>，但类没有<xref:System.SerializableAttribute>属性独立于语言的且适用于 Visual Basic 和 C# 代码。
+您可以使用面向C#代码的 Visual Basic 来实现分析器，反之亦然。 DiagnosticAnalyzerAttribute 中的更重要的是，选择你的分析器是以一种语言还是同时以两者为目标。 更复杂的需要语言详细建模的分析器只能以一种语言为目标。 例如，如果您的分析器仅检查类型名称或公共成员名称，则可以使用公共语言模型 Roslyn 提供的跨 Visual Basic 和C#。 例如，FxCop 警告某个类实现 <xref:System.Runtime.Serialization.ISerializable>，但该类不具有与语言无关的 <xref:System.SerializableAttribute> 属性，适用于 Visual Basic 和C#代码。
 
 ## <a name="initalizing-the-analyzer"></a>初始化分析器
-向下滚动一点`DiagnosticAnalyzer`类来了解`Initialize`方法。 激活分析器时，编译器将调用此方法。 该方法采用`AnalysisContext`对象，它使您的分析器以获取上下文信息并注册回调的事件的类型的你想要分析的代码。
+在 `DiagnosticAnalyzer` 类中向下滚动一点，以查看 `Initialize` 方法。 当激活分析器时，编译器将调用此方法。 方法采用一个 `AnalysisContext` 对象，该对象允许分析器获取上下文信息，并为要分析的代码类型注册事件的回调。
 
 ```csharp
 public override void Initialize(AnalysisContext context) {}
 ```
 
-打开一个新行方法和类型"在此上下文中。" 若要查看的 Intellisense 完成列表。 您可以看到在完成列表中有许多`Register…`方法来处理各种类型的事件。 例如，第一个`RegisterCodeBlockAction`，回调到您的代码块，这通常是大括号之间的代码。 注册为块还调用返回到你的代码字段，提供给属性的值或可选参数的值的初始值设定项。
+在此方法中打开新行，然后键入 "context"。 查看 Intellisense 完成列表。 在完成列表中，可以看到许多 `Register…` 方法来处理各种事件。 例如，第一个 `RegisterCodeBlockAction`为块调用代码，这通常是括在大括号之间的代码。 注册块还会回叫字段的初始值设定项、为属性提供的值或可选参数的值。
 
-另举一例， `RegisterCompilationStartAction`，返回到你的代码开头的编译时，这很有用，当您需要通过多个位置收集状态时调用。 您可以创建一个数据结构，即收集所有符号，并每次您的分析器的某些语法或符号，调用时返回可以将有关每个位置的信息保存在您的数据结构。 您正在调用时返回由于编译结束，可以分析您保存，例如，若要报告的代码使用从每个符号的所有位置`using`语句。
+作为另一个示例，`RegisterCompilationStartAction`，在编译开始时回叫代码，这在需要在多个位置收集状态时非常有用。 您可以创建数据结构，例如，收集所有使用的符号，每次为某些语法或符号回调您的分析器时，您可以保存有关数据结构中每个位置的信息。 如果由于编译结束而调用了，则可以分析保存的所有位置，例如，从每个 `using` 语句报告代码使用的符号。
 
-使用**语法可视化工具**，您学习了你想要在编译器处理 ObjectCreationExpression 时调用。 此代码用于设置回调：
+使用**Syntax Visualizer**，你已了解到要在编译器处理 ObjectCreationExpression 时调用。 使用此代码设置回调：
 
 ```csharp
 
@@ -93,32 +93,32 @@ context.RegisterSyntaxNodeAction(c => AnalyzeObjectCreation(c),
                                  SyntaxKind.ObjectCreationExpression);
 ```
 
-注册了语法节点和仅对象创建语法节点的筛选器。 按照约定，分析器作者使用的 lambda 时注册操作，这有助于保护分析器无状态。 可以使用 Visual Studio 功能**根据使用情况生成**若要创建`AnalyzeObjectCreation`方法。 这也为你将生成上下文参数的正确的类型。
+为语法节点注册并仅筛选对象创建语法节点。 按照约定，在注册操作时，分析器作者使用 lambda，这有助于使分析器保持无状态。 你可以使用 Visual Studio 功能 "**从使用中生成**" 来创建 `AnalyzeObjectCreation` 方法。 这也会为您生成正确类型的上下文参数。
 
-## <a name="setting-properties-for-users-of-your-analyzer"></a>您的分析器的用户设置属性
-以便在您的分析器在 Visual Studio UI 中相应地，查找并修改以下一行代码，以确定您的分析器：
+## <a name="setting-properties-for-users-of-your-analyzer"></a>设置 Analyzer 用户的属性
+为了使分析器在 Visual Studio UI 中正确显示，请查找并修改以下代码行来识别你的分析器：
 
 ```csharp
 internal const string Category = "Naming";
 ```
 
-更改`"Naming"`到`"API Guidance"`。
+将 `"Naming"` 更改为 `"API Guidance"`。
 
-接下来找到并打开 Resources.resx 文件在你项目中使用**解决方案资源管理器**。 您可以为您的分析器、 标题等设置说明。所有这些对象可以更改值`“Don’t use ImmutableArray<T> constructor”`现在。 可以将字符串格式设置字符串中的参数 ({0}，{1}等)，并在调用时，更高版本`Diagnostic.Create()`，可以提供要传递的参数的参数数组。
+接下来，使用**解决方案资源管理器**查找并打开项目中的资源 .resx 文件。 你可以为你的分析器、标题等提供说明。现在可以将所有这些值的值更改为 `“Don’t use ImmutableArray<T> constructor”`。 你可以在字符串中（{0}、{1}等）中放置字符串格式参数，然后在调用 `Diagnostic.Create()`时，可以提供要传递的参数的参数数组。
 
 ## <a name="analyzing-an-object-creation-expression"></a>分析对象创建表达式
-`AnalyzeObjectCreation`方法采用不同类型的代码分析器框架所提供的上下文。 Initialize 方法`AnalysisContext`允许注册操作回调以设置您的分析器。 `SyntaxNodeAnalysisContext`，例如，具有`CancellationToken`，可以传递。 如果用户开始在编辑器中键入，Roslyn 将取消正在运行的分析器保存工作并提高性能。 作为另一个示例中，此上下文中的返回对象创建语法节点的节点属性。
+`AnalyzeObjectCreation` 方法采用代码分析器框架提供的不同类型的上下文。 Initialize 方法的 `AnalysisContext` 允许注册操作回调以设置分析器。 例如，`SyntaxNodeAnalysisContext`具有可传递的 `CancellationToken`。 如果用户在编辑器中开始键入内容，Roslyn 将取消正在运行的分析器以节省工作和提高性能。 再如，此上下文有一个节点属性，该属性返回对象创建语法节点。
 
-获取节点，可以假定是为其筛选语法节点操作的类型：
+获取节点，您可以假定该节点是您为其筛选了语法节点操作的类型：
 
 ```csharp
 var objectCreation = (ObjectCreationExpressionSyntax)context.Node;
 ```
 
-### <a name="launching-visual-studio-with-your-analyzer-the-first-time"></a>启动 Visual Studio 中使用您的分析器第一次
-通过构建和执行您的分析器，启动 Visual Studio (按**F5**)。 因为在项目启动**解决方案资源管理器**是 VSIX 项目，你的代码和 VSIX，运行你的代码生成，并启动 Visual Studio 中使用该 VSIX 安装。 以这种方式启动 Visual Studio，以便主要使用的 Visual Studio 将不会影响你的测试实例在构建分析器时它将启动具有独特的注册表配置单元中。 首次启动这样一来，Visual Studio 执行类似于当您首次启动 Visual Studio 安装完成后的几个初始化。
+### <a name="launching-visual-studio-with-your-analyzer-the-first-time"></a>首次启动 Visual Studio 和分析器
+通过生成并执行分析器来启动 Visual Studio （按**F5**）。 由于**解决方案资源管理器**中的启动项目是 VSIX 项目，因此运行代码将生成代码和 vsix，然后启动安装了该 Vsix 的 Visual Studio。 以这种方式启动 Visual Studio 时，它会以不同的注册表配置单元启动，这样，在构建分析器时，你的测试实例将不会影响你对 Visual Studio 的主要使用。 第一次启动此方法时，Visual Studio 将执行多次初始化，如首次在安装 Visual Studio 后首次启动 Visual Studio 时。
 
- 创建控制台项目，然后在控制台应用程序的 Main 方法中输入数组代码：
+ 创建一个控制台项目，然后将该数组代码输入到控制台应用程序的 Main 方法中：
 
 ```csharp
 var b1 = new ImmutableArray<int>();
@@ -128,22 +128,22 @@ Console.WriteLine("b2.Length = {0}", b2.Length);
 
 ```
 
-代码行`ImmutableArray`具有波形曲线，因为您需要获取不可变的 NuGet 包并添加`using`到你的代码语句。 中的项目节点上按右指针按钮**解决方案资源管理器**，然后选择**管理 NuGet 包...**. 在 NuGet 管理器中，到搜索框中，键入"不可变"并选择项"System.Collections.Immutable"（不选择"Microsoft.Bcl.Immutable"） 中的左的窗格和按右窗格中安装按钮。 安装包添加到你的项目引用的引用。
+`ImmutableArray` 的代码行具有波形曲线，因为需要获取不可变的 NuGet 包，并将 `using` 语句添加到代码中。 按**解决方案资源管理器**中项目节点上的右指针按钮，然后选择 "**管理 NuGet 包 ...** "。 在 NuGet 管理器中，在 "搜索" 框中键入 "不可变"，然后在左窗格中选择 ""，然后在右窗格中按 "安装" 按钮。 安装包将添加对项目引用的引用。
 
-你仍看到下的红色波形曲线`ImmutableArray`，因此将光标置于该标识符和按**CTRL +。** （句点），以便显示建议的修复方法菜单并选择以添加适当`using`语句。
+`ImmutableArray`下仍会出现红色的波形曲线，因此请将插入符号放入该标识符，然后按**CTRL +。** （period）以显示建议的 "修复" 菜单，并选择添加适当的 `using` 语句。
 
-**全部保存并关闭**Visual Studio 现在处于干净状态，以便继续将您的第二个实例。
+**全部保存并关闭**Visual Studio 的第二个实例，以使你处于干净状态以继续。
 
-## <a name="finishing-the-analyzer-using-edit-and-continue"></a>完成分析器使用编辑并继续
-在 Visual Studio 的第一个实例，设置断点的开头你`AnalyzeObjectCreation`方法通过按**F9**和脱字号的第一行上。
+## <a name="finishing-the-analyzer-using-edit-and-continue"></a>使用 "编辑并继续" 完成分析器
+在 Visual Studio 的第一个实例中，通过在第一行上按**F9** ，在 `AnalyzeObjectCreation` 方法的开头设置断点。
 
-启动您的分析器使用再次**F5**，并在 Visual Studio 的第二个实例中，重新打开控制台应用程序创建最后一次。
+用**F5**再次启动分析器，然后在 Visual Studio 的第二个实例中，重新打开上次创建的控制台应用程序。
 
-因为 Roslyn 编译器看到对象创建表达式和到您的分析器调用，返回到 Visual Studio 的第一个实例在断点处。
+在断点处返回到 Visual Studio 的第一个实例，因为 Roslyn 编译器看到对象创建表达式并将其调用到分析器。
 
-**获取对象创建节点。** 单步跳过设置的行`objectCreation`按变量**F10**，然后在**即时窗口**计算表达式`“objectCreation.ToString()”`。 您看到变量指向的语法节点是代码`"new ImmutableArray<int>()"`，只你要查找的内容。
+**获取对象创建节点。** 按**F10**来逐过程设置 `objectCreation` 变量的行，并在 "即时"**窗口**中计算表达式 `“objectCreation.ToString()”`。 你会看到变量指向的语法节点是 `"new ImmutableArray<int>()"`的代码，就是你要查找的内容。
 
-**获取 ImmutableArray\<T > 类型对象。** 您需要检查是否正在创建的类型为 ImmutableArray。 首先，获取表示此类型的对象。 检查类型使用语义模型来确保已完全正确的类型，并且不比较 tostring （） 中的字符串。 输入在函数末尾的代码的以下行：
+**获取 ImmutableArray\<T > 类型对象。** 需要检查正在创建的类型是否为 ImmutableArray。 首先，获取表示此类型的对象。 你使用语义模型检查类型以确保具有完全正确的类型，并且不会比较 ToString （）中的字符串。 在函数的末尾输入以下代码行：
 
 ```csharp
 
@@ -154,22 +154,22 @@ var immutableArrayOfTType =
 
 ```
 
-将指定泛型类型中具有 backquotes （'） 的元数据和泛型参数的数目。 这就是为什么你看不到"...ImmutableArray\<T >"中的元数据名称。
+可在元数据中将泛型类型指定为 backquotes （'）和泛型参数的数目。 这就是为什么看不到 "。ImmutableArray 在元数据名称中\<T > "。
 
-语义模型具有许多有用的操作对其允许您提出有关符号、 数据流、 变量的生存期，等等的问题。Roslyn 出于各种工程原因 （性能，建模错误代码，等等） 将与语义模型的语法节点。 你想要查找的精确比较引用中包含的信息的编译模型。
+语义模型有许多有用的功能，可让你提出有关符号、数据流、变量生存期等问题。Roslyn 将语法节点与语义模型分隔开来，以实现多种工程原因（性能、对错误代码进行建模等）。 您希望编译模型查找引用中包含的信息以实现精确比较。
 
-您可以在编辑器窗口的左侧拖动黄色执行指针。 将它设置的行向上拖动`objectCreation`变量和单步跳过的代码使用你新行**F10**。 如果鼠标指针悬停在变量`immutableArrayOfType`，您看到我们在语义模型中找到的确切类型。
+您可以将黄色执行指针拖到编辑器窗口的左侧。 将其拖到设置 `objectCreation` 变量的行上，并使用**F10**逐过程执行新代码行。 如果将鼠标指针悬停在变量 `immutableArrayOfType`上，您将看到在语义模型中找到了精确的类型。
 
-**获取对象创建表达式的类型。** 在本文中，通过多种方式使用"类型"，但这意味着如果您具有"新 Foo"表达式中，您需要先获取 Foo 的模型。 您需要获取其类型的对象创建表达式，以查看它是否 ImmutableArray\<T > 类型。 再次使用语义模型对象创建表达式中获取类型符号 (ImmutableArray) 的符号信息。 输入在函数末尾的代码的以下行：
+**获取对象创建表达式的类型。** "Type" 在本文中使用几种方法，但这意味着，如果您有 "new Foo" 表达式，则需要获取 Foo 模型。 需要获取对象创建表达式的类型，以查看它是否是 ImmutableArray\<T > 类型。 再次使用语义模型，以获取对象创建表达式中类型符号（ImmutableArray）的符号信息。 在函数的末尾输入以下代码行：
 
 ```csharp
 var symbolInfo = context.SemanticModel.GetSymbolInfo(objectCreation.Type) as INamedTypeSymbol;
 
 ```
 
-因为您的分析器需要处理不完整或不正确的代码编辑器缓冲区中 (例如，缺少`using`语句)，应检查`symbolInfo`正在`null`。 您需要先获取一个已命名的类型 (INamedTypeSymbol) 从符号信息对象来完成分析。
+由于您的分析器需要在编辑器缓冲区中处理不完整或不正确的代码（例如，缺少 `using` 语句），因此应检查是否 `null``symbolInfo`。 需要从符号信息对象获取命名类型（INamedTypeSymbol）才能完成分析。
 
-**比较类型。** 因为我们正在寻找，T 的开放式泛型类型，并且在代码中的类型是一个具体的泛型类型，您将查询从 （开放式泛型类型） 构造的类型的符号信息和比较该结果与`immutableArrayOfTType`。 输入以下内容的方法的末尾：
+**比较类型。** 由于我们要查找的是开放式泛型类型 T，而代码中的类型是具体的泛型类型，因此，你可以在符号信息中查询该类型的构造对象（开放式泛型类型），并将该结果与 `immutableArrayOfTType`进行比较。 在方法的末尾输入以下内容：
 
 ```csharp
 if (symbolInfo != null &&
@@ -177,13 +177,13 @@ if (symbolInfo != null &&
 {}
 ```
 
-**报告诊断。** 报告诊断是相当容易。 使用在之前的初始化方法定义的项目模板中为你创建的规则。 由于这种情况下在代码中时出现错误，您可以更改初始化规则要替换的行`DiagnosticSeverity.Warning`（绿色波浪线） 与`DiagnosticSeverity.Error`（红色波形曲线）。 该规则的其余部分初始化从本演练的开始编辑的资源。 您还需要报告波浪线，对象创建表达式的类型规范的位置的位置。 输入此代码`if`块：
+**报告诊断。** 报告诊断非常简单。 在项目模板中使用为你创建的规则，该规则在 Initialize 方法之前定义。 因为代码中的这种情况是错误的，您可以更改已初始化规则的行，以将 `DiagnosticSeverity.Warning` （绿色波形曲线）替换为 `DiagnosticSeverity.Error` （红色波形曲线）。 规则的其余部分将从你在演练开头附近编辑的资源中进行初始化。 还需要报告波形曲线位置，这是对象创建表达式类型规范的位置。 在 `if` 块中输入以下代码：
 
 ```csharp
 context.ReportDiagnostic(Diagnostic.Create(Rule, objectCreation.Type.GetLocation()));
 ```
 
-你的函数应如下所示 （以不同的方式可能是格式）：
+函数应如下所示（格式可能不同）：
 
 ```csharp
 private void AnalyzeObjectCreation(SyntaxNodeAnalysisContext context)
@@ -206,12 +206,12 @@ private void AnalyzeObjectCreation(SyntaxNodeAnalysisContext context)
 
 ```
 
-删除断点，以便你可以查看您的分析器运行 （和停止返回到 Visual Studio 的第一个实例）。 将执行指针拖到开头的方法，并按**F5**继续执行。 在切换回 Visual Studio 的第二个实例时，编译器将开始再次检查的代码，它将调用您的分析器。 您可以看到波浪线下的`ImmutableType<int>`。
+删除断点，以便您可以看到您的分析器工作（并停止返回到 Visual Studio 的第一个实例）。 将执行指针拖到方法的开头，并按**F5**继续执行。 切换回 Visual Studio 的第二个实例时，编译器将开始再次检查代码，它将调入分析器。 `ImmutableType<int>`下可以看到波形曲线。
 
-## <a name="adding-a-code-fix-for-the-code-issue"></a>将"代码修补程序"添加代码问题
-在开始之前，关闭 Visual Studio 的第二个实例，并停止在 Visual Studio （其中正在开发分析器） 的第一个实例中进行调试。
+## <a name="adding-a-code-fix-for-the-code-issue"></a>为代码问题添加 "代码修复"
+在开始之前，请关闭 Visual Studio 的第二个实例，并在 Visual Studio 的第一个实例（在其中开发分析器）中停止调试。
 
-**添加新类。** 在解决方案资源管理器中的项目节点上使用的快捷菜单 （右指针按钮） 并选择以添加新项。 添加一个名为类`BuildCodeFixProvider`。 此类必须派生自`CodeFixProvider`，并将需要使用**CTRL +。** （句点） 来调用将添加正确的代码修复`using`语句。 此类还需要使用批注`ExportCodeFixProvider`特性，并且你将需要添加`using`语句，以解决`LanguageNames`枚举。 您应该使用以下代码在其中一个类文件：
+**添加新类。** 使用解决方案资源管理器中的项目节点上的快捷菜单，然后选择 "添加新项"。 添加一个名为 `BuildCodeFixProvider`的类。 此类需要从 `CodeFixProvider`派生，你将需要使用**CTRL +。** （period）以调用添加正确的 `using` 语句的代码修补程序。 此类还需要使用 `ExportCodeFixProvider` 属性进行批注，你将需要添加 `using` 语句来解析 `LanguageNames` 枚举。 应具有一个类文件，其中包含以下代码：
 
 ```csharp
 using Microsoft.CodeAnalysis;
@@ -225,28 +225,28 @@ namespace ImmutableArrayAnalyzer
 
 ```
 
-**去掉派生的成员。** 现在，将编辑器插入点放在标识符中`CodeFixProvider`按**CTRL +。** （句点） 以派生出此抽象基类的实现。 这将为您生成的属性和方法。
+**存根派生成员。** 现在，将编辑器的插入符号置于标识符 `CodeFixProvider` 中，然后按**CTRL +。** （period）将此抽象基类的实现存根。 这会为您生成一个属性和一个方法。
 
-**实现的属性。** 填写`FixableDiagnosticIds`属性的`get`正文使用以下代码：
+**实现属性。** 用以下代码填写 `FixableDiagnosticIds` 属性的 `get` 正文：
 
 ```csharp
 return ImmutableArray.Create(ImmutableArrayAnalyzerAnalyzer.DiagnosticId);
 ```
 
-Roslyn 汇集了诊断和修复的匹配这些都是字符串的标识符。 项目模板生成诊断 ID，并可随意对其进行更改。 在属性中的代码只需从分析器类返回的 ID。
+Roslyn 通过将这些标识符（仅是字符串）进行匹配来汇集诊断和修复。 项目模板为你生成了诊断 ID，你可以随时对其进行更改。 属性中的代码只是从 analyzer 类返回 ID。
 
-**RegisterCodeFixAsync 方法采用上下文。** 上下文非常重要，因为代码修补程序，可以将应用于多个诊断，或在代码行上可能有多个问题。 如果键入"上下文。" 在该方法的正文中，Intellisense 完成列表将演示一些有用的成员。 没有可以检查以查看的内容是否想取消解决方法的 CancellationToken 成员。 没有文档成员有很多有用的成员并使你能够获取对项目和解决方案模型对象。 S p a n 成员开头并且末尾的代码位置指定将报告诊断。
+**RegisterCodeFixAsync 方法使用上下文。** 上下文非常重要，因为代码修补程序可以应用于多个诊断，或者一个代码行中可能存在多个问题。 如果键入 "context"。 在方法的主体中，Intellisense 完成列表会显示一些有用的成员。 有一个 CancellationToken 成员，你可以检查是否有要取消修复的内容。 有一个文档成员，其中包含许多有用的成员，并允许您访问项目和解决方案模型对象。 有一个范围成员，该成员是你报告诊断时指定的代码位置的开头和结尾。
 
-**将此方法是异步的。** 需要执行的第一件事是修复生成的方法声明为`async`方法。 不包括抽象类的实现将用作存根的代码修复`async`关键字，即使该方法将返回`Task`。
+**使方法是异步的。** 需要做的第一件事是将生成的方法声明修复为 `async` 方法。 即使该方法返回 `Task`，用作存根的代码修补程序也不会包含 `async` 关键字。
 
-**获取语法树的根。** 若要修改的代码生成新的语法树的更改所需代码修补程序使。 所需`Document`要调用的上下文从`GetSyntaxRootAsync`。 这是异步方法，因为没有未知的操作来获取语法树中，可能包括从磁盘中获取文件、 分析，以及为其生成 Roslyn 代码模型。 在 Visual Studio UI 应在此期间，哪些使用快速地响应`async`启用。 使用以下内容替换方法中的代码行：
+**获取语法树的根。** 若要修改代码，你需要生成新的语法树，其中包含你的代码修复所做的更改。 需要上下文中的 `Document` 来调用 `GetSyntaxRootAsync`。 这是一个异步方法，因为有未知的工作要获取语法树，其中可能包括从磁盘获取文件、对其进行分析，并为其生成 Roslyn 代码模型。 在此期间，Visual Studio UI 应是响应的，使用 `async` 会启用此功能。 将方法中的代码行替换为以下代码：
 
 ```csharp
 var root = await context.Document
                         .GetSyntaxRootAsync(context.CancellationToken);
 ```
 
-**查找具有此问题的节点。** 传入的上下文范围内，但您发现可能需要更改的代码的节点。 报告的诊断的范围仅用于 （在波形曲线上属于其中） 的类型标识符，但你需要更换整个对象创建表达式，其中包括`new`keywoard 在开头和结尾的括号。 将以下代码添加到你的方法 (并使用**CTRL +。** 若要添加`using`语句`ObjectCreationExpressionSyntax`):
+**查找有问题的节点。** 你传入了上下文的范围，但你找到的节点可能不是必须更改的代码。 报告的诊断仅提供类型标识符（曲线所属于的）的跨度，但需要替换整个对象创建表达式，包括开头的 `new` keywoard 和末尾的括号。 将以下代码添加到方法（并使用**CTRL +.** 添加 `ObjectCreationExpressionSyntax`的 `using` 语句）：
 
 ```csharp
 
@@ -254,7 +254,7 @@ var objectCreation = root.FindNode(context.Span)
                          .FirstAncestorOrSelf<ObjectCreationExpressionSyntax>();
 ```
 
- **注册灯泡 UI 将代码修补程序。** 注册您的代码修复程序时，Roslyn 插入到 Visual Studio 灯泡图标 UI 自动。 最终用户将看到，他们可以将**CTRL +。** （句点），当您的分析器错误的波形曲线`ImmutableArray<T>`构造函数使用。 由于代码修复提供程序仅执行时出现问题，可以假定您有要查找的对象创建表达式。 从上下文参数，可以注册新的代码修补程序，通过将以下代码添加到末尾的`RegisterCodeFixAsync`方法：
+ **注册灯泡 UI 的代码修复。** 注册代码修补程序时，Roslyn 会自动插入到 Visual Studio 灯泡 UI 中。 最终用户将看到他们可以使用**CTRL +。** （period）当分析器波形曲线错误 `ImmutableArray<T>` 构造函数使用时。 由于你的代码修复提供程序仅在出现问题时才会执行，因此你可以假设你有要查找的对象创建表达式。 通过上下文参数，你可以通过将以下代码添加到 `RegisterCodeFixAsync` 方法的末尾来注册新的代码修复：
 
 ```csharp
 
@@ -266,17 +266,17 @@ context.RegisterCodeFix(
             context.Diagnostics[0]);
 ```
 
-您需要将编辑器插入点放在标识符中`CodeAction`，然后使用**CTRL +。** （句点） 来添加适当`using`此类型的语句。
+需要将编辑器的插入符号放在标识符中，`CodeAction`，然后使用**CTRL +.** （period）为此类型添加适当的 `using` 语句。
 
-然后将放在编辑器中的插入符号`ChangeToImmutableArrayEmpty`标识符和使用**CTRL +。** 同样，若要为您生成此方法存根 （stub）。
+然后，将编辑器的插入符号置于 `ChangeToImmutableArrayEmpty` 标识符中，并使用**CTRL +.** 再次为你生成此方法存根。
 
-添加此最后一个代码片段表示通过注册的代码修复`CodeAction`和找到的问题种类的诊断 ID。 在此示例中，存在只是一个诊断 ID，此代码提供修补程序，因此只需传递诊断 Id 数组的第一个元素。 当你创建`CodeAction`，灯泡图标中 UI 应使用作为代码修补程序的说明文本中传递。 你还采用 CancellationToken 并返回一个新的文档的函数中传递。 新的文档具有新的语法树包含修补的代码中调用`ImmutableArray.Empty`。 此代码片段，以便它可以关闭对 objectCreation 节点和上下文的文档使用 lambda。
+你添加的最后一个代码片段通过传递 `CodeAction` 和发现的问题类型的诊断 ID 来注册代码修补程序。 在此示例中，此代码仅提供了一个诊断 ID，因此，你可以只传递诊断 Id 数组的第一个元素。 创建 `CodeAction`时，会传入灯泡 UI 应将其用作代码修补说明的文本。 还会传入一个函数，该函数采用 CancellationToken 并返回新文档。 新文档有一个新的语法树，其中包含调用 `ImmutableArray.Empty`的已修复代码。 此代码片段使用 lambda，以便它可以在 objectCreation 节点和上下文的文档中关闭。
 
-**构造新的语法树。** 在中`ChangeToImmutableArrayEmpty`方法之前，生成的存根 （stub） 输入的代码行： `ImmutableArray<int>.Empty;`。 如果您再次查看语法可视化工具窗口，可以看到此语法是 SimpleMemberAccessExpression 节点。 这是此方法需要构造并返回新的文档中。
+**构造新的语法树。** 在之前生成的存根 `ChangeToImmutableArrayEmpty` 方法中，输入代码行： `ImmutableArray<int>.Empty;`。 如果再次查看 "Syntax Visualizer 工具" 窗口，则可以看到此语法是 SimpleMemberAccessExpression 节点。 这就是此方法需要在新文档中构造和返回的内容。
 
-对第一个更改`ChangeToImmutableArrayEmpty`是添加`async`之前`Task<Document>`因为代码生成器不能假定该方法应为异步。
+`ChangeToImmutableArrayEmpty` 的第一次更改是在 `Task<Document>` 之前添加 `async`，因为代码生成器不能假定方法应为 async。
 
-填写用下面的代码正文，以便你的方法看起来类似于以下：
+填写包含以下代码的正文，使方法类似于以下代码：
 
 ```csharp
 
@@ -293,25 +293,25 @@ private async Task<Document> ChangeToImmutableArrayEmpty(
 }
 ```
 
-将需要将编辑器插入点放在`SyntaxGenerator`标识符和使用**CTRL +。** （句点） 来添加适当`using`此类型的语句。
+需要将编辑器的插入符号放在 `SyntaxGenerator` 标识符中，并使用**CTRL +.** （period）为此类型添加适当的 `using` 语句。
 
-此代码使用`SyntaxGenerator`，用于构造新的代码是非常有用的类型。 获取文档的生成器具有代码问题后`ChangeToImmutableArrayEmpty`调用`MemberAccessExpression`、 传递具有我们想要访问的成员的类型和字符串形式传递的成员的名称。
+此代码使用 `SyntaxGenerator`，这是一个用于构造新代码的非常有用的类型。 获取具有代码问题的文档的生成器后，`ChangeToImmutableArrayEmpty` 调用 `MemberAccessExpression`，同时传递包含要访问的成员的类型，并将该成员的名称作为字符串传递。
 
-接下来，方法提取文档的根，因为这可能涉及任意工作一般情况下的，该代码等待此调用，并将传递的取消标记。 Roslyn 代码模型是固定不变，如使用.NET 字符串;更新的字符串，可以获取新的字符串对象返回。 当您调用`ReplaceNode`，得到新的根节点。 大部分语法树共享的 （因为它是不可变），但`objectCreation`替换为节点`memberAccess`节点，以及最多语法树的根的所有父节点。
+接下来，该方法提取文档的根目录，因为这可能涉及一般情况下的任意工作，代码会等待此调用并传递取消标记。 Roslyn 代码模型是不可变的，如使用 .NET 字符串;更新字符串时，将在返回中获取新的字符串对象。 调用 `ReplaceNode`时，将返回一个新的根节点。 大多数语法树都是共享的（因为它是不可变的），但 `objectCreation` 节点会替换为 `memberAccess` 节点，以及所有父节点（直到语法树根）。
 
-## <a name="trying-your-code-fix"></a>尝试代码修补程序
-现在，可以按**F5**在 Visual Studio 的第二个实例中执行您的分析器。 打开之前使用的控制台项目。 现在，会看到灯泡图标中显示新的对象创建表达式为`ImmutableArray<int>`。 如果按**CTRL +。** （句点），则会看到解决问题，请在代码，将看到在灯泡 UI 中的自动生成的代码差异预览。 Roslyn 为你创建此操作。
+## <a name="trying-your-code-fix"></a>尝试进行代码修复
+你现在可以按**F5**在 Visual Studio 的第二个实例中执行 analyzer。 打开之前使用的控制台项目。 现在，应会看到灯泡出现在新对象创建表达式用于 `ImmutableArray<int>`的位置。 如果按**CTRL +.** （句点）后，你将看到你的代码修复，你会在灯泡 UI 中看到自动生成的代码差异预览。 Roslyn 会为你创建此。
 
-Pro 提示：如果启动 Visual Studio 中，第二个实例，并且看不到灯泡图标中使用代码修补程序，您可能需要清除 Visual Studio 组件缓存。 清除缓存将强制 Visual Studio 以重新检查这些组件，因此 Visual Studio 应选取最新组件。 首先，关闭 Visual Studio 的第二个实例。 然后在 Windows 资源管理器，转到你的用户目录 (c:\users\\< userid\>) 并找到 AppData\Local\Microsoft\VisualStudio\14.0Roslyn\\。 在此目录中删除的 ComponentModelCache 子目录。 "14"的更改版本的 Visual studio 中。
+Pro 提示：如果你启动 Visual Studio 的第二个实例，并且你的代码修复不到灯泡，则可能需要清除 Visual Studio 组件缓存。 清除缓存会强制 Visual Studio 重新检查组件，因此 Visual Studio 应选取最新的组件。 首先，关闭 Visual Studio 的第二个实例。 然后，在 Windows 资源管理器中转到你的用户目录（c:\users\\< userid\>）并找到 AppData\Local\Microsoft\VisualStudio\14.0Roslyn\\。 在此目录中，删除子目录 ComponentModelCache。 "14" 将版本更改为带有 Visual Studio 的版本。
 
-## <a name="talk-video-and-finish-code-project"></a>访谈视频和完成的代码项目
-您可以看到开发和讨论了此示例中进一步[本次讨论](http://channel9.msdn.com/events/Build/2015/3-725)。 讨论演示工作分析器，并指导您生成它。
+## <a name="talk-video-and-finish-code-project"></a>讨论视频和完成代码项目
+你可以看到本[示例中开发和讨论的此](https://channel9.msdn.com/events/Build/2015/3-725)示例。 此对话演示了工作分析器，并引导您完成构建。
 
-可以看到所有已完成的代码[此处](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)。 子文件夹 DoNotUseImmutableArrayCollectionInitializer 和 DoNotUseImmutableArrayCtor 每个具有 C# 文件中查找问题和实现在 Visual Studio 灯泡 UI 中显示的代码修补程序的 C# 文件。 请注意，完成的代码有一些更多的抽象来避免提取 ImmutableArray\<T > 遍又一遍地键入对象。 它使用嵌套的已注册的操作类型对象保存在可用的上下文中时的子操作 （分析对象创建和分析集合初始化） 执行。
+可在[此处](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)查看全部完成的代码。 子文件夹 DoNotUseImmutableArrayCollectionInitializer 和 DoNotUseImmutableArrayCtor 各有一个C#查找问题的文件，以及一个C#实现在 Visual Studio 灯泡 UI 中显示的代码修复的文件。 请注意，完成的代码具有更多的抽象，以避免 ImmutableArray\<T > 类型对象反复提取。 它使用嵌套注册操作将类型对象保存在每次执行 sub 操作（分析对象创建和分析集合初始化）时可用的上下文中。
 
 ## <a name="see-also"></a>请参阅
-[\\\Build 2015 talk](http://channel9.msdn.com/events/Build/2015/3-725)
-[完成 GitHub 上的代码](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers) 
-[GitHub 上的几个示例分为三种类型的分析器](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Samples.md) 
- [OSS GitHub 站点上的其他 docs](https://github.com/dotnet/roslyn/tree/master/docs/analyzers) 
-[FxCop 规则实现通过 GitHub 上的 Roslyn 分析器](https://github.com/dotnet/roslyn/tree/master/src/Diagnostics/FxCop)
+[\\\Build 2015 讨论](https://channel9.msdn.com/events/Build/2015/3-725) [Github 上
+已完成的代码](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers) 
+Github 上的[几个示例，](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Samples.md)并将其分为三类分析器 
+github [OSS 站点上的其他文档](https://github.com/dotnet/roslyn/tree/master/docs/analyzers) 
+[github 上的 Roslyn 分析器实现的 FxCop 规则](https://github.com/dotnet/roslyn/tree/master/src/Diagnostics/FxCop)

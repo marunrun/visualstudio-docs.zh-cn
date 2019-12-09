@@ -11,12 +11,12 @@ caps.latest.revision: 39
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 489642936c6b309cd7a30eb6e0a5ad9b0edc8bd0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4fec3595ba7886f5ba979c35e9441ab108174726
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659414"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301336"
 ---
 # <a name="validate-your-system-during-development"></a>在开发过程中验证系统
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,10 +38,10 @@ Visual Studio 可帮助使你的软件与用户的要求和系统的体系结构
 
 |**类别**|**Links**|
 |------------------|---------------|
-|**视频**|![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[通道9： Doug 7：代码理解和 Visual Studio 2010 的系统设计](http://go.microsoft.com/fwlink/?LinkId=216100)<br /><br /> ![视频](../data-tools/media/playvideo.gif "PlayVideo")[第9频道：使用层关系图构建应用程序](http://go.microsoft.com/fwlink/?LinkID=201117)<br /><br /> ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo") [MSDN 如何实现系列：如何使用层关系图验证代码](http://go.microsoft.com/fwlink/?LinkID=214405)|
-|**论坛**|-   [Visual Studio 可视化和建模工具](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio 可视化和建模 SDK（DSL 工具）](http://go.microsoft.com/fwlink/?LinkId=184721)|
-|**Blogs**|-   [Visual Studio ALM + Team Foundation Server 博客](http://go.microsoft.com/fwlink/?LinkID=201340)|
-|**技术文章和日志**|[MSDN 体系结构中心](http://go.microsoft.com/fwlink/?LinkId=201343)|
+|**视频**|![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[通道9： Doug 7：代码理解和 Visual Studio 2010 的系统设计](https://go.microsoft.com/fwlink/?LinkId=216100)<br /><br /> ![视频](../data-tools/media/playvideo.gif "PlayVideo")[第9频道：使用层关系图构建应用程序](https://go.microsoft.com/fwlink/?LinkID=201117)<br /><br /> ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo") [MSDN 如何实现系列：如何使用层关系图验证代码](https://go.microsoft.com/fwlink/?LinkID=214405)|
+|**论坛**|-   [Visual Studio 可视化和建模工具](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio 可视化和建模 SDK（DSL 工具）](https://go.microsoft.com/fwlink/?LinkId=184721)|
+|**博客**|-   [Visual Studio ALM + Team Foundation Server 博客](https://go.microsoft.com/fwlink/?LinkID=201340)|
+|**技术文章和日志**|[MSDN 体系结构中心](https://go.microsoft.com/fwlink/?LinkId=201343)|
 
 ## <a name="see-also"></a>请参阅
  [测试应用程序](https://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac)[扩展 UML 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)[模型用户需求](../modeling/model-user-requirements.md)[分析和建模体系结构](../modeling/analyze-and-model-your-architecture.md)

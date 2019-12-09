@@ -46,7 +46,7 @@ HRESULT GetName(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
 |`E_FAIL`|指定的文档名称未知。|  
@@ -54,6 +54,6 @@ HRESULT GetName(
 ## <a name="remarks"></a>备注  
  此方法返回指定的文档名称。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugDocumentInfo 接口](../../winscript/reference/idebugdocumentinfo-interface.md)   
  [DOCUMENTNAMETYPE 枚举](../../winscript/reference/documentnametype-enumeration.md)

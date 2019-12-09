@@ -35,6 +35,6 @@ var x = example();           // Try and call example as if it were a function.
   
 - 请确保使用函数调用运算符 `()` 仅调用函数。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [函数对象](../../javascript/reference/function-object-javascript.md)   
  [prototype 属性 (Object)](../../javascript/reference/prototype-property-object-javascript.md)

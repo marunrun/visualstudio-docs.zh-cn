@@ -42,13 +42,13 @@ HRESULT GetDebugger(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
  此方法返回连接到应用程序的当前调试器。  
   
-## <a name="see-also"></a>请参阅  
- [IRemoteDebugApplication：： ConnectDebugger](../../winscript/reference/iremotedebugapplication-connectdebugger.md)    
+## <a name="see-also"></a>另请参阅  
+ [IRemoteDebugApplication::ConnectDebugger](../../winscript/reference/iremotedebugapplication-connectdebugger.md)   
  [IRemoteDebugApplication 接口](../../winscript/reference/iremotedebugapplication-interface.md)

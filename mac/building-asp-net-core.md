@@ -5,12 +5,12 @@ author: sayedihashimi
 ms.author: sayedha
 ms.date: 05/30/2019
 ms.assetid: 771C2F8E-46BC-4280-AFE8-ED9D5C7790CE
-ms.openlocfilehash: 345111144e0e209d91d34e53fefcd7d1207d9a8a
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 5aa0b02c87335305f29d098b51c89310cc0a9e5d
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68872468"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73717267"
 ---
 # <a name="building-aspnet-core-applications-in-visual-studio-for-mac"></a>在 Visual Studio for Mac 中生成 ASP.NET Core 应用程序
 
@@ -65,7 +65,7 @@ ASP.NET Core 是开放源跨平台框架，用于生成基于新式云的 Intern
 
     ![](media/netcore-image6.png)
 
-5. 此 CSHTML 文件使用 Razor 语法，基于标准标记和内联 C# 的组合来呈现 HTML。 [联机文档](https://docs.microsoft.com/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c)对此进行了详细介绍。
+5. 此 CSHTML 文件使用 Razor 语法，基于标准标记和内联 C# 的组合来呈现 HTML。 [联机文档](/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c)对此进行了详细介绍。
 
     ![](media/netcore-image7.png)
 
@@ -73,7 +73,7 @@ ASP.NET Core 是开放源跨平台框架，用于生成基于新式云的 Intern
 
     ![](media/netcore-image8.png)
 
-7. 还有各种在运行时用来管理项目、包以及应用程序的配置文件。 例如，默认应用程序[配置](https://docs.microsoft.com/aspnet/core/fundamentals/configuration)存储在 appsettings.json  中。 但可以通过为“开发”  环境提供 appsettings.Development.json  文件之类的方式，基于每个环境替代部分/所有这些设置。
+7. 还有各种在运行时用来管理项目、包以及应用程序的配置文件。 例如，默认应用程序[配置](/aspnet/core/fundamentals/configuration)存储在 appsettings.json  中。 但可以通过为“开发”  环境提供 appsettings.Development.json  文件之类的方式，基于每个环境替代部分/所有这些设置。
 
     ![](media/netcore-image9.png)
 
@@ -87,7 +87,7 @@ ASP.NET Core 是开放源跨平台框架，用于生成基于新式云的 Intern
 
     ![](media/netcore-image11.png)
 
-3. 虽然 WebHostBuilder 负责创建为应用启动服务器的主机，但需要你提供实现 IServer 的服务器   。 默认情况下，这是跨平台 ASP.NET Core 跨平台 Web 服务器 [Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel)，它基于跨平台异步 I/O 库 libuv   。
+3. 虽然 WebHostBuilder 负责创建为应用启动服务器的主机，但需要你提供实现 IServer 的服务器   。 默认情况下，这是跨平台 ASP.NET Core 跨平台 Web 服务器 [Kestrel](/aspnet/core/fundamentals/servers/kestrel)，它基于跨平台异步 I/O 库 libuv   。
 
     ![](media/netcore-image12.png)
 
@@ -189,7 +189,7 @@ ASP.NET Core 是开放源跨平台框架，用于生成基于新式云的 Intern
 
     ![](media/netcore-image32.png)
 
-5. 之后，尝试加载环境特定的 appsettings.json 文件，这将覆盖现有设置  。 例如，这是提供用于该特定环境的 appsettings.Development.json 文件  。 要详细了解 ASP.NET Core 中的配置，请查看[文档](https://docs.microsoft.com/aspnet/core/fundamentals/configuration)。
+5. 之后，尝试加载环境特定的 appsettings.json 文件，这将覆盖现有设置  。 例如，这是提供用于该特定环境的 appsettings.Development.json 文件  。 要详细了解 ASP.NET Core 中的配置，请查看[文档](/aspnet/core/fundamentals/configuration)。
 
     ![](media/netcore-image34.png)
 
@@ -243,4 +243,4 @@ ASP.NET Core 是开放源跨平台框架，用于生成基于新式云的 Intern
 
 ## <a name="summary"></a>总结
 
-在本实验室中，你已了解了如何使用 Visual Studio for Mac 开始开发 ASP.NET Core 应用。 如果你想探索开发更完整的电影数据库应用程序，请参阅 [ASP.NET Core MVC 入门](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/start-mvc)教程。
+在本实验室中，你已了解了如何使用 Visual Studio for Mac 开始开发 ASP.NET Core 应用。 如果你想探索开发更完整的电影数据库应用程序，请参阅 [ASP.NET Core MVC 入门](/aspnet/core/tutorials/first-mvc-app/start-mvc)教程。

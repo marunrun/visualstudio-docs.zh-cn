@@ -8,14 +8,15 @@ ms.assetid: 36f5b4de-5686-4f40-9e72-f4aee27d833c
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: f3e07510f38c18f7d8e4a52d788935400b5a9388
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 50e278e858ea086c83b29ef4eebf6b48ee8e477e
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62776739"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74773304"
 ---
 # <a name="callercallee-view---net-memory-sampling-data"></a>“调用方/被调用方”视图 - .NET 内存采样数据
 “调用方/被调用方”视图显示所选函数及其父函数和子函数的 .NET 内存分析数据。 “调用方/被调用方”视图包含三个网格。

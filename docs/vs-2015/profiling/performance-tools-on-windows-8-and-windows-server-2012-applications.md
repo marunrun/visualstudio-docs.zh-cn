@@ -9,12 +9,12 @@ caps.latest.revision: 20
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: cb77271c37b02104a0e1695d5495ff085518acad
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: c65561f9a9a2ca287232b7a61bb0e07ca07a769d
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65675283"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299656"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Windows 8 和 Windows Server 2012 应用程序上的性能工具
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -24,7 +24,7 @@ Windows 8 和 Windows Server 2012 中增强的安全功能需要对 Visual Studi
 > [!NOTE]
 > 其他受支持的 Windows 版本（Windows 7、Windows Server 2008 R2）的性能工具未更改。  
   
-## <a name="BKMK_In_this_topic"></a> 在本主题中  
+## <a name="BKMK_In_this_topic"></a> 主题内容  
  [从 Visual Studio IDE 收集有关 Windows 应用商店应用的数据](#BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE)  
   
  [从 Visual Studio IDE 收集有关在 Windows 8 桌面上或 Windows Server 2012 上运行的应用的数据](#BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE)  
@@ -64,7 +64,7 @@ Windows 8 和 Windows Server 2012 中增强的安全功能需要对 Visual Studi
   
 - [JavaScript 函数计时](https://msdn.microsoft.com/library/b2bf49fc-aea7-4d9c-8fcf-cff8b8dd0c03)  
   
-- [在远程设备上的 JavaScript 函数计时](https://msdn.microsoft.com/library/d78812b6-a97e-46dc-8d99-e724d1d725d8)  
+- [远程设备上的 JavaScript 函数计时](https://msdn.microsoft.com/library/d78812b6-a97e-46dc-8d99-e724d1d725d8)  
   
 - [分析 JavaScript 函数的计时数据](https://msdn.microsoft.com/library/b5aea8d8-36df-47ba-a7ca-95406700ca9b)  
   
@@ -74,7 +74,7 @@ Windows 8 和 Windows Server 2012 中增强的安全功能需要对 Visual Studi
   
 - [分析 Windows 应用商店应用程序中的 Visual C++、Visual C# 和 Visual Basic 代码的性能数据](https://msdn.microsoft.com/5de4a413-d924-425f-afc4-e1ecfb0fca18)  
   
-  [在本主题中](#BKMK_In_this_topic)  
+  [主题内容](#BKMK_In_this_topic)  
   
 ## <a name="BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE"></a> 从 Visual Studio IDE 收集有关在 Windows 8 桌面上或 Windows Server 2012 上运行的应用的数据  
  针对 Windows 8，使用检测方法进行分析并未更改。  
@@ -100,7 +100,7 @@ Windows 8 和 Windows Server 2012 中增强的安全功能需要对 Visual Studi
   
  若要分析未安装 Visual Studio 的设备上的应用程序，请执行以下操作之一：  
   
-- 从 [MSDN 网站](http://go.microsoft.com/fwlink/?LinkID=219549)上下载这些工具作为 Visual Studio 远程工具的一部分。  
+- 从 [MSDN 网站](https://go.microsoft.com/fwlink/?LinkID=219549)上下载这些工具作为 Visual Studio 远程工具的一部分。  
   
 - 从你的 Visual Studio 计算机复制并运行独立探查器工具安装程序。 安装程序位于 *%VSInstallDir%* **\Team Tools\Performance Tools\Setups** 文件夹。 为远程计算机的操作系统 (x86/x64) 选择安装程序。  
   
@@ -120,7 +120,7 @@ Windows 8 和 Windows Server 2012 中增强的安全功能需要对 Visual Studi
   
  **Visual Studio 版本**  
   
- 可以使用 [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]或 [!INCLUDE[vs_pro_current_short](../includes/vs-pro-current-short-md.md)]收集层交互分析数据。 但是，层交互分析数据只能在 [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] 和 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]中查看。  
+ 可以使用 [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]或 [!INCLUDE[vs_pro_current_short](../includes/vs-pro-current-short-md.md)]收集层交互分析数据。 但是，只能在 [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] 和 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] 中查看层交互分析数据。  
   
  **Windows 8 和 Windows Server 2012**  
   
@@ -134,15 +134,15 @@ Windows 8 和 Windows Server 2012 中增强的安全功能需要对 Visual Studi
   
    必须从性能资源管理器将层交互数据收集选项添加到性能运行。 还必须将项目、可执行文件或网站添加到性能资源管理器的目标节点。 请参阅[收集层交互数据](../profiling/collecting-tier-interaction-data.md)。  
   
-   **在远程计算机上收集 TIP 数据**  
+   **收集远程计算机上的 TIP 数据**  
   
-   若要在远程计算机上收集层交互数据，必须从 Visual Studio 计算机的 %VSInstallDir%\Team Tools\Performance Tools\Setups 文件夹中将 vs\_profiler\_\<Platform>\_\<Language>.exe 文件复制到远程计算机上并进行安装。 不能使用 [Visual Studio 远程工具](https://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c) 下载程序包中的分析工具。  
+   若要在远程计算机上收集层交互数据，必须从 Visual Studio 计算机的 %VSInstallDir%\Team Tools\Performance Tools\Setups 文件夹中将 vs**profiler\_\_Platform>** _Language>.exe 文件复制到远程计算机上并进行安装\<_ **\_** _\<_ 。 不能使用 [Visual Studio 远程工具](https://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c) 下载程序包中的分析工具。  
   
    可以使用 [VSPerfCmd](../profiling/vsperfcmd.md) 或 [VSPerfASPNetCmd](../profiling/vsperfaspnetcmd.md) 收集分析数据。  
   
-   **TIP 报表**  
+   **TIP 报告**  
   
-   只能在 [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] 或 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] IDE 中查看层交互数据。 基于文件的层交互报表通过 [VSPerfReport](../profiling/vsperfreport.md) 将不可用。  
+   只能在 [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] 或 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] IDE 中查看层交互数据。 通过 [VSPerfReport](../profiling/vsperfreport.md) 生成的基于文件的层交互报告不可用。  
   
 ## <a name="see-also"></a>请参阅  
  [性能资源管理器](../profiling/performance-explorer.md)   

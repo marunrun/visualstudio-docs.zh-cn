@@ -6,19 +6,20 @@ ms.assetid: c4de965e-0364-4f78-9936-1f509e85df74
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d2bbd33308ddf14f14746db7f5c2c4ada6826b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 072f80508f81a7b42ad481048f604cbd4c54af88
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62776980"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779787"
 ---
 # <a name="automark"></a>AutoMark
-“AutoMark”选项指定两次 Windows 软件性能计数器事件收集相隔的毫秒数。 在“WinCounter”选项中指定 Windows 性能计数器。
+“AutoMark”选项指定两次 Windows 软件性能计数器事件收集相隔的毫秒数  。 在“WinCounter”选项中指定 Windows 性能计数器  。
 
- 命令行上只能指定一个“AutoMark”选项。 请注意，由“AutoMark”指定的 WinCounter 采样间隔独立于主采样间隔。
+ 命令行上只能指定一个“AutoMark”选项  。 请注意，由“AutoMark”指定的 WinCounter 采样间隔独立于主采样间隔   。
 
 ## <a name="syntax"></a>语法
 
@@ -30,7 +31,7 @@ VSPerfCmd.exe /Start:Method /WinCounter:Path /AutoMark:Milliseconds
  `Milliseconds` 指定两次 Windows 性能计数器事件收集相隔的毫秒数。
 
 ## <a name="required-options"></a>必需选项
- **WinCounter:**`Path` 指定要收集的 Windows 性能计数器。 使用检测方法时，可以指定多个 Windows 计数器。 使用采样方法时，只可指定一个软件计数器。 “WinCounter”选项必须在包含“Start”选项的命令行中进行指定。
+ **WinCounter:** `Path` 指定要收集的 Windows 性能计数器。 使用检测方法时，可以指定多个 Windows 计数器。 使用采样方法时，只可指定一个软件计数器。 “WinCounter”选项必须在包含“Start”选项的命令行中进行指定   。
 
 ## <a name="example"></a>示例
  在此示例中，为两个 Windows 性能计数器设置了 1000 毫秒的采样间隔。

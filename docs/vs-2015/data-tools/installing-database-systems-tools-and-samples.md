@@ -17,12 +17,12 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6f260af17a2fab142c5f5fa58e4ed267dc469d9f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 091338e411369e40f19e028cd19b6cb2e697718c
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651495"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299608"
 ---
 # <a name="installing-database-systems-tools-and-samples"></a>安装数据库系统、工具和示例
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,13 +39,13 @@ Visual Studio 本身不包括它在内部使用的任何数据库系统。 若�
  SQL Server 是 Microsoft 旗舰数据库产品/服务。 SQL Server 2016 提供突破性的性能、高级安全性以及丰富的、集成的报告和分析。 它随附在为不同用途设计的各种版本中：从高度可缩放的高性能业务分析，到一台计算机上使用。 SQL Server Express 是一种功能齐全的 SQL Server 版本，专为重新分发和嵌入进行定制。  LocalDB 是 SQL Server Express 简化版本，无需进行任何配置，就能在应用程序的进程中运行。 你可以从["SQL Server Express 下载" 页](https://www.microsoft.com/sql-server/sql-server-editions-express)下载其中一个或两个产品。 本节中的许多 SQL 示例使用 SQL Server LocalDB。 SQL Server Management Studio （SSMS）是一个独立的数据库管理应用程序，其功能比 Visual Studio 中提供的功能更多 SQL Server 对象资源管理器。 可以从上一个链接获取 SSMS。
 
 ### <a name="oracle"></a>Oracle
- 你可以从 " [Oracle 技术网络](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index-092322.html)" 页下载 oracle 数据库的付费或免费版本。 对于实体框架和 Tableadapter 的设计时支持，将需要[Oracle 开发人员工具 For Visual Studio](http://www.oracle.com/technetwork/developer-tools/visual-studio/overview/index.html)。 其他官方 Oracle 产品（包括 Oracle 即时客户端）可通过 NuGet 包管理器获得。  可以按照[Oracle 联机文档](http://docs.oracle.com/cd/E11882_01/server.112/e10831/toc.htm)中的说明下载 oracle 示例架构。
+ 你可以从 " [Oracle 技术网络](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index-092322.html)" 页下载 oracle 数据库的付费或免费版本。 对于实体框架和 Tableadapter 的设计时支持，将需要[Oracle 开发人员工具 For Visual Studio](https://www.oracle.com/database/technologies/developer-tools/visual-studio/)。 其他官方 Oracle 产品（包括 Oracle 即时客户端）可通过 NuGet 包管理器获得。  可以按照[Oracle 联机文档](https://docs.oracle.com/cd/E11882_01/server.112/e10831/toc.htm)中的说明下载 oracle 示例架构。
 
 ### <a name="mysql"></a>MySQL
- MySQL 是一种常用的开源数据库系统，广泛用于企业和网站。 Mysql、Visual Studio 和相关产品的下载在[Windows 上的 mysql](http://www.mysql.com/why-mysql/windows/)中。  第三方提供各种 Visual Studio 扩展和 MySQL 独立管理应用程序。 你可以在 NuGet 包管理器中浏览产品/**服务** > **Nuget 包管理器** > **管理解决方案的 NuGet 包**）。
+ MySQL 是一种常用的开源数据库系统，广泛用于企业和网站。 Mysql、Visual Studio 和相关产品的下载在[Windows 上的 mysql](https://www.mysql.com/why-mysql/windows/)中。  第三方提供各种 Visual Studio 扩展和 MySQL 独立管理应用程序。 你可以在 NuGet 包管理器中浏览产品/**服务** > **Nuget 包管理器** > **管理解决方案的 NuGet 包**）。
 
-### <a name="postgresql"></a>postgresql
- PostgreSQL 是一个免费的开源对象关系数据库系统。 若要在 Windows 上安装，可以从[PostgreSQL 下载页](http://www.postgresql.org/download/windows/)下载。  还可以从源代码生成 PostgreSQL。  PostgreSQL 核心系统包含 C 语言接口。 许多第三方提供了用于从 .NET 应用程序使用 PostgreSQL 的 NuGet 包。  你可以在 NuGet 包管理器中浏览产品/**服务** > **Nuget 包管理器** > **管理解决方案的 NuGet 包**）。 最常见的包可能由[npgsql.org](http://www.npgsql.org)提供。
+### <a name="postgresql"></a>PostgreSQL
+ PostgreSQL 是一个免费的开源对象关系数据库系统。 若要在 Windows 上安装，可以从[PostgreSQL 下载页](http://www.postgresql.org/download/windows/)下载。  还可以从源代码生成 PostgreSQL。  PostgreSQL 核心系统包含 C 语言接口。 许多第三方提供了用于从 .NET 应用程序使用 PostgreSQL 的 NuGet 包。  你可以在 NuGet 包管理器中浏览产品/**服务** > **Nuget 包管理器** > **管理解决方案的 NuGet 包**）。 最常见的包可能由[npgsql.org](http://www.npgsql.org/)提供。
 
 ### <a name="sqlite"></a>SQLite
  SQLite 是在应用程序自身的进程中运行的嵌入式 SQL 数据库引擎。 可以从[SQLite 下载页面](http://www.sqlite.org/download.html)下载。 还提供了许多用于 SQLite 的第三方 NuGet 包。 你可以在 NuGet 包管理器中浏览产品/**服务** > **Nuget 包管理器** > **管理解决方案的 NuGet 包**）。
@@ -54,4 +54,4 @@ Visual Studio 本身不包括它在内部使用的任何数据库系统。 若�
  Firebird 是一个开源 SQL 数据库系统。 可以从[Firebird 下载页](http://firebirdsql.org/en/downloads/)下载。 可以通过 NuGet 包管理器使用 ADO.NET 数据提供程序。
 
 ## <a name="see-also"></a>请参阅
- [如何确定 SQL Server 及其组件的版本](http://support.microsoft.com/kb/321185)
+ [如何确定 SQL Server 及其组件的版本](https://support.microsoft.com/help/321185/how-to-determine-the-version-edition-and-update-level-of-sql-server-an)

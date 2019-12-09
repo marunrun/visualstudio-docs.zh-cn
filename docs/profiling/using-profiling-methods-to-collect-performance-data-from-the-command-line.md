@@ -6,14 +6,15 @@ ms.assetid: 5613fafc-f298-4e7a-9a2d-a853b61cdf9c
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b5f2c1d350f487b6490d0c2b4ce4fe0b83bb38f
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: b30aa723ea3014aec2bd05d4bd204b9427b3c218
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66746768"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779969"
 ---
 # <a name="use-profiling-methods-to-collect-performance-data-from-the-command-line"></a>使用分析方法通过命令行收集性能数据
 选择的 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 分析工具命令行工具和选项取决于各种因素，如要分析的应用程序的类型、要使用的分析方法以及是以本机还是 .NET Framework 代码编写目标应用程序。

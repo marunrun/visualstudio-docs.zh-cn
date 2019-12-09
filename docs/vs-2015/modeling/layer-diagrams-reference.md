@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a8a0654936ac102891981ecbee43430172487628
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: dd2b2d19e55cbaf9af63ddeafdbdf9f6d677c5bc
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646122"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301621"
 ---
 # <a name="layer-diagrams-reference"></a>层关系图：参考
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "72646122"
 
 - 在开发和维护你的代码过程中，通过包括对签入的验证来强化预期体系结构并生成操作。
 
-  本主题介绍了可以在层关系图中使用的元素。 有关如何创建和绘制层关系图的详细信息，请参阅[层关系图：准则](../modeling/layer-diagrams-guidelines.md)。 有关分层模式的详细信息，请参阅[模式 & 实践](http://go.microsoft.com/fwlink/?LinkId=145794)。
+  本主题介绍了可以在层关系图中使用的元素。 有关如何创建和绘制层关系图的详细信息，请参阅[层关系图：准则](../modeling/layer-diagrams-guidelines.md)。 有关分层模式的详细信息，请参阅[模式 & 实践](https://go.microsoft.com/fwlink/?LinkId=145794)。
 
 ## <a name="reading-layer-diagrams"></a>读取层关系图
  ![层关系图上的元素](../modeling/media/uml-layerrefreading.png "UML_LayerRefReading")

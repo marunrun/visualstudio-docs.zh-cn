@@ -15,19 +15,19 @@ caps.latest.revision: 38
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2d3434236908771cbc2149e766b841e7bcf4cb4e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7c9ccd5285f9a2744704c0ee13094a1dac31c53b
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667847"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302832"
 ---
 # <a name="uml-use-case-diagrams-guidelines"></a>UML 用例图：准则
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 在 Visual Studio 中，您可以绘制*用例图*来汇总使用您的应用程序或系统的用户以及他们可以对其执行的操作。 若要创建 UML 用例图，请在 "**体系结构**" 菜单上单击 "**新建 UML 或层关系图**"。
 
- 有关视频演示，请参阅[将功能组织到用例](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-2-Organizing-Features-Into-Use-Cases/)。
+ 有关视频演示，请参阅[将功能组织到用例](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-2-organizing-features-into-use-cases)。
 
  若要查看支持此功能的 Visual Studio 的版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
@@ -170,7 +170,7 @@ ms.locfileid: "72667847"
 
  ![显示多对多多重性的用例](../modeling/media/uml-ucguidemulti2.png "UML_UCGuideMulti2")
 
-- 若要声明同一类的多个执行组件可以在用例中出现一次，请将关联的执行组件端的重数设置为**1 .. \*** 。
+- 若要声明同一类的多个执行组件可以在用例中出现一次，请将关联的执行组件端的重数设置为**1 ..\*** 。
 
    在图示中，一个或多个餐馆可参与实现同一订餐。
 
@@ -190,7 +190,7 @@ ms.locfileid: "72667847"
 
    - **1**表示此角色的一个实例正好参与每个链接。
 
-   - **1. \*** ，表明此角色的一个或多个实例参与每个链接。
+   - **1.\*** ，表明此角色的一个或多个实例参与每个链接。
 
    - **0-1** ，表明参与是可选的。
 
@@ -270,7 +270,7 @@ ms.locfileid: "72667847"
 
 #### <a name="to-link-to-a-shared-document-onenote-element-or-web-page"></a>若要链接到共享文档、OneNote 元素或网页
 
-1. 获取的共享元素的 URL。 例如，这可以是网络文件路径的开头为 "\\ \\"、网页或 Sharepoint URL （以 "http://" 开头），也可以是指向 OneNote 分区、页面或段落开始 "onenote：" 的链接。
+1. 获取的共享元素的 URL。 例如，这可以是网络文件路径的开头为 "\\\\"、网页或 Sharepoint URL （以 "http://" 开头），也可以是指向 OneNote 分区、页面或段落开始 "onenote：" 的链接。
 
 2. 在 "工具箱" 中，单击 "**项目**"，然后在用例图中单击。
 
@@ -280,7 +280,7 @@ ms.locfileid: "72667847"
 > 双击项目可打开与其链接的关系图或文档。
 
 ### <a name="linking-use-cases-to-work-items"></a>将用例链接到工作项
- 如果你的项目使用 [!INCLUDE[vstsTfsRosarioLong](../includes/vststfsrosariolong-md.md)] 并且你已 [!INCLUDE[esprtfc](../includes/esprtfc-md.md)]，则可以将每个用例链接到 [!INCLUDE[esprfound](../includes/esprfound-md.md)] 中的工作项。 若要了解如何创建这些链接，请参阅[链接模型元素和工作项](../modeling/link-model-elements-and-work-items.md)。
+ 如果你的项目使用 [!INCLUDE[vstsTfsRosarioLong](../includes/vststfsrosariolong-md.md)] 并且你已 [!INCLUDE[esprtfc](../includes/esprtfc-md.md)]，则可以将每个用例链接到 [!INCLUDE[esprfound](../includes/esprfound-md.md)]中的工作项。 若要了解如何创建这些链接，请参阅[链接模型元素和工作项](../modeling/link-model-elements-and-work-items.md)。
 
  这使你能够：
 
@@ -441,4 +441,4 @@ ms.locfileid: "72667847"
  ![子系统显示系统的不同版本](../modeling/media/uml-ucguidesystem.png "UML_UCGuideSystem")
 
 ## <a name="see-also"></a>请参阅
- [模型用户需求](../modeling/model-user-requirements.md) [UML 序列图：准则](../modeling/uml-sequence-diagrams-guidelines.md)[编辑 uml 模型和关系图](../modeling/edit-uml-models-and-diagrams.md) [UML 用例图：引用](../modeling/uml-use-case-diagrams-reference.md) [uml 类图](../modeling/uml-class-diagrams-reference.md)：引用 uml[组件图：](../modeling/uml-component-diagrams-reference.md)引用[uml活动图：准则](../modeling/uml-activity-diagrams-guidelines.md)[视频：将功能组织到用例](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-2-Organizing-Features-Into-Use-Cases/)
+ [模型用户需求](../modeling/model-user-requirements.md) [UML 序列图：准则](../modeling/uml-sequence-diagrams-guidelines.md)[编辑 uml 模型和关系图](../modeling/edit-uml-models-and-diagrams.md) [UML 用例图：引用 uml](../modeling/uml-use-case-diagrams-reference.md) [类图](../modeling/uml-class-diagrams-reference.md) [：引用 uml](../modeling/uml-component-diagrams-reference.md)关系图：参考 Uml[活动图：准则](../modeling/uml-activity-diagrams-guidelines.md)[视频：将功能组织到用例](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-2-organizing-features-into-use-cases)

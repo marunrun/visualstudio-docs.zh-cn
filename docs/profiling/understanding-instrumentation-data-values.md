@@ -8,18 +8,19 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f10a3f434def1c96c2f096c4b299b47dd8aad9f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3dace7b13816c63664ccb4dabfed52d1c5fb7523
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63004406"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778071"
 ---
 # <a name="understand-instrumentation-data-values"></a>了解检测数据值
 
-Visual Studio 的检测分析方法会记录所分析应用程序中函数调用、行和指令的详细计时信息
+Visual Studio 的检测  分析方法会记录所分析应用程序中函数调用、行和指令的详细计时信息
 
 检测方法会在所分析二进制文件中的目标函数开头和末尾注入代码，并且是在这些函数每次调用到其他函数之前和之后注入。 注入的代码会记录以下信息：
 
@@ -31,11 +32,11 @@ Visual Studio 的检测分析方法会记录所分析应用程序中函数调用
 
 对于记录间隔时调用堆栈中的每个函数，探查器分析会将间隔添加到函数的四个数据值中的一个或多个。 分析基于两个条件将间隔添加到函数的数据值：
 
-- 间隔是在函数的代码中还是在子函数（函数调用的函数）中出现。
+- 间隔是在函数的代码中还是在子函数  （函数调用的函数）中出现。
 
 - 在间隔中是否发生了操作系统事件。
 
-函数或数据范围的间隔的数据值称为已用非独占、已用独占、应用程序非独占和应用程序独占：
+函数或数据范围的间隔的数据值称为已用非独占  、已用独占  、应用程序非独占  和应用程序独占  ：
 
 - 函数的所有间隔都会添加到已用非独占数据值。
 

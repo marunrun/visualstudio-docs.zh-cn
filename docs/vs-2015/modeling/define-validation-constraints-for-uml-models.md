@@ -11,17 +11,17 @@ caps.latest.revision: 49
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2f279216d06972578f5173e57375c89542c71e3f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3dd76deb3b72d3b12d3b5892c2e5664273425c4c
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669886"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295844"
 ---
 # <a name="define-validation-constraints-for-uml-models"></a>为 UML 模型定义验证约束
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-你可以定义测试模型是否符合所指定条件的验证约束。 例如，你可以定义一个约束以确保用户不会创建具有继承关系的循环。 用户尝试打开或保存模型时将调用该约束，此外也可手动调用。 如果约束失效，错误窗口中将增加一条你定义的错误消息。 可以将这些约束打包到 Visual Studio 集成扩展 ([VSIX](http://go.microsoft.com/fwlink/?LinkId=160780)) 中，并将其分发到其他 Visual Studio 用户。
+你可以定义测试模型是否符合所指定条件的验证约束。 例如，你可以定义一个约束以确保用户不会创建具有继承关系的循环。 用户尝试打开或保存模型时将调用该约束，此外也可手动调用。 如果约束失效，错误窗口中将增加一条你定义的错误消息。 可以将这些约束打包到 Visual Studio 集成扩展 ([VSIX](https://go.microsoft.com/fwlink/?LinkId=160780)) 中，并将其分发到其他 Visual Studio 用户。
 
  你还可以定义对照外部资源（如数据库）验证模型的约束。 如果要针对层关系图验证程序代码，请参阅[向层关系图添加自定义体系结构验证](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)。
 
@@ -63,7 +63,7 @@ ms.locfileid: "72669886"
 
 4. 按 F5 以测试你的约束。 有关详细信息，请参阅 [执行验证约束](#Executing)。
 
-5. 在另一台计算机上安装菜单命令，方法是：将文件 bin 复制 \\ 由项目生成的 **\* \\ \*。** 有关详细信息，请参阅 [安装和卸载扩展](#Installing)。
+5. 在另一台计算机上安装菜单命令，方法是：将文件 bin 复制\\由项目生成的 **\*\\\*。** 有关详细信息，请参阅 [安装和卸载扩展](#Installing)。
 
    添加其他 **.cs** 文件时，通常将需要以下 `using` 语句：
 
@@ -191,7 +191,7 @@ using Microsoft.VisualStudio.Uml.Classes;
 
     - 如果你有多个项目，请确保将 VSIX 项目设置为解决方案的启动项目。
 
-    - 在“解决方案资源管理器”中，在启动或唯一项目的快捷菜单上选择“属性”。 在项目属性编辑器中，选择 "**调试**" 选项卡。请确保 "**启动外部程序**" 字段中的字符串是 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的完整路径名，通常为：
+    - 在“解决方案资源管理器”中，在启动或唯一项目的快捷菜单上选择“属性”。 在项目属性编辑器中，选择 "**调试**" 选项卡。请确保 "**启动外部程序**" 字段中的字符串是 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的完整路径名，通常为：
 
          `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
@@ -259,7 +259,7 @@ public void ValidateSomething
 |||
 |-|-|
 |`[Export(typeof(System.Action <ValidationContext, object>))]`|使用 Managed Extensibility Framework (MEF) 将方法定义为验证约束。|
-|`[ValidationMethod (ValidationCategories.Menu)]`|指定将执行验证的时间。 如果要组合多&#124;个选项，请使用按位 "或" （）。<br /><br /> `Menu` = 由“验证”菜单调用。<br /><br /> `Save` = 在保存模型时调用。<br /><br /> `Open` = 在打开模型时调用。 `Load` = 在保存模型时调用，但如果违背规则，则警告用户此操作可能重新打开模型。 也可以在加载时（解析模型前）调用。|
+|`[ValidationMethod (ValidationCategories.Menu)]`|指定将执行验证的时间。 如果要组合多&#124;个选项，请使用按位 "或" （）。<br /><br /> `Menu` = 由“验证”菜单调用。<br /><br /> `Save` = 在保存模型时调用。<br /><br /> `Open` = 在打开模型时调用。 `Load` = 在保存模型时调用，但如果违背规则，则警告用户此操作可能不会重新打开模型。 也可以在加载时（解析模型前）调用。|
 |`public void ValidateSomething`<br /><br /> `(ValidationContext context,`<br /><br /> `IElement element)`|将第二个参数 `IElement` 替换为你希望向其应用约束的元素类型。 这将对指定类型的所有元素调用该约束方法。<br /><br /> 方法的名称并不重要。|
 
  你可以使用第二个参数中的其他类型定义所需的尽可能多的验证方法。 调用验证时，将对符合该参数类型的每个模型元素调用每个验证方法。
@@ -372,7 +372,7 @@ context.LogError(... , usecase);
 
     1. 在“解决方案资源管理器”中，在 VSIX 项目的快捷菜单上，选择“在 Windows 资源管理器中打开文件夹”。
 
-    2. **@No__t_2 \\** _项目_**中**查找文件 bin \\
+    2. **\*\\** _项目_**中**查找文件 bin\\
 
 2. 将 **.vsix** 文件复制到要安装该扩展的目标计算机。 该计算机可以是自己的计算机或其他计算机。
 
@@ -386,15 +386,15 @@ context.LogError(... , usecase);
 
 #### <a name="to-uninstall-an-extension"></a>若要卸载扩展
 
-1. 在“工具” 菜单上，选择“扩展和更新”。
+1. 在 **“工具”** 菜单上，选择 **“扩展和更新”** 。
 
 2. 展开“已安装的扩展”。
 
 3. 选择扩展，然后选择“卸载”。
 
-   在极少数情况下，有错误的扩展无法加载并在错误窗口中创建报告，但不显示在扩展管理器中。 在这种情况下，可以通过从以下位置删除文件来删除扩展，其中 *% LocalAppData%* 通常为*DriveName*： \Users \\*UserName*\AppData\Local：
+   在极少数情况下，有错误的扩展无法加载并在错误窗口中创建报告，但不显示在扩展管理器中。 在这种情况下，可以通过从以下位置删除文件来删除扩展，其中 *% LocalAppData%* 通常为*DriveName*： \Users\\*UserName*\AppData\Local：
 
-   *% LocalAppData%* **\Microsoft\VisualStudio \\ [version] \Extensions**
+   *% LocalAppData%* **\Microsoft\VisualStudio\\[version] \Extensions**
 
 ## <a name="Example"></a> 示例
  本示例查找元素间依赖关系中的循环。

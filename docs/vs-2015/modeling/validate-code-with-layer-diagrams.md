@@ -21,12 +21,12 @@ caps.latest.revision: 84
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 45aa7c9807ba08751a354c336b646aa7f7ce641b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 596711c5c59738d5356437bb761e80caeddfbd6b
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659381"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301349"
 ---
 # <a name="validate-code-with-layer-diagrams"></a>用层关系图验证代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "72659381"
 
   若要查看支持此功能的 Visual Studio 的版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
-  你可以从 Visual Studio 中打开的层关系图或从命令提示符手动验证代码。 你还可以在运行本地生成或 Team Foundation Build 时自动验证代码。 请参阅[第9频道视频：使用层关系图设计和验证体系结构](http://go.microsoft.com/fwlink/?LinkID=252073)。
+  你可以从 Visual Studio 中打开的层关系图或从命令提示符手动验证代码。 你还可以在运行本地生成或 Team Foundation Build 时自动验证代码。 请参阅[第9频道视频：使用层关系图设计和验证体系结构](https://go.microsoft.com/fwlink/?LinkID=252073)。
 
 > [!IMPORTANT]
 > 如果想要使用 Team Foundation Build 运行层验证，则还必须在生成服务器上安装相同版本的 Visual Studio。
@@ -99,7 +99,7 @@ ms.locfileid: "72659381"
 2. 若要查看每个错误的源，请在 "**错误列表**" 窗口中双击错误。
 
     > [!NOTE]
-    > [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 可能会显示代码图，而不是显示错误的根源。 若代码所依赖的程序集不是由层关系图指定的，或代码缺少层关系图所指定的依赖项，则会出现此情况。 检查代码映射或代码，以确定此依赖关系是否应该存在。 有关代码图的详细信息，请参阅[映射解决方案之间的依赖关系](../modeling/map-dependencies-across-your-solutions.md)。
+    > [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 可能会显示代码图，而不是错误的源。 若代码所依赖的程序集不是由层关系图指定的，或代码缺少层关系图所指定的依赖项，则会出现此情况。 检查代码映射或代码，以确定此依赖关系是否应该存在。 有关代码图的详细信息，请参阅[映射解决方案之间的依赖关系](../modeling/map-dependencies-across-your-solutions.md)。
 
 3. 若要管理错误，请参阅[管理验证错误](#ManageErrors)。
 
@@ -137,7 +137,7 @@ ms.locfileid: "72659381"
      msbuild /p:ValidateArchitecture=true
      ```
 
-     将列出发生的任何错误。 有关 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 的详细信息，请参阅[msbuild](../msbuild/msbuild.md)和[msbuild 任务](../msbuild/msbuild-task.md)。
+     将列出发生的任何错误。 有关 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]的详细信息，请参阅[msbuild](../msbuild/msbuild.md)和[msbuild 任务](../msbuild/msbuild-task.md)。
 
    有关验证错误的详细信息，请参阅[了解和解决层验证错误](#UnderstandingValidationErrors)。
 

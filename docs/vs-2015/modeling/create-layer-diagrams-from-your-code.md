@@ -14,12 +14,12 @@ caps.latest.revision: 64
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 138f818eab34b0b1860c7daa85f1b6814888fc9b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3e6cd77e785adb59fc8b2cf3b28724ed0efe1ae3
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652846"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300272"
 ---
 # <a name="create-layer-diagrams-from-your-code"></a>从你的代码创建层关系图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -136,4 +136,4 @@ ms.locfileid: "72652846"
 - [使用代码图分析查找潜在问题](../modeling/find-potential-problems-using-code-map-analyzers.md)
 
 ## <a name="see-also"></a>请参阅
- [第9频道视频：使用层关系图设计和验证体系结构](http://go.microsoft.com/fwlink/?LinkID=252073)[层关系图：参考](../modeling/layer-diagrams-reference.md)[层关系图：](../modeling/layer-diagrams-guidelines.md) [使用层关系图验证代码的](../modeling/validate-code-with-layer-diagrams.md)准则[可视化代码](../modeling/visualize-code.md)
+ [第9频道视频：使用层关系图设计和验证体系结构](https://go.microsoft.com/fwlink/?LinkID=252073)[层关系图：参考](../modeling/layer-diagrams-reference.md)[层关系图：](../modeling/layer-diagrams-guidelines.md) [使用层关系图验证代码的](../modeling/validate-code-with-layer-diagrams.md)准则[可视化代码](../modeling/visualize-code.md)

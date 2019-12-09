@@ -17,12 +17,12 @@ caps.latest.revision: 63
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e66f8438e0c28a64d2e8705fea0ffa5e362887b0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cafc4e2a87a31603e1f8cef4174d8538be768428
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671260"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296018"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>方案：使用可视化和建模更改设计
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -363,7 +363,7 @@ ms.locfileid: "72671260"
 
 - [在开发过程中验证系统](../modeling/validate-your-system-during-development.md)
 
-- [使用版本控制](http://go.microsoft.com/fwlink/?LinkID=525605)
+- [使用版本控制](https://go.microsoft.com/fwlink/?LinkID=525605)
 
 - [生成应用程序](/azure/devops/pipelines/index)
 
@@ -697,9 +697,9 @@ ms.locfileid: "72671260"
 
 - 水平 *“消息”* ，可表示方法调用、Web 服务消息或其他一些通信。 *“执行发生”* ，它是显示在生命线上带阴影的垂直矩形，并可表示接收对象处理调用的时间段。
 
-- 在*同步*消息期间，发送方对象会等待控制对 < \<return > > 与在常规函数调用中一样。 在 *“异步”* 消息过程中，发送方可以立即继续。
+- 在*同步*消息期间，发送方对象会等待控制 <，\<返回 > > 与常规函数调用中一样。 在 *“异步”* 消息过程中，发送方可以立即继续。
 
-- 使用 < \<create > > 消息来指示对象按其他对象的构造。 它应是发送给相关对象的第一条消息。
+- 使用 <\<创建 > > 消息，以指示按其他对象构造对象。 它应是发送给相关对象的第一条消息。
 
   请参阅：
 
@@ -882,7 +882,7 @@ ms.locfileid: "72671260"
 
 |**类别**|**Links**|
 |------------------|---------------|
-|**论坛**|-   [Visual Studio 可视化和建模工具](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio 可视化和建模 SDK（DSL 工具）](http://go.microsoft.com/fwlink/?LinkId=184721)|
+|**论坛**|-   [Visual Studio 可视化和建模工具](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio 可视化和建模 SDK（DSL 工具）](https://go.microsoft.com/fwlink/?LinkId=184721)|
 
 ## <a name="see-also"></a>请参阅
  [可视化代码](../modeling/visualize-code.md)[为应用程序创建模型](../modeling/create-models-for-your-app.md)[在开发过程中使用模型](../modeling/use-models-in-your-development-process.md)在开发过程中[使用模型在](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)[开发过程中验证系统](../modeling/validate-your-system-during-development.md)[扩展 UML 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)

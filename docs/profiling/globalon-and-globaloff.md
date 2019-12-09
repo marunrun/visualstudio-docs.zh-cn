@@ -6,14 +6,15 @@ ms.assetid: 24b0ed68-d19e-473e-9af3-252c11d82bcf
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ee29b677096e46d965e8191cf26a829587471dd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 518f41557809cdeaaae9f9e1ac79e3797a854395
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62969623"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74776961"
 ---
 # <a name="globalon-and-globaloff"></a>GlobalOn 和 GlobalOff
 VSPerfCmd.exe 的“GlobalOff” 和“GlobalOn”选项可暂停和继续命令行分析会话中所有进程和线程的分析    。
@@ -43,7 +44,7 @@ VSPerfCmd.exe {Launch:AppName|Attach:PID} /{GlobalOff|GlobalOn}[Options]
 ```
 
 #### <a name="parameters"></a>参数
- None
+ 无
 
 ## <a name="valid-options"></a>有效选项
  可以在还包含以下选项的命令行上指定“GlobalOn”  和“GlobalOff”  。

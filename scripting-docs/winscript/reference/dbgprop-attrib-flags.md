@@ -1,5 +1,5 @@
 ---
-title: DBGPROP_ATTRIB_FLAGS |Microsoft Docs
+title: DBGPROP_ATTRIB_FLAGS | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -109,6 +109,6 @@ DBGPROP_ATTRIB_NO_ATTRIB  =0x00000000,
 ## <a name="remarks"></a>备注  
  这些标志也用于筛选对象的子级。 这些值可使按位“或”组合。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugProperty 接口](../../winscript/reference/idebugproperty-interface.md)   
  [DebugPropertyInfo 结构](../../winscript/reference/debugpropertyinfo-structure.md)

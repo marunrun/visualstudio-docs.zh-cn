@@ -12,12 +12,12 @@ caps.latest.revision: 49
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 41023f49f1897f3e3d26d7fc57807ea98fa35f24
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 10c9c6cfa1d8553c79b710239a99f8ea9e2438e5
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659295"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301278"
 ---
 # <a name="walkthrough-connecting-a-host-to-a-generated-directive-processor"></a>演练：将主机连接至生成的指令处理器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,14 +37,14 @@ ms.locfileid: "72659295"
 
 - 用生成的指令处理器测试自定义主机。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
  若要定义 DSL，必须安装以下组件：
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](http://go.microsoft.com/fwlink/?LinkId=185580)|
-|Visual Studio 可视化和建模 SDK|[http://go.microsoft.com/fwlink/?LinkID=186128](http://go.microsoft.com/fwlink/?LinkID=186128)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://go.microsoft.com/fwlink/?LinkId=185579)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://go.microsoft.com/fwlink/?LinkId=185580)|
+|Visual Studio 可视化和建模 SDK|[http://go.microsoft.com/fwlink/?LinkID=186128](https://go.microsoft.com/fwlink/?LinkID=186128)|
 
  此外，还必须在[演练：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)中创建自定义文本模板转换。
 
@@ -72,13 +72,13 @@ ms.locfileid: "72659295"
 
 3. 在“调试”菜单上，单击“启动调试”。
 
-    @No__t_0 的第二个实例打开。
+    [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的第二个实例打开。
 
 4. 在实验生成的**解决方案资源管理器**中，双击文件**示例。**
 
     文件将在设计器中打开。 请注意，该模型包含两个元素（ExampleElement1 和 ExampleElement2）以及它们之间的链接。
 
-5. 关闭 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的第二个实例。
+5. 关闭 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的第二个实例。
 
 6. 保存解决方案，然后关闭特定于域的语言设计器。
 
@@ -95,17 +95,17 @@ ms.locfileid: "72659295"
 
 3. 添加以下引用：
 
-    - VisualStudio （web.config）
+    - Microsoft.VisualStudio.Modeling.Sdk.11.0
 
-    - VisualStudio. 11.0. 11。0
+    - Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0
 
-    - VisualStudio. TextTemplating
+    - Microsoft.VisualStudio.TextTemplating.11.0
 
-    - VisualStudio. TextTemplating。
+    - Microsoft.VisualStudio.TextTemplating.Interfaces.11.0
 
-    - VisualStudio （TextTemplating）
+    - Microsoft.VisualStudio.TextTemplating.Modeling.11.0
 
-    - VisualStudio. TextTemplating. Vshost.exe
+    - Microsoft.VisualStudio.TextTemplating.VSHost.11.0
 
 4. 在 Program.cs 或 Module1 的顶部，添加以下代码行：
 
@@ -117,7 +117,7 @@ ms.locfileid: "72659295"
     Imports Microsoft.Win32
     ```
 
-5. 找到 `StandardAssemblyReferences` 属性的代码，并将其替换为以下代码：
+5. 找到 `StandardAssemblyReferences`属性的代码，并将其替换为以下代码：
 
     > [!NOTE]
     > 在此步骤中，你将添加对你的主机将支持的生成的指令处理器所需的程序集的引用。
@@ -153,7 +153,7 @@ ms.locfileid: "72659295"
     }
     ```
 
-6. 找到函数 `ResolveDirectiveProcessor` 的代码，并将其替换为以下代码：
+6. 找到函数 `ResolveDirectiveProcessor`的代码，并将其替换为以下代码：
 
     > [!IMPORTANT]
     > 此代码包含对要连接到的所生成指令处理器名称的硬编码引用。 您可以轻松地使此方法更常规，在这种情况下，它会查找注册表中列出的所有指令处理器，并尝试找到匹配项。 在这种情况下，主机将适用于任何生成的指令处理器。
@@ -310,9 +310,9 @@ ms.locfileid: "72659295"
     #>
     ```
 
-3. 在代码中，将 \<YOUR 路径 > 替换为在第一个过程中创建的特定于设计语言的示例文件的路径。
+3. 在代码中，将路径 \<替换为在第一个过程中创建的特定于设计语言的示例文件的路径 >。
 
-4. 保存并关闭文件。
+4. 保存并关闭该文件。
 
 #### <a name="to-test-the-custom-host"></a>测试自定义主机
 

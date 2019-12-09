@@ -3,15 +3,15 @@ title: WhiteSource Bolt 权益 | Microsoft 文档
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 08/01/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 description: 了解如何激活 Visual Studio 订阅中包含的 WhiteSource Bolt 订阅。
-ms.openlocfilehash: 54248c0291fe54c2cb7db9155233d08e96991581
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: fb403053d101cf2edf8677c7bcce494ae4e2d21e
+ms.sourcegitcommit: 5c9ca18eadc7ed0ed095cc5a3e1df40bbc13e70c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816409"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74174128"
 ---
 # <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 WhiteSource Bolt
 
@@ -38,7 +38,7 @@ ms.locfileid: "72816409"
 9. 有关详细信息，请访问 WhiteSource Bolt [常见问题解答页面](https://bolt.whitesourcesoftware.com/azure/faq/)。 
 
 ## <a name="eligibility"></a>资格
-现可从 Visual Studio Marketplace 免费获取 WhiteSource Bolt。 
+现可在 Visual Studio Marketplace 免费获取 [WhiteSource Bolt](https://marketplace.visualstudio.com/search?term=whitesource&target=AzureDevOps&category=All%20categories&sortBy=Relevance)。 
 
 ## <a name="support-resources"></a>支持资源
 - 需要 WhiteSource Bolt 帮助？  在 https://www.whitesourcesoftware.com/vse_whitesource_bolt/ 与 WhiteSource Bolt 代表实时聊天
@@ -46,4 +46,7 @@ ms.locfileid: "72816409"
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
 
 ## <a name="next-steps"></a>后续步骤
-Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过[每月 Azure 开发测试个人额度](vs-azure.md)，可将 Azure 用作开发/测试的个人沙盒。  你可以预配虚拟机、云服务和其他 Azure 资源。  信用额度因订阅级别而异。
+请务必激活这些重要权益以充分利用 Visual Studio 订阅：
+- [Visual Studio](vs-ide-benefit.md)
+- [Azure DevOps](vs-azure-devops.md)
+- [Azure 开发测试个人额度](vs-azure.md)

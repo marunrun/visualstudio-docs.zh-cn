@@ -9,12 +9,12 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1068c87a8979b853dd27de1b35e2449d7f96eaf4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 47bcda57d4446b69096405a54e238e696df24d50
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72664319"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300812"
 ---
 # <a name="keyboard-shortcuts-and-modifier-keys-in-blend"></a>Blend 中的键盘快捷方式和修改键
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "72664319"
 
    ![](../designers/media/f147fc85-9fc5-4e8a-8039-bead80a3e595.png "f147fc85-9fc5-4e8a-8039-bead80a3e595")显示在具有快捷方式的菜单项旁边的快捷键
 
-  有关辅助功能和其他功能的详细信息，请参阅 [Microsoft 辅助功能](http://go.microsoft.com/fwlink/?LinkId=75069)。
+  有关辅助功能和其他功能的详细信息，请参阅 [Microsoft 辅助功能](https://go.microsoft.com/fwlink/?LinkId=75069)。
 
 ## <a name="modifier-keys"></a>修改键
  某些键盘快捷方式没有关联的菜单项，这意味着你无法使用 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 用户界面来发现这些键盘快捷方式。 以下主题列出了用于修改工具行为或修改操作（例如重设对象大小）的快捷方式：

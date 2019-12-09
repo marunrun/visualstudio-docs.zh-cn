@@ -9,19 +9,19 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b683e2d266e065ce9fcf7caa1943cd44d1bd9be6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8eb2d4f5b025be6f68860c18d1c14da017aaf3fe
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72664722"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74294321"
 ---
 # <a name="draw-shapes-and-paths"></a>绘制形状和路径
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 在 XAML 设计器中，“形状” 正是你所期望的内容。 例如：矩形、圆或椭圆。 *路径* 是更加灵活的形状版本。 你可以执行某些操作，如重新调整它们的形状，或将它们合并在一起以形成新形状。
 
- 形状和路径使用矢量图形，因此它们可很好地按高分辨率显示进行缩放。 若要了解有关向量图形的详细信息，请参阅 [什么是向量图形](https://www.youtube.com/watch?v=MoCSwF0n-io) 或 [向量图形](http://www.webopedia.com/TERM/V/vector_graphics.html)。
+ 形状和路径使用矢量图形，因此它们可很好地按高分辨率显示进行缩放。 若要了解有关向量图形的详细信息，请参阅 [什么是向量图形](https://www.youtube.com/watch?v=MoCSwF0n-io) 或 [向量图形](https://www.webopedia.com/TERM/V/vector_graphics.html)。
 
  **本主题内容：**
 

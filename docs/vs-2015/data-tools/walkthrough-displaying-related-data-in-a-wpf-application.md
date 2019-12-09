@@ -19,12 +19,12 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 robots: noindex,nofollow
-ms.openlocfilehash: c44b949daabf587dbca5d8a5d1d932afca2c1f9c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 787be52eeb546d2ab184a172464862d10cb43288
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72602470"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299584"
 ---
 # <a name="walkthrough-displaying-related-data-in-a-wpf-application"></a>演练：在 WPF 应用程序中显示相关数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,12 +41,12 @@ ms.locfileid: "72602470"
 
    [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
  你需要以下组件来完成本演练：
 
-- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。
 
-- 对附加了 AdventureWorksLT 示例数据库的 SQL Server 或 SQL Server Express 的正在运行的实例的访问权限。 可以从[CodePlex](http://go.microsoft.com/fwlink/?linkid=87843)网站下载 AdventureWorksLT 数据库。
+- 对附加了 AdventureWorksLT 示例数据库的 SQL Server 或 SQL Server Express 的正在运行的实例的访问权限。 可以从[CodePlex](https://go.microsoft.com/fwlink/?linkid=87843)网站下载 AdventureWorksLT 数据库。
 
   事先了解以下概念也很有用，但对于完成本演练并不是必需的：
 
@@ -73,7 +73,7 @@ ms.locfileid: "72602470"
 
 6. 在“名称”框中键入 `AdventureWorksOrdersViewer`。
 
-7. 单击“确定”。
+7. 单击" **确定**"。
 
      Visual Studio 将创建 `AdventureWorksOrdersViewer` 项目。
 
@@ -198,7 +198,7 @@ ms.locfileid: "72602470"
 
     - "**销售订单 ID** " 组合框显示**71774**。 这是实体中的第一个订单 ID。
 
-    - 对于在 "**销售订单 ID** " 组合框中选择的每个订单，详细订单信息将显示在 "<xref:System.Windows.Controls.DataGrid> 中。
+    - 对于在 "**销售订单 ID** " 组合框中选择的每个订单，详细订单信息将显示在 "<xref:System.Windows.Controls.DataGrid>中。
 
 2. 关闭该应用程序。
 

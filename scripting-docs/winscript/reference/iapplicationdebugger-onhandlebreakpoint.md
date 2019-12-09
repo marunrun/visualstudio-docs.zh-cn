@@ -45,12 +45,12 @@ HRESULT onHandleBreakPoint(
  中断点的原因。  
   
  `pError`  
- 中运行时错误信息，在 `br` 的值为 BREAKREASON_ERROR 时提供。  
+ 中运行时错误信息，在 BREAKREASON_ERROR `br` 的值时提供。  
   
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
@@ -59,8 +59,8 @@ HRESULT onHandleBreakPoint(
   
  应用程序将保持挂起状态，直到调试器 IDE 调用 `IRemoteDebugApplication::ResumeFromBreakPoint`。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IApplicationDebugger 接口](../../winscript/reference/iapplicationdebugger-interface.md)   
- [IDebugApplication：： HandleBreakPoint](../../winscript/reference/idebugapplication-handlebreakpoint.md)    
- [IRemoteDebugApplication：： ResumeFromBreakPoint](../../winscript/reference/iremotedebugapplication-resumefrombreakpoint.md)    
+ [IDebugApplication::HandleBreakPoint](../../winscript/reference/idebugapplication-handlebreakpoint.md)   
+ [IRemoteDebugApplication::ResumeFromBreakPoint](../../winscript/reference/iremotedebugapplication-resumefrombreakpoint.md)   
  [BREAKREASON 枚举](../../winscript/reference/breakreason-enumeration.md)

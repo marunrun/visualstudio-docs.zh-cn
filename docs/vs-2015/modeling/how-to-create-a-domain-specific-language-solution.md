@@ -15,26 +15,26 @@ caps.latest.revision: 43
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ddce137ebdf2cff0e029a1cbe8551c7437c58386
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 60813fcce28c71c91a3e0c2af9889261c8897a99
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671675"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301409"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>如何：创建域特定语言解决方案
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 使用专用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 解决方案创建域特定语言（DSL）。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
  在开始此过程之前，必须先安装这些组件：
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185579](http://go.microsoft.com/fwlink/?LinkID=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185580](http://go.microsoft.com/fwlink/?LinkID=185580)|
-|Visual Studio 可视化和建模 SDK|[http://go.microsoft.com/fwlink/?LinkID=185581](http://go.microsoft.com/fwlink/?LinkID=185581)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185579](https://go.microsoft.com/fwlink/?LinkID=185579)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185580](https://go.microsoft.com/fwlink/?LinkID=185580)|
+|Visual Studio 可视化和建模 SDK|[http://go.microsoft.com/fwlink/?LinkID=185581](https://go.microsoft.com/fwlink/?LinkID=185581)|
 
 ## <a name="creating-a-domain-specific-language-solution"></a>创建域特定语言解决方案
 
@@ -44,13 +44,13 @@ ms.locfileid: "72671675"
 
    1. 在 **“文件”** 菜单上，指向 **“新建”** ，然后单击 **“项目”** 。
 
-   2. 此时将出现“新建项目”对话框。
+   2. 此时将出现 **“新建项目”** 对话框。
 
    3. 在 "**项目类型**" 下，展开 "**其他项目类型**" 节点，然后单击 "**扩展性**"。
 
    4. 单击 "**特定于域的语言设计器**"。
 
-   5. 在 "**名称**" 框中，键入解决方案的名称。 单击“确定”。
+   5. 在 "**名称**" 框中，键入解决方案的名称。 单击" **确定**"。
 
        此时将显示**特定于域的语言设计器向导**。
 
@@ -127,7 +127,7 @@ ms.locfileid: "72671675"
 
  **使用现有的强名称密钥**如果要将 DSL 与其他程序集集成，请使用此选项。
 
- 有关强命名的详细信息，请参阅[创建和使用具有强名称的程序集](http://go.microsoft.com/fwlink/?LinkId=186073)。
+ 有关强命名的详细信息，请参阅[创建和使用具有强名称的程序集](https://go.microsoft.com/fwlink/?LinkId=186073)。
 
 ## <a name="see-also"></a>请参阅
  [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)[特定于域的语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

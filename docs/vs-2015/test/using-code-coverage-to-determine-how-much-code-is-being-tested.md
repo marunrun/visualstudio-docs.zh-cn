@@ -10,12 +10,12 @@ ms.assetid: 800fc739-acd2-4242-84cb-1d83b4d82cf9
 caps.latest.revision: 38
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ee281e2cabcbce4f950188465163769caae7b2bc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8c7ec729c81f11096a55e87cea528764e500b535
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657241"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297978"
 ---
 # <a name="using-code-coverage-to-determine-how-much-code-is-being-tested"></a>使用代码覆盖率确定所测试的代码量
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "72657241"
 
  可将代码覆盖率分析应用于托管 (CLI) 和非托管（本机）代码。
 
- 代码覆盖率是使用测试资源管理器运行测试方法时的一个选项。 结果表将显示在各个程序集、类和方法中运行的代码的百分比。 此外，源代码编辑器会显示已测试的代码。
+ 代码覆盖率是使用测试资源管理器运行测试方法时的一个选项。 结果表将显示在各个程序集、类和方法中运行的代码的百分比。 此外，源编辑器将显示已测试的代码。
 
  ![带着色的代码覆盖率结果](../test/media/codecoverage1.png "CodeCoverage1")
 
@@ -50,7 +50,7 @@ ms.locfileid: "72657241"
 >   如果要处理非托管（本机）代码，请使用调试版本。
 >   - 确保为每个程序集生成 .pdb（符号）文件。
 >
->   如果没有获得预期的结果，请参阅[代码覆盖率疑难解答](../test/troubleshooting-code-coverage.md)。 方法。 不要忘记在更新代码后再次运行代码覆盖率。 在修改代码后或运行测试时，覆盖率结果和代码着色不会自动更新。
+>   如果没有获得预期的结果，请参阅[代码覆盖率疑难解答](../test/troubleshooting-code-coverage.md)。 中运行但不进行任何修改。 不要忘记在更新代码后再次运行代码覆盖率。 在修改代码后或运行测试时，覆盖率结果和代码着色不会自动更新。
 
 ## <a name="reporting-in-blocks-or-lines"></a>报告块或行
  代码覆盖率将以块为单位计数。 块是恰好有一个入口点和出口点的一段代码。  在测试运行期间，如果程序的控制流通过某个块，则将该块计为“已覆盖”。 块的使用次数对结果没有影响。
@@ -281,7 +281,7 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 ## <a name="external-resources"></a>外部资源
 
 ### <a name="guidance"></a>指导
- [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](http://go.microsoft.com/fwlink/?LinkID=255188)
+ [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](https://go.microsoft.com/fwlink/?LinkID=255188)
 
 ## <a name="see-also"></a>请参阅
  [自定义代码覆盖率分析](../test/customizing-code-coverage-analysis.md)[故障排除代码覆盖率](../test/troubleshooting-code-coverage.md)[单元测试代码](../test/unit-test-your-code.md)

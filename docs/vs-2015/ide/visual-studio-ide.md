@@ -9,12 +9,12 @@ caps.latest.revision: 36
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 52e0b8f87774b11b1750700d5bef19c5423824c4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3780e0ee5cf6bffb1a749b17d868445fbda38b13
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667144"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296923"
 ---
 # <a name="visual-studio-ide"></a>Visual Studio IDE
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,9 +37,9 @@ Microsoft Visual Studio 2015 是一套用于创建软件的工具，包括通过
 若要了解 Visual Studio 2015 的新增功能，请参阅 [Visual Studio 2015 中的新增功能](../what-s-new-in-visual-studio-2015.md)。
 
 ## <a name="visual-studio-setup"></a>Visual Studio 安装
- 你可以在 [Visual Studio 版本](http://www.visualstudio.com/products/visual-studio-with-msdn-overview-vs)了解哪个版本的 Visual Studio 最适合你。
+ 你可以在 [Visual Studio 版本](https://visualstudio.microsoft.com/vs/)了解哪个版本的 Visual Studio 最适合你。
 
- 可以通过从 [Visual Studio 下载](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)页面下载安装 Visual Studio 2015。 如需了解有关安装过程的详细信息，请参阅[安装 Visual Studo 2015](../install/install-visual-studio-2015.md)。
+ 可以通过从 [Visual Studio 下载](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)页面下载安装 Visual Studio 2015。 如需了解有关安装过程的详细信息，请参阅[安装 Visual Studo 2015](../install/install-visual-studio-2015.md)。
 
 ## <a name="ide-basics"></a>IDE 基础
  下图显示了具有打开项目的 Visual Studio IDE、用于在项目文件中导航的“解决方案资源管理器”窗口以及用于导航源控件和工作项跟踪的“团队资源管理器”窗口。 下面详细介绍了标题栏中调出的功能。

@@ -42,13 +42,13 @@ HRESULT SetDefaultTextAttr(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 除非此方法更改了默认属性，否则脚本块外部文本的默认属性为 SOURCETEXT_ATTR_NONSOURCE。 用户界面可使用此信息将脚本块外的文本标记为只读。  
+ 除非此方法更改了默认属性，否则将 SOURCETEXT_ATTR_NONSOURCE 脚本块外的文本默认属性。 用户界面可使用此信息将脚本块外的文本标记为只读。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugDocumentHelper 接口](../../winscript/reference/idebugdocumenthelper-interface.md)   
  [SOURCE_TEXT_ATTR 枚举](../../winscript/reference/source-text-attr-enumeration.md)

@@ -6,12 +6,12 @@ manager: lank
 ms.date: 03/24/2019
 ms.topic: conceptual
 description: 了解如何在管理门户中查看分配的最大订阅数
-ms.openlocfilehash: 15ef4acf8bd02ec4846f387fdce3a9882585a64a
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: 368ca1ad0373267e9753ab223c2e200cbc87f1e0
+ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68605498"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491717"
 ---
 # <a name="use-the-maximum-usage-feature-to-track-the-number-of-assigned-subscriptions"></a>使用最大用量功能跟踪分配的订阅数
 Visual Studio 订阅管理门户中的新功能有助于跟踪已购买和分配的订阅数量，并确定在过去一年和整个协议期间分配的每个级别的峰值订阅数。 

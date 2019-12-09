@@ -11,14 +11,15 @@ ms.assetid: b2773344-8081-4116-85a1-58f770448f6a
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: badb2266e47fcbf0bb20c5fd6fd2f7f25a167997
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c9a0537e146ead1c163941a0f552bdea7a28b89c
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62830910"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74773963"
 ---
 # <a name="marks-view"></a>“标记”视图
 “标记”视图显示插入到应用程序的采样和 ETW 事件。
@@ -27,7 +28,7 @@ ms.locfileid: "62830910"
 
  来自自动生成的标记的 Windows 计数器数据也显示在此视图中。 有关详细信息，请参阅[如何：收集 Windows 计数器数据](../profiling/how-to-collect-windows-counter-data.md)。
 
- 若要创建两个标记之间的筛选器，请选择标记，右键单击，然后单击“添加筛选器(按标记)”或“添加筛选器(按时间戳)”。
+ 若要创建两个标记之间的筛选器，请选择标记，右键单击，然后单击“添加筛选器(按标记)”  或“添加筛选器(按时间戳)”  。
 
  下表提供了“标记”视图中可用列的定义。
 

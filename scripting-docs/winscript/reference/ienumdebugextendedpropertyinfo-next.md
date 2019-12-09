@@ -25,7 +25,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72574262"
 ---
 # <a name="ienumdebugextendedpropertyinfonext"></a>IEnumDebugExtendedPropertyInfo::Next
-检索枚举序列中指定数目的 `ExtendedDebugPropertyInfo` 结构。  
+检索枚举序列中指定数目的`ExtendedDebugPropertyInfo` 结构。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +39,7 @@ HRESULT Next (
   
 #### <a name="parameters"></a>参数  
  `celt`  
- 中要检索的 `ExtendedDebugPropertyInfo`structures 数。  
+ 中要检索的 `ExtendedDebugPropertyInfo`结构的数目。  
   
  `rgelt`  
  弄检索的 `ExtendedDebugPropertyInfo` 结构的数组。  
@@ -50,6 +50,6 @@ HRESULT Next (
 ## <a name="return-value"></a>返回值  
  返回一个有效 `HRESULT`，通常 `S_OK`。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IEnumDebugExtendedPropertyInfo 接口](../../winscript/reference/ienumdebugextendedpropertyinfo-interface.md)   
  [ExtendedDebugPropertyInfo 结构](../../winscript/reference/extendeddebugpropertyinfo-structure.md)

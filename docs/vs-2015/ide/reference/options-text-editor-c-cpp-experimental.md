@@ -11,12 +11,12 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7e9d1464481b33bc5fbf5e73bc09a6da4eb082c7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5979363f16f2e9d78a2f50ffbb6511d03146caaa
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662351"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297852"
 ---
 # <a name="options-text-editor-cc-experimental"></a>选项, 文本编辑器, C/C++, 实验
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "72662351"
 
  **启用展开优先级**如果启用，则可以通过在文本编辑器中键入 ' （' 来包围选定文本和括号。
 
- 有关 Visual Studio 库上的其他文本编辑器功能，请参阅 [此处](http://go.microsoft.com/fwlink/?LinkId=692016)列表。 一个示例是 [C++ 快速修补](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f)，它支持以下内容：
+ 有关 Visual Studio 库上的其他文本编辑器功能，请参阅 [此处](https://go.microsoft.com/fwlink/?LinkId=692016)列表。 一个示例是 [C++ 快速修补](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f)，它支持以下内容：
 
 - **添加缺少的 #include** - 建议对你代码中的未知符号使用相关的 #include
 
@@ -59,4 +59,4 @@ ms.locfileid: "72662351"
   你可以将鼠标悬停在波浪线上以获取灯泡，或者使用默认键盘快捷键 Ctrl+点 (Ctrl+.)。 注意，对于键盘快捷方式，你的插入点无需定位在特定的错误或令牌上；你只需将其与错误置于同一行，以调用该行上任何内容的建议。
 
 ## <a name="see-also"></a>请参阅
- [在C++中](http://blogs.msdn.com/b/vcblog/archive/2014/11/14/all-about-c-refactoring-in-visual-studio-2015-preview.aspx)[设置特定于语言的编辑器选项](../../ide/reference/setting-language-specific-editor-options.md)重构（VC 博客）
+ [在C++中](https://devblogs.microsoft.com/cppblog/all-about-c-refactoring-in-visual-studio-2015-preview/)[设置特定于语言的编辑器选项](../../ide/reference/setting-language-specific-editor-options.md)重构（VC 博客）

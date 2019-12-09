@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 08/12/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 2178881c6ea0e597aef5e25074e3648162d3f6e9
-ms.sourcegitcommit: 6ae0a289f1654dec63b412bfa22035511a2ef5ad
+ms.openlocfilehash: c2f96bcc9df16b5de7d7f3ff485431352800d27e
+ms.sourcegitcommit: 9801fc66a14c0f855b9ff601fb981a9e5321819e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71950641"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74072726"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose 生成属性
 
@@ -35,6 +35,8 @@ ms.locfileid: "71950641"
 
 | 属性名称 | 位置 | 说明 | 默认值  |
 |---------------|----------|-------------|----------------|
+|AdditionalComposeFiles|dcproj|以分号分隔的列表指定要发送给 docker-compose.exe 供所有命令使用的其他撰写文件。 允许使用来自 docker-compose 项目文件 (dcproj) 的相对路径。|-|
+|DockerComposeBaseFilePath|dcproj|执行 docker-compose 文件的文件名的第一部分，不带 .yml 扩展名  。 例如: <br>1.DockerComposeBaseFilePath = null/未定义：使用基本文件路径 docker-compose，文件将命名为 docker-compose.yml 和 docker-compose.override.yml   <br>2. DockerComposeBaseFilePath = mydockercom：文件将命名为 mydockercompose.yml 和 mydockercompose.override.yml   <br> 3.DockerComposeBaseFilePath = ..\mydockercompose：文件将向上提升一级  。 |docker-compose|
 |DockerComposeBuildArguments|dcproj|指定要传递给 `docker-compose build` 命令的额外参数。 例如，`--parallel --pull` |
 |DockerComposeDownArguments|dcproj|指定要传递给 `docker-compose down` 命令的额外参数。 例如，`--timeout 500`|-|  
 |DockerComposeProjectPath|csproj 或 vbproj|Docker-compose 项目 (.dcproj) 文件的相对路径。 发布服务项目时设置此属性，以查找存储在 docker-compose.yml 文件中的关联映像生成设置。|-|
@@ -44,6 +46,46 @@ ms.locfileid: "71950641"
 |DockerServiceName| dcproj|如果指定了 DockerLaunchAction 或 DockerLaunchBrowser，则 DockerServiceName 为应启动的服务名称。  使用此属性来确定将启动 docker-compose 文件可能引用的多个项目中的哪一个。|-|
 |DockerServiceUrl| dcproj | 启动浏览器时将使用的 URL。  有效的替换令牌为“{ServiceIPAddress}”、“{ServicePort}”和“{Scheme}”。  例如：{Scheme}://{ServiceIPAddress}:{ServicePort}|-|
 |DockerTargetOS| dcproj | 生成 Docker 映像时使用的目标 OS。|-|
+
+## <a name="example"></a>示例
+
+如果通过将 `DockerComposeBaseFilePath` 设置为相对路径来更改 docker compose 文件的位置，则还需要确保更改生成上下文，以便其引用解决方案文件夹。 例如，如果 docker compose 文件是名为 DockerComposeFiles 的文件夹，则 docker compose 文件应将生成上下文设置为“..”或“../..”，具体取决于它相对于解决方案文件夹的位置  。
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" Sdk="Microsoft.Docker.Sdk">
+  <PropertyGroup Label="Globals">
+    <ProjectVersion>2.1</ProjectVersion>
+    <DockerTargetOS>Windows</DockerTargetOS>
+    <ProjectGuid>154022c1-8014-4e9d-bd78-6ff46670ffa4</ProjectGuid>
+    <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
+    <DockerServiceUrl>{Scheme}://{ServiceIPAddress}{ServicePort}</DockerServiceUrl>
+    <DockerServiceName>webapplication1</DockerServiceName>
+    <DockerComposeBaseFilePath>DockerComposeFiles\mydockercompose</DockerComposeBaseFilePath>
+    <AdditionalComposeFilePaths>AdditionalComposeFiles\myadditionalcompose.yml</AdditionalComposeFilePaths>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="DockerComposeFiles\mydockercompose.override.yml">
+      <DependentUpon>DockerComposeFiles\mydockercompose.yml</DependentUpon>
+    </None>
+    <None Include="DockerComposeFiles\mydockercompose.yml" />
+    <None Include=".dockerignore" />
+  </ItemGroup>
+</Project>
+```
+
+mydockercompose.yml 文件应如下所示，其中生成上下文设置为解决方案文件夹的相对路径（在本例中为 `..`）  。
+
+```yml
+version: '3.4'
+
+services:
+  webapplication1:
+    image: ${DOCKER_REGISTRY-}webapplication1
+    build:
+      context: ..
+      dockerfile: WebApplication1\Dockerfile
+```
 
 > [!NOTE]
 > DockerComposeBuildArguments、DockerComposeDownArguments 和 DockerComposeUpArguments 是 Visual Studio 2019 版本 16.3 中的新增内容。

@@ -94,12 +94,12 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5198c541deb4680d19e2b15ae0e672b831dbb13e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3d3048d16da507d9d63ea9d3df77b4e88d5a5e59
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665553"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297770"
 ---
 # <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>用于排除集成开发环境错误的资源
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "72665553"
 并非所有错误消息都有特定的相关帮助主题。 如果错误消息里的信息不能帮助解决问题，可以参考其他资源，如知识库文章、开发人员社区或产品支持。
 
 ## <a name="knowledge-base-articles"></a>知识库文章
- 可以在联机知识库 (KB) 中搜索有关产品问题的文章。 并非所有问题都有相应的 KB 文章，但很多客户所遇到的错误通常会记录下来。 可以访问[Microsoft 支持](http://go.microsoft.com/fwlink/?linkid=1782)网站上的 KB 文章。
+ 可以在联机知识库 (KB) 中搜索有关产品问题的文章。 并非所有问题都有相应的 KB 文章，但很多客户所遇到的错误通常会记录下来。 可以访问[Microsoft 支持](https://go.microsoft.com/fwlink/?linkid=1782)网站上的 KB 文章。
 
 ## <a name="the-developer-community"></a>开发人员社区
  可通过论坛与其他开发人员以及 Microsoft 员工进行互动。 如果遇到无法解决的问题，可在论坛中发布有关该问题的帖子。 还可搜索讨论组，查看其他人是否已发布有关该问题的帖子。
@@ -115,4 +115,4 @@ ms.locfileid: "72665553"
  可以访问 [Microsoft 技术社区](https://techcommunity.microsoft.com/)网站上的论坛、博客、聊天和其他资源。
 
 ## <a name="product-support"></a>产品支持
- 如果借助其他资源仍不能解决问题，则可以访问 [Microsoft 支持](http://go.microsoft.com/fwlink/?linkid=1782)网站，与 Microsoft 支持服务联系。 若要了解所在区域中可用的产品支持，请参阅[与我们联系](../../ide/talk-to-us.md)。
+ 如果借助其他资源仍不能解决问题，则可以访问 [Microsoft 支持](https://go.microsoft.com/fwlink/?linkid=1782)网站，与 Microsoft 支持服务联系。 若要了解所在区域中可用的产品支持，请参阅[与我们联系](../../ide/talk-to-us.md)。

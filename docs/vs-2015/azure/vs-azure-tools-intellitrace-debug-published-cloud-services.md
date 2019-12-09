@@ -1,5 +1,5 @@
 ---
-title: 调试已发布的 Azure 云服务与 Visual Studio 和 IntelliTrace |Microsoft Docs
+title: 使用 Visual Studio 和 IntelliTrace 调试已发布的 Azure 云服务 |Microsoft Docs
 description: 了解如何使用 Visual Studio 和 IntelliTrace 调试云服务
 author: mikejo5000
 manager: jillfra
@@ -11,26 +11,26 @@ ms.date: 03/21/2017
 ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
-ms.openlocfilehash: 8cec66f4746656e1bc1f5c2aba54a442883e4fa9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 00e13c6f217c54b99dfe103b86f1e775e36fd62a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62421636"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74293548"
 ---
 # <a name="debugging-a-published-azure-cloud-service-with-visual-studio-and-intellitrace"></a>使用 Visual Studio 和 IntelliTrace 调试已发布的 Azure 云服务
 通过 IntelliTrace，可以在某个角色实例在 Azure 中运行时记录该角色实例的大量调试信息。 如果需要查找问题的原因，可以从 Visual Studio 使用 IntelliTrace 日志来单步执行代码，就像它在 Azure 中运行一样。 实际上，当 Azure 应用程序以云服务的形式在 Azure 中运行时，IntelliTrace 将记录关键代码执行和环境数据，并允许从 Visual Studio 中回放已记录的数据。 
 
 如果已安装 Visual Studio Enterprise，且 Azure 应用程序以 .NET Framework 4 或更高版本为目标，则可使用 IntelliTrace。 IntelliTrace 收集 Azure 角色的信息。 这些角色的虚拟机始终运行 64 位操作系统。
 
-作为替代方法，可以使用[远程调试](http://go.microsoft.com/fwlink/p/?LinkId=623041)，直接连接到在 Azure 中运行的云服务。
+作为替代方法，可以使用[远程调试](https://go.microsoft.com/fwlink/p/?LinkId=623041)，直接连接到在 Azure 中运行的云服务。
 
 > [!IMPORTANT]
 > IntelliTrace 仅适用于调试方案，而不应用于生产部署。
 > 
 
 ## <a name="configure-an-azure-application-for-intellitrace"></a>为 IntelliTrace 配置 Azure 应用程序
-若要为 Azure 应用程序启用 IntelliTrace，必须从 Visual Studio Azure 项目创建并发布应用程序。 在将应用程序发布到 Azure 之前，必须为 Azure 应用程序配置 IntelliTrace。 如果在未配置 IntelliTrace 的情况下发布应用程序，则需要重新发布项目。 有关详细信息，请参阅[使用 Visual Studio 发布 Azure 云服务项目](http://go.microsoft.com/fwlink/p/?LinkId=623012)。
+若要为 Azure 应用程序启用 IntelliTrace，必须从 Visual Studio Azure 项目创建并发布应用程序。 在将应用程序发布到 Azure 之前，必须为 Azure 应用程序配置 IntelliTrace。 如果在未配置 IntelliTrace 的情况下发布应用程序，则需要重新发布项目。 有关详细信息，请参阅[使用 Visual Studio 发布 Azure 云服务项目](https://go.microsoft.com/fwlink/p/?LinkId=623012)。
 
 1. 当准备好部署 Azure 应用程序时，确认已将项目生成目标设置为“调试”。
 
@@ -46,7 +46,7 @@ ms.locfileid: "62421636"
 
     ![IntelliTrace 设置链接](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/intellitrace-settings-link.png)
    
-1. 在“IntelliTrace 设置”对话框中，可以指定要记录的事件、是否收集调用信息、要收集其日志的模块和过程，以及分配给记录的空间量。 有关 IntelliTrace 的详细信息，请参阅[使用 IntelliTrace 进行调试](http://go.microsoft.com/fwlink/?LinkId=214468)。
+1. 在“IntelliTrace 设置”对话框中，可以指定要记录的事件、是否收集调用信息、要收集其日志的模块和过程，以及分配给记录的空间量。 有关 IntelliTrace 的详细信息，请参阅[使用 IntelliTrace 进行调试](https://go.microsoft.com/fwlink/?LinkId=214468)。
    
     ![IntelliTrace 设置](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/IC519063.png)
 

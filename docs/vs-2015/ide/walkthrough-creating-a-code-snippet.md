@@ -16,12 +16,12 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f3cf8d0cfd3119113247dedf7723e02fca9634a3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 278858eb28e0db7edd2694397cc7b24f1cfec301
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662653"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296834"
 ---
 # <a name="walkthrough-creating-a-code-snippet"></a>演练：创建代码段
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "72662653"
 只需几步操作即可创建代码片段。 你需要做的就是创建一个 XML 文件，填写适当的元素，并向其中添加代码。 此外还可以向代码中添加引用和替换参数。 使用代码片段管理器（工具/代码片段管理器）上的“导入”按钮，即可向自己的 Visual Studio 安装添加代码片段。
 
 > [!TIP]
-> 有关如何更轻松地编写代码片段的信息，请在 CodePlex 网站中搜索 "代码片段[编辑器](http://go.microsoft.com/fwlink/?LinkId=251033)" 之类的社区工具。
+> 有关如何更轻松地编写代码片段的信息，请在 CodePlex 网站中搜索 "代码片段[编辑器](https://go.microsoft.com/fwlink/?LinkId=251033)" 之类的社区工具。
 
 ## <a name="snippet-template"></a>代码片段模板
  以下是基本代码片段模板：
@@ -91,7 +91,7 @@ ms.locfileid: "72662653"
 
 ### <a name="adding-description-and-shortcut-fields"></a>添加“说明”和“快捷方式”字段
 
-1. 在“代码片段管理器”中查看“说明”字段时，可以获得有关代码片段的详细信息。 快捷方式是用户为插入代码片段而键入的标记。 通过打开文件 `%USERPROFILE%\Documents\Visual Studio 2013\Code Snippets\Visual Basic\My Code Snippet\VBCodeSnippet.snippet` 来编辑添加的代码片段。
+1. 在“代码片段管理器”中查看“说明”字段时，可以获得有关代码片段的详细信息。 快捷方式是用户为插入代码片段而键入的标记。 通过打开文件 `%USERPROFILE%\Documents\Visual Studio 2013\Code Snippets\Visual Basic\My Code Snippet\VBCodeSnippet.snippet`来编辑添加的代码片段。
 
 2. 将 Author 和 Description 元素添加到 Header 元素，并填写。
 

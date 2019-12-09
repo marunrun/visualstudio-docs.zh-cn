@@ -1,21 +1,21 @@
 ### YamlMime:Landing
-title: 在 Visual Studio 中编辑代码
-summary: 了解诸如打开项目、使用代码编辑器功能和维护一致的代码样式等编辑任务。
+title: 在 Visual Studio 中整理和编辑代码
+summary: 了解如何处理代码项目、使用代码编辑器功能以及如何保持一致的代码风格。
 metadata:
   title: 代码编辑器功能
   description: 了解 Visual Studio 中的代码编辑功能。
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-general
   ms.topic: landing-page
-  author: gewarren
-  ms.author: gewarren
+  author: jillre
+  ms.author: jillfra
   ms.date: 10/15/2019
-  ms.openlocfilehash: 30345839ca1c5f4f07b3c36415f7aad277693069
-  ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+  ms.openlocfilehash: 797df026fb9873c5f50e39fe281e0c9a11688b8f
+  ms.sourcegitcommit: b04c603ce73b993d042ebdf7f3722cf4fe2ef7f4
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 10/17/2019
-  ms.locfileid: "72516824"
+  ms.lasthandoff: 11/22/2019
+  ms.locfileid: "74316442"
 landingContent:
 - title: 打开或创建项目
   linkLists:

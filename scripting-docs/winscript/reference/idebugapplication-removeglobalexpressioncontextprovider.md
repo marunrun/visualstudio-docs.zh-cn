@@ -1,5 +1,5 @@
 ---
-title: IDebugApplication：： RemoveGlobalExpressionContextProvider |Microsoft Docs
+title: IDebugApplication::RemoveGlobalExpressionContextProvider | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -42,13 +42,13 @@ HRESULT RemoveGlobalExpressionContextProvider(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- @No__t_0 方法从此应用程序中移除全局表达式上下文提供程序。  
+ `RemoveGlobalExpressionContextProvider` 方法从此应用程序中移除全局表达式上下文提供程序。  
   
-## <a name="see-also"></a>请参阅  
- [IDebugApplication：： AddGlobalExpressionContextProvider](../../winscript/reference/idebugapplication-addglobalexpressioncontextprovider.md)    
+## <a name="see-also"></a>另请参阅  
+ [IDebugApplication::AddGlobalExpressionContextProvider](../../winscript/reference/idebugapplication-addglobalexpressioncontextprovider.md)   
  [IDebugApplication 接口](../../winscript/reference/idebugapplication-interface.md)

@@ -29,18 +29,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e7fdfedbb2f632bdb0fcaa05c7f0fb282a8fcd2b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: eb2729dcaf0da41c0adac24b0e1909a6d2697eb6
+ms.sourcegitcommit: 697f2ab875fd789685811687387e9e8e471a38c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62849967"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74829949"
 ---
 # <a name="find-memory-leaks-with-the-crt-library"></a>使用 CRT 库查找内存泄漏
 
 内存泄漏是 C/C++ 应用程序中最微妙、最难以发现的 bug 。 内存泄漏是由于之前分配的内存未能正确解除分配而导致的。 最开始的少量内存泄漏可能没被发现，但随时间推移，会导致各种问题，从性能变差到程序由于内存不足而崩溃。 内存泄漏的应用会耗尽全部可用内存，导致其它程序崩溃，从而让人难以分辨是哪个程序引发问题。 即使无害的内存泄漏也可能表明存在其他应纠正的问题。
 
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]调试器和 C 运行时库 (CRT) 可以帮助你检测和识别内存泄漏。
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 调试器和 C 运行时库（CRT）可以帮助检测和识别内存泄漏。
 
 ## <a name="enable-memory-leak-detection"></a>启用内存泄漏检测
 
@@ -54,7 +54,7 @@ ms.locfileid: "62849967"
 #include <crtdbg.h>
 ```
 
-`#define` 语句将 CRT 堆函数的基础版本映射到对应的调试版本。 如果您忽略`#define`语句，为内存泄漏转储[不够详尽](#interpret-the-memory-leak-report)。
+`#define` 语句将 CRT 堆函数的基础版本映射到对应的调试版本。 如果你离开 `#define` 语句，内存泄漏转储将[不会详细](#interpret-the-memory-leak-report)。
 
 包括 *crtdbg.h* 将映射到 `malloc`和`free` 函数的调试版本 [_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg) 和 [_free_dbg](/cpp/c-runtime-library/reference/free-dbg)，它们分别跟踪内存分配和解除分配。 此映射只在包含 `_DEBUG`的调试版本中发生。 发布版本使用普通的 `malloc` 和 `free` 函数。
 
@@ -70,7 +70,7 @@ _CrtDumpMemoryLeaks();
 _CrtSetDbgFlag ( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );
 ```
 
-默认情况下，`_CrtDumpMemoryLeaks` 将内存泄漏报告输出到输出窗口的调试窗格中。 如果使用库，该库可能会将输出重置到另一位置。 
+默认情况下，`_CrtDumpMemoryLeaks` 将内存泄漏报告输出到输出窗口的调试窗格中。 如果使用库，该库可能会将输出重置到另一位置。
 
 可以使用 `_CrtSetReportMode` 将报告重定向到其他位置，或返回到 **输出** 窗口，如下所示：
 
@@ -90,7 +90,7 @@ Dumping objects ->
 Object dump complete.
 ```
 
-如果您的应用程序定义`_CRTDBG_MAP_ALLOC`，内存泄漏报告如下所示：
+如果你的应用程序定义 `_CRTDBG_MAP_ALLOC`，则内存泄漏报告如下所示：
 
 ```cmd
 Detected memory leaks!
@@ -103,7 +103,7 @@ Object dump complete.
 
 第二个报告显示首次分配泄漏的内存的文件名和行号。
 
-该值指示是否定义`_CRTDBG_MAP_ALLOC`，内存泄漏报告将显示：
+不管是否定义 `_CRTDBG_MAP_ALLOC`，内存泄漏报告都显示：
 
 - 内存分配编号，在示例中为 `18`
 - 块类型，在示例中为 `normal` 。
@@ -113,11 +113,11 @@ Object dump complete.
 
 内存块的类型包括”普通”、”客户端”或 *CRT*。 “普通块”是由程序分配的普通内存。 “客户端块”是由 MFC 程序针对需要析构函数的对象而使用的特殊类型内存块。 MFC `new` 运算符根据正在创建的对象创建普通块或客户端块。
 
-“CRT 块”是由 CRT 库为自己使用而分配的内存块。  CRT 库处理这些块的解除分配，因此 CRT 块不会显示在内存泄漏报告中，除非 CRT 库存在严重问题。
+“CRT 块”是由 CRT 库为自己使用而分配的内存块。 CRT 库处理这些块的解除分配，因此 CRT 块不会显示在内存泄漏报告中，除非 CRT 库存在严重问题。
 
 另外两种类型的内存块绝不会出现在内存泄漏报告中。 *释放的块*是已经释放的内存块，从定义上说不是泄漏的内存。 *忽略的块*是已明确标记要从内存泄漏报告中排除的内存。
 
-以前的技术使用标准 CRT`malloc`函数确定存在内存泄漏的内存分配。 但是，如果你的程序使用 c + +`new`运算符分配内存，可能只能在内存泄漏报告中看到`operator new`调用`_malloc_dbg`的文件名和行号。 若要创建更有用的内存泄漏报告，可以编写如下所示来报告进行分配的行的宏：
+以前的技术使用标准 CRT`malloc`函数确定存在内存泄漏的内存分配。 但是，如果你的程序使用 c + +`new`运算符分配内存，可能只能在内存泄漏报告中看到`operator new`调用`_malloc_dbg`的文件名和行号。 若要创建更有用的内存泄漏报告，可以编写如下所示的宏来报告进行分配的行：
 
 ```cpp
 #ifdef _DEBUG
@@ -175,7 +175,7 @@ Object dump complete.
 >[!NOTE]
 >我们不建议创建名为`new`或任何其他语言关键字的预处理器宏。
 
-## <a name="set-breakpoints-on-a-memory-allocation-number"></a>内存分配编号上设置断点
+## <a name="set-breakpoints-on-a-memory-allocation-number"></a>在内存分配编号上设置断点
 
 分配了泄漏内存块时，内存分配编号会提示你。 例如，分配编号为 18 的块内存是应用程序运行期间分配的第 18 块内存。 CRT 报告统计运行期间所有的内存块分配情况，其中包括 CRT 库库和 MFC 等其他库的分配。 因此，分配块编号是 18 的内存可能不是代码分配的第 18 个内存块。
 
@@ -190,6 +190,8 @@ Object dump complete.
 1. 在**监视**窗口的**名称** 列中键入`_crtBreakAlloc`。
 
    如果你使用的是 CRT 库的多线程 DLL 版本（/MD 选项），添加上下文运算符： `{,,ucrtbased.dll}_crtBreakAlloc`
+   
+   请确保已加载调试符号。 否则 `_crtBreakAlloc` 将报告为 "未*识别*"。
 
 1. 按 **Enter**。
 
@@ -197,7 +199,7 @@ Object dump complete.
 
 1. 在**值**列中，将该值替换为调试程序要中断处的内存分配的分配编号。
 
-内存分配编号上设置断点后，继续调试。 请确保在相同条件下运行，这样内存分配编号就不会更改。 当应用程序在指定的内存分配处中断时，使用**调用堆栈**窗口和其他调试器窗口来确定分配内存时的情况。 然后，可以继续执行程序以观察对象会发生什么情况，并确定为什么它不正确释放。
+在内存分配编号上设置断点后，继续调试。 请确保在相同条件下运行，这样内存分配编号就不会更改。 当程序在指定的内存分配处中断时，可以使用 "**调用堆栈**" 窗口和其他调试器窗口来确定分配内存时的情况。 然后，您可以继续执行来观察对象发生了什么情况，并确定未正确释放对象的原因。
 
 在对象上设置数据断点可能也有帮助。 有关详细信息，请参阅[使用断点](../debugger/using-breakpoints.md)。
 
@@ -259,7 +261,7 @@ if ( _CrtMemDifference( &s3, &s1, &s2) )
 ## <a name="false-positives"></a>误报
  如果一个库将内部分配的内存块标记为普通块而不是 CRT 块或客户端块，则 `_CrtDumpMemoryLeaks` 会给出错误的内存泄漏指示。 在这种情况下， `_CrtDumpMemoryLeaks` 无法区分用户和内部库分配的内存块。 如果库分配的全局析构函数在你调用`_CrtDumpMemoryLeaks`之后运行，则每个内部库分配都会报告为内存泄漏。 版本早于 Visual Studio.NET 的标准模板库可能导致 `_CrtDumpMemoryLeaks` 误报。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [CRT 调试堆详细信息](../debugger/crt-debug-heap-details.md)
 - [调试器安全](../debugger/debugger-security.md)
 - [调试本机代码](../debugger/debugging-native-code.md)

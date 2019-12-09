@@ -25,7 +25,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72573606"
 ---
 # <a name="iscriptnode-createchildentry"></a>IScriptNode:: CreateChildEntry
-添加 `IScriptEntry` 的子实例。  
+添加 `IScriptEntry`的子实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -66,13 +66,13 @@ HRESULT CreateChildEntry(
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- @No__t_0 接口表示网页或其元素。 @No__t_0 接口（派生自 `IScriptNode`）表示脚本块或函数对象。 @No__t_0 接口（派生自 `IScriptEntry`）表示事件处理程序。  
+ `IScriptNode` 接口表示网页或其元素。 `IScriptEntry` 接口（派生自 `IScriptNode`）表示脚本块或函数对象。 `IScriptScriptlet` 接口（派生自 `IScriptEntry`）表示事件处理程序。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IScriptNode 接口](../../winscript/reference/iscriptnode-interface.md)   
  [IScriptEntry 接口](../../winscript/reference/iscriptentry-interface.md)

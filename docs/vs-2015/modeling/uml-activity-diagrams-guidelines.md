@@ -15,17 +15,17 @@ caps.latest.revision: 50
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: abcc83a301553ee0c6141502c25903ef2153258b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 692859008891439e4af3d751306bfd3ee6d351e8
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658488"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298995"
 ---
 # <a name="uml-activity-diagrams-guidelines"></a>UML 活动图：准则
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在 Visual Studio 中，可以绘制活动图以按照由一系列操作构成的工作流的形式描述业务流程或软件算法。 用户、软件组件或设备可以执行这些操作。 有关视频演示，请参阅：[使用活动图捕获业务工作流](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-4-Capture-Business-Workflows/)。
+在 Visual Studio 中，可以绘制活动图以按照由一系列操作构成的工作流的形式描述业务流程或软件算法。 用户、软件组件或设备可以执行这些操作。 有关视频演示，请参阅：[使用活动图捕获业务工作流](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-4-capture-business-workflows)。
 
  若要查看支持此功能的 Visual Studio 的版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
@@ -398,7 +398,7 @@ ms.locfileid: "72658488"
 
 - 将注释附加到输入插针或输出插针。
 
-  - 若要将此说明与一般注释区分开来，可以使用 < \<**变换**开始注释 > > 或 < \< > >**选择**。
+  - 若要将此说明与一般注释区分开来，可以使用 <\<**变换**开始注释 > > 或 <\<> >**选择**。
 
 - 在单独的活动图中详细指定转换或选择。
 
@@ -408,7 +408,7 @@ ms.locfileid: "72658488"
 
 1. 创建新的活动图，在其中描述转换或选择流。
 
-   - 在**解决方案资源管理器**中，右键单击项目，指向 "**添加**"，单击 "**新建项**"，然后单击 "**活动图**"。 针对转换或选择流，为此关系图指定一个适当的名称。 单击 **添加**。
+   - 在**解决方案资源管理器**中，右键单击项目，指向 "**添加**"，单击 "**新建项**"，然后单击 "**活动图**"。 针对转换或选择流，为此关系图指定一个适当的名称。 单击“添加”。
 
 2. 在新的关系图中：
 
@@ -427,4 +427,4 @@ ms.locfileid: "72658488"
    此外，可以为对象节点定义选择，也可以在各个输入插针和输出插针上定义选择。 如前面的过程所示定义选择活动，然后设置对象节点的**选择**属性或输入或输出插针。
 
 ## <a name="see-also"></a>请参阅
- [编辑 uml 模型和关系图](../modeling/edit-uml-models-and-diagrams.md) [uml 序列图：引用 uml](../modeling/uml-sequence-diagrams-reference.md) [组件图：](../modeling/uml-component-diagrams-reference.md)引用 Uml[用例图](../modeling/uml-use-case-diagrams-reference.md)：引用 uml[类图](../modeling/uml-class-diagrams-reference.md)：引用 uml[组件图](../modeling/uml-component-diagrams-reference.md) [：引用视频：使用活动图捕获业务工作流](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-4-Capture-Business-Workflows/)
+ [编辑 uml 模型和关系图](../modeling/edit-uml-models-and-diagrams.md) [uml 序列图：引用 uml](../modeling/uml-sequence-diagrams-reference.md) [组件图：](../modeling/uml-component-diagrams-reference.md)引用 Uml[用例图](../modeling/uml-use-case-diagrams-reference.md)：引用 uml[类图](../modeling/uml-class-diagrams-reference.md)：引用视频[：引用](../modeling/uml-component-diagrams-reference.md)[视频：使用活动图捕获业务工作流](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-4-capture-business-workflows)

@@ -8,14 +8,15 @@ ms.assetid: f5e49c24-d4cf-4f87-977d-37e3223d1196
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d41f48594e50e9d5ae0c6f67aabab673a9f112a3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f37fb451238ec7ce6f48d8a4d3b91efa9ce04db7
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62995390"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74774307"
 ---
 # <a name="instruction-pointers-ips-view---contention-data"></a>“指令指针”(IP) 视图 — 争用数据
 争用数据的 IP 视图列出分析运行期间被阻止执行的程序集指令的数据。

@@ -44,7 +44,7 @@ ms.locfileid: "72572376"
 
   - **for/in**循环。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Continue 语句](../../javascript/reference/continue-statement-javascript.md)   
  [控制程序流](../../javascript/controlling-program-flow-javascript.md)   
  [脚本疑难解答](../../javascript/advanced/troubleshooting-your-scripts-javascript.md)

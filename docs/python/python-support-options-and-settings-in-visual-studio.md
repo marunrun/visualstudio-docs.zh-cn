@@ -17,12 +17,12 @@ manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d917f0211a0888fa2a712b0c010cf6177823c223
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 08501d71400a0df139022f04e68573d0dd1449d1
+ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62430923"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73661912"
 ---
 # <a name="options-for-python-in-visual-studio"></a>Visual Studio 中的 Python 选项
 
@@ -51,7 +51,7 @@ ms.locfileid: "62430923"
 | **显示通知栏以创建环境** | On | *仅限 Visual Studio 2019。* 设置此选项并在用户打开包含 requirements.txt 或 environment.yml 文件的项目（而不是使用默认全局环境）时，Visual Studio 将显示包含分别创建虚拟环境或 conda 环境的建议的信息栏。 |
 | **显示通知栏以安装包** | On | *仅限 Visual Studio 2019。* 设置此选项并在用户打开包含 requirements.txt 文件的项目（而不是使用默认全局环境）时，Visual Studio 会将这些要求与当前环境中安装的包进行比较。 如果缺少任何包，Visual Studio 会显示安装这些依赖项的提示。 |
 | **始终以管理员身份运行包管理器** | Off | 始终为所有环境提升 `pip install` 和类似的包管理器操作。 安装包时，如果环境位于文件系统（如 c:\Program Files）的保护区域内，Visual Studio 将提示需要管理员权限。 出现该提示时，可选择始终仅为此环境提升 install 命令。 请参阅[“包”选项卡](python-environments-window-tab-reference.md#packages-tab)。 |
-| **初次使用时自动生成完成 DB** | On | *应用 Visual Studio 2017 版本 15.5 和早期版本，并在使用 IntelliSense 数据库时应用更高版本。* 在编写使用某个库的代码时，优先完成此库的数据库。 有关详细信息，请参阅 [IntelliSense 选项卡](python-environments-window-tab-reference.md#intellisense-tab)。 |
+| **初次使用时自动生成完成 DB** | On | *应用 Visual Studio 2017 版本 15.5 和早期版本，并在使用 IntelliSense 数据库时应用更高版本。* 在编写使用某个库的代码时，优先完成此库的数据库。 有关详细信息，请参阅 [IntelliSense 选项卡](python-environments-window-tab-reference.md?view=vs-2017#intellisense-tab)。 |
 | **忽略系统级 PYTHONPATH 变量** | On | 默认情况下会忽略 PYTHONPATH，因为 Visual Studio 提供了一种更直接的方式来指定环境和项目中的搜索路径。 请参阅[搜索路径](search-paths.md)了解详细信息。 |
 | **添加链接文件时更新搜索路径** | On | 如果已设置此选项，将一个[链接文件](managing-python-projects-in-visual-studio.md#linked-files)添加到项目会更新[搜索路径](search-paths.md)，以便 IntelliSense 能在其完成数据库中包含链接文件的文件夹的内容。 清除此选项将从完成数据库中排除此类内容。 |
 | **在找不到导入模块时发出警告** | On | 当知道导入模块当前不可用但不会影响代码操作时，清除此选项可禁止发出警告。 |

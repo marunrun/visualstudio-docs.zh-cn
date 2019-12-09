@@ -1,18 +1,18 @@
 ---
 title: 使用 .runsettings 文件配置单元测试
-ms.date: 06/14/2019
+ms.date: 10/03/2019
 ms.topic: conceptual
 ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 author: jillre
-ms.openlocfilehash: 22fe1de176819807c5cd60d746f381e325601799
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: aba7ea1c26d38db2f845b2e743aae7a3d90d4d53
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665145"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74771476"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>使用 .runsettings 文件配置单元测试 
 
@@ -38,11 +38,52 @@ ms.locfileid: "72665145"
 
 ::: moniker range=">=vs-2019"
 
+#### <a name="visual-studio-2019-version-163-and-earlier"></a>Visual Studio 2019 版本 16.3 及更早版本
+
 若要在 IDE 中指定运行设置文件，请选择“测试”   > “选择设置文件”  。 浏览到并选择 .runsettings 文件  。
 
 ![在 Visual Studio 2019 中选择测试设置文件菜单](media/vs-2019/select-settings-file.png)
 
 该文件将显示在“测试”菜单上，你可以选择或取消选择它。 选择后，每当选择“分析代码覆盖率”时，都会应用运行设置文件  。
+
+#### <a name="visual-studio-2019-version-164-and-later"></a>Visual Studio 2019 版本 16.4 及更高版本
+
+在 Visual Studio 2019 版本 16.4 及更高版本中，指定运行设置文件的方法有三种：
+
+- 通过项目文件或 Directory.Build.props 文件将生成属性添加到项目。 项目的运行设置文件由 RunSettingsFilePath  属性指定。 
+
+    - 当前 C#、VB、C++ 和 F# 项目中支持项目级运行设置。
+    - 为项目指定的文件将替代解决方案中指定的任何其他运行设置文件。
+
+     指定项目的 .runsettings 文件示例：
+    
+    ```xml
+    <Project Sdk="Microsoft.NET.Sdk">
+      <PropertyGroup>
+        <RunSettingsFilePath>$(SolutionDir)\example.runsettings</RunSettingsFilePath>
+      </PropertyGroup>
+      ...
+    </Project>
+    ```
+
+- 将名为“.runsettings”的运行设置文件放在解决方案的根目录下。
+
+  如果启用了自动检测运行设置文件，则此文件中的设置将应用到所有测试运行。 可以从以下两个位置打开 runsettings 文件自动检测：
+  
+    -  “工具”>“选项”  >  “测试”>  “自动检测 runsettings 文件”
+
+      ![Visual Studio 2019 自动检测 runsettings 文件选项](media/vs-2019/auto-detect-runsettings-tools-window.png)
+      
+    -  “测试”>  “配置运行设置”>  “自动检测 runsettings 文件”
+    
+      ![Visual Studio 2019 自动检测 runsettings 文件菜单](media/vs-2019/auto-detect-runsettings-menu.png)
+
+- 在 IDE 中，选择“测试”>“配置运行设置”>“选择解决方案范围的 runsettings 文件”，然后选择 .runsettings 文件     。
+
+   ![在 Visual Studio 2019 中选择测试解决方案范围的 runsettings 文件菜单](media/vs-2019/select-solution-settings-file.png)
+      
+   - 此文件替代解决方案根目录下的 “.runsettings”文件（如果存在），并应用于所有测试运行。  
+   - 此文件选择仅在本地保留。 
 
 ::: moniker-end
 

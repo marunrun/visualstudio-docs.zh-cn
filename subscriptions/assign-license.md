@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/24/2019
 ms.topic: conceptual
 description: 了解管理员如何将许可证分配给订阅者
-ms.openlocfilehash: 8125c5cbad2ff44dabbf1b0c5014c313d75d2e71
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: 8785d4d4253fa3217341c8200a94dab923ae4a5f
+ms.sourcegitcommit: af9bbf9116a63c0631ff2f4f3a878564aa63cd8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68604703"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74797371"
 ---
 # <a name="assign-licenses-in-the-visual-studio-subscriptions-administration-portal"></a>在 Visual Studio 订阅管理门户中分配许可证
 作为 Visual Studio 订阅管理员，你可以使用管理门户为个人用户和用户组分配订阅。
@@ -41,7 +41,8 @@ ms.locfileid: "68604703"
    > [!div class="mx-imgBorder"]
    > ![选择“添加”按钮](media/add-button.png)
 
-4. 添加订阅者后，系统会向新订阅者自动发送一封分配电子邮件，为其提供进一步说明。 通过选中订阅者和单击顶部菜单中的“重新发送”按钮，可以随时再次发送分配电子邮件。 
+## <a name="resend-assignment-emails"></a>重新发送分配电子邮件
+添加订阅者后，系统会向新订阅者自动发送一封分配电子邮件，为其提供进一步说明。 通过选中订阅者和单击顶部菜单中的“重新发送”按钮，可以随时再次发送分配电子邮件。   若要向多个用户重新发送电子邮件，请在选择订阅者时按住 Ctrl  键。  单击“重新发送”  按钮后，会看到一个对话框，要求确认是否要向这些订阅者重新发送。  
 
 ## <a name="next-steps"></a>后续步骤
 - 有很多用户要添加？  了解如何将订阅分配给[多个订阅者](assign-license-bulk.md)。

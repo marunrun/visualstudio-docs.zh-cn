@@ -1,5 +1,5 @@
 ---
-title: 演练：分析 C/C++ 代码的缺陷
+title: 演练：对 C/C++ 代码进行缺陷分析
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,7 +19,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72018338"
 ---
-# <a name="walkthrough-analyzing-cc-code-for-defects"></a>演练：分析 C/C++ 代码的缺陷
+# <a name="walkthrough-analyzing-cc-code-for-defects"></a>演练：对 C/C++ 代码进行缺陷分析
 
 本演练演示如何使用适用于 CC++ /C++代码的代码分析工具分析 c/code 是否存在可能的代码缺陷。
 
@@ -35,7 +35,7 @@ ms.locfileid: "72018338"
 
 ### <a name="to-run-code-defect-analysis-on-native-code"></a>在本机代码上运行代码缺陷分析
 
-1. 在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中打开演示解决方案。
+1. 在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]中打开演示解决方案。
 
      演示解决方案现在将填充**解决方案资源管理器**。
 
@@ -61,13 +61,13 @@ ms.locfileid: "72018338"
 
 1. 在 "**视图**" 菜单上，单击**错误列表**。
 
-     根据你在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中选择的开发人员配置文件，可能需要指向 "**视图**" 菜单上的 "**其他窗口**"，然后单击 "**错误列表**"。
+     根据在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]中选择的开发人员配置文件，可能需要指向 "**视图**" 菜单上的 "**其他窗口**"，然后单击 "**错误列表**"。
 
 2. 在**错误列表**中，双击以下警告：
 
      警告 C6230：语义不同类型之间的隐式强制转换：在 Boolean 上下文中使用 HRESULT。
 
-     代码编辑器显示导致函数中出现警告的行 `bool ProcessDomain()`。 此警告意味着在需要布尔值结果的 "if" 语句中使用 HRESULT。
+     代码编辑器显示导致函数 `bool ProcessDomain()`中出现警告的行。 此警告意味着在需要布尔值结果的 "if" 语句中使用 HRESULT。
 
 3. 使用 SUCCEEDED 宏更正此警告。 你的代码应与以下代码类似：
 
@@ -87,7 +87,7 @@ ms.locfileid: "72018338"
 
 ### <a name="to-treat-warning-as-an-error"></a>将警告视为错误
 
-1. 在 Bug .cpp 文件中，将以下 `#pragma` 语句添加到文件的开头，以将警告 C6001 视为错误：
+1. 在 Bug .cpp 文件中，将以下 `#pragma` 语句添加到文件开头，以将警告 C6001 视为错误：
 
    ```cpp
    #pragma warning (error: 6001)
@@ -97,7 +97,7 @@ ms.locfileid: "72018338"
 
      在**错误列表**中，C6001 现在显示为 "错误"。
 
-3. 通过初始化 `i` 并 `j` 到0来更正**错误列表**中剩余的两个 C6001 错误。
+3. 通过初始化 `i` 并将 `j` 为0来更正**错误列表**中的其余两个 C6001 错误。
 
 4. 重新生成 CodeDefects 项目。
 
@@ -142,7 +142,7 @@ ms.locfileid: "72018338"
 
 ### <a name="to-use-source-code-annotation"></a>使用源代码批注
 
-1. 使用 Pre 和 Post 条件（如以下示例中所示），批注函数 `AddTail` 的形参和返回值：
+1. 使用 Pre 和 Post 条件（如以下示例中所示）对函数 `AddTail` 的形参和返回值进行批注：
 
    ```cpp
    [returnvalue:SA_Post (Null=SA_Maybe)] LinkedList* AddTail
@@ -176,6 +176,7 @@ ms.locfileid: "72018338"
 
      项目生成时不会出现任何警告或错误。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[演练：分析托管代码的代码缺陷 @ no__t-0 @ no__t-1[代码分析 C/C++ ](../code-quality/code-analysis-for-c-cpp-overview.md)
+[演练：对托管代码进行代码缺陷分析](../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)
+[C/C++的代码分析](../code-quality/code-analysis-for-c-cpp-overview.md)

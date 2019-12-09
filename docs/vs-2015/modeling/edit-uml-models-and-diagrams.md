@@ -21,12 +21,12 @@ caps.latest.revision: 86
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6585fbfa7c16e710633e81841b4c8eb380f9f564
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 00ac30cc7e9ee3aff0dd64f015a4b4954972c09a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669727"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295534"
 ---
 # <a name="edit-uml-models-and-diagrams"></a>编辑 UML 模型和关系图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -136,7 +136,7 @@ ms.locfileid: "72669727"
 
 #### <a name="to-move-one-end-of-a-connector-to-another-shape"></a>若要将连接线的一端移动到另一个形状
 
-1. 执行以下操作之一：
+1. 执行下列操作之一：
 
    - 按**CTRL**并移动结尾。
 
@@ -320,23 +320,11 @@ ms.locfileid: "72669727"
 
 - 若要将备注和说明添加到模型元素，可以创建注释，然后将它们链接到元素。
 
-- 若要在关系图上整洁地对齐列或行形状，可以安装“对齐形状”命令。 这可用作示例 UML 扩展： [uml：命令以对齐形状](http://code.msdn.microsoft.com/UML-command-to-Align-4139c0d7)
-
 ### <a name="to-export-a-diagram-as-an-image"></a>若要将关系图导出为图像
  有关详细信息，请参阅将[关系图导出为图像](../modeling/export-diagrams-as-images.md)。
 
 ## <a name="extensions"></a>扩展 UML 设计器
  可以将新功能添加到 UML 工具并按照自己的需求调整关系图表示法。 有关详细信息，请参阅[扩展 UML 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)。
-
- 有几个示例扩展可用。 可以只安装并使用，或者可将其源代码用作自己扩展的基础。 这些示例包括：
-
-|||
-|-|-|
-|[对齐形状](http://code.msdn.microsoft.com/UML-command-to-Align-4139c0d7)|有助于整理关系图的菜单命令。|
-|[链接到文档](http://code.msdn.microsoft.com/Link-UML-elements-to-0adbf5a8)|将任何 UML 元素链接到 Word 标题、PowerPoint 幻灯片、任何类型的文件、UML 关系图或其他 UML 元素。 可以通过拖动轻松地进行链接。 之后，可以双击该元素，以查看链接的项。 例如，可以将用例链接到 Word 规范或详细的活动图中，将操作链接到情节提要幻灯片。|
-|[快速入门](http://code.msdn.microsoft.com/UML-Rapid-Entry-using-Text-0813ad8a)|使用文本输入，快速创建模型。 对于捕获会议中的想法很有用。|
-|[按构造型的颜色](http://code.msdn.microsoft.com/UML-Color-Classes-by-07de2b70)|根据构造型的颜色类。 可以轻松扩展代码，以适用于自己的构造型。|
-|[域建模](http://code.msdn.microsoft.com/UML-Domain-Modeling-6df6f7f4)|业务模型的方便默认值。 默认情况下，将显示不带箭头的关联，并且操作不会出现在类中。|
 
 ## <a name="see-also"></a>请参阅
  [创建 UML 建模项目和关系图](../modeling/create-uml-modeling-projects-and-diagrams.md)[分析和建模体系结构](../modeling/analyze-and-model-your-architecture.md)[为应用程序创建模型](../modeling/create-models-for-your-app.md)

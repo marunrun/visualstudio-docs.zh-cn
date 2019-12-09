@@ -9,12 +9,12 @@ caps.latest.revision: 8
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 447001a8aefa22fe15bce9158eddeb0cdb26e4e8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: aeeac82b27b4b5bb71ed05ba658bf9ee048bd85d
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654723"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74292157"
 ---
 # <a name="adding-extensions-to-dsl-definitions"></a>向 DSL 定义中添加扩展
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,7 +35,7 @@ DSL 定义扩展允许你创建一包扩展到域特定语言（DSL）的扩展�
 
   扩展 DSL 的用户可以创建并保存包含其他功能的实例的模型，并且这些用户可以读取已安装适当扩展的其他用户。 尚未安装此扩展的用户不能使用其他功能，但可以更新和保存模型，而不会丢失其他功能。
 
-  有关此功能的示例代码和详细信息，请参阅[Visual Studio 可视化和建模 SDK](http://go.microsoft.com/fwlink/?LinkID=186128)网站。
+  有关此功能的示例代码和详细信息，请参阅[Visual Studio 可视化和建模 SDK](https://go.microsoft.com/fwlink/?LinkID=186128)网站。
 
 ## <a name="see-also"></a>请参阅
- [Visual Studio 可视化和建模 SDK](http://go.microsoft.com/fwlink/?LinkID=186128)
+ [Visual Studio 可视化和建模 SDK](https://go.microsoft.com/fwlink/?LinkID=186128)

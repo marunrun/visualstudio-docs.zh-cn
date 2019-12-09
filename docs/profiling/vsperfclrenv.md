@@ -11,14 +11,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 119aa0a710218635cca945372ba9ea6fb6d4d27b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2163ebb9b363de8ee638998dbe56fd76f5a891c8
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62822880"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779904"
 ---
 # <a name="vsperfclrenv"></a>VSPerfCLREnv
 

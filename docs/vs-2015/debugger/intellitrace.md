@@ -22,17 +22,17 @@ caps.latest.revision: 142
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 1ea7378e72d970bf53470b4434222aa4a1a4d9a1
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: db7430d03bbce065b75e890736253c6ba05752d0
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65690523"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298927"
 ---
 # <a name="intellitrace"></a>IntelliTrace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-本主题的最新版本，请参阅[IntelliTrace](https://docs.microsoft.com/visualstudio/debugger/intellitrace) 。  
+本主题的最新版本可在[IntelliTrace](https://docs.microsoft.com/visualstudio/debugger/intellitrace)中找到。  
   
 使用 IntelliTrace 记录和跟踪代码的执行历史记录时，可缩短调试应用程序所用的时间。 你可以更轻松地发现 Bug，因为 IntelliTrace 让你能够：  
   
@@ -42,13 +42,13 @@ ms.locfileid: "65690523"
   
 - 调试难以重现或在部署中出现的错误  
   
-  可以在 Visual Studio 企业版（但不可在专业版或社区版）中使用 IntelliTrace。  
+  可以在 Visual Studio Enterprise 版（但不可在 Professional 或 Community 版）中使用 IntelliTrace。  
   
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？  
   
 |||  
 |-|-|  
-|**使用 IntelliTrace 调试应用程序：**<br /><br /> -向我显示过去的事件。<br />-显示我调用与过去的事件的信息。<br />-保存我的 IntelliTrace 会话。<br />控制 IntelliTrace 收集的数据。|-   [演练：使用 IntelliTrace](../debugger/walkthrough-using-intellitrace.md)<br />     [IntelliTrace 功能](../debugger/intellitrace-features.md)<br />-   [配置 IntelliTrace](https://msdn.microsoft.com/7657ecab-e07e-4b1b-872d-f05d966be37e)<br />-   [历史调试](../debugger/historical-debugging.md)|  
+|**使用 IntelliTrace 调试应用程序：**<br /><br /> -显示过去的事件。<br />-显示对过去事件的调用信息。<br />-保存我的 IntelliTrace 会话。<br />-控制 IntelliTrace 收集的数据。|-   [演练：使用 IntelliTrace](../debugger/walkthrough-using-intellitrace.md)<br />     [IntelliTrace 功能](../debugger/intellitrace-features.md)<br />-   [配置 IntelliTrace](https://msdn.microsoft.com/7657ecab-e07e-4b1b-872d-f05d966be37e)<br />-   [历史调试](../debugger/historical-debugging.md)|  
 |**在测试管理器中，在测试会话期间收集 IntelliTrace 数据**|-   [在手动测试中收集更多诊断数据](https://msdn.microsoft.com/library/bb5a2cc0-84f5-4dfe-9560-ca3d313aefd2)|  
 |**从已部署的应用程序中收集 IntelliTrace 数据**|-   [使用 IntelliTrace 独立收集器](../debugger/using-the-intellitrace-stand-alone-collector.md)|  
 |**从 IntelliTrace 日志文件（.iTrace 文件）中开始调试。**|-   [使用保存的 IntelliTrace 数据](../debugger/using-saved-intellitrace-data.md)|  
@@ -57,9 +57,9 @@ ms.locfileid: "65690523"
   
 |||  
 |-|-|  
-|**支持**|的使用.NET Framework 2.0 或更高版本 Visual Basic 和 Visual C# 应用程序。<br />     你可以调试大多数应用程序，包括 ASP.NET、Microsoft Azure、Windows 窗体、WCF、WPF、Windows 工作流、SharePoint 2010、SharePoint 2013 和 64 位应用。<br />     若要调试 SharePoint 应用程序使用 IntelliTrace，请参阅[演练：使用 IntelliTrace 调试 SharePoint 应用程序](https://msdn.microsoft.com/library/4bd80d2f-f680-4bf4-81c3-f14e8185f6a4)。<br />     若要调试 IntelliTrace 使用 Microsoft Azure 应用程序，请参阅[调试已发布的云服务使用 IntelliTrace 和 Visual Studio](../azure/vs-azure-tools-intellitrace-debug-published-cloud-services.md)。|  
-|**有限支持**|-F#实验性的基础上的应用程序<br />-Windows 应用商店应用程序仅支持事件|  
-|**不支持**|- C++、 其他语言和脚本<br />-Windows 服务、 Silverlight、 Xbox 或[!INCLUDE[winmobile](../includes/winmobile-md.md)]应用|  
+|**支持**|-Visual Basic 和使用C# .NET Framework 2.0 或更高版本的视觉对象应用程序。<br />     你可以调试大多数应用程序，包括 ASP.NET、Microsoft Azure、Windows 窗体、WCF、WPF、Windows 工作流、SharePoint 2010、SharePoint 2013 和 64 位应用。<br />     若要使用 IntelliTrace 调试 SharePoint 应用程序，请参阅[演练：使用 Intellitrace 调试 Sharepoint 应用程序](https://msdn.microsoft.com/library/4bd80d2f-f680-4bf4-81c3-f14e8185f6a4)。<br />     若要使用 IntelliTrace 调试 Microsoft Azure 的应用，请参阅[使用 intellitrace 和 Visual Studio 调试已发布的云服务](../azure/vs-azure-tools-intellitrace-debug-published-cloud-services.md)。|  
+|**有限支持**|- F#在实验基础上应用<br />-仅支持适用于事件的 Windows 应用商店应用|  
+|**不支持**|- C++、其他语言和脚本<br />-Windows 服务、Silverlight、Xbox 或 [!INCLUDE[winmobile](../includes/winmobile-md.md)] 应用|  
   
 > [!NOTE]
 > 如果要调试已经在运行的进程，则不能使用 IntelliTrace。 进程开始时，你必须启动 IntelliTrace。  
@@ -67,17 +67,17 @@ ms.locfileid: "65690523"
 ## <a name="IntelliTraceVSTraditional"></a>为何使用 IntelliTrace 进行调试？  
  传统或实时调试仅显示应用程序的当前状态以及有关过去事件的有限数据。 要么必须根据应用程序的当前状态推断这些事件，要么必须通过重新运行应用程序以重新生成这些事件。  
   
- IntelliTrace 通过记录特定事件和这些时间点的数据，扩展此传统调试体验。 这让你能够不重启应用程序即可查看应用程序中发生了什么，特别是在单步执行到 Bug 处时。 IntelliTrace 在传统调试期间会默认启用，并以不可见的方式自动收集数据。 这样，你即可轻松地在传统调试和 IntelliTrace 调试之间进行切换来查看该记录信息。 请参阅[IntelliTrace 功能](../debugger/intellitrace-features.md)和[IntelliTrace 收集哪些数据？](#WhatData)  
+ IntelliTrace 通过记录特定事件和这些时间点的数据，扩展此传统调试体验。 这让你能够不重启应用程序即可查看应用程序中发生了什么，特别是在单步执行到 Bug 处时。 IntelliTrace 在传统调试期间会默认启用，并以不可见的方式自动收集数据。 这样，你即可轻松地在传统调试和 IntelliTrace 调试之间进行切换来查看该记录信息。 请参阅 intellitrace[功能](../debugger/intellitrace-features.md)和[intellitrace 收集哪些数据？](#WhatData)  
   
  IntelliTrace 还可帮助你调试难以重现或在部署时出现的错误。 可以收集 IntelliTrace 数据并将其保存为 IntelliTrace 日志文件（.iTrace 文件）。 .iTrace 文件包含有关异常、性能事件、Web 请求、测试数据、线程、模块和其他系统信息的详细信息。 可以在 Visual Studio Enterprise 中打开此文件、选择一个项，然后使用 IntelliTrace 开始调试。 这让你能够转到文件中的任何事件并查看该时间点上有关应用程序的特定详细信息。  
   
  你可以从这些源中保存 IntelliTrace 数据：  
   
-- Visual Studio 2015 Enterprise 或早期版本的 Visual Studio Ultimate 中的 IntelliTrace 会话。  
+- Visual Studio 2015 企业版或早期版本的 Visual Studio Ultimate 中的 IntelliTrace 会话。  
   
 - Microsoft 测试管理器中的测试会话  
   
-- IIS 上托管的 ASP.NET Web 应用程序，或使用 Microsoft Monitoring Agent（单独使用或与 System Center 2012 一起使用）时在部署中运行的 SharePoint 2010 和 SharePoint 2013 应用程序。 请参阅[使用 IntelliTrace 独立收集器](../debugger/using-the-intellitrace-stand-alone-collector.md)并[监视使用 Microsoft Monitoring Agent](https://technet.microsoft.com/library/dn465153.aspx)。  
+- IIS 上托管的 ASP.NET Web 应用程序，或使用 Microsoft Monitoring Agent（单独使用或与 System Center 2012 一起使用）时在部署中运行的 SharePoint 2010 和 SharePoint 2013 应用程序。 请参阅[使用 IntelliTrace 独立收集器](../debugger/using-the-intellitrace-stand-alone-collector.md)并使用[Microsoft Monitoring Agent 进行监视](https://technet.microsoft.com/library/dn465153.aspx)。  
   
   下面是一些示例，说明 IntelliTrace 如何帮助你进行调试：  
   
@@ -91,7 +91,7 @@ ms.locfileid: "65690523"
   
 - 你的应用程序在测试计算机上崩溃，但在开发计算机上成功运行。  
   
-   可以从 Microsoft 测试管理器中收集 IntelliTrace 数据，将该数据保存到 .iTrace 文件，并将此文件附加到 Team Foundation Server 工作项以备以后调查使用。 请参阅[手动测试中的更多诊断数据收集](https://msdn.microsoft.com/library/bb5a2cc0-84f5-4dfe-9560-ca3d313aefd2)并[使用保存的 IntelliTrace 数据](../debugger/using-saved-intellitrace-data.md)。  
+   可以从 Microsoft 测试管理器中收集 IntelliTrace 数据，将该数据保存到 .iTrace 文件，并将此文件附加到 Team Foundation Server 工作项以备以后调查使用。 请参阅[在手动测试中收集更多诊断数据](https://msdn.microsoft.com/library/bb5a2cc0-84f5-4dfe-9560-ca3d313aefd2)和[使用保存的 IntelliTrace 数据](../debugger/using-saved-intellitrace-data.md)。  
   
 - 在已部署的应用程序中发生 Bug 或崩溃。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "65690523"
   
 - **.NET Framework 事件**  
   
-   默认情况下，IntelliTrace 记录最常见的 .NET Framework 事件。 例如：  
+   默认情况下，IntelliTrace 记录最常见的 .NET Framework 事件。 例如:  
   
   - 对于“文件访问”事件，IntelliTrace 将收集文件名。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "65690523"
   
 - **SharePoint 2010 和 SharePoint 2013 应用程序事件**  
   
-   你可以为在 Visual Studio 外运行的 SharePoint 2010 和 2013 应用程序记录用户配置文件事件以及一部分统一日志记录系统 (ULS) 事件。 你可以将这些事件保存到 .iTrace 文件中。 需要 Visual Studio Enterprise 2015、 以前版本的 Visual Studio 旗舰版或[Microsoft Monitoring Agent](http://go.microsoft.com/fwlink/?LinkId=320384)正在**跟踪**模式。  
+   你可以为在 Visual Studio 外运行的 SharePoint 2010 和 2013 应用程序记录用户配置文件事件以及一部分统一日志记录系统 (ULS) 事件。 你可以将这些事件保存到 .iTrace 文件中。 需要 Visual Studio Enterprise 2015、以前版本的 Visual Studio Ultimate 或[Microsoft Monitoring Agent](https://go.microsoft.com/fwlink/?LinkId=320384)在**跟踪**模式下运行。  
   
    打开 .iTrace 文件时，输入 SharePoint 相关 ID 以查找其匹配的 Web 请求，查看记录事件，并从特定事件开始调试。 如果文件包含未经处理的异常，可以选择相关 ID，开始调试异常。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "65690523"
   
   - [演练：使用 IntelliTrace 调试 SharePoint 应用程序](https://msdn.microsoft.com/library/4bd80d2f-f680-4bf4-81c3-f14e8185f6a4)  
   
-  **收集函数调用信息**  
+  **正在收集函数调用信息**  
   
   可以配置 IntelliTrace 以收集函数的调用信息。 此信息使你可以查看调用堆栈历史记录，并能在代码中向后移动和向前移动调用。 对于每个函数调用，IntelliTrace 将记录此数据：  
   
@@ -179,14 +179,14 @@ ms.locfileid: "65690523"
   
  [配置 IntelliTrace](https://msdn.microsoft.com/7657ecab-e07e-4b1b-872d-f05d966be37e)  
   
- [包含诊断跟踪数据难以重现的 Bug](https://msdn.microsoft.com/library/944ae9af-5a55-4c58-b520-0108c03b3564)  
+ [包含难以重现的 Bug 的诊断跟踪数据](https://msdn.microsoft.com/library/944ae9af-5a55-4c58-b520-0108c03b3564)  
   
  [诊断部署后出现的问题](../debugger/diagnose-problems-after-deployment.md)  
   
  [使用保存的 IntelliTrace 数据](../debugger/using-saved-intellitrace-data.md)  
   
 ### <a name="blogs"></a>博客  
- [Visual Studio ALM + Team Foundation Server](http://go.microsoft.com/fwlink/?LinkID=201340)  
+ [Visual Studio ALM + Team Foundation Server](https://go.microsoft.com/fwlink/?LinkID=201340)  
   
 ### <a name="forums"></a>论坛  
- [Visual Studio 诊断](http://go.microsoft.com/fwlink/?LinkId=262263)
+ [Visual Studio 诊断](https://go.microsoft.com/fwlink/?LinkId=262263)

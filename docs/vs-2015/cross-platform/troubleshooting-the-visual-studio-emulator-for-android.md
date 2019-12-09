@@ -1,5 +1,5 @@
 ---
-title: Emulator for Android 疑难解答 |Microsoft Docs
+title: 适用于 Android 的仿真程序疑难解答 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: tgt-pltfrm-cross-plat
@@ -8,12 +8,12 @@ ms.assetid: f3fb5df4-3aae-40e4-9450-bbe15b0c5af5
 caps.latest.revision: 25
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 4e9aa77848c3784b1df7a2c1f32651b8d00e5998
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 380de9206b2dc4e78c3719919dfd78720de28129
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263389"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297648"
 ---
 # <a name="troubleshooting-the-visual-studio-emulator-for-android"></a>Troubleshooting the Visual Studio Emulator for Android
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "66263389"
 > [!WARNING]
 > 安装仿真程序时，安装程序将检查运行软件的系统必备组件。 如果系统必备不存在，该程序将发出警告，但不会要求安装这些系统必备组件。
 
- 本主题包含以下各节：
+ 本主题包含以下各节。
 
 - [准备工作](#BeforeYouStart)
 
@@ -62,12 +62,12 @@ ms.locfileid: "66263389"
 ## <a name="BeforeYouStart"></a> 准备工作
  开始进行故障排除前，查看以下主题可能会有用：
 
-- [System Requirements for the Visual Studio Emulator for Android](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md)
+- [适用于 Android 的 Visual Studio 模拟器的系统要求](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md)
 
 ## <a name="NoInstall"></a> 仿真程序安装失败
  如果未安装 Hyper-V，则当你尝试安装仿真程序时将看到以下消息。 你的计算机必须支持并启用了 HyperV。
 
- ![Android_Emu_Install_Issue](../cross-platform/media/android-emu-install-issue.png "Android_Emu_Install_Issue")
+ ![Android&#95;Emu&#95;Install&#95;Issue](../cross-platform/media/android-emu-install-issue.png "Android_Emu_Install_Issue")
 
 > [!NOTE]
 > 对于适用于 Android 的 Visual Studio 仿真程序和 Windows Phone 仿真程序，此消息均适用。 Windows 8.1 和 Windows 10 支持仿真程序。
@@ -94,7 +94,7 @@ ms.locfileid: "66263389"
 ## <a name="ManualNetworkConfig"></a> 当需要手动配置网络设置时无法连接到网络目标
  若要从仿真程序连接到网络目标，网络必须满足以下要求：
 
-- DHCP。 仿真程序需要 DHCP，因为它将自身配置为网络上具有自己的 IP 地址的一个单独的设备
+- DHCP。 仿真程序需要 DHCP，因为它将自身配置为网络上具有自己的 IP 地址的一个单独的设备。
 
 - 自动配置的 DNS 和网关设置。 不可能为仿真程序手动配置 DNS 和网关设置。
 
@@ -103,7 +103,7 @@ ms.locfileid: "66263389"
 ## <a name="SlowStart"></a>模拟器启动缓慢，由于超时或应用部署失败而无法启动
  某些条件下，仿真程序需要几分钟才能启动，或由于超时而未能启动。 当仿真程序启动失败时，将出现以下消息：`App deployment failed. Please try again`。 以下条件可能导致此错误。
 
-- 从可启动的 VHD 运行适用于 Android 的 Visual Studio 仿真程序。 此配置不受支持。
+- 从可启动的 VHD 运行适用于 Android 的 Visual Studio 仿真程序。 不支持此配置。
 
 - 故障硬盘驱动器。 考虑运行 chkdsk 程序。
 
@@ -132,9 +132,9 @@ ms.locfileid: "66263389"
 
 - 在 Hyper-V 管理器中，打开虚拟交换机管理器并检查确认有两个网络交换机；并且第一个是内部交换机，第二个是外部交换机。
 
-     ![Android_Emu_V_Switch_Man](../cross-platform/media/android-emu-v-switch-man.png "Android_Emu_V_Switch_Man")
+     ![Android&#95;Emu&#95;V&#95;Switch&#95;Man](../cross-platform/media/android-emu-v-switch-man.png "Android_Emu_V_Switch_Man")
 
-     如果安装不正确，并且使用的是 Windows 10，则可以尝试 [使用 netcfg – d 命令重新安装网络设备](http://windows.microsoft.com/windows-10/fix-network-connection-issues) （第 6 节）。
+     如果安装不正确，并且使用的是 Windows 10，则可以尝试 [使用 netcfg – d 命令重新安装网络设备](https://support.microsoft.com/help/10741/windows-fix-network-connection-issues) （第 6 节）。
 
 - 如果这些步骤未解决问题，请参阅 [Emulator fails to start (first use)](#NoStart) ，了解可能会干扰仿真程序的第三方软件的信息。
 
@@ -173,7 +173,7 @@ ms.locfileid: "66263389"
 
      - 禁用受信任的执行
 
-       有关详细信息，请参阅此文：Technet：Hyper-V：如何启用 Hyper-V 修复 BIOS 错误
+       有关详细信息，请参阅此文章：Technet：Hyper-V：如何修复启用 Hyper-V 时发生的 BIOS 错误
 
   5. 确保至少具有 4 GB 系统内存，并且它未被其他占用大量资源的程序和进程使用。
 
@@ -191,7 +191,7 @@ ms.locfileid: "66263389"
 
    一般情况下，是否更新其软件从而与 Windows 8 和 Hyper-V 兼容取决于这些产品的开发人员。
 
-   以下产品可能需要升级才能与 Windows 8 兼容：VirtualBox、Virtual PC 7、VMWare、一些 VPN 客户端、软件防火墙、一些版本的 Cisco VPN 客户端和其他虚拟化系统。 与可疑虚拟化软件的开发人员合作，鼓励他们升级软件，从而使软件与 Windows 8 和 Hyper-V 兼容。
+   以下产品可能需要升级以与 Windows 8 兼容：VirtualBox、Virtual PC 7、VMWare、某些 VPN 客户端、软件防火墙、某些版本的 Cisco VPN 客户端和其他虚拟化系统。 与可疑虚拟化软件的开发人员合作，鼓励他们升级软件，从而使软件与 Windows 8 和 Hyper-V 兼容。
 
    作为一种 **解决方法**，可以禁用可能会干扰虚拟网络（仿真程序用于与 Visual Studio 进行通信）的所有第三方驱动程序和应用程序。 这些应用程序可能包括：
 
@@ -209,7 +209,7 @@ ms.locfileid: "66263389"
 
   2. 对于 vEthernet（内部以太网端口 Windows Phone 仿真程序内部交换机）适配器，从上下文菜单选择 **“属性”** 。
 
-      ![由 Hyper-V 使用的虚拟适配器](../cross-platform/media/android-emu-virtual-adapter.png "Android_Emu_Virtual_Adapter")
+      ![Hyper&#45;V 使用的虚拟适配器](../cross-platform/media/android-emu-virtual-adapter.png "Android_Emu_Virtual_Adapter")
 
       此处显示了适配器属性。
 
@@ -254,7 +254,7 @@ ms.locfileid: "66263389"
 
   若要解决此问题，则在主板的 BIOS 设置中禁用 USB3，然后重新启动计算机。 然后，检查 Gigabyte 是否已为主板的 BIOS 发布了更新。
 
-  有关详细信息，请参阅以下知识库文章：[在 Gigabyte 系统上安装 Hyper-V 角色后启动失败](https://support.microsoft.com/kb/2693144)。
+  有关详细信息，请参阅以下知识库文章： [在 Gigabyte 系统上安装 Hyper-V 角色后启动失败](https://support.microsoft.com/kb/2693144)。
 
 ## <a name="ADB"></a> Visual Studio 尝试将应用部署到仿真程序时遇到困难，或者仿真程序未在其他 IDE 中显示为调试目标。
  如果仿真程序正在运行，但它似乎没有连接到 ADB（Android 调试桥）或未显示在使用 ADB 的 Android 工具中（如 Android Studio 或 Eclipse），则可能需要调整仿真程序查找 ADB 的位置。 仿真程序使用注册表项来标识 Android SDK 的基位置，并查找该目录下的 \platform-tools\adb.exe 文件。 若要修改仿真程序使用的 Android SDK 路径：
@@ -268,7 +268,7 @@ ms.locfileid: "66263389"
   重新启动仿真程序，现在应能够看到仿真程序已连接到 ADB 和关联的 Android 工具。
 
 ## <a name="XamarinPlayer"></a> 由于它无法设置 UDP 端口，仿真程序挂起。
- 由于与 Xamarin 播放器不兼容，你可能会遇到此问题。 如果仿真程序显示为挂起，或者如果出现此错误消息“仿真程序无法连接到设备操作系统：无法设置 UDP 端口。  某些功能可能已禁用”，则这表示你可能遇到了此问题。 请执行下列步骤：
+ 由于与 Xamarin 播放器不兼容，你可能会遇到此问题。 如果仿真程序显示为挂起，或者如果你看到错误消息“仿真程序无法连接到设备操作系统: 无法设置 UDP 端口。  某些功能可能已禁用”，则这表示你可能遇到了此问题。 请执行下列步骤：
 
 1. 卸载 Xamarin 播放器。
 
@@ -283,15 +283,15 @@ ms.locfileid: "66263389"
 
 1. 打开 Hyper-V 管理器，选择当前使用的模拟器配置文件的 VM。
 
-2. 选择“删除已保存状态”  （右下方）。
+2. 选择“删除已保存状态”（右下方）。
 
-3. 选择“设置...” 
+3. 选择“设置...”
 
-4. 展开处理器节点并选择“兼容性”  。
+4. 展开处理器节点并选择“兼容性”。
 
-5. 启用“迁移到具有不同处理器版本的物理计算机”  。
+5. 启用“迁移到具有不同处理器版本的物理计算机”。
 
-6. 在“操作”  下重启该服务，然后重试。
+6. 在“操作”下重启该服务，然后重试。
 
 ## <a name="GooglePlay"></a>模拟器未能运行使用 Google Play 服务的应用
  仿真程序未随 Google Play 服务的库一同提供。 但是，仿真程序不支持可闪存 zip 文件的拖放安装。
@@ -311,6 +311,6 @@ ms.locfileid: "66263389"
 ## <a name="Support"></a> 支持资源
  如果你的主机计算机满足系统要求，但你遇到本疑难解答指南中未涉及的问题：
 
-- 使用 [Android 仿真程序](http://stackoverflow.com/questions/tagged/android-emulator) 和 Visual Studio 标记询问有关 StackOverflow 的问题。
+- 使用 [Android 仿真程序](https://stackoverflow.com/questions/tagged/android-emulator) 和 Visual Studio 标记询问有关 StackOverflow 的问题。
 
 - 在 Visual Studio 或在仿真程序管理器中使用“发送笑脸”工具来报告问题。

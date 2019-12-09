@@ -7,12 +7,12 @@ ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
-ms.openlocfilehash: 3e4a41567b02807dce280426daf59e30ed1876eb
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 1ace600f9c4582e99c6fa324cb9dcc61593d3d97
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211454"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73716784"
 ---
 # <a name="install-visual-studio-2019-for-mac"></a>安装 Visual Studio 2019 for Mac
 
@@ -27,7 +27,7 @@ ms.locfileid: "71211454"
 
 要为 iOS 或 macOS 构建 Xamarin 应用，还需要：
 
-- Xcode 10.0 或更高版本。 通常建议使用最新的稳定版本。
+- Xcode 10.0 或更高版本。 通常建议使用稳定的最新版本。
 - 一个 Apple ID。 如果没有 Apple ID，请在 https://appleid.apple.com 新建一个。 需要 Apple ID 才可安装和登录 Xcode。
 
 ## <a name="installation-instructions"></a>安装说明
@@ -76,16 +76,16 @@ ms.locfileid: "71211454"
 
     [![选择要使用的键盘快捷方式](media/ide-tour-2019-keyboard-shortcut.png)](media/ide-tour-2019-keyboard-shortcut.png#lightbox)
 
-如果在企业环境中安装时遇到网络问题，请查看[在有防火墙或代理的情况下进行安装](https://docs.microsoft.com/visualstudio/mac/installation#install-visual-studio-for-mac-behind-a-firewall-or-proxy-server)的说明。
+如果在企业环境中安装时遇到网络问题，请查看[在有防火墙或代理的情况下进行安装](/visualstudio/mac/installation#install-visual-studio-for-mac-behind-a-firewall-or-proxy-server)的说明。
 
-了解有关[发行说明](https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-relnotes)中的更改详细信息。
+了解有关[发行说明](/visualstudio/releasenotes/vs2019-mac-relnotes)中的更改详细信息。
 
 > [!NOTE]
 > 如果在原始安装期间选择不安装平台或工具（方法为在第 #6 步中取消选择相关项），必须要在稍后添加组件时再次运行安装程序。
 
-## <a name="install-visual-studio-for-mac-behind-a-firewall-or-proxy-server"></a>在有防火墙或代理服务器的情况下安装 Visual Studio for Mac
+## <a name="install-visual-studio-for-mac-behind-a-firewall-or-proxy-server"></a>在防火墙或代理服务器后安装 Visual Studio for Mac
 
-若要在有防火墙情况下安装 Visual Studio for Mac，必须将某些终结点设置为可供访问，以允许下载所需的工具和更新软件。
+若要在防火墙后面安装 Visual Studio for Mac，必须将某些终结点设置为可供访问，以允许下载所需的工具和更新软件。
 
 配置网络以允许访问下列位置：
 

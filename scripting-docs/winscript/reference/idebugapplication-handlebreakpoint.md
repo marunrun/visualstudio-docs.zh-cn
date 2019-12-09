@@ -46,7 +46,7 @@ HRESULT HandleBreakPoint(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
@@ -58,8 +58,8 @@ HRESULT HandleBreakPoint(
   
  此方法导致调用 `IApplicationDebugger::onHandleBreakPoint`。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugApplication 接口](../../winscript/reference/idebugapplication-interface.md)   
- [IApplicationDebugger：： onHandleBreakPoint](../../winscript/reference/iapplicationdebugger-onhandlebreakpoint.md)    
+ [IApplicationDebugger::onHandleBreakPoint](../../winscript/reference/iapplicationdebugger-onhandlebreakpoint.md)   
  [BREAKREASON 枚举](../../winscript/reference/breakreason-enumeration.md)   
  [BREAKRESUMEACTION 枚举](../../winscript/reference/breakresumeaction-enumeration.md)

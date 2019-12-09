@@ -28,7 +28,7 @@ ms.locfileid: "72573774"
   
 - 确保程序中使用的所有标签在各自的范围内是唯一的。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [标记语句](../../javascript/reference/labeled-statement-javascript.md)   
  [Switch 语句](../../javascript/reference/switch-statement-javascript.md)   
  [break 语句](../../javascript/reference/break-statement-javascript.md)   

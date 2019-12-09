@@ -22,12 +22,12 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 robots: noindex,nofollow
-ms.openlocfilehash: 2be1de65bb29ddca611366fcdc046162bdafc4b7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 158bc4c2fc7734957c7d3e946390ab1339a322ba
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72673125"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299438"
 ---
 # <a name="accessing-data-in-visual-studio"></a>在 Visual Studio 中访问数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "72673125"
 ||||
 |-|-|-|
 |SQL Server 2005 –2016，包括 Express 和 LocalDB|Firebird|MariaDB|
-|MySQL|Oracle|postgresql|
+|MySQL|Oracle|PostgreSQL|
 |SQLite|||
 
  更多内容...
@@ -67,7 +67,7 @@ ms.locfileid: "72673125"
 
  更多内容...
 
- 许多数据库供应商和第三方支持通过 NuGet 包与 Visual Studio 集成。 可以通过 Visual Studio 中的 NuGet 包管理器或 Visual Studio 中的 NuGet 包管理器来浏览 nuget.org （**Tools**  > **Nuget 包管理器** > **管理解决方案的 nuget 包**）。 其他数据库产品与 Visual Studio 集成以作为扩展。   通过导航到 "**工具**"  >  "**扩展和更新**"，然后在对话框的左窗格中选择 "**联机**"，可以在 Visual Studio 库中浏览这些产品/服务。  有关详细信息，请参阅[安装数据库系统、工具和示例](../data-tools/installing-database-systems-tools-and-samples.md)。
+ 许多数据库供应商和第三方支持通过 NuGet 包与 Visual Studio 集成。 可以通过 Visual Studio 中的 NuGet 包管理器或 Visual Studio 中的 NuGet 包管理器来浏览 nuget.org （**Tools** > **Nuget 包管理器** > **管理解决方案的 nuget 包**）。 其他数据库产品与 Visual Studio 集成以作为扩展。   通过导航到 "**工具**" > "**扩展和更新**"，然后在对话框的左窗格中选择 "**联机**"，可以在 Visual Studio 库中浏览这些产品/服务。  有关详细信息，请参阅[安装数据库系统、工具和示例](../data-tools/installing-database-systems-tools-and-samples.md)。
 
 > [!NOTE]
 > 2005年4月 12 2016 日结束对 SQL Server 的扩展支持。   不保证 Visual Studio 2015 和更高版本中的数据工具在此日期后继续与 SQL Server 2005 一起工作。 有关详细信息，请参阅[SQL Server 2005 的支持终止公告](https://www.microsoft.com/sql-server/sql-server-2005)。
@@ -75,7 +75,7 @@ ms.locfileid: "72673125"
 ### <a name="net-languages"></a>.NET 语言
  所有 .NET 数据访问（包括在 .NET Core 中）都基于 ADO.NET，这是一组类，用于定义用于访问任何类型数据源（关系数据源和非关系数据源）的接口。 Visual Studio 有多个工具和设计器，可与 ADO.NET 配合使用，帮助你连接到数据库、操作数据，以及向用户提供数据。 本部分中的文档介绍了如何使用这些工具。 你还可以对 ADO.NET 命令对象直接编程。 有关直接调用 ADO.NET Api 的详细信息，请参阅 MSDN Library 中的[ADO.NET](https://msdn.microsoft.com/library/e80y5yhx\(v=vs.110\).aspx) 。
 
- 有关专门与 ASP.NET 相关的数据访问文档，请参阅使用 ASP.NET 站点上的[数据](http://www.asp.net/web-forms/overview/presenting-and-managing-data)。 有关将实体框架与 ASP.NET MVC 配合使用的教程，请参阅使用[mvc 5 Code First 实体框架6入门](http://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application)。
+ 有关专门与 ASP.NET 相关的数据访问文档，请参阅使用 ASP.NET 站点上的[数据](https://docs.microsoft.com/aspnet/web-forms/overview/presenting-and-managing-data/)。 有关将实体框架与 ASP.NET MVC 配合使用的教程，请参阅使用[mvc 5 Code First 实体框架6入门](https://docs.microsoft.com/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application)。
 
  或 Visual Basic 中C#的通用 WINDOWS 平台（UWP）应用可以使用用于 .NET 的 Microsoft Azure SDK 访问 azure 存储和其他 azure 服务。 HttpClient 类启用与任何 RESTful 服务的通信。 有关详细信息，请参阅[如何使用 Windows 连接到 http 服务器](https://msdn.microsoft.com/library/windows/apps/dn469430.aspx)。
 
@@ -95,17 +95,17 @@ ms.locfileid: "72673125"
 
  数据集最早的三个建模技术。 它主要设计用于快速开发 "窗体超过数据" 应用程序，在这些应用程序中，您不会处理大量数据或执行复杂的查询或转换。 DataSet 对象包含在逻辑上类似于 SQL 数据库对象的 DataTable 和 DataRow 对象比 .NET 对象多很多。 对于基于 SQL 数据源的相对简单的应用程序，数据集可能仍是一个不错的选择。
 
- 不需要使用其中的任何一种技术。 在某些情况下，尤其是在性能至关重要的情况下，你只需使用 DataReader 对象从数据库中读取数据，并将所需的值复制到集合对象（如 List \<T > 中。
+ 不需要使用其中的任何一种技术。 在某些情况下，尤其是在性能至关重要的情况下，你只需使用 DataReader 对象从数据库中读取数据，并将所需的值复制到集合对象（如 List\<T > 中）。
 
 ### <a name="native-c"></a>本机 C++
  C++连接到 SQL Server 的应用程序应使用[SQL Server Native Client](https://msdn.microsoft.com/sqlserver/aa937733.aspx)。 您可以直接使用[ODBC](https://msdn.microsoft.com/library/ms710252\(v=vs.85\).aspx)或 OLE DB 驱动程序来访问其他数据库。 ODBC 是当前的标准数据库接口，但大多数数据库系统都提供无法通过 ODBC 接口访问的自定义功能。  OLE DB 是一种旧的 COM 数据访问技术，仍受支持，但不建议用于新应用程序。  有关详细信息，请参阅[数据访问](https://msdn.microsoft.com/library/a9455752-39c4-4457-b14e-197772d3df0b)。
 
  C++使用 rest 服务的程序可以使用[ C++ rest SDK](https://github.com/Microsoft/cpprestsdk)。
 
- C++与 Microsoft Azure 存储一起使用的程序可以使用[Microsoft Azure 存储客户端](http://www.nuget.org/packages/wastorage)。
+ C++与 Microsoft Azure 存储一起使用的程序可以使用[Microsoft Azure 存储客户端](https://www.nuget.org/packages/wastorage)。
 
 #### <a name="data-modeling"></a>数据建模
- Visual Studio 不提供的C++ORM 层。  [ODB](http://www.codesynthesis.com/products/odb/)是适用于的C++常用开源 ORM。
+ Visual Studio 不提供的C++ORM 层。  [ODB](https://www.codesynthesis.com/products/odb/)是适用于的C++常用开源 ORM。
 
  有关旧的视觉C++数据访问技术的详细信息，请参阅[数据访问](https://msdn.microsoft.com/library/a9455752-39c4-4457-b14e-197772d3df0b)
 
@@ -133,7 +133,7 @@ ms.locfileid: "72673125"
 
  [ADO.NET 实体框架](https://msdn.microsoft.com/data/ef)介绍如何创建允许开发人员针对概念模型而不是直接针对关系数据库进行编程的数据应用程序。
 
- [WCF 数据服务 4.5](https://msdn.microsoft.com/library/73d2bec3-7c92-4110-b905-11bb0462357a)介绍如何使用 [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] 在实现[Open Data Protocol （OData）](http://go.microsoft.com/fwlink/?LinkID=182204)的 web 或 intranet 上部署数据服务。
+ [WCF 数据服务 4.5](https://msdn.microsoft.com/library/73d2bec3-7c92-4110-b905-11bb0462357a)介绍如何使用 [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] 在实现[Open Data Protocol （OData）](https://go.microsoft.com/fwlink/?LinkID=182204)的 web 或 intranet 上部署数据服务。
 
  [Office 解决方案中的数据](https://msdn.microsoft.com/library/8478c095-864b-4ed3-8a70-1fc19b411c6a)包含指向一些主题的链接，这些主题说明了如何在 Office 解决方案中使用数据。 这包括有关面向架构的编程、数据缓存和服务器端数据访问的信息。
 

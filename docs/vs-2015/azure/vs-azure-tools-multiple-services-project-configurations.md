@@ -11,14 +11,14 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: 3dfea05e38930cc4613335fa5b5bccbe228b71fe
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 70217cc4c83a1f281e8a2fdebec404fa9757bf01
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62422720"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299026"
 ---
-# <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>使用多种服务配置来配置 Visual Studio 中的 Azure 项目
+# <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>在 Visual Studio 中配置 Azure 项目以使用多个服务配置
 
 Visual Studio 中的 Azure 云服务项目包括三个配置文件：`ServiceDefinition.csdef`、`ServiceConfiguration.Local.cscfg` 和 `ServiceConfiguration.Cloud.cscfg`。
 
@@ -57,7 +57,7 @@ Visual Studio 中的 Azure 云服务项目包括三个配置文件：`ServiceDef
 
 ## <a name="settings-page"></a>“设置”页
 
-在“设置”页上，可以将设置以名称/值对形式添加到配置中。 角色中运行的代码可以使用 [Azure 托管库](http://go.microsoft.com/fwlink?LinkID=171026)提供的类（具体而言，[GetConfigurationSettingValue](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleenvironment.getconfigurationsettingvalue.aspx) 方法），在运行时读取配置设置的值。
+在“设置”页上，可以将设置以名称/值对形式添加到配置中。 角色中运行的代码可以使用 [Azure 托管库](https://go.microsoft.com/fwlink?LinkID=171026)提供的类（具体而言，[GetConfigurationSettingValue](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleenvironment.getconfigurationsettingvalue.aspx) 方法），在运行时读取配置设置的值。
 
 ### <a name="configuring-a-connection-string-for-a-storage-account"></a>为存储帐户配置连接字符串
 
@@ -97,7 +97,7 @@ Web 角色通常在端口 80 上具有单个 HTTP 终结点。 另一方面，�
 
 ## <a name="certificates-page"></a>“证书”页
 
-“证书”属性页会将有关证书的信息添加到服务配置。 请注意，证书不会与服务一起打包；必须通过 [Azure 门户](http://portal.azure.com)将证书单独上传到 Azure。
+“证书”属性页会将有关证书的信息添加到服务配置。 请注意，证书不会与服务一起打包；必须通过 [Azure 门户](https://portal.azure.com)将证书单独上传到 Azure。
 
 在此添加证书会将有关证书的信息添加到服务配置。 证书不会随服务一起打包；必须通过 Azure 门户单独上传证书。
 

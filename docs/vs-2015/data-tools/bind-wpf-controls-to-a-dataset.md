@@ -18,12 +18,12 @@ caps.latest.revision: 35
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 70dfaa5671f589c02560a554a6d50611c5364c82
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f0ad4ea108cb0ec3b874c7f360be2e1f0e25ef45
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651188"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299417"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>将 WPF 控件绑定到数据集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,12 +42,12 @@ ms.locfileid: "72651188"
 
    [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
  你需要以下组件来完成本演练：
 
 - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
 
-- 对附加了 AdventureWorksLT 示例数据库的 SQL Server 或 SQL Server Express 的正在运行的实例的访问权限。 可以从[CodePlex](http://go.microsoft.com/fwlink/?linkid=87843)网站下载 AdventureWorksLT 数据库。
+- 对附加了 AdventureWorksLT 示例数据库的 SQL Server 或 SQL Server Express 的正在运行的实例的访问权限。 可以从[CodePlex](https://go.microsoft.com/fwlink/?linkid=87843)网站下载 AdventureWorksLT 数据库。
 
   事先了解以下概念也很有用，但对于完成本演练并不是必需的：
 
@@ -60,7 +60,7 @@ ms.locfileid: "72651188"
 ## <a name="create-the-project"></a>创建项目
  创建一个新的 WPF 项目。 该项目将显示产品记录。
 
-#### <a name="to-create-the-project"></a>要创建项目
+#### <a name="to-create-the-project"></a>创建项目
 
 1. 启动 Visual Studio。
 
@@ -120,7 +120,7 @@ ms.locfileid: "72651188"
 
      “TableAdapter 配置”向导随即打开。
 
-3. 在“输入 SQL 语句”页面上，在文本框中的 `SELECT` 语句后添加以下 WHERE 子句。
+3. 在“输入 SQL 语句”页面上，在文本框中的  **语句后添加以下 WHERE 子句**`SELECT`。
 
     ```
     WHERE ThumbnailPhotoFileName <> 'no_image_available_small.gif'
@@ -186,13 +186,13 @@ ms.locfileid: "72651188"
 7. 在“属性”窗口，选中“IsReadOnly”属性旁边的复选框。
 
 ## <a name="navigating-product-records"></a>导航产品记录
- 添加可让用户通过“\<”和“>”按钮来浏览产品记录的代码。
+ 添加可让用户通过“ **”和“\<”按钮来浏览产品记录的代码** **>** 。
 
 #### <a name="to-enable-users-to-navigate-product-records"></a>使用户能够导航产品记录
 
-1. 在设计器中，双击窗口窗面上的“<”按钮。
+1. 在设计器中，双击窗口窗面上的“ **”按钮<** 。
 
-     Visual Studio 打开代码隐藏文件，并为 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件创建新的 `backButton_Click` 事件处理程序。
+     Visual Studio 打开代码隐藏文件，并为 `backButton_Click` 事件创建新的 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件处理程序。
 
 2. 修改 `Window_Loaded` 事件处理程序，使 `ProductViewSource`、`AdventureWorksLTDataSet` 和 `AdventureWorksLTDataSetProductTableAdapter` 位于该方法的外部，并使它们在整个窗体中可访问。 仅将这些项声明为全局窗体，并将它们分配到 `Window_Loaded` 事件处理程序中，如下所示：
 
@@ -204,7 +204,7 @@ ms.locfileid: "72651188"
      [!code-csharp[Data_WPFDATASET#2](../snippets/csharp/VS_Snippets_ProTools/data_wpfdataset/cs/mainwindow.xaml.cs#2)]
      [!code-vb[Data_WPFDATASET#2](../snippets/visualbasic/VS_Snippets_ProTools/data_wpfdataset/vb/mainwindow.xaml.vb#2)]
 
-4. 返回到设计器，然后双击“>”按钮。
+4. 返回到设计器，然后双击“ **”按钮>** 。
 
 5. 将以下代码添加到 `nextButton_Click` 事件处理程序中：
 
@@ -218,7 +218,7 @@ ms.locfileid: "72651188"
 
 1. 在设计器中，双击“保存更改”按钮。
 
-     Visual Studio 打开代码隐藏文件，并为 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件创建新的 `saveButton_Click` 事件处理程序。
+     Visual Studio 打开代码隐藏文件，并为 `saveButton_Click` 事件创建新的 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件处理程序。
 
 2. 将以下代码添加到 `saveButton_Click` 事件处理程序中：
 
@@ -239,7 +239,7 @@ ms.locfileid: "72651188"
 
     - 文本框显示具有图片的第一条产品记录的数据。 此产品的产品 ID 为 713，名称为“Long-Sleeve Logo Jersey, S”。
 
-    - 可以单击“>”或“<”按钮来导航其他产品记录。
+    - 可以单击“ **”或“>”按钮来导航其他产品记录** **<** 。
 
 2. 在某一产品记录中，更改“大小”值，然后依次“保存更改”。
 

@@ -6,14 +6,15 @@ ms.assetid: 056b10a0-952b-4790-89e0-02aebe902e87
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 57065a7b258e8f9a2491332250cb38919bcb7910
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 191e54189677abc7d89d5f50064ceda6f2669f03
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62973794"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778942"
 ---
 # <a name="how-to-filter-report-views-from-the-summary-timeline"></a>如何：从摘要时间线中筛选报表视图
 可通过在“摘要”视图的时间线图中指定时间段来筛选显示在性能报告中的数据。 筛选报告时，会对分析数据文件进行重新分析，以仅包含指定的时间段。
@@ -24,4 +25,4 @@ ms.locfileid: "62973794"
 
      指定的区域会显示为阴影。
 
-2. 单击“按选定内容筛选”。
+2. 单击“按选定内容筛选”  。

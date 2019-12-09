@@ -11,12 +11,12 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e38e89ee5572f5ba552f3b6807a3edab5012a727
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 14911cda4cfc2be5fece6005a879427c10529bbc
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669587"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298914"
 ---
 # <a name="install-a-uml-profile"></a>安装 UML 配置文件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "72669587"
 
  收到使用配置文件创建的 UML 模型时，除非你安装相同配置文件，否则将不会显示某些属性。
 
- 在 Visual Studio 扩展内部分发配置文件。 扩展还可能包含其他功能，如菜单命令。 有关详细信息，请参阅[管理 Visual Studio 扩展](http://go.microsoft.com/fwlink/?LinkId=160728)。
+ 在 Visual Studio 扩展内部分发配置文件。 扩展还可能包含其他功能，如菜单命令。 有关详细信息，请参阅[管理 Visual Studio 扩展](https://go.microsoft.com/fwlink/?LinkId=160728)。
 
 ### <a name="to-install-a-uml-profile-on-your-computer"></a>在计算机上安装 UML 配置文件
 

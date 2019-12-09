@@ -11,12 +11,12 @@ caps.latest.revision: 33
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 27692c31c2c0f1c52ab026fb2d55e5d240839ff3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ac299f18e544ef4f3215707abbdc3d9e8d266de6
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654904"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299289"
 ---
 # <a name="define-a-custom-modeling-toolbox-item"></a>定义自定义建模工具箱项
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -139,7 +139,7 @@ ms.locfileid: "72654904"
 > 如果在单独试用关系图文件后开始使用 .tbxinfo 文件，则可能会发现工具箱同时包含新旧版本的工具箱项。 如果在 .tbxinfo 文件中键入了错误的关系图文件名称，也会发生此问题。 如果出现这种情况，请在 "工具箱" 的快捷菜单上选择 "**重置工具箱"** 。 将不会显示自定义工具箱项。 重新启动 Visual Studio，此时将显示正确的自定义项。
 
 ## <a name="Extension"></a>如何在 Visual Studio 扩展中分发工具箱项
- 可以通过将工具箱项打包到 Visual Studio 扩展（VSIX）中，将其分发给其他 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 用户。 可以将命令、配置文件和其他扩展打包到同一个 VSIX 文件。 有关详细信息，请参阅[部署 Visual Studio 扩展](http://go.microsoft.com/fwlink/?LinkId=160780)。
+ 可以通过将工具箱项打包到 Visual Studio 扩展（VSIX）中，将其分发给其他 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 用户。 可以将命令、配置文件和其他扩展打包到同一个 VSIX 文件。 有关详细信息，请参阅[部署 Visual Studio 扩展](https://go.microsoft.com/fwlink/?LinkId=160780)。
 
  通常使用 VSIX 项目模板来构建 Visual Studio 扩展。 若要执行此操作，必须已安装 [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]。
 
@@ -170,7 +170,7 @@ ms.locfileid: "72654904"
 
      **复制到输出目录** = **始终复制**
 
-     @No__t_1**内容** **生成操作**
+      = **内容** **生成操作**
 
      **在 VSIX 中包括** = **true**
 
@@ -187,7 +187,7 @@ ms.locfileid: "72654904"
         > [!NOTE]
         > 这并不是下拉列表中的选项。 你必须使用键盘进行输入。
 
-    - 文件**系统上的** **源** =  文件。
+    - 文件**系统上的** **源** = 文件。
 
     - **路径**= 你的 **.tbxinfo**文件，例如**MyTools. .tbxinfo**
 
@@ -214,13 +214,13 @@ ms.locfileid: "72654904"
 
 1. 创建包含一个或多个自定义工具的 Visual Studio 扩展项目。
 
-    在 **.tbxinfo**文件中，使用资源文件方法来定义工具的 `displayName`、工具箱 `tabName` 和工具提示。 创建在其中定义了这些字符串的资源文件，将该文件编译到一个程序集中，并从 tbxinfo 文件中对其进行引用。
+    在 **.tbxinfo**文件中，使用资源文件方法来定义工具的 `displayName`、工具箱 `tabName`和工具提示。 创建在其中定义了这些字符串的资源文件，将该文件编译到一个程序集中，并从 tbxinfo 文件中对其进行引用。
 
 2. 创建包含具有其他语言字符串的资源文件的附加程序集。
 
 3. 将每个附加程序集放在名称为对应语言区域性代码的文件夹中。 例如，将法语版本的程序集放在名为**fr**的文件夹中。
 
-4. 应使用非特定区域性代码（通常为两个字母），而不应使用特定区域性代码（例如 `fr-CA`）。 有关区域性代码的详细信息，请参阅[cultureinfo.getcultures 方法](http://go.microsoft.com/fwlink/?LinkId=160782)，它提供了区域性代码的完整列表。
+4. 应使用非特定区域性代码（通常为两个字母），而不应使用特定区域性代码（例如 `fr-CA`）。 有关区域性代码的详细信息，请参阅[cultureinfo.getcultures 方法](https://go.microsoft.com/fwlink/?LinkId=160782)，它提供了区域性代码的完整列表。
 
 5. 生成 Visual Studio 扩展并发布。
 

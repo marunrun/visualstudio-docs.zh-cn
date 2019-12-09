@@ -13,17 +13,17 @@ caps.latest.revision: 30
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 165214dff519e7db94d5ee8f3a1a6d86856cd4a1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f27fede436ea6cabe0aab6480cd4841299c42293
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72609671"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302780"
 ---
 # <a name="model-user-requirements"></a>建立用户需求模型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-通过绘制有关用户的活动和你的系统在帮助他们实现自己目标上所起到的作用的关系图，Visual Studio 可帮助你了解你的用户，并与他们展开讨论、沟通其要求。 需求模型是一组这样的关系图，每一张图都将重点放在用户需求的不同方面。 有关视频演示，请参阅： [业务域建模](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-3-Modeling-the-Business-Domain/)。
+通过绘制有关用户的活动和你的系统在帮助他们实现自己目标上所起到的作用的关系图，Visual Studio 可帮助你了解你的用户，并与他们展开讨论、沟通其要求。 需求模型是一组这样的关系图，每一张图都将重点放在用户需求的不同方面。 有关视频演示，请参阅： [业务域建模](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain)。
 
  若要查看支持每种类型的模型的 Visual Studio 版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
@@ -138,7 +138,7 @@ ms.locfileid: "72609671"
 |概念类图上的元素|[UML 类图：参考](../modeling/uml-class-diagrams-reference.md)|
 |如何从概念类开发代码|[应用体系结构建模](../modeling/model-your-app-s-architecture.md)|
 
- 在概念类图中，通常在关联上放置箭头来表示可导航性没什么用处。 这是因为此关系图并不表示实现。 关联表示现实世界对象间的关系。 下面的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展将无方向箭头当成默认选择： [示例：UML 域建模功能](http://go.microsoft.com/fwlink/?LinkId=213849)。
+ 在概念类图中，通常在关联上放置箭头来表示可导航性没什么用处。 这是因为此关系图并不表示实现。 关联表示现实世界对象间的关系。 下面的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展将无方向箭头当成默认选择： [示例：UML 域建模功能](https://go.microsoft.com/fwlink/?LinkId=213849)。
 
 ## <a name="BusinessRules"></a> Showing Business Rules
  业务规则是一个不与特定用例相关联的要求，应在整个系统中进行观察。
@@ -239,4 +239,4 @@ ms.locfileid: "72609671"
   通过检查不同关系图提供的视图之间的关系，可以快速理解用户使用的主要概念，并帮助他们理解他们需要从系统中获得什么。 还可以更好地理解利益干系人最不确定的需求。 可以计划在项目的早期阶段至少以简化的形式开发这些功能，从而允许用户体验这些功能。
 
 ## <a name="see-also"></a>请参阅
- [编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)[从模型开发测试](../modeling/develop-tests-from-a-model.md)[使用开发过程中](../modeling/use-models-in-your-development-process.md)的模型使用模型[应用体系结构](../modeling/model-your-app-s-architecture.md)[示例 Vs 扩展： UML 域建模功能](http://go.microsoft.com/fwlink/?LinkId=213849)[示例 vs extension： Color uml元素（按构造型](http://go.microsoft.com/fwlink/?LinkID=213841) [）示例 vs 扩展：将 Uml 元素链接到关系图、文件和其他元素](http://go.microsoft.com/fwlink/?LinkID=213813)[示例 VS 扩展：对齐 uml 关系图上的形状](http://go.microsoft.com/fwlink/?LinkID=213809)[视频：对业务域建模](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-3-Modeling-the-Business-Domain/)
+ [编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)[从模型开发测试](../modeling/develop-tests-from-a-model.md)[使用开发过程模型中](../modeling/use-models-in-your-development-process.md)的模型使用模型[应用的体系结构](../modeling/model-your-app-s-architecture.md)[示例 Vs 扩展： Uml 域建模功能](https://go.microsoft.com/fwlink/?LinkId=213849)[示例 vs 扩展：按构造型显示的 Uml 元素](https://go.microsoft.com/fwlink/?LinkID=213841)示例 vs 扩展：[将 Uml 元素链接到关系图、文件和其他元素](https://go.microsoft.com/fwlink/?LinkID=213813)[示例 Vs 扩展：对齐 uml 关系图上](https://go.microsoft.com/fwlink/?LinkID=213809)[的形状视频：对业务域建模](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain)

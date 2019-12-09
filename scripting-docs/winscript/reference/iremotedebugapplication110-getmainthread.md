@@ -36,6 +36,6 @@ HRESULT GetMainThread([out] IRemoteDebugApplicationThread **ppThread);
  `ppThread`  
  弄主[IRemoteDebugApplicationThread 接口](../../winscript/reference/iremotedebugapplicationthread-interface.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IRemoteDebugApplication 接口](../../winscript/reference/iremotedebugapplication-interface.md)   
  [IRemoteDebugApplication110 接口](../../winscript/reference/iremotedebugapplication110-interface.md)

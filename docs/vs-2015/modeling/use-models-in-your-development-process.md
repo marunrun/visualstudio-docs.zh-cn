@@ -11,17 +11,17 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d3bc95e74c9e80596ea46efa42abce5c4ed48fa8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5d5284bb163f474d67324c395a4342ccef6f8561
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659443"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298263"
 ---
 # <a name="use-models-in-your-development-process"></a>在你的开发过程中使用模型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在 Visual Studio 中，你可以使用模型帮助你理解和更改系统、应用程序或组件。 模型能帮助你可视化系统工作的环境、阐明用户需求、定义你系统的体系结构、分析代码并确保你的代码符合要求。 请参阅第[9 频道视频：通过建模改进体系结构](http://go.microsoft.com/fwlink/?LinkID=252078)。
+在 Visual Studio 中，你可以使用模型帮助你理解和更改系统、应用程序或组件。 模型能帮助你可视化系统工作的环境、阐明用户需求、定义你系统的体系结构、分析代码并确保你的代码符合要求。 请参阅第[9 频道视频：通过建模改进体系结构](https://go.microsoft.com/fwlink/?LinkID=252078)。
 
  若要查看支持每种类型的模型的 Visual Studio 版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
@@ -132,10 +132,10 @@ ms.locfileid: "72659443"
 
 |**类别**|**Links**|
 |------------------|---------------|
-|**视频**|![链接到视频](../data-tools/media/playvideo.gif "PlayVideo") [MSDN 如何实现视频：如何创建和使用 UML 模型和关系图（Visual Studio 2010 旗舰版）](http://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![视频](../data-tools/media/playvideo.gif "PlayVideo")[通道9： UML 与 Visual Studio 2010 的](http://go.microsoft.com/fwlink/?LinkID=201106)链接<br /><br /> ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo") [MSDN 如何实现系列： UML 工具和扩展性（Visual Studio 2010 旗舰版）](http://go.microsoft.com/fwlink/?LinkID=214467)|
-|**论坛**|-   [Visual Studio 可视化和建模工具](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio 可视化和建模 SDK（DSL 工具）](http://go.microsoft.com/fwlink/?LinkId=184721)|
-|**Blogs**|[Visual Studio ALM + Team Foundation Server 博客](http://go.microsoft.com/fwlink/?LinkID=201340)|
-|**技术文章和日志**|[MSDN 体系结构中心](http://go.microsoft.com/fwlink/?LinkId=201343)<br /><br /> [Visual Studio 体系结构工具指南](../modeling/visual-studio-architecture-tooling-guidance.md)|
+|**视频**|![链接到视频](../data-tools/media/playvideo.gif "PlayVideo") [MSDN 如何实现视频：如何创建和使用 UML 模型和关系图（Visual Studio 2010 旗舰版）](https://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![视频](../data-tools/media/playvideo.gif "PlayVideo")[通道9： UML 与 Visual Studio 2010 的](https://go.microsoft.com/fwlink/?LinkID=201106)链接<br /><br /> ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo") [MSDN 如何实现系列： UML 工具和扩展性（Visual Studio 2010 旗舰版）](https://go.microsoft.com/fwlink/?LinkID=214467)|
+|**论坛**|-   [Visual Studio 可视化和建模工具](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio 可视化和建模 SDK（DSL 工具）](https://go.microsoft.com/fwlink/?LinkId=184721)|
+|**博客**|[Visual Studio ALM + Team Foundation Server 博客](https://go.microsoft.com/fwlink/?LinkID=201340)|
+|**技术文章和日志**|[MSDN 体系结构中心](https://go.microsoft.com/fwlink/?LinkId=201343)<br /><br /> [Visual Studio 体系结构工具指南](../modeling/visual-studio-architecture-tooling-guidance.md)|
 
 ## <a name="see-also"></a>请参阅
  [在敏捷开发中使用模型](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)[创建应用模型的](../modeling/create-models-for-your-app.md)[模型用户需求](../modeling/model-user-requirements.md)[模型应用的体系结构](../modeling/model-your-app-s-architecture.md)[从模型结构开发测试](../modeling/develop-tests-from-a-model.md)[建模解决方案](../modeling/structure-your-modeling-solution.md)

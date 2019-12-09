@@ -13,12 +13,12 @@ ms.assetid: ba237712-f8c4-4d13-854b-ab4a16afa309
 caps.latest.revision: 128
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 90cc4849567d744c5380076bf8c1773254cda618
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d7d488581aefee150b1a186eaba48576f0b8146d
+ms.sourcegitcommit: 08105865a9643fb20dce9b8b7580452cfbbe7ee7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657051"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74537951"
 ---
 # <a name="welcome-to-visual-studio-2015"></a>欢迎使用 Visual Studio 2015
 [!INCLUDE[vs2017banner](includes/vs2017banner.md)]
@@ -30,13 +30,13 @@ ms.locfileid: "72657051"
 >
 > 单击此处，了解 [Visual Studio 2017](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes) 的发行说明。
 
- 免费下载 [Visual Studio 社区](http://go.microsoft.com/fwlink/?LinkId=517106) 以立即开始编码。 如果要进行跨平台开发，请确保安装可选包。 （可以通过 [其他 Visual Studio 版本](http://www.visualstudio.com/products/compare-visual-studio-products-vs)获得更多功能。）
+ 免费下载 [Visual Studio 社区](https://go.microsoft.com/fwlink/?LinkId=517106) 以立即开始编码。 如果要进行跨平台开发，请确保安装可选包。 （可以通过 [其他 Visual Studio 版本](https://visualstudio.microsoft.com/vs/compare/)获得更多功能。）
 
  立即投入，创建新项目，然后开始编写代码。 选择要创建的应用类型。 或者，可以 [浏览](./ide/visual-studio-ide.md) Visual Studio IDE 以熟悉工具。
 
  同时，别忘了浏览我们的 [代码库](https://code.msdn.microsoft.com/) ，以找到可帮助你更快编写应用的示例！
 
- 可以通过从 [Visual Studio 下载](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)页面下载安装 Visual Studio 2015。 若要了解有关安装过程的详细信息，请参阅[安装 Visual Studio 2015](./install/install-visual-studio-2015.md)。
+ 可以通过从 [Visual Studio 下载](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)页面下载安装 Visual Studio 2015。 若要了解有关安装过程的详细信息，请参阅[安装 Visual Studio 2015](./install/install-visual-studio-2015.md)。
 
 ## <a name="extend-visual-studio"></a>扩展 Visual Studio
  添加自己的 Visual Studio 扩展以包含在编码时经常使用的工具或脚本。 可以创建自定义菜单项和工具窗口，以将自己的工具集成到 Visual Studio IDE 中。 可以扩展 Visual Studio 编辑器以分析和修复代码，或添加新项目类型以恰好包含所需内容。
@@ -74,14 +74,14 @@ ms.locfileid: "72657051"
 - 将 Office 365 REST API 集成到你自己的应用中以连接到云中存储的数据。 有关详细信息，请参阅 [这些示例](https://github.com/OfficeDev/?utf8=%E2%9C%93&query=o365)。
 
 ## <a name="write-great-web-apps-with-aspnet"></a>使用 ASP.NET 编写优秀的 Web 应用
- [ASP.NET 5](http://www.asp.net/vnext/overview/aspnet-vnext/aspnet-5-overview) 是 MVC、WebAPI 和 SignalR 的一个重大更新，并且在 Windows、Mac 和 Linux 上运行。  ASP.NET 5 旨在完全为你提供可组合的精益 .NET 堆栈以便生成基于云的现代应用 Web 程序和服务。
+ [ASP.NET 5](https://docs.microsoft.com/aspnet/core/?view=aspnetcore-3.0) 是 MVC、WebAPI 和 SignalR 的一个重大更新，并且在 Windows、Mac 和 Linux 上运行。  ASP.NET 5 旨在完全为你提供可组合的精益 .NET 堆栈以便生成基于云的现代应用 Web 程序和服务。
 
 ## <a name="build-test-and-manage-your-code"></a>生成、测试和管理你的代码
 
 ### <a name="check-in-your-code"></a>签入你的代码
  如果你在团队中工作，则还需要共享代码的最新版本，以便团队中的每个人都使用相同的基本代码。 Visual Studio 与 Visual Studio Team Services 或 Team Foundation Server 无缝集成，以使用 Git 或 TFVC（Team Foundation 版本控制）提供版本控制。 使用 Visual Studio Team Services 可将代码存储在云中，而无需维护本地服务器。 如果需要具有本地服务器，请使用 Team Foundation Server。 每次创建代码项目时，你都可以选择将其添加到版本控制。 了解最适合于需求的版本控制系统： [使用版本控制](https://msdn.microsoft.com/library/33267cee-fe5f-4aa3-b2cd-6d22ceace314)。
 
-### <a name="build-your-app"></a>生成应用程序
+### <a name="build-your-app"></a>生成您的应用程序
  你可以 [在本地生成应用](./ide/compiling-and-building-in-visual-studio.md) 并确保它正常运行。 然后使用 [调试工具](./debugger/debugging-in-visual-studio.md) 修复与应用有关的任何问题。 或者，可以在共享生成服务器上或在云中生成项目。 自动执行生成过程以生成团队中的开发人员签入到版本控制的代码。 例如，您可以在夜间或每次签入此代码时生成一个或多个项目。
 
 ### <a name="test-your-app"></a>测试应用程序
@@ -96,7 +96,7 @@ ms.locfileid: "72657051"
 
 |||||
 |-|-|-|-|
-|[Visual Studio 2015 中的新增功能](./what-s-new-in-visual-studio-2015.md)|[Visual C# 的新增功能](https://msdn.microsoft.com/library/9f18dc26-27fa-4603-a639-b573f07a117b)|[.NET Framework 4.6 的新增功能](https://msdn.microsoft.com/library/1d971dd7-10fc-4692-8dac-30ca308fc0fa)|[ALM 的新增功能](https://msdn.microsoft.com/54b98a53-6083-4303-869a-8063d8fae938)|
+|[Visual Studio 2015 中的新增功能](./what-s-new-in-visual-studio-2015.md)|[Visual C# 的新增功能](https://msdn.microsoft.com/library/9f18dc26-27fa-4603-a639-b573f07a117b)|[.NET Framework 4.6 的新增功能](https://msdn.microsoft.com/library/1d971dd7-10fc-4692-8dac-30ca308fc0fa)|[ALM 的新增功能](/azure/devops/server/whats-new)|
 |[C++ 的新增功能](https://msdn.microsoft.com/library/1cc09fad-85a2-43c2-b022-bb99f5fe0ad7)|[Visual Basic 的新增功能](https://msdn.microsoft.com/library/d7e97396-7f42-4873-a81c-4ebcc4b6ca02)|[JavaScript 的新增功能](javascript/javascript-in-visual-studio.md#whats-new-in-javascript)||
 |[Python](./python/getting-started-with-python.md)||||
 

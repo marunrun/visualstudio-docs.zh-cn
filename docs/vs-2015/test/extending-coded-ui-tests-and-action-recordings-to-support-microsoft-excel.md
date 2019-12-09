@@ -8,12 +8,12 @@ ms.assetid: 6b0f72a4-70ca-4e55-b236-2ea1034fd8a7
 caps.latest.revision: 32
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a48c01203d2e951e917482de3c0d9c2bec29ae01
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4e8e167f42a2f00553f1462db058e1b4e6d81b0f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660569"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302558"
 ---
 # <a name="extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel"></a>扩展编码的 UI 测试和操作录制以支持 Microsoft Excel
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "72660569"
 
 - SampleTestProject
 
-  从此[博客文章](http://go.microsoft.com/fwlink/?LinkID=185592)获取示例。
+  从此[博客文章](https://go.microsoft.com/fwlink/?LinkID=185592)获取示例。
 
 > [!NOTE]
 > 该示例旨在与 Microsoft Excel 2010 配合使用。 该示例可以与其他版本的 Microsoft Excel 一起使用，但目前不支持如此。
@@ -70,7 +70,7 @@ ms.locfileid: "72660569"
 ### <a name="testing-excel-with-the-sampletestproject"></a>使用 SampleTestProject 测试 Excel
  可以在提供的测试项目（使用你可能没有的特定 Excel 版本）中运行测试，或创建你自己的测试项目并记录你自己的测试。 有关详细信息，请参阅[创建编码的 UI 测试](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider>
 - <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement>

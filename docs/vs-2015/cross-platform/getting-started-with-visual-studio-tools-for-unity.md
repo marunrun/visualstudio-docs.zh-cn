@@ -9,12 +9,12 @@ caps.latest.revision: 12
 author: conceptdev
 ms.author: crdun
 manager: jillfra
-ms.openlocfilehash: 4532b7e566bbd315d9acbdef43198e0f91f5f195
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: f110b8d6f7ab05d5a1b6942cd9ec599a8d8619b7
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263557"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299827"
 ---
 # <a name="getting-started-with-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity 入门
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -24,12 +24,12 @@ ms.locfileid: "66263557"
 > [!IMPORTANT]
 > Unity 5.2 增加了对 Visual Studio Tools for Unity 2.1 的内置支持，从而简化了项目设置。 若要利用这一支持，你需要在 Windows 上使用 Unity version 5.2.0 或更高版本以及 Visual Studio Tools for Unity 2.1 或更高版本。  
   
-## <a name="prerequisites"></a>系统必备  
+## <a name="prerequisites"></a>先决条件  
  若要使用 Visual Studio Tools for Unity，你需要：  
   
 - 支持扩展的 **Visual Studio** 版本，例如，Visual Studio Community、Professional、Premium 或 Enterprise. 你可以免费下载 Visual Studio Community。  
   
-     [下载 Visual Studio Community](http://www.visualstudio.com/downloads/download-visual-studio-vs)  
+     [下载 Visual Studio Community](https://www.visualstudio.com/downloads/download-visual-studio-vs)  
   
 - **Unity** 4.0.0 版或更高版本； **Unity** 5.2.0 版或更高版本，以利用对 Visual Studio Tools for Unity 2.1 或更高版本的内置支持。  
   
@@ -71,16 +71,16 @@ ms.locfileid: "66263557"
  [教程 -“Unity 学习”页](https://learn.unity.com/tutorials)  
   
 #### <a name="2---configure-unity-editor-to-use-visual-studio-tools-for-unity"></a>2 - 配置 Unity 编辑器以使用 Visual Studio Tools for Unity  
- 若要启用你的项目以使用 Visual Studio Tools for Unity，只需将 Visual Studio 设置为其外部脚本编辑器。 在 Unity 编辑器中的主菜单上，选择“编辑，首选项”  ；然后，在“Unity 首选项”  对话框中，选择“外部工具”  。 接下来，将“外部脚本编辑器”  属性设置为你想要使用的 Visual Studio 的版本（必须为此版本的 Visual Studio 安装 Visual Studio Tools for Unity），并确保已设置“编辑器连接”  属性。  
+ 若要启用你的项目以使用 Visual Studio Tools for Unity，只需将 Visual Studio 设置为其外部脚本编辑器。 在 Unity 编辑器中的主菜单上，选择“编辑，首选项”；然后，在“Unity 首选项” 对话框中，选择“外部工具”。 接下来，将“外部脚本编辑器” 属性设置为你想要使用的 Visual Studio 的版本（必须为此版本的 Visual Studio 安装 Visual Studio Tools for Unity），并确保已设置“编辑器连接” 属性。  
   
- 若要确保现在已启用对 Visual Studio Tools for Unity 的内置支持，请参阅“关于 Unity”  对话框。 In the Unity editor, on the main menu, choose  。如果已安装并正确配置 Visual Studio Tools for Unity，你将看到“关于 Unity”  对话框。  
+ 若要确保现在已启用对 Visual Studio Tools for Unity 的内置支持，请参阅“关于 Unity” 对话框。 In the Unity editor, on the main menu, choose 。如果已安装并正确配置 Visual Studio Tools for Unity，你将看到“关于 Unity” 对话框。  
   
- 最后，请确保已通过“生成设置”  页设置了生成目标并且已启用“脚本调试”  。  
+ 最后，请确保已通过“生成设置” 页设置了生成目标并且已启用“脚本调试” 。  
   
- ![配置 Unity 生成设置进行调试。](../cross-platform/media/vstu-debugging-build-settings.png "vstu_debugging_build_settings")  
+ ![为调试配置 Unity 生成设置。](../cross-platform/media/vstu-debugging-build-settings.png "vstu_debugging_build_settings")  
   
 #### <a name="3---launch-visual-studio-from-the-unity-editor"></a>3 - 从 Unity 编辑器启动 Visual Studio  
- 从 Unity 5.2 开始，若要启动 Visual Studio 或配置 Visual Studio Tools for Unity，不再需要“Visual Studio Tools”  扩展菜单。 相反，一旦将 Visual Studio 设置为你的外部脚本编辑器，只需从 Unity 编辑器中选择脚本文件，你的代码便会在 Visual Studio 中打开。  
+ 从 Unity 5.2 开始，若要启动 Visual Studio 或配置 Visual Studio Tools for Unity，不再需要“Visual Studio Tools” 扩展菜单。 相反，一旦将 Visual Studio 设置为你的外部脚本编辑器，只需从 Unity 编辑器中选择脚本文件，你的代码便会在 Visual Studio 中打开。  
   
 ### <a name="previous-versions-of-unity-pre-52"></a>Unity 的早期版本（5.2 版之前）  
  在 Unity 5.2 之前的版本中，没有对 Visual Studio Tools for Unity 的内置支持。 相反，每个项目必须导入 Visual Studio Tools unitypackage，并配置其他项目设置以便使用 Visual Studio Tools for Unity。  
@@ -93,23 +93,23 @@ ms.locfileid: "66263557"
  [教程 -“Unity 学习”页](https://learn.unity.com/tutorials)  
   
 #### <a name="2---configure-unity-editor-to-use-visual-studio-tools-for-unity"></a>2 - 配置 Unity 编辑器以使用 Visual Studio Tools for Unity  
- 如果你是从现有的 Unity 项目开始或未在创建项目时导入 Visual Studio Tools Unity unitypackage，则需立即导入 unitypackage。 在 Unity 编辑器中的主菜单上，选择“资产、导入包、Visual Studio 2015 Tools”  （应能看到适用于已安装的 Visual Studio 版本的一个选项）。  
+ 如果你是从现有的 Unity 项目开始或未在创建项目时导入 Visual Studio Tools Unity unitypackage，则需立即导入 unitypackage。 在 Unity 编辑器中的主菜单上，选择“资产、导入包、Visual Studio 2015 Tools” （应能看到适用于已安装的 Visual Studio 版本的一个选项）。  
   
  ![将 VSTU 包导入 Unity 项目。](../cross-platform/media/vstu-configure-unity-import-vstu.png "vstu_configure_unity_import_vstu")  
   
- 最后，请确保已通过“生成设置”  页设置了生成目标并且已启用“脚本调试”  。  
+ 最后，请确保已通过“生成设置” 页设置了生成目标并且已启用“脚本调试” 。  
   
- ![配置 Unity 生成设置进行调试。](../cross-platform/media/vstu-debugging-build-settings.png "vstu_debugging_build_settings")  
+ ![为调试配置 Unity 生成设置。](../cross-platform/media/vstu-debugging-build-settings.png "vstu_debugging_build_settings")  
   
 #### <a name="3---launch-visual-studio-from-unity-editor"></a>3 - 从 Unity 编辑器启动 Visual Studio  
  最后一步是从 Unity 启动 Visual Studio。 这将为你的项目创建一个 Visual Studio 解决方案，然后将在 Visual Studio 中打开。  
   
- 在 Unity 编辑器的主菜单上，选择“Visual Studio 工具，在 Visual Studio 中打开”  。  
+ 在 Unity 编辑器的主菜单上，选择“Visual Studio 工具，在 Visual Studio 中打开”。  
   
- ![在 Visual Studio 中打开 Unity 项目。](../cross-platform/media/vstu-configure-open-in-visual-studio.png "vstu_configure_open_in_visual_studio")  
+ ![在 Visual Studio 中打开 unity 项目。](../cross-platform/media/vstu-configure-open-in-visual-studio.png "vstu_configure_open_in_visual_studio")  
   
 ## <a name="next-steps"></a>后续步骤  
- 若要了解如何在 Visual Studio 中使用和调试 Unity 项目，请参阅[使用 Visual Studio Tools for Unity](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md)。  
+ 要学习如何在 Visual Studio 中使用和调试 Unity 项目，请参阅 [Using Visual Studio Tools for Unity](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [Unity 主页](http://unity3d.com)
+ [Unity 主页](https://unity.com/)

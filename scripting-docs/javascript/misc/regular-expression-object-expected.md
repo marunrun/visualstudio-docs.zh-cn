@@ -22,12 +22,12 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72573706"
 ---
 # <a name="regular-expression-object-expected"></a>应为正则表达式对象
-试图对 `RegExp` 以外的类型的对象调用**RegExp. toString**或**valueOf**方法的方法。 此类调用的对象必须是 `RegExp` 类型。  
+试图对 `RegExp`以外的类型的对象调用**RegExp. toString**或**valueOf**方法的方法。 此类调用的对象必须是 `RegExp`类型。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 在 `RegExp` 类型的对象上只调用**RegExp**或**valueOf**方法。  
+- 在 `RegExp`类型的对象上只调用**RegExp**或**valueOf**方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [正则表达式对象](../../javascript/reference/regular-expression-object-javascript.md)   
  [正则表达式语法（JavaScript）](https://msdn.microsoft.com/library/1400241x)

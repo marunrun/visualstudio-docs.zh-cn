@@ -39,16 +39,16 @@ HRESULT onDetach();
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
  此方法处理一个事件，该事件表明调试应用程序节点对象已从父节点分离。  
   
- @No__t_0 接口的实施者引发此事件。  
+ `IDebugApplicationNode` 接口的实施者引发此事件。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugApplicationNodeEvents 接口](../../winscript/reference/idebugapplicationnodeevents-interface.md)   
- [IDebugApplicationNodeEvents：： onAttach](../../winscript/reference/idebugapplicationnodeevents-onattach.md)    
+ [IDebugApplicationNodeEvents::onAttach](../../winscript/reference/idebugapplicationnodeevents-onattach.md)   
  [IDebugApplicationNode 接口](../../winscript/reference/idebugapplicationnode-interface.md)

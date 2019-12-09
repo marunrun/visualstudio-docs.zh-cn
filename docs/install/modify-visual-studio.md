@@ -18,12 +18,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: a97db7e6b81eb9e807902d1b9bd0ea8ee6efa55e
-ms.sourcegitcommit: 0bd63f3bc429ae059b9df6e45c6b8dcae6152940
+ms.openlocfilehash: 628d8fe5d8374d0cb203e6953f63bd63d77d0c58
+ms.sourcegitcommit: 3ba2968a4b44643482aadad4d50e1a55bb36b136
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70026490"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74566999"
 ---
 # <a name="modify-visual-studio-by-adding-or-removing-workloads-and-components"></a>通过添加或删除工作负载和组件修改 Visual Studio
 
@@ -46,7 +46,17 @@ ms.locfileid: "70026490"
 
 ## <a name="modify-workloads"></a>修改工作负载
 
- [工作负载](https://visualstudio.microsoft.com/vs/visual-studio-workloads/)包含所用编程语言或平台必需的功能。 可以使用工作负载来修改 Visual Studio，以便在需要执行某项操作时为其提供支持。
+::: moniker range="vs-2017"
+
+ [工作负载](https://visualstudio.microsoft.com/vs/support/selecting-workloads-visual-studio-2017/)包含所用编程语言或平台必需的功能。 可以使用工作负载来修改 Visual Studio，以便在需要执行某项操作时为其提供支持。
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+ 工作负载包含所用编程语言或平台必需的功能。 可以使用工作负载来修改 Visual Studio，以便在需要执行某项操作时为其提供支持。
+
+::: moniker-end
 
 >[!NOTE]
 > 以下过程假定你具有 Internet 连接。
@@ -59,7 +69,7 @@ ms.locfileid: "70026490"
 
      例如，在运行 Windows 10 的计算机上，选择“开始”，然后滚动到字母“V”，它作为“Visual Studio 安装程序”在那里列出    。
 
-     ![Visual Studio 安装程序](media/vs2017-locate-the-visual-studio-installer.PNG "查找 Microsoft Visual Studio 安装程序")
+     ![Visual Studio 安装程序](media/vs2017-locate-the-visual-studio-installer.PNG "找到 Microsoft Visual Studio 安装程序")
 
      >[!TIP]
      >对于某些计算机，Visual Studio 安装程序可能列在字母 **“M”** 下，即 **Microsoft Visual Studio 安装程序**。<br/><br/> 或者，可以在以下位置找到 Visual Studio 安装程序：`C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
@@ -74,7 +84,7 @@ ms.locfileid: "70026490"
 
 1. 从“工作负载”  屏幕中，选择或取消选择要安装或卸载的工作负载。
 
-    ![Visual Studio 2017 设置对话框](media/vs2017-modify-workloads.PNG "选择 Visual Studio 2017 中的工作负载")
+    ![Visual Studio 2017 安装对话框](media/vs2017-modify-workloads.PNG "在 Visual Studio 2017 中选择工作负载")
 
 1. 再一次选择“修改”  。
 
@@ -88,7 +98,7 @@ ms.locfileid: "70026490"
 
      例如，在运行 Windows 10 的计算机上，选择“开始”，然后滚动到字母“V”，它作为“Visual Studio 安装程序”在那里列出    。
 
-     ![从 Windows 打开 Visual Studio 安装程序](media/vs-2019/vs-installer-windows-start.png "打开 Visual Studio 安装程序")
+     ![在 Windows 中打开 Visual Studio 安装程序](media/vs-2019/vs-installer-windows-start.png "打开 Visual Studio 安装程序")
 
      > [!NOTE]
      > 还可以在以下位置中找到 Visual Studio 安装程序：
@@ -103,11 +113,11 @@ ms.locfileid: "70026490"
 
 1. 在“工作负载”选项卡中，选择或取消选择要安装或卸载的工作负载  。
 
-    ![Visual Studio 2019 设置对话框](media/vs-2019/vs-installer-modify-workloads.png "选择 Visual Studio 2019 中的工作负载")
+    ![Visual Studio 2019 安装对话框](media/vs-2019/vs-installer-modify-workloads.png "在 Visual Studio 2019 中选择工作负载")
 
 1. 选择是要接受默认的“下载时安装”选项还是“全部下载后再安装”选项   。
 
-    ![Visual Studio 2019 安装选项](media/vs-2019/vs-installer-choose-install-or-download.png "选择下载时安装或先下载稍后再安装")
+    ![Visual Studio 2019 安装选项](media/vs-2019/vs-installer-choose-install-or-download.png "选择下载时安装，或者先下载然后再安装")
 
     如果想要先下载稍后再安装，则“全部下载后再安装”选项很有用。
 
@@ -119,13 +129,12 @@ ms.locfileid: "70026490"
 
 ## <a name="modify-individual-components"></a>修改各个组件
 
-如果不想通过安装[工作负载](https://visualstudio.microsoft.com/vs/visual-studio-workloads/)来自定义 Visual Studio 安装，请从 Visual Studio 安装程序中选择“单个组件”选项卡，选择所需组件，然后按提示操作  。
+如果不想通过安装工作负载来自定义 Visual Studio 安装，请从 Visual Studio 安装程序中选择“各个组件”选项卡，选择所需组件，然后按提示操作  。
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>请参阅
 
-* [了解有关 Visual Studio 工作负载的详细信息](https://visualstudio.microsoft.com/vs/visual-studio-workloads/)
 * [Visual Studio 工作负载和组件 ID 列表](workload-and-component-ids.md)
 * [更新 Visual Studio](update-visual-studio.md)
 * [更新基于网络的 Visual Studio 安装](update-a-network-installation-of-visual-studio.md)

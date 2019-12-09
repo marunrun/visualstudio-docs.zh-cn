@@ -3,15 +3,15 @@ title: Parasoft Virtualize/SOAtest Professional 桌面权益 | Microsoft 文档
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/31/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 description: 了解如何激活 Visual Studio 订阅中包含的 Parasoft Virtualize/SOA Test Professional 订阅。
-ms.openlocfilehash: a1bd6525df65ee8cc0c9f3dd9dfd60673dbb6df1
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: 036b265f9ca1accc7027477abfc27ce4e66c4033
+ms.sourcegitcommit: 5c9ca18eadc7ed0ed095cc5a3e1df40bbc13e70c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816474"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74161938"
 ---
 # <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Parasoft Virtualize/SOAtest Professional 桌面
 
@@ -73,7 +73,9 @@ ms.locfileid: "72816474"
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准）   | VL、Azure、零售、所选 NFR<sup>1</sup> | 6 个月       |  是       |
+| 带有 GitHub Enterprise 的 Visual Studio Enterprise | VL | 6 个月       |  是       |
 | Visual Studio Professional（标准） | VL、Azure、零售                                       | 不可用                                                           |NA         |
+| 带有 GitHub Enterprise 的 Visual Studio Professional | VL                                      | 不可用                                                           |NA         |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 不可用                                                           |NA         |
 | MSDN 平台（标准）                                          | VL、零售                                              | 不可用                                                           |NA         |
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure                                       | 不可用                                                           |NA|

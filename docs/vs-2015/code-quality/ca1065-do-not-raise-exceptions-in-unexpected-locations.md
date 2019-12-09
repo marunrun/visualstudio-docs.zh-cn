@@ -15,12 +15,12 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 4b49ea9c293128efd400a1aa22d78ae4ee945092
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 439c6b5fc30be2e76eb6c0b6a44b1ec5226633b1
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663601"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295942"
 ---
 # <a name="ca1065-do-not-raise-exceptions-in-unexpected-locations"></a>CA1065：不要在意外的位置引发异常
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "72663601"
 |-|-|
 |TypeName|DoNotRaiseExceptionsInUnexpectedLocations|
 |CheckId|CA1065|
-|类别|Microsoft. Design|
+|类别|Microsoft.Design|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
@@ -65,9 +65,9 @@ ms.locfileid: "72663601"
 
  允许从属性 get 方法中引发以下异常：
 
-- <xref:System.InvalidOperationException?displayProperty=fullName> 以及所有派生项（包括 <xref:System.ObjectDisposedException?displayProperty=fullName>）
+- <xref:System.InvalidOperationException?displayProperty=fullName> 和所有派生（包括 <xref:System.ObjectDisposedException?displayProperty=fullName>）
 
-- <xref:System.NotSupportedException?displayProperty=fullName> 和所有派生项
+- <xref:System.NotSupportedException?displayProperty=fullName> 和所有派生
 
 - <xref:System.ArgumentException?displayProperty=fullName> （仅从索引 get 获取）
 
@@ -78,9 +78,9 @@ ms.locfileid: "72663601"
 
  允许从事件 accesor 引发以下异常：
 
-- <xref:System.InvalidOperationException?displayProperty=fullName> 以及所有派生项（包括 <xref:System.ObjectDisposedException?displayProperty=fullName>）
+- <xref:System.InvalidOperationException?displayProperty=fullName> 和所有派生（包括 <xref:System.ObjectDisposedException?displayProperty=fullName>）
 
-- <xref:System.NotSupportedException?displayProperty=fullName> 和所有派生项
+- <xref:System.NotSupportedException?displayProperty=fullName> 和所有派生
 
 - <xref:System.ArgumentException> 和派生
 
@@ -89,20 +89,20 @@ ms.locfileid: "72663601"
 
 - <xref:System.Object.Equals%2A?displayProperty=fullName>
 
-- [M:IEquatable.Equals](http://go.microsoft.com/fwlink/?LinkId=113472)
+- [M:IEquatable.Equals](https://go.microsoft.com/fwlink/?LinkId=113472)
 
-  **Equals**方法应返回 `true` 或 `false` 而不是引发异常。 例如，如果将 Equals 传递两个不匹配的类型，则应只返回 `false`，而不是引发 <xref:System.ArgumentException>。
+  **Equals**方法应返回 `true` 或 `false`，而不是引发异常。 例如，如果将 Equals 传递两个不匹配的类型，则它应只返回 `false` 而不是引发 <xref:System.ArgumentException>。
 
 ### <a name="gethashcode-methods"></a>GetHashCode 方法
  以下**GetHashCode**方法通常不应引发异常：
 
 - <xref:System.Object.GetHashCode%2A>
 
-- [M:IEqualityComparer.GetHashCode （T）](http://go.microsoft.com/fwlink/?LinkId=113477)
+- [M:IEqualityComparer.GetHashCode （T）](https://go.microsoft.com/fwlink/?LinkId=113477)
 
   **GetHashCode**应始终返回值。 否则，可能会丢失哈希表中的项。
 
-  采用参数的**GetHashCode**的版本可能引发 <xref:System.ArgumentException>。 但是， **GetHashCode**不应引发异常。
+  采用参数的**GetHashCode**的版本可能会引发 <xref:System.ArgumentException>。 但是， **GetHashCode**不应引发异常。
 
 ### <a name="tostring-methods"></a>ToString 方法
  调试器使用 <xref:System.Object.ToString%2A?displayProperty=fullName> 来帮助以字符串格式显示有关对象的信息。 因此， **ToString**不应更改对象的状态，它不应引发异常。
@@ -114,7 +114,7 @@ ms.locfileid: "72663601"
  从终结器引发异常将导致 CLR 快速失败，从而泪水进程。 因此，应始终避免在终结器中引发异常。
 
 ### <a name="dispose-methods"></a>Dispose 方法
- @No__t_0 方法不应引发异常。 Dispose 通常在 `finally` 子句中的清理逻辑中调用。 因此，从 Dispose 显式引发异常将强制用户添加 `finally` 子句内的异常处理。
+ <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 方法不应引发异常。 Dispose 通常在 `finally` 子句中的清理逻辑中调用。 因此，从 Dispose 显式引发异常将强制用户在 `finally` 子句内添加异常处理。
 
  **Dispose （false）** 代码路径不应引发异常，因为这几乎始终是从终结器调用的。
 

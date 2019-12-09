@@ -8,12 +8,12 @@ ms.assetid: 41981ad6-673e-492e-b739-9863b14157b1
 caps.latest.revision: 26
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0e86364641b477c7b4d8d919cb78afb925f7c27e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 266c4fd418b71c61391ac3b9b20ac93e5c77428c
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660501"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302556"
 ---
 # <a name="making-coded-ui-tests-wait-for-specific-events-during-playback"></a>播放期间让编码的 UI 测试等待特定事件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -109,7 +109,7 @@ UITestControl.WaitForCondition<UITestControl[]>(new UITestControl[] { statusText
 
  **指南**
 
- 有关其他信息，请参阅 [Testing for Continuous Delivery with Visual Studio 2012 – Chapter 5: Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196)（使用 Visual Studio 2012 测试持续交付 - 第 5 章：自动化系统测试）。
+ 有关其他信息，请参阅 [Testing for Continuous Delivery with Visual Studio 2012 – Chapter 5: Automating System Tests](https://go.microsoft.com/fwlink/?LinkID=255196)（使用 Visual Studio 2012 测试持续交付 - 第 5 章：自动化系统测试）。
 
 ## <a name="see-also"></a>请参阅
- [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)[创建编码的 ui 测试](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)[演练：创建、编辑和维护](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)编码的 ui 测试[解析编码的](../test/anatomy-of-a-coded-ui-test.md)Ui 测试[支持编码的 ui 测试和操作的配置和平台录制](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)[如何：使用编码的 Ui 测试编辑器在 UI 操作之前插入延迟](https://msdn.microsoft.com/library/509f8ef7-e105-4049-b11b-d64549e055b0)
+ [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)[创建编码的 ui 测试](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)[演练：创建、编辑和维护](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)编码的 ui 测试支持编码的 ui 测试[的](../test/anatomy-of-a-coded-ui-test.md)[配置和平台解析编码的 ui 测试和操作录制](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)[如何：使用编码的 ui 测试编辑器在 UI 操作之前插入延迟](https://msdn.microsoft.com/library/509f8ef7-e105-4049-b11b-d64549e055b0)

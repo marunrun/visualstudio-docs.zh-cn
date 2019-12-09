@@ -12,14 +12,15 @@ ms.assetid: 71ec0781-6031-4e17-af09-f50226018437
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: dbfb1780cfb8a64ebe20fc45f02992e60d7bb201
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 25dbb0beb600f7f043ae006e09ac48b9b64d613b
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63000077"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74773976"
 ---
 # <a name="lines-view"></a>“行”视图
 “行”视图仅适用于使用采样方法收集的探查器数据， 不适用于使用检测方法收集的数据。

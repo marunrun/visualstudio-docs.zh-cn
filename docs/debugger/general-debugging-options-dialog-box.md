@@ -1,6 +1,6 @@
 ---
 title: “常规”&gt;“调试”&gt;“选项”对话框 | Microsoft Docs
-ms.date: 11/09/2018
+ms.date: 11/12/2019
 ms.topic: reference
 f1_keywords:
 - vs.debug.options.General
@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bbd99d260ba61d9e3ae9e877ecc1cefb1a22892e
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 528fa04b081937af69e647b01911ed00c1ec40c9
+ms.sourcegitcommit: 9801fc66a14c0f855b9ff601fb981a9e5321819e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72569064"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74072717"
 ---
 # <a name="general-debugging-options"></a>常规调试选项
 
@@ -137,6 +137,12 @@ ms.locfileid: "72569064"
 - **在应用程序中显示运行时工具**：在要调试的 XAML 应用程序的主窗口上的工具栏中显示**实时可视化树**命令。 Visual Studio 2015 Update 2 中引入了此选项。
 
 - **启用 Xaml 热重载**：使你能够在应用程序运行时将 Xaml 热重载功能与 xaml 代码一起使用。 （此功能之前称为 "XAML 编辑并继续"）
+
+::: moniker range=">= vs-2019" 
+- **启用仅我的 XAML**：从 visual Studio 2019 版本16.4 开始，默认情况下，**实时可视化树**仅显示归类为用户代码的 XAML。 如果禁用此选项，则会在工具中显示所有生成的 XAML 代码。
+
+- **选择元素时关闭选择模式**从 Visual Studio 2019 版本16.4 开始，当选择一个元素时，应用程序工具栏元素选择器按钮（**启用选择**）将切换为关闭状态。 如果禁用此选项，则元素选择将一直保持打开状态，直到再次单击应用程序工具栏按钮。
+::: moniker-end
 
 **调试时启用诊断工具**：调试时，将显示 "**诊断工具**" 窗口。
 

@@ -18,12 +18,12 @@ caps.latest.revision: 44
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 421bd778b86aa223e1e7b3a96aa3943a86588174
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a3d1aab68e3dc9f33e0b3e9f9a5665d59f6f2ddc
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662516"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299410"
 ---
 # <a name="bind-wpf-controls-to-a-wcf-data-service"></a>将 WPF 控件绑定到 WCF 数据服务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -44,12 +44,12 @@ ms.locfileid: "72662516"
 
    [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
  你需要以下组件来完成本演练：
 
 - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
 
-- 对附加了 AdventureWorksLT 示例数据库的 SQL Server 或 SQL Server Express 的正在运行的实例的访问权限。 可以从[CodePlex](http://go.microsoft.com/fwlink/?linkid=87843)网站下载 AdventureWorksLT 数据库。
+- 对附加了 AdventureWorksLT 示例数据库的 SQL Server 或 SQL Server Express 的正在运行的实例的访问权限。 可以从[CodePlex](https://go.microsoft.com/fwlink/?linkid=87843)网站下载 AdventureWorksLT 数据库。
 
   事先了解以下概念也很有用，但对于完成本演练并不是必需的：
 
@@ -83,7 +83,7 @@ ms.locfileid: "72662516"
 6. 在“解决方案资源管理器”中，右键单击“Default.aspx”，然后选择“删除”。 本演练中不需要此文件。
 
 ## <a name="create-an-entity-data-model-for-the-service"></a>为服务创建实体数据模型
- 若要通过使用 [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)] 向应用程序公开数据，则必须为该服务定义一个数据模型。 @No__t_0 支持两种类型的数据模型：实体数据模型和使用实现 <xref:System.Linq.IQueryable%601> 接口的公共语言运行时（CLR）对象定义的自定义数据模型。 在本演练中，你将为该数据模型创建一个实体数据模型。
+ 若要通过使用 [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)] 向应用程序公开数据，则必须为该服务定义一个数据模型。 [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)] 支持两种类型的数据模型：实体数据模型和使用实现 <xref:System.Linq.IQueryable%601> 接口的公共语言运行时（CLR）对象定义的自定义数据模型。 在本演练中，你将为该数据模型创建一个实体数据模型。
 
 #### <a name="to-create-an-entity-data-model"></a>创建实体数据模型
 
@@ -147,7 +147,7 @@ ms.locfileid: "72662516"
 
 3. 选择“WPF 应用程序”项目模板。
 
-4. 在“名称”框中，键入 `AdventureWorksSalesEditor`，然后单击“确定”。
+4. 在“名称”框中，键入 **，然后单击“确定”。** `AdventureWorksSalesEditor`
 
      Visual Studio 会将 `AdventureWorksSalesEditor` 项目添加到解决方案中。
 
@@ -250,22 +250,22 @@ ms.locfileid: "72662516"
      [!code-vb[Data_WPFWCF#2](../snippets/visualbasic/VS_Snippets_ProTools/data_wpfwcf/vb/adventureworkssaleseditor/mainwindow.xaml.vb#2)]
 
 ## <a name="navigatesales-records"></a>Navigatesales 记录
- 添加可让用户通过“\<”和“>”按钮来滚动销售记录的代码。
+ 添加可让用户通过“ **”和“\<”按钮来滚动销售记录的代码** **>** 。
 
 #### <a name="to-enable-users-to-navigate-sales-records"></a>使用户能够导航销售记录
 
-1. 在设计器中，双击窗口窗面上的“<”按钮。
+1. 在设计器中，双击窗口窗面上的“ **”按钮<** 。
 
-     Visual Studio 打开代码隐藏文件，并为 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件创建新的 `backButton_Click` 事件处理程序。
+     Visual Studio 打开代码隐藏文件，并为 `backButton_Click` 事件创建新的 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件处理程序。
 
 2. 将以下代码添加到生成的 `backButton_Click` 事件处理程序中：
 
      [!code-csharp[Data_WPFWCF#3](../snippets/csharp/VS_Snippets_ProTools/data_wpfwcf/cs/adventureworkssaleseditor/mainwindow.xaml.cs#3)]
      [!code-vb[Data_WPFWCF#3](../snippets/visualbasic/VS_Snippets_ProTools/data_wpfwcf/vb/adventureworkssaleseditor/mainwindow.xaml.vb#3)]
 
-3. 返回到设计器，然后双击“>”按钮。
+3. 返回到设计器，然后双击“ **”按钮>** 。
 
-     Visual Studio 打开代码隐藏文件，并为 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件创建新的 `nextButton_Click` 事件处理程序。
+     Visual Studio 打开代码隐藏文件，并为 `nextButton_Click` 事件创建新的 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件处理程序。
 
 4. 将以下代码添加到生成的 `nextButton_Click` 事件处理程序中：
 
@@ -279,7 +279,7 @@ ms.locfileid: "72662516"
 
 1. 在设计器中，双击“保存更改”按钮。
 
-     Visual Studio 打开代码隐藏文件，并为 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件创建新的 `saveButton_Click` 事件处理程序。
+     Visual Studio 打开代码隐藏文件，并为 `saveButton_Click` 事件创建新的 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件处理程序。
 
 2. 将以下代码添加到 `saveButton_Click` 事件处理程序中。
 
@@ -305,7 +305,7 @@ ms.locfileid: "72662516"
 
     - 文本框显示销售订单 ID 为“71774”的第一条销售记录中的数据的不同字段。
 
-    - 可以单击“>”或“<”按钮来导航其他销售记录。
+    - 可以单击“ **”或“>”按钮来导航其他销售记录** **<** 。
 
 5. 在某条销售记录中，在“注释”框中键入一些文本，然后单击“保存更改”。
 

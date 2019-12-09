@@ -1,5 +1,5 @@
 ---
-title: 创建基本项目系统，第 1 部分 |Microsoft Docs
+title: 创建基本项目系统，第1部分 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,77 +12,77 @@ ms.assetid: 882a10fa-bb1c-4b01-943a-7a3c155286dd
 caps.latest.revision: 48
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 8304719a4b15b5f23957c99244796999d7b3f55c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 20637fb47d85b7cb8341df22d056ffe44534835f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63439402"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295490"
 ---
 # <a name="creating-a-basic-project-system-part-1"></a>创建基本项目系统，第 1 部分
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在 Visual Studio 中，项目是开发人员用于组织源代码文件和其他资产的容器。 项目显示为解决方案中的子级**解决方案资源管理器**。 项目可组织、 生成、 调试和部署的源代码和创建对 Web 服务、 数据库和其他资源的引用。  
+在 Visual Studio 中，项目是开发人员用来组织源代码文件和其他资产的容器。 项目在**解决方案资源管理器**中显示为解决方案的子项目。 项目使你可以组织、构建、调试和部署源代码，并创建对 Web 服务、数据库和其他资源的引用。  
   
- 项目文件中定义了项目，例如 Visual C# 项目的.csproj 文件。 可以创建自己的项目类型具有自己的项目文件扩展名。 有关项目类型的详细信息，请参阅[项目类型](../extensibility/internals/project-types.md)。  
-  
-> [!NOTE]
-> 如果你需要使用自定义项目类型来扩展 Visual Studio，我们强烈建议利用[Visual Studio 项目系统](https://github.com/Microsoft/VSProjectSystem)具有数超过生成从零开始的项目系统的优势：  
-> 
-> - 更轻松的载入。  基本项目系统需要成千上万行代码。  利用 CPS 可以载入成本减少到几次单击之前已准备好你的需求进行自定义。  
->   - 更便于维护。  通过利用 CPS，只需维护自己的方案。  我们处理所有项目系统基础结构在其的执行。  
-> 
->   如果需要面向版本早于 Visual Studio 2013 的 Visual Studio，你将不能在 Visual Studio 扩展中利用 CPS。  如果是这种情况，本演练是入门的好时机。  
-  
- 本演练演示如何创建具有项目文件名称扩展.myproj 的项目类型。 本演练中利用的现有的 Visual C# 项目系统。  
+ 项目在项目文件中定义，例如，Visual C#项目的 .csproj 文件。 你可以创建自己的项目类型，它具有自己的项目文件扩展名。 有关项目类型的详细信息，请参阅[项目类型](../extensibility/internals/project-types.md)。  
   
 > [!NOTE]
-> 有关完整的语言项目系统的端到端示例，请参阅 IronPython 示例中的深入探讨[VSSDK 示例](../misc/vssdk-samples.md)。  
+> 如果需要使用自定义项目类型扩展 Visual Studio，我们强烈建议使用[Visual Studio 项目系统](https://github.com/Microsoft/VSProjectSystem)，该系统与从头开始生成项目系统相比，它具有许多优点：  
+> 
+> - 更轻松的载入。  即使是基本的项目系统也需要数十个代码行。  在准备好根据你的需求进行自定义之前，使用 CPS 会将载入成本降低几次单击。  
+>   - 更易于维护。  利用 CPS，只需维护自己的方案即可。  我们处理所有项目系统基础结构的保养。  
+> 
+>   如果需要将 Visual Studio 的版本定位到 Visual Studio 2013 以前的版本，则不能在 Visual Studio 扩展中利用 CPS。  如果是这种情况，则可以使用此演练。  
   
- 本演练介绍了如何完成这些任务：  
+ 本演练演示如何创建项目文件扩展名为 myproj.csproj 的项目类型。 本演练将借用现有的视觉C#对象系统。  
+  
+> [!NOTE]
+> 有关完整的语言项目系统的端到端示例，请参阅[VSSDK 示例](../misc/vssdk-samples.md)中的 IronPython 示例深入探讨。  
+  
+ 本演练介绍了如何完成以下任务：  
   
 - 创建基本项目类型。  
   
 - 创建基本项目模板。  
   
-- 注册 Visual Studio 项目模板。  
+- 向 Visual Studio 注册项目模板。  
   
-- 创建一个项目实例，方法是打开**新的项目**对话框，然后使用你的模板。  
+- 通过打开 "**新建项目**" 对话框，然后使用模板来创建项目实例。  
   
-- 创建你的项目系统的项目工厂。  
+- 为项目系统创建项目工厂。  
   
-- 创建你的项目系统的项目节点。  
+- 为项目系统创建项目节点。  
   
-- 添加对项目系统的自定义图标。  
+- 为项目系统添加自定义图标。  
   
-- 实现基本的模板参数替换。  
+- 实现基本模板参数替换。  
   
-## <a name="prerequisites"></a>系统必备  
- 从 Visual Studio 2015 开始，您并不安装 Visual Studio SDK 从下载中心获得。 它是作为 Visual Studio 安装程序中的可选功能包含在内。 此外可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。  
   
- 您还必须下载的源代码[项目的托管包框架](http://mpfproj12.codeplex.com/)。 将文件提取到要创建的解决方案可以访问的位置。  
+ 还必须下载[项目的托管包框架](https://archive.codeplex.com/?p=mpfproj12)的源代码。 将文件提取到要创建的解决方案可访问的位置。  
   
 ## <a name="creating-a-basic-project-type"></a>创建基本项目类型  
- 创建一个名为 C# VSIX 项目**SimpleProject**。 (**文件，新建、 项目**，然后**C#，可扩展性，Visual Studio 包**)。 添加 Visual Studio 包项目项模板 (在解决方案资源管理器，右键单击项目节点并选择**添加 / 新建项**，然后转到**扩展性 / Visual Studio 包**)。 将文件命名**SimpleProjectPackage**。  
+ 创建名C#为**SimpleProject**的 VSIX 项目。 （"**文件"、"新建"、"项目"** 和 **C#"可扩展性"、"Visual Studio 包**"）。 添加 Visual Studio 包项目项模板（在解决方案资源管理器上，右键单击项目节点并选择 "添加" **/"新建项**"，然后单击 "**扩展"/"Visual Studio 包**"。 将该文件命名为**SimpleProjectPackage**。  
   
 ## <a name="creating-a-basic-project-template"></a>创建基本项目模板  
- 现在，您可以修改此基本 VSPackage 实现新.myproj 项目类型。 若要创建基于.myproj 项目类型的项目，Visual Studio 必须知道哪些文件、 资源和要添加到新项目的引用。 若要提供此信息，请将项目文件置于项目模板文件夹。 当用户使用.myproj 项目创建项目时，文件复制到新项目。  
+ 现在，可以修改此基本 VSPackage 以实现 myproj.csproj 项目类型。 若要创建基于. myproj.csproj 项目类型的项目，Visual Studio 必须知道要添加到新项目中的文件、资源和引用。 若要提供此信息，请将项目文件放在项目模板文件夹中。 当用户使用 myproj.csproj 项目创建项目时，文件将复制到新项目。  
   
-#### <a name="to-create-a-basic-project-template"></a>若要创建基本项目模板  
+#### <a name="to-create-a-basic-project-template"></a>创建基本项目模板  
   
-1. 添加到项目中，一个在其他三个文件夹：**Templates\Projects\SimpleProject**. (在**解决方案资源管理器**，右键单击**SimpleProject**项目节点，指向**添加**，然后单击**新文件夹**。 将该文件夹命名为 `Templates`注册一个免费试用帐户。 在中**模板**文件夹中，添加名为的文件夹`Projects`。 在**项目**文件夹中，添加名为的文件夹`SimpleProject`。)  
+1. 向项目添加三个文件夹，一个文件夹位于另一个文件夹中： **Templates\Projects\SimpleProject**。 （在**解决方案资源管理器**中，右键单击**SimpleProject**项目节点，指向 "**添加**"，然后单击 "**新建文件夹**"。 将该文件夹命名为 `Templates`注册一个免费试用帐户。 在**Templates**文件夹中，添加一个名为 `Projects`的文件夹。 在 "**项目**" 文件夹中，添加一个名为 `SimpleProject`的文件夹。）  
   
-2. 在中**Projects\SimpleProject**文件夹中添加一个名为的图标文件`SimpleProject.ico`。 当您单击**添加**，打开图标编辑器。  
+2. 在**Projects\SimpleProject**文件夹中，添加名为 `SimpleProject.ico`的图标文件。 单击 "**添加**" 时，图标编辑器将打开。  
   
-3. 使图标不同。 此图标将出现在**新的项目**稍后的演练中的对话框。  
+3. 使图标与众不同。 此图标将显示在本演练后面的 "**新建项目**" 对话框中。  
   
     ![简单项目图标](../extensibility/media/simpleprojicon.png "SimpleProjIcon")  
   
-4. 将图标保存并关闭图标编辑器中。  
+4. 保存图标，并关闭图标编辑器。  
   
-5. 在中**Projects\SimpleProject**文件夹中，添加**类**项名为`Program.cs`。  
+5. 在**Projects\SimpleProject**文件夹中，添加一个名为 `Program.cs`的**类**项。  
   
-6. 现有代码替换为以下行。  
+6. 将现有代码替换为以下行。  
   
    ```csharp  
    using System;  
@@ -103,18 +103,18 @@ ms.locfileid: "63439402"
    ```  
   
    > [!IMPORTANT]
-   > 这不是 Program.cs 代码; 的最终格式将在后面的步骤处理替换参数。 你可能会看到编译错误，但只要文件的**BuildAction**是**内容**，您应该能够生成并照常运行项目。  
+   > 这不是 Program.cs 代码的最终形式;稍后的步骤中将会处理替换参数。 你可能会看到编译错误，但是只要该文件的**BuildAction**是**内容**，你就可以像平常一样生成并运行该项目。  
   
 7. 保存该文件。  
   
-8. 将从 AssemblyInfo.cs 文件复制**属性**向文件夹**Projects\SimpleProject**文件夹。  
+8. 将 AssemblyInfo.cs 文件从**Properties**文件夹复制到**Projects\SimpleProject**文件夹。  
   
-9. 在中**Projects\SimpleProject**文件夹中添加名为 XML 文件`SimpleProject.myproj`。  
+9. 在**Projects\SimpleProject**文件夹中，添加名为 `SimpleProject.myproj`的 XML 文件。  
   
    > [!NOTE]
-   > 此类型的所有项目的文件扩展名是.myproj。 如果你想要对其进行更改，必须在本演练中提到的所有位置更改。  
+   > 此类型的所有项目的文件扩展名为 myproj.csproj。 如果要对其进行更改，必须在本演练所述的任何位置对其进行更改。  
   
-10. 现有内容替换为以下行。  
+10. 将现有内容替换为以下行。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -156,11 +156,11 @@ ms.locfileid: "63439402"
   
 11. 保存该文件。  
   
-12. 在中**属性**窗口中，将**生成操作**AssemblyInfo.cs、 Program.cs、 SimpleProject.ico，和到 SimpleProject.myproj**内容**，并设置其**包括在 VSIX**属性设置为**True**。  
+12. 在 "**属性**" 窗口中，将 AssemblyInfo.cs、Program.cs、SimpleProject 和 SimpleProject 的**生成操作**设置为 "**内容**"，并将其 **"包含项**" 设置为 " **True**"。  
   
-    此项目模板介绍基本 Visual C# 项目的调试配置和发布配置。 该项目包括两个源文件、 AssemblyInfo.cs 和 Program.cs 和多个程序集的引用。 从模板创建项目，ProjectGuid 值是自动替换为新的 GUID。  
+    此项目模板介绍了同时具有C# "调试" 配置和 "发布" 配置的基本视觉对象。 该项目包括两个源文件： AssemblyInfo.cs 和 Program.cs 以及多个程序集引用。 当从模板创建项目时，ProjectGuid 值会自动替换为新的 GUID。  
   
-    在中**解决方案资源管理器**，展开**模板**文件夹应出现，如下所示：  
+    在**解决方案资源管理器**中，展开的 "**模板**" 文件夹应如下所示：  
   
     模板  
   
@@ -177,13 +177,13 @@ ms.locfileid: "63439402"
     SimpleProject.myproj  
   
 ## <a name="creating-a-basic-project-factory"></a>创建基本项目工厂  
- 必须告知 Visual Studio 项目模板文件夹的位置。 若要执行此操作，请将属性添加到 VSPackage 类，该类实现项目工厂，以便生成 VSPackage 时，模板位置写入到系统注册表。 首先创建一个基本项目工厂，它由项目工厂 GUID 标识。 使用<xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute>要将项目工厂连接到 SimpleProjectPackage 类属性。  
+ 必须告知 Visual Studio 你的项目模板文件夹的位置。 为此，请将特性添加到实现项目工厂的 VSPackage 类，以便在生成 VSPackage 时将模板位置写入系统注册表。 首先，创建一个由项目工厂 GUID 标识的基本项目工厂。 使用 <xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute> 特性将项目工厂连接到 SimpleProjectPackage 类。  
   
-#### <a name="to-create-a-basic-project-factory"></a>若要创建基本项目工厂  
+#### <a name="to-create-a-basic-project-factory"></a>创建基本项目工厂  
   
 1. 在代码编辑器中打开 SimpleProjectPackageGuids.cs。  
   
-2. 为项目工厂创建 Guid (上**工具**菜单上，单击**创建 GUID**)，或使用下面的示例所示。 将 Guid 添加到 SimpleProjectPackageGuids 类。 Guid 必须为 GUID 格式和字符串格式。 生成的代码应类似于下面的示例。  
+2. 为项目工厂创建 Guid （在 "**工具**" 菜单上，单击 "**创建 GUID**"），或使用以下示例中的一个。 将 Guid 添加到 SimpleProjectPackageGuids 类。 Guid 必须采用 GUID 格式和字符串格式。 生成的代码应类似于以下示例。  
   
    ```  
    static class SimpleProjectPackageGuids  
@@ -202,7 +202,7 @@ ms.locfileid: "63439402"
    }  
    ```  
   
-3. 将一个类添加到顶部**SimpleProject**名为文件夹`SimpleProjectFactory.cs`。  
+3. 将一个类添加到名为 `SimpleProjectFactory.cs`的顶层**SimpleProject**文件夹中。  
   
 4. 添加以下 using 语句：  
   
@@ -211,7 +211,7 @@ ms.locfileid: "63439402"
    using Microsoft.VisualStudio.Shell;  
    ```  
   
-5. 将 Guid 属性添加到 SimpleProjectFactory 类。 属性的值是新项目工厂的 GUID。  
+5. 将 Guid 特性添加到 SimpleProjectFactory 类。 该属性的值为新的项目工厂 GUID。  
   
    ```  
    [Guid(SimpleProjectGuids.guidSimpleProjectFactoryString)]  
@@ -220,11 +220,11 @@ ms.locfileid: "63439402"
    }  
    ```  
   
-   现在可以注册你的项目模板。  
+   现在可以注册项目模板。  
   
-#### <a name="to-register-the-project-template"></a>若要注册的项目模板  
+#### <a name="to-register-the-project-template"></a>注册项目模板  
   
-1. 在 SimpleProjectPackage.cs，添加<xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute>属性到 SimpleProjectPackage 类，如下所示。  
+1. 在 SimpleProjectPackage.cs 中，将 <xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute> 特性添加到 SimpleProjectPackage 类，如下所示。  
   
    ```  
    [ProvideProjectFactory(    typeof(SimpleProjectFactory),     "Simple Project",   
@@ -234,31 +234,31 @@ ms.locfileid: "63439402"
    public sealed class SimpleProjectPackage : Package  
    ```  
   
-2. 重新生成解决方案并验证正确生成。  
+2. 重新生成解决方案并验证它是否生成但未发生错误。  
   
-    重新生成注册项目模板。  
+    重新生成将注册项目模板。  
   
-   参数`defaultProjectExtension`和`possibleProjectExtensions`设置为项目文件扩展名 (.myproj)。 `projectTemplatesDirectory`参数设置为模板文件夹的相对路径。 在生成过程将转换为完整生成并添加到注册表注册项目系统中此路径。  
+   `defaultProjectExtension` 和 `possibleProjectExtensions` 的参数设置为项目文件扩展名（. myproj.csproj）。 `projectTemplatesDirectory` 参数设置为 Templates 文件夹的相对路径。 在生成过程中，此路径将转换为完整生成并添加到注册表中，以注册项目系统。  
   
 ## <a name="testing-the-template-registration"></a>测试模板注册  
- 模板注册会告知 Visual Studio 项目模板文件夹的位置，以使 Visual Studio 可以显示的模板名称和图标**新的项目**对话框。  
+ 模板注册会告诉 Visual Studio 你的项目模板文件夹的位置，以便 Visual Studio 可以在 "**新建项目**" 对话框中显示模板名称和图标。  
   
-#### <a name="to-test-the-template-registration"></a>若要测试模板注册  
+#### <a name="to-test-the-template-registration"></a>测试模板注册  
   
 1. 按 F5 开始调试 Visual Studio 的实验实例。  
   
-2. 在实验实例中，创建一个新创建的项目类型的新项目。 在中**新的项目**对话框中，你应看到**SimpleProject**下**已安装的模板**。  
+2. 在实验实例中，创建新创建的项目类型的新项目。 在 "**新建项目**" 对话框中，在 "**已安装的模板**" 下应该会看到**SimpleProject** 。  
   
-   现在你已注册的项目工厂。 但是，它尚不能创建一个项目。 项目包和项目工厂协同工作来创建和初始化一个项目。  
+   现在，已注册了一个项目工厂。 但是，它还无法创建项目。 项目包和项目工厂一起工作以创建和初始化项目。  
   
 ## <a name="add-the-managed-package-framework-code"></a>添加托管包框架代码  
  实现项目包和项目工厂之间的连接。  
   
-- 为托管包框架导入的源代码文件。  
+- 导入托管包框架的源代码文件。  
   
-    1. 卸载 SimpleProject 项目 (在**解决方案资源管理器**，选择项目节点，然后在上下文菜单上单击**卸载项目**。) 和 XML 编辑器中打开项目文件。  
+    1. 卸载 SimpleProject 项目（**解决方案资源管理器**中，选择 "项目" 节点，并在上下文菜单上单击 "**卸载项目**"，然后在 XML 编辑器中打开项目文件。  
   
-    2. 将以下块添加到项目文件 (正上方\<导入 > 块)。 将 ProjectBasePath 设置为刚下载的托管包框架代码中的 ProjectBase.files 文件的位置。 您可能需要添加一个反斜杠到路径名。 如果不这样做，项目可能无法找到托管包框架代码。  
+    2. 将以下块添加到项目文件中（\<导入 > 块之前）。 将 ProjectBasePath 设置为你刚下载的托管包框架代码中的 ProjectBase 文件的位置。 可能需要向路径名添加反斜杠。 否则，项目可能无法找到托管的包框架代码。  
   
         ```  
         <PropertyGroup>  
@@ -269,40 +269,40 @@ ms.locfileid: "63439402"
         ```  
   
         > [!IMPORTANT]
-        > 请不要忘记在路径末尾的反斜杠。  
+        > 不要忘记路径末尾的反斜杠。  
   
     3. 重新加载项目。  
   
     4. 添加对下列程序集的引用：  
   
-        - Microsoft.VisualStudio.Designer.Interfaces (在\<VSSDK 安装 > \VisualStudioIntegration\Common\Assemblies\v2.0)  
+        - VisualStudio （在 \<VSSDK 安装 > \VisualStudioIntegration\Common\Assemblies\v2.0）  
   
         - WindowsBase  
   
         - Microsoft.Build.Tasks.v4.0  
   
-#### <a name="to-initialize-the-project-factory"></a>若要初始化项目工厂  
+#### <a name="to-initialize-the-project-factory"></a>初始化项目工厂  
   
-1. 在 SimpleProjectPackage.cs 文件中，添加以下`using`语句。  
+1. 在 SimpleProjectPackage.cs 文件中，添加以下 `using` 语句。  
   
     ```  
     using Microsoft.VisualStudio.Project;  
     ```  
   
-2. 派生`SimpleProjectPackage`类从`Microsoft.VisualStudio.Package.ProjectPackage`。  
+2. 从 `Microsoft.VisualStudio.Package.ProjectPackage`派生 `SimpleProjectPackage` 类。  
   
     ```  
     public sealed class SimpleProjectPackage : ProjectPackage  
     ```  
   
-3. 注册项目工厂。 添加下面的代码行`SimpleProjectPackage.Initialize`方法，之后`base.Initialize`。  
+3. 注册项目工厂。 将以下行添加到 `SimpleProjectPackage.Initialize` 方法，刚好在 `base.Initialize`之后。  
   
     ```  
     base.Initialize();  
     this.RegisterProjectFactory(new SimpleProjectFactory(this));  
     ```  
   
-4. 实现抽象属性`ProductUserContext`:  
+4. 实现抽象属性 `ProductUserContext`：  
   
     ```csharp  
     public override string ProductUserContext  
@@ -311,19 +311,19 @@ ms.locfileid: "63439402"
     }  
     ```  
   
-5. 在 SimpleProjectFactory.cs，添加以下`using`后的现有语句`using`语句。  
+5. 在 SimpleProjectFactory.cs 中，将以下 `using` 语句添加到现有 `using` 语句之后。  
   
     ```  
     using Microsoft.VisualStudio.Project;  
     ```  
   
-6. 派生`SimpleProjectFactory`类从`ProjectFactory`。  
+6. 从 `ProjectFactory`派生 `SimpleProjectFactory` 类。  
   
     ```  
     class SimpleProjectFactory : ProjectFactory  
     ```  
   
-7. 添加到以下虚拟方法`SimpleProjectFactory`类。 将在后面的部分实现此方法。  
+7. 将以下虚方法添加到 `SimpleProjectFactory` 类。 您将在后面的部分中实现此方法。  
   
     ```  
     protected override ProjectNode CreateProject()  
@@ -332,7 +332,7 @@ ms.locfileid: "63439402"
     }  
     ```  
   
-8. 添加以下字段和构造函数`SimpleProjectFactory`类。 这`SimpleProjectPackage`引用缓存在私有字段，以便可在设置服务提供者站点。  
+8. 将以下字段和构造函数添加到 `SimpleProjectFactory` 类。 此 `SimpleProjectPackage` 引用缓存在私有字段中，以便可以在设置服务提供程序站点时使用。  
   
     ```  
     private SimpleProjectPackage package;  
@@ -344,14 +344,14 @@ ms.locfileid: "63439402"
     }  
     ```  
   
-9. 重新生成解决方案并验证正确生成。  
+9. 重新生成解决方案并验证它是否生成但未发生错误。  
   
 ## <a name="testing-the-project-factory-implementation"></a>测试项目工厂实现  
  测试是否调用项目工厂实现的构造函数。  
   
-#### <a name="to-test-the-project-factory-implementation"></a>若要测试的项目工厂实现  
+#### <a name="to-test-the-project-factory-implementation"></a>测试项目工厂实现  
   
-1. 在 SimpleProjectFactory.cs 文件中中的以下行上设置断点`SimpleProjectFactory`构造函数。  
+1. 在 SimpleProjectFactory.cs 文件中，在 `SimpleProjectFactory` 构造函数中的以下行处设置断点。  
   
     ```  
     this.package = package;  
@@ -359,28 +359,28 @@ ms.locfileid: "63439402"
   
 2. 按 F5 启动 Visual Studio 的实验实例。  
   
-3. 在实验实例中，开始创建新的项目。在中**新的项目**对话框中，选择 SimpleProject 项目类型，然后单击**确定**。 执行在断点处停止。  
+3. 在实验实例中，开始创建一个新项目。在 "**新建项目**" 对话框中，选择 "SimpleProject" 项目类型，然后单击 **"确定"** 。 执行在断点处停止。  
   
-4. 清除断点和停止调试。 由于我们具有尚未创建的项目节点，项目创建代码仍将引发异常。  
+4. 清除断点，然后停止调试。 由于尚未创建项目节点，因此项目创建代码仍会引发异常。  
   
 ## <a name="extending-the-project-node-class"></a>扩展项目节点类  
- 现在可以实现`SimpleProjectNode`类，该类派生自`ProjectNode`类。 `ProjectNode`基类处理项目创建的以下任务：  
+ 现在，你可以实现从 `ProjectNode` 类派生的 `SimpleProjectNode` 类。 `ProjectNode` 基类处理项目创建的以下任务：  
   
-- 将项目模板文件，SimpleProject.myproj，复制到新的项目文件夹。 根据输入中的名称重命名该副本**新的项目**对话框。 `ProjectGuid`属性值替换为新的 GUID。  
+- 将项目模板文件 SimpleProject 复制到新的项目文件夹。 该副本将根据在 "**新建项目**" 对话框中输入的名称进行重命名。 `ProjectGuid` 的属性值将替换为新的 GUID。  
   
-- 遍历的项目模板文件，SimpleProject.myproj，MSBuild 元素，并查找`Compile`元素。 每个`Compile`目标文件，将文件复制到新的项目文件夹。  
+- 遍历项目模板文件的 MSBuild 元素 SimpleProject. myproj.csproj，并查找 `Compile` 元素。 对于每个 `Compile` 目标文件，将文件复制到新的项目文件夹。  
   
-  派生`SimpleProjectNode`类处理这些任务：  
+  派生的 `SimpleProjectNode` 类处理以下任务：  
   
-- 使项目和文件中的节点的图标**解决方案资源管理器**要创建或选择。  
+- 启用要在**解决方案资源管理器**中创建或选择的项目和文件节点的图标。  
   
-- 使指定的其他项目模板参数替换。  
+- 启用要指定的其他项目模板参数替换。  
   
-#### <a name="to-extend-the-project-node-class"></a>若要扩展的项目节点类  
+#### <a name="to-extend-the-project-node-class"></a>扩展项目节点类  
   
 1. 
   
-2. 添加一个名为类`SimpleProjectNode.cs`。  
+2. 添加一个名为 `SimpleProjectNode.cs`的类。  
   
 3. 用下面的代码替换现有代码。  
   
@@ -418,27 +418,27 @@ ms.locfileid: "63439402"
    }  
    ```  
   
-   这`SimpleProjectNode`类实现了这些重写的方法：  
+   此 `SimpleProjectNode` 类实现具有以下重写方法：  
   
-- `ProjectGuid`它返回项目工厂的 GUID。  
+- `ProjectGuid`，它返回项目工厂 GUID。  
   
-- `ProjectType`它返回的项目类型的本地化的名称。  
+- `ProjectType`，它返回项目类型的本地化名称。  
   
-- `AddFileFromTemplate`其中模板文件夹中将选定的文件复制到目标项目。 在后面的部分中进一步实现此方法。  
+- `AddFileFromTemplate`，它将从模板文件夹中选择的文件复制到目标项目中。 后面的部分将进一步实现此方法。  
   
-  `SimpleProjectNode`构造函数，如`SimpleProjectFactory`构造函数中，缓存`SimpleProjectPackage`中以供将来使用的私有字段的引用。  
+  `SimpleProjectNode` 构造函数（如 `SimpleProjectFactory` 构造函数）将在私有字段中缓存 `SimpleProjectPackage` 引用以供以后使用。  
   
-  若要连接`SimpleProjectFactory`类来`SimpleProjectNode`类，您必须实例化一个新`SimpleProjectNode`中`SimpleProjectFactory.CreateProject`方法并将其缓存以供将来使用的私有字段中。  
+  若要将 `SimpleProjectFactory` 类连接到 `SimpleProjectNode` 类，必须在 `SimpleProjectFactory.CreateProject` 方法中实例化新的 `SimpleProjectNode`，并将其缓存在私有字段中供以后使用。  
   
-#### <a name="to-connect-the-project-factory-class-and-the-node-class"></a>若要连接的项目工厂类和节点类  
+#### <a name="to-connect-the-project-factory-class-and-the-node-class"></a>连接项目工厂类和 node 类  
   
-1. 在 SimpleProjectFactory.cs 文件中，添加以下`using`语句：  
+1. 在 SimpleProjectFactory.cs 文件中，添加以下 `using` 语句：  
   
     ```  
     using IOleServiceProvider =    Microsoft.VisualStudio.OLE.Interop.IServiceProvider;  
     ```  
   
-2. 替换为`SimpleProjectFactory.CreateProject`方法通过使用下面的代码。  
+2. 使用以下代码替换 `SimpleProjectFactory.CreateProject` 方法。  
   
     ```  
     protected override ProjectNode CreateProject()  
@@ -450,40 +450,40 @@ ms.locfileid: "63439402"
     }  
     ```  
   
-3. 重新生成解决方案并验证正确生成。  
+3. 重新生成解决方案并验证它是否生成但未发生错误。  
   
 ## <a name="testing-the-project-node-class"></a>测试项目节点类  
- 测试您的项目工厂以查看它是否创建项目层次结构。  
+ 测试项目工厂，以确定它是否创建了项目层次结构。  
   
-#### <a name="to-test-the-project-node-class"></a>若要测试的项目节点类  
+#### <a name="to-test-the-project-node-class"></a>测试项目节点类  
   
-1. 按 F5 开始调试。 在实验实例中，将创建新 SimpleProject。  
+1. 按 F5 开始调试。 在实验实例中，创建一个新 SimpleProject。  
   
-2. Visual Studio 应调用你的项目工厂创建的项目。  
+2. Visual Studio 应调用你的项目工厂来创建项目。  
   
 3. 关闭 Visual Studio 的实验实例。  
   
 ## <a name="adding-a-custom-project-node-icon"></a>添加自定义项目节点图标  
- 前面部分中的项目节点图标是一个默认图标。 可以将其更改为自定义图标。  
+ 之前部分中的 "项目节点" 图标为默认图标。 可以将其更改为自定义图标。  
   
-#### <a name="to-add-a-custom-project-node-icon"></a>若要添加自定义项目节点图标  
+#### <a name="to-add-a-custom-project-node-icon"></a>添加自定义项目节点图标  
   
-1. 在中**资源**文件夹中，添加名为 SimpleProjectNode.bmp 的位图文件。  
+1. 在 "**资源**" 文件夹中，添加一个名为 SimpleProjectNode 的位图文件。  
   
-2. 在中**属性**windows，减至 16 × 16 像素的位图。 请以不同的位图。  
+2. 在 "**属性**" 窗口中，将位图缩小为 16 x 16 像素。 使位图与众不同。  
   
-    ![Simple Project Comm](../extensibility/media/simpleprojprojectcomm.png "SimpleProjProjectComm")  
+    ![简单项目通信](../extensibility/media/simpleprojprojectcomm.png "SimpleProjProjectComm")  
   
-3. 在中**属性**窗口中，更改**生成操作**的位图**嵌入的资源**。  
+3. 在 "**属性**" 窗口中，将位图的 "**生成操作**" 更改为 "**嵌入的资源**"。  
   
-4. 在 SimpleProjectNode.cs，添加以下`using`语句：  
+4. 在 SimpleProjectNode.cs 中，添加以下 `using` 语句：  
   
    ```  
    using System.Drawing;  
    using System.Windows.Forms;  
    ```  
   
-5. 添加以下静态字段和构造函数`SimpleProjectNode`类。  
+5. 将以下静态字段和构造函数添加到 `SimpleProjectNode` 类。  
   
    ```  
    private static ImageList imageList;  
@@ -494,7 +494,7 @@ ms.locfileid: "63439402"
    }  
    ```  
   
-6. 将以下属性添加到开头`SimpleProjectNode`类。  
+6. 将以下属性添加到 `SimpleProjectNode` 类的开头。  
   
    ```  
    internal static int imageIndex;  
@@ -504,7 +504,7 @@ ms.locfileid: "63439402"
       }  
    ```  
   
-7. 实例构造函数替换为以下代码。  
+7. 将实例构造函数替换为以下代码。  
   
    ```  
    public SimpleProjectNode(SimpleProjectPackage package)  
@@ -520,7 +520,7 @@ ms.locfileid: "63439402"
    }  
    ```  
   
-   在静态构造期间`SimpleProjectNode`从程序集清单资源中检索项目节点位图，并将其缓存以供将来使用的私有字段中。 请注意语法的<xref:System.Reflection.Assembly.GetManifestResourceStream%2A>映像路径。 若要查看嵌入程序集中的清单资源的名称，请使用<xref:System.Reflection.Assembly.GetManifestResourceNames%2A>方法。 当此方法应用于`SimpleProject`程序集，结果应按如下所示：  
+   在静态构造过程中，`SimpleProjectNode` 从程序集清单资源中检索项目节点位图，并将其缓存在私有字段中供以后使用。 请注意 <xref:System.Reflection.Assembly.GetManifestResourceStream%2A> 映像路径的语法。 若要查看嵌入在程序集中的清单资源的名称，请使用 <xref:System.Reflection.Assembly.GetManifestResourceNames%2A> 方法。 将此方法应用于 `SimpleProject` 程序集时，结果应如下所示：  
   
 - SimpleProject.Resources.resources  
   
@@ -536,20 +536,20 @@ ms.locfileid: "63439402"
   
 - SimpleProject.Resources.SimpleProjectNode.bmp  
   
-  在实例构造期间`ProjectNode`基类加载的 Resources.imagelis.bmp，其中是从 Resources\imagelis.bmp 嵌入常用的 16x16 位图。 此位图列表将提供给`SimpleProjectNode`作为 ImageHandler.ImageList。 `SimpleProjectNode` 将项目节点位图追加到列表。 项目节点位图图像列表中的偏移量进行缓存以供将来使用的公共值`ImageIndex`属性。 Visual Studio 使用此属性来确定要显示为项目节点图标的位图。  
+  在实例构造过程中，`ProjectNode` 的基类加载 imagelis，其中嵌入的常用 16 x 16 位图来自 Resources\imagelis.bmp。 此位图列表可用作 Charthttphandler.imagehandler 的 `SimpleProjectNode`。 `SimpleProjectNode` 将项目节点位图追加到列表。 将缓存 "图像" 列表中项目节点位图的偏移量，以便以后将其用作 public `ImageIndex` 属性的值。 Visual Studio 使用此属性来确定要显示为项目节点图标的位图。  
   
-## <a name="testing-the-custom-project-node-icon"></a>测试节点自定义项目图标  
- 测试您的项目工厂以查看它是否创建具有自定义项目节点图标的项目层次结构。  
+## <a name="testing-the-custom-project-node-icon"></a>测试 "自定义项目节点" 图标  
+ 测试项目工厂，以查看它是否创建了包含自定义项目节点图标的项目层次结构。  
   
-#### <a name="to-test-the-custom-project-node-icon"></a>若要测试自定义项目节点图标  
+#### <a name="to-test-the-custom-project-node-icon"></a>测试 "自定义项目节点" 图标  
   
-1. 开始调试，并在实验实例中创建新 SimpleProject。  
+1. 开始调试，并在实验实例中创建新的 SimpleProject。  
   
-2. 在新建的项目中，请注意 SimpleProjectNode.bmp 用作项目节点图标。  
+2. 请注意，在新创建的项目中，将 SimpleProjectNode 用作项目节点图标。  
   
-     ![简单项目新建项目节点](../extensibility/media/simpleprojnewprojectnode.png "SimpleProjNewProjectNode")  
+     ![简单项目新项目节点](../extensibility/media/simpleprojnewprojectnode.png "SimpleProjNewProjectNode")  
   
-3. 在代码编辑器中打开 Program.cs。 您应看到类似于下面的代码的源代码。  
+3. 在代码编辑器中打开 Program.cs。 应会看到类似于以下代码的源代码。  
   
     ```  
     using System;  
@@ -569,22 +569,22 @@ ms.locfileid: "63439402"
     }  
     ```  
   
-     请注意，模板参数 $nameSpace$ 和 $ $className$ 没有新值。 您将学习如何实现下一节中的模板参数替换。  
+     请注意，$nameSpace $ 和 $className $ 的模板参数没有新值。 在下一部分中，你将学习如何实现模板参数替换。  
   
 ## <a name="substituting-template-parameters"></a>替换模板参数  
- 在前面部分中，你的项目模板与 Visual Studio 使用注册`ProvideProjectFactory`属性。 以这种方式注册的模板文件夹的路径，你可以通过重写并扩展让基本模板参数替换`ProjectNode.AddFileFromTemplate`类。 有关详细信息，请参阅[生成新项目：实质上，第二部分](../extensibility/internals/new-project-generation-under-the-hood-part-two.md)。  
+ 在前面的部分中，已使用 `ProvideProjectFactory` 特性向 Visual Studio 注册了项目模板。 通过以这种方式注册模板文件夹的路径，可以通过重写和展开 `ProjectNode.AddFileFromTemplate` 类来启用基本模板参数替换。 有关详细信息，请参阅[新项目生成：在幕后，第二部分](../extensibility/internals/new-project-generation-under-the-hood-part-two.md)。  
   
- 现在，添加到替代代码`AddFileFromTemplate`类。  
+ 现在，将替换代码添加到 `AddFileFromTemplate` 类。  
   
-#### <a name="to-substitute-template-parameters"></a>若要替换模板参数  
+#### <a name="to-substitute-template-parameters"></a>替换模板参数  
   
-1. 在 SimpleProjectNode.cs 文件中，添加以下`using`语句。  
+1. 在 SimpleProjectNode.cs 文件中，添加以下 `using` 语句。  
   
    ```  
    using System.IO;  
    ```  
   
-2. 替换为`AddFileFromTemplate`方法通过使用下面的代码。  
+2. 使用以下代码替换 `AddFileFromTemplate` 方法。  
   
    ```  
    public override void AddFileFromTemplate(  
@@ -602,30 +602,30 @@ ms.locfileid: "63439402"
    }  
    ```  
   
-3. 设置断点在方法中，紧靠`className`赋值语句。  
+3. 在方法中设置断点，就在 `className` 赋值语句之后。  
   
-   赋值语句确定命名空间和新的类名称的合理值。 这两个`ProjectNode.FileTemplateProcessor.AddReplace`方法调用通过使用这些新值来替换相应的模板参数值。  
+   赋值语句确定命名空间和新类名的合理值。 这两个 `ProjectNode.FileTemplateProcessor.AddReplace` 方法调用使用这些新值替换相应的模板参数值。  
   
 ## <a name="testing-the-template-parameter-substitution"></a>测试模板参数替换  
- 现在，你可以测试模板参数替换。  
+ 现在可以测试模板参数替换。  
   
-#### <a name="to-test-the-template-parameter-substitution"></a>若要测试模板参数替换  
+#### <a name="to-test-the-template-parameter-substitution"></a>测试模板参数替换  
   
-1. 开始调试，并在实验实例中创建新 SimpleProject。  
+1. 开始调试，并在实验实例中创建新的 SimpleProject。  
   
-2. 中的断点处停止执行`AddFileFromTemplate`方法。  
+2. 执行在 `AddFileFromTemplate` 方法中的断点处停止。  
   
-3. 检查有关值`nameSpace`和`className`参数。  
+3. 检查 `nameSpace` 和 `className` 参数的值。  
   
-   - `nameSpace` 给定的值\<根命名空间 > \Templates\Projects\SimpleProject\SimpleProject.myproj 项目模板文件中的元素。 在这种情况下，值为"MyRootNamespace"。  
+   - `nameSpace` 提供 \Templates\Projects\SimpleProject\SimpleProject.myproj 项目模板文件中 \<RootNamespace > 元素的值。 在这种情况下，值为 "MyRootNamespace"。  
   
-   - `className` 都提供了此类源的文件名称，不带文件扩展名值。 在这种情况下，要复制到目标文件夹中的第一个文件是 AssemblyInfo.cs;因此，类名的值是"程序集信息"。  
+   - `className` 提供类源文件名的值，而不包含文件扩展名。 在这种情况下，要复制到目标文件夹的第一个文件为 AssemblyInfo.cs;因此，className 的值为 "AssemblyInfo"。  
   
 4. 删除断点，然后按 F5 继续执行。  
   
-    Visual Studio 应会完成创建项目。  
+    Visual Studio 应完成创建项目。  
   
-5. 在代码编辑器中打开 Program.cs。 您应看到类似于下面的代码的源代码。  
+5. 在代码编辑器中打开 Program.cs。 应会看到类似于以下代码的源代码。  
   
    ```  
    using System;  
@@ -646,10 +646,10 @@ ms.locfileid: "63439402"
    }  
    ```  
   
-    请注意，命名空间现在是"MyRootNamespace"和类名称现在是"计划"。  
+    请注意，现在命名空间为 "MyRootNamespace"，类名称现在为 "Program"。  
   
-6. 开始调试项目。 新的项目应编译、 运行和显示"Hello VSX!!!" 显示文本字符串“Hello World!”。  
+6. 开始调试项目。 新项目应编译、运行和显示 "Hello VSX!!!" 显示文本字符串“Hello World!”。  
   
     ![简单项目命令](../extensibility/media/simpleprojcommand.png "SimpleProjCommand")  
   
-   祝贺你！ 您已实现的基本托管的项目系统。
+   祝贺你！ 您已经实现了一个基本的托管项目系统。

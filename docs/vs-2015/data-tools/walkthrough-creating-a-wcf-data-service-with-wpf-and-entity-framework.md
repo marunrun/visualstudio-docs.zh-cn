@@ -14,12 +14,12 @@ caps.latest.revision: 28
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f26d81c3ac80b889f90e2a729545f0db0e52fa1a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5abbb647f93c991d2de626a84e82f47e03f6f71e
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660233"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299624"
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>演练：使用 WPF 和 Entity Framework 创建 WCF Data Service
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,12 +40,12 @@ ms.locfileid: "72660233"
 
 - 可以选择向应用程序添加筛选功能。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
  你需要以下组件来完成本演练：
 
 - Northwind 示例数据库。
 
-     如果你的开发计算机上没有此数据库，可以从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=98088)进行下载。 有关说明，请参阅[下载示例数据库](https://msdn.microsoft.com/library/ef9d69a1-9461-43fe-94bb-7c836754bcb5)。
+     如果你的开发计算机上没有此数据库，可以从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkID=98088)进行下载。 有关说明，请参阅[下载示例数据库](https://msdn.microsoft.com/library/ef9d69a1-9461-43fe-94bb-7c836754bcb5)。
 
 ## <a name="creating-the-service"></a>创建服务
  若要创建 [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]，你将添加一个 Web 项目，创建一个[!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)]，然后通过此模型创建服务。
@@ -94,7 +94,7 @@ ms.locfileid: "72660233"
 7. 在“选择版本”页上，选择“Entity Framework 5.0”选项按钮，然后选择“下一步”按钮。
 
    > [!NOTE]
-   > 为了使用具有 WCF 服务的 Entity Framework 6 的最新版本，你需要安装 WCF Data Services Entity Framework Provider NuGet 程序包。 请参阅将[WCF 数据服务5.6.0 与实体框架 6 + 配合使用](http://blogs.msdn.com/b/odatateam/archive/2013/10/02/using-wcf-data-services-5-6-0-with-entity-framework-6.aspx)。
+   > 为了使用具有 WCF 服务的 Entity Framework 6 的最新版本，你需要安装 WCF Data Services Entity Framework Provider NuGet 程序包。 请参阅将[WCF 数据服务5.6.0 与实体框架 6 + 配合使用](https://devblogs.microsoft.com/odata/using-wcf-data-services-5-6-0-with-entity-framework-6/)。
 
 8. 在“选择数据库对象”页上，展开“表”节点、选中“客户”复选框，然后选择“完成”按钮。
 
@@ -112,7 +112,7 @@ ms.locfileid: "72660233"
 
     NorthwindCustomers 文件将出现在**代码编辑器**中。
 
-4. 在“代码编辑器”中，定位到第一个 `TODO:` 注释并使用以下内容替换该代码：
+4. 在“代码编辑器”中，定位到第一个  **注释并使用以下内容替换该代码**`TODO:`：
 
     [!code-csharp[WCFDataServiceWalkthrough#1](../snippets/csharp/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/cs/northwindcustomers.svc.cs#1)]
     [!code-vb[WCFDataServiceWalkthrough#1](../snippets/visualbasic/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/vb/northwindcustomers.svc.vb#1)]
@@ -146,7 +146,7 @@ ms.locfileid: "72660233"
 
 2. 在 "**新建项目**" 对话框中，展开 " **Visual Basic** " 或 "  **C#可视化**" 节点，然后选择 " **Windows** " 节点，然后选择 " **Windows 窗体应用程序**"。
 
-3. 在“名称”文本框中，输入 `NorthwindClient`，然后选择“确定”按钮。
+3. 在 **“名称”** 文本框中，输入“`NorthwindClient`”，然后选择 **“确定”** 按钮。
 
 4. 在“解决方案资源管理器”中，选择“NorthwindClient”项目节点。
 

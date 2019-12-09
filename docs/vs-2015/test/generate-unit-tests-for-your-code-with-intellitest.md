@@ -10,12 +10,12 @@ ms.assetid: cd9ff940-e948-4d28-a72c-b291ef5c1e90
 caps.latest.revision: 35
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c7b3d6a3cdb6eefd27f391dbe68a45ec3824b7de
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f03490fc7ea3513a006254e3931cc1113f3bc159
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660561"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302584"
 ---
 # <a name="generate-unit-tests-for-your-code-with-intellitest"></a>使用 IntelliTest 为你的代码生成单元测试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -127,11 +127,11 @@ IntelliTest 浏览你的 .NET 代码，以生成测试数据和单元测试套�
  ![用 MSTest 默认值创建 IntelliTest](../test/media/pexcreateintellitestmstest.png "PEXCreateIntelliTestMSTest")
 
 ### <a name="q-can-i-use-other-unit-test-frameworks-with-intellitest"></a>问：是否可以将其他单元测试框架用于 IntelliTest？
- **答：** 可以，请按照下列步骤 [查找和安装其他框架](../test/install-third-party-unit-test-frameworks.md)。 重新启动 Visual Studio 并重新打开你的解决方案后，在类或方法中单击右键，然后选择 **创建 IntelliTest**。 请在此处选择已安装的框架：
+ **答：** 可以，请按照这些步骤[查找和安装其他框架](../test/install-third-party-unit-test-frameworks.md)。 重新启动 Visual Studio 并重新打开你的解决方案后，在类或方法中单击右键，然后选择 **创建 IntelliTest**。 请在此处选择已安装的框架：
 
  ![为 IntelliTest 选择其他单元测试框架](../test/media/pexcreateintellitestextensions.png "PEXCreateIntelliTestExtensions")
 
  然后，运行 IntelliTest 以在其相应的 .g.cs 文件中生成单个单元测试。
 
 ### <a name="q-can-i-learn-more-about-how-the-tests-are-generated"></a>问：是否可以了解有关如何生成测试的详细信息？
- **答：** 可以，要获取高级概述，请阅读此 [博客文章](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/05/intellitest-one-test-to-rule-them-all.aspx)。
+ **答：** 可以，要获取高级概述，请阅读此 [博客文章](https://devblogs.microsoft.com/devops/intellitest-one-test-to-rule-them-all/)。

@@ -29,7 +29,7 @@ ms.locfileid: "72661442"
 |-|-|
 |TypeName|SpecifyIFormatProvider|
 |CheckId|CA1305|
-|类别|Microsoft 全球化|
+|类别|Microsoft.Globalization|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
@@ -41,12 +41,12 @@ ms.locfileid: "72661442"
 
 - <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=fullName>
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  如果未提供 <xref:System.Globalization.CultureInfo?displayProperty=fullName> 或 <xref:System.IFormatProvider> 对象，则重载成员提供的默认值可能不会在所有区域设置中产生所需的效果。 此外，[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 成员根据你的代码可能不正确的假设，选择默认区域性和格式设置。 若要确保代码按方案的预期运行，应根据以下准则提供区域性特定的信息：
 
-- 如果将向用户显示值，则使用当前区域性。 请参阅<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>.
+- 如果将向用户显示值，则使用当前区域性。 请参阅 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>。
 
-- 如果值将由软件存储和访问（保存到文件或数据库），请使用固定区域性。 请参阅<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>.
+- 如果值将由软件存储和访问（保存到文件或数据库），请使用固定区域性。 请参阅 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>。
 
 - 如果您不知道值的目标，请使数据使用者或提供者指定区域性。
 
@@ -61,7 +61,7 @@ ms.locfileid: "72661442"
  如果确信默认区域性/格式提供程序是正确的选择并且代码可维护性不是重要的开发优先级，则可以安全地禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
- 在下面的示例中，`BadMethod` 会导致此规则发生两次冲突。 `GoodMethod` 通过将固定区域性传递到 <xref:System.String.Compare%2A> 来更正第一个冲突，并通过将当前区域性传递到 <xref:System.String.ToLower%2A> 来更正第二个冲突，因为向用户显示 `string3`。
+ 在下面的示例中，`BadMethod` 会导致此规则发生两次冲突。 `GoodMethod` 通过将固定区域性传递到 <xref:System.String.Compare%2A>来更正第一个冲突，并通过将当前区域性传递到 <xref:System.String.ToLower%2A> 来更正第二个冲突，因为向用户显示 `string3`。
 
  [!code-csharp[FxCop.Globalization.CultureInfo#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Globalization.CultureInfo/cs/FxCop.Globalization.CultureInfo.cs#1)]
 
@@ -72,7 +72,7 @@ ms.locfileid: "72661442"
 
  本示例生成以下输出。
 
- **6/4/1900 12:15:12 PM** 
+ **6/4/1900 12:15:12 PM**
 **06/04/1900 12:15:12**
 ## <a name="related-rules"></a>相关规则
  [CA1304：指定 CultureInfo](../code-quality/ca1304-specify-cultureinfo.md)

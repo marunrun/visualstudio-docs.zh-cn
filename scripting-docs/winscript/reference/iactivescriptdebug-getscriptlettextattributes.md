@@ -52,11 +52,11 @@ HRESULT GetScriptletTextAttributes(
  `dwFlags`  
  中与 scriptlet 关联的标志。 可以是这些值的组合：  
   
-|返回的常量|“值”|描述|  
+|常量|值|说明|  
 |--------------|-----------|-----------------|  
 |GETATTRTYPE_DEPSCAN|0x0001|指示应分别用 SOURCETEXT_ATTR_IDENTIFIER 和 SOURCETEXT_ATTR_MEMBERLOOKUP 标志识别标识符和点运算符。|  
-|GETATTRFLAG_THIS|0x0100|指示应通过 SOURCETEXT_ATTR_THIS 标志标识当前对象的标识符。|  
-|GETATTRFLAG_HUMANTEXT|0x8000|指示应通过 SOURCETEXT_ATTR_HUMANTEXT 标志标识字符串内容和注释文本。|  
+|GETATTRFLAG_THIS|0x0100|指示应用 SOURCETEXT_ATTR_THIS 标志识别当前对象的标识符。|  
+|GETATTRFLAG_HUMANTEXT|0x8000|指示应用 SOURCETEXT_ATTR_HUMANTEXT 标志标识字符串内容和注释文本。|  
   
  `pattr`  
  [in，out]包含返回的属性的缓冲区。  
@@ -64,7 +64,7 @@ HRESULT GetScriptletTextAttributes(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
@@ -73,9 +73,9 @@ HRESULT GetScriptletTextAttributes(
   
  提供此调用是因为 scriptlet 往往是表达式，并且可能具有与脚本块不同的语法。 如果它们具有相同的语法，此方法的实现将与 `GetScriptTextAttributes` 方法的实现完全相同。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IActiveScriptDebug 接口](../../winscript/reference/iactivescriptdebug-interface.md)   
- [IActiveScriptDebug：： getscripttextattribute](../../winscript/reference/iactivescriptdebug-getscripttextattributes.md)    
+ [IActiveScriptDebug::GetScriptTextAttributes](../../winscript/reference/iactivescriptdebug-getscripttextattributes.md)   
  [IDebugDocumentText 接口](../../winscript/reference/idebugdocumenttext-interface.md)   
- [IDebugDocumentText：： GetText](../../winscript/reference/idebugdocumenttext-gettext.md)    
+ [IDebugDocumentText::GetText](../../winscript/reference/idebugdocumenttext-gettext.md)   
  [SOURCE_TEXT_ATTR 枚举](../../winscript/reference/source-text-attr-enumeration.md)

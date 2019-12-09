@@ -37,7 +37,7 @@ ms.locfileid: "72985029"
 > [!NOTE]
 > 以下说明中的某些 Visual Studio 用户界面元素在计算机上出现的名称或位置可能会不同。 这些元素取决于你所使用的 Visual Studio 版本和你所使用的设置。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 - 支持的 Windows 和 SharePoint 版本。
 
@@ -45,7 +45,7 @@ ms.locfileid: "72985029"
 
 首先，创建一个**空 SharePoint 项目**。 稍后，您将向此项目中添加一个**应用程序页**项。
 
-1. 启动 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]。
+1. 启动[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]。
 
 2. 打开 "**新建项目**" 对话框，展开想要使用的语言下的 " **Office/SharePoint** " 节点，然后选择 " **SharePoint 解决方案**" 节点。
 
@@ -73,7 +73,7 @@ ms.locfileid: "72985029"
 
 使用 "应用程序页" 项可以使用设计器将 ASP.NET 控件添加到应用程序页。 此设计器与 Visual Web Developer 中使用的设计器相同。 向设计器的 "**源**" 视图添加标签、单选按钮列表和表，然后设置属性，就像设计任何标准 ASP.NET 页一样。
 
-1. 在菜单栏上，依次选择“视图” > “工具箱”。
+1. 在菜单栏上，依次选择“视图” **“工具箱”**  > 。
 
 2. 在 "**工具箱**" 的 "标准" 节点中，执行以下步骤之一：
 
@@ -151,7 +151,7 @@ ms.locfileid: "72985029"
 
 - [为 web 部件或应用程序页创建可重用控件](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [如何：创建应用程序页](../sharepoint/how-to-create-an-application-page.md)
-[Application _layouts 页类型](/previous-versions/office/aa979604(v=office.14))
+[应用程序 _layouts 页类型](/previous-versions/office/aa979604(v=office.14))

@@ -3,15 +3,15 @@ title: Visual Studio 订阅中的 Visual Studio IDE 权益 | Microsoft 文档
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 08/01/2019
+ms.date: 11/14/2019
 ms.topic: conceptual
 description: 了解如何下载并安装包含在 Visual Studio 订阅中的 Visual Studio IDE。
-ms.openlocfilehash: 5a5acda814739f907aaa36e9b3408527b5ece732
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: fd140dfe1853e6799a960fd8e251a566954bf143
+ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816518"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491586"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>Visual Studio 2019 权益
 
@@ -62,7 +62,9 @@ ms.locfileid: "72816518"
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准、月度云）   | VL、Azure、零售、所选 NFR<sup>1</sup> | 可用       |  是          |
+| 带有 GitHub Enterprise 的 Visual Studio Enterprise   | VL | 可用       |  是          |
 | Visual Studio Professional（标准、月度云） | VL、Azure、零售                                       | 可用                                                            |  是          |
+| 带有 GitHub Enterprise 的 Visual Studio Professional | VL   | 可用              |  是          |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 可用                                             |  是         |
 | MSDN 平台（标准）                                          | VL、零售                                              | 不可用                                              |  不可用          |
 

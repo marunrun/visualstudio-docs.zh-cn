@@ -11,14 +11,15 @@ ms.assetid: a7cc7613-ad5f-48c8-bd2b-56372cc12dfc
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c9e75d003031d591c8ae777c606e6f7a2b6ea8c0
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 0d93de6ce901bfe4d72628f778b18420beb5ebee
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72912005"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779501"
 ---
 # <a name="da0001-use-stringbuilder-for-concatenations"></a>DA0001：将 StringBuilder 用于串联
 
@@ -41,4 +42,4 @@ ms.locfileid: "72912005"
 ## <a name="how-to-investigate-a-warning"></a>如何调查警告
  双击“错误列表”窗口中的消息，导航到采样分析数据的[函数详细信息视图](../profiling/function-details-view.md)  。 查找程序中使用字符串串联最频繁的部分。 请对复杂的字符串操作使用 StringBuilder 类，包括频繁使用的字符串串联操作。
 
- 若要深入了解如何使用字符串，请参阅 Microsoft 模式和做法库中[第 5 章 - 提高托管代码性能](/previous-versions/msp-n-p/ff647790(v=pandp.10))的[字符串操作](/previous-versions/msp-n-p/ff647790(v=pandp.10)#scalenetchapt05_topic26)部分。
+ 若要深入了解如何使用字符串，请参阅 Microsoft 模式和做法库中[第 5 章 - 提高托管代码性能](/previous-versions/msp-n-p/ff647790(v=pandp.10))的[字符串操作](/previous-versions/msp-n-p/ff647790(v=pandp.10)#string-operations)部分。

@@ -24,12 +24,12 @@ caps.latest.revision: 43
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6d2368c19292f9e4205cec9f1b42b1553ce3188f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: da4e0e3bab904b660f3d843e105b7d256a63a1b5
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658442"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297224"
 ---
 # <a name="uml-class-diagrams-reference"></a>UML 类图：参考
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "72658442"
 UML 类图描述在应用程序内部以及应用程序与其用户在通信时使用的对象和信息结构。 它描述的信息不具有对任何特定实现的引用。 它的类和关系可以采用许多方法来实现，例如数据库表、XML 节点或软件对象的组合。
 
 > [!NOTE]
-> 本主题针对 UML 类图。 还有另一种类图，即 .NET 类图，它用于可视化程序代码。 有关详细信息，请参阅[设计和查看类和类型](http://go.microsoft.com/fwlink/?LinkId=142231)。
+> 本主题针对 UML 类图。 还有另一种类图，即 .NET 类图，它用于可视化程序代码。 有关详细信息，请参阅[设计和查看类和类型](https://go.microsoft.com/fwlink/?LinkId=142231)。
 
  若要创建 UML 类图，请在 "**体系结构**" 菜单上，选择 "**新建 UML 或层关系图**"。 有关如何绘制 UML 类图的详细信息，请参阅[Uml 类图：准则](../modeling/uml-class-diagrams-guidelines.md)。 有关如何创建和绘制建模图的详细信息，请参阅[编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)。
 
@@ -89,4 +89,4 @@ UML 类图描述在应用程序内部以及应用程序与其用户在通信时�
 |16|**实现**|同一关系的可选表示形式。 棒糖形符号上的标签用于标识接口。<br /><br /> 若要创建此表示形式，请选择一个现有实现关系。 关联附近将显示一个操作标记。 单击操作标记，然后单击 "**显示为棒糖形**"。|
 
 ## <a name="see-also"></a>请参阅
- [编辑 uml 模型和关系图](../modeling/edit-uml-models-and-diagrams.md) [uml 类图：](../modeling/uml-class-diagrams-guidelines.md) uml 类图上[类型](../modeling/properties-of-types-on-uml-class-diagrams.md)的准则属性 uml 类图上[特性](../modeling/properties-of-attributes-on-uml-class-diagrams.md)的属性 uml 类图上[的](../modeling/properties-of-operations-on-uml-class-diagrams.md)属性属性[UML 类图上的关联](../modeling/properties-of-associations-on-uml-class-diagrams.md)
+ [编辑 uml 模型和关系图](../modeling/edit-uml-models-and-diagrams.md) [uml 类图：](../modeling/uml-class-diagrams-guidelines.md) uml 类图上类型的准则[属性](../modeling/properties-of-types-on-uml-class-diagrams.md)uml 类图上[特性](../modeling/properties-of-attributes-on-uml-class-diagrams.md)的属性 UML 类图上的[操作](../modeling/properties-of-operations-on-uml-class-diagrams.md)的属性[uml 类图上关联的](../modeling/properties-of-associations-on-uml-class-diagrams.md)属性

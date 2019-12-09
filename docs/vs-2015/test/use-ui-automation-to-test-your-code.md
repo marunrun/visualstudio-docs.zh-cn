@@ -17,12 +17,12 @@ ms.assetid: ad9e3eaa-ab86-436e-95b8-dc20eb1f8b2a
 caps.latest.revision: 87
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 070a9bedd5e01e6c39d55d784559d4458e35d72f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2eb0a4ee7c69ebe2bf753d4bbde63160b6e0043e
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657295"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297990"
 ---
 # <a name="use-ui-automation-to-test-your-code"></a>使用 UI 自动化来测试代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -150,7 +150,7 @@ ms.locfileid: "72657295"
 
 8. **运行测试**。
 
-    使用测试资源管理器，或打开测试方法中的快捷菜单，然后选择“运行测试”。 有关如何运行测试的详细信息，请参见本主题结尾处[后续步骤](#VerifyCodeUsingCUITWhatsNext)部分中的[用测试资源管理器运行单元测试](../test/run-unit-tests-with-test-explorer.md)和*运行编码的 UI 测试的其他选项*。
+    使用测试资源管理器，或打开测试方法中的快捷菜单，然后选择“运行测试”。 有关如何运行测试的详细信息，请参见本主题结尾处[后续步骤](../test/run-unit-tests-with-test-explorer.md)部分中的*用测试资源管理器运行单元测试*和[运行编码的 UI 测试的其他选项](#VerifyCodeUsingCUITWhatsNext)。
 
    本主题中的剩余部分提供了有关此过程中步骤的更多详细信息。
 
@@ -303,7 +303,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
   - 在编码的 UI 测试播放中，你可以指示测试等待某些事件发生，如某个窗口出现、进度栏消失等。 为此，请添加相应的 UITestControl.WaitForControlXXX() 方法。 有关可用方法的完整列表，请参阅[播放期间让编码的 UI 测试等待特定事件](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md)。 有关等待使用 WaitForControlEnabled 方法启用某个控件的编码的 UI 测试示例，请参阅[演练：创建、编辑和维护编码的 UI 测试](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)。
 
-  - 编码的 UI 测试包括对某些包含在 Internet Explorer 9 和 Internet Explorer 10 中的 HTML5 控件的支持。 有关详细信息，请参阅[在编码的 UI 测试中使用 HTML5 控件](../test/using-html5-controls-in-coded-ui-tests.md)。
+  - 编码的 UI 测试包括对某些包含在 Internet Explorer 9 和 Internet Explorer 10 中的 HTML5 控件的支持。 有关详细信息，请参阅 [Using HTML5 Controls in Coded UI Tests](../test/using-html5-controls-in-coded-ui-tests.md)。
 
   - **编码的 UI 测试编码指导：**
 
@@ -425,7 +425,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
 - <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A> 返回相应的数据类型，但此返回值将被强制转换为 <xref:System.Object>。 必须再将返回的 <xref:System.Object> 强制转换为相应的类型。
 
-     示例:
+     例如：
 
      `int i = (int)GetProperty(myHtmlList.PropertyNames.ItemCount);`
 
@@ -435,7 +435,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
 - 若要指定要设置的控件属性，请使用来自 `PropertyNames` 类的相应字符串作为 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A> 的第一个参数，使用属性值作为第二个参数。
 
-     示例:
+     例如：
 
      `SetProperty(myWinCheckBox.PropertyNames.Checked, true);`
 
@@ -465,24 +465,24 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
 - [扩展编码的 UI 测试和操作录制以支持 Microsoft Excel](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)
 
-  编码的 UI 测试通常用于自动化手动测试。 有关其他指南，请参阅[使用 Visual Studio 2012 测试持续交付 – 第 5 章：实现系统测试的自动化](http://go.microsoft.com/fwlink/?LinkID=255196)。 有关手动测试的详细信息，请参阅 [[已停用] 使用 Microsoft 测试管理器创建手动测试用例](https://msdn.microsoft.com/library/9989e184-c8e4-444b-998d-a1a5ec94461e)。 有关自动系统测试的详细信息，请参阅[使用 Microsoft 测试管理器创建自动测试](https://msdn.microsoft.com/7b5075ee-ddfe-411d-b1d4-94283550a5d0)。
+  编码的 UI 测试通常用于自动化手动测试。 有关其他指南，请参阅[使用 Visual Studio 2012 测试持续交付 – 第 5 章：实现系统测试的自动化](https://go.microsoft.com/fwlink/?LinkID=255196)。 有关手动测试的详细信息，请参阅 [[已停用] 使用 Microsoft 测试管理器创建手动测试用例](https://msdn.microsoft.com/library/9989e184-c8e4-444b-998d-a1a5ec94461e)。 有关自动系统测试的详细信息，请参阅[使用 Microsoft 测试管理器创建自动测试](https://msdn.microsoft.com/7b5075ee-ddfe-411d-b1d4-94283550a5d0)。
 
 ## <a name="external-resources"></a>外部资源
 
 ### <a name="guidance"></a>指导
-- [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](http://go.microsoft.com/fwlink/?LinkID=255188)
+- [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](https://go.microsoft.com/fwlink/?LinkID=255188)
 
-- [使用 Visual Studio 2012 测试持续交付 - 第 5 章：实现系统测试的自动化](http://go.microsoft.com/fwlink/?LinkID=255196)
+- [使用 Visual Studio 2012 测试持续交付 - 第 5 章：实现系统测试的自动化](https://go.microsoft.com/fwlink/?LinkID=255196)
 
 ### <a name="faq"></a>FAQ
-- [编码的 UI 测试常见问题 - 1](http://go.microsoft.com/fwlink/?LinkID=230576)
+- [编码的 UI 测试常见问题 - 1](https://go.microsoft.com/fwlink/?LinkID=230576)
 
-- [编码的 UI 测试常见问题 - 2](http://go.microsoft.com/fwlink/?LinkID=230578)
+- [编码的 UI 测试常见问题 - 2](https://go.microsoft.com/fwlink/?LinkID=230578)
 
 ### <a name="forum"></a>论坛
-- [Visual Studio UI 自动测试（包括 CodedUI）](http://go.microsoft.com/fwlink/?LinkID=224497)
+- [Visual Studio UI 自动测试（包括 CodedUI）](https://go.microsoft.com/fwlink/?LinkID=224497)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UIMap](/previous-versions/dd580454(v=vs.140))
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>

@@ -34,7 +34,7 @@ ms.locfileid: "72576572"
   
 - 避免使用不属于 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 语言定义的字符。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [变量](../../javascript/variables-javascript.md)   
  [特殊字符](../../javascript/advanced/special-characters-javascript.md)   
  [数据类型](../../javascript/data-types-javascript.md)

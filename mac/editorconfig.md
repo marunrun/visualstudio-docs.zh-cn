@@ -6,22 +6,22 @@ ms.author: cobey
 ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 26A0DE31-2FBF-4E1B-99FB-083111AA1680
-ms.openlocfilehash: 8115715950881168e282cd205ea2dd3e64d89f97
-ms.sourcegitcommit: cf8c0fef2b9690595e99ce3802586cdd55fd37c2
+ms.openlocfilehash: 6f6241c114d636cc8cb01cf5c4bf9ba2b5106701
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108296"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73716888"
 ---
 # <a name="creating-and-editing-a-custom-editorconfig-file"></a>创建并编辑自定义 EditorConfig 文件
 
-在 Visual Studio for Mac 中，可以向项目或解决方案添加 [EditorConfig](http://editorconfig.org/) 文件，强制对使用该基本代码的所有人实施一致的编码样式。 EditorConfig 文件中声明的设置优先于全局 Visual Studio for Mac 文本编辑器设置。 在项目或基本代码中使用 EditorConfig 文件可为项目设置编码样式、首选项和警告。 由于该文件是基本代码的一部分，因此无论使用何种 IDE 或代码编辑器，它都使用户更容易遵守项目的编码操作。
+在 Visual Studio for Mac 中，可以向项目或解决方案添加 [EditorConfig](https://editorconfig.org/) 文件，强制对使用该基本代码的所有人实施一致的编码样式。 EditorConfig 文件中声明的设置优先于全局 Visual Studio for Mac 文本编辑器设置。 在项目或基本代码中使用 EditorConfig 文件可为项目设置编码样式、首选项和警告。 由于该文件是基本代码的一部分，因此无论使用何种 IDE 或代码编辑器，它都使用户更容易遵守项目的编码操作。
 
-[EditorConfig](http://editorconfig.org/) 文件受到许多 IDE 和代码编辑器（包括 Visual Studio）支持。
+[EditorConfig](https://editorconfig.org/) 文件受到许多 IDE 和代码编辑器（包括 Visual Studio）支持。
 
 ## <a name="supported-settings"></a>支持的设置
 
-Visual Studio for Mac 中的编辑器支持 [EditorConfig 属性](http://editorconfig.org/#supported-properties)的核心集：
+Visual Studio for Mac 中的编辑器支持 [EditorConfig 属性](https://editorconfig.org/#supported-properties)的核心集：
 
 - `indent_style`
 - `indent_size`
@@ -134,7 +134,7 @@ csharp_new_line_before_open_brace = none
 
 ![应用 editorconfig 设置之后](media/editorconfig-image5.png)
 
-有关可用的 EditorConfig 设置的详细信息，请参阅 [EditorConfig 的 .NET 编码约定设置](/visualstudio/ide/editorconfig-code-style-settings-reference)一文以及官方文档的[支持的属性](http://editorconfig.org/#supported-properties)部分。
+有关可用的 EditorConfig 设置的详细信息，请参阅 [EditorConfig 的 .NET 编码约定设置](/visualstudio/ide/editorconfig-code-style-settings-reference)一文以及官方文档的[支持的属性](https://editorconfig.org/#supported-properties)部分。
 
 ## <a name="override-editorconfig-settings"></a>替代 EditorConfig 设置
 

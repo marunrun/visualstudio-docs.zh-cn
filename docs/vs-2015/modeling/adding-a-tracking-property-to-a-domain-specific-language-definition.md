@@ -13,12 +13,12 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6e6664f78123864073d605b59c7f43e5b2db36cc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 19d673d9d09ce95580e25033966e1a901255fd90
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72609254"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74292645"
 ---
 # <a name="adding-a-tracking-property-to-a-domain-specific-language-definition"></a>向域特定语言定义中添加跟踪属性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,19 +45,19 @@ ms.locfileid: "72609254"
 
 - 在 "**属性**" 窗口中，当跟踪属性在 "按用户状态更新" 时，其值以粗体显示。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
  在开始本演练之前，必须先安装这些组件：
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185579](http://go.microsoft.com/fwlink/?LinkID=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185580](http://go.microsoft.com/fwlink/?LinkID=185580)|
-|[!INCLUDE[dsl](../includes/dsl-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185581](http://go.microsoft.com/fwlink/?LinkID=185581)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185579](https://go.microsoft.com/fwlink/?LinkID=185579)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185580](https://go.microsoft.com/fwlink/?LinkID=185580)|
+|[!INCLUDE[dsl](../includes/dsl-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185581](https://go.microsoft.com/fwlink/?LinkID=185581)|
 
 ## <a name="creating-the-dsl-project"></a>创建 DSL 项目
  为域特定语言创建项目。
 
-#### <a name="to-create-the-project"></a>要创建项目
+#### <a name="to-create-the-project"></a>创建项目
 
 1. 创建特定于域的语言设计器项目。 将其命名为 `TrackingPropertyDSL`。
 
@@ -65,7 +65,7 @@ ms.locfileid: "72609254"
 
     1. 选择**MinimalLanguage**模板。
 
-    2. 使用域特定语言 `TrackingPropertyDSL` 的默认名称。
+    2. 使用域特定语言 `TrackingPropertyDSL`的默认名称。
 
     3. 将模型文件的扩展名设置为 `trackingPropertyDsl`。
 
@@ -100,15 +100,15 @@ ms.locfileid: "72609254"
 
     2. 在新属性的 "**属性**" 窗口中，将 "**默认值**" 设置为 "`DefaultNamespace`"，将 "**类型**" 设置为 "**字符串**"。
 
-2. 对于**位于 examplemodel.store**域类，添加一个名为 `CustomElements` 的域属性。
+2. 对于**位于 examplemodel.store**域类，添加一个名为 `CustomElements`的域属性。
 
      在新属性的 "**属性**" 窗口中，将 "**类型**" 设置为 "已**计算**"。
 
-3. 对于**ExampleElement**域类，添加一个名为 `Namespace` 的域属性。
+3. 对于**ExampleElement**域类，添加一个名为 `Namespace`的域属性。
 
      在新属性的 "**属性**" 窗口中，将 "可**浏览**" 设置为 " **False**"，并将 "**类型**" 设置为**CustomStorage**。
 
-4. 对于**ExampleElement**域类，添加一个名为 `IsNamespaceTracking` 的域属性。
+4. 对于**ExampleElement**域类，添加一个名为 `IsNamespaceTracking`的域属性。
 
      在新属性的 "**属性**" 窗口中，将 "可**浏览**" 设置为 " **False**"，将 "**默认值**"**设置为 "** `true`"，将 "**类型**" 设置为
 
@@ -160,7 +160,7 @@ ms.locfileid: "72609254"
 
      将创建并打开 NamespaceTrackingProperty.cs 文件进行编辑。
 
-4. 在文件夹中创建以下代码文件： `ExampleModel.cs,``HelperClasses.cs`、`Serialization.cs` 和 `TypeDescriptor.cs`。
+4. 在文件夹中创建以下代码文件： `ExampleModel.cs,``HelperClasses.cs`、`Serialization.cs`和 `TypeDescriptor.cs`。
 
 5. 在**DslPackage**项目中，另外创建一个 `CustomCode` 文件夹，并向其添加 `Package.cs` 的代码文件。
 
@@ -346,7 +346,7 @@ ms.locfileid: "72609254"
 > [!NOTE]
 > DSL 工具为 `ExampleModel` 调用生成的代码 `GetCustomElementsValue`;但是，DSL 工具不会生成实现方法的代码。
 
- 定义 `GetCustomElementsValue` 方法为 `ExampleModel` 的 CustomElements 计算属性提供逻辑。 此方法对具有具有用户更新值的命名空间跟踪属性的 `ExampleElement` 域类的数目进行计数，并返回一个字符串，该字符串表示此计数作为模型中的总元素的一部分。
+ 定义 `GetCustomElementsValue` 方法为 `ExampleModel`的 CustomElements 计算属性提供逻辑。 此方法对具有具有用户更新值的命名空间跟踪属性的 `ExampleElement` 域类的数目进行计数，并返回一个字符串，该字符串表示此计数作为模型中的总元素的一部分。
 
  此外，将 `OnDefaultNamespaceChanged` 方法添加到 `ExampleModel`，并重写 `ExampleModel` 的 `DefaultNamespacePropertyHandler` 嵌套类的 `OnValueChanged` 方法，以调用 `OnDefaultNamespaceChanged`。
 
@@ -420,7 +420,7 @@ ms.locfileid: "72609254"
 ## <a name="adding-custom-code-for-the-tracking-property"></a>为跟踪属性添加自定义代码
  向 `ExampleElement` 域类添加 `CalculateNamespace` 方法。
 
- 定义此方法将为 `ExampleModel` 的 CustomElements 计算属性提供逻辑。 此方法对具有处于已更新的用户状态的命名空间跟踪属性的 `ExampleElement` 域类的数量进行计数，并返回一个字符串，该字符串表示此计数作为模型中的总元素的比例。
+ 定义此方法将为 `ExampleModel`的 CustomElements 计算属性提供逻辑。 此方法对具有处于已更新的用户状态的命名空间跟踪属性的 `ExampleElement` 域类的数量进行计数，并返回一个字符串，该字符串表示此计数作为模型中的总元素的比例。
 
  此外，为获取和设置的 "命名空间" 自定义存储属性（`ExampleElement` 域类的命名空间自定义存储属性）添加存储。
 
@@ -726,7 +726,7 @@ ms.locfileid: "72609254"
 
 2. 在“调试”菜单上，单击“启动调试”。
 
-     @No__t_0 的实验版本将打开包含空测试文件的**调试**解决方案。
+     [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 的实验版本将打开包含空测试文件的**调试**解决方案。
 
 3. 在**解决方案资源管理器**中，双击 trackingPropertyDsl 文件以在设计器中将其打开，然后单击设计图面。
 

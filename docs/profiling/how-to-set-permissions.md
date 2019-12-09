@@ -11,14 +11,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e40438b6b14414371adaba6cb7eafc6377ae1187
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c1ab7705c7ab46b07b08b707ce447f37c581036a
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62539180"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74774584"
 ---
 # <a name="how-to-set-permissions"></a>如何：设置权限
 
@@ -35,19 +36,19 @@ ms.locfileid: "62539180"
 
 ## <a name="to-create-a-user-account-that-has-user-permissions"></a>创建拥有用户权限的用户帐户
 
-1. 右键单击“我的电脑”，然后单击“管理”。
+1. 右键单击“我的电脑”，然后单击“管理”   。
 
-     随即打开“计算机管理”窗口。
+     随即打开“计算机管理”窗口  。
 
-2. 展开“本地用户和组”。
+2. 展开“本地用户和组”  。
 
-3. 右键单击“用户”文件夹，然后单击“新建用户”。
+3. 右键单击“用户”文件夹，然后单击“新建用户”   。
 
-     随即出现“新建用户”对话框。
+     随即出现“新建用户”对话框。 
 
 4. 将所创建的用户帐户的信息填写在此对话框的字段中。 指定一个密码。 还可以选中要求用户下次登录时更改密码的复选框。
 
-5. 单击“创建”，然后单击“关闭”。
+5. 单击“创建”，然后单击“关闭”   。
 
      新用户将出现在用户组（一组没有管理员权限的用户）中。
 
@@ -61,17 +62,17 @@ ms.locfileid: "62539180"
     D:\ourProject
     ```
 
-2. 右键单击该文件夹，然后单击“属性”。
+2. 右键单击该文件夹，  然后单击“属性”。
 
-     随即显示“\<文件夹名称> 属性”对话框。
+     随即显示“\<文件夹名称> 属性”  对话框。
 
 3. 单击 **“安全”** 选项卡。
 
-4. 单击“组或用户名”框中的用户帐户的名称。
+4. 单击“组或用户名”  框中的用户帐户的名称。
 
-5. 在“\<用户名> 的权限”框中，选中“完全控制”复选框。
+5. 在“\<用户名> 的权限”  框中，选中“完全控制”复选框  。
 
-6. 单击 **“确定”**。
+6. 单击 **“确定”** 。
 
      这将授予用户对从第 5 步所选文件夹开始的共享文件夹树的权限。
 

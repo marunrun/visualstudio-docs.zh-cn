@@ -12,14 +12,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 96faf382145d7c4541f1fe66f872ad3622f64631
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cddbb0b3e27b841441937b7256ea32d722e25f5e
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62539294"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74774895"
 ---
 # <a name="how-to-relocate-instrumented-binaries"></a>如何：重定位检测后的二进制文件
 
@@ -27,9 +28,9 @@ ms.locfileid: "62539294"
 
 ## <a name="to-relocate-instrumented-binary"></a>若要重定位已检测的二进制文件
 
-1. 在“性能资源管理器” 中，右键单击性能会话，然后单击“属性” 。
+1. 在“性能资源管理器”  中，右键单击性能会话，然后单击“属性”  。
 
-2. 在“属性页” 中，单击“二进制”  属性。
+2. 在“属性页”  中，单击“二进制”  属性。
 
 3. 选择“重定位已检测的二进制文件”  复选框。
 

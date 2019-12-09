@@ -9,14 +9,14 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1d67e81aa90faa59cf5320293aba9e7d82e3f625
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 30ee029fe231202c821c8448d3594192b5ebfdf8
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654730"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299850"
 ---
-# <a name="tutorial-3-create-a-matching-game"></a>教程3：创建匹配游戏
+# <a name="tutorial-3-create-a-matching-game"></a>教程 3：创建匹配游戏
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 在本教程中，将生成一个匹配游戏，在该游戏中，玩家必须匹配隐藏的图标对。 您将学习如何：
@@ -35,16 +35,14 @@ ms.locfileid: "72654730"
 
   ![本教程中创建的游戏](../ide/media/express-finishedgame.png "Express_FinishedGame")本教程中创建的游戏
 
-  若要下载示例的完整版本，请参阅 [Complete Matching Game tutorial sample](http://code.msdn.microsoft.com/Complete-Matching-Game-4cffddba)（完整匹配游戏教程示例）。
-
 > [!NOTE]
 > 在本教程中，同时涉及 Visual C# 和 Visual Basic，因此请关注特定于您使用的编程语言的信息。
 
- 如果你遇到困难或在编程方面有疑问，请尝试在一个 MSDN 论坛上发布你的问题。 请参阅 [Visual Basic 论坛](http://social.msdn.microsoft.com/Forums/home?forum=vbgeneral)和 [Visual C# 论坛](http://social.msdn.microsoft.com/Forums/home?forum=csharpgeneral)。 另外，那里有很好的免费视频学习资源供你使用。 若要了解有关 Visual Basic 编程的详细信息，请参阅 [Visual Basic Fundamentals: Development for Absolute Beginners](http://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners)（Visual Basic 基础知识：零基础开发）。 若要了解有关 Visual C# 编程的详细信息，请参阅 [C# Fundamentals: Development for Absolute Beginners](http://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners)（C# 基础知识：零基础开发）。
+ 如果你遇到困难或在编程方面有疑问，请尝试在一个 MSDN 论坛上发布你的问题。 请参阅 [Visual Basic 论坛](https://social.msdn.microsoft.com/Forums/en-US/home)和 [Visual C# 论坛](https://social.msdn.microsoft.com/Forums/en-US/home)。 另外，那里有很好的免费视频学习资源供你使用。 若要了解有关 Visual Basic 编程的详细信息，请参阅 [Visual Basic Fundamentals: Development for Absolute Beginners](https://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners)（Visual Basic 基础知识：零基础开发）。 若要了解有关 Visual C# 编程的详细信息，请参阅 [C# Fundamentals: Development for Absolute Beginners](https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners)（C# 基础知识：零基础开发）。
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|描述|
+|标题|描述|
 |-----------|-----------------|
 |[步骤 1：创建项目并向窗体添加表](../ide/step-1-create-a-project-and-add-a-table-to-your-form.md)|首先创建项目并添加 `TableLayoutPanel` 控件，以保持控件正确对齐。|
 |[步骤 2：添加随机对象和图标列表](../ide/step-2-add-a-random-object-and-a-list-of-icons.md)|添加 `Random` 对象和 `List` 对象，以创建图标列表。|

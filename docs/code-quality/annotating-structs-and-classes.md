@@ -24,12 +24,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 93c6826f2903f30fbbdcb9c40ec5f695df32ac05
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 70dc130633e9f191811748b2ab316ad339ad4277
+ms.sourcegitcommit: 174c992ecdc868ecbf7d3cee654bbc2855aeb67d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747055"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74879251"
 ---
 # <a name="annotating-structs-and-classes"></a>批注结构和类
 
@@ -43,15 +43,15 @@ ms.locfileid: "72747055"
 
 - `_Field_size_(size)`, `_Field_size_opt_(size)`, `_Field_size_bytes_(size)`, `_Field_size_bytes_opt_(size)`
 
-     在 `size` 指定的元素（或字节）内具有可写大小的字段。
+     在 `size`指定的元素（或字节）内具有可写大小的字段。
 
-- `_Field_size_part_(size, count)`、`_Field_size_part_opt_(size, count)`、`_Field_size_bytes_part_(size, count)` `_Field_size_bytes_part_opt_(size, count)`
+- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`,         `_Field_size_bytes_part_(size, count)`, `_Field_size_bytes_part_opt_(size, count)`
 
-     在 `size` 指定的元素（或字节）中具有可写大小的字段，以及可读的元素（字节）的 `count`。
+     在 `size`指定的元素（或字节）中具有可写大小的字段，以及可读的元素（字节）的 `count`。
 
 - `_Field_size_full_(size)`, `_Field_size_full_opt_(size)`, `_Field_size_bytes_full_(size)`, `_Field_size_bytes_full_opt_(size)`
 
-     在 `size` 指定的元素（或字节）中具有可读和可写大小的字段。
+     在 `size`指定的元素（或字节）中具有可读和可写大小的字段。
 
 - `_Field_z_`
 
@@ -59,7 +59,7 @@ ms.locfileid: "72747055"
 
 - `_Struct_size_bytes_(size)`
 
-     适用于 struct 或类声明。  指示该类型的有效对象可能大于声明的类型，以及 `size` 指定的字节数。  例如:
+     适用于 struct 或类声明。  指示该类型的有效对象可能大于声明的类型，以及 `size`指定的字节数。  例如：
 
     ```cpp
 
@@ -81,11 +81,9 @@ ms.locfileid: "72747055"
 
 ```cpp
 #include <sal.h>
-// For FIELD_OFFSET macro
-#include <windows.h>
 
 // This _Struct_size_bytes_ is equivalent to what below _Field_size_ means.
-_Struct_size_bytes_(FIELD_OFFSET(MyBuffer, buffer) + bufferSize * sizeof(int))
+_Struct_size_bytes_(__builtin_offsetof(MyBuffer, buffer) + bufferSize * sizeof(int))
 struct MyBuffer
 {
     static int MaxBufferSize;
@@ -99,8 +97,9 @@ struct MyBuffer
 
     _Field_range_(1, MaxBufferSize)
     int bufferSize;
+    
     _Field_size_(bufferSize)        // Prefered way - easier to read and maintain.
-    int buffer[0];
+    int buffer[]; // Using C99 Flexible array member
 };
 ```
 
@@ -108,9 +107,9 @@ struct MyBuffer
 
 - `_Field_z_` 与 `_Null_terminated_` 相等。  "名称" 字段的 `_Field_z_` 指定名称字段为以 null 结尾的字符串。
 - `bufferSize` 的 `_Field_range_` 指定 `bufferSize` 的值应在1和 `MaxBufferSize` （两者都包含）范围内。
-- @No__t_0 和 `_Field_size_` 批注的最终结果是等效的。 对于具有类似布局的结构或类，`_Field_size_` 更易于读取和维护，因为它具有比等效 `_Struct_size_bytes_` 注释更少的引用和计算。 `_Field_size_` 不需要转换为字节大小。 如果 "字节大小" 是唯一的选项，例如，对于 void 指针字段，可以使用 `_Field_size_bytes_`。 如果同时存在 `_Struct_size_bytes_` 和 `_Field_size_`，则它们将可用于工具。 如果两个批注不一致，就会执行该操作。
+- `_Struct_size_bytes_` 和 `_Field_size_` 批注的最终结果是等效的。 对于具有类似布局的结构或类，`_Field_size_` 更易于读取和维护，因为它具有比等效 `_Struct_size_bytes_` 注释更少的引用和计算。 `_Field_size_` 不需要转换为字节大小。 如果 "字节大小" 是唯一的选项，例如，对于 void 指针字段，可以使用 `_Field_size_bytes_`。 如果同时存在 `_Struct_size_bytes_` 和 `_Field_size_`，则它们将可用于工具。 如果两个批注不一致，就会执行该操作。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 SAL 批注以减少 C/C++ 代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [了解 SAL](../code-quality/understanding-sal.md)

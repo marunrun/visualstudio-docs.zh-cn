@@ -52,12 +52,12 @@ HRESULT SetProperty(
   
  下表描述了 `dwProperty` 允许的值。  
   
-|返回的常量|“值”|含义|  
+|常量|值|含义|  
 |--------------|-----------|-------------|  
 |SCRIPTPROP_INTEGERMODE|0x00003000|强制脚本引擎以整数模式而不是浮点模式进行拆分。 默认值为 `False`。|  
 |SCRIPTPROP_STRINGCOMPAREINSTANCE|0x00003001|允许替换脚本引擎的字符串比较函数。|  
 |SCRIPTPROP_ABBREVIATE_GLOBALNAME_RESOLUTION|0x70000002|通知脚本引擎，不存在其他脚本引擎来提供给全局对象。|  
-|SCRIPTPROP_INVOKEVERSIONING|0x00004000|强制 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 脚本引擎选择一组要支持的语言功能。 @No__t_0 脚本引擎支持的语言功能的默认集合等效于 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 脚本引擎版本5.7 中显示的语言功能集。|  
+|SCRIPTPROP_INVOKEVERSIONING|0x00004000|强制 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 脚本引擎选择一组要支持的语言功能。 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 脚本引擎支持的语言功能的默认集合等效于 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 脚本引擎版本5.7 中显示的语言功能集。|  
   
 ## <a name="return-value"></a>返回值  
  返回以下值之一：  
@@ -76,7 +76,7 @@ HRESULT SetProperty(
  若要在初始化 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 脚本引擎时选择要支持的语言功能集，请调用 `SetProperty` 并传递与为 SCRIPTPROP_INVOKEVERSIONING 启用的语言功能设置对应的值。 如果将此属性设置为1（SCRIPTLANGUAGEVERSION_5_7），则可用的语言功能与 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 脚本引擎版本5.7 中显示的功能相同。 如果将其设置为2（SCRIPTLANGUAGEVERSION_5_8），则可用的语言功能是在版本5.7 中显示的功能，以及在版本5.8 中添加的新功能。 默认情况下，此属性设置为0（SCRIPTLANGUAGEVERSION_DEFAULT），它等效于版本5.7 中显示的语言功能集，除非宿主支持不同的默认行为。 例如，Internet explorer 8 引入了版本 5.8 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 脚本引擎支持的 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 语言功能，默认情况下，Internet Explorer 8 的默认文档模式为 "Internet Explorer 8 标准" 模式。 将 Internet Explorer 8 文档模式切换到 Internet Explorer 7 标准或兼容模式，将 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 脚本引擎重置为仅支持版本 5.7 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 脚本引擎中存在的语言功能集。  
   
 > [!NOTE]
-> 只应在正在初始化 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 脚本引擎时设置 SCRIPTPROP_INVOKEVERSIONING。  
+> 只应在初始化 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 脚本引擎时设置 SCRIPTPROP_INVOKEVERSIONING。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何强制脚本引擎使用整数除法，以及如何允许重载比较函数。  
@@ -100,7 +100,7 @@ scriptProperties.SetProperty(SCRIPTPROP_STRCOMPINST,
     System.IntPtr.Zero, ref vtStrCmpInstance);  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [定义文档兼容性](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/compatibility/cc288325(v=vs.85))   
- [IActiveScriptProperty](../../winscript/reference/iactivescriptproperty.md)    
+ [IActiveScriptProperty](../../winscript/reference/iactivescriptproperty.md)   
  [版本信息](../../javascript/reference/javascript-version-information.md)

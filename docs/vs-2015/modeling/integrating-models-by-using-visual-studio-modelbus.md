@@ -9,17 +9,17 @@ caps.latest.revision: 28
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bbb22dd65b806672c7ec2b4888ed8142764f908e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a9abb8bd82f8a00c37cb76588ded8813ec984067
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646166"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298900"
 ---
 # <a name="integrating-models-by-using-visual-studio-modelbus"></a>使用 Visual Studio Modelbus 集成模型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ModelBus 提供了一种方法，用于在模型和其他工具之间创建链接到模型。 例如，可以链接域特定语言（DSL）模型和 UML 模型。 可以创建一组集成 DSL。
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ModelBus 提供了一种方法，用于在模型和其他工具之间创建链接到模型。 例如，可以链接域特定语言 (DSL) 模型和 UML 模型。 可以创建一组集成 DSL。
 
  ModelBus 允许你创建对模型或模型中特定元素的唯一引用。 此引用可存储在该模型外部，例如另一个模型的元素中。 在随后的场合中，当工具想要获取对元素的访问权限时，模型总线基础结构将加载相应的模型并返回元素。 如果需要，可以向用户显示该模型。 如果不能在其以前的位置中访问该文件，则 ModelBus 将要求用户查找该文件。 如果用户找到该文件，则 ModelBus 将修复所有对该文件的引用。
 
@@ -37,13 +37,13 @@ ms.locfileid: "72646166"
 
 ### <a name="expose"></a>向模型总线公开 DSL 定义
 
-1. 除非已安装 Visual Studio 模型总线扩展，否则请下载并安装它。 有关详细信息，请参阅[可视化和建模 SDK](http://go.microsoft.com/fwlink/?LinkID=185579)。
+1. 除非已安装 Visual Studio 模型总线扩展，否则请下载并安装它。 有关详细信息，请参阅[可视化和建模 SDK](https://go.microsoft.com/fwlink/?LinkID=185579)。
 
 2. 打开 DSL 定义文件。 右键单击设计图面，然后单击 "**启用 Modelbus**"。
 
 3. 在对话框中，选择 **"我想要向 ModelBus 公开此 DSL"** 。 如果希望此 DSL 同时公开其模型并使用对其他 DSL 的引用，则可选择这两个选项。
 
-4. 单击“确定”。 新项目“ModelBusAdapter”随即添加到 DSL 解决方案中。
+4. 单击" **确定**"。 新项目“ModelBusAdapter”随即添加到 DSL 解决方案中。
 
 5. 如果要从文本模板访问 DSL，则必须修改新项目中的 AdapterManager.tt。 如果要从其他代码（例如命令和事件处理程序）访问 DSL，则忽略此步骤。 有关详细信息，请参阅[在文本模板中使用 Visual Studio ModelBus](../modeling/using-visual-studio-modelbus-in-a-text-template.md)。
 
@@ -66,7 +66,7 @@ ms.locfileid: "72646166"
    文件夹 `ModelBusAdapters\bin\*` 包含由 `Dsl` 项目和 `ModelBusAdapters` 项目生成的程序集。 若要从另一个 DSL 引用此 DSL，应导入这些程序集。
 
 ### <a name="making-sure-that-elements-can-be-referenced"></a>确保元素可被引用
- 默认情况下，[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ModelBus 适配器使用元素的 GUID 来标识它。 因此这些标识符必须保留在模型文件中。
+ 默认情况下，[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ModelBus 适配器使用元素的 guid 来识别它。 因此这些标识符必须保留在模型文件中。
 
 ##### <a name="to-ensure-that-element-ids-are-persisted"></a>确保保留元素 ID
 
@@ -95,7 +95,7 @@ ms.locfileid: "72646166"
 
 2. 在对话框中，选择 "**我想要启用此模型以使用模型总线引用**"。
 
-3. 在使用 DSL 的 DSL 项目中，将以下程序集添加到项目引用。 你将在公开的 DSL 的 ModelBusAdapter\bin \\ * 目录中找到这些程序集（.dll 文件）。
+3. 在使用 DSL 的 DSL 项目中，将以下程序集添加到项目引用。 你将在公开的 DSL 的 ModelBusAdapter\bin\\* 目录中找到这些程序集（.dll 文件）。
 
     - 公开的 DSL 程序集，例如**FamilyTree**
 
@@ -143,7 +143,7 @@ ms.locfileid: "72646166"
 3. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例的调试项目中，添加作为每个 DSL 的实例的文件。
 
     > [!NOTE]
-    > [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ModelBus 只能解析对这些模型的引用，它们是同一个 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 解决方案中的项。 例如，你无法创建对位于文件系统另一部分中的模型文件的引用。
+    > [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ModelBus 只能解析对属于同一 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 解决方案中的项的模型的引用。 例如，你无法创建对位于文件系统另一部分中的模型文件的引用。
 
 4. 在公开的 DSL 的实例中创建一些元素和链接，并将其保存。
 
@@ -384,7 +384,7 @@ ModelBusReference elementReferenceRestored =
 
 - `ModelBusReferencePropertySerializer` 是处理 MBR 标头的标准序列化程序。 它使用标准 DSL `SerializationContext` 属性包，该属性包使用键 `ReferenceContext` 存储在 `ModelBusReferencePropertySerializer.ModelBusLoadContextKey` 中。 具体而言，`SerializationContext` 应包含 `ModelBus` 的实例。
 
-- ModelBus 适配器将处理 MBR 的特定于适配器的部分。 它可使用存储在 MBR 的 ReferenceContext 中的附加信息。 简单的基于文件的适配器使用 `FilePathLoadContextKey` 和 `FilePathSaveContextKey` 的密钥来保存根文件路径。
+- ModelBus 适配器将处理 MBR 的特定于适配器的部分。 它可使用存储在 MBR 的 ReferenceContext 中的附加信息。 简单的基于文件的适配器使用 `FilePathLoadContextKey` 和 `FilePathSaveContextKey`的密钥来保存根文件路径。
 
      仅当使用模型文件中的适配器引用时才对其进行反序列化。
 

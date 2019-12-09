@@ -13,19 +13,19 @@ caps.latest.revision: 38
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: aa377f657143ccc03a19d99bfc9620782bb916e7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8189330f5bc3ff5c9008b6f01ffc00af96162806
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655033"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301152"
 ---
 # <a name="customizing-element-creation-and-movement"></a>自定义元素创建和移动
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 可以通过工具箱或粘贴或移动操作，允许将元素拖至另一个元素上。 您可以使用您指定的关系将移动的元素链接到目标元素。
 
- 元素合并指令（EMD）指定将一个模型元素*合并*到另一个模型元素时会发生的情况。 发生这种情况时：
+ 元素合并指令（EMD）指定将一个模型元素*合并*到另一个模型元素时会发生的情况。 发生这种情况的原因有：
 
 - 用户将 "工具箱" 拖动到关系图或形状上。
 
@@ -110,7 +110,7 @@ ms.locfileid: "72655033"
 
       可以使用路径导航工具创建每个路径：
 
-   3. 在 "**处理合并" （通过在路径中创建链接**），单击 **\<add 路径 >** 。
+   3. 在 "**处理合并" （通过在路径中创建链接**），单击 **\<添加路径 >** 。
 
    4. 单击列表项右侧的下拉箭头。 此时将显示一个树视图。
 
@@ -122,7 +122,7 @@ ms.locfileid: "72655033"
 
         重新生成的时间比平时长，因为生成的代码将从文本模板中更新以符合新的 DSL 定义。
 
-   2. @No__t_0 的实验实例启动后，打开 DSL 的模型文件。 创建一些示例元素。
+   2. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例启动后，打开 DSL 的模型文件。 创建一些示例元素。
 
    3. 从**示例元素**工具拖到现有形状上。
 
@@ -151,7 +151,7 @@ ms.locfileid: "72655033"
 
 1. 使用**最小语言**解决方案模板创建 DSL。 打开 DSL 定义关系图。
 
-2. 在 DSL 资源管理器中，展开 "**域类**"、`ExampleModel` "**元素合并指令**"。 选择名为 `ExampleElement` 的元素合并指令。
+2. 在 DSL 资源管理器中，展开 "**域类**"、`ExampleModel`"**元素合并指令**"。 选择名为 `ExampleElement`的元素合并指令。
 
      此 EMD 控制用户如何在模型中创建新的 `ExampleElement` 对象，例如通过从工具箱中拖动。
 
@@ -161,7 +161,7 @@ ms.locfileid: "72655033"
 
      将报告生成错误，如下所示： "ElementMergeSample. ExampleElement 不包含 CanMergeExampleElement 的定义 ..."
 
-     必须实现 `CanMergeExampleElement` 方法。
+     必须实现 `CanMergeExampleElement`方法。
 
 5. 在**Dsl**项目中创建新的代码文件。 将其内容替换为以下代码，并将命名空间更改为项目的命名空间。
 
@@ -191,7 +191,7 @@ ms.locfileid: "72655033"
 
     ```
 
-     这个简单的示例限制了可合并到父模型中的元素数。 对于更有趣的条件，该方法可以检查接收对象的任何属性和链接。 它还可以检查在 <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> 中携带的合并元素的属性。 有关 `ElementGroupPrototypes` 的详细信息，请参阅[自定义复制行为](../modeling/customizing-copy-behavior.md)。 有关如何编写读取模型的代码的详细信息，请参阅[在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
+     这个简单的示例限制了可合并到父模型中的元素数。 对于更有趣的条件，该方法可以检查接收对象的任何属性和链接。 它还可以检查在 <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype>中携带的合并元素的属性。 有关 `ElementGroupPrototypes`的详细信息，请参阅[自定义复制行为](../modeling/customizing-copy-behavior.md)。 有关如何编写读取模型的代码的详细信息，请参阅[在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
 
 6. 测试 DSL：
 
@@ -259,9 +259,9 @@ ms.locfileid: "72655033"
 
 #### <a name="to-write-custom-merge-code"></a>编写自定义合并代码
 
-1. 在**Dsl\Generated Code\DomainClasses.cs**中，检查名为 `MergeRelate` 的方法。 这些方法在新元素和现有模型之间创建链接。
+1. 在**Dsl\Generated Code\DomainClasses.cs**中，检查名为 `MergeRelate`的方法。 这些方法在新元素和现有模型之间创建链接。
 
-    同时，检查名为 `MergeDisconnect` 的方法。 当删除元素时，这些方法会将其从模型中取消链接。
+    同时，检查名为 `MergeDisconnect`的方法。 当删除元素时，这些方法会将其从模型中取消链接。
 
 2. 在 " **DSL 资源管理器**" 中，选择或创建要自定义的元素合并指令。 在 " **DSL 详细信息**" 窗口中，设置 "**使用自定义合并**"。
 
@@ -317,4 +317,4 @@ ms.locfileid: "72655033"
      看不到不可用的指针，并且应该能够在现有的**输入端口**上删除现有的。 选择新的**输入端口**并将其拖到**组件**上的另一个点。
 
 ## <a name="see-also"></a>请参阅
- [在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)[自定义工具和工具箱](../modeling/customizing-tools-and-the-toolbox.md)[线路示例 DSL](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
+ [在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)[自定义工具和工具箱](../modeling/customizing-tools-and-the-toolbox.md)

@@ -9,14 +9,15 @@ ms.assetid: 35752f95-a57a-4def-b64d-cf4899669e99
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 545a77791d7bc5318dc17d869c510fb4e8a0787f
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: e7b23a7cbefeace19a3deaa5c1bfc05580081d39
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189344"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778461"
 ---
 # <a name="performance-session-overview"></a>性能会话概述
 本概述说明分析的基础知识。 刚接触性能工作的开发者会了解 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 分析工具如何帮助他们快速提高工作效率以及提高其代码的性能。 在分析方面经验丰富的开发者可以获得特定分析工具功能和过程的概述。

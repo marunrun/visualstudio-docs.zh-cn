@@ -15,12 +15,12 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d3d6eafbafbf9b373028a7ba052ba9e8df62511c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b7ca3179d3e4883f8a2867e13cbdd5e874d60462
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661602"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297776"
 ---
 # <a name="toolbox-html-tab"></a>工具箱，“HTML”选项卡
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -121,7 +121,7 @@ ms.locfileid: "72661602"
  有关详细信息，请参阅 [HTML 输入控件](https://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)、[HtmlInputPassword 服务器控件声明性语法](https://msdn.microsoft.com/df703dd0-1624-4e5a-a547-c97f2f331b9f)、[如何：设置 TextBox Web 服务器控件以输入密码](https://msdn.microsoft.com/library/5b5069f3-64a1-435a-aee6-da263f4e6310)和[演练：验证 Web 窗体页中的用户输入](https://msdn.microsoft.com/library/7141d6ba-34f3-410b-b5cd-2102a24cb436)。
 
 > [!IMPORTANT]
-> 如果应用程序传输用户名和密码，则应配置网站使用安全套接字层 (SSL) 对传输进行加密。 有关详细信息，请参阅 [IIS 操作指南](http://go.microsoft.com/fwlink/?linkid=47856)中的“使用 SSL 保护连接”。 此外，建议对所有用户输入进行验证。 有关详细信息，请参阅[在 ASP.NET 网页中验证用户输入](https://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461)。
+> 如果应用程序传输用户名和密码，则应配置网站使用安全套接字层 (SSL) 对传输进行加密。 有关详细信息，请参阅 [IIS 操作指南](https://go.microsoft.com/fwlink/?linkid=47856)中的“使用 SSL 保护连接”。 此外，建议对所有用户输入进行验证。 有关详细信息，请参阅[在 ASP.NET 网页中验证用户输入](https://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461)。
 
  **输入（复选框）** ![HTML 网页工具箱复选框选项](../../ide/reference/media/vxcheckbox.gif "|::ref8::|")
 

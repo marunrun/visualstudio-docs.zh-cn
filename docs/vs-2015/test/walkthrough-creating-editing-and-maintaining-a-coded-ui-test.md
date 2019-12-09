@@ -8,19 +8,19 @@ ms.assetid: f7c25ba7-5c9c-455b-9242-701cda56f90c
 caps.latest.revision: 43
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2891a01590f2970fc2e68ea7bc2d57506b12d26b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4b4d3e7c597766c3b416a7cb637cf0e5e99f71d5
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657109"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302062"
 ---
 # <a name="walkthrough-creating-editing-and-maintaining-a-coded-ui-test"></a>演练：创建、编辑和维护编码的 UI 测试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 在本演练中，你将创建一个简单的 Windows Presentation Foundation (WPF) 应用程序来演示如何创建、编辑和维护编码的 UI 测试。 本演练为更正由各种计时问题和控件重构中断的测试提供了解决方案。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
  本演练需要：
 
 - Visual Studio Enterprise
@@ -29,7 +29,7 @@ ms.locfileid: "72657109"
 
 1. 在“文件”菜单上，指向“新建”，然后选择“项目”。
 
-     此时将出现“新建项目”对话框。
+     此时将出现 **“新建项目”** 对话框。
 
 2. 在“已安装”窗格中，展开 **Visual C#** ，然后选择“Windows 桌面”。
 
@@ -151,7 +151,7 @@ ms.locfileid: "72657109"
 
      如果需要，你可以暂停记录（例如，如果你必须处理传入的邮件）。
 
-     ![暂停录制](../test/media/cuit.png "CUIT")
+     ![暂停录制](../test/media/cuit.png "CUIT_")
 
     > [!WARNING]
     > 将录制在桌面上执行的所有操作。 如果你正在执行可能会导致敏感数据被包括在录制中的操作，则暂停录制。
@@ -369,22 +369,22 @@ ms.locfileid: "72657109"
 ## <a name="external-resources"></a>外部资源
 
 ### <a name="videos"></a>视频
- ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[编码的 UI 测试-DeepDive-第1集-GettingStarted](http://go.microsoft.com/fwlink/?LinkID=230573)
+ ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[编码的 UI 测试-DeepDive-第1集-GettingStarted](https://go.microsoft.com/fwlink/?LinkID=230573)
 
- ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[编码的 UI 测试-DeepDive-第2集-维护和调试](http://go.microsoft.com/fwlink/?LinkID=230574)
+ ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[编码的 UI 测试-DeepDive-第2集-维护和调试](https://go.microsoft.com/fwlink/?LinkID=230574)
 
- ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[编码的 UI 测试-DeepDive-第-3](http://go.microsoft.com/fwlink/?LinkID=230575)
+ ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[编码的 UI 测试-DeepDive-第-3](https://go.microsoft.com/fwlink/?LinkID=230575)
 
 ### <a name="hands-on-lab"></a>动手实验
- [MSDN 虚拟实验室：使用 Visual Studio 2010 创建编码的 UI 测试的简介](http://go.microsoft.com/fwlink/?LinkID=22508)
+ [MSDN 虚拟实验室：使用 Visual Studio 2010 创建编码的 UI 测试的简介](https://go.microsoft.com/fwlink/?LinkID=22508)
 
 ### <a name="faq"></a>FAQ
- [编码的 UI 测试常见问题 - 1](http://go.microsoft.com/fwlink/?LinkID=230576)
+ [编码的 UI 测试常见问题 - 1](https://go.microsoft.com/fwlink/?LinkID=230576)
 
- [编码的 UI 测试常见问题 - 2](http://go.microsoft.com/fwlink/?LinkID=230578)
+ [编码的 UI 测试常见问题 - 2](https://go.microsoft.com/fwlink/?LinkID=230578)
 
 ### <a name="forum"></a>论坛
- [Visual Studio UI 自动测试（包括 CodedUI）](http://go.microsoft.com/fwlink/?LinkID=224497)
+ [Visual Studio UI 自动测试（包括 CodedUI）](https://go.microsoft.com/fwlink/?LinkID=224497)
 
 ## <a name="see-also"></a>请参阅
  [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)[入门使用 WPF 设计器](https://msdn.microsoft.com/18e61d03-b96a-4058-a166-8ec6b3f6116b)[支持编码的 Ui 测试的配置和平台，以及](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)[使用编码的 Ui 测试编辑器编辑编码的 ui 测试](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)的操作录制

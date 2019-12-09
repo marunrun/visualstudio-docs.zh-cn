@@ -9,12 +9,12 @@ caps.latest.revision: 9
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3fdedf3fd9463b25e2c825a0a2d43b069049a2cb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f634f028dafea3260a69537893513f13cc0ebe83
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671234"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74292546"
 ---
 # <a name="run-unit-tests-on-uml-extensions"></a>对 UML 扩展运行单元测试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,8 +42,6 @@ ms.locfileid: "72671234"
    若要测试 MEF 组件，你必须将这些组件的导入属性显式连接到值。
 
   以下各节详述了这些内容。
-
-  可在 [UML – 使用文本快速输入](http://code.msdn.microsoft.com/UML-Rapid-Entry-using-Text-0813ad8a)上的代码示例库中找到经单元测试的 UML 扩展的示例。
 
 ## <a name="requirements"></a>要求
  请参阅 [要求](../modeling/extend-uml-models-and-diagrams.md#Requirements)。
@@ -379,4 +377,4 @@ Assert.AreEqual("hello", testInstance.privateField1_Accessor);
  使用反射定义访问器这是我们建议的最小方法。 旧版本的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 提供了一个实用工具，可用于自动为每个私有方法创建一个访问器方法。 虽然此方法很方便，但我们的经验表明，此方法会生成与正在测试的应用程序的内部结构紧密耦合的单元测试。 当需求或体系结构发生更改时，这会产生额外的工作量，因为测试必须与实现一起更改。 此外，实现设计中的任何错误假设也会带入到测试中，使得测试无法发现错误。
 
 ## <a name="see-also"></a>请参阅
- [单元测试剖析](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144)[在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md) [UML –使用文本快速输入](http://code.msdn.microsoft.com/UML-Rapid-Entry-using-Text-0813ad8a)
+ [单元测试剖析](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144)[在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)

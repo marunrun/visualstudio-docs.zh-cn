@@ -12,12 +12,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 378a5965f8ca9e9cc2d1c7214180e99f080d7873
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bec6c997a73d0b163ec0857ddd3a3380f26793bf
+ms.sourcegitcommit: 08105865a9643fb20dce9b8b7580452cfbbe7ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72630965"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74538530"
 ---
 # <a name="codeindex-command"></a>CodeIndex 命令
 
@@ -125,4 +125,4 @@ TFSConfig CodeIndex /destroyCodeIndex /collectionName:"Fabrikam Website"
 ## <a name="see-also"></a>请参阅
 
 - [使用 CodeLens 查找代码更改和其他历史记录](../ide/find-code-changes-and-other-history-with-codelens.md)
-- [使用 TFSConfig 管理服务器配置](/tfs/server/ref/command-line/tfsconfig-cmd)
+- [使用 TFSConfig 管理服务器配置](/azure/devops/server/command-line/tfsconfig-cmd)

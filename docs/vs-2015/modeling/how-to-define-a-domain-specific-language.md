@@ -18,28 +18,28 @@ caps.latest.revision: 45
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bf25f5e0239eafd5594c38f7f3701114558b55cc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b4bcd1f1f023c9e439fb870c9e31f07aa5be215d
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671690"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299556"
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>如何定义域特定语言
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 若要定义域特定语言 (DSL)，请从模板创建 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 解决方案。 解决方案的重要组成部分是 DSL 定义关系图，它存储在 DslDefinition.dsl 中。 DSL 定义将定义 DSL 的类和形状。 在进行修改并将所做修改添加到这些元素后，可以添加程序代码以更详细地自定义 DSL。
 
- 如果你不熟悉 Dsl，我们建议你完成**DSL 工具实验室**，你可以在此站点中找到此工具：[初学者和建模 SDK](http://go.microsoft.com/fwlink/?LinkID=186128)
+ 如果你不熟悉 Dsl，我们建议你完成**DSL 工具实验室**，你可以在此站点中找到此工具：[初学者和建模 SDK](https://go.microsoft.com/fwlink/?LinkID=186128)
 
 ## <a name="templates"></a>选择模板解决方案
  若要定义 DSL，必须安装以下组件：
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](http://go.microsoft.com/fwlink/?LinkId=185580)|
-|Visual Studio 可视化和建模 SDK|[http://go.microsoft.com/fwlink/?LinkID=186128](http://go.microsoft.com/fwlink/?LinkID=186128)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://go.microsoft.com/fwlink/?LinkId=185579)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://go.microsoft.com/fwlink/?LinkId=185580)|
+|Visual Studio 可视化和建模 SDK|[http://go.microsoft.com/fwlink/?LinkID=186128](https://go.microsoft.com/fwlink/?LinkID=186128)|
 
  若要创建新的域特定语言，请使用域特定语言项目模板创建新的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 解决方案。
 
@@ -609,7 +609,7 @@ ms.locfileid: "72671690"
  另请参阅[如何：更改域特定语言的命名空间](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md)。
 
 ## <a name="trouble"></a>有关
- 下表列出了在设计 DSL 时遇到的一些最常见问题，以及其解决方案的建议。 [可视化工具扩展性论坛](http://go.microsoft.com/fwlink/?LinkId=186074)上提供了更多建议。
+ 下表列出了在设计 DSL 时遇到的一些最常见问题，以及其解决方案的建议。 [可视化工具扩展性论坛](https://go.microsoft.com/fwlink/?LinkId=186074)上提供了更多建议。
 
 |问题|建议|
 |-------------|----------------|

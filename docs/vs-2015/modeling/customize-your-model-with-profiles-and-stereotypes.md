@@ -13,12 +13,12 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4f83fcf3ea500e0640a226b80d3d3c0e2c7ed869
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b634b11418ef2d4220dc4eb07c825b514ab5494c
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655094"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301195"
 ---
 # <a name="customize-your-model-with-profiles-and-stereotypes"></a>使用配置文件和构造型自定义模型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,11 +38,10 @@ ms.locfileid: "72655094"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|描述|
+|标题|描述|
 |-----------|-----------------|
 |[向 UML 模型元素添加构造型](../modeling/add-stereotypes-to-uml-model-elements.md)|将模型元素放在包中，将包链接到配置文件，并对该元素应用构造型。|
 |[UML 模型的标准构造型](../modeling/standard-stereotypes-for-uml-models.md)|UML 标准配置文件 L2 和 L3 随 Visual Studio 一起安装，并且默认情况下，每个模型都链接到它们。 它们提供了可用于为你的模型添加批注的构造型。<br /><br /> 例如，可以将 «规范» 构造型应用于类，以指示它旨在仅定义其实例的外部可见的行为。|
 |[定义用于扩展 UML 的配置文件](../modeling/define-a-profile-to-extend-uml.md)|你可以定义自己的构造型和工具，它们适用于你自己的应用程序区域。<br /><br /> 例如，如果开发银行软件，则可以定义能应用于类的 «帐户» 构造型。 然后可以使用类图来描述不同类型的帐户及其关系。|
 |[安装 UML 配置文件](../modeling/install-a-uml-profile.md)|如果有人给了你一个 UML 配置文件，可将它安装在你的计算机上。|
 |[定义自定义建模工具箱项](../modeling/define-a-custom-modeling-toolbox-item.md)|自定义工具箱项使你能避免在新元素上重复设置构造型。|
-|[按构造型的 UML 类的颜色](http://code.msdn.microsoft.com/UML-Color-Classes-by-07de2b70)|此示例代码扩展了 UML 关系图。 它根据元素的构造型自动设置 UML 形状的颜色。|

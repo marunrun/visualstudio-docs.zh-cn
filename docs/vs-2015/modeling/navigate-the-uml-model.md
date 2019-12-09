@@ -11,12 +11,12 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7b90d8b532b004a7cbdaeed762300a0daf9ab45c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 23f87c81e43b2dfafb1c9c78c3135faff809bb9f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668547"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74289850"
 ---
 # <a name="navigate-the-uml-model"></a>导航 UML 模型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "72668547"
 本主题介绍 UML 模型的主要类型。
 
 ## <a name="the-model-elements-model-and-model-store"></a>模型元素、模型和模型库
- 在程序集**VisualStudio**中定义的类型对应于[Uml 规范2.1.2 版本](http://www.omg.org/spec/UML/2.1.2/Superstructure/PDF/)中定义的类型。
+ 在程序集**VisualStudio**中定义的类型对应于[Uml 规范2.1.2 版本](https://www.omg.org/spec/UML/2.1.2/Superstructure/PDF/)中定义的类型。
 
  UML 规范中的类型在 Visual Studio 中作为接口实现。 字母“I”附加在每个类型的名称之前。 例如： [IElement](/previous-versions/dd516035(v=vs.140))、 [IClass](/previous-versions/dd523539%28v%3dvs.140%29)、 [IOperation](/previous-versions/dd481186(v=vs.140))。
 
@@ -54,7 +54,7 @@ ms.locfileid: "72668547"
 
  在大多数情况下，`Owner` 和 `OwnedElements` 属性的目标也由具有更具体的名称的其他属性引用。 例如，每个 UML 操作都由一个 UML 类所有。 因此， [IOperation](/previous-versions/dd481186(v=vs.140))有一个名为[IOperation](/previous-versions/dd473473%28v%3dvs.140%29)的属性，并且在每个[IOperation](/previous-versions/dd481186(v=vs.140))对象中都 `Class == Owner`。
 
- 没有所有者的树的最顶层元素是 `AuxiliaryConstructs.IModel`。 IModel 包含在 `IModelStore` 中，这是[IModelStore](/previous-versions/ee789368(v=vs.140))。
+ 没有所有者的树的最顶层元素是 `AuxiliaryConstructs.IModel`。 IModel 包含在 `IModelStore`中，这是[IModelStore](/previous-versions/ee789368(v=vs.140))。
 
  创建的每个模型元素都有一个所有者。 有关详细信息，请参阅[在 UML 模型中创建元素和关系](../modeling/create-elements-and-relationships-in-uml-models.md)。
 
@@ -128,7 +128,7 @@ foreach (IShape<IInterface> in
 
 - 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中打开建模项目及其关系图，然后访问相应内容。 有关详细信息，请参阅[使用 Visual STUDIO API 打开 UML 模型](../modeling/open-a-uml-model-by-using-the-visual-studio-api.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [扩展 UML 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)
 - [使用 UML API 编程](../modeling/programming-with-the-uml-api.md)

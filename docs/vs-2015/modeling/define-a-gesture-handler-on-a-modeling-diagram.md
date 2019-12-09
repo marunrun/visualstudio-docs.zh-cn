@@ -12,17 +12,17 @@ caps.latest.revision: 36
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: fbf111dbf8297994994f10b9b867e03321268679
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bf749d1073faf4cf22febafce716af36b47c6484
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654871"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299308"
 ---
 # <a name="define-a-gesture-handler-on-a-modeling-diagram"></a>在建模图上定义笔势处理程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在 Visual Studio 中，可以定义当用户双击项或将项拖动到 UML 关系图上时将执行的命令。 可以将这些扩展打包到 Visual Studio 集成扩展 ([VSIX](http://go.microsoft.com/fwlink/?LinkId=160780)) 中，并将其分发给其他 Visual Studio 用户。
+在 Visual Studio 中，可以定义当用户双击项或将项拖动到 UML 关系图上时将执行的命令。 可以将这些扩展打包到 Visual Studio 集成扩展 ([VSIX](https://go.microsoft.com/fwlink/?LinkId=160780)) 中，并将其分发给其他 Visual Studio 用户。
 
  如果已存在针对要拖动的关系图类型和元素类型的内置行为，则可能无法添加或重写此行为。
 
@@ -48,7 +48,7 @@ ms.locfileid: "72654871"
 
 3. 按 F5 测试笔势处理程序。 有关详细信息，请参阅 [执行笔势处理程序](#Executing)。
 
-4. 在另一台计算机上安装笔势处理程序，方法是：将文件 bin 复制 \\ 由项目生成的 **\* \\ \*。** 有关详细信息，请参阅 [安装和卸载扩展](#Installing)。
+4. 在另一台计算机上安装笔势处理程序，方法是：将文件 bin 复制\\由项目生成的 **\*\\\*。** 有关详细信息，请参阅 [安装和卸载扩展](#Installing)。
 
    下面是替代过程：
 
@@ -243,7 +243,7 @@ ms.locfileid: "72654871"
 
    - 如果你有多个项目，请确保将 VSIX 项目设置为解决方案的启动项目。
 
-   - 在“解决方案资源管理器”中，在“启动”或“仅项目”的快捷菜单上选择“属性”。 在项目属性编辑器中，选择 "**调试**" 选项卡。请确保 "**启动外部程序**" 字段中的字符串是 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的完整路径名，通常为：
+   - 在“解决方案资源管理器”中，在“启动”或“仅项目”的快捷菜单上选择“属性”。 在项目属性编辑器中，选择 "**调试**" 选项卡。请确保 "**启动外部程序**" 字段中的字符串是 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的完整路径名，通常为：
 
         `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
@@ -280,9 +280,9 @@ ms.locfileid: "72654871"
 
  这些方法的参数包括：
 
-- `ShapeElement target` 用户已将某项拖动到其上的形状或关系图。
+- `ShapeElement target`。 用户已将某项拖动到其上的形状或关系图。
 
-    `ShapeElement` 是作为 UML 建模工具的基础的实现中的一个类。 为降低使 UML 模型和关系图处于不一致状态的风险，建议你不要直接使用此类的方法。 相反，将元素包装在 `IShape` 中，然后使用在[关系图上显示 UML 模型](../modeling/display-a-uml-model-on-diagrams.md)中所述的方法。
+    `ShapeElement` 是作为 UML 建模工具的基础的实现中的一个类。 为降低使 UML 模型和关系图处于不一致状态的风险，建议你不要直接使用此类的方法。 相反，将元素包装在 `IShape`中，然后使用在[关系图上显示 UML 模型](../modeling/display-a-uml-model-on-diagrams.md)中所述的方法。
 
   - 要获取 `IShape`：
 
@@ -311,7 +311,7 @@ ms.locfileid: "72654871"
       target.Store.GetService(typeof(EnvDTE.DTE)) as EnvDTE.DTE
       ```
 
-- `DiagramDragEventArgs eventArgs` 此参数传送拖动操作的源对象的序列化格式：
+- `DiagramDragEventArgs eventArgs`。 此参数传送拖动操作的源对象的序列化格式：
 
     ```
     System.Windows.Forms.IDataObject data = eventArgs.Data;
@@ -357,7 +357,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>) {...}
 
     1. 在“解决方案资源管理器”中，在 VSIX 项目的快捷菜单上，选择“在 Windows 资源管理器中打开文件夹”。
 
-    2. **@No__t_2 \\** _项目_**中**查找文件 bin \\
+    2. **\*\\** _项目_**中**查找文件 bin\\
 
 2. 将 **.vsix** 文件复制到要安装该扩展的目标计算机。 该计算机可以是自己的计算机或其他计算机。
 
@@ -371,7 +371,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>) {...}
 
 #### <a name="to-uninstall-an-extension"></a>若要卸载扩展
 
-1. 在“工具” 菜单上，选择“扩展和更新”。
+1. 在 **“工具”** 菜单上，选择 **“扩展和更新”** 。
 
 2. 展开“已安装的扩展”。
 
@@ -379,7 +379,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>) {...}
 
    在极少数情况下，有错误的扩展无法加载并在错误窗口中创建报告，但不显示在扩展管理器中。 在这种情况下，可以通过从以下位置删除文件来删除扩展：
 
-   *% LocalAppData%* **\Local\Microsoft\VisualStudio \\ [version] \Extensions**
+   *% LocalAppData%* **\Local\Microsoft\VisualStudio\\[version] \Extensions**
 
 ## <a name="DragExample"></a> 示例
  下面的示例演示如何在序列图中基于从组件图中拖动的组件的部件和端口来创建生命线。

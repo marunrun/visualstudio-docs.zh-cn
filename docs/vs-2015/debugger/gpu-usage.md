@@ -9,12 +9,12 @@ caps.latest.revision: 7
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b7dee579f726a1edfc81e1f3e1ec62bf7d8beba4
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: b2e827b180ae218f3dd42b124500e01260e72d82
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437959"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297391"
 ---
 # <a name="gpu-usage"></a>GPU 使用情况
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "63437959"
   
  以下是“GPU 使用情况报告”窗口：  
   
- ![GPU 使用情况报告，提供 CPU 和 GPU 时间线](../debugger/media/gfx-diag-gpu-usage-report.png "gfx_diag_gpu_usage_report")  
+ ![使用 CPU 和 GPU 时间线的 GPU 使用情况报告](../debugger/media/gfx-diag-gpu-usage-report.png "gfx_diag_gpu_usage_report")  
   
 ## <a name="requirements"></a>要求  
  以下是除图形诊断要求之外使用 GPU 使用情况工具的要求。  
@@ -40,7 +40,7 @@ ms.locfileid: "63437959"
   
 #### <a name="to-start-the-gpu-usage-tool"></a>启动 GPU 使用情况工具：  
   
-1. 在菜单按钮中，选择“调试”，然后选择“性能和诊断”（键盘：按 Alt+F2）。  
+1. 在主菜单上，选择“调试”，然后选择“性能和诊断”（键盘：按 Alt+F2）。  
   
 2. 在“性能和诊断”中心，选中“GPU 使用情况”旁的复选框。 （可选）选中你希望使用的其他工具旁的复选框。 你可以同时运行几个性能和诊断工具，以便对应用的性能有一个更全面的了解。  
   
@@ -67,11 +67,11 @@ ms.locfileid: "63437959"
   
 2. 在报告的顶部，从显示要调查问题的图形中选择一个。 所选内容最长可达 3 秒，较长部分将被截尾。  
   
-    ![收集之后，选择范围以查看详细信息](../debugger/media/gfx-diag-gpu-usage-select1.png "gfx_diag_gpu_usage_select1")  
+    ![后期&#45;收集，选择范围以查看详细信息](../debugger/media/gfx-diag-gpu-usage-select1.png "gfx_diag_gpu_usage_select1")  
   
 3. 在报告底部的“...单击此处查看该范围内的 GPU 使用情况详细信息”消息中，选择“查看详细信息”链接，以查看所选内容的详细时间线。  
   
-    ![收集之后，选定范围](../debugger/media/gfx-diag-gpu-usage-select2.png "gfx_diag_gpu_usage_select2")  
+    ![已&#45;选择范围的后期收集](../debugger/media/gfx-diag-gpu-usage-select2.png "gfx_diag_gpu_usage_select2")  
   
    这将打开一个新的标签页式文档，文档中包含报告。 GPU 使用情况报告可帮助你了解图形事件在 CPU 上的启动时间、到达 GPU 的时间以及 GPU 执行该事件所花费的时间。 此信息可以帮助你确定瓶颈和机遇，以提高代码的并行度。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "63437959"
   
  以下是“GPU 使用情况报告”窗口：  
   
- ![GPU 使用情况报告，提供 CPU 和 GPU 时间线](../debugger/media/gfx-diag-gpu-usage-report.png "gfx_diag_gpu_usage_report")  
+ ![使用 CPU 和 GPU 时间线的 GPU 使用情况报告](../debugger/media/gfx-diag-gpu-usage-report.png "gfx_diag_gpu_usage_report")  
   
  选择报告下半部分的其中一个事件会在相关时间线中的相应事件处放置一个标记，通常一个事件在 CPU 线程上，表示 API 调用；另一个事件在 GPU 时间线上，表示 GPU 完成任务的时间。 同样，选择时间线中的一个事件将在报告的下半部分突出显示相应事件。当缩小显示报告上半部分的时间线时，仅最耗时的事件可见。 若要查看持续时间更短的事件，可通过对你的指针设备使用 Ctrl + 滚轮或使用顶部面板左下角的缩放控件来放大时间线。 还可以拖动时间线面板中的内容，以浏览记录的事件。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "63437959"
 |--------------------|-----------------|  
 |**Process**|你感兴趣的进程的名称。 诊断会话期间使用 GPU 的所有进程都包括在此下拉列表中。 与此下拉列表中的进程相关联的颜色是以下时间线中线程活动的颜色。|  
 |**线程**|你感兴趣的线程 ID。 在多线程应用中，这有助于隔离属于你感兴趣的进程的特定线程。 与所选线程关联的事件在每条时间线中突出显示。|  
-|**显示**|显示其刷新率的显示器编号**注意：** 可以配置某些驱动程序，以便将多个物理显示器显示为单个较大的虚拟显示器。 即使计算机连接了多个显示器，也可能仅列出一个。|  
+|**显示**|显示其刷新率的显示器编号。**注意：** 可以配置某些驱动程序，以便将多个物理显示器显示为单个较大的虚拟显示器。 即使计算机连接了多个显示器，也可能仅列出一个。|  
 |**筛选器**|你感兴趣的关键字。 报告的下半部分将仅包括与关键字完全匹配或部分匹配的事件。 你可以指定多个关键字并用分号 (;) 隔开。|  
 |**层次结构排序**|指示是保留还是忽略事件层次结构（通过用户标记定义）的复选框。|  
   
@@ -117,7 +117,7 @@ ms.locfileid: "63437959"
   
 #### <a name="to-postpone-profiling-from-the-start-of-the-app"></a>从应用的开头推迟分析：  
   
-1. 在菜单按钮中，选择“调试”，然后选择“性能和诊断”（键盘：按 Alt+F2）。  
+1. 在主菜单上，选择“调试”，然后选择“性能和诊断”（键盘：按 Alt+F2）。  
   
 2. 在“性能和诊断”中心，按照“GPU 使用情况”旁的“设置”链接进行操作。  
   
@@ -141,12 +141,12 @@ ms.locfileid: "63437959"
   
  暂不支持 VIDIA® SLI™ 和 AMD Crossfire™ 等多 GPU 配置。 支持 VIDIA® Optimus™ 和 AMD Enduro™ 等混合图形设置。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
   
-- [使用 DirectX 工具解决游戏中的复杂图形问题（视频）](http://channel9.msdn.com/Events/GDC/GDC-2015/Solve-the-Tough-Graphics-Problems-with-your-Game-Using-DirectX-Tools)  
+- [使用 DirectX 工具解决游戏中的复杂图形问题（视频）](https://channel9.msdn.com/Events/GDC/GDC-2015/Solve-the-Tough-Graphics-Problems-with-your-Game-Using-DirectX-Tools)  
   
-- [Visual Studio 中的 GPU 使用情况工具（视频）](http://channel9.msdn.com/Events/Visual-Studio/Connect-event-2014/715)  
+- [Visual Studio 中的 GPU 使用情况工具（视频）](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2014/715)  
   
-- [Visual Studio 2013 Update 4 CTP1 中的 GPU 使用情况工具（博客）](http://blogs.msdn.com/b/vcblog/archive/2014/09/05/gpu-usage-tool-in-visual-studio-2013-update-4-ctp1.aspx)  
+- [Visual Studio 2013 Update 4 CTP1 中的 GPU 使用情况工具（博客）](https://devblogs.microsoft.com/cppblog/gpu-usage-tool-in-visual-studio-2013-update-4-ctp1/)  
   
-- [Visual Studio 中 DirectX 的 GPU 使用情况](http://blogs.msdn.com/b/ianhu/archive/2014/12/16/gpu-usage-for-directx-in-visual-studio.aspx)
+- [Visual Studio 中 DirectX 的 GPU 使用情况](https://blogs.msdn.microsoft.com/ianhu/2014/12/16/gpu-usage-for-directx-in-visual-studio/)

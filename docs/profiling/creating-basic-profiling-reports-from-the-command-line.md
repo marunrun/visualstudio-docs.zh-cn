@@ -6,26 +6,27 @@ ms.assetid: 6d73e21e-c04e-48ea-91cc-e517a5f2cd3f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ac35f506aadfcceebcbcf0dd4f6ec5b6dc33107
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cd9748d88a9398792274c386a42bdaa3ce48ba70
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62552858"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777785"
 ---
 # <a name="create-basic-profiling-reports-from-the-command-line"></a>从命令行创建基本分析报告
-本文介绍从 .vsp 或 .vsps 分析数据文件生成逗号分隔值 (.csv) 报告的基本 VSPerfReport 命令。 有关所有报告选项的介绍，请参阅 [VSPerfReport](../profiling/vsperfreport.md)。
+本文介绍从 .vsp 或 .vsps 分析数据文件生成逗号分隔值 (.csv) 报告的基本 VSPerfReport 命令    。 有关所有报告选项的介绍，请参阅 [VSPerfReport](../profiling/vsperfreport.md)。
 
 ## <a name="report-commands"></a>报告命令
  使用以下命令之一可为指定的分析数据文件创建报告。
 
- VSPerfReport `VSPFile` /Summary:All 生成所有适用于 .vsp 或 .vsps 文件的报告。
+ VSPerfReport `VSPFile` /Summary:All 生成所有适用于 .vsp 或 .vsps 文件的报告     。
 
- VSPerfReport `VSPFile` /Summary:`ReportType`[,`ReportType`...] 生成指定的报告类型。
+ VSPerfReport `VSPFile` /Summary:`ReportType`[,`ReportType`...] 生成指定的报告类型   。
 
- VSPerfReport `VSPFile` /CallTrace 生成列出每个数据收集事件的报告。 仅限检测。
+ VSPerfReport `VSPFile` /CallTrace 生成列出每个数据收集事件的报告   。 仅限检测。
 
 ## <a name="summary-report-type-parameters"></a>报告类型参数摘要
  下表介绍了指定报告类型选项所生成的报告。 报告的列取决于用于收集数据的分析方法。

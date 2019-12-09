@@ -9,19 +9,19 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 12bce61c7d860f56142c25dd15dea3ac8ad21f9c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ef28781252181dbf765db52dbe6fed1b286516b2
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671863"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295778"
 ---
 # <a name="step-2-run-your-program"></a>步骤 2：运行程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 一旦创建新的解决方案，实际上就生成了所运行的程序。 该程序并未执行其他操作，它只是显示了一个在标题栏中显示“Form1”的空窗口。 但该程序确实在运行，您即将查明这一点。
 
- ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[教程1：在 Visual Basic 中创建图片查看器-视频 1](http://go.microsoft.com/fwlink/?LinkId=205209)或[教程1：在视频1中C#创建图片查看器](http://go.microsoft.com/fwlink/?LinkId=205199)。 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
+ ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[教程1：在 Visual Basic 中创建图片查看器-视频 1](https://go.microsoft.com/fwlink/?LinkId=205209)或[教程1：在视频1中C#创建图片查看器](https://go.microsoft.com/fwlink/?LinkId=205199)。 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
 
 ### <a name="to-run-your-program"></a>运行程序
 

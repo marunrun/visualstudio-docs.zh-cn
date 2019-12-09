@@ -58,14 +58,14 @@ HRESULT CreatePropertyBrowserEx(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
  此方法返回包装变体的属性浏览器，并允许将变体值或 VARTYPE 类型的自定义转换为字符串。  
   
-## <a name="see-also"></a>请参阅  
- [IDebugHelper：： CreatePropertyBrowser](../../winscript/reference/idebughelper-createpropertybrowser.md)    
+## <a name="see-also"></a>另请参阅  
+ [IDebugHelper::CreatePropertyBrowser](../../winscript/reference/idebughelper-createpropertybrowser.md)   
  [IDebugHelper 接口](../../winscript/reference/idebughelper-interface.md)   
  [IDebugProperty 接口](../../winscript/reference/idebugproperty-interface.md)

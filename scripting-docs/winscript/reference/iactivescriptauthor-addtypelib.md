@@ -54,14 +54,14 @@ HRESULT AddTypeLib(
 ## <a name="return-value"></a>返回值  
  一个 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
  此方法调用 `LoadTypeLib` 以加载类型库。 成功后，此方法将调用 `IActiveScriptAuthor::AddNamedItem` 以添加类型信息。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IActiveScriptAuthor 接口](../../winscript/reference/iactivescriptauthor-interface.md)   
- [IActiveScriptAuthor：： AddNamedItem](../../winscript/reference/iactivescriptauthor-addnameditem.md)    
+ [IActiveScriptAuthor::AddNamedItem](../../winscript/reference/iactivescriptauthor-addnameditem.md)   
  [LoadTypeLib](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelib)

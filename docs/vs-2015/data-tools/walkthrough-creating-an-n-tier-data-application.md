@@ -17,12 +17,12 @@ caps.latest.revision: 51
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 720f50fe486c0e625fcd67191f43897eba466698
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bd77006eda03b716e3c54c0b5b52ac633a383377
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660166"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299598"
 ---
 # <a name="walkthrough-creating-an-n-tier-data-application"></a>演练：创建 N 层数据应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -53,9 +53,9 @@ N 层 * 数据应用程序是访问数据并分为多个逻辑层或*层*的应�
 
 - 编写代码以填充数据表。
 
-  ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[视频如何：创建 N 层数据应用程序](http://go.microsoft.com/fwlink/?LinkId=115188)。
+  ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[视频如何：创建 N 层数据应用程序](https://go.microsoft.com/fwlink/?LinkId=115188)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
  若要完成本演练，你需要：
 
 - 能够访问 Northwind 示例数据库。
@@ -81,12 +81,12 @@ N 层 * 数据应用程序是访问数据并分为多个逻辑层或*层*的应�
 
 5. 将解决方案命名为**NTierWalkthrough**。
 
-6. 单击“确定”。
+6. 单击" **确定**"。
 
      创建包含 DataEntityTier 项目的 NTierWalkthrough 解决方案并将其添加到“解决方案资源管理器”中。
 
 ## <a name="creating-the-class-library-to-hold-the-tableadapters-dataaccesstier"></a>创建用于保存 TableAdapter 的类库 (DataAccessTier)
- 创建 DataEntityTier 项目后，下一步是创建另一个类库项目。 此项目将保存生成的 `TableAdapter`s，并将其称为应用程序的*数据访问层*。 数据访问层包含连接到数据库所需的信息，通常位于中间层内。
+ 创建 DataEntityTier 项目后，下一步是创建另一个类库项目。 此项目将保存生成的 `TableAdapter`，并将其称为应用程序的*数据访问层*。 数据访问层包含连接到数据库所需的信息，通常位于中间层内。
 
 #### <a name="to-create-the-new-class-library-for-the-tableadapters"></a>创建用于 TableAdapter 的新类库
 
@@ -99,7 +99,7 @@ N 层 * 数据应用程序是访问数据并分为多个逻辑层或*层*的应�
      DataAccessTier 项目即被创建并添加到 NTierWalkthrough 解决方案中。
 
 ## <a name="creating-the-dataset"></a>创建数据集
- 下一步是创建类型化数据集。 通过单个项目中的数据集类（包括 DataTable 类）和 `TableAdapter` 类创建类型化数据集。 （所有类都生成到一个文件中。）将数据集和 `TableAdapter`s 分隔到不同的项目中时，该数据集类将移到另一个项目，并在原始项目中保留 `TableAdapter` 类。 因此，应在最终包含 `TableAdapter` 的项目（DataAccessTier 项目）中创建数据集。 您将使用 "**数据源配置向导**" 创建数据集。
+ 下一步是创建类型化数据集。 通过单个项目中的数据集类（包括 DataTable 类）和 `TableAdapter` 类创建类型化数据集。 （所有类都生成到一个文件中。）将数据集和 `TableAdapter`分离到不同的项目中时，该数据集类将移到另一个项目，并在原始项目中保留 `TableAdapter` 类。 因此，应在最终包含 `TableAdapter` 的项目（DataAccessTier 项目）中创建数据集。 您将使用 "**数据源配置向导**" 创建数据集。
 
 > [!NOTE]
 > 你必须具有对 Northwind 示例数据库的访问权限，才能创建连接。
@@ -214,7 +214,7 @@ N 层 * 数据应用程序是访问数据并分为多个逻辑层或*层*的应�
 
 3. 选择“DataAccessTier”和“DataEntityTier”项目。
 
-4. 单击“确定”。
+4. 单击" **确定**"。
 
 ## <a name="adding-functions-to-the-service-to-call-the-getcustomers-and-getorders-methods-in-the-data-access-tier"></a>向服务中添加函数以调用数据访问层中的 GetCustomers 和 GetOrders 方法
  现在数据访问层包含返回数据的方法，接下来要在数据服务中创建调用这些方法的方法。
@@ -361,13 +361,13 @@ N 层 * 数据应用程序是访问数据并分为多个逻辑层或*层*的应�
  由于服务会返回 Customers 和 Orders 表中的数据，而 maxReceivedMessageSize 的默认值还不够大，无法容纳这些数据，因此必须予以增加。 对于本演练，将值更改为 6553600。 将在客户端上更改该值，此操作将自动更新服务引用。
 
 > [!NOTE]
-> 较小的默认大小旨在降低遭受拒绝服务 (DoS) 攻击的可能性。 有关更多信息，请参见<xref:System.ServiceModel.WSHttpBindingBase.MaxReceivedMessageSize%2A>。
+> 较小的默认大小旨在降低遭受拒绝服务 (DoS) 攻击的可能性。 有关详细信息，请参阅 <xref:System.ServiceModel.WSHttpBindingBase.MaxReceivedMessageSize%2A>。
 
 #### <a name="to-increase-the-maxreceivedmessagesize-value"></a>增加 maxReceivedMessageSize 值
 
 1. 在**解决方案资源管理器**中，双击 PresentationTier 项目中的 app.config 文件。
 
-2. 查找“maxReceivedMessage”大小属性，然后将该值更改为 `6553600`。
+2. 查找“maxReceivedMessage”大小属性，然后将该值更改为`6553600`。
 
 ## <a name="testing-the-application"></a>测试应用程序
  运行该应用程序。 它会从数据服务中检索数据，并将检索到的数据显示在窗体上。

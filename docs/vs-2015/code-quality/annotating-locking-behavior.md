@@ -1,5 +1,5 @@
 ---
-title: 对锁定行为进行批注 |Microsoft Docs
+title: 批注锁定行为 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -33,12 +33,12 @@ caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
 manager: jillfra
-ms.openlocfilehash: 66c4aafb380d50ec0faafce931b8ce73e5138e6f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a5b34253485da233ba6e25841b6592068de6fb69
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68157114"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295831"
 ---
 # <a name="annotating-locking-behavior"></a>对锁定行为进行批注
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -109,12 +109,12 @@ ms.locfileid: "68157114"
 |`_Write_guarded_by_(expr)`|批注变量并表明变量每次受到修改时，`expr` 命名的锁对象的锁计数至少为 1。|  
   
 ## <a name="see-also"></a>请参阅  
- [使用 SAL 注释减少 C /C++代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
+ [使用 SAL 注释减少 C/C++代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
  [了解 SAL](../code-quality/understanding-sal.md)   
- [对函数参数和返回值进行批注](../code-quality/annotating-function-parameters-and-return-values.md)   
- [对函数行为进行批注](../code-quality/annotating-function-behavior.md)   
+ [批注函数参数和返回值](../code-quality/annotating-function-parameters-and-return-values.md)   
+ [批注函数行为](../code-quality/annotating-function-behavior.md)   
  [批注结构和类](../code-quality/annotating-structs-and-classes.md)   
  [指定何时以及在何处应用批注](../code-quality/specifying-when-and-where-an-annotation-applies.md)   
  [内部函数](../code-quality/intrinsic-functions.md)   
  [最佳做法和示例](../code-quality/best-practices-and-examples-sal.md)   
- [代码分析团队博客](http://go.microsoft.com/fwlink/p/?LinkId=251197)
+ [代码分析团队博客](https://go.microsoft.com/fwlink/p/?LinkId=251197)

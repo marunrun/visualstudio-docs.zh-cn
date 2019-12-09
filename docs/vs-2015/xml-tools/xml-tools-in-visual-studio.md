@@ -33,12 +33,12 @@ caps.latest.revision: 29
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 313cc11978355942bf6671cc040969c255d7e44d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3ee0cf61f8ec2787894c6f67b8ac75424246c507
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669352"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297447"
 ---
 # <a name="xml-tools-in-visual-studio"></a>Visual Studio 中的 XML 工具
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,15 +49,15 @@ ms.locfileid: "72669352"
 
  XML 是 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 和 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 的许多功能的核心。 下面的主题列表列出了 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 和 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 中提供的与 XML 相关的工具和功能。
 
- 有关详细信息，请参阅[Xml 开发人员中心](http://go.microsoft.com/fwlink/?LinkID=100176)，其中提供了有关 xml 开发人员的最新文档、技术信息、下载、新闻组和其他资源。
+ 有关详细信息，请参阅[Xml 开发人员中心](https://go.microsoft.com/fwlink/?LinkID=100176)，其中提供了有关 xml 开发人员的最新文档、技术信息、下载、新闻组和其他资源。
 
 ## <a name="in-this-section"></a>本节内容
- 使用[XML 数据](../xml-tools/working-with-xml-data.md)讨论 XML 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中处理数据的方式。
+ 使用[XML 数据](../xml-tools/working-with-xml-data.md)讨论 XML 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中处理数据的方式。
 
  [调试 XSLT](../xml-tools/debugging-xslt.md)提供相关主题的链接，这些主题介绍如何使用 Visual Studio 调试程序调试 XSLT。
 
-## <a name="reference"></a>参考
- [XmlEditor 通过 VisualStudio](http://go.microsoft.com/fwlink/?LinkID=165699)为任何 xml 文档公开[xml 编辑器](http://go.microsoft.com/fwlink/?LinkId=228249)分析树[。](http://go.microsoft.com/fwlink/?LinkId=228250)
+## <a name="reference"></a>引用
+ [XmlEditor 通过 VisualStudio](https://go.microsoft.com/fwlink/?LinkID=165699)为任何 xml 文档公开[xml 编辑器](https://go.microsoft.com/fwlink/?LinkId=228249)分析树[。](https://go.microsoft.com/fwlink/?LinkId=228250)
 
  [XML 标准参考](https://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401)提供有关 XML 技术的信息，包括 XML、文档类型定义（DTD）、XML 架构定义语言（XSD）和 XSLT。
 

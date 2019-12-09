@@ -14,17 +14,17 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5cc95418f392e3c771350428e26e1447dae3bcf5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: af300bca2b1e679eae58a92962067fcd50fea78f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665558"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297792"
 ---
 # <a name="resources-for-designing-accessible-applications"></a>用于设计支持辅助功能的应用程序的资源
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-使用以下链接可查找有关支持可访问设计的信息以及用于开发可访问 Windows 应用程序和网站的提示和示例。 可以在 [http://www.microsoft.com/enable/](http://www.microsoft.com/enable/) 处联机查找有关辅助功能的常规信息。
+使用以下链接可查找有关支持可访问设计的信息以及用于开发可访问 Windows 应用程序和网站的提示和示例。 可以在 [http://www.microsoft.com/enable/](https://www.microsoft.com/accessibility/) 处联机查找有关辅助功能的常规信息。
 
 ## <a name="technologies"></a>技术
 
@@ -54,7 +54,7 @@ ms.locfileid: "72665558"
 
 ### <a name="third-party-resources"></a>第三方资源
 
-- **万维网联合会 (W3C) 的 Web 辅助功能计划** 此网站为可访问网站开发提供准则和技术。 有关详细信息，请参阅 [http://www.w3.org/WAI/GL/](http://www.w3.org/WAI/GL/)。
+- **万维网联合会 (W3C) 的 Web 辅助功能计划** 此网站为可访问网站开发提供准则和技术。 有关详细信息，请参阅 [http://www.w3.org/WAI/GL/](https://www.w3.org/WAI/GL/)。
 
 ## <a name="see-also"></a>请参阅
  [Visual Studio 的辅助功能](../../ide/reference/accessibility-features-of-visual-studio.md)

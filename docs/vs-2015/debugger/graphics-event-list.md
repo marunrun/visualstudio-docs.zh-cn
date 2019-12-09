@@ -11,12 +11,12 @@ caps.latest.revision: 23
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 137f3f91922a16b0e3f2a7e459a72c4381162f2e
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 5b1d8bdeb4497af57c385e73ff0dcd34041a2097
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65704637"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297334"
 ---
 # <a name="graphics-event-list"></a>图形事件列表
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "65704637"
   
  事件列表如下：  
   
- ![其名称中包含"Index"的事件的列表。](../debugger/media/gfx-diag-demo-event-list-orientation.png "gfx_diag_demo_event_list_orientation")  
+ ![名称中包含 "Index" 的事件的列表。](../debugger/media/gfx-diag-demo-event-list-orientation.png "gfx_diag_demo_event_list_orientation")  
   
 ## <a name="using-the-event-list"></a>使用事件列表  
  选择事件列表中的某个事件时，它会反映在由其他图形分析工具所显示的信息中；通过结合使用事件列表和其他此类工具，你可以仔细检查呈现问题以确定其原因。 若要了解有关如何通过结合使用事件列表和其他图形分析工具来解决呈现问题的详细信息，请参阅[示例](../debugger/graphics-diagnostics-examples.md)。  
@@ -39,7 +39,7 @@ ms.locfileid: "65704637"
 |-----------------------|-----------|  
 |呈现队列|绿色|  
 |计算队列|黄色|  
-|复制队列|橙色|  
+|复制队列|Orange|  
   
  Direct3D 11 不公开多个队列，这样，因此在你使用 Direct3D 11 应用的捕获时不会再事件列表中对事件进行着色。  
   
@@ -72,8 +72,8 @@ ms.locfileid: "65704637"
 |----------|-----------------------|  
 |（无图标）|常规事件<br /> 用户定义的事件、用户定义的事件组或绘图事件之外的任何事件。|  
 |![绘制事件图标](../debugger/media/vsg-eventlist-icon-draw.png "vsg_eventlist_icon_draw")|绘图事件<br /> 标记在捕获的帧期间发生的绘图事件。|  
-|![用户&#45;定义的事件标记图标](../debugger/media/vsg-eventlist-icon-user.png "vsg_eventlist_icon_user")|用户定义的事件组<br /> 与组相关的事件，由应用定义。|  
-|![用户&#45;定义的事件标记图标](../debugger/media/vsg-eventlist-icon-user.png "vsg_eventlist_icon_user")|用户定义的事件标记<br /> 标记特定位置，由应用定义。|  
+|!["用户&#45;定义的事件标记" 图标](../debugger/media/vsg-eventlist-icon-user.png "vsg_eventlist_icon_user")|用户定义的事件组<br /> 与组相关的事件，由应用定义。|  
+|!["用户&#45;定义的事件标记" 图标](../debugger/media/vsg-eventlist-icon-user.png "vsg_eventlist_icon_user")|用户定义的事件标记<br /> 标记特定位置，由应用定义。|  
   
 ## <a name="marking-user-defined-events-in-your-app"></a>标记应用中用户定义的事件  
  用户定义的事件特定于你的应用。 你可以使用它们，将发生在应用中的重要事件和图形事件列表中的事件关联起来。 例如，你可以创建用户定义的事件组来将相关事件（例如，呈现用户界面的事件）组织到组或层次结构中，以便你可以更加轻松地浏览事件列表，或者，你可以在绘制某种对象时创建标记，以便你可以在事件列表中轻松查找其图形事件。  
@@ -93,7 +93,7 @@ ms.locfileid: "65704637"
 ### <a name="user-defined-events-in-direct3d-11-and-earlier"></a>Direct3D 11 及更早版本中的用户定义的事件  
  若要在 Direct3D 11 或更早版本中创建组和标记，请使用此节中所述的 API。 下表总结了可用于 Direct3D 11 的不同版本和 Direct3D 的早期版本的 API。  
   
-|API 说明|[ID3D11DeviceContext2](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2) (Direct3D 11.2)|[ID3DUserDefinedAnnotation](http://go.microsoft.com/fwlink/p/?LinkID=250967) (Direct3D 11.1)|D3DPerf_ API 系列（Direct3D 11.0 和更早版本）|  
+|API 说明|[ID3D11DeviceContext2](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2) (Direct3D 11.2)|[ID3DUserDefinedAnnotation](https://go.microsoft.com/fwlink/p/?LinkID=250967) (Direct3D 11.1)|D3DPerf_ API 系列（Direct3D 11.0 和更早版本）|  
 |---------------------|---------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|--------------------------------------------------------|  
 |开始事件组|`BeginEventInt`|`BeginEvent`|`D3DPerf_BeginEvent`|  
 |结束事件组|`EndEventInt`|`EndEvent`|`D3DPerf_EndEvent`|  

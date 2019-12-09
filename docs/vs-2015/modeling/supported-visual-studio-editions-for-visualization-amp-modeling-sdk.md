@@ -11,35 +11,35 @@ caps.latest.revision: 29
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 89d65aab64ba82f152e2fe888ab10b88b73a7c42
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b81aaba14acc2c050a770e810c57e99ee43c2ab3
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672373"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298151"
 ---
 # <a name="supported-visual-studio-editions-for-visualization-amp-modeling-sdk"></a>支持可视化 &amp; 建模 SDK 的 Visual Studio 版本
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-以下是在创作和部署环境中 [!INCLUDE[dsl](../includes/dsl-md.md)] 支持的 Visual Studio 版本的列表。 有关这些版本的详细信息，请参阅 Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)][开发人员中心](http://go.microsoft.com/fwlink/?LinkId=75628)。
+以下是在创作和部署环境中 [!INCLUDE[dsl](../includes/dsl-md.md)] 支持的 Visual Studio 版本的列表。 有关这些版本的详细信息，请参阅 Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)][开发人员中心](https://go.microsoft.com/fwlink/?LinkId=75628)。
 
 ## <a name="authoring-edition"></a>创作版
  若要定义 DSL，必须安装以下组件：
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579)|
-|Visual Studio SDK|[http://go.microsoft.com/fwlink/?LinkId=185580](http://go.microsoft.com/fwlink/?LinkId=185580)|
-|Visual Studio 可视化和建模 SDK|[http://go.microsoft.com/fwlink/?LinkID=186128](http://go.microsoft.com/fwlink/?LinkID=186128)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://go.microsoft.com/fwlink/?LinkId=185579)|
+|Visual Studio SDK|[http://go.microsoft.com/fwlink/?LinkId=185580](https://go.microsoft.com/fwlink/?LinkId=185580)|
+|Visual Studio 可视化和建模 SDK|[http://go.microsoft.com/fwlink/?LinkID=186128](https://go.microsoft.com/fwlink/?LinkID=186128)|
 
 ## <a name="deployment-editions"></a>部署版
- [!INCLUDE[dsl](../includes/dsl-md.md)] 支持以下用于部署生成的域特定语言的配置：
+ [!INCLUDE[dsl](../includes/dsl-md.md)] 支持以下配置以部署生成的域特定语言：
 
 - Visual Studio Enterprise
 
 - Visual Studio Professional
 
-- Visual Studio Shell （集成模式）可再发行组件包
+- Visual Studio Shell （集成模式） 可再发行组件包可再发行组件包
 
 - Visual Studio Shell（独立模式）可再发行组件包
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72573811"
 ---
 # <a name="invalid-replacer-argument"></a>无效的替换器参数
-尝试使用无效的自变量调用 `JSON.stringify`。 @No__t_0 参数必须是函数或数组。  
+尝试使用无效的自变量调用 `JSON.stringify`。 `replacer` 参数必须是函数或数组。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
@@ -44,7 +44,7 @@ var memberfilter = new Object();
 var jsontext = JSON.stringify(contact, memberfilter, "\t");  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [JSON 对象](../../javascript/reference/json-object-javascript.md)   
  [JSON. Parse 函数](../../javascript/reference/json-parse-function-javascript.md)   
  [JavaScript 运行时错误](../../javascript/reference/javascript-run-time-errors.md)

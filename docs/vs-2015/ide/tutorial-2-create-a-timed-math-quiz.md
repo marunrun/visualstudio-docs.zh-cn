@@ -9,12 +9,12 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a5112ac6b0fc14d7a5bfc5066ae6fbabbc3c0bc3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b91e5f864bc15f1fbcab9400d0cd3a4a2e8224a9
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654748"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299866"
 ---
 # <a name="tutorial-2-create-a-timed-math-quiz"></a>教程 2：创建计时数学测验
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,14 +33,12 @@ ms.locfileid: "72654748"
 
   本教程中创建的![包含四道题的数学测验](../ide/media/express-finishedquiz.png "Express_FinishedQuiz")
 
-  若要下载测验的完整版本，请参阅 [Complete Math Quiz tutorial sample](http://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c)（数学测验教程的完整示例）。
-
 > [!NOTE]
 > 本教程中同时涉及 Visual C# 和 Visual Basic，因此请关注特定于您所用编程语言的信息。
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|描述|
+|标题|描述|
 |-----------|-----------------|
 |[步骤 1：创建项目并向窗体添加标签](../ide/step-1-create-a-project-and-add-labels-to-your-form.md)|首先创建项目，更改属性并添加 `Label` 控件。|
 |[步骤 2：创建随机加法问题](../ide/step-2-create-a-random-addition-problem.md)|创建一道加法题，然后使用 `Random` 类生成随机数。|

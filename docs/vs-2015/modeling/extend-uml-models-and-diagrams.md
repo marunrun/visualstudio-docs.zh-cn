@@ -12,14 +12,14 @@ caps.latest.revision: 39
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 69315b8a81c321d8a33583b02e9579f392d1dc65
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b8b154ccd18472d0b0bca502c78a6612aeccdda6
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669606"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301044"
 ---
-# <a name="extend-uml-models-and-diagrams"></a>扩展 UML 模型和关系图
+# <a name="extend-uml-models-and-diagrams"></a>Extend UML models and diagrams
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本主题汇总了扩展 Visual Studio 包含的 UML 建模工具可使用的不同方法。 若要查看支持每个模型类型和工具的 Visual Studio 版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
@@ -30,13 +30,13 @@ ms.locfileid: "72669606"
 
  Fabrikam 的工具团队进行了一系列改进来帮助开发团队。 下面各节描述了可以定义的不同种类的扩展。 可以将其中一些技术组合到一个 Visual Studio 扩展中。
 
- 有关详细信息，请参阅此视频：![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[MSDN 如何实现系列： UML 工具和扩展性](http://go.microsoft.com/fwlink/?LinkId=214467)。
+ 有关详细信息，请参阅此视频：![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[MSDN 如何实现系列： UML 工具和扩展性](https://go.microsoft.com/fwlink/?LinkId=214467)。
 
-## <a name="Requirements"></a> 要求
+## <a name="Requirements"></a>要求
 
 - [Visual Studio SDK](../extensibility/visual-studio-sdk.md)。
 
-- [Visual Studio 2015 的建模 SDK](http://www.microsoft.com/download/details.aspx?id=48148)。
+- [Visual Studio 2015 的建模 SDK](https://www.microsoft.com/download/details.aspx?id=48148)。
 
 ## <a name="profiles"></a>配置文件
  配置文件用于对 UML 元素定义构造型和其他属性。
@@ -113,10 +113,10 @@ ms.locfileid: "72669606"
 
 |**类别**|**Links**|
 |------------------|---------------|
-|**视频**|![链接到视频](../data-tools/media/playvideo.gif "PlayVideo") [MSDN 如何实现系列： UML 工具和扩展性](http://go.microsoft.com/fwlink/?LinkId=214467)<br /><br /> ![视频](../data-tools/media/playvideo.gif "PlayVideo")[通道9： UML 与 Visual Studio 的](http://go.microsoft.com/fwlink/?LinkId=199957)链接|
-|**论坛**|-   [Visual Studio 可视化和建模工具](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio 可视化和建模 SDK（DSL 工具）](http://go.microsoft.com/fwlink/?LinkId=184721)|
-|**Blogs**|[Visual Studio ALM + Team Foundation Server 博客](http://go.microsoft.com/fwlink/?LinkID=201340)|
-|**技术文章和日志**|[MSDN 体系结构中心](http://go.microsoft.com/fwlink/?LinkId=201343)|
+|**视频**|![链接到视频](../data-tools/media/playvideo.gif "PlayVideo") [MSDN 如何实现系列： UML 工具和扩展性](https://go.microsoft.com/fwlink/?LinkId=214467)<br /><br /> ![视频](../data-tools/media/playvideo.gif "PlayVideo")[通道9： UML 与 Visual Studio 的](https://go.microsoft.com/fwlink/?LinkId=199957)链接|
+|**论坛**|-   [Visual Studio 可视化和建模工具](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio 可视化和建模 SDK（DSL 工具）](https://go.microsoft.com/fwlink/?LinkId=184721)|
+|**博客**|[Visual Studio ALM + Team Foundation Server 博客](https://go.microsoft.com/fwlink/?LinkID=201340)|
+|**技术文章和日志**|[MSDN 体系结构中心](https://go.microsoft.com/fwlink/?LinkId=201343)|
 
 ## <a name="see-also"></a>请参阅
  [为适用于 UML 建模扩展性的应用 API 参考](../modeling/api-reference-for-uml-modeling-extensibility.md)[创建模型](../modeling/create-models-for-your-app.md)

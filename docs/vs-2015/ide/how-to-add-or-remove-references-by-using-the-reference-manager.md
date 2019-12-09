@@ -23,14 +23,14 @@ caps.latest.revision: 48
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 04b6573b6cd04b5a061a40025a9872d9972e35cb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1ed9a341e1b0f7247175e62aceafc6051f83e8f9
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645487"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300157"
 ---
-# <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>如何：使用引用管理器添加或删除引用
+# <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>How to: Add or Remove References By Using the Reference Manager
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 可以使用“引用管理器”对话框添加和管理对你、Microsoft 或其他公司开发的组件的引用。 如果要开发通用 Windows 应用，你的项目将自动引用所有正确的 Windows SDK DLL。 如果要开发 .NET 应用程序，你的项目将自动引用 mscorlib.dll。 一些 .NET API 在必须手动添加的组件中进行公开。 对 COM 组件或自定义组件的引用必须手动添加。
@@ -54,7 +54,7 @@ ms.locfileid: "72645487"
 - “浏览”组，包含“最近”子组。
 
 ## <a name="assemblies-tab"></a>“程序集”选项卡
- “程序集”选项卡列出可供引用的所有 .NET Framework 程序集。 “程序集”选项卡不会列出全局程序集缓存 (GAC) 中的任何程序集，这是因为 GAC 中的程序集是运行时环境的一部分。 如果某个应用程序包含对在 GAC 中注册的程序集的引用，则在部署或复制该应用程序时，无论“复制本地”设置为何，所引用的程序集都不会与该应用程序一起部署或复制。 有关详细信息，请参阅[项目引用](http://go.microsoft.com/fwlink/?LinkId=238512)。
+ “程序集”选项卡列出可供引用的所有 .NET Framework 程序集。 “程序集”选项卡不会列出全局程序集缓存 (GAC) 中的任何程序集，这是因为 GAC 中的程序集是运行时环境的一部分。 如果某个应用程序包含对在 GAC 中注册的程序集的引用，则在部署或复制该应用程序时，无论“复制本地”设置为何，所引用的程序集都不会与该应用程序一起部署或复制。 有关详细信息，请参阅[项目引用](https://go.microsoft.com/fwlink/?LinkId=238512)。
 
  在添加对任何 EnvDTE 命名空间（EnvDTE、EnvDTE80、EnvDTE90、EnvDTE90a 或 EnvDTE100）的引用时，请在“属性”窗口中将引用的“嵌入互操作类型”属性设置为“False”。 将此属性设置为“True”可能会导致生成问题，因为某些 EnvDTE 属性是不能嵌入的。
 

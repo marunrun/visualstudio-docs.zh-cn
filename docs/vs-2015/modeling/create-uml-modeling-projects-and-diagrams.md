@@ -25,12 +25,12 @@ caps.latest.revision: 50
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0e65f2f33d9c7b034da6b58f32280c95a96bacd7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d5884dcd3f9e3cb8f1910d2e23ec80f910ed2fc9
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651253"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301003"
 ---
 # <a name="create-uml-modeling-projects-and-diagrams"></a>创建 UML 建模项目和关系图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,7 +40,7 @@ UML 模型的有助于你了解、讨论和设计软件系统。 Visual Studio �
  UML 建模图和层关系图只可以存在于建模项目内。 每个建模项目包含一个共享的 UML 模型和几个 UML 关系图。 每个关系图是模型的部分视图。 UML 模型包含在 UML 关系图上的所有元素，并可以使用 UML 模型资源管理器来查看。 有关模型及其与关系图的关系的信息，请参阅[编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)。 有关版本控制下的建模项目的信息，请参阅[管理版本控制下的模型和关系图](../modeling/manage-models-and-diagrams-under-version-control.md)并[构建建模解决方案](../modeling/structure-your-modeling-solution.md)
 
 > [!NOTE]
-> 还有另一种关系图，即 .NET 类关系图，它用于可视化程序代码。 有关详细信息，请参阅[设计和查看类和类型](http://go.microsoft.com/fwlink/?LinkId=142231)。
+> 还有另一种关系图，即 .NET 类关系图，它用于可视化程序代码。 有关详细信息，请参阅[设计和查看类和类型](https://go.microsoft.com/fwlink/?LinkId=142231)。
 
 ## <a name="CreatingModelingDiagrams"></a>在建模项目中创建关系图
  若要查看支持此功能的 Visual Studio 的版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
@@ -80,7 +80,7 @@ UML 模型的有助于你了解、讨论和设计软件系统。 Visual Studio �
 
 2. 在 **“项目”** 菜单上，单击 **“添加新项”** 。
 
-3. 在 "**添加新项-** *\<project 名称" >* "对话框中的"**模板**"下，单击建模图类型，例如" **UML 组件图**"。
+3. 在 "**添加新项-** *\<项目名称 >* " 对话框中的 "**模板**" 下，单击建模图类型，例如 " **UML 组件图**"。
 
 4. 键入关系图的名称，然后单击 "**添加**"。
 

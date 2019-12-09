@@ -30,12 +30,12 @@ caps.latest.revision: 43
 author: MikeJo5000
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 81ae908c29b45b09d2ecec84c3189e6fb4e7a45b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2a2c6e95822794394dbdfc7f53104b31b7c17ea9
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657592"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296071"
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>在 Visual Studio 中调试时映射调用堆栈上的方法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "72657592"
 
 - 可调试的代码，例如 Visual C# .NET、Visual Basic .NET、C++、JavaScript 或 X++
 
-  请参阅：[视频：使用代码图调试器集成进行可视化调试（第9频道）](http://go.microsoft.com/fwlink/?LinkId=293418) •[映射调用堆栈](#MapStack)•[记录有关代码的注释](#MakeNotes)•[使用下一个调用堆栈更新映射](#UpdateMap)•[向地图中添加相关代码](#AddRelatedCode)•[使用map](#FindBugs) • [Q &](#QA)
+  请参阅：[视频：使用代码图调试器集成进行可视化调试（第9频道）](https://go.microsoft.com/fwlink/?LinkId=293418) •[映射调用堆栈](#MapStack)•[记录有关代码的注释](#MakeNotes)•[使用下一个调用堆栈更新映射](#UpdateMap)•[向地图中添加相关代码](#AddRelatedCode)•[使用 map 查找 bug](#FindBugs) • [Q &](#QA)
 
   有关使用代码图时可以使用的命令和操作的详细信息，请参阅[浏览和重新排列代码图](../modeling/browse-and-rearrange-code-maps.md)。
 
@@ -58,7 +58,7 @@ ms.locfileid: "72657592"
 
 1. 开始调试。 （键盘： **F5**）
 
-2. 在应用进入中断模式或单步执行函数后，选择 "**代码图**"。 （键盘： **Ctrl**  + **Shift**  +  **`** ）
+2. 在应用进入中断模式或单步执行函数后，选择 "**代码图**"。 （键盘： **Ctrl** + **Shift** +  **`** ）
 
      ![选择代码图以开始映射调用堆栈](../debugger/media/debuggermap-choosecodemap.png "DebuggerMap_ChooseCodeMap")
 
@@ -153,7 +153,7 @@ ms.locfileid: "72657592"
 
 - **如何实现阻止地图自动添加新的调用堆栈？**
 
-   选择 "在![代码图上自动&#45;显示调用堆栈](../debugger/media/debuggermap-automaticupdateicon.gif "DebuggerMap_AutomaticUpdateIcon")"。 若要手动将当前调用堆栈添加到地图中，请按**Ctrl**  + **Shift**  +  **`** "。
+   选择 "在![代码图上自动&#45;显示调用堆栈](../debugger/media/debuggermap-automaticupdateicon.gif "DebuggerMap_AutomaticUpdateIcon")"。 若要手动将当前调用堆栈添加到地图中，请按**Ctrl** + **Shift** +  **`** "。
 
    在你进行调试时，图中将继续突出显示现有调用堆栈。
 

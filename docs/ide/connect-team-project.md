@@ -5,16 +5,16 @@ ms.topic: conceptual
 ms.author: jillfra
 author: jillre
 ms.manager: jillfra
-ms.openlocfilehash: f3e4b2b5df96f397104afb3ab6268e1fa294116e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c442ec22080a5f3533776e9d581aa1e7ef0e52ee
+ms.sourcegitcommit: 08105865a9643fb20dce9b8b7580452cfbbe7ee7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652638"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74538674"
 ---
 # <a name="connect-to-projects-in-team-explorer"></a>连接到团队资源管理器中的项目
 
-使用“团队资源管理器”工具窗口与其他团队成员协调代码工作，以开发项目，并管理分配给你、你的团队或项目的工作  。 团队资源管理器将 Visual Studio 连接到 Git 和 GitHub 存储库、Team Foundation 版本控制 (TFVC) 存储库以及 [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) 或本地 [Azure DevOps Server](/tfs/index)（以前称为 TFS）上托管的项目  。 你可管理源代码、工作项和生成。
+使用“团队资源管理器”工具窗口与其他团队成员协调代码工作，以开发项目，并管理分配给你、你的团队或项目的工作  。 团队资源管理器将 Visual Studio 连接到 Git 和 GitHub 存储库、Team Foundation 版本控制 (TFVC) 存储库以及 [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) 或本地 [Azure DevOps Server](/azure/devops/index-all)（以前称为 TFS）上托管的项目  。 你可管理源代码、工作项和生成。
 
 ![Visual Studio 中的团队资源管理器主页](media/team-explorer/team-explorer.png)
 

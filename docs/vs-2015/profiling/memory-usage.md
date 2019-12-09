@@ -9,23 +9,23 @@ caps.latest.revision: 17
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 132e6252662ed765630764dabca26b22f868a315
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 0feabad8dfa3b086c9ed5a1a58e231719774f9cc
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65704878"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298361"
 ---
 # <a name="memory-usage"></a>内存使用率
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-使用调试器集成的 **内存使用率** 诊断工具在进行调试时查找内存泄漏和低效内存。 通过内存使用率工具可以拍摄托管和本机内存堆的一个或多个快照  。 可以收集 .NET、本机或混合模式（.NET 和本机）应用的快照。  
+使用调试器集成的 **内存使用率** 诊断工具在进行调试时查找内存泄漏和低效内存。 通过内存使用率工具可以拍摄托管和本机内存堆的一个或多个快照 。 可以收集 .NET、本机或混合模式（.NET 和本机）应用的快照。  
   
 - 你可以分析单个快照以了解有关内存使用的对象类型的相对影响，并在你的应用中查找低效使用内存的代码。  
   
 - 你还可以比较 (diff) 一个应用的两个快照，以便在你的代码中查找导致内存使用随时间增加的区域。  
   
-  下图显示 Visual Studio 2015 Update 1 中的“诊断工具”  窗口：  
+  下图显示 Visual Studio 2015 Update 1 中的“诊断工具” 窗口：  
   
   ![DiagnosticTools&#45;Update1](../profiling/media/diagnostictools-update1.png "DiagnosticTools-Update1")  
   
@@ -41,11 +41,11 @@ ms.locfileid: "65704878"
 ## <a name="analyze-memory-use-with-the-debugger"></a>使用调试器分析内存使用  
   
 > [!NOTE]
-> 因为收集内存数据可能会影响本机或混合模式应用的调试性能，所以内存快照在默认情况下处于禁用状态。 若要启用快照本机或混合模式应用程序，请启动调试会话 (快捷键：F5）。 当 **“诊断工具”** 窗口出现时，选择“内存使用率”选项卡，然后选择 **“启用快照”**。  
+> 因为收集内存数据可能会影响本机或混合模式应用的调试性能，所以内存快照在默认情况下处于禁用状态。 若要对本机或混合模式应用启用快照，请启动调试会话（快捷键： **F5**）。 当 **“诊断工具”** 窗口出现时，选择“内存使用率”选项卡，然后选择 **“启用快照”** 。  
 >   
 > ![启用快照](../profiling/media/dbgdiag-mem-mixedtoolbar-enablesnapshot.png "DBGDIAG_MEM_MixedToolbar_EnableSnapshot")  
 >   
-> 停止（快捷键：**Shift + F5**) 并重新启动调试。  
+> 停止（快捷键： **Shift + F5**）并重新启动调试。  
   
  每当要捕获内存状态时，请在 **“内存使用率”** 摘要工具栏上选择 **“拍摄快照”** 。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "65704878"
   
 - 拍摄多个快照时，摘要表的单元格包含行快照与前一个快照之间的值变化。  
   
-   ![内存摘要表单元格](../profiling/media/dbgdiag-mem-summarytablecell.png "DBGDIAG_MEM_SummaryTableCell")  
+   ![内存摘要表格单元](../profiling/media/dbgdiag-mem-summarytablecell.png "DBGDIAG_MEM_SummaryTableCell")  
   
   **查看详细信息报表：**  
   
@@ -81,17 +81,17 @@ ms.locfileid: "65704878"
 ### <a name="managed-types-reports"></a>托管类型报告  
  在内存使用率摘要表中选择 **“托管对象”** 或 **“托管堆大小”** 单元格的当前链接。  
   
- ![调试器托管的类型报表 - 根路径](../profiling/media/dbgdiag-mem-managedtypesreport-pathstoroot.png "DBGDIAG_MEM_ManagedTypesReport_PathsToRoot")  
+ ![调试器托管类型报表&#45;路径到根](../profiling/media/dbgdiag-mem-managedtypesreport-pathstoroot.png "DBGDIAG_MEM_ManagedTypesReport_PathsToRoot")  
   
- 顶部窗格会显示快照中类型的计数和大小，包括由类型引用的所有对象的大小（**“非独占大小”**）。  
+ 顶部窗格会显示快照中类型的计数和大小，包括由类型引用的所有对象的大小（ **“非独占大小”** ）。  
   
  底部窗格中的 **“根的路径”** 树显示引用上部窗格中选择的类型的对象。 仅当引用某个对象的最后一个类型已释放时，.NET Framework 垃圾回收器才清理该对象的内存。  
   
  **“引用的类型”** 树显示上部窗格中选择的类型所持有的引用。  
   
- ![托管的引用类型报表视图](../profiling/media/dbgdiag-mem-managedtypesreport-referencedtypes.png "DBGDIAG_MEM_ManagedTypesReport_ReferencedTypes")  
+ ![托管引用类型报表视图](../profiling/media/dbgdiag-mem-managedtypesreport-referencedtypes.png "DBGDIAG_MEM_ManagedTypesReport_ReferencedTypes")  
   
- 若要显示上部窗格中所选类型的实例，请选择 ![实例图标](../profiling/media/dbgdiag-mem-instanceicon.png "DBGDIAG_MEM_InstanceIcon") 图标。  
+ 若要在上部窗格中显示所选类型的实例，请选择 "![实例" 图标](../profiling/media/dbgdiag-mem-instanceicon.png "DBGDIAG_MEM_InstanceIcon")图标。  
   
  ![实例视图](../profiling/media/dbgdiag-mem-managedtypesreport-instances.png "DBGDIAG_MEM_ManagedTypesReport_Instances")  
   
@@ -104,7 +104,7 @@ ms.locfileid: "65704878"
   
  **“类型视图”** 显示快照中类型的数量和大小。  
   
-- 选择所选类型的实例图标（![“对象类型”列中的实例图标](../misc/media/dbg-mma-instancesicon.png "DBG_MMA_InstancesIcon")）可显示有关快照中所选类型的对象信息。  
+- 选择所选类型的实例图标（![对象类型列中的实例图标](../misc/media/dbg-mma-instancesicon.png "DBG_MMA_InstancesIcon")），以显示有关快照中所选类型的对象的信息。  
   
      **“实例”** 视图显示所选类型的每个实例。 选择实例可显示导致在 **“分配调用堆栈”** 窗格中创建实例的调用堆栈。  
   
@@ -118,21 +118,21 @@ ms.locfileid: "65704878"
   
 - 在 **“诊断工具”** 窗口上的 **“内存使用率”** 选项卡的摘要表单元格中选择更改链接。  
   
-   ![选择更改（差异）报告](../profiling/media/dbgdiag-mem-choosediffreport.png "DBGDIAG_MEM_ChooseDiffReport")  
+   ![选择更改&#40;dif&#41;f 报表](../profiling/media/dbgdiag-mem-choosediffreport.png "DBGDIAG_MEM_ChooseDiffReport")  
   
 - 在托管或本机报告的 **“与之比较的对象”** 列表中选择快照。  
   
-   ![从“比较对象”列表中选择一个快照](../profiling/media/dbgdiag-mem-choosecompareto.png "DBGDIAG_MEM_ChooseCompareTo")  
+   ![从 "比较对象" 列表中选择一个快照](../profiling/media/dbgdiag-mem-choosecompareto.png "DBGDIAG_MEM_ChooseCompareTo")  
   
   更改报告会向基本报告添加一些列（使用 **“(差异)”** 进行标记），这些列显示基本快照值与比较快照之间的差异。 下面是本机类型视图差异报告的可能外观：  
   
   ![本机类型差异视图](../profiling/media/dbgdiag-mem-native-typesviewdiff.png "DBGDIAG_MEM_Native_TypesViewDiff")  
   
 ## <a name="blogs-and-videos"></a>博客和视频  
- [Visual Studio 2015 中的“诊断工具”调试器窗口](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/16/diagnostic-tools-debugger-window-in-visual-studio-2015.aspx)  
+ [Visual Studio 2015 中的“诊断工具”调试器窗口](https://devblogs.microsoft.com/devops/diagnostic-tools-debugger-window-in-visual-studio-2015/)  
   
- [博客：在 Visual Studio 2015 中调试时的内存使用情况工具](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015.aspx)  
+ [博客：在 Visual Studio 2015 中进行调试时的内存使用工具](https://devblogs.microsoft.com/devops/memory-usage-tool-while-debugging-in-visual-studio-2015/)  
   
- [Visual C++ 博客：VS2015 预览版中的本机内存诊断](http://blogs.msdn.com/b/vcblog/archive/2014/11/21/native-memory-diagnostics-in-vs2015-preview.aspx)  
+ [Visual C++ 博客：VS2015 预览版中的本机内存诊断](https://devblogs.microsoft.com/cppblog/native-memory-diagnostics-in-vs2015-preview/)  
   
- [Visual C++ 博客：Visual Studio 2015 CTP 的本机内存诊断工具](http://blogs.msdn.com/b/vcblog/archive/2014/06/04/native-memory-diagnostic-tools-for-visual-studio-14-ctp1.aspx)
+ [Visual C++ 博客：Visual Studio 2015 CTP 中的本机内存诊断工具](https://devblogs.microsoft.com/cppblog/native-memory-diagnostic-tools-for-visual-studio-14-ctp/)

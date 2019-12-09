@@ -9,12 +9,12 @@ caps.latest.revision: 14
 author: conceptdev
 ms.author: crdun
 manager: jillfra
-ms.openlocfilehash: 65b87c0c03e51e5b14fae7c59a8ac7f9eb8ec0e7
-ms.sourcegitcommit: b56dc6fadc6c924beed36bb4c2ccc16cf6bcfa1c
+ms.openlocfilehash: 364f98fd991494ae83f6175289f34832e271159b
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68740196"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300039"
 ---
 # <a name="application-lifecycle-management-alm-with-unity-apps"></a>适用于 Unity 应用的 Visual Studio 应用程序生命周期管理 (ALM)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "68740196"
  下表标识了在使用 Unity 时，Visual Studio ALM 功能的适用或不适用情况。 请参阅链接文档，获取功能自身的详细信息。  
   
 ## <a name="agile-tools"></a>敏捷工具  
- 参考链接： **[工作](https://msdn.microsoft.com/library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)** (使用 Visual Studio Team Services 或 TFS, 包括 Team Explorer Everywhere)  
+ 参考链接： **[工作](https://msdn.microsoft.com/library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)** （使用 Visual Studio Team Services 或 TFS，包括 Team Explorer Everywhere）  
   
  常规注释：所有的计划和跟踪功能均独立于项目类型和编码语言。  
   
@@ -41,18 +41,18 @@ ms.locfileid: "68740196"
 ## <a name="modeling"></a>建模  
  参考链接： **[体系结构分析和建模](../modeling/analyze-and-model-your-architecture.md)**  
   
- 常规注释：虽然这些设计功能既不依赖于编码语言，也不依赖于使用 C# 等 .NET 语言，但是他们运行于具有对象层次结构和类关系的传统应用程序范例上。 在 Unity 中设计游戏会同时涉及到不同的范例，即图形对象、声音、着色器、脚本等关系。 因此，Visual Studio 建模关系图工具并非专用于 Unity 项目。 它们可能被用于管理 C# 脚本内的关系，但这只有全体中的一个部分。  
+ 常规注释：虽然这些设计功能既不依赖于编码语言，也不使用 C# 等 .NET 语言，但是它们运行于具有对象层次结构和类关系的传统应用程序范例上。 在 Unity 中设计游戏会同时涉及到不同的范例，即图形对象、声音、着色器、脚本等关系。 因此，Visual Studio 建模关系图工具并非专用于 Unity 项目。 它们可能被用于管理 C# 脚本内的关系，但这只有全体中的一个部分。  
   
 |功能|通过 Unity 提供支持|其他注释|  
 |-------------|--------------------------|-------------------------|  
-|序列图|No||  
-|依赖项关系图|No||  
-|调用层次结构|No||  
-|类设计器|No||  
-|体系结构资源管理器|No||  
-|UML 关系图（用例、活动、类、组件、序列和 DSL）|No||  
-|层关系图|No||  
-|层验证|No||  
+|序列图|否||  
+|依赖项关系图|否||  
+|调用层次结构|否||  
+|类设计器|否||  
+|体系结构资源管理器|否||  
+|UML 关系图（用例、活动、类、组件、序列和 DSL）|否||  
+|层关系图|否||  
+|层验证|否||  
   
 ## <a name="code"></a>代码  
   
@@ -66,24 +66,24 @@ ms.locfileid: "68740196"
   
  使用 Unity 进行版本控制的特殊注意事项：  
   
-1. Unity 使用一个默认隐藏的不透明库来追踪和游戏资产相关的元数据。 若要使文件和元数据保持同步，需使元数据可见，并将其保存在更易于管理的区块中。 有关详细信息，请参阅 [Using External Version Control Systems with Unity](http://docs.unity3d.com/Manual/ExternalVersionControlSystemSupport.html)（配合使用 Unity 与外部版本控制系统）（Unity 文档）。  
+1. Unity 使用一个默认隐藏的不透明库来追踪和游戏资产相关的元数据。 若要使文件和元数据保持同步，需使元数据可见，并将其保存在更易于管理的区块中。 有关详细信息，请参阅 [Using External Version Control Systems with Unity](https://docs.unity3d.com/Manual/ExternalVersionControlSystemSupport.html)（配合使用 Unity 与外部版本控制系统）（Unity 文档）。  
   
-2. 并非 Unity 项目中的所有文件和文件夹都适合实施源代码管理，上面的链接中也给予了说明。 应添加 Assets 和 ProjectSettings 文件夹，但不应添加 Library 和 Temp 文件夹。 有关不会执行源代码管理的生成的文件的附加列表，请参阅 StackOverflow 上的讨论[如何使用 Git 进行 Unity3D 源代码管理？](http://stackoverflow.com/questions/18225126/how-to-use-git-for-unity3d-source-control)。 许多开发人员都针对此主题发表了博文。  
+2. 并非 Unity 项目中的所有文件和文件夹都适合实施源代码管理，上面的链接中也给予了说明。 应添加 Assets 和 ProjectSettings 文件夹，但不应添加 Library 和 Temp 文件夹。 有关不会执行源代码管理的生成的文件的附加列表，请参阅 StackOverflow 上的讨论[如何使用 Git 进行 Unity3D 源代码管理？](https://stackoverflow.com/questions/18225126/how-to-use-git-for-unity3d-source-control)。 许多开发人员都针对此主题发表了博文。  
   
-3. Unity 项目中的二进制资产 — 例如纹理或音频文件 — 可能会占用大量存储空间。 Git 等各种源代码管理系统为所做的每一次更改都保留一份唯一的副本，即使更改仅影响该文件的一小部分。 这会导致 Git 存储库变得臃肿。 若要解决此问题，Unity 开发人员通常仅选择将向其存储库添加最终的资产，并使用其他方式保留其资产的工作历史记录，例如 OneDrive、DropBox 或 git-annex。 这种方法有效，因为这种资产通常无需随源代码更改而进行版本控制。 开发人员通常也将项目编辑器的资产序列化模式设置为强制文本，以便以文本格式保存场景文件，而不是允许在源代码管理中进行合并的二进制格式。 有关详细信息，请参阅 [Editor Settings](http://docs.unity3d.com/Manual/class-EditorManager.html)（编辑器设置）（Unity 文档）。  
+3. Unity 项目中的二进制资产 — 例如纹理或音频文件 — 可能会占用大量存储空间。 Git 等各种源代码管理系统为所做的每一次更改都保留一份唯一的副本，即使更改仅影响该文件的一小部分。 这会导致 Git 存储库变得臃肿。 若要解决此问题，Unity 开发人员通常仅选择将向其存储库添加最终的资产，并使用其他方式保留其资产的工作历史记录，例如 OneDrive、DropBox 或 git-annex。 这种方法有效，因为这种资产通常无需随源代码更改而进行版本控制。 开发人员通常也将项目编辑器的资产序列化模式设置为强制文本，以便以文本格式保存场景文件，而不是允许在源代码管理中进行合并的二进制格式。 有关详细信息，请参阅 [Editor Settings](https://docs.unity3d.com/Manual/class-EditorManager.html)（编辑器设置）（Unity 文档）。  
   
-## <a name="build"></a>Build  
- 参考链接： **[构造](/azure/devops/pipelines/index)**  
+## <a name="build"></a>生成  
+ 参考链接： **[生成](/azure/devops/pipelines/index)**  
   
 |功能|通过 Unity 提供支持|其他注释|  
 |-------------|--------------------------|-------------------------|  
-|本地 TFS 服务器|可能|Unity 项目通过 Unity 环境生成，而不是 Visual Studio 生成系统（在 Visual Studio Tools 中为 Unity 生成项目将对脚本进行编译，但不是会生成可执行文件）。 可以[从命令行生成 Unity 项目](http://docs.unity3d.com/Manual/CommandLineArguments.html)（Unity 文档），因此用户可以在 TFS 服务器上配置 MSBuild 进程，以执行相应的 Unity 命令，前提是该计算机已经安装了 Unity。<br /><br /> Unity 也提供 [Unity 云生成](https://build.cloud.unity3d.com/landing/)，它会监视 Git 或 SVN 储存库，并定期运行生成。 目前它并不适用于 Team Foundation 版本控制或 Visual Studio Team Services。|  
+|本地 TFS 服务器|可能|Unity 项目通过 Unity 环境生成，而不是 Visual Studio 生成系统（在 Visual Studio Tools 中为 Unity 生成项目将对脚本进行编译，但不是会生成可执行文件）。 可以[从命令行生成 Unity 项目](https://docs.unity3d.com/Manual/CommandLineArguments.html)（Unity 文档），因此用户可以在 TFS 服务器上配置 MSBuild 进程，以执行相应的 Unity 命令，前提是该计算机已经安装了 Unity。<br /><br /> Unity 也提供 [Unity 云生成](https://build.cloud.unity3d.com/landing/)，它会监视 Git 或 SVN 储存库，并定期运行生成。 目前它并不适用于 Team Foundation 版本控制或 Visual Studio Team Services。|  
 |链接到 Visual Studio Team Services 的本地生成服务器|可能|给定上述相同条件，更有可能指向通过 Visual Studio Team Services 触发的生成，以便使用本地 TFS 计算机。  有关说明，请参阅[生成服务器](https://msdn.microsoft.com/library/2d258a0a-f178-4e93-9da1-eba61151af3c)。|  
-|Visual Studio Team Services 承载的控制器服务|No|目前不支持 Unity 生成。|  
+|Visual Studio Team Services 承载的控制器服务|否|目前不支持 Unity 生成。|  
 |生成带有前脚本和后脚本的定义|是|使用 Unity 命令行运行生成的自定义生成定义还可以配置为预生成和后生成脚本。|  
 |包括封闭签入的持续集成|是|仅在 Git 用于拉取请求（而非签入）时，封闭签入才适用于 TFVC。|  
   
-## <a name="testing"></a>正在测试  
+## <a name="testing"></a>测试  
  参考链接： **[测试应用程序](https://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac)**  
   
 |功能|通过 Unity 提供支持|其他注释|  
@@ -93,27 +93,27 @@ ms.locfileid: "68740196"
 |测试管理器（记录和播放测试）|仅限 Windows 设备和 Android 模拟器||  
 |代码覆盖率|n/a|Unity 内进行单元测试时以及不是 Visual Studio 时不适用，请参阅下文。|  
 |[单元测试代码](../test/unit-test-your-code.md)|在 Unity 中，但不在 Visual Studio 中|Unity 提供了自己的单元测试框架作为 [Unity 测试工具](https://www.assetstore.unity3d.com/en/#!/content/13802)（Unity 资产商店）的一部分。 单元测试结果在 Unity 中报告，将不会出现在 Visual Studio 内。|  
-|[使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)|No|编码的 UI 测试依赖于应用 UI 中可读取的控件；Unity 应用程序在本质上都是图形，因此编码的 UI 测试工具无法读取其内容。|  
+|[使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)|否|编码的 UI 测试依赖于应用 UI 中可读取的控件；Unity 应用程序在本质上都是图形，因此编码的 UI 测试工具无法读取其内容。|  
   
 ## <a name="improve-code-quality"></a>提高代码质量  
  参考链接： **[提高代码质量](https://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)**  
   
 |功能|通过 Unity 提供支持|其他注释|  
 |-------------|--------------------------|-------------------------|  
-|[分析托管代码质量](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)|是|可以在 Visual Studio 中分析 C# 脚本代码。|  
+|[分析托管代码质量](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)|是|可以分析 Visual Studio 中的 C# 脚本代码。|  
 |[使用代码克隆检测功能查找重复代码](https://msdn.microsoft.com/library/a97cd5a6-5ffa-4104-9627-8e59e513654d)|是|可以分析 Visual Studio 中的 C# 脚本代码。|  
-|[测量托管代码的复杂性和可维护性](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)|是|可以在 Visual Studio 中分析 C# 脚本代码。|  
-|[性能资源管理器](../profiling/performance-explorer.md)|No|使用 [Unity 探查器](http://docs.unity3d.com/Manual/Profiler.html)（Unity 网站）。|  
-|[分析 .NET Framework 内存问题](../misc/analyze-dotnet-framework-memory-issues.md)|No|Visual Studio 工具没有深入 Mono 框架（用于 Unity）进行探查的挂钩。 使用 [Unity Profiler](http://docs.unity3d.com/Manual/Profiler.html)（Unity 文档）。|  
+|[测量托管代码的复杂性和可维护性](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)|是|可以分析 Visual Studio 中的 C# 脚本代码。|  
+|[性能资源管理器](../profiling/performance-explorer.md)|否|使用 [Unity 探查器](https://docs.unity3d.com/Manual/Profiler.html)（Unity 网站）。|  
+|[分析 .NET Framework 内存问题](../misc/analyze-dotnet-framework-memory-issues.md)|否|Visual Studio 工具没有深入 Mono 框架（用于 Unity）进行探查的挂钩。 使用 [Unity Profiler](https://docs.unity3d.com/Manual/Profiler.html)（Unity 文档）。|  
   
-## <a name="release-management"></a>发布管理  
- 参考链接： **[通过 Release Management 自动执行部署](https://msdn.microsoft.com/library/vs/alm/release/overview)**  
+## <a name="release-management"></a>版本管理  
+ 参考链接： **[使用发布管理来自动进行部署](https://msdn.microsoft.com/library/vs/alm/release/overview)**  
   
 |功能|通过 Unity 提供支持|其他注释|  
 |-------------|--------------------------|-------------------------|  
 |管理发布进程|是||  
 |通过脚本部署到旁加载的服务器|是||  
-|上载到应用商店|部分|提供了一些扩展，这些扩展可使某些应用商店的此进程自动化。  请参阅 [Visual Studio Team Services 的扩展](https://marketplace.visualstudio.com/VSTS)；例如，[Google Play 的扩展](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.google-play)。|  
+|上载到应用商店|Partial|提供了一些扩展，这些扩展可使某些应用商店的此进程自动化。  请参阅 [Visual Studio Team Services 的扩展](https://marketplace.visualstudio.com/VSTS)；例如，[Google Play 的扩展](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.google-play)。|  
   
 ## <a name="monitor-with-hockeyapp"></a>使用 HockeyApp 进行监控  
  参考链接： **[使用 HockeyApp 进行监控](https://www.hockeyapp.net/features/)**  

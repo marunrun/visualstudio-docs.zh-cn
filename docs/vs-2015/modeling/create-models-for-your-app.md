@@ -37,19 +37,19 @@ caps.latest.revision: 60
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: da86a6cf2e561fdc7e642a76b84b4e604bec12d6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a9f20629c39bc37ca20550c3b88d8ecb2aca470f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651244"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300245"
 ---
 # <a name="create-models-for-your-app"></a>为你的应用程序创建模型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 建模图有助于理解、阐明和传达代码的构思和软件系统必须支持的用户需求。 例如，若要描述和传达用户需求，你可以使用统一建模语言 (UML) 用例图、活动图、类图和序列图。 若要描述和传达系统的功能，你可以使用 UML 组件图、类图、活动图和序列图。
 
- 请参阅第[9 频道视频：通过建模改进体系结构](http://go.microsoft.com/fwlink/?LinkID=252078)。
+ 请参阅第[9 频道视频：通过建模改进体系结构](https://go.microsoft.com/fwlink/?LinkID=252078)。
 
  在此版本中，可以创建以下 UML 关系图：
 
@@ -81,7 +81,7 @@ ms.locfileid: "72651244"
 |[从 UML 类图生成代码](../modeling/generate-code-from-uml-class-diagrams.md)|**从C#类图生成代码**，开始实现。|
 |[使用配置文件和构造型自定义模型](../modeling/customize-your-model-with-profiles-and-stereotypes.md)|使用构造型**自定义模型元素**，以便为特定目的扩展标准 UML 模型元素。|
 |[链接模型元素和工作项](../modeling/link-model-elements-and-work-items.md)|**创建模型元素和工作项之间的链接**，以帮助您跟踪任务、测试用例、bug、要求、问题或与模型的特定部分关联的其他类型的工作。|
-|[将关系图导出为图像](../modeling/export-diagrams-as-images.md)|**保存您的模型和关系图**，以便您可以与其他用户（包括不使用 [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)] 的用户）共享您的模型和关系图。|
+|[将关系图导出为图像](../modeling/export-diagrams-as-images.md)|**保存您的模型和关系图**，以便您可以与其他用户（包括不使用 [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)]的用户）共享您的模型和关系图。|
 
 ## <a name="related-tasks"></a>相关任务
 
@@ -98,4 +98,4 @@ ms.locfileid: "72651244"
 
 |**类别**|**Links**|
 |------------------|---------------|
-|**论坛**|-   [Visual Studio 可视化和建模工具](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio 可视化和建模 SDK（DSL 工具）](http://go.microsoft.com/fwlink/?LinkId=184721)|
+|**论坛**|-   [Visual Studio 可视化和建模工具](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio 可视化和建模 SDK（DSL 工具）](https://go.microsoft.com/fwlink/?LinkId=184721)|

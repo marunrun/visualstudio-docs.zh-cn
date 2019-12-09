@@ -9,23 +9,23 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d9cf0177efe373933f8c34e1600658160f489a64
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a9651c04c1d94459052d92cdda0afa58e344b650
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667342"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295793"
 ---
 # <a name="step-1-create-a-windows-forms-application-project"></a>步骤 1：创建 Windows 窗体应用程序项目
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 创建图片查看器时，第一步是创建 Windows 窗体应用程序项目。
 
- ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[教程1：在 Visual Basic 中创建图片查看器-视频 1](http://go.microsoft.com/fwlink/?LinkId=205209)或[教程1：在视频1中C#创建图片查看器](http://go.microsoft.com/fwlink/?LinkId=205199)。 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
+ ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[教程1：在 Visual Basic 中创建图片查看器-视频 1](https://go.microsoft.com/fwlink/?LinkId=205209)或[教程1：在视频1中C#创建图片查看器](https://go.microsoft.com/fwlink/?LinkId=205199)。 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
 
 ### <a name="to-create-a-windows-forms-application-project"></a>创建 Windows 窗体应用程序项目
 
-1. 在菜单栏上，依次选择 **“文件”** 、 **“新建”** 、 **“项目”** 。 对话框应如下所示。
+1. 在菜单栏上，依次选择“文件”、“新建”、“项目”。 对话框应如下所示。
 
      "![新建项目" 对话框](../ide/media/newprojectdialogcallouts.png "NewProjectDialogCallouts")"新建项目" 对话框
 

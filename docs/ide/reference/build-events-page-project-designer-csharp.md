@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: cca0ec0491d7a2c513f8bc52acaadf7c80d7fd22
-ms.sourcegitcommit: 58000baf528da220fdf7a999d8c407a4e86c1278
+ms.openlocfilehash: 4842a5a08de96cd40a45d0765d427cc74cbf5432
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72789826"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73714389"
 ---
 # <a name="build-events-page-project-designer-c"></a>“项目设计器”->“生成事件”页 (C#)
 
@@ -77,11 +77,19 @@ ms.locfileid: "72789826"
 </PropertyGroup>
 ```
 
-Visual Studio 2019（以及较新更新中的 Visual Studio 2017）为 PreBuildEvent 和 PostBuildEvent 设置添加名为 `PreBuild` 或 `PostBuild` 的 MSBuild 目标   。 例如，对于前面的示例，Visual Studio 现在生成以下代码：
+对于 .NET Core 项目，Visual Studio 2019（以及较新更新中的 Visual Studio 2017）为 PreBuildEvent 和 PostBuildEvent 设置添加了名为 `PreBuild` 或 `PostBuild` 的 MSBuild 目标   。 这些目标使用 BeforeTargets 和 AfterTargets 属性，它们是 MSBuild 可识别的属性   。 例如，对于前面的示例，Visual Studio 现在生成以下代码：
 
 ```xml
 <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="&quot;$(ProjectDir)PreBuildEvent.bat&quot; &quot;$(ProjectDir)..\&quot; &quot;$(ProjectDir)&quot; &quot;$(TargetDir)&quot;" />
+</Target>
+```
+
+对于生成后事件，请使用名称 `PostBuild` 并将属性 `AfterTargets` 设置为 `PostBuildEvent`。
+
+```xml
+<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+   <Exec Command="echo Output written to $(TargetDir)" />
 </Target>
 ```
 

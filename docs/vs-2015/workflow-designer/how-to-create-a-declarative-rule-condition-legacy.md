@@ -13,12 +13,12 @@ caps.latest.revision: 5
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d3a15aad987e46edb58da3560828c70571df2227
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2dc63fc58b22792e566df91bd86cac40e3fd2e65
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663417"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297482"
 ---
 # <a name="how-to-create-a-declarative-rule-condition-legacy"></a>如何：创建声明性规则条件（旧版）
 本主题介绍如何使用面向 [!INCLUDE[wfd1](../includes/wfd1-md.md)] 或 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 的旧 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] 来声明规则条件。
@@ -27,17 +27,17 @@ ms.locfileid: "72663417"
 
  声明性规则条件用在以下 Windows Workflow Foundation 现成可用的活动中：
 
-- [ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65017)
+- [ConditionedActivityGroup](https://go.microsoft.com/fwlink?LinkID=65017)
 
-- [IfElseBranchActivity](http://go.microsoft.com/fwlink?LinkID=65034)
+- [IfElseBranchActivity](https://go.microsoft.com/fwlink?LinkID=65034)
 
-- [ReplicatorActivity](http://go.microsoft.com/fwlink?LinkID=65039)
+- [ReplicatorActivity](https://go.microsoft.com/fwlink?LinkID=65039)
 
-- [WhileActivity](http://go.microsoft.com/fwlink?LinkID=65049)
+- [WhileActivity](https://go.microsoft.com/fwlink?LinkID=65049)
 
-- [SequentialWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65040)
+- [SequentialWorkflowActivity](https://go.microsoft.com/fwlink?LinkID=65040)
 
-- [StateMachineWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65045)
+- [StateMachineWorkflowActivity](https://go.microsoft.com/fwlink?LinkID=65045)
 
 ### <a name="to-create-a-declarative-rule-condition-using-the-rule-condition-editor"></a>使用规则条件编辑器创建声明性规则条件
 
@@ -64,4 +64,4 @@ ms.locfileid: "72663417"
      有关如何使用 "**选择条件**" 对话框的信息，请参阅 "[选择条件" 对话框（旧版）](../workflow-designer/select-condition-dialog-box-legacy.md)。
 
 ## <a name="see-also"></a>请参阅
- 使用[ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65066)的[旧工作流活动](../workflow-designer/legacy-workflow-activities.md)使用[IfElseBranchActivity 活动](http://go.microsoft.com/fwlink?LinkID=65075)，在 "活动规则条件编辑器["](http://go.microsoft.com/fwlink?LinkID=65091)对话框中使用 "[复制器"](http://go.microsoft.com/fwlink?LinkID=65080)活动[（旧版）](../workflow-designer/rule-condition-editor-dialog-box-legacy.md)[使用工作流中的条件的](http://go.microsoft.com/fwlink?LinkID=65009) ["选择条件" 对话框（旧版）](../workflow-designer/select-condition-dialog-box-legacy.md)
+ 使用[ConditionedActivityGroup](https://go.microsoft.com/fwlink?LinkID=65066)的[旧工作流活动](../workflow-designer/legacy-workflow-activities.md)使用[IfElseBranchActivity 活动](https://go.microsoft.com/fwlink?LinkID=65075)[使用复制器活动](https://go.microsoft.com/fwlink?LinkID=65080)使用 "事件[规则条件编辑器" 对话框（旧版）](../workflow-designer/rule-condition-editor-dialog-box-legacy.md)使用[工作流中](https://go.microsoft.com/fwlink?LinkID=65009)[的](https://go.microsoft.com/fwlink?LinkID=65091)条件的 "[选择条件" 对话框（旧版）](../workflow-designer/select-condition-dialog-box-legacy.md)

@@ -10,12 +10,12 @@ ms.assetid: 91b167a3-280a-498b-8fc2-f67859a2c64e
 caps.latest.revision: 29
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9a860ad5408038cced1f5aa2ac20420e35a1240a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 56f2d4cb0b02cc661177a4f781a5c40db924ee2c
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672221"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302105"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>使用测试资源管理器运行单元测试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -59,8 +59,8 @@ ms.locfileid: "72672221"
 
  ![返回到顶部](../debugger/media/pcs-backtotop.png "PCS_BackToTop")[内容](#BKMK_Contents)
 
-### <a name="BKMK_Run_tests"></a> 运行测试
- 你可以运行解决方案中的所有测试、组中的所有测试或你选择的一组测试。 执行以下操作之一：
+### <a name="BKMK_Run_tests"></a>运行测试
+ 你可以运行解决方案中的所有测试、组中的所有测试或你选择的一组测试。 执行下列操作之一：
 
 - 若要运行解决方案中的所有测试，请选择 **“全部运行”** 。
 
@@ -85,7 +85,7 @@ ms.locfileid: "72672221"
 
  ![返回到顶部](../debugger/media/pcs-backtotop.png "PCS_BackToTop")[内容](#BKMK_Contents)
 
-## <a name="BKMK_View_test_results"></a> 查看测试结果
+## <a name="BKMK_View_test_results"></a>查看测试结果
  [查看测试详细信息](#BKMK_View_test_details) **&#124;** [查看测试方法的源代码](#BKMK_View_the_source_code_of_a_test_method)
 
  当你运行、编写以及重新运行测试时，测试资源管理器将在 **“失败的测试”** 、 **“通过的测试”** 、 **“跳过的测试”** 和 **“未运行的测试”** 组中显示结果。 测试运行的摘要显示在测试资源管理器底部的细节窗格中。
@@ -111,38 +111,38 @@ ms.locfileid: "72672221"
 
   ![返回到顶部](../debugger/media/pcs-backtotop.png "PCS_BackToTop")[内容](#BKMK_Contents)
 
-### <a name="BKMK_View_the_source_code_of_a_test_method"></a> 查看测试方法的源代码
+### <a name="BKMK_View_the_source_code_of_a_test_method"></a>查看测试方法的源代码
  若要在 Visual Studio 编辑器中显示测试方法的源代码，请选择该测试，然后在上下文菜单中选择 **“打开测试”** （键盘：按 F12）。
 
  ![返回到顶部](../debugger/media/pcs-backtotop.png "PCS_BackToTop")[内容](#BKMK_Contents)
 
-## <a name="BKMK_Group_and_filter_the_test_list"></a> 分组和筛选测试列表
+## <a name="BKMK_Group_and_filter_the_test_list"></a>分组和筛选测试列表
  [分组测试列表](#BKMK_Grouping_the_test_list) **&#124;** [按特征分组](#BKMK_Group_by_traits) **&#124;** [搜索和筛选测试列表](#BKMK_Search_and_filter_the_test_list)
 
  通过测试资源管理器，可以将测试分组到预定义类别中。 在测试资源管理器中运行的大多数单元测试框架允许你定义自己的类别和类别/值对，以便对测试进行分组。 此外还可以通过匹配字符串和测试属性来筛选测试列表。
 
-### <a name="BKMK_Grouping_the_test_list"></a> 分组测试列表
- 若要更改测试的组织方式，请依次选择“分组依据”按钮 ![测试资源管理器的分组按钮](../test/media/ute-groupby-btn.png "UTE_GroupBy_btn") 旁边的向下箭头和新分组条件。
+### <a name="BKMK_Grouping_the_test_list"></a>分组测试列表
+ 若要更改测试的组织方式，请依次选择“分组依据”按钮 **测试资源管理器的分组按钮** 旁边的向下箭头和新分组条件![](../test/media/ute-groupby-btn.png "UTE_GroupBy_btn")。
 
  ![测试资源管理器中按类别分组测试](../test/media/ute-groupbycategory.png "UTE_GroupByCategory")
 
 ### <a name="test-explorer-groups"></a>测试资源管理器组
 
-|Group|描述|
+|组|描述|
 |-----------|-----------------|
 |**持续时间**|按执行时间对测试进行分组： **“快速”** 、 **“中速”** 和 **“慢速”** 。|
 |**结果**|按执行结果对测试进行分组： **“失败的测试”** 、 **“跳过的测试”** 、 **“通过的测试”** 。|
 |**特征**|按你定义的类别/值对对测试进行分组。 用于指定特征类别和值的语法由单元测试框架定义。|
-|**项目**|按项目名称对测试进行分组。|
+|**Project**|按项目名称对测试进行分组。|
 
  ![返回到顶部](../debugger/media/pcs-backtotop.png "PCS_BackToTop")[内容](#BKMK_Contents)
 
-### <a name="BKMK_Group_by_traits"></a> 按特征分组
+### <a name="BKMK_Group_by_traits"></a>按特征分组
  特征通常是类别名称/值对，但也可以是单个类别。 特性可以分配给由单元测试框架标识为测试方法的方法。 单元测试框架可以定义特征类别。 你可以向特征类别添加值，以便定义自己的类别名称/值对。 用于指定特征类别和值的语法由单元测试框架定义。
 
  **适用于托管代码的 Microsoft 单元测试框架中的特征**
 
- 在适用于托管应用的 Microsoft 单元测试框架中，在  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute> 属性中定义特征名称/值对。 测试框架还包括以下预定义特征：
+ 在适用于托管应用的 Microsoft 单元测试框架中，在 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute> 属性中定义特征名称/值对。 测试框架还包括以下预定义特征：
 
 |特征|描述|
 |-----------|-----------------|
@@ -185,7 +185,7 @@ TEST_METHOD(Method1)
 
  ![返回到顶部](../debugger/media/pcs-backtotop.png "PCS_BackToTop")[内容](#BKMK_Contents)
 
-### <a name="BKMK_Search_and_filter_the_test_list"></a> 搜索和筛选测试列表
+### <a name="BKMK_Search_and_filter_the_test_list"></a>搜索和筛选测试列表
  你可以使用测试资源管理器筛选器来限制你所查看和运行项目中的测试方法。
 
  在测试资源管理器搜索框中键入字符串并选择 Enter 时，测试列表被筛选为仅显示完全限定名包含该字符串的测试。
@@ -206,7 +206,7 @@ TEST_METHOD(Method1)
 |限定符|描述|
 |---------------|-----------------|
 |**特征**|搜索特征类别和值的匹配项。 用于指定特征类别和值的语法由单元测试框架定义。|
-|**项目**|搜索测试项目名称的匹配项。|
+|**Project**|搜索测试项目名称的匹配项。|
 |**错误消息**|搜索由失败的断言返回的用户定义错误消息的匹配项。|
 |**文件路径**|搜索测试源文件的完全限定文件名的匹配项。|
 |**完全限定名**|搜索测试命名空间、类和方法的完全限定文件名的匹配项。|
@@ -219,7 +219,7 @@ TEST_METHOD(Method1)
 FilterName:"Criteria" -FilterName:"SubsetCriteria"
 ```
 
- 例如，应用于对象的
+ 例如，
 
 ```
 FullName:"MyClass" - FullName:"PerfTest"
@@ -229,7 +229,7 @@ FullName:"MyClass" - FullName:"PerfTest"
 
  ![返回到顶部](../debugger/media/pcs-backtotop.png "PCS_BackToTop")[内容](#BKMK_Contents)
 
-## <a name="BKMK_Create_custom_playlists"></a> 创建自定义播放列表
+## <a name="BKMK_Create_custom_playlists"></a>创建自定义播放列表
  你可以创建和保存想要作为组运行或查看的测试列表。 当你选择播放列表时，列表中的测试将显示在“测试资源管理器”中。 你可以将一个测试添加到多个播放列表，并且当你选择默认的 **“所有测试”** 播放列表时，项目中的所有测试都可用。
 
  ![选择播放列表](../test/media/ute-playlist.png "UTE_Playlist")
@@ -244,11 +244,11 @@ FullName:"MyClass" - FullName:"PerfTest"
 
  ![返回到顶部](../debugger/media/pcs-backtotop.png "PCS_BackToTop")[内容](#BKMK_Contents)
 
-## <a name="BKMK_Debug_and_analyze_unit_tests"></a> 调试并分析单元测试
+## <a name="BKMK_Debug_and_analyze_unit_tests"></a>调试和分析单元测试
  [调试单元测试](#BKMK_Debug_unit_tests) **&#124;** [诊断测试方法性能问题](#BKMK_Diagnose_test_method_performance_issues) **&#124;** [分析单元测试代码覆盖率](#BKMK_Analyzeunit_test_code_coverage)
 
-### <a name="BKMK_Debug_unit_tests"></a> 调试单元测试
- 可以使用测试资源管理器为你的测试启动调试会话。 使用 Visual Studio 调试程序无缝地逐句通过代码将使你在单元测试和所测试项目之间来回反复。 若要开始调试：
+### <a name="BKMK_Debug_unit_tests"></a>调试单元测试
+ 可以使用测试资源管理器为你的测试启动调试会话。 使用 Visual Studio 调试程序无缝地逐句通过代码将使你在单元测试和所测试项目之间来回反复。 若要启动调试：
 
 1. 在 Visual Studio 编辑器中，在想要调试的一个或多个测试方法中设置断点。
 
@@ -261,10 +261,10 @@ FullName:"MyClass" - FullName:"PerfTest"
 
    ![返回到顶部](../debugger/media/pcs-backtotop.png "PCS_BackToTop")[内容](#BKMK_Contents)
 
-### <a name="BKMK_Diagnose_test_method_performance_issues"></a> 诊断测试方法性能问题
+### <a name="BKMK_Diagnose_test_method_performance_issues"></a>诊断测试方法性能问题
  若要诊断测试方法花费过多时间的原因，请在测试资源管理器中选择该方法，然后在上下文菜单中选择“配置文件”。 请参阅[性能资源管理器](../profiling/performance-explorer.md)。
 
-### <a name="BKMK_Analyzeunit_test_code_coverage"></a> 分析单元测试代码覆盖率
+### <a name="BKMK_Analyzeunit_test_code_coverage"></a>分析单元测试代码覆盖率
 
 > [!NOTE]
 > 单元测试代码覆盖率仅在 Visual Studio Enterprise 中可用。
@@ -283,14 +283,14 @@ FullName:"MyClass" - FullName:"PerfTest"
 
    代码覆盖率结果窗口显示行、函数、类、命名空间和模块执行的产品代码块的百分比。
 
-   有关详细信息，请参阅[使用代码覆盖率确定正在测试的代码数量](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)。
+   有关详细信息，请参阅 [Using Code Coverage to Determine How Much Code is being Tested](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)。
 
    ![返回到顶部](../debugger/media/pcs-backtotop.png "PCS_BackToTop")[内容](#BKMK_Contents)
 
 ## <a name="BKMK_External_resources"></a>外部资源
 
 ### <a name="BKMK_Guidance"></a> 指导
- [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](http://go.microsoft.com/fwlink/?LinkID=255188)
+ [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](https://go.microsoft.com/fwlink/?LinkID=255188)
 
 ## <a name="see-also"></a>请参阅
  [单元测试你的代码](../test/unit-test-your-code.md)将[单元测试作为64位进程运行](../test/run-a-unit-test-as-a-64-bit-process.md)

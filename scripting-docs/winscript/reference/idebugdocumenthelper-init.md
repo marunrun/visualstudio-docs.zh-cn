@@ -25,7 +25,7 @@ ms.lasthandoff: 10/18/2019
 ms.locfileid: "72576865"
 ---
 # <a name="idebugdocumenthelperinit"></a>IDebugDocumentHelper::Init
-@No__t_0 方法使用 name 和初始属性初始化调试文档帮助程序。  
+`Init` 方法使用 name 和初始属性初始化调试文档帮助程序。  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,7 +54,7 @@ HRESULT Init(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
@@ -63,7 +63,7 @@ HRESULT Init(
   
  在调用 `IDebugDocumentHelper::Attach` 之前，此文档不会显示在树中。  
   
-## <a name="see-also"></a>请参阅  
- [IDebugDocumentHelper：： Attach](../../winscript/reference/idebugdocumenthelper-attach.md)    
+## <a name="see-also"></a>另请参阅  
+ [IDebugDocumentHelper::Attach](../../winscript/reference/idebugdocumenthelper-attach.md)   
  [IDebugDocumentHelper 接口](../../winscript/reference/idebugdocumenthelper-interface.md)   
  [TEXT_DOC_ATTR 常量](../../winscript/reference/text-doc-attr-constants.md)

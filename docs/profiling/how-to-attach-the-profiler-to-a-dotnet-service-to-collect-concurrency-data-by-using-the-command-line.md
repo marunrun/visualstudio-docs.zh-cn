@@ -7,14 +7,15 @@ ms.assetid: ffbdfe37-8325-44be-bd36-2c8aab2dec7b
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9b77d4e27edd470d83941e29d5d7a2314cd2a8e1
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: a95e907379db19d88fd7204e8410038ddb881d3b
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66746267"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779111"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-service-to-collect-concurrency-data-by-using-the-command-line"></a>如何：将探查器附加到 .NET 服务，以使用命令行收集并发数据
 本文介绍如何使用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 分析工具命令行工具将探查器附加到 .NET Framework 服务，并使用采样方法收集进程和线程并发数据。
@@ -98,7 +99,7 @@ ms.locfileid: "66746267"
 
     - 停止服务。
 
-         或
+         -或-
 
     - 键入 **VSPerfCmd /detach.**
 

@@ -6,14 +6,15 @@ ms.assetid: ff319ffc-f249-4c3f-9eb2-06e392e3ae80
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e93cc526ad61916e2a8663caa9652842ce136c5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9455d596e27526f6075ad3b667ac441b12511d58
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62960189"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779839"
 ---
 # <a name="wincounter"></a>WinCounter
 **WinCounter** 选项指定在分析运行过程中以设定时间间隔收集的 Windows 性能计数器或应用程序性能计数器。 Windows 性能计数器和应用程序性能计数器在分析数据文件中列为标记。 可以用单独的选项指定多个要收集的性能计数器。
@@ -36,12 +37,12 @@ VSPerfCmd.exe /Start:Method /Wincounter:Path [/WinCounter:Path] [AutoMark:Millis
 ## <a name="required-options"></a>必需选项
  **WinCounter** 选项只能与 **Start** 选项一起使用。
 
- **Start:**`Method` “Start”选项可将探查器初始化为指定的分析方法。
+ **Start:** `Method` “Start”选项可将探查器初始化为指定的分析方法  。
 
 ## <a name="exclusive-options"></a>独占选项
  **AutoMark** 选项只能与 **WinCounter** 选项一起使用。
 
- **AutoMark:**`Milliseconds` 指定两次 Windows 性能计数器数据收集相隔的毫秒数。
+ **AutoMark:** `Milliseconds` 指定两次 Windows 性能计数器数据收集相隔的毫秒数。
 
 ## <a name="example"></a>示例
  在下面的示例中，将两个 Windows 性能计数器收集时间间隔指定为 1000 毫秒。

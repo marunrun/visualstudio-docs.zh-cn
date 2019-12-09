@@ -9,12 +9,12 @@ caps.latest.revision: 10
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f96909d3051e18fe3992e68b44b2948d1e23ebd6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f2d9b958dacfb35877abc9ad1e83a349e43a7af0
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72670127"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296855"
 ---
 # <a name="walkthrough-building-an-application"></a>演练：生成应用程序
 
@@ -24,7 +24,7 @@ ms.locfileid: "72670127"
 
 本主题包含以下各节：
 
-[安装示例应用程序](../ide/walkthrough-building-an-application.md#BKMK_installapp)
+[安装示例应用程序](../ide/walkthrough-building-an-application.md)
 
 [创建自定义生成配置](../ide/walkthrough-building-an-application.md#BKMK_CreateBuildConfig)
 
@@ -34,11 +34,7 @@ ms.locfileid: "72670127"
 
 [在输出窗口中显示其他生成详细信息](../ide/walkthrough-building-an-application.md#BKMK_outputdetails)
 
-[创建版本生成](../ide/walkthrough-building-an-application.md#BKMK_releasebuild)
-
-## <a name="BKMK_installapp"></a> 安装示例应用程序
-
-使用“扩展和更新”对话框，在 Microsoft 网站上的示例库中找到 [Introduction to Building WPF Applications](http://code.msdn.microsoft.com/Introduction-to-Building-b8d16419?SRC=VSIDE)（生成 WPF 应用程序简介）示例并安装。 示例库提供各种各样的示例项目和代码，你可以在计划和开发应用程序时下载和查看。
+[创建版本生成](../ide/walkthrough-building-an-application.md)
 
 #### <a name="to-install-the-sample-application"></a>安装示例应用程序
 
@@ -74,7 +70,7 @@ ms.locfileid: "72670127"
 
      !["新建项目" 对话框，Visual Basic 示例](../ide/media/buildwalk-newprojectdlgintrotowpfsamplevb.png "BuildWalk_NewProjectdlgIntrotoWPFsampleVB")
 
-4. 选择 **“确定”** 按钮。
+4. 选择“确定” 按钮。
 
 ## <a name="BKMK_CreateBuildConfig"></a> 创建自定义生成配置
 
@@ -100,7 +96,7 @@ ms.locfileid: "72670127"
 
     !["新建解决方案平台" 对话框](../ide/media/buildwalk-newsolutionplatform.png "BuildWalk_NewSolutionPlatform")
 
-6. 选择 **“确定”** 按钮。
+6. 选择“确定” 按钮。
 
    “活动解决方案配置”已更改为“测试”，且“活动解决方案平台”设置为“x64”。
 
@@ -185,7 +181,7 @@ ms.locfileid: "72670127"
 
 1. 打开“选项”对话框。
 
-    !["工具" 菜单上的 "选项" 命令](../ide/media/exploreide-toolsoptionsmenu.png "ExploreIDE-ToolsOptionsmenu")
+    ![“工具”菜单上的“选项”命令](../ide/media/exploreide-toolsoptionsmenu.png "ExploreIDE-ToolsOptionsmenu")
 
 2. 选择“项目和解决方案”类别，然后选择“生成和运行”页。
 
@@ -206,7 +202,7 @@ ms.locfileid: "72670127"
 
    有关详细信息，请参阅[如何：查看、保存和配置生成日志文件](../ide/how-to-view-save-and-configure-build-log-files.md)。
 
-## <a name="BKMK_releasebuild"></a> 创建版本生成
+## <a name="create-a-release-build"></a>创建版本生成
 
 可以生成针对交付进行了优化的示例应用程序版本。 对于版本生成，需指定在启动生成前，将可执行文件复制到网络共享。
 
@@ -233,9 +229,9 @@ ms.locfileid: "72670127"
 
 6. 生成应用程序。
 
-     !["生成" 菜单上的 "生成解决方案" 命令](../ide/media/exploreide-buildsolution.png "ExploreIDE-依次")
+     ![“生成”菜单上的“生成解决方案”命令](../ide/media/exploreide-buildsolution.png "ExploreIDE-依次")
 
-#### <a name="to-specify-a-release-build-for-visual-c"></a>为 Visual C 指定发布版本 \#
+#### <a name="to-specify-a-release-build-for-visual-c"></a>为 Visual C 指定发布版本\#
 
 1. 打开“项目设计器”。
 
@@ -256,7 +252,7 @@ ms.locfileid: "72670127"
 
 6. 生成应用程序。
 
-    !["生成" 菜单上的 "生成解决方案" 命令](../ide/media/exploreide-buildsolution.png "ExploreIDE-依次")
+    ![“生成”菜单上的“生成解决方案”命令](../ide/media/exploreide-buildsolution.png "ExploreIDE-依次")
 
    可执行文件已复制到指定的网络路径。 其路径为 \\\myserver\builds\\*FileName*.exe。
 

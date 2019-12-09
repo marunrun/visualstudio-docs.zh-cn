@@ -6,12 +6,12 @@ ms.author: crdun
 ms.date: 06/25/2019
 ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
-ms.openlocfilehash: fa269285cf11df848f842524e0d3d496a67b7469
-ms.sourcegitcommit: cf8c0fef2b9690595e99ce3802586cdd55fd37c2
+ms.openlocfilehash: e45f80ab1a5aab4969b01a2fddcfd88d9dc4eff7
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108238"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73716131"
 ---
 # <a name="connecting-to-team-foundation-version-control"></a>连接到 Team Foundation 版本控制
 
@@ -68,7 +68,7 @@ Visual Studio for Mac 提供了对 Git 存储库的全面支持，但需要一�
 
 安装 TEE-CLC 后，可以运行命令 `tf eula` 来查看和接受客户端的许可协议。
 
-最后，要在 TFS/Azure DevOps 环境中进行身份验证，需要在服务器上创建一个个人访问令牌。 详细了解如何[使用个人访问令牌进行身份验证](https://docs.microsoft.com/azure/devops/integrate/get-started/authentication/pats?view=azure-devops)。 当创建要与 TFVC 一起使用的个人访问令牌时，请确保在配置令牌时提供完全访问权限。
+最后，要在 TFS/Azure DevOps 环境中进行身份验证，需要在服务器上创建一个个人访问令牌。 详细了解如何[使用个人访问令牌进行身份验证](/azure/devops/integrate/get-started/authentication/pats?view=azure-devops)。 当创建要与 TFVC 一起使用的个人访问令牌时，请确保在配置令牌时提供完全访问权限。
 
 ### <a name="using-the-tee-clc-to-connect-to-your-repo"></a>使用 TEE-CLC 连接到存储库
 

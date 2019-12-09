@@ -1,17 +1,17 @@
 ---
 title: 扩展 Visual Studio for Mac
 description: 可使用被称为“扩展包”的模块扩展 Visual Studio for Mac 的特性和功能。 本指南的第一部分创建了一个简单的 Visual Studio for Mac 扩展包，用于在文档中插入日期和时间。 本指南的第二部分介绍了该扩展包系统和一些构成 Visual Studio for Mac 基础的核心 API 的基础知识。
-author: alanjclark
-ms.author: alcl
+author: conceptdev
+ms.author: crdun
 ms.date: 05/07/2019
 ms.technology: vs-ide-sdk
 ms.assetid: D5245AB0-8404-426B-B538-F49125E672B2
-ms.openlocfilehash: f9c14b408a7714f06ae8a96b0ecc60dfc4b8ebe7
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: 02285a38214b4f13c45b4868599c84f47e67013c
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67691659"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73716828"
 ---
 # <a name="extending-visual-studio-for-mac"></a>扩展 Visual Studio for Mac
 
@@ -135,7 +135,7 @@ public enum DateInserterCommands
 
 <!--The extension package detailed in the [Walkthrough](~/extending-visual-studio-mac-walkthrough.md) deals with the Text Editor in Visual Studio for Mac, but this is only one of many possible areas for customization. -->
 
-若要了解有关可用于开发的区域范围，请参阅 [Extension Tree Reference](http://monodevelop.com/Developers/Articles/Extension_Tree_Reference)（扩展树引用）和 [API Overview](http://monodevelop.com/Developers/Articles/API_Overview)（API 概述）。 生成高级扩展包时，另请参阅[开发者文章](http://monodevelop.com/Developers/Articles)。 以下是自定义区域的部分列表：
+若要了解有关可用于开发的区域范围，请参阅 [Extension Tree Reference](https://www.monodevelop.com/developers/articles/extension-tree-reference/)（扩展树引用）和 [API Overview](https://www.monodevelop.com/developers/articles/api-overview/)（API 概述）。 生成高级扩展包时，另请参阅[开发者文章](https://www.monodevelop.com/developers/articles/)。 以下是自定义区域的部分列表：
 
 * 面板
 * 键绑定方案
@@ -174,13 +174,13 @@ Visual Studio for Mac [引入新的本机 Cocoa 文本编辑器 UI](https://aka.
 
 在讨论特定于 Visual Studio for Mac 的扩展详细信息之前，详细了解有关共享编辑器本身的信息会很有帮助。 以下介绍一些可能加深这种理解的资源：
 
-* [Managed Extensibility Framework](https://docs.microsoft.com/dotnet/framework/mef/index)
-* [编辑器中的 MEF](https://docs.microsoft.com/visualstudio/extensibility/managed-extensibility-framework-in-the-editor)
-* [编辑器内](https://docs.microsoft.com/visualstudio/extensibility/inside-the-editor)
-* [语言服务和编辑器扩展点](https://docs.microsoft.com/visualstudio/extensibility/language-service-and-editor-extension-points)
+* [Managed Extensibility Framework](/dotnet/framework/mef/index)
+* [编辑器中的 MEF](/visualstudio/extensibility/managed-extensibility-framework-in-the-editor)
+* [编辑器内](/visualstudio/extensibility/inside-the-editor)
+* [语言服务和编辑器扩展点](/visualstudio/extensibility/language-service-and-editor-extension-points)
 * [编辑器体系结构的视频介绍](https://www.youtube.com/watch?v=PkYVztKjO9A)
 
-拥有这些资源后，需要熟悉的主要概念就是 [`ITextBuffer`](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.text.itextbuffer) 和 [`ITextView`](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.text.editor.itextview)：
+拥有这些资源后，需要熟悉的主要概念就是 [`ITextBuffer`](/dotnet/api/microsoft.visualstudio.text.itextbuffer) 和 [`ITextView`](/dotnet/api/microsoft.visualstudio.text.editor.itextview)：
 
 * `ITextBuffer` 是文本的内存中表示，可以随时间的推移而更改。 `ITextBuffer` 上的 `CurrentSnapshot` 属性返回缓冲区当前内容的不可变  表示，即 `ITextSnapshot` 的实例。 在缓冲区上进行编辑时，CurrentSnapshot 属性将更新为最新版本。 分析器可以检查任何线程上的文本快照，并确保其内容永不更改。
 

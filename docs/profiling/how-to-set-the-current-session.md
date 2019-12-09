@@ -13,24 +13,25 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ad917a67ab03a4cb6c1e265ec2dafcbe6e2ee421
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 70f33888be5097d2682133cda363099bb815c5b0
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62823564"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778747"
 ---
 # <a name="how-to-set-the-current-session"></a>如何：设置当前会话
 
-可以在“性能资源管理器”中打开多个性能会话，然后可以选择一个可见性能会话，将其设置为当前会话。
+可以在“性能资源管理器”中打开多个性能会话，然后可以选择一个可见性能会话，将其设置为当前会话  。
 
-将某个会话设置为当前会话以后，单击“性能资源管理器”工具栏上的“启动”将开始分析当前会话。
+将某个会话设置为当前会话以后，单击“性能资源管理器”工具栏上的“启动”将开始分析当前会话   。
 
 ## <a name="to-set-current-performance-session"></a>设置当前性能会话
 
-- 在“性能资源管理器”中，右键单击性能会话，然后单击“设置为当前会话”。
+- 在“性能资源管理器”  中，右键单击性能会话，然后单击“设置为当前会话”  。
 
      会话名称将显示为粗体。
 

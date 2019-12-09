@@ -6,12 +6,12 @@ manager: lank
 ms.date: 08/02/2019
 ms.topic: conceptual
 description: 了解一些 Visual Studio 订阅中随附的 Office 365 权益。
-ms.openlocfilehash: 58bfed3de99e3a3fa0a46e084ea566ae0451c47f
-ms.sourcegitcommit: bdccab4c2dbd50ea8adaaf88c69c9ca32db88099
+ms.openlocfilehash: 2dde8489f15d8bd2e6a5d04045b99aea2245f73d
+ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144715"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74099614"
 ---
 # <a name="office-365-proplus-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Office 365 专业增强版
 
@@ -51,8 +51,10 @@ ms.locfileid: "73144715"
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准）   | VL、Azure、零售| 可用       |  是          |
+| 带有 GitHub Enterprise 的 Visual Studio Enterprise  | VL | 可用       |  是          |
 | Visual Studio Enterprise（标准）   | NFR<sup>1</sup> | 不可用       |  不可用          |
 | Visual Studio Professional（标准） | VL、Azure、零售                                       | 不可用                                                            |  不可用          |
+| 带有 GitHub Enterprise 的 Visual Studio Professional | VL | 不可用         |  不可用          |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 不可用                                             |  不可用          |
 | MSDN 平台（标准）                                          | VL、零售                                              | 不可用                                              |  不可用          |
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure | 不可用 | 不可用 |

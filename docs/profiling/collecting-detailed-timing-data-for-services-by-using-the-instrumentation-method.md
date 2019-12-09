@@ -6,14 +6,15 @@ ms.assetid: 6116e1df-ed3e-4b0d-ac7f-22f7d7ac00ea
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e9271974857da4fffa7d053afdb2b160fb72ede4
-ms.sourcegitcommit: 91c7f1b525e0c22d938bc4080ba4ceac2483474f
+ms.openlocfilehash: 915999dbad4cb24fe25fd182c093b8e83e11314e
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67033042"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779592"
 ---
 # <a name="collect-detailed-timing-data-for-services-by-using-the-instrumentation-method-from-the-profiler-command-line"></a>使用检测方法通过探查器命令行收集服务的详细计时数据
 本部分介绍从命令行使用检测方法收集 Windows 服务的详细性能数据的步骤和选项。

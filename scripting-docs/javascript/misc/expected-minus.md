@@ -28,6 +28,6 @@ ms.locfileid: "72577566"
   
 - 插入一个终止正斜杠来标记正则表达式的结尾。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [正则表达式对象](../../javascript/reference/regular-expression-object-javascript.md)   
  [正则表达式语法（JavaScript）](https://msdn.microsoft.com/library/1400241x)

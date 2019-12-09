@@ -12,17 +12,17 @@ caps.latest.revision: 39
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 66a9cdab1284d015e2ea76162d240b6a1232d90f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9c0fa4e92c62ffb5b9c41cf5e297ed11ca63c38e
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669920"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298721"
 ---
 # <a name="define-and-install-a-modeling-extension"></a>定义和安装建模扩展
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在 Visual Studio 中，可以为建模图定义扩展。 以这种方式，你可以根据自己的需要调整关系图和模型。 例如，可以定义菜单命令、UML 配置文件、有效性约束和工具箱项。 可以在单个的扩展中定义多个组件。 此外，还可以以 [Visual Studio 集成扩展 (VSIX)](http://go.microsoft.com/fwlink/?LinkId=160780)的形式将这些扩展分发给其他 Visual Studio 用户。 可以使用 Visual Studio 中的 VSIX 项目创建 VSIX。
+在 Visual Studio 中，可以为建模图定义扩展。 以这种方式，你可以根据自己的需要调整关系图和模型。 例如，可以定义菜单命令、UML 配置文件、有效性约束和工具箱项。 可以在单个的扩展中定义多个组件。 此外，还可以以 [Visual Studio 集成扩展 (VSIX)](https://go.microsoft.com/fwlink/?LinkId=160780)的形式将这些扩展分发给其他 Visual Studio 用户。 可以使用 Visual Studio 中的 VSIX 项目创建 VSIX。
 
 ## <a name="requirements"></a>要求
  请参阅 [要求](../modeling/extend-uml-models-and-diagrams.md#Requirements)。
@@ -54,7 +54,7 @@ ms.locfileid: "72669920"
 
     1. 在“解决方案资源管理器”中，该解决方案的快捷菜单上，选择“添加”、“新建项目”。
 
-    2. 在 **“已安装的模板”** 下，展开 **“Visual C#”** 或 **“Visual Basic”** ，然后选择 **“扩展性”** 。 在中间栏中，选择“VSIX 项目”。
+    2. 在“已安装的模板”下，展开“Visual C#” 或“Visual Basic”，然后选择“扩展性”。 在中间栏中，选择“VSIX 项目”。
 
 3. 将 VSIX 项目设置为解决方案的启动项目。
 
@@ -116,7 +116,7 @@ ms.locfileid: "72669920"
 
     1. 在“解决方案资源管理器”中，项目的快捷菜单上，选择“在 Windows 资源管理器中打开文件夹”。
 
-    2. **@No__t_2 \\** _项目_**中**查找文件 bin \\
+    2. **\*\\** _项目_**中**查找文件 bin\\
 
 2. 将 **.vsix** 文件复制到要安装该扩展的目标计算机。 该计算机可以是自己的计算机或其他计算机。
 
@@ -136,9 +136,9 @@ ms.locfileid: "72669920"
 
 3. 选择扩展，然后单击“卸载”。
 
-   在极少数情况下，有错误的扩展无法加载并在错误窗口中创建报告，但不显示在扩展管理器中。 在这种情况下，可以通过从以下位置删除文件来删除扩展，其中 *% LocalAppData%* 通常为*DriveName*： \Users \\*UserName*\AppData\Local：
+   在极少数情况下，有错误的扩展无法加载并在错误窗口中创建报告，但不显示在扩展管理器中。 在这种情况下，可以通过从以下位置删除文件来删除扩展，其中 *% LocalAppData%* 通常为*DriveName*： \Users\\*UserName*\AppData\Local：
 
-   *% LocalAppData%* **\Microsoft\VisualStudio \\ [version] \Extensions**
+   *% LocalAppData%* **\Microsoft\VisualStudio\\[version] \Extensions**
 
 ## <a name="see-also"></a>请参阅
  [定义用于扩展 UML 的配置文件](../modeling/define-a-profile-to-extend-uml.md)[定义自定义建模工具箱项](../modeling/define-a-custom-modeling-toolbox-item.md)[为 UML 模型定义验证约束](../modeling/define-validation-constraints-for-uml-models.md)[在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)

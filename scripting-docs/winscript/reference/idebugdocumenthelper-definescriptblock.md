@@ -58,7 +58,7 @@ HRESULT DefineScriptBlock(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
@@ -69,7 +69,7 @@ HRESULT DefineScriptBlock(
   
  在添加文本（例如，使用 `IDebugDocumentHelper::AddDBCSText` 方法）之后但在分析脚本块之前，应调用 `DefineScriptBlock` 方法（例如，使用 `IActiveScriptParse ::ParseScriptText` 方法）。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugDocumentHelper 接口](../../winscript/reference/idebugdocumenthelper-interface.md)   
- [IDebugDocumentHelper：： AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)    
+ [IDebugDocumentHelper::AddDBCSText](../../winscript/reference/idebugdocumenthelper-adddbcstext.md)   
  [IDebugDocumentHelper::AddUnicodeText](../../winscript/reference/idebugdocumenthelper-addunicodetext.md)

@@ -3,15 +3,15 @@ title: 技术支持权益
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/29/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 description: 了解如何激活 Visual Studio 订阅中包含的技术支持权益。
-ms.openlocfilehash: 6d76fa3bdff63a31598fb9a977f6ed024d214af1
-ms.sourcegitcommit: ab18c9d850192fc9ccec10961f1126e8b0cba8da
+ms.openlocfilehash: f7c1353e9f9759b91a7d83d8296a036bb5b80dd7
+ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73061148"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74706981"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>激活并使用 Visual Studio 订阅中的技术支持权益
 Visual Studio 订阅中的技术支持权益用于解决仍处于[支持生命周期](https://support.microsoft.com/lifecycle/search)的主流支持阶段产品的“非生产环境”中的中断修复问题  。 Visual Studio Enterprise 标准版和年度云订阅接收四个事件，但 Visual Studio Professional 标准版和年度云订阅接收两个事件，从权益激活开始最多一年。 权益激活必须在订阅为最新状态时进行。
@@ -54,7 +54,7 @@ Visual Studio 订阅中的技术支持权益用于解决仍处于[支持生命�
 > 若要激活非英语的支持帐户，请从[此列表](https://support.microsoft.com/help/14084/activate-support-contract)选择所在国家/地区。
 
 ## <a name="how-to-submit-an-incident-using-your-benefit"></a>如何使用权益提交事件
-设置“合同 ID”和“访问 ID”后，可以使用它[联机](http://support.microsoft.com/oas/)提交技术支持事件（需要登录），或通过 [Azure 门户](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview)提交技术支持事件，或拨打所在国家/地区的技术支持电话提交技术支持事件   。 如果联机提交事件，可以选择让 Microsoft 支持部门专业人员回电。
+设置“合同 ID”和“访问 ID”后，可以使用它[联机](https://support.microsoft.com/oas/)提交技术支持事件（需要登录），或通过 [Azure 门户](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview)提交技术支持事件，或拨打所在国家/地区的技术支持电话提交技术支持事件   。 如果联机提交事件，可以选择让 Microsoft 支持部门专业人员回电。
 
 ### <a name="already-have-your-contract-id-and-access-id-associated-with-the-account-used-to-sign-in-to-submit-a-tech-support-incident-online"></a>合同 ID 和访问 ID 是否已与用于登录以联机提交技术支持事件的帐户相关联？
 联机提交事件时，系统会首先提示你进行登录。 使用已与合同 ID 和访问 ID 关联的帐户登录。 支持工作流的步骤 3 将显示与帐户关联的现有支持计划权益。 只需选择该计划并继续提交事例。 可以提交事件，直至计划中指示的限制或计划的到期日期（以先到者为准）。 剩余的事件显示为“0”或者计划到期后，它就不再处于活跃状态。
@@ -112,7 +112,9 @@ Visual Studio 订阅中的技术支持权益用于解决仍处于[支持生命�
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise（标准）   | VL、Azure、零售、所选 NFR<sup>1</sup> | 4 个事件       |  是|
+| 带有 GitHub Enterprise 的 Visual Studio Enterprise | VL | 4 个事件       |  是|
 | Visual Studio Professional（标准） | VL、Azure、零售、所选 NFR<sup>2</sup>                                        | 2 个事件                                                          |是         |
+| 带有 GitHub Enterprise 的 Visual Studio Professional | VL                                     | 2 个事件                                                          |是         |
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 2 个事件                                             |  是         |
 | MSDN 平台（标准）                                          | VL、零售                                              | 2 个事件                                               | 是         |
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure                                       | 不可用                                                           |NA|
@@ -123,3 +125,9 @@ Visual Studio 订阅中的技术支持权益用于解决仍处于[支持生命�
 <sup>2</sup>  包括：  Imagine 标准版。
 
 无法确定正在使用哪些订阅？  连接到 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)，查看分配给电子邮件地址的所有订阅。 如果没有看到所有订阅，则可能是有一个或多个订阅分配给了不同的电子邮件地址。  你需要使用其他电子邮件地址登录来查看那些订阅。
+
+## <a name="next-steps"></a>后续步骤
+请务必激活这些重要权益以充分利用 Visual Studio 订阅：
+- [Visual Studio](vs-ide-benefit.md)
+- [Azure DevOps](vs-azure-devops.md)
+- [Azure 开发测试个人额度](vs-azure.md)

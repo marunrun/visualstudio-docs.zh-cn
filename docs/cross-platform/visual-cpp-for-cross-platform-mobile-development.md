@@ -1,7 +1,7 @@
 ---
 title: 使用 C++ 进行跨平台移动开发 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/17/2019
+ms.date: 11/14/2019
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +12,12 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 61bb3e17b104759995852959a7396d5a76927cfb
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: bc4164ec405aed2941e807934ee8d66b7ae72504
+ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589044"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74098977"
 ---
 # <a name="cross-platform-mobile-development-with-c"></a>使用 C++ 进行跨平台移动开发
 
@@ -42,10 +42,6 @@ ms.locfileid: "72589044"
 如果你来自 Android 或 iOS 开发部门，我们可以向你提供有关如何入门的有用资料。 Visual Studio 是一个表现力和功能均十分强大的开发环境。 若要了解如何使用，请阅读 [Android 开发人员入门](/previous-versions/windows/apps/dn275875\(v=win.10\))或 [iOS 开发人员入门](/previous-versions/windows/apps/jj657966\(v=win.10\))。 这些文章将向你介绍 Visual Studio 以及开发用于 Windows 和 Windows 应用商店的跨平台应用时所需的概念。 若要开始编写你的第一个用于 iOS 和 Android 的跨平台应用，请参阅[在 Android 和 iOS 上生成 OpenGL ES 应用程序](../cross-platform/build-an-opengl-es-application-on-android-and-ios.md)。
 
 使用 C++ 的移动开发工作负载包括多个模板，可帮助你开始编写应用：
-
-- OpenGLES 2 应用程序（Android、iOS 和 Windows Universal）
-
-  创建包含一组项目的解决方案，用于构建 Android 本机活动应用、iOS 应用、通用 Windows 应用以及共享的 C++ 代码库。 这些应用使用通过使用公共 C++ OpenGL ES 代码创建的特定于平台的库，以在每个应用中绘制相同的旋转立方体。 若要使用此模板，则在安装 Visual Studio 时，必须随附通用 Windows 应用开发工具工作负载  。
 
 - Native-Activity 应用程序(Android)
 

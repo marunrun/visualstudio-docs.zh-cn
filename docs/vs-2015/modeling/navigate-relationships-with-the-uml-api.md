@@ -11,12 +11,12 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5c0067e213fdff2bde09c290d9fcaa9b4f52b9ab
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f19208e886eb499c825b119ad4ade7e8b52ab88f
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668530"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300233"
 ---
 # <a name="navigate-relationships-with-the-uml-api"></a>使用 UML API 导航关系
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -152,7 +152,7 @@ IEnumerable<IUseCase>GetIncludingCases(this IUseCase usecase);
 ```
 
 ## <a name="enumerating-relationships"></a>枚举关系
- 返回多个值的 UML 模型的所有属性都符合 IEnumerable < > 接口。 这意味着你可以使用[Linq 查询表达式](http://go.microsoft.com/fwlink/?LinkId=168834)和在**system.web**命名空间中定义的扩展方法。
+ 返回多个值的 UML 模型的所有属性都符合 IEnumerable < > 接口。 这意味着你可以使用[Linq 查询表达式](https://go.microsoft.com/fwlink/?LinkId=168834)和在**system.web**命名空间中定义的扩展方法。
 
  例如:
 

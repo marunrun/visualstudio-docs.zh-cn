@@ -42,13 +42,13 @@ HRESULT SetBreakPoint(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
  此方法在此代码上下文中设置或清除断点。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugCodeContext 接口](../../winscript/reference/idebugcodecontext-interface.md)   
  [BREAKPOINT_STATE 枚举](../../winscript/reference/breakpoint-state-enumeration.md)

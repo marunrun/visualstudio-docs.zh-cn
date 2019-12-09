@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/29/2019
 ms.topic: conceptual
 description: 了解有关所选 Visual Studio 订阅中包含的 Azure 社区支持权益。
-ms.openlocfilehash: 128147833baf450c0d161f39628a0928e9118412
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: 32a1c962e238bfc5ab8083ff643a99a77b699925
+ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816540"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983754"
 ---
 # <a name="azure-community-support-forum-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Azure 社区支持论坛
 在选定的支持论坛中通过 Azure 社区直接从 Azure 团队获得帮助。  Azure 社区权益提供访问专注于 Azure 相关主题的一系列论坛的权限。
@@ -50,7 +50,9 @@ Azure 社区权益的可用性取决于订阅级别，如下所示：
 |                                          订阅级别                                           |     信道      |    好处    | 是否续订？ |
 |-------------------------------------------------------------------------------------------------------|-------------------|---------------|------------|
 |                           Visual Studio Enterprise（标准）                           | VL、Azure、零售 |   一年    |    是     |
+|                           带有 GitHub Enterprise 的 Visual Studio Enterprise                           | VL、Azure、零售 |   一年    |    是     |
 |                          Visual Studio Professional（标准）                          | VL、Azure、零售 |   一年    |    是     |
+|                          带有 GitHub Enterprise 的 Visual Studio Professional                          | VL、Azure、零售 |   一年    |    是     |
 |                              Visual Studio Test Professional（标准）                               |    VL、零售     |   一年    |    是     |
 |                                       MSDN 平台（标准）                                       |    VL、零售     |   一年    |    是     |
 | Visual Studio Enterprise（月度云）、Visual Studio Professional（月度云）、NFR<sup>1</sup> |        全部        | 不可用 |     No     |

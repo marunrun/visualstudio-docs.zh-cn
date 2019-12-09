@@ -9,12 +9,12 @@ caps.latest.revision: 5
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 09c0c26a75d6881f06e67fa84f30ac7279bddf33
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 751840960288f46c0a1ca09ebe80a2b8e7603359
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663891"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299524"
 ---
 # <a name="wpf-data-binding-with-linq-to-xml-overview"></a>使用 LINQ to XML 进行 WPF 数据绑定概述
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -89,4 +89,4 @@ ms.locfileid: "72663891"
  为了实现 WPF 动态绑定，需要与 <xref:System.Windows.Data> 命名空间提供的功能（特别是 <xref:System.Windows.Data.Binding> 类）一起使用动态属性。
 
 ## <a name="see-also"></a>请参阅
- [使用工作流标记](http://go.microsoft.com/fwlink/?LinkId=98685)[在 wpf](https://msdn.microsoft.com/library/5d858575-a83b-42df-ad3f-047ed2d6e3c8) [数据绑定（WPF）](https://msdn.microsoft.com/library/90f79b97-17e7-40d1-abf0-3ba600ad1d7e)中使用 LINQ to XML [LINQ to XML 动态属性](../designers/linq-to-xml-dynamic-properties.md)XAML[的 WPF 数据绑定](../designers/wpf-data-binding-with-linq-to-xml.md)
+ [使用工作流标记](https://go.microsoft.com/fwlink/?LinkId=98685)[在 wpf](https://msdn.microsoft.com/library/5d858575-a83b-42df-ad3f-047ed2d6e3c8) [数据绑定（WPF）](https://msdn.microsoft.com/library/90f79b97-17e7-40d1-abf0-3ba600ad1d7e)中使用 LINQ to XML [LINQ to XML 动态属性](../designers/linq-to-xml-dynamic-properties.md)XAML[的 WPF 数据绑定](../designers/wpf-data-binding-with-linq-to-xml.md)

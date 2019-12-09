@@ -11,17 +11,17 @@ caps.latest.revision: 63
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 87acbb53fd8fe5eae744aa4ef72c808da8eb6642
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 23ba1a6900559d7ee13639bb1da696127e47e536
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663480"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74299272"
 ---
 # <a name="define-a-menu-command-on-a-modeling-diagram"></a>在建模图上定义菜单命令
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在 Visual Studio 中，你可以在 UML 关系图的快捷菜单上定义其他菜单项。 你可以控制是否在关系图上任意元素的快捷菜单上显示和启用菜单命令，并且可以编写在用户选择菜单项时运行的代码。 可以将这些扩展打包到 Visual Studio 集成扩展 ([VSIX](http://go.microsoft.com/fwlink/?LinkId=160780)) 中，并将其分发给其他 Visual Studio 用户。
+在 Visual Studio 中，你可以在 UML 关系图的快捷菜单上定义其他菜单项。 你可以控制是否在关系图上任意元素的快捷菜单上显示和启用菜单命令，并且可以编写在用户选择菜单项时运行的代码。 可以将这些扩展打包到 Visual Studio 集成扩展 ([VSIX](https://go.microsoft.com/fwlink/?LinkId=160780)) 中，并将其分发给其他 Visual Studio 用户。
 
 ## <a name="requirements"></a>要求
  请参阅 [要求](../modeling/extend-uml-models-and-diagrams.md#Requirements)。
@@ -47,7 +47,7 @@ ms.locfileid: "72663480"
 
 4. 按 F5 测试菜单命令。 有关详细信息，请参阅 [执行菜单命令](#Executing)。
 
-5. 在另一台计算机上安装菜单命令，方法是：将文件 bin 复制 \\ 由项目生成的 **\* \\ \*。** 有关详细信息，请参阅 [安装和卸载扩展](#Installing)。
+5. 在另一台计算机上安装菜单命令，方法是：将文件 bin 复制\\由项目生成的 **\*\\\*。** 有关详细信息，请参阅 [安装和卸载扩展](#Installing)。
 
    下面是替代过程：
 
@@ -65,7 +65,7 @@ ms.locfileid: "72663480"
 
 2. 将下列引用添加到项目中。
 
-   |                                                                                                    参考                                                                                                    |                                                                                                  允许执行的操作                                                                                                  |
+   |                                                                                                    引用                                                                                                    |                                                                                                  允许执行的操作                                                                                                  |
    |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |                                                                                        System.ComponentModel.Composition                                                                                        |                                         通过使用 [Managed Extensibility Framework (MEF)](https://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde)定义组件。                                          |
    |                                                                                      Microsoft.VisualStudio.Uml.Interfaces                                                                                      |                                                                                        读取并更改模型元素的属性。                                                                                         |
@@ -172,7 +172,7 @@ ms.locfileid: "72663480"
 |||
 |-|-|
 |`string Text { get; }`|返回菜单项的标签。|
-|`void QueryStatus(IMenuCommand command);`|当用户在关系图中右击时调用。<br /><br /> 此方法不应更改模型。<br /><br /> 使用 `DiagramContext.CurrentDiagram.SelectedShapes` 确定是否显示并启用该命令。<br /><br /> 设置：<br /><br /> 如果用户在关系图中右键单击时该命令必须出现在菜单中，-    `command.Visible` `true`<br />如果用户可以单击菜单中的命令，则 -    `command.Enabled` `true`<br />-    `command.Text` 动态设置菜单标签|
+|`void QueryStatus(IMenuCommand command);`|当用户在关系图中右击时调用。<br /><br /> 此方法不应更改模型。<br /><br /> 使用 `DiagramContext.CurrentDiagram.SelectedShapes` 确定是否显示并启用该命令。<br /><br /> 设置：<br /><br /> 如果用户在关系图中右键单击时该命令必须出现在菜单中，-   `command.Visible` `true`<br />如果用户可以单击菜单中的命令，则 -   `command.Enabled` `true`<br />-   `command.Text` 动态设置菜单标签|
 |`void Execute (IMenuCommand command);`|当用户单击菜单项（如果它可见并已启用）时调用。|
 
 ### <a name="accessing-the-model-in-code"></a>访问代码中的模型
@@ -222,7 +222,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
     - 如果你有多个项目，请确保将 VSIX 项目设置为解决方案的启动项目。
 
-    - 在“解决方案资源管理器”中，在启动或唯一项目的快捷菜单上选择“属性”。 在项目属性编辑器中，选择 "**调试**" 选项卡。请确保 "**启动外部程序**" 字段中的字符串是 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的完整路径名，通常为：
+    - 在“解决方案资源管理器”中，在启动或唯一项目的快捷菜单上选择“属性”。 在项目属性编辑器中，选择 "**调试**" 选项卡。请确保 "**启动外部程序**" 字段中的字符串是 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的完整路径名，通常为：
 
          `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
@@ -236,7 +236,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
     - `Import` 和 `Export` 特性的参数有效。
 
-    - @No__t_0 方法未设置 `command`。`Enabled` 或 `Visible` 要 `false` 的字段。
+    - `QueryStatus` 方法未设置 `command`。`Enabled` 或 `Visible` 要 `false`的字段。
 
     - 正在使用的模型关系图的类型（UML 类、序列等）作为菜单命令类特性（ `[ClassDesignerExtension]`、 `[SequenceDesignerExtension]` 等）之一列出。
 
@@ -249,7 +249,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
     1. 在“解决方案资源管理器”中，在 VSIX 项目的快捷菜单上，选择“在 Windows 资源管理器中打开文件夹”。
 
-    2. **@No__t_2 \\** _项目_**中**查找文件 bin \\
+    2. **\*\\** _项目_**中**查找文件 bin\\
 
 2. 将 **.vsix** 文件复制到要安装该扩展的目标计算机。 该计算机可以是自己的计算机或其他计算机。
 
@@ -263,7 +263,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
 #### <a name="to-uninstall-an-extension"></a>若要卸载扩展
 
-1. 在“工具” 菜单上，选择“扩展和更新”。
+1. 在 **“工具”** 菜单上，选择 **“扩展和更新”** 。
 
 2. 展开“已安装的扩展”。
 
@@ -271,7 +271,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
    在极少数情况下，有错误的扩展无法加载并在错误窗口中创建报告，但不显示在扩展管理器中。 在这种情况下，可以通过从以下位置删除文件来删除扩展：
 
-   *% LocalAppData%* **\Local\Microsoft\VisualStudio \\ [version] \Extensions**
+   *% LocalAppData%* **\Local\Microsoft\VisualStudio\\[version] \Extensions**
 
 ## <a name="MenuExample"></a> 示例
  下面的示例演示一个菜单命令的代码，该命令用于交换类图中两个元素的名称。 此代码必须在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展项目中生成，并按前面几节所述进行安装。
@@ -363,4 +363,4 @@ namespace SwapClassNames
 ```
 
 ## <a name="see-also"></a>请参阅
- [定义和安装建模扩展](../modeling/define-and-install-a-modeling-extension.md)[扩展 UML 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)[在建模图上定义笔势处理程序](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md)定义[自定义建模工具箱项](../modeling/define-a-custom-modeling-toolbox-item.md)定义[UML 模型编辑的验证约束](../modeling/define-validation-constraints-for-uml-models.md) [使用 uml API](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md) [编程和 uml api](../modeling/programming-with-the-uml-api.md)的 uml 序列图[示例：用于对齐 uml 关系图上的形状的命令](http://go.microsoft.com/fwlink/?LinkID=213809)
+ [定义和安装建模扩展](../modeling/define-and-install-a-modeling-extension.md)[扩展 UML 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)[在建模图上定义笔势处理程序](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md)[定义自定义建模工具箱项](../modeling/define-a-custom-modeling-toolbox-item.md)定义[uml 模型的验证约束](../modeling/define-validation-constraints-for-uml-models.md)[编辑 uml 序列图通过使用 Uml Api](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md) [编程和 Uml api](../modeling/programming-with-the-uml-api.md) [示例：用于对齐 uml 关系图上的形状的命令](https://go.microsoft.com/fwlink/?LinkID=213809)

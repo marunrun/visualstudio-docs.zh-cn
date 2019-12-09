@@ -9,17 +9,17 @@ caps.latest.revision: 26
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9746b156d2ec959f2ffb5bbff41b3891516d130f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9d088844a3d8c1137b762b541b0393f939cdc194
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68193611"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301296"
 ---
 # <a name="what39s-new-in-msbuild-120"></a>MSBuild 12.0 中的新增功能
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-MSBuild 现已作为 Visual Studio 的一部分而不是 .NET Framework 的一部分进行安装。 当前 MSBuild 版本号为 12.0。 如果要单独安装 MSBuild，请从 [MSBuild 下载](http://go.microsoft.com/fwlink/?LinkId=309745)下载安装包。  
+MSBuild 现已作为 Visual Studio 的一部分而不是 .NET Framework 的一部分进行安装。 当前 MSBuild 版本号为 12.0。 如果要单独安装 MSBuild，请从 [MSBuild 下载](https://go.microsoft.com/fwlink/?LinkId=309745)下载安装包。  
   
 ## <a name="changed-path"></a>更改的路径  
  MSBuild 现直接安装在 *%ProgramFiles%* 下，例如安装在 C:\Program Files\MSBuild\\ 中。  

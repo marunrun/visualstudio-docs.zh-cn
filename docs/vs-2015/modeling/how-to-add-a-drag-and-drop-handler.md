@@ -9,12 +9,12 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 244bfeb48a0c0a572cc58e2544cfb0f4336441c8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6ca68005f71d642650a2d9b024a16883de5eaddf
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671666"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298932"
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>如何：添加拖放处理程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "72671666"
 
 - 前两个部分介绍了定义笔势处理程序的替代方法：
 
-  - [通过重写 ShapeElement 方法定义笔势处理程序](#overrideShapeElement)。 `OnDragDrop`、`OnDoubleClick`、`OnDragOver` 以及其他可以进行重写的方法。
+  - [通过重写 ShapeElement 方法定义笔势处理程序](#overrideShapeElement)。 可以重写 `OnDragDrop`、`OnDoubleClick`、`OnDragOver`和其他方法。
 
   - [使用 MEF 定义笔势处理程序](#MEF)。 如果希望第三方开发人员能够对你的 DSL 定义他们自己的处理程序，则使用此方法。 用户可以在安装了你的 DSL 后选择安装第三方扩展。
 
@@ -48,7 +48,7 @@ using System.Linq;
 
  在新文件中，为应响应拖动操作的形状或关系图类定义分部类。 重写以下方法：
 
-- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragOver%2A> - 当鼠标指针在拖动操作期间进入该形状时调用此方法。 你的方法应检查用户正在拖动的项，并设置“效果”属性以指示用户是否可以将项放置在此形状上。 “效果”属性确定当指针悬停在此形状上时指针的外观，还确定当用户释放鼠标按钮时是否将调用 `OnDragDrop()`。
+- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragOver%2A>-在拖动操作过程中鼠标指针进入形状时，将调用此方法。 你的方法应检查用户正在拖动的项，并设置“效果”属性以指示用户是否可以将项放置在此形状上。 “效果”属性确定当指针悬停在此形状上时指针的外观，还确定当用户释放鼠标按钮时是否将调用 `OnDragDrop()`。
 
   ```csharp
   partial class MyShape // MyShape generated from DSL Definition.
@@ -65,7 +65,7 @@ using System.Linq;
 
   ```
 
-- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A> – 如果用户在鼠标指针停留在此形状或关系图上时释放鼠标按钮，则调用此方法，前提是 `OnDragOver(DiagramDragEventArgs e)` 已提前将 `e.Effect` 设置为 `None` 以外的值。
+- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A> –当鼠标指针停留在此形状或关系图上时，如果用户释放鼠标按钮，则调用此方法; 如果 `OnDragOver(DiagramDragEventArgs e)` 之前将 `e.Effect` 设置为 `None`以外的值，则调用此方法。
 
   ```csharp
   public override void OnDragDrop(DiagramDragEventArgs e)
@@ -82,7 +82,7 @@ using System.Linq;
 
   ```
 
-- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A> – 当用户双击该形状或关系图时，将调用此方法。
+- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A> –当用户双击形状或关系图时，将调用此方法。
 
    有关详细信息，请参阅[如何：截获对形状或修饰器的单击](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)。
 
@@ -136,11 +136,11 @@ using System.Linq;
 
  若要发现拖动源信息可采用的格式，请在调试模式下运行代码，从而在 `OnDragOver()` 或 `CanDragDrop()` 入口设置断点。 检查 `DiagramDragEventArgs` 参数的值。 信息将采用以下两种方式提供：
 
-- <xref:System.Windows.Forms.IDataObject> `Data` –此属性具有源对象的序列化版本，通常采用多种格式。 其最有用的函数是：
+- <xref:System.Windows.Forms.IDataObject>`Data` –此属性具有源对象的序列化版本，通常采用多种格式。 其最有用的函数是：
 
   - diagramEventArgs.Data.GetDataFormats() – 列出解码拖动对象时可采用的格式。 例如，如果用户从桌面拖动文件，则可用的格式包括文件名（“`FileNameW`”）。
 
-  - `diagramEventArgs.Data.GetData(format)` – 采用指定格式解码拖动对象。 将该对象转换为相应的类型。 例如:
+  - `diagramEventArgs.Data.GetData(format)` –以指定格式对拖动的对象进行解码。 将该对象转换为相应的类型。 例如:
 
        `string fileName = diagramEventArgs.Data.GetData("FileNameW") as string;`
 
@@ -170,9 +170,9 @@ using System.Linq;
 
 1. 确保源 DSL 可供 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 模型总线访问：
 
-    1. 如果未安装 Visual Studio 模型总线扩展，请下载并安装它。 有关详细信息，请参阅[可视化和建模 SDK](http://go.microsoft.com/fwlink/?LinkID=185579)。
+    1. 如果未安装 Visual Studio 模型总线扩展，请下载并安装它。 有关详细信息，请参阅[可视化和建模 SDK](https://go.microsoft.com/fwlink/?LinkID=185579)。
 
-    2. 在 DSL 设计器中打开源 DSL 的 DSL 定义文件。 右键单击设计图面，然后单击 "**启用 Modelbus**"。 在该对话框中，选择一个或两个选项。  单击“确定”。 新项目“ModelBus”随即添加到 DSL 解决方案中。
+    2. 在 DSL 设计器中打开源 DSL 的 DSL 定义文件。 右键单击设计图面，然后单击 "**启用 Modelbus**"。 在该对话框中，选择一个或两个选项。  单击" **确定**"。 新项目“ModelBus”随即添加到 DSL 解决方案中。
 
     3. 单击 "**转换所有模板**"，然后重新生成解决方案。
 

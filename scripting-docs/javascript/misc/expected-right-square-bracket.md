@@ -28,6 +28,6 @@ ms.locfileid: "72576527"
   
 - 向引用数组元素的表达式添加右括号。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用数组](../../javascript/advanced/using-arrays-javascript.md)   
  [Array 对象](../../javascript/reference/array-object-javascript.md)

@@ -12,12 +12,12 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3ae3d35f98b54038b590c2fbaf75d0f1597fd0b3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0312846431f670ae136fdadfc8647c4096348941
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645439"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300137"
 ---
 # <a name="how-to-change-fonts-and-colors-in-visual-studio"></a>如何：在 Visual Studio 中更改字体和颜色
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "72645439"
     > [!IMPORTANT]
     > 当你更改颜色主题时，IDE 中的文本将恢复为默认值或恢复为之前自定义的字体和大小。
     >
-    >  如果使用的是 Visual Studio Professional、Visual Studio Premium 或 Visual Studio Ultimate，可以通过下载并安装 [Visual Studio 2013 颜色主题编辑器](http://visualstudiogallery.msdn.microsoft.com/9e08e5d3-6eb4-4e73-a045-6ea2a5cbdabe)来安装其他预定义的颜色主题或创建自己的颜色主题。
+    >  如果使用的是 Visual Studio Professional、Visual Studio Premium 或 Visual Studio Ultimate，可以通过下载并安装 [Visual Studio 2013 颜色主题编辑器](https://marketplace.visualstudio.com/items?itemName=MatthewJohnsonMSFT.VisualStudio2013ColorThemeEditor)来安装其他预定义的颜色主题或创建自己的颜色主题。
 
 ### <a name="use-windows-high-contrast-colors"></a>使用 Windows 高对比度颜色
 

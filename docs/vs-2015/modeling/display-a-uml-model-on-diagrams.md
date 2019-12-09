@@ -11,12 +11,12 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4c8365f045618b92b4b34935bf5024c2ff781650
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 67eb1a6ce55292415da4a5c4e363941a4285d8b7
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669746"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296014"
 ---
 # <a name="display-a-uml-model-on-diagrams"></a>在关系图上显示 UML 模型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -379,4 +379,4 @@ namespace AlignCommand
 ```
 
 ## <a name="see-also"></a>请参阅
- [扩展 uml 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)[导航 uml 模型](../modeling/navigate-the-uml-model.md)[示例：对齐关系图菜单上的形状的命令](http://go.microsoft.com/fwlink/?LinkId=213809)[示例：创建元素、形状和构造型](http://go.microsoft.com/fwlink/?LinkId=213811)
+ [扩展 uml 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)[导航 uml 模型](../modeling/navigate-the-uml-model.md)[示例：对齐关系图菜单上的形状的命令](https://go.microsoft.com/fwlink/?LinkId=213809)[示例：创建元素、形状和构造型](https://go.microsoft.com/fwlink/?LinkId=213811)

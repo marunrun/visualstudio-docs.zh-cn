@@ -28,6 +28,6 @@ ms.locfileid: "72573757"
   
 - 仅对**number**类型的对象调用 ValueOf 或**number** .**方法。**  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Number 对象](../../javascript/reference/number-object-javascript.md)   
  [number 属性 (Error)](../../javascript/reference/number-property-error-javascript.md)

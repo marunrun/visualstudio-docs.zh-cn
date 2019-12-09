@@ -10,12 +10,12 @@ ms.assetid: 5838f02d-001f-49ce-adce-c9ea1afaec2f
 caps.latest.revision: 58
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 63c960fd68aba444ff24c0e5f24bab70cbe0746e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3aec055c0fb0253f0b233f51e50485ccb4ee3382
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660633"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302601"
 ---
 # <a name="creating-a-data-driven-coded-ui-test"></a>创建数据驱动的编码的 UI 测试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -205,7 +205,7 @@ ms.locfileid: "72660633"
 
    **指南**
 
-   有关其他信息，请参阅 [Testing for Continuous Delivery with Visual Studio 2012 – Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188)（使用 Visual Studio 2012 测试连续交付 - 第 2 章：单元测试：测试内部）和 [Testing for Continuous Delivery with Visual Studio 2012 – Chapter 5: Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196)（使用 Visual Studio 2012 测试连续交付 - 第 5 章：自动化系统测试）
+   有关其他信息，请参阅 [Testing for Continuous Delivery with Visual Studio 2012 – Chapter 2: Unit Testing: Testing the Inside](https://go.microsoft.com/fwlink/?LinkID=255188)（使用 Visual Studio 2012 测试连续交付 - 第 2 章：单元测试：测试内部）和 [Testing for Continuous Delivery with Visual Studio 2012 – Chapter 5: Automating System Tests](https://go.microsoft.com/fwlink/?LinkID=255196)（使用 Visual Studio 2012 测试连续交付 - 第 5 章：自动化系统测试）
 
 ## <a name="q--a"></a>问题解答
 
@@ -250,7 +250,7 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 
  如果必须修改录制的方法，则必须将其复制到 UIMap.cs 文件并对其重命名。 UIMap.cs 文件可用于重写 UIMapDesigner.cs 文件中的方法和属性。 必须在 Coded UITest.cs 文件中删除对原始方法的引用，并将其替换为重命名的方法名称。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UIMap](/previous-versions/dd580454(v=vs.140))
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>

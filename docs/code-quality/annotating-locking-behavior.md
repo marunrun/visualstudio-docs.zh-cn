@@ -32,12 +32,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 26c788319331d0da4024844b50b4c495ed2c3a37
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: 25978ae5fa76afc7cd43c9ccc243f25712495ddd
+ms.sourcegitcommit: 174c992ecdc868ecbf7d3cee654bbc2855aeb67d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72806771"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74879277"
 ---
 # <a name="annotating-locking-behavior"></a>对锁定行为进行批注
 若要避免多线程程序中的并发 Bug，请遵循适当的锁定规则并使用 SAL 批注。
@@ -64,7 +64,7 @@ SAL 支持许多不同类型的锁定基元，例如临界区、互斥锁、自�
 ## <a name="locking-annotations"></a>锁定批注
 下表列出了锁定批注。
 
-|批注|描述|
+|Annotation|描述|
 |----------------|-----------------|
 |`_Acquires_exclusive_lock_(expr)`|批注函数并表明在状态后，函数会将 `expr` 命名的锁对象的排他锁计数递增 1。|
 |`_Acquires_lock_(expr)`|批注函数并表明在状态后，函数会将 `expr` 命名的锁对象的锁计数递增 1。|
@@ -73,7 +73,7 @@ SAL 支持许多不同类型的锁定基元，例如临界区、互斥锁、自�
 |`_Create_lock_level_(name)`|该语句声明符号 `name` 为锁级别，因此可以在批注 `_Has_Lock_level_` 和 `_Lock_level_order_` 中使用。|
 |`_Has_lock_kind_(kind)`|批注所有对象以优化资源对象的类型信息。 有时一种通用类型会用于不同类型的资源，并且重载的类型不足以区分各资源之间的语义需求。 下面提供了一个预定义 `kind` 参数的列表：<br /><br /> `_Lock_kind_mutex_`<br /> 互斥锁的锁类型 ID。<br /><br /> `_Lock_kind_event_`<br /> 事件的锁类型 ID。<br /><br /> `_Lock_kind_semaphore_`<br /> 信号量的锁类型 ID。<br /><br /> `_Lock_kind_spin_lock_`<br /> 自旋锁的锁类型 ID。<br /><br /> `_Lock_kind_critical_section_`<br /> 临界区的锁类型 ID。|
 |`_Has_lock_level_(name)`|批注锁对象并赋予其 `name` 锁级别。|
-|`_Lock_level_order_(name1, name2)`|该语句提供 `name1` 和 `name2` 之间的锁排序。|
+|`_Lock_level_order_(name1, name2)`|该语句提供 `name1` 和 `name2` 之间的锁排序。  必须先获取具有级别 `name1` 的锁，然后才能 `name2`|
 |`_Post_same_lock_(expr1, expr2)`|批注函数并表明在状态后，两个锁 `expr1` 和 `expr2` 被视为相同的锁对象。|
 |`_Releases_exclusive_lock_(expr)`|批注函数并表明在状态后，函数会将 `expr` 命名的锁对象的排他锁计数递减 1。|
 |`_Releases_lock_(expr)`|批注函数并表明在状态后，函数会将 `expr` 命名的锁对象的锁计数递减 1。|
@@ -88,7 +88,7 @@ SAL 支持许多不同类型的锁定基元，例如临界区、互斥锁、自�
 ## <a name="sal-intrinsics-for-unexposed-locking-objects"></a>非公开锁定对象的 SAL 内部
 某些锁对象不通过关联锁定函数的实现公开。  下表列出可对在未公开的锁对象上运行的函数启用批注的 SAL 内部变量。
 
-|批注|描述|
+|Annotation|描述|
 |----------------|-----------------|
 |`_Global_cancel_spin_lock_`|说明取消自旋锁。|
 |`_Global_critical_region_`|说明临界区。|
@@ -98,7 +98,7 @@ SAL 支持许多不同类型的锁定基元，例如临界区、互斥锁、自�
 ## <a name="shared-data-access-annotations"></a>共享数据访问批注
 下表列出了用于共享数据访问的批注。
 
-|批注|描述|
+|Annotation|描述|
 |----------------|-----------------|
 |`_Guarded_by_(expr)`|批注变量并表明变量每次受到访问时，`expr` 命名的锁对象的锁计数至少为 1。|
 |`_Interlocked_`|批注变量，与 `_Guarded_by_(_Global_interlock_)` 等效。|
@@ -108,7 +108,7 @@ SAL 支持许多不同类型的锁定基元，例如临界区、互斥锁、自�
 ## <a name="smart-lock-and-raii-annotations"></a>Smart Lock 和 RAII 批注
 智能锁通常会包装本机锁并管理其生存期。 下表列出了可与智能锁定和 RAII 编码模式结合使用的批注，支持 `move` 语义。
 
-|批注|描述|
+|Annotation|描述|
 |----------------|-----------------|
 |`_Analysis_assume_smart_lock_acquired_`|通知分析器假设已获取智能锁定。 此批注需要引用锁类型作为其参数。|
 |`_Analysis_assume_smart_lock_released_`|通知分析器假设已释放智能锁定。 此批注需要引用锁类型作为其参数。|
@@ -117,7 +117,7 @@ SAL 支持许多不同类型的锁定基元，例如临界区、互斥锁、自�
 |`_Swaps_locks_(left, right)`|描述标准 `swap` 行为，该行为假设对象 `left` 并 `right` 交换它们的状态。 交换状态包括 "锁计数" 和 "别名目标" （如果存在）。 指向 `left` 和 `right` 对象的别名保持不变。|
 |`_Detaches_lock_(detached, lock)`|描述锁定包装类型允许取消关联遭拒与其包含的资源的方案。 这类似于 `std::unique_ptr` 如何与其内部指针一起使用：它允许程序员提取指针并使其智能指针容器处于干净状态。 `std::unique_lock` 支持类似的逻辑，可以在自定义锁包装器中实现。 分离的锁将保留其状态（如果有），而包装将重置为包含零个锁计数，而不会保留其自己的别名。 锁定计数没有操作（释放和获取）。 此批注的行为与 `_Moves_lock_` 完全相同，只不过分离的参数应 `return` 而不是 `this`。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 SAL 批注以减少 C/C++ 代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [了解 SAL](../code-quality/understanding-sal.md)

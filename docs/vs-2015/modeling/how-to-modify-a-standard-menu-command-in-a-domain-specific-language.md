@@ -12,12 +12,12 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6a821899eb660fb8448b541f9c1be082351dacc6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 989367d395abb56e4f57c4aa2694b5f4ef17fb6e
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662587"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74300876"
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>如何：使用域特定语言修改标准的菜单命令
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "72662587"
 
 #### <a name="to-discover-what-commands-you-can-modify"></a>发现可以修改的命令
 
-1. 在 `DslPackage` 项目中，打开 `GeneratedCode\CommandSet.cs`。 可以C#在 `CommandSet.tt` 的子公司解决方案资源管理器中找到此文件。
+1. 在 `DslPackage` 项目中，打开 `GeneratedCode\CommandSet.cs`。 可以C#在 `CommandSet.tt`的子公司解决方案资源管理器中找到此文件。
 
 2. 查找此文件中名称以 "`CommandSet`" 结尾的类，例如 `Language1CommandSet` 和 `Language1ClipboardCommandSet`。
 
@@ -65,7 +65,7 @@ ms.locfileid: "72662587"
 
      `{ ...  internal partial class Language1CommandSet : ...`
 
-2. 在**DslPackage**中，创建一个名为 "**自定义代码**" 的文件夹。 在此文件夹中，创建一个名为 `CommandSet.cs` 的新类文件。
+2. 在**DslPackage**中，创建一个名为 "**自定义代码**" 的文件夹。 在此文件夹中，创建一个名为 `CommandSet.cs`的新类文件。
 
 3. 在该新文件中，编写具有与生成的分部类相同的命名空间和名称的分部声明。 例如:
 
@@ -80,7 +80,7 @@ ms.locfileid: "72662587"
      **注意**如果使用类文件模板创建新文件，则必须更正命名空间和类名。
 
 ## <a name="override"></a>重写命令方法
- 大多数命令有两个关联的方法：名为的方法，如 `ProcessOnStatus` 。确定命令是否应可见并处于启用状态。 它将在每当用户右键单击关系图时调用，并应快速执行且不做任何更改。 `ProcessOnMenu` 。当用户单击该命令并应执行该命令的功能时，将调用。 你可能想要重写其中一个方法，或两者都进行重写。
+ 大多数命令有两个关联的方法：名为的方法，如 `ProcessOnStatus`。确定命令是否应可见并处于启用状态。 它将在每当用户右键单击关系图时调用，并应快速执行且不做任何更改。 `ProcessOnMenu`。当用户单击该命令并应执行该命令的功能时，将调用。 你可能想要重写其中一个方法，或两者都进行重写。
 
 ### <a name="to-change-when-the-command-appears-on-a-menu"></a>更改命令何时显示在菜单上
  重写 ProcessOnStatus付款方式. 此方法应设置其参数 MenuCommand 的“可见”和“已启用”属性。 通常，命令查看 this.CurrentSelection 来确定命令是否应用到选定的元素，还可能查看其属性来确定命令是否可以应用到其当前状态中。
@@ -136,19 +136,19 @@ protected override void ProcessOnMenuDeleteCommand()
 ### <a name="writing-the-code-of-the-methods"></a>编写方法的代码
  以下片段通常在这些方法内十分有用：
 
-- `this.CurrentSelection` 用户右键单击的形状始终包含在此形状和连接符列表中。 如果用户单击关系图的空白部分，则“关系图”是该列表中的唯一成员。
+- `this.CurrentSelection`。 用户右键单击的形状始终包含在此形状和连接符列表中。 如果用户单击关系图的空白部分，则“关系图”是该列表中的唯一成员。
 
-- 如果用户单击了关系图的空白部分，则 `this.IsDiagramSelected()`  -  `true`。
+- 如果用户单击了关系图的空白部分，则 `this.IsDiagramSelected()` - `true`。
 
 - `this.IsCurrentDiagramEmpty()`
 
-- `this.IsSingleSelection()` - 用户未选择多个形状
+- `this.IsSingleSelection()`-用户未选择多个形状
 
-- `this.SingleSelection` - 用户右键单击的形状或关系图
+- `this.SingleSelection`-用户右键单击的形状或关系图
 
-- `shape.ModelElement as MyLanguageElement` - 由形状表示的模型元素。
+- `shape.ModelElement as MyLanguageElement`-形状表示的模型元素。
 
   有关如何从元素导航到元素以及如何创建对象和链接的详细信息，请参阅[在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
 
 ## <a name="see-also"></a>请参阅
- [编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)<xref:System.ComponentModel.Design.MenuCommand>[如何：向快捷菜单中添加命令](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)[演练：从所选链接获取信息](../misc/walkthrough-getting-information-from-a-selected-link.md)[如何 vspackage 添加用户界面元素](../extensibility/internals/how-vspackages-add-user-interface-elements.md) [Visual Studio命令表（.Vsct）文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md) [.Vsct XML Schema Reference](../extensibility/vsct-xml-schema-reference.md) [VMSDK –接线图示例。广泛的 DSL 自定义](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)[示例代码：线路图](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
+ [编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)<xref:System.ComponentModel.Design.MenuCommand>[如何：向快捷菜单中添加命令](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)[演练：从所选链接获取信息](../misc/walkthrough-getting-information-from-a-selected-link.md)[如何 Vspackage 添加用户界面元素](../extensibility/internals/how-vspackages-add-user-interface-elements.md) [Visual Studio 命令表（.Vsct） Files](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md) [.Vsct XML Schema Reference](../extensibility/vsct-xml-schema-reference.md)

@@ -8,14 +8,15 @@ ms.assetid: 876f145b-ec07-4240-ade6-4f6e44baadce
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e0d9db4660936629c1e9dd6a5b7ff9704a7e7e8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3d65d5fcf8961493c2b780453f2143de788551a5
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62814093"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74778305"
 ---
 # <a name="resumeprofile"></a>ResumeProfile
 `ResumeProfile` 方法递减指定分析级别的挂起/继续计数器的值。
@@ -31,7 +32,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI ResumeProfile(
 #### <a name="parameters"></a>参数
  `Level`
 
- 指示性能数据集合可应用到的分析级别。 以下 PROFILE_CONTROL_LEVEL 枚举器可用于指示性能数据集合可应用到的三个级别之一：
+ 指示性能数据集合可应用到的分析级别。 以下 PROFILE_CONTROL_LEVEL 枚举器可用于指示性能数据集合可应用到的三个级别之一  ：
 
 |枚举器|说明|
 |----------------|-----------------|
@@ -62,12 +63,12 @@ PROFILE_COMMAND_STATUS PROFILERAPI ResumeProfile(
  当启动/停止状态和挂起/继续状态都为 ON 时，该级别的分析状态为 ON。 对于要分析的线程，该线程的全局、进程和线程级别状态都必须为 ON。
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 等效项
- Microsoft.VisualStudio.Profiler.dll
+ Microsoft.VisualStudio.Profiler.dll 
 
 ## <a name="function-information"></a>函数信息
- 标头：在 VSPerf.h 中声明
+ 标头：在 VSPerf.h 中声明 
 
- 导入库：VSPerf.lib
+ 导入库：VSPerf.lib 
 
 ## <a name="example"></a>示例
  下面的示例演示 ResumeProfile 函数。 该示例假定已对由 [PROFILE_CURRENTID](../profiling/profile-currentid.md) 标识的同一线程或进程调用了 SuspendProfile 方法。

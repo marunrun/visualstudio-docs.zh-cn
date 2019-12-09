@@ -23,19 +23,19 @@ caps.latest.revision: 55
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 88c72ecaf44855badfd42456d9818f2ba9168a49
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8c5906084fc7db96ddf304e8362bf7692dac62d5
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661728"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297150"
 ---
 # <a name="uml-sequence-diagrams-guidelines"></a>UML Sequence Diagrams: Guidelines
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 在 Visual Studio 中，可以绘制*序列图*来显示交互。 交互是类、组件、子系统或参与者的典型实例之间的消息序列。
 
- UML 序列图是 UML 模型的一部分，并且仅存在于 UML 建模项目中。 若要创建 UML 序列图，请在 "**体系结构**" 菜单上单击 "**新建 UML 或层关系图**"。 大致了解有关[uml 序列图元素](../modeling/uml-sequence-diagrams-reference.md)或[uml 建模图](../modeling/edit-uml-models-and-diagrams.md)的详细信息。 有关视频演示，请参阅[使用序列图进行草绘交互（2010）](http://channel9.msdn.com/Blogs/clinted/UML-with-VS-2010-Part-7-Sketching-Interactions-with-Sequence-Diagrams)。
+ UML 序列图是 UML 模型的一部分，并且仅存在于 UML 建模项目中。 若要创建 UML 序列图，请在 "**体系结构**" 菜单上单击 "**新建 UML 或层关系图**"。 大致了解有关[uml 序列图元素](../modeling/uml-sequence-diagrams-reference.md)或[uml 建模图](../modeling/edit-uml-models-and-diagrams.md)的详细信息。 有关视频演示，请参阅[使用序列图进行草绘交互（2010）](https://channel9.msdn.com/Blogs/clinted/UML-with-VS-2010-Part-7-Sketching-Interactions-with-Sequence-Diagrams)。
 
  若要查看支持此功能的 Visual Studio 的版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
@@ -115,7 +115,7 @@ ms.locfileid: "72661728"
 3. 要显示来自未知事件源 (9) 或传播给未知接收方 (10) 的消息，请绘制一个起始于或终止于关系图上的空白区域的异步消息。 这些消息称为 "*找到消息*（9）" 和 "*丢失消息*（10）"。
 
     > [!NOTE]
-    > 若要移动具有丢失的消息或找到的消息的一组生命线，请先按照以下步骤选择生命线，然后再移动它们：在这些生命线周围绘制一个矩形，或按住**CTRL**键的同时单击每个生命线。 如果使用 "**全选**"或 CTRL **+ 选择**所有生命线，然后移动它们，则附加到这些生命线的任何丢失的消息或找到的消息将不会移动。 如果出现这种情况，你可以单独移动这些消息。
+    > 若要移动具有丢失的消息或找到的消息的一组生命线，请先按照以下步骤选择生命线，然后再移动它们：在这些生命线周围绘制一个矩形，或按住**CTRL**键的同时单击每个生命线。 如果使用 "**全选**"或 CTRL **+选择**所有生命线，然后移动它们，则附加到这些生命线的任何丢失的消息或找到的消息将不会移动。 如果出现这种情况，你可以单独移动这些消息。
 
 4. 为相同组件或系统的每个主要消息绘制序列图。
 
@@ -179,7 +179,7 @@ ms.locfileid: "72661728"
 
 - 使用**同步**工具描述发送方等待接收方返回响应的交互（3）。
 
-     在执行发生结束时，将显示一个 **< \<return > >** 箭头。 它指示控制回到发送方。
+     在执行发生结束时，将显示 **<\<返回 > >** 箭头。 它指示控制回到发送方。
 
 - 使用**异步**工具描述发送方可以立即继续的交互，而不会等待接收方（4）。
 
@@ -443,4 +443,4 @@ ms.locfileid: "72661728"
 5. 要将新消息添加到片段中，请使用消息工具，或者使用复制和粘贴。
 
 ## <a name="see-also"></a>请参阅
- [Uml 序列图：引用](../modeling/uml-sequence-diagrams-reference.md)[编辑 uml 模型和关系图](../modeling/edit-uml-models-and-diagrams.md) [UML 用例图：引用](../modeling/uml-use-case-diagrams-reference.md) [Uml 类图](../modeling/uml-class-diagrams-reference.md)：引用 uml[组件图](../modeling/uml-component-diagrams-reference.md)：引用 uml[组件图](../modeling/uml-component-diagrams-reference.md) [：引用视频：使用序列图的草绘交互](http://go.microsoft.com/fwlink/?LinkId=201113)
+ [Uml 序列图：引用](../modeling/uml-sequence-diagrams-reference.md)[编辑 uml 模型和关系图](../modeling/edit-uml-models-and-diagrams.md) [UML 用例图：引用 uml](../modeling/uml-use-case-diagrams-reference.md) [类图](../modeling/uml-class-diagrams-reference.md)：引用[uml 组件图](../modeling/uml-component-diagrams-reference.md) [：引用](../modeling/uml-component-diagrams-reference.md)[视频：引用视频：使用序列图的草绘交互](https://go.microsoft.com/fwlink/?LinkId=201113)

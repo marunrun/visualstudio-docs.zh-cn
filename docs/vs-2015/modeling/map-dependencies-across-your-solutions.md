@@ -29,12 +29,12 @@ caps.latest.revision: 245
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1352da002b16c736ce20a9fbaf7cdc26b258b718
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b25d23b7c65742ffddadbe178d7550dc1794414a
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657611"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74296331"
 ---
 # <a name="map-dependencies-across-your-solutions"></a>映射解决方案中的依赖项
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "72657611"
 
  **以下是一些相关视频**：
 
-- [通过可视化了解代码依赖项](http://go.microsoft.com/fwlink/?LinkID=252065)
+- [通过可视化了解代码依赖项](https://go.microsoft.com/fwlink/?LinkID=252065)
 
-- [将更改的影响可视化](http://go.microsoft.com/fwlink/?LinkID=252068)
+- [将更改的影响可视化](https://go.microsoft.com/fwlink/?LinkID=252068)
 
-- [通过代码图理解复杂代码](http://go.microsoft.com/fwlink/?LinkID=259869)
+- [通过代码图理解复杂代码](https://go.microsoft.com/fwlink/?LinkID=259869)
 
 ## <a name="GetStarted"></a> 开始使用代码图
  **要使用代码图，将需要以下两者之一**：
@@ -185,7 +185,7 @@ ms.locfileid: "72657611"
 
 - [浏览和重新排列代码图](../modeling/browse-and-rearrange-code-maps.md)
 
-- [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)
+- [通过编辑 DGML 文件自定义代码图](../modeling/customize-code-maps-by-editing-the-dgml-files.md)
 
 - 通过 [运行分析器](../modeling/find-potential-problems-using-code-map-analyzers.md)发现代码中的潜在问题。
 
@@ -286,7 +286,7 @@ ms.locfileid: "72657611"
 ## <a name="SeeSourceHeader"></a> 了解 C 和 C++ 源文件和头文件之间的依赖关系
  如果要创建更多 C++ 项目的完整代码图，请在这些项目上设置浏览信息编译器选项 ( **/FR**)。 请参阅 [/FR, /Fr (Create .Sbr File)](https://msdn.microsoft.com/library/3fd8f88b-3924-4feb-9393-287036a28896)。 否则，将出现一条消息并提示你设置此选项。 如果选择“确定”，就只会为当前代码图设置选项。 可以选择隐藏所有之后的代码图的信息。 如果你隐藏了该信息，则可以让它再显示。 将以下注册表项设置为 `0` 或删除该项：
 
- **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\NativeProvider : AutoEnableSbr**
+ **HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\14.0\NativeProvider： AutoEnableSbr**
 
  打开包含 Visual C++ 项目的解决方案时，可能需要花一些时间来更新 IntelliSense 数据库。 在此期间，你可能无法为标头（.h 或 `#include`）文件创建代码图，直到 IntelliSense 数据库完成更新。 你可在 Visual Studio 状态栏中监视更新进度。 若要解决因某些 IntelliSense 设置被禁用而导致的问题或消息，请查看 [针对 C 和 C++ 代码的故障排除图](#Troubleshooting)。
 
@@ -316,7 +316,7 @@ ms.locfileid: "72657611"
 ||无法生成程序数据库 (.pdb) 文件。<br /><br /> pdb 文件将存储调试信息，例如，类型、方法和源文件信息。|在链接器中打开 **/DEBUG** 选项。<br /><br /> 请参阅 [/DEBUG (Generate Debug Info)](https://msdn.microsoft.com/library/1af389ae-3f8b-4d76-a087-1cdf861e9103)。|
 ||无法在预期位置打开或找到 .pdb 文件。|确保 .pdb 文件位于预期位置。|
 ||已从 .pdb 文件中去除调试信息。|如果链接器中已使用 **/PDBSTRIPPED** 选项，则改为包含完整的 .pdb 文件。<br /><br /> 请参阅 [/PDBSTRIPPED (Strip Private Symbols)](https://msdn.microsoft.com/library/9b9e0070-6a13-4142-8180-19c003fbbd55)。|
-||调用方不是函数，它是二进制文件中的形式转换 (thunk) 或数据节中的指针。|当调用方是形式转换 (thunk) 时，尝试使用 `_declspec(dllimport)` 以避免形式转换 (thunk)。<br /><br /> 请参阅：<br /><br /> -   [一般规则和限制](https://msdn.microsoft.com/library/6c48902d-4259-4761-95d4-e421d69aa050)<br />[使用 __declspec （dllimport）导入函数调用](https://msdn.microsoft.com/library/6b53c616-0c6d-419a-8e2a-d2fff20510b3)-   <br />-   [dllexport，dllimport](https://msdn.microsoft.com/library/ff95b645-ef55-4e72-b848-df44657b3208)|
+||调用方不是函数，它是二进制文件中的形式转换 (thunk) 或数据节中的指针。|当调用方是形式转换 (thunk) 时，尝试使用 `_declspec(dllimport)` 以避免形式转换 (thunk)。<br /><br /> 请参阅：<br /><br /> -   [一般规则和限制](https://msdn.microsoft.com/library/6c48902d-4259-4761-95d4-e421d69aa050)<br />-   [使用 __declspec （dllimport）导入函数调用](https://msdn.microsoft.com/library/6b53c616-0c6d-419a-8e2a-d2fff20510b3)<br />-   [dllexport，dllimport](https://msdn.microsoft.com/library/ff95b645-ef55-4e72-b848-df44657b3208)|
 
 ## <a name="RenderMoreQuickly"></a> 使代码图更快呈现
  在首次生成代码图时，Visual Studio 会将其找到的所有依赖关系都编入索引中。 这个过程可能需要一些时间，尤其是针对大型解决方案，但会提高之后的性能。 如果更改了代码，Visual Studio 只会将已更新的代码重新编入索引。 为了尽量减少代码图完成呈现所需的时间，请考虑以下内容：
@@ -346,7 +346,7 @@ ms.locfileid: "72657611"
 
  或
 
- 若要将地图保存为特定项目的一部分，请在地图工具栏上选择 "**共享**"，将 \< >*CodeMapName* "**移** **到**"，然后选择要在其中保存地图的项目。
+ 若要将地图保存为特定项目的一部分，请在地图工具栏上选择 "**共享**"，将 \<>*CodeMapName* "**移** **到**"，然后选择要在其中保存地图的项目。
 
  ![将地图移到另一个项目中](../modeling/media/codemapsmovemapmenu.png "CodeMapsMoveMapMenu")
 
@@ -373,7 +373,7 @@ ms.locfileid: "72657611"
 
 2. 浏览到你要保存文件的位置。
 
-3. 对代码图命名。 请确保将 "**保存类型**" 框设置为 " **xps 文件（\* .xps）** "。 选择“保存”。
+3. 对代码图命名。 请确保将 "**保存类型**" 框设置为 " **xps 文件（\*.xps）** "。 选择“保存”。
 
 ## <a name="what-else-can-i-do"></a>我还能执行什么操作？
 
@@ -385,4 +385,4 @@ ms.locfileid: "72657611"
 
 - [浏览和重新排列代码图](../modeling/browse-and-rearrange-code-maps.md)
 
-- [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)
+- [通过编辑 DGML 文件自定义代码图](../modeling/customize-code-maps-by-editing-the-dgml-files.md)

@@ -9,12 +9,12 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d4c6176caee5551b860029ac98b19d52fcb7b51f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d3a17275730cd093f8f9fa433aa28c7f9ca86e80
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658557"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74298142"
 ---
 # <a name="t4-template-directive"></a>T4 模板指令
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,12 +45,12 @@ ms.locfileid: "72658557"
 
  有效值： ""，固定区域性，这是默认值。
 
- 表示为 xx-XX 形式字符串的区域性。 例如：en-US、ja-JP、de-CH、de-DE。 有关更多信息，请参见<xref:System.Globalization.CultureInfo?displayProperty=fullName>。
+ 表示为 xx-XX 形式字符串的区域性。 例如：en-US、ja-JP、de-CH、de-DE。 有关详细信息，请参阅 <xref:System.Globalization.CultureInfo?displayProperty=fullName>。
 
  Culture 特性指定将表达式块转换为文本时要使用的区域性。
 
 ## <a name="debug-attribute"></a>debug 特性
- 示例:
+ 例如：
 
 ```
 debug="true"
@@ -65,7 +65,7 @@ debug="true"
  若要在调试器中运行设计时模板，请保存文本模板，然后在解决方案资源管理器中打开文本模板的快捷菜单，然后选择 "**调试 T4 模板**"。
 
 ## <a name="hostspecific-attribute"></a>hostspecific 特性
- 示例:
+ 例如：
 
 ```
 hostspecific="true"
@@ -211,7 +211,7 @@ This is the common footer.
 
  对于设计时文本模板来说，可以指定从 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName> 派生的任何基类。 使用 `<#@assembly#>` 指令来加载包含基类的程序集或项目。
 
- 有关详细信息，请参阅[Gareth 的 "博客中的" 文本模板中的继承 "](http://go.microsoft.com/fwlink/?LinkId=208373)。
+ 有关详细信息，请参阅[Gareth 的 "博客中的" 文本模板中的继承 "](https://go.microsoft.com/fwlink/?LinkId=208373)。
 
 ## <a name="linepragmas-attribute"></a>LinePragmas 特性
  示例：`linePragmas="false"`

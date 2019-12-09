@@ -6,14 +6,14 @@ manager: lank
 ms.date: 08/22/2019
 ms.topic: conceptual
 description: 了解批量许可协议的管理员如何访问 Visual Studio 订阅管理门户
-ms.openlocfilehash: 35a2186346bd50d883e5dddd0c353393d1f8b85e
-ms.sourcegitcommit: c90a998716b3dfa614dedc61a1bea515364efbec
+ms.openlocfilehash: f160d9278453ea87ae8f793692930ff2a95c4537
+ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000947"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491680"
 ---
-# <a name="accessing-the-administation-portal-as-an-admin-on-a-volume-license-agreement"></a>以批量许可协议上的管理员的身份访问管理门户
+# <a name="accessing-the-administration-portal-as-an-admin-on-a-volume-license-agreement"></a>以批量许可协议上的管理员的身份访问管理门户
 
 如果你是组织协议的主要联系人或通知联系人，则在设置批量许可协议时，你将自动获得门户访问权限。 你将收到系统触发的欢迎电子邮件，该电子邮件将提示你登录门户。 电子邮件将指示用于登录门户的电子邮件地址。 
 

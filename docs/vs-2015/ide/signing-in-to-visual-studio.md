@@ -10,12 +10,12 @@ caps.latest.revision: 34
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9c732f4011c4194ce95621cf49022c2b6a9fabf3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 257c3e097f890cc5b3ceec03aca8b264695e1bd9
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661222"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301223"
 ---
 # <a name="signing-in-to-visual-studio"></a>登录 Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "72661222"
 - 在 IDE 中**自动连接到服务（如 Azure 和 Visual Studio Team Services）** ，而不会再次提示对同一账户输入凭据。
 
 ## <a name="how-to-sign-in-to-visual-studio"></a>如何登录到 Visual Studio
- 首次启动 Visual Studio 时，系统将要求你登录并提供一些基本注册信息。 应选择最符合需求的 Microsoft 帐户或工作（学校）帐户。 如果你没有此类帐户，可以免费创建一个 Microsoft 帐户。 请参阅 [如何注册 Microsoft 帐户？](http://windows.microsoft.com/windows-live/sign-up-create-account-how)
+ 首次启动 Visual Studio 时，系统将要求你登录并提供一些基本注册信息。 应选择最符合需求的 Microsoft 帐户或工作（学校）帐户。 如果你没有此类帐户，可以免费创建一个 Microsoft 帐户。 请参阅 [如何注册 Microsoft 帐户？](https://support.microsoft.com/help/4026324/microsoft-account-how-to-create)
 
  然后，选择要在 Visual Studio 中使用的 UI 设置和颜色主题。 Visual Studio 会记住这些设置并将其同步到登录到的所有 Visual Studio 环境。 有关已同步的设置列表，请参阅[已同步的设置](../ide/synchronized-settings-in-visual-studio.md)。 以后可以打开 Visual Studio 中的“工具 &#124; 选项”菜单来更改设置。
 

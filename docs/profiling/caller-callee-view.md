@@ -13,14 +13,15 @@ ms.assetid: d3511bcf-cce0-4cbe-aecb-b94c7c80ad1b
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: cfa11abdc26805b6944878ea35edbe84d33e58aa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bab816a0b71adef190a7d919b5ada7138a6a0e7c
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62777019"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779709"
 ---
 # <a name="callercallee-view"></a>“调用方/被调用方”视图
 “调用方/被调用方”视图显示所选函数及其父函数和子函数的分析信息。 “调用方/被调用方”视图包含三个网格：

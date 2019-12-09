@@ -9,24 +9,24 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 53542ec2a5270aec6836864fa3108d5f84da2df9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5acbb4d2966e89f7913fa1479b882fad5c9650f7
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669881"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74295816"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>定义锁定策略以创建只读段
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-@No__t_0 可视化和建模 SDK 的永久性 API 允许程序锁定部分或全部域特定语言（DSL）模型，以便可以读取但不能更改它。 例如，可以使用此只读选项，以便用户可以要求同事批注和查看 DSL 模型，但可以禁止它们更改原始模型。
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 可视化和建模 SDK 的永久性 API 允许程序锁定部分或全部域特定语言（DSL）模型，以便可以读取但不能更改它。 例如，可以使用此只读选项，以便用户可以要求同事批注和查看 DSL 模型，但可以禁止它们更改原始模型。
 
  此外，作为 DSL 的作者，你可以定义*锁定策略。* 锁定策略定义允许、不允许或强制的锁定。 例如，当你发布 DSL 时，可以鼓励第三方开发人员使用新命令来扩展它。 但您也可以使用锁定策略来防止其更改模型指定部分的只读状态。
 
 > [!NOTE]
 > 可以使用反射来规避锁定策略。 它为第三方开发人员提供清晰的边界，但不提供强大的安全性。
 
- @No__t_0[可视化和建模 SDK](http://go.microsoft.com/fwlink/?LinkId=186128)网站上提供了更多详细信息和示例。
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)][可视化和建模 SDK](https://go.microsoft.com/fwlink/?LinkId=186128)网站上提供了更多详细信息和示例。
 
 ## <a name="setting-and-getting-locks"></a>设置和获取锁
  可以在存储、分区或单个元素上设置锁。 例如，此语句将阻止删除模型元素，并且还会阻止其属性被更改：
@@ -40,7 +40,7 @@ element.SetLocks(Locks.Delete | Locks.Property);
 
  锁定适用于用户操作和程序代码。 如果程序代码尝试进行更改，则会引发 `InvalidOperationException`。 撤消或重做操作中会忽略锁。
 
- 您可以通过使用 `IsLocked(Locks)` 来发现某个元素是否具有给定集内的任何锁，并且您可以通过使用 `GetLocks()` 获取元素的当前锁集。
+ 您可以通过使用 `IsLocked(Locks)` 来发现某个元素是否具有给定集内的任何锁，并且您可以通过使用 `GetLocks()`获取元素的当前锁集。
 
  无需使用事务即可设置锁。 锁定数据库不属于存储区。 如果设置锁定来响应存储区中某个值的更改（例如，在 OnValueChanged 中），则应允许包含撤消操作的更改。
 
@@ -79,8 +79,8 @@ partition.SetLocks(Locks.Delete);
 
 |“值”|如果 `IsLocked(Value)` 为 true，则表示|
 |-----------|------------------------------------------|
-|None|无限制。|
-|Property|无法更改元素的域属性。 这不适用于由关系中的域类的角色生成的属性。|
+|无|无限制。|
+|属性|无法更改元素的域属性。 这不适用于由关系中的域类的角色生成的属性。|
 |添加|无法在分区或存储区中创建新的元素和链接。<br /><br /> 不适用于 `ModelElement`。|
 |移动|如果 `element.IsLocked(Move)` 为 true，则不能在分区之间移动元素; 如果 `targetPartition.IsLocked(Move)` 为 true，则为。|
 |删除|如果此锁是在元素本身上设置的，或者是在删除操作将传播到的任何元素（如嵌入元素和形状）上，则不能删除元素。<br /><br /> 您可以使用 `element.CanDelete()` 来发现是否可以删除某个元素。|
@@ -89,7 +89,7 @@ partition.SetLocks(Locks.Delete);
 |全部|其他值的按位 "或"。|
 
 ## <a name="locking-policies"></a>锁定策略
- 作为 DSL 的作者，你可以定义*锁定策略*。 锁定策略 moderates 了 SetLocks （）的操作，因此你可以防止设置特定锁或强制必须设置特定锁。 通常，你会使用锁定策略来防止用户或开发人员意外 contravening 地使用了 DSL，这与声明变量 `private` 的方式相同。
+ 作为 DSL 的作者，你可以定义*锁定策略*。 锁定策略 moderates 了 SetLocks （）的操作，因此你可以防止设置特定锁或强制必须设置特定锁。 通常，你会使用锁定策略来防止用户或开发人员意外 contravening 地使用了 DSL，这与声明变量 `private`的方式相同。
 
  你还可以使用锁定策略在依赖于该元素类型的所有元素上设置锁。 这是因为首次从文件创建或反序列化某个元素时，始终会调用 `SetLocks(Locks.None)`。
 

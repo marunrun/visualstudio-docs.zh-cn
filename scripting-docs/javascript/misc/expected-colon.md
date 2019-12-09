@@ -28,6 +28,6 @@ ms.locfileid: "72573422"
   
 - 在第二个和第三个操作数之间插入一个冒号。  
   
-## <a name="see-also"></a>请参阅  
- [条件（三元）运算符（？:)](../../javascript/reference/conditional-ternary-operator-decrement-javascript.md)    
+## <a name="see-also"></a>另请参阅  
+ [条件（三元）运算符（？:)](../../javascript/reference/conditional-ternary-operator-decrement-javascript.md)   
  [运算符](../../javascript/operators-javascript.md)

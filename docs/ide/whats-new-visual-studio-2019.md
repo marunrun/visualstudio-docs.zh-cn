@@ -2,7 +2,7 @@
 title: Visual Studio 2019 中的新增功能
 titleSuffix: ''
 description: 了解 Visual Studio 2019 中的新增功能。
-ms.date: 09/24/2019
+ms.date: 12/03/2019
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,16 +15,16 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 5871e782ee84e49762d26a925380ad481e3623d1
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: eb4282941af9dff8619cb15510399b2e37e0c718
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211331"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777903"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019 中的新增功能
 
-已针对[版本 16.3](/visualstudio/releases/2019/release-notes/) 进行更新 
+已针对[版本 16.4](/visualstudio/releases/2019/release-notes/) 进行更新 
 
 >[!div class="button"]
 >[下载 Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
@@ -74,7 +74,7 @@ C# 中有很多新颖有用的重构，更便于组织代码。 它们在灯泡�
 * 发现难以察觉的代码问题
 * 将关注点集中到重要领域，从而专注代码评审
 
-在 IntelliCode 以 Visual Studio 扩展形式首次预览时，我们最初仅支持 C#。 现在，在 16.1 的新增功能中，我们添加了对 C# 和 XAML“in-the-box”的支持  。 （但是，对 C++ 和 TypeScript/JavaScript 的支持仍处于预览状态。）
+在首次预览作为 Visual Studio 扩展的 IntelliCode 时，我们最初仅支持 C#。 现在，在 16.1 的新增功能中，我们添加了对 C# 和 XAML“in-the-box”的支持  。 （但是，对 C++ 和 TypeScript/JavaScript 的支持仍处于预览状态。）
 
 如果你使用的是 C#，我们还添加了在你自己的代码上训练自定义模型的功能。
 
@@ -110,7 +110,7 @@ C# 中有很多新颖有用的重构，更便于组织代码。 它们在灯泡�
 
 ### <a name="net-core"></a>.NET Core
 
-**16.3 中的新增功能**：提供了对 .NET Core 3.0 的支持。 跨平台、开放源代码且由 Microsoft 完全支持。 
+**16.3 中的新增功能**：提供了对 .NET Core 3.0 的支持。 跨平台、开放源代码且由 Microsoft 完全支持。
 
 有关详细信息，请参阅[宣布推出 .NET Core 3.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/) 博客文章。
 
@@ -132,11 +132,11 @@ C# 中有很多新颖有用的重构，更便于组织代码。 它们在灯泡�
 
 启动窗口还包括用于打开项目或解决方案、打开本地文件夹，或创建新项目的选项。
 
-有关详细信息，请参阅博客文章 [Get to code:How we designed the new Visual Studio start window](https://devblogs.microsoft.com/visualstudio/get-to-code-how-we-designed-the-new-visual-studio-start-window/)（开始编码：如何设计新的 Visual Studio 启动窗口）。
+有关详细信息，请参阅博客文章 [Get to code:How we designed the new Visual Studio start window](https://devblogs.microsoft.com/visualstudio/get-to-code-how-we-designed-the-new-visual-studio-start-window/)（开始编码：如何设计新的 Visual Studio 开始窗口）。
 
 ### <a name="live-share"></a>Live Share
 
-[Visual Studio Live Share](https://visualstudio.microsoft.com/services/live-share/) 是一项开发者服务，可让你与团队成员共享代码库及其上下文，并直接从 Visual Studio 内获得即时双向协作。 借助“Live Share”，团队成员可以无缝且安全地读取、导航、编辑和调试已与他们共享的项目。
+[Visual Studio Live Share](https://visualstudio.microsoft.com/services/live-share/) 是一项开发者服务，可让你与团队成员共享代码库及其上下文，并直接从 Visual Studio 内获得即时双向协作。 利用“实时共享”，团队成员可以无缝且安全地读取、导航、编辑和调试已与他们共享的项目。
 
 Visual Studio 2019 中会默认安装此服务。
 
@@ -160,7 +160,7 @@ Visual Studio 2019 中会默认安装此服务。
 
 ### <a name="performance-gains"></a>性能提升
 
-我们采用了曾经 C++ 独有的数据断点，并将其用于 .NET Core 应用程序。
+我们采用了曾经排他的 C++ 数据断点，并将其用于 .NET Core 应用程序。
 
    ![显示 Visual Studio 2019 中的调试数据断点的动画](media/vs-2019/debug-data-breakpoints.gif)
 
@@ -195,6 +195,12 @@ Visual Studio 2019 中会默认安装此服务。
 **16.2 中的新增功能**：你可通过使用 [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) 浏览器设置 JavaScript 应用程序中的断点并启动调试会话。 执行此操作时，Visual Studio 会在启用调试的情况下打开一个新的浏览器窗口，以允许你在 Visual Studio 中单步调试 JavaScript 应用程序。
 
    ![在浏览器中显示 JavaScript 代码呈现的屏幕截图](media/vs-2019/edge-chromium-breakpoint.png)
+
+### <a name="pinnable-properties-tool"></a>可固定属性工具
+
+**16.4 中的新增功能**：现在使用新的可固定属性工具进行调试时，可以更轻松地按属性来识别对象。 只需将光标悬停在要在“监视”、“自动”和“本地”窗口的调试程序窗口中显示的属性上，单击图钉图标，然后可立即在窗口顶部看到你要查找的信息！
+
+   ![演示如何使用固定属性工具在 Visual Studio 调试程序中固定属性的动画](media/vs-2019/debugger-pinnable-properties.gif)
 
 ## <a name="whats-next"></a>后续步骤
 

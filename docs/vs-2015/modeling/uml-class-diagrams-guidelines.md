@@ -17,12 +17,12 @@ caps.latest.revision: 56
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 804678985ae30d833b57fe7589f0903cf1edb291
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c170827825d772f4d97cd22f0b5754232e8d2257
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652277"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74297292"
 ---
 # <a name="uml-class-diagrams-guidelines"></a>UML 类图：准则
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "72652277"
  若要查看支持此功能的 Visual Studio 的版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
 > [!NOTE]
-> 本主题针对 UML 类图。 还可以创建另一种类图，它用于可视化程序代码。 请参阅[设计和查看类和类型](http://go.microsoft.com/fwlink/?LinkId=142231)。
+> 本主题针对 UML 类图。 还可以创建另一种类图，它用于可视化程序代码。 请参阅[设计和查看类和类型](https://go.microsoft.com/fwlink/?LinkId=142231)。
 
 ## <a name="Using"></a>使用 UML 类图
  UML 类图有多种用途：
@@ -180,7 +180,7 @@ ms.locfileid: "72652277"
 
 - 模型中定义的类型。
 
-- 模板类型的参数化值，> 编写的模板 \<Parameter。 请参阅[模板类型](#Templates)。
+- 模板类型的参数化值，\<参数 > 编写的模板。 请参阅[模板类型](#Templates)。
 
   还可以写入尚未在模型中定义的类型的名称。 该名称将在 "UML 模型资源管理器" 中的 "**未指定类型**" 下列出。
 
@@ -221,7 +221,7 @@ ms.locfileid: "72652277"
 ### <a name="visibility"></a>可见性
  *可见性*指示是否可以在类定义之外访问特性或操作。 允许的值如下所示：
 
- **COMClassAttribute**
+ **Public**
 
  **+**
 
@@ -351,7 +351,7 @@ visibility operation-name (parameter1 : Type1, ...) : Type
   有关这些属性和其他属性的完整详细信息，请参阅[UML 类图上关联的属性](../modeling/properties-of-associations-on-uml-class-diagrams.md)。
 
 ### <a name="navigability"></a>可导航性
- 在绘制关联时，其一端为箭头，表明关联可沿该方向导航。 这在类图表示软件类且关联表示指针或引用的情况下很有用。 但当你使用类图表示实体和关系或业务概念时，它与可导航性不太相关。 在此情况下，你可能更愿意绘制不带箭头的关联。 为此，可以将关联两端的 "**是导向性**" 属性设置为 "True"。 为了使此过程更容易，您可以下载代码示例[UML 域建模](http://code.msdn.microsoft.com/UML-Domain-Modeling-6df6f7f4)。
+ 在绘制关联时，其一端为箭头，表明关联可沿该方向导航。 这在类图表示软件类且关联表示指针或引用的情况下很有用。 但当你使用类图表示实体和关系或业务概念时，它与可导航性不太相关。 在此情况下，你可能更愿意绘制不带箭头的关联。 为此，可以将关联两端的 "**是导向性**" 属性设置为 "True"。
 
 ### <a name="attributes-and-associations"></a>特性和关联
  关联是特性的图形化显示形式。 例如，你可以在“餐馆”与“菜单”之间绘制一个关联，而不是创建具有 Menu 类型特性的 Restaurant 类。
@@ -473,4 +473,4 @@ visibility operation-name (parameter1 : Type1, ...) : Type
      有关如何设置这些属性和自定义提供的模板的详细信息，请参阅[从 UML 类图生成代码](../modeling/generate-code-from-uml-class-diagrams.md)。
 
 ## <a name="see-also"></a>请参阅
- [编辑 uml 模型和关系图](../modeling/edit-uml-models-and-diagrams.md) [uml 类图：引用](../modeling/uml-class-diagrams-reference.md)[模型用户需求](../modeling/model-user-requirements.md) [Uml 组件图：](../modeling/uml-component-diagrams-reference.md)引用[uml 序列图](../modeling/uml-sequence-diagrams-reference.md)：引用 uml[用例图](../modeling/uml-use-case-diagrams-reference.md)：[引用 uml组件图：参考](../modeling/uml-component-diagrams-reference.md)
+ [编辑 uml 模型和关系图](../modeling/edit-uml-models-and-diagrams.md) [uml 类图：引用](../modeling/uml-class-diagrams-reference.md)[模型用户需求](../modeling/model-user-requirements.md) [Uml 组件图：](../modeling/uml-component-diagrams-reference.md)引用 uml[序列图](../modeling/uml-sequence-diagrams-reference.md)：引用 uml[用例图](../modeling/uml-use-case-diagrams-reference.md)：引用 uml[组件图](../modeling/uml-component-diagrams-reference.md)：引用

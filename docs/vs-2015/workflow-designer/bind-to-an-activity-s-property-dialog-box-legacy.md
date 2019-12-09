@@ -13,17 +13,17 @@ caps.latest.revision: 5
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b93f6787ef24a191385c0fd86672aa23ff72e3e5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 451544a84237bc6fa4e069df9dd1e17feccf86f7
+ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659220"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301018"
 ---
 # <a name="bind-to-an-activity39s-property-dialog-box-legacy"></a>"绑定到活动&#39;的属性" 对话框（旧版）
-本主题介绍如何使用旧 [!INCLUDE[wfd1](../includes/wfd1-md.md)] 中的 "**绑定到活动的属性**" 对话框。 在需要面向 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 或 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 时，请使用旧 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]。
+本主题介绍如何使用旧 [!INCLUDE[wfd1](../includes/wfd1-md.md)]中的 "**绑定到活动的属性**" 对话框。 在需要面向 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 或 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 时，请使用旧 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]。
 
- 依赖项属性的实例类型可以绑定到另一个活动的公共属性或事件。 有关活动绑定的详细信息，请参阅[使用依赖属性](http://go.microsoft.com/fwlink?LinkID=65007)。
+ 依赖项属性的实例类型可以绑定到另一个活动的公共属性或事件。 有关活动绑定的详细信息，请参阅[使用依赖属性](https://go.microsoft.com/fwlink?LinkID=65007)。
 
  您可以使用 "**绑定到活动的属性**" 对话框选择要绑定到的属性。 在 "属性" 窗口中单击 "**属性**" 窗口中所选属性文本框末尾的省略号 **[...]** ，或者单击显示在属性浏览器中属性名称旁边的蓝色感叹号图标来打开此对话框。
 
@@ -35,4 +35,4 @@ ms.locfileid: "72659220"
 |**绑定到新成员**|创建要绑定到的新成员字段或属性。 输入**新的成员名称**。 选择是要通过选择 "**创建字段**" 还是 "**创建属性**" 来创建依赖属性或公共字段。 单击 **"确定"** 以创建新成员。|
 
 ## <a name="see-also"></a>请参阅
- 使用[依赖项属性](http://go.microsoft.com/fwlink?LinkID=65007)的[活动属性](http://go.microsoft.com/fwlink?LinkID=65013) [Windows Workflow Foundation UI 帮助的旧设计器](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)
+ 使用[依赖项属性](https://go.microsoft.com/fwlink?LinkID=65007)的[活动属性](https://go.microsoft.com/fwlink?LinkID=65013) [Windows Workflow Foundation UI 帮助的旧设计器](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)

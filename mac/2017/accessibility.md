@@ -5,12 +5,12 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/15/2017
 ms.assetid: 2C4AAC2E-3B4A-4496-8BE0-1F5A7F81D1CA
-ms.openlocfilehash: f90f5fca9d68ed00162fd746ddf291343c8d51f7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 19104cb090ff2a115afefe994bd53c93d2baaf5d
+ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62988384"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73714419"
 ---
 # <a name="accessibility"></a>可访问性
 
@@ -28,13 +28,13 @@ ms.locfileid: "62988384"
 
 Visual Studio for Mac 中的辅助功能默认处于禁用状态。 若要启用辅助功能，请按照下列步骤操作：
 
-1. 依次转到“Visual Studio”>“首选项”>“其他”>“辅助功能”。
+1. 依次转到“Visual Studio”>“首选项”>“其他”>“辅助功能”  。
 
-2. 选中“启用辅助功能”复选框，如下图所示：
+2. 选中“启用辅助功能”  复选框，如下图所示：
 
     ![“启用辅助功能”复选框](media/accessibility-image1.png)
 
-3. 按“重启 Visual Studio”按钮，以启用辅助功能。
+3. 按“重启 Visual Studio”  按钮，以启用辅助功能。
 
 也可以使用命令行启用辅助功能。 为此，请在终端中输入以下命令：
 
@@ -46,7 +46,7 @@ defaults write com.microsoft.visual-studio com.monodevelop.AccessibilityEnabled 
 
 ## <a name="how-to-use-keyboard-navigation"></a>如何：使用键盘导航
 
-可以依次转到“系统首选项”>“键盘”>“快捷方式”，将“完全键盘访问权限”选项设置为“所有控件”，从而启用键盘导航：
+可以依次转到“系统首选项”>“键盘”>“快捷方式”  ，将“完全键盘访问权限”选项设置为“所有控件”  ，从而启用键盘导航：
 
 ![macos 中的“系统首选项”面板](media/accessibility-image2.png)
 
@@ -60,22 +60,22 @@ defaults write com.microsoft.visual-studio com.monodevelop.AccessibilityEnabled 
 
 ## <a name="how-to-enable-and-use-voice-over"></a>如何：启用和使用 Voice Over
 
-按 Cmd + F5 启用或禁用 VoiceOver
+按 Cmd + F5  启用或禁用 VoiceOver
 
 若要切换 UI VoiceOver 命令，请使用以下命令：
 
-- 在控件之间移动 VoiceOver 游标：Ctrl + Alt + 向左键/向右键
+- 在控件之间移动 VoiceOver 游标：Ctrl + Alt + 向左键/向右键 
 
    VoiceOver 会读出控件名称、一些相关详情和具体用法。
 
-- 进入组和控件（如 Solution Pad、Toolbox 和其他 Pad）：Ctrl + Alt + Shift + 向下键
+- 进入组和控件（如 Solution Pad、Toolbox 和其他 Pad）：Ctrl + Alt + Shift + 向下键 
 
-   进入控件后，可以使用 Ctrl + Alt + 箭头键在控件内部移动。
+   进入控件后，可以使用 Ctrl + Alt + 箭头键  在控件内部移动。
 
 有关如何使用 macOS 中的 VoiceOver 的常规信息，请参阅以下指南：
 
 - [VoiceOver 入门](https://help.apple.com/voiceover/info/guide/10.12/)
-- [macOS 中的 VoiceOver 命令](http://lab.dotjay.com/notes/voiceover-commands/)
+- [macOS 中的 VoiceOver 命令](https://lab.dotjay.com/notes/voiceover-commands/)
 
 ## <a name="see-also"></a>请参阅
 
