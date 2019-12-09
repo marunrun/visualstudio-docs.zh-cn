@@ -13,14 +13,15 @@ ms.assetid: 85161cc4-18ee-49b3-9487-33680e687597
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 91b175eec9d17624f2b7225d1aac428926310734
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.openlocfilehash: c6a5a0eb84e4f06fd1b4dd248a1bce952b2c7197
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71128221"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74779800"
 ---
 # <a name="beginners-guide-to-cpu-sampling"></a>CPU 采样初学者指南
 可使用 Visual Studio 分析工具来分析应用程序中的性能问题。 此过程显示如何使用**采样**数据。
@@ -72,7 +73,7 @@ ms.locfileid: "71128221"
 
  图中每个带编号的区域都与过程中的一个步骤相关。
 
- ![采样的摘要报告视图](../profiling/media/summary_sampling.png "Summary_Sampling")
+ ![抽样的摘要报表视图](../profiling/media/summary_sampling.png "Summary_Sampling")
 
 #### <a name="to-analyze-sampling-data"></a>分析采样数据
 

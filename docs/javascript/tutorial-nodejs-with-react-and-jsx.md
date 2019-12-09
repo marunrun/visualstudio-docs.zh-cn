@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 2f14a5f2255f7ba1b077ead60147a6df407970fc
-ms.sourcegitcommit: f9f389e72787de30eb869a55ef7725a10a4011f0
+ms.openlocfilehash: 321e8271806f8f9e2983e82db010cd2ffb49a3ee
+ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73636557"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74777941"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>教程：在 Visual Studio 中创建 Node.js 和 React 应用
 
@@ -400,6 +400,10 @@ webpack 绑定 JavaScript 文件，使其可以在浏览器中运行。 它还�
    其他浏览器实例可能会阻止打开浏览器并阻止调试。 （浏览器扩展可能正在运行并阻止完整的调试模式，因此你可能需要打开任务管理器才能找到意外的 Chrome 实例。）
 
    ::: moniker range=">=vs-2019"
+   对于 Microsoft Edge (Chromium)，还需要关闭所有 Chrome 实例。 由于两个浏览器共享 chromium 基本代码，因此可获得最佳结果。
+   ::: moniker-end
+
+   ::: moniker range=">=vs-2019"
    对于 Microsoft Edge (Chromium)，还需要关闭所有 Chrome 实例。 由于两个浏览器都使用 chromium 基本代码，因此可获得最佳结果。
    ::: moniker-end
 
@@ -513,7 +517,6 @@ webpack 绑定 JavaScript 文件，使其可以在浏览器中运行。 它还�
       * 关闭了所有浏览器实例，包括 Chrome 扩展（使用任务管理器），以便你可以在调试模式下运行浏览器。 请确保在调试模式下启动浏览器。
 
       * 请确保源映射文件包括对 ./app.tsx 的引用（而不包括 webpack:///./app.tsx），该引用会阻止 Visual Studio 调试器查找 app.tsx    。
-
        或者，如果需要中断 app.tsx 中的代码但又无法执行此操作，可尝试使用 app.tsx 中的 `debugger;` 语句或改为在 Chrome 开发人员工具（或 Microsoft Edge 的 F12 工具）中设置断点   。
 
    * 如果需要中断 app-bundle.js 中的代码但又无法执行此操作，请删除 sourcemap 文件 app-bundle.js.map   。

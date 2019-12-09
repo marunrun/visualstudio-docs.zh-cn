@@ -1,7 +1,7 @@
 ---
 title: Visual Studio Tools for Unity | Microsoft Docs
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 10/25/2019
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: 6cabc626-5310-4622-a743-210a9abb5535
@@ -10,12 +10,12 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: d04f197b9114f87c0ebdfa54088d41a958d4584a
-ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
+ms.openlocfilehash: 9789c400ee01bc986bbdf72c509f7a1841c5f300
+ms.sourcegitcommit: af9bbf9116a63c0631ff2f4f3a878564aa63cd8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72777695"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74797131"
 ---
 # <a name="visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity
 
@@ -47,6 +47,12 @@ Visual Studio Tools for Unity 支持用户期望从 Visual Studio 中获得的�
 * 计算“监视”窗口中的复杂表达式。
 * 检查和修改变量和参数的值。
 * 深化到复杂的对象和数据结构。
+
+### <a name="roslyn-diagnostics-and-quick-fixes-for-unity"></a>Unity 的 Roslyn 诊断和快速修补程序
+
+通过 Visual Studio 对 Unity 项目的深刻理解编写更好的代码，以获得最佳做法。
+
+![VS 重构字符串与 CompareTag 的比较](media/unity-diagnostics.png)
 
 ### <a name="visual-studio-for-mac-tools-for-unity"></a>Visual Studio for Mac Tools for Unity
 

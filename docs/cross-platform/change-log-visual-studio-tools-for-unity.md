@@ -1,7 +1,7 @@
 ---
 title: 更改日志（Visual Studio Tools for Unity、Windows）| Microsoft Docs
 ms.custom: ''
-ms.date: 09/18/2019
+ms.date: 12/02/2019
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: ea490b7e-fc0d-44b1-858a-a725ce20e396
@@ -10,16 +10,64 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 713535bb11b4bd9cab4ef1b31507b96fe1c9897a
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: 0e1810f452f48c95e0c4e8117820be3598b0f139
+ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71185987"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74706788"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>更改日志（Visual Studio Tools for Unity、Windows）
 
 Visual Studio Tools for Unity 更改日志。
+
+## <a name="4420"></a>4.4.2.0
+
+发布时间：2019 年 12 月 3 日
+
+### <a name="bug-fixes"></a>Bug 修复
+
+- **集成：**
+
+  - 修复了使用用户定义的接口进行的诊断。
+
+  - 修复了表达式格式错误的快速工具提示。
+
+## <a name="4410"></a>4.4.1.0
+
+发布时间：2019 年 11 月 6 日
+
+### <a name="new-features"></a>新增功能
+
+- **集成：**
+
+  - 添加了对 Unity 后台进程的支持。 （调试程序能够自动连接到主进程，而不是子进程）。
+  
+  - 为 Unity 消息添加了快速工具提示，可显示关联的文档。
+
+### <a name="bug-fixes"></a>Bug 修复
+
+- **集成：**
+
+  - 使用高级二进制和 invocation 表达式修复了标签比较分析器 `UNT0002`。
+
+### <a name="deprecated-features"></a>弃用的功能
+
+- **集成：**
+
+  - 展望未来，Visual Studio Tools for Unity 将仅支持 Visual Studio 2017+。
+
+## <a name="4400"></a>4.4.0.0
+
+发布时间：2019 年 10 月 15 日
+
+### <a name="new-features"></a>新增功能
+
+- **集成：**
+
+  - 为所有 Unity 消息的 `IDE0060`（未使用的参数）添加了抑制器。
+  
+  - 为标有 `TooltipAttribute` 的字段添加了快速工具提示。 （这也适用于使用此字段的简单 get 访问器）。
 
 ## <a name="4330"></a>4.3.3.0
 

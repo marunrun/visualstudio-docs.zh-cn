@@ -6,16 +6,16 @@ ms.author: ghogen
 ms.date: 11/20/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: a2f837ba264a12391786f584cf2698e19250fb2e
-ms.sourcegitcommit: 6336c387388707da94a91060dc3f34d4cfdc0a7b
+ms.openlocfilehash: e1b2f332563503dcb4d63faf301000db83eed5ea
+ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74549960"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74706824"
 ---
-# <a name="build-and-debug-containerized-apps-using-visual-studio-or-the-command-line"></a>使用 Visual Studio 或命令行生成和调试容器化应用
+# <a name="how-visual-studio-builds-containerized-apps"></a>Visual Studio 如何构建容器化应用
 
-无论是从 Visual Studio IDE 生成，还是设置命令行生成，都需要了解 Visual Studio 生成如何使用 Dockerfile 生成项目。  出于性能方面的考虑，Visual Studio 对容器化应用执行特殊的过程。 了解通过修改 Dockerfile 自定义生成过程时，Visual Studio 生成项目的特殊重要性。
+无论是从 Visual Studio IDE 生成，还是设置命令行生成，都需要了解 Visual Studio 如何使用 Dockerfile 生成项目。  出于性能方面的考虑，Visual Studio 对容器化应用执行特殊的过程。 了解通过修改 Dockerfile 自定义生成过程时，Visual Studio 生成项目的特殊重要性。
 
 Visual Studio 生成不使用 Docker 容器的项目时，它会在本地计算机上调用 MSBuild，并在本地解决方案文件夹下的文件夹（通常为 `bin`）中生成输出文件。 但是，对于容器化项目，生成过程会考虑有关生成容器化应用的 Dockerfile 说明。 Visual Studio 使用的 Dockerfile 分为多个阶段。 此过程依赖 Docker 的多阶段生成功能  。
 
@@ -84,7 +84,7 @@ MSBuild MyProject.csproj /t:ContainerBuild /p:Configuration=Release
 
 从 Visual Studio IDE 生成解决方案时，你将看到类似于在“输出”窗口中看到的输出  。 始终使用 `/p:Configuration=Release`，因为在 Visual Studio 使用多阶段生成优化的情况下，生成“调试”配置时产生的结果可能与预期不符  。 请参阅[调试](#debugging)。
 
-如果使用的是 Docker Compose 项目，请使用命令生成映像：
+如果使用的是 Docker Compose 项目，请使用此命令生成映像：
 
 ```cmd
 msbuild /p:SolutionPath=<solution-name>.sln /p:Configuration=Release docker-compose.dcproj
@@ -99,7 +99,7 @@ msbuild /p:SolutionPath=<solution-name>.sln /p:Configuration=Release docker-comp
 - 在 Dockerfile 的第一阶段（大部分 Dockerfile 中的 `base` 阶段）拉取映像。  
 - 生成 Dockerfile 并启动容器。
 
-预热仅在快速模式下进行，因此正在运行的容器将装载应用文件夹卷，并且对应用所做的任何更改都不应使容器无效  。 因此可以大幅提升调试性能，并缩短长期任务（例如拉取大型映像）的等待时间。
+预热仅在快速模式下进行，因此正在运行的容器将装载应用文件夹卷  。 这意味着对应用所做的任何更改都不会使容器无效。 因此可以大幅提升调试性能，并缩短长期任务（例如拉取大型映像）的等待时间。
 
 ## <a name="volume-mapping"></a>卷映射
 
