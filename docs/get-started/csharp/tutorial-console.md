@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bef87392ca9e08e38950f5e3eed53223dd38bd00
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 740968740306bed4c2cf52191c4ff661b6247bd0
+ms.sourcegitcommit: 697f2ab875fd789685811687387e9e8e471a38c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180239"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74830013"
 ---
 # <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>教程：在 Visual Studio 中创建一个简单的 C# 控制台应用程序
 
@@ -136,7 +136,7 @@ ms.locfileid: "70180239"
 
     ![显示 Visual Studio IDE 中 IntelliSense 自动完成功能的整数数学运算代码动画](./media/integer-math-intellisense.gif)
 
-1. 选择“计算器”  或按“F5”  ，以运行程序。
+1. 选择“计算器”  旁的绿色“开始”  按钮以生成并运行程序，或按“F5”  。
 
    ![选择工具栏中的“计算器”按钮以运行应用程序](./media/csharp-console-calculator-button.png)
 

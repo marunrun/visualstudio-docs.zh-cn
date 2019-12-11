@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 9e9212bc5dda2ea69f685077eb2cbe86470d4064
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: d15a20adeb3203687e4d940635551c33774953a5
+ms.sourcegitcommit: c222052906362bf1a3762ec4d4623170e4e06702
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68681356"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74809660"
 ---
 # <a name="uninstall-visual-studio"></a>卸载 Visual Studio
 
@@ -36,14 +36,14 @@ ms.locfileid: "68681356"
 
      例如，在运行 Windows 10 周年更新或更高版本的计算机上，选择“开始”  ，再滚动到字母“V”  （其中它被列为“Visual Studio 安装程序”  ）。
 
-     ![Visual Studio 安装程序](media/vs2017-locate-the-visual-studio-installer.PNG "查找 Microsoft Visual Studio 安装程序")
+     ![Visual Studio 安装程序](media/locate-the-visual-studio-installer.png "找到 Microsoft Visual Studio 安装程序")
 
    > [!NOTE]
    > 对于某些计算机，Visual Studio 安装程序可能列在字母 **“M”** 下，即 **Microsoft Visual Studio 安装程序**。<br/><br/> 或者，可以在以下位置找到 Visual Studio 安装程序：`C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
 1. 在安装程序中，查找已安装的 Visual Studio 版本。 接下来，选择“更多”  ，然后选择“卸载”  。
 
-     ![卸载 Visual Studio 2017](media/uninstall-visual-studio.png "Uninstall Visual Studio 2017")
+     ![卸载 Visual Studio 2017](media/uninstall-visual-studio.png "卸载 Visual Studio 2017")
 
 1. 单击  “确定”确认所做选择。
 
@@ -67,7 +67,7 @@ ms.locfileid: "68681356"
 
      例如，在运行 Windows 10 的计算机上，选择“开始”，然后滚动到字母“V”，它作为“Visual Studio 安装程序”在那里列出    。
 
-     ![打开 Visual Studio 安装程序](media/vs-2019/vs-installer-windows-start.png "Open the Visual Studio Installer")
+     ![打开 Visual Studio 安装程序](media/vs-2019/vs-installer-windows-start.png "打开 Visual Studio 安装程序")
 
      > [!NOTE]
      > 还可以在以下位置中找到 Visual Studio 安装程序：
@@ -78,11 +78,11 @@ ms.locfileid: "68681356"
 
 1. 在安装程序中，查找已安装的 Visual Studio 版本。 接下来，选择“更多”  ，然后选择“卸载”  。
 
-     ![卸载 Visual Studio 2019](media/vs-2019/vs-installer-uninstall.png "Uninstall Visual Studio 2019")
+     ![卸载 Visual Studio 2019](media/vs-2019/vs-installer-uninstall.png "卸载 Visual Studio 2019")
 
 1. 单击  “确定”确认所做选择。
 
-     ![卸载 Visual Studio 确认](media/vs-2019/uninstall-visualstudio-confirm.png "确认想要卸载 Visual Studio 2019")
+     ![卸载 Visual Studio 确认](media/vs-2019/uninstall-visualstudio-confirm.png "确认是否要卸载 Visual Studio 2019")
 
 如果稍后改变主意并想要重新安装 Visual Studio 2019，请再次启动 Visual Studio 安装程序，选择“可用”选项卡，选择要安装的 Visual Studio 版本，然后选择“安装”   。
 
