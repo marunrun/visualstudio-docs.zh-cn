@@ -1,16 +1,16 @@
 ---
 title: Visual Studio 客户体验改善计划
 description: 了解如何在 Visual Studio for Mac 中管理隐私设置。
-author: conceptdev
-ms.author: crdun
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/22/2018
 ms.assetid: 6F2ECF5A-E195-4890-8399-12A88C7D62FD
-ms.openlocfilehash: ba9257acf5c9d68aad5bbbab9ee6cec41f8e77d9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5e8fa7f740275f416f80827276d74be1f05b0e21
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62986566"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984747"
 ---
 # <a name="visual-studio-customer-experience-improvement-program"></a>Visual Studio 客户体验改善计划
 
@@ -24,7 +24,7 @@ VSCEIP 默认开启。 可以按照以下步骤将其关闭或者再次打开。
 
 1. 打开 Visual Studio for Mac。
 
-1. 在菜单栏中，选择“Visual Studio”>“首选项”>“其他”>“反馈”。
+1. 在菜单栏中，选择“Visual Studio”>“首选项”>“其他”>“反馈”  。
 
 1. 选择是否愿意参加：
 

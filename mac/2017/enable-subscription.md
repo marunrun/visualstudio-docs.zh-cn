@@ -1,16 +1,16 @@
 ---
 title: 启用订阅
 description: 本文介绍如何使用你的 Microsoft 帐户在 Visual Studio for Mac 中启用你的订阅和解锁功能
-author: conceptdev
-ms.author: crdun
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 898DFEB8-5757-4CCE-8AD2-8BC7706F5855
-ms.openlocfilehash: 7acef72e3e1768d0250e0dd7ff2b587277d133ec
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: c3f8aef1b784b0261eeba6408a8cef0144e5fcac
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68872303"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984989"
 ---
 # <a name="enable-subscription"></a>启用订阅
 

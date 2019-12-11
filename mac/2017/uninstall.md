@@ -1,17 +1,17 @@
 ---
 title: 卸载 Visual Studio for Mac
 description: 卸载 Visual Studio for Mac 和相关工具的说明。
-author: conceptdev
-ms.author: crdun
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
-ms.openlocfilehash: ef9b609b74b878a2d9bdafb087481ad1c6e79a70
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 78bf7fce98f2a77e05a3fbbd31afcf3f20d97a9f
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62986840"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74985138"
 ---
 # <a name="uninstalling-visual-studio-for-mac"></a>卸载 Visual Studio for Mac
 

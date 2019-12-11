@@ -2,17 +2,17 @@
 title: 更新程序在检索信息时发生错误
 description: 有关如何在看到错误“检索更新信息时出错”时进行修复的说明。 在 Visual Studio 2019 for Mac 中
 ms.topic: troubleshooting
-author: asb3993
-ms.author: amburns
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 04/13/2019
 ms.technology: vs-ide-install
 ms.assetid: 31AF914A-C66B-4CD3-9429-39695E0E94AE
-ms.openlocfilehash: 5ba295defe19c6f3c6c56d5bccc7cc3fa367bb50
-ms.sourcegitcommit: cf8c0fef2b9690595e99ce3802586cdd55fd37c2
+ms.openlocfilehash: b25285ff3060734ee18085d7a9e89cd0d0c43439
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107792"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984402"
 ---
 # <a name="troubleshooting-updater-has-errors-retrieving-information"></a>疑难解答：更新程序在检索信息时发生错误
 
