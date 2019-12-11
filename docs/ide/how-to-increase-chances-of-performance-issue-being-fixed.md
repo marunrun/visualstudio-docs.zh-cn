@@ -5,12 +5,12 @@ author: seaniyer
 ms.author: seiyer
 ms.date: 11/19/2019
 ms.topic: reference
-ms.openlocfilehash: d61e7f47fde06c12b6b133ced76e5a8d72d220b0
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: 3bf61c1ecbed5a3da1fe7ec0bcf9c6d4b7580b8d
+ms.sourcegitcommit: 0b90e1197173749c4efee15c2a75a3b206c85538
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74528534"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74903989"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>如何提高解决性能问题的几率
 
@@ -116,9 +116,9 @@ VS 长时间处于无响应状态。
 **未知的无响应**
 
 如果无响应状态以一种不可预知的方式出现，请在下一次发生时启动 Visual Studio 的新实例并从该实例报告问题。
-在[“记录”屏幕](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019#record-a-repro)中，确保选择挂起的 Visual Studio 会话。
+在[“记录”屏幕](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019#record-a-repro)中，确保选择无响应的 Visual Studio 会话。
 
-如果挂起的 Visual Studio 实例是在管理员模式下启动的，那么第二个实例也需要在管理员模式下启动。
+如果无响应的 Visual Studio 实例是在管理员模式下启动的，那么第二个实例也需要在管理员模式下启动。
 
 >[!NOTE] 
 > **最有价值的反馈：** 对于这种情况，最有价值的反馈是在无响应时捕获的堆转储。

@@ -1,5 +1,5 @@
 ---
-title: 报告问题
+title: 报告问题：状态和常见问题解答
 description: 概述报告问题工具，并包括问题状态和定义
 ms.date: 11/15/2018
 ms.custom: seodec18
@@ -9,14 +9,14 @@ ms.author: seiyer
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 519c7f233866bf71bb342d4f740b3e0a90a4ba72
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: d024e28d696a60a9fc77c290283382dcd0e0ede8
+ms.sourcegitcommit: 2148f3fd69569d8ec54fd21a66370932ce610ce4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925986"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74853498"
 ---
-# <a name="overview-report-a-problem"></a>概述：报告问题
+# <a name="report-a-problem-states-and-faq"></a>报告问题：状态和常见问题解答
 
 报告问题工具使 Visual Studio 开发人员社区能够提交问题。 你的每个问题报告都会成为我们核心工程系统中的工作项，使你能够直接与产品团队互动，以帮助我们识别和解决有影响力的问题。 提供丰富诊断信息的反馈对于改进 Visual Studio 产品系列至关重要。 非常感谢你花时间报告问题。
 

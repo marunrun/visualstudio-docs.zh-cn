@@ -14,12 +14,12 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 9606b02cb26e8e0ad37f490e330e7d81f3089e27
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 684cd4762eed38d947d76655bd9632fc10d0aacd
+ms.sourcegitcommit: 697f2ab875fd789685811687387e9e8e471a38c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188995"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74829994"
 ---
 # <a name="tutorial-get-started-with-visual-basic-in-visual-studio"></a>教程：Visual Studio 中的 Visual Basic 入门
 
@@ -132,6 +132,8 @@ ms.locfileid: "73188995"
 
    ![显示“What Is Your Name”代码的代码窗口](./media/vs-2019/vb-codewindow-what-name-dark.png)
 
+1. 使用绿色“开始”  按钮，或按“F5”  生成并运行第一个应用。
+
 1. 控制台窗口打开时，输入名字。 控制台窗口应如以下屏幕快照所示：
 
    ![显示“What Is Your Name”、时间和日期以及“按任意键继续”消息的控制台窗口](media/vb-console-what-name.png)
@@ -156,6 +158,8 @@ ms.locfileid: "73188995"
     此代码替换现有的 <xref:System.Console.WriteLine%2A>、<xref:System.Console.Write%2A> 和 <xref:System.Console.ReadKey%2A> 语句。
 
    ![显示“What Is Your Name”代码的代码窗口](./media/vs-2019/vb-codewindow-what-name-dark.png)
+
+1. 使用绿色“开始”  按钮，或按“F5”  生成并运行第一个应用。
 
 1. 控制台窗口打开时，输入名字。 控制台窗口应如以下屏幕快照所示：
 

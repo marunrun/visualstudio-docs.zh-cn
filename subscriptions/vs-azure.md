@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/29/2019
 ms.topic: conceptual
 description: 了解如何激活 Visual Studio 订阅中包含的 Azure 开发测试个人额度权益。
-ms.openlocfilehash: 25bb97675c65244258c217901a010ab2211554d0
-ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
+ms.openlocfilehash: 789548f50f7d631f3db190ce5e2638858e8c4707
+ms.sourcegitcommit: c222052906362bf1a3762ec4d4623170e4e06702
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983765"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810039"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>在 Visual Studio 订阅中使用 Microsoft Azure
 Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过[每月 Azure 开发测试个人额度](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)，可将 Azure 用作开发/测试的个人沙盒。  你可以预配虚拟机、云服务和其他 Azure 资源。  信用额度因订阅级别而异。
@@ -74,6 +74,9 @@ Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过
 3. 提交支持事件。
 
 有关完整详细信息，请访问[技术支持](vs-tech-support.md)文档。
+
+### <a name="q-how-owns-the-intellectual-property-i-create-using-my-azure-devtest-individual-credit"></a>问：如何拥有我使用我的 Azure DevTest 个人点数创建的知识产权？
+答：员工根据该公司提供的资源创建的知识产权是提供该资源的公司的知识产权。 因此，如果你通过你的雇主接收 Visual Studio 订阅，则其知识产权政策适用。 
 
 ### <a name="q-ive-received-a-message-stating-that-my-access-to-azure-will-end-soon--what-can-i-do-to-continue-using-azure"></a>问：我收到一条消息，指出我对 Azure 的访问即将结束。  若要继续使用 Azure，我该做什么呢？
 答：因为你使用的 Azure 权益是与 Visual Studio 订阅相关联的，而该订阅已过期或已删除，所以会收到此电子邮件。  要继续使用 Azure，你有多个选择：

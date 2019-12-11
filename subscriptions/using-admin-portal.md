@@ -6,14 +6,15 @@ manager: lank
 ms.date: 08/07/2019
 ms.topic: conceptual
 description: 了解如何开始在订阅管理门户中管理组织的 Visual Studio 订阅。
-ms.openlocfilehash: 6ee33bfaf47452a1213cd5def206e47aee790fc3
-ms.sourcegitcommit: 5b34052a1c7d86179d7898ed532babb2d9dad4a3
+ms.openlocfilehash: 484ecdca3435ee725853932acd66e307c2eb3cbe
+ms.sourcegitcommit: 174c992ecdc868ecbf7d3cee654bbc2855aeb67d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490704"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74879303"
 ---
-# <a name="overview-of-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio 订阅管理门户概述
+# <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio 订阅管理员门户概述
+
 Visual Studio 订阅管理门户提供了集中管理组织订阅的工具。 
 
 ## <a name="important-considerations"></a>重要注意事项

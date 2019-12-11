@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e7ddccf321259ff8f4de2522404fdc42617a810
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 9b38089a088186a30ebd13cae68d19ac23235bf9
+ms.sourcegitcommit: 697f2ab875fd789685811687387e9e8e471a38c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180195"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74829984"
 ---
 # <a name="tutorial-learn-to-debug-visual-basic-code-using-visual-studio"></a>教程：学习使用 Visual Studio 调试 Visual Basic 代码
 
@@ -66,7 +66,7 @@ ms.locfileid: "70180195"
 1. 打开 Visual Studio。
 
     ::: moniker range=">=vs-2019"
-    按 Esc 关闭启动窗口  。 键入 Ctrl+Q 以打开搜索框，键入“visual basic”，选择“模板”，然后选择“创建新的控制台应用(.NET Framework)项目”     。 在出现的对话框中，键入名称（如 get-started-debugging），然后选择“创建”   。
+    按 Esc 关闭启动窗口  。 键入 Ctrl+Q 以打开搜索框，键入“visual basic”，选择“模板”，然后选择“创建新的控制台应用(.NET Core)项目”或“创建新的控制台应用(.NET Framework)项目”      。 在出现的对话框中，键入名称（如 get-started-debugging），然后选择“创建”   。
     ::: moniker-end
     ::: moniker range="vs-2017"
     在顶部菜单栏，依次选择“文件”   > “新建”   > “项目”  。 在“新建项目”对话框的左窗格中，在“Visual Basic”下，选择“Windows 桌面”，然后在中间窗格中选择“控制台应用(.NET Framework)”     。 然后，键入名称（如“get-started-debugging”）并单击“确定”   。
@@ -76,7 +76,7 @@ ms.locfileid: "70180195"
 
     Visual Studio 随即创建项目。
 
-1. 在 Module1.vb 中，替换以下代码 
+1. 在 Module1.vb  中，替换所有默认代码
 
     ```vb
     Module Module1
@@ -197,7 +197,7 @@ ms.locfileid: "70180195"
 
 ## <a name="start-the-debugger"></a>启动调试器！
 
-1. 按 F5（“调试”>“开始调试”）或调试工具栏中的“开始调试”按钮（![开始调试](../../debugger/media/dbg-tour-start-debugging.png "Start Debugging")）    。
+1. 按 F5  （“调试”>“开始调试”  ）或调试工具栏中的“开始调试”  按钮![开始调试](../../debugger/media/dbg-tour-start-debugging.png "开始调试")。
 
      通过 **F5** 启动应用时，调试器会附加到应用进程，但现在我们还未执行任何特殊操作来检查代码。 因此应用只会加载，控制台输出如你所见。
 
@@ -212,7 +212,7 @@ ms.locfileid: "70180195"
 
      在本教程中，我们将使用调试器仔细查看此应用，并查看调试器功能。
 
-2. 按红色的停止（![停止调试](../../debugger/media/dbg-tour-stop-debugging.png "Stop Debugging")）按钮来停止调试器。
+2. 按红色的停止![停止调试](../../debugger/media/dbg-tour-stop-debugging.png "停止调试")按钮来停止调试器。
 
 ## <a name="set-a-breakpoint-and-start-the-debugger"></a>设置断点并启动调试器
 
@@ -226,7 +226,7 @@ ms.locfileid: "70180195"
 
     断点是可靠调试的最基本和最重要的功能。 断点指示 Visual Studio 应在哪个位置挂起你的运行代码，以使你可以查看变量的值或内存的行为，或确定代码的分支是否运行。
 
-2. 按 F5 或“开始调试”按钮![开始调试](../../debugger/media/dbg-tour-start-debugging.png "Start Debugging")，应用随即启动，调试器将运行到你设置断点的代码行   。
+2. 按“F5”  或“开始调试”  按钮![开始调试](../../debugger/media/dbg-tour-start-debugging.png "开始调试")，应用随即启动，调试器将运行到你设置断点的代码行。
 
     ![命中断点](../visual-basic/media/get-started-hit-breakpoint-vb.png)
 
@@ -242,30 +242,30 @@ ms.locfileid: "70180195"
 
 1. 在 `Main` 函数中的 `shape.Draw` 方法调用中暂停时，按 F11（或选择“调试”>“单步执行”）前进到 `Rectangle` 类的代码   。
 
-     ![使用 F11 单步执行代码](../visual-basic/media/get-started-f11-vb.png "F11 Step Into")
+     ![使用 F11 单步执行代码](../visual-basic/media/get-started-f11-vb.png "F11 单步执行")
 
-     F11 是“单步执行”命令，每单击一次，应用就执行一个语句  。 F11 是一种以最详尽方式检查执行流的好方法。 （为了更快地浏览代码，我们还向你展示一些其他选项。）默认情况下，调试器会跳过非用户代码（如果需要更多详细信息，请参阅[仅我的代码](../../debugger/just-my-code.md)）。
+     F11 是“单步执行”命令，每按一次，应用就执行下一个语句  。 F11 是一种以最详尽方式检查执行流的好方法。 （为了更快地浏览代码，我们还向你展示一些其他选项。）默认情况下，调试器会跳过非用户代码（如果需要更多详细信息，请参阅[仅我的代码](../../debugger/just-my-code.md)）。
 
 2. 按几次 F10（或选择“调试”>“单步跳过”），直到调试器停止于 `MyBase.Draw` 方法调用，然后再按一次 F10    。
 
-     ![使用 F10 单步跳过代码](../visual-basic/media/get-started-step-over-vb.png "F10 Step Over")
+     ![使用 F10 单步跳过代码](../visual-basic/media/get-started-step-over-vb.png "F10 单步跳过")
 
      请注意，这次调试器不会单步执行基类 (`Shape`) 的 `Draw` 方法。 按 F10 将使调试器前进，但不会单步执行应用代码中的函数或方法（代码仍将执行）  。 通过在进行 `MyBase.Draw` 方法调用时按“F10”（而不是“F11”），我们跳过了 `MyBase.Draw` 的实现代码（我们现在可能对此不感兴趣）   。
 
 ## <a name="navigate-code-using-run-to-click"></a>使用“运行时单击”导航代码
 
-1. 在代码编辑器中，向下滚动并将鼠标悬停在 `Triangle` 类中的 `Console.WriteLine` 方法上，直到左侧出现绿色的“运行时单击”按钮（![运行时单击](../../debugger/media/dbg-tour-run-to-click.png "RunToClick")）  。 按钮的工具提示显示“将执行运行到此处”。
+1. 在代码编辑器中，向下滚动并将鼠标悬停在 `Triangle` 类中的 `Console.WriteLine` 方法上，直到左侧出现绿色的“运行时单击”  按钮![运行时单击](../../debugger/media/dbg-tour-run-to-click.png "运行时单击")。 按钮的工具提示显示“将执行运行到此处”。
 
-     ![使用“运行时单击”功能](../visual-basic/media/get-started-run-to-click-vb.png "Run to Click")
+     ![使用“运行时单击”功能](../visual-basic/media/get-started-run-to-click-vb.png "运行时单击")
 
    > [!NOTE]
    > “运行时单击”是 [!include[vs_dev15](../../misc/includes/vs_dev15_md.md)] 中的新增按钮  。 如果未看到绿色箭头按钮，请在此示例中改为使用 F11 以使调试器前进到正确的位置  。
 
-2. 单击“运行时单击”  按钮（![运行时单击](../../debugger/media/dbg-tour-run-to-click.png "RunToClick")）。
+2. 单击“运行时单击”  按钮![运行时单击](../../debugger/media/dbg-tour-run-to-click.png "运行时单击")。
 
     使用此按钮类似于设置临时断点。 “运行时单击”对于快速到达应用代码的可见区域十分方便（你可在任何打开的文件中单击）  。
 
-    调试器前进到 `Triangle` 类的 `Console.WriteLine` 方法实现。
+    调试器前进到 `Triangle` 类的 `Console.WriteLine` 方法实现。 （如果调试程序在你之前设置的断点处首次暂停，请再次使用“运行时单击”  ，使调试程序前进到 `Console.WriteLine`。）
 
     暂停时，你注意到有拼写错误！ “Drawing a trangle”输出拼写错误。 在调试器中运行应用时，我们可直接在此处修复它。
 
@@ -286,11 +286,11 @@ ms.locfileid: "70180195"
 
      此命令将恢复应用执行（并使调试器前进），直到当前函数返回。
 
-     你应当会回到 `Main` 方法的 `For Each` 循环中。
+     你应当会回到 `Main` 方法的 `For Each` 循环中。 如果没有，请再次按 Shift + F11   。
 
 ## <a name="restart-your-app-quickly"></a>快速重启应用
 
-单击调试工具栏中的“重启”（![重启应用](../../debugger/media/dbg-tour-restart.png "RestartApp")）按钮（Ctrl + Shift + F5）     。
+单击调试工具栏中的“重启”  ![重启应用](../../debugger/media/dbg-tour-restart.png "重启应用")按钮 (Ctrl + Shift + F5)    。
 
 当你按下“重启”时，与停止应用并重启调试器相比，它节省了时间  。 调试器在执行代码命中的第一个断点处暂停。
 
@@ -304,7 +304,7 @@ ms.locfileid: "70180195"
 
 1. 展开 `shapes` 对象以查看其所有属性，例如数组 `[0]` 的第一个索引，其值为 `Rectangle`。
 
-     ![查看数据提示](../visual-basic/media/get-started-data-tip-vb.png "View a Data Tip")
+     ![查看数据提示](../visual-basic/media/get-started-data-tip-vb.png "查看数据提示")
 
     可进一步展开对象以查看其属性，例如矩形的 `Height` 属性。
 
@@ -314,7 +314,7 @@ ms.locfileid: "70180195"
 
 1. 查看代码编辑器底部的“自动”窗口  。
 
-     ![在“自动”窗口中检查变量](../visual-basic/media/get-started-autos-window-vb.png "Autos Window")
+     ![在“自动”窗口中检查变量](../visual-basic/media/get-started-autos-window-vb.png "“自动”窗口")
 
     在“自动”窗口中，可看到变量及其当前值  。 “自动”窗口显示当前行或前一行使用的所有变量（检查文档中特定于语言的行为）  。
 
@@ -336,7 +336,7 @@ ms.locfileid: "70180195"
 
 2. 单击 F11 几次，直到在代码编辑器中 `Rectangle` 类的 `MyBase.Draw` 方法中看到调试器暂停  。 查看“调用堆栈”窗口  。
 
-    ![检查调用堆栈](../visual-basic/media/get-started-call-stack-vb.png "ExamineCallStack")
+    ![检查调用堆栈](../visual-basic/media/get-started-call-stack-vb.png "检查调用堆栈")
 
     “调用堆栈”窗口显示方法和函数被调用的顺序  。 最上面一行显示当前函数（此应用中的 `Rectangle.Draw` 方法）。 第二行显示 `Rectangle.Draw` 是从 `Main` 函数调用的，依此类推。
 
