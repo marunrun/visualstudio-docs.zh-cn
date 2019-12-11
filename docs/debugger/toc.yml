@@ -46,6 +46,8 @@
           href: using-breakpoints.md
         - name: 断点故障排除
           href: troubleshooting-breakpoints.md
+        - name: 'C# 数据断点疑难解答'
+          href: troubleshoot-data-breakpoint-errors.md
     - name: 数据检查
       items:
         - name: 检查调试器窗口中的数据
