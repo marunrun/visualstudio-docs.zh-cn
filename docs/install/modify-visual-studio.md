@@ -3,7 +3,7 @@ title: 修改 Visual Studio
 titleSuffix: ''
 description: 了解如何逐步修改 Visual Studio。
 ms.custom: H1Hack27Feb2017,seodec18
-ms.date: 08/23/2019
+ms.date: 12/03/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - modify Visual Studio
@@ -18,12 +18,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 628d8fe5d8374d0cb203e6953f63bd63d77d0c58
-ms.sourcegitcommit: 3ba2968a4b44643482aadad4d50e1a55bb36b136
+ms.openlocfilehash: 23e44479bedfdb44b2375baae9f342f47b38700b
+ms.sourcegitcommit: c222052906362bf1a3762ec4d4623170e4e06702
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74566999"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810088"
 ---
 # <a name="modify-visual-studio-by-adding-or-removing-workloads-and-components"></a>通过添加或删除工作负载和组件修改 Visual Studio
 
@@ -69,7 +69,7 @@ ms.locfileid: "74566999"
 
      例如，在运行 Windows 10 的计算机上，选择“开始”，然后滚动到字母“V”，它作为“Visual Studio 安装程序”在那里列出    。
 
-     ![Visual Studio 安装程序](media/vs2017-locate-the-visual-studio-installer.PNG "找到 Microsoft Visual Studio 安装程序")
+     ![Visual Studio 安装程序](media/locate-the-visual-studio-installer.png "找到 Microsoft Visual Studio 安装程序")
 
      >[!TIP]
      >对于某些计算机，Visual Studio 安装程序可能列在字母 **“M”** 下，即 **Microsoft Visual Studio 安装程序**。<br/><br/> 或者，可以在以下位置找到 Visual Studio 安装程序：`C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
@@ -84,7 +84,7 @@ ms.locfileid: "74566999"
 
 1. 从“工作负载”  屏幕中，选择或取消选择要安装或卸载的工作负载。
 
-    ![Visual Studio 2017 安装对话框](media/vs2017-modify-workloads.PNG "在 Visual Studio 2017 中选择工作负载")
+    ![Visual Studio 2017 安装对话框](media/modify-workloads.png "在 Visual Studio 2017 中选择工作负载")
 
 1. 再一次选择“修改”  。
 

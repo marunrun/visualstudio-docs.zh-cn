@@ -1,36 +1,36 @@
 ---
 title: 自定义生成系统
 description: 本文简要介绍 Visual Studio for Mac 使用的 MSBuild 生成系统
-author: conceptdev
-ms.author: crdun
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 04/14/2017
 ms.assetid: 6958B102-8527-4B40-BC65-3505DB63F9D3
-ms.openlocfilehash: 0c2a4590b15faa2573ccab3ff51ff5cd54e177ca
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 97416ef126ee77f9955d8fa486d7bb7e2ceb725e
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62932809"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74983445"
 ---
 # <a name="customizing-the-build-system"></a>自定义生成系统
 
-MSBuild 是 Microsoft 开发的生成引擎，可生成主要 .NET 应用程序。 Mono 框架也有自己的 Microsoft 生成引擎实现，被称为“xbuild”。 但 xbuild 已被淘汰，改而支持在所有操作系统上使用 MSBuild。
+MSBuild 是 Microsoft 开发的生成引擎，可生成主要 .NET 应用程序。 Mono 框架也有自己的 Microsoft 生成引擎实现，被称为“xbuild”  。 但 xbuild 已被淘汰，改而支持在所有操作系统上使用 MSBuild。
 
-MSBuild 主要用作 Visual Studio for Mac 中项目的生成系统。
+MSBuild  主要用作 Visual Studio for Mac 中项目的生成系统。
 
 MSBuild 的工作原理是，将一组输入（如源文件）转换为输出（如可执行文件）。 它通过调用编译器等工具获取此输出。
 
 ## <a name="msbuild-file"></a>MSBuild 文件
 
-MSBuild 使用 XML 文件作为项目文件，该文件定义项目（如图像资源）中的“项”和生成项目所需的“属性”。 该项目文件总是以 `proj` 文件扩展名结尾，例如：C# 项目的 `.csproj`。
+MSBuild 使用 XML 文件作为项目文件，该文件定义项目（如图像资源）中的“项”  和生成项目所需的“属性”  。 该项目文件总是以 `proj` 文件扩展名结尾，例如：C# 项目的 `.csproj`。
 
 ### <a name="viewing-the-msbuild-file"></a>查看 MSBuild 文件
 
-可通过右键单击项目名称并选择“在查找器中展现”定位 MSBuild 文件。 查找器窗口将显示和项目有关的所有文件和文件夹，包括 `.csproj` 文件，如下图所示：
+可通过右键单击项目名称并选择“在查找器中展现”  定位 MSBuild 文件。 查找器窗口将显示和项目有关的所有文件和文件夹，包括 `.csproj` 文件，如下图所示：
 
 ![查找器中的 csproj 位置](media/customizing-build-system-image1.png)
 
-通过右键单击项目名称并浏览到“工具”>“编辑文件”，在 Visual Studio for Mac 中新建的选项卡中显示 `.csproj`：
+通过右键单击项目名称并浏览到“工具”>“编辑文件”  ，在 Visual Studio for Mac 中新建的选项卡中显示 `.csproj`：
 
 ![在源代码编辑器中打开 csproj](media/customizing-build-system-image2.png)
 
@@ -54,7 +54,7 @@ MSBuild 使用 XML 文件作为项目文件，该文件定义项目（如图像�
 
 ### <a name="items-and-properties"></a>项和属性
 
-MSBuild 有两种基础数据类型：“项”和“属性”，下列部分将详细介绍这两种类型。
+MSBuild 有两种基础数据类型：“项”  和“属性”  ，下列部分将详细介绍这两种类型。
 
 #### <a name="properties"></a>属性
 
@@ -80,7 +80,7 @@ MSBuild 有两种基础数据类型：“项”和“属性”，下列部分将
 
 #### <a name="items"></a>项
 
-项提供一种将输入作为列表或集处理到生成系统的方法，同时通常代表文件。 每个项都有项类型、项规范和可选任意元数据。 请注意，MSBuild 不对单个项进行操作，而是对给定类型的所有项（称为项集）进行操作
+项提供一种将输入作为列表或集处理到生成系统的方法，同时通常代表文件。 每个项都有项类型  、项规范  和可选任意元数据  。 请注意，MSBuild 不对单个项进行操作，而是对给定类型的所有项（称为项集）进行操作 
 
 可通过声明 `ItemGroup` 创建项。 可以有任意数量的 ItemGroup，后者也可以包含任意数量的项。
 

@@ -1,16 +1,16 @@
 ---
 title: 登录 Visual Studio for Mac
 description: 如何登录 Visual Studio for Mac
-author: conceptdev
-ms.author: crdun
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: E4CFD03C-03AF-48CA-B409-6DB1CA45E991
-ms.openlocfilehash: e34a1a65e168b92f5002fc52586cae8967b46d3a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 664f2431de7702219ced2ae2af4bd908e814a689
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62987357"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74985181"
 ---
 # <a name="sign-in-to-visual-studio-for-mac"></a>登录 Visual Studio for Mac
 
@@ -24,7 +24,7 @@ ms.locfileid: "62987357"
 
 要登录 Visual Studio for Mac，请执行以下步骤：
 
-1. 单击欢迎页上的“登录”链接，然后在显示的“帐户”对话框中按“登录”按钮：
+1. 单击欢迎页上的“登录”链接，然后在显示的“帐户”对话框中按“登录”按钮：  
 
     ![Visual Studio for Mac 中的“帐户”对话框](media/signing-in-image12.png)
 

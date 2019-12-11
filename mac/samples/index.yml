@@ -3,8 +3,8 @@ documentType: LandingData
 title: Visual Studio for Mac 示例
 metadata:
   description: 使用 Visual Studio for Mac 的示例应用。
-  author: asb3993
-  ms.author: amburns
+  author: heiligerdankgesang
+  ms.author: dominicn
   ms.date: 07/31/2019
   ms.topic: sample
 abstract:

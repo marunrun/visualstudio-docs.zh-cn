@@ -1,18 +1,18 @@
 ---
 title: 安装 Visual Studio 2019 for Mac
 description: 介绍如何安装 Visual Studio 2019 for Mac 以及跨平台开发所需的附加组件。
-author: asb3993
-ms.author: amburns
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
-ms.openlocfilehash: 1ace600f9c4582e99c6fa324cb9dcc61593d3d97
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: dd6afc69c2a7e513358c69eafeacb49fcb06dd52
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73716784"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74983979"
 ---
 # <a name="install-visual-studio-2019-for-mac"></a>安装 Visual Studio 2019 for Mac
 
