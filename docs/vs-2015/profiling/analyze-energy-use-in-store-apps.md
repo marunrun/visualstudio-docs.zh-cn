@@ -26,7 +26,7 @@ ms.locfileid: "74299371"
 
 Visual Studio 的 **“能耗”** 探查器可以帮助你分析低功率平板设备上的 Windows 应用商店应用的功率和能耗情况，这些低功率平板设备在所有时间或部分时间内靠自有电池运行。 在电池供电的设备上，如果应用程序使用过多的能量，可能导致客户非常不满，最终客户甚至可能将其卸载。 能量利用的优化可使更多的客户选择并使用你的应用程序。  
   
-## <a name="BKMK_What_the_Energy_Consumption_tool_is__how_it_works__and_what_it_measures"></a>“能量消耗”探查器的定义、工作机制和测量内容  
+## <a name="BKMK_What_the_Energy_Consumption_tool_is__how_it_works__and_what_it_measures"></a> “能量消耗”探查器的定义、工作机制和测量内容  
  “能耗”探查器在分析会话期间捕获设备的显示器、CPU 和网络连接的活动。 然后生成这些活动所使用功率的估计值和分析会话使用的总能量。  
   
 > [!NOTE]
@@ -42,7 +42,7 @@ Visual Studio 的 **“能耗”** 探查器可以帮助你分析低功率平板
   
 - 能量 以电容或电势的形式衡量总功率数，如电池的功率容量或在一段时间内消耗的总功率。 能量单位为瓦时，即一瓦持续作用一小时所产生的功率数量。 在 **“能量摘要”** 中，单位显示为毫瓦时 **“mW-h”** 。  
   
-  ![Energy capacity, power used, total energy used](../profiling/media/energyprof-capcitypowerused.png "ENERGYPROF_CapcityPowerUsed")  
+  ![能源容量、已用电量、使用的总能量](../profiling/media/energyprof-capcitypowerused.png "ENERGYPROF_CapcityPowerUsed")  
   
   例如，平板电脑中充满电的电池存储了一定数量的能量。 当能量用于执行网络通信、计算值或显示图像等任务时，电池的功率以不同的速率消耗。 对于任意一段时间，消耗的功率的总和还可按能量进行衡量。  
   
@@ -75,7 +75,7 @@ if (performance && performance.mark) {
   
  *markDescription* 是包含要在用户标记工具提示中显示的消息的字符串。  
   
-## <a name="BKMK_Configure_your_environment_for_profiling"></a>配置环境进行分析  
+## <a name="BKMK_Configure_your_environment_for_profiling"></a> 配置要分析的环境  
  若要获取合理估计值，你需要分析由电池供电的低功率设备上的应用程序的能量使用情况。 由于 Visual Studio 不能在大多数的此类设备上运行，因此你需要使用 Visual Studio 远程工具将 Visual Studio 计算机连接到此类设备。 若要连接到远程设备，需要配置 Visual Studio 项目和此远程设备。 有关详细信息，请参阅[在远程计算机上运行 Windows 应用商店应用](../debugger/run-windows-store-apps-on-a-remote-machine.md)。  
   
 > [!TIP]
@@ -146,7 +146,7 @@ if (performance && performance.mark) {
   
 ## <a name="BKMK_Other_resources"></a> 其他资源  
   
-- Windows 开发人员中心中 [C#/VB/C++ 和 XAML](https://msdn.microsoft.com/0ee0b706-8432-4d49-9801-306ed90764e1) 和 [JavaScript 和 HTML](https://msdn.microsoft.com/372afa6a-1c7c-4657-967d-03a77cd8e933) 的“连接状态和成本管理” 部分介绍了提供网络连接信息的 Windows API，你的应用程序可以使用这些信息最大程度降低网络通信成本。  
+- Windows开发人员中心中 [C#/VB/C++ 和 XAML](https://msdn.microsoft.com/0ee0b706-8432-4d49-9801-306ed90764e1) 和 [JavaScript 和 HTML](https://msdn.microsoft.com/372afa6a-1c7c-4657-967d-03a77cd8e933) 的“连接状态和成本管理”  部分介绍了提供网络连接信息的 Windows API，你的应用程序可以使用这些信息最大程度降低网络通信成本。  
   
      使用 Windows 应用商店应用程序的 Visual Studio 模拟器可以模拟网络信息 API 的数据连接属性。 请参见 [Run Windows Store apps in the simulator](../debugger/run-windows-store-apps-in-the-simulator.md)  
   
