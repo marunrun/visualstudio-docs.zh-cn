@@ -30,7 +30,7 @@ ms.locfileid: "74297802"
  默认情况下，安装 Visual Studio 时会启用“快速启动”。 在菜单栏中，可以通过依次选择“工具”、“选项”，显示或隐藏“快速启动”。 展开“环境”节点，然后选择“快速启动”。 选中或清除“启用快速启动”复选框。 你还可以启用或禁用此页上的搜索类别。
 
 ## <a name="category-list"></a>类别列表
- 快速启动搜索结果以下面四个类别出现：“最近使用的”、“菜单”、“选项”和“打开文档”，同时还出现各类别的项数。 若要按类别遍历搜索结果，请选择 Ctrl+Q 键以显示下一类别的所有结果。 在上一类别显示后，Ctrl+Q 会显示每个类别的一些结果。 Ctrl+Shift+Q 可用于按相反的顺序在类别间导航。 若要查看某个类别下的所有搜索结果，请选择类别名称。
+ 快速启动搜索结果按以下四个类别显示：“最近使用的”、“菜单”、“选项”和“打开文档”，同时还出现各类别的项数。 若要按类别遍历搜索结果，请选择 Ctrl+Q 键以显示下一类别的所有结果。 在上一类别显示后，Ctrl+Q 会显示每个类别的一些结果。 Ctrl+Shift+Q 可用于按相反的顺序在类别间导航。 若要查看某个类别下的所有搜索结果，请选择类别名称。
 
  以下快捷方式可用于将搜索限于特定的类别。
 
@@ -50,4 +50,4 @@ ms.locfileid: "74297802"
  有关使用“快速启动”的最新提示和技巧，请参阅 [Visual Studio 博客](https://go.microsoft.com/fwlink/?LinkId=236054)。
 
 ## <a name="see-also"></a>请参阅
- [General User Interface Elements (Visual Studio)](../../ide/reference/general-user-interface-elements-visual-studio.md) [Environment Options Dialog Box](../../ide/reference/environment-options-dialog-box.md)
+ [常规用户界面元素（Visual Studio）](../../ide/reference/general-user-interface-elements-visual-studio.md) ["环境选项" 对话框](../../ide/reference/environment-options-dialog-box.md)
