@@ -49,4 +49,4 @@ Visual Studio 包含能够在多个 Microsoft 平台进行开发的编译器、�
 |[Windows 7](https://support.microsoft.com/lifecycle/search/?c2=14019)|Windows 7 SDK|  
 |[Windows 8](https://support.microsoft.com/lifecycle/search/?c2=16796)|Windows 8 SDK|  
 |[Windows 8.1](https://support.microsoft.com/lifecycle/search?sort=PN&alpha=windows%208.1&Filter=FilterNO)|Windows 8.1 SDK<br /><br /> Windows JavaScript 库 (WinJS)|  
-|[Microsoft Azure](https://support.microsoft.com/help/18486/lifecycle-faq-azure)<br /><br /> <br />> 另请参阅：[在线生命周期策略](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy)|Microsoft Azu re 移动服务 SDK<br /><br /> Microsoft Azure 移动服务工具|
+|[Microsoft Azure](https://support.microsoft.com/help/18486/lifecycle-faq-azure)<br /><br /> <br />> 另请参阅：[联机生命周期策略](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy)|Microsoft Azu re 移动服务 SDK<br /><br /> Microsoft Azure 移动服务工具|

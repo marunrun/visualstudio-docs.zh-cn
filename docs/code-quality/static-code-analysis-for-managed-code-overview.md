@@ -26,7 +26,7 @@ Visual Studio 可以通过以下两种方式对托管代码执行代码分析：
 分析工具将它在分析期间执行的检查表示为警告消息。 警告消息标识任何相关的编程和设计问题，如有可能，还提供有关如何修复问题的信息。
 
 > [!NOTE]
-> Visual Studio 中的 .NET Core 和 .NET Standard 项目不支持传统分析（静态代码分析）。 如果在作为 msbuild 的一部分的 .NET Core 或 .NET Standard 项目上运行代码分析，则会看到类似于 **error 的错误：CA0055 :找不到 \<your > 的平台，@no__t 为-1。 若要分析 .NET Core 或 .NET Standard 项目中的代码，请改用[代码分析器](../code-quality/roslyn-analyzers-overview.md)。
+> Visual Studio 中的 .NET Core 和 .NET Standard 项目不支持传统分析（静态代码分析）。 如果在作为 msbuild 一部分的 .NET Core 或 .NET Standard 项目上运行代码分析，则会看到类似“错误: CA0055: 无法确定 **your.dll> 的平台”的错误\<** 。 若要分析 .NET Core 或 .NET Standard 项目中的代码，请改用[代码分析器](../code-quality/roslyn-analyzers-overview.md)。
 
 ## <a name="ide-integrated-development-environment-integration"></a>IDE （集成开发环境）集成
 
@@ -38,11 +38,11 @@ Visual Studio 可以通过以下两种方式对托管代码执行代码分析：
 
 ## <a name="rule-sets"></a>规则集
 
-托管代码的代码分析规则可分组为[规则集](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)。 可以使用 Microsoft 标准规则集中的一个，也可以根据特定需求[创建自定义规则集](../code-quality/how-to-create-a-custom-rule-set.md)。
+托管代码的代码分析规则划分到[规则集](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)中。 可以使用 Microsoft 标准规则集中的一个，也可以根据特定需求[创建自定义规则集](../code-quality/how-to-create-a-custom-rule-set.md)。
 
 ## <a name="suppress-warnings"></a>禁止显示警告
 
-通常，指出警告不适用是有用的。 这样可以告知开发人员以及可能会在以后检查代码的其他人员：这个警告已被调查过，并且已被禁止显示或被忽略。
+它通常用于指示警告不适用。 这样，便可以通知开发人员以及可能会在以后评审代码的其他人员：已调查了一个警告，且禁止显示或忽略了该警告。
 
 在源代码中禁止显示警告是通过自定义特性实现的。 若要禁止显示警告，请向源代码添加特性 `SuppressMessage`，如下面的示例所示：
 
@@ -59,7 +59,7 @@ Public class MyClass
 ::: moniker range="vs-2017"
 
 > [!NOTE]
-> 如果将项目迁移到 Visual Studio 2017，可能会突然遇到大量代码分析警告。 如果尚未准备好修复警告，可以通过选择 "**分析** > " "**运行代码分析并取消活动问题**" 来取消所有这些警告。
+> 如果将项目迁移到 Visual Studio 2017，可能会突然遇到大量代码分析警告。 如果尚未准备好修复警告，则可以通过选择 "**分析**" > "**运行代码分析" 并取消显示活动问题**来禁止显示这些警告。
 >
 > ![在 Visual Studio 中运行代码分析并取消问题](media/suppress-active-issues.png)
 
@@ -68,13 +68,13 @@ Public class MyClass
 ::: moniker range=">=vs-2019"
 
 > [!NOTE]
-> 如果将项目迁移到 Visual Studio 2019，可能会突然遇到大量代码分析警告。 如果尚未准备好修复警告，则可以通过选择 "**分析** > " "**生成" 并取消显示活动问题**来取消所有这些警告。
+> 如果将项目迁移到 Visual Studio 2019，可能会突然遇到大量代码分析警告。 如果尚未准备好修复警告，可以通过选择 "**分析** > **生成并取消显示活动问题**" 来禁止显示这些警告。
 
 ::: moniker-end
 
 ## <a name="run-code-analysis-as-part-of-check-in-policy"></a>作为签入策略的一部分运行代码分析
 
-作为组织，你可能希望要求所有签入都满足某些策略。 特别是，你希望确保遵循以下策略：
+作为一个单位，可能希望所有签入行为满足特定的策略。 特别是希望确保遵从下列策略：
 
 - 要签入的代码中没有生成错误。
 
@@ -84,9 +84,9 @@ Public class MyClass
 
 ## <a name="team-build-integration"></a>Team build 集成
 
-可以使用生成系统的已集成功能在生成过程中运行分析工具。 有关详细信息，请参阅 [Azure 管道](/azure/devops/pipelines/index?view=vsts)。
+你可以使用生成系统的集成功能在生成过程中运行分析工具。 有关详细信息，请参阅 [Azure Pipelines](/azure/devops/pipelines/index?view=vsts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [基于 .NET Compiler Platform 的分析器概述](../code-quality/roslyn-analyzers-overview.md)
 - [使用规则集对代码分析规则进行分组](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)
