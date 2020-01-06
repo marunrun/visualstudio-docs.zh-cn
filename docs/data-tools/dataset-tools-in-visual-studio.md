@@ -42,24 +42,24 @@ helpviewer_keywords:
 - datasets [Visual Basic], namespace
 - data adapters, populating datasets
 ms.assetid: ee57f4f6-9fe1-4e0a-be9a-955c486ff427
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3796a9b7a1d37911601574e02c89e8ccebb684ca
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cb41a4e3e4ed1c0032c579779a18c7df0bc22477
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72642118"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586713"
 ---
 # <a name="dataset-tools-in-visual-studio"></a>Visual Studio 中的数据集工具
 
 > [!NOTE]
 > 数据集和相关类是早期2000s 中的旧 .NET 技术，使应用程序可以在应用程序与数据库断开连接时使用内存中的数据。 它们对于允许用户修改数据并将更改保存回数据库的应用程序特别有用。 尽管数据集已证实成为一种非常成功的技术，但建议新的 .NET 应用程序使用实体框架。 实体框架提供了一种更自然的方式来处理作为对象模型的表格数据，并且它具有更简单的编程接口。
 
-@No__t_0 对象是一个实质上是小型数据库的内存中对象。 它包含 `DataTable`、`DataColumn` 和 `DataRow` 对象，您可以在其中存储和修改一个或多个数据库中的数据，而不必维护打开的连接。 数据集维护对其数据的更改的相关信息，以便在应用程序重新连接时，可以跟踪更新并将其发送回数据库。
+`DataSet` 对象是一个实质上是小型数据库的内存中对象。 它包含 `DataTable`、`DataColumn`和 `DataRow` 对象，您可以在其中存储和修改一个或多个数据库中的数据，而不必维护打开的连接。 数据集维护对其数据的更改的相关信息，以便在应用程序重新连接时，可以跟踪更新并将其发送回数据库。
 
 数据集和相关类在 .NET API 的 <xref:System.Data?displayProperty=fullName> 命名空间中定义。 可以使用 ADO.NET 在代码中动态地创建和修改数据集。 本部分中的文档演示如何使用 Visual Studio 设计器处理数据集。 通过设计器创建的数据集使用**TableAdapter**对象与数据库进行交互。 以编程方式创建的数据集使用**DataAdapter**对象。 有关以编程方式创建数据集的信息，请参阅[dataadapter 和 datareader](/dotnet/framework/data/adonet/dataadapters-and-datareaders)。
 
@@ -95,6 +95,6 @@ Visual Studio 提供了简化数据集处理的工具。 基本的端到端工�
 
 有关将数据集转换为 XML 或从 XML 转换数据集的信息，请参阅将[xml 数据读入数据集](../data-tools/read-xml-data-into-a-dataset.md)和[将数据集另存为 xml](../data-tools/save-a-dataset-as-xml.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [适用于 NET 的 Visual Studio Data Tools](../data-tools/visual-studio-data-tools-for-dotnet.md)

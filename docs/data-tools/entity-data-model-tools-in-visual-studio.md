@@ -3,17 +3,17 @@ title: 实体框架工具
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1b06b573-84aa-4458-b3f5-e238df47bf45
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6efcd0ca4e8274df7667b5a5b2b75020def8c358
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: 4af96ad0f76414468fd194b7079b3c4dbdaf2a4c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807027"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586661"
 ---
 # <a name="entity-framework-tools-in-visual-studio"></a>Visual Studio 中的 Entity Framework Tools
 
@@ -47,13 +47,13 @@ Entity Framework Tools 旨在帮助您生成实体框架（EF）应用程序。 
 
 ## <a name="related-topics"></a>相关主题
 
-| Title | 描述 |
+| 职务 | 描述 |
 | - | - |
 | [ADO.NET 实体框架](/dotnet/framework/data/adonet/ef/index) | 描述如何使用 [!INCLUDE[adonet_ef](../data-tools/includes/adonet_ef_md.md)] 提供的 [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] 工具来创建应用程序。 |
 | [实体数据模型](/dotnet/framework/data/adonet/entity-data-model) | 提供有关使用 [!INCLUDE[adonet_ef](../data-tools/includes/adonet_ef_md.md)]上构建的应用程序所使用的数据的链接和信息。 |
 | [实体框架（EF）文档）](/ef/ef6/get-started) | 提供视频、教程和高级文档的索引，以帮助您充分利用实体框架。 |
 | [ASP.NET 5 应用程序到新数据库](https://docs.efproject.net/en/latest/platforms/aspnetcore/new-db.html) | 介绍如何使用实体框架7创建新的 ASP.NET 5 应用程序。 |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [适用于 NET 的 Visual Studio Data Tools](../data-tools/visual-studio-data-tools-for-dotnet.md)

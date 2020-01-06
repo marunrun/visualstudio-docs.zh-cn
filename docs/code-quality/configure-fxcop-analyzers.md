@@ -4,17 +4,17 @@ ms.date: 09/23/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - FxCop analyzers, configuring
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1d2c4f6b44daf83b3fd013167ec24e82c45ce2e8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b1d178adbbb847b2629ee785a7a0fa4e990a46dd
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649704"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587714"
 ---
 # <a name="configure-fxcop-analyzers"></a>配置 FxCop 分析器
 
@@ -40,13 +40,13 @@ ms.locfileid: "72649704"
 
 每个优化选项均可针对规则的类别（例如，命名或设计）或特定规则配置。
 
-### <a name="all-rules"></a>所有规则
+### <a name="all-rules"></a>┮Τ砏玥
 
 为*所有*规则配置选项的语法如下所示：
 
 |语法|示例|
 |-|-|
-| dotnet_code_quality.OptionName = OptionValue | `dotnet_code_quality.api_surface = public` |
+| dotnet_code_quality。OptionName = OptionValue | `dotnet_code_quality.api_surface = public` |
 
 ### <a name="category-of-rules"></a>规则类别
 
@@ -54,7 +54,7 @@ ms.locfileid: "72649704"
 
 |语法|示例|
 |-|-|
-| dotnet_code_quality.RuleCategory. OptionName = OptionValue | `dotnet_code_quality.Naming.api_surface = public` |
+| dotnet_code_quality。RuleCategory. OptionName = OptionValue | `dotnet_code_quality.Naming.api_surface = public` |
 
 ### <a name="specific-rule"></a>特定规则
 
@@ -62,7 +62,7 @@ ms.locfileid: "72649704"
 
 |语法|示例|
 |-|-|
-| dotnet_code_quality.RuleId. OptionName = OptionValue | `dotnet_code_quality.CA1040.api_surface = public` |
+| dotnet_code_quality。RuleId. OptionName = OptionValue | `dotnet_code_quality.CA1040.api_surface = public` |
 
 ## <a name="per-project-configuration"></a>每项目配置
 
@@ -103,7 +103,7 @@ ms.locfileid: "72649704"
 > [!NOTE]
 > 此处所述的 EditorConfig 文件的任意共享位置仅适用于配置某些 FxCop 分析器规则的作用域。 对于其他设置，如 "规则严重性"、"常规编辑器设置" 和 "代码样式"，EditorConfig 文件必须始终放置在项目文件夹或父文件夹中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [FxCop 分析器的规则作用域选项](fxcop-analyzer-options.md)
 - [分析器配置](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md)

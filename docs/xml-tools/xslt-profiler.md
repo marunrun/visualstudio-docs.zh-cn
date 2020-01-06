@@ -3,17 +3,17 @@ title: XSLT 性能
 ms.date: 03/05/2019
 ms.topic: conceptual
 ms.assetid: 87387c9a-2e89-4801-ad51-83740cd6ea25
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2866e9b19ea2b79bf8435d81c93443bb20ff4fec
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 79d865a426af2c089bfcc6bd1e733b4ecc185077
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645911"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592277"
 ---
 # <a name="the-xslt-profiler"></a>XSLT 探查器
 
@@ -30,7 +30,7 @@ XSLT 探查器是 Visual Studio 的一部分，可用于**XML**菜单。
 
 1. 在 Visual Studio 中打开 XSLT 文档。
 
-2. 在菜单栏上，选择 " **XML**  > **Profile XSLT**"。
+2. 在菜单栏上，选择 " **XML** > **Profile XSLT**"。
 
 3. 提供一个输入 XML 文档。 如果尚未打开 XML 文档，系统会提示您提供该文件。
 
@@ -106,6 +106,6 @@ XSLT 探查器是 Visual Studio 的一部分，可用于**XML**菜单。
 
    "进程" 视图显示一个表，其中包含**进程 ID**、**进程名称**、**开始时间**和**结束时间**。 可以通过单击列名对数据进行排序。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [演练：使用 XSLT 层次结构](../xml-tools/walkthrough-using-xslt-hierarchy.md)

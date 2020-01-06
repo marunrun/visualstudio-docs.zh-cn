@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, security
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eab987d406d6a2c05c8350aaac9dd1ecfc13e4a8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 25815bcb7f027501fb849dcd29d14b040c24d7fa
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660091"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591965"
 ---
 # <a name="security-of-text-templates"></a>文本模板的安全性
 文本模板具有以下安全问题：
@@ -24,7 +24,7 @@ ms.locfileid: "72660091"
 - 如果主机用于查找指令处理器的机制不安全，则可能会运行恶意指令处理器。
 
 ## <a name="arbitrary-code"></a>任意代码
- 编写模板时，可以在 \< # # > 标记中添加任何代码。 这允许从文本模板中执行任意代码。
+ 编写模板时，可以在 \<# # > 标记中添加任何代码。 这允许从文本模板中执行任意代码。
 
  请确保从受信任的源获取模板。 请确保警告应用程序的最终用户不执行不来自受信任的源的模板。
 

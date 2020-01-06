@@ -10,17 +10,17 @@ helpviewer_keywords:
 - code generation
 - text templates
 - generating code
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b8d3684ac79ce0dde8641e11a455238d927f2adb
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f0eba8b4850ee845414084ef766fce30f9efd7e6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748511"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597199"
 ---
 # <a name="code-generation-and-t4-text-templates"></a>代码生成和 T4 文本模板
 
@@ -42,7 +42,7 @@ T4 文本模板有两种类型：运行时和设计时。
 
 此外，该模板包含程序代码的片段。 你可使用这些片段来重复文本节、创建条件节以及显示应用程序数据。
 
-若要生成输出，应用程序将调用由此模板生成的函数。 例如:
+若要生成输出，应用程序将调用由此模板生成的函数。 例如：
 
 ```csharp
 string webResponseText = new MyTemplate().TransformText();
@@ -94,6 +94,6 @@ namespace Fabrikam.FirstJob
 
 文本模板转换功能命名为 *T4*。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)

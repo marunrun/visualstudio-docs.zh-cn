@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, generated code
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 44f66ed25ab43db2d08db3cb93263bd61ac3a907
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 1196faa5831ae44a93f21ab1808915357690a0ac
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189459"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565937"
 ---
 # <a name="understanding-the-dsl-code"></a>了解 DSL 代码
 
@@ -58,7 +58,7 @@ ms.locfileid: "73189459"
 ## <a name="generated-files-in-dsl"></a>DSL 中生成的文件
  以下生成的文件将出现在**Dsl**项目中。
 
- *Yourdsl 可*`Schema.xsd`
+ *YourDsl* `Schema.xsd`
 
  包含 DSL 实例的文件的架构。 此文件将复制到编译（**bin**）目录。 安装 DSL 时，可以将此文件复制到 **\Program Files\Microsoft Visual Studio 11.0 \ Xml\Schemas** ，以便可以验证模型文件。 有关详细信息，请参阅[部署域特定语言解决方案](msi-and-vsix-deployment-of-a-dsl.md)。
 
@@ -70,7 +70,7 @@ ms.locfileid: "73189459"
 
  （在组件解决方案示例中，其中一个连接生成器称为 ConnectionBuilder，这是一个巧合，因为域关系名为 Connection。）
 
- *关系 `Builder.Connect()` 方法*中创建。 默认版本将验证源和目标模型元素是否为可接受，然后实例化该关系。 例如:
+ *关系`Builder.Connect()` 方法*中创建。 默认版本将验证源和目标模型元素是否为可接受，然后实例化该关系。 例如：
 
  `CommentReferencesSubject(sourceAccepted, targetAccepted);`
 
@@ -122,7 +122,7 @@ ms.locfileid: "73189459"
 
 - 元素组原型 (EGP) 处理程序方法。 如果用户可以将另一个元素*合并*（添加）到此类的实例上，则这是必需的。 通常用户通过从元素工具或另一个形状进行拖动或通过粘贴来执行此操作。
 
-   在示例 DSL 中，“输入端口”或“输出端口”可以合并到“组件”上。 此外，“组件”和“注释”可以合并到模型上。 必须向
+   在示例 DSL 中，“输入端口”或“输出端口”可以合并到“组件”上。 此外，“组件”和“注释”可以合并到模型上。 此
 
    “组件”类中的 EGP 处理程序方法允许“组件”接受“端口”，但不接受“注释”。 根模型类中的 EGP 处理程序可接受“注释”和“组件”，但不接受“端口”。
 
@@ -340,11 +340,11 @@ explorerWindow.TreeContainer.ObjectModelBrowser.SelectedNode = treeNode;
  若要自定义此文件，请编辑 `.tt` 文件。
 
 > [!WARNING]
-> 如果编辑 .tt 文件来包括资源（例如图标或图像），请确保该资源包括在 VSIX 生成中。 在解决方案资源管理器中，选择该文件并确保 `True` "**包含在 VSIX 中**" 属性。
+> 如果编辑 .tt 文件来包括资源（例如图标或图像），请确保该资源包括在 VSIX 生成中。 在解决方案资源管理器中，选择该文件并确保 `True`"**包含在 VSIX 中**" 属性。
 
  此文件控制将 DSL 打包到 Visual Studio 集成扩展 (VSIX) 中的方式。 有关详细信息，请参阅[部署域特定语言解决方案](msi-and-vsix-deployment-of-a-dsl.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)
 - [了解模型、类和关系](../modeling/understanding-models-classes-and-relationships.md)

@@ -2,19 +2,19 @@
 title: 调试 XSLT 代码的方法
 ms.date: 03/05/2019
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: bb358efb711211d58525afb8d30d5cb4cad6b2e3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f6f4a1ce60f04bcea6e21b52db9347a95292dab2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646069"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592849"
 ---
 # <a name="debugging-xslt"></a>调试 XSLT
 
@@ -33,7 +33,7 @@ ms.locfileid: "72646069"
 
 1. 在 Visual Studio 中打开样式表或 XML 文件。
 
-1. 从 " **XML** " 菜单中选择 "**启动 XSLT 调试**"，或按**Alt** +**F5**。
+1. 从 " **XML** " 菜单中选择 "**启动 XSLT 调试**"，或按**Alt**+**F5**。
 
 ## <a name="debug-from-an-app-that-uses-xslt"></a>从使用 XSLT 的应用进行调试
 
@@ -76,7 +76,7 @@ namespace ConsoleApplication
       XslCompiledTransform xslt = new XslCompiledTransform(true);
 
       // Compile the style sheet.
-      xslt.Load(stylesheet)
+      xslt.Load(stylesheet);
 
       // Execute the XSLT transform.
       FileStream outputStream = new FileStream(outputFile, FileMode.Append);
@@ -90,7 +90,7 @@ namespace ConsoleApplication
 
 [Xslt 探查器](../xml-tools/xslt-profiler.md)是一种工具，通过创建详细的 xslt 性能报告，开发人员可通过它来度量、评估和定位 XSLT 代码中与性能相关的问题。 有关详细信息，请参阅[XSLT 探查器](../xml-tools/xslt-profiler.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [演练：调试 XSLT 样式表](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md)
 - [首先查看 Visual Studio 调试器](../debugger/debugger-feature-tour.md)

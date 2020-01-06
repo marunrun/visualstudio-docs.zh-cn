@@ -3,17 +3,17 @@ title: 调试 XSLT 样式表
 ms.date: 03/05/2019
 ms.topic: conceptual
 ms.assetid: 3db9fa5a-f619-4cb6-86e7-64b364e58e5d
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c1f774757acc293091f19a783ed93f34647d494
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cd5882cc606bf241a281940464ba028e77986807
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72604614"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592472"
 ---
 # <a name="walkthrough-debug-an-xslt-style-sheet"></a>演练：调试 XSLT 样式表
 
@@ -44,11 +44,11 @@ ms.locfileid: "72604614"
 
    - 单击第12行的任意位置，然后按**F9**。
 
-   - 右键单击 `xsl:if` "开始" 标记，然后选择 "**断点**"  > **插入断点**"。
+   - 右键单击 `xsl:if` "开始" 标记，然后选择 "**断点**" > **插入断点**"。
 
       ![在 Visual Studio 中的 XSL 文件中插入断点](media/insert-breakpoint.PNG)
 
-6. 在菜单栏上，选择 " **XML**  > "**开始 XSLT 调试**"（或按**Alt** +**F5**）。
+6. 在菜单栏上，选择 " **XML** > "**开始 XSLT 调试**"（或按**Alt**+**F5**）。
 
    调试过程开始。
 
@@ -56,21 +56,21 @@ ms.locfileid: "72604614"
 
    "自动 **"、"** **局部变量**" 和 "**监视 1** " 窗口将出现在 Visual Studio 窗口的底部。 "**局部变量**" 窗口显示所有局部变量及其当前值。 其中包括样式表中定义的变量，也包括调试程序在跟踪上下文中的当前节点时使用的变量。
 
-## <a name="watch-window"></a>监视窗口
+## <a name="watch-window"></a>观察时段
 
 我们会将两个变量添加到 "**监视 1** " 窗口中，以便可以在处理输入文件时检查其值。 （如果您想要监视的变量已经存在，还可以使用 "**局部变量**" 窗口来检查值。）
 
-1. 从 "**调试**" 菜单中选择 " **Windows**  > **watch**  > **watch 1**"。
+1. 从 "**调试**" 菜单中选择 " **Windows** > **watch** > **watch 1**"。
 
    "**监视 1** " 窗口变为可见。
 
 2. 在 "**名称**" 字段中键入 `$bookAverage`，然后按**enter**。
 
-   @No__t_0 变量的值将显示在 "**值**" 字段中。
+   `$bookAverage` 变量的值将显示在 "**值**" 字段中。
 
 3. 在下一行中，在 "**名称**" 字段中键入 `self::node()`，然后按**enter**。
 
-   `self::node()` 是一个计算结果为当前上下文节点的 XPath 表达式。 `self::node()` XPath 表达式的值是第一个 book 节点。 此值随着转换的进度而更改。
+   `self::node()` 是计算结果为当前上下文节点的 XPath 表达式。 `self::node()` XPath 表达式的值是第一个 book 节点。 此值随着转换的进度而更改。
 
 4. 展开 "`self::node()`" 节点，然后展开值为 "`price`" 的节点。
 
@@ -90,7 +90,7 @@ ms.locfileid: "72604614"
 
    由于第二个 book 节点不满足 `xsl:if` 条件，因此不会将书籍节点添加到*below-average*输出文件中。 调试器将继续执行，直到它再次定位在样式表中的 `xsl:if` 元素上。 调试器现在位于*books.xml*文件中的第三个 `book` 节点上。
 
-   在 "**监视 1** " 窗口中，`self::node()` 值将更改为 "第三个书籍" 节点。 通过检查 `price` 元素的值，可以确定价格低于平均值。 @No__t_0 条件应该会成功。
+   在 "**监视 1** " 窗口中，`self::node()` 值将更改为 "第三个书籍" 节点。 通过检查 `price` 元素的值，可以确定价格低于平均值。 `xsl:if` 条件应该会成功。
 
 3. 按 F5继续。
 
@@ -100,7 +100,7 @@ ms.locfileid: "72604614"
 
 下列两个文件供该演练使用。
 
-### <a name="below-averagexsl"></a>below-average
+### <a name="below-averagexsl"></a>below-average.xsl
 
 ```xml
 <?xml version='1.0'?>
@@ -155,6 +155,6 @@ ms.locfileid: "72604614"
 </bookstore>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [调试 XSLT](../xml-tools/debugging-xslt.md)

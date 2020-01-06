@@ -3,17 +3,17 @@ title: XML 架构资源管理器-搜索架构集
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: ec1395e0-d03c-4130-810d-f2db656937bd
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ff7684c56a22ef760655563d1d9f58e2ff01b0c9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8378ebaccefaedfcc3d83f23bcab56f7417264dd
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72604643"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592498"
 ---
 # <a name="search-the-schema-set"></a>搜索架构集
 
@@ -43,7 +43,7 @@ ms.locfileid: "72604643"
 
 ## <a name="display-and-navigate-search-results"></a>显示和导航搜索结果
 
-完成搜索后，摘要结果窗格会添加到工具栏中，其中显示搜索的结果。 搜索结果还会突出显示在**XML 架构资源管理器**中，并通过垂直滚动条上的刻度标记。 您可以使用 "**转到下一个搜索结果**" 导航搜索结果，然后转到 " **XML 架构资源管理器**" 工具栏的摘要结果窗格上的 "**上一搜索结果**" 按钮;通过使用键盘键**F3**和**Shift** +**F3**;或单击滚动条上的刻度线。
+完成搜索后，摘要结果窗格会添加到工具栏中，其中显示搜索的结果。 搜索结果还会突出显示在**XML 架构资源管理器**中，并通过垂直滚动条上的刻度标记。 您可以使用 "**转到下一个搜索结果**" 导航搜索结果，然后转到 " **XML 架构资源管理器**" 工具栏的摘要结果窗格上的 "**上一搜索结果**" 按钮;通过使用键盘键**F3**和**Shift**+**F3**;或单击滚动条上的刻度线。
 
 可以通过单击摘要结果窗格上的 "**将突出显示的节点添加到工作区**" 按钮，将搜索结果添加到工作区。
 
@@ -53,6 +53,6 @@ ms.locfileid: "72604643"
 
 若要清除搜索结果，请单击 " **XML 架构资源管理器**搜索" 工具栏的 "摘要结果" 窗格中的**x**按钮。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 架构资源管理器](../xml-tools/xml-schema-explorer.md)

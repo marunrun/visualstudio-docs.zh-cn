@@ -3,17 +3,17 @@ title: 如何：在视图和 XML 编辑器之间切换
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: cb69fbbd-d99c-439e-9498-5df9050f8df0
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f8049806d14abc8e22154a763e982ce5c86304b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 54e43b00c877f5453d1dc28bbc9d5546fcef056f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72601880"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592616"
 ---
 # <a name="how-to-switch-between-views-and-the-xml-editor"></a>如何：在视图和 XML 编辑器之间切换
 
@@ -33,6 +33,6 @@ ms.locfileid: "72601880"
 
 5. 若要使用工具栏从内容模型视图切换到 "开始" 视图，请单击 XSD 工具栏上的 "**启动视图**" 按钮。
 
-6. 若要使用热键在视图之间切换，请按下 "开始" 视图的**ctrl** +**1** ，按**Ctrl** +**2**作为 "图形" 视图，并按**ctrl** +**3**作为 "内容模型" 视图。
+6. 若要使用热键在视图之间切换，请按下 "开始" 视图的**ctrl**+**1** ，按**Ctrl**+**2**作为 "图形" 视图，并按**ctrl**+**3**作为 "内容模型" 视图。
 
 7. 若要从内容模型视图中转到 "XML 编辑器"，请右键单击该节点，然后在上下文菜单中选择 "**查看代码**"。

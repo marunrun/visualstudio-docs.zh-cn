@@ -1,5 +1,5 @@
 ---
-title: 场景：使用可视化和建模更改设计
+title: 方案：使用可视化和建模更改设计
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - walkthrough [Visual Studio ALM], visualizing code
 - walkthrough [Visual Studio ALM], modeling software
 - walkthroughs [Visual Studio ALM], modeling software
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d332050538ca10d133a69f61a914338484fe799
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 371eadd1438d33601b90ebfae0432c20841c313c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986377"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591978"
 ---
-# <a name="scenario-change-your-design-using-visualization-and-modeling"></a>场景：使用可视化和建模更改设计
+# <a name="scenario-change-your-design-using-visualization-and-modeling"></a>方案：使用可视化和建模更改设计
 
 通过使用 Visual Studio 中的可视化和建模工具，确保你的软件系统满足用户的需求。
 使用代码图、依赖项关系图和类图等工具执行以下操作：
@@ -53,7 +53,7 @@ ms.locfileid: "72986377"
 
 ## <a name="scenario-overview"></a>方案概述
 
-此方案描述了两家虚构公司的软件开发生命周期中的剧集：现在就餐和 Lucerne 发布。 Dinner Now 在西雅图提供基于 Web 的送餐服务。 客户可以在 "立即就餐" 网站上订购餐费并为其付费。 订单随后会发送给相应的本地餐馆以便其配送餐点。 Lucerne Publishing 是一家位于纽约的公司，在网上和网下经营了多项业务。 例如，他们运行一个网站，客户可以在其中发布餐馆评论。
+本方案介绍了 Dinner Now 和 Lucerne Publishing 这两家虚构公司的软件开发周期中的各个阶段。 Dinner Now 在西雅图提供基于 Web 的送餐服务。 客户可以在 "立即就餐" 网站上订购餐费并为其付费。 订单随后会发送给相应的本地餐馆以便其配送餐点。 Lucerne Publishing 是一家位于纽约的公司，在网上和网下经营了多项业务。 例如，他们运行一个网站，客户可以在其中发布餐馆评论。
 
 Lucerne 最近收购了 Dinner Now，并希望进行以下变革：
 
@@ -95,7 +95,7 @@ Lucerne 保留了一组很复杂的大型系统，其中有一些系统已有 40
 
 - [映射解决方案中的依赖项](../modeling/map-dependencies-across-your-solutions.md)
 
-- [如何：向项目添加类图（类设计器）](../ide/class-designer/how-to-add-class-diagrams-to-projects.md)
+- [如何：向项目中添加类图（类设计器）](../ide/class-designer/how-to-add-class-diagrams-to-projects.md)
 
 - [Visual Studio 的建模 SDK - 特定于域的语言](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)
 
@@ -172,7 +172,7 @@ Dinner Now 必须估计满足新的需求所需的成本。 这部分取决于�
 
 |**关系图**|**描述**|
 |-|-|
-|*依赖关系关系图*<br /><br /> 请参阅：<br /><br /> - [从代码创建依赖项关系图](../modeling/create-layer-diagrams-from-your-code.md)<br />- [依赖关系图：参考](../modeling/layer-diagrams-reference.md)<br />- [依赖关系图：指南](../modeling/layer-diagrams-guidelines.md)<br />- [通过依赖关系图验证代码](../modeling/validate-code-with-layer-diagrams.md)|代码的逻辑体系结构。<br /><br /> 依赖关系关系图将 Visual Studio 解决方案中的项目组织并映射到名为 "*层*" 的抽象组。 这些层可标识这些项目在系统中执行的角色、任务或功能。<br /><br /> 依赖项关系图可用于描述系统的预期设计并对该设计验证不断发展的代码。<br /><br /> 要创建层，请从解决方案资源管理器、代码图、类视图和对象浏览器中拖动项。 要绘制新层，请使用工具箱或右键单击关系图图面。<br /><br /> 若要查看现有依赖关系，请右键单击依赖关系关系图图面，然后单击 "**生成依赖**项"。 要指定预期的依赖关系，请绘制新的依赖关系。|
+|*依赖关系关系图*<br /><br /> 请参阅：<br /><br /> - [从代码创建依赖项关系图](../modeling/create-layer-diagrams-from-your-code.md)<br />- [依赖关系图：参考](../modeling/layer-diagrams-reference.md)<br />- [依赖关系图：准则](../modeling/layer-diagrams-guidelines.md)<br />- [通过依赖关系图验证代码](../modeling/validate-code-with-layer-diagrams.md)|代码的逻辑体系结构。<br /><br /> 依赖关系关系图将 Visual Studio 解决方案中的项目组织并映射到名为 "*层*" 的抽象组。 这些层可标识这些项目在系统中执行的角色、任务或功能。<br /><br /> 依赖项关系图可用于描述系统的预期设计并对该设计验证不断发展的代码。<br /><br /> 要创建层，请从解决方案资源管理器、代码图、类视图和对象浏览器中拖动项。 要绘制新层，请使用工具箱或右键单击关系图图面。<br /><br /> 若要查看现有依赖关系，请右键单击依赖关系关系图图面，然后单击 "**生成依赖**项"。 要指定预期的依赖关系，请绘制新的依赖关系。|
 
 例如，下面的依赖项关系图描述了各层之间的依赖关系以及与每个层关联的项目数：
 
@@ -248,7 +248,7 @@ Dinner Now 提供了大批自动测试，Lucerne 可以重用这些测试，因�
 
 Lucerne 和 Dinner Now 必须集成其支付系统。 以下各部分介绍了可帮助团队执行此任务的 Visual Studio 建模图:
 
-- [可视化现有代码：代码映射](#VisualizeCode)
+- [可视化现有代码：代码图](#VisualizeCode)
 
 - [定义类型的术语表：类图](#DefineClasses)
 
@@ -262,7 +262,7 @@ Lucerne 和 Dinner Now 必须集成其支付系统。 以下各部分介绍了�
 
 - [应用体系结构建模](../modeling/model-your-app-s-architecture.md)
 
-### <a name="VisualizeCode"></a>可视化现有代码：代码图
+### <a name="VisualizeCode"></a> 可视化现有代码：代码图
 
 代码图显示代码中的当前组织和关系。 项由代码图上的 *“节点”* 表示，而关系由 *“链接”* 表示。 代码图可帮助你执行以下各类任务：
 
@@ -316,7 +316,7 @@ Lucerne 和 Dinner Now 必须集成其支付系统。 以下各部分介绍了�
 
      例如，要要可视化代码中的分层，请选择树布局。 请参阅[浏览和重新排列代码图](../modeling/browse-and-rearrange-code-maps.md)。
 
-#### <a name="summary-strengths-of-code-maps"></a>摘要:代码图的优点
+#### <a name="summary-strengths-of-code-maps"></a>摘要：代码图的优点
  代码图可帮助你：
 
 - 了解现有代码中的组织和关系。
@@ -329,10 +329,10 @@ Lucerne 和 Dinner Now 必须集成其支付系统。 以下各部分介绍了�
 
 |**关系图**|**描述**|
 |-|-|
-|依赖关系关系图|系统的逻辑体系结构。 使用依赖项验证来确保代码与设计保持一致。<br /><br /> 若要帮助你确定现有依赖项或目标依赖项，请创建代码图并对相关项进行分组。 若要创建依赖关系图，请参阅：<br /><br /> - [从代码创建依赖项关系图](../modeling/create-layer-diagrams-from-your-code.md)<br />- [依赖关系图：指南](../modeling/layer-diagrams-guidelines.md)|
+|依赖关系关系图|系统的逻辑体系结构。 使用依赖项验证来确保代码与设计保持一致。<br /><br /> 若要帮助你确定现有依赖项或目标依赖项，请创建代码图并对相关项进行分组。 若要创建依赖关系图，请参阅：<br /><br /> - [从代码创建依赖项关系图](../modeling/create-layer-diagrams-from-your-code.md)<br />- [依赖关系图：准则](../modeling/layer-diagrams-guidelines.md)|
 |类图（基于代码）|针对某个特定项目的代码中的现有类。<br /><br /> 要可视化和修改代码中的现有类，请使用类设计器。<br /><br /> 请参阅[如何：向项目中添加类图（类设计器）](../ide/class-designer/how-to-add-class-diagrams-to-projects.md)。|
 
-### <a name="DefineClasses"></a>定义类型的术语表：类图
+### <a name="DefineClasses"></a> 定义类型的术语表：类图
  类图定义参与系统的实体、术语或概念以及它们之间的关系。 例如，可以在开发过程中使用这些关系图来描述每个类的属性和操作，无论其实现语言或样式如何。
 
  为了帮助 Lucerne 描述和讨论参与“处理付款”用例的实体，他们绘制了以下类图：
@@ -383,9 +383,9 @@ Lucerne 和 Dinner Now 必须集成其支付系统。 以下各部分介绍了�
 
 作为探究和讨论现有类的第一步，你可以使用类设计器来根据代码创建类图。
 
-- [如何：向项目添加类图（类设计器）](../ide/class-designer/how-to-add-class-diagrams-to-projects.md)
+- [如何：向项目中添加类图（类设计器）](../ide/class-designer/how-to-add-class-diagrams-to-projects.md)
 
-#### <a name="summary-strengths-of-class-diagrams"></a>摘要:类图的优点
+#### <a name="summary-strengths-of-class-diagrams"></a>摘要：类图的优点
  类图可帮助你定义：
 
 - 一个常用术语词汇表，在讨论用户需求和参与系统的实体时将使用它。 请参阅[模型用户需求](../modeling/model-user-requirements.md)。
@@ -396,9 +396,9 @@ Lucerne 和 Dinner Now 必须集成其支付系统。 以下各部分介绍了�
 
 #### <a name="relationship-to-other-diagrams"></a>与其他关系图的关系
 
-|**关系图**|**说明**|
+|**关系图**|**描述**|
 |-|-|
-|依赖关系关系图|定义与类相关的系统的逻辑体系结构。<br /><br /> 使用依赖项验证来确保代码与设计保持一致。<br /><br /> 请参阅：<br /><br /> - [从代码创建依赖项关系图](../modeling/create-layer-diagrams-from-your-code.md)<br />- [依赖关系图：参考](../modeling/layer-diagrams-reference.md)<br />- [依赖关系图：指南](../modeling/layer-diagrams-guidelines.md)<br />- [通过依赖关系图验证代码](../modeling/validate-code-with-layer-diagrams.md)|
+|依赖关系关系图|定义与类相关的系统的逻辑体系结构。<br /><br /> 使用依赖项验证来确保代码与设计保持一致。<br /><br /> 请参阅：<br /><br /> - [从代码创建依赖项关系图](../modeling/create-layer-diagrams-from-your-code.md)<br />- [依赖关系图：参考](../modeling/layer-diagrams-reference.md)<br />- [依赖关系图：准则](../modeling/layer-diagrams-guidelines.md)<br />- [通过依赖关系图验证代码](../modeling/validate-code-with-layer-diagrams.md)|
 |代码图|可视化现有代码中的组织和关系。<br /><br /> 要标识类、类的关系和类的方法，请创建一个显示这些元素的代码图。<br /><br /> 请参阅：<br /><br /> - [映射解决方案中的依赖项](../modeling/map-dependencies-across-your-solutions.md)|
 
 ### <a name="DescribeLayers"></a>描述逻辑体系结构：依赖关系图
@@ -454,13 +454,13 @@ Lucerne 和 Dinner Now 必须集成其支付系统。 以下各部分介绍了�
 
 - [从代码创建依赖项关系图](../modeling/create-layer-diagrams-from-your-code.md)
 
-- [依赖关系图：参考](../modeling/layer-diagrams-reference.md)
+- [依赖项关系图：参考](../modeling/layer-diagrams-reference.md)
 
-- [依赖关系图：指南](../modeling/layer-diagrams-guidelines.md)
+- [依赖项关系图：指南](../modeling/layer-diagrams-guidelines.md)
 
 - [使用依赖项关系图验证代码](../modeling/validate-code-with-layer-diagrams.md)
 
-#### <a name="summary-strengths-of-dependency-diagrams"></a>摘要:依赖关系图的优点
+#### <a name="summary-strengths-of-dependency-diagrams"></a>摘要：依赖关系图的优点
 
 依赖项关系图可帮助你：
 
@@ -470,17 +470,17 @@ Lucerne 和 Dinner Now 必须集成其支付系统。 以下各部分介绍了�
 
 #### <a name="relationship-to-other-diagrams"></a>与其他关系图的关系
 
-|**关系图**|**说明**|
+|**关系图**|**描述**|
 |-|-|
 |代码图|可视化现有代码中的组织和关系。<br /><br /> 要创建层，请生成一个代码图，然后将该代码图上的项作为可能的层进行分组。 将组从映射拖到依赖关系图。<br /><br /> 请参阅：<br /><br /> - [映射解决方案中的依赖项](../modeling/map-dependencies-across-your-solutions.md)<br />- [浏览和重新排列代码图](../modeling/browse-and-rearrange-code-maps.md)|
 
-## <a name="external-resources"></a>外部资源
+## <a name="external-resources"></a>外部資源
 
 |**类别**|**Links**|
 |-|-|
 |**论坛**|- [Visual Studio 可视化和建模工具](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />- [Visual Studio 可视化和建模 SDK（DSL 工具）](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [代码可视化](../modeling/visualize-code.md)
 - [在你的开发过程中使用模型](../modeling/use-models-in-your-development-process.md)

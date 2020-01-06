@@ -26,12 +26,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c976f14a4250741d166c189c53a1b8cae8ea891a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2f0e3666c313c55df605cd7b79199827765f40f3
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736707"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75404361"
 ---
 # <a name="error-unable-to-start-debugging-on-the-web-server"></a>错误：无法在 Web 服务器上启动调试
 
@@ -52,6 +52,7 @@ ms.locfileid: "72736707"
 - [无法启动 ASP.NET 调试](#aspnet)
 - [调试器无法连接到远程计算机](#cannot_connect)
 - [请参阅有关常见配置错误的帮助。在调试器外部运行网页可能会提供进一步的信息。](#see_help)
+- [操作不受支持。未知错误：*错误号*](#operation_not_supported)
 
 ## <a name="IISlist"></a>IIS 未列出与启动 url 匹配的网站
 
@@ -76,7 +77,7 @@ ms.locfileid: "72736707"
 ## <a name="msvsmon"></a> Microsoft Visual Studio 远程调试监视器 (msvsmon.exe) 似乎没有在远程计算机上运行
 
 - 如果在远程计算机上进行调试，请确保已[安装并且正在运行远程调试器](../debugger/remote-debugging.md)。 如果消息提到了防火墙，请确保[防火墙中的正确端口](../debugger/remote-debugger-port-assignments.md)处于打开状态，尤其是在使用第三方防火墙时。
-- 如果你使用的是主机文件，请确保已正确配置该文件。 例如，如果使用**F5** （而不是**附加到进程**）进行调试，则主机文件需要包含与项目属性中相同的项目 URL、 **> Web > 服务器**或**属性 > 调试**的属性，具体取决于项目类型。
+- 如果你使用的是主机文件，请确保已正确配置该文件。 例如，如果使用**F5** （而不是**附加到进程**）进行调试，则主机文件需要包含与项目属性相同的项目 URL， **> 调试**的**属性 > Web > 服务器**或属性，具体取决于项目类型。
 
 ## <a name="server_error"></a>远程服务器返回了一个错误
 
@@ -85,7 +86,7 @@ ms.locfileid: "72736707"
 此外，下面是一些常见的错误代码和一些建议。
 - (403) 已禁止。 此错误有许多可能的原因，因此请检查您的日志文件和网站的 IIS 安全设置。 请确保服务器的 web.config 包含`debug=true`编译元素中。 请确保你的 Web 应用程序文件夹有正确的权限并验证你的应用程序池配置正确 （密码可能已更改）。 请参阅[检查 IIS 配置](#vxtbshttpservererrorsthingstocheck)。 如果这些设置是否已正确和本地调试，还验证连接到正确的服务器类型和 URL (在**属性 > Web > 服务器**或**属性 > 调试**，具体取决于你的项目类型）。
 - (503) 服务器不可用。 由于错误或配置更改，应用程序池可能已停止。 重新启动应用程序池。
-- (404) 未找到。 请确保为 ASP.NET 的正确版本配置了应用程序池。
+- 找不到 (404)。 请确保为 ASP.NET 的正确版本配置了应用程序池。
 
 ## <a name="aspnet"></a>无法启动 ASP.NET 调试
 
@@ -105,6 +106,10 @@ ms.locfileid: "72736707"
 - 是否在同一台计算机上运行 Visual Studio 和 Web 服务器？ 打开项目属性，并确保将项目配置为连接到正确的 Web 服务器并启动 URL。 (打开**属性 > Web > 服务器**或**属性 > 调试**具体取决于您的项目类型。)
 
 - 如果这不起作用或正在远程调试，请按照[检查 IIS 配置](#vxtbshttpservererrorsthingstocheck)中的步骤操作。
+
+## <a name="operation_not_supported"></a>操作不受支持。 未知错误：*错误号*
+
+如果正在 URL 重写，测试一个基本 web.config，没有 URL 重写的配置。 请参阅 **注意** 有关 URL 重写中的模块[检查 IIS 配置](#vxtbshttpservererrorsthingstocheck)。
 
 ## <a name="vxtbshttpservererrorsthingstocheck"></a>检查 IIS 配置
 
@@ -131,7 +136,7 @@ ms.locfileid: "72736707"
 
     IIS 中的ASP.NET 与 Visual Studio 项目的版本不匹配可能会导致此问题。 你可能需要在 web.config 中设置的 framework 版本。若要在 IIS 上安装 ASP.NET，请使用[Web 平台安装程序 (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)。 另请参阅[IIS 8.0 使用 ASP.NET 3.5 和 ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)或为 ASP.NET Core [使用 IIS 的 Windows 上的主机](https://docs.asp.net/en/latest/publishing/iis.html)。
 
-* 如果只使用 IP 地址，则解决身份验证错误
+* 如果你使用的仅为 IP 地址，则解决验证错误
 
      默认情况下，IP 地址被假定为 Internet 的一部分，而在 Internet 上不进行 NTLM 身份验证。 如果你的网站已在 IIS 中配置为需要身份验证，则此身份验证将失败。 若要更正此问题，可以指定远程计算机的名称，而不是 IP 地址。
 
@@ -161,5 +166,5 @@ ms.locfileid: "72736707"
 
     如果无法让应用程序使用调试器，请尝试在服务器上本地创建基本 ASP.NET 应用程序，并尝试调试基本应用程序。 （可能需要使用默认的 ASP.NET MVC 模板。）如果可以调试基本应用，这可能会帮助你确定两种配置的不同之处。 查找 web.config 文件中的设置差异，如 URL 重写规则。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [调试 Web 应用程序：错误和疑难解答](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

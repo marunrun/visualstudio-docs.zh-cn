@@ -3,17 +3,17 @@ title: XSLT 默认模板
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 773dd34e-67d3-4997-8df9-b71e7f880d88
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 81a764aa45eb74ba110d8b3b5965ede1e62bdadd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0f3a6e6391e3c76a43a94e5cf77c819a2f4b18c6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72607784"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592290"
 ---
 # <a name="xslt-default-templates"></a>XSLT 默认模板
 
@@ -21,6 +21,6 @@ ms.locfileid: "72607784"
 
 XSLT 调试器此时显示 XSLT 默认模板的代码。 当逐句通过 XSLT 转换时，如果使用默认模板，则调试器在窗口中显示默认模板。 这使您能够逐句通过默认模板的代码并且按照它的说明设置断点。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [调试 XSLT](../xml-tools/debugging-xslt.md)

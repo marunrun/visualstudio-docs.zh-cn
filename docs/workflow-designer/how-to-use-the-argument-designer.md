@@ -6,17 +6,17 @@ f1_keywords:
 - System.Activities.Presentation.View.ArgumentDesigner.UI
 - System.Activities.Presentation.View.DesignTimeArgument.UI
 ms.assetid: 64813fd5-1ea1-499a-98b4-ab2a44b7ee5e
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c3f8216bb0dfe3813e4852151c351b865128d0c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2903c69e3cf50f3ed0392239ee8848a79eb50e20
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650291"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75584551"
 ---
 # <a name="how-to-use-the-argument-designer"></a>如何：使用自变量设计器
 
@@ -28,12 +28,12 @@ ms.locfileid: "72650291"
 
 2. 通过单击设计画布左下角的 "**参数**" 按钮打开参数设计器。 此时将显示参数设计器。
 
-3. 单击标记为 "**创建参数**" 的行。 这会使用以下默认值添加一个具有新自变量的新行： "**名称**" 为 argumentx，其中 x 是一个整数，其初始值为 "1"，将自动递增以创建唯一的参数名称，并**在**"**方向**"**参数类型**的和**字符串**。 不会为**默认值**添加值。 可以在工作流设计过程中随时更改这些值。
+3. 单击标记为 "**创建参数**" 的行。 这会使用以下默认值添加一个具有新自变量的新行： argumentx 作为**名称**，其中 x 是一个整数，其初始值为1，其初始值为1，自动递增以创建唯一的参数名称，**在中**为**方向**，**字符串**用于**参数类型**。 不会为**默认值**添加值。 可以在工作流设计过程中随时更改这些值。
 
     > [!NOTE]
     > 若要删除某个参数，请单击该参数，然后按**delete**键。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用工作流设计器](developing-applications-with-the-workflow-designer.md)
 - [变量和参数](/dotnet/framework/windows-workflow-foundation/variables-and-arguments)

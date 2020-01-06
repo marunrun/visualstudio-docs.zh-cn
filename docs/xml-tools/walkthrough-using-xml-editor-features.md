@@ -3,17 +3,17 @@ title: 演练：使用 XML 编辑器功能
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: ea8dc357-2e66-455a-aec2-7ccaccfc9adf
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ce7997e1002ced50dc4d8203d522feb0a6bbb49
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d2cf35730b70fc8c8bbec392c73b444b6e8e0aaa
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72604447"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592459"
 ---
 # <a name="walkthrough-use-xml-editor-features"></a>演练：使用 XML 编辑器功能
 
@@ -34,13 +34,13 @@ ms.locfileid: "72604447"
 
      将显示 " **XSD 架构**" 对话框。
 
-4. 单击 **添加**。
+4. 单击“添加”。
 
      随即显示 "**打开 XSD 架构**" 对话框。
 
 5. 选择 "*雇佣*日期" 文件并单击 "**打开**"。
 
-6. 单击“确定”。
+6. 单击" **确定**"。
 
      现在，XML 架构已与 XML 文档关联。 XML 架构用于验证文档。 智能感知还使用该架构来填充有效元素的成员列表。
 
@@ -54,7 +54,7 @@ ms.locfileid: "72604447"
 
     - **!DOCTYPE**来添加文档类型。
 
-    - **?** 添加处理指令。
+    - **?** ，用于添加处理指令。
 
     - **员工**添加根元素。
 
@@ -88,7 +88,7 @@ ms.locfileid: "72604447"
 
      在 ID 元素值下清除波浪下划线和**工具提示**。 Employee 结束标记的**工具提示**现在显示消息：**元素 "employee" 的内容不完整。应为 "雇佣日期"** 。
 
-11. 将光标置于 ID 结束标记后面，在 "`<` 中键入" 成员 "列表中的"**雇佣日期**"，然后键入 `>`。
+11. 将光标置于 ID 结束标记后面，在 "`<`中键入" 成员 "列表中的"**雇佣日期**"，然后键入 `>`。
 
      编辑器将添加 XML 元素 `<hire-date></hire-date>` 并将光标置于 hire-date 开始标记的后面。
 
@@ -96,7 +96,7 @@ ms.locfileid: "72604447"
 
 ## <a name="to-format-the-xml-document"></a>格式化 XML 文档
 
-- 选择 "XML 编辑器" 工具栏上的 "**设置文档格式**" 按钮，或按**Ctrl** +**E**，**D**。
+- 选择 "XML 编辑器" 工具栏上的 "**设置文档格式**" 按钮，或按**Ctrl**+**E**，**D**。
 
    ![Visual Studio 中的 "XML 文档格式" 按钮](media/format-xml-document.png)
 
@@ -104,7 +104,7 @@ ms.locfileid: "72604447"
 
 ## <a name="to-save-the-xml-document"></a>保存 XML 文档
 
-1. 在 "**文件**" 菜单中，选择 "**另存为**"。
+1. 从**文件**菜单中选择**另存为**。
 
      将显示 "**文件另存为**" 对话框。 默认文件名为 *"XMLFile1"* 。
 
@@ -130,6 +130,6 @@ ms.locfileid: "72604447"
 </xs:schema>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 编辑器](../xml-tools/xml-editor.md)

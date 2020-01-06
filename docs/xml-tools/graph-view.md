@@ -1,19 +1,19 @@
 ---
-title: XML 架构设计器关系图视图
+title: XML 架构设计器图形视图
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 5881afde-3f24-4eb9-bff8-6cb3fc8aade7
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b19f8f64bc4fe63d111f4d5c61e96d6fff88a14b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cb71196dfbaf371e66131bf1e4b22584d3dbf0c3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646053"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592862"
 ---
 # <a name="graph-view"></a>图形视图
 
@@ -21,7 +21,7 @@ ms.locfileid: "72646053"
 
 下图显示的是图形视图，其设计图面上有六个全局节点。
 
-![XML 架构设计器关系图视图](../xml-tools/media/xsddesigner_graphview.gif)
+![XML 架构设计器图形视图](../xml-tools/media/xsddesigner_graphview.gif)
 
 ## <a name="design-surface"></a>设计图面
 
@@ -33,7 +33,7 @@ ms.locfileid: "72646053"
 
 如果设计图面为空白，则显示 XML 编辑器、 **Xml 架构资源管理器**和水印。 *水印*是指向所有 XSD 设计器视图的链接的列表。
 
-![XSD 设计器；关系图视图](../xml-tools/media/xsdgraphviewwatermark.gif)
+![XSD 设计器；图形视图](../xml-tools/media/xsdgraphviewwatermark.gif)
 
 如果架构集有错误，则列表的末尾会显示以下文本：“请使用‘错误列表’查看和修复架构集中的错误”[Use the Error List to view and fix the errors in the set]。
 
@@ -101,16 +101,16 @@ ms.locfileid: "72646053"
 
 |选项|描述|
 |-|-----------------|
-|**显示起始视图**|切换到[起始视图](../xml-tools/start-view.md)。 可以使用键盘快捷方式访问此视图： **Ctrl** +**1**。|
-|**显示内容模型视图**|切换到[内容模型视图](../xml-tools/content-model-view.md)。 可以使用键盘快捷方式访问此视图： **Ctrl** +**2**。|
-|**显示图形视图**|切换到[图形视图](../xml-tools/graph-view.md)。 可以使用键盘快捷方式访问此视图： **Ctrl** +**3**。|
+|**显示起始视图**|切换到[起始视图](../xml-tools/start-view.md)。 可以使用键盘快捷方式访问此视图： **Ctrl**+**1**。|
+|**显示内容模型视图**|切换到[内容模型视图](../xml-tools/content-model-view.md)。 可以使用键盘快捷方式访问此视图： **Ctrl**+**2**。|
+|**显示图形视图**|切换到[图形视图](../xml-tools/graph-view.md)。 可以使用键盘快捷方式访问此视图： **Ctrl**+**3**。|
 |**清除工作区**|清空工作区和设计图面。|
 |**从工作区中删除**|从工作区和设计图面中删除所选节点。|
 |**从工作区中删除所有内容但选择**|从工作区和设计图面中删除未选择的节点。 会在内容模型视图和图形视图中启用此选项。|
-|**从左到右**|将图形视图中的布局更改为节点的从左到右分层表示形式。 可以使用键盘快捷方式访问此选项： **Alt** +**向右箭头**。|
-|**从右到左**|将图形视图中的布局更改为节点的从右到左分层表示形式。 可以使用键盘快捷方式访问此选项： **Alt** +**向左键**。|
-|**从上到下**|将图形视图中的布局更改为节点的从上到下分层表示形式。 可以使用键盘快捷方式访问此选项： **Alt** +**向下键**。|
-|**从下到上**|将图形视图中的布局更改为节点的从下到上分层表示形式。 可以使用键盘快捷方式访问此选项： **Alt** +**向上键**。|
+|**从左到右**|将图形视图中的布局更改为节点的从左到右分层表示形式。 可以使用键盘快捷方式访问此选项： **Alt**+**向右箭头**。|
+|**从右到左**|将图形视图中的布局更改为节点的从右到左分层表示形式。 可以使用键盘快捷方式访问此选项： **Alt**+**向左键**。|
+|**从上到下**|将图形视图中的布局更改为节点的从上到下分层表示形式。 可以使用键盘快捷方式访问此选项： **Alt**+**向下键**。|
+|**从下到上**|将图形视图中的布局更改为节点的从下到上分层表示形式。 可以使用键盘快捷方式访问此选项： **Alt**+**向上键**。|
 
 ## <a name="panscroll"></a>平移/滚动
 
@@ -144,6 +144,6 @@ ms.locfileid: "72646053"
 
 如果在 XML 编辑器中对架构集进行更改，则所做的更改将在图形视图中同步。 有关详细信息，请参阅[与 XML 编辑器集成](../xml-tools/integration-with-xml-editor.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Design Surface](../xml-tools/xml-schema-designer-workspace.md)

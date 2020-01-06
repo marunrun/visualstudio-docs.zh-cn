@@ -11,17 +11,17 @@ helpviewer_keywords:
 - web services, as data sources
 - web services, connecting
 ms.assetid: a6b54353-05fe-4e5c-8631-90231fc95504
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 75efb8656d54c02f3126493504506c913a7e0f4a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 01ad796faa8c722ba088143da814305844136aa3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72642024"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586518"
 ---
 # <a name="how-to-connect-to-data-in-a-service"></a>如何：连接到服务中的数据
 
@@ -57,7 +57,7 @@ ms.locfileid: "72642024"
 
 若要向应用程序添加功能，请在 "**数据源**" 窗口中选择一个项，然后将其拖到窗体上以创建绑定控件。 有关详细信息，请参阅[在 Visual Studio 中将控件绑定到数据](../data-tools/bind-controls-to-data-in-visual-studio.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [将 WPF 控件绑定到 WCF 数据服务](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)
 - [Visual Studio 中的 Windows Communication Foundation 服务和 WCF 数据服务](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

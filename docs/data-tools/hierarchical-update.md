@@ -16,23 +16,23 @@ helpviewer_keywords:
 - updated data saving
 - related tables, saving
 ms.assetid: 68bae3f6-ec9b-45ee-a33a-69395029f54c
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 33ca9f91c9b1105af43af21a91f25be13e153aa9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 158908c45d33781bc9f983950d5558a23481ad37
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648450"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586570"
 ---
 # <a name="hierarchical-update"></a>分层更新
 
 *分层更新*是指将已更新的数据（从包含两个或多个相关表的数据集中）保存回数据库的过程，同时保持引用完整性规则。 *引用完整性*是指数据库中约束提供的一致性规则，这些规则控制插入、更新和删除相关记录的行为。 例如，它是在允许为该客户创建订单之前强制创建客户记录的引用完整性。  有关数据集中的关系的详细信息，请参阅[数据集中的关系](../data-tools/relationships-in-datasets.md)。
 
-分层更新功能使用 `TableAdapterManager` 来管理类型化数据集中的 `TableAdapter`s。 @No__t_0 组件是 Visual Studio 生成的类，而不是 .NET 类型。 将表从 "**数据源**" 窗口拖到 Windows 窗体或 WPF 页时，Visual Studio 会将类型为 TableAdapterManager 的变量添加到窗体或页面，并在组件栏的设计器中看到它。 有关 `TableAdapterManager` 类的详细信息，请参阅[tableadapter](../data-tools/create-and-configure-tableadapters.md)的 TableAdapterManager Reference 部分。
+分层更新功能使用 `TableAdapterManager` 来管理类型化数据集中的 `TableAdapter`。 `TableAdapterManager` 组件是 Visual Studio 生成的类，而不是 .NET 类型。 将表从 "**数据源**" 窗口拖到 Windows 窗体或 WPF 页时，Visual Studio 会将类型为 TableAdapterManager 的变量添加到窗体或页面，并在组件栏的设计器中看到它。 有关 `TableAdapterManager` 类的详细信息，请参阅[tableadapter](../data-tools/create-and-configure-tableadapters.md)的 TableAdapterManager Reference 部分。
 
 默认情况下，数据集将相关表视为 "仅关系"，这意味着它不强制外键约束。 您可以使用**数据集设计器**在设计时修改该设置。 选择两个表之间的关系线，以打开 "**关系**" 对话框。 此处所做的更改将决定 `TableAdapterManager` 在将相关表中的更改发送回数据库时的行为方式。
 
@@ -58,7 +58,7 @@ ms.locfileid: "72648450"
 
 ## <a name="set-the-order-to-perform-updates"></a>设置执行更新的顺序
 
-如果将顺序设置为 "执行更新"，则会设置在数据集的所有表中保存所有已修改数据所需的单个插入、更新和删除操作的顺序。 启用分层更新后，先执行插入，然后更新，然后删除。 @No__t_0 提供了一个 `UpdateOrder` 属性，该属性可以设置为先执行更新，然后再进行插入然后删除。
+如果将顺序设置为 "执行更新"，则会设置在数据集的所有表中保存所有已修改数据所需的单个插入、更新和删除操作的顺序。 启用分层更新后，先执行插入，然后更新，然后删除。 `TableAdapterManager` 提供了一个 `UpdateOrder` 属性，该属性可以设置为先执行更新，然后再进行插入然后删除。
 
 > [!NOTE]
 > 必须了解更新顺序全部包括在内。 也就是说，在执行更新时，将对数据集中的所有表执行 insert 和 delete 操作。
@@ -72,7 +72,7 @@ ms.locfileid: "72648450"
 但是，有时您可能想要从备份副本还原数据集。 在使用自动增量值时，可能会出现这种情况。 例如，如果保存操作不成功，则不会在数据集中重置自动增量值，并且数据集将继续创建自动递增的值。 这会使你的应用程序中可能无法接受的编号保持空白。 出现这种情况时，`TableAdapterManager` 提供 `BackupDataSetBeforeUpdate` 属性，该属性将现有数据集替换为备份副本（如果事务失败）。
 
 > [!NOTE]
-> @No__t_0 方法运行时，备份副本仅在内存中。 因此，不能以编程方式访问此备份数据集，因为它会在 `TableAdapterManager.UpdateAll` 方法完成运行后立即替换原始数据集或超出范围。
+> `TableAdapterManager.UpdateAll` 方法运行时，备份副本仅在内存中。 因此，不能以编程方式访问此备份数据集，因为它会在 `TableAdapterManager.UpdateAll` 方法完成运行后立即替换原始数据集或超出范围。
 
 ## <a name="modify-the-generated-save-code-to-perform-the-hierarchical-update"></a>修改生成的保存代码以执行分层更新
 
@@ -80,7 +80,7 @@ ms.locfileid: "72648450"
 
 从“数据源”窗口放置项后，代码会自动添加到 `Form_Load` 事件以填充每个表（`TableAdapter.Fill` 方法）。 代码还将添加到 <xref:System.Windows.Forms.BindingNavigator> 的“保存”按钮 click 事件中，以将数据集中的数据存回数据库中（`TableAdapterManager.UpdateAll` 方法）。
 
-生成的保存代码还包含调用 `CustomersBindingSource.EndEdit` 方法的一行代码。 更具体地讲，它调用添加到窗体中的第一个 <xref:System.Windows.Forms.BindingSource>that 的 <xref:System.Windows.Forms.BindingSource.EndEdit%2A> 方法。 换言之，仅为从 "**数据源**" 窗口拖到窗体上的第一个表生成此代码。 <xref:System.Windows.Forms.BindingSource.EndEdit%2A> 调用将提交当前正在编辑的任何数据绑定控件中的所有更改。 因此，如果数据绑定控件仍具有焦点，则单击“保存”按钮后，会先提交该控件中所有挂起的编辑，然后再执行真正的保存（`TableAdapterManager.UpdateAll` 方法）。
+生成的保存代码还包含调用 `CustomersBindingSource.EndEdit` 方法的一行代码。 更具体地讲，它调用添加到窗体中的第一个 <xref:System.Windows.Forms.BindingSource>的 <xref:System.Windows.Forms.BindingSource.EndEdit%2A> 方法。 换言之，仅为从 "**数据源**" 窗口拖到窗体上的第一个表生成此代码。 <xref:System.Windows.Forms.BindingSource.EndEdit%2A> 调用将提交当前正在编辑的任何数据绑定控件中的所有更改。 因此，如果数据绑定控件仍具有焦点，则单击“保存”按钮后，会先提交该控件中所有挂起的编辑，然后再执行真正的保存（`TableAdapterManager.UpdateAll` 方法）。
 
 > [!NOTE]
 > **数据集设计器**仅为拖放到窗体上的第一个表添加 `BindingSource.EndEdit` 代码。 因此，必须对窗体上的每个相关表添加一行调用 `BindingSource.EndEdit` 方法的代码。 对于本演练，这意味着你必须添加一个对 `OrdersBindingSource.EndEdit` 方法的调用。
@@ -114,7 +114,7 @@ ms.locfileid: "72648450"
 
 默认情况下，当您创建包含相关表的数据集时，将生成一个 `TableAdapterManager` 类。 若要阻止生成类，请将数据集的 `Hierarchical Update` 属性的值更改为 false。 将具有关系的表拖到 Windows 窗体或 WPF 页的设计图面上时，Visual Studio 将声明类的成员变量。 如果不使用数据绑定，则必须手动声明该变量。
 
-@No__t_0 类不是 .NET 类型。 因此，您不能在文档中查找它。 它在设计时创建，作为数据集创建过程的一部分。
+`TableAdapterManager` 类不是 .NET 类型。 因此，您不能在文档中查找它。 它在设计时创建，作为数据集创建过程的一部分。
 
 下面是 `TableAdapterManager` 类的常用方法和属性：
 
@@ -125,6 +125,6 @@ ms.locfileid: "72648450"
 |*tableName* `TableAdapter` 属性|表示 `TableAdapter`。 生成的 `TableAdapterManager` 包含它管理的每个 `TableAdapter` 的属性。 例如，使用包含 `CustomersTableAdapter` 和 `OrdersTableAdapter` 属性的 `TableAdapterManager` 生成包含 Customers 和 Orders 表的数据集。|
 |`UpdateOrder` 属性|控制单个 insert、update 和 delete 命令的顺序。 将此项设置为 `TableAdapterManager.UpdateOrderOption` 枚举中的值之一。<br /><br /> 默认情况下，`UpdateOrder` 设置为**InsertUpdateDelete**。 这意味着对数据集中的所有表执行 insert、update 和 delete 操作。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [将数据保存回数据库](../data-tools/save-data-back-to-the-database.md)

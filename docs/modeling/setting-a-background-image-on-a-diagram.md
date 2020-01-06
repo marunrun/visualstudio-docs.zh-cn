@@ -2,17 +2,17 @@
 title: 在图表上设置背景图像
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f8806571939cb057852ddd9cca971f9415339ca
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1bdf30636a6c7fee1463cbe554058f0802a5f6f0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748256"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591952"
 ---
 # <a name="setting-a-background-image-on-a-diagram"></a>在图表上设置背景图像
 在 Visual Studio 可视化和建模 SDK 中，可以使用自定义代码设置生成的设计器的背景图像。
@@ -100,7 +100,7 @@ ms.locfileid: "72748256"
 
      有关使用程序代码自定义模型的详细信息，请参阅[在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [定义形状和连接线](../modeling/defining-shapes-and-connectors.md)
 - [自定义文本和图像字段](../modeling/customizing-text-and-image-fields.md)

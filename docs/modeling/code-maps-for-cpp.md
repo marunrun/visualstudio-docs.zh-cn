@@ -2,17 +2,17 @@
 title: 查看源文件和C++标头文件之间的依赖关系
 ms.date: 05/16/2018
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bbba97f47c3ac0686bad15c3a1882e1e9bd85057
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a17015c7efbb51027450e06bd1fb571ef9820d48
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654184"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597238"
 ---
 # <a name="code-maps-for-c-projects"></a>项目的C++代码映射
 
@@ -49,6 +49,6 @@ C 和 C++ 代码不支持这些项：
 ||已从 .pdb 文件中去除调试信息。|如果链接器中已使用 **/PDBSTRIPPED** 选项，则改为包含完整的 .pdb 文件。|
 ||调用方不是函数，它是二进制文件中的形式转换 (thunk) 或数据节中的指针。|当调用方是形式转换 (thunk) 时，尝试使用 `_declspec(dllimport)` 以避免形式转换 (thunk)。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [映射与代码图的依赖项](../modeling/map-dependencies-across-your-solutions.md)

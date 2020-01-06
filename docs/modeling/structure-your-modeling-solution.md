@@ -2,17 +2,17 @@
 title: 安排你的建模解决方案
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fecf0d146c1116e6ec6376ffd9ad929cc9179d1c
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 57edf4253840294968238793bf9f3b24326a1e3f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985221"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591939"
 ---
 # <a name="structure-your-modeling-solution"></a>安排你的建模解决方案
 
@@ -72,7 +72,7 @@ ms.locfileid: "72985221"
 
 #### <a name="use-a-separate-package-for-each-layer"></a>为每个层使用单独的包
 
-1. 在每层的解决方案中，添加体系结构建模项目。 在**解决方案资源管理器**中，右键单击解决方案节点，指向 "**添加**"，然后单击 "**现有项目**"。 现在从每个解决方案都可以访问这个单一建模项目：体系结构项目以及每层的开发项目。
+1. 在每层的解决方案中，添加体系结构建模项目。 在中**解决方案资源管理器**，右键单击解决方案节点，指向**添加**，然后单击**现有项目**。 现在从每个解决方案都可以访问这个单一建模项目：体系结构项目以及每层的开发项目。
 
 2. 在共享模型中，为每个层创建一个包：在**解决方案资源管理器**中，选择建模项目。 在 " **UML 模型资源管理器**" 中，右键单击 "模型" 根节点，指向 "**添加**"，然后单击 "**包**"。
 
@@ -106,7 +106,7 @@ ms.locfileid: "72985221"
 
 [组织和管理模型](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-9-organizing-and-managing-your-models)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在你的开发过程中使用模型](../modeling/use-models-in-your-development-process.md)
 - [Visual Studio 体系结构工具指南](../modeling/visual-studio-architecture-tooling-guidance.md)

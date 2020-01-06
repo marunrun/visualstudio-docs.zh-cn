@@ -2,17 +2,17 @@
 title: 使用 MEF 扩展 DSL
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f42186915ade2a518506f5f6ccc55b3599a3ba99
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b8e4898ba6c87f25b38a6c3e42032412d69d8ece
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657517"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596601"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>使用 MEF 扩展 DSL
 
@@ -129,17 +129,17 @@ DSL 现在已启用 MEF。 可以将菜单命令、笔势处理程序和验证�
 
    - 此程序集通常具有以 "结尾的名称。Dsl .dll "。
 
-   - 如果有权访问 DSL 项目，可以在目录**DSL \\bin \\** 中找到程序集文件 \*
+   - 如果有权访问 DSL 项目，可以在目录**DSL\\bin\\** 下找到程序集文件 \*
 
    - 如果有权访问 DSL VSIX 文件，可以通过将 VSIX 文件的文件扩展名更改为 ".zip" 来找到该程序集。 解压缩 .zip 文件。
 
 3. 添加对以下 .NET 程序集的引用：
 
-   - VisualStudio （& e）
+   - Microsoft.VisualStudio.Modeling.Sdk.11.0.dll
 
-   - VisualStudio. 11.0. 11.0。
+   - Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0.dll
 
-   - VisualStudio. 11.0. 11.0。
+   - Microsoft.VisualStudio.Modeling.Sdk.Shell.11.0.dll
 
    - System.ComponentModel.Composition.dll
 
@@ -157,7 +157,7 @@ DSL 现在已启用 MEF。 可以将菜单命令、笔势处理程序和验证�
 
    1. 在**source.extension.vsixmanifest**中，单击 "**添加引用**"
 
-   2. 在对话框中，单击 "**添加有效负载**"，然后找到 DSL 的 VSIX 文件。 VSIX 文件是在 DSL 解决方案中构建的，在**DslPackage \\bin \\ \*** 。
+   2. 在对话框中，单击 "**添加有效负载**"，然后找到 DSL 的 VSIX 文件。 VSIX 文件是在 DSL 解决方案中构建的，在**DslPackage\\bin\\\*** 中。
 
        这允许用户同时安装 DSL 和你的扩展。 如果用户已安装 DSL，则仅安装你的扩展。
 
@@ -321,7 +321,7 @@ namespace MefExtension
 
 ### <a name="validation-constraints"></a>验证约束
 
-验证方法由 DSL 生成的 `ValidationExtension` 特性标记，还由 <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute> 标记。 方法可以出现在未由特性标记的任何类中。
+验证方法由 DSL 生成的 `ValidationExtension` 特性标记，还由 <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute>标记。 方法可以出现在未由特性标记的任何类中。
 
 有关详细信息，请参阅[以域特定语言进行验证](../modeling/validation-in-a-domain-specific-language.md)。
 
@@ -372,7 +372,7 @@ namespace MefExtension
 } } } }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [传送 Visual Studio 扩展](../extensibility/shipping-visual-studio-extensions.md)
 - [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)

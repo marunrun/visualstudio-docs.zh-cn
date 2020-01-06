@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, custom directive processors
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 836e2c24d9f236c7b87dfff60b934221b7645f1b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c70aa1853701ef671b7057ad698a0fb63334a1ca
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654066"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597173"
 ---
 # <a name="create-custom-t4-text-template-directive-processors"></a>创建自定义 T4 文本模板指令处理器
 
@@ -22,7 +22,7 @@ ms.locfileid: "72654066"
 
 若要创建自定义指令处理器，需要创建一个从 <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> 或 <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> 继承的类。
 
-这两者之间的区别在于 <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> 实现从用户获取参数所必需的最小接口，并生成生成模板输出文件的代码。 <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> 实现 "需要/提供" 设计模式。 <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> 处理两个特殊参数 `requires` 和 `provides`。  例如，自定义指令处理器可能会接受来自用户的文件名称，打开并读取文件，然后将该文件的文本存储在名为 `fileText` 的变量中。 @No__t_0 类的子类可能会将用户的文件名用作 `requires` 参数的值，并将该文本作为 `provides` 参数的值存储在其中的变量的名称。 此处理器将打开并读取文件，然后将该文件的文本存储在指定的变量中。
+这两者之间的区别在于 <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> 实现从用户获取参数所必需的最小接口，并生成生成模板输出文件的代码。 <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> 实现 "需要/提供" 设计模式。 <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> 处理两个特殊参数 `requires` 和 `provides`。  例如，自定义指令处理器可能会接受来自用户的文件名称，打开并读取文件，然后将该文件的文本存储在名为 `fileText`的变量中。 <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> 类的子类可能会将用户的文件名用作 `requires` 参数的值，并将该文本作为 `provides` 参数的值存储在其中的变量的名称。 此处理器将打开并读取文件，然后将该文件的文本存储在指定的变量中。
 
 在 Visual Studio 中从文本模板调用自定义指令处理器之前，必须对其进行注册。
 
@@ -46,7 +46,7 @@ ms.locfileid: "72654066"
 
 ### <a name="principal-parts-of-a-custom-directive-processor"></a>自定义指令处理器的主体部分
 
-若要开发指令处理器，您必须创建一个继承自 <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> 或 <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> 的类。
+若要开发指令处理器，您必须创建一个继承自 <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> 或 <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor>的类。
 
 必须实现的最重要的 `DirectiveProcessor` 方法如下所示。
 
@@ -64,7 +64,7 @@ ms.locfileid: "72654066"
 
 - 有关详细信息，请参阅[演练：创建自定义指令处理器](../modeling/walkthrough-creating-a-custom-directive-processor.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [部署自定义指令处理器](../modeling/deploying-a-custom-directive-processor.md)介绍了如何注册自定义指令处理器。
 - [演练：创建自定义指令处理器](../modeling/walkthrough-creating-a-custom-directive-processor.md)介绍了如何创建自定义指令处理器，如何注册和测试指令处理器，以及如何将输出文件的格式设置为 HTML。

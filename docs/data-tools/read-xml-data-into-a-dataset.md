@@ -15,17 +15,17 @@ helpviewer_keywords:
 - XML documents, reading
 - datasets [Visual Basic], reading XML data
 ms.assetid: fae72958-0893-47d6-b3dd-9d42418418e4
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6dec7cad50d818d4b2418442d8196cb8b5ff046a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5f89645b9d5ec8ab0f69fad4fea5a399d8e6764d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72641379"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586323"
 ---
 # <a name="read-xml-data-into-a-dataset"></a>将 XML 数据读入到数据集中
 
@@ -141,14 +141,14 @@ ADO.NET 提供了用于处理 XML 数据的简单方法。 在本演练中，将
     |-------------|--------------|-------------|
     |`TextBox1`|**多行**|`true`|
     ||**ScrollBars**|**垂直**|
-    |`Button1`|**名称**|`ReadXmlButton`|
-    ||**文本**|`Read XML`|
-    |`Button2`|**名称**|`ShowSchemaButton`|
-    ||**文本**|`Show Schema`|
+    |`Button1`|**Name**|`ReadXmlButton`|
+    ||**“文本”**|`Read XML`|
+    |`Button2`|**Name**|`ShowSchemaButton`|
+    ||**“文本”**|`Show Schema`|
 
 ## <a name="create-the-dataset-that-receives-the-xml-data"></a>创建接收 XML 数据的数据集
 
-在此步骤中，将创建一个名为 `authors` 的新数据集。 有关数据集的详细信息，请参阅[Visual Studio 中的数据集工具](../data-tools/dataset-tools-in-visual-studio.md)。
+在此步骤中，将创建一个名为 `authors`的新数据集。 有关数据集的详细信息，请参阅[Visual Studio 中的数据集工具](../data-tools/dataset-tools-in-visual-studio.md)。
 
 1. 在**解决方案资源管理器**中，选择 " **Form1**" 的源文件，然后在**解决方案资源管理器**工具栏上选择 "**查看设计器**" 按钮。
 
@@ -158,7 +158,7 @@ ADO.NET 提供了用于处理 XML 数据的简单方法。 在本演练中，将
 
      **DataSet1**将添加到组件栏。
 
-4. 在 "**属性**" 窗口中，为 `AuthorsDataSet` 设置 "**名称**" 和 "<xref:System.Data.DataSet.DataSetName%2A> 属性"。
+4. 在 "**属性**" 窗口中，为`AuthorsDataSet`设置 "**名称**" 和 "<xref:System.Data.DataSet.DataSetName%2A> 属性"。
 
 ## <a name="create-the-event-handler-to-read-the-xml-file-into-the-dataset"></a>创建事件处理程序以将 XML 文件读取到数据集
 
@@ -179,7 +179,7 @@ ADO.NET 提供了用于处理 XML 数据的简单方法。 在本演练中，将
 
 ## <a name="create-the-event-handler-to-display-the-schema-in-the-textbox"></a>创建事件处理程序以在文本框中显示架构
 
-"**显示架构**" 按钮创建一个使用架构填充的 <xref:System.IO.StringWriter> 对象，并显示在 <xref:System.Windows.Forms.TextBox>control 中。
+"**显示架构**" 按钮将创建一个 <xref:System.IO.StringWriter> 对象，该对象填充架构并显示在 <xref:System.Windows.Forms.TextBox>控件中。
 
 1. 在**解决方案资源管理器**中，选择 " **Form1**"，然后选择 "**视图设计器**" 按钮。
 
@@ -214,7 +214,7 @@ ADO.NET 提供了用于处理 XML 数据的简单方法。 在本演练中，将
 
 - 编辑数据集中的数据，并将数据写入数据库。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中访问数据](../data-tools/accessing-data-in-visual-studio.md)
 - [Visual Studio 中的 XML 工具](../xml-tools/xml-tools-in-visual-studio.md)

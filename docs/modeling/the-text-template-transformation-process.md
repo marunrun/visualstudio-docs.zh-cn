@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, transformation process
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 518c06f8630ad9fa7742f7b3e85ac27263cd0a86
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6d6cca9a4a98c4afcffa8322acb75a4cef8a7527
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605811"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565859"
 ---
 # <a name="the-text-template-transformation-process"></a>文本模板转换过程
 文本模板转换过程会将文本模板文件作为输入，并生成一个新的文本文件作为输出。 例如，您可以使用文本模板来生成 Visual Basic 或C#代码，也可以生成 HTML 报表。
@@ -27,7 +27,7 @@ ms.locfileid: "72605811"
 
 |组件|描述|自定义（是/否）|
 |-|-|-|
-|搜索引擎优化|引擎组件控制文本模板转换过程|否。|
+|引擎|引擎组件控制文本模板转换过程|No。|
 |Host|宿主是引擎和用户环境之间的接口。 Visual Studio 是文本转换过程的宿主。|可以。 可以编写自定义主机。|
 |指令处理器|指令处理器是在文本模板中处理指令的类。 您可以使用指令向输入源中的文本模板提供数据。|可以。 您可以编写自定义指令处理器|
 
@@ -60,4 +60,4 @@ ms.locfileid: "72605811"
 
  `<#@ import namespace="System.Text" #>`
 
- 标准指令处理器将此转换为生成的转换类中的 `using` 语句。 然后，你可以在模板代码的其余部分使用 `StringBuilder` 类，而无需将其作为 `System.Text.StringBuilder` 进行限定。
+ 标准指令处理器将此转换为生成的转换类中的 `using` 语句。 然后，你可以在模板代码的其余部分使用 `StringBuilder` 类，而无需将其作为 `System.Text.StringBuilder`进行限定。

@@ -2,17 +2,17 @@
 title: FxCop 分析器配置选项
 ms.date: 09/23/2019
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2d97552a79b520bd522cb8ec768d7d36fe2fb052
-ms.sourcegitcommit: c222052906362bf1a3762ec4d4623170e4e06702
+ms.openlocfilehash: 9e87ec97acd7aa0ab668c0840aec8bbd84df7e9e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74809811"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587623"
 ---
 # <a name="rule-scope-options-for-fxcop-analyzers"></a>FxCop 分析器的规则作用域选项
 
@@ -64,7 +64,7 @@ ms.locfileid: "74809811"
 | - | - | - | - |
 | 为应分析的 Api 指定必需的修饰符 | 以下允许的修饰符表中的一个或多个值<br/><br/>用逗号（，）分隔多个值 | 取决于每个规则 | [CA1802](ca1802.md) |
 
-| 允许的修饰符 | 总结 |
+| 允许的修饰符 | 摘要 |
 | --- | --- |
 | `none` | 无修饰符要求 |
 | `static` 或 `Shared` | 必须声明为 "static" （在 Visual Basic 中为 "Shared"） |

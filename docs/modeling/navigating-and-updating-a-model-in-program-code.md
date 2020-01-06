@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7273019d837a9cc13f6ffb306946372f11ec1f7f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 521ad703b92133f56d38e061123bf13db13d6375
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658360"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75566171"
 ---
 # <a name="navigate-and-update-a-model-in-program-code"></a>在程序代码中导航和更新模型
 
@@ -55,7 +55,7 @@ ms.locfileid: "72658360"
 
  `henry.Name = "Henry VIII";`
 
- 如果在 DSL 定义中**计算**属性**类型**，则不能对其进行设置。 有关详细信息，请参阅[计算的和自定义的存储属性](../modeling/calculated-and-custom-storage-properties.md)。
+ 如果在 DSL 定义中**计算**属性**类型**，则不能对其进行设置。 有关详细信息，请参阅[计算和自定义存储属性](../modeling/calculated-and-custom-storage-properties.md)。
 
 ### <a name="relationships"></a>关系
  在 DSL 定义中定义的域关系将成为属性对，每个属性在关系的每个端点上都有一个。 属性的名称将在 Dsldefinition.dsl 关系图中显示为关系的每一侧角色上的标签。 根据角色的重数，属性的类型可以是关系的另一端的类，也可以是该类的集合。
@@ -64,7 +64,7 @@ ms.locfileid: "72658360"
 
  `FamilyTreeModel ftree = henry.FamilyTreeModel;`
 
- 关系的另一端的属性始终是反向的。 当创建或删除链接时，将更新这两个元素的角色属性。 以下表达式（使用 `System.Linq` 的扩展）在示例中的 ParentsHaveChildren 关系中始终为 true：
+ 关系的另一端的属性始终是反向的。 当创建或删除链接时，将更新这两个元素的角色属性。 以下表达式（使用 `System.Linq`的扩展）在示例中的 ParentsHaveChildren 关系中始终为 true：
 
  `(Person p) => p.Children.All(child => child.Parents.Contains(p))`
 
@@ -84,7 +84,7 @@ ms.locfileid: "72658360"
 
  `foreach (ParentsHaveChildren link in ParentsHaveChildren.GetLinks(henry, edward)) { ... }`
 
- 还有其他用于访问链接的方法。 例如:
+ 还有其他用于访问链接的方法。 例如：
 
  `foreach (ParentsHaveChildren link in     ParentsHaveChildren.GetLinksToChildren(henry)) { ... }`
 
@@ -108,7 +108,7 @@ ms.locfileid: "72658360"
  `store.ElementDirectory.GetElement(elementId);`
 
 ## <a name="metadata"></a>访问类信息
- 可以获取有关 DSL 定义的类、关系和其他方面的信息。 例如:
+ 可以获取有关 DSL 定义的类、关系和其他方面的信息。 例如：
 
  `DomainClassInfo personClass = henry.GetDomainClass();`
 
@@ -199,13 +199,13 @@ using (Transaction t =
 
  可以通过三种方式创建关系的实例。 这三种方法都具有相同的效果：
 
-- 设置源角色扮演者的属性。 例如:
+- 设置源角色扮演者的属性。 例如：
 
   - `familyTree.People.Add(edward);`
 
   - `edward.Parents.Add(henry);`
 
-- 设置目标角色扮演者的属性。 例如:
+- 设置目标角色扮演者的属性。 例如：
 
   - `edward.familyTreeModel = familyTree;`
 
@@ -215,7 +215,7 @@ using (Transaction t =
 
        此角色的重数为 `0..*`，因此我们将其添加到集合中。
 
-- 显式构造关系的实例。 例如:
+- 显式构造关系的实例。 例如：
 
   - `FamilyTreeHasPeople edwardLink = new FamilyTreeHasPeople(familyTreeModel, edward);`
 
@@ -227,7 +227,7 @@ using (Transaction t =
 
 ## <a name="deleteelements"></a>删除元素
 
-通过调用 `Delete()` 删除元素：
+通过调用 `Delete()`删除元素：
 
 `henry.Delete();`
 
@@ -235,7 +235,7 @@ using (Transaction t =
 
 - 与元素之间的关系链接。 例如，`edward.Parents` 将不再包含 `henry`。
 
-- @No__t_0 标志为 true 的角色所在的元素。 例如，将删除显示该元素的形状。
+- `PropagatesDelete` 标志为 true 的角色所在的元素。 例如，将删除显示该元素的形状。
 
 默认情况下，每个嵌入关系在目标角色上都 `PropagatesDelete` 为 true。 删除 `henry` 不会删除 `familyTree`，但 `familyTree.Delete()` 会删除 `Persons`。
 
@@ -262,7 +262,7 @@ using (Transaction t =
 
  这三种方法都具有相同的效果。 只需使用其中一个。
 
- 如果角色的值为 0 ..1 或 1 ..1，则可以将其设置为 `null` 或其他值：
+ 如果角色的值为 0 ..1 或 1 ..1，则可以将其设置为 `null`或其他值：
 
  `edward.FamilyTreeModel = null;`//或：
 
@@ -285,8 +285,8 @@ using (Transaction t =
 
  `link.MoveBefore(role, nextLink);`
 
-## <a name="locks"></a>住
- 您所做的更改可能会受到锁定的阻止。 可以在单个元素、分区和存储区上设置锁。 如果这些级别中有任何一个锁锁定了您要进行的更改类型，则在您尝试时可能会引发异常。 可以通过使用元素来发现是否设置了锁。GetLocks （），它是在命名空间 <xref:Microsoft.VisualStudio.Modeling.Immutability> 中定义的扩展方法。
+## <a name="locks"></a> 锁
+ 您所做的更改可能会受到锁定的阻止。 可以在单个元素、分区和存储区上设置锁。 如果这些级别中有任何一个锁锁定了您要进行的更改类型，则在您尝试时可能会引发异常。 可以通过使用元素来发现是否设置了锁。GetLocks （），它是在命名空间 <xref:Microsoft.VisualStudio.Modeling.Immutability>中定义的扩展方法。
 
  有关详细信息，请参阅[定义锁定策略以创建只读段](../modeling/defining-a-locking-policy-to-create-read-only-segments.md)。
 
@@ -329,13 +329,13 @@ using (Transaction t = targetDiagram.Store.
 |域关系|<xref:Microsoft.VisualStudio.Modeling.ElementLink>|
 |形状|<xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape>|
 |连接符|<xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape>|
-|关系图|<xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram>|
+|图示|<xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram>|
 
- 关系图上的元素通常表示一个模型元素。 通常（但不总是），<xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape> 表示域类实例，而 <xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape> 表示域关系实例。 @No__t_0 关系将节点或链接形状链接到它所表示的模型元素。
+ 关系图上的元素通常表示一个模型元素。 通常（但不总是），<xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape> 表示域类实例，而 <xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape> 表示域关系实例。 <xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationViewsSubject> 关系将节点或链接形状链接到它所表示的模型元素。
 
  每个节点或链接形状都属于一个关系图。 二进制链接形状连接两个节点形状。
 
- 形状可以有两个集中的子形状。 @No__t_0 集内的形状局限于其父级的边界框。 @No__t_0 列表中的形状可能出现在父级边界以外或部分之外，例如标签或端口。 关系图没有 `RelativeChildShapes` 且没有 `Parent`。
+ 形状可以有两个集中的子形状。 `NestedChildShapes` 集内的形状局限于其父级的边界框。 `RelativeChildShapes` 列表中的形状可能出现在父级边界以外或部分之外，例如标签或端口。 关系图没有 `RelativeChildShapes` 且没有 `Parent`。
 
 ### <a name="views"></a>在形状和元素之间导航
  域模型元素和形状元素由 <xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationViewsSubject> 关系相关。
@@ -428,7 +428,7 @@ FamilyTreeDiagram diagram =
 
 当你创建一个元素并将其链接到嵌入关系树时，将自动创建并关联一个形状。 这是通过在事务结束时执行的 "修复" 规则来完成的。 但是，形状将显示在自动分配的位置，并且其形状、颜色和其他功能将具有默认值。 若要控制如何创建形状，您可以使用 merge 函数。 必须先将要添加的元素添加到 ElementGroup 中，然后再将该组合并到关系图中。
 
-此方法：
+以下方法：
 
 - 如果已将属性指定为元素名称，则设置名称。
 
@@ -469,7 +469,7 @@ partial class MyDiagram
 }
 ```
 
- 如果提供了多个形状，请使用 `AbsoluteBounds` 设置其相对位置。
+ 如果提供了多个形状，请使用 `AbsoluteBounds`设置其相对位置。
 
  你还可以使用此方法设置连接器的颜色和其他公开的属性。
 
@@ -482,7 +482,7 @@ partial class MyDiagram
 ## <a name="store-partitions"></a>存储分区
  加载模型时，将同时加载随附的关系图。 通常情况下，模型会加载到 DefaultPartition 中，关系图内容会加载到另一个分区中。 通常会加载每个分区的内容并将其保存到单独的文件中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualStudio.Modeling.ModelElement>
 - [域特定语言中的验证](../modeling/validation-in-a-domain-specific-language.md)

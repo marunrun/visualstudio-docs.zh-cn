@@ -13,18 +13,21 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c38ff2fcc762ccc202e2a02ecd36e942db75ad3d
-ms.sourcegitcommit: ab18c9d850192fc9ccec10961f1126e8b0cba8da
+ms.openlocfilehash: 67c96c8d28014ee22a387c3ba3ca828b37f267dd
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73061082"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75405213"
 ---
 # <a name="create-custom-views-of-c-objects-in-the-debugger-using-the-natvis-framework"></a>使用 Natvis 框架在C++调试器中创建对象的自定义视图
 
 Visual Studio *Natvis* 框架可以自定义本机类型在调试器变量窗口（例如**局部变量**、**监视**以及**数据提示**窗口）中显示的方式。 Natvis 的可视化功能可以让你创建的类型在调试期间更加直观清晰。
 
 Natvis 替换了 Visual Studio 早期版本中的 *autoexp.dat* 文件，提供了 XML 语法、更好的诊断功能、版本控制功能以及多文件支持功能。
+
+> [!NOTE]
+> Natvis 自定义项适用于类和结构，但不能使用 typedef。
 
 ## <a name="BKMK_Why_create_visualizations_"></a>Natvis 可视化效果
 
@@ -34,7 +37,7 @@ Natvis 替换了 Visual Studio 早期版本中的 *autoexp.dat* 文件，提供�
 
 ![TextBox 默认可视化](../debugger/media/dbg_natvis_textbox_default.png "TextBox 默认可视化")
 
-高亮行显示的是 `TextBox` 类的 `Text` 属性。 由于类的层次结构很复杂，因此很难找到这个属性。 调试器不知道如何解释自定义字符串类型，所以你看不到文本框中的字符串。
+突出显示的行显示 `Text` 类的 `TextBox` 属性。 由于类的层次结构很复杂，因此很难找到这个属性。 调试器不知道如何解释自定义字符串类型，所以你看不到文本框中的字符串。
 
 如果应用了 Natvis 自定义可视化工具规则，那么在变量窗口中，同样的`TextBox`看起来就简单得多。 类的重要成员会显示在一起，并且调试器会显示自定义字符串类型的基础字符串值。
 
@@ -69,9 +72,9 @@ Visual Studio 在 *%VSINSTALLDIR%\Common7\Packages\Debugger\Visualizers*文件�
 
 **若要添加新的*natvis*文件：**
 
-1. 在解决方案资源管理器C++中选择项目节点，然后选择 "**项目**"  >  "**添加新项**"，或右键单击该项目，然后选择 "**添加** > **新项**"。
+1. 在解决方案资源管理器C++中选择项目节点，然后选择 "**项目** > "**添加新项**"，或右键单击该项目并选择"**添加** > **新项**"。
 
-1. 在 "**添加新项**" 对话框中，选择 " **C++Visual** > "**实用程序** > **调试器可视化文件（. natvis）** 。
+1. 在 "**添加新项**" 对话框中，选择 " **Visual C++**  > **实用工具**" > **调试器可视化文件（. natvis）** 。
 
 1. 命名该文件，然后选择 "**添加**"。
 
@@ -128,9 +131,9 @@ Visual Studio 调试器会自动在 C++ 项目中加载 *.natvis* 文件，默�
 还可以使用 **.natvisreload** 命令将 *.natvis* 文件升级到较新的版本。 例如， *.natvis* 文件可能被纳入了源代码管理中，并且你需要获取其他人最近所做的更改。
 
 ## <a name="BKMK_Expressions_and_formatting"></a> 表达式和格式化
-Natvis 的可视化功能使用 C++ 表达式来指定要显示的数据项。 除了[上下文运算符 (C++)](../debugger/context-operator-cpp.md) 中所述的、调试器中的 C++ 表达式的增强功能和限制外，还要注意以下事项：
+Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[上下文运算符 (C++)](../debugger/context-operator-cpp.md) 中所述的、调试器中的 C++ 表达式的增强功能和限制外，还要注意以下事项：
 
-- Natvis 表达式在可视化对象上下文而非当前堆栈框架中进行计算。 例如，Natvis 表达式中 `x` 引用要可视化的对象中名为**x**的字段，而不是当前函数中名为**x**的局部变量。 尽管可以访问全局变量，但不能访问 Natvis 表达式中的局部变量。
+- Natvis 表达式在可视化对象上下文而非当前堆栈框架中进行计算。 例如，Natvis 表达式中的 `x` 指的是可视化对象中名为**x**的字段，而不是当前函数中名为**x**的局部变量。 尽管可以访问全局变量，但不能访问 Natvis 表达式中的局部变量。
 
 - Natvis 表达式不允许函数计算或副作用。 函数调用和赋值运算符会被忽略。 由于[调试器内部函数](../debugger/expressions-in-the-debugger.md#BKMK_Using_debugger_intrinisic_functions_to_maintain_state)没有副作用，因此可以从任何 Natvis 表达式随意调用，即使系统不允许进行其他函数调用也是如此。
 
@@ -164,7 +167,7 @@ Natvis 的可视化功能使用 C++ 表达式来指定要显示的数据项。 �
 
 **若要启用 Natvis 诊断：**
 
-- 在 " **Tools** > **选项**" 下（或 "**调试**"  > **选项**） >**调试** > **输出窗口**中，将 " **Natvis 诊断消息（C++仅限）** " 设置为 "**错误**"，**警告**或 "**详细**"，然后选择 **"确定"** 。
+- 在 "**工具**" > **选项**"（或"**调试** > **选项**"） >**调试** > **输出窗口**中，将" **Natvis 诊断消息（C++仅）** "设置为"**错误**"、"**警告**"或 **"** **详细**"
 
 错误将显示在 "**输出**" 窗口中。
 
@@ -183,7 +186,7 @@ Natvis 的可视化功能使用 C++ 表达式来指定要显示的数据项。 �
 
 `AutoVisualizer` 元素可以具有[类型](#BKMK_Type)、 [HResult](#BKMK_HResult)、 [UIVisualizer](#BKMK_UIVisualizer)和[CustomVisualizer](#BKMK_CustomVisualizer)子项。
 
-### <a name="BKMK_Type"></a>Type 元素
+### <a name="BKMK_Type"></a> Type 元素
 
 基本 `Type` 如下例所示：
 
@@ -256,7 +259,7 @@ Natvis 的可视化功能使用 C++ 表达式来指定要显示的数据项。 �
 ```
 
 ### <a name="optional-attribute"></a>可选特性
-你可以将 `Optional` 属性放在任一节点上。 如果某个可选节点内的某个子表达式的分析失败，调试器就会忽略该节点，但会应用 `Type` 规则的其余部分。 在下面的类型中，`[State]` 不是可选的，但 `[Exception]` 是可选的。  如果 `MyNamespace::MyClass` 包含名为 `M_exceptionHolder` 的字段，就会同时显示 `[State]` 节点和 `[Exception]` 节点，但如果不包含 `_M_exceptionHolder` 字段，就会只显示 `[State]` 节点。
+你可以将 `Optional` 属性放在任一节点上。 如果某个可选节点内的某个子表达式的分析失败，调试器就会忽略该节点，但会应用 `Type` 规则的其余部分。 在下面的类型中， `[State]` 不可选，但 `[Exception]` 可选。  如果 `MyNamespace::MyClass` 包含名为 `M_exceptionHolder` 的字段，就会同时显示 `[State]` 节点和 `[Exception]` 节点，但如果不包含 `_M_exceptionHolder` 字段，就会只显示 `[State]` 节点。
 
 ```xml
 <Type Name="MyNamespace::MyClass">
@@ -271,7 +274,7 @@ Natvis 的可视化功能使用 C++ 表达式来指定要显示的数据项。 �
 
 可选的 `Condition` 属性可用于许多可视化元素，指定何时使用可视化规则。 如果条件属性内的表达式解析为 `false`，就不应用可视化规则。 如果其计算结果为 `true`，或者没有 `Condition` 属性，就会应用可视化规则。 你可以将此属性用于可视化条目中的 if-else 逻辑。
 
-例如，以下可视化对象的智能指针类型具有两个 `DisplayString` 元素。 当 `_Myptr` 成员为空时，第一个 `DisplayString` 元素的条件解析为 `true`，以便显示该窗体。 如果 `_Myptr` 成员不为空，则条件的计算结果为 `false`，第二个 `DisplayString` 元素显示。
+例如，下面的可视化对象具有智能指针类型的两个 `DisplayString` 元素。 当 `_Myptr` 成员为空时，第一个 `DisplayString` 元素的条件解析为 `true`，以便显示该窗体。 如果 `_Myptr` 成员不为空，则条件的计算结果为 `false`，第二个 `DisplayString` 元素显示。
 
 ```xml
 <Type Name="std::auto_ptr&lt;*&gt;">
@@ -325,7 +328,7 @@ Natvis 的可视化功能使用 C++ 表达式来指定要显示的数据项。 �
 `Name` 特性的格式为*filename. ext*，如*hello*或*some*。 不允许使用路径名。
 
 ### <a name="BKMK_DisplayString"></a>DisplayString 元素
-`DisplayString` 元素用于指定要显示为变量值的字符串。 它接受混合了表达式的任意字符串。 大括号内的所有内容都将被解释为表达式。 例如，以下 `DisplayString` 条目：
+`DisplayString` 元素用于指定要显示为变量值的字符串。 它接受混合表达式的任意字符串。 大括号内的所有内容都可解释为表达式。 例如，以下 `DisplayString` 条目：
 
 ```xml
 <Type Name="CPoint">
@@ -333,7 +336,7 @@ Natvis 的可视化功能使用 C++ 表达式来指定要显示的数据项。 �
 </Type>
 ```
 
-表示在此图中，类型 `CPoint` 的变量如下所示：
+表示 `CPoint` 类型的变量显示如下图所示：
 
  ![使用 DisplayString 元素](../debugger/media/dbg_natvis_cpoint_displaystring.png "使用 DisplayString 元素")
 
@@ -404,7 +407,7 @@ Natvis 的可视化功能使用 C++ 表达式来指定要显示的数据项。 �
 > [!NOTE]
 > 如果项元素的表达式指向复杂类型，则**项**节点本身是可展开的。
 
-#### <a name="BKMK_ArrayItems_expansion"></a> ArrayItems 展开
+#### <a name="BKMK_ArrayItems_expansion"></a> Size
 使用 `ArrayItems` 节点，让 Visual Studio 调试器将类型解释为一个数组并显示其各个元素。 `std::vector` 的可视化效果是一个很好的示例：
 
 ```xml
@@ -421,7 +424,7 @@ Natvis 的可视化功能使用 C++ 表达式来指定要显示的数据项。 �
 </Type>
 ```
 
-在变量窗口中展开时，`std::vector` 显示了它的各个元素：
+`std::vector` 在变量窗口中展开时显示其自身的元素：
 
 ![std：： vector 使用 ArrayItems 扩展](../debugger/media/dbg_natvis_expand_arrayitems_stdvector.png "使用 ArrayItems 扩展的 std::vector")
 
@@ -508,7 +511,7 @@ Natvis 的可视化功能使用 C++ 表达式来指定要显示的数据项。 �
 `ValueNode` 可以保留为空或使用 `this` 来引用 `LinkedListItems` 节点本身。
 
 #### <a name="customlistitems-expansion"></a>CustomListItems 展开
-借助 `CustomListItems` 展开，你可以编写自定义逻辑，用于遍历哈希表等数据结构。 使用 `CustomListItems` 来可视化数据结构，这些数据结构可以使用 C++ 表达式进行所有运算，但不太适合 `ArrayItems`、`IndexListItems` 或 `LinkedListItems` 模式。
+`CustomListItems` 展开允许编写自定义逻辑，以遍历数据结构（如哈希表）。 使用 `CustomListItems` 来可视化数据结构，这些数据结构可以使用 C++ 表达式进行所有运算，但不太适合 `ArrayItems`、`IndexListItems` 或 `LinkedListItems` 模式。
 
 下面的 `CAtlMap` 可视化工具是一个很好的例子，其中的 `CustomListItems` 用得很恰当。
 
@@ -601,7 +604,7 @@ Natvis 的可视化功能使用 C++ 表达式来指定要显示的数据项。 �
 
  ![自动&#95;ptr&#60;向量&#60;int&#62; &#62; ExpandedItem 扩展](../debugger/media/dbg_natvis_expand_expandeditem_visualized.png "ExpandedItem 展开")
 
-下面的示例介绍了如何将基类的属性聚合到一个派生类中。 假设 `CPanel` 类派生自 `CFrameworkElement`。 `ExpandedItem` 节点的可视化会将基 `CFrameworkElement` 类的属性附加到 `CPanel` 类的子列表中，而不是重复这些属性。
+下面的示例介绍了如何将基类的属性聚合到一个派生类中。 假定 `CPanel` 类派生自 `CFrameworkElement`。 `ExpandedItem` 节点的可视化会将基 `CFrameworkElement` 类的属性附加到 `CPanel` 类的子列表中，而不是重复这些属性。
 
 ```xml
 <Type Name="CPanel">
@@ -649,7 +652,7 @@ Natvis 的可视化功能使用 C++ 表达式来指定要显示的数据项。 �
 ```
 
 ### <a name="BKMK_UIVisualizer"></a>UIVisualizer 元素
-`UIVisualizer` 元素用于向调试器注册图形可视化工具插件。 图形可视化工具会创建一个对话框或其他界面，用符合其数据类型的方式显示变量或对象。 可视化工具插件必须被编写为 [VSPackage](../extensibility/internals/vspackages.md)，并且必须公开一项调试器可以使用的服务。 *.Natvis* 文件包含插件的注册信息，例如名称、所公开服务的 GUID 以及它可以直观显示的类型。
+`UIVisualizer` 元素向调试器注册图形可视化工具插件。 图形可视化工具会创建一个对话框或其他界面，用符合其数据类型的方式显示变量或对象。 可视化工具插件必须被编写为 [VSPackage](../extensibility/internals/vspackages.md)，并且必须公开一项调试器可以使用的服务。 *.Natvis* 文件包含插件的注册信息，例如名称、所公开服务的 GUID 以及它可以直观显示的类型。
 
 下面是 UIVisualizer 元素的示例：
 
@@ -667,7 +670,7 @@ Natvis 的可视化功能使用 C++ 表达式来指定要显示的数据项。 �
 
 - `ServiceId` - `Id` 属性对用来标识 `UIVisualizer`。 `ServiceId` 是可视化工具包公开的服务的 GUID。 如果服务提供了多个可视化工具，`Id` 是用来区分它们的唯一标识符。 在上面的示例中，同一个可视化工具服务提供了两个可视化工具。
 
-- `MenuName` 属性用于定义可视化工具名称，该名称会显示在调试器的放大镜图标旁边的下拉列表中。 例如:
+- `MenuName` 属性用于定义可视化工具名称，该名称会显示在调试器的放大镜图标旁边的下拉列表中。 例如：
 
   ![UIVisualizer 菜单快捷菜单](../debugger/media/dbg_natvis_vectorvisualizer.png "UIVisualizer 菜单快捷菜单")
 
@@ -679,7 +682,7 @@ Natvis 的可视化功能使用 C++ 表达式来指定要显示的数据项。 �
 </Type>
 ```
 
- 你可以在用于查看内存中位图的[图像监视](https://marketplace.visualstudio.com/items?itemName=VisualCPPTeam.ImageWatch2017)扩展中看到 `UIVisualizer` 的示例。
+ 你可以在用于查看内存中位图的[图像监视](https://marketplace.visualstudio.com/items?itemName=VisualCPPTeam.ImageWatch2017)扩展中查看 `UIVisualizer` 的示例。
 
 ### <a name="BKMK_CustomVisualizer"></a>CustomVisualizer 元素
  `CustomVisualizer` 是一个扩展点，用于指定你编写的 VSIX 扩展，以便在 Visual Studio 代码中控制可视化效果。 有关编写 VSIX 扩展的更多信息，请参阅 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)。
