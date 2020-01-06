@@ -11,17 +11,17 @@ helpviewer_keywords:
 - transactions, saving data
 - data [Visual Studio], saving
 ms.assetid: 8b835e8f-34a3-413d-9bb5-ebaeb87f1198
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: cfb03944743609d20d14f6104e5fadd529a5cfa6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: beadb43d7eed78f04fc60ce1307045e9badac205
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72641309"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586271"
 ---
 # <a name="how-to-save-data-by-using-a-transaction"></a>如何：通过使用事务来保存数据
 
@@ -37,7 +37,7 @@ ms.locfileid: "72641309"
 
 ## <a name="to-add-a-reference-to-the-systemtransactionsdll"></a>添加对 System.object 的引用
 
-1. 在 "**项目**" 菜单上，选择 "**添加引用**"。
+1. 在“项目”菜单中，选择“添加引用”。
 
 2. 在 " **.net** " 选项卡（"SQL Server 项目**SQL Server** " 选项卡）上，选择 "**系统**"，然后选择 **"确定"** 。
 
@@ -50,7 +50,7 @@ ms.locfileid: "72641309"
      [!code-vb[VbRaddataSaving#11](../data-tools/codesnippet/VisualBasic/save-data-by-using-a-transaction_1.vb)]
      [!code-csharp[VbRaddataSaving#11](../data-tools/codesnippet/CSharp/save-data-by-using-a-transaction_1.cs)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [将数据保存回数据库](../data-tools/save-data-back-to-the-database.md)
 - [演练：在事务中保存数据](../data-tools/save-data-in-a-transaction.md)

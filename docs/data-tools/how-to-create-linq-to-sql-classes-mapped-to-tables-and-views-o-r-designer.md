@@ -3,21 +3,21 @@ title: 将 LINQ to SQL 类映射到表/视图（O-R 设计器）
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0fb78bbc-7a78-4ab4-b32f-85ece912e660
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7a06d162a9f439690753f23f74ab9923c3201716
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b0e3103c1b4faa62ff82dafe8ba4aa0ef9193f06
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72641962"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586492"
 ---
 # <a name="how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-or-designer"></a>如何：创建映射到表和视图的 LINQ to SQL 类（O/R 设计器）
 
-映射到数据库表和视图的 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 类称为“实体类”。 实体类映射到记录，而一个实体类的各个属性则映射到构成一条记录的各个列。 通过将表或视图从**服务器资源管理器**或**数据库资源管理器**拖到[Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)，创建基于数据库表或视图的实体类。 **O/R 设计器**生成类并应用特定 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 特性，以启用 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 功能（<xref:System.Data.Linq.DataContext> 的数据通信和编辑功能）。 有关 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 类的详细信息，请参阅[LINQ to SQL 对象模型](/dotnet/framework/data/adonet/sql/linq/the-linq-to-sql-object-model)。
+映射到数据库表和视图的 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 类称为“实体类”。 实体类映射到记录，而一个实体类的各个属性则映射到构成一条记录的各个列。 通过将表或视图从**服务器资源管理器**或**数据库资源管理器**拖到[Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)，创建基于数据库表或视图的实体类。 **O/R 设计器**生成类并应用特定 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 特性，以启用 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 功能（<xref:System.Data.Linq.DataContext>的数据通信和编辑功能）。 有关 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 类的详细信息，请参阅[LINQ to SQL 对象模型](/dotnet/framework/data/adonet/sql/linq/the-linq-to-sql-object-model)。
 
 > [!NOTE]
 > **O/R 设计器**是一个简单的对象关系映射器，因为它仅支持1:1 映射关系。 换句话说，实体类与数据库表或视图之间只能具有 1:1 映射关系。 不支持复杂映射（例如，将一个实体类映射到多个表）。 但是，可以将一个实体类映射到一个联接多个相关表的视图。
@@ -61,7 +61,7 @@ ms.locfileid: "72641962"
 
 7. 将项从“数据源”窗口拖动到窗体。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [演练：创建 LINQ to SQL 类（O-R 设计器）](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)

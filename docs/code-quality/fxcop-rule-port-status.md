@@ -5,17 +5,17 @@ ms.topic: reference
 helpviewer_keywords:
 - fxcop rules
 - fxcop analyzers, ported rules
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a33286ffb678bf37cf684bb603d81ec8091e7405
-ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
+ms.openlocfilehash: f743df63ce779b90f728fd69622f621c8a2169d5
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73568818"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587584"
 ---
 # <a name="fxcop-rule-port-status"></a>Fxcop 规则端口状态
 
@@ -27,7 +27,7 @@ Roslyn 存储库中自动[生成的文档页面](https://github.com/dotnet/rosly
 
 截止到此页上的日期，已移植到[fxcop 分析器](install-fxcop-analyzers.md)的 fxcop 规则列表包括：
 
-规则 ID | Title
+规则 ID | 职务
 --------|---------
 [CA1000](ca1000-do-not-declare-static-members-on-generic-types.md) | 不要在泛型类型中声明静态成员
 [CA1001](ca1001-types-that-own-disposable-fields-should-be-disposable.md) | 具有可释放字段的类型应该是可释放的
@@ -67,8 +67,8 @@ Roslyn 存储库中自动[生成的文档页面](https://github.com/dotnet/rosly
 [CA1063](ca1063-implement-idisposable-correctly.md) | 正确实现 IDisposable
 [CA1064](ca1064-exceptions-should-be-public.md) | 异常应该是公共的
 [CA1065](ca1065-do-not-raise-exceptions-in-unexpected-locations.md) | 不要在意外的位置引发异常
-CA1066 | 类型 {0} 应该实现 IEquatable \<T >，因为它重写 Equals
-CA1067 | 实现 IEquatable 时重写对象 Equals （对象） \<T >
+CA1066 | 类型 {0} 应该实现 IEquatable\<T >，因为它重写 Equals
+CA1067 | 实现 IEquatable 时重写对象 Equals （对象）\<T >
 [CA1068](ca1068.md) | CancellationToken 参数必须最后出现
 CA1200 | 不要使用带前缀的 cref 标记
 [CA1303](ca1303-do-not-pass-literals-as-localized-parameters.md) | 请不要将文本作为本地化参数传递
@@ -344,6 +344,6 @@ CA9999 | 分析器版本不匹配
 - [CA2233](ca2233.md)
 - [CA5122](ca5122.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [CodeAnalysis. FxCopAnalyzers 规则](https://github.com/dotnet/roslyn-analyzers/blob/master/src/Microsoft.CodeAnalysis.FxCopAnalyzers/Microsoft.CodeAnalysis.FxCopAnalyzers.md)

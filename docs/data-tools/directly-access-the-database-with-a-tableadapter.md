@@ -18,21 +18,21 @@ helpviewer_keywords:
 - saving data
 - TableAdapters
 ms.assetid: 012c5924-91f7-4790-b2a6-f51402b7014b
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: e8d5d8e3091b464084df065bb7b889db9fc2194f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8fe408c090dbdc2157cd52977d4bbed66cfe9109
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648514"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586687"
 ---
 # <a name="directly-access-the-database-with-a-tableadapter"></a>使用 TableAdapter 直接访问数据库
 
-除了 `InsertCommand`、`UpdateCommand` 和 `DeleteCommand` 外，还会创建 Tableadapter，它具有可直接针对数据库运行的方法。 您可以调用这些方法（`TableAdapter.Insert`、`TableAdapter.Update` 和 `TableAdapter.Delete`）直接操作数据库中的数据。
+除了 `InsertCommand`、`UpdateCommand`和 `DeleteCommand`外，还会创建 Tableadapter，它具有可直接针对数据库运行的方法。 您可以调用这些方法（`TableAdapter.Insert`、`TableAdapter.Update`和 `TableAdapter.Delete`）直接操作数据库中的数据。
 
 如果不想创建这些直接方法，请在 "**属性**" 窗口中将 TableAdapter 的 `GenerateDbDirectMethods` 属性设置为 "`false`"。 如果除 TableAdapter 的主查询外，还会将任何查询添加到 TableAdapter，它们是不生成这些 `DbDirect` 方法的独立查询。
 
@@ -70,6 +70,6 @@ ms.locfileid: "72648514"
      [!code-vb[VbRaddataSaving#21](../data-tools/codesnippet/VisualBasic/directly-access-the-database-with-a-tableadapter_3.vb)]
      [!code-csharp[VbRaddataSaving#21](../data-tools/codesnippet/CSharp/directly-access-the-database-with-a-tableadapter_3.cs)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 Tableadapter 填充数据集](../data-tools/fill-datasets-by-using-tableadapters.md)

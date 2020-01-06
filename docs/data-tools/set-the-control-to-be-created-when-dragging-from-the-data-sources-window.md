@@ -8,17 +8,17 @@ helpviewer_keywords:
 - data [Visual Studio], displaying on Windows Forms
 - data [Visual Studio], Data Sources window
 ms.assetid: 20597ff8-0c98-43ec-8fb1-05376804ba48
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b5c57b73656f75ae9d99211ba28e38935d3164cb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5193f3e3a0a1f4a06cc4830036ecf63806a1dbee
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72641043"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586180"
 ---
 # <a name="set-the-control-to-be-created-when-dragging-from-the-data-sources-window"></a>设置从“数据源”窗口中拖动时要创建的控件
 
@@ -37,7 +37,7 @@ ms.locfileid: "72641043"
 2. 在 "**数据源**" 窗口中，选择表示要设置的数据表或对象的项。
 
    > [!TIP]
-   > 如果 "**数据源**" 窗口未打开，可以通过选择 "**视图**"  > **其他 Windows**  > **数据源**打开它。
+   > 如果 "**数据源**" 窗口未打开，可以通过选择 "**视图**" > **其他 Windows** > **数据源**打开它。
 
 3. 单击该项的下拉菜单，然后在菜单中单击以下项之一：
 
@@ -69,6 +69,6 @@ ms.locfileid: "72641043"
 
      如果不想创建列或属性的控件，请在下拉菜单中选择 "**无**"。 如果要将父表或对象拖到设计器中，但又不想包含特定列或属性，这会很有用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中将控件绑定到数据](../data-tools/bind-controls-to-data-in-visual-studio.md)

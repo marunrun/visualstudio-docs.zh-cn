@@ -3,17 +3,17 @@ title: 如何：选择要使用的 XML 架构
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: d6fda3ef-d465-4788-8514-2f2d528d658c
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 275def786a93d42e6b8e110d3b3d785a24e948b1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2acafe0c782b39bb7aa345b5456df7238703cb20
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72601902"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592641"
 ---
 # <a name="how-to-select-the-xml-schemas-to-use"></a>如何：选择要使用的 XML 架构
 
@@ -34,7 +34,7 @@ ms.locfileid: "72601902"
 
    ![XML 文件的架构属性](media/properties-schemas.png)
 
-   " [XML 架构" 对话框](xml-schemas-dialog-box.md)随即打开。 此对话框列出了包含的所有架构。架构缓存中的*xsd*扩展（包括在*catalog .xml*文件中引用的架构）和当前解决方案中的任何架构、在 Visual Studio 中打开、在 `xsd:schemaLocation` 特性中引用，或者在**架构**中引用知识产权.
+   " [XML 架构" 对话框](xml-schemas-dialog-box.md)随即打开。 此对话框列出了包含的所有架构。架构缓存中的*xsd*扩展（包括在*catalog .xml*文件中引用的架构）和当前解决方案中的任何架构、在 Visual Studio 中打开、在 `xsd:schemaLocation` 特性中引用，或者在 "**架构**" 属性中引用。
 
 3. 通过执行下列操作之一选择用于验证的架构：
 
@@ -52,7 +52,7 @@ ms.locfileid: "72601902"
 
 1. 在文档属性窗口中，单击 "**架构**" 字段上的按钮。
 
-2. 单击 **添加**。
+2. 单击“添加”。
 
    此时将打开 "**打开 XSD 架构**" 对话框。
 
@@ -73,7 +73,7 @@ ms.locfileid: "72601902"
    > [!NOTE]
    > 如果仍然通过 `schemaLocation` 属性引用架构，或者匹配 `targetNamespace`，则在这种情况下，**删除**将无法在这种情况下工作，因为它是自动关联的。 在这种情况下，建议将架构标记为 "**使用**" 列中的 "**不使用所选架构**"。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [架构缓存](../xml-tools/schema-cache.md)
 - ["XML 架构" 对话框](../xml-tools/xml-schemas-dialog-box.md)
