@@ -15,17 +15,17 @@ helpviewer_keywords:
 - datasets [Visual Basic], constraints
 - constraints [Visual Basic], suspending during dataset update
 ms.assetid: 553f7d0c-2faa-4c17-b226-dd02855bf1dc
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b8ab7bb827c478360a64d65f44af6770c77ebf77
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 13cde04c3a10833c25fdc351d730b866f876e8da
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648139"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586128"
 ---
 # <a name="turn-off-constraints-while-filling-a-dataset"></a>在填充数据集时关闭约束
 
@@ -49,7 +49,7 @@ ms.locfileid: "72648139"
 
 2. 在“属性” 窗口中，将 <xref:System.Data.DataSet.EnforceConstraints%2A> 属性设置为 `false`。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 Tableadapter 填充数据集](../data-tools/fill-datasets-by-using-tableadapters.md)
 - [数据集中的关系](../data-tools/relationships-in-datasets.md)

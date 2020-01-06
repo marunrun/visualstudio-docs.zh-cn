@@ -11,17 +11,17 @@ helpviewer_keywords:
 - WCF services
 - WCF services, walkthrough
 ms.assetid: 5fef1a64-27a4-4f10-aa57-29023e28a2d6
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7e2954d333ae3fe0dc6ff1c221d1e450eb9bf51a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3d3f2e80ff3e2b94c46d1e2658c40bccf2e6c365
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72639470"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586011"
 ---
 # <a name="walkthrough-create-a-simple-wcf-service-in-windows-forms"></a>演练：在 Windows 窗体中创建简单 WCF 服务
 
@@ -35,7 +35,7 @@ ms.locfileid: "72639470"
 
 ::: moniker range="vs-2017"
 
-2. 在“文件” 菜单上，选择“新建”>“项目”。
+2. 在 "**文件**" 菜单上，选择 "**新建**>**项目**"。
 
 3. 在 "**新建项目**" 对话框中，展开 " **Visual Basic** " 或 "  **C# Visual** " 节点，然后选择 " **wcf**"，然后选择 " **wcf 服务库**"。
 
@@ -150,6 +150,6 @@ ms.locfileid: "72639470"
 
      ![显示结果的表单](../data-tools/media/wcf10.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的 Windows Communication Foundation 服务和 WCF 数据服务](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

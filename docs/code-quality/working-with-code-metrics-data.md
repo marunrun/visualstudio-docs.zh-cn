@@ -8,17 +8,17 @@ helpviewer_keywords:
 - code metrics results
 - code metrics results window
 - results window, code metrics
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0824fe608ad1bac86ef904702bd1be907bc9ce7d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6d62baf32685832072266438de003b523399137f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648998"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587077"
 ---
 # <a name="use-the-code-metrics-results-window"></a>使用 "代码度量结果" 窗口
 
@@ -30,9 +30,9 @@ ms.locfileid: "72648998"
 
 您可以使用以下菜单序列之一显示 "代码度量结果" 窗口：
 
-- 在 "**分析**" 菜单上，选择 " **Windows**  > **代码度量结果**"。
+- 在 "**分析**" 菜单上，选择 " **Windows** > **代码度量结果**"。
 
-- 在 "**视图**" 菜单上，选择 "**其他 Windows**  > **代码度量值结果**"。
+- 在 "**视图**" 菜单上，选择 "**其他 Windows** > **代码度量值结果**"。
 
 "**代码度量值" 结果**窗口将打开，即使它不包含任何结果。
 
@@ -106,7 +106,7 @@ ms.locfileid: "72648998"
 
 4. 在 "**文件**" 菜单上，单击 "**全部保存**" 以保存工作项。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [代码度量值](../code-quality/code-metrics-values.md)
-- [如何：生成代码度量数据](../code-quality/how-to-generate-code-metrics-data.md)
+- [如何： 生成代码度量数据](../code-quality/how-to-generate-code-metrics-data.md)

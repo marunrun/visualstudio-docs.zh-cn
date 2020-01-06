@@ -219,17 +219,17 @@ helpviewer_keywords:
 - troubleshooting data access
 - datasets [Visual Basic], troubleshooting
 ms.assetid: 357c9f0a-9d59-4db4-9b7c-b96cad839961
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5c92699d9d7c77c771ea1cc4aa28b918f318eca8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0383de73992b96f6a458b389573e252b39d624b6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648867"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587038"
 ---
 # <a name="troubleshoot-data-access-errors-on-the-forums"></a>排查论坛上的数据访问错误
 
@@ -251,6 +251,6 @@ ms.locfileid: "72648867"
 
 有关如何解决与 SQL Server 的连接问题的信息，请参阅[连接到 SQL Server 数据库引擎的疑难解答](https://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [适用于 NET 的 Visual Studio Data Tools](../data-tools/visual-studio-data-tools-for-dotnet.md)

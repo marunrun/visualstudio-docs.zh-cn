@@ -1,25 +1,25 @@
 ---
-title: 支持可视化和建模 SDK 的 Visual Studio 版本
+title: 可视化和建模 SDK 支持 Visual Studio 版本
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language Tools, supported Visual Studio editions
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: efe452f059d7184e1f7c87fddd6bdc6c213ece8a
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 127b45ae6a0ab28d7f83ee41449d7846858ee4a9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72983732"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591900"
 ---
 # <a name="supported-visual-studio-editions-for-visualization--modeling-sdk"></a>可视化和建模 SDK 支持的 Visual Studio 版本
 
-以下是在创作和部署环境中 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 支持的 Visual Studio 版本的列表。 有关这些版本的详细信息，请参阅 Microsoft Visual Studio[开发人员中心](https://visualstudio.microsoft.com/)。
+以下是支持与 Visual Studio 版本的列表[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]中创作和部署环境。 有关这些版本的详细信息，请参阅 Microsoft Visual Studio[开发人员中心](https://visualstudio.microsoft.com/)。
 
 ## <a name="authoring-edition"></a>创作版
 
@@ -41,13 +41,13 @@ ms.locfileid: "72983732"
 
 - Visual Studio Professional
 
-- Visual Studio Shell （集成模式）可再发行组件包
+- Visual Studio Shell （集成模式） 可再发行组件包可再发行组件包
 
 - Visual Studio Shell（独立模式）可再发行组件包
 
 > [!NOTE]
-> 若要使 DSL 能够在 Shell 产品上运行，必须在扩展清单中设置**支持的 VS Edition**字段。 有关详细信息，请参阅[部署域特定语言解决方案](msi-and-vsix-deployment-of-a-dsl.md)。
+> 若要使 DSL 能够在 Shell 产品上运行，必须设置**支持的 VS 版本**字段在扩展清单中。 有关详细信息，请参阅[部署域特定语言解决方案](msi-and-vsix-deployment-of-a-dsl.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [域特定语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

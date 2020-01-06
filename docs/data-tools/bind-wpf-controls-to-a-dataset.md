@@ -10,17 +10,17 @@ helpviewer_keywords:
 - WPF data binding [Visual Studio], walkthroughs
 - WPF Designer, data binding
 ms.assetid: 177420b9-568b-4dad-9d16-1b0e98a24d71
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 68ffb040e7d642fc2bf285f0510850edc343a5ce
-ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
+ms.openlocfilehash: 8de276bfb6d7ec8bc36380ee41d86de07fc8dd74
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72924544"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586973"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>将 WPF 控件绑定到数据集
 
@@ -38,7 +38,7 @@ ms.locfileid: "72924544"
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 你需要以下组件来完成本演练：
 
@@ -60,7 +60,7 @@ ms.locfileid: "72924544"
 
 1. 打开 Visual Studio。
 
-2. 在“文件”菜单上，依次选择“新建”>“项目”。
+2. 在 "**文件**" 菜单上，选择 "**新建**>**项目**"。
 
 3. 展开“Visual Basic”或“Visual C#”，然后选择“Windows”。
 
@@ -80,7 +80,7 @@ ms.locfileid: "72924544"
 
 ::: moniker-end
 
-   Visual Studio 创建 AdventureWorksProductsEditor 项目。
+   Visual Studio 将创建 AdventureWorksProductsEditor 项目。
 
 ## <a name="create-a-dataset-for-the-application"></a>为应用程序创建数据集
 
@@ -112,7 +112,7 @@ ms.locfileid: "72924544"
 
    Visual Studio 会向项目中添加一个新的 `AdventureWorksLTDataSet.xsd` 文件，并将相应的**adventureworksltdataset.xsd**项添加到 "**数据源**" 窗口中。 `AdventureWorksLTDataSet.xsd` 文件定义名为 `AdventureWorksLTDataSet` 的类型化数据集和名为 `ProductTableAdapter`的 TableAdapter。 在本演练后面的部分中，你将使用 `ProductTableAdapter` 向数据集填充数据，并将更改保存回数据库中。
 
-9. 生成项目。
+9. 生成此项目。
 
 ## <a name="edit-the-default-fill-method-of-the-tableadapter"></a>编辑 TableAdapter 的默认填充方法
 
@@ -154,7 +154,7 @@ ms.locfileid: "72924544"
    <Button HorizontalAlignment="Right" Margin="0,21,46,24" Name="saveButton" Width="110">Save changes</Button>
    ```
 
-3. 生成项目。
+3. 生成此项目。
 
 ## <a name="create-data-bound-controls"></a>创建数据绑定控件
 
@@ -232,7 +232,7 @@ ms.locfileid: "72924544"
 
 ## <a name="test-the-application"></a>测试应用程序
 
-生成并运行应用程序。 验证你是否可以查看和更新产品记录。
+构建并运行应用程序。 验证你是否可以查看和更新产品记录。
 
 1. 按 F5。
 
@@ -258,7 +258,7 @@ ms.locfileid: "72924544"
 
 - 了解如何使用 Visual Studio 中的“数据源”窗口在 WPF 控件中显示相关数据（即父-子关系中的数据）。 有关详细信息，请参阅[演练：在 WPF 应用中显示相关数据](../data-tools/display-related-data-in-wpf-applications.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中将 WPF 控件绑定到数据](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)
 - [Visual Studio 中的数据集工具](../data-tools/dataset-tools-in-visual-studio.md)

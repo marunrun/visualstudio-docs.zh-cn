@@ -5,8 +5,8 @@ ms.topic: conceptual
 helpviewer_keywords:
 - source suppression, code analysis
 - code analysis, source suppression
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 dev_langs:
 - CSharp
@@ -14,20 +14,20 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 50afd9ffd72c37510997176f103f3b269f29fcf2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 92e027b58d1a05d77055048872c38f45939cbfe0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649309"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587441"
 ---
 # <a name="suppress-code-analysis-warnings"></a>禁止显示代码分析警告
 
 它通常用于指示警告不适用。 这向团队成员表明代码已评审，并且可以禁止显示该警告。 源代码中禁止显示（ISS）使用 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 特性来禁止显示警告。 特性可放置在生成警告的代码段附近。 您可以通过在源文件中键入来向源文件添加 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 特性，也可以在**错误列表**中的警告上使用快捷菜单来自动添加它。
 
-仅当在编译时定义了 CODE_ANALYSIS 编译符号时，<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 属性是条件属性，它包含在托管代码程序集的 IL 元数据中。
+仅当编译时定义了 CODE_ANALYSIS 编译符号时，<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 特性才会包含在托管代码程序集的 IL 元数据中。
 
-在C++/cli 中，在头文件中使用宏 CA \_SUPPRESS \_MESSAGE 或 CA \_GLOBAL \_SUPPRESS_MESSAGE 来添加属性。
+在C++/cli 中，使用宏 CA\_在头文件中取消\_消息或 CA\_全局\_SUPPRESS_MESSAGE，以添加属性。
 
 > [!NOTE]
 > 不应在发布版本中使用源内禁止显示，以防止意外发送源中禁止显示元数据。 此外，由于源中禁止显示的处理成本，你的应用程序的性能可能会下降。
@@ -35,7 +35,7 @@ ms.locfileid: "72649309"
 ::: moniker range="vs-2017"
 
 > [!NOTE]
-> 如果将项目迁移到 Visual Studio 2017，可能会突然遇到大量代码分析警告。 如果尚未准备好修复警告，则可以通过选择 "**分析**"  >  "**运行代码分析" 并取消显示活动问题**来禁止显示这些警告。
+> 如果将项目迁移到 Visual Studio 2017，可能会突然遇到大量代码分析警告。 如果尚未准备好修复警告，则可以通过选择 "**分析**" > "**运行代码分析" 并取消显示活动问题**来禁止显示这些警告。
 >
 > ![在 Visual Studio 中运行代码分析并取消问题](media/suppress-active-issues.png)
 
@@ -52,7 +52,7 @@ ms.locfileid: "72649309"
 
 如果从**错误列表**中的 "代码分析" 警告的上下文或右键单击菜单中选择 "**隐藏**"，则会在代码或项目的全局禁止显示文件中添加 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 特性。
 
-@No__t_0 属性采用以下格式：
+<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 属性采用以下格式：
 
 ```vb
 <Scope:SuppressMessage("Rule Category", "Rule Id", Justification = "Justification", MessageId = "MessageId", Scope = "Scope", Target = "Target")>
@@ -78,17 +78,17 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 
 - **作用域**-要禁止显示警告的目标。 如果未指定目标，则将其设置为属性的目标。 支持的[范围](xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Scope)包括：
 
-  - `module`
+  - `module`-此作用域禁止对程序集发出警告。 它是适用于整个项目的全局禁止显示。
 
-  - `resource`
+  - `resource`-（仅限[旧版 FxCop](../code-quality/static-code-analysis-for-managed-code-overview.md) ）此作用域禁止将诊断信息中的警告写入模块（程序集）中的资源文件。 对于 Roslyn 分析器诊断，不会在C#/VB 编译器中阅读/遵守此作用域，它仅分析源文件。
 
-  - `type`
+  - `type`-此作用域禁止对类型发出警告。
 
-  - `member`
+  - `member`-此作用域禁止对成员的警告。
 
   - `namespace`-此范围禁止显示针对命名空间本身的警告。 它不会禁止对命名空间中的类型发出警告。
 
-  - `namespaceanddescendants`-（Visual Studio 2019 的新增）此作用域禁止显示命名空间及其所有子代符号中的警告。 旧分析将忽略 `namespaceanddescendants` 值。
+  - `namespaceanddescendants`-（需要编译器版本3.x 或更高版本以及 Visual Studio 2019）此范围禁止显示命名空间及其所有子代符号中的警告。 旧分析将忽略 `namespaceanddescendants` 值。
 
 - **目标**-用于指定取消警告的目标的标识符。 它必须包含完全限定的项目名称。
 
@@ -96,11 +96,11 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 
 在 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 特性应用到的级别上，会禁止显示代码分析警告。 例如，可以将属性应用于程序集、模块、类型、成员或参数级别。 这样做的目的是将抑制信息紧密地耦合到发生冲突的代码中。
 
-禁止显示的一般形式包括规则类别和规则标识符，其中包含规则名称的可选可读表示形式。 例如:
+禁止显示的一般形式包括规则类别和规则标识符，其中包含规则名称的可选可读表示形式。 例如：
 
 `[SuppressMessage("Microsoft.Design", "CA1039:ListsAreStrongTyped")]`
 
-如果由于最大程度地减少了源中禁止显示元数据的性能原因，则可以省略规则名称。 规则类别及其规则 ID 共同构成了一个足够唯一的规则标识符。 例如:
+如果由于最大程度地减少了源中禁止显示元数据的性能原因，则可以省略规则名称。 规则类别及其规则 ID 共同构成了一个足够唯一的规则标识符。 例如：
 
 `[SuppressMessage("Microsoft.Design", "CA1039")]`
 
@@ -112,7 +112,7 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 
 在某些情况下，您可能需要取消特定的冲突实例，例如，使将来的代码不会自动从代码分析规则中免除。 某些代码分析规则允许通过使用 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 属性的 `MessageId` 属性来执行此操作。 通常，针对特定符号（局部变量或参数）的冲突的旧规则遵循 `MessageId` 属性。 [CA1500： VariableNamesShouldNotMatchFieldNames](../code-quality/ca1500.md)是此类规则的一个示例。 但是，可执行代码（非符号）上的冲突的旧规则不遵循 `MessageId` 属性。 此外，.NET Compiler Platform （"Roslyn"）分析器不遵从 `MessageId` 属性。
 
-若要取消规则的特定符号冲突，请为 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 属性指定 `MessageId` 属性的符号名称。 下面的示例演示了 `name` 变量的[CA1500： VariableNamesShouldNotMatchFieldNames](../code-quality/ca1500.md) &mdash;one 两个冲突的代码，以及一个 `age` 变量的代码。 仅禁止 `age` 符号发生冲突。
+若要取消规则的特定符号冲突，请为 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 属性指定 `MessageId` 属性的符号名称。 下面的示例演示[CA1500： VariableNamesShouldNotMatchFieldNames](../code-quality/ca1500.md)&mdash;两个冲突的代码，一个用于 `name` 变量，另一个用于 `age` 变量。 仅禁止 `age` 符号发生冲突。
 
 ```vb
 Public Class Animal
@@ -178,7 +178,7 @@ public class Animal
 
 全局禁止显示文件维护全局级禁止显示或未指定目标的禁止显示的禁止显示。 例如，程序集级别的冲突的禁止显示存储在此文件中。 此外，某些 ASP.NET 禁止显示文件存储在此文件中，因为项目级设置不适用于窗体的代码。 第一次在 "**错误列表**" 窗口中的 "**禁止显示**" 命令的 "**项目禁止显示文件**" 选项中，会创建全局禁止显示文件并将其添加到项目。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Scope>
 - <xref:System.Diagnostics.CodeAnalysis>

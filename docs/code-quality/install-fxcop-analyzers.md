@@ -4,17 +4,17 @@ ms.date: 08/03/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - fxcop analyzers
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9791e2dbb6d4a82a49539216eda53d217140bd52
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 06362bcf00bc35fdef701e26fe03694b038e88b1
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649340"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587454"
 ---
 # <a name="install-fxcop-analyzers-in-visual-studio"></a>在 Visual Studio 中安装 FxCop 分析器
 
@@ -120,7 +120,7 @@ Microsoft 创建了一组名为[CodeAnalysis](https://www.nuget.org/packages/Mic
 
 ::: moniker-end
 
-4. 选择 "**下载**"。
+4. 选择“下载”。
 
    此扩展已下载。
 
@@ -142,17 +142,17 @@ Microsoft 创建了一组名为[CodeAnalysis](https://www.nuget.org/packages/Mic
 
 ::: moniker range="vs-2017"
 
-如果要检查是否安装了该扩展，请选择 "**工具**"  >  "**扩展和更新**"。 在 "**扩展和更新**" 对话框中，选择左侧的 "**已安装**" 类别，然后按名称搜索扩展。
+如果要检查是否安装了该扩展，请选择 "**工具**" > "**扩展和更新**"。 在 "**扩展和更新**" 对话框中，选择左侧的 "**已安装**" 类别，然后按名称搜索扩展。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-如果要检查是否安装了扩展，请选择 "**扩展**"  >  "**管理扩展**"。 在 "**管理扩展**" 对话框中，选择左侧的 "**已安装**" 类别，然后按名称搜索扩展。
+如果要检查是否安装了扩展，请选择 "**扩展**" > "**管理扩展**"。 在 "**管理扩展**" 对话框中，选择左侧的 "**已安装**" 类别，然后按名称搜索扩展。
 
 ::: moniker-end
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的代码分析器概述](../code-quality/roslyn-analyzers-overview.md)
 - [在 Visual Studio 中使用代码分析器](../code-quality/use-roslyn-analyzers.md)

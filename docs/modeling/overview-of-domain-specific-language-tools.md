@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82bccbd9558a5dad87e9fe13f9ed7136a5d77d8a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 7af9aa8ce8719fe08e16e244a2f7009ddf67f533
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747525"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591692"
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>域特定语言工具的概述
 在 Visual Studio 中托管的特定于域的语言工具（DSL 工具）使你可以设计域特定语言，然后生成用户创建基于语言的模型时必须具有的所有内容。
@@ -74,7 +74,7 @@ ms.locfileid: "72747525"
 
  当你在 Visual Studio 中生成并运行 DSL 工具解决方案时，Visual Studio 的第二个实例将显示特定于域的语言对语言用户的外观。 验证一切运行正常之后，可以分发 DslPackage 项目的生成文件夹中的 `.vsix` 文件。 此文件可用于将 DSL 安装为其他计算机上的 Visual Studio 扩展。  有关详细信息，请参阅[部署域特定语言解决方案](msi-and-vsix-deployment-of-a-dsl.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [实验实例](../extensibility/the-experimental-instance.md)
 - [域特定语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

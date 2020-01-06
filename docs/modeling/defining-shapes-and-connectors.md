@@ -2,17 +2,17 @@
 title: 定义形状和连接线
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d715f6ac9fe2ac06f0f1f35c9319093d8257dc8d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bd95c467f0cfcc997fe419abacb1811e02b468b2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653918"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589664"
 ---
 # <a name="define-shapes-and-connectors"></a>定义形状和连接线
 
@@ -36,7 +36,7 @@ DSL 关系图显示按线条或*连接符*了的*形状*集合。 通常情况�
 
 |形状类型|描述|
 |-|-|
-|几何形状|通用矩形或椭圆形形状。 可在相对于形状边界的特定位置中显示文本和图标修饰器。 您还可以将形状嵌套在 geometry 形状中。|
+|几何图形|通用矩形或椭圆形形状。 可在相对于形状边界的特定位置中显示文本和图标修饰器。 您还可以将形状嵌套在 geometry 形状中。|
 |隔离舱形状|包含标头和隔离舱的矩形（如 UML 类）。 每个隔离舱都可包含文本行列表。<br /><br /> 这些行通常表示嵌入在由形状表示的元素下方的元素。 有关示例，请从类关系图解决方案模板中创建 DSL。|
 |图像形状|显示图像的形状。|
 |端口形状|设计为附加到另一个形状的轮廓的小矩形。 通常用于组件模型中。<br /><br /> 由端口表示的模型元素通常嵌入在由父形状表示的元素下。 有关示例，请通过使用组件解决方案模板创建 DSL。<br /><br /> 默认情况下，端口形状可沿其父形状的侧边滑动。 可定义边界规则以将其约束到特定位置。<br /><br /> 通过使端口形状变得极小并使其透明，可将其用于在其父形状的图面上提供一个固定连接点。|

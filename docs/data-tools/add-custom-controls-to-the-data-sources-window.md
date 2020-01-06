@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ComplexBindingPropertiesAttribute class, using
 - Data Sources Window, selecting controls
 ms.assetid: 8c43e7d2-ba94-4d9b-96de-3aa971955afd
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
-ms.openlocfilehash: b6334d233ccb2c4453d117b6bdfe942b6ea092e2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cd4791e118d22aab1126987461547f9fa2fec317
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648921"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587103"
 ---
 # <a name="add-custom-controls-to-the-data-sources-window"></a>向“数据源”窗口添加自定义控件
 
@@ -39,7 +39,7 @@ ms.locfileid: "72648921"
 2. 在 "**数据源**" 窗口中，单击作为添加到窗口的数据源的一部分的项，然后单击该项的下拉菜单。
 
    > [!TIP]
-   > 如果 "数据源" 窗口未打开，请通过选择 "**视图**"  > **其他 Windows**  > **数据源**打开它。
+   > 如果 "数据源" 窗口未打开，请通过选择 "**视图**" > **其他 Windows** > **数据源**打开它。
 
 3. 在下拉菜单中，单击 "**自定义**"。 此时将打开下列对话框之一：
 
@@ -60,7 +60,7 @@ ms.locfileid: "72648921"
     > [!NOTE]
     > 如果要选择的控件未出现在 "**关联的控件**" 框中，则必须将该控件添加到该列表中。 有关详细信息，请参阅[添加关联控件](#add-associated-controls)。
 
-6. 单击“确定”。
+6. 单击" **确定**"。
 
 7. 在 "**数据源**" 窗口中，单击与一个或多个控件关联的数据类型的项，然后单击该项的下拉菜单。
 
@@ -76,7 +76,7 @@ ms.locfileid: "72648921"
 
      控件必须具有以下属性之一：
 
-    |特性|描述|
+    |属性|描述|
     |---------------|-----------------|
     |<xref:System.ComponentModel.DefaultBindingPropertyAttribute>|在显示数据的单个列（或属性）的简单控件（如 <xref:System.Windows.Forms.TextBox>）上实现此特性。|
     |<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|在显示数据列表（或表）的控件上实现此特性，如 <xref:System.Windows.Forms.DataGridView>。|
@@ -89,7 +89,7 @@ ms.locfileid: "72648921"
     > [!NOTE]
     > 只有位于当前解决方案或被引用程序集中的控件才能添加到关联控件列表中。 （这些控件还必须实现上一个表中的数据绑定特性之一。）若要将数据绑定到 "数据源" 窗口中不可用的自定义控件，请将该控件从 "**工具箱**" 拖动到设计图面上，然后从 "**数据源**" 窗口拖动该项到控件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中将控件绑定到数据](../data-tools/bind-controls-to-data-in-visual-studio.md)
 - ["数据 UI 自定义选项" 对话框](../ide/reference/options-windows-forms-designer-data-ui-customization.md)

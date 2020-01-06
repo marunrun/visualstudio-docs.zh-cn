@@ -2,17 +2,17 @@
 title: DSL 的 MSI 和 VSIX 部署
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 73c81d88f055ea7a585e3d14ab4a0086d9236938
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 96922848adf053e3b728196a445407f3d5f86428
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984451"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590184"
 ---
 # <a name="msi-and-vsix-deployment-of-a-dsl"></a>DSL 的 MSI 和 VSIX 部署
 可以在自己的计算机或其他计算机上安装域特定语言。 必须已在目标计算机上安装 Visual Studio。
@@ -22,7 +22,7 @@ ms.locfileid: "72984451"
 
 |方法|优点|
 |-|-|
-|VSX （Visual Studio 扩展）|易于部署：复制并执行 DslPackage 项目中的 **.vsix**文件。<br /><br /> 有关详细信息，请参阅[使用 VSX 安装和卸载 DSL](#Installing)。|
+|VSX （Visual Studio 扩展）|易于部署：从 DslPackage 项目复制并执行 **.vsix**文件。<br /><br /> 有关详细信息，请参阅[使用 VSX 安装和卸载 DSL](#Installing)。|
 |MSI （安装程序文件）|-允许用户通过双击 DSL 文件打开 Visual Studio。<br />-将图标与目标计算机中的 DSL 文件类型相关联。<br />-将 XSD （XML 架构）与 DSL 文件类型相关联。 这可以避免在将文件加载到 Visual Studio 时出现警告。<br /><br /> 必须将安装项目添加到解决方案才能创建 MSI。<br /><br /> 有关详细信息，请参阅[使用 MSI 文件部署 DSL](#msi)。|
 
 ## <a name="Installing"></a>使用 VSX 安装和卸载 DSL
@@ -53,7 +53,7 @@ ms.locfileid: "72984451"
 
 ### <a name="to-uninstall-a-dsl-that-was-installed-by-using-vsx"></a>卸载使用 VSX 安装的 DSL
 
-1. 在“工具” 菜单上，选择“扩展和更新”。
+1. 在 **“工具”** 菜单上，选择 **“扩展和更新”** 。
 
 2. 展开“已安装的扩展”。
 
@@ -88,9 +88,9 @@ ms.locfileid: "72984451"
 
    - 在 DSL 资源管理器中，单击 "根" 节点，然后在属性窗口中查看：
 
-       - 说明
+       - 描述
 
-       - Version
+       - {2&gt;版本&lt;2}
 
    - 单击 "**编辑器**" 节点，然后在 "属性窗口中，单击"**图标**"。 设置值以引用**DslPackage\Resources**中的图标文件，如**file .ico**
 
@@ -102,11 +102,11 @@ ms.locfileid: "72984451"
 
     Visual Studio 将创建一个名为**CreateMsiSetupProject. .vdproj**的文件。
 
-6. 在 Windows 资源管理器中，将 Dsl\\* .vdproj 复制到名为 Setup 的新文件夹。
+6. 在 Windows 资源管理器，复制 Dsl\\\*.vdproj 到新的文件夹名为安装程序。
 
     （如果需要，现在可以从 Dsl 项目中排除 CreateMsiSetupProject.tt。）
 
-7. 在**解决方案资源管理器**中，将**安装程序\\** 作为现有项目添加\*.vdproj。
+7. 在**解决方案资源管理器**中，将**安装程序\\** 作为现有项目添加 \*.vdproj。
 
 8. 在 "**项目**" 菜单上，单击 "**项目依赖项**"。
 

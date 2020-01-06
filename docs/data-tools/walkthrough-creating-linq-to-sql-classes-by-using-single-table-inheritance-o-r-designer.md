@@ -6,20 +6,20 @@ dev_langs:
 - VB
 - CSharp
 ms.assetid: 63bc6328-e0df-4655-9ce3-5ff74dbf69a4
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7ab33c2e77de183b5c916fbcfe60843c47c4f83f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c9e6974f1b676b623c58eea451270bde98ddcff7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648057"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585972"
 ---
 # <a name="walkthrough-create-linq-to-sql-classes-by-using-single-table-inheritance-or-designer"></a>演练：使用单表继承创建 LINQ to SQL 类（O/R 设计器）
-[Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)支持单表继承，因为它通常在关系系统中实现。 本演练扩展了[如何：通过使用 O/R 设计器配置继承](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md)主题中提供的一般步骤，并提供了一些真实数据来说明如何在 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] 中使用继承。
+[Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)支持单表继承，因为它通常在关系系统中实现。 本演练扩展了[如何：通过使用 O/R 设计器配置继承](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md)主题中提供的一般步骤，并提供了一些真实数据来说明如何在 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]中使用继承。
 
 在本演练中，你将执行以下任务：
 
@@ -49,7 +49,7 @@ ms.locfileid: "72648057"
 
 2. 在表设计器中，向该表中添加以下列：
 
-    |列名|数据类型|允许为 Null|
+    |列名|数据类型|允许 Null|
     |-----------------|---------------|-----------------|
     |**ID**|**int**|**False**|
     |**Type**|**int**|**True**|
@@ -91,7 +91,7 @@ ms.locfileid: "72648057"
 
 ### <a name="to-create-the-new-windows-forms-application"></a>创建新的 Windows 窗体应用程序
 
-1. 在 Visual Studio 的 "**文件**" 菜单上，选择 "**新建** > **项目**"。
+1. 在 Visual Studio 的“文件”菜单中，依次选择“新建” > “项目”。
 
 2. 在左侧窗格中展开 "**视觉对象C#**  " 或 " **Visual Basic** "，然后选择 " **Windows 桌面**"。
 
@@ -138,7 +138,7 @@ ms.locfileid: "72648057"
 
 11. 将“继承默认值”属性设置为“Person”。
 
-12. 生成项目。
+12. 生成此项目。
 
 ## <a name="query-the-inherited-class-and-display-the-data-on-the-form"></a>查询继承类并在窗体上显示数据
 现在，您将向窗体中添加一些代码，用于在对象模型中查询特定的类。
@@ -185,7 +185,7 @@ ms.locfileid: "72648057"
 
 3. 关闭窗体。 （在“调试”菜单上，单击“停止调试”。）
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [演练：创建 LINQ to SQL 类（O-R 设计器）](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)

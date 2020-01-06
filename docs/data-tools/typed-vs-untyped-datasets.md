@@ -6,17 +6,17 @@ dev_langs:
 - VB
 - CSharp
 ms.assetid: c83ba0bb-5425-4d47-8891-6b4dbf937701
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: eff5e0d2f13bfe462ff19d6cfb4e8a32a15a6064
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 430e57713f1bfb01219ea1ac8123f321ba0f5680
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72639636"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586102"
 ---
 # <a name="typed-vs-untyped-datasets"></a>类型化与非类型化数据集
 类型化数据集是第一次派生自基 <xref:System.Data.DataSet> 类，然后使用存储在 .xsd 文件中的**数据集设计器**中的信息来生成新的强类型化数据集类。 将生成架构（表、列等）中的信息，并将其作为一组第一类对象和属性编译到这个新的数据集类中。 由于类型化数据集继承自基本 <xref:System.Data.DataSet> 类，因此类型化类将假定 <xref:System.Data.DataSet> 类的所有功能，并且可与采用 <xref:System.Data.DataSet> 类实例作为参数的方法一起使用。
@@ -40,6 +40,6 @@ ms.locfileid: "72639636"
 
 更常见的情况是，在没有可用架构的情况下，可能会动态创建一个数据集。 在这种情况下，数据集只是一个方便的结构，您可以在其中保留信息，只要数据可以以关系方式表示。 同时，你可以利用数据集的功能，例如序列化信息以传递到另一个进程或写出 XML 文件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据集工具](../data-tools/dataset-tools-in-visual-studio.md)

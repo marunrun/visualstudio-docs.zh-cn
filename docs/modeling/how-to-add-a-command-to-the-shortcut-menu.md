@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language Tools, walkthroughs
 - walkthroughs [Domain-Specific Language Tools]
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e476f1db1e30a04e67e6b53f593f55ee3867fae2
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 75805dc08eb340b3f70884d3bf5078a5b2712ed3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985134"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594729"
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>如何：向快捷菜单中添加命令
 
@@ -139,13 +139,13 @@ ms.locfileid: "72985134"
 
 2. 查找 `ProvideMenuResource` 特性。
 
-3. 递增特性的 `version` 参数，它是第二个参数。 如果需要，你可以显式编写参数名称以提醒你它的用途。 例如:
+3. 递增特性的 `version` 参数，它是第二个参数。 如果需要，你可以显式编写参数名称以提醒你它的用途。 例如：
 
      `[VSShell::ProvideMenuResource("1000.ctmenu", version: 2 )]`
 
 ## <a name="CommandSet"></a>定义命令的行为
 
-DSL 已具有一些在 DslPackage\GeneratedCode\CommandSet.cs 中声明的分部类中实现的命令。 若要添加新命令，你必须通过创建包含同一个类的分部声明的新文件来扩展此类。 该类的名称通常 *\<YourDslName >* `CommandSet`。 首先，请验证类的名称并检查其内容，这一点非常有用。
+DSL 已具有一些在 DslPackage\GeneratedCode\CommandSet.cs 中声明的分部类中实现的命令。 若要添加新命令，你必须通过创建包含同一个类的分部声明的新文件来扩展此类。 该类的名称通常是 *\<e >* `CommandSet`。 首先，请验证类的名称并检查其内容，这一点非常有用。
 
 命令集类派生自 <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>。
 
@@ -157,9 +157,9 @@ DSL 已具有一些在 DslPackage\GeneratedCode\CommandSet.cs 中声明的分部
 
      `{ ...  internal partial class Language1CommandSet : ...`
 
-2. 在**DslPackage**中，创建一个名为 "**自定义代码**" 的文件夹。 在此文件夹中，创建一个名为 `CommandSet.cs` 的新类文件。
+2. 在**DslPackage**中，创建一个名为 "**自定义代码**" 的文件夹。 在此文件夹中，创建一个名为 `CommandSet.cs`的新类文件。
 
-3. 在该新文件中，编写具有与生成的分部类相同的命名空间和名称的分部声明。 例如:
+3. 在该新文件中，编写具有与生成的分部类相同的命名空间和名称的分部声明。 例如：
 
      `namespace Company.Language1 /* Make sure this is correct */`
 
@@ -193,7 +193,7 @@ namespace Company.Language1 /* Make sure this is correct */
 必须定义两个方法，一个用于确定命令何时在右键单击（上下文）菜单上可见，另一个用于执行命令。 这些方法不是重写方法；相反，在命令的列表中注册这些方法。
 
 ### <a name="define-when-the-command-will-be-visible"></a>定义命令将何时可见
- 对于每个命令，定义一个 `OnStatus...` 方法，该方法确定命令是否将显示在菜单上，以及是启用还是灰显。设置 `MenuCommand` 的 `Visible` 和 `Enabled` 属性，如下面的示例中所示。 每次用户右键单击关系图时，都将调用此方法以构造快捷菜单，因此它必须尽快工作。
+ 对于每个命令，定义一个 `OnStatus...` 方法，该方法确定命令是否将显示在菜单上，以及是启用还是灰显。设置 `MenuCommand`的 `Visible` 和 `Enabled` 属性，如下面的示例中所示。 每次用户右键单击关系图时，都将调用此方法以构造快捷菜单，因此它必须尽快工作。
 
  在此示例中，该命令仅在用户已选择特定类型的形状时才可见，并且仅在至少一个选定元素处于特定状态时才启用该命令。 该示例基于类关系图 DSL 模板，并且 ClassShape 和 ModelClass 是在 DSL 中定义的类型：
 
@@ -220,17 +220,17 @@ private void OnStatusMyContextMenuCommand(object sender, EventArgs e)
 
 以下片段通常在 OnStatus 方法内十分有用：
 
-- `this.CurrentSelection` 用户右键单击的形状始终包含在此列表中。 如果用户单击关系图的空白部分，则“关系图”是该列表中的唯一成员。
+- `this.CurrentSelection`。 用户右键单击的形状始终包含在此列表中。 如果用户单击关系图的空白部分，则“关系图”是该列表中的唯一成员。
 
-- 如果用户单击了关系图的空白部分，则 `this.IsDiagramSelected()`  -  `true`。
+- 如果用户单击了关系图的空白部分，则 `this.IsDiagramSelected()` - `true`。
 
 - `this.IsCurrentDiagramEmpty()`
 
-- `this.IsSingleSelection()` - 用户未选择多个对象
+- `this.IsSingleSelection()`-用户未选择多个对象
 
-- `this.SingleSelection` - 用户右键单击的形状或关系图
+- `this.SingleSelection`-用户右键单击的形状或关系图
 
-- `shape.ModelElement as MyLanguageElement` - 由形状表示的模型元素。
+- `shape.ModelElement as MyLanguageElement`-形状表示的模型元素。
 
 一般原则是，使 `Visible` 属性依赖于所选定的内容，并使 `Enabled` 属性依赖于选定元素的状态。
 
@@ -297,7 +297,7 @@ private const int cmdidMyContextMenuCommand = 1;
 > [!NOTE]
 > 如果更改 VSCT 文件的“符号”部分，还必须更改这些要匹配的声明。 还应在 Package.tt 中递增版本号
 
- 将菜单命令注册为此命令集的一部分。 当初始化关系图时，将调用一次 `GetMenuCommands()`：
+ 将菜单命令注册为此命令集的一部分。 初始化关系图后，将调用 `GetMenuCommands()` 一次：
 
 ```csharp
 protected override IList<MenuCommand> GetMenuCommands()
@@ -357,7 +357,7 @@ protected override IList<MenuCommand> GetMenuCommands()
 
 - 确保已卸载早期版本的程序包。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)
 - [如何：修改标准菜单命令](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)

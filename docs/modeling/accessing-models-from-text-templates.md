@@ -4,24 +4,24 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, accessing models
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 61f69163e4458c62b9f114eca72c954a2317076b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b9ac9fb023797db98f3b83aa4da7b92e71f0e71e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652381"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590613"
 ---
 # <a name="access-models-from-text-templates"></a>从文本模板访问模型
 
 通过使用文本模板，你可以创建基于域特定语言模型的报表文件、源代码文件和其他文本文件。 有关文本模板的基本信息，请参阅[代码生成和 T4 文本模板](../modeling/code-generation-and-t4-text-templates.md)。 调试 DSL 时，文本模板将在实验模式下工作，并且还可在已部署 DSL 的计算机上运行。
 
 > [!NOTE]
-> 创建 DSL 解决方案时，将在调试项目中生成示例文本模板 **\* tt**文件。 更改域类的名称时，这些模板将不再工作。 尽管如此，它们包括你需要的基本指令，并提供可进行更新以匹配 DSL 的示例。
+> 创建 DSL 解决方案时，将在调试项目中生成示例文本模板 **\*tt**文件。 更改域类的名称时，这些模板将不再工作。 尽管如此，它们包括你需要的基本指令，并提供可进行更新以匹配 DSL 的示例。
 
  从文本模板访问模型：
 
@@ -57,7 +57,7 @@ Here is a list of elements in the model:
 
 - 模板加载您在 `requires` 属性中指定的模型文件。
 
-- @No__t_0 中的属性包含根元素。 您的代码可以在其中导航到模型的其他元素。 属性的名称通常与 DSL 的根域类相同。 在此示例中，设为 `this.ExampleModel`。
+- `this` 中的属性包含根元素。 您的代码可以在其中导航到模型的其他元素。 属性的名称通常与 DSL 的根域类相同。 在此示例中，设为 `this.ExampleModel`。
 
 - 虽然编写代码片段的语言为C#，但你可以生成任何类型的文本。 您也可以通过将属性 `language="VB"` 添加到 `template` 指令来在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中编写代码。
 
@@ -89,7 +89,7 @@ Here is a list of elements in the model:
 
  请注意：
 
-1. @No__t_0 和 `validation` 参数用 ";" 分隔，且不能有其他分隔符或空格。
+1. `filename` 和 `validation` 参数用 ";" 分隔，且不能有其他分隔符或空格。
 
 2. 验证类别的列表确定将执行哪些验证方法。 应该用 "&#124;" 分隔多个类别，并且必须没有其他分隔符或空格。
 
@@ -138,9 +138,9 @@ For Each element As ExampleElement In Me.WorkModel.Elements
 ## <a name="loading-models-dynamically"></a>动态加载模型
  如果要在运行时确定要加载的模型，可以在程序代码中动态加载模型文件，而不是使用特定于 DSL 的指令。
 
- 但是，DSL 专用指令的功能之一是导入 DSL 命名空间，以便模板代码可以使用该 DSL 中定义的域类。 由于您未使用指令，因此您必须为您可能加载的所有模型添加 **\<assembly >** 和 **\<import >** 指令。 如果可以加载的不同模型都是同一 DSL 的所有实例，这很容易。
+ 但是，DSL 专用指令的功能之一是导入 DSL 命名空间，以便模板代码可以使用该 DSL 中定义的域类。 由于您未使用指令，因此必须将 **\<程序集添加 >** 并 **\<导入**您可能加载的所有模型的 > 指令。 如果可以加载的不同模型都是同一 DSL 的所有实例，这很容易。
 
- 若要加载该文件，最有效的方法是使用 Visual Studio ModelBus。 在典型方案中，文本模板将使用特定于 DSL 的指令以常规方式加载第一个模型。 该模型将包含对另一个模型的 ModelBus 引用。 您可以使用 ModelBus 打开引用的模型并访问特定的元素。 有关详细信息，请参阅[在文本模板中使用 Visual Studio ModelBus](../modeling/using-visual-studio-modelbus-in-a-text-template.md)。
+ 若要加载该文件，最有效的方法是使用 Visual Studio ModelBus。 在典型方案中，文本模板将使用特定于 DSL 的指令以常规方式加载第一个模型。 该模型将包含对另一个模型的 ModelBus 引用。 您可以使用 ModelBus 打开引用的模型并访问特定的元素。 有关详细信息，请参阅[文本模板中使用 Visual Studio ModelBus](../modeling/using-visual-studio-modelbus-in-a-text-template.md)。
 
  在不太常见的情况下，你可能想要打开的模型文件只有一个文件名，并且该文件可能不在当前的 Visual Studio 项目中。 在这种情况下，可以使用[如何：在程序代码中打开文件中的模型](../modeling/how-to-open-a-model-from-file-in-program-code.md)中所述的方法来打开文件。
 

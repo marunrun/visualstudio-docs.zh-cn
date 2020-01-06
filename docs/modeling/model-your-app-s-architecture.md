@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - UML, modeling architecture
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e87759206f6d05267e2be5be25fdb8c3e9b70df
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ba455730ddac9b2a02b8f0580711499d6a779f49
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747540"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590223"
 ---
 # <a name="model-your-app39s-architecture"></a>为应用程序&#39;建模
 为了帮助确保你的软件系统或应用程序满足用户的需求，你可以在 Visual Studio 中创建模型，作为你的软件系统或应用程序的总体结构和行为说明的一部分。 使用模型，也可以描述在整个设计中使用的模式。 这些模型可你帮助了解现有的体系结构、讨论更改和清楚地传达你的意图。
@@ -102,7 +102,7 @@ ms.locfileid: "72747540"
 
 - 开发人员可能能够采用的变体的说明。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [代码可视化](../modeling/visualize-code.md)
 - [建立用户需求模型](../modeling/model-user-requirements.md)

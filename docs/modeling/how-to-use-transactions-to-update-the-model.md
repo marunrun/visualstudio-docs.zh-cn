@@ -2,17 +2,17 @@
 title: 如何：使用事务更新模型
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a08ea67477f42008c35b6f141351beaeee03d27b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 33d6c249845c72e25b7201bed5e640ff523c5d81
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661139"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594599"
 ---
 # <a name="how-to-use-transactions-to-update-the-model"></a>如何：使用事务更新模型
 事务确保对存储区所做的更改被视为组。 可以将已分组的更改作为一个单元提交或回滚。

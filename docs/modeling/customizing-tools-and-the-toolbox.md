@@ -8,17 +8,17 @@ f1_keywords:
 - vs.dsltools.dsldesigner.selectcursordialog
 helpviewer_keywords:
 - Domain-Specific Language, toolbox
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8099773dbbfdd06e4ce806401400bf3d2443b57f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2e8e9fc3a9ecbadc47c3390d2d4a9b504a316658
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747596"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589716"
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>自定义工具和工具箱
 
@@ -154,12 +154,12 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
  连接生成器包含一个或多个链接连接指令，可指定域关系以及源和目标元素。 例如，在 "任务流" 解决方案模板中，可在**DSL 资源管理器**中查看**CommentReferencesSubjectsBuilder** 。 此连接生成器包含一个名为**CommentReferencesSubjects**的链接连接指令，该指令映射到域关系**CommentReferencesSubjects**。 此链接连接指令包含一个指向 `Comment` 域类的源角色指令，和一个指向 `FlowElement` 域类的目标角色指令。
 
 ### <a name="using-connection-builders-to-restrict-source-and-target-roles"></a>使用连接生成器来限制源和目标角色
- 可使用连接生成器限制使某些类显示在给定域关系的源角色或目标角色中。 例如，你可能有一个与另一个域类具有域关系的基域类，但是你可能不希望该基类的所有派生类在该关系中具有相同角色。 在任务流解决方案中，有四个具体域类（**StartPoint**、 **EndPoint**、 **MergeBranch**和**同步**）直接从抽象域类**FlowElement**继承，两个具体的间接从它继承的域类（**Task**和**ObjectInState**）。 还存在一个在其源角色和目标角色中采用**FlowElement**域类的**流**引用关系。 但是，**终结点**域类的实例不应是**flow**关系的实例的源，也不应是**StartPoint**类的实例作为**flow**关系的实例的目标。 **FlowBuilder**连接生成器具有一个名为**Flow**的链接连接指令，该指令指定哪些域类可以扮演源角色（**任务**、 **MergeBranch**、 **StartPoint**和**同步**）以及可以播放目标角色（**MergeBranch**、 **Endpoint**和**同步**）。
+ 可使用连接生成器限制使某些类显示在给定域关系的源角色或目标角色中。 例如，你可能有一个与另一个域类具有域关系的基域类，但是你可能不希望该基类的所有派生类在该关系中具有相同角色。 在任务流解决方案中，有四个具体的域类（**StartPoint**、 **EndPoint**、 **MergeBranch**和**同步**）直接从抽象域类**FlowElement**继承，另外两个具体域类（**Task**和**ObjectInState**）从它间接继承。 还存在一个在其源角色和目标角色中采用**FlowElement**域类的**流**引用关系。 但是，**终结点**域类的实例不应是**flow**关系的实例的源，也不应是**StartPoint**类的实例作为**flow**关系的实例的目标。 **FlowBuilder**连接生成器具有一个名为**Flow**的链接连接指令，该指令指定哪些域类可以扮演源角色（**任务**、 **MergeBranch**、 **StartPoint**和**同步**），并可以播放目标角色（**MergeBranch**、 **Endpoint**和**同步**）。
 
 ### <a name="connection-builders-with-multiple-link-connect-directives"></a>具有多个链接连接指令的连接生成器
  可向连接生成器添加多个链接连接指令。 这可以帮助用户隐藏用户的某些复杂的域模型，并使**工具箱**变得过于杂乱。 可将多种不同的域关系的链接连接指令添加到单个连接生成器。 但是，应在域关系执行大致相同的函数时合并域关系。
 
- 在任务流解决方案中，**流**连接工具用于绘制**流**和**ObjectFlow**域关系的实例。 除了前面所述的**流**链接连接指令， **FlowBuilder**连接生成器还具有名为**ObjectFlow**的两个链接连接指令。 这些指令指定**ObjectFlow**关系的实例可在**ObjectInState**域类的实例之间绘制，或在**ObjectInState**的实例之间**绘制，而**不是在两个**任务**的实例，或从**任务**的实例到**ObjectInState**实例的实例。 但是，可以在**任务**的两个实例之间绘制**流**关系的实例。 如果编译并运行任务流解决方案，可以看到从**ObjectInState**实例到**任务**实例的**流**将创建**ObjectFlow**的实例，但在两个实例之间绘制**流** **任务**创建**流**的实例。
+ 在任务流解决方案中，**流**连接工具用于绘制**流**和**ObjectFlow**域关系的实例。 除了前面所述的**流**链接连接指令， **FlowBuilder**连接生成器还具有名为**ObjectFlow**的两个链接连接指令。 这些指令指定**ObjectFlow**关系的实例可以在**ObjectInState**域类的实例之间进行绘制，或在**ObjectInState**的实例之间**绘制，而**不是在任务的两个实例之间绘制，而不是在**任务**的实例或从**任务**的实例到**ObjectInState**的实例之间进行绘制。 但是，可以在**任务**的两个实例之间绘制**流**关系的实例。 如果编译并运行任务流解决方案，可以看到从**ObjectInState**实例到**任务**实例的**流**将创建**ObjectFlow**的实例，但在两个**任务**实例之间绘制**流**将创建**流**的实例。
 
 ### <a name="custom-code-for-connection-builders"></a>为连接生成器自定义代码
  在用户界面中有四个用于定义不同类型的连接生成器的自定义的复选框：
@@ -232,7 +232,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
  您可以使用自定义代码应用 "硬" 约束，但应考虑用户是否应该能够暂时建立无效的连接。 如果他们应能够如此，你可以修改约束以使连接不进行验证，直到用户尝试保存更改。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)
 - [自定义复制行为](../modeling/customizing-copy-behavior.md)

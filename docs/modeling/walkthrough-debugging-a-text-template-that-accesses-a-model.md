@@ -2,17 +2,17 @@
 title: 演练：调试访问模型的文本模板
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 344a9331ed63d2da27379770305905ecf5edee77
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f592cfbd46e0f4fc3a64ecaabadf17a6754480c0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666961"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593520"
 ---
 # <a name="walkthrough-debugging-a-text-template-that-accesses-a-model"></a>演练：调试访问模型的文本模板
 在域特定语言解决方案中修改或添加文本模板时，当引擎将模板转换为源代码或编译生成的代码时，可能会出现错误。 以下演练演示了调试文本模板时可以执行的一些操作。
@@ -93,7 +93,7 @@ ms.locfileid: "72666961"
 
      **名为 "DebuggingTestLanguageDirectiveProcessor" 的处理器不支持名为 "modelRoot" 的指令。转换将不会运行。**
 
-     在这种情况下，指令调用包含错误的指令名称。 您已将 `modelRoot` 指定为指令名称，但 `DebuggingTestLanguage` 了正确的指令名称。
+     在这种情况下，指令调用包含错误的指令名称。 您已将 `modelRoot` 指定为指令名称，但 `DebuggingTestLanguage`了正确的指令名称。
 
 3. 双击 "**错误列表**" 窗口中的错误，跳转到代码。
 
@@ -157,13 +157,13 @@ ms.locfileid: "72666961"
 
      (C#)
 
-     **编译转换： VisualStudio. TextTemplating \<GUID >。GeneratedTextTransformation "不包含" 位于 examplemodel.store "的定义**
+     **编译转换： VisualStudio. TextTemplating\<GUID >。GeneratedTextTransformation "不包含" 位于 examplemodel.store "的定义**
 
      （Visual Basic）
 
-     **编译转换： "位于 examplemodel.store" 不是 "TextTemplating \<GUID > 的成员。GeneratedTextTransformation'.**
+     **编译转换： "位于 examplemodel.store" 不是 "TextTemplating\<GUID > 的成员。GeneratedTextTransformation'.**
 
-     在这种情况下，文本模板代码包含不正确的属性名称。 已将 `ExampleModel` 指定为属性名称，但 `LibraryModel` 正确的属性名称。 可以在提供参数中找到正确的属性名称，如下面的代码所示：
+     在这种情况下，文本模板代码包含不正确的属性名称。 已将 `ExampleModel` 指定为属性名称，但 `LibraryModel`正确的属性名称。 可以在提供参数中找到正确的属性名称，如下面的代码所示：
 
     ```
     <#@ DebuggingTestLanguage processor="DebuggingTestLanguageDirectiveProcessor" requires="fileName='Sample.ddd'" provides="ExampleModel=LibraryModel" #>

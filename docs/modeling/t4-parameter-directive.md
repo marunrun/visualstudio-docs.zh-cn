@@ -2,17 +2,17 @@
 title: T4 参数指令
 ms.date: 11/04/2016
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a4a9ea9d3c1f80c669ec52936969ae38342e6343
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9f833eb651efda0edb837515e1bf2b3567e1a759
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72606186"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591796"
 ---
 # <a name="t4-parameter-directive"></a>T4 参数指令
 
@@ -24,9 +24,9 @@ ms.locfileid: "72606186"
 <#@ parameter type="Full.TypeName" name="ParameterName" #>
 ```
 
- @No__t_0 指令声明模板代码中从外部上下文传入的值初始化的属性。 如果编写调用文本转换的代码，则可以设置这些值。 可以在 `Session` 字典中传递值，也可以在 <xref:System.Runtime.Remoting.Messaging.CallContext> 中传递值。
+ `parameter` 指令声明模板代码中从外部上下文传入的值初始化的属性。 如果编写调用文本转换的代码，则可以设置这些值。 可以在 `Session` 字典中传递值，也可以在 <xref:System.Runtime.Remoting.Messaging.CallContext>中传递值。
 
- 可声明任何可远程处理的类型的参数。 也就是说，必须将该类型声明为 <xref:System.SerializableAttribute>，或者必须从 <xref:System.MarshalByRefObject> 派生。 这允许将参数值传递到处理模板的 AppDomain。
+ 可声明任何可远程处理的类型的参数。 也就是说，必须将该类型声明为 <xref:System.SerializableAttribute>，或者必须从 <xref:System.MarshalByRefObject>派生。 这允许将参数值传递到处理模板的 AppDomain。
 
  例如，你可以编写包含以下内容的文本模板：
 
@@ -59,7 +59,7 @@ string result = t4.ProcessTemplate("MyTemplateFile.t4",
 ```
 
 ## <a name="passing-values-in-the-call-context"></a>在调用上下文中传递值
- 您还可以将值作为逻辑数据传递到 <xref:System.Runtime.Remoting.Messaging.CallContext> 中。
+ 您还可以将值作为逻辑数据传递到 <xref:System.Runtime.Remoting.Messaging.CallContext>中。
 
  下面的示例通过使用这两种方法传递值：
 
@@ -85,7 +85,7 @@ string result = t4.ProcessTemplate("",
 ## <a name="passing-values-to-a-run-time-preprocessed-text-template"></a>将值传递给运行时（预处理过的）文本模板
  通常不需要在运行时（预处理过的）文本模板中使用 `<#@parameter#>` 指令。 相反，您可以为生成的代码定义其他构造函数或可设置的属性，通过这些构造函数传递参数值。 有关详细信息，请参阅[带有 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。
 
- 但是，如果要在运行时模板中使用 `<#@parameter>`，则可以通过使用会话字典将值传递给它。 例如，假设你已创建了一个名为 `PreTextTemplate1` 的预处理模板文件。 你可以使用以下代码在你的程序中调用该模板。
+ 但是，如果要在运行时模板中使用 `<#@parameter>`，则可以通过使用会话字典将值传递给它。 例如，假设你已创建了一个名为 `PreTextTemplate1`的预处理模板文件。 你可以使用以下代码在你的程序中调用该模板。
 
 ```csharp
 PreTextTemplate1 t = new PreTextTemplate1();
@@ -99,4 +99,4 @@ string resultText = t.TransformText();
 ## <a name="obtaining-arguments-from-texttemplateexe"></a>从 TextTemplate 获取自变量
 
 > [!IMPORTANT]
-> @No__t_0 指令不检索在 `TextTransform.exe` 实用工具的 `-a` 参数中设置的值。 若要获取这些值，请在 `template` 指令中设置 `hostSpecific="true"`，并使用 `this.Host.ResolveParameterValue("","","argName")`。
+> `parameter` 指令不检索在 `TextTransform.exe` 实用工具的 `-a` 参数中设置的值。 若要获取这些值，请在 `template` 指令中设置 `hostSpecific="true"`，并使用 `this.Host.ResolveParameterValue("","","argName")`。

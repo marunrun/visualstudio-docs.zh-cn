@@ -9,17 +9,17 @@ helpviewer_keywords:
 - service references [Visual Studio], configuring behavior
 - Configure Service Reference dialog box
 ms.assetid: 25e4c36b-2db6-4e71-9010-b7068255d09d
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 033663c347a39c63a76bddd10625bdc86cec1f00
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f5bae3acb6f687c8c787e2d4121999d1133b0f1f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72642856"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586921"
 ---
 # <a name="configure-service-reference-dialog-box"></a>“配置服务引用”对话框
 
@@ -83,7 +83,7 @@ ms.locfileid: "72642856"
 
 **重新使用所有引用的程序集中的类型**
 
-如果选择此选项，则会在可能的情况下重用**被引用程序集中**的所有类型。 默认情况下，该选项是选中的。
+如果选择此选项，则会在可能的情况下重用**被引用程序集中**的所有类型。 默认情况下选择此选项。
 
 **重新使用所引用的指定程序集中的类型**
 
@@ -103,7 +103,7 @@ ms.locfileid: "72642856"
 > [!NOTE]
 > 只有在 "**添加服务引用" 对话框**中显示 "**配置服务引用**" 对话框时，"**添加 Web 引用**" 按钮才可用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：添加对 Web 服务的引用](how-to-add-update-or-remove-a-wcf-data-service-reference.md)
 - [Windows Communication Foundation 服务和 WCF 数据服务](../data-tools/configure-service-reference-dialog-box.md)

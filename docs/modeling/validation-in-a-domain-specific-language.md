@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, constraints
 - Domain-Specific Language, validation
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fb059a9175c61c238abf0881cd96e4179fcf6f65
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 7a37dbb4d9754641b4bcca826ff0ec77c7298d9b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748173"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594001"
 ---
 # <a name="validation-in-a-domain-specific-language"></a>域特定语言中的验证
 作为域特定语言 (DSL) 的作者，你可以定义验证约束，以验证由用户创建的模型是否有意义。 例如，如果你的 DSL 允许用户绘制人员及其祖先的家族树，你可以编写一个约束，用于确保孩子的出生日期在其父母之后。
@@ -82,7 +82,7 @@ ms.locfileid: "72748173"
 
     ValidationCategories 指定何时执行该方法。
 
-   例如:
+   例如：
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;
@@ -125,7 +125,7 @@ public partial class ParentsHaveChildren
 
  请注意有关此代码的以下几点：
 
-- 可以将验证方法添加到域类或域关系。 这些类型的代码在**Dsl\Generated Code\Domain \*。**
+- 可以将验证方法添加到域类或域关系。 这些类型的代码在**Dsl\Generated Code\Domain\*。**
 
 - 每个验证方法都将应用到它的类和子类的每个实例。 对于域关系，每个实例都是两个模型元素之间的链接。
 
@@ -173,11 +173,11 @@ public partial class Person
         { ...
 ```
 
- **聚合验证约束。** 若要以可预测的顺序应用验证，请在所有者类上定义单个验证方法，如模型的根元素。 此技术还允许你将多个错误报告聚合到单个消息中。
+ **聚合验证约束。** 若要按可预知的顺序应用验证，请在所有者类上定义单个验证方法，例如模型的根元素。 此技术还允许你将多个错误报告聚合到单个消息中。
 
  缺点是组合的方法不易于管理，并且约束必须都具有相同的 `ValidationCategories`。 因此，建议你将每个约束保留在单独的方法中（如果可能）。
 
- **在上下文缓存中传递值。** 上下文参数包含一个字典，你可以在其中放置任意值。 该字典将在验证运行的生存期内持续存在。 例如，特定验证方法可以将错误计数保留在上下文中，并使用它来避免错误窗口被重复的消息所淹没。 例如:
+ **在上下文缓存中传递值。** 上下文参数具有可以在其中放置任意值的字典。 该字典将在验证运行的生存期内持续存在。 例如，特定验证方法可以将错误计数保留在上下文中，并使用它来避免错误窗口被重复的消息所淹没。 例如：
 
 ```csharp
 List<ParentsHaveChildren> erroneousLinks;
@@ -193,7 +193,7 @@ if (erroneousLinks.Count < 5) { context.LogError( ... ); }
 
  如果你将域关系的角色的重数设置为 1..* 或 1..1，但用户未创建此关系的链接，则将显示验证错误消息。
 
- 例如，如果你的 DSL 具有类 Person 和城镇，并且关系**1. \\** * 的关系 PersonLivesInTown 为 "城镇" 角色，则对于每个不是城镇的人员，将显示一条错误消息。
+ 例如，如果你的 DSL 具有类 Person 和城镇，并且关系**1.\\** * 的关系 PersonLivesInTown 为 "城镇" 角色，则对于每个不是城镇的人员，将显示一条错误消息。
 
 ## <a name="running-validation-from-program-code"></a>从程序代码运行验证
  通过访问或创建 ValidationController，可运行验证。 如果要在错误窗口中向用户显示错误，请使用附加到关系图的 DocData 的 ValidationController。 例如，如果你要编写菜单命令，则命令集类中提供了 `CurrentDocData.ValidationController`：
@@ -213,7 +213,7 @@ partial class MyLanguageCommandSet
 
  有关详细信息，请参阅[如何：向快捷菜单中添加命令](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)。
 
- 还可以创建单独的验证控制器，并自行管理错误。 例如:
+ 还可以创建单独的验证控制器，并自行管理错误。 例如：
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;
@@ -327,14 +327,14 @@ validationController.ValidateCustom
 
  但是，不建议使用这些技术。 通常，最好让用户决定如何更正无效的模型。
 
- **调整更改以便将模型还原到有效性。** 例如，如果用户将属性设置为超过允许的最大值，则可以将属性重置为最大值。 若要实现此目的，请定义一个规则。 有关详细信息，请参阅[规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)。
+ **调整更改以便将模型还原到有效性。** 例如，如果用户将属性设置为允许的最大值之上，则可以将该属性重置为最大值。 若要实现此目的，请定义一个规则。 有关详细信息，请参阅[规则将传播的更改中的模式](../modeling/rules-propagate-changes-within-the-model.md)。
 
  **如果尝试无效的更改，则回滚事务。** 你还可以为此目的定义规则，但在某些情况下，可以重写属性处理程序**OnValueChanging （）** ，或重写方法（如 `OnDeleted().` 回滚事务，使用 `this.Store.TransactionManager.CurrentTransaction.Rollback().` 有关详细信息，请参阅[域属性值更改处理程序](../modeling/domain-property-value-change-handlers.md)。
 
 > [!WARNING]
 > 请确保用户知道更改已调整或已回滚。 例如，使用 `System.Windows.Forms.MessageBox.Show("message").`
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)

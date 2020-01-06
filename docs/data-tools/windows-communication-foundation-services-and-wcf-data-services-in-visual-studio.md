@@ -30,17 +30,17 @@ helpviewer_keywords:
 - WCF services, endpoints
 - service method, called asynchronously[Visual Studio]
 ms.assetid: d56f12cb-e139-4fec-b3e4-488383356642
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8654e42db8ec2a285c9104c6f43bc34beb22ad22
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: abcfde777223ada130e06ab7766319e1d982258c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72806966"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585933"
 ---
 # <a name="windows-communication-foundation-services-and-wcf-data-services-in-visual-studio"></a>Visual Studio 中的 Windows Communication Foundation 服务和 WCF 数据服务
 
@@ -52,7 +52,7 @@ Windows Communication Foundation （WCF）是一个统一的框架，用于创�
 
 ### <a name="what-are-wcf-data-services"></a>WCF 数据服务
 
-WCF 数据服务是开放数据（OData）协议标准的实现。  WCF 数据服务允许你以一组 REST Api 的形式公开表格数据，从而使你能够使用标准 HTTP 谓词（如 GET、POST、PUT 或 DELETE）返回数据。 在服务器端，WCF 数据服务被[ASP.NET Web API](https://dotnet.microsoft.com/apps/aspnet/apis)用于创建新的 OData 服务。 在 Visual Studio 中使用 .NET 应用程序中的 OData 服务时，WCF 数据服务客户端库仍是一个不错的选择（**项目** > **添加服务引用**）。 有关详细信息，请参阅 [WCF Data Services 4.5](http://go.microsoft.com/fwlink/?LinkID=119952)。
+WCF 数据服务是开放数据（OData）协议标准的实现。  WCF 数据服务允许你以一组 REST Api 的形式公开表格数据，从而使你能够使用标准 HTTP 谓词（如 GET、POST、PUT 或 DELETE）返回数据。 在服务器端，WCF 数据服务被[ASP.NET Web API](https://dotnet.microsoft.com/apps/aspnet/apis)用于创建新的 OData 服务。 在 Visual Studio 中使用 .NET 应用程序中的 OData 服务时，WCF 数据服务客户端库仍是一个不错的选择（**项目** > **添加服务引用**）。 有关详细信息，请参阅 [WCF Data Services 4.5](/dotnet/framework/data/wcf)。
 
 ### <a name="wcf-programming-model"></a>WCF 编程模型
 
@@ -167,11 +167,11 @@ Visual Studio 简化了创建 WCF 客户端的任务，自动生成代理和使�
 
 2. 在文件中搜索 `<Client>` 标记。
 
-3. 在 `<Client>` 标记下搜索以查找以 `<Endpoint>` 开头的标记。
+3. 在 `<Client>` 标记下搜索以查找以 `<Endpoint>`开头的标记。
 
      如果服务引用提供多个终结点，则将有两个或多个 `<Endpoint` 标记。
 
-4. 在 `<EndPoint>` 标记中，你将找到 `name="`*SomeService* `"` 参数（其中*SomeService*表示终结点名称）。 这是终结点的名称，可将其传递给服务引用的构造函数的 `endpointConfigurationName As String` 重载。
+4. 在 `<EndPoint>` 标记中，你将找到 `name="`*SomeService*`"` 参数（其中*SomeService*表示终结点名称）。 这是终结点的名称，可将其传递给服务引用的构造函数的 `endpointConfigurationName As String` 重载。
 
 ## <a name="how-to-call-a-service-method-asynchronously"></a>如何：异步调用服务方法
 
@@ -252,7 +252,7 @@ Windows Communication Foundation （WCF）服务中的大多数方法都可以�
 
 ## <a name="related-topics"></a>相关主题
 
-| Title | 描述 |
+| 职务 | 描述 |
 | - | - |
 | [演练：在 Windows 窗体中创建简单的 WCF 服务](../data-tools/walkthrough-creating-a-simple-wcf-service-in-windows-forms.md) | 提供在 Visual Studio 中创建和使用 WCF 服务的分步演示。 |
 | [演练：使用 WPF 和 Entity Framework 创建 WCF Data Service](../data-tools/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework.md) | 提供有关如何在 Visual Studio 中创建和使用 WCF 数据服务的分步演示。 |
@@ -263,11 +263,11 @@ Windows Communication Foundation （WCF）服务中的大多数方法都可以�
 | [演练：创建 N 层数据应用程序](../data-tools/walkthrough-creating-an-n-tier-data-application.md) | 提供有关创建类型化数据集并将 TableAdapter 和数据集代码分离到多个项目中的分步说明。 |
 | [“配置服务引用”对话框](../data-tools/configure-service-reference-dialog-box.md) | 介绍 "**配置服务引用**" 对话框的用户界面元素。 |
 
-## <a name="reference"></a>参考
+## <a name="reference"></a>引用
 
 - <xref:System.ServiceModel>
 - <xref:System.Data.Services>
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [适用于 NET 的 Visual Studio Data Tools](../data-tools/visual-studio-data-tools-for-dotnet.md)

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - text templates, getting started
 - Text Template project item
 - text templates, generating code for your application
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 08451c679f372cb376c6baf97a9a4d06282ba45f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 06c6244f59482825ed435226f79437da9e2c0df0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748421"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589625"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>使用 T4 文本模板生成设计时代码
 
@@ -54,7 +54,7 @@ ms.locfileid: "72748421"
 
     如果已将模板添加到 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 项目，则语言特性将为“`VB`”。
 
-4. 在文件末尾添加一些文本。 例如:
+4. 在文件末尾添加一些文本。 例如：
 
    ```
    Hello, world!
@@ -62,7 +62,7 @@ ms.locfileid: "72748421"
 
 5. 保存该文件。
 
-    你可能会看到一个**安全警告**消息框，要求你确认是否要运行该模板。 单击“确定”。
+    你可能会看到一个**安全警告**消息框，要求你确认是否要运行该模板。 单击" **确定**"。
 
 6. 在**解决方案资源管理器**中，展开 "模板文件" 节点，将会找到扩展名为 **.txt**的文件。 该文件包含从该模板生成的文本。
 
@@ -75,7 +75,7 @@ ms.locfileid: "72748421"
 
 - 编辑模板，然后将焦点更改为其他 Visual Studio 窗口。
 
-- 保存模板。
+- 保存该模板。
 
 - 单击 "**生成**" 菜单中的 "**转换所有模板**"。 这会转换 Visual Studio 解决方案中的所有模板。
 
@@ -123,7 +123,7 @@ ms.locfileid: "72748421"
 
 创建文本模板：
 
-- 将 `debug="true"` 插入 `template` 指令。 例如:
+- 将 `debug="true"` 插入 `template` 指令。 例如：
 
    `<#@ template debug="true" hostspecific="false" language="C#" #>`
 
@@ -134,7 +134,7 @@ ms.locfileid: "72748421"
    模板运行并在断点处停止。 你可以以常用方式检查变量并逐步执行代码。
 
 > [!TIP]
-> `debug="true"` 使生成的代码更精确地映射到文本模板，方法是在生成的代码中插入更多行号指令。 如果不使用它，断点可能在错误状态下停止运行。
+> `debug="true"` 通过在生成的代码中插入更多行号指令，使生成的代码更精确地映射到文本模板。 如果不使用它，断点可能在错误状态下停止运行。
 >
 > 但是，即使不在进行调试，你仍可将该子句留在模板指令中。 这仅会使性能下降一点点。
 
@@ -219,7 +219,7 @@ ms.locfileid: "72748421"
 <#@ import namespace="System.IO" #>
 ```
 
-@No__t_0 指令使指定的程序集可用于模板代码，其方式与 Visual Studio 项目的 "引用" 部分相同。 你无需包括对 System.dll 的引用，它是自动引用的。 `import` 指令允许你使用类型而不使用其完全限定名，方式与普通程序文件中的 `using` 指令相同。
+`assembly` 指令使指定的程序集可用于模板代码，其方式与 Visual Studio 项目的 "引用" 部分相同。 你无需包括对 System.dll 的引用，它是自动引用的。 `import` 指令允许你使用类型而不使用其完全限定名，方式与普通程序文件中的 `using` 指令相同。
 
 例如，在导入**System.IO**后，可以编写：
 
@@ -272,7 +272,7 @@ ms.locfileid: "72748421"
 
 ### <a name="getting-data-from-visual-studio"></a>从 Visual Studio 获取数据
 
-若要使用 Visual Studio 中提供的服务，请设置 `hostSpecific` 属性并加载 `EnvDTE` 程序集。 导入 `Microsoft.VisualStudio.TextTemplating`，其中包含 `GetCOMService()` 扩展方法。  然后，你可以使用 IServiceProvider.GetCOMService() 访问 DTE 和其他服务。 例如:
+若要使用 Visual Studio 中提供的服务，请设置 `hostSpecific` 属性并加载 `EnvDTE` 程序集。 导入 `Microsoft.VisualStudio.TextTemplating`，其中包含 `GetCOMService()` 扩展方法。  然后，你可以使用 IServiceProvider.GetCOMService() 访问 DTE 和其他服务。 例如：
 
 ```src
 <#@ template hostspecific="true" language="C#" #>
@@ -299,7 +299,7 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 如果已安装 Visual Studio 建模 SDK，则可以在每次执行生成时自动转换所有模板。 为此，可在文本编辑器中编辑项目文件（.csproj 或 .vbproj），然后在文件末尾附近（其他任何 `<import>` 语句之后）添加以下行：
 
 > [!NOTE]
-> 当你安装 Visual Studio 的特定功能时，文本模板转换 SDK 和 Visual Studio 建模 SDK 将自动安装。 有关更多详细信息，请参阅[此博客文章](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)。
+> 当你安装 Visual Studio 的特定功能时，文本模板转换 SDK 和 Visual Studio 建模 SDK 将自动安装。 有关更多详细信息，请参阅[这篇博客文章](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)。
 
 ::: moniker range="vs-2017"
 
@@ -342,7 +342,7 @@ Warning("A warning message");
 
 ### <a name="to-convert-an-existing-file-to-a-design-time-template"></a>将现有文件转换为设计时模板
 
-1. 在 Visual Studio 项目中，添加要生成的类型的文件，例如 `.cs`、`.vb` 或 `.resx` 文件。
+1. 在 Visual Studio 项目中，添加要生成的类型的文件，例如 `.cs`、`.vb`或 `.resx` 文件。
 
 2. 测试新文件以确保其工作。
 
@@ -388,6 +388,6 @@ Warning("A warning message");
 |以域特定语言的形式转换数据。|[从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)|
 |编写指令处理器转换自己的数据源。|[自定义 T4 文本转换](../modeling/customizing-t4-text-transformation.md)|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [T4 文本模板编写准则](../modeling/guidelines-for-writing-t4-text-templates.md)

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - WPF data binding [Visual Studio], walkthroughs
 - WPF Designer, data binding
 ms.assetid: 8823537c-82f0-41f7-bf30-705f0e5e59fd
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: ecc08be8c865cefa9b440d9af61cf9d019865ea0
-ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
+ms.openlocfilehash: ef13f400ff762818eb97396c51330d755c0203c4
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72924555"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586960"
 ---
 # <a name="bind-wpf-controls-to-a-wcf-data-service"></a>将 WPF 控件绑定到 WCF 数据服务
 
@@ -40,7 +40,7 @@ ms.locfileid: "72924555"
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 你需要以下组件来完成本演练：
 
@@ -173,7 +173,7 @@ ms.locfileid: "72924555"
    <Button HorizontalAlignment="Right" Margin="0,21,46,24" Name="saveButton" Width="110">Save changes</Button>
    ```
 
-3. 生成项目。
+3. 生成此项目。
 
 ## <a name="create-the-data-bound-controls"></a>创建数据绑定控件
 
@@ -265,7 +265,7 @@ ms.locfileid: "72924555"
 
 1. 在 "**生成**" 菜单上，单击 "**生成解决方案**"。 验证解决方案已生成且未发生错误。
 
-2. 按**Ctrl** +**F5**。
+2. 按**Ctrl**+**F5**。
 
      Visual Studio 启动“AdventureWorksService”项目，但不对其进行调试。
 
@@ -295,7 +295,7 @@ ms.locfileid: "72924555"
 
 - 了解如何使用 Visual Studio 中的“数据源”窗口在 WPF 控件中显示相关数据（即父-子关系中的数据）。 有关详细信息，请参阅[演练：在 WPF 应用程序中显示相关数据](../data-tools/display-related-data-in-wpf-applications.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中将 WPF 控件绑定到数据](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)
 - [将 WPF 控件绑定到数据集](../data-tools/bind-wpf-controls-to-a-dataset.md)
