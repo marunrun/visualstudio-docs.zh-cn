@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, Properties window
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 72e0a8393a65d4c0e1549a6617971b0adb8c1df7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b2cd7d4598040721d3c5b6acb7844f668c72ea09
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653967"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589690"
 ---
 # <a name="customize-the-properties-window"></a>自定义属性窗口
 
@@ -26,7 +26,7 @@ ms.locfileid: "72653967"
 
 在 DSL 定义中设置某个属性的名称时，其显示名称将自动设置为该名称的副本。 如果编写 Pascal 大小写名称（如 "FuelGauge"），则显示名称将自动包含一个空格： "燃料仪表"。 但是，你可以将显示名称显式设置为另一个值。
 
-**说明**。 域属性的说明出现在两个位置：
+**描述**。 域属性的说明出现在两个位置：
 
 - 当用户选择属性时，在 "属性" 窗口的底部。 可以使用它向用户说明属性表示的内容。
 
@@ -40,7 +40,7 @@ ms.locfileid: "72653967"
 
 右键单击 DSL 定义中的形状类，指向 "添加" "**添加**"，然后选择一项功能。
 
-在形状上，可以公开**FillColor**、 **OutlineColor**、 **TextColor**、 **OutlineDashStyle**、 **OutlineThickness**和**FillGradientMode**属性。 在连接器上，可以 `,`**TextColor**、 **DashStyle**和**宽窄**属性公开**颜色**。 在关系图上，可以公开**FillColor**和**TextColor**属性。
+在形状上，可以公开**FillColor**、 **OutlineColor**、 **TextColor**、 **OutlineDashStyle**、 **OutlineThickness**和**FillGradientMode**属性。 在连接器上，可以`,`**TextColor**、 **DashStyle**和**宽窄**属性公开**颜色**。 在关系图上，可以公开**FillColor**和**TextColor**属性。
 
 ## <a name="forwarding-display-properties-of-related-elements"></a>转发：显示相关元素的属性
 
@@ -52,7 +52,7 @@ ms.locfileid: "72653967"
 
 当用户在资源管理器中选择形状或连接符或元素时，以下属性将显示在属性窗口中：
 
-- 在模型元素的域类上定义的域属性，包括基类中定义的属性。 例外情况是你为其设置**了可浏览**`False` 的域属性。
+- 在模型元素的域类上定义的域属性，包括基类中定义的属性。 例外情况是你为其设置**了可浏览**`False`的域属性。
 
 - 通过具有重数为 0 ..1 的关系链接的元素的名称。 这提供了一种方便的方法来查看链接的元素，即使您没有为关系定义连接器映射也是如此。
 
@@ -62,7 +62,7 @@ ms.locfileid: "72653967"
 
 ### <a name="add-property-forwarding"></a>添加属性转发
 
-若要转发属性，请定义域类型描述符。 如果两个域类之间存在域关系，则可以使用域类型描述符将第一个类中的域属性设置为第二个域类中的域属性的值。 例如，如果您有一个**book**域类和一个**Author**域类之间的关系，则可以使用域类型描述符使该书**作者**的**Name**属性属性窗口在用户选择书籍。
+若要转发属性，请定义域类型描述符。 如果两个域类之间存在域关系，则可以使用域类型描述符将第一个类中的域属性设置为第二个域类中的域属性的值。 例如，如果您有一个**book**域类和一个**Author**域类之间的关系，则当用户选择该书时，您可以使用域类型描述符来使该书**作者**的**Name**属性显示在属性窗口中。
 
 > [!NOTE]
 > 属性转发只会影响用户编辑模型时的属性窗口。 它不会在接收类中定义域属性。 如果要在 DSL 定义或程序代码的其他部分访问转发的域属性，则必须访问转发元素。
@@ -146,7 +146,7 @@ ms.locfileid: "72653967"
 
 您可以使用属性窗口中的**自定义特性**项设置属性的属性。
 
-@No__t_0 的类型必须从第二个参数中指定的类型派生而来。 第二个参数应是 <xref:System.Drawing.Design.UITypeEditor> 或 <xref:System.ComponentModel.ComponentEditor>。 有关更多信息，请参见<xref:System.ComponentModel.EditorAttribute>。
+`AnEditor` 的类型必须从第二个参数中指定的类型派生而来。 第二个参数应是 <xref:System.Drawing.Design.UITypeEditor> 或 <xref:System.ComponentModel.ComponentEditor>。 有关更多信息，请参见<xref:System.ComponentModel.EditorAttribute>。
 
 您可以指定您自己的编辑器或 .NET 编辑器，如 <xref:System.Windows.Forms.Design.FileNameEditor> 或 <xref:System.Drawing.Design.ImageEditor>。 例如，使用下面的过程可以拥有一个属性，用户可以在其中输入文件名。
 
@@ -177,18 +177,18 @@ ms.locfileid: "72653967"
 
 您可以定义自己的编辑器。 您可以通过此操作来允许用户编辑您定义的类型，或以特殊方式编辑标准类型。 例如，您可以允许用户输入表示公式的字符串。
 
-通过编写派生自 <xref:System.Drawing.Design.UITypeEditor> 的类来定义编辑器。 你的类必须重写：
+通过编写派生自 <xref:System.Drawing.Design.UITypeEditor>的类来定义编辑器。 你的类必须重写：
 
 - <xref:System.Drawing.Design.UITypeEditor.EditValue%2A>，用于与用户交互并更新属性值。
 
 - <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>，指定编辑器是打开对话框还是提供下拉菜单。
 
-还可以提供属性的值的图形表示形式，该属性的值将显示在属性网格中。 为此，请重写 `GetPaintValueSupported` 和 `PaintValue`。  有关更多信息，请参见<xref:System.Drawing.Design.UITypeEditor>。
+还可以提供属性的值的图形表示形式，该属性的值将显示在属性网格中。 为此，请重写 `GetPaintValueSupported`和 `PaintValue`。  有关更多信息，请参见<xref:System.Drawing.Design.UITypeEditor>。
 
 > [!NOTE]
 > 在**Dsl**项目的单独代码文件中添加代码。
 
-例如:
+例如：
 
 ```csharp
 internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor
@@ -226,7 +226,7 @@ internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor
 (typeof(MyTypeConverter))]
 ```
 
-定义一个从 <xref:System.ComponentModel.TypeConverter> 派生的类。 将代码添加到**Dsl**项目的单独文件中。 例如:
+定义一个从 <xref:System.ComponentModel.TypeConverter> 派生的类。 将代码添加到**Dsl**项目的单独文件中。 例如：
 
 ```csharp
 /// <summary>
@@ -319,6 +319,6 @@ public class MyTypeConverter : System.ComponentModel.TypeConverter
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)

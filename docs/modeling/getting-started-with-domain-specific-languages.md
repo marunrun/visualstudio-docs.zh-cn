@@ -2,24 +2,24 @@
 title: 域特定语言入门
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c86383ddc833a6b76affa451f21180ed4941ad14
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 226111f7bd2c064fa2aec3cbd4f94a0adeb0e5b8
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985054"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596562"
 ---
 # <a name="get-started-with-domain-specific-languages"></a>域特定语言入门
 
 本主题介绍如何定义和使用通过用于 Visual Studio 的建模 SDK 创建的域特定语言（DSL）的基本概念。
 
 > [!NOTE]
-> 当你安装 Visual Studio 的特定功能时，文本模板转换 SDK 和 Visual Studio 建模 SDK 将自动安装。 有关更多详细信息，请参阅[此博客文章](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)。
+> 当你安装 Visual Studio 的特定功能时，文本模板转换 SDK 和 Visual Studio 建模 SDK 将自动安装。 有关更多详细信息，请参阅[这篇博客文章](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)。
 
 如果你不熟悉 Dsl，我们建议你通过**DSL 工具实验室**，你可以在此网站中找到：[可视化和建模 SDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)
 
@@ -37,7 +37,7 @@ Dsl 的一个主体应用程序是生成程序代码、配置文件和其他项�
 
 本概述的其余部分是一个演练，其中介绍了在 Visual Studio 中创建和使用域特定语言的基本操作。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 若要定义 DSL，必须安装以下组件：
 
@@ -61,7 +61,7 @@ Dsl 的一个主体应用程序是生成程序代码、配置文件和其他项�
 
      ![“创建 DSL”对话框](../modeling/media/create_dsldialog.png)
 
-4. 在 "**名称**" 框中，键入**FamilyTree**。 单击“确定”。
+4. 在 "**名称**" 框中，键入**FamilyTree**。 单击" **确定**"。
 
      "**域特定语言向导**" 将打开，并显示模板 DSL 解决方案列表。
 
@@ -147,7 +147,7 @@ DSL 定义可以指定模型在关系图上的显示方式。 可以从各种形
 
 编辑模型时，可以在 "**资源管理器**" 视图中查看作为树的模型。 将形状添加到关系图中时，模型元素也会显示在资源管理器中。 即使没有关系图，也可以使用资源管理器。
 
-如果在 Visual Studio 的调试实例中看不到 "资源管理器"，请在 "**视图**" 菜单上指向**其他窗口**，然后单击 " *\<Your 语言 >* **资源管理器**"。
+如果看不到 Visual Studio 调试实例中的资源管理器，请在 "**视图**" 菜单上指向**其他窗口**，然后单击 " *\<语言 >* **资源管理器**"。
 
 ### <a name="the-api-of-your-dsl"></a>DSL 的 API
 
@@ -209,7 +209,7 @@ DSL 生成一个 API，该 API 允许你读取和更新作为 DSL 实例的模�
 
     2. 打开属性窗口并将其放置在一起，以便你可以同时看到 DSL 资源管理器和属性。
 
-    3. 在 DSL 资源管理器中，依次展开 "**编辑器**"、 **"工具箱" 选项卡**、 *\<your DSL >* 和**工具**。
+    3. 在 DSL 资源管理器中，展开 "**编辑器**"、 **"工具箱" 选项卡**， *\<DSL >* ，然后按 "**工具**"。
 
     4. 单击 " **ExampleElement**"。 这是用于创建元素的工具箱项。
 
@@ -264,7 +264,7 @@ DSL 生成一个 API，该 API 允许你读取和更新作为 DSL 实例的模�
 
 3. 将修饰器映射到属性。
 
-   1. 打开 "DSL 详细信息" 窗口。 它通常位于 "输出" 窗口旁的选项卡中。 如果看不到该窗口，请在 "**视图**" 菜单上，指向 "**其他窗口**"，再单击 " **DSL 详细信息**"。
+   1. 打开“DSL 详细信息”窗口。 它通常位于 "输出" 窗口旁的选项卡中。 如果看不到该窗口，请在 "**视图**" 菜单上，指向 "**其他窗口**"，再单击 " **DSL 详细信息**"。
 
    2. 在 DSL 定义关系图上，单击将**Person**域类连接到 shape 类的行。
 
@@ -333,7 +333,7 @@ DSL 生成一个 API，该 API 允许你读取和更新作为 DSL 实例的模�
 
     1. 在**DSL 资源管理器**中，依次展开**编辑器**和**工具箱选项卡**。
 
-    2. 右键单击 *\<your DSL >* ，然后单击 "**添加新元素工具**"。
+    2. 右键单击*DSL >\<* ，然后单击 "**添加新元素工具**"。
 
     3. 设置新工具的 "**名称**" 属性，并将其 "**类**" 属性设置为 "城镇"。
 
@@ -341,7 +341,7 @@ DSL 生成一个 API，该 API 允许你读取和更新作为 DSL 实例的模�
 
 7. 创建用于在城镇与人员之间进行链接的连接器工具。
 
-    1. 右键单击 *\<your DSL >* ，然后单击 "**添加新的连接器工具**"。
+    1. 右键单击*DSL >\<* ，然后单击 "**添加新的连接器工具**"。
 
     2. 设置新工具的 "名称" 属性。
 
@@ -407,7 +407,7 @@ DSL 生成一个 API，该 API 允许你读取和更新作为 DSL 实例的模�
 
 2. 重新生成仍想要使用的任何实验性 Dsl 或其他实验性 Visual Studio 扩展。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [了解模型、类和关系](../modeling/understanding-models-classes-and-relationships.md)
 - [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)

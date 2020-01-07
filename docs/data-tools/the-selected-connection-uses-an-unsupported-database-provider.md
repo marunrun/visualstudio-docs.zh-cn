@@ -3,17 +3,17 @@ title: 所选连接使用不支持的数据库提供程序
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4d25dfa1-8fa4-4529-9b90-973bc2ec2993
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: ce72f9d4f93db5d4f96bfe54e6cb0d29f4e0727b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5e11feefc6e513dcaffa92389946ffef51f10d4a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72639971"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586141"
 ---
 # <a name="the-selected-connection-uses-an-unsupported-database-provider"></a>所选连接使用不支持的数据库提供程序
 
@@ -23,7 +23,7 @@ ms.locfileid: "72639971"
 
 若要更正此错误，只需将使用 .NET Framework 数据提供程序 SQL Server 的数据连接中的项添加到**O/R 设计器**中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Data.SqlClient>
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

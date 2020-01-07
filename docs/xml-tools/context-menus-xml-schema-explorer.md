@@ -3,17 +3,17 @@ title: XML 架构资源管理器中的上下文菜单
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 42ab17ca-b8c1-40d7-beda-d033f66fe874
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a9310102177e19d2129dd620285d6c45df63ec78
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f7224ca09588858398a0f45c35008ddd5ba0af71
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651208"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592888"
 ---
 # <a name="context-menus-xml-schema-explorer"></a>上下文菜单（XML 架构资源管理器）
 
@@ -112,7 +112,7 @@ ms.locfileid: "72651208"
 |**显示所有成员**|查找并突出显示命名组的所有成员。|
 |**显示所有引用**|查找并突出显示对所选组的所有引用（具有 `ref="selectedGroup"` 的组）。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 架构资源管理器](../xml-tools/xml-schema-explorer.md)
 - [搜索架构集](../xml-tools/searching-the-schema-set.md)

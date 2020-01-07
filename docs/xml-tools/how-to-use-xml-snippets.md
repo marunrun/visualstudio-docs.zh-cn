@@ -3,17 +3,17 @@ title: 如何使用 XML 代码段
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3a27375b-81cc-48f6-a884-e1cb8c4f78f5
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 163fcddb8553da39b035e649155e04c3da4b430e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: decc565eca9b7299761405e06c0cecf82f63319d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72601800"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592602"
 ---
 # <a name="how-to-use-xml-snippets"></a>如何：使用 XML 代码段
 
@@ -26,7 +26,7 @@ ms.locfileid: "72601800"
 以下过程描述如何访问 "**插入代码段**" 命令。
 
 > [!NOTE]
-> 还可以通过键盘快捷方式（**ctrl** +**K**，然后按**ctrl** +**X**）访问 "**插入代码段**" 命令。
+> 还可以通过键盘快捷方式（**ctrl**+**K**，然后按**ctrl**+**X**）访问 "**插入代码段**" 命令。
 
 ### <a name="to-insert-snippets-from-the-shortcut-menu"></a>从快捷菜单插入代码段
 
@@ -52,7 +52,7 @@ ms.locfileid: "72601800"
 
 1. 将光标置于要插入 XML 代码段的位置。
 
-2. 开始键入要添加到文件中的 XML 代码段。 如果启用了自动完成，将显示“智能感知完成单词”列表。 如果未显示，请按**Ctrl** **+ "** 以激活它。
+2. 开始键入要添加到文件中的 XML 代码段。 如果启用了自动完成，将显示“智能感知完成单词”列表。 如果未显示，请按**Ctrl** **+"** 以激活它。
 
 3. 从“完成单词”列表中选择 XML 代码段。
 
@@ -76,7 +76,7 @@ ms.locfileid: "72601800"
 以下过程描述如何访问 "**外侧代码**" 命令。
 
 > [!NOTE]
-> "**环绕**" 命令也可通过键盘快捷方式（**ctrl** +**K**，然后按**ctrl** +**S**）提供。
+> "**环绕**" 命令也可通过键盘快捷方式（**ctrl**+**K**，然后按**ctrl**+**S**）提供。
 
 ### <a name="to-use-surround-with-from-the-context-menu"></a>在上下文菜单中使用 "外侧代码"
 
@@ -102,7 +102,7 @@ ms.locfileid: "72601800"
 
 选择了 XML 代码段后，代码段的文本将自动插入光标位置。 代码段中的任何可编辑字段都将突出显示，并自动选中第一个可编辑字段。 当前选中的字段将框选。
 
-选中某个字段后，可以为该字段键入新值。 按**tab**循环遍历代码段的可编辑字段;按**Shift** +**tab**按相反的顺序循环切换。 单击某个字段可将光标置于该字段中，而双击某个字段可选中该字段。 突出显示某个字段时，可能会显示工具提示，提供对该字段的说明。
+选中某个字段后，可以为该字段键入新值。 按**tab**循环遍历代码段的可编辑字段;按**Shift**+**tab**按相反的顺序循环切换。 单击某个字段可将光标置于该字段中，而双击某个字段可选中该字段。 突出显示某个字段时，可能会显示工具提示，提供对该字段的说明。
 
 只有给定字段的第一个实例是可编辑的。 突出显示该字段时，该字段的其他实例将以大纲方式显示。 更改了某个可编辑字段的值后，代码段中所有使用该字段的位置均将更改。
 
@@ -110,7 +110,7 @@ ms.locfileid: "72601800"
 
 可以通过修改 "**选项**" 对话框的 "**字体和颜色**" 窗格中的 "**代码片段字段**" 设置来更改可编辑代码段字段的默认颜色。 有关详细信息，请参阅[如何：更改编辑器中的字体和颜色](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 代码段](../xml-tools/xml-snippets.md)
 - [如何：从 XML 架构生成 XML 代码段](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)

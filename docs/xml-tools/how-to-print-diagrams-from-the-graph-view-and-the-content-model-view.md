@@ -3,17 +3,17 @@ title: XML 架构：图形视图中的打印关系图 & 内容模型视图
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 7e1785e4-4aaf-4c66-8735-51e7ca035565
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c4d25ef33e22055ff6e6aa17797fcd0c4dbcb0e4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d1253e5470b176f04d715adc4caa10cec202a4c9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668791"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592617"
 ---
 # <a name="how-to-print-diagrams-from-the-graph-view-and-the-content-model-view"></a>如何：从图形视图和内容模型视图打印关系图
 
@@ -29,7 +29,7 @@ ms.locfileid: "72668791"
 
 3. 通过使用 XPS 查看器，打印在 XPS 文件中保存的图像。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [图形视图](../xml-tools/graph-view.md)
 - [内容模型视图](../xml-tools/content-model-view.md)

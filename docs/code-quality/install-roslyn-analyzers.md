@@ -6,17 +6,17 @@ helpviewer_keywords:
 - code analysis, managed code
 - analyzers
 - Roslyn analyzers
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9013d7be60a8091f7ce4fc4fe92fa4acaef43720
-ms.sourcegitcommit: f9f389e72787de30eb869a55ef7725a10a4011f0
+ms.openlocfilehash: 9a833cb46811bd97467fdb048272c9feb2bb7873
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73636526"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587376"
 ---
 # <a name="install-net-compiler-platform-code-analyzers"></a>安装 .NET Compiler Platform 代码分析器
 
@@ -31,7 +31,7 @@ Visual Studio 包含一组核心的 .NET Compiler Platform （*Roslyn*）分析�
 2. 使用[包管理器控制台](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console)或[包管理器 UI](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console)，在 Visual Studio 中安装包。
 
    > [!NOTE]
-   > 每个分析器包的 "www.nuget.org" 页将显示要粘贴到**包管理器控制台**中的命令。 还有一个用于将文本复制到剪贴板的方便的按钮。
+   > 每个分析器包的 www.nuget.org 页将显示要粘贴到**包管理器控制台**中的命令。 还有一个用于将文本复制到剪贴板的方便的按钮。
 
    分析器程序集安装并显示在 "**引用** > **分析器**" 下**解决方案资源管理器**中。
 
@@ -63,7 +63,7 @@ Visual Studio 包含一组核心的 .NET Compiler Platform （*Roslyn*）分析�
 
 3. 在 "搜索" 框中，键入要安装的分析器扩展的名称。 例如，你可能需要[安装 Microsoft FxCop 分析器](install-fxcop-analyzers.md#vsix)来检查代码中是否存在安全问题和性能问题。
 
-4. 选择 "**下载**"。
+4. 选择“下载”。
 
    此扩展已下载。
 
@@ -81,13 +81,13 @@ Visual Studio 包含一组核心的 .NET Compiler Platform （*Roslyn*）分析�
 
 ::: moniker range="vs-2017"
 
-如果要检查是否安装了该扩展，请选择 "**工具**"  >  "**扩展和更新**"。 在 "**扩展和更新**" 对话框中，选择左侧的 "**已安装**" 类别，然后按名称搜索扩展。
+如果要检查是否安装了该扩展，请选择 "**工具**" > "**扩展和更新**"。 在 "**扩展和更新**" 对话框中，选择左侧的 "**已安装**" 类别，然后按名称搜索扩展。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-如果要检查是否安装了扩展，请选择 "**扩展**"  >  "**管理扩展**"。 在 "**管理扩展**" 对话框中，选择左侧的 "**已安装**" 类别，然后按名称搜索扩展。
+如果要检查是否安装了扩展，请选择 "**扩展**" > "**管理扩展**"。 在 "**管理扩展**" 对话框中，选择左侧的 "**已安装**" 类别，然后按名称搜索扩展。
 
 ::: moniker-end
 
@@ -96,7 +96,7 @@ Visual Studio 包含一组核心的 .NET Compiler Platform （*Roslyn*）分析�
 > [!div class="nextstepaction"]
 > [在 Visual Studio 中使用代码分析器](../code-quality/use-roslyn-analyzers.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的代码分析器概述](../code-quality/roslyn-analyzers-overview.md)
 - [安装 FxCop 分析器](../code-quality/install-fxcop-analyzers.md)

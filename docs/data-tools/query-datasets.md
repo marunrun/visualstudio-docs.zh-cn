@@ -6,17 +6,17 @@ dev_langs:
 - VB
 - CSharp
 ms.assetid: 7b1a91cf-8b5a-4fc0-ac36-0dc2d336fa1b
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 056d88790cda6e763ebd0531d61f7007d16d82eb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4080866de58e17c5e11ed01d61740c2f83aed9a7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648238"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586336"
 ---
 # <a name="query-datasets"></a>查询数据集
 若要搜索数据集中的特定记录，请使用 DataTable 上的 `FindBy` 方法，编写自己的 foreach 语句来循环遍历表的 Rows 集合，或使用[LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset)。
@@ -35,7 +35,7 @@ ms.locfileid: "72648238"
 
 - 若要查找行，请调用使用该表的主键的强类型 `FindBy` 方法。
 
-     在下面的示例中，`CustomerID` 列是 `Customers` 表的主键。 这意味着将 `FindByCustomerID` 生成的 `FindBy` 方法。 该示例演示如何使用生成的 `FindBy` 方法将特定 <xref:System.Data.DataRow> 分配给变量。
+     在下面的示例中，`CustomerID` 列是 `Customers` 表的主键。 这意味着将 `FindByCustomerID`生成的 `FindBy` 方法。 该示例演示如何使用生成的 `FindBy` 方法将特定 <xref:System.Data.DataRow> 分配给变量。
 
      [!code-csharp[VbRaddataEditing#18](../data-tools/codesnippet/CSharp/query-datasets_1.cs)]
      [!code-vb[VbRaddataEditing#18](../data-tools/codesnippet/VisualBasic/query-datasets_1.vb)]
@@ -74,9 +74,9 @@ ms.locfileid: "72648238"
 
 - 使用 `Customers` 表 `NorthwindDataSet` 名为的数据集的实例。
 
-- @No__t_0 表。
+- `Orders` 表。
 
-- 一个名为的关系，`FK_Orders_Customers`relating 两个表。
+- 一个名为 `FK_Orders_Customers`的关系，它与两个表相关。
 
 另外，这两个表都需要为要返回的任何记录填充数据。
 
@@ -94,6 +94,6 @@ ms.locfileid: "72648238"
      [!code-csharp[VbRaddataDatasets#7](../data-tools/codesnippet/CSharp/query-datasets_5.cs)]
      [!code-vb[VbRaddataDatasets#7](../data-tools/codesnippet/VisualBasic/query-datasets_5.vb)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的数据集工具](../data-tools/dataset-tools-in-visual-studio.md)

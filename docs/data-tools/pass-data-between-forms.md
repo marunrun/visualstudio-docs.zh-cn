@@ -12,17 +12,17 @@ helpviewer_keywords:
 - forms, passing data between
 - Windows Forms, walkthroughs
 ms.assetid: 78bf038b-9296-4fbf-b0e8-d881d1aff0df
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: eb4b1c0af617bfd8e1771e500b4f12699e3f0ec4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 358cdc4822aa0da1d980f22196618aeaada4b1be
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72641435"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586362"
 ---
 # <a name="pass-data-between-forms"></a>在窗体间传递数据
 
@@ -47,7 +47,7 @@ ms.locfileid: "72641435"
 
 - 在窗体间传递数据。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 本演练使用 SQL Server Express LocalDB 和 Northwind 示例数据库。
 
@@ -67,7 +67,7 @@ ms.locfileid: "72641435"
 
 ## <a name="create-the-windows-forms-app-project"></a>创建 Windows 窗体应用项目
 
-1. 在 Visual Studio 的 "**文件**" 菜单上，选择 "**新建** > **项目**"。
+1. 在 Visual Studio 的“文件”菜单中，依次选择“新建” > “项目”。
 
 2. 在左侧窗格中展开 "**视觉对象C#**  " 或 " **Visual Basic** "，然后选择 " **Windows 桌面**"。
 
@@ -111,7 +111,7 @@ ms.locfileid: "72641435"
 
 - 将主“Customers”节点从“数据源”窗口拖到“Form1”上。
 
-     “Form1”上显示用于导航记录的 <xref:System.Windows.Forms.DataGridView> 和工具栏 (<xref:System.Windows.Forms.BindingNavigator>)。 组件栏中显示“[NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)”、CustomersTableAdapter、<xref:System.Windows.Forms.BindingSource> 和 <xref:System.Windows.Forms.BindingNavigator>。
+     “Form1”上显示用于导航记录的 <xref:System.Windows.Forms.DataGridView> 和工具栏 (<xref:System.Windows.Forms.BindingNavigator>)。 组件栏中显示[“NorthwindDataSet”](../data-tools/dataset-tools-in-visual-studio.md)、CustomersTableAdapter、<xref:System.Windows.Forms.BindingSource> 和 <xref:System.Windows.Forms.BindingNavigator>。
 
 ## <a name="create-the-second-form"></a>创建第二个窗体
 
@@ -123,7 +123,7 @@ ms.locfileid: "72641435"
 
 3. 将主“Orders”节点从“数据源”窗口拖到“Form2”上。
 
-     “Form2”上显示用于导航记录的 <xref:System.Windows.Forms.DataGridView> 和工具栏 (<xref:System.Windows.Forms.BindingNavigator>)。 组件栏中显示“[NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)”、CustomersTableAdapter、<xref:System.Windows.Forms.BindingSource> 和 <xref:System.Windows.Forms.BindingNavigator>。
+     “Form2”上显示用于导航记录的 <xref:System.Windows.Forms.DataGridView> 和工具栏 (<xref:System.Windows.Forms.BindingNavigator>)。 组件栏中显示[“NorthwindDataSet”](../data-tools/dataset-tools-in-visual-studio.md)、CustomersTableAdapter、<xref:System.Windows.Forms.BindingSource> 和 <xref:System.Windows.Forms.BindingNavigator>。
 
 4. 从组件栏删除“OrdersBindingNavigator”。
 
@@ -198,6 +198,6 @@ ms.locfileid: "72641435"
 
 - 添加将数据保存回数据库的功能。 有关详细信息，请参阅[将数据保存回数据库](../data-tools/save-data-back-to-the-database.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中将 Windows 窗体控件绑定到数据](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)

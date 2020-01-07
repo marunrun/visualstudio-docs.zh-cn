@@ -3,17 +3,17 @@ title: O/R 设计器概述
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 45e477c0-5c6b-41f9-b2d0-2808fb4f6537
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c02dbc42d629385671403de7131b27a449313591
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c1d60f2fd2fdaa239ea9528caa6d39424ad2b85c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648287"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586388"
 ---
 # <a name="linq-to-sql-tools-in-visual-studio"></a>Visual Studio 中的 LINQ to SQL 工具
 
@@ -48,11 +48,11 @@ Visual Studio 将创建一个 *.dbml*文件并将其添加到你的解决方案�
 
 ## <a name="create-entity-classes-that-map-to-database-tables-and-views"></a>创建映射到数据库表和视图的实体类
 
-可以通过将数据库表和视图从**服务器资源管理器**或**数据库资源管理器**拖到**O/R 设计器**来创建映射到表和视图的实体类。 正如上一节中所述，<xref:System.Data.Linq.DataContext> 是使用拖动到设计图面上的第一项所提供的连接信息进行配置的。 如果将使用不同连接的后续项添加到**O/R 设计器**，则可以更改 <xref:System.Data.Linq.DataContext> 的连接。 有关详细信息，请参阅[如何：创建映射到表和视图的 LINQ to SQL 类（O/R 设计器）](../data-tools/how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)。
+可以通过将数据库表和视图从**服务器资源管理器**或**数据库资源管理器**拖到**O/R 设计器**来创建映射到表和视图的实体类。 正如上一节中所述，<xref:System.Data.Linq.DataContext> 是使用拖动到设计图面上的第一项所提供的连接信息进行配置的。 如果将使用不同连接的后续项添加到**O/R 设计器**，则可以更改 <xref:System.Data.Linq.DataContext>的连接。 有关详细信息，请参阅[如何：创建映射到表和视图的 LINQ to SQL 类（O/R 设计器）](../data-tools/how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)。
 
 ## <a name="create-datacontext-methods-that-call-stored-procedures-and-functions"></a>创建调用存储过程和函数的 DataContext 方法
 
-通过将存储过程和函数从**服务器资源管理器**或**数据库资源管理器**拖到**O/R 设计器**，可以创建调用（映射到）存储过程和函数的 <xref:System.Data.Linq.DataContext> 方法。 存储过程和函数作为 <xref:System.Data.Linq.DataContext> 的方法添加到**O/R 设计器**中。
+通过将存储过程和函数从**服务器资源管理器**或**数据库资源管理器**拖到**O/R 设计器**，可以创建调用（映射到）存储过程和函数的 <xref:System.Data.Linq.DataContext> 方法。 存储过程和函数作为 <xref:System.Data.Linq.DataContext>的方法添加到**O/R 设计器**中。
 
 > [!NOTE]
 > 在将存储过程和函数从**服务器资源管理器**或**数据库资源管理器**拖到**O/R 设计器**上时，生成的 <xref:System.Data.Linq.DataContext> 方法的返回类型会有所不同，具体取决于放置项的位置。 有关详细信息，请参阅[DataContext 方法（O/R 设计器）](../data-tools/datacontext-methods-o-r-designer.md)。
@@ -71,14 +71,14 @@ Visual Studio 将创建一个 *.dbml*文件并将其添加到你的解决方案�
 
 ## <a name="separate-the-generated-datacontext-and-entity-class-code-into-different-namespaces"></a>将生成的 DataContext 和实体类代码分成不同的命名空间
 
-**O/R 设计器**提供 <xref:System.Data.Linq.DataContext> 上的**上下文命名空间**和**实体命名空间**属性。 这些属性决定 <xref:System.Data.Linq.DataContext> 和实体类代码生成到哪个命名空间。 默认情况下，这些属性为空并且 <xref:System.Data.Linq.DataContext> 和实体类生成到应用程序的命名空间。 若要在除应用程序的命名空间以外的命名空间中生成代码，请在“上下文命名空间”和/或“实体命名空间”属性中输入一个值。
+**O/R 设计器**提供 <xref:System.Data.Linq.DataContext>上的**上下文命名空间**和**实体命名空间**属性。 这些属性决定 <xref:System.Data.Linq.DataContext> 和实体类代码生成到哪个命名空间。 默认情况下，这些属性为空并且 <xref:System.Data.Linq.DataContext> 和实体类生成到应用程序的命名空间。 若要在除应用程序的命名空间以外的命名空间中生成代码，请在“上下文命名空间”和/或“实体命名空间”属性中输入一个值。
 
 ## <a name="reference-content"></a>参考内容
 
 - <xref:System.Linq>
 - <xref:System.Data.Linq>
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [LINQ to SQL （.NET Framework）](/dotnet/framework/data/adonet/sql/linq/index)
 - [常见问题（.NET Framework）](/dotnet/framework/data/adonet/sql/linq/frequently-asked-questions)

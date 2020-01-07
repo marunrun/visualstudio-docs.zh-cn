@@ -2,17 +2,17 @@
 title: 在 VS 扩展中调用文本转换
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8729a96d236fd565f31c827ebff6911dbc0b81d6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7ab846d1d7121d0c36c4187d937330d2ade52eb1
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667768"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594586"
 ---
 # <a name="invoke-text-transformation-in-a-visual-studio-extension"></a>在 Visual Studio 扩展中调用文本转换
 
@@ -130,7 +130,7 @@ class T4Callback : ITextTemplatingCallback
 Sample text.
 ```
 
-编译器警告将显示在 Visual Studio 的 "错误" 窗口中，并且它还会生成对 `ErrorCallback` 的调用。
+编译器警告将显示在 Visual Studio 的 "错误" 窗口中，并且它还会生成对 `ErrorCallback`的调用。
 
 ## <a name="reference-parameters"></a>引用参数
 
@@ -140,6 +140,6 @@ Sample text.
 
 若要从预处理文本模板生成文本，请调用生成的类的 `TransformText()` 方法。 有关详细信息，请参阅[带有 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。
 
-若要在 Visual Studio 扩展外生成文本，请执行以下操作：定义自定义主机。 有关详细信息，请参阅[使用自定义宿主处理文本模板](../modeling/processing-text-templates-by-using-a-custom-host.md)。
+若要在 Visual Studio 扩展外生成文本，请执行以下操作：定义自定义主机。 有关详细信息，请参阅[通过使用自定义宿主处理文本模板](../modeling/processing-text-templates-by-using-a-custom-host.md)。
 
 若要生成以后可编译和执行的源代码：调用[ITextTemplating](/previous-versions/visualstudio/visual-studio-2012/bb932392(v=vs.110))的[PreprocessTemplate](/previous-versions/visualstudio/visual-studio-2012/ee844321(v=vs.110))方法。

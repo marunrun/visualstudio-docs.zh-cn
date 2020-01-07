@@ -10,17 +10,17 @@ helpviewer_keywords:
 - managed code analysis warnings, security warnings
 - warnings, security
 ms.assetid: 60d4e8ea-230a-494f-aa6a-b91db77540e4
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a57236d42ed38070d79843ecf4097c3af80239a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 004f10600df3ed2f9c1f62557e0915638482877e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649082"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587207"
 ---
 # <a name="security-warnings"></a>安全警告
 
@@ -113,7 +113,7 @@ ms.locfileid: "72649082"
 |[CA5370：使用 XmlReader 验证读取器](../code-quality/ca5370.md)|处理不受信任的 DTD 和 XML 架构可能会启用加载危险的外部引用。 可以通过将 XmlReader 与安全解析程序结合使用，或者禁用 DTD 和 XML 内联架构处理来限制这种危险加载。|
 |[CA5371：使用 XmlReader 进行架构读取](../code-quality/ca5371.md)|处理不受信任的 DTD 和 XML 架构可能会启用加载危险的外部引用。 将 XmlReader 用于安全解析程序或 DTD 和 XML 内联架构处理将会限制这种情况。|
 |[CA5372：将 XmlReader 用于 XPathDocument](../code-quality/ca5372.md)|处理来自不受信任数据的 XML 可能会加载危险的外部引用，这可以通过使用具有安全解析程序的 XmlReader 或禁用 DTD 处理来限制。|
-|[CA5373：不要使用过时密钥派生函数](../code-quality/ca5373.md)|此规则检测 <xref:System.Security.Cryptography.PasswordDeriveBytes?displayProperty=fullName> 和 `Rfc2898DeriveBytes.CryptDeriveKey` 弱密钥派生方法的调用。 <xref:System.Security.Cryptography.PasswordDeriveBytes?displayProperty=fullName> 使用弱算法 PBKDF1。|
+|[CA5373：不要使用过时密钥派生函数](../code-quality/ca5373.md)|此规则检测 <xref:System.Security.Cryptography.PasswordDeriveBytes?displayProperty=fullName> 和 `Rfc2898DeriveBytes.CryptDeriveKey`弱密钥派生方法的调用。 <xref:System.Security.Cryptography.PasswordDeriveBytes?displayProperty=fullName> 使用弱算法 PBKDF1。|
 |[CA5378：不禁用 ServicePointManagerSecurityProtocols](../code-quality/ca5378.md)|将 `Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols` 设置为 `true` 将 Windows Communication Framework （WCF）传输层安全性（TLS）连接限制为使用 TLS 1.0。 TLS 版本将不推荐使用。|
 |[CA5380：不要将证书添加到根存储](../code-quality/ca5380.md)|此规则检测将证书添加到 "受信任的根证书颁发机构" 证书存储中的代码。 默认情况下，"受信任的根证书颁发机构" 证书存储区配置为满足 Microsoft 根证书计划要求的一组公共 Ca。|
 |[CA5381：确保证书未添加到根存储](../code-quality/ca5381.md)|此规则检测可能会将证书添加到 "受信任的根证书颁发机构" 证书存储中的代码。 默认情况下，"受信任的根证书颁发机构" 证书存储区使用满足 Microsoft 根证书计划要求的一组公共证书颁发机构（Ca）进行配置。|

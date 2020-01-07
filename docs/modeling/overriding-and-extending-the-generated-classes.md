@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, providing overridable classes
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c2386b7a7472f6b80457a5a803f6dfe886cc1d0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c3374f67f4fba11543e3dbbca47fef621dd2e714
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658333"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595886"
 ---
 # <a name="override-and-extend-the-generated-classes"></a>重写和扩展生成的类
 
@@ -28,7 +28,7 @@ DSL 定义是一种平台，可在该平台上构建一组基于域特定语言�
 
 分部类定义允许在多个位置定义一个类。 这使您可以将生成的代码与自己编写的代码分开。 在手动编写的代码中，你可以重写由生成的代码继承的类。
 
-例如，如果在 DSL 定义中定义了一个名为 `Book` 的域类，则可以编写自定义代码来添加重写方法：
+例如，如果在 DSL 定义中定义了一个名为 `Book`的域类，则可以编写自定义代码来添加重写方法：
 
 ```csharp
 public partial class Book
@@ -80,7 +80,7 @@ public partial class Book
 
 使用事务管理器可以定义在发生指定事件的事务结束之前运行的规则，如属性更改。 规则通常用于维护存储区中不同元素之间的 synchronism。 例如，规则用于确保关系图显示模型的当前状态。
 
-规则是基于每个类定义的，因此你不必具有为每个对象注册规则的代码。 有关详细信息，请参阅[规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)。
+规则是基于每个类定义的，因此你不必具有为每个对象注册规则的代码。 有关详细信息，请参阅[规则将传播的更改中的模式](../modeling/rules-propagate-changes-within-the-model.md)。
 
 ### <a name="store-events"></a>存储事件
 

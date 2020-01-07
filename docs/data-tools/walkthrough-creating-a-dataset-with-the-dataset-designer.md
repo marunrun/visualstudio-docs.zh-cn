@@ -8,23 +8,23 @@ helpviewer_keywords:
 - data [Visual Studio], Dataset Designer
 - Dataset Designer, walkthroughs
 - datasets [Visual Basic], creating
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9b6c91e6074e34a8207325e25f4a48b94dd037ef
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8c525d55de16e859005b9746eb52e5516928b9e6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72639445"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586024"
 ---
 # <a name="walkthrough-create-a-dataset-with-the-dataset-designer"></a>演练：创建具有数据集设计器的数据集
 
 在本演练中，您将使用**数据集设计器**创建一个数据集。 本文将指导你完成创建新项目的过程，并向其中添加新的**数据集**项。 您将了解如何在不使用向导的情况下创建基于数据库中的表的表。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 本演练使用 SQL Server Express LocalDB 和 Northwind 示例数据库。
 
@@ -44,7 +44,7 @@ ms.locfileid: "72639445"
 
 ## <a name="create-a-new-windows-forms-application-project"></a>创建新的 Windows 窗体应用程序项目
 
-1. 在 Visual Studio 的 "**文件**" 菜单上，选择 "**新建** > **项目**"。
+1. 在 Visual Studio 的“文件”菜单中，依次选择“新建” > “项目”。
 
 2. 在左侧窗格中展开 "**视觉对象C#**  " 或 " **Visual Basic** "，然后选择 " **Windows 桌面**"。
 
@@ -108,7 +108,7 @@ ms.locfileid: "72639445"
 
 - 将验证逻辑添加到数据集中的数据表 <xref:System.Data.DataTable.ColumnChanging> 或 <xref:System.Data.DataTable.RowChanging> 事件。 有关详细信息，请参阅[验证数据集中的数据](../data-tools/validate-data-in-datasets.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中创建和配置数据集](../data-tools/create-and-configure-datasets-in-visual-studio.md)
 - [在 Visual Studio 中将 Windows 窗体控件绑定到数据](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)

@@ -3,9 +3,6 @@ title: 使用 CRT 库查找内存泄漏  |Microsoft Docs
 ms.date: 10/04/2018
 ms.topic: conceptual
 dev_langs:
-- CSharp
-- VB
-- FSharp
 - C++
 helpviewer_keywords:
 - breakpoints, on memory allocation
@@ -29,18 +26,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eb2729dcaf0da41c0adac24b0e1909a6d2697eb6
-ms.sourcegitcommit: 697f2ab875fd789685811687387e9e8e471a38c4
+ms.openlocfilehash: 13a346aa0212f4830c2c88ed866b674fc19d30bd
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74829949"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75404984"
 ---
 # <a name="find-memory-leaks-with-the-crt-library"></a>使用 CRT 库查找内存泄漏
 
 内存泄漏是 C/C++ 应用程序中最微妙、最难以发现的 bug 。 内存泄漏是由于之前分配的内存未能正确解除分配而导致的。 最开始的少量内存泄漏可能没被发现，但随时间推移，会导致各种问题，从性能变差到程序由于内存不足而崩溃。 内存泄漏的应用会耗尽全部可用内存，导致其它程序崩溃，从而让人难以分辨是哪个程序引发问题。 即使无害的内存泄漏也可能表明存在其他应纠正的问题。
 
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 调试器和 C 运行时库（CRT）可以帮助检测和识别内存泄漏。
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 调试器和 C 运行时库（CRT）可以帮助检测和识别内存泄漏。
 
 ## <a name="enable-memory-leak-detection"></a>启用内存泄漏检测
 
@@ -70,7 +67,7 @@ _CrtDumpMemoryLeaks();
 _CrtSetDbgFlag ( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );
 ```
 
-默认情况下，`_CrtDumpMemoryLeaks` 将内存泄漏报告输出到输出窗口的调试窗格中。 如果使用库，该库可能会将输出重置到另一位置。
+默认情况下， `_CrtDumpMemoryLeaks` 将内存泄漏报告输出到 “输出”窗口的 “调试”窗格中。 如果使用库，该库可能会将输出重置到另一位置。
 
 可以使用 `_CrtSetReportMode` 将报告重定向到其他位置，或返回到 **输出** 窗口，如下所示：
 
@@ -115,7 +112,7 @@ Object dump complete.
 
 “CRT 块”是由 CRT 库为自己使用而分配的内存块。 CRT 库处理这些块的解除分配，因此 CRT 块不会显示在内存泄漏报告中，除非 CRT 库存在严重问题。
 
-另外两种类型的内存块绝不会出现在内存泄漏报告中。 *释放的块*是已经释放的内存块，从定义上说不是泄漏的内存。 *忽略的块*是已明确标记要从内存泄漏报告中排除的内存。
+内存泄漏报告中绝对不会出现另外两个内存块类型。 *释放的块*是已经释放的内存块，从定义上说不是泄漏的内存。 *忽略的块*是已明确标记要从内存泄漏报告中排除的内存。
 
 以前的技术使用标准 CRT`malloc`函数确定存在内存泄漏的内存分配。 但是，如果你的程序使用 c + +`new`运算符分配内存，可能只能在内存泄漏报告中看到`operator new`调用`_malloc_dbg`的文件名和行号。 若要创建更有用的内存泄漏报告，可以编写如下所示的宏来报告进行分配的行：
 
@@ -177,7 +174,7 @@ Object dump complete.
 
 ## <a name="set-breakpoints-on-a-memory-allocation-number"></a>在内存分配编号上设置断点
 
-分配了泄漏内存块时，内存分配编号会提示你。 例如，分配编号为 18 的块内存是应用程序运行期间分配的第 18 块内存。 CRT 报告统计运行期间所有的内存块分配情况，其中包括 CRT 库库和 MFC 等其他库的分配。 因此，分配块编号是 18 的内存可能不是代码分配的第 18 个内存块。
+如果分配了泄漏内存块，内存分配编号会通知你。 例如，分配编号为 18 的块内存是应用程序运行期间分配的第 18 块内存。 CRT 报告统计运行期间所有的内存块分配情况，其中包括 CRT 库库和 MFC 等其他库的分配。 因此，分配块编号是 18 的内存可能不是代码分配的第 18 个内存块。
 
 可以使用分配编号在内存分配位置设置断点。
 
@@ -195,7 +192,7 @@ Object dump complete.
 
 1. 按 **Enter**。
 
-   调试器将计算调用，并将结果放入”值”列。 如果你尚未在内存分配上设置任何断点，此值将为 **-1** 。
+   调试器将计算调用，并将结果放入 “值”列。 如果你尚未在内存分配上设置任何断点，此值将为 **-1** 。
 
 1. 在**值**列中，将该值替换为调试程序要中断处的内存分配的分配编号。
 
@@ -216,7 +213,8 @@ _CrtSetBreakAlloc(18);
 ```
 
 ## <a name="compare-memory-states"></a>比较内存状态
- 另一种找出内存泄漏的技术是在关键位置对应用程序的内存状态创建快照。 若要在应用程序的给定位置创建内存状态的快照，创建 `_CrtMemState` 结构并将其传递给`_CrtMemCheckpoint` 函数。
+
+定位内存泄漏的另一种技术涉及在关键点对应用程序的内存状态拍快照。 若要在应用程序的给定位置创建内存状态的快照，创建 `_CrtMemState` 结构并将其传递给`_CrtMemCheckpoint` 函数。
 
 ```cpp
 _CrtMemState s1;
@@ -243,7 +241,7 @@ Largest number used: 3071 bytes.
 Total allocations: 3764 bytes.
 ```
 
-若要确定代码的某个部分是否发生了内存泄漏，可以对这部分之前和之后的内存状态创建快照，然后使用 `_ CrtMemDifference` 比较两个状态：
+若要确定在某个代码部分中是否发生了内存泄漏，可以对这部分之前和之后的内存状态拍快照，然后使用 `_ CrtMemDifference` 比较两个状态：
 
 ```cpp
 _CrtMemCheckpoint( &s1 );
@@ -259,9 +257,11 @@ if ( _CrtMemDifference( &s3, &s1, &s2) )
 查找内存泄漏的一项技术是首先在你的应用程序开头和结尾放置 `_CrtMemCheckpoint`，然后使用`_CrtMemDifference` 比较结果。 如果`_CrtMemDifference` 显示内存已泄漏，可以添加更多`_CrtMemCheckpoint`调用使用二进制搜索来划分程序，直到你找到泄漏源。
 
 ## <a name="false-positives"></a>误报
- 如果一个库将内部分配的内存块标记为普通块而不是 CRT 块或客户端块，则 `_CrtDumpMemoryLeaks` 会给出错误的内存泄漏指示。 在这种情况下， `_CrtDumpMemoryLeaks` 无法区分用户和内部库分配的内存块。 如果库分配的全局析构函数在你调用`_CrtDumpMemoryLeaks`之后运行，则每个内部库分配都会报告为内存泄漏。 版本早于 Visual Studio.NET 的标准模板库可能导致 `_CrtDumpMemoryLeaks` 误报。
+
+ 如果一个库将内部分配的内存块标记为普通块而不是 CRT 块或客户端块，则 `_CrtDumpMemoryLeaks` 会给出错误的内存泄漏指示。 在这种情况下， `_CrtDumpMemoryLeaks` 无法区分用户分配和内部库分配。 如果在 `_CrtDumpMemoryLeaks`调用点之后运行库分配的全局析构函数，则每个内部库分配都会报告为内存泄漏。 版本早于 Visual Studio.NET 的标准模板库可能导致 `_CrtDumpMemoryLeaks` 误报。
 
 ## <a name="see-also"></a>另请参阅
+
 - [CRT 调试堆详细信息](../debugger/crt-debug-heap-details.md)
 - [调试器安全](../debugger/debugger-security.md)
 - [调试本机代码](../debugger/debugging-native-code.md)

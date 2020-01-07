@@ -3,17 +3,17 @@ title: XML 架构资源管理器中的排序、筛选和分组
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 4a914de0-9ffc-4526-9603-92e460e52513
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bf9226f3b491a39c7ef5936667cabd789c6a457
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cd288171cd8713e6b403f71a4eee6ba09d3f6ea9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72604583"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592511"
 ---
 # <a name="sorting-filtering-and-grouping-xml-schema-explorer"></a>排序、筛选和分组（XML 架构资源管理器）
 
@@ -65,7 +65,7 @@ ms.locfileid: "72604583"
 
 选择 "**按名称排序**" 选项后，全局节点将按以下顺序进行排序：
 
-1. `import` 节点（按命名空间的字母顺序）。
+1. `import` 节点（按命名空间的字母顺序排序）。
 
 2. `include` 节点（按 `schemaLocation` 特性的字母顺序）。
 

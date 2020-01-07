@@ -3,17 +3,17 @@ title: XML 编辑器架构缓存
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 35a7fcad-f3bf-4a96-9008-4306e7276223
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aae5749d57dd1c9aaca8748ed02bdbb5587cade6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 40781a5249d9b69df5f41f863f3d36ac6a119645
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668742"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592485"
 ---
 # <a name="schema-cache"></a>架构缓存
 
@@ -23,25 +23,25 @@ ms.locfileid: "72668742"
 
 下表描述了与 XML 编辑器一起安装的架构。
 
-| Filename | 描述 |
+| {2&gt;文件名&lt;2} | 描述 |
 |-| - |
-| *catalog .xsd* | “XML 编辑器”架构编录文件的架构。 有关架构编录的信息，请参见下文。 |
-| *Dotnetconfig.xsd* | Web.config 文件的架构 "<http://schemas.microsoft.com/.NETConfiguration/v2.0>"。 |
-| *msbuild.exe* | MSBuild 生成文件的架构 "<http://schemas.microsoft.com/developer/msbuild/2003>"。 |
-| *msdata* | <xref:System.Data.DataSet> 类添加的 XSD 批注的架构“urn:schemas-microsoft-com:xml-msdata”。 |
-| *msxsl* | Microsoft XSLT 脚本块扩展的架构 urn:schemas-microsoft-com:xslt。 |
-| *SnippetFormat* | 代码段 XML 文件的架构。 有关示例，请参阅 *% VSInstallDir%VC#\ \Expansions*。 |
-| *Soap 1.1 .xsd* | 简单对象访问协议（SOAP）1.1 的架构 http://schemas.xmlsoap.org/soap/envelope/ 。 |
-| *Soap 1.2 .xsd* | 简单对象访问协议 1.2 的架构。 |
-| *SiteMapSchema* | ASP.NET 站点地图 XML 文件 "<http://schemas.microsoft.com/AspNet/SiteMap-File-1.0>" 的架构。 |
-| *.wsdl* | Web 服务描述语言的架构， http://schemas.xmlsoap.org/wsdl/ 。 |
-| *xenc* | XML 加密架构， http://www.w3.org/2000/09/xmldsig# 。 |
-| *xhtml .xsd* | XHTML http://www.w3.org/1999/xhtml 的架构。 |
-| *xlink* | XLink 1.0 的架构， http://www.w3.org/1999/xlink 。 |
-| *xml .xsd* | 描述 xml： space 和 xml： lang 属性的架构 http://www.w3.org/XML/1998/namespace 。 |
-| *xmlsig* | XML 数字签名的架构， http://www.w3.org/2000/09/xmldsig# 。 |
-| *xsdschema* | 描述 XSD 本身的架构 http://www.w3.org/2001/XMLSchema 。 |
-| *xslt .xsd* | XML 转换的架构， http://www.w3.org/1999/XSL/Transform 。 |
+| *catalog.xsd* | “XML 编辑器”架构编录文件的架构。 有关架构编录的信息，请参见下文。 |
+| *DotNetConfig.xsd* | Web.config 文件的架构，`http://schemas.microsoft.com/.NETConfiguration/v2.0`。 |
+| *msbuild.xsd* | MSBuild 生成文件的架构 `http://schemas.microsoft.com/developer/msbuild/2003`。 |
+| *msdata.xsd* | <xref:System.Data.DataSet> 类添加的 XSD 批注的架构“urn:schemas-microsoft-com:xml-msdata”。 |
+| *msxsl.xsd* | Microsoft XSLT 脚本块扩展的架构 urn:schemas-microsoft-com:xslt。 |
+| *SnippetFormat.xsd* | 代码段 XML 文件的架构。 有关示例，请参阅 *% VSInstallDir%VC#\ \Expansions*。 |
+| *Soap1.1.xsd* | 简单对象访问协议（SOAP）1.1 的架构 `http://schemas.xmlsoap.org/soap/envelope/`。 |
+| *Soap1.2.xsd* | 简单对象访问协议 1.2 的架构。 |
+| *SiteMapSchema.xsd* | ASP.NET 站点地图 XML 文件的架构，`http://schemas.microsoft.com/AspNet/SiteMap-File-1.0`。 |
+| *wsdl.xsd* | Web 服务描述语言的架构，`http://schemas.xmlsoap.org/wsdl/`。 |
+| *xenc.xsd* | XML 加密架构，`http://www.w3.org/2000/09/xmldsig#`。 |
+| *xhtml.xsd* | XHTML `http://www.w3.org/1999/xhtml`的架构。 |
+| *xlink.xsd* | XLink 1.0 的架构，`http://www.w3.org/1999/xlink`。 |
+| *xml.xsd* | 描述 xml： space 和 xml： lang 属性的架构 `http://www.w3.org/XML/1998/namespace`。 |
+| *xmlsig.xsd* | XML 数字签名的架构，`http://www.w3.org/2000/09/xmldsig#`。 |
+| *xsdschema.xsd* | 描述 XSD 本身的架构 `http://www.w3.org/2001/XMLSchema`。 |
+| *xslt.xsd* | XML 转换的架构，`http://www.w3.org/1999/XSL/Transform`。 |
 
 ## <a name="update-schemas-in-the-cache"></a>更新缓存中的架构
 
@@ -110,7 +110,7 @@ ms.locfileid: "72668742"
 
 ### <a name="to-change-the-schema-cache-location"></a>更改架构缓存的位置
 
-1. 从 "**工具**" 菜单中选择 "**选项**"。
+1. 从 **“工具”** 菜单中，选择 **“选项”** 。
 
 2. 展开 "**文本编辑器**"，展开 " **XML**"，然后单击 "**杂项**"。
 
@@ -128,6 +128,6 @@ ms.locfileid: "72668742"
 
    将自动重新加载编录。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 编辑器](../xml-tools/xml-editor.md)

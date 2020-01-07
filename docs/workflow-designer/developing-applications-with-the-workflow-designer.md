@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Visual Studio Workflow Designer [WFD]
 - Workflow Designer [WFD], overview
 ms.assetid: 4cd062b1-b496-4668-bbc1-ee85545e066d
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b689628983c50fc891c5a3ebe6a0df5c952468d8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 51c38a16ddbdca376dbc9788ca49783c7956d101
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650534"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597082"
 ---
 # <a name="develop-apps-with-the-workflow-designer"></a>使用工作流设计器开发应用
 
@@ -31,7 +31,7 @@ ms.locfileid: "72650534"
 
 若要在 Visual Studio 中使用工作流项目模板，请首先安装**Windows Workflow Foundation**组件。
 
-1. 打开 Visual Studio 安装程序。 通过选择 "**工具**"  >  获取 Visual Studio 中的**工具和功能**，可以快速打开该工具。
+1. 打开 Visual Studio 安装程序。 通过选择 "**工具**" > 获取 Visual Studio 中的**工具和功能**，可以快速打开该工具。
 
 1. 在 Visual Studio 安装程序中，选择 "**单个组件**" 选项卡。
 
@@ -43,6 +43,6 @@ ms.locfileid: "72650534"
 
    Visual Studio 安装**Windows Workflow Foundation**组件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Windows Workflow Foundation （.NET Framework）](/dotnet/framework/windows-workflow-foundation/index)

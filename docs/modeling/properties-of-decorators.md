@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - Domain-Specific Language, decorators
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 567cba4be2d225985b5a6d690f0d8264f24190f4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3374c07cac01104354b2ce41abddbeabbec0a373
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747490"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75566132"
 ---
 # <a name="properties-of-decorators"></a>修饰器的属性
 修饰器是可在关系图上的形状或连接线上出现的图标、文本或展开/折叠燕尾形。 下表显示了三种修饰器的属性。 某些属性仅出现在修饰器形状上，或仅出现在连接器修饰器上。
@@ -23,47 +23,47 @@ ms.locfileid: "72747490"
 
 ## <a name="expandcollapse-decorator"></a>展开/折叠修饰器
 
-|Property|描述|Default|
+|Property|描述|默认值|
 |-|-|-|
 |DisplayName|将在生成的设计器中显示的修饰器的名称。|展开折叠修饰器|
-|“属性”|修饰器的名称。|ExpandCollapseDecorator|
-|注意|与此修饰器关联的非正式注释。|\<none>|
-|System.windows.controls.primitives.popup.horizontaloffset|相对于修饰器默认位置的水平偏移量（以英寸为单位）。 （仅适用于形状。）|0|
-|System.windows.controls.primitives.popup.verticaloffset|相对于修饰器默认位置的垂直偏移量（以英寸为单位）。 （仅适用于形状。）|0|
+|Name|修饰器的名称。|ExpandCollapseDecorator|
+|注释|与此修饰器关联的非正式注释。|\<none>|
+|HorizontalOffset|相对于修饰器默认位置的水平偏移量（以英寸为单位）。 （仅适用于形状。）|0|
+|VerticalOffset|相对于修饰器默认位置的垂直偏移量（以英寸为单位）。 （仅适用于形状。）|0|
 |OffsetFromLine|从行修饰器的偏移量（以英寸为单位），相对于其默认位置。 （仅限连接器。）|0|
 |OffsetFromShape|修饰器相对于其默认位置的偏移量（以英寸为单位）。 （仅限连接器。）|0|
-|位置|修饰器的默认位置。|Microsoft.visualstudio.modeling.diagrams.connectordecoratorposition.sourcetop|
+|位置|修饰器的默认位置。|SourceTop|
 
 ## <a name="icon-decorator"></a>图标修饰器
 
-|Property|描述|Default|
+|Property|描述|默认值|
 |-|-|-|
 |DefaultIcon|要显示的图标或图像文件的路径。|\<none>|
 |DisplayName|要在生成的设计器中显示的修饰器的名称。|图标修饰器|
-|“属性”|修饰器的名称。|IconDecorator|
-|注意|与修饰器关联的非正式注释。|\<none>|
-|System.windows.controls.primitives.popup.horizontaloffset|相对于修饰器默认位置的水平偏移量（以英寸为单位）。 （仅适用于形状。）|0|
-|System.windows.controls.primitives.popup.verticaloffset|相对于修饰器默认位置的垂直偏移量（以英寸为单位）。 （仅适用于形状。）|0|
+|Name|修饰器的名称。|IconDecorator|
+|注释|与修饰器关联的非正式注释。|\<none>|
+|HorizontalOffset|相对于修饰器默认位置的水平偏移量（以英寸为单位）。 （仅适用于形状。）|0|
+|VerticalOffset|相对于修饰器默认位置的垂直偏移量（以英寸为单位）。 （仅适用于形状。）|0|
 |OffsetFromLine|从行修饰器的偏移量（以英寸为单位），相对于其默认位置。 （仅限连接器。）|0|
 |OffsetFromShape|修饰器相对于其默认位置的偏移量（以英寸为单位）。 （仅限连接器。）|0|
-|位置|修饰器的默认位置。|Microsoft.visualstudio.modeling.diagrams.connectordecoratorposition.sourcetop|
+|位置|修饰器的默认位置。|SourceTop|
 
 ## <a name="textdecorator"></a>TextDecorator
 
-|Property|描述|Default|
+|Property|描述|默认值|
 |-|-|-|
-|DefaultText|要显示的默认文本。|Label|
-|DisplayName|要在生成的设计器中显示的修饰器的名称。|Label|
+|DefaultText|要显示的默认文本。|标签|
+|DisplayName|要在生成的设计器中显示的修饰器的名称。|标签|
 |FontSize|修饰器中所显示文本的字体大小。|8|
-|FontStyle|修饰器中所显示文本的字体样式。|规则|
-|“属性”|修饰器的名称。|Label|
-|注意|与修饰器关联的非正式注释。|\<none>|
-|System.windows.controls.primitives.popup.horizontaloffset|相对于修饰器默认位置的水平偏移量（以英寸为单位）。 （仅适用于形状。）|0|
-|System.windows.controls.primitives.popup.verticaloffset|相对于修饰器默认位置的垂直偏移量（以英寸为单位）。 （仅适用于形状。）|0|
+|FontStyle|修饰器中所显示文本的字体样式。|Regular|
+|Name|修饰器的名称。|标签|
+|注释|与修饰器关联的非正式注释。|\<none>|
+|HorizontalOffset|相对于修饰器默认位置的水平偏移量（以英寸为单位）。 （仅适用于形状。）|0|
+|VerticalOffset|相对于修饰器默认位置的垂直偏移量（以英寸为单位）。 （仅适用于形状。）|0|
 |OffsetFromLine|从行修饰器的偏移量（以英寸为单位），相对于其默认位置。 （仅限连接器。）|0|
 |OffsetFromShape|修饰器相对于其默认位置的偏移量（以英寸为单位）。 （仅限连接器。）|0|
-|位置|修饰器的默认位置。|Microsoft.visualstudio.modeling.diagrams.connectordecoratorposition.targetbottom|
+|位置|修饰器的默认位置。|TargetBottom|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [域特定语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

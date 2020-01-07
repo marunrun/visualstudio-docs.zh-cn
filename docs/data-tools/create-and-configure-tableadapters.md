@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data [Visual Studio], TableAdapters
 - data [Visual Studio], creating table adapters
 ms.assetid: 08630d69-0d6c-4e8f-b42d-2922f45f8415
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: f1403d61dd7a0d36401e449806fdafa6adc533b5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4e5a557aeeee3fca2bef0367a630dfaca04b3a74
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648603"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586778"
 ---
 # <a name="create-and-configure-tableadapters"></a>创建和配置 TableAdapter
 
@@ -54,7 +54,7 @@ Tableadapter 提供应用程序和数据库之间的通信。 它们连接到数
 将参数从选中的存储过程映射到数据表中相应的列。 例如，如果您的存储过程接受一个名为 `@CompanyName` 的参数，该参数传递到表中的 `CompanyName` 列，则将 `@CompanyName` 参数的**源列**设置为 `CompanyName`。
 
 > [!NOTE]
-> 分配给 "SELECT" 命令的存储过程是通过调用在向导的下一步骤中命名的 TableAdapter 的方法来运行的。 默认方法是 `Fill`，因此，通常用于运行 SELECT 过程的代码是 `TableAdapter.Fill(tableName)` 的。 如果更改 `Fill` 的默认名称，请将 `Fill` 替换为指定的名称，并将 "TableAdapter" 替换为 TableAdapter 的实际名称（例如，`CustomersTableAdapter`）。
+> 分配给 "SELECT" 命令的存储过程是通过调用在向导的下一步骤中命名的 TableAdapter 的方法来运行的。 默认方法是 `Fill`，因此，通常用于运行 SELECT 过程的代码是 `TableAdapter.Fill(tableName)`的。 如果更改 `Fill`的默认名称，请将 `Fill` 替换为指定的名称，并将 "TableAdapter" 替换为 TableAdapter 的实际名称（例如，`CustomersTableAdapter`）。
 
 - 选择 "**创建将更新直接发送到数据库"** 选项的方法等效于将 `GenerateDBDirectMethods` 属性设置为 true。 当原始 SQL 语句未提供足够的信息或查询不是可更新的查询时，此选项不可用。 例如，**联接**查询和返回单个（标量）值的查询中可能会发生这种情况。
 
@@ -74,7 +74,7 @@ Tableadapter 提供应用程序和数据库之间的通信。 它们连接到数
 
 您可以使用 TableAdapter 查询配置向导来创建和编辑用于 TableAdapter 的附加查询。 这些附加查询必须符合表架构，除非它们返回标量值。  每个附加查询都具有您指定的名称。
 
-下面的示例演示了如何调用名为 `FillByCity` 的附加查询：
+下面的示例演示了如何调用名为 `FillByCity`的附加查询：
 
 `CustomersTableAdapter.FillByCity(NorthwindDataSet.Customers, "Seattle")`
 
@@ -82,7 +82,7 @@ Tableadapter 提供应用程序和数据库之间的通信。 它们连接到数
 
 1. 在“数据集设计器”中打开数据集。
 
-2. 如果要创建新查询，请将 "**查询**" 对象从 "**工具箱**" 的 "**数据集**" 选项卡拖动到 <xref:System.Data.DataTable> 上，或从 TableAdapter 的快捷菜单中选择 "**添加查询**"。 您还可以将**查询**对象拖动到**数据集设计器**的空白区域，这将创建一个不带关联 <xref:System.Data.DataTable> 的 TableAdapter。 这些查询只能返回单个（标量）值，或对数据库运行 UPDATE、INSERT 或 DELETE 命令。
+2. 如果要创建新查询，请将 "**查询**" 对象从 "**工具箱**" 的 "**数据集**" 选项卡拖动到 <xref:System.Data.DataTable>上，或从 TableAdapter 的快捷菜单中选择 "**添加查询**"。 您还可以将**查询**对象拖动到**数据集设计器**的空白区域，这将创建一个不带关联 <xref:System.Data.DataTable>的 TableAdapter。 这些查询只能返回单个（标量）值，或对数据库运行 UPDATE、INSERT 或 DELETE 命令。
 
 3. 在 "**选择你的数据连接**" 屏幕上，选择或创建查询将使用的连接。
 
@@ -115,6 +115,6 @@ Tableadapter 提供应用程序和数据库之间的通信。 它们连接到数
     > [!NOTE]
     > 将**查询**对象直接拖到**数据集设计器**创建只返回标量（单个）值的方法。 尽管你选择的查询或存储过程可能会返回多个值，但向导创建的方法只返回单个值。 例如，查询可能返回返回的数据的第一行的第一列。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 Tableadapter 填充数据集](../data-tools/fill-datasets-by-using-tableadapters.md)

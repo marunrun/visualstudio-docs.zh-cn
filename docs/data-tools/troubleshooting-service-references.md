@@ -11,17 +11,17 @@ helpviewer_keywords:
 - service references [Visual Studio], troubleshooting
 - WCF services, troubleshooting
 ms.assetid: 3b531120-1325-4734-90c6-6e6113bd12ac
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 28ff14f10cd6ad5612551bb65b7b17f0280358f3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d52562382f10615c7da1dfab22d4c18323b725b3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72639600"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586115"
 ---
 # <a name="troubleshoot-service-references"></a>服务引用疑难解答
 
@@ -60,9 +60,9 @@ ms.locfileid: "72639600"
 
 ## <a name="access-level-for-generated-classes-setting-has-no-effect"></a>"生成的类的访问级别" 设置不起作用
 
-如果将 "**配置服务引用**" 对话框中的 "**生成的类的访问级别**" 选项设置为 "**内部**" 或 "**朋友**"，则可能并非始终有效。 即使此选项似乎在对话框中设置，生成的支持类也是使用 `Public` 的访问级别生成的。
+如果将 "**配置服务引用**" 对话框中的 "**生成的类的访问级别**" 选项设置为 "**内部**" 或 "**朋友**"，则可能并非始终有效。 即使此选项似乎在对话框中设置，生成的支持类也是使用 `Public`的访问级别生成的。
 
-这是特定类型的已知限制，如使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化的类型。
+这是特定类型的已知限制，如使用 <xref:System.Xml.Serialization.XmlSerializer>序列化的类型。
 
 ## <a name="error-debugging-service-code"></a>调试服务代码时出错
 
@@ -90,7 +90,7 @@ ms.locfileid: "72639600"
 
 ## <a name="wcf-data-services-do-not-display-in-the-browser"></a>WCF 数据服务不会在浏览器中显示
 
-如果尝试在 [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] 中查看数据的 XML 表示形式，Internet Explorer 可能会将数据作为 RSS 源误认为。 请确保已禁用用于显示 RSS 源的选项。
+如果尝试在 [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]中查看数据的 XML 表示形式，Internet Explorer 可能会将数据作为 RSS 源误认为。 请确保已禁用用于显示 RSS 源的选项。
 
 若要修复此错误，请禁用 RSS 源：
 
@@ -102,6 +102,6 @@ ms.locfileid: "72639600"
 
 4. 单击 **"确定"** 以关闭 " **Internet 选项**" 对话框。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的 Windows Communication Foundation 服务和 WCF 数据服务](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

@@ -8,25 +8,25 @@ helpviewer_keywords:
 - database files, creating
 - table designer
 ms.assetid: 99c2b06f-47aa-414e-8057-a3453712fd23
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 14d30a366c7400b05a713f146e602ae9ccd7e766
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c8fa89b2cf6eb5afdf1d09a9b4de60cdc9ca11f2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648666"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586882"
 ---
 # <a name="create-a-database-and-add-tables-in-visual-studio"></a>在 Visual Studio 中创建数据库并添加表
 
 可以使用 Visual Studio 来创建和更新 SQL Server Express LocalDB 中的本地数据库文件。 还可以通过在 Visual Studio 的 " **SQL Server 对象资源管理器**工具" 窗口中执行 transact-sql 语句来创建数据库。 在本主题中，我们将创建一个 *.mdf*文件并使用表设计器添加表和键。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
-若要完成本演练，你需要安装在 Visual Studio 中的 **.net 桌面开发**和**数据存储和处理**工作负荷。 若要进行安装，请打开**Visual Studio 安装程序**，然后选择要修改的 Visual Studio 版本旁边的 "**修改**" （或**更多** >  "**修改**"）。
+若要完成本演练，你需要安装在 Visual Studio 中的 **.net 桌面开发**和**数据存储和处理**工作负荷。 若要进行安装，请打开**Visual Studio 安装程序**，然后选择要修改的 Visual Studio 版本旁边的 "**修改**" （或**更多** > "**修改**"）。
 
 ## <a name="create-a-project-and-a-local-database-file"></a>创建一个项目及本地数据库文件
 
@@ -42,7 +42,7 @@ ms.locfileid: "72648666"
 
 ### <a name="add-a-data-source"></a>添加数据源
 
-1. 如果 "**数据源**" 窗口未打开，请在菜单栏上按**Shift** +**Alt** +**D**或选择 "**查看** > **其他窗口** > **数据源**" 来打开它。
+1. 如果 "**数据源**" 窗口未打开，请在菜单栏上按**Shift**+**Alt**+**D**或选择 "**查看** > **其他窗口** > **数据源**" 来打开它。
 
 1. 在 "**数据源**" 窗口中，选择 "**添加新数据源**"。
 
@@ -64,7 +64,7 @@ ms.locfileid: "72648666"
 
 可以通过打开数据连接的属性窗口，查看*sampledatabase.mdf*文件的连接字符串：
 
-- 选择 "**查看** > "**SQL Server 对象资源管理器**打开 " **SQL Server 对象资源管理器**" 窗口。 展开 **（localdb） \MSSQLLocalDB**  > **数据库**，然后右键单击*sampledatabase.mdf*并选择 "**属性**"。
+- 选择 "**查看** > " **SQL Server 对象资源管理器**打开 " **SQL Server 对象资源管理器**" 窗口。 展开 **（localdb） \MSSQLLocalDB** > **数据库**，然后右键单击*sampledatabase.mdf*并选择 "**属性**"。
 
 - 或者，如果该窗口尚未打开，还可以选择 "**查看** > "**服务器资源管理器**。 展开 "**数据连接**" 节点，右键单击 sampledatabase.mdf，然后选择 "**属性**"，以打开属性窗口 *。*
 
@@ -83,7 +83,7 @@ ms.locfileid: "72648666"
 
 2. 右键单击 "**表**"，然后选择 "**添加新表**"。
 
-   表设计器将打开并显示一个网格，其中包含一个默认行，表示要创建的表中的单个列。 通过向网格中添加行，即可在表中添加列。
+   “表设计器”将打开并显示一个网格，其中有一个默认行，表示所创建表中的一列。 通过向网格中添加行，即可在表中添加列。
 
 3. 在网格中，为下列各个条目添加行：
 
@@ -104,7 +104,7 @@ ms.locfileid: "72648666"
    CREATE TABLE [dbo].[Customers]
    ```
 
-   将显示如下所示的内容：
+   您应看到与下面类似的内容：
 
    ![表设计器](../data-tools/media/table-designer.png)
 
@@ -180,8 +180,8 @@ ms.locfileid: "72648666"
     > [!IMPORTANT]
     > 请确保所有订单 ID 和订单数量是整数，并且每个客户 ID 与 Customers 表中的“CustomerID”列中指定的值匹配。
 
-7. 在菜单栏上，选择 "**文件**"  >  "**全部保存**"。
+7. 在菜单栏上，选择 "**文件**" > "**全部保存**"。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中访问数据](accessing-data-in-visual-studio.md)

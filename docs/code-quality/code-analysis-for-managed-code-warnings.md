@@ -10,17 +10,17 @@ helpviewer_keywords:
 - managed code analysis warnings
 - code analysis,managed code
 ms.assetid: 3c2741ff-0d3a-42e6-acd5-d42310bd03c4
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8fbc5bbb596cc7b790ea456b22a24b582e1b609a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d18763f3638442de4e0142204d696ee13b1bdb19
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72622466"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587766"
 ---
 # <a name="code-analysis-for-managed-code-warnings"></a>托管代码的代码分析警告
 托管代码分析工具可以发出警告，指示托管代码库中存在违反规则的情况。 这些警告将被分类到各个规则领域，例如设计、本地化、性能和安全性。 每个警告表示一次托管代码分析规则冲突。 本部分深入讨论每个托管代码分析警告，并提供相关示例。
@@ -29,7 +29,7 @@ ms.locfileid: "72622466"
 
 |项|描述|
 |----------|-----------------|
-|键入|规则的 TypeName。|
+|类型|规则的 TypeName。|
 |CheckId|规则的唯一标识符。 CheckId 和类别用于源代码中禁止显示警告。|
 |类别|警告类别。|
 |重大更改|规则冲突的修复是否是一项重大更改。 重大更改意味着，在导致冲突的目标上具有依赖关系的程序集不会使用新修复的版本重新编译，或者可能会由于此更改在运行时失败。 如果有多个修补程序，并且至少有一个修复是重大更改，且一个修补程序不是，则同时指定了 "中断" 和 "非换行"。|
@@ -51,7 +51,7 @@ ms.locfileid: "72622466"
 |[全球化警告](../code-quality/globalization-warnings.md)|支持世界通用库和应用程序的警告。|
 |[互操作性警告](../code-quality/interoperability-warnings.md)|支持与 COM 客户端交互的警告。|
 |[维护性警告](../code-quality/maintainability-warnings.md)|支持库和应用程序维护的警告。|
-|[Mobility Warnings](../code-quality/mobility-warnings.md)|支持高效使用电源的警告。|
+|[移动性警告](../code-quality/mobility-warnings.md)|支持高效使用电源的警告。|
 |[命名警告](../code-quality/naming-warnings.md)|支持遵守 .NET 设计准则命名约定的警告。|
 |[性能警告](../code-quality/performance-warnings.md)|支持高性能库和应用程序的警告。|
 |[可迁移性警告](../code-quality/portability-warnings.md)|支持跨不同平台的可移植性的警告。|

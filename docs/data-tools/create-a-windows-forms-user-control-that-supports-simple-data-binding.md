@@ -9,17 +9,17 @@ helpviewer_keywords:
 - custom controls [Visual Studio], Data Sources Window
 - Data Sources Window, controls
 ms.assetid: b1488366-6dfb-454e-9751-f42fd3f3ddfb
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 296f1a9ca076e9728c65d240bab5a81f80669783
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ace5f9dd2781697525e7041be6cbd8df050bca97
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648622"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586817"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-simple-data-binding"></a>创建支持简单数据绑定的 Windows 窗体用户控件
 
@@ -53,7 +53,7 @@ ms.locfileid: "72648622"
 
 - 创建一个用于在新控件中显示数据的窗体。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 本演练使用 SQL Server Express LocalDB 和 Northwind 示例数据库。
 
@@ -75,7 +75,7 @@ ms.locfileid: "72648622"
 
 第一步是创建**Windows 窗体应用程序**：
 
-1. 在 Visual Studio 的 "**文件**" 菜单上，选择 "**新建** > **项目**"。
+1. 在 Visual Studio 的“文件”菜单中，依次选择“新建” > “项目”。
 
 2. 在左侧窗格中展开 "**视觉对象C#**  " 或 " **Visual Basic** "，然后选择 " **Windows 桌面**"。
 
@@ -166,7 +166,7 @@ ms.locfileid: "72648622"
 
 若要在窗体上创建数据绑定控件，请将主 " **Customers** " 节点从 "**数据源**" 窗口拖到窗体上，并验证 " **PhoneNumberBox** " 控件是否用于显示 "**电话**" 列中的数据。
 
-带有描述性标签的数据绑定控件将显示在窗体上，同时还显示一个工具条 (<xref:System.Windows.Forms.BindingNavigator>)，用于在记录间进行导航。 组件栏中显示“[NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)”、CustomersTableAdapter、<xref:System.Windows.Forms.BindingSource> 和 <xref:System.Windows.Forms.BindingNavigator>。
+带有描述性标签的数据绑定控件将显示在窗体上，同时还显示一个工具条 (<xref:System.Windows.Forms.BindingNavigator>)，用于在记录间进行导航。 组件栏中显示[“NorthwindDataSet”](../data-tools/dataset-tools-in-visual-studio.md)、CustomersTableAdapter、<xref:System.Windows.Forms.BindingSource> 和 <xref:System.Windows.Forms.BindingNavigator>。
 
 ## <a name="run-the-application"></a>运行此应用程序
 
@@ -180,7 +180,7 @@ ms.locfileid: "72648622"
 
 - 创建支持更复杂的数据绑定方案的控件。 有关详细信息，请参阅[创建支持复杂数据绑定的 Windows 窗体用户控件](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md)和[创建支持查找数据绑定的 Windows 窗体用户控件](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中将 Windows 窗体控件绑定到数据](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
 - [设置从“数据源”窗口中拖动时要创建的控件](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)

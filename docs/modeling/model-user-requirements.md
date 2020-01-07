@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - requirements
 - stories
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 68aa46b3dc07813b73921b8acb5970289c30aecc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0c09e45250ad95d50d5d2cd0ca2753a70bb95748
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658415"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590236"
 ---
 # <a name="model-user-requirements"></a>建立用户需求模型
 
@@ -44,7 +44,7 @@ ms.locfileid: "72658415"
 > [!NOTE]
 > 在这些主题中，“系统”表示正在开发的系统或应用程序。 它可能是许多软件和硬件组件的大型集合、单个应用程序或一个更大型系统内的某个软件组件。 在每种情况下，需求模型都描述了在系统外部可以通过用户界面或 API 看到的行为。
 
-## <a name="common-tasks"></a>常见任务
+## <a name="common-tasks"></a>常规任务
 
 可以根据用户需求创建多个不同的视图。  每个视图都提供特定类型的信息。  在创建这些视图时，最好经常在视图间移动。 可以从任意视图开始。
 
@@ -60,7 +60,7 @@ ms.locfileid: "72658415"
 
 业务规则是一个不与特定用例相关联的要求，应在整个系统中进行观察。
 
-许多业务规则受概念类间关系的约束。 您可以编写这些*静态业务规则*作为与概念类图上的相关类关联的注释。 例如:
+许多业务规则受概念类间关系的约束。 您可以编写这些*静态业务规则*作为与概念类图上的相关类关联的注释。 例如：
 
 ![附加到 Order 类的注释中的规则。](../modeling/media/uml_reqmcd2.png)
 
@@ -72,17 +72,17 @@ ms.locfileid: "72658415"
 
 下列主题提供了更多信息：
 
-|了解|读取|
+|若要了解|读取|
 |-|-|
 |如何开发符合业务规则的代码|[应用体系结构建模](../modeling/model-your-app-s-architecture.md)|
 
 ## <a name="QoSRequirements"></a> Describing Quality of Service Requirements
 
-服务质量要求有多个类别。 它们包括以下类型：
+服务质量要求有多个类别。 它们包括以下内容：
 
 - 性能
 
-- 安全
+- 安全性
 
 - 可用性
 
@@ -96,7 +96,7 @@ ms.locfileid: "72658415"
 
 有关如何开发符合服务质量要求的代码，请参阅为[应用程序的体系结构建模](../modeling/model-your-app-s-architecture.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在你的开发过程中使用模型](../modeling/use-models-in-your-development-process.md)
 - [应用体系结构建模](../modeling/model-your-app-s-architecture.md)

@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [text templates], generating application code
 - walkthroughs [text templates]
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d24a2ea1b614cb0ca82bdcf1c4954aba9a9174c
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: ff583874778a2f1affd589ef260c6b9eac6b5d06
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984409"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593504"
 ---
 # <a name="walkthrough-generate-code-by-using-text-templates"></a>演练：使用文本模板生成代码
 
@@ -103,7 +103,7 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
 
 ### <a name="add-a-test-code-file"></a>添加测试代码文件
 
-将 C# 文件添加到项目，并在其中编写希望能够进行编写的代码示例。 例如:
+将 C# 文件添加到项目，并在其中编写希望能够进行编写的代码示例。 例如：
 
 ```csharp
 using System;
@@ -428,7 +428,7 @@ namespace MyProject
 
 若在“错误列表”中看到模板转换或编译错误，或者若未正确生成输出文件，可以借助[使用 TextTransform 实用工具生成文件](../modeling/generating-files-with-the-texttransform-utility.md)中所述的技术解决文本模板的问题。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
 - [编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)

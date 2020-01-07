@@ -12,23 +12,23 @@ helpviewer_keywords:
 - Transactions namespace
 - saving data
 ms.assetid: 80260118-08bc-4b37-bfe5-9422ee7a1e4e
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 0b3262b6123a496cda7025e369c99193ea8b6fd2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c0efdda51a52b18697828e1772eb4a71435753e8
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72641101"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586232"
 ---
 # <a name="walkthrough-save-data-in-a-transaction"></a>演练：在事务中保存数据
 
 本演练演示如何使用 <xref:System.Transactions> 命名空间在事务中保存数据。 在本演练中，你将创建一个 Windows 窗体应用程序。 您将使用 "数据源配置向导" 创建 Northwind 示例数据库中两个表的数据集。 你将在 Windows 窗体中添加数据绑定控件，你将修改 BindingNavigator 的 "保存" 按钮的代码以更新 TransactionScope 内的数据库。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 本演练使用 SQL Server Express LocalDB 和 Northwind 示例数据库。
 
@@ -50,7 +50,7 @@ ms.locfileid: "72641101"
 
 第一步是创建**Windows 窗体应用程序**。
 
-1. 在 Visual Studio 的 "**文件**" 菜单上，选择 "**新建** > **项目**"。
+1. 在 Visual Studio 的“文件”菜单中，依次选择“新建” > “项目”。
 
 2. 在左侧窗格中展开 "**视觉对象C#**  " 或 " **Visual Basic** "，然后选择 " **Windows 桌面**"。
 
@@ -96,7 +96,7 @@ ms.locfileid: "72641101"
 
 2. 将主“Customers”节点从“数据源”窗口拖到“Form1”上。
 
-   用于导航记录的 <xref:System.Windows.Forms.DataGridView> 控件和工具栏（<xref:System.Windows.Forms.BindingNavigator>）将显示在窗体上。 组件栏中显示[NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)、`CustomersTableAdapter`、<xref:System.Windows.Forms.BindingSource> 和 <xref:System.Windows.Forms.BindingNavigator>。
+   用于导航记录的 <xref:System.Windows.Forms.DataGridView> 控件和工具栏（<xref:System.Windows.Forms.BindingNavigator>）将显示在窗体上。 组件栏中显示[NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)、`CustomersTableAdapter`、<xref:System.Windows.Forms.BindingSource>和 <xref:System.Windows.Forms.BindingNavigator>。
 
 3. 将相关的 " **orders** " 节点（而非 "主**订单**" 节点，但 " **Fax** " 列下的相关子表节点）拖到**CustomersDataGridView**下的窗体中。
 
@@ -108,7 +108,7 @@ ms.locfileid: "72641101"
 
 ### <a name="to-add-a-reference-to-the-systemtransactions-dll-file"></a>添加对 System.Transactions DLL 文件的引用
 
-1. 在 "**项目**" 菜单上，选择 "**添加引用**"。
+1. 在“项目”菜单中，选择“添加引用”。
 
 2. 选择 "**系统事务**" （位于 " **.net** " 选项卡上），然后选择 **"确定"** 。
 
@@ -116,7 +116,7 @@ ms.locfileid: "72641101"
 
 ## <a name="modify-the-code-in-the-bindingnavigators-saveitem-button"></a>修改 BindingNavigator 的 "SaveItem" 按钮中的代码
 
-对于拖放到窗体上的第一个表，默认情况下，会将代码添加到 <xref:System.Windows.Forms.BindingNavigator> 上的 "保存" 按钮的 `click` 事件。 你需要手动添加代码以更新所有附加的表。 对于本演练，我们将重构保存按钮的单击事件处理程序中的现有保存代码。 另外，还创建了一些方法，以根据是否需要添加或删除行来提供特定的更新功能。
+对于拖放到窗体上的第一个表，默认情况下，会将代码添加到 <xref:System.Windows.Forms.BindingNavigator>上的 "保存" 按钮的 `click` 事件。 你需要手动添加代码以更新所有附加的表。 对于本演练，我们将重构保存按钮的单击事件处理程序中的现有保存代码。 另外，还创建了一些方法，以根据是否需要添加或删除行来提供特定的更新功能。
 
 ### <a name="to-modify-the-auto-generated-save-code"></a>修改自动生成的保存代码
 
@@ -169,7 +169,7 @@ ms.locfileid: "72641101"
 
 按 **F5** 运行该应用程序。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：使用事务保存数据](../data-tools/save-data-by-using-a-transaction.md)
 - [将数据保存回数据库](../data-tools/save-data-back-to-the-database.md)

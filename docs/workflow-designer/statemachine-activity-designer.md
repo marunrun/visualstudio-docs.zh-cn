@@ -6,17 +6,17 @@ f1_keywords:
 - StateMachine Designer
 - System.Activities.Statements.StateMachine.UI
 ms.assetid: 474d5fb3-1049-4b3f-bc6b-7524dbbe1672
-ms.author: jillfra
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: 2e79e1db2cc6c46361afa7412cdeb493418c0365
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: TerryGLee
+ms.openlocfilehash: e7a270780a953a6104adc7089a02ff6529106fdf
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649911"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593130"
 ---
 # <a name="statemachine-activity-designer"></a>StateMachine 活动设计器
 
@@ -30,11 +30,11 @@ ms.locfileid: "72649911"
 
 下表列出可使用工作流设计器设置的 <xref:System.Activities.Statements.StateMachine> 属性并说明如何在设计器中使用它们。 这些属性可以在属性网格中进行编辑，其中一些属性还可以在设计器图面上进行编辑。
 
-|属性名|必需|用法|
+|属性名|必需|用量|
 |-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|False|指定 <xref:System.Activities.Statements.StateMachine> 活动设计器在标头中的友好名称。 默认值为**StateMachine**。 可以在属性网格或直接在活动设计器的标头中编辑该值。 <xref:System.Activities.Activity.DisplayName%2A> 用于痕迹导航，后者显示在工作流设计器顶部。<br /><br /> 虽然 <xref:System.Activities.Activity.DisplayName%2A> 不是绝对必需的，但最好使用该属性。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [流程图](../workflow-designer/flowchart-activity-designer.md)
 - [控制流](../workflow-designer/control-flow-activity-designers.md)

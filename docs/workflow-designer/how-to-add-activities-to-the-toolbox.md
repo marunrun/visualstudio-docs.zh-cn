@@ -3,17 +3,17 @@ title: 工作流设计器-如何：向工具箱添加活动
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b3a8a785-5928-457a-8a50-30267e29503d
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 83c2f1ed4db7a7a80e9f5b9e9861c4faa86cbdfa
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d3cde4f3a41a1a07f982f85c0c19e9f16b047068
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650367"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593923"
 ---
 # <a name="how-to-add-activities-to-the-toolbox"></a>如何：向工具箱添加活动
 
@@ -25,7 +25,7 @@ ms.locfileid: "72650367"
 
 2. 向活动添加自定义逻辑。
 
-3. 生成项目。 如果生成成功，则会显示 "**工具箱**" 中名为 "\<*项目名称*>" 的新类别，其中包含包含在该类别中的自定义活动。
+3. 生成此项目。 如果生成成功，则会显示 "**工具箱**" 中名为 "\<*项目名称*>" 的新类别，其中包含包含在该类别中的自定义活动。
 
     > [!NOTE]
     > 如果重置工具箱中，则将删除自定义活动，即使重新生成解决方案。 若要在重置后通过自定义活动重新填充工具箱，请重启 Visual Studio。
@@ -52,12 +52,12 @@ ms.locfileid: "72650367"
 
 4. 选择该程序集，然后单击 **"确定"** 。 自定义活动组件将添加到组件列表中并自动处于选中状态。
 
-    1. 单击 **"确定"** 以关闭对话框。
+    1. 单击 **“确定”** ，关闭对话框。
 
 5. 若要显示工具箱，请在 "**视图**" 菜单中选择 **"工具箱**"。
 
 6. 自定义活动将显示在 "工具箱" 中的 "**工具箱**" 下，该项添加之前处于焦点的类别。 例如，如果在添加工具箱项之前在 "**工具箱**" 中选择了 "**常规**" 类别，则活动将显示在 "**常规**" 类别下。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用工作流设计器](developing-applications-with-the-workflow-designer.md)

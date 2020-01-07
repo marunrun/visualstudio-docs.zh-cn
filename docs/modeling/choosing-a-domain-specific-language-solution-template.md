@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language Tools, solution templates
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 110d357bd113913ab73990b8e3cfa12e4dd1cdae
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b76b61bb0ff84d3e1f0948057b60f6f3fbb505ad
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748520"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590561"
 ---
 # <a name="choosing-a-domain-specific-language-solution-template"></a>选择域特定语言解决方案模板
 若要创建域特定语言解决方案，请选择特定于域的语言设计器向导中提供的解决方案模板之一。 通过选择与你要创建的语言最相似的模板，你可以最大程度地减少必须对起始解决方案进行的修改。
@@ -31,6 +31,6 @@ ms.locfileid: "72748520"
 |最小 WPF 设计器|-小型模型<br />-显示模型的 Windows Presentation Foundation 用户界面|如果要构建一个应用程序，在该应用程序中，DSL 绑定到 WPF 用户界面，而不是图形设计器，请使用此模板。<br /><br /> 用户界面的设计器位于文件夹 Dsl\UI. 中。<br /><br /> 你应在打开 UI 设计器之前生成项目。<br /><br /> 有关详细信息，请参阅[创建基于 WPF 的域特定语言](../modeling/creating-a-wpf-based-domain-specific-language.md)。|
 |DSL 库|-最小库|如果要生成可导入到其他 DSL 定义中的部分 DSL 定义，请使用此模板。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [域特定语言工具的概述](../modeling/overview-of-domain-specific-language-tools.md)

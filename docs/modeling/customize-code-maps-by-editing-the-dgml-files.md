@@ -1,5 +1,5 @@
 ---
-title: Customize code maps by editing the DGML files
+title: 通过编辑 DGML 文件自定义代码图
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - dependency graphs, customizing
 - graph documents, grouping nodes
 - dependency graphs, assigning categories and properties
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ace7da233f135aa795d73d43a5e10e411c0d646f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2b79fd73713de535c11062fd6396abde6b1a0131
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748471"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590509"
 ---
-# <a name="customize-code-maps-by-editing-the-dgml-files"></a>Customize code maps by editing the DGML files
+# <a name="customize-code-maps-by-editing-the-dgml-files"></a>通过编辑 DGML 文件自定义代码图
 
 若要自定义代码图，可以编辑其定向关系图标记语言（.dgml）文件。 例如，可以编辑元素来指定自定义样式，向代码元素和链接分配属性和类别，或将文档（或 URL）链接到代码元素（或链接）。 有关 DGML 元素的详细信息，请参阅[定向关系图标记语言（DGML）引用](../modeling/directed-graph-markup-language-dgml-reference.md)。
 
@@ -47,7 +47,7 @@ ms.locfileid: "72748471"
 
     若要添加新组，请查找 `<Nodes>` 部分。 创建新的 `<Node/>` 元素。
 
-3. 在 `<Node/>` 元素中，添加一个 `Group` 特性以指定组显示为展开状态还是折叠状态。 例如:
+3. 在 `<Node/>` 元素中，添加一个 `Group` 特性以指定组显示为展开状态还是折叠状态。 例如：
 
    ```xml
    <Nodes>
@@ -64,7 +64,7 @@ ms.locfileid: "72748471"
 
    - 指定组代码元素与其子代码元素之间的 `Category` 关系的 `Contains` 特性
 
-     例如:
+     例如：
 
    ```xml
    <Links>
@@ -96,7 +96,7 @@ ms.locfileid: "72748471"
     Stroke="StrokeValue"
     ```
 
-     例如:
+     例如：
 
     ```xml
     <DirectedGraph Background="Green" xmlns="http://schemas.microsoft.com/vs/2009/dgml" >
@@ -131,7 +131,7 @@ ms.locfileid: "72748471"
     Background="ColorNameOrHexadecimalValue"
     ```
 
-     轮廓
+     外边框
 
     ```xml
     Stroke="ColorNameOrHexadecimalValue"
@@ -201,7 +201,7 @@ ms.locfileid: "72748471"
     Shape="ShapeFilePathLocation"
     ```
 
-     例如:
+     例如：
 
     ```xml
     <Nodes>
@@ -236,7 +236,7 @@ ms.locfileid: "72748471"
     StrokeDashArray="StrokeArrayValues"
     ```
 
-     例如:
+     例如：
 
     ```xml
     <Links>
@@ -266,7 +266,7 @@ ms.locfileid: "72748471"
 
 2. 在 `<Style/>` 元素中，添加一个包含 `<Condition/>` 特性的 `Expression` 元素，以指定返回布尔值的表达式。
 
-    例如:
+    例如：
 
    ```xml
    <Condition Expression="MyCategory"/>
@@ -286,35 +286,35 @@ ms.locfileid: "72748471"
 
     此表达式使用以下 Backus-Naur 形式 (BNF) 语法：
 
-    \<Expression >：： = \<BinaryExpression > &#124; \<UnaryExpression > &#124; "（" \<Expression > "）" &#124; \<MemberBindings > &#124; \<Literal > &#124; 1Number >
+    \<Expression >：： = \<BinaryExpression > &#124; \<UnaryExpression > &#124; "（"\<Expression > "）" &#124; \<b > &#124; \<> \<&#124; >
 
-    \<BinaryExpression >：： = \<Expression > \<Operator > \<Expression >
+    \<BinaryExpression >：： = \<Expression > \<> \<表达式 >
 
-    \<UnaryExpression >：： = "！" \<Expression > &#124; "+" \<Expression > &#124; "-" \<Expression >
+    \<UnaryExpression >：： = "！" \<表达式 > &#124; "+" \<表达式 > &#124; "-" \<表达式 >
 
-    \<Operator >：： = "<" &#124; "\< =" &#124; "=" &#124; "> =" &#124; ">" &#124; "！ =" &#124; "、" &#124; "和" &#124; "+" &#124; "*" &#124; "/" &#124; "-"
+    \<运算符 >：： = "<" &#124; "\<=" &#124; "=" &#124; "> =" &#124; ">" &#124; "！ =" &#124; "、" &#124; "和" &#124; "+" &#124; "*" &#124; "/" &#124; "-"
 
-    \<MemberBindings >：： = \<MemberBindings > &#124; \<MemberBinding > "。" \<MemberBinding >
+    \<b >：： = \<b > &#124; \<MemberBinding > "." \<MemberBinding >
 
     \<MemberBinding >：： = \<MethodCall > &#124; \<PropertyGet >
 
-    \<MethodCall >：： = \<Identifier > "（" \<MethodArgs > "）"
+    \<MethodCall >：： = \<标识符 > "（" \<G s > "）"
 
     \<PropertyGet >：： = 标识符
 
-    \<MethodArgs >：： = \<Expression > &#124; \<Expression > "，" \<MethodArgs > &#124; \<empty >
+    \<G s >：： = \<表达式 > &#124; \<表达式 > "，" \<g s > &#124; \<空 >
 
-    \<Identifier >：： = [^。 ]*
+    \<标识符 >：： = [^。 ]*
 
-    \<Literal >：： = 单个或用双引号括起来的字符串
+    \<文字 >：： = 单个或用双引号括起来的字符串
 
-    \<Number >：： = 带可选小数点的数字字符串
+    \<号 >：： = 带可选小数点的数字字符串
 
     可以指定多个 `<Condition/>` 元素，这些元素必须全部为 true 才能应用样式。
 
 3. 在 `<Condition/>` 元素后的下一行上，添加一个或多个 `<Setter/>` 元素，以指定要应用于满足条件的代码图、代码元素或链接的 `Property` 特性和固定 `Value` 特性或者计算所得的 `Expression` 特性。
 
-    例如:
+    例如：
 
    ```xml
    <Setter Property="BackGround" Value="Green"/>
@@ -442,7 +442,7 @@ ms.locfileid: "72748471"
 
 1. 在文本编辑器或 XML 编辑器中打开 .dgml 文件。
 
-2. 查找该代码元素的 `<Node/>` 元素。 指定属性的名称和属性的值。 例如:
+2. 查找该代码元素的 `<Node/>` 元素。 指定属性的名称和属性的值。 例如：
 
     ```xml
     <Nodes>
@@ -464,7 +464,7 @@ ms.locfileid: "72748471"
 
 2. 查找包含源代码元素名称和目标代码元素名称的 `<Link/>` 元素。
 
-3. 在 `<Node/>` 元素中，指定属性的名称和属性的值。 例如:
+3. 在 `<Node/>` 元素中，指定属性的名称和属性的值。 例如：
 
     ```xml
     <Links>
@@ -489,7 +489,7 @@ ms.locfileid: "72748471"
 
 - 查找所需代码元素的 `<Node/>` 元素。
 
-- 在 `<Node/>` 元素中，添加一个 `Category` 特性以指定类别的名称。 例如:
+- 在 `<Node/>` 元素中，添加一个 `Category` 特性以指定类别的名称。 例如：
 
     ```xml
     <Nodes>
@@ -511,7 +511,7 @@ ms.locfileid: "72748471"
 
 2. 查找包含源代码元素名称和目标代码元素名称的 `<Link/>` 元素。
 
-3. 在 `<Link/>` 元素中，添加一个 `Category` 特性以指定类别的名称。 例如:
+3. 在 `<Link/>` 元素中，添加一个 `Category` 特性以指定类别的名称。 例如：
 
     ```xml
     <Links>
@@ -533,7 +533,7 @@ ms.locfileid: "72748471"
 
 2. 为父类别添加一个 `<Category/>` 元素，然后将 `BasedOn` 特性添加到子类别的 `<Category/>` 元素。
 
-     例如:
+     例如：
 
     ```xml
     <Nodes>
@@ -582,7 +582,7 @@ ms.locfileid: "72748471"
      > [!NOTE]
      > 每个元素只能具有一个 `Reference` 特性。
 
-     例如:
+     例如：
 
    ```xml
    <Nodes>
@@ -607,7 +607,7 @@ ms.locfileid: "72748471"
 
       4. 使用 `Label` 特性来指定代码元素的 "**跳到引用**" 快捷菜单上的显示文本。
 
-      例如:
+      例如：
 
    ```xml
    <Nodes>
@@ -638,7 +638,7 @@ ms.locfileid: "72748471"
 
 5. 若要查看引用的代码元素或代码图中的代码元素，请打开代码元素或链接的快捷菜单。 选择 "**转向引用**"，然后选择 "代码" 元素。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [映射解决方案中的依赖项](../modeling/map-dependencies-across-your-solutions.md)
 - [使用代码图调试应用程序](../modeling/use-code-maps-to-debug-your-applications.md)

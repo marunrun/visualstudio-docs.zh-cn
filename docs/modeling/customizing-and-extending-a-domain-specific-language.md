@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language Tools, creating solutions
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bd1e3c3769f30806f7430bd32ddcb82db378093d
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 9040e65d3e9acce101ee6b481c2cd27d24285169
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984274"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597160"
 ---
 # <a name="customize-and-extend-a-domain-specific-language"></a>自定义和扩展域特定语言
 
@@ -37,11 +37,11 @@ Visual Studio 建模和可视化 SDK （VMSDK）提供了几个级别，你可�
 |不同种类的模型元素在关系图上看起来类似于共享属性，如初始高度和宽度、颜色和工具提示。|使用形状或连接符类之间的继承。 派生形状和派生域类之间的映射继承父级的映射详细信息。<br /><br /> 或者，将不同域类映射到同一个形状类。|
 |模型元素的类由不同的形状上下文显示。|将多个 shape 类映射到同一个域类。 在生成解决方案时，请遵循错误报告并提供所请求的代码，以确定要使用的形状。|
 |形状颜色或其他功能（如字体）指示当前状态。|请参阅[更新形状和连接线以反映模型](../modeling/updating-shapes-and-connectors-to-reflect-the-model.md)。<br /><br /> 创建更新公开的属性的规则。 请参阅[规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)。<br /><br /> 或者，使用 OnAssociatedPropertyChanged （）更新未公开的功能，如链接箭头或字体。|
-|形状上的图标更改为指示状态。|在 "DSL 详细信息" 窗口中设置修饰器映射的可见性。 在同一位置找到多个修饰器图像。 请参阅[更新形状和连接线以反映模型](../modeling/updating-shapes-and-connectors-to-reflect-the-model.md)。<br /><br /> 或者，重写 `ImageField.GetDisplayImage()`。 请参阅 <xref:Microsoft.VisualStudio.Modeling.Diagrams.ImageField> 中的示例。|
+|形状上的图标更改为指示状态。|在 "DSL 详细信息" 窗口中设置修饰器映射的可见性。 在同一位置找到多个修饰器图像。 请参阅[更新形状和连接线以反映模型](../modeling/updating-shapes-and-connectors-to-reflect-the-model.md)。<br /><br /> 或者，重写 `ImageField.GetDisplayImage()`。 请参阅 <xref:Microsoft.VisualStudio.Modeling.Diagrams.ImageField>中的示例。|
 |在任意形状上设置背景图像|重写 InitializeInstanceResources （）以添加定位 ImageField。|
 |将形状嵌套到任何深度|设置递归嵌入树。 定义 BoundsRules 以包含形状。|
 |在元素的边界上的固定点附加连接器。|定义嵌入的终端元素，由关系图上的小端口表示。 使用 BoundsRules 就地修复端口。 请参阅[可视化和建模 SDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)中的 "线路图" 示例。|
-|"文本" 字段显示从其他值派生的值。|将文本修饰器映射到计算或自定义存储域属性。 有关详细信息，请参阅[计算的和自定义的存储属性](../modeling/calculated-and-custom-storage-properties.md)。|
+|"文本" 字段显示从其他值派生的值。|将文本修饰器映射到计算或自定义存储域属性。 有关详细信息，请参阅[计算和自定义存储属性](../modeling/calculated-and-custom-storage-properties.md)。|
 |传播模型元素或形状之间的更改|请参阅[域特定语言的验证](../modeling/validation-in-a-domain-specific-language.md)。|
 |将更改传播到存储区之外的资源，如其他 Visual Studio 扩展。|请参阅[事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)。|
 |"属性" 窗口显示相关元素的属性。|设置属性转发。 请参阅[自定义 "属性" 窗口](../modeling/customizing-the-properties-window.md)。|
@@ -53,7 +53,7 @@ Visual Studio 建模和可视化 SDK （VMSDK）提供了几个级别，你可�
 |删除、重新设定父元素，或者在删除元素时重新链接相关的元素。|设置关系角色的 "**传播删除**" 值。 对于更复杂的效果，请重写 `MyDslDeleteClosure` 类中的 `ShouldVisitRelationship` 和 `ShouldVisitRolePlayer` 方法，这些方法在**DomainModel.cs**中定义。|
 |保留形状布局和副本上的外观并拖放。|将形状和连接线添加到复制的 `ElementGroupPrototype`。 要重写的最便捷方法是 `ElementOperations.CreateElementGroupPrototype()`<br /><br /> 请参阅[自定义复制行为](../modeling/customizing-copy-behavior.md)。|
 |在所选位置（例如当前光标位置）粘贴形状。|覆盖 `ClipboardCommandSet.ProcessOnCopy()` 要使用特定于位置的 `ElementOperations.Merge().` 版本，请参阅[自定义复制行为](../modeling/customizing-copy-behavior.md)。|
-|在粘贴时创建其他链接|重写 ClipboardCommandSet ProcessOnPasteCommand （）|
+|在粘贴时创建其他链接|Override ClipboardCommandSet.ProcessOnPasteCommand()|
 |在此关系图中启用拖放、其他 Dsl 和 Windows 元素|请参阅[如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)|
 |允许将形状或工具拖到子形状（例如端口）上，就像将其拖动到父级上一样。|定义针对目标对象类的元素合并指令，以将已删除的对象转发到父级。 请参阅[自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)。|
 |允许将形状或工具拖到形状上，并创建其他链接或对象。 例如，允许将注释放到要链接到的项上。|在目标域类上定义元素合并指令，并定义要生成的链接。 在复杂情况下，你可以添加自定义代码。 请参阅[自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)。|
@@ -68,7 +68,7 @@ Visual Studio 建模和可视化 SDK （VMSDK）提供了几个级别，你可�
 |集成多个 Dsl，使其作为一个应用程序的一部分工作。|请参阅[使用 Visual Studio 集成模型 Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md)。|
 |允许第三方扩展 DSL，并控制扩展。|[使用 MEF 扩展 DSL](../modeling/extend-your-dsl-by-using-mef.md)<br /><br /> [使用 DSL 库在 DSL 之间共享类](../modeling/sharing-classes-between-dsls-by-using-a-dsl-library.md)<br /><br /> [定义锁定策略以创建只读段](../modeling/defining-a-locking-policy-to-create-read-only-segments.md)|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)
 - [编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)

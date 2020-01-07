@@ -5,17 +5,17 @@ ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.Parallel.UI
 ms.assetid: 0306dc3b-075a-4091-ac3a-96486fbabed5
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d0c1ea74c1cf64252bdae201e8cc3dd529adb7cb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3f07dd02f682cd5c61d4d17099c1aeb76bb39bf8
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650107"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593156"
 ---
 # <a name="parallel-activity-designer"></a>Parallel 活动设计器
 
@@ -25,7 +25,7 @@ ms.locfileid: "72650107"
 
 <xref:System.Activities.Statements.Parallel> 活动将其子活动存储在 <xref:System.Activities.Statements.Parallel.Branches%2A> 集合中。 如果某些子活动可能进入空闲状态，则使用 <xref:System.Activities.Statements.Parallel> 活动，而不使用 <xref:System.Activities.Statements.Sequence> 活动。
 
-@No__t_0 活动具有一个 <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> 属性，该属性包含一个指定 Visual Basic 表达式的用户。 <xref:System.Activities.Statements.Parallel> 活动在完成每个分支后计算此属性。 如果计算结果为**True**，则 <xref:System.Activities.Statements.Parallel> 活动完成，而不执行其他分支。 如果 <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> 的计算结果不为**True**，则在完成其所有子活动后 <xref:System.Activities.Statements.Parallel> 活动完成。
+<xref:System.Activities.Statements.Parallel> 活动具有一个 <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> 属性，该属性包含一个指定 Visual Basic 表达式的用户。 <xref:System.Activities.Statements.Parallel> 活动在完成每个分支后计算此属性。 如果计算结果为**True**，则 <xref:System.Activities.Statements.Parallel> 活动完成，而不执行其他分支。 如果 <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> 的计算结果不为**True**，则在完成其所有子活动后 <xref:System.Activities.Statements.Parallel> 活动完成。
 
 ### <a name="using-the-parallel-activity-designer"></a>使用 Parallel 活动设计器
 
@@ -39,13 +39,13 @@ ms.locfileid: "72650107"
 
 下表列出 Parallel 活动属性并说明如何在设计器中使用这些属性。
 
-|属性名|必需|用法|
+|属性名|必需|用量|
 |-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|False|指定活动设计器在标头中的友好显示名称。 默认值为 "**并行**"。 可以在 "**属性**" 网格中或直接在活动设计器标头中编辑该值。|
 |<xref:System.Activities.Statements.Parallel.Branches%2A>|True|包含要执行的子活动的集合。|
-|<xref:System.Activities.Statements.Parallel.CompletionCondition%2A>|False|在分支完成后计算。 如果计算结果为**True**，则取消计划的挂起分支。 如果未将此属性设置为或计算为**False**，则在完成其所有子活动后，活动完成。 默认值为**null**。|
+|<xref:System.Activities.Statements.Parallel.CompletionCondition%2A>|False|在分支完成后计算。 如果计算结果为**True**，则取消计划的挂起分支。 如果未将此属性设置为或计算为**False**，则在完成其所有子活动后，活动完成。 默认值为 **null**。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Sequence](../workflow-designer/sequence-activity-designer.md)
 - [ParallelForEach\<T>](../workflow-designer/parallelforeach-t-activity-designer.md)

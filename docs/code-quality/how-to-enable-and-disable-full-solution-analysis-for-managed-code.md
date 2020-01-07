@@ -4,17 +4,17 @@ ms.date: 03/23/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - full solution analysis
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3f7837b1e5ea5b84e1ee1197bf6f8c40d0863c3e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d699dd74315cfc36820c1cdb4120543e0290b1a1
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649448"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587506"
 ---
 # <a name="how-to-enable-and-disable-full-solution-analysis-for-managed-code"></a>如何：启用和禁用托管代码的完整解决方案分析
 
@@ -32,9 +32,9 @@ ms.locfileid: "72649448"
 
 ## <a name="toggle-full-solution-analysis"></a>切换完整解决方案分析
 
-1. 若要打开 "**选项**" 对话框，请在 Visual Studio 的菜单栏中选择 "**工具**"  > **选项**。
+1. 若要打开 "**选项**" 对话框，请在 Visual Studio 的菜单栏中选择 "**工具**" > **选项**。
 
-1. 在 "**选项**" 对话框中，选择 "**文本编辑器**"  > **C#** 或 "**基本** > **高级**"。
+1. 在 "**选项**" 对话框中，选择 "**文本编辑器**" > **C#** 或 "**基本** > **高级**"。
 
 1. 选中 "**启用完整解决方案分析**" 复选框以启用完整解决方案分析，或者清除该复选框以禁用它。 完成后，请选择 **"确定"** 。
 
@@ -44,4 +44,4 @@ ms.locfileid: "72649448"
 
 如果 Visual Studio 检测到可用于 200 MB 或更少的系统内存，则它会自动禁用完整解决方案分析（以及其他一些功能）（如果已启用）。 如果出现这种情况，则会出现一个警报，通知你 Visual Studio 已禁用某些功能。 利用按钮，可以根据需要重新启用完整解决方案分析。
 
-![暂停完整解决方案分析的警报文本](../code-quality/media/fsa_alert.png)
+![警报文本中挂起完整解决方案分析](../code-quality/media/fsa_alert.png)

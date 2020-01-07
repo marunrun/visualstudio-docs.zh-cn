@@ -10,17 +10,17 @@ helpviewer_keywords:
 - LookupBindingPropertiesAttribute class, examples
 - user controls [Visual Basic], creating
 ms.assetid: c48b4d75-ccfc-4950-8b14-ff8adbfe4208
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 2c6542ac89f82443cbe4245862473861c94da3cd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a5d6309818c251b9101b1345450ef66f3fc8f1f8
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72642663"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586791"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-lookup-data-binding"></a>创建支持查找数据绑定的 Windows 窗体用户控件
 
@@ -54,7 +54,7 @@ ms.locfileid: "72642663"
 
 - 创建一个用于在新控件中显示数据的窗体。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 本演练使用 SQL Server Express LocalDB 和 Northwind 示例数据库。
 
@@ -76,7 +76,7 @@ ms.locfileid: "72642663"
 
 第一步是创建**Windows 窗体应用程序**项目。
 
-1. 在 Visual Studio 的 "**文件**" 菜单上，选择 "**新建** > **项目**"。
+1. 在 Visual Studio 的“文件”菜单中，依次选择“新建” > “项目”。
 
 2. 在左侧窗格中展开 "**视觉对象C#**  " 或 " **Visual Basic** "，然后选择 " **Windows 桌面**"。
 
@@ -155,7 +155,7 @@ ms.locfileid: "72642663"
 
 6. 在“数据 UI 自定义选项”对话框中，从“关联的控件”列表中选择“LookupBox”。
 
-7. 单击“确定”。
+7. 单击" **确定**"。
 
 8. 单击“CustomerID”列上的下拉箭头，然后选择“LookupBox”。
 
@@ -177,6 +177,6 @@ ms.locfileid: "72642663"
 
 - 通过某些记录进行定位，并验证 `LookupBox` 控件中是否显示 `CompanyName`。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中将 Windows 窗体控件绑定到数据](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)

@@ -13,17 +13,17 @@ helpviewer_keywords:
 - updating datasets, errors
 - concurrency control, walkthroughs
 ms.assetid: 73ee9759-0a90-48a9-bf7b-9d6fc17bff93
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6096e8919d21a93af0dbf6beea2f263bd500d26c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 462d0a9beb88a8fb6d73bf0672bb012c75b8ea93
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648433"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586596"
 ---
 # <a name="handle-a-concurrency-exception"></a>处理并发异常
 
@@ -45,7 +45,7 @@ ms.locfileid: "72648433"
 
 7. 捕获错误，然后显示记录的不同版本，使用户能够确定是继续更新数据库，还是取消更新。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 本演练使用 SQL Server Express LocalDB 和 Northwind 示例数据库。
 
@@ -67,7 +67,7 @@ ms.locfileid: "72648433"
 
 首先创建一个新的 Windows 窗体应用程序：
 
-1. 在 Visual Studio 的 "**文件**" 菜单上，选择 "**新建** > **项目**"。
+1. 在 Visual Studio 的“文件”菜单中，依次选择“新建” > “项目”。
 
 2. 在左侧窗格中展开 "**视觉对象C#**  " 或 " **Visual Basic** "，然后选择 " **Windows 桌面**"。
 
@@ -83,7 +83,7 @@ ms.locfileid: "72648433"
 
 1. 在 "**数据**" 菜单上，选择 "**添加新数据源**"。
 
-   “数据源配置”向导随即打开。
+   “数据源配置向导”打开。
 
 2. 在 "**选择数据源类型**" 屏幕上，选择 "**数据库**"。
 
@@ -112,7 +112,7 @@ ms.locfileid: "72648433"
 
 4. 将该表拖到窗体的空白区域。
 
-     名为**CustomersDataGridView**的 <xref:System.Windows.Forms.DataGridView> 控件和名为**CustomersBindingNavigator**的 <xref:System.Windows.Forms.BindingNavigator> 将添加到绑定到 <xref:System.Windows.Forms.BindingSource> 的窗体中。 这反过来又绑定到 NorthwindDataSet 中的 Customers 表。
+     名为**CustomersDataGridView**的 <xref:System.Windows.Forms.DataGridView> 控件和名为**CustomersBindingNavigator**的 <xref:System.Windows.Forms.BindingNavigator> 将添加到绑定到 <xref:System.Windows.Forms.BindingSource>的窗体中。 这反过来又绑定到 NorthwindDataSet 中的 Customers 表。
 
 ## <a name="test-the-form"></a>测试窗体
 
@@ -122,7 +122,7 @@ ms.locfileid: "72648433"
 
      此时将显示窗体，其中包含一个由 Customers 表中的数据填充的 <xref:System.Windows.Forms.DataGridView> 控件。
 
-2. 在 "**调试**" 菜单上，选择 "**停止调试**"。
+2. 在“调试”菜单中，选择“停止调试”。
 
 ## <a name="handle-concurrency-errors"></a>处理并发错误
 
@@ -191,7 +191,7 @@ ms.locfileid: "72648433"
 
 2. 窗体显示后，使其保持运行状态，并切换到 Visual Studio IDE。
 
-3. 在 "**视图**" 菜单上，选择 "**服务器资源管理器**"。
+3. 在“视图”菜单中，选择“服务器资源管理器”。
 
 4. 在**服务器资源管理器**中，展开应用程序正在使用的连接，然后展开 "**表**" 节点。
 
@@ -212,6 +212,6 @@ ms.locfileid: "72648433"
 
    选择 "**否**" 将取消更新并用数据库中当前的值更新数据集。 选择 **"是"** 将建议的值写入数据库。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [将数据保存回数据库](../data-tools/save-data-back-to-the-database.md)

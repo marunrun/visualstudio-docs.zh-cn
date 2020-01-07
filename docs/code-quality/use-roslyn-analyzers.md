@@ -6,17 +6,17 @@ helpviewer_keywords:
 - code analysis, managed code
 - analyzers
 - Roslyn analyzers
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6cd4d5517dae889387ec632df57c90485bd366b0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c24164f31ca444d17035f145a1783c69dfb2585b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649054"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587194"
 ---
 # <a name="use-code-analyzers"></a>使用代码分析器
 
@@ -28,7 +28,7 @@ ms.locfileid: "72649054"
 
 ![解决方案资源管理器中的分析器节点](media/analyzers-expanded-in-solution-explorer.png)
 
-您可以在 "**属性**" 窗口中查看诊断的属性，包括其说明和默认严重性。 若要查看属性，请右键单击规则，然后选择 "**属性**"，或选择规则，并按**Alt** +**enter**。
+您可以在 "**属性**" 窗口中查看诊断的属性，包括其说明和默认严重性。 若要查看属性，请右键单击规则，然后选择 "**属性**"，或选择规则，并按**Alt**+**enter**。
 
 ![属性窗口中的诊断属性](media/analyzer-diagnostic-properties.png)
 
@@ -62,12 +62,12 @@ ms.locfileid: "72649054"
 
 | 严重性（解决方案资源管理器） | 严重性（EditorConfig 文件） | 生成时行为 | 编辑器行为 |
 |-|-|-|
-| Error | `error` | 冲突在错误列表和命令行生成输出中显示为*错误*，并导致生成失败。| 令人讨厌的代码带有红色波形曲线，并由滚动条中的小红色框标记。 |
+| 错误 | `error` | 冲突在错误列表和命令行生成输出中显示为*错误*，并导致生成失败。| 令人讨厌的代码带有红色波形曲线，并由滚动条中的小红色框标记。 |
 | 警告 | `warning` | 冲突在错误列表和命令行生成输出中显示为*警告*，但不会导致生成失败。 | 令人讨厌的代码带有绿色波形曲线，并由滚动条中的小绿色框标记。 |
 | T:System.Diagnostics.Switch | `suggestion` | 冲突显示为错误列表中的消息，而不是命令行生成输出中的*消息*。 | 令人讨厌的代码带有灰色波形曲线，并由滚动条中的小灰色框标记。 |
 | Hidden | `silent` | 对用户不可见。 | 对用户不可见。 但会将诊断报告给 IDE 诊断引擎。 |
-| None | `none` | 完全取消。 | 完全取消。 |
-| Default | `default` | 对应于规则的默认严重性。 若要确定规则的默认值是什么，请查看属性窗口。 | 对应于规则的默认严重性。 |
+| 无 | `none` | 完全取消。 | 完全取消。 |
+| 默认值 | `default` | 对应于规则的默认严重性。 若要确定规则的默认值是什么，请查看属性窗口。 | 对应于规则的默认严重性。 |
 
 代码编辑器的以下屏幕截图显示了三个不同严重性的不同冲突。 请注意右侧滚动条中的波形曲线颜色和小的彩色正方形。
 
@@ -107,9 +107,9 @@ ms.locfileid: "72649054"
 
 Visual Studio 提供了一种简便的方法，可用于在 "[快速操作](../ide/quick-actions.md)" 灯泡菜单中配置规则的严重性。
 
-1. 发生冲突后，将鼠标悬停在编辑器中的冲突波形曲线上，并打开灯泡菜单。 或者，将光标放在行上，然后按**Ctrl** + **。** （句点）。
+1. 发生冲突后，将鼠标悬停在编辑器中的冲突波形曲线上，并打开灯泡菜单。 或者，将光标放在行上，然后按**Ctrl**+ **。** （句点）。
 
-2. 在灯泡菜单中，选择 "**配置或抑制问题**" >**配置 \<rule ID > 严重性**。
+2. 在灯泡菜单中，选择 "**配置" 或 "抑制问题**" >**配置 \<规则 ID > 严重性**。
 
    ![在 Visual Studio 中配置灯泡菜单中的规则严重性](media/configure-rule-severity.png)
 
@@ -126,7 +126,7 @@ Visual Studio 提供了一种简便的方法，可用于在 "[快速操作](../i
 
 ### <a name="set-rule-severity-from-solution-explorer"></a>设置解决方案资源管理器的规则严重性
 
-1. 在**解决方案资源管理器**中，展开 "**引用**"  > **分析器**（或适用于 .net Core 项目的**依赖项** > **分析器**）。
+1. 在**解决方案资源管理器**中，展开 "**引用**" > **分析器**（或适用于 .net Core 项目的**依赖项** > **分析器**）。
 
 1. 展开包含要为其设置严重性的规则的程序集。
 
@@ -138,9 +138,9 @@ Visual Studio 提供了一种简便的方法，可用于在 "[快速操作](../i
 
 ![解决方案资源管理器中的规则集文件](media/ruleset-in-solution-explorer.png)
 
-1. 打开活动规则集文件，方法是在**解决方案资源管理器**中双击该文件，在 "引用  > **分析器**" 节点的 "**引用**" 菜单上选择 "**打开活动规则集**"，或选择 "在代码上**打开**"项目的 "分析" 属性页。
+1. 打开活动规则集文件，方法是在**解决方案资源管理器**中双击该文件，在 "引用 > **分析器**" 节点的 "**引用**" 菜单上选择 "**打开活动规则集**"，或在项目的 "**代码分析**" 属性页上选择 "**打开**"。
 
-   如果这是你第一次编辑规则集，则 Visual Studio 将创建默认规则集文件的副本，并将其命名为 *\<projectname > 规则*集，并将其添加到你的项目中。 此自定义规则集还会成为项目的活动规则集。
+   如果这是你第一次编辑规则集，则 Visual Studio 将创建默认规则集文件的副本，并将其命名为 *\<名 > 规则*集，并将其添加到你的项目中。 此自定义规则集还会成为项目的活动规则集。
 
    > [!NOTE]
    > .NET Core 和 .NET Standard 项目不支持**解决方案资源管理器**中规则集的菜单命令，例如，**打开活动规则集**。 若要为 .NET Core 或 .NET Standard 项目指定非默认规则集，请手动[将**CodeAnalysisRuleSet**属性添加](using-rule-sets-to-group-code-analysis-rules.md#specify-a-rule-set-for-a-project)到项目文件。 你仍可以在 Visual Studio 规则集编辑器 UI 中配置规则集内的规则。
@@ -185,13 +185,13 @@ Visual Studio 提供了一种简便的方法，可用于在 "[快速操作](../i
 
 - 从**代码编辑器**
 
-  将光标放在包含冲突的代码行中，然后按**Ctrl** +**句点（.）** 以打开 "**快速操作**" 菜单。 选择 **"在源/禁止显示文件中** **取消 CAXXXX**  > 。
+  将光标放在包含冲突的代码行中，然后按**Ctrl**+**句点（.）** 以打开 "**快速操作**" 菜单。 选择 **"在源/禁止显示文件中** **取消 CAXXXX** > 。
 
   ![禁止显示 "快速操作" 菜单中的诊断](media/suppress-diagnostic-from-editor.png)
 
 - 从**错误列表**
 
-  选择要禁止显示的规则，然后右键单击并选择 "**取消隐藏** **文件中**的  > "。
+  选择要禁止显示的规则，然后右键单击并选择 "**取消隐藏** **文件中**的 > "。
 
   - 如果在 "**源" 中**取消显示，则 "**预览更改**" 对话框将打开C# ，并显示[#pragma 警告](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning)或 Visual Basic 添加到源代码中[#Disable 警告](/dotnet/visual-basic/language-reference/directives/directives)指令的预览。
 
@@ -235,13 +235,13 @@ msbuild myproject.csproj /target:rebuild /verbosity:minimal
 
 ## <a name="dependent-projects"></a>依赖项目
 
-在 .NET Core 项目中，如果添加对包含 NuGet 分析器的项目的引用，则这些分析器也会自动添加到依赖项目。 若要禁用此行为，例如，如果依赖项目是单元测试项目，请通过设置**PrivateAssets**属性，在所引用项目的 *.csproj*或 *.vbproj*文件中将 NuGet 包标记为 private：
+在.NET Core 项目中，如果添加对具有 NuGet 分析器的项目的引用这些分析器将自动添加到依赖项目太。 若要禁用此行为，例如，如果依赖项目是单元测试项目，请通过设置**PrivateAssets**属性，在所引用项目的 *.csproj*或 *.vbproj*文件中将 NuGet 包标记为 private：
 
 ```xml
 <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.0" PrivateAssets="all" />
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的代码分析器概述](../code-quality/roslyn-analyzers-overview.md)
 - [提交代码分析器 bug](https://github.com/dotnet/roslyn-analyzers/issues)

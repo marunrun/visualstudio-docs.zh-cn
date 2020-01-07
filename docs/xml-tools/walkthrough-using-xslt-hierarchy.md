@@ -2,15 +2,15 @@
 title: 演练：使用 XSLT 层次结构
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 9f3fe246189313dcc04176e2971ad448a1b2cff8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 892c166504b9a33fdcbbe0af2605e8268a2b06e7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72604446"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592446"
 ---
 # <a name="walkthrough-use-xslt-hierarchy"></a>演练：使用 XSLT 层次结构
 
@@ -103,12 +103,12 @@ XSLT 层次结构工具简化了诸多 XML 开发任务。 XSLT 样式表通常�
     </xsl:stylesheet>
     ```
 
-4. 在指令 `<xsl:include href="xslincludefile.xsl" />` 添加断点。
+4. 在指令 `<xsl:include href="xslincludefile.xsl" />`添加断点。
 
 5. 开始调试。
 
-6. 调试器在指令 `<xsl:include href="xslincludefile.xsl" />` 停止时，按 "**单步**执行" 按钮。 可以在引用的样式表中继续进行调试。 该层次结构可见，并且设计器显示正确的路径。
+6. 调试器在指令 `<xsl:include href="xslincludefile.xsl" />`停止时，按 "**单步**执行" 按钮。 可以在引用的样式表中继续进行调试。 该层次结构可见，并且设计器显示正确的路径。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XSLT 探查器](../xml-tools/xslt-profiler.md)

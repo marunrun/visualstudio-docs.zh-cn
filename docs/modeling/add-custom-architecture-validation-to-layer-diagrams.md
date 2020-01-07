@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - dependency diagrams, adding custom validation
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cfd85d7b7e60c64244fb1753ffb2a903dff03455
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9f7c3c37feb2f2d68817807f056ee470f0d0d05f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748552"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597225"
 ---
 # <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>向依赖项关系图添加自定义体系结构验证
 
@@ -30,7 +30,7 @@ ms.locfileid: "72748552"
 > [!WARNING]
 > 创建验证项目之后，请复制本主题末尾的 [示例代码](#example) ，然后根据自己的需要进行编辑。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 请参阅 [要求](../modeling/extend-layer-diagrams.md#requirements)。
 
@@ -287,6 +287,6 @@ namespace Validator3
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [扩展依赖项关系图](../modeling/extend-layer-diagrams.md)

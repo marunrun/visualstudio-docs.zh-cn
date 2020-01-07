@@ -6,17 +6,17 @@ helpviewer_keywords:
 - modeling diagrams, saving
 - diagrams - modeling, saving modeling diagrams
 - UML diagrams, saving
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8cbbdab08b5bc9298f83d4159f31ac8b9b0fb963
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 56b7839985871333bb120057efde92e58baebdec
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645718"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596614"
 ---
 # <a name="export-diagrams-as-images"></a>将关系图导出为图像
 
@@ -38,9 +38,9 @@ ms.locfileid: "72645718"
 
 2. 在 "**名称**" 列表中，选择 " **Microsoft XPS 文档编写器**"，然后单击 **"确定"** 。
 
-3. 在 "将**文件另存为**" 对话框中，将该文件另存为**xps 文档（\* .xps）** 文件。
+3. 在 "将**文件另存为**" 对话框中，将该文件另存为**xps 文档（\*.xps）** 文件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [为应用程序创建模型](../modeling/create-models-for-your-app.md)
 - [共享模型和导出关系图](../modeling/share-models-and-exporting-diagrams.md)

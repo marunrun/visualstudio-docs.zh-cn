@@ -11,17 +11,17 @@ helpviewer_keywords:
 - object binding
 - binding, to objects
 ms.assetid: ed743ce6-73af-45e5-a8ff-045eddaccc86
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 2b046eaa4244d08c9fff9e2412471d018203de42
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 09e3ad2cfc2690c27e4e26e51f6b40d7afd79f54
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648797"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586986"
 ---
 # <a name="bind-objects-as-data-sources-in-visual-studio"></a>在 Visual Studio 中将对象绑定为数据源
 
@@ -56,9 +56,9 @@ Visual Studio 提供设计时工具，用于在应用程序中使用自定义对
 
 在此示例中，使用 Tableadapter 将数据加载到对象。 默认情况下，将使用两种方法创建 Tableadapter，这些方法从数据库中提取数据并填充数据表。
 
-- @No__t_0 方法使用返回的数据填充现有数据表。
+- `TableAdapter.Fill` 方法使用返回的数据填充现有数据表。
 
-- @No__t_0 方法返回用数据填充的新数据表。
+- `TableAdapter.GetData` 方法返回用数据填充的新数据表。
 
 使用数据加载自定义对象的最简单方法是调用 `TableAdapter.GetData` 方法，遍历返回的数据表中的行集合，并使用每行中的值填充每个对象。 您可以创建一个 `GetData` 方法，该方法为添加到 TableAdapter 的任何查询返回填充的数据表。
 
@@ -74,12 +74,12 @@ Visual Studio 提供设计时工具，用于在应用程序中使用自定义对
 
 可以为对象创建集合类，或使用[BindingSource 组件](/dotnet/framework/winforms/controls/bindingsource-component)自动提供的类型化集合。
 
-为对象创建自定义集合类时，建议从 <xref:System.ComponentModel.BindingList%601> 继承。 此泛型类提供管理集合的功能，以及在 Windows 窗体中引发将通知发送到数据绑定基础结构的事件的功能。
+为对象创建自定义集合类时，建议从 <xref:System.ComponentModel.BindingList%601>继承。 此泛型类提供管理集合的功能，以及在 Windows 窗体中引发将通知发送到数据绑定基础结构的事件的功能。
 
-@No__t_0 中自动生成的集合对其类型化集合使用 <xref:System.ComponentModel.BindingList%601>。 如果你的应用程序不需要其他功能，你可以在 <xref:System.Windows.Forms.BindingSource> 中维护你的集合。 有关详细信息，请参阅 <xref:System.Windows.Forms.BindingSource> 类的 <xref:System.Windows.Forms.BindingSource.List%2A> 属性。
+<xref:System.Windows.Forms.BindingSource> 中自动生成的集合对其类型化集合使用 <xref:System.ComponentModel.BindingList%601>。 如果你的应用程序不需要其他功能，你可以在 <xref:System.Windows.Forms.BindingSource>中维护你的集合。 有关详细信息，请参阅 <xref:System.Windows.Forms.BindingSource> 类的 <xref:System.Windows.Forms.BindingSource.List%2A> 属性。
 
 > [!NOTE]
-> 如果集合需要 <xref:System.ComponentModel.BindingList%601> 的基实现未提供的功能，则应创建自定义集合，以便可以根据需要将其添加到类中。
+> 如果集合需要 <xref:System.ComponentModel.BindingList%601>的基实现未提供的功能，则应创建自定义集合，以便可以根据需要将其添加到类中。
 
 下面的代码演示如何为 `Order` 对象的强类型集合创建类：
 
@@ -88,17 +88,17 @@ Visual Studio 提供设计时工具，用于在应用程序中使用自定义对
 
 ### <a name="add-objects-to-a-collection"></a>将对象添加到集合
 
-您可以通过调用自定义集合类或 <xref:System.Windows.Forms.BindingSource> 的 `Add` 方法，将对象添加到集合中。
+您可以通过调用自定义集合类或 <xref:System.Windows.Forms.BindingSource>的 `Add` 方法，将对象添加到集合中。
 
 > [!NOTE]
-> 从 <xref:System.ComponentModel.BindingList%601> 继承时，会自动为自定义集合提供 `Add` 方法。
+> 从 <xref:System.ComponentModel.BindingList%601>继承时，会自动为自定义集合提供 `Add` 方法。
 
-下面的代码演示如何将对象添加到 <xref:System.Windows.Forms.BindingSource> 中的类型化集合：
+下面的代码演示如何将对象添加到 <xref:System.Windows.Forms.BindingSource>中的类型化集合：
 
 [!code-csharp[VbRaddataConnecting#5](../data-tools/codesnippet/CSharp/bind-objects-in-visual-studio_3.cs)]
 [!code-vb[VbRaddataConnecting#5](../data-tools/codesnippet/VisualBasic/bind-objects-in-visual-studio_3.vb)]
 
-下面的代码演示如何将对象添加到从 <xref:System.ComponentModel.BindingList%601> 继承的类型化集合：
+下面的代码演示如何将对象添加到从 <xref:System.ComponentModel.BindingList%601>继承的类型化集合：
 
 > [!NOTE]
 > 在此示例中，`Orders` 集合是 `Customer` 对象的一个属性。
@@ -108,10 +108,10 @@ Visual Studio 提供设计时工具，用于在应用程序中使用自定义对
 
 ### <a name="remove-objects-from-a-collection"></a>从集合中删除对象
 
-您可以通过调用自定义集合类或 <xref:System.Windows.Forms.BindingSource> 的 `Remove` 或 `RemoveAt` 方法从集合中删除对象。
+您可以通过调用自定义集合类或 <xref:System.Windows.Forms.BindingSource>的 `Remove` 或 `RemoveAt` 方法从集合中删除对象。
 
 > [!NOTE]
-> 当你从 <xref:System.ComponentModel.BindingList%601> 继承时，将自动为你的自定义集合提供 `Remove` 和 `RemoveAt` 方法。
+> 当你从 <xref:System.ComponentModel.BindingList%601>继承时，将自动为你的自定义集合提供 `Remove` 和 `RemoveAt` 方法。
 
 下面的代码演示如何使用 <xref:System.Windows.Forms.BindingSource.RemoveAt%2A> 方法在 <xref:System.Windows.Forms.BindingSource> 中查找和删除类型化集合中的对象：
 
@@ -126,7 +126,7 @@ Visual Studio 提供设计时工具，用于在应用程序中使用自定义对
 
 若要编辑数据绑定到 Windows 窗体控件的自定义对象中的数据，只需编辑绑定控件中的数据（或直接在对象的属性中编辑）。 数据绑定体系结构更新对象中的数据。
 
-如果你的应用程序需要跟踪更改，并向其原始值回滚建议的更改，则必须在对象模型中实现此功能。 有关数据表如何跟踪建议的更改的示例，请参阅 <xref:System.Data.DataRowState>、<xref:System.Data.DataSet.HasChanges%2A> 和 <xref:System.Data.DataTable.GetChanges%2A>。
+如果你的应用程序需要跟踪更改，并向其原始值回滚建议的更改，则必须在对象模型中实现此功能。 有关数据表如何跟踪建议的更改的示例，请参阅 <xref:System.Data.DataRowState>、<xref:System.Data.DataSet.HasChanges%2A>和 <xref:System.Data.DataTable.GetChanges%2A>。
 
 ### <a name="save-data-in-objects-back-to-the-database"></a>将对象中的数据保存回数据库
 
@@ -137,7 +137,7 @@ Visual Studio 会创建可直接针对数据库执行的 DBDirect 方法。 这�
 |TableAdapter DBDirect 方法|描述|
 | - |-----------------|
 |`TableAdapter.Insert`|将新记录添加到数据库，以便作为方法参数传入单独的列值。|
-|`TableAdapter.Update`|更新数据库中的现有记录。 Update 方法将原始值和新列值作为方法参数使用。 原始值用于查找原始记录，新值用于更新该记录。<br /><br /> @No__t_0 方法还用于通过将 <xref:System.Data.DataRow>s 的 <xref:System.Data.DataSet>、<xref:System.Data.DataTable>、<xref:System.Data.DataRow> 或数组作为方法参数来协调数据集中的更改。|
+|`TableAdapter.Update`|更新数据库中的现有记录。 Update 方法将原始值和新列值作为方法参数使用。 原始值用于查找原始记录，新值用于更新该记录。<br /><br /> `TableAdapter.Update` 方法还用于通过将 <xref:System.Data.DataRow>的 <xref:System.Data.DataSet>、<xref:System.Data.DataTable>、<xref:System.Data.DataRow>或数组作为方法参数来协调数据集中的更改。|
 |`TableAdapter.Delete`|基于作为方法参数传入的原始列值删除数据库中的现有记录。|
 
 若要保存对象集合中的数据，请遍历对象的集合（例如，使用 for next 循环）。 使用 TableAdapter 的 DBDirect 方法将每个对象的值发送到数据库。
@@ -147,6 +147,6 @@ Visual Studio 会创建可直接针对数据库执行的 DBDirect 方法。 这�
 [!code-csharp[VbRaddataSaving#23](../data-tools/codesnippet/CSharp/bind-objects-in-visual-studio_6.cs)]
 [!code-vb[VbRaddataSaving#23](../data-tools/codesnippet/VisualBasic/bind-objects-in-visual-studio_6.vb)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中将控件绑定到数据](../data-tools/bind-controls-to-data-in-visual-studio.md)

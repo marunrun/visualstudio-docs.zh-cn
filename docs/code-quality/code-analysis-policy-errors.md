@@ -1,5 +1,5 @@
 ---
-title: 代码分析策略错误
+title: Code Analysis Policy Errors
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - policy errors, code analysis
 ms.assetid: d1f221cd-68c0-4277-9397-b76ad0dbae77
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e6ff6000f0eab60e17642bf2bd8257154e54a9d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ac7a949b3f8a1e0c9d44c6194f87745b4e3f17a8
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745945"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587740"
 ---
-# <a name="code-analysis-policy-errors"></a>代码分析策略错误
+# <a name="code-analysis-policy-errors"></a>Code Analysis Policy Errors
 
 如果签入时未满足代码分析策略，则会发生以下错误：
 
@@ -29,7 +29,7 @@ ms.locfileid: "72745945"
 
 - 未对解决方案中所有项目的生成版本启用代码分析。
 
-- Visual Studio 中项目的本地规则集的**操作**设置限制低于项目规则集，例如，服务器上设置为 "**操作**=**错误**" 的规则将其 "**操作**" 设置为 "**警告**" 或在 Visual Studio 中运行的规则集中**没有**。
+- Visual Studio 中项目的本地规则集的**操作**设置限制低于项目规则集，例如，服务器上设置为 "**操作**=**错误**" 的规则在 Visual Studio 中运行的规则集中的**操作**设置为 "**警告**" 或 "**无**"。
 
 - 在 Visual Studio 中指定的规则集不包含在项目的代码分析签入策略中指定的规则集中指定的所有规则。
 
@@ -45,13 +45,13 @@ ms.locfileid: "72745945"
 
 代码分析策略要求签入的所有文件必须位于当前打开的解决方案中。 当存在打开的解决方案，但 "挂起签入" 视图中的某些文件不是当前打开的解决方案的一部分时，将引发此错误。 若要更正此错误，请打开包含要签入的文件的解决方案。
 
-**"@No__t_1" 的版本不正确。策略中指定的强名称为 "{1}"。**
+**"{0}" 的版本不正确。策略中指定的强名称为 "{1}"。**
 
-此错误适用于 .NET 项目。 代码分析策略所需的规则 .dll 存在于本地计算机上，但版本/公钥不匹配。 若要更正此错误，策略创建者必须在其计算机上更新*C:\Program Files\Microsoft Visual Studio 8 \ Team Tools\Static Analysis \\ Tools\FxCop\Rules*中的 .dll。
+此错误适用于 .NET 项目。 代码分析策略所需的规则 .dll 存在于本地计算机上，但版本/公钥不匹配。 若要更正此错误，策略创建者必须在其计算机上更新*C:\Program Files\Microsoft Visual Studio 8 \ Team Tools\Static Analysis\\Tools\FxCop\Rules*中的 .dll。
 
 **策略中指定的 "{0}" 程序集不存在。**
 
-此错误适用于 .NET 项目。 代码分析策略所需的规则未在客户端计算机上安装相应的 dll。 若要更正此错误，策略创建者必须在其计算机上更新*C:\Program Files\Microsoft Visual Studio 8 \ Team Tools\Static Analysis Tools\FxCop\Rules \\* 目录中的 dll。
+此错误适用于 .NET 项目。 代码分析策略所需的规则未在客户端计算机上安装相应的 dll。 若要更正此错误，策略创建者必须在其计算机上更新*C:\Program Files\Microsoft Visual Studio 8 \ Team Tools\Static Analysis Tools\FxCop\Rules\\* 目录中的 dll。
 
 **项目 {0} 规则设置与代码分析策略不一致。**
 
@@ -59,7 +59,7 @@ ms.locfileid: "72745945"
 
 **在活动配置上未启用代码分析。签入之前，切换到配置 {0} 并生成项目 {1}。**
 
-在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中，活动配置未启用代码分析，但至少启用了一个代码分析。
+在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]中，活动配置未启用代码分析，但至少启用了一个代码分析。
 
 **在签入之前，必须在项目 {0} 属性中启用托管二进制文件的代码分析和生成。**
 
@@ -73,6 +73,6 @@ ms.locfileid: "72745945"
 
 此错误适用于非托管项目。 代码分析策略需要适用于 C/C++的代码分析，但在客户端上的当前项目中未启用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [代码分析应用程序错误](../code-quality/code-analysis-application-errors.md)

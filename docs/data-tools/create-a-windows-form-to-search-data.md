@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data [Visual Studio], parameterizing queries
 - data [Visual Studio], searching
 ms.assetid: 65ca79a9-7458-466c-af55-978cd24c549e
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: d503f8d1fd18817a30f49c64307d9fc14c74b3ea
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: df6f2245f06a594e35febe07d5aab2d7e83c48fd
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72642708"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586804"
 ---
 # <a name="create-a-windows-form-to-search-data"></a>创建用于搜索数据的 Windows 窗体
 
@@ -43,7 +43,7 @@ ms.locfileid: "72642708"
 
 - 在窗体中输入参数并执行参数化查询。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 本演练使用 SQL Server Express LocalDB 和 Northwind 示例数据库。
 
@@ -99,7 +99,7 @@ ms.locfileid: "72642708"
 
 2. 将“Customers”节点从“数据源”窗口中拖到窗体上。
 
-     窗体上出现用于导航记录的 <xref:System.Windows.Forms.DataGridView> 和工具栏 (<xref:System.Windows.Forms.BindingNavigator>)。 组件栏中显示“[NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)”、CustomersTableAdapter、<xref:System.Windows.Forms.BindingSource> 和 <xref:System.Windows.Forms.BindingNavigator>。
+     窗体上出现用于导航记录的 <xref:System.Windows.Forms.DataGridView> 和工具栏 (<xref:System.Windows.Forms.BindingNavigator>)。 组件栏中显示[“NorthwindDataSet”](../data-tools/dataset-tools-in-visual-studio.md)、CustomersTableAdapter、<xref:System.Windows.Forms.BindingSource> 和 <xref:System.Windows.Forms.BindingNavigator>。
 
 ## <a name="add-parameterization-search-functionality-to-the-query"></a>向查询添加参数化（搜索功能）
 
@@ -145,6 +145,6 @@ ms.locfileid: "72642708"
 
 - 编辑数据集来添加或移除数据库对象。 有关详细信息，请参阅[创建和配置数据集](../data-tools/create-and-configure-datasets-in-visual-studio.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中将 Windows 窗体控件绑定到数据](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)

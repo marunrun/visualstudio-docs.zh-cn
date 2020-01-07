@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Data Sources window
 - displaying data
 ms.assetid: be8b6623-86a6-493e-ab7a-050de4661fd6
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7257bd25adf32b7529d2c5e1dc6d2a753d9b2458
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9e0746de34a16dc181baff3c8b843b123c2ae434
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648861"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587025"
 ---
 # <a name="bind-controls-to-data-in-visual-studio"></a>在 Visual Studio 中将控件绑定到数据
 
@@ -32,7 +32,7 @@ ms.locfileid: "72648861"
 
 | 数据源 | Windows 窗体设计器中的拖放支持 | WPF 设计器中的拖放支持 | Silverlight 设计器中的拖放支持 |
 | - | - | - | - |
-| 数据集 | 是 | 是 | No |
+| 数据集 | 是 | 是 | 否 |
 | 实体数据模型 | 是<sup>1</sup> | 是 | 是 |
 | LINQ to SQL 类 | 否<sup>2</sup> | 否<sup>2</sup> | 否<sup>2</sup> |
 | 服务（包括 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]、WCF 服务和 Web 服务） | 是 | 是 | 是 |
@@ -45,7 +45,7 @@ ms.locfileid: "72648861"
 
 ## <a name="data-sources-window"></a>“数据源”窗口
 
-数据源以“数据源”窗口中的项的形式提供给项目。 当窗体设计图面是您的项目中的活动窗口时，或者您可以通过选择 "**视图**"  > **其他 Windows**  > **数据源**打开该窗口时，将显示此窗口。 您可以从此窗口拖动项来创建绑定到基础数据的控件，还可以通过右键单击来配置数据源。
+数据源以“数据源”窗口中的项的形式提供给项目。 当窗体设计图面是您的项目中的活动窗口时，或者您可以通过选择 "**视图**" > **其他 Windows** > **数据源**打开该窗口时，将显示此窗口。 您可以从此窗口拖动项来创建绑定到基础数据的控件，还可以通过右键单击来配置数据源。
 
 ![“数据源”窗口](../data-tools/media/raddata-data-sources-window.png)
 
@@ -66,7 +66,7 @@ ms.locfileid: "72648861"
 |筛选 UI 中显示的数据。|[在 Windows 窗体应用程序中对数据进行筛选和排序](../data-tools/filter-and-sort-data-in-a-windows-forms-application.md)|
 |自定义控件的标题。|[自定义 Visual Studio 创建数据绑定控件的标题的方式](../data-tools/customize-how-visual-studio-creates-captions-for-data-bound-controls.md)|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [适用于 NET 的 Visual Studio Data Tools](../data-tools/visual-studio-data-tools-for-dotnet.md)
 - [Windows 窗体数据绑定](/dotnet/framework/winforms/windows-forms-data-binding)

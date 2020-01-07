@@ -6,17 +6,17 @@ helpviewer_keywords:
 - code metrics data
 - code metrics results
 - code metrics [Visual Studio]
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 55f9904c95be45c7f293355340c814faafb5de2b
-ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
+ms.openlocfilehash: a71f507aa5ce524e01b2120594ace634056d0850
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73568839"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587467"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>如何：生成代码度量数据
 
@@ -62,7 +62,7 @@ ms.locfileid: "73568839"
 
    在此示例中，规则[CA1502](ca1502.md)配置为在方法的圈复杂度大于10时激发。
 
-3. 在 Visual Studio 的 "**属性**" 窗口中，或者在项目文件中，将配置文件的生成操作标记为 " [**AdditionalFiles**](../ide/build-actions.md#build-action-values)"。 例如:
+3. 在 Visual Studio 的 "**属性**" 窗口中，或者在项目文件中，将配置文件的生成操作标记为 " [**AdditionalFiles**](../ide/build-actions.md#build-action-values)"。 例如：
 
    ```xml
    <ItemGroup>
@@ -78,7 +78,7 @@ ms.locfileid: "73568839"
 
 可以通过以下任一方式生成整个解决方案的代码度量结果：
 
-- 从菜单栏中，选择 "**分析** >  计算解决方案  > **的** **代码度量值**"。
+- 从菜单栏中，选择 "**分析** > 计算解决方案 > **的** **代码度量值**"。
 
 - 在**解决方案资源管理器**中，右键单击解决方案，然后选择 "**计算代码度量值**"。
 
@@ -90,7 +90,7 @@ ms.locfileid: "73568839"
 
 1. 在**解决方案资源管理器**中，选择一个或多个项目。
 
-1. 从菜单栏中，选择 "**分析**" "分析"  >  "**为所选项目** **计算代码度量值**"  > 。
+1. 从菜单栏中，选择 "**分析**" "分析" > "**为所选项目** **计算代码度量值**" > 。
 
 将生成结果，并显示 "**代码度量结果**" 窗口。 若要查看结果详细信息，请在**层次结构**中展开树。
 
@@ -111,7 +111,7 @@ ms.locfileid: "73568839"
 
 ### <a name="microsoftcodeanalysismetrics-nuget-package"></a>CodeAnalysis NuGet 包
 
-若要从命令行生成代码度量数据，最简单的方法是安装[CodeAnalysis](https://www.nuget.org/packages/Microsoft.CodeAnalysis.Metrics/) NuGet 包。 安装程序包后，从包含项目文件的目录运行 `msbuild /t:Metrics`。 例如:
+若要从命令行生成代码度量数据，最简单的方法是安装[CodeAnalysis](https://www.nuget.org/packages/Microsoft.CodeAnalysis.Metrics/) NuGet 包。 安装程序包后，从包含项目文件的目录运行 `msbuild /t:Metrics`。 例如：
 
 ```shell
 C:\source\repos\ClassLibrary3\ClassLibrary3>msbuild /t:Metrics
@@ -134,7 +134,7 @@ Build succeeded.
     0 Error(s)
 ```
 
-您可以通过指定 `/p:MetricsOutputFile=<filename>` 来覆盖输出文件的名称。 还可以通过指定 `/p:LEGACY_CODE_METRICS_MODE=true`获取[旧样式](#previous-versions)的代码度量数据。 例如:
+您可以通过指定 `/p:MetricsOutputFile=<filename>`来覆盖输出文件的名称。 还可以通过指定 `/p:LEGACY_CODE_METRICS_MODE=true`获取[旧样式](#previous-versions)的代码度量数据。 例如：
 
 ```shell
 C:\source\repos\ClassLibrary3\ClassLibrary3>msbuild /t:Metrics /p:LEGACY_CODE_METRICS_MODE=true /p:MetricsOutputFile="Legacy.xml"
@@ -231,7 +231,7 @@ Build succeeded.
 
 #### <a name="metricsexe-usage"></a>度量值 .exe 用法
 
-若要运行*公制*，请提供项目或解决方案，并将输出 XML 文件作为参数提供。 例如:
+若要运行*公制*，请提供项目或解决方案，并将输出 XML 文件作为参数提供。 例如：
 
 ```shell
 C:\>Metrics.exe /project:ConsoleApp20.csproj /out:report.xml
@@ -263,7 +263,7 @@ Visual Studio 2015 附带了一个命令行代码度量值工具，该工具也�
 
 其他指标（例如 `CyclomaticComplexity` 和 `MaintainabilityIndex`）使用与之前版本的*规格*相同的公式，但新的工具会计算 `IOperations` （逻辑源指令）而不是中间语言（IL）指令的数目。 这些数字将与 Visual Studio IDE 和以前版本的*指标*生成的数字略有不同。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [使用 "代码度量结果" 窗口](../code-quality/working-with-code-metrics-data.md)
+- [使用代码度量结果窗口](../code-quality/working-with-code-metrics-data.md)
 - [代码度量值](../code-quality/code-metrics-values.md)

@@ -6,17 +6,17 @@ dev_langs:
 - VB
 - CSharp
 ms.assetid: 2222841f-e443-4a3d-8c70-4506aa905193
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: f895bd909ec9fda496d284c163bff4a5168bd057
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8f35173ded1ba4d52e0c5a9800fa228a7f93b981
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648733"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586869"
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>使用 ADO.NET 创建简单的数据应用程序
 
@@ -27,11 +27,11 @@ ms.locfileid: "72648733"
 > [!IMPORTANT]
 > 要使代码保持简单，请不要包括生产就绪的异常处理。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 要创建应用程序，你将需要：
 
-- Visual Studio。
+- 。
 
 - SQL Server Express LocalDB。 如果没有 SQL Server Express 的 LocalDB，则可以从[SQL Server Express 下载页](https://www.microsoft.com/sql-server/sql-server-editions-express)安装它。
 
@@ -122,7 +122,7 @@ ms.locfileid: "72648733"
 ## <a name="store-the-connection-string"></a>存储连接字符串
 当应用程序尝试打开数据库的连接时，应用程序必须能够访问连接字符串。 若要避免在每个窗体上手动输入字符串，请将该字符串存储在项目的*app.config*文件中，并创建一个方法，该方法在从应用程序中的任何窗体中调用方法时返回字符串。
 
-您可以通过在**服务器资源管理器**中右键单击**Sales**数据连接，然后选择 "**属性**" 来查找连接字符串。 找到**ConnectionString**属性，然后使用**ctrl** +**A**、 **ctrl** +**C**选择字符串并将其复制到剪贴板。
+您可以通过在**服务器资源管理器**中右键单击**Sales**数据连接，然后选择 "**属性**" 来查找连接字符串。 找到**ConnectionString**属性，然后使用**ctrl**+**A**、 **ctrl**+**C**选择字符串并将其复制到剪贴板。
 
 1. 如果C#使用的是，请在**解决方案资源管理器**中展开项目下的 "**属性**" 节点，然后打开 "**设置**" 文件。
     如果使用的是 Visual Basic，请在**解决方案资源管理器**中单击 "**显示所有文件**"，展开 "**我的项目**" 节点，然后打开 "**设置**" 文件。
@@ -233,6 +233,6 @@ ms.locfileid: "72648733"
 
 在对每个 Click 事件处理程序进行编码且完成编码后，请按 F5 键以生成并测试应用程序。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [适用于 NET 的 Visual Studio Data Tools](../data-tools/visual-studio-data-tools-for-dotnet.md)

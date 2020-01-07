@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Workflow Designer, creating a workflow project
 - creating a workflow project
 ms.assetid: 235a125e-ebe7-4a98-bf77-86c8558728fb
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f793e6ff468bdec6df499c5e5eb6b8524e9e4d5a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f8c3e4930376d2d2f9a6ee3334d8b164279d5ac2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650579"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597069"
 ---
 # <a name="workflow-project-templates"></a>工作流项目模板
 
@@ -36,7 +36,7 @@ Visual Studio 提供了四种不同的工作流项目模板：
 
 若要访问这些模板，请首先安装 Visual Studio 的**Windows Workflow Foundation**组件。 有关详细说明，请参阅[安装 Windows Workflow Foundation](developing-applications-with-the-workflow-designer.md#install-windows-workflow-foundation)。
 
-1. 安装**Windows Workflow Foundation**组件后，选择 "**文件**"  >  "**新建** > **项目**"。
+1. 安装**Windows Workflow Foundation**组件后，选择 "**文件**" > "**新建** > **项目**"。
 
 1. 搜索并选择一个工作流项目模板，例如 "**工作流控制台应用程序**" 模板。
 
@@ -69,7 +69,7 @@ Visual Studio 提供了四种不同的工作流项目模板：
 > [!NOTE]
 > 自定义活动设计器可用于自定义活动和默认的 .NET 活动。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用工作流设计器](developing-applications-with-the-workflow-designer.md)
 - [设计工作流（.NET Framework）](/dotnet/framework/windows-workflow-foundation/designing-workflows)

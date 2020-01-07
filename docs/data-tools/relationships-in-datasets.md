@@ -10,22 +10,22 @@ helpviewer_keywords:
 - datasets [Visual Basic], relationships
 - relationships, datasets
 ms.assetid: cfe274f0-71fe-40f6-994e-7c7f6273c9ba
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c9fab55c020894fe87ec4dc1c31137fb7e38c204
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a9d733892b3bc62c272f31b0d7cc1aa10fbf229d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648244"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586310"
 ---
 # <a name="create-relationships-between-datasets"></a>创建数据集之间的关系
 包含相关数据表的数据集使用 <xref:System.Data.DataRelation> 对象来表示表之间的父/子关系，并返回彼此相关的记录。 使用 "**数据源配置向导**" 或**数据集设计器**向数据集添加相关表，并为您创建和配置 <xref:System.Data.DataRelation> 对象。
 
-@No__t_0 对象执行两个函数：
+<xref:System.Data.DataRelation> 对象执行两个函数：
 
 - 它可以使与您正在使用的记录相关的记录可用。 如果正在使用子记录（<xref:System.Data.DataRow.GetParentRow%2A>），则它会提供子记录（<xref:System.Data.DataRow.GetChildRows%2A>）和父记录。
 
@@ -34,7 +34,7 @@ ms.locfileid: "72648244"
 了解真正的联接与 <xref:System.Data.DataRelation> 对象的函数之间的差异非常重要。 在真正的联接中，记录取自父表和子表，并放入单个平面记录集中。 使用 <xref:System.Data.DataRelation> 对象时，不会创建新的记录集。 而 DataRelation 会跟踪表之间的关系，并使父记录和子记录保持同步。
 
 ## <a name="datarelation-objects-and-constraints"></a>DataRelation 对象和约束
-@No__t_0 对象还用于创建和强制以下约束：
+<xref:System.Data.DataRelation> 对象还用于创建和强制以下约束：
 
 - Unique 约束，保证表中的列不包含重复项。
 
@@ -92,7 +92,7 @@ ms.locfileid: "72648244"
 
 7. 选择是要创建关系还是约束，或同时创建两者。
 
-8. 选中或清除 "**嵌套关系**" 框。 如果选择此选项，则会将 <xref:System.Data.DataRelation.Nested%2A> 属性设置为 `true`，这会导致在将这些行作为 XML 数据写入或与 <xref:System.Xml.XmlDataDocument> 同步时，将关系的子行嵌套在父列中。 有关详细信息，请参阅[嵌套 datarelation](/dotnet/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations)。
+8. 选中或清除 "**嵌套关系**" 框。 如果选择此选项，则会将 <xref:System.Data.DataRelation.Nested%2A> 属性设置为 `true`，这会导致在将这些行作为 XML 数据写入或与 <xref:System.Xml.XmlDataDocument>同步时，将关系的子行嵌套在父列中。 有关详细信息，请参阅[嵌套 datarelation](/dotnet/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations)。
 
 9. 设置对这些表中的记录进行更改时要强制执行的规则。 有关更多信息，请参见<xref:System.Data.Rule>。
 
@@ -104,6 +104,6 @@ ms.locfileid: "72648244"
 
 2. 从 "**数据**" 菜单中，选择 "**显示关系标签**" 命令以显示关系名称。 清除该命令以隐藏关系名称。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中创建和配置数据集](../data-tools/create-and-configure-datasets-in-visual-studio.md)

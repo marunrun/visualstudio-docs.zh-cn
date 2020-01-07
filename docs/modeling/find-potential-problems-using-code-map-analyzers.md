@@ -8,17 +8,17 @@ helpviewer_keywords:
 - code analysis, dependency graphs
 - dependency graphs, analyzing code
 - graph documents, analyzing
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f55d4d3c4470d32d9779f7adf06934f10ac618e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: dd20d3c40a4fbe80ac1578275ccd8614eb018d7a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657486"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596588"
 ---
 # <a name="find-potential-problems-using-code-map-analyzers"></a>使用代码图分析器查找潜在问题
 
@@ -45,7 +45,7 @@ ms.locfileid: "72657486"
 > [!TIP]
 > 如果你的代码图非常大，运行分析器则可能导致内存不足异常。 如果发生这种情况，请编辑代码图以减小其范围，或者生成一个较小的代码图，然后运行分析器。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [映射解决方案中的依赖项](../modeling/map-dependencies-across-your-solutions.md)
 - [使用代码图调试应用程序](../modeling/use-code-maps-to-debug-your-applications.md)

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - TextTemplatingFilePreprocessor custom tool
 - text templates, TransformText() method
 - text templates, generating files at run time
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e1ee422ec549ced0995db22258edf9ef21540804
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 26897bee69f7c0e969cd42feb7604321294641fb
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660313"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595366"
 ---
 # <a name="run-time-text-generation-with-t4-text-templates"></a>使用 T4 文本模板的运行时文本生成
 
@@ -55,7 +55,7 @@ This report is Company Confidential.
 
 1. 在解决方案资源管理器中，在项目的快捷菜单上，选择 "**添加** > **新项**"。
 
-2. 在 "**添加新项**" 对话框中，选择 "**运行时文本模板**"。 （Visual Basic  > **常规**"下的"**常见项**"。）
+2. 在 "**添加新项**" 对话框中，选择 "**运行时文本模板**"。 （Visual Basic > **常规**"下的"**常见项**"。）
 
 3. 键入模板文件的名称。
 
@@ -107,7 +107,7 @@ Language 参数将取决于项目的语言。
 
 ### <a name="plain-content"></a>纯内容
 
-编辑**tt**文件以包含你希望应用程序生成的文本。 例如:
+编辑**tt**文件以包含你希望应用程序生成的文本。 例如：
 
 ```html
 <html><body>
@@ -119,7 +119,7 @@ This report is Company Confidential.
 
 ### <a name="embedded-program-code"></a>嵌入的程序代码
 
-可以在 `<#` 和 `#>` 之间插入程序代码。 例如:
+可以在 `<#` 和 `#>`之间插入程序代码。 例如：
 
 ```csharp
 <table>
@@ -144,7 +144,7 @@ This report is Company Confidential.
 </table>
 ```
 
-请注意，将在 `<# ... #>` 中插入语句，并在 `<#= ... #>` 之间插入表达式。 有关详细信息，请参阅[编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
+请注意，将在 `<# ... #>` 中插入语句，并在 `<#= ... #>`之间插入表达式。 有关详细信息，请参阅[编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
 
 ## <a name="using-the-template"></a>使用模板
 
@@ -152,7 +152,7 @@ This report is Company Confidential.
 
 保存**tt**文件时，将生成一个子 **.cs**或 **.vb**文件。 若要在**解决方案资源管理器**中查看此文件，请展开**tt**文件节点。 在 Visual Basic 项目中，首先选择**解决方案资源管理器**工具栏中的 "**显示所有文件**"。
 
-请注意，该子公司文件包含一个分部类，其中包含一个名为 `TransformText()` 的方法。 可以从应用程序中调用此方法。
+请注意，该子公司文件包含一个分部类，其中包含一个名为 `TransformText()`的方法。 可以从应用程序中调用此方法。
 
 ### <a name="generating-text-at-run-time"></a>在运行时生成文本
 
@@ -262,7 +262,7 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
 
 #### <a name="passing-data-in-template-properties"></a>在模板属性中传递数据
 
-将数据传递到模板的另一种方法是将公共属性添加到分部类定义的模板类中。 应用程序可以在调用 `TransformText()` 之前设置属性。
+将数据传递到模板的另一种方法是将公共属性添加到分部类定义的模板类中。 应用程序可以在调用 `TransformText()`之前设置属性。
 
 你还可以将字段添加到分部定义的模板类中。 这使您可以在模板的后续执行之间传递数据。
 
@@ -302,11 +302,11 @@ Include 指令可用于模板文件文本或包含的文件文本中的任意位
 
 在下面的示例中使用的模式中，请注意以下几点：
 
-- 基类 `SharedFragments` 在类功能块 `<#+ ... #>` 内定义方法。
+- 基类 `SharedFragments` 在类功能块 `<#+ ... #>`内定义方法。
 
 - 基类不包含任何可用文本。 相反，它的所有文本块都出现在类功能方法中。
 
-- 派生类调用 `SharedFragments` 中定义的方法。
+- 派生类调用 `SharedFragments`中定义的方法。
 
 - 应用程序调用派生类的 `TextTransform()` 方法，但不会转换基类 `SharedFragments`。
 
@@ -433,7 +433,7 @@ End material for DerivedTemplate1.
 
 可在编译时确定模板及其内容的任何应用程序中使用运行时模板。 但是，如果想要编写一个 Visual Studio 扩展，以便从运行时更改的模板生成文本，请参阅[在 VS 扩展中调用文本转换](../modeling/invoking-text-transformation-in-a-vs-extension.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [代码生成和 T4 文本模板](../modeling/code-generation-and-t4-text-templates.md)
 - [编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)

@@ -4,21 +4,21 @@ ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - text templates, utility methods
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e6426ea57fbdbec6ec47a4f6348463b88b250e0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c55da4d58b717bc4d42b6fafdd084067b7e21a31
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72606010"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591757"
 ---
 # <a name="text-template-utility-methods"></a>文本模板实用工具方法
 
-在 Visual Studio 文本模板中编写代码时，有几种方法始终可用。 这些方法是在 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> 中定义的。
+在 Visual Studio 文本模板中编写代码时，有几种方法始终可用。 这些方法是在 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>中定义的。
 
 > [!TIP]
 > 您还可以在常规（非预处理）文本模板中使用主机环境提供的其他方法和服务。 例如，你可以解析文件路径、记录错误以及获取 Visual Studio 提供的服务和任何加载的包。 有关详细信息，请参阅[从文本模板访问 Visual Studio](/previous-versions/visualstudio/visual-studio-2010/gg604090\(v\=vs.100\))。
@@ -53,7 +53,7 @@ while (i-- > 0)
 
 你可能会发现，在带有嵌套控制结构的长代码块中使用这些实用工具方法之一而不是表达式块很有用。
 
-@No__t_0 和 `WriteLine()` 方法有两个重载，一个重载采用单个字符串参数，另一个采用复合格式字符串和要包含在字符串中的对象数组（如 `Console.WriteLine()` 方法）。 @No__t_0 的以下两种用法在功能上是等效的：
+`Write()` 和 `WriteLine()` 方法有两个重载，一个重载采用单个字符串参数，另一个采用复合格式字符串和要包含在字符串中的对象数组（如 `Console.WriteLine()` 方法）。 `WriteLine()` 的以下两种用法在功能上是等效的：
 
 ```
 <#
@@ -69,7 +69,7 @@ while (i-- > 0)
 
 ## <a name="indentation-methods"></a>缩进方法
 
-您可以使用缩进方法格式化文本模板的输出。 @No__t_0 类具有一个 `CurrentIndent` string 属性，该属性显示文本模板中的当前缩进和一个 `indentLengths` 字段，该字段是已添加的缩进的列表。 您可以使用 `PushIndent()` 方法添加缩进，并使用 `PopIndent()` 方法减去缩进。 如果要删除所有缩进，请使用 `ClearIndent()` 方法。 以下代码块显示了这些方法的用法：
+您可以使用缩进方法格式化文本模板的输出。 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> 类具有一个 `CurrentIndent` string 属性，该属性显示文本模板中的当前缩进和一个 `indentLengths` 字段，该字段是已添加的缩进的列表。 您可以使用 `PushIndent()` 方法添加缩进，并使用 `PopIndent()` 方法减去缩进。 如果要删除所有缩进，请使用 `ClearIndent()` 方法。 以下代码块显示了这些方法的用法：
 
 ```
 <#
@@ -119,7 +119,7 @@ Hello
 
 `<#@template ... hostspecific="true" #>`
 
-@No__t_0 的类型取决于执行模板的主机的类型。 在 Visual Studio 中运行的模板中，可以将 `this.Host` 转换为 `IServiceProvider` 以获取对 IDE 等服务的访问权限。 例如:
+`this.Host` 的类型取决于执行模板的主机的类型。 在 Visual Studio 中运行的模板中，可以将 `this.Host` 转换为 `IServiceProvider` 以获取对 IDE 等服务的访问权限。 例如：
 
 ```
 EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)
@@ -128,7 +128,7 @@ EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)
 
 ## <a name="using-a-different-set-of-utility-methods"></a>使用一组不同的实用工具方法
 
-作为文本生成过程的一部分，模板文件转换为类，该类始终命名为 `GeneratedTextTransformation`and 从 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> 继承。 如果要改为使用一组不同的方法，可以编写自己的类并在模板指令中指定它。 类必须继承自 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>。
+作为文本生成过程的一部分，模板文件转换为类，该类始终 `GeneratedTextTransformation`命名，并从 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>继承。 如果要改为使用一组不同的方法，可以编写自己的类并在模板指令中指定它。 类必须继承自 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>。
 
 ```
 <#@ template inherits="MyUtilityClass" #>

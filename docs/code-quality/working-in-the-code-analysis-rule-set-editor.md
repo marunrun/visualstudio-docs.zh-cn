@@ -5,17 +5,17 @@ ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.ruleseteditor
 ms.assetid: 370c97bf-bb29-4b2f-b9ae-ba125bce7b2d
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e23bf15796a8ff581a8a017687f90084c338e74
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8ea828cd0cba0bdab60a1f7cf4f74dbf20bd01d2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649015"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587129"
 ---
 # <a name="use-the-code-analysis-rule-set-editor"></a>使用代码分析规则集编辑器
 
@@ -26,10 +26,10 @@ ms.locfileid: "72649015"
 |操作（严重性）|描述|
 |-|-|
 |警告|在**错误列表**中和生成时生成警告。|
-|Error|在**错误列表**中和生成时生成错误。|
+|错误|在**错误列表**中和生成时生成错误。|
 |T:System.Diagnostics.Switch|在**错误列表**中生成一条消息。|
 |Hidden|冲突对用户不可见。 但会通知 IDE 冲突。|
-|None|规则被抑制。 行为与从规则集中删除规则的行为相同。|
+|无|规则被抑制。 行为与从规则集中删除规则的行为相同。|
 
 编辑器以树结构显示规则，这些规则按指定的规则集字段对规则进行分组。 若要添加或删除规则集中的规则，请执行以下一个或多个步骤：
 
@@ -42,7 +42,7 @@ ms.locfileid: "72649015"
 
 - 选中或清除单个规则的复选框。 选中规则的复选框后，规则将设置为警告操作。
 
-## <a name="toolbar"></a>Toolbar
+## <a name="toolbar"></a>ToolBar
 
 您可以使用 "规则集编辑器" 的工具栏对规则集网格中显示的数据进行分组、筛选和搜索。
 
@@ -52,7 +52,7 @@ ms.locfileid: "72649015"
 |---------------------|-----------------|
 |**全部展开**|显示所有组中的规则。|
 |**全部折叠**|隐藏所有组中的规则。|
-|**Group By**|指定对规则进行分组所依据的字段。 单击 " **\<None" >** 以显示没有组的规则。|
+|**Group By**|指定对规则进行分组所依据的字段。 单击 " **\<无" >** 以显示没有组的规则。|
 |**列选项**|指定要显示的规则字段。|
 |**隐藏不适用于当前解决方案的规则**|显示或隐藏与解决方案不属于同一目标类型的规则。|
 |**显示可以生成代码分析错误的规则**|显示或隐藏分配了 "错误" 操作的规则。|
@@ -71,8 +71,8 @@ ms.locfileid: "72649015"
 |-----------|-----------------|
 |**ID**|规则的标识符。|
 |**类别**|除了规则集中的成员身份外，代码分析规则还按类别分组。 有关详细信息，请参阅[代码分析警告](../code-quality/code-analysis-for-managed-code-warnings.md)。|
-|**名称**|规则的标题。|
-|**Namespace**|规则的命名空间。|
+|**Name**|规则的标题。|
+|**命名空间**|规则的命名空间。|
 |**目标类型**|指示规则是适用于本机、托管代码还是数据库代码。|
 |**操作**|代码分析运行中违反规则时执行的操作。 可以编辑 "**操作**" 字段。|
 |**源规则集**|包含规则的规则集。|
@@ -85,6 +85,6 @@ ms.locfileid: "72649015"
 
 - 若要按字段的值筛选规则集，请单击要作为筛选依据的字段的列标题上的 "筛选器" 按钮。 选中要显示的值的复选框，并清除要隐藏的值的复选框。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [创建自定义规则集](../code-quality/how-to-create-a-custom-rule-set.md)

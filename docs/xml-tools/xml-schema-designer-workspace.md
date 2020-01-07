@@ -3,17 +3,17 @@ title: XML 架构设计器工作区
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 588fa495-fe7f-4b16-8a9f-6b6b8d2d502a
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d6e5efc4c192fbb9debeb9dd5f9ccf1eaec69efa
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4cf86dd39e010424b25916deec8cdebd23ee1c1b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72608265"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592368"
 ---
 # <a name="xml-schema-designer-workspace-views"></a>XML 架构设计器工作区视图
 
@@ -47,4 +47,4 @@ XML 架构设计器（XSD 设计器）是一个图形工具，可帮助您浏览
 
 - 起始视图页上的水印、空内容模型视图上的水印或图形视图上的水印。
 
-- 热键： **ctrl** +**1**作为开始视图，按**Ctrl** +**2**作为 "图形" 视图，并按**ctrl** +**3**作为 "内容模型" 视图。
+- 热键： **ctrl**+**1**作为开始视图，按**Ctrl**+**2**作为 "图形" 视图，并按**ctrl**+**3**作为 "内容模型" 视图。

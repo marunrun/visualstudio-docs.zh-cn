@@ -3,17 +3,17 @@ title: XSLT 调试器窗口
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 846fdabd-e5c3-4688-9b0d-a93fbeea1b96
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae37db21072e81a5940f09f085bf261839686a69
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bb72acf2db63e54da8a1ee001d2abfaa30850fc3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646093"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592875"
 ---
 # <a name="debugger-user-interface-xslt"></a>调试器用户界面（XSLT）
 
@@ -25,7 +25,7 @@ ms.locfileid: "72646093"
 
 “局部变量”窗口显示在样式表中定义的任何变量的有关信息。 “局部变量”窗口包含三列信息：
 
-**名称**
+**Name**
 
 此列包含当前范围中的所有局部变量的名称。 节点集具有树控件，你可以向下钻取以查看其子文件夹。
 
@@ -39,7 +39,7 @@ ms.locfileid: "72646093"
 
 “局部变量”窗口还显示用于跟踪 XSLT 转换上下文的预定义上下文变量。 下表介绍 XSLT 调试程序所使用的预定义上下文变量。
 
-|“属性”|描述|
+|Name|描述|
 |-|-----------------|
 |`last()`|上下文大小。|
 |`position()`|上下文节点相对于上下文大小的位置（或索引号）。|
@@ -64,7 +64,7 @@ ms.locfileid: "72646093"
 
 “断点”窗口的操作方式应与其他 Visual Studio 调试程序相同。
 
-## <a name="watch-window"></a>监视窗口
+## <a name="watch-window"></a>观察时段
 
 “监视”窗口用于计算变量。 还可以更改变量的值。
 
@@ -100,7 +100,7 @@ ms.locfileid: "72646093"
 
 有关详细信息，请[使用 "反汇编" 窗口](../debugger/how-to-use-the-disassembly-window.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [调试 XSLT](../xml-tools/debugging-xslt.md)
 - [初探调试器](../debugger/debugger-feature-tour.md)

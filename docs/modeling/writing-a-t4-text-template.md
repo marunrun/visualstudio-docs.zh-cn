@@ -6,17 +6,17 @@ helpviewer_keywords:
 - text templates, syntax
 - text templates, guide
 - text templates, functions that generate text
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: df653dbd449429b6995c987328a401866751fd5e
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 1990377bffe0c663a70520c07bd3ab60b91f8bbd
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981253"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593481"
 ---
 # <a name="writing-a-t4-text-template"></a>编写 T4 文本模板
 文本模板包含将从其生成的文本。 例如，用于创建网页的模板将包含 "\<html > ..."以及 HTML 页的所有其他标准部分。 插入到模板中的是*控制块*，它们是程序代码的片段。 控制块提供变化值，允许文本部件是条件和重复的。
@@ -155,7 +155,7 @@ private int Square(int i)
  有关控制块的详细信息，请参阅[文本模板控制块](../modeling/text-template-control-blocks.md)。
 
 ### <a name="class-feature-blocks-can-contain-text-blocks"></a>类功能块可以包含文本块
- 可以编写生成文本的方法。 例如:
+ 可以编写生成文本的方法。 例如：
 
 ```
 List of Squares:
@@ -185,7 +185,7 @@ private void WriteSquareLine(int i)
 <#@ assembly name="System.Xml" #>
 ```
 
- 应该使用绝对路径名，或在路径名中使用标准宏名。 例如:
+ 应该使用绝对路径名，或在路径名中使用标准宏名。 例如：
 
 ```
 <#@ assembly name="$(SolutionDir)library\MyAssembly.dll" #>
@@ -238,7 +238,7 @@ private void WriteSquareLine(int i)
 
  **将文件作为可导航模型加载**。 更有效的方法是将数据作为模型读取，文本模板代码可以导航该模型。 例如，可以加载 XML 文件，然后使用 XPath 表达式对其导航。 你还可以使用[xsd.exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe)创建一组可用于读取 XML 数据的类。
 
- **在关系图或窗体中编辑模型文件。** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 提供了一种工具，使您可以将模型作为关系图或 Windows 窗体进行编辑。 这样便于与生成的应用程序的用户讨论模型。 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 还创建一组反映模型结构的强类型类。 有关详细信息，请参阅[从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)。
+ **在关系图或窗体中编辑模型文件。** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 提供了一种工具，使您可以将模型作为关系图或 Windows 窗体进行编辑。 这样便于与生成的应用程序的用户讨论模型。 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 还会创建一组反映模型结构的强类型类。 有关详细信息，请参阅[从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)。
 
 ### <a name="relative-file-paths-in-design-time-templates"></a>设计时模板中的相对文件路径
  在[设计时文本模板](../modeling/design-time-code-generation-by-using-t4-text-templates.md)中，如果要引用相对于文本模板的位置中的文件，请使用 `this.Host.ResolvePath()`。 还必须在 `hostspecific="true"` 指令中设置 `template`：

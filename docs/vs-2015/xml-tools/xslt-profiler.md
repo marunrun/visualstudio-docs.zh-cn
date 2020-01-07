@@ -9,12 +9,12 @@ caps.latest.revision: 5
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c1316602d900fb122567b5ad50edf8e7b90c79bd
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 93ae9c58e0f9a366727f8a5aac08b8d3887f2e7f
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300949"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75406734"
 ---
 # <a name="xslt-profiler"></a>XSLT 探查器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,7 +25,7 @@ XSLT 探查器是一个性能分析探查器工具，可帮助您开发和调试
 
  ![XSLT 探查器](../xml-tools/media/xsltprofilermenu.gif "XSLTProfilerMenu")
 
- XSLT 探查器最初是作为 Visual Studio 2008 的外接程序而引入的。 有关详细信息，请参阅[Visual Studio 2003 年2月社区技术预览版](https://go.microsoft.com/fwlink/?LinkId=142987)页面上的 "相关资源" 部分。
+ XSLT 探查器最初是作为 Visual Studio 2008 的外接程序而引入的。 有关详细信息，请参阅[XSLT 探查器外接](https://marketplace.visualstudio.com/items?itemName=SinanUssakli-MSFT.XSLTProfilerAddin)程序。
 
 > [!NOTE]
 > Visual Studio 2010 中的有些屏幕显示可能会与这些文档中介绍的不同，因为自 Visual Studio 2008 开始，一些可视元素已发生更改。

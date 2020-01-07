@@ -5,29 +5,29 @@ ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [text templates], connecting host to processor
 - text templates, custom directive hosts
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: d474de7da459e9639e8ec9f29f34e59267388b50
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: a27b856b9c5129f725381afa34bd134009002216
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984427"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593975"
 ---
-# <a name="walkthrough-connect-a-host-to-a-generated-directive-processor"></a>演练：将主机连接到所生成的指令处理器
+# <a name="walkthrough-connect-a-host-to-a-generated-directive-processor"></a>演练：将主机连接到生成的指令处理器
 
-您可以编写自己的宿主来处理文本模板。 在 [演练中演示了一个基本的自定义宿主：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)。 您可以扩展该主机以添加功能，如生成多个输出文件。
+您可以编写自己的宿主来处理文本模板。 [演练：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)中演示了一个基本的自定义主机。 您可以扩展该主机以添加功能，如生成多个输出文件。
 
 在本演练中，将展开自定义主机，使其支持调用指令处理器的文本模板。 定义域特定语言时，它将为域模型生成*指令处理器*。 指令处理器使用户能够更轻松地编写访问该模型的模板，从而减少了在模板中编写程序集和导入指令的需求。
 
 > [!NOTE]
-> 本演练以 [演练为基础：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)。 首先执行该演练。
+> 本演练基于[演练：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)。 首先执行该演练。
 
 本演练包含以下任务：
 
@@ -37,7 +37,7 @@ ms.locfileid: "72984427"
 
 - 用生成的指令处理器测试自定义主机。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 若要定义 DSL，必须安装以下组件：
 
@@ -49,7 +49,7 @@ ms.locfileid: "72984427"
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-此外，还必须在 [演练中创建自定义文本模板转换：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)。
+此外，还必须在[演练：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)中创建自定义文本模板转换。
 
 ## <a name="use-domain-specific-language-tools-to-generate-a-directive-processor"></a>使用特定于域的语言工具生成指令处理器
 
@@ -57,15 +57,15 @@ ms.locfileid: "72984427"
 
 1. 创建具有以下特征的域特定语言解决方案：
 
-   - 姓名:DSLMinimalTest
+   - 名称： DSLMinimalTest
 
    - 解决方案模板：最小语言
 
    - 文件扩展名：最小值
 
-   - 公司名称：Fabrikam
+   - 公司名称： Fabrikam
 
-   有关创建域特定语言解决方案的详细信息，请参阅 [如何：创建域特定语言解决方案](../modeling/how-to-create-a-domain-specific-language-solution.md)。
+   有关创建域特定语言解决方案的详细信息，请参阅[如何：创建特定于域的语言解决方案](../modeling/how-to-create-a-domain-specific-language-solution.md)。
 
 2. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
 
@@ -86,7 +86,7 @@ ms.locfileid: "72984427"
 
 ## <a name="connect-a-custom-text-template-host-to-a-directive-processor"></a>将自定义文本模板主机连接到指令处理器
 
-生成指令处理器后，可将指令处理器和在 [演练中创建的自定义文本模板主机连接起来：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)。
+生成指令处理器后，将连接在[演练：创建自定义文本模板主机](../modeling/walkthrough-creating-a-custom-text-template-host.md)中创建的指令处理器和自定义文本模板主机。
 
 1. 打开 CustomHost 解决方案。
 
@@ -96,17 +96,17 @@ ms.locfileid: "72984427"
 
 3. 添加以下引用：
 
-    - VisualStudio （web.config）
+    - Microsoft.VisualStudio.Modeling.Sdk.11.0
 
-    - VisualStudio. 11.0. 11。0
+    - Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0
 
-    - VisualStudio. TextTemplating
+    - Microsoft.VisualStudio.TextTemplating.11.0
 
-    - VisualStudio. TextTemplating。
+    - Microsoft.VisualStudio.TextTemplating.Interfaces.11.0
 
-    - VisualStudio （TextTemplating）
+    - Microsoft.VisualStudio.TextTemplating.Modeling.11.0
 
-    - VisualStudio. TextTemplating. Vshost.exe
+    - Microsoft.VisualStudio.TextTemplating.VSHost.11.0
 
 4. 在 Program.cs 或 Module1 的顶部，添加以下代码行：
 
@@ -360,6 +360,6 @@ ms.locfileid: "72984427"
     Linked from: ExampleElement1
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [演练：创建自定义文本模板主机](../modeling/walkthrough-creating-a-custom-text-template-host.md)
+- [演练：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)

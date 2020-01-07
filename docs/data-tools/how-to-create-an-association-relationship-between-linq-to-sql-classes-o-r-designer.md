@@ -3,17 +3,17 @@ title: LINQ to SQL 类之间的关系（O/R 设计器）
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 56133e65-81f3-44c3-bc28-ffdd0671a0d2
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 13443dd25719caad5002b29a33975a0dbc5850f1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: fb81cf17de86a11d2373f6a545b3efc78e65ada9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72641891"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586466"
 ---
 # <a name="how-to-create-an-association-between-linq-to-sql-classes-or-designer"></a>如何：在 LINQ to SQL 类之间创建关联（O/R 设计器）
 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 中实体类之间的关联类似于数据库中表之间的关系。 可以使用“关联编辑器”对话框创建实体类之间的关联。
@@ -29,8 +29,8 @@ ms.locfileid: "72641891"
 |Property|描述|
 |--------------|-----------------|
 |**基数**|控制关联是一对多关系还是一对一关系。|
-|**子属性**|指定是否在父类上创建一个属性，作为关联关系外键一方上的子记录的集合或对这些子记录的引用。 例如，在 `Customer` 与 `Order` 之间的关联中，如果**子属性**设置为**True**，则将在父类上创建一个名为 `Orders` 的属性。|
-|**父属性**|子类上引用关联父类的属性。 例如，在 `Customer` 和 `Order` 之间的关联中，将在 `Order` 类上创建一个名为 `Customer` 的属性，该属性引用订单的关联客户。|
+|**子属性**|指定是否在父类上创建一个属性，作为关联关系外键一方上的子记录的集合或对这些子记录的引用。 例如，在 `Customer` 与 `Order`之间的关联中，如果**子属性**设置为**True**，则将在父类上创建一个名为 `Orders` 的属性。|
+|**父属性**|子类上引用关联父类的属性。 例如，在 `Customer` 和 `Order`之间的关联中，将在 `Order` 类上创建一个名为 `Customer` 的属性，该属性引用订单的关联客户。|
 |**参与的属性**|显示关联属性，并提供一个省略号按钮 (...)，该按钮可重新打开“关联编辑器”对话框。|
 |**唯一**|指定外目标列是否具有唯一性约束。|
 
@@ -46,7 +46,7 @@ ms.locfileid: "72641891"
 
 5. 单击“确定”创建关联。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [演练：创建 LINQ to SQL 类](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)

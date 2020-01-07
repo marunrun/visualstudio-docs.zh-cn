@@ -6,21 +6,21 @@ f1_keywords:
 - TypeBrowser.UI
 - ActivityTypeResolver.UI
 ms.assetid: 864b60b6-a070-4e5c-aa5b-a25341b57ea6
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5eac3c2a45f1e220415f7512e601f4bf034c4dd7
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: a526bc9504f4f63a7a135978ade02654bbe63ffd
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189810"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597108"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>“浏览并选择 .NET 类型”对话框
 
-在 "**属性**" 窗口、对话框或设计器（如变量设计器）中，当您从数据类型列表中选择 "**浏览类型**" 时，将是 "**浏览并选择 .net 类型**" 对话框（在缩写形式中称为 "类型浏览器 "）。 在此对话框中，可以从程序集和项目的树视图中选择类型。
+在 "**属性**" 窗口、对话框或设计器（如变量设计器）中，当您从数据类型列表中选择 "**浏览类型**" 时，将是 "**浏览并选择 .net 类型**" 对话框（在缩略窗体中称为 "类型浏览器"）。 在此对话框中，可以从程序集和项目的树视图中选择类型。
 
 在很多用户方案中都使用此对话框，这些方案包括：
 
@@ -63,7 +63,7 @@ ms.locfileid: "73189810"
 
 键入更多字符以查找匹配项时，"**类型名称**" 框中的类型列表将变短。 只有其 fullyqualified 名称以您键入的字符串开头的类型或其短名称以您键入的字符串开头的类型才会显示在筛选列表中。
 
-例如:
+例如：
 
 1. 键入**操作**匹配 <xref:System.OperationCanceledException> 而不是 <xref:System.InvalidOperationException>。 若要匹配 <xref:System.InvalidOperationException>，请开始键入 System.I 或 Invalid。
 
@@ -73,6 +73,6 @@ ms.locfileid: "73189810"
 
 选择服务协定类型时，类型浏览器只显示具有 <xref:System.ServiceModel.ServiceContractAttribute> 特性的类型。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用活动设计器](control-flow-activity-designers.md)

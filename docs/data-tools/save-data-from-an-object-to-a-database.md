@@ -10,17 +10,17 @@ helpviewer_keywords:
 - data access [Visual Studio], objects
 - saving data
 ms.assetid: efd6135a-40cf-4b0d-8f8b-41a5aaea7057
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5208b7764949f6ba6d3e862c7a2102608afb7e24
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 509910730d4da095b6db622212716a8f958495d7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648212"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586258"
 ---
 # <a name="save-data-from-an-object-to-a-database"></a>将数据从对象保存到数据库
 
@@ -36,7 +36,7 @@ ms.locfileid: "72648212"
 |TableAdapter DBDirect 方法|描述|
 | - |-----------------|
 |`TableAdapter.Insert`|将新记录添加到数据库，并使您能够作为方法参数传入单独的列值。|
-|`TableAdapter.Update`|更新数据库中的现有记录。 @No__t_0 方法将原始列值和新列值作为方法参数使用。 原始值用于查找原始记录，新值用于更新该记录。<br /><br /> @No__t_0 方法还用于通过将 <xref:System.Data.DataSet>、<xref:System.Data.DataTable>、<xref:System.Data.DataRow> 或 <xref:System.Data.DataRow>s 的数组作为方法参数来协调数据集中的更改。|
+|`TableAdapter.Update`|更新数据库中的现有记录。 `Update` 方法将原始列值和新列值作为方法参数使用。 原始值用于查找原始记录，新值用于更新该记录。<br /><br /> `TableAdapter.Update` 方法还用于通过将 <xref:System.Data.DataSet>、<xref:System.Data.DataTable>、<xref:System.Data.DataRow>或 <xref:System.Data.DataRow>的数组作为方法参数来协调数据集中的更改。|
 |`TableAdapter.Delete`|基于作为方法参数传入的原始列值删除数据库中的现有记录。|
 
 ## <a name="to-save-new-records-from-an-object-to-a-database"></a>将新记录从对象保存到数据库
@@ -72,10 +72,10 @@ ms.locfileid: "72648212"
      [!code-csharp[VbRaddataSaving#25](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_3.cs)]
      [!code-vb[VbRaddataSaving#25](../data-tools/codesnippet/VisualBasic/save-data-from-an-object-to-a-database_3.vb)]
 
-## <a name="net-security"></a>.NET 安全性
+## <a name="net-security"></a>.NET 安全
 
-您必须有权在数据库中的表上执行所选的 `INSERT`、`UPDATE` 或 `DELETE`。
+您必须有权在数据库中的表上执行所选的 `INSERT`、`UPDATE`或 `DELETE`。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [将数据保存回数据库](../data-tools/save-data-back-to-the-database.md)

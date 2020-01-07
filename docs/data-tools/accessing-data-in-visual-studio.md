@@ -2,24 +2,22 @@
 title: 数据访问和工具
 ms.date: 11/04/2016
 ms.topic: conceptual
-f1_keywords:
-- "80025080"
 helpviewer_keywords:
 - data [Visual Studio]
 - data access [Visual Studio]
 - data [C#]
 - ADO.NET, data access
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 07c7c9db37a951b689e28e87a02c7f41a667685b
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: 4087541b11b240f455dc6c0109ef44c0cb8d72ad
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807046"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587090"
 ---
 # <a name="access-data-in-visual-studio"></a>在 Visual Studio 中访问数据
 
@@ -35,7 +33,7 @@ ms.locfileid: "72807046"
 
 **Microsoft Azure**
 
-- SQL 数据库
+- SQL Database
 - Azure Cosmos DB
 - 存储（blob、表、队列、文件）
 - SQL 数据仓库
@@ -67,22 +65,22 @@ ms.locfileid: "72807046"
 
 ::: moniker range="vs-2017"
 
-许多数据库供应商和第三方支持通过 NuGet 包与 Visual Studio 集成。 可以通过 Visual Studio 中的 NuGet 包管理器或 Visual Studio 中的 NuGet 包管理器来浏览 nuget.org （**Tools**  > **Nuget 包管理器** > **管理解决方案的 nuget 包**）。 其他数据库产品与 Visual Studio 集成以作为扩展。 你可以在[Visual Studio Marketplace](https://marketplace.visualstudio.com/)中浏览这些产品，或者导航到 "**工具**"  >  "**扩展和更新**"，然后在对话框的左窗格中选择 "**联机**"。 有关详细信息，请参阅[Visual Studio 的兼容数据库系统](../data-tools/installing-database-systems-tools-and-samples.md)。
+许多数据库供应商和第三方支持通过 NuGet 包与 Visual Studio 集成。 可以通过 Visual Studio 中的 NuGet 包管理器或 Visual Studio 中的 NuGet 包管理器来浏览 nuget.org （**Tools** > **Nuget 包管理器** > **管理解决方案的 nuget 包**）。 其他数据库产品与 Visual Studio 集成以作为扩展。 你可以在[Visual Studio Marketplace](https://marketplace.visualstudio.com/)中浏览这些产品，或者导航到 "**工具**" > "**扩展和更新**"，然后在对话框的左窗格中选择 "**联机**"。 有关详细信息，请参阅[Visual Studio 的兼容数据库系统](../data-tools/installing-database-systems-tools-and-samples.md)。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-许多数据库供应商和第三方支持通过 NuGet 包与 Visual Studio 集成。 可以通过 Visual Studio 中的 NuGet 包管理器或 Visual Studio 中的 NuGet 包管理器来浏览 nuget.org （**Tools**  > **Nuget 包管理器** > **管理解决方案的 nuget 包**）。 其他数据库产品与 Visual Studio 集成以作为扩展。 可以在[Visual Studio Marketplace](https://marketplace.visualstudio.com/)中浏览这些产品/服务，也可以导航到 "**扩展**"  > **管理扩展**，然后在对话框的左窗格中选择 "**联机**"。 有关详细信息，请参阅[Visual Studio 的兼容数据库系统](../data-tools/installing-database-systems-tools-and-samples.md)。
+许多数据库供应商和第三方支持通过 NuGet 包与 Visual Studio 集成。 可以通过 Visual Studio 中的 NuGet 包管理器或 Visual Studio 中的 NuGet 包管理器来浏览 nuget.org （**Tools** > **Nuget 包管理器** > **管理解决方案的 nuget 包**）。 其他数据库产品与 Visual Studio 集成以作为扩展。 可以在[Visual Studio Marketplace](https://marketplace.visualstudio.com/)中浏览这些产品/服务，也可以导航到 "**扩展**" > **管理扩展**，然后在对话框的左窗格中选择 "**联机**"。 有关详细信息，请参阅[Visual Studio 的兼容数据库系统](../data-tools/installing-database-systems-tools-and-samples.md)。
 
 ::: moniker-end
 
 > [!NOTE]
-> 2005年4月 12 2016 日结束对 SQL Server 的扩展支持。 不保证 Visual Studio 2015 和更高版本中的数据工具将继续与 SQL Server 2005 一起使用。 有关详细信息，请参阅[SQL Server 2005 的支持终止公告](https://www.microsoft.com/sql-server/sql-server-2005)。
+> 对 SQL Server 2005 的延长支持已于 2016 年 4 月 12 日结束。 不保证 Visual Studio 2015 和更高版本中的数据工具将继续与 SQL Server 2005 一起使用。 有关详细信息，请参阅[SQL Server 2005 的支持终止公告](https://www.microsoft.com/sql-server/sql-server-2005)。
 
 ## <a name="net-languages"></a>.NET 语言
 
-所有 .NET 数据访问（包括在 .NET Core 中）都基于 ADO.NET，这是一组类，用于定义用于访问任何类型数据源（关系数据源和非关系数据源）的接口。 Visual Studio 有多个工具和设计器，可与 ADO.NET 配合使用，帮助你连接到数据库、操作数据，以及向用户提供数据。 本部分中的文档介绍了如何使用这些工具。 你还可以对 ADO.NET 命令对象直接编程。 有关直接调用 ADO.NET Api 的详细信息，请参阅[ADO.NET](/dotnet/framework/data/adonet/index)。
+所有.NET 数据访问，包括在.NET Core 中都基于 ADO.NET 中，为访问任何类型的数据源、 关系和非关系定义一个接口的一组类。 Visual Studio 有多个工具和设计器，可与 ADO.NET 配合使用，帮助你连接到数据库、操作数据，以及向用户提供数据。 本部分中的文档介绍了如何使用这些工具。 你还可以对 ADO.NET 命令对象直接编程。 有关直接调用 ADO.NET Api 的详细信息，请参阅[ADO.NET](/dotnet/framework/data/adonet/index)。
 
 有关与 ASP.NET 相关的数据访问文档，请参阅使用 ASP.NET 站点上的[数据](https://www.asp.net/web-forms/overview/presenting-and-managing-data)。 有关将实体框架与 ASP.NET MVC 配合使用的教程，请参阅使用[mvc 5 Code First 实体框架6入门](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application)。
 
@@ -106,7 +104,7 @@ ms.locfileid: "72807046"
 
 [数据集](../data-tools/dataset-tools-in-visual-studio.md)最早的三个建模技术。 它主要设计用于快速开发 "窗体超过数据" 应用程序，在这些应用程序中，您不会处理大量数据或执行复杂的查询或转换。 DataSet 对象包含在逻辑上类似于 SQL 数据库对象的 DataTable 和 DataRow 对象比 .NET 对象多很多。 对于基于 SQL 数据源的相对简单的应用程序，数据集可能仍是一个不错的选择。
 
-不需要使用其中的任何一种技术。 在某些情况下，尤其是在性能至关重要的情况下，你只需使用 DataReader 对象从数据库中读取数据，并将所需的值复制到集合对象（如 List \<T > 中。
+不需要使用其中的任何一种技术。 在某些情况下，尤其是在性能至关重要的情况下，你只需使用 DataReader 对象从数据库中读取数据，并将所需的值复制到集合对象（如 List\<T > 中）。
 
 ## <a name="native-c"></a>本机 C++
 
@@ -116,7 +114,7 @@ C++使用 rest 服务的程序可以使用[ C++ rest SDK](https://github.com/Mic
 
 C++与 Microsoft Azure 存储一起使用的程序可以使用[Microsoft Azure 存储客户端](https://www.nuget.org/packages/Microsoft.Azure.Storage.CPP)。
 
-数据建模 &mdash;Visual Studio 不提供的C++ORM 层。 [ODB](https://www.codesynthesis.com/products/odb/)是适用于的C++常用开源 ORM。
+数据建模&mdash;Visual Studio 不提供的C++ORM 层。 [ODB](https://www.codesynthesis.com/products/odb/)是适用于的C++常用开源 ORM。
 
 若要了解有关从应用连接到C++数据库的详细信息，请参阅[Visual C++Studio data tools for ](../data-tools/visual-studio-data-tools-for-cpp.md)。 有关旧的视觉C++数据访问技术的详细信息，请参阅[数据访问](/cpp/data/data-access-in-cpp)。
 
@@ -134,24 +132,24 @@ C++与 Microsoft Azure 存储一起使用的程序可以使用[Microsoft Azure �
 
 ## <a name="related-topics"></a>相关主题
 
-[MICROSOFT AI platform](https://azure.microsoft.com/overview/ai-platform/?v=17.42w) &mdash;Provides microsoft 智能云的简介，其中包括 Cortana Analytics Suite 和对物联网的支持。
+[MICROSOFT AI platform](https://azure.microsoft.com/overview/ai-platform/?v=17.42w)&mdash;提供 microsoft 智能云的简介，其中包括 Cortana Analytics Suite 和对物联网的支持。
 
-[Microsoft Azure 存储](/azure/storage/)&mdash;Describes azure 存储，以及如何使用 azure blob、表、队列和文件创建应用程序。
+[Microsoft Azure 存储](/azure/storage/)&mdash;介绍 azure 存储，以及如何使用 azure blob、表、队列和文件创建应用程序。
 
-[AZURE Sql database](/azure/sql-database/) &mdash;Describes 如何连接到 Azure sql 数据库（一种关系数据库即服务）。
+[AZURE Sql database](/azure/sql-database/)&mdash;介绍了如何连接到 Azure sql 数据库（一种关系数据库即服务）。
 
-[SQL Server Data Tools](/sql/ssdt/download-sql-server-data-tools-ssdt) &mdash;Describes 工具，可简化数据连接的应用程序和数据库的设计、探索、测试和部署。
+[SQL Server Data Tools](/sql/ssdt/download-sql-server-data-tools-ssdt)&mdash;介绍了简化数据连接的应用程序和数据库的设计、探索、测试和部署的工具。
 
-[ADO.NET](/dotnet/framework/data/adonet/index) &mdash;Describes ADO.NET 体系结构，以及如何使用 ADO.NET 类管理应用程序数据以及与数据源和 XML 进行交互。
+[ADO.NET](/dotnet/framework/data/adonet/index)&mdash;介绍 ADO.NET 体系结构，以及如何使用 ADO.NET 类管理应用程序数据以及与数据源和 XML 进行交互。
 
-[ADO.NET 实体框架](/ef/ef6/)&mdash;Describes 如何创建数据应用程序，使开发人员可以针对概念模型而不是直接针对关系数据库进行编程。
+[ADO.NET 实体框架](/ef/ef6/)&mdash;介绍如何创建允许开发人员针对概念模型而不是直接针对关系数据库编程的数据应用程序。
 
 [WCF 数据服务 4.5](/dotnet/framework/data/wcf/index)&mdash;介绍了如何使用 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] 在实现[Open Data Protocol （OData）](https://www.odata.org/)的 web 或 intranet 上部署数据服务。
 
-[Office 解决方案中的数据](../vsto/data-in-office-solutions.md)&mdash;Contains 链接到说明如何在 Office 解决方案中工作的主题的链接。 这包括有关面向架构的编程、数据缓存和服务器端数据访问的信息。
+[Office 解决方案中的数据](../vsto/data-in-office-solutions.md)&mdash;包含指向一些主题的链接，这些主题说明了如何在 Office 解决方案中使用数据。 这包括有关面向架构的编程、数据缓存和服务器端数据访问的信息。
 
-[LINQ （语言集成查询）](/dotnet/csharp/linq/) &mdash;Describes C#和 Visual Basic 中内置的查询功能，以及用于查询关系数据库、XML 文档、数据集和内存中集合的通用模型。
+[LINQ （语言集成查询）](/dotnet/csharp/linq/)&mdash;介绍了内置于C#和 Visual Basic 的查询功能，以及用于查询关系数据库、XML 文档、数据集和内存中集合的通用模型。
 
-[Visual Studio 中的 Xml 工具](../xml-tools/xml-tools-in-visual-studio.md)&mdash;Discusses 处理 xml 数据、调试 XSLT、.net XML 功能和 xml 查询的体系结构。
+[Visual Studio 中的 Xml 工具](../xml-tools/xml-tools-in-visual-studio.md)&mdash;讨论了如何使用 xml 数据、调试 XSLT、.net XML 功能和 xml 查询的体系结构。
 
-[Xml 文档和数据](/dotnet/standard/data/xml/index)&mdash;Provides 概述了一组全面的集成类，这些类可用于 .net 中的 XML 文档和数据。
+[Xml 文档和数据](/dotnet/standard/data/xml/index)&mdash;提供了一组全面的集成类，这些类可用于 .net 中的 XML 文档和数据。

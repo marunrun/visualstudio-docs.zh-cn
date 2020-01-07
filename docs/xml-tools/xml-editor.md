@@ -2,17 +2,17 @@
 title: XML 编辑器
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c7898ff0a592ff8aaf6c6a44672024e13e2f0221
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 10741daffff2213e8ababde2395663e78241fdc4
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72608348"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592394"
 ---
 # <a name="xml-editor"></a>XML 编辑器
 
@@ -54,7 +54,7 @@ Visual Studio 中的 XML 编辑器基于文本编辑器，并提供对 XML 语�
 
 [XSLT 层次结构工具](../xml-tools/walkthrough-using-xslt-hierarchy.md)允许您在包含的样式表和/或内置模板规则中添加断点。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 编辑器选项-格式设置](../ide/reference/options-text-editor-xml-formatting.md)
 - [XML 编辑器选项-杂项](../ide/reference/options-text-editor-xml-miscellaneous.md)

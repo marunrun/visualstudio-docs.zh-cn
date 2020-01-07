@@ -9,17 +9,17 @@ helpviewer_keywords:
 - SQLEXPRESS
 - upgrading SQLExpress to SQLExpress
 - upgrading to LocalDB
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: e0196c582fbe673d73c7aeb89280d05e11a071a5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 195cab863554bc60478df4e80319eab80124140a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72639575"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586089"
 ---
 # <a name="upgrade-mdf-files"></a>升级 .mdf 文件
 
@@ -101,7 +101,7 @@ ms.locfileid: "72639575"
 
 ### <a name="to-make-sql-server-express-the-default-database-engine"></a>使 SQL Server Express 默认的数据库引擎
 
-1. 在菜单栏上，选择 "**工具**"  > **选项**"。
+1. 在菜单栏上，选择“工具” > “选项”。
 
 2. 在 "**选项**" 对话框中，展开 "**数据库工具**" 选项，然后选择 "**数据连接**"。
 
@@ -111,6 +111,6 @@ ms.locfileid: "72639575"
 
     SQL Server Express 将是应用程序的默认数据库引擎。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中访问数据](accessing-data-in-visual-studio.md)

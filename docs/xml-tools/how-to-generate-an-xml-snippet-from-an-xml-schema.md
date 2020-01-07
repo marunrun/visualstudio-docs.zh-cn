@@ -3,17 +3,17 @@ title: 如何：从 XML 架构生成 XML 代码段
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 2c128d2a-aaa6-4814-aa95-e07056afe338
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae55428b61053fbd255446833cb20aec3da79b6e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ec320018cc64e774751c312ca4cdeb94a6d53a9c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645380"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592680"
 ---
 # <a name="how-to-generate-an-xml-snippet-from-an-xml-schema"></a>如何：从 XML 架构生成 XML 代码段
 
@@ -60,13 +60,13 @@ ms.locfileid: "72645380"
 
      将显示 " **XSD 架构**" 对话框。
 
-4. 单击 **添加**。
+4. 单击“添加”。
 
      随即显示 "**打开 XSD 架构**" 对话框。
 
 5. 选择该架构文件并单击 "**打开**"。
 
-6. 单击“确定”。
+6. 单击" **确定**"。
 
      XML 架构现在与 XML 文档关联。
 
@@ -80,7 +80,7 @@ ms.locfileid: "72645380"
 
      **!DOCTYPE**来添加文档类型。
 
-     **?** 添加处理指令。
+     **?** ，用于添加处理指令。
 
      **Contact**来添加根元素。
 
@@ -154,7 +154,7 @@ ms.locfileid: "72645380"
 </Contact>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 代码段](../xml-tools/xml-snippets.md)
 - [如何：使用 XML 代码段](../xml-tools/how-to-use-xml-snippets.md)

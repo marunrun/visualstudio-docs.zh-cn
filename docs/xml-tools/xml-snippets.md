@@ -3,17 +3,17 @@ title: XML 代码片断
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 348dbf64-3f09-4fff-b47a-a7ecdf3221cc
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c261893b50a217d888300ca01f3bc190bc065c94
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a2f2bcdd0c28d7b4b99c92d3346b32ed34aa92a0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658761"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592316"
 ---
 # <a name="xml-snippets"></a>XML 代码片断
 
@@ -49,7 +49,7 @@ XML 编辑器包含许多涵盖一些常见任务的代码段。 这样，您更
 
 除了默认情况下随 Visual Studio 提供的代码段之外，你还可以创建并使用自己的 XML 代码段。 有关详细信息，请参阅[如何：创建 XML 代码段](../xml-tools/how-to-create-xml-snippets.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的代码片段](../ide/code-snippets.md)
 - [XML 编辑器](../xml-tools/xml-editor.md)

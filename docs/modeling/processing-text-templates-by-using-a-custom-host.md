@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - text templates, in application or VS extension
 - text templates, custom directive hosts
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 171eb8810d74df5c1058ba055e598d04f9164633
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0f7ecd6508df780f570d10b3d615094fae15209d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658288"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591679"
 ---
 # <a name="process-text-templates-by-using-a-custom-host"></a>使用自定义主机处理文本模板
 
@@ -44,7 +44,7 @@ string output = engine.ProcessTemplate(templateString, host);
 
  应用程序必须找到并提供模板，并且必须处理输出。
 
- 在 `host` 参数中，必须提供实现[ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))的类。 这是由引擎回调的。
+ 在`host`参数中, 必须提供实现 [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)) 的类。 这是由引擎回调的。
 
  宿主必须能记录错误、解析对程序集和包含文件的引用、提供可在其中执行模板的应用程序域并为每条指令调用相应的处理器。
 
@@ -53,7 +53,7 @@ string output = engine.ProcessTemplate(templateString, host);
 ## <a name="in-this-section"></a>本节内容
  [演练：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)说明如何创建自定义文本模板宿主，使文本模板功能在 Visual Studio 外部可用。
 
-## <a name="reference"></a>参考
+## <a name="reference"></a>引用
  [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))
 
 ## <a name="related-sections"></a>相关章节

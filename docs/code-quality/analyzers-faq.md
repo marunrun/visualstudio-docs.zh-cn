@@ -4,17 +4,17 @@ ms.date: 03/11/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - analyzers, faq
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fdc30d0299e83423474c673b9d32e019885c2d52
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 680d52ff04553d399b6abeb53919d8aafd4fa792
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72603880"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75573243"
 ---
 # <a name="code-analysis-faq"></a>代码分析常见问题解答
 
@@ -47,7 +47,7 @@ ms.locfileid: "72603880"
 
 **问**：在持续集成（CI）版本中，基于 .NET Compiler Platform 的代码分析是否有效？
 
-**答**：是。 对于从 NuGet 包安装的分析器，将[在生成时强制执行](roslyn-analyzers-overview.md#build-errors)这些规则，包括在 CI 生成过程中。 CI 生成中使用的分析器遵循规则集和 EditorConfig 文件中的规则配置。 目前，Visual Studio 中内置的代码分析器不作为 NuGet 包提供，因此在 CI 生成中无法强制执行这些规则。
+**答**: 可以。 对于从 NuGet 包安装的分析器，将[在生成时强制执行](roslyn-analyzers-overview.md#build-errors)这些规则，包括在 CI 生成过程中。 CI 生成中使用的分析器遵循规则集和 EditorConfig 文件中的规则配置。 目前，Visual Studio 中内置的代码分析器不作为 NuGet 包提供，因此在 CI 生成中无法强制执行这些规则。
 
 ## <a name="ide-analyzers-versus-stylecop"></a>IDE 分析器与 StyleCop
 
@@ -63,7 +63,7 @@ ms.locfileid: "72603880"
 
 **答**：基于 .NET Compiler Platform 的代码分析实时分析源代码，并在编译期间分析二进制文件。 有关详细信息，请参阅[基于 .NET Compiler Platform 的分析与传统分析](roslyn-analyzers-overview.md#source-code-analysis-versus-legacy-analysis)和[FxCop 分析器常见问题解答](fxcop-analyzers-faq.md)。
 
-## <a name="treat-warnings-as-errors"></a>将警告视为错误
+## <a name="treat-warnings-as-errors"></a>视警告为错误
 
 **问**：我的项目使用 "生成" 选项将警告视为错误。 从旧分析迁移到源代码分析后，所有代码分析警告现在都将显示为错误。 如何防止出现这种情况？
 
@@ -88,7 +88,7 @@ ms.locfileid: "72603880"
      ...
      ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析器概述](roslyn-analyzers-overview.md)
 - [EditorConfig 的 .NET 编码约定设置](../ide/editorconfig-code-style-settings-reference.md)
