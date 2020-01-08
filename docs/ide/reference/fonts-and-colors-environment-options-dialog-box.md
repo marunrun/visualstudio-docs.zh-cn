@@ -20,17 +20,17 @@ helpviewer_keywords:
 - defaults, colors
 - printers, customizing
 ms.assetid: c767d302-51ed-47a8-a527-c07bce2aa485
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 527c01629fbff856748a50d393ca5df2a413d056
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9d5c9edd47e3db43735d3c6e8f6a4ec1a881214e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667024"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595613"
 ---
 # <a name="fonts-and-colors-environment-options-dialog-box"></a>“选项”对话框 ->“环境”->“字体和颜色”
 
@@ -99,7 +99,7 @@ ms.locfileid: "72667024"
 
 一些显示项包括：
 
-|显示项|说明|
+|显示项|描述|
 |------------------|-----------------|
 |纯文本 |编辑器中的文本。|
 |选定的文本 |当编辑器具有焦点时，当前选定内容中包含的文本。|
@@ -132,7 +132,7 @@ ms.locfileid: "72667024"
 |覆盖率未涉及的区域 |单元测试尚未覆盖的代码。|
 |覆盖率部分涉及的区域 |单元测试已部分覆盖的代码。|
 |覆盖率涉及的区域 |已被单元测试完全覆盖的代码。|
-|CSS 注释 |级联样式表中的注释。 例如:<br /><br /> /* comment \*/|
+|CSS 注释 |级联样式表中的注释。 例如：<br /><br /> /* comment \*/|
 |CSS 关键字 |级联样式表中的关键字。|
 |CSS 属性名 |属性的名称，如 Background。|
 |CSS 属性值 |分配给属性的值，如 blue。|
@@ -168,7 +168,7 @@ ms.locfileid: "72667024"
 |SQL DML 标记 |应用于 Transact-SQL 编辑器。 默认情况下，此编辑器中的 DML 语句以蓝色的边界框进行标记。|
 |陈旧的代码 |等待更新的取代代码。 在某些情况下，“编辑并继续”无法立即应用代码更改，而是在稍后继续调试时应用这些更改。 当编辑某个必须调用当前所执行的函数的函数，或将超过 64 个字节的新变量添加到等待调用堆栈的某个函数中时，会发生这种情况。 发生这种情况时，调试器将显示一个“陈旧代码警告”对话框，而取代代码继续执行，直到上述函数完成并被重新调用为止。 “编辑并继续”将在此时应用代码更改。|
 |**字符串**|字符串。|
-|字符串(C# @ 逐字字符串) |在 C# 中逐字解释的字符串。 例如:<br /><br /> @"x"|
+|字符串(C# @ 逐字字符串) |在 C# 中逐字解释的字符串。 例如：<br /><br /> @"x"|
 |语法错误 |分析错误。|
 |任务列表快捷方式 |如果将“任务列表”快捷方式添加到某一行，并禁用指示器边距，则将突出显示该行  。|
 |跟踪点(禁用) |未使用。|

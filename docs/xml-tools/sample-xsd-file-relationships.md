@@ -3,17 +3,17 @@ title: 示例 XSD 文件：关系
 ms.date: 11/04/2016
 ms.topic: sample
 ms.assetid: 60126510-b7dd-4cb4-92d3-9883590b92f2
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d5342bece15fff25ba970270456aed96c5dc7f2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5a52d152a78ee585cc2724d8504feff1e72558cf
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72601753"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592550"
 ---
 # <a name="sample-xsd-file-relationships"></a>示例 XSD 文件：关系
 

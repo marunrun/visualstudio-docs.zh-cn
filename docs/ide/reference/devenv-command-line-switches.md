@@ -8,17 +8,17 @@ helpviewer_keywords:
 - command line [Visual Studio], switches
 - Devenv
 ms.assetid: e12bc6ed-74fd-4bea-8d7c-89b99c20bad8
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cf7ebda1e661801995c17a81e658b4f638c2f8a1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b3ed82bd8ba3845541d7dce628f99fb78b62ab9f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661649"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595704"
 ---
 # <a name="devenv-command-line-switches"></a>Devenv 命令行开关
 
@@ -62,7 +62,7 @@ ms.locfileid: "72661649"
 
 下面各个命令行开关显示 IDE，并执行所描述的任务。
 
-|命令行开关|说明|
+|命令行开关|描述|
 | - |-----------------|
 |[/Command](command-devenv-exe.md)|启动 IDE 并执行指定的命令。<br /><br /> `devenv /command "nav https://docs.microsoft.com/"`|
 |[/DebugExe](debugexe-devenv-exe.md)|在调试器的控制下加载 C++ 可执行文件。 此开关不适用于 Visual Basic 或 C# 可执行文件。 有关详细信息，请参阅[自动启动调试器中的进程](../../debugger/debug-multiple-processes.md#BKMK_Automatically_start_an_process_in_the_debugger)。<br /><br /> `devenv /debugexe mysln.exe`|
@@ -79,7 +79,7 @@ ms.locfileid: "72661649"
 
 下面各个命令行开关不显示 IDE。
 
-|命令行开关|说明|
+|命令行开关|描述|
 | - |-----------------|
 |[/?](q-devenv-exe.md)|在“命令提示符”  窗口中显示 `devenv` 开关的相关帮助信息。<br /><br /> 此开关不带参数。|
 |[build](build-devenv-exe.md)|根据指定解决方案的配置，生成指定的解决方案或项目。<br /><br /> `devenv mysln.sln /build`|

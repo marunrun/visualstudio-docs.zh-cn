@@ -10,15 +10,15 @@ helpviewer_keywords:
 - load tests, removing results
 - load test results, deleting
 ms.assetid: c2afe36b-d061-4f0e-9580-c18569ec08f9
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 3604c8bee778334d4f1355f6b3ce312c9c8d0efc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 26dc9750a2bf2eaf5d0ee5dd3d08485c458bb74a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653553"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589053"
 ---
 # <a name="how-to-delete-load-test-results-from-a-repository"></a>如何：从存储库删除负载测试结果
 
@@ -38,7 +38,7 @@ ms.locfileid: "72653553"
 
 3. 在  “请输入要用来查找负载测试结果的控制器名称”中选择一个控制器。 选择  “\<本地 - 无控制器>”以访问在本地存储的结果。
 
-4. 在“显示以下负载测试的结果”中，选择要查看其结果的负载测试  。 选择“\<显示所有测试的结果>”以查看所有测试的所有结果  。
+4. 在“显示以下负载测试的结果”中，选择要查看其结果的负载测试。  选择“\<显示所有测试的结果>”以查看所有测试的所有结果  。
 
      如果存在负载测试结果，它们将出现在“负载测试结果”列表中  。 其中包括“时间”、“持续时间”、“用户”、“结果”、“测试”和“说明”列       。 “测试”列包含测试的名称，“说明”列包含运行测试之前添加的可选说明   。 “说明”列显示在“分析注释”中为此测试结果输入的简短说明   。
 

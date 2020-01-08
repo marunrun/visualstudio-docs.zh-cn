@@ -11,17 +11,17 @@ helpviewer_keywords:
 - command aliases
 - alias command
 ms.assetid: bdf857df-b5d5-450f-8c10-a6fd4dccc130
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fdcc816510642c7800b6fbeacfa3fcdeff5e0b3
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 031f1a4bab1acee3f3d0999b17c0b607f7808df9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748797"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596900"
 ---
 # <a name="alias-command"></a>“别名”命令
 为完整命令、完整命令和参数或另一个别名创建新别名。

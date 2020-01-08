@@ -11,17 +11,17 @@ helpviewer_keywords:
 - .targets files
 - MSBuild, .targets files
 ms.assetid: f6d98eb4-d2fa-49b7-8e3c-bae1ca3cf596
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5dc3964524536b1d0452462512e5847311e8bfeb
-ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
+ms.openlocfilehash: 4dc5df9c4eba4195400b6a41fa50a5c88257d70e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983822"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75566548"
 ---
 # <a name="msbuild-targets-files"></a>MSBuild .targets 文件
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 包括多个 .targets 文件，文件内容包含常见方案的项、属性、目标和任务  。 这些文件将自动导入到大多数 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 项目文件中，以便简化维护，增强可读性。
@@ -35,7 +35,7 @@ ms.locfileid: "73983822"
 
 ## <a name="common-targets-files"></a>公用 .targets 文件
 
-| .targets 文件  | 说明 |
+| .targets 文件  | 描述 |
 |---------------------------------| - |
 | *Microsoft.Common.targets* | 定义 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 和 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 项目标准生成过程中的步骤。<br /><br /> 由 Microsoft.CSharp.targets 和 Microsoft.VisualBasic.targets 文件导入，其中包括以下语句：`<Import Project="Microsoft.Common.targets" />`   |
 | *Microsoft.CSharp.targets* | 定义 Visual C# 项目标准生成过程中的步骤。<br /><br /> 由 Visual C# 项目文件 (.csproj) 导入，其中包括以下语句：`<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`  |

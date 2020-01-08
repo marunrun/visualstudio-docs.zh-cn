@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Project Designer, Debug page
 - Debug page in Project Designer
 ms.assetid: ef11eae9-df96-4e20-aabd-2678ba317140
-author: mikejo5000
-ms.author: mikejo
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a1f54485a4dd47b0aec4401f6cdfb39072e9f8cf
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: a2c3e7813e5e07a0fbb8f4ebf5838c883faa0fb8
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461411"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595717"
 ---
 # <a name="debug-page-project-designer"></a>“项目设计器”->“调试”页
 

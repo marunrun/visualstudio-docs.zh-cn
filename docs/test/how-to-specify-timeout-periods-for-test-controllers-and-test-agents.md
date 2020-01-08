@@ -8,15 +8,15 @@ helpviewer_keywords:
 - controllers, configuring
 - controllers, timeouts
 ms.assetid: 777d0db5-0073-458a-a2a3-58b1c1f24c60
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 2f4e82261b9b36ced471dfa3e93be085e22c4d64
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 64ce566369f2c60a52e9026e8f92fc30836d523c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653326"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594755"
 ---
 # <a name="how-to-specify-timeout-periods-for-test-controllers-and-test-agents"></a>如何：为测试控制器和测试代理指定超时周期
 
@@ -28,7 +28,7 @@ ms.locfileid: "72653326"
 
 - 测试控制器：*QTController.exe.config*
 
-    |项名称|说明|值|
+    |项名称|描述|“值”|
     |-|-----------------|-|
     |AgentConnectionTimeoutInSeconds|认为连接丢失前等待代理 ping 请求的秒数。|“n”秒。|
     |AgentSyncTimeoutInSeconds|开始同步测试运行时，中止运行前等待所有代理同步的秒数。|“n”秒。|
@@ -37,7 +37,7 @@ ms.locfileid: "72653326"
 
 - 测试代理：*QTAgentService.exe.config*
 
-    |项名称|说明|值|
+    |项名称|描述|“值”|
     |-|-----------------|-|
     |ControllerConnectionPeriodInSeconds|连接控制器尝试之间的秒数。|“n”秒。 默认：“30”（三十秒）。|
     |RemotingTimeoutSeconds|远程处理调用可以持续的最长时间（以秒为单位）。|“n”秒。 默认：“600”（10 分钟）。|
@@ -68,7 +68,7 @@ ms.locfileid: "72653326"
     <add key="AgentConnectionTimeoutInSeconds" value="180"/>
     ```
 
-    -或-
+    \- 或 -
 
     添加其他键并指定超时值。 例如，可以在 `AgentInitializeTimeout` 节中添加 `<appSettings>` 键并指定五分钟的值：
 
@@ -102,7 +102,7 @@ ms.locfileid: "72653326"
     <add key="ControllerConnectionPeriodInSeconds" value="60"/>
     ```
 
-    -或-
+    \- 或 -
 
     添加其他键并指定超时值。 例如，可以在 `RemotingTimeoutSeconds` 节中添加 `<appSettings>` 键并指定十五分钟的值：
 

@@ -5,17 +5,17 @@ ms.topic: conceptual
 f1_keywords:
 - vs.graphics.designer.imageeditor
 - vs.graphics.imageeditor
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f2430dddb4fe7de0d050ce26fc94e54c13a7779
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: fd7d9aed75876b47a6574d46b226f5baec336883
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72635309"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589313"
 ---
 # <a name="image-editor"></a>图像编辑器
 
@@ -111,7 +111,7 @@ Truevision Graphics Adapter (TGA) 图像格式（也称为 Targa）。 一种使
 
 下表描述了“图像编辑器模式”工具栏上的项目，按其从左至右的显示顺序依次列出  ：
 
-|工具栏项|说明|
+|工具栏项|描述|
 |------------------|-----------------|
 |**选择**|可选择图像的矩形区域。 选择区域后，可执行剪切、复制、移动、缩放、旋转、翻转或删除操作。 若有可用的选择区域，绘图工具仅影响所选区域。|
 |**不规则选择**|可选择图像的不规则区域。 选择区域后，可执行剪切、复制、移动、缩放、旋转、翻转或删除操作。 若有可用的选择区域，绘图工具仅影响所选区域。|
@@ -135,7 +135,7 @@ Truevision Graphics Adapter (TGA) 图像格式（也称为 Targa）。 一种使
 
 下表描述了“图像编辑器”工具栏上的项目，按其从上到下的显示顺序依次列出  ：
 
-|工具栏项|说明|
+|工具栏项|描述|
 |------------------|-----------------|
 |**铅笔**|使用处于活动状态的颜色选择绘制锯齿笔划。 可在“属性”  窗口中设置笔划颜色和粗细。|
 |**画笔**|使用处于活动状态的颜色选择绘制抗锯齿笔划。 可在“属性”  窗口中设置笔划颜色和粗细。|
@@ -158,7 +158,7 @@ DirectDraw Surface (.dds) 等部分图像格式支持透明度效果  。 使用
 
 下表描述了不同类型的工具如何控制透明度的应用方式：
 
-|工具|说明|
+|工具|描述|
 |----------|-----------------|
 |**铅笔**、**画笔**、**喷枪**、**线**、**矩形**、**圆角矩形**、**椭圆形**、**文本**|若要将活动颜色选择与图像混合，在“属性”  窗口中，展开“通道”  属性组，选中“Alpha”  通道上的“绘制”  复选框，然后正常绘制即可。<br /><br /> 若要使用活动颜色选择进行绘制并保留图像的 Alpha 值，可取消选中“Alpha”  通道的“绘制”  复选框，然后正常绘制即可。|
 |**填充**|若要将活动颜色选择与图像混合，只需选择要填充的区域即可。<br /><br /> 若要使用活动颜色选择（包括 alpha 通道的值）来覆盖图像，请按住 Shift，然后选择要填充的区域  。|
@@ -169,7 +169,7 @@ DirectDraw Surface (.dds) 等部分图像格式支持透明度效果  。 使用
 
 下表对图像属性进行了描述：
 
-|属性|说明|
+|Property|描述|
 |--------------|-----------------|
 |宽度|图像的宽度。|
 |高度|图像的高度。|
@@ -214,7 +214,7 @@ DirectDraw Surface (.dds) 等部分图像格式支持透明度效果  。 使用
 
 下表描述了修改键的有效组合：
 
-|Ctrl|移位|Alt|说明|
+|Ctrl|移位|Alt|描述|
 |----------|-----------|---------|-----------------|
 ||||调整所选区域内容的大小。|
 ||**Shift**||按比例调整所选区域内容的大小。|
@@ -286,7 +286,7 @@ DirectDraw Surface (.dds) 等部分图像格式支持透明度效果  。 使用
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[处理游戏和应用的三维资产](../designers/working-with-3-d-assets-for-games-and-apps.md)|概述 Visual Studio 中可用于处理图形资产（例如纹理和图像、三维模型和着色器效果）的工具。|
 |[模型编辑器](../designers/model-editor.md)|描述如何使用 Visual Studio 模型编辑器处理三维模型。|

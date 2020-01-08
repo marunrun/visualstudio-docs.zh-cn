@@ -7,17 +7,17 @@ helpviewer_keywords:
 - MSBuild, specifying the defalut target
 - MSBuild, DefaultTargets attribute
 ms.assetid: a580ba5b-2919-42d2-ae38-1af991e0205a
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a567ca32a78eb6a78aad3702a68a6e08ed122db8
-ms.sourcegitcommit: b04c603ce73b993d042ebdf7f3722cf4fe2ef7f4
+ms.openlocfilehash: 75bcb41bb2df2afcb6e71b0fdaf58d0d7429e974
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74316508"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75574621"
 ---
 # <a name="how-to-specify-which-target-to-build-first"></a>如何：指定首先生成的目标
 项目文件可以包含一个或多个用于定义如何生成项目的 `Target` 元素。 [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) 引擎生成它找到的第一个项目以及所有依赖项，除非项目文件包含 `DefaultTargets` 属性、`InitialTargets` 属性，或目标是在命令行中使用 -target  开关进行指定。
@@ -27,7 +27,7 @@ ms.locfileid: "74316508"
 
 #### <a name="to-specify-one-initial-target"></a>指定一个初始目标
 
-- 在 `Project` 元素的 `InitialTargets` 属性中指定默认目标。 例如:
+- 在 `Project` 元素的 `InitialTargets` 属性中指定默认目标。 例如：
 
    `<Project InitialTargets="Clean">`
 
@@ -44,7 +44,7 @@ ms.locfileid: "74316508"
 
 #### <a name="to-specify-one-default-target"></a>指定一个默认目标
 
-- 在 `Project` 元素的 `DefaultTargets` 属性中指定默认目标。 例如:
+- 在 `Project` 元素的 `DefaultTargets` 属性中指定默认目标。 例如：
 
    `<Project DefaultTargets="Compile">`
 
@@ -61,13 +61,13 @@ ms.locfileid: "74316508"
 
 #### <a name="to-use-a-target-other-than-the-default-target-first"></a>首先使用非默认目标的目标
 
-- 使用 -target  命令行开关将目标指定为第一个目标。 例如:
+- 使用 -target  命令行开关将目标指定为第一个目标。 例如：
 
      `msbuild file.proj -target:Clean`
 
 #### <a name="to-use-several-targets-other-than-the-default-targets-first"></a>首先使用非默认目标的多个目标
 
-- 使用 -target  命令行开关列出目标（由分号或逗号分隔）。 例如:
+- 使用 -target  命令行开关列出目标（由分号或逗号分隔）。 例如：
 
      `msbuild <file name>.proj -t:Clean;Compile`
 

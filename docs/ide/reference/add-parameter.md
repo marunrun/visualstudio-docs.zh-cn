@@ -2,17 +2,17 @@
 title: “向方法添加参数”快速操作
 ms.date: 09/28/2018
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d1edc9d38ff4476a9fe76886676bfce1c80a61db
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6720421fd5188688214665d85de682542b1c1357
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658806"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595860"
 ---
 # <a name="add-a-parameter-to-a-method-using-a-quick-action"></a>使用快速操作向方法添加参数
 

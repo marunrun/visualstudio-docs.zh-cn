@@ -14,17 +14,17 @@ helpviewer_keywords:
 - VCMessage task (MSBuild (C++))
 - MSBuild (C++), VCMessage task
 ms.assetid: 956675fd-05dc-40b4-856f-616145103498
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: be4f963a5944882f14118be54e498fd4712c2e46
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 66b1bf1eb222d70c18bfb94c65dddd2903864c68
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747187"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591107"
 ---
 # <a name="vcmessage-task"></a>VCMessage 任务
 记录生成期间的警告消息和错误消息。
@@ -35,7 +35,7 @@ ms.locfileid: "72747187"
 ## <a name="parameters"></a>参数
  下表描述了 VCMessage 任务的参数  。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |**参数**|可选 **String** 参数。<br /><br /> 要显示的消息列表（以分号分隔）。|
 |**代码**|必需的 **String** 参数。<br /><br /> 限定消息的错误号。|

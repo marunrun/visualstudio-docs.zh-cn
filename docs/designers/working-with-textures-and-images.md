@@ -3,17 +3,17 @@ title: 使用纹理和图像
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b9fbc8fa-66d1-4055-8460-24d8b8fbe43e
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d59b7c2c52cc0fe230a6e9c5c7c89db56d065aff
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 110cbbb01f5b86d462a9a5f196735fd4d477fb10
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72633704"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589859"
 ---
 # <a name="work-with-textures-and-images"></a>使用纹理和图像
 
@@ -50,7 +50,7 @@ ms.locfileid: "72633704"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[图像编辑器](../designers/image-editor.md)|介绍如何使用图像编辑器处理纹理和图像。|
 |[图像编辑器示例](../designers/how-to-create-a-basic-texture.md)|提供演示如何使用图像编辑器执行常见图像处理任务的主题的链接。|

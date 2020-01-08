@@ -12,17 +12,17 @@ helpviewer_keywords:
 - multitargeting
 - .NET Framework Client Profile
 ms.assetid: 830e3e45-9a93-4279-a249-75b84599aefb
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 36401e2ac002a74cdab6e9c19373354f4eb6fb1e
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 1c384f7e2bdd22f7a68140c90aa172d1efc9aca6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189424"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594911"
 ---
 # <a name="troubleshoot-net-framework-targeting-errors"></a>.NET Framework 目标错误疑难解答
 本主题介绍可能由引用问题导致的 MSBuild 错误以及解决这些错误的方法。

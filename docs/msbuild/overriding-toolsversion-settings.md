@@ -6,17 +6,17 @@ helpviewer_keywords:
 - MSBuild, overriding ToolsVersion setting
 - MSBuild, building solutions with
 ms.assetid: ccd42c07-0fb6-4e8b-9ebb-a6a6db18aa2e
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 151e714a00a3030c2ed502a739c54c28e5ae75d3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1706d0e82139da5962fbb43610cdecd6b1477ad1
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63006744"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590483"
 ---
 # <a name="override-toolsversion-settings"></a>重写 ToolsVersion 设置
 可使用以下三种方式之一来更改项目和解决方案的工具集：
@@ -28,7 +28,7 @@ ms.locfileid: "63006744"
 3. 设置解决方案中某个项目的 `$(ProjectToolsVersion)` 参数。 使用此方法，可以在解决方案中使用不同于其他项目的工具集版本生成项目。
 
 ## <a name="override-the-toolsversion-settings-of-projects-and-solutions-on-command-line-builds"></a>在命令行生成上替代项目和解决方案的 ToolsVersion 设置
- 虽然 Visual Studio 项目通常使用在项目文件中指定的 ToolsVersion 生成，但也可以使用命令行上的 `-ToolsVersion`（或 `-tv`）开关来替代该值，并用不同的工具集来生成所有项目及其项目到项目依赖项。 例如:
+ 虽然 Visual Studio 项目通常使用在项目文件中指定的 ToolsVersion 生成，但也可以使用命令行上的 `-ToolsVersion`（或 `-tv`）开关来替代该值，并用不同的工具集来生成所有项目及其项目到项目依赖项。 例如：
 
 ```cmd
 msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
@@ -41,7 +41,7 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
 ## <a name="override-the-toolsversion-settings-using-the-toolsversion-parameter-of-the-msbuild-task"></a>使用 MSBuild 任务的 ToolsVersion 参数替代 ToolsVersion 设置
  MSBuild 任务是一个项目生成另一个项目的主要方式。 为了使 MSBuild 任务能够使用与项目中指定的值不同的 ToolsVersion 来生成项目，它提供了名为 `ToolsVersion` 的可选任务参数。 下面的示例演示如何使用此参数：
 
-1. 创建一个名为“projectA.proj”的文件，在其中包含以下代码：
+1. 创建一个名为“projectA.proj”  的文件，在其中包含以下代码：
 
     ```xml
     <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
@@ -59,7 +59,7 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
     </Project>
     ```
 
-2. 创建另一个名为“projectB.proj”的文件，在其中包含以下代码：
+2. 创建另一个名为“projectB.proj”  的文件，在其中包含以下代码：
 
     ```xml
     <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
@@ -109,7 +109,7 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
 
     1. 项目文件的 [Project](../msbuild/project-element-msbuild.md) 元素的 `ToolsVersion` 属性。 如果此属性不存在，则假定是当前版本。
 
-    2. MSBuild.exe.config 文件中的默认工具版本。
+    2. MSBuild.exe.config  文件中的默认工具版本。
 
     3. 注册表中的默认工具版本。 有关详细信息，请参阅[标准和自定义工具集配置](../msbuild/standard-and-custom-toolset-configurations.md)。
 
@@ -117,7 +117,7 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
 
     1. 如果环境变量 `MSBUILDDEFAULTTOOLSVERSION` 设置为现有的 `ToolsVersion`，请使用它。
 
-    2. 如果在 MSBuild.exe.config 中设置了 `DefaultOverrideToolsVersion`，请使用它。
+    2. 如果在 MSBuild.exe.config  中设置了 `DefaultOverrideToolsVersion`，请使用它。
 
     3. 如果在注册表中设置了 `DefaultOverrideToolsVersion`，请使用它。
 

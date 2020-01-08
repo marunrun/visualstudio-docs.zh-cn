@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Warning task [MSBuild]
 - MSBuild, Warning task
 ms.assetid: 96ba5507-8b43-4f54-a1d7-9b15644dd56c
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: afbf7dd2f8ae42cd21ee7c9d006d9f503d2d3bf9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 84b9f9d9d92815d1719f8ba43f4014ef9598e0c4
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62779086"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75567133"
 ---
 # <a name="warning-task"></a>Warning 任务
 基于评估的条件语句，在生成期间记录警告。
@@ -31,7 +31,7 @@ ms.locfileid: "62779086"
 ## <a name="parameters"></a>参数
  下表描述了 `Warning` 任务的参数。
 
-| 参数 | 说明 |
+| 参数 | 描述 |
 |---------------| - |
 | `Code` | 可选 `String` 参数。<br /><br /> 与警告相关联的警告代码。 |
 | `File` | 可选 `String` 参数。<br /><br /> 指定相关文件（如果有）。 如果未提供任何文件，则使用包含 Warning 任务的文件。 |

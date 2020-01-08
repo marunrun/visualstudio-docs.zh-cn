@@ -7,17 +7,17 @@ f1_keywords:
 - Microsoft.VisualStudio.Publish.BaseProvider.Dialog.Bootstrapper
 helpviewer_keywords:
 - Prerequisites dialog box
-author: mikejo5000
-ms.author: mikejo
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ab3cb844f518ef5fae553010fe4a800c09d170a
-ms.sourcegitcommit: 9cfd3ef6c65f671a26322320818212a1ed5955fe
+ms.openlocfilehash: 0ecbba1a1c5e8670fd9adcafdfed8cec21dd3912
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68533382"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75567900"
 ---
 # <a name="prerequisites-dialog-box"></a>“系统必备”对话框
 
@@ -29,7 +29,7 @@ ms.locfileid: "68533382"
 
 ## <a name="uielement-list"></a>UIElement 列表
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |**创建用于安装系统必备组件的安装程序**|将应用程序的系统必备组件包含到安装程序 (Setup.exe) 中，以便在安装应用程序之前按照依赖顺序安装这些组件  。 默认情况下，该选项是选中的。 如果没有选择此选项，则不会创建 Setup.exe  。|
 |**选择要安装的系统必备组件**|指定是否安装 .NET Framework 和 C++ 运行时库等组件。<br /><br />例如，通过选中“SQL Server 2012 Express”旁边的复选框，可以指定安装程序必须验证目标计算机上是否安装有此组件，如果没有则进行安装  。<br /><br />有关每个系统必备包的详细信息，请参阅[系统必备信息](#prerequisites-information)。|
@@ -44,7 +44,7 @@ ms.locfileid: "68533382"
 
 出现在“系统必备”  对话框中的系统必备组件可能与下面列表中的不同。 第一次打开对话框时将自动设置 **“系统必备”对话框**中所列的必备组件包。 如果随后更改项目的目标框架，则必须手动选择必备组件，以便与新目标框架相匹配。
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |**.NET Framework 3.5 SP1**|此程序包会安装下列系统必备组件：<br /><br /> - .NET Framework 2.0、3.0 和 3.5 版<br />- 支持 32 位 (x86) 和 64 位 (x64) 操作系统上的所有 .NET Framework 版本。<br />- 与程序包一起安装的每个 .NET Framework 版本的语言包。<br />- .NET Framework 2.0 和 3.0 服务包。<br /><br /> .NET Framework 3.0 随 Windows Vista 一起提供，.NET Framework 3.5 随 Visual Studio 一起提供。 .NET Framework 3.5 是针对 32 位操作系统进行编译且目标框架设置为“.NET Framework 3.5”  的所有 Visual Basic 和 C# 项目的必需组件，也是针对 64 位操作系统编译的 Visual Basic 和 C# 项目的必需组件。 （不支持 IA64。）注意，默认情况下 Visual Basic 和 C# 项目是针对所有 CPU 体系结构进行编译的。 有关详细信息，请参阅 [Framework 定位概述](../../ide/visual-studio-multi-targeting-overview.md)和[部署 64 位应用的必备条件](../../deployment/deploying-prerequisites-for-64-bit-applications.md)。|
 |**Microsoft .NET Framework 4.x**|此包为 x86 和 x64 平台安装 .NET Framework 4.x。|

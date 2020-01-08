@@ -7,17 +7,17 @@ helpviewer_keywords:
 - analyzers
 - Roslyn analyzers
 - code analyzers
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 388667485f27b59e46a1c39d95b37ddc413240ee
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 77ee96272733eb519e92262cece405de21c06fa3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649142"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587272"
 ---
 # <a name="overview-of-source-code-analyzers"></a>源代码分析器概述
 
@@ -25,7 +25,7 @@ ms.locfileid: "72649142"
 
 - 某些分析器内置于 Visual Studio 中。 对于这些分析器，诊断 ID 或代码的格式为 IDExxxx，如 IDE0067。 大多数这些内置分析器会检查[代码样式](../ide/code-styles-and-code-cleanup.md)，并且你可以在[文本编辑器选项](../ide/code-styles-and-code-cleanup.md)页上或在 [EditorConfig 文件](../ide/editorconfig-code-style-settings-reference.md)中配置首选项。 一小部分内置分析器会检查代码质量。
 
-- 可以将其他分析器作为 NuGet 包或 Visual Studio 扩展进行安装。 例如:
+- 可以将其他分析器作为 NuGet 包或 Visual Studio 扩展进行安装。 例如：
 
   - [FxCop 分析器](../code-quality/install-fxcop-analyzers.md)，Microsoft 的推荐代码质量分析器
   - 第三方分析器，例如 [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/)、[Roslynator](https://www.nuget.org/packages/Roslynator/)、[XUnit Analyzers](https://www.nuget.org/packages/xunit.analyzers/) 和 [Sonar Analyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)

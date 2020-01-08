@@ -3,17 +3,17 @@ title: 为项目和 NuGet 包取消显示编译器警告
 ms.date: 01/24/2018
 ms.technology: vs-ide-compile
 ms.topic: conceptual
-author: ghogen
-ms.author: ghogen
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aec3dfb45471a3349e14419671ef1fb3b5e05db5
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: cbcef86187ad03545066f3c595d00b56f83be5c5
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747950"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591419"
 ---
 # <a name="how-to-suppress-compiler-warnings"></a>如何：取消编译器警告
 
@@ -87,7 +87,7 @@ ms.locfileid: "72747950"
     ```
 
    > [!NOTE]
-   > 在默认情况下，.NET Core 项目不包含生成配置属性组。 若要取消显示 .NET Core 项目中的警告，请将生成配置部分手动添加到文件。 例如:
+   > 在默认情况下，.NET Core 项目不包含生成配置属性组。 若要取消显示 .NET Core 项目中的警告，请将生成配置部分手动添加到文件。 例如：
    >
    > ```xml
    > <Project Sdk="Microsoft.NET.Sdk">

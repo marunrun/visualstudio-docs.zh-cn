@@ -13,17 +13,17 @@ helpviewer_keywords:
 - SGen task [MSBuild]
 - MSBuild, SGen task
 ms.assetid: 22c5ade4-4159-4667-b891-0c1aa06f4df5
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c326dc31f6ce80026f1c83c5b71f8e27faabf93e
-ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
+ms.openlocfilehash: a97133892926e60adc1d9f0165415868732066ca
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70887629"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595119"
 ---
 # <a name="sgen-task"></a>SGen 任务
 创建指定程序集中的类型的 XML 序列化程序集。 此任务将包装 XML 序列化程序生成器工具 (Sgen.exe)  。 有关详细信息，请参阅 [XML 序列化程序生成器工具 (Sgen.exe)](/dotnet/framework/serialization/xml-serializer-generator-tool-sgen-exe)。
@@ -31,7 +31,7 @@ ms.locfileid: "70887629"
 ## <a name="parameters"></a>参数
  下表描述了 `SGen` 任务的参数。
 
-| 参数 | 说明 |
+| 参数 | 描述 |
 |-----------------------------| - |
 | `BuildAssemblyName` | 必选 `String` 参数。<br /><br /> 要为其生成序列化代码的程序集。 |
 | `BuildAssemblyPath` | 必选 `String` 参数。<br /><br /> 要生成序列化代码的程序集的路径。 |

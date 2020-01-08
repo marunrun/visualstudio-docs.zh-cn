@@ -7,15 +7,15 @@ helpviewer_keywords:
 - response times in load tests
 - load test results, response times
 ms.assetid: e61c49f3-3161-45b1-9220-08b5459065a2
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5fbaa3f8f322bc6633e4f5081ba4cae38b581b95
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cf8bc1205658899a51cf1a50e83a9a8b34034b25
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653283"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594313"
 ---
 # <a name="how-to-view-web-page-response-time-in-a-load-test-using-the-load-test-analyzer"></a>如何：使用负载测试分析器在负载测试中查看网页响应时间
 
@@ -43,7 +43,7 @@ ms.locfileid: "72653283"
 
 3. 网格中将显示每页的数据。 通常会显示以下列。
 
-   |列标题|说明|
+   |列标题|描述|
    |-|-|
    |**页**|网页的名称。|
    |**方案**|方案的名称。 如果在 Web 性能测试中有多个方案，则这一列很重要。|

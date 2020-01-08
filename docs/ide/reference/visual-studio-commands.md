@@ -7,17 +7,17 @@ helpviewer_keywords:
 - commands, Visual Studio
 - command syntax
 ms.assetid: 76ffa394-ee89-4629-aba9-1a62b72e6cc1
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3af3685288c00e27bb63cd45c682ab8b6354f4e5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ac0284ce274791f21c9c0f85d265d92a7097cb09
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72622102"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596367"
 ---
 # <a name="visual-studio-commands"></a>Visual Studio 命令
 
@@ -31,7 +31,7 @@ ms.locfileid: "72622102"
 
 ## <a name="escape-character"></a>转义符
 
-Visual Studio 命令的转义字符是一个插入符号 (^)。 转义字符表示紧随其后的字符将按字面意思而不是作为控制字符进行解释。 这可以用于嵌入参数或开关值中的直引号 (")、空格、前导斜杠，插入符号或其他任何字符，开关名称除外。 例如:
+Visual Studio 命令的转义字符是一个插入符号 (^)。 转义字符表示紧随其后的字符将按字面意思而不是作为控制字符进行解释。 这可以用于嵌入参数或开关值中的直引号 (")、空格、前导斜杠，插入符号或其他任何字符，开关名称除外。 例如：
 
 ```
 >Edit.Find ^^t /regex
@@ -43,7 +43,7 @@ Visual Studio 命令的转义字符是一个插入符号 (^)。 转义字符表�
 
 以下命令采用参数或开关：
 
-| 命令名： | 说明 |
+| 命令名： | 描述 |
 | - | - |
 | [添加现有项](../../ide/reference/add-existing-item-command.md) | 将现有文件添加到当前解决方案中并打开它。 |
 | [添加现有项目](../../ide/reference/add-existing-project-command.md) | 将现有项目添加到当前解决方案中。 |

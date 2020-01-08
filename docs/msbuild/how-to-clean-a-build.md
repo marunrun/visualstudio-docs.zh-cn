@@ -8,31 +8,31 @@ helpviewer_keywords:
 - directories [.NET Framework], for output items
 - output, removing items
 ms.assetid: 999ba473-b0c4-45c7-930a-63ea7a510509
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d737ecf51b6726bf46a525104c99f8ac61569964
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8d183026ffdfce3ada7fc96c29c83570ee18c694
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977299"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585214"
 ---
 # <a name="how-to-clean-a-build"></a>如何：清理生成
 清理生成时，将删除所有中间文件和输出文件，仅保留项目和组件文件。 然后，可以根据项目和组件文件生成中间文件和输出文件的新实例。 随 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 提供的常规任务库中包括一个 [Exec](../msbuild/exec-task.md) 任务，可以使用该任务运行系统命令。 有关任务库的详细信息，请参阅[任务参考](../msbuild/msbuild-task-reference.md)。
 
 ## <a name="create-a-directory-for-output-items"></a>创建输出项目录
- 默认情况下，编译项目时创建的 .exe 文件与项目文件和源文件位于同一目录中。 但是，输出项通常在单独的目录中创建。
+ 默认情况下，编译项目时创建的 .exe 文件与项目文件和源文件位于同一目录中  。 但是，输出项通常在单独的目录中创建。
 
 #### <a name="to-create-a-directory-for-output-items"></a>创建输出项目录
 
-1. 使用 `Property` 元素定义目录的位置和名称。 例如，在包含项目文件和源文件的目录中创建一个名为 BuiltApp 的目录：
+1. 使用 `Property` 元素定义目录的位置和名称。 例如，在包含项目文件和源文件的目录中创建一个名为 BuiltApp 的目录  ：
 
      `<builtdir>BuiltApp</builtdir>`
 
-2. 如果目录不存在，使用 [MakeDir](../msbuild/makedir-task.md) 任务创建目录。 例如:
+2. 如果目录不存在，使用 [MakeDir](../msbuild/makedir-task.md) 任务创建目录。 例如：
 
      ```xml
      <MakeDir Directories = "$(builtdir)"
@@ -44,18 +44,18 @@ ms.locfileid: "62977299"
 
 #### <a name="to-remove-a-directory-and-all-files-contained-in-the-directory"></a>删除目录和目录中包含的所有文件
 
-- 使用 `RemoveDir` 任务删除目录。 例如:
+- 使用 `RemoveDir` 任务删除目录。 例如：
 
      `<RemoveDir Directories="$(builtdir)" />`
 
 ## <a name="example"></a>示例
  以下代码示例项目包含一个新目标 `Clean`，该目标使用 `RemoveDir` 任务删除目录和该目录中包含的所有文件和目录。 此外，在此示例中，`Compile` 目标还将为清理生成时删除的输出项创建一个单独的目录。
 
- 由于 `Compile` 被定义为默认目标，因此，除非另外指定一个或多个目标，否则会自动使用该默认目标。 使用命令行开关 -target 指定其他目标。 例如:
+ 由于 `Compile` 被定义为默认目标，因此，除非另外指定一个或多个目标，否则会自动使用该默认目标。 使用命令行开关 -target  指定其他目标。 例如：
 
  `msbuild <file name>.proj -target:Clean`
 
- -target 开关可缩写为 -t，并能指定多个目标。 例如，若要依次使用目标 `Clean` 和 `Compile`，请键入：
+ -target  开关可缩写为 -t  ，并能指定多个目标。 例如，若要依次使用目标 `Clean` 和 `Compile`，请键入：
 
  `msbuild <file name>.proj -t:Clean;Compile`
 

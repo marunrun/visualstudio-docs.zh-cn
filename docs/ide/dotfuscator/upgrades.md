@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Dotfuscator Professional
 description: 了解如何升级 Visual Studio 中包含的免费 Dotfuscator Community 副本。
 ms.assetid: c7c60904-27f9-4f1f-b79b-ddf65041b810
-author: Joe-Sewell-PreEmptive
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 555b23f33ee1e3541afc6181a9ec6c4ece833b81
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 08492340022f772beadca8061a216de69fafc8af
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748886"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596796"
 ---
 # <a name="upgrade-dotfuscator-community"></a>升级 Dotfuscator Community
 

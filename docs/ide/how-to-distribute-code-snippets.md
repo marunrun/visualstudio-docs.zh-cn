@@ -5,25 +5,25 @@ ms.topic: conceptual
 helpviewer_keywords:
 - code snippets, distributing
 ms.assetid: 5f717abd-e167-47ae-818c-6b0bae100ceb
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b5ae4053e97e823952118abda11f334c5ac1083
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 23e77658b2b09f643af18a3f136f5428828cfb5c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72656071"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591055"
 ---
 # <a name="how-to-distribute-code-snippets"></a>如何：分发代码片段
 
 可以向朋友提供代码片段，然后让他们使用代码片段管理器在自己的计算机上安装代码片段  。 但是，如果你有若干代码片段要分发或者希望进行范围更广泛的分发，则可以将代码片段文件包含到 Visual Studio 扩展中。 然后，Visual Studio 用户可安装扩展，以获得这些片段。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 安装“Visual Studio 扩展开发”工作负载，以访问“VSIX 项目”项目模板   。
 

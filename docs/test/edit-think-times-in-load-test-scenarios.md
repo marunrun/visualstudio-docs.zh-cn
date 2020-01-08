@@ -7,15 +7,15 @@ helpviewer_keywords:
 - load tests, adding delays
 - load tests, changing think times
 ms.assetid: 8e03bee5-ab7b-4b40-9497-9dbe91ccb90e
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 661a31411a561f15809a10fb15fd71a29e6a64fa
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 887d2af9e60be914bd74141041ecc375cfea4f00
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672943"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590028"
 ---
 # <a name="edit-think-times-to-simulate-website-human-interaction-delays-in-load-tests-scenarios"></a>编辑思考时间以模拟负载测试方案中的网站人工交互延迟
 

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - tasks
 - MSBuild, tasks
 ms.assetid: 5d3cc4a7-e5db-4f73-b707-8b6882fddcf8
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 90b6731cf75a1825139aba57fe8491cd7cb0253f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3a6bc01ee1f692a4da0cf1921de757236651a177
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63004557"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593793"
 ---
 # <a name="msbuild-tasks"></a>MSBuild 任务
 生成平台需要能够在生成过程中执行任意数量的操作。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 使用 *任务* 以执行这些操作。 任务是由 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 用于执行原子生成操作的可执行代码单元。
@@ -62,7 +62,7 @@ ms.locfileid: "63004557"
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 附带了许多任务，例如用于复制文件的[复制](../msbuild/copy-task.md)、用于创建目录的 [MakeDir](../msbuild/makedir-task.md) 以及用于编译 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 源代码文件的 [Csc](../msbuild/csc-task.md)。 有关可用任务的完整列表以及用法信息，请参阅[任务参考](../msbuild/msbuild-task-reference.md)。
 
 ## <a name="overridden-tasks"></a>覆盖的任务
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 在多个位置查找任务。 第一个位置位于存储在 .NET Framework 目录中扩展名为 .OverrideTasks 的文件中。 这些文件中的任务会覆盖具有相同名称的其他任何任务，包括项目文件中的任务。 第二个位置位于 .NET Framework 目录中扩展名为 .Tasks 的文件中。 如果在这些位置中找不到任务，则会使用项目文件中的任务。
+ [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 在多个位置查找任务。 第一个位置位于存储在 .NET Framework 目录中扩展名为 .OverrideTasks 的文件中。  这些文件中的任务会覆盖具有相同名称的其他任何任务，包括项目文件中的任务。 第二个位置位于 .NET Framework 目录中扩展名为 .Tasks 的文件中。  如果在这些位置中找不到任务，则会使用项目文件中的任务。
 
 ## <a name="see-also"></a>请参阅
 - [MSBuild 概念](../msbuild/msbuild-concepts.md)

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - load tests, scenarios
 - load tests, virtual users
 ms.assetid: e3b7d952-9012-400a-8131-3444390a6066
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: d9c678f1ec5cc984bff8e7f77d3ed95c9d579bfb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 62c817a2df6c56f70ab2217292feeb545cf66c85
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72644460"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593208"
 ---
 # <a name="edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test"></a>编辑测试组合模型以指定运行测试的虚拟用户的概率
 

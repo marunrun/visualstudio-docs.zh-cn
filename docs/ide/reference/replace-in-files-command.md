@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Replace In Files command
 - ReplaceInFiles command
 ms.assetid: f116066a-4f65-4f2c-94ef-12cbd8cfb598
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fccfe696da2d38ff03ffb2f9b91de481e924a514
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 96f7d7ae0ea5eaf0de1a6fa4357e2750cdd8c22e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748665"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565469"
 ---
 # <a name="replace-in-files-command"></a>“在文件中替换”命令
 使用“查找和替换”窗口的“在文件中替换”选项卡上的可用选项子集替换文件中的文本   。

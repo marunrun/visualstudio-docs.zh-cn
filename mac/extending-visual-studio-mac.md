@@ -3,15 +3,15 @@ title: 扩展 Visual Studio for Mac
 description: 可使用被称为“扩展包”的模块扩展 Visual Studio for Mac 的特性和功能。 本指南的第一部分创建了一个简单的 Visual Studio for Mac 扩展包，用于在文档中插入日期和时间。 本指南的第二部分介绍了该扩展包系统和一些构成 Visual Studio for Mac 基础的核心 API 的基础知识。
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 05/07/2019
+ms.date: 12/20/2019
 ms.technology: vs-ide-sdk
 ms.assetid: D5245AB0-8404-426B-B538-F49125E672B2
-ms.openlocfilehash: 76f8f4945542d1b2fd4dce230d750db4c965af76
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.openlocfilehash: 102b03caf2880d9b1311bb757eaf92aad84f8c81
+ms.sourcegitcommit: d04441e3c5f2eff3a63f7aca35ccf7ecac90fb44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74983267"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75735826"
 ---
 # <a name="extending-visual-studio-for-mac"></a>扩展 Visual Studio for Mac
 
@@ -72,10 +72,10 @@ Visual Studio for Mac 包含一组被称为“扩展包”的模块  。 可使�
 
  ```xml
 <Extension path="/MonoDevelop/Ide/Commands/Edit">
-  <command id="DateInserter.DateInserterCommands.InsertDate"
+  <Command id="DateInserter.DateInserterCommands.InsertDate"
             _label="Insert Date"
             _description="Insert the current date"
-            defaulthandler="DateInserter.InsertDateHandler" />
+            defaultHandler="DateInserter.InsertDateHandler" />
 </Extension>
 ```
 
@@ -92,7 +92,7 @@ Visual Studio for Mac 包含一组被称为“扩展包”的模块  。 可使�
 
 ```xml
 <Extension path="/MonoDevelop/Ide/MainMenu/Edit">
-  <commanditem id="DateInserter.DateInserterCommands.InsertDate" />
+  <CommandItem id="DateInserter.DateInserterCommands.InsertDate" />
 </Extension>
 ```
 
@@ -186,7 +186,7 @@ Visual Studio for Mac [引入新的本机 Cocoa 文本编辑器 UI](https://aka.
 
 * `ITextView` 是在编辑器控件的屏幕上如何呈现 `ITextBuffer` 的 UI 表示。 它引用其文本缓冲区，以及 `Caret``Selection` 和其他与 UI 相关的概念。
 
-对于给定的 [`MonoDevelop.Ide.Gui.Document` ](http://source.monodevelop.com/#MonoDevelop.Ide/MonoDevelop.Ide.Gui/Document.cs,4e960d4735f089b5)，可以分别通过 `Document.GetContent<ITextBuffer>()` 和 `Document.GetContent<ITextView>()` 检索关联的基础 `ITextBuffer` 和 `ITextView`。
+对于给定的 [`MonoDevelop.Ide.Gui.Document`](http://source.monodevelop.com/#MonoDevelop.Ide/MonoDevelop.Ide.Gui/Document.cs,4e960d4735f089b5)，可以分别通过 `Document.GetContent<ITextBuffer>()` 和 `Document.GetContent<ITextView>()` 检索关联的基础 `ITextBuffer` 和 `ITextView`。
 
 ## <a name="additional-information"></a>其他信息
 

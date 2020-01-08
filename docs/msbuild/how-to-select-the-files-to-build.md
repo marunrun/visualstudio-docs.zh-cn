@@ -7,17 +7,17 @@ helpviewer_keywords:
 - MSBuild, including files
 - Include attribute [MSBuild]
 ms.assetid: f5ff182f-7b3a-46fb-9335-37df54cfb8eb
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f8f582a0148f5fddd88393e008593d9ad9a05ce
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: a9ad869fc091035de711ec59e20d10fd0af5e21b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63386176"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75574608"
 ---
 # <a name="how-to-select-the-files-to-build"></a>如何：选择要生成的文件
 如果生成包含多个文件的项目，可以在项目文件中分别列出每个文件，也可以使用通配符将一个目录或一组嵌套目录中的所有文件都包括进去。
@@ -53,27 +53,27 @@ ms.locfileid: "63386176"
 ## <a name="specify-inputs-with-wildcards"></a>使用通配符指定输入
 还可以使用通配符以递归方式将子目录中的所有文件或某些特定文件包括在某个生成的输入中。 有关通配符的详细信息，请参阅[通配符](../msbuild/msbuild-items.md)
 
-下面的示例基于一个项目，该项目包含下列目录和子目录中的图形文件，项目文件位于 Project 目录中：
+下面的示例基于一个项目，该项目包含下列目录和子目录中的图形文件，项目文件位于 Project 目录中  ：
 
-Project\Images\BestJpgs
+Project\Images\BestJpgs 
 
-Project\Images\ImgJpgs
+Project\Images\ImgJpgs 
 
-Project\Images\ImgJpgs\Img1
+Project\Images\ImgJpgs\Img1 
 
-#### <a name="to-include-all-jpg-files-in-the-images-directory-and-subdirectories"></a>包括 Images 目录和子目录中的所有 .jpg 文件
+#### <a name="to-include-all-jpg-files-in-the-images-directory-and-subdirectories"></a>包括 Images 目录和子目录中的所有 .jpg 文件  
 
 - 使用下面的 `Include` 属性：
 
     `Include="Images\**\*.jpg"`
 
-#### <a name="to-include-all-jpg-files-starting-with-img"></a>包括所有以“img”开头的 .jpg 文件
+#### <a name="to-include-all-jpg-files-starting-with-img"></a>包括所有以“img”开头的 .jpg 文件  
 
 - 使用下面的 `Include` 属性：
 
     `Include="Images\**\img*.jpg"`
 
-#### <a name="to-include-all-files-in-directories-with-names-ending-in-jpgs"></a>包括目录中名称以“jpgs”结尾的所有文件
+#### <a name="to-include-all-files-in-directories-with-names-ending-in-jpgs"></a>包括目录中名称以“jpgs”结尾的所有文件 
 
 - 使用以下 `Include` 属性之一：
 
@@ -136,7 +136,7 @@ Project\Images\ImgJpgs\Img1
 ```
 
 ## <a name="example"></a>示例
-以下代码示例使用通配符来包括所有 .cs 文件。
+以下代码示例使用通配符来包括所有 .cs 文件  。
 
 ```xml
 <Project DefaultTargets="Compile"

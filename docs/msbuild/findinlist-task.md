@@ -11,17 +11,17 @@ helpviewer_keywords:
 - FindInList task [MSBuild]
 - MSBuild, FindInList task
 ms.assetid: d49b9f84-52a2-4242-9269-b741a7a7e9f7
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c2f6c5f14f6eff818a265e097f02e2bc76c7372
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 650683c047f7df6422e25ef5b23201a2660b3125
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62996664"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591120"
 ---
 # <a name="findinlist-task"></a>FindInList 任务
 在指定的列表中查找具有匹配的 itemspec 的项。
@@ -29,7 +29,7 @@ ms.locfileid: "62996664"
 ## <a name="parameters"></a>参数
  下表描述了 [FindInList 任务](../msbuild/findinlist-task.md)的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`CaseSensitive`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则搜索区分大小写，否则不区分大小写。 默认值是 `true`。|
 |`FindLastMatch`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则返回最后一个匹配项；否则返回第一个匹配项。 默认值是 `false`。|

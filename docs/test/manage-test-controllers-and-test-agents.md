@@ -2,17 +2,17 @@
 title: 管理测试控制器和测试代理
 ms.date: 09/18/2018
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 530a3d7ac205988639ed1346f823d889f56adffb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: efcc284291281b6e370cf51ddbe175faf8f1204c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652924"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75584408"
 ---
 # <a name="manage-test-controllers-and-test-agents"></a>管理测试控制器和测试代理
 
@@ -114,7 +114,7 @@ ms.locfileid: "72652924"
 
 测试代理的状态可以是以下任何一个值：
 
-|状态|说明|
+|状态|描述|
 |-|-----------------|
 |运行测试|运行测试|
 |就绪|可用于运行测试或收集数据和诊断信息|
@@ -140,7 +140,7 @@ ms.locfileid: "72652924"
 
 1. 根据需要更改以下测试代理属性：
 
-|测试代理属性|说明|
+|测试代理属性|描述|
 |-|-----------------|
 |**权重**|用于在使用具有不同性能级别的测试代理时分布负载。 例如，权重为 100 的测试代理获得的负载将为权重为 50 的测试代理的两倍。|
 |**IP 切换**|用于配置 IP 切换。 IP 切换使测试代理可以使用一个 IP 地址范围向服务器发送请求。 这模拟了来自不同客户端计算机的调用。<br /><br /> 如果负载测试要访问网络场，则 IP 切换很重要。 大多数负载均衡器通过使用客户端的 IP 地址在客户端与特定的 Web 服务器之间建立关联。 如果所有请求看上去都来自单个客户端，则负载平衡器不会平衡负载。 若要在 Web 场中实现较好的负载平衡，请确保请求来自某个范围内的 IP 地址。 **注意：** 你可以指定网络适配器，也可以使用“(全部未指定)”自动选择当前未使用的网络适配器  。 <br /><br /> 若要使用 IP 切换功能，则必须以该代理计算机的管理员组中的用户身份运行 Visual Studio Test Agent 服务。 此用户是在安装代理过程中选择的，但是可以通过修改服务的属性并重启该服务来进行更改。<br /><br /> 要验证 IP 交换机制是否正常工作，可在 Web 服务器上启用 IIS 日志记录功能，使用 IIS 日志记录功能来验证请求是否来自所配置的 IP 地址。|

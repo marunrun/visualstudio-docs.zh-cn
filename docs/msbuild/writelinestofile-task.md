@@ -13,17 +13,17 @@ helpviewer_keywords:
 - WriteLinesToFile task [MSBuild]
 - MSBuild, WriteLinesToFile task
 ms.assetid: 9c8862ac-8da5-4437-9430-ecc30421f1c9
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8cfe294e94acce70f48b96265b3edc491b37e668
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cf7f36d0876b1f757dee1a752c8461745783a21e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62777888"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595327"
 ---
 # <a name="writelinestofile-task"></a>WriteLinesToFile 任务
 将指定项的路径写入指定的文本文件。
@@ -31,7 +31,7 @@ ms.locfileid: "62777888"
 ## <a name="task-parameters"></a>任务参数
  下表描述了 `WriteLinestoFile` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`File`|必选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指定要将项写入到的文件。|
 |`Lines`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要写入到文件的项。|

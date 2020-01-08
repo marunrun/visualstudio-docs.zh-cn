@@ -6,17 +6,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, Items
 ms.assetid: d762eff4-c92a-4b5f-a944-1ca30aa22319
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cebf824785fed39cfd824b9b90f9d19be5df8c64
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: a8ed6b9789569e9f68706a5b132aa9000b25d910
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251715"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590639"
 ---
 # <a name="msbuild-items"></a>MSBuild 项
 MSBuild 项是生成系统的输入，通常表示文件（文件在 `Include` 属性中指定）。 根据项元素名称，将其组成不同的项类型。 项类型是项的命名列表，可用作任务参数。 任务使用项值来执行生成过程。

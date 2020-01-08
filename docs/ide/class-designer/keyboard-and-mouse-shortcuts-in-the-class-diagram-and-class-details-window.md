@@ -8,17 +8,17 @@ helpviewer_keywords:
 - class diagrams, keyboard shortcuts
 - class diagrams, mouse shortcuts
 ms.assetid: c12d8dac-9902-4fde-b721-2a8116da53b7
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a755de4df0cd7402debbc964d2f3f9c54802eb85
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 6df4932a1043c984509632951ba67864fefe31ce
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188968"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590756"
 ---
 # <a name="keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window"></a>类图和“类详细信息”窗口中的键盘快捷方式和鼠标快捷方式
 
@@ -28,7 +28,7 @@ ms.locfileid: "73188968"
 
 类图中支持下列鼠标操作：
 
-|鼠标组合|上下文|说明|
+|鼠标组合|上下文|描述|
 | - |-------------|-----------------|
 |双击|Shape 元素|打开代码编辑器。|
 |双击|棒糖形连接器|展开/折叠棒糖形。|
@@ -56,7 +56,7 @@ ms.locfileid: "73188968"
 
 类图中支持下列键盘操作：
 
-|键|上下文|说明|
+|键|上下文|描述|
 |---------|-------------|-----------------|
 |**箭头键**|在类型形状内|对形状内容的树式导航（支持环绕形状）。 如果当前项可展开，则左键和右键会展开/折叠此项；如果当前项不可展开，则导航到其父级（请参阅视图导航以了解详细行为）。|
 |**箭头键**|顶级形状|定义关系图上的形状。|

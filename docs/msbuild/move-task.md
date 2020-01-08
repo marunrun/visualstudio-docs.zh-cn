@@ -11,17 +11,17 @@ helpviewer_keywords:
 - MSBuild, Move task
 - Move task [MSBuild]
 ms.assetid: d1405347-1309-4f18-b565-905408093d59
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dc2e11a1466f359cebb60505f498c0df3ae6c45b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8adfa75964959e2cce61779914a52f03319ed314
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62817517"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592134"
 ---
 # <a name="move-task"></a>Move 任务
 将文件移至新位置。
@@ -29,7 +29,7 @@ ms.locfileid: "62817517"
 ## <a name="parameters"></a>参数
  下表描述了 `Move` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`DestinationFiles`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 指定要将源文件移动到的文件的列表。 此列表应与 `SourceFiles` 参数中指定的列表具有一对一的映射关系。 也就是说，`SourceFiles` 中指定的第一个文件将移动到 `DestinationFiles` 中指定的第一个位置，依次类推。|
 |`DestinationFolder`|可选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指定要将文件移动到的目录。|

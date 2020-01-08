@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Edit.Replace command
 - Replace command
 ms.assetid: a15767f1-5a3d-44f5-8c77-7b0f1157f340
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b13dee4ec87a0a4c2735d9523bff093046c5b38c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 620e55938a9c96393d8cd7de6f238d3f98715d29
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747787"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596679"
 ---
 # <a name="replace-command"></a>Replace 命令
 使用“查找和替换”窗口的“在文件中替换”选项卡上的可用选项子集替换文件中的文本   。

@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Project Designer, Signing page
 - Signing page in Project Designer
 ms.assetid: dab3ba13-2f92-4827-92bd-1be3c35bc48b
-author: mikejo5000
-ms.author: mikejo
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d4fa326d65606fd06d41fc5c697b80a526c1059
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: 516e2aaf4a55ad6422200f9fef1cbbf2d435af7b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461290"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597329"
 ---
 # <a name="signing-page-project-designer"></a>“项目设计器”->“签名”页
 

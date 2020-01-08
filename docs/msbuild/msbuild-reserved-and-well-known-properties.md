@@ -10,17 +10,17 @@ dev_langs:
 helpviewer_keywords:
 - MSBuild, reserved properties
 ms.assetid: 99333e61-83c9-4804-84e3-eda297c2478d
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9bd54e97535c281d50119fdc7aa759d0704fa9e1
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: 1ab4c18006834cc1bef6841864e42609e09bc3a1
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491557"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585829"
 ---
 # <a name="msbuild-reserved-and-well-known-properties"></a>MSBuild 保留属性和已知属性
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 提供了一组预定义的属性，这些属性存储有关项目文件和 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 二进制文件的信息。 这些属性的计算方式与其他 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 属性相同。 例如，要使用 `MSBuildProjectFile` 属性，应键入 `$(MSBuildProjectFile)`。
@@ -30,7 +30,7 @@ ms.locfileid: "74491557"
 ## <a name="reserved-and-well-known-properties"></a>保留属性和已知属性
  下表介绍了 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 预定义的属性。
 
-| 属性 | 保留或已知 | 说明 |
+| Property | 保留或已知 | 描述 |
 |----------------------------------|------------------------| - |
 | `MSBuildBinPath` | 保留 | 当前正在使用的 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 二进制文件所在文件夹的绝对路径（例如，C:\Windows\Microsoft.Net\Framework\\\<versionNumber>  ）。 如果你必须引用 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 目录中的文件，此属性将非常有用。<br /><br /> 不要在此属性上添加最终反斜杠。 |
 | `MSBuildExtensionsPath` | 已知 | 在 .NET Framework 4 中引入：`MSBuildExtensionsPath` 和 `MSBuildExtensionsPath32` 的默认值之间没有差异。 你可以设置环境变量 `MSBUILDLEGACYEXTENSIONSPATH` 为非 null 值，以启用早期版本中的 `MSBuildExtensionsPath`的默认值的行为。<br /><br /> 在 .NET Framework 3.5 和较早的版本中，根据当前进程的位数，`MSBuildExtensionsPath` 的默认值指向位于 \Program Files\\ 或 \Program Files (x86) 文件夹下的 MSBuild 子文件夹路径   。 例如，对于在 64 位计算机上的 32 位进程，此属性指向 \Program Files (x86) 文件夹  。 对于在 64 位计算机上的 64 位进程，此属性指向 \Program Files 文件夹  。<br /><br /> 不要在此属性上添加最终反斜杠。<br /><br /> 此位置用于存放自定义目标文件。 例如，目标文件可能安装在 \Program Files\MSBuild\MyFiles\Northwind.targets 中，然后使用此 XML 代码导入到项目文件中  ：<br /><br /> `<Import Project="$(MSBuildExtensionsPath)\MyFiles\Northwind.targets"/>` |

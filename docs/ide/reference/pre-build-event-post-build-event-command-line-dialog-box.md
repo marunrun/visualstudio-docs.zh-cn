@@ -29,17 +29,17 @@ helpviewer_keywords:
 - $(ProjectName)
 - build events, macros
 ms.assetid: d49b2c57-24bf-4fb2-8351-5c4b6cca938f
-author: ghogen
-ms.author: ghogen
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d5671a75a847d81caedeffc17ea436eade060f3e
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: 38712c25718670ea15324e3daf6fadc138cb08a6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461310"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75567913"
 ---
 # <a name="pre-build-eventpost-build-event-command-line-dialog-box"></a>生成前事件/生成后事件命令行对话框
 
@@ -73,7 +73,7 @@ ms.locfileid: "68461310"
 
 可以使用任何宏来指定文件位置，或在存在多种选择的情况下获取输入文件的实际名称。 这些宏不区分大小写。
 
-|宏|说明|
+|宏|描述|
 |-----------|-----------------|
 |`$(ConfigurationName)`|当前项目配置的名称，例如，“调试”。|
 |`$(OutDir)`|相对于项目目录的输出文件目录的路径。 这解析为输出目录属性的值。 它包括尾随反斜杠“\\”。|
