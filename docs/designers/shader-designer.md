@@ -6,17 +6,17 @@ f1_keywords:
 - vs.graphics.designer.effectdesigner
 - vs.graphics.shaderdesigner
 ms.assetid: 5db09a16-b82c-4ba3-8ec9-630cdc109397
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fd82a5c8bee50c778b87927f1074d71a38a21e9f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 85ce7b0f270f0da8728b17610a683dcc17d06189
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72635057"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589924"
 ---
 # <a name="shader-designer"></a>着色器设计器
 
@@ -81,7 +81,7 @@ ms.locfileid: "72635057"
 
 下表介绍了“着色器设计器模式”  工具栏上的项，按其从左至右的显示顺序列出：
 
-|工具栏项|说明|
+|工具栏项|描述|
 |------------------|-----------------|
 |**选择**|启用关系图中节点与边缘的交互。 在此模式下，可以选择节点并移动或删除它们，也可以建立边缘或中断它们。|
 |**平移**|相对于窗口框架移动着色器图。 若要进行平移，请选择设计图面上的一个点，然后将其四处移动。<br /><br /> 在“选择”模式下，可以按住 Ctrl 来暂时激活“平移”模式    。|
@@ -199,7 +199,7 @@ ms.locfileid: "72635057"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[处理游戏和应用的三维资产](../designers/working-with-3-d-assets-for-games-and-apps.md)|概述了可用来处理纹理和图像、三维模型和着色器效果的 Visual Studio 工具。|
 |[图像编辑器](../designers/image-editor.md)|介绍如何使用 Visual Studio 图像编辑器处理纹理和图像。|

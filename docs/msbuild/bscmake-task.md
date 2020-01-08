@@ -15,17 +15,17 @@ helpviewer_keywords:
 - MSBuild (C++), tasks
 - BscMake task (MSBuild (C++))
 ms.assetid: bb98fc67-cad8-43a7-9598-60df6d734db2
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: acf9c0df17ec0e1bb97c1426d5d312f616de0a8e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ff0c95c37e24f8c51453a849159073baff8dca0d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747377"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593416"
 ---
 # <a name="bscmake-task"></a>BscMake 任务
 > [!IMPORTANT]
@@ -36,7 +36,7 @@ ms.locfileid: "72747377"
 ## <a name="parameters"></a>参数
  下表介绍了 **BscMake** 任务的参数。 大多数任务参数都对应于命令行选项。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |**AdditionalOptions**|可选 **String** 参数。<br /><br /> 在命令行上指定的选项列表。 例如，/\<option1> /\<option2> /\<option#>。 此参数用于指定无法由其他任何 **BscMake** 任务参数表示的选项。<br /><br /> 有关详细信息，请参阅 [BSCMAKE 选项](/cpp/build/reference/bscmake-options)中的选项。|
 |**OutputFile**|可选 **String** 参数。<br /><br /> 指定重写默认输出文件名的文件名。<br /><br /> 有关详细信息，请参阅 [BSCMAKE 选项](/cpp/build/reference/bscmake-options)中的 /o 选项  。|

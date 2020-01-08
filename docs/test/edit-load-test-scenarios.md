@@ -7,15 +7,15 @@ helpviewer_keywords:
 - load tests, user activities
 - load tests, modeling scenarios
 ms.assetid: fec04f2e-bf38-4d44-b2ec-fa50f58fd0d9
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 944b0bf52cd6a7c3459f0be2a06b437796f57b37
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8fa323d275628fe580763709884552754acfba81
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665041"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593234"
 ---
 # <a name="edit-load-test-scenarios"></a>编辑负载测试方案
 
@@ -37,7 +37,7 @@ ms.locfileid: "72665041"
 |-|-|
 |浏览器组合|模拟虚拟用户通过各种 Web 浏览器访问网站的过程。|
 |负载模式|指定负载测试期间的活动虚拟用户数和启动新用户的速率。 例如：单步负载、恒负载和基于目标的负载模式。|
-|测试组合模型|指定虚拟用户在负载测试方案中运行给定测试的概率。 例如:20% 的概率运行 TestA，80% 的概率运行 TestB。 测试组合模型应反映特定方案的测试目标。|
+|测试组合模型|指定虚拟用户在负载测试方案中运行给定测试的概率。 例如：20% 的概率运行 TestA，80% 的概率运行 TestB。 测试组合模型应反映特定方案的测试目标。|
 |测试组合|测试组合是有关构成方案的 Web 性能测试和单元测试的选择以及这些测试的分布。|
 |网络组合|模拟虚拟用户通过各种网络连接访问网站的过程。 网络组合提供的选项包括 LAN、电缆调制解调器和其他选项。|
 

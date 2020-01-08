@@ -15,32 +15,32 @@ helpviewer_keywords:
 - MSBuild, in-process compilers
 - MSBuild, design-time target execution
 ms.assetid: 06cd6d7f-8dc1-4e49-8a72-cc9e331d7bca
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 00d64b060b340302107ddffaf1d69cad802a283b
-ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
+ms.openlocfilehash: b1ddb8bdbc913a72791144d5e9d29d206712a3d6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913278"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594417"
 ---
 # <a name="visual-studio-integration-msbuild"></a>Visual Studio 集成 (MSBuild)
-Visual Studio 承载有 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ，用以加载和生成托管项目。 由于 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 负责处理项目，因此，可以在 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 中成功使用几乎任何 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]格式的项目（即使项目是用另一种工具编写的，而且这些项目有自定义的生成过程）。
+Visual Studio 承载有 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]，用以加载和生成托管项目。 由于 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 负责处理项目，因此，可以在 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 中成功使用几乎任何 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 格式的项目（即使项目是用另一种工具编写的，而且这些项目有自定义的生成过程）。
 
  自定义希望在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中加载和生成的项目和 .targets  文件时，应当考虑 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 的 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]承载的特定方面，本文对此进行了描述。 这些内容将帮助你确保 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中诸如 IntelliSense 和调试这样的功能对你的自定义项目有效。
 
  有关 C++ 项目的信息，请参阅 [Project Files](/cpp/build/reference/project-files)。
 
 ## <a name="project-file-name-extensions"></a>项目文件扩展名
- MSBuild.exe  可识别与 .\*proj  模式匹配的任何项目文件扩展名。 但是， [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 只识别其中一部分项目文件扩展名，这些扩展名决定了将会加载项目的特定于语言的项目系统。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 没有基于非特定语言 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 的项目系统。
+ MSBuild.exe  可识别与 .\*proj  模式匹配的任何项目文件扩展名。 但是，[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 只识别其中一部分项目文件扩展名，这些扩展名决定了将会加载项目的特定于语言的项目系统。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 没有基于非特定语言 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 的项目系统。
 
- 例如，[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 项目系统可加载 .csproj  文件，但是 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 不能加载 .xxproj  文件。 任意语言的源文件对应的项目文件都必须使用与 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 或 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 项目文件相同的扩展名，才能加载到 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]中。
+ 例如，[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 项目系统可加载 .csproj  文件，但是 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 不能加载 .xxproj  文件。 任意语言的源文件对应的项目文件都必须使用与 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 或 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 项目文件相同的扩展名，才能加载到 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中。
 
 ## <a name="well-known-target-names"></a>已知的目标名称
- 在 **中单击** “生成” [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 命令将执行项目中的默认目标。 通常，此目标也命名为 `Build`。 如果选择 **“重新生成”** 或 **“清理”** 命令，将尝试执行项目中的同名目标。 单击 **“发布”** 将执行项目中的名为 `PublishOnly` 的目标。
+ 单击 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中的“生成”  命令会执行项目中的默认目标。 通常，此目标也命名为 `Build`。 如果选择 **“重新生成”** 或 **“清理”** 命令，将尝试执行项目中的同名目标。 单击 **“发布”** 将执行项目中的名为 `PublishOnly` 的目标。
 
 ## <a name="configurations-and-platforms"></a>配置和平台
  在 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目中，配置由在包含 `PropertyGroup` 特性的 `Condition` 元素中进行分组的属性来表示。 为了创建要显示的项目配置和平台的列表，[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 将检查这些条件。 若要成功提取此列表，条件必须具有如下格式：
@@ -84,9 +84,9 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 - [进程内编译器](#in-process-compilers)部分中列出的条件必须满足。
 
 ## <a name="build-solutions"></a>生成解决方案
- 在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]中，解决方案文件和项目生成顺序由 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 本身进行控制。 在命令行用 msbuild.exe  生成解决方案时，[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 将分析解决方案文件，并对项目生成进行排序。 在这两种情况下，项目都将按依赖顺序逐个生成，因此，不会来回进行项目到项目的引用。 相比之下，用 msbuild.exe  生成单个项目时，则会来回进行项目到项目的引用。
+ 在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中，解决方案文件和项目生成顺序由 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 本身进行控制。 在命令行用 msbuild.exe  生成解决方案时，[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 将分析解决方案文件，并对项目生成进行排序。 在这两种情况下，项目都将按依赖顺序逐个生成，因此，不会来回进行项目到项目的引用。 相比之下，用 msbuild.exe  生成单个项目时，则会来回进行项目到项目的引用。
 
- 在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]内生成时，属性 `$(BuildingInsideVisualStudio)` 将设置为 `true`。 这可以用在项目或 .targets  文件中，使生成行为有所不同。
+ 在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 内生成时，属性 `$(BuildingInsideVisualStudio)` 将设置为 `true`。 这可以用在项目或 .targets  文件中，使生成行为有所不同。
 
 ## <a name="display-properties-and-items"></a>显示属性和项
  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 可识别某些属性名称和值。 例如，项目中下面的属性将导致 **“Windows 应用程序”** 出现在 **“项目设计器”** 内的 **“应用程序类型”** 框中。
@@ -99,7 +99,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 知道某些属性的默认值。 这些属性不会保留到项目文件中，除非它们有非默认的值。
 
- 具有任意名称的属性不会显示在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]中。 若要在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]中修改任意属性，必须在 XML 编辑器中打开项目文件，并手动编辑它们。 有关详细信息，请参阅本主题后面的[在 Visual Studio 中编辑项目文件](#edit-project-files-in-visual-studio)一节。
+ 具有任意名称的属性不会显示在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中。 若要在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中修改任意属性，必须在 XML 编辑器中打开项目文件，并手动编辑它们。 有关详细信息，请参阅本主题后面的[在 Visual Studio 中编辑项目文件](#edit-project-files-in-visual-studio)一节。
 
  默认情况下，在项目中定义的具有任意项类型名称的项将会显示在解决方案资源管理器  中其项目节点的下面。 若要隐藏项，请将 `Visible` 元数据设置为 `false`。 例如，下面的项将参与生成过程，但不会显示在解决方案资源管理器  中。
 
@@ -116,12 +116,12 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 ## <a name="conditions-on-items-and-properties"></a>项和属性的条件
  在生成期间，将严格检查所有条件。
 
- 在确定要显示的属性值时，会以不同的方式来计算 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 认为依赖于配置的属性和它认为独立于配置的属性。 对于它认为依赖于配置的属性， [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 将相应地设置 `Configuration` 和 `Platform` 属性，并指示 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 重新计算项目。 对于它认为独立于配置的属性，计算条件的方式则是不确定的。
+ 在确定要显示的属性值时，会以不同的方式来计算 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 认为依赖于配置的属性和它认为独立于配置的属性。 对于它认为依赖于配置的属性，[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 将相应地设置 `Configuration` 和 `Platform` 属性，并指示 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 重新计算项目。 对于它认为独立于配置的属性，计算条件的方式则是不确定的。
 
  如果项的条件表达式用于决定是否应当在解决方案资源管理器  中显示项，则始终忽略这样的表达式。
 
 ## <a name="debugging"></a>调试
- 为了查找和启动输出程序集并附加调试器， [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 需要正确定义属性 `OutputPath`、 `AssemblyName`和 `OutputType` 。 如果生成过程没有导致编译器生成 .pdb  文件，则调试器将无法附加。
+ 为了查找和启动输出程序集并附加调试器，[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 需要正确定义属性 `OutputPath`、`AssemblyName` 和 `OutputType`。 如果生成过程没有导致编译器生成 .pdb  文件，则调试器将无法附加。
 
 ## <a name="design-time-target-execution"></a>设计时目标执行
  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 加载项目时，它将尝试执行具有某些名称的目标。 这些目标包括 `Compile`、`ResolveAssemblyReferences`、`ResolveCOMReferences`、`GetFrameworkPaths` 和 `CopyRunEnvironmentFiles`。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 将运行这些目标，以便可以执行以下操作：初始化编译器以提供 IntelliSense，初始化调试器，以及解析在解决方案资源管理器中显示的引用。 如果这些目标不出现，项目将正确加载和生成，但是 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中的设计时体验将不会完全有效。
@@ -149,10 +149,10 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
  核心 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 类型是在 Microsoft.Build.Core.xsd  中定义的，[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 使用的通用类型则是在 Microsoft.Build.CommonTypes.xsd  中定义的。 若要自定义架构，以便设置针对自定义项类型名称、属性和任务的 IntelliSense 和验证，可以编辑 Microsoft.Build.xsd  ，或创建包括 CommonTypes 或核心架构的自己的架构。 如果创建自己的架构，则必须使用 **“属性”** 窗口指引 XML 编辑器找到它。
 
 ## <a name="edit-loaded-project-files"></a>编辑加载的项目文件
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 将缓存项目文件和由项目文件导入的文件的内容。 如果编辑已加载的项目文件， [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 将自动提示你重新加载项目，以使更改生效。 但是，如果编辑由已加载的项目导入的文件，则没有重新加载的提示，并且你必须手动卸载并重新加载项目，以使更改生效。
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 将缓存项目文件和由项目文件导入的文件的内容。 如果编辑已加载的项目文件，[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 将自动提示你重新加载项目，以使更改生效。 但是，如果编辑由已加载的项目导入的文件，则没有重新加载的提示，并且你必须手动卸载并重新加载项目，以使更改生效。
 
 ## <a name="output-groups"></a>输出组
- Microsoft.Common.targets  中定义的一些目标的名称以 `OutputGroups` 或 `OutputGroupDependencies` 结尾。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 调用这些目标以获取项目输出的特定列表。 例如，`SatelliteDllsProjectOutputGroup` 目标创建将由一次生成过程创建的所有附属程序集的列表。 诸如发布、部署和项目到项目引用这样的功能将使用这些输出组。 没有定义它们的项目仍然可以在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]中加载和生成，但是某些功能可能无法正常工作。
+ Microsoft.Common.targets  中定义的一些目标的名称以 `OutputGroups` 或 `OutputGroupDependencies` 结尾。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 调用这些目标以获取项目输出的特定列表。 例如，`SatelliteDllsProjectOutputGroup` 目标创建将由一次生成过程创建的所有附属程序集的列表。 诸如发布、部署和项目到项目引用这样的功能将使用这些输出组。 没有定义它们的项目仍然可以在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中加载和生成，但是某些功能可能无法正常工作。
 
 ## <a name="reference-resolution"></a>引用解析
  引用解析是使用项目文件中存储的引用项来查找实际程序集的过程。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 必须触发引用解析，才能在 **“属性”** 窗口中显示每个引用的详细属性。 下面的列表描述了三种类型引用和如何解析它们。

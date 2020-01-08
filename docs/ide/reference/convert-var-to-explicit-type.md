@@ -2,19 +2,19 @@
 title: 重构代码以将 var 替换为显式类型
 ms.date: 05/15/2018
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 566d064ac0ac1b9c48ee8e75697cef39b2ec4ee1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4ec388564e1851402f085f6bbaefba08dbea212c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661691"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595769"
 ---
 # <a name="refactoring-to-replace-var-with-an-explicit-type"></a>重构以将 var 替换为显式类型
 

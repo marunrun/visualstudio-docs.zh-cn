@@ -5,25 +5,25 @@ ms.date: 07/17/2019
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: ''
-author: doughall
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 4e84704d4ca37dd9e36da3838b5b1b23f068568c
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: 3ef0cf63f8063d543cbb8fb69a0588dc331e4c6a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888580"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590951"
 ---
 # <a name="update-visual-studio-while-on-a-servicing-baseline"></a>在维修基线上更新 Visual Studio
 
 我们经常在 Visual Studio 的产品生命周期中更新它。 有两种类型的更新： 
 
-* **次要版本更新** &mdash; 例如从 16.0 更新到 16.1&mdash;，其中包含新功能和组件。  
+* **次要版本更新**&mdash; 例如从 16.0 更新到 16.1&mdash;，其中包含新功能和组件。  
 * **服务更新** - 例如，从 16.0.4 更新到 16.0.5，仅包含针对关键问题的目标修复。
 
 企业管理员可以选择将其客户端保管在维护基线上。 在发布下一个维护基线后的一年内将使用维护更新支持该维护基线。

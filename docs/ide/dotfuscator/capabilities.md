@@ -14,15 +14,15 @@ helpviewer_keywords:
 - protection
 description: 了解 Visual Studio 中包含的免费 Dotfuscator Community 副本的功能。
 ms.assetid: 0ee89c58-c900-48fc-a6a2-65ace00e8bab
-author: Joe-Sewell-PreEmptive
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 249c039070246f27669f3a808cf607a649db1e59
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a36aa17207affa257cdbb2caec0f2d6d9392285b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747944"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590002"
 ---
 # <a name="capabilities-of-dotfuscator"></a>Dotfuscator 的功能
 

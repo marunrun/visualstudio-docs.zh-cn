@@ -6,17 +6,17 @@ helpviewer_keywords:
 - user interface [Visual Studio], projects
 - projects [Visual Studio], user interface
 ms.assetid: eec49aec-5474-48a7-889d-709045b9a475
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f3b5c5f79b4ecfcac3e70b6be125c57bcc738199
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cc3ec00ed771caba7e779e708801d611ca16b8c5
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655792"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75567718"
 ---
 # <a name="project-properties-reference"></a>项目属性引用
 
@@ -24,7 +24,7 @@ ms.locfileid: "72655792"
 
 ## <a name="project-properties-pages"></a>项目属性页
 
-| Title | 说明 |
+| Title | 描述 |
 | - | - |
 | [“项目设计器”->“应用程序”页 (Visual Basic)](../../ide/reference/application-page-project-designer-visual-basic.md) | 使用此页指定 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] 项目的应用程序设置和属性。 |
 | [“项目设计器”->“应用程序”页 (C#)](../../ide/reference/application-page-project-designer-csharp.md) | 使用此页指定 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 项目的应用程序设置和属性。 |

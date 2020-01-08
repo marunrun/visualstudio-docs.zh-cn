@@ -13,17 +13,17 @@ helpviewer_keywords:
 - MSBuild, RemoveDuplicates task
 - RemoveDuplicates task [MSBuild]
 ms.assetid: 481cbab6-73ff-488c-aba5-2c09f9eb1e04
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 027e1f4894660b0198ed8a6df862e66e41cde409
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 235f96b3d67b0ad2e3c3bd1c486c5c9f2eeb86c2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62811610"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596003"
 ---
 # <a name="removeduplicates-task"></a>RemoveDuplicates 任务
 从指定的项集合中删除重复的项。
@@ -31,7 +31,7 @@ ms.locfileid: "62811610"
 ## <a name="parameters"></a>参数
  下表描述了 `RemoveDuplicates` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`Filtered`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 包含删除了所有重复项的项集合。 输入项的顺序被保留，保留每个复制项的第一个实例。|
 |`Inputs`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 要从中删除重复项的项集合。|
@@ -66,7 +66,7 @@ ms.locfileid: "62811610"
 </Project>
 ```
 
- 下面的示例显示 `RemoveDuplicates` 任务保留其输入顺序。 任务完成后，`FilteredItems` 项集合以该顺序包含项 MyFile2.cs、MyFile1.cs 和 MyFile3.cs。
+ 下面的示例显示 `RemoveDuplicates` 任务保留其输入顺序。 任务完成后，`FilteredItems` 项集合以该顺序包含项 MyFile2.cs、MyFile1.cs 和 MyFile3.cs。   
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

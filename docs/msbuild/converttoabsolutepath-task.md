@@ -13,17 +13,17 @@ helpviewer_keywords:
 - ConvertToAbsolutePath task [MSBuild]
 - MSBuild, ConvertToAbsolutePath task
 ms.assetid: f1af2cb8-b4ef-4a72-be80-22fa526c4491
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 14695cbfddc2f469d48bf78ee002f0582ef7f4bc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e37c57119f74b9ab5f3157c6b88f9405799a2e82
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834072"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596094"
 ---
 # <a name="converttoabsolutepath-task"></a>ConvertToAbsolutePath 任务
 将相对路径或引用转换为绝对路径。
@@ -31,7 +31,7 @@ ms.locfileid: "62834072"
 ## <a name="task-parameters"></a>任务参数
  下表描述了 `ConvertToAbsolutePath` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`Paths`|必选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 要转换为绝对路径的相对路径的列表。|
 |`AbsolutePaths`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 传入项的绝对路径列表。|

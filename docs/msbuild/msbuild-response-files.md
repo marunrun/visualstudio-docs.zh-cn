@@ -13,26 +13,26 @@ helpviewer_keywords:
 - MSBuild, .rsp files
 - .rsp files
 ms.assetid: 9f53987b-20ee-470a-ab62-fce997bb5e15
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e83ed29e2caf180cdd8950b73f65f62794a8783
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ff207bdb5797cbbfb490a3b5b081ddfb1d665853
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63004844"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585803"
 ---
 # <a name="msbuild-response-files"></a>MSBuild 响应文件
-响应 (.rsp) 文件是包含 MSBuild.exe 命令行开关的文本文件。 每个开关可以单独占一行，或者所有开关仅占一行。 注释行以 # 符号开头。 @ 开关用于将另一个响应文件传递给 MSBuild.exe。
+响应 (.rsp  ) 文件是包含 MSBuild.exe  命令行开关的文本文件。 每个开关可以单独占一行，或者所有开关仅占一行。 注释行以 # 符号开头  。 @ 开关用于将另一个响应文件传递给 MSBuild.exe   。
 
 ## <a name="msbuildrsp"></a>MSBuild.rsp
-自动响应文件是在生成项目时 MSBuild.exe 自动使用的特殊 .rsp 文件。 MSBuild.rsp 文件必须位于 MSBuild.exe 所在的目录中，否则无法找到该文件。 可以将此文件编辑为，向 MSBuild.exe 指定默认命令行开关。 例如，如果每次生成项目时都使用相同的记录器，可以将 -logger 开关添加到 MSBuild.rsp 中，这样 MSBuild.exe 在每次项目生成后都会使用记录器。
+自动响应文件是在生成项目时 MSBuild.exe  自动使用的特殊 .rsp  文件。 MSBuild.rsp 文件必须位于 MSBuild.exe 所在的目录中，否则无法找到该文件   。 可以将此文件编辑为，向 MSBuild.exe  指定默认命令行开关。 例如，如果每次生成项目时都使用相同的记录器，可以将 -logger  开关添加到 MSBuild.rsp  中，这样 MSBuild.exe  在每次项目生成后都会使用记录器。
 
 ## <a name="directorybuildrsp"></a>Directory.Build.rsp
-在版本 15.6 及更高版本中，MSBuild 会在该项目的父级目录中搜索名为 Directory.Build.rsp 的文件。  这可以帮助源代码存储库在命令行生成过程中提供默认参数。  此外，它还可以用于指定托管生成的命令行参数。
+在版本 15.6 及更高版本中，MSBuild 会在该项目的父级目录中搜索名为 Directory.Build.rsp 的文件  。  这可以帮助源代码存储库在命令行生成过程中提供默认参数。  此外，它还可以用于指定托管生成的命令行参数。
 
 ## <a name="see-also"></a>请参阅
 - [MSBuild 参考](../msbuild/msbuild-reference.md)

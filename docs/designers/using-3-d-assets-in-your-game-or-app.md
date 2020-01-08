@@ -10,17 +10,17 @@ f1_keywords:
 - VC.Project.ShaderGraphContentTask.ContentOutput
 - VC.Project.ImageContentTask.GenerateMips
 ms.assetid: ea587909-e434-46a8-abf8-9b3e95a58b4f
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4df842f83f92afe8a8f747135632eb30a715d43f
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: d38f87970d5f9ff6d90befc61073cc4ed3d4ca92
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888506"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589820"
 ---
 # <a name="how-to-use-3d-assets-in-your-game-or-app"></a>如何：在游戏或应用中使用三维资产
 
@@ -95,7 +95,7 @@ ms.locfileid: "72888506"
 
 使用图像内容管道工具生成纹理资产时，你可以采用各种方式压缩纹理、指示生成时是否应该生成 MIP 级别，以及更改输出文件的名称。
 
-|属性|说明|
+|Property|描述|
 |--------------|-----------------|
 |压缩 |指定用于输出文件的压缩类型。<br /><br /> 可用选项为：<br /><br /> -   不进行压缩 <br />-   BC1_UNORM 压缩 <br />-   BC1_UNORM_SRGB 压缩 <br />-   BC2_UNORM 压缩 <br />-   BC2_UNORM_SRGB 压缩 <br />-   BC3_UNORM 压缩 <br />-   BC3_UNORM_SRGB 压缩 <br />-   BC4_UNORM 压缩 <br />-   BC4_SNORM 压缩 <br />-   BC5_UNORM 压缩 <br />-   BC5_SNORM 压缩 <br />-   BC6H_UF16 压缩 <br />-   BC6H_SF16 压缩 <br />-   BC7_UNORM 压缩 <br />-   BC7_UNORM_SRGB 压缩 <br /><br /> 有关不同版本的 DirectX 中支持哪些压缩格式的信息，请参阅 [DXGI 编程指南](/windows/win32/direct3ddxgi/dx-graphics-dxgi-overviews)。|
 |转换为预乘 alpha 格式|若要将输出文件中的图像转换为预乘 alpha 格式，则为“是”；否则为“否”   。 仅更改输出文件，源图像未发生更改。|
@@ -106,7 +106,7 @@ ms.locfileid: "72888506"
 
 使用网格内容管道工具生成网格资产时，你可以更改输出文件的名称。
 
-|属性|说明|
+|Property|描述|
 |--------------|-----------------|
 |内容输出 |指定输出文件的名称。 **重要提示：** 更改输出文件的文件扩展名不会影响其文件格式。|
 
@@ -114,7 +114,7 @@ ms.locfileid: "72888506"
 
 使用着色器内容管道工具生成着色器资产时，你可以更改输出文件的名称。
 
-|属性|说明|
+|Property|描述|
 |--------------|-----------------|
 |内容输出 |指定输出文件的名称。 **重要提示：** 更改输出文件的文件扩展名不会影响其文件格式。|
 
@@ -211,7 +211,7 @@ cbuffer MiscVars : register(b3)
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[如何：导出包含 mipmap 的纹理](../designers/how-to-export-a-texture-that-contains-mipmaps.md)|描述如何使用“图像内容管道”导出包含预计算 mipmap 的纹理。|
 |[如何：导出包含预乘 Alpha 的纹理](../designers/how-to-export-a-texture-that-has-premultiplied-alpha.md)|描述如何使用“图像内容管道”导出包含预乘 alpha 值的纹理。|

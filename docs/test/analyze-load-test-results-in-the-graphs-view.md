@@ -12,15 +12,15 @@ helpviewer_keywords:
 - load tests, using graphs
 - load test results, graphs
 ms.assetid: 4a919cd8-541c-40ee-be3b-352fabc56140
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 4efedd7fc7672331f04440f09d49b9339d90bdb2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: dac639b8513e8ef675c6246476791b9351241130
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665377"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591263"
 ---
 # <a name="analyze-load-test-results-in-the-graphs-view-of-the-load-test-analyzer"></a>在负载测试分析器的关系图视图中分析负载测试结果
 
@@ -38,7 +38,7 @@ ms.locfileid: "72665377"
 
 下表列出了可用于分析负载测试结果的内置关系图。
 
-|关系图名称|说明|
+|关系图名称|描述|
 |-|-|
 |关键指示器|用于描述测试性能的基本情况（如用户负载、吞吐量和响应时间）的计数器。|
 |测试响应时间|有关运行测试所用时间的数据。|

@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Item Element [MSBuild]
 - <Item> Element [MSBuild]
 ms.assetid: dcef5f91-0613-4bfc-8ee9-d7004bb6d3a9
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d94058f1f14f1da644cff672d73cd77e0840c68
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 730e7d317ffa3fd5a450978f35659df3fe5629f3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63006788"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75573659"
 ---
 # <a name="item-element-msbuild"></a>Item 元素 (MSBuild)
 包含用户定义的项和其元数据。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目中使用的每一个项都必须被指定为 `ItemGroup` 元素的子元素。
@@ -66,7 +66,7 @@ ms.locfileid: "63006788"
 
 ### <a name="attributes"></a>特性
 
-|特性|说明|
+|特性|描述|
 |---------------|-----------------|
 |`Include`|可选特性。<br /><br /> 项列表中要包含的文件或通配符。|
 |`Exclude`|可选特性。<br /><br /> 项列表中要排除的文件或通配符。|
@@ -79,13 +79,13 @@ ms.locfileid: "63006788"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ItemMetadata](../msbuild/itemmetadata-element-msbuild.md)|用户定义的包含项元数据值的项元数据键。 项中可能没有或有一些 `ItemMetadata` 元素。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|为项进行元素分组。|
 
@@ -94,7 +94,7 @@ ms.locfileid: "63006788"
 
 使用表示法 @(\<myType>) 可使类型 \<myType> 的项的集合扩展为以分号分隔的字符串列表，并将传递给参数。 如果参数的类型为 `string`，则参数的值是以分号分隔的元素列表。 如果此参数是一个字符串数组 (`string[]`)，则根据分号的位置将每个元素插入到数组中。 如果任务参数的类型为 <xref:Microsoft.Build.Framework.ITaskItem>`[]`，则值是项集合的内容以及附加的任何元数据。 如需通过使用分号之外的其他字符来分隔每个项，请使用语法 @(\<myType>, '\<separator>')。
 
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 引擎能够计算通配符（如 `*` 和 `?`）和递归通配符（如 /\*\*/\*）。 有关详细信息，请参阅[项](../msbuild/msbuild-items.md)。
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 引擎能够计算通配符（如 `*` 和 `?`）和递归通配符（如 /\*\*/\*）  。 有关详细信息，请参阅[项](../msbuild/msbuild-items.md)。
 
 ## <a name="examples"></a>示例
 以下代码示例演示如何声明类型 `CSFile` 的两个项。 第二个声明项包含将 `MyMetadata` 设置为 `HelloWorld` 的元数据。
@@ -108,7 +108,7 @@ ms.locfileid: "63006788"
 </ItemGroup>
 ```
 
-以下代码示例演示如何使用 `Update` 属性修改通过 glob 包含的 somefile.cs 文件中的元数据。 （仅适用于 Visual Studio 2017 或更高版本中的 .NET Core 项目。）
+以下代码示例演示如何使用 `Update` 属性修改通过 glob 包含的 somefile.cs 文件中的元数据  。 （仅适用于 Visual Studio 2017 或更高版本中的 .NET Core 项目。）
 
 ```xml
 <ItemGroup>

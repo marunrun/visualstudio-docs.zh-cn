@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, properties
 ms.assetid: 962912ac-8931-49bf-a88c-0200b6e37362
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e476876234c31009d219af30fbe3c9d1e55f3d96
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 82ae72ee835fa5b5e0d2ebb484ce24a5ffb85b91
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443591"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589235"
 ---
 # <a name="msbuild-properties"></a>MSBuild 属性
 属性是可用于配置生成的名称/值对。 属性可用于将值传递给任务，评估条件和存储将在整个项目文件中引用的值。
@@ -59,7 +59,7 @@ ms.locfileid: "63443591"
  有关详细信息，请参阅[如何：在生成中使用环境变量](../msbuild/how-to-use-environment-variables-in-a-build.md)。
 
 ## <a name="registry-properties"></a>注册表属性
- 可使用以下语法读取系统注册表值，其中 `Hive` 是注册表配置单元（例如 HKEY_LOCAL_MACHINE），`MyKey` 是键名称，`MySubKey` 是子键名称，`Value` 是子键的值。
+ 可使用以下语法读取系统注册表值，其中 `Hive` 是注册表配置单元（例如 HKEY_LOCAL_MACHINE），`MyKey` 是键名称，`MySubKey` 是子键名称，`Value` 是子键的值  。
 
 ```xml
 $(registry:Hive\MyKey\MySubKey@Value)
@@ -82,7 +82,7 @@ $(registry:Hive\MyKey\MySubKey)
 ```
 
 ## <a name="global-properties"></a>全局属性
- 借助 MSBuild，可使用 -property（或 -p）开关在命令行中设置属性。 这些全局属性值会覆盖项目文件中设置的属性值。 这包括环境属性，但不包括不能更改的保留属性。
+ 借助 MSBuild，可使用 -property  （或 -p  ）开关在命令行中设置属性。 这些全局属性值会覆盖项目文件中设置的属性值。 这包括环境属性，但不包括不能更改的保留属性。
 
  以下示例将全局 `Configuration` 属性设置为 `DEBUG`。
 

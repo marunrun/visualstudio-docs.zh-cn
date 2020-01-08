@@ -2,8 +2,8 @@
 title: 生成类或类型
 ms.date: 01/26/2018
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 f1_keywords:
 - vsl.GenerateFromUsage
@@ -12,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: d561a77006b83d366506b48d3a164ada380b1a24
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 94786ef10e427a0deb4f80471305509124f1638b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660078"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595626"
 ---
 # <a name="generate-a-class-or-type-in-visual-studio"></a>在 Visual Studio 中生成类或类型
 
@@ -70,11 +70,11 @@ ms.locfileid: "72660078"
 
    ![生成类型](media/class-newtype-cs.png)
 
-   选择 | 说明
+   选择 | 描述
    --- | ---
    Access | 将类型设置为具有“默认”  、“内部”  或“公共”  访问权限。
    类型 | 这可被设置为“类”  或“结构”  。
-   name | 无法对此进行更改，将使用已键入的名称。
+   “属性” | 无法对此进行更改，将使用已键入的名称。
    项目 | 如果在你的解决方案中有多个项目，可以选择想要设置类/结构所在的位置。
    文件名 | 可以创建一个新文件，或将该类型添加到现有文件。
 

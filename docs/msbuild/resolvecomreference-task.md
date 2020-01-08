@@ -13,17 +13,17 @@ helpviewer_keywords:
 - MSBuild, ResolveCOMReference task
 - ResolveCOMReference task [MSBuild]
 ms.assetid: c9bf5fcf-6453-40ea-b50f-a212adc3e9b5
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ecefab48babc2938a4995ec8232e0aa7a06dae3c
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: 3fdc6c6ccd58bcc83cc37ff3a9f7888af837ed6e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68681113"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595197"
 ---
 # <a name="resolvecomreference-task"></a>ResolveComReference 任务
 
@@ -33,7 +33,7 @@ ms.locfileid: "68681113"
 
  下表描述了 `ResolveCOMReference` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`DelaySign`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，任务会在程序集中放入公钥。 如果为 `false`，任务会对程序集进行完全签名。|
 |`EnvironmentVariables`|可选 `String[]` 参数。<br /><br /> 环境变量对的数组（使用等号分隔）。 这些变量会传递给生成的 tlbimp.exe 和 aximp.exe 以及常规环境块，或有选择地重写常规环境块。  |
@@ -57,7 +57,7 @@ ms.locfileid: "68681113"
 
  下表介绍了传递给 `TypeLibNames` 参数的项可用的项元数据。
 
-|元数据|说明|
+|元数据|描述|
 |--------------|-----------------|
 |`GUID`|所需的项元数据。<br /><br /> 类型库的 GUID。 如果未指定此项元数据，则任务失败。|
 |`VersionMajor`|所需的项元数据。<br /><br /> 类型库的主版本。 如果未指定此项元数据，则任务失败。|
@@ -70,7 +70,7 @@ ms.locfileid: "68681113"
 
  下表介绍了传递给 `TypeLibFiles` 参数的项可用的项元数据。
 
-|元数据|说明|
+|元数据|描述|
 |--------------|-----------------|
 |`EmbedInteropTypes`|可选 `Boolean` 参数。<br /><br />  如果为 `true`，则将此引用中的互操作类型直接嵌入到程序集中，而不是生成互操作 DLL。|
 |`WrapperTool`|可选项元数据。<br /><br /> 指定用于生成此类型库的程序集包装器的包装工具。 如果未指定此项元数据，任务将使用默认包装工具“tlbimp”。 可供类型库使用且区分大小写的选项有：<br /><br /> -   `Primary`：如果希望使用已为 COM 组件生成的主互操作程序集，请使用此包装工具。 使用此包装工具时，请勿指定包装器输出目录，否则任务会失败。<br />-   `TLBImp`：如果希望为 COM 组件生成互操作程序集，请使用此包装工具。<br />-   `AXImp`：如果希望为 ActiveX 控件生成互操作程序集，请使用此包装工具。|

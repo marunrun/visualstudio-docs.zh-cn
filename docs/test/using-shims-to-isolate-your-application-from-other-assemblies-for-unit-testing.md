@@ -2,18 +2,18 @@
 title: 使用填充码隔离应用程序以进行单元测试
 ms.date: 11/04/2016
 ms.topic: conceptual
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
-author: jillre
+author: mikejo5000
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: e4a59cb4e3372e16634cddde2a163ac94ca73d24
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 480283b4f86f28fdedfb38687682fcee4e67646e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72982803"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585530"
 ---
 # <a name="use-shims-to-isolate-your-app-for-unit-testing"></a>使用填充码隔离应用以进行单元测试
 
@@ -92,7 +92,7 @@ public void Y2kCheckerTest() {
 
 ### <a name="write-a-test-with-shims"></a>编写包含填充码的测试
 
-在测试代码中，为要虚设的方法插入 *绕道*。 例如:
+在测试代码中，为要虚设的方法插入 *绕道*。 例如：
 
 ```csharp
 [TestClass]

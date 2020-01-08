@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Visual Studio, unit tests
 - unit tests, verifying code with
 - testing code, automated tests
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: fd6d6dca2680dcfcaa42912333b080c428ba78d2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: ffe383d2195feb6689954a8ec858b196bae8c06a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659852"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565989"
 ---
 # <a name="unit-test-your-code"></a>对代码进行单元测试
 
@@ -26,13 +26,13 @@ ms.locfileid: "72659852"
 
 * 测试资源管理器 &mdash; 可在“测试资源管理器”中运行单元测试并查看其结果   。 可以使用任何单元测试框架，包括具有资源管理器的适配器的第三方框架。 
 
-* **托管代码的 Microsoft 单元测试框架** &mdash; 托管代码的 Microsoft 单元测试框架随 Visual Studio 安装，并提供测试 .NET 代码的框架。
+* **托管代码的 Microsoft 单元测试框架**&mdash; 托管代码的 Microsoft 单元测试框架随 Visual Studio 安装，并提供测试 .NET 代码的框架。
 
-* **适用于 C++ 的 Microsoft 单元测试框架** &mdash; 适用于 C++ 的 Microsoft 单元测试框架作为“使用 C++ 的桌面开发”工作负载的一部分安装。  它提供一个框架，用于测试本机代码。 还随附有 Google Test、Boost.Test 和 CTest 框架，并且提供了第三方适配器用于其他测试框架。 有关详细信息，请参阅[编写适用于 C/C++ 的单元测试](../test/writing-unit-tests-for-c-cpp.md)。
+* **适用于 C++ 的 Microsoft 单元测试框架**&mdash; 适用于 C++ 的 Microsoft 单元测试框架作为“使用 C++ 的桌面开发”工作负载的一部分安装。  它提供一个框架，用于测试本机代码。 还随附有 Google Test、Boost.Test 和 CTest 框架，并且提供了第三方适配器用于其他测试框架。 有关详细信息，请参阅[编写适用于 C/C++ 的单元测试](../test/writing-unit-tests-for-c-cpp.md)。
 
-* **代码覆盖工具** &mdash; 可以确定单元测试从“测试资源管理器”中的一个命令执行的产品代码数量。
+* **代码覆盖工具**&mdash; 可以确定单元测试从“测试资源管理器”中的一个命令执行的产品代码数量。
 
-* **Microsoft Fakes 隔离框架** &mdash; Microsoft Fakes 隔离框架可以为创建所测试代码中的依赖关系的产品和系统代码创建替代类和方法。 通过实施函数的假委托，可以控制依赖对象的行为和输出。
+* **Microsoft Fakes 隔离框架**&mdash; Microsoft Fakes 隔离框架可以为创建所测试代码中的依赖关系的产品和系统代码创建替代类和方法。 通过实施函数的假委托，可以控制依赖对象的行为和输出。
 
 还可以使用 [IntelliTest](../test/generate-unit-tests-for-your-code-with-intellitest.md) 浏览 .NET 代码，以生成测试数据和单元测试套件。 对于代码中的每个语句，将生成执行该语句的测试输入。 为代码中的每个条件分支执行案例分析。
 
