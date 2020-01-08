@@ -25,6 +25,7 @@
 ## [创建新项目](create-new-projects.md)
 ## [添加和删除项目项](add-and-remove-project-items.md)
 ## [管理解决方案和项目属性](managing-solutions-and-project-properties.md)
+## [多定向](project-multitargeting.md)
 ## 管理项目中的引用
 ### [概述](managing-references-in-a-project.md)
 ### [演练 - 包括项目中的 NuGet 包](nuget-walkthrough.md)
@@ -35,6 +36,8 @@
 ## [编辑器功能](source-editor.md)
 ## [重构](refactoring.md)
 ## [IntelliSense](intellisense.md)
+## [显示导入项](show-imports.md)
+## [多个插入点编辑](multi-caret-editing.md)
 ## [注释](comments.md)
 ## [编辑器行为](editor-behavior.md)
 ## [任务注释](task-comments.md)
@@ -47,6 +50,7 @@
 # 调试
 ## [概述](debugging.md)
 ## [数据可视化效果](data-visualizations.md)
+## [通过源链接调试 NuGet 包](source-link.md)
 
 # 编译和生成
 ## [概述](compiling-and-building.md)
