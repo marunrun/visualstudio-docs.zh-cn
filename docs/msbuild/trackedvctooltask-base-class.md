@@ -7,16 +7,16 @@ dev_langs:
 - CSharp
 - C++
 - jsharp
-author: mikeblome
-ms.author: mblome
+author: ghogen
+ms.author: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a4044416131a27ca313d10d02404094c5f5e219
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8a4272f7800e0532c0674fe7117e839cb16557d5
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62938864"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594924"
 ---
 # <a name="trackedvctooltask-base-class"></a>TrackedVCToolTask 基类
 
@@ -24,29 +24,29 @@ ms.locfileid: "62938864"
 
 ## <a name="parameters"></a>参数
 
-下表介绍了 TrackedVCToolTask 基类的参数。
+下表介绍了 TrackedVCToolTask  基类的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
-|**DeleteOutputOnExecute**|可选的 bool 参数。|
-|**EnableExecuteTool**|可选的 bool 参数。|
+|**DeleteOutputOnExecute**|可选的 bool  参数。|
+|**EnableExecuteTool**|可选的 bool  参数。|
 |**ExcludedInputPaths**|可选的 **ITaskItem[]** 参数。|
-|**MinimalRebuildFromTracking**|可选的 bool 参数。|
-|**PathOverride**|可选的 string 参数。|
-|**PostBuildTrackingCleanup**|可选的 bool 参数。|
-|**RootSource**|可选的 string 参数。|
-|**SkippedExecution**|可选的 bool 输出参数。|
+|**MinimalRebuildFromTracking**|可选的 bool  参数。|
+|**PathOverride**|可选的 string  参数。|
+|**PostBuildTrackingCleanup**|可选的 bool  参数。|
+|**RootSource**|可选的 string  参数。|
+|**SkippedExecution**|可选的 bool  输出参数。|
 |**SourcesCompiled**|可选的 **ITaskItem[]** 输出参数。|
-|**TLogCommandFile**|可选的 ITaskItem 参数。|
+|**TLogCommandFile**|可选的 ITaskItem  参数。|
 |**TLogReadFiles**|可选的 **ITaskItem[]** 参数。|
 |**TLogWriteFiles**|可选的 **ITaskItem[]** 参数。|
-|**ToolArchitecture**|可选的 string 参数。|
-|**TrackCommandLines**|可选的 bool 参数。|
-|**TrackFileAccess**|可选的 bool 参数。|
+|**ToolArchitecture**|可选的 string  参数。|
+|**TrackCommandLines**|可选的 bool  参数。|
+|**TrackFileAccess**|可选的 bool  参数。|
 |**TrackedInputFilesToIgnore**|可选的 **ITaskItem[]** 参数。|
 |**TrackedOutputFilesToIgnore**|可选的 **ITaskItem[]** 参数。|
-|**TrackerFrameworkPath**|可选的 string 参数。|
-|**TrackerSdkPath**|可选的 string 参数。|
+|**TrackerFrameworkPath**|可选的 string  参数。|
+|**TrackerSdkPath**|可选的 string  参数。|
 
 ## <a name="see-also"></a>请参阅
 

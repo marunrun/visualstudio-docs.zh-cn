@@ -4,17 +4,17 @@ ms.date: 10/05/2015
 ms.topic: conceptual
 f1_keywords:
 - vs.UnitTest.CreateIntelliTest
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: cd808e23fbb94259df0805125e7d6f3e27dbaeac
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: 65b1de58f195b957d080bd21144c22479b1aafed
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72664902"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589586"
 ---
 # <a name="how-to-generate-unit-tests-by-using-intellitest"></a>如何：通过使用 IntelliTest 来生成单元测试
 

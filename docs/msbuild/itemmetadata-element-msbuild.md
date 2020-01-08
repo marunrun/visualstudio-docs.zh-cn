@@ -11,17 +11,17 @@ helpviewer_keywords:
 - ItemMetadata Element [MSBuild]
 - <ItemMetadata> Element [MSBuild]
 ms.assetid: e3db5122-202d-43a9-b2f4-3e0ec4ed3d08
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 825c6b897447a5a628d9a97e4c7e64f1427fb4d7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 66c19dbd74176babbf9e26030a68a6095992b660
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62817666"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589365"
 ---
 # <a name="itemmetadata-element-msbuild"></a>ItemMetadata 元素 (MSBuild)
 包含用户定义的项元数据键，其中包含项元数据值。 一个项可能具有任意数量的元数据键值对。
@@ -39,7 +39,7 @@ ms.locfileid: "62817666"
 
 ### <a name="attributes"></a>特性
 
-|特性|说明|
+|特性|描述|
 |---------------|-----------------|
 |`Condition`|可选特性。<br /><br /> 要计算的条件。 有关详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。|
 
@@ -48,7 +48,7 @@ ms.locfileid: "62817666"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[Item](../msbuild/item-element-msbuild.md)|为生成过程定义输入的用户定义元素。|
 

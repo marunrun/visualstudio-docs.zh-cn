@@ -3,19 +3,19 @@ title: 重构代码以将 LINQ 查询转换为 foreach 语句
 description: 将以查询语法编写的任何 LINQ 查询转换为 foreach 语句。
 ms.date: 05/15/2018
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: a618285e1981171eb8f5f2f435fb23d412296b5b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bb2cdf96d7f7829ff6a6d1394160548da2adae7f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654533"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595743"
 ---
 # <a name="refactoring-to-convert-linq-to-a-foreach-statement"></a>重构以将 LINQ 转换为 foreach 语句
 

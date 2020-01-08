@@ -2,17 +2,17 @@
 title: 设置颜色主题和字体
 ms.date: 11/20/2017
 ms.topic: quickstart
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 039e48dec17ce902932e2d0df26ebb336c396985
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 11cd73574f42fffb7bcfcda5ab47496fe92565c7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667785"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596939"
 ---
 # <a name="personalize-the-visual-studio-ide-and-editor"></a>个性化设置 Visual Studio IDE 和编辑器
 
@@ -36,7 +36,7 @@ Visual Studio 用户界面的默认颜色主题命名为“蓝色”  。 让我
 
 1. 在菜单栏上，这是“文件”和“编辑”等菜单的行，选择“工具” > “选项”     。
 
-1. 在“环境” > “常规”选项页上，将选择的“颜色主题”更改为“深色”，然后选择“确定”      。
+1. 在“环境”   > “常规”  选项页上，将选择的“颜色主题”  更改为“深色”  ，然后选择“确定”  。
 
    将整个 Visual Studio 开发环境 (IDE) 的颜色主题更改为“深色”  。
 
