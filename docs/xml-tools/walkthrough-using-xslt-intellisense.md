@@ -3,17 +3,17 @@ title: 演练：使用 XSLT IntelliSense
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 079d95ac-2eaf-4ae1-9cd3-2c81a961a942
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 606c4ad307de46d19989d14e2c660cc0286cb803
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: adeab012e78d5f49ca94d1d8135aaf491839c767
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72604380"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592433"
 ---
 # <a name="walkthrough-using-xslt-intellisense"></a>演练：使用 XSLT IntelliSense
 
@@ -152,7 +152,7 @@ ms.locfileid: "72604380"
     </xsl:stylesheet>
     ```
 
-2. 将光标插入 `<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:alt="http://www.w3.org/1999/XSL/Transform-alternate" version="1.0">` 之后，然后按**enter**。 然后开始键入以下 `xsl:namespace-alias` 元素：
+2. 将光标插入 `<xsl:stylesheet version="1.0">` 之后，然后按**enter**。 然后开始键入以下 `xsl:namespace-alias` 元素：
 
     ```xml
     <xsl:namespace-alias stylesheet-prefix="alt" result-prefix="xsl"/>
@@ -160,6 +160,6 @@ ms.locfileid: "72604380"
 
      请注意前缀列表在 `stylesheet-prefix` 元素的 `result-prefix` 和 `xsl:namespace-alias` 特性中的显示方式。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 编辑器的 IntelliSense 功能](../xml-tools/xml-editor-intellisense-features.md)
