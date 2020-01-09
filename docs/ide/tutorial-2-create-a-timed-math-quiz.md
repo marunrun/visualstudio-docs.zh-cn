@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e092e11474aa872903977e1b07c699b160bef8a2
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: 884047237652f6b69bd437b5faf47d820903b824
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516598"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588663"
 ---
 # <a name="tutorial-2-create-a-timed-math-quiz"></a>教程 2：创建计时数学测验
 
@@ -39,7 +39,7 @@ ms.locfileid: "72516598"
 
 ## <a name="tutorial-links"></a>教程链接
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[步骤 1：创建项目并向窗体添加标签](../ide/step-1-create-a-project-and-add-labels-to-your-form.md)|首先创建项目，更改属性并添加 `Label` 控件。|
 |[步骤 2：创建随机加法问题](../ide/step-2-create-a-random-addition-problem.md)|创建一道加法题，然后使用 `Random` 类生成随机数。|
@@ -54,7 +54,7 @@ ms.locfileid: "72516598"
 
 ## <a name="next-steps"></a>后续步骤
 
-要开始学习本教程，请从[步骤 1：创建项目并向窗体添加标签](../ide/step-1-create-a-project-and-add-labels-to-your-form.md)  。
+要开始学习本教程，请从[步骤 1：创建项目并向窗体添加标签](../ide/step-1-create-a-project-and-add-labels-to-your-form.md)** 。
 
 ## <a name="see-also"></a>请参阅
 
