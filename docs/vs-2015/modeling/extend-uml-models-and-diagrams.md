@@ -12,14 +12,14 @@ caps.latest.revision: 39
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b8b154ccd18472d0b0bca502c78a6612aeccdda6
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 7f4c490abbcd5b970c5bf9586ea881be4c5d62a4
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301044"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849802"
 ---
-# <a name="extend-uml-models-and-diagrams"></a>Extend UML models and diagrams
+# <a name="extend-uml-models-and-diagrams"></a>扩展 UML 模型和关系图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本主题汇总了扩展 Visual Studio 包含的 UML 建模工具可使用的不同方法。 若要查看支持每个模型类型和工具的 Visual Studio 版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
@@ -30,7 +30,7 @@ ms.locfileid: "74301044"
 
  Fabrikam 的工具团队进行了一系列改进来帮助开发团队。 下面各节描述了可以定义的不同种类的扩展。 可以将其中一些技术组合到一个 Visual Studio 扩展中。
 
- 有关详细信息，请参阅此视频：![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[MSDN 如何实现系列： UML 工具和扩展性](https://go.microsoft.com/fwlink/?LinkId=214467)。
+ 有关详细信息，请参阅此视频：![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[MSDN 如何实现系列： UML 工具和扩展性](https://msdn.microsoft.com/vstudio/ff859492)。
 
 ## <a name="Requirements"></a>要求
 
@@ -109,14 +109,14 @@ ms.locfileid: "74301044"
 ## <a name="domain-specific-languages"></a>域特定语言
  在经常使用某个特定类型的模型的情况下，创建域特定语言会很有用。 域特定语言比 UML 模型更能符合你的业务需求，只不过你需要进行更多的工作来生成和维护它。 有关详细信息，请参阅用于[Visual Studio 的建模 SDK-域特定语言](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)。
 
-## <a name="external-resources"></a>外部资源
+## <a name="external-resources"></a>外部資源
 
 |**类别**|**Links**|
 |------------------|---------------|
-|**视频**|![链接到视频](../data-tools/media/playvideo.gif "PlayVideo") [MSDN 如何实现系列： UML 工具和扩展性](https://go.microsoft.com/fwlink/?LinkId=214467)<br /><br /> ![视频](../data-tools/media/playvideo.gif "PlayVideo")[通道9： UML 与 Visual Studio 的](https://go.microsoft.com/fwlink/?LinkId=199957)链接|
-|**论坛**|-   [Visual Studio 可视化和建模工具](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio 可视化和建模 SDK（DSL 工具）](https://go.microsoft.com/fwlink/?LinkId=184721)|
-|**博客**|[Visual Studio ALM + Team Foundation Server 博客](https://go.microsoft.com/fwlink/?LinkID=201340)|
-|**技术文章和日志**|[MSDN 体系结构中心](https://go.microsoft.com/fwlink/?LinkId=201343)|
+|**视频**|![链接到视频](../data-tools/media/playvideo.gif "PlayVideo") [MSDN 如何实现系列： UML 工具和扩展性](https://msdn.microsoft.com/vstudio/ff859492)<br /><br /> ![视频](../data-tools/media/playvideo.gif "PlayVideo")[通道9： UML 与 Visual Studio 的](https://channel9.msdn.com/posts/clinted/)链接|
+|**论坛**|-   [Visual Studio 可视化和建模工具](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Visual Studio 可视化和建模 SDK（DSL 工具）](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
+|**Blogs**|[Visual Studio ALM + Team Foundation Server 博客](https://blogs.msdn.com/b/visualstudioalm)|
+|**技术文章和日志**|[MSDN 体系结构中心](https://msdn.microsoft.com/architecture/default.aspx)|
 
 ## <a name="see-also"></a>请参阅
  [为适用于 UML 建模扩展性的应用 API 参考](../modeling/api-reference-for-uml-modeling-extensibility.md)[创建模型](../modeling/create-models-for-your-app.md)

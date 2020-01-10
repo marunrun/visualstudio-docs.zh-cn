@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/24/2017
 ms.author: ghogen
-ms.openlocfilehash: 36b2691525eb66bf946317c1bb5254796d5cd639
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 7b7ec05e8d849f7e802ab1c1ff4464e0552ab6d6
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291222"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849860"
 ---
 # <a name="browse-and-manage-storage-resources-by-using-server-explorer"></a>使用服务器资源管理器浏览和管理存储资源
 
@@ -26,7 +26,7 @@ ms.locfileid: "74291222"
 
 如果已安装 Azure Tools for Microsoft Visual Studio，可以从 Azure 的存储帐户中查看 Blob、队列和表数据。 服务器资源管理器中的 Azure“存储”节点显示了位于本地存储模拟器帐户和其他 Azure 存储帐户中的数据。
 
-若要在 Visual Studio 中查看服务器资源管理器，请在菜单栏上选择“查看” **“服务器资源管理器”**  > 。 “存储”节点显示已连接的每个 Azure 订阅或证书下的所有存储帐户。 如果存储帐户未出现，可以遵循[本文稍后部分](#add-storage-accounts-by-using-server-explorer)的说明来添加帐户。
+若要在 Visual Studio 中查看服务器资源管理器，请在菜单栏上选择“查看” > “服务器资源管理器”。 “存储”节点显示已连接的每个 Azure 订阅或证书下的所有存储帐户。 如果存储帐户未出现，可以遵循[本文稍后部分](#add-storage-accounts-by-using-server-explorer)的说明来添加帐户。
 
 从 Azure SDK 2.7 开始，也可使用 Cloud Explorer 来查看和管理 Azure 资源。 有关详细信息，请参阅[使用 Cloud Explorer 管理 Azure 资源](vs-azure-tools-resources-managing-with-cloud-explorer.md)。
 
@@ -78,7 +78,7 @@ ms.locfileid: "74291222"
 
 1. 在“上传新文件”对话框中，选择“浏览”按钮并指定要上传的文件，并在“文件夹(可选)”框中输入文件夹名称。
 
-   ![将文件上传到 Blob 文件夹](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC766037.png)
+   ![将文件上载到 Blob 文件夹](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC766037.png)
 
    可以遵循相同的步骤将子文件夹添加到容器文件夹。 如未指定文件夹名称，文件会上传到 Blob 容器的顶层。 文件将出现在容器中指定的文件夹内。
 
@@ -110,7 +110,7 @@ ms.locfileid: "74291222"
 * 选择 Blob 名称，并选择“打开”按钮。
 * 双击 Blob 名称。
 
-Blob 下载的进度显示在 **“Azure 活动日志”** 窗口中。
+Blob 下载的进度会显示在“Azure 活动日志”窗口中。
 
 在此文件类型的默认编辑器中打开该 Blob。 如果操作系统识别出文件类型，则在本地安装的应用程序中打开文件。 否则会提示选择适合该 Blob 文件类型的应用程序。 下载 Blob 时创建的本地文件将标记为只读。
 
@@ -122,7 +122,7 @@ Blob 数据在本地缓存，并且对照 Azure Blob 存储中 Blob 的最后修
 
 若要上传 Blob，当容器处于打开状态，可以在 Blob 容器视图中查看时，选择“上传 Blob”按钮。
 
-可以选择一个或多个文件进行上传，可以上传任何类型的文件。 “Azure 活动日志”窗口显示上传进度。 有关处理 Blob 数据的详细信息，请参阅[如何在 .NET 中使用 Azure Blob 存储](https://go.microsoft.com/fwlink/p/?LinkId=267911)。
+可以选择一个或多个文件进行上传，可以上传任何类型的文件。 “Azure 活动日志”窗口显示上传进度。 有关处理 Blob 数据的详细信息，请参阅[如何在 .NET 中使用 Azure Blob 存储](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)。
 
 ### <a name="to-view-logs-transferred-to-blobs"></a>查看传输到 Blob 的日志
 
@@ -142,7 +142,7 @@ Blob 数据在本地缓存，并且对照 Azure Blob 存储中 Blob 的最后修
 
 ## <a name="work-with-queue-resources"></a>处理队列资源
 
-存储服务队列托管在 Azure 存储帐户中。 可以使用它们，允许云服务角色通过消息传递机制互相通信以及与其他服务通信。 可以用编程方式，通过云服务以及面向外部客户端的 Web 服务来访问队列。 还可以使用 Visual Studio 中的服务器资源管理器直接访问队列。
+存储服务队列托管在 Azure 存储帐户中。 可以使用它们，允许云服务角色通过消息传递机制互相通信以及与其他服务通信。 可以用编程方式，通过云服务以及面向外部客户端的 Web 服务来访问队列。 还可以使用 Visual Studio 中的服务器资源管理器，直接访问队列。
 
 开发使用队列的云服务时，可能希望使用 Visual Studio 来创建队列，并在开发和测试代码时，以交互方式使用它们。
 
@@ -157,7 +157,7 @@ Blob 数据在本地缓存，并且对照 Azure Blob 存储中 Blob 的最后修
 
 ![查看队列](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC651470.png)
 
-有关存储服务队列的详细信息，请参阅[通过 .NET 开始使用 Azure 队列存储](https://go.microsoft.com/fwlink/?LinkID=264702)。 有关存储服务队列的 Web 服务的详细信息，请参阅 [Queue Service Concepts](https://go.microsoft.com/fwlink/?LinkId=264788)（队列服务的概念）。 有关如何使用 Visual Studio 将消息发送到存储服务队列的信息，请参阅 [Sending Messages to a Storage Services Queue](/azure/visual-studio/vs-storage-cloud-services-getting-started-queues)（将消息发送到存储服务队列）。
+有关存储服务队列的详细信息，请参阅[通过 .NET 开始使用 Azure 队列存储](https://www.windowsazure.com/develop/net/how-to-guides/queue-service/)。 有关存储服务队列的 Web 服务的详细信息，请参阅 [Queue Service Concepts](https://msdn.microsoft.com/library/windowsazure/dd179353.aspx)（队列服务的概念）。 有关如何使用 Visual Studio 将消息发送到存储服务队列的信息，请参阅 [Sending Messages to a Storage Services Queue](/azure/visual-studio/vs-storage-cloud-services-getting-started-queues)（将消息发送到存储服务队列）。
 
 > [!NOTE]
 > 存储服务队列不同于 Azure 服务总线队列。 有关服务总线队列的详细信息，请参阅[服务总线队列、主题和订阅](/azure/service-bus-messaging/service-bus-queues-topics-subscriptions)。
@@ -249,7 +249,7 @@ Azure 表存储可存储大量结构化数据。 该服务是一个 NoSQL 数据
 
 ## <a name="add-storage-accounts-by-using-server-explorer"></a>使用服务器资源管理器添加存储帐户
 
-可以使用两种方法在服务器资源管理器中添加存储帐户。 可以在 Azure 订阅中创建存储帐户，也可以附加现有的存储帐户。
+有两种方法可通过服务器资源管理器添加存储帐户。 可以在 Azure 订阅中创建存储帐户，也可以附加现有的存储帐户。
 
 ### <a name="to-create-a-storage-account-by-using-server-explorer"></a>使用服务器资源管理器创建存储帐户
 
@@ -259,7 +259,7 @@ Azure 表存储可存储大量结构化数据。 该服务是一个 NoSQL 数据
 
    * 要将存储帐户添加到的 Azure 订阅。
    * 要用于新存储帐户的名称。
-   * 区域或地缘组（例如“美国西部”或“东亚”）。
+   * 区域或地缘组（例如“美国西部”或“亚洲东部”）。
    * 要用于存储帐户的复制类型，如本地冗余。
 
    ![创建 Azure 存储帐户](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC744166.png)
@@ -272,7 +272,7 @@ Azure 表存储可存储大量结构化数据。 该服务是一个 NoSQL 数据
 
 1. 在服务器资源管理器中，打开 Azure“存储”节点的快捷菜单，并选择“附加外部存储”。
 
-    ![添加现有的存储帐户](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC766039.png)
+    ![添加现有存储帐户](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC766039.png)
 1. 在“创建存储帐户”对话框中，选择或输入以下信息：
 
    * 要附加的现有存储帐户的名称。

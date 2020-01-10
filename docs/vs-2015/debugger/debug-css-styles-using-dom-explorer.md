@@ -20,12 +20,12 @@ caps.latest.revision: 47
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a9f07fc064a87910f59f5734d4d635aa3b5d6b77
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 676a4ef2570873998f3ebc890e06d6d5ccae4cf2
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299496"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852426"
 ---
 # <a name="debug-css-styles-using-dom-explorer"></a>使用 DOM 资源管理器调试 CSS 样式
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "74299496"
     > [!TIP]
     > 在模拟器中显示应用程序后，请将模拟器放置在 Visual Studio 窗口的旁边，以便你能够立即看到选择的结果以及对 CSS 样式所做的更改。  
   
-6. 切换到 Visual Studio，然后在 DOM 资源管理器中单击 **“选择元素”** （或按 Ctrl+B）。 这将更改选择模式以使你可通过单击某项来选择该项，然后将应用程序置于前台。 单击后模式即恢复原样。 下面是 **“选择元素”** 按钮。 ![DOM 资源管理器中的 "选择元素" 按钮](../debugger/media/js-dom-select-element-button.png "JS_DOM_Select_Element_Button ")  
+6. 切换到 Visual Studio，然后在 DOM 资源管理器中单击 **“选择元素”** （或按 Ctrl+B）。 这将更改选择模式以使你可通过单击某项来选择该项，然后将应用程序置于前台。 单击后模式即恢复原样。 下面是 **“选择元素”** 按钮。 ![DOM 资源管理器中的 "选择元素" 按钮](../debugger/media/js-dom-select-element-button.png "JS_DOM_Select_Element_Button")  
   
     > [!TIP]
     > 也可直接在 DOM 资源管理器中选择 HTML 元素。 有关选择元素的详细信息，请参阅[快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md)。  
@@ -160,4 +160,4 @@ ms.locfileid: "74299496"
  [快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md)   
  [使用 DOM 资源管理器调试布局](../debugger/debug-layout-using-dom-explorer.md)   
  [查看 DOM 事件侦听器](../debugger/view-dom-event-listeners.md)   
- [产品支持和辅助功能](https://go.microsoft.com/fwlink/?LinkId=253502)
+ [产品支持和辅助功能](https://msdn.microsoft.com/library/tzbxw1af(VS.110).aspx)

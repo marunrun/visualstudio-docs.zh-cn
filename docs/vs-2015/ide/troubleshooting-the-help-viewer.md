@@ -12,12 +12,12 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 01049d5ecf8710cd680278dbf95dbe70767cd5bf
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 2cedc9f45d2e21684496bd882de4aa74b3bf8b3d
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299895"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851069"
 ---
 # <a name="troubleshooting-the-help-viewer"></a>帮助查看器疑难解答
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,9 +45,9 @@ ms.locfileid: "74299895"
 ## <a name="additional-resources"></a>其他资源
  通过使用以下资源，可以获取更多信息，并针对 Help Viewer 提供反馈：
 
-- 若要提供反馈，请参阅 Microsoft 网站上的 [Microsoft Connect](https://go.microsoft.com/fwlink/?linkid=243983) 或发送电子邮件到 [hlpfdbk@microsoft.com](mailto:hlpfdbk@microsoft.com)。
+- 若要提供反馈，请参阅 Microsoft 网站上的 [Microsoft Connect](https://connect.microsoft.com/) 或发送电子邮件到 [hlpfdbk@microsoft.com](mailto:hlpfdbk@microsoft.com)。
 
-- 有关详细信息，请参阅[开发人员文档和帮助系统](https://go.microsoft.com/fwlink/?LinkId=232741)论坛和[帮助专家](https://go.microsoft.com/fwlink/?LinkId=232743)博客。
+- 有关详细信息，请参阅[开发人员文档和帮助系统](https://social.msdn.microsoft.com/Forums/en-US/devdocs/threads)论坛和[帮助专家](https://blogs.msdn.com/b/thehelpguy/)博客。
 
 ## <a name="see-also"></a>请参阅
- [Help Viewer 2.1 管理员指南](https://go.microsoft.com/fwlink/?LinkId=243985)
+ [Help Viewer 2.1 管理员指南](https://msdn.microsoft.com/library/hh492077(VS.110).aspx)

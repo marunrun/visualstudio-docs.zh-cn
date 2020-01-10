@@ -21,12 +21,12 @@ caps.latest.revision: 47
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f90344c156ea6c012c6ac086ffa40bf30e78a682
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: daf72a4466cd0f02eb6ef3a357276ed690fd26bf
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300736"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845523"
 ---
 # <a name="creating-bootstrapper-packages"></a>创建引导程序包
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -100,7 +100,7 @@ HKLM\Software\Wow6432Node\Microsoft\GenericBootstrapper\11.0
   
  下表显示由引导程序自动填充的属性。  
   
-|属性|描述|  
+|Property|描述|  
 |--------------|-----------------|  
 |ApplicationName|应用程序的名称。|  
 |ProcessorArchitecture|可执行文件的目标平台的处理器和每字位数。 包括以下值：<br /><br /> -   Intel<br />-   IA64<br />-   AMD64|  
@@ -128,4 +128,4 @@ HKLM\Software\Wow6432Node\Microsoft\GenericBootstrapper\11.0
  [如何：与 ClickOnce 应用程序一起安装必备组件](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)   
  [“系统必备”对话框](../ide/reference/prerequisites-dialog-box.md)   
  [产品和包架构引用](../deployment/product-and-package-schema-reference.md)   
- [使用 Visual Studio 2005 引导程序来开始安装](https://go.microsoft.com/fwlink/?LinkId=107537)
+ [使用 Visual Studio 2005 引导程序来开始安装](https://msdn.microsoft.com/magazine/cc163899.aspx)

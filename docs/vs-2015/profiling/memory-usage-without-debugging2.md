@@ -14,12 +14,12 @@ caps.latest.revision: 18
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 0ab8aaff0ddf793fe64dd3695adc58c281290f98
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 37db8a095e8f7b420f14df29de30f265aee49bb6
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295697"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850810"
 ---
 # <a name="memory-usage-without-debugging"></a>不调试的内存使用情况
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "74295697"
 ### <a name="BKMK_Close_a_monitoring_session"></a>关闭监视会话  
  ![停止收集](../profiling/media/memuse-stopcollection.png "MEMUSE__StopCollection")  
   
- 若要在不创建报告的情况下监视会话，只需关闭诊断窗口。 若要在拍摄内存快照后生成报告，请选择“停止”。  
+ 若要在不创建报告的情况下停止监视会话，只需关闭诊断窗口。 若要在拍摄内存快照后生成报告，请选择“停止”。  
   
 ## <a name="BKMK_Take_snapshots_to_analyze_the_memory_state_of_your_app"></a>拍摄应用的内存状态快照  
  如果发现要调查的内存问题，可以在诊断会话期间拍摄快照，以在特定时刻捕获内存中的对象。 由于应用使用大量不同类型的对象，因此你可能希望集中分析某一种情况。 还有一个较好的办法是，在出现内存问题之前获取应用的基线快照，首次出现问题后获取另一个快照，并且在重复执行该方案时获取一个或多个其他快照。  
@@ -69,7 +69,7 @@ ms.locfileid: "74295697"
  ![内存使用量概述页](../profiling/media/memuse-reportoverview.png "MEMUSE__ReportOverview")  
   
 ### <a name="BKMK_Memory_Usage_snapshot_views"></a>“内存使用率”快照视图  
- 使用快照视图以在新的 Visual Studio 窗口中打开详细的报告。 存在两种类型的快照视图：  
+ 使用快照视图以在新的 Visual Studio 窗口中打开详细报告。 有两种类型的快照视图：  
   
 - [快照详细报告](../profiling/memory-usage-without-debugging2.md#BKMK_Snapshot_details_reports)显示某个快照中的类型和实例。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "74295697"
  如果注意到不能轻易标识的类型或如果不知道它是如何涉及在代码中，它很可能是内存使用情况工具显示的 .NET Framework、操作系统或编译器中的对象，因为它涉及对象的所有权链。  
   
 ### <a name="BKMK_Report_tree_filters_"></a>报告树筛选器  
- 大多数应用都包含超乎想像的大量类型，然而应用开发人员对其中的大多数类型都不是很感兴趣。 **内存使用情况**工具定义了两个筛选器，它们可用于隐藏**托管堆**和**根路径**树中的大多数类型。 还可按类型名称筛选树。  
+ 大多数应用都包含超乎想像的大量类型，然而应用开发人员对其中的大部分类型都不是很感兴趣。 **内存使用情况**工具定义了两个筛选器，它们可用于隐藏**托管堆**和**根路径**树中的大多数类型。 还可按类型名称筛选树。  
   
  ![对选项进行排序和筛选](../profiling/media/memuse-sortandfilter.png "MEMUSE_SortAndFilter")  
   
@@ -122,7 +122,7 @@ ms.locfileid: "74295697"
  **仅我的代码**筛选器将隐藏外部代码生成的大多数实例。 外部类型属于操作系统或 Framework 组件，或者由编译器生成。  
   
 ## <a name="BKMK_Snapshot_details_reports"></a>快照详细信息报告  
- 可以使用快照详细信息报告专注于诊断会话中的某个快照。 若要打开详细信息报告，可在快照视图中选择一个链接，如下图所示。 这两个链接打开的都是相同的报告；唯一的差异是在报告中**托管堆**树的启动排序顺序不同。 在这两种情况下，你可以在报告打开后更改排序顺序。  
+ 可以使用快照详细信息报告专注于诊断会话中的某个快照。 若要打开详细信息报告，可在快照视图中选择一个链接，如下图所示。 这两个链接打开的都是相同的报告；唯一的差异是在报告中**托管堆**树的启动排序顺序不同。 在这两种情况下，你都可以在报告打开后更改排序顺序。  
   
  ![快照视图中快照报表的链接](../profiling/media/memuse-snapshotview-snapshotdetailslinks.png "MEMUSE_SnapshotView_SnapshotDetailsLinks")  
   
@@ -138,8 +138,8 @@ ms.locfileid: "74295697"
 |||  
 |-|-|  
 |“对象类型”|类型或对象实例的名称。|  
-|**计数**|类型的对象实例数。 对于实例，该数量始终为 1。|  
-|“大小(字节)”|对于类型，则为内存快照中所有类型实例的大小，排除实例中包含的对象的大小。<br /><br /> 对于实例、类型，则为对象的大小，排除实例中包含的对象大小。 实例。|  
+|“计数”|类型的对象实例数。 对于实例，数字始终为 1。|  
+|“大小(字节)”|对于类型，则为内存快照中所有类型实例的大小，其中不包括实例中所含对象的大小。<br /><br /> 对于实例、类型，则为对象的大小，排除实例中包含的对象大小。 新 Web 角色。|  
 |“非独占大小(字节)”|类型实例的大小或单个实例的大小，其中包括所含对象的大小。|  
   
 ### <a name="BKMK_Paths_to_Root_tree__Snapshot_details_"></a>根路径树（快照详细信息）  
@@ -147,7 +147,7 @@ ms.locfileid: "74295697"
   
  ![类型的根树的路径](../profiling/media/memuse-snapshotdetails-type-pathstoroottree.png "MEMUSE_SnapshotDetails_Type_PathsToRootTree")  
   
- 当在**根路径**树中查看某个类型时，将在“引用计数”列中显示保留此类型引用的类型对象的数量。 当你分析实例时，该列不会显示。  
+ 当在**根路径**树中查看某个类型时，将在“引用计数”列中显示保留此类型引用的类型对象的数量。 分析实例时，不会显示此列。  
   
 ### <a name="BKMK_Referenced_Objects_tree__Snapshot_details_"></a>引用的对象树（快照详细信息）  
  **引用的对象**树显示已选类型的对象或实例引用的对象。  
@@ -157,8 +157,8 @@ ms.locfileid: "74295697"
 |||  
 |-|-|  
 |“对象类型/实例”|类型或对象实例的名称。|  
-|“大小(字节)”|对于类型，则为所有类型实例的大小，排除类型中包含的对象的大小。<br /><br /> 对于实例，则为对象的大小，排除实例中包含的对象大小。|  
-|“非独占大小(字节)”|类型实例的总大小或实例的大小，其中包括所包含的对象的大小。|  
+|“大小(字节)”|对于类型，则为类型中所有实例的大小，其中不包括类型中所含对象的大小。<br /><br /> 对于实例，则为对象的大小，其中不包括实例中所含对象的大小。|  
+|“非独占大小(字节)”|类型实例的总大小或实例的大小，其中包括所含对象的大小。|  
   
 ## <a name="BKMK_Snapshot_difference__diff__reports"></a>快照差异报告  
  快照差异报告显示主要快照和紧接着在它之前拍摄的快照之间的更改。 若要打开差异报告，可在快照视图中选择一个链接，如下图所示。 这两个链接打开的都是相同的报告；唯一的差异是在报告中**托管堆**树的启动排序顺序不同。 可以在报告打开后更改排序顺序。  
@@ -179,12 +179,12 @@ ms.locfileid: "74295697"
 |||  
 |-|-|  
 |“对象类型”|类型或对象实例的名称。|  
-|**计数**|主要快照中的类型实例的数量。 对于实例，“计数”始终为 1。|  
-|“计数差异”|对于类型，则为主要快照与上一个快照之间的类型实例数的差异。 对于实例，字段是空白的。|  
-|“大小(字节)”|主要快照中对象的大小，排除对象中包含的对象的大小。 对于类型，“大小(字节)”和“非独占大小(字节)”为类型实例的总大小。|  
-|“总大小差异(字节)”|对于类型，则为主要快照和上一个快照之间的类型实例总大小的差异，排除实例中包含的对象的大小。 对于实例，字段是空白的。|  
-|“非独占大小(字节)”|主要快照中对象的大小，其中包括对象中包含的对象的大小。|  
-|“非独占大小差异(字节)”|对于类型，则为主要快照和上一个快照之间的所有类型实例大小的差异，其中包括对象中所含对象的大小。 对于实例，字段是空白的。|  
+|“计数”|主要快照中的类型实例的数量。 对于实例，“计数”始终为 1。|  
+|“计数差异”|对于类型，则为主要快照与上一个快照之间的类型实例数的差异。 对于实例，此字段为空白字段。|  
+|“大小(字节)”|主要快照中对象的大小，其中不包括对象中所含对象的大小。 对于类型，“大小(字节)”和“非独占大小(字节)”为类型实例的总大小。|  
+|“总大小差异(字节)”|对于类型，则为主要快照和上一个快照之间的类型实例总大小的差异，其中不包括实例中所含对象的大小。 对于实例，此字段为空白字段。|  
+|“非独占大小(字节)”|主要快照中对象的大小，其中包括对象中所含对象的大小。|  
+|“非独占大小差异(字节)”|对于类型，则为主要快照和上一个快照之间的所有类型实例大小的差异，其中包括对象中所含对象的大小。 对于实例，此字段为空白字段。|  
   
 ### <a name="BKMK_Paths_to_Root_tree__Snapshot_diff_"></a>根路径树（快照差异）  
  **根路径树**显示引用类型或实例的对象链。 .NET Framework 垃圾回收器仅在释放对某个对象的所有引用后才清理此对象的内存。  
@@ -199,12 +199,12 @@ ms.locfileid: "74295697"
 |||  
 |-|-|  
 |“对象类型/实例”|类型或对象实例的名称。|  
-|“大小(字节)”|对于实例，则为主要快照中的对象大小，排除该实例中包含的对象大小。<br /><br /> 对于类型，则为主要快照中类型实例的总大小，排除实例中包含的对象的大小。|  
-|“非独占大小(字节)”|主要快照中对象的大小，其中包括对象中包含的对象的大小。|  
+|“大小(字节)”|对于实例，则为主要快照中的对象大小，其中不包括此实例中所含对象的大小。<br /><br /> 对于类型，则为主要快照中类型实例的总大小，其中不包括实例中所含对象的大小。|  
+|“非独占大小(字节)”|主要快照中对象的大小，其中包括对象中所含对象的大小。|  
   
 ## <a name="see-also"></a>请参阅  
  [JavaScript 内存](../profiling/javascript-memory.md)   
  [分析应用性能](https://msdn.microsoft.com/library/58acb30b-8428-41a6-b195-b0fdedb89575)   
  [运行性能和诊断工具](https://msdn.microsoft.com/library/788279d8-f56b-40a0-9bef-facc3dfba471)   
  [使用 C++、C# 和 Visual Basic 的 Windows 应用商店应用的性能最佳做法](https://msdn.microsoft.com/library/windows/apps/hh750313.aspx)   
- [Diagnosing memory issues with the new Memory Usage Tool in Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=394706)（在 Visual Studio 中使用新的内存使用情况工具诊断内存问题）
+ [Diagnosing memory issues with the new Memory Usage Tool in Visual Studio](https://blogs.msdn.com/b/visualstudioalm/archive/2014/04/02/diagnosing-memory-issues-with-the-new-memory-usage-tool-in-visual-studio.aspx)（在 Visual Studio 中使用新的内存使用情况工具诊断内存问题）

@@ -16,12 +16,12 @@ caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 1d82531bcde6e0a03485ac6bf77965b5c5744f23
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 8ede112706cfc0291d2523424192f123c9929771
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300451"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846965"
 ---
 # <a name="additional-resources-for-msbuild"></a>有关 MSBuild 的其他资源
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "74300451"
 ## <a name="microsoft-resources"></a>Microsoft 资源  
   
 ### <a name="on-the-web"></a>在 Web 上  
- [MSBuild 第 9 频道网站](https://go.microsoft.com/fwlink/?LinkId=243092)  
+ [MSBuild 第 9 频道网站](https://channel9.msdn.com/tags/MSBuild/)  
  包含有关 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 的信息，以及 Web 上其他 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 站点的链接。  
   
- [MSBuild Team Blog](https://go.microsoft.com/fwlink/?LinkId=65846)（MSBuild 团队博客）  
+ [MSBuild Team Blog](https://blogs.msdn.com/msbuild/)（MSBuild 团队博客）  
  包含由 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 产品团队编写的信息、链接和更新。  
   
- [Visual Studio MSBuild 论坛](https://go.microsoft.com/fwlink/?LinkId=48931)  
+ [Visual Studio MSBuild 论坛](https://social.msdn.microsoft.com/forums/en-US/msbuild/threads/)  
  专注于 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 的社区论坛。  
   
 ## <a name="see-also"></a>另请参阅  

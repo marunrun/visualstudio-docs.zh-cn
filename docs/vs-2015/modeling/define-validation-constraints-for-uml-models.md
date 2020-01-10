@@ -11,23 +11,23 @@ caps.latest.revision: 49
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3dd76deb3b72d3b12d3b5892c2e5664273425c4c
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 32f249b971e8a37bc5b596203cde6bc7b0bcf6f1
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295844"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849742"
 ---
 # <a name="define-validation-constraints-for-uml-models"></a>为 UML 模型定义验证约束
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-你可以定义测试模型是否符合所指定条件的验证约束。 例如，你可以定义一个约束以确保用户不会创建具有继承关系的循环。 用户尝试打开或保存模型时将调用该约束，此外也可手动调用。 如果约束失效，错误窗口中将增加一条你定义的错误消息。 可以将这些约束打包到 Visual Studio 集成扩展 ([VSIX](https://go.microsoft.com/fwlink/?LinkId=160780)) 中，并将其分发到其他 Visual Studio 用户。
+你可以定义测试模型是否符合所指定条件的验证约束。 例如，你可以定义一个约束以确保用户不会创建具有继承关系的循环。 用户尝试打开或保存模型时将调用该约束，此外也可手动调用。 如果约束失效，错误窗口中将增加一条你定义的错误消息。 可以将这些约束打包到 Visual Studio 集成扩展 ([VSIX](https://msdn.microsoft.com/library/dd393694(VS.100).aspx)) 中，并将其分发到其他 Visual Studio 用户。
 
  你还可以定义对照外部资源（如数据库）验证模型的约束。 如果要针对层关系图验证程序代码，请参阅[向层关系图添加自定义体系结构验证](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)。
 
  若要查看支持 UML 模式的 Visual Studio 版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
  请参阅 [要求](../modeling/extend-uml-models-and-diagrams.md#Requirements)。
 
  若要查看支持此功能的 Visual Studio 的版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
@@ -394,7 +394,7 @@ context.LogError(... , usecase);
 
    在极少数情况下，有错误的扩展无法加载并在错误窗口中创建报告，但不显示在扩展管理器中。 在这种情况下，可以通过从以下位置删除文件来删除扩展，其中 *% LocalAppData%* 通常为*DriveName*： \Users\\*UserName*\AppData\Local：
 
-   *% LocalAppData%* **\Microsoft\VisualStudio\\[version] \Extensions**
+   *%LocalAppData%* **\Microsoft\VisualStudio\\[version]\Extensions**
 
 ## <a name="Example"></a> 示例
  本示例查找元素间依赖关系中的循环。

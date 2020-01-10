@@ -9,12 +9,12 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 744b5f3c62ac2c5636ed2499653986d3b669fce3
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 090aeb83f6d0480c511acd808498953ae6c01940
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299964"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851105"
 ---
 # <a name="step-9-review-comment-and-test-your-code"></a>步骤 9：检查代码、为代码添加注释和测试代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "74299964"
 
    语句用于指示程序执行操作。 在 Visual C# 中，语句始终以分号结束。 在 Visual Basic 中，行的结尾即为语句的结尾。 （Visual Basic 中不需要分号。）前面的语句指示 `PictureBox` 控件加载用户在**OpenFileDialog**组件中选择的文件。
 
-  ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[教程1：在 Visual Basic 中创建图片查看器-视频 5](https://go.microsoft.com/fwlink/?LinkId=205216)或[教程1：在视频5中C#创建图片查看器](https://go.microsoft.com/fwlink/?LinkId=205206)。 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
+  ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[教程1：在 Visual Basic 中创建图片查看器-视频 5](https://msdn.microsoft.com/vbasic/gg315356.aspx)或[教程1：在视频5中C#创建图片查看器](https://msdn.microsoft.com/vcsharp/gg278413.aspx)。 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
 
 ### <a name="to-add-comments"></a>添加注释
 
@@ -81,7 +81,7 @@ ms.locfileid: "74299964"
 2. 选择“显示图片”按钮可运行刚刚编写的代码。 首先，该程序会打开“打开文件”对话框。 确认在该对话框底部的“文件类型”下拉列表中会出现筛选器。 然后，定位到一张图片并将其打开。 通常可以在“我的文档”文件夹内的“图片收藏\示例图片”文件夹中找到 Windows 操作系统附带的示例图片。
 
     > [!NOTE]
-    > 如果“选择图片文件”对话框中未显示任何图像，请确保选择了对话框右下方下拉列表中的“所有文件(*. **)”筛选器**\*。
+    > 如果“选择图片文件”对话框中未显示任何图像，请确保选择了对话框右下方下拉列表中的“所有文件(*.\*)”筛选器。
 
 3. 加载一张图片后，此图片会在 PictureBox 中出现。 然后尝试通过拖动窗体的边框来调整其大小。 由于已将 PictureBox 停靠在 TableLayoutPanel 内部，而 TableLayoutPanel 自身停靠在窗体内部，因此图片区域会自行重设大小，使自身的宽度与窗体的宽度相同，并占据窗体上部空间的 90%。 这就是使用 TableLayoutPanel 容器和 FlowLayoutPanel 容器的原因：当用户调整窗体的大小时，二者可以使窗体具有适当的大小。
 

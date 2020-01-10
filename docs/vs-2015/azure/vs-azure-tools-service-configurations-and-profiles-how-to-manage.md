@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/11/2017
 ms.author: ghogen
-ms.openlocfilehash: bcc290bfd9d646355479c2a9fe83a48f43dfa432
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 2d7081fc7531c8c1c1fcf13564f9f90bc9964f17
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298032"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850000"
 ---
 # <a name="how-to-manage-service-configurations-and-profiles"></a>如何管理服务配置和配置文件
 ## <a name="overview"></a>概述
@@ -47,7 +47,7 @@ ms.locfileid: "74298032"
 2. 要删除服务配置，请从“名称”列表中选择要删除的配置，并选择“删除”。 此时会显示一个对话框框以确认要删除此配置。
 3. 选择“删除”。
    
-     此时该服务配置文件将从解决方案资源管理器的 Azure 项目中删除。
+     该服务配置文件随即从“解决方案资源管理器”中的 Azure 项目内删除。
 
 ### <a name="to-rename-a-service-configuration"></a>重命名服务配置
 1. 在解决方案资源管理器中，打开 Azure 项目的快捷菜单，并选择“管理配置”。
@@ -55,7 +55,7 @@ ms.locfileid: "74298032"
     此时会显示“管理服务配置”对话框。
 2. 要重命名服务配置，请从“名称”列表中选择新的服务配置，并选择“重命名”。 在“名称”文本框中，键入要用于此服务配置的名称，并选择“确定”。
    
-    此时该服务配置文件的名称会在解决方案资源管理器的 Azure 项目中更改。
+    该服务配置文件的名称随即在“解决方案资源管理器”中的 Azure 项目内更改。
 
 ### <a name="to-change-a-service-configuration"></a>更改服务配置
 * 如果要更改服务配置，请在 Azure 项目中打开要更改的特定角色的快捷菜单，并选择“属性”。 有关详细信息，请参阅[如何：使用 Visual Studio 配置 Azure 云服务的角色](vs-azure-tools-configure-roles-for-cloud-service.md)。
@@ -78,9 +78,9 @@ ms.locfileid: "74298032"
 4. 在“名称”列表中，选择一个配置文件，并选择“创建副本”。
 5. 选择“关闭”按钮。
    
-    此时新的配置文件将出现在“目标配置文件”列表中。
+    新配置文件将出现在“目标配置文件”列表中。
 6. 在“目标配置文件”列表中，选择刚创建的配置文件。 将使用所选配置文件中的选项填充“发布向导”设置。
-7. 选择“上一页”和“下一页”按钮以显示发布向导的每一页，并自定义此配置文件的设置。 有关信息，请参阅 [Publish Azure Application Wizard](https://go.microsoft.com/fwlink/p/?LinkID=623085)（发布 Azure 应用程序向导）。
+7. 选择“上一页”和“下一页”按钮以显示发布向导的每一页，并自定义此配置文件的设置。 有关信息，请参阅 [Publish Azure Application Wizard](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-publish-azure-application-wizard?view=vs-2019)（发布 Azure 应用程序向导）。
 8. 完成自定义设置后，选择“下一步”以返回到“设置”页。 当使用这些设置发布服务时或者选择配置文件列表旁边的“保存”时，将保存该配置文件。
 
 ### <a name="to-rename-or-delete-a-profile"></a>重命名或删除配置文件
@@ -93,9 +93,9 @@ ms.locfileid: "74298032"
 ### <a name="to-change-a-profile"></a>更改配置文件
 1. 打开 Azure 项目的快捷菜单，并选择“发布”。
 2. 在“目标配置文件”列表中，选择要更改的配置文件。
-3. 选择“上一页”和“下一页”按钮以显示发布向导的每一页，并更改所需的设置。 有关信息，请参阅 [Publish Azure Application Wizard](https://go.microsoft.com/fwlink/p/?LinkID=623085)（发布 Azure 应用程序向导）。
+3. 选择“上一页”和“下一页”按钮以显示发布向导的每一页，并更改所需的设置。 有关信息，请参阅 [Publish Azure Application Wizard](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-publish-azure-application-wizard?view=vs-2019)（发布 Azure 应用程序向导）。
 4. 完成更改设置后，选择“下一步”以返回到“设置”。
 5. （可选）选择“发布”以使用新设置发布云服务。 如果现在不需要发布云服务，并且关闭发布向导，Visual Studio 会询问是否要保存对配置文件的更改。
 
 ## <a name="next-steps"></a>后续步骤
-若要了解如何在 Visual Studio 中配置 Azure 项目的其他部分，请参阅[配置 Azure 项目](https://go.microsoft.com/fwlink/p/?LinkID=623075)
+若要了解如何在 Visual Studio 中配置 Azure 项目的其他部分，请参阅[配置 Azure 项目](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address?view=vs-2019)

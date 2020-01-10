@@ -9,17 +9,17 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9c56eb091e6d4efbe33dc8f05d5040272307c274
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 66988fa88ae347a2db08bf2f6d1b79ba3bcd80b8
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299904"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851325"
 ---
 # <a name="tutorial-1-create-a-picture-viewer"></a>教程 1：创建图片查看器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在本教程中，您将生成一个从文件加载图片并将其显示在窗口中的程序。 您将学习如何拖动控件（如窗体上的按钮和图片框）、设置控件属性，以及如何使用容器来平滑地调整窗体的大小。 您还将开始编写代码。 您将学习如何：
+在本教程中，您将生成一个从文件加载图片并将其显示在窗口中的程序。 您将学习如何拖动控件（如窗体上的按钮和图片框）、设置控件属性，以及如何使用容器来平滑地调整窗体的大小。 您还将开始编写代码。 你将学习：
 
 - 创建新项目。
 
@@ -39,7 +39,7 @@ ms.locfileid: "74299904"
 
   ![本教程中创建的图片](../ide/media/express-pictureviewerdone.png "Express_PictureViewerDone")本教程中创建的图片
 
-  ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[如何实现：在 Visual Basic 中创建图片查看器？](https://go.microsoft.com/fwlink/?LinkId=205207)或[如何实现：在中C#创建图片查看器？](https://go.microsoft.com/fwlink/?LinkId=205198)。
+  ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[如何实现：在 Visual Basic 中创建图片查看器？](https://msdn.microsoft.com/vstudio/gg315352)或[如何实现：在中C#创建图片查看器？](https://msdn.microsoft.com/vcsharp/gg278960.aspx)。
 
 > [!NOTE]
 > 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。 本教程中同时涉及 Visual C# 和 Visual Basic，因此请关注特定于您所用编程语言的信息。
@@ -50,7 +50,7 @@ ms.locfileid: "74299904"
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|描述|
+|职务|描述|
 |-----------|-----------------|
 |[步骤 1：创建 Windows 窗体应用程序项目](../ide/step-1-create-a-windows-forms-application-project.md)|首先创建 Windows 窗体应用程序项目。|
 |[步骤 2：运行程序](../ide/step-2-run-your-program.md)|运行您在上一步中创建的 Windows 窗体应用程序。|

@@ -14,12 +14,12 @@ caps.latest.revision: 28
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5abbb647f93c991d2de626a84e82f47e03f6f71e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 4d825e625313febfa67cfb85f6a9c6bccb7f3608
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299624"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844276"
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>演练：使用 WPF 和 Entity Framework 创建 WCF Data Service
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "74299624"
 
 - 创建一个表示 Northwind 数据库中 Customers 表的 [!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)]。
 
-- 创建 [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]。
+- 创建[!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]。
 
 - 创建一个客户端应用程序，并添加对 [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]的引用。
 
@@ -45,7 +45,7 @@ ms.locfileid: "74299624"
 
 - Northwind 示例数据库。
 
-     如果你的开发计算机上没有此数据库，可以从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkID=98088)进行下载。 有关说明，请参阅[下载示例数据库](https://msdn.microsoft.com/library/ef9d69a1-9461-43fe-94bb-7c836754bcb5)。
+     如果你的开发计算机上没有此数据库，可以从 [Microsoft 下载中心](https://www.microsoft.com/downloads)进行下载。 有关说明，请参阅[下载示例数据库](https://msdn.microsoft.com/library/ef9d69a1-9461-43fe-94bb-7c836754bcb5)。
 
 ## <a name="creating-the-service"></a>创建服务
  若要创建 [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)]，你将添加一个 Web 项目，创建一个[!INCLUDE[adonet_edm](../includes/adonet-edm-md.md)]，然后通过此模型创建服务。
@@ -74,7 +74,7 @@ ms.locfileid: "74299624"
 
 3. 在 "**名称**" 文本框中，输入 `NorthwindModel`，然后选择 "**添加**" 按钮。
 
-    此时将显示实体数据模型向导。
+    此时将出现“实体数据模型向导”。
 
 4. 在实体数据模型向导的“选择模型内容”页上，选择“数据库的 EF 设计器”项，然后选择“下一步”按钮。
 
@@ -112,7 +112,7 @@ ms.locfileid: "74299624"
 
     NorthwindCustomers 文件将出现在**代码编辑器**中。
 
-4. 在“代码编辑器”中，定位到第一个  **注释并使用以下内容替换该代码**`TODO:`：
+4. 在“代码编辑器”中，定位到第一个 `TODO:` 注释并使用以下内容替换该代码：
 
     [!code-csharp[WCFDataServiceWalkthrough#1](../snippets/csharp/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/cs/northwindcustomers.svc.cs#1)]
     [!code-vb[WCFDataServiceWalkthrough#1](../snippets/visualbasic/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/vb/northwindcustomers.svc.vb#1)]
@@ -146,7 +146,7 @@ ms.locfileid: "74299624"
 
 2. 在 "**新建项目**" 对话框中，展开 " **Visual Basic** " 或 "  **C#可视化**" 节点，然后选择 " **Windows** " 节点，然后选择 " **Windows 窗体应用程序**"。
 
-3. 在 **“名称”** 文本框中，输入“`NorthwindClient`”，然后选择 **“确定”** 按钮。
+3. 在“名称”文本框中，输入 `NorthwindClient`，然后选择“确定”按钮。
 
 4. 在“解决方案资源管理器”中，选择“NorthwindClient”项目节点。
 

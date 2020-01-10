@@ -11,14 +11,14 @@ caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: jillfra
-ms.openlocfilehash: 8046b261021a1147dbf0356c6854968b3d23a1df
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 70f1266581bb633086fa33a28b43e04befc7e6f9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299804"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844332"
 ---
-# <a name="install-visual-c-for-cross-platform-mobile-development"></a>Install Visual C++ for Cross-Platform Mobile Development
+# <a name="install-visual-c-for-cross-platform-mobile-development"></a>安装用于跨平台移动开发的 Visual C++
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 适用于跨平台移动开发的 Visual C++(https://go.microsoft.com/fwlink/p/?LinkId=536383) 是 Visual Studio 2015 的可安装组件。 它包括跨平台 Visual Studio 模板，并安装了跨平台工具和 SDK 以快速启动，而无需自行查找、下载和配置它们。 你可以在 Visual Studio 中使用这些工具轻松创建、编辑、调试和测试跨平台项目。 本主题介绍了如何安装使用 Visual Studio 开发跨平台应用所需的工具和第三方软件。 有关组件的概述，请参阅 [Visual C++ 跨平台移动](https://go.microsoft.com/fwlink/p/?LinkId=536387)  
@@ -38,14 +38,14 @@ ms.locfileid: "74299804"
   
   若要为特定的设备平台创建应用，还需要满足一些附加要求：  
   
-- Windows Phone 仿真程序和适用于 Android 的 Microsoft Visual Studio 仿真程序需要可以运行 Hyper-V 的计算机。 必须先启用 Windows 中的 Hyper-V 功能，然后才能安装和运行仿真程序。 有关详细信息，请参阅仿真程序的 [系统要求](https://msdn.microsoft.com/4d5bb438-231a-4cd2-84b7-e9660b0e3baf)。  
+- Windows Phone 仿真程序和适用于 Android 的 Microsoft Visual Studio 仿真程序需要可以运行 Hyper-V 的计算机。 必须先启用 Windows 中的 Hyper-V 功能，然后才能安装和运行仿真程序。 有关详细信息，请参阅仿真程序的[系统要求](https://msdn.microsoft.com/4d5bb438-231a-4cd2-84b7-e9660b0e3baf)。  
   
-- Android SDK 附带的 x86 Android 仿真程序在可以运行 Intel HAXM 驱动程序的计算机上工作性能最好。 此驱动程序需要具有 VT-x 和执行禁用位支持的 Intel x64 处理器。 有关详细信息，请参阅 [Intel® 硬件加速执行管理器安装说明 - Microsoft Windows](https://go.microsoft.com/fwlink/p/?LinkId=536385)。  
+- Android SDK 附带的 x86 Android 仿真程序在可以运行 Intel HAXM 驱动程序的计算机上工作性能最好。 此驱动程序需要具有 VT-x 和执行禁用位支持的 Intel x64 处理器。 有关详细信息，请参阅 [Intel® 硬件加速执行管理器安装说明 - Microsoft Windows](https://github.com/intel/haxm)。  
   
 - 若要构建适用于 iOS 的代码，需要 Apple ID、iOS Developer Program 帐户，以及可在 OS X Mavericks 或更高版本上运行 [Xcode 6](https://go.microsoft.com/fwlink/p/?LinkId=536387) 或更高版本的 Mac 计算机。 有关简单的安装步骤，请参阅 [Install tools for iOS](#InstallForiOS)。  
   
 ## <a name="GetTheTools"></a> 获取工具  
- 适用于跨平台移动开发的 Visual C++ 是 Visual Studio Community、Professional 和 Enterprise 版所随附的可安装组件。 若要获取 Visual Studio，请转到 [Visual Studio 2015 下载](https://go.microsoft.com/fwlink/p/?linkid=517106)页面，并下载 Visual Studio 2015 Update 2 或更高版本。  
+ 适用于跨平台移动开发的 Visual C++ 是 Visual Studio Community、Professional 和 Enterprise 版所随附的可安装组件。 若要获取 Visual Studio，请转到 [Visual Studio 2015 下载](https://visualstudio.microsoft.com/downloads/)页面，并下载 Visual Studio 2015 Update 2 或更高版本。  
   
 ## <a name="InstallTheTools"></a> 安装工具  
  Visual Studio 2015 的安装程序包括安装用于跨平台移动开发的 Visual C++ 的选项。 这将安装 Visual Studio 所需的 C++ 语言工具、模板和组件，Android 生成和调试所需的 GCC 和 Clang 工具集，以及与用于 iOS 开发的 Mac 进行通信的组件。 它还会安装所有第三方工具和支持 iOS 和 Android 应用开发所需的软件开发工具包。 这些大部分第三方工具都是 Android 平台支持所需的开放源代码软件。  
@@ -115,7 +115,7 @@ ms.locfileid: "74299804"
   
    安装程序将 Apache Ant 默认置于以下路径： C:\Program Files (x86)\Microsoft Visual Studio 14.0\Apps。  
   
-- [适用于 Android 的 Microsoft Visual Studio 仿真程序](https://visualstudio.microsoft.com/vs/msft-android-emulator/)  
+- [适用于 Android 的 Microsoft Visual Studio 模拟器](https://visualstudio.microsoft.com/vs/msft-android-emulator/)  
   
    可以从 Visual Studio 库安装和更新适用于 Android 的 Microsoft Visual Studio 仿真程序。  
   
@@ -134,5 +134,5 @@ ms.locfileid: "74299804"
 4. 选择“确定” 以保存自定义工具文件夹位置。  
   
 ## <a name="see-also"></a>请参阅  
- [Install And Configure Tools to Build using iOS](../cross-platform/install-and-configure-tools-to-build-using-ios.md)   
+ [安装并配置使用 iOS 进行构建的工具](../cross-platform/install-and-configure-tools-to-build-using-ios.md)   
  [Visual C++ 跨平台移动](https://www.visualstudio.com/explore/cplusplus-mdd-vs.aspx)

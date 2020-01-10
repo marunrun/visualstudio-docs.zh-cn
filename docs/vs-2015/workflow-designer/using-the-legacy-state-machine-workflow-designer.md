@@ -18,12 +18,12 @@ caps.latest.revision: 5
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5bab07b8ba0b71bd880135518ff9ff5fc697d54c
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 77bb2c7abb49dbf6fe973ebc80f8340000e4afbd
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302805"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846003"
 ---
 # <a name="using-the-legacy-state-machine-workflow-designer"></a>使用旧版状态机工作流设计器
 在以 [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] 或 [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]为目标的 [!INCLUDE[vs2010](../includes/vs2010-md.md)] 中创建新的状态机工作流项目时，可以选择使用**状态机工作流控制台应用程序**或 "**状态机工作流库**" 旧项目模板。 如果选择其中一个状态机项目模板，则会以旧工作流设计器用户界面的形式呈现状态机设计器。 有关旧状态机项目模板的信息，请参阅[如何：创建状态机工作流控制台应用程序（旧版）](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md)和[如何：创建状态机工作流库（旧版）](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md)。
@@ -42,15 +42,15 @@ ms.locfileid: "74302805"
 
 |工具箱名称|活动|描述|
 |------------------|--------------|-----------------|
-|**状态**|[StateActivity](https://go.microsoft.com/fwlink?LinkID=65042)|表示状态机中的状态;可能包含其他**StateActivity**活动。 有关详细信息，请参阅[使用 StateActivity 活动](https://go.microsoft.com/fwlink?LinkID=65083)。|
-|**SetState**|[SetStateActivity](https://go.microsoft.com/fwlink?LinkID=65041)|指定到新状态的转换。 有关详细信息，请参阅[使用 SetStateActivity 活动](https://go.microsoft.com/fwlink?LinkID=65082)。|
-|**StateInitialization**|[StateInitializationActivity](https://go.microsoft.com/fwlink?LinkID=65044)|在进入某个状态时执行；可能包含其他活动。 有关详细信息，请参阅[使用 StateInitialization 活动](https://go.microsoft.com/fwlink?LinkID=65006)。|
-|**StateFinalization**|[StateFinalizationActivity](https://go.microsoft.com/fwlink?LinkID=65043)|离开[StateActivity](https://go.microsoft.com/fwlink?LinkID=65042)活动时执行包含的活动。 有关详细信息，请参阅[使用 StateFinalizationActivity 活动](https://go.microsoft.com/fwlink?LinkID=65008)。|
-|**EventDriven**|[EventDrivenActivity](https://go.microsoft.com/fwlink?LinkID=65029)|用于依赖于外部事件开始执行的状态。 **EventDrivenActivity**活动必须有一个实现[IEventActivity](https://go.microsoft.com/fwlink?LinkID=65032)接口的活动，作为第一个子活动。 有关详细信息，请参阅[使用 EventDrivenActivity 活动](https://go.microsoft.com/fwlink?LinkID=65068)。|
+|**状态**|[StateActivity](https://msdn2.microsoft.com/library/system.workflow.activities.stateactivity.aspx)|表示状态机中的状态;可能包含其他**StateActivity**活动。 有关详细信息，请参阅[使用 StateActivity 活动](https://msdn2.microsoft.com/library/bb628612.aspx)。|
+|**SetState**|[SetStateActivity](https://msdn2.microsoft.com/library/system.workflow.activities.setstateactivity.aspx)|指定到新状态的转换。 有关详细信息，请参阅[使用 SetStateActivity 活动](https://msdn2.microsoft.com/library/bb628469.aspx)。|
+|**StateInitialization**|[StateInitializationActivity](https://msdn2.microsoft.com/library/system.workflow.activities.stateinitializationactivity.aspx)|在进入某个状态时执行；可能包含其他活动。 有关详细信息，请参阅[使用 StateInitialization 活动](https://msdn2.microsoft.com/library/bb675253.aspx)。|
+|**StateFinalization**|[StateFinalizationActivity](https://msdn2.microsoft.com/library/system.workflow.activities.statefinalizationactivity.aspx)|离开[StateActivity](https://msdn2.microsoft.com/library/system.workflow.activities.stateactivity.aspx)活动时执行包含的活动。 有关详细信息，请参阅[使用 StateFinalizationActivity 活动](https://msdn2.microsoft.com/library/bb675278.aspx)。|
+|**EventDriven**|[EventDrivenActivity](https://msdn2.microsoft.com/library/system.workflow.activities.eventdrivenactivity.aspx)|用于依赖于外部事件开始执行的状态。 **EventDrivenActivity**活动必须有一个实现[IEventActivity](https://msdn2.microsoft.com/library/system.workflow.activities.ieventactivity.aspx)接口的活动，作为第一个子活动。 有关详细信息，请参阅[使用 EventDrivenActivity 活动](https://msdn2.microsoft.com/library/bb628466.aspx)。|
 
- 状态机工作流中的主要组件是[StateActivity](https://go.microsoft.com/fwlink?LinkID=65042)活动。 在状态机工作流中的不同位置捕获了事件时，将会进入不同的状态，以处理与这些事件关联的任务。 在工作流的生存期内，工作流可能会离开和进入若干不同的状态。 这些状态通过使用[SetStateActivity](https://go.microsoft.com/fwlink?LinkID=65041)活动彼此连接。
+ 状态机工作流中的主要组件是[StateActivity](https://msdn2.microsoft.com/library/system.workflow.activities.stateactivity.aspx)活动。 在状态机工作流中的不同位置捕获了事件时，将会进入不同的状态，以处理与这些事件关联的任务。 在工作流的生存期内，工作流可能会离开和进入若干不同的状态。 这些状态通过使用[SetStateActivity](https://msdn2.microsoft.com/library/system.workflow.activities.setstateactivity.aspx)活动彼此连接。
 
- 将新的**StateActivity**拖到工作流设计图面上时，可以将[EventDrivenActivity](https://go.microsoft.com/fwlink?LinkID=65029)、 [StateInitializationActivity](https://go.microsoft.com/fwlink?LinkID=65044)、 [StateFinalizationActivity](https://go.microsoft.com/fwlink?LinkID=65043)或其他**StateActivity**活动作为子活动添加。
+ 将新的**StateActivity**拖到工作流设计图面上时，可以将[EventDrivenActivity](https://msdn2.microsoft.com/library/system.workflow.activities.eventdrivenactivity.aspx)、 [StateInitializationActivity](https://msdn2.microsoft.com/library/system.workflow.activities.stateinitializationactivity.aspx)、 [StateFinalizationActivity](https://msdn2.microsoft.com/library/system.workflow.activities.statefinalizationactivity.aspx)或其他**StateActivity**活动作为子活动添加。
 
 > [!CAUTION]
 > 使用状态机工作流设计器创建工作流时，必须使用 "**文档大纲**" 视图窗口监视正在设计的工作流的结构。 "**文档大纲**" 视图窗口中状态机工作流的结构视图反映了工作流标记文件中活动的逻辑布局。 工作流活动显示在设计图面上的物理布局可能不会反映工作流标记文件中活动的逻辑布局。
@@ -58,4 +58,4 @@ ms.locfileid: "74302805"
 > 若要打开 "**文档大纲**" 窗口，请在 "**视图**" 菜单上，指向 "**其他窗口**"，然后选择 "**文档大纲**"。
 
 ## <a name="see-also"></a>请参阅
- [如何：创建状态机工作流控制台应用程序（旧版）](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md)如何：使用[StateActivity 活动](https://go.microsoft.com/fwlink?LinkID=65083)[创建状态机工作流库（旧版）](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md) [状态机工作流](https://go.microsoft.com/fwlink?LinkID=65016)使用[StateInitializationActivity 活动](https://go.microsoft.com/fwlink?LinkID=65006)使用[StateFinalizationActivity 活动](https://go.microsoft.com/fwlink?LinkID=65008)使用[SetStateActivity 活动](https://go.microsoft.com/fwlink?LinkID=65082)使用[EventDrivenActivity](https://go.microsoft.com/fwlink?LinkID=65068)活动
+ [如何：创建状态机工作流控制台应用程序（旧版）](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md)如何：使用[StateActivity 活动](https://msdn2.microsoft.com/library/bb628612.aspx)[创建状态机工作流库（旧版）](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md) [状态机工作流](https://msdn2.microsoft.com/library/bb628601.aspx)使用[StateInitializationActivity 活动](https://msdn2.microsoft.com/library/bb675253.aspx)使用[StateFinalizationActivity 活动](https://msdn2.microsoft.com/library/bb675278.aspx)使用[SetStateActivity 活动](https://msdn2.microsoft.com/library/bb628469.aspx)使用[EventDrivenActivity](https://msdn2.microsoft.com/library/bb628466.aspx)活动

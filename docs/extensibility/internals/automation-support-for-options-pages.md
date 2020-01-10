@@ -1,5 +1,5 @@
 ---
-title: 选项页的自动化支持 |Microsoft Docs
+title: "\"选项\" 页的自动化支持 |Microsoft Docs"
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,30 +11,30 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0bf997205979cdfbb9c9f03492a5943f458e2d9c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 03360bfc01110e7b4ef73956f0199aaaed9cee2c
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66342265"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848972"
 ---
-# <a name="automation-support-for-options-pages"></a>选项页的自动化支持
-Vspackage 可以提供自定义**选项**到对话框**工具**菜单 (**工具选项**页面) 中[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]，可以使它们可用于自动化模型。
+# <a name="automation-support-for-options-pages"></a>"选项" 页的自动化支持
+Vspackage 可以在 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 的 "**工具**" 菜单中提供自定义**选项**对话框（"**工具选项**" 页），并使它们可用于自动化模型。
 
 ## <a name="tools-options-pages"></a>工具选项页
- 若要创建**工具选项**页上，VSPackage 必须提供返回到 VSPackage 的实现通过环境的用户控件实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A>方法。 (或者，对于托管代码<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A>方法。)
+ 若要创建 "**工具选项**" 页，VSPackage 必须通过 VSPackage 的 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A> 方法实现来提供向环境返回的用户控件实现。 （对于托管代码，则为 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A> 方法。）
 
- 它是可选的但强烈建议，以允许访问自动化模型通过此新页。 可以通过执行以下步骤进行操作：
+ 这是可选的，但强烈建议您通过自动化模型允许访问此新页。 为此，可以执行以下步骤：
 
-1. 扩展<xref:EnvDTE._DTE.Properties%2A>IDispatch 派生的对象实现的对象。
+1. 通过实现 IDispatch 派生对象扩展 <xref:EnvDTE._DTE.Properties%2A> 对象。
 
-2. 返回的实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A>方法 (或托管代码的<xref:Microsoft.VisualStudio.Shell.Package.GetAutomationObject%2A>方法) 到 IDispatch 派生的对象。
+2. 返回 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> 方法的实现（对于托管代码，则返回派生对象的 <xref:Microsoft.VisualStudio.Shell.Package.GetAutomationObject%2A> 方法）。
 
-3. 当自动化使用者调用<xref:EnvDTE._DTE.Properties%2A>方法的自定义**选项**属性页中，在环境中使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A>方法来获取自定义**工具选项**页面的自动化实现。
+3. 当自动化使用者在自定义**选项**属性页上调用 <xref:EnvDTE._DTE.Properties%2A> 方法时，环境使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> 方法来获取自定义**工具选项**页的自动化实现。
 
-4. VSPackage 的自动化对象然后用于提供每个<xref:EnvDTE.Property>返回的<xref:EnvDTE._DTE.Properties%2A>。
+4. 然后，使用 VSPackage 的自动化对象提供 <xref:EnvDTE._DTE.Properties%2A>返回的每个 <xref:EnvDTE.Property>。
 
-   有关示例实现一个自定义**工具选项**页上，请参阅[VSSDK 示例](https://aka.ms/vs2015sdksamples)。
+   有关实现自定义**工具选项**页的示例，请参阅[VSSDK 示例](https://github.com/Microsoft/VSSDK-Extensibility-Samples)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [公开项目对象](../../extensibility/internals/exposing-project-objects.md)

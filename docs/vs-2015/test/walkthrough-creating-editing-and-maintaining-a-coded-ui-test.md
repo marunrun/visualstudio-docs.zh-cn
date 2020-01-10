@@ -8,12 +8,12 @@ ms.assetid: f7c25ba7-5c9c-455b-9242-701cda56f90c
 caps.latest.revision: 43
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4b4d3e7c597766c3b416a7cb637cf0e5e99f71d5
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: d14de396e24874f39a09172a483ebef81a5886f2
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302062"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851236"
 ---
 # <a name="walkthrough-creating-editing-and-maintaining-a-coded-ui-test"></a>演练：创建、编辑和维护编码的 UI 测试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -203,7 +203,7 @@ ms.locfileid: "74302062"
 3. 若要更正此问题，可以使用 `WaitForControlEnabled()` 方法使编码的 UI 测试等待 CheckBox 控件被启用，然后再继续此行。
 
     > [!WARNING]
-    > 请不要修改 UIMap.Designer.cs 文件。 每次使用“UIMap - 编码的 UI 测试生成器”生成代码时，都会覆盖在 UIMapDesigner.cs 文件中进行的所有代码更改。 如果必须修改录制的方法，则必须将其复制到 UIMap.cs 文件并对其重命名。 UIMap.cs 文件可用于重写 UIMapDesigner.cs 文件中的方法和属性。 必须在 Coded UITest.cs 文件中删除对原始方法的引用，并将其替换为重命名的方法名称。
+    > 请不要修改 UIMap.Designer.cs 文件。 每次使用 UIMap - 编码的 UI 测试生成器生成代码时，都会覆盖你在 UIMapDesigner.cs 文件中所做出的任何更改。 如果必须修改录制的方法，则必须将其复制到 UIMap.cs 文件并对其重命名。 UIMap.cs 文件可用于重写 UIMapDesigner.cs 文件中的方法和属性。 必须在 Coded UITest.cs 文件中删除对原始方法的引用，并将其替换为重命名的方法名称。
 
 4. 在解决方案资源管理器中，找到编码的 UI 测试项目中的 **UIMap.uitest**。
 
@@ -366,25 +366,25 @@ ms.locfileid: "74302062"
 
      此时，编码的 UI 测试已成功完成测试中的所有步骤。  在“测试结果”窗口中，你会看到状态“已通过”。
 
-## <a name="external-resources"></a>外部资源
+## <a name="external-resources"></a>外部資源
 
 ### <a name="videos"></a>视频
- ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[编码的 UI 测试-DeepDive-第1集-GettingStarted](https://go.microsoft.com/fwlink/?LinkID=230573)
+ ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[编码的 UI 测试-DeepDive-第1集-GettingStarted](https://skydrive.live.com/?cid=2db0e1efe1c1d3b8&id=2DB0E1EFE1C1D3B8%21118)
 
- ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[编码的 UI 测试-DeepDive-第2集-维护和调试](https://go.microsoft.com/fwlink/?LinkID=230574)
+ ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[编码的 UI 测试-DeepDive-第2集-维护和调试](https://skydrive.live.com/?cid=2db0e1efe1c1d3b8&id=2DB0E1EFE1C1D3B8%21116)
 
- ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[编码的 UI 测试-DeepDive-第-3](https://go.microsoft.com/fwlink/?LinkID=230575)
+ ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[编码的 UI 测试-DeepDive-第-3](https://skydrive.live.com/?cid=2db0e1efe1c1d3b8&id=2DB0E1EFE1C1D3B8%21117)
 
 ### <a name="hands-on-lab"></a>动手实验
- [MSDN 虚拟实验室：使用 Visual Studio 2010 创建编码的 UI 测试的简介](https://go.microsoft.com/fwlink/?LinkID=22508)
+ [MSDN 虚拟实验室：使用 Visual Studio 2010 创建编码的 UI 测试的简介](https://windows.microsoft.com/en-US/windows/products/windows-media-player)
 
-### <a name="faq"></a>FAQ
- [编码的 UI 测试常见问题 - 1](https://go.microsoft.com/fwlink/?LinkID=230576)
+### <a name="faq"></a>常见问题
+ [编码的 UI 测试常见问题 - 1](https://blogs.msdn.com/b/mathew_aniyan/archive/tags/faq/)
 
- [编码的 UI 测试常见问题 - 2](https://go.microsoft.com/fwlink/?LinkID=230578)
+ [编码的 UI 测试常见问题 - 2](https://social.msdn.microsoft.com/Forums/en-US/vsautotest/thread/3a74dd2c-cef8-4923-abbf-7a91f489e6c4)
 
 ### <a name="forum"></a>论坛
- [Visual Studio UI 自动测试（包括 CodedUI）](https://go.microsoft.com/fwlink/?LinkID=224497)
+ [Visual Studio UI 自动测试（包括 CodedUI）](https://social.msdn.microsoft.com/Forums/en-US/vsautotest)
 
 ## <a name="see-also"></a>请参阅
  [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)[入门使用 WPF 设计器](https://msdn.microsoft.com/18e61d03-b96a-4058-a166-8ec6b3f6116b)[支持编码的 Ui 测试的配置和平台，以及](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)[使用编码的 Ui 测试编辑器编辑编码的 ui 测试](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)的操作录制
