@@ -16,12 +16,12 @@ caps.latest.revision: 36
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 8c407475f72684360551cd97852c1a1bfde5088f
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: becaa70d2eed862d77f4c666b0a408054eaf5926
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300611"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850951"
 ---
 # <a name="concurrency-visualizer"></a>并发可视化工具
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,20 +36,20 @@ ms.locfileid: "74300611"
   
  使用并发可视化工具，可以检查多线程应用的执行方式。 并发可视化工具中的视图提供图形、表格和文本形式的数据，可表明程序中的线程与整个系统之间的时态关系。 可以使用并发可视化工具查找性能瓶颈、CPU 利用率不足、线程争用、跨内核线程迁移、同步延迟、DirectX 活动、I/O 重叠区域和其他信息。 这些视图通过将其图形输出与调用堆栈和源代码关联在一起，提供可操作数据。  
   
- 并发可视化工具依赖 [Windows 事件跟踪](https://go.microsoft.com/fwlink/?LinkId=234579) 功能。  
+ 并发可视化工具依赖 [Windows 事件跟踪](https://msdn.microsoft.com/library/bb968803(VS.85).aspx) 功能。  
   
 > [!NOTE]
 > 并发可视化工具不支持 Web 项目。  
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|职务|描述|  
 |-----------|-----------------|  
 |[使用率视图](../profiling/utilization-view.md)|介绍如何在所有处理器中查看和分析系统活动。|  
-|[“线程”视图](../profiling/threads-view-parallel-performance.md)|介绍如何分析程序中线程之间的交互。|  
+|[线程视图](../profiling/threads-view-parallel-performance.md)|介绍如何分析程序中线程之间的交互。|  
 |[“核心”视图](../profiling/cores-view.md)|介绍如何分析跨越核心的线程迁移。|  
 |[性能不佳的多线程应用程序的常见模式](../profiling/common-patterns-for-poorly-behaved-multithreaded-applications.md)|描述若干常见模式并展示其在并发可视化工具中的显示方式。|  
-|[Visual Studio 博客中的并行开发](https://go.microsoft.com/fwlink/?LinkId=235385)|提供关于并发可视化工具的提示和最佳做法。|  
+|[Visual Studio 博客中的并行开发](https://blogs.msdn.com/b/visualizeparallel)|提供关于并发可视化工具的提示和最佳做法。|  
 |[性能报告视图](../profiling/performance-report-views.md)|提供有关 Visual Studio 分析工具报告和视图的参考信息。|  
 |[并发可视化工具 SDK](../profiling/concurrency-visualizer-sdk.md)|描述如何检测你的源代码，以便在并发可视化工具中显示附加信息。|  
 |[并发可视化工具命令行实用工具 (CVCollectionCmd)](../profiling/concurrency-visualizer-command-line-utility-cvcollectioncmd.md)|描述如何使用并发可视化工具命令行实用程序 (CVCollectionCmd.exe) 在未安装 Visual Studio 的计算机上收集并处理跟踪信息。|  

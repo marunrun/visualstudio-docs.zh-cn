@@ -8,12 +8,12 @@ author: frozenpandaman
 ms.author: efessler
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e226ac6c83839474b9d8ac6be7fb57e376de4a4f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 25320da07249abee0ab0cddd48662585a7a809dd
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745983"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846748"
 ---
 # <a name="using-clang-tidy-in-visual-studio"></a>在 Visual Studio 中使用 Clang
 
@@ -28,13 +28,13 @@ Clang 是使用 LLVM/Clang-cl 工具集时的默认分析工具，可在 MSBuild
 
 ## <a name="msbuild"></a>MSBuild
 
-可以将 Clang 配置为作为代码分析的一部分运行，并在项目属性窗口的 "**代码分析**"  >  "**常规**" 页下生成。 用于配置工具的选项可在 "Clang" 子菜单中找到。
+可以将 Clang 配置为作为代码分析的一部分运行，并在项目属性窗口的 "**代码分析**" > "**常规**" 页下生成。 用于配置工具的选项可在 "Clang" 子菜单中找到。
 
 有关详细信息，请参阅[如何：设置 C/C++项目的代码分析属性](../code-quality/how-to-set-code-analysis-properties-for-c-cpp-projects.md)。
 
 ## <a name="cmake"></a>CMake
 
-在 CMake 项目中，您可以在 `CMakeSettings.json` 中配置 Clang 检查。 打开后，在 "CMake 项目设置" 编辑器的右上角单击 "编辑 JSON"。 识别以下密钥：
+在 CMake 项目中，您可以在 `CMakeSettings.json`中配置 Clang 检查。 打开后，在 "CMake 项目设置" 编辑器的右上角单击 "编辑 JSON"。 识别以下密钥：
 
 - `enableMicrosoftCodeAnalysis`：启用 Microsoft 代码分析
 - `enableClangTidyCodeAnalysis`：启用 Clang 分析
@@ -44,13 +44,13 @@ Clang 是使用 LLVM/Clang-cl 工具集时的默认分析工具，可在 MSBuild
 
 ## <a name="warning-display"></a>警告显示
 
-Clang 运行会导致错误列表中显示警告，并在代码相关部分下显示为编辑器内波形曲线。 使用错误列表中的 "Category" 列对 Clang 警告进行排序和组织。 可以通过在 "**工具**"  >  "**选项**" 下切换 "禁用代码分析波形曲线" 设置来配置编辑器内警告。
+Clang 运行会导致错误列表中显示警告，并在代码相关部分下显示为编辑器内波形曲线。 使用错误列表中的 "Category" 列对 Clang 警告进行排序和组织。 可以通过在 "**工具**" > "**选项**" 下切换 "禁用代码分析波形曲线" 设置来配置编辑器内警告。
 
 ## <a name="clang-tidy-configuration"></a>Clang 配置
 
 您可以通过 " **Clang 检查**" 选项配置检查 clang 是否在 Visual Studio 中运行。 此输入提供给该工具的 **--检查**参数。 任何进一步的配置都可以包含在**clang 的**文件中。 有关更多详细信息，请参阅[LLVM.org 上的 Clang 文档](https://clang.llvm.org/extra/clang-tidy/)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [Clang/LLVM 对 MSBuild 项目的支持](https://aka.ms/cpp/clangmsbuild)
-- [CMake 项目的 Clang/LLVM 支持](https://aka.ms/cpp/clangcmake)
+- [Clang/LLVM 对 MSBuild 项目的支持](https://devblogs.microsoft.com/cppblog/clang-llvm-support-for-msbuild-projects/)
+- [CMake 项目的 Clang/LLVM 支持](https://devblogs.microsoft.com/cppblog/visual-studio-cmake-support-clang-llvm-cmake-3-14-vcpkg-and-performance-improvements/)

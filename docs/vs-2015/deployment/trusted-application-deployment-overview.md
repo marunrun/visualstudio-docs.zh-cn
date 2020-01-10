@@ -17,12 +17,12 @@ caps.latest.revision: 33
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a95392525826fcfb2595e1bac7d45ebea20317fc
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 673cc3d9b936131e6423a015af5c78486846fbe7
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74294691"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847710"
 ---
 # <a name="trusted-application-deployment-overview"></a>Trusted Application Deployment Overview
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "74294691"
 |--------------------|-----------------|  
 |管理员|负责更新和维护客户端计算机的组织实体|  
 |信任关系管理器|公共语言运行时 (CLR) 中负责强制执行客户端应用程序安全性的的子系统。|  
-|publisher|编写和维护应用程序的实体。|  
+|出版商|编写和维护应用程序的实体。|  
 |部署人员|将应用程序打包并分发给用户的实体。|  
 |证书|由公钥和私钥组成的加密签名；通常由可保证其可靠性的的证书颁发机构 (CA) 颁发。|  
 |验证码证书|嵌入了元数据的证书，其中元数据描述证书的可能用途等信息。|  
@@ -74,7 +74,7 @@ ms.locfileid: "74294691"
 ### <a name="add-the-publisher-to-the-trusted-publishers-store"></a>将发布者添加到受信任的发布者存储区。  
  为了你的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序能够接收更高级别的信任，必须将你的证书作为受信任的发布者添加到将运行此应用程序的每个客户端计算机。 执行此任务属于一次性的配置。 完成后，可尽可能多地随心部署用你的发布者证书进行签名的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序，且这些应用程序均将以高信任级别运行。  
   
- 如果正在托管的桌面环境中部署应用程序（例如，运行 Windows 操作系统的公司 Intranet），可通过使用组策略创建新的证书信任列表 (CTL) 将受信任的发布者添加到客户端的存储区。 有关详细信息，请参阅 [为组策略对象创建证书信任列表](https://go.microsoft.com/fwlink/?LinkId=102576)。  
+ 如果正在托管的桌面环境中部署应用程序（例如，运行 Windows 操作系统的公司 Intranet），可通过使用组策略创建新的证书信任列表 (CTL) 将受信任的发布者添加到客户端的存储区。 有关详细信息，请参阅 [为组策略对象创建证书信任列表](https://technet.microsoft.com/library/2c03582f-00b2-43e5-ae1d-493894ad0fd7)。  
   
  如果未在托管的桌面环境中部署应用程序，可使用以下选项将证书添加到受信任的发布者存储区：  
   

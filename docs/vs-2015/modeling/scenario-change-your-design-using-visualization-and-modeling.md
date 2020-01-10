@@ -17,12 +17,12 @@ caps.latest.revision: 63
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: cafc4e2a87a31603e1f8cef4174d8538be768428
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 0954a38a2667331c537487a706d1d2d13a07f6c4
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296018"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850902"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>方案：使用可视化和建模更改设计
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -242,7 +242,7 @@ ms.locfileid: "74296018"
 |**代码图或关系图**|**显示**|
 |------------------------|---------------|
 |*代码图*<br /><br /> 请参阅：<br /><br /> -   [映射解决方案中的依赖项](../modeling/map-dependencies-across-your-solutions.md)<br />-   [浏览和重新排列代码图](../modeling/browse-and-rearrange-code-maps.md)<br />-   [通过编辑 DGML 文件自定义代码图](../modeling/customize-code-maps-by-editing-the-dgml-files.md)|代码中的依赖关系以及其他关系。<br /><br /> 例如，Dinner Now 首先会查看程序集代码图，大致了解这些程序集及其依赖关系。 他们可以深入探讨代码图，浏览这些程序集中的命名空间和类。<br /><br /> Dinner Now 还可以创建代码图来浏览特定区域和代码中其他类型的关系。 他们借助解决方案资源管理器来帮助查找和选择感兴趣的区域和关系。|
-|*基于代码的类图*<br /><br /> 请参阅[如何：向项目中添加类图（类设计器）](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)。|代码中的现有类|
+|*基于代码的类图*<br /><br /> 请参阅 [How to: Add Class Diagrams to Projects (Class Designer)](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)。|代码中的现有类|
 
  例如，开发人员创建一个代码图。 她调整了该代码图的范围，以侧重于将受到新方案影响的区域。 代码图上选中并突出显示了这些区域：
 
@@ -264,7 +264,7 @@ ms.locfileid: "74296018"
 |------------------|-------------------|
 |*活动图（UML）*<br /><br /> 请参阅：<br /><br /> -   [UML 活动图：参考](../modeling/uml-activity-diagrams-reference.md)<br />-   [UML 活动图：准则](../modeling/uml-activity-diagrams-guidelines.md)|系统通知客户重新从餐馆下订单时发生的步骤流，用于提示客户写评论。|
 |*类图（UML）*<br /><br /> 请参阅：<br /><br /> -   [UML 类图：参考](../modeling/uml-class-diagrams-reference.md)<br />-   [UML 类图：准则](../modeling/uml-class-diagrams-guidelines.md)|逻辑类及其关系。 例如，添加一个新类来描述 **“评论”** 以及它与其他实体（如 **“餐馆”** 、 **“菜单”** 和 **“客户”** ）的关系。<br /><br /> 要将评论与客户关联，系统必须存储客户详细信息。 UML 类图可帮助阐明这些详细信息。|
-|*基于代码的类图*<br /><br /> 请参阅[如何：向项目中添加类图（类设计器）](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)。|代码中的现有类。|
+|*基于代码的类图*<br /><br /> 请参阅 [How to: Add Class Diagrams to Projects (Class Designer)](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)。|代码中的现有类。|
 |*组件图（UML）*<br /><br /> 请参阅：<br /><br /> -   [UML 组件图：参考](../modeling/uml-component-diagrams-reference.md)<br />-   [UML 组件图：准则](../modeling/uml-component-diagrams-guidelines.md)|系统的高级部分，如 Dinner Now 网站及其接口。 这些接口定义组件如何通过他们提供和使用的方法或服务来互相交互。|
 |*序列图（UML）*<br /><br /> 请参阅：<br /><br /> -   [UML 序列图：参考](../modeling/uml-sequence-diagrams-reference.md)<br />-   [UML 序列图：准则](../modeling/uml-sequence-diagrams-guidelines.md)|实例间的交互的序列。|
 
@@ -363,7 +363,7 @@ ms.locfileid: "74296018"
 
 - [在开发过程中验证系统](../modeling/validate-your-system-during-development.md)
 
-- [使用版本控制](https://go.microsoft.com/fwlink/?LinkID=525605)
+- [使用版本控制](https://docs.microsoft.com/azure/devops/repos/tfvc/overview?view=azure-devops)
 
 - [生成应用程序](/azure/devops/pipelines/index)
 
@@ -665,7 +665,7 @@ ms.locfileid: "74296018"
 |层关系图|系统的逻辑体系结构。 使用层验证来确保代码与设计保持一致。<br /><br /> 为了有助于标识现有层或预期层，请创建代码图并对相关项进行分组。 要创建层关系图，请参阅：<br /><br /> -   [从代码创建层关系图](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [层关系图：准则](../modeling/layer-diagrams-guidelines.md)|
 |组件图|组件、组件的接口以及它们之间的关系。<br /><br /> 为了有助于标识组件，请创建代码图并按项在系统中的功能对其进行分组。<br /><br /> 请参阅：<br /><br /> -   [UML 组件图：参考](../modeling/uml-component-diagrams-reference.md)<br />-   [UML 组件图：准则](../modeling/uml-component-diagrams-guidelines.md)|
 |类图 (UML)|类、类的属性和操作以及它们之间的关系。<br /><br /> 为了有助于标识这些元素，请创建一个显示这些元素的 UML 类图。<br /><br /> 请参阅：<br /><br /> -   [UML 类图：参考](../modeling/uml-class-diagrams-reference.md)<br />-   [UML 类图：准则](../modeling/uml-class-diagrams-guidelines.md)|
-|类图（基于代码）|针对某个特定项目的代码中的现有类。<br /><br /> 要可视化和修改代码中的现有类，请使用类设计器。<br /><br /> 请参阅[如何：向项目中添加类图（类设计器）](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)。|
+|类图（基于代码）|针对某个特定项目的代码中的现有类。<br /><br /> 要可视化和修改代码中的现有类，请使用类设计器。<br /><br /> 请参阅 [How to: Add Class Diagrams to Projects (Class Designer)](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)。|
 
 ### <a name="DescribeSequence"></a>描述交互：序列图
  序列图描述系统的各个部件之间的一系列交互。 部件的规模不限。 例如，从一个程序中的单个对象到大型子系统或外部参与者，都可以作为部件。 交互的规模和类型不限。 例如，其范围可以从单一消息到扩展的事务，也可以是函数调用或 Web 服务消息。
@@ -878,11 +878,11 @@ ms.locfileid: "74296018"
 |代码图|可视化现有代码中的组织和关系。<br /><br /> 要创建层，请生成一个代码图，然后将该代码图上的项作为可能的层进行分组。 将组从代码图拖动到层关系图。<br /><br /> 请参阅：<br /><br /> -   [映射解决方案中的依赖项](../modeling/map-dependencies-across-your-solutions.md)<br />-   [浏览和重新排列代码图](../modeling/browse-and-rearrange-code-maps.md)|
 |组件图|描述组件、组件的接口以及它们之间的关系。<br /><br /> 要可视化层，请创建一个描述系统中不同组件的功能的组件图。<br /><br /> 请参阅：<br /><br /> -   [UML 组件图：参考](../modeling/uml-component-diagrams-reference.md)<br />-   [UML 组件图：准则](../modeling/uml-component-diagrams-guidelines.md)|
 
-## <a name="external-resources"></a>外部资源
+## <a name="external-resources"></a>外部資源
 
 |**类别**|**Links**|
 |------------------|---------------|
-|**论坛**|-   [Visual Studio 可视化和建模工具](https://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio 可视化和建模 SDK（DSL 工具）](https://go.microsoft.com/fwlink/?LinkId=184721)|
+|**论坛**|-   [Visual Studio 可视化和建模工具](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Visual Studio 可视化和建模 SDK（DSL 工具）](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
 
 ## <a name="see-also"></a>请参阅
  [可视化代码](../modeling/visualize-code.md)[为应用程序创建模型](../modeling/create-models-for-your-app.md)[在开发过程中使用模型](../modeling/use-models-in-your-development-process.md)在开发过程中[使用模型在](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)[开发过程中验证系统](../modeling/validate-your-system-during-development.md)[扩展 UML 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)
