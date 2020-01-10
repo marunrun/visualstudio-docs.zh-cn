@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e328e85f58e69ef1d579fd979f629c59b90caf3e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b5b0369a30e69fc69782bbc4a0f5b0c4518cac07
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72730518"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776089"
 ---
 # <a name="pseudovariables-in-the-visual-studio-debugger"></a>Visual Studio 调试器中的伪变量
 伪变量是用于在变量窗口或“快速监视”对话框中显示某些信息的术语。 你可以像输入普通变量那样输入伪变量。 但伪变量不是变量，它不与程序中的变量名相对应。
@@ -43,11 +43,11 @@ ms.locfileid: "72730518"
 |`$env`|在字符串查看器中显示环境块。|
 |`$cmdline`|显示已启动程序的命令行字符串。|
 |`$pid`|显示进程 ID。|
-|`$` *RegisterName*<br /><br /> 或<br /><br /> `@` *RegisterName*|显示寄存器“registerName”的内容。<br /><br /> 通常，只需输入寄存器名便可以显示寄存器的内容。 仅在寄存器名重载变量名时才需要使用此语法。 如果寄存器名与当前范围内的某个变量名同名，则调试器将该名称解释为变量名。 这时就需要使用 `$` registername 或 `@` registername 寄存器名。|
+|`$`*寄存器*名<br /><br /> 或<br /><br /> `@`*寄存器*名|显示寄存器“registerName”的内容。<br /><br /> 通常，只需输入寄存器名便可以显示寄存器的内容。 仅在寄存器名重载变量名时才需要使用此语法。 如果寄存器名与当前范围内的某个变量名同名，则调试器将该名称解释为变量名。 这时就需要使用 `$` registername 或 `@` registername 寄存器名。|
 |`$clk`|以时钟形式显示时间。|
 |`$user`|显示一个结构，在该结构中含有应用程序运行于的帐户的帐户信息。 出于安全原因，将不显示密码信息。|
 |`$exceptionstack`|显示当前 Windows 运行时异常的堆栈跟踪。 `$ exceptionstack` 仅适用于 UWP 应用。 `$ exceptionstack` 不支持C++和 SEH 异常|
-|`$returnvalue`|显示 .NET 方法的返回值。|
+|`$returnvalue`|显示方法的返回值。|
 
  在C#中，可以使用下表中所示的伪变量：
 
@@ -62,11 +62,11 @@ ms.locfileid: "72730518"
 |伪变量|函数|
 |--------------------|--------------|
 |`$exception`|显示有关上一个异常的信息。 如果没有发生异常，则计算 `$exception` 将显示错误消息。|
-|`$delete` 或 `$$delete`|删除已在“即时”窗口中创建的隐式变量。 语法 `$delete,`*变量*或 `$delete,`*变量*`.`|
-|`$objectids` 或 `$listobjectids`|将所有活动对象 ID 显示为指定的表达式的子级。 语法为 `$objectid,`*表达式*或 `$listobjectids,`*表达式*`.`|
+|`$delete` 或 `$$delete`|删除已在“即时”窗口中创建的隐式变量。 语法 `$delete,`*变量*或`$delete,`*变量*`.`|
+|`$objectids` 或 `$listobjectids`|将所有活动对象 ID 显示为指定的表达式的子级。 语法为 `$objectid,`*表达式*或`$listobjectids,`*表达式*`.`|
 |`$` *N* `#`|显示对象 ID 等于 N 的对象。|
-|`$dynamic`|显示这两个特殊“动态视图”实现 `IDynamicMetaObjectProvider` 的对象的节点。 接口。 语法为 `$dynamic,` 对象。 此功能仅适用于使用 .NET Framework 版本4或更高版本的代码。|
+|`$dynamic`|显示这两个特殊“动态视图”实现 `IDynamicMetaObjectProvider` 的对象的节点。 接口。 语法为 `$dynamic,`*对象*。 此功能仅适用于使用 .NET Framework 版本4或更高版本的代码。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [监视和快速监视窗口](../debugger/watch-and-quickwatch-windows.md)
 - [变量窗口](../debugger/debugger-windows.md)
