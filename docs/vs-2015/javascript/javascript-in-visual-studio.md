@@ -9,12 +9,12 @@ caps.latest.revision: 18
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 175cb6f6a8a3f240c244e139406841b0546209cc
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 778912c3149f9f146c01dbab15afa4fabeaa49b8
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295902"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852261"
 ---
 # <a name="javascript-in-visual-studio"></a>Visual Studio 中的 JavaScript
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,7 +25,7 @@ JavaScript 是 Visual Studio 中的一级语言。 当你在 Visual Studio IDE �
 
  可能需要特定版本的 Visual Studio 或特定 Visual Studio 扩展来使用 HTML 和 JavaScript 开发特定应用程序类型和服务。 下面的列表包含指向详细信息的链接。
 
-- 若要使用 Apache Cordova 创建跨平台的应用，请[获取 Visual Studio 用于 Apache Cordova 的工具](https://go.microsoft.com/fwlink/p/?LinkId=397606)。
+- 若要使用 Apache Cordova 创建跨平台的应用，请[获取 Visual Studio 用于 Apache Cordova 的工具](https://taco.visualstudio.com/docs/install-vs-tools-apache-cordova/)。
 
 - 若要创建 [Windows 应用商店](https://developer.microsoft.com/)、[Windows Phone](https://developer.microsoft.com/) 和通用应用（支持这两种平台的应用），请[获取这些工具](https://developer.microsoft.com/windows/downloads)。
 
@@ -45,8 +45,8 @@ JavaScript 是 Visual Studio 中的一级语言。 当你在 Visual Studio IDE �
 |-------------|-----------------|
 |类|新语法支持[类](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/class)的声明。|
 |承诺|通过[承诺](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)可以实现更轻松、更干净的异步编码。 支持承诺构造函数，以及 `all` 和 `race` 实用工具方法。|
-|迭代器|现在可以循环访问可迭代对象（包括数组、类似数组的对象和迭代器），从而使用要对每个非重复属性的值执行的语句来调用自定义迭代挂钩。 有关详细信息，请参阅[迭代器和生成器](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Iterators_and_Generators)。 **注意：** 尚不支持生成器。|
-|箭头函数|箭头函数 (=>) 为采用词法 `function` 绑定的 `this` 关键字提供速记形式语法。|
+|Iterators|现在可以循环访问可迭代对象（包括数组、类似数组的对象和迭代器），从而使用要对每个非重复属性的值执行的语句来调用自定义迭代挂钩。 有关详细信息，请参阅[迭代器和生成器](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Iterators_and_Generators)。 **注意：** 尚不支持生成器。|
+|箭头函数|箭头函数 (=>) 为采用词法 `this` 绑定的 `function` 关键字提供速记形式语法。|
 |用于内置对象的新方法|[Array 对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)、[Math 对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math)、[Number 对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)、[Object 对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)和 [String 对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)内置对象包括许多用于操作和检测数据的新实用工具函数和属性。|
 |对象文字增强功能|对象现在针对其值初始化为同名变量的属性支持计算属性、简洁方法定义和速记形式语法。 有关详细信息，请参阅[创建对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)。|
 |代理|[代理](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Proxy)可实现对象的自定义行为。|

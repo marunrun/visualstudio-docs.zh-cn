@@ -19,12 +19,12 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e9d476cfc4ce742d3300c78f2219c0b3797130c8
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 1676f438b876757ab66d8b9e9b1ee09bde442ef9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301301"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852045"
 ---
 # <a name="accessibility-products-and-services-from-microsoft"></a>Microsoft 提供的辅助功能产品和服务
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -40,23 +40,23 @@ Microsoft 致力于让每位用户可以更便捷地使用其产品和服务。 
 - [更多信息](../../ide/reference/accessibility-products-and-services-from-microsoft.md#moreinfo)
 
 > [!NOTE]
-> 本节中的信息仅适用于美国境内获得 Microsoft 产品许可证的用户。 如果你在美国之外获得本产品，可以使用软件包附带的分公司信息卡，也可以访问 [Microsoft 辅助功能网站](https://go.microsoft.com/fwlink/?LinkId=8431) ，以获取 Microsoft 支持服务电话号码和地址的列表。 你可以与当地的分公司联系，了解你所在的地区是否供应本节中描述的产品和服务类型。 有关辅助功能的信息有其他语言版本，包括日语和法语。
+> 本节中的信息仅适用于美国境内获得 Microsoft 产品许可证的用户。 如果你在美国之外获得本产品，可以使用软件包附带的分公司信息卡，也可以访问 [Microsoft 辅助功能网站](https://www.microsoft.com/enable/default.aspx) ，以获取 Microsoft 支持服务电话号码和地址的列表。 你可以与当地的分公司联系，了解你所在的地区是否供应本节中描述的产品和服务类型。 有关辅助功能的信息有其他语言版本，包括日语和法语。
 
 ## <a name="windows"></a> Windows 辅助功能
- Windows 操作系统具备许多内置辅助功能，这些功能适用于不便打字或使用鼠标、失明或视力较差，或者失聪或具有听力障碍的人群。 安装时将安装这些功能。 有关这些功能的详细信息，请参阅 Windows 中的“帮助”和 [Microsoft 辅助功能网站](https://go.microsoft.com/fwlink/?LinkId=8431)。
+ Windows 操作系统具备许多内置辅助功能，这些功能适用于不便打字或使用鼠标、失明或视力较差，或者失聪或具有听力障碍的人群。 安装时将安装这些功能。 有关这些功能的详细信息，请参阅 Windows 中的“帮助”和 [Microsoft 辅助功能网站](https://www.microsoft.com/enable/default.aspx)。
 
 ### <a name="free-step-by-step-tutorials"></a>免费分步教程
  Microsoft 提供了一系列分步教程，这些教程提供了有关如何调整计算机上的辅助功能选项和设置的详细过程。 此信息以并行格式提供，以便你能够了解如何使用鼠标和/或键盘。
 
- 若要查找 Microsoft 产品的分步教程，请参阅 [Microsoft 辅助功能网站](https://go.microsoft.com/fwlink/?LinkId=8431)。
+ 若要查找 Microsoft 产品的分步教程，请参阅 [Microsoft 辅助功能网站](https://www.microsoft.com/enable/default.aspx)。
 
 ### <a name="assistive-technology-products-for-windows"></a>Windows 辅助技术产品
- 提供各种辅助技术产品以便残障人士更方便地使用计算机。 你可以在 [Microsoft 辅助功能网站](https://go.microsoft.com/fwlink/?LinkId=8431)上搜索在 Windows 上运行的辅助性技术产品的目录。
+ 提供各种辅助技术产品以便残障人士更方便地使用计算机。 你可以在 [Microsoft 辅助功能网站](https://www.microsoft.com/enable/default.aspx)上搜索在 Windows 上运行的辅助性技术产品的目录。
 
  如果使用辅助技术，请务必在升级软件或硬件之前与辅助技术供应商联系，以检查是否存在可能的兼容性问题。
 
 ## <a name="altfortmats"></a> 替代格式的文档
- 如果你有阅读困难或难以处理印刷材料，可以获取许多 Microsoft 产品的更易于访问的格式的文档。 你可以在 [Microsoft 辅助功能网站](https://go.microsoft.com/fwlink/?LinkId=8431)上查看辅助产品文档的索引。
+ 如果你有阅读困难或难以处理印刷材料，可以获取许多 Microsoft 产品的更易于访问的格式的文档。 你可以在 [Microsoft 辅助功能网站](https://www.microsoft.com/enable/default.aspx)上查看辅助产品文档的索引。
 
  此外，还可以从 Blind & Dyslexic, Inc (RFB&D) 获得其他的 Microsoft 出版物。 RFB&D 将这些文档分发给已注册使用其分发服务的合格成员。 有关 Microsoft 产品文档和 Microsoft 出版社所出版书籍的提供情况信息，请联系：
 
@@ -76,7 +76,7 @@ Microsoft 致力于让每位用户可以更便捷地使用其产品和服务。 
   Microsoft 支持服务受使用服务时实施的价格、条款和条件约束。
 
 ## <a name="moreinfo"></a> 更多信息
- 有关计算机辅助技术如何帮助残障人士改善生活的详细信息，请参阅 [Microsoft 辅助功能网站](https://go.microsoft.com/fwlink/?LinkId=8431)。
+ 有关计算机辅助技术如何帮助残障人士改善生活的详细信息，请参阅 [Microsoft 辅助功能网站](https://www.microsoft.com/enable/default.aspx)。
 
 ## <a name="see-also"></a>另请参阅
  [用于设计可访问应用程序的资源](../../ide/reference/resources-for-designing-accessible-applications.md) [Visual Studio 的辅助功能](../../ide/reference/accessibility-features-of-visual-studio.md)

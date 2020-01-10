@@ -18,12 +18,12 @@ caps.latest.revision: 35
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5a78fab1986c7fae50bbb4c8149e8f2c89ec4873
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 97c8c50dec18d730d92021d88361701a96b99590
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295204"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844989"
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>ClickOnce 部署中的服务器和客户端配置问题
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "74295204"
 ## <a name="clickonce-and-proxy-authentication"></a>ClickOnce 和代理身份验证  
  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 在 .NET Framework 3.5 中开始提供对 Windows 集成代理身份验证的支持。 不需要特定的 machine.config 指令。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 不支持其他身份验证协议，如 Basic 或 Digest。  
   
- 你还可以将修补程序应用到 .NET Framework 2.0 来启用此功能。 有关详细信息，请参阅 https://go.microsoft.com/fwlink/?LinkId=158730。  
+ 你还可以将修补程序应用到 .NET Framework 2.0 来启用此功能。 有关更多信息，请参见 https://go.microsoft.com/fwlink/?LinkId=158730 。  
   
  有关详细信息，请参阅[\<defaultProxy > 元素（网络设置）](https://msdn.microsoft.com/library/9d663c4b-07b4-4f6f-9b12-efbd3630354f)。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "74295204"
   
 - 如果创建扩展名为 "*" 且 MIME 类型为 "application/八进制流" 的 MIME 类型，则将允许下载不受阻止的文件类型的文件。 （但是，不能下载被阻止的文件类型，如 .aspx 和 .asmx。）  
   
-  有关在 Windows Server 上配置 MIME 类型的具体说明，请参阅 Microsoft 知识库文章 KB326965 "IIS 6.0 不提供未知 MIME 类型" [https://support.microsoft.com/default.aspx?scid=kb; en-us; 326965](https://support.microsoft.com/default.aspx?scid=kb;en-us;326965)。  
+  有关在 Windows Server 上配置 MIME 类型的具体说明，请参阅 Microsoft 知识库文章 KB326965 "IIS 6.0 不提供未知 MIME 类型" [https://support.microsoft.com/default.aspx?scid=kb ; en-us; 326965](https://support.microsoft.com/default.aspx?scid=kb;en-us;326965)。  
   
 ## <a name="content-type-mappings"></a>内容类型映射  
  通过 HTTP 发布时，应用程序文件的内容类型（也称为 MIME 类型）应为 "应用程序/x 应用程序"。 如果已在服务器上安装 [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)]，则会自动设置。 如果未安装，则需要为 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序 vroot （或整个服务器）创建 MIME 类型关联。  
@@ -133,7 +133,7 @@ ms.locfileid: "74295204"
   
  如果使用的是 IIS，则可以轻松启用 HTTP 压缩。 但是，当启用 HTTP 压缩时，仅对某些文件类型（即 HTML 和文本文件）启用它。 若要为程序集（.dll）、XML （.xml）、部署清单（应用程序）和应用程序清单（.manifest）启用压缩，则必须将这些文件类型添加到 IIS 的类型列表中以进行压缩。 将文件类型添加到部署之前，只会压缩文本和 HTML 文件。  
   
- 有关 IIS 的详细说明，请参阅[如何为 HTTP 压缩指定其他文档类型](https://go.microsoft.com/fwlink/?LinkId=178459)。  
+ 有关 IIS 的详细说明，请参阅[如何为 HTTP 压缩指定其他文档类型](https://support.microsoft.com/kb/234497)。  
   
 ## <a name="see-also"></a>请参阅  
  [ClickOnce 部署疑难解答](../deployment/troubleshooting-clickonce-deployments.md)   

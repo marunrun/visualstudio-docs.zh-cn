@@ -12,12 +12,12 @@ ms.assetid: c191de3e-3f3b-471e-b828-29ec24e80e2c
 caps.latest.revision: 64
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8c861099ac5253c9610e8ae75d3c429a5ce88a9d
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 7a8b9a4b52fce5fb838c12ccf057fd0e80619cd7
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301437"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851262"
 ---
 # <a name="unit-test-your-code"></a>单元测试代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "74301437"
 |**使用代码覆盖率确定通过单元测试进行测试的项目代码的比例：** 了解 [!INCLUDE[vsprvsts](../includes/vsprvsts-md.md)] 测试工具的代码覆盖率功能。|-   [使用代码覆盖率确定所测试的代码量](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)|
 |**通过对单元测试使用负载测试来执行压力和性能分析**：可以创建负载测试并向其添加单元测试，以帮助隔离应用程序中的性能和压力问题。 **注意：** 创建和使用负载测试需要 Visual Studio Enterprise。|-   [创建和编辑负载测试](https://msdn.microsoft.com/e2985d15-60a7-4177-93b4-f986c2936337)<br />-   [如何：将 Web 性能测试和单元测试添加到负载测试方案](https://msdn.microsoft.com/03cc073e-9bdf-4530-ae46-504a51884594)<br />-   [如何：从负载测试方案中删除 Web 测试和单元测试](https://msdn.microsoft.com/3d6128d2-82b0-42fc-bda2-23a8aa03be07)|
 |**设置和强制实施质量要求**：可以创建质量要求以在签入代码之前强制运行测试，从而帮助确保代码质量。|-   [设置和强制实施质量要求](https://msdn.microsoft.com/library/bdc5666e-6cf0-45b2-a0a1-133c3f61e852)|
-|**扩展单元测试类型：** 可以向可能不在单元测试框架内的测试添加功能。 例如，可以添加一个指定某个测试是否应以普通用户身份运行的测试属性。 也可以扩展框架，将行特性添加到某个方法并在测试内使用该行中的数据。|有关如何扩展单元测试框架的示例代码，请参见以下 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkId=185591)。|
+|**扩展单元测试类型：** 可以向可能不在单元测试框架内的测试添加功能。 例如，可以添加一个指定某个测试是否应以普通用户身份运行的测试属性。 也可以扩展框架，将行特性添加到某个方法并在测试内使用该行中的数据。|有关如何扩展单元测试框架的示例代码，请参见以下 [Microsoft 网站](https://msdn.microsoft.com/vstudio/ff420671.aspx)。|
 |**设置测试选项：** 例如，可以指定测试结果的存储位置。|[使用 .runsettings 文件配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)|
 
 ## <a name="related-tasks"></a>相关任务
@@ -71,16 +71,16 @@ ms.locfileid: "74301437"
 ## <a name="external-resources"></a>外部资源
 
 ### <a name="videos"></a>视频
- [第 9 频道：对使用 XAML 编写的 Windows 应用商店应用进行单元测试](https://go.microsoft.com/fwlink/?LinkId=226285)
+ [第 9 频道：对使用 XAML 编写的 Windows 应用商店应用进行单元测试](https://channel9.msdn.com/Events/BUILD/BUILD2011/TOOL-529T)
 
 ### <a name="forums"></a>论坛
- [Visual Studio 单元测试](https://go.microsoft.com/fwlink/?LinkId=224477)
+ [Visual Studio 单元测试](https://social.msdn.microsoft.com/Forums/en/vsunittest/threads)
 
 ### <a name="guidance"></a>指导
- [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](https://go.microsoft.com/fwlink/?LinkID=255188)
+ [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](https://msdn.microsoft.com/library/jj159340.aspx)
 
 ### <a name="reference"></a>引用
- [Content Index for Unit Tests](https://go.microsoft.com/fwlink/?LinkID=254719)（单元测试的内容索引）
+ [Content Index for Unit Tests](https://blogs.msdn.com/b/mathew_aniyan/archive/2012/05/17/content-index-for-unit-test.aspx)（单元测试的内容索引）
 
 ## <a name="see-also"></a>请参阅
  [提高](https://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)[测试应用程序的](https://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac)代码质量

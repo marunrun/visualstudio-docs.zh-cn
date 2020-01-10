@@ -13,12 +13,12 @@ caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 67589a04b8f3c39e442b596a7a41981825bd5aa5
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 2d3247fb421800f87740a911563880b70abf3eed
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301113"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844737"
 ---
 # <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018：运行的 32 位应用程序达到了进程托管内存的限制
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "74301113"
   
  仅对 32 位计算机上运行的 32 位应用程序触发此规则。  
   
-## <a name="rule-description"></a>规则说明  
+## <a name="rule-description"></a>规则描述  
  Microsoft .NET 公共语言运行时 (CLR) 提供自动内存管理机制，该机制使用垃圾回收器从应用程序不再使用的对象回收内存。 垃圾回收器是面向生成的，基于大量分配为短期分配的假设。 例如，局部变量应是短期的。 新创建的对象在 0 代中启动，如果在垃圾回收后它们仍然存在，则将提升到 1 代，如果应用程序仍使用它们，则最后将过渡到 2 代。  
   
  会在大型对象堆上分配超过 85 KB 的托管对象，这样相比较小的对象，不会频繁对其进行垃圾回收和压缩。 大型对象是单独进行管理的，这是因为会假定大型对象更持久，并且将持久的大型对象与频繁分配的较小对象混合在一起会产生最差的堆碎片。  
@@ -64,7 +64,7 @@ ms.locfileid: "74301113"
   
   使用[分配视图](../profiling/dotnet-memory-allocations-view.md)确定这些分配的执行路径。  
   
-  有关如何提高垃圾回收性能的详细信息，请参阅 MSDN 站点上的 .NET Framework 技术文章：[Garbage Collector Basics and Performance Hints](https://go.microsoft.com/fwlink/?LinkId=177946)（垃圾回收器基础知识和性能提示）。  
+  有关如何提高垃圾回收性能的详细信息，请参阅 MSDN 站点上的 .NET Framework 技术文章：[Garbage Collector Basics and Performance Hints](https://msdn.microsoft.com/library/ms973837.aspx)（垃圾回收器基础知识和性能提示）。  
   
   若要解除对进程地址空间的专用部分大小的虚拟内存体系结构约束，请尝试在 64 位计算机上运行此 32 位进程。  64 位计算机上的 32 位进程最多可获得 4 GB 的专用虚拟内存。  
   

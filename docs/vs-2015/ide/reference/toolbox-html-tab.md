@@ -15,12 +15,12 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b7ca3179d3e4883f8a2867e13cbdd5e874d60462
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 4474f2a0823b5599da30706daedff6e5cd1fc0f5
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297776"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851661"
 ---
 # <a name="toolbox-html-tab"></a>工具箱，“HTML”选项卡
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "74297776"
 
  **指针** ![ASP.NET Mobile 设计器 html 页指针](../../ide/reference/media/vxpointer.gif "|::ref1::|")
 
- 打开任一工具箱选项卡时，此工具默认处于选中状态。 无法删除此工具。 使用指针可将对象拖动到“设计”视图图面上、调整其大小，并在页面或窗体中对其重新定位。 有关详细信息，请参阅[如何：管理“工具箱”窗口](https://msdn.microsoft.com/a022c3fe-298c-4a59-a48f-b050da90ebc2)和[如何：操作工具箱选项卡](https://msdn.microsoft.com/21285050-cadd-455a-b1f5-a2289a89c4db)。
+ 打开任一工具箱选项卡时，此工具默认处于选中状态。 无法删除此工具。 使用指针可将对象拖动到“设计”视图图面上、调整其大小，并在页面或窗体中对其重新定位。 有关详细信息，请参阅[如何：管理“工具箱”窗口](https://msdn.microsoft.com/a022c3fe-298c-4a59-a48f-b050da90ebc2)以及[如何：操作工具箱选项卡](https://msdn.microsoft.com/21285050-cadd-455a-b1f5-a2289a89c4db).
 
  **输入（按钮）** ![HTML 网页按钮](../../ide/reference/media/vxbutton.gif "|::ref2::|")
 
@@ -52,7 +52,7 @@ ms.locfileid: "74297776"
 <input id="Button1" type="button" value="Button" name="Button1">
 ```
 
- 有关详细信息，请参阅 [HTML 输入控件](https://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)、[HtmlInputButton 服务器控件声明性语法](https://msdn.microsoft.com/99ccf7fb-7e2a-4ba1-bcd9-981b619a16aa)、[NIB：如何：创建脚本和编辑事件处理程序](https://msdn.microsoft.com/69d71d13-c68b-4ecd-869b-a42edf6d1f6d)、[按钮 Web 服务器控件内容映射](https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf)、<xref:System.Web.UI.HtmlControls.HtmlInputButton>、<xref:System.Web.UI.HtmlControls.HtmlButton> 和 <xref:System.Web.UI.WebControls.Button>。
+ 有关详细信息，请参阅 [HTML 输入控件](https://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)、[HtmlInputButton 服务器控件声明性语法](https://msdn.microsoft.com/99ccf7fb-7e2a-4ba1-bcd9-981b619a16aa)、[NIB：如何：创建脚本和编辑事件处理程序](https://msdn.microsoft.com/69d71d13-c68b-4ecd-869b-a42edf6d1f6d)、[按钮 Web 服务器控件内容图](https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf), <xref:System.Web.UI.HtmlControls.HtmlInputButton>、<xref:System.Web.UI.HtmlControls.HtmlButton> 和 <xref:System.Web.UI.WebControls.Button>。
 
  **输入（Reset）** ![HTMLpageResetButton 屏幕快照](../../ide/reference/media/vxreset.gif "|::ref3::|")
 
@@ -118,10 +118,10 @@ ms.locfileid: "74297776"
 <input id="Password1" type="password" name="Password1">
 ```
 
- 有关详细信息，请参阅 [HTML 输入控件](https://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)、[HtmlInputPassword 服务器控件声明性语法](https://msdn.microsoft.com/df703dd0-1624-4e5a-a547-c97f2f331b9f)、[如何：设置 TextBox Web 服务器控件以输入密码](https://msdn.microsoft.com/library/5b5069f3-64a1-435a-aee6-da263f4e6310)和[演练：验证 Web 窗体页中的用户输入](https://msdn.microsoft.com/library/7141d6ba-34f3-410b-b5cd-2102a24cb436)。
+ 有关详细信息，请参阅 [HTML 输入控件](https://msdn.microsoft.com/library/2ba82c6b-dff7-4b73-b1c2-9e76a48a69de)、[ 服务器控件声明性语法](https://msdn.microsoft.com/df703dd0-1624-4e5a-a547-c97f2f331b9f) 以及 [如何：为密码条目设置 TextBox Web 服务器控制](https://msdn.microsoft.com/library/5b5069f3-64a1-435a-aee6-da263f4e6310)和[演练：验证 Web 窗体页中的用户输入](https://msdn.microsoft.com/library/7141d6ba-34f3-410b-b5cd-2102a24cb436)。
 
 > [!IMPORTANT]
-> 如果应用程序传输用户名和密码，则应配置网站使用安全套接字层 (SSL) 对传输进行加密。 有关详细信息，请参阅 [IIS 操作指南](https://go.microsoft.com/fwlink/?linkid=47856)中的“使用 SSL 保护连接”。 此外，建议对所有用户输入进行验证。 有关详细信息，请参阅[在 ASP.NET 网页中验证用户输入](https://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461)。
+> 如果应用程序传输用户名和密码，则应配置网站使用安全套接字层 (SSL) 对传输进行加密。 有关详细信息，请参阅 [IIS 操作指南](https://technet.microsoft.com/library/cc732976(v=WS.10).aspx)中的“使用 SSL 保护连接”。 此外，建议对所有用户输入进行验证。 有关详细信息，请参阅[在 ASP.NET 网页中验证用户输入](https://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461)。
 
  **输入（复选框）** ![HTML 网页工具箱复选框选项](../../ide/reference/media/vxcheckbox.gif "|::ref8::|")
 
@@ -210,7 +210,7 @@ ms.locfileid: "74297776"
 
  通过增加 size 属性的值可以创建多行 `select` 元素。
 
- 有关详细信息，请参阅 [HtmlSelect 服务器控件声明性语法](https://msdn.microsoft.com/ee93bdec-b343-441a-a8ff-56ffcafe9ae5)、[NIB：如何：创建脚本和编辑事件处理程序](https://msdn.microsoft.com/69d71d13-c68b-4ecd-869b-a42edf6d1f6d)、[DropDownList Web 服务器控件概述](https://msdn.microsoft.com/library/517dd1a4-8df3-4c9f-8c89-1549a1aee608)、[ListBox Web 服务器控件概述](https://msdn.microsoft.com/library/c08ee025-787a-408d-858e-a4a5fdb61d97)、<xref:System.Web.UI.HtmlControls.HtmlSelect> 和 <xref:System.Web.UI.WebControls.DropDownList>。
+ 有关详细信息，请参阅 [HtmlSelect 服务器控件声明性语法](https://msdn.microsoft.com/ee93bdec-b343-441a-a8ff-56ffcafe9ae5)、[NIB：如何：创建脚本和编辑事件处理程序](https://msdn.microsoft.com/69d71d13-c68b-4ecd-869b-a42edf6d1f6d)、[DropDownList Web 服务器控制概述](https://msdn.microsoft.com/library/517dd1a4-8df3-4c9f-8c89-1549a1aee608)、[ListBox Web 服务器控制概述](https://msdn.microsoft.com/library/c08ee025-787a-408d-858e-a4a5fdb61d97), <xref:System.Web.UI.HtmlControls.HtmlSelect> 和 <xref:System.Web.UI.WebControls.DropDownList>。
 
  **水平规则** ![HTML 页水平标尺项](../../ide/reference/media/vxhorizontal.gif "|::ref15::|")
 

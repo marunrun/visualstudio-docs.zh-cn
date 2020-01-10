@@ -9,12 +9,12 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ebe3813ad01566e2994b0a16b4a3fdc735de8c8c
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 4d4d703dbe28776cd93c7a438fc457d9f50ac4f7
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295704"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851127"
 ---
 # <a name="step-6-name-your-button-controls"></a>步骤 6：命名按钮控件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "74295704"
 
  窗体上包含四个按钮，IDE 将它们分别命名为“button1”、“button2”、“button3”和“button4”。 只看这些按钮的当前名称，你并不知道哪个按钮是“关闭” 按钮，哪个按钮是“显示图片” 按钮。 这就是为按钮控件提供包含更多信息的名字会很有帮助的原因。
 
- ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[教程1：在 Visual Basic 中创建图片查看器-视频 3](https://go.microsoft.com/fwlink/?LinkId=205213)或[教程1：在视频3中C#创建图片查看器](https://go.microsoft.com/fwlink/?LinkId=205202)。 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
+ ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[教程1：在 Visual Basic 中创建图片查看器-视频 3](https://msdn.microsoft.com/vbasic/gg315354.aspx)或[教程1：在视频3中C#创建图片查看器](https://msdn.microsoft.com/vcsharp/gg278411.aspx)。 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
 
 ### <a name="to-name-your-button-controls"></a>要命名按钮控件
 

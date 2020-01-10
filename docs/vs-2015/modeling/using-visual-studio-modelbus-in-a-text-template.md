@@ -9,12 +9,12 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a0d18103d2990b2734e4db1d1e7dc4261e08e7a7
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 3815ed93156a70a547a892a281f8907419503a3d
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301373"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845401"
 ---
 # <a name="using-visual-studio-modelbus-in-a-text-template"></a>在文本模板中使用 Visual Studio ModelBus
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,29 +37,29 @@ ms.locfileid: "74301373"
 
 #### <a name="to-create-a-modelbus-adapter-that-is-compatible-with-text-templates"></a>若要创建文本模板与兼容的 ModelBus 适配器
 
-1. 如果目标 DSL 解决方案没有**ModelBusAdapter**项目，请使用 Modelbus 扩展向导创建一个项目：
+1. 如果目标 DSL 解决方案不具有**ModelBusAdapter**项目中，创建一个使用 Modelbus 扩展向导：
 
-    1. 下载并安装 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ModelBus 扩展（如果尚未执行此操作）。 有关详细信息，请参阅[可视化和建模 SDK](https://go.microsoft.com/fwlink/?LinkID=185579)。
+    1. 下载并安装 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ModelBus 扩展（如果尚未执行此操作）。 有关详细信息，请参阅[可视化和建模 SDK](https://www.visualstudio.com/)。
 
-    2. 打开 DSL 定义文件。 右键单击设计图面，然后单击 "**启用 Modelbus**"。
+    2. 打开 DSL 定义文件。 右键单击设计图面，然后单击**启用 Modelbus**。
 
-    3. 在对话框中，选择 **"我想要向 ModelBus 公开此 DSL"** 。 如果希望此 DSL 同时公开其模型和使用对其他 Dsl 的引用，可以选择这两个选项。
+    3. 在对话框中，选择**我想要向 ModelBus 公开此 DSL**。 如果希望此 DSL 同时公开其模型和使用对其他 Dsl 的引用，可以选择这两个选项。
 
     4. 单击" **确定**"。 新项目“ModelBusAdapter”随即添加到 DSL 解决方案中。
 
-    5. 单击 "**转换所有模板**"。
+    5. 单击**转换所有模板**。
 
     6. 重新生成解决方案。
 
-2. 如果要从文本模板和其他代码（如 command）访问 DSL，请复制**ModelBusAdapter**项目：
+2. 如果你想要访问 DSL，从文本模板和其他代码，例如命令，重复**ModelBusAdapter**项目：
 
-    1. 在 Windows 资源管理器中，复制并粘贴包含**ModelBusAdapter**的文件夹。
+    1. 在 Windows 资源管理器，复制并粘贴所在的文件夹**ModelBusAdapter.csproj**。
 
-    2. 重命名项目文件（例如， **T4ModelBusAdapter**）。
+    2. 重命名项目文件 (例如，若**T4ModelBusAdapter.csproj**)。
 
-    3. 在**解决方案资源管理器**中，右键单击解决方案节点，指向 "**添加**"，然后单击 "**现有项目**"。 找到新的适配器项目**T4ModelBusAdapter**。
+    3. 在中**解决方案资源管理器**，右键单击解决方案节点，指向**添加**，然后单击**现有项目**。 找到新的适配器项目中， **T4ModelBusAdapter.csproj**。
 
-    4. 在新项目的每个 `*.tt` 文件中，更改命名空间。
+    4. 在每个`*.tt`文件的新项目的更改的命名空间。
 
     5. 右键单击解决方案资源管理器中的新项目，然后单击属性。 在属性编辑器中，更改生成的程序集和默认命名空间的名称。
 
@@ -71,7 +71,7 @@ ms.locfileid: "74301373"
         <MefComponent>|T4ModelBusAdapter|</MefComponent>
         ```
 
-    8. **转换所有模板**并重新生成解决方案。 应不发生任何生成错误。
+    8. **转换所有模板**重新生成解决方案。 应不发生任何生成错误。
 
 3. 在新的适配器项目中，添加对以下程序集的引用：
 
@@ -97,14 +97,14 @@ ms.locfileid: "74301373"
 
          此属性筛选器的适配器搜索 modelbus 使用者时可用的适配器集。
 
-5. **转换所有模板**并重新生成解决方案。 应不发生任何生成错误。
+5. **转换所有模板**重新生成解决方案。 应不发生任何生成错误。
 
 ## <a name="writing-a-text-template-that-can-resolve-modelbus-references"></a>编写文本模板可以解析 ModelBus 引用
- 通常情况下，在开始使用模板来读取和生成文件从"source"DSL。 此模板使用源 DSL 项目中生成的指令以按[从文本模板访问模型](../modeling/accessing-models-from-text-templates.md)中所述的方式读取源模型文件。 但是，源 DSL 包含对"目标"DSL 的 ModelBus 引用。 因此想要启用用于解析引用和访问目标 DSL 的模板代码。 因此必须通过执行以下步骤来适应模板：
+ 通常情况下，在开始使用模板来读取和生成文件从"source"DSL。 此模板使用要读取源模型文件中所述的方式中的源 DSL 项目中生成的指令[从文本模板访问模型](../modeling/accessing-models-from-text-templates.md)。 但是，源 DSL 包含对"目标"DSL 的 ModelBus 引用。 因此想要启用用于解析引用和访问目标 DSL 的模板代码。 因此必须通过执行以下步骤来适应模板：
 
 - 将模板的基类更改为[ModelBusEnabledTextTransformation](/previous-versions/ee844263(v=vs.140))。
 
-- 将 `hostspecific="true"` 包含在模板指令中。
+- 包括`hostspecific="true"`模板指令中。
 
 - 将程序集引用添加到目标 DSL 和其适配器，并启用 ModelBus。
 
@@ -150,7 +150,7 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
 
 ```
 
- 执行此文本模板时，`SourceDsl` 指令 `Sample.source`加载文件。 模板可以从 `this.ModelRoot`开始访问该模型的元素。 代码可以使用的域类和属性的 DSL。
+ 执行此文本模板时，`SourceDsl`指令将文件加载`Sample.source`。 在模板可以访问该模型中，从开始的元素`this.ModelRoot`。 代码可以使用的域类和属性的 DSL。
 
  此外，该模板可以解析 ModelBus 引用。 如果引用指向目标模型，则程序集指令使代码可以使用该模型的 DSL 的域类和属性。
 
@@ -161,12 +161,12 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
     <#@ assembly name = "Microsoft.VisualStudio.TextTemplating.Modeling.11.0" #>
     ```
 
-- 使用 `this.ModelBus` 获取对 ModelBus 的访问权限。
+- 使用`this.ModelBus`以获取向 ModelBus 的访问权限。
 
 ## <a name="walkthrough-testing-a-text-template-that-uses-modelbus"></a>演练： 测试使用 ModelBus 的文本模板
  在本演练中，您将执行以下步骤：
 
-1. 构造两个 Dsl。 一个 DSL，*使用者*具有一个 `ModelBusReference` 属性，该属性可以引用另一个 Dsl （*提供程序*）。
+1. 构造两个 Dsl。 一个 DSL*使用者*，具有`ModelBusReference`属性，可以对其他 DSL，请参阅*提供程序*。
 
 2. 在提供程序中创建两个 ModelBus 适配器： 一个用于通过文本模板访问另一个用于普通代码。
 
@@ -180,15 +180,15 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
 
 #### <a name="construct-a-dsl-that-is-accessible-to-modelbus"></a>构造 DSL 的 ModelBus 均可访问
 
-1. 创建新 DSL 解决方案。 对于此示例中，选择任务流解决方案模板。 将语言名称设置为 `MBProvider`，并将文件扩展名设置为 ". 提供"。
+1. 创建新 DSL 解决方案。 对于此示例中，选择任务流解决方案模板。 将语言名称设置为`MBProvider`和文件扩展名为".provide"。
 
-2. 在 DSL 定义关系图中，右键单击不在顶部附近的关系图的空白部分，然后单击 "**启用 Modelbus**"。
+2. 在 DSL 定义关系图中，右键单击顶部附近，不是关系图的空白部分，然后单击**启用 Modelbus**。
 
-   - 如果看不到**Enable Modelbus**，则必须下载并安装 VMSDK Modelbus 扩展。 在 VMSDK 站点上找到它：[可视化和建模 SDK](https://go.microsoft.com/fwlink/?LinkID=185579)。
+   - 如果没有看到**启用 Modelbus**，必须下载并安装 VMSDK ModelBus 扩展。 VMSDK 网站上找到：[可视化和建模 SDK](https://www.visualstudio.com/)。
 
-3. 在 "**启用 Modelbus** " 对话框中，选择 **"将此 DSL 公开到 Modelbus"** ，然后单击 **"确定"** 。
+3. 在中**启用 Modelbus**对话框中，选择**向 ModelBus 公开此 DSL**，然后单击**确定**。
 
-    新项目 `ModelBusAdapter`会添加到解决方案中。
+    一个新项目， `ModelBusAdapter`，添加到解决方案。
 
    现可由 ModelBus 通过文本模板访问 DSL。 可以在命令、 事件处理程序或规则，所有这些模型文件编辑器的 AppDomain 中运行的代码中解析对它的引用。 但是，文本模板在单独的 AppDomain 中运行，并且正在编辑的情况下无法访问模型。 如果你想要访问从文本模板对此 DSL 的 ModelBus 引用，必须具有单独的 ModelBusAdapter。
 
@@ -200,21 +200,21 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
 
     项目文件 T4ModelBusAdapter.csproj 重命名。
 
-2. 在解决方案资源管理器，将添加到 MBProvider 解决方案的 T4ModelBusAdapter。 右键单击解决方案节点，指向 "**添加**"，然后单击 "**现有项目**"。
+2. 在解决方案资源管理器，将添加到 MBProvider 解决方案的 T4ModelBusAdapter。 右键单击解决方案节点，指向**外**，然后单击**现有项目**。
 
-3. 右键单击 T4ModelBusAdapter 项目节点，然后单击属性。 在项目的 "属性" 窗口中，将**程序集名称**和**默认命名空间**更改为 `Company.MBProvider.T4ModelBusAdapters`。
+3. 右键单击 T4ModelBusAdapter 项目节点，然后单击属性。 在项目属性窗口中更改**程序集名称**并**Default Namespace**到`Company.MBProvider.T4ModelBusAdapters`。
 
 4. 在每个 *.tt 文件中 T4ModelBusAdapter，插入"T4"命名空间的最后一个部分，使行类似于以下。
 
     `namespace <#= CodeGenerationUtilities.GetPackageNamespace(this.Dsl) #>.T4ModelBusAdapters`
 
-5. 在 `DslPackage` 项目中，将项目引用添加到 `T4ModelBusAdapter`。
+5. 在中`DslPackage`项目中，添加到项目引用`T4ModelBusAdapter`。
 
-6. 在 DslPackage\source.extension.tt 中，在 `<Content>`下面添加以下行。
+6. 在 DslPackage\source.extension.tt，添加以下行下的`<Content>`。
 
     `<MefComponent>|T4ModelBusAdapter|</MefComponent>`
 
-7. 在 `T4ModelBusAdapter` 项目中，添加对 VisualStudio 的引用： **TextTemplating**
+7. 在中`T4ModelBusAdapter`项目中，添加对的引用： **Microsoft.VisualStudio.TextTemplating.Modeling.11.0**
 
 8. 打开 T4ModelBusAdapter\AdapterManager.tt:
 
@@ -252,11 +252,11 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
 
        ```
 
-9. 单击 "解决方案资源管理器的标题栏中的"**转换所有模板**"。
+9. 单击**转换所有模板**在标题栏的解决方案资源管理器。
 
 10. 重新生成解决方案。 单击 F5。
 
-11. 验证通过按 F5 的 DSL 正常工作。 在实验项目中，打开 `Sample.provider`。 关闭 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例。
+11. 验证通过按 F5 的 DSL 正常工作。 在实验性的项目中，打开`Sample.provider`。 关闭 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例。
 
     在文本模板中以及在普通代码中，现在可以解决对此 DSL 的 ModelBus 引用。
 
@@ -264,23 +264,23 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
 
 1. 使用最小语言解决方案模板创建新的 DSL。 命名 MBConsumer 的语言，并将设置为".consume"的文件扩展名。
 
-2. 在 DSL 项目中，添加 MBProvider DSL 程序集的引用。 右键单击 `MBConsumer\Dsl\References`，然后单击 "**添加引用**"。 在 "**浏览**" 选项卡中，找到 `MBProvider\Dsl\bin\Debug\Company.MBProvider.Dsl.dll`
+2. 在 DSL 项目中，添加 MBProvider DSL 程序集的引用。 右键单击`MBConsumer\Dsl\References`，然后单击**添加引用**。 在中**浏览**选项卡上，找到 `MBProvider\Dsl\bin\Debug\Company.MBProvider.Dsl.dll`
 
     这使您可以创建使用其他 DSL 的代码。 如果你想要创建对多个 Dsl 的引用，则还应添加它们。
 
-3. 在 DSL 定义关系图中，右键单击关系图，然后单击 "**启用 ModelBus**"。 在对话框中，选择 "**启用此 DSL" 以使用 ModelBus**。
+3. 在 DSL 定义关系图中，右键单击关系图，然后单击**启用 ModelBus**。 在对话框中，选择**启用此 DSL 使用 ModelBus**。
 
-4. 在 "类 `ExampleElement`中，添加一个新的域属性 `MBR`，并在属性窗口中将其类型设置为" `ModelBusReference`"。
+4. 在类中`ExampleElement`，添加一个新的域属性`MBR`，并在属性窗口中将其类型设置为`ModelBusReference`。
 
-5. 右键单击关系图上的 "域" 属性，然后单击 "**编辑 ModelBusReference 特定属性**"。 在对话框中，选择**一个模型元素**。
+5. 右键单击关系图上的域属性，然后单击**编辑 ModelBusReference 特定属性**。 在对话框中，选择**模型元素**。
 
     设置为以下文件对话框筛选器。
 
     `Provider File|*.provide`
 
-    后的子字符串"&#124;"是文件选择对话框中的筛选器。 可以通过使用 * 将其设置为允许任何文件。\*
+    后的子字符串"&#124;"是文件选择对话框中的筛选器。 您无法将其设置为允许的任何文件使用 *。\*
 
-    在 "**模型元素类型**" 列表中，输入提供程序 DSL 中一个或多个域类的名称（例如 MBProvider）。 它们可以是抽象类。 如果列表为空，则用户可以设置对任何元素的引用。
+    在中**模型元素类型**列表中，在提供程序 (例如，Company.MBProvider.Task) DSL 中输入的一个或多个域类的名称。 它们可以是抽象类。 如果列表为空，则用户可以设置对任何元素的引用。
 
 6. 关闭对话框并**转换所有模板**。
 
@@ -290,17 +290,17 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
 
 1. 在 MBConsumer 解决方案中，按 CTRL + F5。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 在**MBConsumer\Debugging**项目中打开的实验实例。
 
-2. 添加示例的副本。提供给**MBConsumer\Debugging**项目。 这是必需的因为 ModelBus 引用必须引用同一解决方案中的文件。
+2. 添加一份到 Sample.provide **MBConsumer\Debugging**项目。 这是必需的因为 ModelBus 引用必须引用同一解决方案中的文件。
 
-   1. 右键单击 "调试" 项目，指向 "**添加**"，然后单击 "**现有项**"。
+   1. 右键单击调试项目，指向**外**，然后单击**现有项**。
 
-   2. 在 "**添加项目**" 对话框中，将 "筛选器" 设置为 "**所有文件（\*\*）** "。
+   2. 在中**添加项**对话框中，将筛选器设置为**的所有文件 (\*。\*)** .
 
-   3. 导航到 `MBProvider\Debugging\Sample.provide`，然后单击 "**添加**"。
+   3. 导航到`MBProvider\Debugging\Sample.provide`，然后单击**添加**。
 
 3. 打开 `Sample.consume`。
 
-4. 单击一个示例形状，然后在 "属性窗口中，单击 MBR 属性中的" **[...]** "。 在对话框中，单击 "**浏览**" 并选择 "`Sample.provide`"。 在元素窗口中，展开类型任务并选择元素之一。
+4. 单击一个示例形状，然后在属性窗口中，单击 **[...]** MBR 属性中。 在对话框中，单击**浏览**，然后选择`Sample.provide`。 在元素窗口中，展开类型任务并选择元素之一。
 
 5. 保存该文件。
 
@@ -346,7 +346,7 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
 
      请注意以下内容：
 
-    1. `template` 指令的 `hostSpecific` 和 `inherits` 属性必须设置。
+    1. `hostSpecific`并`inherits`的属性`template`指令必须设置。
 
     2. 使用者模型访问以通常的方式，通过在该 DSL 中生成的指令处理器。
 
@@ -354,7 +354,7 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
 
     4. 如果您知道很多 Mbr 已链接到相同的模型，则最好调用 CreateAdapter 仅一次。
 
-2. 保存模板。 验证生成的文本文件类似于以下。
+2. 保存该模板。 验证生成的文本文件类似于以下。
 
     ```
 
@@ -401,7 +401,7 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
 
     ```
 
-3. 按 Ctrl+F5。
+3. 按“Ctrl+F5”。
 
 4. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的实验实例中，打开 `Debugging\Sample.consume`。
 

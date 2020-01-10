@@ -11,14 +11,14 @@ caps.latest.revision: 26
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9cc4f8038906de89afd86fd666fbb011e974362d
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: e181500beefd32dffb9c0e8a7572a198cc9ff1f2
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298083"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852199"
 ---
-# <a name="working-with-3-d-assets-for-games-and-apps"></a>为游戏和应用程序使用三维资产
+# <a name="working-with-3-d-assets-for-games-and-apps"></a>为游戏和应用使用三维资产
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本文档介绍了 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 工具，这些工具可用来创建或修改基于 DirectX 的游戏和应用的三维模型、纹理和着色器。
@@ -44,14 +44,14 @@ ms.locfileid: "74298083"
  可以使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 着色器设计器，它是一个基于图形的着色器设计工具，用户可以在不懂 HLSL 编程的情况下创建自定义可视化效果。
 
 > [!NOTE]
-> 有关如何开始 DirectX 编程的详细信息，请参阅 [DirectX](https://go.microsoft.com/fwlink/p/?LinkId=224633)。 有关如何调试基于 DirectX 的应用的详细信息，请参阅[图形诊断（调试 DirectX 图形）](../debugger/visual-studio-graphics-diagnostics.md)。
+> 有关如何开始 DirectX 编程的详细信息，请参阅 [DirectX](https://msdn.microsoft.com/library/ee663274(VS.85).aspx)。 有关如何调试基于 DirectX 的应用的详细信息，请参阅[图形诊断（调试 DirectX 图形）](../debugger/visual-studio-graphics-diagnostics.md)。
 
 ## <a name="directx-version-compatibility"></a>DirectX 版本兼容性
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 使用 DirectX 来呈现二维和三维资产。 可以选择 DirectX 11 呈现器或 Windows 高级光栅化平台 (WARP) 软件呈现器。 DirectX 11 呈现器在 DirectX 11 和 DirectX 10 GPU 上提供高性能、硬件加速呈现。 WARP 呈现器有助于确保资产适用于一系列计算机，其中包括没有新式图形硬件的计算机和具有集成图形硬件的计算机。 有关 WARP 的详细信息，请参见 [Windows 高级光栅化平台 (WARP) 指南](https://go.microsoft.com/fwlink/p/?LinkId=224634)。
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 使用 DirectX 来呈现二维和三维资产。 可以选择 DirectX 11 呈现器或 Windows 高级光栅化平台 (WARP) 软件呈现器。 DirectX 11 呈现器在 DirectX 11 和 DirectX 10 GPU 上提供高性能、硬件加速呈现。 WARP 呈现器有助于确保资产适用于一系列计算机，其中包括没有新式图形硬件的计算机和具有集成图形硬件的计算机。 有关 WARP 的详细信息，请参见 [Windows 高级光栅化平台 (WARP) 指南](https://msdn.microsoft.com/library/gg615082(VS.85).aspx)。
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|描述|
+|职务|描述|
 |-----------|-----------------|
 |[使用纹理和图像](../designers/working-with-textures-and-images.md)|介绍如何使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 处理图像和纹理。|
 |[使用三维模型](../designers/working-with-3-d-models.md)|介绍如何使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 处理三维模型。|

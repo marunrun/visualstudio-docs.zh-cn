@@ -29,12 +29,12 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 10eb94783abbd63ca152fbf73a544665199ba137
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: a095cd909dcd4d378fddc91c9151cf28e34a8ee5
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300293"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852211"
 ---
 # <a name="additional-information-about-class-designer-errors"></a>有关类设计器错误的附加信息
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "74300293"
 
  [使用 Visual C++ Code （类设计器）](../ide/working-with-visual-cpp-code-class-designer.md)包括有关在类图中C++显示的疑难解答信息。
 
- [Visual Studio 类设计器论坛](https://go.microsoft.com/fwlink/?LinkId=160754)提供一个有关类设计器相关问题的论坛。
+ [Visual Studio 类设计器论坛](https://social.msdn.microsoft.com/Forums/en-US/vsclassdesigner/threads?page=1)提供一个有关类设计器相关问题的论坛。
 
 ## <a name="see-also"></a>另请参阅
  [设计和查看类与类型](../ide/designing-and-viewing-classes-and-types.md)

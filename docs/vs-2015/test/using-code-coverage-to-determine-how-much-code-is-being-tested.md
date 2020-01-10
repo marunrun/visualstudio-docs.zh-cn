@@ -10,12 +10,12 @@ ms.assetid: 800fc739-acd2-4242-84cb-1d83b4d82cf9
 caps.latest.revision: 38
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8c7ec729c81f11096a55e87cea528764e500b535
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 737311167fc1f444d5c0f8a5d2c27e2fe321da75
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297978"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851240"
 ---
 # <a name="using-code-coverage-to-determine-how-much-code-is-being-tested"></a>使用代码覆盖率确定所测试的代码量
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "74297978"
 
 1. 在“测试”菜单上，选择“分析代码覆盖率”。
 
-2. 若要查看已运行的行，请选择 "![显示代码覆盖率着色" 图标](../test/media/codecoverage-showcoloringicon.png "CodeCoverage-ShowColoringIcon")"**显示代码覆盖率着色**"。
+2. 若要查看已运行的行，请选择![显示代码覆盖率着色图标](../test/media/codecoverage-showcoloringicon.png "CodeCoverage-ShowColoringIcon")**显示代码覆盖率着色**。
 
      若要更改颜色或使用加粗，请依次选择“工具”、“选项”、“环境”、“字体和颜色”和“显示其设置：文本编辑器”。 在“显示项”下，调整覆盖率项。
 
@@ -50,7 +50,7 @@ ms.locfileid: "74297978"
 >   如果要处理非托管（本机）代码，请使用调试版本。
 >   - 确保为每个程序集生成 .pdb（符号）文件。
 >
->   如果没有获得预期的结果，请参阅[代码覆盖率疑难解答](../test/troubleshooting-code-coverage.md)。 中运行但不进行任何修改。 不要忘记在更新代码后再次运行代码覆盖率。 在修改代码后或运行测试时，覆盖率结果和代码着色不会自动更新。
+>   如果没有获得预期的结果，请参阅[代码覆盖率疑难解答](../test/troubleshooting-code-coverage.md)。 。 不要忘记在更新代码后再次运行代码覆盖率。 在修改代码后或运行测试时，覆盖率结果和代码着色不会自动更新。
 
 ## <a name="reporting-in-blocks-or-lines"></a>报告块或行
  代码覆盖率将以块为单位计数。 块是恰好有一个入口点和出口点的一段代码。  在测试运行期间，如果程序的控制流通过某个块，则将该块计为“已覆盖”。 块的使用次数对结果没有影响。
@@ -81,7 +81,7 @@ ms.locfileid: "74297978"
 
  例如，假设你在运行某个测试（输入为“2”）时发现某个特定函数已被覆盖了 50%。 当你第二次运行该测试（输入为“-2”）时，你在覆盖着色视图中发现该函数的另外 50% 也被覆盖。 现在，你合并来自这两个测试运行的结果，报告和覆盖率着色视图显示该函数已经 100% 被覆盖。
 
- !["代码覆盖率" 窗口中的 "合并" 按钮的图标：](../test/media/codecoverage-mergeicon.png "CodeCoverage-MergeIcon")**合并代码覆盖率结果**。 你可以选择最近的运行或导入的结果的任意组合。 如果要组合导出的结果，则必须先将其导入。
+ 为此，请使用![“代码覆盖率”窗口中“合并”按钮的图标](../test/media/codecoverage-mergeicon.png "CodeCoverage-MergeIcon")**合并代码覆盖率结果**。 你可以选择最近的运行或导入的结果的任意组合。 如果要组合导出的结果，则必须先将其导入。
 
  使用“导出代码覆盖率结果”可保存合并操作的结果。
 
@@ -96,7 +96,7 @@ ms.locfileid: "74297978"
 ## <a name="excluding-elements-from-the-code-coverage-results"></a>从代码覆盖率结果中排除元素
  例如，如果代码是从文本模板生成的，则你可能希望从覆盖率分数中排除代码中的特定元素。 将特性 `System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage` 添加到以下任一代码元素：类、结构、方法、属性、属性 setter 或 getter、事件。 请注意，排除某个类并不会排除它的派生类。
 
- 例如:
+ 例如：
 
 ```csharp
 
@@ -275,13 +275,13 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
      `vstest.console.exe MyTestAssembly.dll /EnableCodeCoverage`
 
-## <a name="troubleshooting"></a>疑难解答
+## <a name="troubleshooting"></a>故障排除
  如果看不到代码覆盖率结果，请参阅[代码覆盖率疑难解答](../test/troubleshooting-code-coverage.md)。
 
 ## <a name="external-resources"></a>外部资源
 
 ### <a name="guidance"></a>指导
- [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](https://go.microsoft.com/fwlink/?LinkID=255188)
+ [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](https://msdn.microsoft.com/library/jj159340.aspx)
 
 ## <a name="see-also"></a>请参阅
  [自定义代码覆盖率分析](../test/customizing-code-coverage-analysis.md)[故障排除代码覆盖率](../test/troubleshooting-code-coverage.md)[单元测试代码](../test/unit-test-your-code.md)

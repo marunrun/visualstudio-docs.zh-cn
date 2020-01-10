@@ -11,17 +11,17 @@ caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 33689ed44f4228411243d3b9716a2407b751d32b
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 14bced870cd24badcaf2a687fc4a1a2edeb740c0
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300645"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851010"
 ---
 # <a name="concurrency-visualizer-sdk"></a>并发可视化工具 SDK
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-可通过使用并发可视化工具 SDK 检测源代码，以在并发可视化工具中显示附加信息。 可以在代码中将其他数据与阶段和事件关联。 这些其他的可视化被称为标记。  有关介绍性演练，请参阅 [Introducing the Concurrency Visualizer SDK](https://go.microsoft.com/fwlink/?LinkId=235405)（并发可视化工具 SDK 简介）。
+可通过使用并发可视化工具 SDK 检测源代码，以在并发可视化工具中显示附加信息。 可以在代码中将其他数据与阶段和事件关联。 这些其他的可视化被称为标记。  有关介绍性演练，请参阅 [Introducing the Concurrency Visualizer SDK](https://blogs.msdn.com/b/visualizeparallel/archive/2011/10/17/introducing-the-concurrency-visualizer-sdk.aspx)（并发可视化工具 SDK 简介）。
 
 ## <a name="properties"></a>属性
  标志、范围和消息都具有两个属性：类别和重要性。 在[高级设置](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md)对话框中，可以使用以下属性来筛选显示的标记集。 此外，这些属性还会影响标记的视觉表示形式。 例如，标志的大小用于表示重要性。 此外，颜色用于指示类别。
@@ -123,7 +123,7 @@ ms.locfileid: "74300645"
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|描述|
+|职务|描述|
 |-----------|-----------------|
 |[C++ 库参考](../profiling/cpp-library-reference.md)|介绍用于 C++ 的并发可视化工具 API。|
 |[C 库参考](../profiling/c-library-reference.md)|介绍用于 C 的并发可视化工具 API。|

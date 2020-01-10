@@ -13,12 +13,12 @@ caps.latest.revision: 13
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 898208530eb1ba71a5a1443fcb97ac1f1a1081e1
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 31d36a89473cd0c6a0b55e484fee2ce1d7045b15
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300049"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850896"
 ---
 # <a name="da0503-average-working-set-in-bytes-for-the-process-being-profiled"></a>DA0503：所分析的进程的平均工作集(以字节为单位)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "74300049"
   
  使用采样法、.NET 内存或资源争用方法进行分析时，必须收集至少 10 个样本才能触发此规则。  
   
-## <a name="rule-description"></a>规则说明  
+## <a name="rule-description"></a>规则描述  
  此消息用于报告此进程当前使用的平均物理内存字节数（工作集）。 进程工作集表示当前位于物理内存中的进程地址空间中的页面。  
   
  报告的值包括进程已引用的共享内存段中的驻留页面。 进程引用的共享 DLL 包含在计算的共享内存段中。 受共享内存段的影响，进程工作集的值可能高于进程已经分配的虚拟内存量。  
@@ -40,7 +40,7 @@ ms.locfileid: "74300049"
   
  进程工作集的大小反映进程当前使用的虚拟内存量。 它还受可用于运行应用程序的物理内存量（或 RAM）和其他运行的进程对该物理内存的争用量的影响。 如果物理内存受到约束，则进程工作集往往存在较大差别，因为操作系统将尝试从进程工作集通过定期修整活动程度相当低的进程，以平衡整个活动进程中的内存使用情况。  
   
- 有关进程工作集的详细信息，请参阅 MSDN 上 Windows 内存管理文档中的 [Working Set](https://go.microsoft.com/fwlink/?LinkId=177830)（工作集）。  
+ 有关进程工作集的详细信息，请参阅 MSDN 上 Windows 内存管理文档中的 [Working Set](https://msdn.microsoft.com/library/cc441804.aspx)（工作集）。  
   
 ## <a name="how-to-use-rule-data"></a>如何使用规则数据  
  若要了解不同分析方案中应用程序的性能，可使用规则值比较不同版本程序的性能。  

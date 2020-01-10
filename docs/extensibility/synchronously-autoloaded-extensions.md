@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aaa26585ff4cca909a7fb7c955b351b8860436b4
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: 71ba7e8ee1b847137386c7714745f6668be4cabc
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75406635"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848739"
 ---
 # <a name="synchronously-autoloaded-extensions"></a>以同步方式加载了扩展
 
@@ -54,4 +54,4 @@ Value = (DWORD)
 扩展作者可以在[迁移到 AsyncPackage](https://github.com/Microsoft/VSSDK-Extensibility-Samples/tree/master/AsyncPackageMigration)中找到迁移到异步 autoload 的包的说明。
 
 ## <a name="see-also"></a>另请参阅
-有关 Visual Studio 2019 中同步 autoload 设置的详细信息，请参阅[同步 Autoload 行为](https://aka.ms/AA52xzw)页。
+有关 Visual Studio 2019 中同步 autoload 设置的详细信息，请参阅[同步 Autoload 行为](https://devblogs.microsoft.com/visualstudio/updates-to-synchronous-autoload-of-extensions-in-visual-studio-2019/)页。

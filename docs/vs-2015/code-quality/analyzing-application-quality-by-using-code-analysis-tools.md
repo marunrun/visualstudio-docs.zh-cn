@@ -15,14 +15,14 @@ caps.latest.revision: 26
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 8b85bbad909a05bacab361a49cc7e029482ad606
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: d4e45ade24ce792999d1f9b0f52d9c82703fc5a0
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291198"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849884"
 ---
-# <a name="analyzing-application-quality-by-using-code-analysis-tools"></a>使用代码分析工具分析应用程序质量
+# <a name="analyzing-application-quality-by-using-code-analysis-tools"></a>{2&gt;使用代码分析工具分析应用程序质量&lt;2}
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本部分中的 "[分析](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)托管代码的 Visual Studio 代码分析" 一节提供有关托管程序集的信息，如 Microsoft .NET 框架设计准则中规定的编程和设计规则的冲突。 警告消息标识任何相关的编程和设计问题，如有可能，还提供有关如何修复问题的信息。
@@ -40,7 +40,7 @@ ms.locfileid: "74291198"
 
  [使用代码分析工具分析驱动程序质量](/windows-hardware/drivers/devtest/tools-for-verifying-drivers)驱动程序的代码分析是一种编译时静态验证工具，用于检测 C 和C++程序中的基本编码错误，并包含专用模块，旨在检测（主要）内核模式驱动程序代码中的错误。 Static Driver Verifier (SDV) 是一个静态验证工具，可以系统分析 Windows 内核模式驱动程序的源代码。 SDV 确定驱动程序是否与 Windows 操作系统内核正确交互。
 
- [驱动程序警告的代码分析](https://go.microsoft.com/fwlink/?LinkId=225920)描述当驱动程序的代码分析在驱动程序代码中检测到可能的错误时所报告的警告。
+ [驱动程序警告的代码分析](https://msdn.microsoft.com/library/windows/hardware/ff550572(v=VS.85).aspx)描述当驱动程序的代码分析在驱动程序代码中检测到可能的错误时所报告的警告。
 
 ## <a name="related-tasks"></a>相关任务
  [测量托管代码的复杂性和可维护性](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)在此处插入说明。

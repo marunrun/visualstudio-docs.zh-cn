@@ -16,12 +16,12 @@ caps.latest.revision: 112
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5b44ec3fcab0512e50af1debcf6010c1dc584ed0
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 8f6047e6104467b5b0516fba26fc39f402dfaac9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297135"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845650"
 ---
 # <a name="using-saved-intellitrace-data"></a>使用保存的 IntelliTrace 数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "74297135"
   
 - 来自以下源之一的 .iTrace 文件：  
   
-    |**Source**|**请参阅**|  
+    |**源**|**请参阅**|  
     |----------------|-------------|  
     |Visual Studio Enterprise（但不是 Professional 或 Community 版）中的 IntelliTrace 会话|[IntelliTrace 功能](../debugger/intellitrace-features.md)|  
     |Microsoft 测试管理器中的测试会话。 这会将 .iTrace 文件附加到 Team Foundation Server 工作项。|[在手动测试中收集更多诊断数据](https://msdn.microsoft.com/library/bb5a2cc0-84f5-4dfe-9560-ca3d313aefd2)|  
@@ -143,7 +143,7 @@ ms.locfileid: "74297135"
   
     |**列**|**显示**|  
     |----------------|-------------------|  
-    |**类型**|异常的 .NET 类型|  
+    |**Type**|异常的 .NET 类型|  
     |“最新消息” （对于分组异常）或“消息” （对于未分组异常）|异常提供的消息|  
     |“计数” （对于分组异常）|引发异常的次数|  
     |“线程 ID” （对于未分组异常）|引发异常的线程的 ID|  
@@ -161,7 +161,7 @@ ms.locfileid: "74297135"
   
 1. 从源复制 SharePoint 相关 ID。  
   
-    例如:  
+    例如：  
   
     ![IntelliTrace &#45; SharePoint 错误&#45;相关性 ID](../debugger/media/sharepointerror-intellitrace.png "SharePointError_IntelliTrace")  
   
@@ -270,7 +270,7 @@ ms.locfileid: "74297135"
  [IntelliTrace](../debugger/intellitrace.md)  
   
 #### <a name="forums"></a>论坛  
- [Visual Studio 调试器](https://go.microsoft.com/fwlink/?LinkId=262263)  
+ [Visual Studio 调试器](https://social.msdn.microsoft.com/Forums/vsdebug)  
   
 #### <a name="guidance"></a>指导  
- [使用 Visual Studio 2012 对持续交付进行测试 - 第 6 章：测试工具箱](https://go.microsoft.com/fwlink/?LinkID=255203)
+ [使用 Visual Studio 2012 对持续交付进行测试 - 第 6 章：测试工具箱](https://msdn.microsoft.com/library/jj159337.aspx)

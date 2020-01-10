@@ -18,12 +18,12 @@ caps.latest.revision: 49
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 03ecd3fcc253f255afc59c2d6412f3864fe253b8
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 10375e00eb850691e88d01c56a87bb967c40e9ea
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300604"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850571"
 ---
 # <a name="creating-solutions-and-projects"></a>Creating Solutions and Projects
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "74300604"
  您必须在您的系统上安装 .NET Framework 3.5，这样可以访问 framework 4.0 以前的版本。
 
 ## <a name="downloading-sample-solutions"></a>下载示例解决方案
- 可使用 Visual Studio 下载和安装 [MSDN 代码库](https://go.microsoft.com/fwlink/?LinkId=254185)中的示例解决方案。
+ 可使用 Visual Studio 下载和安装 [MSDN 代码库](https://code.msdn.microsoft.com/)中的示例解决方案。
 
  您可单独下载示例，也可以下载包含共享技术或主题的相关示例的示例包。 在为下载的任何示例发布源代码更改时，您将收到通知。
 

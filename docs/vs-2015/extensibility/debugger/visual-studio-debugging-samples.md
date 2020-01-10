@@ -12,12 +12,12 @@ ms.assetid: fbcc42a7-7851-487f-b981-8c4ae7ec7347
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 9f1dab6be397028917976c9827e48a6748ba78bd
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 3cebab63c1f811c83c1cf0db00a21474f0102aff
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295992"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849974"
 ---
 # <a name="visual-studio-debugging-samples"></a>Visual Studio 调试示例
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -26,4 +26,4 @@ ms.locfileid: "74295992"
   
 - 托管语言的调试器表达式计算器示例包含在 [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]中。 在 "[!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]" 窗口中，单击 "**示例**" 选项卡**C#** ，单击 "**全部**" 或在语言列表中，然后单击 "**调试器**"。  
   
-- MSDN 代码库中提供了适用于本机语言的 Visual Studio 调试引擎示例。 有关详细信息，请参阅 Microsoft 网站上的以下页面： [Visual Studio 调试引擎示例](https://go.microsoft.com/fwlink/?LinkId=150236)。
+- MSDN 代码库中提供了适用于本机语言的 Visual Studio 调试引擎示例。 有关详细信息，请参阅 Microsoft 网站上的以下页面： [Visual Studio 调试引擎示例](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)。

@@ -33,12 +33,12 @@ caps.latest.revision: 29
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3ee0cf61f8ec2787894c6f67b8ac75424246c507
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: b9a46523c4c856367e77c345c7e44d0dbc87508f
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297447"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845976"
 ---
 # <a name="xml-tools-in-visual-studio"></a>Visual Studio 中的 XML 工具
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "74297447"
 
  XML 是 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 和 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 的许多功能的核心。 下面的主题列表列出了 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 和 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 中提供的与 XML 相关的工具和功能。
 
- 有关详细信息，请参阅[Xml 开发人员中心](https://go.microsoft.com/fwlink/?LinkID=100176)，其中提供了有关 xml 开发人员的最新文档、技术信息、下载、新闻组和其他资源。
+ 有关详细信息，请参阅[Xml 开发人员中心](https://msdn.microsoft.com/data/bb190600.aspx)，其中提供了有关 xml 开发人员的最新文档、技术信息、下载、新闻组和其他资源。
 
 ## <a name="in-this-section"></a>本节内容
  使用[XML 数据](../xml-tools/working-with-xml-data.md)讨论 XML 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中处理数据的方式。
@@ -57,16 +57,16 @@ ms.locfileid: "74297447"
  [调试 XSLT](../xml-tools/debugging-xslt.md)提供相关主题的链接，这些主题介绍如何使用 Visual Studio 调试程序调试 XSLT。
 
 ## <a name="reference"></a>引用
- [XmlEditor 通过 VisualStudio](https://go.microsoft.com/fwlink/?LinkID=165699)为任何 xml 文档公开[xml 编辑器](https://go.microsoft.com/fwlink/?LinkId=228249)分析树[。](https://go.microsoft.com/fwlink/?LinkId=228250)
+ [Microsoft.VisualStudio.XmlEditor](https://msdn.microsoft.com/library/microsoft.visualstudio.xmleditor.aspx)公开[XML 编辑器](https://msdn.microsoft.com/library/ms255810.aspx)分析通过树[System.Xml.Linq](https://msdn.microsoft.com/library/system.xml.linq.aspx)为任意 XML 文档。
 
- [XML 标准参考](https://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401)提供有关 XML 技术的信息，包括 XML、文档类型定义（DTD）、XML 架构定义语言（XSD）和 XSLT。
+ [XML 标准参考](https://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401)提供有关 XML 技术，包括 XML、 文档类型定义 (DTD)、 XML 架构定义语言 (XSD) 和 XSLT 的信息。
 
- <xref:System.Xml?displayProperty=fullName> 描述组成 <xref:System.Xml> 命名空间的类和其他元素，并提供指向每个项的更详细信息的链接。
+ <xref:System.Xml?displayProperty=fullName> 介绍类和其他元素构成<xref:System.Xml>命名空间，并对每个项提供更多详细信息的链接。
 
- <xref:System.Xml.Serialization?displayProperty=fullName> 描述组成 <xref:System.Xml.Serialization> 命名空间的类和其他元素，并提供指向有关每个项的更多详细信息的链接。
+ <xref:System.Xml.Serialization?displayProperty=fullName> 介绍类和其他元素构成<xref:System.Xml.Serialization>命名空间并提供指向有关每个项的更多详细信息。
 
 ## <a name="related-sections"></a>相关章节
- [XML 文档对象模型（DOM）](https://msdn.microsoft.com/library/b5e52844-4820-47c0-a61d-de2da33e9f54)描述 <xref:System.Xml.XmlDocument> 及其关联的类如何符合 W3C 文档对象模型（核心）级别1和级别2命名空间支持规范。
+ [XML 文档对象模型 (DOM)](https://msdn.microsoft.com/library/b5e52844-4820-47c0-a61d-de2da33e9f54)描述如何<xref:System.Xml.XmlDocument>和及其关联的类符合 W3C 文档对象模型 (Core) 等级 1 和 2 级命名空间支持规范。
 
  [用 XmlReader 读取 XML](https://msdn.microsoft.com/3029834c-a27e-4331-b7aa-711924062182)介绍 <xref:System.Xml.XmlReader> 如何通过 XML 流提供对 XML 数据的非缓存、只进、只读访问。
 
@@ -76,4 +76,4 @@ ms.locfileid: "74297447"
 
  [使用 XPath 数据模型处理 XML 数据](https://msdn.microsoft.com/library/536c6fce-1453-4654-9c72-bca54d47e081)介绍 <xref:System.Xml.XPath.XPathNavigator> 类如何处理 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中存储的 XML 数据。 <xref:System.Xml.XPath.XPathNavigator> 类以 XQuery 1.0 和 XPath 2.0 数据模型为基础，可用于导航和编辑 XML 数据。
 
- [XML 架构对象模型（SOM）](https://msdn.microsoft.com/library/a897a599-ffd1-43f9-8807-e58c8a7194cd)介绍用于创建和操作 XML 架构的类，通过提供 <xref:System.Xml.Schema.XmlSchema> 类来加载和编辑架构。
+ [XML 架构对象模型 (SOM)](https://msdn.microsoft.com/library/a897a599-ffd1-43f9-8807-e58c8a7194cd)说明了用来创建和操作 XML 架构，通过提供的类<xref:System.Xml.Schema.XmlSchema>类来加载和编辑架构。

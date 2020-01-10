@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 5af4fc76fa20148495ca44cc7e9b74d4b95ecb7c
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: a6d6611c8ce8bdb09023794b5eca029b6b972afb
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298103"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849978"
 ---
 # <a name="using-windows-powershell-scripts-to-publish-to-dev-and-test-environments"></a>使用 Windows PowerShell 脚本发布到开发和测试环境
 
@@ -26,13 +26,13 @@ ms.locfileid: "74298103"
 
 ## <a name="prerequisites"></a>先决条件
 
-* Azure SDK 2.3 或更高版本。 请参阅 [Visual Studio 下载](https://go.microsoft.com/fwlink/?LinkID=624384)。 （无需使用 Azure SDK 就能为 Web 项目生成脚本。 此功能适用于 Web 项目，而不适用于云服务中的 Web 角色。）
+* Azure SDK 2.3 或更高版本。 请参阅 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/)。 （无需使用 Azure SDK 就能为 Web 项目生成脚本。 此功能适用于 Web 项目，而不适用于云服务中的 Web 角色。）
 * Azure PowerShell 0.7.4 或更高版本。 请参阅 [如何安装和配置 Azure PowerShell](/powershell/azure/overview)。
 * [Windows PowerShell 3.0](https://docs.microsoft.com/aspnet/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control) 或更高版本。
 
 ## <a name="additional-tools"></a>其他工具
 
-我们还提供其他工具和资源，用于在 Visual Studio 中通过 PowerShell 进行 Azure 开发。 请参阅 [PowerShell Tools for Visual Studio](https://go.microsoft.com/fwlink/?LinkId=404012)（适用于 Visual Studio 的 PowerShell 工具）。
+我们还提供其他工具和资源，用于在 Visual Studio 中通过 PowerShell 进行 Azure 开发。 请参阅 [PowerShell Tools for Visual Studio](https://visualstudiogallery.msdn.microsoft.com/c9eb3ba8-0c59-4944-9a62-6eee37294597)（适用于 Visual Studio 的 PowerShell 工具）。
 
 ## <a name="generating-the-publish-scripts"></a>生成发布脚本
 
@@ -252,7 +252,7 @@ JSON 文件是在 **Configurations** 文件夹中创建的，其中包含的配�
         #Write a function to build and package your web application
     ```
 
-    若要生成 Web 应用程序，请使用 MsBuild.exe。 有关帮助，请参阅位于以下页面的 MSBuild 命令行参考：[http://go.microsoft.com/fwlink/?LinkId=391339](https://go.microsoft.com/fwlink/?LinkId=391339)
+    若要生成 Web 应用程序，请使用 MsBuild.exe。 有关帮助，请参阅位于以下页面的 MSBuild 命令行参考：[http://go.microsoft.com/fwlink/?LinkId=391339](https://msdn.microsoft.com/library/ms164311.aspx)
 
     ```powershell
     Write-VerboseWithTime 'Build-WebDeployPackage: Start'

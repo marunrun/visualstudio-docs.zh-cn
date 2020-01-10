@@ -11,12 +11,12 @@ caps.latest.revision: 8
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a80aef71271df0a1353dfd73898dbe8fcd7007c4
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: fcace8b2ed9576ff5c3c4f4a0c526a70b2d4228a
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300927"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75843879"
 ---
 # <a name="developing-workflow-applications-targeting-the-net-30-or-net-35-framework"></a>开发面向 .NET 3.0 或 .NET 3.5 Framework 的工作流应用程序
 [!INCLUDE[vs2010](../includes/vs2010-md.md)] 提供用于创建面向 [!INCLUDE[netfx40_long](../includes/netfx40-long-md.md)]的 [!INCLUDE[wf](../includes/wf-md.md)] 应用程序的 [!INCLUDE[wfd1](../includes/wfd1-md.md)]。 该设计器使用人们熟悉的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 用户界面，用于以图形化的方式构造和调试工作流应用程序。
@@ -29,4 +29,4 @@ ms.locfileid: "74300927"
  [调试旧版工作流](../workflow-designer/debugging-legacy-workflows.md)
 
 ## <a name="related-sections"></a>相关章节
- [Windows Workflow Foundation 编程指南](https://go.microsoft.com/fwlink?LinkID=65012)
+ [Windows Workflow Foundation 编程指南](https://msdn2.microsoft.com/library/bb628474.aspx)

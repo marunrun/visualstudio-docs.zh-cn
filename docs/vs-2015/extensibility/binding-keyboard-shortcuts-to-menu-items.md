@@ -14,12 +14,12 @@ ms.assetid: 19f483b6-4d3e-424e-9d68-dc129c788e47
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: e362a61c5ecab78c332eb5e077a02ee4e9e3fa9b
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 0396d3290ef870fb2c2c7b7b49c774b66397077c
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295620"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852220"
 ---
 # <a name="binding-keyboard-shortcuts-to-menu-items"></a>将键盘快捷方式绑定到菜单项
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "74295620"
   
    在大多数情况下，不应在没有第二个修饰符的情况下使用**Shift** ，因为按下它已使大多数字母数字键都可键入一个大写字母或符号。  
   
-   利用虚拟键代码，你可以访问没有与其关联的字符的特殊键，例如，函数键和**BACKSPACE**键。 有关详细信息，请参阅[虚拟键代码](https://go.microsoft.com/fwlink/?LinkID=105932)。  
+   利用虚拟键代码，你可以访问没有与其关联的字符的特殊键，例如，函数键和**BACKSPACE**键。 有关详细信息，请参阅[虚拟键代码](https://msdn2.microsoft.com/library/ms645540.aspx)。  
   
    若要在 Visual Studio 编辑器中使用该命令，请将 `editor` 特性设置为 `guidVSStd97`。  
   
