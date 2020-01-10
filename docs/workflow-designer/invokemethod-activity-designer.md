@@ -5,17 +5,17 @@ ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.InvokeMethod.UI
 ms.assetid: 15e6efdc-52ca-46d8-9c5e-063f7c8265a6
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 593ec198cdfdd8acd1967abb046384711e1fa9ac
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8660cd82f9d671da3b535ac228e8ce62c875dc07
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650171"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593195"
 ---
 # <a name="invokemethod-activity-designer"></a>InvokeMethod 活动设计器
 
@@ -27,7 +27,7 @@ ms.locfileid: "72650171"
 
 ### <a name="use-the-invokemethod-activity-designer"></a>使用 InvokeMethod 活动设计器
 
-访问 "**工具箱**" 的 "**基元**" 类别中的 " **InvokeMethod** " 活动设计器。 可以将 " **InvokeMethod** " 活动设计器从 "**工具箱**" 拖放到工作流设计器表面上，通常会在其中放置活动，如 <xref:System.Activities.Statements.Sequence> 内。 删除活动设计器将创建一个 <xref:System.Activities.Statements.InvokeMethod> 的活动，其默认 <xref:System.Activities.Activity.DisplayName%2A> 为 InvokeMethod。 可以在 " **InvokeMethod** " 活动设计器的标头中或在属性网格的 " **DisplayName** " 框中编辑 <xref:System.Activities.Activity.DisplayName%2A>。
+访问 "**工具箱**" 的 "**基元**" 类别中的 " **InvokeMethod** " 活动设计器。 可以将 " **InvokeMethod** " 活动设计器从 "**工具箱**" 拖放到工作流设计器表面上，通常会在其中放置活动，如 <xref:System.Activities.Statements.Sequence>内。 删除活动设计器将创建一个 <xref:System.Activities.Statements.InvokeMethod> 的活动，其默认 <xref:System.Activities.Activity.DisplayName%2A> 为 InvokeMethod。 可以在 " **InvokeMethod** " 活动设计器的标头中或在属性网格的 " **DisplayName** " 框中编辑 <xref:System.Activities.Activity.DisplayName%2A>。
 
 ### <a name="the-invokemethod-properties"></a>InvokeMethod 属性
 
@@ -55,7 +55,7 @@ ms.locfileid: "72650171"
 
 3. 循环访问 <xref:System.Activities.Statements.InvokeMethod.Parameters%2A> 集合并注册每个自变量。
 
-产生的异常的类型为 <xref:System.Activities.InvalidWorkflowException> 并带有以下消息：“InvokeMethod”: 已存在名为“TargetObject”的变量、RuntimeArgument 或 DelegateArgument。 在环境作用域中，名称必须唯一。
+产生的异常的类型为 <xref:System.Activities.InvalidWorkflowException>，其中包含以下消息："InvokeMethod"：已存在名为 "TargetObject" 的变量、RuntimeArgument 或 DelegateArgument。 在环境作用域中，名称必须唯一。
 
 此限制不适用于 <xref:System.Activities.Statements.InvokeMethod.TargetType%2A> 和 <xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A>。 它们不是工作流参数，因此不在 <xref:System.Activities.Activity.CacheMetadata%2A> 方法的 <xref:System.Activities.Statements.InvokeMethod> 活动的 <xref:System.Activities.Statements.InvokeMethod.GenericTypeArguments%2A> 集合中进行注册。
 
