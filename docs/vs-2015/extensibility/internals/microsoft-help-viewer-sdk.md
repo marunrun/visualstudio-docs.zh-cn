@@ -8,12 +8,12 @@ ms.assetid: 620d7dcd-d462-475e-a449-fbfa06ff12c5
 caps.latest.revision: 34
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: cafdfacec24e906569d0f2b0d1a334511a75e30a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 96647f362566f0687cb04b7da4459331ac56b031
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300724"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851906"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft Help Viewer SDK
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -312,13 +312,13 @@ some F# code
 
    - 对于32位操作系统：
 
-      HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Help\v2.1\Partner<em>\\< 命名空间\></em>
+      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.1\Partner<em>\\<namespace\></em>
 
       "位置" = "脱机"
 
    - 对于64位操作系统：
 
-      HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Partner<em>\\< 命名空间\></em>
+      HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Partner<em>\\<namespace\></em>
 
       "位置" = "脱机"
 
@@ -352,8 +352,8 @@ some F# code
 
 |Property （HTML 表示形式）|描述|
 |--------------------------------------|-----------------|
-|\< meta name = "Microsoft. Help" content = "[language-code]"/>|为此主题设置区域设置。 如果在主题中使用此标记，则必须只使用一次，并且必须将其插入到任何其他 Microsoft 帮助标记之上。 如果未使用此标记，则将使用与产品区域设置相关联的断字符（如果已指定）对主题的正文文本进行索引。否则，将使用 en-us 断字符。 此标记符合 ISOC RFC 4646。 若要确保 Microsoft 帮助正常工作，请使用此属性而不是 "常规语言" 属性。|
-|\< meta name = "TopicLocale" content = "[language-code]"/>|如果还使用了其他区域设置，则设置本主题的区域设置。 如果在主题中使用此标记，则必须只使用一次。 当目录包含多种语言的内容时，请使用此标记。 目录中的多个主题可以具有相同的 ID，但每个主题都必须指定唯一的 TopicLocale。 指定与目录的区域设置匹配的 TopicLocale 的主题是在目录中显示的主题。 但是，该主题的所有语言版本都将显示在搜索结果中。|
+|\< meta name="Microsoft.Help.Locale" content="[language-code]" />|为此主题设置区域设置。 如果在主题中使用此标记，则必须只使用一次，并且必须将其插入到任何其他 Microsoft 帮助标记之上。 如果未使用此标记，则将使用与产品区域设置相关联的断字符（如果已指定）对主题的正文文本进行索引。否则，将使用 en-us 断字符。 此标记符合 ISOC RFC 4646。 若要确保 Microsoft 帮助正常工作，请使用此属性而不是 "常规语言" 属性。|
+|\< meta name="Microsoft.Help.TopicLocale" content="[language-code]" />|如果还使用了其他区域设置，则设置本主题的区域设置。 如果在主题中使用此标记，则必须只使用一次。 当目录包含多种语言的内容时，请使用此标记。 目录中的多个主题可以具有相同的 ID，但每个主题都必须指定唯一的 TopicLocale。 指定与目录的区域设置匹配的 TopicLocale 的主题是在目录中显示的主题。 但是，该主题的所有语言版本都将显示在搜索结果中。|
 |\< 标题 > [Title]\</title >|指定本主题的标题。 此标记是必需的，必须在主题中仅使用一次。 如果主题正文不包含 \<div > 部分的标题，此标题将显示在主题和目录中。|
 |\< meta name = "aKeywordPhrase" content = "[]"/>|指定在帮助查看器的 "索引" 窗格中显示的链接文本。 单击此链接时，将显示该主题。您可以为一个主题指定多个索引关键字，如果您不希望该主题的链接显示在索引中，也可以省略此标记。 可以将早期版本的帮助中的 "K" 关键字转换为此属性。|
 |\< meta name = "TopicID" content = "[]"/>|设置该主题的标识符。 此标记是必需的，必须在主题中仅使用一次。 此 ID 必须在目录中具有相同区域设置的主题中是唯一的。 在另一个主题中，你可以使用此 ID 创建指向此主题的链接。|
@@ -432,25 +432,25 @@ some F# code
 
   注意： "{n}" 标记的变量具有代码依赖项，删除或更改这些值会导致错误，并可能导致应用程序崩溃。Visual Studio 品牌包中包含本地化标识符（例如 _locID = "codesnippet"）。
 
-  **署名 .xml**
+  **Branding.xml**
 
 |||
 |-|-|
 |功能：|**CollapsibleArea**|
-|使用:|展开折叠内容控件文本|
-|**元素**|**值**|
+|用途：|展开折叠内容控件文本|
+|**元素**|**“值”**|
 |ExpandText|Expand|
 |CollapseText|折叠|
 |功能：|**CodeSnippet**|
-|使用:|代码片段控件文本。  注意： "不间断" 空间的代码片段内容将更改为空间。|
-|**元素**|**值**|
+|用途：|代码片段控件文本。  注意： "不间断" 空间的代码片段内容将更改为空间。|
+|**元素**|**“值”**|
 |CopyToClipboard|复制到剪贴板|
-|ViewColorizedText|查看着色|
+|ViewColorizedText|查看着色文本|
 |CombinedVBTabDisplayLanguage|Visual Basic （示例）|
 |VBDeclaration|声明|
-|VBUsage|用法|
+|VBUsage|用量|
 |功能：|**反馈、页脚和徽标**|
-|使用:|为客户提供反馈控制，以通过电子邮件提供当前主题的反馈。  内容的版权文本。  徽标定义。|
+|用途：|为客户提供反馈控制，以通过电子邮件提供当前主题的反馈。  内容的版权文本。  徽标定义。|
 |**元素**|**值（可以对这些字符串进行修改以满足采纳者需求。）**|
 |版权声明|© 2013 Microsoft Corporation。 保留所有权利。|
 |SendFeedback|\<href = "{0}" {1}> 向 Microsoft 发送有关本主题的反馈\</a。|
@@ -458,51 +458,51 @@ some F# code
 |LogoTitle|[!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)]|
 |LogoFileName|vs_logo_bk.gif|
 |LogoFileNameHC|vs_logo_wh.gif|
-|功能：|**否认**|
-|使用:|计算机翻译内容的一组案例特定免责声明。|
-|**元素**|**值**|
-|MT_Editable|本文进行了机器翻译。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
-|MT_NonEditable|本文进行了机器翻译。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
-|MT_QualityEditable|本文已手动翻译。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
-|MT_QualityNonEditable|本文已手动翻译。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
-|MT_BetaContents|本文是针对预发布版本的机器翻译。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
-|MT_BetaRecycledContents|本文是针对初步版本手动翻译的。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
+|功能：|**免责声明**|
+|用途：|计算机翻译内容的一组案例特定免责声明。|
+|**元素**|**“值”**|
+|MT_Editable|此文章由机器翻译。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
+|MT_NonEditable|此文章由机器翻译。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
+|MT_QualityEditable|此文章由人工翻译。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
+|MT_QualityNonEditable|此文章由人工翻译。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
+|MT_BetaContents|此文章由机器翻译，用于预发行版本。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
+|MT_BetaRecycledContents|此文章由人工翻译，用于预发行版本。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
 |功能：|**LinkTable**|
-|使用:|支持联机主题链接|
-|**元素**|**值**|
+|用途：|支持联机主题链接|
+|**元素**|**“值”**|
 |LinkTableTitle|链接表|
 |TopicEnuLinkText|查看计算机上提供的本主题的英语版本\</a >。|
 |TopicOnlineLinkText|查看本主题 \<href = "{0}" {1}> online\</a >|
 |OnlineText|Online|
 |功能：|**视频音频控件**|
-|使用:|显示视频内容的元素和文本|
-|**元素**|**值**|
+|用途：|显示视频内容的元素和文本|
+|**元素**|**“值”**|
 |MultiMediaNotSupported|必须安装 Internet Explorer 9 或更高版本才能支持 {0} 内容。|
 |VideoText|显示视频|
 |AudioText|流式传输音频|
 |OnlineVideoLinkText|\<p > 若要查看与本主题相关联的视频，请单击 {0}\<href = "{1}" >{2}/a\<。\</p >|
 |OnlineAudioLinkText|\<p > 收听与本主题相关联的音频，请单击 {0}\<href = "{1}" >{2}/a\<>。\</p >|
 |功能：|**内容未安装控件**|
-|使用:|用于呈现 contentnotinstalled 的文本元素（字符串）|
-|**元素**|**值**|
+|用途：|用于呈现 contentnotinstalled 的文本元素（字符串）|
+|**元素**|**“值”**|
 |ContentNotInstalledTitle|在您的计算机上找不到任何内容。|
 |ContentNotInstalledDownloadContentText|\<p > 将内容下载到您的计算机，\<href = "{0}" {1}> 单击 "管理" 选项卡\</a >。\</p >|
 |ContentNotInstalledText|\<p > 计算机上未安装任何内容。 请参阅管理员以获取本地帮助内容安装。\</p >|
 |功能：|**找不到主题控件**|
-|使用:|用于呈现 topicnotfound 的文本元素（字符串）|
-|**元素**|**值**|
+|用途：|用于呈现 topicnotfound 的文本元素（字符串）|
+|**元素**|**“值”**|
 |TopicNotFoundTitle|在您的计算机上找不到请求的主题。|
 |TopicNotFoundViewOnlineText|\<p > 在您的计算机上找不到您请求的主题，但您可以 \<href = "{0}" {1}> 查看联机\</a > 的主题。\</p >|
 |TopicNotFoundDownloadContentText|\<p > 参见导航窗格以获取指向类似主题的链接，或 \<href = "{0}" {1}> 单击 "管理" 选项卡\</a > 将内容下载到计算机。\</p >|
 |TopicNotFoundText|\<p > 在您的计算机上找不到您请求的主题。\</p >|
 |功能：|**主题损坏控件**|
-|使用:|用于呈现 topiccorrupted 的文本元素（字符串）|
-|**元素**|**值**|
+|用途：|用于呈现 topiccorrupted 的文本元素（字符串）|
+|**元素**|**“值”**|
 |TopicCorruptedTitle|无法显示请求的主题。|
 |TopicCorruptedViewOnlineText|\<p > Help Viewer 无法显示请求的主题。 主题的内容或基础系统依赖项中可能存在错误。\</p >|
 |功能：|**主页控件**|
-|使用:|支持显示帮助查看器顶层节点内容的文本。|
-|**元素**|**值**|
+|用途：|支持显示帮助查看器顶层节点内容的文本。|
+|**元素**|**“值”**|
 |HomePageTitle|Help Viewer 主页|
 |HomePageIntroduction|\<p > 欢迎使用 Microsoft Help Viewer，这是使用 Microsoft 工具、产品、技术和服务的所有用户的重要信息来源。 帮助查看器可让你访问操作方法和参考信息、示例代码、技术文章等。 若要查找所需的内容，请浏览目录、使用全文搜索或使用关键字索引在内容中导航。\</p >|
 |HomePageContentInstallText|\<p >\<br/> 使用 \<href = "{0}" {1}> 管理内容\</a > 选项卡执行以下操作：\<ul >\<li > 将内容添加到计算机。\</li >\<li > 检查本地内容的更新。\</li >\<li > 从计算机中删除内容。\</li >\</ul >\</p >|
@@ -512,7 +512,7 @@ some F# code
 |HomePageHelpSettingsText|\<p > 当前设置为 "本地帮助"。 "帮助查看器" 显示您在计算机上安装的内容。\<br/> 若要更改帮助内容的源，请在 Visual Studio 菜单栏上选择 "\<范围样式 ="{0}"> 帮助，设置帮助首选项\</span >。\<br/>\</p >|
 |几|MB|
 
- **署名 node.js**
+ **branding.js**
 
  署名 .js 文件包含 Visual Studio 帮助查看器品牌元素使用的 JavaScript。  下面是品牌元素和支持 JavaScript 函数的列表。  要为此文件本地化的所有字符串都在此文件顶部的 "可本地化字符串" 部分中定义。  已为署名 .js 文件中的字符串创建了 ICL 文件。
 
@@ -524,7 +524,7 @@ some F# code
 |设置并获取 cookie 值|System.windows.application.getcookie、System.windows.application.setcookie||
 |继承成员|changeMembersLabel|展开/折叠继承的成员|
 |当 SelfBranded = False 时|onLoad|阅读查询字符串，检查其是否是打印请求。  将所有 codesnippets 设置为 "关注用户首选" 选项卡。 如果是打印请求，则将 isPrinterFriendly 设置为 true。 检查高对比度模式。|
-|代码片段|addSpecificTextLanguageTagSet||
+|代码段|addSpecificTextLanguageTagSet||
 ||getIndexFromDevLang||
 ||ChangeTab||
 ||setCodesnippetLang||
@@ -555,7 +555,7 @@ some F# code
 
 ||||
 |-|-|-|
-|**文件**|**用法**|**显示的内容源**|
+|**文件**|**用途**|**显示的内容源**|
 |homepage.htm|此页面显示当前已安装的内容，以及任何其他适用于用户内容的消息。  此文件具有附加的元数据属性 "Microsoft.Help.Id" content = "-1"，该属性将此内容置于本地内容目录的顶部。||
 ||<META_HOME_PAGE_TITLE_ADD />|署名 .xml、标记 \<HomePageTitle >|
 ||<HOME_PAGE_INTRODUCTION_SECTION_ADD />|署名 .xml、标记 \<HomePageIntroduction >|
@@ -590,7 +590,7 @@ some F# code
 
 ||||
 |-|-|-|
-|**文件**|**用法**|**示例**|
+|**文件**|**用途**|**示例**|
 |clear.gif|用于呈现可折叠区域||
 |footer_slice.gif|页脚显示||
 |info_icon.gif|显示信息时使用|免责声明|
@@ -824,4 +824,4 @@ some F# code
 
 有关如何利用帮助 API 的详细信息，请参阅[帮助查看器代码示例](https://marketplace.visualstudio.com/items?itemName=RobChandlerHelpMVP.HelpViewer20CodeExamples)。
 
-有关中断问题的更新，请参阅[帮助查看器自述文件](https://go.microsoft.com/fwlink/?LinkID=231397&clcid=0x409)。
+有关中断问题的更新，请参阅[帮助查看器自述文件](https://go.microsoft.com/fwlink/?LinkId=255960)。

@@ -21,12 +21,12 @@ caps.latest.revision: 51
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 1e1099eaf8d766088612abbb399bdf004e6378e4
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: cba55c9f4a8f7436b97099b6b548b916ea6e5ecb
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74294678"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844944"
 ---
 # <a name="walkthrough-manually-deploying-a-clickonce-application"></a>演练：手动部署 ClickOnce 应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "74294678"
   
 - 安装 Mage.exe 和 Mageui.exe。  
   
-     Mage.exe 和 Mageui.exe 是 [!INCLUDE[winsdklong](../includes/winsdklong-md.md)]的一部分。 您必须安装 [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)] 或 Visual Studio 随附 [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)] 的版本。 有关详细信息，请参阅 MSDN 上的[Windows SDK](https://go.microsoft.com/fwlink/?LinkId=158044) 。  
+     Mage.exe 和 Mageui.exe 是 [!INCLUDE[winsdklong](../includes/winsdklong-md.md)]的一部分。 您必须安装 [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)] 或 Visual Studio 随附 [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)] 的版本。 有关详细信息，请参阅 MSDN 上的[Windows SDK](https://msdn.microsoft.com/windowsserver/bb980924.aspx) 。  
   
 - 提供要部署的应用程序。  
   
@@ -50,18 +50,18 @@ ms.locfileid: "74294678"
   
 - 确定应用程序是否需要提升的信任级别。  
   
-     如果你的应用程序需要完全信任（例如，对用户系统的完全访问权限），则可以使用 Mage.exe 的 `-TrustLevel` 选项来设置此项。 如果要为应用程序定义自定义权限集，可以从另一个清单复制 Internet 或 intranet 权限部分，对其进行修改以满足你的需求，并使用文本编辑器或 Mageui.exe 将其添加到应用程序清单。 有关详细信息，请参阅 [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)。  
+     如果你的应用程序需要完全信任（例如，对用户系统的完全访问权限），则可以使用 Mage.exe 的 `-TrustLevel` 选项来设置此项。 如果要为应用程序定义自定义权限集，可以从另一个清单复制 Internet 或 intranet 权限部分，对其进行修改以满足你的需求，并使用文本编辑器或 Mageui.exe 将其添加到应用程序清单。 有关更多信息，请参见 [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)。  
   
 - 获取 Authenticode 证书。  
   
-     应使用 Authenticode 证书对部署进行签名。 可以通过使用 Visual Studio、Mageui.exe 或 MakeCert 和 Pvk2Pfx 工具生成测试证书，也可以从证书颁发机构（CA）获取证书。 如果选择使用受信任的应用程序部署，还必须在所有客户端计算机上执行一次证书安装。 有关详细信息，请参阅 [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)。  
+     应使用 Authenticode 证书对部署进行签名。 可以通过使用 Visual Studio、Mageui.exe 或 MakeCert 和 Pvk2Pfx 工具生成测试证书，也可以从证书颁发机构（CA）获取证书。 如果选择使用受信任的应用程序部署，还必须在所有客户端计算机上执行一次证书安装。 有关更多信息，请参见 [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)。  
   
     > [!NOTE]
     > 你还可以使用可从证书颁发机构获取的 CNG 证书对你的部署进行签名。  
   
 - 请确保应用程序没有带有 UAC 信息的清单。  
   
-     你需要确定你的应用程序是否包含具有用户帐户控制（UAC）信息的清单，如 `<dependentAssembly>` 元素。 若要检查应用程序清单，可以使用 Windows Sysinternals [Sigcheck](https://go.microsoft.com/fwlink/?LinkId=158035)实用程序。  
+     你需要确定你的应用程序是否包含具有用户帐户控制（UAC）信息的清单，如 `<dependentAssembly>` 元素。 若要检查应用程序清单，可以使用 Windows Sysinternals [Sigcheck](https://technet.microsoft.com/sysinternals/bb897441.aspx)实用程序。  
   
      如果你的应用程序包含具有 UAC 详细信息的清单，则必须在不使用 UAC 信息的情况下重新生成它。 对于 Visual C# Studio 中的项目，打开 "项目属性"，然后选择 "应用程序" 选项卡。在 "**清单**" 下拉列表中，选择 "**创建不带清单的应用程序**"。 对于 Visual Studio 中的 Visual Basic 项目，请打开项目属性，选择 "应用程序" 选项卡，然后单击 "**查看 UAC 设置**"。 在打开的清单文件中，删除单个 `<asmv1:assembly>` 元素中的所有元素。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "74294678"
   
 10. 将部署目录中的所有文件复制到部署目标或媒体。 这可能是网站或 FTP 站点、文件共享或 cd-rom 上的文件夹。  
   
-11. 为用户提供安装应用程序所需的 URL、UNC 或物理介质。 如果提供 URL 或 UNC，则必须为用户提供部署清单的完整路径。 例如，如果将 AppToDeploy 部署到 AppToDeploy 目录中 http://webserver01/，则将 http://webserver01/AppToDeploy/AppToDeploy.application完整的 URL 路径。  
+11. 为用户提供安装应用程序所需的 URL、UNC 或物理介质。 如果提供 URL 或 UNC，则必须为用户提供部署清单的完整路径。 例如，如果 AppToDeploy 部署到 http://webserver01/ AppToDeploy 目录中，在完整的 URL 路径应 http://webserver01/AppToDeploy/AppToDeploy.application 。  
   
 ### <a name="to-deploy-an-application-with-the-mageuiexe-graphical-tool"></a>使用 Mageui.exe 图形工具部署应用程序  
   
@@ -200,14 +200,14 @@ ms.locfileid: "74294678"
   
 28. 将部署目录中的所有文件复制到部署目标或媒体。 这可能是网站或 FTP 站点、文件共享或 cd-rom 上的文件夹。  
   
-29. 为用户提供安装应用程序所需的 URL、UNC 或物理介质。 如果提供 URL 或 UNC，则必须为用户提供部署清单的完整路径。 例如，如果将 AppToDeploy 部署到 AppToDeploy 目录中 http://webserver01/，则将 http://webserver01/AppToDeploy/AppToDeploy.application完整的 URL 路径。  
+29. 为用户提供安装应用程序所需的 URL、UNC 或物理介质。 如果提供 URL 或 UNC，则必须为用户提供部署清单的完整路径。 例如，如果 AppToDeploy 部署到 http://webserver01/ AppToDeploy 目录中，在完整的 URL 路径应 http://webserver01/AppToDeploy/AppToDeploy.application 。  
   
 ## <a name="next-steps"></a>后续步骤  
  当需要部署应用程序的新版本时，请创建一个名为的新目录（例如1.0.0.1），并将新的应用程序文件复制到新目录中。 接下来，需要按照前面的步骤创建新的应用程序清单并对其进行签名，并对部署清单进行更新和签名。 请注意，在 Mage.exe `-New` 和 `–Update` 调用中指定相同的更高版本，因为 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 仅更新较高版本，最左端的整数最重要。 如果使用了 Mageui.exe，则可以通过打开部署清单、选择 "**应用程序引用**" 选项卡、单击 "**选择清单**" 按钮，然后选择更新的应用程序清单来更新部署清单。  
   
 ## <a name="see-also"></a>请参阅  
  [Mage.exe（清单生成和编辑工具）](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)   
- [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](https://msdn.microsoft.com/library/f9e130a6-8117-49c4-839c-c988f641dc14)   
+ [MageUI.exe（图形化客户端中的清单生成和编辑工具）](https://msdn.microsoft.com/library/f9e130a6-8117-49c4-839c-c988f641dc14)   
  [发布 ClickOnce 应用程序](../deployment/publishing-clickonce-applications.md)   
  [ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md)   
- [ndptecclick](../deployment/clickonce-application-manifest.md)
+ [ClickOnce 应用程序清单](../deployment/clickonce-application-manifest.md)

@@ -24,12 +24,12 @@ caps.latest.revision: 43
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: da4e0e3bab904b660f3d843e105b7d256a63a1b5
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 06e83e254cad77d4ede9716a18a51f6476fb51ad
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297224"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850184"
 ---
 # <a name="uml-class-diagrams-reference"></a>UML 类图：参考
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "74297224"
 UML 类图描述在应用程序内部以及应用程序与其用户在通信时使用的对象和信息结构。 它描述的信息不具有对任何特定实现的引用。 它的类和关系可以采用许多方法来实现，例如数据库表、XML 节点或软件对象的组合。
 
 > [!NOTE]
-> 本主题针对 UML 类图。 还有另一种类图，即 .NET 类图，它用于可视化程序代码。 有关详细信息，请参阅[设计和查看类和类型](https://go.microsoft.com/fwlink/?LinkId=142231)。
+> 本主题针对 UML 类图。 还有另一种类图，即 .NET 类图，它用于可视化程序代码。 有关详细信息，请参阅[设计和查看类和类型](https://msdn.microsoft.com/library/ab7aty24.aspx)。
 
  若要创建 UML 类图，请在 "**体系结构**" 菜单上，选择 "**新建 UML 或层关系图**"。 有关如何绘制 UML 类图的详细信息，请参阅[Uml 类图：准则](../modeling/uml-class-diagrams-guidelines.md)。 有关如何创建和绘制建模图的详细信息，请参阅[编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)。
 
@@ -62,13 +62,13 @@ UML 类图描述在应用程序内部以及应用程序与其用户在通信时�
 |     1     |        分类器        |                                                                                                             类、接口或枚举的通用名称。 组件、用例和参与者也是分类器。                                                                                                             |
 |     2     | 折叠/展开控件 |                                                                                         如果看不到分类器的详细信息，则单击分类器左上角的扩展器。 可能还必须单击每段上的 [+]。                                                                                         |
 |     3     |      **特性**       |   附加到每个分类器实例的类型化值。<br /><br /> 若要添加属性，请单击 "**属性**" 部分，然后按**enter**。 键入该特性的签名。 有关详细信息，请参阅[UML 类图上特性的属性](../modeling/properties-of-attributes-on-uml-class-diagrams.md)。   |
-|     4     |      **运作**       | 分类器的实例可执行的方法或函数。 若要添加操作，请单击 "**操作**" 部分，然后按**enter**。 键入该操作的签名。 有关详细信息，请参阅[UML 类图上的操作属性](../modeling/properties-of-operations-on-uml-class-diagrams.md)。 |
+|     4     |      **Operation**       | 分类器的实例可执行的方法或函数。 若要添加操作，请单击 "**操作**" 部分，然后按**enter**。 键入该操作的签名。 有关详细信息，请参阅[UML 类图上的操作属性](../modeling/properties-of-operations-on-uml-class-diagrams.md)。 |
 |     5     |     **关联**      |                                                                  两个分类器的成员之间的关系。 有关详细信息，请参阅[UML 类图上关联的属性](../modeling/properties-of-associations-on-uml-class-diagrams.md)。                                                                   |
 |    5a     |     **聚合**      |                                                                                                    表示共享所有权关系的关联。 所有者角色的 "**聚合**" 属性设置为 "**共享**"。                                                                                                     |
 |    5b     |     **组合**      |                                                                                                      表示整体-部分关系的关联。 所有者角色的 "**聚合**" 属性设置为 "**组合**"。                                                                                                      |
 |     6     |   **关联名称**   |                                                                                                                                         关联的名称。 该名称可以留空。                                                                                                                                          |
 |     7     |      **角色名称**       |                       角色（即关联的一端）的名称。 可用于引用关联对象。 在前面的图示中，对于任何“订单”`O`，`O.ChosenMenu` 是其关联菜单。<br /><br /> 每个角色都有自己的属性，这些属性列在关联的属性下。                       |
-|     8     |     **多样性**     |                                         指示此端有多少个对象可以链接到另一端的每个对象。 在该示例中，每个“订单”必须链接到正好一个“菜单”。<br /><br /> **\\** \* 表示可以进行的链接数没有上限。                                         |
+|     8     |     **多重性**     |                                         指示此端有多少个对象可以链接到另一端的每个对象。 在该示例中，每个“订单”必须链接到正好一个“菜单”。<br /><br /> **\\** \* 表示可以进行的链接数没有上限。                                         |
 |     9     |    **泛**    |  *特定*分类器从*通用*分类器继承部分定义。 通用分类器位于连接线的箭头端。 特定分类器继承特性、关联和操作。<br /><br /> 使用 "**继承**" 工具在两个分类器之间创建泛化。   |
 
  ![包含接口和枚举的包](../modeling/media/uml-classovpackage.png "UML_ClassOvPackage")

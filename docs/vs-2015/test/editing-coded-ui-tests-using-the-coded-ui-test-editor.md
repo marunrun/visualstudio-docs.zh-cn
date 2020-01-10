@@ -12,12 +12,12 @@ ms.assetid: 76435c4b-593e-43a3-a9fe-709a7f9f5e0f
 caps.latest.revision: 42
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d408f21555deee835cd8f00926bb9c73fd3167f3
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: ab2651767e36abd8e85efff0dadea8071fc7db5b
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302636"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851846"
 ---
 # <a name="editing-coded-ui-tests-using-the-coded-ui-test-editor"></a>使用编码的 UI 测试编辑器编辑编码的 UI 测试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "74302636"
 > 当选择位于 **“UI 操作”** 窗格中的方法中的 UI 操作时，将突出显示相应的控件。 你还可以修改 UI 操作或控件属性。
 
  *我看不到* 编码的 UI 测试编辑器。
-你可能正在使用的 Visual Studio Enterprise 2012 之前的版本。 订阅 MSDN 的 Visual Studio 2010 功能包 2 中也提供编码的 UI 测试编辑器。 [!INCLUDE[crdefault](../includes/crdefault-md.md)] [Microsoft Visual Studio 2010 功能包 2](https://go.microsoft.com/fwlink/?LinkID=204119)。
+你可能正在使用的 Visual Studio Enterprise 2012 之前的版本。 订阅 MSDN 的 Visual Studio 2010 功能包 2 中也提供编码的 UI 测试编辑器。 [!INCLUDE[crdefault](../includes/crdefault-md.md)][Microsoft Visual Studio 2010 功能包 2](https://msdn.microsoft.com/library/gg269474.aspx)。
 
 ## <a name="CodedUITestEditor_EditActionAndControlProperties"></a>修改 UI 操作属性及其相应的控件属性
  使用编码的 UI 测试编辑器，你可以快速查找和查看测试方法中所有的 UI 操作。 当在编辑器中选择的 UI 操作时，将自动突出显示相应的控件。 同样，如果选择一个控件，将突出显示相关联的 UI 操作。 这样，当选择 UI 操作或控件时，就可以轻松通过“属性”窗口来修改与之相对应的属性。
@@ -74,7 +74,7 @@ ms.locfileid: "74302636"
 
  若要修改 UI 操作的属性，在 **“UI 操作”** 窗格中，展开包含你想要为其编辑属性的 UI 操作的测试方法，选择 UI 操作，然后通过“属性”窗口修改属性。
 
- 例如，如果服务器不可用，并且 UI 操作与指示“转到网页 **”的 Web 浏览器关联，则可以将 URL 更改为 <http://Contoso1/default.aspx’>** `‘ http://Contoso2/default.aspx’`。
+ 例如，如果服务器不可用，并且 UI 操作与指示“转到网页 <http://Contoso1/default.aspx’>”的 Web 浏览器关联，则可以将 URL 更改为 `‘ http://Contoso2/default.aspx’`。
 
  ![控件属性](../test/media/codeduitestcontrolprop.png "CodedUITestControlProp")编辑控件属性
 
@@ -116,7 +116,7 @@ ms.locfileid: "74302636"
  拆分方法完成后，通过选择 **工具栏上的“保存”** [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，可将所做更改保存到 UIMap.Designer 文件。
 
  *我应该知道哪些其他内容？*
- **重大问题**
+ **重要事项**
 
 - 警告![图标](../test/media/caution.gif "注意")**警告：** 如果你拆分方法，则必须修改调用现有方法的任何代码，以便还在你仍想要包括这些 UI 操作时调用要创建的新方法。 拆分方法时，将显示一个 Microsoft Visual Studio 对话框。 它会警告你必须修改可调用现有方法的任何代码，使其还可以调用要创建的新方法。 选择 **“是”** 。
 
@@ -140,7 +140,7 @@ ms.locfileid: "74302636"
  移动方法后，通过选择 **工具栏上的“保存”** [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，可将所做更改保存到 UIMap.Designer 文件。
 
  *我应该知道哪些其他内容？*
- **重大问题**
+ **重要事项**
 
 - 警告![图标](../test/media/caution.gif "注意")**警告：** 一旦移动了方法，就不能再使用编码的 UI 测试编辑器对其进行编辑。 你必须使用代码编辑器添加并维护你的自定义代码。 移动方法时，将显示一个 Microsoft Visual Studio 对话框。 该对话框将警告你，该方法将从 UIMap.uitest 文件移动到 UIMap.cs 或 UIMap.vb 文件，并且你将不能再使用编码的 UI 测试编辑器来编辑该方法。 选择 **“是”** 。
 
@@ -149,7 +149,7 @@ ms.locfileid: "74302636"
 - ![提示](../test/media/tip.png "提示")若要撤消移动，请从 "**编辑**" 菜单中选择 "**撤消**"，或按 Ctrl + Z。 但是，随后必须手动从 UIMap.cs 或 UIMap.vb 文件删除该代码。
 
 ## <a name="CodedUITestEditor_LocateUIControl"></a> 在受测应用程序中查找 UI 控件
- 有时，可能很难直观显示控件在受测应用程序 UI 中的位置。 编码的 UI 测试编辑器的功能之一是，你可以选择 UI 控件图中列出的控件和查看其在受测应用程序中的位置。 受测应用程序中的“查找 UI 控件” 功能还可以用于验证你对控件所做的搜索属性修改。
+ 有时，可能很难直观显示控件在受测试应用程序 UI 中的位置。 编码的 UI 测试编辑器的功能之一是，你可以选择 UI 控件图中列出的控件和查看其在受测应用程序中的位置。 受测应用程序中的“查找 UI 控件” 功能还可以用于验证你对控件所做的搜索属性修改。
 
  ![定位 UI 控件](../test/media/codeduilocatecontrol.png "CodedUILocateControl")
 
@@ -158,7 +158,7 @@ ms.locfileid: "74302636"
  在“UI 控件图” 窗格中，选择你想要在与测试关联的应用程序中查找的控件。 接下来，打开该控件的快捷菜单，然后选择“查找 UI 控件”。 在受测应用程序中，为该控件指定了一个蓝色边框。
 
  *我应该知道哪些其他内容？*
- **重大问题**
+ **重要事项**
 
 - 警告![图标](../test/media/caution.gif "注意")**警告：** 查找 UI 控件之前，请验证与测试关联的应用程序是否正在运行。
 
@@ -176,11 +176,11 @@ ms.locfileid: "74302636"
  在“UI 控件图” 窗格中，选择你想要为其查找和查看所有后代的容器控件。 接下来，打开该控件的快捷菜单，然后选择“查找全部”。 容器控件及其所有后代控件在编码的 UI 测试编辑器标记为一个绿色复选标记或红色 X。 这些标记可让你知道是否可以在受测应用程序中成功查找这些控件。
 
  *我应该知道哪些其他内容？*
- **重大问题**
+ **重要事项**
 
 - 警告![图标](../test/media/caution.gif "注意")**警告：** 在定位 UI 控件之前，请验证与测试关联的应用程序是否正在运行。
 
-## <a name="CodedUITestEditor_InsertDelay"></a>在 UI 操作前插入延迟
+## <a name="CodedUITestEditor_InsertDelay"></a> 在 UI 操作之前插入延迟
  有时，可能需要让测试等待某些事件发生，如某个窗口出现、进度栏消失等。 使用编码的 UI 测试编辑器，你可以通过在 UI 操作之前插入延迟完成此操作。 你可以指定希望延迟的秒数。
 
  ![在 UI 操作前插入延迟](../test/media/codeduidelay.png "CodedUIDelay")
@@ -192,7 +192,7 @@ ms.locfileid: "74302636"
  插入延迟完成后，通过选择 **工具栏上的“保存”** [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，将所做更改保存到 UIMap.Designer 文件。
 
  *我应该知道哪些其他内容？*
- **注意**
+ **备注**
 
 - ![先决条件](../test/media/prereq.png "Prereq")如果需要确保特定控件在 UI 操作之前可用，应考虑使用相应的的 uitestcontrol.waitforcontrolxxx Uitestcontrol.waitforcontrolxxx （）方法将自定义代码添加到测试方法。 [!INCLUDE[crdefault](../includes/crdefault-md.md)][播放期间让编码的 UI 测试等待特定事件](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md)。
 
@@ -203,15 +203,15 @@ ms.locfileid: "74302636"
 ## <a name="external-resources"></a>外部资源
 
 ### <a name="guidance"></a>指导
- [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](https://go.microsoft.com/fwlink/?LinkID=255188)
+ [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](https://msdn.microsoft.com/library/jj159340.aspx)
 
-### <a name="faq"></a>FAQ
- [编码的 UI 测试常见问题 - 1](https://go.microsoft.com/fwlink/?LinkID=230576)
+### <a name="faq"></a>常见问题
+ [编码的 UI 测试常见问题 - 1](https://blogs.msdn.com/b/mathew_aniyan/archive/tags/faq/)
 
- [编码的 UI 测试常见问题 - 2](https://go.microsoft.com/fwlink/?LinkID=230578)
+ [编码的 UI 测试常见问题 - 2](https://social.msdn.microsoft.com/Forums/en-US/vsautotest/thread/3a74dd2c-cef8-4923-abbf-7a91f489e6c4)
 
 ### <a name="forum"></a>论坛
- [Visual Studio UI 自动测试（包括 CodedUI）](https://go.microsoft.com/fwlink/?LinkID=224497)
+ [Visual Studio UI 自动测试（包括 CodedUI）](https://social.msdn.microsoft.com/Forums/en-US/vsautotest)
 
 ## <a name="see-also"></a>请参阅
  [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)[创建编码](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)[的](../test/creating-a-data-driven-coded-ui-test.md)ui 测试创建编码的 ui 测试[从现有操作录制生成编码的 ui](https://msdn.microsoft.com/library/56736963-9027-493b-b5c4-2d4e86d1d497)测试[演练：创建、编辑和维护编码的 ui 测试](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)

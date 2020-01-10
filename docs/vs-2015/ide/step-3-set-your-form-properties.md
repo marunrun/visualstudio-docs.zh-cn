@@ -9,19 +9,19 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 90fab2724c3d392db7824222da2450a8a4d585c3
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: f05e91c13b1a9c52b5afad6942e5847643aa9490
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295751"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851550"
 ---
 # <a name="step-3-set-your-form-properties"></a>步骤 3：设置窗体属性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 接下来，使用“属性”窗口更改窗体的外观。
 
- ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[教程1：在 Visual Basic 中创建图片查看器-视频 1](https://go.microsoft.com/fwlink/?LinkId=205209)或[教程1：在视频1中C#创建图片查看器](https://go.microsoft.com/fwlink/?LinkId=205199)。 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
+ ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[教程1：在 Visual Basic 中创建图片查看器-视频 1](https://msdn.microsoft.com/vbasic/gg315352.aspx)或[教程1：在视频1中C#创建图片查看器](https://msdn.microsoft.com/vcsharp/gg278409.aspx)。 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
 
 ### <a name="to-set-your-form-properties"></a>设置窗体属性
 

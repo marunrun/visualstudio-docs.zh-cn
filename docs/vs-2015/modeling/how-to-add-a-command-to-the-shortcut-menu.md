@@ -12,12 +12,12 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8d5373ae27797aa3bfe4627fb84ce393dce9e910
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 2d5ddea477aa7295c41097177265b43483b7aa45
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300890"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850413"
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>如何：向快捷菜单中添加命令
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "74300890"
 
 3. [在 CommandSet 类中编写方法](#CommandSet)，使命令可见，并定义要执行的命令。
 
-   有关示例，请参阅[可视化和建模 SDK 网站](https://go.microsoft.com/fwlink/?LinkID=185579)。
+   有关示例，请参阅[可视化和建模 SDK 网站](https://www.visualstudio.com/)。
 
 > [!NOTE]
 > 通过在 CommandSet.cs 中重写方法，还可以修改某些现有命令（例如剪切、粘贴、全选和打印）的行为。 有关详细信息，请参阅[如何：修改标准菜单命令](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)。
@@ -143,7 +143,7 @@ ms.locfileid: "74300890"
 
 2. 查找 `ProvideMenuResource` 特性。
 
-3. 递增特性的 `version` 参数，它是第二个参数。 如果需要，你可以显式编写参数名称以提醒你它的用途。 例如:
+3. 递增特性的 `version` 参数，它是第二个参数。 如果需要，你可以显式编写参数名称以提醒你它的用途。 例如：
 
      `[VSShell::ProvideMenuResource("1000.ctmenu", version: 2 )]`
 
@@ -162,7 +162,7 @@ ms.locfileid: "74300890"
 
 2. 在**DslPackage**中，创建一个名为 "**自定义代码**" 的文件夹。 在此文件夹中，创建一个名为 `CommandSet.cs`的新类文件。
 
-3. 在该新文件中，编写具有与生成的分部类相同的命名空间和名称的分部声明。 例如:
+3. 在该新文件中，编写具有与生成的分部类相同的命名空间和名称的分部声明。 例如：
 
      `namespace Company.Language1 /* Make sure this is correct */`
 
@@ -332,7 +332,7 @@ protected override IList<MenuCommand> GetMenuCommands()
 
 4. 在关系图中右键单击各种项，以验证命令是否根据所选择的项正确启用或禁用，以及是否相应地显示或隐藏。
 
-## <a name="troubleshooting"></a>疑难解答
+## <a name="troubleshooting"></a>故障排除
  **命令未显示在菜单中：**
 
 - 除非安装 DSL 包，否则命令将只显示在 Visual Studio 的调试实例中。 有关详细信息，请参阅[部署域特定语言解决方案](../modeling/deploying-domain-specific-language-solutions.md)。

@@ -9,12 +9,12 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5acbb4d2966e89f7913fa1479b882fad5c9650f7
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 0d9887e3c7cf283bff453e458502400a7ade1a41
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295816"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849573"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>定义锁定策略以创建只读段
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "74295816"
 > [!NOTE]
 > 可以使用反射来规避锁定策略。 它为第三方开发人员提供清晰的边界，但不提供强大的安全性。
 
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)][可视化和建模 SDK](https://go.microsoft.com/fwlink/?LinkId=186128)网站上提供了更多详细信息和示例。
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)][可视化和建模 SDK](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)网站上提供了更多详细信息和示例。
 
 ## <a name="setting-and-getting-locks"></a>设置和获取锁
  可以在存储、分区或单个元素上设置锁。 例如，此语句将阻止删除模型元素，并且还会阻止其属性被更改：
@@ -77,14 +77,14 @@ partition.SetLocks(Locks.Delete);
 
   不能对分区或存储设置锁，同时禁用对单个元素的锁定。
 
-|“值”|如果 `IsLocked(Value)` 为 true，则表示|
+|{2&gt;值&lt;2}|如果 `IsLocked(Value)` 为 true，则表示|
 |-----------|------------------------------------------|
 |无|无限制。|
-|属性|无法更改元素的域属性。 这不适用于由关系中的域类的角色生成的属性。|
-|添加|无法在分区或存储区中创建新的元素和链接。<br /><br /> 不适用于 `ModelElement`。|
+|Property|无法更改元素的域属性。 这不适用于由关系中的域类的角色生成的属性。|
+|加法运算|无法在分区或存储区中创建新的元素和链接。<br /><br /> 不适用于 `ModelElement`。|
 |移动|如果 `element.IsLocked(Move)` 为 true，则不能在分区之间移动元素; 如果 `targetPartition.IsLocked(Move)` 为 true，则为。|
 |删除|如果此锁是在元素本身上设置的，或者是在删除操作将传播到的任何元素（如嵌入元素和形状）上，则不能删除元素。<br /><br /> 您可以使用 `element.CanDelete()` 来发现是否可以删除某个元素。|
-|安排|不能更改 roleplayer 中的链接排序。|
+|重新排序|不能更改 roleplayer 中的链接排序。|
 |RolePlayer|无法更改来源于此元素的链接集。 例如，不能在此元素下嵌入新元素。 这不会影响此元素作为其目标的链接。<br /><br /> 如果此元素是链接，则其源和目标不受影响。|
 |全部|其他值的按位 "或"。|
 
@@ -115,7 +115,7 @@ public interface ILockingPolicy
 
  当对存储区、分区或 ModelElement 调用 `SetLocks()` 时，将调用这些方法。 每种方法都提供一组建议的锁。 可以返回建议的集，也可以添加和减去锁。
 
- 例如:
+ 例如：
 
 ```
 using Microsoft.VisualStudio.Modeling;

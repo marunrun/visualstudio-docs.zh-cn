@@ -13,12 +13,12 @@ caps.latest.revision: 21
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: af214f6a29e12dcdf2fe8bd2de75e05283894922
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: cd521a853d9ec8c1a3fee8e50e87217621a73a89
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74290115"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848164"
 ---
 # <a name="performance-session-properties"></a>性能会话属性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "74290115"
   
   性能会话具有以下属性页：  
   
-## <a name="general"></a>常规  
+## <a name="general"></a>“常规”  
  这些设置使您能够选择分析方法、添加 .NET 对象集合和生存期数据，以及指定默认报告位置和命名约定。  
   
- 有关详细信息，请参见:  
+ 有关详细信息，请参阅：  
   
  [如何：选择收集方法](../profiling/how-to-choose-collection-methods.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "74290115"
   
  [如何：设置性能数据文件名选项](../profiling/how-to-set-performance-data-file-name-options.md)  
   
-## <a name="launch"></a>启动  
+## <a name="launch"></a>从  
  通过这些设置可以从二进制文件列表进行选择并指定二进制文件的启动顺序。  
   
  有关详细信息，请参阅[如何：指定要启动的二进制文件](../profiling/how-to-specify-the-binary-to-start.md)  
@@ -74,10 +74,10 @@ ms.locfileid: "74290115"
 ## <a name="tier-interactions"></a>层交互  
  有关详细信息，请参阅[收集层交互数据](../profiling/collecting-tier-interaction-data.md)  
   
-## <a name="instrumentation"></a>检测  
+## <a name="instrumentation"></a>检测信息  
  通过这些设置可以收集为 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 网页中的 JScript 代码收集性能数据，并指定要在检测过程之前或之后发生的任何**检测前**和**检测后**事件。  
   
- 有关详细信息，请参见:  
+ 有关详细信息，请参阅：  
   
  [如何：分析网页中的 JavaScript 代码](../profiling/how-to-profile-javascript-code-in-web-pages.md)  
   
@@ -89,9 +89,9 @@ ms.locfileid: "74290115"
  有关详细信息，请参阅[如何：收集 CPU 计数器数据](../profiling/how-to-collect-cpu-counter-data.md)  
   
 ## <a name="windows-events"></a>Windows 事件  
- 在分析过程中，可以从事件跟踪提供程序收集数据。 可以使用 VSPerfReport.exe 命令行工具 `/calltrace` 选项查看数据。 有关 Windows 事件跟踪 (ETW) 的详细信息，请参阅[关于事件跟踪](https://go.microsoft.com/fwlink/?linkid=90752)。  
+ 在分析过程中，可以从事件跟踪提供程序收集数据。 可以使用 VSPerfReport.exe 命令行工具 `/calltrace` 选项查看数据。 有关 Windows 事件跟踪 (ETW) 的详细信息，请参阅[关于事件跟踪](https://msdn2.microsoft.com/library/aa363668.aspx)。  
   
- 有关详细信息，请参见:  
+ 有关详细信息，请参阅：  
   
  [如何：收集 Windows 事件跟踪 (ETW) 数据](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "74290115"
 ## <a name="advanced"></a>高级  
  通过这些设置可以指定 [VSInstr](../profiling/vsinstr.md) 命令行分析工具的一个或多个选项，从而将选项添加到检测过程。 应用程序使用多个版本时，还可以指定要分析的公共运行时版本。  
   
- 有关详细信息，请参见:  
+ 有关详细信息，请参阅：  
   
  [如何：指定 .NET Framework 运行时](../profiling/how-to-specify-the-dotnet-framework-runtime.md)  
   

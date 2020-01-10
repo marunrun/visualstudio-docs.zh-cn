@@ -13,12 +13,12 @@ caps.latest.revision: 45
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bcd5a4996db4a5e374baabe4f52d5fd1dbac2e5e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: e590af12e8979d16a946339cae530fd5ccc1b08d
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301120"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850741"
 ---
 # <a name="writing-a-t4-text-template"></a>编写 T4 文本模板
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -161,7 +161,7 @@ private int Square(int i)
  有关控制块的详细信息，请参阅[文本模板控制块](../modeling/text-template-control-blocks.md)。
 
 ### <a name="class-feature-blocks-can-contain-text-blocks"></a>类功能块可以包含文本块
- 可以编写生成文本的方法。 例如:
+ 可以编写生成文本的方法。 例如：
 
 ```
 List of Squares:
@@ -191,7 +191,7 @@ private void WriteSquareLine(int i)
 <#@ assembly name="System.Xml" #>
 ```
 
- 应该使用绝对路径名，或在路径名中使用标准宏名。 例如:
+ 应该使用绝对路径名，或在路径名中使用标准宏名。 例如：
 
 ```
 <#@ assembly name="$(SolutionDir)library\MyAssembly.dll" #>
@@ -242,7 +242,7 @@ private void WriteSquareLine(int i)
 <# string fileContent = File.ReadAllText(@"C:\myData.txt"); ...
 ```
 
- **将文件作为可导航模型加载**。 更有效的方法是将数据作为模型读取，文本模板代码可以导航该模型。 例如，可以加载 XML 文件，然后使用 XPath 表达式对其导航。 你还可以使用[xsd.exe](https://go.microsoft.com/fwlink/?LinkId=178765)创建一组可用于读取 XML 数据的类。
+ **将文件作为可导航模型加载**。 更有效的方法是将数据作为模型读取，文本模板代码可以导航该模型。 例如，可以加载 XML 文件，然后使用 XPath 表达式对其导航。 你还可以使用[xsd.exe](https://docs.microsoft.com/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe)创建一组可用于读取 XML 数据的类。
 
  **在关系图或窗体中编辑模型文件。** [!INCLUDE[dsl](../includes/dsl-md.md)] 提供了一种工具，使您可以将模型作为关系图或 Windows 窗体进行编辑。 这样便于与生成的应用程序的用户讨论模型。 [!INCLUDE[dsl](../includes/dsl-md.md)] 还会创建一组反映模型结构的强类型类。 有关详细信息，请参阅[从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)。
 

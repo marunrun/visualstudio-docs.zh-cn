@@ -14,12 +14,12 @@ caps.latest.revision: 64
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3e6cd77e785adb59fc8b2cf3b28724ed0efe1ae3
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: eea557035ef4e5f1ffa2585e620a331fb6b5cce2
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300272"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852081"
 ---
 # <a name="create-layer-diagrams-from-your-code"></a>从你的代码创建层关系图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -70,8 +70,8 @@ ms.locfileid: "74300272"
 |为所有选择的项目创建单个层|同时将所有项目拖到层关系图上。<br /><br /> 一个层将出现在关系图上，并链接到所有这些项目。|
 |为每个所选的项目创建一个层|按住**SHIFT**键，同时将所有项目同时拖到层关系图中。 **注意：** 如果使用**SHIFT**键来选择项目范围，请在选择项目后释放该密钥。 将这些项目拖到关系图上时再次按住该键。 <br /><br /> 每个项目的层将出现在关系图上，并链接到该项目。|
 |向层中添加项目|将项目拖到层上。|
-|创建新的未链接的层|在 "**工具箱**" 中，展开 "**层关系图**" 部分，然后将**层**拖到层关系图。<br /><br /> 若要添加多个层，请双击该工具。 完成后，选择 "**指针**" 工具或按**ESC**键。<br /><br /> - 或 -<br /><br /> 打开层关系图的快捷菜单，选择 "**添加**"，然后选择 "**层**"。|
-|创建嵌套的层|将现有层拖到另一个层上。<br /><br /> - 或 -<br /><br /> 打开层的快捷菜单，选择 "**添加**"，然后选择 "**层**"。|
+|创建新的未链接的层|在 "**工具箱**" 中，展开 "**层关系图**" 部分，然后将**层**拖到层关系图。<br /><br /> 若要添加多个层，请双击该工具。 完成后，选择 "**指针**" 工具或按**ESC**键。<br /><br /> -或者-<br /><br /> 打开层关系图的快捷菜单，选择 "**添加**"，然后选择 "**层**"。|
+|创建嵌套的层|将现有层拖到另一个层上。<br /><br /> -或者-<br /><br /> 打开层的快捷菜单，选择 "**添加**"，然后选择 "**层**"。|
 |创建包含两个或更多现有层的新层|选择层，打开所选内容的快捷菜单，然后选择 "**组**"。|
 |更改层的颜色|将其 "**颜色**" 属性设置为所需的颜色。|
 |指定与层关联的项目必须不属于指定的命名空间|在层的 "**禁止的命名空间**" 属性中键入命名空间。 使用分号（ **;** ）分隔命名空间。|
@@ -97,7 +97,7 @@ ms.locfileid: "74300272"
 |**若要**|**在层资源管理器中**|
 |------------|---------------------------|
 |删除层与项目之间的链接|打开项目链接的快捷菜单，然后选择 "**删除**"。|
-|将链接从一个层移到另一个层|将项目链接拖到关系图上的一个现有层。<br /><br /> - 或 -<br /><br /> 1. 打开项目链接的快捷菜单，然后选择 "**剪切**"。<br />2. 在层关系图上，打开层的快捷菜单，然后选择 "**粘贴**"。|
+|将链接从一个层移到另一个层|将项目链接拖到关系图上的一个现有层。<br /><br /> -或者-<br /><br /> 1. 打开项目链接的快捷菜单，然后选择 "**剪切**"。<br />2. 在层关系图上，打开层的快捷菜单，然后选择 "**粘贴**"。|
 |将链接从一个层复制到另一个层|1. 打开项目链接的快捷菜单，然后选择 "**复制**"。<br />2. 在层关系图上，打开层的快捷菜单，然后选择 "**粘贴**"。|
 |基于现有项目链接创建一个新层|将项目链接拖到关系图上的空白区域。|
 |验证链接的项目是否支持对照层关系图的验证。|查看项目链接的 "**支持验证**" 列。|
@@ -136,4 +136,4 @@ ms.locfileid: "74300272"
 - [使用代码图分析查找潜在问题](../modeling/find-potential-problems-using-code-map-analyzers.md)
 
 ## <a name="see-also"></a>请参阅
- [第9频道视频：使用层关系图设计和验证体系结构](https://go.microsoft.com/fwlink/?LinkID=252073)[层关系图：参考](../modeling/layer-diagrams-reference.md)[层关系图：](../modeling/layer-diagrams-guidelines.md) [使用层关系图验证代码的](../modeling/validate-code-with-layer-diagrams.md)准则[可视化代码](../modeling/visualize-code.md)
+ [第9频道视频：使用层关系图设计和验证体系结构](https://s.ch9.ms/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Using-layer-diagrams-to-design-and-validate-your-architecture)[层关系图：参考](../modeling/layer-diagrams-reference.md)[层关系图：](../modeling/layer-diagrams-guidelines.md) [使用层关系图验证代码的](../modeling/validate-code-with-layer-diagrams.md)准则[可视化代码](../modeling/visualize-code.md)

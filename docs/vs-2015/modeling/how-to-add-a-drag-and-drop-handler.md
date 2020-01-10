@@ -9,12 +9,12 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6ca68005f71d642650a2d9b024a16883de5eaddf
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: f3bbb4500eb4792f77a7011bd95dd06d05d0ff8d
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298932"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850426"
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>如何：添加拖放处理程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -140,7 +140,7 @@ using System.Linq;
 
   - diagramEventArgs.Data.GetDataFormats() – 列出解码拖动对象时可采用的格式。 例如，如果用户从桌面拖动文件，则可用的格式包括文件名（“`FileNameW`”）。
 
-  - `diagramEventArgs.Data.GetData(format)` –以指定格式对拖动的对象进行解码。 将该对象转换为相应的类型。 例如:
+  - `diagramEventArgs.Data.GetData(format)` –以指定格式对拖动的对象进行解码。 将该对象转换为相应的类型。 例如：
 
        `string fileName = diagramEventArgs.Data.GetData("FileNameW") as string;`
 
@@ -170,9 +170,9 @@ using System.Linq;
 
 1. 确保源 DSL 可供 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 模型总线访问：
 
-    1. 如果未安装 Visual Studio 模型总线扩展，请下载并安装它。 有关详细信息，请参阅[可视化和建模 SDK](https://go.microsoft.com/fwlink/?LinkID=185579)。
+    1. 如果未安装 Visual Studio 模型总线扩展，请下载并安装它。 有关详细信息，请参阅[可视化和建模 SDK](https://www.visualstudio.com/)。
 
-    2. 在 DSL 设计器中打开源 DSL 的 DSL 定义文件。 右键单击设计图面，然后单击 "**启用 Modelbus**"。 在该对话框中，选择一个或两个选项。  单击" **确定**"。 新项目“ModelBus”随即添加到 DSL 解决方案中。
+    2. 在 DSL 设计器中打开源 DSL 的 DSL 定义文件。 右键单击设计图面，然后单击**启用 Modelbus**。 在该对话框中，选择一个或两个选项。  单击" **确定**"。 新项目“ModelBus”随即添加到 DSL 解决方案中。
 
     3. 单击 "**转换所有模板**"，然后重新生成解决方案。
 

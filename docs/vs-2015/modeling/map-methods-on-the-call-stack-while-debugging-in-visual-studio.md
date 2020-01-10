@@ -30,12 +30,12 @@ caps.latest.revision: 43
 author: MikeJo5000
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2a2c6e95822794394dbdfc7f53104b31b7c17ea9
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 414022e4e3c058826705845d57de62a9114fc821
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296071"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847522"
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>在 Visual Studio 中调试时映射调用堆栈上的方法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -50,15 +50,15 @@ ms.locfileid: "74296071"
 
 - 可调试的代码，例如 Visual C# .NET、Visual Basic .NET、C++、JavaScript 或 X++
 
-  请参阅：[视频：使用代码图调试器集成进行可视化调试（第9频道）](https://go.microsoft.com/fwlink/?LinkId=293418) •[映射调用堆栈](#MapStack)•[记录有关代码的注释](#MakeNotes)•[使用下一个调用堆栈更新映射](#UpdateMap)•[向地图中添加相关代码](#AddRelatedCode)•[使用 map 查找 bug](#FindBugs) • [Q &](#QA)
+  请参阅：[视频：使用代码图调试器集成进行可视化调试（第9频道）](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012Debug-visually-with-Code-Map-debugger-integration) •[映射调用堆栈](#MapStack)•[记录有关代码的注释](#MakeNotes)•[使用下一个调用堆栈更新映射](#UpdateMap)•[向地图中添加相关代码](#AddRelatedCode)•[使用 map 查找 bug](#FindBugs) • [Q &](#QA)
 
-  有关使用代码图时可以使用的命令和操作的详细信息，请参阅[浏览和重新排列代码图](../modeling/browse-and-rearrange-code-maps.md)。
+  有关命令和使用代码图时，可以使用的操作的详细信息，请参阅[浏览和重新排列代码图](../modeling/browse-and-rearrange-code-maps.md)。
 
 ## <a name="MapStack"></a>映射调用堆栈
 
-1. 开始调试。 （键盘： **F5**）
+1. 开始调试。 (键盘： **F5**)
 
-2. 在应用进入中断模式或单步执行函数后，选择 "**代码图**"。 （键盘： **Ctrl** + **Shift** +  **`** ）
+2. 你的应用进入中断模式或你单步执行函数后，请选择**Code Map**。 (键盘： **Ctrl** + **Shift** +  **`** )
 
      ![选择代码图以开始映射调用堆栈](../debugger/media/debuggermap-choosecodemap.png "DebuggerMap_ChooseCodeMap")
 
@@ -66,7 +66,7 @@ ms.locfileid: "74296071"
 
      ![请参阅代码图上的调用堆栈](../debugger/media/debuggermap-seeundocallstack.png "DebuggerMap_SeeUndoCallStack")
 
-     在你继续调试时，该代码图将自动更新。 请参见[用下一个调用堆栈更新映射](#UpdateMap)。
+     在你继续调试时，该代码图将自动更新。 请参阅[使用下一步的调用堆栈更新图](#UpdateMap)。
 
 ## <a name="MakeNotes"></a>对代码进行标注
  添加注释以跟踪代码发生的情况。 若要在注释中添加新行，请按**Shift + Return**。
@@ -81,7 +81,7 @@ ms.locfileid: "74296071"
 ## <a name="AddRelatedCode"></a>向映射添加相关代码
  现在你已生成一个图，下一步做什么？ 如果你正在使用 Visual C# .NET 或 Visual Basic .NET，请添加诸如字段、属性和其他方法等项，以便跟踪代码发生的情况。
 
- 双击某个方法以查看其代码定义，或者使用该方法的快捷菜单。 （键盘：在地图上选择方法，然后按**F12**）
+ 双击某个方法以查看其代码定义，或者使用该方法的快捷菜单。 (键盘： 选择方法在图上按**F12**)
 
  ![在代码图上中转到方法的代码定义](../debugger/media/debuggermap-gotocodedefinition.png "DebuggerMap_GoToCodeDefinition")
 
@@ -90,7 +90,7 @@ ms.locfileid: "74296071"
  ![在调用堆栈代码图上的方法中显示字段](../debugger/media/debuggermap-showfields.png "DebuggerMap_ShowFields")
 
 > [!NOTE]
-> 默认情况下，向图添加项还会添加父组节点（如类、命名空间和程序集）。 虽然这很有用，但你可以通过在 "地图" 工具栏上使用 "**包括父级**" 按钮关闭此功能，或者在添加项时按**CTRL**来使映射简单。
+> 默认情况下，向图添加项还会添加父组节点（如类、命名空间和程序集）。 尽管这很有用，您可以仅仅保留图通过关闭此功能使用**包括父级**图工具栏上或通过按按钮**CTRL**添加项时。
 
  ![与调用堆栈代码图上的方法相关的字段](../debugger/media/debuggermap-showedfields.png "DebuggerMap_ShowedFields")
 
@@ -119,15 +119,15 @@ ms.locfileid: "74296071"
 
 - **不是所有的调用都出现在地图上。为什么?**
 
-   默认情况下，只有你自己的代码会显示在图中。 若要查看外部代码，请在 "**调用堆栈**" 窗口中将其打开：
+   默认情况下，只有你自己的代码会显示在图中。 若要查看外部代码，将其打开**调用堆栈**窗口：
 
    ![使用 "调用堆栈" 窗口显示外部代码](../debugger/media/debuggermap-callstackmenu.png "DebuggerMap_CallStackMenu")
 
-   或在 Visual Studio 调试选项中关闭 "**启用仅我的代码**：
+   或将其关闭**启用 ' 仅我的代码**在 Visual Studio 调试选项：
 
    ![使用 "选项" 对话框显示外部代码](../debugger/media/debuggermap-debugoptions.png "DebuggerMap_DebugOptions")
 
-- **更改地图是否会影响代码？**
+- **更改图是否会影响代码？**
 
    更改图不会对代码造成任何影响。 你可随意在图上重命名、移动或移除任何内容。
 
@@ -137,29 +137,29 @@ ms.locfileid: "74296071"
 
 - **如何实现控制地图的布局？**
 
-   打开地图工具栏上的 "**布局**" 菜单：
+   打开**布局**图工具栏上的菜单：
 
   - 更改默认布局。
 
-  - 若要停止自动重新排列映射，请关闭 "**调试时自动布局**"。
+  - 若要停止自动重新排列图，关闭**调试时自动布局**。
 
-  - 若要在添加项时尽可能少地重新排列映射，请关闭 "**增量布局**"。
+  - 若要添加项时，重新排列图降至最低，请关闭**增量布局**。
 
-- **能否与他人共享地图？**
+- **可以与他人共享代码图？**
 
    你可以导出映射，将其发送给他人（如果你有 Microsoft Outlook）或保存到你的解决方案中，以便你将其签入 Team Foundation 版本控制。
 
    ![与其他人共享调用堆栈代码图](../debugger/media/debuggermap-sharewithothers.png "DebuggerMap_ShareWithOthers")
 
-- **如何实现阻止地图自动添加新的调用堆栈？**
+- **如何停止自动添加新的调用堆栈中的映射？**
 
-   选择 "在![代码图上自动&#45;显示调用堆栈](../debugger/media/debuggermap-automaticupdateicon.gif "DebuggerMap_AutomaticUpdateIcon")"。 若要手动将当前调用堆栈添加到地图中，请按**Ctrl** + **Shift** +  **`** "。
+   选择![按钮&#45;显示调用自动堆栈代码图上](../debugger/media/debuggermap-automaticupdateicon.gif "DebuggerMap_AutomaticUpdateIcon")图工具栏上。 若要手动添加到映射的当前调用堆栈，请按**Ctrl** + **Shift** +  **`** 。
 
    在你进行调试时，图中将继续突出显示现有调用堆栈。
 
 - **项图标和箭头代表什么？**
 
-   若要获取有关某个项的详细信息，请将鼠标指针移动到它上方，然后查看该项的工具提示。 还可以查看**图例**来了解每个图标的含义。
+   若要获取有关某个项的详细信息，请将鼠标指针移动到它上方，然后查看该项的工具提示。 此外可以查看**图例**若要了解每个图标的含义。
 
    ![调用堆栈代码图上的图标是什么意思？](../debugger/media/debuggermap-showlegend.png "DebuggerMap_ShowLegend")
 

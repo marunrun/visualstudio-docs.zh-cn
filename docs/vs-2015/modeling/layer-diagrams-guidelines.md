@@ -14,17 +14,17 @@ caps.latest.revision: 57
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 51cb71d4bc2f66377b677d5be292c4eafa1dbd18
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 21376668eef88d3d8ce42ff73785b972be045cb2
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299465"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850638"
 ---
-# <a name="layer-diagrams-guidelines"></a>层关系图：指南
+# <a name="layer-diagrams-guidelines"></a>层关系图：准则
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在 Visual Studio 中创建*层关系图*，以较高的层次描述你的应用程序的体系结构。 若要确保你的代码与此设计保持一致，请使用层关系图验证代码。 还可以在生成过程中包括层验证。 请参阅[第9频道视频：使用层关系图设计和验证体系结构](https://go.microsoft.com/fwlink/?LinkID=252073)。
+在 Visual Studio 中创建*层关系图*，以较高的层次描述你的应用程序的体系结构。 若要确保你的代码与此设计保持一致，请使用层关系图验证代码。 还可以在生成过程中包括层验证。 请参阅[第9频道视频：使用层关系图设计和验证体系结构](https://s.ch9.ms/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Using-layer-diagrams-to-design-and-validate-your-architecture)。
 
  若要查看支持此功能的 Visual Studio 的版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
@@ -66,7 +66,7 @@ ms.locfileid: "74299465"
 ## <a name="CreateLayers"></a>定义用于表示功能区域或组件的层
  层表示项目的逻辑组，如*项目、代码*文件、命名空间、类和方法。 可以从 Visual C# .NET 和 Visual Basic .NET 项目创建层，也可以通过链接文档（如 Word 文件或 PowerPoint 演示文稿）将规范或计划附加到层。 每一层显示为关系图上的一个矩形，并显示链接到它的项目数。 一个层可以包含描述更具体任务的嵌套的层。
 
- 一般原则是按其功能命名层，例如“演示文稿”或“服务”。 如果这些项目依赖关系紧密，则将它们放在同一层。 如果可以分别更新或在单独的应用程序中使用这些项目，请将它们放在不同的层中。 若要了解分层模式，请访问[http://go.microsoft.com/fwlink/?LinkId=145794](https://go.microsoft.com/fwlink/?LinkId=145794)的模式 & 实践。
+ 一般原则是按其功能命名层，例如“演示文稿”或“服务”。 如果这些项目依赖关系紧密，则将它们放在同一层。 如果可以分别更新或在单独的应用程序中使用这些项目，请将它们放在不同的层中。 若要了解分层模式，请访问[http://go.microsoft.com/fwlink/?LinkId=145794](https://apparch.codeplex.com/Wiki/View.aspx?title=Application Patterns&referringTitle=Home)的模式 & 实践。
 
 > [!TIP]
 > 有某些类型的可链接到层的项目，但是不支持对层关系图进行验证。 若要查看项目是否支持验证，请打开 "**层资源管理器**" 以查看项目链接的 "**支持验证**" 属性。 请参阅[发现层之间的现有依赖关系](#Generate)。
@@ -115,7 +115,7 @@ ms.locfileid: "74299465"
 ## <a name="NewAreas"></a>设计应用程序的新区域
  当你启动开发新项目或新项目中的新区域时，你可以绘制层和依赖项，以帮助你在开始开发代码之前标识主要组件。
 
-- 如果可能，请在层关系图中**显示可识别的体系结构模式**。 例如，描述桌面应用程序的层关系图可能包括演示文稿、域逻辑和数据存储等层。 涵盖应用程序的单个功能的层关系图，可能有模型、视图和控制器等一些层。 有关此类模式的详细信息，请参阅[模式 & 实践：应用程序体系结构](https://go.microsoft.com/fwlink/?LinkId=145794)。
+- 如果可能，请在层关系图中**显示可识别的体系结构模式**。 例如，描述桌面应用程序的层关系图可能包括演示文稿、域逻辑和数据存储等层。 涵盖应用程序的单个功能的层关系图，可能有模型、视图和控制器等一些层。 有关此类模式的详细信息，请参阅[模式 & 实践：应用程序体系结构](https://apparch.codeplex.com/Wiki/View.aspx?title=Application Patterns&referringTitle=Home)。
 
      如果您要频繁创建相似的模式，请创建一个自定义工具。 请参阅[定义自定义建模工具箱项](../modeling/define-a-custom-modeling-toolbox-item.md)。
 

@@ -18,12 +18,12 @@ caps.latest.revision: 44
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a3d1aab68e3dc9f33e0b3e9f9a5665d59f6f2ddc
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 3589f409efe2a104391eb62f939ef76d140e5224
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299410"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850143"
 ---
 # <a name="bind-wpf-controls-to-a-wcf-data-service"></a>将 WPF 控件绑定到 WCF 数据服务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "74299410"
 
 - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
 
-- 对附加了 AdventureWorksLT 示例数据库的 SQL Server 或 SQL Server Express 的正在运行的实例的访问权限。 可以从[CodePlex](https://go.microsoft.com/fwlink/?linkid=87843)网站下载 AdventureWorksLT 数据库。
+- 对附加了 AdventureWorksLT 示例数据库的 SQL Server 或 SQL Server Express 的正在运行的实例的访问权限。 可以从[CodePlex](https://codeplex.com/SqlServerSamples)网站下载 AdventureWorksLT 数据库。
 
   事先了解以下概念也很有用，但对于完成本演练并不是必需的：
 
@@ -76,7 +76,7 @@ ms.locfileid: "74299410"
 
 4. 选择“ASP.NET Web 应用程序”项目模板。
 
-5. 在 "**名称**" 框中，键入 `AdventureWorksService` 然后单击 **"确定"** 。
+5. 在“名称”框中，键入 `AdventureWorksService`，然后单击“确定”。
 
      Visual Studio 将创建 `AdventureWorksService` 项目。
 
@@ -147,7 +147,7 @@ ms.locfileid: "74299410"
 
 3. 选择“WPF 应用程序”项目模板。
 
-4. 在“名称”框中，键入 **，然后单击“确定”。** `AdventureWorksSalesEditor`
+4. 在“名称”框中，键入 `AdventureWorksSalesEditor`，然后单击“确定”。
 
      Visual Studio 会将 `AdventureWorksSalesEditor` 项目添加到解决方案中。
 
@@ -196,7 +196,7 @@ ms.locfileid: "74299410"
     <Button HorizontalAlignment="Right" Margin="0,21,46,24" Name="saveButton" Width="110">Save changes</Button>
     ```
 
-3. 生成项目。
+3. 生成此项目。
 
 ## <a name="create-the-data-bound-controls"></a>创建数据绑定控件
  通过将 "`SalesOrderHeaders`" 节点从 "**数据源**" 窗口拖到设计器，创建显示客户记录的控件。
@@ -250,22 +250,22 @@ ms.locfileid: "74299410"
      [!code-vb[Data_WPFWCF#2](../snippets/visualbasic/VS_Snippets_ProTools/data_wpfwcf/vb/adventureworkssaleseditor/mainwindow.xaml.vb#2)]
 
 ## <a name="navigatesales-records"></a>Navigatesales 记录
- 添加可让用户通过“ **”和“\<”按钮来滚动销售记录的代码** **>** 。
+ 添加可让用户通过“\<”和“>”按钮来滚动销售记录的代码。
 
 #### <a name="to-enable-users-to-navigate-sales-records"></a>使用户能够导航销售记录
 
-1. 在设计器中，双击窗口窗面上的“ **”按钮<** 。
+1. 在设计器中，双击窗口窗面上的“<”按钮。
 
-     Visual Studio 打开代码隐藏文件，并为 `backButton_Click` 事件创建新的 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件处理程序。
+     Visual Studio 打开代码隐藏文件，并为 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件创建新的 `backButton_Click` 事件处理程序。
 
 2. 将以下代码添加到生成的 `backButton_Click` 事件处理程序中：
 
      [!code-csharp[Data_WPFWCF#3](../snippets/csharp/VS_Snippets_ProTools/data_wpfwcf/cs/adventureworkssaleseditor/mainwindow.xaml.cs#3)]
      [!code-vb[Data_WPFWCF#3](../snippets/visualbasic/VS_Snippets_ProTools/data_wpfwcf/vb/adventureworkssaleseditor/mainwindow.xaml.vb#3)]
 
-3. 返回到设计器，然后双击“ **”按钮>** 。
+3. 返回到设计器，然后双击“>”按钮。
 
-     Visual Studio 打开代码隐藏文件，并为 `nextButton_Click` 事件创建新的 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件处理程序。
+     Visual Studio 打开代码隐藏文件，并为 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件创建新的 `nextButton_Click` 事件处理程序。
 
 4. 将以下代码添加到生成的 `nextButton_Click` 事件处理程序中：
 
@@ -279,7 +279,7 @@ ms.locfileid: "74299410"
 
 1. 在设计器中，双击“保存更改”按钮。
 
-     Visual Studio 打开代码隐藏文件，并为 `saveButton_Click` 事件创建新的 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件处理程序。
+     Visual Studio 打开代码隐藏文件，并为 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件创建新的 `saveButton_Click` 事件处理程序。
 
 2. 将以下代码添加到 `saveButton_Click` 事件处理程序中。
 
@@ -305,7 +305,7 @@ ms.locfileid: "74299410"
 
     - 文本框显示销售订单 ID 为“71774”的第一条销售记录中的数据的不同字段。
 
-    - 可以单击“ **”或“>”按钮来导航其他销售记录** **<** 。
+    - 可以单击“>”或“<”按钮来导航其他销售记录。
 
 5. 在某条销售记录中，在“注释”框中键入一些文本，然后单击“保存更改”。
 

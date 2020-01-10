@@ -17,12 +17,12 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ffb1298981481bde063de898dc81c02dad548888
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: e9fa22a4ed52c3e0a1afdda0105716c0de9b3316
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297830"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851814"
 ---
 # <a name="property-pages-javascript"></a>属性页，JavaScript
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "74297830"
 
  **配置**指定要显示或修改的配置设置。 这些设置包括“调试”（默认）、“版本”、“所有配置”或用户定义的配置。 有关详细信息，请参阅[调试和发布项目配置](https://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e)。
 
- **平台**指定要显示或修改的平台设置。 这些设置包括“任何 CPU”（ **应用的默认值）、“x64”、“ARM”、“x86”或用户定义的平台**[!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)]。 有关详细信息，请参阅[调试和发布项目配置](https://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e)。
+ **平台**指定要显示或修改的平台设置。 这些设置包括“任何 CPU”（[!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] 应用的默认值）、“x64”、“ARM”、“x86”或用户定义的平台。 有关详细信息，请参阅[调试和发布项目配置](https://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e)。
 
 ## <a name="general-page"></a>常规页
  使用以下选项来设置项目的常规属性。
@@ -62,11 +62,11 @@ ms.locfileid: "74297830"
 
  **要启动的调试器**指定调试器的默认主机。
 
-- 选择“本地计算机”可在 Visual Studio 主机计算机上启动应用程序。 有关详细信息，请参阅[在本地计算机上运行应用](https://go.microsoft.com/fwlink/?LinkId=234912)。
+- 选择“本地计算机”可在 Visual Studio 主机计算机上启动应用程序。 有关详细信息，请参阅[在本地计算机上运行应用](https://msdn.microsoft.com/library/windows/apps/hh441483(v=VS.85).aspx)。
 
-- 选择“模拟器”可在模拟器中启动应用程序。 有关详细信息，请参阅[在模拟器中运行应用](https://go.microsoft.com/fwlink/?LinkId=234913)。
+- 选择“模拟器”可在模拟器中启动应用程序。 有关详细信息，请参阅[在模拟器中运行应用](https://msdn.microsoft.com/library/windows/apps/hh441475(v=VS.85).aspx)。
 
-- 选择“远程计算机”可在远程计算机上启动应用程序。 有关远程调试的详细信息，请参阅[在远程计算机上运行应用](https://go.microsoft.com/fwlink/?LinkId=234914)。
+- 选择“远程计算机”可在远程计算机上启动应用程序。 有关远程调试的详细信息，请参阅[在远程计算机上运行应用](https://msdn.microsoft.com/library/windows/apps/hh441469(v=VS.85).aspx)。
 
   **启动应用程序**指定在按 F5 或单击 "**调试**"、"**启动调试**" 时是否启动应用程序。 选择“是”则启动应用程序；否则，请选择“否”。 如果选择“否”，而使用另一种方法来启动，则仍然可以调试应用程序。
 

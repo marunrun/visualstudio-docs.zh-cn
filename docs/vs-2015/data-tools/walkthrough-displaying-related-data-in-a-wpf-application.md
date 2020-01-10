@@ -19,12 +19,12 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 robots: noindex,nofollow
-ms.openlocfilehash: 787be52eeb546d2ab184a172464862d10cb43288
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 8116d4ab4a2f20f79f3849ae7f8b324af9832dd5
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299584"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850243"
 ---
 # <a name="walkthrough-displaying-related-data-in-a-wpf-application"></a>演练：在 WPF 应用程序中显示相关数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "74299584"
 
 - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。
 
-- 对附加了 AdventureWorksLT 示例数据库的 SQL Server 或 SQL Server Express 的正在运行的实例的访问权限。 可以从[CodePlex](https://go.microsoft.com/fwlink/?linkid=87843)网站下载 AdventureWorksLT 数据库。
+- 对附加了 AdventureWorksLT 示例数据库的 SQL Server 或 SQL Server Express 的正在运行的实例的访问权限。 可以从[CodePlex](https://codeplex.com/SqlServerSamples)网站下载 AdventureWorksLT 数据库。
 
   事先了解以下概念也很有用，但对于完成本演练并不是必需的：
 
@@ -108,7 +108,7 @@ ms.locfileid: "74299584"
 
 7. 单击 **“完成”** 。
 
-8. 生成项目。
+8. 生成此项目。
 
 ## <a name="creating-data-bound-controls-that-display-the-orders"></a>创建显示订单的数据绑定控件
  通过将 `SalesOrderHeaders` 实体从 "**数据源**" 窗口拖到 WPF 设计器来创建显示订单记录的控件。
@@ -139,11 +139,11 @@ ms.locfileid: "74299584"
 
    - **CreditCardApprovalCode**
 
-   - **进行**
+   - **SubTotal**
 
    - **TaxAmt**
 
-   - **代理**
+   - **Freight**
 
    - **rowguid**
 

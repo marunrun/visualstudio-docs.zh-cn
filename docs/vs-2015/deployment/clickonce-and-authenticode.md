@@ -19,12 +19,12 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 06edf9954134a6110f9285fc744c87c2696b19d5
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 2e48039a618f7e8eef7f2c6e9f097da87e37d0f5
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298273"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847792"
 ---
 # <a name="clickonce-and-authenticode"></a>ClickOnce 和 Authenticode
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +36,7 @@ Authenticode * 是一种 Microsoft 技术，它使用行业标准加密来签署
 ## <a name="authenticode-and-code-signing"></a>验证码和代码签名  
  *数字证书* 是一个包含一个加密公钥/私钥对和元数据的文件，元数据描述了向其颁发证书的发行者以及颁发证书的机构。  
   
- 有各种类型的验证码证书。 每种验证码证书为不同类型的签名而配置。 对于 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序，必须具有对代码签名有效的验证码证书。 如果尝试使用其他类型证书（如数字电子邮件证书）对 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序进行签名，将不起作用。 有关详细信息，请参阅 [Introduction to Code Signing](https://go.microsoft.com/fwlink/?LinkId=179452)（代码签名简介）。  
+ 有各种类型的验证码证书。 每种验证码证书为不同类型的签名而配置。 对于 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序，必须具有对代码签名有效的验证码证书。 如果尝试使用其他类型证书（如数字电子邮件证书）对 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序进行签名，将不起作用。 有关详细信息，请参阅 [Introduction to Code Signing](https://msdn.microsoft.com/library/ms537361.aspx)（代码签名简介）。  
   
  可以通过以下三种方法之一获取代码签名证书：  
   
@@ -65,7 +65,7 @@ Authenticode * 是一种 Microsoft 技术，它使用行业标准加密来签署
   
 - 卸载该应用程序，并重新安装具有有效证书的新版本。  
   
-- 创建更新证书的命令行程序集。 有关此过程的分步信息可在 [Microsoft 支持文章 925521](https://go.microsoft.com/fwlink/?LinkId=179454)中找到。  
+- 创建更新证书的命令行程序集。 有关此过程的分步信息可在 [Microsoft 支持文章 925521](https://support.microsoft.com/kb/925521)中找到。  
   
 ### <a name="storing-certificates"></a>存储证书  
   

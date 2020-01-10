@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0df5b9c-0932-4e54-86f0-28530ad9d684
 caps.latest.revision: 22
 manager: jillfra
-ms.openlocfilehash: ceb78d3310f37a58850199b11fb2b2fed86f6799
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: fba7f1e0801b6f977d47b13af025538f5d2fe031
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299314"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850979"
 ---
 # <a name="creating-your-own-start-page"></a>创建你自己的起始页
 你可以通过使用“起始页”项目模板或通过创建一个空白“起始页”来创建自定义“起始页”。  
@@ -28,7 +28,7 @@ ms.locfileid: "74299314"
   
 #### <a name="to-create-a-custom-start-page-by-using-the-start-page-project-template"></a>若要通过使用“起始页”项目模板来创建自定义“起始页”  
   
-1. 从 Visual Studio 库下载并安装 [起始页项目模板](https://go.microsoft.com/fwlink/?LinkId=186204) 。  
+1. 从 Visual Studio 库下载并安装 [起始页项目模板](https://visualstudiogallery.msdn.microsoft.com/f655a5dc-1a2d-4eca-b774-76c352c03b87) 。  
   
     > [!WARNING]
     > 此时 Visual Studio 2010 起始页项目模板尚未升级。 有关如何升级此模板的信息，请参阅[如何：升级 Visual Studio 自定义起始页](../misc/how-to-upgrade-a-visual-studio-custom-start-page.md)。  
