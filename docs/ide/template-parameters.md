@@ -7,15 +7,15 @@ helpviewer_keywords:
 - template parameters [Visual Studio]
 - project templates, parameters
 - item templates, parameters
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 445a4fa7847ea5c9a5cb64da09cf54c763e86d16
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 582c87eee2586eab12f70e2d27341987e7cb7e2a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647389"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585881"
 ---
 # <a name="template-parameters"></a>模板参数
 
@@ -23,7 +23,7 @@ ms.locfileid: "72647389"
 
 ## <a name="declare-and-enable-template-parameters"></a>声明和启用模板参数
 
-模板参数以 $参数$ 的格式进行声明  。 例如:
+模板参数以 $参数$ 的格式进行声明  。 例如：
 
 - $safeprojectname$
 
@@ -47,7 +47,7 @@ ms.locfileid: "72647389"
 
 下表列出可供任何模板使用的保留的模板参数：
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |clrversion|公共语言运行时 (CLR) 的当前版本。|
 |ext_*|将 `ext_` 前缀添加到任何参数，以引用父模板的变量。 例如 `ext_safeprojectname`。|

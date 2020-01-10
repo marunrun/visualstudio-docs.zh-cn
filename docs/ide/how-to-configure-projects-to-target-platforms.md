@@ -13,17 +13,17 @@ helpviewer_keywords:
 - CPUs, targeting specific
 - 64-bit applications [Visual Studio]
 ms.assetid: 845302fc-273d-4f81-820a-7296ce91bd76
-author: ghogen
-ms.author: ghogen
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 15799ff8b181ddcfff97f7fb7338897c6f23fee2
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 9ba79bb199bba6c606ac603816cadc2dd2042057
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188949"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595301"
 ---
 # <a name="how-to-configure-projects-to-target-platforms"></a>如何：将项目配置为面向平台
 

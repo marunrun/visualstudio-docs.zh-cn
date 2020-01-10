@@ -13,17 +13,17 @@ helpviewer_keywords:
 - ExcludeDeploymentUrl property
 - project file properties (MSBuild)
 ms.assetid: 9857505d-ae15-42f1-936d-6cd7fb9dd276
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5fa726aa9f2055f7803f066607ee931550bdcafb
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2797e8b51bba0e71db07ec748d7a6813183250fb
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747368"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596185"
 ---
 # <a name="common-msbuild-project-properties"></a>常用的 MSBuild 项目属性
 下表列出了在 Visual Studio 项目文件中定义的或者在 MSBuild 提供的 .targets 文件中包括的经常使用的属性  。
@@ -32,7 +32,7 @@ ms.locfileid: "72747368"
 
 ## <a name="list-of-common-properties-and-parameters"></a>通用属性和参数的列表
 
-| 属性或参数名 | 说明 |
+| 属性或参数名 | 描述 |
 |------------------------------------| - |
 | AdditionalLibPaths | 指定其他文件夹，编译器将在这些文件夹中查找引用程序集。 |
 | AddModules | 使编译器让指定文件中的所有类型信息可供正在编译的项目使用。 此属性等效于 `/addModules` 编译器开关。 |

@@ -11,17 +11,17 @@ helpviewer_keywords:
 - <Property> Element [MSBuild]
 - Property Element [MSBuild]
 ms.assetid: 69ab08ab-3e76-41dd-a01b-49aa1d2e0cac
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a2c011e700eb93293ae5fa0b08db5f486ea85ad5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 99970bfbc955fe972d5e3c9a4e38ae6f57e0e0bf
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63002459"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597420"
 ---
 # <a name="property-element-msbuild"></a>Property 元素 (MSBuild)
 包含用户定义的属性名和值。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目中使用的每一个属性都必须被指定为 `PropertyGroup` 元素的子元素。
@@ -41,7 +41,7 @@ ms.locfileid: "63002459"
 
 ### <a name="attributes"></a>特性
 
-|特性|说明|
+|特性|描述|
 |---------------|-----------------|
 |`Condition`|可选特性。<br /><br /> 要计算的条件。 有关详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。|
 
@@ -50,7 +50,7 @@ ms.locfileid: "63002459"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[PropertyGroup](../msbuild/propertygroup-element-msbuild.md)|对属性进行分组。|
 
@@ -60,7 +60,7 @@ ms.locfileid: "63002459"
  此文本指定属性值，并且可能包含 XML。
 
 ## <a name="remarks"></a>备注
- 属性名称被限制为仅 ASCII 字符。 将属性名放置在“`$(`”和“`)`”之间，从而在项目中引用属性值。 例如，如果 `builddir` 属性具有值 `build`，则 `$(builddir)\classes` 将解析为“build\classes”。 有关属性的详细信息，请参阅 [MSBuild 属性](../msbuild/msbuild-properties.md)。
+ 属性名称被限制为仅 ASCII 字符。 将属性名放置在“`$(`”和“`)`”之间，从而在项目中引用属性值。 例如，如果 `builddir` 属性具有值 `build`，则 `$(builddir)\classes` 将解析为“build\classes”  。 有关属性的详细信息，请参阅 [MSBuild 属性](../msbuild/msbuild-properties.md)。
 
 ## <a name="example"></a>示例
  如果 `Version` 属性为空，那么以下代码会将 `Optimization` 属性设置为 `false`，将 `DefaultVersion` 属性设置为 `1.0`。

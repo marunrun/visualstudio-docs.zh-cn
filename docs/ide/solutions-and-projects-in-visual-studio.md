@@ -15,17 +15,17 @@ f1_keywords:
 helpviewer_keywords:
 - solutions [Visual Studio]
 - projects [Visual Studio]
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ca611d7ae1faa86ae7878b2f824ce27b9872713
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ffa561667ea31f215306c7cac4b9820d7b386b5c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72621587"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590080"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Visual Studio 中的解决方案和项目
 
@@ -53,7 +53,7 @@ Visual Studio 使用 [MSBuild](../msbuild/msbuild.md) 生成解决方案中的�
 
 Visual Studio 采用两种文件类型（.sln 和 .suo）来存储解决方案设置   ：
 
-|扩展名|name|说明|
+|扩展名|“属性”|描述|
 |---------------|----------|-----------------|
 |.sln|Visual Studio 解决方案|将项目、项目项和解决方案项组织到解决方案中。|
 |.suo|解决方案用户选项|存储用户级别设置和自定义项，如断点。|

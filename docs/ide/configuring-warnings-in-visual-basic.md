@@ -7,17 +7,17 @@ helpviewer_keywords:
 - run-time errors, warnings
 - warnings, configuring
 ms.assetid: 99cf4781-bd4d-47b4-91b9-217933509f82
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c71c352040898874cd90a397db6b8c7321ff39d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 67f65ea691a02bac87f75f43e0a9938125bcd959
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652074"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585504"
 ---
 # <a name="configuring-warnings-in-visual-basic"></a>在 Visual Basic 中配置警告
 
@@ -50,7 +50,7 @@ ms.locfileid: "72652074"
 ## <a name="examples"></a>示例
 下表包含命令行参数示例，并对每个参数的作用进行了说明。
 
-|参数|说明|
+|参数|描述|
 |--------------|-----------------|
 |`vbc /warnaserror`|指定应将所有警告都视为错误。|
 |`vbc /warnaserror:42024`|指定应将 42024 警告视为错误。|

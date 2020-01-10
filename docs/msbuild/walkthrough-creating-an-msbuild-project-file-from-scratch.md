@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, tutorial
 ms.assetid: e3acff7c-cb4e-4ae1-8be2-a871bcff847b
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e13399d80e74f41774542da31d0edd8c36a42c7e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 0c7b79347416df5fd0790baf7ebe6495c739f7c4
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748024"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565963"
 ---
 # <a name="walkthrough-create-an-msbuild-project-file-from-scratch"></a>演练：从头开始创建 MSBuild 项目文件
 面向 .NET Framework 的编程语言将使用 MSBuild 项目文件来介绍并控制应用程序生成过程。 使用 Visual Studio 创建 MSBuild 项目文件时，会自动将适当的 XML 添加到该文件。 但是，你可能会发现，了解 XML 的组织方式以及如何能够更改 XML 来控制生成将非常有用。
@@ -400,7 +400,7 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 
 ## <a name="example"></a>示例
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
  下面的示例演示一个项目文件，该项目文件编译 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 应用程序，并记录一条包含输出文件名的消息。
 
 ### <a name="code"></a>代码
@@ -438,7 +438,7 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 
 ## <a name="example"></a>示例
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
  下面的示例演示一个项目文件，该项目文件编译 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 应用程序，并记录一条包含输出文件名的消息。
 
 ### <a name="code"></a>代码

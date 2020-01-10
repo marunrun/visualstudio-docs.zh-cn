@@ -16,17 +16,17 @@ helpviewer_keywords:
 - referencing components, removing references
 - references [Visual Studio], removing
 - referencing components, assemblies not listed
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e302b5c4df73f8fcdadf766a1fe1d8dc0731c261
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: dfad622a7587246836161cd79bb5b759151df1ef
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654827"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595305"
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>如何：使用引用管理器添加或删除引用
 

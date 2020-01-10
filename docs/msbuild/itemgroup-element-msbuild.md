@@ -13,17 +13,17 @@ helpviewer_keywords:
 - ItemGroup element [MSBuild]
 - <ItemGroup> element [MSBuild]
 ms.assetid: aac894e3-a9f1-4bbc-a796-6ef07001f35b
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 64667ef01d1b21cce8303e2f72be3f252ec4245e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 588118bf31c5d310e947b02fda476a63d0d9df7a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63001205"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75573438"
 ---
 # <a name="itemgroup-element-msbuild"></a>ItemGroup 元素 (MSBuild)
 包含一组用户定义的 [Item](../msbuild/item-element-msbuild.md) 元素。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目中使用的每个项都必须指定为 `ItemGroup` 元素的子元素。
@@ -44,19 +44,19 @@ ms.locfileid: "63001205"
 
 ### <a name="attributes"></a>特性
 
-|特性|说明|
+|特性|描述|
 |---------------|-----------------|
 |`Condition`|可选特性。 要计算的条件。 有关详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。|
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[Item](../msbuild/item-element-msbuild.md)|定义生成过程的输入。 `ItemGroup` 中可能没有或有一些 `Item` 元素。|
 
 ### <a name="parent-elements"></a>父元素
 
-| 元素 | 说明 |
+| 元素 | 描述 |
 | - | - |
 | [Project](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目文件必需的根元素。 |
 | [Target](../msbuild/target-element-msbuild.md) | 从 .NET Framework 3.5 开始，`ItemGroup` 元素可以出现在 `Target` 元素内部。 有关详细信息，请参阅[目标](../msbuild/msbuild-targets.md)。 |

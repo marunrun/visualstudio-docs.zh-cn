@@ -13,17 +13,17 @@ helpviewer_keywords:
 - <PropertyGroup> element [MSBuild]
 - PropertyGroup element [MSBuild]
 ms.assetid: ff1e6c68-b9a1-4263-a1ce-dc3b829a64d4
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 607c5f2c3cda64e7407203b0c45287a58342b807
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f7497578b977b66c83a8b5f9f37f03743f864bcd
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62974678"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597368"
 ---
 # <a name="propertygroup-element-msbuild"></a>PropertyGroup 元素 (MSBuild)
 包含一组用户定义的 [Property](../msbuild/property-element-msbuild.md) 元素。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目中使用的每个 `Property` 元素必须是 `PropertyGroup` 元素的子元素。
@@ -44,19 +44,19 @@ ms.locfileid: "62974678"
 
 ### <a name="attributes"></a>特性
 
-|特性|说明|
+|特性|描述|
 |---------------|-----------------|
 |条件|可选特性。<br /><br /> 要计算的条件。 有关详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。|
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[Property](../msbuild/property-element-msbuild.md)|可选元素。<br /><br /> 用户定义的属性名称，其中包含属性值。 `PropertyGroup` 元素中可能有零个或零个以上的 *Property* 元素。|
 
 ### <a name="parent-elements"></a>父元素
 
-| 元素 | 说明 |
+| 元素 | 描述 |
 | - | - |
 | [Project](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目文件必需的根元素。 |
 

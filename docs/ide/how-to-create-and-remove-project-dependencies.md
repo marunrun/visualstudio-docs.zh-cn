@@ -13,17 +13,17 @@ helpviewer_keywords:
 - projects [Visual Studio], dependencies
 ms.assetid: e2a0a8ff-dae7-40a8-b774-b88aa5235183
 ms.technology: vs-ide-compile
-author: ghogen
-ms.author: ghogen
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ce26c74aced2dd979f9f9847d5c56ead30f897ce
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 2c10ea49dfd1398b8271f959cb498c311d98a4ef
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68415606"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595275"
 ---
 # <a name="how-to-create-and-remove-project-dependencies"></a>如何：创建和删除项目依赖项
 

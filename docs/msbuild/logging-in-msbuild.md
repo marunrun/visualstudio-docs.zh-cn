@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - msbuild, logging
 ms.assetid: 9aea2e76-8f60-4234-913d-598e7bbad808
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99bbb6ba880ace8b21ae6b6009ee84cffee79485
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 24a769f6d0b9aa847899c02c951921dc77bac21a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62856040"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592186"
 ---
 # <a name="logging-in-msbuild"></a>MSBuild 中的日志记录
 通过日志记录可监视生成的进度。 日志记录捕获日志文件中的生成事件、消息、警告和错误。

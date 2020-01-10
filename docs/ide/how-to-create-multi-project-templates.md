@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Visual Studio templates, creating multi-project
 - project templates, multi-project
 - multi-project templates
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 8ad04a557ee4b0a359efebfbe7a70d8a85db4551
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6da7464f5e22e186edff7671744c2605bee3c9ad
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655835"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591081"
 ---
 # <a name="how-to-create-multi-project-templates"></a>如何：创建多项目模板
 
@@ -46,14 +46,14 @@ ms.locfileid: "72655835"
 
 多项目模板的根 vstemplate  文件不同于单项目模板，表现在以下方面：
 
-- VSTemplate 元素的 Type 属性有 ProjectGroup 而没有 Project 值     。 例如:
+- VSTemplate 元素的 Type 属性有 ProjectGroup 而没有 Project 值     。 例如：
 
     ```xml
     <VSTemplate Version="2.0.0" Type="ProjectGroup"
         xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
     ```
 
-- TemplateContent 元素包含 ProjectCollection 元素，它有一个或多个 ProjectTemplateLink 元素，这些元素定义了所包含项目的 vstemplate 文件的路径     。 例如:
+- TemplateContent 元素包含 ProjectCollection 元素，它有一个或多个 ProjectTemplateLink 元素，这些元素定义了所包含项目的 vstemplate 文件的路径     。 例如：
 
     ```xml
     <TemplateContent>
@@ -69,7 +69,7 @@ ms.locfileid: "72655835"
     ```
 
 > [!TIP]
-> 如果只需在“新建项目”对话框中显示多项目模板（而不是所包含的各个项目），请将内部模板标记为[隐藏](../extensibility/hidden-element-visual-studio-templates.md)。 例如:
+> 如果只需在“新建项目”对话框中显示多项目模板（而不是所包含的各个项目），请将内部模板标记为[隐藏](../extensibility/hidden-element-visual-studio-templates.md)。 例如：
 >
 > ```xml
 > <VSTemplate Type="Project" ... >
