@@ -22,12 +22,12 @@ caps.latest.revision: 142
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: db7430d03bbce065b75e890736253c6ba05752d0
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 7bc1e36f6d5dea12a8c46e88a3e1f450cc30caa6
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298927"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847208"
 ---
 # <a name="intellitrace"></a>IntelliTrace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "74298927"
   
   可以在 Visual Studio Enterprise 版（但不可在 Professional 或 Community 版）中使用 IntelliTrace。  
   
-## <a name="what-do-you-want-to-do"></a>你希望做什么？  
+## <a name="what-do-you-want-to-do"></a>要执行什么操作Јї  
   
 |||  
 |-|-|  
@@ -128,7 +128,7 @@ ms.locfileid: "74298927"
   
 - **.NET Framework 事件**  
   
-   默认情况下，IntelliTrace 记录最常见的 .NET Framework 事件。 例如:  
+   默认情况下，IntelliTrace 记录最常见的 .NET Framework 事件。 例如：  
   
   - 对于“文件访问”事件，IntelliTrace 将收集文件名。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "74298927"
   
 - **SharePoint 2010 和 SharePoint 2013 应用程序事件**  
   
-   你可以为在 Visual Studio 外运行的 SharePoint 2010 和 2013 应用程序记录用户配置文件事件以及一部分统一日志记录系统 (ULS) 事件。 你可以将这些事件保存到 .iTrace 文件中。 需要 Visual Studio Enterprise 2015、以前版本的 Visual Studio Ultimate 或[Microsoft Monitoring Agent](https://go.microsoft.com/fwlink/?LinkId=320384)在**跟踪**模式下运行。  
+   你可以为在 Visual Studio 外运行的 SharePoint 2010 和 2013 应用程序记录用户配置文件事件以及一部分统一日志记录系统 (ULS) 事件。 你可以将这些事件保存到 .iTrace 文件中。 需要 Visual Studio Enterprise 2015、以前版本的 Visual Studio Ultimate 或[Microsoft Monitoring Agent](https://go.microsoft.com/fwlink/?LinkID=309771)在**跟踪**模式下运行。  
   
    打开 .iTrace 文件时，输入 SharePoint 相关 ID 以查找其匹配的 Web 请求，查看记录事件，并从特定事件开始调试。 如果文件包含未经处理的异常，可以选择相关 ID，开始调试异常。  
   
@@ -186,7 +186,7 @@ ms.locfileid: "74298927"
  [使用保存的 IntelliTrace 数据](../debugger/using-saved-intellitrace-data.md)  
   
 ### <a name="blogs"></a>博客  
- [Visual Studio ALM + Team Foundation Server](https://go.microsoft.com/fwlink/?LinkID=201340)  
+ [Visual Studio ALM + Team Foundation Server](https://blogs.msdn.com/b/visualstudioalm)  
   
 ### <a name="forums"></a>论坛  
- [Visual Studio 诊断](https://go.microsoft.com/fwlink/?LinkId=262263)
+ [Visual Studio 诊断](https://social.msdn.microsoft.com/Forums/vsdebug)

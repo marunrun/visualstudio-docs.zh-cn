@@ -14,17 +14,17 @@ ms.assetid: c64a9bf0-9bf8-45c3-8fa2-306fa6cab66a
 caps.latest.revision: 26
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 0db0ab2c2a97f7cedde5b9b3a5ab925467a25146
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: aa346ebfe321e4672ea3fa71a4dcc872ebf22cda
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300478"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850234"
 ---
 # <a name="shell-isolated-or-integrated"></a>Shell（独立或集成）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-可以在集成模式或隔离模式下创建自己的基于 Visual Studio 的应用程序。 在集成模式下，除应用程序外，还提供许多 Visual Studio 功能。 在隔离模式下，你可以选择想要随自己的扩展一起分发的 Visual Studio 功能的子集。  
+可以在集成模式或隔离模式下创建自己的基于 Visual Studio 的应用程序。 在集成模式中，您除了可以创建应用程序之外，还可以使用许多 Visual Studio 功能。 在独立模式中，您可以选择要与您自己的扩展一起分发的 Visual Studio 功能子集。  
   
 ## <a name="integrated-mode"></a>集成模式  
  集成模式使用户能够将标准 Visual Studio 功能与自定义工具一起使用。 集成外壳主要用于托管编程语言和软件开发工具。  
@@ -55,7 +55,7 @@ ms.locfileid: "74300478"
 > - 你自己的 EULA，要求你的客户同意保护 Visual Studio 集成或隔离 shell 的条款至少与 shell 软件的 Microsoft 最终用户许可条款相同  
   
 ## <a name="additional-resources"></a>其他资源  
- 有关可再发行组件包的详细信息，请参阅[Visual Studio 扩展性下载](https://go.microsoft.com/fwlink/?LinkID=119298)网站。  
+ 有关可再发行组件包的详细信息，请参阅[Visual Studio 扩展性下载](https://msdn.microsoft.com/vstudio/bb984878.aspx)网站。  
   
 ## <a name="see-also"></a>请参阅  
  [传送 Visual Studio 扩展](../extensibility/shipping-visual-studio-extensions.md)

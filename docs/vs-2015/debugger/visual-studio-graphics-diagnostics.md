@@ -11,12 +11,12 @@ caps.latest.revision: 42
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 29ca6b2110038a427c76622d50f769321cda9ff9
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: ca0a1613f46f8542a3ede4ce2053b3584824590e
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296917"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847831"
 ---
 # <a name="visual-studio-graphics-diagnostics"></a>Visual Studio 图形诊断
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,7 +40,7 @@ Visual Studio*图形诊断*是一组用于记录和分析 Direct3D 应用中的�
  [入门](../debugger/getting-started-with-visual-studio-graphics-diagnostics.md)  
  在该部分中，你会了解到如何安装 Visual Studio 图形诊断以及如何在你的 Direct3D 应用上使用图形诊断。  
   
- [捕获图形信息](../debugger/capturing-graphics-information.md)  
+ [Capturing Graphics Information](../debugger/capturing-graphics-information.md)  
  若要使用图形诊断检查应用中的呈现问题，请先记录有关应用如何使用 DirectX 的信息。 在录制会话期间，由于应用正常运行，可以“捕获”（即选择）感兴趣的帧。 包含有关如何呈现帧的详细信息的捕获。 你可以将捕获的信息另存为图形日志文档，以在稍后进行检查或与团队中的其他成员进行共享。  
   
  [GPU 使用情况](../debugger/gpu-usage.md)  
@@ -81,7 +81,7 @@ Visual Studio*图形诊断*是一组用于记录和分析 Direct3D 应用中的�
   
 ## <a name="related-sections"></a>相关章节  
   
-|标题|描述|  
+|职务|描述|  
 |-----------|-----------------|  
 |[在 Visual Studio 中进行调试](../debugger/debugging-in-visual-studio.md)|介绍 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的调试功能。|  
-|[DirectX 图形和游戏](https://go.microsoft.com/fwlink/?LinkId=256498)|提供讨论 DirectX 图形技术的文章。|
+|[DirectX 图形和游戏](https://msdn.microsoft.com/library/ee663274(v=vs.85).aspx)|提供讨论 DirectX 图形技术的文章。|

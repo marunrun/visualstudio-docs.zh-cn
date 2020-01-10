@@ -16,12 +16,12 @@ caps.latest.revision: 44
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bdb6620f8d73bf7fae7b7dbb1b92af38e71345b6
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: b680c2e27b871e654618b4c0ada0904744751282
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295677"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850474"
 ---
 # <a name="define-a-profile-to-extend-uml"></a>定义用于扩展 UML 的配置文件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "74295677"
 
  多个配置文件与受支持版本的 Visual Studio 一起安装。 若要查看支持此功能的 Visual Studio 的版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。 有关这些配置文件以及如何应用构造型的详细信息，请参阅[使用配置文件和构造型自定义模型](../modeling/customize-your-model-with-profiles-and-stereotypes.md)。
 
- 你可以定义自己的配置文件，以采用 UML 并将其扩展到自己的业务范围或体系结构。 例如:
+ 你可以定义自己的配置文件，以采用 UML 并将其扩展到自己的业务范围或体系结构。 例如：
 
 - 如果需要经常定义网站，则可以定义自己的配置文件，其中提供可应用到类图中的类的 «网页» 构造型。 然后可以使用类图规划网站。 每个 «网页» 类都会具有页面内容、样式等的额外属性。
 
@@ -76,7 +76,7 @@ ms.locfileid: "74295677"
 6. 将扩展文件发送给 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的其他用户，以将该文件安装到他们的计算机上。
 
 ## <a name="AddProfile"></a>如何将配置文件添加到 Visual Studio 扩展
- 要安装某个配置文件并允许你将其发送给其他用户，必须将该配置文件添加到 Visual Studio 扩展中。 有关详细信息，请参阅[部署 Visual Studio 扩展](https://go.microsoft.com/fwlink/?LinkId=160780)。
+ 要安装某个配置文件并允许你将其发送给其他用户，必须将该配置文件添加到 Visual Studio 扩展中。 有关详细信息，请参阅[部署 Visual Studio 扩展](https://msdn.microsoft.com/library/dd393694(VS.100).aspx)。
 
 #### <a name="to-define-a-profile-in-a-new-visual-studio-extension"></a>在新 Visual Studio 扩展中定义配置文件
 
@@ -105,7 +105,7 @@ ms.locfileid: "74295677"
 
 5. 在 "**资产**" 页上，添加描述该配置文件的行：
 
-   - 单击 **“新建”** 。 按如下所示设置 "**添加新资产**" 对话框中的字段。
+   - 单击“新建”。 按如下所示设置 "**添加新资产**" 对话框中的字段。
 
    - 将**类型**设置为 `Microsoft.VisualStudio.UmlProfile`
 
@@ -113,7 +113,7 @@ ms.locfileid: "74295677"
 
    - 单击 "**文件系统" 上**的 "文件" 并选择配置文件的名称，例如 `MyProfile.profile`
 
-6. 生成项目。
+6. 生成此项目。
 
 7. **若要调试该配置文件**，请按 F5。
 
@@ -196,7 +196,7 @@ ms.locfileid: "74295677"
     > [!NOTE]
     > 如果要使用 Visual Studio 扩展项目生成扩展，请使用解决方案资源管理器向该项目添加一个新文件夹。
 
-3. 将新目录的名称更改为本地化区域性所对应的 ISO 短代码，例如保加利亚语对应 `bg`，法语对应 `fr`。 应使用非特定区域性代码（通常为两个字母），而不应使用特定区域性代码（例如 `fr-CA`）。 有关区域性代码的详细信息，请参阅[cultureinfo.getcultures 方法](https://go.microsoft.com/fwlink/?LinkId=160782)，它提供了区域性代码的完整列表。
+3. 将新目录的名称更改为本地化区域性所对应的 ISO 短代码，例如保加利亚语对应 `bg`，法语对应 `fr`。 应使用非特定区域性代码（通常为两个字母），而不应使用特定区域性代码（例如 `fr-CA`）。 有关区域性代码的详细信息，请参阅[cultureinfo.getcultures 方法](https://msdn.microsoft.com/library/system.globalization.cultureinfo.getcultures(VS.100).aspx)，它提供了区域性代码的完整列表。
 
 4. 将默认配置文件的副本添加到新目录中。 请不要更改其文件名。
 
@@ -220,9 +220,9 @@ ms.locfileid: "74295677"
 7. 通过生成扩展项目或压缩所有文件生成 Visual Studio 扩展，如前面的章节中所述。
 
 ## <a name="Schema"></a>配置文件的结构
- UML 配置文件的 XSD 文件可在以下示例中找到：[设置构造型和配置文件 xsd](https://go.microsoft.com/fwlink/?LinkID=213811)。 为帮助编辑配置文件，请在以下位置安装 `.xsd` 文件：
+ UML 配置文件的 XSD 文件可在以下示例中找到：[设置构造型和配置文件 xsd](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)。 为帮助编辑配置文件，请在以下位置安装 `.xsd` 文件：
 
- **%ProgramFiles%\Microsoft Visual Studio [version] \Xml\Schemas**
+ **%ProgramFiles%\Microsoft Visual Studio [version]\Xml\Schemas**
 
  本节使用 C# 配置文件作为示例。 完整的配置文件定义位于：
 
@@ -338,7 +338,7 @@ ms.locfileid: "74295677"
 ## <a name="Elements"></a>模型元素类型
  可以为其定义构造型的类型集在 " [UML 模型元素类型](../modeling/uml-model-element-types.md)" 中列出。
 
-## <a name="troubleshooting"></a>疑难解答
+## <a name="troubleshooting"></a>故障排除
  我的构造型不显示我的 UML 模型。
 必须在包或模型中选择配置文件。 然后，构造型将在包或模型内部的元素上显示。 有关详细信息，请参阅[将构造型添加到 UML 模型元素](../modeling/add-stereotypes-to-uml-model-elements.md)。
 
@@ -365,4 +365,4 @@ ms.locfileid: "74295677"
 6. 重新启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。
 
 ## <a name="see-also"></a>请参阅
- [向 uml 模型元素添加构造型](../modeling/add-stereotypes-to-uml-model-elements.md)[使用配置文件和构造型构造模型](../modeling/customize-your-model-with-profiles-and-stereotypes.md)[标准构造型 uml 模型的标准构造型](../modeling/standard-stereotypes-for-uml-models.md)[示例：按构造型的 uml 元素](https://go.microsoft.com/fwlink/?LinkID=213841)示例：[设置构造型，配置文件 XSD](https://go.microsoft.com/fwlink/?LinkID=213811)
+ [向 uml 模型元素添加构造型](../modeling/add-stereotypes-to-uml-model-elements.md)[使用配置文件和构造型构造模型](../modeling/customize-your-model-with-profiles-and-stereotypes.md)[标准构造型 uml 模型的标准构造型](../modeling/standard-stereotypes-for-uml-models.md)[示例：按构造型的 uml 元素](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)示例：[设置构造型，配置文件 XSD](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)

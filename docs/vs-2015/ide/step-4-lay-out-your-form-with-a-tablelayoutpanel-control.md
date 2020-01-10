@@ -9,19 +9,19 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 54e4713abef096d5a23cf1ebf74a9d90db0d6409
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: f61a308fcd68b03852176087438c22c245078693
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295731"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851537"
 ---
 # <a name="step-4-lay-out-your-form-with-a-tablelayoutpanel-control"></a>步骤 4：使用 TableLayoutPanel 控件设置窗体布局
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 在此步骤中，向窗体添加一个 `TableLayoutPanel` 控件。 TableLayoutPanel 可帮助在窗体中正确地对齐您稍后将添加的控件。
 
- ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[教程1：在 Visual Basic 中创建图片查看器-视频 2](https://go.microsoft.com/fwlink/?LinkId=205211)或[教程1：在视频2中C#创建图片查看器](https://go.microsoft.com/fwlink/?LinkId=205200)。 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
+ ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[教程1：在 Visual Basic 中创建图片查看器-视频 2](https://msdn.microsoft.com/vbasic/gg315945.aspx)或[教程1：在视频2中C#创建图片查看器](https://msdn.microsoft.com/vcsharp/gg278410.aspx)。 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
 
 ### <a name="to-lay-out-your-form-with-a-tablelayoutpanel-control"></a>使用 TableLayoutPanel 控件设置窗体布局
 
@@ -69,7 +69,7 @@ ms.locfileid: "74295731"
 
      ![TableLayoutPanel 任务](../ide/media/express-tablepanel.png "Express_TablePanel")TableLayoutPanel 任务
 
-10. 选择“编辑行和列”任务，显示“列和行样式”窗口。 选择“Column1”，确保选中“百分比”按钮并在“百分比”框中输入 **，以将此控件的大小设置为 15%** `15`。 （这是一个 `NumericUpDown` 的控件，将在后面的教程中使用。）选择**Column2**并将其设置为85%。 先不要选择“确定”按钮，因为这将关闭此窗口。 （但如果这样做，你可以使用任务列表重新打开它。）
+10. 选择“编辑行和列”任务，显示“列和行样式”窗口。 选择“Column1”，确保选中“百分比”按钮并在“百分比”框中输入 `15`，以将此控件的大小设置为 15%。 （这是一个 `NumericUpDown` 的控件，将在后面的教程中使用。）选择**Column2**并将其设置为85%。 先不要选择“确定”按钮，因为这将关闭此窗口。 （但如果这样做，你可以使用任务列表重新打开它。）
 
      ![TableLayoutPanel 列和行样式](../ide/media/vs-tablelayoutpanel-setup.png "VS_TableLayoutPanel_Setup")TableLayoutPanel 列和行样式
 

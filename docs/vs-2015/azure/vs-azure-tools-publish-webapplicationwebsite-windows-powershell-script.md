@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 6c9c2e281ace3b483d1f37552fba0cc6f490978a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: cd26e3d37779337ee39a1afa68aa3ba9ab56d376
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298132"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846547"
 ---
 # <a name="publish-webapplicationwebsite-windows-powershell-script"></a>Publish-WebApplicationWebSite（Windows PowerShell 脚本）
 ## <a name="syntax"></a>语法
@@ -39,10 +39,10 @@ Publish-WebApplicationWebSite
 | --- | --- |
 | 别名 |无 |
 | 是否必需？ |true |
-| 位置 |指定 |
+| 位置 |named |
 | 默认值 |无 |
-| 接受管道输入？ |False |
-| 接受通配符？ |False |
+| 接受管道输入？ |false |
+| 接受通配符？ |false |
 
 ## <a name="subscriptionname"></a>SubscriptionName
 要在其中创建网站的 Azure 订阅的名称。
@@ -50,23 +50,23 @@ Publish-WebApplicationWebSite
 | 参数 | 默认值 |
 | --- | --- |
 | 别名 |无 |
-| 是否必需？ |False |
-| 位置 |指定 |
+| 是否必需？ |false |
+| 位置 |named |
 | 默认值 |无 |
-| 接受管道输入？ |False |
-| 接受通配符？ |False |
+| 接受管道输入？ |false |
+| 接受通配符？ |false |
 
 ## <a name="webdeploypackage"></a>WebDeployPackage
-要发布到网站的 Web 部署包的路径。 可以在 Visual Studio 中使用“发布 Web”向导来创建此包。 有关详细信息，请参阅 [Azure 云服务和 ASP.NET 入门](https://go.microsoft.com/fwlink/p/?LinkID=623089)。
+要发布到网站的 Web 部署包的路径。 可以在 Visual Studio 中使用“发布 Web”向导来创建此包。 有关详细信息，请参阅 [Azure 云服务和 ASP.NET 入门](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-publish-webapplicationwebsite-windows-powershell-script?view=vs-2019)。
 
 | 参数 | 默认值 |
 | --- | --- |
 | 别名 |无 |
-| 是否必需？ |False |
-| 位置 |指定 |
+| 是否必需？ |false |
+| 位置 |named |
 | 默认值 |无 |
-| 接受管道输入？ |False |
-| 接受通配符？ |False |
+| 接受管道输入？ |false |
+| 接受通配符？ |false |
 
 ## <a name="databaseserverpassword"></a>DatabaseServerPassword
 Azure 中的 SQL 数据库的用户名和密码。
@@ -74,11 +74,11 @@ Azure 中的 SQL 数据库的用户名和密码。
 | 参数 | 默认值 |
 | --- | --- |
 | 别名 |无 |
-| 是否必需？ |False |
-| 位置 |指定 |
+| 是否必需？ |false |
+| 位置 |named |
 | 默认值 |无 |
-| 接受管道输入？ |False |
-| 接受通配符？ |False |
+| 接受管道输入？ |false |
+| 接受通配符？ |false |
 
 ## <a name="sendhostmessagestooutput"></a>SendHostMessagesToOutput
 如果为 true，则将来自脚本的消息打印到输出流。
@@ -86,11 +86,11 @@ Azure 中的 SQL 数据库的用户名和密码。
 | 参数 | 默认值 |
 | --- | --- |
 | 别名 |无 |
-| 是否必需？ |False |
-| 位置 |指定 |
-| 默认值 |False |
-| 接受管道输入？ |False |
-| 接受通配符？ |False |
+| 是否必需？ |false |
+| 位置 |named |
+| 默认值 |false |
+| 接受管道输入？ |false |
+| 接受通配符？ |false |
 
 ## <a name="remarks"></a>备注
 有关如何使用脚本创建开发和测试环境的完整说明，请参阅[使用 Windows PowerShell 脚本发布到开发和测试环境](vs-azure-tools-publishing-using-powershell-scripts.md)。
@@ -121,7 +121,7 @@ JSON 配置文件指定要部署的内容的详细信息。 它包括当创建�
 }
 ```
 
-可以编辑 JSON 配置文件以更改部署的内容。 网站部分是必需的，但数据库部分则是可选的。
+可以编辑 JSON 配置文件以更改部署的内容。 webSite 节是必需的，但 database 节是可选的。
 
 ## <a name="next-steps"></a>后续步骤
 有关详细信息，请参阅[Publish-WebApplicationVM（Windows PowerShell 脚本）](vs-azure-tools-publish-webapplicationvm.md)

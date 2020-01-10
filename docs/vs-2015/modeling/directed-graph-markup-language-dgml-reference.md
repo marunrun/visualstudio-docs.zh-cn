@@ -9,12 +9,12 @@ caps.latest.revision: 10
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 16a51c7fc05d51b551884f70dc514e8939962818
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: c676c57d6e6e6008611133235df8d525752f16b5
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296039"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849505"
 ---
 # <a name="directed-graph-markup-language-dgml-reference"></a>定向图形标记语言 (DGML) 引用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "74296039"
  请注意，某些版本的 Visual Studio 仅支持 DGML 功能的一个子集，请参阅[体系结构和建模工具的版本支持](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
 > [!NOTE]
-> 在编辑 .dgml 文件时，IntelliSense 可帮助您标识对每个元素及其值可用的特性。 若要指定特性中的颜色，请使用常用颜色的名称，如“Blue”或 ARGB 十六进制值（如“#ffa0b1c3”）。 DGML 使用一小部分 Windows Presentation Foundation (WPF) 颜色定义格式。 有关详细信息，请参阅[Colors 类](https://go.microsoft.com/fwlink/?LinkId=182345)。
+> 在编辑 .dgml 文件时，IntelliSense 可帮助您标识对每个元素及其值可用的特性。 若要指定特性中的颜色，请使用常用颜色的名称，如“Blue”或 ARGB 十六进制值（如“#ffa0b1c3”）。 DGML 使用一小部分 Windows Presentation Foundation (WPF) 颜色定义格式。 有关详细信息，请参阅[Colors 类](https://msdn.microsoft.com/library/system.windows.media.colors.aspx)。
 
 ## <a name="DGML"></a>DGML 语法
  下表描述在 DGML 中使用的各种元素：
@@ -45,7 +45,7 @@ ms.locfileid: "74296039"
 
    `NeighborhoodDistance`-当映射设置为树布局或快速群集布局时，仅显示与所选节点相距指定数目（1-7）的链接。 请参阅[更改地图布局](../modeling/browse-and-rearrange-code-maps.md#Selecting)。
 
-   例如：
+   示例：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -72,7 +72,7 @@ ms.locfileid: "74296039"
   > [!NOTE]
   > 在 `<Link/>` 元素中引用未定义的节点时，代码图会自动创建 `<Node/>` 元素。
 
-   例如：
+   示例：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -110,7 +110,7 @@ ms.locfileid: "74296039"
 
    `Reference` - 将此特性设置为链接到文档或 URL。 请参阅[将文档或 Url 链接到代码元素和链接](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AddReferences)。
 
-   例如：
+   示例：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -135,7 +135,7 @@ ms.locfileid: "74296039"
 
    此元素包含 `<Link>` 元素的列表，这些元素可定义两个节点之间的链接。 有关更多信息，请参见 `<Link/>` 元素。
 
-   例如：
+   示例：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -169,7 +169,7 @@ ms.locfileid: "74296039"
 
    `Property`-属性的名称，该属性标识具有相同属性值的元素。 有关更多信息，请参见 `<Property/>` 元素。
 
-   例如：
+   示例：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -193,7 +193,7 @@ ms.locfileid: "74296039"
 
    此元素包含 `<Category/>` 元素的列表。 有关更多信息，请参见 `<Category/>` 元素。
 
-   例如：
+   示例：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -222,7 +222,7 @@ ms.locfileid: "74296039"
 
    类别还提供一些基本模板行为，这些行为用于控制节点和链接在代码图上显示的外观。 请参阅 [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)。
 
-   例如：
+   示例：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -250,7 +250,7 @@ ms.locfileid: "74296039"
 
    此元素包含 `<Property/>` 元素的列表。 有关更多信息，请参见 `<Property/>` 元素。
 
-   例如：
+   示例：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -275,7 +275,7 @@ ms.locfileid: "74296039"
 
     请参阅向[代码元素和链接分配类别](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AssignCategories)。
 
-    例如：
+    示例：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>

@@ -13,12 +13,12 @@ ms.assetid: 9c399598-b9fa-4da7-84b5-defbf82e9335
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 9b1fd98b3812fbeca2597534a7177ba2f81ab138
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 3185b70f74478a9a55c4fb918c1535c86d154c76
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301238"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846371"
 ---
 # <a name="the-structure-of-the-content_typesxml-file"></a>[Content_types].xml 文件的结构
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "74301238"
 包含有关 VSIX 包中的内容种类的信息。 Visual Studio 使用 [Content_Types] .xml 文件来安装包，但不会安装文件本身。  
   
 > [!NOTE]
-> 尽管本主题仅适用于 VSIX 包中使用的 [Content_Type] .xml 文件，但 [Content_Types] .xml 文件类型是*开放打包约定（OPC）* 标准的一部分。 有关详细信息，请参阅 MSDN 网站上的[OPC：用于打包数据的新标准](https://go.microsoft.com/fwlink/?LinkID=148207)。  
+> 尽管本主题仅适用于 VSIX 包中使用的 [Content_Type] .xml 文件，但 [Content_Types] .xml 文件类型是*开放打包约定（OPC）* 标准的一部分。 有关详细信息，请参阅 MSDN 网站上的[OPC：用于打包数据的新标准](https://msdn.microsoft.com/magazine/cc163372.aspx)。  
   
-## <a name="attributes-and-elements"></a>特性和元素  
+## <a name="attributes-and-elements"></a>属性和元素  
  以下各节描述了 root 元素及其属性和子元素。  
   
 ### <a name="root-element"></a>根元素  
@@ -45,7 +45,7 @@ ms.locfileid: "74301238"
   
 ### <a name="attribute-name-attribute"></a>{Attribute name}Attribute  
   
-|                           “值”                           |                描述                |
+|                           {2&gt;值&lt;2}                           |                描述                |
 |-----------------------------------------------------------|-------------------------------------------|
 | http://schemas.openformats.org/package/2006/content-types | 内容类型架构的位置。 |
   
@@ -68,7 +68,7 @@ ms.locfileid: "74301238"
   
 |扩展名|ContentType|  
 |---------------|-----------------|  
-|文本文件|text/plain|  
+|txt|text/plain|  
 |.pkgdef|text/plain|  
 |xml|text/xml|  
 |vsixmanifest|text/xml|  
@@ -104,4 +104,4 @@ ms.locfileid: "74301238"
 ## <a name="see-also"></a>请参阅  
  [VSIX 包的剖析](../extensibility/anatomy-of-a-vsix-package.md)   
  [VSIX 扩展架构1.0 引用](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)   
- [OPC：用于打包数据的新标准](https://go.microsoft.com/fwlink/?LinkID=148207)
+ [OPC：用于打包数据的新标准](https://msdn.microsoft.com/magazine/cc163372.aspx)

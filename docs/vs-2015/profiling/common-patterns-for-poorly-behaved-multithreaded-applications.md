@@ -13,12 +13,12 @@ caps.latest.revision: 17
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b103c2611216a5024d600aafba212919592ff3b3
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 414b5ea6a6cf6bf0277ad8d2df51b20c39f558e1
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300668"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852168"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>性能不佳的多线程应用程序的常见模式
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "74300668"
   
  如下图所示，并发可视化工具还可在 CPU 使用率视图中公开此症状，其中，尽管存在多个线程，但该应用程序只使用一个逻辑核心。  
   
- 有关详细信息，请参阅 MSDN 博客网站上 Hazim Shafi 的 [Windows 的并行性能工具](https://go.microsoft.com/fwlink/?LinkID=160569)博客中的“性能模式 1：识别锁争用”。  
+ 有关详细信息，请参阅 MSDN 博客网站上 Hazim Shafi 的 [Windows 的并行性能工具](https://blogs.msdn.com/hshafi)博客中的“性能模式 1：识别锁争用”。  
   
  ![锁争用](../profiling/media/lockcontention-2.png "LockContention_2")  
   
@@ -67,4 +67,4 @@ ms.locfileid: "74300668"
  当应用程序要求以先到先得的顺序锁定和锁定处的到达率高于获取率时将发生锁保护。 这两个条件的组合会导致要求锁开始进行备份。 解决此问题的一种方法是使用“不公平”锁或使用授予第一个线程访问权限的锁，以在未锁定状态中找到查找它们。 上图显示了此保护行为。 若要解决此问题，请尝试减少同步对象的争用并尝试使用不公平锁。  
   
 ## <a name="see-also"></a>请参阅  
- [“线程”视图](../profiling/threads-view-parallel-performance.md)
+ [线程视图](../profiling/threads-view-parallel-performance.md)

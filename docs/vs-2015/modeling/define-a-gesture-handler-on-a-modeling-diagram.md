@@ -12,21 +12,21 @@ caps.latest.revision: 36
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bf749d1073faf4cf22febafce716af36b47c6484
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 67946ffb674a7f4a2346229b958ba8316d6ff919
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299308"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850492"
 ---
 # <a name="define-a-gesture-handler-on-a-modeling-diagram"></a>在建模图上定义笔势处理程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在 Visual Studio 中，可以定义当用户双击项或将项拖动到 UML 关系图上时将执行的命令。 可以将这些扩展打包到 Visual Studio 集成扩展 ([VSIX](https://go.microsoft.com/fwlink/?LinkId=160780)) 中，并将其分发给其他 Visual Studio 用户。
+在 Visual Studio 中，可以定义当用户双击项或将项拖动到 UML 关系图上时将执行的命令。 可以将这些扩展打包到 Visual Studio 集成扩展 ([VSIX](https://msdn.microsoft.com/library/dd393694(VS.100).aspx)) 中，并将其分发给其他 Visual Studio 用户。
 
  如果已存在针对要拖动的关系图类型和元素类型的内置行为，则可能无法添加或重写此行为。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
  请参阅 [要求](../modeling/extend-uml-models-and-diagrams.md#Requirements)。
 
  若要查看支持此功能的 Visual Studio 的版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
@@ -210,7 +210,7 @@ ms.locfileid: "74299308"
 
     1. 在“解决方案资源管理器”中，在该解决方案的快捷菜单上依次选择“添加”、“新建项目”。
 
-    2. 在“已安装的模板”下，展开“Visual C#” 或“Visual Basic”，然后选择“扩展性”。 在中间栏中，选择“VSIX 项目”。
+    2. 在 **“已安装的模板”** 下，展开 **“Visual C#”** 或 **“Visual Basic”** ，然后选择 **“扩展性”** 。 在中间栏中，选择“VSIX 项目”。
 
 3. 将 VSIX 项目设置为解决方案的启动项目。
 
@@ -243,7 +243,7 @@ ms.locfileid: "74299308"
 
    - 如果你有多个项目，请确保将 VSIX 项目设置为解决方案的启动项目。
 
-   - 在“解决方案资源管理器”中，在“启动”或“仅项目”的快捷菜单上选择“属性”。 在项目属性编辑器中，选择 "**调试**" 选项卡。请确保 "**启动外部程序**" 字段中的字符串是 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的完整路径名，通常为：
+   - 在“解决方案资源管理器”中，在启动或唯一项目的快捷菜单上选择“属性”。 在项目属性编辑器中，选择 "**调试**" 选项卡。请确保 "**启动外部程序**" 字段中的字符串是 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的完整路径名，通常为：
 
         `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
@@ -379,7 +379,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>) {...}
 
    在极少数情况下，有错误的扩展无法加载并在错误窗口中创建报告，但不显示在扩展管理器中。 在这种情况下，可以通过从以下位置删除文件来删除扩展：
 
-   *% LocalAppData%* **\Local\Microsoft\VisualStudio\\[version] \Extensions**
+   *%LocalAppData%* **\Local\Microsoft\VisualStudio\\[version]\Extensions**
 
 ## <a name="DragExample"></a> 示例
  下面的示例演示如何在序列图中基于从组件图中拖动的组件的部件和端口来创建生命线。

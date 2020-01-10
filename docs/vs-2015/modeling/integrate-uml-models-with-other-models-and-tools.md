@@ -11,12 +11,12 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: caecb85392170559a860a7dc334570880d6e76f1
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 87d7742c988e0193c8175621a08478b6225c8670
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301471"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850647"
 ---
 # <a name="integrate-uml-models-with-other-models-and-tools"></a>将 UML 模型与其他模型和工具集成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,17 +40,17 @@ UML 模型可与其他模型和特定于域的语言集成。
 
    有关详细信息，请参阅[定义用于扩展 UML 的配置文件](../modeling/define-a-profile-to-extend-uml.md)。
 
-   有关将配置文件与菜单命令和笔势处理程序一起部署的示例项目，请参阅[示例： UML 配置文件](https://go.microsoft.com/fwlink/?LinkID=213811)。
+   有关将配置文件与菜单命令和笔势处理程序一起部署的示例项目，请参阅[示例： UML 配置文件](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)。
 
 - **参考.** 你可以将一组字符串附加到任何 UML 元素。 你可以编写用于存储信息的代码，如另一个元素的文件名或 GUID。 无需提供其他定义就可完成此操作。 引用并不直接对用户可见。
 
-   有关详细信息，请参阅[将引用字符串附加到 UML 模型元素](../modeling/attach-reference-strings-to-uml-model-elements.md)。 有关示例，请参阅[将 UML 元素链接到关系图或其他文件](https://go.microsoft.com/fwlink/?LinkId=213813)。
+   有关详细信息，请参阅[将引用字符串附加到 UML 模型元素](../modeling/attach-reference-strings-to-uml-model-elements.md)。 有关示例，请参阅[将 UML 元素链接到关系图或其他文件](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)。
 
   有两种方法可以对模型元素的引用进行编码：
 
 - 目标模型元素的**GUID 和文件名**以及包含它的模型或显示该元素的特定关系图。
 
-   有关示例，请参阅[将 UML 元素链接到关系图或其他文件](https://go.microsoft.com/fwlink/?LinkId=213813)。
+   有关示例，请参阅[将 UML 元素链接到关系图或其他文件](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)。
 
 - **ModelBus 引用。** ModelBus 是用于创建和解析模型之间的引用的框架。 它包括 ModelBus 选取器，允许用户选择某一模型中的元素。 它还帮助用户解决由于目标模型中的更改而丢失的引用。
 
@@ -61,7 +61,7 @@ UML 模型可与其他模型和特定于域的语言集成。
 
 1. **VMSDK 规则**可用于在同一模型内传播更改。
 
-    有关示例，请参阅[将 UML 元素链接到关系图或其他文件](https://go.microsoft.com/fwlink/?LinkId=213813)。
+    有关示例，请参阅[将 UML 元素链接到关系图或其他文件](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)。
 
 2. **VMSDK 事件**可用于在模型外传播更改（例如，更改链接文档的文件名）或更改另一个模型中的元素。
 
@@ -72,7 +72,7 @@ UML 模型可与其他模型和特定于域的语言集成。
    有关详细信息，请参阅[在建模图上定义笔势处理程序](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md)和[如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)。
 
 ## <a name="samples"></a>示例
- 请参阅代码示例：将[UML 元素链接到关系图或其他文件](https://go.microsoft.com/fwlink/?LinkId=213813)。 此示例允许用户将文件拖到任何 UML 元素上，并在之后通过双击该元素来打开该文件。 例如，可以将活动关系图链接到用例元素。 图标显示哪些元素具有链接。
+ 请参阅代码示例：将[UML 元素链接到关系图或其他文件](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)。 此示例允许用户将文件拖到任何 UML 元素上，并在之后通过双击该元素来打开该文件。 例如，可以将活动关系图链接到用例元素。 图标显示哪些元素具有链接。
 
  此代码示例演示以下技术：
 
@@ -97,4 +97,4 @@ UML 模型可与其他模型和特定于域的语言集成。
   有关 DSL 读取 UML 模型的示例，请参阅[如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)。
 
 ## <a name="see-also"></a>请参阅
- [在建模图上定义菜单命令在](../modeling/define-a-menu-command-on-a-modeling-diagram.md)[建模图上定义笔势处理程序](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md)[如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)[如何：响应 UML 模型中的更改](../misc/how-to-respond-to-changes-in-a-uml-model.md)[示例： Uml 配置文件](https://go.microsoft.com/fwlink/?LinkID=213811)将[uml 元素链接到关系图或其他文件](https://go.microsoft.com/fwlink/?LinkId=213813)
+ [在建模图上定义菜单命令在](../modeling/define-a-menu-command-on-a-modeling-diagram.md)[建模图上定义笔势处理程序](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md)[如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)[如何：响应 UML 模型中的更改](../misc/how-to-respond-to-changes-in-a-uml-model.md)[示例： Uml 配置文件](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)将[uml 元素链接到关系图或其他文件](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)

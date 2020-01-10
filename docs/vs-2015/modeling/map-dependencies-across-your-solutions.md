@@ -29,14 +29,14 @@ caps.latest.revision: 245
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b25d23b7c65742ffddadbe178d7550dc1794414a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 4395dbc212514a71f8c4119d8f0778280dee81aa
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296331"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847632"
 ---
-# <a name="map-dependencies-across-your-solutions"></a>映射解决方案中的依赖项
+# <a name="map-dependencies-across-your-solutions"></a>映射解决方案之间的依赖关系
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 若要了解代码之间的依赖关系，可通过创建代码图使其可视化。 这样有助于你查看代码如何相互配合，而无需读取文件和各行代码。
@@ -45,11 +45,11 @@ ms.locfileid: "74296331"
 
  **以下是一些相关视频**：
 
-- [通过可视化了解代码依赖项](https://go.microsoft.com/fwlink/?LinkID=252065)
+- [通过可视化了解代码依赖项](https://s.ch9.ms/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Understand-your-code-dependencies-through-visualization)
 
-- [将更改的影响可视化](https://go.microsoft.com/fwlink/?LinkID=252068)
+- [将更改的影响可视化](https://s.ch9.ms/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Visualize-the-impact-of-a-change)
 
-- [通过代码图理解复杂代码](https://go.microsoft.com/fwlink/?LinkID=259869)
+- [通过代码图理解复杂代码](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Understanding-complex-code-with-Code-Map-ENU)
 
 ## <a name="GetStarted"></a> 开始使用代码图
  **要使用代码图，将需要以下两者之一**：
@@ -232,7 +232,7 @@ ms.locfileid: "74296331"
 
      若要查看代码中的成员，但不显示在地图上，请单击组左上角的 "**重新提取子级**" 图标![重新提取儿童图标](../modeling/media/dependencygraph-deletednodesicon.png "DependencyGraph_DeletedNodesIcon")。
 
-6. 若要查看更多与代码图上的项相关的项，请选择其中一个，再选择代码图工具栏上的“显示相关内容” ，然后选择要添加到图中的相关项的类型。 或者，选择一个或多个项，打开快捷菜单，然后为要添加到图中的相关项类型选择“显示…” 选项。 例如:
+6. 若要查看更多与代码图上的项相关的项，请选择其中一个，再选择代码图工具栏上的“显示相关内容” ，然后选择要添加到图中的相关项的类型。 或者，选择一个或多个项，打开快捷菜单，然后为要添加到图中的相关项类型选择“显示…” 选项。 例如：
 
      对于 **程序集**，请选择：
 
@@ -286,7 +286,7 @@ ms.locfileid: "74296331"
 ## <a name="SeeSourceHeader"></a> 了解 C 和 C++ 源文件和头文件之间的依赖关系
  如果要创建更多 C++ 项目的完整代码图，请在这些项目上设置浏览信息编译器选项 ( **/FR**)。 请参阅 [/FR, /Fr (Create .Sbr File)](https://msdn.microsoft.com/library/3fd8f88b-3924-4feb-9393-287036a28896)。 否则，将出现一条消息并提示你设置此选项。 如果选择“确定”，就只会为当前代码图设置选项。 可以选择隐藏所有之后的代码图的信息。 如果你隐藏了该信息，则可以让它再显示。 将以下注册表项设置为 `0` 或删除该项：
 
- **HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\14.0\NativeProvider： AutoEnableSbr**
+ **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\NativeProvider : AutoEnableSbr**
 
  打开包含 Visual C++ 项目的解决方案时，可能需要花一些时间来更新 IntelliSense 数据库。 在此期间，你可能无法为标头（.h 或 `#include`）文件创建代码图，直到 IntelliSense 数据库完成更新。 你可在 Visual Studio 状态栏中监视更新进度。 若要解决因某些 IntelliSense 设置被禁用而导致的问题或消息，请查看 [针对 C 和 C++ 代码的故障排除图](#Troubleshooting)。
 
@@ -310,7 +310,7 @@ ms.locfileid: "74296331"
 |**问题**|**可能的原因**|**解决方法**|
 |---------------|------------------------|--------------------|
 |未能生成代码图。|解决方案中没有项目成功生成过。|修复出现的生成错误，然后重新生成代码图。|
-|尝试从“体系结构”[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]  **菜单生成代码图时，** 无响应。|程序数据库 (.pdb) 文件可能已损坏。<br /><br /> pdb 文件将存储调试信息，例如，类型、方法和源文件信息。|重新生成解决方案，然后重试。|
+|尝试从“体系结构”[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]**菜单生成代码图时，** 无响应。|程序数据库 (.pdb) 文件可能已损坏。<br /><br /> pdb 文件将存储调试信息，例如，类型、方法和源文件信息。|重新生成解决方案，然后重试。|
 |禁用 IntelliSense 浏览器数据库的某些设置。|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] “选项”对话框中可能已禁用某些 IntelliSense 设置。|打开设置以启用它们。<br /><br /> 请参阅[选项、文本编辑器、CC++/、Advanced](../ide/reference/options-text-editor-c-cpp-advanced.md)。|
 |消息“未知方法” 将出现在方法节点上。<br /><br /> 由于无法解析方法的名称，导致出现此问题。|二进制文件可能没有基重定位表。|在链接器中打开 **/FIXED:NO** 选项。<br /><br /> 请参阅 [/FIXED (Fixed Base Address)](https://msdn.microsoft.com/library/929bba5e-b7d8-40ed-943e-056aa3710fc5)。|
 ||无法生成程序数据库 (.pdb) 文件。<br /><br /> pdb 文件将存储调试信息，例如，类型、方法和源文件信息。|在链接器中打开 **/DEBUG** 选项。<br /><br /> 请参阅 [/DEBUG (Generate Debug Info)](https://msdn.microsoft.com/library/1af389ae-3f8b-4d76-a087-1cdf861e9103)。|

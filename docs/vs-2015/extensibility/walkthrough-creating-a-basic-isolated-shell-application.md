@@ -12,12 +12,12 @@ ms.assetid: 8b12e223-aae3-4c23-813d-ede1125f5f69
 caps.latest.revision: 55
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: b6dc84dd8d9f19012c4d09ba9bfd974ec181b9f6
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 6192eb5583e7d0bc37518e995aacccad643cc9ec
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291266"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850352"
 ---
 # <a name="walkthrough-creating-a-basic-isolated-shell-application"></a>演练：创建基本的独立 Shell 应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "74291266"
   
 2. 取消注释以下行：  
   
-     [$RootKey $ \Packages\\{87569308-4813-40a0-9cd0-d7a30838ca3f}]  
+     [$RootKey$\Packages\\{87569308-4813-40a0-9cd0-d7a30838ca3f}]  
   
 3. 重新生成解决方案并开始调试独立 shell。 打开 XML 文件，例如，\MyVSShellStub\MyVSShellStub\MyVSShellStubUI\MyVSShellStubUI.vsct。 验证文件中的 XML 关键字不是着色，并且在行上键入 "<" 不会显示 XML 工具提示。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "74291266"
 6. 重新生成解决方案并开始调试独立 shell。 "帮助"/"关于" 框应该大致为正方形。  
   
 ## <a name="before-you-deploy-the-isolated-shell-application"></a>部署独立 Shell 应用程序之前  
- 可以在具有 Visual Studio Shell （独立）可再发行组件包的任何计算机上安装独立 shell 应用程序。 有关可再发行组件包的详细信息，请参阅[Visual Studio 扩展性下载](https://go.microsoft.com/fwlink/?LinkID=119298)网站。  
+ 可以在具有 Visual Studio Shell （独立）可再发行组件包的任何计算机上安装独立 shell 应用程序。 有关可再发行组件包的详细信息，请参阅[Visual Studio 扩展性下载](https://msdn.microsoft.com/vstudio/bb984878.aspx)网站。  
   
 ## <a name="deploying-the-isolated-shell-application"></a>部署独立 Shell 应用程序  
  通过创建安装项目，将独立 shell 应用程序部署到目标计算机。 你必须指定以下内容：  
@@ -248,7 +248,7 @@ ms.locfileid: "74291266"
   
 18. 在 "**你想要查找什么？** " 窗格中，选择下拉列表中的 "**注册表项**"，然后单击 "**下一步**"。  
   
-19. 在 "**你希望如何查找它？** " 窗格中，选择 " **HKEY_LOCAL_MACHINE** " 作为注册表根目录。 为64位系统输入**SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** ，为32位系统输入**SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** ，并输入**Install**作为注册表值。 单击“下一步”。  
+19. 在 "**你希望如何查找它？** " 窗格中，选择 " **HKEY_LOCAL_MACHINE** " 作为注册表根目录。 为64位系统输入**SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** ，为32位系统输入**SOFTWARE\Microsoft\DevDiv\vs\Servicing\14.0\isoshell** ，并输入**Install**作为注册表值。 单击 **“下一步”** 。  
   
 20. 在 "**你希望如何处理值？"** 窗格中，输入**此产品需要安装 Visual Studio 2015 隔离 Shell 可再发行组件。** 作为显示文本，然后单击 "**完成**"。  
   

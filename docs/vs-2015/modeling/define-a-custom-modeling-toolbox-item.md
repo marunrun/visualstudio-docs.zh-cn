@@ -11,12 +11,12 @@ caps.latest.revision: 33
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ac299f18e544ef4f3215707abbdc3d9e8d266de6
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 0a038150519ea7a40a52fb1be16ed93045c09eed
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299289"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851522"
 ---
 # <a name="define-a-custom-modeling-toolbox-item"></a>定义自定义建模工具箱项
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -139,7 +139,7 @@ ms.locfileid: "74299289"
 > 如果在单独试用关系图文件后开始使用 .tbxinfo 文件，则可能会发现工具箱同时包含新旧版本的工具箱项。 如果在 .tbxinfo 文件中键入了错误的关系图文件名称，也会发生此问题。 如果出现这种情况，请在 "工具箱" 的快捷菜单上选择 "**重置工具箱"** 。 将不会显示自定义工具箱项。 重新启动 Visual Studio，此时将显示正确的自定义项。
 
 ## <a name="Extension"></a>如何在 Visual Studio 扩展中分发工具箱项
- 可以通过将工具箱项打包到 Visual Studio 扩展（VSIX）中，将其分发给其他 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 用户。 可以将命令、配置文件和其他扩展打包到同一个 VSIX 文件。 有关详细信息，请参阅[部署 Visual Studio 扩展](https://go.microsoft.com/fwlink/?LinkId=160780)。
+ 可以通过将工具箱项打包到 Visual Studio 扩展（VSIX）中，将其分发给其他 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 用户。 可以将命令、配置文件和其他扩展打包到同一个 VSIX 文件。 有关详细信息，请参阅[部署 Visual Studio 扩展](https://msdn.microsoft.com/library/dd393694(VS.100).aspx)。
 
  通常使用 VSIX 项目模板来构建 Visual Studio 扩展。 若要执行此操作，必须已安装 [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]。
 
@@ -170,7 +170,7 @@ ms.locfileid: "74299289"
 
      **复制到输出目录** = **始终复制**
 
-      = **内容** **生成操作**
+     **生成操作** = **内容**
 
      **在 VSIX 中包括** = **true**
 
@@ -191,7 +191,7 @@ ms.locfileid: "74299289"
 
     - **路径**= 你的 **.tbxinfo**文件，例如**MyTools. .tbxinfo**
 
-8. 生成项目。
+8. 生成此项目。
 
 9. **若要验证扩展是否正常运行**，请按 F5。 启动 Visual Studio 的实验实例。
 
@@ -207,7 +207,7 @@ ms.locfileid: "74299289"
 
 3. 若要卸载或临时禁用该扩展，请从 "**工具**" 菜单打开 "**扩展和更新**"。
 
-## <a name="localization"></a>本地化
+## <a name="localization"></a>Localization
  构建一个扩展，使其在安装到另一台计算机中时，以目标计算机语言显示工具名称和工具提示。
 
 #### <a name="to-provide-versions-of-the-tool-in-more-than-one-language"></a>提供多种语言的工具版本
@@ -220,7 +220,7 @@ ms.locfileid: "74299289"
 
 3. 将每个附加程序集放在名称为对应语言区域性代码的文件夹中。 例如，将法语版本的程序集放在名为**fr**的文件夹中。
 
-4. 应使用非特定区域性代码（通常为两个字母），而不应使用特定区域性代码（例如 `fr-CA`）。 有关区域性代码的详细信息，请参阅[cultureinfo.getcultures 方法](https://go.microsoft.com/fwlink/?LinkId=160782)，它提供了区域性代码的完整列表。
+4. 应使用非特定区域性代码（通常为两个字母），而不应使用特定区域性代码（例如 `fr-CA`）。 有关区域性代码的详细信息，请参阅[cultureinfo.getcultures 方法](https://msdn.microsoft.com/library/system.globalization.cultureinfo.getcultures(VS.100).aspx)，它提供了区域性代码的完整列表。
 
 5. 生成 Visual Studio 扩展并发布。
 

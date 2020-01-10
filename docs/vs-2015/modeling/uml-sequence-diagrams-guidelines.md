@@ -23,14 +23,14 @@ caps.latest.revision: 55
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8c5906084fc7db96ddf304e8362bf7692dac62d5
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: cdd853307bdea28c48762a6a3f0416e698b577ff
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297150"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850127"
 ---
-# <a name="uml-sequence-diagrams-guidelines"></a>UML Sequence Diagrams: Guidelines
+# <a name="uml-sequence-diagrams-guidelines"></a>UML 序列图：准则
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 在 Visual Studio 中，可以绘制*序列图*来显示交互。 交互是类、组件、子系统或参与者的典型实例之间的消息序列。
@@ -262,7 +262,7 @@ ms.locfileid: "74297150"
 |**出于此目的**|**使用此格式**|
 |--------------------------|-------------------------|
 |类型的匿名实例。<br /><br /> 如果每个类型只有一个生命线，则使用这种格式。|*typeName*|
-|类型的命名实例。<br /><br /> 如果想要显示涉及同一类型的多个实例的序列，则使用此格式。|*objectName*：*typeName*|
+|类型的命名实例。<br /><br /> 如果想要显示涉及同一类型的多个实例的序列，则使用此格式。|*objectName*:*typeName*|
 
 ### <a name="creating-lifelines-from-types"></a>根据类型创建生命线
  例如，你可以根据已在类图中定义的类创建新生命线。
@@ -443,4 +443,4 @@ ms.locfileid: "74297150"
 5. 要将新消息添加到片段中，请使用消息工具，或者使用复制和粘贴。
 
 ## <a name="see-also"></a>请参阅
- [Uml 序列图：引用](../modeling/uml-sequence-diagrams-reference.md)[编辑 uml 模型和关系图](../modeling/edit-uml-models-and-diagrams.md) [UML 用例图：引用 uml](../modeling/uml-use-case-diagrams-reference.md) [类图](../modeling/uml-class-diagrams-reference.md)：引用[uml 组件图](../modeling/uml-component-diagrams-reference.md) [：引用](../modeling/uml-component-diagrams-reference.md)[视频：引用视频：使用序列图的草绘交互](https://go.microsoft.com/fwlink/?LinkId=201113)
+ [Uml 序列图：引用](../modeling/uml-sequence-diagrams-reference.md)[编辑 uml 模型和关系图](../modeling/edit-uml-models-and-diagrams.md) [UML 用例图：引用 uml](../modeling/uml-use-case-diagrams-reference.md) [类图](../modeling/uml-class-diagrams-reference.md)：引用[uml 组件图](../modeling/uml-component-diagrams-reference.md) [：引用](../modeling/uml-component-diagrams-reference.md)[视频：引用视频：使用序列图的草绘交互](https://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-2-Organizing-Features-Into-Use-Cases)

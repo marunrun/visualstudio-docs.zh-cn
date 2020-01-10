@@ -126,12 +126,12 @@ caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
 manager: jillfra
-ms.openlocfilehash: dd9a0e09d4032feff398a9ba8c7333c84cb46550
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: fb2b8120665c7eb08f1462dd7b3299538079ae9b
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295855"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852382"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>对函数参数和返回值进行批注
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -219,7 +219,7 @@ ms.locfileid: "74295855"
   
      `_Out_writes_to_(_Old_(s), _Old_(s))    _Out_writes_bytes_to_(_Old_(s), _Old_(s))`  
   
-     换而言之，缓冲区中的每个要在预状态 `s` 的元素在 post 状态中都有效。  例如:  
+     换而言之，缓冲区中的每个要在预状态 `s` 的元素在 post 状态中都有效。  例如：  
   
      `void *memcpy(_Out_writes_bytes_all_(s) char *p1,    _In_reads_bytes_(s) char *p2,    _In_ int s); void * wordcpy(_Out_writes_all_(s) DWORD *p1,     _In_reads_(s) DWORD *p2,    _In_ int s);`  
   
@@ -247,7 +247,7 @@ ms.locfileid: "74295855"
   
      `_Out_writes_to_(_Old_(s), _Old_(s))    _Out_writes_bytes_to_(_Old_(s), _Old_(s))`  
   
-     换而言之，缓冲区中的每个要在预状态 `s` 的元素在 post 状态中都有效。  例如:  
+     换而言之，缓冲区中的每个要在预状态 `s` 的元素在 post 状态中都有效。  例如：  
   
      `void *memcpy(_Out_writes_bytes_all_(s) char *p1,    _In_reads_bytes_(s) char *p2,    _In_ int s); void * wordcpy(_Out_writes_all_(s) DWORD *p1,     _In_reads_(s) DWORD *p2,    _In_ int s);`  
   
@@ -484,7 +484,7 @@ ms.locfileid: "74295855"
   
 - `_Struct_size_bytes_(size)`  
   
-     适用于结构或类声明。  指示该类型的有效对象可能大于声明的类型，以及 `size`给定的字节数。  例如:  
+     适用于结构或类声明。  指示该类型的有效对象可能大于声明的类型，以及 `size`给定的字节数。  例如：  
   
      `typedef _Struct_size_bytes_(nSize) struct MyStruct {    size_t nSize;    ... };`  
   
@@ -493,7 +493,7 @@ ms.locfileid: "74295855"
      `min(pM->nSize, sizeof(MyStruct))`  
   
 ## <a name="related-resources"></a>相关资源  
- [代码分析团队博客](https://go.microsoft.com/fwlink/?LinkId=251197)  
+ [代码分析团队博客](https://blogs.msdn.com/b/codeanalysis/)  
   
 ## <a name="see-also"></a>请参阅  
  [使用 SAL 注释减少 C/C++代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   

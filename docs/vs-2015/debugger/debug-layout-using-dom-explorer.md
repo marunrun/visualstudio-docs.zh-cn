@@ -18,19 +18,19 @@ caps.latest.revision: 36
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5dd40381b8f5ba4807e95cfcf5e5b7d54afd77e2
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 1a3c9b3a6ae2ed11e8512f8cf8857d27b3d0043b
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298385"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850079"
 ---
 # <a name="debug-layout-using-dom-explorer"></a>使用 DOM 资源管理器调试布局
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 适用于 Windows 和 Windows Phone] （.。。将 windows_and_phone_content .png "windows_and_phone_content"）  
   
- DOM 资源管理器的“布局” 选项卡显示适用于 [应用、Windows Phone 应用商店应用或使用 Visual Studio Tools for Apache Cordova 创建的应用中的所选元素的](https://go.microsoft.com/fwlink/?LinkID=238778) CSS 方框模型 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 。 可使用此方框模型的可视表示形式来标识和修改影响元素外观的布局相关值。  
+ DOM 资源管理器的“布局” 选项卡显示适用于 [应用、Windows Phone 应用商店应用或使用 Visual Studio Tools for Apache Cordova 创建的应用中的所选元素的](https://www.w3.org/TR/CSS2/box.html) CSS 方框模型 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 。 可使用此方框模型的可视表示形式来标识和修改影响元素外观的布局相关值。  
   
 > [!TIP]
 > 你在“布局” 选项卡中所作的更改不是永久性的。 你可以永久更改源代码，然后使用“调试”工具栏上的“刷新 Windows 应用” （仅限 Windows 应用商店和 Windows Phone 应用商店）按钮刷新应用。 这样一来，便可避免重新启动调试器。  

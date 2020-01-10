@@ -15,12 +15,12 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 439c6b5fc30be2e76eb6c0b6a44b1ec5226633b1
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 2df740abf25344253627b614fdbd80dce86c7bfa
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295942"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847473"
 ---
 # <a name="ca1065-do-not-raise-exceptions-in-unexpected-locations"></a>CA1065：不要在意外的位置引发异常
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "74295942"
 ## <a name="cause"></a>原因
  不应引发异常的方法引发了异常。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  不应引发异常的方法可以按如下方式分类：
 
 - 属性获取方法
@@ -89,7 +89,7 @@ ms.locfileid: "74295942"
 
 - <xref:System.Object.Equals%2A?displayProperty=fullName>
 
-- [M:IEquatable.Equals](https://go.microsoft.com/fwlink/?LinkId=113472)
+- [M:IEquatable.Equals](https://msdn2.microsoft.com/library/ms131190(VS.80).aspx)
 
   **Equals**方法应返回 `true` 或 `false`，而不是引发异常。 例如，如果将 Equals 传递两个不匹配的类型，则它应只返回 `false` 而不是引发 <xref:System.ArgumentException>。
 
@@ -98,7 +98,7 @@ ms.locfileid: "74295942"
 
 - <xref:System.Object.GetHashCode%2A>
 
-- [M:IEqualityComparer.GetHashCode （T）](https://go.microsoft.com/fwlink/?LinkId=113477)
+- [M:IEqualityComparer.GetHashCode(T)](https://msdn2.microsoft.com/library/system.collections.iequalitycomparer.gethashcode.aspx)
 
   **GetHashCode**应始终返回值。 否则，可能会丢失哈希表中的项。
 

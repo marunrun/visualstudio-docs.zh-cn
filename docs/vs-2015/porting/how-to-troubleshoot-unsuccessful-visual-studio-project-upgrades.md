@@ -18,17 +18,17 @@ caps.latest.revision: 31
 author: kraigb
 ms.author: kraigb
 manager: jillfra
-ms.openlocfilehash: 16232a72cd37f8d1d68760f032b6050e0bdf74c5
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 65059e285777e48633da5eb7e8723e3997f37dfa
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300358"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844441"
 ---
 # <a name="how-to-troubleshoot-unsuccessful-visual-studio-project-upgrades"></a>如何：升级 Visual Studio 项目失败疑难解答
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-有时，Visual Studio 不能从 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的早期版本中完全转换项目。 如果以下部分中的提示不能解决你的特定问题，则可以在 TechNet [Wiki：开发门户](https://go.microsoft.com/fwlink/?LinkId=254808)中找到详细信息。
+有时，Visual Studio 不能从 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的早期版本中完全转换项目。 如果以下部分中的提示不能解决你的特定问题，则可以在 TechNet [Wiki：开发门户](https://social.technet.microsoft.com/wiki/contents/articles/706.wiki-development-portal.aspx#Visual_Studio)中找到详细信息。
 
 ## <a name="the-project-does-not-run-because-files-are-not-found"></a>由于找不到文件，项目不会运行
  项目文件包含硬编码文件路径，当您按 F5 时，[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 使用该路径来运行项目。 这些路径可能包含 devenv 和其他所需文件的位置。 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的升级版本中，这些文件的路径可能已更改。

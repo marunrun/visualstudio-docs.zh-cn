@@ -10,12 +10,12 @@ ms.date: 06/28/2018
 ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
-ms.openlocfilehash: 0839c69a95df4419781ece2a163071ae0e3e6930
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 96df8bbf1c991b98571a427a5118374cd6f3ba3b
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74293679"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851455"
 ---
 # <a name="set-up-diagnostics-for-azure-cloud-services-and-virtual-machines"></a>为 Azure 云服务和虚拟机设置诊断
 需要对 Azure 云服务或虚拟机进行故障排除时，可使用 Visual Studio 更轻松地设置 Azure 诊断。 诊断可以在运行云服务的虚拟机和虚拟机实例上捕获系统数据和日志记录数据。 诊断数据传输到所选的存储帐户。 有关 Azure 中诊断日志记录的详细信息，请参阅[为 Azure 应用服务中的 Web 应用启用诊断日志记录](/azure/app-service/web-sites-enable-diagnostic-log)。
@@ -38,7 +38,7 @@ ms.locfileid: "74293679"
 * 在 Azure SDK 2.4 及更低版本中，连接字符串由诊断插件用作运行时以获取用于传输诊断日志的存储帐户信息。
 * 在 Azure SDK 2.6 及更高版本中，Visual Studio 在发布过程中通过诊断连接字符串使用相应的存储帐户信息来设置 Azure 诊断扩展。 可以使用连接字符串，为 Visual Studio 在发布时使用的不同服务配置定义不同的存储帐户。 但是，因为诊断插件在 Azure SDK 2.5 之后不可用，.cscfg 文件本身不能设置诊断扩展。 必须使用 Visual Studio 或 PowerShell 之类的工具分别设置扩展。
 * Visual Studio 的包输出包括每个角色的诊断扩展的公共配置 XML，可简化使用 PowerShell 设置诊断扩展的过程。 Visual Studio 使用诊断连接字符串来填充公共配置中的存储帐户信息。 公共配置文件在 Extensions 文件夹中创建。 公共配置文件使用的命名模式为 PaaSDiagnostics.&lt;角色名称\>.PubConfig.xml。 任何基于 PowerShell 的部署都可以使用此模式将每个配置映射到角色。
-* [Azure 门户](https://go.microsoft.com/fwlink/p/?LinkID=525040)使用 .cscfg 文件中的连接字符串来访问诊断数据。 数据将显示在 "**监视**" 选项卡上。需要连接字符串才能将服务设置为在门户中显示详细监视数据。
+* [Azure 门户](https://portal.azure.com/)使用 .cscfg 文件中的连接字符串来访问诊断数据。 数据将显示在 "**监视**" 选项卡上。需要连接字符串才能将服务设置为在门户中显示详细监视数据。
 
 ## <a name="migrate-projects-to-azure-sdk-26-and-later"></a>将项目迁移到 Azure SDK 2.6 及更高版本
 从 Azure SDK 2.5 迁移到 Azure SDK 2.6 或更高版本时，如果在 .wadcfgx 文件中指定了诊断存储帐户，此存储帐户会保留在该文件中。 可以针对不同的存储配置使用不同的存储帐户，若要充分利用这种灵活性，请手动将连接字符串添加到项目。 如果将项目从 Azure SDK 2.4 或更低版本迁移到 Azure SDK 2.6，则会保留诊断连接字符串。 但是，请注意 Azure SDK 2.6 中连接字符串处理方式的变化，如上一部分所述。
@@ -82,7 +82,7 @@ ms.locfileid: "74293679"
    * 如果选择“Microsoft Azure 存储模拟器”，则连接字符串设置为 `UseDevelopmentStorage=true`。
    * 如果选择“你的订阅”，则可选择要使用的 Azure 订阅，然后输入帐户名称。 若要管理 Azure 订阅，请选择“管理帐户”。
    * 如果选择“手动输入的凭据”选项，则请输入要使用的 Azure 帐户的名称和密钥。
-5. 若要查看“诊断配置”对话框，请选择“配置”。 每个选项卡（“常规”和“日志目录”除外）都表示可以收集的诊断数据源。 默认的 "**常规**" 选项卡提供以下诊断数据收集选项： "**仅限错误**"、"**所有信息**" 和 "**自定义计划**"。 默认的“仅限错误”选项占用最少量的存储，因为该选项不传输警告或跟踪消息。 “所有信息”选项传输的信息最多，占用最多的存储，因此是成本最高的选项。
+5. 若要查看“诊断配置”对话框，请选择“配置”。 每个选项卡（“常规”和“日志目录”除外）都表示可以收集的诊断数据源。 默认的“常规”选项卡提供以下诊断数据收集选项：“仅限错误”、“所有信息”和“自定义计划”。 默认的“仅限错误”选项占用最少量的存储，因为该选项不传输警告或跟踪消息。 “所有信息”选项传输的信息最多，占用最多的存储，因此是成本最高的选项。
 
    > [!NOTE]
    > “磁盘配额(以 MB 为单位)”支持的最小大小为 4GB。 但是，如果要收集内存转储，请将此限制提高到更高值（如 10GB）。
@@ -91,7 +91,7 @@ ms.locfileid: "74293679"
     ![启用 Azure 诊断和配置](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC758144.png)
 6. 对于此示例，请选择“自定义计划”选项，以便自定义所收集的数据。
 7. 在“磁盘配额(MB)”框中，可以设置需要在存储帐户中为诊断数据分配的空间量。 可以更改或接受默认值。
-8. 在要收集的诊断数据的每个选项卡上，选中“启用**日志类型\<的传输”复选框。\>** 例如，如果要收集应用程序日志，请在“应用程序日志”选项卡上选中“启用应用程序日志的传输”复选框。 另外，请指定每种诊断数据类型所需的其他任何信息。 有关每个选项卡的配置信息，请参阅本文后面的“设置诊断数据源”部分。
+8. 在要收集的诊断数据的每个选项卡上，选中“启用\<日志类型\>的传输”复选框。 例如，如果要收集应用程序日志，请在“应用程序日志”选项卡上选中“启用应用程序日志的传输”复选框。 另外，请指定每种诊断数据类型所需的其他任何信息。 有关每个选项卡的配置信息，请参阅本文后面的“设置诊断数据源”部分。
 9. 允许收集所有需要的诊断数据后，请选择“确定”。
 10. 照常在 Visual Studio 中运行 Azure 云服务项目。 使用应用程序时，允许的日志信息会保存到指定的 Azure 存储帐户中。
 
@@ -101,7 +101,7 @@ ms.locfileid: "74293679"
 ### <a name="to-turn-on-diagnostics-on-azure-virtual-machines"></a>在 Azure 虚拟机上启用诊断
 
 1. 在“服务器资源管理器”中，选择“Azure”节点，然后连接到 Azure 订阅（如果尚未连接）。
-2. 展开 **“虚拟机”** 节点。 可以创建新虚拟机，也可以选择现有节点。
+2. 展开“虚拟机”节点。 可以创建新虚拟机，也可以选择现有节点。
 3. 在所需虚拟机的快捷菜单上，选择“配置”。 此时会显示虚拟机配置对话框。
 
     ![配置 Azure 虚拟机](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC796663.png)
@@ -120,10 +120,10 @@ ms.locfileid: "74293679"
 
     ![启用 Azure 诊断和配置](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC758144.png)
 
-    默认选项卡 "**常规**" 为你提供以下诊断数据收集选项： "**仅限错误**"、"**所有信息**" 和 "**自定义计划**"。 默认选项“仅限错误”占用最少量的存储空间，因为该选项不传输警告或跟踪消息。 “所有信息”选项传输的信息最多，因此就存储来说是成本最高的选项。
+    默认选项卡“常规”提供以下诊断数据收集选项：“仅限错误”、“所有信息”和“自定义计划”。 默认选项“仅限错误”占用最少量的存储空间，因为该选项不传输警告或跟踪消息。 “所有信息”选项传输的信息最多，因此就存储来说是成本最高的选项。
 7. 对于此示例，可以选择“自定义计划”选项，以便自定义所收集的数据。
-8. “磁盘配额(MB)”框指定要在存储帐户中为诊断数据分配的空间量。 可以根据需要更改默认值。
-9. 在要收集的诊断数据的每个选项卡上，选中其“启用**日志类型\<的传输”复选框。\>**
+8. “磁盘配额(MB)”框指定要在存储帐户中为诊断数据分配的空间量。 你可以根据需要更改默认值。
+9. 在要收集的诊断数据的每个选项卡上，选中其“启用\<日志类型\>的传输”复选框。
 
     例如，如果要收集应用程序日志，请选中 "**应用**程序日志" 选项卡上的 "**启用应用程序日志的传输**" 复选框。另外，请指定每种诊断数据类型所需的任何其他信息。 有关每个选项卡的配置信息，请参阅本文后面的“设置诊断数据源”部分。
 10. 允许收集所有需要的诊断数据后，请选择“确定”。
@@ -146,7 +146,7 @@ ms.locfileid: "74293679"
 
 ![事件日志](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC796664.png)
 
-如果使用的是 Azure SDK 2.6 或更高版本并想要指定自定义数据源，请在 **\<“\>数据源名称**”文本框中输入它，然后选择“添加”。 该数据源将添加到 diagnostics.cfcfg 文件中。
+如果使用的是 Azure SDK 2.6 或更高版本并想要指定自定义数据源，请在“\<数据源名称\>”文本框中输入它，然后选择“添加”。 该数据源将添加到 diagnostics.cfcfg 文件中。
 
 如果使用的是 Azure SDK 2.5 并想要指定自定义数据源，可以将其添加到 diagnostics.wadcfgx 文件的 `WindowsEventLog` 节，如下例所示：
 
@@ -158,7 +158,7 @@ ms.locfileid: "74293679"
 ```
 
 ### <a name="performance-counters"></a>性能计数器
-性能计数器信息可以帮助找到系统瓶颈，并优化系统和应用程序性能。 有关详细信息，请参阅[在 Azure 应用程序中创建和使用性能计数器](https://msdn.microsoft.com/library/azure/hh411542.aspx)。 若要捕获性能计数器，请选中“启用性能计数器的传输”复选框。 若要增加或减少事件日志传输到存储帐户的时间间隔，请更改“传输周期(分钟)”值。 选中与要跟踪的性能计数器对应的复选框。
+性能计数器信息可以帮助你找到系统瓶颈，并优化系统和应用程序性能。 有关详细信息，请参阅[在 Azure 应用程序中创建和使用性能计数器](https://msdn.microsoft.com/library/azure/hh411542.aspx)。 若要捕获性能计数器，请选中“启用性能计数器的传输”复选框。 若要增加或减少事件日志传输到存储帐户的时间间隔，请更改“传输周期(分钟)”值。 选中与要跟踪的性能计数器对应的复选框。
 
 ![性能计数器](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC758147.png)
 
@@ -183,7 +183,7 @@ ms.locfileid: "74293679"
 ### <a name="etw-logs"></a>ETW 日志
 如果使用 [Windows 事件跟踪](https://msdn.microsoft.com/library/windows/desktop/bb968803\(v=vs.85\).aspx) (ETW) 并要捕获 ETW 日志，请选中“启用 ETW 日志的传输”复选框。 若要增加或减少日志传输到存储帐户的时间间隔，请更改“传输周期(分钟)”值。
 
-将从指定的事件源和事件清单捕获事件。 若要指定事件源，请在“事件源”部分输入名称，然后选择“添加事件源”。 同样，可以在“事件清单”部分指定事件清单，然后选择“添加事件清单”。
+事件将从你指定的事件源和事件清单捕获。 若要指定事件源，请在“事件源”部分输入名称，然后选择“添加事件源”。 同样，可以在“事件清单”部分指定事件清单，然后选择“添加事件清单”。
 
 ![ETW 日志](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC766025.png)
 
@@ -196,7 +196,7 @@ ASP.NET 通过 [System.Diagnostics.aspx](https://msdn.microsoft.com/library/syst
 
 ![故障转储](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC766026.png)
 
-有关详细信息，请参阅[在 Microsoft Azure 中控制日志记录和跟踪](https://msdn.microsoft.com/magazine/ff714589.aspx) [Microsoft Azure 诊断第4部分：自定义日志记录组件和 Azure 诊断1.3 更改](https://www.red-gate.com/simple-talk/cloud/platform-as-a-service/microsoft-azure-diagnostics-part-4-custom-logging-components-and-azure-diagnostics-1.3-changes/)。
+有关详细信息，请参阅[在 Microsoft Azure 中控制日志记录和跟踪](https://msdn.microsoft.com/magazine/ff714589.aspx)，以及 [Microsoft Azure Diagnostics Part 4: Custom logging components and Azure Diagnostics 1.3 changes](https://www.red-gate.com/simple-talk/cloud/platform-as-a-service/microsoft-azure-diagnostics-part-4-custom-logging-components-and-azure-diagnostics-1.3-changes/)（Microsoft Azure 诊断第 4 部分：自定义日志记录组件和 Azure 诊断 1.3 更改）。
 
 ## <a name="view-the-diagnostics-data"></a>查看诊断数据
 收集云服务或虚拟机的诊断数据后，可以查看这些数据。
@@ -215,10 +215,10 @@ ASP.NET 通过 [System.Diagnostics.aspx](https://msdn.microsoft.com/library/syst
 
     若要立即更新数据，请选择“刷新”链接。 若要让数据自动更新，请在“自动刷新”下拉列表框中选择一个时间间隔。 若要导出错误数据，请选择“导出到 CSV”按钮以创建逗号分隔值文件。可以在 Excel 工作表中打开该文件。
 
-    在 Cloud Explorer 或服务器资源管理器中，打开与部署相关联的存储帐户。
-3. 在表查看器中打开诊断表，并查看所收集的数据。 对于 IIS 日志和自定义日志，可以打开 Blob 容器。 下表列出的表或 Blob 容器包含不同日志文件的数据。 除了该日志文件的数据，表条目还包含 EventTickCount、DeploymentId、Role 和 RoleInstance，有助于确定数据由哪个虚拟机和角色生成，以及生成的时间。
+    在“云资源管理器”或“服务器资源管理器”中，打开部署的关联存储帐户。
+3. 在表查看器中打开诊断表，然后查看所收集的数据。 对于 IIS 日志和自定义日志，可以打开 Blob 容器。 下表列出的表或 Blob 容器包含不同日志文件的数据。 除了该日志文件的数据，表条目还包含 EventTickCount、DeploymentId、Role 和 RoleInstance，有助于确定数据由哪个虚拟机和角色生成，以及生成的时间。
 
-   | 诊断数据 | 描述 | 位置 |
+   | 诊断数据 | 描述 | Location |
    | --- | --- | --- |
    | 应用程序日志 |代码通过调用 System.Diagnostics.Trace 类的方法而生成的日志。 |WADLogsTable |
    | 事件日志 |虚拟机上 Windows 事件日志中的数据。 Windows 在这些日志中存储信息，但应用程序和服务也使用这些日志来报告错误或记录信息。 |WADWindowsEventLogsTable |
@@ -229,7 +229,7 @@ ASP.NET 通过 [System.Diagnostics.aspx](https://msdn.microsoft.com/library/syst
    | 自定义日志文件 |预定义的数据日志。 |可以通过代码指定自定义日志文件在存储帐户中的位置。 例如，可以指定自定义 Blob 容器。 |
 4. 如有任何类型的数据出现截断，可以尝试增大该数据类型的缓冲区，或是缩短从虚拟机到存储帐户的数据传输间隔。
 5. （可选）间或清除存储帐户中的数据，降低整体存储开销。
-6. 进行完整部署时，diagnostics.cscfg 文件（Azure SDK 2.5 中为 .wadcfgx）会在 Azure 中更新，云服务将拾取对诊断配置的所有更改。 如果改为更新现有部署，则不会在 Azure 中更新 .cscfg 文件。 但仍可按照下一部分中的步骤更改诊断设置。 有关执行完整部署和更新现有部署的详细信息，请参阅 [Publish Azure Application Wizard](vs-azure-tools-publish-azure-application-wizard.md)（发布 Azure 应用程序向导）。
+6. 进行完整部署时，diagnostics.cscfg 文件（Azure SDK 2.5 中为 .wadcfgx）将在 Azure 中更新，云服务将拾取对诊断配置的所有更改。 如果改为更新现有部署，则不会在 Azure 中更新 .cscfg 文件。 但仍可按照下一部分中的步骤更改诊断设置。 有关执行完整部署和更新现有部署的详细信息，请参阅 [Publish Azure Application Wizard](vs-azure-tools-publish-azure-application-wizard.md)（发布 Azure 应用程序向导）。
 
 ### <a name="to-view-virtual-machine-diagnostics-data"></a>查看虚拟机的诊断数据
 1. 在虚拟机的快捷菜单上，选择“查看诊断数据”。
@@ -274,7 +274,7 @@ ASP.NET 通过 [System.Diagnostics.aspx](https://msdn.microsoft.com/library/syst
 时间戳使用托管云服务的数据中心的本地时区。 使用日志表中的以下三个时间戳列：
 
 * **PreciseTimeStamp**：事件的 ETW 时间戳。 即，从客户端记录事件的时间。
-* **TIMESTAMP**： **PreciseTimeStamp**的值向下舍入到上传频率边界。 例如，如果上传频率为 5 分钟，事件时间为 00:17:12，则 TIMESTAMP 为 00:15:00。
+* **TIMESTAMP**：已向下舍入到上传频率边界的 PreciseTimeStamp 的值。 例如，如果上传频率为 5 分钟，事件时间为 00:17:12，则 TIMESTAMP 为 00:15:00。
 * **Timestamp**：在 Azure 表中创建实体时的时间戳。
 
 **收集诊断信息时，如何管理开销？**

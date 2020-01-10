@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dd2b2d19e55cbaf9af63ddeafdbdf9f6d677c5bc
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 448a74b739bbb339d5f3b3e56c0ba59072994109
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301621"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850620"
 ---
 # <a name="layer-diagrams-reference"></a>层关系图：参考
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "74301621"
 
 - 在开发和维护你的代码过程中，通过包括对签入的验证来强化预期体系结构并生成操作。
 
-  本主题介绍了可以在层关系图中使用的元素。 有关如何创建和绘制层关系图的详细信息，请参阅[层关系图：准则](../modeling/layer-diagrams-guidelines.md)。 有关分层模式的详细信息，请参阅[模式 & 实践](https://go.microsoft.com/fwlink/?LinkId=145794)。
+  本主题介绍了可以在层关系图中使用的元素。 有关如何创建和绘制层关系图的详细信息，请参阅[层关系图：准则](../modeling/layer-diagrams-guidelines.md)。 有关分层模式的详细信息，请参阅[模式 & 实践](https://apparch.codeplex.com/Wiki/View.aspx?title=Application Patterns&referringTitle=Home)。
 
 ## <a name="reading-layer-diagrams"></a>读取层关系图
  ![层关系图上的元素](../modeling/media/uml-layerrefreading.png "UML_LayerRefReading")
@@ -89,7 +89,7 @@ ms.locfileid: "74301621"
 
     |**层资源管理器中的列**|**描述**|
     |----------------------------------|---------------------|
-    |**类型**|项目种类，例如类、命名空间、源文件等|
+    |**类别**|项目种类，例如类、命名空间、源文件等|
     |**该层**|链接到该项目的层|
     |**支持验证**|如果**为 True**，则层验证过程可以验证项目是否符合与此元素的依赖关系。<br /><br /> 如果**为 False**，则链接不参与层验证过程。<br /><br /> 有关详细信息，请参阅[层关系图：准则](../modeling/layer-diagrams-guidelines.md)。|
     |标识符|对链接的项目的引用|

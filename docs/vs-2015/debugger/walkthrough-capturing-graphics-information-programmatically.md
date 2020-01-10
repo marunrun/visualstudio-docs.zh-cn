@@ -9,12 +9,12 @@ caps.latest.revision: 24
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 54097420fd212ec9057f4a968e2c6d5de199e56e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 9de8e2a2ee69911f5505937494d2912c724326e9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296902"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847808"
 ---
 # <a name="walkthrough-capturing-graphics-information-programmatically"></a>演练：以编程方式捕获图形信息
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -145,7 +145,7 @@ ms.locfileid: "74296902"
 ### <a name="preparing-your-computer-to-use-programmatic-capture"></a>准备你的计算机以使用编程捕获  
  编程捕获 API 使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的远程工具来提供捕获功能。 将运行应用的计算机必须安装远程工具，即使你要在本地计算机上使用编程捕获也是如此。 在本地计算机上执行编程捕获时，不必运行[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。  
   
- 若要在正在计算机上运行的应用中使用远程捕获 API，首先，你必须在该计算机上安装 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的远程工具。 不同版本的远程工具支持不同的硬件平台。 有关如何安装远程工具的信息，请参阅 Microsoft 下载网站上的 [远程工具下载页](https://go.microsoft.com/fwlink/p/?LinkId=246691) 。  
+ 若要在正在计算机上运行的应用中使用远程捕获 API，首先，你必须在该计算机上安装 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的远程工具。 不同版本的远程工具支持不同的硬件平台。 有关如何安装远程工具的信息，请参阅 Microsoft 下载网站上的 [远程工具下载页](https://visualstudio.microsoft.com/downloads#remote-tools) 。  
   
  或者， [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 将安装必需的组件来为 32 位应用执行远程捕获。  
   

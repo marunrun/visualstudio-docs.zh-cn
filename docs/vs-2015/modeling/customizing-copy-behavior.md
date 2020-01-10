@@ -9,12 +9,12 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e17e29e36be5636662e6105a05446a9cbe0aa724
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 791e2e077ebd2ed3e97aecd4c7c6e52316b4fe3b
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301192"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845291"
 ---
 # <a name="customizing-copy-behavior"></a>自定义复制行为
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -46,13 +46,13 @@ ms.locfileid: "74301192"
  **启用或禁用复制、剪切和粘贴。**
 在 "DSL 资源管理器" 中，设置 "**编辑器**" 节点的 "**启用复制粘贴**" 属性。
 
- **将链接复制到同一目标。** 例如，若要将复制的注释框链接到同一个 subject 元素，则为。
+ **将链接复制到同一目标。** 例如，将复制的注释框链接到相同的使用者元素。
 将角色的 "**传播复制**" 属性设置为 "**仅将副本传播到链接**"。 有关详细信息，请参阅[自定义链接复制行为](#customizeLinks)。
 
  复制链接的元素。 例如，在复制新元素时，还建立了任何链接的注释框的副本。
 将角色的 "**传播复制**" 属性设置为 "将**副本传播到链接和相反的角色扮演**者"。 有关详细信息，请参阅[自定义链接复制行为](#customizeLinks)。
 
- **通过复制和粘贴快速复制元素。** 通常，您刚刚复制的项仍处于选中状态，并且您不能将相同类型的元素粘贴到其中。
+ **通过复制和粘贴快速复制元素。** 通常，刚复制的项仍处于选中状态，并且你无法将相同类型的元素粘贴到该项上。
 将元素合并指令添加到域类，并将其设置为向前合并到父类。 这将在拖动操作上产生相同的效果。 有关详细信息，请参阅[自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)。
 
  \- 或 -
@@ -77,7 +77,7 @@ partial class MyDslClipboardCommandSet
 
 ```
 
- **当用户粘贴到选定目标时创建其他链接。** 例如，在将注释框粘贴到元素上时，将在其之间建立链接。
+ **当用户粘贴到选定目标时创建其他链接。** 例如，在将注释框粘贴到元素上时，它们之间即创建一个链接。
 将元素合并指令添加到目标域类，并将其设置为通过添加链接来处理合并。 这将在拖动操作上产生相同的效果。 有关详细信息，请参阅[自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)。
 
  \- 或 -
@@ -91,7 +91,7 @@ partial class MyDslClipboardCommandSet
 在 DslPackage 项目中重写*MyDsl*`ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()`。
 
  **通过复制和粘贴保留形状布局。**
-当用户复制多个形状时，可以在粘贴它们时保留其相对位置。 此方法由[VMSDK：线路图示例](https://go.microsoft.com/fwlink/?LinkId=213879)中的示例演示。
+当用户复制多个形状时，可以在粘贴它们时保留其相对位置。 此方法由[VMSDK：线路图示例](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)中的示例演示。
 
  若要获得此效果，请将形状和连接符添加到复制的 ElementGroupPrototype。 重写的最简便方法是 ElementOperations.CreateElementGroupPrototype()。 为此，请将以下代码添加到 DSL 项目：
 
@@ -148,7 +148,7 @@ partial class MyDslDiagram // EDIT NAME
 ```
 
  **在所选位置（例如当前光标位置）粘贴形状。**
-当用户复制多个形状时，可以在粘贴它们时保留其相对位置。 此方法由[VMSDK：线路图示例](https://go.microsoft.com/fwlink/?LinkId=213879)中的示例演示。
+当用户复制多个形状时，可以在粘贴它们时保留其相对位置。 此方法由[VMSDK：线路图示例](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)中的示例演示。
 
  为实现此效果，请重写 `ClipboardCommandSet.ProcessOnMenuPasteCommand()`，以使用特定于位置的版本的 `ElementOperations.Merge()`。 为此，请在 DslPackage 项目中添加以下代码：
 
@@ -564,4 +564,4 @@ namespace Company.MyDsl
 ```
 
 ## <a name="see-also"></a>请参阅
- [自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)[如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)[自定义删除行为](../modeling/customizing-deletion-behavior.md)[示例： VMSDK 电路图示例](https://go.microsoft.com/fwlink/?LinkId=213879)
+ [自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)[如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)[自定义删除行为](../modeling/customizing-deletion-behavior.md)[示例： VMSDK 电路图示例](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)

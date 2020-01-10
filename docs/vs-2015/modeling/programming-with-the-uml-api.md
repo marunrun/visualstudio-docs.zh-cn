@@ -12,12 +12,12 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dcb179ae80e60654c981da8c76e9a57e6fb8ed66
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: bdf1111198c7f874d03596382372fe25851e37d3
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296063"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852132"
 ---
 # <a name="programming-with-the-uml-api"></a>Programming with the UML API
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "74296063"
 
 |主题|描述的示例类型和方法|描述的功能|
 |-----------|-----------------------------------------|------------------------|
-|[使用 UML API 导航关系](../modeling/navigate-relationships-with-the-uml-api.md)|UML 元素及其属性和关联。 例如，IElement 及其后代，其中包括：IClass、IActivity、IUseCase、IComponent、IInteraction、IModel 和 IPackage|在 Visual Studio 中，UML 模型符合 UML 规范版本2.1.2，可在 " [Uml 资源" 页](https://go.microsoft.com/fwlink/?LinkId=160796)中获取。 每种类型都是一个接口，与 UML 类型具有相同的名称，带有前缀“I”。|
+|[使用 UML API 导航关系](../modeling/navigate-relationships-with-the-uml-api.md)|UML 元素及其属性和关联。 例如，IElement 及其后代，其中包括：IClass、IActivity、IUseCase、IComponent、IInteraction、IModel 和 IPackage|在 Visual Studio 中，UML 模型符合 UML 规范版本2.1.2，可在 " [Uml 资源" 页](https://www.uml.org/)中获取。 每种类型都是一个接口，与 UML 类型具有相同的名称，带有前缀“I”。|
 |[在 UML 模型中创建元素和关系](../modeling/create-elements-and-relationships-in-uml-models.md)|IPackage.CreateClass()<br /><br /> IClass.CreateOperation()|每个元素类型都具有创建其子级的方法。|
 |[在关系图上显示 UML 模型](../modeling/display-a-uml-model-on-diagrams.md)|IShape、IDiagram<br /><br /> IShape.Move()|模型中的每个元素都可以表示为关系图中的形状。 在某些情况下，可为每个对象创建新形状。 可以对这些形状进行移动、调整大小、着色和折叠或展开。|
 |[导航 UML 模型](../modeling/navigate-the-uml-model.md)|IModelStore<br /><br /> IDiagramContext|模型存储区用于存储模型。<br /><br /> 通过关系图上下文，可以访问当前关系图和存储。|

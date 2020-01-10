@@ -18,12 +18,12 @@ caps.latest.revision: 35
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f0ad4ea108cb0ec3b874c7f360be2e1f0e25ef45
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 937e28e923c26a72940b0181da16cf34199bb9aa
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299417"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852156"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>将 WPF 控件绑定到数据集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "74299417"
 
 - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
 
-- 对附加了 AdventureWorksLT 示例数据库的 SQL Server 或 SQL Server Express 的正在运行的实例的访问权限。 可以从[CodePlex](https://go.microsoft.com/fwlink/?linkid=87843)网站下载 AdventureWorksLT 数据库。
+- 对附加了 AdventureWorksLT 示例数据库的 SQL Server 或 SQL Server Express 的正在运行的实例的访问权限。 可以从[CodePlex](https://codeplex.com/SqlServerSamples)网站下载 AdventureWorksLT 数据库。
 
   事先了解以下概念也很有用，但对于完成本演练并不是必需的：
 
@@ -70,7 +70,7 @@ ms.locfileid: "74299417"
 
 4. 选择“WPF 应用程序”项目模板。
 
-5. 在 "**名称**" 框中，键入 `AdventureWorksProductsEditor` 然后单击 **"确定"** 。
+5. 在“名称”框中，键入 `AdventureWorksProductsEditor`，然后单击“确定”。
 
      Visual Studio 将创建 `AdventureWorksProductsEditor` 项目。
 
@@ -105,7 +105,7 @@ ms.locfileid: "74299417"
 
      Visual Studio 会向项目中添加一个新的 Adventureworksltdataset.xsd 文件，并将相应的**adventureworksltdataset.xsd**项添加到 "**数据源**" 窗口。 AdventureWorksLTDataSet.xsd 文件定义了一个名为 `AdventureWorksLTDataSet` 的类型化数据集和一个名为 `ProductTableAdapter` 的 TableAdapter。 在本演练后面的部分中，你将使用 `ProductTableAdapter` 向数据集填充数据，并将更改保存回数据库中。
 
-9. 生成项目。
+9. 生成此项目。
 
 ## <a name="edit-the-default-fill-method-of-the-tableadapter"></a>编辑 TableAdapter 的默认填充方法
  若要向数据集填充数据，请使用 `Fill` 的 `ProductTableAdapter` 方法。 默认情况下，`Fill` 方法将向 `ProductDataTable` 中的 `AdventureWorksLTDataSet` 填充 Product 表包含的所有数据行。 你可以修改此方法以仅返回行的子集。 对于本演练而言，将修改 `Fill` 方法以仅返回具有照片的产品行。
@@ -120,7 +120,7 @@ ms.locfileid: "74299417"
 
      “TableAdapter 配置”向导随即打开。
 
-3. 在“输入 SQL 语句”页面上，在文本框中的  **语句后添加以下 WHERE 子句**`SELECT`。
+3. 在“输入 SQL 语句”页面上，在文本框中的 `SELECT` 语句后添加以下 WHERE 子句。
 
     ```
     WHERE ThumbnailPhotoFileName <> 'no_image_available_small.gif'
@@ -149,7 +149,7 @@ ms.locfileid: "74299417"
     <Button HorizontalAlignment="Right" Margin="0,21,46,24" Name="saveButton" Width="110">Save changes</Button>
     ```
 
-3. 生成项目。
+3. 生成此项目。
 
 ## <a name="createdata-bound-controls"></a>Createdata 绑定控件
  通过将 `Product` 表从 "**数据源**" 窗口拖到 WPF 设计器，创建显示客户记录的控件。
@@ -186,13 +186,13 @@ ms.locfileid: "74299417"
 7. 在“属性”窗口，选中“IsReadOnly”属性旁边的复选框。
 
 ## <a name="navigating-product-records"></a>导航产品记录
- 添加可让用户通过“ **”和“\<”按钮来浏览产品记录的代码** **>** 。
+ 添加可让用户通过“\<”和“>”按钮来浏览产品记录的代码。
 
 #### <a name="to-enable-users-to-navigate-product-records"></a>使用户能够导航产品记录
 
-1. 在设计器中，双击窗口窗面上的“ **”按钮<** 。
+1. 在设计器中，双击窗口窗面上的“<”按钮。
 
-     Visual Studio 打开代码隐藏文件，并为 `backButton_Click` 事件创建新的 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件处理程序。
+     Visual Studio 打开代码隐藏文件，并为 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件创建新的 `backButton_Click` 事件处理程序。
 
 2. 修改 `Window_Loaded` 事件处理程序，使 `ProductViewSource`、`AdventureWorksLTDataSet` 和 `AdventureWorksLTDataSetProductTableAdapter` 位于该方法的外部，并使它们在整个窗体中可访问。 仅将这些项声明为全局窗体，并将它们分配到 `Window_Loaded` 事件处理程序中，如下所示：
 
@@ -204,7 +204,7 @@ ms.locfileid: "74299417"
      [!code-csharp[Data_WPFDATASET#2](../snippets/csharp/VS_Snippets_ProTools/data_wpfdataset/cs/mainwindow.xaml.cs#2)]
      [!code-vb[Data_WPFDATASET#2](../snippets/visualbasic/VS_Snippets_ProTools/data_wpfdataset/vb/mainwindow.xaml.vb#2)]
 
-4. 返回到设计器，然后双击“ **”按钮>** 。
+4. 返回到设计器，然后双击“>”按钮。
 
 5. 将以下代码添加到 `nextButton_Click` 事件处理程序中：
 
@@ -218,7 +218,7 @@ ms.locfileid: "74299417"
 
 1. 在设计器中，双击“保存更改”按钮。
 
-     Visual Studio 打开代码隐藏文件，并为 `saveButton_Click` 事件创建新的 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件处理程序。
+     Visual Studio 打开代码隐藏文件，并为 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件创建新的 `saveButton_Click` 事件处理程序。
 
 2. 将以下代码添加到 `saveButton_Click` 事件处理程序中：
 
@@ -229,7 +229,7 @@ ms.locfileid: "74299417"
     > 此示例使用 `Save` 的 `TableAdapter` 方法来保存更改。 这对于本演练很合适，因为本演练中只会更改一个数据表。 如果你需要保存对多个数据表所做的更改，则还可以使用 Visual Studio 利用你的数据集生成的 `UpdateAll` 的 `TableAdapterManager` 方法。 有关详细信息，请参阅[TableAdapterManager 概述](https://msdn.microsoft.com/library/33076d42-6b41-491a-ac11-6c6339aea650)。
 
 ## <a name="test-the-application"></a>测试应用程序
- 生成并运行应用程序。 验证你是否可以查看和更新产品记录。
+ 构建并运行应用程序。 验证你是否可以查看和更新产品记录。
 
 #### <a name="to-test-the-application"></a>测试应用程序
 
@@ -239,7 +239,7 @@ ms.locfileid: "74299417"
 
     - 文本框显示具有图片的第一条产品记录的数据。 此产品的产品 ID 为 713，名称为“Long-Sleeve Logo Jersey, S”。
 
-    - 可以单击“ **”或“>”按钮来导航其他产品记录** **<** 。
+    - 可以单击“>”或“<”按钮来导航其他产品记录。
 
 2. 在某一产品记录中，更改“大小”值，然后依次“保存更改”。
 

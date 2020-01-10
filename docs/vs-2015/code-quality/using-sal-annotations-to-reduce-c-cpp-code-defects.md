@@ -13,12 +13,12 @@ caps.latest.revision: 29
 author: mikeblome
 ms.author: mblome
 manager: jillfra
-ms.openlocfilehash: d8ea7122c5dcd086d10e4b937792dd7e47f68547
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 3dd1a481a7db9739bdd847c0b6780a2b55d28469
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291894"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848300"
 ---
 # <a name="using-sal-annotations-to-reduce-cc-code-defects"></a>使用 SAL 批注以减少 C/C++ 代码缺陷
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -60,7 +60,7 @@ SAL 是 Microsoft 源代码批注语言。 通过使用源代码批注，你可�
      提供演示如何使用 SAL 批注的示例。 还介绍常见的缺陷。  
   
 ## <a name="related-resources"></a>相关资源  
- [代码分析团队博客](https://go.microsoft.com/fwlink/?LinkId=251197)  
+ [代码分析团队博客](https://blogs.msdn.com/b/codeanalysis/)  
   
 ## <a name="see-also"></a>请参阅  
- [Windows 驱动程序的 SAL 2.0 批注](https://go.microsoft.com/fwlink/?LinkId=250979)
+ [Windows 驱动程序的 SAL 2.0 注释](https://msdn.microsoft.com/library/windows/hardware/hh454237.aspx)

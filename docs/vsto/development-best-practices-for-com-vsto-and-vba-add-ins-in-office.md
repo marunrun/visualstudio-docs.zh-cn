@@ -1,5 +1,5 @@
 ---
-title: 开发最佳做法：Office 中的 COM、VSTO & VBA 外接程序
+title: 开发最佳实践： COM、VSTO、Office 中 & VBA 外接程序
 ms.date: 07/25/2017
 ms.topic: conceptual
 dev_langs:
@@ -11,15 +11,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 35b39aef2865f0438e6165bd6bf2c5418e8fbcb0
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 24cc456058f4a87426261ce53fbecb2d919d6a2d
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254644"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846350"
 ---
 # <a name="development-best-practices-for-com-vsto-and-vba-add-ins-in-office"></a>Office 中 COM、VSTO 和 VBA 外接程序的开发最佳做法
-  如果要开发适用于 Office 的 COM、VSTO 或 VBA 外接程序，请遵循本文中所述的开发最佳实践。   这将有助于确保:
+  如果要开发适用于 Office 的 COM、VSTO 或 VBA 外接程序，请遵循本文中所述的开发最佳实践。   这有助于确保：
 
 - 不同版本和 Office 部署之间的外接程序的兼容性。
 - 降低了用户和 IT 管理员的加载项部署复杂性。
@@ -31,7 +31,7 @@ ms.locfileid: "71254644"
  建议你不要在外接程序安装过程中让你的加载项检测是否安装了 Office。 如果未安装 Office，则可以安装外接程序，并且用户在安装 Office 后可以访问它。
 
 ## <a name="use-embedded-interop-types-nopia"></a>使用嵌入的互操作类型（NoPIA）
-如果你的解决方案使用 .NET 4.0 或更高版本，请使用嵌入的互操作类型（NoPIA），而不是取决于 Office 主互操作程序集（PIA）可再发行组件。 使用类型嵌入可降低解决方案的安装大小，并可确保将来的兼容性。 Office 2010 是交付 PIA 可再发行组件的最新版本的 Office。 有关详细信息，请参见[演练：嵌入来自 Microsoft Office 程序集](https://msdn.microsoft.com/library/ee317478.aspx)和[类型等效性和嵌入互操作类型](/windows/uwp/porting/desktop-to-uwp-root)的类型信息。
+如果你的解决方案使用 .NET 4.0 或更高版本，请使用嵌入的互操作类型（NoPIA），而不是取决于 Office 主互操作程序集（PIA）可再发行组件。 使用类型嵌入可降低解决方案的安装大小，并可确保将来的兼容性。 Office 2010 是交付 PIA 可再发行组件的最新版本的 Office。 有关详细信息，请参阅[演练：嵌入类型信息 Microsoft Office 程序集](https://msdn.microsoft.com/library/ee317478.aspx)和[类型等效性和嵌入的互操作类型](/windows/uwp/porting/desktop-to-uwp-root)。
 
 如果你的解决方案使用的是早期版本的 .NET，我们建议你将解决方案更新为使用 .NET 4.0 或更高版本。 使用 .NET 4.0 或更高版本可在较新版本的 Windows 上减少运行时必备组件。
 
@@ -61,7 +61,7 @@ ms.locfileid: "71254644"
 
 若要为 Office 客户端应用程序（例如，Word 或 Excel）提供支持语句，请先验证外接程序是否在当前 Office 版本中运行，然后在将来的版本中的外接程序中断的情况下提交以提供更新。 当 Microsoft 发布新版本或 Office 更新时，无需测试外接程序。 Microsoft 很少在 Office 中更改 COM、VSTO 和 VBA 扩展性平台，这些更改将会很好地记录下来。
 
->重要提示：Microsoft 维护了一个列表，其中列出了准备就绪报表的支持外接程序，以及 ISV 联系信息。 若要使外接程序列出，请[https://aka.ms/readyforwindows](https://aka.ms/readyforwindows)参阅。
+>重要说明： Microsoft 维护了支持的加载项列表，其中列出了准备情况报表和 ISV 联系信息。 若要使外接程序列出，请参阅[https://docs.microsoft.com/configmgr/desktop-analytics/ready-for-windows](https://docs.microsoft.com/configmgr/desktop-analytics/ready-for-windows)。
 
 ## <a name="use-process-monitor-to-help-debug-installation-or-loading-issues"></a>使用进程监视器帮助调试安装或加载问题
 如果你的外接程序在安装或加载过程中存在兼容性问题，它们可能与文件或注册表访问问题有关。 使用[进程监视器](/sysinternals/downloads/procmon)或类似的调试工具来记录和比较工作环境的行为，以帮助确定问题。
