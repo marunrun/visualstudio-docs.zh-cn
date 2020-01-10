@@ -13,24 +13,24 @@ helpviewer_keywords:
 - GenerateTemporaryTargetAssembly task [WPF MSBuild], parameters
 - creating an assembly [WPF MSBuild], XAML page refers to a locally declared type
 ms.assetid: 92b6539c-6897-45e0-8989-0c234bbfe782
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 864c15203b0b9601f2c9f5bd1421acf48120bb41
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 634cf365c0cd42e3eb146b74a137a66f742a8730
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977828"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594807"
 ---
 # <a name="generatetemporarytargetassembly-task"></a>GenerateTemporaryTargetAssembly 任务
 如果项目中至少有一个 [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] 页引用该项目中本地声明的类型，则 <xref:Microsoft.Build.Tasks.Windows.GenerateTemporaryTargetAssembly> 任务会生成一个程序集。 在生成过程完成后或者在生成过程失败的情况下，生成的程序集会被删除。
 
 ## <a name="task-parameters"></a>任务参数
 
-| 参数 | 说明 |
+| 参数 | 描述 |
 |--------------------------| - |
 | `AssemblyName` | 必需的 **String** 参数。<br /><br /> 指定为项目生成的程序集的短名称，该名称同时也是临时生成的目标程序集的名称。 例如，如果项目生成一个名为 *WinExeAssembly.exe* 的 [!INCLUDE[TLA#tla_mswin](../code-quality/includes/tlasharptla_mswin_md.md)] 可执行文件，则 **AssemblyName** 参数的值为 **WinExeAssembly**。 |
 | `CompileTargetName` | 必需的 **String** 参数。<br /><br /> 指定用于从源代码文件生成程序集的 [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)] 目标的名称。 **CompileTargetName** 的典型值为 **CoreCompile**。 |
@@ -48,7 +48,7 @@ ms.locfileid: "62977828"
 但是，**MarkupCompilePass1** 会将包含对同一项目中类型的引用的 [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 文件转换推迟到由 [MarkupCompilePass2](../msbuild/markupcompilepass2-task.md) 执行的第二个标记编译传递。 **MarkupCompilePass2** 执行前会生成一个临时程序集。 该程序集包含推迟了标记编译传递的 [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 文件所使用的类型。 在其运行以允许被推迟的编译 [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 文件转换为二进制格式时，会向 **MarkupCompilePass2** 提供一个对已生成程序集的引用。
 
 ## <a name="example"></a>示例
-以下示例会生成一个临时程序集，因为 Page1.xaml 包含对同一项目中的类型的引用。
+以下示例会生成一个临时程序集，因为 Page1.xaml 包含对同一项目中的类型的引用  。
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

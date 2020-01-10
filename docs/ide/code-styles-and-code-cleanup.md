@@ -2,20 +2,20 @@
 title: 代码样式选项和代码清理
 ms.date: 04/25/2019
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Code_Style.General
 - VS.ToolsOptionsPages.Text_Editor.Basic.Code_Style.General
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d653898e6c6a8ab856a5b7763d12fd793708b9f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9d540339ca25fc42fc05df4818a6d05204ccae0e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72631102"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585400"
 ---
 # <a name="code-style-preferences"></a>代码样式首选项
 

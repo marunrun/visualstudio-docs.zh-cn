@@ -5,24 +5,24 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, concepts
 ms.assetid: 083b8ba3-e4ad-45af-bb5d-3bc81d406131
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 12f0c8f2235db4c5eb332d52a454bd0093a34b68
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aed8c97702989bdbdfd0f09c3cf99391c12fe9bd
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62842784"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589274"
 ---
 # <a name="msbuild-concepts"></a>MSBuild 概念
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 提供可用于控制生成平台如何生成软件的基本 XML 架构。 若要指定生成中的组件及其生成方式，请使用这四个 MSBuild 部件：属性、项、任务和目标。
 
 ## <a name="related-topics"></a>相关主题
 
-| Title | 说明 |
+| Title | 描述 |
 | - | - |
 | [MSBuild 属性](../msbuild/msbuild-properties.md) | 介绍属性和属性集合。 属性是可用于配置生成的键/值对。 |
 | [MSBuild 项](../msbuild/msbuild-items.md) | 介绍项和项集合。 项是生成系统的输入，通常表示文件。 |

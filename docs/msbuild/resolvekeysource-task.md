@@ -13,17 +13,17 @@ helpviewer_keywords:
 - ResolveKeySource task [MSBuild]
 - MSBuild, ResolveKeySource task
 ms.assetid: 449f06c2-e9aa-4236-ab1e-c45c25452b2e
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 123c45ed23743335a1c4db2000dd241cb92ce291
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 09b3917e1c67014a780d11e2ae9a944844e63e25
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62810631"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595184"
 ---
 # <a name="resolvekeysource-task"></a>ResolveKeySource 任务
 确定强名称密钥源。
@@ -31,7 +31,7 @@ ms.locfileid: "62810631"
 ## <a name="task-parameters"></a>任务参数
  下表描述了 `ResolveKeySource` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`AutoClosePasswordPromptShow`|可选 `Int32` 参数。<br /><br /> 获取或设置显示倒计时消息的时间长度（以秒为单位）。|
 |`AutoClosePasswordPromptTimeout`|可选 `Int32` 参数。<br /><br /> 获取或设置在关闭密码提示对话框之前要等待的时间量（以秒为单位）。|

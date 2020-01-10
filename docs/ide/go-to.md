@@ -7,17 +7,17 @@ helpviewer_keywords:
 - code editor, go to line
 - go to line
 - go to
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3a810e96b410c0f1f6f5d6ffdaa07b1e007abd6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bb39f1d395e48351aeacb587556224b0f86aac3e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654637"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593780"
 ---
 # <a name="find-code-using-go-to-commands"></a>使用“转到”命令查找代码
 
@@ -52,7 +52,7 @@ Visual Studio 的“转到”命令可执行代码的重点搜索，有助于快
 
 要缩小对特定类型的码位元素的搜索范围，可以在搜索框中指定一个前缀，也可以从以下五个筛选器图标中选择一个：
 
-前缀 | 图标 | 快捷键 | 说明
+前缀 | 图标 | 快捷键 | 描述
 :-: | - | - | -
 :| ![行图标](media/gotoall-line-icon.png) | Ctrl  +G  | 转到指定行号
 f| ![文件图标](media/gotoall-files-icon.png) | Ctrl  +1  、Ctrl  +F  | 转到指定文件
@@ -65,7 +65,7 @@ m| ![成员图标](media/gotoall-members-icon.png) | Ctrl  +1  、Ctrl  +M  | �
 
 要将搜索范围缩小到特定位置，请从这两个文档图标中选择一个：
 
-图标 | 说明
+图标 | 描述
 ---- | ---
 ![当前文档](media/gotoall_currentdocument.png) | 仅搜索当前文档
 ![外部文档](media/gotoall_external.png) | 除了项目/解决方案中的文档外还搜索外部文档
@@ -80,7 +80,7 @@ m| ![成员图标](media/gotoall-members-icon.png) | Ctrl  +1  、Ctrl  +M  | �
 
 选择齿轮图标 ![齿轮图标](media/gotoall_gear.png) 允许更改此功能的作用方式：
 
-设置 | 说明
+设置 | 描述
 ------- | ---
 使用预览选项卡 | 在 IDE 的预览选项卡中立即显示所选的项
 显示详细信息 | 在窗口的文档注释中显示项目、文件、行和摘要信息

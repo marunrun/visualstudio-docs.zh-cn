@@ -4,15 +4,15 @@ ms.date: 01/02/2018
 ms.topic: troubleshooting
 helpviewer_keywords:
 - templates [Visual Studio], troubleshooting
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 0dbdb2854833f7c28866aa3d6ec0a685803adb3d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1bef6a460f1a59823930597565b955b591ab48a0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72656557"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591380"
 ---
 # <a name="how-to-troubleshoot-templates"></a>如何：模板疑难解答
 
@@ -45,7 +45,7 @@ ms.locfileid: "72656557"
 1. 验证 vstemplate 文件的 XML 是否遵循模板架构  。 有关 vstemplate  架构的详细信息，请参阅[模板架构参考](../extensibility/visual-studio-template-schema-reference.md)。
 
     > [!NOTE]
-    > 要在创作 vstemplate  文件时获得 IntelliSense 支持，请将 `xmlns` 属性添加到 `VSTemplate` 元素，并为其赋值 http://schemas.microsoft.com/developer/vstemplate/2005 。
+    > 要在创作 vstemplate  文件时获得 IntelliSense 支持，请将 `xmlns` 属性添加到 `VSTemplate` 元素，并为其赋值 `http://schemas.microsoft.com/developer/vstemplate/2005`。
 
 1. 保存并关闭 vstemplate  文件。
 

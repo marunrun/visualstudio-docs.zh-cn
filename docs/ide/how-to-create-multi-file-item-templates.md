@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Visual Studio templates, creating multi-file item templates
 - multi-file item templates
 - item templates, creating multi-file item templates
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 82047b4a49db4edbea4ce965d1987f87a799a9f7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e8a6e5358a87e3d64b341c89b8ffd4cd3cf3e325
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655945"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593728"
 ---
 # <a name="how-to-create-multi-file-item-templates"></a>如何：创建多文件项模板
 
@@ -36,7 +36,7 @@ ms.locfileid: "72655945"
 
 1. 创建项模板与手动创建单文件项模板一样，但包括每个构成多文件项的文件。
 
-1. 在 .vstemplate XML 文件中，为每个单独文件添加 `ProjectItem` 元素，并向此元素添加 `TargetFileName` 属性  。 将 `TargetFileName` 属性的值设为 $fileinputname$.FileExtension，此处 FileExtension 为模板中包含的文件的文件扩展名   。 例如:
+1. 在 .vstemplate XML 文件中，为每个单独文件添加 `ProjectItem` 元素，并向此元素添加 `TargetFileName` 属性  。 将 `TargetFileName` 属性的值设为 $fileinputname$.FileExtension，此处 FileExtension 为模板中包含的文件的文件扩展名   。 例如：
 
     ```xml
     <ProjectItem TargetFileName="$fileinputname$.vb">

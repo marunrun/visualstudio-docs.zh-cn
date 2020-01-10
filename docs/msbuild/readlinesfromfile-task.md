@@ -13,17 +13,17 @@ helpviewer_keywords:
 - MSBuild, ReadLinesFromFile task
 - ReadLinesFromFile task [MSBuild]
 ms.assetid: a18af929-b53a-4d9e-b7bf-e3d3737ee85f
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3b08ab26b30abe767674d51795dd4f3a4cfac01
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aeb6e43e315aceef5028e77480b2817cd8edb030
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62974626"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597355"
 ---
 # <a name="readlinesfromfile-task"></a>ReadLinesFromFile 任务
 从文本文件读取项列表。
@@ -31,7 +31,7 @@ ms.locfileid: "62974626"
 ## <a name="parameters"></a>参数
  下表描述了 `ReadLinesFromFile` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`File`|必选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指定要读取的文件。 文件的每一行都必须有一项。|
 |`Lines`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 包含从文件读取的行。|

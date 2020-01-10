@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, tutorial
 ms.assetid: b8a8b866-bb07-4abf-b9ec-0b40d281c310
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ee57e0fb78eadce226a7fa8371d395181c6060a1
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: d874d8b9c96cc8cc58466bb42d8ac189e1aabc11
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445304"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75567289"
 ---
 # <a name="walkthrough-use-msbuild"></a>演练：使用 MSBuild
 
@@ -27,7 +27,7 @@ MSBuild 是 Microsoft 和 Visual Studio 的生成平台。 本演练介绍 MSBui
 
 - 如何使用生成项。
 
-可从 Visual Studio 或命令窗口运行 MSBuild。 本演练将使用 Visual Studio 创建 MSBuild 项目文件。 可在 Visual Studio 中编辑项目文件，并使用命令窗口生成项目并检查结果。
+可从 Visual Studio 或命令窗口  运行 MSBuild。 本演练将使用 Visual Studio 创建 MSBuild 项目文件。 可在 Visual Studio 中编辑项目文件，并使用命令窗口  生成项目并检查结果。
 
 ## <a name="create-an-msbuild-project"></a>创建 MSBuild 项目
 
@@ -38,17 +38,17 @@ MSBuild 是 Microsoft 和 Visual Studio 的生成平台。 本演练介绍 MSBui
 1. 打开 Visual Studio 并创建一个项目。
 
     ::: moniker range=">=vs-2019"
-    按 Esc 关闭启动窗口。 键入 Ctrl + Q 打开搜索框，键入“winforms”，然后选择“创建一个新的 Windows 窗体应用程序(.NET Framework)”。 在出现的对话框中，选择“创建”。
+    按 Esc 关闭启动窗口  。 键入 Ctrl + Q  打开搜索框，键入“winforms”  ，然后选择“创建一个新的 Windows 窗体应用程序(.NET Framework)”  。 在出现的对话框中，选择“创建”  。
 
-    在“名称”框中键入 `BuildApp`。 输入解决方案的“位置”，例如 D:\\。 接受“解决方案”、“解决方案名称”(BuildApp)，以及“框架”的默认值。
+    在“名称”  框中键入 `BuildApp`。 输入解决方案的“位置”  ，例如 D:\\  。 接受“解决方案”  、“解决方案名称”  (BuildApp  )，以及“框架”  的默认值。
     ::: moniker-end
     ::: moniker range="vs-2017"
-    在顶部菜单栏，依次选择“文件” > “新建” > “项目”。 在“新建项目”对话框的左侧窗格中，展开“Visual C#” > “Windows 桌面”，然后选择“Windows 窗体应用(.NET Framework)”。 然后选择“确定”。
+    从顶部菜单栏中选择“文件”   > “新建”   > “项目”  。 在“新建项目”  对话框的左侧窗格中，展开“Visual C#”   > “Windows 桌面”  ，然后选择“Windows 窗体应用(.NET Framework)”  。 然后选择“确定”  。
 
-    在“名称”框中键入 `BuildApp`。 输入解决方案的“位置”，例如 D:\\。 接受“创建解决方案目录”（已选）、“添加到源代码管理”（未选）和“解决方案名称”(BuildApp) 的默认值。
+    在“名称”  框中键入 `BuildApp`。 输入解决方案的“位置”  ，例如 D:\\  。 接受“创建解决方案目录”  （已选）、“添加到源代码管理”  （未选）和“解决方案名称”  (BuildApp  ) 的默认值。
     ::: moniker-end
 
-1. 单击“确定”或“创建”以创建项目文件。
+1. 单击“确定”  或“创建”  以创建项目文件。
 
 ## <a name="examine-the-project-file"></a>检查项目文件
 
@@ -56,13 +56,13 @@ MSBuild 是 Microsoft 和 Visual Studio 的生成平台。 本演练介绍 MSBui
 
 **检查项目文件**
 
-1. 在“解决方案资源管理器”中，单击项目节点“BuildApp”。
+1. 在“解决方案资源管理器”  中，单击项目节点“BuildApp”  。
 
-2. 请注意，在“属性”浏览器中，“项目文件”属性是“BuildApp.csproj”。 所有项目文件名称中都带有后缀“proj”。 如果创建了 Visual Basic 项目，则项目文件名称将为“BuildApp.vbproj”。
+2. 请注意，在“属性”  浏览器中，“项目文件”  属性是“BuildApp.csproj”  。 所有项目文件名称中都带有后缀“proj”  。 如果创建了 Visual Basic 项目，则项目文件名称将为“BuildApp.vbproj”  。
 
-3. 右键单击项目节点，然后单击“卸载项目”。
+3. 右键单击项目节点，然后单击“卸载项目”  。
 
-4. 再次右键单击项目节点，然后单击“编辑 BuildApp.csproj”。
+4. 再次右键单击项目节点，然后单击“编辑 BuildApp.csproj”  。
 
      该项目文件出现在代码编辑器中。
 
@@ -83,7 +83,7 @@ MSBuild 是 Microsoft 和 Visual Studio 的生成平台。 本演练介绍 MSBui
 
 - 目标是任务的已命名序列。 有关详细信息，请参阅[目标](../msbuild/msbuild-targets.md)主题。
 
-默认目标不是在项目文件中定义的。 而是在导入的项目中指定的。 [Import](../msbuild/import-element-msbuild.md) 元素可指定导入的项目。 例如在 C# 项目中，默认目标是从“Microsoft.CSharp.targets”文件中导入的。
+默认目标不是在项目文件中定义的。 而是在导入的项目中指定的。 [Import](../msbuild/import-element-msbuild.md) 元素可指定导入的项目。 例如在 C# 项目中，默认目标是从“Microsoft.CSharp.targets”  文件中导入的。
 
 ```xml
 <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -127,20 +127,20 @@ Message 任务将文本属性的字符串值作为输入并显示在输出设备
 
 ## <a name="build-the-target"></a>生成目标
 
- 从 Visual Studio 的“开发人员命令提示符”运行 MSBuild，生成上面定义的 HelloWorld 目标。 使用 -target 或 -t 命令行开关选择目标。
+ 从 Visual Studio 的“开发人员命令提示符”运行 MSBuild，生成上面定义的 HelloWorld 目标  。 使用 -target 或 -t 命令行开关选择目标。
 
 > [!NOTE]
-> 以下各部分将“开发人员命令提示”称为“命令窗口”。
+> 以下各部分将“开发人员命令提示”称为“命令窗口”   。
 
 **生成目标**
 
-1. 打开“命令窗口”。
+1. 打开“命令窗口”  。
 
    (Windows 10) 在任务栏的搜索框中，开始键入工具的名称，例如 `dev` 或 `developer command prompt`。 然后显示一个列表，其中包含与搜索模式匹配的已安装应用。
 
-   如需手动查找，可在“<visualstudio installation folder\>\<version>\Common7\Tools”文件夹中查找 LaunchDevCmd.bat 文件。
+   如需手动查找，可在“<visualstudio installation folder\>\<version>\Common7\Tools”文件夹中查找 LaunchDevCmd.bat 文件   。
 
-2. 从命令窗口导航到包含项目文件的文件夹，此例中为 D:\BuildApp\BuildApp。
+2. 从命令窗口导航到包含项目文件的文件夹，此例中为 D:\BuildApp\BuildApp  。
 
 3. 使用命令开关 -t:HelloWorld 运行 msbuild。 这将选择并生成 HelloWorld 目标：
 
@@ -148,7 +148,7 @@ Message 任务将文本属性的字符串值作为输入并显示在输出设备
     msbuild buildapp.csproj -t:HelloWorld
     ```
 
-4. 在“命令窗口”检查输出。 应看到两行“Hello”和“World”：
+4. 在“命令窗口”  检查输出。 应看到两行“Hello”和“World”：
 
     ```
     Hello
@@ -213,7 +213,7 @@ $(PropertyName)
 
 2. 保存项目文件。
 
-3. 在“命令窗口”输入并执行此行：
+3. 在“命令窗口”  输入并执行此行：
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
@@ -267,7 +267,7 @@ $(PropertyName)
 
 **在命令行中设置属性值**
 
-1. 在“命令窗口”输入并执行此行：
+1. 在“命令窗口”  输入并执行此行：
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld -p:Configuration=Release
@@ -297,7 +297,7 @@ MSBuild 创建配置属性并赋予其“发布”值。
 
 2. 保存项目文件。
 
-3. 在“命令窗口”输入并执行此行：
+3. 在“命令窗口”  输入并执行此行：
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
@@ -324,7 +324,7 @@ MSBuild 创建配置属性并赋予其“发布”值。
 </ItemGroup>
 ```
 
- 定义包含两个项的项组。 项类型编译有两个值：Program.cs 和 Properties\AssemblyInfo.cs。
+ 定义包含两个项的项组。 项类型编译有两个值：Program.cs 和 Properties\AssemblyInfo.cs   。
 
  以下代码通过在一个 Include 属性中声明两个文件（用分号分隔）来创建相同的项类型。
 
@@ -361,7 +361,7 @@ MSBuild 创建配置属性并赋予其“发布”值。
 
 2. 保存项目文件。
 
-3. 在“命令窗口”输入并执行此行：
+3. 在“命令窗口”  输入并执行此行：
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
@@ -393,7 +393,7 @@ MSBuild 创建配置属性并赋予其“发布”值。
 
 2. 保存项目文件。
 
-3. 在“命令窗口”输入并执行此行：
+3. 在“命令窗口”  输入并执行此行：
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
@@ -417,13 +417,13 @@ MSBuild 创建配置属性并赋予其“发布”值。
 <Photos Include="images\*.jpeg" />
 ```
 
- 将“图片”文件夹中所有文件扩展名为“.jpeg”的文件添加到照片项类型，而
+ 将“图片”  文件夹中所有文件扩展名为“.jpeg”  的文件添加到照片项类型，而
 
 ```xml
 <Photos Include="images\**\*.jpeg" />
 ```
 
- 将“图片”文件夹和其所有子文件夹中所有文件扩展名为“.jpeg”的文件添加到照片项类型。 有关更多示例，请参见[如何：选择要生成的文件](../msbuild/how-to-select-the-files-to-build.md)。
+ 将“图片”  文件夹和其所有子文件夹中所有文件扩展名为“.jpeg”  的文件添加到照片项类型。 有关更多示例，请参见[如何：选择要生成的文件](../msbuild/how-to-select-the-files-to-build.md)。
 
  注意，项在声明时会被添加到项类型。 例如，应用于对象的
 
@@ -432,7 +432,7 @@ MSBuild 创建配置属性并赋予其“发布”值。
 <Photos Include="images\*.gif" />
 ```
 
- 创建一个名为“照片”的项类型，其中包含“图片”文件夹中的所有文件，这些文件的扩展名为“.jpeg”或“.gif”。 这等效于以下行：
+ 创建一个名为“照片”的项类型，其中包含“图片”  文件夹中的所有文件，这些文件的扩展名为“.jpeg”  或“.gif”  。 这等效于以下行：
 
 ```xml
 <Photos Include="images\*.jpeg;images\*.gif" />
@@ -444,7 +444,7 @@ MSBuild 创建配置属性并赋予其“发布”值。
 <Compile Include="*.cs" Exclude="*Designer*">
 ```
 
- 将所有文件扩展名为“.cs”的文件添加到编译项类型，除了名称中包含字符串“Designer”的文件。 有关更多示例，请参见[如何：从生成中排除文件](../msbuild/how-to-exclude-files-from-the-build.md)。
+ 将所有文件扩展名为“.cs”  的文件添加到编译项类型，除了名称中包含字符串“Designer”  的文件。 有关更多示例，请参见[如何：从生成中排除文件](../msbuild/how-to-exclude-files-from-the-build.md)。
 
 Exclude 属性只会影响由 Include 属性添加的项（这两个属性均位于项元素中）。 例如，应用于对象的
 
@@ -453,7 +453,7 @@ Exclude 属性只会影响由 Include 属性添加的项（这两个属性均位
 <Compile Include="*.res" Exclude="Form1.cs">
 ```
 
-不会排除在之前的项元素中添加的文件 Form1.cs。
+不会排除在之前的项元素中添加的文件 Form1.cs  。
 
 **包含和排除项**
 
@@ -473,7 +473,7 @@ Exclude 属性只会影响由 Include 属性添加的项（这两个属性均位
 
 3. 保存项目文件。
 
-4. 在“命令窗口”输入并执行此行：
+4. 在“命令窗口”  输入并执行此行：
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
@@ -514,7 +514,7 @@ Exclude 属性只会影响由 Include 属性添加的项（这两个属性均位
 
 2. 保存项目文件。
 
-3. 在“命令窗口”输入并执行此行：
+3. 在“命令窗口”  输入并执行此行：
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
@@ -545,7 +545,7 @@ Exclude 属性只会影响由 Include 属性添加的项（这两个属性均位
 
 2. 保存项目文件。
 
-3. 在“命令窗口”输入并执行此行：
+3. 在“命令窗口”  输入并执行此行：
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
@@ -584,7 +584,7 @@ Exclude 属性只会影响由 Include 属性添加的项（这两个属性均位
 
 2. 保存项目文件。
 
-3. 在“命令窗口”输入并执行此行：
+3. 在“命令窗口”  输入并执行此行：
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
