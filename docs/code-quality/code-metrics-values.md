@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f6caf63b2d1fb6b9206fe43da5c7a63818fd299f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: ece5c08ca3aa4a9f5e5329dbf6d5fd6c9087d085
+ms.sourcegitcommit: aa302af53de342e75793bd05b10325939dc69b53
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587690"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886406"
 ---
 # <a name="code-metrics-values"></a>代码度量值
 
@@ -36,10 +36,19 @@ ms.locfileid: "75587690"
 
 - **类耦合**-衡量与通过参数、 局部变量、 返回类型、 方法调用、 泛型或模板实例化、 基类，这些类、 接口实现、 外部类型上定义的字段的唯一类耦合程度和特性修饰。 类型和方法应具有高度内聚和较低的耦合，决定了优秀的软件设计。 高的耦合度表示设计，很难进行重复使用和维护由于其许多其他类型相互依赖关系。 有关详细信息，请参阅[类耦合](https://blogs.msdn.microsoft.com/zainnab/2011/05/25/code-metrics-class-coupling/)博客文章。
 
+::: moniker range=">=vs-2019"
+
+- **源代码行**数-表示源文件中存在的源代码行的确切数目，包括空行。 此指标在 Visual Studio 2019 版本16.4 和 CodeAnalysis. Dc （2.9.5）中启动。
+
+- **可执行代码的行**数-表示可执行代码行或操作的大致数目。 这是可执行代码中的操作数。 此指标在 Visual Studio 2019 版本16.4 和 CodeAnalysis. Dc （2.9.5）中启动。 值通常与上一个度量值（即在旧模式下使用的基于 MSIL 指令的度量值的**行**）接近。
+::: moniker-end
+::: moniker range="vs-2017"
+
 - **代码行**-指示的代码中的行的大致数目。 计数为基础的 IL 代码，因此不精确的源代码文件中的行数。 较高的计数可能表示某个类型或方法正在尝试执行过多的工作并且应拆分。 它还可能指示类型或方法可能很难维护。
 
    > [!NOTE]
    > [命令行版本](../code-quality/how-to-generate-code-metrics-data.md#command-line-code-metrics)代码的指标工具计算实际行代码，因为它分析而不是 IL 的源代码。
+::: moniker-end
 
 ## <a name="anonymous-methods"></a>匿名方法
 
