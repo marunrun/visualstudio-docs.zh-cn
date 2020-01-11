@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a71f507aa5ce524e01b2120594ace634056d0850
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: a43f11df65286e25d0ea19990fa56620695e69df
+ms.sourcegitcommit: aa302af53de342e75793bd05b10325939dc69b53
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587467"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886438"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>如何：生成代码度量数据
 
@@ -162,6 +162,63 @@ Build succeeded.
 
 生成的 XML 输出采用以下格式：
 
+::: moniker range=">=vs-2019"
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<CodeMetricsReport Version="1.0">
+  <Targets>
+    <Target Name="ConsoleApp20.csproj">
+      <Assembly Name="ConsoleApp20, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <Metrics>
+          <Metric Name="MaintainabilityIndex" Value="100" />
+          <Metric Name="CyclomaticComplexity" Value="1" />
+          <Metric Name="ClassCoupling" Value="1" />
+          <Metric Name="DepthOfInheritance" Value="1" />
+          <Metric Name="SourceLines" Value="11" />
+          <Metric Name="ExecutableLines" Value="1" />
+        </Metrics>
+        <Namespaces>
+          <Namespace Name="ConsoleApp20">
+            <Metrics>
+              <Metric Name="MaintainabilityIndex" Value="100" />
+              <Metric Name="CyclomaticComplexity" Value="1" />
+              <Metric Name="ClassCoupling" Value="1" />
+              <Metric Name="DepthOfInheritance" Value="1" />
+              <Metric Name="SourceLines" Value="11" />
+              <Metric Name="ExecutableLines" Value="1" />
+            </Metrics>
+            <Types>
+              <NamedType Name="Program">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="100" />
+                  <Metric Name="CyclomaticComplexity" Value="1" />
+                  <Metric Name="ClassCoupling" Value="1" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="SourceLines" Value="7" />
+                  <Metric Name="ExecutableLines" Value="1" />
+                </Metrics>
+                <Members>
+                  <Method Name="void Program.Main(string[] args)" File="C:\source\repos\ConsoleApp20\ConsoleApp20\Program.cs" Line="7">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="SourceLines" Value="4" />
+                      <Metric Name="ExecutableLines" Value="1" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+            </Types>
+          </Namespace>
+        </Namespaces>
+      </Assembly>
+    </Target>
+  </Targets>
+</CodeMetricsReport>
+```
+::: moniker-end
+::: moniker range="vs-2017"
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <CodeMetricsReport Version="1.0">
@@ -212,6 +269,7 @@ Build succeeded.
   </Targets>
 </CodeMetricsReport>
 ```
+::: moniker-end
 
 ### <a name="metricsexe"></a>度量值 .exe
 
@@ -253,13 +311,24 @@ msbuild /m /v:m /t:rebuild /p:LEGACY_CODE_METRICS_MODE=true Metrics.csproj
 
 ### <a name="previous-versions"></a>早期版本
 
+::: moniker range=">=vs-2019"
+Visual Studio 2015 附带了一个命令行代码度量值工具，该工具也称为 "*规格*"。 此工具的以前版本执行二进制分析，即基于程序集的分析。 较新版本的*规格 .exe*工具会分析源代码。 由于较新的*规格 .exe*工具是基于源代码的，因此，命令行代码度量结果可能与 VISUAL Studio IDE 和以前版本的*指标*生成的结果不同。 从 Visual Studio 2019 开始，Visual Studio IDE 将分析类似于命令行工具的源代码，结果应相同。
+
+::: moniker-end
+::: moniker range="vs-2017"
 Visual Studio 2015 附带了一个命令行代码度量值工具，该工具也称为 "*规格*"。 此工具的以前版本执行二进制分析，即基于程序集的分析。 新的*规格 .exe*工具会分析源代码。 由于新的*规格 .exe*工具是基于源代码的，因此，命令行代码度量结果与 VISUAL Studio IDE 和以前版本的*指标*生成的结果不同。
+::: moniker-end
 
 即使存在源代码错误，新的命令行代码度量工具也会计算度量值，前提是解决方案和项目可以加载。
 
 #### <a name="metric-value-differences"></a>指标值差异
 
+::: moniker range=">=vs-2019"
+从 Visual Studio 2019 版本16.4 和 CodeAnalysis Dc （2.9.5）开始，`SourceLines` 和 `ExecutableLines` 替换以前的 `LinesOfCode` 指标。 有关新指标的说明，请参阅[代码度量值](../code-quality/code-metrics-values.md)。 `LinesOfCode` 指标在旧模式下可用。
+::: moniker-end
+::: moniker range="vs-2017"
 在新的命令行代码度量工具中，`LinesOfCode` 指标更准确且更可靠。 它独立于任何 codegen 差异，并且在工具集或运行时发生更改时不会更改。 新工具将计算代码的实际行数，包括空白行和注释。
+::: moniker-end
 
 其他指标（例如 `CyclomaticComplexity` 和 `MaintainabilityIndex`）使用与之前版本的*规格*相同的公式，但新的工具会计算 `IOperations` （逻辑源指令）而不是中间语言（IL）指令的数目。 这些数字将与 Visual Studio IDE 和以前版本的*指标*生成的数字略有不同。
 
