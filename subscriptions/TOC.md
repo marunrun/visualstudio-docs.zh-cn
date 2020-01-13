@@ -88,7 +88,7 @@
 ### [使用个人电子邮件登录的订阅者](personal-email-sign-ins.md)
 ### [使用 GitHub Enterprise 管理 Visual Studio](assign-github.md)
 # 资源
-## [Visual Studio 授权白皮书](https://aka.ms/vslicensing)
+## [Visual Studio 授权白皮书](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 ## [比较订阅选项和定价](https://visualstudio.microsoft.com/vs/pricing)
 ## [比较 Visual Studio IDE 功能](https://visualstudio.microsoft.com/vs/compare)
 ## [Visual Studio 管理和订阅支持](https://visualstudio.microsoft.com/support/support-overview-vs)
