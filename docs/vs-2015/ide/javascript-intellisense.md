@@ -26,12 +26,12 @@ caps.latest.revision: 67
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e367ff6d6abbf40cdf7efebed04aee6fc74a384c
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 962c724e231275c9fa716d6c823b7451292392cf
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300750"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848387"
 ---
 # <a name="javascript-intellisense"></a>JavaScript IntelliSense
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -127,7 +127,7 @@ IntelliSense 可在你编码时提供信息，从而有助于较快地编写代�
 ### <a name="UserDefined"></a> 用户定义的变量、函数和对象
  更改 JavaScript 文件时，[!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 将扫描打开和引用的文档，以确定所有可用的代码资源。 这包括已创建的变量、函数和对象。 然后 JavaScript IntelliSense 便可使用这些资源。
 
- 有关用户定义的变量、函数和对象的详细信息，请参阅 MSDN 网站上的[创建自己的对象](https://go.microsoft.com/fwlink/?LinkId=108671)。
+ 有关用户定义的变量、函数和对象的详细信息，请参阅 MSDN 网站上的[创建自己的对象](https://msdn.microsoft.com/library/202863ha.aspx)。
 
 ### <a name="External"></a> 外部文件引用
  你可以包含各种类型的外部文件引用，以便在你的代码中实现 IntelliSense 支持。 外部文件引用可能是脚本引用、引用指令，或可使用引用组指定。
@@ -283,6 +283,6 @@ IntelliSense 可在你编码时提供信息，从而有助于较快地编写代�
 - [扩展 JavaScript IntelliSense](../ide/extending-javascript-intellisense.md)
 - [适用于标识符的语句结束](../ide/statement-completion-for-identifiers.md)
 - [XML 文档注释](../ide/xml-documentation-comments-javascript.md)
-- [关于 DHTML 对象模型](https://go.microsoft.com/fwlink/?LinkID=92344)
+- [关于 DHTML 对象模型](https://msdn2.microsoft.com/library/ms533022.aspx)
 - [列表成员](https://msdn.microsoft.com/1b9cc469-9cd4-4d42-9999-1f9479635ff8)
-- [SRC 特性|src 属性](https://go.microsoft.com/fwlink/?LinkId=92345)
+- [SRC 特性|src 属性](https://msdn2.microsoft.com/library/ms534642.aspx)
