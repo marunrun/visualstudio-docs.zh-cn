@@ -11,12 +11,12 @@ ms.assetid: 33416226-9083-41b5-b153-10d2bf35c012
 caps.latest.revision: 41
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 4d9a7b39dc322ab92458dbd6c7304f672468db17
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 0adc81cfe9ea4462940c31a02c6429be89709565
+ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851715"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75944264"
 ---
 # <a name="installing-an-isolated-shell-application"></a>安装独立 Shell 应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "75851715"
   
 - Visual Studio SDK  
   
-- [WINDOWS INSTALLER XML 工具集](http://wix.sourceforge.net/)版本3。6  
+- [WINDOWS INSTALLER XML 工具集](https://documentation.help/WiX-Toolset/index.html/)版本3。6  
   
   该示例还需要 Microsoft 可视化和建模 SDK，这并非所有外壳都需要。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "75851715"
 2. 对于包含 VSIX 清单的每个项目，编辑生成任务，将内容输出到 MSI 将安装到的位置。 在生成输出中包括 VSIX 清单，但不生成 .vsix 文件。  
   
 ## <a name="creating-an-msi-for-your-shell"></a>为 Shell 创建 MSI  
- 为了构建你的 MSI 包，我们建议你使用[Windows Installer 的 XML 工具集](http://wix.sourceforge.net/)，因为它比标准安装项目提供更大的灵活性。  
+ 为了构建你的 MSI 包，我们建议你使用[Windows Installer 的 XML 工具集](https://documentation.help/WiX-Toolset/index.html)，因为它比标准安装项目提供更大的灵活性。  
   
  在 wsmanconfig.wxs 文件中，设置检测块和 Shell 组件的布局。  
   

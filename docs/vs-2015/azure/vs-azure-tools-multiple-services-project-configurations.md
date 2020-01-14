@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: a151e16537eb143f27e9fd518cdc2495ac954563
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 59996180661806eee60d18ab4b7b5fd26f4a2e7b
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851375"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915588"
 ---
 # <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>在 Visual Studio 中配置 Azure 项目以使用多个服务配置
 
@@ -57,7 +57,7 @@ Visual Studio 中的 Azure 云服务项目包括三个配置文件：`ServiceDef
 
 ## <a name="settings-page"></a>“设置”页
 
-在“设置”页上，可以将设置以名称/值对形式添加到配置中。 角色中运行的代码可以使用 [Azure 托管库](https://msdn.microsoft.com/library/azure/dn602775(v=azure.11).aspx)提供的类（具体而言，[GetConfigurationSettingValue](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleenvironment.getconfigurationsettingvalue.aspx) 方法），在运行时读取配置设置的值。
+在“设置”页上，可以将设置以名称/值对形式添加到配置中。 角色中运行的代码可以使用 [Azure 托管库](/previous-versions/azure/dn602775(v=azure.11))提供的类（具体而言，[GetConfigurationSettingValue](/previous-versions/azure/reference/ee772857(v=azure.100)) 方法），在运行时读取配置设置的值。
 
 ### <a name="configuring-a-connection-string-for-a-storage-account"></a>为存储帐户配置连接字符串
 

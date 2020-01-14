@@ -9,12 +9,12 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d0c001ec8310759309c88c49c37050516b110b81
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 83c8d8e7a1afe0946c1b1f5eb25c8650e2b512f5
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850802"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917318"
 ---
 # <a name="structure-your-modeling-solution"></a>安排你的建模解决方案
 
@@ -34,7 +34,7 @@ ms.locfileid: "75850802"
 
 #### <a name="to-divide-an-application-into-layers"></a>将应用程序划分为多层
 
-1. 将解决方案的结构建立在应用程序（例如，Web 应用程序、服务应用程序或桌面应用程序）的结构之上。 [Microsoft 应用程序体系结构指南的应用程序原型中](https://docs.microsoft.com/previous-versions/msp-n-p/ee658107(v=pandp.10)?redirectedfrom=MSDN)讨论了各种常见的体系结构。
+1. 将解决方案的结构建立在应用程序（例如，Web 应用程序、服务应用程序或桌面应用程序）的结构之上。 [Microsoft 应用程序体系结构指南的应用程序原型中](/previous-versions/msp-n-p/ee658107(v=pandp.10))讨论了各种常见的体系结构。
 
 2. 创建我们称之为体系结构解决方案的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 解决方案。 此解决方案将用于创建系统的整体设计。 它将包含模型但不包括代码。
 

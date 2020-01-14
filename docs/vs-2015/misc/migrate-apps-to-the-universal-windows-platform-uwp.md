@@ -9,12 +9,12 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5794aa5ab7dc14932c65a9156ea9252e71731155
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 60951091914474f07f19672799fb59c8b2d0aa56
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299470"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919143"
 ---
 # <a name="migrate-apps-to-the-universal-windows-platform-uwp"></a>将应用迁移到通用 Windows 平台 (UWP)
 对使用 Visual Studio 2015 RC 创建的 Windows Store 8.1 应用、Windows Phone 8.1 应用或通用 Windows 应用的现有项目文件进行必要的手动更改，以便它们能与 Visual Studio 2015 RTM 一起使用。 （如果你的 Windows 8.1 通用应用同时具有 Windows 应用项目和 Windows Phone 项目，则需要按照以下步骤迁移每个项目。）
@@ -292,7 +292,7 @@ ms.locfileid: "74299470"
         </PropertyGroup>
         ```
 
-4. 将 \<PlatformToolset > 元素的所有实例更改为具有值 v140。 例如:
+4. 将 \<PlatformToolset > 元素的所有实例更改为具有值 v140。 例如：
 
     ```xml
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -379,7 +379,7 @@ ms.locfileid: "74299470"
 
 5. 查找 \<必备组件 > 元素，并删除此元素及其具有的任何子元素。
 
-6. 将**uap**命名空间添加到以下 \<资源 > 元素： Scale、DXFeatureLevel。 例如:
+6. 将**uap**命名空间添加到以下 \<资源 > 元素： Scale、DXFeatureLevel。 例如：
 
    ```xml
    <Resources>
@@ -390,7 +390,7 @@ ms.locfileid: "74299470"
 
    ```
 
-7. 将**uap**命名空间添加到以下 \<功能 > 元素： DocumentsLibrary、PicturesLibrary、VideosLibrary、MusicLibrary、EnterpriseAuthentication、SharedUserCertificates、removableStorage、约会和联系人。 例如:
+7. 将**uap**命名空间添加到以下 \<功能 > 元素： DocumentsLibrary、PicturesLibrary、VideosLibrary、MusicLibrary、EnterpriseAuthentication、SharedUserCertificates、removableStorage、约会和联系人。 例如：
 
    ```xml
    <Capabilities>
@@ -400,7 +400,7 @@ ms.locfileid: "74299470"
 
    ```
 
-8. 将**uap**命名空间添加到 \<visualelements> > 元素及其任何子元素。 例如:
+8. 将**uap**命名空间添加到 \<visualelements> > 元素及其任何子元素。 例如：
 
    ```xml
    <uap:VisualElements
@@ -444,7 +444,7 @@ ms.locfileid: "74299470"
 
    ```
 
-9. 将**uap**命名空间添加到 \<s > 及其所有子元素。 例如:
+9. 将**uap**命名空间添加到 \<s > 及其所有子元素。 例如：
 
     ```xml
     <uap:ApplicationContentUriRules>
@@ -454,7 +454,7 @@ ms.locfileid: "74299470"
 
     ```
 
-10. 将**uap**命名空间添加到以下 \<扩展 > 元素及其所有子元素： AccountPictureProvide、AppointmentsProvider、autoPlayContent、autoPlayDevice、cachedFileUpdate、cameraSettings、fileOpenPicker、fileTypeAssociation、fileSavePicke、lockScreenCall、printTaskSettings、shareTarget、、、、、、。 例如:
+10. 将**uap**命名空间添加到以下 \<扩展 > 元素及其所有子元素： AccountPictureProvide、AppointmentsProvider、autoPlayContent、autoPlayDevice、cachedFileUpdate、cameraSettings、fileOpenPicker、fileTypeAssociation、fileSavePicke、lockScreenCall、printTaskSettings、shareTarget、、、、、、。 例如：
 
     ```xml
     <Extensions>
@@ -469,7 +469,7 @@ ms.locfileid: "74299470"
 
     ```
 
-11. 将“uap” 命名空间添加到 chatMessageNotification 类型的后台任务。 例如:
+11. 将“uap” 命名空间添加到 chatMessageNotification 类型的后台任务。 例如：
 
     ```xml
     <Extension Category="windows.backgroundTasks" EntryPoint="Fabrikam.BackgroundTask" Executable="MyBackground.exe">
@@ -505,7 +505,7 @@ ms.locfileid: "74299470"
 
      使用你正在使用的实际框架的相应发布者和 MinVersion 值。 请注意，对于 Windows 10，这些名称可能会更改。
 
-13. 将 gattCharacteristicNotification 和 rfcommConnection 后台类型任务替换为蓝牙类型任务。 例如:
+13. 将 gattCharacteristicNotification 和 rfcommConnection 后台类型任务替换为蓝牙类型任务。 例如：
 
      **原来**
 
@@ -528,7 +528,7 @@ ms.locfileid: "74299470"
     </Extension>
     ```
 
-14. 将蓝牙设备功能 bluetooth.rfcomm 和 bluetooth.genericAttributeProfile 替换为泛型蓝牙功能。 例如:
+14. 将蓝牙设备功能 bluetooth.rfcomm 和 bluetooth.genericAttributeProfile 替换为泛型蓝牙功能。 例如：
 
      **原来**
 
@@ -566,7 +566,7 @@ ms.locfileid: "74299470"
 
        - \<w > 元素
 
-         例如:
+         例如：
 
        ```xml
        <m2:VisualElements
@@ -691,7 +691,7 @@ ms.locfileid: "74299470"
 
    ```
 
-8. 查找已 \<> 引用 NuGet 包的 \<ItemGroup >。 记下引用的 NuGet 包，因为在后续步骤中将需要此信息。 Visual Studio 2015 RC 与 Visual Studio 2015 RTM 在 Windows 10 项目格式上的其中一个显著区别是 RTM 格式使用 [NuGet](https://docs.microsoft.com/nuget/) 版本 3。
+8. 查找已 \<> 引用 NuGet 包的 \<ItemGroup >。 记下引用的 NuGet 包，因为在后续步骤中将需要此信息。 Visual Studio 2015 RC 与 Visual Studio 2015 RTM 在 Windows 10 项目格式上的其中一个显著区别是 RTM 格式使用 [NuGet](/nuget/) 版本 3。
 
     删除 \<ItemGroup > 及其所有子项。 例如，使用 Visual Studio RC 创建的 UWP 项目可能具有以下需要删除的 NuGet 包：
 
@@ -739,7 +739,7 @@ ms.locfileid: "74299470"
 
     2. 保存更改。
 
-14. 使用 NuGet 管理器添加你在之前步骤中删除的包。 Visual Studio 2015 RC 与 Visual Studio 2015 RTM 在 Windows 10 项目格式上的其中一个显著区别是 RTM 格式使用 [NuGet](https://docs.microsoft.com/nuget/) 版本 3。
+14. 使用 NuGet 管理器添加你在之前步骤中删除的包。 Visual Studio 2015 RC 与 Visual Studio 2015 RTM 在 Windows 10 项目格式上的其中一个显著区别是 RTM 格式使用 [NuGet](/nuget/) 版本 3。
 
     现在可以对应用进行编码、编译和调试。
 

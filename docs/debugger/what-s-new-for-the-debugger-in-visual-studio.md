@@ -20,18 +20,18 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 130387fedce065948ebe09ea605e32cf89ad820b
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 523867a8f9aa074e9122c74deb8bcd91cddd8bee
+ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71210588"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75944216"
 ---
 # <a name="whats-new-for-the-debugger-in-visual-studio-2017"></a>Visual Studio 2017 中调试器的新变化
 
 调试器包括以下新功能：
 
-- 在版本15.5 中的新增操作中，当你感兴趣的代码执行时， **Snapshot Debugger**会拍摄你的生产中应用的快照。 若要指示该调试器拍摄快照，可以在代码中设置快照点和记录点。 通过该调试器，可精确查看出错的内容，而不会影响生产应用程序的流量。 快照调试程序有助于大幅减少用于解决生产环境中发生的问题的时间。
+- 在版本15.5 中的新增操作中，当你感兴趣的代码执行时， **Snapshot Debugger**会拍摄你的生产中应用的快照。 要指示调试程序拍摄快照，可在代码中设置 snappoints 和 logpoints。 通过该调试器，可精确查看出错的内容，而不会影响生产应用程序的流量。 快照调试程序有助于大幅减少用于解决生产环境中发生的问题的时间。
 
     快照集合适用于在 Azure App Service 中运行的以下 Web 应用：
 
@@ -44,9 +44,9 @@ ms.locfileid: "71210588"
 
     可以通过使用调试工具栏中的“后退”和前进”按钮浏览和查看快照。 这些按钮用于浏览“诊断工具”窗口中“事件”选项卡上显示的事件。
 
-    ![“后退”和“前进”按钮](../debugger/media/intellitrace-step-back-icons-description.png  "Step Backward and Forward buttons")
+    ![“后退”和“前进”按钮](../debugger/media/intellitrace-step-back-icons-description.png  "“后退”和“前进”按钮")
 
-    有关详细信息，请参阅[使用 IntelliTrace 检查上一应用状态](../debugger/view-historical-application-state.md)页。
+    有关详细信息，请参阅[使用 IntelliTrace 检查上一应用状态](view-historical-application-state.md)页。
 
 - **异常帮助**程序将替换 "异常助手"，并出现在出现错误的非模式对话框中。 **异常帮助**程序可以更快地访问任何内部异常、调试器的其他分析（如果可用）以及对异常的**异常设置**的立即访问。 如果异常帮助程序阻止了需要查看的内容，也可以将其拖到浮动视图。
 
@@ -54,7 +54,7 @@ ms.locfileid: "71210588"
 
     ![调试器的异常帮助器](../debugger/media/dbg-exception-helper.png "DbgExceptionHelper")
 
-    有关详细信息，请参阅 [Using the New Exception Helper in Visual Studio](https://blogs.msdn.microsoft.com/visualstudioalm/2016/03/31/using-the-new-exception-helper-in-visual-studio-15-preview/)（使用 Visual Studio 中的新异常帮助器）博客文章。
+    有关详细信息，请参阅 [Using the New Exception Helper in Visual Studio](https://devblogs.microsoft.com/devops/using-the-new-exception-helper-in-visual-studio-15-preview/)（使用 Visual Studio 中的新异常帮助器）博客文章。
 
 - 你现在可以通过选择 "在**此处运行执行到此处**" 绿色箭头图标（当鼠标悬停在代码行上时看到图标），在调试器中暂停时运行到代码行。 这样就无需设置临时断点。
 
@@ -68,9 +68,9 @@ ms.locfileid: "71210588"
 
     ![在 "附加到进程" 中搜索](../debugger/media/dbg-attach-to-process-search.png "DbgAttachToProcessSearch")
 
-有关这些新功能的详细信息，请参阅的[发行说明[!include[vs_dev15](../misc/includes/vs_dev15_md.md)] ](/visualstudio/releasenotes/vs2017-relnotes)。
+有关这些新功能的详细信息，请参阅[[!include[vs_dev15](../misc/includes/vs_dev15_md.md)]的发行说明](/visualstudio/releasenotes/vs2017-relnotes)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中进行调试](../debugger/index.yml)
 - [初探调试器](../debugger/debugger-feature-tour.md)

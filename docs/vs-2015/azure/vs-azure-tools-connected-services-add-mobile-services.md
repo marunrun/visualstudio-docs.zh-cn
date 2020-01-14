@@ -12,12 +12,12 @@ ms.technology: vs-azure
 ms.custom: vs-azure
 ms.date: 12/16/2015
 ms.author: mlearned
-ms.openlocfilehash: 83f908876b2e0de774443084d830f20d121e33d0
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 0a8f6fab3c8f30834a467e2ad98843b16a9245b4
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75844850"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916700"
 ---
 # <a name="adding-mobile-services-by-using-visual-studio-connected-services"></a>使用 Visual Studio 连接服务添加移动服务
 借助 Visual Studio 2015，可以使用“添加连接服务”对话框连接到 Azure 移动服务。 您可以从任何 C# 客户端应用、任何 JavaScript 应用或跨平台 Cordova 应用进行连接。 连接后，您就可以创建并访问数据、创建自定义 API 和计划作业，或添加对推送通知的支持。  连接服务操作将添加所有适当的引用和连接代码。 您还可以利用内置支持，以便使用各种常用身份标识方案（例如，Azure AD、Facebook、Twitter 和 Microsoft 帐户）进行身份验证。
@@ -63,9 +63,6 @@ ms.locfileid: "75844850"
    5. “Azure 移动服务”对话框上的服务列表中应当会显示新移动服务。 在列表中选择新移动服务，然后选择“添加”按钮以将该服务添加到项目中。
 5. 查看显示的入门页，了解您的项目的修改情况。 每当你添加连接的服务时，“入门”页便会显示在你的浏览器中。 你可以查看建议的后续步骤和代码示例，或切换到“完成的操作”页以查看哪些引用已添加到你的项目，以及对你的代码和配置文件进行了哪些修改。
 6. 使用代码示例作为指导，开始编写代码来访问您的移动服务！
-
-## <a name="how-your-project-is-modified"></a>您的项目的修改情况
-Visual Studio 如何修改您的项目取决于项目类型。 对于 C# 客户端应用，请参阅[完成的操作 – C# 项目](https://docs.microsoft.com/azure/)。 对于 JavaScript 客户端应用，请参阅[完成的操作 – JavaScript 项目](https://docs.microsoft.com/azure/)。 对于 Cordova 应用，请参阅[完成的操作 – Cordova 项目](https://docs.microsoft.com/azure/)。
 
 ## <a name="next-steps"></a>后续步骤
 提出问题并获得帮助：

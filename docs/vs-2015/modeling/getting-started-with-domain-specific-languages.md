@@ -9,19 +9,17 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 71aa8b31023cedcc41a08a775f9fdf28a4489d1e
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: c7e8ca0fa1558ce0a2d37d4e11a35ba10a27fd2d
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75847189"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919084"
 ---
 # <a name="getting-started-with-domain-specific-languages"></a>域特定语言入门
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本主题介绍如何定义和使用通过用于 Visual Studio 的建模 SDK 创建的域特定语言（DSL）的基本概念。
-
- 如果你不熟悉 Dsl，我们建议你完成**DSL 工具实验室**，你可以在此站点中找到此工具：[初学者和建模 SDK](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
 
 ## <a name="what-can-you-do-with-a-domain-specific-language"></a>使用域特定语言可以执行什么操作？
  域特定语言是一种通常为图形的表示法，用于特定目的。 与此相反，UML 等语言是通用的。 在 DSL 中，可以定义模型元素的类型及其关系，以及如何在屏幕上显示它们。
@@ -42,7 +40,7 @@ ms.locfileid: "75847189"
 |||
 |-|-|
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://www.visualstudio.com/)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://docs.microsoft.com/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts)|
 |Visual Studio 的建模 SDK|[下载 MSDK](https://www.microsoft.com/download/details.aspx?id=48148)|
 
 ## <a name="creating-a-dsl-solution"></a>创建 DSL 解决方案
@@ -399,4 +397,4 @@ ms.locfileid: "75847189"
 2. 重新生成仍想要使用的任何实验性 Dsl 或其他实验性 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展。
 
 ## <a name="see-also"></a>请参阅
- [了解模型、类和关系](../modeling/understanding-models-classes-and-relationships.md)[如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)[初学者和建模 SDK](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+ [了解模型、类和关系](../modeling/understanding-models-classes-and-relationships.md)[如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)[初学者和建模 SDK](https://www.microsoft.com/download/details.aspx?id=48148)

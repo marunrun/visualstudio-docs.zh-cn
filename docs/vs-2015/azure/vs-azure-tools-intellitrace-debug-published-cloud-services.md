@@ -11,26 +11,26 @@ ms.date: 03/21/2017
 ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
-ms.openlocfilehash: b1617ab8bd61857b29d78dc800ca70e26a7c8ff2
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 033e682344cbd255c8cbf41d7527ec7d08a5db20
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75852271"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915614"
 ---
 # <a name="debugging-a-published-azure-cloud-service-with-visual-studio-and-intellitrace"></a>使用 Visual Studio 和 IntelliTrace 调试已发布的 Azure 云服务
 通过 IntelliTrace，可以在某个角色实例在 Azure 中运行时记录该角色实例的大量调试信息。 如果您需要查找问题的原因，您可以从 Visual Studio 使用 IntelliTrace 日志来单步执行代码，就像它在 Azure 中运行一样。 实际上，当 Azure 应用程序以云服务的形式在 Azure 中运行时，IntelliTrace 将记录关键代码执行和环境数据，并允许从 Visual Studio 中回放已记录的数据。 
 
 如果已安装 Visual Studio Enterprise，且 Azure 应用程序以 .NET Framework 4 或更高版本为目标，则可使用 IntelliTrace。 IntelliTrace 收集 Azure 角色的信息。 这些角色的虚拟机始终运行 64 位操作系统。
 
-作为替代方法，可以使用[远程调试](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-debugging-cloud-services-overview?view=vs-2019)，直接连接到在 Azure 中运行的云服务。
+作为替代方法，可以使用[远程调试](vs-azure-tools-debugging-cloud-services-overview.md)，直接连接到在 Azure 中运行的云服务。
 
 > [!IMPORTANT]
 > IntelliTrace 仅适用于调试方案，而不应用于生产部署。
 > 
 
 ## <a name="configure-an-azure-application-for-intellitrace"></a>为 IntelliTrace 配置 Azure 应用程序
-若要为 Azure 应用程序启用 IntelliTrace，必须从 Visual Studio Azure 项目创建并发布应用程序。 在将应用程序发布到 Azure 之前，必须为 Azure 应用程序配置 IntelliTrace。 如果在未配置 IntelliTrace 的情况下发布应用程序，则需要重新发布项目。 有关详细信息，请参阅[使用 Visual Studio 发布 Azure 云服务项目](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-publishing-a-cloud-service?view=vs-2019)。
+若要为 Azure 应用程序启用 IntelliTrace，必须从 Visual Studio Azure 项目创建并发布应用程序。 在将应用程序发布到 Azure 之前，必须为 Azure 应用程序配置 IntelliTrace。 如果在未配置 IntelliTrace 的情况下发布应用程序，则需要重新发布项目。 有关详细信息，请参阅[使用 Visual Studio 发布 Azure 云服务项目](vs-azure-tools-publishing-a-cloud-service.md)。
 
 1. 当准备好部署 Azure 应用程序时，确认已将项目生成目标设置为“调试”。
 

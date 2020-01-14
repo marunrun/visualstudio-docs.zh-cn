@@ -12,12 +12,12 @@ caps.latest.revision: 79
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0673f7511276799804dc327bab67637f3fc450b7
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 4907838720e3a68614e4b9774eb2d7e9fb42ff20
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850094"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916543"
 ---
 # <a name="modeling-sdk-for-visual-studio---domain-specific-languages"></a>Visual Studio 的建模 SDK - 特定于域的语言
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,8 +42,6 @@ ms.locfileid: "75850094"
 
 ## <a name="samples-and-the-latest-information"></a>示例和最新信息
  [下载适用于 Visual Studio 2015 的建模 SDK](https://www.microsoft.com/download/details.aspx?id=48148)
-
- 适用于 Visual Studio 的建模 SDK 的[示例](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)。
 
  高级的技术和故障排除指导，请访问[Visual Studio DSL 和建模工具扩展性论坛](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=dslvsarchx)。
 

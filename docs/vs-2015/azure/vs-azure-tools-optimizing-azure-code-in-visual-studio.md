@@ -11,12 +11,12 @@ ms.date: 11/11/2016
 ms.author: ghogen
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
-ms.openlocfilehash: 83500f599b909f189de86305e4f017abfd015059
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: e34c51db062528c83e08e2cb463a1cc44ab476f7
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75846570"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915759"
 ---
 # <a name="optimizing-your-azure-code"></a>优化 Azure 代码
 对使用 Microsoft Azure 的应用程序进行编程时，应遵循某些编码做法，以免在云环境中应用程序的伸缩性、行为和性能出现问题。 Microsoft 提供了 Azure 代码分析工具，该工具可识别并确定部分常见问题并帮助你解决这些问题。 可以通过 NuGet 在 Visual Studio 中下载该工具。
@@ -30,8 +30,6 @@ AP0000
 
 ### <a name="description"></a>描述
 如果对云应用程序使用默认（进程内）会话状态模式，可能丢失会话状态。
-
-请通过 [Azure 代码分析反馈](https://social.msdn.microsoft.com/Forums/en-US/home)来分享看法和意见。
 
 ### <a name="reason"></a>原因
 默认情况下，在 web.config 文件中指定的会话状态模式为进程内。 此外，如果配置文件中没有指定任何条目，会话状态模式默认为进程内。 进程内模式会话状态存储在 Web 服务器的内存中。 当重新启动某个实例或使用新实例来支持负载均衡或故障转移时，存储在 Web 服务器内存中的会话状态并不保存。 这种情况会导致应用程序无法在云上缩放。
@@ -93,8 +91,6 @@ AP2000
 ### <a name="description"></a>描述
 使用共享访问签名 (SAS) 进行身份验证。 用于服务总线身份验证的访问控制服务 (ACS) 会被弃用。
 
-请通过 [Azure 代码分析反馈](https://social.msdn.microsoft.com/Forums/en-US/home)来分享看法和意见。
-
 ### <a name="reason"></a>原因
 为了增强安全性，Azure Active Directory 会将 ACS 身份验证替换为 SAS 身份验证。 有关过渡计划的信息，请参阅 [Azure Active Directory is the future of ACS](https://cloudblogs.microsoft.com/enterprisemobility/2013/06/22/azure-active-directory-is-the-future-of-acs/)（Azure Active Directory 是 ACS 的未来）。
 
@@ -109,8 +105,7 @@ BrokeredMessage receivedMessage = sc.Receive();
 
 有关更多信息，请参阅以下主题。
 
-* 有关概述，请参阅[服务总线的共享访问签名身份验证](https://msdn.microsoft.com/library/dn170477.aspx)
-* [如何使用服务总线的共享访问签名身份验证](https://msdn.microsoft.com/library/dn205161.aspx)
+* [如何使用服务总线的共享访问签名身份验证](/azure/service-bus-messaging/service-bus-sas)
 
 ## <a name="consider-using-onmessage-method-to-avoid-receive-loop"></a>考虑使用 OnMessage 方法来避免“receive 循环”
 ### <a name="id"></a>ID
@@ -118,8 +113,6 @@ AP2002
 
 ### <a name="description"></a>描述
 为了避免陷入“receive 循环”，接收消息时调用 **OnMessage** 方法是比调用 **Receive** 方法更适合的解决方案。 但是，如果必须使用 **Receive** 方法并指定了非默认的服务器等待时间，请确保服务器等待时间超过一分钟。
-
-请通过 [Azure 代码分析反馈](https://social.msdn.microsoft.com/Forums/en-US/home)来分享看法和意见。
 
 ### <a name="reason"></a>原因
 当调用 **OnMessage** 时，客户端将启动一个内部消息泵，该消息泵不断轮询队列或订阅。 此消息泵包含发出消息接收调用的无限循环。 如果调用超时，它将发出新的调用。 超时间隔由所用的 [MessagingFactory](https://msdn.microsoft.com/library/microsoft.servicebus.messaging.messagingfactory.aspx) 的 [OperationTimeout](https://msdn.microsoft.com/library/microsoft.servicebus.messaging.messagingfactorysettings.operationtimeout.aspx) 属性值确定。
@@ -223,8 +216,6 @@ AP2003
 ### <a name="description"></a>描述
 使用异步服务总线方法可改善中转消息传送的性能。
 
-请通过 [Azure 代码分析反馈](https://social.msdn.microsoft.com/Forums/en-US/home)来分享看法和意见。
-
 ### <a name="reason"></a>原因
 使用异步方法可实现应用程序并行性效果，因为在执行每个调用时不会阻塞主线程。 使用服务总线消息传送方法时，执行某项操作（发送、接收、删除等）需要花费一定的时间。 这一时间包括服务总线服务处理该操作的时间，外加延迟处理请求和答复的时间。 若要增加每次操作的数目，操作必须同时执行。 有关详细信息，请参阅 [Best Practices for Performance Improvements Using Service Bus Brokered Messaging](https://msdn.microsoft.com/library/azure/hh528527.aspx)（使用服务总线中转消息传送改善性能的最佳实践）。
 
@@ -239,8 +230,6 @@ AP2004
 
 ### <a name="description"></a>描述
 对服务总线队列和主题进行分区以提高服务总线消息传送的性能。
-
-请通过 [Azure 代码分析反馈](https://social.msdn.microsoft.com/Forums/en-US/home)来分享看法和意见。
 
 ### <a name="reason"></a>原因
 对服务总线队列和主题进行分区可以提高性能吞吐量和服务可用性，因为分区后的队列或主题的总体吞吐量不再受限于单个消息代理或消息存储的性能。 此外，消息存储的临时中断不会导致分区的队列或主题不可用。 有关详细信息，请参阅[对消息实体进行分区](https://msdn.microsoft.com/library/azure/dn520246.aspx)。
@@ -264,8 +253,6 @@ AP3001
 
 ### <a name="description"></a>描述
 应避免使用设置为当前时间的 SharedAccessStartTimeset，以立即启动共享访问策略。 仅想要在以后启动共享访问策略时，才需要设置此属性。
-
-请通过 [Azure 代码分析反馈](https://social.msdn.microsoft.com/Forums/en-US/home)来分享看法和意见。
 
 ### <a name="reason"></a>原因
 时钟同步会导致各数据中心的时间略有不同。 例如，你可能会使用 DateTime.Now 或类似方法将存储 SAS 策略的开始时间设为当前时间，以使 SAS 策略立即生效。 但是，数据中心之间的轻微时间差可能会导致问题，因为某些数据中心可能会略迟于开始时间，而其他数据中心则可能会早于开始时间。 因此，如果策略生存时间设置得太短，则 SAS 策略可能很快（或者甚至立即）过期。
@@ -347,8 +334,6 @@ AP4000
 ### <a name="description"></a>描述
 对 Azure 网站和 Azure 移动服务等项目使用 [ConfigurationManager](https://msdn.microsoft.com/library/system.configuration.configurationmanager\(v=vs.110\).aspx) 类不会造成运行时问题。 但是，最佳做法是使用 Cloud[ConfigurationManager](https://msdn.microsoft.com/library/system.configuration.configurationmanager\(v=vs.110\).aspx) 作为所有 Azure 云应用程序配置的统一管理方式。
 
-请通过 [Azure 代码分析反馈](https://social.msdn.microsoft.com/Forums/en-US/home)来分享看法和意见。
-
 ### <a name="reason"></a>原因
 CloudConfigurationManager 读取适用于应用程序环境的配置文件。
 
@@ -384,8 +369,6 @@ AP4001
 ### <a name="description"></a>描述
 如果使用硬编码的连接字符串并且以后需要更新，则必须对源代码进行更改并重新编译应用程序。 但是，如果将连接字符串存储在配置文件中，以后只需更新配置文件就能更改连接字符串。
 
-请通过 [Azure 代码分析反馈](https://social.msdn.microsoft.com/Forums/en-US/home)来分享看法和意见。
-
 ### <a name="reason"></a>原因
 将连接字符串硬编码不是个好办法，因为这种方式在需要快速更改连接字符串时会引发问题。 此外，如果需要将项目签入源代码管理，硬编码的连接字符串将引发安全漏洞，因为在源代码中就能查看字符串。
 
@@ -396,7 +379,7 @@ AP4001
 * 对于 IIS 托管的 Web 应用程序，请使用 web.config 来存储连接字符串。
 * 对于 ASP.NET vNext 应用程序，请使用 configuration.json 来存储连接字符串。
 
-有关使用 web.config 或 app.config 等配置文件的相关信息，请参阅[ASP.NET Web 配置指南](https://msdn.microsoft.com/library/vstudio/ff400235\(v=vs.100\).aspx)。 有关 Azure 环境变量工作原理的信息，请参阅 [Azure Web Sites: How Application Strings and Connection Strings Work](https://azure.microsoft.com/blog/2013/07/17/windows-azure-web-sites-how-application-strings-and-connection-strings-work/)（Azure 网站：应用程序字符串和连接字符串的工作原理）。 有关在源代码管理中存储连接字符串的信息，请参阅[避免将敏感信息（如连接字符串）放置在源代码存储库中存储的文件内](https://docs.microsoft.com/aspnet/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control)。
+有关使用 web.config 或 app.config 等配置文件的相关信息，请参阅[ASP.NET Web 配置指南](https://msdn.microsoft.com/library/vstudio/ff400235\(v=vs.100\).aspx)。 有关 Azure 环境变量工作原理的信息，请参阅 [Azure Web Sites: How Application Strings and Connection Strings Work](https://azure.microsoft.com/blog/2013/07/17/windows-azure-web-sites-how-application-strings-and-connection-strings-work/)（Azure 网站：应用程序字符串和连接字符串的工作原理）。 有关在源代码管理中存储连接字符串的信息，请参阅[避免将敏感信息（如连接字符串）放置在源代码存储库中存储的文件内](/aspnet/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control)。
 
 ## <a name="use-diagnostics-configuration-file"></a>使用诊断配置文件
 ### <a name="id"></a>ID
@@ -404,8 +387,6 @@ AP5000
 
 ### <a name="description"></a>描述
 不要在代码中配置诊断设置（例如使用 Microsoft.WindowsAzure.Diagnostics 编程 API），而应该在 diagnostics.wadcfg 文件中配置诊断设置。 （或者，如果使用 Azure SDK 2.5，请使用 diagnostics.wadcfgx）。 这样，就可以更改诊断设置而无需重新编译代码。
-
-请通过 [Azure 代码分析反馈](https://social.msdn.microsoft.com/Forums/en-US/home)来分享看法和意见。
 
 ### <a name="reason"></a>原因
 在 Azure SDK 2.5（使用 Azure 诊断 1.3）之前，可使用几种不同的方法来配置 Azure 诊断 (WAD)：将它添加到存储中的配置 Blob，或者使用命令性代码、声明性配置或默认配置。 但是，配置诊断的首选方法是在应用程序项目中使用 XML 配置文件（SDK 2.5 和更高版本的 diagnostics.wadcfg 或 diagnostics.wadcfgx）。 在此方法中，diagnostics.wadcfg 文件完整地定义配置并可随意进行更新和重新部署。 将 diagnostics.wadcfg 配置文件与使用[DiagnosticMonitor](https://msdn.microsoft.com/library/microsoft.windowsazure.diagnostics.diagnosticmonitor.aspx)或[RoleInstanceDiagnosticManager](https://msdn.microsoft.com/library/microsoft.windowsazure.diagnostics.management.roleinstancediagnosticmanager.aspx)类设置配置的编程方法混合使用可能会导致混淆。 有关详细信息，请参阅[初始化或更改 Azure 诊断配置](https://msdn.microsoft.com/library/azure/hh411537.aspx)。
@@ -429,8 +410,6 @@ AP6000
 
 ### <a name="description"></a>描述
 为了节省内存，请避免将 DBContext 对象声明为静态。
-
-请通过 [Azure 代码分析反馈](https://social.msdn.microsoft.com/Forums/en-US/home)来分享看法和意见。
 
 ### <a name="reason"></a>原因
 DBContext 对象保存每个调用返回的查询结果。 只有在卸载应用程序域之后，才释放静态 DBContext 对象。 因此，静态 DBContext 对象可能会消耗大量的内存。

@@ -11,12 +11,12 @@ caps.latest.revision: 50
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 37ac181c2e2182dc8ff57931fbbb51a4f7fc9fc4
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 55ec2cf2f2a6ebf4186f81f6f3dd61766acd7958
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75852411"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918896"
 ---
 # <a name="customizing-and-extending-a-domain-specific-language"></a>自定义和扩展域特定语言
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,7 +45,7 @@ Visual Studio 建模和可视化 SDK （VMSDK）提供了几个级别，你可�
 |形状上的图标更改为指示状态。|在 "DSL 详细信息" 窗口中设置修饰器映射的可见性。 在同一位置找到多个修饰器图像。 请参阅[更新形状和连接线以反映模型](../modeling/updating-shapes-and-connectors-to-reflect-the-model.md)。<br /><br /> 或者，重写 `ImageField.GetDisplayImage()`。 请参阅 <xref:Microsoft.VisualStudio.Modeling.Diagrams.ImageField>中的示例。|
 |在任意形状上设置背景图像|重写 InitializeInstanceResources （）以添加定位 ImageField。 请参阅[在关系图上自定义演示](../modeling/customizing-presentation-on-the-diagram.md)。|
 |将形状嵌套到任何深度|设置递归嵌入树。 定义 BoundsRules 以包含形状。 请参阅[在关系图上自定义演示](../modeling/customizing-presentation-on-the-diagram.md)。|
-|在元素的边界上的固定点附加连接器。|定义嵌入的终端元素，由关系图上的小端口表示。 使用 BoundsRules 就地修复端口。 请参阅[可视化和建模 SDK](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)中的 "线路图" 示例。|
+|在元素的边界上的固定点附加连接器。|定义嵌入的终端元素，由关系图上的小端口表示。 使用 BoundsRules 就地修复端口。|
 |"文本" 字段显示从其他值派生的值。|将文本修饰器映射到计算或自定义存储域属性。 有关详细信息，请参阅[计算和自定义存储属性](../modeling/calculated-and-custom-storage-properties.md)。|
 |传播模型元素或形状之间的更改|请参阅[域特定语言的验证](../modeling/validation-in-a-domain-specific-language.md)。|
 |在存储区外传播对资源（如其他 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展）的更改。|请参阅[事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)。|

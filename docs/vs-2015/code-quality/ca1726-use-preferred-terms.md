@@ -14,29 +14,29 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f5d184684a6ec30c216b7274313905781843071b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 639a42e26442e31f7bbbbb2245af0289c6a04fd8
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671565"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918229"
 ---
 # <a name="ca1726-use-preferred-terms"></a>CA1726：使用首选词条
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-有关 Visual Studio 的最新文档，请参阅[CA1726：使用首选字词](https://docs.microsoft.com/visualstudio/code-quality/ca1726-use-preferred-terms)。
+有关 Visual Studio 的最新文档，请参阅[CA1726：使用首选字词](/visualstudio/code-quality/ca1726-use-preferred-terms)。
 
 |||
 |-|-|
 |TypeName|UsePreferredTerms|
 |CheckId|CA1726|
-|类别|Microsoft。命名|
+|类别|Microsoft.Naming|
 |是否重大更改|正在进行-对程序集引发时<br /><br /> 非中断-在类型参数上触发时|
 
 ## <a name="cause"></a>原因
  在外部可见的标识符的名称中，包括一个存在首选备用词条的词条。 此外，名称还包括字词标志或标志。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  此规则将标识符分析为标记。 每个单独的标记和每个连续的双重标记组合将与规则中和任何自定义字典中不推荐使用的部分中的字词进行比较。 下表显示了规则中内置的术语及其首选替代项。
 
 |过时术语|首选术语|

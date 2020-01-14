@@ -8,12 +8,12 @@ ms.assetid: 30f137e6-595d-4ce7-b8f5-415b07c1caa2
 caps.latest.revision: 33
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 7a0284ab6b8d2e89e1c0129c2bc98fb486918f90
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 204d3ee68aace07ed19e5913309a122d6d775a0e
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297925"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918344"
 ---
 # <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>在 Visual Studio 中使用 Xamarin 生成具有本机 UI 的应用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -46,20 +46,20 @@ ms.locfileid: "74297925"
 >
 >   - [Hello，Android](https://developer.xamarin.com/guides/android/getting_started/hello,android/) （具有单个屏幕的简单应用）
 >   - [Hello，Android 多屏显示](https://developer.xamarin.com/guides/android/getting_started/hello,android_multiscreen/) （可在屏幕之间导航的应用）
->   - [Android 片段演练](https://docs.microsoft.com/xamarin/android/platform/fragments/implementing-with-fragments/) （用于主屏幕/详细信息屏幕等）
->   - [了解 iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/)
->   - [了解 iOS 多屏显示](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS_multiscreen/)
+>   - [Android 片段演练](/xamarin/android/platform/fragments/implementing-with-fragments/) （用于主屏幕/详细信息屏幕等）
+>   - [Hello，iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/)
+>   - [Hello，iOS 多屏显示](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS_multiscreen/)
 >   - 具有 Xamarin.Forms（共享 UI）的 Xamarin 应用
 >
->   - [了解 Xamarin.Forms](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms/quickstart/)
->   - [了解 Xamarin.Forms 多屏显示](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms-multiscreen/)
+>   - [Hello，Xamarin.Forms](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms/quickstart/)
+>   - [Hello，Xamarin.Forms 多屏显示](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms-multiscreen/)
 
-## <a name="solution"></a> 设置你的解决方案
+## <a name="solution"></a>设置解决方案
  这些步骤使用本机 UI 创建 Xamarin 解决方案，该方案包含共享代码的 PCL 和两个添加的 NuGet 包。
 
 1. 在 Visual Studio 中，创建新的“空白应用(本机可移植)”解决方案，并将其命名为 **WeatherApp**。 通过在搜索字段中输入“本机可移植”可以非常方便地找到此模板。
 
-    如果不存在，则可能需要安装 Xamarin 或启用 Visual Studio 2015 功能，请参阅[设置和安装](../cross-platform/setup-and-install.md)。
+    如果没有，则你可能需要安装 Xamarin 或启用 Visual Studio 2015 功能，请参阅 [Setup and install](../cross-platform/setup-and-install.md)。
 
 2. 单击“确定”以创建解决方案后，将会得到多个单独项目：
 
@@ -230,7 +230,7 @@ ms.locfileid: "74297925"
 1. 在“解决方案资源管理器”中，展开“WeatherApp.Droid”>“资源”>“布局”文件夹，然后打开“Main.axml”。 此操作后将在可视化设计器中打开此文件。 （如果出现与 Java 相关的错误，请参阅此[博客文章](https://forums.xamarin.com/discussion/32365/connection-to-the-layout-renderer-failed-in-xs-5-7-and-xamarinvs-3-9)。）
 
     > [!TIP]
-    > 项目中有许多其他文件。 对它们的探讨不在本主题范围内，但如果你要深入了解 Android 项目的结构，请参阅 xamarin.com 上“了解 Android”主题的[第 2 部分：深入了解](https://docs.microsoft.com/xamarin/android/get-started/hello-android/hello-android-deepdive?pivots=windows)。
+    > 项目中有许多其他文件。 对它们的探讨不在本主题范围内，但如果你要深入了解 Android 项目的结构，请参阅 xamarin.com 上“了解 Android”主题的[第 2 部分：深入了解](/xamarin/android/get-started/hello-android/hello-android-deepdive?pivots=windows)。
 
 2. 选择并删除设计器中出现的默认按钮。
 
@@ -247,9 +247,9 @@ ms.locfileid: "74297925"
 
 7. 在“属性”窗口中，设置这些属性（注意：它有助于使用“属性”窗口工具栏中的排序按钮对列表进行按字母顺序排序）：
 
-    |属性|“值”|
+    |Property|{2&gt;值&lt;2}|
     |--------------|-----------|
-    |**text**|**根据“邮政编码”进行搜索**|
+    |**文本**|**根据“邮政编码”进行搜索**|
     |**id**|`@+id/ZipCodeSearchLabel`|
     |**layout_marginLeft**|`10dp`|
     |**textColor**|`@android:color/white`|
@@ -279,9 +279,9 @@ ms.locfileid: "74297925"
 
 9. 在 **“属性”** 窗口中，设置以下属性：
 
-    |属性|“值”|
+    |Property|{2&gt;值&lt;2}|
     |--------------|-----------|
-    |**text**|**“邮政编码”**|
+    |**文本**|**“邮政编码”**|
     |**id**|`@+id/ZipCodeLabel`|
     |**layout_marginLeft**|`10dp`|
     |**layout_marginTop**|`5dp`|
@@ -301,7 +301,7 @@ ms.locfileid: "74297925"
 
 10. 在“工具箱”中，将“数字”控件拖动到“RelativeLayout”上，然后将其放置在“邮政编码”标签下。 然后设置以下属性：
 
-    |属性|“值”|
+    |Property|{2&gt;值&lt;2}|
     |--------------|-----------|
     |**id**|`@+id/zipCodeEntry`|
     |**layout_marginLeft**|`10dp`|
@@ -324,10 +324,10 @@ ms.locfileid: "74297925"
 
 11. 在“工具箱”中，将“按钮”拖动到“RelativeLayout”控件上，然后将其放置在 zipCodeEntry 控件的右侧。 然后设置这些属性：
 
-    |属性|“值”|
+    |Property|{2&gt;值&lt;2}|
     |--------------|-----------|
     |**id**|`@+id/weatherBtn`|
-    |**text**|**获取天气信息**|
+    |**文本**|**获取天气信息**|
     |**layout_marginLeft**|`20dp`|
     |**layout_alignBottom**|`@id/zipCodeEntry`|
     |**width**|`165dp`|
@@ -343,7 +343,7 @@ ms.locfileid: "74297925"
         android:width="165dp" />
     ```
 
-12. 你通过使用 Android 设计器，已经具备生成基本 UI 的充足经验。 也可通过将标记直接添加到页面的 .asxml 文件来生成 UI。 若要以这种方式生成其余的 UI，请在设计器中切换到“源”视图，然后将以下标记粘贴到  *标记下*`</RelativeLayout>`（是的，在标记下...这些元素不包含在 ReleativeLayout 中）。
+12. 你通过使用 Android 设计器，已经具备生成基本 UI 的充足经验。 也可通过将标记直接添加到页面的 .asxml 文件来生成 UI。 若要以这种方式生成其余的 UI，请在设计器中切换到“源”视图，然后将以下标记粘贴到 `</RelativeLayout>` 标记下（是的，在标记下...这些元素不包含在 ReleativeLayout 中）。
 
     ```xml
     <TextView
@@ -631,16 +631,16 @@ ms.locfileid: "74297925"
 > [!TIP]
 > 可在 [GitHub 上的 mobile-samples 存储库](https://github.com/xamarin/mobile-samples/tree/master/Weather)中找到此项目的完整源代码。
 
-## <a name="next"></a> 后续步骤
+## <a name="next"></a>后续步骤
  **将适用于 iOS 的 UI 添加到解决方案**
 
  通过添加适用于 iOS 的本机 UI 来扩展此示例。 为此，连接到本地网络上安装了 Xcode 和 Xamarin 的 Mac。 连接后，可直接在 Visual Studio 中使用 iOS 设计器。 有关已完成的应用，请参阅 [GitHub 上的 mobile-samples 存储库](https://github.com/xamarin/mobile-samples/tree/master/Weather)。
 
- 另请参阅 [Hello, iOS](https://docs.microsoft.com/xamarin/ios/get-started/hello-ios/hello-ios-quickstart?pivots=windows)（了解 iOS）(xamarin.com) 演练。 请注意，在此页上，请选择 xamarin.com 页右上角的“Visual Studio”，以便显示正确的一组指令。
+ 另请参阅 [Hello, iOS](/xamarin/ios/get-started/hello-ios/hello-ios-quickstart?pivots=windows)（了解 iOS）(xamarin.com) 演练。 请注意，在此页上，请选择 xamarin.com 页右上角的“Visual Studio”，以便显示正确的一组指令。
 
  **在共享项目中添加特定于平台的代码**
 
- PCL 中的共享代码是特定于平台的，因为 PCL 只编译了一次，并且包括在每个特定于平台的应用包中。 若要编写使用条件编译的共享代码来分离特定于平台的代码，可使用共享项目。 有关详细信息，请参阅[代码共享选项](https://docs.microsoft.com/xamarin/cross-platform/app-fundamentals/code-sharing) (xamarin.com)。
+ PCL 中的共享代码是特定于平台的，因为 PCL 只编译了一次，并且包括在每个特定于平台的应用包中。 若要编写使用条件编译的共享代码来分离特定于平台的代码，可使用共享项目。 有关详细信息，请参阅[代码共享选项](/xamarin/cross-platform/app-fundamentals/code-sharing) (xamarin.com)。
 
 ## <a name="see-also"></a>请参阅
- [Xamarin 开发人员网站](https://docs.microsoft.com/xamarin/) [Windows 开发人员中心](https://dev.windows.com/en-us) [Swift 和C#快速参考海报](https://aka.ms/scposter)
+ [Xamarin 开发人员网站](/xamarin/) [Windows 开发人员中心](https://dev.windows.com/en-us) [Swift 和C#快速参考海报](https://aka.ms/scposter)

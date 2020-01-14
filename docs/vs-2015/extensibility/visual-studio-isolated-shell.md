@@ -14,12 +14,12 @@ ms.assetid: d2620e71-be9e-44c9-b5b7-03a4c8d9cf0b
 caps.latest.revision: 36
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 01917b9e78ee6129f09811ca2dc3e18c149c06f6
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: ef2d1cbffab5e38e603b0e50beb896f1c6efa23d
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850391"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919202"
 ---
 # <a name="visual-studio-isolated-shell"></a>Visual Studio 独立 Shell
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "75850391"
   
  若要使用独立 shell 项目，必须安装 Visual Studio SDK。 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。  
   
- 若要创建独立 shell 应用程序，请首先使用 Visual Studio Shell 独立项目。 此项目包含开发和测试自己的独立 shell 应用程序所需的所有内容。 准备好编写部署应用程序的安装程序时，必须从[Microsoft Visual Studio Shell (独立) 可再发行组件包](https://docs.microsoft.com/collaborate/connect-redirect?ProgramID=8963&InvitationID=VS15-2R69-RB8J)获取隔离 shell 可再发行组件包。  
+ 若要创建独立 shell 应用程序，请首先使用 Visual Studio Shell 独立项目。 此项目包含开发和测试自己的独立 shell 应用程序所需的所有内容。 准备好编写部署应用程序的安装程序时，必须从[Microsoft Visual Studio Shell (独立) 可再发行组件包](https://visualstudio.microsoft.com/vs/older-downloads/isolated-shell/)获取隔离 shell 可再发行组件包。  
   
 > [!NOTE]
 > 你需要先填写一份简短的客户调查，然后才能访问隔离 shell 可再发行组件包。  填写完客户调查后，您会转到包含可再发行组件包下载链接的 Visual Studio Connect 页面。  可以在后续访问 visual studio **2015 集成和隔离 SHELL &#124;** 选项卡下的 visual studio Connect 站点时找到下载链接。  

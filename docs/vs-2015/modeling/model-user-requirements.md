@@ -13,12 +13,12 @@ caps.latest.revision: 30
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3d70a7c8b7dbf6015e992cfabb5204f3b307238a
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: a94a4bd479c3ad48efe44d3a92e91dc3a050efcd
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75844918"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918267"
 ---
 # <a name="model-user-requirements"></a>建立用户需求模型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -138,7 +138,7 @@ ms.locfileid: "75844918"
 |概念类图上的元素|[UML 类图：参考](../modeling/uml-class-diagrams-reference.md)|
 |如何从概念类开发代码|[应用体系结构建模](../modeling/model-your-app-s-architecture.md)|
 
- 在概念类图中，通常在关联上放置箭头来表示可导航性没什么用处。 这是因为此关系图并不表示实现。 关联表示现实世界对象间的关系。 下面的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展将无方向箭头当成默认选择： [示例：UML 域建模功能](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)。
+ 在概念类图中，通常在关联上放置箭头来表示可导航性没什么用处。 这是因为此关系图并不表示实现。 关联表示现实世界对象间的关系。
 
 ## <a name="BusinessRules"></a> Showing Business Rules
  业务规则是一个不与特定用例相关联的要求，应在整个系统中进行观察。
@@ -239,4 +239,4 @@ ms.locfileid: "75844918"
   通过检查不同关系图提供的视图之间的关系，可以快速理解用户使用的主要概念，并帮助他们理解他们需要从系统中获得什么。 还可以更好地理解利益干系人最不确定的需求。 可以计划在项目的早期阶段至少以简化的形式开发这些功能，从而允许用户体验这些功能。
 
 ## <a name="see-also"></a>请参阅
- [编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)[从模型开发测试](../modeling/develop-tests-from-a-model.md)[使用开发过程模型中](../modeling/use-models-in-your-development-process.md)的模型使用模型[应用的体系结构](../modeling/model-your-app-s-architecture.md)[示例 Vs 扩展： Uml 域建模功能](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)[示例 vs 扩展：按构造型显示的 Uml 元素](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)示例 vs 扩展：[将 Uml 元素链接到关系图、文件和其他元素](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)[示例 Vs 扩展：对齐 uml 关系图上](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)[的形状视频：对业务域建模](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain)
+ [编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)[从模型开发测试](../modeling/develop-tests-from-a-model.md)[使用开发过程中](../modeling/use-models-in-your-development-process.md)[的模型模型应用的体系结构](../modeling/model-your-app-s-architecture.md)[视频：业务域建模](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain)

@@ -11,18 +11,18 @@ ms.date: 11/11/2016
 ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
-ms.openlocfilehash: 0f4e7635e62c8d21b6bdb3b1fd28a2fed0c60262
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: b1e5a5d4d5312968571965df8c9e28d31379720d
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851899"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915605"
 ---
 # <a name="testing-the-performance-of-a-cloud-service"></a>测试云服务的性能
 ## <a name="overview"></a>概述
 您可以通过以下方式测试云服务的性能：
 
-* 使用 Azure 诊断，可以收集有关请求和连接的信息，可以查看站点统计信息，其中显示了客户角度的服务执行情况。 若要快速入门，请参阅[为 Azure 云服务和虚拟机配置诊断](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines?view=vs-2019)。
+* 使用 Azure 诊断，可以收集有关请求和连接的信息，可以查看站点统计信息，其中显示了客户角度的服务执行情况。 若要快速入门，请参阅[为 Azure 云服务和虚拟机配置诊断](vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md)。
 * 通过使用 Visual Studio 探查器，可以获取该服务在计算方面运行情况的深入分析。 如本主题所述，当服务在 Azure 中运行时，您可以使用探查器来测量其性能。 有关当服务在计算模拟器中本地运行时如何使用探查器来测量其性能的信息，请参阅[使用 Visual Studio 探查器来测试在计算模拟器中本地运行的 Azure 云服务的性能](https://azure.microsoft.com/documentation/articles/cloud-services-performance-testing-visual-studio-profiler/)。
 
 ## <a name="choosing-a-performance-testing-method"></a>选择性能测试方法
@@ -84,7 +84,7 @@ ms.locfileid: "75851899"
 > 
 
 ### <a name="to-configure-profiling-settings"></a>配置分析设置
-1. 在“解决方案资源管理器”中，打开“Azure 项目”的快捷菜单，并选择“发布”。 有关如何发布云服务的详细步骤，请参阅[使用 Azure Tools 发布云服务](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-publishing-a-cloud-service?view=vs-2019)。
+1. 在“解决方案资源管理器”中，打开“Azure 项目”的快捷菜单，并选择“发布”。 有关如何发布云服务的详细步骤，请参阅[使用 Azure Tools 发布云服务](vs-azure-tools-publishing-a-cloud-service.md)。
 2. 在“发布 Azure 应用程序”对话框中，选择“高级设置”选项卡。
 3. 若要启用分析，请选中“启用分析”复选框。
 4. 若要配置分析设置，请选择“设置”超链接。 此时将显示“分析设置”对话框。

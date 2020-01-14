@@ -16,12 +16,12 @@ caps.latest.revision: 44
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b680c2e27b871e654618b4c0ada0904744751282
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: a495a566f78ceb2b89f8e2070837f038da352a4d
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850474"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918877"
 ---
 # <a name="define-a-profile-to-extend-uml"></a>定义用于扩展 UML 的配置文件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -220,7 +220,8 @@ ms.locfileid: "75850474"
 7. 通过生成扩展项目或压缩所有文件生成 Visual Studio 扩展，如前面的章节中所述。
 
 ## <a name="Schema"></a>配置文件的结构
- UML 配置文件的 XSD 文件可在以下示例中找到：[设置构造型和配置文件 xsd](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)。 为帮助编辑配置文件，请在以下位置安装 `.xsd` 文件：
+
+ 为帮助编辑配置文件，请在以下位置安装 `.xsd` 文件：
 
  **%ProgramFiles%\Microsoft Visual Studio [version]\Xml\Schemas**
 
@@ -365,4 +366,5 @@ ms.locfileid: "75850474"
 6. 重新启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。
 
 ## <a name="see-also"></a>请参阅
- [向 uml 模型元素添加构造型](../modeling/add-stereotypes-to-uml-model-elements.md)[使用配置文件和构造型构造模型](../modeling/customize-your-model-with-profiles-and-stereotypes.md)[标准构造型 uml 模型的标准构造型](../modeling/standard-stereotypes-for-uml-models.md)[示例：按构造型的 uml 元素](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)示例：[设置构造型，配置文件 XSD](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+ [向 uml 模型元素添加构造型](../modeling/add-stereotypes-to-uml-model-elements.md)[自定义模型配置文件和构造型](../modeling/customize-your-model-with-profiles-and-stereotypes.md) [uml 模型的标准构造型](../modeling/standard-stereotypes-for-uml-models.md)
+ 

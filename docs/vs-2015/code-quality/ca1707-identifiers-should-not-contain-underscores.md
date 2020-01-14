@@ -15,29 +15,29 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 526f0333cc4a233996c00576e3439bac4593c29f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5a06e87f8d28ceb225e240d7702a47e00122feea
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669219"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919180"
 ---
 # <a name="ca1707-identifiers-should-not-contain-underscores"></a>CA1707：标识符不应包含下划线
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-有关 Visual Studio 的最新文档，请参阅[CA1707：标识符不应包含下划线](https://docs.microsoft.com/visualstudio/code-quality/ca1707-identifiers-should-not-contain-underscores)。
+有关 Visual Studio 的最新文档，请参阅[CA1707：标识符不应包含下划线](/visualstudio/code-quality/ca1707-identifiers-should-not-contain-underscores)。
 
 |||
 |-|-|
 |TypeName|IdentifiersShouldNotContainUnderscores|
 |CheckId|CA1707|
-|类别|Microsoft。命名|
+|类别|Microsoft.Naming|
 |是否重大更改|正在进行-对程序集引发<br /><br /> 无间断-在类型参数上引发|
 
 ## <a name="cause"></a>原因
  标识符的名称包含下划线（_）字符。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  按照约定，标识符名称不包含下划线 (_) 字符。 规则将检查命名空间、类型、成员和参数。
 
  命名约定为面向公共语言运行时的库提供了通用的外观。 这减少了新软件库所需的学习曲线，并使客户可以放心地了解库是由具有开发托管代码的专业技能的人员开发的。
