@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dc49a628cdf5695df7744295d2c1d990986bcfbe
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: ead3faa5354dae198524e2a816a85b05bc5d8f08
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295630"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845549"
 ---
 # <a name="user-permissions-and-visual-studio"></a>用户权限与 Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "74295630"
 ||从 Visual Studio 的试用版升级。|[如何：从 Visual Studio 的试用版升级](../install/how-to-upgrade-from-a-trial-edition-of-visual-studio.md)|
 ||安装、更新或移除本地 Help 内容。|[安装和管理本地内容](../ide/install-and-manage-local-content.md)|
 |应用程序类型|部署 SharePoint 2010 的解决方案。|[开发 SharePoint 解决方案的需求](https://msdn.microsoft.com/library/ae8ff69d-4540-4380-ab0b-845f7108e89c)|
-||获取 [!INCLUDE[win8_appstore_long](../includes/win8-appstore-long-md.md)]的开发人员许可证。|[获取开发人员许可证（Windows 应用商店应用）](https://go.microsoft.com/fwlink/?LinkID=241313)|
+||获取 [!INCLUDE[win8_appstore_long](../includes/win8-appstore-long-md.md)]的开发人员许可证。|[获取开发人员许可证（Windows 应用商店应用）](https://msdn.microsoft.com/library/windows/apps/hh974578.aspx)|
 |工具箱|将经典 COM 控件添加到“工具箱”  。|[使用工具箱](../ide/using-the-toolbox.md)|
 |外接程序|安装和使用通过使用 IDE 中的经典 COM 编写的加载项。|[创建外接程序和向导](https://msdn.microsoft.com/library/c5a47c21-6668-4de3-898d-afa969317e73)|
 |生成|使用注册组件的后期生成事件。|[了解自定义生成步骤和生成事件](https://msdn.microsoft.com/library/beb2f017-3e9f-4b2c-9b57-2572fd2628e4)|
@@ -45,10 +45,10 @@ ms.locfileid: "74295630"
 |调试|调试使用提升的权限运行的应用程序。|[调试器设置和准备](../debugger/debugger-settings-and-preparation.md)|
 ||调试在其他用户帐户下运行的应用程序，例如 ASP.NET 网站。|[调试 ASP.NET 和 AJAX 应用程序](../debugger/debugging-aspnet-and-ajax-applications.md)|
 ||在区域中调试 XAML 浏览器应用程序 (XBAP)。|[WPF 主机 (PresentationHost.exe)](https://msdn.microsoft.com/library/3215bfa1-722c-4ac8-a7c5-bdd02d30afbd)|
-||使用模拟器可以调试 Microsoft Azure 的云服务项目。|[在 Visual Studio 中调试云服务](https://go.microsoft.com/fwlink/?LinkId=266725)|
+||使用模拟器可以调试 Microsoft Azure 的云服务项目。|[在 Visual Studio 中调试云服务](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-debug-cloud-services-virtual-machines?view=vs-2019)|
 ||配置远程调试的防火墙。|[在设备上安装远程工具](https://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c)|
 |性能工具|分析应用程序。|[性能分析初学者指南](../profiling/beginners-guide-to-performance-profiling.md)|
-|部署|在本地计算机上将 Web 应用程序部署到 Internet Information Services (IIS)。|[使用 Visual Studio 或 Visual Web Developer 将 ASP.NET Web 应用程序部署到承载提供程序：作为测试环境部署到 IIS](https://go.microsoft.com/fwlink/?LinkId=266478)|
+|部署|在本地计算机上将 Web 应用程序部署到 Internet Information Services (IIS)。|[使用 Visual Studio 或 Visual Web Developer 将 ASP.NET Web 应用程序部署到承载提供程序：作为测试环境部署到 IIS](https://www.asp.net/web-forms/tutorials/deployment/deployment-to-a-hosting-provider/Deployment-to-a-Hosting-Provider-Deploying-to-IIS-as-a-Test-Environment-5-of-12)|
 |向 Microsoft 提供反馈|更改参与 Visual Studio 客户体验计划的方式。|[如何：发送反馈](../misc/how-to-send-feedback-about-visual-studio.md)|
 
 ## <a name="running-visual-studio-as-an-administrator"></a>以管理员身份运行 Visual Studio
@@ -66,9 +66,9 @@ ms.locfileid: "74295630"
 
 1. 在“开始”  菜单上，选择“所有程序”  。
 
-2. 在 **Microsoft Visual Studio** 版本  文件夹中，选择 **Visual Studio** 版本  ，打开快捷菜单，然后选择“以管理员身份运行”  。
+2. 在 Microsoft Visual Studio  版本  文件夹中，选择 Visual Studio  版本  ，打开快捷菜单，然后选择“以管理员身份运行”  。
 
      Visual Studio 启动时，标题栏的产品名后显示“(管理员)”  。
 
 ## <a name="see-also"></a>另请参阅
- [移植、迁移和升级 Visual Studio 项目](../porting/porting-migrating-and-upgrading-visual-studio-projects.md) [安装 Visual Studio 2015](../install/install-visual-studio-2015.md)
+ [移植、迁移和升级 visual Studio 项目](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)[安装 visual studio 2015](../install/install-visual-studio-2015.md)

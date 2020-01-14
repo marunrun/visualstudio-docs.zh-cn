@@ -19,12 +19,12 @@ caps.latest.revision: 27
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: cb2b5a55f778b8025ea9da25713eca903f9cbf74
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 020535ac73c48be74e56100c7b6f9c49b69e50dc
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296219"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851305"
 ---
 # <a name="working-with-visual-c-code-class-designer"></a>使用 Visual C++ 代码（类设计器）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "74296219"
 ### <a name="type-resolution-issues"></a>类型解析问题
  以下原因可能会导致类设计器无法解析类型：
 
-- 该类型所在的项目或程序集未从包含类图的项目进行引用。 若要纠正此错误，请添加一个对包含该类型的项目或程序集的引用。 有关详细信息，请参阅 [NIB 如何：使用“添加引用”对话框添加或删除引用](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)。
+- 该类型所在的项目或程序集未从包含类图的项目进行引用。 若要纠正此错误，请添加一个对包含该类型的项目或程序集的引用。 有关详细信息，请参阅 [NIB 如何：使用“添加引用”对话框添加或移除引用](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)。
 
 - 由于该类型未处于正确的范围内，因此类设计器无法找到它。 确保代码未缺失 `using`、`imports` 或 `#include` 语句。 还请确保未将该类型（或相关类型）移出它原来所在的命名空间。
 
@@ -77,12 +77,12 @@ ms.locfileid: "74296219"
 
 - 确保类设计器支持你输入的类型。 请参阅 [C++ 代码元素的限制](#limitations)。
 
-- 尝试解析的类型。 该类型所在的项目或程序集未从包含类图的项目进行引用。 若要纠正此错误，请添加一个对包含该类型的项目或程序集的引用。 有关详细信息，请参阅 [NIB 如何：使用“添加引用”对话框添加或删除引用](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)。
+- 尝试解析的类型。 该类型所在的项目或程序集未从包含类图的项目进行引用。 若要纠正此错误，请添加一个对包含该类型的项目或程序集的引用。 有关详细信息，请参阅 [NIB 如何：使用“添加引用”对话框添加或移除引用](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)。
 
 - 确保该类型位于正确的范围，因此选件类设计器可以找到它。 确保代码未缺失 `using`、`imports` 或 `#include` 语句。 还请确保未将该类型（或相关类型）移出它原来所在的命名空间。
 
 ### <a name="troubleshooting-other-error-messages"></a>排除其他错误消息
- 在 Microsoft Developer Network (MSDN) 公共论坛中，可以找到有关对错误和警告进行疑难解答的帮助。 请参阅 [Visual Studio 类设计器论坛](https://go.microsoft.com/fwlink/?linkid=160754)。
+ 在 Microsoft Developer Network (MSDN) 公共论坛中，可以找到有关对错误和警告进行疑难解答的帮助。 请参阅 [Visual Studio 类设计器论坛](https://social.msdn.microsoft.com/Forums/en-US/vsclassdesigner/threads?page=1)。
 
 ## <a name="limitations"></a>C++ 代码元素的限制
 
