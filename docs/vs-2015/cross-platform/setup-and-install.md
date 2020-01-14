@@ -6,12 +6,12 @@ ms.assetid: 2cfcad00-352c-4161-814c-f5ae32d8ada8
 caps.latest.revision: 19
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 430c54527ad0a4647bb750c505942242688aaa17
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: dbdeeab49da1a63562bb9a4188a264a8d3d99da2
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297729"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917049"
 ---
 # <a name="setup-and-install"></a>设置和安装
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "74297729"
 > [!NOTE]
 > 自 2016 年 3 月 31 日起，所有版本的 Visual Studio 中均随附所有 Xamarin，无需额外费用，且不需要单独的许可证。 Xamarin Studio Community for Mac 向学生、OSS 开发者和小型团队免费提供。 请注意，对于使用早期 Xamarin 许可证配置的 Visual Studio 现有安装，必须将 Xamarin 更新到版本 4.0.3.214 或更高版本。 为此，请转到“工具”>“选项”>“Xamarin”>“其他”，单击“立即检查”链接，然后下载 4.0.3.214 更新。 重启 Visual Studio 时，请转到“工具”>“Xamarin 帐户...”，然后应会看到更新后的状态。  
   
- **本主题内容：**  
+ **在本主题中：**  
   
 - [先决条件](#prereq)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "74297729"
   
 - [Mac 设置（Apple ID、Xcode 和 Xamarin）](#mac)  
   
-## <a name="prereq"></a>先决条件  
+## <a name="prereq"></a> 先决条件  
   
 1. 为了面向 Windows 和 Android：  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74297729"
   
     1. 在 Windows (7+) 计算机上使用 Visual Studio 作为主要开发环境时，联网的 Mac 只需要编译和调试 iOS 应用、附加到 iOS 模拟器或受限设备，并使用 Visual Studio 中的情节提要设计器进行用户界面设计。 较早的 Mac 型号完全可满足此辅助角色的需求。  
   
-## <a name="windows"></a>Windows 设置（Visual Studio 和 Xamarin）  
+## <a name="windows"></a> Windows 设置（Visual Studio 和 Xamarin）  
   
 > [!TIP]
 > 这些说明适用于 Visual Studio 2015。 若要在 Visual Studio 2013 中使用 Xamarin（需要 Update 2），请按照 [ Xamarin 直接安装](https://developer.xamarin.com/guides/cross-platform/getting_started/requirements/#install) (xamarin.com) 的说明操作。  
@@ -91,14 +91,14 @@ ms.locfileid: "74297729"
   
    **Windows 计算机上模拟器的相关备注：** CPU 一次仅支持一种虚拟化技术，因此最好只在开发计算机上采用一种技术。 有 3 种主要的虚拟化技术，分别是：Hyper-V（由适用于 Android 的 Visual Studio 模拟器和 Windows Phone 模拟器使用）、Virtual Box（由 Genymotion 使用）和 Intel HAXM（由 Android SDK 模拟器使用）。 由于 Hyper-V 和 Virtual Box 之间的各种问题，最好在任意给定计算机上仅使用一种模拟器，因此建议在 Windows 8 和更高版本的计算机上使用 Hyper-V，在 Windows 7 和更早版本上以及在 Mac 上运行 Windows 时使用 Intel HAXM 模拟器。  
   
-## <a name="mac"></a> Mac 设置（Apple ID、Xcode 和 Xamarin）  
+## <a name="mac"></a>Mac 设置（Apple ID、Xcode 和 Xamarin）  
   
 1. 如果尚无 Apple ID，请在 [https://appleid.apple.com](https://appleid.apple.com/) 处创建免费 Apple ID。 这是安装和登录 Xcode 所必需的。  
   
 2. 从 [https://developer.apple.com/xcode/](https://developer.apple.com/xcode/) 处下载并安装 Xcode，并如[将帐户添加到 XCode](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppStoreDistributionTutorial/AddingYourAccounttoXcode/AddingYourAccounttoXcode.html#//apple_ref/doc/uid/TP40013839-CH40-SW1) (apple.com) 中所述添加你的 Apple ID。  
   
-3. 按照 [安装和配置 Xamarin.iOS](https://docs.microsoft.com/xamarin/ios/get-started/installation/mac) (xamarin.com) 上的说明下载和安装 Xamarin。  
+3. 按照 [安装和配置 Xamarin.iOS](/xamarin/ios/get-started/installation/mac) (xamarin.com) 上的说明下载和安装 Xamarin。  
   
-4. 在 Windows 和 Mac 计算机上安装好 Xamarin 后，请按照[连接到 Mac](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/connecting-to-mac/) (xamarin.com) 上的说明操作，以便可通过 Windows 计算机上的 Visual Studio 针对 iOS 和 Mac 进行开发。  
+4. 在 Windows 和 Mac 计算机上安装好 Xamarin 后，请按照[连接到 Mac](/xamarin/ios/get-started/installation/windows/connecting-to-mac/) (xamarin.com) 上的说明操作，以便可通过 Windows 计算机上的 Visual Studio 针对 iOS 和 Mac 进行开发。  
   
      请注意，这两台计算机必须位于同一本地网络。

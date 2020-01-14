@@ -14,30 +14,30 @@ caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 86d41a2717eb3ef7bd49f8d34b85198a55e5101c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2ed433612498a6b7d4b87291311d7fd6efcb0974
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68158650"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918389"
 ---
-# <a name="da0011-expensive-compareto"></a>DA0011：高开销 CompareTo
+# <a name="da0011-expensive-compareto"></a>DA0011：高开销的 CompareTo
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 的最新文档，请参阅[DA0011:高开销的 CompareTo](https://docs.microsoft.com/visualstudio/profiling/da0011-expensive-compareto)。  
+有关 Visual Studio 的最新文档，请参阅[DA0011：昂贵的 CompareTo](/visualstudio/profiling/da0011-expensive-compareto)。  
   
 |||  
 |-|-|  
 |规则 ID|DA0011|  
 |类别|.NET Framework 使用情况|  
 |分析方法|采样<br /><br /> .NET 内存|  
-|消息|CompareTo 函数应该比较便宜，且不应分配任何内存。 如果可能，降低 CompareTo 函数的复杂性。|  
+|Message|CompareTo 函数应该比较便宜，且不应分配任何内存。 如果可能，降低 CompareTo 函数的复杂性。|  
 |规则类型|警告|  
   
 ## <a name="cause"></a>原因  
  类型的 CompareTo 方法开销巨大或分配内存。  
   
-## <a name="rule-description"></a>规则说明  
+## <a name="rule-description"></a>规则描述  
  CompareTo 方法应高效，且不应分配内存。  
   
 ## <a name="how-to-fix-violations"></a>如何解决冲突  

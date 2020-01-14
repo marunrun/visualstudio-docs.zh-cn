@@ -10,12 +10,12 @@ ms.assetid: 22491cdc-8f04-4e1c-8eb4-ff33798ec792
 caps.latest.revision: 26
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 46b48370847cbb2cf8b171342aff9baf38c40a22
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: e2f4926a503304491164635b983353ba7f3bb0f6
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74295553"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915973"
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2015"></a>如何：将扩展性项目迁移到 Visual Studio 2015
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "74295553"
   
 2. 升级完成后，将外部程序的路径更改为新版本的 node.js。 右键单击 "**解决方案资源管理器**中的项目节点，然后选择"**属性**"。 在 "**调试**" 选项卡中，通过 "**启动外部程序**" 查找文本框，并将 devenv 的路径更改为 Visual Studio 2015 路径，如下所示：  
   
-     **%ProgramFiles%\Microsoft Visual Studio 14.0 \ Common7\IDE\devenv.exe**  
+     **%ProgramFiles%\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe**  
   
 3. 添加一个对 VisualStudio 的引用。 （右键单击 "**解决方案资源管理器**中的项目节点，然后选择"**添加/引用**"。 选择 "**扩展**" 选项卡，然后检查**VisualStudio**。）  
   
 4. 生成解决方案。 生成的文件部署到：  
   
-     **%LOCALAPPDATA%\Microsoft\VisualStudio.14.0Exp\Extensions\\< 作者名称\>\\< 项目名称**\>\\<\>项目版本 \\。  
+     **%LOCALAPPDATA%\Microsoft\VisualStudio.14.0Exp\Extensions\\< 作者名称\>\\< 项目名称**\>\\\>项目版本 \\。  
   
 #### <a name="to-update-an-extensibility-project-to-nuget-vs-sdk-reference-assemblies"></a>将扩展性项目更新为 NuGet VS SDK 引用程序集  
   
@@ -45,7 +45,7 @@ ms.locfileid: "74295553"
   
 2. 通过选择该程序集，然后右键单击并**删除**，从项目中删除 VS SDK 引用程序集。  
   
-3. 添加 VS SDK 引用程序集的 NuGet 版本。  仍在 "**解决方案资源管理器引用**" 节点中，打开 "**管理 NuGet 包 ...** " 对话框中的字段。  如果要了解有关此对话框的详细信息，请参阅[使用对话框管理 NuGet 包](https://docs.microsoft.com/nuget/consume-packages/install-use-packages-visual-studio)。 VS SDK 引用程序集通过[VisualStudioExtensibility](https://www.nuget.org/profiles/VisualStudioExtensibility)发布在[nuget.org](https://www.nuget.org/)上。  
+3. 添加 VS SDK 引用程序集的 NuGet 版本。  仍在 "**解决方案资源管理器引用**" 节点中，打开 "**管理 NuGet 包 ...** " 对话框中的字段。  如果要了解有关此对话框的详细信息，请参阅[使用对话框管理 NuGet 包](/nuget/consume-packages/install-use-packages-visual-studio)。 VS SDK 引用程序集通过[VisualStudioExtensibility](https://www.nuget.org/profiles/VisualStudioExtensibility)发布在[nuget.org](https://www.nuget.org/)上。  
   
 4. 使用**nuget.org**作为**包源**，搜索与所需的引用程序集匹配的 nuget 包名称（例如： VisualStudio），并将其安装在你的项目中。  NuGet 可能会添加多个引用程序集，以便满足初始程序集的依赖关系。  
   

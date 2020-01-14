@@ -11,12 +11,12 @@ ms.date: 11/11/2016
 ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
-ms.openlocfilehash: a22d16606cad7ecbfcf3862d6b7e85b65e7aafe4
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: ac1f47d3daabf800a308d73727f750f971ace4e6
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850400"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919169"
 ---
 # <a name="debugging-an-azure-cloud-service-or-virtual-machine-in-visual-studio"></a>在 Visual Studio 中调试云服务或虚拟机
 
@@ -50,7 +50,7 @@ Visual Studio 提供了不同的选项让您调试 Azure 云服务和虚拟机�
 为云服务启用远程调试不会导致性能下降或费用增加。 请勿在生产服务上使用远程调试，因为使用该服务的客户端可能会受到不利影响。
 
 > [!NOTE]
-> 当从 Visual Studio 中发布云服务时，可以为该服务中所有以 .NET Framework 4 或 .NET Framework 4.5 为目标的角色启用 **IntelliTrace**。 使用 **IntelliTrace** 可以检查过去发生在某个角色实例中的事件，并重现当时的上下文。 请参阅[使用 IntelliTrace 和 Visual Studio 调试已发布的云服务](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-intellitrace-debug-published-cloud-services?view=vs-2019)和[使用 IntelliTrace 进行调试](https://msdn.microsoft.com/library/dd264915.aspx)。
+> 当从 Visual Studio 中发布云服务时，可以为该服务中所有以 .NET Framework 4 或 .NET Framework 4.5 为目标的角色启用 **IntelliTrace**。 使用 **IntelliTrace** 可以检查过去发生在某个角色实例中的事件，并重现当时的上下文。 请参阅[使用 IntelliTrace 和 Visual Studio 调试已发布的云服务](vs-azure-tools-intellitrace-debug-published-cloud-services.md)和[使用 IntelliTrace 进行调试](../debugger/intellitrace.md)。
 
 ### <a name="to-enable-remote-debugging-for-a-cloud-service"></a>为云服务启用远程调试
 
@@ -150,7 +150,7 @@ Visual Studio ASP.NET 项目提供了一个选项，让你创建可用于应用�
     > [!NOTE]
     > 如果你尚未登录到 Azure 帐户，系统将要求你登录。
 
-3. 为虚拟机选择各项设置，并选择“确定”。 有关详细信息，请参阅[虚拟机](https://docs.microsoft.com/previous-versions/azure/jj156003(v=azure.100)?redirectedfrom=MSDN)。
+3. 为虚拟机选择各项设置，并选择“确定”。 有关详细信息，请参阅[虚拟机](/previous-versions/azure/jj156003(v=azure.100))。
 
     为“DNS 名称”输入的名称也就是虚拟机的名称。
 
@@ -188,6 +188,6 @@ Visual Studio ASP.NET 项目提供了一个选项，让你创建可用于应用�
 
 ## <a name="next-steps"></a>后续步骤
 
-* 使用 **IntelliTrace** 从发布服务器中收集调用和事件的日志。 请参阅[使用 IntelliTrace 和 Visual Studio 调试已发布的云服务](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-intellitrace-debug-published-cloud-services?view=vs-2019)。
+* 使用 **IntelliTrace** 从发布服务器中收集调用和事件的日志。 请参阅[使用 IntelliTrace 和 Visual Studio 调试已发布的云服务](vs-azure-tools-intellitrace-debug-published-cloud-services.md)。
 
 * 使用“Azure 诊断”以记录在角色内运行的代码的详细信息，角色是否在开发环境或 Azure 中运行。 请参阅[使用 Azure 诊断收集日志记录数据](https://msdn.microsoft.com/library/gg433048.aspx)。

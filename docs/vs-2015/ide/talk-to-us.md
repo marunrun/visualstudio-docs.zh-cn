@@ -11,17 +11,17 @@ caps.latest.revision: 34
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b55100fa6aaf74dee6277db2a079a0a908dc265c
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: adfd23cfcee69ef3242545f6d0680d7316be8156
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851068"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917691"
 ---
 # <a name="talk-to-us"></a>与我们交流
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-有关 Visual Studio 的最新文档，请参阅[与我们交流](https://docs.microsoft.com/visualstudio/ide/feedback-options)。
+有关 Visual Studio 的最新文档，请参阅[与我们交流](/visualstudio/ide/feedback-options)。
 
 我们很希望了解你为改进我们的文档所提出的建议。 我们无法一一答复，但我们保证你的反馈会传达给相应的负责人。
 

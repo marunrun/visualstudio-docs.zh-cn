@@ -11,12 +11,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 24cc456058f4a87426261ce53fbecb2d919d6a2d
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 716345cd2df3e941ea3d50cfc1519dc86dcd7077
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75846350"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918631"
 ---
 # <a name="development-best-practices-for-com-vsto-and-vba-add-ins-in-office"></a>Office 中 COM、VSTO 和 VBA 外接程序的开发最佳做法
   如果要开发适用于 Office 的 COM、VSTO 或 VBA 外接程序，请遵循本文中所述的开发最佳实践。   这有助于确保：
@@ -61,7 +61,7 @@ ms.locfileid: "75846350"
 
 若要为 Office 客户端应用程序（例如，Word 或 Excel）提供支持语句，请先验证外接程序是否在当前 Office 版本中运行，然后在将来的版本中的外接程序中断的情况下提交以提供更新。 当 Microsoft 发布新版本或 Office 更新时，无需测试外接程序。 Microsoft 很少在 Office 中更改 COM、VSTO 和 VBA 扩展性平台，这些更改将会很好地记录下来。
 
->重要说明： Microsoft 维护了支持的加载项列表，其中列出了准备情况报表和 ISV 联系信息。 若要使外接程序列出，请参阅[https://docs.microsoft.com/configmgr/desktop-analytics/ready-for-windows](https://docs.microsoft.com/configmgr/desktop-analytics/ready-for-windows)。
+>重要说明： Microsoft 维护了支持的加载项列表，其中列出了准备情况报表和 ISV 联系信息。 若要使外接程序列出，请参阅[/configmgr/desktop-analytics/ready-for-windows](/configmgr/desktop-analytics/ready-for-windows)。
 
 ## <a name="use-process-monitor-to-help-debug-installation-or-loading-issues"></a>使用进程监视器帮助调试安装或加载问题
 如果你的外接程序在安装或加载过程中存在兼容性问题，它们可能与文件或注册表访问问题有关。 使用[进程监视器](/sysinternals/downloads/procmon)或类似的调试工具来记录和比较工作环境的行为，以帮助确定问题。

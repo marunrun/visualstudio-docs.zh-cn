@@ -13,15 +13,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 68efbd59abe1b0aff717a55383f3ac330586164a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a22bc8fbe65795a3c5162607a12690081e565666
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738582"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917109"
 ---
 # <a name="querying-the-pdb-file"></a>查询 .Pdb 文件
-程序数据库文件（扩展名 .pdb）是一个二进制文件，其中包含在编译和链接项目的过程中收集的类型和符号调试信息。 当使用 **/zi**或 **/zi**或使用 **/debug**选项的 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]C++ 、[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 或 [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] 程序编译 C/程序时，将创建 PDB 文件。 对于调试信息，对象文件包含对 .pdb 文件的引用。 有关 pdb 文件的详细信息，请参阅[Pdb 文件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/yd4f8bd1(v=vs.100))。 DIA 应用程序可以使用以下常规步骤来获取有关可执行映像中各种符号、对象和数据元素的详细信息。
+程序数据库文件（扩展名 .pdb）是一个二进制文件，其中包含在编译和链接项目的过程中收集的类型和符号调试信息。 当使用 **/zi**或 **/zi**或使用 **/debug**选项的 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]C++ 、[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]或 [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] 程序编译 C/程序时，将创建 PDB 文件。 对于调试信息，对象文件包含对 .pdb 文件的引用。 有关 pdb 文件的详细信息，请参阅[Pdb 文件](/previous-versions/visualstudio/visual-studio-2010/yd4f8bd1(v=vs.100))。 DIA 应用程序可以使用以下常规步骤来获取有关可执行映像中各种符号、对象和数据元素的详细信息。
 
 ### <a name="to-query-the-pdb-file"></a>查询 .pdb 文件
 
@@ -90,5 +90,5 @@ ms.locfileid: "72738582"
     }
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)

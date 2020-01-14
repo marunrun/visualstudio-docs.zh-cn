@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 464820258e5c20474d74f92eb108344deccc49f1
-ms.sourcegitcommit: 0a8855572c6c88f4b2ece232c04aa124fbd9cec3
+ms.openlocfilehash: 6f814aabc4a6de4806fd419f16599758799c7538
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74955044"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919122"
 ---
 # <a name="registry-entries-for-vsto-add-ins"></a>VSTO 外接程序的注册表项
   部署使用 Visual Studio 创建的 VSTO 外接程序时，必须创建一组特定的注册表项。 这些注册表项可提供一些信息，使 Microsoft Office 应用程序能够发现和加载 VSTO 外接程序。
@@ -62,7 +62,7 @@ ms.locfileid: "74955044"
 >
 >如果安装程序面向当前用户，则不需要将其安装到 WOW6432Node，因为 HKEY_CURRENT_USER \Software 路径是共享的。
 >
->有关详细信息，请参阅[注册表中的32位和64位应用程序数据](https://docs.microsoft.com/windows/win32/sysinfo/32-bit-and-64-bit-application-data-in-the-registry)
+>有关详细信息，请参阅[注册表中的32位和64位应用程序数据](/windows/win32/sysinfo/32-bit-and-64-bit-application-data-in-the-registry)
 
  下表列出了此注册表项下的条目。
 

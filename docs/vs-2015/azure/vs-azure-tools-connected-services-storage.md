@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/26/2017
 ms.author: ghogen
-ms.openlocfilehash: 8b03d1e698108fac2f81d1e3263d7b38ff82b1dc
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 3acb009d27a9fa47f890235f6957d1f29ed2f4a0
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75852354"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916698"
 ---
 # <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>使用 Visual Studio 连接服务添加 Azure 存储空间
 在 Visual Studio 中，通过使用“添加连接服务”对话框可将以下任何服务连接到 Azure 存储：
@@ -63,12 +63,12 @@ ms.locfileid: "75852354"
 ## <a name="how-your-project-is-modified"></a>您的项目的修改情况
 完成该对话框后，Visual Studio 将添加引用并修改特定配置文件。 具体更改情况取决于项目类型：
 
-- ASP.NET 项目 - [完成的操作 – ASP.NET 项目](https://docs.microsoft.com/azure/visual-studio/vs-storage-aspnet-getting-started-blobs)
-- ASP.NET Core 项目 - [完成的操作 – ASP.NET 5 项目](https://docs.microsoft.com/azure/visual-studio/vs-storage-aspnet5-getting-started-blobs)
-- 云服务项目（Web 角色和辅助角色）- [完成的操作 – 云服务项目](https://docs.microsoft.com/azure/visual-studio/vs-storage-cloud-services-getting-started-blobs)
+- ASP.NET 项目 - [完成的操作 – ASP.NET 项目](/azure/visual-studio/vs-storage-aspnet-getting-started-blobs)
+- ASP.NET Core 项目 - [完成的操作 – ASP.NET 5 项目](/azure/visual-studio/vs-storage-aspnet5-getting-started-blobs)
+- 云服务项目（Web 角色和辅助角色）- [完成的操作 – 云服务项目](/azure/visual-studio/vs-storage-cloud-services-getting-started-blobs)
 - WebJob 项目 - [完成的操作 – WebJob 项目](/azure/visual-studio/vs-storage-webjobs-what-happened)
 
 ## <a name="next-steps"></a>后续步骤
 - [MSDN 论坛：Azure 存储](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
 - [Microsoft Azure 存储团队博客](https://blogs.msdn.microsoft.com/windowsazurestorage/)
-- [Azure 存储文档](https://docs.microsoft.com/azure/storage/)
+- [Azure 存储文档](/azure/storage/)

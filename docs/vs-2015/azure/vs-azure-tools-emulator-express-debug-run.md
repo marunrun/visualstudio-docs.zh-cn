@@ -10,12 +10,12 @@ ms.date: 03/06/2017
 ms.author: mikejo
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
-ms.openlocfilehash: 89d6662a1da987f927951937d04426b5e0b8cfa9
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 190e75579c8388a572c3186c36cb57114284690a
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75846583"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915581"
 ---
 # <a name="using-emulator-express-to-run-and-debug-an-azure-cloud-service-on-a-local-machine"></a>使用快速仿真器在本地计算机上运行和调试 Azure 云服务
 通过使用 Emulator Express，您可以测试和调试云服务，而不需要以管理员身份运行 Visual Studio。 您可以将项目设置指定为根据云服务的要求使用 Emulator Express 或完整版模拟器。 有关完整模拟器的详细信息，请参阅 [Run an Azure Application in the Compute Emulator](/azure/storage/common/storage-use-emulator)（在计算模拟器中运行 Azure 应用程序）。
@@ -47,7 +47,7 @@ ms.locfileid: "75846583"
 - Emulator Express 与 IIS Web 服务器不兼容。
 - 您的云服务可以包含多个角色，但每个角色只能有一个实例。
 - 无法访问 1000 以下的端口号。 如果所用的某个身份验证提供程序通常使用低于 1000 的端口，则可能需要将此值更改为 1000 以上的端口号。
-- 适用于 Azure 计算模拟器的任何限制也适用于 Emulator Express。 例如，每个部署的角色实例数不能超过 50 个。 有关 Azure 计算模拟器的详细信息，请参阅[在计算模拟器中运行 Azure 应用程序](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-performance-profiling-cloud-services?view=vs-2019)。
+- 适用于 Azure 计算模拟器的任何限制也适用于 Emulator Express。 例如，每个部署的角色实例数不能超过 50 个。 有关 Azure 计算模拟器的详细信息，请参阅[在计算模拟器中运行 Azure 应用程序](vs-azure-tools-performance-profiling-cloud-services.md)。
 
 ## <a name="next-steps"></a>后续步骤
 [调试 Azure 云服务](vs-azure-tools-debugging-cloud-services-overview.md)

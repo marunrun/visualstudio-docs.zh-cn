@@ -18,16 +18,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e92e27b123102cb45069c47ebf9de3971039801d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e612228bf5440936c336d286962820a02d6bd071
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738135"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916274"
 ---
 # <a name="debugging-preparation-console-projects-c-c-visual-basic-f"></a>调试准备：控制台项目（C#、 C++、Visual Basic F#）
 
-准备调试控制台项目类似于准备调试 Windows 项目，还有一些其他注意事项，如设置命令行参数以及如何暂停应用程序进行调试。 有关详细信息，请参阅[Windows 窗体应用程序](../debugger/debugging-preparation-windows-forms-applications.md)，和[调试准备：Windows 窗体应用程序 (.NET)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/sez9z95a(v=vs.100))。 由于所有控制台应用程序的相似性，本主题介绍以下项目类型：
+准备调试控制台项目类似于准备调试 Windows 项目，还有一些其他注意事项，如设置命令行参数以及如何暂停应用程序进行调试。 有关详细信息，请参阅[Windows 窗体应用程序](../debugger/debugging-preparation-windows-forms-applications.md)，和[调试准备：Windows 窗体应用程序 (.NET)](/previous-versions/visualstudio/visual-studio-2010/sez9z95a(v=vs.100))。 由于所有控制台应用程序的相似性，本主题介绍以下项目类型：
 
 - C#、Visual Basic 和F#控制台应用程序
 
@@ -53,11 +53,11 @@ ms.locfileid: "72738135"
 
 - 在代码编辑器中，右键单击行并选择 "**运行到光标处**"。
 
-  调试控制台应用程序时，你可能希望从命令提示符处而不是从 Visual Studio 中启动该应用程序。 在这种情况下，可以从命令提示处启动应用程序并将 Visual Studio 调试器附加到该应用程序。 有关详细信息，请参阅[附加到运行中的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)。
+  调试控制台应用程序时，您可能希望从命令提示符处而不是从 Visual Studio 中启动该应用程序。 在这种情况下，可以从命令提示处启动应用程序并将 Visual Studio 调试器附加到该应用程序。 有关详细信息，请参阅[附加到正在运行的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)。
 
   当从 Visual Studio 中启动控制台应用程序时，“控制台”窗口有时会出现在 Visual Studio 窗口的后面。 如果尝试从 Visual Studio 中启动控制台应用程序但似乎未产生任何结果，请尝试移动 Visual Studio 窗口。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [调试本机代码](../debugger/debugging-native-code.md)
 - [调试托管代码](../debugger/debugging-managed-code.md)
 - [准备调试C++项目](../debugger/debugging-preparation-visual-cpp-project-types.md)

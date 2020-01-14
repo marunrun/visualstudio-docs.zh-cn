@@ -9,12 +9,12 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0d9887e3c7cf283bff453e458502400a7ade1a41
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 85573309e594fab49db75115a48b5a4e98e44de3
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75849573"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918848"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>定义锁定策略以创建只读段
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "75849573"
 > [!NOTE]
 > 可以使用反射来规避锁定策略。 它为第三方开发人员提供清晰的边界，但不提供强大的安全性。
 
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)][可视化和建模 SDK](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)网站上提供了更多详细信息和示例。
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)][可视化和建模 SDK](https://www.microsoft.com/download/details.aspx?id=48148)网站上提供了详细信息。
 
 ## <a name="setting-and-getting-locks"></a>设置和获取锁
  可以在存储、分区或单个元素上设置锁。 例如，此语句将阻止删除模型元素，并且还会阻止其属性被更改：

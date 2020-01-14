@@ -8,12 +8,12 @@ ms.assetid: c64aac80-a411-463f-b7bd-8b7607a52ece
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 6735f929f52387f4cb40406d6918894e72bb40d3
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: d47e40a5c38eeb7898aa179282fa55bbe17ef1d5
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299685"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917335"
 ---
 # <a name="what39s-new-in-the-visual-studio-2015-sdk"></a>Visual&#39;STUDIO 2015 SDK 中的新增功能
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,7 +40,7 @@ Visual Studio SDK 具有以下新功能和更新功能，适用于 Visual Studio
  从 Visual Studio 2015 SDK 开始，根据所使用的编程语言，你可以使用不同的选项来创建扩展。
 
 ### <a name="visual-c-and-visual-basic"></a>Visual C# 和 Visual Basic
- 对于C#和 Visual Basic，可以使用一系列完整的项目项模板来创建 vspackage、菜单命令、工具窗口、编辑器分类器、编辑器修饰和编辑器边距扩展。 您可以将所有这些或全部添加到标准 VSIX 项目中。 有关详细信息，请参见:
+ 对于C#和 Visual Basic，可以使用一系列完整的项目项模板来创建 vspackage、菜单命令、工具窗口、编辑器分类器、编辑器修饰和编辑器边距扩展。 您可以将所有这些或全部添加到标准 VSIX 项目中。 有关详细信息，请参阅：
 
 - [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)
 
@@ -56,7 +56,7 @@ Visual Studio SDK 具有以下新功能和更新功能，适用于 Visual Studio
  对于C++，VSPackage 向导支持菜单命令、工具窗口和自定义编辑器。 在**Visual C++ /扩展性**的 "**新建项目**" 对话框中查找它。
 
 ## <a name="vs-sdk-reference-assemblies-via-nuget"></a>VS SDK Reference 程序集通过 NuGet
- 为了提高可移植性和可共享的扩展性项目，可以使用 VS SDK 引用程序集的 NuGet 版本。  这些功能在[VisualStudioExtensibility](https://www.nuget.org/profiles/VisualStudioExtensibility)发布的[nuget.org](https://www.nuget.org/)上可用，并可通过 Visual Studio 的 "**引用/管理 nuget 包**" 对话框轻松添加到项目或解决方案中。 您可以使用 VS SDK[元包](https://www.nuget.org/packages/VSSDK_Reference_Assemblies)一次添加对特定扩展性程序集的单独引用或添加所有 VS sdk 引用程序集。 若要了解有关 NuGet 的详细信息，请参阅[Nuget 概述](https://docs.microsoft.com/nuget/)和[使用对话框管理 nuget 包](https://docs.microsoft.com/nuget/consume-packages/install-use-packages-visual-studio)。
+ 为了提高可移植性和可共享的扩展性项目，可以使用 VS SDK 引用程序集的 NuGet 版本。  这些功能在[VisualStudioExtensibility](https://www.nuget.org/profiles/VisualStudioExtensibility)发布的[nuget.org](https://www.nuget.org/)上可用，并可通过 Visual Studio 的 "**引用/管理 nuget 包**" 对话框轻松添加到项目或解决方案中。 您可以使用 VS SDK[元包](https://www.nuget.org/packages/VSSDK_Reference_Assemblies)一次添加对特定扩展性程序集的单独引用或添加所有 VS sdk 引用程序集。 若要了解有关 NuGet 的详细信息，请参阅[Nuget 概述](/nuget/)和[使用对话框管理 nuget 包](/nuget/consume-packages/install-use-packages-visual-studio)。
 
  使用 VS SDK 引用程序集的 NuGet 版本时，其他用户无需安装 VS SDK 即可打开和生成项目。  NuGet 引用程序集和 VS SDK 生成工具会自动安装在其计算机上用于该项目。
 

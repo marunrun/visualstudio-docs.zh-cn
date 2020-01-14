@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/31/2017
 ms.author: ghogen
-ms.openlocfilehash: 12f94605ee6a1f4e4cc0142e6dd59ec02ed619c9
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: f4c1ff547d9d550cbbc2e77435b159543fc16bf6
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75849942"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917100"
 ---
 # <a name="accessing-azure-virtual-machines-from-server-explorer"></a>从服务器资源管理器访问 Azure 虚拟机
 
@@ -31,7 +31,7 @@ ms.locfileid: "75849942"
    | DNS 名称 |包含虚拟机 Internet 地址的 URL。 |
    | 环境 |对于虚拟机，此属性的值始终为“生产”。 |
    | Name |虚拟机的名称。 |
-   | 大小 |虚拟机的大小，此值反映可用的内存和磁盘空间量。 有关详细信息，请参阅[虚拟机大小](https://docs.microsoft.com/azure/cloud-services/cloud-services-sizes-specs)。 |
+   | 大小 |虚拟机的大小，此值反映可用的内存和磁盘空间量。 有关详细信息，请参阅[虚拟机大小](/azure/cloud-services/cloud-services-sizes-specs)。 |
    | 状态 |值包括“正在启动”、“已启动”、“正在停止”、“已停止”和“正在检索状态”。 如果出现“正在检索状态”，则表示当前状态未知。 此属性的值不同于 [Azure 门户](https://portal.azure.com/)上使用的值。 |
    | 订阅 ID |Azure 帐户的订阅 ID。 可以通过在 [Azure 门户](https://portal.azure.com/)上查看订阅的属性来显示此信息。 |
 2. 选择一个终结点节点，并查看“属性”窗口。

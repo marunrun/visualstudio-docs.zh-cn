@@ -12,17 +12,17 @@ ms.assetid: b1b41012-a777-4ccf-81a6-3b41f0e96583
 caps.latest.revision: 20
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 9403121a235d71a42639121458fc37607180b18a
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: df6ef440202057bb8e0612af0987782fa281c952
+ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851337"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75944252"
 ---
 # <a name="how-to-generate-registry-information-for-an-installer"></a>如何：为安装程序生成注册表信息
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-RegPkg 实用程序可用于为托管的 VSPackage 生成注册清单。 清单可以合并到 Windows Installer 安装包中。 RegPkg 还可以生成一个文件，该文件可以包含在基于[WINDOWS INSTALLER XML 工具集](http://wix.sourceforge.net/)的安装程序源文件中。  
+RegPkg 实用程序可用于为托管的 VSPackage 生成注册清单。 清单可以合并到 Windows Installer 安装包中。 RegPkg 还可以生成一个文件，该文件可以包含在基于[WINDOWS INSTALLER XML 工具集](https://documentation.help/WiX-Toolset/index.html)的安装程序源文件中。
   
 > [!IMPORTANT]
 > RegPkg 生成特定于您的开发系统的路径名称，因此，每次使用 RegPkg 时，必须编辑输出，以使用适当的 Windows Installer 格式属性。 例如，InprocServer32 值应为 **[SystemFolder] mscoree.dll** ，而路径应使用 **[#filekey]** 和 **[$componentkey]** 。 以这种方式调整输出支持将 Windows 安装在其他驱动器或不同的目录中的计算机，以及用户可以选择的、本地化的目录名称和路径。 有关详细信息，请参阅 Windows Installer SDK 中的[格式设置](https://msdn.microsoft.com/library/default.asp?url=/library/msi/setup/formatted.asp)。 如果你遵循开发系统路径的 RegPkg 约定（例如 File_*filename*格式的文件 id），则需要进行更少的更改。  

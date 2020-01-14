@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: ae6449613d273c6e0f8302b8a0b604fe91ebc847
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: d8257e0833da470554ce331c30cd0edf74122093
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911758"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915956"
 ---
 # <a name="publishing-a-cloud-service-using-visual-studio"></a>使用 Visual Studio 发布云服务
 
@@ -31,13 +31,13 @@ Visual Studio 可以将应用程序直接发布到 Azure，同时支持云服务
 
 发布 Azure 应用程序时，可以执行以下任务之一：
 
-- 创建服务包：可以使用此包和服务配置文件将应用程序从[Azure 门户](https://portal.azure.com)发布到部署环境。
+- 创建服务包：可以使用此包和服务配置文件，从 [Azure 门户](https://portal.azure.com)中，将应用程序发布到部署环境。
 
-- 从 Visual Studio 中发布 Azure 项目：要将应用程序直接发布到 Azure，请使用发布向导。 有关信息，请参阅 [Publish Azure Application Wizard](vs-azure-tools-publish-azure-application-wizard.md)（发布 Azure 应用程序向导）。
+- 从 Visual Studio 中发布 Azure 项目：若要将应用程序直接发布到 Azure，请使用发布向导。 有关信息，请参阅 [Publish Azure Application Wizard](vs-azure-tools-publish-azure-application-wizard.md)（发布 Azure 应用程序向导）。
 
 ### <a name="to-create-a-service-package-from-visual-studio"></a>从 Visual Studio 中创建服务包
 
-1. 已准备好发布应用程序时，打开解决方案资源管理器，打开包含角色的 Azure 项目的快捷菜单，并选择“发布”。
+1. 已准备好发布应用程序时，打开解决方案资源管理器，打开包含角色的 Azure 项目的快捷菜单，然后选择“发布”。
 
 1. 如果只是要创建服务包，请执行以下步骤：
 
@@ -67,13 +67,13 @@ Visual Studio 可以将应用程序直接发布到 Azure，同时支持云服务
 
 ### <a name="requirements-for-using-web-deploy"></a>使用 Web 部署的要求
 
-- **仅用于开发和测试目的**：更改直接在运行 web 角色的虚拟机上进行。 如果必须回收此虚拟机，则将丢失此更改，因为发布的原始包已用于重建角色虚拟机。 重新发布应用程序才能获取 Web 角色的最新更改。
+- **仅限开发和测试用途**：更改直接作用于运行 Web 角色的虚拟机。 如果必须回收此虚拟机，则将丢失此更改，因为发布的原始包已用于重建角色虚拟机。 重新发布应用程序才能获取 Web 角色的最新更改。
 
-- **只能更新 web 角色**：无法更新辅助角色。 此外，无法更新 `web role.cs` 中的 `RoleEntryPoint`。
+- **只能更新 Web 角色**：无法更新辅助角色。 此外，无法更新 `web role.cs` 中的 `RoleEntryPoint`。
 
-- **只能支持 web 角色的单个实例**：你的部署环境中不能有任何 web 角色的多个实例。 但是，支持仅含一个实例的多个 Web 角色。
+- **只能支持 Web 角色的单个实例**：不能在部署环境中使用任何 Ｗeb 角色的多个实例。 但是，支持仅含一个实例的多个 Web 角色。
 
-- **启用远程桌面连接**：此要求允许 Web 部署使用用户和密码来连接到虚拟机，以将更改部署到运行 INTERNET INFORMATION SERVICES （IIS）的服务器。 此外，可能需要连接到虚拟机才能将可信证书添加到此虚拟机上的 IIS。 （此证书可以确保 Web 部署使用的 IIS 远程连接是安全的。）
+- **启用远程桌面连接**：通过这个要求，Web 部署可以使用用户和密码来连接到虚拟机，从而将更改部署到运行 Internet Information Services (IIS) 的服务器。 此外，可能需要连接到虚拟机才能将可信证书添加到此虚拟机上的 IIS。 （此证书可以确保 Web 部署使用的 IIS 远程连接是安全的。）
 
 以下过程假设你正在使用“发布 Azure 应用程序”向导。
 
@@ -120,7 +120,7 @@ Visual Studio 可以将应用程序直接发布到 Azure，同时支持云服务
 
    a. 要连接到正在运行 Web 角色的虚拟机，请单击“云资源管理器”或“服务器资源管理器”中的 Web 角色实例，并选择“使用远程桌面连接”。 有关如何连接到虚拟机的详细步骤，请参阅[使用 Visual Studio 为 Azure 云服务中的角色启用远程桌面连接](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio)。 你的浏览器会提示下载 `.rdp` 文件。
 
-   b. 若要添加 SSL 证书，请在 IIS 管理器中打开管理服务。 在 IIS 管理器中，通过在“操作”窗格中打开“绑定”链接来启用 SSL。 此时会显示“添加站点绑定”对话框。 选择“添加”，然后在“类型”下拉列表中选择 HTTPS。 在“SSL 证书”列表中，选择已由 CA 签名并上传到 Azure 门户的 SSL 证书。 有关详细信息，请参阅 [Configure Connection Settings for the Management Service](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770458(v=ws.10))（配置管理服务的连接设置）。
+   b. 若要添加 SSL 证书，请在 IIS 管理器中打开管理服务。 在 IIS 管理器中，通过在“操作”窗格中打开“绑定”链接来启用 SSL。 此时会显示“添加站点绑定”对话框。 选择“添加”，然后在“类型”下拉列表中选择 HTTPS。 在“SSL 证书”列表中，选择已由 CA 签名并上传到 Azure 门户的 SSL 证书。 有关详细信息，请参阅 [Configure Connection Settings for the Management Service](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770458(v=ws.10))（配置管理服务的连接设置）。
 
       > [!NOTE]
       > 如果添加了受信任的 SSL 证书，“发布向导”中不再显示黄色警告三角形。
@@ -145,7 +145,7 @@ Visual Studio 可以将应用程序直接发布到 Azure，同时支持云服务
 
     该引用将添加到“引用”文件夹下的列表中。
 
-1. 打开所添加的程序集的快捷菜单，并选择“属性”。 此时会显示“属性”窗口。
+1. 打开所添加的程序集的快捷菜单，并选择“属性”。 此时将出现“属性”窗口。
 
 1. 要将此程序集包含在服务包中，请在“本地复制”列表中选择“True”。
 

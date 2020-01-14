@@ -14,12 +14,12 @@ caps.latest.revision: 364
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f7065967ec86f7cde63c90de816fca95afce2171
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 758e2bbf69c7b48a1027819377839cbdce9204fe
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851491"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919253"
 ---
 # <a name="what39s-new-in-visual-studio-2015"></a>Visual Studio 2015 中的新增功能
 [!INCLUDE[vs2017banner](./includes/vs2017banner.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "75851491"
 
 - **C#/Xamarin**。 通过 [Xamarin](https://msdn.microsoft.com/library/dn879698\(v=vs.140\).aspx) ，在 Visual Studio 中使用 C# 生成适用于 Windows、iOS 和 Android 的本机应用。
 
-     [Xamarin 开发人员指南](https://docs.microsoft.com/xamarin/ios/deploy-test/debugging-in-xamarin-ios?tabs=windows) 中的 [调试](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-device?tabs=windows) (iOS) 和 [在设备上进行调试](https://docs.microsoft.com/xamarin/) 介绍了调试体验。
+     [Xamarin 开发人员指南](/xamarin/ios/deploy-test/debugging-in-xamarin-ios?tabs=windows) 中的 [调试](/xamarin/android/deploy-test/debugging/debug-on-device?tabs=windows) (iOS) 和 [在设备上进行调试](/xamarin/) 介绍了调试体验。
 
 - **C++/Android**。 配合使用 [用于跨平台移动开发的 Visual C++](cross-platform/visual-cpp-for-cross-platform-mobile-development.md) 模板和 [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html) 等第三方工具，创建适用于 Windows 和 Android 的本机应用。
 

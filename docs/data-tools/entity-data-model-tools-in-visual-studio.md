@@ -8,12 +8,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4af96ad0f76414468fd194b7079b3c4dbdaf2a4c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 250f1ad55f8d60396b8423098e58801d0ed81e77
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586661"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916728"
 ---
 # <a name="entity-framework-tools-in-visual-studio"></a>Visual Studio 中的 Entity Framework Tools
 
@@ -43,7 +43,7 @@ Entity Framework Tools 旨在帮助您生成实体框架（EF）应用程序。 
 
 这些工具可生成或修改 *.edmx*文件。 此 *.edmx*文件包含描述概念模型、存储模型和这些模型之间的映射的信息。 有关详细信息，请参阅[EDMX](/ef/ef6/)。
 
-[实体框架 Power Tools](https://marketplace.visualstudio.com/items?itemName=EntityFrameworkTeam.EntityFrameworkPowerToolsBeta4)可帮助生成使用实体数据模型的应用程序。 Power tools 可以生成概念模型、验证现有模型、生成包含基于概念模型的对象类的源代码文件，并生成包含模型生成的视图的源代码文件。 有关详细信息，请参阅[预生成的映射视图](https://docs.microsoft.com/ef/ef6/fundamentals/performance/pre-generated-views)。
+[实体框架 Power Tools](https://marketplace.visualstudio.com/items?itemName=EntityFrameworkTeam.EntityFrameworkPowerToolsBeta4)可帮助生成使用实体数据模型的应用程序。 Power tools 可以生成概念模型、验证现有模型、生成包含基于概念模型的对象类的源代码文件，并生成包含模型生成的视图的源代码文件。 有关详细信息，请参阅[预生成的映射视图](/ef/ef6/fundamentals/performance/pre-generated-views)。
 
 ## <a name="related-topics"></a>相关主题
 

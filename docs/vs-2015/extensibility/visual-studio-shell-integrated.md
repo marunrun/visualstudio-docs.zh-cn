@@ -11,19 +11,19 @@ ms.assetid: 0b40d495-f17f-4bb9-ace8-b365a7172784
 caps.latest.revision: 26
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 4f6e88e5c430129faa80f34a45f9b6620d5b0d13
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 6220afc2bdf75cc22529c65d5514f5f9e0766555
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850364"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919215"
 ---
 # <a name="visual-studio-shell-integrated"></a>Visual Studio Shell（集成）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio 集成 Shell 包括集成开发环境 (IDE)、调试程序以及源控件集成。 不包含任何编程语言。 但是，集成 shell 提供了一个框架，可用于添加编程语言。  
   
- Visual Studio 集成 shell 实际上是 Visual Studio 独立 shell 的组合，另外还有一个包含集成的 shell 特定组件的其他安装。  集成 shell 应用程序应同时包含[Microsoft Visual Studio Shell (独立) 可再发行组件包](https://docs.microsoft.com/collaborate/connect-redirect?ProgramID=8963&InvitationID=VS15-2R69-RB8J)中的独立 shell 可再发行组件包，以及[Microsoft Visual Studio Shell (集成) 可再](https://docs.microsoft.com/collaborate/connect-redirect?ProgramID=8963&InvitationID=VS15-2R69-RB8J)发行组件包中的集成 shell 可再发行组件包。  
+ Visual Studio 集成 shell 实际上是 Visual Studio 独立 shell 的组合，另外还有一个包含集成的 shell 特定组件的其他安装。  集成 shell 应用程序应同时包含独立的 shell 可再发行组件包以及集成的 shell 可再发行组件包， [Microsoft Visual Studio shell 可再发行](https://visualstudio.microsoft.com/vs/older-downloads/isolated-shell/)组件包。  
   
 > [!NOTE]
 > 您必须先填写一份简短的客户调查，然后才能获取独立和集成 Shell 可再发行组件包。  填写完客户调查后，您会转到包含可再发行组件包下载链接的 Visual Studio Connect 页面。  可以在后续访问 visual studio **2015 集成和隔离 SHELL &#124;** 选项卡下的 visual studio Connect 站点时找到下载链接。  

@@ -18,12 +18,12 @@ caps.latest.revision: 35
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 97c8c50dec18d730d92021d88361701a96b99590
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: a8f068099ec77f35919f880512e6c66f8e648cbe
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75844989"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918816"
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>ClickOnce 部署中的服务器和客户端配置问题
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -132,8 +132,6 @@ ms.locfileid: "75844989"
  使用 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]，你可以执行使用 HTTP 压缩的下载，它是使用 GZIP 算法在将流发送到客户端之前压缩数据流的 Web 服务器技术。 在这种情况下，客户端（在本例中为 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]）将在读取文件之前对其进行解压缩。  
   
  如果使用的是 IIS，则可以轻松启用 HTTP 压缩。 但是，当启用 HTTP 压缩时，仅对某些文件类型（即 HTML 和文本文件）启用它。 若要为程序集（.dll）、XML （.xml）、部署清单（应用程序）和应用程序清单（.manifest）启用压缩，则必须将这些文件类型添加到 IIS 的类型列表中以进行压缩。 将文件类型添加到部署之前，只会压缩文本和 HTML 文件。  
-  
- 有关 IIS 的详细说明，请参阅[如何为 HTTP 压缩指定其他文档类型](https://support.microsoft.com/kb/234497)。  
   
 ## <a name="see-also"></a>请参阅  
  [ClickOnce 部署疑难解答](../deployment/troubleshooting-clickonce-deployments.md)   

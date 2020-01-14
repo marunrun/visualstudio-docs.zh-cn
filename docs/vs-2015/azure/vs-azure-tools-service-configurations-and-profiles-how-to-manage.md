@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/11/2017
 ms.author: ghogen
-ms.openlocfilehash: 2d7081fc7531c8c1c1fcf13564f9f90bc9964f17
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 008dd927f38c7fd79996bde39531e256314f2e24
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850000"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917362"
 ---
 # <a name="how-to-manage-service-configurations-and-profiles"></a>如何管理服务配置和配置文件
 ## <a name="overview"></a>概述
@@ -80,7 +80,7 @@ ms.locfileid: "75850000"
    
     新配置文件将出现在“目标配置文件”列表中。
 6. 在“目标配置文件”列表中，选择刚创建的配置文件。 将使用所选配置文件中的选项填充“发布向导”设置。
-7. 选择“上一页”和“下一页”按钮以显示发布向导的每一页，并自定义此配置文件的设置。 有关信息，请参阅 [Publish Azure Application Wizard](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-publish-azure-application-wizard?view=vs-2019)（发布 Azure 应用程序向导）。
+7. 选择“上一页”和“下一页”按钮以显示发布向导的每一页，并自定义此配置文件的设置。 有关信息，请参阅 [Publish Azure Application Wizard](vs-azure-tools-publish-azure-application-wizard.md)（发布 Azure 应用程序向导）。
 8. 完成自定义设置后，选择“下一步”以返回到“设置”页。 当使用这些设置发布服务时或者选择配置文件列表旁边的“保存”时，将保存该配置文件。
 
 ### <a name="to-rename-or-delete-a-profile"></a>重命名或删除配置文件
@@ -93,9 +93,9 @@ ms.locfileid: "75850000"
 ### <a name="to-change-a-profile"></a>更改配置文件
 1. 打开 Azure 项目的快捷菜单，并选择“发布”。
 2. 在“目标配置文件”列表中，选择要更改的配置文件。
-3. 选择“上一页”和“下一页”按钮以显示发布向导的每一页，并更改所需的设置。 有关信息，请参阅 [Publish Azure Application Wizard](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-publish-azure-application-wizard?view=vs-2019)（发布 Azure 应用程序向导）。
+3. 选择“上一页”和“下一页”按钮以显示发布向导的每一页，并更改所需的设置。 有关信息，请参阅 [Publish Azure Application Wizard](vs-azure-tools-publish-azure-application-wizard.md)（发布 Azure 应用程序向导）。
 4. 完成更改设置后，选择“下一步”以返回到“设置”。
 5. （可选）选择“发布”以使用新设置发布云服务。 如果现在不需要发布云服务，并且关闭发布向导，Visual Studio 会询问是否要保存对配置文件的更改。
 
 ## <a name="next-steps"></a>后续步骤
-若要了解如何在 Visual Studio 中配置 Azure 项目的其他部分，请参阅[配置 Azure 项目](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address?view=vs-2019)
+若要了解如何在 Visual Studio 中配置 Azure 项目的其他部分，请参阅[配置 Azure 项目](vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address.md)

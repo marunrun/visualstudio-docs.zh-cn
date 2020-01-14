@@ -15,23 +15,23 @@ caps.latest.revision: 30
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 3c8022a9dfba3012e8c81523b076b7bbfbb6ee8d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c4da0414c9923a8ed7bb01456f38000433641522
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669186"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919223"
 ---
 # <a name="ca1709-identifiers-should-be-cased-correctly"></a>CA1709：标识符的大小写应当正确
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-有关 Visual Studio 的最新文档，请参阅[CA1709：标识符应采用正确的大小写](https://docs.microsoft.com/visualstudio/code-quality/ca1709-identifiers-should-be-cased-correctly)。
+有关 Visual Studio 的最新文档，请参阅[CA1709：标识符应采用正确的大小写](/visualstudio/code-quality/ca1709-identifiers-should-be-cased-correctly)。
 
 |||
 |-|-|
 |TypeName|IdentifiersShouldBeCasedCorrectly|
 |CheckId|CA1709|
-|类别|Microsoft。命名|
+|类别|Microsoft.Naming|
 |是否重大更改|重大-在程序集、命名空间、类型、成员和参数上引发。<br /><br /> 不间断-当对泛型类型参数引发时。|
 
 ## <a name="cause"></a>原因
@@ -45,7 +45,7 @@ ms.locfileid: "72669186"
 
  标识符的名称包含三个或更多大写字母的首字母缩写词。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  命名约定为面向公共语言运行时的库提供了通用的外观。 这减少了新软件库所需的学习曲线，并使客户可以放心地了解库是由具有开发托管代码的专业技能的人员开发的。
 
  按照约定，参数名称使用 camel 大小写;命名空间、类型和成员名称使用 Pascal 大小写。 在 camel 大小写格式的名称中，第一个字母为小写，名称中任何剩余单词的第一个字母都大写。 Camel 大小写格式的名称示例包括 "packetSniffer"、"ioFile" 和 "fatalErrorCode"。 在 Pascal 大小写名称中，第一个字母为大写，名称中任何剩余单词的第一个字母为大写。 Pascal 大小写的名称的示例包括 "PacketSniffer"、"IOFile" 和 "FatalErrorCode"。

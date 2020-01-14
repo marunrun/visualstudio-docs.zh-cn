@@ -33,12 +33,12 @@ caps.latest.revision: 40
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5303a8003d84af5e2a059d9f509e560204afa528
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 45b681b8d146fcc4ca8b056cd94bb0ef65cae826
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301099"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918960"
 ---
 # <a name="managing-exceptions-with-the-debugger"></a>管理调试器的异常
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -150,7 +150,7 @@ ms.locfileid: "74301099"
   
 3. 可以为特定异常（选择异常，右键单击，然后选择/取消选择 **“在用户代码中未经处理时继续操作”** ）或为整个类别的异常（例如，所有公共语言运行时异常）更改此设置。  
   
-   例如，ASP.NET Web 应用程序通过将异常转换为 HTTP 500 状态代码来处理异常（[ASP.NET API 中的异常处理](https://docs.microsoft.com/aspnet/web-api/overview/error-handling/exception-handling)），该方法可能无法帮助你确定异常的源。 在下面的示例中，用户代码对引发 `String.Format()` 的 <xref:System.FormatException>进行调用。 异常中断如下所示：  
+   例如，ASP.NET Web 应用程序通过将异常转换为 HTTP 500 状态代码来处理异常（[ASP.NET API 中的异常处理](/aspnet/web-api/overview/error-handling/exception-handling)），该方法可能无法帮助你确定异常的源。 在下面的示例中，用户代码对引发 `String.Format()` 的 <xref:System.FormatException>进行调用。 异常中断如下所示：  
   
    ![用户&#45;分隔符例外时中断](../debugger/media/exceptionunhandledbyuser.png "ExceptionUnhandledByUser")  
   

@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: cd26e3d37779337ee39a1afa68aa3ba9ab56d376
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 3d56cfce70b0723b636b9b8ef7c6f3917015bf66
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75846547"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915548"
 ---
 # <a name="publish-webapplicationwebsite-windows-powershell-script"></a>Publish-WebApplicationWebSite（Windows PowerShell 脚本）
 ## <a name="syntax"></a>语法
@@ -57,7 +57,7 @@ Publish-WebApplicationWebSite
 | 接受通配符？ |false |
 
 ## <a name="webdeploypackage"></a>WebDeployPackage
-要发布到网站的 Web 部署包的路径。 可以在 Visual Studio 中使用“发布 Web”向导来创建此包。 有关详细信息，请参阅 [Azure 云服务和 ASP.NET 入门](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-publish-webapplicationwebsite-windows-powershell-script?view=vs-2019)。
+要发布到网站的 Web 部署包的路径。 可以在 Visual Studio 中使用“发布 Web”向导来创建此包。 有关详细信息，请参阅 [Azure 云服务和 ASP.NET 入门](vs-azure-tools-publish-webapplicationwebsite-windows-powershell-script.md)。
 
 | 参数 | 默认值 |
 | --- | --- |

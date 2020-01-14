@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d792f13e073f11c8e6d3a652c1d041902f1209c9
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 2a1611f8fcc1ba7f754b6d178b70180678cd06d6
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75848922"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917615"
 ---
 # <a name="image-service-and-catalog"></a>映像服务和目录
 本指南包含的指南和最佳实践适用于 Visual studio 2015 中引入的 Visual Studio 映像服务和映像目录。
@@ -720,7 +720,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 3. 更新你的代码，以便使用映像服务通过已更新的映射来请求名字对象。 （这可能意味着更新托管代码的**CrispImages** ，或从映像服务请求 HBITMAPs 或 HICONs，并将其传递给本机代码。）
 
 ## <a name="testing-your-images"></a>测试映像
- 您可以使用 "图像库查看器" 工具来测试图像清单，以确保正确编写所有内容。 可在[Visual Studio 2015 SDK](visual-studio-sdk.md)中找到该工具。 可在[此处](https://docs.microsoft.com/visualstudio/extensibility/internals/vssdk-utilities?view=vs-2015&redirectedfrom=MSDN)找到有关此工具和其他工具的文档。
+ 您可以使用 "图像库查看器" 工具来测试图像清单，以确保正确编写所有内容。 可在[Visual Studio 2015 SDK](visual-studio-sdk.md)中找到该工具。 可在[此处](/visualstudio/extensibility/internals/vssdk-utilities?view=vs-2015)找到有关此工具和其他工具的文档。
 
 ## <a name="additional-resources"></a>其他资源
 

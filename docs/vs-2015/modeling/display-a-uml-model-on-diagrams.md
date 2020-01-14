@@ -11,12 +11,12 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b43d4353e325bb81a29fe39106ac13e1ddcf96a9
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 12c6cecf79b0c20ea2c110efa432d5ccb9f38863
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75849473"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916139"
 ---
 # <a name="display-a-uml-model-on-diagrams"></a>在关系图上显示 UML 模型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -379,4 +379,5 @@ namespace AlignCommand
 ```
 
 ## <a name="see-also"></a>请参阅
- [扩展 uml 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)[导航 uml 模型](../modeling/navigate-the-uml-model.md)[示例：对齐关系图菜单上的形状的命令](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)[示例：创建元素、形状和构造型](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+ [扩展 uml 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)[导航 uml 模型](../modeling/navigate-the-uml-model.md)
+ 

@@ -29,12 +29,12 @@ caps.latest.revision: 62
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b30e171756527352976dcb03abb0d1c32370c442
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: cf4d63d7d00e91daa2564992f801896075f73aab
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75849892"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918947"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>使用 Visual Studio 调试器附加到运行的进程
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -111,7 +111,7 @@ ms.locfileid: "75849892"
 
 如果尝试附加到不受信任的用户帐户拥有的进程，则会出现安全警告对话框确认。 有关详细信息请参阅[安全警告：附加到不受信任的用户所拥有的进程可能很危险。如果以下信息看上去可疑或者你无法确定，请勿附加到此进程](/visualstudio/debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user?view=vs-2015).
 
-在某些情况下，在“远程桌面”（“终端服务”）会话中进行调试时， **“可用进程”** 列表不会显示所有可用进程。 如果以具有有限用户帐户的用户身份运行 Visual Studio，“可用进程” 列表将不显示在会话 0 中运行的进程，会话 0 用于服务与其他服务器进程，包括 w3wp.exe。 你可以通过以下方法解决该问题：使用管理员帐户运行 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 或从服务器控制台而不是“终端服务”会话运行 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。 如果这两种解决方法都不可行，则第三种方法是通过从 Windows 命令行运行 `vsjitdebugger.exe -p` *ProcessId*来附加到进程。 你可以使用 tlist.exe 来确定进程 ID。 若要获取 tlist.exe，可从  [WDK 和 WinDbg 下载](https://docs.microsoft.com/windows-hardware/drivers/dashboard/)中下载并安装 Windows 调试工具。
+在某些情况下，在“远程桌面”（“终端服务”）会话中进行调试时， **“可用进程”** 列表不会显示所有可用进程。 如果以具有有限用户帐户的用户身份运行 Visual Studio，“可用进程” 列表将不显示在会话 0 中运行的进程，会话 0 用于服务与其他服务器进程，包括 w3wp.exe。 你可以通过以下方法解决该问题：使用管理员帐户运行 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 或从服务器控制台而不是“终端服务”会话运行 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。 如果这两种解决方法都不可行，则第三种方法是通过从 Windows 命令行运行 `vsjitdebugger.exe -p` *ProcessId*来附加到进程。 你可以使用 tlist.exe 来确定进程 ID。 若要获取 tlist.exe，可从  [WDK 和 WinDbg 下载](/windows-hardware/drivers/dashboard/)中下载并安装 Windows 调试工具。
 
 ## <a name="BKMK_Scenarios"></a>常见调试方案
 
