@@ -57,7 +57,7 @@ ms.locfileid: "75590262"
 
 ## <a name="next-steps"></a>后续步骤
 
-要开始学习本教程，请从[步骤 1：创建项目并向窗体添加表](../ide/step-1-create-a-project-and-add-a-table-to-your-form.md)** 。
+要开始学习本教程，请从[步骤 1：  创建项目并向窗体添加表](../ide/step-1-create-a-project-and-add-a-table-to-your-form.md)。
 
 ## <a name="see-also"></a>请参阅
 
