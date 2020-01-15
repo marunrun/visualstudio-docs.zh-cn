@@ -10,21 +10,19 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e8e306aea1615649223c96f0c5a7041574f844d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c0fa7afc7262a1a78b356104f8cc206e8898f22e
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588845"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776132"
 ---
 # <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>步骤 1：创建项目并向窗体添加标签
 
 在开发此测验的过程中，首先应创建项目并将数个标签、一个按钮和其他控件添加到窗体。 此外还要设置已添加各个控件的属性。 项目将包含窗体、控件和代码（在本教程下文中）。 按钮用于启动测验，标签用于显示测验问题，其他控件则用于显示测验答案和完成测验所剩时间。
 
 > [!NOTE]
-> 本主题是基本编码概念教程系列中的一部分。 
-> - 有关本教程的概述，请参阅[教程 2：创建计时数学测验](../ide/tutorial-2-create-a-timed-math-quiz.md)。 
-> - 若要下载完整版代码，请参阅[数学测验教程的完整示例](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c)。
+> 本主题是基本编码概念教程系列中的一部分。 有关本教程的概述，请参阅[教程 2：创建计时数学测验](../ide/tutorial-2-create-a-timed-math-quiz.md)。
 
 ## <a name="to-create-a-project-for-a-form"></a>为窗体创建项目
 
@@ -210,6 +208,6 @@ ms.locfileid: "75588845"
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅[步骤 2：创建随机加法题](../ide/step-2-create-a-random-addition-problem.md)  。
+- 要转到下一个教程步骤，请参阅 **[步骤 2：创建随机加法题](../ide/step-2-create-a-random-addition-problem.md)** 。
 
 - 要返回概述主题，请参阅[教程 2：创建计时数学测验](../ide/tutorial-2-create-a-timed-math-quiz.md)。

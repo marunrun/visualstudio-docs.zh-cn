@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b88af1a0ac1ec51f57d3aa339c2c2ec4adb45134
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: 77b8fc1f1f9f34a5b19756b7cf1370522f74075e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119003"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589963"
 ---
 # <a name="step-5-add-controls-to-your-form"></a>步骤 5：向窗体添加控件
 
@@ -74,7 +74,7 @@ ms.locfileid: "71119003"
 
    此时这些按钮应具有适当大小且按照适当的顺序排列。 （只要选定所有四个按钮，就可以同时更改所有四个“AutoSize”属性。）  下图显示了这四个按钮。
 
-    ![带四个按钮的图片查看器](../ide/media/express_autosize.png)<br/>带四个按钮的图片查看器 
+    ![带四个按钮的图片查看器](../ide/media/express_autosize.png)<br/>带四个按钮  的图片查看器
 
 1. 现在，再次运行程序以查看更改。
 
