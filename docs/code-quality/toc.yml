@@ -721,6 +721,8 @@
                   href: ca3077.md
                 - name: 'CA3147:使用 ValidateAntiForgeryToken 标记谓词处理程序'
                   href: ca3147.md
+                - name: CA5358：请勿使用不安全的密码模式
+                  href: ca5358.md
                 - name: CA5361：不禁用 SChannel 使用强加密
                   href: ca5361.md
                 - name: CA5363：请勿禁用请求验证
