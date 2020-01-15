@@ -11,18 +11,18 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 071c16267486e1dda1e183cad3c488345974a3cc
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 84f6ddc2012617a5216c58fa0761dc100fb8942f
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745926"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75402746"
 ---
 # <a name="sample-c-project-for-code-analysis"></a>用于代码分析的示例 C++ 项目
 
 以下过程说明如何为[演练：分析 C/C++ 代码的缺陷](../code-quality/walkthrough-analyzing-c-cpp-code-for-defects.md)创建示例。 这些过程将创建：
 
-- 名为 CppDemo 的 Visual Studio 解决方案。
+- 名为 CppDemo 的 [!INCLUDEvsprvs] 解决方案。
 
 - 名为 CodeDefects 的静态库项目。
 
@@ -32,19 +32,17 @@ ms.locfileid: "72745926"
 
 ## <a name="create-the-cppdemo-solution-and-the-codedefects-project"></a>创建 CppDemo 解决方案和 CodeDefects 项目
 
-1. 单击“文件”菜单，指向“新建”，然后单击“新建项目”    。
+1. 打开 [!INCLUDEvsprvs] 并选择“创建新项目” 
 
-2. 在“项目类型”树列表中，如果 C++ 不是 VS 中的默认语言，则展开“其他语言”   。
+2. 将语言筛选器更改为 C++ 
 
-3. 展开“Visual C++”，然后单击“常规”   。
+3. 选择空项目，然后单击“下一步”  
 
-4. 在“模板”中单击“空项目”   。
+4. 在“项目名称”文本框中，键入“CodeDefects”  
 
-5. 在“名称”文本框中，键入“CodeDefects”   。
+5. 在“解决方案名称”文本框中，键入“CppDemo”  
 
-6. 选择“为解决方案创建目录”复选框  。
-
-7. 在“解决方案名称”文本框中，键入“CppDemo”   。
+6. 单击“创建” 
 
 ## <a name="configure-the-codedefects-project-as-a-static-library"></a>将 CodeDefects 项目配置为静态库
 
@@ -52,9 +50,9 @@ ms.locfileid: "72745926"
 
 2. 展开“配置属性”，然后单击“常规”   。
 
-3. 在“常规”列表中，选择“目标扩展”旁边的列中的文本，然后键入“.lib”    。
+3. 在“常规”列表中，将“配置类型”更改为“静态库(.lib)”    。
 
-4. 在“项目默认值”中，单击“配置类型”旁边的列，然后单击“静态库(.lib)”    。
+4. 在“高级”列表中，将“目标文件扩展名”更改为“.lib”   
 
 ## <a name="add-the-header-and-source-file-to-the-codedefects-project"></a>将标头和源文件添加到 CodeDefects 项目
 
@@ -64,27 +62,23 @@ ms.locfileid: "72745926"
 
 3. 在“名称”框中，键入“Bug.h”，然后单击“添加”    。
 
-4. 复制以下代码并将其粘贴到 Visual Studio 编辑器中的“Bug.h”文件中  。
+4. 复制以下代码并将其粘贴到编辑器中的“Bug.h”文件中  。
 
-    ```cpp
-    #include <windows.h>
+```cpp
+#pragma once
 
-    //
-    //These 3 functions are consumed by the sample
-    //  but are not defined. This project cannot be linked!
-    //
+#include <windows.h>
 
-    bool CheckDomain( LPCSTR );
-    HRESULT ReadUserAccount();
+// These functions are consumed by the sample
+// but are not defined. This project cannot be linked!
+bool CheckDomain(LPCTSTR);
+HRESULT ReadUserAccount();
 
-    //
-    //These constants define the common sizes of the
-    //  user account information throughout the program
-    //
-
-    const int USER_ACCOUNT_LEN = 256;
-    const int ACCOUNT_DOMAIN_LEN = 128;
-    ```
+// These constants define the common sizes of the
+// user account information throughout the program
+const int USER_ACCOUNT_LEN = 256;
+const int ACCOUNT_DOMAIN_LEN = 128;
+```
 
 5. 在解决方案资源管理器中，右键单击“源文件”，指向“新建”，然后单击“新项”    。
 
@@ -92,65 +86,63 @@ ms.locfileid: "72745926"
 
 7. 在“名称”框中，键入“Bug.cpp”，然后单击“添加”    。
 
-8. 复制以下代码并将其粘贴到 Visual Studio 编辑器中的 Bug.cpp 文件中  。
+8. 复制以下代码并将其粘贴到编辑器中的“Bug.cpp”文件中  。
 
-    ```cpp
-    #include <stdlib.h>
-    #include "Bug.h"
+```cpp
+#include "Bug.h"
 
-    // the user account
-    TCHAR g_userAccount[USER_ACCOUNT_LEN] = "";
-    int len = 0;
+// the user account
+TCHAR g_userAccount[USER_ACCOUNT_LEN] = {};
+int len = 0;
 
-    bool ProcessDomain()
+bool ProcessDomain()
+{
+    TCHAR* domain = new TCHAR[ACCOUNT_DOMAIN_LEN];
+    // ReadUserAccount gets a 'domain\user' input from
+    //the user into the global 'g_userAccount'
+    if (ReadUserAccount())
     {
-        TCHAR* domain = new TCHAR[ACCOUNT_DOMAIN_LEN];
-        // ReadUserAccount gets a 'domain\user' input from
-        //the user into the global 'g_userAccount'
-        if (ReadUserAccount() )
+        // Copies part of the string prior to the '\'
+        // character onto the 'domain' buffer
+        for (len = 0; (len < ACCOUNT_DOMAIN_LEN) && (g_userAccount[len] != L'\0'); len++)
         {
-
-            // Copies part of the string prior to the '\'
-            // character onto the 'domain' buffer
-            for( len = 0 ; (len < ACCOUNT_DOMAIN_LEN) && (g_userAccount[len] != '\0') ; len++  )
+            if (g_userAccount[len] == '\\')
             {
-                if ( g_userAccount[len] == '\\' )
-                {
-                    // Stops copying on the domain and user separator ('\')
-                    break;
-                }
-                domain[len] = g_userAccount[len];
+                // Stops copying on the domain and user separator ('\')
+                break;
             }
-            if((len= ACCOUNT_DOMAIN_LEN) || (g_userAccount[len] != '\\'))
-            {
-                // '\' was not found. Invalid domain\user string.
-                delete [] domain;
-                return false;
-            }
-            else
-            {
-                domain[len]='\0';
-            }
-            // Process domain string
-            bool result = CheckDomain( domain );
-
-            delete[] domain;
-            return result;
+            domain[len] = g_userAccount[len];
         }
-        return false;
-    }
-
-    int path_dependent(int n)
-    {
-        int i;
-        int j;
-        if (n == 0)
-            i = 1;
+        if ((len = ACCOUNT_DOMAIN_LEN) || (g_userAccount[len] != '\\'))
+        {
+            // '\' was not found. Invalid domain\user string.
+            delete[] domain;
+            return false;
+        }
         else
-            j = 1;
-        return i+j;
+        {
+            domain[len] = '\0';
+        }
+        // Process domain string
+        bool result = CheckDomain(domain);
+
+        delete[] domain;
+        return result;
     }
-    ```
+    return false;
+}
+
+int path_dependent(int n)
+{
+    int i;
+    int j;
+    if (n == 0)
+        i = 1;
+    else
+        j = 1;
+    return i + j;
+}
+```
 
 9. 单击“文件”菜单，然后单击“全部保存”   。
 
@@ -158,17 +150,18 @@ ms.locfileid: "72745926"
 
 1. 在解决方案资源管理器中，单击“CppDemo”，指向“添加”，然后单击“新项目”    。
 
-2. 在“添加新项目”对话框中，展开 Visual C++，单击“常规”，然后单击“空项目”    。
+2. 在“添加新项目”对话框中，将语言筛选器更改为“C++”并选择“空项目”，然后单击“下一步”     。
 
-3. 在“名称”文本框中，键入“Annotations”，然后单击“添加”    。
+3. 在“项目名称”文本框中，键入“Annotations”，然后单击“创建”    。
 
 4. 在解决方案资源管理器中，右键单击“Annotations”，然后单击“属性”   。
 
 5. 展开“配置属性”，然后单击“常规”   。
 
-6. 在“常规”列表中，选择“目标扩展”旁边的列中的文本，然后键入“.lib”    。
+6. 在“常规”列表中，将“配置类型”更改为“静态库(.lib)”，然后单击“静态库(.lib)”    。
 
-7. 在“项目默认值”中，单击“配置类型”旁边的列，然后单击“静态库(.lib)”    。
+7. 在“高级”列表中，选择“目标文件扩展名”旁边的列中的文本，然后键入“.lib”    。
+
 
 ## <a name="add-the-header-file-and-source-file-to-the-annotations-project"></a>将头文件和源文件添加到 Annotations 项目
 
@@ -178,22 +171,22 @@ ms.locfileid: "72745926"
 
 3. 在“名称”框中，键入“annotations.h”，然后单击“添加”    。
 
-4. 复制以下代码并将其粘贴到 Visual Studio 编辑器中的“annotations.h”文件中  。
+4. 复制以下代码并将其粘贴到编辑器中的“annotations.h”文件中  。
 
-    ```cpp
-    #include <CodeAnalysis/SourceAnnotations.h>
+```cpp
+#pragma once
+#include <sal.h>
 
-    struct LinkedList
-    {
-        struct LinkedList* next;
-        int data;
-    };
+struct LinkedList
+{
+    struct LinkedList* next;
+    int data;
+};
 
-    typedef struct LinkedList LinkedList;
+typedef struct LinkedList LinkedList;
 
-    [returnvalue:SA_Post( Null=SA_Maybe )] LinkedList* AllocateNode();
-
-    ```
+_Ret_maybenull_ LinkedList* AllocateNode();
+```
 
 5. 在解决方案资源管理器中，右键单击“源文件”，指向“新建”，然后单击“新项”    。
 
@@ -201,33 +194,30 @@ ms.locfileid: "72745926"
 
 7. 在“名称”框中，键入“annotations.cpp”，然后单击“添加”    。
 
-8. 复制以下代码并将其粘贴到 Visual Studio 编辑器中的“annotations.cpp”文件中  。
+8. 复制以下代码并将其粘贴到编辑器中的“annotations.cpp”文件中  。
 
-    ```cpp
-    #include <CodeAnalysis/SourceAnnotations.h>
-    #include <windows.h>
-    #include <stdlib.h>
-    #include "annotations.h"
+```cpp
+#include "annotations.h"
 
-    LinkedList* AddTail( LinkedList *node, int value )
+LinkedList* AddTail(LinkedList* node, int value)
+{
+    // finds the last node
+    while (node->next != nullptr)
     {
-        LinkedList *newNode = NULL;
-
-        // finds the last node
-        while ( node->next != NULL )
-        {
-            node = node->next;
-        }
-
-        // appends the new node
-        newNode = AllocateNode();
-        newNode->data = value;
-        newNode->next = 0;
-        node->next = newNode;
-
-        return newNode;
+        node = node->next;
     }
 
-    ```
+    // appends the new node
+    LinkedList* newNode = AllocateNode();
+    newNode->data = value;
+    newNode->next = 0;
+    node->next = newNode;
+
+    return newNode;
+}
+```
 
 9. 单击“文件”菜单，然后单击“全部保存”   。
+
+
+解决方案现已完成，应顺利生成，没有错误。

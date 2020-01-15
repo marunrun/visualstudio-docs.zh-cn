@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7fb9ba985867895b5ba19f8049e20fd31ccef191
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: b3f4ca58506e99331c48b33717903d1925874912
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118809"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590015"
 ---
 # <a name="step-4-lay-out-your-form-with-a-tablelayoutpanel-control"></a>步骤 4：使用 TableLayoutPanel 控件设置窗体布局
 
@@ -28,7 +28,7 @@ ms.locfileid: "71118809"
 1. 选择“容器”组旁边的小三角形符号打开该组，如下面的屏幕截图所示  。
 
      ![容器组](../ide/media/express_toolbox.png)<br>
-“容器”组 
+容器组 
 
 1. 可以向窗体中添加类似按钮、复选框和标签这样的控件。 在“工具箱”中双击“TableLayoutPanel”  控件。 （您也可将控件从工具箱拖动到窗体上。）当执行此操作时，IDE 会将 TableLayoutPanel 控件添加到窗体中，如下面的屏幕截图所示。
 
@@ -46,7 +46,7 @@ TableLayoutPanel 控件
 1. 通过选择“TableLayoutPanel”来确保将它选中。 可以通过查看“属性”窗口顶部的下拉列表来验证选定了哪个控件，如下面的屏幕截图所示  。
 
      ![显示 TableLayoutPanel 控件的“属性”窗口](../ide/media/express_controlspropwin.png)<br>
-显示“TableLayoutPanel”控件的“属性”窗口   
+显示 TableLayoutPanel 控件  的“属性”窗口 
 
 1. 在“属性”窗口的工具栏上选择“按字母顺序”按钮   。 这会使“属性”窗口中的属性列表按字母顺序显示，这样更易于查找本教程中的属性  。
 
@@ -55,7 +55,7 @@ TableLayoutPanel 控件
    选择 TableLayoutPanel 之后，请查找“Dock”  属性并选择“Dock”  ，此属性应设置为“无”  。 请注意，一个下拉箭头将出现在值旁边。 选择该箭头，然后选择“填充”按钮（中间的大按钮），如下面的屏幕截图所示  。
 
      ![选定“填充”的“属性”窗口](../ide/media/express_docktable.png)<br>
-选定了“填充”的“属性”窗口   
+选定  “填充”的“属性”窗口 
 
      Visual Studio 中的停靠是指 IDE 中的一个窗口附加到另一个窗口或区域的情况  。 例如，“属性”窗口可以取消停靠，即在 Visual Studio 中独立地自由浮动，也可以靠近“解决方案资源管理器”停靠   。
 
@@ -74,23 +74,23 @@ TableLayoutPanel 控件
 1. 选择三角形以显示控件的任务列表，如下面的屏幕截图所示。
 
      ![TableLayoutPanel 任务](../ide/media/express_tablepanel.png)<br>
-“TableLayoutPanel”任务 
+TableLayoutPanel 任务 
 
 1. 选择“编辑行和列”任务，显示“列和行样式”窗口   。 选择“Column1”  ，确保选中“百分比”  按钮并在“百分比”  框中输入“15”  ，以将此控件的大小设置为 15%。 （这是一个 <xref:System.Windows.Forms.NumericUpDown> 控件，将在后面的教程中使用。）选择“Column2”并将其设置为 85%  。 先不要选择“确定”按钮，因为这将关闭此窗口  。 （但如果这样做，你可以使用任务列表重新打开它。）
 
      ![TableLayoutPanel 列和行样式](../ide/media/vs_tablelayoutpanel_setup.png)<br>
-“TableLayoutPanel”列和行样式 
+TableLayoutPanel 列和行样式 
 
 1. 从“列和行样式”窗口顶部的“显示”下拉列表中选择“行”    。 将“Row1”设置为 90% 并将“Row2”设置为 10%   。
 
 1. 选择“确定”  按钮。 现在，TableLayoutPanel 应具有一个大的顶部行、一个小的底部行、一个小的左侧列和一个大的右侧列。 （可在 TableLayoutPanel 中调整行和列的大小，方法是在窗体中选择“tableLayoutPanel1”，然后拖动其行和列边框  。）
 
      ![具有已调整大小的 TableLayoutPanel 的 Form1](../ide/media/vs_formafterlayoutpanel.png)<br>
-具有已调整大小的“TableLayoutPanel”的“Form1”（图片查看器）  
+具有已调整大小的  TableLayoutPanel 的 Form1（图片查看器）
 
 ## <a name="next-steps"></a>后续步骤
 
-* 要转到下一个教程步骤，请参阅[步骤 5：向窗体添加控件](../ide/step-5-add-controls-to-your-form.md)** 。
+* 要转到下一个教程步骤，请参阅[步骤 5：向窗体添加控件](../ide/step-5-add-controls-to-your-form.md)  。
 
 * 要返回上一个教程步骤，请参阅[步骤 3：设置窗体属性](../ide/step-3-set-your-form-properties.md)。
 

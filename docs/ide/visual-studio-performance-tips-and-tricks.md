@@ -2,17 +2,17 @@
 title: 有关提高性能的提示
 ms.date: 08/14/2018
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ccf785cec859290cac0ebcf5c9685861bd2887e4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 950803d46d7b870804c2c8914f3c85b0b89e5732
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647139"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590665"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio 性能提示和技巧
 
@@ -107,13 +107,13 @@ Visual Studio 会自动重新打开上一个会话中处于打开状态的文档
 
    ::: moniker range="vs-2017"
 
-    若要禁用扩展，请转到“工具”  >  “扩展和更新”，然后禁用特定扩展。
+    要禁用扩展，请转到“工具”  >“扩展和更新”  ，然后禁用特定扩展。
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-    若要禁用扩展，请转到“扩展”  >  “管理扩展”，然后禁用特定扩展。
+    若要禁用扩展，请转到“扩展”  >“管理扩展”  ，然后禁用特定扩展。
 
    ::: moniker-end
 

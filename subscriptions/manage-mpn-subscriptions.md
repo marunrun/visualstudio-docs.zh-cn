@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/28/2019
 ms.topic: conceptual
 description: 对于 MPN 合作伙伴而言，如何将 Visual Studio 订阅分配到最终用户。
-ms.openlocfilehash: 600d7c651e4e4b4396293e8be60a008a6f6d0bf3
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: 544987556b33358865fc785db7e86d455942a430
+ms.sourcegitcommit: 9186dc1af846ef2236ca78d4facf399c253ab5f7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68605463"
+ms.lasthandoff: 12/26/2019
+ms.locfileid: "75492904"
 ---
 # <a name="manage-visual-studio-subscriptions-offered-through-the-microsoft-partner-network-mpn"></a>管理通过 Microsoft 合作伙伴网络 (MPN) 提供的 Visual Studio 订阅
 具备相应资格或在 MPN 中购买了Action Pack 的合作伙伴可以使用 Visual Studio 订阅。 这些订阅按用户授权，并且仅在分配给为合作伙伴公司工作的特定命名用户时才有效。
@@ -53,7 +53,7 @@ Microsoft Action Pack 订阅者和 Visual Studio 订阅
 
 ## <a name="resources-and-references"></a>资源和参考
 - 与 Microsoft 合作伙伴网络 [Visual Studio 订阅](https://partner.microsoft.com/membership/msdn-subscriptions)有关的详细信息
-- Microsoft 合作伙伴网络[计划管理员软件与联机服务权益指南](https://assets.microsoft.com/Program-Administrator-Guide-to-Software-and-Online-Services-Benefits_1.pdf)
+- Microsoft 合作伙伴网络[计划管理员软件与联机服务权益指南](https://assetsprod.microsoft.com/mpn/Program-Administrator-Guide-to-Software-and-Online-Services-Benefits)
   - 第 6 页 - 为 Action Pack 分配联系人角色和 Visual Studio 订阅
   > [!NOTE]
   > Visual Studio 订阅需要技术联系人角色
@@ -61,3 +61,5 @@ Microsoft Action Pack 订阅者和 Visual Studio 订阅
 
 ## <a name="next-steps"></a>后续步骤
 订阅者和计划管理器应直接与 Microsoft 合作伙伴网络支持团队协作，以解决订阅者访问订阅时出现的任何问题。 请访问[“支持合作伙伴”](https://partner.microsoft.com/support)页寻求帮助。 （需要提供 MPN 登录凭据。）
+
+https://r.search.yahoo.com/_ylt=AwrWnKI73ARewjwA1C0PxQt.;_ylu=X3oDMTEyN2cxcTlwBGNvbG8DZ3ExBHBvcwMxBHZ0aWQDQjg0OTJfMQRzZWMDc3I-/RV=2/RE=1577405628/RO=10/RU=https%3a%2f%2fassetsprod.microsoft.com%2fmpn%2fProgram-Administrator-Guide-to-Software-and-Online-Services-Benefits/RK=2/RS=xsA5OL.9t6QqJlvFYZ3OPnZkC_k-

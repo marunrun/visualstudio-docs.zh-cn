@@ -2,17 +2,17 @@
 title: 对 Visual C# 代码进行单元测试
 ms.date: 09/27/2019
 ms.topic: conceptual
-ms.author: jillfra
-author: jillre
+ms.author: mikejo
+author: mikejo5000
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 309cf408167cc463db8cde9e39d5c0fe4dbe26d6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 31fbbfaa5d16dd51776f592b89a7846936b3013f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659835"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590860"
 ---
 # <a name="unit-test-c-code"></a>单元测试 C# 代码
 
@@ -52,7 +52,7 @@ ms.locfileid: "72659835"
 
 ::: moniker range="vs-2017"
 
-2. 在“测试”  菜单中，选择“运行”  >“全部测试”  。
+2. 在“测试”  菜单中，选择“运行”  >“所有测试”  。
 
 ::: moniker-end
 

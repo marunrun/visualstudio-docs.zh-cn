@@ -7,17 +7,17 @@ helpviewer_keywords:
 - code snippets [C#]
 - Code Snippet Inserter [C#]
 - C#, code snippets
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: e06e825779476489414ff200aba9cd43fce96e2f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d41907a15b7e0b1692dda3f4d678c2b843dfcd03
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647254"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594157"
 ---
 # <a name="c-code-snippets"></a>C# 代码片段
 
@@ -31,7 +31,7 @@ ms.locfileid: "72647254"
 
 Visual Studio for C# 默认包含以下代码片段。
 
-|名称（或快捷方式）|说明|要插入代码片段的有效位置|
+|名称（或快捷方式）|描述|要插入代码片段的有效位置|
 | - |-----------------| - |
 |#if|创建 [#if](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-if) 指令和 [#endif](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-endif) 指令。|任何位置。|
 |#region|创建 [#region](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-region) 指令和 [#endregion](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-endregion) 指令。|任何位置。|
@@ -55,7 +55,7 @@ Visual Studio for C# 默认包含以下代码片段。
 |invoke|创建安全调用事件的块。|在方法、索引器、属性访问器或事件访问器内。|
 |iterator|创建迭代器。|在类或结构中。|
 |iterindex|使用嵌套类创建“已命名”迭代器和索引器对。|在类或结构中。|
-|lock|创建 [lock](/dotnet/csharp/language-reference/keywords/lock-statement) 块。|在方法、索引器、属性访问器或事件访问器内。|
+|锁 (lock)|创建 [lock](/dotnet/csharp/language-reference/keywords/lock-statement) 块。|在方法、索引器、属性访问器或事件访问器内。|
 |mbox|创建对 <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName> 的调用。 可能还需要添加对 System.Windows.Forms.dll 的引用  。|在方法、索引器、属性访问器或事件访问器内。|
 |namespace|创建[命名空间](/dotnet/csharp/language-reference/keywords/namespace)声明。|在命名空间（包括全局命名空间）中。|
 |prop|创建[自动实现的属性](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties)声明。|在类或结构中。|

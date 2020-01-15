@@ -1,6 +1,6 @@
 ---
 title: 将 ASP.NET Docker 容器部署到 ACR 注册表
-description: 了解如何使用 Visual Studio 容器工具将 ASP.NET Core Web 应用部署到容器注册表
+description: 了解如何使用 Visual Studio 容器工具将 ASP.NET 或 ASP.NET Core Web 应用部署到容器注册表
 author: ghogen
 manager: jillfra
 ms.assetid: e5e81c5e-dd18-4d5a-a24d-a932036e78b9
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.technology: vs-azure
 ms.date: 03/14/2019
 ms.author: ghogen
-ms.openlocfilehash: b3b012bfe3b9fc359a8c9688c52aa5bfc27fd2c7
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 200c94950c9dd6309481e7d79b27eeba166a0e1f
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "71126141"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75402507"
 ---
 # <a name="deploy-an-aspnet-container-to-a-container-registry-using-visual-studio"></a>使用 Visual Studio 将 ASP.NET 容器部署到容器注册表
 
@@ -25,7 +25,7 @@ Docker 是轻型容器引擎，在某些方面类似于虚拟机，可以将其�
 
 如果没有 Azure 订阅，请在开始之前创建一个[免费帐户](https://azure.microsoft.com/free/dotnet/?utm_source=acr-publish-doc&utm_medium=docs&utm_campaign=docs)。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 完成本教程：
 
@@ -38,7 +38,7 @@ Docker 是轻型容器引擎，在某些方面类似于虚拟机，可以将其�
 * 安装[适用于 Windows 的 Docker](https://docs.docker.com/docker-for-windows/install/)
 
 ## <a name="create-an-aspnet-core-web-app"></a>创建 ASP.NET Core Web 应用
-以下步骤将指导你完成创建基本 ASP.NET Core 应用（将在本教程中使用）的过程。
+以下步骤将指导你完成创建基本 ASP.NET Core 应用（将在本教程中使用）的过程。 如果你已有一个项目，则可跳过此部分。
 
 ::: moniker range="vs-2017"
 [!INCLUDE [create-aspnet5-app](../azure/includes/create-aspnet5-app.md)]
@@ -53,7 +53,7 @@ Docker 是轻型容器引擎，在某些方面类似于虚拟机，可以将其�
 3. 选择“新建 Azure 容器注册表”并单击“发布”   。
 4. 在“创建新 Azure 容器注册表”中填写所需的值  。
 
-    | 设置      | 建议的值  | 说明                                |
+    | 设置      | 建议的值  | 描述                                |
     | ------------ |  ------- | -------------------------------------------------- |
     | **DNS 前缀** | 全局唯一名称 | 用于唯一标识容器注册表的名称。 |
     | **订阅** | 选择订阅 | 要使用的 Azure 订阅。 |
@@ -66,3 +66,7 @@ Docker 是轻型容器引擎，在某些方面类似于虚拟机，可以将其�
 5. 单击“创建” 
 
 现在可以将容器从注册表中拖放到任何能够运行 Docker 映像的主机上，例如[Azure 容器实例](/azure/container-instances/container-instances-tutorial-deploy-app)。
+
+## <a name="see-also"></a>请参阅
+
+[快速入门：使用 Azure CLI 在 Azure 中部署容器实例](/azure/container-instances/container-instances-quickstart)

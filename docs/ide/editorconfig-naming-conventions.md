@@ -5,21 +5,21 @@ ms.topic: reference
 helpviewer_keywords:
 - naming conventions [EditorConfig]
 - EditorConfig naming conventions
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ff6c9885bd01a94cc36046faf71067e1fe9c17b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b5c4115f4d63456e105fb4a6770fd1650938770d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650900"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588598"
 ---
 # <a name="net-naming-conventions-for-editorconfig"></a>EditorConfig 适用的 .NET 命名约定
 
-命名约定与类、属性和方法等码位元素的命名有关。 例如，可以指定公共成员必须采用大写形式，或者异步方法必须以“Async”结尾。 可以通过在 [.editorconfig 文件](../ide/create-portable-custom-editor-options.md)中指定这些规则来加以实施。 命名规则冲突显示在“错误列表”中，或者作为建议显示在名称之下，具体取决于为规则选择的严重性  。 不需要生成项目即可查看冲突。
+命名约定与类、属性和方法等码位元素的命名有关。 例如，可以指定公共成员必须采用大写形式，或者私有字段必须以 `_` 开头。 可以通过在 [.editorconfig 文件](../ide/create-portable-custom-editor-options.md)中指定这些规则来加以实施。 命名规则冲突显示在“错误列表”中，或者作为建议显示在名称之下，具体取决于为规则选择的严重性  。 不需要生成项目即可查看冲突。
 
 对于每个命名约定，必须使用下面介绍的属性指定适用的符号、命名样式和实施约定的严重性。 属性的顺序并不重要。
 

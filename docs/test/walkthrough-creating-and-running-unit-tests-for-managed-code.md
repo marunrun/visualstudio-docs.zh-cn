@@ -8,17 +8,17 @@ helpviewer_keywords:
 - unit tests, generating
 - unit tests, running
 - unit tests, authoring
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-author: jillre
-ms.openlocfilehash: 317b014ae0ef684dfc5f7ff73247d6186846a860
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: b1ec115dd960799a1242a0d60bd793d671facb18
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659660"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590704"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>演练：创建并运行托管代码的单元测试
 
@@ -30,11 +30,11 @@ ms.locfileid: "72659660"
 
 1. 打开 Visual Studio。
 
-2. 在“文件”  菜单上，依次选择“新建”  >“项目”  。
+2. 在“文件”  菜单上，选择“新建”  >“项目”  。
 
    此时将出现“新建项目”  对话框。
 
-3. 在“Visual C#”>“.NET Core”类别下，选择“控制台应用(.NET Core)”项目模板    。
+3. 在“Visual C#”  >“.NET Core”  类别下，选择“控制台应用(.NET Core)”  项目模板。
 
 4. 将项目命名为“Bank”，然后单击“确定”   。
 

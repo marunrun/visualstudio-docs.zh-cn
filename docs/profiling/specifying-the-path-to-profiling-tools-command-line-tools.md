@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 087407f511c038a369694beca8a9fe4ecc2ff7b7
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.openlocfilehash: f66ed17aec8c6e5303ea61741021dd25032fcb37
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74771566"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75406306"
 ---
 # <a name="specify-the-path-to-profiling-tools-command-line-tools"></a>指定分析工具命令行工具的路径
 
@@ -22,9 +22,7 @@ ms.locfileid: "74771566"
 
 ## <a name="32-bit-computers"></a>32 位计算机
 
-::: moniker range="vs-2017"
- 对于本机代码，Visual Studio 探查器 API 位于 VSPerf.dll 中  。 头文件 VSPerf.h 和导入库 VSPerf.lib 位于 Microsoft Visual Studio \2017\Team Tools\Performance Tools\PerfSDK 目录中    。
-::: moniker-end
+对于本机代码，Visual Studio 探查器 API 位于 VSPerf.dll 中  。 头文件 VSPerf.h 和导入库 VSPerf.lib 位于 Microsoft Visual Studio \2017\Team Tools\Performance Tools\PerfSDK 目录中    。
 
  对于托管代码，探查器 API 位于 Microsoft.VisualStudio.Profiler.dll 中  。 此 DLL 位于 Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools 目录  。
 
@@ -32,12 +30,14 @@ ms.locfileid: "74771566"
 
 在 64 位计算机上，根据被分析应用程序的目标平台指定路径。
 
-::: moniker range="vs-2017"
 - 对于 32 位应用程序，默认的探查器工具目录为：
 
-     （本机）Microsoft Visual Studio\2017\Team Tools\Performance Tools\PerfSDK（托管）Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools  
+     （本机）*Microsoft Visual Studio\2017\Team Tools\Performance Tools\PerfSDK*
+     
+     （托管）*Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools*
 
 - 对于 64 位应用程序，默认的探查器工具目录为：
 
-     （本机）Microsoft Visual Studio\2017\Team Tools\Performance Tools\x64\PerfSDK（托管）Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\64  
-::: moniker-end
+     （本机）*Microsoft Visual Studio\2017\Team Tools\Performance Tools\x64\PerfSDK*
+
+     （托管）*Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\x64*

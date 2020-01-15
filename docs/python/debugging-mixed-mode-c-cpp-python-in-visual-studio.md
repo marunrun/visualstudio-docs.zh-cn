@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a2848f04e2765c23f60de041e865e7684901b924
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bc90d659a32c14f92e1eff058dd22d4a17d0b1cb
+ms.sourcegitcommit: 0d8488329263cc0743a89d43f6de863028e982ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62962610"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75678995"
 ---
 # <a name="debug-python-and-c-together"></a>一起调试 Python 和 C++
 
@@ -38,7 +38,7 @@ Visual Studio 为 Python 和本机 C/C++ 提供集成的同步混合模式调试
 
 |   |   |
 |---|---|
-| ![视频的摄像机图标](../install/media/video-icon.png "观看视频") | 有关使用 Visual Studio 生成、测试和调试本机 C 模块的介绍，请观看[深入了解：创建本机模块](https://youtu.be/D9RlT06a1EI)（youtube.com，9 分 09 秒）。 该视频适用于 Visual Studio 2015 和 2017。 |
+| ![视频摄影机图标](../install/media/video-icon.png "观看视频") | 有关使用 Visual Studio 生成、测试和调试本机 C 模块的介绍，请观看[深入了解：创建本机模块](https://youtu.be/D9RlT06a1EI)（youtube.com，9 分 09 秒）。 该视频适用于 Visual Studio 2015 和 2017。 |
 
 ## <a name="enable-mixed-mode-debugging-in-a-python-project"></a>在 Python 项目中启用混合模式调试
 
@@ -69,6 +69,9 @@ Visual Studio（2017 版本 15.5 及更高版本）支持通过 C/C++ 项目进�
 1. 选择“调试”选项卡，从“要启动的调试器”中选择“Python/本机调试”，然后选择“确定”     。
 
     ![在 C/C++ 项目中选择“Python/本机调试器”](media/mixed-mode-debugging-select-cpp-debugger.png)
+
+> [!Note]
+> 如果你没有选择“Python/本机调试”，则需要先使用 VS 安装程序安装“Python 本机开发工具”   。 可以在 Python 开发工作负载下找到此选项。 有关其他信息，请参阅[如何在 Windows 上的 Visual Studio 中安装 Python 支持](installing-python-support-in-visual-studio.md)。
 
 使用此方法时，请注意，不能调试 py.exe 启动器本身，因为它会生成不附加调试器的子 python.exe 进程   。 如果想要直接使用参数启动 python.exe，请更改“Python/本机调试”属性中的“命令”选项（如上图所示），以指定 python.exe 的完整路径，然后指定“命令参数”中的参数      。
 

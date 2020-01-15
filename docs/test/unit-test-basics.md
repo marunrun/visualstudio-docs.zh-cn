@@ -4,17 +4,17 @@ ms.date: 08/07/2019
 ms.topic: conceptual
 f1_keywords:
 - vs.UnitTest.CreateUnitTest
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 25e594136fe79d38268999099231791364d1082a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e78b021e41caf584a74172cbdf00135e525df265
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659895"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590496"
 ---
 # <a name="unit-test-basics"></a>单元测试基础知识
 
@@ -120,7 +120,7 @@ public void Withdraw(double amount)
 
 **若要向解决方案中添加单元测试项目：**
 
-1. 在“解决方案资源管理器”中，右键单击解决方案，然后依次选择“添加” > “新建项目”     。
+1. 在“解决方案资源管理器”  中，右键单击解决方案，然后依次选择“添加”   > “新建”  “项目”  。
 
 ::: moniker range="vs-2017"
 
@@ -273,7 +273,7 @@ public void My_Test ()
 
 ::: moniker range="vs-2017"
 
-|Button|说明|
+|Button|描述|
 |-|-|
 |![生成后运行](../test/media/ute_runafterbuild_btn.png)|要在每个本地生成后运行单元测试，请在标准菜单上选择“测试”，然后在测试资源管理器的工具栏上选择“生成后运行测试”    。|
 
@@ -299,7 +299,7 @@ public void My_Test ()
 ![搜索筛选器类别](../test/media/vs-2019/test-explorer-search-filter-16-2.png)
 ::: moniker-end
 
-|Button|说明|
+|Button|描述|
 |-|-|
 |![测试资源管理器的分组按钮](../test/media/ute_groupby_btn.png)|若要按类别分组测试，请选择“分组依据”  按钮。|
 

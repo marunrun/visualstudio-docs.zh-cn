@@ -5,23 +5,23 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/23/2019
 ms.assetid: 5880BB10-0A12-47E2-8A82-7A2D59C4D579
-ms.openlocfilehash: dbfc0d951524bb9ffbbd4a2366679cfc6ae41925
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: 10fcb52a8e1311f3e8128361ee835f6ddcb3670d
+ms.sourcegitcommit: 0d8488329263cc0743a89d43f6de863028e982ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67693055"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75678871"
 ---
-# <a name="creating-a-new-project"></a>创建新项目
+# <a name="create-a-new-project"></a>创建新项目
 
 ## <a name="opening-the-project-creation-dialog"></a>打开“项目创建”对话框
 
-可通过多种方式在 Visual Studio for Mac 中创建新项目。 首次打开 Visual Studio for Mac 时，将显示欢迎屏幕。 可在此处选择“新建”，随即将转到项目创建屏幕  。
+可通过多种方式在 Visual Studio for Mac 中创建新项目。 首次打开 Visual Studio for Mac 时，将显示启动窗口。 可在此处选择“新建”，随即将转到项目创建屏幕  。
 
 > [!TIP]
-> 此外，在欢迎屏幕中，还可以打开并搜索最近的项目和解决方案。 还可以通过转到菜单栏并依次选择“文件”、“最近使用的解决方案”来打开最近使用的项目 
+> 此外，在启动窗口中，还可以打开并搜索最近的项目和解决方案。 还可以通过转到菜单栏并依次选择“文件”、“最近使用的解决方案”来打开最近使用的项目 
 
-![包含新建项目选项的欢迎屏幕](media/first-run-project.png)
+![带有“创建新项目“的启动窗口](media/first-run-project.png)
 
 如果 Visual Studio for Mac 已打开，并且已加载解决方案，可以通过转到菜单栏并依次选择“文件”、“新建解决方案”来创建新解决方案  。 通过此方法创建新解决方案将关闭已加载的解决方案。
 

@@ -1,21 +1,21 @@
 ---
-title: 使用 Xamarin 进行调试
+title: 使用 Visual Studio for Mac 调试
 description: 调试是编程中常见且必要的部分。 Visual Studio for Mac 作为成熟的 IDE，具有一整套方便调试的功能。 本文将介绍如何在 Visual Studio for Mac 中充分使用调试功能，包括从安全调试到数据可视化效果。
-author: jmatthiesen
-ms.author: jomatthi
-ms.date: 05/06/2018
+author: therealjohn
+ms.author: johmil
+ms.date: 12/13/2019
 ms.technology: vs-ide-debug
 ms.assetid: BB7A084D-9AC2-48B5-8076-6C8518796BBA
-ms.openlocfilehash: 58844d54000dbeb86548863510ecac63bfb2ade9
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: 8a12880c25e980d668351ef4c24ced1e479577d4
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73716974"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75397930"
 ---
-# <a name="debugging-with-xamarin"></a>使用 Xamarin 进行调试
+# <a name="debugging-with-visual-studio-for-mac"></a>使用 Visual Studio for Mac 调试
 
-Visual Studio for Mac 具有本机调试器，支持 Xamarin.iOS、Xamarin.Mac 和 Xamarin.Android 应用程序的调试。
+Visual Studio for Mac 提供支持 .Net Core、.NET Framework、Unity 和 Xamarin 应用程序的调试器。
 
 Visual Studio for Mac 使用 [Mono 软调试器](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/)，该调试器在 Mono 运行时中实施，以便 Visual Studio for Mac 跨所有平台调试托管代码  。
 
@@ -24,6 +24,8 @@ Visual Studio for Mac 使用 [Mono 软调试器](https://www.mono-project.com/do
 Visual Studio for Mac 使用 Mono 软调试器来调试所有 Xamarin 应用程序中的托管（C# 或 F#）代码。 Mono 软调试器不同于常规调试器，因为它是内置于 Mono 运行时的协作式调试器；生成的代码和 Mono 运行时与 IDE 协作提供调试体验。 Mono 运行时通过网络协议公开调试功能，可以阅读 [Mono 文档](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger-wire-format/)，了解详细信息。
 
 硬调试器（如 [LLDB]( http://lldb.llvm.org/index.html) 或 [GDB]( https://www.gnu.org/software/gdb/)）在不了解受调试的程序或不与其协作的情况下控制程序，但如果需要调试本机 iOS 或 Android 代码，则该调试器对于调试 Xamarin 应用程序仍十分有用。
+
+对于 .NET Core 和 ASP.NET Core 应用程序，Visual Studio for Mac 使用 .NET Core 调试器。 此调试器也是协作式调试器，适用于 .NET 运行时。
 
 ## <a name="using-the-debugger"></a>使用调试器
 
@@ -43,8 +45,9 @@ Visual Studio for Mac 使用 Mono 软调试器来调试所有 Xamarin 应用程�
 
 ## <a name="start-debugging"></a>“启动调试”
 
-若要开始调试，请在 IDE 中选择目标设备或类似/仿真器：
+若要开始调试，请选择目标浏览器、设备或模拟器/仿真器：
 
+![调试配置](media/debugging-image_0.png)
 ![选择目标设备](media/debugging-image1.png)
 
 然后通过按“播放”按钮或“Cmd + 返回”部署应用程序   。 命中断点时，代码会以黄色突出显示：
@@ -90,9 +93,9 @@ Xamarin 产品随附用于 Mono 类库的源代码，可使用此代码在调试
 
 由于此功能在调试过程中会占用更多内存，因此默认禁用。
 
-若要启用此功能，请浏览到“Visual Studio for Mac”>“首选项”>“调试器”，并确保“仅调试项目代码；不单步执行框架代码”   。 选项“未选定”  ，如下所示：
+若要启用此功能，请浏览到“Visual Studio for Mac”>“首选项”>“调试器”  ，并确保“单步执行外部代码”  为“选中”  状态，如下所示：
 
-![不单步执行框架代码选项](media/debugging-image8.png)
+![“单步执行外部代码”选项](media/debugging-image8.png)
 
 ## <a name="see-also"></a>请参阅
 
