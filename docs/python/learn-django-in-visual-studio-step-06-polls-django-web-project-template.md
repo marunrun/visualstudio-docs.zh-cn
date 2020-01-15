@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 5e9220df4f9abdb806495e6108fb6039b28e0b7b
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: c1fe3db702508267e96dc79f2f789a17a7edf98b
+ms.sourcegitcommit: 789430e18dfe8e5f7db19273e7298af2f078c0dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254384"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755573"
 ---
 # <a name="step-6-use-the-polls-django-web-project-template"></a>步骤 6：使用投票 Django Web 项目模板
 
@@ -160,7 +160,7 @@ def seed(request):
 
 ### <a name="question-is-it-possible-to-initialize-the-database-using-the-django-administrative-utility"></a>问：是否可以使用 Django 管理实用工具初始化数据库？
 
-答：是的，可以使用 [django-admin loaddata 命令](https://docs.djangoproject.com/en/1.9/ref/django-admin/#loaddata)来完成与应用中的种子设定页相同的任务。 在处理完整的 Web 应用时，可以将以下两种方法结合使用：从命令行初始化数据库，然后将此处的种子页转换为 API，可以向其发送任何其他任意 JSON，而不是依赖于硬编码文件。
+答：是的，可以使用 [django-admin loaddata 命令](https://docs.djangoproject.com/en/2.0/ref/django-admin/#loaddata)来完成与应用中的种子设定页相同的任务。 在处理完整的 Web 应用时，可以将以下两种方法结合使用：从命令行初始化数据库，然后将此处的种子页转换为 API，可以向其发送任何其他任意 JSON，而不是依赖于硬编码文件。
 
 ## <a name="step-6-3-use-migrations"></a>步骤 6-3：使用迁移
 

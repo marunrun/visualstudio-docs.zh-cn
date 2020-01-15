@@ -12,12 +12,12 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 25bd88886b6bed447ec7d091543fccdb478db9c5
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: c3ea8c91c54586cf54b82566a4803b464e01750c
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72588882"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916483"
 ---
 # <a name="install-cross-platform-mobile-development-with-c"></a>使用 C++ 安装跨平台移动开发
 
@@ -98,7 +98,7 @@ Visual Studio 安装程序包括使用 C++ 的移动开发工作负载  。 此�
 
 可再次运行 Android SDK 目录中的 SDK 管理器应用，以更新 SDK 并安装可选工具和其他 API 级别。 除非你使用“以管理员身份运行”  运行 SDK Manager 应用，否则安装更新可能会失败。 如果构建 Android 应用存在问题，请检查已安装的 SDK 的 SDK Manager 更新。
 
-若要使用 Android SDK 附带的某些 Android 仿真器，则可能需要安装硬件加速。 有关详细信息，请参阅[通过硬件加速提高仿真器性能 (Hyper-V & HAXM)](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/hardware-acceleration?tabs=vswin)。
+若要使用 Android SDK 附带的某些 Android 仿真器，则可能需要安装硬件加速。 有关详细信息，请参阅[通过硬件加速提高仿真器性能 (Hyper-V & HAXM)](/xamarin/android/get-started/installation/android-emulator/hardware-acceleration?tabs=vswin)。
 
 在大多数情况下，Visual Studio 可以检测到已安装的第三方软件的配置，并维护内部环境变量中的安装路径。 可以覆盖 Visual Studio IDE 中的这些跨平台开发工具的默认路径。
 
@@ -117,4 +117,4 @@ Visual Studio 安装程序包括使用 C++ 的移动开发工作负载  。 此�
 ## <a name="see-also"></a>请参阅
 
 - [安装并配置使用 iOS 进行构建的工具](install-and-configure-tools-to-build-using-ios.md)
-- [Visual C++ 跨平台移动](https://go.microsoft.com/fwlink/p/?LinkId=536383)
+- [Visual C++ 跨平台移动](https://visualstudio.microsoft.com/vs/features/cplusplus-mdd/)

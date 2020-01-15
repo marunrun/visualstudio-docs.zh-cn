@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ee3cace6940b4fe402595cfba7b316a273c1d50
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: a0f63ac8fa782dcb504b8bd00ad7e32ce96e1eab
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593390"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917814"
 ---
 # <a name="build-multiple-projects-in-parallel-with-msbuild"></a>用 MSBuild 并行生成多个项目
 通过 MSBuild，可通过并行运行多个项目来更快地生成它们。 若要并行运行生成，请在一台多核或多处理器计算机上采用以下设置：
@@ -43,7 +43,7 @@ msbuild.exe myproj.proj -maxcpucount:3
 ```
 
 ## <a name="buildinparallel-task-parameter"></a>BuildInParallel 任务参数
-`BuildInParallel` 是 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 任务上的可选布尔参数。 如果 `BuildInParallel` 设置为 `true`（默认值为 `false`），则会生成多个工作进程，以尽可能同时生成多个项目。 为使此操作能够正常进行，`-maxcpucount` 开关必须设置为一个大于 1 的值，并且系统必须至少为双核或具有两个或多个处理器。
+`BuildInParallel` 是 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 任务上的可选布尔参数。 如果 `BuildInParallel` 设置为 `true`（默认值为 `true`），则会生成多个工作进程，以尽可能同时生成多个项目。 为使此操作能够正常进行，`-maxcpucount` 开关必须设置为一个大于 1 的值，并且系统必须至少为双核或具有两个或多个处理器。
 
 以下是摘自 microsoft.common.targets 中的有关如何设置 `BuildInParallel` 参数的示例  。
 

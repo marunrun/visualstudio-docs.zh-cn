@@ -5,18 +5,18 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/18/2019
 ms.assetid: E4CFD03C-03AF-48CA-B409-6DB1CA45E991
-ms.openlocfilehash: 96a113e21fe2e2e11da0e156ba9578c632e648ae
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.openlocfilehash: 9a9cf7871684e0951f66e0f20dcf156b3e625b45
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74983652"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844259"
 ---
 # <a name="sign-in-to-visual-studio-for-mac"></a>登录 Visual Studio for Mac
 
 登录到 Visual Studio for Mac 是[激活订阅](enable-subscription.md)的过程。 下载 Visual Studio for Mac 时，默认情况下，将始终获取社区版。 如果有 [Professional 或 Enterprise 许可证](https://visualstudio.microsoft.com/vs/compare/)，则应在首次运行时登录来解锁任何其他功能。 此外，还可以获得以下功能：
 
-*  访问 Visual Studio Dev Essentials 程序的权限 - 此程序包括免费软件产品/服务、培训、支持等。 请参阅 [Visual Studio Dev Essential](https://aka.ms/vsdevhelp) 了解详细信息。
+*  访问 Visual Studio Dev Essentials 程序的权限 - 此程序包括免费软件产品/服务、培训、支持等。 请参阅 [Visual Studio Dev Essential](https://visualstudio.microsoft.com/dev-essentials/) 了解详细信息。
 
 * 在 IDE 中自动连接到 Azure，而不会再次提示对同一帐户输入凭据  。
 

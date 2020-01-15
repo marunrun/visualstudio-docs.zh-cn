@@ -9,12 +9,12 @@ ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f84051e4450926136064b9af7f3c09e2e91a2f9
-ms.sourcegitcommit: 8530d15aa72fe058ee3a3b4714c36b8638f8b494
+ms.openlocfilehash: d5e73757e10eec5e7e8c290772822f49129fd1e5
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74188573"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915904"
 ---
 # <a name="create-an-ai-project-from-the-azure-machine-learning-gallery-in-visual-studio"></a>在 Visual Studio 中通过 Azure 机器学习库创建 AI 项目
 
@@ -23,7 +23,7 @@ Azure 机器学习与 Visual Studio Tools for AI 集成在一起。 可以使用
 [安装 Visual Studio Tools for AI](installation.md) 之后，可以使用 Azure 机器学习示例库中的预制方案轻松地创建新 Python 项目。
 
 > [!NOTE]
-> 必须安装 Azure 机器学习工作台。 要进行安装，请参阅 [Azure 机器学习安装快速入门](https://docs.microsoft.com/azure/machine-learning/preview/quickstart-installation)
+> 必须安装 Azure 机器学习工作台。 要进行安装，请参阅 [Azure 机器学习安装快速入门](/azure/machine-learning/preview/quickstart-installation)
 
 1. 启动 Visual Studio。 通过打开“AI 工具”菜单，然后选择“选择群集”，来打开“服务器资源管理器”   
 

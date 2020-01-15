@@ -7,16 +7,16 @@ ms.date: 02/01/2019
 ms.prod: visual-studio-dev16
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 0232b37d08901bcc04c9d66facfe6850a9852e88
-ms.sourcegitcommit: e825d1223579b44ee2deb62baf4de0153f99242a
+ms.openlocfilehash: d0da02773913a610c77d7165fdb0f9becfc59e9c
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74485485"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75928136"
 ---
 使用 Visual Studio，可以轻松地生成、调试和运行容器化的 .NET、ASP.NET 和 ASP.NET Core 应用并将其发布到 Azure 容器注册表 (ACR)、Docker Hub、Azure 应用服务或你自己的容器注册表。 本文介绍如何将 ASP.NET Core 应用发布到 ACR。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * 安装了“Web 开发”、“Azure 工具”工作负载和/或“.NET Core 跨平台开发”工作负载的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)   
@@ -97,12 +97,12 @@ ENTRYPOINT ["dotnet", "HelloDockerTools.dll"]
 1. 选择“创建新的 Azure 容器注册表”并单击“发布”   。
 1. 在“创建新 Azure 容器注册表”中填写所需的值  。
 
-    | 设置      | 建议的值  | 说明                                |
+    | 设置      | 建议的值  | 描述                                |
     | ------------ |  ------- | -------------------------------------------------- |
     | **DNS 前缀** | 全局唯一名称 | 用于唯一标识容器注册表的名称。 |
     | **订阅** | 选择订阅 | 要使用的 Azure 订阅。 |
     | **[资源组](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  要在其中创建容器注册表的资源组的名称。 选择“新建”  创建新的资源组。|
-    | **[SKU](https://docs.microsoft.com/azure/container-registry/container-registry-skus)** | 标准 | 容器注册表的服务层  |
+    | **[SKU](/azure/container-registry/container-registry-skus)** | 标准 | 容器注册表的服务层  |
     | **注册表位置** | 靠近你的位置 | 在你附近或将使用容器注册表的其他服务附近的[区域](https://azure.microsoft.com/regions/)中，选择位置。 |
 
     ![Visual Studio 的创建 Azure 容器注册表对话框][0]
