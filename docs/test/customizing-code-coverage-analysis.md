@@ -2,17 +2,17 @@
 title: 自定义代码覆盖率分析
 ms.date: 08/21/2019
 ms.topic: conceptual
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: 7392397748d26224a0fba0d5510fccb6655d7642
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: bce7a6b9369f33e6fa5248821f58d9903172415c
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665064"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918653"
 ---
 # <a name="customize-code-coverage-analysis"></a>自定义代码覆盖率分析
 
@@ -51,7 +51,7 @@ ms.locfileid: "72665064"
 
 ::: moniker range="vs-2017"
 
-若要关闭和启用自定义设置，请在“测试”>“测试设置”菜单中取消选择或选择该文件   。
+若要禁用和启用自定义设置，请依次选择“测试”  >“测试设置”  菜单，然后取消选择或选择文件。
 
 ![Visual Studio 2017 中包含自定义设置文件的测试设置菜单](../test/media/codecoverage-settingsfile.png)
 
@@ -197,7 +197,7 @@ Note that searching for symbols increases code coverage runtime. So keep this sm
 <!--
 About include/exclude lists:
 Empty "Include" clauses imply all; empty "Exclude" clauses imply none.
-Each element in the list is a regular expression (ECMAScript syntax). See https://docs.microsoft.com/visualstudio/ide/using-regular-expressions-in-visual-studio.
+Each element in the list is a regular expression (ECMAScript syntax). See /visualstudio/ide/using-regular-expressions-in-visual-studio.
 An item must first match at least one entry in the include list to be included.
 Included items must then not match any entries in the exclude list to remain included.
 -->

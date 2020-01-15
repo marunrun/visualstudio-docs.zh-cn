@@ -7,16 +7,16 @@ dev_langs:
 - CSharp
 - C++
 - jsharp
-author: mikeblome
-ms.author: mblome
+author: ghogen
+ms.author: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bdad856a6ea0ec6cca8292bc3095f51c500bcb1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: df75bb998d2b8c6486e20c4c3ca0d80347c8f88a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970713"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591666"
 ---
 # <a name="vctooltask-base-class"></a>VCToolTask 基类
 
@@ -24,18 +24,18 @@ ms.locfileid: "62970713"
 
 ## <a name="parameters"></a>参数
 
-下表介绍了 VCToolTask 基类的参数。
+下表介绍了 VCToolTask  基类的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
-|**ActiveToolSwitchesValues**|可选的 Dictionary\<string, ToolSwitch> 参数。|
-|**AdditionalOptions**|可选的 string 参数。|
-|**EffectiveWorkingDirectory**|可选的 string 参数。|
-|**EnableErrorListRegex**|可选的 bool 参数。<br/><br/>默认值为 `true`。|
+|**ActiveToolSwitchesValues**|可选的 Dictionary\<string, ToolSwitch>  参数。|
+|**AdditionalOptions**|可选的 string  参数。|
+|**EffectiveWorkingDirectory**|可选的 string  参数。|
+|**EnableErrorListRegex**|可选的 bool  参数。<br/><br/>默认值为 `true`。|
 |**ErrorListRegex**|可选的 **ITaskItem[]** 参数。|
 |**ErrorListListExclusion**|可选的 **ITaskItem[]** 参数。|
-|**GenerateCommandLine**|可选的 string 参数。<br/><br/>使用 CommandLineFormat format [default = CommandLineFormat.ForBuildLog] 和 EscapeFormat escapeFormat [default = EscapeFormat.Default] 值。|
-|**GenerateCommandLineExceptSwitches**|可选的 string 参数。<br/><br/>使用 string[] switchesToRemove、CommandLineFormat format [default = CommandLineFormat.ForBuildLog] 和 EscapeFormat escapeFormat [default = EscapeFormat.Default] 值。|
+|**GenerateCommandLine**|可选的 string  参数。<br/><br/>使用 CommandLineFormat  format  [default = CommandLineFormat.ForBuildLog] 和 EscapeFormat  escapeFormat  [default = EscapeFormat.Default] 值。|
+|**GenerateCommandLineExceptSwitches**|可选的 string  参数。<br/><br/>使用 string[]  switchesToRemove  、CommandLineFormat  format  [default = CommandLineFormat.ForBuildLog] 和 EscapeFormat  escapeFormat  [default = EscapeFormat.Default] 值。|
 
 ## <a name="see-also"></a>请参阅
 

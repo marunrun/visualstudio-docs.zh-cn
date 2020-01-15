@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.technology: vs-azure
 ms.date: 03/14/2019
 ms.author: ghogen
-ms.openlocfilehash: 200c94950c9dd6309481e7d79b27eeba166a0e1f
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: cfed918633f62700f464ee5f9911fbbfc6463c36
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75402507"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916918"
 ---
 # <a name="deploy-an-aspnet-container-to-a-container-registry-using-visual-studio"></a>使用 Visual Studio 将 ASP.NET 容器部署到容器注册表
 
@@ -58,7 +58,7 @@ Docker 是轻型容器引擎，在某些方面类似于虚拟机，可以将其�
     | **DNS 前缀** | 全局唯一名称 | 用于唯一标识容器注册表的名称。 |
     | **订阅** | 选择订阅 | 要使用的 Azure 订阅。 |
     | **[资源组](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  要在其中创建容器注册表的资源组的名称。 选择“新建”  创建新的资源组。|
-    | **[SKU](https://docs.microsoft.com/azure/container-registry/container-registry-skus)** | 标准 | 容器注册表的服务层  |
+    | **[SKU](/azure/container-registry/container-registry-skus)** | 标准 | 容器注册表的服务层  |
     | **注册表位置** | 靠近你的位置 | 在你附近或将使用容器注册表的其他服务附近的[区域](https://azure.microsoft.com/regions/)中，选择位置。 |
 
     ![Visual Studio 的创建 Azure 容器注册表对话框](media/hosting-web-apps-in-docker/vs-acr-provisioning-dialog.png)

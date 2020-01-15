@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 897c4ba0bfa46e73115f8288770d088346498dee
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: 0a1c0184c11b745ef6c83c35b524884a139bc3d8
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516697"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588780"
 ---
 # <a name="step-1-create-a-windows-forms-app-project"></a>步骤 1：创建 Windows 窗体应用项目
 
@@ -25,7 +25,7 @@ ms.locfileid: "72516697"
 
 ## <a name="open-visual-studio-2017"></a>打开 Visual Studio 2017
 
-1. 在菜单栏上，依次选择“文件”   > “新建”   > “项目”  。 对话框应如以下屏幕快照所示。
+1. 在菜单栏上选择“文件”   > “新建”   > “项目”  。 对话框应如以下屏幕快照所示。
 
      ![“新建项目”对话框](../ide/media/newprojectdialogcallouts.png)<br/>“新建项目”对话框 
 
