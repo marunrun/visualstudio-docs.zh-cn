@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 24a6a642528fbf8fed7b8000434a963e32cc85ee
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: fe581d9c754ee78f66771901661e8870fd91b4b3
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594482"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849595"
 ---
 # <a name="troubleshoot-visual-studio-installation-and-upgrade-issues"></a>Visual Studio 安装和升级问题疑难解答
 
@@ -127,11 +127,11 @@ Visual Studio 安装程序引导程序是最轻型的可执行文件，用于安
 
 若要排查大部分的安装问题，需要有安装日志。 使用 Visual Studio 安装程序中的[报告问题](../ide/how-to-report-a-problem-with-visual-studio.md)提交问题时，这些日志会自动添加到报告中。
 
-如果联系 Microsoft 支持部门，可能需要使用 [Microsoft Visual Studio 和 .NET Framework 日志收集工具](https://aka.ms/vscollect)来提供这些安装日志。 日志收集工具从 Visual Studio 安装的所有组件（包括 .NET Framework、Windows SDK 和 SQL Server）收集安装日志。 它还会收集计算机信息、Windows Installer 清单，以及 Visual Studio 安装程序、Windows Installer 和系统还原的 Windows 事件日志信息。
+如果联系 Microsoft 支持部门，可能需要使用 [Microsoft Visual Studio 和 .NET Framework 日志收集工具](https://www.microsoft.com/download/details.aspx?id=12493)来提供这些安装日志。 日志收集工具从 Visual Studio 安装的所有组件（包括 .NET Framework、Windows SDK 和 SQL Server）收集安装日志。 它还会收集计算机信息、Windows Installer 清单，以及 Visual Studio 安装程序、Windows Installer 和系统还原的 Windows 事件日志信息。
 
 收集日志的具体步骤：
 
-1. [下载工具](https://aka.ms/vscollect)。
+1. [下载工具](https://www.microsoft.com/download/details.aspx?id=12493)。
 2. 打开管理命令提示符。
 3. 从工具保存目录运行 `Collect.exe`。
 4. 在 `%TEMP%` 目录中查找生成的 `vslogs.zip` 文件，例如，`C:\Users\YourName\AppData\Local\Temp\vslogs.zip`。

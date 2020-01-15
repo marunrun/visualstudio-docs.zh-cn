@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 5f86c3b146bb74a38910b151a80c3c2d439ef023
-ms.sourcegitcommit: ab18c9d850192fc9ccec10961f1126e8b0cba8da
+ms.openlocfilehash: a913fa6abdcf59a64d8514f17656b8f8531d476d
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73061156"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845670"
 ---
 # <a name="work-with-python-in-visual-studio-on-windows"></a>在 Windows 上的 Visual Studio 中使用 Python
 
@@ -305,17 +305,17 @@ Visual Studio 2015 及更早版本可在 [visualstudio.microsoft.com/vs/older-do
 
 1. Visual Studio Tools for Git 扩展中提供了对 Visual Studio 2012 的 Git 支持，可从 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=TFSPowerToolsTeam.VisualStudioToolsforGit) 中获得。
 
-1. 部署到 Azure 网站需要 [Azure SDK for .NET 2.1 - Visual Studio 2010 SP1](https://go.microsoft.com/fwlink/?LinkId=313855)。 更高版本不支持 Visual Studio 2010。
+1. 部署到 Azure 网站需要 [Azure SDK for .NET 2.1 - Visual Studio 2010 SP1](https://www.microsoft.com/web/handlers/webpi.ashx/getinstaller/VS2010SP1AzurePack.2E2.2E1.appids)。 更高版本不支持 Visual Studio 2010。
 
-1. 对 Azure Web 角色和辅助角色的支持需要[用于 .NET 2.3 - VS 2012 的 Azure SDK](https://go.microsoft.com/fwlink/?LinkId=323511) 或更高版本。
+1. 对 Azure Web 角色和辅助角色的支持需要[用于 .NET 2.3 - VS 2012 的 Azure SDK](https://www.microsoft.com/web/handlers/webpi.ashx/getinstaller/VWDOrVs11AzurePack.appids) 或更高版本。
 
-1. 对 Azure Web 角色和辅助角色的支持需要[用于 .NET 2.3 - VS 2013 的 Azure SDK](https://go.microsoft.com/fwlink/?LinkId=323510) 或更高版本。
+1. 对 Azure Web 角色和辅助角色的支持需要[用于 .NET 2.3 - VS 2013 的 Azure SDK](https://www.microsoft.com/web/handlers/webpi.ashx/getinstaller/VWDOrVs2013AzurePack.appids) 或更高版本。
 
 1. Visual Studio 2013 中的 Django 模板编辑器具有一些已知问题，可通过安装 Update 2 解决。
 
-1. 需要 Windows 8 或更高版本。 Visual Studio 2013 Express for Web 没有“附加到进程”  对话框，但 Azure 网站远程调试仍然可能在服务器资源管理器  中使用附加调试器 (Python)  命令。 远程调试需要安装 [Azure SDK for .NET 2.3 - Visual Studio 2013](https://go.microsoft.com/fwlink/?LinkId=323510) 或更高版本。
+1. 需要 Windows 8 或更高版本。 Visual Studio 2013 Express for Web 没有“附加到进程”  对话框，但 Azure 网站远程调试仍然可能在服务器资源管理器  中使用附加调试器 (Python)  命令。 远程调试需要安装 [Azure SDK for .NET 2.3 - Visual Studio 2013](https://www.microsoft.com/web/handlers/webpi.ashx/getinstaller/VWDOrVs2013AzurePack.appids) 或更高版本。
 
-1. 需要 Windows 8 或更高版本。 使用服务器资源管理器  中的附加调试器 (Python)  命令需要 [Azure SDK for .NET 2.3 - Visual Studio 2013](https://go.microsoft.com/fwlink/?LinkId=323510) 或更高版本。
+1. 需要 Windows 8 或更高版本。 使用服务器资源管理器  中的附加调试器 (Python)  命令需要 [Azure SDK for .NET 2.3 - Visual Studio 2013](https://www.microsoft.com/web/handlers/webpi.ashx/getinstaller/VWDOrVs2013AzurePack.appids) 或更高版本。
 
 1. 需要 Windows 8 或更高版本。
 ::: moniker-end

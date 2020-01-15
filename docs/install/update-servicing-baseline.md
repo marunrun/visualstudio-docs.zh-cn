@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 3ef0cf63f8063d543cbb8fb69a0588dc331e4c6a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 4c33420e715f2164f767ba57ff149a409d7d3627
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590951"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776176"
 ---
 # <a name="update-visual-studio-while-on-a-servicing-baseline"></a>在维修基线上更新 Visual Studio
 
@@ -62,7 +62,7 @@ vs_enterprise.exe --channelUri c:\doesnotexist.chman
 
 若提供了维护基线更新，[My.VisualStudio.com](https://my.visualstudio.com/Downloads?q=visual%20studio%202019%20version%2016.0) 将向该维护更新提供不可编辑版本的引导程序文件。
 
-对于使用网络布局安装进行部署的管理员，管理员应更新[布局位置](update-a-network-installation-of-visual-studio.md)。 从该位置安装的客户端将收到更新通知。 如果必须将更新部署到客户端，请按照[这些说明](update-a-network-installation-of-visual-studio.md#how-to-deploy-an-update-to-client-machines)操作。 通过修改“response.json”来获取更新时，请不要添加其他工作负载、组件或语言。 更新产品后，必须以“修改”部署的形式管理这些设置。
+对于使用网络布局安装进行部署的管理员，管理员应更新[布局位置](update-a-network-installation-of-visual-studio.md)。 从该位置安装的客户端将收到更新通知。 如果必须将更新部署到客户端，请按照[这些说明](update-a-network-installation-of-visual-studio.md#deploy-an-update-to-client-machines)操作。 通过修改“response.json”来获取更新时，请不要添加其他工作负载、组件或语言。 更新产品后，必须以“修改”部署的形式管理这些设置。
 
 对于基于 Internet 的安装，请在客户端上使用指向不存在的通道清单的 `--channelUri` 参数运行新的不可编辑版本的引导程序。 若使用安静或被动模式部署更新，请使用下面的两个独立的命令：
 

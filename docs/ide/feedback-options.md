@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: 1c7d9ce8382ee208b160fa5cec845c8ff9508d74
-ms.sourcegitcommit: 2148f3fd69569d8ec54fd21a66370932ce610ce4
+ms.openlocfilehash: 6577d49094cd4e2718507eb0c1f4f83ff146da05
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74853485"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847465"
 ---
 # <a name="visual-studio-feedback-options"></a>Visual Studio 反馈选项
 
@@ -75,12 +75,12 @@ ms.locfileid: "74853485"
 
 ## <a name="contact-microsoft-support"></a>联系 Microsoft 支持部门
 
-有关 Visual Studio 支持信息，请参阅[产品生命周期和服务](/visualstudio/releases/2019/servicing/)页。 有关其他 Microsoft 产品和服务，请参阅 [Microsoft 支持](https://go.microsoft.com/fwlink/?LinkID=99019)以获取联机帮助。
+有关 Visual Studio 支持信息，请参阅[产品生命周期和服务](/visualstudio/releases/2019/servicing/)页。 有关其他 Microsoft 产品和服务，请参阅 [Microsoft 支持](https://support.microsoft.com/)以获取联机帮助。
 
 > [!NOTE]
 > 美国和加拿大以外的支持可能会有所变化。 有关地区联系人的列表，请参阅 [Microsoft 全球站点](https://www.microsoft.com/worldwide/)。
 
-针对需要 Microsoft 直接提供托管支持的大型组织，可通过各种企业支持服务提供的策划方案签订合同。 有关更多信息，请参阅 [Microsoft 企业支持解决方案](https://go.microsoft.com/fwlink/?LinkId=258223)。
+针对需要 Microsoft 直接提供托管支持的大型组织，可通过各种企业支持服务提供的策划方案签订合同。 有关更多信息，请参阅 [Microsoft 企业支持解决方案](https://www.microsoft.com/industry/services/support)。
 
 如果产品预先安装在新计算机或设备上，则由硬件制造商提供此软件的技术支持和帮助。 请直接联系制造商以获得支持。
 

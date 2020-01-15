@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/28/2019
 ms.topic: conceptual
 description: 云订阅的计费问题。
-ms.openlocfilehash: 12ff77a052e54520885642cb3cd6ed1dea31506b
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: c4544df196d3e861522dfcbb877a90a5656ad7ba
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491273"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851410"
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Visual Studio 云订阅计费常见问题解答
 请确保[比较云订阅权益和定价](https://visualstudio.microsoft.com/vs/pricing/)，了解每种 Visual Studio 订阅的权益，云订阅与标准 Visual Studio 订阅之间的不同之处，以及订阅者权益的相关详细信息等。
@@ -37,7 +37,7 @@ ms.locfileid: "74491273"
 需要从出现的当前链接到登录名的 Azure 订阅列表中选择一个 Azure 订阅（即计费帐户）。
 由于 Azure 订阅的名称默认为计费帐户的类型（“即用即付”、“企业协议”等），因此通常很容易判断 Azure 订阅是否为企业协议的一部分。
 
-另一种方法是尝试访问 [Azure 企业门户](https://ea.azure.com)。  如果可以成功访问，说明已经具有企业管理员或帐户所有者角色。 只有帐户所有者才能在企业协议中设置新的 Azure 计费帐户。 如果无法访问 Azure 企业门户，请咨询你的组织并联系企业管理员将你添加为 Azure 企业门户中的帐户所有者。  如果联系不到管理员，可以[提交支持票证](https://aka.ms/AzureEntSupport)并请求联系信息。  需要提供组织名称以及支持票证的企业协议注册号。
+另一种方法是尝试访问 [Azure 企业门户](https://ea.azure.com)。  如果可以成功访问，说明已经具有企业管理员或帐户所有者角色。 只有帐户所有者才能在企业协议中设置新的 Azure 计费帐户。 如果无法访问 Azure 企业门户，请咨询你的组织并联系企业管理员将你添加为 Azure 企业门户中的帐户所有者。  如果联系不到管理员，可以[提交支持票证](https://support.microsoft.com/supportrequestform/cf791efa-485b-95a3-6fad-3daf9cd4027c)并请求联系信息。  需要提供组织名称以及支持票证的企业协议注册号。
 
 ### <a name="q-can-i-use-the-azure-monetary-commitment-funds-from-my-enterprise-agreement-to-buy-visual-studio-cloud-subscriptions"></a>问：我可以使用来自企业协议的 Azure 货币承诺资金购买 Visual Studio 云订阅吗？
 答：不可以，这些预付资金不具备购买 Visual Studio 云订阅的资格。 当选择为 EA 创建的 Azure 订阅来购买 Visual Studio 云订阅时，这些费用会显示在下一张“超额”发票上。 通常该情况每月都会发生，但由于某些 EA 客户的历史规则，可能在几个月内不会开具超额发票。 如需了解额外购买量（不符合 Azure 货币承诺资金的购买量）是否会触发超额发票，请咨询 EA 的许可专家。

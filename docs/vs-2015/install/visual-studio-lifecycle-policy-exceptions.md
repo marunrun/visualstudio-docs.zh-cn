@@ -9,12 +9,12 @@ caps.latest.revision: 3
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 246ffa914ba21b9b2813abca1bae063162576486
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
-ms.translationtype: HT
+ms.openlocfilehash: cc3a18fe1ce76b6214766ba45fc5441e80c56cef
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75852146"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918493"
 ---
 # <a name="visual-studio-lifecycle-policy-exceptions"></a>Visual Studio 生命周期策略异常
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,7 +34,7 @@ Visual Studio 包含能够在多个 Microsoft 平台进行开发的编译器、�
 |[Exchange 2013](https://support.microsoft.com/kb/2902020)|Exchange Web 服务|  
 |[Microsoft OWIN](https://support.microsoft.com/kb/2902020)|Microsoft OWIN|  
 |[Microsoft Web 开发人员工具 2013](https://support.microsoft.com/kb/2902020)|Microsoft Web 开发人员工具 2013|  
-|这些组件的更新通过 NuGet 分发，并且不遵循标准 Microsoft 生命周期策略。  有关详细信息，请参阅 [http://docs.nuget.org/](https://docs.microsoft.com/nuget/)。|适用于 Microsoft.NET Framework 4.5 的 JSON Web 令牌处理程序<br /><br /> NuGet 2.7<br /><br /> SignalR<br /><br /> Web 优化框架<br /><br /> WebGrease|  
+|这些组件的更新通过 NuGet 分发，并且不遵循标准 Microsoft 生命周期策略。  有关详细信息，请参阅 [http://docs.nuget.org/](/nuget/)。|适用于 Microsoft.NET Framework 4.5 的 JSON Web 令牌处理程序<br /><br /> NuGet 2.7<br /><br /> SignalR<br /><br /> Web 优化框架<br /><br /> WebGrease|  
 |[ODataLib](https://support.microsoft.com/kb/2902020)|ODataLib|  
 |[Office 2013](https://support.microsoft.com/lifecycle/search/?p1=16674)|Open XML SDK|  
 |[Online Services 策略](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy)|Microsoft Ads SDK|  

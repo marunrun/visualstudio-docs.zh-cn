@@ -7,21 +7,21 @@ ms.topic: conceptual
 ms.date: 10/16/2019
 ms.technology: vs-azure
 monikerRange: vs-2019
-ms.openlocfilehash: 355a08b2ff322226d347d999f4ec8a9ebb7ba5fc
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: bdf326bc337456a0a9b4ba085d308ead2c90d49b
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188722"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846946"
 ---
 # <a name="how-to-view-and-diagnose-containers-and-images-in-visual-studio"></a>如何在 Visual Studio 中查看和诊断容器与图像
 
 可使用“容器”窗口查看托管应用的容器内发生的情况  。 如果习惯于通过使用命令提示符运行 Docker 命令来查看和诊断容器中进行的操作，则此窗口提供更方便的方法，在无需离开 Visual Studio IDE 的情况下即可监视容器。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-- [Visual Studio 2019 版本 16.4 预览版 2](https://visualstudio.microsoft.com/downloads) 或更高版本，或者如果使用的是早期版本的 Visual Studio 2019，请安装[容器窗口扩展](https://aka.ms/vscontainerspreview)。
+- [Visual Studio 2019 版本 16.4 预览版 2](https://visualstudio.microsoft.com/downloads) 或更高版本，或者如果使用的是早期版本的 Visual Studio 2019，请安装[容器窗口扩展](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vs-containers-tools-extensions)。
 
 ## <a name="view-information-about-your-containers"></a>查看容器的相关信息
 

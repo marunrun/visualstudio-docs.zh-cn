@@ -8,12 +8,12 @@ ms.assetid: E2C9420F-A5D5-4472-9020-2B63FB27A133
 ms.technology: vs-unity-tools
 ms.workload:
 - unity
-ms.openlocfilehash: 01363ab1588507f31dc74800c85b159039c9bab6
-ms.sourcegitcommit: 9c7d8693108ecd2042a70c04cebe3c44af657baf
+ms.openlocfilehash: 5fb521ff1769f1d742dc1ce67080e98aecb417ad
+ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74239433"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75944236"
 ---
 # <a name="using-net-4x-in-unity"></a>在 Unity 中使用 .NET 4.x
 
@@ -21,7 +21,7 @@ ms.locfileid: "74239433"
 
 随着 Unity 2017.1 的发布，Unity 引入了升级到 .NET 4.6、C# 6 兼容版本的实验版脚本运行时。 在 Unity 2018.1 中，与 .NET 4.x 等效的运行时不再视为实验版，较旧的等效于 .NET 3.5 的运行时现被视为旧版本。 随着 Unity 2018.3 的发布，Unity 计划将已升级的脚本运行时作为默认选择，并进一步更新为 C# 7。 有关此路线图的详细信息和最新更新，请阅读 Unity 的[博客文章](https://blogs.unity3d.com/2018/07/11/scripting-runtime-improvements-in-unity-2018-2/)或访问其[实验性脚本预览论坛](https://forum.unity.com/forums/experimental-scripting-previews.107/)。 与此同时，请查看以下部分，了解有关 .NET 4.x 脚本运行时现在可用的新功能的详细信息。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 * [Unity 2017.1 或更高版本](https://unity3d.com/)（建议使用 2018.2）
 * [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)
@@ -146,7 +146,7 @@ public int Health { get; set; } = 100;
 
 ### <a name="string-interpolation"></a>字符串内插
 
-使用较旧的 .NET 3.5 运行时，字符串串联需要繁琐的语法。 现在使用 .NET 4.x 运行时，[`$`字符串内插](https://docs.microsoft.com/dotnet/csharp/language-reference/tokens/interpolated)功能允许以更直接和可读的语法将表达式插入到字符串中：
+使用较旧的 .NET 3.5 运行时，字符串串联需要繁琐的语法。 现在使用 .NET 4.x 运行时，[`$`字符串内插](/dotnet/csharp/language-reference/tokens/interpolated)功能允许以更直接和可读的语法将表达式插入到字符串中：
 
 ```csharp
 // .NET 3.5
@@ -159,7 +159,7 @@ Debug.Log($"Player health: {Health}");
 
 ### <a name="expression-bodied-members"></a>Expression-Bodied 成员
 
-使用 .NET 4.x 运行时中提供的新的 C# 语法，[Lambda 表达式](https://docs.microsoft.com/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions)可替换函数主体，使它们更为简洁：
+使用 .NET 4.x 运行时中提供的新的 C# 语法，[Lambda 表达式](/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions)可替换函数主体，使它们更为简洁：
 
 ```csharp
 // .NET 3.5
@@ -181,9 +181,9 @@ public string PlayerHealthUiText => $"Player health: {Health}";
 
 ### <a name="task-based-asynchronous-pattern-tap"></a>基于任务的异步模式 (TAP)
 
-[异步编程](https://docs.microsoft.com/dotnet/csharp/async)允许执行耗时的操作，而不会导致应用程序无响应。 此功能还允许代码等待耗时的操作完成，然后继续执行取决于这些操作结果的代码。 例如，可等待文件加载或网络操作完成。
+[异步编程](/dotnet/csharp/async)允许执行耗时的操作，而不会导致应用程序无响应。 此功能还允许代码等待耗时的操作完成，然后继续执行取决于这些操作结果的代码。 例如，可等待文件加载或网络操作完成。
 
-在 Unity 中，异步编程通常使用[协同程序](https://docs.unity3d.com/Manual/Coroutines.html)来完成。 但是，从 C# 5 开始，.NET 开发中异步编程的首选方法是[基于任务的异步模式 (TAP)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)，该方法将 `async` 和 `await` 关键字与 [System.Threading.Task](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task) 结合使用。 总之，在 `async` 函数中，可 `await`（等待）任务完成，同时不会阻止应用程序的其余部分更新：
+在 Unity 中，异步编程通常使用[协同程序](https://docs.unity3d.com/Manual/Coroutines.html)来完成。 但是，从 C# 5 开始，.NET 开发中异步编程的首选方法是[基于任务的异步模式 (TAP)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)，该方法将 `async` 和 `await` 关键字与 [System.Threading.Task](/dotnet/api/system.threading.tasks.task) 结合使用。 总之，在 `async` 函数中，可 `await`（等待）任务完成，同时不会阻止应用程序的其余部分更新：
 
 ```csharp
 // Unity coroutine
@@ -229,7 +229,7 @@ TAP 是一个复杂的内容，具有相对于 Unity 的细微差别，这是开
 
 这些提示可帮助你开始在 Unity 中使用 TAP：
 
-* 预期等待的异步函数应具有返回类型 [`Task`](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task) 或 [`Task<TResult>`](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1)。
+* 预期等待的异步函数应具有返回类型 [`Task`](/dotnet/api/system.threading.tasks.task) 或 [`Task<TResult>`](/dotnet/api/system.threading.tasks.task-1)。
 * 返回任务的异步函数其名称后应附加后缀“Async”  。 “Async”后缀有助于指示需始终等待某个函数。
 * 仅为从传统同步代码触发异步函数的函数使用 `async void` 返回类型。 无法等待此类函数，且不应在其名称中包含“Async”后缀。
 * 默认情况下，Unity 使用 UnitySynchronizationContext 来确保异步函数在主线程上运行。 无法在主线程外部访问 Unity API。
@@ -274,7 +274,7 @@ private void RecordHighScore(string playerName)
 
 ### <a name="caller-info-attributes"></a>调用方信息属性
 
-[调用方信息属性](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/caller-information)提供有关方法调用方的信息。 必须为要与调用方信息属性一起使用的每个参数提供默认值：
+[调用方信息属性](/dotnet/csharp/programming-guide/concepts/caller-information)提供有关方法调用方的信息。 必须为要与调用方信息属性一起使用的每个参数提供默认值：
 
 ```csharp
 private void Start ()
@@ -300,7 +300,7 @@ public void ShowCallerInfo(string message,
 
 ### <a name="using-static"></a>Using static
 
-[Using static](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/using-static) 允许使用静态函数，且无需键入其类名。 通过 using static，在需要使用同一类中的多个静态函数时，可节省空间和时间：
+[Using static](/dotnet/csharp/language-reference/keywords/using-static) 允许使用静态函数，且无需键入其类名。 通过 using static，在需要使用同一类中的多个静态函数时，可节省空间和时间：
 
 ```csharp
 // .NET 3.5
@@ -344,8 +344,8 @@ public class UsingStaticExample: MonoBehaviour
 ## <a name="additional-resources"></a>其他资源
 
 * [Unity 博客 - Unity 2018.2 中的脚本运行时改进](https://blogs.unity3d.com/2018/07/11/scripting-runtime-improvements-in-unity-2018-2/)
-* [C# 的历史记录](https://docs.microsoft.com/dotnet/csharp/whats-new/csharp-version-history)
-* [C# 6 中的新增功能](https://docs.microsoft.com/dotnet/csharp/whats-new/csharp-6)
-* [Unity 中的异步编程 - 使用协同程序和 TAP](https://blogs.msdn.microsoft.com/appconsult/2017/09/01/unity-coroutine-tap)
+* [C# 的历史记录](/dotnet/csharp/whats-new/csharp-version-history)
+* [C# 6 中的新增功能](/dotnet/csharp/whats-new/csharp-6)
+* [Unity 中的异步编程 - 使用协同程序和 TAP](/archive/blogs/appconsult/unity-coroutine-tap-en-us)
 * [Unity 2017 使用 Async-Await 而非协同程序](http://www.stevevermeulen.com/index.php/2017/09/using-async-await-in-unity3d-2017/)
 * [Unity 论坛 - 实验性脚本预览](https://forum.unity.com/forums/experimental-scripting-previews.107/)

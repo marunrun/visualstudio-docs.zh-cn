@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/28/2019
 ms.topic: conceptual
 description: 有关云解决方案提供商如何为客户购买和管理 Visual Studio 云订阅的信息。
-ms.openlocfilehash: 7711d9296ca26a09f251f70a6f8dc4848f769507
-ms.sourcegitcommit: a124076dfd6b4e5aecda4d01984fee7b0c034745
+ms.openlocfilehash: 7cc5a04a26a3120d88a931dde47c3b249c082791
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787750"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851402"
 ---
 # <a name="buy-and-manage-visual-studio-cloud-subscriptions-for-your-customers"></a>为客户购买和管理 Visual Studio 云订阅
 [云解决方案提供商 (CSP)](https://partner.microsoft.com/cloud-solution-provider) 计划中的合作伙伴可为其客户购买 Visual Studio Enterprise 和 Visual Studio Professional 云订阅。
@@ -21,7 +21,7 @@ ms.locfileid: "68787750"
 > [!NOTE]
 > Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 必须先在合作伙伴中心设置客户租户，并为此租户创建 Azure 订阅。
 
 [了解更多信息](/azure/devops/organizations/billing/csp/set-up-csp-customer)
@@ -68,7 +68,7 @@ ms.locfileid: "68787750"
 
 下面解释了在此电子表格中看到的内容：
 
-| 计量类别    |   name                 |  单位                                |           这是什么                          |
+| 计量类别    |   “属性”                 |  单位                                |           这是什么                          |
 |-------------------|------------------------|---------------------------------------|-------------------------------------------------|
 | Visual Studio     | 企业             |  订阅                         | Visual Studio Enterprise 月度订阅   |
 | Visual Studio     | Professional           |  订阅                         | Visual Studio Professional 月度订阅 |
@@ -103,5 +103,5 @@ ms.locfileid: "68787750"
 答：否，Visual Studio 订阅的价格是固定的。 新订阅和继续订阅的价格相同。
 
 ### <a name="q-are-there-azure-devtest-pricing-options-for-csps"></a>问：有适用于 CSP 的 Azure 开发/测试定价选项吗？
-答：暂时没有。 客户可以使用 [Azure 开发/测试定价](https://aka.ms/azuredevtestpricing)，但目前没有专门适用于 CSP 的任何内容。
+答：暂时没有。 客户可以使用 [Azure 开发/测试定价](https://azure.microsoft.com/pricing/dev-test/)，但目前没有专门适用于 CSP 的任何内容。
 

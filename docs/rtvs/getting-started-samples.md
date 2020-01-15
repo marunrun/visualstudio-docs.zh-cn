@@ -8,12 +8,12 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: adcc5ce422cdd06e641408b3506fb751a4c730d1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ef3316d929b00203815918a656568f75571e954e
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62950489"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75843826"
 ---
 # <a name="r-tools-for-visual-studio-sample-projects"></a>针对 Visual Studio 的 R 工具示例项目
 
@@ -22,12 +22,12 @@ ms.locfileid: "62950489"
 1. 下载[示例 zip 文件](https://github.com/Microsoft/RTVS-docs/archive/master.zip)并将其解压到选择的文件夹。
 1. 打开 `examples/Examples.sln`，可看到项目中的两个文件夹：
 
-    - “初探 R”为 R 新用户提供简要介绍。
-    - “MRS 和机器学习”举例说明如何将 R 和 Microsoft Machine Learning Server 用于机器学习。
+    - “初探 R”  为 R 新用户提供简要介绍。
+    - “MRS 和机器学习”举例说明如何将 R 和 Microsoft Machine Learning Server 用于机器学习  。
 
 ## <a name="a-first-look-at-r"></a>初探 R
 
-此示例通过两个源文件中的大量注释深入介绍 R。 为获得最佳体验，请将光标置于文件顶部，然后按 Ctrl+Enter 将代码逐行发送到“R 交互”窗口。 （用于安装包的行可能需要一两分钟来完成。）
+此示例通过两个源文件中的大量注释深入介绍 R。 为获得最佳体验，请将光标置于文件顶部，然后按 Ctrl+Enter 将代码逐行发送到“R 交互”窗口  。 （用于安装包的行可能需要一两分钟来完成。）
 
 - `1-Getting Started with R.R` 介绍了许多 R 基础知识，包括使用包、加载和分析数据以及绘图等。
 
@@ -41,7 +41,7 @@ ms.locfileid: "62950489"
 
 此示例集合演示如何使用 R 创建机器学习模型，以及如何利用 [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server)。
 
-与所有示例一样，请打开文件、将光标置于顶部，然后按 Ctrl+Enter 逐行单步执行代码。 每个文件夹中的 Markdown 文件还包含其他详细信息。
+与所有示例一样，请打开文件、将光标置于顶部，然后按 Ctrl+Enter 逐行单步执行代码   。 每个文件夹中的 Markdown 文件还包含其他详细信息。
 
 - `Benchmarks` 运行大量密集型的并行线性代数计算，显示使用 Microsoft R Open 和 Intel Math Kernel Library (MKL) 可能提升的性能。 通过模拟数据，基准专门将一个线程和其他两个线程上的矩阵计算进行比较。
 
@@ -57,7 +57,7 @@ ms.locfileid: "62950489"
 
       ![使用 ggplot2.R 示例的输出](media/samples-3d-interactive.png)
 
-- `Datasets` 包含其他示例使用的三个 .csv 文件
+- `Datasets` 包含其他示例使用的三个 .csv 文件 
 - `Flight_Delays_Prediction_with_R` 和 `Flight_Delays_Prediction_with_MRS` 演示如何使用 R 机器学习、历史实时性能和天气数据预测航班延误。
 - `Machine learning` 包含三个示例，用于学习如何预测航班延迟、住房价格和自行车租金。 总体而言，这些示例演示了 R 和 Microsoft ML Server 在实际问题中的应用。 它们还演示如何使用多个热门机器学习模型，以及如何使用 [Azure 机器学习](https://azure.microsoft.com/services/machine-learning/)工作区将这些模型部署为 Azure Web 服务。
 
@@ -65,7 +65,7 @@ ms.locfileid: "62950489"
 
 ## <a name="whats-special-about-microsoft-r-open-and-microsoft-ml-server"></a>Microsoft R Open 和 Microsoft ML Server 有什么特别之处？
 
-[Microsoft R Open](https://aka.ms/rtvs-r-open) 是 Microsoft R 的分发，与 [CRAN R](https://cran.r-project.org/) 相比有两个重大差异：
+[Microsoft R Open](https://mran.revolutionanalytics.com/download/) 是 Microsoft R 的分发，与 [CRAN R](https://cran.r-project.org/) 相比有两个重大差异：
 
 1. 如果与 [Intel Math Kernel Libraries](https://software.intel.com/intel-mkl) 配合使用，可获得[更好的计算性能](https://mran.revolutionanalytics.com/rro/#intelmkl1)。 可从 Microsoft 免费下载这些库，以便与 Microsoft R Open 配合使用。
 
@@ -81,8 +81,8 @@ ms.locfileid: "62950489"
 
 ![比较使用 MKL 的 MLS 和 MRO 与不使用 MKL 的 R 和 MRO](media/samples-speed-comparison.png)
 
-有关 R 与 MRO 和 MLS 的技术比较，请参阅关于该主题的 [Lixun Zhang 详细讨论](http://htmlpreview.github.io/? https://github.com/lixzhang/R-MRO-MRS/blob/master/Introduction_to_MRO_and_MRS.html)。
+有关 R 与 MRO 和 MLS 的技术比较，请参阅关于该主题的 [Lixun Zhang 详细讨论](http://htmlpreview.github.io/?https://github.com/lixzhang/R-MRO-MRS/blob/master/Introduction_to_MRO_and_MRS.html)。
 
-下图比较生成逻辑回归模型所用的运行时间（秒），从而预测航班延误是否将超过 15 分钟。  行数的微小增加会导致 CRAN R 中的运行时间显著增加，而 MLS 的增加量仅约为行数的两倍。 有关此基准的详细信息，请参阅 Benchmarks/rxGlm_benchmark.R 示例。
+下图比较生成逻辑回归模型所用的运行时间（秒），从而预测航班延误是否将超过 15 分钟。  行数的微小增加会导致 CRAN R 中的运行时间显著增加，而 MLS 的增加量仅约为行数的两倍。 有关此基准的详细信息，请参阅 Benchmarks/rxGlm_benchmark.R 示例  。
 
 ![rxGlm 基准](media/samples-rxGLM-benchmark.png)
