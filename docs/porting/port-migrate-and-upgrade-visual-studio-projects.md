@@ -1,7 +1,7 @@
 ---
 title: 移植、迁移和升级项目
 description: Visual Studio 的当前版本和早期版本中创建的项目的支持的参考。
-ms.date: 10/17/2019
+ms.date: 11/26/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.topic: conceptual
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - conversion, projects
 - asset compatibility
 - projects, conversion
-ms.openlocfilehash: 9bc0436eac0460071d2393f8ff43178d49e8f7de
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 221fd38b6035c1e41d9a768f5e30117dd3f4d35c
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72912008"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75406354"
 ---
 # <a name="project-migration-and-upgrade-reference-for-visual-studio"></a>Visual Studio 的项目迁移和升级参考
 
@@ -112,14 +112,15 @@ Visual Studio 的每个版本通常都支持大部分以前的项目、文件和
 
 ::: moniker range="vs-2019"
 
-Visual Studio 的每个版本通常都支持大部分以前的项目、文件和其他资产类型。 可以[照常](../ide/solutions-and-projects-in-visual-studio.md)使用这些类型。如果不依赖新功能，Visual Studio 会尝试保留与旧版本（如 Visual Studio 2017、Visual Studio 2015、Visual Studio 2013 和 Visual Studio 2012）的向后兼容性。 （若要了解哪些功能特定于哪个版本，请参阅[发行说明](/visualstudio/releases/2019/release-notes/)。）
+Visual Studio 的每个新版本都支持大部分项目、文件和其他资产类型。 只要不依赖于新功能，就可以[像往常一样](../ide/solutions-and-projects-in-visual-studio.md)使用它们。
 
-对某些项目类型的支持会随着时间的推移而更改。 较新版本的 Visual Studio 可能不再支持某些项目，或者可能需要更新项目，使其不再向后兼容。 有关迁移问题的当前状态，请参阅 [Visual Studio 开发人员社区](https://developercommunity.visualstudio.com)。
+我们尝试保留与早期版本的向后兼容性，如 Visual Studio 2017、Visual Studio 2015、Visual Studio 2013 和 Visual Studio 2012。 但是，对某些项目类型的支持会随着时间的推移而更改。 较新版本的 Visual Studio 可能根本不支持某些项目，或者可能需要更新项目，使其不再向后兼容。 
 
-本文详细介绍 Visual Studio 2019 可迁移的项目类型。 它还包括 Visual Studio 2019 弃用的或者即将弃用的项目类型的信息。 本文不包括 Visual Studio 2019 中不再支持且因此无法迁移的项目类型。 本文也不包括没有迁移问题的受支持项目类型；此列表位于[平台目标以及兼容性](/visualstudio/releases/2019/compatibility)中。
+> [!NOTE]
+> 有关迁移问题的当前状态，请参阅 [Visual Studio 开发人员社区](https://developercommunity.visualstudio.com)。 若要详细了解哪些功能特定于对应的 Visual Studio 版本，请参阅[发行说明](/visualstudio/releases/2019/release-notes/)。
 
 > [!IMPORTANT]
-> 某些项目类型需要通过 Visual Studio 安装程序安装特定的工作负荷。 如果尚未安装工作负荷，Visual Studio 将报告未知的或不兼容的项目类型。 在这种情况下，请检查安装选项，然后重试。 有关 Visual Studio 2019 中项目支持的详细信息，请参阅[平台目标以及兼容性](/visualstudio/releases/2019/compatibility)。
+> 某些项目类型需要特定工作负载。 如果尚未安装工作负荷，Visual Studio 将报告未知的或不兼容的项目类型。 在这种情况下，请检查 [Visual Studio 安装程序中的安装选项](../install/modify-visual-studio.md)，然后重试。 有关 Visual Studio 2019 中项目支持的详细信息，请参阅[平台目标和兼容性](/visualstudio/releases/2019/compatibility)页。
 
 ## <a name="project-types"></a>项目类型
 
@@ -167,11 +168,11 @@ Visual Studio 的每个版本通常都支持大部分以前的项目、文件和
 | Windows 应用商店应用程序 | Visual Studio 2019 不支持 JavaScript Universal Windows 项目。 要继续使用这些项目，请使用 Visual Studio 2017。 <br/><br/>Windows 10 Fall Creators Update（内部版本 16299）之前的 Windows 10 SDK 已从 Visual Studio 2019 安装程序中删除。 可以手动下载旧版 SDK，也可以重定向项目以使用较新的 SDK。<br/><br/>不支持使用 project.json 的通用 Windows 项目。 建议升级这些项目以使用包引用。 或者，在 project.json 文件中添加对 Microsoft.NET.Test.Sdk 版本 16.0.0.0 的引用。<br/><br/>Visual Studio 2019 不支持 Windows Store 8.1 和 8.0 的项目。 要继续使用这些应用，请继续使用 Visual Studio 2015。 |
 | Xamarin | 已删除适用于 Visual Studio 和 Visual Studio for Mac 的 Xamarin Live Player 扩展。 这会删除配对屏幕和任何集成。 改用内置的 Xamarin.Forms 预览器。<br/><br/>适用于 Android 的 Visual Studio 仿真程序已从 Visual Studio 安装程序中删除。 改用 Google Android 仿真程序中的新的 Hyper-V 支持。 |
 
-## <a name="how-visual-studio-decides-when-to-migrate-a-project"></a>Visual Studio 如何决定迁移项目的时间
+## <a name="migrate-a-project"></a>迁移项目
 
-每个新版本的 Visual Studio 通常都会尝试与之前的版本保持兼容，以便在不同版本中打开、修改和构建同一项目。 但是，随着时间的推移，会出现不可避免的更改，使某些项目类型不再受支持。 （请参阅[平台目标以及兼容性](/visualstudio/releases/2019/compatibility)，了解 Visual Studio 2019 支持的项目类型。）在这些情况下，较新版本的 Visual Studio 不会加载该项目并且不提供迁移路径；需要在支持该项目的 Visual Studio 早期版本中维护该项目。
+尽管我们尝试保持与早期版本的兼容性，但可能存在与早期版本不兼容的更改。 （请参阅[平台目标以及兼容性](/visualstudio/releases/2019/compatibility)，了解 Visual Studio 2019 支持的项目类型。）发生这种情况时，较新版本的 Visual Studio 不会加载项目或提供迁移路径。 可能必须在早期版本的 Visual Studio 中维护该项目。
 
-在其他情况下，较新版本的 Visual Studio 可以打开项目，但必须以可能导致其与之前的版本不兼容的方式更新或迁移该项目。 Visual Studio 使用大量条件来确定是否需要此类迁移：
+有时，较新版本的 Visual Studio 可以打开项目，但必须以可能导致其与之前的版本不兼容的方式更新或迁移该项目。 Visual Studio 使用大量条件来确定是否需要此类迁移：
 
 - 与平台目标版本（Visual Studio 2013 RTM 及更高版本）的兼容性。
 
@@ -179,15 +180,15 @@ Visual Studio 的每个版本通常都支持大部分以前的项目、文件和
 
 - 新设计时资产是否会破坏与早期版本（Visual Studio 2013 RTM & Update 5 及更高版本）的兼容性。
 
-相关项目类型的工程所有者可查看这些条件，并确定需要支持、兼容性和迁移的位置。 同样，如果可能，Visual Studio 尝试保持 Visual Studio 各版本之间的透明兼容性，这意味着在某一 Visual Studio 版本中创建和修改的项目也可在其他版本中工作。
+拥有项目类型的工程团队可查看这些条件，并确定需要支持、兼容性和迁移的位置。 同样，我们尝试保持 Visual Studio 各版本之间的兼容性，以便在某一 Visual Studio 版本中创建和修改项目时，它也可在其他版本中工作。
 
-但是，如果与本文中所述的某些项目类型一样，不可能有此兼容性，那么 Visual Studio 会打开升级向导进行必要的单向更改。
+有时无法实现兼容性。 然后，Visual Studio 会打开升级向导以进行必要的单向更改。 这些单向更改可能涉及更改项目文件中的 `ToolsVersion` 属性，该属性明确表示哪个 MSBuild 版本可以将项目的源代码转变为所需的可运行且可部署的项目。 
 
-此类单向更改可能涉及更改项目文件中的 `ToolsVersion` 属性，该属性明确表示哪个 MSBuild 版本可以将项目的源代码转变为最终所需的可运行且可部署的项目。 也就是说，导致项目与 Visual Studio 早期版本不兼容的不是 Visual Studio 版本，而是由 `ToolsVersion` 确定的 MSBuild 版本   。 只要 Visual Studio 版本包含与项目中的 `ToolsVersion` 匹配的 MSBuild 工具链，Visual Studio 就可以调用该工具链来生成项目。
+导致项目与 Visual Studio 早期版本不兼容的不是 Visual Studio  版本，而是由 `ToolsVersion` 确定的 MSBuild  版本。 如果 Visual Studio 版本包含与项目中的 `ToolsVersion` 匹配的 MSBuild 工具链，Visual Studio 就可以调用该工具链来生成项目。
 
-为了最大限度保持与较旧版本中创建的项目的兼容性，Visual Studio 2019 包含了必要的 MSBuild 工具链来支持 `ToolsVersion` 15、14、12 和 4。 使用任意这些 `ToolsVersion` 值的项目都可进行成功的生成。 （再次强调，有关 Visual Studio 2019 是否支持项目类型的主题，请参阅[平台目标以及兼容性](/visualstudio/releases/2019/compatibility)。）
+为了保持与早期版本中创建的项目的兼容性，Visual Studio 2019 包含了必要的 MSBuild 工具链来支持 `ToolsVersion` 15、14、12 和 4。 使用任意这些 `ToolsVersion` 值的项目都可进行成功的生成。 （再次强调，有关 Visual Studio 2019 是否支持项目类型的主题，请参阅[平台目标和兼容性](/visualstudio/releases/2019/compatibility)。）
 
-在此上下文中，会自然而然出现一个问题：是否应该尝试将项目手动更新或迁移到新的 `ToolsVersion` 值。 没有必要做出该更改，进行该更改可能会产生许多错误和警告，需要修复它们并再次生成项目。 此外，如果 Visual Studio 以后不支持特定的 `ToolsVersion`，那么打开项目会触发项目迁移过程，这是因为必须更改 `ToolsVersion` 值。 在这种情况下，该特定项目类型的子系统确切地知道要更改的内容，并且可以按前文所述自动完成更改。
+你可能想要将项目手动更新或迁移到更新的 `ToolsVersion` 值。 无需进行此类更改，进行该更改可能会产生许多错误和警告，必须修复它们并再次生成项目。 此外，如果 Visual Studio 将来不支持特定的 `ToolsVersion`，则当你打开项目时，项目会触发项目迁移过程，因为必须更改其 `ToolsVersion` 值。
 
 ## <a name="next-steps"></a>后续步骤
 

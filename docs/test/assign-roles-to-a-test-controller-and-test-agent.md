@@ -9,15 +9,15 @@ helpviewer_keywords:
 - test controller, walkthrough
 - walkthroughs, test controller and test agents
 ms.assetid: 57ed43ae-4e67-4139-8aec-3e9fceb0a745
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9ae46db2d99024b598ff655452ca748298b528a0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f0ea644294ea79f1e4c044c0cebf3f427f5b672a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665306"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591185"
 ---
 # <a name="assign-roles-to-a-test-controller-and-test-agent"></a>为测试控制器和测试代理分配角色
 
@@ -25,7 +25,7 @@ ms.locfileid: "72665306"
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - 创建要使用测试设置运行的单元测试或编码的 UI 测试。
 
@@ -97,7 +97,7 @@ ms.locfileid: "72665306"
 
 ::: moniker range="vs-2017"
 
-8. 在“测试”  菜单上，选择“测试设置”  和“选择测试设置文件”>  ，然后选择“TestSettingDistributedTestWalkthrough.testsettings”  文件。
+8. 在“测试”  菜单上，选择“测试设置”  >“选择测试设置文件”  ，然后选择“TestSettingDistributedTestWalkthrough.testsettings”  文件。
 
 ::: moniker-end
 

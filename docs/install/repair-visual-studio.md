@@ -5,19 +5,19 @@ description: 了解如何修复 Visual Studio 2017 的安装
 ms.date: 07/31/2019
 ms.custom: seodec18
 ms.topic: conceptual
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: ed6b7050d2162fc4e893db6ec4f429fbe3f8eb4f
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: 255995f7ca660d36ae40a6a8fead4b3ea5d70424
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68681326"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594547"
 ---
 # <a name="repair-visual-studio"></a>修复 Visual Studio
 
@@ -36,7 +36,7 @@ Visual Studio 安装有时会损毁或损坏。 通过修复可以解决此问�
 
 1. 打开安装程序，选择“更多”  ，然后选择“修复”  。
 
-    ![通过 Visual Studio 安装程序修复 Visual Studio](media/repair-visual-studio.png "通过 Visual Studio 安装程序修复 Visual Studio")
+    ![从 Visual Studio 安装程序修复 Visual Studio](media/repair-visual-studio.png "从 Visual Studio 安装程序修复 Visual Studio")
 
    > [!NOTE]
    > 修复 Visual Studio 将重置环境。 将删除无需提升权限即可安装的每用户扩展、用户设置和配置文件等本地自定义项。 将还原主题、颜色、键绑定等同步设置。
@@ -53,7 +53,7 @@ Visual Studio 安装有时会损毁或损坏。 通过修复可以解决此问�
 
      例如，在运行 Windows 10 的计算机上，选择“开始”，然后滚动到字母“V”，它作为“Visual Studio 安装程序”在那里列出    。
 
-     ![打开 Visual Studio 安装程序](media/vs-2019/vs-installer-windows-start.png "Open the Visual Studio Installer")
+     ![打开 Visual Studio 安装程序](media/vs-2019/vs-installer-windows-start.png "打开 Visual Studio 安装程序")
 
      > [!NOTE]
      > 还可以在以下位置中找到 Visual Studio 安装程序：

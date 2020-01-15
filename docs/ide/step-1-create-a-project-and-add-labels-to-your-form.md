@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fdda615ceea11434a4533fa2a5071a5a999c1c4
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: 9e8e306aea1615649223c96f0c5a7041574f844d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516680"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588845"
 ---
 # <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>步骤 1：创建项目并向窗体添加标签
 
@@ -30,7 +30,7 @@ ms.locfileid: "72516680"
 
 ::: moniker range="vs-2017"
 
-1. 在菜单栏上选择“文件”  >“新建”  >“项目”  。
+1. 在菜单栏上，依次选择“文件”  >“新建”  >“项目”  。
 
 1. 在“新建项目”  对话框的左侧，选择 Visual C#  或 Visual Basic  ，然后选择“Windows 桌面”  。
 

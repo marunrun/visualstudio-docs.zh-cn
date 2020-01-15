@@ -4,12 +4,12 @@ description: 有关使用 Visual Studio for Mac 中的 IntelliSense 的信息
 author: cobey
 ms.author: cobey
 ms.date: 08/16/2019
-ms.openlocfilehash: 3e99c31b1ab4d12532d701e4626ac9c1aae7df56
-ms.sourcegitcommit: 0bd63f3bc429ae059b9df6e45c6b8dcae6152940
+ms.openlocfilehash: 07ef1d6292e4ac88ca616d0f35e3fd831cacc649
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70026566"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75405811"
 ---
 # <a name="intellisense"></a>IntelliSense
 
@@ -23,7 +23,7 @@ IntelliSense 提供了多种功能，有助于增强编写和编辑代码的体�
 
 完成窗口还支持按类型筛选包含的完成。 例如，可以将列表成员限制为仅表示类或委托等类型。 可以通过单击表示将筛选的类型的特定图标，或通过与给定类型对应的键盘快捷方式来启用此筛选过程。 位于完成窗口底部的图标如下：
 
-| 图标                         | name          | 关键字    | 热键 |
+| 图标                         | “属性”          | 关键字    | 热键 |
 | -----------------------------|---------------| -----------|--------|
 | ![类图标](media/classes-icon.png)  | class         | `class`    |  ⌥C
 | ![“常量”图标](media/constant-icon.png) | constant      | `const`    |  ⌥O
@@ -36,22 +36,12 @@ IntelliSense 提供了多种功能，有助于增强编写和编辑代码的体�
 | ![方法图标](media/method-icon.png)   | 方法        |            |  ⌥M
 | ![命名空间图标](media/namespace-icon.png)| namespace     | `namespace`|  ⌥N
 | ![属性图标](media/props-icon.png)    | 属性      |            |  ⌥P
-| ![代码片段图标](media/snippet-icon.png)  | snippet       | `class`    |  ⌥S
+| ![代码片段图标](media/snippet-icon.png)  | 代码片段       | `class`    |  ⌥S
 | ![结构图标](media/struct-icon.png)   | 结构     | `struct`   |  ⌥S
 
 通过单击任何图标，或者按下相应的热键，完成列表将仅限于由筛选集定义的类型。  
 
 ![IntelliSense 类型筛选](media/intellisense-typefiltering.gif)
-
-## <a name="show-import-items"></a>显示导入项
-
-默认情况下，IntelliSense 完成仅显示已导入项的库的完成。 例如，如果没有通过 `using` 导入 `System.Collections.Generic`，则不具有 `List<>` 的完成。 要显示未导入的库的完成，必须在 Visual Studio for Mac 的首选项中启用“显示导入项”  。 此设置可在“首选项”>“文本编辑器”>“IntelliSense”下找到  ：
-
-![IntelliSense 的显示导入项](media/intellisense-showimport.png)
-
-启用“显示导入项”后，完成列表将包含尚未导入的完成  。 选择对应于未声明库的项后，该库的 `using` 语句将自动添加到代码文件的标题中。 完成所属的库的名称也随完成本身一起列出。
-
-![“显示导入项”列表](media/intellisense-importaction.png)
 
 ## <a name="parameter-window"></a>参数窗口
 

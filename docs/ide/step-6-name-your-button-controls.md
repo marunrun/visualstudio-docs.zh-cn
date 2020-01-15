@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ff8c43e42d63208c1119f1f545697a57173fdd7a
-ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
+ms.openlocfilehash: 615b112c8ad3e35449a1e3a6c2817db9c7699a73
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313964"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589976"
 ---
 # <a name="step-6-name-your-button-controls"></a>步骤 6：命名按钮控件
 
@@ -99,7 +99,7 @@ ms.locfileid: "72313964"
 
 ## <a name="next-steps"></a>后续步骤
 
-* 要转到下一个教程步骤，请参阅[步骤 7：向窗体添加对话框组件](../ide/step-7-add-dialog-components-to-your-form.md)** 。
+* 要转到下一个教程步骤，请参阅[步骤 7：向窗体添加对话框组件](../ide/step-7-add-dialog-components-to-your-form.md)  。
 
 * 要返回上一个教程步骤，请参阅[步骤 5：向窗体添加控件](../ide/step-5-add-controls-to-your-form.md)。
 

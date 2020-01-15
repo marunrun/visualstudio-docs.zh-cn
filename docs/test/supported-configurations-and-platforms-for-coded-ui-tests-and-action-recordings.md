@@ -4,17 +4,17 @@ ms.date: 10/04/2015
 ms.topic: reference
 helpviewer_keywords:
 - coded UI tests
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: cf70ad5e28286d3906b1d670303e5fdfad4cbbe2
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+author: mikejo5000
+ms.openlocfilehash: e18e50537f35080f9796f4a090b3806953ae5170
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72982949"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845814"
 ---
 # <a name="supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings"></a>支持编码的 UI 测试和操作录制的配置和平台
 
@@ -39,7 +39,7 @@ ms.locfileid: "72982949"
 | .NET | .NET 2.0、3.0、3.5、4 和 4.5。 **注意：** [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] 和 Visual Studio 都需要 .NET 4 才能运行。 但是，支持使用列出的 .NET 版本开发的应用程序。 |
 
 > [!NOTE]
-> UI 同步是一种功能，该功能在每个控件的消息队列中验证播放。  如果某个控件未响应发送给它的事件，则会重新发送该事件。
+>  UI 同步是一种功能，该功能在每个控件的消息队列中验证播放。 如果某个控件未响应发送给它的事件，则会重新发送该事件。
 
 ## <a name="platform-support"></a>平台支持
 
@@ -54,7 +54,7 @@ ms.locfileid: "72982949"
 | Internet Explorer 6<br /><br /> Internet Explorer 7 | 不支持。 |
 | Chrome<br /><br /> Firefox | 不支持操作步骤的录制。 利用 Visual Studio 2012 Update 4 或更高版本，编码的 UI 测试可在 Chrome 和 Firefox 浏览器中播放。 有关更多详细信息，请转到 [此处](using-different-web-browsers-with-coded-ui-tests.md) 。 |
 | Opera<br /><br /> Safari | 不支持。 |
-| Silverlight | 不支持。<br /><br /> 对于 Visual Studo 2013，可从 Visual Studio 库下载[用于 Silverlight 的 Microsoft Visual Studio 2013 编码的 UI 测试插件](https://go.microsoft.com/fwlink/?LinkId=691026)。 |
+| Silverlight | 不支持。<br /><br /> 对于 Visual Studo 2013，可从 Visual Studio 库下载[用于 Silverlight 的 Microsoft Visual Studio 2013 编码的 UI 测试插件](https://marketplace.visualstudio.com/items?itemName=PrachiBoraMSFT.MicrosoftVisualStudio2013CodedUITestPluginforSilve)。 |
 | Flash/Java | 不支持。 |
 | Windows 窗体 2.0 及更高版本 | 完全支持。 **注意：** 完全支持 NetFx 控件，但并非支持所有第三方控件。 |
 | WPF 3.5 及更高版本 | 完全支持。<br /><br /> **注意** NetFx 控件完全受支持，但并非所有第三方控件都受支持。 |

@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 870179243f99501cac7aaa68ce9929ae589ba79e
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: 1be9af1badba19932c5d713bb4134448ccf84caf
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118965"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591744"
 ---
 # <a name="step-3-set-your-form-properties"></a>步骤 3：设置窗体属性
 
@@ -33,7 +33,7 @@ ms.locfileid: "71118965"
 1. 选中窗体后，在“属性”窗口中找到“Text”属性   。 根据列表排序的方式，您可能需要向下滚动。 选择“Text”  ，键入“图片查看器”  ，然后按 Enter  。  窗体的标题栏中将显示文本“图片查看器”，并且“属性”窗口的外观应与以下屏幕截图类似   。
 
     ![属性窗口](../ide/media/express_edittextproperty.png)<br>
-   属性窗口 
+   “属性”窗口 
 
    > [!NOTE]
    > 可以通过“按分类顺序”  视图或“字母顺序”  视图对属性进行排序。 可通过使用“属性”窗口上的按钮在这两类视图之间进行切换  。 在本教程中，通过“字母顺序”  视图查找属性会更加轻松。
@@ -72,7 +72,7 @@ ms.locfileid: "71118965"
 
 ## <a name="next-steps"></a>后续步骤
 
-* 要转到下一个教程步骤，请参阅[步骤 4：使用 TableLayoutPanel 控件设置窗体布局](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)** 。
+* 要转到下一个教程步骤，请参阅[步骤 4：使用 TableLayoutPanel 控件设置窗体布局](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)  。
 
 * 要返回上一个教程步骤，请参阅[步骤 2：运行运行图片查看器应用](../ide/step-2-run-your-program.md)。
 

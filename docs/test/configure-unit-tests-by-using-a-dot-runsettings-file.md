@@ -2,17 +2,17 @@
 title: 使用 .runsettings 文件配置单元测试
 ms.date: 10/03/2019
 ms.topic: conceptual
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: aba7ea1c26d38db2f845b2e743aae7a3d90d4d53
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+author: mikejo5000
+ms.openlocfilehash: 3f6690c2443b6c084c3e876cbb1a4340247613e0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74771476"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593247"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>使用 .runsettings 文件配置单元测试 
 
@@ -28,7 +28,7 @@ ms.locfileid: "74771476"
 
 ::: moniker range="vs-2017"
 
-若要在 IDE 中指定一个运行设置文件，请选择“测试”>“测试设置”>“选择测试设置文件”，然后选择 .runsettings 文件     。
+若要在 IDE 中指定一个运行设置文件，请选择“测试”  >“测试设置”  >“选择测试设置文件”  ，然后选择 .runsettings  文件。
 
 ![在 Visual Studio 2017 中选择测试设置文件菜单](media/select-test-settings-file.png)
 
@@ -70,15 +70,15 @@ ms.locfileid: "74771476"
 
   如果启用了自动检测运行设置文件，则此文件中的设置将应用到所有测试运行。 可以从以下两个位置打开 runsettings 文件自动检测：
   
-    -  “工具”>“选项”  >  “测试”>  “自动检测 runsettings 文件”
+    - “工具”  >“选项”  >“测试”  >“自动检测 runsettings 文件” 
 
       ![Visual Studio 2019 自动检测 runsettings 文件选项](media/vs-2019/auto-detect-runsettings-tools-window.png)
       
-    -  “测试”>  “配置运行设置”>  “自动检测 runsettings 文件”
+    - “测试”  >“配置运行设置”  >“自动检测 runsettings 文件” 
     
       ![Visual Studio 2019 自动检测 runsettings 文件菜单](media/vs-2019/auto-detect-runsettings-menu.png)
 
-- 在 IDE 中，选择“测试”>“配置运行设置”>“选择解决方案范围的 runsettings 文件”，然后选择 .runsettings 文件     。
+- 在 IDE 中，选择“测试”  >“配置运行设置”  >“选择解决方案范围的 runsettings 文件”  ，然后选择 .runsettings  文件。
 
    ![在 Visual Studio 2019 中选择测试解决方案范围的 runsettings 文件菜单](media/vs-2019/select-solution-settings-file.png)
       
@@ -95,13 +95,13 @@ ms.locfileid: "74771476"
 
    ::: moniker range="vs-2017"
 
-   在 Windows“启动”菜单中，选择“Visual Studio 2017”>“VS 2017 的开发人员命令提示”    。
+   在 Windows“启动”  菜单中，选择“Visual Studio 2017”  >“VS 2017 的开发人员命令提示”  。
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-   在 Windows“启动”菜单中，选择“Visual Studio 2019”>“VS 2019 的开发人员命令提示”    。
+   在 Windows“启动”  菜单中，选择“Visual Studio 2019”  >“VS 2019 的开发人员命令提示”  。
 
    ::: moniker-end
 

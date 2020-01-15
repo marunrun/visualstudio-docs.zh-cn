@@ -4,19 +4,19 @@ ms.date: 12/12/2018
 ms.technology: vs-ide-general
 ms.custom: get-started
 ms.topic: tutorial
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 22c48086fb98cc4ae25098cb70c642f77f621209
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 48b3f2c9aae099e3ae5f2cf2d8c438fb0f9062a2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72632574"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590210"
 ---
 # <a name="learn-about-projects-and-solutions-using-visual-basic"></a>通过 Visual Basic 了解项目和解决方案
 
@@ -53,7 +53,7 @@ ms.locfileid: "72632574"
 
 1. 打开 Visual Studio。
 
-1. 在菜单栏上选择“文件”  >“新建”  >“项目”  。
+1. 在菜单栏上，依次选择“文件”  >“新建”  >“项目”  。
 
    **“新建项目”** 对话框随即打开。
 
@@ -87,7 +87,7 @@ ms.locfileid: "72632574"
 
 ::: moniker range="vs-2017"
 
-1. 在“解决方案资源管理器”中的“解决方案‘QuickSolution’”的右键菜单或上下文菜单中，依次选择“添加”>“新建项目”     。
+1. 在“解决方案资源管理器”  中的“解决方案‘QuickSolution’”  的右键菜单或上下文菜单中，依次选择“添加”  >“新建项目”  。
 
    此时会打开 **“添加新项目”** 对话框。
 
@@ -104,7 +104,7 @@ ms.locfileid: "72632574"
 
 ::: moniker range=">=vs-2019"
 
-1. 在“解决方案资源管理器”中的“解决方案‘QuickSolution’”的右键菜单或上下文菜单中，依次选择“添加”>“新建项目”     。
+1. 在“解决方案资源管理器”  中的“解决方案‘QuickSolution’”  的右键菜单或上下文菜单中，依次选择“添加”  >“新建项目”  。
 
    随即打开显示“添加新项目”的对话框  。
 

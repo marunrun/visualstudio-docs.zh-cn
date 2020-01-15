@@ -2,26 +2,26 @@
 title: 卸载 Visual Studio
 titleSuffix: ''
 description: 了解如何逐步卸载 Visual Studio。
-ms.date: 07/31/2019
+ms.date: 12/19/2019
 ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
 - uninstall
 - uninstall Visual Studio
 ms.assetid: 0e445255-b796-426d-ad93-a4d8e36da2c5
-author: TerryGLee
-ms.author: tglee
+author: jillre
+ms.author: jillfra
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: d15a20adeb3203687e4d940635551c33774953a5
-ms.sourcegitcommit: c222052906362bf1a3762ec4d4623170e4e06702
+ms.openlocfilehash: a895d9a94ada22ecce340488c6ba00662a599969
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74809660"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594469"
 ---
 # <a name="uninstall-visual-studio"></a>卸载 Visual Studio
 
@@ -98,10 +98,13 @@ ms.locfileid: "74809660"
 
 ::: moniker-end
 
+## <a name="remove-all-files"></a>删除所有文件
+
+如果遇到灾难性错误，并且无法使用上述说明卸载 Visual Studio，则可以考虑使用“最后一种方法”选项。 有关如何完全删除所有 Visual Studio 安装文件和产品信息的详细信息，请参阅[删除 Visual Studio](remove-visual-studio.md)页。
+
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>请参阅
 
 * [修改 Visual Studio](modify-visual-studio.md)
 * [更新 Visual Studio](update-visual-studio.md)
-* [卸载 Visual Studio for Mac](/visualstudio/mac/uninstall)

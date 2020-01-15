@@ -18,17 +18,17 @@ helpviewer_keywords:
 - solution build configurations, build order
 - builds [Visual Studio], preparing
 ms.assetid: 710891fd-379e-42c2-a84b-44a7af694ca0
-author: ghogen
-ms.author: ghogen
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b8676ad9dc1a3b245242687e2ea56148b83b8d56
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: f3e71fe9b6179ac8f7ac69b0cb987fdbc30459fb
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416419"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596523"
 ---
 # <a name="build-and-clean-projects-and-solutions-in-visual-studio"></a>在 Visual Studio 中生成和清理项目和解决方案
 
@@ -59,11 +59,11 @@ ms.locfileid: "68416419"
 
 1. 在“解决方案资源管理器”  中，选择或打开项目。
 
-2. 在菜单栏上选择“生成”，再选择“生成 ProjectName”或“重新生成 ProjectName”      。
+2. 在菜单栏上选择“生成”  ，然后选择“生成”  “ProjectName”  或“重新生成”  “ProjectName”  。
 
-    - 选择“生成 ProjectName”后，仅生成自上次生成起更改过的项目组件   。
+    - 选择“生成”  “ProjectName”  可仅生成自最近生成以来更改过的项目组件。
 
-    - 选择“重新生成 ProjectName”项目名称可清理项目，然后生成项目文件和所有项目组件   。
+    - 选择“重新生成“  ”ProjectName”  可以“清理”项目，然后生成项目文件和所有项目组件。
 
 ## <a name="to-build-only-the-startup-project-and-its-dependencies"></a>仅生成启动项目及其依赖项
 
@@ -87,13 +87,13 @@ ms.locfileid: "68416419"
 
 选择 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 项目，然后在菜单栏上选择“生成” > “仅项目”，再选择下列某个命令   ：
 
-- **仅生成** *ProjectName*
+- 仅生成  ProjectName 
 
-- **仅重新生成** *ProjectName*
+- 仅重新生成  ProjectName 
 
-- **仅清理** *ProjectName*
+- 仅清理  ProjectName 
 
-- **仅链接** *ProjectName*
+- 仅链接  ProjectName 
 
 这些命令仅适用于所选的 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 项目，而不会生成、重新生成、清理或链接任何项目依赖项或解决方案文件。 根据 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 的版本，“仅项目”  子菜单可能包含更多命令。
 
