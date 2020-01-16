@@ -2,17 +2,17 @@
 title: 创建基于 Windows 窗体的域特定语言
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cc9d043f64204c50be06952ecc39be75e15087cf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f565184dcb9570ecc34b61f1f2d4d0e2ce2a4110
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654111"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114879"
 ---
 # <a name="create-a-windows-forms-based-domain-specific-language"></a>创建基于 Windows 窗体的域特定语言
 
@@ -33,13 +33,13 @@ ms.locfileid: "72654111"
    | | |
    |-|-|
    | 解决方案和 DSL 名称 | FarmApp |
-   | Namespace | FarmApp |
+   | 命名空间 | Company.FarmApp |
 
 2. 试验模板提供的初始示例：
 
    1. 转换所有模板。
 
-   2. 生成并运行示例（**Ctrl** +**F5**）。
+   2. 生成并运行示例（**Ctrl**+**F5**）。
 
    3. 在 Visual Studio 的实验实例中，打开调试项目中的 `Sample` 文件。
 
@@ -57,15 +57,15 @@ ms.locfileid: "72654111"
 
 - 在 `DslPackage` 项目中，`UI\DocView.cs` 包含显示 `UI` 项目中定义的 Windows 窗体控件的代码。
 
-- @No__t_0 项目包含绑定到 DSL 的窗体控件的工作示例。 但是，在更改 DSL 定义后，它将不起作用。 @No__t_0 项目包含：
+- `UI` 项目包含绑定到 DSL 的窗体控件的工作示例。 但是，在更改 DSL 定义后，它将不起作用。 `UI` 项目包含：
 
-  - 名为 `ModelViewControl` Windows 窗体类。
+  - 名为 `ModelViewControl`Windows 窗体类。
 
-  - 一个名为 `DataBinding.cs` 的文件，其中包含 `ModelViewControl` 的其他部分定义。 若要查看其内容，请在**解决方案资源管理器**中打开该文件的快捷菜单，然后选择 "**查看代码**"。
+  - 一个名为 `DataBinding.cs` 的文件，其中包含 `ModelViewControl`的其他部分定义。 若要查看其内容，请在**解决方案资源管理器**中打开该文件的快捷菜单，然后选择 "**查看代码**"。
 
 ### <a name="about-the-ui-project"></a>关于 UI 项目
 
-当你更新 DSL 定义文件以定义你自己的 DSL 时，必须更新 `UI` 项目中的控件以显示你的 DSL。 与 `Dsl` 和 `DslPackage` 项目不同，示例 `UI` 项目不是从 `DslDefinitionl.dsl` 生成的。 如果需要，你可以添加 tt 文件以生成代码，但本演练中并未涉及到。
+当你更新 DSL 定义文件以定义你自己的 DSL 时，必须更新 `UI` 项目中的控件以显示你的 DSL。 与 `Dsl` 和 `DslPackage` 项目不同，示例 `UI` 项目不是从 `DslDefinitionl.dsl`生成的。 如果需要，你可以添加 tt 文件以生成代码，但本演练中并未涉及到。
 
 ## <a name="update-the-dsl-definition"></a>更新 DSL 定义
 
@@ -86,7 +86,7 @@ ms.locfileid: "72654111"
 
 4. 使用**指定的域类**工具创建以下域类：
 
-    - `Field`-为此添加一个名为 `Size` 的其他域属性。
+    - `Field`-为此添加一个名为 `Size`的其他域属性。
 
     - `Animal`-在属性窗口中，将**继承修饰符**设置为**Abstract**。
 
@@ -96,9 +96,9 @@ ms.locfileid: "72654111"
 
     - `Goat`
 
-6. 使用**继承**工具可以从 `Animal` 继承 `Goat` 和 `Sheep`。
+6. 使用**继承**工具可以从 `Animal`继承 `Goat` 和 `Sheep`。
 
-7. 使用**嵌入**工具嵌入 `Farm` 下的 `Field` 和 `Animal`。
+7. 使用**嵌入**工具嵌入 `Farm`下的 `Field` 和 `Animal`。
 
 8. 您可能想要整理关系图。 若要减少重复元素的数目，请使用叶元素的快捷菜单上的 "将**子树置于此处**" 命令。
 
@@ -174,7 +174,7 @@ ms.locfileid: "72654111"
 
 - 它可确保在用户选择某一行时，属性窗口显示相应模型元素的属性，而不是显示数据网格行。
 
-  数据源和视图之间 ![DslWpf4 ](../modeling/media/dslwpf4.png) 的链接架构。
+  ![DslWpf4](../modeling/media/dslwpf4.png) 数据源和视图之间的链接架构。
 
 ### <a name="complete-the-bindings-to-the-dsl"></a>完成到 DSL 的绑定
 
@@ -321,7 +321,7 @@ private void NewSheepButton_Click(object sender, EventArgs e)
 
 因此，我们建议使用 <xref:Microsoft.VisualStudio.Modeling.ElementOperations> 来创建新元素。 有关详细信息，请参阅[自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)
 - [编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)

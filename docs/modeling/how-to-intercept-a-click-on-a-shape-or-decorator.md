@@ -4,23 +4,23 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1443cacd6d2e7c8f980e0bf423832d9b013e560f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f4923a858d9d46c477f50df2a08440a10e9309ef
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748384"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114518"
 ---
 # <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>如何：截获对形状或修饰器的单击
 下面的过程演示如何截获单击形状或图标修饰器的方法。 您可以截获单击、双击、拖动和其他笔势，并使元素响应。
 
 ## <a name="to-intercept-clicks-on-shapes"></a>若要截获单击形状
- 在 Dsl 项目中，在与生成的代码文件分离的代码文件中，为 shape 类编写分部类定义。 重写 `OnDoubleClick()` 或名称以 `On...` 开头的其他方法之一。 例如:
+ 在 Dsl 项目中，在与生成的代码文件分离的代码文件中，为 shape 类编写分部类定义。 重写 `OnDoubleClick()` 或名称以 `On...`开头的其他方法之一。 例如：
 
 ```csharp
 public partial class MyShape // change
@@ -133,7 +133,7 @@ public partial class MyShape // change
 
 - 创建每个隔离舱实例时会附加一组鼠标事件处理程序。
 
-- @No__t_0 事件存储当前项。
+- `ClassShape.MouseDown` 事件存储当前项。
 
 - 当鼠标移出当前项时，将创建一个 MouseAction 实例，该实例将设置光标并捕获鼠标，直到它被释放。
 
@@ -393,7 +393,7 @@ namespace Company.CompartmentDrag
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [响应并传播更改](../modeling/responding-to-and-propagating-changes.md)
 - [修饰器的属性](../modeling/properties-of-decorators.md)

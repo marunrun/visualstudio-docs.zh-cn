@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain properties
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: def432c5c2861716b4b3fb6e2f93f20a93a54a28
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 52915f0bac2bd172daf909541ecfa86396d90a5d
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748535"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115196"
 ---
 # <a name="calculated-and-custom-storage-properties"></a>计算的和自定义的存储属性
 域特定语言（DSL）中的所有域属性都可以在关系图和语言浏览器中显示给用户，并可通过程序代码进行访问。 但是，属性的值存储方式有所不同。
@@ -25,8 +25,8 @@ ms.locfileid: "72748535"
 |域属性类型|描述|
 |-|-|
 |**标准**（默认值）|保存在*存储区*中并序列化为文件的域属性。|
-|**所得**|只读域属性，该属性不保存在存储区中，而是从其他值计算而来的。<br /><br /> 例如，可以从 `Person.BirthDate` 计算 `Person.Age`。<br /><br /> 您必须提供执行计算的代码。 通常，您需要计算其他域属性的值。 不过，您也可以使用外部资源。|
-|**自定义存储**|不会直接保存在存储区中，而是可以获取和设置的域属性。<br /><br /> 您必须提供获取和设置值的方法。<br /><br /> 例如，可以将 `Person.FullAddress` 存储在 `Person.StreetAddress`、`Person.City` 和 `Person.PostalCode` 中。<br /><br /> 您还可以访问外部资源，例如从数据库中获取和设置值。<br /><br /> 如果 `Store.InUndoRedoOrRollback` 为 true，则代码不应在存储中设置值。 请参阅[事务和自定义资源库](#setters)。|
+|**所得**|只读域属性，该属性不保存在存储区中，而是从其他值计算而来的。<br /><br /> 例如，可以从 `Person.BirthDate`计算 `Person.Age`。<br /><br /> 您必须提供执行计算的代码。 通常，您需要计算其他域属性的值。 不过，您也可以使用外部资源。|
+|**自定义存储**|不会直接保存在存储区中，而是可以获取和设置的域属性。<br /><br /> 您必须提供获取和设置值的方法。<br /><br /> 例如，可以将 `Person.FullAddress` 存储在 `Person.StreetAddress`、`Person.City`和 `Person.PostalCode`中。<br /><br /> 您还可以访问外部资源，例如从数据库中获取和设置值。<br /><br /> 如果 `Store.InUndoRedoOrRollback` 为 true，则代码不应在存储中设置值。 请参阅[事务和自定义资源库](#setters)。|
 
 ## <a name="providing-the-code-for-a-calculated-or-custom-storage-property"></a>为计算的或自定义的存储属性提供代码
  如果将域属性的种类设置为 "计算" 或 "自定义存储"，则必须提供访问方法。 生成解决方案时，错误报告会告诉您需要什么。
@@ -52,7 +52,7 @@ ms.locfileid: "72748535"
     > [!NOTE]
     > 此文件是从 Dsldefinition.dsl 生成的。 如果编辑此文件，则下次单击 "**转换所有模板**" 时，所做的更改将丢失。 相反，请在单独的文件中添加所需的方法。
 
-6. 在单独的文件夹中创建或打开一个类文件，例如 CustomCode \\*YourDomainClass*。
+6. 在单独的文件夹中创建或打开一个类文件，例如 CustomCode\\*YourDomainClass*。
 
      确保命名空间与生成的代码中的命名空间相同。
 
@@ -66,7 +66,7 @@ ms.locfileid: "72748535"
     }  }
     ```
 
-8. 如果将**种类**设置为 "**自定义存储**"，则还必须提供 `Set` 方法。 例如:
+8. 如果将**种类**设置为 "**自定义存储**"，则还必须提供 `Set` 方法。 例如：
 
     ```
     void SetAgeValue(int value)
@@ -90,7 +90,7 @@ ms.locfileid: "72748535"
 
 - 但是，它应该更新任何外部资源（如数据库或文件内容）或存储区之外的对象。 这将确保它们与存储区中的值保持 synchronism。
 
-  例如:
+  例如：
 
 ```
 void SetAgeValue(int value)
@@ -107,7 +107,7 @@ void SetAgeValue(int value)
 
  有关事务的详细信息，请参阅[在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [域属性的属性](../modeling/properties-of-domain-properties.md)

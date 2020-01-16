@@ -3,17 +3,17 @@ title: 调试时无法修改设计器
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 487dafe4-d57c-4be1-9e3a-bb0a8699b2fa
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 77034b422f710bd6e7811679f35024b543a91558
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1667277e4f833ddcd6c2b2e077898ae5c76aada4
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648159"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76113570"
 ---
 # <a name="the-designer-cannot-be-modified-while-debugging"></a>调试时无法修改设计器
 
@@ -21,6 +21,6 @@ ms.locfileid: "72648159"
 
 若要更正此错误，请在 "**调试**" 菜单中选择 "**停止调试**"。 应用程序停止调试，你可以在**O/R 设计器**中修改项。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

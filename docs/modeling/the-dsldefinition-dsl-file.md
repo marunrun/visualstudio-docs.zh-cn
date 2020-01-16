@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - Domain-Specific Language, definition file
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99145768ef4e0c37f729477ee598628a3b8d0e9a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 97736dd9893f3a5d0c07f464ae75849395270d4b
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605989"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114917"
 ---
 # <a name="the-dsldefinitiondsl-file"></a>DslDefinition.dsl 文件
 
@@ -26,9 +26,9 @@ ms.locfileid: "72605989"
 
 ## <a name="sections-of-the-dsldefinitiondsl-file"></a>DslDefinition.dsl 文件的各个部分
 
-根元素 \<Dsl >，其属性标识域特定语言的名称、命名空间以及用于版本控制的主版本号和次版本号。 `DslDefinitionModel` 架构将定义有效 DslDefinition.dsl 文件的内容和结构。
+根元素是 \<Dsl >，其属性标识域特定语言的名称、命名空间以及用于版本控制的主版本号和次版本号。 `DslDefinitionModel` 架构将定义有效 DslDefinition.dsl 文件的内容和结构。
 
-@No__t_0Dsl > root 元素的子元素如下所示：
+\<Dsl > root 元素的子元素如下所示：
 
 ### <a name="classes"></a>类
 
@@ -40,7 +40,7 @@ ms.locfileid: "72605989"
 
 ### <a name="types"></a>类型
 
-本部分将定义每个类型及其命名空间。 域属性具有两种类型。 `DomainEnumerations` 在模型中定义并将各个类型生成到 DomainModel.cs 中。 `ExternalTypes` 是指在其他位置定义的类型（例如 `String` 或 `Int32`），不会生成任何内容。
+本部分将定义每个类型及其命名空间。 域属性具有两种类型。 `DomainEnumerations` 在模型中定义，并在 DomainModel.cs 中生成类型。 `ExternalTypes` 引用在其他位置定义的类型（如 `String` 或 `Int32`），并且不生成任何内容。
 
 ### <a name="shapes"></a>形状
 
@@ -62,7 +62,7 @@ ms.locfileid: "72605989"
 
 本部分将定义每个连接符工具的连接生成器（用于在任意两个可以连接的类之间建立链接的工具）。 本部分将确定你是否可以连接源类和目标类。
 
-### <a name="diagram"></a>关系图
+### <a name="diagram"></a>图示
 
 本部分将定义一个关系图，你可以使用它来指定背景色和根类等属性。 （根类是由整个关系图表示的域类。）"关系图" 部分还包含 ShapeMap 和 ConnectorMap 元素，这些元素指定代表每个域类或关系的形状或连接符。
 
@@ -148,7 +148,7 @@ ms.locfileid: "72605989"
 </DomainClass>
 ```
 
-`NamedElement` 是其他几个类（如 `Component`）的基类；对于该基类，除了继承自 `Name` 的 `NamedElement` 属性外，它还具有自己的属性。 BaseClass 子节点包含名字对象引用。 由于引用的类位于同一命名空间中，因此名字对象中仅需要其名称：
+`NamedElement` 是多个其他类（如 `Component`）的基，它们除了 `Name` 属性之外，还具有其自己的属性，它从 `NamedElement`继承。 BaseClass 子节点包含名字对象引用。 由于引用的类位于同一命名空间中，因此名字对象中仅需要其名称：
 
 ```xml
 <DomainClass Name="Component" Namespace="Fabrikam.CmptDsl5"              DisplayName="Component">
@@ -168,13 +168,13 @@ ms.locfileid: "72605989"
 
 - **Id。** 此属性是一个 GUID。 如果文件中未提供值，则域特定语言设计器将创建一个值。 （在本文档的插图中，通常忽略此特性以节省空间。）
 
-- **名称和命名空间。** 这些属性指定生成的代码中的类的名称和命名空间。 在域特定语言中它们必须都是唯一的。
+- **名称和命名空间。** 这些特性指定生成的代码中类的名称和命名空间。 在域特定语言中它们必须都是唯一的。
 
-- **InheritanceModifier.** 此属性为 "abstract"、"sealed" 或 none。
+- **InheritanceModifier.** 此特性是“抽象的”、“密封的”或两者都不是。
 
 - **DisplayName.** 此属性是在 "**属性**" 窗口中显示的名称。 DisplayName 特性可以包含空格和其他标点。
 
-- **GeneratesDoubleDerived.** 如果将此特性设置为 true，则会生成两个类，其中一个类是另一个的子类。 所有生成的方法都位于基类中，而构造函数位于子类中。 通过设置此特性，你可以在自定义代码中重写任何生成的方法。
+- **GeneratesDoubleDerived.** 如果将此特性设置为 true，则将生成两个类并且其中一个是另一个的子类。 所有生成的方法都位于基类中，而构造函数位于子类中。 通过设置此特性，你可以在自定义代码中重写任何生成的方法。
 
 - **HasCustomConstructor**。 如果将此特性设置为 true，则从生成的代码中忽略构造函数，以便你可以编写自己的版本。
 
@@ -182,7 +182,7 @@ ms.locfileid: "72605989"
 
 - **BaseClass**。 如果指定基类，它必须属于同一类型。 例如，域类必须具有另一个域类作为其基类，而隔离舱形状也必须具有一个隔离舱形状。 如果没有指定基类，则生成的代码中的类派生自标准框架类。 例如，域类派生自 `ModelElement`。
 
-- **Properties**。 此特性包含在事务控制下维护的且在保存模型时保留的属性。
+- **属性**。 此特性包含在事务控制下维护的且在保存模型时保留的属性。
 
 - **ElementMergeDirectives**。 每个元素合并指令都可以控制将其他类的不同实例添加到父类的实例的方式。 你可以在本主题后面找到有关元素合并指令的详细信息。
 
@@ -212,7 +212,7 @@ ms.locfileid: "72605989"
 
 - **IsElementName**。 如果将此特性设置为 true，则其值会在创建父类的实例时自动设置为唯一值。 仅针对每个类中的一个属性（必须具有字符串类型），将此特性设置为 true。 在组件图示例中，`Name` 中的 `NamedElement` 属性已将 `IsElementName` 设置为 true。 只要用户创建 `Component` 元素（派生自 `NamedElement`），该名称就会自动初始化为类似于“Component6”的名称。
 
-- `DefaultValue` 如果已指定此特性，则指定的值将分配给此类的新实例的特性。 如果设置 `IsElementName`，则 DefaultValue 特性将指定新字符串的初始部分。
+- `DefaultValue`。 如果已指定此特性，则指定的值将分配给此类的新实例的特性。 如果设置 `IsElementName`，则 DefaultValue 特性将指定新字符串的初始部分。
 
 - **Category**是属性将显示在 "**属性**" 窗口中的标头。
 
@@ -465,7 +465,7 @@ ComponentModel（语言的根类）具有适用于组件和注释的元素合并
 
 （连接关系具有其自己的 XML 类数据，该数据提供了此关系的元素和特性名称。）
 
-如果将**OmitElement**特性设置为 true，则将忽略关系角色名称，这会缩写序列化文件，如果两个类不具有多个关系，则不明确。 例如:
+如果将**OmitElement**特性设置为 true，则将忽略关系角色名称，这会缩写序列化文件，如果两个类不具有多个关系，则不明确。 例如：
 
 ```xml
 <component name="Component3">
@@ -498,7 +498,7 @@ DslDefinition.dsl 文件本身就是一个序列化文件并且符合域特定�
       <XmlClassData ...>...</XmlClassData>
 ```
 
-- ConnectorHasDecorators 是 `Connector` 和 `Decorator` 之间的嵌入关系。 已对 `UseFullForm` 进行设置，以便关系名称与连接符对象中的每个链接的关系属性列表一同显示。 但是，还对 `OmitElement` 进行了设置，以便 `RoleElementName` 没有包含嵌入在 `Connector` 内的多个链接：
+- ConnectorHasDecorators 是 `Connector` 和 `Decorator` 之间的嵌入关系。 已将 `UseFullForm` 设置为，使关系的名称与连接器对象中每个链接的属性列表一起显示。 但是，还对 `OmitElement` 进行了设置，以便 `RoleElementName` 没有包含嵌入在 `Connector` 内的多个链接：
 
 ```xml
 <Connector Name="AssociationLink" ...>
@@ -577,7 +577,7 @@ ComponentHasPorts . Component / ! Component /    ComponentModelHasComponents . C
 
 连接符映射还可以包含修饰器映射。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [域特定语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
 - [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)
