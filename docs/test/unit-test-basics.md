@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e78b021e41caf584a74172cbdf00135e525df265
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 77ac5ffd14f97fd6fdd753327fe193ceb80ea57e
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590496"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846934"
 ---
 # <a name="unit-test-basics"></a>单元测试基础知识
 
@@ -91,13 +91,16 @@ public void Withdraw(double amount)
 
    ::: moniker range="vs-2017"
    ![从编辑器窗口查看上下文菜单](../test/media/createunittestsrightclick.png)
-   ::: moniker-end
-   ::: moniker range=">=vs-2019"
-   ![从编辑器窗口查看上下文菜单](../test/media/vs-2019/basics-create-unit-tests.png)
-   ::: moniker-end
 
    > [!NOTE]
    > “创建单元测试”菜单命令仅适用于面向 .NET Framework（但不是 .NET Core）的托管代码  。
+   ::: moniker-end
+   ::: moniker range=">=vs-2019"
+   ![从编辑器窗口查看上下文菜单](../test/media/vs-2019/basics-create-unit-tests.png)
+
+   > [!NOTE]
+   > “创建单元测试”菜单命令仅适用于托管代码  。
+   ::: moniker-end
 
 2. 单击“确定”接受默认值以创建单元测试，或更改用于创建并命名单元测试项目和单元测试的值  。 你可以选择默认添加到单元测试方法的代码。
 
