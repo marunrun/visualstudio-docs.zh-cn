@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
 - Domain-Specific Language, events
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f35c94004a76e5671585969686798c38e5f750e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 76234eea6c689459728e0da876b6a9cce7c290a5
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747564"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114602"
 ---
 # <a name="event-handlers-propagate-changes-outside-the-model"></a>事件处理程序在模型外部传播更改
 
@@ -25,7 +25,7 @@ ms.locfileid: "72747564"
 
 ### <a name="to-define-a-store-event"></a>定义存储事件
 
-1. 选择要监视的事件类型。 有关完整列表，请查看 <xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory> 的属性。 每个属性都对应于一种事件类型。 最常使用的事件类型包括：
+1. 选择要监视的事件类型。 有关完整列表，请查看 <xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory>的属性。 每个属性都对应于一种事件类型。 最常使用的事件类型包括：
 
     - `ElementAdded`-创建模型元素、关系链接、形状或连接符时触发。
 
@@ -90,7 +90,7 @@ namespace Company.MusicLib
 
 ## <a name="use-events-to-make-undoable-adjustments-in-the-store"></a>使用事件在存储中进行可撤消的调整
 
-存储事件通常不用于传播存储区中的更改，因为在提交事务后，事件处理程序会执行。 相反，应使用存储规则。 有关详细信息，请参阅[规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)。
+存储事件通常不用于传播存储区中的更改，因为在提交事务后，事件处理程序会执行。 相反，应使用存储规则。 有关详细信息，请参阅[规则将传播的更改中的模式](../modeling/rules-propagate-changes-within-the-model.md)。
 
 但是，如果您希望用户能够从原始事件中单独撤消其他更新，则可以使用事件处理程序对存储区进行其他更新。 例如，假设小写字符是唱片集标题的常见约定。 您可以编写一个存储事件处理程序，用于在用户键入大写后将标题更正为小写。 但是，用户可以使用 "撤消" 命令取消您的更正，同时还原大写字符。 第二次撤消会删除用户的更改。
 
@@ -184,7 +184,7 @@ private static void AlbumTitleAdjuster(object sender,
 |TransactionCommitted||
 |TransactionRolledBack||
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [响应并传播更改](../modeling/responding-to-and-propagating-changes.md)
 - [示例代码：线路图](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - TableAdapters, n-tier applications
 - n-tier applications, extending TableAdapters
 ms.assetid: dafac00e-df9d-4d4a-95a6-e34b4d099425
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 246ba595cf1da7e4713e0ddc03ea015eeb61eb64
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e5d240726030a3a08d184b3015f56f65d9168e9f
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648933"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76113329"
 ---
 # <a name="add-code-to-tableadapters-in-n-tier-applications"></a>向 n 层应用程序中的 TableAdapter 添加代码
 可以通过为 TableAdapter 创建分部类文件并向其添加代码来扩展 TableAdapter 的功能（而不是将代码添加到*DatasetName*文件）。 分部类使特定类的代码可以在多个物理文件之间进行分隔。 有关详细信息，请参阅[partial](/dotnet/visual-basic/language-reference/modifiers/partial)或[partial （类型）](/dotnet/csharp/language-reference/keywords/partial-type)。
@@ -48,7 +48,7 @@ ms.locfileid: "72648933"
 
 4. 将代码添加到分部类声明中。
 
-5. 下面的示例演示如何将代码添加到 `NorthwindDataSet` 中的 `CustomersTableAdapter`：
+5. 下面的示例演示如何将代码添加到 `NorthwindDataSet`中的 `CustomersTableAdapter`：
 
     ```vb
     Partial Public Class CustomersTableAdapter
@@ -65,7 +65,7 @@ ms.locfileid: "72648933"
     }
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [N 层数据应用程序概述](../data-tools/n-tier-data-applications-overview.md)
 - [向 N 层应用程序的数据集添加代码](../data-tools/add-code-to-datasets-in-n-tier-applications.md)

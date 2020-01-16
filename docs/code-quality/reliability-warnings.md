@@ -9,17 +9,17 @@ helpviewer_keywords:
 - reliability warnings
 - managed code analysis warnings, reliability warnings
 ms.assetid: 77886846-10a2-4585-968a-7eb60ebe07e8
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 602f372e11c4a9a8506186535958fc4f22da7806
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e936222a95681796f5c5ca423d122995e1ea5f79
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649120"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76113252"
 ---
 # <a name="reliability-warnings"></a>可靠性警告
 
@@ -33,4 +33,4 @@ ms.locfileid: "72649120"
 |[CA2003：不要将纤程视为线程](../code-quality/ca2003.md)|托管线程被视为 Win32 线程。|
 |[CA2004：移除对 GC.KeepAlive 的调用](../code-quality/ca2004.md)|如果要转换到 SafeHandle 使用情况，请删除对 GC 的所有调用。KeepAlive （object）。 在这种情况下，类不必调用 GC。KeepAlive，假设它们没有终结器，但依赖于 SafeHandle 来完成它们的操作系统句柄。|
 |[CA2006：使用 SafeHandle 封装本机资源](../code-quality/ca2006.md)|在托管代码中使用 IntPtr 可能意味着潜在的安全性和可靠性方面的问题。 必须检查所有使用 IntPtr 之处，以确定是否需要在该处使用 SafeHandle 或类似的技术。|
-|[CA2007：不直接等待任务](../code-quality/ca2007.md)|异步方法会直接[等待](/dotnet/csharp/language-reference/keywords/await)<xref:System.Threading.Tasks.Task>。|
+|[CA2007：不直接等待任务](../code-quality/ca2007.md)|异步方法会 直接[等待](/dotnet/csharp/language-reference/keywords/await) <xref:System.Threading.Tasks.Task>。|

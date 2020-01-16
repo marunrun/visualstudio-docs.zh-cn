@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, domain path
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 37255345c1d394130872dc65a8568309a3091347
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9d7ab5f080328338e40bed080ec8a4c7a85eabdb
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747580"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114636"
 ---
 # <a name="domain-path-syntax"></a>域路径语法
 DSL 定义使用类似 XPath 的语法在模型中查找特定元素。
@@ -23,7 +23,7 @@ DSL 定义使用类似 XPath 的语法在模型中查找特定元素。
 
  域路径采用以下形式：
 
- *RelationshipName/！职位*
+ *RelationshipName.PropertyName/!Role*
 
  ![CommentReferencesSubjects 引用关系](../modeling/media/dsl_reference.png)
 
@@ -35,6 +35,6 @@ DSL 定义使用类似 XPath 的语法在模型中查找特定元素。
 
  用于元素到链接跳跃的名称是角色的 `Property Name` 的值。 用于链接到元素跳跃的名称是目标角色名称。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [了解模型、类和关系](../modeling/understanding-models-classes-and-relationships.md)
