@@ -3,15 +3,15 @@ title: 使用 Docker Compose 与 ASP.NET Core 的多容器教程
 author: ghogen
 description: 了解如何将多个容器与 Docker Compose 配合使用
 ms.author: ghogen
-ms.date: 02/21/2019
+ms.date: 01/10/2020
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 298ac91a7e7cf89f7723a3fd8bb3e8056da798ba
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: 5d6b867c2f237f20747628533af055e5c4900ceb
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75399758"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916513"
 ---
 # <a name="tutorial-create-a-multi-container-app-with-docker-compose"></a>教程：使用 Docker Compose 创建多容器应用
 
@@ -98,7 +98,7 @@ ms.locfileid: "75399758"
     
       <div class="text-center">
           <h1 class="display-4">Welcome</h1>
-          <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+          <p>Learn about <a href="/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
           <p>@ViewData["Message"]</p>
       </div>
       ```
@@ -114,7 +114,7 @@ ms.locfileid: "75399758"
         }
       ```
 
-    使用 .NET Core 3.1 则不需要执行此操作，因为你可以使用已存在的 WeatherForecast API。 但是，你需要在 Startup.cs  的 `Configure` 方法中注释掉对 `UseHttpsRedirections` 的调用，因为此代码使用 HTTP 而不是 HTTPS 来调用 Web API。
+    使用 .NET Core 3.1 则不需要执行此操作，因为你可以使用已存在的 WeatherForecast API。 但是，你需要在 Startup.cs 的 `Configure` 方法中注释掉对 <xref:Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions.UseHttpsRedirection*> 的调用，因为此代码使用 HTTP 而不是 HTTPS 来调用 Web API  。
 
     ```csharp
                 //app.UseHttpsRedirection();
