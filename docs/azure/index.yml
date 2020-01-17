@@ -71,8 +71,14 @@ landingContent:
             url: /azure/key-vault/vs-key-vault-add-connected-service
           - text: Azure Active Directory
             url: /azure/active-directory/develop/vs-active-directory-add-connected-service
-          - text: 认知服务
-            url: /visualstudio/azure/cognitive-services-connected-services
+          - text: 认知服务 - 文本分析
+            url: /azure/cognitive-services/text-analytics/vs-text-connected-service
+          - text: 认知服务 - 必应新闻搜索
+            url: /azure/cognitive-services/bing-news-search/vs-bing-news-search-connected-service
+          - text: 认知服务 - 人脸 API
+            url: /azure/cognitive-services/face/vs-face-connected-service
+          - text: 认知服务 - 计算机视觉
+            url: /azure/cognitive-services/computer-vision/vs-computer-vision-connected-service
   - title: Azure 云服务
     linkLists:
       - linkListType: how-to-guide
