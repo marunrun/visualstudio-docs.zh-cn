@@ -8,20 +8,20 @@ manager: jillfra
 ms.technology: vs-azure
 ms.workload:
 - azure
-ms.openlocfilehash: 8b6aef437519a4fe92f11a3b21546b3dda9981bb
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: f5868f97301eba62d16ea68cdaa0c97c8e20edd1
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188768"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916948"
 ---
 # <a name="get-started-with-visual-studio-kubernetes-tools"></a>Visual Studio Kubernetes 工具入门
 
 Visual Studio Kubernetes 工具有助于简化面向 Kubernetes 的容器化应用程序的开发。 Visual Studio 可以自动创建支持 Kubernetes 部署所需的配置即代码文件，如 Dockerfile 和 Helm 图表。 可使用 Azure Dev Spaces 在实时 Azure Kubernetes 服务 (AKS) 群集中调试代码，或从 Visual Studio 内部直接发布到 AKS 群集。
 
-本教程介绍如何使用 Visual Studio 将 Kubernetes 支持添加到项目并将其发布到 AKS。 如果主要需求是使用 [Azure Dev Spaces](https://aka.ms/get-azds) 来调试和测试 AKS 中运行的项目，则可以改为转到 [Azure Dev Spaces 教程](/azure/dev-spaces/get-started-netcore-visualstudio)。
+本教程介绍如何使用 Visual Studio 将 Kubernetes 支持添加到项目并将其发布到 AKS。 如果主要需求是使用 [Azure Dev Spaces](/azure/dev-spaces/) 来调试和测试 AKS 中运行的项目，则可以改为转到 [Azure Dev Spaces 教程](/azure/dev-spaces/get-started-netcore-visualstudio)。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 若要利用此新的功能，将需要以下各项：
 
@@ -30,7 +30,7 @@ Visual Studio Kubernetes 工具有助于简化面向 Kubernetes 的容器化应�
 - [适用于 Visual Studio的 Kubernetes 工具](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vs-tools-for-kubernetes)，可作为单独的下载提供。
 ::: moniker-end
 ::: moniker range="vs-2019"
-- 带有 ASP.NET 和 Web 开发  工作负荷的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)。
+- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) 与“ASP.NET 和 Web 开发”工作负载  。
 ::: moniker-end
 - 在开发工作站（即运行 Visual Studio 的位置）上安装的 [Docker Desktop](https://store.docker.com/editions/community/docker-ce-desktop-windows)，如果要生成 Docker 映像，请调试本地运行的 Docker 容器，或发布到 AKS。 （使用 Azure Dev Spaces 在 AKS 中生成和调试 Docker 容器时不需要 Docker  。）
 ::: moniker range="vs-2017"
@@ -121,13 +121,13 @@ Visual Studio Kubernetes 工具有助于简化面向 Kubernetes 的容器化应�
 
 - Helm 图表，及 charts 文件夹  。 这些 yaml 文件构成应用程序的 Helm 图表，可用于将其部署到 Kubernetes。 有关 Helm 的详细信息，请参阅 [https://www.helm.sh](https://www.helm.sh)。
 
-- azds.yaml  . 这包含 Azure Dev Spaces 的设置，可在 Azure Kubernetes 服务中提供快速的迭代调试体验。 有关详细信息，请参阅 [Azure Dev Spaces 文档](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)。
+- azds.yaml  . 这包含 Azure Dev Spaces 的设置，可在 Azure Kubernetes 服务中提供快速的迭代调试体验。 有关详细信息，请参阅 [Azure Dev Spaces 文档](/azure/dev-spaces/azure-dev-spaces)。
 
 ::: moniker range="vs-2017"
 
 ## <a name="publish-to-azure-kubernetes-service-aks"></a>发布到 Azure Kubernetes 服务 (AKS)
 
-所有这些文件都准备就绪后，如往常一样，可使用 Visual Studio IDE 来编写和调试应用程序代码。 还可使用 [Azure Dev Spaces](https://aka.ms/get-azds) 来快速地运行和调试 AKS 群集中实时运行的代码。 有关详细信息，请参阅 [Azure Dev Spaces 教程](https://docs.microsoft.com/azure/dev-spaces/get-started-netcore-visualstudio)
+所有这些文件都准备就绪后，如往常一样，可使用 Visual Studio IDE 来编写和调试应用程序代码。 还可使用 [Azure Dev Spaces](/azure/dev-spaces/) 来快速地运行和调试 AKS 群集中实时运行的代码。 有关详细信息，请参阅 [Azure Dev Spaces 教程](/azure/dev-spaces/get-started-netcore-visualstudio)
 
 使用所需方式运行代码后，可直接从 Visual Studio 发布到 AKS 群集。
 
@@ -171,4 +171,4 @@ Visual Studio Kubernetes 工具有助于简化面向 Kubernetes 的容器化应�
 
 阅读 [AKS 文档](/azure/aks)，深入了解如何在 Azure 上进行 Kubernetes 开发。
 
-阅读 [Azure Dev Spaces 文档](https://aka.ms/get-azds)，深入了解 Azure Dev Spaces
+阅读 [Azure Dev Spaces 文档](/azure/dev-spaces/)，深入了解 Azure Dev Spaces

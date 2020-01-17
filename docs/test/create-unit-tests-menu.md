@@ -9,19 +9,25 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c562d6f750db7096e37b863c46d6330eb484912
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3eb001d2022bb57981f21fd99c051c54aeb08301
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588819"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844320"
 ---
 # <a name="create-unit-test-method-stubs-with-the-create-unit-tests-command"></a>使用“创建单元测试”命令创建单元测试方法存根
 
 “创建单元测试”命令创建单元测试方法存根  。 借助此功能，可以轻松地配置测试项目、测试类和其中的测试方法存根。
 
+::: moniker range="vs-2017"
 > [!NOTE]
 > “创建单元测试”菜单命令仅适用于面向 .NET Framework（但不是 .NET Core）的托管代码  。
+::: moniker-end
+::: moniker range=">=vs-2019"
+> [!NOTE]
+> “创建单元测试”菜单命令仅适用于托管代码  。
+::: moniker-end
 
 “创建单元测试”菜单命令可扩展，并可用于为 MSTest、MSTest V2、NUnit 和 xUnit 生成测试  。
 

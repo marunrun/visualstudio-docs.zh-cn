@@ -10,12 +10,12 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 39be02226a46aaa95742caa760e94fe6be4efdf4
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 5a0595fdf7331c8b2825c6092b5b29a19974887b
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253043"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916572"
 ---
 # <a name="use-visual-studio-tools-for-unity"></a>使用 Visual Studio Tools for Unity
 
@@ -83,7 +83,7 @@ MonoBehavior 向导可用于查看所有 Unity API 方法的列表，并快速�
 
 6. 选择“确定”  按钮退出向导，并将方法插入代码中。
 
-   ![Monobehavior 向导对话框。](../cross-platform/media/vstu_monobehavior_wizard_full.png "vstu_monobehavior_wizard_full")
+   ![MonoBehavior 向导对话框。](../cross-platform/media/vstu_monobehavior_wizard_full.png "vstu_monobehavior_wizard_full")
 
 ## <a name="unity-project-explorer"></a>Unity 项目资源管理器
 
@@ -145,7 +145,7 @@ Visual Studio Tools for Unity 让你可以使用 Visual Studio 功能强大的�
 
 2. 在“版本设置”窗口中，标记“开发版本”  和“脚本调试”  复选框。
 
-   ![配置 Unity 生成设置进行调试。](../cross-platform/media/vstu_debugging_build_settings.png "vstu_debugging_build_settings")
+   ![配置 Unity 生成设置以进行调试。](../cross-platform/media/vstu_debugging_build_settings.png "vstu_debugging_build_settings")
 
 #### <a name="select-a-unity-instance-to-attach-the-debugger-to"></a>选择要附加调试器的 Unity 实例
 
@@ -155,9 +155,9 @@ Visual Studio Tools for Unity 让你可以使用 Visual Studio 功能强大的�
 
    “选择 Unity 实例”  对话框将显示有关每个可以连接的 Unity 实例的信息。
 
-   ![选择要连接到的 Unity 实例。](../cross-platform/media/vstu_attach-debugger.png "vstu_connection_to_unity")
+   ![选择要连接的 Unity 实例。](../cross-platform/media/vstu_attach-debugger.png "vstu_connection_to_unity")
 
-   **项目**
+   **Project**
 
    在此 Unity 实例中运行的 Unity 项目的名称。
 
@@ -183,7 +183,7 @@ Visual Studio Tools for Unity 让你可以使用 Visual Studio 功能强大的�
 
 1. 将现有的 DLL 项目添加到由 Visual Studio Tools for Unity 生成的 Visual Studio 解决方案中。 不太常见的情况是：你可能会启动一个新的托管 DLL 项目，以便在 Unity 项目中包含代码组件；如果是这种情况，则可将新的托管 DLL 项目添加到 Visual Studio 解决方案。 有关向解决方案添加新项目或现有项目的详细信息，请参阅[如何：向解决方案添加项目](https://msdn.microsoft.com/library/ff460187.aspx)。
 
-   ![将现有的 DLL 项目添加到解决方案。](../cross-platform/media/vstu_debugging_dll_add_existing.png "vstu_debugging_dll_add_existing")
+   ![将现有 DLL 项目添加到解决方案。](../cross-platform/media/vstu_debugging_dll_add_existing.png "vstu_debugging_dll_add_existing")
 
    在任一情况下，Visual Studio Tools for Unity 均将维护项目引用，即使不得不再次重新生成项目和解决方案文件，所以你只需要执行一次这些步骤。
 
@@ -202,7 +202,7 @@ Visual Studio Tools for Unity 让你可以使用 Visual Studio 功能强大的�
 
    需要调试 PDB 文件（因为它们包含 DLL 的调试符号），并将 DLL 代码映射到其源代码形式。 如果面向旧版运行时，Visual Studio Tools for Unity 将使用来自 DLL 和 PDB 的信息来创建一个 DLL.MDB 文件，此文件是旧版 Unity 脚本引擎所使用的调试符号格式。 如果面向新版运行时并使用可移植 PDB，Visual Studio Tools for Unity 将不会尝试执行任何符号转换，因为新版 Unity 运行时能够在本机使用可移植 PDB。
 
-   有关 PDB 生成的详细信息，请访问[此处](https://docs.microsoft.com/visualstudio/debugger/how-to-set-debug-and-release-configurations)。 如果面向新版运行时，请确保将“调试信息”设置为“可移植”，以便正确生成可移植 PDB。 如果面向旧版运行时，则需要使用“完整”。
+   有关 PDB 生成的详细信息，请访问[此处](/visualstudio/debugger/how-to-set-debug-and-release-configurations)。 如果面向新版运行时，请确保将“调试信息”设置为“可移植”，以便正确生成可移植 PDB。 如果面向旧版运行时，则需要使用“完整”。
 
 4. 调试代码。 现在可以同时调试 DLL 源代码以及 Unity 项目的源代码，并使用所有熟悉的调试功能，如断点和单步调试代码。
 

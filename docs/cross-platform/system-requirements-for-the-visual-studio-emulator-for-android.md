@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e5f7f21206953b8d99306a9b1da6935604c88b8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ee89472ba4773e3b8692b293118bea154504fb55
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62815457"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916811"
 ---
 # <a name="system-requirements-for-the-visual-studio-emulator-for-android"></a>适用于 Android 的 Visual Studio 仿真程序的系统要求
 
@@ -107,7 +107,7 @@ Windows 中的 Hyper-V 要求
 
 |需求|如何检查并实现此要求|
 |-----------------|----------------------------------------------|
-|必须安装 Hyper-V|按照用于 [为 Windows Phone 仿真程序启用 Hyper-V](https://docs.microsoft.com/previous-versions/windows/apps/jj863509(v=vs.105))相同说明操作。<br /><br /> 检查服务管理单元中的 **Hyper-V 虚拟机管理** 服务的状态。|
+|必须安装 Hyper-V|按照用于 [为 Windows Phone 仿真程序启用 Hyper-V](/previous-versions/windows/apps/jj863509(v=vs.105))相同说明操作。<br /><br /> 检查服务管理单元中的 **Hyper-V 虚拟机管理** 服务的状态。|
 |必须正在运行 Hyper-V。|有关管理服务的详细信息，请参阅以下主题：<br /><br /> -   [启动、停止、暂停、继续或重新启动服务](https://technet.microsoft.com/library/cc736564\(v=WS.10\).aspx)<br />-   [配置服务启动方式](https://technet.microsoft.com/%20library/cc739213\(v=ws.10\))|
 
  你需要成为本地 Hyper-V 管理员组的成员。
@@ -119,7 +119,7 @@ Windows 中的 Hyper-V 要求
 > [!IMPORTANT]
 > 加入该组后，注销或重启以使更改生效。
 
- ![加入 Hyper-V 管理员安全组](../cross-platform/media/android_emu_hyperv_admin.png "Android_Emu_HyperV_Admin")
+ ![加入 Hyper&#45;V 管理员安全组](../cross-platform/media/android_emu_hyperv_admin.png "Android_Emu_HyperV_Admin")
 
  要手动将自己添加到组中，请打开本地用户和组管理单元。
 
