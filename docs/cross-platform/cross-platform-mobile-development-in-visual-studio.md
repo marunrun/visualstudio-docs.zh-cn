@@ -10,12 +10,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d3df97bf8e180eae99e6ba27466fbde7a8466ad
-ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
+ms.openlocfilehash: 15c4d31c8cc835884f1093dc78083bbfa9448bc3
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72777769"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916877"
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Visual Studio 中的跨平台移动开发
 
@@ -168,6 +168,6 @@ ms.locfileid: "72777769"
 
 ## <a name="see-also"></a>请参阅
 
-- [向 Visual Studio 项目添加 Office 365 API](https://docs.microsoft.com/office/developer-program/office-365-developer-program)
+- [向 Visual Studio 项目添加 Office 365 API](/office/developer-program/office-365-developer-program)
 - [Azure App Service - 移动应用](https://azure.microsoft.com/services/app-service/mobile/)
-- [Visual Studio App Center](https://docs.microsoft.com/appcenter)
+- [Visual Studio App Center](/appcenter)

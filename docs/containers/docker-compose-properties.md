@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 08/12/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: c2f96bcc9df16b5de7d7f3ff485431352800d27e
-ms.sourcegitcommit: 9801fc66a14c0f855b9ff601fb981a9e5321819e
+ms.openlocfilehash: c528d1ca2d767b914bba2fd554699985c37d6ba1
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74072726"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916922"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose 生成属性
 
@@ -33,15 +33,15 @@ ms.locfileid: "74072726"
 
 下表显示了可用于 Docker Compose 项目的 MSBuild 属性。
 
-| 属性名称 | 位置 | 说明 | 默认值  |
+| 属性名称 | 位置 | 描述 | 默认值  |
 |---------------|----------|-------------|----------------|
-|AdditionalComposeFiles|dcproj|以分号分隔的列表指定要发送给 docker-compose.exe 供所有命令使用的其他撰写文件。 允许使用来自 docker-compose 项目文件 (dcproj) 的相对路径。|-|
-|DockerComposeBaseFilePath|dcproj|执行 docker-compose 文件的文件名的第一部分，不带 .yml 扩展名  。 例如: <br>1.DockerComposeBaseFilePath = null/未定义：使用基本文件路径 docker-compose，文件将命名为 docker-compose.yml 和 docker-compose.override.yml   <br>2. DockerComposeBaseFilePath = mydockercom：文件将命名为 mydockercompose.yml 和 mydockercompose.override.yml   <br> 3.DockerComposeBaseFilePath = ..\mydockercompose：文件将向上提升一级  。 |docker-compose|
+|AdditionalComposeFilePaths|dcproj|以分号分隔的列表指定要发送给 docker-compose.exe 供所有命令使用的其他撰写文件。 允许使用来自 docker-compose 项目文件 (dcproj) 的相对路径。|-|
+|DockerComposeBaseFilePath|dcproj|执行 docker-compose 文件的文件名的第一部分，不带 .yml 扩展名  。 例如： <br>1.DockerComposeBaseFilePath = null/未定义：使用基本文件路径 docker-compose，文件将命名为 docker-compose.yml 和 docker-compose.override.yml   <br>2. DockerComposeBaseFilePath = mydockercom：文件将命名为 mydockercompose.yml 和 mydockercompose.override.yml   <br> 3.DockerComposeBaseFilePath = ..\mydockercompose：文件将向上提升一级  。 |docker-compose|
 |DockerComposeBuildArguments|dcproj|指定要传递给 `docker-compose build` 命令的额外参数。 例如，`--parallel --pull` |
 |DockerComposeDownArguments|dcproj|指定要传递给 `docker-compose down` 命令的额外参数。 例如，`--timeout 500`|-|  
 |DockerComposeProjectPath|csproj 或 vbproj|Docker-compose 项目 (.dcproj) 文件的相对路径。 发布服务项目时设置此属性，以查找存储在 docker-compose.yml 文件中的关联映像生成设置。|-|
 |DockerComposeUpArguments|dcproj|指定要传递给 `docker-compose up` 命令的额外参数。 例如，`--timeout 500`|-|
-|DockerLaunchAction| dcproj | 指定要针对 F5 或 Ctrl+F5 执行的启动操作。  允许的值为 None、LaunchBrowser 和 LaunchWCFTestClient|无|
+|DockerLaunchAction| dcproj | 指定要针对 F5 或 Ctrl+F5 执行的启动操作。  允许的值为 None、LaunchBrowser 和 LaunchWCFTestClient|None|
 |DockerLaunchBrowser| dcproj | 指示是否启动浏览器。 如果指定了 DockerLaunchAction，则忽略。 | False |
 |DockerServiceName| dcproj|如果指定了 DockerLaunchAction 或 DockerLaunchBrowser，则 DockerServiceName 为应启动的服务名称。  使用此属性来确定将启动 docker-compose 文件可能引用的多个项目中的哪一个。|-|
 |DockerServiceUrl| dcproj | 启动浏览器时将使用的 URL。  有效的替换令牌为“{ServiceIPAddress}”、“{ServicePort}”和“{Scheme}”。  例如：{Scheme}://{ServiceIPAddress}:{ServicePort}|-|
@@ -103,7 +103,7 @@ services:
 
 如前面的示例所示，用双引号将这些值括起来，并在路径中使用反斜杠作为转义字符。
 
-|标签名称|说明|
+|标签名称|描述|
 |----------|-----------|
 |com.microsoft.visualstudio.debuggee.arguments|开始调试时传递给程序的参数。 对于 .NET Core 应用，这些参数通常是 NuGet 包的其他搜索路径，后面是指向项目输出程序集的路径。|
 |com.microsoft.visualstudio.debuggee.killprogram|此命令用于停止在容器中运行的调试对象程序（如有必要）。|

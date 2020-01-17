@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 09f3e5fed93cac3a251e4b7cdcaa988e63ff8741
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 1e87f35778b8aec615410312c0eb7373d4e9969f
+ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596263"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75775891"
 ---
 # <a name="developer-community-data-privacy"></a>开发人员社区数据隐私
 
@@ -81,7 +81,7 @@ ms.locfileid: "75596263"
   - 转储文件
 
 > [!NOTE]
-> 仅当你提供权限（即提交包含日志文件、屏幕截图和记录数据的问题报告）时，才会将日志文件、屏幕截图和记录数据发送给 Microsoft。 你可以在“报告问题”窗口的“摘要”步骤中查看哪些文件包含在内（请参阅本说明中的屏幕截图）。 收集的日志和文件存储在 %temp% 文件夹中，并在每次上传后定期清理。 如果你不想在问题报告中包含日志，请在提交报告之前从 %temp% 文件夹中删除该文件。
+> 你发送的日志文件、屏幕截图和记录数据可显著提高 Microsoft 对你的问题的理解和响应能力。  因此，建议将它们包含在内。 为保护你的隐私，仅当你提供权限（即提交包含任何附加的日志文件、屏幕截图和记录数据的问题报告）时，才会将这些日志文件、屏幕截图和记录数据发送给 Microsoft。 你可以在“报告问题”窗口的“摘要”步骤中查看哪些文件包含在内，然后再提交该报告。 你可以在“摘要”步骤中取消选中“附加系统日志”，从报告中排除系统日志文件。 有关参考信息，请参阅下面的屏幕截图。 
   > ![报告问题 - 收集的日志摘要](media/report-a-problem-logs-collected.png)
 
 

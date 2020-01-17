@@ -3,15 +3,15 @@ title: WhiteSource Bolt 权益 | Microsoft 文档
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 11/18/2019
+ms.date: 01/06/2020
 ms.topic: conceptual
 description: 了解如何激活 Visual Studio 订阅中包含的 WhiteSource Bolt 订阅。
-ms.openlocfilehash: fb403053d101cf2edf8677c7bcce494ae4e2d21e
-ms.sourcegitcommit: 5c9ca18eadc7ed0ed095cc5a3e1df40bbc13e70c
+ms.openlocfilehash: 8db777135e9f78321ccbc7cc9d40bf657da97589
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74174128"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75866168"
 ---
 # <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 WhiteSource Bolt
 
@@ -38,7 +38,22 @@ ms.locfileid: "74174128"
 9. 有关详细信息，请访问 WhiteSource Bolt [常见问题解答页面](https://bolt.whitesourcesoftware.com/azure/faq/)。 
 
 ## <a name="eligibility"></a>资格
-现可在 Visual Studio Marketplace 免费获取 [WhiteSource Bolt](https://marketplace.visualstudio.com/search?term=whitesource&target=AzureDevOps&category=All%20categories&sortBy=Relevance)。 
+
+| 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
+|--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
+| Visual Studio Enterprise（标准）   | VL、Azure、零售、所选 NFR<sup>1</sup> | 6 个月       |  是       |
+| 带有 GitHub Enterprise 的 Visual Studio Enterprise | VL | 6 个月       |  是       |
+| Visual Studio Professional（标准） | VL、Azure、零售                                       | 不可用                                                           |NA         |
+| 带有 GitHub Enterprise 的 Visual Studio Professional | VL                                      | 不可用                                                           |NA         |
+| Visual Studio Test Professional（标准）                         | VL、零售                                              | 不可用                                                           |NA         |
+| MSDN 平台（标准）                                          | VL、零售                                              | 不可用                                                           |NA         |
+| Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure                                       | 不可用                                                           |NA|
+||
+
+<sup>1</sup>  *包括：Microsoft 合作伙伴网络 (Enterprise)。不包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、FTE、MCT 软件和服务开发人员、BizSpark、Imagine、最有价值专家 (MVP)、区域总监 (RD)。MCT 软件和服务*。
+
+> [!NOTE]
+> Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。
 
 ## <a name="support-resources"></a>支持资源
 - 需要 WhiteSource Bolt 帮助？  在 https://www.whitesourcesoftware.com/vse_whitesource_bolt/ 与 WhiteSource Bolt 代表实时聊天
@@ -50,3 +65,9 @@ ms.locfileid: "74174128"
 - [Visual Studio](vs-ide-benefit.md)
 - [Azure DevOps](vs-azure-devops.md)
 - [Azure 开发测试个人额度](vs-azure.md)
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](/visualstudio/)
+- [Azure DevOps 文档](/azure/devops/)
+- [Azure 文档](/azure/)
+- [Microsoft 365 文档](/microsoft-365/)

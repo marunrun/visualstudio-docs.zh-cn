@@ -9,12 +9,12 @@ ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: fb296346d54b0774bdd9a738581ee28fe99b1de0
-ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
+ms.openlocfilehash: c1160c68c79dd595e82ecf761c6e441ecc906f62
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72777472"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915813"
 ---
 # <a name="installation"></a>安装
 
@@ -24,7 +24,7 @@ ms.locfileid: "72777472"
 
 此扩展适用于 Visual Studio 2015、Visual Studio 2017、社区版或更高版本。
 
-可以从 [Visual Studio Marketplace](https://aka.ms/vstoolsforai) 或 Visual Studio 中下载工具：
+可以从 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.vstoolsai-vs2017) 或 Visual Studio 中下载工具：
 
 1. 依次选择“工具”   > “扩展和更新”  。
 
@@ -137,7 +137,7 @@ pip3.5 install -U numpy scipy
 > [!NOTE]
 > CNTK 当前不支持 macOS。
 
-若要安装 CNTK Python 包，请参阅[如何安装 CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)。
+若要安装 CNTK Python 包，请参阅[如何安装 CNTK](/cognitive-toolkit/Setup-CNTK-on-your-machine)。
 
 ### <a name="tensorflow"></a>TensorFlow
 
@@ -156,7 +156,7 @@ pip3.5 install -U numpy scipy
 
 ### <a name="mxnet"></a>MXNet
 
-[Apache MXNet（孵化中）](https://mxnet.incubator.apache.org/)是旨在提高效率和灵活性的深入学习框架。 它使你可以**混合**[符号和命令式编程](http://mxnet.io/architecture/index.html#deep-learning-system-design-concepts)以最大程度提高效率和生产力。
+[Apache MXNet（孵化中）](https://mxnet.incubator.apache.org/)是旨在提高效率和灵活性的深入学习框架。 通过它，你可混用[符号和命令式编程](http://mxnet.io/architecture/index.html#deep-learning-system-design-concepts)，从而最大程度地提高效率和生产力  。
 
 若要安装 MXNet，请在终端中运行以下命令：
 

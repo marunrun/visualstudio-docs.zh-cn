@@ -10,12 +10,12 @@ author: mikejo5000
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d4c44719854714658c1c15bf7059e49f4e668bd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: affad69f6821addb50686d4f41d0bdb3bd816e8e
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590418"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919024"
 ---
 # <a name="vstestconsoleexe-command-line-options"></a>VSTest.Console.exe 命令行选项
 
@@ -25,6 +25,8 @@ VSTest.Console.exe 是用于运行测试的命令行工具  。 可在命令行�
 > Visual Studio 中的 MSTest 适配器在旧模式下仍有效（等效于使用 mstest.exe 运行测试），可实现兼容性  。 在旧模式下，它无法利用 TestCaseFilter 功能。 在以下情况下，适配器可以切换到旧模式：指定 .testsettings 文件、在 .runsettings 文件中将 forcelegacymode 设置为 true 或使用 HostType 等特性      。
 >
 > 若要在基于 ARM 架构的计算机上运行自动测试，则必须使用 VSTest.Console.exe  。
+
+打开一个[开发人员命令提示](/dotnet/framework/tools/developer-command-prompt-for-vs)以使用命令行工具，或者可在 %Program Files(x86)%\Microsoft Visual Studio\\<version\>\\<edition\>\common7\ide\CommonExtensions\\<Platform | Microsoft> 中找到该工具  。
 
 ## <a name="general-command-line-options"></a>常规命令行选项
 
@@ -44,7 +46,7 @@ VSTest.Console.exe 是用于运行测试的命令行工具  。 可在命令行�
 |**/Framework: [Framework 版本]** |要用于执行测试的目标 .NET 版本。<br />示例值有 `Framework35`、`Framework40`、`Framework45`、`FrameworkUap10`、`.NETCoreApp,Version=v1.1`。<br />如果将目标框架指定为 Framework35，则测试在 CLR 4.0“兼容模式”下运行  。<br />示例：`/Framework:framework40`|
 |**/TestCaseFilter:[表达式]** |运行与给定表达式匹配的测试。<br /><Expression\> 的格式为 <property\>=<value\>[\|<Expression\>]。<br />示例：`/TestCaseFilter:"Priority=1"`<br />示例：`/TestCaseFilter:"TestCategory=Nightly|FullyQualifiedName=Namespace.ClassName.MethodName"`<br />/TestCaseFilter 命令行选项不能与 /Tests 命令行选项一起使用   。 <br />有关创建和使用表达式的信息，请参阅 [TestCase 筛选](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md)。|
 |**/?**|显示使用情况信息。|
-|**/Logger:[*uri/friendlyname*]**|为测试结果指定一个记录器。<br />示例：要将结果记录到 Visual Studio 测试结果文件 (TRX)，请使用 /Logger:trx  。<br />示例：要将测试结果发布到 Team Foundation Server，请使用 TfsPublisher：<br />**/logger:TfsPublisher;**<br />**Collection=<project url\>;**<br />**BuildName=<build name\>;**<br />**TeamProject=<project name\>;**<br />**[;Platform=\<Defaults to "Any CPU">]**<br />**[;Flavor=\<Defaults to "Debug">]**<br />**[;RunTitle=<title\>]**|
+|**/Logger:[*uri/friendlyname*]**|为测试结果指定一个记录器。<br />示例：要将结果记录到 Visual Studio 测试结果文件 (TRX)，请使用<br />/Logger:trx <br />[;LogFileName=\<Defaults to unique file name>] <br />示例：要将测试结果发布到 Team Foundation Server，请使用 TfsPublisher：<br />**/logger:TfsPublisher;**<br />**Collection=<project url\>;**<br />**BuildName=<build name\>;**<br />**TeamProject=<project name\>;**<br />**[;Platform=\<Defaults to "Any CPU">]**<br />**[;Flavor=\<Defaults to "Debug">]**<br />**[;RunTitle=<title\>]**<br />注意：TfsPublisher 记录器已在 Visual Studio 2017 中被弃用，且在更高版本的 Visual Studio 中不受支持。 对于这些情况，请改用自定义记录器。 此记录器会将记录器切换到旧模式。|
 |**/ListTests:[文件名]** |列出给定测试容器中的已发现的测试。|
 |**/ListDiscoverers**|列出已安装的测试发现器。|
 |**/ListExecutors**|列出已安装的测试执行器。|
@@ -55,7 +57,7 @@ VSTest.Console.exe 是用于运行测试的命令行工具  。 可在命令行�
 |**/ResultsDirectory:[*path*]**|如果不存在，则将在指定路径中创建测试结果目录。<br />示例：`/ResultsDirectory:<pathToResultsDirectory>`|
 |**/ParentProcessId:[*parentProcessId*]**|负责启动当前进程的父进程的进程 ID。|
 |**/Port:[*port*]**|套接字连接和接收事件消息的端口。|
-|**/Collect:[*dataCollector friendlyName*]**|为测试运行启用数据收集器。 [详细信息](https://aka.ms/vstest-collect)。|
+|**/Collect:[*dataCollector friendlyName*]**|为测试运行启用数据收集器。 [详细信息](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md)。|
 
 > [!TIP]
 > 选项和值不区分大小写。

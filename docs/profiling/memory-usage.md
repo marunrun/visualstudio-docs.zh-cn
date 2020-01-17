@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c72b6749dcba857d9a5059a36adc0fae6e0bacf
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 2876e1b25380719a4424c5828c8b37fb5bb72b41
+ms.sourcegitcommit: 9a5cf730d8e43eed6eba25369b7b44cae0b26b98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254614"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75929234"
 ---
 # <a name="measure-memory-usage-in-visual-studio"></a>在 Visual Studio 中衡量内存使用情况
 
@@ -71,7 +71,7 @@ ms.locfileid: "71254614"
 
 6. 若要在调试会话开始时拍摄快照，请选择“内存使用率”  摘要工具栏上的“拍摄快照”  。 （在此处设置断点可能也会有所帮助。）
 
-    ![拍摄快照](../profiling/media/dbgdiag_mem_mixedtoolbar_takesnapshot.png "DBGDIAG_MEM_MixedToolbar_TakeSnapshot")
+    ![获取快照](../profiling/media/dbgdiag_mem_mixedtoolbar_takesnapshot.png "DBGDIAG_MEM_MixedToolbar_TakeSnapshot")
 
      > [!TIP]
      > 若要为进行内存比较而创建基线，请考虑在调试会话开始时拍摄快照。
@@ -101,7 +101,7 @@ ms.locfileid: "71254614"
 
 若要分析内存使用率，请单击其中一个链接，打开内存使用率详细报表：
 
-- 若要查看当前快照与前一个快照之间的差异的详细信息，请选择箭头左侧的更改链接（![内存使用率增加](../profiling/media/prof-tour-mem-usage-up-arrow.png "Memory Usage Increase")）。 红色箭头表示内存使用率增加，绿色箭头表示减少。
+- 若要查看当前快照与前一个快照之间的差异的详细信息，请选择箭头左侧的更改链接 (![内存使用率增加](../profiling/media/prof-tour-mem-usage-up-arrow.png "内存使用量增加"))。 红色箭头表示内存使用率增加，绿色箭头表示减少。
 
 > [!TIP]
 > 为了帮助更快地识别内存问题，差异报告按照总体数量增加最多（单击“对象(差异)”  列中的更改链接）的对象类型或整体堆大小增加最多（单击“堆大小(差异)”  列中的更改链接）的对象类型进行排序。
@@ -113,15 +113,15 @@ ms.locfileid: "71254614"
 ### <a name="managed-types-reports"></a>托管类型报告
  在内存使用率摘要表中选择“对象(差异)”  或“分配(差异)”  单元格的当前链接。
 
- ![调试器托管的类型报表 - 根路径](../profiling/media/dbgdiag_mem_managedtypesreport_pathstoroot.png "DBGDIAG_MEM_ManagedTypesReport_PathsToRoot")
+ ![调试器托管类型报表 &#45; 根路径](../profiling/media/dbgdiag_mem_managedtypesreport_pathstoroot.png "DBGDIAG_MEM_ManagedTypesReport_PathsToRoot")
 
  顶部窗格会显示快照中类型的计数和大小，包括由类型引用的所有对象的大小（ **“非独占大小”** ）。
 
  底部窗格中的 **“根的路径”** 树显示引用上部窗格中选择的类型的对象。 仅当引用某个对象的最后一个类型已释放时，.NET Framework 垃圾回收器才清理该对象的内存。
 
- **“引用的类型”** 树显示上部窗格中选择的类型所持有的引用。
+ “引用的对象”树显示上部中选择的类型所持有的引用  。
 
- ![托管的引用类型报表视图](../profiling/media/dbgdiag_mem_managedtypesreport_referencedtypes.png "DBGDIAG_MEM_ManagedTypesReport_ReferencedTypes")
+ ![托管引用对象报表视图](../profiling/media/dbgdiag_mem_managedtypesreport_referencedtypes.png "DBGDIAG_MEM_ManagedTypesReport_ReferencedTypes")
 
  若要显示上部窗格中所选类型的实例，请选择 ![实例图标](../profiling/media/dbgdiag_mem_instanceicon.png "DBGDIAG_MEM_InstanceIcon") 图标。
 
@@ -136,7 +136,7 @@ ms.locfileid: "71254614"
 
  **“类型视图”** 显示快照中类型的数量和大小。
 
-- 选择所选类型的实例图标（![“对象类型”列中的实例图标](../profiling/media/dbg_mma_instancesicon.png "DBG_MMA_InstancesIcon")）可显示有关快照中所选类型的对象信息。
+- 选择所选类型的实例图标 (![“对象类型”列中的实例图标](../profiling/media/dbg_mma_instancesicon.png "DBG_MMA_InstancesIcon")) 可显示快照中所选类型的对象的相关信息。
 
      **“实例”** 视图显示所选类型的每个实例。 选择实例可显示导致在 **“分配调用堆栈”** 窗格中创建实例的调用堆栈。
 
@@ -150,7 +150,7 @@ ms.locfileid: "71254614"
 
 - 在 **“诊断工具”** 窗口上的 **“内存使用率”** 选项卡的摘要表单元格中选择更改链接。
 
-   ![选择更改（差异）报告](../profiling/media/dbgdiag_mem_choosediffreport.png "DBGDIAG_MEM_ChooseDiffReport")
+   ![选择一个更改（差异）报表](../profiling/media/dbgdiag_mem_choosediffreport.png "DBGDIAG_MEM_ChooseDiffReport")
 
 - 在托管或本机报告的 **“与之比较的对象”** 列表中选择快照。
 
