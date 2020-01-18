@@ -11,19 +11,19 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 186df377670ffec2c06e0214d25b8824679b6f83
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 63fa0db72a01ddf1f6e1003fc27cf6a28128e036
+ms.sourcegitcommit: e3c3d2b185b689c5e32ab4e595abc1ac60b6b9a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188861"
+ms.lasthandoff: 01/18/2020
+ms.locfileid: "76269128"
 ---
 # <a name="starting-to-develop-visual-studio-extensions"></a>开始开发 Visual Studio 扩展
 
 如果之前从未编写过 Visual Studio 扩展，则可能会遇到一些问题。 这里列出了其中一些最常用的文件。 如果看不到要查找的信息，请使用反馈按钮（位于屏幕底部的 "**此页面有帮助？"** ）来请求所需的内容。
 
 > [!NOTE]
-> 本文适用于 Windows 上的 Visual Studio。 有关 Visual Studio for Mac，请参阅[扩展 Visual Studio for Mac](/visualstudio/mac/extending-visual-studio-mac)。
+> 本文适用于 Windows 上的 Visual Studio。 有关 Visual Studio for Mac，请参阅[扩展 Visual Studio for Mac](/visualstudio/mac/extending-visual-studio-mac)。 有关 Visual Studio Code，请参阅[Visual Studio Code 扩展 API](https://code.visualstudio.com/api)。
 
 ## <a name="what-software-do-i-need-to-develop-visual-studio-extensions"></a>开发 Visual Studio 扩展需要什么软件？
 
@@ -93,6 +93,7 @@ ms.locfileid: "73188861"
 
  你还可以在 Visual Studio Marketplace 上发布扩展，使其对大量 Visual Studio 客户可见。 有关将扩展打包到 Marketplace 的示例，请参阅[演练：发布 Visual Studio 扩展](../extensibility/walkthrough-publishing-a-visual-studio-extension.md)。 若要详细了解如何在 Marketplace 上发布内容，请参阅[Visual Studio 产品和扩展](/azure/devops/extend/overview?view=vsts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [扩展 Visual Studio for Mac](/visualstudio/mac/extending-visual-studio-mac)
+- [扩展 Visual Studio Code](https://code.visualstudio.com/api)
