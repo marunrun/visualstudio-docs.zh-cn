@@ -13,12 +13,12 @@ dev_langs:
 - VB
 ms.workload:
 - vssdk
-ms.openlocfilehash: 82ce8a1b9cbc79925ff2f4a1c1df9d832bb96f7b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 78cbcc9b2efd37aa99906d7ed7708621ec213b2e
+ms.sourcegitcommit: e3c3d2b185b689c5e32ab4e595abc1ac60b6b9a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72632516"
+ms.lasthandoff: 01/18/2020
+ms.locfileid: "76269069"
 ---
 # <a name="walkthrough-display-statement-completion"></a>演练：显示语句完成
 您可以通过定义要为其提供完成的标识符，然后触发完成会话来实现基于语言的语句完成。 您可以在语言服务的上下文中定义语句结束，定义自己的文件扩展名和内容类型，然后仅为该类型显示完成。 或者，可以触发现有内容类型（例如，"纯文本"）的完成。 本演练演示如何为 "纯文本" 内容类型（文本文件的内容类型）触发语句结束。 "Text" 内容类型是所有其他内容类型（包括代码和 XML 文件）的上级。
@@ -27,7 +27,7 @@ ms.locfileid: "72632516"
 
  此演练演示如何为硬编码的标识符集实现语句结束。 在完整实现中，语言服务和语言文档负责提供该内容。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
  从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-mef-project"></a>创建 MEF 项目
@@ -42,17 +42,17 @@ ms.locfileid: "72632516"
 
 4. 将以下引用添加到项目，并确保**CopyLocal**设置为 `false`：
 
-     VisualStudio
+     Microsoft.VisualStudio.Editor
 
      Microsoft.VisualStudio.Language.Intellisense
 
-     VisualStudio。
+     Microsoft.VisualStudio.OLE.Interop
 
-     VisualStudio。14。0
+     VisualStudio. 15。0
 
-     VisualStudio. 10.0。
+     Microsoft.VisualStudio.Shell.Immutable.10.0
 
-     VisualStudio. TextManager
+     Microsoft.VisualStudio.TextManager.Interop
 
 ## <a name="implement-the-completion-source"></a>实现完成源
  完成源负责收集一组标识符，并在用户键入完成触发器时将内容添加到完成窗口，如标识符的第一个字母。 在此示例中，标识符及其说明在 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource.AugmentCompletionSession%2A> 方法中硬编码。 大多数情况下，使用语言的分析器来获取标记，以填充完成列表。
@@ -81,7 +81,7 @@ ms.locfileid: "72632516"
      [!code-csharp[VSSDKCompletionTest#4](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_4.cs)]
      [!code-vb[VSSDKCompletionTest#4](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_4.vb)]
 
-6. 通过添加包含要在上下文中提供的完成的完成集来实现 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource.AugmentCompletionSession%2A> 方法。 每个完成集包含一组 <xref:Microsoft.VisualStudio.Language.Intellisense.Completion> 完成，并对应于完成窗口的一个选项卡。 （在 Visual Basic 项目中，完成窗口选项卡命名为**Common**和**All**。）@No__t_2 方法是在下一步中定义的。
+6. 通过添加包含要在上下文中提供的完成的完成集来实现 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource.AugmentCompletionSession%2A> 方法。 每个完成集包含一组 <xref:Microsoft.VisualStudio.Language.Intellisense.Completion> 完成，并对应于完成窗口的一个选项卡。 （在 Visual Basic 项目中，完成窗口选项卡命名为**Common**和**All**。）`FindTokenSpanAtPosition` 方法是在下一步中定义的。
 
      [!code-csharp[VSSDKCompletionTest#5](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_5.cs)]
      [!code-vb[VSSDKCompletionTest#5](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_5.vb)]
@@ -117,23 +117,23 @@ ms.locfileid: "72632516"
      [!code-vb[VSSDKCompletionTest#10](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_10.vb)]
 
 ## <a name="implement-the-completion-command-handler-provider"></a>实现完成命令处理程序提供程序
- 完成命令处理程序提供程序是从一个 <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> 派生的，该提供程序侦听一个文本视图创建事件，并将该视图从 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> 转换，这使得可以将命令添加到 Visual Studio shell 的命令链中-添加到 <xref:Microsoft.VisualStudio.Text.Editor.ITextView>。 由于此类是一个 MEF 导出，因此还可以使用它导入命令处理程序本身所需的服务。
+ 完成命令处理程序提供程序是从一个 <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener>派生的，该提供程序侦听一个文本视图创建事件，并将该视图从 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>转换，这使得可以将命令添加到 Visual Studio shell 的命令链中-添加到 <xref:Microsoft.VisualStudio.Text.Editor.ITextView>。 由于此类是一个 MEF 导出，因此还可以使用它导入命令处理程序本身所需的服务。
 
 #### <a name="to-implement-the-completion-command-handler-provider"></a>实现完成命令处理程序提供程序
 
-1. 添加一个名为 `TestCompletionCommandHandler` 的文件。
+1. 添加一个名为 `TestCompletionCommandHandler`的文件。
 
 2. 添加以下 using 指令：
 
      [!code-csharp[VSSDKCompletionTest#11](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_11.cs)]
      [!code-vb[VSSDKCompletionTest#11](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_11.vb)]
 
-3. 添加一个名为 `TestCompletionHandlerProvider` 的类，该类实现 <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener>。 使用 <xref:Microsoft.VisualStudio.Utilities.NameAttribute> 的 "令牌完成处理程序"、"纯文本" <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> 和 <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Editable> 来导出此类。
+3. 添加一个名为 `TestCompletionHandlerProvider` 的类，该类实现 <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener>。 使用 <xref:Microsoft.VisualStudio.Utilities.NameAttribute> 的 "令牌完成处理程序"、"纯文本" <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> 和 <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Editable>来导出此类。
 
      [!code-csharp[VSSDKCompletionTest#12](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_12.cs)]
      [!code-vb[VSSDKCompletionTest#12](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_12.vb)]
 
-4. 导入 <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService>，这允许从 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> 转换为 <xref:Microsoft.VisualStudio.Text.Editor.ITextView>、<xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker> 和允许访问标准 Visual Studio 服务的 <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider>。
+4. 导入 <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService>，这允许从 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> 转换为 <xref:Microsoft.VisualStudio.Text.Editor.ITextView>、<xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker>和允许访问标准 Visual Studio 服务的 <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider>。
 
      [!code-csharp[VSSDKCompletionTest#13](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_13.cs)]
      [!code-vb[VSSDKCompletionTest#13](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_13.vb)]
@@ -204,5 +204,5 @@ ms.locfileid: "72632516"
 
 4. 键入第一个 "a" 和 "d" 时，应显示包含 "加法" 和 "适配" 的列表。 请注意，选择 "添加"。 如果键入其他 "d"，则该列表应仅包含 "加法"，此时将选择此选项。 可以按**空格键**、 **Tab**或**Enter**键提交 "加法"，也可以通过键入 Esc 或其他任何键来关闭列表。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [演练：将内容类型链接到文件扩展名](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)
