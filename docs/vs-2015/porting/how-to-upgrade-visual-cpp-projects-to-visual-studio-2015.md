@@ -12,17 +12,17 @@ caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
 manager: jillfra
-ms.openlocfilehash: 83794267cbd13b0bde0b1ba6217d08275fe12e05
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 60ba1ad7f1ed467cb1a396f80228b8915bd62a31
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850335"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918802"
 ---
 # <a name="how-to-upgrade-visual-c-projects-to-visual-studio-2015"></a>如何：将 Visual C++ 项目升级到 Visual Studio 2015
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-有关 Visual Studio 2017 的最新文档，请参阅 [Visual C++ 移植和升级指南](https://docs.microsoft.com/cpp/porting/visual-cpp-porting-and-upgrading-guide)。
+有关 Visual Studio 2017 的最新文档，请参阅 [Visual C++ 移植和升级指南](/cpp/porting/visual-cpp-porting-and-upgrading-guide)。
 
 当你首次打开在早期版本的 Visual Studio 中创建的 Visual C++ 项目时，系统可能会提示你更新项目。 该消息会询问你是否想要升级到 Visual C++ 编译器和库的最新版本。 升级的选项取决于用于创建该项目的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的版本。
 
@@ -54,4 +54,4 @@ ms.locfileid: "75850335"
  如果要继续在 [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)]中使用自定义的 PlatformToolset，则该工具集必须位于 x86 计算机的 %ProgramFiles%\MSBuild\Microsoft.Cpp\v4.0\Platforms\Win32\PlatformToolsets\ 下，或位于 x64 计算机的 %ProgramFiles (x86)%\MSBuild\Microsoft.Cpp\v4.0\Platforms\Win32\PlatformToolsets\ 下。 有关如何创建自定义 PlatformToolset 的信息，请参见 Visual C++ 团队博客上的 [C++ 本机多目标](https://blogs.msdn.com/b/vcblog/archive/2009/12/08/c-native-multi-targeting.aspx) 。
 
 ## <a name="see-also"></a>另请参阅
- [Visual C++移植和升级指南](https://msdn.microsoft.com/library/f5fbcc3d-aa72-41a6-ad9a-a706af2166fb)[移植、迁移和升级 visual Studio 项目](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)
+ [Visual C++ 移植和升级指南](https://msdn.microsoft.com/library/f5fbcc3d-aa72-41a6-ad9a-a706af2166fb)[移植、迁移和升级 Visual Studio 项目](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)
