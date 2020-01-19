@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ead3faa5354dae198524e2a816a85b05bc5d8f08
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: aa01cb77e8a003438721984da13f46de350104ea
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75845549"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918995"
 ---
 # <a name="user-permissions-and-visual-studio"></a>用户权限与 Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "75845549"
 |调试|调试使用提升的权限运行的应用程序。|[调试器设置和准备](../debugger/debugger-settings-and-preparation.md)|
 ||调试在其他用户帐户下运行的应用程序，例如 ASP.NET 网站。|[调试 ASP.NET 和 AJAX 应用程序](../debugger/debugging-aspnet-and-ajax-applications.md)|
 ||在区域中调试 XAML 浏览器应用程序 (XBAP)。|[WPF 主机 (PresentationHost.exe)](https://msdn.microsoft.com/library/3215bfa1-722c-4ac8-a7c5-bdd02d30afbd)|
-||使用模拟器可以调试 Microsoft Azure 的云服务项目。|[在 Visual Studio 中调试云服务](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-debug-cloud-services-virtual-machines?view=vs-2019)|
+||使用模拟器可以调试 Microsoft Azure 的云服务项目。|[在 Visual Studio 中调试云服务](../azure/vs-azure-tools-debug-cloud-services-virtual-machines.md)|
 ||配置远程调试的防火墙。|[在设备上安装远程工具](https://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c)|
 |性能工具|分析应用程序。|[性能分析初学者指南](../profiling/beginners-guide-to-performance-profiling.md)|
 |部署|在本地计算机上将 Web 应用程序部署到 Internet Information Services (IIS)。|[使用 Visual Studio 或 Visual Web Developer 将 ASP.NET Web 应用程序部署到承载提供程序：作为测试环境部署到 IIS](https://www.asp.net/web-forms/tutorials/deployment/deployment-to-a-hosting-provider/Deployment-to-a-Hosting-Provider-Deploying-to-IIS-as-a-Test-Environment-5-of-12)|
@@ -71,4 +71,4 @@ ms.locfileid: "75845549"
      Visual Studio 启动时，标题栏的产品名后显示“(管理员)”  。
 
 ## <a name="see-also"></a>另请参阅
- [移植、迁移和升级 visual Studio 项目](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)[安装 visual studio 2015](../install/install-visual-studio-2015.md)
+ [移植、迁移和升级 Visual Studio 项目](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)[安装 Visual Studio 2015](../install/install-visual-studio-2015.md)
