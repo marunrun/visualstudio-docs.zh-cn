@@ -50,7 +50,7 @@ ms.locfileid: "75596185"
 | CleanFile | 将用作“清理缓存”的文件的名称。 清理缓存是要在清理操作期间删除的已生成文件的列表。 该文件由生成过程放在中间输出路径中。<br /><br /> 此属性只指定没有路径信息的文件名。 |
 | CodePage | 指定要用于编译中所有源代码文件的代码页。 此属性等效于 `/codepage` 编译器开关。 |
 | CompilerResponseFile | 可以传递给编译器任务的可选响应文件。 |
-| 配置 | 正在生成的配置，为“调试”或“发布”。 |
+| Configuration | 正在生成的配置，为“Debug”或“Release”。 |
 | CscToolPath | [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 编译器 csc.exe 的路径  。 |
 | CustomBeforeMicrosoftCommonTargets | 要在公用目标导入前自动导入的项目文件或目标文件的名称。 |
 | DebugSymbols | 一个布尔值，指示是否由生成来生成符号。<br /><br /> 在命令行中设置 -p:DebugSymbols=false  会禁止生成程序数据库 (.pdb  ) 符号文件。 |
