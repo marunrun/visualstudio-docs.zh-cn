@@ -3,8 +3,8 @@ title: Visual Studio 生成工具工作负载和组件 ID
 titleSuffix: ''
 description: 使用 Visual Studio 工作负载和组件 ID 来构建基于 Windows 的经典应用程序
 keywords: ''
-author: jillre
-ms.author: jillfra
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.date: 12/03/2019
 ms.topic: reference
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b99298df-0280-47fc-af73-44cd7a8ac553
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 6486b305d65d46b2255055bbd11cbdb9e1039411
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 26de8e2ad329d37de043431f5d655b4be8722755
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588494"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114092"
 ---
 # <a name="visual-studio-build-tools-component-directory"></a>Visual Studio 生成工具组件目录
 

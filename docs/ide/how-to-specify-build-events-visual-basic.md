@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c516b6fc412d393d0528536afe0bb69629c87c44
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: 33cf9cadc8fbf091fb213926fb25b232d14dc0d7
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461511"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115108"
 ---
 # <a name="how-to-specify-build-events-visual-basic"></a>如何：指定生成事件 (Visual Basic)
 
@@ -49,7 +49,7 @@ Visual Basic 中的生成事件可用于运行脚本、宏或用作作为编译�
     > [!NOTE]
     > 如果预生成事件或生成后事件未成功完成，可通过使用除零 (0) 之外的代码退出事件操作来终止生成，这表示操作成功。
 
-## <a name="example-how-to-change-manifest-information-using-a-post-build-event"></a>示例:如何使用生成后事件更改清单信息
+## <a name="example-how-to-change-manifest-information-using-a-post-build-event"></a>示例：如何使用生成后事件更改清单信息
 
 以下过程演示如何使用从生成后事件（项目目录中的 .exe.manifest 文件）调用的 .exe 命令在应用程序清单中设置最低的操作系统版本   。 最低的操作系统版本是由四个部分组成的数字组合，例如 4.10.0.0。 为此，该命令将更改清单的 `<dependentOS>` 部分：
 
