@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/28/2019
 ms.topic: conceptual
 description: 有关在 MPN 中提供的订阅、应用的规则以及提供的订阅数的详细信息。
-ms.openlocfilehash: 8847d320ec950b6601f99875e2c35ca80105e5b4
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: 1a103f76b56df72b5829f9ce87f587070519726e
+ms.sourcegitcommit: e3c3d2b185b689c5e32ab4e595abc1ac60b6b9a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491669"
+ms.lasthandoff: 01/20/2020
+ms.locfileid: "76281693"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>提供给 Microsoft 合作伙伴网络 (MPN) 中的合作伙伴的 Visual Studio 订阅
 
@@ -47,7 +47,7 @@ ms.locfileid: "74491669"
 
 ## <a name="subscriptions-for-partners-purchasing-the-action-pack"></a>购买 Action Pack 的合作伙伴可获得的订阅数
 
-具备资格的合作伙伴不能购买 Action Pack。 每个合作伙伴只能购买一个 Action Pack。
+具备资格的合作伙伴能够购买 Action Pack。 每个合作伙伴只能购买一个 Action Pack。
 
 通过 Action Pack，合作伙伴可获得 3 个 Visual Studio Professional (MPN) 订阅  。 Visual Studio Professional (MPN) 是一种自定义产品，市场上没有相应的同类型产品。 它包括以下内容：
 

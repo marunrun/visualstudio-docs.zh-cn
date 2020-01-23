@@ -6,16 +6,16 @@ manager: lank
 ms.date: 01/06/2020
 ms.topic: conceptual
 description: 了解如何激活 Visual Studio 订阅中包含的 WhiteSource Bolt 订阅。
-ms.openlocfilehash: 8db777135e9f78321ccbc7cc9d40bf657da97589
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: edfc4c01908a6ce3bf5466a812ab7cf2608a62f7
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75866168"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114319"
 ---
 # <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 WhiteSource Bolt
 
-查找和修复开源漏洞，在内部版本中生成所有开源组件的综合清单和许可报告。 
+查找和修复开源漏洞，在内部版本中生成所有开源组件的综合清单和许可报告。 Visual Studio Enterprise 订阅接收六个月的无限制扫描。
 
 ## <a name="activation-steps"></a>激活步骤
 

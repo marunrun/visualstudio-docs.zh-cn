@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c2f4c01a627fb2cd1b581331dd086e2d783d475f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8f6bd03b9d652909022adab169682160ae541677
+ms.sourcegitcommit: 3b48ce4649d38a7e3b095bd087739d6131e49d1b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596224"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76124499"
 ---
 # <a name="options-text-editor-c-advanced"></a>选项，文本编辑器，C#，高级
 
@@ -87,7 +87,7 @@ ms.locfileid: "75596224"
    using System.Linq;
    ```
 
-- 建议对引用程序集中的类型使用 using
+- 建议对 .NET Framework 程序集中的类型使用 using
 - 建议对 NuGet 包中的类型使用 using
 
    选择这些选项时，[快速操作](../quick-actions.md)可用于安装 NuGet 包，并为未引用的类型添加 `using` 指令。
