@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c751f6b55bc50a064473468d95c07a54aba76ae
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: f9af5a3e8796af3aeaefae569d61e78a1039d84e
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516630"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115092"
 ---
 # <a name="tutorial-1-create-a-picture-viewer"></a>教程 1：创建图片查看器
 
@@ -46,7 +46,7 @@ ms.locfileid: "72516630"
 
 ## <a name="tutorial-links"></a>教程链接
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[步骤 1：创建 Windows 窗体应用项目](../ide/step-1-create-a-windows-forms-application-project.md)|首先创建 Windows 窗体应用项目。|
 |[步骤 2：运行图片查看器应用](../ide/step-2-run-your-program.md)|运行你在上一步中创建的 Windows 窗体应用项目。|
@@ -64,7 +64,7 @@ ms.locfileid: "72516630"
 
 ## <a name="next-steps"></a>后续步骤
 
-要开始学习本教程，请从[步骤 1：创建 Windows 窗体应用程序项目](../ide/step-1-create-a-windows-forms-application-project.md)  开始。
+要开始学习本教程，请从[步骤 1：创建 Windows 窗体应用程序项目](../ide/step-1-create-a-windows-forms-application-project.md)** 开始。
 
 ## <a name="see-also"></a>请参阅
 

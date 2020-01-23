@@ -5,15 +5,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - load tests, virtual users
 ms.assetid: f66d5d43-4121-4487-b27f-d0a0baaf7601
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: bc8baf2586e0c0ce682436387bfd612af14e18bd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8cac3368d0f03c268e086cc8636f1175a15effdd
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653383"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76113360"
 ---
 # <a name="how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data"></a>如何：指定使用 Web 高速缓存数据的虚拟用户的百分比
 
